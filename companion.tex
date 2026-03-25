@@ -29,7 +29,7 @@
 \newtheorem{axiom}{Axiom}
 
 % --- Document metadata ---
-\newcommand{\docversion}{2.16.0}
+\newcommand{\docversion}{2.17.0}
 \newcommand{\docdate}{\DTMdisplaydate{2026}{03}{25}{-1}}
 
 % --- Macros ---
@@ -4491,7 +4491,7 @@ admissibility class. Thus the field/probe layer realizes the translated
 structure without changing its underlying body.
 \end{proof}
 
-\begin{proposition}[No-ontology-drift lemma]
+\begin{proposition}[No-ontology-drift proposition]
 \label{prop:no-ontology-drift}
 Admissible transport across the grouped layers does not create ontological
 multiplicity. If
@@ -5609,6 +5609,7 @@ and spectrum-level completion.
 \addcontentsline{toc}{subsection}{Phase IV-I: Physical Unfolding, Observer Frames, and Interface Regimes}
 
 \begin{lemma}[Observer-frame lemma]
+\label{lem:observer-frame-lemma}
 Within the normalized structural architecture, an observer frame is not introduced as an external background datum. Rather, it is the stabilized readout frame selected by the combined action of the cascade, the closure filter, and the admissibility-preserving transport across the grouped layers. In particular, any observer description compatible with the kernel must arise as a frame-shifted but ground-linked reading of the same underlying body.
 \end{lemma}
 
@@ -5617,6 +5618,7 @@ The semantic kernel identifies all admissible descriptions as readings of a sing
 \end{proof}
 
 \begin{lemma}[Mass/spectral reading lemma]
+\label{lem:mass-spectral-reading-lemma}
 Any admissible mass or hierarchy reading in the Companion must be interpreted first as a spectral or sectoral readout of the normalized structural kernel, and only secondarily as a phenomenological mass assignment. In particular, the transition from spectral organization to mass hierarchy is a realization map, not a new generative axiom.
 \end{lemma}
 
@@ -5625,6 +5627,7 @@ The generative layer produces admissible sectors and their closure relations, wh
 \end{proof}
 
 \begin{lemma}[Generation-splitting lemma]
+\label{lem:generation-splitting-lemma}
 If the triolic and grouped-layer architecture is preserved across admissible projections and field realizations, then any generation splitting must appear as a structured decomposition of an already admissible spectral body rather than as a free multiplication of unrelated sectors.
 \end{lemma}
 
@@ -5633,6 +5636,7 @@ Triolic minimality and orthogonal anchoring prevent arbitrary proliferation of s
 \end{proof}
 
 \begin{theorem}[Standard-model interface theorem]
+\label{thm:standard-model-interface-theorem}
 The normalized Companion architecture defines a one-way interface to Standard-Model-style phenomenology: admissible structures may be projected into observer, spectral, and field realizations compatible with particle-physics language, but the Companion introduces no independent Standard-Model ontology at the generative level. Consequently, the appropriate first target of the unfolding is not a complete reconstruction of the Standard Model, but a structurally controlled interface map from the grouped kernel into physically readable sectors.
 \end{theorem}
 
@@ -5641,17 +5645,88 @@ By the observer-frame, mass/spectral, and generation-splitting lemmas, all physi
 \end{proof}
 
 \begin{corollary}[First physical unfolding chain]
+\label{cor:first-physical-unfolding-chain}
 The first physical unfolding chain of the Companion is
 \[
-\text{observer-frame emergence}
+\begin{aligned}
+&\text{observer-frame emergence}
 \Longrightarrow
-\text{spectral/mass readout}
-\Longrightarrow
+\text{spectral/mass readout}\
+&\Longrightarrow
 \text{generation-compatible splitting}
 \Longrightarrow
 \text{controlled Standard-Model interface}.
+\end{aligned}
 \]
 Thus the physical interpretation layer is admitted only after the structural, closure, tensorial, and grouped-layer chains have already been stabilized.
+\end{corollary}
+
+
+\subsection*{Phase IV-I$'$: Refined Physical Interface and Realization Control}
+\addcontentsline{toc}{subsection}{Phase IV-I': Refined Physical Interface and Realization Control}
+
+\begin{lemma}[Observer covariance under admissible transport]
+\label{lem:observer-covariance-admissible-transport}
+If two observer descriptions are related by admissibility-preserving transport through the grouped architecture, then they represent frame-shifted realizations of the same underlying body and cannot define distinct generative ontologies.
+\end{lemma}
+
+\begin{proof}
+The no-ontology-drift result of Phase~II-F implies that transport across $\mathfrak G$, $\mathfrak P$, and $\mathfrak F$ preserves the underlying structural identity. By the observer-frame lemma, any observer description is already a frame-shifted readout of the same admissible kernel. Therefore two observer descriptions related by admissible transport differ only at the level of readout covariance and not at the level of generative content.
+\end{proof}
+
+\begin{proposition}[Spectral-to-mass realization map]
+\label{prop:spectral-to-mass-realization-map}
+There exists a structurally controlled realization map
+\[
+\mathcal R_{m}: \mathcal S_{\mathrm{spec}} \longrightarrow \mathcal S_{\mathrm{mass}}
+\]
+from admissible spectral sectors to admissible mass-readout sectors, where $\mathcal R_{m}$ is downstream of closure, cascade readout, and grouped transport.
+\end{proposition}
+
+\begin{proof}
+By the mass/spectral reading lemma, any mass assignment must be subordinated to a prior spectral organization. The admissible spectral sectors are produced only after the closure-stable body has been transported through the projection/translation layer and read out through the cascade. Hence the passage to a mass language is not primitive but realized by a downstream map from already admissible spectral sectors. Denote this realization map by $\mathcal R_m$. Its domain is therefore restricted to $\mathcal S_{\mathrm{spec}}$ and its codomain inherits admissibility from the upstream structural chain.
+\end{proof}
+
+\begin{proposition}[Generation-compatible decomposition]
+\label{prop:generation-compatible-decomposition}
+If a generation-like multiplicity appears in the physical layer, then it must be expressible as an admissible decomposition of the image of $\mathcal R_m$ rather than as an unconstrained replication of primitive sectors.
+\end{proposition}
+
+\begin{proof}
+The generation-splitting lemma already excludes free multiplication of unrelated sectors. Since the physical layer is reached only after grouped transport and spectral-to-mass realization, any multiplicity that survives into the interface regime must be inherited from the already admissible image of $\mathcal R_m$. Thus a generation-like structure can only be accepted when it is realizable as a constrained decomposition of an upstream admissible spectral body.
+\end{proof}
+
+\begin{theorem}[Controlled physical interface functor]
+\label{thm:controlled-physical-interface-functor}
+The first physically readable regime of the Companion is determined by a controlled interface functor
+\[
+\mathfrak I_{\mathrm{phys}}:
+(\mathfrak G,\mathfrak P,\mathfrak F)
+\longrightarrow
+\mathcal O_{\mathrm{phys}},
+\]
+which assigns observer, spectral, mass, and generation-level readouts to admissible structural sectors while preserving closure compatibility and ontology non-drift.
+\end{theorem}
+
+\begin{proof}
+The observer covariance lemma identifies physically readable frames as transport-compatible readouts of the same body. The spectral-to-mass realization proposition supplies a downstream realization map from spectral sectors to mass sectors, while the generation-compatible decomposition proposition constrains multiplicity to inherited admissible decompositions. Collecting these assignments yields a functorial interface from the grouped structural architecture to a space of physically readable observables $\mathcal O_{\mathrm{phys}}$. Since every step is subordinated to admissibility, closure, and no-ontology drift, the resulting interface is controlled rather than ontologically generative.
+\end{proof}
+
+\begin{corollary}[Refined physical interface chain]
+\label{cor:refined-physical-interface-chain}
+The refined physical interface chain is
+\[
+\begin{aligned}
+&\text{observer covariance}
+\Longrightarrow
+\text{spectral-to-mass realization}\
+&\Longrightarrow
+\text{generation-compatible decomposition}
+\Longrightarrow
+\text{controlled interface functor}.
+\end{aligned}
+\]
+Hence the physical language of the Companion is introduced only as a regulated readout of the normalized structural architecture.
 \end{corollary}
 
 %% ============================================================
@@ -8801,6 +8876,8 @@ v2.15.0 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.192
 \hline
 v2.16.0 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.19226445}{10.5281/zenodo.19226445} \\
 \hline
+v2.17.0 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.19226497}{10.5281/zenodo.19226497} \\
+\hline
 \end{longtable}
 }
 
@@ -8822,9 +8899,9 @@ Zenodo v4.15, March 2026.
 
 \bibitem{brendecke2026sphaera}
 Marc Brendecke,
-\emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding} (Quantum Sphaera Companion v2.16.0),
+\emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding} (Quantum Sphaera Companion v2.17.0),
 March 2026.
-\newblock DOI: \href{https://doi.org/10.5281/zenodo.19226445}{10.5281/zenodo.19226445}.
+\newblock DOI: \href{https://doi.org/10.5281/zenodo.19226497}{10.5281/zenodo.19226497}.
 
 \bibitem{kim2026}
 Yilwook Kim,
