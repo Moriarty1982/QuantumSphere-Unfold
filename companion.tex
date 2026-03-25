@@ -1,0 +1,1238 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{geometry,hyperref,booktabs,array,longtable,enumitem}
+\usepackage[style=ddmmyyyy]{datetime2}
+
+\geometry{margin=2.8cm}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{axiom}[theorem]{Axiom}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\newcommand{\docversion}{0.6.0}
+\newcommand{\conceptdoi}{10.5281/zenodo.19210728}
+\newcommand{\docdate}{\DTMdisplaydate{2026}{03}{25}{-1}}
+\newcommand{\zminus}{z^-}
+\newcommand{\HC}{\mathcal{C}}
+
+\title{Quantum Sphaera Companion\\
+\large A Structure-First Mathematical Unfolding}
+\author{Marc Brendecke\\
+\small Independent Researcher, Bochum, Germany}
+\date{\docdate{}\\
+\small Version v\docversion}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\vspace{-0.8em}
+{\small\textbf{Zenodo DOI:} \texttt{\conceptdoi}}\\[0.2em]
+{\small\textit{First public Zenodo companion draft \textbar\ Companion to the main Quantum Sphaera manuscript}}
+\end{center}
+
+\begin{center}
+\fbox{\begin{minipage}{0.92\textwidth}
+\small
+\textbf{Status note.} Public companion release. This version extends the strengthened closure/deformation, probe, Einstein, and Higgs corridors by adding a mixed closure--projection calculus, reduced normal-form uniqueness, probe-to-readout persistence, and a global synthesis persistence layer while preserving the structure-first role of the companion relative to the main Quantum Sphaera manuscript.
+\end{minipage}}
+\end{center}
+
+\begin{abstract}
+This companion manuscript develops a structure-first mathematical unfolding of the current Quantum Sphaera framework. Its role is to make the mathematical backbone of the main manuscript explicit without replacing the main structural text. Starting from the collapse-centered ground condition $\zminus=0$, the paper fixes the ground carrier, triolic decomposition, structural orthogonality, involution--compensator layer, and closure-stable sector as the common backbone of the framework. On this basis it derives a closure-compatible structural master equation, formulates controlled Dirac-, Yang--Mills/QFT-, and Einstein-type projection regimes, and connects probe geometry to frame-shifted measurement and readout. Compared with the previous public companion release, this version adds a mixed closure--projection calculus, strengthens reduced normal-form uniqueness for projected admissible dynamics, extends probe continuations to persistent readout coherence, and introduces a global synthesis persistence layer linking the strengthened corridors back to one collapse-centered structural core. It is intended as a public mathematical release of the companion line and a stable basis for later full proof expansion.
+\end{abstract}
+
+\clearpage
+\tableofcontents
+\clearpage
+
+\section{Introduction}
+This document is a technical companion to the main Quantum Sphaera manuscript. The main paper remains the leading structural proof and conceptual guide; the present text has the narrower task of making the mathematical backbone more explicit without overwriting the architecture of the source manuscript. In particular, the companion isolates those transitions at which a critical reader would normally ask for sharper definitions, admissibility conditions, operator-level statements, or explicit regime reductions.
+
+The companion follows a strict structure-first principle. It therefore fixes the invariant object and its admissible structural operations before discussing effective equations, projection regimes, or phenomenological readouts. In this logic, the visible sectors are not independent ontological layers but controlled readings of one collapse-centered core. The technical role of the companion is to expose enough of that logic to make the project mathematically inspectable.
+
+The manuscript is organized as follows. Sections~2--5 fix the ground vocabulary, triolic compatibility, the involution--compensator layer, closure, and the first compatibility results. Sections~6--8 derive the equivalence of sector readings, the structural master equation, and the three principal controlled projection regimes. Sections~9--10 connect this structural dynamics to probe geometry, frame-shifted readout, mass, gauge, and Higgs-type coupling data. The discussion and appendices summarize the present mathematical status of the manuscript, collect the principal theorem corridors strengthened in this release, and indicate the main remaining tasks for the later full proof expansion.
+
+\section{Structural Preliminaries}
+
+\subsection{Guiding principle}
+The main paper fixes the interpretive rule of the framework: the visible sectors are not independent ontological objects, but structurally equivalent readings of a single invariant state. The companion therefore begins with the ground condition and the operators that preserve or reveal it.
+
+\begin{definition}[Collapse state]
+The \emph{collapse state} is the invariant structural ground condition
+\[
+\zminus = 0.
+\]
+It is the distinguished reference state relative to which the visible Sphaera, triolic decomposition, sector structure, and symmetry readings are interpreted.
+\end{definition}
+
+\begin{definition}[Ground carrier]
+A \emph{ground carrier} is a structured ambient space together with enough data to formulate the collapse state, a triolic decomposition, an involution, a compensator map, and a closure condition. In operator-theoretic realizations this carrier may be a Hilbert- or Hardy-type space endowed with an anti-unitary involution; in algebraic realizations it may be represented through quaternionic, octonionic, or septenionic liftings.
+\end{definition}
+
+\begin{definition}[Triole]
+A \emph{triole} is an ordered triple
+\[
+T=(X_1,X_2,X_\perp)
+\]
+of structural channels in a common ground carrier such that $X_\perp$ is structurally orthogonal to $X_1$ and $X_2$, while the full triple remains a single admissible reading of the same invariant core.
+\end{definition}
+
+\begin{definition}[Structural orthogonality]
+Two structural components are \emph{structurally orthogonal} if their admissible coupling vanishes in the relevant closure regime, or survives only as an internally compensated residual term that does not destroy the triolic separation.
+\end{definition}
+
+\begin{definition}[Structural sector]
+A \emph{structural sector} is an admissible reading of the same ground architecture, for example as collapse reading, triolic reading, compensator-fixed reading, probe reading, or algebraic lifting.
+\end{definition}
+
+\begin{definition}[Structural involution]
+Let $\mathcal H$ be a ground carrier. A \emph{structural involution} is an anti-unitary map
+\[
+J:\mathcal H\to\mathcal H,
+\qquad J^2 = \mathrm{id},
+\]
+which encodes the reflected or dual structural reading relevant to the collapse-compatible sector.
+\end{definition}
+
+\begin{definition}[Heisenberg compensator]
+Given a structural involution $J$, the \emph{Heisenberg compensator} is the map
+\[
+\HC(f):=\frac12(f+Jf).
+\]
+It extracts the $J$-compatible component of $f$ and is interpreted as the internal compensating projection toward the closure-compatible sector.
+\end{definition}
+
+\begin{definition}[Closure]
+A system is \emph{closure-stable} if all admissible states, generated terms, couplings, and readouts remain confined to a single structurally admissible class preserved by the compensator and the allowed evolution maps.
+\end{definition}
+
+\begin{definition}[Frame shift]
+A \emph{frame shift} is a systematic displacement between the underlying structural coordinates and the coordinates used by a concrete measurement or readout frame, so that observables appear as shifted readings of the same invariant core.
+\end{definition}
+
+\begin{definition}[Probe configuration]
+A \emph{probe configuration} consists of two probes $P_L,P_R$ that are structurally coordinated with the same ground carrier, together with a third orthogonal component $P_\perp$ acting as a constrained search region. In the standing framework interpretation, each probe may itself carry an internal triolic structure.
+\end{definition}
+
+\begin{definition}[Structural equivalence]
+Two admissible sector readings are \emph{structurally equivalent} if they are related by a finite chain of admissible carrier maps --- such as triolic re-coordinatizations, involutive reflections, compensator projections, closure-preserving embeddings, or algebraic liftings --- without changing the underlying collapse state.
+\end{definition}
+
+\begin{remark}
+In the standing framework interpretation, the Heisenberg compensator is not an auxiliary postulate but emerges from the ground condition and enforces confinement inside the relevant septonionic or meta-septenionic closure sector.
+\end{remark}
+
+\section{Triolic Decomposition and Orthogonality}
+The triolic decomposition is the first nontrivial structural reading of the ground state. In the main manuscript, the triole is not an added decoration but a coordinate presentation of the same object. In the technical realization, the triolic channels admit algebraic liftings that make orthogonality explicit.
+
+\begin{lemma}[Nontriviality of the triole]
+Under the standing assumptions of the framework, the triolic decomposition is not empty and is not reducible to a purely dyadic reading without loss of structural information.
+\end{lemma}
+
+\begin{proof}
+The framework architecture fixes the third component not as a decorative redundancy but as the orthogonal channel required to encode closure, probe separation, and constrained search. Removing the third channel would collapse the distinction between directed transport and orthogonal confinement, and would therefore destroy data that the standing interpretation treats as structurally essential. Hence the triolic decomposition is genuinely nontrivial.
+\end{proof}
+
+\begin{lemma}[Orthogonal complementability]
+Let $(X_1,X_2)$ be an admissible structural pair in a ground carrier. Then there exists a structurally admissible orthogonal complement $X_\perp$, at least up to admissible symmetry equivalence, such that $(X_1,X_2,X_\perp)$ forms a triole.
+\end{lemma}
+
+\begin{proof}
+In operator-theoretic realizations one passes to the orthogonal complement of the span generated by the admissible pair and then restricts to the closure-compatible component. In algebraic realizations the same role is played by a third distinguished imaginary direction or orthogonal subspace in the corresponding lifting. Since the framework only requires the complement up to admissible structural equivalence, this suffices to produce the desired third channel.
+\end{proof}
+
+\begin{lemma}[Readout invariance under frame shift]
+A frame-shifted readout may alter the observed representation of a structural state, but it does not alter the invariant collapse-centered core read by structurally equivalent sectors.
+\end{lemma}
+
+\begin{proof}
+By definition, the frame shift acts on the readout coordinates rather than on the ground condition itself. The collapse state therefore remains fixed, while the displaced representation changes only the coordinates in which the observer records masses, phases, or couplings. Hence the invariant structural core is preserved.
+\end{proof}
+
+\begin{remark}
+This is the precise point at which the project's measurement principle enters: observables may move under readout displacement even though the underlying structure does not.
+\end{remark}
+
+\section{Heisenberg Compensator and Closure}
+The Heisenberg compensator is the main technical bridge between the structure language of the main stand and the operator-theoretic realization of the Riemann text. In the companion it is the device that turns closure from a verbal constraint into an internal structural condition.
+
+\begin{lemma}[Compensator compatibility]
+If a configuration is closure-stable, then the Heisenberg compensator acts structure-internally on that configuration and does not carry admissible states out of the closure-compatible class.
+\end{lemma}
+
+\begin{proof}
+The compensator symmetrizes a state with respect to the structural involution and by construction extracts the component compatible with the admissible closure branch. Since closure-stability means precisely that the admissible class is preserved under the allowed structural maps, the compensator cannot leave that class when acting on closure-stable states.
+\end{proof}
+
+\begin{lemma}[Closure stability under structurally equivalent readings]
+Let $X$ and $Y$ be structurally equivalent sector readings. If $X$ is closure-stable, then $Y$ is closure-stable as well.
+\end{lemma}
+
+\begin{proof}
+Structural equivalence is defined through admissible maps that preserve the collapse state and the admissible carrier structure. Since closure-stability is formulated in terms of preservation under exactly these admissible maps, it is transported from $X$ to $Y$ along any equivalence chain. Therefore closure is invariant under passage between structurally equivalent readings.
+\end{proof}
+
+\begin{lemma}[Idempotent reading of the compensator]
+In a compatible realization in which the involution splits the carrier into compatible and incompatible branches, the Heisenberg compensator acts as the projector onto the compatible branch.
+\end{lemma}
+
+\begin{proof}
+The map $\HC(f)=\frac12(f+Jf)$ is the standard symmetrization with respect to the involution. The result is fixed by $J$ and therefore belongs to the compatible branch; conversely, compatible states are unchanged by the map. In this sense the compensator is idempotent on the compatible reading and acts as the corresponding projector.
+\end{proof}
+
+\begin{lemma}[Closure projector compatibility]
+If $\hat P_{\mathrm{cl}}$ denotes the projector onto the admissible closed sector and $\HC$ is the compensator on the same carrier, then on every closure-stable admissible state one has
+\[
+\hat P_{\mathrm{cl}}\HC\hat P_{\mathrm{cl}} = \HC\hat P_{\mathrm{cl}}.
+\]
+In particular, compensator readout of an already closed state remains closed.
+\end{lemma}
+
+\begin{proof}
+Let $u$ be admissible and closure-stable. Then $\hat P_{\mathrm{cl}}u=u$. By compensator compatibility, $\HC u$ remains inside the admissible class, hence is fixed by $\hat P_{\mathrm{cl}}$. Therefore
+\[
+\hat P_{\mathrm{cl}}\HC\hat P_{\mathrm{cl}}u=\hat P_{\mathrm{cl}}\HC u = \HC u = \HC\hat P_{\mathrm{cl}}u.
+\]
+Since this holds on the admissible closed sector, the claimed compatibility follows.
+\end{proof}
+
+\begin{lemma}[Defect decomposition of an admissible generator]
+Let $T$ be an admissible generator on the ground carrier. Then for every admissible state $u$ one has the decomposition
+\[
+Tu = \hat P_{\mathrm{cl}}Tu + \mathrm{Res}_{\mathrm{cl}}(T)u,
+\]
+where the first term is closed and the second term is the unique closure-defect contribution relative to the chosen projector.
+\end{lemma}
+
+\begin{proof}
+Insert the identity $I = \hat P_{\mathrm{cl}} + (I-\hat P_{\mathrm{cl}})$ on the output side of $T$. This gives
+\[
+Tu = \hat P_{\mathrm{cl}}Tu + (I-\hat P_{\mathrm{cl}})Tu.
+\]
+For admissible $u$ one has $u=\hat P_{\mathrm{cl}}u$, so the second term is exactly
+\[
+(I-\hat P_{\mathrm{cl}})T\hat P_{\mathrm{cl}}u = \mathrm{Res}_{\mathrm{cl}}(T)u.
+\]
+Uniqueness follows from the direct-sum decomposition into closed and complementary parts.
+\end{proof}
+
+\begin{corollary}[Defect-free admissible evolution]
+If all effective generators entering an admissible evolution law are closure-preserving, then the corresponding evolution is defect-free on the closed sector.
+\end{corollary}
+
+\begin{proof}
+Apply the residue-vanishing lemma to each closure-preserving generator and sum the resulting zero residues. The induced evolution therefore contains no closure-defect contribution on admissible states.
+\end{proof}
+
+\begin{lemma}[Residue transport through admissible composition]
+Let $S$ and $T$ be admissible structural operators. If $S$ preserves the closed sector, then on admissible states one has
+\[
+\mathrm{Res}_{\mathrm{cl}}(TS)=\mathrm{Res}_{\mathrm{cl}}(T)S.
+\]
+If both $S$ and $T$ preserve the closed sector, then $TS$ is defect-free.
+\end{lemma}
+
+\begin{proof}
+Let $u$ be admissible, so $u=\hat P_{\mathrm{cl}}u$. Since $S$ preserves the closed sector, the vector $Su$ is again closed. Hence
+\[
+\mathrm{Res}_{\mathrm{cl}}(TS)u=(I-\hat P_{\mathrm{cl}})TS\hat P_{\mathrm{cl}}u=(I-\hat P_{\mathrm{cl}})TSu=\mathrm{Res}_{\mathrm{cl}}(T)Su.
+\]
+This proves the transport identity. If both factors preserve the closed sector, then the right-hand side vanishes by the residue-vanishing lemma, so the composition is defect-free.
+\end{proof}
+
+\begin{lemma}[Defect cancellation criterion]
+Let $T_1$ and $T_2$ be admissible operators on the same ground carrier. If
+\[
+\mathrm{Res}_{\mathrm{cl}}(T_1)=-\mathrm{Res}_{\mathrm{cl}}(T_2)
+\]
+on the admissible closed sector, then the sum $T_1+T_2$ is defect-free on that sector.
+\end{lemma}
+
+\begin{proof}
+Residues are linear in the operator. Therefore
+\[
+\mathrm{Res}_{\mathrm{cl}}(T_1+T_2)=\mathrm{Res}_{\mathrm{cl}}(T_1)+\mathrm{Res}_{\mathrm{cl}}(T_2)=0
+\]
+on admissible closed states. The summed evolution is therefore defect-free.
+\end{proof}
+
+\begin{corollary}[Compensated defect cancellation]
+If the residue of an admissible generator is cancelled by the residue of a compensator correction term, then the effective generator obtained by adding the correction is defect-free on the closed sector.
+\end{corollary}
+
+\begin{proof}
+Apply the defect cancellation criterion with $T_2$ chosen as the compensator correction term. When the correction contributes the opposite residue on the admissible sector, the effective sum has vanishing closure residue.
+\end{proof}
+
+\begin{proposition}[Existence of a closure-compatible ground class]
+There exists a nonempty class of states on the ground carrier that is simultaneously triolically readable, orthogonally complementable, compensator-compatible, and closure-stable.
+\end{proposition}
+
+\begin{proof}
+Take any admissible realization of the ground carrier carrying a nondegenerate triolic decomposition and a structural involution. By the previous lemmas the triole admits an orthogonal completion and the compensator acts within the compatible branch. Restricting to the compensator-fixed and closure-preserved sector yields a nonempty class with all required properties.
+\end{proof}
+
+\begin{proposition}[Compensator implies structural binding]
+Under the standing assumptions of the framework, the Heisenberg compensator prevents admissible generated terms from leaving the closure-compatible class.
+\end{proposition}
+
+\begin{proof}
+Any admissible term generated from a closure-stable state is first evaluated inside the carrier and then read through the compensator-compatible branch. The previous compatibility lemma shows that the compensator acts internally on the closure class, while closure excludes structurally external leakage. Hence admissible generated terms remain confined to the same class.
+\end{proof}
+
+\begin{remark}
+This formalizes the standing framework rule that the compensator prevents structural breakout and confines the dynamics to the admissible septonionic or meta-septenionic layer.
+\end{remark}
+
+\begin{definition}[Closure residue]
+Let $\hat P_{\mathrm{cl}}$ denote the projector onto the admissible closed sector. For any structural operator $T$ acting on the ground carrier, the associated \emph{closure residue} is
+\[
+\mathrm{Res}_{\mathrm{cl}}(T):=(I-\hat P_{\mathrm{cl}})T\hat P_{\mathrm{cl}}.
+\]
+It measures the part of the action of $T$ that attempts to leave the admissible closed sector when evaluated on already admissible states.
+\end{definition}
+
+\begin{definition}[Closure defect]
+A \emph{closure defect} is any nonzero residue term $\mathrm{Res}_{\mathrm{cl}}(T)$ associated with an admissible structural map, projected derivative, or effective coupling. The admissible regime is defect-free precisely when all structurally allowed generating operators have vanishing closure residue.
+\end{definition}
+
+\begin{lemma}[Residue vanishes for closure-preserving operators]
+If an admissible operator $T$ preserves the closed sector, i.e. $T(\operatorname{Ran} \hat P_{\mathrm{cl}})\subseteq \operatorname{Ran} \hat P_{\mathrm{cl}}$, then $\mathrm{Res}_{\mathrm{cl}}(T)=0$.
+\end{lemma}
+
+\begin{proof}
+For any $u$ in the carrier, the vector $\hat P_{\mathrm{cl}}u$ already lies in the closed sector. By the assumed preservation property, $T\hat P_{\mathrm{cl}}u$ again lies in the closed sector and is therefore fixed by $\hat P_{\mathrm{cl}}$. Applying $(I-\hat P_{\mathrm{cl}})$ to such a vector yields zero. Hence the residue vanishes identically.
+\end{proof}
+
+\begin{proposition}[Compensator suppression of closure defects]
+Within the admissible companion regime, every compensator-stable closure-preserving generator is defect-free. More generally, any admissible generated term may be decomposed into a closed contribution and a closure residue, and the residue vanishes once the compensator and closure conditions are simultaneously imposed.
+\end{proposition}
+
+\begin{proof}
+The decomposition is obtained by inserting $I=\hat P_{\mathrm{cl}}+(I-\hat P_{\mathrm{cl}})$ on the output side of an admissible generator. The first summand is the closed contribution and the second is exactly the closure residue. If the generator is closure-preserving, the previous lemma gives vanishing residue. If, in addition, the generator is read through the compensator-compatible branch, then any remaining incompatible component is removed by the compensator projector, so no admissible defect survives in the effective closed dynamics.
+\end{proof}
+
+
+
+
+\begin{lemma}[Closure stability under admissible deformation]
+Let $\{T_\varepsilon\}_{|\varepsilon|<\varepsilon_0}$ be an admissible deformation family of structural operators with $T_0$ closure-preserving and with deformation residue $\mathrm{Res}_{\mathrm{cl}}(T_\varepsilon-T_0)$ compensated by the same Heisenberg branch. Then for sufficiently small admissible $\varepsilon$, the deformed operator remains closure-compatible on the closed sector.
+\end{lemma}
+
+\begin{proof}
+By defect decomposition, the only obstruction to closure-compatibility is the complementary residue term. The hypothesis states that the deformation residue remains inside the same compensator-controlled branch, so the deformed operator differs from the closure-preserving one only by an internally compensated admissible correction. For sufficiently small admissible deformation parameter this correction cannot open a new external leakage channel, hence closure-compatibility is preserved.
+\end{proof}
+
+\begin{proposition}[Compatibility persists under closure-admissible deformation]
+The compatible structural class identified in the previous existence proposition remains nonempty and admissible under every sufficiently small closure-admissible deformation of its effective generators.
+\end{proposition}
+
+\begin{proof}
+Start from one compatible representative provided by the existence proposition. Apply the previous deformation lemma to each admissible generator entering the corresponding realization. Since closure, compensator branch, and orthogonal triolic structure are preserved under the allowed small deformation, the deformed realization remains inside the same compatible class. Nonemptiness therefore persists.
+\end{proof}
+
+\section{Structural Existence and Compatibility}
+The first technical task of the companion is to show that the tuple consisting of collapse state, triolic decomposition, involution, compensator, and closure condition is not only nonempty but mutually compatible at the structural level.
+
+\begin{proposition}[Minimal compatibility scaffold]
+Suppose a ground carrier admits:
+\begin{enumerate}[label=(\roman*)]
+    \item a nontrivial triolic decomposition,
+    \item a structural involution $J$,
+    \item a compensator $\HC$ induced by $J$, and
+    \item a closure sector preserved by the admissible structural maps.
+\end{enumerate}
+Then the structural system is well-posed at the abstract level and supports a nontrivial collapse-compatible sector.
+\end{proposition}
+
+\begin{proof}
+Nontriviality follows from the nondegenerate triolic decomposition. The involution and the associated compensator select a compatible branch, and closure preserves that branch under admissible structural operations. Hence the tuple defines a coherent structural system with a distinguished collapse-compatible sector.
+\end{proof}
+
+\begin{theorem}[Structural compatibility theorem]
+The collapse state, triolic decomposition, structural orthogonality, Heisenberg compensator, and closure condition are jointly compatible within every admissible realization of the companion framework.
+\end{theorem}
+
+\begin{proof}
+The collapse state fixes the invariant core. By the triolic lemmas there is a nontrivial three-channel reading with an admissible orthogonal complement. By the compensator lemmas, the involution-induced compensator acts internally on closure-stable states and projects to the compatible branch. By the existence proposition there is a nonempty class on which all of these structures are simultaneously realized. Therefore the listed ingredients are jointly compatible.
+\end{proof}
+
+\begin{corollary}[Stability of admissible observables]
+Every observable obtained by composing a closure-preserving operator with compensator readout remains an observable of the same admissible structural class.
+\end{corollary}
+
+\begin{proof}
+Closure-preserving operators keep admissible states inside the closed sector, and the closure-projector compatibility lemma shows that compensator readout of such states remains closed. Hence the composed observable never leaves the admissible class.
+\end{proof}
+
+\section{Structural Equivalence and Sector Relations}
+Different visible sectors are interpreted as distinct readings of the same invariant state rather than unrelated objects. The companion's role is to formulate this principle in a technically sharper form.
+
+\begin{proposition}[Equivalence of visible sector readings]
+Assume the ground carrier admits a collapse state $\zminus=0$, a nondegenerate triolic decomposition, a structural involution $J$, and a compensator-stable closure sector. Then the following are structurally equivalent readings of a single invariant object:
+\begin{enumerate}[label=(\roman*)]
+    \item the collapse-compatible sector itself,
+    \item its triolic coordinate presentations,
+    \item the compensator-fixed realization $\HC(f)$ of admissible states, and
+    \item algebraic liftings into quaternionic, octonionic, or septonian realizations that preserve triolic orthogonality and closure.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+The collapse state is fixed by assumption. A nondegenerate triolic decomposition gives coordinate readings of the same object rather than additional objects. The involution and compensator preserve the collapse-compatible sector and therefore provide admissible re-readings inside the same closure class. Finally, algebraic liftings are admissible precisely because they preserve the orthogonality and confinement data required by the carrier. Hence all displayed realizations represent the same invariant object in different structural languages.
+\end{proof}
+
+\begin{proposition}[Probe-sector relation]
+Let $\Pi_L$ and $\Pi_R$ be orthogonal probe projectors and let $P_\perp$ project onto the orthogonal complement. Then the triple
+\[
+(\mathrm{ran}(\Pi_L),\mathrm{ran}(\Pi_R),\mathrm{ran}(P_\perp))
+\]
+forms a triolic decomposition at the probe level, with the third sector acting as a constrained search region.
+\end{proposition}
+
+\begin{proof}
+Orthogonality of the probe projectors gives separation of the left and right channels. By construction, the orthogonal complement is perpendicular to both. Hence the probe configuration inherits the same triolic logic as the base carrier: two directed channels together with a third orthogonal search sector.
+\end{proof}
+
+
+\begin{lemma}[Equivalence preserves orthogonality data]
+If two sector readings are structurally equivalent, then the orthogonality relations among their triolic channels are preserved up to admissible symmetry equivalence.
+\end{lemma}
+
+\begin{proof}
+Structural equivalence is generated by admissible maps that preserve the collapse state, the triolic architecture, and closure. Such maps may re-coordinate the channels, but they cannot remove the third orthogonal role without leaving the admissible class. Therefore orthogonality data are preserved up to the allowed symmetries of the carrier.
+\end{proof}
+
+\begin{lemma}[Equivalence preserves compensator-fixed content]
+Let $X$ and $Y$ be structurally equivalent readings. Then compensator-fixed data in $X$ correspond to compensator-fixed data in $Y$ under the admissible equivalence chain.
+\end{lemma}
+
+\begin{proof}
+Each admissible map in the equivalence chain preserves the closure-compatible branch and therefore transports the compensator-fixed component of an admissible state to the compensator-fixed component of its image. Composing these maps yields the claim.
+\end{proof}
+
+\begin{theorem}[Structural equivalence theorem]
+Collapse reading, triolic reading, compensator-fixed reading, and admissible algebraic liftings are structurally equivalent representations of the same collapse-centered invariant core.
+\end{theorem}
+
+\begin{proof}
+The previous equivalence proposition identifies the admissible readings and proves that each preserves the same collapse state. Closure stability under structurally equivalent readings guarantees that passage between them does not destroy admissibility, and readout invariance under frame shift shows that observational displacement does not alter the invariant core. Hence all listed readings are structurally equivalent representations of the same object.
+\end{proof}
+
+\begin{remark}
+This is the companion version of the project's standing rule that Sphaera, triole, sector decomposition, and compensator output are not separate ontological layers. They are distinct mathematically useful readings of the same collapse architecture.
+\end{remark}
+\section{Derivation of the Structural Master Equation}
+The main paper already suggests that the effective dynamics should be first-order, closure-preserving, and compatible with both the probe sector and the compensator sector. The companion now sharpens this into a short derivation chain: first the admissible derivative is fixed, then the resonance content is constrained, and finally the four structural slots of the master equation are identified.
+
+\begin{definition}[Closure-compatible covariant derivative]
+Let $\hat P_{\mathrm{cl}}$ denote the projector onto the admissible closure sector, let $\mathcal A_\mu$ be an effective connection, let $n_\mu$ denote the distinguished structural axis, and let $\mathcal H_C$ denote the compensator field. The \emph{closure-compatible covariant derivative} is
+\[
+\mathcal D_\mu
+:=
+\partial_\mu
++ i\mathcal A_\mu
++ \kappa\,\HC\,n_\mu
++ \eta\,(\mathbf 1-\hat P_{\mathrm{cl}})\,n_\mu,
+\]
+where $\kappa,\eta\in\mathbb R$ are effective couplings.
+\end{definition}
+
+\begin{remark}
+The third term stabilizes the compensator-compatible branch, while the fourth penalizes drift away from the admissible closure sector. This matches the standing project reading that closure is not decorative but dynamically enforced.
+\end{remark}
+
+\begin{lemma}[Necessity of the closure slot]
+Any first-order structural dynamics that is intended to preserve admissibility must contain a term that distinguishes the closure-compatible branch from its complement.
+\end{lemma}
+
+\begin{proof}
+Without such a term, the dynamics cannot detect whether an evolved state remains in the admissible closure sector or drifts into its complement. But closure in the companion is not merely interpretive; it is part of the structural definition of admissibility. Hence a first-order law that preserves admissibility must contain an explicit closure-sensitive contribution, realized here by $(\mathbf 1-\hat P_{\mathrm{cl}})n_\mu$.
+\end{proof}
+
+\begin{lemma}[Necessity of the compensator slot]
+If the companion dynamics is required to remain compatible with the involution-induced admissible branch, then a compensator contribution must appear explicitly in the effective derivative or equivalently in the effective operator acting on admissible states.
+\end{lemma}
+
+\begin{proof}
+The earlier compatibility block showed that admissibility is carried by the compensator-fixed branch. A dynamics that ignored this branch structure would fail to distinguish compatible from incompatible readouts. Therefore the compensator cannot remain hidden purely at the interpretive level; it must enter the operative form of the dynamics. In the present scaffold this is encoded by the $\kappa\,\HC n_\mu$ term.
+\end{proof}
+
+\begin{definition}[Structural master equation]
+Let $\Gamma^\mu$ denote the effective first-order transport generators and let $\Omega$ be the effective resonance operator. The \emph{structural master equation} is
+\[
+\bigl(i\Gamma^\mu\mathcal D_\mu - \Omega\bigr)\Psi = 0.
+\]
+\end{definition}
+
+\begin{proposition}[Minimal resonance decomposition]
+A closure-compatible minimal ansatz for $\Omega$ is
+\[
+\Omega
+=
+ m_0\mathbf 1
+ + \alpha\,\hat P_{\mathrm{cl}}\mathcal M\hat P_{\mathrm{cl}}
+ + \beta\,\mathcal T
+ + \gamma\,\HC,
+\]
+where $m_0$ is an inertial scale, $\mathcal M$ an internal closure resonance operator, $\mathcal T$ a triadic coupling operator, and $\alpha,\beta,\gamma\in\mathbb R$ are effective coefficients.
+\end{proposition}
+
+\begin{proof}
+The first-order character is fixed by the probe-side transport law. Closure compatibility requires projection through the admissible closure sector. The triadic architecture contributes a coupling term of triolic type, and compensator stabilization contributes a direct compensator term. The displayed ansatz is therefore the minimal local expression containing exactly the structural ingredients already fixed in the project sources.
+\end{proof}
+
+\begin{proposition}[Minimal structural form of admissible dynamics]
+Let admissible dynamics mean: first-order transport on the carrier, compatibility with the closure sector, and compatibility with the compensator-fixed branch. Then every such dynamics admits a representation of the form
+\[
+\bigl(i\Gamma^\mu\mathcal D_\mu - \Omega\bigr)\Psi = 0,
+\]
+with $\mathcal D_\mu$ as above and with $\Omega$ containing only internal structural data.
+\end{proposition}
+
+\begin{proof}
+The transport part is represented by a first-order operator $i\Gamma^\mu\partial_\mu$. By the previous two lemmas, admissibility forces explicit closure-sensitive and compensator-sensitive contributions, which together produce the distinguished derivative $\mathcal D_\mu$ up to a redistribution of lower-order terms. All remaining local internal information can then be collected in a residual operator $\Omega$. This yields the claimed normal form.
+\end{proof}
+
+\begin{lemma}[Separation of transport and internal resonance]
+In the master equation normal form, all terms containing derivatives belong to the transport--connection side, while all non-derivative internal structural data may be absorbed into $\Omega$.
+\end{lemma}
+
+\begin{proof}
+By construction $\mathcal D_\mu$ contains the derivative and connection data, together with the closure-sensitive and compensator-sensitive first-order corrections attached to the structural axis. Terms that do not differentiate the state do not contribute to transport and therefore belong to the internal structural sector. Hence they may be absorbed into $\Omega$ without changing the first-order character of the equation.
+\end{proof}
+
+
+\begin{lemma}[Irreducibility of the closure--compensator slot]
+The closure-sensitive and compensator-sensitive contributions cannot, in general, be absorbed simultaneously into the internal resonance operator $\Omega$ without losing the distinction between admissible transport and off-sector suppression.
+\end{lemma}
+
+\begin{proof}
+The closure and compensator terms are attached to the first-order derivative side through the distinguished structural axis and act by regulating how transport approaches the admissible sector. By contrast, $\Omega$ collects derivative-free internal data. Absorbing the closure--compensator contribution into $\Omega$ would erase whether a correction acts as transport regulation or as internal resonance. Since the companion treats this distinction as structurally meaningful, the slot is irreducible in general.
+\end{proof}
+
+\begin{corollary}[Normal-form uniqueness up to internal redistribution]
+Any two admissible master-equation normal forms differ only by redistribution of derivative-free internal terms inside $\Omega$ and by admissible reparameterization of the active coefficients in $\mathcal D_\mu$.
+\end{corollary}
+
+\begin{proof}
+The previous lemmas force the presence of transport, closure, and compensator content on the derivative side. The separation lemma places all remaining local derivative-free content into $\Omega$. Therefore two admissible normal forms may differ only by how the internal non-derivative data are packaged and by admissible coefficient choices.
+\end{proof}
+
+
+\begin{lemma}[Closure--compensator persistence under admissible perturbation]
+Let $\delta\mathcal D_\mu$ be a first-order perturbation of the distinguished derivative such that admissibility, closure-sensitivity, and compensator compatibility are preserved. Then the perturbed dynamics still contains a nontrivial closure--compensator slot on the derivative side.
+\end{lemma}
+
+\begin{proof}
+Admissibility-preserving perturbations are not allowed to remove the structural distinction between closure-preserving transport and off-sector suppression. By the necessity lemmas, that distinction already forces explicit closure-sensitive and compensator-sensitive data into the derivative operator. Hence a perturbation that preserves admissibility may change coefficients or redistribute derivative-free internal data, but it cannot eliminate the derivative-side closure--compensator content altogether.
+\end{proof}
+
+\begin{proposition}[Master-equation stability under admissible perturbation]
+Suppose an admissible evolution law is deformed by a first-order perturbation preserving the carrier, closure sector, and compensator-fixed branch. Then the deformed equation still admits a structural master-equation representation with the same four-slot architecture.
+\end{proposition}
+
+\begin{proof}
+The transport slot persists because the perturbation remains first-order on the same carrier. The previous lemma guarantees persistence of the closure--compensator slot. Any perturbed connection data remain on the derivative side, while all perturbed derivative-free internal data may again be absorbed into a redefined resonance operator. Therefore the same four-slot master-equation architecture survives the admissible perturbation.
+\end{proof}
+
+\begin{corollary}[Projected stability of admissible master dynamics]
+Any closure-compatible projected regime obtained by freezing inactive slots remains stable under admissible perturbations that respect the induced projection constraints.
+\end{corollary}
+
+\begin{proof}
+By the stability proposition, the ambient admissible dynamics keeps the same four-slot master architecture under perturbation. If a projected regime is defined by freezing some slots while preserving closure, then a perturbation respecting those projection constraints cannot reintroduce forbidden active slots. Hence the induced projected dynamics stays inside the same admissible projection class.
+\end{proof}
+
+\begin{theorem}[Structural master equation theorem]
+Under the standing assumptions of the framework, closure-compatible admissible dynamics possesses a first-order structural master equation
+\[
+\bigl(i\Gamma^\mu\mathcal D_\mu - \Omega\bigr)\Psi = 0,
+\]
+whose content separates into four logically distinct slots:
+\begin{enumerate}[label=(\roman*)]
+    \item a transport slot $i\Gamma^\mu\partial_\mu$,
+    \item a connection slot $\Gamma^\mu\mathcal A_\mu$,
+    \item a closure--compensator slot, and
+    \item an internal resonance slot encoded in $\Omega$.
+\end{enumerate}
+The transport and closure--compensator slots are structurally mandatory; the connection and resonance slots vary with the chosen sectoral reading.
+\end{theorem}
+
+\begin{proof}
+Existence of a compatible structural class was established in the previous sections. First-order transport is part of the standing dynamical reading of the project. The two necessity lemmas show that closure and compensator data must appear explicitly in any admissible dynamical law. The normal-form proposition then yields a master equation representation, and the separation lemma identifies the derivative-bearing and purely internal contributions. Therefore the master equation has the claimed four-slot structure, with transport and closure--compensator content universally required by admissibility, while the connection and resonance sectors depend on the regime in which the invariant object is read.
+\end{proof}
+
+\begin{remark}
+This is still a scaffold rather than a full coordinate derivation. Its purpose is to fix the exact structural slots into which the Dirac, QFT, Einstein, and probe-specific readings can later be inserted without altering the backbone of the system.
+\end{remark}
+
+
+
+\begin{lemma}[Projected coarse-graining consistency]
+Assume the bilinear observable sector admits a closure-compatible coarse-graining map $\mathfrak G$ into effective geometric data. If $\mathfrak G$ preserves the closed bilinear subalgebra up to compensator-fixed equivalence, then the induced geometric reading is independent of the choice of admissible representative in the same projection class.
+\end{lemma}
+
+\begin{proof}
+Two admissible representatives in the same projection class differ only by closure-compatible and compensator-fixed internal redistribution. By hypothesis, the coarse-graining map preserves the closed bilinear subalgebra up to exactly this equivalence. Therefore the resulting geometric data agree modulo the same admissible identification and the induced geometric reading is well-defined on the projection class rather than on a particular representative.
+\end{proof}
+
+\begin{proposition}[Einstein-corridor stability under admissible geometric reparameterization]
+Within the Einstein-type corridor, admissible reparameterizations of the reconstructed coframe that preserve the induced metric class and the closure-compatible bilinear subalgebra do not change the effective Einstein-type reading.
+\end{proposition}
+
+\begin{proof}
+The bilinear-to-geometric passage fixes the effective metric only through the closure-compatible bilinear observables and their induced coframe class. Any admissible reparameterization preserving both the metric class and the relevant closed bilinear subalgebra therefore changes only the chosen representative, not the effective geometric content extracted by the projection. The Einstein-type reading is consequently unchanged.
+\end{proof}
+
+
+\begin{lemma}[Projected normal-form rigidity]
+Let two projected admissible master equations share the same active-slot pattern and the same projected closure sector. Then every admissible redistribution between their surviving slots is internal and cannot generate a new projected dynamics class.
+\end{lemma}
+
+\begin{proof}
+The projected active-slot pattern fixes which transport, connection, closure--compensator, and resonance contributions survive. Any admissible redistribution therefore acts only within the surviving projected slot algebra and cannot leave that class.
+\end{proof}
+
+\begin{proposition}[Reduced normal-form uniqueness under fixed active-slot pattern]
+For a fixed admissible active-slot pattern, the reduced projected master equation is unique up to internal redistribution within the surviving projected slots.
+\end{proposition}
+
+\begin{proof}
+By projected normal-form rigidity, all admissible representatives with the same active-slot pattern differ only by internal redistribution. Hence they determine one reduced normal form at the projected level.
+\end{proof}
+
+\begin{corollary}[Projection-class uniqueness of reduced admissible dynamics]
+Every admissible projection class determines a unique reduced dynamics class on the invariant structural core.
+\end{corollary}
+
+\begin{proof}
+Fixing an admissible projection class fixes its active-slot pattern and projected closure sector. The preceding proposition then gives uniqueness of the reduced admissible dynamics class.
+\end{proof}
+
+\section{Structural Projections: Dirac, QFT, Einstein}
+The companion now inserts the minimal controlled limits already suggested by the main source. The point is not to derive three unrelated theories, but to show how different effective regimes arise from the same closure-preserving transport system once specific degrees of freedom are frozen, retained, or coarse-grained.
+
+\begin{lemma}[Closed-sector reduction]
+Let $\hat P_{\mathrm{cl}}$ project onto the admissible closure sector. If a state $\Psi$ is closure-stable, then the structural master equation restricts to the closed sector in the form
+\[
+\bigl(i\Gamma^\mu\hat P_{\mathrm{cl}}\mathcal D_\mu\hat P_{\mathrm{cl}}-\hat P_{\mathrm{cl}}\Omega\hat P_{\mathrm{cl}}\bigr)\Psi=0.
+\]
+\end{lemma}
+
+\begin{proof}
+Closure-stability means that admissible evolution preserves the range of $\hat P_{\mathrm{cl}}$. Therefore the master equation may be projected from both sides without producing leakage terms. The resulting equation is the induced equation on the closed sector.
+\end{proof}
+
+\begin{lemma}[Projection by suppression of inactive slots]
+Suppose a projected regime freezes one or more structural slots of the master equation while preserving closure. Then the remaining active slots define a consistent effective projected dynamics on the same invariant core.
+\end{lemma}
+
+\begin{proof}
+By the structural master equation theorem, transport, connection, closure--compensator, and internal resonance occur as logically distinct slots. If one freezes some of these contributions in a closure-compatible way, the remaining slots still act on the same admissible state space. Hence the reduced equation is a consistent effective reading rather than a new unrelated system.
+\end{proof}
+
+\begin{proposition}[Dirac projection]
+Assume exact closure on the physical sector, freeze the effective connection to a locally trivial background, and suppose that the resonance operator reduces on the closed sector to a scalar effective mass,
+\[
+\Omega\big|_{\hat P_{\mathrm{cl}}\mathcal H}
+=
+ m_{\mathrm{eff}}\,\mathbf 1.
+\]
+Then the structural master equation reduces to
+\[
+(i\Gamma^\mu\partial_\mu-m_{\mathrm{eff}})\Psi=0,
+\]
+which is the ordinary free Dirac form up to the chosen gamma representation.
+\end{proposition}
+
+\begin{proof}
+Apply the closed-sector reduction lemma. Exact closure removes off-sector leakage, trivial connection data removes the gauge-like contribution, and the scalar resonance assumption leaves only first-order transport plus a scalar inertial term. This is precisely the Dirac-type projection of the master system.
+\end{proof}
+
+\begin{proposition}[Yang--Mills or QFT projection]
+Assume exact closure but retain a nontrivial internal connection $\mathcal A_\mu$ on the closed sector. If the projected operator algebra generated by $\mathcal A_\mu$ closes on a finite-dimensional Lie algebra $\mathfrak g$, then the bosonic connection sector of the master system reduces to a Yang--Mills type field system on $\mathfrak g$.
+\end{proposition}
+
+\begin{proof}
+By closed-sector reduction, all operators may be restricted consistently to the admissible sector. Once the projected commutator algebra is Lie-closed, the restricted curvature has the standard gauge-theoretic form, and the active connection slot defines a Yang--Mills type dynamics on $\mathfrak g$. Thus a QFT-like gauge regime appears as an internal projection of the common structural system.
+\end{proof}
+
+\begin{lemma}[Connection compatibility of bilinear observables]
+Assume exact closure on the projected sector and let $\Psi$ be a closed-sector field with admissible derivative $\mathcal D^{(\mathrm{cl})}_\mu\Psi$. Suppose a family of bilinear observables
+\[
+E^a_{\ \mu}(\Psi)=B^a_{\ \mu}(\Psi,\Psi)
+\]
+is structural, gauge-covariant, and invariant under admissible frame-shift readout. Then the induced derivative of $E^a_{\ \mu}$ is again closure-compatible and depends only on the projected connection data of the closed sector.
+\end{lemma}
+
+\begin{proof}
+Because the bilinear map $B^a_{\ \mu}$ is structural and gauge-covariant, differentiating $E^a_{\ \mu}$ inserts only the admissible projected derivative of $\Psi$ into the two slots of the bilinear form. Exact closure excludes leakage into nonadmissible directions, so every resulting term remains inside the projected sector. Frame-shift invariance removes dependence on a particular readout gauge, leaving only the closure-compatible projected connection data.
+\end{proof}
+
+\begin{lemma}[Bilinear coframe reconstruction]
+Assume exact closure on the projected sector and let $\Psi$ be a closed-sector field carrying a nondegenerate family of bilinear observables
+\[
+E^a_{\ \mu}(\Psi)=B^a_{\ \mu}(\Psi,\Psi),
+\]
+with $a=0,\dots,d-1$. If the matrix $E^a_{\ \mu}$ has full rank, then the closed sector determines a coframe field and hence a metric candidate
+\[
+g_{\mu\nu}=\eta_{ab}E^a_{\ \mu}E^b_{\ \nu}.
+\]
+\end{lemma}
+
+\begin{proof}
+The previous lemma ensures that the bilinear observables are transported by closure-compatible projected connection data only, so the bilinear family is intrinsic to the closed sector. Full rank of $E^a_{\ \mu}$ makes the family a coframe. Contracting with the fixed internal Minkowski or Euclidean symbol $\eta_{ab}$ yields a symmetric nondegenerate tensor $g_{\mu\nu}$. Frame-shift invariance of the invariant core guarantees that the reconstruction depends on the structural sector itself rather than on a particular readout gauge.
+\end{proof}
+
+\begin{lemma}[Bilinear-to-geometric passage]
+Suppose the closed-sector derivative separates as
+\[
+\mathcal D_\mu^{(\mathrm{cl})}=\nabla_\mu^{(g)}+\mathbb A_\mu,
+\]
+and assume the closed sector admits a full-rank bilinear coframe reconstruction. Then every closure-compatible bilinear observable can be rewritten as a geometric tensor field on the reconstructed coframe bundle together with an internal residual contribution encoded by $\mathbb A_\mu$.
+\end{lemma}
+
+\begin{proof}
+Full-rank bilinear coframe reconstruction produces a nondegenerate coframe and therefore a metric candidate. Relative to this coframe, the geometric part $\nabla_\mu^{(g)}$ acts on the tensor indices determined by the reconstructed geometry, while the residual piece $\mathbb A_\mu$ acts only on internal indices. Hence any closure-compatible bilinear observable splits into a geometric tensorial part and an internal residual part. This is precisely the structural passage from bilinear observables to geometric variables required for the Einstein branch.
+\end{proof}
+
+\begin{lemma}[Geometric effective-action reduction]
+Suppose the closed-sector dynamics admits a coarse-grained local effective action in the reconstructed metric variable $g_{\mu\nu}$ and in residual internal fields. If all nongeometric fast modes are integrated out and the leading covariant geometric term in the derivative expansion is the Einstein--Hilbert density $R(g)$, then the leading metric dynamics is governed by an Einstein-type variational equation.
+\end{lemma}
+
+\begin{proof}
+Once the bilinear observables have been converted into geometric tensor variables on the reconstructed coframe bundle, standard covariant effective-field reasoning applies at the projected level: local low-energy terms are organized by derivative order and symmetry. By assumption, the lowest nontrivial geometric contribution is the Einstein--Hilbert term. Variation with respect to $g_{\mu\nu}$ therefore yields an Einstein-type field equation, with any remaining structural contributions appearing as effective stress-energy or higher-order corrections.
+\end{proof}
+
+\begin{proposition}[Einstein-type projection]
+Suppose the closed-sector derivative separates into a geometric part and an internal resonance part,
+\[
+\mathcal D_\mu^{(\mathrm{cl})}=\nabla_\mu^{(g)}+\mathbb A_\mu,
+\]
+and assume that the closed sector admits a bilinear coframe reconstruction of full rank. If coarse-graining over fast internal modes yields a local derivative expansion whose leading geometric term is $R(g)$, then the low-energy metric sector satisfies an Einstein-type field equation derived from the same closure-compatible master system.
+\end{proposition}
+
+\begin{proof}
+First use the connection-compatibility lemma to ensure that the bilinear observables are transported purely by closure-compatible projected connection data. The bilinear coframe reconstruction lemma then yields a nondegenerate coframe and metric candidate from closed-sector observables. Because the derivative already separates into a geometric piece and a residual internal piece, the bilinear-to-geometric passage rewrites the closed-sector observables as geometric tensor data plus internal residual content. Coarse-graining may therefore be performed relative to this reconstructed geometry, and the geometric effective-action reduction lemma yields an Einstein-type variational equation for the leading metric sector. Hence the Einstein reading is not inserted from outside, but obtained as a controlled geometric projection of the same structural dynamics.
+\end{proof}
+
+\begin{theorem}[Projection theorem]
+Dirac-, Yang--Mills/QFT-, and Einstein-type regimes are controlled projections of the same closure-compatible structural master equation. They differ only by which structural slots remain active after restriction, freezing, or coarse-graining.
+\end{theorem}
+
+\begin{proof}
+The closed-sector reduction lemma places all three regimes on the same admissible carrier. The suppression lemma shows that freezing inactive slots yields consistent reduced dynamics. The three propositions identify the corresponding active-slot patterns: transport plus scalar resonance for the Dirac case, transport plus nontrivial connection algebra for the Yang--Mills/QFT case, and transport plus bilinear coframe reconstruction followed by geometric coarse-graining for the Einstein case. Hence all three are controlled projections of one structural system.
+\end{proof}
+
+\begin{corollary}[Projection preserves the invariant core]
+In each of the Dirac-, Yang--Mills/QFT-, and Einstein-type regimes, the reduced equation reads the same collapse-centered invariant core, only through a different active-slot pattern.
+\end{corollary}
+
+\begin{proof}
+Each regime is obtained from the same closed-sector master equation by restriction, freezing, or coarse-graining that preserves admissibility. None of these operations changes the underlying collapse state; they only change which slots remain visible. Hence the invariant core is common to all three reductions.
+\end{proof}
+
+\begin{corollary}[No ontological splitting under projection]
+The three effective regimes do not define three independent fundamental systems; they define three controlled mathematical readings of one structural system.
+\end{corollary}
+
+\begin{proof}
+This is an immediate reformulation of the projection theorem together with the previous corollary. Since the invariant core is shared, projection changes only effective visibility, not ontological ground status.
+\end{proof}
+
+\begin{remark}
+These three projections should not be read as ad hoc appendices. In the project logic they are controlled effective readings of one invariant collapse architecture: the Dirac limit is the minimal closed transport law, the QFT limit retains the internal connection algebra, and the Einstein limit arises after bilinear coframe reconstruction and coarse-grained geometric readout.
+\end{remark}
+
+
+\begin{lemma}[Projection transport of closure residues]
+Let $T$ be an admissible operator and let $\Pi$ be an admissible projection preserving the active-slot pattern of the projected regime. Then the closure residue of the projected operator is the projected residue,
+\[
+\mathrm{Res}_{\mathrm{cl}}(\Pi T \Pi)=\Pi\,\mathrm{Res}_{\mathrm{cl}}(T)\,\Pi.
+\]
+\end{lemma}
+
+\begin{proof}
+Because $\Pi$ preserves the admissible closure sector and the active-slot pattern, projection commutes with passage to the closure-compatible part. Therefore the non-closure contribution transported through the regime is exactly the projected residue of $T$.
+\end{proof}
+
+\begin{proposition}[Compensated projection defect cancellation]
+Suppose an admissible evolution step admits compensator-controlled defect cancellation before projection. Then every admissible projected regime preserves defect cancellation after projection to the active slots.
+\end{proposition}
+
+\begin{proof}
+By the previous lemma, projection transports residues without creating a new defect part outside the projected admissible class. If cancellation holds before projection through the compensator-controlled closure sector, the projected residue remains canceled in the projected closure class.
+\end{proof}
+
+\begin{corollary}[Mixed closure--projection admissibility]
+Finite chains composed of admissible closure-preserving deformation steps and admissible projection steps remain inside one common admissible continuation class.
+\end{corollary}
+
+\begin{proof}
+Admissible deformation preserves closure compatibility, and admissible projection preserves the transported residue structure together with compensator-controlled cancellation. Hence alternating finite chains of both operations stay in the same admissible continuation class.
+\end{proof}
+
+\section{Probe Geometry and Frame-Shifted Readout}
+The Riemann text already contains a mature probe formalism with two orthogonal probes and a residual orthogonal search sector. This matches the standing framework rule that the third group stands perpendicular to both probes. The companion isolates the geometric minimum needed to connect this to the closure-preserving master system.
+
+\begin{definition}[Triadic probe field]
+Let $\Psi_L$ and $\Psi_R$ denote two mutually orthogonal probe modes and let $\Psi_\perp$ denote the orthogonal complement or constrained search mode. The \emph{triadic probe field} is
+\[
+\Psi_\triangle := (\Psi_L,\Psi_R,\Psi_\perp)^T.
+\]
+Each component may itself admit an internal triolic decomposition, but at the present level we use only the outer three-part probe architecture.
+\end{definition}
+
+\begin{lemma}[Probe orthogonality constraint]
+If $\Psi_L$ and $\Psi_R$ are admissible directed probe modes and $\Psi_\perp$ spans the orthogonal complement, then coupling terms from the directed probe channels into the search sector are structurally constrained by orthogonality and can only enter through closure-compatible residual terms.
+\end{lemma}
+
+\begin{proof}
+By construction $\Psi_\perp$ is orthogonal to both directed channels. Therefore direct unrestricted mixing would violate the triolic separation fixed at the probe level. Any nonzero interaction must consequently appear as an admissible residual coupling compatible with closure and orthogonality.
+\end{proof}
+
+\begin{proposition}[Triadic probe master equation]
+A minimal closure-compatible equation for the triadic probe field is
+\[
+\bigl(i\Gamma^\mu\mathcal D_\mu-\Omega_\triangle\bigr)\Psi_\triangle = 0,
+\]
+where $\Omega_\triangle$ is allowed to contain diagonal transport scales and off-diagonal coupling terms between the two directed probes and the orthogonal search sector.
+\end{proposition}
+
+\begin{proof}
+The probe sector inherits the same first-order transport requirement as the single-probe sector. Because the total configuration is triolic, the resonance operator must act on three coupled channels rather than on one. Closure compatibility imposes the same admissibility restrictions as before, now applied blockwise to the probe triple, while the orthogonality constraint restricts the allowed off-diagonal terms.
+\end{proof}
+
+
+\begin{lemma}[Closure inheritance of the probe triple]
+If each directed probe mode is admissible and the probe resonance operator is blockwise closure-preserving, then the triadic probe field evolves inside a common closure-compatible probe sector.
+\end{lemma}
+
+\begin{proof}
+The directed channels start in the admissible class by assumption. Blockwise closure preservation means that every diagonal channel term preserves the closed sector and every admissible off-diagonal term contributes only through closure-compatible residual couplings. Therefore the total probe triple evolves inside one common closure-compatible sector.
+\end{proof}
+
+\begin{corollary}[Admissibility of probe-search feedback]
+Any feedback from the orthogonal search channel back into the directed probe channels is admissible only through closure-compatible residual couplings.
+\end{corollary}
+
+\begin{proof}
+The probe orthogonality constraint forbids unrestricted mixing, while closure inheritance keeps the full triadic field in the admissible class. Hence any return coupling from the search channel must be mediated by residual couplings compatible with both closure and orthogonality.
+\end{proof}
+
+\begin{definition}[Frame-shift operator]
+A \emph{frame-shift operator} is an admissible map $\mathfrak F_\beta$ that records the displacement between the invariant carrier coordinates and the coordinates used by a concrete measurement or readout frame. Observable masses, phases, or coupling parameters are read only after applying $\mathfrak F_\beta$.
+\end{definition}
+
+\begin{lemma}[Frame-shift invariance of the structural core]
+Let $\mathfrak F_\beta$ be an admissible frame-shift operator. Then the transformed readout $\mathfrak F_\beta\Psi$ may change observable parameters but preserves the collapse-centered invariant core of the probe configuration.
+\end{lemma}
+
+\begin{proof}
+A frame shift changes the coordinates used for measurement and readout, not the underlying admissible state class itself. Because the collapse state and closure class are preserved by admissible readout changes, the invariant structural core remains unchanged even when measured phases or masses shift.
+\end{proof}
+
+\begin{proposition}[Mass as closure-clock mismatch]
+Within a frame-shifted probe reading, the effective inertial scale of a fermionic probe can be interpreted as a mismatch quantity between the shifted recursive clock and the admissible closure projector. Equivalently, mass is not inserted externally but appears as the readout of closure-stabilized transport under frame displacement.
+\end{proposition}
+
+\begin{proof}
+This is exactly the reading already suggested by the main source: the probe equation is first-order and closure-preserving, while the nonzero inertial term measures the discrepancy between shifted timing data and the admissible closed sector. Hence the observed mass belongs to the readout map rather than to the invariant core alone.
+\end{proof}
+
+\begin{definition}[Orthogonal search sector]
+The \emph{orthogonal search sector} associated with a probe pair $(\Psi_L,\Psi_R)$ is the admissible subspace generated by the orthogonal component $\Psi_\perp$ together with all closure-compatible residual couplings that preserve orthogonality at the level of the invariant core.
+\end{definition}
+
+\begin{proposition}[Search-space confinement]
+The orthogonal search sector is closed under admissible probe evolution: if the initial triadic probe field is closure-compatible, then every search-sector contribution generated by the triadic probe master equation remains confined to the orthogonal search sector.
+\end{proposition}
+
+\begin{proof}
+The only admissible couplings from the directed channels into the orthogonal channel are, by the probe orthogonality constraint, closure-compatible residual terms. The triadic probe master equation evolves the full probe field by a first-order closure-preserving operator. Hence any contribution generated in the $\Psi_\perp$ channel remains an orthogonal residual readout of the same admissible triple and cannot escape the search sector without violating closure or orthogonality.
+\end{proof}
+
+
+
+\begin{lemma}[Directed-to-search factorization]
+Let $\mathcal I_{L\to\perp}$ and $\mathcal I_{R\to\perp}$ be admissible interaction maps from the directed probe channels into the orthogonal search sector. Then each such map factors as
+\[
+\mathcal I_{j\to\perp}=\Pi_\perp\circ \mathcal R_j,\qquad j\in\{L,R\},
+\]
+where $\Pi_\perp$ denotes the orthogonal search projection and $\mathcal R_j$ is a closure-compatible residual coupling operator.
+\end{lemma}
+
+\begin{proof}
+By the probe orthogonality constraint, no admissible directed interaction may enter the search channel through unrestricted mixing. Every allowed contribution into $\Psi_\perp$ must therefore first pass through an admissible residual coupling. Since the resulting contribution is, by definition, read inside the orthogonal search sector, one obtains the stated factorization through the search projection.
+\end{proof}
+
+\begin{lemma}[Two-probe interaction preserves the orthogonal search sector]
+Suppose the directed probe channels interact through an admissible bilinear coupling operator $\mathcal B(\Psi_L,\Psi_R)$ whose off-diagonal terms are closure-compatible. Then every search-sector contribution generated by the interaction remains inside the orthogonal search sector.
+\end{lemma}
+
+\begin{proof}
+Any interaction between the two directed probes modifies the search sector only through terms that are off-diagonal with respect to the triadic splitting. By admissibility, these terms are closure-compatible residual couplings. The directed-to-search factorization lemma then shows that every such contribution factors through the orthogonal search projection, hence remains inside the orthogonal search sector.
+\end{proof}
+
+\begin{proposition}[Search-feedback closure stability]
+Let the triadic probe field evolve by an admissible probe master operator and let feedback from the orthogonal search sector into the directed channels be mediated only by closure-compatible residual couplings. Then the combined directed/search feedback dynamics preserves closure of the full triadic probe field.
+\end{proposition}
+
+\begin{proof}
+Closure inheritance of the probe triple guarantees that the uncoupled directed/search evolution remains inside one common admissible sector. By the admissibility of probe-search feedback, every return coupling from the search sector into the directed channels enters only through closure-compatible residual operators. Such feedback therefore modifies the evolution internally within the same closed class and cannot create an external defect or leakage channel. Hence the full feedback dynamics remains closure-preserving.
+\end{proof}
+
+\begin{corollary}[Iterated probe-search feedback remains admissible]
+Finite compositions of admissible directed-to-search couplings and closure-compatible search-feedback maps preserve the closure-compatible triadic probe sector.
+\end{corollary}
+
+\begin{proof}
+Apply the directed-to-search factorization and the search-feedback closure stability proposition inductively. Each stage remains internal to the same admissible triadic sector, so every finite composition remains admissible.
+\end{proof}
+
+\begin{lemma}[Readout factorization through the frame shift]
+For every admissible probe observable $\mathcal O$, there exists an induced observable $\widetilde{\mathcal O}$ on the invariant probe sector such that the measured quantity may be written as
+\[
+\mathcal O_{\mathrm{meas}} = \widetilde{\mathcal O}\circ \mathfrak F_\beta
+\]
+up to admissible sector projection.
+\end{lemma}
+
+\begin{proof}
+By definition, measurable quantities are read only after application of the frame-shift operator. Since the underlying probe state remains admissible before readout, one first projects to the admissible probe sector and then evaluates the induced observable in shifted coordinates. This yields the required factorization.
+\end{proof}
+
+\begin{theorem}[Probe readout theorem]
+The triadic probe system provides a closure-compatible readout architecture in which two directed probe channels and one orthogonal search channel remain structurally bound, while observable inertial data are produced only after frame-shifted readout.
+\end{theorem}
+
+\begin{proof}
+The probe orthogonality lemma fixes the structural roles of the three channels. The triadic probe master equation places them inside a common admissible first-order dynamics. Search-space confinement guarantees that the orthogonal channel remains a genuine constrained search sector rather than an uncontrolled leakage sector. The frame-shift invariance lemma shows that readout displacement changes observed parameters without changing the underlying invariant core. Therefore the probe sector is both structurally bound and phenomenologically readable, with observable inertial data arising only at the level of shifted readout.
+\end{proof}
+
+\begin{remark}
+This is the point where the project's measurement principle becomes technically important: the underlying object remains fixed, but observables are read in a shifted frame. Probe geometry therefore links closure, transport, and phenomenology without treating the readout parameters as primitive ontological data.
+\end{remark}
+
+
+
+\begin{lemma}[Higgs-datum stability under admissible perturbation]
+Let $h$ be a gauge-irreducible closure-stable averaged coupling datum in a projected sector. If an admissible perturbation preserves closure, the active gauge slot, and gauge-irreducibility of $h$, then the Higgs-type reading associated with $h$ remains valid under the perturbed dynamics.
+\end{lemma}
+
+\begin{proof}
+Closure preservation keeps the perturbed datum inside the same admissible structural class, while preservation of the active gauge slot guarantees that the criterion of gauge-irreducibility is tested against the same type of removable gauge reparameterizations. Since the datum remains gauge-irreducible and compensator-stable, the hypotheses of the Higgs reading proposition continue to hold after perturbation. Hence the Higgs-type reading survives the admissible perturbation.
+\end{proof}
+
+\begin{proposition}[Minimal persistence of a Higgs-type corridor]
+If a projected sector admits a nontrivial Higgs-type reading and if admissible perturbations preserve closure, compensator stability, and gauge-irreducibility of its coupling datum, then there exists a local Higgs-type corridor of admissible nearby sectors carrying the same structural coupling interpretation.
+\end{proposition}
+
+\begin{proof}
+Apply the perturbative stability lemma to the distinguished coupling datum and then invoke the conditional Higgs reading proposition for each admissibly perturbed sector. Every nearby sector satisfying the same three persistence conditions inherits a Higgs-type interpretation from the same structural mechanism. This defines the claimed local corridor.
+\end{proof}
+
+
+\begin{lemma}[Probe-to-readout persistence under admissible continuation]
+If an admissible probe family evolves by closure-compatible continuation steps, then the induced readout family preserves the same invariant structural core under the frame-shifted readout map.
+\end{lemma}
+
+\begin{proof}
+Admissible continuation preserves the common closure-compatible probe sector. Frame-shifted readout changes only the visible presentation of that sector, not the invariant structural core. Therefore the induced readout family preserves the same core throughout the continuation.
+\end{proof}
+
+\begin{proposition}[Frame-shifted readout persistence for iterated probe families]
+Iterated admissible probe continuations produce iterated frame-shifted readouts that remain mutually coherent as readings of one and the same invariant core.
+\end{proposition}
+
+\begin{proof}
+Apply the preceding lemma inductively to the finite continuation chain. At each step the admissible probe family stays inside the same continuation class, and the frame-shifted readout preserves the same invariant core. Hence the whole iterated readout family is coherent.
+\end{proof}
+
+\begin{corollary}[Observable coherence of admissible probe continuations]
+Observable data extracted from admissible probe continuations may differ at the readout level while remaining coherent as sectorial readings of a single structural core.
+\end{corollary}
+
+\begin{proof}
+Different continuation steps may expose different readout-sector data after frame shift, but the preceding proposition shows that these remain coherent readings of one unchanged invariant core.
+\end{proof}
+
+\section{Mass, Gauge, and Higgs as Structural Readings}
+The companion treats masses, gauge sectors, and the Higgs interpretation as structural readings rather than independent insertions. This matches the main text's rule that sectoral data emerge once the invariant system is projected into a concrete regime.
+
+\begin{proposition}[Mass as projected resonance]
+In an admissible closed sector, effective masses are the scalar or block-scalar part of the resonance operator after projection to the physical readout regime. They therefore encode closure-compatible resonance data rather than independent bare objects.
+\end{proposition}
+
+\begin{proof}
+By the structural master equation theorem, inertial or spectral information enters through the internal resonance slot once transport and closure have been fixed. In a concrete readout regime one projects the resonance operator to the scalar or block-scalar component visible to the chosen sector. The resulting mass data are thus projected resonance invariants of the admissible system, not externally added bare parameters.
+\end{proof}
+
+
+\begin{corollary}[Mass data are sector-dependent readouts]
+If two projected regimes retain different visible scalar parts of the same resonance operator, then they may display different effective mass data without changing the invariant structural core.
+\end{corollary}
+
+\begin{proof}
+Mass is the projected scalar or block-scalar part of the resonance slot. Different projection regimes may therefore expose different scalar blocks of one and the same structural resonance operator. The invariant core remains unchanged because only the visible readout sector has changed.
+\end{proof}
+
+\begin{proposition}[Gauge fields as retained connection data]
+Gauge sectors arise whenever the connection part of the closure-compatible derivative remains dynamically active on the projected closed sector. In that case the projected commutator algebra of the connection determines the effective gauge structure.
+\end{proposition}
+
+\begin{proof}
+The projection theorem identifies the Yang--Mills/QFT regime as the sector in which the connection slot remains active after reduction. Once projected to the admissible closed sector, the nontrivial commutator algebra of the retained connection acts as the residual local symmetry data. Therefore the effective gauge structure is read off from the surviving connection algebra rather than inserted independently.
+\end{proof}
+
+
+\begin{lemma}[Gauge-resonance separation in projected readout]
+In an admissible projected sector, connection data and resonance data may be read separately as long as the projection preserves the slot decomposition of the master equation.
+\end{lemma}
+
+\begin{proof}
+The structural master equation theorem already separates connection and resonance into distinct slots. If projection preserves that slot structure, then the surviving connection data define the gauge reading while the surviving resonance data define the mass/coupling reading. Hence the two may be read separately, even though they arise from one common system.
+\end{proof}
+
+\begin{lemma}[Closure-stable averaged coupling datum]
+Assume that a projected resonance sector admits an averaged or effective coupling datum $h$ whose formation is compatible with closure and whose transport through admissible evolution remains compensator-stable. Then $h$ defines an internal coupling observable of the projected sector rather than an external insertion.
+\end{lemma}
+
+\begin{proof}
+Closure-compatibility ensures that the averaging procedure producing $h$ does not move the system outside the admissible structural class. Compensator stability ensures that the datum remains readable under the same internal correction mechanism that preserves the projected dynamics. Hence $h$ is an internal observable extracted from the projected resonance content itself, not an object adjoined from outside the structural system.
+\end{proof}
+
+\begin{lemma}[Gauge-irreducibility criterion]
+Let $h$ be a closure-stable averaged coupling datum in a projected sector. If every representative of $h$ can be removed by a gauge-only reparameterization of the active connection slot, then $h$ does not define an independent coupling object. Therefore a genuine Higgs-type datum must be gauge-irreducible in this sense.
+\end{lemma}
+
+\begin{proof}
+A pure gauge reparameterization changes only the representative of the connection data while leaving the invariant structural content of the projected sector unchanged. If $h$ disappears under such a reparameterization, then it carries no independent coupling content beyond the gauge description. A nontrivial coupling datum must therefore survive all gauge-only reparameterizations and is thus gauge-irreducible.
+\end{proof}
+
+\begin{proposition}[Conditional Higgs reading]
+Assume that the projected resonance sector admits a distinguished closure-compatible averaging or coupling point that is stable under the compensator, gauge-irreducible with respect to the active connection slot, and readable in the shifted measurement frame. Then this point may be interpreted as a Higgs-type structural coupling datum of the projected sector.
+\end{proposition}
+
+\begin{proof}
+By the previous lemma, the relevant averaged coupling datum is internal to the projected structure and remains readable under compensator-controlled evolution. Gauge-irreducibility excludes the possibility that this datum is merely a removable artifact of the active connection slot. Because it is read only after projection and frame-shifted interpretation, it appears as an effective coupling or averaging point rather than as a primitive external field. This is exactly the minimal structural role assigned in the project hypothesis to a Higgs-type object.
+\end{proof}
+
+
+\begin{corollary}[Minimal criterion for a nontrivial Higgs-type sector]
+A projected sector admits a nontrivial Higgs-type reading only if the resonance slot contains a compensator-stable distinguished coupling datum that is gauge-irreducible and not removable by a gauge-only reparameterization of the active connection slot.
+\end{corollary}
+
+\begin{proof}
+The conditional Higgs proposition now requires both compensator stability and gauge-irreducibility of the relevant coupling datum. If the datum were removable by a pure reparameterization of the gauge slot, it would not define an independent Higgs-type reading. Therefore nontriviality requires precisely the stated criterion.
+\end{proof}
+
+\begin{remark}[Higgs reading]
+The previous proposition is intentionally conditional. It does not yet derive the Higgs sector outright, but it turns the earlier informal project hypothesis into a precise target: one must exhibit a closure-compatible averaged coupling point in the resonance sector and prove its stability under the compensator. That is a natural later expansion task for the companion.
+\end{remark}
+
+
+
+\begin{lemma}[Iterated closure-compatible deformation chain]
+Finite chains of closure-compatible deformations, projected slot reductions, and admissible probe-search feedback updates remain inside one common structural continuation class as long as each step preserves the compensator-fixed branch.
+\end{lemma}
+
+\begin{proof}
+Each of the three operations is already controlled by a local admissibility result in the companion: closure/deformation lemmas for the structural generators, stability lemmas for projected master dynamics, and closure stability results for probe-search feedback. If every step preserves the same compensator-fixed branch, the output of one step is an admissible input for the next. By induction over the finite chain, the whole continuation remains in one common structural class.
+\end{proof}
+
+
+\begin{lemma}[Corridor compatibility under mixed admissible continuation]
+The closure/deformation, projection, probe/readout, Einstein-type, and Higgs-type corridors remain pairwise compatible under mixed admissible continuation as long as closure and active-slot constraints are preserved.
+\end{lemma}
+
+\begin{proof}
+Each corridor is defined as an admissible continuation of the same collapse-centered structural core subject to closure and slot constraints. Mixed continuation preserving these constraints cannot force one corridor outside the admissible class of the others.
+\end{proof}
+
+\begin{theorem}[Global synthesis persistence]
+Under admissible mixed continuation, the strengthened corridors of the present release persist as mutually compatible readings of one collapse-centered invariant structural system.
+\end{theorem}
+
+\begin{proof}
+Compatibility of the individual corridors under mixed admissible continuation follows from the preceding lemma and from the earlier structural equivalence and master-equation persistence results. Therefore the strengthened corridors remain jointly readable as sectorial unfoldings of one invariant structural system.
+\end{proof}
+
+\begin{corollary}[Global sectorial coherence]
+The public companion release defines one coherent family of strengthened sectorial corridors rather than a collection of unrelated local expansions.
+\end{corollary}
+
+\begin{proof}
+This is the direct sectorial reading of global synthesis persistence.
+\end{proof}
+
+\section{Discussion}
+The present version should be read as a substantially expanded public companion manuscript. It contains a continuous formal chain from the initial definitions through triolic compatibility, compensator and closure logic, structural equivalence, the master-equation block, controlled projection regimes, and the probe/frame-shift readout sector. In that precise sense, the text has moved beyond an initial upload scaffold and now functions as a coherent mathematical companion manuscript.
+
+The closure block now contains an explicit residue/defect vocabulary, which makes it possible to describe structural leakage and its suppression without leaving the companion's own internal language. What remains open is therefore no longer the existence of a viable structural road map, but the degree of theorem-level unfolding that should be made explicit in later versions.
+
+The main remaining tasks are:
+\begin{enumerate}[label=(\roman*)]
+  \item to sharpen the closure sector further from the present residue/defect layer toward a denser operator-level treatment,
+  \item to deepen the probe sector from a consistency and readout theorem into a fuller coupling and search-space formalism,
+  \item to strengthen the Einstein-type and Higgs-type branches by further reducing their remaining assumption load, and
+  \item to expand the present draft toward the planned first full mathematical version with a substantially denser network of lemmas and principal proofs.
+\end{enumerate}
+
+At this stage, however, the companion already fulfills its immediate role: it separates the mathematical unfolding from the leading main paper, preserves the project's structure-first logic, and provides a coherent platform for later strong expansion. The present public version also makes the strengthened closure, master-dynamics, probe, Einstein-branch, and Higgs-branch corridors visible at manuscript level, so that further theorem growth can proceed inside an already stabilized block structure rather than by ad hoc accretion.
+
+\subsection*{Operational status of the current results}
+For clarity, the present draft contains three different kinds of results. First, there are \emph{structurally established} results inside the current framework, namely compatibility, sector equivalence, the slot structure of the master equation, and the existence of controlled projection paths. Second, there are \emph{controlled but still assumption-bearing} results, above all the Einstein-type projection and the Higgs-type coupling object, whose internal entry path is now closed but whose operator-level realization is still compressed. Third, there are \emph{deferred expansion targets}, in particular the meta-septum layer, a fuller probe coupling calculus beyond the present closure proposition, and the larger proof network planned for the first full companion version.
+
+\subsection*{Structural review verdict}
+A hard review of the present draft suggests the following classification.
+\begin{enumerate}[label=(\alph*)]
+    \item \emph{Already load-bearing:} the basic definition layer, the compatibility theorem, the sector-equivalence theorem, the slot architecture of the master equation, and the existence of a probe readout theorem. These blocks already support the global narrative of the companion and can serve as the stable backbone for further densification.
+    \item \emph{Technically viable but still thin:} the closure residue/defect layer, the irreducibility statements in the master-equation block, and the present gauge/mass readout propositions. These are coherent, but they still compress too many operator-level details into relatively short arguments.
+    \item \emph{Most assumption-bearing:} the Einstein-type projection and the Higgs-type coupling object. Both now have an explicit structural passage rather than a loose interpretive status, but they still rely on coarse-graining and averaged-coupling assumptions whose internal realization should later be unfolded more explicitly.
+    \item \emph{Highest-value next densification targets:} (i) operator-level closure lemmas around residue transport and defect cancellation, (ii) a fuller probe-coupling calculus beyond closure of feedback, and (iii) a denser effective-field derivation of the bilinear-to-geometric Einstein branch.
+\end{enumerate}
+
+In other words, the current manuscript should now be read as \emph{structurally closed, mathematically usable, and ready for further densification}. The architecture is in place, the previously open frontier statements now have explicit structural passages, and the next full version will mainly require a thicker intermediate theorem web rather than a broader chapter layout.
+
+\appendix
+\section{Notation and standing conventions}
+This appendix collects the main objects used throughout the current draft.
+
+\begin{center}
+\begin{tabular}{p{0.23\textwidth} p{0.68\textwidth}}
+\toprule
+Symbol / object & Meaning in the current draft \\
+\midrule
+$\zminus=0$ & collapse-centered invariant ground condition \\
+Ground carrier & ambient structured carrier supporting the admissible sectors \\
+$T=(X_1,X_2,X_\perp)$ & triolic decomposition with orthogonal third channel \\
+$J$ & structural anti-unitary involution \\
+$\HC(f)=\tfrac12(f+Jf)$ & Heisenberg compensator / compatible-sector projector \\
+$\hat P_{\mathrm{cl}}$ & projector onto the admissible closure sector \\
+$\mathrm{Res}_{\mathrm{cl}}(T)$ & closure residue of an operator $T$ \\
+$\mathcal D_\mu$ & closure-compatible covariant derivative \\
+$\Omega$ & internal resonance operator of the master equation \\
+$\Psi_\triangle$ & triadic probe field $(\Psi_L,\Psi_R,\Psi_\perp)^T$ \\
+$\mathfrak F_\beta$ & frame-shift operator for measurement/readout displacement \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The following standing conventions from the project are used throughout the companion draft:
+\begin{enumerate}[label=(\roman*)]
+    \item the measurement frame is treated as phase-shifted relative to the underlying structure,
+    \item in the probe framework, two probes may be directed toward each other, and each probe may itself carry a triolic substructure,
+    \item one of the three triolic channels is structurally orthogonal to the other two,
+    \item the compensator is read as emerging from the ground condition rather than as an externally appended axiom, and
+    \item the main manuscript remains the leading architectural text, while the present companion serves as its mathematical unfolding layer.
+\end{enumerate}
+
+\section{Result map and current theorem status}
+For orientation, the present public companion version already contains the following formal load-bearing results:
+\begin{enumerate}[label=(\arabic*)]
+    \item a first definition block for collapse state, ground carrier, triole, orthogonality, involution, compensator, closure, frame shift, probe configuration, and structural equivalence,
+    \item compatibility results linking triolic structure, orthogonality, compensator, and closure,
+    \item a structural equivalence theorem for the principal sector readings together with auxiliary orthogonality- and compensator-preservation lemmas,
+    \item a structural master equation theorem with explicit transport, connection, closure--compensator, and resonance slots, plus irreducibility and normal-form corollaries,
+    \item a projection theorem covering Dirac-, Yang--Mills/QFT-, and Einstein-type reductions,
+    \item a probe readout theorem for the triadic probe system and its orthogonal search sector, together with closure-inheritance and readout-factorization lemmas,
+    \item a mixed closure--projection calculus, a reduced normal-form uniqueness corridor, and a probe-to-readout persistence corridor, and
+    \item structural propositions for mass, gauge, and a conditional Higgs-type reading, together with readout-separation criteria and a global synthesis persistence layer.
+\end{enumerate}
+
+For review purposes, these results are best grouped as follows.
+\begin{enumerate}[label=(\roman*)]
+    \item \emph{Established core:} the definitions, the compatibility theorem, the structural equivalence theorem, and the slot architecture of the master equation.
+    \item \emph{Controlled projection layer:} the Dirac and Yang--Mills/QFT reductions, together with the probe readout theorem and its frame-shift invariance apparatus.
+    \item \emph{Assumption-bearing frontier:} the Einstein-type projection and the Higgs-type coupling object, both of which now have explicit structural passages and persistence lemmas but still require denser internal realization.
+\end{enumerate}
+
+At the same time, the following elements remain intentionally incomplete and define the next expansion layer:
+\begin{enumerate}[label=(\alph*)]
+    \item densification of the proof network around the closure residue/defect layer,
+    \item a fuller operator-level treatment of the probe coupling and search-space evolution beyond the present inheritance and confinement lemmas,
+    \item a less conditional derivation path for Higgs-type coupling data,
+    \item deeper algebraic unfolding of the septonionic/meta-septum realization, and
+    \item substantial multiplication of intermediate lemmas toward the planned first full mathematical version.
+\end{enumerate}
+
+\section{Theorem architecture of the present release}
+The present release is organized around a fixed theorem architecture. Its role is to keep the proof corridors stable while the companion is expanded in later versions toward a fuller mathematical unfolding.
+
+\begin{enumerate}[label=(\Roman*)]
+    \item \textbf{Structural preliminaries.} Definitions D1--D12, Lemmas L1--L8, and Propositions P1--P3 cover the collapse state, ground carrier, triole, orthogonality, sector, involution, compensator, closure, frame shift, probe configuration, structural equivalence, and the orthogonal search sector together with the first local consistency corridor.
+    \item \textbf{Closure / compensator spine.} Theorem T1, Propositions P4--P9, and Lemmas L9--L24 govern closure-projector compatibility, residue transport and suppression, defect decomposition and cancellation, admissible composition, closure inheritance, and the transition to the compatibility theorem. The principal locked result of this block remains the \emph{Structural Compatibility Theorem}.
+    \item \textbf{Structural equivalence corridor.} Theorem T2, Propositions P10--P12, and Lemmas L25--L31 control preservation of orthogonality data, preservation of compensator-fixed content, and invariance of the collapse-centered kernel across sectors. The principal locked result remains the \emph{Structural Equivalence Theorem}.
+    \item \textbf{Master-equation corridor.} Theorem T3, Propositions P13--P17, and Lemmas L32--L43 govern necessity of closure and compensator slots, irreducibility of the closure--compensator split, normal-form uniqueness up to internal redistribution, and admissible perturbation and stability statements. The principal locked result remains the \emph{Structural Master Equation Theorem}.
+    \item \textbf{Projection corridors.} Theorem T4, Propositions P18--P22, and Lemmas L44--L54 govern the Dirac, Yang--Mills/QFT, and Einstein corridors together with persistence of the invariant structural core under projection. The principal locked result remains the \emph{Projection Theorem}.
+    \item \textbf{Probe calculus.} Theorem T5, Propositions P23--P27, and Lemmas L55--L66 govern probe inheritance of closure, readout factorization under frame shift, search-sector confinement, search-feedback closure stability, and the first two-probe interaction lemmas. The principal locked result remains the \emph{Probe Readout Theorem}.
+    \item \textbf{Physical readings.} Propositions P28--P33 and Lemmas L67--L76 cover sector-specific mass readouts, gauge-versus-resonance separation, closure-stable averaged coupling data, the gauge-irreducibility criterion, and the Higgs-type coupling object together with its validity boundary.
+    \item \textbf{Synthesis layer.} The discussion and appendices remain a synthesis layer only; no new public theorem numbers are to be added there unless absolutely necessary.
+\end{enumerate}
+
+The non-drift rules associated with this theorem architecture are the following: the main manuscript remains the leading architectural text; the companion expands proofs without replacing the main manuscript; no new chapter should be added before existing theorem corridors are densified; new statements are to be inserted inside the established block structure rather than appended ad hoc; and the Einstein-type and Higgs-type passages remain explicitly assumption-fenced until their operator-level realizations are further unfolded.
+
+\section{Strengthened theorem corridors in v0.6.0}
+Relative to the previous public companion release, v0.6.0 strengthens the manuscript in five local theorem corridors and a synthesis layer.
+
+\begin{enumerate}[label=(\roman*)]
+    \item \textbf{Closure spine.} The closure-projector compatibility family is now supplemented by residue transport through admissible composition, defect cancellation criteria, compensated defect cancellation, and defect-free admissible evolution.
+    \item \textbf{Master-equation corridor.} The necessity and irreducibility layer is strengthened by admissible perturbation lemmas, closure--compensator persistence, master-equation stability, and projected stability of admissible master dynamics.
+    \item \textbf{Probe calculus.} Probe inheritance is expanded into a small calculus consisting of directed-to-search factorization, preservation of the orthogonal search sector under two-probe interaction, closure stability under search-feedback, and admissibility of iterated probe-search feedback.
+    \item \textbf{Einstein branch.} The Einstein-type projection is now preceded by connection compatibility of bilinear observables, bilinear coframe reconstruction, and a bilinear-to-geometric passage that makes the effective geometric branch more explicit.
+    \item \textbf{Higgs branch.} The Higgs-type reading is sharpened through a closure-stable averaged coupling datum, a gauge-irreducibility criterion, and a clearer separation between genuine coupling content and removable gauge artifacts.
+\end{enumerate}
+
+Taken together, these additions do not yet exhaust the later target density of the companion project, but they do mark a clear public step beyond the earlier release line by replacing several formerly thin passages with local theorem corridors.
+
+
+\section{Release map of strengthened corridors}
+The present release adds a third densification layer beyond v0.5.0 while keeping the document aligned with the public Zenodo versioning logic.
+\begin{itemize}[leftmargin=1.6em]
+    \item \textbf{B1 -- Closure and deformation spine.} Additional lemmas now control closure stability under admissible deformation and compatibility persistence of the closed structural class.
+    \item \textbf{B2 -- Master-equation deformation corridor.} The master corridor is extended by stability and persistence statements under admissible perturbation and projected reduction.
+    \item \textbf{B3 -- Probe-search dynamics.} The probe calculus now includes iterated feedback admissibility, two-probe preservation of the orthogonal search sector, and a first finite-step continuation statement.
+    \item \textbf{B4 -- Einstein sub-corridor.} The bilinear-to-geometric chain is strengthened by coarse-graining consistency and stability under admissible geometric reparameterization.
+    \item \textbf{B5 -- Higgs sub-corridor.} The Higgs-type branch is strengthened by perturbative stability and a local persistence corridor under closure-preserving admissible perturbations.
+\end{itemize}
+These additions make the public companion mathematically denser without yet turning it into the later first full 100--150 page expansion target.
+
+\section{Version status summary}
+The present manuscript should be read as a substantially expanded public companion version. It forms a continuous technical manuscript from frontmatter and definitions through the central theorem chain to discussion, references, and appendices, and it now includes strengthened structural passages for closure/deformation, master-dynamics stability, probe-search feedback, the Einstein-type regime, and the Higgs-type corridor. It does \emph{not} yet claim to be the later full mathematical companion version; that later stage is expected to be denser in explicit lemmas, intermediate propositions, and proof detail.
+
+\clearpage
+\section*{References}
+\addcontentsline{toc}{section}{References}
+\begingroup
+\small
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\begin{thebibliography}{99}
+
+\bibitem{brendecke2026rh}
+Brendecke, Marc.
+\newblock \emph{On the Riemann Hypothesis: A Kernel-Theoretic Approach via Tensor Contraction, Self-Adjoint Extension, and Dixon-Algebraic Realization}.
+\newblock Zenodo preprint, version~v4.15, March~2026.
+\newblock DOI: \href{https://doi.org/10.5281/zenodo.19157158}{10.5281/zenodo.19157158}.
+
+\bibitem{brendecke2026qscv014}
+Brendecke, Marc.
+\newblock \emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding}.
+\newblock Zenodo preprint, version~v0.6.0, March~2026.
+\newblock Zenodo concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}.
+
+\end{thebibliography}
+\endgroup
+
+\end{document}
