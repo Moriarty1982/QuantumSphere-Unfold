@@ -1,0 +1,29 @@
+# PDFs bleiben aussen vor: sie sind aus dem Quelltext reproduzierbar und
+# machen ueber 75 % des Ordners aus.  Ihre Pruefsummen stehen in den
+# V4_7_0_RC*_SHA256_MANIFEST.csv, dort liegt der Nachweis.
+# Ausnahme siehe unten: das RC19-PDF stammt aus einer anderen Toolchain
+# und laesst sich nicht bitgenau nachbauen.
+*.pdf
+!Quantum_Sphaera_Companion_v4_7_0.pdf
+
+# LaTeX-Hilfsdateien
+*.aux
+*.log
+*.toc
+*.out
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+
+# Build-Verzeichnisse
+build/
+out/
+
+# Betriebssystem
+desktop.ini
+Thumbs.db
+.DS_Store

@@ -1,0 +1,11 @@
+# Zeilenenden NICHT anfassen.
+#
+# Die Pruefsummen in den V4_7_0_RC*_SHA256_MANIFEST.csv gelten fuer die Bytes
+# der Dateien, wie sie gebaut und gehasht wurden.  Jede Zeilenenden-Konvertierung
+# beim Checkout wuerde jeden dieser Hashes brechen und die Provenienzkette
+# entwerten.  Deshalb gilt fuer alles: keine Normalisierung.
+* -text
+
+# PDFs und Bilder ausdruecklich binaer
+*.pdf binary
+*.png binary
