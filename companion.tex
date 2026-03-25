@@ -17,7 +17,7 @@
 \theoremstyle{remark}
 \newtheorem*{remark}{Remark}
 
-\newcommand{\docversion}{0.9.0}
+\newcommand{\docversion}{1.0.0}
 \newcommand{\conceptdoi}{10.5281/zenodo.19210728}
 \newcommand{\docdate}{\DTMdisplaydate{2026}{03}{25}{-1}}
 \newcommand{\zminus}{z^-}
@@ -42,12 +42,12 @@
 \begin{center}
 \fbox{\begin{minipage}{0.92\textwidth}
 \small
-\textbf{Status note.} Public companion release. This version consolidates the strengthened closure/deformation, probe, Einstein, and Higgs corridors together with the mixed closure--projection calculus, reduced normal-form uniqueness, probe-to-readout persistence, the global synthesis persistence layer, the normalized tool architecture, and the second densification wave, while preserving the structure-first role of the companion relative to the main Quantum Sphaera manuscript.
+\textbf{Status note.} Public companion release. This version serves as the first major mathematical companion release of the current Quantum Sphaera line. It consolidates the strengthened closure/compensator spine, structural equivalence corridor, master-equation corridor, projection corridors, probe/readout layer, physical readout layer, global synthesis layer, and the derived structural tools while preserving the structure-first role of the companion relative to the main Quantum Sphaera manuscript.
 \end{minipage}}
 \end{center}
 
 \begin{abstract}
-This companion manuscript develops a structure-first mathematical unfolding of the current Quantum Sphaera framework. Its role is to make the mathematical backbone of the main manuscript explicit without replacing the main structural text. Starting from the collapse-centered ground condition $\zminus=0$, the paper fixes the ground carrier, triolic decomposition, structural orthogonality, involution--compensator layer, and closure-stable sector as the common backbone of the framework. On this basis it derives a closure-compatible structural master equation, formulates controlled Dirac-, Yang--Mills/QFT-, and Einstein-type projection regimes, and connects probe geometry to frame-shifted measurement and readout. This public release carries forward the strengthened mixed closure--projection calculus, reduced normal-form uniqueness for projected admissible dynamics, persistent probe-to-readout coherence, the global synthesis persistence layer, the normalized tool architecture, and the second densification wave of load-bearing theorems. It is intended as a near-final pre-1.0 mathematical release of the companion line and a stable basis for the later full proof expansion.
+This companion manuscript develops a structure-first mathematical unfolding of the current Quantum Sphaera framework. Its role is to make the mathematical backbone of the main manuscript explicit without replacing the main structural text. Starting from the collapse-centered ground condition $\zminus=0$, the paper fixes the ground carrier, triolic decomposition, structural orthogonality, involution--compensator layer, and closure-stable sector as the common backbone of the framework. On this basis it derives a closure-compatible structural master equation, formulates controlled Dirac-, Yang--Mills/QFT-, and Einstein-type projection regimes, and connects probe geometry to frame-shifted measurement and readout. The present release consolidates the principal theorem corridors of the companion, provides a normalized appendix of structural tools and computational shortcuts, and records a dependency map for the current proof architecture. It is intended as the first major mathematical companion release of the Quantum Sphaera line and as a stable basis for later full proof expansion.
 \end{abstract}
 
 \clearpage
@@ -59,7 +59,7 @@ This document is a technical companion to the main Quantum Sphaera manuscript. T
 
 The companion follows a strict structure-first principle. It therefore fixes the invariant object and its admissible structural operations before discussing effective equations, projection regimes, or phenomenological readouts. In this logic, the visible sectors are not independent ontological layers but controlled readings of one collapse-centered core. The technical role of the companion is to expose enough of that logic to make the project mathematically inspectable.
 
-The manuscript is organized as follows. Sections~2--5 fix the ground vocabulary, triolic compatibility, the involution--compensator layer, closure, and the first compatibility results. Sections~6--8 derive the equivalence of sector readings, the structural master equation, and the three principal controlled projection regimes. Sections~9--10 connect this structural dynamics to probe geometry, frame-shifted readout, mass, gauge, and Higgs-type coupling data. The discussion and appendices summarize the present mathematical status of the manuscript, collect the principal theorem corridors and derived tools strengthened in this release, and indicate the main remaining tasks for the later full proof expansion.
+The manuscript is organized as follows. Sections~2--5 fix the ground vocabulary, triolic compatibility, the involution--compensator layer, closure, and the first compatibility results. Sections~6--8 derive the equivalence of sector readings, the structural master equation, and the three principal controlled projection regimes. Sections~9--10 connect this structural dynamics to probe geometry, frame-shifted readout, mass, gauge, and Higgs-type coupling data. The discussion and appendices summarize the present mathematical status of the manuscript, collect the principal theorem corridors strengthened in this release, record the current theorem and dependency maps, and indicate the main remaining tasks for later proof expansion.
 
 \section{Structural Preliminaries}
 
@@ -338,40 +338,6 @@ The compatible structural class identified in the previous existence proposition
 
 \begin{proof}
 Start from one compatible representative provided by the existence proposition. Apply the previous deformation lemma to each admissible generator entering the corresponding realization. Since closure, compensator branch, and orthogonal triolic structure are preserved under the allowed small deformation, the deformed realization remains inside the same compatible class. Nonemptiness therefore persists.
-\end{proof}
-
-
-
-\begin{lemma}[Closure compatibility is local under admissible composition]
-Let $A$ and $B$ be admissible structural operators on the same closed sector. If each operator is closure-compatible and the intermediate image of $B$ remains in the compensator-fixed branch, then the composition $A\circ B$ is closure-compatible.
-\end{lemma}
-
-\begin{proof}
-Closure-compatibility of $B$ ensures that admissible states are first transported inside the closed sector. The additional hypothesis says that the intermediate image stays inside the compensator-fixed branch, so application of $A$ cannot see any new external leakage channel. Since $A$ is itself closure-compatible on that same branch, the composition preserves the closed sector as well.
-\end{proof}
-
-\begin{lemma}[Minimal defect support is compensator-visible]
-Let $T$ be an admissible structural operator with nonzero closure defect. Then every minimal nonvanishing defect contribution has nontrivial image in the compensator-complementary channel.
-\end{lemma}
-
-\begin{proof}
-If a nonvanishing minimal defect contribution were entirely invisible to the compensator-complementary channel, then it would lie completely inside the compensator-fixed branch. But defects are precisely the complementary residue obstructing closure on the closed sector. Hence any genuine minimal defect must have nontrivial complementary image, which makes it compensator-visible.
-\end{proof}
-
-\begin{proposition}[Closure-compatibility theorem]
-The class of admissible closure-compatible realizations is closed under admissible composition of effective generators as long as the intermediate states remain in the compensator-fixed branch.
-\end{proposition}
-
-\begin{proof}
-Take two closure-compatible effective generators and apply the local composition lemma. Intermediate admissibility keeps the image in the compensator-fixed branch, and minimal defects are compensator-visible by the previous lemma. Therefore no hidden nonclosure term can survive composition without becoming detectable and hence removable by the compensator logic already established in the closure spine. The composed realization stays inside the admissible closure-compatible class.
-\end{proof}
-
-\begin{proposition}[Compensator binding theorem]
-Within every admissible closure-compatible realization, the Heisenberg compensator binds all minimal defect support to the complementary channel and therefore prevents invisible leakage away from the collapse-centered branch.
-\end{proposition}
-
-\begin{proof}
-The previous lemma shows that every genuine minimal defect is compensator-visible. The compensator acts internally on the closure-compatible branch and suppresses precisely the complementary support responsible for leakage. Hence no minimal defect can remain both nonzero and invisible. Therefore the compensator binds all defect support to the complementary channel and blocks invisible escape from the collapse-centered branch.
 \end{proof}
 
 \section{Structural Existence and Compatibility}
@@ -700,24 +666,6 @@ By normal-form uniqueness up to internal redistribution and by reduced normal-fo
 \paragraph{Derived tools from the master-equation corridor.}
 The master-equation chain yields a second family of reusable tools. In practice these let the reader identify active slots, test whether a reduced equation is still in normal form, and verify whether a perturbation remains inside the same admissible master-dynamics class without re-running the full derivation.
 
-
-
-\begin{lemma}[Slot separation is stable under admissible projection]
-Assume a projected regime preserves the active-slot pattern of an admissible master equation. Then the induced reduced equation still separates transport, connection, closure--compensator, and resonance contributions up to internal redistribution inside inactive slots.
-\end{lemma}
-
-\begin{proof}
-Projection eliminates or freezes only inactive contributions by hypothesis. Active slots therefore continue to contribute through their projected images, while any change inside frozen sectors is internal to the discarded or inactive directions. The reduced equation thus keeps the same four-way slot separation up to internal redistribution within the inactive complement.
-\end{proof}
-
-\begin{proposition}[Reduced master corridor rigidity]
-Fix an admissible active-slot pattern. Then every admissible reduced master equation in that class is rigid up to internal redistribution inside inactive slots and admissible reparameterization of retained effective couplings.
-\end{proposition}
-
-\begin{proof}
-By the reduced normal-form uniqueness statements already established, the visible master structure is determined by the retained slots. The previous lemma shows that admissible projection cannot merge or split these visible slots except through internal redistribution in the inactive complement. Therefore any two admissible reduced equations with the same active-slot pattern differ only by admissible coupling reparameterization and internal redistribution.
-\end{proof}
-
 \section{Structural Projections: Dirac, QFT, Einstein}
 The companion now inserts the minimal controlled limits already suggested by the main source. The point is not to derive three unrelated theories, but to show how different effective regimes arise from the same closure-preserving transport system once specific degrees of freedom are frozen, retained, or coarse-grained.
 
@@ -884,24 +832,6 @@ Admissible deformation preserves closure compatibility, and admissible projectio
 
 \paragraph{Derived tools from the projection corridors.}
 The projection block now yields a small family of reusable readout and reduction tools. First, the \emph{Dirac projection criterion} isolates those admissible sectors in which exact closure, trivialized connection data, and scalar resonance collapse the master equation to a Dirac-type form. Second, the \emph{gauge/resonance separation rule} distinguishes retained connection data from internal resonance contributions before one reads a Yang--Mills/QFT-type regime. Third, the \emph{bilinear-to-geometric trigger} says that one should first test bilinear observables for connection compatibility before attempting any Einstein-type reading. Fourth, the \emph{Einstein-corridor consistency test} checks whether bilinear reconstruction, coframe passage, and effective geometric reduction remain aligned inside the same projection class.
-
-
-
-\begin{lemma}[Bilinear observables preserve closure profile under geometric continuation]
-Let $\mathcal O(\Psi,\Psi)$ be an admissible bilinear observable generated from closure-compatible states. If the continuation preserves compensator-fixed content, then the induced bilinear observable preserves the active closure profile during geometric continuation.
-\end{lemma}
-
-\begin{proof}
-A bilinear observable of admissible states reads only closure-compatible data together with the admissible internal pairing. Preservation of compensator-fixed content prevents new complementary leakage terms from entering the bilinear pairing. Hence the active closure profile seen by the bilinear observable is unchanged during the continuation.
-\end{proof}
-
-\begin{proposition}[Einstein corridor persistence theorem]
-The Einstein-type projection corridor persists under every admissible geometric continuation that preserves compensator-fixed bilinear content and the coframe reconstruction class.
-\end{proposition}
-
-\begin{proof}
-Connection compatibility of bilinear observables and bilinear-to-geometric passage already supply the local geometric chain. The previous lemma shows that admissible continuation preserves the active closure profile at the bilinear level, while preservation of the coframe reconstruction class keeps the same geometric readout regime. Therefore the Einstein-type projection corridor persists under the stated continuation.
-\end{proof}
 
 \section{Probe Geometry and Frame-Shifted Readout}
 The Riemann text already contains a mature probe formalism with two orthogonal probes and a residual orthogonal search sector. This matches the standing framework rule that the third group stands perpendicular to both probes. The companion isolates the geometric minimum needed to connect this to the closure-preserving master system.
@@ -1091,24 +1021,6 @@ Different continuation steps may expose different readout-sector data after fram
 
 \paragraph{Derived tools from the probe calculus.}
 The probe block now yields a reusable family of search- and readout-oriented tools. First, the \emph{orthogonal search-sector test} checks whether a two-probe configuration preserves a third perpendicular channel as a genuine admissible search sector rather than letting it collapse into one of the directed probe modes. Second, the \emph{probe-readout persistence criterion} tests whether admissible continuation of a probe family preserves closure and frame-shifted readout coherence. Third, the \emph{search-feedback admissibility rule} determines whether feedback from the constrained search channel can be reinserted into the probe dynamics without creating uncancelled closure defects. Fourth, the \emph{iterated probe-family coherence test} checks whether repeated admissible probe updates preserve observable coherence across the entire probe-to-readout chain.
-
-
-
-\begin{lemma}[Frame-shifted readout preserves probe-visible closure data]
-Let a probe family be admissibly continued and then read through the frame-shift operator. If search-feedback remains closure-compatible, then the frame-shifted readout preserves the probe-visible closure data up to admissible internal redistribution.
-\end{lemma}
-
-\begin{proof}
-Closure-compatible feedback keeps the probe family inside the admissible search-and-readout class. The frame shift changes only the visible representation of the readout, not the invariant structural core. Therefore the closure data visible to the probe family are preserved up to the internal redistributions already allowed by the readout formalism.
-\end{proof}
-
-\begin{proposition}[Probe readout persistence theorem]
-Every admissible iterated probe family with closure-compatible search feedback defines one coherent frame-shifted readout class throughout the continuation.
-\end{proposition}
-
-\begin{proof}
-The iterated probe-family coherence statements ensure admissibility of the continuation. The previous lemma shows that frame-shifted readout preserves the probe-visible closure data. Hence the entire iterated family remains inside one coherent readout class rather than splitting into incompatible observational branches.
-\end{proof}
 
 \section{Mass, Gauge, and Higgs as Structural Readings}
 The companion treats masses, gauge sectors, and the Higgs interpretation as structural readings rather than independent insertions. This matches the main text's rule that sectoral data emerge once the invariant system is projected into a concrete regime.
@@ -1333,7 +1245,21 @@ The present release is organized around a fixed theorem architecture. Its role i
 
 The non-drift rules associated with this theorem architecture are the following: the main manuscript remains the leading architectural text; the companion expands proofs without replacing the main manuscript; no new chapter should be added before existing theorem corridors are densified; new statements are to be inserted inside the established block structure rather than appended ad hoc; and the Einstein-type and Higgs-type passages remain explicitly assumption-fenced until their operator-level realizations are further unfolded.
 
-\section{Strengthened theorem corridors in v0.9.0}
+\section{Dependency map of the current proof architecture}
+The present release may be read through the following dependency map.
+\begin{enumerate}[label=(\arabic*)]
+    \item The collapse state, ground carrier, triole, orthogonality, involution, compensator, closure, frame shift, and probe configuration form the fixed definitional base.
+    \item The closure/compensator spine depends directly on that base and yields the first admissibility, residue, and defect-control layer.
+    \item Structural equivalence depends on the definitional base together with closure compatibility and records which sectors preserve the same collapse-centered kernel.
+    \item The master-equation corridor depends on the closure/compensator spine and the equivalence corridor; its slot architecture and reduced-normal-form layer therefore sit strictly above those earlier blocks.
+    \item The controlled projection corridors depend on the master-equation corridor. The Dirac and gauge/QFT corridors are the least assumption-bearing projected regimes, while the Einstein-type corridor additionally depends on the bilinear/coframe/geometric passage.
+    \item The probe/readout layer depends on the closure/compensator spine, the master-equation corridor, and the frame-shift formalism. Its persistence results therefore inherit admissibility from those earlier corridors.
+    \item The mass/gauge/Higgs readout layer depends on the projection corridors and the probe/readout layer. In particular, the Higgs-type coupling corridor remains structurally supported by closure stability and gauge-irreducibility criteria.
+    \item The global synthesis layer depends on all previous corridors and records their mixed admissible compatibility in a common collapse-centered persistence class.
+    \item The appendix tool layer is secondary to the theorem layer: every tool recorded there is derived from one of the theorem corridors above and does not replace its proof basis.
+\end{enumerate}
+
+\section{Strengthened theorem corridors in v1.0.0}
 The present public release preserves and consolidates the strengthened manuscript architecture across five local theorem corridors together with the synthesis layer carried into the current release.
 
 \begin{enumerate}[label=(\roman*)]
@@ -1347,7 +1273,7 @@ The present public release preserves and consolidates the strengthened manuscrip
 Taken together, these additions do not yet exhaust the later target density of the companion project, but they do mark a clear public step beyond the earlier release line by replacing several formerly thin passages with local theorem corridors.
 
 
-\section{Release map of strengthened corridors}
+\section{Release map of theorem corridors and tools}
 The present release carries forward the consolidated densification layers while keeping the document aligned with the public Zenodo versioning logic.
 \begin{itemize}[leftmargin=1.6em]
     \item \textbf{B1 -- Closure and deformation spine.} Additional lemmas now control closure stability under admissible deformation and compatibility persistence of the closed structural class.
@@ -1361,27 +1287,12 @@ These additions make the public companion mathematically denser without yet turn
 \section{Structural tools and computational shortcuts}
 This appendix collects the first family of structural tools derived from the proof architecture. They do \emph{not} replace the proofs in the main text; rather, they package recurring admissibility checks, closure tests, and readout shortcuts that have already been justified by the theorem chain.
 
-
-\subsection{Second densification wave: load-bearing theorems}
-The present large-form draft now carries an additional densification wave on top of the public release chain. The most load-bearing strengthened statements are the \emph{Closure-compatibility theorem}, the \emph{Compensator binding theorem}, the \emph{Reduced master corridor rigidity} proposition, the \emph{Einstein corridor persistence theorem}, and the \emph{Probe readout persistence theorem}. These statements do not replace earlier corridor results; they tighten the continuation logic across closure, reduction, geometric readout, and probe persistence.
-
-\subsection{Tool nomenclature and usage convention}
-The tool layer uses a fixed naming convention throughout the appendix.
-\begin{description}[leftmargin=2.2em, style=nextline]
-\item[Test.] A decision-style tool that checks whether a configuration or continuation remains in the admissible class.
-\item[Criterion.] A sharper condition that identifies when a structural reading, reduction, or cancellation is justified.
-\item[Rule.] A transport or update prescription that can be applied without rerunning the full proof chain.
-\item[Shortcut.] A computation-saving readout device justified by a theorem corridor already proved in the main text.
-\item[Invariant.] A quantity or readout class that remains unchanged across admissible representatives, projections, or continuations.
-\end{description}
-Each tool below should be read in that sense: the proofs remain primary, and the tools summarize only what the theorem chain has already established.
-
 \subsection{Closure tools}
 \begin{description}[leftmargin=2.2em, style=nextline]
 \item[Closure admissibility test.] Decide whether an admissible operator family preserves the closed sector up to compensator-cancellable residue.
-\item[Closure-defect criterion.] Compute $\mathrm{Res}_{\mathrm{cl}}(T)$ for a candidate generator and test whether it vanishes on the admissible branch.
+\item[Defect detection criterion.] Compute $\mathrm{Res}_{\mathrm{cl}}(T)$ for a candidate generator and test whether it vanishes on the admissible branch.
 \item[Compensated cancellation criterion.] Check whether a nonzero residue is bound and cancelled by the compensator-fixed part of the evolution.
-\item[Residue transport rule.] Propagate the residue profile through admissible compositions without re-deriving the full closure argument from scratch.
+\item[Residue transport shortcut.] Propagate the residue profile through admissible compositions without re-deriving the full closure argument from scratch.
 \item[Projection-safe closure test.] Verify that a projected or reduced dynamics remains closure-compatible inside the active-slot pattern.
 \end{description}
 
@@ -1389,15 +1300,15 @@ Each tool below should be read in that sense: the proofs remain primary, and the
 \begin{description}[leftmargin=2.2em, style=nextline]
 \item[Orthogonality-preservation test.] Check whether an admissible sector change preserves the triolic orthogonality data up to the allowed carrier symmetries.
 \item[Compensator-fixed transfer rule.] Transport compensator-fixed content between equivalent readings without re-running the full admissibility proof.
-\item[Closure-profile transport rule.] Compare active closure content across equivalent sectors modulo internal redistribution.
-\item[Collapse-kernel invariance test.] Decide whether two projected or lifted readings belong to the same collapse-centered invariant class.
+\item[Closure-profile transport shortcut.] Compare active closure content across equivalent sectors modulo internal redistribution.
+\item[Collapse-kernel invariance check.] Decide whether two projected or lifted readings belong to the same collapse-centered invariant class.
 \end{description}
 
 \subsection{Master-equation tools}
 \begin{description}[leftmargin=2.2em, style=nextline]
-\item[Active-slot detection test.] Identify which of the transport, connection, closure--compensator, and resonance slots are structurally active in a given admissible equation.
-\item[Reduced normal-form criterion.] Decide whether a projected or reduced admissible equation is already in its canonical normal-form class for the fixed active-slot pattern.
-\item[Slot-persistence test.] Verify that an admissible perturbation preserves the current active-slot pattern rather than creating a genuinely new dynamics class.
+\item[Active-slot detection rule.] Identify which of the transport, connection, closure--compensator, and resonance slots are structurally active in a given admissible equation.
+\item[Reduced normal-form test.] Decide whether a projected or reduced admissible equation is already in its canonical normal-form class for the fixed active-slot pattern.
+\item[Slot-persistence check.] Verify that an admissible perturbation preserves the current active-slot pattern rather than creating a genuinely new dynamics class.
 \item[Internal redistribution shortcut.] Compare two admissible equations modulo derivative-free redistribution inside the same master-equation class.
 \item[Master-class readout invariant.] Read the collapse-centered core directly from the admissible master-equation class instead of from a particular representative.
 \end{description}
@@ -1405,7 +1316,7 @@ Each tool below should be read in that sense: the proofs remain primary, and the
 \begin{description}[leftmargin=2.2em, style=nextline]
 \item[Dirac projection criterion.] Test whether exact closure, frozen connection data, and scalar resonance reduce the admissible master equation to a Dirac-type form.
 \item[Gauge/resonance separation rule.] Separate retained connection data from resonance content before reading a gauge-theoretic projection.
-\item[Bilinear-to-geometric trigger criterion.] Check bilinear observables for projected connection compatibility before attempting geometric reconstruction.
+\item[Bilinear-to-geometric trigger.] Check bilinear observables for projected connection compatibility before attempting geometric reconstruction.
 \item[Einstein-corridor consistency test.] Verify that bilinear reconstruction, coframe passage, and effective geometric reduction stay aligned inside the same admissible projection class.
 \item[Projection-core readout invariant.] Read the same collapse-centered core across different admissible Dirac-, gauge-, and Einstein-type projection classes.
 \end{description}
@@ -1415,15 +1326,15 @@ Each tool below should be read in that sense: the proofs remain primary, and the
 \subsection{Probe tools}
 \begin{description}[leftmargin=2.2em, style=nextline]
 \item[Orthogonal search-sector test.] Verify that a two-probe configuration preserves a third perpendicular channel as an admissible search sector under the current closure and orthogonality constraints.
-\item[Probe-readout persistence test.] Decide whether admissible continuation of a probe family preserves closure-compatible readout after frame-shifted measurement.
-\item[Search-feedback admissibility criterion.] Test whether feedback from the constrained search sector can be reinserted into the probe dynamics without creating uncancelled closure defects.
+\item[Probe-readout persistence criterion.] Decide whether admissible continuation of a probe family preserves closure-compatible readout after frame-shifted measurement.
+\item[Search-feedback admissibility rule.] Test whether feedback from the constrained search sector can be reinserted into the probe dynamics without creating uncancelled closure defects.
 \item[Iterated probe-family coherence test.] Check whether repeated admissible probe updates preserve observable coherence across the full probe-to-readout chain.
 \end{description}
 
 \subsection{Physical readout tools}
 \begin{description}[leftmargin=2.2em, style=nextline]
 \item[Mass readout shortcut.] Extract the effective mass reading directly from the scalar or block-scalar part of the projected resonance slot once closure-compatible projection has been fixed.
-\item[Gauge-residue discrimination criterion.] Separate retained connection data from projected resonance data whenever the active-slot pattern survives the readout projection.
+\item[Gauge residue discriminator.] Separate retained connection data from projected resonance data whenever the active-slot pattern survives the readout projection.
 \item[Higgs-type coupling criterion.] Decide whether a projected coupling datum is simultaneously compensator-stable and gauge-irreducible, so that it supports a nontrivial Higgs-type structural reading.
 \end{description}
 
@@ -1431,11 +1342,11 @@ Each tool below should be read in that sense: the proofs remain primary, and the
 \begin{description}[leftmargin=2.2em, style=nextline]
 \item[Mixed-continuation compatibility test.] Check whether admissible deformation, projection, and probe continuation preserve the collapse-centered admissible class when composed.
 \item[Global synthesis persistence criterion.] Verify that the strengthened corridors remain jointly readable as one invariant structural system after mixed admissible continuation.
-\item[Sectorial coherence test.] Decide whether the resulting sectorial unfoldings still form one coherent family rather than disconnected effective regimes.
+\item[Sectorial coherence check.] Decide whether the resulting sectorial unfoldings still form one coherent family rather than disconnected effective regimes.
 \end{description}
 
 \subsection{How to use the tools}
-Each tool should be read as a \emph{derived consequence} of the proved theorem corridors. Tests decide admissibility, criteria identify structurally justified readings, rules transport content, shortcuts compress repeated calculations, and invariants package what remains unchanged across admissible representatives. The present draft now collects tool families for the closure/compensator spine, structural equivalence corridor, master-equation corridor, projection corridors, probe calculus, physical readout layer, and global synthesis layer. Later full-companion versions can refine these families further, but they should continue to preserve the rule that the tools summarize and operationalize theorems rather than replacing them.
+Each tool should be read as a \emph{derived consequence} of the proved theorem corridors. The present draft now collects tool families for the closure/compensator spine, structural equivalence corridor, master-equation corridor, projection corridors, probe calculus, and physical readout layer. Later full-companion versions can further refine these families, but they should continue to preserve the rule that the tools summarize and operationalize theorems rather than replacing them.
 
 \section{Version status summary}
 The present manuscript should be read as a substantially expanded public companion version. It forms a continuous technical manuscript from frontmatter and definitions through the central theorem chain to discussion, references, and appendices, and it now includes strengthened structural passages for closure/deformation, master-dynamics stability, probe-search feedback, the Einstein-type regime, the Higgs-type corridor, and a first dedicated appendix collection of derived structural tools and computational shortcuts. It does \emph{not} yet claim to be the later full mathematical companion version; that later stage is expected to be denser in explicit lemmas, intermediate propositions, and proof detail.
@@ -1458,7 +1369,7 @@ Brendecke, Marc.
 \bibitem{brendecke2026qscv014}
 Brendecke, Marc.
 \newblock \emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding}.
-\newblock Zenodo preprint, version~v0.9.0, March~2026.
+\newblock Zenodo preprint, version~v1.0.0, March~2026.
 \newblock Zenodo concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}.
 
 \end{thebibliography}
