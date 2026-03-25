@@ -29,7 +29,7 @@
 \newtheorem{axiom}{Axiom}
 
 % --- Document metadata ---
-\newcommand{\docversion}{2.18.0}
+\newcommand{\docversion}{2.19.0}
 \newcommand{\docdate}{\DTMdisplaydate{2026}{03}{25}{-1}}
 
 % --- Macros ---
@@ -5757,6 +5757,278 @@ Hence the physical language of the Companion is introduced only as a regulated r
 
 
 
+
+
+\subsection*{Phase IV-J: Spectral Readout, Trace Reconstruction, and Observable Selection}
+\addcontentsline{toc}{subsection}{Phase IV-J: Spectral Readout, Trace Reconstruction, and Observable Selection}
+
+\begin{lemma}[Spectral admissibility inheritance]
+\label{lem:spectral-admissibility-inheritance}
+If a physically readable sector is admitted by the controlled interface functor, then its spectral representative must inherit admissibility from the upstream closure-stable and transport-compatible structural body. In particular, no spectral mode may enter the readout regime unless it descends from an already admissible structural sector.
+\end{lemma}
+
+\begin{proof}
+By the semantic--tensor interface and the grouped transport chain, admissibility is preserved from the generative layer through cascade readout and into the physically readable interface regime. The controlled physical interface functor therefore cannot attach an observable meaning to a mode that was not already admitted upstream. Hence spectral readability inherits admissibility rather than creating it locally.
+\end{proof}
+
+\begin{proposition}[Trace-compatible spectral decomposition]
+\label{prop:trace-compatible-spectral-decomposition}
+Every admissible spectral body in the readout regime admits a trace-compatible decomposition into modes whose contribution respects the closure filter, the grouped transport constraints, and the observer-covariant interface conditions.
+\end{proposition}
+
+\begin{proof}
+The historical spectral and trace cores already isolate the need for admissible mode selection and trace-compatible decomposition. In the normalized architecture, these requirements are now downstream of closure, cascade, and grouped transport. Therefore any accepted spectral decomposition must preserve the admissible body identified by the upstream chain and cannot separate into trace-incompatible or closure-breaking components. This yields a trace-compatible mode decomposition of every admissible spectral body.
+\end{proof}
+
+\begin{proposition}[Observable extraction map]
+\label{prop:observable-extraction-map}
+There exists a structurally controlled observable extraction map
+\[
+\mathcal R_{\mathrm{obs}}: \mathcal S_{\mathrm{spec}}^{\mathrm{adm}} \longrightarrow \mathcal O_{\mathrm{phys}}^{\mathrm{adm}},
+\]
+which assigns observable readouts only to trace-compatible admissible spectral sectors.
+\end{proposition}
+
+\begin{proof}
+Phase~IV-I$'$ introduced a controlled interface functor from the grouped architecture into physically readable observables. Restricting that interface to the spectrally admissible, trace-compatible body provided by Proposition~\ref{prop:trace-compatible-spectral-decomposition} yields a downstream extraction map from admissible spectral sectors to admissible observables. Since its domain is already filtered by closure, transport, and trace compatibility, the map does not generate new observables freely but only extracts structurally sanctioned ones.
+\end{proof}
+
+\begin{theorem}[Mode-selection and observable consistency theorem]
+\label{thm:mode-selection-observable-consistency}
+Mode selection in the Companion is admissible only when it is simultaneously spectral, trace-compatible, closure-preserving, and observer-covariant. Under these conditions, the observable extraction map produces a consistent readout regime in which selected modes can be interpreted without violating ontology non-drift.
+\end{theorem}
+
+\begin{proof}
+Spectral admissibility inheritance excludes modes that do not descend from the admissible structural chain. Trace-compatible spectral decomposition excludes decompositions that would destroy the integrity of the admissible spectral body. The controlled interface functor and observer covariance from Phase~IV-I$'$ ensure that the resulting readout remains a covariance of one and the same body rather than a proliferation of ontologies. Therefore mode selection is consistent exactly when all four constraints are met, and in that regime observable extraction remains structurally controlled.
+\end{proof}
+
+\begin{corollary}[Spectral readout reconstruction chain]
+\label{cor:spectral-readout-reconstruction-chain}
+The next spectral unfolding chain is
+\[
+\begin{aligned}
+&\text{spectral admissibility inheritance}
+\Longrightarrow
+\text{trace-compatible decomposition}\\
+&\Longrightarrow
+\text{observable extraction}
+\Longrightarrow
+\text{consistent mode-selected readout}.
+\end{aligned}
+\]
+Thus the spectral and trace layer of the Companion is admitted only after closure, grouped transport, and controlled physical interfacing have already been stabilized.
+\end{corollary}
+
+
+% -- relocated late main-text phases IV-K to IV-O --
+
+
+\subsection*{Phase IV-K: Resolvent Gatekeeping and Operator-Controlled Spectral Access}
+\addcontentsline{toc}{subsection}{Phase IV-K: Resolvent Gatekeeping and Operator-Controlled Spectral Access}
+
+\begin{lemma}[Resolvent admissibility lemma]\label{lem:resolvent_admissibility}
+Let $\mathcal R(\lambda)=(\lambda\mathbf 1-\mathcal A)^{-1}$ denote a formal resolvent on the admissible spectral layer. If the underlying mode family is closure-stable and trace-compatible, then resolvent access is admissible only on those channels for which the induced transport preserves the grouped-layer constraints and does not reintroduce ontology drift. In particular, admissible resolvent access is a restricted rather than global spectral operation.
+\end{lemma}
+\begin{proof}
+The semantic kernel already constrains admissible transport by closure preservation, grouped transport, and controlled readout. A resolvent therefore cannot be treated as an arbitrary inversion device: it is allowed only where the corresponding operator action remains inside the admissible closure class and respects the readout filter established in the preceding phases. Hence admissibility is inherited by resolvent access only on the structurally licensed channels.
+\end{proof}
+
+\begin{proposition}[Gatekeeping proposition for admissible modes]\label{prop:resolvent_gatekeeping}
+The resolvent layer acts as a gatekeeping mechanism: admissible modes are precisely those spectral branches for which resolvent access is compatible with closure, trace reconstruction, and grouped-layer transport. Non-admissible branches are excluded before observable extraction.
+\end{proposition}
+\begin{proof}
+By Lemma~\ref{lem:resolvent_admissibility}, resolvent access is already restricted to structure-preserving channels. Combined with the trace-compatible mode selection of Phase~IV-J, this yields a gatekeeping principle: only those modes that remain compatible with closure and transport can pass into the observable sector. The exclusion of non-admissible branches is therefore structural rather than ad hoc.
+\end{proof}
+
+\begin{theorem}[Operator-controlled trace access theorem]\label{thm:operator_controlled_trace_access}
+Assume that the spectral sector is admissible, the selected modes are resolvent-gated, and the trace reconstruction remains compatible with the semantic--tensor interface. Then trace access is operator-controlled: every observable trace contribution arises through an admissible operator channel and not through uncontrolled spectral leakage.
+\end{theorem}
+\begin{proof}
+The preceding proposition ensures that only admissible modes are available for readout. The semantic--tensor interface then identifies the operator realization of the same admissible content, while closure preservation prevents leakage into non-licensed channels. Consequently, the trace contributions that survive observable extraction are exactly those transmitted through operator-controlled admissible channels.
+\end{proof}
+
+\begin{corollary}[Stable observable channel corollary]\label{cor:stable_observable_channel}
+Under admissible resolvent gatekeeping, the observable readout sector forms a stable channel: spectral access, trace reconstruction, and mode selection remain synchronized under the same structural admissibility constraints.
+\end{corollary}
+\begin{proof}
+This follows directly from Theorem~\ref{thm:operator_controlled_trace_access}: once admissible access, admissible mode selection, and admissible trace transport coincide, the resulting observable sector is stable under the same structural constraints.
+\end{proof}
+
+\begin{remark}[Resolvent-to-readout chain]\label{rem:resolvent_to_readout_chain}
+The operator-controlled spectral access chain may therefore be summarized as
+\[
+\begin{aligned}
+\text{resolvent admissibility}
+&\Longrightarrow \text{gatekept mode access}\\
+&\Longrightarrow \text{operator-controlled trace access}\\
+&\Longrightarrow \text{stable observable channel}.
+\end{aligned}
+\]
+This phase extends the preceding spectral readout layer by showing that observable extraction is not only spectrally filtered but also operatorically regulated.
+\end{remark}
+
+
+
+\subsection*{Phase IV-L: Semigroup Stability and Lyapunov-Controlled Readout Persistence}
+\addcontentsline{toc}{subsection}{Phase IV-L: Semigroup Stability and Lyapunov-Controlled Readout Persistence}
+
+\begin{lemma}[Semigroup admissibility lemma]\label{lem:semigroup_admissibility}
+Let $(T_t)_{t\ge 0}$ denote a formal semigroup acting on the admissible readout sector. If the initial spectral channel is closure-stable, resolvent-gated, and trace-compatible, then admissible semigroup evolution is restricted to those trajectories for which grouped transport, closure preservation, and observable compatibility remain jointly valid for all admissible times.
+\end{lemma}
+\begin{proof}
+The preceding phases identify the observable channel only after admissibility, gatekeeping, and operator-controlled trace access have been enforced. A semigroup acting on this sector may therefore propagate states only if the induced time evolution respects the same admissibility filter. Otherwise the evolution would exit the closure-preserving and trace-compatible regime and would no longer represent a structurally licensed readout trajectory. Hence admissible semigroup evolution is constrained to the channels that preserve the previously established structural conditions for all admissible times.
+\end{proof}
+
+\begin{proposition}[Lyapunov gate proposition]\label{prop:lyapunov_gate}
+Assume that an admissible Lyapunov functional $\mathcal L$ exists on the gated readout sector. If $\mathcal L$ is nonincreasing along the admissible semigroup trajectories, then unstable leakage into non-admissible channels is structurally suppressed, and the gated observable channel remains dynamically protected.
+\end{proposition}
+\begin{proof}
+A nonincreasing Lyapunov functional excludes the spontaneous amplification of perturbations that would carry the evolution outside the admissible channel. Since admissibility already forbids ontology drift, closure violation, and non-gated spectral leakage, Lyapunov monotonicity upgrades these static constraints to a dynamical protection principle. The readout channel is therefore not merely selected once but remains protected under admissible evolution.
+\end{proof}
+
+\begin{theorem}[Persistent observable channel theorem]\label{thm:persistent_observable_channel}
+Suppose that the readout sector is resolvent-gated, operator-controlled, and semigroup-admissible, and that a Lyapunov functional controls admissible perturbations. Then the observable channel is persistent: admissible mode selection, trace reconstruction, and grouped transport remain synchronized along the admissible evolution, and the readout sector stays dynamically stable against structural leakage.
+\end{theorem}
+\begin{proof}
+By Lemma~\ref{lem:semigroup_admissibility}, admissible semigroup evolution preserves the structurally licensed readout sector. Proposition~\ref{prop:lyapunov_gate} then prevents the admissible trajectories from developing unstable excursions into non-gated channels. Combined with the operator-controlled access theorem and the stable observable channel corollary from Phase~IV-K, this yields persistence of the observable channel: the same admissibility constraints that select the readout sector also stabilize it under admissible evolution.
+\end{proof}
+
+\begin{corollary}[Long-time readout stability corollary]\label{cor:long_time_readout_stability}
+Under admissible semigroup evolution and Lyapunov control, the observable readout channel remains stable at long admissible times; the selected spectral and trace-compatible sector is therefore not merely accessible but persistently readable.
+\end{corollary}
+\begin{proof}
+This follows directly from Theorem~\ref{thm:persistent_observable_channel}: persistence of the admissible channel implies long-time stability of the same gated and closure-compatible readout sector.
+\end{proof}
+
+\begin{remark}[Semigroup-to-stability chain]\label{rem:semigroup_to_stability_chain}
+The late-stage stability chain may therefore be summarized as
+\[
+\begin{aligned}
+\text{semigroup admissibility}
+&\Longrightarrow \text{Lyapunov-controlled gated evolution}\\
+&\Longrightarrow \text{persistent observable channel}\\
+&\Longrightarrow \text{long-time readout stability}.
+\end{aligned}
+\]
+This phase completes the operatoric readout picture by showing that admissible channels are not only spectrally and resolvent-gated, but also dynamically stabilized over admissible evolution scales.
+\end{remark}
+
+
+
+\subsection*{Phase IV-M: Channel Fusion and Multi-Readout Consistency}
+\addcontentsline{toc}{subsection}{Phase IV-M: Channel Fusion and Multi-Readout Consistency}
+
+\begin{lemma}[Admissible channel fusion lemma]\label{lem:admissible_channel_fusion}
+Suppose that two or more observable channels are individually admissible, resolvent-gated, and semigroup-stable. Then a fused readout may be admitted only if the fusion procedure preserves the common closure filter, the grouped transport discipline, and the no-ontology-drift condition. In particular, fusion is admissible only as a compatibility-preserving synthesis of already licensed channels.
+\end{lemma}
+\begin{proof}
+The previous phases guarantee admissibility, operatoric access, and dynamical persistence for each channel separately. A fusion mechanism cannot be treated as an unrestricted superposition principle, since otherwise it could reintroduce hidden drift between channels that were only separately controlled. Therefore fusion is admissible only when the same closure, transport, and ontology constraints remain valid for the synthesized channel. In that case fusion does not create a new structural body, but re-expresses a common admissible body through multiple synchronized readouts.
+\end{proof}
+
+\begin{proposition}[Cross-channel consistency proposition]\label{prop:cross_channel_consistency}
+If admissible channels are fused through a compatibility-preserving synthesis, then their spectral, trace-based, and long-time readout contents must agree on the shared admissible sector. Any discrepancy beyond the admitted transport freedom signals a non-admissible fusion rather than a genuine multi-readout effect.
+\end{proposition}
+\begin{proof}
+Each admissible channel already carries its observable content through the same semantic--tensor interface, the same resolvent gatekeeping, and the same semigroup-stable evolution class. Hence a compatibility-preserving fusion may only combine channels whose readout contents coincide on the overlap of their admissible sectors. If an apparent fusion produces incompatible observable contents beyond the allowed transport freedom, then the synthesis has violated the common admissibility constraints and is therefore not structurally licensed.
+\end{proof}
+
+\begin{theorem}[Multi-readout consistency theorem]\label{thm:multi_readout_consistency}
+Under admissible channel fusion, the Companion admits a controlled multi-readout regime: distinct readout channels may coexist, but only as synchronized presentations of one and the same admissible structural body. Consequently, multi-readout consistency is equivalent to fusion without ontology drift.
+\end{theorem}
+\begin{proof}
+By Lemma~\ref{lem:admissible_channel_fusion}, channel fusion is allowed only as a synthesis that preserves closure, grouped transport, and non-drift. Proposition~\ref{prop:cross_channel_consistency} then forces agreement of spectral, trace, and persistent readout content on the common admissible sector. Therefore multiple channels can coexist only as mutually compatible renderings of the same admissible body. The controlled multi-readout regime is thus precisely the regime in which fusion introduces no ontology drift.
+\end{proof}
+
+\begin{corollary}[Fusion-to-consistency chain]\label{cor:fusion_to_consistency_chain}
+The late-stage fusion chain may therefore be summarized as
+\[
+\begin{aligned}
+\text{admissible channel fusion}
+&\Longrightarrow \text{cross-channel consistency}\\
+&\Longrightarrow \text{controlled multi-readout regime}\\
+&\Longrightarrow \text{fusion without ontology drift}.
+\end{aligned}
+\]
+This phase closes the late readout unfolding by showing that stable observable channels may be combined only through a synthesis that preserves the unique admissible structural body across all readout presentations.
+\end{corollary}
+
+
+\subsection*{Phase IV-N: Unified Observable Readout Synthesis}
+\addcontentsline{toc}{subsection}{Phase IV-N: Unified Observable Readout Synthesis}
+
+\begin{proposition}[Unified observable readout synthesis]
+Let the late readout regime be governed by the spectral admissibility, resolvent gatekeeping, semigroup persistence, and admissible channel-fusion principles established in Phases IV-J through IV-M. Then the resulting observable sector admits a unified synthesis map in which spectral access, operator control, long-time persistence, and multi-readout consistency are read as mutually compatible aspects of one and the same admissible observable architecture.
+\end{proposition}
+
+\begin{proof}
+Phase IV-J supplies the spectral and trace-compatible decomposition of admissible modes. Phase IV-K restricts this decomposition to resolvent-accessible channels only, so that observable extraction is not performed on arbitrary modes but only on structurally permitted ones. Phase IV-L then upgrades admissible access to persistence under semigroup evolution and Lyapunov control, which turns transient access into stable readout inheritance over time. Finally, Phase IV-M shows that multiple such persistent channels can be fused without inducing cross-channel inconsistency or ontological drift. Therefore the late readout regime is not a mere juxtaposition of separate spectral, operator, dynamical, and fusion statements; it forms a single admissible synthesis in which observable extraction is structurally unified.\qedhere
+\end{proof}
+
+\begin{corollary}[Late readout master chain]
+The late readout architecture admits the compressed chain
+\[
+\begin{aligned}
+&\text{spectral admissibility}
+\Longrightarrow \text{resolvent-controlled access}\\
+&\Longrightarrow \text{semigroup/Lyapunov persistence}
+\Longrightarrow \text{multi-readout consistency}\\
+&\Longrightarrow \text{unified observable synthesis.}
+\end{aligned}
+\]
+\end{corollary}
+
+\begin{remark}[Interpretive role of the late synthesis]
+This synthesis does not introduce a new ontology behind the observable layer. Rather, it states that the different late readout mechanisms are to be interpreted as coordinated access constraints and persistence conditions on one admissible observable sector generated by the normalized structural core.
+\end{remark}
+
+
+
+\subsection*{Phase IV-O: Return Bridge to the Generative Core and the Structural Master Equation}
+\addcontentsline{toc}{subsection}{Phase IV-O: Return Bridge to the Generative Core and the Structural Master Equation}
+
+\begin{proposition}[Return bridge from unified readout to the generative core]
+The unified observable readout synthesized in Phase IV-N does not define a second ontological source. Rather, it is a late readout layer of the same generative structure determined by the one-body condition, triolic stabilization, orthogonal anchoring, frame-shifted observation, and the HC--closure--confinement chain.
+\end{proposition}
+
+\begin{proof}
+The earlier unfolding phases establish that admissible readout channels arise only after re-identification, compensator forcing, closure stabilization, and higher confinement. Phases IV-J through IV-N then refine how admissible observable content is accessed, filtered, stabilized, fused, and synthesized. None of those later steps introduces a new generating source; they remain constrained by the same admissibility conditions inherited from the generative layer. Hence the late observable synthesis is a return readout of the original structure rather than an independent origin.
+\end{proof}
+
+\begin{theorem}[Master-equation readout closure]
+Let the structural master equation be the compressed dynamical expression of the admissible generative core. Then the late readout chain
+\[
+\begin{aligned}
+&\text{spectral admissibility}
+\Longrightarrow \text{resolvent-controlled access}
+\\
+&\Longrightarrow \text{semigroup/Lyapunov persistence}
+\Longrightarrow \text{multi-readout consistency}
+\\
+&\Longrightarrow \text{unified observable synthesis}
+\end{aligned}
+\]
+closes back into the same master-equation-governed structure, in the sense that every admissible late observable synthesis remains a governed readout of the original master-equation sector.
+\end{theorem}
+
+\begin{proof}
+By the semantic/tensor interface and grouped transport phases, admissibility is preserved under the Millennium transport between the generative, projection, and realization layers. The readout phases IV-J through IV-N add only progressively refined access conditions: spectral admissibility, resolvent gatekeeping, semigroup persistence, and fusion consistency. Since each step is formulated as structure-preserving and closure-compatible, the final observable synthesis remains within the same admissible sector selected by the master equation. Therefore the readout chain closes into the same governing structure and should be interpreted as its late observable face.
+\end{proof}
+
+\begin{remark}[Interpretive closure of the unfolding program]
+The point of the return bridge is to prevent the late readout machinery from being mistaken for a detached auxiliary theory. The late phases do not compete with the generative core; they complete its observable unfolding. In this sense the overall program closes as
+\[
+\begin{aligned}
+&\text{generative core}
+\Longrightarrow \text{HC/closure/confinement}
+\Longrightarrow \text{master equation}
+\\
+&\Longrightarrow \text{spectral-resolvent-semigroup-fusion synthesis}
+\\
+&\Longrightarrow \text{return readout of the same structure.}
+\end{aligned}
+\]
+\end{remark}
+
 \appendix
 
 \section{Reintegrated Historical Proof Blocks}
@@ -8821,7 +9093,7 @@ filter, admit HC-stable observable reconstruction, and finally support
 multi-readout fusion without hidden inconsistency.
 
 
-\appendix
+% Appendix mode is already active above; the following block continues the appendix material without re-entering appendix mode.
 
 \section*{Appendix B. Symbol Normalization for the Late Ledger/Readout Layers}
 \addcontentsline{toc}{section}{Appendix B. Symbol Normalization for the Late Ledger/Readout Layers}
@@ -8951,6 +9223,7 @@ v2.16.0 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.192
 \hline
 v2.17.0 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.19226497}{10.5281/zenodo.19226497} \\
  v2.18.0 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.19226549}{10.5281/zenodo.19226549} \\
+ v2.19.0 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.19226773}{10.5281/zenodo.19226773} \\
 \hline
 \end{longtable}
 }
@@ -8961,6 +9234,8 @@ Zenodo releases and local repair states remain chronologically comparable inside
 appendix table.
 
 \subsection*{Bibliography}
+
+
 
 \begin{thebibliography}{9}
 
@@ -8973,9 +9248,9 @@ Zenodo v4.15, March 2026.
 
 \bibitem{brendecke2026sphaera}
 Marc Brendecke,
-\emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding} (Quantum Sphaera Companion v2.18.0),
+\emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding} (Quantum Sphaera Companion v2.19.0),
 March 2026.
-\newblock DOI: \href{https://doi.org/10.5281/zenodo.19226549}{10.5281/zenodo.19226549}.
+\newblock DOI: \href{https://doi.org/10.5281/zenodo.19226773}{10.5281/zenodo.19226773}.
 
 \bibitem{kim2026}
 Yilwook Kim,
