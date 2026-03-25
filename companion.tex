@@ -3,7 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath,amssymb,amsthm,mathtools}
-\usepackage{geometry,hyperref,booktabs,array}
+\usepackage{geometry,hyperref,booktabs,array,longtable}
 \usepackage{enumitem}
 \usepackage{fancyhdr,bm}
 \usepackage{slashed}
@@ -29,7 +29,7 @@
 \newtheorem{axiom}{Axiom}
 
 % --- Document metadata ---
-\newcommand{\docversion}{2.10.0}
+\newcommand{\docversion}{2.12.0}
 \newcommand{\docdate}{\DTMdisplaydate{2026}{03}{25}{-1}}
 
 % --- Macros ---
@@ -48,13 +48,13 @@
 \newcommand{\KC}{\hat{K}}
 
 \title{%
-  Mathematical Companion to the Quantum Sphaera Framework:\\
-  Structural Expansion, Closure, and Readout Architecture
+  Quantum Sphaera Companion:\
+  A Structure-First Mathematical Unfolding
 }
 \author{%
   Marc Brendecke\\
   \small Independent Researcher, Bochum, Germany\\
-  \small DOI: \href{https://doi.org/10.5281/zenodo.19223084}{10.5281/zenodo.19223084}\\
+  \small DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}\\
   \small Companion Paper --- Preprint, not peer reviewed.\\
   \small Technical unfolding of the main Sphaera paper~\cite{brendecke2026rh}.
 }
@@ -93,8 +93,8 @@ All quantum consequences --- entanglement as shared proper time, Bell
 consistency, gauge structure --- follow from Theorem~\ref{thm:unity}
 without additional assumptions.
 
-Version~\docversion\ extends the earlier expansion into a closure--projection synthesis release: it preserves the HC/closure programme, retains the staged master-equation ladder, hardens the intermediate derivation chains, strengthens the lemma/tool apparatus, keeps the appendix tables reusable as proof interfaces, and adds a new synthesis layer that transports structural status from local closure through probe reduction into disciplined projection and back-reference recovery.
-Version~\docversion\ adds a budget-transport layer for the specialized channels: ledger entries are no longer only static admissibility markers, but are promoted to evolving quantities whose transfer, leakage, and compensator absorption can be tracked across the derivation chain.
+Version~\docversion\ consolidates the local repair and title-fix states into the public release chain: it preserves the HC/closure programme, retains the staged master-equation ladder, hardens the intermediate derivation chains, strengthens the lemma/tool apparatus, keeps the appendix tables reusable as proof interfaces, and folds the recent version, title, and history fixes into a single normalized release state.
+Version~\docversion\ also normalizes Appendix~D into a release-grade chronology: ledger entries are no longer only static admissibility markers, but are recorded together with release status and publication date so that the historical chain remains auditable across local repair states and Zenodo publications.
 \end{abstract}
 
 \clearpage
@@ -114,7 +114,7 @@ monolith intact. The operative rule for this release is:
 \begin{itemize}[leftmargin=2em]
   \item Version: \docversion
   \item Date: \docdate
-  \item Zenodo DOI: \href{https://doi.org/10.5281/zenodo.19223084}{10.5281/zenodo.19223084}
+  \item Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}
   \item Main-paper relation: Explicit mathematical companion to the current Sphaera master line
 \end{itemize}
 
@@ -291,8 +291,8 @@ For the actual writing sequence of the next cycle:
 
 
 
-\section*{v\docversion\ Consolidation Core}
-\addcontentsline{toc}{section}{v\docversion\ Consolidation Core}
+\section*{v1.2.0 Consolidation Core}
+\addcontentsline{toc}{section}{v1.2.0 Consolidation Core}
 
 This version closes the gap between the previously inserted roadmap and the
 already existing structural sections of the monolith. Its purpose is to state,
@@ -322,7 +322,7 @@ be introduced as autonomous starting axioms when they can instead be read as
 forced compression formulas of a deeper closure mechanism.
 
 \subsection*{2. Ground condition, HC, and closure}
-The working core of v\docversion\ is the explicit chain
+The working core of v1.2.0 is the explicit chain
 \[
 \text{Ground Condition} \Longrightarrow \text{HC} \Longrightarrow \text{Closure}.
 \]
@@ -372,7 +372,7 @@ freedom therefore assemble into a closed class. This class is the closure
 regime read throughout the monolith.
 
 \paragraph{Protected invariants.}
-At the level of v\docversion, the most important protected invariants are:
+At the level of v1.2.0, the most important protected invariants are:
 (i) the persistence of one common underlying body, (ii) orthogonality of the
 third triolic direction relative to the first two, (iii) frame-shift discipline
 between structure and observer description, and (iv) confinement of admissible
@@ -400,7 +400,7 @@ is one of the main structural arrows of the version.
 
 \subsection*{4. First-layer master-equation logic}
 The monolith already contains the structural core section and the ToE-style
-master-equation section. v\docversion\ now fixes how these are to be read.
+master-equation section. v1.2.0 now fixes how these are to be read.
 The first-layer master equation is not yet the maximal explicit final law of
 the framework. It is the minimal compressed form that must simultaneously carry
 geometry, triolic sector dynamics, compensator action, closure residue, and
@@ -442,7 +442,7 @@ readout discipline. Hence only a combined structural form remains compatible.
 
 \subsection*{5. Probe sector as second access path}
 The probe sector is not a side remark but the second major access path of
-v\docversion. Two probes are sent toward one another, and each probe itself is
+v1.2.0. Two probes are sent toward one another, and each probe itself is
 to be treated as a triolic structure. The third group stands orthogonal to both
 probes and thereby defines a constrained search region rather than an arbitrary
 ambient space. This orthogonal third group is crucial because it prevents the
@@ -473,7 +473,7 @@ orthogonality of the third group, compensator compatibility, and closure.
 Everything outside that region is structurally irrelevant for the probe readout.
 
 \subsection*{6. Normalized tool apparatus}
-A central goal of v\docversion\ is to stop treating rechen-tricks as scattered
+A central goal of v1.2.0 is to stop treating rechen-tricks as scattered
 intuition and instead store them as a reusable apparatus. The following classes
 are fixed for this version.
 
@@ -495,7 +495,7 @@ are fixed for this version.
 Every individual tool should be documented under the same six labels:
 \emph{name, purpose, prerequisite, short formal scheme, typical use, boundary
 of validity}. This normalization rule is itself one of the deliverables of
-v\docversion.
+v1.2.0.
 
 \paragraph{Canonical examples in the present project.}
 Kasisky detection is stored as a frequency/pattern detector rather than as a
@@ -524,7 +524,7 @@ physical object is already fully derived at the same level. It claims instead
 that the structural origin is common and that different physical sectors appear
 at different distances from that origin.
 
-\subsection*{8. Consistency status of v\docversion}
+\subsection*{8. Consistency status of v1.2.0}
 The present version should therefore be regarded as \emph{finished in working
 form} whenever the following points are simultaneously true:
 \begin{enumerate}[leftmargin=2em]
@@ -545,10 +545,10 @@ missing architecture, but the next proof-theoretic deepening: more explicit
 lemma chains, stronger sector-by-sector projections, and a larger appendix of
 normalized tools and shortcuts.
 
-\section*{v\docversion\ Derivation and Appendix Integration Core}
-\addcontentsline{toc}{section}{v\docversion\ Derivation and Appendix Integration Core}
+\section*{v1.4.0 Derivation and Appendix Integration Core}
+\addcontentsline{toc}{section}{v1.4.0 Derivation and Appendix Integration Core}
 
-The specific task of v\docversion\ is to turn the earlier consolidation and
+The specific task of v1.4.0 is to turn the earlier consolidation and
 lemma-development layers into a more tightly chained proof surface. This means
 that the argument is no longer presented only as a list of strategic claims.
 Instead, the intermediate dependencies are written so that later appendix items
@@ -614,7 +614,7 @@ moves of the theory.
 
 \subsection*{2. Micro-to-macro chain tightened}
 The earlier versions already stated that the macroscopic projection must be read
-from the microscopic structural unit through HC and closure. In v\docversion\,
+from the microscopic structural unit through HC and closure. In v1.4.0,
 this chain is stated more sharply:
 \[
 \text{micro structural unit}
@@ -676,7 +676,7 @@ store these devices as modular search operators without severing them from the
 main proof line.
 
 \subsection*{4. Appendix coupling rules}
-The appendix is no longer a passive storage area. In v\docversion\ it is given a
+The appendix is no longer a passive storage area. In v1.4.0 it is given a
 precise function: each appendix block must either (i) justify a compressed step
 in the main text, (ii) codify a reusable tool, or (iii) collect a repeated
 technical transformation that would otherwise bloat the main line.
@@ -706,11 +706,11 @@ transformation block. Once that citation path exists, the main text may use the
 compressed reference without reducing logical transparency.
 \end{proof}
 
-\subsection*{5. v\docversion\ readiness criteria}
+\subsection*{5. v1.4.0 readiness criteria}
 This release should be regarded as complete in working form when the following
 conditions hold simultaneously:
 \begin{enumerate}[leftmargin=2em]
-  \item the version stamp and DOI are updated to v\docversion;
+  \item the version stamp and DOI are updated to v1.4.0;
   \item the closure ladder is stated as an explicit reusable chain;
   \item at least one new family of intermediate lemmas is present;
   \item the micro-to-macro principle is written as a formal proposition;
@@ -720,15 +720,15 @@ conditions hold simultaneously:
 \end{enumerate}
 
 These conditions are now satisfied in the present monolith. Relative to v1.3.0,
-v\docversion\ therefore marks the point where the document stops being only a
+v1.4.0 therefore marks the point where the document stops being only a
 consolidated development line and becomes a more disciplined proof-and-appendix
 system.
 
 
-\section*{v\docversion\ Projection and Appendix Table Integration Core}
-\addcontentsline{toc}{section}{v\docversion\ Projection and Appendix Table Integration Core}
+\section*{v1.5.0 Projection and Appendix Table Integration Core}
+\addcontentsline{toc}{section}{v1.5.0 Projection and Appendix Table Integration Core}
 
-The task of v\docversion\ is to convert the earlier derivation-and-appendix
+The task of v1.5.0 is to convert the earlier derivation-and-appendix
 interlock into a more explicit transport layer between the main line and the
 technical tables. Earlier versions had already introduced the closure ladder,
 the micro-to-macro principle, and the appendix transfer rule. The present stage
@@ -739,7 +739,7 @@ The point is not stylistic expansion but recoverability. A compressed move must
 remain reconstructible.
 
 \subsection*{1. Projection tables as proof interfaces}
-Projection tables are not merely descriptive summaries. In v\docversion\ they
+Projection tables are not merely descriptive summaries. In v1.5.0 they
 receive a precise logical role: a projection table records how a structural
 object, already licensed by the closure architecture, may be read as an
 effective sector form without pretending that the effective form is primary.
@@ -775,7 +775,7 @@ stores the missing local detail in recoverable form.
 \subsection*{2. Interpretation status discipline}
 The earlier reading discipline distinguished between what is structurally
 forced, projectively read, heuristically interpreted, and left open. In
-v\docversion\ this becomes a transport rule for all summary tables and appendix
+v1.5.0 this becomes a transport rule for all summary tables and appendix
 catalogues.
 
 \begin{proposition}[Interpretation-status transport principle]
@@ -800,7 +800,7 @@ is mandatory.
 
 \subsection*{3. Appendix-citation lattice}
 The appendix now receives a more explicit citation lattice. Instead of treating
-the appendix as a linear storage area, v\docversion\ organizes it as a small
+the appendix as a linear storage area, v1.5.0 organizes it as a small
 network of recoverable proof targets:
 \begin{enumerate}[leftmargin=2em]
   \item \textbf{lemma targets} for local derivation moves;
@@ -847,11 +847,11 @@ Higgs readings. The question is no longer only whether a reading is suggestive,
 but whether it survives transport across the disciplined structural operations
 already fixed by the framework.
 
-\subsection*{5. v\docversion\ readiness criteria}
+\subsection*{5. v1.5.0 readiness criteria}
 This release should be regarded as complete in working form when the following
 conditions hold simultaneously:
 \begin{enumerate}[leftmargin=2em]
-  \item the version stamp and DOI are updated to v\docversion;
+  \item the version stamp and DOI are updated to v1.5.0;
   \item projection tables are assigned an explicit proof-interface role;
   \item interpretation status is required to survive table and appendix transfer;
   \item the appendix-citation lattice is stated as a reusable compression rule;
@@ -860,7 +860,7 @@ conditions hold simultaneously:
 \end{enumerate}
 
 These conditions are now satisfied in the present monolith. Relative to v1.4.0,
-v\docversion\ marks the point where appendix tables and projection summaries are
+v1.5.0 marks the point where appendix tables and projection summaries are
 integrated into the proof discipline itself rather than serving only as support
 material.
 
@@ -3159,8 +3159,8 @@ available.
 
 
 
-\section*{v\docversion\ Closure--Projection Synthesis Core}
-\addcontentsline{toc}{section}{v\docversion\ Closure--Projection Synthesis Core}
+\section*{v1.7.0 Closure--Projection Synthesis Core}
+\addcontentsline{toc}{section}{v1.7.0 Closure--Projection Synthesis Core}
 
 This release adds a further synthesis layer between the closure blocks already
 introduced and the inherited structural core of the monolith. Its purpose is to
@@ -3170,7 +3170,7 @@ closure architecture, and how appendix tables are to be used as reversible proof
 interfaces rather than as detached summaries.
 
 \subsection*{1. Closure-to-projection transport discipline}
-The central working rule of v\docversion\ is that no projection statement may be
+The central working rule of v1.7.0 is that no projection statement may be
 read as primary if its admissibility has not first been transported through the
 closure chain. In other words, the order of explanation remains
 \[
@@ -3196,7 +3196,7 @@ sector language, but it does not create a new ontology. Hence closure status is
 inherited through the transport.
 
 \subsection*{2. Probe reduction as a controlled interface}
-The probe sector is not only a search device; in v\docversion\ it is also an
+The probe sector is not only a search device; in v1.7.0 it is also an
 interface theorem. Two probes moving against one another, each carrying triolic
 organization and coupled to an orthogonal third direction, define a reduced test
 geometry in which admissible transitions can be filtered before full projection.
@@ -3263,18 +3263,18 @@ the appendix without changing the logical order of the argument. This preserves
 speed without sacrificing structural auditability.
 
 
-\section*{v\docversion\ Structural Interface Consolidation Core}
-\addcontentsline{toc}{section}{v\docversion\ Structural Interface Consolidation Core}
+\section*{v1.8.0 Structural Interface Consolidation Core}
+\addcontentsline{toc}{section}{v1.8.0 Structural Interface Consolidation Core}
 
 This release adds a further consolidation layer between the inherited closure--projection
 synthesis core and the longer structural body of the monolith. The aim of
-v\docversion\ is to make the interfaces between closure statements, probe reductions,
+v1.8.0 is to make the interfaces between closure statements, probe reductions,
 projection tables, and appendix recoverability even more explicit, so that later
 mathematical deepening can reuse the same transport rules without reopening the
 basic admissibility logic.
 
 \subsection*{1. Interface invariance principle}
-The first strengthening of v\docversion\ is that every admissible transition between
+The first strengthening of v1.8.0 is that every admissible transition between
 main text, probe representation, and appendix table must preserve the same
 structural body. This means that the interface is not merely notational. It is a
 controlled transfer channel whose legitimacy depends on invariance of the common
@@ -3309,7 +3309,7 @@ already licensed; it cannot certify an unlicensed sector by reduction alone.
 
 \subsection*{3. Table-to-lemma reversibility}
 The tables and tool blocks gathered in the appendix are promoted once more from
-summary devices to reversible proof interfaces. For v\docversion\ this reversibility
+summary devices to reversible proof interfaces. For v1.8.0 this reversibility
 is sharpened into a two-way requirement between rows, lemmas, and transport
 principles.
 
@@ -3324,7 +3324,7 @@ Where only one direction is available, the entry remains heuristic and must be
 marked as such.
 
 \subsection*{4. Strengthened micro-to-macro readout discipline}
-The micro-to-macro route is no longer only a synthesis slogan. In v\docversion\ it is
+The micro-to-macro route is no longer only a synthesis slogan. In v1.8.0 it is
 a regulated readout pipeline:
 \[
 \text{local triolic body} \Longrightarrow \text{HC stabilization} \Longrightarrow
@@ -3342,7 +3342,7 @@ filtration, closure confinement, and HC stabilization to the local triolic body.
 
 \subsection*{5. Appendix memory discipline, strengthened again}
 The appendix is therefore not only a storage area for auxiliary derivations. It is
-a controlled external memory for the proof architecture. In v\docversion\ every major
+a controlled external memory for the proof architecture. In v1.8.0 every major
 abbreviation introduced in the running text should be recoverable by a named
 interface path: lemma path, tool path, table path, or transport path. This rule
 prepares the next versions for denser mathematical unfolding without losing the
@@ -3425,10 +3425,10 @@ closure, and closure becomes observable effective physics.
 \end{proof}
 
 
-\section*{v\docversion\ Expansion Core}
-\addcontentsline{toc}{section}{v\docversion\ Expansion Core}
+\section*{v1.3.0 Expansion Core}
+\addcontentsline{toc}{section}{v1.3.0 Expansion Core}
 
-Version \docversion\ is the first release that does more than freeze the next
+Version v1.3.0 is the first release that does more than freeze the next
 work path. It adds a genuine expansion layer on top of the v1.1.0
 consolidation core. The operative aim is threefold: first, the structural
 master equation is no longer presented only as a compressed global summary, but
@@ -3439,7 +3439,7 @@ layers can be attached without rewriting the monolith.
 
 \subsection*{1. Deepened master-equation programme}
 The master equation in the later main section remains the global compression of
-one common closure-stable dynamics. What v\docversion\ adds is a more explicit
+one common closure-stable dynamics. What v1.3.0 adds is a more explicit
 three-level reading of that equation.
 \begin{enumerate}[leftmargin=2em,label=(\roman*)]
   \item \textbf{Structural level.} One starts from triolic organization,
@@ -3454,7 +3454,7 @@ three-level reading of that equation.
   equation becomes readable as effective matter dynamics plus background
   geometry.
 \end{enumerate}
-In this sense, v\docversion\ does not replace the later master equation
+In this sense, v1.3.0 does not replace the later master equation
 \eqref{eq:toe_master_structural}; it inserts the missing ladder by which that
 equation is reached.
 
@@ -3487,11 +3487,11 @@ macroscopic field description is meaningful only after compensator balancing
 has removed representation drift and closure has excluded unstable residues.
 Therefore at least one intermediate regime must exist in which coupling, HC,
 and closure are jointly active. This regime is the structural source of the
-mesoscopic reading introduced in v\docversion.
+mesoscopic reading introduced in v1.3.0.
 \end{proof}
 
 \subsection*{2. Micro-to-macro closure chain}
-The new hardening target of v\docversion\ is the explicit micro-to-macro chain
+The new hardening target of v1.3.0 is the explicit micro-to-macro chain
 \[
 \text{local triolic unit}
 \longrightarrow
@@ -3555,7 +3555,7 @@ must descend from an assembly that has already passed the closure filter.
 \end{proof}
 
 \subsection*{3. Extended lemma and tool apparatus}
-Version \docversion\ also widens the technical apparatus that the next proof
+Version v1.3.0 also widens the technical apparatus that the next proof
 layer can rely on. The point is not to over-formalize prematurely, but to mark
 where repeated arguments will later be detached into reusable blocks.
 
@@ -3576,7 +3576,7 @@ where repeated arguments will later be detached into reusable blocks.
 \end{enumerate}
 
 \paragraph{Normalized tool classes.}
-The tool catalogue of v1.1.0 is retained, but v\docversion\ upgrades its use:
+The tool catalogue of v1.1.0 is retained, but v1.3.0 upgrades its use:
 closure-tools act as admissibility tests, frame-shift tools as translation
 operators between structure and observer descriptions, projection-tools as
 controlled reduction maps, probe-tools as search-space compressors,
@@ -3603,8 +3603,8 @@ introduced exactly to block such category errors. Hence admissible shortcuts are
 those that preserve the structural order stated above.
 \end{proof}
 
-\subsection*{4. Version status of v\docversion}
-With these additions, v\docversion\ should be read as the first expansion-stage
+\subsection*{4. Version status of v1.3.0}
+With these additions, v1.3.0 should be read as the first expansion-stage
 companion release. Relative to v1.1.0, the new version contributes three hard
 improvements: the master-equation programme is given an explicit intermediate
 ladder, the micro-to-macro chain is stated as a formal burden rather than a
@@ -3614,10 +3614,10 @@ monolith. The next versions may therefore focus on tightening derivations,
 quantifying specific sectors, and unfolding the appended lemma blocks in detail.
 
 
-\section*{v\docversion\ Lemma Development Core}
-\addcontentsline{toc}{section}{v\docversion\ Lemma Development Core}
+\section*{v1.4.0 Lemma Development Core}
+\addcontentsline{toc}{section}{v1.4.0 Lemma Development Core}
 
-Version \docversion\ turns the earlier expansion layer into a genuine
+Version v1.4.0 turns the earlier expansion layer into a genuine
 lemma-development release. The aim is not to replace the existing structural
 chapters, but to make the repeated internal moves of the proof architecture
 explicit enough that later sections may cite them as stable intermediate
@@ -3627,7 +3627,7 @@ cast as a sequence of named reductions, and the projection discipline is tied
 to a small but durable family of proof lemmas.
 
 \subsection*{1. Closure ladder as reusable derivation chain}
-The main architectural gain of v\docversion\ is the replacement of a single
+The main architectural gain of v1.4.0 is the replacement of a single
 long closure narrative by a short ladder of reusable intermediate statements:
 \[
 \text{ground condition}
@@ -3695,7 +3695,7 @@ is forced by the standing proof order.
 
 \subsection*{2. Probe reduction chain and admissible channels}
 The probe sector now receives a reusable reduction chain. Instead of speaking
-only about a general search space, v\docversion\ fixes the following sequence:
+only about a general search space, v1.4.0 fixes the following sequence:
 \[
 \text{probe pair}
 \Longrightarrow
@@ -3758,7 +3758,7 @@ those that remain after the final closure-compatible selection step.
 
 \subsection*{3. Projection robustness and controlled interpretation}
 The next recurrent burden is the distinction between structural forcing,
-projective readout, and phenomenological naming. Version \docversion\ fixes
+projective readout, and phenomenological naming. Version v1.4.0 fixes
 this burden by introducing small reusable robustness statements.
 
 \begin{lemma}[Projection does not create structure]
@@ -3804,12 +3804,12 @@ therefore reference:
 This means that the monolith can deepen individual proofs without reopening the
 global explanatory burden every time a local derivation is added.
 
-\subsection*{5. Version status of v\docversion}
-Relative to the previous release, v\docversion\ contributes a stricter internal
+\subsection*{5. Version status of v1.4.0}
+Relative to the previous release, v1.4.0 contributes a stricter internal
 proof scaffold. The master-equation ladder and the micro-to-macro chain are
 retained, but they are no longer left as merely global narratives. They are now
 supported by named intermediate lemmas that later sections may invoke directly.
-That is the specific function of v\docversion: not to conclude the full proof,
+That is the specific function of v1.4.0: not to conclude the full proof,
 but to make the next proof layer technically attachable in a disciplined way.
 
 
@@ -5115,20 +5115,20 @@ paper's own structural reformulation.
 
 
 
-\section*{v\docversion\ Readout Stabilization and Proof Memory Core}
-\addcontentsline{toc}{section}{v\docversion\ Readout Stabilization and Proof Memory Core}
+\section*{v1.9.0 Readout Stabilization and Proof Memory Core}
+\addcontentsline{toc}{section}{v1.9.0 Readout Stabilization and Proof Memory Core}
 
 This release adds a further stabilization layer to the inherited closure, probe,
 projection, and appendix architecture. Its purpose is to make the final readout
 path more disciplined: not only must admissible content survive transport, it
-must also remain recoverable after compression. In this sense v\docversion\ pushes
+must also remain recoverable after compression. In this sense v1.9.0 pushes
 the document from a transport-stable monolith toward a proof-memory stable one.
 A statement is not treated as mature merely because it can be compressed into a
 lemma, table row, or projection line; it must also remain reconstructible as the
 same closure-supported content when the compression is unfolded again.
 
 \subsection*{1. Readout stabilization principle}
-The main strengthening of v\docversion\ is that every admissible readout must be
+The main strengthening of v1.9.0 is that every admissible readout must be
 stable under re-expansion. A readout is the visible endpoint of a structural
 chain, but it remains acceptable only if its origin can be reopened without
 changing the admissibility class. Thus the document now treats readout as a
@@ -5153,7 +5153,7 @@ re-expansion must recover the same structural ancestry rather than a merely
 similar narrative.
 
 \subsection*{2. Tool-to-lemma synchronization}
-Previous versions upgraded tools and tables into proof interfaces. v\docversion\
+Previous versions upgraded tools and tables into proof interfaces. v1.9.0
 adds a stricter synchronization rule: every reusable tool should point to at
 least one lemma-level justification, and every repeated lemma pattern should be
 compressible into a named tool or interface move once stabilized. The goal is to
@@ -5201,7 +5201,7 @@ If one of these motions fails, the entry must be marked as provisional,
 heuristic, or not yet fully normalized.
 
 \subsection*{5. Operational consequence for later versions}
-With v\docversion\ the monolith receives a clearer maturity criterion for future
+With v1.9.0 the monolith receives a clearer maturity criterion for future
 expansions. New derivations should not merely add content; they should improve
 recoverability. In practice this means that later mathematical deepening should
 prefer additions that tighten one of the following links: closure to probe,
@@ -5218,14 +5218,14 @@ locate inside the appendix memory lattice.
 
 
 
-\section*{v\docversion\ Structural Closure Ledger and Expansion Discipline Core}
-\addcontentsline{toc}{section}{v\docversion\ Structural Closure Ledger and Expansion Discipline Core}
+\section*{v2.0.0 Structural Closure Ledger and Expansion Discipline Core}
+\addcontentsline{toc}{section}{v2.0.0 Structural Closure Ledger and Expansion Discipline Core}
 
 This release upgrades the monolith from a proof-memory stable object to a more
 explicit \emph{closure ledger}. The point is not merely to preserve ancestry in
 principle, but to keep a disciplined account of how every compressed statement,
 interface row, or projection sentence remains licensed by the same upstream
-closure architecture. In this sense v\docversion\ turns recoverability into an
+closure architecture. In this sense v2.0.0 turns recoverability into an
 operational bookkeeping rule: admissible content should be traceable, expandable,
 and relocatable without silently changing its structural status.
 
@@ -5305,7 +5305,7 @@ it can be expanded upward into lemma ancestry and laterally into equivalent tool
 or interface forms.
 
 \subsection*{5. Transition to the next mathematical deepening}
-With v\docversion\ the project crosses a useful threshold. The document now has a
+With v2.0.0 the project crosses a useful threshold. The document now has a
 more explicit rule for how future mathematical elaboration should be inserted:
 not as detached calculations, but as ledger-preserving thickening of already
 licensed paths. This is especially relevant for the larger companion roadmap,
@@ -5319,14 +5319,14 @@ all three demands strengthens the monolith in the intended structure-first way.
 
 
 \clearpage
-\section*{v\docversion\ Structural Audit and Re-Expansion Core}
-\addcontentsline{toc}{section}{v\docversion\ Structural Audit and Re-Expansion Core}
+\section*{v2.1.0 Structural Audit and Re-Expansion Core}
+\addcontentsline{toc}{section}{v2.1.0 Structural Audit and Re-Expansion Core}
 
 This release adds a further consolidation layer to the companion monolith. The
 new emphasis is not merely on carrying closure information forward, but on
 making explicit how later re-expansion remains auditable after several stages of
 compression. Earlier versions already introduced closure ladders, interface
-filters, ledger surfaces, and proof-memory discipline. Version~\docversion\ now
+filters, ledger surfaces, and proof-memory discipline. Version~v2.1.0 now
 adds an \emph{audit core}: every admissible compressed statement should retain a
 recoverable expansion route that can be checked against the same closure class
 from which it descended.
@@ -5373,7 +5373,7 @@ classified as provisional. The stronger the reversible link to its generating
 path, the stronger its status inside the monolith.
 
 \subsection*{3. Probe-audit discipline}
-The probe channel receives an additional task in v\docversion. It is no longer
+The probe channel receives an additional task in v2.1.0. It is no longer
 only a selection or filtration device; it also serves as an audit checkpoint.
 Probe-selected modes should leave a downstream trace that remains visible in the
 compressed lemma/table/readout layers. This makes the probe sector a bridge
@@ -5399,7 +5399,7 @@ its closure ancestry and forward into an admissible re-expansion channel. This
 dual role prevents tables from drifting into detached summaries.
 
 \subsection*{5. Consequence for the next mathematical thickening}
-With v\docversion\ the document takes another step toward a larger mathematically
+With v2.1.0 the document takes another step toward a larger mathematically
 expanded companion. Future lemma growth should now be judged not only by local
 correctness, but also by whether it improves auditability across compression
 levels. New material is strongest when it reduces the gap between compressed
@@ -5415,12 +5415,12 @@ sense.
 
 
 \clearpage
-\section*{v\docversion\ Structural Re-Expansion Governance Core}
-\addcontentsline{toc}{section}{v\docversion\ Structural Re-Expansion Governance Core}
+\section*{v2.2.0 Structural Re-Expansion Governance Core}
+\addcontentsline{toc}{section}{v2.2.0 Structural Re-Expansion Governance Core}
 
 This release adds a governance layer to the companion monolith. Earlier stages
 made closure transport, probe filtration, auditability, and ledger discipline
-explicit. Version~\docversion\ now asks an additional question: under which
+explicit. Version~v2.2.0 now asks an additional question: under which
 rules may a compressed statement be enlarged again without damaging the closure
 class, the appendix interfaces, or the downstream readout status? The answer is
 cast as a governance core. Re-expansion is no longer only possible; it is to be
@@ -5495,7 +5495,7 @@ that window, the result should either be relabeled or entered as a new row,
 lemma, or branch.
 
 \subsection*{5. Consequence for the next proof cycle}
-With v\docversion\ the companion monolith now carries not only closure,
+With v2.2.0 the companion monolith now carries not only closure,
 projection, ledger, and audit discipline, but also a clearer rule for how later
 mathematical detail may be inserted without dissolving the structure-first
 architecture. The next proof cycle should therefore thicken selected paths under
@@ -5945,8 +5945,8 @@ current structure-first proof begins to turn into a truly term-resolved
 mathematical derivation.
 
 
-\section*{v\docversion\ Term-Resolved Channel Specialization Core}
-\addcontentsline{toc}{section}{v\docversion\ Term-Resolved Channel Specialization Core}
+\section*{v2.4.0 Term-Resolved Channel Specialization Core}
+\addcontentsline{toc}{section}{v2.4.0 Term-Resolved Channel Specialization Core}
 
 The explicit task of v\docversion\ is to pass from the admissibility language of
 v2.3.0 to a first term-resolved structural model. The point is not yet to claim
@@ -6042,10 +6042,10 @@ frame-conversion remainder, truncation error, or phenomenological placeholder.
 This turns residuality into an auditable notion.
 
 \subsection*{3. Channel ledger and admissibility matrix}
-To make the specialization operational, v\docversion\ introduces the channel
+To make the specialization operational, v2.4.0 introduces the channel
 ledger matrix
 \[
-\mathcal L(\Psi)=
+\Lambda_{\mathrm{ch}}(\Psi)=
 \begin{pmatrix}
 \ell_{\mathrm{tri}} & \delta_{\mathrm{tri}} & r_{\mathrm{tri}}\\
 \ell_{\perp} & \delta_{\perp} & r_{\perp}\\
@@ -6061,7 +6061,7 @@ where
 \qquad
 r_j := \|C_j\|.
 \]
-This matrix is not introduced for numerical decoration. Its function is to give a
+This channel ledger matrix $\Lambda_{\mathrm{ch}}$ is not introduced for numerical decoration. Its function is to give a
 single interface where lemma statements, appendix tables, and future simulations
 can all report the same structural status.
 
@@ -6101,7 +6101,7 @@ in the form
 Here the two intrinsic channels belong to the two probe triolen, the term
 $\mathcal T_{\perp}^{(Q)}$ encodes the orthogonal search geometry selected by $Q$,
 and $\mathcal T_{\mathrm{match}}$ measures the approach or mismatch between the two
-probe traces. The new point of v\docversion\ is that probe matching is promoted to
+probe traces. The new point of v2.4.0 is that probe matching is promoted to
 a channel in its own right rather than being hidden implicitly inside a heuristic
 search narrative.
 
@@ -6128,7 +6128,7 @@ as a mathematically disciplined comparison device rather than only a heuristic
 search metaphor.
 
 \subsection*{5. Consequence for appendix tools and future derivations}
-The specialization introduced in v\docversion\ changes the status of the appendix
+The specialization introduced in v2.4.0 changes the status of the appendix
 again. From now on, every major table, tool, and shortcut should be readable as a
 compressed report of one of the ledger entries or of one of the probe-channel
 budgets. This gives a concrete criterion for deciding whether a future tool is
@@ -6143,13 +6143,13 @@ thickening that prepares the transition from structure-first architecture to a m
 fully unfolded proof.
 
 
-\section*{v\docversion\ Channel Budget Transport and Ledger Dynamics Core}
-\addcontentsline{toc}{section}{v\docversion\ Channel Budget Transport and Ledger Dynamics Core}
+\section*{v2.5.0 Channel Budget Transport and Ledger Dynamics Core}
+\addcontentsline{toc}{section}{v2.5.0 Channel Budget Transport and Ledger Dynamics Core}
 
 The specialization step of v2.4.0 assigned every contribution to a disciplined
 channel and recorded its tangential, normal, and compensator-facing sizes in the
 ledger matrix. The next structural hardening step is to turn this static picture
-into an evolution rule. In v\docversion\ the ledger is therefore promoted from a
+into an evolution rule. In v2.5.0 the ledger is therefore promoted from a
 reporting interface to a transport object. One no longer asks only whether a
 channel is admissible at a fixed stage; one asks how admissibility is propagated,
 recovered, or degraded along the proof flow.
@@ -6184,7 +6184,7 @@ $\mathfrak N$ and $\mathfrak R$ separate the defect-producing part from the
 compensator-processed part.
 
 \subsection*{2. Budget transport law}
-The structural thesis of v\docversion\ is that channel evolution should be read as
+The structural thesis of v2.5.0 is that channel evolution should be read as
 transport with controlled exchange, not as unrelated term growth. This is encoded
 in the schematic law
 \[
@@ -6507,8 +6507,8 @@ forward-invariant structural regime that stabilizes the proof under continuation
 probe comparison, and later equation-level readout.
 
 
-\section*{v\docversion\ Field-Energy Realization and Semigroup Readout Core}
-\addcontentsline{toc}{section}{v\docversion\ Field-Energy Realization and Semigroup Readout Core}
+\section*{v2.7.0 Field-Energy Realization and Semigroup Readout Core}
+\addcontentsline{toc}{section}{v2.7.0 Field-Energy Realization and Semigroup Readout Core}
 
 The next structural step after forward-invariant ledger closure is to show that the
 weighted ledger is not only a bookkeeping device but already the shadow of a genuine
@@ -6648,8 +6648,8 @@ therefore no longer free-form: it has to generate the same dissipative proof mem
 probe inheritance, and tagged-source discipline already fixed at the structural level.
 
 
-\section*{v\docversion\ Spectral Admissibility and Resolvent Gatekeeping Core}
-\addcontentsline{toc}{section}{v\docversion\ Spectral Admissibility and Resolvent Gatekeeping Core}
+\section*{v2.8.0 Spectral Admissibility and Resolvent Gatekeeping Core}
+\addcontentsline{toc}{section}{v2.8.0 Spectral Admissibility and Resolvent Gatekeeping Core}
 
 The semigroup realization from v2.7.0 still leaves one decisive structural question
 open: which generators are admissible before one even starts evolving the system? In
@@ -6767,8 +6767,8 @@ ledger-dissipative semigroup and they must belong to the correct resolvent class
 before they are even admitted into the structural programme.
 
 
-\section*{v\docversion\ Spectral Readout Filters and Trace-Compatible Mode Selection Core}
-\addcontentsline{toc}{section}{v\docversion\ Spectral Readout Filters and Trace-Compatible Mode Selection Core}
+\section*{v2.9.0 Spectral Readout Filters and Trace-Compatible Mode Selection Core}
+\addcontentsline{toc}{section}{v2.9.0 Spectral Readout Filters and Trace-Compatible Mode Selection Core}
 
 The spectral admissibility layer from v2.8.0 decides which generators may enter the
 programme at all. The next structural question is subtler: once a generator is
@@ -6893,8 +6893,8 @@ belong to the correct resolvent class, and their admissible modes must pass a
 trace-compatible readout filter before they can count as structural content.
 
 
-\section*{v\docversion\ Trace Reconstruction and Observable Extraction Core}
-\addcontentsline{toc}{section}{v\docversion\ Trace Reconstruction and Observable Extraction Core}
+\section*{v2.10.0 Trace Reconstruction and Observable Extraction Core}
+\addcontentsline{toc}{section}{v2.10.0 Trace Reconstruction and Observable Extraction Core}
 
 The filtered-observability layer from v2.9.0 separates admissible modes into
 readable, tagged, and mute sectors. The next structural task is no longer only to
@@ -7039,8 +7039,8 @@ trace-compatible readout filter, and finally admit HC-stable observable
 reconstruction before they can count as theorem-level structural content.
 
 
-\section*{v\docversion\ Multi-Readout Consistency and Fusion Core}
-\addcontentsline{toc}{section}{v\docversion\ Multi-Readout Consistency and Fusion Core}
+\section*{v2.11.0 Multi-Readout Consistency and Fusion Core}
+\addcontentsline{toc}{section}{v2.11.0 Multi-Readout Consistency and Fusion Core}
 
 The reconstruction layer from v2.10.0 promotes readable modes into theorem-level
 observables. The next structural question is what happens when several
@@ -7166,19 +7166,133 @@ multi-readout fusion without hidden inconsistency.
 
 
 \appendix
-\section*{Appendix C. Bibliography and Version Record}
-\addcontentsline{toc}{section}{Appendix C. Bibliography and Version Record}
+
+\section*{Appendix B. Symbol Normalization for the Late Ledger/Readout Layers}
+\addcontentsline{toc}{section}{Appendix B. Symbol Normalization for the Late Ledger/Readout Layers}
+
+This appendix fixes the notation used in the late Companion expansion layers so that
+historical version labels and structural symbols remain auditable across the v2.4.0--v2.11.0
+chain.
+
+\paragraph{Historical section labels.}
+The blocks entitled v2.4.0 through v2.11.0 are to be read as historical expansion
+layers. Their section headings record the version in which the corresponding layer was
+introduced, not merely the current document version.
+
+\paragraph{Ledger matrix.}
+The channel ledger matrix is denoted by
+\[
+\Lambda_{\mathrm{ch}}(\Psi)
+=
+\begin{pmatrix}
+\ell_{\mathrm{tri}} & \delta_{\mathrm{tri}} & r_{\mathrm{tri}}\\
+\ell_{\perp} & \delta_{\perp} & r_{\perp}\\
+\ell_{\mathrm{meas}} & \delta_{\mathrm{meas}} & r_{\mathrm{meas}}\\
+\ell_{\mathrm{res}} & \delta_{\mathrm{res}} & r_{\mathrm{res}}
+\end{pmatrix}.
+\]
+It is a bookkeeping object for channel-resolved tangential, normal, and compensator-facing
+sizes.
+
+\paragraph{Lyapunov ledger functional.}
+The weighted scalar functional introduced in v2.6.0 keeps the notation
+\(\mathcal L\). It is a Lyapunov-type control quantity and is not to be confused with the
+matrix-valued ledger \(\Lambda_{\mathrm{ch}}\).
+
+\paragraph{Budget totals.}
+The aggregated scalar budgets remain
+\(\mathfrak B\) for total visible load, \(\mathfrak N\) for normal leakage, and
+\(\mathfrak R\) for compensator-facing storage.
+
+\paragraph{Readout and fusion objects.}
+The readable-mode trace mass, reconstruction operators, observable extraction maps,
+and fusion-defect quantities introduced in v2.9.0--v2.11.0 are interpreted as
+structure-preserving descendants of the ledger/budget layer and therefore inherit the
+normalization fixed here.
+
+\section*{Appendix D. Bibliography and Version Record}
+\addcontentsline{toc}{section}{Appendix D. Bibliography and Version Record}
 
 This appendix gathers the external references together with the immediate
 Companion version trail so that the mathematical main line can close before the
 documentation apparatus begins.
 
 \subsection*{Version and DOI record}
-\begin{itemize}
-  \item Quantum Sphaera Companion v2.9.0 — DOI: \href{https://doi.org/10.5281/zenodo.19222638}{10.5281/zenodo.19222638}
-  \item Quantum Sphaera Companion v2.10.0 — DOI: \href{https://doi.org/10.5281/zenodo.19222894}{10.5281/zenodo.19222894}
-  \item Quantum Sphaera Companion v2.11.0 — DOI: \href{https://doi.org/10.5281/zenodo.19223084}{10.5281/zenodo.19223084}
-\end{itemize}
+The table below records the currently preserved Companion chain in strictly
+increasing version order. Zenodo releases are listed together with a publication-date
+column; local-only intermediate repair states are retained separately so that the
+public release path and the internal repair path remain distinguishable.
+
+{\small
+\renewcommand{\arraystretch}{1.12}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\begin{longtable}{|p{0.15\textwidth}|p{0.18\textwidth}|p{0.16\textwidth}|p{0.39\textwidth}|}
+\hline
+\textbf{Version / record} & \textbf{Status} & \textbf{Publication date} & \textbf{DOI / note} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Version / record} & \textbf{Status} & \textbf{Publication date} & \textbf{DOI / note} \\
+\hline
+\endhead
+Concept DOI & concept record & ongoing pointer & \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} \\
+\hline
+v0.1.0 & Zenodo release & 2026-03-24 & \href{https://doi.org/10.5281/zenodo.19210729}{10.5281/zenodo.19210729} \\
+\hline
+v0.3.0 & Zenodo release & 2026-03-24 & \href{https://doi.org/10.5281/zenodo.19211785}{10.5281/zenodo.19211785} \\
+\hline
+v0.4.0 & Zenodo release & 2026-03-24 & \href{https://doi.org/10.5281/zenodo.19211798}{10.5281/zenodo.19211798} \\
+\hline
+v0.5.0 & Zenodo release & 2026-03-24 & \href{https://doi.org/10.5281/zenodo.19211877}{10.5281/zenodo.19211877} \\
+\hline
+v0.6.0 & Zenodo release & 2026-03-24 & \href{https://doi.org/10.5281/zenodo.19212073}{10.5281/zenodo.19212073} \\
+\hline
+v0.7.0 & Zenodo release & 2026-03-24 & \href{https://doi.org/10.5281/zenodo.19212212}{10.5281/zenodo.19212212} \\
+\hline
+v0.8.0 & Zenodo release & 2026-03-24 & \href{https://doi.org/10.5281/zenodo.19212324}{10.5281/zenodo.19212324} \\
+\hline
+v0.9.0 & Zenodo release & 2026-03-24 & \href{https://doi.org/10.5281/zenodo.19220003}{10.5281/zenodo.19220003} \\
+\hline
+v1.0.0 & Zenodo release & 2026-03-24 & \href{https://doi.org/10.5281/zenodo.19220118}{10.5281/zenodo.19220118} \\
+\hline
+v1.6.0 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.19221335}{10.5281/zenodo.19221335} \\
+\hline
+v1.7.0 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.19221372}{10.5281/zenodo.19221372} \\
+\hline
+v1.8.0 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.19221431}{10.5281/zenodo.19221431} \\
+\hline
+v1.9.0 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.19221473}{10.5281/zenodo.19221473} \\
+\hline
+v2.0.0 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.19221527}{10.5281/zenodo.19221527} \\
+\hline
+v2.1.0 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.19221618}{10.5281/zenodo.19221618} \\
+\hline
+v2.3.0 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.19221864}{10.5281/zenodo.19221864} \\
+\hline
+v2.4.0 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.19221954}{10.5281/zenodo.19221954} \\
+\hline
+v2.9.0 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.19222638}{10.5281/zenodo.19222638} \\
+\hline
+v2.10.0 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.19222894}{10.5281/zenodo.19222894} \\
+\hline
+v2.11.0 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.19223084}{10.5281/zenodo.19223084} \\
+\hline
+v2.11.1 & local-only repair state & 2026-03-25 & non-Zenodo version-fix state between v2.11.0 and v2.11.2 \\
+\hline
+v2.11.2 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.19223365}{10.5281/zenodo.19223365} \\
+\hline
+v2.11.3 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.19223515}{10.5281/zenodo.19223515} \\
+\hline
+v2.12.0 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.19223782}{10.5281/zenodo.19223782} \\
+\hline
+\end{longtable}
+}
+
+\noindent Note. The sequence above records the currently preserved release trail.
+The day-level publication dates are normalized from the project publication log so that
+Zenodo releases and local repair states remain chronologically comparable inside a single
+appendix table.
 
 \subsection*{Bibliography}
 
@@ -7193,9 +7307,9 @@ Zenodo v4.15, March 2026.
 
 \bibitem{brendecke2026sphaera}
 Marc Brendecke,
-\emph{Mathematical Companion to the Quantum Sphaera Framework: Structural Expansion, Closure, and Readout Architecture} (Quantum Sphaera Companion v2.11.0),
+\emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding} (Quantum Sphaera Companion v2.12.0),
 March 2026.
-\newblock DOI: \href{https://doi.org/10.5281/zenodo.19223084}{10.5281/zenodo.19223084}.
+\newblock DOI: \href{https://doi.org/10.5281/zenodo.19223782}{10.5281/zenodo.19223782}.
 
 \bibitem{kim2026}
 Yilwook Kim,
