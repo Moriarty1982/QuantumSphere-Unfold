@@ -29,7 +29,7 @@
 \newtheorem{axiom}{Axiom}
 
 % --- Document metadata ---
-\newcommand{\docversion}{2.14.0}
+\newcommand{\docversion}{2.15.0}
 \newcommand{\docdate}{\DTMdisplaydate{2026}{03}{25}{-1}}
 
 % --- Macros ---
@@ -3434,8 +3434,10 @@ closure, and closure becomes observable effective physics.
 \end{proof}
 
 
-\subsection*{Semantic and Tensorial Kernel Interface}
-\addcontentsline{toc}{subsection}{Semantic and Tensorial Kernel Interface}
+\subsection*{Preliminary Semantic and Tensorial Kernel Interface}
+\addcontentsline{toc}{subsection}{Preliminary Semantic and Tensorial Kernel Interface}
+
+This subsection states the semantic/tensor interface in anticipatory form. Its formal unfolding as a lemma--theorem chain is given later in Phase II-E.
 
 The structural kernel can be stated on two coordinated levels. The first is a
 semantic layer of sets, states, maps, and admissibility predicates. The second
@@ -3599,6 +3601,722 @@ Riemann/Sphaera core while keeping their semantic meaning explicit.
 \end{remark}
 
 
+\subsection*{Phase I: First Unfolding Lemmas for the Generative Layer}
+\addcontentsline{toc}{subsection}{Phase I: First Unfolding Lemmas for the Generative Layer}
+
+We now begin the actual mathematical unfolding of the normalized structural
+core by isolating the first chain of generative lemmas. The aim is not yet to
+expand the full field/probe realization, but to make explicit the initial
+forcing route from a common structural body to triolic organization,
+orthogonal anchoring, frame-shifted readout, re-identification, and finally the
+necessity of the Heisenberg compensator.
+
+\begin{lemma}[One-body lemma]
+\label{lem:one-body-lemma}
+The semantic and tensorial kernels are to be read as describing different
+admissible presentations of one and the same structural body, not independent
+ontological objects. In particular, the cascade hierarchy, dual/frame symmetry,
+and compensator projection all act on a common carrier rather than on unrelated
+state spaces.
+\end{lemma}
+
+\begin{proof}
+In Definition~\ref{def:semantic-structural-kernel} the kernel data are given as
+one coordinated family
+\[
+(\mathbb S,\{S_n\}_{n\ge 0},S_0,\hat K,J,C,\mathcal M),
+\]
+not as several unrelated structures. The grouped architecture of
+Definition~\ref{def:grouped-structural-architecture} likewise states that the
+generative, projection, and field/probe layers are different organizational
+regimes of the same underlying body. The tensor realization of
+Definition~\ref{def:tensor-structural-kernel} then presents the same body in
+operator form. Hence the structural reading is one-body throughout.
+\end{proof}
+
+\begin{lemma}[Triolic minimality lemma]
+\label{lem:triolic-minimality-lemma}
+A merely binary decomposition is structurally insufficient for the normalized
+core. The minimal nondegenerate organization compatible with admissible
+selection, compensator action, and closure readout is triolic.
+\end{lemma}
+
+\begin{proof}
+By Definition~\ref{def:semantic-structural-kernel}, a triolic state carries a
+three-sector organization $(K_1,K_2,K_3)$, while the orthogonal anchor singles
+out the third sector as stabilizing direction relative to the first two. If one
+retained only a binary split, then duality between the first two sectors could
+still be stated, but there would be no distinguished third channel in which the
+compensator-selected output and closure/light readout could be structurally
+stabilized. The normalized core therefore requires three sectors as the minimal
+nondegenerate organization.
+\end{proof}
+
+\begin{lemma}[Orthogonal anchor lemma]
+\label{lem:orthogonal-anchor-lemma}
+Within a triolic organization, the third sector is not an optional decoration but
+the structural anchor that prevents the first two sectors from remaining a
+merely parallel or relabelable pair. In particular,
+\[
+K_3\perp K_1,
+\qquad
+K_3\perp K_2.
+\]
+\end{lemma}
+
+\begin{proof}
+The orthogonal anchor condition is built into
+Definition~\ref{def:semantic-structural-kernel}. Its role is clarified by the
+forcing chain of Proposition~\ref{prop:semantic-forcing-chain}: closure
+stability does not follow from duality alone, but from triolic structure plus a
+protected anchor together with HC forcing. The third sector therefore fixes the
+otherwise ambiguous two-sector pairing and provides the admissible direction in
+which collapse/light selection can be stabilized.
+\end{proof}
+
+\begin{lemma}[Frame-shift lemma]
+\label{lem:frame-shift-lemma}
+Admissible effective states are read out in a phase- or frame-shifted
+presentation. Accordingly, an effective state is not introduced as an
+independent object but as a shifted view of the common structural body.
+\end{lemma}
+
+\begin{proof}
+This is exactly the content of the frame-shift principle in
+Definition~\ref{def:semantic-structural-kernel}, where
+$\mathrm{FrameShifted}(x)$ means that $x$ is a shifted or regime-dependent
+readout of a common body. The grouped architecture makes the same point at the
+layer level: projection/translation and field/probe realizations are
+organizational regimes of one underlying structure and therefore inherit rather
+than replace the generative body.
+\end{proof}
+
+\begin{lemma}[Re-identification lemma]
+\label{lem:re-identification-lemma}
+If a state is simultaneously one-body and frame-shifted, then admissibility
+requires a re-identification mechanism that returns competing presentations to a
+common structural channel.
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{lem:one-body-lemma}, the relevant descriptions concern one and the
+same body. By Lemma~\ref{lem:frame-shift-lemma}, these descriptions appear in
+shifted or regime-dependent presentations. Without re-identification, the
+shifted presentations would remain only formally related and no unique
+admissible output sector could be selected. But the semantic kernel is built to
+support admissible cascade readout and closure selection; hence a mechanism that
+returns the shifted presentations to a common channel is structurally required.
+\end{proof}
+
+\begin{theorem}[HC-forcing theorem]
+\label{thm:hc-forcing-theorem}
+Within the normalized structural core, the required re-identification mechanism
+is the Heisenberg compensator. Equivalently,
+\[
+\mathrm{GroundLinked}(x)\wedge \mathrm{FrameShifted}(x)
+\Longrightarrow \mathrm{HCForced}(x).
+\]
+\end{theorem}
+
+\begin{proof}
+Proposition~\ref{prop:semantic-forcing-chain} already states the forcing
+implication. The present point is to identify why the implication is necessary.
+By Lemma~\ref{lem:re-identification-lemma}, one-body structure under shifted
+readout requires a common re-identifying channel. In the tensor realization,
+the only built-in operator that symmetrizes competing dual/frame descriptions
+into a common admissible output is the compensator projection $\mathcal C$, and
+on the semantic level this is represented by the map
+\[
+C(x)=\tfrac12\bigl(x+J(x)\bigr).
+\]
+Thus the required re-identification mechanism is not external to the kernel but
+is precisely the Heisenberg compensator. Hence HC is forced by the normalized
+generative conditions.
+\end{proof}
+
+\begin{corollary}[First generative forcing chain]
+\label{cor:first-generative-forcing-chain}
+The first unfolded forcing route of the normalized core is
+\[
+\text{one body}
+\Longrightarrow
+\text{triolic minimality}
+\Longrightarrow
+\text{orthogonal anchor}
+\Longrightarrow
+\text{frame-shifted readout}
+\Longrightarrow
+\text{re-identification}
+\Longrightarrow
+\mathrm{HC}.
+\]
+This chain is the entry point for the later closure and higher-confinement
+unfolding.
+\end{corollary}
+
+\begin{proof}
+Lemmas~\ref{lem:one-body-lemma}--\ref{lem:re-identification-lemma} establish the
+successive structural requirements, and
+Theorem~\ref{thm:hc-forcing-theorem} identifies their first nontrivial forced
+operator consequence. The later closure and higher-confinement chain therefore
+starts from this generative route.
+\end{proof}
+
+
+\subsection*{Phase I-B: HC and Closure Unfolding}
+\addcontentsline{toc}{subsection}{Phase I-B: HC and Closure Unfolding}
+
+We next unfold the first closure layer that begins once HC has been forced.
+The aim of this block is to make precise that HC is not merely present, but
+acts as an admissibility-preserving, anchor-compatible, closure-selecting
+mechanism, and that exact closure can be distinguished from residual or only
+partial closure.
+
+\begin{lemma}[HC idempotence lemma]
+\label{lem:hc-idempotence-lemma}
+Once a state has been compensator-normalized, repeated compensator action does
+not move it to a different admissible sector. Equivalently,
+\[
+C(C(x)) = C(x).
+\]
+\end{lemma}
+
+\begin{proof}
+By Definition~\ref{def:tensor-structural-kernel}, the tensorial compensator
+satisfies $\mathcal C^2=\mathcal C$, and by
+Definition~\ref{def:semantic-structural-kernel} the semantic compensator is the
+corresponding map
+\[
+C(x)=\tfrac12\bigl(x+J(x)\bigr).
+\]
+Thus compensator action is projective rather than drifting: once a state lies
+in the compensator-selected channel, further application leaves it there.
+\end{proof}
+
+\begin{lemma}[HC admissibility lemma]
+\label{lem:hc-admissibility-lemma}
+If $x$ is structurally admissible, then its compensator-normalized image $C(x)$
+remains admissible.
+\end{lemma}
+
+\begin{proof}
+The semantic/tensor kernel was introduced precisely so that the compensator is
+not an external deformation but an internal normalization operator. Since
+Theorem~\ref{thm:hc-forcing-theorem} identifies HC as the required
+re-identification mechanism, using $C$ restores competing shifted presentations
+to a common admissible channel instead of producing a foreign state. In the
+tensor realization this is the admissible output selected by $\mathcal C$; on
+the semantic side the same role is expressed by the preservation of the common
+structural body under compensator projection. Hence admissibility is preserved.
+\end{proof}
+
+\begin{lemma}[Anchor-compatibility lemma]
+\label{lem:anchor-compatibility-lemma}
+Compensator action is compatible with the orthogonal anchor. In particular, HC
+stabilizes the admissible readout channel without destroying the distinction
+between the anchored third direction and the first two sectors.
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{lem:orthogonal-anchor-lemma}, the third sector is not decorative
+but the stabilizing orthogonal anchor. By Theorem~\ref{thm:hc-forcing-theorem},
+HC is the mechanism that re-identifies shifted descriptions in a common output
+channel. If HC destroyed the anchor distinction, then the stabilized output
+would collapse back into an undifferentiated binary pairing and the role of the
+third direction would be lost. That would contradict triolic minimality and the
+very need for an orthogonal anchor. Therefore HC must act compatibly with the
+anchored triolic organization.
+\end{proof}
+
+\begin{lemma}[Closure forcing lemma]
+\label{lem:closure-forcing-lemma}
+A triolic state with orthogonal anchor and forced HC is closure-stable.
+Equivalently,
+\[
+\mathrm{Triolic}(x)\wedge \mathrm{Anchored}(x)\wedge \mathrm{HCForced}(x)
+\Longrightarrow \mathrm{ClosureStable}(x).
+\]
+\end{lemma}
+
+\begin{proof}
+This is the first nontrivial consequence of combining the generative forcing
+chain with the normalized semantic kernel. Triolic minimality provides the
+three-sector organization, the anchor protects the stabilizing direction, and HC
+restores shifted descriptions to a common admissible channel. Without closure,
+this restored channel could still leak into incompatible external or residual
+sectors, contradicting the role of HC as an admissibility-preserving
+re-identification mechanism. Hence closure-stability is forced.
+\end{proof}
+
+\begin{proposition}[Closure class proposition]
+\label{prop:closure-class-proposition}
+The closure-stable states form a structurally distinguished admissibility class.
+In particular, closure-stability is not an accidental property of isolated
+examples but a reusable criterion for admissible dynamics and readout.
+\end{proposition}
+
+\begin{proof}
+By Lemma~\ref{lem:closure-forcing-lemma}, closure-stability follows from a fixed
+combination of generative conditions rather than from a one-off construction.
+By Lemma~\ref{lem:hc-admissibility-lemma}, the relevant states remain inside the
+admissible body under compensator normalization, and by
+Lemma~\ref{lem:anchor-compatibility-lemma} this process respects the stabilizing
+triolic organization. Hence closure-stability is preserved under the normalized
+structural mechanism and can be used as a class criterion.
+\end{proof}
+
+\begin{proposition}[Exact closure criterion]
+\label{prop:exact-closure-criterion}
+Exact closure is the regime in which the admissible channel selected by HC is
+already terminal with respect to the relevant closure test, so that no further
+residual compensator correction is required.
+\end{proposition}
+
+\begin{proof}
+By Lemma~\ref{lem:hc-idempotence-lemma}, compensator-normalized states do not
+drift under repeated HC action. Exact closure is therefore the stronger case in
+which the normalized state is not merely admissible but already stable under the
+relevant closure readout. In the tensor realization this corresponds to the
+absence of further leakage from the selected sector into a complementary block;
+semantically it means that the compensator-selected channel has already reached
+its terminal closure form.
+\end{proof}
+
+\begin{lemma}[Closure residue lemma]
+\label{lem:closure-residue-lemma}
+Whenever exact closure fails, the failure can be measured by a residual term
+that records the remaining mismatch between HC-normalized admissibility and full
+closure stability.
+\end{lemma}
+
+\begin{proof}
+The exact-closure regime of
+Proposition~\ref{prop:exact-closure-criterion} is defined precisely by the
+absence of further correction after compensator normalization. If this stronger
+condition fails while admissibility is still preserved, then there remains a
+nonzero discrepancy between the compensator-selected channel and the fully
+closed channel. This discrepancy is the closure residue. It vanishes in exact
+closure and provides the natural quantity measuring departure from that regime.
+\end{proof}
+
+\begin{corollary}[First closure forcing chain]
+\label{cor:first-closure-forcing-chain}
+The first unfolded closure route of the normalized core is
+\[
+\mathrm{HC}
+\Longrightarrow
+\text{HC idempotence/admissibility}
+\Longrightarrow
+\text{anchor-compatible normalization}
+\Longrightarrow
+\text{closure forcing}
+\Longrightarrow
+\text{closure class}
+\Longrightarrow
+\text{exact closure or closure residue}.
+\]
+\end{corollary}
+
+\begin{proof}
+Lemmas~\ref{lem:hc-idempotence-lemma},
+\ref{lem:hc-admissibility-lemma}, and
+\ref{lem:anchor-compatibility-lemma} identify the first structural properties of
+forced HC. Lemma~\ref{lem:closure-forcing-lemma} turns these into closure
+stability, Proposition~\ref{prop:closure-class-proposition} promotes this to a
+reusable admissibility class, and
+Proposition~\ref{prop:exact-closure-criterion} together with
+Lemma~\ref{lem:closure-residue-lemma} separates the exact and residual regimes.
+\end{proof}
+
+
+\subsection*{Phase I-C: Higher Confinement and Septinion Unfolding}
+\addcontentsline{toc}{subsection}{Phase I-C: Higher Confinement and Septinion Unfolding}
+
+This third unfolding block turns closure stability into a higher confinement
+reading and makes explicit why the septinion/seption interpretation is not an
+external axiom but a structurally selected reading of the admissible closure
+class.
+
+\begin{lemma}[Higher confinement lemma]
+\label{lem:higher-confinement-lemma}
+If a structural class is closure-stable and remains invariant under repeated
+compensator-compatible normalization, then it admits a higher confinement
+reading.
+\end{lemma}
+
+\begin{proof}
+Closure stability excludes uncontrolled drift out of the admissible class, while
+repeated compensator-compatible normalization prevents the persistence of an
+independent escaping sector. Once both conditions hold, the admissible class is
+not merely locally normalized but globally retained under the structural return
+mechanisms of the system. This is exactly the content of higher confinement:
+the admissible states are no longer only corrected case by case but persist as a
+retained confinement regime.
+\end{proof}
+
+\begin{lemma}[Non-escape lemma]
+\label{lem:non-escape-lemma}
+Let $x$ be a closure-stable state in the normalized core. Then no admissible
+transition generated within the core sends $x$ into a structurally independent
+external sector.
+\end{lemma}
+
+\begin{proof}
+By closure stability, every admissible normalization step sends $x$ back into
+the same closure class. If an admissible transition could produce a genuinely
+independent external sector, then closure stability would fail exactly at that
+point, because the state would no longer be returnable by the same structural
+normalization. Hence admissible transitions may rearrange or re-express states
+inside the confinement class, but they cannot export them into an independent
+outside sector. This is the structural non-escape property.
+\end{proof}
+
+\begin{theorem}[Septinion readability theorem]
+\label{thm:septinion-readability-theorem}
+If a class is closure-stable and admits the higher confinement reading, then it
+is septinion-readable: the resulting stabilized regime may be interpreted as a
+septinion/seption-level confinement of the normalized structural body.
+\end{theorem}
+
+\begin{proof}
+The septinion reading is not introduced as an arbitrary enlargement of the
+formalism. Rather, it names the level at which the closure-stable and
+non-escaping structural class is most naturally read as a higher unified
+container of the admissible sectors. By Lemma~\ref{lem:higher-confinement-lemma},
+closure stability already upgrades the system to a higher confinement regime,
+and Lemma~\ref{lem:non-escape-lemma} shows that admissible states remain inside
+that regime. The septinion/seption reading is therefore the natural structural
+reading of this higher confinement container.
+\end{proof}
+
+\begin{corollary}[HC as emergent structural consequence]
+\label{cor:hc-emergent-structural-consequence}
+Within the normalized core, HC is not an externally appended axiom. It appears
+as an emergent structural consequence of the one-body, frame-shift, and closure
+requirements.
+\end{corollary}
+
+\begin{proof}
+The generative chain of Phase~I-A forces re-identification and therefore HC,
+while the closure chain of Phase~I-B shows that HC is precisely the mechanism
+that stabilizes the admissible class. Phase~I-C now identifies the higher
+confinement reading selected by this stabilization. Consequently HC is not an
+optional addition but the structurally emergent mechanism by which the unified
+body remains admissible across shifted readouts and under closure.
+\end{proof}
+
+\begin{corollary}[First confinement forcing chain]
+\label{cor:first-confinement-forcing-chain}
+The first unfolded confinement route of the normalized core is
+\[
+\text{closure class}
+\Longrightarrow
+\text{higher confinement}
+\Longrightarrow
+\text{non-escape}
+\Longrightarrow
+\text{septinion reading}.
+\]
+Together with the preceding phases, this yields
+\[
+\text{one body}
+\Longrightarrow
+\text{re-identification}
+\Longrightarrow
+\mathrm{HC}
+\Longrightarrow
+\text{closure}
+\Longrightarrow
+\text{higher confinement}
+\Longrightarrow
+\text{septinion/seption reading}.
+\]
+\end{corollary}
+
+\begin{proof}
+Proposition~\ref{prop:closure-class-proposition} provides the stabilized
+closure class. Lemma~\ref{lem:higher-confinement-lemma} upgrades this class to a
+higher confinement reading, Lemma~\ref{lem:non-escape-lemma} gives the internal
+retention property of admissible transitions, and
+Theorem~\ref{thm:septinion-readability-theorem} identifies the corresponding
+septinion/seption interpretation. The final displayed chain is obtained by
+concatenating this phase with the forcing chains of Phases~I-A and~I-B.
+\end{proof}
+
+
+\subsection*{Phase II-D: Cascade, Readout, and the Collapse-Fixed Sector}
+\addcontentsline{toc}{subsection}{Phase II-D: Cascade, Readout, and the Collapse-Fixed Sector}
+
+\begin{lemma}[Cascade admissibility lemma]
+\label{lem:cascade-admissibility-lemma}
+If $x$ belongs to the closure-stable class selected by the normalized core,
+then every admissible cascade image $\hat K(x)$ remains inside the admissible
+readout class of the same unified body.
+\end{lemma}
+
+\begin{proof}
+The cascade is introduced as a composition of projection maps from higher
+strata toward the ground sector, not as an ontological splitting of the body.
+By Corollary~\ref{cor:first-closure-forcing-chain}, closure-stable states are
+precisely those stabilized against drift under shifted readouts. Applying the
+cascade to such a state therefore yields another admissible readout of the same
+body rather than a new object. Hence admissibility is preserved along the
+cascade image of any closure-stable input.
+\end{proof}
+
+\begin{lemma}[Terminal ground-state lemma]
+\label{lem:terminal-ground-state-lemma}
+The ground state $S_0$ is the terminal invariant readout sector of the cascade:
+for every admissible state $x$, one has $\hat K(x)=x$ exactly when $x\in S_0$.
+\end{lemma}
+
+\begin{proof}
+This is the normalized readout form of the ground-state condition already built
+into the semantic kernel. The cascade terminates in $S_0$, and terminality
+means precisely that no further nontrivial readout step occurs. Therefore the
+fixed-point condition $\hat K(x)=x$ is equivalent to membership in the terminal
+sector $S_0$.
+\end{proof}
+
+\begin{lemma}[Global light-axis lemma]
+\label{lem:global-light-axis-lemma}
+The light-axis structure selected by the normalized core is stratified across
+the cascade: if a state is read on the light axis at one admissible layer, then
+its admissible readouts remain aligned with the same global light-axis class
+through the cascade.
+\end{lemma}
+
+\begin{proof}
+The Lorentz/light-axis structure is not introduced as a local afterthought but
+as a stratified feature of the whole construction. The cascade only changes the
+readout level, not the structural identity of the body. Since admissible
+cascade images preserve the same unified body and the same closure-compatible
+sector, the light-axis reading persists as a global class across the projected
+layers.
+\end{proof}
+
+\begin{theorem}[Collapse-fixed sector theorem]
+\label{thm:collapse-fixed-sector-theorem}
+The photon/readout sector identified in the normalized core is the global
+collapse-fixed sector of the cascade. In particular, the sector denoted by
+$S_0$ is not merely a local null readout but the terminal collapse-fixed sector
+selected by the full stratified structure.
+\end{theorem}
+
+\begin{proof}
+Lemma~\ref{lem:cascade-admissibility-lemma} ensures that the cascade preserves
+admissibility, while Lemma~\ref{lem:terminal-ground-state-lemma} identifies
+$S_0$ as the terminal invariant sector. Lemma~\ref{lem:global-light-axis-lemma}
+shows that the light-axis reading persists globally across admissible layers.
+Therefore the photon/readout sector is not obtained from an isolated local
+calculation alone; rather, it is the collapse-fixed terminal sector selected by
+the entire cascade of admissible projections.
+\end{proof}
+
+\begin{lemma}[Readout separation lemma]
+\label{lem:readout-separation-lemma}
+Within the normalized core one must distinguish three levels: structural
+forcing, cascade identification, and physical reading. A statement belongs to
+exactly one of these levels unless an explicit bridge is given.
+\end{lemma}
+
+\begin{proof}
+The structural forcing chain establishes what must hold inside the unified
+body. The cascade then identifies how such a structurally forced state appears
+at lower readout levels. A physical interpretation is an additional reading of
+that identified sector. Conflating these levels obscures where a statement is
+proved and where it is interpreted. The separation therefore serves as a
+normalization rule for subsequent unfolding steps.
+\end{proof}
+
+\begin{corollary}[First readout forcing chain]
+\label{cor:first-readout-forcing-chain}
+The first unfolded readout route of the normalized core is
+\[
+\text{closure-stable class}
+\Longrightarrow
+\text{admissible cascade image}
+\Longrightarrow
+\text{terminal ground sector}
+\Longrightarrow
+\text{collapse-fixed photon/readout sector}.
+\]
+Taken together with Phases~I-A through~I-C, the normalized core now yields the
+combined chain
+\[
+\text{one body}
+\Longrightarrow
+\text{re-identification}
+\Longrightarrow
+\mathrm{HC}
+\Longrightarrow
+\text{closure}
+\Longrightarrow
+\text{higher confinement}
+\Longrightarrow
+\text{septinion reading}
+\Longrightarrow
+\text{cascade-fixed readout sector}.
+\]
+\end{corollary}
+
+\begin{proof}
+The first displayed chain is the direct concatenation of
+Lemma~\ref{lem:cascade-admissibility-lemma},
+Lemma~\ref{lem:terminal-ground-state-lemma}, and
+Theorem~\ref{thm:collapse-fixed-sector-theorem}. The second displayed chain is
+obtained by appending this readout route to the forcing chain from
+Corollary~\ref{cor:first-confinement-forcing-chain}.
+\end{proof}
+
+
+\subsection*{Phase II-E: Semantic/Tensor Interface and Millennium Intertwining}
+\addcontentsline{toc}{subsection}{Phase II-E: Semantic/Tensor Interface and Millennium Intertwining}
+
+\begin{lemma}[Semantic kernel well-formedness lemma]
+\label{lem:semantic-kernel-well-formedness-lemma}
+The normalized semantic kernel is well formed: its predicates of one-body
+identity, triolic organization, orthogonal anchoring, frame-shifted readout,
+HC forcing, closure stability, higher confinement, and readout admissibility do
+not define competing ontologies but successive structural constraints on one and
+the same body.
+\end{lemma}
+
+\begin{proof}
+By construction, the normalized core begins from the one-body condition and then
+adds only constraint predicates that regulate how the same body may be read,
+stabilized, and projected. None of the predicates introduces a second carrier
+space or an ontologically independent duplicate; each one refines the same
+underlying body by imposing an admissibility condition. The semantic kernel is
+therefore well formed as a constraint hierarchy rather than a family of
+competing state spaces.
+\end{proof}
+
+\begin{lemma}[Tensor realization lemma]
+\label{lem:tensor-realization-lemma}
+The tensorial operators $\mathcal J^\mu{}_{\nu}$, $\mathcal C^\mu{}_{\nu}$,
+$\Pi_n{}^\mu{}_{\nu}$, and $\hat K^\mu{}_{\nu}$ realize the normalized semantic
+kernel as an operator system: $\mathcal J$ realizes the involutive frame
+symmetry, $\mathcal C$ the compensating projection, $\Pi_n$ the cascade steps,
+and $\hat K$ the terminal readout map.
+\end{lemma}
+
+\begin{proof}
+The semantic kernel distinguishes involutive reflection, compensating return,
+projection through admissible layers, and terminal ground readout. The tensorial
+operators are introduced precisely to encode these roles in compact operator
+notation. The semantic and tensorial descriptions therefore stand in a role-wise
+correspondence: the operator system is not a second theory but a tensor
+realization of the already normalized semantic structure.
+\end{proof}
+
+\begin{lemma}[Intertwining lemma]
+\label{lem:millennium-intertwining-lemma}
+If the Millennium matrix $\mathcal M^\mu{}_{\nu}$ is used as the structural
+transport operator between admissible grouped layers, then it must intertwine
+with the normalized tensorial kernel. In the minimal normalized form one
+requires
+\[
+\mathcal M\mathcal J=\mathcal J\mathcal M,
+\qquad
+\mathcal M\mathcal C=\mathcal C\mathcal M,
+\qquad
+\mathcal M\hat K=\hat K\mathcal M
+\]
+whenever the corresponding involution, compensation, and cascade-readout
+structures are to be preserved across the transport.
+\end{lemma}
+
+\begin{proof}
+A transport operator that fails to commute with the involution would change the
+frame logic of the transported state; one that fails to commute with the
+compensator would alter admissibility by moving states in or out of the
+compensated sector; and one that fails to commute with the terminal readout map
+would not preserve the normalized collapse/readout architecture. Hence a
+Millennium transport that is meant to be structure preserving must satisfy the
+stated intertwining relations at least for the operators whose semantic role it
+claims to preserve.
+\end{proof}
+
+\begin{theorem}[Admissibility preservation theorem]
+\label{thm:admissibility-preservation-theorem}
+If $x$ is admissible in the normalized semantic kernel and $\mathcal M$ is a
+Millennium transport satisfying the intertwining relations of
+Lemma~\ref{lem:millennium-intertwining-lemma}, then $\mathcal Mx$ remains
+admissible in the transported layer.
+\end{theorem}
+
+\begin{proof}
+Admissibility in the normalized core is carried by compatibility with the one-body
+constraint, compensator normalization, and the cascade-compatible readout
+structure. By Lemma~\ref{lem:millennium-intertwining-lemma}, the transport
+operator preserves the tensorial realizations of exactly these mechanisms.
+Therefore applying $\mathcal M$ cannot convert an admissible state into an
+inadmissible one merely by transport; it yields an admissible image in the next
+layer provided the transport is itself taken within the normalized grouped
+architecture.
+\end{proof}
+
+\begin{theorem}[Closure preservation theorem]
+\label{thm:closure-preservation-theorem}
+Under the same hypotheses, closure-stable states are transported by
+$\mathcal M$ to closure-stable states of the receiving layer.
+\end{theorem}
+
+\begin{proof}
+Closure stability is the semantic statement that the admissible state does not
+drift out of the normalized class once HC forcing and anchoring are taken into
+account. Since admissibility is preserved by
+Theorem~\ref{thm:admissibility-preservation-theorem} and the intertwining
+relations preserve the compensator and readout structures that stabilize the
+closure class, the transported image cannot lose closure merely by layer
+transport. Thus closure stability is preserved across admissible Millennium
+transport.
+\end{proof}
+
+\begin{proposition}[Semantic--tensor equivalence proposition]
+\label{prop:semantic-tensor-equivalence-proposition}
+The tensorial kernel does not introduce a second structural theory. It is a
+parallel notation for the normalized semantic kernel, and the Millennium matrix
+is admissible only insofar as its tensorial action represents the same
+constraint chain already present on the semantic side.
+\end{proposition}
+
+\begin{proof}
+By Lemma~\ref{lem:semantic-kernel-well-formedness-lemma}, the semantic side is a
+single constrained body. By Lemma~\ref{lem:tensor-realization-lemma}, the
+operator side realizes these constraints in tensorial notation. The intertwining
+and preservation results show that $\mathcal M$ is not free to create a new
+structural doctrine; it is licensed only as a transport operator respecting the
+same normalized constraint chain. Hence semantic kernel and tensor kernel are
+parallel realizations of one structure.
+\end{proof}
+
+\begin{corollary}[First semantic--tensor forcing chain]
+\label{cor:first-semantic-tensor-forcing-chain}
+The normalized semantic/tensor interface yields the chain
+\[
+\text{semantic kernel}
+\Longrightarrow
+\text{tensor realization}
+\Longrightarrow
+\text{Millennium intertwining}
+\Longrightarrow
+\text{admissibility preservation}
+\Longrightarrow
+\text{closure preservation}.
+\]
+\end{corollary}
+
+\begin{proof}
+Lemma~\ref{lem:semantic-kernel-well-formedness-lemma} establishes the semantic
+kernel, Lemma~\ref{lem:tensor-realization-lemma} gives its tensor realization,
+Lemma~\ref{lem:millennium-intertwining-lemma} fixes the admissible transport
+relations for $\mathcal M$, and Theorems~\ref{thm:admissibility-preservation-theorem}
+and~\ref{thm:closure-preservation-theorem} provide the preservation steps.
+\end{proof}
+
+
 \subsection*{Grouped Layer Architecture and Millennium Transport}
 \addcontentsline{toc}{subsection}{Grouped Layer Architecture and Millennium Transport}
 
@@ -3715,6 +4433,374 @@ foundation lies in $\mathfrak G$, the translation/readout logic in $\mathfrak P$
 and the field/probe realization in $\mathfrak F$.
 \end{remark}
 
+\subsection*{Phase II-F: Grouped Layer Transport and Ontological Non-Drift}
+\addcontentsline{toc}{subsection}{Phase II-F: Grouped Layer Transport and Ontological Non-Drift}
+
+This unfolding block upgrades the grouped architecture from a normalization note
+into an explicit transport calculus. The goal is to show that grouped layers do
+not introduce new origins of structure, but only different admissible regimes of
+one and the same underlying body.
+
+\begin{lemma}[Group decomposition lemma]
+\label{lem:group-decomposition}
+Every active structural block of the normalized Companion is dominantly
+assignable to exactly one of the grouped layers $\mathfrak G$, $\mathfrak P$, or
+$\mathfrak F$, even when secondary cross-references to the other layers remain.
+\end{lemma}
+
+\begin{proof}
+By Definition~\ref{def:grouped-structural-architecture}, the grouped layers are
+distinguished by role rather than by separate ontology: generation,
+projection/translation, and realization. Any active block therefore has one
+primary structural function. Cross-references may connect a block to the other
+layers, but they do not erase its dominant role. Hence each active block is
+assignable to one grouped layer as its principal location.
+\end{proof}
+
+\begin{lemma}[Transport lemma]
+\label{lem:group-transport}
+Let $x$ be a state generated in $\mathfrak G$. If $\mathcal M_{\mathfrak G\to\mathfrak P}$
+is an admissible grouped-layer converter, then its image in $\mathfrak P$ is a
+projection/translation of the same admissible structure and not a newly created
+structural body.
+\end{lemma}
+
+\begin{proof}
+By Definition~\ref{def:millennium-transport-grouped-layers}, admissible grouped
+transport preserves structural admissibility. Proposition~\ref{prop:grouped-forcing-readout-chain}
+states that $\mathfrak P$ reads and translates what $\mathfrak G$ has already
+generated. Therefore the image of $x$ under $\mathcal M_{\mathfrak G\to\mathfrak P}$
+remains the same admissible structure under a projection/translation regime.
+It is not a second origin because admissibility is transported, not recreated.
+\end{proof}
+
+\begin{lemma}[Realization lemma]
+\label{lem:group-realization}
+If $y\in\mathfrak P$ is an admissible projection/translation state and
+$\mathcal M_{\mathfrak P\to\mathfrak F}$ is admissible, then its image in
+$\mathfrak F$ is a realization of the same admissible structure as a field/probe
+state.
+\end{lemma}
+
+\begin{proof}
+The role of $\mathfrak F$ is realization rather than generation by
+Proposition~\ref{prop:grouped-forcing-readout-chain}. Since admissibility is
+preserved across grouped transport by Proposition~\ref{prop:admissibility-preservation-grouped-layers},
+$\mathcal M_{\mathfrak P\to\mathfrak F}(y)$ remains within the same
+admissibility class. Thus the field/probe layer realizes the translated
+structure without changing its underlying body.
+\end{proof}
+
+\begin{proposition}[No-ontology-drift lemma]
+\label{prop:no-ontology-drift}
+Admissible transport across the grouped layers does not create ontological
+multiplicity. If
+\[
+x \in \mathfrak G,
+\qquad
+x_P := \mathcal M_{\mathfrak G\to\mathfrak P}(x),
+\qquad
+x_F := \mathcal M_{\mathfrak P\to\mathfrak F}(x_P),
+\]
+then $x$, $x_P$, and $x_F$ are three admissible organizational regimes of one
+and the same structural body.
+\end{proposition}
+
+\begin{proof}
+By Lemma~\ref{lem:group-transport}, passage from $\mathfrak G$ to $\mathfrak P$
+produces a translation/readout of the same admissible body. By
+Lemma~\ref{lem:group-realization}, passage from $\mathfrak P$ to $\mathfrak F$
+produces a field/probe realization of that same admissible body. Since both
+steps preserve admissibility rather than replacing it, no new ontology is
+introduced along the chain. Therefore $x$, $x_P$, and $x_F$ are structurally
+identical in body and differ only by organizational regime.
+\end{proof}
+
+\begin{corollary}[First grouped transport forcing chain]
+\label{cor:first-grouped-transport-forcing-chain}
+The normalized grouped architecture supports the forcing chain
+\[
+\mathfrak G
+\Longrightarrow
+\text{admissible transport to }\mathfrak P
+\Longrightarrow
+\text{admissible realization in }\mathfrak F
+\Longrightarrow
+\text{no ontology drift across grouped layers}.
+\]
+\end{corollary}
+
+\begin{proof}
+Combine Lemma~\ref{lem:group-decomposition}, Lemma~\ref{lem:group-transport},
+Lemma~\ref{lem:group-realization}, and
+Proposition~\ref{prop:no-ontology-drift}.
+\end{proof}
+
+
+\subsection*{Phase III-G: Probe Geometry, Inheritance, and Guided Search}
+\addcontentsline{toc}{subsection}{Phase III-G: Probe Geometry, Inheritance, and Guided Search}
+
+This unfolding block upgrades the probe sector from an interpretive add-on to a
+structurally inherited realization of the normalized core. The goal is to show
+that probes do not introduce a foreign search mechanism, but inherit triolic,
+anchored, and closure-compatible structure from the generative and grouped
+layers.
+
+\begin{lemma}[Probe inheritance lemma]
+\label{lem:probe-inheritance}
+If the normalized structural body is triolic, anchored, and closure-admissible,
+then every admissible probe realization inherited through $\mathfrak F$ carries a
+corresponding triolic and closure-compatible organization.
+\end{lemma}
+
+\begin{proof}
+By Proposition~\ref{prop:no-ontology-drift}, admissible realization in
+$\mathfrak F$ does not create a second ontology, but realizes the same
+underlying structural body under a field/probe regime. Hence structural features
+that belong to the admissible body---in particular triolic organization and
+anchor-compatible closure discipline---remain available in the probe image as
+inherited structure rather than externally attached decoration.
+\end{proof}
+
+\begin{lemma}[Two-probe compatibility lemma]
+\label{lem:two-probe-compatibility}
+Let $P_1$ and $P_2$ be two admissible probes directed toward one another. If
+both are inherited from the same normalized structural body, then their mutual
+configuration is compatible with one common closure-governed geometry.
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{lem:probe-inheritance}, each probe inherits the same triolic and
+closure-compatible structural discipline. Since neither probe introduces a new
+ontology by Proposition~\ref{prop:no-ontology-drift}, their mutual interaction
+must be read inside one common admissibility class. Therefore the two-probe
+configuration is not a collision of unrelated structures but a common
+closure-governed geometry of one inherited body.
+\end{proof}
+
+\begin{lemma}[Orthogonal third-group lemma]
+\label{lem:orthogonal-third-group-probe}
+In an admissible two-probe configuration, the third structural group remains
+orthogonal to both probes and thereby determines the constrained search region.
+\end{lemma}
+
+\begin{proof}
+The orthogonal third direction is already forced at the generative level by the
+orthogonal-anchor principle and remains preserved under admissible realization.
+Hence, when two probes are realized as inherited triolic structures, the third
+group cannot collapse into either probe direction without violating anchor
+compatibility. It therefore remains orthogonal to both and serves as the
+stabilizing transversal direction that bounds the admissible search region.
+\end{proof}
+
+\begin{proposition}[Probe reduction theorem]
+\label{prop:probe-reduction-theorem}
+An admissible two-probe configuration reduces to the closure-preserving sector of
+the grouped architecture. In particular, the probe interaction may be analyzed
+inside the admissible closure class without introducing a second search
+ontology.
+\end{proposition}
+
+\begin{proof}
+By Lemma~\ref{lem:two-probe-compatibility}, the two probes share one common
+closure-governed geometry. By Lemma~\ref{lem:orthogonal-third-group-probe}, the
+third group fixes the transversal admissible search region. Since closure and
+ontology are preserved across grouped realization by
+Proposition~\ref{prop:no-ontology-drift}, the probe interaction reduces to the
+closure-preserving sector of the same normalized architecture.
+\end{proof}
+
+\begin{corollary}[Guided search corollary]
+\label{cor:guided-search-corollary}
+Auxiliary tools such as frequency extraction, transition guidance, structural
+routing, or convergence acceleration act only within the already admissible
+probe geometry. They do not generate admissibility, but exploit a search region
+that has already been restricted by inheritance, closure, and orthogonal
+anchoring.
+\end{corollary}
+
+\begin{proof}
+By Proposition~\ref{prop:probe-reduction-theorem}, admissible probe analysis is
+already confined to the closure-preserving sector. Therefore any auxiliary tool
+operates on a domain whose admissibility has been fixed before the tool is
+applied. The tool may compress or guide the search, but it does not create the
+search geometry itself.
+\end{proof}
+
+\begin{corollary}[First probe forcing chain]
+\label{cor:first-probe-forcing-chain}
+The normalized probe sector supports the forcing chain
+\[
+\text{inherited probe structure}
+\Longrightarrow
+\text{two-probe compatibility}
+\Longrightarrow
+\text{orthogonal third-group search region}
+\Longrightarrow
+\text{closure-preserving probe reduction}
+\Longrightarrow
+\text{guided search inside an already admissible geometry}.
+\]
+\end{corollary}
+
+\begin{proof}
+Combine Lemma~\ref{lem:probe-inheritance},
+Lemma~\ref{lem:two-probe-compatibility},
+Lemma~\ref{lem:orthogonal-third-group-probe},
+Proposition~\ref{prop:probe-reduction-theorem}, and
+Corollary~\ref{cor:guided-search-corollary}.
+\end{proof}
+
+
+
+\subsection*{Phase III-H: Structural Master Equation and Exact-Closure Field Regime}
+\addcontentsline{toc}{subsection}{Phase III-H: Structural Master Equation and Exact-Closure Field Regime}
+
+This unfolding block upgrades the previously compressed master-equation language
+into an explicit field-level forcing chain. The aim is not yet to derive every
+physical limit in full detail, but to show that the structural master equation,
+its variational reading, the closure-preserving field regime, and the exact-
+closure simplifications belong to one continuous argument rather than to loosely
+connected interpretive remarks.
+
+\begin{lemma}[Structural master-equation lemma]
+\label{lem:structural-master-equation}
+The structural master equation is the compressed field-level summary of the
+normalized forcing chain from one-body structure through re-identification, HC,
+closure, higher confinement, and admissible readout.
+\end{lemma}
+
+\begin{proof}
+By Corollary~\ref{cor:first-generative-forcing-chain}, the normalized body
+forces re-identification and HC. By Corollary~\ref{cor:first-closure-forcing-chain},
+this induces a closure class with either exact closure or a controlled residue.
+By Corollary~\ref{cor:first-confinement-forcing-chain}, closure yields higher
+confinement and the septinion reading. By Corollary~\ref{cor:first-readout-forcing-chain}
+and Corollary~\ref{cor:first-semantic-tensor-forcing-chain}, admissible readout
+and tensorial transport preserve this structure. Hence the master equation is not
+an additional postulate but the compressed field-level expression of the forcing
+chain already established.
+\end{proof}
+
+\begin{lemma}[Variational consistency lemma]
+\label{lem:variational-consistency}
+Any variational reading of the structural master equation is admissible only if
+it preserves the normalized one-body, HC, and closure conditions. In
+particular, admissible variation may unfold the structural equation but may not
+replace its forcing chain by an independent ontology.
+\end{lemma}
+
+\begin{proof}
+By Proposition~\ref{prop:semantic-tensor-equivalence-proposition}, tensorial formulation is
+only a parallel realization of the same semantic kernel. Therefore any
+variational formulation that is meant to belong to the present architecture must
+preserve the same semantic admissibility data. If the variation were to destroy
+one-body identity, HC-forcing, or closure preservation, it would cease to be a
+variation of the normalized structural equation and would instead define a
+second independent system. Hence admissible variation is constrained by the
+forcing chain and remains structurally internal to it.
+\end{proof}
+
+\begin{lemma}[Closure-field compatibility lemma]
+\label{lem:closure-field-compatibility}
+The field-level realization of the structural master equation is compatible with
+closure precisely when the realized dynamics preserves the HC-selected
+admissibility class and does not mix the stable closure sector with an
+ontologically foreign complement.
+\end{lemma}
+
+\begin{proof}
+By Theorem~\ref{thm:closure-preservation-theorem}, admissible transport through
+the Millennium interface preserves closure classes. By Proposition~\ref{prop:no-ontology-drift},
+realization in the field/probe layer introduces no second ontology. Therefore a
+field realization is closure-compatible exactly when it remains inside the
+HC-selected admissibility class rather than coupling the closure-stable sector
+to a foreign complement. This is the field-level restatement of normalized
+closure preservation.
+\end{proof}
+
+\begin{theorem}[Exact-closure field theorem]
+\label{thm:exact-closure-field-theorem}
+In the exactly closed regime, the realized field dynamics reduces to the
+closure-stable block of the normalized architecture. Equivalently, the active
+field transport becomes block-compatible with the exact closure class.
+\end{theorem}
+
+\begin{proof}
+By Proposition~\ref{prop:exact-closure-criterion}, exact closure is equivalent
+to the disappearance of the nontrivial closure defect. By
+Lemma~\ref{lem:closure-field-compatibility}, closure-compatible field dynamics
+may then act only on the already stabilized admissibility class. Since no
+ontology drift occurs across grouped transport, the realized field dynamics
+reduces to the closure-stable block itself. Thus exact closure yields a
+block-compatible field regime.
+\end{proof}
+
+\begin{lemma}[Minimal compensator disappearance lemma]
+\label{lem:minimal-compensator-disappearance}
+In the exactly closed regime, the minimal compensator residue vanishes. What
+remains is not the disappearance of structural compensation as such, but the
+fact that no additional compensator correction is required beyond the exact
+closure block.
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{lem:closure-residue-lemma}, the non-exact regime is marked
+by a residual deviation from exact closure. By
+Theorem~\ref{thm:exact-closure-field-theorem}, exact closure confines the field
+transport completely to the closure-stable block. Therefore the additional
+minimal compensator term that measures residual off-block correction must
+vanish. Structural compensation remains implicit in the exact block, but no
+separate compensator residue survives.
+\end{proof}
+
+\begin{theorem}[Effective-limit theorem]
+\label{thm:effective-limit-theorem}
+Any admissible effective limit---for example a geometric, spinorial, or quantum
+field-theoretic limit---must arise as a readout of the normalized structural
+master equation together with its closure-preserving field realization. Such a
+limit may specialize the realization, but cannot bypass the forcing chain that
+produces it.
+\end{theorem}
+
+\begin{proof}
+By Lemma~\ref{lem:structural-master-equation}, the structural master equation is
+the compressed summary of the normalized forcing chain. By
+Lemma~\ref{lem:variational-consistency} and Lemma~\ref{lem:closure-field-compatibility},
+any admissible field realization and any admissible variation remain internal to
+that chain. By Theorem~\ref{thm:exact-closure-field-theorem} and
+Lemma~\ref{lem:minimal-compensator-disappearance}, the exact regime yields a
+pure closure block without additional corrective residue. Hence any effective
+limit must be read as a specialization or projection of the normalized
+structural field realization rather than as an independent starting point.
+\end{proof}
+
+\begin{corollary}[First field forcing chain]
+\label{cor:first-field-forcing-chain}
+The normalized field sector supports the forcing chain
+\[
+\text{structural master equation}
+\Longrightarrow
+\text{variational consistency}
+\Longrightarrow
+\text{closure-preserving field compatibility}
+\Longrightarrow
+\text{exact closure block regime}
+\Longrightarrow
+\text{vanishing minimal compensator residue}
+\Longrightarrow
+\text{admissible effective limit readout}.
+\]
+\end{corollary}
+
+\begin{proof}
+Combine Lemma~\ref{lem:structural-master-equation},
+Lemma~\ref{lem:variational-consistency},
+Lemma~\ref{lem:closure-field-compatibility},
+Theorem~\ref{thm:exact-closure-field-theorem},
+Lemma~\ref{lem:minimal-compensator-disappearance}, and
+Theorem~\ref{thm:effective-limit-theorem}.
+\end{proof}
 
 \subsection*{Concrete mapping of legacy core blocks to grouped layers}
 \addcontentsline{toc}{subsection}{Concrete mapping of legacy core blocks to grouped layers}
@@ -4516,6 +5602,57 @@ and spectrum-level completion.
         a systematic error of $\gL^{3/2}\approx 2.546$.
 \end{enumerate}
 
+
+
+
+\subsection*{Phase IV-I: Physical Unfolding, Observer Frames, and Interface Regimes}
+\addcontentsline{toc}{subsection}{Phase IV-I: Physical Unfolding, Observer Frames, and Interface Regimes}
+
+\begin{lemma}[Observer-frame lemma]
+Within the normalized structural architecture, an observer frame is not introduced as an external background datum. Rather, it is the stabilized readout frame selected by the combined action of the cascade, the closure filter, and the admissibility-preserving transport across the grouped layers. In particular, any observer description compatible with the kernel must arise as a frame-shifted but ground-linked reading of the same underlying body.
+\end{lemma}
+
+\begin{proof}
+The semantic kernel identifies all admissible descriptions as readings of a single underlying structure. Frame-shifted observation therefore does not create an ontologically new sector. By the forcing chain established in Phases~I--III, any admissible readout is first re-identified by the compensator, then filtered into a closure-stable class, then transported through the grouped architecture without ontology drift. The observer frame is therefore fixed only at the level of admissible readout, not posited independently of the structure.
+\end{proof}
+
+\begin{lemma}[Mass/spectral reading lemma]
+Any admissible mass or hierarchy reading in the Companion must be interpreted first as a spectral or sectoral readout of the normalized structural kernel, and only secondarily as a phenomenological mass assignment. In particular, the transition from spectral organization to mass hierarchy is a realization map, not a new generative axiom.
+\end{lemma}
+
+\begin{proof}
+The generative layer produces admissible sectors and their closure relations, while the projection/translation layer supplies readout rules and collapse-fixed identifications. Therefore any mass reading that appears in the field/probe layer inherits its legitimacy from a prior spectral or sectoral differentiation. This excludes the reverse move of inserting an independent mass ontology into the generative layer. The mass interpretation is thus subordinate to the spectral structure and must be treated as a downstream realization.
+\end{proof}
+
+\begin{lemma}[Generation-splitting lemma]
+If the triolic and grouped-layer architecture is preserved across admissible projections and field realizations, then any generation splitting must appear as a structured decomposition of an already admissible spectral body rather than as a free multiplication of unrelated sectors.
+\end{lemma}
+
+\begin{proof}
+Triolic minimality and orthogonal anchoring prevent arbitrary proliferation of sectors at the generative level. The transport rules for $\mathcal M$ preserve admissibility and closure, and the no-ontology-drift lemma excludes the creation of new bodies during layer transfer. Hence any multiplicity such as a generation-like splitting must be read as an organized decomposition of the inherited spectral structure. It is therefore constrained by the prior closure and transport logic.
+\end{proof}
+
+\begin{theorem}[Standard-model interface theorem]
+The normalized Companion architecture defines a one-way interface to Standard-Model-style phenomenology: admissible structures may be projected into observer, spectral, and field realizations compatible with particle-physics language, but the Companion introduces no independent Standard-Model ontology at the generative level. Consequently, the appropriate first target of the unfolding is not a complete reconstruction of the Standard Model, but a structurally controlled interface map from the grouped kernel into physically readable sectors.
+\end{theorem}
+
+\begin{proof}
+By the observer-frame, mass/spectral, and generation-splitting lemmas, all physically readable sectors arise only after the generative core has been passed through closure, confinement, cascade readout, tensor realization, and grouped transport. The field/probe layer therefore supplies an interface regime in which known physical language may be attached to admissible sectors, but the kernel itself remains prior to that language. The Standard Model can thus enter only through an interface map respecting admissibility, closure, and no-ontology drift. This proves that the correct unfolding target is an interface theorem rather than a premature full identification.
+\end{proof}
+
+\begin{corollary}[First physical unfolding chain]
+The first physical unfolding chain of the Companion is
+\[
+\text{observer-frame emergence}
+\Longrightarrow
+\text{spectral/mass readout}
+\Longrightarrow
+\text{generation-compatible splitting}
+\Longrightarrow
+\text{controlled Standard-Model interface}.
+\]
+Thus the physical interpretation layer is admitted only after the structural, closure, tensorial, and grouped-layer chains have already been stabilized.
+\end{corollary}
 
 %% ============================================================
 %% APPENDIX A — Formal Proof Supplement
@@ -5504,10 +6641,11 @@ chain, but it remains acceptable only if its origin can be reopened without
 changing the admissibility class. Thus the document now treats readout as a
 \emph{controlled fixed point} of compression and reconstruction:
 \[
-\text{local structure} \Longrightarrow \text{HC} \Longrightarrow \text{closure}
-\Longrightarrow \text{probe filtration} \Longrightarrow \text{table/tool compression}
-\Longrightarrow \text{readout}
-\Longrightarrow \text{re-expansion to the same admissibility class}.
+\begin{aligned}
+&\text{local structure} \Longrightarrow \text{HC} \Longrightarrow \text{closure}\\
+&\Longrightarrow \text{probe filtration} \Longrightarrow \text{table/tool compression}\\
+&\Longrightarrow \text{readout} \Longrightarrow \text{re-expansion to the same admissibility class}.
+\end{aligned}
 \]
 
 \paragraph{Stabilization Proposition A (readout fixed-point discipline).}
@@ -7597,7 +8735,7 @@ public release path and the internal repair path remain distinguishable.
 \renewcommand{\arraystretch}{1.12}
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
-\begin{longtable}{|p{0.15\textwidth}|p{0.18\textwidth}|p{0.16\textwidth}|p{0.39\textwidth}|}
+\begin{longtable}{|p{0.14\textwidth}|p{0.17\textwidth}|p{0.15\textwidth}|p{0.42\textwidth}|}
 \hline
 \textbf{Version / record} & \textbf{Status} & \textbf{Publication date} & \textbf{DOI / note} \\
 \hline
@@ -7656,7 +8794,10 @@ v2.11.3 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.192
 \hline
 v2.12.0 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.19223782}{10.5281/zenodo.19223782} \\
 \hline
-v2.13.0 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.19225191}{10.5281/zenodo.19225191} \\
+v2.13.0 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.19223968}{10.5281/zenodo.19223968} \\
+\hline
+v2.14.0 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.19225191}{10.5281/zenodo.19225191} \\
+v2.15.0 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.19226408}{10.5281/zenodo.19226408} \\
 \hline
 \end{longtable}
 }
@@ -7681,7 +8822,7 @@ Zenodo v4.15, March 2026.
 Marc Brendecke,
 \emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding} (Quantum Sphaera Companion v2.14.0),
 March 2026.
-\newblock DOI: \href{https://doi.org/10.5281/zenodo.19223968}{10.5281/zenodo.19223968}.
+\newblock DOI: \href{https://doi.org/10.5281/zenodo.19226408}{10.5281/zenodo.19226408}.
 
 \bibitem{kim2026}
 Yilwook Kim,
