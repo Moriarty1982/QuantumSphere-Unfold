@@ -29,8 +29,8 @@
 \newtheorem{axiom}{Axiom}
 
 % --- Document metadata ---
-\newcommand{\docversion}{2.23.0}
-\newcommand{\docdate}{\DTMdisplaydate{2026}{03}{26}{-1}}
+\newcommand{\docversion}{2.24.0}
+\newcommand{\docdate}{\DTMdisplaydate{2026}{03}{27}{-1}}
 
 % --- Macros ---
 \newcommand{\bsym}{\beta_{\mathrm{sym}}}
@@ -65,7 +65,7 @@
 \thispagestyle{fancy}
 \begin{center}
 \fbox{\begin{minipage}{0.92\textwidth}
-\small\textbf{Companion status.} This document is the mathematical companion to the current main Quantum Sphaera paper. It expands and hardens derivations, tools, and structural proof interfaces, but it does not replace the main paper as the leading structural text. In the present release, the Companion is explicitly reorganized around the Millennium matrix as global Heisenberg-compensator matrix, the carrier/group/physical-readout distinction, and the master-chain logic from structure-first to stable physical readout.
+\small\textbf{Companion status.} This document is the mathematical companion to the current main Quantum Sphaera paper. It expands and hardens derivations, tools, and structural proof interfaces, but it does not replace the main paper as the leading structural text. In the present release, the Companion is explicitly reorganized around the Millennium matrix as global Heisenberg-compensator matrix, the carrier/group/physical-readout distinction, the master-chain logic from structure-first to stable physical readout, and a reserved computational-reading layer connecting projector logic, Boolean admissibility, and machine-like structural search.
 \end{minipage}}
 \end{center}
 \vspace{0.6em}
@@ -1230,6 +1230,15 @@ $J$-structure leaves both $\tau_n$ and $C$ unchanged.
 \section{Fractal Self-Traversal Along the Light Axis}
 \label{sec:fractal}
 %% ============================================================
+
+\begin{remark}[Structural null axis and physical light-axis readout]
+In the structurally prior language of the Companion, the distinguished
+axis selected by the MM/HC architecture is the null axis. Once the same
+axis is read at stable physical propagation level, it appears as the
+light axis. Thus the present section keeps the historically familiar
+light-axis title, while treating it explicitly as the physical readout
+of a structurally prior null-axis statement.
+\end{remark}
 
 \begin{definition}[Light axis of a stratum]
 The structurally prior null axis of stratum $S_n$ is
@@ -2621,6 +2630,15 @@ with Earth.
 \section{Dirac Probe as Closure-Preserving Solution}
 \label{sec:dirac-probe}
 %% ============================================================
+
+\begin{remark}[Probe branch as secondary MM/HC transport branch]
+The probe sector is not a second ontology beside the main Sphaera line.
+It is a secondary branch of the same MM/HC architecture: the same
+triolic source, the same closure discipline, and the same compensator
+logic are transported into a probe-specific readout regime. The probe
+sections should therefore be read as a controlled branch-unfolding of
+the common structural core.
+\end{remark}
 
 \begin{remark}[The fermionic probe from the tree]
 The recursive septonic tree (§\ref{sec:stringlqg}) suggests that
@@ -7502,6 +7520,84 @@ zero sum at height $T = 1/\lP^{(\mathrm{photon})}$ — is the
 remaining mathematical content of OP~5.
 \end{remark}
 
+
+\section{Computational Interpretation, Enigma Analogy, and Bomba-Style Structural Search}
+\label{sec:computational-reading}
+\addcontentsline{toc}{section}{Computational Interpretation, Enigma Analogy, and Bomba-Style Structural Search}
+
+\paragraph{Status note.}
+This section is inserted as a \emph{forward structural reserve} for Version~\docversion. Its purpose is not to replace the mathematical architecture by a cryptographic metaphor, but to make explicit a computational reading that is already latent in the combined language of collapse states, probe traces, HC-selection, projector logic, and recursive self-similarity. The block is therefore exploratory in style but still subject to the same interpretive discipline as the rest of the Companion: structural statements first, computational analogy second, and strong universality claims only where explicit simulation arguments can later be supplied.
+
+\subsection*{1. Historical computational line}
+The computational reading proposed here is historically motivated by four lines of thought. First, Turing's analysis of computability supplies the canonical abstract picture of state, writable memory, and rule-governed transition. Second, Zuse's Z3 shows that a programmable architecture need not resemble the textbook tape machine in order to realize nontrivial computation. Third, Rojas' later interpretation of the Z3 suggests that even architecturally rigid machines may support universality claims under suitable encoding. Fourth, Knuth's algorithmic tradition provides the methodological discipline needed to turn a structural machine intuition into an explicit calculus of executable operations. None of these references is taken as a substitute for proof inside the present framework; they are used here as the historical genealogy of the computational question itself.
+
+\subsection*{2. Why an Enigma-like comparison becomes structurally natural}
+Viewed from sufficiently far away, the current Sphaera architecture can be read as a hidden transformation system with constrained internal routing. Collapse states play the role of local machine states; probe traces act as writable path-memory; projector logic and closure rules constrain admissible channel combinations; and the Heisenberg compensator functions as a consistency selector that either stabilizes, redirects, or rejects a candidate continuation. In that precise but limited sense, the total system can be compared to an \emph{extremely generalized Enigma-like architecture}: one does not read the hidden transformation law directly, but reconstructs it from admissible traversals, structural exclusions, and the persistence of consistent return paths.
+
+The comparison must remain disciplined. The framework is not literally a rotor cipher, and no claim is made that the underlying mathematics reduces to cryptography. The point is only that the same structural motifs appear: hidden internal state, constrained transition, reversible or quasi-reversible path structure, exclusion of inconsistent configurations, and reconstruction by systematic elimination.
+
+\subsection*{3. Reflector-like return map from disjointness and Lorentz transport}
+Within this analogy, the role of an Enigma-like reflector is not played by a single mechanical component. It is structurally realized by the joint action of \emph{sector disjointness} and \emph{Lorentz-mediated frame transport}. Disjointness prevents uncontrolled mixing between inadmissible branches. Lorentz transport supplies the frame-changing return mechanism through which a forward traversal can re-enter the architecture in a compatible transformed sector. The resulting map is therefore reflector-like rather than literally reflective: it closes a path by structural return instead of by a dedicated hardware wheel.
+
+In this reading, the reflector-like mechanism is important because it explains why search need not be linear. A candidate path can be advanced, translated, and checked again under a transformed frame constraint. This is precisely the type of global return behavior that later makes a Bomba/Bombe-style elimination strategy plausible.
+
+\subsection*{4. Boolean and projector-logical layer}
+The present Companion already contains the ingredients for a Boolean-style logical layer compatible with tensor notation. The basic objects are not initially truth values, but admissibility projectors, closure-preserving sector rules, compatibility filters, and complement-type exclusions. Nevertheless, once a given structural question is pushed down to the level of admissible versus inadmissible continuation, a Boolean reading becomes natural:
+\begin{itemize}[leftmargin=2em]
+  \item projector activation / projector annihilation,
+  \item admissible branch / rejected branch,
+  \item stable continuation / forced redirection,
+  \item sector membership / complementary exclusion.
+\end{itemize}
+For later computational purposes, this layer is preferable to an imported external logic because it is already expressed in the tensorial and projector-based syntax native to the framework. A future formalization can therefore define a Boolean-projector calculus internally, rather than grafting one on from outside.
+
+\subsection*{5. Millennium machine viewpoint}
+The machine-like reading is best expressed by the tuple
+\[
+\mathfrak M=(C,\Gamma,H_C,\mathbb S^\ast,\mathcal M),
+\]
+where $C$ is the active collapse state, $\Gamma$ the probe trace or trace aggregate, $H_C$ the Heisenberg-compensated selection layer, $\mathbb S^\ast$ the recursively self-similar sphere-memory, and $\mathcal M$ the Millennium matrix acting as the global transition operator. In this perspective, the matrix itself is not the whole machine; rather, it is the transition architecture acting on a self-generated computational substrate.
+
+The crucial point is that the framework does not need an externally visible infinite tape in order to motivate machine-like behavior. If recursive self-traversal of the sphere yields effectively unbounded addressability, then memory is supplied by structural continuation itself. Probe traces then behave like writable history, while HC-selection and projector logic supply branch admissibility.
+
+\subsection*{6. Toward a Bomba/Bombe-style structural search}
+The Enigma comparison becomes operational once one asks how hidden structural settings could be reconstructed from probe traces. Here a Bomba/Bombe-style strategy suggests itself. One does not search the full hidden state space naively; instead, one builds a contradiction-sensitive elimination engine on top of structural consistency conditions. In the present framework, a first abstract \emph{Millennium Bombe} would work with the following ingredients:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item a finite local hypothesis set of collapse-state classes, branch labels, or sector addresses;
+  \item a library of projector constraints and HC-compatibility rules;
+  \item a trace-comparison mechanism for two or more probes;
+  \item a return-map discipline induced by disjointness plus Lorentz transport;
+  \item a contradiction counter or admissibility score on closed loops of candidate transitions.
+\end{enumerate}
+The purpose of such a machine would be to eliminate candidate hidden settings as soon as they violate a required closure relation, a projector identity, or a trace-return compatibility condition. In modern language, this is close to a structural constraint-propagation engine; in historical language, it is close to the logic of a Bombe: force many candidate paths at once, and let inconsistency kill the wrong ones.
+
+\subsection*{7. What can actually be tested with the Bomba idea}
+Several concrete search modes become visible immediately.
+\begin{enumerate}[leftmargin=2em,label=(\arabic*)]
+  \item \textbf{Trace-loop consistency tests.} One can compare left/right probe traces and reject candidate branch assignments for which the reflector-like return map fails to close.
+  \item \textbf{Projector menu tests.} One can form small ``menus'' of mutually constrained projector activations and check which local settings survive HC-selection across the whole menu.
+  \item \textbf{Hopf-branch pruning.} If several Hopf transitions are locally available, only those compatible with both disjointness and transformed-frame return are retained.
+  \item \textbf{Counter-based universality probes.} A later step could encode simple counter-machine behavior by using probe traces as writable history and HC/projector logic as update constraints.
+\end{enumerate}
+What matters is that the search is not brute force in a blind combinatorial sense. It is \emph{structurally informed elimination}. That is the exact point where the cryptanalytic analogy becomes useful rather than decorative.
+
+\subsection*{8. Relation to Lorenz/Tunny and the differencing perspective}
+The present section should also be read with the later wartime attack on the Lorenz/Tunny traffic in mind. The relevant lesson is not that the Sphaera framework is a teleprinter cipher. The lesson is methodological: hidden transformation systems can often be attacked more effectively after one passes from raw symbols to derived difference- or compatibility-structures. In the present setting, the analogue is the transition from naive path following to projector-aware trace differencing, frame-shift comparison, and HC-mediated elimination. This is one reason why Turing's cryptanalytic work remains suggestive even beyond the narrow Enigma/Bombe picture.
+
+\subsection*{9. Programming-language outlook}
+If the Millennium matrix admits a faithful computational reading with effective state encoding, writable trace-memory, branch selection, and recursively extensible addressability, then a native programming formalism should in principle be possible. For the next release cycle this is reserved under the provisional title \emph{Millennium Matrix Language (MML)}. The intended syntax remains deliberately hybrid: C\#-style declarations and block structure on the outside, F\#-style transformation flow and pattern matching on the inside. The mathematical point is that such a language would not sit on top of the framework as a merely decorative DSL; it would express the framework's own collapse/trace/HC/self-similarity logic directly.
+
+\subsection*{10. Proof obligations and limits}
+The present section introduces a computational research direction, not a completed theorem package. In particular:
+\begin{itemize}[leftmargin=2em]
+  \item the Enigma/Bombe analogy is structural, not literal;
+  \item the Boolean layer still needs a fully explicit projector calculus;
+  \item effective unbounded memory must be formalized before any strict Turing-completeness claim;
+  \item a true universality statement should ideally pass through an explicit simulation of a small standard model such as a two-counter machine.
+\end{itemize}
+What is already justified, however, is the existence of a serious computational interpretation path inside the Companion itself. The architecture no longer contains only physical and mathematical readings; it now also contains the beginnings of a machine-theoretic reading that can later be extracted into an independent computational paper without disturbing the main structural line.
+
+
 \appendix
 
 \section{Structural Tools for the Millennium Matrix}
@@ -10890,6 +10986,10 @@ v2.22.0 & Zenodo release & 2026-03-26 & \href{https://doi.org/10.5281/zenodo.192
 \hline
 v2.23.0 & Zenodo release & 2026-03-26 & \href{https://doi.org/10.5281/zenodo.19239228}{10.5281/zenodo.19239228} \\
 \hline
+v2.23.1 & Zenodo patch release & 2026-03-26 & \href{https://doi.org/10.5281/zenodo.19239967}{10.5281/zenodo.19239967} \\
+\hline
+v2.24.0 & Zenodo release & 2026-03-27 & \href{https://doi.org/10.5281/zenodo.19258774}{10.5281/zenodo.19258774} \\
+\hline
 \end{longtable}
 }
 
@@ -10913,9 +11013,9 @@ Zenodo v4.15, March 2026.
 
 \bibitem{brendecke2026sphaera}
 Marc Brendecke,
-\emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding} (Quantum Sphaera Companion v2.23.0),
+\emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding} (Quantum Sphaera Companion v2.24.0),
 March 2026.
-\newblock DOI: \href{https://doi.org/10.5281/zenodo.19239228}{10.5281/zenodo.19239228}.
+\newblock Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}; version DOI: \href{https://doi.org/10.5281/zenodo.19258774}{10.5281/zenodo.19258774}.
 
 \bibitem{kim2026}
 Yilwook Kim,
@@ -10937,6 +11037,32 @@ Math.\ Ann.\ \textbf{104} (1931), 570--578.
 A.~Weil,
 \emph{Sur certains groupes d'opérateurs unitaires},
 Acta Math.\ \textbf{111} (1964), 143--211.
+
+
+\bibitem{turing1936}
+A.~M.~Turing,
+\emph{On Computable Numbers, with an Application to the Entscheidungsproblem},
+Proc.\ London Math.\ Soc.\ (2) \textbf{42} (1936), 230--265.
+
+\bibitem{knuth1997}
+Donald E.~Knuth,
+\emph{The Art of Computer Programming, Vol.~1: Fundamental Algorithms},
+3rd ed., Addison--Wesley, 1997.
+
+\bibitem{rojas1998}
+Ra\'ul Rojas,
+\emph{How to Make Zuse's Z3 a Universal Computer},
+IEEE Annals of the History of Computing \textbf{20} (1998), no.~3, 51--54.
+
+\bibitem{copeland2006}
+B.~Jack Copeland (ed.),
+\emph{Colossus: The Secrets of Bletchley Park's Codebreaking Computers},
+Oxford University Press, 2006.
+
+\bibitem{zuse2016}
+Horst Zuse,
+\emph{Konrad Zuse's Computer Z3},
+historical overview, 2016.
 
 \end{thebibliography}
 
