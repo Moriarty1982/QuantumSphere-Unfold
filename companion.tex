@@ -29,7 +29,7 @@
 \newtheorem{axiom}{Axiom}
 
 % --- Document metadata ---
-\newcommand{\docversion}{2.24.0}
+\newcommand{\docversion}{2.25.0}
 \newcommand{\docdate}{\DTMdisplaydate{2026}{03}{27}{-1}}
 
 % --- Macros ---
@@ -7587,7 +7587,894 @@ The present section should also be read with the later wartime attack on the Lor
 \subsection*{9. Programming-language outlook}
 If the Millennium matrix admits a faithful computational reading with effective state encoding, writable trace-memory, branch selection, and recursively extensible addressability, then a native programming formalism should in principle be possible. For the next release cycle this is reserved under the provisional title \emph{Millennium Matrix Language (MML)}. The intended syntax remains deliberately hybrid: C\#-style declarations and block structure on the outside, F\#-style transformation flow and pattern matching on the inside. The mathematical point is that such a language would not sit on top of the framework as a merely decorative DSL; it would express the framework's own collapse/trace/HC/self-similarity logic directly.
 
-\subsection*{10. Proof obligations and limits}
+
+\subsection*{10. First Millennium-Bombe algorithm schemata}
+The eliminative search perspective can be made more explicit by writing the first procedures in pseudocode form. These are not yet implementation claims; they are structural schemata that show how the computational reading can be operationalized.
+
+\paragraph{Algorithm A: candidate elimination.}
+\begin{enumerate}[leftmargin=2em,label=\arabic*.]
+  \item Initialize a finite candidate set $\Sigma_0$ of collapse classes, branch labels, or sector addresses.
+  \item For each $\sigma\in\Sigma_0$, test closure compatibility.
+  \item Reject $\sigma$ if the required projector identities fail.
+  \item Reject $\sigma$ if HC-selection forces contradiction or forbidden leakage.
+  \item Reject $\sigma$ if the induced trace pattern is incompatible with the required return map.
+  \item Retain the surviving subset $\Sigma_{\mathrm{adm}}$.
+\end{enumerate}
+This is the basic Bombe principle in structural form: one does not certify the right candidate immediately; one lets inconsistency annihilate the wrong ones.
+
+\paragraph{Algorithm B: Hopf-branch resolution.}
+\begin{enumerate}[leftmargin=2em,label=\arabic*.]
+  \item Start from a locally exhausted sector or branch menu.
+  \item Enumerate the admissible Hopf candidates $k$ compatible with disjointness.
+  \item Transport each candidate through the Lorentz-mediated return discipline.
+  \item Apply HC-selection and projector checks to the transported candidate.
+  \item Keep only those $k$ whose transformed return remains structurally stable.
+\end{enumerate}
+The algorithm clarifies that Hopf branching is not an arbitrary jump; it is a constrained branch-resolution mechanism tied to closure and transformed return.
+
+\paragraph{Algorithm C: probe-trace reconciliation with differencing.}
+\begin{enumerate}[leftmargin=2em,label=\arabic*.]
+  \item Launch two or more probes through the current structural sector menu.
+  \item Record the resulting traces $\Gamma_1,\Gamma_2,\dots$.
+  \item Form pairwise or aggregate difference data $\Delta(\Gamma_i,\Gamma_j)$.
+  \item Compare the resulting patterns against projector compatibility and HC-admissibility.
+  \item Extract the common structurally stable core and reject divergent inconsistent components.
+\end{enumerate}
+This gives the Lorenz/Tunny lesson a direct internal form: differencing is useful because it can simplify the visibility of hidden structure before one attempts a full reconstruction.
+
+\paragraph{Admissibility functional.}
+A first compact formalization of the elimination logic is the multiplicative indicator
+\[
+\mathcal A(\sigma)=\chi_{\mathrm{close}}(\sigma)\,\chi_{\mathrm{proj}}(\sigma)\,\chi_{\mathrm{HC}}(\sigma)\,\chi_{\mathrm{trace}}(\sigma)\,\chi_{\Delta}(\sigma),
+\]
+where each factor is an indicator of admissibility for one structural test layer. Then $\mathcal A(\sigma)=1$ marks a surviving candidate, while $\mathcal A(\sigma)=0$ records elimination.
+
+\subsection*{11. First MML mini-box}
+The computational reading becomes more concrete once the same logic is written in a small language sketch. The following mini-box is intentionally modest: it is not yet a formal language specification, but it already shows how a future Millennium Matrix Language (MML) could inherit C\#-style outer declarations and F\#-style inner transformation flow.
+
+\begin{quote}
+\ttfamily
+module Sphere.Program\par
+state C0;\par
+sector C7;\par
+probe left;\par
+probe right;\par
+\par
+run \{\par
+\quad collapse C0;\par
+\quad project C7;\par
+\quad left  |> probe Sector.A |> trace;\par
+\quad right |> probe Sector.B |> trace;\par
+\quad compare;\par
+\quad diff;\par
+\quad match hc\_select() with\par
+\quad | Stable      -> iterate();\par
+\quad | Exhausted k -> hopf(k);\par
+\quad | Rejected    -> reject();\par
+\}\par
+\end{quote}
+
+The point of the mini-box is not syntax design for its own sake. It demonstrates that the same objects already used mathematically---collapse state, sector projection, probe trace, comparison, differencing, HC-selection, and Hopf branching---can be arranged into an executable-looking calculus without leaving the native conceptual vocabulary of the Companion.
+
+\subsection*{12. Triolen Algebra 0.1}
+At the lowest operational layer, the present framework suggests not a purely binary Boolean algebra, but a triadic structural logic. A first minimal state space is
+\[
+\mathbb T=\{L,R,C\},
+\]
+where $L$ and $R$ denote two disjoint polar states and $C$ denotes the closure/compensator state required by the triolen architecture itself. In this sense the third state is not merely epistemic or indeterminate; it is structurally forced whenever admissible closure is required.
+
+A first operational reading is supplied by the primitive maps
+\[
+\operatorname{cpl}:\mathbb T\times\mathbb T\to\mathbb T,
+\qquad
+\operatorname{sep}:\mathbb T\times\mathbb T\to\mathbb T\times\mathbb T,
+\qquad
+\operatorname{comp}:\mathbb T\to\mathbb T,
+\]
+\[
+\operatorname{cl}:\mathcal P(\mathbb T)\to\mathcal P(\mathbb T),
+\qquad
+\operatorname{adm}:\mathcal P(\mathbb T)\to\{0,1\}.
+\]
+The intended first rules are
+\[
+\operatorname{cpl}(L,R)=C,
+\qquad
+\operatorname{comp}(L)=\operatorname{comp}(R)=\operatorname{comp}(C)=C,
+\]
+\[
+\operatorname{cl}(\{L,R\})=\{L,R,C\},
+\qquad
+\operatorname{adm}(\{L,R\})=0,
+\qquad
+\operatorname{adm}(\{L,R,C\})=1.
+\]
+The point of this toy algebra is not finality but orientation: binary opposition by itself is not yet structurally stable; admissible completion requires the third closure state.
+
+\subsection*{13. Boolean readout as projection}
+The triadic internal logic should nevertheless remain exportable into Boolean-compatible channels. The most disciplined way to say this is that Boolean algebra appears here as a \emph{readout projection}, not as the full internal ontology of the machine layer. A first binary projection may be written as
+\[
+\pi_B:\mathbb T\to\{0,1\},
+\qquad
+\pi_B(L)=0,
+\quad
+\pi_B(R)=1,
+\]
+while the status of $C$ remains context-dependent. In many cases the better choice is a two-channel export
+\[
+\pi_2(L)=(1,0),
+\qquad
+\pi_2(R)=(0,1),
+\qquad
+\pi_2(C)=(1,1),
+\]
+so that the closure state is not erased but exported as simultaneous structural activation. This is especially compatible with the tensor/projector language already used in the Companion: the richer triadic layer can be processed internally, and only then read outward in Boolean form.
+
+\begin{table}[h]
+\centering
+\caption{First triolen-algebra readout table.}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.16\textwidth} >{\centering\arraybackslash}p{0.14\textwidth} >{\centering\arraybackslash}p{0.14\textwidth} >{\centering\arraybackslash}p{0.14\textwidth} >{\centering\arraybackslash}p{0.18\textwidth}}
+\toprule
+State & Role & $\pi_B$ & $\pi_2$ & admissibility role \\
+\midrule
+$L$ & left / first pole & $0$ & $(1,0)$ & polar input \\
+$R$ & right / second pole & $1$ & $(0,1)$ & polar input \\
+$C$ & closure / compensator & context-dependent & $(1,1)$ & forced completion / closure witness \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{14. Co-processor view and MMIX forwarding}
+Once the triadic layer is distinguished from its Boolean export, a natural machine architecture presents itself. The Millennium layer need not replace classical computation; it can instead be treated as a \emph{structural co-processor}. Its task is to perform closure completion, projector filtering, HC-selection, trace reconciliation, differencing, and branch pre-resolution before forwarding a reduced Boolean-compatible state to a classical host engine. Schematically,
+\[
+\text{Input}
+\to
+\text{Triolen normalization}
+\to
+\text{closure / HC / projector filtering}
+\to
+\text{Boolean export}
+\to
+\text{MMIX or classical host}.
+\]
+This makes the comparison with Knuth's machine tradition especially useful. One may keep a classical host architecture --- whether read through MMIX or through a more abstract RISC-like core --- while treating the Millennium layer as a dedicated pre-processing engine for the structural ``dirty work.'' In that sense the host executes the normalized remainder, whereas the co-processor handles the admissibility-sensitive structural front end.
+
+A first low-level instruction reserve for such a co-processor could include
+\begin{quote}
+\ttfamily
+PAIR \quad SEPARATE \quad COUPLE \quad COMP \quad CLOSE \quad PROJECT \\
+TRACE \quad DIFF \quad HCSEL \quad HOPF \quad EXPORT\_BOOL \quad FORWARD
+\end{quote}
+Here \texttt{EXPORT\_BOOL} marks the Boolean readout step and \texttt{FORWARD} the handoff to a classical engine. Later, a future MML layer can sit above this instruction core in the same way that a high-level language sits above an assembly-like machine layer.
+
+
+
+\subsection*{15. MCP pipeline and host interface}
+The co-processor viewpoint becomes clearer if one writes the Millennium layer as an explicit staged pipeline rather than merely as an analogy. A first disciplined reserve is
+\[
+\mathcal P_{\mathrm{MCP}}:
+\text{raw problem state}
+\to
+\text{triolen normalization}
+\to
+\text{closure completion}
+\to
+\text{projector / HC filtering}
+\to
+\text{trace reconciliation and differencing}
+\to
+\text{Hopf / branch pre-resolution}
+\to
+\text{Boolean export}
+\to
+\text{host forwarding}.
+\]
+Each stage has a precise role. Triolen normalization translates a raw problem configuration into the native triadic state menu. Closure completion inserts the forced compensator state whenever the admissibility discipline requires it. Projector and HC filtering remove structurally forbidden continuations. Trace reconciliation and differencing compare probe histories before a full reconstruction is attempted. Hopf pre-resolution handles the transformed return menu when a local logical region is exhausted. Only then is the resulting reduced state exported into Boolean-compatible channels for handoff to the host.
+
+This suggests an interface contract between the Millennium Co-Processor (MCP) and a classical host architecture:
+\begin{enumerate}[leftmargin=2em,label=\arabic*.]
+  \item The host submits a raw state, candidate family, or normalized symbolic problem menu.
+  \item The MCP performs admissibility-sensitive structural preprocessing.
+  \item The MCP returns either a reduced Boolean-compatible state, a narrowed candidate menu, or an admissibility certificate / rejection witness.
+  \item The host continues ordinary classical computation on the reduced output.
+\end{enumerate}
+In this reading the MCP does not compete with the host; it specializes the front end by eliminating structurally impossible branches before ordinary execution resources are spent on them.
+
+\subsection*{16. MMA-0.1: first assembly reserve}
+If MML is the future readable high-level layer, then the co-processor needs a stricter low-level reserve underneath it. Let this provisional instruction layer be called \emph{MMA-0.1} (Millennium Matrix Assembly). Its purpose is not elegance but determinacy: the same structural front-end procedure should be writable in a normalized primitive vocabulary.
+
+A first minimal instruction classification is:
+\begin{itemize}[leftmargin=2em]
+  \item \textbf{state instructions:} \texttt{COLLAPSE}, \texttt{PROJECT}, \texttt{CLOSE}, \texttt{RETURN};
+  \item \textbf{probe / trace instructions:} \texttt{PROBE}, \texttt{TRACE}, \texttt{COMPARE}, \texttt{DIFF};
+  \item \textbf{selection instructions:} \texttt{HCSEL}, \texttt{HOPF}, \texttt{REJECT};
+  \item \textbf{export instructions:} \texttt{EXPORT\_BOOL}, \texttt{FORWARD}.
+\end{itemize}
+A toy reserve then reads:
+\begin{quote}
+\ttfamily
+COLLAPSE C0 \par
+PROJECT C7 \par
+PROBE L A \par
+TRACE \par
+PROBE R B \par
+TRACE \par
+COMPARE \par
+DIFF \par
+HCSEL \par
+HOPF K1 \par
+EXPORT\_BOOL \par
+FORWARD
+\end{quote}
+This is intentionally RISC-like in spirit: the primitive set is kept small, and more complex proof or search behavior is obtained by composition. In this sense MMA-0.1 is not yet a machine implementation, but it already serves as a candidate structural instruction set architecture for admissibility-preserving preprocessing.
+
+
+\subsection*{17. Instruction semantics reserve and compilation path}
+The architectural reserve becomes much clearer once the primitive layers are aligned explicitly. The guiding idea is that a future MML program is readable shorthand for a normalized MMA sequence, and an MMA sequence is in turn a disciplined invocation pattern for the MCP pipeline. Thus one obtains a first compilation path
+\[
+\text{MML source}
+\Longrightarrow
+\text{MMA-0.1 instruction stream}
+\Longrightarrow
+\mathcal P_{\mathrm{MCP}}
+\Longrightarrow
+\text{Boolean-compatible host state}.
+\]
+The first semantics reserve can therefore be stated instruction-by-instruction, without yet pretending to a full formal machine implementation.
+
+\begin{table}[h]
+\centering
+\caption{First MMA-0.1 instruction-semantics reserve.}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.16\textwidth} >{\raggedright\arraybackslash}p{0.25\textwidth} >{\raggedright\arraybackslash}p{0.23\textwidth} >{\raggedright\arraybackslash}p{0.23\textwidth}}
+\toprule
+Instruction & Local role & MCP stage & Expected output effect \\
+\midrule
+\texttt{COLLAPSE} & fix local collapse state & triolen normalization / state preparation & initialize active structural state \\
+\texttt{PROJECT} & restrict to admissible sector & projector filtering & remove sector-incompatible branches \\
+\texttt{CLOSE} & insert forced compensator closure & closure completion & upgrade open polar pair to admissible triolen state \\
+\texttt{PROBE} & launch probe into local sector menu & trace generation & produce path candidate / local trace contribution \\
+\texttt{TRACE} & record current structural passage & trace reconciliation & append writable history \(\Gamma\) \\
+\texttt{COMPARE} & compare probe traces / branch images & reconciliation layer & expose overlap and incompatibility patterns \\
+\texttt{DIFF} & form difference data & differencing layer & simplify hidden structure into contrast data \\
+\texttt{HCSEL} & apply HC-guided selection & projector / HC filtering & reject leakage or contradiction \\
+\texttt{HOPF} & perform constrained branch transfer & Hopf pre-resolution & move to transformed compatible return branch \\
+\texttt{REJECT} & abort forbidden continuation & any elimination stage & produce rejection witness / empty continuation \\
+\texttt{EXPORT\_BOOL} & project internal triadic state outward & Boolean export & yield host-readable binary or two-channel state \\
+\texttt{FORWARD} & hand reduced state to host & host interface & pass normalized result to MMIX / classical engine \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+A compact state-update reading may also be written schematically as
+\[
+(C,\Gamma,H_C,\mathbb S^\ast)
+\xrightarrow{\texttt{COLLAPSE }X}
+(X,\Gamma,H_C,\mathbb S^\ast),
+\]
+\[
+(C,\Gamma,H_C,\mathbb S^\ast)
+\xrightarrow{\texttt{TRACE}}
+(C,\Gamma\cup\{C\},H_C,\mathbb S^\ast),
+\]
+\[
+(C,\Gamma,H_C,\mathbb S^\ast)
+\xrightarrow{\texttt{HOPF}(k)}
+(C',\Gamma,H_C,\mathbb S^\ast),
+\qquad
+(C,\Gamma,H_C,\mathbb S^\ast)
+\xrightarrow{\texttt{EXPORT\_BOOL}}
+\pi_2(C),
+\]
+where \(C'\) denotes the transformed compatible return state.
+
+\paragraph{First compilation example.}
+The small MML sketch from above compiles naturally into a normalized MMA reserve:
+\begin{align*}
+&\texttt{collapse C0; project C7; left |> probe Sector.A |> trace; right |> probe Sector.B |> trace;}\\
+&\texttt{compare; diff; match hc\_select() with | Stable -> iterate(); | Exhausted k -> hopf(k); | Rejected -> reject();}
+\end{align*}
+becomes, at the low-level reserve,
+\begin{quote}
+\ttfamily
+COLLAPSE C0 \par
+PROJECT C7 \par
+PROBE L A \par
+TRACE \par
+PROBE R B \par
+TRACE \par
+COMPARE \par
+DIFF \par
+HCSEL \par
+HOPF K1 / REJECT / CONTINUE \par
+EXPORT\_BOOL \par
+FORWARD
+\end{quote}
+The point is not yet compiler engineering. The point is that the Companion now contains a credible stratification from structural proof language to instruction-level preprocessing to classical host execution.
+
+\subsection*{18. Macro layer and proof-oriented compression}
+Once a small RISC-like primitive reserve has been identified, the next natural step is a macro layer above MMA-0.1. This layer is not meant to replace the primitive semantics, but to bundle recurring structural proof patterns into short, reusable admissibility-preserving blocks. In that sense one may speak of a future CISC-like convenience layer built on top of a RISC-like structural core. The point is proof economy: long structural passages that are currently written out verbally or tensorially should eventually be expressible as short macro invocations whose low-level expansion remains auditably available.
+
+A first schematic reserve of such macros is:
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.23\textwidth} >{\raggedright\arraybackslash}p{0.65\textwidth}}
+\toprule
+Macro & Intended normalized low-level expansion \\
+\midrule
+\texttt{RESOLVE\_TRACE} & \texttt{PROBE + TRACE + COMPARE + DIFF + HCSEL} \\
+\texttt{CLOSE\_AND\_PROJECT} & \texttt{CLOSE + PROJECT + HCSEL} \\
+\texttt{BRANCH\_ON\_EXHAUSTION} & \texttt{HCSEL + HOPF + PROJECT} \\
+\texttt{EXPORT\_RESULT} & \texttt{EXPORT\_BOOL + FORWARD} \\
+\bottomrule
+\end{tabular}
+\end{center}
+These are intentionally schematic. Their function is to signal how a future proof-programming style could compress large parts of repetitive structural reasoning without sacrificing the existence of a normalized primitive expansion.
+
+\subsection*{19. First proof-as-program reserve}
+The computational reading becomes most persuasive once a short proof-like structural argument can be presented as a program. Consider the following prototype task: two probes are launched into compatible sectors, their traces are reconciled, admissibility is enforced by projector and HC selection, and only then is a Boolean-compatible result exported to the host. In prose, this would normally require several lines of structural explanation. In a proof-oriented program reserve it may be written more compactly as
+\begin{quote}
+\ttfamily
+resolve collapse C0 in C7;\par
+left |> probe Sector.A |> trace;\par
+right |> probe Sector.B |> trace;\par
+resolve\_trace;\par
+close\_and\_project;\par
+branch\_on\_exhaustion;\par
+export\_result;
+\end{quote}
+The corresponding normalized MMA reserve is then
+\begin{quote}
+\ttfamily
+COLLAPSE C0 \par
+PROJECT C7 \par
+PROBE L A \par
+TRACE \par
+PROBE R B \par
+TRACE \par
+COMPARE \par
+DIFF \par
+CLOSE \par
+PROJECT C7 \par
+HCSEL \par
+HOPF K1 / CONTINUE / REJECT \par
+EXPORT\_BOOL \par
+FORWARD
+\end{quote}
+This does not yet constitute a formal proof language. However, it already illustrates the intended compression principle: a long admissibility chain can be written as a short structural program, provided the macro layer remains reducible to a stable primitive instruction sequence. That is precisely the sense in which the Millennium-language direction could later serve as a proof compressor rather than a merely decorative programming metaphor.
+
+\subsection*{19A. Concrete mini-example: closure, projection, and HC selection}
+To make the proof-compression idea more tangible, consider the following minimal structural claim. Suppose two probes are launched into compatible sectors of a collapse state $C_0$ inside the admissible projector sector $C_7$. If the resulting traces can be reconciled, and if projector admissibility and Heisenberg-compensator selection both succeed, then the resulting state may be exported as a Boolean-compatible host state. In ordinary prose, the argument is short but still multi-step:
+\begin{enumerate}[leftmargin=2em]
+  \item initialize the collapse state in the admissible sector;
+  \item launch the two probes into compatible local sectors;
+  \item write and reconcile their traces;
+  \item close the local structure under the projector constraint;
+  \item apply HC selection to remove non-admissible continuations;
+  \item export the surviving state to the host interface.
+\end{enumerate}
+In a proof-oriented MML reserve, the same reasoning can be written as
+\begin{quote}
+\ttfamily
+run \{\par
+\ \ collapse C0;\par
+\ \ project C7;\par
+\ \ left  |> probe Sector.A |> trace;\par
+\ \ right |> probe Sector.B |> trace;\par
+\ \ resolve\_trace;\par
+\ \ close\_and\_project;\par
+\ \ match hc\_select() with\par
+\ \ | Stable      -> export\_result();\par
+\ \ | Exhausted k -> hopf(k); export\_result();\par
+\ \ | Rejected    -> reject();\par
+\}\par
+\end{quote}
+A normalized MMA-0.1 reserve for the same program is
+\begin{quote}
+\ttfamily
+COLLAPSE C0 \par
+PROJECT C7 \par
+PROBE L A \par
+TRACE \par
+PROBE R B \par
+TRACE \par
+COMPARE \par
+DIFF \par
+CLOSE \par
+PROJECT C7 \par
+HCSEL \par
+HOPF K1 / CONTINUE / REJECT \par
+EXPORT\_BOOL \par
+FORWARD
+\end{quote}
+The gain is not that content disappears. The gain is that the admissibility chain is now written in a normalized operational form. A later fully formal version could therefore present long recurring structural proof patterns as short programs together with a canonical primitive expansion. This is exactly the sense in which the MML/MMA direction could become a proof-compression layer for the framework.
+
+
+\subsection*{19B. Second mini-example: Hopf branching and trace differencing}
+A slightly stronger prototype task arises when trace reconciliation alone does not settle the continuation, and a Hopf-mediated branch must be selected after structural differencing. Suppose two probe traces agree up to a stable prefix but then separate into two locally compatible continuations. The structural task is then not merely to close and project, but to compare the trace difference, test admissibility under the HC layer, and send the exhausted branch through a compatible Hopf return before export. In prose, the argument reads as follows:
+\begin{enumerate}[leftmargin=2em]
+  \item initialize the collapse state and admissible projector sector;
+  \item launch two probes and write their traces;
+  \item compare the traces and compute the local difference pattern;
+  \item use HC selection to decide whether the local continuation is stable, exhausted, or rejected;
+  \item if exhausted, perform a Hopf-mediated return into a compatible branch;
+  \item only then export the surviving branch to the Boolean-compatible host interface.
+\end{enumerate}
+In a compact MML-style reserve, the same pattern may be written as
+\begin{quote}
+\ttfamily
+run \{\par
+\ \ collapse C0;\par
+\ \ project C7;\par
+\ \ left  |> probe Sector.A |> trace;\par
+\ \ right |> probe Sector.B |> trace;\par
+\ \ compare;\par
+\ \ diff;\par
+\ \ match hc\_select() with\par
+\ \ | Stable      -> export\_result();\par
+\ \ | Exhausted k -> hopf(k); project C7; export\_result();\par
+\ \ | Rejected    -> reject();\par
+\}\par
+\end{quote}
+A normalized MMA-0.1 reserve for this branching pattern is
+\begin{quote}
+\ttfamily
+COLLAPSE C0 \par
+PROJECT C7 \par
+PROBE L A \par
+TRACE \par
+PROBE R B \par
+TRACE \par
+COMPARE \par
+DIFF \par
+HCSEL \par
+HOPF K1 / CONTINUE / REJECT \par
+PROJECT C7 \par
+EXPORT\_BOOL \par
+FORWARD
+\end{quote}
+Here the role of structural differencing becomes explicit. The low-level sequence no longer merely closes a compatible local pattern; it also records that branch choice can be driven by a trace difference and then normalized by Hopf return before the state is exported. This is a more faithful miniature of the intended ``Millennium-Bombe'' reading: branches are not naively enumerated, but filtered by admissibility, trace difference, and compatible return.
+
+
+
+\subsection*{19C. Proof-template family reserve}
+The two mini-examples suggest that the computational reading should not remain a collection of isolated prototypes. What begins to emerge is a small family of reusable proof templates. These are not yet theorems about a completed language, but they already act as normalized admissibility patterns that can later be invoked repeatedly. In this sense they sit conceptually between verbal structure proofs and a future macro-capable MML/MMA layer.
+
+\paragraph{Template A: closure/projector template.}
+This template covers arguments in which a locally generated configuration must first be closure-completed and only then projected into an admissible sector. Its generic logical shape is
+\[
+\text{local generation}
+\to
+\text{closure completion}
+\to
+\text{projector admissibility}
+\to
+\text{HC stability check}
+\to
+\text{export.}
+\]
+A compact MML-style reserve may be written as
+\begin{quote}
+\ttfamily
+run \{\par
+\ \ collapse C0;\par
+\ \ local\_generate();\par
+\ \ close();\par
+\ \ project C7;\par
+\ \ match hc\_select() with\par
+\ \ | Stable   -> export\_result();\par
+\ \ | Rejected -> reject();\par
+\}\par
+\end{quote}
+with the corresponding normalized MMA reserve
+\begin{quote}
+\ttfamily
+COLLAPSE C0 \par
+LOCALGEN \par
+CLOSE \par
+PROJECT C7 \par
+HCSEL \par
+EXPORT\_BOOL / REJECT \par
+FORWARD
+\end{quote}
+
+\paragraph{Template B: branch-on-exhaustion template.}
+This template covers arguments in which direct continuation fails and the admissible path must be recovered through a compatible Hopf return. Its generic logical shape is
+\[
+\text{trace generation}
+\to
+\text{HC test}
+\to
+\text{exhaustion detected}
+\to
+\text{Hopf return}
+\to
+\text{reprojection}
+\to
+\text{export.}
+\]
+A compact MML-style reserve is
+\begin{quote}
+\ttfamily
+run \{\par
+\ \ generate\_trace();\par
+\ \ match hc\_select() with\par
+\ \ | Stable      -> export\_result();\par
+\ \ | Exhausted k -> hopf(k); project C7; export\_result();\par
+\ \ | Rejected    -> reject();\par
+\}\par
+\end{quote}
+with normalized MMA reserve
+\begin{quote}
+\ttfamily
+TRACEGEN \par
+HCSEL \par
+HOPF K / CONTINUE / REJECT \par
+PROJECT C7 \par
+EXPORT\_BOOL \par
+FORWARD
+\end{quote}
+
+\paragraph{Template C: trace-reconciliation template.}
+This template covers probe-based arguments in which several traces must be reconciled before admissibility can be decided. Its generic logical shape is
+\[
+\text{multi-trace generation}
+\to
+\text{comparison}
+\to
+\text{differencing}
+\to
+\text{HC-guided elimination}
+\to
+\text{surviving branch export.}
+\]
+A compact MML-style reserve is
+\begin{quote}
+\ttfamily
+run \{\par
+\ \ left  |> probe Sector.A |> trace;\par
+\ \ right |> probe Sector.B |> trace;\par
+\ \ compare;\par
+\ \ diff;\par
+\ \ match hc\_select() with\par
+\ \ | Stable      -> export\_result();\par
+\ \ | Exhausted k -> hopf(k); export\_result();\par
+\ \ | Rejected    -> reject();\par
+\}\par
+\end{quote}
+with normalized MMA reserve
+\begin{quote}
+\ttfamily
+PROBE L A \par
+TRACE \par
+PROBE R B \par
+TRACE \par
+COMPARE \par
+DIFF \par
+HCSEL \par
+HOPF K / CONTINUE / REJECT \par
+EXPORT\_BOOL \par
+FORWARD
+\end{quote}
+
+\paragraph{Why the template family matters.}
+The point of these templates is proof economy by normalization. Once recurring structural patterns are recognized at the level of admissibility flow, they no longer need to be rewritten each time as long verbal chains. Instead, they can be referenced as reusable proof-program shapes whose primitive expansion remains available for audit. In a later mature stage, such templates could supply exactly the bridge between compact structure-first proofs and explicit machine-readable certificate chains.
+
+\subsection*{19D. Standard library reserve}
+
+\paragraph{Toward a normalized structural standard library.}
+If the MML/MMA line is to mature into a reusable proof-and-computation environment, then the next natural step is a small standard library of normalized structural routines. Such a library would sit above raw MMA-0.1 instructions and above the first proof templates, but below fully problem-specific proof programs. Its role would be to package recurring admissibility-preserving patterns into stable callable units.
+
+\paragraph{First reserved library families.}
+A preliminary reserve may be organized into the following families:
+\begin{enumerate}[label=(\alph*)]
+    \item \emph{Closure library:} routines such as \texttt{CloseProject}, \texttt{CloseAndStabilize}, and \texttt{AdmissibleClosureCheck}.
+    \item \emph{Trace library:} routines such as \texttt{TraceMerge}, \texttt{TraceCompare}, \texttt{TraceDiff}, and \texttt{TraceReconcile}.
+    \item \emph{Branch library:} routines such as \texttt{BranchOnExhaustion}, \texttt{HopfResolve}, and \texttt{ReturnToCompatibleSector}.
+    \item \emph{Projector/HC library:} routines such as \texttt{ProjectSector}, \texttt{HCSelect}, \texttt{HCReject}, and \texttt{ClosurePreservingSelect}.
+    \item \emph{Export library:} routines such as \texttt{ExportBool}, \texttt{ExportTwoChannel}, and \texttt{ForwardToHost}.
+\end{enumerate}
+
+\paragraph{Library reading in MML form.}
+At the MML level, the standard library would make proof scripts significantly shorter by turning recurrent command chains into stable named units. For example, one might later write
+\begin{quote}
+\ttfamily
+run \{\par
+\ \ CloseAndProject(C0, C7);\par
+\ \ TraceReconcile(left, right);\par
+\ \ BranchOnExhaustion(K);\par
+\ \ ExportResult();\par
+\}\par
+\end{quote}
+instead of manually repeating the full lower-level instruction chain on every occurrence.
+
+\paragraph{Library reading in MMA form.}
+At the MMA level, the same library call would still expand into explicit primitive operations, for example into normalized sequences built from \texttt{COLLAPSE}, \texttt{PROJECT}, \texttt{TRACE}, \texttt{COMPARE}, \texttt{DIFF}, \texttt{HCSEL}, \texttt{HOPF}, \texttt{EXPORT\_BOOL}, and \texttt{FORWARD}. In this way, the library does not hide the structure; it only packages stable fragments while preserving full expandability for audit and proof checking.
+
+\paragraph{Why a library matters.}
+The standard library reserve is important because it turns the present computational strand from a set of examples into a reusable proof-technology. It also makes clear how later proof compression can remain mathematically transparent: short MML calls can always be unfolded back into explicit MMA chains and then related again to the structural argument in ordinary mathematical language.
+
+
+\subsection*{19E. Naming and module convention reserve}
+
+\paragraph{Why naming discipline matters.}
+If the computational strand is meant to grow incrementally over many Companion releases, then a stable naming and module convention should be fixed early. Otherwise the same structural routine risks being rewritten under different names at the MML, MMA, MCP, and host-interface levels. A small convention reserve therefore serves both proof economy and future extractability.
+
+\paragraph{Layer prefixes.}
+A first normalized layer discipline may be written as follows:
+\begin{itemize}[leftmargin=2em]
+    \item \textbf{MML.} High-level proof/program layer; readable structural scripts and proof-oriented macros.
+    \item \textbf{MMA.} Low-level assembly reserve; primitive normalized instructions and expansion targets.
+    \item \textbf{MCP.} Co-processor layer; triolen normalization, closure filtering, HC selection, branch pre-resolution, and Boolean export.
+    \item \textbf{HOST.} Classical target layer; MMIX-style or other Boolean-compatible receiving architecture.
+\end{itemize}
+
+\paragraph{Module families.}
+At the MML/library level one may reserve the following module families:
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Module family & Purpose \\
+\midrule
+\texttt{Closure.*} & closure completion and stabilization routines \\
+\texttt{Trace.*} & trace merge, compare, diff, and reconciliation \\
+\texttt{Branch.*} & exhaustion tests, Hopf resolution, return maps \\
+\texttt{Projector.*} & projector and HC-oriented admissibility logic \\
+\texttt{Export.*} & Boolean/two-channel export and host forwarding \\
+\texttt{Proof.*} & reusable proof templates and compressed proof calls \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Recommended call style.}
+A readable reserve should prefer qualified calls such as
+\begin{quote}
+\ttfamily
+Closure.CloseAndProject(C0, C7)\\
+Trace.Reconcile(left, right)\\
+Branch.OnExhaustion(K)\\
+Export.ToHost() 
+\end{quote}
+rather than a growing collection of unscoped global command names. This keeps the line extractable into a later stand-alone computational document without forcing a redesign of the vocabulary.
+
+\paragraph{Instruction naming at the MMA level.}
+To keep the low-level reserve visually distinct from MML calls, primitive MMA instructions should remain uppercase, for example
+\begin{quote}
+\ttfamily
+COLLAPSE\quad PROJECT\quad TRACE\quad DIFF\quad HCSEL\quad HOPF\quad EXPORT\_BOOL\quad FORWARD
+\end{quote}
+while MML/library invocations remain mixed-case and module-qualified. In this way the document immediately signals whether a line is a proof-level script or an explicit primitive expansion.
+
+\paragraph{Host interface convention.}
+The forwarding boundary should also remain named explicitly. A reserved pattern such as
+\begin{quote}
+\ttfamily
+Export.Bool(state) -> Host.Forward(target)
+\end{quote}
+clarifies that Boolean readability is not the native internal logic of the triolen layer, but the disciplined export format through which the co-processor hands reduced states to a classical engine.
+
+\paragraph{Why this matters for proof normalization.}
+A naming convention may sound cosmetic, but it has mathematical value in the present setting. Once proof templates, library calls, and MMA expansions stabilize under fixed module and instruction names, one can compare proof scripts across releases, identify true structural novelties, and prevent accidental rewordings from masquerading as new content. In that sense the naming/module reserve is part of the normalization discipline itself.
+
+
+\subsection*{19F. Typing discipline reserve}
+
+\paragraph{Why a typing layer is needed.}
+If MML, MMA, and MCP are meant to become more than suggestive notation, then the next normalization step is a lightweight typing discipline. The point is not software engineering ornament, but structural safety: a script should not silently confuse an unprojected state with a projected one, nor should a Boolean export token be treated as if it were still an internal triolen object. A reserved typing layer therefore supports both proof auditability and later machine execution.
+
+\paragraph{Core type families.}
+A first reserve may distinguish the following types:
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Type & Role \\
+\midrule
+\texttt{State} & generic internal structural state \\
+\texttt{CollapsedState} & state after explicit collapse normalization \\
+\texttt{ProjectedState} & state after projector-sector restriction \\
+\texttt{StableState} & HC/closure-stable admissible state \\
+\texttt{Trace} & probe trace or reconciled trace object \\
+\texttt{BranchToken} & branch/Hopf routing token \\
+\texttt{BoolExport} & Boolean or two-channel external readout packet \\
+\texttt{HostToken} & host-level forwarded operand / instruction carrier \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Suggested typing flow.}
+The intended flow should remain monotone:
+\[
+\texttt{State}
+\to
+\texttt{CollapsedState}
+\to
+\texttt{ProjectedState}
+\to
+\texttt{StableState}
+\to
+\texttt{BoolExport}
+\to
+\texttt{HostToken}.
+\]
+This expresses that admissibility is not an afterthought, but a staged refinement. In particular, Boolean export should appear only after the internal structural filters have acted.
+
+\paragraph{Illustrative typing rules.}
+The reserve may be expressed schematically as
+\begin{align*}
+\texttt{collapse} &: \texttt{State} \to \texttt{CollapsedState},\\
+\texttt{project} &: \texttt{CollapsedState} \to \texttt{ProjectedState},\\
+\texttt{hc\_select} &: \texttt{ProjectedState} \times \texttt{Trace} \to \texttt{StableState} + \texttt{BranchToken},\\
+\texttt{hopf} &: \texttt{BranchToken} \times \texttt{Trace} \to \texttt{ProjectedState},\\
+\texttt{export\_bool} &: \texttt{StableState} \to \texttt{BoolExport},\\
+\texttt{forward} &: \texttt{BoolExport} \to \texttt{HostToken}.
+\end{align*}
+This already prevents several category mistakes. One should not, for example, allow \texttt{forward} to act directly on an unfiltered \texttt{State}, nor \texttt{export\_bool} to bypass projector/HC discipline.
+
+\paragraph{Typing and proof compression.}
+A later proof-as-program layer gains credibility only if a compressed script still carries enough structural typing information to be unfolded reliably. In that sense the typing reserve is part of proof economy itself: it allows the document to shorten an argument without hiding where collapse, projection, stabilization, and export actually occurred.
+
+\paragraph{Minimal example.}
+A normalized MML-style line may therefore be read as
+\begin{quote}
+\ttfamily
+let s0 : State = Seed;\\
+let s1 : CollapsedState = collapse s0;\\
+let s2 : ProjectedState = project C7 s1;\\
+let h  : StableState = hc\_select(s2, t);\\
+let b  : BoolExport = export\_bool h;\\
+Host.Forward(b)
+\end{quote}
+while the corresponding MMA expansion remains untyped on the surface but typed by construction through the compilation discipline. This is exactly the sort of reserve that can later support a true MML/MMA compiler without forcing the Companion to commit too early to one concrete implementation.
+
+
+
+\subsection*{19G. Error and exception discipline reserve}
+
+\paragraph{Why an error discipline is needed.}
+Once the computational line is typed, the next reserve should govern failure, rejection, and non-exportability explicitly. This is again not software ornament. In the present framework, many ``errors'' are mathematically meaningful events: a branch may be rejected by HC selection, a trace may fail reconciliation, a projected sector may not close, or a state may simply remain non-exportable. A disciplined error layer therefore helps distinguish genuine structural failure from unfinished computation, and it prevents compressed proof scripts from silently hiding where admissibility broke down.
+
+\paragraph{Core exception families.}
+A first reserve may distinguish the following normalized exception classes:
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Exception & Meaning \\
+\midrule
+\texttt{InvalidProjectorState} & projector restriction cannot be applied consistently \\
+\texttt{UnstableTrace} & trace object fails reconciliation or admissibility checks \\
+\texttt{RejectedBranch} & branch candidate eliminated by HC/projector logic \\
+\texttt{NonClosableState} & local state does not admit closure completion \\
+\texttt{NonExportableState} & internal state cannot yet be reduced to Boolean output \\
+\texttt{HostForwardError} & forwarded packet violates host-interface contract \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Suggested propagation discipline.}
+The intended logic should be monotone in the same spirit as the type flow:
+\[
+\texttt{State}
+\rightsquigarrow
+\texttt{ProjectedState}
+\rightsquigarrow
+\texttt{StableState}
+\rightsquigarrow
+\texttt{BoolExport},
+\]
+but each step may branch into an admissible exception class. In other words, failure is not external to the calculus; it is a structured output of the same normalization process.
+
+\paragraph{Illustrative exception signatures.}
+A schematic reserve may therefore read
+\begin{align*}
+\texttt{project} &: \texttt{CollapsedState} \to \texttt{ProjectedState} + \texttt{InvalidProjectorState},\\
+\texttt{trace\_reconcile} &: \texttt{Trace} \times \texttt{Trace} \to \texttt{Trace} + \texttt{UnstableTrace},\\
+\texttt{hc\_select} &: \texttt{ProjectedState} \times \texttt{Trace} \to \texttt{StableState} + \texttt{RejectedBranch},\\
+\texttt{close} &: \texttt{ProjectedState} \to \texttt{StableState} + \texttt{NonClosableState},\\
+\texttt{export\_bool} &: \texttt{StableState} \to \texttt{BoolExport} + \texttt{NonExportableState},\\
+\texttt{forward} &: \texttt{BoolExport} \to \texttt{HostToken} + \texttt{HostForwardError}.
+\end{align*}
+This gives the computational reserve an explicit place for rejection events without collapsing them into a generic ``false''.
+
+\paragraph{Relation to HC and branch logic.}
+In a classical architecture, exceptions are often secondary. Here they are part of the structural logic itself. A \texttt{RejectedBranch} is not merely an implementation problem; it records that a candidate continuation violated the admissibility discipline. Likewise, \texttt{NonExportableState} means that the internal triolen logic has not yet reached a host-compatible Boolean readout. This perspective fits naturally with the existing distinction between internal structural necessity and external readable output.
+
+\paragraph{Minimal example.}
+A typed-and-guarded MML reserve may therefore look like
+\begin{quote}
+\ttfamily
+let s1 = collapse s0;\\
+let s2 = project C7 s1\\
+\quad else InvalidProjectorState;\\
+let t1 = trace\_reconcile(tL,tR)\\
+\quad else UnstableTrace;\\
+match hc\_select(s2,t1) with\\
+| Stable h      -> Host.Forward(export\_bool h)\\
+| Rejected k    -> RejectedBranch(k)
+\end{quote}
+which makes explicit that a compressed proof script can still expose where admissibility failed or where host export became possible.
+
+\paragraph{Why this matters for proof auditability.}
+A proof-as-program methodology remains trustworthy only if negative outcomes can be named as clearly as positive ones. The error/exception reserve therefore serves two roles at once: it supports later compiler/runtime design, and it protects the mathematical reading by ensuring that branch rejection, trace instability, and non-exportability remain visible rather than silently absorbed into compressed notation.
+
+\subsection*{19H. Verification and certificate reserve}
+
+\paragraph{Why a certificate layer is natural.}
+Once the computational line has explicit types and explicit rejection modes, the next natural reserve is a certificate layer. The guiding idea is simple: a compressed proof script should not only produce an output, but also leave behind a structured certificate indicating \emph{why} the output was admissible. This fits the framework especially well because admissibility is already driven by closure, projector restriction, HC selection, and trace consistency. Certificates therefore do not import a foreign logic; they record the native normalization path in an auditable form.
+
+\paragraph{Core certificate families.}
+A first normalized reserve may distinguish the following certificate classes:
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Certificate & Meaning \\
+\midrule
+\texttt{ClosureCertificate} & confirms closure completion of the local triolen state \\
+\texttt{ProjectorCertificate} & records admissible projector restriction and sector compatibility \\
+\texttt{HCCertificate} & records compensator-guided branch admissibility \\
+\texttt{TraceCertificate} & records successful trace reconciliation or coincidence \\
+\texttt{DiffCertificate} & records differencing-based separation or discrimination result \\
+\texttt{ExportCertificate} & confirms valid Boolean-compatible readout \\
+\texttt{HostCertificate} & confirms successful host-interface forwarding \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Certificate flow.}
+The intended logic mirrors the computational pipeline itself:
+\[
+\texttt{State}
+\rightsquigarrow
+\texttt{ClosureCertificate}
+\rightsquigarrow
+\texttt{ProjectorCertificate}
+\rightsquigarrow
+\texttt{HCCertificate}
+\rightsquigarrow
+\texttt{TraceCertificate}
+\rightsquigarrow
+\texttt{ExportCertificate}
+\rightsquigarrow
+\texttt{HostCertificate}.
+\]
+In practice not every run will generate the whole chain. Some programs stop internally, some remain non-exportable, and some terminate precisely by producing a rejection certificate. The key point is that positive and negative outcomes should both leave behind named structural evidence.
+
+\paragraph{Certificate-bearing signatures.}
+A first schematic reserve may therefore write
+\begin{align*}
+\texttt{close} &: \texttt{ProjectedState} \to \texttt{StableState} \times \texttt{ClosureCertificate} + \texttt{NonClosableState},\\
+\texttt{project} &: \texttt{CollapsedState} \to \texttt{ProjectedState} \times \texttt{ProjectorCertificate} + \texttt{InvalidProjectorState},\\
+\texttt{hc\_select} &: \texttt{ProjectedState} \times \texttt{Trace} \to \texttt{StableState} \times \texttt{HCCertificate} + \texttt{RejectedBranch},\\
+\texttt{trace\_reconcile} &: \texttt{Trace} \times \texttt{Trace} \to \texttt{Trace} \times \texttt{TraceCertificate} + \texttt{UnstableTrace},\\
+\texttt{diff} &: \texttt{Trace} \times \texttt{Trace} \to \texttt{Trace} \times \texttt{DiffCertificate},\\
+\texttt{export\_bool} &: \texttt{StableState} \to \texttt{BoolExport} \times \texttt{ExportCertificate} + \texttt{NonExportableState},\\
+\texttt{forward} &: \texttt{BoolExport} \to \texttt{HostToken} \times \texttt{HostCertificate} + \texttt{HostForwardError}.
+\end{align*}
+This already suggests a proof-kernel style reading: each structural step can optionally return not only a value but a witness of admissibility.
+
+\paragraph{Positive and negative certificates.}
+The reserve should also allow negative evidence. For example, a branch eliminated by HC logic may produce a normalized \texttt{RejectedBranchCertificate}, and a failed export may produce a \texttt{NonExportableCertificate}. This matters because a compressed proof program often derives its force from systematic elimination rather than from a single constructive forward path. A certificate layer should therefore preserve both successful realization and disciplined exclusion.
+
+\paragraph{Minimal MML sketch with certificates.}
+A typed MML reserve may thus look like
+\begin{quote}
+\ttfamily
+let s1, cc = close (project C7 (collapse s0));\\
+let t1, tc = Trace.Reconcile(tL,tR);\\
+match hc\_select(s1,t1) with\\
+| Stable h, hc ->\\
+\quad let b, ec = export\_bool h;\\
+\quad let host, hc2 = Host.Forward b;\\
+\quad Proof.Emit(cc,tc,hc,ec,hc2)\\
+| Rejected k ->\\
+\quad Proof.Emit(RejectedBranchCertificate(k))
+\end{quote}
+where \texttt{Proof.Emit} should be read as a later proof-kernel/library operation that packages admissibility evidence into an auditable object.
+\paragraph{Relation to proof compression.}
+This certificate reserve is important because it gives a precise answer to the usual concern about compressed proof languages: namely, whether brevity hides too much. In the present architecture, the aim is the opposite. MML/MMA compression should shorten the written program while the certificate layer preserves or even improves auditability. One may then read a short program at the surface and still expand, inspect, or export the structural certificate chain underneath.
+
+\paragraph{Toward a proof kernel.}
+Taken together, the typing reserve, exception reserve, and certificate reserve already point toward the outline of a genuine proof kernel. Such a kernel would not yet replace ordinary mathematical prose, but it would provide a normalized executable layer in which closure, projector admissibility, compensator selection, trace consistency, and host export can all be checked through explicit witnesses rather than only through long textual repetition.
+
+\subsection*{20. Proof obligations and limits}
+
 The present section introduces a computational research direction, not a completed theorem package. In particular:
 \begin{itemize}[leftmargin=2em]
   \item the Enigma/Bombe analogy is structural, not literal;
@@ -8537,6 +9424,92 @@ It is self-contained and can be read independently.
 All macros are as defined in the main preamble.}
 
 %% --- A.1 GUE Self-Determination ---
+
+\subsection*{19I. Optimization and normalization reserve}
+
+\paragraph{Why an optimization layer is needed.}
+Once the computational line carries typed programs, explicit rejection modes, and certificate-bearing outputs, a further reserve becomes natural: normalization and optimization rules that compress proof-programs without destroying admissibility evidence. In the present setting this is especially important because the entire motivation of MML/MMA is \emph{proof economy by structural normalization}. Hence optimization should not be understood as a merely engineering afterthought; it is part of the proof-theoretic architecture itself.
+
+\paragraph{Design principle.}
+The guiding constraint is that optimization must remain \emph{certificate-preserving}. A shorter program is acceptable only if it produces the same admissible structural state and carries either the same certificates or canonically reduced certificates. Thus the relevant notion is not arbitrary minimization, but normalization toward structurally transparent forms.
+
+\paragraph{Four initial optimization families.}
+A first reserve may separate the following layers:
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Family & Function \\
+\midrule
+Peephole normalization & removes local instruction redundancies \\
+Macro normalization & rewrites proof macros into canonical expansions \\
+Certificate-preserving compression & shortens programs while preserving witnesses \\
+Canonical proof-program forms & rewrites structurally equivalent programs into a fixed normal form \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Peephole rules.}
+At the lowest level, local instruction windows should admit simple rewrites such as
+\begin{align*}
+&\texttt{PROJECT }S;\,\texttt{PROJECT }S \;\Longrightarrow\; \texttt{PROJECT }S,\\
+&\texttt{TRACE};\,\texttt{TRACE} \;\Longrightarrow\; \texttt{TRACE} \quad\text{(when no state update intervenes)},\\
+&\texttt{EXPORT\_BOOL};\,\texttt{EXPORT\_BOOL} \;\Longrightarrow\; \texttt{EXPORT\_BOOL},\\
+&\texttt{HCSEL};\,\texttt{HCSEL} \;\Longrightarrow\; \texttt{HCSEL} \quad\text{(when branch context is unchanged)}.
+\end{align*}
+These are intentionally conservative. Their role is not to be clever, but to remove obvious redundancies while preserving the structural path.
+
+\paragraph{Macro normalization.}
+The emerging macro layer above MMA should itself admit canonical expansion and contraction. Schematically,
+\[
+\texttt{CLOSE\_AND\_PROJECT}
+\Longrightarrow
+\texttt{CLOSE};\,\texttt{PROJECT},
+\]
+while conversely a recognized primitive sequence may be re-packed into a named proof macro whenever the corresponding certificate chain is preserved. This creates a disciplined relation between concise proof scripts and auditable low-level expansions.
+
+\paragraph{Certificate-preserving compression.}
+A central normalization requirement is that compression should preserve witnesses. If a program segment
+\[
+P \Longrightarrow P_{\mathrm{norm}}
+\]
+is accepted as a valid normalization, then there should exist a map on certificates
+\[
+\mathcal C(P) \longmapsto \mathcal C(P_{\mathrm{norm}})
+\]
+that either preserves the original chain or contracts it into a canonical equivalent chain. In this way program shortening does not erase the proof record; it only normalizes it.
+
+\paragraph{Canonical proof-program forms.}
+The long-term aim is that many proof fragments should be writable in a small family of normal forms. A first reserve may distinguish at least the following:
+\begin{align*}
+&\texttt{ClosureNormalForm},\\
+&\texttt{BranchNormalForm},\\
+&\texttt{TraceNormalForm},\\
+&\texttt{ExportNormalForm}.
+\end{align*}
+These names do not yet define a completed formalism, but they indicate the intended endpoint: proof programs that can be compared, optimized, certified, and eventually indexed by structural class.
+
+\paragraph{Mini normalization example.}
+For instance, the sequence
+\begin{verbatim}
+PROJECT C7
+TRACE
+TRACE
+HCSEL
+HCSEL
+EXPORT_BOOL
+\end{verbatim}
+may normalize to
+\begin{verbatim}
+PROJECT C7
+TRACE
+HCSEL
+EXPORT_BOOL
+\end{verbatim}
+provided that no state-changing instruction intervenes and the resulting certificates remain equivalent. The mathematical point is that admissibility is preserved while the proof-program becomes shorter and more canonical.
+
+\paragraph{Relation to proof economy.}
+This reserve clarifies the deeper purpose of the MML/MMA line. The goal is not merely to invent a language for its own sake, but to create a setting in which long structural proofs can be compressed into short normalized programs, with explicit certificate trails and canonical rewrites. In this sense optimization is part of the normalization discipline of the Companion itself.
+
 \subsection*{Full proof of Theorem~\ref{thm:gue-selfdet}}
 \label{app:gue-selfdet}
 
@@ -10989,6 +11962,7 @@ v2.23.0 & Zenodo release & 2026-03-26 & \href{https://doi.org/10.5281/zenodo.192
 v2.23.1 & Zenodo patch release & 2026-03-26 & \href{https://doi.org/10.5281/zenodo.19239967}{10.5281/zenodo.19239967} \\
 \hline
 v2.24.0 & Zenodo release & 2026-03-27 & \href{https://doi.org/10.5281/zenodo.19258774}{10.5281/zenodo.19258774} \\
+v2.25.0 & Zenodo release & 2026-03-27 & \href{https://doi.org/10.5281/zenodo.19259425}{10.5281/zenodo.19259425} \\
 \hline
 \end{longtable}
 }
@@ -11013,9 +11987,9 @@ Zenodo v4.15, March 2026.
 
 \bibitem{brendecke2026sphaera}
 Marc Brendecke,
-\emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding} (Quantum Sphaera Companion v2.24.0),
+\emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding} (Quantum Sphaera Companion v2.25.0),
 March 2026.
-\newblock Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}; version DOI: \href{https://doi.org/10.5281/zenodo.19258774}{10.5281/zenodo.19258774}.
+\newblock Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}; version DOI: \href{https://doi.org/10.5281/zenodo.19259425}{10.5281/zenodo.19259425}. 
 
 \bibitem{kim2026}
 Yilwook Kim,
