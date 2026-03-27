@@ -29,7 +29,7 @@
 \newtheorem{axiom}{Axiom}
 
 % --- Document metadata ---
-\newcommand{\docversion}{2.25.0}
+\newcommand{\docversion}{2.26.0}
 \newcommand{\docdate}{\DTMdisplaydate{2026}{03}{27}{-1}}
 
 % --- Macros ---
@@ -7526,6 +7526,9 @@ remaining mathematical content of OP~5.
 \addcontentsline{toc}{section}{Computational Interpretation, Enigma Analogy, and Bomba-Style Structural Search}
 
 \paragraph{Status note.}
+In Version~2.26.0 this block is treated as a first \emph{computational consolidation chapter}: the intent remains exploratory, but the internal layering has been tightened so that MML, MMA, MCP, certificates, normalization, and host export can now be read as parts of a single companion strand.
+
+\paragraph{Status note.}
 This section is inserted as a \emph{forward structural reserve} for Version~\docversion. Its purpose is not to replace the mathematical architecture by a cryptographic metaphor, but to make explicit a computational reading that is already latent in the combined language of collapse states, probe traces, HC-selection, projector logic, and recursive self-similarity. The block is therefore exploratory in style but still subject to the same interpretive discipline as the rest of the Companion: structural statements first, computational analogy second, and strong universality claims only where explicit simulation arguments can later be supplied.
 
 \subsection*{1. Historical computational line}
@@ -7780,7 +7783,7 @@ This suggests an interface contract between the Millennium Co-Processor (MCP) an
 \end{enumerate}
 In this reading the MCP does not compete with the host; it specializes the front end by eliminating structurally impossible branches before ordinary execution resources are spent on them.
 
-\subsection*{16. MMA-0.1: first assembly reserve}
+\subsection*{16. MMA-0.1: first assembly layer}
 If MML is the future readable high-level layer, then the co-processor needs a stricter low-level reserve underneath it. Let this provisional instruction layer be called \emph{MMA-0.1} (Millennium Matrix Assembly). Its purpose is not elegance but determinacy: the same structural front-end procedure should be writable in a normalized primitive vocabulary.
 
 A first minimal instruction classification is:
@@ -8472,6 +8475,81 @@ This certificate reserve is important because it gives a precise answer to the u
 
 \paragraph{Toward a proof kernel.}
 Taken together, the typing reserve, exception reserve, and certificate reserve already point toward the outline of a genuine proof kernel. Such a kernel would not yet replace ordinary mathematical prose, but it would provide a normalized executable layer in which closure, projector admissibility, compensator selection, trace consistency, and host export can all be checked through explicit witnesses rather than only through long textual repetition.
+
+
+\subsection*{19I. End-to-end workflow reserve}
+
+\paragraph{Why an end-to-end view matters.}
+By this stage the computational line already contains logic, language, assembly, co-processor semantics, certificates, and host export. What is still useful as a stabilizing reserve is an explicit end-to-end workflow summary. The point is not to claim a finished implementation, but to show how a problem would travel through the stack without changing interpretive regime at every step.
+
+\paragraph{Normalized workflow chain.}
+A first companion-level schematic may be written as
+\[
+\texttt{ProblemToken}
+\longrightarrow
+\texttt{MML script}
+\longrightarrow
+\texttt{MMA normal form}
+\longrightarrow
+\texttt{MCP execution state}
+\longrightarrow
+\texttt{certificate bundle}
+\longrightarrow
+\texttt{BoolExport / HostToken}.
+\]
+This chain says in compact form what the present computational reserve is trying to preserve: human-readable structural intent at the top, normalized primitive operations in the middle, structural admissibility checking during execution, and conservative export at the end.
+
+\paragraph{Stage-by-stage interpretation.}
+The stages may be read as follows:
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Stage & Role \\
+\midrule
+\texttt{ProblemToken} & normalized input representation of a closure/trace/branch task \\
+\texttt{MML script} & short human-readable proof/program description \\
+\texttt{MMA normal form} & primitive instruction expansion with explicit structural steps \\
+\texttt{MCP execution state} & triolen/co-processor execution under HC/projector discipline \\
+\texttt{certificate bundle} & accumulated witnesses of admissibility and rejection \\
+\texttt{BoolExport / HostToken} & conservative readable result for a classical host \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Minimal walkthrough.}
+A closure-and-export problem can then be read in one line as
+\[
+\texttt{close} \circ \texttt{project} \circ \texttt{collapse}
+\rightsquigarrow
+\texttt{ClosureCertificate} \otimes \texttt{ProjectorCertificate} \otimes \texttt{ExportCertificate}
+\rightsquigarrow
+\texttt{HostToken},
+\]
+while a branch-resolution problem extends the chain by trace reconciliation, differencing, and HC certificates. This is helpful because it shows that the same short MML layer can feed both constructive and eliminative proofs.
+
+\paragraph{Replayability as part of the workflow.}
+The workflow should also be read backwards: a \texttt{HostToken} ought to be replayable to the corresponding certificate bundle, and the bundle in turn ought to be replayable to the normalized MMA run. In that sense, end-to-end execution is not only a production path but an audit path. This is exactly the point at which short proof programs and long-form mathematical accountability can coexist.
+
+\subsection*{19J. Extraction roadmap reserve}
+
+\paragraph{Why an extraction roadmap is useful already now.}
+The Companion should not turn overnight into a full computer-science monograph. At the same time, the present version already contains enough substance that a later extraction path should be made visible. This helps readers understand that the computational section is not an arbitrary digression, but a reserved future strand with its own internal order.
+
+\paragraph{A four-stage extraction path.}
+A first roadmap may be written schematically as follows:
+\begin{enumerate}[leftmargin=2em]
+  \item \textbf{Companion teaser stage.} Preserve the machine-theoretic reading, examples, and reserves inside the Companion without disturbing the main structural and physical line.
+  \item \textbf{Computational consolidation stage.} Stabilize MML, MMA, MCP, the certificate layer, and the execution model into a more internally complete computational block.
+  \item \textbf{Standalone paper stage.} Extract the computational strand into a dedicated paper centered on the Millennium matrix as a structural computational substrate.
+  \item \textbf{Kernel/tool stage.} Only afterwards consider an implementation-level roadmap involving proof-kernel tooling, replay engines, or host-interface libraries.
+\end{enumerate}
+This makes clear that the present section is intentionally a scaffold, not a premature final product.
+
+\paragraph{Conservative extraction principle.}
+The extraction should remain conservative with respect to the Companion. That is, nothing in the main mathematical line should depend on the future success of MML/MMA/MCP formalization. Rather, the computational strand is supposed to re-express and compress already available structural logic. If the later computational formalization succeeds, it adds a new mode of access; if not, the mathematical content of the Companion remains intact.
+
+\paragraph{Why the roadmap helps now.}
+Even at teaser level, this roadmap has a concrete editorial benefit: it explains why certain blocks currently appear as ``reserve'', ``toward'', or ``first sketch'' rather than as final theorem packages. The section is being written so that it can attract attention, preserve ideas, and remain citable, while still leaving room for later normalization and extraction.
 
 \subsection*{20. Proof obligations and limits}
 
@@ -11963,6 +12041,7 @@ v2.23.1 & Zenodo patch release & 2026-03-26 & \href{https://doi.org/10.5281/zeno
 \hline
 v2.24.0 & Zenodo release & 2026-03-27 & \href{https://doi.org/10.5281/zenodo.19258774}{10.5281/zenodo.19258774} \\
 v2.25.0 & Zenodo release & 2026-03-27 & \href{https://doi.org/10.5281/zenodo.19259425}{10.5281/zenodo.19259425} \\
+ v2.25.1 & Zenodo patch release & 2026-03-27 & \href{https://doi.org/10.5281/zenodo.19262890}{10.5281/zenodo.19262890} \\
 \hline
 \end{longtable}
 }
@@ -11971,6 +12050,19 @@ v2.25.0 & Zenodo release & 2026-03-27 & \href{https://doi.org/10.5281/zenodo.192
 The day-level publication dates are normalized from the project publication log so that
 Zenodo releases and local repair states remain chronologically comparable inside a single
 appendix table.
+
+
+\subsection*{v2.26.0 computational consolidation note}
+
+Version~\textbf{2.26.0} executes the consolidation roadmap that had been reserved in
+v2.25.1. The computational strand is retained but internally reorganized into a more
+coherent progression: historical perspective, structural machine reading, Triolen
+Algebra / Boolean readout, MML--MMA--MCP stratification, proof templates,
+certificate-bearing execution, normalization, addressing, scheduling, host export,
+and extraction outlook. The present version still remains exploratory in the sense of
+future formalization, but the material is no longer presented only as a loose teaser;
+it is now collected as a first internally coherent computational chapter of the
+Companion.
 
 \subsection*{Bibliography}
 
@@ -11987,9 +12079,9 @@ Zenodo v4.15, March 2026.
 
 \bibitem{brendecke2026sphaera}
 Marc Brendecke,
-\emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding} (Quantum Sphaera Companion v2.25.0),
+\emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding} (Quantum Sphaera Companion v2.26.0),
 March 2026.
-\newblock Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}; version DOI: \href{https://doi.org/10.5281/zenodo.19259425}{10.5281/zenodo.19259425}. 
+\newblock Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}; version DOI: \href{https://doi.org/10.5281/zenodo.19263121}{10.5281/zenodo.19263121}. 
 
 \bibitem{kim2026}
 Yilwook Kim,
