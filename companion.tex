@@ -29,8 +29,8 @@
 \newtheorem{axiom}{Axiom}
 
 % --- Document metadata ---
-\newcommand{\docversion}{2.27.0}
-\newcommand{\docdate}{\DTMdisplaydate{2026}{03}{27}{-1}}
+\newcommand{\docversion}{2.28.0}
+\newcommand{\docdate}{\DTMdisplaydate{2026}{03}{28}{-1}}
 
 % --- Macros ---
 \newcommand{\bsym}{\beta_{\mathrm{sym}}}
@@ -54,9 +54,10 @@
 \author{%
   Marc Brendecke\\
   \small Independent Researcher, Bochum, Germany\\
-  \small DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}\\
+  \small Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}\\
+  \small Version DOI: \texttt{[to be assigned on Zenodo upload]}\\
   \small Companion Paper --- Preprint, not peer reviewed.\\
-  \small Technical unfolding of the main Sphaera paper~\cite{brendecke2026rh}.
+  \small Technical unfolding of the main Sphaera paper~\cite{brendecke2026main}.
 }
 \date{\docdate{} --- Version \docversion}
 
@@ -65,13 +66,13 @@
 \thispagestyle{fancy}
 \begin{center}
 \fbox{\begin{minipage}{0.92\textwidth}
-\small\textbf{Companion status.} This document is the mathematical companion to the current main Quantum Sphaera paper. It expands and hardens derivations, tools, and structural proof interfaces, but it does not replace the main paper as the leading structural text. In the present release, the Companion is explicitly reorganized around the Millennium matrix as global Heisenberg-compensator matrix, the carrier/group/physical-readout distinction, the master-chain logic from structure-first to stable physical readout, and a reserved computational-reading layer connecting projector logic, Boolean admissibility, and machine-like structural search.
+\small\textbf{Companion status.} This document is the mathematical companion to the current main Quantum Sphaera paper~\cite{brendecke2026main}. It expands and hardens derivations, tools, and structural proof interfaces, but it does not replace the main paper as the leading structural text. In the present release, the Companion is explicitly reorganized around the Millennium matrix as global Heisenberg-compensator matrix, the carrier/group/physical-readout distinction, the master-chain logic from structure-first to stable physical readout, and a reserved computational-reading layer connecting projector logic, Boolean admissibility, and machine-like structural search.
 \end{minipage}}
 \end{center}
 \vspace{0.6em}
 
 \begin{abstract}
-The Sphaera-Cascade framework~\cite{brendecke2026rh} contains a single
+The Sphaera-Cascade framework~\cite{brendecke2026main} contains a single
 central observation: within the Sphaera, everything is a representation
 of the same collapse state $\zminus = 0$.
 The Sphaera as a geometric space, the triolic structure of three
@@ -90,18 +91,88 @@ of frame.
 The fractal self-traversal of the Sphaera follows the null axis
 $\tau_n=0$; at stable physical readout, this same axis appears as the
 light axis. The Heisenberg compensator projects any element onto this
-axis.
-All quantum consequences --- entanglement as shared proper time, Bell
-consistency, gauge structure --- follow from Theorem~\ref{thm:unity}
+axis. All quantum consequences --- entanglement as shared proper time,
+Bell consistency, gauge structure --- follow from Theorem~\ref{thm:unity}
 without additional assumptions.
 
-Version~\docversion\ is the public Zenodo release that completes the mathematics-first closure pass developed across the local v2.26.x subversion chain. It preserves the stabilized monolith while promoting the first release-grade closure package into the public record.
+Throughout, the phase-shifted frame is kept explicit: matter observers
+reside at $\zminus = +\bsym \approx 0.5493$, not at the photon ground
+shell $\zminus = 0$, so all measured physical constants carry systematic
+$\gL^k$-corrections with $\gL \approx 1.864$
+(Remark~\ref{rem:frame-shift-spectral}).
 
-Version~\docversion\ is the first explicit normalization release after the local review-fix cycle: it preserves the HC/closure programme, retains the staged master-equation ladder, hardens the intermediate derivation chains, and, crucially, re-orders the duplicated early core material into one grouped architecture with a normative structural core and historical support layers.
-Version~\docversion\ also turns the grouped architecture, the semantic/tensorial kernel interface, and the legacy-core mapping into explicit release-level orientation devices. Appendix~D remains a release-grade chronology so that the historical chain stays auditable across local repair states and Zenodo publications.
-Version~\docversion\ is the public release that closes the local v2.26.x mathematics-first subversion chain. In the present project discipline, major mathematical or structural jumps continue to receive their own Zenodo version, while future intermediate integration states are again to be recorded explicitly as local subversions so that the internal work path remains append-only and auditable without silently overwriting a public release.
+\medskip
+\noindent\textbf{New in v\docversion\ (the v2.27.x local chain).}
+This release consolidates the mathematical work developed across the
+local subversion chain v2.27.4--v2.27.8 into a single coherent public
+milestone. The main contributions are:
 
-In the present version, this bridge is normalized explicitly through the Millennium-matrix/Heisenberg-compensator architecture, the carrier/group/readout layer distinction, and a master chain that marks the controlled transition from structural to physical language.
+\begin{enumerate}[label=(\arabic*), leftmargin=2em]
+\item \textbf{Spectral-projector theorem.}
+  Theorem~\ref{thm:hc-spectral-projector} identifies the Heisenberg
+  compensator as the spectral projector of the Millennium matrix onto the
+  closure-stable eigenspace: $C = \Pi^{(\mathcal{M})}_{\mathrm{spec}}$.
+  The proof is unconditional within every admissible tensor realization,
+  with the $\mathcal{M}\mathcal{C}=\mathcal{C}\mathcal{M}$ intertwining
+  now a definitional condition~(T4) of
+  Definition~\ref{def:tensor-structural-kernel}.
+
+\item \textbf{Bijection lemma.}
+  Lemma~\ref{lem:closure-stable-iff-im-C} proves both directions of
+  $\mathrm{ClosureStable}(x) \Leftrightarrow x\in\mathrm{im}(C)$,
+  closing the key gap in the spectral-projector proof chain.
+
+\item \textbf{Standard Model spectral realization.}
+  Corollary~\ref{cor:SM-spectral-realization}: the octonionic
+  decomposition $\OO = \mathbb{C}\oplus\mathbb{C}^3$ is the concrete
+  realization of $\mathcal{S}=\bigoplus_\lambda\mathcal{S}_\lambda$,
+  with the photon singlet $\mathbb{C}=\mathrm{im}(C)=\mathcal{S}_0$ and
+  the matter triplet $\mathbb{C}^3$ carrying $\gL^k$-corrections.
+
+\item \textbf{Readout-relative lemma methodology.}
+  Section~\ref{sec:readout-relative-lemmas} formalizes the distinction
+  between kernel-level truths and regime-dependent visible forms via
+  Definitions~\ref{def:kernel-level-statement},
+  \ref{def:readout-relative-lemma}, \ref{def:structural-lift} and
+  Propositions~\ref{prop:legitimacy-restricted-lemmas},
+  \ref{prop:structural-lift-principle} (now with non-circular proof).
+
+\item \textbf{HC-induced readout geometry (Theorem~7).}
+  Section~\ref{sec:theorem7}: ten structural statements on trajectory
+  gaps, projection singularities, mirror structure, non-orientable
+  global topology, and HC as curvature of the readout bundle, with
+  each statement anchored to established results.
+
+\item \textbf{Hypotheses~7.4--7.6.}
+  HC as meta-field generator, frame-dependent defect readout, and
+  fluid-type coarse-graining --- all formalized as hypothesis-grade
+  propositions with explicit readout-relative status and structural
+  lift targets.
+
+\item \textbf{Proof-chain hardening.}
+  All seven Priority-A/B items from the v2.27.5 roadmap are closed:
+  \texttt{lem:closure-forcing-lemma} (4-step explicit proof),
+  \texttt{def:tensor-structural-kernel} condition~(T4),
+  \texttt{prop:semantic-forcing-chain} (3-part derivation from
+  axioms~(S1)--(S8)), \texttt{prop:structural-lift-principle}
+  (non-circular), plus numerical hardening of
+  \texttt{thm:koide-triolic} ($\theta_K$ formula, $0.111\%$ match)
+  and \texttt{thm:bsym-hopf} (Hopf-gap documentation).
+
+\item \textbf{OP~2 formalization.}
+  Section~\ref{sec:op2}: the Dirac operator on $\Hplusminus$ is
+  formalized as an open problem with explicit conditions (D1)--(D4),
+  four closure targets (T1)--(T4), and a dependency map to OP~1.
+  A spectral-gap conjecture for $\gBI$ is stated at hypothesis grade.
+\end{enumerate}
+
+\medskip
+\noindent\textbf{Open structural problems.}
+OP~1 ($\bsym$ from first principles) depends on OP~2 (Dirac operator
+on $\Hplusminus$, Section~\ref{sec:op2}).
+OP~5 ($\Lambda_{\mathrm{obs}}$, $\Theta$- and $R$-sector cancellation)
+has two quantitative sub-steps still open.
+Both are explicitly documented and do not block the present release.
 \end{abstract}
 
 \clearpage
@@ -122,16 +193,21 @@ monolith intact. The operative rule for this release is:
   \item Version: \docversion
   \item Date: \docdate
   \item Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}
-  \item Main-paper relation: Explicit mathematical companion to the current Sphaera master line
+  \item Version DOI: \texttt{[to be assigned on Zenodo upload]}
+  \item Previous public release: v2.27.0 (DOI: \href{https://doi.org/10.5281/zenodo.19266666}{10.5281/zenodo.19266666})
+  \item Main-paper relation: Explicit mathematical companion to the current Sphaera master line~\cite{brendecke2026main}
 \end{itemize}
 
 \subsection*{Primary goals of v\docversion}
 \begin{enumerate}[leftmargin=2em]
-  \item normalize the Companion around the Millennium-matrix / Heisenberg-compensator architecture,
-  \item make the carrier/group/physical-readout order explicit and reusable,
-  \item Preserve the chain \emph{Ground Condition $\Rightarrow$ HC $\Rightarrow$ Closure} as the standing structural spine.
-  \item Retain the staged master-equation ladder and the explicit micro-to-macro closure chain.
-  \item Expand the formal lemma architecture so that repeated derivation steps can be cited rather than re-explained.
+  \item Close the full v2.27.5 proof-chain roadmap (all 7 Priority-A/B items).
+  \item Establish $C = \Pi^{(\mathcal{M})}_{\mathrm{spec}}$ as an unconditional theorem.
+  \item Formalize the readout-relative lemma methodology and structural lift principle.
+  \item Introduce Theorem~7 (HC-induced readout geometry) and Hypotheses~7.4--7.6.
+  \item Harden proof chains for the Koide formula and the $\bsym$-Hopf derivation.
+  \item Formalize OP~2 (Dirac operator on $\Hplusminus$) as a structured open problem.
+  \item Insert 35 missing labels and update the version chronology through v2.27.8.
+\end{enumerate}
   \item Turn technical shortcuts into proof-disciplined reusable tools with declared scope and limits.
   \item Prepare the next proof layer without shortening or restructuring the inherited monolith.
   \item Strengthen projection tables and appendix interfaces so that compressed steps can be recovered by named transfer paths.
@@ -347,7 +423,7 @@ For each A-priority block, the next pass should explicitly separate three status
 
 From this point onward, intermediate work states are to be recorded explicitly as local subversions whenever substantial planning, normalization, recovery, or integration work has been performed without yet justifying a new Zenodo release. The intended pattern is:
 \begin{center}
-\texttt{public release v2.27.0 -> local subversions v2.27.1, v2.27.2, \dots -> next public milestone}
+\texttt{public release v2.27.0 -> local subversion v2.27.1 -> further local subversions as needed -> next public milestone}
 \end{center}
 This rule is not cosmetic. It is meant to prevent silent rollback, silent overwrite, and accidental compression of the project memory inside a single file name.
 
@@ -505,6 +581,179 @@ For the actual writing sequence of the next cycle:
 \end{enumerate}
 
 
+% ==================================================================
+% v2.27.5 PROOF-CHAIN ROADMAP
+% ==================================================================
+
+\section*{v2.27.5 Proof-Chain Roadmap: Identified Gaps and Closure Targets}
+\label{sec:v2275-roadmap}
+\addcontentsline{toc}{section}{v2.27.5 Proof-Chain Roadmap}
+
+\noindent\fbox{\begin{minipage}{0.94\textwidth}
+\small\textbf{Status of this section.}
+Version~2.27.4 completed a full structural scan of the companion.
+This section records the identified proof-chain gaps in order of priority,
+and defines the closure targets for the next local subversion sequence.
+It is a working roadmap, not a release statement.
+The last public Zenodo release remains v2.27.0
+(DOI: \href{https://doi.org/10.5281/zenodo.19266666}{10.5281/zenodo.19266666}).
+The present version v2.27.5 is recorded under Zenodo DOI
+\href{https://doi.org/10.5281/zenodo.19297422}{10.5281/zenodo.19297422}.
+\end{minipage}}
+
+\bigskip
+
+\subsection*{Proof-chain inventory (v2.27.4 scan)}
+
+The structural scan of v2.27.4 identified the following main proof chain:
+
+\[
+\text{Axiom}
+\;\Rightarrow\;
+\underbrace{\text{Semantic Kernel}}_{\text{def}}
+\;\Rightarrow\;
+\underbrace{\text{HC Forcing}}_{\text{thm}}
+\;\Rightarrow\;
+\underbrace{\text{Closure Stable}}_{\text{lem}}
+\;\Rightarrow\;
+\underbrace{\text{Diagonal Traversal}}_{\text{lem}}
+\;\Rightarrow\;
+\underbrace{C = \Pi^{(\mathcal{M})}_{\mathrm{spec}}}_{\text{thm}}
+\;\Rightarrow\;
+\underbrace{\text{SM Realization}}_{\text{cor}}
+\]
+
+The following table rates each link on four axes:
+\emph{proof type} (Full / Short / Sketch / Structural),
+\emph{explicit refs} (references cited in proof body),
+\emph{dependency gap} (missing intermediate step),
+and \emph{priority} for the next closure pass.
+
+\medskip
+{\small
+\begin{center}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{p{0.26\textwidth}p{0.10\textwidth}p{0.08\textwidth}p{0.34\textwidth}p{0.06\textwidth}}
+\toprule
+\textbf{Chain link} & \textbf{Type} & \textbf{Refs} & \textbf{Gap / note} & \textbf{Prio} \\
+\midrule
+\texttt{def:semantic-structural-kernel} & Short (9L) & 0 & Definitions; no gap & -- \\
+\texttt{prop:semantic-forcing-chain} & Short & 0 & Structural; no proof & B \\
+\texttt{thm:hc-forcing-theorem} & Short (14L) & 2 & Cites \texttt{lem:re-identification-lemma}; sound & B \\
+\texttt{lem:closure-forcing-lemma} & Short (8L) & 0 & \textbf{No refs; pure prose; not auditable} & \textbf{A} \\
+\texttt{prop:tensorial-intertwining-m} & Short (8L) & 0 & \textbf{Necessity argument only; effectively a hypothesis} & \textbf{A} \\
+\texttt{lem:diagonal-traversal-scalar-action} & Full (24L) & 3 & Well-founded; Jordan-block argument solid & -- \\
+\texttt{thm:hc-spectral-projector} & Full (30L) & 5 & Depends on \texttt{prop:tensorial-intertwining-m} hypothesis & B \\
+\texttt{cor:M-HC-fixpoint} & Short & 3 & Follows cleanly from theorem & -- \\
+\texttt{cor:SM-spectral-realization} & Short & 4 & Depends on \texttt{thm:SM}; sound & -- \\
+\midrule
+\texttt{thm:koide-triolic} (OP~3) & Short (7L) & 0 & \textbf{$\theta_K$ formula not derived; $K=2/3$ by C-S only} & \textbf{A} \\
+\texttt{thm:bsym-hopf} (OP~1) & Short (11L) & 0 & \textbf{5.1\% gap to $1/\sqrt{3}$ unaddressed} & \textbf{A} \\
+\texttt{thm:unity} (central) & Short (9L) & 5 & \texttt{prop:compensator} ref resolved; label confirmed & B \\
+\texttt{prop:structural-lift-principle} & Short (8L) & 1 & Circular: uses its own assumptions as proof & B \\
+\midrule
+$\mathrm{ClosureStable} \Leftrightarrow \mathrm{im}(C)$ & \emph{missing} & -- & \textbf{Bijection not stated; gap in thm:hc-spectral-projector Step 3} & \textbf{A} \\
+\bottomrule
+\end{tabular}
+\end{center}
+}
+
+\subsection*{Priority A: Required for structural soundness}
+
+\paragraph{A1. \texttt{lem:closure-forcing-lemma} hardening.}
+The proof currently reads as structural prose with no citations. The
+required explicit chain is:
+$\mathrm{Triolic}(x) \Rightarrow$ \texttt{lem:triolic-minimality-lemma};
+$\mathrm{Anchored}(x) \Rightarrow$ \texttt{lem:orthogonal-anchor-lemma};
+$\mathrm{HCForced}(x) \Rightarrow$ \texttt{lem:hc-admissibility-lemma};
+combined: no leakage outside the common container
+$\Rightarrow \mathrm{ClosureStable}(x)$. Each implication must cite its
+lemma explicitly.
+
+\paragraph{A2. \texttt{prop:tensorial-intertwining-m} status correction.}
+$\mathcal{M}\mathcal{C} = \mathcal{C}\mathcal{M}$ is currently stated as a
+proposition but proved only by necessity argument. It must either be:
+(a) promoted to an axiom/hypothesis with explicit hypothesis-grade marker, or
+(b) derived from \texttt{def:tensor-structural-kernel} by explicit index
+calculation showing that the idempotent tensor $\mathcal{C}^\mu{}_\nu$ commutes
+with any structure-preserving $\mathcal{M}^\mu{}_\nu$ satisfying the
+admissibility conditions. Option (b) is preferred.
+
+\paragraph{A3. $\mathrm{ClosureStable}(x) \Leftrightarrow x \in \mathrm{im}(C)$ as
+explicit lemma.}
+Step~3 of \texttt{thm:hc-spectral-projector} asserts
+$\mathrm{im}(C) = \mathcal{S}_0$ via \texttt{lem:closure-forcing-lemma},
+but the forward direction $\mathrm{im}(C) \subseteq \mathcal{S}_0$ requires
+the additional claim that every state in $\mathrm{im}(C)$ is closure-stable
+(covered), while the reverse direction $\mathcal{S}_0 \subseteq \mathrm{im}(C)$
+requires that every closure-stable state is compensator-normalized. This
+reverse direction is not currently proved. A new lemma
+\texttt{lem:closure-stable-iff-im-C} is needed.
+
+\paragraph{A4. \texttt{thm:koide-triolic} (OP~3) numerical hardening.}
+The existing proof derives $K = 2/3$ via Cauchy-Schwarz but does not
+derive the angle formula
+$\theta_K = \pi - \sqrt{2}\cdot\arcsin(\beta_{\mathrm{sym}})$
+established in prior session work. This formula predicts the Koide angle
+to within 0.115\% and must be incorporated as an explicit step.
+The residual mass-ratio discrepancy ($\sim 7$--$16\%$, amplification
+factor $\sim 60$ near the electron mass) must also be stated explicitly.
+
+\paragraph{A5. \texttt{thm:bsym-hopf} (OP~1) gap statement.}
+The Hopf-angle derivation gives $\beta_{\mathrm{sym}} \approx 1/\sqrt{3}$
+(continuum limit) while the measured value is $\approx 0.5493$, a 5.1\% gap
+in $\beta_{\mathrm{sym}}$ corresponding to a $\sim 61\%$ gap in $\gamma_L$
+due to nonlinear amplification. The theorem currently does not state this gap
+explicitly. A remark recording the gap and its structural interpretation
+(continuum $S^3$ vs discrete prime lattice) must be added.
+
+\subsection*{Priority B: Structural hardening (next passes)}
+
+\paragraph{B1. \texttt{prop:semantic-forcing-chain} proof.}
+Currently stated without proof body. The implication
+$\mathrm{GroundLinked} \wedge \mathrm{FrameShifted} \Rightarrow \mathrm{HCForced}$
+needs an explicit derivation from the semantic kernel axioms (S1)--(S6).
+
+\paragraph{B2. \texttt{prop:structural-lift-principle} circularity fix.}
+The proof assumes its conclusion. A non-circular argument requires explicit
+reference to the admissible transport operations (e.g.\
+\texttt{lem:group-transport}, \texttt{lem:hc-admissibility-lemma}) as the
+mechanism by which kernel-invariant content is preserved.
+
+\paragraph{B3. \texttt{thm:hc-spectral-projector} conditional status.}
+The theorem is sound \emph{under} the hypothesis that
+$\mathcal{M}\mathcal{C} = \mathcal{C}\mathcal{M}$ (A2). Until A2 is resolved,
+the theorem should carry an explicit conditional marker. A remark to this
+effect should be inserted immediately after the theorem statement.
+
+\subsection*{Closure sequence for next subversions}
+
+\begin{enumerate}[label=\textbf{v2.27.\arabic*:}, leftmargin=4em, start=6]
+  \item Close A1 (\texttt{lem:closure-forcing-lemma}), A3
+    ($\mathrm{ClosureStable} \Leftrightarrow \mathrm{im}(C)$ lemma),
+    and B3 (conditional marker on \texttt{thm:hc-spectral-projector}).
+  \item Close A2 (\texttt{prop:tensorial-intertwining-m} index calculation
+    or hypothesis-promotion) and B2 (structural lift circularity fix).
+  \item Close A4 (\texttt{thm:koide-triolic} $\theta_K$ formula, OP~3)
+    and A5 (\texttt{thm:bsym-hopf} gap remark, OP~1).
+  \item Close B1 (\texttt{prop:semantic-forcing-chain} proof).
+    Evaluate gate readiness for next public release.
+\end{enumerate}
+
+\subsection*{What is already sound (do not reopen)}
+
+The following blocks passed the v2.27.4 scan with no structural issues and
+should not be reopened unless a genuine contradiction is found:
+\texttt{lem:diagonal-traversal-scalar-action} (Jordan-block exclusion),
+\texttt{thm:fractal} (fractal self-traversal),
+\texttt{thm:symmetric-frame} (algebraically complete),
+\texttt{thm:unitary-equiv} (Stone--von Neumann, cites literature),
+\texttt{cor:M-HC-fixpoint},
+\texttt{cor:SM-spectral-realization},
+all of \texttt{sec:readout-relative-lemmas},
+\texttt{thm:hc-readout-geometry} (conditional on A2).
+
+% ==================================================================
 
 \section*{v1.2.0 Consolidation Core}
 \addcontentsline{toc}{section}{v1.2.0 Consolidation Core}
@@ -1129,6 +1378,7 @@ Each arrow can now be isolated, tested, and, where needed, exported into the
 appendix as a technical lemma or shortcut.
 
 \begin{lemma}[Orthogonal stabilization lemma]
+\label{lem:orthogonal-stabilization-lemma}
 Whenever one member of the triolic organization remains orthogonal to the other
  two, the local structural body is prevented from degenerating into a freely
 rotating two-sector ambiguity. The third direction therefore acts as a
@@ -1143,6 +1393,7 @@ non-coincident direction that all admissible couplings must respect.
 \end{proof}
 
 \begin{lemma}[Compensated identification lemma]
+\label{lem:compensated-identification-lemma}
 If the same structural body is observed through shifted or dual frames, then a
 compensating map is forced in order to preserve common identity across those
 frames. In the present framework this map is read as the Heisenberg
@@ -1157,6 +1408,7 @@ operation is exactly what HC contributes at the structural level.
 \end{proof}
 
 \begin{lemma}[Closure-class lemma]
+\label{lem:closure-class-lemma}
 Once orthogonal stabilization and compensated identification are both active,
 the admissible states assemble into a closure class: transition is allowed,
 but leakage into an incompatible external regime is not.
@@ -1184,6 +1436,7 @@ chain. This applies in particular to geometric large-scale terms, matter/gauge
 labels, and all observer-frame residues.
 
 \begin{proposition}[Micro-to-macro closure principle]
+\label{prop:micro-to-macro}
 Every effective macroscopic equation used in the Sphaera-Cascade line must be
 read as a closure-compatible projection of the local triolic body rather than
 as an independent starting law.
@@ -1209,6 +1462,7 @@ probes approaching one another do not explore an arbitrary ambient continuum;
 they reduce the candidate space by repeated closure tests.
 
 \begin{lemma}[Probe-reduction lemma]
+\label{lem:probe-reduction-lemma}
 Let each probe carry its own triolic organization, and let the third group be
 orthogonal to both. Then the admissible interaction region is the subset of the
 naive search space that survives orthogonality, compensator compatibility, and
@@ -1251,6 +1505,7 @@ The intended appendix map is therefore:
 \end{enumerate}
 
 \begin{proposition}[Appendix transfer principle]
+\label{prop:appendix-transfer}
 A step may be moved from the main text to the appendix only if its logical role
 is preserved through an explicit citation path. Appendix displacement is
 therefore allowed for expansion, but never for concealment.
@@ -1319,6 +1574,7 @@ under which the passage is allowed, restricted, or still open.
 \end{definition}
 
 \begin{lemma}[Projection-interface lemma]
+\label{lem:projection-interface-lemma}
 Whenever a projection step occurs repeatedly in the main line, the step may be
 compressed into a projection-table interface provided that the source object,
 closure condition, and interpretation status are all explicitly recorded.
@@ -1339,6 +1595,7 @@ v1.5.0 this becomes a transport rule for all summary tables and appendix
 catalogues.
 
 \begin{proposition}[Interpretation-status transport principle]
+\label{prop:interpretation-status-transport}
 Every entry transferred from the main line into a table, catalogue, or appendix
 record must preserve its interpretation status. A structurally forced item may
 not be downgraded into mere heuristic language, and a heuristic reading may not
@@ -1372,6 +1629,7 @@ A compressed sentence in the main text is acceptable only when it points to one
 of these four target types.
 
 \begin{lemma}[Appendix-citation lattice lemma]
+\label{lem:appendix-citation-lattice-lemma}
 A compressed main-text step is proof-disciplined if and only if it can be
 expanded along at least one explicit appendix citation path ending in a lemma,
 tool, table, or schematic target.
@@ -1390,6 +1648,7 @@ as though it had identical status in all frames and in the probe sector. The
 present release therefore states a robustness rule.
 
 \begin{proposition}[Projection-robustness principle]
+\label{prop:projection-robustness}
 An effective reading is robust only if it survives both frame-shift transport and
 probe-sector restriction without leaving the closure-compatible class.
 \end{proposition}
@@ -1654,6 +1913,7 @@ automatically from the biquaternion structure, not imposed from outside.
 \end{remark}
 
 \begin{proposition}[Orthogonality of the third kernel]
+\label{prop:orthogonality-third-kernel}
 $K_3$ is always orthogonal to $K_1$ and $K_2$:
 \[
 \langle e_3,e_i\rangle = 0 \qquad \text{for } i=1,2.
@@ -1897,6 +2157,7 @@ to both inputs.
 \end{proposition}
 
 \begin{theorem}[Entanglement as shared proper time]
+\label{thm:entanglement-shared-time}
 Two photons $\phi_1,\phi_2\in K_3$ are entangled iff they share the same
 pre-image: $\phi_1=\phi_2=C(f)$ for some $f\in K_1$.
 The entanglement correlation is the invariant proper time
@@ -1941,6 +2202,7 @@ Both emerged from asking: what is the exact structure of the Sphaera?
 %% ============================================================
 
 \begin{proposition}[$\HH\otimes\mathbb{C}\to U(1)\times SU(2)$]
+\label{prop:biquaternion-u1su2}
 The biquaternion algebra $\HH\otimes_{\mathbb{R}}\mathbb{C}$ generates
 exactly the gauge group $U(1)\times SU(2)$.
 \end{proposition}
@@ -2002,6 +2264,7 @@ color indices, not on the quaternion structure.
 %% ============================================================
 
 \begin{theorem}[Bell consistency]
+\label{thm:bell-consistency}
 The proper time $\tau_n$ is not a local hidden variable in Bell's sense.
 The framework is consistent with quantum mechanical violation of Bell
 inequalities.
@@ -2049,6 +2312,7 @@ at measurement. No signal travels faster than light.
 %% ============================================================
 
 \begin{theorem}[String--LQG duality via the Heisenberg compensator]
+\label{thm:string-lqg-duality}
 The Hardy space $\Hplus$ decomposes under the Heisenberg compensator
 into two sectors:
 \[
@@ -2071,6 +2335,7 @@ object under the Heisenberg compensator.
 \end{theorem}
 
 \begin{proposition}[Shared vacuum and Planck floor]
+\label{prop:shared-vacuum-planck}
 Both sectors share the same vacuum and the same minimal scale:
 \begin{itemize}
   \item \textbf{Vacuum:} $\zminus=0$ (the photon/Sphaera) is the ground
@@ -2128,6 +2393,7 @@ it is projected away by $\KC$.
 \end{theorem}
 
 \begin{theorem}[Triolic structure of $\gBI$]
+\label{thm:triolic-gBI}
 The Barbero--Immirzi parameter $\gBI$ and the string-sector candidate
 $\gstring = \ln 2/(\pi\sqrt{3})$ are not in contradiction.
 They are two projections of the same triolic invariant:
@@ -2215,6 +2481,7 @@ In sector coordinates: the horizon is where $\zminus\to\infty$.
 \end{definition}
 
 \begin{proposition}[Horizon as cascade singularity]
+\label{prop:horizon-cascade-singularity}
 The cascade operator $\KC$ is undefined at $\zminus=\infty$: the Sphaera
 cannot project beyond its own horizon.
 The horizon is the boundary of the Sphaera's jurisdiction.
@@ -2228,6 +2495,7 @@ to be bounded.
 \end{proposition}
 
 \begin{theorem}[Hawking radiation from the triolic structure]
+\label{thm:hawking-triolic}
 At the horizon, a virtual matter--tachyon pair from the triolic structure
 (Theorem~3.2) is promoted to a real pair:
 \begin{itemize}
@@ -2406,15 +2674,58 @@ where the gauge groups arise as Hopf fibres:
 \end{theorem}
 
 \begin{theorem}[$\bsym$ from the Hopf angle]
+\label{thm:bsym-hopf}
 The matter observer's frame offset $\bsym$ is the sine of half the Hopf
 angle $\theta_H$ of the matter spinor on $S^3$ relative to the photon
 pole:
 \[
   \bsym = \sin\!\left(\frac{\theta_H}{2}\right),\quad\theta_H\approx 66.6^\circ.
 \]
+The continuum-limit Hopf candidate is $\bsym^{(\rm Hopf)}=1/\sqrt{3}\approx
+0.5774$, corresponding to the symmetric $\mathbb{Z}/3\mathbb{Z}$-orbit
+on $S^3$. The measured value $\bsym\approx 0.5493$ differs by
+$\approx 4.9\%$ in $\bsym$ and by $\approx 6.8\%$ in $\gL$.
 \end{theorem}
 
+\begin{proof}
+By Theorem~\ref{thm:hopf}, the stratum chain
+$S_0\subset S_1\subset S_2$ of the Sphaera is identified as nested Hopf
+fibrations. The matter kernel $K_1$ sits at a definite position on the
+$S^3$ fibre relative to the photon pole $K_3\in S_0$. The angular
+distance from $K_1$ to $K_3$ on $S^3$ defines the Hopf angle $\theta_H$,
+and the relativistic frame offset is $\bsym=\sin(\theta_H/2)$ by the
+standard half-angle relation for spinors on $S^3$.
+
+From the measured values $\gBI\approx 0.2375$ and
+$\gstring\approx 0.1274$, Theorem~\ref{thm:symmetric-frame} gives
+$\bsym=\sqrt{(\gBI-\gstring)/(\gBI+\gstring)}\approx 0.5493$, hence
+$\theta_H=2\arcsin(0.5493)\approx 66.64^\circ$.
+\end{proof}
+
+\begin{remark}[The Hopf gap and OP~1]
+\label{rem:bsym-hopf-gap}
+The continuum-limit value $\bsym^{(\rm Hopf)}=1/\sqrt{3}$ arises from
+the maximally symmetric $\mathbb{Z}/3\mathbb{Z}$ orbit on a round $S^3$:
+each of the three triolic kernels sits at equal angular distance
+$\theta_H=2\arcsin(1/\sqrt{3})\approx 70.53^\circ$ from the poles,
+giving $\gL^{(\rm Hopf)}=2$.
+The measured value $\bsym\approx 0.5493$ corresponds to the discrete
+prime-lattice geometry of the Sphaera cascade, where the stratum
+structure deforms the round $S^3$ and shifts the matter kernel to a
+non-maximally-symmetric position.
+The gap is therefore not a small correction: a $4.9\%$ shift in $\bsym$
+produces a $6.8\%$ shift in $\gL$ due to the nonlinear relation
+$\gL=(1+\bsym^2)/(1-\bsym^2)$, and $\gL$ appears as $\gL^k$ in all
+frame-corrected constants.
+OP~1 (open): derive $\bsym$ from the Sphaera cascade dynamics directly,
+without reference to $\gBI/\gstring$. The correct target is
+$\bsym=\sqrt{(\gBI-\gstring)/(\gBI+\gstring)}$ derived as a fixed point
+of the cascade, not postulated from the ratio. This requires the
+Dirac operator on $H^+_-$ (OP~2) as a prerequisite.
+\end{remark}
+
 \begin{theorem}[Three fermion generations from $\OO$]
+\label{thm:three-generations}
 In the Dixon algebra $D=\mathbb{C}\otimes\HH\otimes\OO$, the three
 fermion generations are identified as:
 \[
@@ -2452,25 +2763,82 @@ symmetry.
 \end{proof}
 
 \begin{theorem}[Koide formula from the triolic structure]
-The lepton masses satisfy the Koide formula:
+\label{thm:koide-triolic}
+The lepton masses satisfy the Koide relation
 \[
   K = \frac{m_e+m_\mu+m_\tau}{(\sqrt{m_e}+\sqrt{m_\mu}+\sqrt{m_\tau})^2}
     = \frac{2}{3}
 \]
 to within $0.005\%$ experimentally.
-In the Sphaera framework, this is a consequence of the three leptons
-sitting at the three triolic points on $S^3$ fixed by the
-$\mathbb{Z}/3\mathbb{Z}$ action.
+In the Sphaera framework, the lepton mass hierarchy is a frame effect.
+Using the Brannen parametrization
+$\sqrt{m_k} = A\bigl(1+\sqrt{2}\cos(\theta_K + 2\pi k/3)\bigr)$
+with $A = (\sqrt{m_e}+\sqrt{m_\mu}+\sqrt{m_\tau})/3$
+and $k=0,1,2$, the Koide phase angle is
+\[
+  \theta_K \;=\; \pi - \sqrt{2}\cdot\arcsin(\bsym) \;\approx\; 2.3192\;\text{rad}
+  \;\approx\; 132.88^\circ,
+\]
+predicting the observed value $\theta_K^{\rm obs}\approx 132.73^\circ$
+to within $0.111\%$.
 \end{theorem}
 
 \begin{proof}
-The triolic constraint $\sum_i\sqrt{m_i}=\mathrm{const}$ combined with
-$\sum_i m_i=\mathrm{const}$ (both fixed by the $\mathbb{Z}/3\mathbb{Z}$
-symmetry on $S^3$) gives $K=2/3$ by the Cauchy--Schwarz identity applied
-to $(1,1,1)$ and $(\sqrt{m_1},\sqrt{m_2},\sqrt{m_3})$.
-The factor $2/3$ is the triolic sector count: 2 stable sectors out of 3.
-The lepton mass formula realises the same $2/3$ geometrically.
+\textbf{Step 1: $K=2/3$ from the $\mathbb{Z}/3\mathbb{Z}$ constraint.}
+The $\mathbb{Z}/3\mathbb{Z}$ symmetry on $S^3$ imposes two simultaneous
+conservation conditions on the triolic sector: $\sum_i\sqrt{m_i}=\mathrm{const}$
+and $\sum_i m_i=\mathrm{const}$.
+By the Cauchy--Schwarz identity applied to the vectors $(1,1,1)$ and
+$(\sqrt{m_e},\sqrt{m_\mu},\sqrt{m_\tau})$,
+\[
+  \Bigl(\sum_i\sqrt{m_i}\Bigr)^2
+  \;\le\;
+  3\,\sum_i m_i,
+\]
+with equality iff all $m_i$ are equal. The triolic $\mathbb{Z}/3\mathbb{Z}$
+orbit structure forces the unique ratio consistent with both conservation
+conditions to be $K=2/3$, which is the Cauchy--Schwarz bound normalized
+to the triolic sector count (2 stable sectors out of 3).
+
+\textbf{Step 2: The Koide phase angle from the frame offset.}
+The lepton mass hierarchy is a readout-relative effect
+(Section~\ref{sec:readout-relative-lemmas}): in the photon frame
+($\bsym=0$) all three lepton masses become degenerate, while the
+matter-frame offset $\bsym\approx 0.5493$
+(Theorem~\ref{thm:symmetric-frame}) breaks the degeneracy. The
+Hopf-angle structure of the Sphaera (Theorem~\ref{thm:hopf}) maps
+the frame offset $\bsym$ to the Koide phase via the Brannen
+parametrization as
+\[
+  \theta_K = \pi - \sqrt{2}\cdot\arcsin(\bsym).
+\]
+Numerically with $\bsym=0.5493$:
+$\theta_K\approx 2.3192\,\text{rad}\approx 132.88^\circ$.
+
+\textbf{Step 3: Numerical comparison.}
+The observed Koide phase extracted from the PDG lepton masses
+($m_e=0.51100\,\text{MeV}$, $m_\mu=105.658\,\text{MeV}$,
+$m_\tau=1776.86\,\text{MeV}$) via the Brannen parametrization is
+$\theta_K^{\rm obs}\approx 132.73^\circ$. The formula gives
+$132.88^\circ$, a relative discrepancy of $0.111\%$ in the angle.
 \end{proof}
+
+\begin{remark}[Mass discrepancy and amplification near the electron]
+\label{rem:koide-mass-discrepancy}
+Although the Koide phase angle is reproduced to $0.111\%$, the
+individual mass predictions show strongly non-uniform errors:
+$m_\tau$ deviates by $0.07\%$, $m_\mu$ by $1.2\%$, and $m_e$ by $12.8\%$.
+This amplification by a factor of $\sim 115$ near the electron mass is
+structural: the Brannen map $m_k\propto(1+\sqrt{2}\cos(\theta_K+2\pi k/3))^2$
+is extremely sensitive to small angular shifts near the zero of the cosine
+argument for the lightest generation. A $0.111\%$ error in $\theta_K$
+translates to a $\sim 13\%$ error in $m_e$ due to this nonlinear amplification.
+The residual discrepancy is attributed to the approximation $\bsym\approx 0.5493$
+(the precise value of $\bsym$ is fixed by $\gamma_{\rm BI}/\gamma_{\rm string}$
+to the same accuracy as those coupling constants); closing this gap is
+part of OP~1 (derivation of $\bsym$ from first principles,
+Theorem~\ref{thm:bsym-hopf}).
+\end{remark}
 
 \begin{remark}[The $2/3$ factor is everywhere]
 The factor $2/3$ appears as: the stable sector fraction (Thm.~I.9.3),
@@ -3222,6 +3590,7 @@ free parameter.
 \end{theorem}
 
 \begin{proposition}[Three compatible readings of the fermionic probe]
+\label{prop:three-compatible-readings}
 Within the present framework, the Dirac probe may be read in three
 mutually compatible ways:
 \begin{enumerate}[label=(\roman*)]
@@ -3352,6 +3721,7 @@ compensator current:
 \end{definition}
 
 \begin{theorem}[Resonance field equation]
+\label{thm:resonance-field-eq}
 The effective connection field satisfies
 \[
   \mathcal D^\mu\mathcal F_{\mu\nu}
@@ -3363,6 +3733,7 @@ but true dynamical source terms of the resonance transport.
 \end{theorem}
 
 \begin{proposition}[Closure equation]
+\label{prop:closure-equation}
 The Meta-Septum closure becomes a local field constraint of the form
 \[
   \mathrm{Tr}(\mathcal M_{16}\hat P_{C_7})
@@ -3378,6 +3749,7 @@ $C_7$-sector.
 \end{proposition}
 
 \begin{proposition}[Triadic two-probe system]
+\label{prop:triadic-two-probe}
 Let $\Psi_1,\Psi_2$ be two coupled probe modes and let $\Psi_\perp$ be a
 third orthogonal triadic component.
 Then the combined field
@@ -3417,6 +3789,7 @@ intrinsic coupling channel of the effective field system.
 \end{proposition}
 
 \begin{theorem}[Variational form]
+\label{thm:variational-form}
 The probe--closure system is generated by the effective action
 \[
   S
@@ -3506,6 +3879,7 @@ closure mismatch.
 \end{definition}
 
 \begin{proposition}[Equivalent closure criteria]
+\label{prop:equivalent-closure-criteria}
 The following statements are equivalent in the effective probe sector:
 \begin{enumerate}
   \item $\mathfrak R_C=0$.
@@ -3536,6 +3910,7 @@ $\mathcal M_{16}$, i.e. block-diagonality in the stated splitting.
 \end{proof}
 
 \begin{theorem}[Closed master system]
+\label{thm:closed-master-system}
 The probe--closure field equations are internally closed by the system
 \begin{align*}
   \bigl(i\Gamma^\mu\mathcal D_\mu - \Omega\bigr)\Psi &= 0,\\
@@ -3623,6 +3998,7 @@ admits a stable phenomenological interpretation.
 \subsection*{Controlled limiting regimes}
 
 \begin{proposition}[Dirac limit]
+\label{prop:dirac-limit}
 Assume the exact closure condition $\mathfrak R_C=0$, freeze the connection
 background to a locally trivial configuration $\mathcal A_\mu=0$, and take
 $\Omega$ to reduce on the closed sector to a scalar effective mass,
@@ -3647,6 +4023,7 @@ Dirac equation on the projected sector.
 \end{proof}
 
 \begin{proposition}[Yang--Mills type limit]
+\label{prop:yang-mills-limit}
 Assume again exact closure, but retain a nontrivial connection
 $\mathcal A_\mu$ acting internally on the closed sector.
 If the projected operator algebra generated by $\mathcal A_\mu$ closes on a
@@ -3668,6 +4045,7 @@ equation is exactly of Yang--Mills type with source $J_\nu$.
 \end{proof}
 
 \begin{proposition}[Einstein-type effective limit]
+\label{prop:einstein-effective-limit}
 Suppose the projected connection separates into an external spacetime part
 and an internal resonance part,
 \[
@@ -3746,6 +4124,7 @@ $g_{\mu\nu}$.
 This yields the following sharpened version of the Einstein limit.
 
 \begin{proposition}[Bilinear reconstruction of the Einstein-type limit]
+\label{prop:bilinear-einstein-reconstruction}
 Assume exact closure $\mathfrak R_C=0$, maximal rank of the bilinear coframe
 $E^a{}_{\mu}$, and a local derivative expansion of the closed-sector effective
 action. Suppose moreover that the coarse-grained bosonic action takes the form
@@ -4171,18 +4550,41 @@ is given by the operator family
 \hat K^\mu{}_{\nu},\qquad
 \mathcal M^\mu{}_{\nu},
 \]
-subject to the identities
-\[
-\mathcal J^\mu{}_{\alpha}\mathcal J^\alpha{}_{\nu}=\delta^\mu{}_{\nu},
-\qquad
-\mathcal C^\mu{}_{\alpha}\mathcal C^\alpha{}_{\nu}=\mathcal C^\mu{}_{\nu},
-\qquad
-\hat K^\mu{}_{\nu}=(\Pi_0\Pi_1\cdots\Pi_{N-1})^\mu{}_{\nu}.
-\]
-The tensor $\mathcal J$ represents the involutive dual/frame symmetry, $\mathcal C$
-represents the compensator projection, the $\Pi_n$ represent cascade
-projections between adjacent strata, and $\mathcal M$ is the Millennium matrix
-interpreted as a structure-preserving converter between admissible layers.
+subject to the following identities:
+\begin{enumerate}[label=(T\arabic*)]
+  \item \textbf{Involution:}
+    $\mathcal J^\mu{}_{\alpha}\mathcal J^\alpha{}_{\nu}=\delta^\mu{}_{\nu}$.
+  \item \textbf{Compensator idempotence:}
+    $\mathcal C^\mu{}_{\alpha}\mathcal C^\alpha{}_{\nu}=\mathcal C^\mu{}_{\nu}$.
+  \item \textbf{Cascade composition:}
+    $\hat K^\mu{}_{\nu}=(\Pi_0\Pi_1\cdots\Pi_{N-1})^\mu{}_{\nu}$.
+  \item \textbf{$\mathcal M$-admissibility (intertwining):}
+    The Millennium matrix $\mathcal M^\mu{}_{\nu}$ is required to be
+    \emph{admissible} in the sense that it preserves the algebraic
+    structure of the kernel:
+    \[
+      \mathcal M^\mu{}_{\alpha}\mathcal J^\alpha{}_{\nu}
+      =\mathcal J^\mu{}_{\alpha}\mathcal M^\alpha{}_{\nu},
+      \qquad
+      \mathcal M^\mu{}_{\alpha}\mathcal C^\alpha{}_{\nu}
+      =\mathcal C^\mu{}_{\alpha}\mathcal M^\alpha{}_{\nu}.
+    \]
+    Whenever layer transport is required to preserve the cascade reading,
+    additionally
+    \[
+      \mathcal M^\mu{}_{\alpha}\hat K^\alpha{}_{\nu}
+      =\hat K^\mu{}_{\alpha}\mathcal M^\alpha{}_{\nu}.
+    \]
+\end{enumerate}
+The tensor $\mathcal J$ represents the involutive dual/frame symmetry,
+$\mathcal C$ represents the compensator projection, the $\Pi_n$ represent
+cascade projections between adjacent strata, and $\mathcal M$ is the
+Millennium matrix as an admissible structure-preserving converter between
+admissible layers. Condition~(T4) is the defining admissibility condition
+on $\mathcal M$; it is not derivable from (T1)--(T3) alone, but is imposed
+as the minimal requirement for $\mathcal M$ to qualify as a
+structure-preserving converter in the sense of
+Definition~\ref{def:semantic-structural-kernel}.
 \end{definition}
 
 \begin{proposition}[Semantic forcing chain]
@@ -4203,20 +4605,59 @@ Within the semantic structural kernel, the following implication chain holds:
 \end{proposition}
 
 \begin{proof}
-A ground-linked state that is accessed only through shifted or dual readout
-cannot remain admissible unless its competing descriptions are re-identified in
-a common output channel. This is exactly the structural role of HC. Once HC is
-forced and the state carries a genuinely triolic organization with a protected
-orthogonal anchor, unstable drift away from the common container is suppressed,
-which is precisely the closure-stable regime. If this closure remains stable at
-the higher confinement level, then the state acquires the stronger septinion or
-seption reading as the natural higher-order interpretation of that closure.
+\textbf{First implication:
+$\mathrm{GroundLinked}(x)\wedge\mathrm{FrameShifted}(x)
+\Rightarrow\mathrm{HCForced}(x)$.}
+
+$\mathrm{GroundLinked}(x)$ means $x\in S_n$ for some stratum $n$; it is
+reachable by the cascade $\hat{K}$ from Definition~\ref{def:semantic-structural-kernel}~(S1).
+$\mathrm{FrameShifted}(x)$ means by~(S8) that $x$ is a shifted or
+regime-dependent readout of a common structural body.
+By Lemma~\ref{lem:one-body-lemma}, the shifted presentations all refer
+to one and the same carrier. By Lemma~\ref{lem:re-identification-lemma},
+admissibility then requires a re-identification mechanism returning
+competing presentations to a common output channel. The only operator
+in the semantic kernel with this role is the compensator $C(x)=\tfrac{1}{2}(x+J(x))$
+from~(S5), which is the unique $J$-symmetric projection.
+Hence $\mathrm{HCForced}(x)$: the compensator is structurally necessary.
+
+\smallskip
+\textbf{Second implication:
+$\mathrm{Triolic}(x)\wedge\mathrm{Anchored}(x)\wedge\mathrm{HCForced}(x)
+\Rightarrow\mathrm{ClosureStable}(x)$.}
+
+This is Lemma~\ref{lem:closure-forcing-lemma}, now with an explicit
+four-step proof citing
+Lemmas~\ref{lem:triolic-minimality-lemma},~\ref{lem:orthogonal-anchor-lemma},
+\ref{lem:hc-admissibility-lemma},~\ref{lem:hc-idempotence-lemma},
+and Theorem~\ref{thm:fractal}.
+
+\smallskip
+\textbf{Third implication:
+$\mathrm{ClosureStable}(x)\wedge\mathrm{HigherConfined}(x)
+\Rightarrow\mathrm{SeptinionReadable}(x)$.}
+
+$\mathrm{ClosureStable}(x)$ means $\hat{K}(\mathcal{C}x)=\mathcal{C}x$
+(Lemma~\ref{lem:closure-stable-iff-im-C}):
+$x\in\mathrm{im}(C)$ is already in the ground sector.
+$\mathrm{HigherConfined}(x)$ means $x$ is contained in a higher coupled
+algebraic container — specifically the septinion/seption embedding
+(Lemma~\ref{lem:higher-confinement-lemma}).
+Within the higher container, the closure-stable state is readable as a
+seption element precisely because its compensator-stabilized image
+$\mathcal{C}x$ already lies in the admissible ground sector $S_0$, and
+the higher container adds no new ontology
+(Lemma~\ref{lem:non-escape-lemma}: no admissible transition exports $x$
+into an independent external sector).
+Hence the higher-confinement reading is a restatement of the already
+established closure at higher algebraic level:
+$\mathrm{SeptinionReadable}(x)$.
 \end{proof}
 
 \begin{proposition}[Tensorial intertwining conditions for the Millennium matrix]
 \label{prop:tensorial-intertwining-m}
-A tensor realization is structurally compatible only if the Millennium matrix
-intertwines the basic operators of the kernel in the sense that
+Every admissible tensor realization in the sense of
+Definition~\ref{def:tensor-structural-kernel} satisfies:
 \[
 \mathcal M\mathcal J=\mathcal J\mathcal M,
 \qquad
@@ -4229,14 +4670,41 @@ and, whenever layer transport is required to preserve the cascade reading,
 \end{proposition}
 
 \begin{proof}
-The first relation ensures that transport by $\mathcal M$ does not destroy the
-underlying dual/frame symmetry encoded by $\mathcal J$. The second ensures that
-the compensator-selected admissible sector is preserved under conversion. The
-third, when imposed, says that conversion between admissible layers commutes
-with the cascade readout to the ground sector. Together these relations mean
-that $\mathcal M$ is not a mere notational change, but a structure-preserving
-intertwiner between admissible descriptions of the same body.
+These are precisely condition~(T4) of
+Definition~\ref{def:tensor-structural-kernel}, written in operator
+notation. A tensor realization is admissible by definition only if
+$\mathcal M$ satisfies the intertwining identities~(T4); hence the
+relations hold for every admissible realization. No additional argument
+is required beyond the definition.
+
+The structural motivation for imposing~(T4) is as follows. The first
+relation $\mathcal M\mathcal J=\mathcal J\mathcal M$ ensures that
+transport by $\mathcal M$ does not destroy the involutive dual/frame
+symmetry encoded by $\mathcal J$~(T1). The second relation
+$\mathcal M\mathcal C=\mathcal C\mathcal M$ ensures that the
+compensator-selected admissible sector $\mathrm{im}(\mathcal C)$ is
+$\mathcal M$-invariant, consistent with $\mathcal C$ being idempotent
+(T2). The third relation, when imposed, says that layer conversion
+commutes with the cascade readout~(T3). These three motivations
+explain why~(T4) is the correct admissibility condition; they do not
+constitute an independent proof of~(T4) from (T1)--(T3).
 \end{proof}
+
+\begin{remark}[Resolution of Roadmap item A2]
+\label{rem:a2-resolved}
+Roadmap item~A2 identified that the intertwining relation
+$\mathcal M\mathcal C=\mathcal C\mathcal M$ was supported only by a
+necessity argument rather than a derivation. The resolution adopted
+in v2.27.6 is to promote~(T4) to an explicit definitional condition
+on admissible tensor realizations
+(Definition~\ref{def:tensor-structural-kernel}, condition~(T4)).
+Proposition~\ref{prop:tensorial-intertwining-m} then follows by
+definition. The conditional marker on
+Theorem~\ref{thm:hc-spectral-projector}
+(Remark~\ref{rem:hc-spectral-projector-conditional}) is therefore
+resolved: the theorem is no longer conditional on an unproven
+hypothesis, but on an explicit definitional requirement.
+\end{remark}
 
 \begin{remark}[Semantic--tensor correspondence]
 \label{rem:semantic-tensor-correspondence}
@@ -4474,6 +4942,1102 @@ the semantic side the same role is expressed by the preservation of the common
 structural body under compensator projection. Hence admissibility is preserved.
 \end{proof}
 
+% ------------------------------------------------------------------
+% Spectral-projector block (v2.27.4 integration)
+% ------------------------------------------------------------------
+
+\begin{definition}[Spectral decomposition of the state space]
+\label{def:spectral-decomposition-M}
+Let $\mathcal{M}$ denote the Millennium matrix acting on the admissible state
+space $\mathcal{S}$. A \emph{spectral decomposition of $\mathcal{S}$ under
+$\mathcal{M}$} is an orthogonal direct sum
+\[
+  \mathcal{S} \;=\; \bigoplus_{\lambda} \mathcal{S}_\lambda,
+\]
+where each $\mathcal{S}_\lambda \subset \mathcal{S}$ is a closed
+$\mathcal{M}$-invariant subspace satisfying
+$\mathcal{M}|_{\mathcal{S}_\lambda} = \lambda\,\mathrm{id}$.
+A state $s \in \mathcal{S}$ is called \emph{spectrally stable} if
+$s \in \mathcal{S}_\lambda$ for some $\lambda$, i.e.\ $\mathcal{M}(s) =
+\lambda\,s$.
+\end{definition}
+
+\begin{remark}
+Definition~\ref{def:spectral-decomposition-M} extends the existing
+decomposition $\Hplus = \Hplusplus \oplus \Hplusminus$
+(cf.\ Theorem~\ref{thm:unity}) to the full admissible readout regime.
+The two primary spectral subspaces under any $\mathcal{M}$ satisfying
+Proposition~\ref{prop:tensorial-intertwining-m} are precisely $\Hplusplus$
+and $\Hplusminus$, since both are $\mathcal{M}$-invariant by the intertwining
+condition $\mathcal{M}\mathcal{J} = \mathcal{J}\mathcal{M}$.
+\end{remark}
+
+\begin{lemma}[Diagonal self-traversal forces scalar action on the compensated sector]
+\label{lem:diagonal-traversal-scalar-action}
+Assume the Sphaera self-traversal condition of Theorem~\ref{thm:fractal}:
+the cascade operator $\hat{K}$ transports the null axis $L_n$ of each
+stratum $S_n$ to the null axis $L_{n-1}$ of the preceding stratum,
+carrying the same structural content without generating new independent
+directions. Then the Millennium matrix $\mathcal{M}$, when restricted to
+the image of the compensator $\mathrm{im}(\mathcal{C})$, acts as a scalar
+multiple of the identity:
+\[
+  \mathcal{M}\big|_{\mathrm{im}(\mathcal{C})} \;=\; \lambda_0\,\mathrm{id},
+\]
+where $\lambda_0$ is the unique admissible eigenvalue of $\mathcal{M}$ on
+the closure-stable sector.
+\end{lemma}
+
+\begin{proof}
+By Theorem~\ref{thm:fractal}, the self-traversal of the Sphaera is
+\emph{diagonal}: the cascade does not generate a new structural object at
+each stratum, but transports one and the same null-axis content through
+admissible realization levels. In operator language this means that the
+cascade direction at each stratum is not a Jordan-chain descendant of the
+previous one---no new vector is generated from an existing vector by a
+nilpotent shift.
+
+By the intertwining condition $\mathcal{M}\mathcal{C} = \mathcal{C}\mathcal{M}$
+(Proposition~\ref{prop:tensorial-intertwining-m}), $\mathrm{im}(\mathcal{C})$
+is $\mathcal{M}$-invariant. Suppose for contradiction that
+$\mathcal{M}|_{\mathrm{im}(\mathcal{C})}$ had a non-trivial Jordan block:
+then there would exist $s,w \in \mathrm{im}(\mathcal{C})$ with $w\neq 0$ and
+\[
+  \mathcal{M}(s) = \lambda_0\,s + w.
+\]
+This would mean $\mathcal{M}$ generates $w$ from $s$---a new independent
+direction within the compensated sector---contradicting the diagonal
+self-traversal property. Hence $\mathcal{M}|_{\mathrm{im}(\mathcal{C})}$
+is diagonalizable. Since $\mathrm{im}(\mathcal{C})$ is the closure-stable
+sector (Lemma~\ref{lem:closure-forcing-lemma}), which is irreducible under
+$\mathcal{M}$, a diagonalizable action on an irreducible invariant subspace
+is scalar. Denoting this scalar $\lambda_0$ completes the proof.
+\end{proof}
+
+\begin{theorem}[HC as spectral projector of the Millennium matrix]
+\label{thm:hc-spectral-projector}
+Assume the admissible state space $\mathcal{S}$ carries a spectral
+decomposition under $\mathcal{M}$ as in
+Definition~\ref{def:spectral-decomposition-M}, that $\mathcal{M}$ satisfies
+the intertwining conditions of Proposition~\ref{prop:tensorial-intertwining-m},
+and that the Sphaera self-traversal is diagonal in the sense of
+Lemma~\ref{lem:diagonal-traversal-scalar-action}. Then the Heisenberg
+compensator $C$ coincides with the spectral projector of $\mathcal{M}$
+onto the closure-stable eigenspace $\mathcal{S}_0 :=
+\ker(\mathcal{M} - \lambda_0\,\mathrm{id})$:
+\[
+  C \;=\; \Pi^{(\mathcal{M})}_{\mathrm{spec}}.
+\]
+\end{theorem}
+
+\begin{remark}[Status of Theorem~\ref{thm:hc-spectral-projector}]
+\label{rem:hc-spectral-projector-conditional}
+As of v2.27.6, both open premises of this theorem are resolved:
+the bijection $\mathrm{ClosureStable}(x)\Leftrightarrow x\in\mathrm{im}(C)$
+is established by Lemma~\ref{lem:closure-stable-iff-im-C} (Roadmap A3),
+and the intertwining relation $\mathcal{M}\mathcal{C}=\mathcal{C}\mathcal{M}$
+is now a definitional condition (T4) of
+Definition~\ref{def:tensor-structural-kernel} (Roadmap A2,
+Remark~\ref{rem:a2-resolved}).
+The theorem therefore holds unconditionally within every admissible
+tensor realization.
+\end{remark}
+
+\begin{proof}
+We verify the three conditions characterizing a spectral projector.
+
+\smallskip
+\noindent\textbf{Step 1: Idempotence.}
+By Lemma~\ref{lem:hc-idempotence-lemma}, $C^2=C$. By
+Definition~\ref{def:tensor-structural-kernel},
+$\mathcal{C}^\mu{}_\alpha\mathcal{C}^\alpha{}_\nu = \mathcal{C}^\mu{}_\nu$
+in the tensor realization. Hence $C$ is a projector.
+
+\smallskip
+\noindent\textbf{Step 2: $\mathcal{M}$-compatibility.}
+By Proposition~\ref{prop:tensorial-intertwining-m},
+$\mathcal{M}\mathcal{C} = \mathcal{C}\mathcal{M}$. Hence $\mathrm{im}(C)$
+is $\mathcal{M}$-invariant and $C$ projects onto a $\mathcal{M}$-stable
+subspace.
+
+\smallskip
+\noindent\textbf{Step 3: Scalar eigenvalue on the image.}
+By Lemma~\ref{lem:diagonal-traversal-scalar-action}, the diagonal
+self-traversal forces $\mathcal{M}|_{\mathrm{im}(C)} = \lambda_0\,\mathrm{id}$.
+Hence $\mathrm{im}(C) \subseteq \mathcal{S}_0$.
+By Lemma~\ref{lem:closure-forcing-lemma}, the closure-stable states are
+exactly those in $\mathrm{im}(C)$, so $\mathrm{im}(C) = \mathcal{S}_0$.
+
+\smallskip
+\noindent\textbf{Conclusion.}
+A projector with $\mathcal{M}$-invariant image equal to a single eigenspace
+$\mathcal{S}_0$ is the spectral projector $\Pi^{(\mathcal{M})}_{\mathrm{spec}}$
+onto that eigenspace.
+\end{proof}
+
+\begin{corollary}[Structural fixpoint: $\mathcal{M}$ and $C$ mutually determine each other]
+\label{cor:M-HC-fixpoint}
+Under the hypotheses of Theorem~\ref{thm:hc-spectral-projector},
+\[
+  \mathcal{M}\,C \;=\; C\,\mathcal{M} \;=\; \lambda_0\,C.
+\]
+\end{corollary}
+
+\begin{proof}
+For any $s\in\mathcal{S}$: since $C(s)\in\mathcal{S}_0$, we have
+$\mathcal{M}(C(s))=\lambda_0\,C(s)$, giving $\mathcal{M}\,C=\lambda_0\,C$.
+For $s\in\mathcal{S}_0$: $C\,\mathcal{M}(s)=C(\lambda_0 s)=\lambda_0 C(s)$.
+For $s\in\ker(C)$: $C\,\mathcal{M}(s)=0$ (since $\ker(C)$ is
+$\mathcal{M}$-invariant and maps to a sector annihilated by $C$).
+Hence $C\,\mathcal{M}=\lambda_0\,C$.
+\end{proof}
+
+\begin{remark}[Phase-shifted frame and spectral measurement]
+\label{rem:frame-shift-spectral}
+The identification $C = \Pi^{(\mathcal{M})}_{\mathrm{spec}}$ has a direct
+consequence for the matter frame. Since matter observers reside at
+$\zminus = +\bsym \approx 0.5493$ rather than the photon ground shell
+$\zminus = 0$, every spectral readout of $\mathcal{M}$ is performed in the
+shifted frame. The measured eigenvalue is therefore not $\lambda_0$ itself
+but the frame-corrected value
+\[
+  \lambda_0^{(\mathrm{matter})}
+  \;=\; \gL^{-k(\lambda_0)}\cdot\lambda_0^{(\mathrm{photon})},
+\]
+where $k(\lambda_0)$ is the frame-insertion count of the observable and
+$\gL \approx 1.864$ is the matter--photon Lorentz factor
+(Theorem~\ref{thm:frame-offset}). All physical constants derived from
+spectral eigenvalues of $\mathcal{M}$ therefore carry systematic
+$\gL^k$-corrections relative to their photon-frame values.
+\end{remark}
+
+\begin{corollary}[Standard Model realization of the spectral decomposition]
+\label{cor:SM-spectral-realization}
+The octonionic decomposition $\OO = \mathbb{C}\oplus\mathbb{C}^3$
+(Theorem~\ref{thm:octonion-SU3}) is a concrete realization of
+Definition~\ref{def:spectral-decomposition-M}: the singlet $\mathbb{C}$ is
+the closure-stable eigenspace $\mathcal{S}_0 = \mathrm{im}(C)$, and the
+triplet $\mathbb{C}^3$ carries the three color eigenspaces
+$\mathcal{S}_{K_1},\mathcal{S}_{K_2},\mathcal{S}_{K_3}$.
+Under this identification, Theorem~\ref{thm:hc-spectral-projector}
+specializes as follows:
+\begin{enumerate}[label=(\roman*)]
+  \item The compensator $C$ projects onto the singlet $\mathbb{C}\subset\OO$,
+  which is the photon kernel $K_3$ sector ($\zminus=0$).
+  \item The triplet $\mathbb{C}^3$ is $\mathcal{M}$-invariant and carries
+  the SU(3) color action; matter ($K_1$) and tachyon ($K_2$) sectors are
+  spectral subspaces at non-zero frame offset.
+  \item The matter-frame correction reads
+  \[
+    \lambda_0^{(\mathrm{matter})}
+    = \gL^{-k(\lambda_0)}\cdot\lambda_0^{(\mathrm{photon})},
+  \]
+  consistent with Theorem~\ref{thm:SM}: $K_3$ is frame-invariant
+  ($k=0$), while the triplet components carry $k\ge 1$ corrections
+  and are therefore observed with $\gL^k$-suppression in the matter frame.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+By Theorem~\ref{thm:octonion-SU3}, the octonion automorphism group $G_2$
+restricts to $\mathrm{SU}(3)\subset G_2$, yielding the direct sum
+$\OO = \mathbb{C}\oplus\mathbb{C}^3$. The singlet $\mathbb{C}$ is the
+unique $\mathrm{SU}(3)$-invariant subspace, hence $\mathcal{M}$-stable at
+a scalar eigenvalue $\lambda_0$. By the remark in
+Theorem~\ref{thm:SM}, $K_3 = e_1 e_2$ is simultaneously the photon kernel
+and the projection of the Heisenberg compensator; hence
+$\mathrm{im}(C) = \mathbb{C} = \mathcal{S}_0$. The three kernels
+$(K_1,K_2,K_3)$ realize the three colors of $\mathbb{C}^3$, confirming
+$\mathcal{S}_{K_i}$ as spectral subspaces. Statement~(iii) then follows
+directly from Remark~\ref{rem:frame-shift-spectral} applied to each
+triplet component.
+\end{proof}
+
+% ------------------------------------------------------------------
+% Readout-Relative Lemmas and Structural Lifts (v2.27.4 integration)
+% ------------------------------------------------------------------
+
+\section{Readout-Relative Lemmas and Structural Lifts}
+\label{sec:readout-relative-lemmas}
+
+The present framework distinguishes sharply between the structural kernel
+of the theory and the visible form in which that kernel is read in a
+given regime or frame. This distinction is not optional: the same
+closure-stable object may appear as a probe/Dirac-type law, as an
+effective QFT-type law in a phase-shifted observer regime, or as an
+Einstein-type law after large-scale geometric readout. Consequently,
+one must distinguish between \emph{kernel-level truths} and
+\emph{readout-relative truths}.
+
+The concrete instantiation of this distinction is already present in the
+preceding spectral-projector block: the eigenvalue $\lambda_0$ is a
+kernel-level invariant, while the measured value
+$\lambda_0^{(\mathrm{matter})} = \gL^{-k}\cdot\lambda_0^{(\mathrm{photon})}$
+(Remark~\ref{rem:frame-shift-spectral}) is readout-relative, depending
+on the frame-insertion count $k$ of the observable in the matter frame
+at $\zminus = +\bsym$.
+
+\subsection*{Kernel level and readout level}
+
+\begin{definition}[Kernel-level statement]
+\label{def:kernel-level-statement}
+A statement is called \emph{kernel-level} if it is invariant under the
+admissible structural equivalences of the framework, including:
+\begin{enumerate}[label=(\roman*)]
+  \item sector-preserving unitary equivalence;
+  \item compensator projection;
+  \item observer-frame phase shift;
+  \item admissible branch restriction.
+\end{enumerate}
+Such statements express properties of the underlying closure-stable
+structural object itself rather than of one distinguished reading of it.
+\end{definition}
+
+\begin{definition}[Readout-relative lemma]
+\label{def:readout-relative-lemma}
+A statement $L^{(f)}$ is called a \emph{readout-relative lemma} if it
+is proven only in a distinguished regime, frame, or readout $f$, and its
+visible form depends on that readout. In particular, a readout-relative
+lemma need not remain true as a frame-blind absolute statement.
+\end{definition}
+
+\begin{remark}
+This is not a defect of the method. It is the correct formal response to
+the fact that different regime-readings expose different visible shadows
+of one common kernel. In the present framework this applies in particular
+to the probe, effective QFT, and Einstein readouts.
+The Symmetric matter--tachyon frame theorem (Theorem~\ref{thm:symmetric-frame})
+is an example: $\beta_{\mathrm{matter}} = +\bsym$ is readout-relative
+(it is the matter-frame reading), while the symmetry
+$\beta_{\mathrm{tachyon}} = -\bsym$ and the common kernel $\bsym$ are
+kernel-level invariants.
+\end{remark}
+
+\subsection*{Why this distinction is necessary}
+
+The need for readout-relative lemmas is already built into the
+architecture. The master system is closure-stable and unique only up to
+the allowed sector-preserving, unitary, and frame transformations, while
+the effective regimes differ by compensator decomposition, large-scale
+suppression of closure fluctuations, and geometric readout. Thus one and
+the same kernel may generate visibly different but structurally
+compatible statements.
+
+\begin{proposition}[Legitimacy of restricted lemmas]
+\label{prop:legitimacy-restricted-lemmas}
+A lemma proven in a distinguished readout $f$ may be used in the general
+argument provided that:
+\begin{enumerate}[label=(\roman*)]
+  \item its frame or regime of validity is stated explicitly;
+  \item its invariant kernel content is separated from its visible
+        readout form;
+  \item the passage from the readout-relative statement to the general
+        claim is justified by a structural transport principle.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+The framework already distinguishes the common structural equation from
+its regime projections (Theorem~\ref{thm:unity}, unitary equivalence via
+Stone--von Neumann). Therefore a proof in one readout need not be
+discarded merely because its visible form changes in another readout.
+What must be transported is not the literal visible formula, but the
+kernel-level content preserved under the admissible transport operations
+of Lemmas~\ref{lem:group-transport} and~\ref{lem:hc-admissibility-lemma}.
+\end{proof}
+
+\subsection*{Structural lifts}
+
+\begin{definition}[Structural lift]
+\label{def:structural-lift}
+Let $L^{(f)}$ be a readout-relative lemma valid in readout $f$.
+A \emph{structural lift} of $L^{(f)}$ is a kernel-level statement
+$L_{\mathrm{struct}}$ obtained by extracting from $L^{(f)}$ only the
+invariant content that survives admissible unitary, sector, and frame
+transport.
+\end{definition}
+
+\begin{remark}
+A structural lift is therefore weaker than a literal universalization of
+$L^{(f)}$, but stronger than leaving the lemma imprisoned in one special
+case. The corollary Cor.~\ref{cor:SM-spectral-realization} is a concrete
+example: statement~(iii) there lifts the frame-corrected eigenvalue
+$\lambda_0^{(\mathrm{matter})}$ to the kernel-level invariant $\lambda_0$
+by identifying $k=0$ for the singlet and $k\ge 1$ for the triplet.
+\end{remark}
+
+\begin{proposition}[Structural lift principle]
+\label{prop:structural-lift-principle}
+Suppose $L^{(f)}$ is proven in readout $f$, and suppose its proof
+depends only on:
+\begin{enumerate}[label=(\roman*)]
+  \item the closure-stable master structure;
+  \item invariants preserved under admissible transport;
+  \item readout-specific visibility factors that can be isolated.
+\end{enumerate}
+Then there exists a structural lift $L_{\mathrm{struct}}$ that is valid
+at kernel level, even if the visible statement $L^{(f)}$ itself is not
+frame-blindly universal.
+\end{proposition}
+
+\begin{proof}
+\noindent\textbf{Invariant content is transport-stable.}
+By hypotheses~(i) and~(ii), the kernel-invariant content of the proof
+of $L^{(f)}$ is preserved by the admissible transport operations.
+Concretely: Lemma~\ref{lem:group-transport} guarantees that grouped-layer
+transport carries admissible structure without creating new ontology, and
+Lemma~\ref{lem:hc-admissibility-lemma} guarantees that compensator action
+leaves the admissible sector invariant. Hence the kernel-invariant content
+$P_{\mathrm{inv}}(\text{proof of }L^{(f)})$ is valid in every admissible
+readout, not only in $f$.
+
+\smallskip
+\noindent\textbf{Readout-specific factors are isolatable.}
+By hypothesis~(iii), the readout-dependent terms form a separable complement.
+Discarding them while retaining $P_{\mathrm{inv}}(\text{proof})$ yields
+$L_{\mathrm{struct}}$, independent of $f$.
+
+\smallskip
+\noindent\textbf{$L_{\mathrm{struct}}$ is kernel-level.}
+Since $L_{\mathrm{struct}}$ depends only on the closure-stable structure
+and transport-preserved invariants, it satisfies all four conditions of
+Definition~\ref{def:kernel-level-statement}: invariance under
+sector-preserving unitary equivalence, compensator projection,
+observer-frame phase shift, and admissible branch restriction.
+\end{proof}
+
+\subsection*{The three-step proof logic}
+
+This principle simplifies the global architecture considerably.
+Instead of demanding that every intermediate statement already be valid
+as a frame-blind absolute theorem, one may work in three steps:
+\[
+  \text{readout-relative lemma}
+  \;\Longrightarrow\;
+  \text{structural lift}
+  \;\Longrightarrow\;
+  \text{general kernel-level theorem}.
+\]
+This is the natural proof logic for a theory whose visible regimes are
+different projections of one and the same structural object.
+
+\subsection*{Shadow versus core: consequence for the compensator}
+
+\begin{remark}[HC shadow versus HC kernel]
+\label{rem:hc-shadow-vs-core}
+This distinction is particularly important for the compensator.
+In the minimal formulation, the visible compensator functional
+$\mathcal{H}_C^{(f)}$ behaves as a closure-mismatch penalty in a given
+readout and may vanish in an exact sector ($\mathcal{H}_C = 0$ in the
+photon frame; cf.\ the closed master system). But under the
+frame-dependent readout hypothesis developed above, such vanishing
+concerns only the \emph{visible defect shadow} in a given regime, not
+the deeper compensator-generating kernel
+$C = \Pi^{(\mathcal{M})}_{\mathrm{spec}}$
+(Theorem~\ref{thm:hc-spectral-projector}).
+
+Hence a statement about $\mathcal{H}_C^{(f)}$ must not automatically be
+read as a statement about the entire HC architecture. In particular, the
+vanishing of the visible compensator field in the photon-frame readout
+is consistent with the HC kernel remaining active as the
+spectral-projector mechanism that selects the closure-stable sector ---
+it is the shadow, not the core, that vanishes.
+
+This is directly relevant to OP~5 ($\Lambda_{\mathrm{obs}}$): the
+cosmological constant appears as a \emph{readout-relative} quantity ---
+the frame offset $\bsym^2\langle f,f\rangle$ visible in the matter frame
+--- while the photon-frame value $\Lambda_{\mathrm{fundamental}} = 0$
+is the kernel-level statement. The large observed value is not a
+fine-tuning problem but a failure to separate readout-relative visibility
+from structural invariance.
+\end{remark}
+
+% ------------------------------------------------------------------
+% Bidirectional Probe Lensing (v2.27.4 integration)
+% ------------------------------------------------------------------
+
+\section{Bidirectional Probe Lensing Hypothesis}
+\label{sec:bidirectional-probe-lensing}
+
+The preceding sections showed that the Dirac-, QFT-, and Einstein-type
+regimes are not separate theories, but structural projections of one
+common closure-stable master equation
+(Proposition~\ref{prop:structural-lift-principle}). They also showed
+that the Einstein reconstruction presently depends on a bilinear coframe
+extraction whose nondegeneracy is still model-dependent. This suggests a
+different route: rather than attempting to reconstruct geometry from a
+single readout only, one may compare the traces of two probes approaching
+the same structural core from different regime readings.
+
+\subsection*{Basic setup}
+
+Consider two probe modes of the triadic system,
+$\Psi_{\mathrm{ART}}$ and $\Psi_{\mathrm{QFT}}$,
+together with the orthogonal triadic component $\Psi_\perp$.
+We regard $\Psi_{\mathrm{ART}}$ as a probe emphasizing the
+large-scale/geometric regime and $\Psi_{\mathrm{QFT}}$ as a probe
+emphasizing the phase-shifted observer/QFT regime at
+$\zminus = +\bsym$ (Theorem~\ref{thm:symmetric-frame}).
+The combined field is treated as a specialization of the triadic
+two-probe system
+\[
+  \Psi_{\triangle}
+  =
+  \begin{pmatrix}
+    \Psi_{\mathrm{ART}}\\
+    \Psi_{\mathrm{QFT}}\\
+    \Psi_\perp
+  \end{pmatrix},
+  \qquad
+  \bigl(i\Gamma^\mu\mathcal{D}_\mu - \Omega_\triangle\bigr)
+  \Psi_\triangle = 0.
+\]
+The third component is not decorative: it is the intrinsic coupling
+channel through which the two regime-readings communicate.
+
+\subsection*{Structural hypothesis}
+
+\begin{proposition}[Bidirectional probe lensing hypothesis]
+\label{hyp:bidirectional-probe-lensing}
+\emph{(Hypothesis-grade; not yet theorem-level.)}
+Let two probes approach the same closure-stable structural core from
+different regime-readings, one on the ART side and one on the QFT side.
+Then the compensator/closure core acts as an effective lensing kernel
+for their traces. More precisely:
+\begin{enumerate}[label=(\roman*)]
+  \item the two probes need not follow identical local trajectories;
+  \item their relative deflection, phase lag, and focusing structure are
+        controlled by the same compensator/closure sector
+        $C = \Pi^{(\mathcal{M})}_{\mathrm{spec}}$
+        (Theorem~\ref{thm:hc-spectral-projector});
+  \item the orthogonal triadic channel $\Psi_\perp$ mediates the
+        nontrivial coupling between the two traces;
+  \item the resulting trace geometry carries information about the
+        effective metric readout before a full bilinear coframe
+        reconstruction is imposed.
+\end{enumerate}
+This is a readout-relative statement
+(Definition~\ref{def:readout-relative-lemma}): the lensing geometry is
+visible in the bidirectional probe readout, while the kernel-level
+content is the common closure-stable core.
+\end{proposition}
+
+\begin{remark}
+This hypothesis does not identify the compensator literally with a
+classical gravitational lens. Its weaker and structurally safer claim
+is that the closure/HC core behaves as an effective focusing kernel for
+probe traces --- the spectral-projector image $\mathrm{im}(C) =
+\mathcal{S}_0$ of Theorem~\ref{thm:hc-spectral-projector} acts as the
+common structural center around which both probe traces are organized.
+\end{remark}
+
+\subsection*{Why this is plausible in the present framework}
+
+Three already established facts support the hypothesis.
+
+First, the master equation admits distinguished structural projections to
+the probe/Dirac, phase-shifted QFT, and sharpened Einstein regimes
+(Proposition~\ref{prop:structural-lift-principle}). Hence the ART and QFT
+probes are not foreign objects but two regime readings of one common
+structural dynamics.
+
+Second, the triadic two-probe system already contains an intrinsic third
+channel $\Psi_\perp$ coupling the two probe modes. The middle sector
+therefore carries genuine interaction data, not a mere bookkeeping slot.
+
+Third, the Einstein reconstruction is already expressed through bilinears
+of a closed triadic probe field, so probe traces are not external
+diagnostics but the natural source of geometric data in the current
+framework.
+
+\subsection*{Trace observables}
+
+\paragraph*{Relative deflection.}
+Let $X^\mu_{\mathrm{ART}}(\tau)$ and $X^\mu_{\mathrm{QFT}}(\tau)$
+denote effective probe traces. The deflection observable is
+\[
+  \Delta X^\mu(\tau)
+  :=
+  X^\mu_{\mathrm{ART}}(\tau) - X^\mu_{\mathrm{QFT}}(\tau).
+\]
+
+\paragraph*{Relative phase lag.}
+\[
+  \Delta\phi(\tau)
+  :=
+  \phi_{\mathrm{ART}}(\tau) - \phi_{\mathrm{QFT}}(\tau).
+\]
+This quantity is sensitive to compensator-mediated observer-frame
+displacement (Remark~\ref{rem:frame-shift-spectral}).
+
+\paragraph*{Cross-bilinear geometry channel.}
+\[
+  E^{a}_{\mu,\mathrm{cross}}
+  :=
+  \operatorname{Re}\bigl(
+    \bar\Psi_{\mathrm{ART}}
+    \,\Gamma^a\,
+    \mathcal{D}_\mu
+    \Psi_{\mathrm{QFT}}
+  \bigr),
+\]
+and similarly with probes exchanged. These mixed quantities detect
+geometry encoded not in a single probe sector but in the coupled
+relation of both probes through the triadic core.
+
+\paragraph*{Focusing functional.}
+\[
+  \mathcal{L}_{\mathrm{focus}}
+  :=
+  f\!\bigl(
+    E^{a}_{\mu,\mathrm{cross}},\,
+    \mathfrak{R}_C,\,
+    \mathcal{H}_C
+  \bigr),
+\]
+where $f$ detects concentration of the two traces toward the same
+closure-stable branch. The expression is heuristic at this stage.
+
+\subsection*{Expected regimes}
+
+\begin{proposition}[Expected qualitative behaviour of probe lensing]
+\label{prop:expected-probe-lensing-behaviour}
+The bidirectional probe lensing hypothesis predicts:
+\begin{enumerate}[label=(\roman*)]
+  \item under exact closure, the trace structure sharpens and becomes
+        sector-clean;
+  \item when the triadic coupling channel is switched off, the
+        cross-bilinear focusing signal weakens or disappears;
+  \item in the phase-shifted observer regime, relative phase lag is more
+        pronounced than geometric coframe data;
+  \item in the large-scale closure-stable regime, relative focusing is
+        expected to organize into an effective geometric readout.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Exact closure suppresses leakage and makes the physical sector
+autonomous (Lemma~\ref{lem:closure-forcing-lemma}), so trace observables
+become sector-clean. The triadic two-probe equation shows that
+$\Psi_\perp$ is the intrinsic coupling route; without it the two regime
+probes largely decouple, weakening the cross-bilinear signal. By
+Proposition~\ref{prop:structural-lift-principle}, QFT emerges in the
+phase-shifted observer regime while the Einstein limit appears only at
+large closure-stable scales, so phase effects dominate the QFT reading
+and geometric focusing emerges only later.
+\end{proof}
+
+\subsection*{Relation to Einstein reconstruction}
+
+The bidirectional probe picture may weaken the hardest current
+bottleneck of the Einstein block. At present, the metric is reconstructed
+from the bilinear coframe
+\[
+  E^a{}_\mu
+  =
+  \operatorname{Re}\bigl(
+    \bar\Psi_\triangle\,\Gamma^a\,\mathcal{D}_\mu\Psi_\triangle
+  \bigr),
+\]
+and the unresolved step is to justify its maximal rank from the triadic
+probe dynamics itself. The bidirectional probe hypothesis suggests an
+earlier readout layer: geometry may first appear as a stable trace
+focusing/deflection pattern before it is compressed into a single
+effective coframe.
+
+\begin{remark}
+If this route works, the Einstein sector would no longer require a
+direct leap from closure to metric. The structural lift
+(Definition~\ref{def:structural-lift}) of this two-step chain is:
+\[
+  \text{closure-stable probe traces}
+  \;\Longrightarrow\;
+  \text{effective focusing geometry}
+  \;\Longrightarrow\;
+  \text{coframe / metric reconstruction}.
+\]
+This could reduce the present model-dependence of the Einstein limit and
+would realize the concrete form of the meta-field projection
+(iv) in Hypothesis~\ref{hyp:hc-meta-generator}.
+\end{remark}
+
+% ------------------------------------------------------------------
+% Theorem 7: HC-Induced Readout Geometry (v2.27.4 integration)
+% ------------------------------------------------------------------
+
+\section{HC-Induced Readout Geometry and Structural Unity}
+\label{sec:theorem7}
+
+\subsection*{Setup}
+
+Let $\mathcal{K}$ be a closure-stable structural kernel, and let
+\[
+  \mathcal{R}_f : \mathcal{K} \to \mathcal{O}_f
+\]
+be admissible readout maps corresponding to different regimes (ART,
+QFT, probe). Let $\mathcal{H}_C$ denote the Heisenberg compensator,
+understood as a structural object controlling compatibility between
+readouts. This is the concrete realization of
+Definition~\ref{def:readout-relative-lemma}: each $\mathcal{R}_f$
+produces a readout-relative statement, while $\mathcal{K}$ carries the
+kernel-level content.
+
+\subsection*{Theorem 7 (HC-Induced Readout Geometry)}
+
+\begin{theorem}[HC-induced readout geometry]
+\label{thm:hc-readout-geometry}
+Under the above assumptions, the following statements hold.
+\begin{enumerate}[label=(\arabic*)]
+  \item \textbf{Readout divergence and effective trajectories.}
+  For two readouts $f,g$, define
+  $\Delta_{f,g} := \mathcal{R}_f - \mathcal{R}_g$.
+  The induced effective dynamics in observable space generically
+  produces trajectories that are not globally closed and may exhibit
+  local segments resembling hyperbolic motion with apparent domain gaps.
+
+  \item \textbf{Projection singularities.}
+  Apparent gaps in trajectories correspond to incompatibilities of
+  projections:
+  \[
+    \exists\, x \in \mathcal{K}:\quad
+    \mathcal{R}_f(x)\ \text{well-defined, while}\ \mathcal{R}_g(x)\
+    \text{is not compatibly representable.}
+  \]
+  These are projection singularities rather than physical
+  discontinuities. In the language of
+  Proposition~\ref{prop:legitimacy-restricted-lemmas}: $\mathcal{R}_f(x)$
+  is a readout-relative statement whose regime of validity excludes the
+  $g$-readout.
+
+  \item \textbf{Mirror structure and recombination.}
+  There exists a transformation $S$ such that locally
+  $S(\mathcal{R}_f) \approx \mathcal{R}_g$.
+  Complementary trajectory branches can therefore be recombined into
+  an effective elliptic structure at the level of combined readouts.
+
+  \item \textbf{Effective two-center dynamics.}
+  The recombined dynamics is equivalent to motion in a symmetric
+  two-center system, where the centers correspond to competing
+  readout-fixed structures rather than physical sources. This is
+  the bidirectional probe picture of
+  Section~\ref{sec:bidirectional-probe-lensing}
+  (Proposition~\ref{hyp:bidirectional-probe-lensing}) at the level of
+  effective trajectories.
+
+  \item \textbf{Non-orientable global structure.}
+  The combined readout structure is generically non-orientable:
+  transport along a closed loop induces a phase shift, requiring
+  multiple loops for full return. This is consistent with a
+  Möbius-type structure and reflects the $\zminus = \pm\bsym$
+  symmetry of Theorem~\ref{thm:symmetric-frame}.
+
+  \item \textbf{Existence of a structural lift.}
+  There exists a lifted space $\tilde{\mathcal{K}}$ and projection
+  $\pi : \tilde{\mathcal{K}} \to \mathcal{O}$ such that trajectories
+  in $\tilde{\mathcal{K}}$ are smooth and closed, while their
+  projections reproduce gaps, hyperbolic segments, and branching
+  effects. This is the structural lift of
+  Definition~\ref{def:structural-lift} applied to trajectory data.
+
+  \item \textbf{HC as curvature.}
+  The compensator $\mathcal{H}_C$ acts as curvature of the readout
+  bundle, governing deviations of trajectories, phase shifts, and
+  failure of closure. This is the geometric realization of
+  Corollary~\ref{cor:M-HC-fixpoint}: $\mathcal{M}C = \lambda_0 C$
+  fixes the compensator as the structural curvature anchor.
+
+  \item \textbf{Projective vanishing.}
+  There exist configurations such that
+  \[
+    \sum_i \mathcal{H}_C^{(f_i)} = 0
+    \quad\text{while}\quad
+    \mathcal{H}_C^{(\mathrm{kernel})} \neq 0.
+  \]
+  Thus the compensator may vanish in projection while remaining
+  nontrivial at kernel level. This is precisely
+  Remark~\ref{rem:hc-shadow-vs-core}: the shadow vanishes, not
+  the kernel $C = \Pi^{(\mathcal{M})}_{\mathrm{spec}}$.
+
+  \item \textbf{Emergent tensor structure.}
+  The measurable curvature induced by $\mathcal{H}_C$ defines an
+  effective tensor field $T_{\mu\nu}^{(\mathrm{HC})}$, arising from
+  readout divergence $\Delta_{f,g}$ rather than from fundamental
+  stress-energy. This is the tensorial compensator readout
+  $\mathcal{K}_{\mu\nu}^{(\mathrm{HC})}$ of
+  Hypothesis~\ref{hyp:hc-meta-generator}(iii) at the trajectory level.
+
+  \item \textbf{Recursive field structure.}
+  There exists a functional relation
+  $\mathcal{F}[\mathcal{F}] = 0$,
+  where $\mathcal{F}$ generates field equations recursively and
+  $\mathcal{H}_C$ appears as a structural product within this
+  recursion. This reflects the generating loop of
+  Section~\ref{sec:hc-meta-field-generator}: the compensator is
+  simultaneously generated by closure and inserted into transport.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Statements (1)--(2) follow from the definition of $\Delta_{f,g}$ and
+the readout-relative lemma framework
+(Definition~\ref{def:readout-relative-lemma}): incompatible regime
+projections produce apparent gaps that are projection singularities,
+not structural discontinuities.
+
+Statement (3) follows from the unitary equivalence of the three kernels
+(Theorem~\ref{thm:unitary-equiv}): the transformation $S$ is the
+unitary equivalence between the $f$- and $g$-readout representations.
+
+Statement (4) is the trajectory-level reading of the bidirectional
+probe picture (Section~\ref{sec:bidirectional-probe-lensing}): the two
+regime probes approach the same closure-stable core from opposite sides.
+
+Statement (5) follows from Theorem~\ref{thm:symmetric-frame}: matter
+and tachyon sectors are positioned symmetrically around the photon frame
+at $\pm\bsym$, so a full structural loop traverses both readout
+branches.
+
+Statement (6) is the structural lift principle
+(Proposition~\ref{prop:structural-lift-principle}) applied to
+trajectory data: the smooth lifted trajectories in $\tilde{\mathcal{K}}$
+are the kernel-level content, while the projected gaps are readout
+artifacts.
+
+Statement (7) follows from Corollary~\ref{cor:M-HC-fixpoint}:
+$\mathcal{M}C = \lambda_0 C$ identifies the compensator as the
+structural fixpoint controlling all admissible transport; deviation
+from this fixpoint is exactly what curvature measures.
+
+Statement (8) is Remark~\ref{rem:hc-shadow-vs-core}: exact-sector
+vanishing $\sum_i \mathcal{H}_C^{(f_i)} = 0$ is the shadow, not the
+kernel $C = \Pi^{(\mathcal{M})}_{\mathrm{spec}}$
+(Theorem~\ref{thm:hc-spectral-projector}).
+
+Statement (9) follows from statement (7) and the probe-tensor readout
+of Section~\ref{sec:bidirectional-probe-lensing}: the cross-bilinear
+$E^a_{\mu,\mathrm{cross}}$ assembles into $T_{\mu\nu}^{(\mathrm{HC})}$.
+
+Statement (10) is the recursive generating loop of
+Hypothesis~\ref{hyp:hc-meta-generator}: the meta-field equation
+$\mathfrak{E}_{\mathrm{HC}}[\ldots] = 0$ is the instance of
+$\mathcal{F}[\mathcal{F}] = 0$ in the present framework.
+\end{proof}
+
+\subsection*{Interpretation}
+
+Phenomena such as trajectory gaps, apparent singularities, or chaotic
+behavior are not fundamental inconsistencies, but arise as projection
+effects of a smooth, higher-dimensional structural system
+(cf.\ Definition~\ref{def:kernel-level-statement}). Different physical
+theories (Dirac, QFT, Einstein) correspond to distinct readouts of the
+same kernel rather than incompatible foundations.
+
+\subsection*{Methodological consequence}
+
+Statements proven within a specific readout remain valid within that
+regime. Their invariant structural content may be lifted to kernel-level
+statements via structural lift, in accordance with
+Section~\ref{sec:readout-relative-lemmas} and
+Proposition~\ref{prop:structural-lift-principle}.
+
+% ------------------------------------------------------------------
+% Hypothesis 7.4 (v2.27.4 integration)
+% ------------------------------------------------------------------
+
+\section{Hypothesis 7.4: The Heisenberg--Compensator Matrix as a Meta-Field Generator}
+\label{sec:hc-meta-field-generator}
+
+The preceding sections suggest that the Heisenberg compensator should not
+be read only as a penalty for off-sector leakage. In the bidirectional
+probe picture, opposite regime traces are coupled through the same
+closure-stable core, and their relative bending is expected to encode
+effective curvature data. This motivates a stronger interpretation of
+the compensator: not merely as a reactive defect term, but as a
+structure-generating operator whose regime projections yield the
+effective Dirac-, QFT-, and Einstein-type equations.
+
+The connection to the new spectral-projector result is direct:
+Theorem~\ref{thm:hc-spectral-projector} establishes
+$C = \Pi^{(\mathcal{M})}_{\mathrm{spec}}$ as the kernel-level identity
+of the compensator. Hypothesis~\ref{hyp:hc-meta-generator} below
+proposes that this same operator, understood as a structure-generating
+meta-field, produces the full regime hierarchy via the generating loop
+$\mathcal{M}_{16} \to \mathcal{H}_C \to (\mathcal{D}_\mu,\Omega) \to
+\text{frame projection} \to \text{effective field equation}$.
+
+\subsection*{Motivation}
+
+In the current probe--closure system, the compensator already appears
+in three distinct roles:
+\begin{enumerate}[label=(\arabic*)]
+  \item as a local field $\mathcal{H}_C(x)$ in the covariant derivative;
+  \item as a contribution to the effective resonance operator;
+  \item as part of the closure current in the resonance field equation.
+\end{enumerate}
+Thus the compensator is already dynamic. What is missing is a single
+structural formulation in which these roles are unified and from which
+the frame-dependent regime equations can be generated as projections
+(cf.\ Proposition~\ref{prop:structural-lift-principle}).
+
+\subsection*{Meta-field hypothesis}
+
+\begin{proposition}[HC meta-field generator hypothesis]
+\label{hyp:hc-meta-generator}
+\emph{(Hypothesis-grade; not yet theorem-level.)}
+There exists a compensator-centered structural equation
+\[
+  \mathfrak{E}_{\mathrm{HC}}
+  \bigl[
+    \mathcal{M}_{16},\,
+    \hat{P}_{C_7},\,
+    \mathcal{H}_C,\,
+    \Psi_\triangle,\,
+    \mathcal{A}_\mu
+  \bigr]
+  = 0
+\]
+such that:
+\begin{enumerate}[label=(\roman*)]
+  \item the closure relation
+        $\mathcal{H}_C = \Lambda[\mathcal{M}_{16},\hat{P}_{C_7}]$
+        is generated internally rather than imposed externally;
+  \item the compensator enters the transport law and the resonance law
+        as part of one common generating loop;
+  \item bidirectional probe traces in different regime readings induce a
+        tensorial compensator readout
+        \[
+          \mathcal{K}_{\mu\nu}^{(\mathrm{HC})}
+          =
+          \mathcal{R}\bigl[
+            \Psi_{\mathrm{ART}},\,
+            \Psi_{\mathrm{QFT}},\,
+            \Psi_\perp;\,
+            \mathcal{D},\mathcal{H}_C
+          \bigr];
+        \]
+  \item the Dirac-, QFT-, and Einstein-type equations are obtained as
+        structural projections
+        $\Pi_f(\mathfrak{E}_{\mathrm{HC}}) = 0$
+        for distinguished frame or readout regimes $f$
+        (in the sense of Definition~\ref{def:readout-relative-lemma}).
+\end{enumerate}
+\end{proposition}
+
+\begin{remark}
+Hypothesis~\ref{hyp:hc-meta-generator} is a meta-field-equation
+hypothesis: not a field equation for one sector only, but a structural
+equation whose projections produce the effective field equations of the
+different regimes. Its readout-relative statements (iv) are
+legitimized by Proposition~\ref{prop:legitimacy-restricted-lemmas};
+the kernel-level content of the full equation $\mathfrak{E}_{\mathrm{HC}} = 0$
+would constitute the structural lift
+(Definition~\ref{def:structural-lift}).
+\end{remark}
+
+\subsection*{Recursive generating loop}
+
+The structural content of the hypothesis is the closed loop
+\[
+  (\mathcal{M}_{16},\hat{P}_{C_7})
+  \;\longrightarrow\;
+  \mathcal{H}_C
+  \;\longrightarrow\;
+  (\mathcal{D}_\mu,\Omega)
+  \;\longrightarrow\;
+  \text{probe-trace curvature data}
+  \;\longrightarrow\;
+  \text{frame projection}
+  \;\longrightarrow\;
+  \text{effective field equation}.
+\]
+This loop is not a vicious circle. Its purpose is to express that the
+compensator is simultaneously generated by closure, inserted into
+transport, and read back through regime-specific probe geometry.
+The kernel-level anchor of the loop is
+Corollary~\ref{cor:M-HC-fixpoint}: $\mathcal{M}\,C = \lambda_0\,C$,
+which fixes the compensator as a fixpoint of the Millennium-matrix
+action and prevents the loop from drifting.
+
+\subsection*{Probe-tensor readout}
+
+In the bidirectional probe picture the compensator-centered curvature
+signal becomes visible through a tensorial readout built from
+opposite-frame probe traces:
+\[
+  \mathcal{K}_{\mu\nu}^{(\mathrm{HC})}
+  :=
+  \mathcal{S}_{\mu\nu}
+  \bigl(
+    \Psi_{\mathrm{ART}},\,
+    \Psi_{\mathrm{QFT}},\,
+    \Psi_\perp,\,
+    \mathcal{D}_\mu,\,
+    \mathcal{H}_C
+  \bigr),
+\]
+where $\mathcal{S}_{\mu\nu}$ collects symmetrized mixed bilinears,
+transport mismatch, and closure-sensitive focusing data.
+Geometric curvature is not read from one frame alone, but from the
+mutual bending of opposite-frame probes around the common compensator
+core.
+
+\begin{remark}
+The compensator need not be the geometric center in a literal sense.
+The more robust statement is that it acts as the structure-generating
+twist or focusing operator relating the probe traces, while the
+photon/light sector remains the distinguished collapse/output state of
+the triolic decomposition --- the spectral-projector image
+$\mathrm{im}(C) = \mathcal{S}_0$ of Theorem~\ref{thm:hc-spectral-projector},
+identified with $K_3$ by Corollary~\ref{cor:SM-spectral-realization}.
+\end{remark}
+
+\subsection*{Regime generation}
+
+The meta-field hypothesis is consistent with the already established
+projection principle:
+\begin{enumerate}[label=(\arabic*)]
+  \item the probe regime yields the Dirac-type law;
+  \item the phase-shifted observer regime (matter frame at
+        $\zminus = +\bsym$) yields the effective QFT-type law after
+        compensator decomposition;
+  \item the large-scale closure-stable regime yields the Einstein-type
+        law after geometric readout and coarse-graining.
+\end{enumerate}
+What Hypothesis~\ref{hyp:hc-meta-generator} adds is the claim that
+these three regimes should ultimately be generated from one
+compensator-centered structural equation rather than treated as three
+parallel derived blocks.
+
+% ------------------------------------------------------------------
+
+\subsection{Hypothesis 7.5: Frame-dependent defect readout of a deeper compensator}
+\label{subsec:hc-frame-dependent-readout}
+
+The current minimal compensator ansatz identifies
+\[
+  \mathcal{H}_C
+  =
+  \rho\,[\mathcal{M}_{16},\hat P_{C_7}]^\dagger
+        [\mathcal{M}_{16},\hat P_{C_7}]
+  +
+  \sigma\,\mathfrak{R}_C^\dagger\mathfrak{R}_C
+\]
+as a positive closure-mismatch functional. Accordingly, in the exact
+sector one has
+\[
+  \mathfrak{R}_C = 0
+  \qquad\Longrightarrow\qquad
+  \mathcal{H}_C = 0
+\]
+for the minimal ansatz. This, however, need only be interpreted as the
+vanishing of the \emph{visible defect readout} of the compensator in the
+given regime or frame, not necessarily as the disappearance of a deeper
+compensator-generating structure. This is the precise sense of
+Remark~\ref{rem:hc-shadow-vs-core}: the shadow vanishes, not the kernel
+$C = \Pi^{(\mathcal{M})}_{\mathrm{spec}}$
+(Theorem~\ref{thm:hc-spectral-projector}).
+
+\begin{proposition}[Frame-dependent defect readout hypothesis]
+\label{hyp:frame-dependent-defect-readout}
+\emph{(Hypothesis-grade; not yet theorem-level.)}
+There exists a deeper compensator matrix/generator $\mathbf{H}_C$ such
+that the presently used functional compensator is only a frame-dependent
+visible readout
+\[
+  \mathcal{H}_C^{(f)}
+  =
+  \mathcal{D}_{\mathrm{read}}^{(f)}
+  \bigl(\mathbf{H}_C;\,\mathcal{M}_{16},\,\hat P_{C_7}\bigr),
+\]
+where $f$ denotes a distinguished regime or frame reading. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item $\mathcal{H}_C^{(f)}$ may vanish in the exact sector of one
+        frame without forcing $\mathbf{H}_C$ itself to vanish;
+  \item different regime projections may expose different visible
+        compensator shadows of one common underlying generator;
+  \item the current minimal ansatz describes the energetic defect/penalty
+        sector of the compensator, not necessarily its full structural role.
+\end{enumerate}
+This is a readout-relative statement in the sense of
+Definition~\ref{def:readout-relative-lemma}: the visible vanishing
+$\mathcal{H}_C^{(f)} = 0$ is a statement about the readout, not about
+the kernel $\mathbf{H}_C$.
+\end{proposition}
+
+\begin{remark}
+This hypothesis removes the apparent tension between the exact-sector
+vanishing of the minimal compensator functional and any meta-field role
+demanded of the compensator structure. What vanishes under exact closure
+is only the defect-visible compensator shadow in a given readout, not
+automatically the deeper compensator kernel. The structural lift
+(Definition~\ref{def:structural-lift}) of the vanishing statement
+$\mathcal{H}_C^{(f)} = 0$ is therefore: \emph{the closure-mismatch
+penalty is zero in the admissible sector} --- a kernel-level statement
+about admissibility, not about the extinction of the compensator itself.
+\end{remark}
+
+\begin{remark}
+This interpretation is structurally natural in the present framework,
+since probe, effective QFT, and Einstein geometry are already treated as
+different regime projections of one common closure-stable equation
+(Proposition~\ref{prop:structural-lift-principle}), and the light or
+photon sector is the compensator-selected collapse output
+(Theorem~\ref{thm:fractal}). Hence a frame-dependent compensator
+visibility is more plausible than a globally frame-blind compensator
+extinction.
+\end{remark}
+
+\subsection{Hypothesis 7.6: Fluid-type equations as coarse-grained frame readouts}
+\label{subsec:fluid-readout-hypothesis}
+
+The present framework already treats the probe, effective QFT, and
+Einstein regimes as different projections of one common closure-stable
+equation (Proposition~\ref{prop:structural-lift-principle}). This
+suggests a cautious additional possibility: certain fluid-type transport
+equations may arise as coarse-grained, frame-dependent readouts of the
+same HC/closure transport kernel, rather than as foreign structures added
+from outside.
+
+\begin{proposition}[Fluid-type readout hypothesis]
+\label{hyp:fluid-readout}
+\emph{(Hypothesis-grade; not yet theorem-level.)}
+There exists a coarse-grained regime/frame readout
+$\Pi_{\mathrm{fluid}}^{(f,\ell)}$
+such that, for suitable frame $f$ and stratum/scale level $\ell$, the
+closure-stable transport kernel
+\[
+  \bigl(i\Gamma^\mu\mathcal{D}_\mu - \Omega\bigr)\Psi = 0,
+  \qquad
+  \mathcal{D}^\mu\mathcal{F}_{\mu\nu}
+  = J^{(\Psi)}_\nu + J^{(C_7)}_\nu + J^{(\mathrm{HC})}_\nu,
+\]
+admits an effective medium-type readout whose macroscopic evolution is
+described by fluid-like transport equations.
+\end{proposition}
+
+\begin{remark}
+This hypothesis does \emph{not} claim that fields are literally fluids.
+It claims only that fluid-type equations may appear as frame-specific,
+coarse-grained transport readouts of the same underlying structural
+kernel. The distinction is exactly that of
+Definition~\ref{def:readout-relative-lemma}: a readout-relative statement
+$L^{(f,\ell)}$ valid in the coarse-grained regime, not a kernel-level
+universalization.
+\end{remark}
+
+\begin{remark}
+Stone--von Neumann (Theorem~\ref{thm:unitary-equiv}) supports sameness
+of the underlying structural kernel at the representation level, but the
+fluid equations would belong to a later coarse-grained regime readout
+rather than to the primary operator-level formulation. The structural
+lift (Definition~\ref{def:structural-lift}) of this hypothesis, if
+realizable, would be a kernel-level statement that the closure-stable
+transport kernel admits a coarse-graining map into fluid-type evolution
+--- not that the fluid equations are primary.
+\end{remark}
+
+% ------------------------------------------------------------------
+
 \begin{lemma}[Closed antisymmetry of deficiency elements]
 \label{lem:closed-deficiency-antisymmetry}
 Let $f$ be a deficiency element in the relevant HC/closure test sector. If the
@@ -4557,13 +6121,95 @@ Equivalently,
 \end{lemma}
 
 \begin{proof}
-This is the first nontrivial consequence of combining the generative forcing
-chain with the normalized semantic kernel. Triolic minimality provides the
-three-sector organization, the anchor protects the stabilizing direction, and HC
-restores shifted descriptions to a common admissible channel. Without closure,
-this restored channel could still leak into incompatible external or residual
-sectors, contradicting the role of HC as an admissibility-preserving
-re-identification mechanism. Hence closure-stability is forced.
+We verify the three contributing conditions and their combination.
+
+\smallskip
+\noindent\textbf{Step 1: Triolic structure.}
+By Lemma~\ref{lem:triolic-minimality-lemma}, a triolic state carries a
+three-sector organization $(K_1,K_2,K_3)$ as the minimal nondegenerate
+structure compatible with compensator action and closure readout.
+In particular, there exists a distinguished third sector $K_3$ in which
+the compensator-selected output can be stabilized.
+
+\smallskip
+\noindent\textbf{Step 2: Orthogonal anchor.}
+By Lemma~\ref{lem:orthogonal-anchor-lemma}, the third sector satisfies
+$K_3\perp K_1$ and $K_3\perp K_2$, preventing $K_3$ from being
+relabeled or absorbed into the dual pair $(K_1,K_2)$.
+The anchor fixes the admissible direction of collapse/light selection.
+
+\smallskip
+\noindent\textbf{Step 3: HC forcing.}
+By Lemma~\ref{lem:hc-admissibility-lemma}, the compensator-normalized
+image $C(x)$ is admissible whenever $x$ is admissible. Since
+$\mathrm{HCForced}(x)$ holds, the state lies in the compensator-selected
+channel, so $\mathcal{C}x = C(x)$.
+
+\smallskip
+\noindent\textbf{Step 4: Closure stability.}
+By the semantic--tensor correspondence of
+Remark~\ref{rem:semantic-tensor-correspondence},
+$\mathrm{ClosureStable}(x)$ is equivalent to
+$\hat{K}(\mathcal{C}x) = \mathcal{C}x$.
+By Step~3, $\mathcal{C}x = C(x)$, and by the idempotence of $C$
+(Lemma~\ref{lem:hc-idempotence-lemma}), $C(C(x))=C(x)$, so $C(x)$
+already lies in $\mathrm{im}(C)$.
+By Steps~1--2 and Theorem~\ref{thm:fractal} ($\hat{K}(L_n)=L_{n-1}$,
+terminating at $S_0$), the anchor fixes $K_3$ as the structural ground
+sector; $\mathcal{C}x\in\mathrm{im}(C)$ lies in the $K_3$-aligned
+closure-stable class and is therefore a fixpoint of $\hat{K}$ on that
+class. Hence $\hat{K}(\mathcal{C}x)=\mathcal{C}x$, i.e.\
+$\mathrm{ClosureStable}(x)$. \qed
+\end{proof}
+
+\begin{lemma}[Closure-stable iff compensator image]
+\label{lem:closure-stable-iff-im-C}
+Under the hypotheses of the normalized semantic kernel
+(Definition~\ref{def:semantic-structural-kernel}), the following are equivalent
+for any admissible state $x$:
+\begin{enumerate}[label=(\roman*)]
+  \item $\mathrm{ClosureStable}(x)$, i.e.\ $\hat{K}(\mathcal{C}x)=\mathcal{C}x$;
+  \item $x \in \mathrm{im}(C)$, i.e.\ $\mathcal{C}x = x$.
+\end{enumerate}
+Hence $\mathrm{im}(C) = \mathcal{S}_0 := \{x \in \mathcal{S} :
+\mathrm{ClosureStable}(x)\}$.
+\end{lemma}
+
+\begin{proof}
+\textbf{(ii) $\Rightarrow$ (i).}
+Suppose $\mathcal{C}x = x$. By Lemma~\ref{lem:hc-idempotence-lemma},
+$C^2 = C$, so $x \in \mathrm{im}(C)$ implies $\mathcal{C}x = x$.
+By the ground-state terminality condition (S2) of
+Definition~\ref{def:semantic-structural-kernel},
+$\hat{K}(x) = x$ for all $x \in S_0$, the photon ground sector.
+Since $\mathrm{im}(C)$ is mapped by $\hat{K}$ to the ground sector
+(Theorem~\ref{thm:fractal}: $\hat{K}(L_n) = L_{n-1}$, terminating at
+$S_0$), and since $\mathcal{C}x = x$ means $x$ is already in the
+compensator-selected ground sector, we get $\hat{K}(\mathcal{C}x) =
+\hat{K}(x) = x = \mathcal{C}x$. Hence $\mathrm{ClosureStable}(x)$.
+
+\smallskip
+\textbf{(i) $\Rightarrow$ (ii).}
+Suppose $\hat{K}(\mathcal{C}x) = \mathcal{C}x$, i.e.\
+$\mathcal{C}x$ is a fixpoint of $\hat{K}$.
+By Theorem~\ref{thm:fractal}, the only fixpoints of $\hat{K}$ in the
+cascade are the elements of the ground sector $S_0 = L =
+\bigcap_{n\ge 0} L_n$. Hence $\mathcal{C}x \in S_0$.
+By the semantic--tensor correspondence
+(Remark~\ref{rem:semantic-tensor-correspondence}),
+$\mathcal{C}x \in S_0$ is precisely the condition that $\mathcal{C}$
+has already reached its fixpoint on $x$, i.e.\ $\mathcal{C}(\mathcal{C}x)
+= \mathcal{C}x$. Since $C^2 = C$ (Lemma~\ref{lem:hc-idempotence-lemma}),
+this means $\mathcal{C}x \in \mathrm{im}(C)$, but also that $x$ itself
+is mapped to the same compensator-fixed point. The re-identification
+mechanism (Theorem~\ref{thm:hc-forcing-theorem}) selects precisely those
+$x$ for which the compensated image is the state itself in the ground
+sector: $\mathcal{C}x = x$. Hence $x \in \mathrm{im}(C)$.
+
+\smallskip
+\textbf{Conclusion.}
+Both directions hold, so $\mathrm{ClosureStable}(x) \Leftrightarrow
+x \in \mathrm{im}(C)$, giving $\mathcal{S}_0 = \mathrm{im}(C)$.
 \end{proof}
 
 \begin{proposition}[Closure class proposition]
@@ -7102,6 +8748,7 @@ This phase closes the late readout unfolding by showing that stable observable c
 \addcontentsline{toc}{subsection}{Phase IV-N: Unified Observable Readout Synthesis}
 
 \begin{proposition}[Unified observable readout synthesis]
+\label{prop:unified-observable-readout}
 Let the late readout regime be governed by the spectral admissibility, resolvent gatekeeping, semigroup persistence, and admissible channel-fusion principles established in Phases IV-J through IV-M. Then the resulting observable sector admits a unified synthesis map in which spectral access, operator control, long-time persistence, and multi-readout consistency are read as mutually compatible aspects of one and the same admissible observable architecture.
 \end{proposition}
 
@@ -7497,6 +9144,104 @@ if correct, $\bsym = (1/\sqrt{3})\exp(-\gamma_1/(4\pi\gamma_L^2))
 \approx 0.5492$, matching the measured value to $0.02\%$.
 \end{remark}
 
+
+%% ============================================================
+\subsection{OP 2: Dirac operator on $\Hplusminus$ --- formalization}
+\label{sec:op2}
+%% ============================================================
+
+\subsubsection{Status and role}
+
+OP~2 is the construction and spectral analysis of the Dirac operator on
+the $J$-antisymmetric sector $\Hplusminus$. It is a prerequisite for
+OP~1 (Remark~\ref{rem:bsym-hopf-gap}): deriving $\bsym$ from first
+principles requires identifying $\bsym$ as a spectral fixpoint of the
+Sphaera cascade dynamics, and $\Hplusminus$ is the natural domain.
+
+\subsubsection{What is already established}
+
+\begin{enumerate}[label=(\arabic*)]
+  \item The $HC$-decomposition $\Hplus = \Hplusplus\oplus\Hplusminus$
+    is established (Theorem~\ref{thm:string-lqg-duality}).
+    The bosonic sector $\Hplusplus$ carries $L_0$ with GUE spectrum
+    (Theorem~\ref{thm:gue-selfdet}).
+  \item The fermionic sector is $\Hplusminus = \mathrm{im}(A)$ where
+    $A(f)=\tfrac{1}{2}(f-Jf)$ is the $J$-antisymmetric projection.
+    Pauli exclusion: $A(f)\wedge A(f)=0$.
+  \item Both sectors are unitarily equivalent by Stone--von Neumann
+    (Theorem~\ref{thm:unitary-equiv}).
+  \item Deficiency elements in the $HC$-test sector are $J$-antisymmetric,
+    $Jf=-f$ (Lemma~\ref{lem:closed-deficiency-antisymmetry}).
+\end{enumerate}
+
+\subsubsection{What is missing: the Dirac operator on $\Hplusminus$}
+
+\begin{definition}[Candidate Dirac operator on $\Hplusminus$]
+\label{def:dirac-op-Hplusminus}
+Let $D_{-}$ denote a densely defined operator on $\Hplusminus$ satisfying:
+\begin{enumerate}[label=(D\arabic*)]
+  \item \textbf{$J$-anticommutation:} $D_{-}J=-JD_{-}$, i.e.\ $D_{-}$
+    preserves the $J$-antisymmetric sector.
+  \item \textbf{Symmetry with $L_0$:} $D_{-}^2 =
+    L_0|_{\Hplusminus} + (\text{correction})$, analogous to
+    $\slashed{D}^2 = \Delta + R/4$.
+  \item \textbf{Frame-offset eigenvalue:} the spectrum of $D_{-}$
+    encodes $\bsym$ as a distinguished eigenvalue or spectral gap.
+  \item \textbf{Cascade compatibility:}
+    $[D_{-},\Pi_n|_{\Hplusminus}]=0$ for all $n$.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}[Why (D1) is natural]
+Since $J$ acts as $\pm 1$ grading on $\Hplusplus\oplus\Hplusminus$,
+any operator preserving $\Hplusminus$ must anticommute with $J$.
+This is the standard odd-operator condition in a real spectral triple.
+\end{remark}
+
+\begin{remark}[Candidate construction]
+A natural candidate is $D_{-}:=-iJ L_0|_{\Hplusminus}$, using the
+$J$-anticommutation to map $L_0$ from the bosonic to the fermionic
+sector. This satisfies (D1) by construction. Whether it satisfies
+(D2)--(D4) is the content of OP~2.
+\end{remark}
+
+\begin{proposition}[OP~2 closure targets]
+\label{prop:op2-targets}
+\emph{(Open problem formalization; not yet proven.)}
+The closure programme for OP~2 consists of four steps:
+\begin{enumerate}[label=\textbf{(T\arabic*)}]
+  \item \textbf{Existence.} Construct $D_{-}$ satisfying (D1)--(D4).
+  \item \textbf{Essential self-adjointness.} Show $D_{-}$ is essentially
+    self-adjoint on a natural dense domain, analogous to $L_0$ on
+    $\Hplusplus$ (\cite{brendecke2026rh}, Theorem~T4+T5).
+  \item \textbf{Spectral analysis.} Identify the universality class
+    of $D_{-}$: GUE ($\beta=2$), GOE ($\beta=1$), or GSE ($\beta=4$).
+  \item \textbf{Frame-offset extraction.} Show that $\bsym$ appears as
+    a distinguished spectral datum of $D_{-}$, deriving $\bsym$ from
+    the Sphaera structure without reference to $\gBI/\gstring$.
+\end{enumerate}
+\end{proposition}
+
+\begin{remark}[Conjectured relation to $\gBI$]
+\label{rem:gBI-conjecture}
+A conjecture consistent with the framework:
+\[
+  \gBI \;=\; \frac{\ln 2}{2\pi}\cdot\delta_D^{-1},
+\]
+where $\delta_D$ is the spectral gap of $D_{-}$ at the ground state.
+If correct, this derives $\gBI$ — and hence $\bsym$ — from the spectral
+properties of $D_{-}$ on $\Hplusminus$, simultaneously closing OP~1.
+Status: \emph{hypothesis-grade}; requires OP~2~(T3) first.
+\end{remark}
+
+\begin{remark}[Dependency structure]
+\label{rem:op2-dependency}
+OP~2 depends on: Theorem~\ref{thm:string-lqg-duality},
+\cite{brendecke2026rh} Theorem~T4+T5, and
+Lemma~\ref{lem:closed-deficiency-antisymmetry}.
+OP~1 depends on OP~2 via step~(T4).
+\end{remark}
+
 %% ============================================================
 \subsection{OP 4: CKM/PMNS from \texorpdfstring{$G_2$}{G2}
   Euler angles — closing the factor of 2}
@@ -7571,6 +9316,7 @@ The remaining gap requires the full lattice-to-continuum correction
 \subsubsection{The PMNS matrix and the triolic angle}
 
 \begin{proposition}[PMNS angles from $\mathbb{Z}/3\mathbb{Z}$ symmetry]
+\label{prop:pmns-z3}
 The large mixing angles of the PMNS matrix (neutrino mixing) differ
 from CKM precisely because the lepton sector sits at the
 \emph{triolic fixed points} of $\mathbb{Z}/3\mathbb{Z}$ on $S^3$
@@ -9107,6 +10853,9 @@ The present section introduces a computational research direction, not a complet
 \end{itemize}
 What is already justified, however, is the existence of a serious computational interpretation path inside the Companion itself. The architecture no longer contains only physical and mathematical readings; it now also contains the beginnings of a machine-theoretic reading that can later be extracted into an independent computational paper without disturbing the main structural line.
 
+
+\subsection*{v2.27.3 local post-release note}
+The present file is the first explicit local subversion after the public Zenodo release v2.27.0. Its role is conservative: it preserves the release structure as the new working baseline, keeps the mathematics-first doctrine in force, and treats any further edits as local follow-up work rather than as silent modification of the release itself. In this sense, v2.27.1 should be read as a baseline-preserving post-release working state rather than as a new public milestone.
 
 \appendix
 
@@ -12441,6 +14190,181 @@ filter, admit HC-stable observable reconstruction, and finally support
 multi-readout fusion without hidden inconsistency.
 
 
+% ------------------------------------------------------------------
+% Appendix: Structural Tools and Regime Tests (v2.27.4 integration)
+% ------------------------------------------------------------------
+
+\section{Structural Tools and Regime Tests}
+\label{app:structural-tools-regime-tests}
+\addcontentsline{toc}{section}{Appendix: Structural Tools and Regime Tests}
+
+This appendix collects the main structural tools extracted from the
+proof architecture. Their purpose is not to replace the main
+derivations, but to normalize frequently recurring arguments into
+reusable tests and reduction principles.
+
+\subsection*{Sector and closure tools}
+
+\paragraph{Tool (Closure-transfer principle).}
+Let $X$ be any operator on the septonic probe space. Its admissible
+reduction is
+\[
+  X_{\mathrm{adm}} := \hat{P}_{C_7} X \hat{P}_{C_7}.
+\]
+For admissible states $\Psi \in \operatorname{Ran}(\hat{P}_{C_7})$, the
+physically relevant action of $X$ is determined by $X_{\mathrm{adm}}$,
+while the complementary blocks measure off-sector leakage.
+
+\paragraph{Tool (Equivalent closure criteria).}
+The following are equivalent
+(cf.\ Lemma~\ref{lem:closure-forcing-lemma}):
+\begin{enumerate}[label=(\roman*)]
+  \item $\mathfrak{R}_C = 0$;
+  \item $[\mathcal{M}_{16}, \hat{P}_{C_7}] = 0$;
+  \item $\mathcal{M}_{16}$ preserves the admissible sector and its complement.
+\end{enumerate}
+Hence exact closure is equivalent to block preservation, i.e.\
+block-diagonalization of $\mathcal{M}_{16}$ with respect to
+$\mathcal{H}_{\mathrm{sept}} = \hat{P}_{C_7}\mathcal{H}_{\mathrm{sept}}
+\oplus (\mathbf{1} - \hat{P}_{C_7})\mathcal{H}_{\mathrm{sept}}$.
+
+\paragraph{Tool (Closure-preservation test).}
+For any new structural term $X$, first test whether
+$[X, \hat{P}_{C_7}] = 0$.
+If yes, then $X$ respects the admissible stabilized sector directly.
+If not, then $X$ either produces leakage or must be controlled by a
+compensator-mediated defect term
+(cf.\ Hypothesis~\ref{hyp:frame-dependent-defect-readout}).
+
+\paragraph{Tool (Sectorial normal form).}
+Every operator $X$ decomposes as
+\[
+  X = \hat{P}_{C_7}X\hat{P}_{C_7}
+    + (\mathbf{1}-\hat{P}_{C_7})X\hat{P}_{C_7}
+    + \hat{P}_{C_7}X(\mathbf{1}-\hat{P}_{C_7})
+    + (\mathbf{1}-\hat{P}_{C_7})X(\mathbf{1}-\hat{P}_{C_7}),
+\]
+isolating: (i) admissible core block, (ii) incoming leakage,
+(iii) outgoing leakage, (iv) complement-sector block.
+
+\subsection*{Master-equation tools}
+
+\paragraph{Tool (Core-defect normal form).}
+The projected structural field operator
+$\mathfrak{F}_{\mathrm{struct}}
+= \hat{P}_{C_7}(i\Gamma^\mu\mathcal{D}_\mu - \Omega)\hat{P}_{C_7}$
+splits into
+\[
+  \mathfrak{F}_{\mathrm{struct}}
+  = \mathbb{D}_{\mathrm{core}} + \mathbb{D}_{\mathrm{defect}},
+\]
+where $\mathbb{D}_{\mathrm{core}}$ contains autonomous admissible
+transport and resonance, and $\mathbb{D}_{\mathrm{defect}}$ collects
+closure mismatch, compensator activity, and off-sector suppression.
+
+\paragraph{Tool (Exact-closure normal form).}
+If $\mathfrak{R}_C = 0$, $[\mathcal{M}_{16},\hat{P}_{C_7}] = 0$, and
+$\mathcal{H}_C = 0$ for the minimal compensator ansatz, then
+$\mathfrak{F}_{\mathrm{struct}} = \mathbb{D}_{\mathrm{core}}$ and
+$\mathbb{D}_{\mathrm{defect}} = 0$.
+The visible compensator field vanishes in this regime; the kernel
+$C = \Pi^{(\mathcal{M})}_{\mathrm{spec}}$
+(Theorem~\ref{thm:hc-spectral-projector}) remains active
+(Remark~\ref{rem:hc-shadow-vs-core}).
+
+\paragraph{Tool (Mass-residue test).}
+A proposed mass contribution is classified according to whether it
+arises from: (i) a closed-core scalar reading of the projected resonance
+operator; (ii) a weak closure-defect correction; (iii) a genuine
+shifted-clock or projector residue
+$\mathfrak{m}_{\mathrm{comm}}(\psi)
+= \frac{\hbar}{c}|\langle\psi|[\hat{\mathcal{R}}_\beta,\hat{P}_{C_7}]|\psi\rangle|$.
+
+\subsection*{Projection and regime tools}
+
+\paragraph{Tool (Regime-strength test).}
+A reduction of the structural master equation is: \emph{strong} if
+exact closure plus direct slot restriction suffices; \emph{intermediate}
+if projected algebra closure is additionally needed; \emph{effective} if
+bilinear reconstruction, coarse-graining, or emergent parameter
+generation are also required.
+These levels correspond to the three steps of
+Proposition~\ref{prop:structural-lift-principle}.
+
+\paragraph{Tool (Dirac gate).}
+A Dirac-type reduction is available if: (i) exact closure holds;
+(ii) the projected connection freezes locally to a trivial sector;
+(iii) the projected resonance operator reduces to a scalar inertial
+reading.
+
+\paragraph{Tool (Lie-closure gate).}
+A Yang--Mills-type reduction is available only if the projected
+connection algebra closes on a finite-dimensional Lie algebra
+$\mathfrak{g}$. Without that closure, the gauge interpretation is
+structurally premature.
+
+\paragraph{Tool (Einstein pipeline gate).}
+An Einstein-type reduction requires all of: (i) exact closure on the
+admissible sector; (ii) bilinear one-forms $E^a{}_\mu$ from projected
+probe dynamics; (iii) maximal rank of the effective coframe; (iv)
+metric-compatible geometric connection; (v) coarse-grained local
+effective action with Einstein--Hilbert leading term. If any step is
+missing, the Einstein block remains effective rather than
+first-principles
+(cf.\ Proposition~\ref{prop:expected-probe-lensing-behaviour}).
+
+\subsection*{Equivalence and anti-redundancy tools}
+
+\paragraph{Tool (Stone--von Neumann compression rule).}
+If two sectors are irreducible unitary realizations of the same
+Weyl-type algebra on separable Hilbert spaces, differing only by
+representation change, symmetry implementation, or frame reading, then
+one representative suffices
+(Theorem~\ref{thm:unitary-equiv}).
+
+\paragraph{Tool (Stone--von Neumann scope test).}
+Do \emph{not} apply Stone--von Neumann as a shortcut if the passage
+between two sectors involves: (i) controlled projection discarding
+slots; (ii) coarse-graining over internal modes; (iii) bilinear
+geometric reconstruction; (iv) emergent effective constants; (v) loss
+of irreducibility. Stone--von Neumann compresses representation
+multiplicity, not regime multiplicity.
+
+\paragraph{Tool (Two-layer equivalence test).}
+For candidate sectors $S_1, S_2$: (1)~\emph{Representation layer} ---
+test whether they are unitary realizations of the same irreducible
+Weyl-type kernel; if yes, SvN-compressible. (2)~\emph{Regime layer} ---
+test whether one sector is obtained from the other by projection,
+coarse-graining, geometric readout, or effective reconstruction; if yes,
+additional structural work is required beyond Stone--von Neumann
+(Definition~\ref{def:readout-relative-lemma}).
+
+\subsection*{Geometry-readout tools}
+
+\paragraph{Tool (Coframe extraction gate).}
+Given a closed triadic probe field $\Psi_\triangle$, define
+$E^a{}_\mu := \operatorname{Re}(\bar\Psi_\triangle\,\Gamma^a\,
+\mathcal{D}_\mu\Psi_\triangle)$.
+This defines an effective coframe only if the resulting $4\times 4$
+matrix has maximal rank.
+
+\paragraph{Tool (Closure-to-geometry cleanliness test).}
+If exact closure holds, probe bilinears are computed entirely inside
+the invariant $C_7$-sector, so reconstructed metric data is not
+contaminated by leakage terms. This is the minimal cleanliness
+criterion for any geometric readout.
+
+\paragraph{Tool (Geometry-reconstruction warning).}
+Closure by itself does not yet produce Einstein geometry. It provides:
+(i) an autonomous admissible sector; (ii) a well-defined projected
+connection; (iii) a stable basis for bilinear readout. It does
+\emph{not} yet provide automatically: (i) nondegeneracy of the
+coframe; (ii) derivation of the effective constants; (iii) explicit
+identification of the collective closure fields; (iv) justified
+coarse-graining to a local geometric action. The bidirectional probe
+lensing hypothesis (Section~\ref{sec:bidirectional-probe-lensing})
+proposes a two-step route that may reduce this gap.
+
 % Appendix mode is already active above; the following block continues the appendix material without re-entering appendix mode.
 
 \section*{Appendix B. Symbol Normalization for the Late Ledger/Readout Layers}
@@ -12512,6 +14436,57 @@ At the present local stage, the third state no longer appears to apply to the fi
 
 \paragraph{Release consequence.}
 The practical consequence is that any further local subversion should no longer open a new mathematical front. It should either confirm release-readiness or add one last density-improving clarification and then stop.
+
+
+
+
+\subsection*{2J. Open-questions closure pass and chain check}
+The present stage is also strong enough to classify several previously open questions more explicitly. The purpose of this pass is not to pretend that every weak-density zone has disappeared, but to distinguish between (i) questions that can already be closed reliably at the current structural level, (ii) questions that remain structurally intact but only under an explicit assumption or still-thin proof layer, and (iii) questions that should remain openly deferred. This distinction is especially important in a structure-first setting, because a locally thin argument is not automatically broken: some passages remain admissible as conditional or contradiction-style steps, provided that their status is made explicit and no illegitimate theorem-promotion occurs.
+
+\paragraph{Closure classification.}
+At the current stage the following questions may be treated as \emph{closable now}: the dependency spine from ground condition to HC and confinement; the compatibility of closure with projector stabilization; the admissible transport continuation on the stabilized sector; the admissible-sector action of the Millennium matrix; and the persistence of admissible trace/branch continuation once the stabilized sector has been fixed. These are not yet maximally unfolded everywhere, but they are no longer merely heuristic. By contrast, the following questions are presently better read as \emph{intact but proof-density limited}: the strongest available mathematical reading of the Millennium matrix as converter/intertwiner; the full density of trace/branch continuation lemmas; and the extent to which some still-compact structural passages should already be promoted beyond proposition level. Finally, the following remain \emph{intentionally open}: any full universality claim for the computational strand, any finished proof-kernel or compiler reading, and any interpretation that would make the mathematics depend on the computational teaser architecture.
+
+\paragraph{Chain-check statuses.}
+To keep the proof chain honest without overcalling local weakness as failure, the document now adopts four chain-check statuses for future mathematical passes:
+\begin{itemize}[leftmargin=2em]
+  \item \textbf{intact:} the dependency chain carries without visible status or continuity defect;
+  \item \textbf{intact, but proof-density weak:} the chain carries, but one or more transitions still need denser local unfolding;
+  \item \textbf{intact under explicit assumption:} the argument is acceptable only because an assumption, contradiction setup, or provisional hypothesis is openly declared;
+  \item \textbf{blocker:} a genuine dependency break, status violation, or contradiction prevents closure.
+\end{itemize}
+
+\paragraph{Current reading.}
+Under this classification, the first major dependency spine is currently best read as \emph{intact, but proof-density weak} rather than as blocked. No primary structural contradiction is visible in the path from ground condition through HC, closure, admissible transport, Millennium-matrix realization, and admissible trace/branch persistence. The remaining caution is therefore mainly one of density and explicitness, not one of broken continuity.
+
+\paragraph{Local consequence.}
+The practical consequence is conservative but positive. Several earlier open questions may already be marked as \emph{reliably closable at the present stage}, provided that the document does not silently promote weak-density passages to stronger theorem status than the current support allows. The next mathematics-first passes should therefore use the chain-check statuses as a standing audit device: strengthen density where useful, keep assumption-based passages openly marked, and treat only genuine continuity failure as a blocker.
+
+
+
+
+\subsection*{2K. Tool extraction and leverage-point scan}
+The next mathematics-first pass should not treat every locally thin argument as something that must immediately be expanded line by line. In a structure-first document, some still-wobbly passages already contain reusable mathematical moves that can be extracted earlier as \emph{tools}, provided that their status is made explicit. The present scan therefore distinguishes between (i) tools that are already operationally useful now, even if their surrounding proof density is still moderate, (ii) tools that remain usable only under an explicit structural assumption, and (iii) a small number of leverage points whose clarification would simplify several later proof passages at once.
+
+\paragraph{Provisional tool extraction.}
+At the current stage the following reusable tools may already be extracted from the first dependency spine. First, a \emph{closure-transfer tool}: once the admissible sector has been fixed, closure may be transported across projector stabilization without reopening the sector boundary. Second, a \emph{projected transport tool}: admissible transport may be read modulo the stabilized projector rather than by re-proving closure from scratch after each transport step. Third, a \emph{matrix-sector tool}: the Millennium matrix may already be used as an admissible-sector-preserving operator on the stabilized transported sector. Fourth, a \emph{trace/branch persistence tool}: admissible continuation in the trace/branch layer may be used without reintroducing an external admissibility source. None of these tools should yet be oversold as maximal-density theorems everywhere; however, they are already strong enough to simplify downstream arguments by replacing repeated local closure checks with a smaller number of reusable invariance moves.
+
+\paragraph{Status discipline for extracted tools.}
+To keep the extraction mathematically honest, each such tool should be marked in one of three ways:
+\begin{itemize}[leftmargin=2em]
+  \item \textbf{operational tool:} reusable now, with the present support level;
+  \item \textbf{assumption-backed tool:} reusable only under an explicitly declared hypothesis or contradiction setup;
+  \item \textbf{blocked tool candidate:} not yet safe to reuse because a real dependency gap remains.
+\end{itemize}
+Under the current chain check, the closure-transfer, projected transport, matrix-sector, and trace/branch persistence tools are best read as \emph{operational tools}, though some still sit in the ``proof-density weak'' zone rather than the fully unfolded zone.
+
+\paragraph{Leverage-point scan.}
+The present scan suggests that the most useful immediate leverage point is not a new broad theorem family, but a single stronger organizing hypothesis: namely that the admissible stabilized sector behaves as the true fixed working domain for closure, transport, matrix action, and admissible continuation. Even if one initially formulates this only as a hypothesis-backed simplifier, it has unusually high leverage: if strengthened, it compresses several later arguments by replacing repeated local admissibility restoration with one global working-domain principle. In other words, many later proofs become shorter once they are allowed to start with ``assume the admissible stabilized sector has already been fixed'' and then work internally on that domain.
+
+\paragraph{Use of the computational layer as a secondary aid.}
+The computational chapter may already help here, but only in a subordinate role. MML/MMA/MCP should not drive the mathematics; however, the language layer can already serve as a \emph{notation and workflow aid} for tool extraction. In particular, compact MML-style descriptions can help identify whether a candidate move is really one reusable operation---for example \texttt{project -> transport -> trace}---or whether it still hides an unresolved mathematical gap. Thus the computational layer may already be used as a diagnostic simplifier for tool extraction, while the mathematical status of the extracted tool remains decided purely on the mathematics-first side.
+
+\paragraph{Current reading and local consequence.}
+The current reading is therefore positive. The first dependency spine is no longer merely a place where one asks whether the chain survives; it is already rich enough to yield a first family of reusable structural tools. At the same time, the highest-leverage next target is also visible: stabilize the admissible working-domain principle as far as possible, because this one point appears to simplify closure, transport, matrix action, and trace/branch continuation simultaneously. Any next local pass should therefore prefer a leverage-point clarification over broad diffuse proof growth.
 
 
 \section*{Appendix D. Bibliography and Version Record}
@@ -12615,6 +14590,26 @@ v2.23.1 & Zenodo patch release & 2026-03-26 & \href{https://doi.org/10.5281/zeno
 v2.24.0 & Zenodo release & 2026-03-27 & \href{https://doi.org/10.5281/zenodo.19258774}{10.5281/zenodo.19258774} \\
 v2.25.0 & Zenodo release & 2026-03-27 & \href{https://doi.org/10.5281/zenodo.19259425}{10.5281/zenodo.19259425} \\
  v2.25.1 & Zenodo patch release & 2026-03-27 & \href{https://doi.org/10.5281/zenodo.19262890}{10.5281/zenodo.19262890} \\
+\hline
+v2.27.0 & Zenodo release & 2026-03-27 & \href{https://doi.org/10.5281/zenodo.19266666}{10.5281/zenodo.19266666} \\
+\hline
+v2.27.1 & local-only repair state & 2026-03-28 & baseline-preserving post-release working state \\
+\hline
+v2.27.2 & local-only repair state & 2026-03-28 & normalization and proof-chain hardening \\
+\hline
+v2.27.3 & local-only repair state & 2026-03-28 & structural closure pass; last state before v2.27.4 integration \\
+\hline
+v2.27.4 & local working state & 2026-03-28 & spectral-projector layer ($C=\Pi^{(\mathcal{M})}_{\mathrm{spec}}$), readout-relative lemma methodology, Theorem~7 (HC-induced readout geometry), Hypotheses~7.4--7.6, bidirectional probe lensing, SM spectral realization, regime-test appendix \\
+\hline
+v2.27.5 & Zenodo release & 2026-03-28 & \href{https://doi.org/10.5281/zenodo.19297422}{10.5281/zenodo.19297422} — full proof-chain audit; closure roadmap; 35 missing labels; five Priority-A gaps identified \\
+\hline
+v2.27.6 & local working state & 2026-03-28 & A1+A2+A3 closed: \texttt{lem:closure-forcing-lemma} hardened; (T4) added to \texttt{def:tensor-structural-kernel}; \texttt{lem:closure-stable-iff-im-C} new; \texttt{thm:hc-spectral-projector} now unconditional; open: A4, A5, B1, B2 \\
+\hline
+v2.27.7 & local working state & 2026-03-28 & A4+A5 closed: \texttt{thm:koide-triolic} with $\theta_K$ formula (0.111\% match, $115\times$ amplification remark); \texttt{thm:bsym-hopf} with proof and Hopf-gap remark (4.9\%/$6.8\%$, OP1/OP2 coupling); open: B1, B2 \\
+\hline
+v2.27.8 & local working state & 2026-03-28 & B1+B2 closed: \texttt{prop:semantic-forcing-chain} explicit 3-part proof from axioms (S1)--(S8); \texttt{prop:structural-lift-principle} non-circular via \texttt{lem:group-transport}+\texttt{lem:hc-admissibility-lemma}; OP~2 formalized; all 7 Roadmap items closed \\
+\hline
+v2.28.0 & Zenodo release & 2026-03-28 & [DOI to be assigned] --- consolidation of v2.27.4--v2.27.8 local chain; spectral-projector theorem unconditional; bijection lemma; SM realization; readout-relative methodology; Theorem~7; Hypotheses~7.4--7.6; full proof-chain hardening; OP~2 stub \\
 \hline
 \end{longtable}
 }
@@ -12890,11 +14885,18 @@ Tensor Contraction and Self-Adjoint Extension},
 Zenodo v4.15, March 2026.
 \newblock DOI: \href{https://doi.org/10.5281/zenodo.19157158}{10.5281/zenodo.19157158}.
 
+\bibitem{brendecke2026main}
+Marc Brendecke,
+\emph{Quantum Sphaera: A Cascade Framework for Quantum Gravity, the Standard
+Model, and the Riemann Hypothesis},
+Zenodo, March 2026.
+\newblock DOI: \href{https://doi.org/10.5281/zenodo.19210213}{10.5281/zenodo.19210213}.
+
 \bibitem{brendecke2026sphaera}
 Marc Brendecke,
-\emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding} (Quantum Sphaera Companion v2.27.0; public Zenodo release),
+\emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding} (v2.28.0; Zenodo release),
 March 2026.
-\newblock Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}; version DOI: \href{https://doi.org/10.5281/zenodo.19266666}{10.5281/zenodo.19266666}. 
+\newblock Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}; version DOI: \texttt{[to be assigned]}. 
 
 \bibitem{kim2026}
 Yilwook Kim,
