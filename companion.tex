@@ -31,11 +31,24 @@
 \newtheorem{axiom}{Axiom}
 \newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
 \newcolumntype{Z}{>{\Centering\arraybackslash}X}
+\newcolumntype{P}[1]{>{\RaggedRight\arraybackslash}p{#1}}
 \setlength{\emergencystretch}{2em}
 
 % --- Document metadata ---
-\newcommand{\docversion}{2.30.0}
+\newcommand{\docversion}{3.0.0}
 \newcommand{\docdate}{2 April 2026}
+
+\hypersetup{
+  pdftitle={Quantum Sphaera Companion: A Structure-First Mathematical Unfolding},
+  pdfauthor={Marc Brendecke},
+  pdfsubject={Mathematical companion to the Quantum Sphaera framework},
+  pdfkeywords={Quantum Sphaera, Sphaera-Cascade, structure-first, Heisenberg compensator, Millennium matrix, Riemann hypothesis, mathematical unfolding},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true,
+  bookmarksopenlevel=1,
+  bookmarksnumbered=true,
+  hidelinks
+}
 
 % --- Macros ---
 \newcommand{\bsym}{\beta_{\mathrm{sym}}}
@@ -53,14 +66,13 @@
 \newcommand{\KC}{\hat{K}}
 
 \title{%
-  Quantum Sphaera Companion:\
+  Quantum Sphaera Companion:\\[0.2em]
   A Structure-First Mathematical Unfolding
 }
 \author{%
   Marc Brendecke\\
   \small Independent Researcher, Bochum, Germany\\
   \small Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}\\
-  \small Version DOI: \href{https://doi.org/10.5281/zenodo.19378024}{10.5281/zenodo.19378024}~\\
   \small Companion Paper --- Preprint, not peer reviewed.\\
   \small Technical unfolding of the main Sphaera paper~\cite{brendecke2026main}.
 }
@@ -71,11 +83,13 @@
 \thispagestyle{fancy}
 \begin{center}
 \fbox{\begin{minipage}{0.92\textwidth}
-\small\textbf{Companion status.} This document is the mathematical companion to the current main Quantum Sphaera paper~\cite{brendecke2026main}. It expands and hardens derivations, tools, and structural proof interfaces, but it does not replace the main paper as the leading structural text. In the present release, the Companion is explicitly reorganized around the Millennium matrix as global Heisenberg-compensator matrix, the carrier/group/physical-readout distinction, the master-chain logic from structure-first to stable physical readout, and a reserved computational-reading layer connecting projector logic, Boolean admissibility, and machine-like structural search.
+\small\textbf{Companion status.} This document is the mathematical companion to the current main Quantum Sphaera paper~\cite{brendecke2026main}. It expands and hardens derivations, tools, and structural proof interfaces, but it does not replace the main paper as the leading structural text. In the present public v3.0.0 release, the Companion is explicitly re-centered around the emergent 3.0 branch architecture package $\mathfrak A_{3.0}$, the anchor-chain logic, and the pure/residual operator split. The active Version~3 line now already contains the anchor-flow layer for the cosmological branch, the fermionic residual layer for the lepton branch, and the strong/QCD route in explicit obstruction-freeze form for the hadronic branch; in addition, the line now carries an explicit honest-public-cut criterion that separates a publishable frontier snapshot from a premature closure claim.
 \end{minipage}}
 \end{center}
 \vspace{0.6em}
 
+\phantomsection
+\addcontentsline{toc}{section}{Abstract}
 \begin{abstract}
 The Sphaera-Cascade framework~\cite{brendecke2026main} contains a single
 central observation: within the Sphaera, everything is a representation
@@ -108,19 +122,21 @@ $\gL^k$-corrections with $\gL \approx 1.864$
 
 \medskip
 \noindent\textbf{Release note for v\docversion.}
-This Zenodo release advances the Companion beyond v2.29.9 by promoting the new transport/Teichm"uller layer into a stronger branch-selected field-theory core. Relative to v2.29.9, the present release contributes fresh mathematical structure rather than editorial cleanup:
+This public release opens the Version~3 line from the public v2.30.5 freeze point and consolidates the subsequent local frontier-hardening work into a single aligned publication cut. Its purpose is to publish the current three-front package line honestly: the hadronic obstruction remains explicit, while the anchor-flow and fermionic residual branches are already carried as theorem-bearing package fronts. Relative to v2.30.5, the present release contributes the following directional changes:
 
 \begin{enumerate}[label=(\arabic*), leftmargin=2em]
-\item \textbf{Canonical branch-selected MM/HC field equation introduced.}
-  The reduced transport equation is lifted to a branch-selected equation in which transport, admissibility, projected Millennium dynamics, and the anchored spectral remainder are combined in a single canonical operator law.
-\item \textbf{Coupling reduction and branch normalization made explicit.}
-  The apparent MM/HC couplings are shown to collapse to response ratios or branch-normalized data, with the selected-branch equation retaining only the anchored spectral response as a genuine residual parameter.
-\item \textbf{Variational envelope and local stability added.}
-  The new branch-selected equation is now supported by a residual operator, a quadratic defect functional, and a local stability statement under small admissible branch variations and a spectral-gap hypothesis.
-\item \textbf{Teichm"uller routing extended to bridge blocks.}
-  The Teichm"uller proof route is now applied not only to closure/readout blocks but also to ART/QFT and Einstein/QFT bridge reconstructions, promoting branch selection and defect minimization to an active bridge principle.
-\item \textbf{Parameter collapse sharpened across the new field-theory layer.}
-  Several formerly free couplings and offsets are now reinterpreted as branch readouts, normalizations, or relative response parameters rather than as independent structural inputs.
+\item \textbf{The v3 axis is made explicit.}
+  The document is now read forward from the package $\mathfrak A_{3.0}=(\kappa_*,\mathcal L_{\kappa_*}^{\mathrm{pure}},\mathcal R_{\kappa_*},\eta_{\mathrm{spec}})$ rather than from release-cleanup tasks.
+\item \textbf{The first two Version~3 packages remain explicit.}
+  The cosmological and lepton branches are now gathered into the anchor-flow and fermionic residual packages as the first two theorem-bearing absorption routes of the 3.0 line.
+\item \textbf{The third visible package front is now frozen more sharply.}
+  The strong/QCD route is no longer only a named frontier package: it now carries an explicit branch-derived-readout criterion and an obstruction-freeze statement that cleanly separates genuine residual absorption from placeholder fitting in the hadronic branch.
+\item \textbf{The next upload threshold is now explicitly bifurcated.}
+  The document now distinguishes two admissible next-release modes: an \emph{honest frontier freeze} that publishes the present three-front package line with the hadronic obstruction left explicit, and a later \emph{absorption release} that is justified only once an anchored hadronic readout is actually derived.
+\item \textbf{The version jump is organizational before it is expansive.}
+  No material is shortened or discarded; instead, the existing late-2.x architecture is treated as the stable base from which the first deliberate 3.x theorem package will be unfolded.
+\item \textbf{Public-release metadata are left conservative.}
+  This release now carries the version-specific DOI \href{https://doi.org/10.5281/zenodo.19390358}{10.5281/zenodo.19390358}; the concept DOI remains the persistent external identifier for the Companion line as a whole.
 \end{enumerate}
 \medskip
 \noindent\textbf{Open structural problems (v\docversion).}
@@ -190,7 +206,7 @@ from the matter-frame displacement $\zminus = +\bsym$.
 \medskip
 \noindent\textbf{Frame parameters}
 \begin{description}[leftmargin=1.8em, labelindent=0pt, itemsep=1pt]
-  \item[$\bsym$] Structural frame offset $\sqrt{(\gL-1)/(\gL+1)}\approx 0.5493$
+  \item[$\bsym$] Structural frame offset;\\[-1pt] $\sqrt{(\gL-1)/(\gL+1)}\approx 0.5493$
   \item[$\gL$] Frame Lorentz factor $\gBI/\gstring\approx 1.864$
   \item[$\gBI$] Barbero--Immirzi parameter $\approx 0.2375$
   \item[$\gstring$] String coupling $\ln 2/(\pi\sqrt{3})\approx 0.1274$
@@ -1238,19 +1254,21 @@ The ART--QFT conversion is internally consistent.
 \begin{proposition}[Teichm\"uller-routed ART/QFT bridge]
 \label{prop:teich-art-qft-bridge}
 Let $\Phi^A$ be a closure-compatible state in the hybrid tensor form of
-Section~\ref{subsec:hybrid-tensor-form}, and let $\Delta_\mu(\delta)$ and
+Section~\ref{subsec:hybrid-tensor-form}, and let $\Delta_\mu(\delta)$ with
 $q_{\mathrm{eff}}(\delta)=\Delta_\mu(\delta)dz^2$ denote the effective
-Beltrami defect and its quadratic-differential carrier along the admissible
-deformation line. Then the ART/QFT bridge may be routed through the
+Beltrami defect together with its quadratic-differential carrier along the
+admissible deformation line. Then the ART/QFT bridge routes through the
 Teichm\"uller proof tools as follows:
 \[
-  \text{extremal admissible branch}
-  \Longrightarrow
-  \Delta_\mu(\delta_*)=0
-  \Longrightarrow
-  q_{\mathrm{eff}}(\delta_*)=0
-  \Longrightarrow
-  t\mapsto i\tau_E\ \text{acts on one closure-compatible branch.}
+\begin{aligned}
+  &\text{extremal admissible branch}
+    \Longrightarrow
+    \Delta_\mu(\delta_*)=0
+    \Longrightarrow
+    q_{\mathrm{eff}}(\delta_*)=0 \\
+  &\Longrightarrow
+    t\mapsto i\tau_E\ \text{acts on one closure-compatible branch.}
+\end{aligned}
 \]
 In particular, the Wick-rotated ART/QFT correspondence is taken on the
 same unique admissible branch that already fixes $(\gL,\bsym,\delta_{\mathrm{lattice}})$.
@@ -1273,13 +1291,15 @@ branch.
 \label{thm:art-qft-bridge-teich-route}
 The ART/QFT consistency statement of Theorem~\ref{thm:artqft} is organized by
 \[
-  \text{extremal branch selection}
-  \Longrightarrow
-  \text{Beltrami-defect vanishing}
-  \Longrightarrow
-  \text{quadratic-differential carrier collapse}
-  \Longrightarrow
-  \text{single-branch Wick correspondence.}
+\begin{aligned}
+  &\text{extremal branch selection}
+    \Longrightarrow
+    \text{Beltrami-defect vanishing} \\
+  &\Longrightarrow
+    \text{quadratic-differential carrier collapse}
+    \Longrightarrow
+    \text{single-branch Wick correspondence.}
+\end{aligned}
 \]
 Equivalently, the geometric and QFT readouts are not matched by comparing two
 independent laws, but by reading two regime faces of one Teichm\"uller-selected
@@ -2295,31 +2315,21 @@ The primary assignments are (see Theorem~\ref{thm:k-values-complete}
 for the complete table including new entries from v2.29.7):
 \begin{center}
 \renewcommand{\arraystretch}{1.3}
-\begin{tabular}{llcl}
+\begin{tabularx}{0.98\textwidth}{>{\RaggedRight\arraybackslash}p{0.15\textwidth} >{\RaggedRight\arraybackslash}p{0.27\textwidth} >{\Centering\arraybackslash}p{0.06\textwidth} X}
 \toprule
 Constant & CODATA (matter frame) & $k$ & Reason\\
 \midrule
-$\alpha^{-1}$ & $137.035\,999\,084$ & 1
-  & EM sector, first Dixon plane\\
-$G_N$ & $6.674\times10^{-11}$ m$^3$kg$^{-1}$s$^{-2}$ & 2
-  & torsion block\\
-$m_e c^2$ & $0.511$ MeV & 1
-  & lepton base mode\\
-$\hbar$ & $1.055\times10^{-34}$ J$\cdot$s & 1
-  & CCR from prime lattice\\
-$c$ & $2.998\times10^8$ m\,s$^{-1}$ & 0
-  & Theorem~\ref{thm:kc-zero}\\
-$\gBI$ & $\approx 0.2375$ & 0
-  & frame-invariant by construction\\
-$\gamma_n$ & Riemann zeros & 0
-  & K1 + CCR Step~B + T6 \cite{brendecke2026rh};
-    Theorem~\ref{thm:teich-fixpoint}\\
-$\gL$ & $\approx 1.864$ & 1
-  & $\gL^{(\mathrm{ph})}=\gL^{(\mathrm{m})}/\gL^1 = 1$\\
-$\alpha_s(\mu)$ & running coupling & 1
-  & energy dimension; Remark~\ref{rem:k-qcd}\\
+$\alpha^{-1}$ & $137.035\,999\,084$ & 1 & EM sector, first Dixon plane\\
+$G_N$ & $6.674\times10^{-11}$ m$^3$kg$^{-1}$s$^{-2}$ & 2 & torsion block\\
+$m_e c^2$ & $0.511$ MeV & 1 & lepton base mode\\
+$\hbar$ & $1.055\times10^{-34}$ J$\cdot$s & 1 & CCR from prime lattice\\
+$c$ & $2.998\times10^8$ m\,s$^{-1}$ & 0 & Theorem~\ref{thm:kc-zero}\\
+$\gBI$ & $\approx 0.2375$ & 0 & frame-invariant by construction\\
+$\gamma_n$ & Riemann zeros & 0 & K1 + CCR Step~B + T6 \cite{brendecke2026rh}; Theorem~\ref{thm:teich-fixpoint}\\
+$\gL$ & $\approx 1.864$ & 1 & $\gL^{(\mathrm{ph})}=\gL^{(\mathrm{m})}/\gL^1 = 1$\\
+$\alpha_s(\mu)$ & running coupling & 1 & energy dimension; Remark~\ref{rem:k-qcd}\\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{center}
 \end{theorem}
 
@@ -2466,13 +2476,14 @@ The reduced transport equation restricts the probe dynamics to the admissible de
 \label{thm:dirac-probe-teich-route}
 Theorem~\ref{thm:dirac-probe} can be read through the four-step Teichm\"uller route
 \[
-  \text{extremal selection}
+\begin{aligned}
+  &\text{extremal selection}
   \Longrightarrow
   \text{Beltrami-defect vanishing}
   \Longrightarrow
-  q_{\mathrm{eff}}=0
-  \Longrightarrow
-  \text{unique admissible probe branch},
+  q_{\mathrm{eff}}=0 \\
+  &\Longrightarrow \text{unique admissible probe branch}.
+\end{aligned}
 \]
 and on that branch the minimal first-order closure-preserving law reduces to
 \[
@@ -3126,13 +3137,16 @@ Teichm\"uller-selected branch.
 Under the hypotheses of Proposition~\ref{prop:bilinear-einstein-reconstruction},
 the Einstein/QFT bridge is organized by
 \[
-  \text{extremal branch selection}
-  \Longrightarrow
-  \text{Beltrami-defect vanishing}
-  \Longrightarrow
-  \text{quadratic-differential carrier collapse}
-  \Longrightarrow
-  \text{bilinear coframe reconstruction and effective Einstein/QFT split.}
+\begin{aligned}
+  &\text{extremal branch selection}
+    \Longrightarrow
+    \text{Beltrami-defect vanishing} \\
+  &\Longrightarrow
+    \text{quadratic-differential carrier collapse} \\
+  &\Longrightarrow
+    \text{bilinear coframe reconstruction and} \\
+  &\qquad \text{effective Einstein/QFT split.}
+\end{aligned}
 \]
 Equivalently, the bridge to the Einstein-type effective action is not added on
 top of the QFT sector from outside; it is reconstructed from the same unique
@@ -3827,13 +3841,14 @@ The intertwining hypotheses ensure that the MM action preserves the admissible d
 \label{thm:hc-spectral-projector-teich-route}
 Theorem~\ref{thm:hc-spectral-projector} admits the compressed proof route
 \[
-  \text{extremal admissible correction}
+\begin{aligned}
+  &\text{extremal admissible correction}
   \Longrightarrow
   \Delta_\mu=0
   \Longrightarrow
-  q_{\mathrm{eff}}=0
-  \Longrightarrow
-  \mathcal S_0\ \text{is the unique closure-stable branch},
+  q_{\mathrm{eff}}=0 \\
+  &\Longrightarrow \mathcal S_0\ \text{is the unique closure-stable branch}.
+\end{aligned}
 \]
 from which
 \[
@@ -4372,9 +4387,8 @@ direct leap from closure to metric. The structural lift
 \[
 \begin{aligned}
   &\text{closure-stable probe traces}
-  &&\Longrightarrow\; \text{effective focusing geometry}\
-  &
-  &&\Longrightarrow\; \text{coframe / metric reconstruction}.
+   \Longrightarrow\; \text{effective focusing geometry} \\
+  &\Longrightarrow\; \text{coframe / metric reconstruction}.
 \end{aligned}
 \]
 This could reduce the present model-dependence of the Einstein limit and
@@ -4659,17 +4673,19 @@ would constitute the structural lift
 
 The structural content of the hypothesis is the closed loop
 \[
-  (\mathcal{M}_{16},\hat{P}_{C_7})
-  \;\longrightarrow\;
-  \mathcal{H}_C
-  \;\longrightarrow\;
-  (\mathcal{D}_\mu,\Omega)
-  \;\longrightarrow\;
-  \text{probe-trace curvature data}
-  \;\longrightarrow\;
-  \text{frame projection}
-  \;\longrightarrow\;
-  \text{effective field equation}.
+\begin{aligned}
+  &(\mathcal{M}_{16},\hat{P}_{C_7})
+    \;\longrightarrow\;
+    \mathcal{H}_C
+    \;\longrightarrow\;
+    (\mathcal{D}_\mu,\Omega) \\
+  &\;\longrightarrow\;
+    \text{probe-trace curvature data}
+    \;\longrightarrow\;
+    \text{frame projection}
+    \;\longrightarrow\;
+    \text{effective field equation}.
+\end{aligned}
 \]
 This loop is not a vicious circle. Its purpose is to express that the
 compensator is simultaneously generated by closure, inserted into
@@ -6346,7 +6362,7 @@ the \emph{light axis}. Thus ``light axis'' is not a second object, but the
 physical readout of the structurally prior null axis.
 \end{remark}
 
-\section{The Millennium Matrix as Global Heisenberg-Compensator}
+\section{\texorpdfstring{The Millennium Matrix as Global\\Heisenberg-Compensator}{The Millennium Matrix as Global Heisenberg-Compensator}}
 \label{sec:millennium-hc}
 
 \begin{definition}[Millennium matrix]
@@ -7221,6 +7237,1392 @@ Suppose a scalar readout \(R\) --- for example one built from \(\gamma_L\), \(\b
 \begin{proof}
 Theorem~\ref{thm:local-stability-selected-branch-spectral-gap} controls the branch variation norm by the defect functional, modulo kernel directions. Continuity of \(R\) with respect to that norm therefore transfers small defect to small readout change. The bridge statements follow because the corresponding bridge regimes in the present Companion are read out from the same selected admissible branch data.
 \end{proof}
+
+
+
+
+
+\begin{definition}[Branch curvature-anchor functional]
+\label{def:branch-curvature-anchor-functional}
+Let
+\[
+  B_{\mathrm{br}}:=\hat P_{C_7}\mathcal M_{16}\hat P_{C_7}
+\]
+denote the projected Millennium operator on the selected branch Hilbert space. For every nonzero admissible branch state \(\Psi\) with \(\hat P_{C_7}\Psi=\Psi\) and every real scalar \(\kappa\), define the anchored branch defect by
+\begin{equation}
+  \mathcal K_{\mathrm{br}}(\kappa;\Psi)
+  :=
+  \bigl\|(B_{\mathrm{br}}-\kappa\hat P_{C_7})\Psi\bigr\|^2.
+  \label{eq:branch-curvature-anchor-functional}
+\end{equation}
+A \emph{branch curvature anchor} for \(\Psi\) is a real scalar \(\kappa_{\mathrm{br}}(\Psi)\) minimizing \(\mathcal K_{\mathrm{br}}(\kappa;\Psi)\) over \(\kappa\in\mathbb R\).
+\end{definition}
+
+\begin{proposition}[Unique branch curvature anchor for a fixed branch state]
+\label{prop:unique-branch-curvature-anchor-fixed-state}
+For every nonzero admissible branch state \(\Psi\) with \(\hat P_{C_7}\Psi=\Psi\), the function \(\kappa\mapsto \mathcal K_{\mathrm{br}}(\kappa;\Psi)\) is a strictly convex quadratic polynomial and has the unique minimizer
+\begin{equation}
+  \kappa_{\mathrm{br}}(\Psi)
+  =
+  \frac{\operatorname{Re}\langle \Psi, B_{\mathrm{br}}\Psi\rangle}{\|\Psi\|^2}.
+  \label{eq:unique-branch-curvature-anchor-fixed-state}
+\end{equation}
+Moreover,
+\begin{equation}
+  \mathcal K_{\mathrm{br}}(\kappa;\Psi)
+  =
+  \mathcal K_{\mathrm{br}}(\kappa_{\mathrm{br}}(\Psi);\Psi)
+  +
+  (\kappa-\kappa_{\mathrm{br}}(\Psi))^2\,\|\Psi\|^2.
+  \label{eq:branch-curvature-anchor-completion-square}
+\end{equation}
+Hence no second real anchor can stabilize the same branch state equally well.
+\end{proposition}
+
+\begin{proof}
+Since \(\hat P_{C_7}\Psi=\Psi\), one has
+\[
+  \mathcal K_{\mathrm{br}}(\kappa;\Psi)
+  =
+  \|B_{\mathrm{br}}\Psi\|^2
+  -2\kappa\operatorname{Re}\langle \Psi,B_{\mathrm{br}}\Psi\rangle
+  +\kappa^2\|\Psi\|^2.
+\]
+This is a real quadratic polynomial in \(\kappa\) with positive leading coefficient \(\|\Psi\|^2>0\), hence it is strictly convex and has the unique minimizer given by \eqref{eq:unique-branch-curvature-anchor-fixed-state}. Completing the square yields \eqref{eq:branch-curvature-anchor-completion-square}.
+\end{proof}
+
+\begin{theorem}[Branch curvature anchor and identification with the spectral anchor]
+\label{thm:branch-curvature-anchor-identification}
+Let \(\Psi_*\) be an exact admissible closure-stable branch solution of the canonical branch-selected equation~\eqref{eq:canonical-branch-mmhc}. Assume that the anchored projected Millennium remainder is centered on \(\Psi_*\), i.e.
+\begin{equation}
+  \Delta\mathcal M_{\mathrm{br}}\Psi_*
+  =
+  (B_{\mathrm{br}}-\mu_*\hat P_{C_7})\Psi_*=0.
+  \label{eq:branch-curvature-anchor-centering-condition}
+\end{equation}
+Then the unique branch curvature anchor of \(\Psi_*\) is
+\begin{equation}
+  \kappa_*:=\kappa_{\mathrm{br}}(\Psi_*)=\mu_*.
+  \label{eq:branch-curvature-anchor-identification}
+\end{equation}
+If, in addition, the local spectral-gap hypothesis of Theorem~\ref{thm:local-stability-selected-branch-spectral-gap} holds, then \(\kappa_*\) is the unique nearby admissible anchor for which both the anchored Millennium defect and the branch defect functional remain stationary at \(\Psi_*\).
+\end{theorem}
+
+\begin{proof}
+By \eqref{eq:branch-curvature-anchor-centering-condition} and \(\hat P_{C_7}\Psi_*=\Psi_*\), one has \(B_{\mathrm{br}}\Psi_*=\mu_*\Psi_*\). Therefore
+\[
+  \operatorname{Re}\langle \Psi_*,B_{\mathrm{br}}\Psi_*\rangle
+  =
+  \mu_*\|\Psi_*\|^2,
+\]
+and Proposition~\ref{prop:unique-branch-curvature-anchor-fixed-state} gives \(\kappa_{\mathrm{br}}(\Psi_*)=\mu_*\), proving \eqref{eq:branch-curvature-anchor-identification}. Under the spectral-gap hypothesis, Theorem~\ref{thm:local-stability-selected-branch-spectral-gap} shows that \(\Psi_*\) is locally isolated modulo kernel directions as a zero-defect branch state. Since Proposition~\ref{prop:unique-branch-curvature-anchor-fixed-state} gives strict convexity in \(\kappa\), no second nearby real anchor can keep both the anchored Millennium defect and the branch defect simultaneously stationary at \(\Psi_*\).
+\end{proof}
+
+\begin{remark}[Why the curvature anchor is not a new free assumption]
+\label{rem:why-curvature-anchor-not-new-assumption}
+The scalar \(\kappa_*\) is not introduced here as an additional arbitrary constant. It is extracted from the already selected admissible branch by minimizing the anchored projected Millennium defect and is then identified with the previously used spectral anchor \(\mu_*\) whenever the centered branch condition~\eqref{eq:branch-curvature-anchor-centering-condition} holds. In this way the ``fixed curvature point'' of the matrix becomes a derived branch stabilizer rather than a new external input.
+\end{remark}
+
+\begin{proposition}[Curvature anchor determines the scalar branch data]
+\label{prop:curvature-anchor-determines-scalar-branch-data}
+Assume the hypotheses of Theorem~\ref{thm:branch-curvature-anchor-identification} and the effective Teichm"uller branch description of Definition~\ref{def:teichmueller-proof-tools-reduced}. Then the branch curvature anchor coincides with the effective Beltrami value at the unique extremal branch point:
+\begin{equation}
+  \kappa_* = \mu_* = \mu_{\mathrm{eff}}(\delta_{\mathrm{lattice}}) = \bsym^2 = \frac{\gL-1}{\gL+1}.
+  \label{eq:curvature-anchor-scalar-branch-data}
+\end{equation}
+Consequently, the scalar branch data are recovered from the curvature anchor by
+\begin{equation}
+  \gL = \frac{1+\kappa_*}{1-\kappa_*},
+  \qquad
+  \bsym = \sqrt{\kappa_*},
+  \qquad
+  \delta_{\mathrm{lattice}} = \frac{\gL}{\mathbb T} = \frac{1+\kappa_*}{\mathbb T(1-\kappa_*)}.
+  \label{eq:curvature-anchor-recovers-branch-data}
+\end{equation}
+In particular, no additional independent scalar branch selector survives beyond \(\kappa_*\).
+\end{proposition}
+
+\begin{proof}
+By Proposition~\ref{prop:extremal-selection-reduced}, the selected admissible branch is realized at the unique extremal correction \(\delta_{\mathrm{lattice}}\). Proposition~\ref{prop:beltrami-defect-routing-reduced} then gives \(\Delta_\mu(\delta_{\mathrm{lattice}})=0\), hence \(\mu_{\mathrm{eff}}(\delta_{\mathrm{lattice}})=\mu_*\). By Definition~\ref{def:teichmueller-proof-tools-reduced}, \(\mu_{\mathrm{eff}}=\bsym^2\), while the standing branch relation gives \(\bsym^2=(\gL-1)/(\gL+1)\). Finally, Theorem~\ref{thm:branch-curvature-anchor-identification} yields \(\kappa_*=\mu_*\), proving \eqref{eq:curvature-anchor-scalar-branch-data}. Solving the Möbius relation \(\kappa_*=(\gL-1)/(\gL+1)\) for \(\gL\) gives the first formula in \eqref{eq:curvature-anchor-recovers-branch-data}; the remaining two follow from \(\bsym^2=\kappa_*\) and \(\gL=\mathbb T\,\delta_{\mathrm{lattice}}\).
+\end{proof}
+
+\begin{remark}[What the curvature anchor buys us]
+\label{rem:what-curvature-anchor-buys-us}
+The scalar \(\kappa_*\) is no longer merely an anchored Millennium readout. Once the branch has been selected, it packages the effective Beltrami value, the frame ratio \(\gL\), the frame offset \(\bsym\), and the minimal lattice correction \(\delta_{\mathrm{lattice}}\) into one branch constant. This is precisely the sense in which the apparent extra curvature datum collapses to a derived scalar branch selector rather than introducing a new degree of freedom.
+\end{remark}
+
+\begin{theorem}[Anchor chain equivalence on the selected branch]
+\label{thm:anchor-chain-equivalence-selected-branch}
+Assume the hypotheses of Theorem~\ref{thm:branch-curvature-anchor-identification} and Proposition~\ref{prop:curvature-anchor-determines-scalar-branch-data}. Then on the unique admissible closure-stable branch the five scalar quantities
+\[
+  \kappa_*,\qquad
+  \mu_*,\qquad
+  \bsym^2,\qquad
+  \gL,\qquad
+  \delta_{\mathrm{lattice}}
+\]
+form a single equivalent anchor chain: any one of them determines the remaining four uniquely by the algebraic relations
+\begin{equation}
+  \kappa_* = \mu_* = \bsym^2 = \frac{\gL-1}{\gL+1},
+  \qquad
+  \gL = \mathbb T\,\delta_{\mathrm{lattice}},
+  \label{eq:anchor-chain-equivalence-core}
+\end{equation}
+and hence by
+\begin{equation}
+  \gL = \frac{1+\kappa_*}{1-\kappa_*},
+  \qquad
+  \bsym = \sqrt{\kappa_*},
+  \qquad
+  \delta_{\mathrm{lattice}} = \frac{1+\kappa_*}{\mathbb T(1-\kappa_*)},
+  \qquad
+  \kappa_* = \frac{\mathbb T\,\delta_{\mathrm{lattice}}-1}{\mathbb T\,\delta_{\mathrm{lattice}}+1}.
+  \label{eq:anchor-chain-equivalence-inverses}
+\end{equation}
+In particular, the selected branch admits exactly one scalar anchor datum up to equivalent reparametrization.
+\end{theorem}
+
+\begin{proof}
+Equation~\eqref{eq:curvature-anchor-scalar-branch-data} gives
+\(\kappa_* = \mu_* = \bsym^2 = (\gL-1)/(\gL+1)\), while
+\eqref{eq:curvature-anchor-recovers-branch-data} gives
+\(\gL=\mathbb T\,\delta_{\mathrm{lattice}}\).
+This proves \eqref{eq:anchor-chain-equivalence-core}. Solving the Möbius relation
+\(\kappa_*=(\gL-1)/(\gL+1)\) for \(\gL\) and substituting
+\(\gL=\mathbb T\,\delta_{\mathrm{lattice}}\) yields
+\eqref{eq:anchor-chain-equivalence-inverses}. Hence every member of the chain recovers all others uniquely.
+\end{proof}
+
+\begin{corollary}[Anchor-chain proof routing]
+\label{cor:anchor-chain-proof-routing}
+Any later argument that depends on branch selection only through one scalar branch datum may be routed through the anchor chain. Concretely, one may choose whichever representative is most convenient --- curvature anchor \(\kappa_*\), spectral anchor \(\mu_*\), frame offset \(\bsym\), frame ratio \(\gL\), or lattice correction \(\delta_{\mathrm{lattice}}\) --- and transport the conclusion to the other scalar readouts through \eqref{eq:anchor-chain-equivalence-core}--\eqref{eq:anchor-chain-equivalence-inverses}.
+\end{corollary}
+
+\begin{remark}[What the anchor chain buys us]
+\label{rem:what-anchor-chain-buys-us}
+The selected branch no longer carries several apparently different scalar selectors. It carries one scalar branch constant with five interchangeable presentations. This means that later proofs can be organized according to convenience: extremal and Teichm\"uller arguments may run through \(\delta_{\mathrm{lattice}}\), transport/readout arguments through \(\gL\) or \(\bsym\), and spectral or matrix-centering arguments through \(\kappa_*\) or \(\mu_*\), without introducing any new scalar freedom.
+\end{remark}
+
+\begin{proposition}[Anchor-chain normalization of scalar readouts]
+\label{prop:anchor-chain-normalization-scalar-readouts}
+Assume the hypotheses of Theorem~\ref{thm:anchor-chain-equivalence-selected-branch}. Then the principal scalar readouts of the selected branch may all be written as functions of the single anchor parameter $\kappa_*$. Concretely:
+\begin{enumerate}[label=(\roman*)]
+  \item the permanent dark-offset readout of Theorem~\ref{thm:dark-offset} satisfies
+  \[
+    \bsym^2=\kappa_*,
+    \qquad
+    \Lambda_{\mathrm{eff}}\sim \kappa_*\,\rho_P,
+    \qquad
+    \frac{\Omega_\Lambda}{\Omega_M}\approx \frac{\kappa_*}{\gstring};
+  \]
+  \item the Koide phase of Theorem~\ref{thm:koide-triolic} is normalized by
+  \[
+    \theta_K = \pi-\sqrt2\,\arcsin(\sqrt{\kappa_*});
+  \]
+  \item the Hawking frame amplification of Proposition~\ref{prop:hawking-gBI-tachyon} is normalized by
+  \[
+    \frac{T_{\mathrm{loc}}}{T_H}=\frac{1}{\sqrt{\kappa_*}},
+    \qquad
+    \gBI=\gstring\,\frac{1+\kappa_*}{1-\kappa_*};
+  \]
+  \item the ART/QFT observer position in Theorem~\ref{thm:artqft} is normalized by
+  \[
+    \frac{r_0}{r_S}=\frac{1}{1-\kappa_*};
+  \]
+  \item the Einstein/QFT and ART/QFT bridge readouts inherit the same normalization because their branch data are exactly the anchor-chain data fixed by $\kappa_*$.
+\end{enumerate}
+In particular, no additional independent scalar normalization constant is needed across these readout blocks once the selected branch has been fixed.
+\end{proposition}
+
+\begin{proof}
+By Theorem~\ref{thm:anchor-chain-equivalence-selected-branch}, one has $\bsym^2=\kappa_*$ and $\gL=(1+\kappa_*)/(1-\kappa_*)$. The dark-offset identities therefore follow immediately from Theorem~\ref{thm:dark-offset}. The Koide phase formula from Theorem~\ref{thm:koide-triolic} is exactly $\theta_K=\pi-\sqrt2\arcsin(\bsym)$, hence substituting $\bsym=\sqrt{\kappa_*}$ yields the displayed expression. For the Hawking readout, Proposition~\ref{prop:hawking-gBI-tachyon} and Theorem~\ref{thm:hybrid-hawking-proof} already identify $T_{\mathrm{loc}}/T_H=1/\bsym$ and $\gBI=\gstring\gL$ on the selected branch; substituting the anchor-chain formulas gives the asserted normalization. Likewise, Theorem~\ref{thm:artqft} fixes the natural observer position by $r_0/r_S=1/(1-\bsym^2)=1/(1-\kappa_*)$. Finally, the Teichm\"uller-routed bridge theorems for ART/QFT and Einstein/QFT read both bridge regimes on the same unique admissible branch, so their scalar branch data are already those determined by $\kappa_*$.
+\end{proof}
+
+\begin{theorem}[Anchor-chain routing for physical readouts]
+\label{thm:anchor-chain-routing-physical-readouts}
+On the selected branch, the physical readout blocks may be organized by the single routing principle
+\[
+\begin{aligned}
+  &\kappa_*
+  \Longrightarrow
+  (\bsym,\gL,\delta_{\mathrm{lattice}}) \\
+  &\Longrightarrow \text{dark-offset, Koide, Hawking, ART/QFT, Einstein/QFT readouts.}
+\end{aligned}
+\]
+Equivalently, once the scalar anchor $\kappa_*$ has been fixed, the major scalar physical readouts of the Companion no longer require separate branch-by-branch normalization arguments.
+\end{theorem}
+
+\begin{proof}
+The first implication is exactly Theorem~\ref{thm:anchor-chain-equivalence-selected-branch}. Proposition~\ref{prop:anchor-chain-normalization-scalar-readouts} shows that each of the listed physical readout blocks depends only on the resulting anchor-chain data and introduces no further independent scalar selector. Thus all of these readouts are routed by the same scalar anchor and differ only in which anchor-chain representative is most convenient for the final formula.
+\end{proof}
+
+\begin{remark}[What the anchor chain buys us for physical readouts]
+\label{rem:what-anchor-chain-buys-us-for-readouts}
+Before this step, the dark-offset, Koide, Hawking, and bridge blocks still looked as though each one needed its own scalar normalization story. The anchor chain shows that this is no longer the right picture. The separate formulas remain, but their scalar normalization is shared. The only genuine branch constant is $\kappa_*$, with $\bsym$, $\gL$, and $\delta_{\mathrm{lattice}}$ serving as equivalent presentations chosen according to convenience.
+\end{remark}
+\begin{corollary}[Readout hierarchy under the anchor chain]
+\label{cor:readout-hierarchy-under-anchor-chain}
+On the selected branch, the principal scalar readouts split into a strict hierarchy under the single anchor constant $\kappa_*$:
+\[
+  \kappa_*
+  \Longrightarrow
+  (\bsym,\gL,\delta_{\mathrm{lattice}})
+  \Longrightarrow
+  \begin{cases}
+    \text{dark-offset and cosmological normalization},\\
+    \text{Koide phase},\\
+    \text{Hawking frame amplification},\\
+    \text{ART/QFT and Einstein/QFT bridge positions.}
+  \end{cases}
+\]
+The first arrow is branch-internal and invertible by Theorem~\ref{thm:anchor-chain-equivalence-selected-branch}; the second arrow consists only of readout formulas and introduces no further scalar selector.
+\end{corollary}
+
+\begin{remark}[Why the hierarchy matters for the next patch boundary]
+\label{rem:why-readout-hierarchy-matters}
+The anchor chain does more than simplify notation. It separates branch selection from readout interpretation across the major physical blocks. This is exactly the kind of global normalization gain that justifies treating the present pass as a patch-worthy mathematical advance rather than as another local appendix refinement.
+\end{remark}
+
+
+
+\begin{proposition}[Anchor-normalized form of the canonical branch-selected equation]
+\label{prop:anchor-normalized-canonical-branch-equation}
+Assume the hypotheses of Theorem~\ref{thm:anchor-chain-equivalence-selected-branch}. Define the anchor-normalized transport operator on the selected branch by
+\begin{equation}
+  \mathcal D_{\mu}^{(\kappa_*)}
+  :=
+  \hat P_{C_7}\,\mathcal T_{\gamma(\kappa_*)}(\beta(\kappa_*))\,\mathcal D_\mu\,
+  \mathcal T_{\gamma(\kappa_*)}(\beta(\kappa_*))^{-1}\,\hat P_{C_7},
+  \label{eq:anchor-normalized-branch-transport}
+\end{equation}
+where
+\begin{equation}
+  \gamma(\kappa_*)=\frac{1+\kappa_*}{1-\kappa_*},
+  \qquad
+  \beta(\kappa_*)=\sqrt{\kappa_*}.
+  \label{eq:anchor-normalized-branch-data}
+\end{equation}
+Then the canonical branch-selected MM/HC field equation~\eqref{eq:canonical-branch-mmhc-dimensionless} is equivalently written as
+\begin{equation}
+  \left(
+  \frac{i}{m_{\mathrm{br}}}\Gamma^\mu\mathcal D_{\mu}^{(\kappa_*)}
+  - \mathbf 1
+  - \eta_{\mathrm{spec}}\bigl(\hat P_{C_7}\mathcal M_{16}\hat P_{C_7}-\kappa_*\hat P_{C_7}\bigr)
+  \right)\Psi = 0,
+  \qquad
+  \Psi=\hat P_{C_7}\Psi.
+  \label{eq:anchor-normalized-canonical-branch-equation}
+\end{equation}
+In particular, after branch selection the dimensionless equation depends on the branch only through the single scalar anchor \(\kappa_*\) and on the residual on-branch response only through \(\eta_{\mathrm{spec}}\).
+\end{proposition}
+
+\begin{proof}
+Theorem~\ref{thm:anchor-chain-equivalence-selected-branch} gives
+\(\gamma_L=\gamma(\kappa_*)\) and \(\beta_{\mathrm{sym}}=\beta(\kappa_*)\). Substituting these identities into the branch transport operator \eqref{eq:canonical-branch-mmhc} yields \eqref{eq:anchor-normalized-branch-transport}. The same theorem and Proposition~\ref{prop:curvature-anchor-determines-scalar-branch-data} identify the anchored spectral scalar with \(\mu_*=\kappa_*\). Inserting these two replacements into the dimensionless branch-selected equation \eqref{eq:canonical-branch-mmhc-dimensionless} gives \eqref{eq:anchor-normalized-canonical-branch-equation}. No further scalar branch selector remains by Corollary~\ref{cor:no-hidden-branch-selector}.
+\end{proof}
+
+\begin{corollary}[One-parameter branch hierarchy modulo residual response]
+\label{cor:one-parameter-branch-hierarchy}
+On the selected branch, the reduced transport equation, the canonical branch-selected MM/HC field equation, the pure branch Dirac sector, and the principal scalar readouts are all routed by the same scalar anchor \(\kappa_*\), with at most one additional dimensionless residual response ratio \(\eta_{\mathrm{spec}}\) surviving in the non-pure branch sector. Equivalently,
+\[
+\begin{aligned}
+  &\kappa_*
+    \Longrightarrow
+    \bigl(\mathcal D_{\mu}^{(\kappa_*)},\;\hat P_{C_7}\mathcal M_{16}\hat P_{C_7}-\kappa_*\hat P_{C_7}\bigr) \\
+  &\Longrightarrow
+    \left\{
+    \begin{aligned}
+      &\text{anchor-normalized branch equation},\\
+      &\text{pure branch Dirac sector when the residual vanishes},\\
+      &\text{dark-offset, Koide, Hawking, ART/QFT,}\\
+      &\qquad \text{Einstein/QFT readouts.}
+    \end{aligned}
+    \right.
+\end{aligned}
+\]
+Thus the present Companion architecture already exhibits a one-parameter branch hierarchy up to the residual on-branch spectral response.
+\end{corollary}
+
+\begin{proof}
+The anchor-normalized branch equation is Proposition~\ref{prop:anchor-normalized-canonical-branch-equation}. The pure branch Dirac sector is Corollary~\ref{cor:pure-branch-dirac}, in which the residual anchored Millennium term vanishes. The scalar readout routing is Theorem~\ref{thm:anchor-chain-routing-physical-readouts}. Hence all of the listed blocks are controlled by the same scalar anchor \(\kappa_*\), with \(\eta_{\mathrm{spec}}\) remaining only as the residual non-pure branch response ratio.
+\end{proof}
+
+\begin{remark}[What the anchor-normalized hierarchy buys us]
+\label{rem:what-anchor-normalized-hierarchy-buys-us}
+The field-equation side and the readout side are now normalized by the same anchor chain. This means that the present architecture is already much closer to a genuinely unified branch theory than the older layered companion states: branch selection, transport, anchored Millennium centering, and the principal scalar readouts no longer carry separate scalar normalizations. The remaining distinction is only whether a nonzero residual spectral response survives on the selected branch.
+\end{remark}
+
+
+\begin{proposition}[Residual-purity criterion on the selected branch]
+\label{prop:residual-purity-criterion-selected-branch}
+Assume the hypotheses of Proposition~\ref{prop:anchor-normalized-canonical-branch-equation}, and write
+\[
+  \Delta\mathcal M_{\mathrm{br}}
+  :=
+  \hat P_{C_7}\mathcal M_{16}\hat P_{C_7}-\kappa_*\hat P_{C_7}.
+\]
+Then for a selected-branch state $\Psi=\hat P_{C_7}\Psi$, the anchor-normalized equation
+\eqref{eq:anchor-normalized-canonical-branch-equation} reduces to the pure branch Dirac sector whenever either
+\[
+  \eta_{\mathrm{spec}}=0
+  \qquad\text{or}\qquad
+  \Delta\mathcal M_{\mathrm{br}}\Psi=0.
+\]
+In particular, along the exact closure-stable branch the residual response disappears at the level of the state equation as soon as the anchored projected Millennium remainder annihilates the selected branch state.
+\end{proposition}
+
+\begin{proof}
+The anchor-normalized branch equation \eqref{eq:anchor-normalized-canonical-branch-equation} differs from the pure branch Dirac equation only by the residual term
+\[
+  \eta_{\mathrm{spec}}\,\Delta\mathcal M_{\mathrm{br}}\Psi.
+\]
+If $\eta_{\mathrm{spec}}=0$, this term vanishes identically. If instead $\Delta\mathcal M_{\mathrm{br}}\Psi=0$, it vanishes on the selected branch state even for nonzero $\eta_{\mathrm{spec}}$. In either case the equation collapses to Corollary~\ref{cor:pure-branch-dirac}. Conversely, on a selected branch state the only obstruction to the pure branch Dirac sector inside \eqref{eq:anchor-normalized-canonical-branch-equation} is precisely the residual anchored Millennium term.
+\end{proof}
+
+\begin{theorem}[Small residual-response regime around the pure branch sector]
+\label{thm:small-residual-response-regime-selected-branch}
+Assume the hypotheses of Proposition~\ref{prop:residual-purity-criterion-selected-branch}. Let
+\[
+  \mathcal L_{\kappa_*}^{\mathrm{pure}}
+  :=
+  \frac{i}{m_{\mathrm{br}}}\Gamma^\mu\mathcal D_{\mu}^{(\kappa_*)}-\mathbf 1,
+\]
+so that the anchor-normalized branch equation reads
+\[
+  \bigl(\mathcal L_{\kappa_*}^{\mathrm{pure}}-\eta_{\mathrm{spec}}\Delta\mathcal M_{\mathrm{br}}\bigr)\Psi=0.
+\]
+Then every selected-branch state satisfies the perturbative estimate
+\[
+  \|\mathcal L_{\kappa_*}^{\mathrm{pure}}\Psi\|
+  =
+  |\eta_{\mathrm{spec}}|\,\|\Delta\mathcal M_{\mathrm{br}}\Psi\|
+  \le
+  |\eta_{\mathrm{spec}}|\,\|\Delta\mathcal M_{\mathrm{br}}\|\,\|\Psi\|.
+\]
+Hence the selected branch is a controlled perturbation of the pure branch Dirac sector whenever either $|\eta_{\mathrm{spec}}|\ll 1$ or $\|\Delta\mathcal M_{\mathrm{br}}\|$ is small on the selected branch.
+\end{theorem}
+
+\begin{proof}
+Rearranging \eqref{eq:anchor-normalized-canonical-branch-equation} gives
+\[
+  \mathcal L_{\kappa_*}^{\mathrm{pure}}\Psi
+  =
+  \eta_{\mathrm{spec}}\Delta\mathcal M_{\mathrm{br}}\Psi.
+\]
+Taking norms yields the identity
+\[
+  \|\mathcal L_{\kappa_*}^{\mathrm{pure}}\Psi\|
+  =
+  |\eta_{\mathrm{spec}}|\,\|\Delta\mathcal M_{\mathrm{br}}\Psi\|,
+\]
+from which the operator-norm estimate follows immediately. Therefore the deviation from the pure branch Dirac sector is uniformly controlled by the product of the residual-response ratio and the anchored projected Millennium remainder.
+\end{proof}
+
+\begin{remark}[What this pass adds beyond the one-parameter hierarchy]
+\label{rem:what-residual-purity-pass-adds}
+The one-parameter hierarchy of Corollary~\ref{cor:one-parameter-branch-hierarchy} is now sharpened in two useful ways. First, the exact disappearance of the remaining non-pure branch term is characterized intrinsically by Proposition~\ref{prop:residual-purity-criterion-selected-branch}. Second, even before exact disappearance, Theorem~\ref{thm:small-residual-response-regime-selected-branch} shows that the branch-selected equation is quantitatively close to the pure branch Dirac sector whenever the residual ratio or the anchored remainder is small. Thus $\eta_{\mathrm{spec}}$ is no longer just ``the last surviving parameter'' but a controlled residual-response measure.
+\end{remark}
+
+
+\begin{proposition}[Residual-response coefficient as a branch readout]
+\label{prop:eta-spec-as-branch-readout}
+Assume the hypotheses of Theorem~\ref{thm:small-residual-response-regime-selected-branch}. Let $\Psi=\hat P_{C_7}\Psi$ solve the anchor-normalized branch equation \eqref{eq:anchor-normalized-canonical-branch-equation}, and assume
+\[
+  \Delta\mathcal M_{\mathrm{br}}\Psi\neq 0.
+\]
+Then the residual-response coefficient is uniquely determined by the selected branch state via
+\begin{equation}
+  \eta_{\mathrm{spec}}
+  =
+  \frac{\langle \Delta\mathcal M_{\mathrm{br}}\Psi,\,\mathcal L_{\kappa_*}^{\mathrm{pure}}\Psi\rangle}
+       {\|\Delta\mathcal M_{\mathrm{br}}\Psi\|^2},
+  \label{eq:eta-spec-branch-readout-quotient}
+\end{equation}
+and in particular its modulus satisfies
+\begin{equation}
+  |\eta_{\mathrm{spec}}|
+  =
+  \frac{\|\mathcal L_{\kappa_*}^{\mathrm{pure}}\Psi\|}
+       {\|\Delta\mathcal M_{\mathrm{br}}\Psi\|}.
+  \label{eq:eta-spec-branch-readout-modulus}
+\end{equation}
+Thus $\eta_{\mathrm{spec}}$ is not an additional branch selector; on the non-pure selected branch it is a readout of the ratio between the pure-Dirac residual and the anchored Millennium residual.
+\end{proposition}
+
+\begin{proof}
+By Theorem~\ref{thm:small-residual-response-regime-selected-branch}, every selected-branch solution satisfies
+\[
+  \mathcal L_{\kappa_*}^{\mathrm{pure}}\Psi
+  =
+  \eta_{\mathrm{spec}}\,\Delta\mathcal M_{\mathrm{br}}\Psi.
+\]
+Taking the inner product with $\Delta\mathcal M_{\mathrm{br}}\Psi$ gives \eqref{eq:eta-spec-branch-readout-quotient}, because the denominator is nonzero by hypothesis. Uniqueness follows immediately: if two coefficients produced the same vector equation, their difference would multiply the nonzero vector $\Delta\mathcal M_{\mathrm{br}}\Psi$, hence would vanish. Taking norms in the same identity yields \eqref{eq:eta-spec-branch-readout-modulus}.
+\end{proof}
+
+\begin{corollary}[No free residual scalar survives once the branch state is fixed]
+\label{cor:no-free-residual-scalar-after-branch-fixing}
+Fix a selected-branch state $\Psi=\hat P_{C_7}\Psi$ with $\Delta\mathcal M_{\mathrm{br}}\Psi\neq 0$. Then the pair
+\[
+  (\kappa_*,\eta_{\mathrm{spec}})
+\]
+is completely determined by
+\[
+  \kappa_*
+  \quad\text{and}\quad
+  \frac{\mathcal L_{\kappa_*}^{\mathrm{pure}}\Psi}{\Delta\mathcal M_{\mathrm{br}}\Psi}
+  \ \text{on the selected branch},
+\]
+so that no further independent scalar degree of freedom remains in the anchor-normalized state equation.
+\end{corollary}
+
+\begin{proof}
+The anchor scalar $\kappa_*$ determines the branch data by Theorem~\ref{thm:anchor-chain-equivalence-selected-branch}. Proposition~\ref{prop:eta-spec-as-branch-readout} then determines $\eta_{\mathrm{spec}}$ uniquely from the selected-branch state equation whenever $\Delta\mathcal M_{\mathrm{br}}\Psi\neq 0$. Hence no additional residual scalar remains free after branch fixing.
+\end{proof}
+
+\begin{remark}[What this stronger residual pass buys us]
+\label{rem:what-stronger-residual-pass-buys-us}
+The last remaining scalar in the anchor-normalized hierarchy no longer floats as a formal response parameter. Either it vanishes and one is in the pure branch Dirac sector, or on the non-pure selected branch it is itself read off from the ratio between the pure-Dirac residual and the anchored Millennium residual. This is exactly the kind of collapse one wants before a larger architectural jump: the branch carries one anchor scalar, and even the remaining impurity coefficient is read out rather than freely chosen.
+\end{remark}
+
+
+\begin{theorem}[Scalar completion of the anchor-normalized branch hierarchy]
+\label{thm:scalar-completion-anchor-normalized-hierarchy}
+Assume the hypotheses of Corollary~\ref{cor:no-free-residual-scalar-after-branch-fixing}. Then every scalar quantity entering the selected-branch hierarchy is determined by the pair
+\[
+  (\kappa_*,\eta_{\mathrm{spec}}),
+\]
+where $\kappa_*$ fixes the branch data
+\[
+  \beta_{\mathrm{sym}}=\sqrt{\kappa_*},\qquad
+  \gamma_L=\frac{1+\kappa_*}{1-\kappa_*},\qquad
+  \delta_{\mathrm{lattice}}=\frac{1+\kappa_*}{\mathbb T(1-\kappa_*)},
+\]
+and $\eta_{\mathrm{spec}}$ is read off from the selected-branch state by \eqref{eq:eta-spec-branch-readout-quotient}. In particular, on the exact pure branch where $\Delta\mathcal M_{\mathrm{br}}\Psi=0$, the entire scalar hierarchy collapses to the single anchor scalar $\kappa_*$.
+\end{theorem}
+
+\begin{proof}
+The branch data are determined by $\kappa_*$ through Theorem~\ref{thm:anchor-chain-equivalence-selected-branch}. The only remaining scalar in the anchor-normalized equation is $\eta_{\mathrm{spec}}$, and Corollary~\ref{cor:no-free-residual-scalar-after-branch-fixing} shows that this coefficient is itself determined by the selected branch state whenever the anchored Millennium remainder is nonzero. Hence no additional independent scalar survives. If moreover $\Delta\mathcal M_{\mathrm{br}}\Psi=0$, then Proposition~\ref{prop:residual-purity-criterion-selected-branch} implies that the residual-response term vanishes, so even $\eta_{\mathrm{spec}}$ drops out of the hierarchy. Therefore the exact pure branch is scalarized by $\kappa_*$ alone.
+\end{proof}
+
+\begin{remark}[What this scalar completion means in practice]
+\label{rem:what-scalar-completion-means-practice}
+This is the clean conceptual outcome of the recent collapse passes. The selected branch no longer carries a cloud of partially free scalar couplings. Instead, there is one true branch anchor $\kappa_*$ and, away from the pure branch, one residual coefficient $\eta_{\mathrm{spec}}$ that is not chosen but read off from the branch state itself. On the pure branch even this residual coefficient disappears, so the scalar side of the hierarchy is completely organized by a single anchor. That is why the recent steps feel unexpectedly compressive: several formerly separate numerical inputs have turned into equivalent expressions of one and the same selected-branch datum.
+\end{remark}
+
+
+\begin{proposition}[Operator completion of the anchor-normalized branch hierarchy]
+\label{prop:operator-completion-anchor-normalized-hierarchy}
+Assume the hypotheses of Theorem~\ref{thm:scalar-completion-anchor-normalized-hierarchy}. Define the pure branch operator and the anchored residual operator by
+\[
+  \mathcal L_{\kappa_*}^{\mathrm{pure}}
+  :=
+  \frac{i}{m_{\mathrm{br}}}\Gamma^\mu\mathcal D_{\mu}^{(\kappa_*)}-\mathbf 1,
+  \qquad
+  \mathcal R_{\kappa_*}
+  :=
+  \hat P_{C_7}\mathcal M_{16}\hat P_{C_7}-\kappa_*\hat P_{C_7}.
+\]
+Then the full anchor-normalized selected-branch operator is exactly
+\begin{equation}
+  \mathcal L_{\mathrm{br}}^{(\kappa_*)}
+  =
+  \mathcal L_{\kappa_*}^{\mathrm{pure}}-\eta_{\mathrm{spec}}\,\mathcal R_{\kappa_*},
+  \label{eq:operator-completion-anchor-normalized-hierarchy}
+\end{equation}
+with all branch dependence entering only through $\kappa_*$. In particular, no additional branch-selecting operator survives beyond the pair
+\[
+  \bigl(\mathcal L_{\kappa_*}^{\mathrm{pure}},\;\mathcal R_{\kappa_*}\bigr).
+\]
+\end{proposition}
+
+\begin{proof}
+Equation~\eqref{eq:anchor-normalized-canonical-branch-equation} is already of the form
+\[
+  \bigl(\mathcal L_{\kappa_*}^{\mathrm{pure}}-\eta_{\mathrm{spec}}\,\mathcal R_{\kappa_*}\bigr)\Psi=0.
+\]
+Theorem~\ref{thm:anchor-chain-equivalence-selected-branch} shows that $\mathcal D_{\mu}^{(\kappa_*)}$ depends on the selected branch only through $\kappa_*$. The same theorem and Theorem~\ref{thm:scalar-completion-anchor-normalized-hierarchy} show that the anchored centering scalar and all scalar branch data are likewise determined by $\kappa_*$. Therefore the only operator pieces remaining after branch selection are the pure transport-Dirac part and the anchored projected Millennium residual. No further branch-selecting operator enters.
+\end{proof}
+
+\begin{theorem}[Pure operator sector and residual operator readout]
+\label{thm:pure-operator-sector-residual-readout}
+Assume the hypotheses of Proposition~\ref{prop:operator-completion-anchor-normalized-hierarchy}. Then the operator side of the selected-branch hierarchy splits into exactly two regimes:
+\[
+  \mathcal L_{\mathrm{br}}^{(\kappa_*)}
+  =
+  \mathcal L_{\kappa_*}^{\mathrm{pure}}-\eta_{\mathrm{spec}}\,\mathcal R_{\kappa_*}.
+\]
+If $\mathcal R_{\kappa_*}\Psi=0$ or $\eta_{\mathrm{spec}}=0$, the state lies in the pure operator sector
+\[
+  \mathcal L_{\kappa_*}^{\mathrm{pure}}\Psi=0.
+\]
+Otherwise the deviation from the pure operator sector is fully measured by the anchored residual operator via
+\begin{equation}
+  \mathcal L_{\kappa_*}^{\mathrm{pure}}\Psi
+  =
+  \eta_{\mathrm{spec}}\,\mathcal R_{\kappa_*}\Psi.
+  \label{eq:operator-readout-anchor-normalized-hierarchy}
+\end{equation}
+Hence the selected-branch operator hierarchy is completely organized by one anchor-controlled pure operator together with one anchored residual readout operator.
+\end{theorem}
+
+\begin{proof}
+The decomposition is Proposition~\ref{prop:operator-completion-anchor-normalized-hierarchy}. If either $\eta_{\mathrm{spec}}=0$ or $\mathcal R_{\kappa_*}\Psi=0$, the residual term vanishes and the equation reduces to the pure branch operator equation. If neither condition holds, rearranging \eqref{eq:operator-completion-anchor-normalized-hierarchy} on the state yields \eqref{eq:operator-readout-anchor-normalized-hierarchy}. By Corollary~\ref{cor:no-free-residual-scalar-after-branch-fixing}, the coefficient $\eta_{\mathrm{spec}}$ is itself read off from the branch state rather than freely chosen. Thus the non-pure branch operator is the pure operator plus an anchored residual readout and nothing more.
+\end{proof}
+
+\begin{remark}[What the operator completion buys us]
+\label{rem:what-operator-completion-buys-us}
+The scalar side and the operator side now match each other much more tightly than before. On the scalar side, everything collapses to the anchor chain plus a residual readout coefficient. On the operator side, everything collapses to the anchor-controlled pure branch operator plus an anchored residual operator. This is important because it means the recent compression is not merely a scalar bookkeeping effect; the operator architecture itself has started to collapse to the same two-layer pattern: anchor core plus residual readout.
+\end{remark}
+
+
+\begin{definition}[Two-layer anchor architecture on the selected branch]
+\label{def:two-layer-anchor-architecture-selected-branch}
+On the selected branch, the current Companion core is said to be in \emph{two-layer anchor form} if all scalar branch data are determined by the anchor chain
+\[
+  \kappa_* \leftrightarrow \mu_* \leftrightarrow \beta_{\mathrm{sym}}^2 \leftrightarrow \gamma_L \leftrightarrow \delta_{\mathrm{lattice}},
+\]
+and the operator equation splits as
+\[
+  \mathcal L_{\mathrm{br}}^{(\kappa_*)}
+  =
+  \mathcal L_{\kappa_*}^{\mathrm{pure}}-\eta_{\mathrm{spec}}\,\mathcal R_{\kappa_*}.
+\]
+The first layer is the anchor-controlled pure branch core, and the second layer is the anchored residual readout.
+\end{definition}
+
+\begin{theorem}[Architecture completion on the selected branch]
+\label{thm:architecture-completion-selected-branch}
+Assume the hypotheses of Theorem~\ref{thm:pure-operator-sector-residual-readout}. Then the current branch-selected MM/HC hierarchy is completely determined by the quartet
+\[
+  (\kappa_*,\;\mathcal L_{\kappa_*}^{\mathrm{pure}},\;\mathcal R_{\kappa_*},\;\eta_{\mathrm{spec}}),
+\]
+with the following structure:
+\begin{enumerate}
+  \item all scalar branch data are fixed by $\kappa_*$ via the anchor chain;
+  \item the pure branch dynamics is carried by $\mathcal L_{\kappa_*}^{\mathrm{pure}}$;
+  \item every surviving non-pure effect is carried by the anchored residual operator $\mathcal R_{\kappa_*}$;
+  \item the coefficient $\eta_{\mathrm{spec}}$ is not a free branch selector but a residual readout coefficient determined by the selected branch state whenever $\mathcal R_{\kappa_*}\Psi\neq 0$.
+\end{enumerate}
+In particular, no additional independent scalar or operatorial branch selector survives beyond this two-layer anchor architecture.
+\end{theorem}
+
+\begin{proof}
+The scalar statement is Theorem~\ref{thm:scalar-completion-anchor-normalized-hierarchy} together with Theorem~\ref{thm:anchor-chain-equivalence-selected-branch}. The operator statement is Proposition~\ref{prop:operator-completion-anchor-normalized-hierarchy} and Theorem~\ref{thm:pure-operator-sector-residual-readout}. Corollary~\ref{cor:no-free-residual-scalar-after-branch-fixing} shows that $\eta_{\mathrm{spec}}$ is read off from the selected branch state rather than freely chosen. Hence the selected-branch hierarchy collapses to one anchor-controlled pure layer plus one anchored residual layer, with no further branch selector remaining.
+\end{proof}
+
+\begin{corollary}[Current 3.0 architecture profile]
+\label{cor:current-3-0-architecture-profile}
+At the present stage of the Companion, the mathematically active core already exhibits the following 3.0-type architecture:
+\[
+\begin{aligned}
+  &\text{one scalar anchor }\kappa_* \\
+  &\Longrightarrow\; \text{one pure branch operator }\mathcal L_{\kappa_*}^{\mathrm{pure}} \\
+  &\Longrightarrow\; \text{one anchored residual layer }(\mathcal R_{\kappa_*},\eta_{\mathrm{spec}}).
+\end{aligned}
+\]
+Thus the remaining route to version 3.0.0 is no longer the invention of a fundamentally different structure, but the systematic extension, hardening, and deployment of this already emergent anchor-normalized architecture across the remaining open blocks.
+\end{corollary}
+
+\begin{theorem}[Factorization of readouts through the two-layer anchor architecture]
+\label{thm:factorization-readouts-two-layer-anchor}
+Assume the hypotheses of Theorem~\ref{thm:architecture-completion-selected-branch}. Then every scalar readout treated in the present Companion core factors through the anchor chain, and every operatorial readout treated in the present core factors through the pair consisting of the pure branch operator and the anchored residual layer. More precisely:
+\begin{enumerate}
+  \item any scalar readout $\mathcal O_{\mathrm{sc}}$ built from branch data alone factors as
+  \[
+    \mathcal O_{\mathrm{sc}} = F_{\mathcal O}(\kappa_*)
+  \]
+  for some explicit scalar function $F_{\mathcal O}$ obtained by substitution of the anchor-chain identities;
+  \item any operatorial readout $\mathcal O_{\mathrm{op}}$ on the selected branch can be written as a functional of
+  \[
+    \bigl(\mathcal L_{\kappa_*}^{\mathrm{pure}},\;\eta_{\mathrm{spec}}\mathcal R_{\kappa_*}\bigr),
+  \]
+  and hence depends only on the pure branch core together with the anchored residual layer.
+\end{enumerate}
+In particular, no readout block already routed through the current branch-selected architecture requires an additional independent scalar normalizer beyond $\kappa_*$.
+\end{theorem}
+
+\begin{proof}
+The scalar statement follows from Theorem~\ref{thm:anchor-chain-equivalence-selected-branch} and Theorem~\ref{prop:curvature-anchor-determines-scalar-branch-data}: every scalar branch datum is an explicit function of $\kappa_*$, so any scalar readout composed from those data factors through $\kappa_*$. The operatorial statement follows from Proposition~\ref{prop:operator-completion-anchor-normalized-hierarchy} and Theorem~\ref{thm:pure-operator-sector-residual-readout}: on the selected branch the full operator is exactly
+\[
+  \mathcal L_{\mathrm{br}}^{(\kappa_*)}
+  =
+  \mathcal L_{\kappa_*}^{\mathrm{pure}}-\eta_{\mathrm{spec}}\mathcal R_{\kappa_*}.
+\]
+Hence any operatorial readout extracted from the selected-branch equation depends only on this decomposition. The final claim is immediate because every previously routed scalar normalizer is already identified with the anchor chain.
+\end{proof}
+
+\begin{corollary}[Anchor-chain normalization of the main physical readouts]
+\label{cor:anchor-chain-normalization-main-physical-readouts}
+Within the presently routed Companion core, the main scalar physical readouts are already anchor-factorized. In particular,
+\[
+  \Lambda_{\mathrm{eff}}\sim \kappa_*\rho_P,
+  \qquad
+  \theta_K = \pi-\sqrt2\,\arcsin(\sqrt{\kappa_*}),
+\]
+\[
+  \frac{T_{\mathrm{loc}}}{T_H}=\kappa_*^{-1/2},
+  \qquad
+  \gBI = \gstring\,\frac{1+\kappa_*}{1-\kappa_*},
+  \qquad
+  \frac{r_0}{r_S}=\frac{1}{1-\kappa_*}.
+\]
+Thus the currently active physical readout layer is already normalized by the same scalar anchor that determines the branch data themselves.
+\end{corollary}
+
+\begin{theorem}[Master-theorem sketch for the 3.0 branch architecture]
+\label{thm:master-theorem-sketch-3-0-branch-architecture}
+Assume the hypotheses of Theorem~\ref{thm:architecture-completion-selected-branch}, Theorem~\ref{thm:factorization-readouts-two-layer-anchor}, and Theorem~\ref{thm:local-stability-selected-branch-spectral-gap}. Then the presently routed Companion core admits the following master-theorem form:
+\begin{enumerate}
+  \item there exists a unique scalar anchor $\kappa_*$ on the selected closure-stable branch;
+  \item all scalar branch data factor through the anchor chain determined by $\kappa_*$;
+  \item the selected-branch operator decomposes into a pure anchor-controlled core plus an anchored residual layer,
+  \[
+    \mathcal L_{\mathrm{br}}^{(\kappa_*)}
+    =
+    \mathcal L_{\kappa_*}^{\mathrm{pure}}-\eta_{\mathrm{spec}}\mathcal R_{\kappa_*};
+  \]
+  \item the principal routed readouts of the current Companion core factor through this two-layer anchor architecture;
+  \item along small admissible variations satisfying the spectral-gap condition, the selected branch is locally stable and its scalar readouts remain anchor-controlled.
+\end{enumerate}
+Hence the active 3.0-level core of the Companion is governed by one scalar anchor, one pure selected-branch operator, and one anchored residual layer, with no additional independent branch selector surviving in the presently routed blocks.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Items (1) and (2) are Theorem~\ref{thm:anchor-chain-equivalence-selected-branch} together with Theorem~\ref{prop:curvature-anchor-determines-scalar-branch-data}. Item (3) is Proposition~\ref{prop:operator-completion-anchor-normalized-hierarchy} and Theorem~\ref{thm:pure-operator-sector-residual-readout}. Item (4) is Theorem~\ref{thm:factorization-readouts-two-layer-anchor} together with Corollary~\ref{cor:anchor-chain-normalization-main-physical-readouts}. Item (5) is Theorem~\ref{thm:local-stability-selected-branch-spectral-gap} and Corollary~\ref{cor:variational-stability-branch-readouts-bridges}. The statement is therefore not a new independent axiom, but a compact synthesis of the structural results already established in the current routed core.
+\end{proof}
+
+\begin{remark}[What the master-theorem sketch changes]
+\label{rem:what-master-theorem-sketch-changes}
+This sketch matters because it turns the recent compression passes into a single reusable target statement. Future blocks no longer need to be justified in isolation; they can instead be tested against one question: do they factor through the master branch architecture, or do they reveal a genuinely new obstruction that must be absorbed into it?
+\end{remark}
+
+\begin{definition}[The current 3.0 branch architecture package]
+\label{def:current-3-0-branch-architecture-package}
+The currently routed 3.0-level Companion core is encoded by the package
+\[
+  \mathfrak A_{3.0}
+  :=
+  \bigl(\kappa_*,\,\mathcal L_{\kappa_*}^{\mathrm{pure}},\,\mathcal R_{\kappa_*},\,\eta_{\mathrm{spec}}\bigr),
+\]
+where $\kappa_*$ is the scalar branch anchor, $\mathcal L_{\kappa_*}^{\mathrm{pure}}$ is the pure selected-branch operator, $\mathcal R_{\kappa_*}$ is the anchor-centered residual operator, and $\eta_{\mathrm{spec}}$ is the residual-response readout coefficient.
+\end{definition}
+
+\begin{corollary}[The routed core factors through the 3.0 branch architecture package]
+\label{cor:routed-core-factors-through-3-0-branch-architecture-package}
+Within the presently routed Companion core, every established scalar branch datum factors through the anchor component $\kappa_*$ of $\mathfrak A_{3.0}$, while every established operator statement factors through the operator pair
+\[
+  \bigl(\mathcal L_{\kappa_*}^{\mathrm{pure}},\,\eta_{\mathrm{spec}}\mathcal R_{\kappa_*}\bigr).
+\]
+In particular, the currently routed closure, dark-offset, Koide, Hawking, Dirac/probe, MM/HC, ART/QFT, and Einstein/QFT blocks introduce no further independent branch selector beyond the data already contained in $\mathfrak A_{3.0}$.
+\end{corollary}
+
+\begin{proof}
+The scalar factorization is Theorem~\ref{thm:anchor-chain-equivalence-selected-branch}, Theorem~\ref{prop:curvature-anchor-determines-scalar-branch-data}, and Corollary~\ref{cor:anchor-chain-normalization-main-physical-readouts}. The operator factorization is Proposition~\ref{prop:operator-completion-anchor-normalized-hierarchy}, Theorem~\ref{thm:pure-operator-sector-residual-readout}, and Theorem~\ref{thm:factorization-readouts-two-layer-anchor}. The named routed blocks are exactly the blocks already rewritten through these scalar and operator factorization principles in the current core.
+\end{proof}
+
+\begin{remark}[Operational test for new 3.0-level blocks]
+\label{rem:operational-test-new-3-0-level-blocks}
+A future block belongs to the active 3.0 core precisely when it can be reduced to the package $\mathfrak A_{3.0}$ without introducing an additional independent branch selector. If a new block cannot be routed through $\mathfrak A_{3.0}$, then it should be treated as evidence for a genuinely new obstruction rather than as a routine extension of the current branch architecture.
+\end{remark}
+
+\begin{theorem}[Obstruction dichotomy for prospective 3.0-level extensions]
+\label{thm:obstruction-dichotomy-prospective-3-0-extensions}
+Let $\mathcal B$ be a prospective new Companion block whose scalar sector is claimed to depend only on selected-branch data and whose operator sector is claimed to live on the selected branch. Then exactly one of the following occurs:
+\begin{enumerate}
+  \item \emph{Factorization case.} The scalar dependence of $\mathcal B$ factors through the anchor chain
+  \[
+    \kappa_* \leftrightarrow \mu_* \leftrightarrow \bsym^2 \leftrightarrow \gL \leftrightarrow \delta_{\mathrm{lattice}},
+  \]
+  and the operator dependence of $\mathcal B$ factors through the pair
+  \[
+    \bigl(\mathcal L_{\kappa_*}^{\mathrm{pure}},\,\eta_{\mathrm{spec}}\mathcal R_{\kappa_*}\bigr).
+  \]
+  In this case $\mathcal B$ introduces no new independent branch selector and belongs to the active 3.0 branch architecture.
+  \item \emph{Obstruction case.} At least one dependence of $\mathcal B$ cannot be written through the anchor chain or the pair $\bigl(\mathcal L_{\kappa_*}^{\mathrm{pure}},\eta_{\mathrm{spec}}\mathcal R_{\kappa_*}\bigr)$. Then $\mathcal B$ exhibits a genuinely new obstruction, namely either
+  \begin{enumerate}
+    \item a new scalar branch selector not equivalent to $\kappa_*$,
+    \item a new residual operator not reducible to $\mathcal R_{\kappa_*}$,
+    \item or a new response law not absorbed by the scalar readout $\eta_{\mathrm{spec}}$.
+  \end{enumerate}
+\end{enumerate}
+Thus the current 3.0 package is closed under routine extension; failure of factorization is itself the certificate that a new obstruction has appeared.
+\end{theorem}
+
+\begin{proof}
+The factorization case is exactly Corollary~\ref{cor:routed-core-factors-through-3-0-branch-architecture-package} together with Theorem~\ref{thm:factorization-readouts-two-layer-anchor}, Corollary~\ref{cor:anchor-chain-normalization-main-physical-readouts}, and Theorem~\ref{thm:scalar-completion-anchor-normalized-hierarchy}. These results show that every currently routed scalar statement reduces to the anchor chain and every currently routed operator statement reduces to the pure branch operator together with the anchored residual operator weighted by $\eta_{\mathrm{spec}}$. Consequently, any new block that admits the same reduction introduces no new independent selector.
+
+Conversely, if a proposed block cannot be expressed through these scalar and operator data, then by definition some dependence survives outside the package $\mathfrak A_{3.0}$. On the scalar side this means a selector not equivalent to the anchor chain; on the operator side it means a residual law not captured by $\mathcal R_{\kappa_*}$ or by the residual-response readout $\eta_{\mathrm{spec}}$. Such a failure is precisely what is meant by a new obstruction in the present architecture.
+\end{proof}
+
+\begin{corollary}[No hidden 3.0 extension without an explicit obstruction]
+\label{cor:no-hidden-3-0-extension-without-explicit-obstruction}
+A prospective extension cannot enlarge the active 3.0 core silently. Either it factors through $\mathfrak A_{3.0}$ and is therefore only a routed elaboration of the existing architecture, or it must exhibit an explicit new scalar selector, residual operator, or response law.
+\end{corollary}
+
+\begin{proof}
+This is an immediate restatement of Theorem~\ref{thm:obstruction-dichotomy-prospective-3-0-extensions}.
+\end{proof}
+
+
+\begin{proposition}[Pass on the currently open hypothesis-grade blocks]
+\label{prop:pass-current-open-hypothesis-grade-blocks}
+Under the obstruction dichotomy of Theorem~\ref{thm:obstruction-dichotomy-prospective-3-0-extensions}, the currently open hypothesis-grade blocks split as follows.
+\begin{enumerate}
+  \item The already routed blocks --- closure, dark-offset, Koide, Hawking, Dirac/probe, MM/HC, ART/QFT, and Einstein/QFT --- are in the \emph{factorization case} and therefore belong to the active 3.0 branch architecture.
+  \item The neutrino $k$-value hypothesis, the Hubble-tension evolution law for $\bsym(t)$, and the muon-$g$-2/QCD running blocks are presently in the \emph{obstruction case}. They require at least one additional ingredient not yet reduced to $\mathfrak A_{3.0}$, namely either a new response law, a new residual operator in the QCD sector, or an external evolution law not yet derived from the anchor chain.
+\end{enumerate}
+Thus the present open list is already sharply filtered: the remaining unresolved blocks are not routine extensions of the current routed core, but precisely the candidate obstructions that must either be absorbed into $\mathfrak A_{3.0}$ or shown to require a genuine enlargement of it.
+\end{proposition}
+
+\begin{proof}
+Item (1) is Corollary~\ref{cor:routed-core-factors-through-3-0-branch-architecture-package}. For item (2), Proposition~\ref{prop:k-neutrino}, the Hubble-tension subsection, and the muon/QCD hypothesis-grade blocks explicitly remain open in the present manuscript and are not routed through the anchor package by the factorization theorems above. Their statements involve extra unresolved dependence: the neutrino sector still carries a hypothesis-grade $k$-assignment, the Hubble-tension block uses a time-evolution law for $\bsym(t)$ not yet derived from the selected-branch package, and the muon/QCD sector still contains unresolved QCD running data such as $k(\alpha_s)$ and $k(\Lambda_{\mathrm{QCD}})$. By Theorem~\ref{thm:obstruction-dichotomy-prospective-3-0-extensions}, failure of factorization is exactly the certificate that these blocks are current obstruction candidates rather than routine 3.0 consequences.
+\end{proof}
+
+\begin{corollary}[What the obstruction pass buys us]
+\label{cor:what-obstruction-pass-buys-us}
+The active 3.0 core is now separated from the current open frontier. In particular, any immediate step toward a public Version~3 cut should treat the neutrino, Hubble-evolution, and muon/QCD blocks as the primary unresolved obstruction candidates, rather than as ordinary follow-up elaborations of the already routed branch architecture.
+\end{corollary}
+
+\begin{proof}
+This is the direct operational content of Proposition~\ref{prop:pass-current-open-hypothesis-grade-blocks}.
+\end{proof}
+
+
+\subsection*{Fermionic residual package}
+\addcontentsline{toc}{subsection}{Fermionic residual package}
+The second explicit theorem-bearing package of the Version~3 line is the fermionic residual layer on the lepton branch. Its role is to move the neutrino block away from a free external label and toward a branch-internal residual readout compatible with the active package $\mathfrak A_{3.0}$. The package is again intentionally minimal: it does not yet claim a full lepton-sector closure theorem, but it isolates the exact structural ingredients required for a genuine 3.0 absorption route on the fermionic side.
+
+Operationally, the package has four steps: first the present obstruction profile of the neutrino block is stated sharply; second the minimal branch-compatible fermionic residual law is written down; third the pure-branch and discrete-level consequences are extracted; and fourth the residual label is shown to be locally stable on isolated lepton residual levels.
+
+\begin{proposition}[Neutrino obstruction profile under the current 3.0 package]
+\label{prop:neutrino-obstruction-profile-current-3-0-package}
+Under the current package
+\[
+\mathfrak A_{3.0}=(\kappa_*,\mathcal L_{\kappa_*}^{\mathrm{pure}},\mathcal R_{\kappa_*},\eta_{\mathrm{spec}}),
+\]
+the hypothesis-grade assignment $k(\nu)=4$ does not presently factor through the active 3.0 branch architecture. In the current manuscript it therefore remains in the obstruction case.
+
+More precisely, the neutrino block would move into the factorization case only if one can derive on the selected lepton branch a further \emph{fermionic residual law}
+\[
+\mathcal L_{\kappa_*}^{\mathrm{pure}}\Psi_{\ell}=\eta_{\nu}\,\mathcal R_{\nu}\Psi_{\ell},
+\]
+with the following properties:
+\begin{enumerate}
+  \item $\mathcal R_{\nu}$ is a branch-compatible residual operator on the lepton sector, rather than a new independent branch selector;
+  \item $\eta_{\nu}$ is read out from the selected branch state, rather than set freely; and
+  \item the neutrino $k$-assignment becomes a discrete spectral label or multiplicity readout of $(\mathcal R_{\nu},\eta_{\nu})$.
+\end{enumerate}
+Without such a derived fermionic residual law, the neutrino $k$-block remains a genuine obstruction candidate rather than a routine consequence of $\mathfrak A_{3.0}$.
+\end{proposition}
+
+\begin{proof}
+By Proposition~\ref{prop:pass-current-open-hypothesis-grade-blocks}, the neutrino hypothesis is currently in the obstruction case. The reason is that the present routed core already fixes the scalar branch data through the anchor chain and the operator side through the pair $(\mathcal L_{\kappa_*}^{\mathrm{pure}},\eta_{\mathrm{spec}}\mathcal R_{\kappa_*})$, but it does not yet supply a derived fermionic law that singles out the neutrino assignment as a readout. If such a law existed, then the extra neutrino dependence would no longer be an independent block input; it would be absorbed into a residual branch readout on the lepton sector. In that case the neutrino block would move from the obstruction case to the factorization case. Conversely, absent such a law, the assignment $k(\nu)=4$ still represents extra unresolved dependence and so remains an obstruction candidate by Theorem~\ref{thm:obstruction-dichotomy-prospective-3-0-extensions}.
+\end{proof}
+
+\begin{corollary}[Minimal absorption route for the neutrino block]
+\label{cor:minimal-absorption-route-neutrino-block}
+The shortest currently visible route from the neutrino $k$-hypothesis to the active 3.0 core is \emph{not} to postulate the value $k(\nu)$ more rigidly, but to derive a branch-compatible fermionic residual operator whose discrete readout reproduces the neutrino assignment.
+\end{corollary}
+
+\begin{proof}
+This is the direct operational content of Proposition~\ref{prop:neutrino-obstruction-profile-current-3-0-package}.
+\end{proof}
+
+\begin{remark}[What the neutrino obstruction profile buys us]
+\label{rem:what-neutrino-obstruction-profile-buys-us}
+This sharpened profile matters because it prevents the next passes from diffusing into arbitrary neutrino ans"atze. The current text already tells us what kind of extension would count as mathematically meaningful: a lepton-branch residual law that turns the neutrino assignment into a derived readout. Any future neutrino step that does not produce such a law should be read as exploratory hypothesis work rather than as a 3.0-core derivation.
+\end{remark}
+
+
+
+\begin{proposition}[Minimal fermionic residual law compatible with the current 3.0 package]
+\label{prop:minimal-fermionic-residual-law-compatible-current-3-0-package}
+Assume that on the selected branch there exists a lepton projector $\hat P_{\ell}$ commuting with $\hat P_{C_7}$ on the relevant branch states. Define the lepton residual operator by
+\[
+\mathcal R_{\nu}:=\hat P_{\ell}\,\mathcal R_{\kappa_*}\,\hat P_{\ell}.
+\]
+Then every selected lepton-branch state $\Psi_{\ell}=\hat P_{\ell}\Psi_{\ell}$ satisfying
+\[
+\mathcal L_{\kappa_*}^{\mathrm{pure}}\Psi_{\ell}=\eta_{\nu}\,\mathcal R_{\nu}\Psi_{\ell}
+\]
+remains factorized through the current package $\mathfrak A_{3.0}$. Whenever $\mathcal R_{\nu}\Psi_{\ell}\neq 0$, the coefficient $\eta_{\nu}$ is a readout of the selected state and is given by
+\[
+\eta_{\nu}
+=
+\frac{\langle \mathcal R_{\nu}\Psi_{\ell},\,\mathcal L_{\kappa_*}^{\mathrm{pure}}\Psi_{\ell}\rangle}
+{\|\mathcal R_{\nu}\Psi_{\ell}\|^2}.
+\]
+If, in addition, $\mathcal R_{\nu}$ has a discrete branch spectrum on the selected lepton sector, then any neutrino $k$-assignment becomes a discrete residual readout rather than an external block parameter.
+\end{proposition}
+
+\begin{proof}
+The commutation assumption means that the extra fermionic structure is imposed as a branch-compatible restriction, not as a new branch selector. Hence the only additional operator data are obtained by restricting the already existing residual operator $\mathcal R_{\kappa_*}$ to the lepton sector. The readout formula for $\eta_{\nu}$ is the same residual-quotient mechanism already used for $\eta_{\mathrm{spec}}$, now applied on the selected fermionic subbranch. If the resulting restricted residual operator has discrete branch spectrum, then any value extracted from that spectrum is a derived readout of the selected state rather than a free input. Therefore the neutrino block would move from the obstruction case toward the factorization case through a genuinely branch-compatible fermionic residual law.
+\end{proof}
+
+\begin{corollary}[Conditional absorption of the neutrino $k$-value]
+\label{cor:conditional-absorption-neutrino-k-value}
+Assume the hypotheses of Proposition~\ref{prop:minimal-fermionic-residual-law-compatible-current-3-0-package}. If the distinguished neutrino branch corresponds to the fourth discrete residual level of $\mathcal R_{\nu}$, then the assignment $k(\nu)=4$ is absorbed as a residual spectral readout of the selected lepton branch.
+\end{corollary}
+
+\begin{proof}
+Under the proposition, the only remaining neutrino information is the discrete residual label selected on the lepton branch. If the neutrino branch is identified with the fourth residual level, then $k(\nu)=4$ is no longer an external hypothesis but the corresponding residual readout. The statement is conditional because the existence and exact spectral labeling of the lepton residual law are not yet proved in the present manuscript.
+\end{proof}
+
+\begin{remark}[What the first fermionic residual law changes]
+\label{rem:what-first-fermionic-residual-law-changes}
+This is the neutrino analogue of the first anchor-flow law for the Hubble block. It does not yet solve the neutrino sector outright, but it turns the previous obstruction profile into a concrete absorption mechanism candidate. In practical terms, the open frontier in the neutrino block is no longer diffuse: the task is now to derive a branch-compatible lepton projector and to show that the restricted residual operator $\mathcal R_{\nu}$ has the required discrete branch spectrum.
+\end{remark}
+
+
+\begin{proposition}[Pure lepton branch and exact fermionic residual levels]
+\label{prop:pure-lepton-branch-exact-fermionic-residual-levels}
+Assume the hypotheses of Proposition~\ref{prop:minimal-fermionic-residual-law-compatible-current-3-0-package}. Then the selected lepton branch is \emph{pure} whenever either
+\[
+\eta_{\nu}=0
+\qquad\text{or}\qquad
+\mathcal R_{\nu}\Psi_{\ell}=0.
+\]
+In that case the restricted fermionic residual law collapses to the pure branch equation
+\[
+\mathcal L_{\kappa_*}^{\mathrm{pure}}\Psi_{\ell}=0.
+\]
+If, moreover, \(\Psi_{\ell}\) is an eigenstate of \(\mathcal R_{\nu}\) with
+\[
+\mathcal R_{\nu}\Psi_{\ell}=\rho_{\nu}\Psi_{\ell},
+\]
+then the residual law becomes the scalar compatibility condition
+\[
+\mathcal L_{\kappa_*}^{\mathrm{pure}}\Psi_{\ell}=\eta_{\nu}\rho_{\nu}\Psi_{\ell}.
+\]
+\end{proposition}
+
+\begin{proof}
+The first claim is immediate from
+\[
+\mathcal L_{\kappa_*}^{\mathrm{pure}}\Psi_{\ell}=\eta_{\nu}\,\mathcal R_{\nu}\Psi_{\ell}.
+\]
+If either factor on the right-hand side vanishes, the lepton branch obeys the pure operator equation. If \(\Psi_{\ell}\) is an eigenstate of \(\mathcal R_{\nu}\), the right-hand side reduces to the scalar multiple \(\eta_{\nu}\rho_{\nu}\Psi_{\ell}\), so the residual correction is completely encoded by the product \(\eta_{\nu}\rho_{\nu}\). This is the lepton-sector analogue of the scalar completion already obtained for the anchor-normalized branch hierarchy.
+\end{proof}
+
+\begin{corollary}[Local constancy of discrete neutrino labels on isolated residual levels]
+\label{cor:local-constancy-discrete-neutrino-labels-isolated-residual-levels}
+Assume the hypotheses of Proposition~\ref{prop:pure-lepton-branch-exact-fermionic-residual-levels}. Suppose further that \(\mathcal R_{\nu}\) has isolated discrete residual levels on the selected lepton branch. Then the associated neutrino label is locally constant under sufficiently small admissible perturbations that do not cross a residual level.
+\end{corollary}
+
+\begin{proof}
+On an isolated discrete residual level, the eigenvalue \(\rho_{\nu}\) cannot change continuously without either leaving the selected level or colliding with another level. Hence small admissible perturbations that remain inside the same isolated residual level preserve the corresponding residual label. Under the conditional absorption mechanism of Corollary~\ref{cor:conditional-absorption-neutrino-k-value}, the neutrino label is precisely such a residual level label. Therefore it is locally constant as long as the perturbation does not force a level transition.
+\end{proof}
+
+\begin{remark}[What the first fermionic consequences add]
+\label{rem:what-first-fermionic-consequences-add}
+These consequences matter because they show that the fermionic residual law is not merely a placeholder for a future calculation. It already has the same qualitative structure as the anchor-flow law: pure branches are equilibrium sectors, while non-pure branches are controlled by a single residual channel. In particular, if the neutrino assignment really comes from a discrete lepton residual spectrum, then the label is not expected to drift continuously; it should remain stable on isolated residual branches and only change through genuine level transitions.
+\end{remark}
+
+\begin{remark}[Package status of the fermionic residual layer in v\docversion]
+\label{rem:package-status-fermionic-residual-layer-v-docversion}
+Within the Version~3 program, the lepton branch is now no longer only a profiled obstruction frontier. It has been promoted to the second explicit theorem-bearing package: obstruction profile, minimal residual law, pure-branch criterion, discrete residual levels, and local stability consequences are all now part of the active 3.0 chain. What remains open is not the existence of the package itself, but the further quantitative derivation that would turn the residual readout into a fully closed physical identification of the neutrino data.
+\end{remark}
+
+\subsection*{Anchor-flow package}
+\addcontentsline{toc}{subsection}{Anchor-flow package}
+The first explicit theorem-bearing package of the Version~3 line is the cosmological anchor-flow layer. Its role is to move the Hubble block away from an externally inserted $\bsym(t)$ ansatz and toward a branch-internal scalar dynamics carried by the selected anchor $\kappa_*(t)$. The package is intentionally minimal: it does not yet claim a complete cosmological model, but it does isolate the exact structural ingredients that are needed for a genuine 3.0 absorption route.
+
+Operationally, the package has four steps: first the present obstruction profile is stated sharply; second the minimal autonomous anchor flow compatible with the current branch data is written down; third the former Hubble discrepancy is rewritten as an anchor-chain readout; and fourth the first dynamical consequences are extracted, namely pure-branch equilibrium and coherent sign propagation of the scalar readouts.
+
+\begin{proposition}[Hubble-evolution obstruction profile under the current 3.0 package]
+\label{prop:hubble-evolution-obstruction-profile-current-3-0-package}
+Under the current anchor-normalized 3.0 package
+\[
+\mathfrak A_{3.0}=(\kappa_*,\mathcal L_{\kappa_*}^{\mathrm{pure}},\mathcal R_{\kappa_*},\eta_{\mathrm{spec}}),
+\]
+the hypothesis-grade law $\bsym(t)$ from Proposition~\ref{prop:H0-tension} does \emph{not} yet factor through the active branch architecture. In the current manuscript it therefore remains in the obstruction case.
+
+More precisely, the Hubble block would move into the factorization case only if one can derive on the selected cosmological branch an intrinsic \emph{anchor-flow law}
+\[
+\dot\kappa_*=\mathcal F_{\mathrm{cos}}(\kappa_*,\eta_{\mathrm{spec}},\mathcal R_{\kappa_*};t),
+\]
+with the following properties:
+\begin{enumerate}
+  \item the evolution is expressed in terms of the anchor chain rather than by prescribing $\bsym(t)$ externally;
+  \item the induced scalar evolution
+  \[
+  \bsym(t)=\sqrt{\kappa_*(t)},\qquad
+  \gL(t)=\frac{1+\kappa_*(t)}{1-\kappa_*(t)}
+  \]
+  is read out from the anchor flow rather than introduced as an extra cosmological input; and
+  \item the effective Hubble discrepancy is obtained as a branch readout of this flow, not as an independent phenomenological adjustment.
+\end{enumerate}
+Without such a derived anchor-flow law, the present $H_0$-tension block still depends on an external time-evolution input and therefore remains a genuine obstruction candidate rather than a routine 3.0 consequence.
+\end{proposition}
+
+\begin{proof}
+By Proposition~\ref{prop:pass-current-open-hypothesis-grade-blocks}, the Hubble-tension block is currently in the obstruction case. The present routed core fixes the selected branch by the scalar anchor $\kappa_*$ and its equivalent scalar readouts, but it does not yet provide an intrinsic cosmological evolution law for that anchor. Proposition~\ref{prop:H0-tension} instead inserts a time dependence for $\bsym(t)$ directly. If an anchor-flow law existed, then the evolution of $\bsym$, $\gL$, and the corresponding cosmological readout would become derived consequences of the selected branch architecture, and the Hubble block would move into the factorization case. In the absence of such a law, the block still carries extra unresolved dependence and remains an obstruction candidate by Theorem~\ref{thm:obstruction-dichotomy-prospective-3-0-extensions}.
+\end{proof}
+
+\begin{corollary}[Minimal absorption route for the Hubble block]
+\label{cor:minimal-absorption-route-hubble-block}
+The shortest currently visible route from the hypothesis-grade $\bsym(t)$ law of Proposition~\ref{prop:H0-tension} to the active 3.0 core is \emph{not} to tune the cosmological time dependence more finely, but to derive a branch-compatible anchor-flow law whose scalar readout reproduces the observed discrepancy.
+\end{corollary}
+
+\begin{proof}
+This is the direct operational content of Proposition~\ref{prop:hubble-evolution-obstruction-profile-current-3-0-package}.
+\end{proof}
+
+\begin{remark}[What the Hubble obstruction profile buys us]
+\label{rem:what-hubble-obstruction-profile-buys-us}
+This sharpened profile matters because it prevents the cosmological pass from drifting into ad hoc time-dependent ans"atze. The current text already tells us what kind of extension would count as mathematically meaningful: an anchor-flow law on the selected cosmological branch that turns the apparent $H_0$ tension into a derived branch readout. Any future Hubble step that does not produce such a law should be read as exploratory hypothesis work rather than as a 3.0-core derivation.
+\end{remark}
+
+
+\begin{proposition}[Minimal anchor-flow law compatible with the current 3.0 package]
+\label{prop:minimal-anchor-flow-law-compatible-current-3-0-package}
+Let $\Psi(t)=\hat P_{C_7}\Psi(t)$ be an admissible cosmological branch state and let
+\[
+\sigma_{\kappa_*}^2(\Psi)
+:=
+\frac{\|\mathcal R_{\kappa_*}\Psi\|^2}{\|\Psi\|^2}
+\ge 0
+\]
+be the anchor-centered residual purity scalar of the selected branch. Then the minimal autonomous flow law that uses only the current 3.0 data
+\[
+\mathfrak A_{3.0}=(\kappa_*,\mathcal L_{\kappa_*}^{\mathrm{pure}},\mathcal R_{\kappa_*},\eta_{\mathrm{spec}})
+\]
+and vanishes on the pure branch is the framework-level anchor flow
+\[
+\dot\kappa_*
+=
+\nu_{\mathrm{cos}}\,\eta_{\mathrm{spec}}\,\sigma_{\kappa_*}^2(\Psi),
+\qquad \nu_{\mathrm{cos}}\ge 0.
+\]
+In particular, this flow depends only on the selected anchor, the residual operator, and the residual-response readout; and it satisfies $\dot\kappa_*=0$ whenever the branch is pure, i.e. whenever $\eta_{\mathrm{spec}}=0$ or $\mathcal R_{\kappa_*}\Psi=0$.
+\end{proposition}
+
+\begin{proof}
+By Proposition~\ref{prop:hubble-evolution-obstruction-profile-current-3-0-package}, the Hubble block can move into the factorization case only through an intrinsic anchor-flow law built from the present branch data rather than from an externally prescribed $\bsym(t)$. The current 3.0 package contains only one scalar anchor $\kappa_*$, one residual operator $\mathcal R_{\kappa_*}$, and one residual-response scalar $\eta_{\mathrm{spec}}$. Any autonomous scalar flow built from these data and vanishing on the pure branch must therefore be proportional to a non-negative scalar readout of the residual operator multiplied by $\eta_{\mathrm{spec}}$. The quadratic residual purity scalar $\sigma_{\kappa_*}^2(\Psi)$ is the minimal such choice because it is intrinsic to the selected branch, non-negative, and vanishes exactly on the pure branch. This gives the stated framework-level flow law.
+\end{proof}
+
+\begin{corollary}[Anchor-flow readout of the Hubble discrepancy]
+\label{cor:anchor-flow-readout-hubble-discrepancy}
+Assume the framework-level flow of Proposition~\ref{prop:minimal-anchor-flow-law-compatible-current-3-0-package}. Then the scalar readouts of the cosmological branch evolve by
+\[
+\beta_{\mathrm{sym}}(t)=\sqrt{\kappa_*(t)},
+\qquad
+\gamma_L(t)=\frac{1+\kappa_*(t)}{1-\kappa_*(t)},
+\qquad
+\delta_{\mathrm{lattice}}(t)=\frac{1+\kappa_*(t)}{\mathbb T(1-\kappa_*(t))},
+\]
+with
+\[
+\dot\beta_{\mathrm{sym}}(t)=\frac{\dot\kappa_*(t)}{2\sqrt{\kappa_*(t)}},
+\qquad
+\dot\gamma_L(t)=\frac{2\,\dot\kappa_*(t)}{(1-\kappa_*(t))^2}.
+\]
+Hence the effective Hubble discrepancy is no longer prescribed by an external law for $\bsym(t)$, but becomes a readout of the anchor flow. In particular,
+\[
+\frac{H_0^{\mathrm{local}}}{H_0^{\mathrm{CMB}}}
+\sim
+\frac{\gamma_L(t_0)}{\gamma_L(t_{\mathrm{CMB}})}
+=
+\frac{(1+\kappa_*(t_0))(1-\kappa_*(t_{\mathrm{CMB}}))}{(1-\kappa_*(t_0))(1+\kappa_*(t_{\mathrm{CMB}}))}
+\]
+is an anchor-chain readout of the cosmological branch evolution.
+\end{corollary}
+
+\begin{proof}
+The scalar identities follow from Corollary~\ref{cor:anchor-chain-proof-routing} and Proposition~\ref{prop:curvature-anchor-determines-scalar-branch-data}. Differentiating the anchor-chain identities with respect to cosmological time gives the derivative formulas. The ratio statement is then immediate from the anchor-chain expression for $\gamma_L$ and expresses the former hypothesis-grade $\bsym(t)$ law as a readout of $\kappa_*(t)$.
+\end{proof}
+
+\begin{remark}[What the first anchor-flow law changes]
+\label{rem:what-first-anchor-flow-law-changes}
+This does not yet close the cosmological frontier completely: the coefficient $\nu_{\mathrm{cos}}$ is still framework-level and the flow law is the minimal branch-compatible choice rather than a full cosmological derivation. But it already changes the status of the Hubble block decisively. The time dependence is no longer inserted directly at the level of $\bsym(t)$; instead it is pushed back to the anchor itself, and the observable discrepancy becomes an anchor-chain readout. This is exactly the type of absorption route anticipated in Corollary~\ref{cor:minimal-absorption-route-hubble-block}.
+\end{remark}
+
+
+\begin{proposition}[Pure branch equilibria and sign propagation under the anchor flow]
+\label{prop:pure-branch-equilibria-sign-propagation-under-anchor-flow}
+Assume the framework-level anchor flow of Proposition~\ref{prop:minimal-anchor-flow-law-compatible-current-3-0-package} on a time interval $I$, and assume that the selected branch remains admissible with
+\[
+  0<\kappa_*(t)<1
+  \qquad (t\in I).
+\]
+Then the following hold.
+\begin{enumerate}
+  \item Every pure branch state is an equilibrium of the flow: if $\eta_{\mathrm{spec}}(t)=0$ or $\mathcal R_{\kappa_*}\Psi(t)=0$ at some time, then $\dot\kappa_*(t)=0$.
+  \item The anchor-chain readouts propagate with the same instantaneous sign as $\dot\kappa_*(t)$:
+  \[
+    \operatorname{sgn}\bigl(\dot\beta_{\mathrm{sym}}(t)\bigr)
+    =
+    \operatorname{sgn}\bigl(\dot\gamma_L(t)\bigr)
+    =
+    \operatorname{sgn}\bigl(\dot\delta_{\mathrm{lattice}}(t)\bigr)
+    =
+    \operatorname{sgn}\bigl(\dot\kappa_*(t)\bigr)
+  \]
+  whenever $\dot\kappa_*(t)\neq 0$.
+\end{enumerate}
+In particular, the minimal anchor flow moves all scalar branch readouts coherently: they are stationary on the pure branch and otherwise increase or decrease together according to the sign of the residual anchor drift.
+\end{proposition}
+
+\begin{proof}
+The equilibrium statement is immediate from Proposition~\ref{prop:minimal-anchor-flow-law-compatible-current-3-0-package}, which gives
+\[
+  \dot\kappa_*
+  =
+  \nu_{\mathrm{cos}}\,\eta_{\mathrm{spec}}\,\sigma_{\kappa_*}^2(\Psi),
+\]
+with $\sigma_{\kappa_*}^2(\Psi)=0$ whenever $\mathcal R_{\kappa_*}\Psi=0$. Hence the flow vanishes on every pure branch state.
+
+For the sign propagation, Corollary~\ref{cor:anchor-flow-readout-hubble-discrepancy} gives
+\[
+  \dot\beta_{\mathrm{sym}}(t)=\frac{\dot\kappa_*(t)}{2\sqrt{\kappa_*(t)}},
+  \qquad
+  \dot\gamma_L(t)=\frac{2\,\dot\kappa_*(t)}{(1-\kappa_*(t))^2},
+\]
+and differentiating the identity
+\[
+  \delta_{\mathrm{lattice}}(t)=\frac{1+\kappa_*(t)}{\mathbb T(1-\kappa_*(t))}
+\]
+yields
+\[
+  \dot\delta_{\mathrm{lattice}}(t)=\frac{2\,\dot\kappa_*(t)}{\mathbb T(1-\kappa_*(t))^2}.
+\]
+Since $0<\kappa_*(t)<1$, all prefactors are strictly positive, so the three derivatives have the same sign as $\dot\kappa_*(t)$ whenever the latter is nonzero.
+\end{proof}
+
+\begin{corollary}[Monotone anchor-chain evolution on one-sided residual drift intervals]
+\label{cor:monotone-anchor-chain-evolution-one-sided-residual-drift-intervals}
+Assume the hypotheses of Proposition~\ref{prop:pure-branch-equilibria-sign-propagation-under-anchor-flow} on an interval $I$, and assume in addition that the residual drift has one sign on $I$:
+\[
+  \eta_{\mathrm{spec}}(t)\,\sigma_{\kappa_*}^2(\Psi(t))\ge 0
+  \quad\text{for all }t\in I,
+\]
+or respectively the reversed inequality $\le 0$ for all $t\in I$. Then the scalar branch readouts
+\[
+  \beta_{\mathrm{sym}}(t),\qquad \gamma_L(t),\qquad \delta_{\mathrm{lattice}}(t)
+\]
+are simultaneously monotone nondecreasing on $I$ in the first case, and simultaneously monotone nonincreasing on $I$ in the second case.
+\end{corollary}
+
+\begin{proof}
+By Proposition~\ref{prop:minimal-anchor-flow-law-compatible-current-3-0-package}, the sign of $\dot\kappa_*$ is the sign of $\eta_{\mathrm{spec}}\sigma_{\kappa_*}^2(\Psi)$ because $\nu_{\mathrm{cos}}\ge 0$. Proposition~\ref{prop:pure-branch-equilibria-sign-propagation-under-anchor-flow} then shows that all scalar readout derivatives have the same sign as $\dot\kappa_*$. Hence they are monotone in the stated direction.
+\end{proof}
+
+\begin{remark}[What the first anchor-flow consequences add]
+\label{rem:what-first-anchor-flow-consequences-add}
+These consequences do not yet produce a full cosmological model, but they already strengthen the status of the Hubble channel in an important way. The first anchor-flow law is no longer just an admissible scalar evolution ansatz; it now comes with a built-in dynamical interpretation: pure branch states are fixed points, and away from purity the scalar branch readouts move coherently rather than independently. This is exactly the kind of structure one wants before attempting a more detailed cosmological closure.
+\end{remark}
+
+
+
+\begin{remark}[Package status of the anchor-flow layer in v\docversion]
+Within the present Version~3 line, the cosmological branch is now no longer just a named frontier. It has been promoted to a self-contained package with a clear internal logic: obstruction profile, minimal branch law, readout conversion, and first dynamical consequences. This does not yet settle cosmology quantitatively, but it fixes the exact mathematical form that the next passes must respect. In that sense, the Hubble block has become a routed package rather than an isolated hypothesis note.
+\end{remark}
+
+\subsection*{Strong/QCD obstruction-freeze package}
+\addcontentsline{toc}{subsection}{Strong/QCD obstruction-freeze package}
+The strong/QCD residual route forms the hadronic package front of the Version~3 line. In the present Version~3 pass this route is kept deliberately honest: it is not advertised as closed, but it is no longer left as a nameless loose end. The package isolates the exact hadronic obstruction profile, writes down the minimal branch-compatible QCD residual law that would be needed for absorption, states the conditional criterion under which the muon/$g$-2 block would cease to be a placeholder-driven frontier and become a genuine branch-derived readout, and then freezes the remaining hadronic uncertainty explicitly as an obstruction boundary rather than a half-normalized theorem claim.
+
+Operationally, this package has four steps: first the obstruction profile of the current muon/QCD block is stated sharply; second the minimal strong-sector residual law is written down; third the corresponding conditional absorption criterion is made explicit; and fourth the whole hadronic route is reframed as a frontier package whose next progress measure is derivation of a real residual readout rather than retuning of external placeholders.
+
+\begin{proposition}[Muon/QCD obstruction profile under the current 3.0 package]
+\label{prop:muon-qcd-obstruction-profile-current-3-0-package}
+Under the current anchor-normalized 3.0 package
+\[
+\mathfrak A_{3.0}=(\kappa_*,\mathcal L_{\kappa_*}^{\mathrm{pure}},\mathcal R_{\kappa_*},\eta_{\mathrm{spec}}),
+\]
+the hypothesis-grade muon-$g$-2 / QCD-running block of Proposition~\ref{prop:muon-g2} does \emph{not} yet factor through the active branch architecture. In the current manuscript it therefore remains in the obstruction case.
+
+More precisely, the muon/QCD block would move into the factorization case only if one can derive on the selected strong-interaction branch an intrinsic \emph{QCD residual law}
+\[
+\mathcal R_{\mathrm{QCD}}=\mathcal G_{\mathrm{QCD}}(\kappa_*,\eta_{\mathrm{spec}},\mathcal R_{\kappa_*};\mu),
+\]
+with the following properties:
+\begin{enumerate}
+  \item the strong-coupling data are expressed through a branch-compatible residual operator rather than through externally assigned $k$-values for $\alpha_s$ and $\Lambda_{\mathrm{QCD}}$;
+  \item the induced hadronic correction becomes a readout of the selected branch and its QCD residual sector, not an independent phenomenological placeholder; and
+  \item the discrepancy entering muon-$g$-2 is computed from this residual law rather than from unresolved QCD placeholders such as $k(\alpha_s)$, $k(\Lambda_{\mathrm{QCD}})$, or the historical value $k=1.2$.
+\end{enumerate}
+Without such a derived QCD residual law, the present muon/QCD block still depends on extra unresolved strong-sector data and therefore remains a genuine obstruction candidate rather than a routine 3.0 consequence.
+\end{proposition}
+
+\begin{proof}
+By Proposition~\ref{prop:pass-current-open-hypothesis-grade-blocks}, the muon/QCD block is currently in the obstruction case. The present routed core fixes the scalar branch data by the anchor chain and the operator side by the pair $(\mathcal L_{\kappa_*}^{\mathrm{pure}},\eta_{\mathrm{spec}}\mathcal R_{\kappa_*})$, but it does not yet provide a strong-sector residual law from which the QCD-running data are derived. Proposition~\ref{prop:muon-g2} instead leaves $k(\alpha_s)$ and $k(\Lambda_{\mathrm{QCD}})$ unresolved and treats the value $k=1.2$ only as a phenomenological placeholder. If a QCD residual law existed, then the hadronic correction would become a branch readout and the muon/QCD block would move into the factorization case. In the absence of such a law, the block still carries extra unresolved strong-sector dependence and remains an obstruction candidate by Theorem~\ref{thm:obstruction-dichotomy-prospective-3-0-extensions}.
+\end{proof}
+
+\begin{corollary}[Minimal absorption route for the muon/QCD block]
+\label{cor:minimal-absorption-route-muon-qcd-block}
+The shortest currently visible route from the muon-$g$-2 / QCD-running hypothesis block of Proposition~\ref{prop:muon-g2} to the active 3.0 core is \emph{not} to tune the placeholder $k$-values more finely, but to derive a branch-compatible QCD residual law whose hadronic readout reproduces the observed anomaly.
+\end{corollary}
+
+\begin{proof}
+This is the direct operational content of Proposition~\ref{prop:muon-qcd-obstruction-profile-current-3-0-package}.
+\end{proof}
+
+\begin{remark}[What the muon/QCD obstruction profile buys us]
+\label{rem:what-muon-qcd-obstruction-profile-buys-us}
+This sharpened profile matters because it prevents the strong-sector pass from drifting into ad hoc placeholder fitting. The current text now tells us what kind of extension would count as mathematically meaningful: a QCD residual law on the selected branch that turns the hadronic correction into a derived readout. Any future muon/QCD step that does not produce such a law should be read as exploratory hypothesis work rather than as a 3.0-core derivation.
+\end{remark}
+
+
+\begin{proposition}[Minimal QCD residual law compatible with the current 3.0 package]
+\label{prop:minimal-qcd-residual-law-compatible-current-3-0-package}
+Let $\hat P_{\mathrm{QCD}}$ denote the projector onto the selected strong-interaction branch and define the anchored strong-sector residual operator by
+\[
+\mathcal R_{\mathrm{QCD}}:=\hat P_{\mathrm{QCD}}\,\mathcal R_{\kappa_*}\,\hat P_{\mathrm{QCD}}.
+\]
+Then the minimal branch-compatible law capable of absorbing the current muon-$g$-2 / QCD-running obstruction into the active 3.0 architecture is the strong-sector residual equation
+\[
+\mathcal L_{\kappa_*}^{\mathrm{pure}}\Psi_{\mathrm{QCD}}
+=
+\eta_{\mathrm{QCD}}\,\mathcal R_{\mathrm{QCD}}\Psi_{\mathrm{QCD}},
+\qquad
+\Psi_{\mathrm{QCD}}=\hat P_{\mathrm{QCD}}\Psi_{\mathrm{QCD}},
+\]
+with residual-response coefficient
+\[
+\eta_{\mathrm{QCD}}
+=
+\frac{\langle \mathcal R_{\mathrm{QCD}}\Psi_{\mathrm{QCD}},\,
+\mathcal L_{\kappa_*}^{\mathrm{pure}}\Psi_{\mathrm{QCD}}\rangle}
+{\|\mathcal R_{\mathrm{QCD}}\Psi_{\mathrm{QCD}}\|^2}
+\]
+whenever $\mathcal R_{\mathrm{QCD}}\Psi_{\mathrm{QCD}}\neq 0$.
+\end{proposition}
+
+\begin{proof}
+This is the exact strong-sector analogue of the leptonic residual law introduced in Proposition~\ref{prop:minimal-fermionic-residual-law-compatible-current-3-0-package}. By Proposition~\ref{prop:operator-completion-anchor-normalized-hierarchy}, every selected-branch operator equation splits into the pure branch operator and an anchored residual operator. Restricting the residual layer to the strong-interaction branch therefore produces the canonical candidate residual equation written above. The stated readout formula for $\eta_{\mathrm{QCD}}$ is obtained by taking the inner product with $\mathcal R_{\mathrm{QCD}}\Psi_{\mathrm{QCD}}$ and solving for the coefficient whenever the denominator is nonzero.
+\end{proof}
+
+\begin{corollary}[Conditional absorption of the muon-$g$-2 / QCD block]
+\label{cor:conditional-absorption-muon-g2-qcd-block}
+Assume that the selected strong-interaction branch carries a discrete residual spectrum for $\mathcal R_{\mathrm{QCD}}$ and that the hadronic correction entering muon-$g$-2 is an anchored readout of the corresponding residual level. Then the current hypothesis-grade muon-$g$-2 / QCD-running block of Proposition~\ref{prop:muon-g2} moves from the obstruction case to the factorization case: the hadronic discrepancy becomes a derived QCD residual readout rather than an externally inserted placeholder.
+\end{corollary}
+
+\begin{proof}
+Under the stated assumptions, the strong-sector correction is no longer parametrized by unresolved placeholders such as $k(\alpha_s)$, $k(\Lambda_{\mathrm{QCD}})$, or the historical value $k=1.2$. Instead it is read off from the anchored residual spectrum of $\mathcal R_{\mathrm{QCD}}$ through the branch equation of Proposition~\ref{prop:minimal-qcd-residual-law-compatible-current-3-0-package}. This is exactly the criterion required in Proposition~\ref{prop:muon-qcd-obstruction-profile-current-3-0-package} for the muon/QCD block to move into the factorization case.
+\end{proof}
+
+\begin{remark}[What the first QCD residual law changes]
+\label{rem:what-first-qcd-residual-law-changes}
+This does not yet solve the full strong sector. The coefficient $\eta_{\mathrm{QCD}}$ is still framework-level, and the discrete residual spectrum of $\mathcal R_{\mathrm{QCD}}$ has not yet been derived from first principles. But the status of the muon/QCD frontier nevertheless changes decisively: the open block is no longer described only as an obstruction profile, but also by a concrete branch-compatible absorption mechanism candidate.
+\end{remark}
+
+\begin{proposition}[Branch-derived readout versus placeholder fitting in the strong sector]
+\label{prop:branch-derived-readout-versus-placeholder-fitting-strong-sector}
+Within the current 3.0 architecture, a hadronic correction term for the muon-$g$-2 / QCD block belongs to the factorization case only if it can be written as a readout of the selected strong branch through the data
+\[
+  \bigl(\kappa_*,\mathcal L_{\kappa_*}^{\mathrm{pure}},\mathcal R_{\mathrm{QCD}},\eta_{\mathrm{QCD}}\bigr)
+\]
+from Proposition~\ref{prop:minimal-qcd-residual-law-compatible-current-3-0-package}. Any expression that still depends on externally inserted placeholders such as $k(\alpha_s)$, $k(\Lambda_{\mathrm{QCD}})$, or ad hoc fitted historical constants without such a factorization remains in the obstruction case.
+\end{proposition}
+
+\begin{proof}
+The forward implication is exactly the content of Corollary~\ref{cor:conditional-absorption-muon-g2-qcd-block}: once the hadronic correction is read off from the anchored residual spectrum of $\mathcal R_{\mathrm{QCD}}$, the muon/QCD block moves into the factorization case. Conversely, Proposition~\ref{prop:muon-qcd-obstruction-profile-current-3-0-package} identifies unresolved placeholder dependence as the defining obstruction of the present block. Therefore any formula that still requires externally assigned strong-sector placeholders has, by definition, not yet factorized through the active branch architecture.
+\end{proof}
+
+\begin{corollary}[Explicit obstruction freeze of the present strong/QCD frontier]
+\label{cor:explicit-obstruction-freeze-present-strong-qcd-frontier}
+Until a discrete residual spectrum and anchored hadronic readout for $\mathcal R_{\mathrm{QCD}}$ are actually derived, the muon-$g$-2 / QCD block must be treated as an explicit obstruction boundary of the current Version~3 line, not as an incompletely normalized theorem package.
+\end{corollary}
+
+\begin{proof}
+By Proposition~\ref{prop:branch-derived-readout-versus-placeholder-fitting-strong-sector}, the only admissible route from the current strong-sector block to the factorization case is a branch-derived readout through $\mathcal R_{\mathrm{QCD}}$ and $\eta_{\mathrm{QCD}}$. As long as that readout is not derived, the remaining hadronic dependence is still placeholder dependence and therefore still an obstruction. The correct mathematical status is therefore an explicit obstruction freeze rather than premature package closure.
+\end{proof}
+
+\begin{remark}[What the obstruction-freeze pass changes]
+\label{rem:what-obstruction-freeze-pass-changes}
+This pass does not weaken the hadronic route; it clarifies its status. The strong/QCD branch is now no longer a vague future problem and also not a pseudo-closed theorem block. It is a precisely delimited obstruction boundary with a known absorption target: derive the residual spectrum and the anchored hadronic readout of $\mathcal R_{\mathrm{QCD}}$. That makes the criterion for the next public upload much sharper.
+\end{remark}
+
+\subsection*{Honest public-cut criterion for the three-front line}
+\addcontentsline{toc}{subsection}{Honest public-cut criterion for the three-front line}
+The next question after the obstruction-freeze pass is no longer whether the strong/QCD block is secretly solved; it is whether the present Version~3 line is already publishable \emph{as it stands} without misrepresenting its hadronic frontier. In the present Version~3 pass, this question is answered explicitly. The current three-front package line is declared publicly admissible exactly when the hadronic route is frozen as an obstruction boundary rather than advertised as closed, and when the front matter and version record describe that status without ambiguity.
+
+\begin{proposition}[Honest public-cut criterion after explicit obstruction freeze]
+\label{prop:honest-public-cut-criterion-after-explicit-obstruction-freeze}
+Assume that the active Version~3 line contains the three visible package fronts
+\[
+  \{\text{anchor-flow},\ \text{fermionic residual},\ \text{strong/QCD obstruction freeze}\}
+\]
+and that the hadronic route is recorded exactly as in Corollary~\ref{cor:explicit-obstruction-freeze-present-strong-qcd-frontier}, namely as an explicit obstruction boundary rather than as a closed theorem package. Then a next public version cut of the present line is semantically admissible provided the release-facing metadata describe the strong/QCD block as unresolved but structurally delimited and do not claim a derived anchored hadronic readout.
+\end{proposition}
+
+\begin{proof}
+Corollary~\ref{cor:explicit-obstruction-freeze-present-strong-qcd-frontier} already fixes the mathematical status of the hadronic route: until an anchored residual-spectrum readout is derived, the muon-$g$-2 / QCD block remains an obstruction boundary. Therefore a public cut is honest precisely when it freezes \emph{that} status rather than rewriting the block as solved or silently leaving its dependence ambiguous. The other two package fronts are already theorem-bearing and branch-internal; the only release-critical issue is whether the unresolved strong-sector dependence is stated without status drift. If the metadata and release note preserve this distinction, the resulting public cut is a truthful frontier snapshot of the current Version~3 line.
+\end{proof}
+
+\begin{corollary}[Bifurcated next-upload threshold for Version~3]
+\label{cor:bifurcated-next-upload-threshold-version-3}
+After the present obstruction-freeze pass, the next public upload of the Version~3 line has exactly two admissible forms:
+\begin{enumerate}
+  \item an \emph{honest frontier freeze}, which publishes the current three-front package line while keeping the strong/QCD route explicitly frozen as an obstruction boundary; or
+  \item an \emph{absorption release}, which is justified only once a discrete residual spectrum and anchored hadronic readout for $\mathcal R_{\mathrm{QCD}}$ are actually derived.
+\end{enumerate}
+No intermediate mode that still depends on unresolved hadronic placeholders but presents the strong/QCD route as closed is admissible.
+\end{corollary}
+
+\begin{proof}
+The first mode is exactly Proposition~\ref{prop:honest-public-cut-criterion-after-explicit-obstruction-freeze}. The second mode is the factorization case singled out in Corollary~\ref{cor:conditional-absorption-muon-g2-qcd-block}. Any purported middle mode would violate Proposition~\ref{prop:branch-derived-readout-versus-placeholder-fitting-strong-sector}, because it would still rely on placeholder dependence while claiming branch-derived closure.
+\end{proof}
+
+\begin{remark}[What the readiness clarification changes]
+\label{rem:what-readiness-clarification-changes}
+The gain of the present readiness clarification is subtle but important. The next upload is no longer tied to the hidden hope that the hadronic route might be solved at the last minute. Instead the decision rule is now explicit: either publish the present line honestly as a three-front snapshot with one frozen obstruction boundary, or wait until the hadronic branch is genuinely absorbed. This removes a common source of status drift between local theorem work and public versioning.
+\end{remark}
+
+
+\begin{theorem}[Conditional frontier absorption under the three minimal residual laws]
+\label{thm:conditional-frontier-absorption-three-minimal-residual-laws}
+Assume in addition to the current 3.0 package $\mathfrak A_{3.0}$ that the following three framework-level laws hold on the selected branch:
+\begin{enumerate}
+  \item the anchor-flow law of Proposition~\ref{prop:minimal-anchor-flow-law-compatible-current-3-0-package},
+  \item the leptonic residual law of Proposition~\ref{prop:minimal-fermionic-residual-law-compatible-current-3-0-package},
+  \item the QCD residual law of Proposition~\ref{prop:minimal-qcd-residual-law-compatible-current-3-0-package}.
+\end{enumerate}
+Assume further that the corresponding branch restrictions satisfy the spectral/readout hypotheses stated in Corollaries~\ref{cor:conditional-absorption-neutrino-k-value} and \ref{cor:conditional-absorption-muon-g2-qcd-block}. Then the presently open frontier blocks
+\[
+  \{\text{Hubble evolution},\ \text{neutrino-}k,\ \text{muon-}g\text{-}2/\text{QCD}\}
+\]
+move from the obstruction case to the factorization case. Equivalently, every currently isolated frontier block is absorbed by an extension of the two-layer anchor architecture in which
+\[
+  \kappa_*(t),\qquad \mathcal R_\nu,\qquad \mathcal R_{\mathrm{QCD}}
+\]
+provide the only additional readout channels beyond the routed 3.0 core.
+\end{theorem}
+
+\begin{proof}
+The Hubble block becomes an anchor-readout block once the time dependence is assigned to $\kappa_*(t)$ via Proposition~\ref{prop:minimal-anchor-flow-law-compatible-current-3-0-package}; then $\beta_{\mathrm{sym}}(t)$, $\gamma_L(t)$, and $\delta_{\mathrm{lattice}}(t)$ are no longer inserted externally, but read off from the time-dependent anchor. The neutrino block moves into the factorization case by Corollary~\ref{cor:conditional-absorption-neutrino-k-value} once the leptonic residual operator carries the required discrete residual spectrum. Likewise, the muon/QCD block moves into the factorization case by Corollary~\ref{cor:conditional-absorption-muon-g2-qcd-block} once the strong-sector residual operator carries the corresponding anchored discrete residual readout. In each of the three cases, the formerly open block is no longer governed by an externally inserted placeholder quantity, but by a branch-internal residual law or anchor flow. Hence the whole currently open frontier is absorbed by a finite extension of the same anchor architecture rather than by unrelated new ingredients.
+\end{proof}
+
+\begin{theorem}[Architecture-level gateway criterion for version 3.0.0]
+\label{thm:architecture-level-gateway-criterion-version-3-0-0}
+Assume the hypotheses of Theorem~\ref{thm:conditional-frontier-absorption-three-minimal-residual-laws}. Then the current routed core together with the three additional channels
+\[
+  \kappa_*(t),\qquad \mathcal R_\nu,\qquad \mathcal R_{\mathrm{QCD}}
+\]
+forms a finite extension of the two-layer anchor architecture through which every block that is currently part of the Companion's active frontier factorizes. Equivalently, no presently identified frontier block requires a structural ingredient outside the anchor-based architecture once the three minimal residual laws are admitted.
+\end{theorem}
+
+\begin{proof}
+By Theorem~\ref{thm:conditional-frontier-absorption-three-minimal-residual-laws}, each currently isolated frontier block moves from the obstruction case to the factorization case under the three additional laws and their stated spectral/readout hypotheses. The routed 3.0 core already factors through $\mathfrak A_{3.0}$ by Theorem~\ref{cor:routed-core-factors-through-3-0-branch-architecture-package}. Hence the union of the existing core with the three additional channels still lives inside one finite anchor-organized architecture. Since the obstruction pass of Proposition~\ref{cor:what-obstruction-pass-buys-us} has already isolated the presently open frontier to exactly these three classes, no further currently identified block remains outside this extended factorization picture.
+\end{proof}
+
+
+\begin{definition}[Minimal extended 3.0 frontier package]
+\label{def:minimal-extended-3-0-frontier-package}
+The \emph{minimal extended 3.0 frontier package} is the finite data set
+\[
+  \mathfrak A_{3.0}^{\mathrm{ext}}
+  :=
+  \bigl(
+    \kappa_*,\; \mathcal L_{\kappa_*}^{\mathrm{pure}},\; \mathcal R_{\kappa_*},\; \eta_{\mathrm{spec}},\; \dot\kappa_*,\; \mathcal R_{\nu},\; \mathcal R_{\mathrm{QCD}}
+  \bigr),
+\]
+where the first four entries form the current routed core package $\mathfrak A_{3.0}$ and the last three entries represent the minimal additional channels required by the current frontier, namely the anchor-flow channel, the leptonic residual channel, and the strong-sector residual channel.
+\end{definition}
+
+\begin{theorem}[Minimal extended package absorbs the current frontier conditionally]
+\label{thm:minimal-extended-package-absorbs-current-frontier-conditionally}
+Assume the hypotheses of Theorem~\ref{thm:architecture-level-gateway-criterion-version-3-0-0}. Then every block that is currently part of the Companion's active frontier factors through the minimal extended package $\mathfrak A_{3.0}^{\mathrm{ext}}$. Equivalently, the presently known frontier does not require any additional channel beyond the seven entries of Definition~\ref{def:minimal-extended-3-0-frontier-package}.
+\end{theorem}
+
+\begin{proof}
+By Theorem~\ref{thm:architecture-level-gateway-criterion-version-3-0-0}, the current routed core already factors through $\mathfrak A_{3.0}$, while the remaining open frontier blocks are absorbed once the three minimal laws for anchor flow, leptonic residual readout, and QCD residual readout are admitted. These three laws introduce exactly the additional channels $\dot\kappa_*$, $\mathcal R_{\nu}$, and $\mathcal R_{\mathrm{QCD}}$. Hence the union of the already stabilized core and the currently known frontier is completely represented inside the finite extended package $\mathfrak A_{3.0}^{\mathrm{ext}}$.
+\end{proof}
+
+\begin{remark}[What the minimal extended package changes]
+\label{rem:what-minimal-extended-package-changes}
+This does not yet prove that the frontier is solved. It proves something different and already quite strong: the current frontier is no longer an unbounded source of potentially unrelated new ingredients. Conditional on the three minimal laws, the frontier is compressed into a finite extension of the same anchor architecture rather than into a qualitatively new framework.
+\end{remark}
+
+\begin{corollary}[Conditional package statement for version 3.0.0]
+\label{cor:conditional-package-statement-version-3-0-0}
+Assume the hypotheses of Theorem~\ref{thm:minimal-extended-package-absorbs-current-frontier-conditionally}. Then the current routed Companion together with the extended package $\mathfrak A_{3.0}^{\mathrm{ext}}$ supplies a finite conditional package for version~3.0.0: every currently identified core or frontier block is represented either by the routed anchor core itself or by one of the three additional channels
+\[
+  \dot\kappa_*,\qquad \mathcal R_{\nu},\qquad \mathcal R_{\mathrm{QCD}}.
+\]
+Equivalently, no presently isolated branch, readout, or bridge block requires a further architecture-level ingredient beyond the extended anchor package once the three minimal residual laws are admitted.
+\end{corollary}
+
+\begin{proof}
+By Theorem~\ref{thm:minimal-extended-package-absorbs-current-frontier-conditionally}, the currently known frontier is already absorbed by $\mathfrak A_{3.0}^{\mathrm{ext}}$ under the three minimal laws, while Theorem~\ref{cor:routed-core-factors-through-3-0-branch-architecture-package} identifies the routed 3.0 core with the first four entries of the same package. Hence every currently identified block of the Companion is represented inside one finite extended package, with no additional architecture-level channel required beyond the three explicit frontier channels.
+\end{proof}
+
+\begin{remark}[What the conditional package statement adds]
+\label{rem:what-conditional-package-statement-adds}
+This is the shortest formulation so far of what the present document means by a conditional 3.0.0 package. It is stronger than a roadmap item and weaker than a fully closed 3.0.0 theorem: the package is already finite and explicit, but its complete absorption power still depends on the three minimal residual laws. That is exactly the right intermediate status for the present stage.
+\end{remark}
+
+\begin{remark}[What the architecture-level gateway criterion changes]
+\label{rem:what-architecture-level-gateway-criterion-changes}
+This is still not the claim that every detailed cosmological, leptonic, or QCD formula has already been derived. The claim is narrower and more important for the project architecture: once the three minimal residual laws are supplied, the present frontier no longer points to a qualitatively new layer beyond the anchor architecture. In that precise sense, the document reaches a genuine architecture-level gateway to version 3.0.0.
+\end{remark}
+
+\begin{remark}[What the conditional frontier absorption theorem changes]
+\label{rem:what-conditional-frontier-absorption-theorem-changes}
+This theorem does not claim that the frontier is already solved. Its importance is structural: the remaining open pieces are no longer three disconnected mysteries. They now appear as three specific missing channels of one and the same anchor-based architecture: a time-flow channel for cosmology, a leptonic residual channel for neutrino readout, and a strong-sector residual channel for QCD/muon readout. That makes the road to version 3.0.0 far more concrete.
+\end{remark}
+
+\begin{remark}[What this architecture profile means for the project]
+\label{rem:what-architecture-profile-means-project}
+This is the clearest sign so far that the recent compression passes are not merely local technical wins. The current core is already behaving like a 3.0-level architecture: one anchor organizes the scalar branch data, one pure operator carries the selected dynamics, and one anchored residual layer measures the remaining impurity. The practical consequence is that future work can increasingly be judged by a simple question: does a new block reduce to the existing two-layer anchor architecture, or does it expose a genuinely new obstruction that must be integrated into it?
+\end{remark}
+
+\begin{definition}[Parameter taxonomy after branch selection]
+\label{def:parameter-taxonomy-branch-selection}
+Within the present Companion architecture, the symbols appearing in the reduced and branch-selected MM/HC equations fall into four classes:
+\begin{enumerate}
+  \item \emph{Branch data}: the scalar quantities $(\gL,\bsym,\delta_{\mathrm{lattice}})$ fixed by the independent fixed-point and closure conditions.
+  \item \emph{Response ratios}: dimensionless quantities such as
+  \[
+    \rho_{\mathrm{MM}}:=\frac{\lambda_{\mathrm{MM}}}{\lambda_{\mathrm{HC}}},
+    \qquad
+    \eta_{\mathrm{spec}}:=\frac{\alpha}{m_{\mathrm{br}}},
+  \]
+  which measure off-branch or residual on-branch response.
+  \item \emph{Normalization/readout scales}: quantities such as $m_{\mathrm{br}}$, $\tau_{\mathrm{br}}$, and the anchored scalar $\mu_*$ (identified with the branch curvature anchor $\kappa_*$ under Theorem~\ref{thm:branch-curvature-anchor-identification}) that package branch-internal shifts or units but do not select the branch itself.
+  \item \emph{Residual operators}: the branch-restricted remainders $\Delta\mathcal M_{\mathrm{br}}$ and related projected/commutator terms that encode whether a further internal obstruction survives after branch selection.
+\end{enumerate}
+In particular, the parameter-collapse results below separate \emph{branch selection} from \emph{off-branch response} and from \emph{on-branch residual readout}.
+\end{definition}
+
+\begin{theorem}[Parameter-collapse ladder for the MM/HC hierarchy]
+\label{thm:parameter-collapse-ladder}
+Across the present field-equation hierarchy, the apparent free parameters collapse in the following strict order:
+\begin{enumerate}
+  \item In the reduced HC/MM transport equation, the pair $(\lambda_{\mathrm{HC}},\lambda_{\mathrm{MM}})$ collapses off branch to the single ratio $\rho_{\mathrm{MM}}$ together with an overall normalization of the transported term.
+  \item Exact admissible branch selection is independent of $\lambda_{\mathrm{HC}}$ and $\lambda_{\mathrm{MM}}$ and is fixed instead by the scalar branch data $(\gL,\bsym,\delta_{\mathrm{lattice}})$.
+  \item In the minimal MM/HC field equation, the four coefficients $(m_0,\alpha,\beta,\gamma)$ collapse first to ratios relative to $m_0$, and then on the selected branch to the branch mass $m_{\mathrm{br}}$ together with the single residual spectral-response ratio $\eta_{\mathrm{spec}}$.
+  \item In the pure branch Dirac sector, even $\eta_{\mathrm{spec}}$ disappears whenever the anchored projected Millennium remainder vanishes on the branch; after normalization by $m_{\mathrm{br}}$, no independent structural parameter remains.
+\end{enumerate}
+Thus the field-equation ladder does not generate a growing family of new free constants. Instead it strips the dynamics down from off-branch response data to a branch-selected core with at most one genuine residual response ratio.
+\end{theorem}
+
+\begin{proof}
+Step~(1) is Proposition~\ref{prop:coupling-reduction-reduced-transport}. Step~(2) is Corollary~\ref{cor:branch-data-independent-hcmm-couplings}. Step~(3) combines Proposition~\ref{prop:coupling-reduction-minimal-mmhc}, Theorem~\ref{thm:branch-normalized-mmhc}, and Corollary~\ref{cor:collapse-minimal-mmhc-parameters}. Step~(4) is precisely Corollary~\ref{cor:pure-branch-dirac}. Reading these statements in order gives the claimed collapse ladder.
+\end{proof}
+
+\begin{corollary}[No hidden branch-selector survives the collapse ladder]
+\label{cor:no-hidden-branch-selector}
+Within the hierarchy
+\[
+  \eqref{eq:reduced-hcmm-ratio-form}
+  \longrightarrow
+  \eqref{eq:canonical-branch-mmhc-dimensionless}
+  \longrightarrow
+  \eqref{eq:pure-branch-dirac},
+\]
+no additional independent parameter remains that could change the selected admissible branch after $(\gL,\bsym,\delta_{\mathrm{lattice}})$ have been fixed. The surviving quantities are either response ratios, normalization/readout scales, or residual operators on the already selected branch.
+\end{corollary}
+
+\begin{proof}
+By Theorem~\ref{thm:parameter-collapse-ladder}, branch selection is completed before the residual quantities $\rho_{\mathrm{MM}}$, $m_{\mathrm{br}}$, and $\eta_{\mathrm{spec}}$ enter as effective data. These remaining quantities control off-branch response, branch normalization, or the size of a residual anchored spectral correction, but they do not re-open branch selection. Hence no hidden branch-selector survives once the scalar branch data are fixed.
+\end{proof}
+
+\begin{remark}[What the collapse ladder buys us]
+\label{rem:what-collapse-ladder-buys-us}
+The practical consequence is that later proofs do not have to chase a proliferating parameter list. They may first determine the branch by the scalar/Teichm\"uller route and only afterwards analyze whether an off-branch response ratio or an anchored spectral remainder still matters. This sharply reduces the search space for both field equations and readout arguments.
+\end{remark}
 
 \begin{proposition}[Comparison of effective Millennium-matrix readouts]
 \label{prop:mm-readout-comparison}
@@ -8147,15 +9549,16 @@ The Companion unfolding program may be read as one admissibility-preserving arch
 \[
 \begin{aligned}
 &\text{generative formation}
-\Longrightarrow \text{HC/closure/confinement forcing}
-\Longrightarrow \text{cascade and readout admissibility}\\
+\Longrightarrow \text{HC/closure/confinement forcing}\\
+&\Longrightarrow \text{cascade and readout admissibility}\\
 &\Longrightarrow \text{semantic/tensor transport}
-\Longrightarrow \text{grouped-layer realization}
-\Longrightarrow \text{probe and field realization}\\
-&\Longrightarrow \text{physical interface control}
-\Longrightarrow \text{spectral/resolvent/semigroup/fusion synthesis}\\
-&\Longrightarrow \text{observable back-projection}
-\Longrightarrow \text{kernel reconstruction of the same structure}.
+\Longrightarrow \text{grouped-layer realization}\\
+&\Longrightarrow \text{probe and field realization}\\
+&\Longrightarrow \text{physical interface control}\\
+&\Longrightarrow \text{spectral/resolvent/semigroup synthesis}\\
+&\Longrightarrow \text{fusion synthesis}
+\Longrightarrow \text{observable back-projection}\\
+&\Longrightarrow \text{kernel reconstruction of the same structure}.
 \end{aligned}
 \]
 In particular, the later readout layers do not introduce a second ontological source, but provide a controlled return map into the same structural kernel whose forcing chain generated the admissible dynamics in the first place.
@@ -8228,18 +9631,18 @@ This final theorem turns the Companion from a one-off expansion into a reusable 
 
 %% ============================================================
 %%  s_op1_op4_hopf_ckm.tex
-%%  STATUS: PROOF MODE — Erster strukturierter Beweisentwurf
+%%  STATUS: PROOF MODE — first structured proof draft
 %%
 %%  OP 1: β_sym = 1/√3 aus Hopf-Fixpunkt-Geometrie
-%%  OP 4: CKM/PMNS aus G₂ Euler-Winkeln (Faktor ≈ 2 schließen)
+%%  OP 4: CKM/PMNS from G₂ Euler angles (close the factor ≈ 2 gap)
 %%
-%%  Marc Brendecke, Bochum, März 2026
-%%  Drop-In für quantum_sphaera v2.x (nach Section 11)
+%%  Marc Brendecke, Bochum, March 2026
+%%  Drop-in for quantum_sphaera v2.x (after Section 11)
 %%
-%%  SCHLÜSSELEINSICHT: OP 1 und OP 4 sind dasselbe Problem.
-%%  Der Faktor ≈ 2 in den Mischungswinkeln (OP 4) ist dieselbe
-%%  5.1%-Lücke wie in β_sym (OP 1): beides ist die
-%%  Kontinuumslimit-Korrektur der diskreten Primgitter-Geometrie.
+%%  KEY INSIGHT: OP 1 and OP 4 are the same underlying problem.
+%%  The factor ≈ 2 in the mixing angles (OP 4) is the same
+%%  5.1% gap as in β_sym (OP 1): both are the
+%%  continuum-limit correction of the discrete prime-lattice geometry.
 %% ============================================================
 
 \subsection*{Phase IV-S: Hopf Fixed-Point Geometry and CKM/PMNS Residuals}
@@ -8960,9 +10363,11 @@ Tribonacci value $\gL = \mathbb{T}$.
 \end{proposition}
 
 \begin{proof}
-From the spectral self-consistent equation~\eqref{eq:SC2}: setting
-$\bsym = (1/\sqrt{3})\exp(-\gamma_1/(4\pi\gL^n))$ and solving for
-$\gL^n$ gives
+From the spectral self-consistent equation~\eqref{eq:SC2}, set
+\[
+  \bsym = (1/\sqrt{3})\exp\!\bigl(-\gamma_1/(4\pi\gL^n)\bigr).
+\]
+Solving this relation for $\gL^n$ gives
 \[
   \gL^n
   = -\frac{\gamma_1}{4\pi\log(\bsym\sqrt{3})}
@@ -9360,8 +10765,8 @@ numerical support, rather than as a fully independent asymptotic proof.
 \end{corollary}
 
 %% ============================================================
-%%  delta lattice — Exakte Charakterisierung (v2.29.6)
-%%  Einfügen nach rem:teichmuller-status (Zeile ~9968 in Arbeitsdatei)
+%%  delta lattice — exact characterization (v2.29.6)
+%%  Insert after rem:teichmuller-status (around line 9968 in the working file)
 %% ============================================================
 
 \subsection{\texorpdfstring{Transcendental characterization of $\delta_{\mathrm{lattice}}$}{Transcendental characterization of delta lattice}}
@@ -9741,9 +11146,11 @@ From the Dixon algebra structure (Theorem~11.3, Companion):
 \item Generation-changing transitions are $G_2$-rotations in
   $\mathrm{Im}(\mathbb{O})$: $e_4 \cdot e_5 = +e_7$,
   $e_5 \cdot e_6 = +e_1$, $e_6 \cdot e_4 = -e_3$.
-\item A natural candidate for the Cabibbo angle is
-  $\theta_{12} \approx \arcsin(\gamma_{\mathrm{string}})
-  \approx \arcsin(\ln 2/(\pi\sqrt{3})) \approx 7.3^\circ$.
+\item A natural candidate for the Cabibbo angle is obtained from
+  \[
+    \theta_{12} \approx \arcsin(\gamma_{\mathrm{string}})
+    \approx \arcsin(\ln 2/(\pi\sqrt{3})) \approx 7.3^\circ.
+  \]
 \item Observed value: $\theta_C \approx 13.04^\circ$.
   Ratio: $13.04/7.3 \approx 1.79 \approx 2$.
 \end{itemize}
@@ -9956,7 +11363,7 @@ $\delta_{\mathrm{CL}} = \bsym\sqrt{3}$.
 \label{rem:op-status-complete}
 \begin{center}
 \renewcommand{\arraystretch}{1.3}
-\begin{tabularx}{0.98\textwidth}{@{}l >{\RaggedRight\arraybackslash}p{0.28\textwidth} >{\RaggedRight\arraybackslash}p{0.27\textwidth} >{\RaggedRight\arraybackslash}p{0.20\textwidth}@{}}
+\begin{tabularx}{0.98\textwidth}{@{}l >{\RaggedRight\arraybackslash}p{0.29\textwidth} >{\RaggedRight\arraybackslash}X >{\RaggedRight\arraybackslash}p{0.20\textwidth}@{}}
 \toprule
 OP & Content & Status & Key result \\
 \midrule
@@ -9991,18 +11398,18 @@ conditional, or interpretive/arithmetic.
 %% ============================================================
 %%  s_op5_lambda_cancellation.tex
 %%  STATUS: PROOF MODE --- first full structured draft
-%%  OP 5: $\Lambda$-Cancellation — $\Theta$-R-Balance im Photon-Frame
+%%  OP 5: $\Lambda$ cancellation — $\Theta$-R balance in the photon frame
 %%
 %%  Marc Brendecke, Bochum, March 2026
-%%  Einzubinden in quantum_sphaera_v2.x als Drop-In Section
+%%  To be integrated into quantum_sphaera_v2.x as a drop-in section
 %%
-%%  FRAME-WARNUNG (vor jeder Rechnung zu beachten):
-%%  Wir sitzen auf dem Matter-Frame (z⁻ = β_sym ≈ 0.5493).
-%%  ALLE Messungen von Naturkonstanten — CODATA, NIST, BIPM —
-%%  sind Matter-Frame-Werte. Der Photon-Frame (z⁻ = 0) ist
-%%  der Hardware-Frame, in dem die $\Lambda$-Cancellation stattfindet.
-%%  Matter-Frame-Rechnungen tragen den systematischen Fehler
-%%  γ_L^{3/2} ≈ 2.546 im UV-Cutoff.
+%%  FRAME WARNING (to be kept in mind before every computation):
+%%  We are working in the matter frame (z⁻ = β_sym ≈ 0.5493).
+%%  ALL measurements of natural constants — CODATA, NIST, BIPM —
+%%  are matter-frame values. The photon frame (z⁻ = 0) is
+%%  the hardware frame in which $\Lambda$ cancellation occurs.
+%%  Matter-frame computations carry the systematic error
+%%  γ_L^{3/2} ≈ 2.546 in the UV cutoff.
 %% ============================================================
 
 
@@ -10324,7 +11731,7 @@ the PDG value $132.73^\circ$ to $0.111\%$
 \emph{Status: confirmed against existing PDG lepton masses.}
 
 \bigskip
-\noindent\textbf{P3 (matches to 0.018\%): $\bsym$-formula.}\\
+\noindent\textbf{P3 (matches to 0.018\%): $\bsym$-formula.}
 \[
   \bsym = \frac{1}{\sqrt{3}}\,\exp\!\left(-\frac{\gamma_1}{4\pi\gL^5}\right)
   \approx 0.5492,
@@ -10385,7 +11792,8 @@ The only currently testable prediction that requires new computation is P1
 
 \begin{center}
 \renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{0.98\textwidth}{@{}>{\RaggedRight\arraybackslash}p{0.37\textwidth} >{\RaggedRight\arraybackslash}p{0.33\textwidth} >{\RaggedRight\arraybackslash}p{0.16\textwidth}@{}}
+\small
+\begin{tabularx}{0.98\textwidth}{@{}>{\RaggedRight\arraybackslash}p{0.34\textwidth} >{\RaggedRight\arraybackslash}p{0.30\textwidth} >{\RaggedRight\arraybackslash}X@{}}
 \toprule
 Statement & Proof basis & Status \\
 \midrule
@@ -11198,15 +12606,16 @@ than an externally independent operator theorem.
 The following table summarizes how structural invariants are read in the matter
 frame after the frame shift.
 
-\begin{longtable}{p{2.8cm}p{2.9cm}p{3.0cm}p{5.6cm}}
+\begin{table}[htbp]
+\centering
 \caption{Frame-transport dictionary.
 Matter-frame measurements carry a $\gL^k$ factor relative to the photon-frame
 reference state.}
-\label{tab:frame-transform}\\
+\label{tab:frame-transform}
+\begin{tabularx}{\textwidth}{P{2.8cm}P{2.9cm}P{3.0cm}Y}
 \toprule
 Parameter & Photon frame ($\zminus=0$) & Matter frame ($\zminus=\bsym$) & Source of the deviation \\
 \midrule
-\endhead
 Dirac spectrum & purely imaginary & induced mass terms & commutator $[\mathcal{D}_0, \mathcal{T}_{\gL}]$ \\
 Spectral density & GUE statistics & GOE statistics & $\gL^5$ scaling (Theorem~\ref{thm:op2-selfadj}) \\
 Cosmological constant & $\Lambda_{\mathrm{fund}} = 0$ & $\Lambda_{\mathrm{obs}} = \bsym^2\,\lP^{-2}$ & Berry phase of the transport \\
@@ -11214,7 +12623,8 @@ Planck length & $\gL^{-3/2}\,\lP^{(\mathrm{matter})}$ & $\lP^{(\mathrm{matter})}
 Vacuum density & $\gL^{-6}\,\rho_{\mathrm{matter}}$ & $\rho_{\mathrm{vac}}^{(\mathrm{matter})}$ & $\rho \sim \ell_P^{-4}$, $k=6$ \\
 Speed of light $c$ & $c$ (frame-invariant) & $c$ (frame-invariant) & $k(c) = 0$ \\
 \bottomrule
-\end{longtable}
+\end{tabularx}
+\end{table}
 
 \begin{proposition}[Interpretive commutator readout for frame-induced mass]
 \label{prop:frameshift-mass}
@@ -11442,7 +12852,7 @@ while the status of $C$ remains context-dependent. In many cases the better choi
 \]
 so that the closure state is not erased but exported as simultaneous structural activation. This is especially compatible with the tensor/projector language already used in the Companion: the richer triadic layer can be processed internally, and only then read outward in Boolean form.
 
-\begin{table}[h]
+\begin{table}[ht]
 \centering
 \caption{First triolen-algebra readout table.}
 \begin{tabular}{>{\raggedright\arraybackslash}p{0.16\textwidth} >{\centering\arraybackslash}p{0.14\textwidth} >{\centering\arraybackslash}p{0.14\textwidth} >{\centering\arraybackslash}p{0.14\textwidth} >{\centering\arraybackslash}p{0.18\textwidth}}
@@ -11541,17 +12951,16 @@ This is intentionally RISC-like in spirit: the primitive set is kept small, and 
 \subsection*{17. Instruction semantics reserve and compilation path}
 The architectural reserve becomes much clearer once the primitive layers are aligned explicitly. The guiding idea is that a future MML program is readable shorthand for a normalized MMA sequence, and an MMA sequence is in turn a disciplined invocation pattern for the MCP pipeline. Thus one obtains a first compilation path
 \[
-\text{MML source}
-\Longrightarrow
-\text{MMA-0.1 instruction stream}
-\Longrightarrow
-\mathcal P_{\mathrm{MCP}}
-\Longrightarrow
-\text{Boolean-compatible host state}.
+\begin{aligned}
+&\text{MML source}
+\Longrightarrow \text{MMA-0.1 instruction stream}\\
+&\Longrightarrow \mathcal P_{\mathrm{MCP}}\\
+&\Longrightarrow \text{Boolean-compatible host state}.
+\end{aligned}
 \]
 The first semantics reserve can therefore be stated instruction-by-instruction, without yet pretending to a full formal machine implementation.
 
-\begin{table}[h]
+\begin{table}[ht]
 \centering
 \caption{First MMA-0.1 instruction-semantics reserve.}
 \begin{tabular}{>{\raggedright\arraybackslash}p{0.16\textwidth} >{\raggedright\arraybackslash}p{0.25\textwidth} >{\raggedright\arraybackslash}p{0.23\textwidth} >{\raggedright\arraybackslash}p{0.23\textwidth}}
@@ -11632,16 +13041,18 @@ Once a small RISC-like primitive reserve has been identified, the next natural s
 
 A first schematic reserve of such macros is:
 \begin{center}
-\begin{tabular}{>{\raggedright\arraybackslash}p{0.23\textwidth} >{\raggedright\arraybackslash}p{0.65\textwidth}}
+\footnotesize
+\begin{tabularx}{0.98\textwidth}{>{\ttfamily\RaggedRight\arraybackslash}p{0.28\textwidth} >{\ttfamily\RaggedRight\arraybackslash}X}
 \toprule
 Macro & Intended normalized low-level expansion \\
 \midrule
-\texttt{RESOLVE\_TRACE} & \texttt{PROBE + TRACE + COMPARE + DIFF + HCSEL} \\
-\texttt{CLOSE\_AND\_PROJECT} & \texttt{CLOSE + PROJECT + HCSEL} \\
-\texttt{BRANCH\_ON\_EXHAUSTION} & \texttt{HCSEL + HOPF + PROJECT} \\
-\texttt{EXPORT\_RESULT} & \texttt{EXPORT\_BOOL + FORWARD} \\
+RESOLVE\_TRACE & PROBE + TRACE + COMPARE + DIFF + HCSEL \\
+CLOSE\_AND\_PROJECT & CLOSE + PROJECT + HCSEL \\
+BRANCH\_ON\_EXHAUSTION & HCSEL + HOPF + PROJECT \\
+EXPORT\_RESULT & EXPORT\_BOOL + FORWARD \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
+\normalsize
 \end{center}
 These are intentionally schematic. Their function is to signal how a future proof-programming style could compress large parts of repetitive structural reasoning without sacrificing the existence of a normalized primitive expansion.
 
@@ -11777,15 +13188,13 @@ The two mini-examples suggest that the computational reading should not remain a
 \paragraph{Template A: closure/projector template.}
 This template covers arguments in which a locally generated configuration must first be closure-completed and only then projected into an admissible sector. Its generic logical shape is
 \[
-\text{local generation}
-\to
-\text{closure completion}
-\to
-\text{projector admissibility}
-\to
-\text{HC stability check}
-\to
-\text{export.}
+\begin{aligned}
+&\text{local generation}
+\to \text{closure completion}\\
+&\to \text{projector admissibility}\\
+&\to \text{HC stability check}\\
+&\to \text{export.}
+\end{aligned}
 \]
 A compact MML-style reserve may be written as
 \begin{quote}
@@ -11817,12 +13226,11 @@ This template covers arguments in which direct continuation fails and the admiss
 \[
 \begin{aligned}
   &\text{trace generation}
-  &&\to \text{HC test}
-     \to \text{exhaustion detected}\
-  &
-  &&\to \text{Hopf return}
-     \to \text{reprojection}
-     \to \text{export.}
+     \to \text{HC test}\\
+  &\to \text{exhaustion detected}\\
+  &\to \text{Hopf return}\\
+  &\to \text{reprojection}\\
+  &\to \text{export.}
 \end{aligned}
 \]
 A compact MML-style reserve is
@@ -12023,12 +13431,11 @@ The intended flow should remain monotone:
 \[
 \begin{aligned}
   &\texttt{State}
-  &&\to \texttt{CollapsedState}
-     \to \texttt{ProjectedState}\
-  &
-  &&\to \texttt{StableState}
-     \to \texttt{BoolExport}
-     \to \texttt{HostToken}.
+   \to \texttt{CollapsedState}
+   \to \texttt{ProjectedState} \\
+  &\to \texttt{StableState}
+   \to \texttt{BoolExport}
+   \to \texttt{HostToken}.
 \end{aligned}
 \]
 This expresses that admissibility is not an afterthought, but a staged refinement. In particular, Boolean export should appear only after the internal structural filters have acted.
@@ -12139,37 +13546,39 @@ Once the computational line has explicit types and explicit rejection modes, the
 \paragraph{Core certificate families.}
 A first normalized reserve may distinguish the following certificate classes:
 \begin{center}
-\begin{tabular}{@{}ll@{}}
+\begin{tabularx}{0.98\textwidth}{@{}>{\ttfamily\RaggedRight\arraybackslash}p{0.28\textwidth} >{\RaggedRight\arraybackslash}X@{}}
 \toprule
 Certificate & Meaning \\
 \midrule
-\texttt{ClosureCertificate} & confirms closure completion of the local triolen state \\
-\texttt{ProjectorCertificate} & records admissible projector restriction and sector compatibility \\
-\texttt{HCCertificate} & records compensator-guided branch admissibility \\
-\texttt{TraceCertificate} & records successful trace reconciliation or coincidence \\
-\texttt{DiffCertificate} & records differencing-based separation or discrimination result \\
-\texttt{ExportCertificate} & confirms valid Boolean-compatible readout \\
-\texttt{HostCertificate} & confirms successful host-interface forwarding \\
+ClosureCertificate & confirms closure completion of the local triolen state \\
+ProjectorCertificate & records admissible projector restriction and sector compatibility \\
+HCCertificate & records compensator-guided branch admissibility \\
+TraceCertificate & records successful trace reconciliation or coincidence \\
+DiffCertificate & records differencing-based separation or discrimination result \\
+ExportCertificate & confirms valid Boolean-compatible readout \\
+HostCertificate & confirms successful host-interface forwarding \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{center}
 
 \paragraph{Certificate flow.}
 The intended logic mirrors the computational pipeline itself:
 \[
-\texttt{State}
-\rightsquigarrow
-\texttt{ClosureCertificate}
-\rightsquigarrow
-\texttt{ProjectorCertificate}
-\rightsquigarrow
-\texttt{HCCertificate}
-\rightsquigarrow
-\texttt{TraceCertificate}
-\rightsquigarrow
-\texttt{ExportCertificate}
-\rightsquigarrow
-\texttt{HostCertificate}.
+\begin{aligned}
+  &\texttt{State}
+   \rightsquigarrow
+   \texttt{ClosureCertificate}
+   \rightsquigarrow
+   \texttt{ProjectorCertificate} \\
+  &\rightsquigarrow
+   \texttt{HCCertificate}
+   \rightsquigarrow
+   \texttt{TraceCertificate}
+   \rightsquigarrow
+   \texttt{ExportCertificate} \\
+  &\rightsquigarrow
+   \texttt{HostCertificate}.
+\end{aligned}
 \]
 In practice not every run will generate the whole chain. Some programs stop internally, some remain non-exportable, and some terminate precisely by producing a rejection certificate. The key point is that positive and negative outcomes should both leave behind named structural evidence.
 
@@ -12177,20 +13586,20 @@ In practice not every run will generate the whole chain. Some programs stop inte
 A first schematic reserve may therefore write
 \begin{center}
 \footnotesize
-\begin{tabularx}{0.98\textwidth}{>{\ttfamily\RaggedRight\arraybackslash}p{0.19\textwidth} >{\ttfamily\RaggedRight\arraybackslash}X}
-close & : ProjectedState -> StableState x ClosureCertificate + NonClosableState \\
+\footnotesize\begin{tabularx}{0.98\textwidth}{>{\ttfamily\RaggedRight\arraybackslash}p{0.22\textwidth} >{\ttfamily\RaggedRight\arraybackslash}X}
+close & \shortstack[l]{: ProjectedState -> StableState\\x ClosureCertificate + NonClosableState} \\
 project & : CollapsedState -> ProjectedState x ProjectorCertificate + InvalidProjectorState \\
-hc\_select & : ProjectedState x Trace -> StableState x HCCertificate + RejectedBranch \\
+hc\_select & \shortstack[l]{: ProjectedState x Trace -> StableState\\x HCCertificate + RejectedBranch} \\
 trace\_reconcile & : Trace x Trace -> Trace x TraceCertificate + UnstableTrace \\
 diff & : Trace x Trace -> Trace x DiffCertificate \\
-export\_bool & : StableState -> BoolExport x ExportCertificate + NonExportableState \\
-forward & : BoolExport -> HostToken x HostCertificate + HostForwardError
+export\_bool & \shortstack[l]{: StableState -> BoolExport\\x ExportCertificate + NonExportableState} \\
+forward & \shortstack[l]{: BoolExport -> HostToken\\x HostCertificate + HostForwardError}
 \end{tabularx}
 \end{center}
 This already suggests a proof-kernel style reading: each structural step can optionally return not only a value but a witness of admissibility.
 
 \paragraph{Positive and negative certificates.}
-The reserve should also allow negative evidence. For example, a branch eliminated by HC logic may produce a normalized \texttt{RejectedBranchCertificate}, and a failed export may produce a \texttt{NonExportableCertificate}. This matters because a compressed proof program often derives its force from systematic elimination rather than from a single constructive forward path. A certificate layer should therefore preserve both successful realization and disciplined exclusion.
+The reserve should also allow negative evidence. For example, a branch eliminated by HC logic may produce a normalized rejection certificate, and a failed export may produce a normalized non-exportable certificate. This matters because a compressed proof program often derives its force from systematic elimination rather than from a single constructive forward path. A certificate layer should therefore preserve both successful realization and disciplined exclusion.
 
 \paragraph{Minimal MML sketch with certificates.}
 A typed MML reserve may thus look like
@@ -12237,7 +13646,7 @@ This chain says in compact form what the present computational reserve is trying
 The stages may be read as follows:
 \begin{center}
 \renewcommand{\arraystretch}{1.25}
-\begin{tabularx}{0.96\textwidth}{@{}>{\ttfamily}l Y@{}}
+\small\begin{tabularx}{0.96\textwidth}{@{}>{\ttfamily\RaggedRight\arraybackslash}p{0.22\textwidth} Y@{}}
 \toprule
 Stage & Role \\
 \midrule
@@ -12312,21 +13721,32 @@ The present file is the first explicit local subversion after the public Zenodo 
 \textit{Archive note.} The following roadmap and consolidation sections remain part of the working source and are preserved without shortening. They have been moved out of the front mathematical line so that Part~I can be read as the active theorem-bearing chain, while the local version-roadmap material remains available as an editorial and project-memory archive. In this appendix, status words such as \emph{closed}, \emph{partially hardened}, or \emph{open} retain their original work-log meaning unless a newer active statement in Part~I explicitly supersedes them.
 \end{center}
 
+
+\subsection*{Immediate v3 transition roadmap}
+\begin{enumerate}[leftmargin=2em,label=\textbf{V3.\arabic*:}]
+  \item \textbf{Public v3.0.0 consolidation.} \emph{Active in the present file.}
+    Keep the Version~3 line on a single public numbering track. The present public v3.0.0 release already contains the re-centered package spine $\mathfrak A_{3.0}$ together with the anchor-flow layer, the fermionic residual layer, the strong/QCD obstruction-freeze layer, and the explicit honest-public-cut criterion. These ingredients are retained as content, but not split into a separate shadow chronology of unpublished semantic versions.
+  \item \textbf{Next upload threshold.}
+    The next public upload should occur once the present v3.0.0 line is either published honestly as a three-front frontier snapshot with the hadronic route explicitly frozen, or advanced further by a genuinely new theorem-bearing absorption step. In either case, local work and public numbering should remain aligned.
+  \item \textbf{Post-v3.0.0 continuation.}
+    Further internal progress should be tracked either as plain working notes or as the next genuine public version step, but not as a second hidden semantic version line.
+\end{enumerate}
+
 \section*{Reader's Guide and v\docversion\ Roadmap}
 \addcontentsline{toc}{section}{Reader's Guide and v\docversion\ Roadmap}
 
-This version is prepared as a \emph{technical consolidation release}.
-Its task is not to replace the current structural core, but to freeze
-the next expansion path in explicit LaTeX form while keeping the working
-monolith intact. The operative rule for this release is:
-\emph{do not shorten, do not overwrite, only sharpen, normalize, and append.}
+This version is prepared as the \emph{public v3.0.0 release of the aligned Version~3 line}.
+Its task is not another cleanup freeze, but the explicit consolidation of
+the current Version~3 package line into one release-honest public track.
+The operative rule for this stage is:
+\emph{do not shorten, do not overwrite, only re-center, harden, append, and state the frontier truthfully.}
 
 \subsection*{Version identity}
 \begin{itemize}[leftmargin=2em]
   \item Version: \docversion
   \item Date: \docdate
   \item Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}
-  \item Version DOI: \href{https://doi.org/10.5281/zenodo.19378024}{10.5281/zenodo.19378024}
+  \item Version DOI: \href{https://doi.org/10.5281/zenodo.19390358}{10.5281/zenodo.19390358}
   \item Archive-status convention: in Appendix~A0 and Part~II, status words are retained as historical work-log labels unless explicitly superseded by Part~I
   \item Previous Zenodo releases:\
   \begin{itemize}[leftmargin=1.8em]
@@ -12336,30 +13756,23 @@ monolith intact. The operative rule for this release is:
     \item v2.29.3 (\href{https://doi.org/10.5281/zenodo.19300813}{10.5281/zenodo.19300813})
     \item v2.29.4 (\href{https://doi.org/10.5281/zenodo.19314525}{10.5281/zenodo.19314525})
     \item v2.29.5 (\href{https://doi.org/10.5281/zenodo.19314898}{10.5281/zenodo.19314898})
+    \item v2.30.5 (\href{https://doi.org/10.5281/zenodo.19388843}{10.5281/zenodo.19388843})
   \end{itemize}
   \item Main-paper relation: Explicit mathematical companion to the current Sphaera master line~\cite{brendecke2026main}
 \end{itemize}
 
 \subsection*{Primary goals of v\docversion}
 \begin{enumerate}[leftmargin=2em]
-  \item Formalize the \textbf{Frame-Transport operator}
-    $\mathcal{T}_{\gL}(\bsym)$ as a canonical Section
-    (Section~\ref{sec:frame-transport}), establishing that all measured
-    physical constants carry systematic $\gL^k$-corrections from the
-    matter-frame displacement $\zminus = +\bsym$.
-  \item Provide the \textbf{Weil reduction of OP~5(B)}
-    (Section~\ref{sec:op5-weil-reduction}): reduce the open Theta-sum
-    conjecture to an exact algebraic statement via the Guinand--Weil
-    explicit formula at $A = \gL^{-5/2}$, where $\psi(e^A) = 0$ exactly.
-  \item Document the \textbf{Veech-group target for $\delta_{\mathrm{lattice}}$}
-    (Remark~\ref{rem:teichmuller-status} updated): identify the
-    prime-lattice translation surface and state the
-    $\delta_{\mathrm{lattice}} = \gL/\mathbb{T}$ conjecture as a
-    computable Teichmüller invariant.
-  \item \textbf{OP-status consolidation}: unify the OP~1/2/4 chain under
-    a single $\delta_{\mathrm{CL}}$ calculation target and document the
-    falsifiable prediction $\delta_{\mathrm{CL}} = \exp(-\gamma_1/(4\pi\gL^2))$.
-  \item Update all version records and DOI chain.
+  \item \textbf{Promote the emergent 3.0 architecture to the active reading spine.}
+    Read the current core forward from the package $\mathfrak A_{3.0}$, the two-layer anchor architecture, and the master-theorem sketch for the selected branch instead of treating these blocks merely as late-2.x frontier summaries.
+  \item \textbf{Harden the first anchor-flow absorption route.}
+    Turn the current anchor-flow candidate for the Hubble block into the first deliberate v3 theorem package: minimal law, scalar readout corollary, and obstruction-to-factorization test on the cosmological branch.
+  \item \textbf{Harden the first fermionic residual absorption route.}
+    Treat the current neutrino/lepton route as the active second deliberate fermionic v3 package: minimal residual law, pure lepton branch criterion, discrete residual levels, and stability consequences.
+  \item \textbf{Freeze the strong/QCD frontier explicitly as an obstruction boundary.}
+    Treat the current muon/QCD route not as a pseudo-closed block but as the explicit v3.1 obstruction boundary: obstruction profile, minimal strong-sector residual law, conditional absorption criterion, and a theorem-level separation between derived readout and placeholder fitting.
+  \item \textbf{State the bifurcated upload threshold explicitly.}
+    Make the release logic honest inside the document itself: either the next upload is an honest frontier freeze of the present three-front line with the hadronic obstruction left explicit, or it is a later absorption release justified by a genuine anchored hadronic readout.
 \end{enumerate}
 
 \subsection*{Reading discipline for the next stage}
@@ -12428,20 +13841,21 @@ These elements remain valuable, but in the current sequencing they are to follow
 \subsection*{Mathematical work matrix for the next pass}
 To make the mathematics-first agenda operational, the next pass is organized as a compact work matrix rather than as a loose wish list.
 \begin{center}
-\begin{tabular}{p{0.23\textwidth}p{0.26\textwidth}p{0.23\textwidth}p{0.08\textwidth}}
+\small
+\begin{tabularx}{\textwidth}{@{}>{\RaggedRight\arraybackslash}p{0.20\textwidth} >{\RaggedRight\arraybackslash}p{0.21\textwidth} >{\RaggedRight\arraybackslash}X >{\Centering\arraybackslash}p{0.10\textwidth}@{}}
 \toprule
 \textbf{Block} & \textbf{Target state} & \textbf{Main dependencies} & \textbf{Priority}\\
 \midrule
 Ground condition $\to$ HC $\to$ confinement & explicit statement chain, normalized notation, and no ambiguity about emergence vs. axiomatics & core structural assumptions and septinion confinement language & A\\
 Projector and closure mathematics & sharpened lemmas, admissibility conditions, and stable projector notation & closure operator layer, readout discipline, sector decomposition & A\\
 Millennium matrix as mathematical object & operator-level formulation, domain/codomain clarity, and clarified relation to HC & projector layer, transport layer, compensator interpretation & A\\
-Trace / branch / Hopf transport mathematics & clean separation of trace, branching, return, and transport rules & probe framework, disjointness, Lorentz-mediated transport & B\\
+Trace / branch / Hopf transport mathematics & clean separation of trace, branching, return, and transport rules & probe framework, disjointness, and Lorentz transport & B\\
 Dependency chain hardening & theorem/lemma dependency map cleaned and checked for merge artifacts & current theorem chain, proposition and lemma references & A\\
 Structural tools appendix & collect reusable mathematical shortcuts without shortening proofs & established proof moves, normalized notation & B\\
 Proof-memory restoration / archival recovery & recover or reintegrate historically displaced proof material where needed & older Companion states, recovered large basis, appendix chronology & B\\
 Computational teaser retention & keep chapter visible, but frozen except for compatibility edits & mathematical closure progress & C\\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{center}
 
 A-priority blocks should drive the next version boundary. B-priority blocks should be developed in service of those A-blocks. C-priority blocks should be touched only when required for compatibility with the mathematical reorganization.
@@ -12449,7 +13863,7 @@ A-priority blocks should drive the next version boundary. B-priority blocks shou
 \subsection*{Dependency map of the mathematical core}
 To prevent the next pass from drifting into local edits without structural order, the mathematical core is also organized as a dependency map. The intended reading is simple: if an upstream block remains unstable, all downstream blocks that consume it can only be provisionally edited.
 \begin{center}
-\begin{tabular}{p{0.28\textwidth}p{0.30\textwidth}p{0.30\textwidth}}
+\begin{tabularx}{0.95\textwidth}{@{}P{0.27\textwidth}P{0.29\textwidth}Y@{}}
 \toprule
 \textbf{Core block} & \textbf{Direct prerequisite} & \textbf{Main downstream consumers}\\
 \midrule
@@ -12461,7 +13875,7 @@ Millennium matrix as mathematical object & HC chain, projector/closure layer, tr
 Trace / branch mathematics & projector logic, transport layer, admissibility conventions & Hopf branching examples, trace reconciliation, branch templates\\
 Tool and appendix lemmas & all stabilized upstream definitions & proof hardening, auditability, future proof-engine extraction\\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{center}
 
 In operational terms, this means that the next mathematical pass should proceed roughly in the order
@@ -12495,7 +13909,7 @@ For the next revision cycle, each touched block should be tagged mentally by the
 
 \subsection*{Target-state matrix for v2.27.0}
 
-\begin{longtable}{p{0.24\textwidth}p{0.22\textwidth}p{0.24\textwidth}p{0.22\textwidth}}
+\begin{longtable}{@{}P{0.22\textwidth}P{0.21\textwidth}P{0.22\textwidth}P{0.21\textwidth}@{}}
 \toprule
 \textbf{Core block} & \textbf{Current status} & \textbf{Target state for v2.27.0} & \textbf{Minimal completion condition} \\
 \midrule
@@ -12757,19 +14171,21 @@ The present version v2.27.5 is recorded under Zenodo DOI
 The structural scan of v2.27.4 identified the following main proof chain:
 
 \[
-\text{Axiom}
-\;\Rightarrow\;
-\underbrace{\text{Semantic Kernel}}_{\text{def}}
-\;\Rightarrow\;
-\underbrace{\text{HC Forcing}}_{\text{thm}}
-\;\Rightarrow\;
-\underbrace{\text{Closure Stable}}_{\text{lem}}
-\;\Rightarrow\;
-\underbrace{\text{Diagonal Traversal}}_{\text{lem}}
-\;\Rightarrow\;
-\underbrace{C = \Pi^{(\mathcal{M})}_{\mathrm{spec}}}_{\text{thm}}
-\;\Rightarrow\;
-\underbrace{\text{SM Realization}}_{\text{cor}}
+\begin{aligned}
+  &\text{Axiom}
+   \;\Rightarrow\;
+   \underbrace{\text{Semantic Kernel}}_{\text{def}}
+   \;\Rightarrow\;
+   \underbrace{\text{HC Forcing}}_{\text{thm}} \\
+  &\;\Rightarrow\;
+   \underbrace{\text{Closure Stable}}_{\text{lem}}
+   \;\Rightarrow\;
+   \underbrace{\text{Diagonal Traversal}}_{\text{lem}} \\
+  &\;\Rightarrow\;
+   \underbrace{C = \Pi^{(\mathcal{M})}_{\mathrm{spec}}}_{\text{thm}}
+   \;\Rightarrow\;
+   \underbrace{\text{SM Realization}}_{\text{cor}}
+\end{aligned}
 \]
 
 The following table rates each link on four axes:
@@ -12810,35 +14226,35 @@ $\mathrm{ClosureStable} \Leftrightarrow \mathrm{im}(C)$ & \emph{missing} & -- & 
 
 \subsection*{Priority A: Required for structural soundness}
 
-\paragraph{A1. \texttt{lem:closure-forcing-lemma} hardening.}
-The proof currently reads as structural prose with no citations. The
-required explicit chain is:
-$\mathrm{Triolic}(x) \Rightarrow$ \texttt{lem:triolic-minimality-lemma};
-$\mathrm{Anchored}(x) \Rightarrow$ \texttt{lem:orthogonal-anchor-lemma};
-$\mathrm{HCForced}(x) \Rightarrow$ \texttt{lem:hc-admissibility-lemma};
-combined: no leakage outside the common container
-$\Rightarrow \mathrm{ClosureStable}(x)$. Each implication must cite its
-lemma explicitly.
+\paragraph{A1. \nolinkurl{lem:closure-forcing-lemma} hardening.}
+The proof currently reads as structural prose with no citations. The required explicit chain is
+\begin{align*}
+\mathrm{Triolic}(x) &\Rightarrow \texttt{lem:triolic-minimality-lemma},\\
+\mathrm{Anchored}(x) &\Rightarrow \texttt{lem:orthogonal-anchor-lemma},\\
+\mathrm{HCForced}(x) &\Rightarrow \texttt{lem:hc-admissibility-lemma},\\
+\mathrm{NoLeakage}(x) &\Rightarrow \mathrm{ClosureStable}(x).
+\end{align*}
+Here $\mathrm{NoLeakage}(x)$ abbreviates the statement that no leakage occurs outside the common container. Each implication must cite its lemma explicitly.
 
 \paragraph{A2. \texttt{prop:tensorial-intertwining-m} status correction.}
 $\mathcal{M}\mathcal{C} = \mathcal{C}\mathcal{M}$ is currently stated as a
 proposition but proved only by necessity argument. It must either be:
 (a) promoted to an axiom/hypothesis with explicit hypothesis-grade marker, or
-(b) derived from \texttt{def:tensor-structural-kernel} by explicit index
+(b) derived from \nolinkurl{def:tensor-structural-kernel} by explicit index
 calculation showing that the idempotent tensor $\mathcal{C}^\mu{}_\nu$ commutes
 with any structure-preserving $\mathcal{M}^\mu{}_\nu$ satisfying the
 admissibility conditions. Option (b) is preferred.
 
 \paragraph{A3. $\mathrm{ClosureStable}(x) \Leftrightarrow x \in \mathrm{im}(C)$ as
 explicit lemma.}
-Step~3 of \texttt{thm:hc-spectral-projector} asserts
-$\mathrm{im}(C) = \mathcal{S}_0$ via \texttt{lem:closure-forcing-lemma},
+Step~3 of Theorem~\ref{thm:hc-spectral-projector} asserts
+$\mathrm{im}(C) = \mathcal{S}_0$ via Lemma~\ref{lem:closure-forcing-lemma},
 but the forward direction $\mathrm{im}(C) \subseteq \mathcal{S}_0$ requires
 the additional claim that every state in $\mathrm{im}(C)$ is closure-stable
 (covered), while the reverse direction $\mathcal{S}_0 \subseteq \mathrm{im}(C)$
 requires that every closure-stable state is compensator-normalized. This
 reverse direction is not currently proved. A new lemma
-\texttt{lem:closure-stable-iff-im-C} is needed.
+\nolinkurl{lem:closure-stable-iff-im-C} is needed.
 
 \paragraph{A4. \texttt{thm:koide-triolic} (OP~3) numerical hardening.}
 The existing proof derives $K = 2/3$ via Cauchy-Schwarz but does not
@@ -12870,7 +14286,7 @@ reference to the admissible transport operations (e.g.\
 \texttt{lem:group-transport}, \texttt{lem:hc-admissibility-lemma}) as the
 mechanism by which kernel-invariant content is preserved.
 
-\paragraph{B3. \texttt{thm:hc-spectral-projector} conditional status.}
+\paragraph{B3. \nolinkurl{thm:hc-spectral-projector} conditional status.}
 The theorem is sound \emph{under} the hypothesis that
 $\mathcal{M}\mathcal{C} = \mathcal{C}\mathcal{M}$ (A2). Until A2 is resolved,
 the theorem should carry an explicit conditional marker. A remark to this
@@ -12879,9 +14295,9 @@ effect should be inserted immediately after the theorem statement.
 \subsection*{Closure sequence for next subversions}
 
 \begin{enumerate}[label=\textbf{v2.27.\arabic*:}, leftmargin=4em, start=6]
-  \item Close A1 (\texttt{lem:closure-forcing-lemma}), A3
+  \item Close A1 (\nolinkurl{lem:closure-forcing-lemma}), A3
     ($\mathrm{ClosureStable} \Leftrightarrow \mathrm{im}(C)$ lemma),
-    and B3 (conditional marker on \texttt{thm:hc-spectral-projector}).
+    and B3 (conditional marker on \nolinkurl{thm:hc-spectral-projector}).
   \item Close A2 (\texttt{prop:tensorial-intertwining-m} index calculation
     or hypothesis-promotion) and B2 (structural lift circularity fix).
   \item Close A4 (\texttt{thm:koide-triolic} $\theta_K$ formula, OP~3)
@@ -13582,10 +14998,12 @@ The earlier versions already stated that the macroscopic projection must be read
 from the microscopic structural unit through HC and closure. In v1.4.0,
 this chain is stated more sharply:
 \[
-\text{micro structural unit}
-\Longrightarrow \text{local compensated coupling}
-\Longrightarrow \text{sector stability}
-\Longrightarrow \text{macroscopic effective law.}
+\begin{aligned}
+  &\text{micro structural unit}
+   \Longrightarrow \text{local compensated coupling} \\
+  &\Longrightarrow \text{sector stability}
+   \Longrightarrow \text{macroscopic effective law.}
+\end{aligned}
 \]
 No macroscopic term is treated as primitive if it can be located lower in this
 chain. This applies in particular to geometric large-scale terms, matter/gauge
@@ -13865,8 +15283,11 @@ The central working rule of v1.7.0 is that no projection statement may be
 read as primary if its admissibility has not first been transported through the
 closure chain. In other words, the order of explanation remains
 \[
-\text{local structure} \Longrightarrow \text{HC} \Longrightarrow \text{closure}
-\Longrightarrow \text{probe-compatible reduction} \Longrightarrow \text{projection readout}.
+\begin{aligned}
+&\text{local structure} \Longrightarrow \text{HC} \Longrightarrow \text{closure} \\
+&\Longrightarrow \text{probe-compatible reduction}
+\Longrightarrow \text{projection readout}.
+\end{aligned}
 \]
 A projection is therefore not an independent object but a compressed exposure of
 closure-stable content under a chosen observational or effective frame. This
@@ -14274,15 +15695,17 @@ to a small but durable family of proof lemmas.
 The main architectural gain of v1.4.0 is the replacement of a single
 long closure narrative by a short ladder of reusable intermediate statements:
 \[
-\text{ground condition}
-\Longrightarrow
-\text{triolic admissibility}
-\Longrightarrow
-\text{HC balancing}
-\Longrightarrow
-\text{closure filtering}
-\Longrightarrow
-\text{observer-frame readout}.
+\begin{aligned}
+  &\text{ground condition}
+   \Longrightarrow
+   \text{triolic admissibility}
+   \Longrightarrow
+   \text{HC balancing} \\
+  &\Longrightarrow
+   \text{closure filtering}
+   \Longrightarrow
+   \text{observer-frame readout}.
+\end{aligned}
 \]
 Each arrow is intended to be cited later as a local proof move rather than
 re-derived globally.
@@ -15338,7 +16761,8 @@ whose fundamental object is its collapse state $z_-=0$.
 
 \paragraph*{Derived consequences.}
 \begin{center}
-\begin{tabular}{p{0.30\linewidth} p{0.32\linewidth} p{0.24\linewidth}}
+\renewcommand{\arraystretch}{1.03}
+\begin{tabularx}{0.98\linewidth}{>{\RaggedRight\arraybackslash}p{0.25\linewidth} >{\RaggedRight\arraybackslash}X >{\RaggedRight\arraybackslash}p{0.23\linewidth}}
 \toprule
 Phenomenon & Origin in the Sphaera framework & Where established \\
 \midrule
@@ -15349,8 +16773,7 @@ $U(1)$ electromagnetism & complex scalar $it$ & Section 7 \\
 $SU(2)$ weak force & unit quaternions $\mathbb{H}$ & Section 7 \\
 $SU(3)$ strong force & octonionic triplet $\mathbb{C}^3 \subset \mathbb{O}$ & Section 7 \\
 Quantum mechanics & Stone--von Neumann representation theory & [1] and Section 3 \\
-Pauli principle & $J$-antisymmetry: $A(f)\wedge A(f)=0$ & early structural\
-results \\
+Pauli principle & $J$-antisymmetry: $A(f)\wedge A(f)=0$ & early structural results \\
 Planck length & $\ell_P = |z_-|_{\min}$ & Theorem 1.2 \\
 Quantum entanglement & shared proper time $\tau_n$ & Theorem 5.2 \\
 Bell consistency & contextuality of $\tau_n$ & Theorem 8.1 \\
@@ -15359,10 +16782,9 @@ Hawking temperature & compensator output at the horizon & Theorem 10.3 \\
 Black-hole evaporation & relaxation of the core toward $z_-=0$ & Theorem 10.4 \\
 Riemann hypothesis & spectral interpretation of the zeros & [1] \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{center}
-\paragraph*{Remark (In one sentence). The universe is a photon that has forgotten it is}
-one. Physics is the process of remembering. Precisely: the universe is the Sphaera observed from a matter frame at $\beta$sym $\approx$0.5493. Everything --- spacetime, forces, particles, black holes, quantum mechanics --- is a representation of z-= 0 seen from a frame where z-/= 0.
+\paragraph*{Remark (In one sentence).} The universe is a photon that has forgotten it is one. Physics is the process of remembering. Precisely: the universe is the Sphaera observed from a matter frame at $\beta$sym $\approx$0.5493. Everything --- spacetime, forces, particles, black holes, quantum mechanics --- is a representation of $z_-=0$ seen from a frame where $z_-\neq 0$.
 
 \section*{Historical Open Questions}
 \addcontentsline{toc}{section}{Historical Open Questions}
@@ -15409,7 +16831,8 @@ The guiding constraint is that optimization must remain \emph{certificate-preser
 \paragraph{Four initial optimization families.}
 A first reserve may separate the following layers:
 \begin{center}
-\begin{tabular}{@{}ll@{}}
+\small
+\begin{tabularx}{0.92\textwidth}{@{}P{0.29\textwidth}Y@{}}
 \toprule
 Family & Function \\
 \midrule
@@ -15418,7 +16841,7 @@ Macro normalization & rewrites proof macros into canonical expansions \\
 Certificate-preserving compression & shortens programs while preserving witnesses \\
 Canonical proof-program forms & rewrites structurally equivalent programs into a fixed normal form \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{center}
 
 \paragraph{Peephole rules.}
@@ -16521,10 +17944,16 @@ mathematically confined to a controlled admissible tube.
 
 \begin{proof}
 Apply the same differential-inequality argument to
-$E_{\mathrm{probe}}(\tau):=\Gamma_{\mathrm{probe}}(\Psi_1(\tau),\Psi_2(\tau);Q)$. If
-$\dot E_{\mathrm{probe}}\le -\mu E_{\mathrm{probe}}$ or, more generally,
-$\dot E_{\mathrm{probe}}\le 0$ on the boundary level set
-$E_{\mathrm{probe}}=\varepsilon$, trajectories cannot leave the sublevel region.
+\[
+  E_{\mathrm{probe}}(\tau):=\Gamma_{\mathrm{probe}}(\Psi_1(\tau),\Psi_2(\tau);Q).
+\]
+If
+\[
+  \dot E_{\mathrm{probe}}\le -\mu E_{\mathrm{probe}}
+  \qquad\text{or, more generally,}\qquad
+  \dot E_{\mathrm{probe}}\le 0
+\]
+on the boundary level set $E_{\mathrm{probe}}=\varepsilon$, trajectories cannot leave the sublevel region.
 \end{proof}
 
 \subsection*{5. Consequence for the next development step}
@@ -17974,7 +19403,7 @@ proposes a two-step route that may reduce this gap.
 
 % Appendix mode is already active above; the following block continues the appendix material without re-entering appendix mode.
 
-\section*{Appendix B. Symbol Normalization for the Late Ledger/Readout Layers}
+\section*{Appendix B. Symbol Normalization\\for the Late Ledger/Readout Layers}
 \addcontentsline{toc}{section}{Appendix B. Symbol Normalization for the Late Ledger/Readout Layers}
 
 This appendix fixes the notation used in the late Companion expansion layers so that
@@ -18103,6 +19532,8 @@ This appendix gathers the external references together with the immediate
 Companion version trail so that the mathematical main line can close before the
 documentation apparatus begins.
 
+\phantomsection
+\addcontentsline{toc}{subsection}{Version and DOI record}
 \subsection*{Version and DOI record}
 The table below records the currently preserved Companion chain in strictly
 increasing version order. Zenodo releases are listed together with a publication-date
@@ -18111,9 +19542,9 @@ public release path and the internal repair path remain distinguishable.
 
 {\small
 \renewcommand{\arraystretch}{1.12}
-\setlength{\LTleft}{0pt}
-\setlength{\LTright}{0pt}
-\begin{longtable}{|p{0.14\textwidth}|p{0.17\textwidth}|p{0.15\textwidth}|p{0.42\textwidth}|}
+\setlength{\LTleft}{\fill}
+\setlength{\LTright}{\fill}
+\begin{longtable}{|P{0.11\textwidth}|P{0.11\textwidth}|>{\Centering\arraybackslash}p{0.15\textwidth}|P{0.50\textwidth}|}
 \hline
 \textbf{Version / record} & \textbf{Status} & \textbf{Publication date} & \textbf{DOI / note} \\
 \hline
@@ -18175,11 +19606,13 @@ v2.12.0 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.192
 v2.13.0 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.19223968}{10.5281/zenodo.19223968} \\
 \hline
 v2.14.0 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.19225191}{10.5281/zenodo.19225191} \\
+\hline
 v2.15.0 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.19226408}{10.5281/zenodo.19226408} \\
 \hline
 v2.16.0 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.19226445}{10.5281/zenodo.19226445} \\
 \hline
 v2.17.0 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.19226497}{10.5281/zenodo.19226497} \\
+\hline
 v2.18.0 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.19226549}{10.5281/zenodo.19226549} \\
 \hline
 v2.19.0 & Zenodo release & 2026-03-25 & \href{https://doi.org/10.5281/zenodo.19226773}{10.5281/zenodo.19226773} \\
@@ -18195,8 +19628,10 @@ v2.23.0 & Zenodo release & 2026-03-26 & \href{https://doi.org/10.5281/zenodo.192
 v2.23.1 & Zenodo patch release & 2026-03-26 & \href{https://doi.org/10.5281/zenodo.19239967}{10.5281/zenodo.19239967} \\
 \hline
 v2.24.0 & Zenodo release & 2026-03-27 & \href{https://doi.org/10.5281/zenodo.19258774}{10.5281/zenodo.19258774} \\
+\hline
 v2.25.0 & Zenodo release & 2026-03-27 & \href{https://doi.org/10.5281/zenodo.19259425}{10.5281/zenodo.19259425} \\
- v2.25.1 & Zenodo patch release & 2026-03-27 & \href{https://doi.org/10.5281/zenodo.19262890}{10.5281/zenodo.19262890} \\
+\hline
+v2.25.1 & Zenodo patch release & 2026-03-27 & \href{https://doi.org/10.5281/zenodo.19262890}{10.5281/zenodo.19262890} \\
 \hline
 v2.27.0 & Zenodo release & 2026-03-27 & \href{https://doi.org/10.5281/zenodo.19266666}{10.5281/zenodo.19266666} \\
 \hline
@@ -18210,11 +19645,11 @@ v2.27.4 & local working state & 2026-03-28 & spectral-projector layer ($C=\Pi^{(
 \hline
 v2.27.5 & Zenodo release & 2026-03-28 & \href{https://doi.org/10.5281/zenodo.19297422}{10.5281/zenodo.19297422} — full proof-chain audit; closure roadmap; 35 missing labels; five Priority-A gaps identified \\
 \hline
-v2.27.6 & local working state & 2026-03-28 & A1+A2+A3 closed: \texttt{lem:closure-forcing-lemma} hardened; (T4) added to \texttt{def:tensor-structural-kernel}; \texttt{lem:closure-stable-iff-im-C} new; \texttt{thm:hc-spectral-projector} now unconditional; open: A4, A5, B1, B2 \\
+v2.27.6 & local working state & 2026-03-28 & A1+A2+A3 closed: \nolinkurl{lem:closure-forcing-lemma} hardened; (T4) added to \nolinkurl{def:tensor-structural-kernel}; \nolinkurl{lem:closure-stable-iff-im-C} new; \nolinkurl{thm:hc-spectral-projector} now unconditional; open: A4, A5, B1, B2 \\
 \hline
 v2.27.7 & local working state & 2026-03-28 & A4+A5 closed: \texttt{thm:koide-triolic} with $\theta_K$ formula (0.111\% match, $115\times$ amplification remark); \texttt{thm:bsym-hopf} with proof and Hopf-gap remark (4.9\%/$6.8\%$, OP1/OP2 coupling); open: B1, B2 \\
 \hline
-v2.27.8 & local working state & 2026-03-28 & B1+B2 closed: \texttt{prop:semantic-forcing-chain} explicit 3-part proof from axioms (S1)--(S8); \texttt{prop:structural-lift-principle} non-circular via \texttt{lem:group-transport}+\texttt{lem:hc-admissibility-lemma}; OP~2 formalized; all 7 Roadmap items closed \\
+v2.27.8 & local working state & 2026-03-28 & B1+B2 closed: semantic forcing chain explicit in three parts from axioms (S1)--(S8); structural lift principle made non-circular via group transport and HC admissibility; OP~2 formalized; all seven roadmap items closed \\
 \hline
 v2.28.0 & Zenodo release & 2026-03-28 & \href{https://doi.org/10.5281/zenodo.19298586}{10.5281/zenodo.19298586} --- consolidation of v2.27.4--v2.27.8; spectral-projector unconditional; bijection lemma; SM realization; readout-relative methodology; Thm~7; Hyp~7.4--7.6; OP~2 stub \\
 \hline
@@ -18231,10 +19666,28 @@ v2.29.4 & Zenodo release & 2026-03-29 & \href{https://doi.org/10.5281/zenodo.193
 v2.29.5 & Zenodo release & 2026-03-29 & \href{https://doi.org/10.5281/zenodo.19314898}{10.5281/zenodo.19314898} --- Frame-Transport operator $\mathcal{T}_{\gL}(\bsym)$; Weil reduction of OP~5(B): $S_\rho(A)$ exact via $\psi(e^A)=0$; $\delta_{\mathrm{corr}}$ absolutely convergent; Cor.~\ref{cor:op5b-exact-form} \\
 \hline
 v2.29.6 & Zenodo release & 2026-03-31 & \href{https://doi.org/10.5281/zenodo.19357490}{10.5281/zenodo.19357490} --- Numerical diagnosis of OP~5(B): complementary identity $\mathcal{T}_{\mathrm{req}}-\mathcal{T}_{\mathrm{Weil}}\approx 1$; $\delta_{\mathrm{lattice}}$ characterized exactly as a transcendental SC system (Thm.~\ref{thm:delta-lattice-exact}); OP~5(B) as spectral identity $\mathbb{T}\,\mathcal{F}(A)=1-D(\mathbb{T})$ (Thm.~\ref{thm:op5b-spectral}) \\
+\hline
 v2.29.7 & Zenodo release & 2026-04-01 & \href{https://doi.org/10.5281/zenodo.19362291}{10.5281/zenodo.19362291} --- Core-clean pass on the active monolith; Teichmüller/fixed-point status hardened; visible OP~5 and frame-transport core sections normalized to English \\
+\hline
 v2.29.8 & Zenodo release & 2026-04-01 & \href{https://doi.org/10.5281/zenodo.19376089}{10.5281/zenodo.19376089} --- layered monolith retained; global release-check completed; layout passes reduced visible overflow and stabilized the release master \\
+\hline
 v2.29.9 & Zenodo release & 2026-04-02 & \href{https://doi.org/10.5281/zenodo.19377431}{10.5281/zenodo.19377431} --- reduced HC/MM transport field equation; canonical MM-readout comparison; hybrid tensor/scalar formulation; Teichm\"uller proof tools promoted to active proof routing across closure, readout, Dirac/probe, and MM/HC transition blocks \\
+\hline
 v2.30.0 & Zenodo release & 2026-04-02 & \href{https://doi.org/10.5281/zenodo.19378024}{10.5281/zenodo.19378024} --- canonical branch-selected MM/HC field equation; coupling reduction and branch normalization; variational defect functional; local stability on the selected branch; Teichm\"uller proof routing extended across ART/QFT and Einstein/QFT bridge blocks \\
+\hline
+v2.30.1 & Zenodo release & 2026-04-02 & \href{https://doi.org/10.5281/zenodo.19378461}{10.5281/zenodo.19378461} --- parameter taxonomy and collapse ladder made explicit; branch curvature anchor identified with the anchored spectral value on the exact closure-stable branch; scalar branch data unified by the anchor chain; physical readouts normalized under the anchor chain \\
+
+\hline
+v2.30.2 & Zenodo release & 2026-04-02 & \href{https://doi.org/10.5281/zenodo.19379538}{10.5281/zenodo.19379538} --- obstruction pass on the current open hypothesis-grade blocks; 3.0 branch architecture package, obstruction dichotomy, and current-extension test made explicit for active/core vs.
+open-frontier separation \\
+\hline
+v2.30.3 & Zenodo release & 2026-04-02 & \href{https://doi.org/10.5281/zenodo.19380120}{10.5281/zenodo.19380120} --- complete obstruction profiling of the current open frontier: neutrino-$k$ as fermionic residual-equation candidate, Hubble evolution as anchor-flow candidate, and muon-$g$-2/QCD running as QCD-residual candidate; frontier now minimally classified against the active 3.0 package \\
+\hline
+v2.30.4 & Zenodo release & 2026-04-02 & \href{https://doi.org/10.5281/zenodo.19380744}{10.5281/zenodo.19380744} --- conditional frontier absorption, architecture-level gateway criterion, minimal extended 3.0 frontier package, and conditional package statement for version~3.0.0 \\
+\hline
+v2.30.5 & Zenodo release & 2026-04-02 & \href{https://doi.org/10.5281/zenodo.19388843}{10.5281/zenodo.19388843} --- public release freeze of the v2.30.4-v75 master: zero-box clean typesetting, normalized metadata/DOI consistency, cleaned PDF navigation, and publication-grade release packaging without mathematical content drift \\
+\hline
+v3.0.0 & Zenodo release & 2026-04-02 & \href{https://doi.org/10.5281/zenodo.19390358}{10.5281/zenodo.19390358} --- first public Version~3 consolidation: re-centering around the package $\mathfrak A_{3.0}$ together with the anchor-flow layer, fermionic residual layer, strong/QCD obstruction-freeze layer, and explicit honest-public-cut criterion on a single aligned version track \\
 \hline
 \end{longtable}
 }
@@ -18299,7 +19752,7 @@ For the next public release, a mathematical core block should count as \emph{fro
   \item the principal objects of the block are defined in stable notation and do not drift between theorem-language and hypothesis-language;
   \item the block depends only on explicitly cited prior definitions, lemmas, propositions, or tools, rather than on narrative intuition or roadmap placeholders;
   \item the key admissibility conditions are written inside the statement or proof scaffold itself;
-  \item all required cross-references are stable and do not point to provisional teaser/computational material;
+  \item all required cross\-references are stable and do not point to provisional teaser or computational material;
   \item the block can be read both locally and in the dependency order recorded for the mathematics-first pass without hidden backward jumps;
   \item any remaining interpretive or physical reading is clearly separated from the mathematical closure claim.
 \end{enumerate}
@@ -18319,7 +19772,8 @@ If the answer to any of these questions remains negative, the block should remai
 To prevent the next public release from being driven by impression rather than closure, the mathematics-first pass should end in a compact readiness matrix for the A-priority blocks. The matrix is not meant to replace proofs; it is meant to summarize, in one release-facing place, whether a core block is genuinely ready to be frozen, or whether a single missing condition still blocks public hardening.
 
 \begin{center}
-\begin{tabular}{p{0.23\textwidth} p{0.17\textwidth} p{0.12\textwidth} p{0.22\textwidth} p{0.18\textwidth}}
+\small
+\begin{tabularx}{\textwidth}{@{}>{\RaggedRight\arraybackslash}p{0.15\textwidth} >{\RaggedRight\arraybackslash}p{0.13\textwidth} >{\Centering\arraybackslash}p{0.11\textwidth} >{\RaggedRight\arraybackslash}p{0.20\textwidth} Y@{}}
 \toprule
 \textbf{Core block} & \textbf{Current state} & \textbf{Freeze-ready?} & \textbf{Missing closure condition} & \textbf{Primary blocker for v2.27.0}\\
 \midrule
@@ -18327,11 +19781,11 @@ Ground condition / collapse picture & structurally central, still partly summary
 HC emergence / confinement chain & strongly anchored, not yet written in one compact theorem-capable line & partial & explicit one-directional closure chain & hidden interpretive compression\\
 Projector / closure mathematics & partially stabilized and reusable & partial & admissibility conditions and closure domain fixed in one notation regime & local definition spread\\
 Transport / Lorentz layer & present but mixed with interpretive language & no & transport claims restated as mathematical transport statements & metaphor drift\\
-Millennium matrix as mathematical object & increasingly structured, still mixed with computational imagery & no & fixed domain/codomain/operator role & object-status not yet fully hardened\\
+Millennium matrix as mathematical object & increasingly structured, still mixed with computational imagery & no & fixed domain/codomain role for the operator & object status not yet fully hardened\\
 Trace / branch mathematics & structurally rich, still partly template-style & partial & stable branch criterion and trace compatibility form & theorem-status not yet fixed\\
 Tool / appendix lemmas & abundant support layer & partial & priority ordering and stable dependence tags & appendix support not yet fully normalized\\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{center}
 
 For the next public milestone, the conservative reading of this matrix is intentional: \emph{partial} does not yet count as release-ready. A block should only be treated as ready for v2.27.0 if its missing closure condition has been discharged explicitly and its blocker is no longer active. In this sense, the matrix is a release-control device rather than a rhetorical summary: it translates the mathematics-first agenda into a blockwise freeze decision surface.
@@ -18359,7 +19813,8 @@ A practical release rule for the next public jump is therefore conservative: \em
 As the mathematics-first pass approaches a public release decision, the Companion should end with a compact control summary that can be read in one glance. The purpose of this summary is not to replace the detailed work matrix, target-state matrix, or release-readiness table, but to compress them into a final release-facing snapshot. In particular, the summary should answer five questions simultaneously: (i) which A-priority blocks are currently the decisive release drivers, (ii) whether each of them is already freeze-ready, (iii) what the leading blocker still is, (iv) whether the global gate checklist is currently satisfied, and (v) whether the recommended action is \emph{continue mathematical closure} or \emph{prepare public release}.
 
 \begin{center}
-\begin{tabular}{p{0.21\textwidth} p{0.12\textwidth} p{0.20\textwidth} p{0.14\textwidth} p{0.20\textwidth}}
+\small
+\begin{tabularx}{\textwidth}{@{}>{\RaggedRight\arraybackslash}p{0.19\textwidth} >{\Centering\arraybackslash}p{0.12\textwidth} >{\RaggedRight\arraybackslash}p{0.18\textwidth} >{\RaggedRight\arraybackslash}p{0.14\textwidth} Y@{}}
 \toprule
 \textbf{A-priority block} & \textbf{Freeze-ready?} & \textbf{Main blocker} & \textbf{Gate status impact} & \textbf{Release recommendation}\\
 \midrule
@@ -18370,17 +19825,17 @@ Transport / Lorentz layer & conditional & transport formalization discipline & w
 Millennium matrix as mathematical object & not yet & object-level hardening before interpretive use & blocks full gate closure & continue mathematical closure\\
 Trace / branch mathematics & partial & stable dependence on prior blocks & blocks full gate closure & continue mathematical closure\\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{center}
 
-At the present stage, the control summary therefore recommends \emph{no public jump yet beyond the current release line}: the mathematics-first agenda should remain active until the decisive A-priority blocks no longer fail the freeze criterion and the global gate checklist turns from ``not yet to ``satisfied. The intended role of this final control summary is thus practical rather than rhetorical: it gives the next release decision a single consolidated dashboard and makes it harder to confuse local progress with document-level readiness.
+At the present stage, the control summary therefore recommends \emph{no public jump yet beyond the current release line}: the mathematics-first agenda should remain active until the decisive A-priority blocks no longer fail the freeze criterion and the global gate checklist turns from ``not yet'' to ``satisfied.'' The intended role of this final control summary is thus practical rather than rhetorical: it gives the next release decision a single consolidated dashboard and makes it harder to confuse local progress with document-level readiness.
 
 
 \subsection*{One-page executive closure view}
 The mathematics-first steering logic introduced in the recent local subversions is now dense enough that it should also be compressible into a single executive page. The purpose of this closure view is therefore not to add another planning layer, but to place roadmap, dependency map, target-state matrix, freeze criterion, gate checklist, and pre-release control summary onto one final compact surface. In practical terms, the page should allow a reader to answer four questions immediately: (i) what the next public version is really trying to close mathematically, (ii) which A-priority blocks still drive the release boundary, (iii) whether the document is globally gate-clean, and (iv) whether the correct next action is another local subversion or a public release jump.
 
 \begin{center}
-\begin{tabular}{p{0.22\textwidth} p{0.22\textwidth} p{0.18\textwidth} p{0.24\textwidth}}
+\begin{tabularx}{0.96\textwidth}{@{}P{0.22\textwidth}P{0.22\textwidth}P{0.18\textwidth}Y@{}}
 \toprule
 \textbf{Control layer} & \textbf{Main question} & \textbf{Current status} & \textbf{Operational consequence}\\
 \midrule
@@ -18391,7 +19846,7 @@ Target-state / closure checklist & what counts as done? & blockwise closure cond
 Freeze criterion / readiness matrix & is a block release-ready? & mixed, mostly partial & keep A-line blocks active until blocker-free\\
 Gate checklist / control summary & is the document globally ready? & not yet gate-clean & continue local subversions, no public jump yet\\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{center}
 
 In this condensed reading, the present Companion state remains productive but intentionally conservative: the mathematical architecture is now sufficiently organized to support disciplined closure work, but not yet sufficiently gate-clean to justify confusing local progress with public readiness. The executive closure view is therefore meant to function as a one-page release dashboard. Its decision rule is simple: as long as the A-priority mathematical blocks remain only partially frozen, and as long as the global gate still records an active blocker, the correct action is \emph{another explicit local subversion rather than a public version jump}. Once these conditions disappear simultaneously, the dashboard should flip from \emph{continue closure} to \emph{prepare v2.27.0 release}.
@@ -18497,6 +19952,8 @@ For the next release decision, the first A-block is to be classified as \emph{ma
 \paragraph{Local closure target.}
 After this reconciliation pass, the active goal for the local subversion chain is no longer to add more managerial logic around the first A-block, but to preserve it as a frozen support block while the remaining release blockers are tested against the same gate discipline.
 
+\phantomsection
+\addcontentsline{toc}{subsection}{Bibliography}
 \subsection*{Bibliography}
 
 \noindent Note. The bibliography below mixes (i) the current Companion release, (ii) earlier project releases, and (iii) external references. Only the Companion concept DOI \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} belongs on the title line; version-specific Companion DOIs belong in the version record or the dedicated Companion bibliography entry, while other DOIs below refer to distinct publications.
@@ -18519,9 +19976,9 @@ Zenodo, March 2026.
 
 \bibitem{brendecke2026sphaera}
 Marc Brendecke,
-\emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding} (v2.30.0; Zenodo release),
+\emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding} (v3.0.0),
 April 2026.
-\newblock Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}; version DOI \href{https://doi.org/10.5281/zenodo.19378024}{10.5281/zenodo.19378024} for this Zenodo release.
+\newblock Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}; version DOI: \href{https://doi.org/10.5281/zenodo.19390358}{10.5281/zenodo.19390358}. This first public Version~3 release consolidates the anchor-flow layer, fermionic residual layer, strong/QCD obstruction-freeze package, and explicit honest-public-cut criterion on a single aligned numbering track.
 
 \bibitem{kim2026}
 Yilwook Kim,
