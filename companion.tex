@@ -35,8 +35,8 @@
 \setlength{\emergencystretch}{2em}
 
 % --- Document metadata ---
-\newcommand{\docversion}{3.1.0}
-\newcommand{\docdate}{2 April 2026}
+\newcommand{\docversion}{3.2.0}
+\newcommand{\docdate}{3 April 2026}
 
 \hypersetup{
   pdftitle={Quantum Sphaera Companion: A Structure-First Mathematical Unfolding},
@@ -83,7 +83,7 @@
 \thispagestyle{fancy}
 \begin{center}
 \fbox{\begin{minipage}{0.92\textwidth}
-\small\textbf{Companion status.} This document is the mathematical companion to the current main Quantum Sphaera paper~\cite{brendecke2026main}. It expands and hardens derivations, tools, and structural proof interfaces, but it does not replace the main paper as the leading structural text. In the present v3.1.0 release, the Companion is no longer treated merely as a cleaned release monolith: it is explicitly re-centered around the emergent 3.0 branch architecture package $\mathfrak A_{3.0}$, the anchor-chain logic, and the pure/residual operator split. The first three visible Version~3 package fronts are now the anchor-flow layer for the cosmological branch, the fermionic residual layer for the lepton branch, and the strong/QCD residual frontier package for the hadronic branch.
+\small\textbf{Companion status.} This document is the mathematical companion to the current main Quantum Sphaera paper~\cite{brendecke2026main}. It expands and hardens derivations, tools, and structural proof interfaces, but it does not replace the main paper as the leading structural text. The present v3.2.0 public release builds on the public v3.1.0 baseline and consolidates the post-release anchor forcing line into its first canonical package threshold. After quotient-level Class-Bomba pruning, finite anchor survivor taxonomy, explicit signature-level sieving, a first genuinely small anchor test family, canonical hull extraction, intrinsic corridor geometry, and coordinatewise hull separation, the active structural question is no longer merely whether finite ambiguity remains, but whether the finite template language now forces the anchor branch canonically up to obstruction or a unique package.
 \end{minipage}}
 \end{center}
 \vspace{0.6em}
@@ -122,19 +122,17 @@ $\gL^k$-corrections with $\gL \approx 1.864$
 
 \medskip
 \noindent\textbf{Release note for v\docversion.}
-This public release establishes v3.1.0 as the first consolidated expansion step of the Version~3 line beyond the public v3.0.0 baseline. Its purpose is to expose the strong/QCD route as the next named package front of the already emergent 3.0 branch architecture while preserving the package logic of the anchor-flow and fermionic residual branches. Relative to v3.0.0, the present release contributes the following directional changes:
+This public v3.2.0 release builds on the public v3.1.0 baseline and consolidates the post-release anchor-side hardening line into the first canonical forcing threshold beyond that public cut. The present v3.2.0 release does not merely sharpen another local criterion; it packages the chain from finite candidate families through template-derived hulls and coordinatewise separation into a first canonical anchor-forcing regime. Relative to the public v3.1.0 baseline, the present release contributes the following directional changes:
 
 \begin{enumerate}[label=(\arabic*), leftmargin=2em]
-\item \textbf{The v3 axis is made explicit.}
-  The document is now read forward from the package $\mathfrak A_{3.0}=(\kappa_*,\mathcal L_{\kappa_*}^{\mathrm{pure}},\mathcal R_{\kappa_*},\eta_{\mathrm{spec}})$ rather than from release-cleanup tasks.
-\item \textbf{The first two Version~3 packages remain explicit.}
-  The cosmological and lepton branches are now gathered into the anchor-flow and fermionic residual packages as the first two theorem-bearing absorption routes of the 3.0 line.
-\item \textbf{The third visible package front is now named.}
-  The strong/QCD route is no longer only a future note: it is now exposed as the first v3.1 frontier package, with explicit obstruction profile, minimal residual-law candidate, and conditional absorption criterion for the hadronic branch.
-\item \textbf{The version jump is organizational before it is expansive.}
-  No material is shortened or discarded; instead, the existing late-2.x architecture is treated as the stable base from which the first deliberate 3.x theorem package will be unfolded.
-\item \textbf{Public-release metadata are now synchronized.}
-  This release carries the version-specific DOI \href{https://doi.org/10.5281/zenodo.19391581}{10.5281/zenodo.19391581}, while the concept DOI remains the persistent identifier of the Companion line.
+\item \textbf{Coordinatewise hull separation is extracted.}
+  The template-derived hull family is no longer used only as a corridor source: explicit criteria are now stated under which the $U$- or $E$-projections of the hulls already separate the anchor classes.
+\item \textbf{One-coordinate anchor fixing is installed.}
+  Once one coordinate projection separates the active hulls, a single scalar corridor in that coordinate already fixes the active anchor class before any representative-level comparison.
+\item \textbf{Two-stage package forcing becomes canonical.}
+  After anchor fixing by one coordinate, the complementary scalar coordinate can be used inside the active slice to force the remaining package, yielding a new two-stage forcing criterion from template-derived data alone.
+\item \textbf{v3.2.0 becomes the new public citation point.}
+  The present file is the first public v3.2.0 release on the canonical anchor-forcing line and is assigned the version-specific DOI \href{https://doi.org/10.5281/zenodo.19394261}{10.5281/zenodo.19394261}.
 \end{enumerate}
 \medskip
 \noindent\textbf{Open structural problems (v\docversion).}
@@ -8121,6 +8119,751 @@ These consequences matter because they show that the fermionic residual law is n
 Within the Version~3 program, the lepton branch is now no longer only a profiled obstruction frontier. It has been promoted to the second explicit theorem-bearing package: obstruction profile, minimal residual law, pure-branch criterion, discrete residual levels, and local stability consequences are all now part of the active 3.0 chain. What remains open is not the existence of the package itself, but the further quantitative derivation that would turn the residual readout into a fully closed physical identification of the neutrino data.
 \end{remark}
 
+
+\subsection*{v3.1.1: Fermionic quotient-rigidity tools}
+\addcontentsline{toc}{subsection}{v3.1.1: Fermionic quotient-rigidity tools}
+The first post-release structural test after the public v3.1.0 cut is whether the quotient-style rigidity logic extracted on the anchor branch already transports to a second package front. On the lepton branch the natural target is the discrete neutrino label: once the residual law is in place and isolated residual levels exist, the remaining question is no longer whether one can attach a label to a chosen state, but whether that label is already a representative-free readout on quotient classes of the selected lepton sector.
+
+To make this precise, define an equivalence relation on admissible selected lepton states by
+\[
+\Psi_{\ell}\sim_{\nu}\Phi_{\ell}
+\quad\Longleftrightarrow\quad
+\operatorname{Lev}_{\nu}(\Psi_{\ell})=\operatorname{Lev}_{\nu}(\Phi_{\ell}),
+\]
+where $\operatorname{Lev}_{\nu}(\Psi_{\ell})$ denotes the connected component of the isolated residual level of $\mathcal R_{\nu}$ containing $\Psi_{\ell}$. Denote the corresponding quotient by
+\[
+Q_{\nu}:=\mathcal B_{\ell}^{\mathrm{ad}}/\!\sim_{\nu},
+\]
+where $\mathcal B_{\ell}^{\mathrm{ad}}$ is the admissible selected lepton branch.
+
+\begin{theorem}[Residual-level quotient transfer and neutrino-label rigidity]
+\label{thm:residual-level-quotient-transfer-neutrino-label-rigidity}
+Assume the hypotheses of Proposition~\ref{prop:pure-lepton-branch-exact-fermionic-residual-levels} and Corollary~\ref{cor:local-constancy-discrete-neutrino-labels-isolated-residual-levels}. Suppose further that the neutrino label is read from an isolated discrete residual level of $\mathcal R_{\nu}$ on the selected lepton branch. Then:
+\begin{enumerate}
+  \item the neutrino label factors through the quotient map $\pi_{\nu}:\mathcal B_{\ell}^{\mathrm{ad}}\to Q_{\nu}$;
+  \item the scalar residual product $\chi_{\nu}:=\eta_{\nu}\rho_{\nu}$ is constant on each quotient class $[\Psi_{\ell}]\in Q_{\nu}$; and
+  \item the restricted fermionic residual law admits the representative-free quotient writing
+\[
+\mathcal L_{\kappa_*}^{\mathrm{pure}}\Psi_{\ell}=\chi_{\nu}([\Psi_{\ell}])\,\Psi_{\ell}
+\]
+for every admissible representative $\Psi_{\ell}$ of a class on which the residual level stays isolated.
+\end{enumerate}
+In particular, continuous drift of the neutrino label inside one quotient class is impossible; any genuine change of label must pass through a level transition and hence leave the class.
+\end{theorem}
+
+\begin{proof}
+By Corollary~\ref{cor:local-constancy-discrete-neutrino-labels-isolated-residual-levels}, the discrete neutrino label is locally constant under admissible perturbations that remain inside one isolated residual level. Therefore the label is constant on every connected component of such a level, which is exactly the definition of the quotient classes of $Q_{\nu}$. This proves item~(1).
+
+For item~(2), Proposition~\ref{prop:pure-lepton-branch-exact-fermionic-residual-levels} shows that on an eigenstate of $\mathcal R_{\nu}$ the whole residual correction is encoded by the scalar product $\eta_{\nu}\rho_{\nu}$. Inside one isolated residual level both the discrete label and the eigenvalue branch remain fixed, hence the scalar product is constant on the whole quotient class; denote the class-value by $\chi_{\nu}([\Psi_{\ell}])$.
+
+Item~(3) is then just the scalar writing from Proposition~\ref{prop:pure-lepton-branch-exact-fermionic-residual-levels}, rewritten with the class-dependent scalar $\chi_{\nu}([\Psi_{\ell}])$. Since the label and scalar are constant on the quotient class, the writing is independent of the chosen admissible representative. If the label changed continuously while remaining in the same quotient class, the class would contain two different residual labels, contradicting the local constancy and isolation assumptions. Hence any actual label change must cross a level transition and therefore leave the class.
+\end{proof}
+
+\begin{corollary}[Representative-free lepton writing on isolated residual classes]
+\label{cor:representative-free-lepton-writing-isolated-residual-classes}
+Under the hypotheses of Theorem~\ref{thm:residual-level-quotient-transfer-neutrino-label-rigidity}, the selected lepton branch on every isolated residual class is controlled by a single class scalar
+\[
+\chi_{\nu}:Q_{\nu}\to\mathbb R,
+\]
+rather than by separate representative-dependent data $(\eta_{\nu},\rho_{\nu})$. Consequently the neutrino block is structurally reduced from a state-level labeling problem to a quotient-level scalar readout problem.
+\end{corollary}
+
+\begin{proof}
+Theorem~\ref{thm:residual-level-quotient-transfer-neutrino-label-rigidity} identifies the product $\eta_{\nu}\rho_{\nu}$ as a quotient-class scalar. On each isolated residual class, all admissible representatives therefore satisfy the same scalar branch equation with the same class value $\chi_{\nu}$. The remaining information is thus encoded by the quotient-level scalar, not by a separate microscopic choice of representative.
+\end{proof}
+
+\begin{remark}[Extracted tools from the first lepton-side quotient transfer]
+\label{rem:extracted-tools-first-lepton-side-quotient-transfer}
+The new post-release gain is not only a theorem, but a reusable tool stack:
+\begin{enumerate}
+  \item \textbf{Residual-Level Quotient Tool:} move discrete residual labels from states to quotient classes of isolated residual levels.
+  \item \textbf{Discrete-Label Rigidity Tool:} forbid continuous drift of a label inside one quotient class.
+  \item \textbf{Representative-Free Lepton Writing Tool:} replace the pair $(\eta_{\nu},\rho_{\nu})$ by one class scalar $\chi_{\nu}$ on the admissible lepton quotient.
+  \item \textbf{Level-Transition Detection Tool:} certify that any genuine label change must cross an isolated-level boundary and is therefore a structural transition, not a smooth retuning.
+\end{enumerate}
+These tools matter because they show that the quotient/factorization logic extracted from the anchor branch is not local to cosmology. It already survives transport to the lepton residual package and therefore starts to look like a package-independent structural method.
+\end{remark}
+
+\begin{remark}[Package status after the first lepton-side quotient transfer in v\docversion]
+\noindent The first post-release transfer step removed representative dependence from the neutrino label on isolated fermionic residual classes. The next structural task is therefore no longer to stabilize the label on each class, but to test whether the class scalar
+\[
+\chi_{\nu}:Q_{\nu}^{\mathrm{iso}}\to\mathbb R
+\]
+already separates those isolated classes strongly enough to determine the discrete level itself.
+
+\noindent The genuinely new question is collision: can two distinct isolated residual classes still carry the same class scalar? If not, then the lepton package gains a second compression step and the label problem collapses from a class-valued problem to a scalar-separation problem.
+\end{remark}
+
+\subsection*{v3.1.2: Scalar separation on isolated fermionic residual classes}
+\addcontentsline{toc}{subsection}{v3.1.2: Scalar separation on isolated fermionic residual classes}
+Let
+\[
+Q_{\nu}^{\mathrm{iso}}\subseteq Q_{\nu}
+\]
+denote the subset of quotient classes on which the isolated-level hypotheses of Theorem~\ref{thm:residual-level-quotient-transfer-neutrino-label-rigidity} remain valid, and let
+\[
+\lambda_{\nu}:Q_{\nu}^{\mathrm{iso}}\to\Lambda_{\nu}
+\]
+be the corresponding discrete neutrino-label map.
+
+\begin{theorem}[Class-scalar separation and residual-level determination]
+\label{thm:class-scalar-separation-residual-level-determination}
+Assume the hypotheses of Theorem~\ref{thm:residual-level-quotient-transfer-neutrino-label-rigidity}. Suppose further that the quotient-class scalar
+\[
+\chi_{\nu}:Q_{\nu}^{\mathrm{iso}}\to\mathbb R
+\]
+is injective on the admissible isolated residual classes. Then:
+\begin{enumerate}
+  \item the discrete neutrino-label map factors through the scalar image of $\chi_{\nu}$: there exists a unique map
+  \[
+  \ell_{\nu}:\chi_{\nu}(Q_{\nu}^{\mathrm{iso}})\to\Lambda_{\nu}
+  \]
+  such that
+  \[
+  \lambda_{\nu}=\ell_{\nu}\circ\chi_{\nu};
+  \]
+  \item if two admissible representatives $\Psi_{\ell},\Phi_{\ell}$ satisfy
+  \[
+  \chi_{\nu}([\Psi_{\ell}])=\chi_{\nu}([\Phi_{\ell}]),
+  \]
+  then they have the same discrete neutrino label and belong to the same isolated residual class;
+  \item any genuine level transition inside the admissible isolated sector changes the class scalar $\chi_{\nu}$. Equivalently, a path along which $\chi_{\nu}$ remains constant cannot cross to a different isolated neutrino level.
+\end{enumerate}
+In particular, on isolated residual classes with injective $\chi_{\nu}$, the neutrino label is no longer an independent discrete datum beyond the class scalar itself.
+\end{theorem}
+
+\begin{proof}
+By Theorem~\ref{thm:residual-level-quotient-transfer-neutrino-label-rigidity}, the discrete neutrino label and the scalar product $\eta_{\nu}\rho_{\nu}$ are both constant on each class in $Q_{\nu}^{\mathrm{iso}}$. Hence both descend to class-level maps $\lambda_{\nu}$ and $\chi_{\nu}$. If $\chi_{\nu}$ is injective, every scalar value in $\chi_{\nu}(Q_{\nu}^{\mathrm{iso}})$ comes from exactly one isolated class, and therefore from exactly one class label. This defines the unique factor map $\ell_{\nu}$ in item~(1).
+
+For item~(2), equality of class scalars implies equality of quotient classes by injectivity of $\chi_{\nu}$. On that class the label is constant by Theorem~\ref{thm:residual-level-quotient-transfer-neutrino-label-rigidity}, so both representatives have the same label and belong to the same isolated residual class.
+
+Item~(3) is the contrapositive of item~(2): if a path crossed to a different isolated residual class while keeping $\chi_{\nu}$ constant, then two distinct isolated classes would carry the same scalar value, contradicting injectivity. Thus every genuine level transition forces a scalar jump.
+\end{proof}
+
+\begin{corollary}[Scalar-only determination of isolated neutrino levels]
+\label{cor:scalar-only-determination-isolated-neutrino-levels}
+Under the hypotheses of Theorem~\ref{thm:class-scalar-separation-residual-level-determination}, determination of the discrete neutrino level on the admissible isolated lepton sector reduces to identifying the quotient-class scalar value $\chi_{\nu}$. Consequently the lepton frontier is compressed from a discrete level-selection problem to a scalar class-separation problem.
+\end{corollary}
+
+\begin{proof}
+The theorem shows that the discrete label factors through the injective class scalar $\chi_{\nu}$. Therefore one no longer needs an independent microscopic or class-level label selection once the scalar value is known: the scalar image already determines the corresponding isolated neutrino level.
+\end{proof}
+
+\begin{remark}[Extracted tools from lepton-side scalar separation]
+\label{rem:extracted-tools-lepton-side-scalar-separation}
+The next reusable tool stack is now explicit:
+\begin{enumerate}
+  \item \textbf{Class-Scalar Separation Tool:} test whether the quotient scalar $\chi_{\nu}$ separates isolated fermionic residual classes.
+  \item \textbf{Scalar-to-Label Determination Tool:} recover the discrete neutrino label from the scalar image of $\chi_{\nu}$ whenever the separation test passes.
+  \item \textbf{Collision Detection Tool:} identify the precise obstruction case as a scalar collision between distinct isolated residual classes.
+  \item \textbf{Constant-Scalar No-Transition Tool:} certify that a path with constant class scalar cannot cross an isolated neutrino-level boundary.
+\end{enumerate}
+These tools matter because they shrink the remaining lepton frontier again: the open problem is no longer a general discrete spectral bookkeeping problem, but the much narrower question whether scalar collisions actually occur on the admissible isolated lepton quotient.
+\end{remark}
+
+
+\subsection*{v3.1.3: Class-Bomba pruning on anchor and residual branches}
+\addcontentsline{toc}{subsection}{v3.1.3: Class-Bomba pruning on anchor and residual branches}
+The exploratory Turing/Bomba analogy becomes substantially sharper once the recent quotient tools are taken seriously. The search should no longer run on raw representatives; it should run on finite candidate families of quotient classes, anchor-profile tuples, or isolated residual classes, with contradiction propagation eliminating whole branches as soon as a local incompatibility appears. This is the exact structural point at which the historical Bomba intuition stops being decorative and becomes a reusable method.
+
+\begin{theorem}[Class-Bomba pruning on quotient-level candidate systems]
+\label{thm:class-bomba-pruning-on-quotient-level-candidate-systems}
+Let $\Sigma$ be a finite candidate set whose elements are quotient classes, quotient-level profile tuples, or isolated residual classes. For each $\sigma\in\Sigma$ let
+\[
+\mathcal T(\sigma)=\{T_1(\sigma),\dots,T_m(\sigma)\}
+\]
+be a finite family of local structural tests, each returning either \emph{pass} or \emph{fail}, and let
+\[
+\mathcal D_j(\sigma)\subseteq\Sigma
+\]
+be the associated contradiction-cascade set that must also be eliminated whenever $T_j(\sigma)$ fails. Assume:
+\begin{enumerate}
+  \item \textbf{sound local tests:} if $T_j(\sigma)$ fails, then $\sigma$ is not admissible;
+  \item \textbf{sound contradiction cascades:} if $T_j(\sigma)$ fails, then every candidate in $\mathcal D_j(\sigma)$ is likewise inadmissible;
+  \item \textbf{exhaustive admissibility:} a candidate is admissible precisely when it survives all local tests and every contradiction cascade generated during the iterative pruning process.
+\end{enumerate}
+Then the iterative elimination procedure that repeatedly removes every failing candidate together with its contradiction-cascade set terminates after finitely many steps and returns exactly the admissible subset $\Sigma_{\mathrm{adm}}\subseteq\Sigma$.
+\end{theorem}
+
+\begin{proof}
+Because $\Sigma$ is finite, every pruning round removes either no candidate or at least one candidate. Hence the iterative process terminates after finitely many steps.
+
+By assumptions (1) and (2), every removed candidate is inadmissible. Therefore the surviving set after termination is always contained in the admissible subset.
+
+Conversely, let $\sigma\in\Sigma$ be inadmissible. By assumption (3), inadmissibility must appear through failure of some local test or through membership in a contradiction cascade generated by an earlier failure. In the first case $\sigma$ is removed directly; in the second case it is removed when the generating failure is processed. Thus no inadmissible candidate survives termination. The surviving set is therefore exactly $\Sigma_{\mathrm{adm}}$.
+\end{proof}
+
+\begin{corollary}[Anchor-side Class-Bomba pruning]
+\label{cor:anchor-side-class-bomba-pruning}
+Apply Theorem~\ref{thm:class-bomba-pruning-on-quotient-level-candidate-systems} to a finite candidate family
+\[
+\Sigma_{\mathrm{anc}}\subseteq \{(a,N,P,\varepsilon)\}
+\]
+of candidate anchor packages, where $a$ is the anchor class, $N(a)$ the pure-defect norm profile, $P(a)$ the anchored residual norm profile, and $\varepsilon$ the sign branch. Choose the local test family to consist of residual-norm rigidity, sign coherence, square-root closure
+\[
+\bar\eta_{\mathrm{spec}}(a)=\varepsilon\sqrt{\frac{N(a)}{P(a)}},
+\]
+one-dimensional anchor closure, and anchor-only field writing. Then the iterative Class-Bomba elimination returns exactly the contradiction-stable anchor packages compatible with the current cosmological branch data.
+\end{corollary}
+
+\begin{proof}
+Each listed anchor test is already sound by the corresponding v3.0.x tools: failure of residual-norm rigidity destroys anchor-determinedness, failure of sign coherence destroys the fixed sign branch, failure of square-root closure destroys the explicit scalar writing, and failure of one-dimensional closure or anchor-only field writing destroys the compressed cosmological branch package. Hence every failed test removes an inadmissible anchor package. The theorem therefore applies and the survivors are exactly the contradiction-stable anchor packages.
+\end{proof}
+
+\begin{corollary}[Residual-class Class-Bomba pruning on the lepton branch]
+\label{cor:residual-class-class-bomba-pruning-lepton-branch}
+Apply Theorem~\ref{thm:class-bomba-pruning-on-quotient-level-candidate-systems} to a finite candidate family $\Sigma_{\nu}$ of isolated fermionic residual classes and admissible candidate transitions between them. Choose the local test family to consist of residual-level quotient rigidity, representative-free lepton writing, class-scalar separation, and constant-scalar no-transition. Then the iterative Class-Bomba elimination returns exactly the isolated residual classes and candidate transitions that are compatible with the current lepton package.
+\end{corollary}
+
+\begin{proof}
+Residual-level quotient rigidity and representative-free lepton writing are sound by Theorem~\ref{thm:residual-level-quotient-transfer-neutrino-label-rigidity}; class-scalar separation and constant-scalar no-transition are sound by Theorem~\ref{thm:class-scalar-separation-residual-level-determination}. Any class or transition that violates one of these constraints is therefore inadmissible. The theorem then yields exactly the contradiction-stable lepton-side survivors.
+\end{proof}
+
+\begin{remark}[Extracted Class-Bomba tools]
+\label{rem:extracted-class-bomba-tools}
+The improved Turing/Bomba reading now produces an explicit reusable tool stack:
+\begin{enumerate}
+  \item \textbf{Class-Bomba Tool:} perform contradiction-sensitive elimination on finite candidate families of quotient classes or quotient-level profile tuples instead of on raw representatives.
+  \item \textbf{Contradiction Cascade Tool:} whenever one structural test fails, remove all candidates whose admissibility depended on that failed branch.
+  \item \textbf{Sector-Pruning Tool:} eliminate whole anchor or residual sectors before attempting any microstate-level continuation.
+  \item \textbf{Scalar-Memo Tool:} cache already-tested scalar or norm profiles so quotient-equivalent candidates are not rechecked under new representatives.
+  \item \textbf{Transition-Impossibility Tool:} mark candidate level transitions as impossible once scalar separation or constant-scalar constraints force their elimination.
+\end{enumerate}
+These tools matter because they replace an open-ended microstate search by a finite contradiction-pruning problem on quotient candidates. In particular, the anchor and lepton fronts can now be searched by eliminating impossible class packages first and only then inspecting the few contradiction-stable survivors.
+\end{remark}
+
+\subsection*{v3.1.5: Finite anchor candidate family survivor taxonomy}
+\addcontentsline{toc}{subsection}{v3.1.5: Finite anchor candidate family survivor taxonomy}
+The Class-Bomba theorem becomes operational on the cosmological branch only once one fixes an explicit finite starting candidate family. We therefore start from a finite anchor candidate family
+\[
+\Sigma_{\mathrm{anc}}^{(0)}\subseteq
+\{(a,N,P,\varepsilon)\}
+\]
+of candidate anchor packages, where $a$ is an anchor class, $N$ and $P$ are admissible norm-profile templates, and $\varepsilon\in\{\pm1\}$ is the sign branch. The point of the next step is not yet to guess the correct package, but to prove that after quotient-level pruning the outcome always falls into a small and explicit taxonomy: obstruction, uniqueness up to induced data, or a genuinely finite residual frontier.
+
+\begin{definition}[Induced anchor data]
+\label{def:induced-anchor-data-v314}
+For a surviving anchor package $\sigma=(a,N,P,\varepsilon)$ define its induced anchor data by
+\[
+\mathcal I(\sigma)
+:=
+\left(
+\nu_{\mathrm{cos}}\,\varepsilon\sqrt{N(a)P(a)},
+\varepsilon\sqrt{\frac{N(a)}{P(a)}},
+P(a)
+\right),
+\]
+that is, by the anchor-side scalar evolution term, the induced residual coefficient, and the anchored residual norm readout entering the compressed field writing.
+\end{definition}
+
+\begin{theorem}[Finite anchor candidate family survivor taxonomy]
+\label{thm:finite-anchor-candidate-family-survivor-taxonomy}
+Let $\Sigma_{\mathrm{anc}}^{(0)}$ be a finite anchor candidate family and let
+\[
+\Sigma_{\mathrm{anc}}^{\mathrm{surv}}\subseteq\Sigma_{\mathrm{anc}}^{(0)}
+\]
+be the surviving subset obtained from Corollary~\ref{cor:anchor-side-class-bomba-pruning}. On $\Sigma_{\mathrm{anc}}^{\mathrm{surv}}$ define an equivalence relation by
+\[
+\sigma\sim_{\mathcal I}\sigma'
+\quad\Longleftrightarrow\quad
+\mathcal I(\sigma)=\mathcal I(\sigma').
+\]
+Then the quotient survivor set
+\[
+\Sigma_{\mathrm{anc}}^{\mathrm{surv}}/\!\sim_{\mathcal I}
+\]
+is finite, and exactly one of the following three cases occurs:
+\begin{enumerate}
+  \item \textbf{obstruction case:} $\Sigma_{\mathrm{anc}}^{\mathrm{surv}}=\varnothing$;
+  \item \textbf{unique package case:} $\Sigma_{\mathrm{anc}}^{\mathrm{surv}}/\!\sim_{\mathcal I}$ has exactly one element;
+  \item \textbf{finite residual frontier case:} $\Sigma_{\mathrm{anc}}^{\mathrm{surv}}/\!\sim_{\mathcal I}$ has at least two elements.
+\end{enumerate}
+In particular, Class-Bomba pruning reduces every finite anchor search to a finite survivor taxonomy on induced anchor data, not to an uncontrolled microstate continuation.
+\end{theorem}
+
+\begin{proof}
+By Corollary~\ref{cor:anchor-side-class-bomba-pruning}, iterative Class-Bomba elimination removes every inadmissible anchor package and leaves exactly the contradiction-stable survivors. Since the initial family $\Sigma_{\mathrm{anc}}^{(0)}$ is finite, the surviving set $\Sigma_{\mathrm{anc}}^{\mathrm{surv}}$ is finite as well. The quotient of a finite set by any equivalence relation is again finite, so $\Sigma_{\mathrm{anc}}^{\mathrm{surv}}/\!\sim_{\mathcal I}$ is finite.
+
+The three listed cases are mutually exclusive and exhaustive for any finite set: the quotient is either empty, has exactly one element, or has at least two elements. In the first case there is no compatible anchor package. In the second case every surviving package induces the same anchor-side scalar law and the same compressed field data, so the remaining ambiguity is only representative-level and no longer package-level. In the third case at least two inequivalent induced anchor-data packages remain, so the open anchor frontier has been reduced to a genuinely finite residual candidate family. Therefore every finite anchor search falls into the stated survivor taxonomy.
+\end{proof}
+
+\begin{corollary}[Singleton trigger for the next anchor-side increment]
+\label{cor:singleton-trigger-next-anchor-side-increment}
+Under the hypotheses of Theorem~\ref{thm:finite-anchor-candidate-family-survivor-taxonomy}, if the quotient survivor set $\Sigma_{\mathrm{anc}}^{\mathrm{surv}}/\!\sim_{\mathcal I}$ has exactly one element, then the current anchor branch is fixed up to induced anchor data. Equivalently, the remaining post-pruning ambiguity is no longer a package ambiguity but only a representative ambiguity inside one induced anchor package.
+\end{corollary}
+
+\begin{proof}
+If the quotient survivor set has exactly one element, every surviving package has the same induced anchor data. By Definition~\ref{def:induced-anchor-data-v314}, those data already determine the scalar evolution term, the induced residual coefficient, and the anchored residual norm readout that enter the compressed anchor-side field writing. Hence all remaining survivors are equivalent for the purposes of the current anchor package, and only representative-level ambiguity remains.
+\end{proof}
+
+\begin{remark}[Extracted tools from finite anchor candidate family pruning]
+\label{rem:extracted-tools-finite-anchor-candidate-family-pruning}
+The next reusable tool stack is now explicit:
+\begin{enumerate}
+  \item \textbf{Finite Anchor Candidate Family Tool:} replace an open-ended anchor search by a finite candidate family $\Sigma_{\mathrm{anc}}^{(0)}$ of candidate packages.
+  \item \textbf{Induced-Data Equivalence Tool:} quotient surviving anchor packages by the induced data $\mathcal I(\sigma)$ rather than by raw representatives.
+  \item \textbf{Survivor-Taxonomy Tool:} classify the pruning outcome as obstruction, unique package, or finite residual frontier.
+  \item \textbf{Singleton Trigger Tool:} detect the exact moment at which anchor ambiguity has collapsed to one induced package.
+  \item \textbf{Finite-Frontier Certificate Tool:} certify that, even if uniqueness is not yet reached, the remaining anchor ambiguity has already been reduced to a finite inspectable candidate family.
+\end{enumerate}
+These tools matter because they turn the vague question “which anchor package is correct?” into a much smaller structural decision tree. Either no package survives, one induced package survives, or only a finite residual ambiguity remains. In all three cases the search has become sharply more controlled than before.
+\end{remark}
+
+\subsection*{v3.1.6: Explicit anchor test families and signature sieve}
+\addcontentsline{toc}{subsection}{v3.1.6: Explicit anchor test families and signature sieve}
+The survivor taxonomy of v3.1.5 becomes practically useful only once one can write down a finite test family from explicit finite ingredients and perform the first elimination step before entering any deeper branch-specific calculation. We therefore separate two layers: first an 
+explicit finite anchor test family built from finite anchor, norm-profile, and sign choices; second a signature sieve that quotients large fibers of packages already at the level of induced scalar data.
+
+\begin{definition}[Explicit finite anchor test family and anchor signature]
+\label{def:explicit-finite-anchor-test-family-and-anchor-signature-v316}
+Fix finite sets $A_{\mathrm{anc}}$ of admissible anchor classes, $\mathcal N_{\mathrm{anc}}$ of admissible pure-defect norm-profile templates, $\mathcal P_{\mathrm{anc}}$ of admissible anchored residual norm-profile templates, and $E_{\mathrm{anc}}\subseteq\{\pm1\}$ of admissible sign branches. Define the induced finite anchor test family by
+\[
+\Sigma_{\mathrm{anc}}^{\mathrm{test}}
+:=
+\left\{\begin{aligned}
+&(a,N,P,\varepsilon)\in A_{\mathrm{anc}}\times\mathcal N_{\mathrm{anc}}\times\mathcal P_{\mathrm{anc}}\times E_{\mathrm{anc}}:\\
+&N(a)>0,\ P(a)>0,\text{ and the active square-root/branch conditions hold}
+\end{aligned}\right\}.
+\]
+For $\sigma=(a,N,P,\varepsilon)\in\Sigma_{\mathrm{anc}}^{\mathrm{test}}$ define its anchor signature by
+\[
+\mathfrak s(\sigma)
+:=
+\left(
+N(a),\ P(a),\ \varepsilon,
+\varepsilon\sqrt{N(a)P(a)},
+\varepsilon\sqrt{\frac{N(a)}{P(a)}}
+\right).
+\]
+The first two coordinates are the anchor-rigid norm values, while the last two are the induced scalar evolution and residual-coefficient entries that already appear in the compressed anchor-side writing.
+\end{definition}
+
+\begin{theorem}[Signature sieve on explicit finite anchor test families]
+\label{thm:signature-sieve-on-explicit-finite-anchor-test-families}
+Let $\Sigma_{\mathrm{anc}}^{\mathrm{test}}$ be as in Definition~\ref{def:explicit-finite-anchor-test-family-and-anchor-signature-v316}. Assume that the currently active local tests on the anchor branch are chosen from the following family:
+\begin{enumerate}
+  \item positivity and square-root closure of $N(a)$ and $P(a)$,
+  \item sign coherence on the selected branch,
+  \item induced-data comparison through $\mathcal I(\sigma)$ from Definition~\ref{def:induced-anchor-data-v314},
+  \item compatibility with the compressed anchor-side field writing and the one-dimensional anchor closure laws.
+\end{enumerate}
+Assume further that each such local test depends on a candidate package $\sigma$ only through its anchor signature $\mathfrak s(\sigma)$. Then Class-Bomba elimination descends from the package family $\Sigma_{\mathrm{anc}}^{\mathrm{test}}$ to the finite signature set
+\[
+\mathfrak s\bigl(\Sigma_{\mathrm{anc}}^{\mathrm{test}}\bigr)\subset\mathbb R^5,
+\]
+and every eliminated signature removes the whole fiber
+\[
+\mathfrak s^{-1}(u)
+\subseteq
+\Sigma_{\mathrm{anc}}^{\mathrm{test}}
+\qquad (u\in\mathfrak s(\Sigma_{\mathrm{anc}}^{\mathrm{test}})).
+\]
+In particular, the first anchor-side pruning stage can be performed as a finite signature sieve before one returns to any finer package-level inspection.
+\end{theorem}
+
+\begin{proof}
+By construction, $\Sigma_{\mathrm{anc}}^{\mathrm{test}}$ is finite, hence its signature image $\mathfrak s(\Sigma_{\mathrm{anc}}^{\mathrm{test}})$ is finite as well. If a local test depends on $\sigma$ only through $\mathfrak s(\sigma)$, then any two packages with the same signature either both pass or both fail that test. Therefore every contradiction discovered at the signature level propagates to the whole fiber of packages carrying that signature.
+
+Since the active anchor-side Class-Bomba tests are assumed to have this property, iterative elimination may be carried out on the finite signature image instead of on the full package family. Once a signature is removed, no package in its fiber can survive. Conversely, every surviving package must belong to a surviving signature fiber. Hence the first pruning stage descends to a finite signature sieve, and only the remaining fibers require finer inspection.
+\end{proof}
+
+\begin{corollary}[Early singleton detection on explicit anchor test families]
+\label{cor:early-singleton-detection-on-explicit-anchor-test-families}
+Under the hypotheses of Theorem~\ref{thm:signature-sieve-on-explicit-finite-anchor-test-families}, if exactly one signature survives the finite signature sieve, then all surviving packages in $\Sigma_{\mathrm{anc}}^{\mathrm{test}}$ induce the same anchor-side scalar law and the same compressed field data. In particular, the current anchor-side search has already collapsed to one induced package class before any representative-level inspection is needed.
+\end{corollary}
+
+\begin{proof}
+If exactly one signature survives, all surviving packages share the same values of $N(a)$, $P(a)$, $\varepsilon$, $\varepsilon\sqrt{N(a)P(a)}$, and $\varepsilon\sqrt{N(a)/P(a)}$. By Definition~\ref{def:induced-anchor-data-v314}, these data determine the induced scalar evolution term, residual coefficient, and anchored residual norm readout that enter the compressed anchor-side field writing. Hence all surviving packages lie in one induced package class, and only finer representative-level distinctions remain.
+\end{proof}
+
+\begin{remark}[Extracted tools from explicit anchor test families]
+\label{rem:extracted-tools-from-explicit-anchor-test-families}
+The next reusable tool layer is now explicit:
+\begin{enumerate}
+  \item \textbf{Explicit Anchor Test-Family Tool:} build a finite anchor search space from finite sets $A_{\mathrm{anc}},\mathcal N_{\mathrm{anc}},\mathcal P_{\mathrm{anc}},E_{\mathrm{anc}}$ instead of from an uncontrolled open search.
+  \item \textbf{Anchor Signature Sieve Tool:} carry out the first elimination step on finite signature data $\mathfrak s(\sigma)$ rather than on full packages.
+  \item \textbf{Fiber-Elimination Tool:} remove every package in a signature fiber once that signature fails a local test.
+  \item \textbf{Early Singleton Detection Tool:} detect at the signature level when the anchor search has already collapsed to one induced package class.
+  \item \textbf{Signature-Memory Tool:} avoid repeated local testing on packages whose signature has already been accepted or eliminated.
+\end{enumerate}
+These tools matter because they turn the abstract finite-survivor story of v3.1.5 into an executable structural workflow: choose finite ingredients, build a finite test family, sieve signatures first, and inspect packages only on the few surviving fibers.
+\end{remark}
+
+
+
+\subsection*{v3.1.7: Minimal explicit anchor candidate family and first sieve run}
+\addcontentsline{toc}{subsection}{v3.1.7: Minimal explicit anchor candidate family and first sieve run}
+The abstract signature-sieve story of v3.1.6 becomes materially sharper once one fixes a genuinely small candidate family and asks what the first elimination pass already enforces. We therefore choose the smallest nontrivial anchor-side family that still contains anchor variation, norm-template variation, and sign branching.
+
+\begin{definition}[Minimal explicit anchor candidate family]
+\label{def:minimal-explicit-anchor-candidate-family-v317}
+Fix two admissible anchor classes
+\[
+A_{\mathrm{anc}}^{\min}=\{a_-,a_+\},
+\]
+two admissible pure-defect norm-profile templates
+\[
+\mathcal N_{\mathrm{anc}}^{\min}=\{N^{(0)},N^{(1)}\},
+\]
+two admissible anchored residual norm-profile templates
+\[
+\mathcal P_{\mathrm{anc}}^{\min}=\{P^{(0)},P^{(1)}\},
+\]
+and both sign branches
+\[
+E_{\mathrm{anc}}^{\min}=\{\pm1\}.
+\]
+The associated minimal explicit anchor candidate family is
+\[
+\Sigma_{\mathrm{anc}}^{\min}
+:=
+\Sigma_{\mathrm{anc}}^{\mathrm{test}}
+\cap
+\bigl(A_{\mathrm{anc}}^{\min}\times\mathcal N_{\mathrm{anc}}^{\min}\times\mathcal P_{\mathrm{anc}}^{\min}\times E_{\mathrm{anc}}^{\min}\bigr).
+\]
+Thus, before local admissibility tests are applied, at most $2\cdot2\cdot2\cdot2=16$ candidate packages are present. Their anchor signatures and induced data are inherited from Definition~\ref{def:explicit-finite-anchor-test-family-and-anchor-signature-v316} and Definition~\ref{def:induced-anchor-data-v314}.
+\end{definition}
+
+\begin{theorem}[First sieve run on a minimal explicit anchor candidate family]
+\label{thm:first-sieve-run-on-minimal-explicit-anchor-candidate-family-v317}
+Let $\Sigma_{\mathrm{anc}}^{\min}$ be as in Definition~\ref{def:minimal-explicit-anchor-candidate-family-v317}. Assume:
+\begin{enumerate}
+  \item sign coherence fixes one active branch $\varepsilon=\varepsilon_0\in\{\pm1\}$;
+  \item positivity and square-root closure hold for every surviving package;
+  \item on the surviving triples $(a,N,P)$, the map
+  \[
+  (a,N,P)
+  \longmapsto
+  \bigl(N(a),\,P(a),\,\sqrt{N(a)P(a)},\,\sqrt{N(a)/P(a)}\bigr)
+  \]
+  is injective.
+\end{enumerate}
+Then the first anchor-side signature sieve has the following consequences:
+\begin{enumerate}
+  \item every candidate with sign $-\varepsilon_0$ is eliminated immediately, so the surviving search space is a subset of at most $8$ packages;
+  \item on that surviving subset, anchor signatures separate packages already at the package level, i.e. each surviving signature fiber contains at most one package;
+  \item consequently the first sieve run reduces the anchor-side search either to obstruction, to a unique surviving package, or to a finite list of pairwise signature-distinct survivors of size at most $8$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Condition~(1) eliminates one whole sign branch, so only packages with $\varepsilon=\varepsilon_0$ may survive; at most $2\cdot2\cdot2=8$ packages remain. Condition~(2) removes every package violating the admissibility of the square-root entries already used in the anchor signature. If two surviving packages had the same signature, then in particular they would have the same values of $N(a)$, $P(a)$, $\sqrt{N(a)P(a)}$, and $\sqrt{N(a)/P(a)}$ with the same fixed sign $\varepsilon_0$. By Condition~(3), this forces the underlying triples $(a,N,P)$ to coincide, hence the packages themselves coincide. Therefore every surviving signature fiber contains at most one package.
+
+The remaining possibilities are then exactly the three stated cases: no surviving package, one surviving package, or finitely many pairwise signature-distinct surviving packages, all drawn from a set of size at most $8$.
+\end{proof}
+
+\begin{corollary}[First concrete singleton criterion on the anchor branch]
+\label{cor:first-concrete-singleton-criterion-on-anchor-branch-v317}
+Under the hypotheses of Theorem~\ref{thm:first-sieve-run-on-minimal-explicit-anchor-candidate-family-v317}, if all but one package in $\Sigma_{\mathrm{anc}}^{\min}$ are eliminated by the active local tests, then the surviving package determines the anchor-side induced scalar law and compressed field data uniquely within the chosen minimal family. In particular, the next anchor-side increment may be certified relative to this family without any further representative-level branching.
+\end{corollary}
+
+\begin{proof}
+By Theorem~\ref{thm:first-sieve-run-on-minimal-explicit-anchor-candidate-family-v317}, every surviving signature fiber contains at most one package. Hence if only one package survives, then its induced data are unique within the chosen minimal family. The anchor-side scalar law and compressed field data are therefore fixed relative to that family, and no further representative-level branching remains inside the present test family.
+\end{proof}
+
+\begin{remark}[Extracted tools from the first concrete anchor sieve run]
+\label{rem:extracted-tools-from-first-concrete-anchor-sieve-run-v317}
+The explicit first test run yields another practical tool layer:
+\begin{enumerate}
+  \item \textbf{Minimal Candidate-Family Tool:} start from a genuinely small family $\Sigma_{\mathrm{anc}}^{\min}$ instead of from an abstract finite existence statement.
+  \item \textbf{Branch-Fixing Tool:} eliminate one entire sign branch before any deeper comparison once sign coherence has fixed $\varepsilon_0$.
+  \item \textbf{Signature-Injectivity Tool:} upgrade the signature sieve from fiber elimination to direct package separation whenever the scalar signature map is injective on surviving triples.
+  \item \textbf{Eight-Package Ceiling Tool:} certify that the first nontrivial explicit anchor run reduces the admissible search to at most eight packages before deeper branch analysis.
+  \item \textbf{Relative Singleton Certificate Tool:} certify the next anchor-side increment relative to a chosen minimal family as soon as one package survives.
+\end{enumerate}
+These tools matter because they turn the new finite-family language into a concrete operational workflow: choose a very small admissible family, fix the sign branch, sieve by signatures, and decide whether one already has obstruction, a singleton, or a still-finite residual frontier.
+\end{remark}
+
+
+\subsection*{v3.1.9: Scalar-corridor isolation on minimal anchor candidate families}
+\addcontentsline{toc}{subsection}{v3.1.9: Scalar-corridor isolation on minimal anchor candidate families}
+The minimal explicit anchor family of v3.1.7 is still only a finite residual frontier until one can force a unique package from genuinely coarse scalar data. The next step is therefore not to add new microstructure, but to show that interval information on the induced anchor-side scalar pair already isolates packages whenever the scalar-pair map is injective on the active sign branch.
+
+\begin{definition}[Anchor scalar pair and scalar corridor on the minimal family]
+\label{def:anchor-scalar-pair-and-scalar-corridor-v319}
+For a package
+\[
+\sigma=(a,N,P,\varepsilon)\in\Sigma_{\mathrm{anc}}^{\min}
+\]
+on the minimal explicit anchor candidate family of Definition~\ref{def:minimal-explicit-anchor-candidate-family-v317}, define its \emph{anchor scalar pair}
+\[
+\Xi(\sigma)
+:=
+\left(
+U(\sigma),E(\sigma)
+\right)
+:=
+\left(
+\nu_{\mathrm{cos}}\,\varepsilon\sqrt{N(a)P(a)},
+\varepsilon\sqrt{\frac{N(a)}{P(a)}}
+\right).
+\]
+For intervals $I_U,I_E\subseteq\mathbb R$, the associated \emph{scalar corridor survivor set} is
+\[
+\Sigma_{\mathrm{anc}}^{\min}(I_U,I_E)
+:=
+\left\{\sigma\in\Sigma_{\mathrm{anc}}^{\min}: U(\sigma)\in I_U\ \text{and}\ E(\sigma)\in I_E\right\}.
+\]
+Thus a scalar corridor retains exactly those minimal-family packages whose induced anchor evolution term and induced residual coefficient both lie inside the prescribed coarse windows.
+\end{definition}
+
+\begin{theorem}[Scalar-corridor isolation on the minimal anchor family]
+\label{thm:scalar-corridor-isolation-on-minimal-anchor-family-v319}
+Let $\Sigma_{\mathrm{anc}}^{\min}$ be as in Definition~\ref{def:minimal-explicit-anchor-candidate-family-v317}. Assume:
+\begin{enumerate}
+  \item sign coherence fixes one active branch $\varepsilon=\varepsilon_0\in\{\pm1\}$;
+  \item positivity and square-root closure hold for every package on that active branch;
+  \item the anchor scalar-pair map
+  \[
+  \Xi: \{\sigma\in\Sigma_{\mathrm{anc}}^{\min}:\varepsilon=\varepsilon_0\}\to\mathbb R^2
+  \]
+  is injective.
+\end{enumerate}
+Then for every pair of intervals $I_U,I_E\subseteq\mathbb R$, the restriction of $\Xi$ induces a bijection
+\[
+\Sigma_{\mathrm{anc}}^{\min}(I_U,I_E)
+\longleftrightarrow
+\Xi\bigl(\Sigma_{\mathrm{anc}}^{\min}\bigr)\cap(I_U\times I_E)
+\]
+on the active sign branch. In particular:
+\begin{enumerate}
+  \item if $\Xi\bigl(\Sigma_{\mathrm{anc}}^{\min}\bigr)\cap(I_U\times I_E)=\varnothing$, then the scalar corridor certifies obstruction inside the minimal family;
+  \item if $\Xi\bigl(\Sigma_{\mathrm{anc}}^{\min}\bigr)\cap(I_U\times I_E)$ consists of exactly one point, then $\Sigma_{\mathrm{anc}}^{\min}(I_U,I_E)$ contains exactly one package;
+  \item in that singleton case, the anchor-side induced data and compressed field writing are fixed already at corridor level, before any deeper representative-level branch analysis.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Condition~(1) removes the inactive sign branch, so only packages with $\varepsilon=\varepsilon_0$ remain under consideration. Condition~(2) ensures that the scalar pair $\Xi(\sigma)$ is well-defined on every remaining package. By Condition~(3), the map $\Xi$ is injective on the active sign branch.
+
+By definition of $\Sigma_{\mathrm{anc}}^{\min}(I_U,I_E)$, a package belongs to the corridor survivor set exactly when its scalar pair lies in $I_U\times I_E$. Hence the image of the corridor survivor set under $\Xi$ is precisely
+\[
+\Xi\bigl(\Sigma_{\mathrm{anc}}^{\min}\bigr)\cap(I_U\times I_E).
+\]
+Injectivity of $\Xi$ on the active branch shows that each point of this image comes from at most one package. Surjectivity onto the displayed intersection is immediate from the definition of the corridor survivor set. Therefore the restriction of $\Xi$ gives a bijection between corridor survivors and scalar-pair points inside the corridor.
+
+The three stated consequences now follow directly. Empty intersection means no surviving package in the corridor, hence obstruction relative to the minimal family. A singleton intersection means exactly one surviving package. In that singleton case, the induced anchor evolution term and induced residual coefficient are fixed by the unique scalar pair, while $P(a)$ is fixed by the unique underlying package itself; therefore the induced data of Definition~\ref{def:induced-anchor-data-v314} and the compressed anchor-side field writing are fixed before any deeper representative-level continuation.
+\end{proof}
+
+\begin{corollary}[Anchor-class fixing by one scalar gap and package forcing by two corridors]
+\label{cor:anchor-class-fixing-by-one-scalar-gap-v319}
+Assume the hypotheses of Theorem~\ref{thm:scalar-corridor-isolation-on-minimal-anchor-family-v319}. Suppose further that on the active sign branch the first scalar coordinate separates the two anchor classes, in the sense that
+\[
+\max\{U(\sigma):\sigma\in\Sigma_{\mathrm{anc}}^{\min},\ a=a_-,\ \varepsilon=\varepsilon_0\}
+<
+\min\{U(\sigma):\sigma\in\Sigma_{\mathrm{anc}}^{\min},\ a=a_+,\ \varepsilon=\varepsilon_0\}.
+\]
+Then any interval $I_U$ meeting only one of these two separated $U$-ranges fixes the anchor class already at corridor level. If, in addition, an interval $I_E$ is chosen so that
+\[
+\Xi\bigl(\Sigma_{\mathrm{anc}}^{\min}\bigr)\cap(I_U\times I_E)
+\]
+contains exactly one point, then the surviving package is unique.
+\end{corollary}
+
+\begin{proof}
+The strict gap in the $U$-coordinate implies that any interval $I_U$ meeting only one of the two separated ranges can contain scalar pairs only from packages lying on the corresponding anchor class. This fixes the anchor class at the level of the first scalar coordinate. The second claim is then immediate from Theorem~\ref{thm:scalar-corridor-isolation-on-minimal-anchor-family-v319}: if the full scalar corridor intersects the scalar-pair image in exactly one point, the corridor survivor set contains exactly one package.
+\end{proof}
+
+\begin{remark}[Extracted tools from scalar-corridor isolation]
+\label{rem:extracted-tools-from-scalar-corridor-isolation-v319}
+The next reusable anchor-side tool layer is therefore:
+\begin{enumerate}
+  \item \textbf{Scalar-Corridor Tool:} replace full package comparison by interval constraints on the induced scalar pair $(U,E)$.
+  \item \textbf{Two-Scalar Isolation Tool:} isolate a unique package as soon as the active scalar corridor hits exactly one scalar-pair point.
+  \item \textbf{Anchor-Class Gap Tool:} fix the anchor class already from a one-coordinate gap in $U$ before comparing finer residual data.
+  \item \textbf{Corridor Singleton Certificate Tool:} certify that compressed anchor-side field writing is fixed once the scalar corridor has a unique hit.
+  \item \textbf{Early Obstruction Tool:} certify obstruction on the chosen minimal family whenever the scalar corridor misses the scalar-pair image entirely.
+\end{enumerate}
+These tools matter because they push the anchor search one step further away from explicit package enumeration: first one fixes the sign, then one uses very coarse scalar windows, and only afterwards does one inspect any remaining residual ambiguity.
+\end{remark}
+
+\subsection*{v3.1.10: Template-derived anchor hulls and canonical scalar corridors}
+\addcontentsline{toc}{subsection}{v3.1.10: Template-derived anchor hulls and canonical scalar corridors}
+The scalar-corridor step of v3.1.9 still allowed the corridor windows to be chosen abstractly. The next structural question is whether the current finite template language already supplies canonical corridor sources by itself. The answer is yes: once one fixes the active sign branch and the finite anchor/test families, each anchor class determines a finite scalar hull in the $(U,E)$-plane, and those hulls provide the first intrinsic corridor geometry on the anchor branch.
+
+\begin{definition}[Anchor hulls induced by finite template families]
+\label{def:anchor-hulls-induced-by-finite-template-families-v3110}
+Let the explicit finite anchor test family of Definition~\ref{def:explicit-finite-anchor-test-family-and-anchor-signature-v316} and the minimal anchor family of Definition~\ref{def:minimal-explicit-anchor-candidate-family-v317} be fixed. Assume one active sign branch $\varepsilon=\varepsilon_0$. For an anchor class $a\in A_{\mathrm{anc}}$, define the associated active-branch package slice
+\[
+\Sigma_{\mathrm{anc}}(a;\varepsilon_0)
+:=
+\{(a,N,P,\varepsilon_0)\in\Sigma_{\mathrm{anc}}^{\mathrm{test}}:	ext{ positivity and square-root closure hold}\}.
+\]
+Its induced \emph{anchor hull} is the rectangle
+\[
+\mathcal H_a
+:=
+[U_a^-,U_a^+]\times[E_a^-,E_a^+],
+\]
+where
+\[
+U_a^-:=\min\{U(\sigma):\sigma\in\Sigma_{\mathrm{anc}}(a;\varepsilon_0)\},
+\quad
+U_a^+:=\max\{U(\sigma):\sigma\in\Sigma_{\mathrm{anc}}(a;\varepsilon_0)\},
+\]
+\[
+E_a^-:=\min\{E(\sigma):\sigma\in\Sigma_{\mathrm{anc}}(a;\varepsilon_0)\},
+\quad
+E_a^+:=\max\{E(\sigma):\sigma\in\Sigma_{\mathrm{anc}}(a;\varepsilon_0)\}.
+\]
+The finite family
+\[
+\mathfrak H_{\mathrm{anc}}:=\{\mathcal H_a:a\in A_{\mathrm{anc}}\}
+\]
+is called the \emph{template-derived anchor hull family}. Its coordinate projections
+\[
+\pi_U(\mathcal H_a)=[U_a^-,U_a^+],
+\qquad
+\pi_E(\mathcal H_a)=[E_a^-,E_a^+]
+\]
+are the corresponding \emph{canonical scalar corridors} for that anchor class.
+\end{definition}
+
+\begin{theorem}[Template-derived hull forcing on finite anchor families]
+\label{thm:template-derived-hull-forcing-on-finite-anchor-families-v3110}
+Assume:
+\begin{enumerate}
+  \item sign coherence fixes one active branch $\varepsilon=\varepsilon_0$;
+  \item positivity and square-root closure hold on every package in the active branch of the explicit finite anchor test family;
+  \item the active anchor classes are finite in number and each slice $\Sigma_{\mathrm{anc}}(a;\varepsilon_0)$ is nonempty;
+  \item the scalar-pair map $\Xi$ of Definition~\ref{def:anchor-scalar-pair-and-scalar-corridor-v319} is injective on the active branch of the minimal family.
+\end{enumerate}
+Then:
+\begin{enumerate}
+  \item every active-branch package with anchor class $a$ has scalar pair in the hull $\mathcal H_a$;
+  \item if $\mathcal H_a\cap\mathcal H_{a'}=\varnothing$ for two anchor classes $a\neq a'$, then any scalar corridor intersecting only one of these hulls fixes the anchor class already at hull level;
+  \item if a scalar corridor $(I_U,I_E)$ misses the union $\bigcup_{a\in A_{\mathrm{anc}}}\mathcal H_a$, then it certifies obstruction on the active branch of the finite anchor family;
+  \item if a scalar corridor intersects exactly one scalar-pair point of the active minimal family and lies inside a single hull $\mathcal H_a$, then the surviving package is unique and the compressed anchor-side field writing is fixed.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+For (1), the definitions of $U_a^{\pm}$ and $E_a^{\pm}$ are finite minima and maxima taken over the active package slice with anchor class $a$. Hence every active-branch package with anchor $a$ has scalar coordinates inside the corresponding intervals, so its scalar pair lies in $\mathcal H_a$.
+
+For (2), suppose a scalar corridor intersects only one hull among two disjoint hulls. By (1), any package lying in the corridor must have its scalar pair in the hull of its anchor class. Since the corridor does not meet the second hull, no package from that anchor class can survive. Thus the anchor class is fixed already at hull level.
+
+Statement (3) is immediate from (1): if the corridor misses the union of all anchor hulls, then it misses the scalar pair of every active-branch package, so no active package survives.
+
+For (4), lying inside a single hull already fixes the anchor class by (2) whenever the relevant competing hulls are disjoint; in any case it restricts attention to one active anchor slice. If the corridor intersects exactly one scalar-pair point of the active minimal family, then Theorem~\ref{thm:scalar-corridor-isolation-on-minimal-anchor-family-v319} gives uniqueness of the surviving minimal package. The induced anchor data and compressed field writing are therefore fixed by that unique survivor.
+\end{proof}
+
+\begin{corollary}[Canonical corridor extraction from finite template data]
+\label{cor:canonical-corridor-extraction-from-finite-template-data-v3110}
+Under the hypotheses of Theorem~\ref{thm:template-derived-hull-forcing-on-finite-anchor-families-v3110}, the finite template language itself provides a first canonical source of scalar corridors on the anchor branch: namely the coordinate projections $\pi_U(\mathcal H_a)$ and $\pi_E(\mathcal H_a)$ of the anchor hulls. In particular, if two anchor hulls are disjoint, then anchor-class fixing can be read off from the finite template extrema alone, before any deeper package-level or representative-level analysis.
+\end{corollary}
+
+\begin{proof}
+The hulls are defined entirely by the finite extrema of the scalar pair on the active slices of the explicit anchor test family, so their coordinate projections are canonically determined by the finite template data. The second statement is exactly the anchor-class forcing part of Theorem~\ref{thm:template-derived-hull-forcing-on-finite-anchor-families-v3110}.
+\end{proof}
+
+\begin{remark}[Extracted tools from template-derived anchor hulls]
+\label{rem:extracted-tools-from-template-derived-anchor-hulls-v3110}
+The next reusable anchor-side tool layer is therefore:
+\begin{enumerate}
+  \item \textbf{Template-Hull Tool:} replace free scalar windows by hull rectangles canonically induced from the finite anchor templates on each active anchor class.
+  \item \textbf{Canonical Corridor Extraction Tool:} read off first scalar corridors directly from the coordinate projections of those hulls instead of inserting them externally.
+  \item \textbf{Anchor-Hull Separation Tool:} fix the anchor class as soon as the relevant hulls are disjoint and the corridor meets only one of them.
+  \item \textbf{Hull-Based Obstruction Tool:} certify obstruction whenever the chosen scalar corridor misses the union of all active anchor hulls.
+  \item \textbf{Class-Hull Forcing Tool:} combine hull restriction with scalar-pair injectivity to force a unique package and compressed field writing from corridor data that already sit inside one active hull.
+\end{enumerate}
+These tools matter because they convert the corridor method from an externally chosen filter into an intrinsically generated finite geometry on the anchor branch: the first windows now come from template extrema themselves, so the remaining search is not only finite but canonically localized.
+\end{remark}
+
+\subsection*{v3.1.11: Coordinate-separation criteria on template-derived anchor hulls}
+\addcontentsline{toc}{subsection}{v3.1.11: Coordinate-separation criteria on template-derived anchor hulls}
+The hull step of v3.1.10 still leaves one structural ambiguity: even if the first corridors come canonically from the finite templates, one still has to know whether one scalar coordinate already separates the active anchor classes, or whether both coordinates must always be carried simultaneously. The next sharpening is therefore a coordinatewise one: extract explicit criteria under which either the $U$-projections or the $E$-projections of the template-derived hulls already force the anchor class, and then use the complementary coordinate only for the remaining in-class package selection.
+
+\begin{theorem}[Coordinatewise hull separation and two-stage package forcing]
+\label{thm:coordinatewise-hull-separation-and-two-stage-package-forcing-v3111}
+Assume the hypotheses of Theorem~\ref{thm:template-derived-hull-forcing-on-finite-anchor-families-v3110}. In addition, assume that one of the following two coordinate-separation conditions holds on the active sign branch:
+\begin{enumerate}
+  \item the projected $U$-intervals $\pi_U(\mathcal H_a)$ are pairwise disjoint for distinct active anchor classes; or
+  \item the projected $E$-intervals $\pi_E(\mathcal H_a)$ are pairwise disjoint for distinct active anchor classes.
+\end{enumerate}
+Then the separating coordinate alone already fixes the active anchor class from any scalar corridor meeting exactly one projected hull interval.
+
+Moreover, fix one active anchor class $a$. If the complementary coordinate map is injective on the active minimal packages over that class, then a second scalar corridor in the complementary coordinate forces at most one active minimal package over $a$. In particular, under coordinatewise hull separation plus in-slice complementary injectivity, package forcing on the active branch becomes a two-stage process: first anchor fixing by one scalar coordinate, then package forcing by the other.
+\end{theorem}
+
+\begin{proof}
+Assume first that the $U$-intervals are pairwise disjoint. Let $I_U$ be a scalar corridor in the $U$-coordinate meeting exactly one projected interval $\pi_U(\mathcal H_a)$. By Theorem~\ref{thm:template-derived-hull-forcing-on-finite-anchor-families-v3110}(1), every active package with anchor class $a'$ has its scalar pair inside $\mathcal H_{a'}$, hence its $U$-coordinate lies in $\pi_U(\mathcal H_{a'})$. Since $I_U$ meets only $\pi_U(\mathcal H_a)$, no package from any distinct anchor class $a'\neq a$ can survive. Thus the anchor class is fixed already from the $U$-corridor alone. The same argument applies with $E$ in place of $U$ when the $E$-intervals are pairwise disjoint.
+
+Now fix the resulting active anchor class $a$ and assume that the complementary coordinate map is injective on the active minimal packages over $a$. If a second scalar corridor in that coordinate meets at most one complementary scalar value on the active minimal slice over $a$, then by injectivity it can correspond to at most one active minimal package over $a$. Therefore the combined two-stage filter yields at most one surviving active minimal package: first the anchor class is fixed by the separating coordinate, then the package is forced by the complementary one.
+\end{proof}
+
+\begin{corollary}[One-coordinate anchor fixing and near-v3.2 forcing criterion]
+\label{cor:one-coordinate-anchor-fixing-and-near-v3-2-forcing-criterion-v3111}
+Under the hypotheses of Theorem~\ref{thm:coordinatewise-hull-separation-and-two-stage-package-forcing-v3111}, the anchor branch reaches a canonical two-stage forcing regime whenever one projected hull family is pairwise disjoint and the complementary coordinate is injective on each active anchor slice. In that regime, the finite template language no longer yields merely a finite residual ambiguity: it yields anchor fixing from one coordinate and remaining package forcing from the other. This is the first anchor-side situation that is naturally read as a genuine v3.2-threshold condition rather than as a mere post-release hardening step.
+\end{corollary}
+
+\begin{proof}
+The first statement is exactly the content of Theorem~\ref{thm:coordinatewise-hull-separation-and-two-stage-package-forcing-v3111}. The last sentence is interpretive but precise: compared with v3.1.3--v3.1.10, the residual search is no longer only finite and canonically localized; it becomes canonically split into anchor forcing and in-slice package forcing. That is exactly the structural transition from hardening a finite ambiguity to approaching a first canonical forcing package on the anchor branch.
+\end{proof}
+
+\begin{remark}[Extracted tools from coordinatewise hull separation]
+\label{rem:extracted-tools-from-coordinatewise-hull-separation-v3111}
+The next reusable anchor-side tool layer is therefore:
+\begin{enumerate}
+  \item \textbf{Coordinate-Separation Tool:} test whether the projected $U$- or $E$-intervals of the template-derived hulls are already pairwise disjoint across the active anchor classes.
+  \item \textbf{One-Coordinate Anchor-Fixing Tool:} once one coordinate separates the active hull family, use that coordinate alone to fix the anchor class before any deeper package comparison.
+  \item \textbf{Complementary-Coordinate Package Tool:} after anchor fixing, use injectivity of the remaining coordinate on the active slice to force the package in a second stage.
+  \item \textbf{Two-Stage Forcing Tool:} replace simultaneous two-coordinate package comparison by the sequential workflow ``anchor first, package second''.
+  \item \textbf{Near-v3.2 Threshold Tool:} detect the point at which the finite template language has passed from canonical localization into canonical forcing on the anchor branch.
+\end{enumerate}
+These tools matter because they reduce the remaining ambiguity once more: instead of carrying both scalar coordinates at full strength throughout the whole search, one now checks whether one coordinate already fixes the anchor class globally and reserves the second coordinate only for the much smaller in-slice comparison problem.
+\end{remark}
+
+
+\subsection*{v3.2.0: First canonical anchor-forcing package}
+\addcontentsline{toc}{subsection}{v3.2.0: First canonical anchor-forcing package}
+The cumulative anchor-side hardening line from the post-release v3.1.x steps now reaches its first canonical package threshold. Finite candidate families, signature-level sieves, minimal explicit anchor families, scalar-corridor isolation, template-derived hulls, and coordinatewise hull separation are no longer separate local devices; taken together, they yield a single forcing regime. In that regime the finite template language itself either certifies obstruction or forces a unique active anchor-side package without returning to representative-level ambiguity. This is the first point on the anchor branch that is naturally read as a genuine Version~3.2 consolidation rather than as another local hardening step.
+
+\begin{theorem}[First canonical anchor-forcing package at the v3.2 threshold]
+\label{thm:first-canonical-anchor-forcing-package-at-the-v3-2-threshold}
+Assume the hypotheses of Theorem~\ref{thm:coordinatewise-hull-separation-and-two-stage-package-forcing-v3111}. In addition, assume that the active branch of the finite anchor language is described by an explicit finite anchor candidate family with finite template-induced hulls and that the projected hull family in one coordinate is pairwise disjoint across the active anchor classes while the complementary coordinate is injective on each active anchor slice.
+
+Then the finite template language on the active anchor branch admits a canonical forcing map
+\[
+\mathfrak F_{\mathrm{anc}}:\mathfrak C_{\mathrm{templ}}\longrightarrow
+\{\text{obstruction}\}\sqcup \Sigma^{\mathrm{min}}_{\mathrm{anc,act}},
+\]
+from canonical template-side scalar data $\mathfrak C_{\mathrm{templ}}$ to either obstruction or a unique active minimal anchor package, with the following properties:
+\begin{enumerate}
+  \item if the canonical corridor data extracted from the active hulls meet no active hull, then $\mathfrak F_{\mathrm{anc}}$ returns obstruction;
+  \item if the canonical corridor data meet exactly one projected hull interval in the separating coordinate, then the active anchor class is fixed canonically;
+  \item if, after anchor fixing, the complementary canonical corridor meets at most one scalar value on the active slice, then the surviving active minimal package is unique;
+  \item in the unique-package case, the compressed anchor-side field writing is forced canonically by the finite template language itself.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Theorem~\ref{thm:template-derived-hull-forcing-on-finite-anchor-families-v3110} supplies the canonical hull data extracted from the finite template language, together with obstruction whenever the relevant corridor misses the union of active hulls. Theorem~\ref{thm:coordinatewise-hull-separation-and-two-stage-package-forcing-v3111} then upgrades that hull geometry to a two-stage forcing regime: one coordinate canonically fixes the anchor class because the projected hull family separates the active classes, and the complementary coordinate canonically forces the remaining package because it is injective on the active slice.
+
+It therefore remains only to package these two steps into a single map $\mathfrak F_{\mathrm{anc}}$. Given canonical template-side scalar data, first apply the hull-extraction step. If no active hull is met, return obstruction. Otherwise use the separating coordinate to fix the unique active anchor class. Then apply the complementary coordinate on that active slice. By injectivity on the slice, at most one active minimal package survives. In the unique survivor case the induced scalar data, hence the compressed anchor-side field writing, are fixed by that package. This defines the required canonical forcing map and proves the four stated properties.
+\end{proof}
+
+\begin{corollary}[Canonical anchor forcing and first v3.2-ready branch package]
+\label{cor:canonical-anchor-forcing-and-first-v3-2-ready-branch-package}
+Under the hypotheses of Theorem~\ref{thm:first-canonical-anchor-forcing-package-at-the-v3-2-threshold}, the anchor branch has passed from finite post-release ambiguity control to first canonical package forcing. In particular, the active branch no longer needs to be described merely as a finite family of survivors together with additional local tests: it can be described as a branch package whose canonical template-side data force either obstruction or a unique compressed anchor-side realization.
+\end{corollary}
+
+\begin{proof}
+Theorem~\ref{thm:first-canonical-anchor-forcing-package-at-the-v3-2-threshold} gives exactly a canonical forcing map from finite template-side data to obstruction or a unique active minimal package. That statement is stronger than the earlier finite-survivor and near-threshold formulations: the residual ambiguity has been absorbed into the forcing mechanism itself. Hence the anchor branch is now legitimately read as the first v3.2-ready canonical package.
+\end{proof}
+
+\begin{remark}[Extracted tools from the first canonical anchor-forcing package]
+\label{rem:extracted-tools-from-the-first-canonical-anchor-forcing-package-v320}
+The next reusable anchor-side tool layer is therefore:
+\begin{enumerate}
+  \item \textbf{Canonical Anchor-Forcing Tool:} combine finite candidate families, signature sieves, hull extraction, and coordinatewise separation into a single forcing map from template-side data to obstruction or a unique package.
+  \item \textbf{Hull-to-Package Collapse Tool:} collapse the remaining search from active hull geometry directly to a single active minimal package whenever the complementary slice coordinate is injective.
+  \item \textbf{Coordinate-Split Certificate Tool:} certify explicitly which coordinate fixes the anchor class and which coordinate forces the in-slice package.
+  \item \textbf{Canonical Branch-Package Tool:} treat the anchor branch no longer as a loose family of local hardening lemmas but as one canonical forcing package with a definite output type.
+  \item \textbf{v3.2 Threshold Certificate Tool:} detect the point at which anchor-side hardening has crossed from finite survivor control into canonical branch forcing.
+\end{enumerate}
+These tools matter because they finally convert the anchor-side search line from a finite ambiguity-management story into a canonical branch-package story. The remaining open work is no longer how to localize the search, but how often the canonical forcing hypotheses are actually realized on the intended structural sectors.
+\end{remark}
+
 \subsection*{v3.0.1: Anchor-flow package}
 \addcontentsline{toc}{subsection}{v3.0.1: Anchor-flow package}
 The first explicit theorem-bearing package of the Version~3 line is the cosmological anchor-flow layer. Its role is to move the Hubble block away from an externally inserted $\bsym(t)$ ansatz and toward a branch-internal scalar dynamics carried by the selected anchor $\kappa_*(t)$. The package is intentionally minimal: it does not yet claim a complete cosmological model, but it does isolate the exact structural ingredients that are needed for a genuine 3.0 absorption route.
@@ -12656,7 +13399,7 @@ Several concrete search modes become visible immediately.
   \item \textbf{Hopf-branch pruning.} If several Hopf transitions are locally available, only those compatible with both disjointness and transformed-frame return are retained.
   \item \textbf{Counter-based universality probes.} A later step could encode simple counter-machine behavior by using probe traces as writable history and HC/projector logic as update constraints.
 \end{enumerate}
-What matters is that the search is not brute force in a blind combinatorial sense. It is \emph{structurally informed elimination}. That is the exact point where the cryptanalytic analogy becomes useful rather than decorative.
+What matters is that the search is not brute force in a blind combinatorial sense. It is \emph{structurally informed elimination}. That is the exact point where the cryptanalytic analogy becomes useful rather than decorative. In the later v3.1 post-release package line this intuition is sharpened further: the elimination engine should be run on finite candidate families of quotient classes or quotient-level profile tuples, not on raw representatives, exactly as formalized in Theorem~\ref{thm:class-bomba-pruning-on-quotient-level-candidate-systems}.
 
 \subsection*{8. Relation to Lorenz/Tunny and the differencing perspective}
 The present section should also be read with the later wartime attack on the Lorenz/Tunny traffic in mind. The relevant lesson is not that the Sphaera framework is a teleprinter cipher. The lesson is methodological: hidden transformation systems can often be attacked more effectively after one passes from raw symbols to derived difference- or compatibility-structures. In the present setting, the analogue is the transition from naive path following to projector-aware trace differencing, frame-shift comparison, and HC-mediated elimination. This is one reason why Turing's cryptanalytic work remains suggestive even beyond the narrow Enigma/Bombe picture.
@@ -13631,6 +14374,114 @@ The extraction should remain conservative with respect to the Companion. That is
 \paragraph{Why the roadmap helps now.}
 Even at teaser level, this roadmap has a concrete editorial benefit: it explains why certain blocks currently appear as ``reserve'', ``toward'', or ``first sketch'' rather than as final theorem packages. The section is being written so that it can attract attention, preserve ideas, and remain citable, while still leaving room for later normalization and extraction.
 
+
+\subsection*{19K. Arithmetic reserve: finite-sum and character blocks}
+
+The language direction should not remain restricted to closure, projector, and branch logic only. If MML/MMA are eventually to serve as a proof-compression layer, then a first arithmetic reserve is needed as well. The smallest useful extension is finite-sum arithmetic over a prime field together with multiplicative characters, additive phases, conjugation, admissible reindexing on $\mathbb F_p^\times$, and certification of the resulting finite identity. The point is not to beat direct number theory on elegance; the point is to identify reusable primitives that can later be replayed, audited, and compiled.
+
+A first surface-level extension of the language reserve may be written as
+\begin{quote}
+\ttfamily
+module Sphere.Arithmetic\par
+mod prime p;\par
+field Fp;\par
+unit x;\par
+unit t;\par
+character quad;\par
+phase zeta\_p;\par
+accumulator G;\par
+certificate Cert;\par
+\par
+run \{\par
+\quad G <- sum x in Units(Fp) => quad(x) * zeta\_p\^{}x;\par
+\quad G <- conj(G) * G;\par
+\quad G <- reindex\_mul(t);\par
+\quad G <- split\_on(t == 1, t != 1);\par
+\quad G <- cancel\_nonzero\_phase();\par
+\quad Cert <- certify(G == p);\par
+\}
+\end{quote}
+The corresponding low-level reserve is still schematic, but it already suggests primitive blocks of the form \texttt{SUM\_UNITS}, \texttt{CHAR\_EVAL}, \texttt{PHASE\_POW}, \texttt{CONJ\_MUL}, \texttt{REINDEX\_MUL}, \texttt{SPLIT\_EQ}, \texttt{EXP\_CANCEL}, and \texttt{CERTIFY}. In other words, the arithmetic extension does not replace the structural core; it adds a finite-sum layer above it.
+
+\subsection*{19L. First arithmetic proof-as-program reserve: the quadratic Gauss sum}
+
+The simplest good test is not a huge theorem but a short classical identity whose proof has a clear finite-sum structure. Let $p$ be an odd prime, let $\chi:\mathbb F_p\to\{-1,0,1\}$ be the quadratic character extended by $\chi(0)=0$, and let
+\[
+\zeta_p=e^{2\pi i/p},
+\qquad
+G_p=\sum_{x\in\mathbb F_p}\chi(x)\,\zeta_p^x.
+\]
+Then the language reserve is already strong enough to express the standard norm computation.
+
+\begin{proposition}[Quadratic Gauss-sum norm in the first arithmetic reserve]
+\label{prop:quadratic-gauss-sum-norm-first-arithmetic-reserve}
+For every odd prime $p$, the quadratic Gauss sum $G_p$ satisfies
+\[
+|G_p|^2=p.
+\]
+\end{proposition}
+
+\begin{proof}
+Because $\chi(0)=0$, only nonzero terms contribute to the norm square:
+\[
+|G_p|^2
+=\sum_{x\in\mathbb F_p^\times}\sum_{y\in\mathbb F_p^\times}
+\chi(x)\chi(y)\,\zeta_p^{x-y}.
+\]
+Write $y=tx$ with $t\in\mathbb F_p^\times$. Since multiplication by $x$ permutes $\mathbb F_p^\times$, this is an admissible reindexing and gives
+\[
+|G_p|^2
+=\sum_{x\in\mathbb F_p^\times}\sum_{t\in\mathbb F_p^\times}
+\chi(x)\chi(tx)\,\zeta_p^{x(1-t)}
+=\sum_{t\in\mathbb F_p^\times}\chi(t)
+\sum_{x\in\mathbb F_p^\times}\zeta_p^{x(1-t)},
+\]
+using $\chi(x)^2=1$ on $\mathbb F_p^\times$. For $t=1$, the inner sum is $p-1$. For $t\neq1$, multiplication by $1-t$ again permutes $\mathbb F_p^\times$, so
+\[
+\sum_{x\in\mathbb F_p^\times}\zeta_p^{x(1-t)}
+=\sum_{u\in\mathbb F_p^\times}\zeta_p^{u}
+=-1.
+\]
+Hence
+\[
+|G_p|^2
+=(p-1)-\sum_{t\in\mathbb F_p^\times\setminus\{1\}}\chi(t)
+=(p-1)-\Bigl(\sum_{t\in\mathbb F_p^\times}\chi(t)-\chi(1)\Bigr).
+\]
+Since $\sum_{t\in\mathbb F_p^\times}\chi(t)=0$ for a nontrivial quadratic character and $\chi(1)=1$, this becomes
+\[
+|G_p|^2=(p-1)-(0-1)=p.
+\]
+\end{proof}
+
+\paragraph{Proof-as-program reading.}
+The proof above can be read as a short arithmetic MML reserve:
+\begin{quote}
+\ttfamily
+run \{\par
+\quad G <- sum x in Units(Fp) => quad(x) * zeta\_p\^{}x;\par
+\quad N <- conj(G) * G;\par
+\quad N <- reindex\_mul(t := y/x);\par
+\quad N <- split\_on(t == 1, t != 1);\par
+\quad N <- cancel\_nonzero\_phase();\par
+\quad N <- use quadratic\_character\_sum();\par
+\quad certify(N == p);\par
+\}
+\end{quote}
+The arithmetic point is classical; the Companion-level point is different: the same short argument is now decomposed into explicit language blocks whose low-level expansion could later be audited instruction-by-instruction.
+
+\paragraph{Extracted arithmetic tools.}
+The example already exposes a small reusable arithmetic tool stack:
+\begin{itemize}[leftmargin=2em]
+  \item \textbf{Finite-Character Sum Tool:} isolate finite sums with multiplicative characters before any geometric or spectral rewriting.
+  \item \textbf{Multiplicative Reindexing Tool:} pass from two-variable nonzero sums to a one-parameter ratio variable whenever the unit group acts freely.
+  \item \textbf{Nonzero Exponential-Cancellation Tool:} replace nontrivial additive phase sums on $\mathbb F_p^\times$ by $-1$ as soon as the coefficient is nonzero.
+  \item \textbf{Arithmetic Proof-Replay Tool:} separate the classical arithmetic content from the language-level replay path so that the same finite argument can later be compiled into normalized primitive steps.
+\end{itemize}
+
+\paragraph{Trade-off note.}
+This example also makes the trade-off visible that motivated the present test. The direct arithmetic proof of $|G_p|^2=p$ is shorter than its structural-language rendering. The overhead comes from making finite-sum blocks, reindexing, cancellation, and certification explicit. That overhead is the price of replayability. In other words, easy arithmetic proofs do become longer in the structural language direction; the compensation is that they are decomposed into named primitives that can later be reused in other finite-sum arguments.
+
 \subsection*{20. Proof obligations and limits}
 
 The present section introduces a computational research direction, not a completed theorem package. In particular:
@@ -13666,25 +14517,47 @@ The present file is the first explicit local subversion after the public Zenodo 
     Build the parallel Version~3 theorem layer around the lepton branch: minimal fermionic residual law, pure lepton branch criterion, discrete residual levels, and stability consequences for the neutrino assignment.
   \item \textbf{v3.1.0 --- strong/QCD frontier package.} \emph{Current public release.}
     Expose the hadronic frontier as an explicit package front: obstruction profile, minimal strong-sector residual law, conditional absorption route, and a clear criterion separating branch-derived readout from unresolved placeholder fitting.
-  \item \textbf{v3.1.x --- frontier absorption or explicit obstruction freeze.}
-    Only after the three visible package fronts are stabilized should the remaining QCD/muon frontier be either absorbed through a fully derived residual law or frozen explicitly as the next unresolved obstruction boundary.
+  \item \textbf{v3.1.1 --- fermionic quotient-rigidity tools.} first post-release transport of quotient-style rigidity tools from the anchor package to isolated lepton residual classes.
+  \item \textbf{v3.1.2 --- scalar separation on isolated fermionic residual classes.} \emph{Completed locally.}
+    Test whether quotient-style rigidity tools transport from the anchor package to the lepton package by rewriting discrete neutrino labels as quotient-level residual readouts on isolated lepton classes.
+  \item \textbf{v3.1.3 --- class-Bomba pruning on anchor and residual branches.} \emph{Completed locally.}
+    Upgrade the exploratory Turing/Bomba intuition into a quotient-level contradiction-pruning engine and apply it to finite candidate families of anchor norm profiles and isolated fermionic residual classes.
+  \item \textbf{v3.1.4 --- finite anchor candidate-family survivor taxonomy.} \emph{Completed locally.}
+    Start from a concrete finite anchor candidate family, prune it by the Class-Bomba engine, quotient the survivors by their induced scalar/field data, and classify the outcome as obstruction, unique package, or finite residual ambiguity.
+  \item \textbf{v3.1.5 --- terminology cleanup of the anchor candidate-family layer.} \emph{Completed locally.}
+    Normalize the finite-candidate-family language, remove the unnecessary informal menu terminology, and restate the pruning/taxonomy layer in explicit mathematical candidate-family form.
+  \item \textbf{v3.1.6 --- explicit anchor test families and signature sieve.} \emph{Completed locally.}
+    Build finite anchor test families from finite anchor, norm-profile, and sign ingredients; then push the first elimination step down to finite signature data so that entire fibers of packages can be removed at once before deeper branch analysis.
+  \item \textbf{v3.1.7 --- minimal explicit anchor candidate family and first sieve run.} \emph{Completed locally.}
+    Fix the first genuinely small two-anchor, two-template, two-sign family and show that the first concrete signature sieve already reduces the admissible search to obstruction, a relative singleton, or a finite list of at most eight signature-distinct survivors.
+  \item \textbf{v3.1.8 --- arithmetic language reserve and Gauss-sum demonstrator.} \emph{Completed locally.}
+    Extend the MML/MMA reserve by finite-field, character, phase, reindexing, and finite-sum blocks, then test the enlarged language on the quadratic Gauss-sum norm identity as a first proof-as-program arithmetic benchmark.
+  \item \textbf{v3.1.9 --- scalar-corridor isolation on minimal anchor candidate families.} \emph{Completed locally.}
+    Replace direct package comparison by the induced scalar pair $(U,E)$ and show that coarse scalar corridors already isolate packages whenever the active scalar-pair map is injective.
+  \item \textbf{v3.1.10 --- template-derived anchor hulls and canonical scalar corridors.} \emph{Completed locally.}
+    Extract canonical corridor sources directly from the finite anchor templates by passing to hull rectangles in the $(U,E)$-plane and use them for hull-based obstruction and anchor-class forcing.
+  \item \textbf{v3.1.11 --- coordinate-separation criteria on template-derived anchor hulls.} \emph{Completed locally.}
+    Prove that one scalar coordinate can already fix the anchor class whenever the corresponding hull projections separate, and then force the remaining package in a second stage via the complementary coordinate.
+  \item \textbf{v3.2.0 --- first canonical anchor forcing package.}
+    Consolidate the post-release anchor line once canonical template-derived forcing has replaced mere finite ambiguity by a package-level forcing criterion that can be cited as the next public anchor-side expansion release.
+  \item \textbf{v3.2.x --- frontier absorption or explicit obstruction freeze.}
+    Only after the three visible package fronts and the first inter-package tool transfer are stabilized should the remaining QCD/muon frontier be either absorbed through a fully derived residual law or frozen explicitly as the next unresolved obstruction boundary.
 \end{enumerate}
 
 \section*{Reader's Guide and v\docversion\ Roadmap}
 \addcontentsline{toc}{section}{Reader's Guide and v\docversion\ Roadmap}
 
-This version is prepared as the \emph{first local v3.1 working master}.
-Its task is not another cleanup freeze, but the explicit transition from
-the early v3 package line to the first public v3.1 frontier-consolidation pass.
+This version is prepared as the \emph{ongoing local post-release v3.2 continuation}.
+Its task is not another cleanup freeze, but to consolidate the post-release tool stack from branch pruning and finite anchor localization into the first canonical anchor-forcing package, while keeping the public v3.1.0 frontier-consolidation release as the stable citation point.
 The operative rule for this stage is:
-\emph{do not shorten, do not overwrite, only re-center, harden, and append.}
+\emph{do not shorten, do not overwrite, only re-center, harden, append, and extract reusable tools.}
 
 \subsection*{Version identity}
 \begin{itemize}[leftmargin=2em]
   \item Version: \docversion
   \item Date: \docdate
   \item Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}
-  \item Version DOI: \href{https://doi.org/10.5281/zenodo.19391581}{10.5281/zenodo.19391581} (v3.1.0 strong/QCD frontier package)
+  \item Public release baseline DOI: \href{https://doi.org/10.5281/zenodo.19394261}{10.5281/zenodo.19394261} (v3.2.0 first canonical anchor-forcing package)
   \item Archive-status convention: in Appendix~A0 and Part~II, status words are retained as historical work-log labels unless explicitly superseded by Part~I
   \item Previous Zenodo releases:\
   \begin{itemize}[leftmargin=1.8em]
@@ -13701,16 +14574,16 @@ The operative rule for this stage is:
 
 \subsection*{Primary goals of v\docversion}
 \begin{enumerate}[leftmargin=2em]
-  \item \textbf{Promote the emergent 3.0 architecture to the active reading spine.}
-    Read the current core forward from the package $\mathfrak A_{3.0}$, the two-layer anchor architecture, and the master-theorem sketch for the selected branch instead of treating these blocks merely as late-2.x frontier summaries.
-  \item \textbf{Harden the first anchor-flow absorption route.}
-    Turn the current anchor-flow candidate for the Hubble block into the first deliberate v3 theorem package: minimal law, scalar readout corollary, and obstruction-to-factorization test on the cosmological branch.
-  \item \textbf{Harden the first fermionic residual absorption route.}
-    Treat the current neutrino/lepton route as the active second deliberate fermionic v3 package: minimal residual law, pure lepton branch criterion, discrete residual levels, and stability consequences.
-  \item \textbf{Name and stabilize the strong/QCD frontier package.}
-    Treat the current muon/QCD route as the first explicit v3.1 frontier package: obstruction profile, minimal strong-sector residual law, conditional absorption criterion, and a clear separation between derived readout and placeholder fitting.
-  \item \textbf{Prepare the public v3 cut conservatively.}
-    Keep this stage local and theorem-oriented until the re-centered three-front package chain is stable enough to justify a new version-specific DOI.
+  \item \textbf{Preserve the public v3.2.0 release as the stable baseline.}
+    Read the current core forward from the package $\mathfrak A_{3.0}$ and the three visible package fronts, but treat the public v3.2.0 cut as the stable citation point rather than reopening the release logic itself.
+  \item \textbf{Convert successful tool transfers into a pruning engine.}
+    Turn quotient-style rigidity, representative-free writing, and scalar separation into a contradiction-sensitive search method on finite class families.
+  \item \textbf{Apply the pruning logic to both active non-hadronic branches.}
+    Use it to eliminate incompatible anchor norm profiles and forbidden isolated lepton residual transitions before any microstate-level search is attempted.
+  \item \textbf{Keep the strong/QCD frontier explicit but untouched for the moment.}
+    Do not blur the hadronic obstruction package with exploratory add-ons until the first clean post-release tool transfer has been checked.
+  \item \textbf{Extract reusable tools whenever a structural step succeeds.}
+    Every successful post-release pass should explicitly name the tools it contributes, so later packages can reuse them without redoing the whole derivation.
 \end{enumerate}
 
 \subsection*{Reading discipline for the next stage}
@@ -19629,6 +20502,18 @@ v3.0.0 & local working state & 2026-04-02 & first deliberate Version~3 re-center
 v3.0.1 & local working state & 2026-04-02 & first theorem-bearing Version~3 package cut: explicit anchor-flow layer for the cosmological branch with obstruction profile, minimal autonomous anchor law, anchor-readout corollary, and first dynamical coherence consequences; version-specific DOI intentionally not yet assigned  \\
 v3.0.2 & local working state & 2026-04-02 & second theorem-bearing Version~3 package cut: explicit fermionic residual layer for the lepton branch with obstruction profile, minimal residual law, discrete residual-level consequences, and local stability consequences for the neutrino assignment; version-specific DOI intentionally not yet assigned  \\
 v3.1.0 & Zenodo release & 2026-04-02 & \href{https://doi.org/10.5281/zenodo.19391581}{10.5281/zenodo.19391581} --- first public v3.1 frontier-consolidation release: explicit strong/QCD frontier package with hadronic obstruction profile, minimal strong-sector residual law, conditional absorption criterion, and an explicit separation between branch-derived readout and unresolved placeholder fitting  \\
+v3.1.1 & local working state & 2026-04-02 & first post-release tool-transfer step: residual-level quotient transfer, discrete-label rigidity, representative-free lepton writing, and level-transition detection on isolated fermionic residual classes; version-specific DOI intentionally not yet assigned  \\
+v3.1.2 & local working state & 2026-04-02 & second post-release lepton-side hardening step: class-scalar separation, scalar-to-label determination, collision detection, and constant-scalar no-transition criteria on admissible isolated fermionic residual classes; version-specific DOI intentionally not yet assigned  \\
+v3.1.3 & local working state & 2026-04-02 & class-Bomba pruning promoted from analogy to tool: quotient-level contradiction cascades, sector pruning, scalar memoization, and transition-impossibility checks on anchor and lepton candidate families; version-specific DOI intentionally not yet assigned  \\
+v3.1.4 & local working state & 2026-04-02 & finite anchor candidate family survivor taxonomy: induced anchor data, survivor taxonomy, singleton trigger, and finite-frontier certificate on the anchor branch; version-specific DOI intentionally not yet assigned  \\
+v3.1.5 & local working state & 2026-04-02 & terminology cleanup of the anchor-side finite-candidate-family layer: mathematical candidate-family language normalized and the v3.1.4 pruning/taxonomy step restated without informal menu terminology; version-specific DOI intentionally not yet assigned  \\
+v3.1.6 & local working state & 2026-04-02 & explicit finite anchor test-family construction and signature-level sieve: finite ingredient sets, anchor-signature fibers, early singleton detection, and first package elimination on signature data; version-specific DOI intentionally not yet assigned  \\
+v3.1.7 & local working state & 2026-04-02 & first genuinely small explicit anchor candidate family: two anchors, two pure-defect templates, two residual templates, two sign branches; concrete first sieve run, eight-package ceiling, and relative singleton certificate on the anchor branch; version-specific DOI intentionally not yet assigned  \\
+v3.1.8 & local working state & 2026-04-02 & language-reserve extension into finite arithmetic: finite-field, character, phase, reindexing, cancellation, and certification blocks; first proof-as-program demonstrator via the quadratic Gauss-sum norm identity; version-specific DOI intentionally not yet assigned  \\
+v3.1.9 & local working state & 2026-04-03 & scalar-corridor isolation on minimal anchor candidate families: scalar-pair corridors, one-coordinate anchor-class gaps, two-scalar isolation, and early obstruction/singleton certificates on the anchor branch; version-specific DOI intentionally not yet assigned  \\
+v3.1.10 & local working state & 2026-04-03 & template-derived anchor hulls and canonical scalar corridors: finite template extrema, hull forcing, anchor-hull separation, and hull-based obstruction on finite anchor families; version-specific DOI intentionally not yet assigned  \\
+v3.1.11 & local working state & 2026-04-03 & coordinatewise hull separation and two-stage package forcing: one-coordinate anchor fixing, complementary-coordinate package forcing, and the first explicit near-v3.2 threshold criterion on the anchor branch; version-specific DOI intentionally not yet assigned  \\
+v3.2.0 & Zenodo release & 2026-04-03 & \href{https://doi.org/10.5281/zenodo.19394261}{10.5281/zenodo.19394261} \\
 \hline
 \end{longtable}
 }
@@ -19917,9 +20802,9 @@ Zenodo, March 2026.
 
 \bibitem{brendecke2026sphaera}
 Marc Brendecke,
-\emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding} (v3.1.0),
+\emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding} (v3.2.0),
 April 2026.
-\newblock Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}; version DOI: \href{https://doi.org/10.5281/zenodo.19391581}{10.5281/zenodo.19391581}; explicit Version~3 package fronts = anchor-flow layer, fermionic residual layer, and strong/QCD frontier package.
+\newblock Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}; version DOI: \href{https://doi.org/10.5281/zenodo.19394261}{10.5281/zenodo.19394261}. This public v3.2.0 release consolidates the post-release anchor mathematics into the first canonical anchor-forcing package, including template-derived anchor hulls, canonical scalar corridors, coordinatewise separation, and hull-based class forcing on explicit finite anchor families.
 
 \bibitem{kim2026}
 Yilwook Kim,
