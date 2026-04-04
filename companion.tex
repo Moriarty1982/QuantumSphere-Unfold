@@ -31,8 +31,8 @@
 \newtheorem{axiom}{Axiom}
 
 % --- Document metadata ---
-\newcommand{\docversion}{3.4.0}
-\newcommand{\docdate}{\DTMdisplaydate{2026}{04}{03}{-1}}
+\newcommand{\docversion}{3.5.0}
+\newcommand{\docdate}{\DTMdisplaydate{2026}{04}{04}{-1}}
 
 % --- Macros ---
 \newcommand{\bsym}{\beta_{\mathrm{sym}}}
@@ -73,116 +73,20 @@
 \vspace{0.6em}
 
 \begin{abstract}
-The Sphaera-Cascade framework~\cite{brendecke2026main} contains a single
-central observation: within the Sphaera, everything is a representation
-of the same collapse state $\zminus = 0$.
-The Sphaera as a geometric space, the triolic structure of three
-phase-shifted kernels ($z_1+z_2+z_3=0$, a $\mathbb{Z}/3\mathbb{Z}$
-symmetry), the individual kernels, the Heisenberg compensator output,
-matter/photon/tachyon sectors, and the Standard Model gauge group
-$U(1)\times SU(2)\times SU(3)$ --- all are unitarily equivalent
-representations of this one object, related by Stone--von Neumann
-uniqueness.
+The Sphaera-Cascade framework~\cite{brendecke2026main} is organized around a single closure state, $\zminus=0$, whose visible matter, photon, gauge, and compensator sectors are treated as readout-relative representations of one underlying kernel rather than as independent primitives. In the Companion this principle is made explicit by a biquaternionic ground configuration
+\[
+q_n = it\cdot\mathbf{1} + z_1 e_1 + z_2 e_2 + z_3 e_3
+\in \HH\otimes_{\mathbb{R}}\mathbb{C},
+\]
+with Minkowski norm $|q_n|^2=\tau_n^2$ invariant under admissible frame changes. The Heisenberg compensator is identified as the spectral projector onto the closure-stable sector, while the phase-shifted observer shell $\zminus=+\bsym\approx 0.5493$ explains why physical readout occurs away from the photon ground shell and therefore carries systematic $\gL^k$ corrections.
 
-The paper makes this explicit through the biquaternion ground state
-$q_n = it\cdot\mathbf{1} + z_1 e_1 + z_2 e_2 + z_3 e_3
-\in \HH\otimes_{\mathbb{R}}\mathbb{C}$,
-whose Minkowski norm $|q_n|^2 = \tau_n^2$ is invariant under all changes
-of frame.
-The fractal self-traversal of the Sphaera follows the null axis
-$\tau_n=0$; at stable physical readout, this same axis appears as the
-light axis. The Heisenberg compensator projects any element onto this
-axis. All quantum consequences --- entanglement as shared proper time,
-Bell consistency, gauge structure --- follow from Theorem~\ref{thm:unity}
-without additional assumptions.
+Version~\docversion\ consolidates the post-3.4 development into a first record-level compression step. The visible residual layer is treated through a single admissible residual record,
+\[
+\mathfrak R(B)=\bigl(\Phi,\Delta_{\mathrm{diag}},\varepsilon_{\mathrm{par}},\chi_{\mathrm{par}},\widehat\chi_{\mathrm{par}}\bigr),
+\]
+which packages the generator-based branch dynamics, the inverse shell-atlas diagnostics, and the parity-sensitive readout sector without opening any new visible branch variable beyond $\eta$. In this form, the stabilized 3.4 line is carried forward as one coherent structure built from generator dynamics, inverse atlas data, and parity holonomy.
 
-Throughout, the phase-shifted frame is kept explicit: matter observers
-reside at $\zminus = +\bsym \approx 0.5493$, not at the photon ground
-shell $\zminus = 0$, so all measured physical constants carry systematic
-$\gL^k$-corrections with $\gL \approx 1.864$
-(Remark~\ref{rem:frame-shift-spectral}).
-
-\medskip
-\noindent\textbf{New in v\docversion\ (consolidated 3.4 release).}
-This consolidated 3.4 release closes the current 3.4 extension line into a single
-visible readout package and serves as the clean bridge between the public
-3.3.5 release and the later 3.5 milestone. The exact residual branch law is now organized by an
-even analytic generator, regular shell data admit a calibrated inverse readout,
-and the remaining global ambiguity has been compressed to a cohomological
-parity obstruction with operational loop estimator. In this form, 3.4 closes as
-a generator-atlas-holonomy layer that is ready to be handed off to the next
-proof-simplification stage. The broader list below records the stabilized
-structural base carried forward from the 3.3 release milestone.
-
-\begin{enumerate}[label=(\arabic*), leftmargin=2em]
-\item \textbf{Spectral-projector theorem.}
-  Theorem~\ref{thm:hc-spectral-projector} identifies the Heisenberg
-  compensator as the spectral projector of the Millennium matrix onto the
-  closure-stable eigenspace: $C = \Pi^{(\mathcal{M})}_{\mathrm{spec}}$.
-  The proof is unconditional within every admissible tensor realization,
-  with the $\mathcal{M}\mathcal{C}=\mathcal{C}\mathcal{M}$ intertwining
-  now a definitional condition~(T4) of
-  Definition~\ref{def:tensor-structural-kernel}.
-
-\item \textbf{Bijection lemma.}
-  Lemma~\ref{lem:closure-stable-iff-im-C} proves both directions of
-  $\mathrm{ClosureStable}(x) \Leftrightarrow x\in\mathrm{im}(C)$,
-  closing the key gap in the spectral-projector proof chain.
-
-\item \textbf{Standard Model spectral realization.}
-  Corollary~\ref{cor:SM-spectral-realization}: the octonionic
-  decomposition $\OO = \mathbb{C}\oplus\mathbb{C}^3$ is the concrete
-  realization of $\mathcal{S}=\bigoplus_\lambda\mathcal{S}_\lambda$,
-  with the photon singlet $\mathbb{C}=\mathrm{im}(C)=\mathcal{S}_0$ and
-  the matter triplet $\mathbb{C}^3$ carrying $\gL^k$-corrections.
-
-\item \textbf{Readout-relative lemma methodology.}
-  Section~\ref{sec:readout-relative-lemmas} formalizes the distinction
-  between kernel-level truths and regime-dependent visible forms via
-  Definitions~\ref{def:kernel-level-statement},
-  \ref{def:readout-relative-lemma}, \ref{def:structural-lift} and
-  Propositions~\ref{prop:legitimacy-restricted-lemmas},
-  \ref{prop:structural-lift-principle} (now with non-circular proof).
-
-\item \textbf{HC-induced readout geometry (Theorem~7).}
-  Section~\ref{sec:theorem7}: ten structural statements on trajectory
-  gaps, projection singularities, mirror structure, non-orientable
-  global topology, and HC as curvature of the readout bundle, with
-  each statement anchored to established results.
-
-\item \textbf{Hypotheses~7.4--7.6.}
-  HC as meta-field generator, frame-dependent defect readout, and
-  fluid-type coarse-graining --- all formalized as hypothesis-grade
-  propositions with explicit readout-relative status and structural
-  lift targets.
-
-\item \textbf{Proof-chain hardening.}
-  All seven Priority-A/B items from the v2.27.5 roadmap are closed:
-  \texttt{lem:closure-forcing-lemma} (4-step explicit proof),
-  \texttt{def:tensor-structural-kernel} condition~(T4),
-  \texttt{prop:semantic-forcing-chain} (3-part derivation from
-  axioms~(S1)--(S8)), \texttt{prop:structural-lift-principle}
-  (non-circular), plus numerical hardening of
-  \texttt{thm:koide-triolic} ($\theta_K$ formula, $0.111\%$ match)
-  and \texttt{thm:bsym-hopf} (Hopf-gap documentation).
-
-\item \textbf{OP~2 formalization.}
-  Section~\ref{sec:op2}: the Dirac operator on $\Hplusminus$ is
-  formalized as an open problem with explicit conditions (D1)--(D4),
-  four closure targets (T1)--(T4), and a dependency map to OP~1.
-  A spectral-gap conjecture for $\gBI$ is stated at hypothesis grade.
-\end{enumerate}
-
-\medskip
-\noindent\textbf{Open structural problems.}
-OP~1 ($\bsym$ from first principles) depends on OP~2 (Dirac operator
-on $\Hplusminus$, Section~\ref{sec:op2}).
-OP~5 ($\Lambda_{\mathrm{obs}}$): step~(A) is now closed
-(Proposition~\ref{prop:theta-remainder-trivial}: $\Theta^{(\mathrm{photon})}=0$
-below the UV cutoff, since $T_{\mathrm{photon}} < \gamma_1^{(\mathrm{photon})}$);
-step~(B) (oscillatory Theta sum over all zeros integrated to
-$\approx 0.893$ in renormalized Planck units) remains open
-(Proposition~\ref{prop:theta-required-B}).
+The present 3.5 step begins the first conservative proof-compression stage beyond that closure. The record is used as a faithful interface for comparison, reconstruction, and later proof compression, with the explicit requirement that any future frontend or set-theoretic language factor conservatively through this interface if it is to remain mathematically faithful to the visible theory. Several global identification problems remain open, in particular the derivation of $\bsym$ from first principles and the unresolved Theta-sum part of the cosmological readout problem.
 \end{abstract}
 
 \clearpage
@@ -192,19 +96,19 @@ $\approx 0.893$ in renormalized Planck units) remains open
 \section*{Reader's Guide and v\docversion\ Roadmap}
 \addcontentsline{toc}{section}{Reader's Guide and v\docversion\ Roadmap}
 
-This version is prepared as a \emph{technical consolidation release}.
+This version is prepared as a \emph{public release}.
 Its task is not to replace the current structural core, but to freeze
 the next expansion path in explicit LaTeX form while keeping the working
 monolith intact. The operative rule for this release is:
-\emph{do not shorten, do not overwrite, only sharpen, normalize, and append.}
+\emph{preserve the stabilized structure, sharpen the visible package, and prepare the next proof-compression stage without opening new visible primitives.}
 
 \subsection*{Version identity}
 \begin{itemize}[leftmargin=2em]
   \item Version: \docversion
   \item Date: \docdate
   \item Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}
-  \item Version DOI: \href{https://doi.org/10.5281/zenodo.19410949}{10.5281/zenodo.19410949}
-  \item Previous Zenodo releases: v2.28.0 (\href{https://doi.org/10.5281/zenodo.19298586}{10.5281/zenodo.19298586}), v2.29.0 (\href{https://doi.org/10.5281/zenodo.19299245}{10.5281/zenodo.19299245})
+  \item Version DOI: \href{https://doi.org/10.5281/zenodo.19411671}{10.5281/zenodo.19411671}
+  \item Previous Zenodo releases: v3.3.5 (\href{https://doi.org/10.5281/zenodo.19396143}{10.5281/zenodo.19396143}), v3.4.0 (\href{https://doi.org/10.5281/zenodo.19410949}{10.5281/zenodo.19410949})
   \item Main-paper relation: Explicit mathematical companion to the current Sphaera master line~\cite{brendecke2026main}
 \end{itemize}
 
@@ -13703,6 +13607,50 @@ Theorem~\ref{thm:mainline-3420} already identifies the complete visible 3.4 pack
 \paragraph{3.4 closing remark.}
 The 3.4 line has therefore reached a natural stopping point. It began by globalizing the local residual law and ends with a parity-resolved inverse readout atlas whose only global obstruction is a single class in $H^1(B,\mathbb Z_2)$. This is the right place to stop extending 3.4 and hand the package forward, rather than continuing to add more local refinements.
 
+
+
+\subsection*{3.5 First extension: admissible residual record and reconstruction normal form}
+\addcontentsline{toc}{subsection}{3.5 First extension: admissible residual record and reconstruction normal form}
+The closed 3.4 line already shows that the visible branch layer is controlled by a small package rather than by an open-ended family of new observables. The correct first move of 3.5 is therefore not to enlarge the visible theory, but to treat this package as a single admissible record. This gives a compact interface for later simplification work while remaining entirely inside the current mathematical language.
+
+\begin{definition}[Admissible residual record]
+\label{def:mainline-3500}
+On a connected admissible shell base $B$, define the visible residual record
+\[
+  \mathfrak R(B)
+  :=
+  \bigl(\Phi,\Delta_{\mathrm{diag}},\varepsilon_{\mathrm{par}},\chi_{\mathrm{par}},\widehat\chi_{\mathrm{par}}\bigr),
+\]
+where $\Phi$ is the even analytic generator of the local visible branch law, $\Delta_{\mathrm{diag}}$ is the shell-consistency defect, $\varepsilon_{\mathrm{par}}\in H^1(B,\mathbb Z_2)$ is the parity obstruction class, $\chi_{\mathrm{par}}$ is its parity-holonomy character, and $\widehat\chi_{\mathrm{par}}$ is the empirical loop estimator.
+\end{definition}
+
+\begin{theorem}[3.5 reconstruction normal form]
+\label{thm:mainline-3500}
+Assume the hypotheses of Theorem~\ref{thm:mainline-3420}. Then every visible statement in the stabilized generator-atlas-holonomy sector factors through the admissible residual record $\mathfrak R(B)$ together with the chartwise shell coordinate $s$ and parity label $\pi$, in the following sense:
+\begin{enumerate}[label=(\roman*), leftmargin=2em]
+  \item on each regular shell chart away from the obstruction set, the local branch law, tunnel observables, and shell-consistency diagnostics are determined by $(\Phi,s,\pi,\Delta_{\mathrm{diag}})$;
+  \item globally, the only remaining ambiguity of visible continuation is determined by the parity obstruction package $(\varepsilon_{\mathrm{par}},\chi_{\mathrm{par}},\widehat\chi_{\mathrm{par}})$;
+  \item no further independent visible branch datum beyond $\eta$ is required to reconstruct the 3.4 readout sector.
+\end{enumerate}
+Equivalently, the stabilized visible branch layer of the Companion is already in reconstruction normal form once it is expressed through $\mathfrak R(B)$.
+\end{theorem}
+
+\begin{proof}
+Theorem~\ref{thm:mainline-3420} identifies the complete 3.4 handoff package and states that no further independent local scalar is opened by the 3.4 construction. Its item~(i) reduces the local visible residual dynamics to the generator $\Phi$, while item~(ii) reduces the calibrated inverse shell readout to chartwise shell data $(s,\pi)$ together with the shell-consistency defect. Items~(iii) and~(iv) show that the only remaining global ambiguity is the parity obstruction package and that its operational loop readout is completely captured by $\chi_{\mathrm{par}}$ and $\widehat\chi_{\mathrm{par}}$. Therefore every visible statement proved in the stabilized 3.4 sector factors through the single record $\mathfrak R(B)$ together with chartwise shell coordinates, and no new visible branch datum beyond $\eta$ is needed.
+\end{proof}
+
+\begin{corollary}[3.5 starting principle: record-level compression]
+\label{cor:mainline-3500}
+For the first simplification stage of v\docversion, proofs and comparisons may treat $\mathfrak R(B)$ as the complete visible residual interface. In particular, any later compact formal layer that is introduced for proof economy must remain faithful to the reconstruction normal form determined by $\mathfrak R(B)$.
+\end{corollary}
+
+\begin{proof}
+This is a direct restatement of Theorem~\ref{thm:mainline-3500}. Once the visible branch layer has been compressed to $\mathfrak R(B)$, any further simplification may only reorganize or repackage these same data, not enlarge the visible branch interface by adding new primitive observables.
+\end{proof}
+
+\paragraph{3.5 opening remark.}
+The transition from 3.4 to 3.5 is therefore a change of stance rather than a new visible mechanism. Instead of extending the branch picture by more local refinements, the document now treats the residual generator, the inverse shell atlas, and the parity holonomy package as one admissible record. This is the first point at which later proof-economy work can aim at genuine compression instead of further accumulation.
+
 \section*{Historical Open Questions}
 \addcontentsline{toc}{section}{Historical Open Questions}
 \begin{enumerate}
@@ -16881,10 +16829,10 @@ Let $s_\ast$ be an isolated obstruction shell. If $s_\ast$ is a nondegenerate ca
 A nondegenerate critical shell of a one-dimensional smooth map is locally a fold, so the inverse consists of exactly two sheets exchanged by the local deck involution. A pure parity shell leaves the scalar calibration regular and therefore does not affect the shell coordinate, but it does flip the transported sign class by definition. Since one operation acts on the shell coordinate and the other on parity, the mixed case is their commuting composition.
 \end{proof}
 
-\paragraph{3.4.14 interpretation.}
+\paragraph{3.4.14 working interpretation.}
 The obstruction shells are therefore organized rather than chaotic. Each isolated obstruction contributes only one of two primitive involutions---fold exchange or parity flip---and every local continuation across the inverse-readout atlas is built from these same $\mathbb Z_2$ pieces. This makes the spinorial/M\"obius branch no longer just a visual metaphor at the image layer, but the explicit parity part of the local obstruction monodromy.
 
-\paragraph{3.4.12 interpretation.}
+\paragraph{3.4.12 working interpretation.}
 The inverse-readout block now has a local stability test. Once the calibration slope on a shell interval is known to stay away from zero, tunnel width ceases to be a merely qualitative marker and becomes a controlled coordinate for the shell radius. The remaining local obstruction is discrete---the parity branch---together with the obvious continuous failure mode at critical points of the calibration law.
 
 \subsection*{C.12 Thirteenth 3.4 extension: shell atlas and obstruction support}
@@ -16905,42 +16853,42 @@ Then every connected component of $I\setminus(\Sigma_{\mathrm{crit}}\cup\Sigma_{
 Outside $\Sigma_{\mathrm{par}}$ the parity class is fixed. Outside $\Sigma_{\mathrm{crit}}$, the derivative of $W_\tau$ never vanishes and therefore keeps a constant sign on each connected component, so the calibration map is strictly monotone there. Compactness then upgrades the local inverse estimate to a uniform chartwise estimate. The shell-consistency defect is therefore an internal observable on such a chart, and only the two obstruction sets can destroy the chart itself.
 \end{proof}
 
-\paragraph{3.4.13 interpretation.}
+\paragraph{3.4.13 working interpretation.}
 The inverse detector-style layer is now stratified. Stable readout happens chart by chart, with sharp obstruction shells where either the calibration slope collapses or the transported parity changes. This gives a clean separation between chart-internal mismatch and genuine breakdown of inverse control.
 
-\paragraph{3.4.11 interpretation.}
+\paragraph{3.4.11 working interpretation.}
 The diagnostic image can therefore be treated as a small inverse instrument. After threshold calibration, tunnel width and shell parity recover the local generator shell and predict the remaining edge/opening readouts. The natural residual mismatch is then measured by the shell-consistency defect $\Delta_{\mathrm{diag}}$, which quantifies how well the image closes back to the same shell/parity model.
 
-\paragraph{3.4.10 interpretation.}
+\paragraph{3.4.10 working interpretation.}
 The image layer is therefore now coupled back into the mathematics in a controlled way: the diagnostic render may be discussed through tunnel width, edge intensification, and opening angle without pretending that visual similarity alone proves a detector interpretation. This keeps the observational hypothesis testable while preserving the structure-first discipline.
 
-\paragraph{3.4.8 interpretation.}
+\paragraph{3.4.8 working interpretation.}
 The shell classifier can therefore be read as a parity law. Once the generator radius $s(E)$ is fixed, the only remaining local ambiguity is whether the admissible shell cycle returns with the same sign or with reversed sign. Under a shell decomposition into regular segments and transverse reflector crossings, this becomes an explicit even/odd criterion. The accompanying M\"obius-reflected diagnostic render is not used as a proof of the residual scalar; it is included only to make the stable-kernel / branch-frontier split visible at the level of the current probe geometry.
 
 
-\paragraph{3.4.9 cautious hypothesis.}
+\paragraph{3.4.9 working hypothesis.}
 The current diagnostic render also motivates a cautious readout hypothesis. Because the plot was not tuned to detector imagery, its visual similarity to some detector-like photon displays should not be dismissed as a mere decorative analogy, but it should likewise not be elevated to an identification claim. Within the standing phase-shift / frame-shift reading, the safer interpretation is that detector images may display readout-relative shadows of the same branch-sensitive residual geometry. This can be tested at the level of tunnel width, opening angle, boundary intensification, and shell-parity response, without assuming that the diagnostic probe already reproduces a full detector event.
 
-\paragraph{3.4.7 interpretation.}
+\paragraph{3.4.7 working interpretation.}
 The analytic generator now also controls the probe decision itself. On every sufficiently small regular shell, the energy first collapses to a unique generator radius $s(E)$, and the visible branch data then reduces to the transported sign pair $\pm\sqrt{s(E)}$. The direct-convergence versus spinorial/M\"obius-lift dichotomy is therefore the $\mathbb Z_2$ shell classifier of the same generator family rather than an additional independent mechanism.
 
-\paragraph{3.4.6 interpretation.}
+\paragraph{3.4.6 working interpretation.}
 The even hierarchy is therefore no longer just a ladder of separate coefficients. Once the transported closure germ is analytic, the visible branch law is packaged by a single local generator $\Phi(\eta^2)$. The quartic shell, the delayed higher timing drifts, and the turning-value corrections then become coordinated readouts of one canonical germ rather than separate nonlinear sectors.
 
-\paragraph{3.4.5 interpretation.}
+\paragraph{3.4.5 working interpretation.}
 The higher nonlinear hierarchy is therefore already strongly constrained: once the quartic channel disappears, the next visible correction cannot re-enter arbitrarily, but only through the first surviving even closure coefficient. Operationally, the probe remains isochronous through all lower orders and only begins to drift at the exact order at which the closure hierarchy itself reopens.
 
-\paragraph{3.4.4 interpretation.}
+\paragraph{3.4.4 working interpretation.}
 The quartic correction is therefore not only structurally present; it is already operationally visible. The first failure of exact isochrony on a regular periodic shell is controlled by the same closure coefficient $c_4$ that generates the quartic branch correction. The probe may therefore read the same admissible shell through energy, through its unique positive turning value, or through its first nonlinear period drift, without opening a new scalar channel.
 
 
-\paragraph{3.4.3 interpretation.}
+\paragraph{3.4.3 working interpretation.}
 The nonlinear visible coefficient is therefore no longer free: once the exact branch potential is the transported readout of the same closure geometry, the quartic branch coefficient $\lambda$ is simply the positive transport of the closure coefficient $c_4$. The regular shell can then be indexed either by its energy $E$ or by its unique positive turning value $A(E)$, while the nonlinear strength itself is already fixed by the closure side.
 
-\paragraph{3.4.2 interpretation.}
+\paragraph{3.4.2 working interpretation.}
 The first concrete nonlinear model is therefore already visible: once the admissible branch closes to a one-field exact potential and no additional scalar opens at first nonlinear order, the restoring branch law falls into the quartic reversible family. The global probe can then read the same admissible shell either as an energy level or as a unique positive turning value, while the residual ambiguity remains exhausted by the transported $\mathbb Z_2$ pair.
 
-\paragraph{3.4 interpretation.}
+\paragraph{3.4 working interpretation.}
 The first move toward 3.4 is therefore not a proliferation of new local lemmas, but a globalization principle: once the reduced branch equation is exact, the restoring branch law becomes a one-dimensional potential dynamics, and the reversal probe becomes an energy-component test for direct closure versus spinorial lift.
 
 \paragraph{Condensed 3.3 status.}
@@ -16986,9 +16934,47 @@ v3.3.4 & local editorial-clean state & 2026-04-03 & global editorial cleanup: re
 \hline
 v3.3.5 & Zenodo release & 2026-04-03 & \href{https://doi.org/10.5281/zenodo.19396143}{10.5281/zenodo.19396143} --- strict wording cleanup: aligned version metadata, removed residual status-weakening phrasing in the 3.3 line, normalized the current-version record, and finalized the 3.3.5 release package \\
 \hline
-v3.4.0 & Zenodo release & 2026-04-03 & \href{https://doi.org/10.5281/zenodo.19410949}{10.5281/zenodo.19410949} --- consolidated 3.4 release: organizes the residual branch law by the generator--atlas--holonomy package $(\Phi,\Delta_{\mathrm{diag}},\varepsilon_{\mathrm{par}},\chi_{\mathrm{par}},\widehat\chi_{\mathrm{par}})$ and includes the calibrated inverse shell readout, parity obstruction, and loop-based parity estimator \\
+v3.4.0 & Zenodo release & 2026-04-04 & \href{https://doi.org/10.5281/zenodo.19410949}{10.5281/zenodo.19410949} --- consolidated the post-3.3 development into the generator-based branch framework, inverse shell atlas, parity obstruction sector, and diagnostic Julia-type probe package \\
 \hline
-v3.4.x & internal pre-release working chain & 2026-04-03 & internal 3.4 development steps (3.4.1--3.4.20), consolidated into the present public v3.4.0 release and therefore not released separately on Zenodo \\
+v3.4.1 & local working extension & 2026-04-03 & constrained the exact branch potential to the reversible single-well class and reduced the global scalar ambiguity to the transported $\mathbb Z_2$ pair \\
+\hline
+v3.4.2 & local working extension & 2026-04-03 & extracted the canonical quartic one-field family for the visible residual branch law and added turning-value parameterization of regular probe shells \\
+\hline
+v3.4.3 & local working extension & 2026-04-03 & tied the visible quartic branch coefficient to the transported quartic closure coefficient and replaced the technical turning-amplitude label by turning value \\
+\hline
+v3.4.4 & local working extension & 2026-04-03 & added the first nonlinear period-drift readout, showing that the timing defect on regular periodic shells is already fixed by the same quartic closure coefficient \\
+\hline
+v3.4.5 & local working extension & 2026-04-03 & extended the quartic readout to the full even hierarchy, proving that the first higher timing defect appears exactly at the order of the first surviving even closure coefficient \\
+\hline
+v3.4.6 & local working extension & 2026-04-03 & repackaged the transported even hierarchy into a single analytic generator $\Phi(\eta^2)$ for the visible branch potential and its nonlinear shell readouts \\
+\hline
+v3.4.7 & local working extension & 2026-04-03 & generator-shell probe classifier: small regular shells reduced to the generator radius $s(E)=\Phi^{-1}(E)$ and the transported sign pair $\pm\sqrt{s(E)}$ \\
+\hline
+v3.4.8 & local working extension & 2026-04-03 & shell-parity criterion: direct convergence versus spinorial/M\"obius lift determined by the even/odd reflector-crossing parity on sufficiently small regular shells; added first diagnostic Julia-type appendix render \\
+\hline
+v3.4.9 & local working extension & 2026-04-03 & added cautious frame-shifted detector-readout hypothesis for the diagnostic Julia/probe geometry, together with explicit candidate observables for later comparison work \\
+\hline
+v3.4.10 & local working extension & 2026-04-03 & converted the detector-readout hypothesis into a quantitative tunnel-observable interface: tunnel width, edge intensification, opening angle, and shell parity are now organized as a minimal diagnostic comparison package \\
+\hline
+v3.4.11 & local working extension & 2026-04-03 & added a calibrated inverse-readout theorem: tunnel width plus shell parity now recover the local shell radius, while edge intensification and opening angle become shell-consistency checks measured by $\Delta_{\mathrm{diag}}$ \\
+\hline
+v3.4.12 & local working extension & 2026-04-03 & added a local inverse identifiability/stability theorem: the calibrated tunnel-width law now carries a shell-wise stability margin and inverse condition number, so shell reconstruction is controlled whenever the calibration slope stays away from zero \\
+\hline
+v3.4.13 & local working extension & 2026-04-03 & organized the inverse readout globally into a shell atlas stratified by calibration-critical shells and parity-switch shells, so stable inversion now proceeds chart by chart away from the obstruction set \\
+\hline
+v3.4.14 & local working extension & 2026-04-03 & added an obstruction-shell transition law: isolated obstructions now carry only fold exchange, parity flip, or their composition, giving the inverse-readout layer a small $\mathbb Z_2$ transition algebra and local obstruction monodromy \\
+\hline
+v3.4.15 & local working extension & 2026-04-03 & organized the obstruction transitions into a global Klein-four transition cocycle on the shell atlas and showed that, after fold resolution, the remaining monodromy reduces to the parity local system underlying the spinorial/M\"obius lift \\
+\hline
+v3.4.16 & local working extension & 2026-04-03 & promoted the parity local system to a global double-cover criterion: direct visible convergence is globally available exactly when the parity class trivializes, while every nontrivial case becomes globally single-valued on the canonical parity double cover \\
+\hline
+v3.4.17 & local working extension & 2026-04-03 & recast the residual parity sector as a genuine cohomological obstruction class in $H^1(B,\mathbb Z_2)$, identifying direct visible convergence with the vanishing class and the canonical parity double cover with its associated classifying two-sheeted cover \\
+\hline
+v3.4.18 & local working extension & 2026-04-03 & promoted the parity obstruction to an operational global holonomy/readout character: admissible closed shell paths now evaluate the class $\varepsilon_{\mathrm{par}}$ directly, so direct visible return versus spinorial/M\"obius lift is read as a $\mathbb Z_2$ loop outcome factoring through mod-two homology \\
+v3.4.19 & local working extension & 2026-04-03 & turned the parity holonomy character into an empirical loop-readout estimator: chartwise parity-jump counting across admissible obstruction shells now recovers the cohomological $\mathbb Z_2$ holonomy, giving a detector-side loop test for direct visible return versus spinorial/M\"obius lift \\
+v3.4.20 & local closing state & 2026-04-03 & clean 3.4 closure: compressed the full extension line into a single generator-atlas-holonomy synthesis theorem, identified the minimal handoff package $(\Phi,\Delta_{\mathrm{diag}},\varepsilon_{\mathrm{par}},\chi_{\mathrm{par}},\widehat\chi_{\mathrm{par}})$, and marked the end of the 3.4 build-up before the next-stage simplification work \\
+\hline
+v3.5.0 & Zenodo release & 2026-04-04 & \href{https://doi.org/10.5281/zenodo.19411671}{10.5281/zenodo.19411671} --- first record-level compression step beyond the closed 3.4 line: packaged the visible residual sector into the admissible record $\mathfrak R(B)=(\Phi,\Delta_{\mathrm{diag}},\varepsilon_{\mathrm{par}},\chi_{\mathrm{par}},\widehat\chi_{\mathrm{par}})$ and established it as the faithful interface for comparison, reconstruction, and later proof compression \\
 \hline
 v0.1.0 & Zenodo release & 2026-03-24 & \href{https://doi.org/10.5281/zenodo.19210729}{10.5281/zenodo.19210729} \\
 \hline
@@ -17369,7 +17355,7 @@ Every admissible overlap arises from continuation across finitely many isolated 
 On triple overlaps, composing continuation maps in two stages or one stage leads to the same inverse shell identification, because both are obtained by following the same continuation class through the same finite obstruction data. Hence the cocycle relation holds. Resolving fold exchange by adjoining the local inverse-sheet label kills the fold generator on the lifted data, leaving only the parity component, which is exactly the quotient to $\mathbb Z_2^{\mathrm{par}}$.
 \end{proof}
 
-\paragraph{3.4.15 interpretation.}
+\paragraph{3.4.15 working interpretation.}
 The inverse-readout atlas is therefore not just stratified; it is glued by a tiny and completely explicit transition law. Before fold resolution, the global bookkeeping lives in a Klein-four transition cocycle. After fold resolution, the only surviving topological memory is the parity lift. This is the most economical global form of the spinorial/M"obius mechanism obtained so far.
 
 
@@ -17666,7 +17652,7 @@ Let $B$ be a connected admissible shell base and let $\mathcal L_{\mathrm{par}}$
 The parity local system is a locally constant $\mathbb Z_2$-bundle over $B$. Its monodromy representation sends every admissible closed continuation class to either the trivial or nontrivial parity action. The associated kernel subgroup therefore defines a connected index-two cover $p:\widetilde B\to B$, unique up to canonical isomorphism. By construction, loops lifted to $\widetilde B$ lie in the kernel of the parity monodromy, so the pulled-back local system has trivial transport. If another connected cover trivializes the same monodromy, its deck group must also kill that kernel and therefore factor through the index-two quotient defining $\widetilde B$.
 \end{proof}
 
-\paragraph{3.4.16 interpretation.}
+\paragraph{3.4.16 working interpretation.}
 The parity sector has now reached its cleanest possible global form. The shell atlas first produced local obstruction types, then a Klein-four transition cocycle, then a reduced parity local system, and now finally the canonical object that removes the remaining obstruction: the parity double cover. Once lifted to that cover, the inverse-readout branch is globally single-valued again. This is the sharpest mathematical version so far of the statement that the visible spinorial/M"obius branch is a double-cover phenomenon rather than a decorative metaphor.
 
 
@@ -17686,7 +17672,7 @@ classifies the parity local system and its associated connected two-sheeted cove
 Because the post-fold transition functions take values in the constant group $\mathbb Z_2$, they define a \v{C}ech $1$-cocycle. Two admissible atlases related by refinement or change of parity frame produce cohomologous cocycles, so the resulting class in $H^1(B,\mathbb Z_2)$ is intrinsic. Standard classification of principal $\mathbb Z_2$-bundles over $B$ identifies this cohomology class with the isomorphism class of the parity local system. The associated connected two-sheeted cover is the cover classified by the same class and is exactly the parity double cover constructed in Theorem~\ref{thm:appendix-3416}.
 \end{proof}
 
-\paragraph{3.4.17 interpretation.}
+\paragraph{3.4.17 working interpretation.}
 The remaining global defect has now been compressed to its sharpest invariant. What previously appeared as parity flips, spinorial lift behavior, and double-cover repair is encoded by one class in $H^1(B,\mathbb Z_2)$. This does not change the mechanism; it shows that the mechanism is already as small as it can be.
 
 
@@ -17706,7 +17692,7 @@ Then the monodromy representation of $\mathcal L_{\mathrm{par}}$ is exactly the 
 A locally constant $\mathbb Z_2$-bundle on $B$ has monodromy in the discrete group $\mathbb Z_2$, hence a homomorphism from $\pi_1(B,b_0)$ to $\mathbb Z_2$. By Theorem~\ref{thm:appendix-3417}, the same local system is classified by the cocycle class $\varepsilon_{\mathrm{par}}\in H^1(B,\mathbb Z_2)$. Under the standard identification of $H^1(B,\mathbb Z_2)$ with homomorphisms out of mod-two $1$-cycles, the monodromy around a loop is given by evaluation of $\varepsilon_{\mathrm{par}}$ on its mod-two homology class. The lifted double cover from Theorem~\ref{thm:appendix-3416} trivializes the parity transport, so the loops in the kernel are exactly those whose lifted continuation closes directly on the cover.
 \end{proof}
 
-\paragraph{3.4.18 interpretation.}
+\paragraph{3.4.18 working interpretation.}
 The cohomological class now has a direct operational meaning. It is not only something that classifies the parity defect abstractly; it can be evaluated on a closed admissible shell path and returns a two-valued global outcome. This is the cleanest bridge so far between the atlas/cohomology side and the actual readout side.
 
 
@@ -17723,7 +17709,7 @@ Let $\gamma$ be an admissible closed shell path decomposed into stable chart arc
 Each local obstruction crossing carries one of the four transition types from Theorem~\ref{thm:mainline-3414}. Passing to the post-fold parity local system collapses the fold component and retains only whether the crossing changes the residual parity label. Therefore the transported parity label after traversing the full loop is obtained by multiplying the local $\mathbb Z_2$ transition factors, which in additive notation is exactly the mod-two sum of the local parity-change indicators $\delta_k$. This product is the monodromy of the parity local system along the loop. By Theorem~\ref{thm:appendix-3418}, that monodromy is also the evaluation of $\varepsilon_{\mathrm{par}}$ on the mod-two homology class of $\gamma$.
 \end{proof}
 
-\paragraph{3.4.19 interpretation.}
+\paragraph{3.4.19 working interpretation.}
 The parity obstruction can now be read directly from a calibrated shell trace. Once the trace has been decomposed into admissible chart arcs, the full global lift defect collapses to a mod-two count of parity-changing transitions. This is the first point at which the global cohomological obstruction becomes an explicit detector-side or probe-side measurement rule.
 
 
@@ -17743,8 +17729,28 @@ with branch variable $\eta$, in the sense that every local regular shell observa
 Theorem~\ref{thm:mainline-346} reduces the visible branch dynamics to the analytic generator $\Phi(\eta^2)$, and Theorems~\ref{thm:appendix-3411}--\ref{thm:appendix-3413} show that calibrated shell inversion away from the obstruction set is entirely controlled by the shell coordinate and parity label, with $\Delta_{\mathrm{diag}}$ measuring chartwise mismatch. Theorems~\ref{thm:appendix-3415}--\ref{thm:appendix-3418} then compress the remaining global ambiguity to the parity local system, its cohomological class, and its holonomy character. Finally, Theorem~\ref{thm:appendix-3419} identifies the empirical estimator with this same holonomy class along admissible closed traces. Hence the listed package captures the entire visible 3.4 layer.
 \end{proof}
 
-\paragraph{3.4.20 interpretation.}
+\paragraph{3.4.20 working interpretation.}
 The 3.4 material is now closed as a single generator-atlas-holonomy block. Local residual dynamics is carried by the one-field generator, local diagnostic mismatch is measured by $\Delta_{\mathrm{diag}}$, and the only global leftover is the parity obstruction class with its loop readout. This is the natural handoff point for the next stage.
+
+
+\subsection*{C.20 First 3.5 extension: residual-record support}
+\addcontentsline{toc}{subsection}{C.20 First 3.5 extension: residual-record support}
+
+\begin{theorem}[Appendix support for Theorem~\ref{thm:mainline-3500}]
+\label{thm:appendix-3500}
+Let $B$ be a connected admissible shell base satisfying the stabilized 3.4 hypotheses. Then the visible branch layer admits a faithful record description by
+\[
+  \mathfrak R(B)=\bigl(\Phi,\Delta_{\mathrm{diag}},\varepsilon_{\mathrm{par}},\chi_{\mathrm{par}},\widehat\chi_{\mathrm{par}}\bigr),
+\]
+in the sense that every chartwise regular-shell observable and every global parity-readout statement in the stabilized 3.4 sector is recoverable from this record together with the chartwise shell coordinate and parity label.
+\end{theorem}
+
+\begin{proof}
+Theorem~\ref{thm:appendix-3420} already proves that the full stabilized 3.4 line factors through the same five visible data together with the shell atlas away from the obstruction set. The generator $\Phi$ determines the local branch law, the inverse shell charts determine the regular-shell coordinate and parity label, $\Delta_{\mathrm{diag}}$ measures chartwise diagnostic mismatch, and the parity package records the only remaining global ambiguity together with its operational loop estimator. Therefore the visible branch layer is faithfully encoded by the record $\mathfrak R(B)$, and the only extra ingredients needed for local reconstruction are the chartwise shell coordinate and parity label already present in the inverse atlas.
+\end{proof}
+
+\paragraph{3.5.0 release interpretation.}
+The first simplification step does not yet introduce a new formal language. It only observes that the visible branch layer has already closed enough to be handled as a single admissible record. This is exactly the right level of compression before any later language-level or proof-economy layer is introduced.
 
 \subsection*{Bibliography}
 
@@ -17768,9 +17774,9 @@ Zenodo, March 2026.
 
 \bibitem{brendecke2026sphaera}
 Marc Brendecke,
-\emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding} (v3.4.0),
+\emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding} (v3.5.0),
 April 2026.
-\newblock Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}; version DOI: \href{https://doi.org/10.5281/zenodo.19410949}{10.5281/zenodo.19410949}. 
+\newblock Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}; version DOI: \href{https://doi.org/10.5281/zenodo.19411671}{10.5281/zenodo.19411671}. 
 
 \bibitem{kim2026}
 Yilwook Kim,
