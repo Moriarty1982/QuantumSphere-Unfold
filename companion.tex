@@ -38,7 +38,7 @@
 \newtheorem{axiom}{Axiom}
 
 % --- Document metadata ---
-\newcommand{\docversion}{3.12.0}
+\newcommand{\docversion}{3.13.0}
 \newcommand{\docdate}{\DTMdisplaydate{2026}{04}{07}{-1}}
 
 % --- Macros ---
@@ -74,7 +74,7 @@
 \thispagestyle{fancy}
 \begin{center}
 \fbox{\begin{minipage}{0.92\textwidth}
-\small\textbf{Companion status.} This document is the mathematical companion to the current main Quantum Sphaera paper~\cite{brendecke2026main}. It expands and hardens derivations, tools, and structural proof interfaces, but it does not replace the main paper as the leading structural text. The present text is the public v3.12.0 Zenodo release, developed from the public v3.11.0 line. Its active focus is the structural closure of the OP~1/OP~5 source-return pair, the branchwise refinement of that closed pair, and the separation between admissible routed support and closure-breaking residual support within the readout layer.
+\small\textbf{Companion status.} This document is the mathematical companion to the current main Quantum Sphaera paper~\cite{brendecke2026main}. It expands and hardens derivations, tools, and structural proof interfaces, but it does not replace the main paper as the leading structural text. The present text is the public Zenodo release v3.13.0, developed from the public v3.12.0 line. Its active focus is the structural closure of the OP~1/OP~5 source-return pair, the branchwise refinement of that closed pair, and the separation between admissible routed support and closure-breaking residual support within the readout layer.
 \end{minipage}}
 \end{center}
 \vspace{0.6em}
@@ -87,7 +87,7 @@ q_n = it\cdot\mathbf{1} + z_1 e_1 + z_2 e_2 + z_3 e_3
 \]
 with Minkowski norm $|q_n|^2=\tau_n^2$ invariant under admissible frame changes. The Heisenberg compensator is identified as the spectral projector onto the closure-stable sector, while the phase-shifted observer shell $\zminus=+\bsym\approx 0.5493$ explains why physical readout occurs away from the photon ground shell and therefore carries systematic $\gL^k$ corrections.
 
-Version~\docversion\ is the public Zenodo release that advances the v3.11.0 Companion line. The post-3.3 development is treated through a generator-based residual formalism. The visible residual layer is controlled by a single scalar $\eta$ and an even generator $\Phi(\eta^2)$, from which the branch dynamics, inverse shell atlas, shell-consistency defect $\Delta_{\mathrm{diag}}$, and the parity-sensitive readout sector are organized. In the present release, the OP~1/OP~5 line is sharpened into an explicit source-return closure theorem: OP~1 is read as the inflow-side source readout of a fixed route, OP~5 as the reversal-stable return readout of the same route, and closure is decided through preservation of a native closure carrier class under two-pass transport. Direct visible closure and spinorial/Mobius-type lift behavior are thereby distinguished by one global $\mathbb{Z}_2$ obstruction class
+Version~\docversion\ is the public Zenodo successor to the public v3.12.0 Companion line. The post-3.3 development is treated through a generator-based residual formalism. The visible residual layer is controlled by a single scalar $\eta$ and an even generator $\Phi(\eta^2)$, from which the branch dynamics, inverse shell atlas, shell-consistency defect $\Delta_{\mathrm{diag}}$, and the parity-sensitive readout sector are organized. In the present release, the OP~1/OP~5 line is sharpened into an explicit source-return closure theorem: OP~1 is read as the inflow-side source readout of a fixed route, OP~5 as the reversal-stable return readout of the same route, and closure is decided through preservation of a native closure carrier class under two-pass transport. Direct visible closure and spinorial/Mobius-type lift behavior are thereby distinguished by one global $\mathbb{Z}_2$ obstruction class
 \[
 \varepsilon_{\mathrm{par}}\in H^1(B,\mathbb{Z}_2),
 \]
@@ -109,15 +109,15 @@ which serves as a faithful interface for comparison, reconstruction, and conserv
 This working continuation proceeds directly from the abstract and contents to the nomenclature.
 Preserved release-roadmap notes, checkpoint transitions, and earlier front-matter control blocks remain part of the document, but they have been moved out of the opening sequence into a historical appendix block near the back so that the public reading path starts with terminology and mathematics rather than local version genealogy.
 
-\section*{Release orientation for v3.12.0}
-\addcontentsline{toc}{section}{Release orientation for v3.12.0}
-The present v\docversion\ public release uses the public v3.11.0 release as baseline and records the OP~1/OP~5 closure hardening carried out after that release. It serves as the deposited public v3.12.0 step, with the following release priorities:
+\section*{Release orientation for v3.13.0}
+\addcontentsline{toc}{section}{Release orientation for v3.13.0}
+The present v\docversion\ public release uses the public v3.12.0 release as baseline and records the post-release OP cleanup, cross-reference stabilization, and integration work carried out after that release. It serves as the current public checkpoint, with the following release priorities:
 \begin{enumerate}[leftmargin=2em]
   \item \textbf{Stabilize the front and release architecture.} Keep the public reading path clean: terminology and mathematics first, historical release material retained only as appendix support.
-  \item \textbf{Push OP~5 from diagnostics to branch closure.} Build on the newly closed OP~1/OP~5 source-return pair and compress the current packet, phase-lock, and epsilon-trap analysis into a cleaner admissible-branch theorem.
-  \item \textbf{Re-tighten OP~1 on the transport side.} Keep the transported-branch reading explicit, align it with the closed source-return route, and reduce the remaining burden to the discrete correction channel without reopening already stabilized continuum structure.
-  \item \textbf{Extract reusable tools.} Gather the transport-first, readout-after-transport, checkpoint-absorption, and epsilon-trap principles as named tools with clear scope so later proof blocks depend on tools rather than patch history.
-  \item \textbf{Record the public v3.12.0 Zenodo release.} The present public step reduces local patch narratives, narrows the genuinely live residual channels, and presents a more visibly unified proof route from structure to readout.
+  \item \textbf{Promote branch closure on top of the established OP source-return core.} The OP~1/OP~5 source-return pair is now treated as an established closure theorem. The next active task is to compress the current packet, phase-lock, and epsilon-trap analysis into a cleaner admissible-branch theorem built on that closed pair.
+  \item \textbf{Refine the transported OP~1 side without reopening closure.} Keep the transported-branch reading explicit, align it with the closed source-return route, and reduce the remaining burden to the discrete correction channel without reopening already stabilized continuum structure.
+  \item \textbf{Normalize the extracted tools.} Gather the transport-first, readout-after-transport, checkpoint-absorption, epsilon-trap, and OP-derived structural principles as named tools with clear scope so later proof blocks depend on tools rather than patch history.
+  \item \textbf{Record the present public v3.13.0 Zenodo step.} The present public release consolidates the OP transport closure architecture after the public v3.12.0 release, reduces local patch narratives, and presents a more visibly unified proof route from structure to readout. Its version-specific DOI is \href{https://doi.org/10.5281/zenodo.19446872}{10.5281/zenodo.19446872}.
 \end{enumerate}
 
 \section*{Nomenclature}
@@ -204,9 +204,12 @@ The present v\docversion\ public release uses the public v3.11.0 release as base
 
 \clearpage
 
-\section*{Current tool layer and live open cores}
-\addcontentsline{toc}{section}{Current tool layer and live open cores}
-This working block records the current reusable tool layer in one place and states, without patch-language, where the live burdens of OP~1 and OP~5 still remain. The purpose is to let later proof blocks cite a small number of named moves rather than repeatedly re-derive the same routing logic.
+\section*{Historical tool layer and pre-closure live cores}
+\addcontentsline{toc}{section}{Historical tool layer and pre-closure live cores}
+\begin{remark}
+This block is retained as a historical record of the last pre-closure burden analysis. In the present release, its role is no longer to state the current live proof core, but to document the diagnostic compression stage from which the OP transport theorem and the OP3 residual/shell interface were extracted.
+\end{remark}
+This historical block collects the reusable tool layer that was available before the OP~1/OP~5 transport closure was hardened in theorem form. Its purpose is to preserve the compression logic from which the current named tools were derived, without treating the remaining burdens recorded here as the active proof core of the document.
 
 \subsection*{Current extracted tool layer}
 \begin{description}[leftmargin=2.2em, labelindent=0pt, itemsep=0.5em]
@@ -231,7 +234,7 @@ This working block records the current reusable tool layer in one place and stat
     \sup_{|b-\beta_{\mathrm{br}}|\le \varepsilon_{\mathrm{br}}}\bigl|\partial_b T_{\gamma_{\mathrm{br}}}(b)\bigr|\le L_{\mathrm{br}}<1,
   \]
   then entry into that tube implies non-escape and convergence to the same bridge fixed point. In particular, once the normalization defect is shown to lie inside a contractive \(\varepsilon\)-tube around \(\gamma_{\mathrm{br}}\), OP~1 becomes a local fixed-point identification problem rather than a second branch-search problem.
-  \\item[Shared matrix-leakage tool.] Let \(J\) denote the Umkehrwalze/involution, let \(C:=\tfrac12(\mathrm{id}+J)\) be the HC readout projector, and let \(\mathcal M\) denote the Millennium matrix on the active grouped transport layer. The first shared obstruction channel for OP~1 and OP~5 should be tested through the two leakage diagnostics
+  \item[Shared matrix-leakage tool.] Let \(J\) denote the Umkehrwalze/involution, let \(C:=\tfrac12(\mathrm{id}+J)\) be the HC readout projector, and let \(\mathcal M\) denote the Millennium matrix on the active grouped transport layer. The first shared obstruction channel for OP~1 and OP~5 should be tested through the two leakage diagnostics
   \[
     E_{\mathrm{comm}}:=[\mathcal M,J],
     \qquad
@@ -250,7 +253,7 @@ This working block records the current reusable tool layer in one place and stat
   This family leaves the pure even/even and odd/odd blocks untouched to first order and perturbs only the admissible/complementary coupling. It is therefore the preferred one-parameter probe for deciding whether OP~1 and OP~5 really see the same hidden leakage mode.
 \end{description}
 
-\subsection*{Where OP~1 and OP~5 still hang}
+\subsection*{Historical live-burden record prior to OP transport closure}
 \paragraph{OP~1.}
 Under the synchronized 3.8/3.9/3.10 reading, OP~1 no longer hangs at the continuum candidate itself, nor at the existence of a visible root window, nor even at local bridge entry. The continuum transport branch is already fixed, the rounded matter-frame readout already enters the local contractive bridge tube, and the admissible-readout uniqueness logic removes the former identification burden \(b_{\mathrm{can}}=b_{\mathrm{MF}}\). At theorem level, OP~1 has therefore been compressed to one explicit local scalar remainder only: the bridge residue of the standard readout inside the distinguished tube. In plain language: the live burden is no longer a second normalization search, but only the exact vanishing of the already isolated local bridge defect for the unique admissible readout.''
 
@@ -3828,7 +3831,7 @@ available.
 
 \begin{remark}[Normalization note for v1.7.0]
 \label{rem:normalization-note-v170}
-This synthesis block is retained as a historical transport precursor. Its closure--projection synthesis is now carried proof-theoretically by Phase~II-D, Phase~II-E, and Phase~II-F; here it should be read as an earlier integrative summary rather than as an independent axiomatic center.
+In the present release, the mathematical content of this synthesis layer is subsumed by the OP transport theorem and the OP3 residual/shell interface. The block is retained as historical compression logic and interpretive guidance. This synthesis block is therefore kept as a historical transport precursor: its closure--projection synthesis is now carried proof-theoretically by Phase~II-D, Phase~II-E, and Phase~II-F, and here it should be read as an earlier integrative summary rather than as an independent axiomatic center.
 \end{remark}
 
 This release adds a further synthesis layer between the closure blocks already
@@ -4845,7 +4848,7 @@ the allowed sector-preserving, unitary, and frame transformations, while
 the effective regimes differ by compensator decomposition, large-scale
 suppression of closure fluctuations, and geometric readout. Thus one and
 the same kernel may generate visibly different but structurally
-compatible statements.
+compatible statements. In the present release this distinction should be read together with the OP transport theorem and the visible/structural mismatch separation tool: visible disagreement is secondary unless native closure-class preservation itself fails.
 
 \begin{proposition}[Legitimacy of restricted lemmas]
 \label{prop:legitimacy-restricted-lemmas}
@@ -5268,8 +5271,11 @@ Under the above assumptions, the following statements hold.
   \item \textbf{HC as curvature.}
   The compensator $\mathcal{H}_C$ acts as curvature of the readout
   bundle, governing deviations of trajectories, phase shifts, and
-  failure of closure. This is the geometric realization of
-  Corollary~\ref{cor:M-HC-fixpoint}: $\mathcal{M}C = \lambda_0 C$
+  apparent failure of closure at the visible trajectory level. In the
+  present release such failure must first be tested through native
+  closure-class preservation and the OP transport theorem rather than
+  inferred from raw trajectory separation alone. This is the geometric
+  realization of Corollary~\ref{cor:M-HC-fixpoint}: $\mathcal{M}C = \lambda_0 C$
   fixes the compensator as the structural curvature anchor.
 
   \item \textbf{Projective vanishing.}
@@ -9460,7 +9466,7 @@ such that
 \end{enumerate}
 \end{assumption}
 
-\begin{theorem}[Closure of the OP~1--OP~5 pair]
+\begin{theorem}[Closure of the OP~1--OP~5 pair]\label{thm:op15-closure}
 Under the native OP~1--OP~5 closure assumptions,
 \[
 \mathcal{I}(\mathrm{OP1})
@@ -9590,7 +9596,7 @@ K_{\mathrm{ncl}}(T_{\overline{\Gamma}}^{(b)}c)
 \text{for all admissible } c\in\mathcal{A}_{\mathrm{cl}}.
 \]
 
-\begin{proposition}[Branchwise refinement of OP closure]
+\begin{proposition}[Branchwise refinement of OP closure]\label{prop:op-branchwise-refinement}
 Assume the OP~1--OP~5 pair is closed in the sense of the previous theorem. If a branch $b\in\mathcal{B}$ is closure-admissible, then
 \[
 \mathcal{I}(\mathrm{OP1})
@@ -9645,7 +9651,7 @@ The corresponding admissible routed return readout is
 whenever the sum is well-defined in $\mathcal{W}$.
 \end{definition}
 
-\begin{proposition}[Invariant value of the admissible routed return]
+\begin{proposition}[Invariant value of the admissible routed return]\label{prop:op-admissible-routing}
 Assume that:
 \begin{enumerate}[leftmargin=2em,label=(\roman*)]
 \item every branch $b\in\mathcal{B}_{\mathrm{adm}}$ is closure-admissible;
@@ -13448,6 +13454,9 @@ Theorem~\ref{thm:mainline-3413} gives a stable inverse chart on every compact $K
 \paragraph{Interpretive consequence.}
 The inverse-readout layer now has a global local-to-global organization. Stable reconstruction is not a scattered pointwise accident, but comes in shell charts separated by sharply identified obstruction shells. This makes the diagnostic side much cleaner: one can distinguish chart-internal model mismatch from genuine loss of inverse control.
 
+\begin{remark}[OP3 reading of shell diagnostics]
+In the present release, shell-consistency defects in a stable chart should be read together with the OP3 residual/shell interface and the visible/structural mismatch separation tool. A rise of $\Delta_{\mathrm{diag}}$ inside a valid chart is first an OP3-admissibility or model-fit issue inside a fixed shell/parity regime, not immediate evidence against the closed OP~1--OP~5 source-return pair.
+\end{remark}
 
 \subsection*{3.4 Fifteenth extension: obstruction-shell transition law}
 \addcontentsline{toc}{subsection}{3.4 Fifteenth extension: obstruction-shell transition law}
@@ -17477,7 +17486,7 @@ Accordingly, the front of the release now moves directly from abstract and conte
 \section*{Reader's Guide and working roadmap at v\docversion}
 \addcontentsline{toc}{section}{Reader's Guide and v\docversion\ Roadmap}
 
-This version is the public v3.12.0 release of the Companion. It preserves the release-normalized front structure and adds an explicit OP~1/OP~5 closure line, together with the first compact branchwise and routed-readout consequences of that closure.
+This version is the public Zenodo release v3.13.0 of the Companion. It preserves the public v3.12.0 release structure as baseline and adds the OP cleanup and cross-reference consolidation passes that stabilize the new transport-based reading across the monolithic text.
 It presents the existing mathematical line in one monolithic text, preserves the stabilized diagnostic material already carried by the document, and keeps the operative rule:
 \emph{do not shorten, do not overwrite, only sharpen, normalize, and preserve.}
 
@@ -17487,8 +17496,8 @@ It presents the existing mathematical line in one monolithic text, preserves the
   \item Date: \docdate
   \item Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}
   \item Current status: public Zenodo release v\docversion
-  \item Latest public release DOI (v\docversion): \href{https://doi.org/10.5281/zenodo.19446264}{10.5281/zenodo.19446264}
-  \item Version-specific DOI for v\docversion: \href{https://doi.org/10.5281/zenodo.19446264}{10.5281/zenodo.19446264}
+  \item Latest public release DOI (v3.13.0): \href{https://doi.org/10.5281/zenodo.19446872}{10.5281/zenodo.19446872}
+  \item Version-specific DOI for v\docversion: \href{https://doi.org/10.5281/zenodo.19446872}{10.5281/zenodo.19446872}
   \item Previous Zenodo releases: v3.3.5 (\href{https://doi.org/10.5281/zenodo.19396143}{10.5281/zenodo.19396143}), v3.4.0 (\href{https://doi.org/10.5281/zenodo.19410949}{10.5281/zenodo.19410949}), v3.7.1 (\href{https://doi.org/10.5281/zenodo.19412478}{10.5281/zenodo.19412478}), v3.9.0 (\href{https://doi.org/10.5281/zenodo.19423689}{10.5281/zenodo.19423689})
   \item Main-paper relation: Explicit mathematical companion to the current Sphaera master line~\cite{brendecke2026main}
 \end{itemize}
@@ -17517,7 +17526,7 @@ Accordingly, the present public release should be read as the stabilized public 
   \item Keep OP~1 on the transported-branch reading and compress the remaining burden to the discrete correction channel without reopening settled continuum structure.
   \item Normalize the document language so that internal patch chronology remains archival only, while the main line reads as one coherent proof route.
   \item Collect the now-stabilized transport, readout, checkpoint, and epsilon-trap principles as explicit reusable tools for the next theorem blocks.
-  \item Use the present v3.12.0 candidate as the next public target because these structural compressions are now visible at theorem level rather than merely distributed across diagnostics and remarks.
+  \item Use the present v3.13.0 public release as the stabilized next checkpoint because the OP transport closure architecture is now integrated more consistently across the monolithic text rather than remaining split between new theorem blocks and unreconciled historical passages.
 \end{enumerate}
 
 \subsection*{Continuity of the v3.5.2 checkpoint in the present release}
@@ -17961,7 +17970,7 @@ Version~2.27.4 completed a full structural scan of the companion.
 This section records the identified proof-chain gaps in order of priority,
 and defines the closure targets for the next local subversion sequence.
 It is a working roadmap, not a release statement.
-The last public Zenodo release remains v2.27.0
+The last public Zenodo release remains v3.12.0
 (DOI: \href{https://doi.org/10.5281/zenodo.19266666}{10.5281/zenodo.19266666}).
 The present version v2.27.5 is recorded under Zenodo DOI
 \href{https://doi.org/10.5281/zenodo.19297422}{10.5281/zenodo.19297422}.
@@ -19064,7 +19073,7 @@ The table below records the currently preserved Companion chain in strictly
 increasing version order. Zenodo releases are listed together with a publication-date
 column; earlier intermediate records are retained so that the release chronology remains reconstructible.
 
-For the latest public release row (v3.12.0), the version-specific DOI is fixed as \href{https://doi.org/10.5281/zenodo.19446264}{10.5281/zenodo.19446264}; the concept DOI remains the stable title-page pointer, while the prior public release row (v3.11.0) remains part of the normalized chronology.
+For the latest public release row (v3.13.0), the version-specific DOI is fixed as \href{https://doi.org/10.5281/zenodo.19446872}{10.5281/zenodo.19446872}; the concept DOI remains the stable title-page pointer, while the prior public release rows remain part of the normalized chronology.
 
 {\small
 \renewcommand{\arraystretch}{1.12}
@@ -20143,7 +20152,7 @@ Zenodo, March 2026.
 Marc Brendecke,
 \emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding} (v3.8.57; local working state above the public 3.8.18 release),
 April 2026.
-\newblock Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}; latest public release DOI: \href{https://doi.org/10.5281/zenodo.19446264}{10.5281/zenodo.19446264}. 
+\newblock Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}; latest public release DOI: \href{https://doi.org/10.5281/zenodo.19446872}{10.5281/zenodo.19446872}. 
 
 \bibitem{kim2026}
 Yilwook Kim,
