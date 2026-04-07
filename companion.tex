@@ -33,12 +33,13 @@
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
 \newtheorem*{remark}{Remark}
 \newtheorem{axiom}{Axiom}
 
 % --- Document metadata ---
-\newcommand{\docversion}{3.11.0}
-\newcommand{\docdate}{\DTMdisplaydate{2026}{04}{06}{-1}}
+\newcommand{\docversion}{3.12.0}
+\newcommand{\docdate}{\DTMdisplaydate{2026}{04}{07}{-1}}
 
 % --- Macros ---
 \newcommand{\bsym}{\beta_{\mathrm{sym}}}
@@ -73,7 +74,7 @@
 \thispagestyle{fancy}
 \begin{center}
 \fbox{\begin{minipage}{0.92\textwidth}
-\small\textbf{Companion status.} This document is the mathematical companion to the current main Quantum Sphaera paper~\cite{brendecke2026main}. It expands and hardens derivations, tools, and structural proof interfaces, but it does not replace the main paper as the leading structural text. In the present public release, the Companion advances the v3.10.0 line to a consolidated v3.11.0 Zenodo state while preserving the cleaned front structure. The active focus remains the mathematical sharpening of transport/readout organization, OP~1 residual-routing, OP~5 branch control, and the transition from packet-level diagnostics to structural branch criteria.
+\small\textbf{Companion status.} This document is the mathematical companion to the current main Quantum Sphaera paper~\cite{brendecke2026main}. It expands and hardens derivations, tools, and structural proof interfaces, but it does not replace the main paper as the leading structural text. The present text is the public v3.12.0 Zenodo release, developed from the public v3.11.0 line. Its active focus is the structural closure of the OP~1/OP~5 source-return pair, the branchwise refinement of that closed pair, and the separation between admissible routed support and closure-breaking residual support within the readout layer.
 \end{minipage}}
 \end{center}
 \vspace{0.6em}
@@ -86,7 +87,7 @@ q_n = it\cdot\mathbf{1} + z_1 e_1 + z_2 e_2 + z_3 e_3
 \]
 with Minkowski norm $|q_n|^2=\tau_n^2$ invariant under admissible frame changes. The Heisenberg compensator is identified as the spectral projector onto the closure-stable sector, while the phase-shifted observer shell $\zminus=+\bsym\approx 0.5493$ explains why physical readout occurs away from the photon ground shell and therefore carries systematic $\gL^k$ corrections.
 
-Version~\docversion\ is the public Zenodo release that consolidates the v3.10.32 working continuation of the public v3.10.0 Companion line. The post-3.3 development is treated through a generator-based residual formalism. The visible residual layer is controlled by a single scalar $\eta$ and an even generator $\Phi(\eta^2)$, from which the branch dynamics, inverse shell atlas, shell-consistency defect $\Delta_{\mathrm{diag}}$, and the parity-sensitive readout sector are organized. Direct visible closure and spinorial/Mobius-type lift behavior are thereby distinguished by one global $\mathbb{Z}_2$ obstruction class
+Version~\docversion\ is the public Zenodo release that advances the v3.11.0 Companion line. The post-3.3 development is treated through a generator-based residual formalism. The visible residual layer is controlled by a single scalar $\eta$ and an even generator $\Phi(\eta^2)$, from which the branch dynamics, inverse shell atlas, shell-consistency defect $\Delta_{\mathrm{diag}}$, and the parity-sensitive readout sector are organized. In the present release, the OP~1/OP~5 line is sharpened into an explicit source-return closure theorem: OP~1 is read as the inflow-side source readout of a fixed route, OP~5 as the reversal-stable return readout of the same route, and closure is decided through preservation of a native closure carrier class under two-pass transport. Direct visible closure and spinorial/Mobius-type lift behavior are thereby distinguished by one global $\mathbb{Z}_2$ obstruction class
 \[
 \varepsilon_{\mathrm{par}}\in H^1(B,\mathbb{Z}_2),
 \]
@@ -108,15 +109,15 @@ which serves as a faithful interface for comparison, reconstruction, and conserv
 This working continuation proceeds directly from the abstract and contents to the nomenclature.
 Preserved release-roadmap notes, checkpoint transitions, and earlier front-matter control blocks remain part of the document, but they have been moved out of the opening sequence into a historical appendix block near the back so that the public reading path starts with terminology and mathematics rather than local version genealogy.
 
-\section*{Release orientation toward v3.12}
-\addcontentsline{toc}{section}{Release orientation toward v3.12}
-The present v\docversion\ release uses the public v3.10.0 release as baseline and records the current structural-cleanup jump. The next public target is therefore v3.12, with the following priorities:
+\section*{Release orientation for v3.12.0}
+\addcontentsline{toc}{section}{Release orientation for v3.12.0}
+The present v\docversion\ public release uses the public v3.11.0 release as baseline and records the OP~1/OP~5 closure hardening carried out after that release. It serves as the deposited public v3.12.0 step, with the following release priorities:
 \begin{enumerate}[leftmargin=2em]
   \item \textbf{Stabilize the front and release architecture.} Keep the public reading path clean: terminology and mathematics first, historical release material retained only as appendix support.
-  \item \textbf{Compress OP~5 from diagnostics to structure.} Promote the current packet, phase-lock, and epsilon-trap analysis into one cleaner branch theorem so that the first valley channel is carried by a small structural criterion rather than by many local checks.
-  \item \textbf{Re-tighten OP~1 on the transport side.} Keep the transported-branch reading explicit and reduce the remaining burden to the discrete correction channel without reopening already stabilized continuum structure.
+  \item \textbf{Push OP~5 from diagnostics to branch closure.} Build on the newly closed OP~1/OP~5 source-return pair and compress the current packet, phase-lock, and epsilon-trap analysis into a cleaner admissible-branch theorem.
+  \item \textbf{Re-tighten OP~1 on the transport side.} Keep the transported-branch reading explicit, align it with the closed source-return route, and reduce the remaining burden to the discrete correction channel without reopening already stabilized continuum structure.
   \item \textbf{Extract reusable tools.} Gather the transport-first, readout-after-transport, checkpoint-absorption, and epsilon-trap principles as named tools with clear scope so later proof blocks depend on tools rather than patch history.
-  \item \textbf{Prepare a cleaner public v3.12 release.} The next public jump should present fewer local patch narratives, a smaller number of genuinely live residual channels, and a more visibly unified proof route from structure to readout.
+  \item \textbf{Record the public v3.12.0 Zenodo release.} The present public step reduces local patch narratives, narrows the genuinely live residual channels, and presents a more visibly unified proof route from structure to readout.
 \end{enumerate}
 
 \section*{Nomenclature}
@@ -9356,166 +9357,605 @@ of the Sphaera frame structure rigorously:
 \end{enumerate}
 \end{remark}
 
-\section{Hypothesen-Unterversion: Inflow-Paradigma und kosmologische Erweiterungen}
+\section{Hypothesis subversion: inflow paradigm and cosmological extensions}
 \label{sec:inflow-hypotheses}
 
-\begin{remark}[Status dieses Abschnitts]
-Die folgenden Propositions sind Hypothesen-Grad. Sie entstammen einer
-internen Entwurfsversion (``Inflow-Paradigma'') und sind noch nicht
-mathematisch bewiesen. Sie werden hier als strukturierte Ideen für
-zukünftige Entwicklung festgehalten.
+\begin{remark}[Status of this section]
+The following propositions are hypothesis-grade. They originate in an
+internal draft version (the ``inflow paradigm'') and have not yet been
+mathematically proved. They are retained here as structured ideas for
+future development.
 \end{remark}
 
-\subsection{Inflow-Bild als Kaskadendynamik}
+\subsection{Inflow picture as cascade dynamics}
 
-\begin{proposition}[Inflow-Interpretation der Kaskade, hypothesis-grade]
+\begin{proposition}[Inflow interpretation of the cascade, hypothesis-grade]
 \label{prop:inflow-cascade}
 \emph{(Hypothesis-grade.)}
-Das ``Inflow-Paradigma'' des Entwurfs ist strukturell identisch mit der
-Kaskadendynamik $S^8\to S^4\to S^2$:
+The draft's ``inflow paradigm'' is structurally identical with the
+cascade dynamics $S^8\to S^4\to S^2$:
 \begin{itemize}
-  \item ``Informations-Einstrom'' = Kaskaden-Fluss von $S^8$ nach $S^2$
-  \item ``Widerstand als Masse'' = der Anteil $\bsym^2 \approx 0.302$,
-    der durch $S^4$ (Materie-Stratum) läuft statt direkt nach $S^2$
-  \item ``Biquaternionischer Kern'' = die Biquaternionenstruktur
+  \item ``information inflow'' = cascade flow from $S^8$ to $S^2$
+  \item ``resistance as mass'' = the fraction $\bsym^2 \approx 0.302$
+    that runs through $S^4$ (matter stratum) instead of directly to $S^2$
+  \item ``biquaternionic core'' = the biquaternionic structure
     $q_n = it\cdot\mathbf{1} + z_i e_i \in \HH\otimes\mathbb{C}$
 \end{itemize}
-Kein neues mathematisches Fundament ist erforderlich; das Inflow-Bild
-ist eine intuitive Umformulierung der bestehenden Kaskaden-Wahrscheinlichkeiten.
+
+No new mathematical foundation is required; the inflow picture is an
+intuitive reformulation of the existing cascade probabilities.
 \end{proposition}
 
-\subsection{$k$-Wert der Neutrinos}
+\paragraph{Transition from inflow to source-return closure.}
+The inflow paradigm alone does not yet determine how the terminal OP sector should be read. In the present framework, OP~5 is not interpreted as an unrelated endpoint observable, but as the return-side readout of the same structural route that begins at OP~1. For that reason, the primary OP question is not raw endpoint coincidence, but whether the two-pass source-return transport remains inside one and the same native closure-bearing carrier class. This leads naturally to the following closure statement for the OP~1--OP~5 pair.
 
-\begin{proposition}[$k(\nu) = 4$ als Hypothese, hypothesis-grade]
+\subsection{Closure of the OP1--OP5 pair}
+
+The OP-chain should not be read as a naive raw endpoint comparison. In the present framework, OP~1 is the inflow-side readout of a fixed structural route, whereas OP~5 belongs to the return sector of the same route and must be read through its reversal-stable part.
+
+Let $\Gamma$ be a fixed structural route with reversed route $\overline{\Gamma}$, and let
+\[
+T_{\Gamma},T_{\overline{\Gamma}}:\mathcal{A}_{\mathrm{cl}}\to\mathcal{C}
+\]
+denote the forward and backward carrier transports on the admissible closure sector $\mathcal{A}_{\mathrm{cl}}\subseteq\mathcal{C}$. Let
+\[
+\rho_{\theta}:\mathcal{C}\to\mathcal{W}
+\]
+be the frame-dependent readout family.
+
+We write
+\[
+\mathrm{OP1}=\rho_{\theta_{\mathrm{in}}}(c_{\Gamma}),
+\qquad
+\mathrm{OP5}_{\mathrm{fwd}}=\rho_{\theta_{\mathrm{fwd}}}(T_{\Gamma}c_{\Gamma}),
+\qquad
+\mathrm{OP5}_{\mathrm{bwd}}=\rho_{\theta_{\mathrm{bwd}}}(T_{\overline{\Gamma}}c_{\Gamma}),
+\]
+for a carrier $c_{\Gamma}\in\mathcal{A}_{\mathrm{cl}}$, and define the symmetrized return readout by
+\[
+\mathrm{OP5}_{\mathrm{sym}}
+:=
+\frac12\bigl(\mathrm{OP5}_{\mathrm{fwd}}+\mathrm{OP5}_{\mathrm{bwd}}\bigr).
+\]
+
+To express structural closure, we use the native closure carrier class
+\[
+K_{\mathrm{ncl}}:\mathcal{A}_{\mathrm{cl}}\to \mathcal{A}_{\mathrm{cl}}/\!\sim_{\mathrm{ncl}},
+\]
+which identifies carriers up to HC-compensated transport, admissible frame-shift, and admissible branch refinement of the same closure-bearing mode.
+
+\begin{assumption}[Native OP~1--OP~5 closure assumptions]
+We assume:
+\begin{enumerate}[leftmargin=2em,label=(\roman*)]
+\item \textbf{HC-confined transport:}
+\[
+T_{\Gamma}(\mathcal{A}_{\mathrm{cl}})\subseteq \mathcal{A}_{\mathrm{cl}},
+\qquad
+T_{\overline{\Gamma}}(\mathcal{A}_{\mathrm{cl}})\subseteq \mathcal{A}_{\mathrm{cl}};
+\]
+
+\item \textbf{two-pass class consistency:}
+\[
+K_{\mathrm{ncl}}(T_{\Gamma}c)=K_{\mathrm{ncl}}(c)=K_{\mathrm{ncl}}(T_{\overline{\Gamma}}c)
+\qquad
+\text{for all } c\in\mathcal{A}_{\mathrm{cl}};
+\]
+
+\item \textbf{closure-compatible readout:} there exists a map
+\[
+J:\mathcal{A}_{\mathrm{cl}}/\!\sim_{\mathrm{ncl}}\to\Lambda
+\]
+and an observable invariant
+\[
+\mathcal{I}:\mathcal{W}\to\Lambda
+\]
+such that
+\[
+\mathcal{I}(\rho_{\theta}(c))=J(K_{\mathrm{ncl}}(c))
+\qquad
+\text{for all } c\in\mathcal{A}_{\mathrm{cl}},\ \theta\in\Theta;
+\]
+
+\item \textbf{return-sector linearity:} $\mathcal{I}$ is linear on the admissible OP~5 return sector.
+\end{enumerate}
+\end{assumption}
+
+\begin{theorem}[Closure of the OP~1--OP~5 pair]
+Under the native OP~1--OP~5 closure assumptions,
+\[
+\mathcal{I}(\mathrm{OP1})
+=
+\mathcal{I}(\mathrm{OP5}_{\mathrm{sym}}).
+\]
+Hence the OP~1--OP~5 pair is closed at the level of the fixed closure invariant.
+\end{theorem}
+
+\begin{proof}
+By closure-compatible readout,
+\[
+\mathcal{I}(\mathrm{OP1})
+=
+\mathcal{I}\!\left(\rho_{\theta_{\mathrm{in}}}(c_{\Gamma})\right)
+=
+J(K_{\mathrm{ncl}}(c_{\Gamma})).
+\]
+Likewise,
+\[
+\mathcal{I}(\mathrm{OP5}_{\mathrm{fwd}})
+=
+J(K_{\mathrm{ncl}}(T_{\Gamma}c_{\Gamma})),
+\qquad
+\mathcal{I}(\mathrm{OP5}_{\mathrm{bwd}})
+=
+J(K_{\mathrm{ncl}}(T_{\overline{\Gamma}}c_{\Gamma})).
+\]
+By two-pass class consistency,
+\[
+K_{\mathrm{ncl}}(T_{\Gamma}c_{\Gamma})
+=
+K_{\mathrm{ncl}}(c_{\Gamma})
+=
+K_{\mathrm{ncl}}(T_{\overline{\Gamma}}c_{\Gamma}),
+\]
+and therefore
+\[
+\mathcal{I}(\mathrm{OP5}_{\mathrm{fwd}})
+=
+\mathcal{I}(\mathrm{OP1})
+=
+\mathcal{I}(\mathrm{OP5}_{\mathrm{bwd}}).
+\]
+Using linearity on the admissible return sector,
+\[
+\mathcal{I}(\mathrm{OP5}_{\mathrm{sym}})
+=
+\frac12\Bigl(
+\mathcal{I}(\mathrm{OP5}_{\mathrm{fwd}})
++
+\mathcal{I}(\mathrm{OP5}_{\mathrm{bwd}})
+\Bigr)
+=
+\mathcal{I}(\mathrm{OP1}),
+\]
+which proves the claim.
+\end{proof}
+
+\begin{corollary}[Odd return defect is closure-invisible]
+Define
+\[
+\Delta_{\mathrm{OP5}}
+:=
+\frac12\bigl(\mathrm{OP5}_{\mathrm{fwd}}-\mathrm{OP5}_{\mathrm{bwd}}\bigr).
+\]
+Then
+\[
+\mathcal{I}(\Delta_{\mathrm{OP5}})=0.
+\]
+\end{corollary}
+
+\begin{proof}
+By linearity,
+\[
+\mathcal{I}(\Delta_{\mathrm{OP5}})
+=
+\frac12\Bigl(
+\mathcal{I}(\mathrm{OP5}_{\mathrm{fwd}})
+-
+\mathcal{I}(\mathrm{OP5}_{\mathrm{bwd}})
+\Bigr)=0,
+\]
+since the theorem gives equality of the two return-side invariant values.
+\end{proof}
+
+\begin{remark}
+The theorem does not require raw observable equality
+\[
+\mathrm{OP1}=\mathrm{OP5}_{\mathrm{sym}}.
+\]
+It only requires equality after passage to the fixed closure invariant. Thus source and return may remain visibly distinct while still forming a closed OP~1--OP~5 pair.
+\end{remark}
+
+\paragraph{Consequence for the OP reading rule.}
+The theorem shows that OP~1 and OP~5 are not compared as literal observables in the raw measurement frame. Their structural comparison is mediated by the native closure class and becomes visible only after passage to the fixed closure invariant. In particular, visible source-return separation may persist without destroying OP closure, provided the two-pass transport remains class-preserving. This is the precise sense in which the inflow-side source readout and the reversal-stable return readout belong to one and the same closure-bearing mode.
+
+\subsection{Branchwise refinement of the closed OP1--OP5 pair}
+
+Once the OP~1--OP~5 pair has been closed at the invariant level, branchwise effects should be read as secondary refinements of that closed source-return architecture rather than as replacements for it. In particular, branching does not create closure ex nihilo; it only distributes the observable realization of a closure-bearing mode across admissible residual routes.
+
+Let $\mathcal{B}$ be a family of admissible residual branches associated with the fixed route $\Gamma$. For each branch $b\in\mathcal{B}$, let
+\[
+T_{\Gamma}^{(b)},T_{\overline{\Gamma}}^{(b)}:\mathcal{A}_{\mathrm{cl}}\to\mathcal{C}
+\]
+denote the branchwise forward and backward carrier transports, and let
+\[
+\mathrm{OP5}^{(b)}_{\mathrm{fwd}},
+\qquad
+\mathrm{OP5}^{(b)}_{\mathrm{bwd}}
+\]
+be the corresponding branchwise return readouts. Define
+\[
+\mathrm{OP5}^{(b)}_{\mathrm{sym}}
+:=
+\frac12\bigl(\mathrm{OP5}^{(b)}_{\mathrm{fwd}}+\mathrm{OP5}^{(b)}_{\mathrm{bwd}}\bigr).
+\]
+
+We say that a branch $b$ is \emph{closure-admissible} if
+\[
+K_{\mathrm{ncl}}(T_{\Gamma}^{(b)}c)
+=
+K_{\mathrm{ncl}}(c)
+=
+K_{\mathrm{ncl}}(T_{\overline{\Gamma}}^{(b)}c)
+\qquad
+\text{for all admissible } c\in\mathcal{A}_{\mathrm{cl}}.
+\]
+
+\begin{proposition}[Branchwise refinement of OP closure]
+Assume the OP~1--OP~5 pair is closed in the sense of the previous theorem. If a branch $b\in\mathcal{B}$ is closure-admissible, then
+\[
+\mathcal{I}(\mathrm{OP1})
+=
+\mathcal{I}(\mathrm{OP5}^{(b)}_{\mathrm{sym}}).
+\]
+Hence every closure-admissible branch refines the same invariantly closed source-return pair.
+\end{proposition}
+
+\begin{proof}
+Since $b$ is closure-admissible, the branchwise forward and backward transports preserve the same native closure carrier class as the source carrier. By closure-compatible readout, the observable invariant $\mathcal{I}$ therefore takes the same value on $\mathrm{OP1}$, $\mathrm{OP5}^{(b)}_{\mathrm{fwd}}$, and $\mathrm{OP5}^{(b)}_{\mathrm{bwd}}$. Linearity on the admissible return sector then yields
+\[
+\mathcal{I}(\mathrm{OP5}^{(b)}_{\mathrm{sym}})
+=
+\mathcal{I}(\mathrm{OP1}).
+\]
+\end{proof}
+
+\begin{remark}
+The proposition shows that admissible branching does not introduce a new closure criterion. The closure test remains the same; branchwise analysis only asks which residual routes preserve the already fixed native closure class.
+\end{remark}
+
+\begin{corollary}[Diagnostic status of non-admissible branches]
+If a branch fails closure-admissibility, then it does not by itself refute closure of the OP~1--OP~5 pair. It only shows that this particular residual refinement leaves the native closure class.
+\end{corollary}
+
+\begin{proof}
+Closure of the OP~1--OP~5 pair is decided at the level of the fixed two-pass source-return architecture. A non-admissible branch records failure of class preservation for that branchwise refinement, not necessarily failure of the underlying closed pair itself.
+\end{proof}
+
+\subsection{Observable routing consequence of closure-admissible branches}
+
+Once the OP~1--OP~5 pair has been closed at the invariant level and closure-admissible branches have been identified, the remaining question is how these admissible branches contribute to the observable return signal. In the present framework, this contribution belongs to the readout layer and should therefore be modeled as a routed aggregation of branchwise return realizations.
+
+Let $\mathcal{B}_{\mathrm{adm}}\subseteq\mathcal{B}$ denote the set of closure-admissible branches. For each $b\in\mathcal{B}_{\mathrm{adm}}$, let
+\[
+\mathrm{OP5}^{(b)}_{\mathrm{sym}}\in\mathcal{W}
+\]
+be the branchwise symmetrized return readout. Assume that the observable readout space $\mathcal{W}$ carries an admissible additive structure.
+
+\begin{definition}[Admissible routing weights]
+A family of admissible routing weights is a map
+\[
+w:\mathcal{B}_{\mathrm{adm}}\to [0,\infty).
+\]
+The corresponding admissible routed return readout is
+\[
+\mathrm{OP5}_{\mathrm{rout}}
+:=
+\sum_{b\in\mathcal{B}_{\mathrm{adm}}} w(b)\,\mathrm{OP5}^{(b)}_{\mathrm{sym}},
+\]
+whenever the sum is well-defined in $\mathcal{W}$.
+\end{definition}
+
+\begin{proposition}[Invariant value of the admissible routed return]
+Assume that:
+\begin{enumerate}[leftmargin=2em,label=(\roman*)]
+\item every branch $b\in\mathcal{B}_{\mathrm{adm}}$ is closure-admissible;
+\item the closure invariant $\mathcal{I}$ is linear on the admissible routed sector;
+\item the routed sum defining $\mathrm{OP5}_{\mathrm{rout}}$ exists.
+\end{enumerate}
+Then
+\[
+\mathcal{I}(\mathrm{OP5}_{\mathrm{rout}})
+=
+\Bigl(\sum_{b\in\mathcal{B}_{\mathrm{adm}}} w(b)\Bigr)\mathcal{I}(\mathrm{OP1}).
+\]
+\end{proposition}
+
+\begin{proof}
+By branchwise closure-admissibility, the previous proposition gives
+\[
+\mathcal{I}\!\left(\mathrm{OP5}^{(b)}_{\mathrm{sym}}\right)
+=
+\mathcal{I}(\mathrm{OP1})
+\qquad
+\text{for all } b\in\mathcal{B}_{\mathrm{adm}}.
+\]
+Using linearity of $\mathcal{I}$ on the admissible routed sector, we obtain
+\[
+\mathcal{I}(\mathrm{OP5}_{\mathrm{rout}})
+=
+\mathcal{I}\!\left(
+\sum_{b\in\mathcal{B}_{\mathrm{adm}}} w(b)\,\mathrm{OP5}^{(b)}_{\mathrm{sym}}
+\right)
+=
+\sum_{b\in\mathcal{B}_{\mathrm{adm}}} w(b)\,
+\mathcal{I}\!\left(\mathrm{OP5}^{(b)}_{\mathrm{sym}}\right).
+\]
+Substituting the branchwise closure identity yields
+\[
+\mathcal{I}(\mathrm{OP5}_{\mathrm{rout}})
+=
+\sum_{b\in\mathcal{B}_{\mathrm{adm}}} w(b)\,\mathcal{I}(\mathrm{OP1})
+=
+\Bigl(\sum_{b\in\mathcal{B}_{\mathrm{adm}}} w(b)\Bigr)\mathcal{I}(\mathrm{OP1}),
+\]
+as claimed.
+\end{proof}
+
+\begin{corollary}[Normalized admissible routing]
+If, in addition, the admissible routing weights are normalized so that
+\[
+\sum_{b\in\mathcal{B}_{\mathrm{adm}}} w(b)=1,
+\]
+then
+\[
+\mathcal{I}(\mathrm{OP5}_{\mathrm{rout}})
+=
+\mathcal{I}(\mathrm{OP1}).
+\]
+\end{corollary}
+
+\begin{proof}
+This is immediate from the proposition.
+\end{proof}
+
+\begin{definition}[Admissible routing defect]
+Define the admissible routing defect by
+\[
+\mathfrak{d}_{\mathrm{rout}}
+:=
+\mathcal{I}(\mathrm{OP5}_{\mathrm{rout}})
+-
+\mathcal{I}(\mathrm{OP1}).
+\]
+In the normalized case, one has
+\[
+\mathfrak{d}_{\mathrm{rout}}=0.
+\]
+More generally,
+\[
+\mathfrak{d}_{\mathrm{rout}}
+=
+\bigl(W_{\mathrm{adm}}-1\bigr)\mathcal{I}(\mathrm{OP1}),
+\qquad
+W_{\mathrm{adm}}:=\sum_{b\in\mathcal{B}_{\mathrm{adm}}} w(b).
+\]
+\end{definition}
+
+\begin{remark}
+Thus unnormalized routing does not destroy closure content; it rescales its observable aggregate. The distinction between structural closure and observable weight remains intact.
+\end{remark}
+
+\subsection{Mixed routed support and the final OP closure diagnostic}
+
+Visible routed support need not come entirely from closure-admissible branches. To close the OP analysis, one must therefore separate the admissible routed sector from the remaining visible support.
+
+Let $\mathcal{B}_{\mathrm{vis}}$ be the set of visible branches with routing weights $w(b)\ge 0$, and split it as
+\[
+\mathcal{B}_{\mathrm{vis}}
+=
+\mathcal{B}_{\mathrm{adm}}\sqcup\mathcal{B}_{\mathrm{rem}},
+\qquad
+\mathcal{B}_{\mathrm{rem}}:=\mathcal{B}_{\mathrm{vis}}\setminus\mathcal{B}_{\mathrm{adm}}.
+\]
+Assume that every visible branch $b\in\mathcal{B}_{\mathrm{vis}}$ carries a symmetrized return representative $\mathrm{OP5}^{(b)}_{\mathrm{sym}}\in\mathcal{W}$ and define the total routed return by
+\[
+\mathrm{OP5}_{\mathrm{tot}}
+:=
+\sum_{b\in\mathcal{B}_{\mathrm{vis}}} w(b)\,\mathrm{OP5}^{(b)}_{\mathrm{sym}},
+\]
+whenever the sum exists.
+
+\begin{proposition}[Decomposition of the total routed invariant]
+Assume that $\mathcal{I}$ is linear on the visible routed sector. Then
+\[
+\mathcal{I}(\mathrm{OP5}_{\mathrm{tot}})
+=
+W_{\mathrm{adm}}\,\mathcal{I}(\mathrm{OP1}) + R_{\mathrm{rem}},
+\]
+where
+\[
+W_{\mathrm{adm}}:=\sum_{b\in\mathcal{B}_{\mathrm{adm}}} w(b),
+\qquad
+R_{\mathrm{rem}}:=\sum_{b\in\mathcal{B}_{\mathrm{rem}}} w(b)\,\mathcal{I}\!\left(\mathrm{OP5}^{(b)}_{\mathrm{sym}}\right).
+\]
+\end{proposition}
+
+\begin{proof}
+By linearity,
+\[
+\mathcal{I}(\mathrm{OP5}_{\mathrm{tot}})
+=
+\sum_{b\in\mathcal{B}_{\mathrm{adm}}} w(b)\,\mathcal{I}\!\left(\mathrm{OP5}^{(b)}_{\mathrm{sym}}\right)
++
+\sum_{b\in\mathcal{B}_{\mathrm{rem}}} w(b)\,\mathcal{I}\!\left(\mathrm{OP5}^{(b)}_{\mathrm{sym}}\right).
+\]
+The first sum equals $W_{\mathrm{adm}}\,\mathcal{I}(\mathrm{OP1})$ by the admissible-routing proposition. The second sum is exactly $R_{\mathrm{rem}}$.
+\end{proof}
+
+\begin{corollary}[Final OP closure mismatch decomposition]
+Define the total OP closure mismatch by
+\[
+\mathfrak{m}_{\mathrm{OP}}
+:=
+\mathcal{I}(\mathrm{OP5}_{\mathrm{tot}})-\mathcal{I}(\mathrm{OP1}).
+\]
+Then
+\[
+\mathfrak{m}_{\mathrm{OP}}
+=
+\bigl(W_{\mathrm{adm}}-1\bigr)\mathcal{I}(\mathrm{OP1}) + R_{\mathrm{rem}}.
+\]
+\end{corollary}
+
+\begin{proof}
+Subtract $\mathcal{I}(\mathrm{OP1})$ from the decomposition in the previous proposition.
+\end{proof}
+
+\begin{corollary}[Exact closure criterion for the visible routed sector]
+If
+\[
+W_{\mathrm{adm}}=1
+\qquad\text{and}\qquad
+R_{\mathrm{rem}}=0,
+\]
+then
+\[
+\mathcal{I}(\mathrm{OP5}_{\mathrm{tot}})=\mathcal{I}(\mathrm{OP1}).
+\]
+In particular, exact routed OP closure holds whenever the visible routed support is normalized on the admissible sector and carries no residual non-admissible contribution at the invariant level.
+\end{corollary}
+
+\begin{proof}
+Under the stated conditions, the mismatch formula gives $\mathfrak{m}_{\mathrm{OP}}=0$.
+\end{proof}
+
+\begin{remark}[Closed form of the OP analysis]
+The OP analysis is thereby closed in three layers: first, the source-return pair OP~1/OP~5 is closed by native closure-class preservation; second, admissible branches are read as refinements of that closed pair; third, the visible routed mismatch splits into a pure routing-normalization term and a residual non-admissible support term. This identifies precisely where observable source-return disagreement still lives once the structural pair has been closed.
+\end{remark}
+
+\subsection{The neutrino $k$-value}
+
+\begin{proposition}[$k(\nu) = 4$ as hypothesis, hypothesis-grade]
 \label{prop:k-neutrino}
 \emph{(Hypothesis-grade; requires derivation from the fermionic sector.)}
-Die ungewöhnlich kleinen Neutrino-Massen könnten durch $k(\nu) = 4$
-erklärt werden:
+The unusually small neutrino masses may be explained by $k(\nu) = 4$:
 \[
   m_\nu^{(\mathrm{matter})} = \gL^4 \cdot m_\nu^{(\mathrm{photon})},
   \qquad \gL^4 \approx 12.1.
 \]
-Im Photon-Frame wären Neutrino-Massen um Faktor $\gL^{-3} \approx 1/6.5$
-kleiner als das geladene Lepton-zu-Neutrino-Massenverhältnis in der
-Materie-Frame-Messung erwarten lässt.
-Strukturell: $k(\nu) = 4$ entspricht $k(m_e)+k(G_N)+k(\ell_P^{-1}) = 1+2+3/2$
---- einem Lepton-Graviton-Planck-Vertex, konsistent mit der LQG-Kopplung
-im $\Hplusminus$-Sektor (Theorem~\ref{thm:op2-selfadj}).
-Eine strukturelle Ableitung aus dem Dirac-Operator $D_-$ auf $\Hplusminus$
-steht noch aus.
+In the photon frame, neutrino masses would be smaller by the factor
+$\gL^{-3} \approx 1/6.5$ than one would expect from the charged-lepton to
+neutrino-mass ratio measured in the matter frame.
+Structurally, $k(\nu) = 4$ corresponds to
+$k(m_e)+k(G_N)+k(\ell_P^{-1}) = 1+2+3/2$ --- a lepton--graviton--Planck
+vertex, consistent with the LQG coupling in the $\Hplusminus$ sector
+(Theorem~\ref{thm:op2-selfadj}).
+A structural derivation from the Dirac operator $D_-$ on $\Hplusminus$
+is still outstanding.
 \end{proposition}
 
-\subsection{Hubble-Spannung als kosmologische Evolution von $\bsym$}
+\subsection{Hubble tension as cosmological evolution of $\bsym$}
 
-\begin{proposition}[H$_0$-Spannung als $\bsym(t)$-Evolution, hypothesis-grade]
+\begin{proposition}[H$_0$ tension as $\bsym(t)$ evolution, hypothesis-grade]
 \label{prop:H0-tension}
 \emph{(Hypothesis-grade; requires cosmological model.)}
-Die Hubble-Spannung ($H_0^{\mathrm{CMB}} \approx 67.4$ vs. $H_0^{\mathrm{local}} \approx 73.0$ km/s/Mpc, Faktor $\approx 1.083$)
-könnte eine kosmologische Evolution des Frame-Offsets $\bsym(t)$
-widerspiegeln:
+The Hubble tension ($H_0^{\mathrm{CMB}} \approx 67.4$ vs.
+$H_0^{\mathrm{local}} \approx 73.0$ km/s/Mpc, factor $\approx 1.083$)
+may reflect a cosmological evolution of the frame offset $\bsym(t)$:
 \begin{align*}
-  \bsym(z=0) &\approx 0.5493 \quad \text{(heute)}, \\
-  \bsym(z=1100) &\approx 0.527 \quad \text{(CMB-Epoche)}.
+  \bsym(z=0) &\approx 0.5493 \quad \text{(today)}, \\
+  \bsym(z=1100) &\approx 0.527 \quad \text{(CMB epoch)}.
 \end{align*}
-Die erforderliche Änderung $\Delta\bsym \approx +0.023$ über 13.8 Gyr
-entspricht einer Rate von $\approx 1.6\times 10^{-12}$ pro Jahr.
-Physikalisch: als Materie-Strukturen im Universum wuchsen ($z: 1100\to 0$),
-wuchs auch der Frame-Offset $\bsym$ --- das Universum bewegt sich
-kontinuierlich vom Photon-Frame weg.
-In diesem Bild würde der $H_0$-Diskrepanz keine neue Physik erfordern,
-sondern wäre ein Artefakt der Zeit-Variation von $\bsym(t)$.
+The required change $\Delta\bsym \approx +0.023$ over 13.8 Gyr
+corresponds to a rate of $\approx 1.6\times 10^{-12}$ per year.
+Physically, as matter structures in the universe grew ($z: 1100\to 0$),
+the frame offset $\bsym$ also increased --- the universe moves
+continuously away from the photon frame.
+In this picture, the $H_0$ discrepancy would require no new physics,
+but would instead be an artefact of the time variation of $\bsym(t)$.
 \end{proposition}
 
-\begin{remark}[Bewertung der Hypothesen]
+\begin{remark}[Evaluation of the hypotheses]
 \label{rem:inflow-evaluation}
-Von den drei Hypothesen ist die strukturell robusteste die
-$\bsym(t)$-Evolution (Prop.~\ref{prop:H0-tension}): sie erklärt
-die $H_0$-Spannung ohne freie Parameter (nur $\beta_{\mathrm{sym},0} = 0.5493$
-und $\beta_{\mathrm{sym},\mathrm{CMB}}$ aus der Spannung bestimmt).
-Die $k(\nu) = 4$-Hypothese (Prop.~\ref{prop:k-neutrino}) ist
-strukturell anschlussfähig an die GOE-Klasse von $D_-$ auf
-$\Hplusminus$ (Theorem~\ref{thm:op2-selfadj}), braucht aber
-eine explizite Ableitung.
-Das Inflow-Bild (Prop.~\ref{prop:inflow-cascade}) ist bereits
-im bestehenden Framework enthalten.
+Among the three hypotheses, the structurally most robust one is the
+$\bsym(t)$ evolution (Prop.~\ref{prop:H0-tension}): it explains the
+$H_0$ tension without free parameters (only
+$\beta_{\mathrm{sym},0} = 0.5493$ and
+$\beta_{\mathrm{sym},\mathrm{CMB}}$ determined from the tension).
+The $k(\nu) = 4$ hypothesis (Prop.~\ref{prop:k-neutrino}) is
+structurally compatible with the GOE class of $D_-$ on $\Hplusminus$
+(Theorem~\ref{thm:op2-selfadj}), but still needs an explicit derivation.
+The inflow picture (Prop.~\ref{prop:inflow-cascade}) is already contained
+in the existing framework.
 \end{remark}
 
-\subsection{Myon-Anomalie und $k$-Wert der starken Kopplung}
+\subsection{Muon anomaly and the $k$-value of the strong coupling}
 \label{sec:muon-anomaly}
 
-\begin{proposition}[Muon $g-2$ als Hypothese, hypothesis-grade]
+\begin{proposition}[Muon $g-2$ as hypothesis, hypothesis-grade]
 \label{prop:muon-g2}
 \emph{(Hypothesis-grade; the source value $k=1.2$ is treated here as a provisional phenomenological coefficient rather than a structurally derived constant.)}
 
-Das anomale magnetische Moment des Myons zeigt eine Diskrepanz von
+The anomalous magnetic moment of the muon shows a discrepancy of
 \[
   \delta a_\mu
   := a_\mu^{(\mathrm{exp})} - a_\mu^{(\mathrm{SM})}
   \approx 2.51\times 10^{-9},
 \]
-was $\approx 3.6\%$ des hadronischen Vakuumpolarisations-Beitrags
-$a_\mu^{(\mathrm{hvp})} \approx 6.9\times 10^{-8}$ entspricht.
+which corresponds to about $3.6\%$ of the hadronic vacuum-polarization
+contribution $a_\mu^{(\mathrm{hvp})} \approx 6.9\times 10^{-8}$.
 
-Das Framework liefert eine mögliche Erklärung durch die unbekannten
-$k$-Werte der starken Kopplung $\alpha_s$ und der QCD-Skala
+The framework offers a possible explanation through the unknown
+$k$-values of the strong coupling $\alpha_s$ and of the QCD scale
 $\Lambda_{\mathrm{QCD}}$:
 \begin{itemize}
-  \item Falls $k(\alpha_s) = 1$ (wie die EM-Kopplung $\alpha$):
-    $\alpha_s^{(\mathrm{photon})} = \gL^{-1}\cdot\alpha_s^{(\mathrm{matter})}$,
-    was den hadronischen Beitrag um $\gL^{-1}\approx 0.537$ skaliert.
-  \item Falls $k(\Lambda_{\mathrm{QCD}}) \in [0,1]$: der Korrekturfaktor
-    für $a_\mu^{(\mathrm{hvp})}$ liegt im Bereich $[\gL^0,\gL^{-2}]$.
+  \item If $k(\alpha_s) = 1$ (like the electromagnetic coupling $\alpha$),
+    then $\alpha_s^{(\mathrm{photon})} = \gL^{-1}\cdot\alpha_s^{(\mathrm{matter})}$,
+    which scales the hadronic contribution by $\gL^{-1}\approx 0.537$.
+  \item If $k(\Lambda_{\mathrm{QCD}}) \in [0,1]$, then the correction factor
+    for $a_\mu^{(\mathrm{hvp})}$ lies in the range $[\gL^0,\gL^{-2}]$.
 \end{itemize}
-Das $k$-Wert-Paar $(k(\alpha_s), k(\Lambda_{\mathrm{QCD}}))$, das
-$\delta a_\mu$ reproduziert, ist eine offene Frage im QCD-Sektor
-des Frameworks. Der Wert $k=1.2$ des Quelldokuments ist ein
-phänomenologischer Platzhalter, kein abgeleiteter Wert.
+The $k$-value pair $(k(\alpha_s), k(\Lambda_{\mathrm{QCD}}))$ that
+reproduces $\delta a_\mu$ is an open question in the framework's QCD
+sector. The value $k=1.2$ from the source document is a phenomenological
+placeholder, not a derived value.
 \end{proposition}
 
-\begin{proposition}[Saturierungs-Modell, hypothesis-grade]
+\begin{proposition}[Saturation model, hypothesis-grade]
 \label{prop:saturation}
 \emph{(Hypothesis-grade; cosmological end-state.)}
 
-Das Saturierungs-Modell verbindet $k(\nu)=4$ (Proposition~\ref{prop:k-neutrino})
-mit der Langzeit-Kosmologie:
+The saturation model connects $k(\nu)=4$
+(Proposition~\ref{prop:k-neutrino}) with long-term cosmology:
 \begin{enumerate}[label=(\arabic*)]
-  \item Mit wachsender Expansion steigen Neutrino-Massen im Matter-Frame
-    ($m_\nu^{(\mathrm{matter})} = \gL^4(t)\cdot m_\nu^{(\mathrm{photon})}$,
-    wenn $\gL(t)$ wächst, d.h. $\bsym(t)\nearrow 1$).
-  \item Wenn $\bsym(t)\to 1$ (Tachyon-Grenze), gilt:
-    $\gL\to\infty$, $m_\nu^{(\mathrm{matter})}\to\infty$,
-    und die Kaskaden-Wahrscheinlichkeit $P(S^8\to S^4) = \bsym^2\to 1$
-    --- das Universum wird vollständig ``Materie-dominiert''.
-  \item Kurz vor dem Grenzwert: $H_0\to 0$ und die Expansion stoppt ---
-    das Universum erreicht den ``Tachyon-Horizont'' $\zminus = -\bsym$
-    (Definitionsgrenzen des Frameworks, vgl. Proposition~\ref{prop:horizon-cascade-singularity}).
+  \item As expansion increases, neutrino masses increase in the matter frame
+    ($m_\nu^{(\mathrm{matter})} = \gL^4(t)\cdot m_\nu^{(\mathrm{photon})}$
+    when $\gL(t)$ grows, i.e. $\bsym(t)\nearrow 1$).
+  \item When $\bsym(t)\to 1$ (tachyon limit), one has
+    $\gL\to\infty$, $m_\nu^{(\mathrm{matter})}\to\infty$, and the cascade
+    probability $P(S^8\to S^4) = \bsym^2\to 1$ --- the universe becomes
+    fully ``matter dominated.''
+  \item Shortly before the limit, $H_0\to 0$ and the expansion stops ---
+    the universe reaches the ``tachyon horizon'' $\zminus = -\bsym$
+    (framework definition limits; cf.
+    Proposition~\ref{prop:horizon-cascade-singularity}).
 \end{enumerate}
-Dieses Modell ist keine neue Annahme, sondern die konsequente
-Fortführung der $\bsym(t)$-Evolution (Proposition~\ref{prop:H0-tension})
-in die ferne Zukunft.
+This model is not a new assumption, but the consistent continuation of
+the $\bsym(t)$ evolution (Proposition~\ref{prop:H0-tension}) into the
+distant future.
 \end{proposition}
 
-\begin{remark}[k-Wert-Tabelle der offenen QCD-Fragen]
+\begin{remark}[$k$-value table for the open QCD questions]
 \label{rem:k-qcd}
-Die folgende Tabelle fasst den $k$-Wert-Status des QCD-Sektors zusammen:
+The following table summarizes the $k$-value status of the QCD sector:
 \begin{center}
 \renewcommand{\arraystretch}{1.3}
 \begin{tabular}{llll}
 \toprule
-Konstante & Wert & $k$ & Status \\
+Constant & Value & $k$ & Status \\
 \midrule
-$\alpha$ (EM)    & $1/137.036$ & $1$ & etabliert \\
-$G_N$ (Gravitation) & $6.674\times10^{-11}$ & $2$ & etabliert \\
-$\gBI$ (LQG)     & $0.2375$    & $0$ & etabliert \\
-$\alpha_s$ (QCD strong) & $0.118$ & $?$ & \textbf{offen} \\
-$\Lambda_{\mathrm{QCD}}$ & $\approx 200$ MeV & $?$ & \textbf{offen} \\
-$m_\nu$ (Neutrino)  & $< 0.04$ eV & $4$? & Hypothese \\
+$\alpha$ (EM)    & $1/137.036$ & $1$ & established \\
+$G_N$ (gravitation) & $6.674\times10^{-11}$ & $2$ & established \\
+$\gBI$ (LQG)     & $0.2375$    & $0$ & established \\
+$\alpha_s$ (QCD strong) & $0.118$ & $?$ & \textbf{open} \\
+$\Lambda_{\mathrm{QCD}}$ & $\approx 200$ MeV & $?$ & \textbf{open} \\
+$m_\nu$ (neutrino)  & $< 0.04$ eV & $4$? & hypothesis \\
 \bottomrule
 \end{tabular}
 \end{center}
-Die Bestimmung von $k(\alpha_s)$ und $k(\Lambda_{\mathrm{QCD}}$) würde
-die Myon-$g$-2-Anomalie, die laufende Kopplung im QCD-Sektor, und
-möglicherweise die CP-Verletzung im Rahmen des Frameworks erklären.
+Determining $k(\alpha_s)$ and $k(\Lambda_{\mathrm{QCD}})$ would explain
+the muon $g$-2 anomaly, the running coupling in the QCD sector, and
+possibly CP violation within the framework.
 \end{remark}
 
 
@@ -17037,7 +17477,7 @@ Accordingly, the front of the release now moves directly from abstract and conte
 \section*{Reader's Guide and working roadmap at v\docversion}
 \addcontentsline{toc}{section}{Reader's Guide and v\docversion\ Roadmap}
 
-This version is the public v3.11.0 release of the Companion. It consolidates the v3.10.32 working continuation of the public v3.10.0 line, including the explicit tool-layer extraction and the open-core diagnosis that prepared the release jump.
+This version is the public v3.12.0 release of the Companion. It preserves the release-normalized front structure and adds an explicit OP~1/OP~5 closure line, together with the first compact branchwise and routed-readout consequences of that closure.
 It presents the existing mathematical line in one monolithic text, preserves the stabilized diagnostic material already carried by the document, and keeps the operative rule:
 \emph{do not shorten, do not overwrite, only sharpen, normalize, and preserve.}
 
@@ -17046,21 +17486,21 @@ It presents the existing mathematical line in one monolithic text, preserves the
   \item Version: \docversion
   \item Date: \docdate
   \item Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}
-  \item Current status: public Zenodo release based on the public v3.10.0 line, consolidating the v3.10.32 working state into a release-ready record
-  \item Latest public release DOI (v3.11.0): \href{https://doi.org/10.5281/zenodo.19444128}{10.5281/zenodo.19444128}
-  \item Version-specific DOI for v\docversion: \href{https://doi.org/10.5281/zenodo.19444128}{10.5281/zenodo.19444128}
+  \item Current status: public Zenodo release v\docversion
+  \item Latest public release DOI (v\docversion): \href{https://doi.org/10.5281/zenodo.19446264}{10.5281/zenodo.19446264}
+  \item Version-specific DOI for v\docversion: \href{https://doi.org/10.5281/zenodo.19446264}{10.5281/zenodo.19446264}
   \item Previous Zenodo releases: v3.3.5 (\href{https://doi.org/10.5281/zenodo.19396143}{10.5281/zenodo.19396143}), v3.4.0 (\href{https://doi.org/10.5281/zenodo.19410949}{10.5281/zenodo.19410949}), v3.7.1 (\href{https://doi.org/10.5281/zenodo.19412478}{10.5281/zenodo.19412478}), v3.9.0 (\href{https://doi.org/10.5281/zenodo.19423689}{10.5281/zenodo.19423689})
   \item Main-paper relation: Explicit mathematical companion to the current Sphaera master line~\cite{brendecke2026main}
 \end{itemize}
 
 \subsection*{Working note for v\docversion}
-This public release continues the public v3.10.0 Companion line in one preserved monolithic text. Content-wise it keeps together three central gains:
+This public release proceeds from the public v3.11.0 Companion release in one preserved monolithic text. Content-wise it now keeps together three central gains:
 \begin{enumerate}[leftmargin=2em,label=(\roman*)]
   \item the stabilized residual-record interface and its associated structural tools,
   \item the reproducible M\"obius-shell diagnostic suite for the live residual scales, and
   \item the OP~5 packet, breathing-envelope, and frame-flicker visual audit line.
 \end{enumerate}
-Accordingly, the present working state should be read as a continuation baseline for the next public jump: it preserves the current monolithic chain while keeping the front cleaner and the live burdens more sharply routed.
+Accordingly, the present public release should be read as the stabilized public checkpoint of the current monolithic chain: it preserves the current mathematical line while keeping the front cleaner and the live burdens more sharply routed.
 
 \subsection*{Primary working goals at v\docversion}
 \begin{enumerate}[leftmargin=2em]
@@ -17071,13 +17511,13 @@ Accordingly, the present working state should be read as a continuation baseline
   \item Preserve the monolithic document without shortening historical material.
 \end{enumerate}
 
-\subsection*{Roadmap from v\docversion\ toward v3.12}
+\subsection*{Release priorities from v\docversion\ toward Zenodo deposition}
 \begin{enumerate}[leftmargin=2em]
   \item Turn the current OP~5 packet/phase/epsilon analysis into one cleaner structural branch theorem with a small admissible branch load and a non-escape criterion.
   \item Keep OP~1 on the transported-branch reading and compress the remaining burden to the discrete correction channel without reopening settled continuum structure.
   \item Normalize the document language so that internal patch chronology remains archival only, while the main line reads as one coherent proof route.
   \item Collect the now-stabilized transport, readout, checkpoint, and epsilon-trap principles as explicit reusable tools for the next theorem blocks.
-  \item Use v3.12 as the next public target only once these structural compressions are visible at theorem level rather than merely distributed across diagnostics and remarks.
+  \item Use the present v3.12.0 candidate as the next public target because these structural compressions are now visible at theorem level rather than merely distributed across diagnostics and remarks.
 \end{enumerate}
 
 \subsection*{Continuity of the v3.5.2 checkpoint in the present release}
@@ -18624,7 +19064,7 @@ The table below records the currently preserved Companion chain in strictly
 increasing version order. Zenodo releases are listed together with a publication-date
 column; earlier intermediate records are retained so that the release chronology remains reconstructible.
 
-For the latest public release row (v3.11.0), the version-specific DOI is fixed as \href{https://doi.org/10.5281/zenodo.19444128}{10.5281/zenodo.19444128}; the concept DOI remains the stable title-page pointer, while the prior public release row (v3.10.0) remains part of the normalized chronology.
+For the latest public release row (v3.12.0), the version-specific DOI is fixed as \href{https://doi.org/10.5281/zenodo.19446264}{10.5281/zenodo.19446264}; the concept DOI remains the stable title-page pointer, while the prior public release row (v3.11.0) remains part of the normalized chronology.
 
 {\small
 \renewcommand{\arraystretch}{1.12}
@@ -18815,7 +19255,9 @@ v3.10.31 & local working architecture-driven shell state & 2026-04-06 & pushed t
 \hline
 v3.10.32 & local working architecture-rescue corridor state & 2026-04-06 & reduced the remaining visible question to a single budget comparison between the normalized combined architecture load and the normalized higher-order rescue budget, giving a final first-order corridor for exact visible closure after exact transport \\
 \hline
-v3.11.0 & Zenodo release & 2026-04-06 & \href{https://doi.org/10.5281/zenodo.19444128}{10.5281/zenodo.19444128} --- public release consolidating the v3.10.32 architecture-rescue corridor state, explicit tool-layer extraction, and release-normalized front matter for Zenodo \
+v3.11.0 & Zenodo release & 2026-04-06 & \href{https://doi.org/10.5281/zenodo.19444128}{10.5281/zenodo.19444128} --- public release consolidating the v3.10.32 architecture-rescue corridor state, explicit tool-layer extraction, and release-normalized front matter for Zenodo \\
+v3.11.2 & local working state & 2026-04-07 & OP~1/OP~5 closed as a native source-return pair via closure-class preservation; branchwise refinement, admissible routed aggregation, and the final visible-support mismatch decomposition added as the compact main-line hardening beyond the public v3.11.0 release  \\
+ v3.12.0 & Zenodo release & 2026-04-07 & \href{https://doi.org/10.5281/zenodo.19446264}{10.5281/zenodo.19446264} --- public release promoting the OP~1/OP~5 closure line into the public-facing main text, with branchwise refinement and routed-readout consequences integrated into the monolithic Companion \\
 \hline
 v0.1.0 & Zenodo release & 2026-03-24 & \href{https://doi.org/10.5281/zenodo.19210729}{10.5281/zenodo.19210729} \\
 \hline
@@ -19701,7 +20143,7 @@ Zenodo, March 2026.
 Marc Brendecke,
 \emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding} (v3.8.57; local working state above the public 3.8.18 release),
 April 2026.
-\newblock Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}; latest public release DOI: \href{https://doi.org/10.5281/zenodo.19444128}{10.5281/zenodo.19444128}. 
+\newblock Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}; latest public release DOI: \href{https://doi.org/10.5281/zenodo.19446264}{10.5281/zenodo.19446264}. 
 
 \bibitem{kim2026}
 Yilwook Kim,
