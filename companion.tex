@@ -38,7 +38,7 @@
 \newtheorem{axiom}{Axiom}
 
 % --- Document metadata ---
-\newcommand{\docversion}{3.14.0}
+\newcommand{\docversion}{3.15.0}
 \newcommand{\docdate}{\DTMdisplaydate{2026}{04}{07}{-1}}
 
 % --- Macros ---
@@ -74,7 +74,7 @@
 \thispagestyle{fancy}
 \begin{center}
 \fbox{\begin{minipage}{0.92\textwidth}
-\small\textbf{Companion status.} This document is the mathematical companion to the current main Quantum Sphaera paper~\cite{brendecke2026main}. It expands and hardens derivations, tools, and structural proof interfaces, but it does not replace the main paper as the leading structural text. The present text is the public Zenodo release v3.14.0, extending the public v3.13.0 Companion line. Its active focus is no longer the discovery of a new closure mechanism, but the stabilized presentation of the compressed OP transport architecture, theorem-level branch admissibility on top of the closed OP~1/OP~5 pair, and the integration of the residual/shell layer at the OP~3 interface in public release form.
+\small\textbf{Companion status.} This document is the mathematical companion to the current main Quantum Sphaera paper~\cite{brendecke2026main}. It expands and hardens derivations, tools, and structural proof interfaces, but it does not replace the main paper as the leading structural text. The present text is the public Zenodo release v3.15.0 for the first public-shape QAM extraction on top of the public v3.14.0 baseline. Its active focus is the compressed public-shape QAM core: tagged coded objects and minimal predicates, admissible transport with coded closure-class preservation, closure-compatible coded readout, and faithful translation of the admissible OP fragment. The fuller QAM package remains preserved below as technical support for later public stages.
 \end{minipage}}
 \end{center}
 \vspace{0.6em}
@@ -87,7 +87,7 @@ q_n = it\cdot\mathbf{1} + z_1 e_1 + z_2 e_2 + z_3 e_3
 \]
 with Minkowski norm $|q_n|^2=\tau_n^2$ invariant under admissible frame changes. The Heisenberg compensator is identified as the spectral projector onto the closure-stable sector, while the phase-shifted observer shell $\zminus=+\bsym\approx 0.5493$ explains why physical readout occurs away from the photon ground shell and therefore carries systematic $\gL^k$ corrections.
 
-Version~\docversion\ is the public Zenodo release on top of the former public v3.13.0 Companion line. The post-3.3 development is treated through a generator-based residual formalism. The visible residual layer is controlled by a single scalar $\eta$ and an even generator $\Phi(\eta^2)$, from which the branch dynamics, inverse shell atlas, shell-consistency defect $\Delta_{\mathrm{diag}}$, and the parity-sensitive readout sector are organized. In the present release, the OP~1/OP~5 line is sharpened into an explicit source-return closure theorem: OP~1 is read as the inflow-side source readout of a fixed route, OP~5 as the reversal-stable return readout of the same route, and closure is decided through preservation of a native closure carrier class under two-pass transport. Direct visible closure and spinorial/Mobius-type lift behavior are thereby distinguished by one global $\mathbb{Z}_2$ obstruction class
+Version~\docversion\ is the public QAM-oriented Zenodo continuation on top of the public Zenodo release v3.14.0 and the former public v3.13.0 Companion line. The post-3.3 development is treated through a generator-based residual formalism. The visible residual layer is controlled by a single scalar $\eta$ and an even generator $\Phi(\eta^2)$, from which the branch dynamics, inverse shell atlas, shell-consistency defect $\Delta_{\mathrm{diag}}$, and the parity-sensitive readout sector are organized. In the present release, the OP~1/OP~5 line is sharpened into an explicit source-return closure theorem: OP~1 is read as the inflow-side source readout of a fixed route, OP~5 as the reversal-stable return readout of the same route, and closure is decided through preservation of a native closure carrier class under two-pass transport. Direct visible closure and spinorial/Mobius-type lift behavior are thereby distinguished by one global $\mathbb{Z}_2$ obstruction class
 \[
 \varepsilon_{\mathrm{par}}\in H^1(B,\mathbb{Z}_2),
 \]
@@ -104,22 +104,1015 @@ which serves as a faithful interface for comparison, reconstruction, and conserv
 \tableofcontents
 \clearpage
 
-\section*{Release orientation for the public v3.14.0 Zenodo release}
-\addcontentsline{toc}{section}{Release orientation for the public v3.14.0 Zenodo release}
+\section*{Release orientation for the public v3.15.0 Zenodo release}
+\addcontentsline{toc}{section}{Release orientation for the public v3.15.0 Zenodo release}
 This working continuation proceeds directly from the abstract and contents to the nomenclature. Preserved release-roadmap notes, checkpoint transitions, and earlier front-matter control blocks remain part of the document, but they have been moved out of the opening sequence into a historical appendix block near the back so that the reading path starts with terminology and mathematics rather than local version genealogy.
 
-The present v\docversion\ text uses the public v3.13.0 release as baseline and records the stabilized main/appendix compression pass now frozen as the public Zenodo v3.14.0 release. It is meant to be read as the first public post-closure branch/shell hardening step on top of that baseline, with the following release-facing priorities and outcomes:
+The present v\docversion\ text uses the public v3.14.0 release as baseline and records the first public QAM-oriented extraction on top of the now public branch/shell transport architecture. It is meant to be read as the public form of the compressed public-shape QAM core, with the following priorities and outcomes:
 \begin{enumerate}[leftmargin=2em]
-  \item \textbf{Stabilize the front and release architecture.} Keep the public reading path clean: terminology and mathematics first, historical release material retained only as appendix support.
-  \item \textbf{Freeze the first post-closure theorem layer.} The admissible-branch theorem, the OP~3 shell/residual theorem, the combined branch-shell transport theorem, and the packet/phase-lock/epsilon screening principle are now presented in public form as the first post-closure consequence layer of the OP core.
-  \item \textbf{Refine the transported OP~1 side without reopening closure.} Keep the transported-branch reading explicit, align it with the closed source-return route, and reduce the remaining burden to the discrete correction channel without reopening already stabilized continuum structure.
-  \item \textbf{Normalize the extracted tools and release split.} Gather the transport-first, readout-after-transport, checkpoint-absorption, epsilon-trap, and OP-derived structural principles as named tools with clear scope, and keep the compressed main-text presentation clean while the technical unfolding remains in appendix form.
-  \item \textbf{Record the present public v3.14.0 Zenodo step.} The current public release extends the OP transport closure architecture into a sharper branch/shell hardening layer, reduces local patch narratives, and presents a more visibly unified proof route from structure to admissible routed readout. Its version-specific DOI is \href{https://doi.org/10.5281/zenodo.19460589}{10.5281/zenodo.19460589}.
-  \item \textbf{Keep the DOI logic normalized.} The concept DOI remains the stable title-page pointer of the Companion line, while the public baseline immediately before this release remains v3.13.0 with version-specific DOI \href{https://doi.org/10.5281/zenodo.19446872}{10.5281/zenodo.19446872}.
+  \item \textbf{Preserve the public v3.14.0 branch/shell core as fixed baseline.} The OP transport closure, the admissible-branch theorem, the OP~3 shell/residual theorem, the combined branch-shell transport theorem, and the packet/phase-lock/epsilon screening principle are treated as already public and no longer as the live discovery front.
+  \item \textbf{Open the QAM-over-ZF entry layer.} Introduce QAM conservatively as a coded structural language over ZF rather than as a new foundational replacement, so that the current OP/branch/shell architecture becomes the first nontrivial translation target.
+  \item \textbf{Fix the minimal QAM signature.} Add tagged set-codes for states, layers, operators, readouts, branches, shell/refinement objects, admissibility/closure witnesses, and tensor-coded composites.
+  \item \textbf{Include tensorial syntax from the beginning.} Build the tensor-coded constructor into the language layer immediately, while postponing stronger admissibility and algebraic tensor rules to later internal stages.
+  \item \textbf{Reserve the next minor releases for QAM formalization.} The first public-shape line is now realized in v3.15.0; later minor releases remain reserved for branch/shell/routed extension and tensor/operator expansion.
+  \item \textbf{Keep the DOI logic normalized.} The current public release is v3.15.0 with version-specific DOI \href{https://doi.org/10.5281/zenodo.19463389}{10.5281/zenodo.19463389}. The concept DOI remains the stable title-page pointer of the Companion line, while v3.14.0 remains the immediately preceding public release.
 \end{enumerate}
 
-\paragraph{Public freeze note for v3.14.0.}
-The public v3.14.0 release freezes the first post-closure branch/shell hardening line on top of the public v3.13.0 baseline. At this stage, the OP transport closure, the admissible-branch theorem, the OP~3 shell/residual theorem, the combined branch-shell transport theorem, and the packet/phase-lock/epsilon screening layer are all part of the public release text. The main remaining tasks after this freeze therefore shift away from discovery of a new closure mechanism and toward later refinement, normalization, and further theorem-level hardening on top of the now public branch/shell architecture.
+\paragraph{Public note after the v3.15.0 QAM freeze.}
+The public v3.15.0 release adds the first compressed QAM-over-ZF line on top of the public v3.14.0 branch/shell baseline. With this freeze, the main live task shifts from introducing the first coded language layer to deciding how much of the broader internal QAM package should be unfolded in later public minor releases while preserving strict ZF-groundedness and non-overreach.
+
+
+\begin{remark}[QAM-over-ZF entry layer]
+A next formal development line of the Companion is the introduction of QAM not as a replacement for Zermelo--Fraenkel set theory, but as a structure-first coded language over ZF. The point of this layer is to give the current OP/branch/shell architecture a cleaner formal interface for states, layers, operators, readouts, admissibility, closure preservation, and tensor-coded composition while remaining, in principle, back-translatable into set-theoretic form.
+
+In the present release, this QAM line appears for the first time as a public compressed extraction on top of the public v3.14.0 baseline. Its first intended translation target is the admissible OP fragment of the current Companion line: the OP~1/OP~5 source-return closure architecture, admissible branch transport, OP~3 shell-admissible refinement, admissible routed support, and the visible packet/phase-lock/epsilon screening layer.
+
+The reserved minor-release path remains the following. First, introduce the minimal QAM language layer over ZF, including tagged set-codes for states, layers, operators, readouts, branches, shell/refinement objects, admissibility witnesses, and tensor-coded composites. Second, translate the current OP transport core into QAM form, including admissible transport, closure-class preservation, closure-compatible readout, branch admissibility, OP~3 shell admissibility, and admissible routed support. Third, strengthen the tensor-coded language by admissibility and closure rules for tensor composition together with operator-family or lambda-like structural maps and explicit translation/round-trip results.
+
+The present public release exposes only the compressed public-shape QAM core as the exported layer: tagged coded objects and minimal predicates, admissible transport with coded closure-class preservation, closure-compatible coded readout, and faithful translation of the admissible OP fragment. The broader internal QAM package remains available below as technical support and does not change the public mathematical claims of v3.14.0.
+
+\textbf{QAM-coded object preview.} The minimal intended object types are states, layers, operators, readouts, branches, shell/refinement objects, admissibility/closure witnesses, and tensor-coded composites. A set $x$ is intended to count as a QAM-coded object exactly when it has one of the tagged forms
+\[
+\langle 0,a\rangle,\quad
+\langle 1,\ell,D\rangle,\quad
+\langle 2,\ell_1,\ell_2,G\rangle,\quad
+\langle 3,\ell,W,R\rangle,\quad
+\langle 4,b,B\rangle,\quad
+\langle 5,r,s,T\rangle,\quad
+\langle 6,u\rangle,\quad
+\langle 7,y,z\rangle.
+\]
+If $x$ and $y$ are QAM-coded objects, the tensor-coded composite is written as
+\[
+x \otimes y := \langle 7,x,y\rangle.
+\]
+At the entry stage, these tags and tensor codes are only coding devices that distinguish structural roles inside ZF and reserve tensor syntax for later internal hardening.
+\end{remark}
+
+\begin{remark}[Dependency guide for the internal QAM package]
+The internal QAM-over-ZF line should be read in the following order: coded objects and predicates first, admissible transport and closure-class schemata second, branch/shell/routed admissibility third, tensor admissibility and tensor closure rules fourth, faithful translation of the admissible OP fragment fifth, operator-family/lambda-like structural maps sixth, and support-selection/degeneracy handling only as a seventh-layer refinement on top of the already admissible fragment.
+\end{remark}
+
+\subsection*{How to read the internal QAM package}
+The internal QAM package should be read in two layers. At the compact reader level, one should keep only the following chain in view: coded objects and predicates, admissible transport and closure, branch/shell/routed admissibility, tensor closure rules, faithful translation of the admissible OP fragment, and only afterwards operator/lambda and support-selection refinements. At the technical level, the detailed sections below provide the full internal unfolding of these same layers in theorematic form.
+
+\begin{remark}[QAM normalization guide]
+The current internal package is not meant to be enlarged indiscriminately. Its next intended use is normalization and later public extraction. In particular, later work should prefer compression, dependency control, and clean appendix-style grouping over uncontrolled addition of parallel QAM subsystems.
+\end{remark}
+
+\subsection*{Roadmap and extraction criteria for the first public QAM line}
+The internal QAM package is now far enough along that one may begin to formulate a controlled extraction path toward a later public QAM-oriented line. The intended purpose of this extraction is not to publish the entire internal QAM package at once, but to expose its first stable and readable core in stages.
+
+The current preferred extraction sequence is the following.
+\begin{enumerate}[leftmargin=2em]
+  \item \textbf{First public QAM line (current candidate: v3.15.0): language and closure interface.} Publish a compact QAM-over-ZF entry layer together with the minimal predicate package, admissible transport, coded closure-class preservation, closure-compatible readout, and a first translation statement for the admissible OP fragment.
+  \item \textbf{Second public QAM line (planned v3.16.x): branch/shell/routed translation.} Extend the public QAM line by adding closure-admissible branch codes, shell-admissible refinement codes, admissible routed support, and the first coded branch-shell transport results.
+  \item \textbf{Third public QAM line (planned v3.17.x): tensor and operator/lambda extension.} Add tensor admissibility and tensor closure rules together with the first operator-family/lambda-like structural maps, and only then consider whether selection/support handling should itself enter the public line.
+\end{enumerate}
+
+At the present internal stage, the extraction criteria for the first public QAM line should remain strict. A QAM block should be promoted into a public release only if it satisfies all of the following conditions:
+\begin{enumerate}[leftmargin=2em]
+  \item \textbf{compression:} the public block can be read in a compact main-text form without forcing the full internal package into the public line;
+  \item \textbf{dependency clarity:} the block has a clean dependency guide and does not rely on hidden internal lemmas;
+  \item \textbf{ZF-groundedness:} the coded language remains explicitly readable as a definitional overlay over ZF rather than as an unexplained new ontology;
+  \item \textbf{translation contact:} the public block makes clear what part of the current OP/branch/shell architecture it actually translates;
+  \item \textbf{non-overreach:} the public block does not yet claim more than the present coded layer genuinely supports.
+\end{enumerate}
+
+\begin{remark}
+The current internal package already satisfies much of this extraction logic, but it is still broader than what should be exported immediately. The next internal passes should therefore favor public-shape compression and clean staging over further rapid enlargement.
+\end{remark}
+
+\subsection*{Compressed public-shape QAM core}
+The first public QAM line should expose only the smallest stable coded layer needed to carry the current admissible OP fragment into a ZF-grounded formal interface. At compressed level, this public-shape core should be read through four ingredients:
+\begin{enumerate}[leftmargin=2em]
+  \item tagged QAM-coded objects and the minimal predicate layer;
+  \item admissible transport together with coded closure-class preservation;
+  \item closure-compatible coded readout;
+  \item a first faithful translation statement for the admissible OP fragment.
+\end{enumerate}
+
+\begin{theorem}[Compressed public-shape QAM theorem]
+Assume that coded QAM objects are read as a definitional overlay over ZF, that admissible coded transport preserves coded closure class, and that the relevant coded readout is closure-compatible. Assume further that the admissible OP fragment is translated faithfully into the coded QAM layer. Then the translated source/return closure content of the admissible OP fragment is preserved at coded level, and closure-relevant readout agreement is retained after passage through the closure-factor map.
+\end{theorem}
+
+\begin{remark}
+This compressed theorem is the intended mathematical core of the first public QAM line. It is deliberately weaker than the full internal QAM package: branch/shell/routed refinements, tensor rules, operator/lambda maps, and support-selection layers remain available internally, but they need not all be exported at once in order to make the first public QAM step mathematically meaningful.
+\end{remark}
+
+\subsection*{QAM minimal predicates and coded relations}
+
+We now pass from the entry-layer preview to the first explicit predicate layer of QAM-over-ZF. At this stage, the QAM language still remains conservative over ZF: the predicates below are intended as definable recognition or relation clauses on tagged set-codes rather than as commitments to a new ontology.
+
+\begin{definition}[Primitive QAM predicates]
+We introduce the primitive predicates
+\[
+\mathrm{QState}(x),\quad
+\mathrm{QLayer}(x),\quad
+\mathrm{QOp}(x),\quad
+\mathrm{QReadout}(x),\quad
+\mathrm{QBranch}(x),\quad
+\mathrm{QShell}(x),\quad
+\mathrm{QWitness}(x),\quad
+\mathrm{QTensor}(x),
+\]
+with the intended ZF-grounded readings
+\[
+\mathrm{QState}(x)\;:\Longleftrightarrow\;\exists a\,(x=\langle 0,a\rangle),
+\]
+\[
+\mathrm{QLayer}(x)\;:\Longleftrightarrow\;\exists \ell\,\exists D\,(x=\langle 1,\ell,D\rangle),
+\]
+\[
+\mathrm{QOp}(x)\;:\Longleftrightarrow\;\exists \ell_1\,\exists \ell_2\,\exists G\,(x=\langle 2,\ell_1,\ell_2,G\rangle),
+\]
+\[
+\mathrm{QReadout}(x)\;:\Longleftrightarrow\;\exists \ell\,\exists W\,\exists R\,(x=\langle 3,\ell,W,R\rangle),
+\]
+\[
+\mathrm{QBranch}(x)\;:\Longleftrightarrow\;\exists b\,\exists B\,(x=\langle 4,b,B\rangle),
+\]
+\[
+\mathrm{QShell}(x)\;:\Longleftrightarrow\;\exists r\,\exists s\,\exists T\,(x=\langle 5,r,s,T\rangle),
+\]
+\[
+\mathrm{QWitness}(x)\;:\Longleftrightarrow\;\exists u\,(x=\langle 6,u\rangle),
+\]
+\[
+\mathrm{QTensor}(x)\;:\Longleftrightarrow\;\exists y\,\exists z\,(x=\langle 7,y,z\rangle).
+\]
+\end{definition}
+
+\begin{remark}
+At this stage, these predicates are still recognition clauses rather than a full independent axiom system. Their purpose is to let the Companion speak explicitly about coded states, layers, operators, readouts, branches, shell/refinement objects, witnesses, and tensor composites inside one ZF-grounded language layer.
+\end{remark}
+
+\begin{definition}[Primitive QAM coded relations]
+We also introduce the primitive QAM-style relations
+\[
+\mathrm{QAdmTransport}(o,s,t),\qquad
+\mathrm{QClEq}(s,t),\qquad
+\mathrm{QRead}(r,s,w),
+\]
+\[
+\mathrm{QBranchRef}(b,s,t),\qquad
+\mathrm{QShellRef}(\sigma,s,t),\qquad
+\mathrm{QTensorAdm}(x,y).
+\]
+Their intended readings are as follows:
+\begin{enumerate}
+\item $\mathrm{QAdmTransport}(o,s,t)$ means that the operator-code $o$ transports the coded state $s$ admissibly to the coded state $t$;
+\item $\mathrm{QClEq}(s,t)$ means that $s$ and $t$ belong to the same coded closure class;
+\item $\mathrm{QRead}(r,s,w)$ means that the readout-code $r$ reads the coded state $s$ into the coded observable value $w$;
+\item $\mathrm{QBranchRef}(b,s,t)$ means that the branch-code $b$ refines the coded state $s$ to the coded state $t$;
+\item $\mathrm{QShellRef}(\sigma,s,t)$ means that the shell/refinement-code $\sigma$ refines the coded state $s$ to the coded state $t$;
+\item $\mathrm{QTensorAdm}(x,y)$ means that the tensor-coded composite $x\otimes y$ is admitted as a legitimate coded QAM object.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}
+These relations are the first minimal bridge between the current OP/branch/shell architecture and its coded QAM-over-ZF form. In particular, admissibility and closure-class preservation already appear here as primitive language-level notions rather than as only informal motivation.
+\end{remark}
+
+\begin{definition}[First QAM translation target]
+The first intended translation target of the QAM-over-ZF layer is the admissible OP fragment consisting of:
+\begin{enumerate}
+\item the OP~1/OP~5 source-return closure architecture;
+\item the intermediate OP~2--OP~4 transport bridge;
+\item admissible branch transport;
+\item OP~3 shell-admissible refinement;
+\item admissible routed support together with the visible packet/phase-lock/epsilon screening layer.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}
+The significance of the present predicate layer is that QAM is no longer only a roadmap note. Even at this first stage, the language already distinguishes object-kinds and relation-kinds closely enough to serve as a faithful coded entry interface for the current admissible OP fragment.
+\end{remark}
+
+
+
+\subsection*{QAM transport, closure, and readout schemata}
+
+We now pass from the minimal predicate layer to the first theorematic QAM transport/closure layer. The point of this section is still conservative: it does not yet claim a fully independent QAM foundation, but it does begin to formulate admissible transport, closure-class preservation, and closure-compatible readout directly in the coded QAM-over-ZF language.
+
+\begin{definition}[QAM-coded transport graph]
+A QAM-operator code
+\[
+o=\langle 2,\ell_1,\ell_2,G\rangle
+\]
+is called a \emph{coded transport graph} if $G$ is a set of ordered pairs coding a functional transport rule from coded states on layer $\ell_1$ to coded states on layer $\ell_2$.
+\end{definition}
+
+\begin{definition}[QAM admissible transport]
+For a QAM-operator code $o$ and coded states $s,t$, we write
+\[
+\mathrm{QAdmTransport}(o,s,t)
+\]
+iff:
+\begin{enumerate}
+\item $o$ is a coded transport graph;
+\item $s$ is a coded state on the source layer of $o$;
+\item $t$ is a coded state on the target layer of $o$;
+\item the graph-code of $o$ sends $s$ to $t$;
+\item the transport from $s$ to $t$ preserves the intended closure-bearing structural mode.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}
+At this stage, the final clause is still schematic. Its precise intended mathematical content is supplied by the coded closure-class relation below.
+\end{remark}
+
+\begin{definition}[QAM closure-class equivalence]
+The relation
+\[
+\mathrm{QClEq}(s,t)
+\]
+is the coded closure-class relation on QAM-state codes. It is intended to mean that $s$ and $t$ represent the same closure-bearing structural mode, even if they differ by admissible transport, admissible frame-shifted realization, admissible branch refinement, or admissible shell refinement.
+\end{definition}
+
+\begin{axiom}[QAM closure-class schema]
+The relation $\mathrm{QClEq}$ is required to satisfy:
+\begin{enumerate}
+\item \textbf{reflexivity:}
+\[
+\mathrm{QClEq}(s,s);
+\]
+\item \textbf{symmetry:}
+\[
+\mathrm{QClEq}(s,t)\Longrightarrow \mathrm{QClEq}(t,s);
+\]
+\item \textbf{transitivity:}
+\[
+\mathrm{QClEq}(s,t)\wedge \mathrm{QClEq}(t,u)\Longrightarrow \mathrm{QClEq}(s,u).
+\]
+\end{enumerate}
+\end{axiom}
+
+\begin{remark}
+Thus $\mathrm{QClEq}$ is the coded QAM analogue of the native closure carrier-class relation used in the current OP architecture.
+\end{remark}
+
+\begin{axiom}[QAM admissibility implies closure preservation]
+For every operator code $o$ and state codes $s,t$,
+\[
+\mathrm{QAdmTransport}(o,s,t)\Longrightarrow \mathrm{QClEq}(s,t).
+\]
+\end{axiom}
+
+\begin{remark}
+This is the first central QAM principle. Admissibility is not defined merely by existence of transport, but by preservation of closure class.
+\end{remark}
+
+\begin{definition}[QAM-coded readout]
+A QAM-readout code
+\[
+r=\langle 3,\ell,W,R\rangle
+\]
+is called a \emph{coded readout} if $R$ is a graph-code sending coded states on layer $\ell$ into coded observable values in the target code $W$.
+\end{definition}
+
+\begin{definition}[QAM readout relation]
+We write
+\[
+\mathrm{QRead}(r,s,w)
+\]
+iff $r$ is a coded readout, $s$ is a coded state on the source layer of $r$, and the graph-code of $r$ sends $s$ to the coded observable value $w$.
+\end{definition}
+
+\begin{definition}[QAM closure-compatible readout]
+A coded readout $r$ is called \emph{closure-compatible} if there exists a coded class-target map $J$ such that for all coded states $s,t$,
+\[
+\mathrm{QClEq}(s,t)\Longrightarrow
+\bigl(
+\forall w_1\,\forall w_2\,
+(\mathrm{QRead}(r,s,w_1)\wedge \mathrm{QRead}(r,t,w_2)\Longrightarrow J(w_1)=J(w_2))
+\bigr).
+\]
+\end{definition}
+
+\begin{remark}
+This is the coded QAM version of readout factorization through closure class. Raw readouts may differ, but their closure-relevant image under $J$ must agree whenever the source states belong to the same closure class.
+\end{remark}
+
+\begin{definition}[First tensor-compatibility placeholder]
+We reserve the tensor-admissibility predicate
+\[
+\mathrm{QTensorAdm}(x,y)
+\]
+for the statement that the tensor-coded composite $x\otimes y$ is admitted as a legitimate coded QAM object of the intended kind.
+\end{definition}
+
+\begin{proposition}[First QAM transport principle]
+Let $o$ be a coded QAM-operator, let $s,t$ be coded QAM-states, and let $r$ be a closure-compatible coded readout. If
+\[
+\mathrm{QAdmTransport}(o,s,t),
+\]
+then:
+\begin{enumerate}
+\item \[
+\mathrm{QClEq}(s,t);
+\]
+\item the closure-relevant image of any readout of $s$ agrees with the closure-relevant image of any readout of $t$ under the factor map $J$ associated with $r$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+The first claim is exactly the admissibility-implies-closure-preservation schema. The second follows from closure-compatibility of the readout: since $\mathrm{QClEq}(s,t)$ holds, any coded readouts of $s$ and $t$ are identified after passage through the closure-relevant class-target map $J$.
+\end{proof}
+
+\begin{theorem}[First QAM version of the OP transport principle]
+Assume:
+\begin{enumerate}
+\item there is a coded source state $s_{\mathrm{in}}$;
+\item there are coded intermediate states $s_2,s_3,s_4$;
+\item there are coded operator maps $o_2,o_3,o_4,o_{\mathrm{fwd}},o_{\mathrm{bwd}}$;
+\item the transports
+\[
+\mathrm{QAdmTransport}(o_2,s_{\mathrm{in}},s_2),\qquad
+\mathrm{QAdmTransport}(o_3,s_2,s_3),\qquad
+\mathrm{QAdmTransport}(o_4,s_3,s_4),
+\]
+\[
+\mathrm{QAdmTransport}(o_{\mathrm{fwd}},s_{\mathrm{in}},t_{\mathrm{fwd}}),\qquad
+\mathrm{QAdmTransport}(o_{\mathrm{bwd}},s_{\mathrm{in}},t_{\mathrm{bwd}})
+\]
+all hold;
+\item the relevant coded readout is closure-compatible.
+\end{enumerate}
+Then all coded states
+\[
+s_{\mathrm{in}},\ s_2,\ s_3,\ s_4,\ t_{\mathrm{fwd}},\ t_{\mathrm{bwd}}
+\]
+belong to the same coded closure class. Consequently, all closure-relevant readouts of these states agree after passage through the closure-factor map.
+\end{theorem}
+
+\begin{proof}
+Each admissible transport preserves closure class by the admissibility schema. Therefore
+\[
+\mathrm{QClEq}(s_{\mathrm{in}},s_2),\qquad
+\mathrm{QClEq}(s_2,s_3),\qquad
+\mathrm{QClEq}(s_3,s_4).
+\]
+By transitivity,
+\[
+\mathrm{QClEq}(s_{\mathrm{in}},s_4).
+\]
+Likewise,
+\[
+\mathrm{QClEq}(s_{\mathrm{in}},t_{\mathrm{fwd}})
+\qquad\text{and}\qquad
+\mathrm{QClEq}(s_{\mathrm{in}},t_{\mathrm{bwd}})
+\]
+follow from admissible forward and backward transport. Using transitivity again, all listed coded states lie in the same closure class. Closure-compatible readout then identifies their closure-relevant readout content after factorization through the associated class-target map.
+\end{proof}
+
+\begin{remark}
+This theorem is only the first coded QAM shadow of the current OP transport architecture. It does not yet include the full branch-shell routed layer, but it already captures the source/intermediate/return logic in a ZF-grounded coded form.
+\end{remark}
+
+
+
+\subsection*{QAM branch, shell, and routed support layer}
+
+We now extend the QAM-over-ZF language from basic transport and readout to the branch/shell/routed layer. The point of this section is to translate the current admissible-branch, OP~3 shell-admissibility, and admissible routed-support architecture into a single coded QAM fragment without yet claiming a fully independent QAM foundation.
+
+\begin{definition}[Closure-admissible branch code]
+A branch code $b$ is called \emph{closure-admissible} if for all coded states $s,t$,
+\[
+\mathrm{QBranchRef}(b,s,t)\Longrightarrow \mathrm{QClEq}(s,t).
+\]
+Equivalently, branch refinement by $b$ preserves the coded closure class.
+\end{definition}
+
+\begin{definition}[Shell-admissible refinement code]
+A shell/refinement code $\sigma$ is called \emph{shell-admissible} if for all coded states $s,t$,
+\[
+\mathrm{QShellRef}(\sigma,s,t)\Longrightarrow \mathrm{QClEq}(s,t).
+\]
+Equivalently, shell-sensitive or residual-sensitive refinement by $\sigma$ preserves the coded closure class.
+\end{definition}
+
+\begin{remark}
+These are the direct coded QAM analogues of closure-admissible branches and OP~3 shell-admissible refinements in the current Companion line.
+\end{remark}
+
+\begin{definition}[Admissible branch set and shell family]
+We define the admissible branch class by
+\[
+\mathcal{B}^{\mathrm{QAM}}_{\mathrm{adm}}
+:=
+\{\,b:\mathrm{QBranch}(b)\ \wedge\ b\text{ is closure-admissible}\,\},
+\]
+and for each branch code $b$, the shell-admissible refinement class by
+\[
+\mathcal{F}^{\mathrm{QAM}}_{\mathrm{sh}}(b)
+:=
+\{\,\sigma:\mathrm{QShell}(\sigma)\ \wedge\ \sigma\text{ is shell-admissible on }b\,\}.
+\]
+\end{definition}
+
+\begin{remark}
+At this stage, the phrase ``shell-admissible on $b$'' may be read minimally as: shell refinement by $\sigma$ acts on branchwise states associated with $b$ without leaving the coded closure class.
+\end{remark}
+
+\begin{definition}[Routed support code]
+A \emph{routed support code} is a set-code
+\[
+u=\langle 8,\Omega,w\rangle,
+\]
+where $\Omega$ is a coded finite or set-sized support family of admissible branch-shell pairs and $w$ is a coded weight assignment on $\Omega$.
+\end{definition}
+
+\begin{definition}[Admissible routed support]
+A routed support code
+\[
+u=\langle 8,\Omega,w\rangle
+\]
+is called \emph{admissible} if every element of $\Omega$ has the form $(b,\sigma)$ with
+\[
+b\in \mathcal{B}^{\mathrm{QAM}}_{\mathrm{adm}}
+\qquad\text{and}\qquad
+\sigma\in \mathcal{F}^{\mathrm{QAM}}_{\mathrm{sh}}(b).
+\]
+\end{definition}
+
+\begin{remark}
+Thus admissible routed support is the coded QAM version of the admissible branch-shell support sector in the current OP architecture.
+\end{remark}
+
+\begin{definition}[Normalized routed support]
+An admissible routed support code
+\[
+u=\langle 8,\Omega,w\rangle
+\]
+is called \emph{normalized} if its coded weight assignment satisfies
+\[
+\sum_{(b,\sigma)\in\Omega} w(b,\sigma)=1
+\]
+in the intended decoded numerical target.
+\end{definition}
+
+\begin{remark}
+The normalization condition is stated semiformally at this stage. In the fully coded version, the sum relation would itself be represented by a suitable arithmetic coding layer over ZF.
+\end{remark}
+
+\begin{definition}[Branch-shell coded return realization]
+Let $b$ be a closure-admissible branch code and let $\sigma$ be a shell-admissible refinement code on $b$. A \emph{branch-shell coded return realization} is a coded state
+\[
+t_{b,\sigma}
+\]
+such that:
+\begin{enumerate}
+\item $t_{b,\sigma}$ is reached from the coded source state through admissible branch refinement by $b$;
+\item the OP~3-level shell refinement by $\sigma$ is shell-admissible;
+\item the resulting return-side coded state is read through a closure-compatible coded readout.
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}[QAM branch admissibility principle]
+Let $b$ be a closure-admissible branch code. If
+\[
+\mathrm{QBranchRef}(b,s,t),
+\]
+then
+\[
+\mathrm{QClEq}(s,t).
+\]
+Consequently, every closure-compatible readout identifies the closure-relevant image of $s$ and $t$ after passage through the associated class-factor map.
+\end{proposition}
+
+\begin{proof}
+The first claim is just the definition of closure-admissibility. The readout claim follows from closure-compatibility of coded readouts: closure-equivalent coded states have the same closure-relevant image after factorization.
+\end{proof}
+
+\begin{proposition}[QAM shell admissibility principle]
+Let $\sigma$ be a shell-admissible refinement code. If
+\[
+\mathrm{QShellRef}(\sigma,s,t),
+\]
+then
+\[
+\mathrm{QClEq}(s,t).
+\]
+Consequently, shell-sensitive refinement does not alter closure-relevant readout content as long as shell-admissibility is preserved.
+\end{proposition}
+
+\begin{proof}
+This is the direct content of shell-admissibility together with closure-compatible readout factorization.
+\end{proof}
+
+\begin{theorem}[QAM admissible branch-shell theorem]
+Let $s_{\mathrm{in}}$ be a coded source state, let $b$ be a closure-admissible branch code, and let $\sigma$ be a shell-admissible refinement code on $b$. Assume there exists a branch-shell coded return realization
+\[
+t_{b,\sigma}
+\]
+associated with $(b,\sigma)$, and let $r$ be a closure-compatible coded readout. Then
+\[
+\mathrm{QClEq}(s_{\mathrm{in}},t_{b,\sigma}).
+\]
+Hence every closure-compatible readout of $s_{\mathrm{in}}$ and $t_{b,\sigma}$ agrees after passage through its associated closure-factor map.
+\end{theorem}
+
+\begin{proof}
+By closure-admissibility of $b$, branch refinement preserves the coded closure class. By shell-admissibility of $\sigma$, the shell-sensitive refinement preserves the same coded closure class at the OP~3 layer. Hence the final coded return realization $t_{b,\sigma}$ remains closure-equivalent to the coded source state $s_{\mathrm{in}}$. Closure-compatible readout then identifies the closure-relevant content of both states after factorization.
+\end{proof}
+
+\begin{corollary}[QAM branch-shell support class]
+Define the coded admissible branch-shell support class by
+\[
+\mathcal{S}^{\mathrm{QAM}}_{\mathrm{adm}}
+:=
+\{\, (b,\sigma): b\in \mathcal{B}^{\mathrm{QAM}}_{\mathrm{adm}}
+\ \wedge\
+\sigma\in \mathcal{F}^{\mathrm{QAM}}_{\mathrm{sh}}(b)\,\}.
+\]
+Then every coded return realization supported on
+\[
+\mathcal{S}^{\mathrm{QAM}}_{\mathrm{adm}}
+\]
+is closure-preserving at the coded QAM level.
+\end{corollary}
+
+\begin{remark}
+This is the coded QAM counterpart of the admissible branch-shell support sector in the present OP architecture.
+\end{remark}
+
+\begin{definition}[QAM branch-shell routed return]
+Let
+\[
+u=\langle 8,\Omega,w\rangle
+\]
+be an admissible routed support code with
+\[
+\Omega\subseteq \mathcal{S}^{\mathrm{QAM}}_{\mathrm{adm}}.
+\]
+A \emph{QAM branch-shell routed return} is a coded return aggregation associated with the support family $\Omega$ and the weight assignment $w$.
+\end{definition}
+
+\begin{theorem}[QAM routed admissible support theorem]
+Let $u=\langle 8,\Omega,w\rangle$ be a normalized admissible routed support code, and let $r$ be a closure-compatible coded readout. Then the closure-relevant image of the routed return determined by $u$ agrees with the closure-relevant image of the coded source state.
+\end{theorem}
+
+\begin{proof}
+Every element $(b,\sigma)\in\Omega$ lies in the admissible branch-shell support class, so each associated coded return realization is closure-equivalent to the coded source state by the previous theorem. Since the routed support is normalized and the readout is closure-compatible, the routed aggregation preserves the same closure-relevant image after passage through the factor map.
+\end{proof}
+
+\begin{remark}
+This is the coded QAM analogue of the combined branch-shell transport theorem together with normalized routed admissible preservation.
+\end{remark}
+
+\begin{definition}[QAM screening layer]
+A coded diagnostic layer is called a \emph{screening layer} if it provides visible preselection information about admissible branch-shell support without itself constituting an independent closure proof.
+\end{definition}
+
+\begin{remark}
+In this sense, packet-, phase-lock-, and epsilon-type coded diagnostics should be treated in QAM as screening-layer data rather than as primary closure criteria. Their structural relevance begins only when they track loss of branch admissibility or loss of shell admissibility.
+\end{remark}
+
+\begin{corollary}[QAM visible/structural separation]
+Visible coded mismatch in the screening layer does not by itself imply failure of closure at the QAM level. Closure failure begins only when coded branch admissibility or coded shell admissibility is lost.
+\end{corollary}
+
+\begin{remark}
+This is the QAM-over-ZF shadow of the visible-mismatch-versus-structural-mismatch principle already established in the current Companion line.
+\end{remark}
+
+
+\subsection*{QAM tensor admissibility and tensor closure rules}
+
+We now strengthen the tensor-coded part of the QAM language. At the present stage, tensor composition is still not treated as a full tensor algebra. Instead, it is introduced as a controlled structural constructor equipped with admissibility, closure, transport, and readout compatibility rules.
+
+\begin{definition}[Tensor-coded formation]
+If $x$ and $y$ are QAM-coded objects, then
+\[
+x\otimes y := \langle 7,x,y\rangle
+\]
+is their tensor-coded composite. We write
+\[
+\mathrm{QTensor}(x\otimes y)
+\]
+for the statement that the code has the tensor tag.
+\end{definition}
+
+\begin{definition}[Tensor formation by kind]
+The following tensor formations are allowed in principle:
+\begin{enumerate}
+\item state-state tensors:
+\[
+s_1\otimes s_2;
+\]
+\item layer-layer tensors:
+\[
+\ell_1\otimes \ell_2;
+\]
+\item operator-operator tensors:
+\[
+o_1\otimes o_2;
+\]
+\item readout-readout tensors:
+\[
+r_1\otimes r_2;
+\]
+\item branch-branch tensors:
+\[
+b_1\otimes b_2;
+\]
+\item shell-shell tensors:
+\[
+\sigma_1\otimes \sigma_2.
+\]
+\end{enumerate}
+A tensor-coded composite is called \emph{well-typed} if both entries belong to one of the admissible kind-pairs listed above.
+\end{definition}
+
+\begin{remark}
+At this stage, mixed tensors between different kinds are not taken as primitive. They may be introduced later through derived coding conventions if needed.
+\end{remark}
+
+\begin{definition}[Tensor admissibility]
+For QAM-coded objects $x,y$, we write
+\[
+\mathrm{QTensorAdm}(x,y)
+\]
+iff:
+\begin{enumerate}
+\item $x\otimes y$ is well-typed;
+\item the tensor-coded composite preserves the intended closure-bearing structural regime;
+\item the tensor-coded composite is admitted as a legitimate QAM object of its corresponding kind.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}
+Thus tensor admissibility is not automatic from mere code formation. It is a structural compatibility condition.
+\end{remark}
+
+\begin{definition}[Tensor closure compatibility]
+For coded states $s_1,s_2,t_1,t_2$, we write
+\[
+\mathrm{QTensorCl}(s_1,s_2;t_1,t_2)
+\]
+iff
+\[
+\mathrm{QClEq}(s_1,t_1)
+\qquad\text{and}\qquad
+\mathrm{QClEq}(s_2,t_2)
+\]
+and the tensor composites
+\[
+s_1\otimes s_2
+\qquad\text{and}\qquad
+t_1\otimes t_2
+\]
+are tensor-admissible.
+\end{definition}
+
+\begin{axiom}[Tensor closure propagation schema]
+If
+\[
+\mathrm{QTensorCl}(s_1,s_2;t_1,t_2),
+\]
+then
+\[
+\mathrm{QClEq}(s_1\otimes s_2,\ t_1\otimes t_2).
+\]
+\end{axiom}
+
+\begin{remark}
+This is the first basic tensor closure principle: closure-equivalent components yield closure-equivalent tensor composites whenever tensor admissibility holds.
+\end{remark}
+
+\begin{definition}[Tensor-coded transport]
+Let
+\[
+o_1=\langle 2,\ell_1,\ell_1',G_1\rangle,
+\qquad
+o_2=\langle 2,\ell_2,\ell_2',G_2\rangle
+\]
+be coded operators. Their tensor-coded transport is
+\[
+o_1\otimes o_2.
+\]
+We say that
+\[
+\mathrm{QTensorTransport}(o_1,o_2;s_1,s_2;t_1,t_2)
+\]
+holds iff:
+\begin{enumerate}
+\item $\mathrm{QAdmTransport}(o_1,s_1,t_1)$;
+\item $\mathrm{QAdmTransport}(o_2,s_2,t_2)$;
+\item $\mathrm{QTensorAdm}(s_1,s_2)$ and $\mathrm{QTensorAdm}(t_1,t_2)$;
+\item $\mathrm{QTensorAdm}(o_1,o_2)$.
+\end{enumerate}
+\end{definition}
+
+\begin{axiom}[Tensor transport admissibility schema]
+If
+\[
+\mathrm{QTensorTransport}(o_1,o_2;s_1,s_2;t_1,t_2),
+\]
+then
+\[
+\mathrm{QAdmTransport}(o_1\otimes o_2,\ s_1\otimes s_2,\ t_1\otimes t_2).
+\]
+\end{axiom}
+
+\begin{remark}
+This is the tensorial lift of admissible transport: admissible componentwise transport induces admissible tensor transport whenever the tensor compatibility conditions are satisfied.
+\end{remark}
+
+\begin{definition}[Tensor-coded readout]
+Let
+\[
+r_1=\langle 3,\ell_1,W_1,R_1\rangle,
+\qquad
+r_2=\langle 3,\ell_2,W_2,R_2\rangle
+\]
+be coded readouts. Their tensor-coded readout is
+\[
+r_1\otimes r_2.
+\]
+We say that $r_1\otimes r_2$ is \emph{tensor closure-compatible} if:
+\begin{enumerate}
+\item $r_1$ and $r_2$ are closure-compatible;
+\item $\mathrm{QTensorAdm}(r_1,r_2)$;
+\item the closure-relevant readout factorization of $r_1\otimes r_2$ depends only on the tensor closure class of the source state.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}
+This is the tensor analogue of closure-compatible readout. It allows tensor-composite visible outputs to differ at raw level while preserving closure content after factorization.
+\end{remark}
+
+\begin{definition}[Tensor branch admissibility]
+Let $b_1,b_2$ be closure-admissible branch codes. Their tensor composite
+\[
+b_1\otimes b_2
+\]
+is called \emph{tensor branch-admissible} if:
+\begin{enumerate}
+\item $\mathrm{QTensorAdm}(b_1,b_2)$;
+\item componentwise branch refinement preserves closure class;
+\item the induced tensor branch refinement preserves closure class at the tensor-composite level.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Tensor shell admissibility]
+Let $\sigma_1,\sigma_2$ be shell-admissible refinement codes. Their tensor composite
+\[
+\sigma_1\otimes \sigma_2
+\]
+is called \emph{tensor shell-admissible} if:
+\begin{enumerate}
+\item $\mathrm{QTensorAdm}(\sigma_1,\sigma_2)$;
+\item componentwise shell refinement preserves closure class;
+\item the induced tensor shell refinement preserves closure class at the tensor-composite level.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}
+Tensor branch admissibility and tensor shell admissibility are the coded QAM precursors of coupled branch/shell transport across multiple structural sectors.
+\end{remark}
+
+\begin{proposition}[Tensor closure preservation principle]
+Let $s_1,s_2,t_1,t_2$ be coded states. Assume
+\[
+\mathrm{QClEq}(s_1,t_1),
+\qquad
+\mathrm{QClEq}(s_2,t_2),
+\qquad
+\mathrm{QTensorAdm}(s_1,s_2),
+\qquad
+\mathrm{QTensorAdm}(t_1,t_2).
+\]
+Then
+\[
+\mathrm{QClEq}(s_1\otimes s_2,\ t_1\otimes t_2).
+\]
+\end{proposition}
+
+\begin{proof}
+This is exactly the tensor closure propagation schema.
+\end{proof}
+
+\begin{proposition}[Tensor transport preservation principle]
+Assume
+\[
+\mathrm{QTensorTransport}(o_1,o_2;s_1,s_2;t_1,t_2).
+\]
+Then
+\[
+\mathrm{QClEq}(s_1\otimes s_2,\ t_1\otimes t_2).
+\]
+\end{proposition}
+
+\begin{proof}
+By tensor transport admissibility,
+\[
+\mathrm{QAdmTransport}(o_1\otimes o_2,\ s_1\otimes s_2,\ t_1\otimes t_2).
+\]
+Admissible transport implies closure preservation, hence
+\[
+\mathrm{QClEq}(s_1\otimes s_2,\ t_1\otimes t_2).
+\]
+\end{proof}
+
+\begin{theorem}[First tensor QAM transport theorem]
+Let
+\[
+o_1,o_2
+\]
+be coded operators,
+\[
+s_1,s_2
+\]
+coded source states,
+and
+\[
+t_1,t_2
+\]
+coded transported states. Assume
+\[
+\mathrm{QTensorTransport}(o_1,o_2;s_1,s_2;t_1,t_2),
+\]
+and let
+\[
+r_1\otimes r_2
+\]
+be a tensor closure-compatible readout. Then the tensor-composite source state and the tensor-composite transported state lie in the same coded closure class:
+\[
+\mathrm{QClEq}(s_1\otimes s_2,\ t_1\otimes t_2),
+\]
+and therefore their closure-relevant tensor readout content agrees after factorization through the tensor class-target map.
+\end{theorem}
+
+\begin{proof}
+By the previous proposition,
+\[
+\mathrm{QClEq}(s_1\otimes s_2,\ t_1\otimes t_2).
+\]
+Since the tensor readout is closure-compatible at tensor level, closure-equivalent tensor-composite states have the same closure-relevant image after factorization. This proves the claim.
+\end{proof}
+
+\begin{corollary}[Tensor branch-shell admissible support]
+If
+\[
+b_1\otimes b_2
+\]
+is tensor branch-admissible and
+\[
+\sigma_1\otimes \sigma_2
+\]
+is tensor shell-admissible, then admissible branch-shell support is preserved at tensor-composite level, provided the relevant tensor admissibility conditions hold.
+\end{corollary}
+
+\begin{remark}
+This is the first indication that the current branch-shell architecture of the Companion can be lifted into a tensor-coded QAM language without changing its closure-first logic. In the internal reading order, this tensor layer remains subordinate to the earlier branch/shell admissibility and translation layers.
+\end{remark}
+
+\begin{remark}[Current status of tensor QAM]
+At the present stage, the tensor rules do not yet define a full monoidal calculus. They only establish the first closure-preserving, transport-preserving, and readout-compatible tensor schemata needed for a structure-first QAM development over ZF.
+\end{remark}
+
+
+\subsection*{QAM translation theorem for the admissible OP fragment}
+
+We now make explicit that the present OP/branch/shell architecture may be translated into the coded QAM-over-ZF language without changing its closure-first logic. At the current stage, this is not yet claimed as a full equivalence of entire formal systems. It is claimed only as a faithful translation on the admissible fragment of the OP transport architecture.
+
+\begin{definition}[Translation map from the OP fragment into QAM codes]
+Let $\mathfrak{O}_{\mathrm{adm}}$ denote the admissible OP fragment consisting of:
+\begin{enumerate}
+\item source and return states of the OP transport architecture;
+\item intermediate OP transport states;
+\item admissible branch data;
+\item OP3 shell-admissible refinement data;
+\item admissible routed support data.
+\end{enumerate}
+A \emph{QAM translation map} is a coding assignment
+\[
+\tau:\mathfrak{O}_{\mathrm{adm}}\to \mathfrak{Q}_{\mathrm{adm}}
+\]
+from admissible OP objects into admissible QAM-coded objects such that:
+\begin{enumerate}
+\item source/readout objects are sent to coded states and coded readouts;
+\item OP transport maps are sent to coded operator maps;
+\item admissible branches are sent to closure-admissible branch codes;
+\item OP3 shell-admissible refinements are sent to shell-admissible refinement codes;
+\item admissible routed support is sent to admissible routed support codes.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}
+The point of $\tau$ is not merely syntactic recoding. It must preserve the structural roles of the translated objects: source remains source, admissible transport remains admissible transport, shell-admissible refinement remains shell-admissible refinement, and so on.
+\end{remark}
+
+\begin{definition}[Faithfulness on closure data]
+The translation map $\tau$ is called \emph{closure-faithful} if for all admissible OP objects $X,Y\in\mathfrak{O}_{\mathrm{adm}}$,
+\[
+X \sim_{\mathrm{cl}} Y
+\qquad\Longrightarrow\qquad
+\mathrm{QClEq}(\tau(X),\tau(Y)),
+\]
+and whenever the OP-side relation expresses admissible preservation of the native closure-bearing mode, the translated QAM-side relation expresses coded closure preservation.
+\end{definition}
+
+\begin{definition}[Readout compatibility of the translation]
+The translation map $\tau$ is called \emph{readout-compatible} if OP-side closure-compatible readout invariants correspond, after translation, to QAM-coded closure-compatible readouts on the image of $\tau$.
+\end{definition}
+
+\begin{remark}
+Readout compatibility is the crucial condition preventing the translation from preserving only the objects while losing the closure-first interpretation of the theory.
+\end{remark}
+
+\begin{theorem}[QAM translation theorem for the admissible OP fragment]\label{thm:qam-translation}
+Assume that:
+\begin{enumerate}
+\item the OP transport architecture is given on its admissible fragment $\mathfrak{O}_{\mathrm{adm}}$;
+\item there exists a closure-faithful and readout-compatible translation map
+\[
+\tau:\mathfrak{O}_{\mathrm{adm}}\to \mathfrak{Q}_{\mathrm{adm}};
+\]
+\item admissible OP transport, admissible branches, OP3 shell-admissible refinements, and admissible routed support are translated according to the preceding definitions.
+\end{enumerate}
+Then the following OP-side statements are preserved under translation into QAM-over-ZF:
+
+\begin{enumerate}
+\item \textbf{OP closure preservation.}  
+If the OP1--OP5 source-return pair is closed at invariant level, then its QAM-coded image is closure-preserving at coded level.
+
+\item \textbf{Intermediate transport preservation.}  
+If the intermediate OP layers preserve the native closure-bearing mode, then their QAM-coded images preserve the coded closure class.
+
+\item \textbf{Branch admissibility preservation.}  
+If a branch is closure-admissible on the OP side, then its image under $\tau$ is a closure-admissible branch code on the QAM side.
+
+\item \textbf{Shell admissibility preservation.}  
+If an OP3 refinement is shell-admissible on the OP side, then its image under $\tau$ is a shell-admissible refinement code on the QAM side.
+
+\item \textbf{Routed admissible support preservation.}  
+If a routed support sector is admissible and normalized on the OP side, then its image under $\tau$ is an admissible and normalized routed support code on the QAM side, and its closure-relevant content is preserved.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Each clause follows from closure-faithfulness and readout compatibility of the translation map.
+
+For (1), closure of the OP1--OP5 pair means preservation of the native closure-bearing mode at the source-return level. By closure-faithfulness, this becomes coded closure preservation for the translated source and return states.
+
+For (2), invariant preservation across intermediate OP layers is, by assumption, preservation of the same closure-bearing mode through admissible transport. Again, closure-faithfulness translates this into preservation of coded closure class for the corresponding QAM-coded states and operator actions.
+
+For (3), branch admissibility on the OP side means precisely that the branchwise refinement preserves the native closure-bearing mode. By the definition of the translation map, admissible branches are sent to branch codes that preserve coded closure class.
+
+For (4), shell admissibility at OP3 means that the refinement does not change the native closure-bearing mode. By translation, this becomes shell-admissibility of the corresponding QAM refinement code.
+
+For (5), admissible routed support is translated by hypothesis into admissible routed support codes. Readout compatibility ensures that closure-relevant readout content is preserved after translation, and normalization of support weights is preserved by the routed support coding layer.
+\end{proof}
+
+\begin{corollary}[QAM image of the current OP core]
+The current OP core of the Companion --- including source-return closure, intermediate transport, admissible branches, OP3 shell admissibility, and admissible routed support --- admits a faithful coded realization inside QAM-over-ZF.
+\end{corollary}
+
+\begin{remark}
+This corollary is the first formal justification for introducing QAM as a structure-first coded language over ZF. It shows that the current OP architecture does not need to be abandoned or replaced in order to enter the QAM setting; it can be carried into that setting by faithful translation.
+\end{remark}
+
+\begin{definition}[Partial decoding map]
+A \emph{partial decoding map} is a map
+\[
+\delta:\mathfrak{Q}_{\mathrm{adm}}\dashrightarrow \mathfrak{O}_{\mathrm{adm}}
+\]
+defined on the admissible QAM fragment such that for translated admissible OP objects,
+\[
+\delta(\tau(X))=X.
+\]
+\end{definition}
+
+\begin{remark}
+At the present stage, $\delta$ is only required on the image of the admissible OP fragment. No full decoding of arbitrary QAM-coded expressions is assumed yet.
+\end{remark}
+
+\begin{proposition}[Round-trip property on the admissible fragment]
+If a partial decoding map $\delta$ exists on the image of $\tau$, then
+\[
+\delta\circ\tau = \mathrm{id}_{\mathfrak{O}_{\mathrm{adm}}}.
+\]
+Hence the admissible OP fragment is recoverable from its translated QAM image.
+\end{proposition}
+
+\begin{proof}
+This is immediate from the definition of the partial decoding map.
+\end{proof}
+
+\begin{remark}
+The round-trip property is intentionally weaker than full bi-interpretability. It only says that the currently relevant admissible OP fragment can be faithfully encoded into QAM-over-ZF and read back without structural loss.
+\end{remark}
+
+\begin{corollary}[Tensor-compatible translation]
+If the admissible OP fragment contains tensorially paired sectors and the translation map respects tensor-coded formation, then admissible tensor closure and admissible tensor transport are preserved under translation as well.
+\end{corollary}
+
+\begin{remark}[Current status of the translation theorem]
+The present theorem should be read as a conservative first step. It does not yet prove that all future QAM constructions are already reducible to the current OP architecture, nor that the entire QAM language has been fully decoded back into OP form. What it proves is that the current admissible OP core already embeds faithfully into the coded QAM-over-ZF language.
+\end{remark}
 
 \section*{Nomenclature}
 \addcontentsline{toc}{section}{Nomenclature}
@@ -19339,9 +20332,9 @@ The table below records the currently preserved Companion chain in strictly
 increasing version order. Zenodo releases are listed together with a publication-date
 column; earlier intermediate records are retained so that the release chronology remains reconstructible.
 
-For the latest public release row (v3.14.0), the version-specific DOI is fixed as \href{https://doi.org/10.5281/zenodo.19460589}{10.5281/zenodo.19460589}; the concept DOI remains the stable title-page pointer, while the prior public release rows remain part of the normalized chronology.
+For the latest public release row (v3.15.0), the version-specific DOI is fixed as \href{https://doi.org/10.5281/zenodo.19463389}{10.5281/zenodo.19463389}; the concept DOI remains the stable title-page pointer, while the prior public release rows remain part of the normalized chronology.
 
-The present v\docversion\ file is the public Zenodo release of the next Companion step above the public v3.13.0 line and is listed below as the current latest public release row.
+The present v\docversion\ file is the first public QAM-oriented release above the public v3.14.0 baseline. It is recorded below as the current latest public release row.
 
 {\small
 \renewcommand{\arraystretch}{1.12}
@@ -19358,7 +20351,9 @@ The present v\docversion\ file is the public Zenodo release of the next Companio
 \endhead
 Concept DOI & concept record & ongoing pointer & \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} \\
 \hline
-v3.14.0 & public Zenodo release & 2026-04-07 & \href{https://doi.org/10.5281/zenodo.19460589}{10.5281/zenodo.19460589} --- current latest public release; extends the public v3.13.0 line by freezing the first post-closure branch/shell hardening layer \\
+v3.15.0 & public Zenodo release & 2026-04-08 & \href{https://doi.org/10.5281/zenodo.19463389}{10.5281/zenodo.19463389} --- current latest public release; freezes the first compressed public-shape QAM core on top of the public v3.14.0 branch/shell baseline \\
+\hline
+v3.14.0 & public Zenodo release & 2026-04-07 & \href{https://doi.org/10.5281/zenodo.19460589}{10.5281/zenodo.19460589} --- prior public release; extends the public v3.13.0 line by freezing the first post-closure branch/shell hardening layer \\
 \hline
 v3.3.0 & local working state & 2026-04-03 & condensed Appendix-C integration of Julia-boundary, master-residual, Umkehrwalze, and reversal-probe sector \\
 \hline
@@ -20426,7 +21421,7 @@ Zenodo, March 2026.
 Marc Brendecke,
 \emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding} (v3.8.57; local working state above the public 3.8.18 release),
 April 2026.
-\newblock Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}; latest public release DOI: \href{https://doi.org/10.5281/zenodo.19460589}{10.5281/zenodo.19460589}. 
+\newblock Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}; latest public release DOI: \href{https://doi.org/10.5281/zenodo.19463389}{10.5281/zenodo.19463389}. 
 
 \bibitem{kim2026}
 Yilwook Kim,
@@ -21832,6 +22827,298 @@ If the inequality fails, then the common visible shell mode is canonically nonze
 
 \begin{remark}[Working interpretation of the final corridor]
 The remaining visible problem is now compressed as far as the current structure allows. It is no longer a pair of unfinished closures, nor even two shell loads. It is one corridor question: can the higher-order rescue sector absorb the normalized combined architecture load after exact transport, or does a canonical observer-shell remainder necessarily survive?
+\end{remark}
+
+
+
+\subsection{QAM-over-ZF: operator families and lambda-like structural maps}
+
+We now close the first internal QAM package by adding an operator-family and lambda-like structural layer on top of the already introduced transport, branch/shell, tensor, and translation strata. The point remains conservative: no higher-order foundation is introduced. Instead, families of coded operators and lambda-like structural maps are themselves represented as set-codes over ZF and are required to preserve closure content on the admissible fragment.
+
+\begin{definition}[Operator-family code]
+A set
+\[
+\mathfrak{o}=\langle 9,I,F\rangle
+\]
+is called an \emph{operator-family code} if $I$ is an index code and $F$ is a graph-code assigning to each $i\in I$ a coded operator $o_i$.
+\end{definition}
+
+\begin{definition}[Admissible operator family]
+An operator-family code
+\[
+\mathfrak{o}=\langle 9,I,F\rangle
+\]
+is called \emph{admissible} if every member operator $o_i$ coded by $F$ is admissible on its intended coded state domain. Equivalently, for every admissible coded source state $s$ and every coded target state $t$ linked by some member $o_i$, one has
+\[
+\mathrm{QAdmTransport}(o_i,s,t)
+\Longrightarrow
+\mathrm{QClEq}(s,t).
+\]
+\end{definition}
+
+\begin{remark}
+Thus admissibility of an operator family means pointwise closure preservation across the family. The family layer does not weaken the closure-first discipline already imposed on single coded operators.
+\end{remark}
+
+\begin{definition}[Lambda-like structural map code]
+A set
+\[
+\lambda=\langle 10,D,C,L\rangle
+\]
+is called a \emph{lambda-like structural map code} if $D$ codes an intended domain class of QAM-coded objects, $C$ codes an intended codomain class, and $L$ is a graph-code assigning to each coded object in $D$ a coded object in $C$.
+\end{definition}
+
+\begin{definition}[Closure-compatible lambda map]
+A lambda-like structural map code $\lambda$ is called \emph{closure-compatible} on a coded state domain if for all coded states $s,t$ in that domain,
+\[
+\mathrm{QClEq}(s,t)
+\Longrightarrow
+\mathrm{QClEq}(\lambda(s),\lambda(t)),
+\]
+whenever the values $\lambda(s)$ and $\lambda(t)$ are coded states.
+\end{definition}
+
+\begin{remark}
+This is the lambda-level analogue of admissible transport. A closure-compatible lambda map need not itself be read as a transport along one fixed route; it may instead be a structural selector, reindexer, collector, or support-transforming map, provided it preserves closure class on the admissible fragment.
+\end{remark}
+
+\begin{definition}[Support-selection lambda]
+A closure-compatible lambda-like structural map is called a \emph{support-selection lambda} if it acts on admissible branch-shell support codes and returns a coded sub-support, preferred support, or selected routed support without leaving the admissible closure regime.
+\end{definition}
+
+\begin{proposition}[Pointwise closure preservation for admissible operator families]
+Let
+\[
+\mathfrak{o}=\langle 9,I,F\rangle
+\]
+be an admissible operator family. If $o_i$ is a member of the family and
+\[
+\mathrm{QAdmTransport}(o_i,s,t),
+\]
+then
+\[
+\mathrm{QClEq}(s,t).
+\]
+Consequently, every closure-compatible readout identifies the closure-relevant content of $s$ and $t$ after factorization.
+\end{proposition}
+
+\begin{proof}
+This is immediate from pointwise admissibility of the family members together with admissibility-implies-closure preservation and closure-compatible readout.
+\end{proof}
+
+\begin{proposition}[Closure preservation under closure-compatible lambda maps]
+Let $\lambda$ be a closure-compatible lambda-like structural map on an admissible coded state domain. If
+\[
+\mathrm{QClEq}(s,t),
+\]
+then
+\[
+\mathrm{QClEq}(\lambda(s),\lambda(t)),
+\]
+whenever the values are coded states.
+\end{proposition}
+
+\begin{proof}
+This is exactly the defining property of closure-compatible lambda maps.
+\end{proof}
+
+\begin{theorem}[First QAM operator-family/lambda theorem]
+Assume:
+\begin{enumerate}
+\item $\mathfrak{o}=\langle 9,I,F\rangle$ is an admissible operator family;
+\item $\lambda=\langle 10,D,C,L\rangle$ is a closure-compatible lambda-like structural map on the relevant admissible fragment;
+\item $r$ is a closure-compatible coded readout.
+\end{enumerate}
+Then the following hold.
+\begin{enumerate}
+\item \textbf{Familywise transport preservation.}  
+For every member operator $o_i$ of $\mathfrak{o}$ and every admissible transport step
+\[
+\mathrm{QAdmTransport}(o_i,s,t),
+\]
+one has
+\[
+\mathrm{QClEq}(s,t).
+\]
+
+\item \textbf{Lambda-level closure preservation.}  
+If in addition
+\[
+\mathrm{QClEq}(s,t),
+\]
+then
+\[
+\mathrm{QClEq}(\lambda(s),\lambda(t)).
+\]
+
+\item \textbf{Readout stability after family transport and lambda action.}  
+Whenever the composed expressions are defined on the admissible fragment, the closure-relevant readout content of
+\[
+s,
+\quad t,
+\quad \lambda(s),
+\quad \lambda(t)
+\]
+agrees after factorization through the associated class-target maps.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+The first claim is pointwise admissibility of the operator family. The second is closure preservation under the lambda-like map. The third follows because closure-compatible readout factors through coded closure class, and all four coded states listed in the statement lie in the same closure class whenever the hypotheses apply.
+\end{proof}
+
+\begin{corollary}[Operator-family/lambda lift of the admissible OP fragment]
+The admissible OP fragment translated into QAM-over-ZF remains stable not only under single admissible coded operators, but also under admissible operator families and closure-compatible lambda-like structural maps acting on the translated fragment.
+\end{corollary}
+
+\begin{remark}
+This is the first point at which the QAM layer becomes more than a static coding scheme. It now supports controlled families of operations and closure-preserving structural maps on the admissible fragment while remaining conservative over ZF.
+\end{remark}
+
+\begin{remark}[Transition to support selection]
+The preceding operator-family/lambda layer is the last part of the internal QAM package that still acts directly on admissible transport and closure data. The next layer is different in status: support selection and degeneracy handling do not generate admissibility, but only refine already admissible branch-shell support after the closure-first filters have been applied.
+\end{remark}
+
+\subsection{QAM-over-ZF: support selection and degeneracy handling}
+
+We now add a first support-selection layer on top of the already translated admissible QAM fragment. The purpose of this layer is not to replace closure-admissibility or shell-admissibility, but to order admissible support after those primary filters have already been applied. Thus QAM selection is subordinate to closure preservation and only acts inside the admissible branch-shell sector.
+
+\begin{definition}[Support candidate code]
+A set
+\[
+\varsigma = \langle 11,\Omega,w\rangle
+\]
+is called a \emph{support candidate code} if $\Omega$ codes a family of admissible branch-shell pairs and $w$ codes a weight or preference assignment on $\Omega$.
+\end{definition}
+
+\begin{remark}
+A support candidate code is the QAM analogue of a visible support sector restricted in advance to admissible branch-shell data. It is therefore a post-admissibility object rather than a primitive closure object.
+\end{remark}
+
+\begin{definition}[Support preference relation]
+For support candidate codes $\varsigma_1,\varsigma_2$, we write
+\[
+\mathrm{QSuppPref}(\varsigma_1,\varsigma_2)
+\]
+if $\varsigma_1$ is structurally preferred to $\varsigma_2$ according to the current coded selection discipline. At the present stage, this relation is only required to refine the closure-first hierarchy:
+\[
+\text{closure preservation}
+\;>\;
+\text{branch admissibility}
+\;>\;
+\text{shell admissibility}
+\;>\;
+\text{support preference}
+\;>\;
+\text{visible routed weight}.
+\]
+\end{definition}
+
+\begin{remark}
+Thus support preference never overrides admissibility. It only compares already admissible support candidates.
+\end{remark}
+
+\begin{definition}[Closure-compatible support selector]
+A lambda-like structural map
+\[
+\lambda_{\mathrm{sel}}=\langle 10,D,C,L\rangle
+\]
+is called a \emph{closure-compatible support selector} if:
+\begin{enumerate}
+\item its domain consists of admissible support candidate codes;
+\item its values are coded selected supports or coded preferred subsupports;
+\item whenever two input support candidates encode the same closure-bearing admissible content up to support degeneracy, their images under $\lambda_{\mathrm{sel}}$ are closure-equivalent or support-equivalent at coded level.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Support degeneracy]
+Two admissible support candidate codes $\varsigma_1,\varsigma_2$ are called \emph{support-degenerate} if they differ only by admissible re-indexing, admissible redistribution of coded visible weight, or admissible closure-equivalent regrouping, while preserving the same coded closure-bearing support content.
+\end{definition}
+
+\begin{remark}
+Support degeneracy is the QAM-over-ZF shadow of carrier degeneracy and readout multiplicity in the current Companion line. It records when several admissible support realizations should still be read as one structural support type.
+\end{remark}
+
+\begin{definition}[Selected routed support code]
+If $\lambda_{\mathrm{sel}}$ is a closure-compatible support selector and $\varsigma$ is an admissible support candidate code, then
+\[
+\lambda_{\mathrm{sel}}(\varsigma)
+\]
+is called the corresponding \emph{selected routed support code}, whenever the value is defined.
+\end{definition}
+
+\begin{proposition}[Selection stays inside the admissible QAM fragment]
+Let $\lambda_{\mathrm{sel}}$ be a closure-compatible support selector and let $\varsigma$ be an admissible support candidate code. Then every selected routed support code
+\[
+\lambda_{\mathrm{sel}}(\varsigma)
+\]
+remains inside the admissible QAM support fragment.
+\end{proposition}
+
+\begin{proof}
+By definition, the domain of $\lambda_{\mathrm{sel}}$ consists only of admissible support candidate codes, and the selector is required to return coded selected supports or preferred subsupports without leaving the closure-compatible admissible regime. Hence the selected support remains inside the admissible fragment.
+\end{proof}
+
+\begin{proposition}[Closure preservation under support selection]
+Let $\varsigma$ be an admissible support candidate code and let $\lambda_{\mathrm{sel}}$ be a closure-compatible support selector. Then the closure-relevant content of
+\[
+\lambda_{\mathrm{sel}}(\varsigma)
+\]
+agrees with the closure-relevant content of $\varsigma$ after passage through the associated closure-factor map.
+\end{proposition}
+
+\begin{proof}
+Support selection acts only after admissibility has already been established and is required to be closure-compatible. Therefore the selector cannot change the coded closure-bearing content of the admissible support candidate; it may only refine, reduce, or prefer one admissible representation over another. Closure-compatible readout therefore identifies the closure-relevant content of the input and output supports after factorization.
+\end{proof}
+
+\begin{corollary}[Support selection does not create closure]
+A selected routed support is closure-preserving only because it is selected from an already admissible support candidate. Selection itself is not an independent source of closure.
+\end{corollary}
+
+\begin{remark}
+This is the coded QAM analogue of the structure-first rule that preferred support must be read only after closure and admissibility have already been fixed.
+\end{remark}
+
+\begin{proposition}[Degenerate supports may be identified after selection]
+Let $\varsigma_1,\varsigma_2$ be support-degenerate admissible support candidate codes. If $\lambda_{\mathrm{sel}}$ is a closure-compatible support selector, then
+\[
+\lambda_{\mathrm{sel}}(\varsigma_1)
+\qquad\text{and}\qquad
+\lambda_{\mathrm{sel}}(\varsigma_2)
+\]
+may be treated as equivalent selected supports at the coded structural level.
+\end{proposition}
+
+\begin{proof}
+Since $\varsigma_1$ and $\varsigma_2$ differ only by admissible re-indexing, admissible redistribution of visible weight, or closure-equivalent regrouping, they carry the same coded closure-bearing support content. Closure-compatibility of the selector ensures that this content is preserved under selection. Therefore their selected images may be identified at the coded structural level.
+\end{proof}
+
+\begin{theorem}[First QAM support-selection theorem]
+Assume:
+\begin{enumerate}
+\item $\varsigma$ is an admissible support candidate code;
+\item $\lambda_{\mathrm{sel}}$ is a closure-compatible support selector;
+\item $r$ is a closure-compatible coded readout on the relevant support fragment.
+\end{enumerate}
+Then:
+\begin{enumerate}
+\item the selected routed support code $\lambda_{\mathrm{sel}}(\varsigma)$ remains admissible;
+\item the closure-relevant readout content of $\lambda_{\mathrm{sel}}(\varsigma)$ agrees with that of $\varsigma$ after factorization;
+\item support-degenerate admissible candidates yield equivalent selected supports at coded structural level.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+The first claim is selection-stays-inside-admissible-fragment. The second is closure preservation under support selection. The third is the degeneracy proposition above. Together they show that support selection in QAM is a post-admissibility refinement layer rather than an independent closure mechanism.
+\end{proof}
+
+\begin{remark}
+This is the first QAM-over-ZF support-selection layer. It does not yet impose one final universal selector. It only provides the structural place where preferred support, selected support, and degeneracy handling may be coded without violating the closure-first architecture inherited from the current Companion line.
+\end{remark}
+
+
+\begin{remark}[Current closure of the internal QAM package]
+At the present internal stage, the QAM-over-ZF line has reached a first connected package state: coded objects, primitive predicates, admissible transport, coded closure-class preservation, closure-compatible readout, branch/shell/routed admissibility, tensor closure rules, faithful translation of the admissible OP fragment, operator-family/lambda-like maps, and support-selection/degeneracy handling are now all present inside one conservative ZF-grounded coding line. The next natural work should therefore focus on normalization, compression, and later public extraction rather than immediate uncontrolled enlargement.
 \end{remark}
 
 \end{document}
