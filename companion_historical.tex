@@ -6924,11 +6924,65 @@ material.
 \clearpage
 
 \subsection*{Version and DOI record}
-The table below records the currently preserved Companion chain in strictly
-increasing version order. Zenodo releases are listed together with a publication-date
-column; earlier intermediate records are retained so that the release chronology remains reconstructible.
+The version/DOI history had started to mix three different functions in one place: (i) a current public-release chronology, (ii) local working checkpoints, and (iii) an older archival snapshot that was no longer fully normalized. To keep the release line readable, the current-era public chronology is normalized first, while the older mixed snapshot is retained immediately afterwards as archival proof-memory.
 
-The following chronology block is preserved as an \emph{archival DOI/history snapshot} from an earlier release-normalization stage. It should not be read as the current release register for the present v\docversion\ release. For the active release line, the concept DOI remains the stable title-page pointer; version-specific DOI updates should be taken only from explicit release or freeze notes.
+\subsection*{Normalized current public chronology (v3.13.0 onward)}
+The following table is the intended quick-reference register for the current public 3.x line. It corrects the earlier omission of several later public checkpoints and makes explicit where a version label was used only as a working line or where a separate public Zenodo release could not yet be reconstructed from the preserved file set.
+
+{\small
+\renewcommand{\arraystretch}{1.12}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\begin{longtable}{|p{0.14\textwidth}|p{0.18\textwidth}|p{0.15\textwidth}|p{0.40\textwidth}|}
+\hline
+\textbf{Version / record} & \textbf{Status} & \textbf{Publication date} & \textbf{DOI / note} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Version / record} & \textbf{Status} & \textbf{Publication date} & \textbf{DOI / note} \\
+\hline
+\endhead
+Concept DOI & concept record & ongoing pointer & \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} \\
+\hline
+v3.13.0 & public Zenodo release & 2026-04-07 & \href{https://doi.org/10.5281/zenodo.19446872}{10.5281/zenodo.19446872} --- stabilized public checkpoint before the first post-closure branch/shell hardening line \\
+\hline
+v3.14.0 & public Zenodo release & 2026-04-07 & \href{https://doi.org/10.5281/zenodo.19460589}{10.5281/zenodo.19460589} --- first post-closure branch/shell hardening layer \\
+\hline
+v3.15.0 & public Zenodo release & 2026-04-08 & \href{https://doi.org/10.5281/zenodo.19463389}{10.5281/zenodo.19463389} --- first compressed public-shape QAM core over the branch/shell baseline \\
+\hline
+v3.16.0 & public Zenodo release & 2026-04-10 & \href{https://doi.org/10.5281/zenodo.19489324}{10.5281/zenodo.19489324} --- second public-shape QAM branch/shell/routed layer \\
+\hline
+v3.17.0 & public Zenodo release & 2026-04-10 & \href{https://doi.org/10.5281/zenodo.19522352}{10.5281/zenodo.19522352} --- tensor/operator public line above the v3.16.0 baseline \\
+\hline
+v3.18.0 & public Zenodo release & 2026-04-13 & \href{https://doi.org/10.5281/zenodo.19548590}{10.5281/zenodo.19548590} --- first public OP~3/QAM closure package with shell certificates and bundled OP~3$\to$OP~5/global interface \\
+\hline
+v3.19.0 & historical public QAM line & reconstruction pending & witness-grade hardening and local reopening discipline are referenced repeatedly in the preserved text, but a separate version-specific Zenodo DOI row could not be reconstructed from the currently preserved file set without risking a false insertion \\
+\hline
+v3.20.0 & public Zenodo release & 2026-04-13 & \href{https://doi.org/10.5281/zenodo.19571954}{10.5281/zenodo.19571954} --- theorem-level shadow package together with the terminal crystal--shadow interface checkpoint \\
+\hline
+v3.21.0 & public Zenodo release & 2026-04-13 & \href{https://doi.org/10.5281/zenodo.19576799}{10.5281/zenodo.19576799} --- interface-payoff layer on top of the public v3.20.0 shadow package \\
+\hline
+v3.22.0 & public Zenodo release & 2026-04-13 & \href{https://doi.org/10.5281/zenodo.19581855}{10.5281/zenodo.19581855} --- first partial-closure and interface-hardening steps above the v3.21.0 payoff layer \\
+\hline
+v3.23.0 & public Zenodo release & 2026-04-13 & \href{https://doi.org/10.5281/zenodo.19582751}{10.5281/zenodo.19582751} --- reduced retained-carrier optical approximation together with partial-closure / restricted lift-back reading on the historical public line \\
+\hline
+v3.24.0 & no separate public Zenodo release preserved & not applicable & the version label does not appear as a distinct preserved public Zenodo release in the current Companion file set; the chain jumps from v3.23.0 to v3.25.0 \\
+\hline
+v3.25.0 & public Zenodo release & 2026-04-16 & \href{https://doi.org/10.5281/zenodo.19615952}{10.5281/zenodo.19615952} --- optical-comparison and machine-theoretic overlay consolidation, including compressed optical diagnostic control and capped machine-overlay equivalence surface \\
+\hline
+v3.26.0 & local working line only & not a public Zenodo release & preserved as a working-stage label between the public v3.25.0 and v3.27.0 checkpoints; no separate public version DOI is recorded for it \\
+\hline
+v3.27.0 & public Zenodo release & 2026-04-18 & \href{https://doi.org/10.5281/zenodo.19643697}{10.5281/zenodo.19643697} --- bidirectional machine-shadow split, retained total/imbalance channel discipline, compressed live-burden dictionary, and freeze-clean public line before the tool/QAM/decoder revision \\
+\hline
+v3.28.0 & public Zenodo release & 2026-04-19 & \href{https://doi.org/10.5281/zenodo.19648743}{10.5281/zenodo.19648743} --- completes the immediate tool/QAM/decoder revision on top of public v3.27.0, including the normalized tool ledger, QAM menu-tag-registry layer, tag-first reopening routes, and Monte-Carlo residual-signature decoder package \\
+\hline
+\end{longtable}
+}
+
+\noindent Note. The normalized table above is the intended quick-reference history for the current public 3.x line. It also makes explicit where the preserved project record supports only a working-line label (v3.26.0), where a public label appears to have been skipped rather than separately released (v3.24.0), and where the text preserves a public-stage reference but the version-specific DOI row itself still needs reconstruction from the publication log (v3.19.0).
+
+\subsection*{Archival mixed chronology snapshot}
+The longer table below is retained as an \emph{archival DOI/history snapshot} from an earlier release-normalization stage. It deliberately mixes public releases and local working states and is therefore no longer fully normalized by increasing version number. It remains useful for proof-memory, checkpoint genealogy, and recovery of older local subversion notes, but the normalized public chronology above should be read first whenever the question is simply ``which public version had which DOI?''
 
 {\small
 \renewcommand{\arraystretch}{1.12}
@@ -6945,7 +6999,7 @@ The following chronology block is preserved as an \emph{archival DOI/history sna
 \endhead
 Concept DOI & concept record & ongoing pointer & \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} \\
 \hline
-v3.25.0 & public Zenodo release & 2026-04-16 & \href{https://doi.org/10.5281/zenodo.19615952}{10.5281/zenodo.19615952} --- current latest public release; consolidates the optical-comparison and machine-theoretic overlay line, including compressed optical diagnostic control, bundled proof-use compression, conditional reference-core closure, and the capped machine-theoretic overlay line up to the present equivalence surface \\ 
+v3.25.0 & public Zenodo release & 2026-04-16 & \href{https://doi.org/10.5281/zenodo.19615952}{10.5281/zenodo.19615952} --- then-current latest public release; consolidates the optical-comparison and machine-theoretic overlay line, including compressed optical diagnostic control, bundled proof-use compression, conditional reference-core closure, and the capped machine-theoretic overlay line up to the present equivalence surface \\ 
 \hline
 v3.18.0 & public Zenodo release & 2026-04-13 & \href{https://doi.org/10.5281/zenodo.19548590}{10.5281/zenodo.19548590} --- prior public release; carries the public v3.17.0 tensor/operator baseline forward into a first public OP~3/QAM closure package with shell certificates, shell-defect localization, shell-stable readout factorization, and a bundled OP~3$\to$OP~5/global interface while keeping stronger kernel-first activation internal \\
 \hline
