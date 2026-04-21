@@ -1,0 +1,12 @@
+Quantum Sphaera Companion: A Structure-First Mathematical Unfolding (v3.30.0)
+
+This release advances the public Quantum Sphaera Companion line to v3.30.0 and consolidates the post-v3.29.0 conservative upgrade and probe-integration stage into a release-ready audited version. The title page continues to display the concept DOI, while the version-specific DOI is recorded in the version and chronology material.
+
+The main contribution of v3.30.0 is the stabilization and completion of a certificate-aware conservative continuation architecture beyond the earlier tool-layer consolidation. Building on the previously established decision, token, routing, readout, crystal, field-diagnostic, admissibility, and upgrade-menu layers, this version develops a fuller conservative workflow: probe-compatible upgrade packets, finite probe-ranked work queues, queue-extracted working programs, route-faithful lead tasks, executable conservative packets, first conservative result forms, compact conservative readout and comparison surfaces, OP-facing intake and request/fulfillment logic, and a completed second downstream loop with explicit close/promote, branch, consume, task, program, cycle, and return structure. The result is a mathematically cleaner conservative continuation staircase that can be consumed downstream without reopening the underlying route or erasing the inherited boundary stop.
+
+A central structural feature of this release is that matrix, crystal, field-profile, decoder, and Monte Carlo/probe layers are now coordinated under one certificate-aware discipline. Diagnostic and probe layers may rank, cluster, compress, and profile admissible states, but they do not manufacture new theorematic certificates, do not blur the inherited horizon/boundary distinction, and do not override the earliest honest boundary stop. This makes the present line more suitable as a controlled pre-OP working interface rather than merely a descriptive collection of local tools.
+
+This release also preserves the full historical witness in Part II, keeping the current public line connected to its integrated proof-memory and release genealogy. The audited v3.30.0 version removes the earlier accidental duplication issue from the first draft release build and restores a clean single frontmatter / single Part II / single version-record structure.
+
+Version DOI: 10.5281/zenodo.19682951
+Concept DOI: 10.5281/zenodo.19210728
