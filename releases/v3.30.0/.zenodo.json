@@ -1,0 +1,26 @@
+{
+  "title": "Quantum Sphaera Companion: A Structure-First Mathematical Unfolding (v3.30.0)",
+  "description": "Public audited release v3.30.0 of the Quantum Sphaera Companion. This version extends the post-v3.29.0 conservative upgrade-plus-probe integration line into a fuller certificate-aware continuation architecture, including probe-compatible upgrade packets, ranked work queues, executable conservative packets, compact readout/output/intake surfaces, OP-facing request/fulfillment/aggregation/dispatch/program/cycle/return logic, and a completed second downstream loop with explicit close/promote and branch-consumption structure. Matrix, crystal, field-profile, decoder, and Monte Carlo/probe layers are now coordinated under a route-faithful conservative discipline that preserves inherited certificates and the earliest honest boundary stop. The full historical witness remains preserved in Part II.",
+  "creators": [
+    {
+      "name": "Brendecke, Marc"
+    }
+  ],
+  "keywords": [
+    "Quantum Sphaera",
+    "structure-first mathematics",
+    "certificate-aware continuation",
+    "probe integration",
+    "conservative upgrade architecture"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.19210728",
+      "relation": "isVersionOf",
+      "scheme": "doi"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "upload_type": "publication",
+  "publication_type": "report"
+}
