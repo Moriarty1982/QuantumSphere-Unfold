@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/1217191571.svg)](https://doi.org/10.5281/zenodo.19691419)
+
 # QuantumSphere-Unfold
 
 Public repository for the *Quantum Sphaera Companion* release line.
