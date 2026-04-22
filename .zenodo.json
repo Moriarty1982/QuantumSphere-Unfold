@@ -1,8 +1,7 @@
 {
   "title": "Quantum Sphaera Companion: A Structure-First Mathematical Unfolding",
-  "version": "3.31.0-release",
   "upload_type": "software",
-  "description": "Groundwork-complete pre-OP frontier release of the Quantum Sphaera Companion. This version freezes the full mathematical foundation layer before explicit OP 1-5 work and presents the current line as a frontier-certified pre-entry synthesis state.",
+  "description": "Canonical metadata for the QuantumSphere-Unfold GitHub mirror. This repository is used for synchronization, release preparation metadata, and public project-state tracking. Final document releases are prepared outside the repository workflow and published to Zenodo manually from the finalized document bundle.",
   "creators": [
     {
       "name": "Brendecke, Marc"
@@ -12,8 +11,8 @@
     "Quantum Sphaera",
     "Quantum Sphaera Companion",
     "structure-first mathematics",
-    "pre-OP foundation",
-    "frontier-certified pre-entry",
+    "project mirror",
+    "release preparation",
     "paired conservative framework"
   ],
   "access_right": "open",
@@ -26,8 +25,8 @@
     },
     {
       "identifier": "https://doi.org/10.5281/zenodo.19682951",
-      "relation": "isNewVersionOf",
-      "resource_type": "software"
+      "relation": "references",
+      "resource_type": "publication-softwaredocumentation"
     },
     {
       "identifier": "https://github.com/Moriarty1982/QuantumSphere-Unfold",
