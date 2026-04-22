@@ -23,6 +23,16 @@
       "identifier": "https://doi.org/10.5281/zenodo.19210728",
       "relation": "isSupplementTo",
       "resource_type": "publication-softwaredocumentation"
+    },
+    {
+      "identifier": "https://doi.org/10.5281/zenodo.19682951",
+      "relation": "isNewVersionOf",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://github.com/Moriarty1982/QuantumSphere-Unfold",
+      "relation": "isDerivedFrom",
+      "resource_type": "software"
     }
   ]
 }
