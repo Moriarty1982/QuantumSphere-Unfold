@@ -1,0 +1,72 @@
+name: Create GitHub release on version tag
+
+on:
+  push:
+    tags:
+      - 'v*-release'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Prepare release assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          TAG="${GITHUB_REF_NAME}"
+          mkdir -p dist
+
+          if [ -d "releases/${TAG}" ]; then
+            tar -czf "dist/${TAG}-release-payload.tar.gz" "releases/${TAG}"
+          fi
+
+          if [ -f "README.md" ]; then
+            cp README.md "dist/README-${TAG}.md"
+          fi
+
+      - name: Create or update GitHub release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          TAG="${GITHUB_REF_NAME}"
+          TITLE="${TAG}"
+
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo "Release ${TAG} already exists."
+          else
+            if [ -f "releases/${TAG}/RELEASE_NOTES.md" ]; then
+              gh release create "$TAG" \
+                --title "$TITLE" \
+                --notes-file "releases/${TAG}/RELEASE_NOTES.md"
+            else
+              gh release create "$TAG" \
+                --title "$TITLE" \
+                --generate-notes
+            fi
+          fi
+
+      - name: Upload release assets
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          TAG="${GITHUB_REF_NAME}"
+          shopt -s nullglob
+          files=(dist/*)
+          if [ ${#files[@]} -gt 0 ]; then
+            gh release upload "$TAG" "${files[@]}" --clobber
+          else
+            echo "No release assets to upload."
+          fi
