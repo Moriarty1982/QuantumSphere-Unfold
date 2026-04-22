@@ -22,3 +22,8 @@
 ## Release reading
 
 This release should be read as a groundwork-complete pre-OP frontier release that freezes the full mathematical foundation layer immediately before explicit OP 1-5 work.
+
+## Publication record
+
+Published public release DOI: **10.5281/zenodo.19699827**  
+Concept DOI: **10.5281/zenodo.19210728**
