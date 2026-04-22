@@ -7,5 +7,5 @@ At the current local level, the line now carries an explicit frontier-certified 
 In short: this version does not yet claim closure of OP 1-5. Instead, it completes and freezes the full mathematical pre-OP foundation on which the next OP-focused stage can begin in a controlled way.
 
 Concept DOI: 10.5281/zenodo.19210728
-Version DOI: assigned by Zenodo after archive
+Version DOI: 10.5281/zenodo.19699827
 Version: v3.31.0-release
