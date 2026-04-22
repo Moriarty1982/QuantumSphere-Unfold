@@ -4,8 +4,10 @@ Public repository for the *Quantum Sphaera Companion* project line.
 
 ## Current document release reference
 
-- Current public document release: **v3.30.0**
-- Current public document DOI: **10.5281/zenodo.19682951**
+- Current public document release: **v3.31.0**
+- Current public document DOI: **10.5281/zenodo.19699827**
+- Previous public document release: **v3.30.0**
+- Previous public document DOI: **10.5281/zenodo.19682951**
 - Concept DOI: **10.5281/zenodo.19210728**
 
 ## Repository role
