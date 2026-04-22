@@ -1,28 +1,27 @@
-[![DOI](https://zenodo.org/badge/1217191571.svg)](https://doi.org/10.5281/zenodo.19691419)
-
 # QuantumSphere-Unfold
 
-Public repository for the *Quantum Sphaera Companion* release line.
+Public repository for the *Quantum Sphaera Companion* project line.
 
-## Current public release
+## Current document release reference
 
-- Version: **v3.30.0**
-- Version DOI: **10.5281/zenodo.19682951**
+- Current public document release: **v3.30.0**
+- Current public document DOI: **10.5281/zenodo.19682951**
 - Concept DOI: **10.5281/zenodo.19210728**
 
 ## Repository role
 
-This repository is the canonical GitHub mirror for audited public release states of the project.
+This repository is the canonical GitHub mirror for public project states, release preparation metadata, and synchronization of the working line.
 
-## v3.30.0 audited release payload
+The repository itself is **not** the direct Zenodo publication source for final document releases.
 
-The `releases/v3.30.0/` directory is reserved for the audited public release and its metadata:
+## Release workflow policy
 
-- audited release notes
-- audited release audit
-- Zenodo description
-- Zenodo metadata file
-- wrapper source
-- repository assembly stub for the audited TeX source
+- GitHub is used for ongoing synchronization and public project-state tracking.
+- Final release documents are prepared outside the repository workflow.
+- Zenodo publication is performed manually from the finalized document bundle.
+- The document itself carries the concept DOI.
+- The new version-specific DOI is read back from Zenodo after publication and inserted into the version history in the next maintained document state.
 
-The full source synchronization is being structured in repository-friendly form so future project work can stay aligned with the repo state.
+## Release-preparation payloads
+
+The `releases/` directory is reserved for prepared release notes, audits, Zenodo descriptions, bibliography companions, and related metadata for upcoming or archived public release states.
