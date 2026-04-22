@@ -1,7 +1,8 @@
 {
   "title": "Quantum Sphaera Companion: A Structure-First Mathematical Unfolding",
+  "version": "3.31.0-release",
   "upload_type": "software",
-  "description": "Canonical Zenodo metadata for the Quantum Sphaera Companion GitHub release line. The repository publishes audited public release states; the document itself carries the concept DOI, while version-specific DOIs are created by Zenodo for each archived release.",
+  "description": "Groundwork-complete pre-OP frontier release of the Quantum Sphaera Companion. This version freezes the full mathematical foundation layer before explicit OP 1-5 work and presents the current line as a frontier-certified pre-entry synthesis state.",
   "creators": [
     {
       "name": "Brendecke, Marc"
