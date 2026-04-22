@@ -17,11 +17,15 @@ At the current local level, the line carries:
 
 This version does **not** yet claim closure of OP 1-5. Instead, it completes and freezes the full mathematical pre-OP foundation on which the next OP-focused stage can begin in a controlled way.
 
+## Publication record
+
+Published public release DOI: **10.5281/zenodo.19699827**  
+Concept DOI: **10.5281/zenodo.19210728**
+
 ## Relative to the previous public release
 
 Previous public release: **v3.30.0**  
-Previous version DOI: **10.5281/zenodo.19682951**  
-Concept DOI: **10.5281/zenodo.19210728**
+Previous version DOI: **10.5281/zenodo.19682951**
 
 ## Main additions in this release
 
