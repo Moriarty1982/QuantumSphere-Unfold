@@ -16,6 +16,19 @@ This repository is the canonical GitHub mirror for public project states, releas
 
 The repository itself is **not** the direct Zenodo publication source for final document releases.
 
+## Source-tree direction
+
+The long-term direction of this repository is to hold the real modular TeX source tree of the project, so that tagged repository states remain inspectable and reconstructable.
+
+That means:
+
+- the live modular source should move into the repository directly
+- historical material should remain explicitly recoverable
+- `releases/` should hold release-side metadata, not replace the source tree
+- release tags should freeze reconstructable source states
+
+See `docs/MODULAR_SOURCE_POLICY.md` for the intended repository architecture and tag policy.
+
 ## Release workflow policy
 
 - GitHub is used for ongoing synchronization and public project-state tracking.
