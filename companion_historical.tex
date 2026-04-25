@@ -1,3 +1,140 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{geometry,hyperref,booktabs,array,longtable,graphicx,float}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,fit,calc}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{fancyhdr,bm}
+\usepackage{slashed}
+\usepackage{multicol}
+\setlength{\emergencystretch}{2em}
+\allowdisplaybreaks[1]
+\usepackage[style=ddmmyyyy]{datetime2}
+
+\newcommand{\safegraphic}[2][]{%
+  \IfFileExists{#2}{\includegraphics[#1]{#2}}{%
+    \fbox{\begin{minipage}{0.9\linewidth}\centering\small Placeholder figure not bundled in this release:\\texttt{\detokenize{#2}}\end{minipage}}%
+  }%
+}
+
+\geometry{margin=2.5cm}
+\hypersetup{
+  hidelinks,
+  pdftitle={Quantum Sphaera Companion: A Structure-First Mathematical Unfolding (v3.35.0-r01 historical witness working candidate)},
+  pdfauthor={Marc Brendecke},
+  pdfsubject={Historical witness PDF of mathematical companion; v3.35.0-r01 historical witness working candidate; previous version DOI 10.5281/zenodo.19746821; preserved Part II/proof memory as separate PDF in the same release bundle above the public v3.33.0 release},
+  pdfkeywords={Quantum Sphaera, historical witness, preserved Part II, proof memory, audit store},
+  pdfcreator={OpenAI},
+  pdfproducer={pdfLaTeX}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\footnotesize\textcopyright\ 2026 Marc Brendecke. Preprint --- not peer reviewed.}
+\fancyfoot[R]{\footnotesize\thepage}
+\fancyhead[L]{\footnotesize Quantum Sphaera Companion Historical Witness}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{axiom}{Axiom}
+
+% --- Document metadata ---
+\newcommand{\docversion}{3.35.0-r01}
+\newcommand{\docdate}{\DTMdisplaydate{2026}{04}{25}{-1}}
+
+% --- Macros ---
+\newcommand{\bsym}{\beta_{\mathrm{sym}}}
+\newcommand{\gL}{\gamma_L}
+\newcommand{\gstring}{\gamma_{\mathrm{string}}}
+\newcommand{\gBI}{\gamma_{\mathrm{BI}}}
+\newcommand{\lP}{\ell_P}
+\newcommand{\zminus}{z^-}
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\OO}{\mathbb{O}}
+\newcommand{\Hplus}{H^+}
+\newcommand{\Hplusplus}{H^+_+}
+\newcommand{\Hplusminus}{H^+_-}
+\newcommand{\WA}{\mathcal{W}(A^1)}
+\newcommand{\KC}{\hat{K}}
+
+\lstdefinestyle{pyappendix}{
+  basicstyle=\ttfamily\scriptsize,
+  breaklines=true,
+  breakatwhitespace=false,
+  columns=fullflexible,
+  keepspaces=true,
+  showstringspaces=false,
+  frame=single,
+  framerule=0.2pt,
+  tabsize=4
+}
+
+
+% --- v3.31.0 pre-OP frontier macros ---
+\newcommand{\Rlive}{\mathbf{R}_{\mathrm{live}}}
+\newcommand{\Rcurr}{\mathbf{R}_{\mathrm{curr}}}
+\newcommand{\Rtilde}{\widetilde{\mathbf{R}}_{\mathrm{live}}}
+\newcommand{\Rcurrtilde}{\widetilde{\mathbf{R}}_{\mathrm{curr}}}
+\newcommand{\Ew}{\widetilde{\mathcal{E}}_{w}}
+\newcommand{\Wpref}{\mathfrak{W}^{\mathrm{pref}}_{\mathrm{curr}}}
+\newcommand{\Wdir}{\mathfrak{W}^{\mathrm{dir}}_{\mathrm{next}}}
+
+
+\title{%
+  Quantum Sphaera Companion:\\
+  A Structure-First Mathematical Unfolding
+}
+\author{%
+  Marc Brendecke\\
+  \small Independent Researcher, Bochum, Germany\\
+  \small Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}\\
+  \small Companion Paper --- Preprint, not peer reviewed.\\
+  \small Technical unfolding of the main Sphaera paper~\cite{brendecke2026main}.
+}
+\date{\docdate{} --- Version \docversion\ --- historical witness pre-v4 QAM preparation working candidate}
+
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries Quantum Sphaera Companion}\par\vspace{0.4em}
+{\Large\bfseries Historical Witness}\par\vspace{0.8em}
+{\large A preserved Part II / COMPLETE snapshot for v3.35.0-r01}\par\vspace{0.8em}
+Marc Brendecke\par
+Independent Researcher, Bochum, Germany\par
+Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}\par
+\docdate{} --- Version \docversion{} --- historical witness pre-v4 QAM preparation working candidate
+\end{center}
+\thispagestyle{fancy}
+
+\begin{quote}\small
+\noindent\textbf{Status.} This PDF preserves the historical witness that was formerly integrated as Part II of the monolithic Companion. It is not deleted, shortened, or promoted into the active theorem core. It is carried as proof memory, genealogy, and reconstruction support in the same release bundle as the active core. The v3.35.0-r01 historical witness working candidate keeps this file separate for readability and archival clarity, not as a second theorematic line.
+
+\medskip
+\noindent\textbf{Active companion file.} The governing current proof-line is provided as\par
+\texttt{Quantum\_Sphaera\_Companion\_v3\_35\_0\_r01\_active\_core\_pre\_v4\_qam.pdf}.
+
+\medskip
+\noindent\textbf{Reading rule.} If a historical statement sounds stronger, flatter, or older than the active-core status ledger, the active-core reading governs. In particular, this historical witness does not close OP~1/4 or OP~5(B).
+
+\medskip
+\noindent\textbf{Cross-reference rule.} References from this historical witness to labels that now live in the active core are preserved by stable label name, written as \texttt{label} in the active-core PDF, rather than imported as mutable cross-document page numbers.
+\end{quote}
+
+\clearpage
+\tableofcontents
+\clearpage
 \part*{Part II: Integrated Historical COMPLETE Snapshot}
 \addcontentsline{toc}{part}{Part II: Integrated Historical COMPLETE Snapshot}
 
@@ -1804,7 +1941,7 @@ where \(\Pi_{\mathrm{phys}}\) is a closure-compatible physical readout / observe
 
 \begin{theorem}[3.8.1 residual-controlled emergence principle]
 \label{thm:mainline-3810}
-Assume the Master probe field equation (Theorem~\ref{thm:master-field-equation}), the residual-record exact representability principle, and the 3.8 two-core closure reduction principle. Then the unresolved field-equation / controlled-emergence burden of the present Companion admits a residual-controlled physical interface form in the sense of Definition~\ref{def:mainline-3810}. More precisely:
+Assume the Master probe field equation (Theorem~\texttt{thm:master-field-equation} in the active-core PDF), the residual-record exact representability principle, and the 3.8 two-core closure reduction principle. Then the unresolved field-equation / controlled-emergence burden of the present Companion admits a residual-controlled physical interface form in the sense of Definition~\ref{def:mainline-3810}. More precisely:
 \begin{enumerate}[label=(\roman*), leftmargin=2em]
   \item the structural master side may be projected to an admissible physical readout equation without introducing any new visible primitive beyond the residual-record interface;
   \item every unresolved contribution that still survives in the present stabilized reading can be absorbed into the two remainder families \(\mathcal E_{1}\) and \(\mathcal E_{5}\), corresponding respectively to the OP~1 correction problem and the OP~5 step~(B) balance problem;
@@ -1813,7 +1950,7 @@ Assume the Master probe field equation (Theorem~\ref{thm:master-field-equation})
 \end{theorem}
 
 \begin{proof}
-Theorem~\ref{thm:master-field-equation} already fixes a closure-compatible structural master equation for the probe/field sector. Sections~3.5 and~3.6 then force all later readout and frontend organization to remain conservative over the residual record, so no admissible physical projection may introduce a genuinely new visible primitive.
+Theorem~\texttt{thm:master-field-equation} in the active-core PDF already fixes a closure-compatible structural master equation for the probe/field sector. Sections~3.5 and~3.6 then force all later readout and frontend organization to remain conservative over the residual record, so no admissible physical projection may introduce a genuinely new visible primitive.
 
 Theorem~\ref{thm:mainline-3800} further reduces the remaining foundational burden to two cores only: the OP~1 prime-lattice/continuum-limit correction and the OP~5 step~(B) Theta-balance problem. Therefore any unresolved contribution in the controlled-emergence reading of the structural master equation must, in the present stabilized reading, belong to one of these two residual families. Writing the projected equation in the form
 \[
@@ -1873,7 +2010,7 @@ The equation \(\mathcal R_{1}(\mu)=0\) is called the \emph{OP~1 scalar residual 
 
 \begin{theorem}[3.8.2 OP~1 single-channel reduction principle]
 \label{thm:mainline-3820}
-Assume the Tribonacci continuum fixed-point theorem, the self-consistent OP~1 matching system \eqref{eq:SC1}--\eqref{eq:SC2}, and the 3.8.1 residual-controlled emergence principle. Then, in the present stabilized reading:
+Assume the Tribonacci continuum fixed-point theorem, the self-consistent OP~1 matching system (\texttt{eq:SC1}, active-core PDF)--(\texttt{eq:SC2}, active-core PDF), and the 3.8.1 residual-controlled emergence principle. Then, in the present stabilized reading:
 \begin{enumerate}[label=(\roman*), leftmargin=2em]
   \item the remaining OP~1 burden is completely represented by the scalar residual profile \(\mathcal R_{1}(\mu)\) of Definition~\ref{def:mainline-3820};
   \item closing OP~1 no longer requires a new visible primitive, a new field equation, or a new language layer, but only a first-principles control or derivation of the correction law encoded by \(\mathcal R_{1}(\mu)\);
@@ -1882,7 +2019,7 @@ Assume the Tribonacci continuum fixed-point theorem, the self-consistent OP~1 ma
 \end{theorem}
 
 \begin{proof}
-The continuum side of OP~1 is already fixed by Theorem~\ref{thm:tribonacci}: the uncorrected self-referential frame candidate is the Tribonacci value, equivalently read through the continuum expression \(\beta_{\mathrm{cont}}(\mu)=\sqrt{(\mu-1)/(\mu+1)}\). The physical matching side is already fixed by the self-consistent system \eqref{eq:SC1}--\eqref{eq:SC2}, whose unresolved content is precisely the prime-lattice / continuum-limit correction law. Taking logarithms rewrites the matching problem as the vanishing of the single scalar expression \(\mathcal R_{1}(\mu)\). This loses no information because \(\mu>1\) and the exponential side of \eqref{eq:SC1} is positive. By the 3.8.1 residual-controlled emergence principle, the field-equation burden cannot add a third independent OP~1 channel; it can only feed into the same residual family \(\mathcal E_{1}\). Hence the entire remaining OP~1 content is exhausted by the scalar residual channel \(\mathcal R_{1}(\mu)\), and any admissible closure must proceed by deriving, controlling, or eliminating that residual.
+The continuum side of OP~1 is already fixed by Theorem~\texttt{thm:tribonacci} in the active-core PDF: the uncorrected self-referential frame candidate is the Tribonacci value, equivalently read through the continuum expression \(\beta_{\mathrm{cont}}(\mu)=\sqrt{(\mu-1)/(\mu+1)}\). The physical matching side is already fixed by the self-consistent system (\texttt{eq:SC1}, active-core PDF)--(\texttt{eq:SC2}, active-core PDF), whose unresolved content is precisely the prime-lattice / continuum-limit correction law. Taking logarithms rewrites the matching problem as the vanishing of the single scalar expression \(\mathcal R_{1}(\mu)\). This loses no information because \(\mu>1\) and the exponential side of (\texttt{eq:SC1}, active-core PDF) is positive. By the 3.8.1 residual-controlled emergence principle, the field-equation burden cannot add a third independent OP~1 channel; it can only feed into the same residual family \(\mathcal E_{1}\). Hence the entire remaining OP~1 content is exhausted by the scalar residual channel \(\mathcal R_{1}(\mu)\), and any admissible closure must proceed by deriving, controlling, or eliminating that residual.
 \end{proof}
 
 \begin{corollary}[3.8.2 OP~1 closure test]
@@ -2162,7 +2299,7 @@ provided that no state-changing instruction intervenes and the resulting certifi
 \paragraph{Relation to proof economy.}
 This reserve clarifies the deeper purpose of the MML/MMA line. The goal is not merely to invent a language for its own sake, but to create a setting in which long structural proofs can be compressed into short normalized programs, with explicit certificate trails and canonical rewrites. In this sense optimization is part of the normalization discipline of the Companion itself.
 
-\subsection*{Full proof of Theorem~\ref{thm:gue-selfdet}}
+\subsection*{Full proof of Theorem~\texttt{thm:gue-selfdet} in the active-core PDF}
 \label{app:gue-selfdet}
 
 \begin{lemma}[GUE self-determination of $\gL$ --- formal version]
@@ -2205,8 +2342,8 @@ mean equals 1.
 \emph{Step 2 (Uniqueness).}
 The critical line $\mathrm{Re}(s)=\tfrac{1}{2}$ is the unique fixed-point
 set of \(J\). Here \(J(s)=1-\bar s\), and this fixed-point description is
-frame-invariant by Theorem~\ref{thm:unity}.
-By Theorem~\ref{thm:gue}, $L_0$ on $\Hplusplus$ has Dyson index
+frame-invariant by Theorem~\texttt{thm:unity} in the active-core PDF.
+By Theorem~\texttt{thm:gue} in the active-core PDF, $L_0$ on $\Hplusplus$ has Dyson index
 $\beta=2$ in the photon frame.
 Both properties are frame-invariant.
 The Wigner--Dyson distribution therefore singles out exactly one
@@ -2232,7 +2369,7 @@ numerical check, not a definition.
 \end{remark}
 
 %% --- A.2 k(c) = 0 ---
-\subsection*{Full proof of Theorem~\ref{thm:kc-zero}}
+\subsection*{Full proof of Theorem~\texttt{thm:kc-zero} in the active-core PDF}
 \label{app:kc-zero}
 
 \begin{proposition}[Historical $k(c)=0$ from biquaternion structure --- formal version]
@@ -2269,7 +2406,7 @@ frame change: $k(c)=0$.
 \end{proof}
 
 %% --- A.3 Planck length ---
-\subsection*{Full proof of Theorem~\ref{thm:planck-photon}}
+\subsection*{Full proof of Theorem~\texttt{thm:planck-photon} in the active-core PDF}
 \label{app:planck}
 
 \begin{proof}
@@ -2311,7 +2448,7 @@ preserved in both frames (local property, hence frame-invariant).
 The taktgeber frequency $\nu_{\mathrm{takt}}\propto\gL$
 transforms as $\nu^{(m)}=\gL^1\cdot\nu^{(\gamma)}$.
 Hence $k(\nu_{\mathrm{takt}})=1$, consistent with $k(\alpha^{-1})=1$
-and $k(\hbar)=1$ in Theorem~\ref{thm:k-values}.
+and $k(\hbar)=1$ in Theorem~\texttt{thm:k-values} in the active-core PDF.
 \end{corollary}
 
 %% --- A.5 Dirac probe formal ---
@@ -2352,7 +2489,7 @@ sequence without any free parameter.
 \label{app:attribution}
 
 The Kim-style refinement of the fermionic probe sector
-(\S\ref{sec:dirac-probe}) was developed from Yilwook Kim's Zenodo line
+(\S\texttt{sec:dirac-probe} in the active-core PDF) was developed from Yilwook Kim's Zenodo line
 associated with concept DOI \texttt{10.5281/zenodo.19112361}.
 In the present paper this material is not treated as an internal axiom
 of the Sphaera program, but as an externally motivated operator ansatz
@@ -4490,7 +4627,7 @@ while the complementary blocks measure off-sector leakage.
 
 \paragraph{Tool (Equivalent closure criteria).}
 The following are equivalent
-(cf.\ Lemma~\ref{lem:closure-forcing-lemma}):
+(cf.\ Lemma~\texttt{lem:closure-forcing-lemma} in the active-core PDF):
 \begin{enumerate}[label=(\roman*)]
   \item $\mathfrak{R}_C = 0$;
   \item $[\mathcal{M}_{16}, \hat{P}_{C_7}] = 0$;
@@ -4506,7 +4643,7 @@ $[X, \hat{P}_{C_7}] = 0$.
 If yes, then $X$ respects the admissible stabilized sector directly.
 If not, then $X$ either produces leakage or must be controlled by a
 compensator-mediated defect term
-(cf.\ Hypothesis~\ref{hyp:frame-dependent-defect-readout}).
+(cf.\ Hypothesis~\texttt{hyp:frame-dependent-defect-readout} in the active-core PDF).
 
 \paragraph{Tool (Sectorial normal form).}
 Every operator $X$ decomposes as
@@ -4541,8 +4678,8 @@ $\mathfrak{F}_{\mathrm{struct}} = \mathbb{D}_{\mathrm{core}}$ and
 $\mathbb{D}_{\mathrm{defect}} = 0$.
 The visible compensator field vanishes in this regime; the kernel
 $C = \Pi^{(\mathcal{M})}_{\mathrm{spec}}$
-(Theorem~\ref{thm:hc-spectral-projector}) remains active
-(Remark~\ref{rem:hc-shadow-vs-core}).
+(Theorem~\texttt{thm:hc-spectral-projector} in the active-core PDF) remains active
+(Remark~\texttt{rem:hc-shadow-vs-core} in the active-core PDF).
 
 \paragraph{Tool (Mass-residue test).}
 A proposed mass contribution is classified according to whether it
@@ -4561,7 +4698,7 @@ if projected algebra closure is additionally needed; \emph{effective} if
 bilinear reconstruction, coarse-graining, or emergent parameter
 generation are also required.
 These levels correspond to the three steps of
-Proposition~\ref{prop:structural-lift-principle}.
+Proposition~\texttt{prop:structural-lift-principle} in the active-core PDF.
 
 \paragraph{Tool (Dirac gate).}
 A Dirac-type reduction is available if: (i) exact closure holds;
@@ -4583,7 +4720,7 @@ metric-compatible geometric connection; (v) coarse-grained local
 effective action with Einstein--Hilbert leading term. If any step is
 missing, the Einstein block remains effective rather than
 first-principles
-(cf.\ Proposition~\ref{prop:expected-probe-lensing-behaviour}).
+(cf.\ Proposition~\texttt{prop:expected-probe-lensing-behaviour} in the active-core PDF).
 
 \subsection*{Equivalence and anti-redundancy tools}
 
@@ -4592,7 +4729,7 @@ If two sectors are irreducible unitary realizations of the same
 Weyl-type algebra on separable Hilbert spaces, differing only by
 representation change, symmetry implementation, or frame reading, then
 one representative suffices
-(Theorem~\ref{thm:unitary-equiv}).
+(Theorem~\texttt{thm:unitary-equiv} in the active-core PDF).
 
 \paragraph{Tool (Stone--von Neumann scope test).}
 Do \emph{not} apply Stone--von Neumann as a shortcut if the passage
@@ -4609,7 +4746,7 @@ Weyl-type kernel; if yes, SvN-compressible. (2)~\emph{Regime layer} ---
 test whether one sector is obtained from the other by projection,
 coarse-graining, geometric readout, or effective reconstruction; if yes,
 additional structural work is required beyond Stone--von Neumann
-(Definition~\ref{def:readout-relative-lemma}).
+(Definition~\texttt{def:readout-relative-lemma} in the active-core PDF).
 
 \subsection*{Geometry-readout tools}
 
@@ -4634,7 +4771,7 @@ connection; (iii) a stable basis for bilinear readout. It does
 coframe; (ii) derivation of the effective constants; (iii) explicit
 identification of the collective closure fields; (iv) justified
 coarse-graining to a local geometric action. The bidirectional probe
-lensing hypothesis (Section~\ref{sec:bidirectional-probe-lensing})
+lensing hypothesis (Section~\texttt{sec:bidirectional-probe-lensing} in the active-core PDF)
 proposes a two-step route that may reduce this gap.
 
 % Appendix mode is already active above; the following block continues the appendix material without re-entering appendix mode.
@@ -5323,12 +5460,10 @@ The first move toward 3.4 is therefore not a proliferation of new local lemmas, 
 \paragraph{Condensed 3.3 status.}
 The local 3.3 line is therefore fully captured by four linked claims: a single transported residual scalar $\eta$, a Julia-boundary readout of that same scalar, a restoring branch dynamics for the local reversal profile, and a hybrid reversal probe with the two-way outcome ``direct convergence or spinorial/M\"obius lift''. Relative to the longer 3.3.0 working appendix, this is a structure-preserving compression rather than a deletion: the intermediate defect, jet, and probe lemmas are absorbed into the four main statements above.
 
-\section*{Appendix D. Bibliography and Version Record}
-\addcontentsline{toc}{section}{Appendix D. Bibliography and Version Record}
+\section*{Appendix D. Historical Release Notes and Version Record}
+\addcontentsline{toc}{section}{Appendix D. Historical Release Notes and Version Record}
 
-This appendix gathers the external references together with the immediate
-Companion version trail so that the mathematical main line can close before the
-documentation apparatus begins.
+This appendix gathers the immediate Companion version trail and historical release notes so that the mathematical main line can close before the documentation apparatus begins. The live bibliography itself is kept as the terminal back-matter block of the document.
 
 \clearpage
 \section*{Historical release notes and roadmap blocks}
@@ -5363,7 +5498,7 @@ This public release proceeds from the public v3.11.0 Companion release in one pr
   \item the reproducible M\"obius-shell diagnostic suite for the live residual scales, and
   \item the OP~5 packet, breathing-envelope, and frame-flicker visual audit line.
 \end{enumerate}
-Accordingly, the present public release should be read as the stabilized public checkpoint of the current monolithic chain: it preserves the current mathematical line while keeping the front cleaner and the live burdens more sharply routed.
+Accordingly, that archived public release should be read as the stabilized public checkpoint of its then-current monolithic chain: it preserved the mathematical line of that stage while keeping the front cleaner and the live burdens more sharply routed.
 
 \subsection*{Archived primary working goals recorded at v3.13.0}
 \begin{enumerate}[leftmargin=2em]
@@ -6117,7 +6252,7 @@ The practical value of this dependency spine is that later sections may appeal
 to one normalized arrow instead of reintroducing the same chain piecemeal. In
 particular, the later projector, transport, and Millennium-matrix sections
 should be read as refinements of this spine, not as independent foundations.
-This is also the correct mathematics-first reading for the present public release:
+This is also the correct mathematics-first reading for that archived public release:
 first the spine is stabilized, then the surrounding operator language is
 hardened.
 
@@ -6923,66 +7058,440 @@ material.
 \clearpage
 \clearpage
 
+
+\clearpage
+\section*{Computational completeness layer: QAM / MML / MMA}
+
+The present block records the first explicit machine reading of the post-v3.31.0 line.  
+In the current v3.34.0-r09 working candidate it should be read together with the local HC/OP interface registry of Definition~\texttt{def:r07-local-language-version-registry} in the active-core PDF, the compression map of Definition~\texttt{def:compression-map-from-inherited-text-to-mml-mma-operations} in the active-core PDF, and the reusable tool normal forms of Definition~\texttt{def:first-reusable-hcop-tool-normal-form} in the active-core PDF. That registry gives the active sublanguage versions actually used by the present OP-entry chain, the compression map gives the active audit reading for inherited HC/OP text, and the r09 tool layer gives the controlled invocation form:
+\[
+  \mathrm{QAM}_{\mathrm{HCOP}}^{\mathrm{loc}}
+  \to
+  \mathrm{MML}_{\mathrm{HCOP}}^{\mathrm{loc}}
+  \to
+  \mathrm{MMA}_{\mathrm{HCOP}}^{\mathrm{loc}}.
+\]
+The broader computational chapter remains a reserve architecture; the r07 interface is the narrow executable slice used for HC-routed OP-entry.
+
+Its purpose is to separate three layers which were already implicit in the project architecture:
+\begin{enumerate}[leftmargin=2em]
+  \item QAM as the finite tagged object language;
+  \item MML as the finite machine / instruction language;
+  \item MMA as the matrix-realized execution layer.
+\end{enumerate}
+
+The block proceeds in three steps. First, it isolates finite machine completeness and finite universality (the Z3-style regime). Second, it exhibits the unbounded extension mechanism through extensible address towers and fresh-address allocation. Third, it formulates stage-stable universality and the resulting architectural Turing-style completeness reading.
+
+This computational layer is to be read \emph{subordinate} to the earlier strength hierarchy
+\[
+\mathbf S_1\to \mathbf S_2\to \mathbf S_3(\mathcal R)\to \mathbf S_4(\mathcal R)\to \mathbf S_5
+\]
+from Sections~19U--19Z and the subsequent machine-status decoder. Accordingly, the present section does not by itself upgrade the unconditional public status of the line beyond \(\mathbf S_1\). Rather, it records an \emph{internal machine-reading package}: finite machine completeness and finite universality sharpen the internal route toward \(\mathbf S_2\), while explicit fresh-address extension and stage-stable universality formulate the internal architectural ingredients that would be needed later on any conditional route toward \(\mathbf S_4(\mathcal R)\) and \(\mathbf S_5\).
+
+\begin{definition}[Finite machine store]\label{def:finite-machine-store-computational-layer}
+A \emph{finite machine store} is a finite tagged family
+\[
+\mathfrak{S}_{\mathrm{fin}}
+=
+\{(a_i,x_i)\}_{i=1}^{N}
+\]
+where each \(a_i\) is an address tag and each \(x_i\) is a stored QAM-object.
+\end{definition}
+
+\begin{definition}[Finite machine state]\label{def:finite-machine-state-computational-layer}
+A \emph{finite machine state} is a tuple
+\[
+\Sigma
+=
+\bigl(
+\mathfrak{S}_{\mathrm{fin}},
+p,
+q,
+r
+\bigr),
+\]
+where:
+\begin{enumerate}[leftmargin=2em]
+    \item \(\mathfrak{S}_{\mathrm{fin}}\) is a finite machine store;
+    \item \(p\) is the current program position;
+    \item \(q\) is the current control state;
+    \item \(r\) is the current route-faithful residual/control register.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[QAM-object layer]\label{def:qam-object-layer-computational-layer}
+The \emph{QAM-object layer} is the finite tagged object language in which the machine store contents \(x_i\) are represented.
+
+A QAM-object may be:
+\begin{enumerate}[leftmargin=2em]
+    \item a scalar-like tagged object;
+    \item a packet-like tagged object;
+    \item a tuple/block object;
+    \item a routed or normalized residual object;
+    \item any finite object built from the current QAM grammar by the allowed formation rules.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}[QAM as object language]\label{rem:qam-as-object-language-computational-layer}
+QAM is not yet used here as a new infinite set theory. At this stage it is used as the finite object language in which machine-addressable project data are encoded.
+\end{remark}
+
+\begin{definition}[MML instruction alphabet]\label{def:mml-instruction-alphabet-computational-layer}
+The \emph{MML instruction alphabet} is a finite set
+\[
+\mathcal{I}_{\mathrm{MML}}
+\]
+of primitive machine instructions, divided into the following classes:
+\begin{enumerate}[leftmargin=2em]
+    \item \textbf{read/write instructions:}
+    \[
+    \mathrm{READ}(a),\qquad \mathrm{WRITE}(a,\xi);
+    \]
+    \item \textbf{routing/transfer instructions:}
+    \[
+    \mathrm{ROUTE}(\xi),\qquad \mathrm{PROJECT}(\xi),\qquad \mathrm{NORMALIZE}(\xi);
+    \]
+    \item \textbf{comparison/test instructions:}
+    \[
+    \mathrm{TEST}_{=},\qquad \mathrm{TEST}_{<},\qquad \mathrm{TEST}_{\mathrm{adm}};
+    \]
+    \item \textbf{branching/control instructions:}
+    \[
+    \mathrm{SELECT}(b_1,\dots,b_k),\qquad \mathrm{BRANCH}(j),\qquad \mathrm{RETURN};
+    \]
+    \item \textbf{cycle/termination instructions:}
+    \[
+    \mathrm{STEP},\qquad \mathrm{LOOP},\qquad \mathrm{HALT}.
+    \]
+\end{enumerate}
+\end{definition}
+
+\begin{remark}[MML as finite machine language]\label{rem:mml-as-finite-machine-language-computational-layer}
+MML is the first finite machine language layer of the project. Its purpose is not yet unrestricted computation, but finite programmable symbolic control on route-faithful QAM-data.
+\end{remark}
+
+\begin{definition}[Finite MML program]\label{def:finite-mml-program-computational-layer}
+A \emph{finite MML program} is a finite word
+\[
+P=(I_1,\dots,I_m),\qquad I_j\in\mathcal{I}_{\mathrm{MML}}.
+\]
+\end{definition}
+
+\begin{definition}[MMA execution layer]\label{def:mma-execution-layer-computational-layer}
+The \emph{MMA execution layer} is the matrix-realized execution semantics of MML on finite machine states.
+
+Concretely, an MMA-step is a map
+\[
+\mathcal{E}_{\mathrm{MMA}}:(\Sigma,I)\longmapsto \Sigma^{+},
+\]
+sending a finite machine state \(\Sigma\) and one MML instruction \(I\) to the updated state \(\Sigma^{+}\), in a way compatible with the current Millennium-matrix / Heisenberg-compensator realization of the route-faithful control structure.
+\end{definition}
+
+\begin{remark}[Why MMA is the right execution layer]\label{rem:why-mma-is-the-right-execution-layer-computational-layer}
+MML gives the symbolic instruction form. MMA gives the executable matrix-side realization. Thus QAM, MML, and MMA correspond respectively to object language, machine language, and execution dynamics.
+\end{remark}
+
+\begin{definition}[Finite branch emulation]\label{def:finite-branch-emulation-computational-layer}
+A \emph{finite branch emulation rule} is any route-faithful realization of conditional continuation by means of:
+\begin{enumerate}[leftmargin=2em]
+    \item a test instruction;
+    \item a finite selector family;
+    \item a branch-resolution instruction;
+    \item an updated program position and control state.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}[Why explicit jump is not required]\label{rem:why-explicit-jump-is-not-required-computational-layer}
+For the finite completeness level pursued here, it is not necessary to require a primitive classical jump instruction. It is sufficient that the machine language can emulate conditional continuation by a finite branch-resolution mechanism.
+\end{remark}
+
+\begin{definition}[Finite machine completeness]\label{def:finite-machine-completeness-computational-layer}
+The triple
+\[
+(\mathrm{QAM},\mathrm{MML},\mathrm{MMA})
+\]
+is called \emph{finitely machine-complete} if:
+\begin{enumerate}[leftmargin=2em]
+    \item every finite project-relevant symbolic state can be encoded as a finite QAM-store;
+    \item every finite admissible symbolic transformation on such states can be represented by a finite MML program;
+    \item every such finite MML program is executable in the MMA layer;
+    \item conditional continuation is realizable by finite branch emulation;
+    \item halting and finite return are representable on the same machine level.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Finite address space]\label{def:finite-address-space-computational-layer}
+A \emph{finite address space} is a finite nonempty set
+\[
+\mathfrak{A}_{\mathrm{fin}}=\{a_1,\dots,a_N\}
+\]
+of address tags.
+\end{definition}
+
+\begin{definition}[Finite machine store as address map]\label{def:finite-machine-store-as-address-map-computational-layer}
+A \emph{finite machine store} on the address space
+\[
+\mathfrak{A}_{\mathrm{fin}}
+\]
+is a map
+\[
+\mathsf{Mem}:\mathfrak{A}_{\mathrm{fin}}\longrightarrow \mathsf{QAM}_{\mathrm{fin}},
+\]
+where \(\mathsf{QAM}_{\mathrm{fin}}\) denotes the class of finite QAM-objects admissible at machine level.
+\end{definition}
+
+\begin{definition}[Store read operation]\label{def:store-read-operation-computational-layer}
+For \(a\in\mathfrak{A}_{\mathrm{fin}}\), the \emph{store read operation} is
+\[
+\mathsf{READ}_{\mathsf{Mem}}(a):=\mathsf{Mem}(a).
+\]
+\end{definition}
+
+\begin{definition}[Store write operation]\label{def:store-write-operation-computational-layer}
+For \(a\in\mathfrak{A}_{\mathrm{fin}}\) and \(\xi\in\mathsf{QAM}_{\mathrm{fin}}\), the \emph{store write operation} is the updated store
+\[
+\mathsf{WRITE}_{\mathsf{Mem}}(a,\xi)=\mathsf{Mem}^{+},
+\]
+defined by
+\[
+\mathsf{Mem}^{+}(a)=\xi,
+\qquad
+\mathsf{Mem}^{+}(b)=\mathsf{Mem}(b)
+\;\text{for all } b\neq a.
+\]
+\end{definition}
+
+\begin{definition}[Address register]\label{def:address-register-computational-layer}
+An \emph{address register} is a distinguished element \(\alpha\in\mathfrak{A}_{\mathrm{fin}}\) serving as the currently selected address for machine-level read/write access.
+\end{definition}
+
+\begin{definition}[Control register]\label{def:control-register-computational-layer}
+A \emph{control register} is a finite tuple
+\[
+\mathcal{R}_{\mathrm{ctrl}}=(p,q,r,\alpha),
+\]
+where \(p\) is the current program position, \(q\) the current control state, \(r\) the current route-faithful residual/control datum, and \(\alpha\) the current address register.
+\end{definition}
+
+\begin{definition}[Finite machine configuration]\label{def:finite-machine-configuration-computational-layer}
+A \emph{finite machine configuration} is a pair
+\[
+\mathcal{C}=(\mathsf{Mem},\mathcal{R}_{\mathrm{ctrl}})
+\]
+consisting of a finite machine store and a control register.
+\end{definition}
+
+\begin{definition}[Finite universality]\label{def:finite-universality-computational-layer}
+The stack
+\[
+(\mathrm{QAM},\mathrm{MML},\mathrm{MMA})
+\]
+is called \emph{finitely universal} if every finite admissible symbolic task on finite machine configurations admits a finite MML realization executable in MMA.
+\end{definition}
+
+\begin{definition}[Extensible address tower]\label{def:extensible-address-tower-computational-layer}
+An \emph{extensible address tower} is a nested family
+\[
+\mathfrak{A}_1\subset\mathfrak{A}_2\subset\mathfrak{A}_3\subset\cdots
+\]
+of finite address spaces such that each inclusion preserves the previously existing address tags and every finite set of address demands is realized at some stage.
+\end{definition}
+
+\begin{definition}[Store extension map]\label{def:store-extension-map-computational-layer}
+Given two stages \(\mathfrak{A}_n\subset\mathfrak{A}_{n+1}\), a \emph{store extension map} is a map
+\[
+\mathrm{Ext}_{n}^{n+1}:\mathsf{Mem}_n\longmapsto \mathsf{Mem}_{n+1}
+\]
+such that old address contents are preserved and every new address is initialized by a fixed admissible default QAM-object.
+\end{definition}
+
+\begin{definition}[Fresh tag]\label{def:fresh-tag-computational-layer}
+Let \(\mathfrak{A}_{\mathrm{fin}}\) be the currently active finite address/tag carrier set. A \emph{fresh tag} is a tag
+\[
+a_{\mathrm{new}}\notin\mathfrak{A}_{\mathrm{fin}}.
+\]
+\end{definition}
+
+\begin{definition}[Fresh-address realization rule]\label{def:fresh-address-realization-rule-computational-layer}
+A \emph{fresh-address realization rule} assigns to every fresh tag \(a_{\mathrm{new}}\) an extended finite address space
+\[
+\mathfrak{A}_{\mathrm{fin}}^{+}=\mathfrak{A}_{\mathrm{fin}}\cup\{a_{\mathrm{new}}\}.
+\]
+\end{definition}
+
+\begin{definition}[Default initialization object]\label{def:default-initialization-object-computational-layer}
+A \emph{default initialization object} is a distinguished finite QAM-object
+\[
+\mathbf{0}_{\mathrm{QAM}}\in\mathsf{QAM}_{\mathrm{fin}}
+\]
+used to initialize newly created addresses before any further write/update takes place.
+\end{definition}
+
+\begin{definition}[Fresh-address store extension]\label{def:fresh-address-store-extension-computational-layer}
+Let
+\[
+\mathsf{Mem}:\mathfrak{A}_{\mathrm{fin}}\to\mathsf{QAM}_{\mathrm{fin}}
+\]
+be the current finite machine store, and let \(a_{\mathrm{new}}\notin\mathfrak{A}_{\mathrm{fin}}\) be a fresh tag.
+
+The \emph{fresh-address store extension} is the extended store
+\[
+\mathsf{Mem}^{+}:\mathfrak{A}_{\mathrm{fin}}^{+}\to\mathsf{QAM}_{\mathrm{fin}}
+\]
+defined by
+\[
+\mathsf{Mem}^{+}(a)=\mathsf{Mem}(a)
+\quad
+\text{for all } a\in\mathfrak{A}_{\mathrm{fin}},
+\]
+and
+\[
+\mathsf{Mem}^{+}(a_{\mathrm{new}})=\mathbf{0}_{\mathrm{QAM}}.
+\]
+\end{definition}
+
+\begin{definition}[Old-address semantic preservation]\label{def:old-address-semantic-preservation-computational-layer}
+A fresh-address extension satisfies \emph{old-address semantic preservation} if every admissible instruction that only refers to addresses in the old domain has exactly the same effect on those old addresses before and after extension.
+\end{definition}
+
+\begin{definition}[Stage-stable universality]\label{def:stage-stable-universality-computational-layer}
+The stack
+\[
+(\mathrm{QAM},\mathrm{MML},\mathrm{MMA})
+\]
+is called \emph{stage-stably universal} if every extension-compatible stage-stable task family admits a stable unbounded realization by one stage-stable finite program.
+\end{definition}
+
+\begin{remark}[Computational status reading]\label{rem:computational-status-reading-computational-layer}
+At the present stage, the project computational architecture should be read in three levels:
+\begin{enumerate}[leftmargin=2em]
+    \item finite machine completeness;
+    \item finite universality (Z3-style regime);
+    \item stage-stable universality together with fresh-address extension, yielding an architectural Turing-style regime.
+\end{enumerate}
+\end{remark}
+
+\begin{theorem}[First finite machine completeness reading theorem]\label{thm:first-finite-machine-completeness-computational-layer}
+Assume:
+\begin{enumerate}[leftmargin=2em]
+    \item finite machine states are encoded in the QAM-object layer;
+    \item finite admissible symbolic transformations are representable in MML;
+    \item the MMA execution layer executes finite MML programs route-faithfully;
+    \item finite branch emulation is available.
+\end{enumerate}
+Then the triple
+\[
+(\mathrm{QAM},\mathrm{MML},\mathrm{MMA})
+\]
+supports a finitely machine-complete internal reading.
+\end{theorem}
+
+\begin{proof}
+Finite tagged QAM stores supply the data layer, finite MML programs supply the symbolic control layer, MMA supplies executable realization, and branch emulation supplies finite conditional continuation. Hence the machine architecture is complete at the finite programmable level.
+\end{proof}
+
+\begin{theorem}[Finite address/store layer theorem]\label{thm:finite-address-store-completeness-computational-layer}
+Assume:
+\begin{enumerate}[leftmargin=2em]
+    \item the QAM-object layer encodes finite machine stores;
+    \item the MML instruction alphabet contains finite read/write, test, branch, loop, and halt instructions;
+    \item the MMA execution layer executes address-valid MML instructions on finite machine configurations;
+    \item finite branch emulation is available.
+\end{enumerate}
+Then the project architecture supports an explicit complete finite address/store machine layer.
+\end{theorem}
+
+\begin{proof}
+Finite stores are explicit address maps, read/write closure holds on the same finite address domain, finite control is preserved under address-valid execution, and finite conditional control is realizable without leaving the finite regime. Thus the address/store layer is complete.
+\end{proof}
+
+\begin{theorem}[First finite universality reading theorem]\label{thm:first-finite-universality-computational-layer}
+Assume:
+\begin{enumerate}[leftmargin=2em]
+    \item the strengthened finite machine completeness theorem holds;
+    \item every finite symbolic task decomposes into finitely many canonical finite programming primitives;
+    \item finite branch emulation is available.
+\end{enumerate}
+Then the stack
+\[
+(\mathrm{QAM},\mathrm{MML},\mathrm{MMA})
+\]
+supports a finite-universality reading on the internal machine layer.
+\end{theorem}
+
+\begin{proof}
+Every finite symbolic task can be decomposed into finite read/write, routing, projection, normalization, test, selection, branch, loop, and halt primitives; these are representable in MML and executable in MMA. Hence every finite admissible symbolic task admits a finite realization.
+\end{proof}
+
+\begin{theorem}[Fresh tag = fresh address reading theorem]\label{thm:fresh-tag-equals-fresh-address-computational-layer}
+Assume:
+\begin{enumerate}[leftmargin=2em]
+    \item the architecture already contains an implicit extensible address-tower pattern;
+    \item fresh tags are admissibly generable;
+    \item fresh-address realization holds;
+    \item default initialization is available;
+    \item old-address semantic preservation holds.
+\end{enumerate}
+Then the current QAM/MML/MMA architecture supports an explicit extensible-address reading.
+\end{theorem}
+
+\begin{proof}
+Fresh-address realization turns new tags into genuine new addresses, default initialization turns those addresses into usable machine cells, and old-address semantic preservation makes the extension conservative on the previous stage. Iterating this process makes the address tower explicit.
+\end{proof}
+
+\begin{theorem}[First stage-stable universality reading theorem]\label{thm:first-stage-stable-universality-computational-layer}
+Assume:
+\begin{enumerate}[leftmargin=2em]
+    \item the first finite universality theorem holds;
+    \item the fresh tag = fresh address theorem holds;
+    \item uniform instruction persistence holds;
+    \item uniform execution persistence holds;
+    \item finite branch emulation persists along stage extension.
+\end{enumerate}
+Then the stack
+\[
+(\mathrm{QAM},\mathrm{MML},\mathrm{MMA})
+\]
+supports a stage-stably universal machine reading.
+\end{theorem}
+
+\begin{proof}
+Finite universality gives programmable realization on each finite stage. Fresh-address extension makes store growth explicit and conservative. Uniform instruction and execution persistence keep the same finite program semantics valid on larger stages, and persistent branch emulation stabilizes conditional control. Therefore extension-compatible stage-stable task families admit stable unbounded realizations.
+\end{proof}
+
+\begin{theorem}[Conditional architectural Turing-style completeness reading theorem]\label{thm:architectural-turing-style-completeness-computational-layer}
+Assume the first stage-stable universality reading theorem. Then the stack
+\[
+(\mathrm{QAM},\mathrm{MML},\mathrm{MMA})
+\]
+supports a conditional architectural Turing-style completeness reading along the explicit stage-stable route singled out by the present computational layer.
+\end{theorem}
+
+\begin{proof}
+By stage-stable universality, the architecture supports programmable finite symbolic control, explicit unbounded store growth, stable finite program semantics across arbitrarily large stages, and persistent conditional control. These are exactly the architectural ingredients isolated for a Turing-style machine reading. Because the older Sections~19U--19Z still distinguish unconditional status \(\mathbf S_1\) from stronger conditional route-dependent upgrades toward \(\mathbf S_4(\mathcal R)\) and \(\mathbf S_5\), the present conclusion is recorded only as a conditional architectural reading rather than as a new unconditional global machine-status theorem.
+\end{proof}
+
+\begin{corollary}[Computational status embedding rule]\label{cor:computational-status-upgrade-rule-computational-layer}
+The project computational status should now be embedded into the older strength hierarchy in the following disciplined way:
+\begin{enumerate}[leftmargin=2em]
+    \item unconditionally, the public machine-status reading of the line remains at \(\mathbf S_1\) unless the external route certificates of Sections~19U--19Z are invoked;
+    \item internally, the present block sharpens the machine reading from a bare \(\mathbf S_1\) interpretation toward a finitely machine-complete / finitely universal (Z3-style) package, i.e. toward the primitive-core side of \(\mathbf S_2\);
+    \item explicitly extensible fresh-address and stage-stable universality readings isolate the architectural ingredients that would later be needed on a conditional route toward \(\mathbf S_4(\mathcal R)\) and \(\mathbf S_5\), but they do not by themselves replace the earlier route-dependent certification ladder.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Immediate from the preceding completeness theorems.
+\end{proof}
+
+\begin{remark}[No parallel machine-status hierarchy]\label{rem:no-parallel-machine-status-hierarchy-computational-layer}
+This computational block should therefore not be read as introducing a second independent machine-status ladder beside Sections~19U--19Z. Its role is narrower and more local: it explicates the QAM/MML/MMA machine package that underlies the already existing hierarchy and sharpens the internal architectural route toward stronger conditional computational claims, while leaving the unconditional public status decoder unchanged.
+\end{remark}
+
 \subsection*{Version and DOI record}
-The version/DOI history had started to mix three different functions in one place: (i) a current public-release chronology, (ii) local working checkpoints, and (iii) an older archival snapshot that was no longer fully normalized. To keep the release line readable, the current-era public chronology is normalized first, while the older mixed snapshot is retained immediately afterwards as archival proof-memory.
+The table below records the currently preserved Companion chain as a normalized release and working-state register. Zenodo releases are listed together with a publication-date column; earlier intermediate records and local working witnesses are retained so that the release chronology remains reconstructible even where the register groups recent working states before older archive rows.
 
-\subsection*{Normalized current public chronology (v3.13.0 onward)}
-The following table is the intended quick-reference register for the current public 3.x line. It corrects the earlier omission of several later public checkpoints and makes explicit where a version label was used only as a working line or where a separate public Zenodo release could not yet be reconstructed from the preserved file set.
-
-{\small
-\renewcommand{\arraystretch}{1.12}
-\setlength{\LTleft}{0pt}
-\setlength{\LTright}{0pt}
-\begin{longtable}{|p{0.14\textwidth}|p{0.18\textwidth}|p{0.15\textwidth}|p{0.40\textwidth}|}
-\hline
-\textbf{Version / record} & \textbf{Status} & \textbf{Publication date} & \textbf{DOI / note} \\
-\hline
-\endfirsthead
-\hline
-\textbf{Version / record} & \textbf{Status} & \textbf{Publication date} & \textbf{DOI / note} \\
-\hline
-\endhead
-Concept DOI & concept record & ongoing pointer & \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} \\
-\hline
-v3.13.0 & public Zenodo release & 2026-04-07 & \href{https://doi.org/10.5281/zenodo.19446872}{10.5281/zenodo.19446872} --- stabilized public checkpoint before the first post-closure branch/shell hardening line \\
-\hline
-v3.14.0 & public Zenodo release & 2026-04-07 & \href{https://doi.org/10.5281/zenodo.19460589}{10.5281/zenodo.19460589} --- first post-closure branch/shell hardening layer \\
-\hline
-v3.15.0 & public Zenodo release & 2026-04-08 & \href{https://doi.org/10.5281/zenodo.19463389}{10.5281/zenodo.19463389} --- first compressed public-shape QAM core over the branch/shell baseline \\
-\hline
-v3.16.0 & public Zenodo release & 2026-04-10 & \href{https://doi.org/10.5281/zenodo.19489324}{10.5281/zenodo.19489324} --- second public-shape QAM branch/shell/routed layer \\
-\hline
-v3.17.0 & public Zenodo release & 2026-04-10 & \href{https://doi.org/10.5281/zenodo.19522352}{10.5281/zenodo.19522352} --- tensor/operator public line above the v3.16.0 baseline \\
-\hline
-v3.18.0 & public Zenodo release & 2026-04-13 & \href{https://doi.org/10.5281/zenodo.19548590}{10.5281/zenodo.19548590} --- first public OP~3/QAM closure package with shell certificates and bundled OP~3$\to$OP~5/global interface \\
-\hline
-v3.19.0 & historical public QAM line & reconstruction pending & witness-grade hardening and local reopening discipline are referenced repeatedly in the preserved text, but a separate version-specific Zenodo DOI row could not be reconstructed from the currently preserved file set without risking a false insertion \\
-\hline
-v3.20.0 & public Zenodo release & 2026-04-13 & \href{https://doi.org/10.5281/zenodo.19571954}{10.5281/zenodo.19571954} --- theorem-level shadow package together with the terminal crystal--shadow interface checkpoint \\
-\hline
-v3.21.0 & public Zenodo release & 2026-04-13 & \href{https://doi.org/10.5281/zenodo.19576799}{10.5281/zenodo.19576799} --- interface-payoff layer on top of the public v3.20.0 shadow package \\
-\hline
-v3.22.0 & public Zenodo release & 2026-04-13 & \href{https://doi.org/10.5281/zenodo.19581855}{10.5281/zenodo.19581855} --- first partial-closure and interface-hardening steps above the v3.21.0 payoff layer \\
-\hline
-v3.23.0 & public Zenodo release & 2026-04-13 & \href{https://doi.org/10.5281/zenodo.19582751}{10.5281/zenodo.19582751} --- reduced retained-carrier optical approximation together with partial-closure / restricted lift-back reading on the historical public line \\
-\hline
-v3.24.0 & no separate public Zenodo release preserved & not applicable & the version label does not appear as a distinct preserved public Zenodo release in the current Companion file set; the chain jumps from v3.23.0 to v3.25.0 \\
-\hline
-v3.25.0 & public Zenodo release & 2026-04-16 & \href{https://doi.org/10.5281/zenodo.19615952}{10.5281/zenodo.19615952} --- optical-comparison and machine-theoretic overlay consolidation, including compressed optical diagnostic control and capped machine-overlay equivalence surface \\
-\hline
-v3.26.0 & local working line only & not a public Zenodo release & preserved as a working-stage label between the public v3.25.0 and v3.27.0 checkpoints; no separate public version DOI is recorded for it \\
-\hline
-v3.27.0 & public Zenodo release & 2026-04-18 & \href{https://doi.org/10.5281/zenodo.19643697}{10.5281/zenodo.19643697} --- bidirectional machine-shadow split, retained total/imbalance channel discipline, compressed live-burden dictionary, and freeze-clean public line before the tool/QAM/decoder revision \\
-\hline
-v3.28.0 & public Zenodo release & 2026-04-19 & \href{https://doi.org/10.5281/zenodo.19648743}{10.5281/zenodo.19648743} --- completes the immediate tool/QAM/decoder revision on top of public v3.27.0, including the normalized tool ledger, QAM menu-tag-registry layer, tag-first reopening routes, and Monte-Carlo residual-signature decoder package \\
-\hline
-\end{longtable}
-}
-
-\noindent Note. The normalized table above is the intended quick-reference history for the current public 3.x line. It also makes explicit where the preserved project record supports only a working-line label (v3.26.0), where a public label appears to have been skipped rather than separately released (v3.24.0), and where the text preserves a public-stage reference but the version-specific DOI row itself still needs reconstruction from the publication log (v3.19.0).
-
-\subsection*{Archival mixed chronology snapshot}
-The longer table below is retained as an \emph{archival DOI/history snapshot} from an earlier release-normalization stage. It deliberately mixes public releases and local working states and is therefore no longer fully normalized by increasing version number. It remains useful for proof-memory, checkpoint genealogy, and recovery of older local subversion notes, but the normalized public chronology above should be read first whenever the question is simply ``which public version had which DOI?''
+The following chronology block is the active normalized release register for the present v\docversion\ release. The concept DOI remains the stable title-page pointer; version-specific DOI claims for public releases and pre-release freeze witnesses are recorded explicitly in this chronology.
 
 {\small
 \renewcommand{\arraystretch}{1.12}
@@ -6999,17 +7508,75 @@ The longer table below is retained as an \emph{archival DOI/history snapshot} fr
 \endhead
 Concept DOI & concept record & ongoing pointer & \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} \\
 \hline
-v3.25.0 & public Zenodo release & 2026-04-16 & \href{https://doi.org/10.5281/zenodo.19615952}{10.5281/zenodo.19615952} --- then-current latest public release; consolidates the optical-comparison and machine-theoretic overlay line, including compressed optical diagnostic control, bundled proof-use compression, conditional reference-core closure, and the capped machine-theoretic overlay line up to the present equivalence surface \\ 
+v3.28.0 & public Zenodo release & 2026-04-20 & \href{https://doi.org/10.5281/zenodo.19648743}{10.5281/zenodo.19648743} --- earlier public release; completes the deferred tool/QAM/decoder layer and fixes the route-control infrastructure that the present release inherits as its public baseline \\
 \hline
-v3.18.0 & public Zenodo release & 2026-04-13 & \href{https://doi.org/10.5281/zenodo.19548590}{10.5281/zenodo.19548590} --- prior public release; carries the public v3.17.0 tensor/operator baseline forward into a first public OP~3/QAM closure package with shell certificates, shell-defect localization, shell-stable readout factorization, and a bundled OP~3$\to$OP~5/global interface while keeping stronger kernel-first activation internal \\
+v3.28.1-r39 & pre-release working continuation & 2026-04-20 & local working state above the public v3.28.0 release; assembled the certificate-aware extension/routing/probe layer, local retained-corridor closure of the live OP~1 and OP~5 Step~(B) kernels, QAM/decoder shadow reattachment, certificate-aware Monte-Carlo discipline, and restored full historical preservation; carried forward here as the final pre-release working witness for v3.29.0 \\
 \hline
-v3.17.0 & public Zenodo release & 2026-04-10 & \href{https://doi.org/10.5281/zenodo.19522352}{10.5281/zenodo.19522352} --- prior public release; promotes the third public-shape QAM tensor/operator line above the public v3.16.0 release and keeps translation/round-trip statements in front-facing public form while leaving support-selection and wider compression internal \\
+v3.29.0 & public Zenodo release & 2026-04-20 & \href{https://doi.org/10.5281/zenodo.19670829}{10.5281/zenodo.19670829} --- prior public release; promotes the certificate-aware extension/routing/probe layer, finite decision/action/word routing, matrix/crystal/field readout tags, admissibility and routing discipline, QAM/decoder shadow reattachment, certificate-aware Monte-Carlo discipline, and local retained-corridor closure of the live OP~1 and OP~5 Step~(B) kernels while preserving the full historical witness in Part~II \\
 \hline
-v3.16.0 & public Zenodo release & 2026-04-10 & \href{https://doi.org/10.5281/zenodo.19489324}{10.5281/zenodo.19489324} --- prior public release; promotes the second public-shape QAM branch/shell/routed layer while leaving tensor/operator and support-selection expansion internal, and records a deferred kernel-first compression path with activation criteria, staged stress tests, and migration roadmap \\
+v3.29.1-r32 & release-freeze working continuation & 2026-04-21 & local freeze witness above the public v3.29.0 release; completes the conservative upgrade-plus-probe integration line through probe-compatible packets, work queues, executable conservative programs, compact readout/output/intake surfaces, OP-facing request/fulfillment/aggregation/dispatch/program/cycle/return logic, a completed second downstream loop, and an explicit release-freeze stabilization point; no version-specific DOI assigned \\
 \hline
-v3.15.0 & public Zenodo release & 2026-04-08 & \href{https://doi.org/10.5281/zenodo.19463389}{10.5281/zenodo.19463389} --- prior public release; freezes the first compressed public-shape QAM core on top of the public v3.14.0 branch/shell baseline \\
+v3.30.0 & public Zenodo release & 2026-04-21 & \href{https://doi.org/10.5281/zenodo.19682951}{10.5281/zenodo.19682951} --- prior public release; promotes the conservative upgrade-plus-probe integration line above the public v3.29.0 release, including probe-compatible conservative upgrade packets, finite probe-ranked work queues, queue-extracted working programs, route-faithful lead tasks, executable conservative packets, compact conservative readout/output/intake surfaces, OP-facing request/fulfillment/aggregation/dispatch/program/cycle/return logic, a completed second downstream loop, and an explicit release-freeze stabilization point while preserving the full historical witness in Part~II \\
 \hline
-v3.14.0 & public Zenodo release & 2026-04-07 & \href{https://doi.org/10.5281/zenodo.19460589}{10.5281/zenodo.19460589} --- prior public release; extends the public v3.13.0 line by freezing the first post-closure branch/shell hardening layer \\
+v3.31.0 & public Zenodo release & 2026-04-24 & \href{https://doi.org/10.5281/zenodo.19699827}{10.5281/zenodo.19699827} --- prior public release; freezes the groundwork-complete pre-OP frontier synthesis above the public v3.30.0 baseline and publishes the full monolith with the integrated coupled prime-lattice trigger correction and the QAM/MML/MMA machine-realization layer while preserving the full historical witness in Part~II \\
+\hline
+v3.32.0 & public Zenodo release & 2026-04-24 & \href{https://doi.org/10.5281/zenodo.19704489}{10.5281/zenodo.19704489} --- prior public release; current release final built above the public v3.31.0 baseline; integrates the first machine-fused coupled OP-entry transition line, the coupled prime-lattice machine realization block, and the strengthened finite-to-stage-stable universality reading while preserving the full historical witness in Part~II \\
+v3.33.0 & public Zenodo release & 2026-04-24 & \href{https://doi.org/10.5281/zenodo.19716926}{10.5281/zenodo.19716926} --- prior public release; built above the public v3.32.0 baseline; carries the HC-captured local continuation line through lock-corridor capture, minimal HC-lock step, HC menu scan, plausible HC candidate, micro-lock update, and first local HC-capture chain while preserving the full historical witness in Part~II \\
+\hline
+v3.34.0 & public Zenodo release & 2026-04-25 & \href{https://doi.org/10.5281/zenodo.19746821}{10.5281/zenodo.19746821} --- current public split-bundle release; promotes the locally audit-clean v3.34.0-r27 line into a reader-facing active core plus preserved historical witness bundle, adds the QAM/MML/MMA store-array layer, frontmatter reader architecture, and Sphaera array mirror/stripe/parity-residual infrastructure while preserving the non-closure status of OP~1/4 and OP~5(B) \\
+\hline
+v3.34.0-r17 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- executes the first dispatched handoff-guard packet \(\mathsf W_{\mathrm{handoff}}^{\mathrm{guard}}\) after a stable lock/capture return, installs the handoff-guard defect register \(\Delta_{\mathrm{handoff}}^{\mathrm{guard}}\), and returns exactly one of handoff-ready source, bounded handoff-guard repair source, or smaller frontier source without manufacturing an OP closure certificate \\
+v3.34.0-r18 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- executes the first dispatched OP-normalization/type packet \(\mathsf W_{\mathrm{norm}}^{\mathrm{type}}\) after a handoff-ready return, installs the normalization/type-coherence defect register \(\Delta_{\mathrm{norm}}^{\mathrm{type}}\), and returns exactly one of route/rank-ready typed OP input, bounded normalization/type repair source, or smaller frontier source without manufacturing an OP closure certificate \\
+v3.34.0-r19 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- executes the first dispatched route/rank packet \(\mathsf W_{\mathrm{route}}^{\mathrm{rank}}\) after a normalization-ready return, installs the route/rank defect register \(\Delta_{\mathrm{route}}^{\mathrm{rank}}\), and returns exactly one of comparison-ready routed OP task, bounded route/rank repair source, or smaller frontier source without manufacturing an OP closure certificate \\
+v3.34.0-r20 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- executes the first dispatched comparison/defect packet \(\mathsf W_{\mathrm{cmp}}^{\Delta}\) after a route/rank-ready return, installs the comparison/defect register \(\Delta_{\mathrm{cmp}}^{\Delta}\), and returns exactly one of guarded bind candidate, guarded split candidate, or smaller comparison frontier without manufacturing an OP closure certificate \\
+v3.34.0-r21 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- executes the first dispatched resolve/return packet \(\mathsf W_{\mathrm{resolve}}^{\mathrm{next}}\) after a guarded comparison return, installs the resolve/return defect register \(\Delta_{\mathrm{resolve}}^{\mathrm{next}}\), and returns exactly one of guarded bind-work continuation, guarded split-work continuation, or smaller comparison-frontier descent without manufacturing an OP closure certificate \\
+v3.34.0-r22 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- executes the first continuation-queue packet after resolve/return, installs the continuation-queue defect register \(\Delta_{\mathrm{queue}}^{\mathrm{cont}}\), and returns exactly one of a guarded common-origin bind queue, guarded ranked split queue, or protected frontier-descent queue without manufacturing an OP closure certificate \\
+v3.34.0-r23 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- executes the first queue-head selection packet after continuation queue, installs the queue-head selection defect register \(\Delta_{\mathrm{head}}^{\mathrm{select}}\), and returns exactly one of a guarded common-origin-check head, guarded branch-rank-check head, or guarded frontier-descent-check head while retaining the finite tail and without manufacturing an OP closure certificate \\
+v3.34.0-r24 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- executes the first selected queue-head execution packet, installs the selected queue-head execution defect register \(\Delta_{\mathrm{head}}^{\mathrm{exec}}\), and returns exactly one of an executed common-origin-check surface, executed branch-rank-check surface, or executed frontier-descent-check surface while retaining the finite queue tail and without manufacturing an OP closure certificate \\
+v3.34.0-r25 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- executes the first executed-head tail-entry packet \(\mathsf W_{\mathrm{tail}}^{\mathrm{entry}}\), installs the tail-entry defect \(\Delta_{\mathrm{tail}}^{\mathrm{entry}}\), and returns exactly one of a guarded bind-tail, split-tail, or frontier-tail entry without manufacturing an OP closure certificate \\
+v3.34.0-r26 & local audit-freeze candidate & 2026-04-24 & no Zenodo DOI assigned --- installs the first audit-freeze ledger \(F_{\mathrm{HCOP}}^{\mathrm{audit}}\) with audit-freeze defect \(\Delta_{\mathrm{audit}}^{\mathrm{freeze}}\), recording baseline, DOI state, local spine, tail-entry output, preservation obligations, reference/compilation audit data, terminal bibliography, historical witness, and the no-false-certificate marker \\
+v3.34.0-r27 & local audit-freeze candidate & 2026-04-24 & no Zenodo DOI assigned --- installs the audit-freeze stabilization object \(F_{\mathrm{freeze}}^{\mathrm{audit}}\), permitting only audit, mechanical repair, metadata repair, release packaging, and Zenodo-description preparation before further theorem expansion \\
+\hline
+v3.34.0-r15 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- turns the r14 tail-normalized HC/OP proof skeleton into the first controlled skeleton-to-workstep dispatch object \(\mathsf D_{\mathrm{HCOP}}^{\mathrm{skel}}\), assigning finite admissible next work packets to lock/capture, handoff, normalization, routing, comparison, and resolution nodes while preserving dependency order, guards, witnesses, route tags, theorematic status, and the no-false-certificate rule \\
+v3.34.0-r16 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- executes the first dispatched lock/capture stabilization packet \(\mathsf W_{\mathrm{lock}}^{\mathrm{stab}}\), installs the lock-stability defect register \(\Delta_{\mathrm{lock}}^{\mathrm{stab}}\), and returns exactly one of handoff-ready stable source, bounded local repair source, or smaller frontier source without manufacturing an OP closure certificate \\
+\hline
+v3.34.0-r14 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- extracts the first tail-normalized HC/OP proof skeleton \(\mathsf S_{\mathrm{HCOP}}^{\mathrm{tail}}\), organizing the active r01--r04 spine as LOCK/CAPTURE, HANDOFF, NORMALIZE, ROUTE, COMPARE, and RESOLVE source nodes plus later guarded citation tails while preserving dependency order and preventing false OP-closure certificates \\
+\hline
+v3.34.0-r13 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- turns the r12 ledger into the first guarded-reduction pilot normal form \(\mathrm{GRCite}_{\mathrm{HCOP}}(\ell;G,W,S)\), allowing only later repeated HC/OP tails to be rewritten as guarded tool citations while first occurrences, local guards, witnesses, certificate tests, proof-critical inequalities, theorematic status, and historical witness material remain explicit \\
+\hline
+v3.34.0-r12 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- applies the r11 guarded-reduction protocol for the first time by installing the finite ledger \(\mathcal L_{\mathrm{HCOP}}^{(1)}\) over the active HC/OP proof spine, allowing later repeated lock/capture, handoff, normalization, route/frontier, paired-comparison, probe-diagnostic, and archive-to-tool tails to be cited in guarded normal form while keeping first occurrences, local guards, certificate tests, proof-critical inequalities, theorematic status, and historical witness material explicit \\
+\hline
+v3.34.0-r11 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- keeps the r10 tool-contract application layer and adds the first tool-guarded reduction protocol \(\mathcal R_{\mathrm{HCOP}}^{(1)}\), defining reducible and non-reducible HC/OP occurrences, guarded citation normal form, and the partial simplification map \(\mathsf{Red}_{\mathrm{HCOP}}^{(1)}\) while preserving proof content, first definitions, local guards, certificate tests, theorematic status, and the full historical witness in Part~II \\
+\hline
+v3.34.0-r10 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- applies the r09 reusable tool contracts back to the active r01--r04 HC/OP proof spine as a conservative cross-reference layer \(\mathcal P_{\mathrm{HCOP}}^{\mathrm{tool}}\), allowing repeated route, frontier, and no-false-certificate safety prose to be replaced by typed tool-contract citations only where the original hypotheses and guards remain visible, while preserving proof content and the full historical witness in Part~II \\
+\hline
+v3.34.0-r09 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- keeps the r08 compression map unchanged and extracts the first reusable HC/OP tool normal forms \(\mathbb T_{\mathrm{HCOP}}^{(1)}\), giving typed contracts for lock/capture, handoff, normalization, routing, comparison, resolution, probe ranking, certificate tests, frontier descent, and archive-to-tool extraction, so later text can cite tool contracts instead of repeating safety prose while preserving proof content and the full historical witness in Part~II \\
+\hline
+v3.34.0-r08 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- keeps the r07 QAM/MML/MMA interface unchanged and adds \(\mathfrak C_{\mathrm{HCOP}}\), a conservative MML/MMA compression map for inherited HC/OP text, so repeated capture, handoff, normalization, routing, comparison, probe, certificate-test, route-preservation, and historical-tool paragraphs can be reread as typed operations without deleting proof content or manufacturing OP closure certificates, while preserving the full historical witness in Part~II \\
+\hline
+v3.34.0-r07 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- keeps the r04 paired OP-entry comparison execution and r06 bibliography hardening unchanged, assigns local interface versions \(\mathrm{QAM}_{\mathrm{HCOP}}^{\mathrm{loc}}\), \(\mathrm{MML}_{\mathrm{HCOP}}^{\mathrm{loc}}\), and \(\mathrm{MMA}_{\mathrm{HCOP}}^{\mathrm{loc}}\), and proves that the r01--r04 HC-routed OP-entry chain is executable as one finite typed MML/MMA program without manufacturing an OP closure certificate, while preserving the full historical witness in Part~II \\
+v3.34.0-r06 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- keeps the r04/r05 mathematical and bibliography-placement state unchanged, expands the terminal bibliography after a whole-document literature scan, adds compact front/back literature anchor notes for Teichmuller/quasiconformal geometry, Riemann--GUE/RMT, Hopf/fibre-bundle topology, division algebras, gauge/QFT landmarks, CKM/PMNS mixing, Julia dynamics, set-theoretic foundations, and probe/cryptographic/computational diagnostics, while preserving the full historical witness in Part~II \\
+v3.34.0-r05 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- keeps the r04 paired OP~1/4--OP~5(B) comparison execution layer unchanged and normalizes the bibliography/back-matter placement by moving the live bibliography to the terminal Final Bibliography block while preserving the full historical witness in Part~II \\
+\hline
+v3.34.0-r04 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- executes the paired OP~1/4--OP~5(B) comparison branch above the r03 task-routing layer; compares joint versus separated HC-compatible readouts and returns either a bound common-origin state, a split ranked single-branch state, or a smaller frontier-certified comparison state while preserving route tags and the full historical witness in Part~II \\
+\hline
+v3.34.0-r03 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- extracts the first finite OP-entry task-routing layer from the HC-derived normal form; maps the selected live residual branch into OP~1/4 continuum-limit work, OP~5(B) routed $\Theta$--$R$ balance work, anchor/admissibility refinement, or paired OP~1/4--OP~5(B) comparison while preserving route tags and the full historical witness in Part~II \\
+\hline
+v3.34.0-r02 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- extracts the first downstream-readable OP-entry normal form from the transport-stable HC-to-OP handoff packet; routes the terminal live residual triple into OP~1/4, OP~5(B), and anchor/admissibility request families while preserving route tags and the full historical witness in Part~II \\
+\hline
+v3.34.0-r01 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- begins the transport-stable HC-capture and OP-entry handoff line above the public v3.33.0 release; packages local HC capture into a route-faithful transport-stability test and an OP-facing handoff packet while preserving the full historical witness in Part~II \\
+\hline
+v3.25.0 & public Zenodo release & 2026-04-16 & \href{https://doi.org/10.5281/zenodo.19615952}{10.5281/zenodo.19615952} --- earlier public release; consolidates the optical-comparison and machine-theoretic overlay line, including compressed optical diagnostic control, bundled proof-use compression, conditional reference-core closure, and the capped machine-theoretic overlay line up to the present equivalence surface \\ 
+\hline
+v3.18.0 & public Zenodo release & 2026-04-13 & \href{https://doi.org/10.5281/zenodo.19548590}{10.5281/zenodo.19548590} --- earlier public release; carries the public v3.17.0 tensor/operator baseline forward into a first public OP~3/QAM closure package with shell certificates, shell-defect localization, shell-stable readout factorization, and a bundled OP~3$\to$OP~5/global interface while keeping stronger kernel-first activation internal \\
+\hline
+v3.17.0 & public Zenodo release & 2026-04-10 & \href{https://doi.org/10.5281/zenodo.19522352}{10.5281/zenodo.19522352} --- earlier public release; promotes the third public-shape QAM tensor/operator line above the public v3.16.0 release and keeps translation/round-trip statements in front-facing public form while leaving support-selection and wider compression internal \\
+\hline
+v3.16.0 & public Zenodo release & 2026-04-10 & \href{https://doi.org/10.5281/zenodo.19489324}{10.5281/zenodo.19489324} --- earlier public release; promotes the second public-shape QAM branch/shell/routed layer while leaving tensor/operator and support-selection expansion internal, and records a deferred kernel-first compression path with activation criteria, staged stress tests, and migration roadmap \\
+\hline
+v3.15.0 & public Zenodo release & 2026-04-08 & \href{https://doi.org/10.5281/zenodo.19463389}{10.5281/zenodo.19463389} --- earlier public release; freezes the first compressed public-shape QAM core on top of the public v3.14.0 branch/shell baseline \\
+\hline
+v3.14.0 & public Zenodo release & 2026-04-07 & \href{https://doi.org/10.5281/zenodo.19460589}{10.5281/zenodo.19460589} --- earlier public release; extends the public v3.13.0 line by freezing the first post-closure branch/shell hardening layer \\
 \hline
 v3.3.0 & local working state & 2026-04-03 & condensed Appendix-C integration of Julia-boundary, master-residual, Umkehrwalze, and reversal-probe sector \\
 \hline
@@ -8022,7 +8589,7 @@ The gain of the first 3.6 step is methodological but real: later language work i
 The following figures make the Section~3.8.48 hypothesis auditable on the current benchmark window. They do not prove the frame-flicker ansatz, but they show that a single smooth packet-scale moving-frame mode can already account for most of the mismatch beyond the rigid carrier and can do so in the two correction channels predicted by the current first-order frame-flicker decomposition.
 
 \begin{remark}[Systems-level reading of the OP~5 visual block]\label{rem:appendixC-op5-systems-reading}
-In the systems language summarized in Figure~\ref{fig:qam-vm-os-zfs}, the present OP~5 figures should be read as visible-support views rather than as independent kernel identities. The rigid carrier, the packet breathing, and the localized readout slip are therefore shown here precisely because they belong to the auditable view layer of one transported channel. Their role is to expose where the visible readout departs from the rigid carrier picture, while the structural closure judgment itself still remains delegated to the deeper branch/shell/transport architecture.
+In the systems language summarized in Figure~\texttt{fig:qam-vm-os-zfs} in the active-core PDF, the present OP~5 figures should be read as visible-support views rather than as independent kernel identities. The rigid carrier, the packet breathing, and the localized readout slip are therefore shown here precisely because they belong to the auditable view layer of one transported channel. Their role is to expose where the visible readout departs from the rigid carrier picture, while the structural closure judgment itself still remains delegated to the deeper branch/shell/transport architecture.
 \end{remark}
 
 
@@ -8065,80 +8632,8 @@ On the present benchmark window, the frame-flicker ansatz remains hypothesis-gra
 Within the current OP transport architecture, the packet-wave, breathing-envelope, and frame-flicker figures should be read as visible-support diagnostics rather than as primary closure criteria. Their mathematical role is to show that a large part of the observed OP~5 residue is compatible with a carrier-plus-readout-defect picture, which is exactly the kind of situation filtered later by the visible/structural mismatch separation tool.
 \end{remark}
 
-\subsection*{Bibliography}
-
-\noindent Note. The bibliography below mixes (i) the current Companion release, (ii) earlier project releases, and (iii) external references. Only the Companion concept DOI \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} belongs on the title line; version-specific Companion DOIs belong in the version record or the dedicated Companion bibliography entry, while other DOIs below refer to distinct publications.
-
-\begin{thebibliography}{9}
-
-\bibitem{brendecke2026rh}
-Marc Brendecke,
-\emph{On the Riemann Hypothesis: A Kernel-Theoretic Approach via
-Tensor Contraction and Self-Adjoint Extension},
-Zenodo v4.15, March 2026.
-\newblock DOI: \href{https://doi.org/10.5281/zenodo.19157158}{10.5281/zenodo.19157158}.
-
-\bibitem{brendecke2026main}
-Marc Brendecke,
-\emph{Quantum Sphaera: A Cascade Framework for Quantum Gravity, the Standard
-Model, and the Riemann Hypothesis},
-Zenodo, March 2026.
-\newblock DOI: \href{https://doi.org/10.5281/zenodo.19210213}{10.5281/zenodo.19210213}.
-
-\bibitem{brendecke2026sphaera}
-Marc Brendecke,
-\emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding} (v3.18.0; public Zenodo release),
-April 2026.
-\newblock Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}; version-specific DOI: \href{https://doi.org/10.5281/zenodo.19548590}{10.5281/zenodo.19548590}. 
-
-\bibitem{kim2026}
-Yilwook Kim,
-\emph{GUE-pacing and Energy Highway in the Riemann Lattice},
-Zenodo, March 2026.
-\newblock Concept DOI: \texttt{10.5281/zenodo.19112361}.
-
-\bibitem{Stone1930}
-M.~H.~Stone,
-\emph{Linear transformations in Hilbert space, III},
-Proc.\ Natl.\ Acad.\ Sci.\ USA \textbf{16} (1930), 172--175.
-
-\bibitem{vonNeumann1931}
-J.~von Neumann,
-\emph{Die Eindeutigkeit der Schrödingerschen Operatoren},
-Math.\ Ann.\ \textbf{104} (1931), 570--578.
-
-\bibitem{Weil1964}
-A.~Weil,
-\emph{Sur certains groupes d'opérateurs unitaires},
-Acta Math.\ \textbf{111} (1964), 143--211.
-
-
-\bibitem{turing1936}
-A.~M.~Turing,
-\emph{On Computable Numbers, with an Application to the Entscheidungsproblem},
-Proc.\ London Math.\ Soc.\ (2) \textbf{42} (1936), 230--265.
-
-\bibitem{knuth1997}
-Donald E.~Knuth,
-\emph{The Art of Computer Programming, Vol.~1: Fundamental Algorithms},
-3rd ed., Addison--Wesley, 1997.
-
-\bibitem{rojas1998}
-Ra\'ul Rojas,
-\emph{How to Make Zuse's Z3 a Universal Computer},
-IEEE Annals of the History of Computing \textbf{20} (1998), no.~3, 51--54.
-
-\bibitem{copeland2006}
-B.~Jack Copeland (ed.),
-\emph{Colossus: The Secrets of Bletchley Park's Codebreaking Computers},
-Oxford University Press, 2006.
-
-\bibitem{zuse2016}
-Horst Zuse,
-\emph{Konrad Zuse's Computer Z3},
-historical overview, 2016.
-
-\end{thebibliography}
+\paragraph{Bibliography placement note.}
+The bibliography that formerly appeared at this historical appendix position has been moved to the final back matter so that the document closes with the references. The version-record and historical-release material continues below unchanged as archival proof-memory.
 
 
 
@@ -8263,7 +8758,7 @@ This is the clean matrix-side endpoint of the current reduction. Once the observ
 The active commutator defect was introduced as the primitive common-mode obstruction on the active branch. However, the older grouped-layer architecture already contains a stronger structural principle: admissible Millennium transport is only allowed when it intertwines with the involution. Therefore the active commutator should not be read as a free new defect by default, but as a quantity that must vanish whenever the transport really is the admissible grouped-layer converter claimed by the document architecture. What then remains, if anything, must be downstream dressing rather than primitive HC/MM/J leakage.
 
 \begin{theorem}[Working admissible grouped transport kills the active commutator]
-Assume the Millennium matrix $\mathcal M$ acts on the active admissible plane $U$ as an admissible grouped-layer converter in the sense of Definition~\ref{def:millennium-transport-grouped-layers}, and assume its transport role is structure preserving with respect to the involution/umkehrwalze in the sense of Lemma~\ref{lem:millennium-intertwining-lemma}. Then
+Assume the Millennium matrix $\mathcal M$ acts on the active admissible plane $U$ as an admissible grouped-layer converter in the sense of Definition~\texttt{def:millennium-transport-grouped-layers} in the active-core PDF, and assume its transport role is structure preserving with respect to the involution/umkehrwalze in the sense of Lemma~\texttt{lem:millennium-intertwining-lemma} in the active-core PDF. Then
 \[
   [\mathcal M,J]\big|_{U}=0.
 \]
@@ -8277,7 +8772,7 @@ Consequently,
 \end{theorem}
 
 \begin{proof}
-By Lemma~\ref{lem:millennium-intertwining-lemma}, every Millennium transport that claims to preserve the normalized involutive kernel must satisfy
+By Lemma~\texttt{lem:millennium-intertwining-lemma} in the active-core PDF, every Millennium transport that claims to preserve the normalized involutive kernel must satisfy
 \[
   \mathcal M\mathcal J=\mathcal J\mathcal M.
 \]
@@ -9791,3 +10286,368 @@ This is the first QAM-over-ZF support-selection layer. It does not yet impose on
 \begin{remark}[Current closure of the internal QAM package]
 At the present internal stage, the QAM-over-ZF line has reached a first connected package state: coded objects, primitive predicates, admissible transport, coded closure-class preservation, closure-compatible readout, branch/shell/routed admissibility, tensor closure rules, faithful translation of the admissible OP fragment, operator-family/lambda-like maps, and support-selection/degeneracy handling are now all present inside one conservative ZF-grounded coding line. The next natural work should therefore focus on normalization, compression, and later public extraction rather than immediate uncontrolled enlargement.
 \end{remark}
+
+
+\clearpage
+\section*{Bibliographic hardening scan for v\docversion}
+\addcontentsline{toc}{section}{Bibliographic hardening scan for v\docversion}
+
+\noindent The r06 scan was conservative: it did not alter the theorem chain and did not promote any external source to an axiom. It only checked which external literatures are repeatedly invoked by terminology, analogies, or mathematical background in the monolith and then expanded the terminal bibliography accordingly. The highest-priority additions are Teichmuller/quasiconformal references, because Teichmuller, Beltrami, and quasiconformal language occurs often while the r05 bibliography had no dedicated Teichmuller anchor. The second-priority additions are the Riemann--GUE/RMT and operator/spectral references, because the document repeatedly uses GUE pacing, Riemann-zero language, and self-adjoint/spectral framing. The third-priority additions are structural background references for Hopf/fibre bundles, division algebras, gauge/QFT landmarks, CKM/PMNS mixing, Julia dynamics, ZF/set theory, and the probe/cryptographic/computational diagnostic vocabulary.
+
+\noindent The present bibliography is therefore still not meant to be exhaustive. In particular, a later release could still add a dedicated literature group for Teichmuller geodesic flow, measured foliations, moduli-space dynamics, geometric quantization, modern $G_2$ model building, neutrino phenomenology, and numerical zeta-zero datasets. Those are useful follow-on enrichments, but they are not required for the r06 hardening pass.
+
+\clearpage
+\section*{Final Bibliography}
+\addcontentsline{toc}{section}{Final Bibliography}
+
+\noindent Note. The bibliography below mixes (i) the current Companion release, (ii) earlier project releases, and (iii) external references. Only the Companion concept DOI \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} belongs on the title line; version-specific Companion DOIs belong in the version record or the dedicated Companion bibliography entry, while other DOIs below refer to distinct publications.
+
+
+\begin{thebibliography}{99}
+
+\bibitem{brendecke2026rh}
+Marc Brendecke,
+\emph{On the Riemann Hypothesis: A Kernel-Theoretic Approach via Tensor Contraction and Self-Adjoint Extension},
+Zenodo v4.15, March 2026.
+\newblock DOI: \href{https://doi.org/10.5281/zenodo.19157158}{10.5281/zenodo.19157158}.
+
+\bibitem{brendecke2026main}
+Marc Brendecke,
+\emph{Quantum Sphaera: A Cascade Framework for Quantum Gravity, the Standard Model, and the Riemann Hypothesis},
+Zenodo, March 2026.
+\newblock DOI: \href{https://doi.org/10.5281/zenodo.19210213}{10.5281/zenodo.19210213}.
+
+\bibitem{brendecke2026sphaera}
+Marc Brendecke,
+\emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding} (v3.35.0-r01 historical witness working candidate),
+April 2026.
+\newblock Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}; version-specific DOI: \href{https://doi.org/10.5281/zenodo.19746821}{10.5281/zenodo.19746821}.
+
+\bibitem{kim2026}
+Yilwook Kim,
+\emph{GUE-pacing and Energy Highway in the Riemann Lattice},
+Zenodo, March 2026.
+\newblock Concept DOI: \texttt{10.5281/zenodo.19112361}.
+
+\bibitem{Riemann1859}
+B.~Riemann,
+\emph{\"Uber die Anzahl der Primzahlen unter einer gegebenen Gr\"osse},
+Monatsberichte der Berliner Akademie, November 1859, 136--144.
+
+\bibitem{Edwards1974}
+H.~M. Edwards,
+\emph{Riemann's Zeta Function},
+Academic Press, New York, 1974.
+
+\bibitem{Titchmarsh1986}
+E.~C. Titchmarsh,
+\emph{The Theory of the Riemann Zeta-Function},
+2nd ed., revised by D.~R. Heath-Brown,
+Oxford University Press, 1986.
+
+\bibitem{Conrey2003}
+J.~B. Conrey,
+\emph{The Riemann Hypothesis},
+Notices of the American Mathematical Society \textbf{50} (2003), no.~3, 341--353.
+
+\bibitem{Montgomery1973}
+H.~L. Montgomery,
+\emph{The Pair Correlation of Zeros of the Zeta Function},
+Proc. Sympos. Pure Math. \textbf{24} (1973), 181--193.
+
+\bibitem{Odlyzko1987}
+A.~M. Odlyzko,
+\emph{On the Distribution of Spacings Between Zeros of the Zeta Function},
+Mathematics of Computation \textbf{48} (1987), no.~177, 273--308.
+\newblock DOI: \href{https://doi.org/10.1090/S0025-5718-1987-0866115-0}{10.1090/S0025-5718-1987-0866115-0}.
+
+\bibitem{Mehta2004}
+M.~L. Mehta,
+\emph{Random Matrices},
+3rd ed., Pure and Applied Mathematics, vol.~142,
+Elsevier/Academic Press, 2004.
+
+\bibitem{KatzSarnak1999}
+N.~M. Katz and P.~Sarnak,
+\emph{Zeroes of Zeta Functions and Symmetry},
+Bulletin of the American Mathematical Society \textbf{36} (1999), no.~1, 1--26.
+\newblock DOI: \href{https://doi.org/10.1090/S0273-0979-99-00766-1}{10.1090/S0273-0979-99-00766-1}.
+
+\bibitem{Ahlfors2006}
+L.~V. Ahlfors,
+\emph{Lectures on Quasiconformal Mappings},
+2nd ed., University Lecture Series, vol.~38,
+American Mathematical Society, Providence, RI, 2006.
+\newblock DOI: \href{https://doi.org/10.1090/ulect/038}{10.1090/ulect/038}.
+
+\bibitem{GardinerLakic2000}
+F.~P. Gardiner and N.~Lakic,
+\emph{Quasiconformal Teichm\"uller Theory},
+Mathematical Surveys and Monographs, vol.~76,
+American Mathematical Society, Providence, RI, 2000.
+
+\bibitem{Hubbard2006}
+J.~H. Hubbard,
+\emph{Teichm\"uller Theory and Applications to Geometry, Topology, and Dynamics, Volume 1: Teichm\"uller Theory},
+Matrix Editions, Ithaca, NY, 2006.
+
+\bibitem{Sullivan1985}
+D.~Sullivan,
+\emph{Quasiconformal Homeomorphisms and Dynamics I. Solution of the Fatou--Julia Problem on Wandering Domains},
+Annals of Mathematics \textbf{122} (1985), no.~3, 401--418.
+\newblock DOI: \href{https://doi.org/10.2307/1971308}{10.2307/1971308}.
+
+\bibitem{Milnor2006}
+J.~Milnor,
+\emph{Dynamics in One Complex Variable},
+3rd ed., Annals of Mathematics Studies, vol.~160,
+Princeton University Press, 2006.
+
+\bibitem{Hopf1931}
+H.~Hopf,
+\emph{\"Uber die Abbildungen der dreidimensionalen Sph\"are auf die Kugelfl\"ache},
+Mathematische Annalen \textbf{104} (1931), 637--665.
+\newblock DOI: \href{https://doi.org/10.1007/BF01457962}{10.1007/BF01457962}.
+
+\bibitem{Steenrod1951}
+N.~Steenrod,
+\emph{The Topology of Fibre Bundles},
+Princeton Mathematical Series, vol.~14,
+Princeton University Press, 1951.
+
+\bibitem{Hatcher2002}
+A.~Hatcher,
+\emph{Algebraic Topology},
+Cambridge University Press, 2002.
+
+\bibitem{Bryant1987}
+R.~L. Bryant,
+\emph{Metrics with Exceptional Holonomy},
+Annals of Mathematics \textbf{126} (1987), no.~3, 525--576.
+\newblock DOI: \href{https://doi.org/10.2307/1971360}{10.2307/1971360}.
+
+\bibitem{EguchiGilkeyHanson1980}
+T.~Eguchi, P.~B. Gilkey, and A.~J. Hanson,
+\emph{Gravitation, Gauge Theories and Differential Geometry},
+Physics Reports \textbf{66} (1980), no.~6, 213--393.
+\newblock DOI: \href{https://doi.org/10.1016/0370-1573(80)90130-1}{10.1016/0370-1573(80)90130-1}.
+
+\bibitem{Baez2002}
+J.~C. Baez,
+\emph{The Octonions},
+Bulletin of the American Mathematical Society \textbf{39} (2002), no.~2, 145--205.
+\newblock DOI: \href{https://doi.org/10.1090/S0273-0979-01-00934-X}{10.1090/S0273-0979-01-00934-X}.
+
+\bibitem{Dixon1994}
+G.~M. Dixon,
+\emph{Division Algebras: Octonions, Quaternions, Complex Numbers and the Algebraic Design of Physics},
+Mathematics and Its Applications, vol.~290,
+Kluwer Academic Publishers, Dordrecht, 1994.
+\newblock DOI: \href{https://doi.org/10.1007/978-1-4757-2315-1}{10.1007/978-1-4757-2315-1}.
+
+\bibitem{Furey2018}
+C.~Furey,
+\emph{$SU(3)_C\times SU(2)_L\times U(1)_Y\left(\times U(1)_X\right)$ as a Symmetry of Division Algebraic Ladder Operators},
+European Physical Journal C \textbf{78} (2018), 375.
+\newblock DOI: \href{https://doi.org/10.1140/epjc/s10052-018-5844-7}{10.1140/epjc/s10052-018-5844-7}.
+
+\bibitem{Dirac1928}
+P.~A.~M. Dirac,
+\emph{The Quantum Theory of the Electron},
+Proceedings of the Royal Society of London A \textbf{117} (1928), no.~778, 610--624.
+\newblock DOI: \href{https://doi.org/10.1098/rspa.1928.0023}{10.1098/rspa.1928.0023}.
+
+\bibitem{YangMills1954}
+C.~N. Yang and R.~L. Mills,
+\emph{Conservation of Isotopic Spin and Isotopic Gauge Invariance},
+Physical Review \textbf{96} (1954), 191--195.
+\newblock DOI: \href{https://doi.org/10.1103/PhysRev.96.191}{10.1103/PhysRev.96.191}.
+
+\bibitem{EnglertBrout1964}
+F.~Englert and R.~Brout,
+\emph{Broken Symmetry and the Mass of Gauge Vector Mesons},
+Physical Review Letters \textbf{13} (1964), 321--323.
+\newblock DOI: \href{https://doi.org/10.1103/PhysRevLett.13.321}{10.1103/PhysRevLett.13.321}.
+
+\bibitem{Higgs1964}
+P.~W. Higgs,
+\emph{Broken Symmetries and the Masses of Gauge Bosons},
+Physical Review Letters \textbf{13} (1964), 508--509.
+\newblock DOI: \href{https://doi.org/10.1103/PhysRevLett.13.508}{10.1103/PhysRevLett.13.508}.
+
+\bibitem{Cabibbo1963}
+N.~Cabibbo,
+\emph{Unitary Symmetry and Leptonic Decays},
+Physical Review Letters \textbf{10} (1963), 531--533.
+\newblock DOI: \href{https://doi.org/10.1103/PhysRevLett.10.531}{10.1103/PhysRevLett.10.531}.
+
+\bibitem{KobayashiMaskawa1973}
+M.~Kobayashi and T.~Maskawa,
+\emph{CP-Violation in the Renormalizable Theory of Weak Interaction},
+Progress of Theoretical Physics \textbf{49} (1973), no.~2, 652--657.
+\newblock DOI: \href{https://doi.org/10.1143/PTP.49.652}{10.1143/PTP.49.652}.
+
+\bibitem{MakiNakagawaSakata1962}
+Z.~Maki, M.~Nakagawa, and S.~Sakata,
+\emph{Remarks on the Unified Model of Elementary Particles},
+Progress of Theoretical Physics \textbf{28} (1962), 870--880.
+\newblock DOI: \href{https://doi.org/10.1143/PTP.28.870}{10.1143/PTP.28.870}.
+
+\bibitem{Stone1930}
+M.~H.~Stone,
+\emph{Linear Transformations in Hilbert Space, III: Operational Methods and Group Theory},
+Proceedings of the National Academy of Sciences of the USA \textbf{16} (1930), 172--175.
+
+\bibitem{vonNeumann1931}
+J.~von Neumann,
+\emph{Die Eindeutigkeit der Schr\"odingerschen Operatoren},
+Mathematische Annalen \textbf{104} (1931), 570--578.
+
+\bibitem{Weil1964}
+A.~Weil,
+\emph{Sur certains groupes d'op\'erateurs unitaires},
+Acta Mathematica \textbf{111} (1964), 143--211.
+\newblock DOI: \href{https://doi.org/10.1007/BF02391012}{10.1007/BF02391012}.
+
+\bibitem{ReedSimon1975}
+M.~Reed and B.~Simon,
+\emph{Methods of Modern Mathematical Physics II: Fourier Analysis, Self-Adjointness},
+Academic Press, New York, 1975.
+
+\bibitem{KadisonRingrose1997}
+R.~V. Kadison and J.~R. Ringrose,
+\emph{Fundamentals of the Theory of Operator Algebras, Volume I: Elementary Theory},
+Graduate Studies in Mathematics, vol.~15,
+American Mathematical Society, 1997.
+
+\bibitem{Zermelo1908}
+E.~Zermelo,
+\emph{Untersuchungen \"uber die Grundlagen der Mengenlehre. I},
+Mathematische Annalen \textbf{65} (1908), 261--281.
+\newblock DOI: \href{https://doi.org/10.1007/BF01449999}{10.1007/BF01449999}.
+
+\bibitem{Fraenkel1928}
+A.~A. Fraenkel,
+\emph{Einleitung in die Mengenlehre},
+3rd ed., Springer, Berlin, 1928.
+\newblock DOI: \href{https://doi.org/10.1007/978-3-662-42029-4}{10.1007/978-3-662-42029-4}.
+
+\bibitem{Jech2003}
+T.~Jech,
+\emph{Set Theory: The Third Millennium Edition, Revised and Expanded},
+Springer Monographs in Mathematics,
+Springer, Berlin, 2003.
+
+\bibitem{Kunen1980}
+K.~Kunen,
+\emph{Set Theory: An Introduction to Independence Proofs},
+Studies in Logic and the Foundations of Mathematics, vol.~102,
+North-Holland, Amsterdam, 1980.
+
+\bibitem{Turing1936}
+A.~M. Turing,
+\emph{On Computable Numbers, with an Application to the Entscheidungsproblem},
+Proceedings of the London Mathematical Society (2) \textbf{42} (1936), 230--265.
+
+\bibitem{Kasiski1863}
+F.~W. Kasiski,
+\emph{Die Geheimschriften und die Dechiffrir-Kunst: Mit besonderer Ber\"ucksichtigung der deutschen und der franz\"osischen Sprache},
+E. S. Mittler und Sohn, Berlin, 1863.
+
+\bibitem{RivestShamirAdleman1978}
+R.~L. Rivest, A.~Shamir, and L.~Adleman,
+\emph{A Method for Obtaining Digital Signatures and Public-Key Cryptosystems},
+Communications of the ACM \textbf{21} (1978), no.~2, 120--126.
+\newblock DOI: \href{https://doi.org/10.1145/359340.359342}{10.1145/359340.359342}.
+
+\bibitem{DiffieHellman1976}
+W.~Diffie and M.~E. Hellman,
+\emph{New Directions in Cryptography},
+IEEE Transactions on Information Theory \textbf{22} (1976), no.~6, 644--654.
+\newblock DOI: \href{https://doi.org/10.1109/TIT.1976.1055638}{10.1109/TIT.1976.1055638}.
+
+\bibitem{Norris1997}
+J.~R. Norris,
+\emph{Markov Chains},
+Cambridge Series in Statistical and Probabilistic Mathematics, vol.~2,
+Cambridge University Press, 1997.
+
+\bibitem{Glasserman2004}
+P.~Glasserman,
+\emph{Monte Carlo Methods in Financial Engineering},
+Stochastic Modelling and Applied Probability, vol.~53,
+Springer, New York, 2004.
+\newblock DOI: \href{https://doi.org/10.1007/978-0-387-21617-1}{10.1007/978-0-387-21617-1}.
+
+\bibitem{Bollerslev1986}
+T.~Bollerslev,
+\emph{Generalized Autoregressive Conditional Heteroskedasticity},
+Journal of Econometrics \textbf{31} (1986), no.~3, 307--327.
+\newblock DOI: \href{https://doi.org/10.1016/0304-4076(86)90063-1}{10.1016/0304-4076(86)90063-1}.
+
+\bibitem{Knuth1997}
+D.~E. Knuth,
+\emph{The Art of Computer Programming, Vol.~1: Fundamental Algorithms},
+3rd ed., Addison--Wesley, 1997.
+
+\bibitem{Rojas1998}
+Ra\'ul Rojas,
+\emph{How to Make Zuse's Z3 a Universal Computer},
+IEEE Annals of the History of Computing \textbf{20} (1998), no.~3, 51--54.
+
+\bibitem{Copeland2006}
+B.~J. Copeland (ed.),
+\emph{Colossus: The Secrets of Bletchley Park's Codebreaking Computers},
+Oxford University Press, 2006.
+
+\bibitem{Zuse2016}
+H.~Zuse,
+\emph{Konrad Zuse's Computer Z3},
+historical overview, 2016.
+
+\bibitem{MenezesOorschotVanstone1996}
+A.~J. Menezes, P.~C. van Oorschot, and S.~A. Vanstone,
+\emph{Handbook of Applied Cryptography},
+CRC Press, 1996.
+
+\bibitem{GoldwasserBellare2008}
+S.~Goldwasser and M.~Bellare,
+\emph{Lecture Notes on Cryptography},
+MIT/UCSD lecture notes, 2008.
+
+\bibitem{PeskinSchroeder1995}
+M.~E. Peskin and D.~V. Schroeder,
+\emph{An Introduction to Quantum Field Theory},
+Westview Press, 1995.
+
+\bibitem{Weinberg1995}
+S.~Weinberg,
+\emph{The Quantum Theory of Fields, Volume I: Foundations},
+Cambridge University Press, 1995.
+
+\bibitem{FultonHarris1991}
+W.~Fulton and J.~Harris,
+\emph{Representation Theory: A First Course},
+Graduate Texts in Mathematics, vol.~129,
+Springer, 1991.
+
+\bibitem{Nakahara2003}
+M.~Nakahara,
+\emph{Geometry, Topology and Physics},
+2nd ed., Institute of Physics Publishing, 2003.
+
+\bibitem{Besse1987}
+A.~L. Besse,
+\emph{Einstein Manifolds},
+Ergebnisse der Mathematik und ihrer Grenzgebiete, vol.~10,
+Springer, 1987.
+
+\bibitem{Joyce2000}
+D.~D. Joyce,
+\emph{Compact Manifolds with Special Holonomy},
+Oxford University Press, 2000.
+
+\end{thebibliography}
+
+
+\end{document}
