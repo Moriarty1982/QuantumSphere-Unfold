@@ -1,0 +1,167 @@
+\section{String Theory and Loop Quantum Gravity as HC Sectors}
+\begin{quote}\small
+\noindent\textbf{Status.} \emph{Legacy comparative-physics block inside the active main body.}\par
+\noindent\textbf{Block function.} This section places two familiar high-energy frameworks into the compensator-based sector reading without promoting them to separate primitives.
+\end{quote}
+\label{sec:stringlqg}
+%% ============================================================
+
+\begin{theorem}[String--LQG duality via the Heisenberg compensator]
+\label{thm:string-lqg-duality}
+The Hardy space $\Hplus$ decomposes under the Heisenberg compensator
+into two sectors:
+\[
+  \Hplus = \Hplusplus\oplus\Hplusminus,
+\]
+\[
+  C(f) = \tfrac{1}{2}(f+Jf)\in\Hplusplus
+  \quad\text{(symmetric, bosonic --- String theory)},
+\]
+\[
+  A(f) = \tfrac{1}{2}(f-Jf)\in\Hplusminus
+  \quad\text{(antisymmetric, fermionic --- LQG)}.
+\]
+Both sectors are unitarily equivalent by Stone--von Neumann
+\cite{brendecke2026rh}: they are two representations of the same
+Weyl algebra $\WA$, seen from different frames.
+String theory and LQG are therefore not competing theories of quantum
+gravity: they are the bosonic and fermionic projections of the same
+object under the Heisenberg compensator.
+\end{theorem}
+
+\begin{proposition}[Shared vacuum and Planck floor]
+\label{prop:shared-vacuum-planck}
+Both sectors share the same vacuum and the same minimal scale:
+\begin{itemize}
+  \item \textbf{Vacuum:} $\zminus=0$ (the photon/Sphaera) is the ground
+        state of both $\Hplusplus$ and $\Hplusminus$.
+  \item \textbf{Planck floor:} $\lP=|\zminus|_{\min}$ is the string
+        length in $\Hplusplus$ and the area quantum
+        $\sqrt{A_{\min}}\sim\lP$ in $\Hplusminus$.
+        Both emerge from the same threshold of Theorem~1.2(i).
+\end{itemize}
+String theory and LQG are therefore not competing theories of quantum
+gravity: they are the bosonic and fermionic projections of the same
+object under the Heisenberg compensator.
+\end{proposition}
+
+\begin{theorem}[Wick rotation as splitting mechanism]\label{thm:wick}
+Under the imaginary proper time transformation $t\mapsto i\tau_E$
+(Wick rotation), the biquaternion time unit transforms as:
+\[
+  it \;\mapsto\; i\cdot(i\tau_E) = -\tau_E \in\mathbb{R}_{<0}.
+\]
+This is precisely the third triolic sector $\gamma_3<0$: the Wick
+rotation identifies the imaginary time component with the unstable
+tachyon sector.
+Consequently:
+\begin{enumerate}[label=(\roman*)]
+  \item The triolic balance condition
+        $\gstring+\gamma_{\mathrm{LQG}}+\gamma_3=0$ is the stability
+        condition under imaginary proper time: without it, the system
+        diverges to $\pm\infty$.
+  \item The two positive sectors ($\gstring,\gamma_{\mathrm{LQG}}>0$)
+        are stable under Wick rotation; the negative sector
+        ($\gamma_3<0$) is unstable and is projected away by the
+        cascade $\KC$.
+  \item The Minkowski norm $|q_n|^2=\tau_n^2$ becomes Euclidean
+        $|q_E|^2=\tau_E^2\geq 0$ under $t\mapsto i\tau_E$: the system
+        is unconditionally stable in Euclidean signature.
+\end{enumerate}
+\begin{proof}
+(i). Under $t\mapsto i\tau_E$: $it\mapsto -\tau_E$.
+The biquaternion $q_n=it\cdot\mathbf{1}+z_1 e_1+z_2 e_2+z_3 e_3$ becomes
+$q_E=-\tau_E\cdot\mathbf{1}+z_1 e_1+z_2 e_2+z_3 e_3$
+with norm $|q_E|^2=\tau_E^2+|z_1|^2+|z_2|^2+|z_3|^2\geq 0$.
+Stability requires $\tau_E^2\geq 0$, which is always satisfied.
+The balance $\gamma_1+\gamma_2+\gamma_3=0$ is equivalent to requiring
+that the $-\tau_E$ component does not introduce a net positive energy
+divergence.
+
+(ii). In Euclidean signature, only $\gamma>0$ sectors contribute to a
+convergent partition function $Z=\mathrm{Tr}(e^{-\beta H})$ with $H\geq 0$.
+The sector $\gamma_3<0$ would give $e^{+\beta|\gamma_3|H}\to\infty$:
+it is projected away by $\KC$.
+
+(iii). Direct computation of the Euclidean norm.
+\end{proof}
+\end{theorem}
+
+\begin{theorem}[Triolic structure of $\gBI$]
+\label{thm:triolic-gBI}
+The Barbero--Immirzi parameter $\gBI$ and the string-sector candidate
+$\gstring = \ln 2/(\pi\sqrt{3})$ are not in contradiction.
+They are two projections of the same triolic invariant:
+\[
+  \gstring + \gamma_{\mathrm{LQG}} + \gamma_3 = 0,
+\]
+with $\gamma_3 = -(\gstring+\gamma_{\mathrm{LQG}})\approx -0.3649$ being
+the third (unoccupied, tachyon) sector.
+The frame-invariant quantity is the triolic norm:
+\[
+  \tau_\gamma := \frac{1}{\sqrt{3}}
+  \sqrt{\gstring^2+\gamma_{\mathrm{LQG}}^2+\gamma_3^2}\approx 0.2619.
+\]
+\end{theorem}
+
+\begin{theorem}[Observer frame offset]\label{thm:frame-offset}
+Every matter observer carries a nonzero contravariant component
+$\zminus\neq 0$.
+All measured physical constants --- including $\hbar$, $G$, $c$, and
+$\gBI$ --- are projections of their frame-invariant values onto the
+observer's sector:
+\[
+  \gamma_{\mathrm{observed}}
+  = \gamma_0\cdot\frac{1}{\sqrt{1-\beta^2}}
+  = \gamma_0\cdot\gamma_{\mathrm{Lorentz}}(\beta).
+\]
+The Barbero--Immirzi parameter $\gBI\approx 0.2375$ is not an absolute
+constant of nature: it is the Lorentz-transformed $\gstring$, observed
+from a matter frame with $\beta\approx 0.844$.
+\end{theorem}
+
+\begin{proof}
+$\gstring = \ln 2/(\pi\sqrt{3})$ is computed in the photon frame
+$\zminus=0$ from the HC trace formula.
+The ratio $\gBI/\gstring = 1.864$ equals a Lorentz factor
+$\gL = 1/\sqrt{1-\beta^2}$ for $\beta=\sqrt{1-1/1.864^2}\approx 0.844$.
+The corresponding observer position is $\zminus=\beta/2\approx 0.422$.
+\end{proof}
+
+\begin{theorem}[Symmetric matter--tachyon frame]\label{thm:symmetric-frame}
+Matter and tachyon are positioned symmetrically around the photon frame
+$\zminus=0$:
+\[
+  \beta_{\mathrm{matter}} = +\bsym,\qquad
+  \beta_{\mathrm{tachyon}} = -\bsym,
+\]
+where
+\[
+  \bsym = \sqrt{\frac{\gBI-\gstring}{\gBI+\gstring}}\approx 0.5493.
+\]
+The Lorentz factor between the matter and tachyon frames is:
+\[
+  \gL = \frac{1+\bsym^2}{1-\bsym^2}
+      = \frac{\gBI}{\gstring}\approx 1.864.
+\]
+\end{theorem}
+
+\begin{proof}
+Let $r:=\gBI/\gstring$. Set $\bsym:=\sqrt{(r-1)/(r+1)}$. Then:
+\[
+  \frac{1+\bsym^2}{1-\bsym^2}
+  =\frac{1+(r-1)/(r+1)}{1-(r-1)/(r+1)}
+  =\frac{(r+1)+(r-1)}{(r+1)-(r-1)}=\frac{2r}{2}=r.\quad\checkmark
+\]
+The relativistic velocity of the tachyon as seen from the matter frame:
+\[
+  \beta_{\mathrm{tachyon}|\mathrm{matter}}
+  =\frac{-\bsym-\bsym}{1-(-\bsym)\bsym}
+  =\frac{-2\bsym}{1+\bsym^2},
+\]
+with corresponding Lorentz factor $\gamma_{\mathrm{tachyon}|\mathrm{matter}}=r$.\quad$\checkmark$
+\end{proof}
+
+
+%% ============================================================
+

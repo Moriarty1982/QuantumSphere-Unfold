@@ -1,0 +1,300 @@
+\section*{Historical Complete Snapshot: Formal Proof Supplement}
+\addcontentsline{toc}{section}{Historical Complete Snapshot: Formal Proof Supplement}
+\label{app:formal}
+
+\textit{This appendix contains the full formal proof architecture
+for the results stated in the main text.
+It is self-contained and can be read independently.
+All macros are as defined in the main preamble.}
+
+%% --- A.1 GUE Self-Determination ---
+
+\subsection*{19I. Optimization and normalization reserve}
+
+\paragraph{Why an optimization layer is needed.}
+Once the computational line carries typed programs, explicit rejection modes, and certificate-bearing outputs, a further reserve becomes natural: normalization and optimization rules that compress proof-programs without destroying admissibility evidence. In the present setting this is especially important because the entire motivation of MML/MMA is \emph{proof economy by structural normalization}. Hence optimization should not be understood as a merely engineering afterthought; it is part of the proof-theoretic architecture itself.
+
+\paragraph{Design principle.}
+The guiding constraint is that optimization must remain \emph{certificate-preserving}. A shorter program is acceptable only if it produces the same admissible structural state and carries either the same certificates or canonically reduced certificates. Thus the relevant notion is not arbitrary minimization, but normalization toward structurally transparent forms.
+
+\paragraph{Four initial optimization families.}
+A first reserve may separate the following layers:
+\begin{center}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.33\textwidth}>{\raggedright\arraybackslash}p{0.57\textwidth}@{}}
+\toprule
+Family & Function \\
+\midrule
+Peephole normalization & removes local instruction redundancies \\
+Macro normalization & rewrites proof macros into canonical expansions \\
+Certificate-preserving compression & shortens programs while preserving witnesses \\
+Canonical proof-program forms & rewrites structurally equivalent programs into a fixed normal form \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Peephole rules.}
+At the lowest level, local instruction windows should admit simple rewrites such as
+\begin{align*}
+&\texttt{PROJECT }S;\,\texttt{PROJECT }S \;\Longrightarrow\; \texttt{PROJECT }S,\\
+&\texttt{TRACE};\,\texttt{TRACE} \;\Longrightarrow\; \texttt{TRACE} \quad\text{(when no state update intervenes)},\\
+&\texttt{EXPORT\_BOOL};\,\texttt{EXPORT\_BOOL} \;\Longrightarrow\; \texttt{EXPORT\_BOOL},\\
+&\texttt{HCSEL};\,\texttt{HCSEL} \;\Longrightarrow\; \texttt{HCSEL} \quad\text{(when branch context is unchanged)}.
+\end{align*}
+These are intentionally conservative. Their role is not to be clever, but to remove obvious redundancies while preserving the structural path.
+
+\paragraph{Macro normalization.}
+The emerging macro layer above MMA should itself admit canonical expansion and contraction. Schematically,
+\[
+\texttt{CLOSE\_AND\_PROJECT}
+\Longrightarrow
+\texttt{CLOSE};\,\texttt{PROJECT},
+\]
+while conversely a recognized primitive sequence may be re-packed into a named proof macro whenever the corresponding certificate chain is preserved. This creates a disciplined relation between concise proof scripts and auditable low-level expansions.
+
+\paragraph{Certificate-preserving compression.}
+A central normalization requirement is that compression should preserve witnesses. If a program segment
+\[
+P \Longrightarrow P_{\mathrm{norm}}
+\]
+is accepted as a valid normalization, then there should exist a map on certificates
+\[
+\mathcal C(P) \longmapsto \mathcal C(P_{\mathrm{norm}})
+\]
+that either preserves the original chain or contracts it into a canonical equivalent chain. In this way program shortening does not erase the proof record; it only normalizes it.
+
+\paragraph{Canonical proof-program forms.}
+The long-term aim is that many proof fragments should be writable in a small family of normal forms. A first reserve may distinguish at least the following:
+\begin{align*}
+&\texttt{ClosureNormalForm},\\
+&\texttt{BranchNormalForm},\\
+&\texttt{TraceNormalForm},\\
+&\texttt{ExportNormalForm}.
+\end{align*}
+These names do not yet define a completed formalism, but they indicate the intended endpoint: proof programs that can be compared, optimized, certified, and eventually indexed by structural class.
+
+\paragraph{Mini normalization example.}
+For instance, the sequence
+\begin{verbatim}
+PROJECT C7
+TRACE
+TRACE
+HCSEL
+HCSEL
+EXPORT_BOOL
+\end{verbatim}
+may normalize to
+\begin{verbatim}
+PROJECT C7
+TRACE
+HCSEL
+EXPORT_BOOL
+\end{verbatim}
+provided that no state-changing instruction intervenes and the resulting certificates remain equivalent. The mathematical point is that admissibility is preserved while the proof-program becomes shorter and more canonical.
+
+\paragraph{Relation to proof economy.}
+This reserve clarifies the deeper purpose of the MML/MMA line. The goal is not merely to invent a language for its own sake, but to create a setting in which long structural proofs can be compressed into short normalized programs, with explicit certificate trails and canonical rewrites. In this sense optimization is part of the normalization discipline of the Companion itself.
+
+\subsection*{Full proof of Theorem~\texttt{thm:gue-selfdet} in the active-core PDF}
+\label{app:gue-selfdet}
+
+\begin{lemma}[GUE self-determination of $\gL$ --- formal version]
+\label{lem:gue-selfdet-formal}
+For $\mu>0$ define the photon-frame unfolding density
+\[
+  \rho_\gamma(t;\mu)
+  := \frac{\log\!\bigl(t/(2\pi\mu)\bigr)}{2\pi\mu},
+  \qquad t>2\pi\mu,
+\]
+and the unfolded spacings
+$s_n(\mu):=\tilde\gamma_{n+1}(\mu)-\tilde\gamma_n(\mu)$
+where $\tilde\gamma_n(\mu):=\int_0^{\gamma_n}\rho_\gamma(t;\mu)\,dt$.
+Let $P_\mu$ be the empirical spacing distribution of $\{s_n(\mu)\}$
+and let $P_{\mathrm{GUE}}$ be the Wigner--Dyson distribution
+$p_{\mathrm{GUE}}(s)=\tfrac{\pi}{2}s\,e^{-\pi s^2/4}$.
+Set $\mathcal{F}(\mu):=D_{\mathrm{KS}}[P_\mu,P_{\mathrm{GUE}}]$.
+Then:
+\begin{enumerate}[label=(\roman*)]
+  \item $\mathcal{F}$ has a unique global minimum at $\mu=\gL^*$ in the
+        asymptotic regime $\gamma\gg 2\pi\mu$.
+  \item $\gL^*=\gBI/\gstring$ to available numerical precision.
+  \item $\gL^*$ is determined solely by the zero sequence $\{\gamma_n\}$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+\emph{Step 1 (Sensitivity).}
+A perturbation $\mu\mapsto\mu+\delta\mu$ rescales unfolded spacings by
+\[
+  s_n(\mu+\delta\mu)
+  \approx s_n(\mu)
+  \Bigl(1-\frac{\delta\mu}{\mu}\cdot\frac{1}{\log(\gamma_n/2\pi\mu)}\Bigr).
+\]
+Since the GUE mean spacing equals 1 by construction, any $\mu\neq\gL^*$
+shifts the mean of $P_\mu$ away from 1 and increases $D_{\mathrm{KS}}$.
+Hence $\mathcal{F}$ has a strict local minimum wherever the rescaled
+mean equals 1.
+
+\emph{Step 2 (Uniqueness).}
+The critical line $\mathrm{Re}(s)=\tfrac{1}{2}$ is the unique fixed-point
+set of \(J\). Here \(J(s)=1-\bar s\), and this fixed-point description is
+frame-invariant by Theorem~\texttt{thm:unity} in the active-core PDF.
+By Theorem~\texttt{thm:gue} in the active-core PDF, $L_0$ on $\Hplusplus$ has Dyson index
+$\beta=2$ in the photon frame.
+Both properties are frame-invariant.
+The Wigner--Dyson distribution therefore singles out exactly one
+unfolding scale, yielding a unique minimiser $\gL^*$ of $\mathcal{F}$.
+
+\emph{Step 3 (Numerical identification).}
+Simulation \texttt{gue\_frame\_correction.py} establishes
+$\mathcal{F}(\gBI/\gstring)<\mathcal{F}(\mu)$ for all tested
+$\mu\neq\gBI/\gstring$ in the asymptotic regime.
+The $\chi^2$ improvement of $\approx 21\%$ relative to standard
+unfolding ($\mu=1$) quantifies the depth of the minimum.
+The minimum is $3\sigma$-detectable at $N\approx 205$ zeros in the
+asymptotic range.
+\end{proof}
+
+\begin{remark}[Historical logical reversal]
+Prior to this lemma, $\gL=\gBI/\gstring$ was an \emph{input}.
+Lemma~\ref{lem:gue-selfdet-formal} reverses the direction:
+$\gBI/\gstring$ is a \emph{consequence} of demanding that the GUE
+taktgeber running on $\zminus=0$ is globally consistent with $\beta=2$.
+The empirical values of $\gBI$ and $\gstring$ provide an independent
+numerical check, not a definition.
+\end{remark}
+
+%% --- A.2 k(c) = 0 ---
+\subsection*{Full proof of Theorem~\texttt{thm:kc-zero} in the active-core PDF}
+\label{app:kc-zero}
+
+\begin{proposition}[Historical $k(c)=0$ from biquaternion structure --- formal version]
+In the Sphaera-Cascade, $c^{(\mathrm{photon})}=c^{(\mathrm{matter})}$.
+\end{proposition}
+
+\begin{proof}
+The Sphaera biquaternion in physical units reads
+$\mathcal{B} = ic\,t\cdot\mathbf{1}+z_i e_i$.
+The light-cone condition $|\mathcal{B}|^2=0$ defines $c$ as the ratio
+of the spatial to the temporal norm of $\mathcal{B}$.
+
+\emph{Step 1 (Wick rotation is frame-independent).}
+The Wick rotation $t\mapsto i\tau_E$ is consistent at the natural
+observer position $r_0/r_S=1/(1-\bsym^2)$ and introduces no additional
+geometric factor beyond $g_{tt}(r_0)=-\bsym^2$.
+No factor of $\zminus$ is generated.
+
+\emph{Step 2 ($c$ defines the photon ground shell).}
+The frame variable $\zminus$ measures the displacement of the matter
+shell from $\zminus=0$.
+The speed $c$ is the causal propagation speed of that ground state
+itself --- the quantity \emph{with respect to which} $\bsym$ is defined.
+Under a frame change $\zminus\mapsto\zminus+\bsym$, a massless excitation
+acquires a boost by $\bsym$, but its speed in the new frame remains $c$
+by the Einstein postulate, encoded in the $J$-symmetry structure.
+
+\emph{Step 3 (No $\zminus$-factors in the operator realization of $c$).}
+Frame changes are unitaries commuting with $J$; they act on the septinion
+components $z_i$ but not on the $J$-invariant temporal component
+$ic\,t\cdot\mathbf{1}$.
+Hence the coefficient $c$ picks up no power of $\zminus$ under any
+frame change: $k(c)=0$.
+\end{proof}
+
+%% --- A.3 Planck length ---
+\subsection*{Full proof of Theorem~\texttt{thm:planck-photon} in the active-core PDF}
+\label{app:planck}
+
+\begin{proof}
+Apply $X^{(\mathrm{photon})}=\gL^{-k(X)}\cdot X^{(\mathrm{matter})}$
+to each factor of $\lP=\sqrt{\hbar G_N/c^3}$:
+\begin{align*}
+  \lP^{(\mathrm{photon})}
+  &= \sqrt{
+       \gL^{-k(\hbar)}\hbar^{(m)}
+       \cdot\gL^{-k(G_N)}G_N^{(m)}
+       \big/
+       \bigl(\gL^{-k(c)}c^{(m)}\bigr)^3
+     }\\
+  &= \gL^{-(k(\hbar)+k(G_N)-3k(c))/2}
+     \cdot\lP^{(\mathrm{matter})}\\
+  &= \gL^{-(1+2-0)/2}\cdot\lP^{(\mathrm{matter})}
+   = \gL^{-3/2}\cdot\lP^{(\mathrm{matter})}.\qedhere
+\end{align*}
+\end{proof}
+
+%% --- A.4 Frame-corrected GUE ---
+\subsection{Frame-corrected GUE: detailed statement}
+\label{app:gue-frame}
+
+\begin{proposition}[Historical matter-frame Dyson index]
+Matter observers using the standard unfolding density
+$\rho_{\mathrm{matter}}(\gamma)=\log(\gamma/2\pi)/(2\pi)$
+measure an effective Dyson index
+\[
+  \beta_{\mathrm{eff}} = 2\gL\approx 3.73.
+\]
+Photon-frame unfolding recovers $\beta=2$ exactly.
+The shift changes the scale of the spacing distribution, not the
+universality class: level repulsion $p(s)\propto s^2$ near $s=0$ is
+preserved in both frames (local property, hence frame-invariant).
+\end{proposition}
+
+\begin{corollary}[Historical $k$-value of the GUE taktgeber]
+The taktgeber frequency $\nu_{\mathrm{takt}}\propto\gL$
+transforms as $\nu^{(m)}=\gL^1\cdot\nu^{(\gamma)}$.
+Hence $k(\nu_{\mathrm{takt}})=1$, consistent with $k(\alpha^{-1})=1$
+and $k(\hbar)=1$ in Theorem~\texttt{thm:k-values} in the active-core PDF.
+\end{corollary}
+
+%% --- A.5 Dirac probe formal ---
+\subsection{Formal Dirac probe structure}
+\label{app:dirac-formal}
+
+\begin{definition}[Historical commutator-residue probe mass]
+For a closure-preserving probe state $\psi$, the commutator residue
+\[
+  \mathfrak{m}_{\mathrm{comm}}(\psi)
+  := \frac{\hbar}{c}
+     \left|
+     \bigl\langle\psi\big|
+     [\hat{\mathcal{R}}_\beta,\hat P_{C_7}]
+     \big|\psi\bigr\rangle
+     \right|
+\]
+measures the antisymmetric mismatch between the shifted pacer and the
+admissible closure projector.
+Since $k(\hbar)=1$ and $k(c)=0$, the prefactor $\hbar/c$ carries
+$k=1$, consistent with Corollary of \S\ref{app:gue-frame}.
+The commutator $[\hat{\mathcal{R}}_\beta,\hat P_{C_7}]$ is
+frame-invariant (its support lives on $\mathrm{Re}(s)=\tfrac{1}{2}$),
+so the full expression has $k=1$: the matter-frame reading of the probe
+mass is displaced from the photon-frame value by a single factor $\gL$.
+\end{definition}
+
+\begin{remark}[Historical open calculation]
+The remaining open step is the explicit evaluation of
+$[\hat{\mathcal{R}}_\beta,\hat P_{C_7}]$ in the septonic matrix
+realization of $\mathcal{M}_{16}$.
+Once computed, the Dirac mass is determined from the Riemann zero
+sequence without any free parameter.
+\end{remark}
+
+%% --- A.6 Attribution ---
+\subsection*{Attribution note}
+\label{app:attribution}
+
+The Kim-style refinement of the fermionic probe sector
+(\S\texttt{sec:dirac-probe} in the active-core PDF) was developed from Yilwook Kim's Zenodo line
+associated with concept DOI \texttt{10.5281/zenodo.19112361}.
+In the present paper this material is not treated as an internal axiom
+of the Sphaera program, but as an externally motivated operator ansatz
+reformulated within the current proof-mode architecture.
+The embedding into the septonic tree, Meta-Septum closure, Heisenberg
+compensator, and phase-space-shifted measurement frame is the present
+paper's own structural reformulation.
+
+
+
+
+
+

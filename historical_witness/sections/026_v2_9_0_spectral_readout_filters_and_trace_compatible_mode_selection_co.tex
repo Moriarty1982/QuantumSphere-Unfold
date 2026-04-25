@@ -1,0 +1,131 @@
+\section*{v2.9.0 Spectral Readout Filters and Trace-Compatible Mode Selection Core}
+\addcontentsline{toc}{section}{v2.9.0 Spectral Readout Filters and Trace-Compatible Mode Selection Core}
+
+\begin{quote}
+\textbf{Normalization note (v2.17.1 local review).}
+This block is retained as a \emph{historical spectral-readout and trace-filter precursor}. It contributes proof memory and specialized readout discipline, but should be read through the later normalized readout and interface phases.
+\end{quote}
+
+The spectral admissibility layer from v2.8.0 decides which generators may enter the
+programme at all. The next structural question is subtler: once a generator is
+admissible, which parts of its spectrum are actually readable in a way compatible
+with the ledger, HC confinement, probe comparison, and later trace-style summary
+principles? In this version the monolith therefore adds a spectral readout layer.
+Not every admissible mode is automatically promoted to a structural observable. A
+mode must also survive a filter test that distinguishes stable, tagged, and
+non-readable contributions.
+
+\subsection*{1. Readout filter principle}
+Let $\mathcal G$ be spectrally admissible on the HC-confined state space
+$\mathfrak X$, and let $\Sigma_{\mathrm{adm}}(\mathcal G)$ denote the admissible part
+of the spectrum. We introduce a family of bounded readout filters
+$\{\mathcal F_\alpha\}_{\alpha\in A}$ acting on the admissible sector, where each
+$\mathcal F_\alpha$ is designed to isolate one structural mode class: triadic,
+orthogonal, measurement, residual, or probe-induced. A mode contribution is called
+\emph{trace-compatible} if there exists at least one filter $\mathcal F_\alpha$ such
+that
+\[
+\mathcal F_\alpha \Pi_{\mathrm{HC}} u = \Pi_{\mathrm{HC}} u + r_\alpha,
+\qquad
+\|r_\alpha\|_{\mathfrak X} \le \varepsilon_\alpha \|u\|_{\mathfrak X},
+\]
+with either small remainder $r_\alpha$ or explicitly tagged remainder. Thus the
+readout is not merely spectral isolation but structural readability modulo tagged
+error.
+
+\paragraph{Principle 3 (filtered observability).}
+A spectral component may be used in the proof architecture only if it is both
+spectrally admissible and trace-compatible under an approved readout filter family.
+This prevents uncontrolled spectral clutter from being mistaken for genuine
+structural information.
+
+\subsection*{2. Trace-compatible decomposition}
+The admissible spectrum should now admit a decomposition of the schematic form
+\[
+\Sigma_{\mathrm{adm}}(\mathcal G)
+= \Sigma_{\mathrm{read}} \cup \Sigma_{\mathrm{tag}} \cup \Sigma_{\mathrm{mute}},
+\]
+where readable modes lie in $\Sigma_{\mathrm{read}}$, tagged but non-primary modes lie
+in $\Sigma_{\mathrm{tag}}$, and the remainder $\Sigma_{\mathrm{mute}}$ is admissible but
+not allowed to enter the principal structural trace. The point is not that mute
+modes vanish, but that they cannot serve as primary carriers of theorem-level
+readout. This sharpens the difference between existence and interpretability.
+
+\subsection*{3. HC-filter compatibility}
+The HC projector from v2.8.0 is now required to commute with readout at least up to
+controlled tagged remainder. Concretely, one seeks estimates of the form
+\[
+\mathcal F_\alpha \Pi_{\mathrm{HC}}
+= \Pi_{\mathrm{HC}} \mathcal F_\alpha + \mathcal T_\alpha,
+\]
+where $\mathcal T_\alpha$ is either small in the admissible norm or belongs to a
+source-tagged correction class. This means HC confinement is preserved under mode
+selection: filtering is not allowed to re-open forbidden channels except through a
+ledger-visible correction.
+
+\subsection*{4. Mode budgets and readable trace mass}
+The budget language from v2.5.0 now acquires a spectral refinement. For every
+approved filter $\mathcal F_\alpha$ define the readable trace mass
+\[
+\mathfrak M_\alpha(u) := \mathcal E(\mathcal F_\alpha u)
+\]
+with $\mathcal E$ the field-energy functional from v2.7.0. Structural readability
+requires a balance inequality of the schematic form
+\[
+\sum_{\alpha\in A_{\mathrm{read}}} \mathfrak M_\alpha(u)
+\le C_{\mathrm{tr}}
+\Bigl( \mathcal E(u) + \mathrm{Tag}(u) + \mathrm{Leak}(u) \Bigr).
+\]
+Hence readable spectral mass cannot exceed the ledger budget except through already
+visible tagged or leakage terms. This gives a quantitative bridge between spectral
+filtering and earlier channel transport estimates.
+
+\subsection*{5. Probe-sector mode inheritance}
+For the two-probe subsystem the same distinction becomes a comparison principle.
+Let $\mathcal G_{\mathrm{probe}}$ be the effective probe generator and
+$\mathcal F^{\mathrm{probe}}_\beta$ its admissible filter family. Then every readable
+probe mode should either descend from a readable ambient mode or be marked as a
+probe-only tagged correction. In particular, one asks for comparison bounds of the
+form
+\[
+\mathfrak M^{\mathrm{probe}}_\beta(v)
+\le C_{\mathrm{cmp}}
+\bigl( \mathfrak M_\alpha(u) + \mathrm{Mismatch}(u,v) \bigr),
+\]
+for matched ambient/probe states $(u,v)$. This prevents the probe sector from
+manufacturing fake observables that have no ambient structural parent.
+
+\subsection*{6. Consequence for future field equations and appendix tools}
+The admission checklist for candidate field equations is now extended once more:
+\begin{enumerate}[label=(\arabic*)]
+  \item verify semigroup dissipativity and ledger closure;
+  \item verify spectral admissibility and resolvent compatibility;
+  \item construct an HC-compatible readout filter family;
+  \item separate readable, tagged, and mute spectral sectors; and
+  \item prove probe inheritance of readable modes.
+\end{enumerate}
+The appendix tool taxonomy is correspondingly refined. Besides resolvent and gap
+certificates, a strong tool may now also be labelled as readout filter constructor,
+trace-mass comparator, mute-sector exclusion lemma, or probe-inheritance witness.
+These labels indicate that the tool produces not only existence information but also
+structural legibility.
+
+\subsection*{7. v\docversion\ readiness criterion}
+The present step should be regarded as successful if the following can now be done:
+\begin{itemize}
+  \item admissible spectra can be split into readable, tagged, and mute parts;
+  \item HC confinement survives mode filtering modulo controlled tagged remainder;
+  \item readable trace mass is bounded in the same ledger language as channel budgets;
+  \item probe readout inherits ambient readable modes rather than inventing new ones; and
+  \item future field equations can be screened not only for existence, but for structural legibility.
+\end{itemize}
+
+This is the gain of v\docversion. The companion monolith now carries not only
+closure, channel specialization, transport dynamics, forward invariance,
+field-energy realization, semigroup readout, and spectral admissibility, but also a
+first filtered-observability layer. Future field equations are therefore constrained
+three times: they must generate the correct ledger-dissipative semigroup, they must
+belong to the correct resolvent class, and their admissible modes must pass a
+trace-compatible readout filter before they can count as structural content.
+
+

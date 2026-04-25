@@ -1,0 +1,24 @@
+\section*{Extended Abstract and Reader Orientation}
+\addcontentsline{toc}{section}{Extended Abstract and Reader Orientation}
+\begin{quote}\small
+\noindent\textbf{Purpose.} The short abstract gives the frontmatter summary. This extended abstract records the technical routing information needed by human readers and LLM/audit readers without making the title page unmanageably long.
+\end{quote}
+
+The present release prepares the next architectural step after the public v3.34.0 split-bundle release. The public v3.34.0 line separated the governing Active Core from the preserved Historical Witness, added the QAM/MML/MMA store layer, and introduced Sphaera arrays as guarded mirror, stripe, and parity/residual carriers. Version~\docversion{} keeps that state and adds a pre-v4 bridge: it explains how the current QAM tuple-tag convention could later be shifted by a Hilbert-hotel reindexing so that tag 0 becomes available as a reserved empty/no-active-kind marker.
+
+The key restriction is conservative. No current QAM definition is globally migrated in this release. Existing tuple surfaces such as $\langle 0,a\rangle$ remain part of the inherited active syntax. The new material instead records a planned translation layer and proves the shape of the required conservativity statement: if each inhabited tag is shifted upward and all definitions are translated coherently, the payloads, constructor distinctions, admissibility tests, readout compatibility, and closure-relevant predicates are preserved. This makes the future v4 migration a controlled notation-level change rather than a hidden mathematical change.
+
+The same pre-v4 layer defines mixed QAM readouts as guarded derived packages. A mixed readout is not a primitive mixed tensor between unrelated kinds. It is a finite package of already admissible component readouts, equipped with guards, an aggregation map, and a closure-factor discipline. This lets the Companion read visible-state, kernel, audit, route, residual, and Sphaera-array surfaces together while preserving the rule that metadata and diagnostics do not manufacture theorematic certificates.
+
+The r02 layer added a two-sided structural tensor notation as a local compression grammar for these readout situations, and r03 stabilizes its conservative expansion and mixed-readout normal form. Front-side indices mark frame, observer, language, or readout-facing data; back-side indices mark structure, action, field, or transport data. Classical upper--lower contraction remains the ordinary action/readout case. Same-variance pairings are permitted only through explicit comparison tensors or selector tensors, so the notation improves formula readability without becoming a new primitive tensor calculus.
+
+Finally, the optional binary mask registry gives an IPv4-like Boolean handle for mixed readout kinds, and r03 records the corresponding selector grammar explicitly. In that registry, mask value 0 is reserved for no active kind, and every inhabited kind receives a nonzero power-of-two bit. Boolean OR records which components are present, AND tests for a component, XOR records diagnostic difference, and relative complement is allowed only inside a fixed mask universe. This mask registry is a readout/audit layer only; it does not replace the inherited QAM tuple namespace in Version~\docversion{}.
+
+\paragraph{Status.}
+OP~1/4 and OP~5(B) remain open. QAM reindexing is planned but not executed. Primitive mixed tensors remain deferred. The two-sided notation is only a conservative compression grammar. The Sphaera array parity/residual layer remains diagnostic infrastructure, not a closure theorem. Turing-completeness remains a later machine-semantics question.
+
+\paragraph{Reader route.}
+A human reader should read the next sections as a map for why v4 would be a major notation migration and why the r02/r03 tensor grammar is only a local aid. The r04 layer freezes that grammar for release-candidate audit without extending it into a global rewrite. An LLM/audit reader should track the explicit guard: v3.35.0 carries preparation lemmas, registries, sided-index notation, stability normal forms, and release-final audit language only; the global Hilbert-shift of the QAM object language is reserved for v4.0.0.
+
+\clearpage
+

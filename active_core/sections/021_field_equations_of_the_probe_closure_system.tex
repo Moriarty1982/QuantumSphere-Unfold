@@ -1,0 +1,223 @@
+\section{Field Equations of the Probe--Closure System}
+\begin{quote}\small
+\noindent\textbf{Status.} \emph{Legacy field-equation block inside the active main body.}\par
+\noindent\textbf{Block function.} This section formulates the field-equation package attached to the probe/closure interface and fixes what the later closure section has to stabilize.
+\end{quote}
+\label{sec:field-eq}
+%% ============================================================
+
+\begin{remark}[From probe equation to field system]
+The Dirac probe equation of \S\ref{sec:dirac-probe} is the minimal
+first-order transport law for a closure-preserving fermionic mode.
+To pass from a single probe reading to a dynamical theory, one must
+promote the closure data, the compensator, and the resonance transport
+into coupled fields.
+\end{remark}
+
+\begin{definition}[Probe--closure field content]
+We consider the following effective fields on spacetime:
+\begin{align*}
+  \Psi(x) &\in \mathcal H_{\mathrm{sept}}
+    &&\text{(septonic probe spinor)},\\
+  \mathcal A_\mu(x)
+    &&&\text{(resonance connection)},\\
+  \hat P_{C_7}(x)
+    &&&\text{(Meta-Septum closure projector)},\\
+  \mathcal H_C(x)
+    &&&\text{(Heisenberg compensator field)}.
+\end{align*}
+The stable sector is defined by the projector constraint
+\[
+  \hat P_{C_7}^2 = \hat P_{C_7},
+  \qquad
+  (\mathbf 1-\hat P_{C_7})\Psi = 0.
+\]
+\end{definition}
+
+\begin{definition}[Covariant probe derivative]
+The effective covariant derivative of the probe--closure system is
+\[
+  \mathcal D_\mu
+  :=
+  \partial_\mu
+  + i\mathcal A_\mu
+  + \kappa\,\mathcal H_C\,n_\mu
+  + \eta\,(\mathbf 1-\hat P_{C_7})\,n_\mu,
+\]
+where $n_\mu$ is the distinguished null-axis direction, read physically as the light-axis direction at stable propagation, and
+$\kappa,\eta\in\mathbb R$ are effective couplings.
+The last two terms encode, respectively, compensator stabilization and
+penalization of departures from admissible closure.
+\end{definition}
+
+\begin{theorem}[Master probe field equation]
+\label{thm:master-field-equation}
+The minimal closure-compatible field equation extending
+Theorem~\ref{thm:dirac-probe} is
+\[
+  \left(
+    i\Gamma^\mu\mathcal D_\mu
+    - \Omega
+  \right)\Psi = 0,
+\]
+with effective resonance operator
+\[
+  \Omega
+  :=
+  m_0\mathbf 1
+  + \alpha\,\hat P_{C_7}\mathcal M_{16}\hat P_{C_7}
+  + \beta\,g_Y\,\mathcal T
+  + \gamma\,\mathcal H_C.
+\]
+Here $m_0$ is a bare inertial scale, $g_Y$ the Yokamono coupling,
+$\mathcal T$ the triadic coupling operator, and
+$\alpha,\beta,\gamma\in\mathbb R$ are effective coefficients.
+\end{theorem}
+
+\begin{proof}
+Theorem~\ref{thm:dirac-probe} already fixes the first-order spinorial
+character of the transport law.
+The Meta-Septum constraint requires the dynamics to be projected through
+$\hat P_{C_7}$, while the closure mismatch is stabilized by the
+compensator field $\mathcal H_C$.
+The Millennium matrix $\mathcal M_{16}$ contributes the internal
+septonic resonance structure, and the Yokamono sector contributes the
+triadic coupling term $g_Y\mathcal T$.
+Hence the displayed equation is the minimal local first-order extension
+compatible with all previously introduced structures.
+\end{proof}
+
+\begin{definition}[Curvature and closure current]
+The curvature of the resonance connection is
+\[
+  \mathcal F_{\mu\nu} := [\mathcal D_\mu,\mathcal D_\nu].
+\]
+Its source decomposes into a probe current, a closure current, and a
+compensator current:
+\begin{align*}
+  J^{(\Psi)}_\nu &:= \bar\Psi\Gamma_\nu\Psi,\\
+  J^{(C_7)}_\nu &:= \lambda_C\,\partial_\nu
+    \mathrm{Tr}(\mathcal M_{16}\hat P_{C_7}),\\
+  J^{(HC)}_\nu &:= \lambda_H\,\partial_\nu
+    \mathrm{Tr}(\mathcal H_C\mathcal M_{16}).
+\end{align*}
+\end{definition}
+
+\begin{theorem}[Resonance field equation]
+\label{thm:resonance-field-eq}
+The effective connection field satisfies
+\[
+  \mathcal D^\mu\mathcal F_{\mu\nu}
+  =
+  J^{(\Psi)}_\nu + J^{(C_7)}_\nu + J^{(HC)}_\nu.
+\]
+Thus the compensator and the closure are not external constraints only,
+but true dynamical source terms of the resonance transport.
+\end{theorem}
+
+\begin{quote}\small
+\noindent\textbf{Reader cue.} Read the next block as a closure-tightening continuation of the same field package. Its purpose is to add the explicit closure equation, the triadic two-probe coupling, and the variational form that later closure arguments stabilize.
+\end{quote}
+
+\begin{proposition}[Closure equation]
+\label{prop:closure-equation}
+The Meta-Septum closure becomes a local field constraint of the form
+\[
+  \mathrm{Tr}(\mathcal M_{16}\hat P_{C_7})
+  \equiv 0 \pmod{\mathrm{HC}},
+\]
+and, in dynamical form,
+\[
+  \mathcal H_C = \Lambda[\mathcal M_{16},\hat P_{C_7}],
+\]
+for an effective closure functional $\Lambda$.
+Hence physically stable probe states are precisely those lying in the
+$C_7$-sector.
+\end{proposition}
+
+\begin{proposition}[Triadic two-probe system]
+\label{prop:triadic-two-probe}
+Let $\Psi_1,\Psi_2$ be two coupled probe modes and let $\Psi_\perp$ be a
+third orthogonal triadic component.
+Then the combined field
+\[
+  \Psi_{\triangle}
+  :=
+  \begin{pmatrix}
+    \Psi_1\\
+    \Psi_2\\
+    \Psi_\perp
+  \end{pmatrix}
+\]
+satisfies a block equation
+\[
+  \bigl(i\Gamma^\mu\mathcal D_\mu - \Omega_{\triangle}\bigr)
+  \Psi_{\triangle}=0,
+\]
+with
+\[
+  \Omega_{\triangle}
+  =
+  \begin{pmatrix}
+    \Omega_1 & g_Y\mathcal T_{12} & 0\\
+    g_Y\mathcal T_{21} & \Omega_2 & 0\\
+    0 & 0 & \Omega_\perp
+  \end{pmatrix}
+  +
+  \chi
+  \begin{pmatrix}
+    0 & 0 & \mathcal T_{1\perp}\\
+    0 & 0 & \mathcal T_{2\perp}\\
+    \mathcal T_{\perp1} & \mathcal T_{\perp2} & 0
+  \end{pmatrix}.
+\]
+Therefore the triadic component is not decorative but enters as an
+intrinsic coupling channel of the effective field system.
+\end{proposition}
+
+\begin{theorem}[Variational form]
+\label{thm:variational-form}
+The probe--closure system is generated by the effective action
+\[
+  S
+  =
+  \int d^4x\,
+  \Bigl(
+    \bar\Psi i\Gamma^\mu\mathcal D_\mu\Psi
+    - \bar\Psi\Omega\Psi
+    - \tfrac14\mathrm{Tr}(\mathcal F_{\mu\nu}\mathcal F^{\mu\nu})
+    - U_{C_7}
+    - U_{HC}
+  \Bigr),
+\]
+where
+\[
+  U_{C_7}
+  :=
+  \lambda_C\,
+  \bigl\|(\mathbf 1-\hat P_{C_7})\Psi\bigr\|^2,
+  \qquad
+  U_{HC}
+  :=
+  \lambda_H\,
+  \bigl\|\mathcal H_C - \Lambda[\mathcal M_{16},\hat P_{C_7}]\bigr\|^2.
+\]
+Its Euler--Lagrange equations are exactly the master probe equation,
+the resonance field equation, and the closure equation above.
+\end{theorem}
+
+\begin{remark}[Status of the construction]
+This section does not yet claim a derivation of Einstein's equations or
+of the Standard Model Lagrangian.
+It provides instead the first internally closed field architecture of
+the Sphaera probe sector: the Dirac probe, the Meta-Septum closure, the
+Millennium matrix, the Yokamono coupling, and the Heisenberg
+compensator are now written as one coupled variational system.
+The next task is the explicit closing of the system, namely the concrete
+realization of $\Lambda[\mathcal M_{16},\hat P_{C_7}]$ and the direct
+computation of the closure residue.
+
+\end{remark}
+
+%% ============================================================
+

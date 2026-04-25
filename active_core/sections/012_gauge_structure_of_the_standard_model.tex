@@ -1,0 +1,66 @@
+\section{Gauge Structure of the Standard Model}
+\begin{quote}\small
+\noindent\textbf{Status.} \emph{Legacy physical-readout block inside the active main body.}\par
+\noindent\textbf{Block function.} This section explains how the structural core is read as a gauge-sector organization rather than as an independently added physical layer.
+\end{quote}
+\label{sec:gauge}
+%% ============================================================
+
+\begin{proposition}[$\HH\otimes\mathbb{C}\to U(1)\times SU(2)$]
+\label{prop:biquaternion-u1su2}
+The biquaternion algebra $\HH\otimes_{\mathbb{R}}\mathbb{C}$ generates
+exactly the gauge group $U(1)\times SU(2)$.
+\end{proposition}
+
+\begin{proof}
+\emph{$SU(2)$ from unit quaternions.}
+The unit quaternions $\{q\in\HH:|q|=1\}\cong S^3$ form a Lie group
+isomorphic to $SU(2)$.
+The three generators are $T_k:=\sigma_k/2$ (half Pauli matrices),
+satisfying $[T_j,T_k]=i\varepsilon_{jkl}T_l$.
+
+\emph{$U(1)$ from the complex scalar.}
+The imaginary time unit $it\in i\mathbb{R}$ generates the abelian group
+$e^{i\theta}\in U(1)$ for $\theta\in\mathbb{R}$.
+This commutes with all $SU(2)$ generators.
+Hence $U(1)\times SU(2)$, direct product.
+\end{proof}
+
+\begin{theorem}[$\OO\to SU(3)$]\label{thm:octonion-SU3}
+The octonions decompose under $SU(3)$-action as
+$\OO = \mathbb{C}\oplus\mathbb{C}^3$,
+a singlet plus the fundamental (triplet) representation of $SU(3)$.
+The triplet $\mathbb{C}^3$ carries the three kernels $(K_1,K_2,K_3)$
+as the three colors.
+\end{theorem}
+
+\begin{theorem}[Standard Model from the Sphaera biquaternion]\label{thm:SM}
+The biquaternion ground state $q_n\in\HH\otimes\mathbb{C}$, extended to
+the octonionic structure $\mathbb{C}\otimes\HH\otimes\OO$, generates
+the Standard Model gauge group $U(1)\times SU(2)\times SU(3)$ with
+generators arising from:
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{lll}
+\toprule
+Source & Group & Physical force\\
+\midrule
+Complex scalar $it$ & $U(1)$ & Electromagnetism\\
+Unit quaternions $\HH$ & $SU(2)$ & Weak force\\
+Octonion triplet $\mathbb{C}^3\subset\OO$ & $SU(3)$ & Strong force\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{theorem}
+
+\begin{proof}
+Propositions 7.1--7.2 and Theorem~\ref{thm:octonion-SU3} establish each
+factor.
+The three factors are independent (direct product structure) because
+$U(1)$ commutes with $SU(2)$ and both commute with the $SU(3)$ action
+on $\mathbb{C}^3$: the $SU(3)$ generators $\lambda_k$ act only on the
+color indices, not on the quaternion structure.
+\end{proof}
+
+%% ============================================================
+

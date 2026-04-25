@@ -1,0 +1,21 @@
+Quantum Sphaera Companion v3.35.0 modular source audit
+========================================================
+
+Purpose: verify that the section-level modular source is a lossless split of the release-final monolithic TEX files.
+
+Active Core: PASS
+  ok: True
+  orig_len: 2255553
+  flat_len: 2255553
+  orig_sha256: c74ab11c9fece91bea747ce5d501b87f120a388cf93f4b1d6791405c89646c24
+  flat_sha256: c74ab11c9fece91bea747ce5d501b87f120a388cf93f4b1d6791405c89646c24
+
+Historical Witness: PASS
+  ok: True
+  orig_len: 739386
+  flat_len: 739386
+  orig_sha256: a51c344e92a646ccfb0ee17c14b2e620a92eafb72f5413109595f93cc8c3a7b8
+  flat_sha256: a51c344e92a646ccfb0ee17c14b2e620a92eafb72f5413109595f93cc8c3a7b8
+
+Master files use \input, not \include, so modularization does not add page breaks.
+PDF generation is delegated to the included GitHub Actions workflow or local pdflatex/latexmk.

@@ -1,0 +1,380 @@
+\section{Closure of the Probe--Closure Field System}
+\begin{quote}\small
+\noindent\textbf{Status.} \emph{Legacy field-closure block inside the active main body.}\par
+\noindent\textbf{Block function.} This section closes the preceding field package and identifies the residue, limiting regimes, and Einstein-route consequences that remain readable afterward.
+\end{quote}
+\label{sec:closure-field-system}
+%% ============================================================
+
+\begin{definition}[Projected closure residue]
+The local closure residue of the probe--closure system is defined by
+\[
+  \mathfrak R_C
+  :=
+  (\mathbf 1-\hat P_{C_7})\mathcal M_{16}\hat P_{C_7}
+  + \hat P_{C_7}\mathcal M_{16}(\mathbf 1-\hat P_{C_7}).
+\]
+It measures the off-sector leakage of the Millennium matrix across the
+Meta-Septum splitting.
+The field system is called \emph{closed} if and only if
+\[
+  \mathfrak R_C = 0.
+\]
+\end{definition}
+
+\begin{definition}[Explicit closure functional]
+The compensator functional is taken in minimal form as
+\[
+  \Lambda[\mathcal M_{16},\hat P_{C_7}]
+  :=
+  \rho\,[\mathcal M_{16},\hat P_{C_7}]^
+  \dagger [\mathcal M_{16},\hat P_{C_7}]
+  + \sigma\,\mathfrak R_C^
+  \dagger \mathfrak R_C,
+\]
+with effective coefficients $\rho,\sigma\ge 0$.
+Hence
+\[
+  \mathcal H_C
+  =
+  \rho\,[\mathcal M_{16},\hat P_{C_7}]^
+  \dagger [\mathcal M_{16},\hat P_{C_7}]
+  + \sigma\,\mathfrak R_C^
+  \dagger \mathfrak R_C.
+\]
+This realizes the compensator as a positive semidefinite measure of
+closure mismatch.
+\end{definition}
+
+\begin{proposition}[Equivalent closure criteria]
+\label{prop:equivalent-closure-criteria}
+The following statements are equivalent in the effective probe sector:
+\begin{enumerate}
+  \item $\mathfrak R_C=0$.
+  \item $[\mathcal M_{16},\hat P_{C_7}]=0$.
+  \item $\mathcal M_{16}$ preserves the $C_7$-sector and its complement.
+\end{enumerate}
+In particular, exact closure means that the Millennium matrix becomes
+block-diagonal with respect to the decomposition
+\[
+  \mathcal H_{\mathrm{sept}}
+  = \hat P_{C_7}\mathcal H_{\mathrm{sept}}
+  \oplus
+  (\mathbf 1-\hat P_{C_7})\mathcal H_{\mathrm{sept}}.
+\]
+\end{proposition}
+
+\begin{proof}
+Writing $Q:=\hat P_{C_7}$ and $Q_\perp:=\mathbf 1-Q$, we have
+\[
+  [\mathcal M_{16},Q]
+  =
+  Q_\perp\mathcal M_{16}Q - Q\mathcal M_{16}Q_\perp.
+\]
+Hence $[\mathcal M_{16},Q]=0$ if and only if both mixed blocks vanish,
+which is exactly the condition $\mathfrak R_C=0$.
+This is equivalent to invariance of the two summands under
+$\mathcal M_{16}$, i.e. block-diagonality in the stated splitting.
+\end{proof}
+
+\begin{theorem}[Closed master system]
+\label{thm:closed-master-system}
+The probe--closure field equations are internally closed by the system
+\begin{align*}
+  \bigl(i\Gamma^\mu\mathcal D_\mu - \Omega\bigr)\Psi &= 0,\\
+  \mathcal D^\mu\mathcal F_{\mu\nu}
+    &= J^{(\Psi)}_\nu + J^{(C_7)}_\nu + J^{(HC)}_\nu,\\
+  (\mathbf 1-\hat P_{C_7})\Psi &= 0,\\
+  \mathcal H_C &= \Lambda[\mathcal M_{16},\hat P_{C_7}],\\
+  \mathfrak R_C &= 0.
+\end{align*}
+Therefore all previously free closure symbols are eliminated in favour
+of explicit algebraic conditions on $(\mathcal M_{16},\hat P_{C_7})$.
+\end{theorem}
+
+\begin{corollary}[Vanishing compensator in the exact sector]
+If the closure condition $\mathfrak R_C=0$ holds exactly, then
+\[
+  [\mathcal M_{16},\hat P_{C_7}] = 0
+  \qquad\text{and hence}\qquad
+  \mathcal H_C = 0
+\]
+for the minimal compensator ansatz above.
+Thus the Heisenberg compensator is nonzero only away from exact closure,
+where it measures and suppresses leakage out of the stable sector.
+\end{corollary}
+
+\begin{remark}[Interpretation of the closure step]
+The previous section produced a coupled field architecture.
+The present section closes it in the minimal algebraic sense:
+physical states stay in the $C_7$-sector, the Millennium matrix may not
+mix stable and unstable blocks, and the compensator becomes an explicit
+positive residue functional rather than a symbolic placeholder.
+This does not yet derive gravitation or the Standard Model, but it does
+remove the main formal gap inside the probe sector.
+\end{remark}
+
+\begin{quote}\small
+\noindent\textbf{Reader cue.} Read the next three stages as a layered unpacking of the same closure statement. Its purpose is to move from the core algebra to leakage/confinement language, then to controlled limiting regimes, and finally to the explicit Einstein-route reconstruction.
+\end{quote}
+
+\subsection*{Physical interpretation of the closure residue}
+
+\begin{remark}[Leakage, confinement, and stability]
+The residue $\mathfrak R_C$ has a direct physical reading.
+Its mixed blocks measure transitions between the stable $C_7$-sector and
+its complement.
+Hence $\mathfrak R_C\neq 0$ represents \,leakage\, of probe amplitude out
+of the metastably confined sector, while $\mathfrak R_C=0$ expresses exact
+sector confinement.
+In this sense the closure condition is the algebraic analogue of a
+superselection rule: admissible long-lived states are precisely those for
+which the effective internal dynamics generated by $\mathcal M_{16}$ never
+pushes the state out of the projected septum sector.
+\end{remark}
+
+\begin{remark}[Role of the compensator]
+For the minimal ansatz,
+\[
+  \mathcal H_C
+  = \rho\,[\mathcal M_{16},\hat P_{C_7}]^\dagger[\mathcal M_{16},\hat P_{C_7}]
+    + \sigma\,\mathfrak R_C^\dagger\mathfrak R_C,
+\]
+the compensator is not an independent interaction but an energetic penalty
+for sector mixing.
+Its effect is twofold:
+first, it raises the cost of off-sector propagation; second, it drives the
+variation toward block preservation of $\mathcal M_{16}$.
+Thus the compensator plays the role of a restoring term that suppresses
+unstable excursions and selects dynamically persistent probe states.
+\end{remark}
+
+\begin{remark}[Physical reading of exact closure]
+In the exactly closed regime the splitting
+\[
+  \mathcal H_{\mathrm{sept}}
+  = \hat P_{C_7}\mathcal H_{\mathrm{sept}}
+  \oplus
+  (\mathbf 1-\hat P_{C_7})\mathcal H_{\mathrm{sept}}
+\]
+is preserved by the internal generator $\mathcal M_{16}$.
+Then the effective dynamics on the physical sector becomes autonomous.
+Operationally this means that all observables built from $\Psi$ may be
+computed within the projected sector without referring to hidden leakage
+channels.
+The closed system is therefore the minimal regime in which the probe theory
+admits a stable phenomenological interpretation.
+\end{remark}
+
+\subsection*{Controlled limiting regimes}
+
+\begin{proposition}[Dirac limit]
+\label{prop:dirac-limit}
+Assume the exact closure condition $\mathfrak R_C=0$, freeze the connection
+background to a locally trivial configuration $\mathcal A_\mu=0$, and take
+$\Omega$ to reduce on the closed sector to a scalar effective mass,
+\[
+  \Omega\big|_{\hat P_{C_7}\mathcal H}
+  = m_{\mathrm{eff}}\,\mathbf 1.
+\]
+Then the master equation reduces on the physical sector to
+\[
+  (i\Gamma^\mu\partial_\mu - m_{\mathrm{eff}})\Psi = 0,
+\]
+which is the ordinary free Dirac form up to the choice of the effective
+gamma representation.
+\end{proposition}
+
+\begin{proof}
+Under exact closure the constraint $(\mathbf 1-\hat P_{C_7})\Psi=0$ removes
+off-sector components, and for the minimal ansatz the compensator vanishes.
+With $\mathcal A_\mu=0$ and scalar reduction of $\Omega$, the covariant
+operator collapses to $\partial_\mu$, so the master system becomes the free
+Dirac equation on the projected sector.
+\end{proof}
+
+\begin{proposition}[Yang--Mills type limit]
+\label{prop:yang-mills-limit}
+Assume again exact closure, but retain a nontrivial connection
+$\mathcal A_\mu$ acting internally on the closed sector.
+If the projected operator algebra generated by $\mathcal A_\mu$ closes on a
+finite-dimensional Lie algebra $\mathfrak g$, then the resonance field
+equation
+\[
+  \mathcal D^\mu \mathcal F_{\mu\nu}=J_\nu
+\]
+reduces on the physical sector to a Yang--Mills type equation with gauge
+algebra $\mathfrak g$.
+\end{proposition}
+
+\begin{proof}
+Once $\hat P_{C_7}$ is preserved by $\mathcal M_{16}$, the connection and its
+curvature may be restricted consistently to the closed sector.
+If the projected commutator algebra is Lie-closed, then the curvature takes
+the standard form of a gauge field strength on $\mathfrak g$, and the field
+equation is exactly of Yang--Mills type with source $J_\nu$.
+\end{proof}
+
+\begin{proposition}[Einstein-type effective limit]
+\label{prop:einstein-effective-limit}
+Suppose the projected connection separates into an external spacetime part
+and an internal resonance part,
+\[
+  \mathcal D_\mu = \nabla_\mu^{(g)} + \mathbb A_\mu,
+\]
+where $\nabla_\mu^{(g)}$ is compatible with a coarse-grained metric
+$g_{\mu\nu}$ extracted from bilinear probe observables.
+If the effective action is integrated over fast internal modes and the
+leading derivative expansion is local, then the bosonic sector has the
+generic low-energy form
+\[
+  S_{\mathrm{eff}}[g,\mathbb A]
+  = \int d^4x\sqrt{|g|}\,
+    \bigl(c_0 + c_1 R(g) + c_2\operatorname{Tr}(\mathbb F_{\mu\nu}\mathbb F^{\mu\nu}) + \cdots\bigr).
+\]
+Hence the metric sector obeys Einstein-type equations at leading order.
+\end{proposition}
+
+\begin{remark}[Status of the Einstein limit]
+This is presently a controlled effective-theory statement, not yet a first-
+principles derivation.
+What closure provides is the prerequisite for such a limit: a dynamically
+stable projected sector, a well-defined connection, and a variationally
+closed action.
+To obtain actual Einstein equations one still has to specify how the metric
+is reconstructed from probe bilinears and how the internal modes are coarse-
+grained.
+\end{remark}
+
+\begin{quote}\small
+\noindent\textbf{Reader cue.} Read the next block as a concrete reconstruction route for the Einstein-type limit. Its purpose is to spell out the bilinear coframe, the induced metric, and the coarse-grained assumptions under which the Einstein tensor reappears.
+\end{quote}
+
+\subsection*{A concrete route to the Einstein limit}
+
+We now make the effective Einstein-type limit more explicit at the level of
+field reconstruction. Let $\Psi_\triangle=(\Psi_1,\Psi_2,\Psi_\perp)^T$ be the
+closed triadic probe field and let the exact closure condition
+$\mathfrak R_C=0$ hold. On the physical sector we define the bilinear one-forms
+\[
+  E^a{}_{\mu}
+  := \operatorname{Re}\bigl(\bar\Psi_\triangle \,\Gamma^a \, \mathcal D_\mu
+  \Psi_\triangle\bigr),
+  \qquad a=0,1,2,3,
+\]
+where $\Gamma^a$ denotes a fixed Clifford frame acting on the projected probe
+space. Whenever the $4\times 4$ matrix $E^a{}_{\mu}$ has maximal rank, these
+bilinears define an effective coframe and hence an effective metric
+\[
+  g_{\mu\nu}
+  := \eta_{ab} E^a{}_{\mu} E^b{}_{\nu},
+\]
+with $\eta_{ab}=\operatorname{diag}(-1,1,1,1)$.
+
+The closure constraint is essential here: it ensures that the bilinears are
+computed entirely within the invariant $C_7$-sector, so the reconstructed
+metric is not contaminated by leakage terms. In this sense $g_{\mu\nu}$ is not
+introduced externally but induced from the closed probe dynamics.
+
+Next, restrict the covariant operator to the physical sector,
+\[
+  \mathcal D^{(C)}_\mu := \hat P_{C_7}\mathcal D_\mu \hat P_{C_7}.
+\]
+Assume that $\mathcal D^{(C)}_\mu$ admits a decomposition into a geometric and an
+internal part,
+\[
+  \mathcal D^{(C)}_\mu
+  = \partial_\mu + \frac14 \, \omega_{\mu ab}\,\Sigma^{ab} + \mathbb A_\mu,
+\]
+where $\Sigma^{ab}=\frac12[\Gamma^a,\Gamma^b]$ and $\omega_{\mu ab}$ is chosen so
+that the induced connection is metric-compatible,
+\[
+  \nabla^{(g)}_\lambda g_{\mu\nu}=0.
+\]
+If in addition the torsion-free condition is imposed at the coarse-grained
+level, then $\omega_{\mu ab}$ coincides with the Levi--Civita spin connection of
+$g_{\mu\nu}$.
+
+This yields the following sharpened version of the Einstein limit.
+
+\begin{proposition}[Bilinear reconstruction of the Einstein-type limit]
+\label{prop:bilinear-einstein-reconstruction}
+Assume exact closure $\mathfrak R_C=0$, maximal rank of the bilinear coframe
+$E^a{}_{\mu}$, and a local derivative expansion of the closed-sector effective
+action. Suppose moreover that the coarse-grained bosonic action takes the form
+\[
+  S_{\mathrm{eff}}[g,\mathbb A,\Phi]
+  = \int d^4x\sqrt{|g|}\,\bigl(
+      \Lambda_{\mathrm{eff}}
+      + \frac{1}{2\kappa_{\mathrm{eff}}}R(g)
+      - \frac14\operatorname{Tr}(\mathbb F_{\mu\nu}\mathbb F^{\mu\nu})
+      + \mathcal L_{\mathrm{cl}}(\Phi,g)
+    \bigr),
+\]
+where $\Phi$ denotes the remaining closure-sector collective fields.
+Then variation with respect to $g^{\mu\nu}$ yields the effective equation
+\[
+  G_{\mu\nu}(g) + \Lambda_{\mathrm{eff}}g_{\mu\nu}
+  = \kappa_{\mathrm{eff}}
+    \bigl(T^{(\mathbb A)}_{\mu\nu} + T^{(\Phi)}_{\mu\nu}\bigr),
+\]
+with the standard stress-energy tensors obtained from the gauge and collective
+sectors. In particular, the Einstein tensor arises from the closed probe
+system once the metric is reconstructed from bilinears and the internal modes
+are integrated out.
+\end{proposition}
+
+\begin{proof}
+Under exact closure the projected operator $\mathcal D^{(C)}_\mu$ acts
+autonomously on the physical sector. Maximal rank of $E^a{}_{\mu}$ turns the
+probe bilinears into a nondegenerate coframe, hence into a metric
+$g_{\mu\nu}$. Metric compatibility and vanishing torsion identify the geometric
+part of $\mathcal D^{(C)}_\mu$ with the Levi--Civita spin connection.
+By assumption, coarse-graining over the fast internal modes produces a local
+effective action whose leading geometric term is the Einstein--Hilbert term
+$R(g)$. Varying $S_{\mathrm{eff}}$ with respect to $g^{\mu\nu}$ gives the Einstein
+tensor on the left-hand side and the stress-energy tensors of the remaining
+fields on the right-hand side, which is the claimed Einstein-type equation.
+\end{proof}
+
+\begin{remark}[What is still model-dependent]
+The above construction isolates the precise points where additional work is
+still required.
+First, one must justify the nondegeneracy of the bilinear coframe from the
+triadic probe dynamics rather than postulate it.
+Second, one has to derive the constants $\Lambda_{\mathrm{eff}}$ and
+$\kappa_{\mathrm{eff}}$ from the microscopic closure model.
+Third, the collective closure fields $\Phi$ have to be identified explicitly;
+they encode the backreaction of the residual probe, projector, and compensator
+degrees of freedom on spacetime geometry.
+What is gained already is structural: the Einstein sector now appears by a
+clear reconstruction pipeline
+\[
+  (\Psi_\triangle,\hat P_{C_7},\mathcal H_C,\mathcal M_{16})
+  \longrightarrow E^a{}_{\mu}
+  \longrightarrow g_{\mu\nu}
+  \longrightarrow S_{\mathrm{eff}}[g,\mathbb A,\Phi]
+  \longrightarrow G_{\mu\nu}=\kappa_{\mathrm{eff}}T_{\mu\nu}^{\mathrm{eff}}.
+\]
+\end{remark}
+
+\begin{remark}[Interpretive summary]
+The probe--closure system now supports a three-level reading.
+At the exact algebraic level, closure means vanishing leakage between the
+physical $C_7$-sector and its complement.
+At the dynamical level, the compensator suppresses deviations from that
+sector.
+At the phenomenological level, ordinary Dirac and Yang--Mills equations
+appear as closed-sector limits, while Einstein dynamics can arise as a
+further coarse-grained low-energy description if a metric reconstruction is
+available.
+\end{remark}
+
+\begin{quote}\small
+\noindent\textbf{Historical transition note.} Read the next synthesis block as archival proof-memory. Its purpose is to preserve back-reference, genealogy, and an earlier integrative summary beneath the active main line, not to add a second live closure engine.
+\end{quote}
+
+%% ============================================================
+
+
+

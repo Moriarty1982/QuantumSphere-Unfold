@@ -1,0 +1,176 @@
+\section*{v2.27.5 Proof-Chain Roadmap: Identified Gaps\\Closure Targets}
+\label{sec:v2275-roadmap}
+\addcontentsline{toc}{section}{v2.27.5 Proof-Chain Roadmap: Identified Gaps and Closure Targets}
+
+\noindent\fbox{\begin{minipage}{0.94\textwidth}
+\small\textbf{Status of this section.}
+Version~2.27.4 completed a full structural scan of the companion.
+This section records the identified proof-chain gaps in order of priority,
+and defines the closure targets for the next local subversion sequence.
+It is a working roadmap, not a release statement.
+The DOI and version references inside this preserved v2.27.x roadmap belong to the original historical checkpoint and are retained only as archival proof-memory. They are not current release-status statements for the present Companion line.
+\end{minipage}}
+
+\bigskip
+
+\subsection*{Proof-chain inventory (v2.27.4 scan)}
+
+The structural scan of v2.27.4 identified the following main proof chain:
+
+{\small
+\[
+\begin{aligned}
+\text{Axiom}
+&\Rightarrow \underbrace{\text{Semantic Kernel}}_{\text{def}}
+\Rightarrow \underbrace{\text{HC Forcing}}_{\text{thm}}
+\Rightarrow \underbrace{\text{Closure Stable}}_{\text{lem}}\\[2pt]
+&\Rightarrow \underbrace{\text{Diagonal Traversal}}_{\text{lem}}
+\Rightarrow \underbrace{C = \Pi^{(\mathcal{M})}_{\mathrm{spec}}}_{\text{thm}}
+\Rightarrow \underbrace{\text{SM Realization}}_{\text{cor}}
+\end{aligned}
+\]
+}
+
+The following table rates each link on four axes:
+\emph{proof type} (Full / Short / Sketch / Structural),
+\emph{explicit refs} (references cited in proof body),
+\emph{dependency gap} (missing intermediate step),
+and \emph{priority} for the next closure pass.
+
+\medskip
+{\footnotesize
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.18}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.26\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\centering\arraybackslash}p{0.07\textwidth}>{\raggedright\arraybackslash}p{0.39\textwidth}>{\centering\arraybackslash}p{0.06\textwidth}}
+\toprule
+\textbf{Chain link} & \textbf{Type} & \textbf{Refs} & \textbf{Gap / note} & \textbf{Prio} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Chain link} & \textbf{Type} & \textbf{Refs} & \textbf{Gap / note} & \textbf{Prio} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{5}{r}{\emph{Continued on next page}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+\shortstack[l]{\texttt{def:semantic-}\\\texttt{structural-kernel}} & Short (9L) & 0 & Definitions; no gap. & -- \\
+\shortstack[l]{\texttt{prop:semantic-}\\\texttt{forcing-chain}} & Short & 0 & Structural; no proof. & B \\
+\shortstack[l]{\texttt{thm:hc-}\\\texttt{forcing-theorem}} & Short (14L) & 2 & Cites \texttt{lem:re-identification-lemma}; sound. & B \\
+\shortstack[l]{\texttt{lem:closure-}\\\texttt{forcing-lemma}} & Short (8L) & 0 & \textbf{No refs; pure prose; not auditable.} & \textbf{A} \\
+\shortstack[l]{\texttt{prop:tensorial-}\\\texttt{intertwining-m}} & Short (8L) & 0 & \textbf{Necessity argument only; effectively a hypothesis.} & \textbf{A} \\
+\shortstack[l]{\texttt{lem:diagonal-}\\\texttt{traversal-}\\\texttt{scalar-action}} & Full (24L) & 3 & Well-founded; Jordan-block argument solid. & -- \\
+\shortstack[l]{\texttt{thm:hc-spectral-}\\\texttt{projector}} & Full (30L) & 5 & Depends on \texttt{prop:tensorial-intertwining-m} hypothesis. & B \\
+\shortstack[l]{\texttt{cor:M-HC-}\\\texttt{fixpoint}} & Short & 3 & Follows cleanly from theorem. & -- \\
+\shortstack[l]{\texttt{cor:SM-spectral-}\\\texttt{realization}} & Short & 4 & Depends on \texttt{thm:SM}; sound. & -- \\
+\midrule
+\shortstack[l]{\texttt{thm:koide-}\\\texttt{triolic} (OP~3)} & Short (7L) & 0 & \textbf{$\theta_K$ formula not derived; $K=2/3$ by C--S only.} & \textbf{A} \\
+\shortstack[l]{\texttt{thm:bsym-hopf}\\(OP~1)} & Short (11L) & 0 & \textbf{5.1\% gap to $1/\sqrt{3}$ unaddressed.} & \textbf{A} \\
+\shortstack[l]{\texttt{thm:unity}\\(central)} & Short (9L) & 5 & \texttt{prop:compensator} ref resolved; label confirmed. & B \\
+\shortstack[l]{\texttt{prop:structural-}\\\texttt{lift-principle}} & Short (8L) & 1 & Circular: uses its own assumptions as proof. & B \\
+\midrule
+\shortstack[l]{$\mathrm{ClosureStable}$\\$\Leftrightarrow\,\mathrm{im}(C)$} & \emph{missing} & -- & \textbf{Bijection not stated; gap in thm:hc-spectral-projector Step~3.} & \textbf{A} \\
+\end{longtable}
+}
+
+\subsection*{Priority A: Required for structural soundness}
+
+\paragraph{A1. \texttt{lem:closure-forcing-lemma} hardening.}
+The proof currently reads as structural prose with no citations. The required explicit chain is:
+\[
+\begin{aligned}
+\mathrm{Triolic}(x) &\Rightarrow \texttt{lem:triolic-minimality-lemma},\\
+\mathrm{Anchored}(x) &\Rightarrow \texttt{lem:orthogonal-anchor-lemma},\\
+\mathrm{HCForced}(x) &\Rightarrow \texttt{lem:hc-admissibility-lemma}.
+\end{aligned}
+\]
+Combined consequence: no leakage outside the common container
+$\Rightarrow \mathrm{ClosureStable}(x)$. Each implication must cite its
+lemma explicitly.
+
+\paragraph{A2. \texttt{prop:tensorial-intertwining-m} status correction.}
+$\mathcal{M}\mathcal{C} = \mathcal{C}\mathcal{M}$ is currently stated as a
+proposition but proved only by necessity argument. It must either be:
+(a) promoted to an axiom/hypothesis with explicit hypothesis-grade marker, or
+(b) derived from \texttt{def:tensor-structural-kernel} by explicit index
+calculation showing that the idempotent tensor $\mathcal{C}^\mu{}_\nu$ commutes
+with any structure-preserving $\mathcal{M}^\mu{}_\nu$ satisfying the
+admissibility conditions. Option (b) is preferred.
+
+\paragraph{A3. $\mathrm{ClosureStable}(x) \Leftrightarrow x \in \mathrm{im}(C)$ as
+explicit lemma.}
+Step~3 of \texttt{thm:hc-spectral-projector} uses \texttt{lem:closure-forcing-lemma} to identify $\mathrm{im}(C)$ with $\mathcal S_0$, but the reverse implication is still missing. The required gap may be summarized as:
+\begin{itemize}[leftmargin=1.8em]
+\item $\mathrm{im}(C) \subseteq \mathcal S_0$ is already covered,
+\item closure-stable states must still be shown to be compensator-normalized,
+\item hence a dedicated closure-stable/im$(C)$ lemma is still needed.
+\end{itemize}
+
+\paragraph{A4. \texttt{thm:koide-triolic} (OP~3) numerical hardening.}
+The existing proof derives $K = 2/3$ via Cauchy-Schwarz but does not
+derive the angle formula
+$\theta_K = \pi - \sqrt{2}\cdot\arcsin(\beta_{\mathrm{sym}})$
+established in prior session work. This formula predicts the Koide angle
+to within 0.115\% and must be incorporated as an explicit step.
+The residual mass-ratio discrepancy ($\sim 7$--$16\%$, amplification
+factor $\sim 60$ near the electron mass) must also be stated explicitly.
+
+\paragraph{A5. \texttt{thm:bsym-hopf} (OP~1) gap statement.}
+The Hopf-angle derivation gives $\beta_{\mathrm{sym}} \approx 1/\sqrt{3}$
+(continuum limit) while the measured value is $\approx 0.5493$, a 5.1\% gap
+in $\beta_{\mathrm{sym}}$ corresponding to a $\sim 61\%$ gap in $\gamma_L$
+due to nonlinear amplification. The theorem currently does not state this gap
+explicitly. A remark recording the gap and its structural interpretation
+(continuum $S^3$ vs discrete prime lattice) must be added.
+
+\subsection*{Priority B: Structural hardening (next passes)}
+
+\paragraph{B1. \texttt{prop:semantic-forcing-chain} proof.}
+Currently stated without proof body. The implication
+$\mathrm{GroundLinked} \wedge \mathrm{FrameShifted} \Rightarrow \mathrm{HCForced}$
+needs an explicit derivation from the semantic kernel axioms (S1)--(S6).
+
+\paragraph{B2. \texttt{prop:structural-lift-principle} circularity fix.}
+The proof assumes its conclusion. A non-circular argument requires explicit
+reference to the admissible transport operations (for example, \texttt{lem:group-transport} and \texttt{lem:hc-admissibility-lemma}) as the
+mechanism by which kernel-invariant content is preserved.
+
+\paragraph{B3. \texttt{thm:hc-spectral-projector} conditional status.}
+The theorem is sound \emph{under} the hypothesis that
+$\mathcal{M}\mathcal{C} = \mathcal{C}\mathcal{M}$ (A2). Until A2 is resolved,
+the theorem should carry an explicit conditional marker. A remark to this
+effect should be inserted immediately after the theorem statement.
+
+\subsection*{Closure sequence for next subversions}
+
+\begin{enumerate}[label=\textbf{v2.27.\arabic*:}, leftmargin=4em, start=6]
+  \item Close A1 (\texttt{lem:closure-forcing-lemma}), A3
+    ($\mathrm{ClosureStable} \Leftrightarrow \mathrm{im}(C)$ lemma),
+    and B3 (conditional marker on \texttt{thm:hc-spectral-projector}).
+  \item Close A2 (\texttt{prop:tensorial-intertwining-m} index calculation
+    or hypothesis-promotion) and B2 (structural lift circularity fix).
+  \item Close A4 (\texttt{thm:koide-triolic} $\theta_K$ formula, OP~3)
+    and A5 (\texttt{thm:bsym-hopf} gap remark, OP~1).
+  \item Close B1 (\texttt{prop:semantic-forcing-chain} proof).
+    Evaluate gate readiness for next public release.
+\end{enumerate}
+
+\subsection*{What is already sound (do not reopen)}
+
+The following blocks passed the v2.27.4 scan with no structural issues and
+should not be reopened unless a genuine contradiction is found:
+\begin{itemize}[leftmargin=1.8em]
+\item \texttt{lem:diagonal-traversal-scalar-action} (Jordan-block exclusion),
+\item \texttt{thm:fractal} (fractal self-traversal),
+\item \texttt{thm:symmetric-frame} (algebraically complete),
+\item \texttt{thm:unitary-equiv} (Stone--von Neumann, cites literature),
+\item \texttt{cor:M-HC-fixpoint}, \texttt{cor:SM-spectral-realization},
+\item all of \texttt{sec:readout-relative-lemmas},
+\item \texttt{thm:hc-readout-geometry} (conditional on A2).
+\end{itemize}
+
+% ==================================================================
+

@@ -1,0 +1,21 @@
+\section{Tool stability and normalization}
+\begin{definition}[Tool-stable invariant regime]\label{def:tool-stable-invariant-regime}
+A compact paired conservative normal form lies in a tool-stable invariant regime if monotone selectors are compression-stable, close-side states are route-faithfully robust, promote-side continuation is honest rather than a pure weight artifact, and the preserved route-faithful invariants remain unchanged under admissible uses of the tool layer.
+\end{definition}
+
+\begin{definition}[Canonical normalization regime]\label{def:canonical-normalization-regime}
+A canonical normalization regime is an admissible class of normalization scale triples in which the selector class and close/promote classification remain unchanged under bounded side-preserving scale replacements.
+\end{definition}
+
+\begin{theorem}[Normalization theorem]\label{thm:normalization-theorem}
+Every compact paired conservative normal form equipped with an admissible normalization scale triple admits a normalized live residual reading and a normalized weighted residual energy
+\[
+\Ew=w_{\mathrm{CL}}|\widetilde{\rho}_{\mathrm{CL}}|^2+w_{\Theta}|\widetilde{\rho}_{\Theta}|^2+w_A|\widetilde{\rho}_{A}|^2.
+\]
+Inside a canonical normalization regime, comparison, selection, and close/promote testing are independent of arbitrary raw scale imbalance.
+\end{theorem}
+
+\begin{proof}
+Normalization is performed channel-wise inside the route-faithful split. Within the canonical normalization regime, equivalent admissible scale choices preserve the relevant comparisons and branch classifications, so the normalized state is the preferred pre-OP working surface.
+\end{proof}
+

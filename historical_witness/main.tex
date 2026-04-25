@@ -1,0 +1,155 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{geometry,hyperref,booktabs,array,longtable,graphicx,float}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,fit,calc}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{fancyhdr,bm}
+\usepackage{slashed}
+\usepackage{multicol}
+\setlength{\emergencystretch}{2em}
+\allowdisplaybreaks[1]
+\usepackage[style=ddmmyyyy]{datetime2}
+
+\newcommand{\safegraphic}[2][]{%
+  \IfFileExists{#2}{\includegraphics[#1]{#2}}{%
+    \fbox{\begin{minipage}{0.9\linewidth}\centering\small Placeholder figure not bundled in this release:\\texttt{\detokenize{#2}}\end{minipage}}%
+  }%
+}
+
+\geometry{margin=2.5cm}
+\hypersetup{
+  hidelinks,
+  pdftitle={Quantum Sphaera Companion: A Structure-First Mathematical Unfolding (v3.35.0 historical witness release)},
+  pdfauthor={Marc Brendecke},
+  pdfsubject={Historical witness PDF of mathematical companion; v3.35.0 historical witness release; concept DOI 10.5281/zenodo.19210728; version DOI 10.5281/zenodo.19750674; preserved Part II/proof memory as separate PDF in the same release bundle},
+  pdfkeywords={Quantum Sphaera, historical witness, preserved Part II, proof memory, audit store},
+  pdfcreator={OpenAI},
+  pdfproducer={pdfLaTeX}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\footnotesize\textcopyright\ 2026 Marc Brendecke. Preprint --- not peer reviewed.}
+\fancyfoot[R]{\footnotesize\thepage}
+\fancyhead[L]{\footnotesize Quantum Sphaera Companion Historical Witness}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{axiom}{Axiom}
+
+% --- Document metadata ---
+\newcommand{\docversion}{3.35.0}
+\newcommand{\docdate}{\DTMdisplaydate{2026}{04}{25}{-1}}
+
+% --- Macros ---
+\newcommand{\bsym}{\beta_{\mathrm{sym}}}
+\newcommand{\gL}{\gamma_L}
+\newcommand{\gstring}{\gamma_{\mathrm{string}}}
+\newcommand{\gBI}{\gamma_{\mathrm{BI}}}
+\newcommand{\lP}{\ell_P}
+\newcommand{\zminus}{z^-}
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\OO}{\mathbb{O}}
+\newcommand{\Hplus}{H^+}
+\newcommand{\Hplusplus}{H^+_+}
+\newcommand{\Hplusminus}{H^+_-}
+\newcommand{\WA}{\mathcal{W}(A^1)}
+\newcommand{\KC}{\hat{K}}
+
+\lstdefinestyle{pyappendix}{
+  basicstyle=\ttfamily\scriptsize,
+  breaklines=true,
+  breakatwhitespace=false,
+  columns=fullflexible,
+  keepspaces=true,
+  showstringspaces=false,
+  frame=single,
+  framerule=0.2pt,
+  tabsize=4
+}
+
+
+% --- v3.31.0 pre-OP frontier macros ---
+\newcommand{\Rlive}{\mathbf{R}_{\mathrm{live}}}
+\newcommand{\Rcurr}{\mathbf{R}_{\mathrm{curr}}}
+\newcommand{\Rtilde}{\widetilde{\mathbf{R}}_{\mathrm{live}}}
+\newcommand{\Rcurrtilde}{\widetilde{\mathbf{R}}_{\mathrm{curr}}}
+\newcommand{\Ew}{\widetilde{\mathcal{E}}_{w}}
+\newcommand{\Wpref}{\mathfrak{W}^{\mathrm{pref}}_{\mathrm{curr}}}
+\newcommand{\Wdir}{\mathfrak{W}^{\mathrm{dir}}_{\mathrm{next}}}
+
+
+\title{%
+  Quantum Sphaera Companion:\\
+  A Structure-First Mathematical Unfolding
+}
+\author{%
+  Marc Brendecke\\
+  \small Independent Researcher, Bochum, Germany\\
+  \small Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}\\
+  \small Companion Paper --- Preprint, not peer reviewed.\\
+  \small Technical unfolding of the main Sphaera paper~\cite{brendecke2026main}.
+}
+\date{\docdate{} --- Version \docversion\ --- historical witness release}
+
+
+\begin{document}
+
+% Modular source generated from the v3.35.0 release-final monolithic TeX.
+% Use pdflatex on this main.tex file; each section file is input without adding page breaks.
+
+\input{sections/000_title_and_release_status.tex}%
+\input{sections/001_the_central_theorem.tex}%
+\input{sections/002_lorentz_invariance_on_every_stratum.tex}%
+\input{sections/003_fractal_self_traversal_along_the_light_axis.tex}%
+\input{sections/004_three_objects_as_one_unitary_equivalence.tex}%
+\input{sections/005_near_collision_photon_production_and_entanglement.tex}%
+\input{sections/006_connection_to_the_riemann_hypothesis.tex}%
+\input{sections/007_gauge_structure_of_the_standard_model.tex}%
+\input{sections/008_bell_inequalities_and_tau_n.tex}%
+\input{sections/009_string_theory_and_loop_quantum_gravity_as_hc_sectors.tex}%
+\input{sections/010_black_holes_and_hawking_radiation.tex}%
+\input{sections/011_the_sphaera_as_a_hopf_fibration.tex}%
+\input{sections/012_3_8_op_closure_phase_two_core_reduction_and_closure_discipline.tex}%
+\input{sections/013_historical_open_questions_status_synchronized.tex}%
+\input{sections/014_historical_complete_snapshot_formal_proof_supplement.tex}%
+\input{sections/015_v1_9_0_readout_stabilization_and_proof_memory_core.tex}%
+\input{sections/016_v2_0_0_structural_closure_ledger_and_expansion_discipline_core.tex}%
+\input{sections/017_v2_1_0_structural_audit_and_re_expansion_core.tex}%
+\input{sections/018_v2_2_0_structural_re_expansion_governance_core.tex}%
+\input{sections/019_mathematical_thickening_of_the_hc_closure_core_working_expansion.tex}%
+\input{sections/020_v2_3_0_mathematical_deepening_core.tex}%
+\input{sections/021_v2_4_0_term_resolved_channel_specialization_core.tex}%
+\input{sections/022_v2_5_0_channel_budget_transport_and_ledger_dynamics_core.tex}%
+\input{sections/023_v2_6_0_lyapunov_ledger_closure_and_forward_invariant_regimes.tex}%
+\input{sections/024_v2_7_0_field_energy_realization_and_semigroup_readout_core.tex}%
+\input{sections/025_v2_8_0_spectral_admissibility_and_resolvent_gatekeeping_core.tex}%
+\input{sections/026_v2_9_0_spectral_readout_filters_and_trace_compatible_mode_selection_co.tex}%
+\input{sections/027_v2_10_0_trace_reconstruction_and_observable_extraction_core.tex}%
+\input{sections/028_v2_11_0_multi_readout_consistency_and_fusion_core.tex}%
+\input{sections/029_structural_tools_and_regime_tests.tex}%
+\input{sections/030_appendix_b_symbol_normalization_for_the_late_readout_layers.tex}%
+\input{sections/031_appendix_c_julia_boundary_master_residual_and_reversal_probe_consolida.tex}%
+\input{sections/032_appendix_d_historical_release_notes_and_version_record.tex}%
+\input{sections/033_historical_release_notes_and_roadmap_blocks.tex}%
+\input{sections/034_archived_reader_s_guide_and_working_roadmap_from_the_public_v3_13_0_re.tex}%
+\input{sections/035_v2_27_5_proof_chain_roadmap_identified_gaps_targets.tex}%
+\input{sections/036_v1_2_0_consolidation_core.tex}%
+\input{sections/037_v1_4_0_derivation_and_appendix_integration_core.tex}%
+\input{sections/038_v1_5_0_projection_and_appendix_table_integration_core.tex}%
+\input{sections/039_computational_completeness_layer_qam_mml_mma.tex}%
+\input{sections/040_bibliographic_hardening_scan_for_v.tex}%
+\input{sections/041_final_bibliography.tex}%
+\end{document}

@@ -1,0 +1,124 @@
+\section*{v2.8.0 Spectral Admissibility and Resolvent Gatekeeping Core}
+\addcontentsline{toc}{section}{v2.8.0 Spectral Admissibility and Resolvent Gatekeeping Core}
+
+\begin{quote}
+\textbf{Normalization note (v2.17.1 local review).}
+This block is retained as a \emph{historical spectral-admissibility precursor}. Its gatekeeping role is preserved, but the normalized admissibility logic is now carried by the semantic/tensor and grouped-layer unfolding phases.
+\end{quote}
+
+The semigroup realization from v2.7.0 still leaves one decisive structural question
+open: which generators are admissible before one even starts evolving the system? In
+this version the answer is sharpened by adding a spectral gatekeeping layer. The
+state evolution is not accepted merely because it can be written as an abstract flow;
+it must also possess a resolvent and spectrum compatible with the ledger discipline,
+HC confinement, tagged-source accounting, and probe inheritance.
+
+\subsection*{1. Spectral admissibility principle}
+Let $\mathfrak X$ be the admissible state space from the previous realization step and
+let $\mathcal G$ denote the effective generator of the dynamics, including its
+controlled tagged-source coupling. We call $\mathcal G$ \emph{spectrally admissible}
+if there exist $\omega_*>0$ and $C_*>0$ such that for every $\lambda$ with
+$\Re \lambda\ge -\omega_*$ the resolvent exists on the admissible sector and obeys
+\[
+\| (\lambda-\mathcal G)^{-1} \|_{\mathfrak X\to\mathfrak X}
+\le \frac{C_*}{1+|\lambda|},
+\]
+after projection to the HC-confined channel space. This estimate expresses that the
+generator does not hide uncontrolled growth modes behind formal notation. The ledger
+control from earlier versions is therefore promoted into a spectral entrance test.
+
+\paragraph{Principle 2 (spectral gatekeeping).}
+A candidate field equation or abstract operator model is structurally admissible only
+if its effective generator is spectrally admissible in the above sense and the
+corresponding resolvent bounds are compatible with the tagged-source decomposition.
+The proof programme may therefore reject an operator before any detailed PDE analysis
+if the spectrum already violates ledger closure.
+
+\subsection*{2. Resolvent--ledger compatibility}
+The weighted energy $\mathcal E$ from v2.7.0 should now be stable not only along the
+flow but already at the resolvent level. Concretely, admissibility requires a bound
+of the schematic form
+\[
+\mathcal E\bigl((\lambda-\mathcal G)^{-1}F\bigr)
+\le C_{\mathrm{res}}
+\Bigl( \mathcal E(F)
++ \mathrm{Tag}(F)
++ \mathrm{Match}(F)\Bigr)
+\]
+for every admissible forcing term $F$ and every $\Re\lambda\ge -\omega_*$. Here
+$\mathrm{Tag}(F)$ denotes the explicitly source-tagged part and
+$\mathrm{Match}(F)$ the mismatch component inherited from probe comparison. This is
+the spectral analogue of the semigroup energy estimate: the resolvent may amplify
+forcing, but only in a way that remains ledger-readable.
+
+\subsection*{3. HC confinement as spectral projector}
+The HC mechanism is now reinterpreted one step more sharply. Earlier versions treated
+it as the structural compensator that confines evolution to the septinion closure.
+At spectral level this becomes the statement that there exists a projector
+$\Pi_{\mathrm{HC}}$ with
+\[
+(\lambda-\mathcal G)^{-1}
+= \Pi_{\mathrm{HC}}(\lambda-\mathcal G)^{-1}\Pi_{\mathrm{HC}}
++ \mathcal R_{\mathrm{tag}}(\lambda),
+\]
+where $\mathcal R_{\mathrm{tag}}(\lambda)$ is either negligible in the admissible
+regime or explicitly source-tagged. Hence uncontrolled extra channels are not merely
+suppressed dynamically; they are prevented from entering the admissible resolvent
+class except through a tagged remainder. This gives a clean spectral formulation of
+HC confinement.
+
+\subsection*{4. Spectral gap and restart robustness}
+If the admissible generator satisfies the above bounds together with a positive gap
+between the dominant admissible spectrum and the forbidden sector, then restart
+stability acquires a stronger meaning. A checkpoint is not only dynamically safe but
+spectrally robust: small reconstruction errors remain trapped inside the same
+resolvent class and do not move the system into a hidden unstable branch. In this
+sense proof memory is upgraded from semigroup continuity to spectral persistence.
+
+\subsection*{5. Probe-sector comparison spectrum}
+The two-probe subsystem inherits the same criterion. Let
+$\mathcal G_{\mathrm{probe}}$ be the effective probe generator acting on the probe
+state space. Then admissibility requires a comparison estimate
+\[
+\| (\lambda-\mathcal G_{\mathrm{probe}})^{-1} \| 
+\le C_{\mathrm{probe,res}}(1+|\lambda|)^{-1},
+\qquad \Re\lambda\ge -\omega_{\mathrm{probe}},
+\]
+with constants controlled by the same ledger hierarchy and mismatch tags. The search
+geometry therefore becomes spectrally testable: a probe construction is not accepted
+merely because it heuristically mirrors the main evolution, but because its spectrum
+remains subordinate to the same admissible comparison regime.
+
+\subsection*{6. Consequence for future field equations and appendix tools}
+The field-equation admission checklist is sharpened again. A candidate model should
+now be tested in the following order:
+\begin{enumerate}[label=(\arabic*)]
+  \item identify state space and admissible channel projector;
+  \item construct the energy and ledger readout;
+  \item verify semigroup dissipativity modulo tagged sources;
+  \item prove spectral admissibility and resolvent compatibility; and
+  \item verify probe-spectrum inheritance and restart robustness.
+\end{enumerate}
+This also refines the appendix tools. Strong tools may now additionally be marked as
+resolvent estimator, spectral projector certificate, gap witness, or restart
+persistence lemma. These labels distinguish genuinely admissibility-producing tools
+from merely formal symbolic aids.
+
+\subsection*{7. v\docversion\ readiness criterion}
+The present step should be regarded as successful if the following can now be done:
+\begin{itemize}
+  \item admissible generators can be filtered by a spectral entrance test;
+  \item resolvent bounds can be read in the same ledger language as the semigroup flow;
+  \item HC confinement is expressible as a spectral projector statement;
+  \item restart stability is strengthened to spectral persistence; and
+  \item the probe sector inherits a controlled comparison spectrum.
+\end{itemize}
+
+This is the gain of v\docversion. The companion monolith now carries not only
+closure, channel specialization, transport dynamics, forward invariance, and
+field-energy realization, but also a first spectral admissibility layer. Future
+field equations are therefore constrained twice: they must generate the correct
+ledger-dissipative semigroup and they must belong to the correct resolvent class
+before they are even admitted into the structural programme.
+
+

@@ -1,0 +1,68 @@
+--- Quantum_Sphaera_Companion_v3_35_0_r04_historical_witness.tex
++++ Quantum_Sphaera_Companion_v3_35_0_historical_witness_release_final.tex
+@@ -24,9 +24,9 @@
+ \geometry{margin=2.5cm}
+ \hypersetup{
+   hidelinks,
+-  pdftitle={Quantum Sphaera Companion: A Structure-First Mathematical Unfolding (v3.35.0-r04 historical witness release candidate)},
++  pdftitle={Quantum Sphaera Companion: A Structure-First Mathematical Unfolding (v3.35.0 historical witness release)},
+   pdfauthor={Marc Brendecke},
+-  pdfsubject={Historical witness PDF of mathematical companion; v3.35.0-r04 historical witness release candidate; previous version DOI 10.5281/zenodo.19746821; preserved Part II/proof memory as separate PDF in the same release bundle above the public v3.33.0 release},
++  pdfsubject={Historical witness PDF of mathematical companion; v3.35.0 historical witness release; concept DOI 10.5281/zenodo.19210728; version DOI 10.5281/zenodo.19750674; preserved Part II/proof memory as separate PDF in the same release bundle},
+   pdfkeywords={Quantum Sphaera, historical witness, preserved Part II, proof memory, audit store},
+   pdfcreator={OpenAI},
+   pdfproducer={pdfLaTeX}
+@@ -50,7 +50,7 @@
+ \newtheorem{axiom}{Axiom}
+ 
+ % --- Document metadata ---
+-\newcommand{\docversion}{3.35.0-r04}
++\newcommand{\docversion}{3.35.0}
+ \newcommand{\docdate}{\DTMdisplaydate{2026}{04}{25}{-1}}
+ 
+ % --- Macros ---
+@@ -102,7 +102,7 @@
+   \small Companion Paper --- Preprint, not peer reviewed.\\
+   \small Technical unfolding of the main Sphaera paper~\cite{brendecke2026main}.
+ }
+-\date{\docdate{} --- Version \docversion\ --- historical witness release candidate}
++\date{\docdate{} --- Version \docversion\ --- historical witness release}
+ 
+ 
+ \begin{document}
+@@ -110,20 +110,20 @@
+ \begin{center}
+ {\LARGE\bfseries Quantum Sphaera Companion}\par\vspace{0.4em}
+ {\Large\bfseries Historical Witness}\par\vspace{0.8em}
+-{\large A preserved Part II / COMPLETE snapshot for v3.35.0-r04}\par\vspace{0.8em}
++{\large A preserved Part II / COMPLETE snapshot for v3.35.0}\par\vspace{0.8em}
+ Marc Brendecke\par
+ Independent Researcher, Bochum, Germany\par
+ Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}\par
+-\docdate{} --- Version \docversion{} --- historical witness release candidate
++\docdate{} --- Version \docversion{} --- historical witness release
+ \end{center}
+ \thispagestyle{fancy}
+ 
+ \begin{quote}\small
+-\noindent\textbf{Status.} This PDF preserves the historical witness that was formerly integrated as Part II of the monolithic Companion. It is not deleted, shortened, or promoted into the active theorem core. It is carried as proof memory, genealogy, and reconstruction support in the same release bundle as the active core. The v3.35.0-r04 historical witness release candidate keeps this file separate for readability and archival clarity, not as a second theorematic line.
++\noindent\textbf{Status.} This PDF preserves the historical witness that was formerly integrated as Part II of the monolithic Companion. It is not deleted, shortened, or promoted into the active theorem core. It is carried as proof memory, genealogy, and reconstruction support in the same release bundle as the active core. The v3.35.0 historical witness release keeps this file separate for readability and archival clarity, not as a second theorematic line.
+ 
+ \medskip
+ \noindent\textbf{Active companion file.} The governing current proof-line is provided as\par
+-\texttt{Quantum\_Sphaera\_Companion\_v3\_35\_0\_r02\_active\_core\_pre\_v4\_qam\_two\_sided\_tensor.pdf}.
++\texttt{Quantum\_Sphaera\_Companion\_v3\_35\_0\_active\_core\_release\_final.pdf}.
+ 
+ \medskip
+ \noindent\textbf{Reading rule.} If a historical statement sounds stronger, flatter, or older than the active-core status ledger, the active-core reading governs. In particular, this historical witness does not close OP~1/4 or OP~5(B).
+@@ -7523,7 +7523,9 @@
+ v3.32.0 & public Zenodo release & 2026-04-24 & \href{https://doi.org/10.5281/zenodo.19704489}{10.5281/zenodo.19704489} --- prior public release; current release final built above the public v3.31.0 baseline; integrates the first machine-fused coupled OP-entry transition line, the coupled prime-lattice machine realization block, and the strengthened finite-to-stage-stable universality reading while preserving the full historical witness in Part~II \\
+ v3.33.0 & public Zenodo release & 2026-04-24 & \href{https://doi.org/10.5281/zenodo.19716926}{10.5281/zenodo.19716926} --- prior public release; built above the public v3.32.0 baseline; carries the HC-captured local continuation line through lock-corridor capture, minimal HC-lock step, HC menu scan, plausible HC candidate, micro-lock update, and first local HC-capture chain while preserving the full historical witness in Part~II \\
+ \hline
+-v3.34.0 & public Zenodo release & 2026-04-25 & \href{https://doi.org/10.5281/zenodo.19746821}{10.5281/zenodo.19746821} --- current public split-bundle release; promotes the locally audit-clean v3.34.0-r27 line into a reader-facing active core plus preserved historical witness bundle, adds the QAM/MML/MMA store-array layer, frontmatter reader architecture, and Sphaera array mirror/stripe/parity-residual infrastructure while preserving the non-closure status of OP~1/4 and OP~5(B) \\
++v3.34.0 & public Zenodo release & 2026-04-25 & \href{https://doi.org/10.5281/zenodo.19746821}{10.5281/zenodo.19746821} --- prior public split-bundle release; promotes the locally audit-clean v3.34.0-r27 line into a reader-facing active core plus preserved historical witness bundle, adds the QAM/MML/MMA store-array layer, frontmatter reader architecture, and Sphaera array mirror/stripe/parity-residual infrastructure while preserving the non-closure status of OP~1/4 and OP~5(B) \\
++\hline
++v3.35.0 & public Zenodo release & 2026-04-25 & \href{https://doi.org/10.5281/zenodo.19750674}{10.5281/zenodo.19750674} --- current public pre-v4 QAM/tensor preparation release; adds the short/extended abstract architecture, Hilbert-hotel QAM reindexing plan for later v4, guarded mixed QAM readouts, optional binary mask registry, conservative two-sided structural tensor grammar, role-erasure and mixed-readout normal forms, Boolean selector grammar, and release-final DOI packaging while preserving the non-closure status of OP~1/4 and OP~5(B) \\
+ \hline
+ v3.34.0-r17 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- executes the first dispatched handoff-guard packet \(\mathsf W_{\mathrm{handoff}}^{\mathrm{guard}}\) after a stable lock/capture return, installs the handoff-guard defect register \(\Delta_{\mathrm{handoff}}^{\mathrm{guard}}\), and returns exactly one of handoff-ready source, bounded handoff-guard repair source, or smaller frontier source without manufacturing an OP closure certificate \\
+ v3.34.0-r18 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- executes the first dispatched OP-normalization/type packet \(\mathsf W_{\mathrm{norm}}^{\mathrm{type}}\) after a handoff-ready return, installs the normalization/type-coherence defect register \(\Delta_{\mathrm{norm}}^{\mathrm{type}}\), and returns exactly one of route/rank-ready typed OP input, bounded normalization/type repair source, or smaller frontier source without manufacturing an OP closure certificate \\

@@ -1,0 +1,151 @@
+\section*{v2.10.0 Trace Reconstruction and Observable Extraction Core}
+\addcontentsline{toc}{section}{v2.10.0 Trace Reconstruction and Observable Extraction Core}
+
+\begin{quote}
+\textbf{Normalization note (v2.17.1 local review).}
+This block is retained as a \emph{historical reconstruction and observable-extraction precursor}. Its reconstruction language remains useful, but the normalized proof-bearing architecture now lies in the unfolding phases and the grouped transport logic.
+\end{quote}
+
+The filtered-observability layer from v2.9.0 separates admissible modes into
+readable, tagged, and mute sectors. The next structural task is no longer only to
+screen admissible modes, but to reconstruct theorem-level observables from the
+readable part without double counting, without reopening forbidden channels, and
+without losing the ledger discipline enforced by HC confinement. The present step
+therefore adds a trace-reconstruction layer. It answers the question: once a mode
+has passed admissibility and readability tests, how is it promoted to an actual
+observable in the companion proof architecture?
+
+\subsection*{1. Reconstruction operator for readable modes}
+Let $\{\mathcal F_\alpha\}_{\alpha\in A_{\mathrm{read}}}$ be the approved readable
+filter family from v2.9.0. We now introduce a reconstruction operator
+\[
+\mathcal R: \bigoplus_{\alpha\in A_{\mathrm{read}}} \mathfrak X_\alpha \to \mathfrak O,
+\]
+where $\mathfrak X_\alpha = \mathcal F_\alpha \mathfrak X$ denotes the readable mode
+sector and $\mathfrak O$ is the structural observable space. The role of
+$\mathcal R$ is not arbitrary synthesis: it is constrained reconstruction. For a
+state $u\in\mathfrak X$ one seeks a decomposition
+\[
+\mathrm{Obs}(u) = \mathcal R\bigl((\mathcal F_\alpha u)_{\alpha\in A_{\mathrm{read}}}\bigr)
+\]
+such that every observable component remains HC-confined, ledger-bounded, and
+source-tagged whenever the reconstruction is not exact. Thus observable extraction
+is treated as a disciplined readout map rather than an unrestricted projection.
+
+\paragraph{Principle 4 (reconstructive observability).}
+A readable mode contributes to theorem-level content only after passing through a
+reconstruction operator whose output is compatible with HC confinement, channel
+budgets, and source tags. Readability alone is therefore necessary but not yet
+sufficient for observable status.
+
+\subsection*{2. Observable extraction at theorem level}
+For each admissible theorem-context $\Theta$ let $\mathfrak O_\Theta$ denote the class
+of observables allowed in that context. One then requires extraction estimates of
+schematic form
+\[
+\|\mathcal R_\Theta((\mathcal F_\alpha u)_\alpha)\|_{\mathfrak O_\Theta}
+\le C_\Theta
+\Bigl(
+\sum_{\alpha\in A_{\mathrm{read}}} \mathfrak M_\alpha(u)
++ \mathrm{Tag}(u)+\mathrm{Leak}(u)
+\Bigr),
+\]
+with $\mathfrak M_\alpha$ the readable trace masses from v2.9.0. This means an
+observable is only legitimate when its theorem-level norm is controlled by the same
+ledger quantities already used to regulate channel transport and spectral readout.
+The companion proof therefore acquires an explicit extraction stage between readable
+modes and theorem statements.
+
+\subsection*{3. Overlap ledger and anti-double-counting rule}
+Once multiple filters contribute to one observable quantity, overlap must be made
+visible. Introduce an overlap ledger
+\[
+\mathrm{OL}(u)= \sum_{\alpha\neq\beta}
+\omega_{\alpha\beta}\,\langle \mathcal F_\alpha u,\mathcal F_\beta u\rangle_{\mathfrak X},
+\]
+where the coefficients $\omega_{\alpha\beta}$ encode admissible correlation or
+subtraction rules. The purpose of $\mathrm{OL}(u)$ is not to forbid overlap but to
+prevent silent duplication of structural mass. Observable reconstruction is required
+to satisfy a compensated estimate of the form
+\[
+\|\mathrm{Obs}(u)\|_{\mathfrak O}
+\le C_{\mathrm{obs}}
+\Bigl(
+\sum_{\alpha\in A_{\mathrm{read}}} \mathfrak M_\alpha(u)
+- \mathrm{OL}(u)
++ \mathrm{Tag}(u)+\mathrm{Leak}(u)
+\Bigr),
+\]
+whenever the overlap ledger is well defined. Thus one can read several filtered
+channels at once without pretending they were disjoint when they are not.
+
+\subsection*{4. HC-stable observable closure}
+The reconstructed observable sector must itself remain HC-stable. Concretely, one
+requires that
+\[
+\Pi_{\mathrm{HC}}\,\mathrm{Obs}(u)=\mathrm{Obs}(u)+\tau(u),
+\qquad
+\|\tau(u)\|_{\mathfrak O}\le C_{\mathrm{HC}}
+\bigl(\mathrm{Tag}(u)+\mathrm{Leak}(u)\bigr),
+\]
+so that reconstruction does not reactivate forbidden directions except through
+ledger-visible correction terms. In this sense HC confinement becomes not only a
+state-space condition and not only a filter-compatibility condition, but now also an
+observable-closure condition. Only outputs that survive this test may be used as
+stable structural readings.
+
+\subsection*{5. Probe-sector reconstruction inheritance}
+For the two-probe subsystem the same reconstruction principle must descend to the
+probe readout. Let $\mathcal R^{\mathrm{probe}}$ be the probe reconstruction operator.
+Then every probe observable should either be inherited from an ambient observable
+through the descent chain or be explicitly tagged as probe-local correction. One
+asks schematically for bounds of the form
+\[
+\|\mathrm{Obs}^{\mathrm{probe}}(v)\|_{\mathfrak O_{\mathrm{probe}}}
+\le C_{\mathrm{pr}}
+\bigl(
+\|\mathrm{Obs}(u)\|_{\mathfrak O}
++\mathrm{Mismatch}(u,v)
+\bigr),
+\]
+for matched ambient/probe states $(u,v)$. This ensures the probe sector remains an
+instrument of structural descent rather than an independent source of untracked
+observables.
+
+\subsection*{6. Consequence for field equations and appendix tools}
+The admission checklist for future candidate field equations is therefore extended
+once more:
+\begin{enumerate}[label=(\arabic*)]
+  \item verify semigroup dissipativity and ledger closure;
+  \item verify spectral admissibility and resolvent compatibility;
+  \item verify readable mode separation under HC-compatible filters;
+  \item construct a reconstruction operator for theorem-level observables; and
+  \item bound overlap, leakage, and probe descent in a visible ledger form.
+\end{enumerate}
+The appendix tool taxonomy is refined accordingly. Besides resolvent estimators,
+readout filters, and gap witnesses, a strong tool may now also be labelled as
+reconstruction operator, observable extractor, overlap-ledger bound, HC-stability
+witness, or probe-descent certificate. These labels mark tools that do not merely
+prove admissibility, but actually promote admissible readable content into stable
+observables.
+
+\subsection*{7. v\docversion\ readiness criterion}
+The present step should be regarded as successful if the following can now be done:
+\begin{itemize}
+  \item readable spectral content can be reconstructed into theorem-level observables;
+  \item overlaps between readable channels are accounted for instead of silently duplicated;
+  \item observable extraction remains HC-stable modulo visible tagged/leakage correction;
+  \item probe observables descend from ambient observables rather than appearing autonomously; and
+  \item future field equations can be screened for observable reconstruction, not merely for readable spectra.
+\end{itemize}
+
+This is the gain of v\docversion. The companion monolith now carries not only
+closure, channel specialization, transport dynamics, forward invariance,
+field-energy realization, semigroup readout, spectral admissibility, and filtered
+observability, but also a first disciplined reconstruction layer. Future field
+equations are therefore constrained four times: they must generate the correct
+ledger-dissipative semigroup, belong to the correct resolvent class, pass a
+trace-compatible readout filter, and finally admit HC-stable observable
+reconstruction before they can count as theorem-level structural content.
+
+

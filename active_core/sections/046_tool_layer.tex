@@ -1,0 +1,19 @@
+\section{Tool layer}
+\begin{definition}[Extracted tool layer]\label{def:tool-layer}
+The extracted tool layer consists of:
+\begin{enumerate}[leftmargin=2em]
+  \item compression-before-comparison,
+  \item monotone selection on the compressed state,
+  \item a route-faithful close-or-promote shortcut,
+  \item scalar-packet decoupling for genuinely one-sided arguments.
+\end{enumerate}
+\end{definition}
+
+\begin{theorem}[Tool extraction theorem]\label{thm:tool-extraction}
+The compact paired conservative normal form supports the extracted tool layer entirely through the preserved route-faithful invariant class and the extracted three-coordinate residual state.
+\end{theorem}
+
+\begin{proof}
+Each tool is defined directly on the compact normal form and depends only on route-faithful invariants and on the residual coordinates. No reopening of the full internal machine is required unless the compressed tool layer is insufficient.
+\end{proof}
+

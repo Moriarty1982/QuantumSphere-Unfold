@@ -1,0 +1,184 @@
+\section{HC-Induced Readout Geometry and Structural Unity}
+\label{sec:theorem7}
+
+\subsection*{Setup}
+
+Let $\mathcal{K}$ be a closure-stable structural kernel, and let
+\[
+  \mathcal{R}_f : \mathcal{K} \to \mathcal{O}_f
+\]
+be admissible readout maps corresponding to different regimes (ART,
+QFT, probe). Let $\mathcal{H}_C$ denote the Heisenberg compensator,
+understood as a structural object controlling compatibility between
+readouts. This is the concrete realization of
+Definition~\ref{def:readout-relative-lemma}: each $\mathcal{R}_f$
+produces a readout-relative statement, while $\mathcal{K}$ carries the
+kernel-level content.
+
+\subsection*{Theorem 7 (HC-Induced Readout Geometry)}
+
+\begin{theorem}[HC-induced readout geometry]
+\label{thm:hc-readout-geometry}
+Under the above assumptions, the following statements hold.
+\begin{enumerate}[label=(\arabic*)]
+  \item \textbf{Readout divergence and effective trajectories.}
+  For two readouts $f,g$, define
+  $\Delta_{f,g} := \mathcal{R}_f - \mathcal{R}_g$.
+  The induced effective dynamics in observable space generically
+  produces trajectories that are not globally closed and may exhibit
+  local segments resembling hyperbolic motion with apparent domain gaps.
+
+  \item \textbf{Projection singularities.}
+  Apparent gaps in trajectories correspond to incompatibilities of
+  projections:
+  \[
+    \exists\, x \in \mathcal{K}:\quad
+    \begin{aligned}
+      &\mathcal{R}_f(x)\ \text{well-defined, while}\\
+      &\mathcal{R}_g(x)\ \text{is not compatibly representable.}
+    \end{aligned}
+  \]
+  These are projection singularities rather than physical
+  discontinuities. In the language of
+  Proposition~\ref{prop:legitimacy-restricted-lemmas}: $\mathcal{R}_f(x)$
+  is a readout-relative statement whose regime of validity excludes the
+  $g$-readout.
+
+  \item \textbf{Mirror structure and recombination.}
+  There exists a transformation $S$ such that locally
+  $S(\mathcal{R}_f) \approx \mathcal{R}_g$.
+  Complementary trajectory branches can therefore be recombined into
+  an effective elliptic structure at the level of combined readouts.
+
+  \item \textbf{Effective two-center dynamics.}
+  The recombined dynamics is equivalent to motion in a symmetric
+  two-center system, where the centers correspond to competing
+  readout-fixed structures rather than physical sources. This is
+  the bidirectional probe picture of
+  Section~\ref{sec:bidirectional-probe-lensing}
+  (Proposition~\ref{hyp:bidirectional-probe-lensing}) at the level of
+  effective trajectories.
+
+  \item \textbf{Non-orientable global structure.}
+  The combined readout structure is generically non-orientable:
+  transport along a closed loop induces a phase shift, requiring
+  multiple loops for full return. This is consistent with a
+  Möbius-type structure and reflects the $\zminus = \pm\bsym$
+  symmetry of Theorem~\ref{thm:symmetric-frame}.
+
+  \item \textbf{Existence of a structural lift.}
+  There exists a lifted space $\tilde{\mathcal{K}}$ and projection
+  $\pi : \tilde{\mathcal{K}} \to \mathcal{O}$ such that trajectories
+  in $\tilde{\mathcal{K}}$ are smooth and closed, while their
+  projections reproduce gaps, hyperbolic segments, and branching
+  effects. This is the structural lift of
+  Definition~\ref{def:structural-lift} applied to trajectory data.
+
+  \item \textbf{HC as curvature.}
+  The compensator $\mathcal{H}_C$ acts as curvature of the readout
+  bundle, governing deviations of trajectories, phase shifts, and
+  apparent failure of closure at the visible trajectory level. In the
+  present release such failure must first be tested through native
+  closure-class preservation and the OP transport theorem rather than
+  inferred from raw trajectory separation alone. This is the geometric
+  realization of Corollary~\ref{cor:M-HC-fixpoint}: $\mathcal{M}C = \lambda_0 C$
+  fixes the compensator as the structural curvature anchor.
+
+  \item \textbf{Projective vanishing.}
+  There exist configurations such that
+  \[
+    \sum_i \mathcal{H}_C^{(f_i)} = 0
+    \quad\text{while}\quad
+    \mathcal{H}_C^{(\mathrm{kernel})} \neq 0.
+  \]
+  Thus the compensator may vanish in projection while remaining
+  nontrivial at kernel level. This is precisely
+  Remark~\ref{rem:hc-shadow-vs-core}: the shadow vanishes, not
+  the kernel $C = \Pi^{(\mathcal{M})}_{\mathrm{spec}}$.
+
+  \item \textbf{Emergent tensor structure.}
+  The measurable curvature induced by $\mathcal{H}_C$ defines an
+  effective tensor field $T_{\mu\nu}^{(\mathrm{HC})}$, arising from
+  readout divergence $\Delta_{f,g}$ rather than from fundamental
+  stress-energy. This is the tensorial compensator readout
+  $\mathcal{K}_{\mu\nu}^{(\mathrm{HC})}$ of
+  Hypothesis~\ref{hyp:hc-meta-generator}(iii) at the trajectory level.
+
+  \item \textbf{Recursive field structure.}
+  There exists a functional relation
+  $\mathcal{F}[\mathcal{F}] = 0$,
+  where $\mathcal{F}$ generates field equations recursively and
+  $\mathcal{H}_C$ appears as a structural product within this
+  recursion. This reflects the generating loop of
+  Section~\ref{sec:hc-meta-field-generator}: the compensator is
+  simultaneously generated by closure and inserted into transport.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Statements (1)--(2) follow from the definition of $\Delta_{f,g}$ and
+the readout-relative lemma framework
+(Definition~\ref{def:readout-relative-lemma}): incompatible regime
+projections produce apparent gaps that are projection singularities,
+not structural discontinuities.
+
+Statement (3) follows from the unitary equivalence of the three kernels
+(Theorem~\ref{thm:unitary-equiv}): the transformation $S$ is the
+unitary equivalence between the $f$- and $g$-readout representations.
+
+Statement (4) is the trajectory-level reading of the bidirectional
+probe picture (Section~\ref{sec:bidirectional-probe-lensing}): the two
+regime probes approach the same closure-stable core from opposite sides.
+
+Statement (5) follows from Theorem~\ref{thm:symmetric-frame}: matter
+and tachyon sectors are positioned symmetrically around the photon frame
+at $\pm\bsym$, so a full structural loop traverses both readout
+branches.
+
+Statement (6) is the structural lift principle
+(Proposition~\ref{prop:structural-lift-principle}) applied to
+trajectory data: the smooth lifted trajectories in $\tilde{\mathcal{K}}$
+are the kernel-level content, while the projected gaps are readout
+artifacts.
+
+Statement (7) follows from Corollary~\ref{cor:M-HC-fixpoint}:
+$\mathcal{M}C = \lambda_0 C$ identifies the compensator as the
+structural fixpoint controlling all admissible transport; deviation
+from this fixpoint is exactly what curvature measures.
+
+Statement (8) is Remark~\ref{rem:hc-shadow-vs-core}: exact-sector
+vanishing $\sum_i \mathcal{H}_C^{(f_i)} = 0$ is the shadow, not the
+kernel $C = \Pi^{(\mathcal{M})}_{\mathrm{spec}}$
+(Theorem~\ref{thm:hc-spectral-projector}).
+
+Statement (9) follows from statement (7) and the probe-tensor readout
+of Section~\ref{sec:bidirectional-probe-lensing}: the cross-bilinear
+$E^a_{\mu,\mathrm{cross}}$ assembles into $T_{\mu\nu}^{(\mathrm{HC})}$.
+
+Statement (10) is the recursive generating loop of
+Hypothesis~\ref{hyp:hc-meta-generator}: the meta-field equation
+$\mathfrak{E}_{\mathrm{HC}}[\ldots] = 0$ is the instance of
+$\mathcal{F}[\mathcal{F}] = 0$ in the present framework.
+\end{proof}
+
+\subsection*{Interpretation}
+
+Phenomena such as trajectory gaps, apparent singularities, or chaotic
+behavior are not fundamental inconsistencies, but arise as projection
+effects of a smooth, higher-dimensional structural system
+(cf.\ Definition~\ref{def:kernel-level-statement}). Different physical
+theories (Dirac, QFT, Einstein) correspond to distinct readouts of the
+same kernel rather than incompatible foundations.
+
+\subsection*{Methodological consequence}
+
+Statements proven within a specific readout remain valid within that
+regime. Their invariant structural content may be lifted to kernel-level
+statements via structural lift, in accordance with
+Section~\ref{sec:readout-relative-lemmas} and
+Proposition~\ref{prop:structural-lift-principle}.
+
+% ------------------------------------------------------------------
+% Hypothesis 7.4 (v2.27.4 integration)
+% ------------------------------------------------------------------
+

@@ -1,56 +1,24 @@
-# QuantumSphere-Unfold
+# Quantum Sphaera Companion v3.35.0 modular source
 
-Public repository for the *Quantum Sphaera Companion* project line.
+This folder contains a chapter/section-level modularization of the v3.35.0 release-final TeX sources.
 
-## Current document release reference
+- Concept DOI: `10.5281/zenodo.19210728`
+- Version-specific DOI: `10.5281/zenodo.19750674`
 
-- Current public document release: **v3.35.0**
-- Current public document DOI: **10.5281/zenodo.19750674**
-- Previous public document release: **v3.34.0**
-- Previous public document DOI: **10.5281/zenodo.19746821**
-- Concept DOI: **10.5281/zenodo.19210728**
+## Structure
 
-## Repository role
+- `active_core/main.tex` inputs `61` section files from `active_core/sections/`.
+- `historical_witness/main.tex` inputs `42` section files from `historical_witness/sections/`.
+- `release_metadata/` contains the release audit, Zenodo description, release notes, manifest, checksums, and diffs.
+- `.github/workflows/build-v3-35-0.yml` builds both PDFs on GitHub Actions and uploads them as workflow artifacts.
 
-This repository is the canonical GitHub mirror for public project states, release preparation metadata, and synchronization of the working line.
+The split is intentionally conservative: the master files use `\input`, not `\include`, so no extra page breaks are inserted by the modularization.
 
-The repository itself is **not** the direct Zenodo publication source for final document releases.
+## Local build
 
-## Source-tree direction
+```bash
+cd active_core && pdflatex -interaction=nonstopmode -halt-on-error main.tex
+cd ../historical_witness && pdflatex -interaction=nonstopmode -halt-on-error main.tex
+```
 
-The long-term direction of this repository is to hold the real modular TeX source tree of the project, so that tagged repository states remain inspectable and reconstructable.
-
-That means:
-
-- the live modular source should move into the repository directly;
-- historical material should remain explicitly recoverable;
-- `releases/` should hold release-side metadata, not replace the source tree;
-- release tags should freeze reconstructable source states.
-
-See `docs/MODULAR_SOURCE_POLICY.md` for the intended repository architecture and tag policy.
-
-## v3.35.0 source status
-
-Version v3.35.0 has been prepared as a split-bundle release with:
-
-- Active Core final PDF/TEX;
-- Historical Witness final PDF/TEX;
-- audit report;
-- Zenodo description;
-- release notes;
-- manifest and SHA-256 checksums;
-- a modularized source bundle split into section-level TeX files.
-
-The modularized v3.35.0 source passed a lossless flattening check against the final monolithic TeX files. The PDF build is intended to run from the modular source tree through GitHub Actions once the section-level source tree is present in the repository.
-
-## Release workflow policy
-
-- GitHub is used for ongoing synchronization and public project-state tracking.
-- Final release documents are prepared outside the repository workflow.
-- Zenodo publication is performed manually from the finalized document bundle.
-- The document itself carries the concept DOI.
-- Version-specific DOIs are recorded in the version history, release metadata, and repository release records.
-
-## Release-preparation payloads
-
-The `releases/` directory is reserved for prepared release notes, audits, Zenodo descriptions, bibliography companions, and related metadata for upcoming or archived public release states.
+Run each document three times for stable references and table of contents.

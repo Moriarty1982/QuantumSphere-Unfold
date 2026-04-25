@@ -1,0 +1,205 @@
+\section*{v2.3.0 Mathematical Deepening Core}
+\begin{quote}
+\textbf{Normalization note.} This block is retained as a historical deepening precursor. Its mathematical thickening remains part of the document's proof memory, but the normalized architecture reads it through the later unfolding phases rather than as a second autonomous mathematical foundation.
+\end{quote}
+
+This version continues the return from governance-style consolidation to
+explicit mathematical derivation. The focus is no longer merely that closure can
+be encoded by a defect functional, but that the induced closure flow can be
+separated into invariant, dissipative, and residual channels. In this way the
+HC term becomes a mathematically trackable transport law rather than a purely
+qualitative stabilizer.
+
+\subsection*{1. Orthogonal projector formulation of closure}
+Let $\mathcal H=\mathcal H_A\oplus\mathcal H_B\oplus\mathcal H_C\oplus\mathcal H_R$
+be the structural state space used in the previous thickening step, and let
+$\Pi_{\mathrm{cl}}$ denote the orthogonal projector onto the admissible closure
+manifold
+\[
+\mathfrak M_{\mathrm{cl}}:=\{\Psi\in\mathcal H\,:\,\Gamma(\Psi)=0\}.
+\]
+Whenever $\Gamma$ is locally quadratic near $\mathfrak M_{\mathrm{cl}}$, one may
+write, to leading order,
+\[
+\Gamma(\Psi)\asymp \| (I-\Pi_{\mathrm{cl}})\Psi\|^2,
+\]
+so that the distance to closure is measured by the defect component
+\[
+\Psi_{\perp}:=(I-\Pi_{\mathrm{cl}})\Psi,
+\qquad
+\Psi_{\parallel}:=\Pi_{\mathrm{cl}}\Psi.
+\]
+The compensated flow
+\[
+\partial_\tau \Psi = F(\Psi)-\kappa\nabla\Gamma(\Psi)
+\]
+therefore admits the splitting
+\[
+\partial_\tau \Psi_{\parallel}=\Pi_{\mathrm{cl}}F(\Psi)+\mathcal N_{\parallel}(\Psi),
+\qquad
+\partial_\tau \Psi_{\perp}=(I-\Pi_{\mathrm{cl}})F(\Psi)-\kappa\nabla\Gamma(\Psi)+\mathcal N_{\perp}(\Psi),
+\]
+where $\mathcal N_{\parallel},\mathcal N_{\perp}$ collect higher-order curvature
+terms of the closure manifold.
+
+\paragraph{Lemma 1 (normal damping near closure).}
+Assume that $\Gamma$ is $C^2$ in a neighborhood of $\mathfrak M_{\mathrm{cl}}$ and that
+its Hessian is strictly positive on the normal bundle of
+$\mathfrak M_{\mathrm{cl}}$. Then there are constants $c_1,c_2>0$ such that for all
+states sufficiently near closure,
+\[
+c_1\|\Psi_{\perp}\|^2\le \Gamma(\Psi)\le c_2\|\Psi_{\perp}\|^2,
+\]
+and the HC term damps the normal component at leading order.
+
+\begin{proof}
+By the Morse--Bott type expansion of $\Gamma$ around the zero set,
+\[
+\Gamma(\Psi_{\parallel}+\Psi_{\perp})=
+\tfrac12\langle H_{\Gamma}(\Psi_{\parallel})\Psi_{\perp},\Psi_{\perp}\rangle
++O(\|\Psi_{\perp}\|^3),
+\]
+with $H_{\Gamma}$ positive on normal directions. Hence $\Gamma$ is equivalent to
+the squared normal distance, and
+$\nabla\Gamma(\Psi)=H_{\Gamma}(\Psi_{\parallel})\Psi_{\perp}+O(\|\Psi_{\perp}\|^2)$.
+Therefore the compensator contributes a strictly contracting term in the normal
+direction.
+\end{proof}
+
+\subsection*{2. Differential inequality for the closure ladder}
+Set $E(\tau):=\Gamma(\Psi(\tau))$. Then
+\[
+\dot E = \langle \nabla\Gamma(\Psi),F(\Psi)\rangle - \kappa\|\nabla\Gamma(\Psi)\|^2.
+\]
+To make the structural content explicit, split the drift as
+\[
+F = F_{\mathrm{tan}} + F_{\mathrm{nor}} + F_{\mathrm{res}},
+\]
+where $F_{\mathrm{tan}}$ is tangent to $\mathfrak M_{\mathrm{cl}}$, $F_{\mathrm{nor}}$ is
+controlled by the closure defect, and $F_{\mathrm{res}}$ contains genuinely residual
+terms. Then
+\[
+\dot E
+= \langle \nabla\Gamma,F_{\mathrm{nor}}\rangle
+ + \langle \nabla\Gamma,F_{\mathrm{res}}\rangle
+ - \kappa\|\nabla\Gamma\|^2,
+\]
+because the tangential part drops out to first order.
+
+\paragraph{Proposition 1 (closure ladder with residual threshold).}
+Suppose there exist constants $a<\kappa$ and $b\ge 0$ such that
+\[
+|\langle \nabla\Gamma,F_{\mathrm{nor}}+F_{\mathrm{res}}\rangle|
+\le a\|\nabla\Gamma\|^2 + b\Gamma.
+\]
+Then for states near closure,
+\[
+\dot E \le -(\kappa-a)\|\nabla\Gamma\|^2 + bE.
+\]
+In particular, if $b$ is dominated by the coercivity constant relating
+$\|\nabla\Gamma\|^2$ and $E$, then the closure ladder is dissipative and the flow
+returns exponentially to the admissible structural sector.
+
+\begin{proof}
+Insert the estimate directly into the identity for $\dot E$. The final claim
+follows from the local coercivity
+$\|\nabla\Gamma\|^2\ge cE$ near $\mathfrak M_{\mathrm{cl}}$, which converts the
+inequality into $\dot E\le -\mu E$ for some $\mu>0$.
+\end{proof}
+
+This proposition sharpens the earlier Lyapunov statement. Closure is not only
+monotone under ideal tangency; it remains stable under a controlled class of
+residual perturbations, provided the compensator strength exceeds the residual
+threshold.
+
+\subsection*{3. Term-wise master equation refinement}
+Write the first-layer master equation in the refined form
+\[
+\partial_\tau \Psi
+= T_{\mathrm{tri}}(\Psi)
++ T_{\perp}(\Psi)
++ T_{\mathrm{meas}}(\Psi)
++ T_{\mathrm{res}}(\Psi)
+- \kappa\nabla\Gamma(\Psi).
+\]
+Here the meaning of the terms is:
+\begin{itemize}
+    \item $T_{\mathrm{tri}}$: internal triolic transport preserving the intrinsic
+    algebraic coupling,
+    \item $T_{\perp}$: orthogonality-restoring channel induced by the requirement
+    that one branch remains perpendicular to the other two,
+    \item $T_{\mathrm{meas}}$: frame-shift and measurement transport,
+    \item $T_{\mathrm{res}}$: unresolved residual transport not yet assigned to a
+    unique physical model.
+\end{itemize}
+The closure condition can then be tested term by term through the scalar
+pairings
+\[
+\sigma_{\mathrm{tri}}:=\langle \nabla\Gamma,T_{\mathrm{tri}}\rangle,
+\quad
+\sigma_{\perp}:=\langle \nabla\Gamma,T_{\perp}\rangle,
+\quad
+\sigma_{\mathrm{meas}}:=\langle \nabla\Gamma,T_{\mathrm{meas}}\rangle,
+\quad
+\sigma_{\mathrm{res}}:=\langle \nabla\Gamma,T_{\mathrm{res}}\rangle.
+\]
+Thus
+\[
+\dot E = \sigma_{\mathrm{tri}}+\sigma_{\perp}+\sigma_{\mathrm{meas}}+\sigma_{\mathrm{res}}
+-\kappa\|\nabla\Gamma\|^2.
+\]
+The mathematical advantage is that every structural claim can now be tied to one
+of these four channels. For instance, a perfect intrinsic closure sector is
+characterized by $\sigma_{\mathrm{tri}}=0$, while measurement-induced distortion is
+captured by the sign and size of $\sigma_{\mathrm{meas}}$.
+
+\paragraph{Corollary 2 (term-wise admissibility test).}
+If each non-compensated channel satisfies an estimate of the form
+$|\sigma_j|\le a_j\|\nabla\Gamma\|^2+b_jE$ with $\sum_j a_j<\kappa$, then the
+master flow is closure-admissible. In this sense the first-layer master
+equation acquires a concrete mathematical admissibility criterion instead of a
+purely narrative one.
+
+\subsection*{4. Probe reduction with quantitative search radius}
+For the probe functional
+\[
+\Gamma_{\mathrm{probe}}(\Psi_1,\Psi_2;Q)
+=\Gamma(\Psi_1)+\Gamma(\Psi_2)+\rho\,\Xi(\Psi_1,\Psi_2;Q),
+\]
+define the admissible search radius
+\[
+\mathcal R_\varepsilon(Q):=
+\{(\Psi_1,\Psi_2):\Gamma_{\mathrm{probe}}(\Psi_1,\Psi_2;Q)\le \varepsilon\}.
+\]
+This produces a genuinely quantitative reading of the earlier search-space
+language: the probe channel is restricted to a sublevel tube around the
+orthogonally compatible sector.
+
+\paragraph{Proposition 3 (quantitative probe reduction).}
+Assume the probe drift satisfies the analogue of the closure-ladder estimate.
+Then for every sufficiently small $\varepsilon>0$ the set
+$\mathcal R_\varepsilon(Q)$ is forward invariant under the compensated probe flow,
+provided the initial probe state lies in $\mathcal R_\varepsilon(Q)$. Hence the
+probe search does not merely heuristically prefer a smaller space; it is
+mathematically confined to a controlled admissible tube.
+
+\begin{proof}
+Apply the same differential-inequality argument to
+\[
+E_{\mathrm{probe}}(\tau):=\Gamma_{\mathrm{probe}}(\Psi_1(\tau),\Psi_2(\tau);Q).
+\]
+If $\dot E_{\mathrm{probe}}\le -\mu E_{\mathrm{probe}}$ or, more generally, $\dot E_{\mathrm{probe}}\le 0$ on the boundary level set $E_{\mathrm{probe}}=\varepsilon$, trajectories cannot leave the sublevel region.
+\end{proof}
+
+\subsection*{5. Consequence for the next development step}
+The present deepening changes the status of the HC/closure block in two ways.
+First, closure is now expressed through projector splitting and coercive defect
+control. Second, the master and probe channels both admit explicit admissibility
+tests in terms of scalar defect pairings. The next natural step is therefore no
+longer another meta-level consolidation, but the specialization of
+$T_{\mathrm{tri}},T_{\perp},T_{\mathrm{meas}},T_{\mathrm{res}}$ and of the probe drift to
+more definite structural or physical models. That is the point at which the
+current structure-first proof begins to turn into a truly term-resolved
+mathematical derivation.
+
+

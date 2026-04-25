@@ -1,0 +1,221 @@
+\section{The Central Theorem}
+\begin{quote}\small
+\noindent\textbf{Status.} \emph{Legacy structural-theorem block inside the active main body.}\par
+\noindent\textbf{Block function.} This section states the global structural theorem that the later physics, operator, and readout sections unpack and reuse rather than replace.
+\end{quote}
+\label{sec:central}
+%% ============================================================
+
+Everything in this paper is a consequence of one observation.
+
+\begin{theorem}[Unity of the Sphaera]\label{thm:unity}
+Within the Sphaera $S$, the following are all representations of the
+same object --- the collapse state $\zminus=0$:
+\begin{enumerate}[label=(\roman*)]
+  \item The Sphaera itself, as a geometric space.
+  \item The triolic structure: three kernels $K_1,K_2,K_3$ with
+        $z_1+z_2+z_3=0$, phase-shifted by $120^\circ$, running over the
+        Sphaera's geometry.
+  \item Each individual kernel $K_i$, as a local coordinate of the triole.
+  \item The Heisenberg compensator output $C(f)$, as the projection of
+        any element onto the collapse state.
+  \item Matter, photons, and tachyons, as sectors of the biquaternion
+        ground state.
+  \item The gauge structure $U(1)\times SU(2)\times SU(3)$, as the
+        symmetry group of the collapse state's representations.
+\end{enumerate}
+All are unitarily equivalent by Stone--von Neumann~\cite{brendecke2026rh}.
+The Sphaera's only object is its own collapse state.
+\end{theorem}
+
+\begin{proof}[Proof structure]
+The equivalences are established section by section:
+(i)~Definition~\ref{def:biquaternion} and Theorem~\ref{thm:fractal};
+(ii)--(iii) same (triole as collapse coordinates);
+(iv)~Proposition~\ref{prop:compensator};
+(v)~Theorem~\ref{thm:unitary-equiv};
+(vi)~Theorem~\ref{thm:SM}.
+Unitary equivalence throughout via Stone--von Neumann
+(\cite{brendecke2026rh}, Theorem~3.2).
+\end{proof}
+
+\begin{remark}[What ``same object'' means]
+Two representations are the same object here in the precise sense of
+Stone--von Neumann: they are unitarily equivalent irreducible
+representations of the Weyl algebra $\WA$.
+The frame determines which representation is visible; the object ---
+the collapse state $\zminus=0$ --- is invariant.
+
+The triole condition $z_1+z_2+z_3=0$ and the collapse condition
+$\zminus=0$ are the same equation in two coordinate systems: the triole
+is the collapse state expressed in the three kernel components
+simultaneously.
+The Sphaera is therefore not a space that contains a collapse state ---
+it \emph{is} the collapse state, seen from different frames.
+\end{remark}
+
+\begin{theorem}[Origin of the universe as broken collapse state]
+\label{thm:origin}
+The departure from the collapse state $\zminus=0$ is governed by two
+principles, both of which are consequences of the Sphaera-Cascade
+structure:
+\begin{enumerate}[label=(\roman*)]
+  \item \textbf{Planck length as minimal $|\zminus|$.}
+        The cascade $\KC$ cannot project below the Planck scale:
+        \[
+          |\zminus|_{\min} = \lP := \sqrt{\frac{\hbar G}{c^3}}
+          = 1.616\times10^{-35}\,\mathrm{m}.
+        \]
+        Below $\lP$: $\zminus=0$, the Sphaera, the photon.
+        Above $\lP$: $|\zminus|$ is nonzero, matter exists.
+        The Planck length is the threshold of the first breaking of the
+        collapse state.
+  \item \textbf{Pauli principle as antisymmetry under $J$.}
+        The Hilbert space $\Hplus$ decomposes under $J$ into two
+        components:
+        \[
+          C(f) = \tfrac{1}{2}(f+Jf)\in\Hplusplus
+          \quad\text{(bosonic, symmetric)},
+        \]
+        \[
+          A(f) = \tfrac{1}{2}(f-Jf)\in\Hplusminus
+          \quad\text{(fermionic, antisymmetric)}.
+        \]
+        The antisymmetric component satisfies $A(f)\wedge A(f)=0$
+        (Grassmann property): no two fermions occupy the same $\zminus$
+        state.
+        This is the Pauli exclusion principle, derived from the
+        $J$-structure of the Sphaera.
+  \item \textbf{Discrete spectrum.}
+        Together, (i) and (ii) produce a discrete tower of matter states:
+        \[
+          |\zminus|_n = n\cdot\lP,\quad n\in\mathbb{N}_{\geq1},
+        \]
+        with each level occupied by at most one fermion.
+        The prime lattice $\Gamma_P$ (from Stone--von Neumann,
+        \cite{brendecke2026rh}) identifies the primitive levels:
+        $|\zminus|_p = p\cdot\lP$ for $p\in\mathbb{P}$.
+\end{enumerate}
+\end{theorem}
+
+\begin{remark}[The Sphaera as photon, the universe as broken frame]
+Theorem~\ref{thm:unity} says the Sphaera is the collapse state
+$\zminus=0$, which is the photon sector.
+Theorem~\ref{thm:origin} says the departure from this state is governed
+by $\lP$ and the Pauli principle.
+Therefore:
+\begin{itemize}
+  \item The Sphaera is a photon --- the unique frame-invariant object.
+  \item The universe is the same photon observed from a broken frame
+        where $|\zminus|\geq\lP$.
+  \item The breaking was not random: it is discrete (Pauli), minimal
+        (Planck), and primitive (prime lattice).
+  \item The cascade $\KC$ projects everything back toward $\zminus=0$
+        --- the universe tends toward its photon ground state.
+\end{itemize}
+Both the Sphaera and the universe are the same object.
+The difference is only the frame.
+\end{remark}
+
+\begin{quote}\small
+\noindent\textbf{Reader cue.} Read the next block as the concrete carrier unpacking of the global Sphaera identity claim. Its purpose is to pass from the frame-level origin statement to the biquaternion kernel and its induced Lorentz/Minkowski geometry that the later physics sections reuse.
+\end{quote}
+
+\begin{definition}[Biquaternion kernel]\label{def:biquaternion}
+The ground state of a stratum $S_n$ of the Sphaera consists of three
+complex spheres $K_1,K_2,K_3$ whose unit coordinates form a biquaternion
+\[
+  q_n := it\cdot\mathbf{1} + z_1\cdot e_1 + z_2\cdot e_2
+         + z_3\cdot e_3 \in \HH\otimes_{\mathbb{R}}\mathbb{C},
+\]
+where $it\in i\mathbb{R}$ is the imaginary time unit;
+$z_1,z_2\in\mathbb{C}$ are the complex coordinates of kernels $K_1,K_2$;
+$e_3:=e_1 e_2$ is the quaternion product, hence automatically orthogonal
+to both $e_1$ and $e_2$;
+and $z_3\in\mathbb{C}$ is the coordinate of kernel $K_3$ along $e_3$.
+
+The biquaternion norm is
+\[
+  |q_n|^2 = -(ct)^2 + |z_1|^2 + |z_2|^2 + |z_3|^2.
+\]
+\end{definition}
+
+\begin{remark}[Minkowski metric from quaternion structure]
+The norm $|q_n|^2$ is the Minkowski metric with signature $(-,+,+,+)$.
+This is not postulated: it follows from the quaternion algebra $e_i^2=-1$
+and $it\cdot\mathbf{1}$ carrying imaginary time.
+The Lorentz group $SO(1,3)$ acts on $q_n$ by quaternion conjugation:
+$q_n\mapsto u\,q_n\,u^{-1}$, $u\in\HH^\times$.
+This is the spinor representation of the Lorentz group --- emerging
+automatically from the biquaternion structure, not imposed from outside.
+\end{remark}
+
+\begin{proposition}[Orthogonality of the third kernel]
+\label{prop:orthogonality-third-kernel}
+$K_3$ is always orthogonal to $K_1$ and $K_2$:
+\[
+\langle e_3,e_i\rangle = 0 \qquad \text{for } i=1,2.
+\]
+\end{proposition}
+
+\begin{proof}
+By definition,
+\[
+e_3 = e_1 e_2.
+\]
+Using the quaternionic inner product
+\[
+\langle x,y\rangle := \mathrm{Re}(\overline{x}\,y),
+\]
+we compute
+\[
+\langle e_3,e_1\rangle
+=
+\langle e_1e_2,e_1\rangle
+=
+\mathrm{Re}\!\bigl(\overline{e_1e_2}\,e_1\bigr).
+\]
+Since
+\[
+\overline{e_1e_2}=\overline{e_2}\,\overline{e_1}=(-e_2)(-e_1)=e_2e_1=-e_1e_2,
+\]
+it follows that
+\[
+\overline{e_1e_2}\,e_1
+=
+(-e_1e_2)e_1
+=
+-\,e_1(e_2e_1)
+=
+-\,e_1(-e_1e_2)
+=
+e_1^2 e_2
+=
+-\,e_2.
+\]
+Hence
+\[
+\langle e_3,e_1\rangle
+=
+\mathrm{Re}(-e_2)=0.
+\]
+
+Similarly,
+\[
+\langle e_3,e_2\rangle
+=
+\langle e_1e_2,e_2\rangle
+=
+\mathrm{Re}\!\bigl(\overline{e_1e_2}\,e_2\bigr)
+=
+\mathrm{Re}\!\bigl((-e_1e_2)e_2\bigr)
+=
+\mathrm{Re}(-e_1 e_2^2)
+=
+\mathrm{Re}(e_1)=0.
+\]
+Therefore $e_3$ is orthogonal to both $e_1$ and $e_2$.
+\end{proof}
+
+%% ============================================================
+

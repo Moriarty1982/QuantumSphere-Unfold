@@ -1,0 +1,121 @@
+\section{Phase-Shifted Natural Constants}
+\begin{quote}\small
+\noindent\textbf{Status.} \emph{Legacy physical-constants block inside the active main body.}\par
+\noindent\textbf{Block function.} This section collects the constant-level readout consequences of the phase-shifted observer shell in one place.
+\end{quote}
+\label{sec:phase-constants}
+%% ============================================================
+
+\begin{remark}[What this section adds]
+Corollary~\ref{cor:gue-frame} established that the taktgeber frequency
+transforms with a factor $\gL$ between frames.
+This section assigns frame-insertion counts $k$ to all fundamental
+constants and derives the photon-frame values.
+No CODATA value has ever been measured in the photon frame.
+\end{remark}
+
+\begin{definition}[Frame-insertion count $k$]
+For a physical constant $X$, the \emph{frame-insertion count} $k(X)$ denotes
+ the number of factors of $\zminus$ appearing in the operator-theoretic
+ realization of $X$ within the Sphaera-Cascade.
+The photon-frame value is
+\[
+  X^{(\mathrm{photon})} = \gL^{-k(X)}\cdot X^{(\mathrm{matter})}.
+\]
+\end{definition}
+
+\begin{theorem}[Frame-insertion counts]\label{thm:k-values}
+The primary assignments are:
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{llcl}
+\toprule
+Constant & CODATA (matter frame) & $k$ & Reason\\
+\midrule
+$\alpha^{-1}$ & $137.035\,999\,084$ & 1
+  & EM sector, first Dixon plane\\
+$G_N$ & $6.674\times10^{-11}$ m$^3$kg$^{-1}$s$^{-2}$ & 2
+  & torsion block\\
+$m_e c^2$ & $0.511$ MeV & 1
+  & lepton base mode\\
+$\hbar$ & $1.055\times10^{-34}$ J$\cdot$s & 1
+  & CCR from prime lattice\\
+$c$ & $2.998\times10^8$ m\,s$^{-1}$ & 0
+  & Theorem~\ref{thm:kc-zero}\\
+$\gBI$ & $\approx 0.2375$ & 0
+  & frame-invariant by construction\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{theorem}
+
+\begin{theorem}[$k(c)=0$: the speed of light is frame-invariant]
+\label{thm:kc-zero}
+In the Sphaera-Cascade, $c^{(\mathrm{photon})}=c^{(\mathrm{matter})}$.
+\end{theorem}
+
+\begin{proof}
+The biquaternion is $q_n = ic\,t\cdot\mathbf{1}+z_i e_i$.
+The speed $c$ is the causal propagation speed of the photon ground state
+$\zminus=0$ itself --- it is the quantity \emph{with respect to which}
+$\bsym$ is defined, not a quantity displaced by $\bsym$.
+Frame changes are unitaries commuting with $J$; they act on the septinion
+components $z_i$ but not on the $J$-invariant temporal component
+$ic\,t\cdot\mathbf{1}$.
+Hence $c$ picks up no power of $\zminus$ under any frame change:
+$k(c)=0$.
+Mechanically: the photon is the massless equilibrium node of the
+spring system (Theorem~11.7 of~\S\ref{sec:hopf}); its speed is always $c$ because
+the equilibrium node of a symmetric spring system has no dynamics of its own.
+\end{proof}
+
+\begin{theorem}[Photon-frame Planck length]\label{thm:planck-photon}
+With $k(\hbar)=1$, $k(G_N)=2$, $k(c)=0$:
+\[
+  \lP^{(\mathrm{photon})}
+  = \gL^{-3/2}\cdot\lP^{(\mathrm{matter})}
+  \approx (1.864)^{-3/2}\times 1.616\times10^{-35}\,\mathrm{m}
+  \approx 6.35\times10^{-36}\,\mathrm{m}.
+\]
+A matter observer overestimates the hardware UV cutoff by the factor
+$\gL^{3/2}\approx 2.546$.
+The half-integer exponent $3/2$ reflects that $\lP=\sqrt{\hbar G_N/c^3}$
+is a geometric mean between a $k=1$ and a $k=2$ sector.
+\end{theorem}
+
+\begin{corollary}[Cosmological constant revisited]
+A matter observer always measures a nonzero cosmological term
+$\Lambda_{\mathrm{obs}}\sim\bsym^2$, even though in the photon frame
+($\bsym=0$) it vanishes exactly
+(Theorem~\ref{thm:dark-energy}).
+The observed value is not a fine-tuning problem but a measurement
+artifact of the observer's frame.
+The vacuum energy density ratio between frames is
+\[
+  \frac{\rho_{\mathrm{vac}}^{(\mathrm{photon})}}
+       {\rho_{\mathrm{vac}}^{(\mathrm{matter})}}
+  = \gL^6\approx 41.8,
+\]
+which enters the $\Lambda$-cancellation problem: the $\Theta$--$R$
+balance must achieve cancellation in the \emph{photon} frame, not the
+matter frame where the cutoff is inflated by $\gL^{3/2}$.
+\end{corollary}
+
+\begin{corollary}[$\alpha$-drift as a frame effect]
+The hardware value $\alpha^{(\mathrm{photon})}$ is strictly constant:
+it is a $J$-fixpoint eigenvalue of $L_0$ on $\Hplusplus$ and cannot vary.
+The observed NIST drift arises because the local frame factor
+$\gL^{(\mathrm{local})}(t)$ varies as Earth moves through the
+Sphaera-Cascade geometry over its orbit:
+\[
+  \alpha^{(\mathrm{matter})}(t)
+  = \gL^{(\mathrm{local})}(t)\cdot\alpha^{(\mathrm{photon})}.
+\]
+\textbf{Falsifiable prediction:} The drift has a period of exactly one
+year, is in phase at all terrestrial laboratories simultaneously, and is
+absent or phase-shifted for a space-based reference clock not co-orbiting
+with Earth.
+\end{corollary}
+
+%% ============================================================
+

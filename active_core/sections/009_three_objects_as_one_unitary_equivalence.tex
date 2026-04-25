@@ -1,0 +1,38 @@
+\section{Three Objects as One: Unitary Equivalence}
+\begin{quote}\small
+\noindent\textbf{Status.} \emph{Legacy structural-identity block inside the active main body.}\par
+\noindent\textbf{Block function.} This section compresses the unitary-equivalence reading that ties the three-object architecture into one common structural carrier.
+\end{quote}
+\label{sec:unitary}
+%% ============================================================
+
+\begin{definition}[Sector classification from biquaternion]
+The three sectors correspond to the sign of $\mathrm{Re}(\zminus)$:
+\begin{itemize}
+  \item \textbf{Matter} ($K_1$): $\mathrm{Re}(z_1)<0$, boost $\beta<0$, spacelike.
+  \item \textbf{Tachyon} ($K_2=J\cdot K_1$): $\mathrm{Re}(z_2)>0$, boost $\beta>0$, timelike.
+  \item \textbf{Photon} ($K_3=e_1 e_2$): $\mathrm{Re}(z_3)=0$, boost $\beta=0$, lightlike.
+\end{itemize}
+\end{definition}
+
+\begin{theorem}[Unitary equivalence via Stone--von Neumann]\label{thm:unitary-equiv}
+The three kernels $K_1,K_2,K_3$ carry unitarily equivalent
+irreducible representations of the Weyl algebra $\WA$.
+The boost $J$ implements the equivalence between $K_1$ and $K_2$,
+and the compensator $C$ produces $K_3$ from $K_1$.
+\end{theorem}
+
+\begin{proof}
+By Stone--von Neumann~\cite{brendecke2026rh}, every irreducible
+representation of $\WA$ is unitarily equivalent to $L^2(\mathbb{Q}^+\backslash A_1)$.
+All three kernels are subspaces of $\Hplus$ which carries this
+representation.
+Since $J$ is unitary and maps $K_1\leftrightarrow K_2$, they are
+equivalent.
+$K_3=C(K_1)$ lies in $\Hplusplus$, the unique $J$-invariant subspace,
+which is again irreducible (no proper $J$-invariant subspace exists by
+T4+T5 of~\cite{brendecke2026rh}).
+\end{proof}
+
+%% ============================================================
+

@@ -1,0 +1,199 @@
+\section{Readout-Relative Lemmas and Structural Lifts}
+\label{sec:readout-relative-lemmas}
+
+The present framework distinguishes sharply between the structural kernel
+of the theory and the visible form in which that kernel is read in a
+given regime or frame. This distinction is not optional: the same
+closure-stable object may appear as a probe/Dirac-type law, as an
+effective QFT-type law in a phase-shifted observer regime, or as an
+Einstein-type law after large-scale geometric readout. Consequently,
+one must distinguish between \emph{kernel-level truths} and
+\emph{readout-relative truths}.
+
+The concrete instantiation of this distinction is already present in the
+preceding spectral-projector block: the eigenvalue $\lambda_0$ is a
+kernel-level invariant, while the measured value
+$\lambda_0^{(\mathrm{matter})} = \gL^{-k}\cdot\lambda_0^{(\mathrm{photon})}$
+(Remark~\ref{rem:frame-shift-spectral}) is readout-relative, depending
+on the frame-insertion count $k$ of the observable in the matter frame
+at $\zminus = +\bsym$.
+
+\subsection*{Kernel level and readout level}
+
+\begin{definition}[Kernel-level statement]
+\label{def:kernel-level-statement}
+A statement is called \emph{kernel-level} if it is invariant under the
+admissible structural equivalences of the framework, including:
+\begin{enumerate}[label=(\roman*)]
+  \item sector-preserving unitary equivalence;
+  \item compensator projection;
+  \item observer-frame phase shift;
+  \item admissible branch restriction.
+\end{enumerate}
+Such statements express properties of the underlying closure-stable
+structural object itself rather than of one distinguished reading of it.
+\end{definition}
+
+\begin{definition}[Readout-relative lemma]
+\label{def:readout-relative-lemma}
+A statement $L^{(f)}$ is called a \emph{readout-relative lemma} if it
+is proven only in a distinguished regime, frame, or readout $f$, and its
+visible form depends on that readout. In particular, a readout-relative
+lemma need not remain true as a frame-blind absolute statement.
+\end{definition}
+
+\begin{remark}
+This is not a defect of the method. It is the correct formal response to
+the fact that different regime-readings expose different visible shadows
+of one common kernel. In the present framework this applies in particular
+to the probe, effective QFT, and Einstein readouts.
+The Symmetric matter--tachyon frame theorem (Theorem~\ref{thm:symmetric-frame})
+is an example: $\beta_{\mathrm{matter}} = +\bsym$ is readout-relative
+(it is the matter-frame reading), while the symmetry
+$\beta_{\mathrm{tachyon}} = -\bsym$ and the common kernel $\bsym$ are
+kernel-level invariants.
+\end{remark}
+
+\subsection*{Why this distinction is necessary}
+
+The need for readout-relative lemmas is already built into the
+architecture. The master system is closure-stable and unique only up to
+the allowed sector-preserving, unitary, and frame transformations, while
+the effective regimes differ by compensator decomposition, large-scale
+suppression of closure fluctuations, and geometric readout. Thus one and
+the same kernel may generate visibly different but structurally
+compatible statements. In the present release this distinction should be read together with the OP transport theorem and the visible/structural mismatch separation tool: visible disagreement is secondary unless native closure-class preservation itself fails.
+
+\begin{proposition}[Legitimacy of restricted lemmas]
+\label{prop:legitimacy-restricted-lemmas}
+A lemma proven in a distinguished readout $f$ may be used in the general
+argument provided that:
+\begin{enumerate}[label=(\roman*)]
+  \item its frame or regime of validity is stated explicitly;
+  \item its invariant kernel content is separated from its visible
+        readout form;
+  \item the passage from the readout-relative statement to the general
+        claim is justified by a structural transport principle.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+The framework already distinguishes the common structural equation from
+its regime projections (Theorem~\ref{thm:unity}, unitary equivalence via
+Stone--von Neumann). Therefore a proof in one readout need not be
+discarded merely because its visible form changes in another readout.
+What must be transported is not the literal visible formula, but the
+kernel-level content preserved under the admissible transport operations
+of Lemmas~\ref{lem:group-transport} and~\ref{lem:hc-admissibility-lemma}.
+\end{proof}
+
+\subsection*{Structural lifts}
+
+\begin{definition}[Structural lift]
+\label{def:structural-lift}
+Let $L^{(f)}$ be a readout-relative lemma valid in readout $f$.
+A \emph{structural lift} of $L^{(f)}$ is a kernel-level statement
+$L_{\mathrm{struct}}$ obtained by extracting from $L^{(f)}$ only the
+invariant content that survives admissible unitary, sector, and frame
+transport.
+\end{definition}
+
+\begin{remark}
+A structural lift is therefore weaker than a literal universalization of
+$L^{(f)}$, but stronger than leaving the lemma imprisoned in one special
+case. The corollary Cor.~\ref{cor:SM-spectral-realization} is a concrete
+example: statement~(iii) there lifts the frame-corrected eigenvalue
+$\lambda_0^{(\mathrm{matter})}$ to the kernel-level invariant $\lambda_0$
+by identifying $k=0$ for the singlet and $k\ge 1$ for the triplet.
+\end{remark}
+
+\begin{proposition}[Structural lift principle]
+\label{prop:structural-lift-principle}
+Suppose $L^{(f)}$ is proven in readout $f$, and suppose its proof
+depends only on:
+\begin{enumerate}[label=(\roman*)]
+  \item the closure-stable master structure;
+  \item invariants preserved under admissible transport;
+  \item readout-specific visibility factors that can be isolated.
+\end{enumerate}
+Then there exists a structural lift $L_{\mathrm{struct}}$ that is valid
+at kernel level, even if the visible statement $L^{(f)}$ itself is not
+frame-blindly universal.
+\end{proposition}
+
+\begin{proof}
+\noindent\textbf{Invariant content is transport-stable.}
+By hypotheses~(i) and~(ii), the kernel-invariant content of the proof
+of $L^{(f)}$ is preserved by the admissible transport operations.
+Concretely: Lemma~\ref{lem:group-transport} guarantees that grouped-layer
+transport carries admissible structure without creating new ontology, and
+Lemma~\ref{lem:hc-admissibility-lemma} guarantees that compensator action
+leaves the admissible sector invariant. Hence the kernel-invariant content
+$P_{\mathrm{inv}}(\text{proof of }L^{(f)})$ is valid in every admissible
+readout, not only in $f$.
+
+\smallskip
+\noindent\textbf{Readout-specific factors are isolatable.}
+By hypothesis~(iii), the readout-dependent terms form a separable complement.
+Discarding them while retaining $P_{\mathrm{inv}}(\text{proof})$ yields
+$L_{\mathrm{struct}}$, independent of $f$.
+
+\smallskip
+\noindent\textbf{$L_{\mathrm{struct}}$ is kernel-level.}
+Since $L_{\mathrm{struct}}$ depends only on the closure-stable structure
+and transport-preserved invariants, it satisfies all four conditions of
+Definition~\ref{def:kernel-level-statement}: invariance under
+sector-preserving unitary equivalence, compensator projection,
+observer-frame phase shift, and admissible branch restriction.
+\end{proof}
+
+\subsection*{The three-step proof logic}
+
+This principle simplifies the global architecture considerably.
+Instead of demanding that every intermediate statement already be valid
+as a frame-blind absolute theorem, one may work in three steps:
+\[
+  \text{readout-relative lemma}
+  \;\Longrightarrow\;
+  \text{structural lift}
+  \;\Longrightarrow\;
+  \text{general kernel-level theorem}.
+\]
+This is the natural proof logic for a theory whose visible regimes are
+different projections of one and the same structural object.
+
+\subsection*{Shadow versus core: consequence for the compensator}
+
+\begin{remark}[HC shadow versus HC kernel]
+\label{rem:hc-shadow-vs-core}
+This distinction is particularly important for the compensator.
+In the minimal formulation, the visible compensator functional
+$\mathcal{H}_C^{(f)}$ behaves as a closure-mismatch penalty in a given
+readout and may vanish in an exact sector ($\mathcal{H}_C = 0$ in the
+photon frame; cf.\ the closed master system). But under the
+frame-dependent readout hypothesis developed above, such vanishing
+concerns only the \emph{visible defect shadow} in a given regime, not
+the deeper compensator-generating kernel
+$C = \Pi^{(\mathcal{M})}_{\mathrm{spec}}$
+(Theorem~\ref{thm:hc-spectral-projector}).
+
+Hence a statement about $\mathcal{H}_C^{(f)}$ must not automatically be
+read as a statement about the entire HC architecture. In particular, the
+vanishing of the visible compensator field in the photon-frame readout
+is consistent with the HC kernel remaining active as the
+spectral-projector mechanism that selects the closure-stable sector ---
+it is the shadow, not the core, that vanishes.
+
+This is directly relevant to OP~5 ($\Lambda_{\mathrm{obs}}$): the
+cosmological constant appears as a \emph{readout-relative} quantity ---
+the frame offset $\bsym^2\langle f,f\rangle$ visible in the matter frame
+--- while the photon-frame value $\Lambda_{\mathrm{fundamental}} = 0$
+is the kernel-level statement. The large observed value is not a
+fine-tuning problem but a failure to separate readout-relative visibility
+from structural invariance.
+\end{remark}
+
+% ------------------------------------------------------------------
+% Bidirectional Probe Lensing (v2.27.4 integration)
+% ------------------------------------------------------------------
+

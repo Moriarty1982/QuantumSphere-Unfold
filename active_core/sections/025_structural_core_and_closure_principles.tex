@@ -1,0 +1,756 @@
+\section{Structural Core and Closure Principles}
+\label{sec:structural-core}
+%% ============================================================
+
+Before compressing the preceding results into a single ToE master equation, we
+make explicit the structural kernel that has been implicit throughout the
+construction.
+
+\begin{definition}[Structural core]
+\label{def:structural-core}
+The structural core of the theory consists of the following coupled
+requirements:
+\begin{enumerate}
+\item a common underlying field object $\Psi$;
+\item a triolic decomposition
+\[
+  \Psi = \Psi_1\oplus\Psi_2\oplus\Psi_3;
+\]
+\item an orthogonal closure/light sector $\Psi_3$ relative to the first two
+sectors;
+\item a dual unitary symmetry exchanging $\Psi_1$ and $\Psi_2$;
+\item a Heisenberg compensator $C$ emerging from the ground condition and
+selecting the collapse/light output;
+\item a projected closure condition determining the physically admissible
+sector;
+\item a phase-shifted observer frame in which effective quantities are read
+out.
+\end{enumerate}
+\end{definition}
+
+\begin{theorem}[Existence of a nontrivial closure-stable triolic system]
+\label{thm:structural-existence}
+Assume the structural core of Definition~\ref{def:structural-core}. Then there
+exists a nontrivial class of configurations in which the triolic decomposition,
+compensator consistency, and projected closure condition are simultaneously
+satisfied.
+\end{theorem}
+
+\begin{proof}
+The preceding sections already exhibit the required ingredients separately.
+The central theorem provides a common ground object together with its triolic
+unfolding and Lorentz-compatible strata. The unitary symmetry $J$ links the
+first two sectors, while the Heisenberg compensator produces the
+collapse/light sector as a structurally distinguished output. The subsequent
+probe--closure analysis introduces the projected closure residue and identifies
+an admissible closed sector by the condition that leakage into the complement
+is suppressed. Since these ingredients are realized within one and the same
+construction, the intersection of the triolic, compensator-consistent, and
+closure-stable constraints is nonempty. Hence a nontrivial closure-stable
+triolic system exists.
+\end{proof}
+
+\begin{proposition}[Centrality of the Heisenberg compensator]
+\label{prop:hc-centrality}
+Within the structural core, the Heisenberg compensator is not an auxiliary
+correction term but the central structural hinge linking duality, collapse,
+closure stability, and the phase-shifted observer description.
+\end{proposition}
+
+\begin{proof}
+Without the duality symmetry, the first two sectors would remain merely
+parallel descriptions. Without the compensator, their common collapse/light
+output would not be selected. Without this selected output, the projected
+closure condition would not isolate a physically admissible sector. And
+without that closure-stable sector, the observer-frame description would lack a
+well-defined quantity to read out after phase shift. Thus the compensator is
+precisely the operator through which duality becomes collapse, collapse becomes
+closure, and closure becomes observable effective physics.
+\end{proof}
+
+
+\subsection*{Preliminary Semantic and Tensorial Kernel Interface}
+\addcontentsline{toc}{subsection}{Preliminary Semantic and Tensorial Kernel Interface}
+
+This subsection states the semantic/tensor interface in anticipatory form. Its formal unfolding as a lemma--theorem chain is given later in Phase II-E.
+
+The structural kernel can be stated on two coordinated levels. The first is a
+semantic layer of sets, states, maps, and admissibility predicates. The second
+is a tensorial realization layer in which the same constraints are written in a
+notation compatible with the Riemann/Sphaera core. The tensor layer does not
+replace the semantic one; it compresses it into a transportable operator form.
+
+\begin{definition}[Semantic structural kernel]
+\label{def:semantic-structural-kernel}
+The semantic structural kernel consists of the data
+\[
+(\mathbb S,\{S_n\}_{n\ge 0},S_0,\hat K,J,C,\mathcal M)
+\]
+together with the admissibility predicates
+\[
+\begin{aligned}
+&\mathrm{Triolic}(x),\ \mathrm{Anchored}(x),\ \mathrm{FrameShifted}(x),\ \mathrm{GroundLinked}(x),\\
+&\mathrm{HCForced}(x),\ \mathrm{ClosureStable}(x),\ \mathrm{HigherConfined}(x),\ \mathrm{SeptinionReadable}(x).
+\end{aligned}
+\]
+These objects satisfy the following semantic conditions:
+\begin{enumerate}[leftmargin=2em,label=(S\arabic*)]
+\item \textbf{Cascade hierarchy:}
+\[
+\mathbb S=S_N\supseteq S_{N-1}\supseteq \cdots \supseteq S_1\supseteq S_0,
+\qquad
+\hat K=\Pi_0\circ\Pi_1\circ\cdots\circ\Pi_{N-1}.
+\]
+\item \textbf{Ground-state terminality:}
+\[
+x\in S_0 \Longleftrightarrow \hat K(x)=x.
+\]
+\item \textbf{Maximal-totality closure rule:} if $M^*\cap \mathbb S=\emptyset$, then
+\[
+\hat K(M^*)\subseteq S_0.
+\]
+\item \textbf{$J$-involution:}
+\[
+J^2=\mathrm{id}.
+\]
+\item \textbf{Compensator map:}
+\[
+C(x):=\tfrac12\bigl(x+J(x)\bigr).
+\]
+\item \textbf{Triolic minimality:} if $\mathrm{Triolic}(x)$, then $x$ admits a three-sector
+organization $(K_1,K_2,K_3)$.
+\item \textbf{Orthogonal anchor:} if $\mathrm{Anchored}(x)$, then the third sector is
+orthogonal to the first two,
+\[
+K_3\perp K_1,
+\qquad
+K_3\perp K_2.
+\]
+\item \textbf{Frame-shift principle:} $\mathrm{FrameShifted}(x)$ means that $x$ is a shifted
+or regime-dependent readout of a common structural body rather than an
+ontologically independent object.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Tensor realization of the structural kernel]
+\label{def:tensor-structural-kernel}
+A tensor realization of Definition~\ref{def:semantic-structural-kernel}
+is given by the operator family
+\[
+\mathcal J^\mu{}_{\nu},\qquad
+\mathcal C^\mu{}_{\nu},\qquad
+\Pi_n{}^\mu{}_{\nu},\qquad
+\hat K^\mu{}_{\nu},\qquad
+\mathcal M^\mu{}_{\nu},
+\]
+subject to the following identities:
+\begin{enumerate}[label=(T\arabic*)]
+  \item \textbf{Involution:}
+    $\mathcal J^\mu{}_{\alpha}\mathcal J^\alpha{}_{\nu}=\delta^\mu{}_{\nu}$.
+  \item \textbf{Compensator idempotence:}
+    $\mathcal C^\mu{}_{\alpha}\mathcal C^\alpha{}_{\nu}=\mathcal C^\mu{}_{\nu}$.
+  \item \textbf{Cascade composition:}
+    $\hat K^\mu{}_{\nu}=(\Pi_0\Pi_1\cdots\Pi_{N-1})^\mu{}_{\nu}$.
+  \item \textbf{$\mathcal M$-admissibility (intertwining):}
+    The Millennium matrix $\mathcal M^\mu{}_{\nu}$ is required to be
+    \emph{admissible} in the sense that it preserves the algebraic
+    structure of the kernel:
+    \[
+      \mathcal M^\mu{}_{\alpha}\mathcal J^\alpha{}_{\nu}
+      =\mathcal J^\mu{}_{\alpha}\mathcal M^\alpha{}_{\nu},
+      \qquad
+      \mathcal M^\mu{}_{\alpha}\mathcal C^\alpha{}_{\nu}
+      =\mathcal C^\mu{}_{\alpha}\mathcal M^\alpha{}_{\nu}.
+    \]
+    Whenever layer transport is required to preserve the cascade reading,
+    additionally
+    \[
+      \mathcal M^\mu{}_{\alpha}\hat K^\alpha{}_{\nu}
+      =\hat K^\mu{}_{\alpha}\mathcal M^\alpha{}_{\nu}.
+    \]
+\end{enumerate}
+The tensor $\mathcal J$ represents the involutive dual/frame symmetry,
+$\mathcal C$ represents the compensator projection, the $\Pi_n$ represent
+cascade projections between adjacent strata, and $\mathcal M$ is the
+Millennium matrix as an admissible structure-preserving converter between
+admissible layers. Condition~(T4) is the defining admissibility condition
+on $\mathcal M$; it is not derivable from (T1)--(T3) alone, but is imposed
+as the minimal requirement for $\mathcal M$ to qualify as a
+structure-preserving converter in the sense of
+Definition~\ref{def:semantic-structural-kernel}.
+\end{definition}
+
+\begin{proposition}[Semantic forcing chain]
+\label{prop:semantic-forcing-chain}
+Within the semantic structural kernel, the following implication chain holds:
+\[
+\mathrm{GroundLinked}(x)\wedge \mathrm{FrameShifted}(x)
+\Longrightarrow \mathrm{HCForced}(x),
+\]
+\[
+\mathrm{Triolic}(x)\wedge \mathrm{Anchored}(x)\wedge \mathrm{HCForced}(x)
+\Longrightarrow \mathrm{ClosureStable}(x),
+\]
+\[
+\mathrm{ClosureStable}(x)\wedge \mathrm{HigherConfined}(x)
+\Longrightarrow \mathrm{SeptinionReadable}(x).
+\]
+\end{proposition}
+
+\begin{proof}
+\textbf{First implication:
+$\mathrm{GroundLinked}(x)\wedge\mathrm{FrameShifted}(x)
+\Rightarrow\mathrm{HCForced}(x)$.}
+
+$\mathrm{GroundLinked}(x)$ means $x\in S_n$ for some stratum $n$; it is
+reachable by the cascade $\hat{K}$ from Definition~\ref{def:semantic-structural-kernel}~(S1).
+$\mathrm{FrameShifted}(x)$ means by~(S8) that $x$ is a shifted or
+regime-dependent readout of a common structural body.
+By Lemma~\ref{lem:one-body-lemma}, the shifted presentations all refer
+to one and the same carrier. By Lemma~\ref{lem:re-identification-lemma},
+admissibility then requires a re-identification mechanism returning
+competing presentations to a common output channel. The only operator
+in the semantic kernel with this role is the compensator $C(x)=\tfrac{1}{2}(x+J(x))$
+from~(S5), which is the unique $J$-symmetric projection.
+Hence $\mathrm{HCForced}(x)$: the compensator is structurally necessary.
+
+\smallskip
+\textbf{Second implication:
+$\mathrm{Triolic}(x)\wedge\mathrm{Anchored}(x)\wedge\mathrm{HCForced}(x)
+\Rightarrow\mathrm{ClosureStable}(x)$.}
+
+This is Lemma~\ref{lem:closure-forcing-lemma}, now with an explicit
+four-step proof citing
+Lemmas~\ref{lem:triolic-minimality-lemma},~\ref{lem:orthogonal-anchor-lemma},
+\ref{lem:hc-admissibility-lemma},~\ref{lem:hc-idempotence-lemma},
+and Theorem~\ref{thm:fractal}.
+
+\smallskip
+\textbf{Third implication:
+$\mathrm{ClosureStable}(x)\wedge\mathrm{HigherConfined}(x)
+\Rightarrow\mathrm{SeptinionReadable}(x)$.}
+
+$\mathrm{ClosureStable}(x)$ means $\hat{K}(\mathcal{C}x)=\mathcal{C}x$
+(Lemma~\ref{lem:closure-stable-iff-im-C}):
+$x\in\mathrm{im}(C)$ is already in the ground sector.
+$\mathrm{HigherConfined}(x)$ means $x$ is contained in a higher coupled
+algebraic container — specifically the septinion/seption embedding
+(Lemma~\ref{lem:higher-confinement-lemma}).
+Within the higher container, the closure-stable state is readable as a
+seption element precisely because its compensator-stabilized image
+$\mathcal{C}x$ already lies in the admissible ground sector $S_0$, and
+the higher container adds no new ontology
+(Lemma~\ref{lem:non-escape-lemma}: no admissible transition exports $x$
+into an independent external sector).
+Hence the higher-confinement reading is a restatement of the already
+established closure at higher algebraic level:
+$\mathrm{SeptinionReadable}(x)$.
+\end{proof}
+
+\begin{proposition}[Tensorial intertwining conditions for the Millennium matrix]
+\label{prop:tensorial-intertwining-m}
+Every admissible tensor realization in the sense of
+Definition~\ref{def:tensor-structural-kernel} satisfies:
+\[
+\mathcal M\mathcal J=\mathcal J\mathcal M,
+\qquad
+\mathcal M\mathcal C=\mathcal C\mathcal M,
+\]
+and, whenever layer transport is required to preserve the cascade reading,
+\[
+\mathcal M\hat K=\hat K\mathcal M.
+\]
+\end{proposition}
+
+\begin{proof}
+These are precisely condition~(T4) of
+Definition~\ref{def:tensor-structural-kernel}, written in operator
+notation. A tensor realization is admissible by definition only if
+$\mathcal M$ satisfies the intertwining identities~(T4); hence the
+relations hold for every admissible realization. No additional argument
+is required beyond the definition.
+
+The structural motivation for imposing~(T4) is as follows. The first
+relation $\mathcal M\mathcal J=\mathcal J\mathcal M$ ensures that
+transport by $\mathcal M$ does not destroy the involutive dual/frame
+symmetry encoded by $\mathcal J$~(T1). The second relation
+$\mathcal M\mathcal C=\mathcal C\mathcal M$ ensures that the
+compensator-selected admissible sector $\mathrm{im}(\mathcal C)$ is
+$\mathcal M$-invariant, consistent with $\mathcal C$ being idempotent
+(T2). The third relation, when imposed, says that layer conversion
+commutes with the cascade readout~(T3). These three motivations
+explain why~(T4) is the correct admissibility condition; they do not
+constitute an independent proof of~(T4) from (T1)--(T3).
+\end{proof}
+
+\begin{remark}[Resolution of Roadmap item A2]
+\label{rem:a2-resolved}
+Roadmap item~A2 identified that the intertwining relation
+$\mathcal M\mathcal C=\mathcal C\mathcal M$ was supported only by a
+necessity argument rather than a derivation. The resolution adopted
+in v2.27.6 is to promote~(T4) to an explicit definitional condition
+on admissible tensor realizations
+(Definition~\ref{def:tensor-structural-kernel}, condition~(T4)).
+Proposition~\ref{prop:tensorial-intertwining-m} then follows by
+definition. The conditional marker on
+Theorem~\ref{thm:hc-spectral-projector}
+(Remark~\ref{rem:hc-spectral-projector-conditional}) is therefore
+resolved: the theorem is no longer conditional on an unproven
+hypothesis, but on an explicit definitional requirement.
+\end{remark}
+
+\begin{remark}[Semantic--tensor correspondence]
+\label{rem:semantic-tensor-correspondence}
+The semantic predicates and the tensor notation are intended to be read in
+parallel. In particular,
+\[
+\mathrm{HCForced}(x)
+\quad\leftrightarrow\quad
+x\mapsto \mathcal Cx,
+\]
+\[
+\mathrm{ClosureStable}(x)
+\quad\leftrightarrow\quad
+\hat K(\mathcal Cx)=\mathcal Cx,
+\]
+and
+\[
+\mathrm{Admissible}(x)
+\quad\Rightarrow\quad
+\mathrm{Admissible}(\mathcal Mx)
+\]
+whenever $\mathcal M$ satisfies the intertwining conditions of
+Proposition~\ref{prop:tensorial-intertwining-m}. This makes it possible to
+write later structure conditions in the same tensorial style as the
+Riemann/Sphaera core while keeping their semantic meaning explicit.
+\end{remark}
+
+
+\subsection*{Phase I: First Unfolding Lemmas for the Generative Layer}
+\addcontentsline{toc}{subsection}{Phase I: First Unfolding Lemmas for the Generative Layer}
+
+We now begin the actual mathematical unfolding of the normalized structural
+core by isolating the first chain of generative lemmas. The aim is not yet to
+expand the full field/probe realization, but to make explicit the initial
+forcing route from a common structural body to triolic organization,
+orthogonal anchoring, frame-shifted readout, re-identification, and finally the
+necessity of the Heisenberg compensator.
+
+\begin{lemma}[One-body lemma]
+\label{lem:one-body-lemma}
+The semantic and tensorial kernels are to be read as describing different
+admissible presentations of one and the same structural body, not independent
+ontological objects. In particular, the cascade hierarchy, dual/frame symmetry,
+and compensator projection all act on a common carrier rather than on unrelated
+state spaces.
+\end{lemma}
+
+\begin{proof}
+In Definition~\ref{def:semantic-structural-kernel} the kernel data are given as
+one coordinated family
+\[
+(\mathbb S,\{S_n\}_{n\ge 0},S_0,\hat K,J,C,\mathcal M),
+\]
+not as several unrelated structures. The grouped architecture of
+Definition~\ref{def:grouped-structural-architecture} likewise states that the
+generative, projection, and field/probe layers are different organizational
+regimes of the same underlying body. The tensor realization of
+Definition~\ref{def:tensor-structural-kernel} then presents the same body in
+operator form. Hence the structural reading is one-body throughout.
+\end{proof}
+
+\begin{lemma}[Triolic minimality lemma]
+\label{lem:triolic-minimality-lemma}
+A merely binary decomposition is structurally insufficient for the normalized
+core. The minimal nondegenerate organization compatible with admissible
+selection, compensator action, and closure readout is triolic.
+\end{lemma}
+
+\begin{proof}
+By Definition~\ref{def:semantic-structural-kernel}, a triolic state carries a
+three-sector organization $(K_1,K_2,K_3)$, while the orthogonal anchor singles
+out the third sector as stabilizing direction relative to the first two. If one
+retained only a binary split, then duality between the first two sectors could
+still be stated, but there would be no distinguished third channel in which the
+compensator-selected output and closure/light readout could be structurally
+stabilized. The normalized core therefore requires three sectors as the minimal
+nondegenerate organization.
+\end{proof}
+
+\begin{lemma}[Orthogonal anchor lemma]
+\label{lem:orthogonal-anchor-lemma}
+Within a triolic organization, the third sector is not an optional decoration but
+the structural anchor that prevents the first two sectors from remaining a
+merely parallel or relabelable pair. In particular,
+\[
+K_3\perp K_1,
+\qquad
+K_3\perp K_2.
+\]
+\end{lemma}
+
+\begin{proof}
+The orthogonal anchor condition is built into
+Definition~\ref{def:semantic-structural-kernel}. Its role is clarified by the
+forcing chain of Proposition~\ref{prop:semantic-forcing-chain}: closure
+stability does not follow from duality alone, but from triolic structure plus a
+protected anchor together with HC forcing. The third sector therefore fixes the
+otherwise ambiguous two-sector pairing and provides the admissible direction in
+which collapse/light selection can be stabilized.
+\end{proof}
+
+\begin{lemma}[Frame-shift lemma]
+\label{lem:frame-shift-lemma}
+Admissible effective states are read out in a phase- or frame-shifted
+presentation. Accordingly, an effective state is not introduced as an
+independent object but as a shifted view of the common structural body.
+\end{lemma}
+
+\begin{proof}
+This is exactly the content of the frame-shift principle in
+Definition~\ref{def:semantic-structural-kernel}, where
+$\mathrm{FrameShifted}(x)$ means that $x$ is a shifted or regime-dependent
+readout of a common body. The grouped architecture makes the same point at the
+layer level: projection/translation and field/probe realizations are
+organizational regimes of one underlying structure and therefore inherit rather
+than replace the generative body.
+\end{proof}
+
+\begin{lemma}[Re-identification lemma]
+\label{lem:re-identification-lemma}
+If a state is simultaneously one-body and frame-shifted, then admissibility
+requires a re-identification mechanism that returns competing presentations to a
+common structural channel.
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{lem:one-body-lemma}, the relevant descriptions concern one and the
+same body. By Lemma~\ref{lem:frame-shift-lemma}, these descriptions appear in
+shifted or regime-dependent presentations. Without re-identification, the
+shifted presentations would remain only formally related and no unique
+admissible output sector could be selected. But the semantic kernel is built to
+support admissible cascade readout and closure selection; hence a mechanism that
+returns the shifted presentations to a common channel is structurally required.
+\end{proof}
+
+\begin{theorem}[HC-forcing theorem]
+\label{thm:hc-forcing-theorem}
+Within the normalized structural core, the required re-identification mechanism
+is the Heisenberg compensator. Equivalently,
+\[
+\mathrm{GroundLinked}(x)\wedge \mathrm{FrameShifted}(x)
+\Longrightarrow \mathrm{HCForced}(x).
+\]
+\end{theorem}
+
+\begin{proof}
+Proposition~\ref{prop:semantic-forcing-chain} already states the forcing
+implication. The present point is to identify why the implication is necessary.
+\[
+\begin{aligned}
+&\text{ground condition}
+\Longrightarrow
+\text{one triolic projection}
+\Longrightarrow
+\text{triolic minimality}
+\Longrightarrow
+\text{orthogonal anchor}
+\\[0.2em]
+&\Longrightarrow
+\text{frame-shifted readout}
+\Longrightarrow
+\text{re-identification}
+\Longrightarrow
+\mathrm{HC}.
+\end{aligned}
+\]
+\end{proof}
+
+\begin{corollary}[First generative forcing chain]
+\label{cor:first-generative-forcing-chain}
+The first unfolded forcing route of the normalized core is
+\[
+\begin{aligned}
+\text{one body}
+&\Longrightarrow \text{triolic minimality}\\
+&\Longrightarrow \text{orthogonal anchor}\\
+&\Longrightarrow \text{frame-shifted readout}\\
+&\Longrightarrow \text{re-identification}\\
+&\Longrightarrow \mathrm{HC}.
+\end{aligned}
+\]
+This chain is the entry point for the later closure and higher-confinement
+unfolding.
+\end{corollary}
+
+\begin{proof}
+Lemmas~\ref{lem:one-body-lemma}--\ref{lem:re-identification-lemma} establish the
+successive structural requirements, and
+Theorem~\ref{thm:hc-forcing-theorem} identifies their first nontrivial forced
+operator consequence. The later closure and higher-confinement chain therefore
+starts from this generative route.
+\end{proof}
+
+
+\subsection*{Phase I-B: HC and Closure Unfolding}
+\addcontentsline{toc}{subsection}{Phase I-B: HC and Closure Unfolding}
+
+We next unfold the first closure layer that begins once HC has been forced.
+The aim of this block is to make precise that HC is not merely present, but
+acts as an admissibility-preserving, anchor-compatible, closure-selecting
+mechanism, and that exact closure can be distinguished from residual or only
+partial closure.
+
+\begin{lemma}[HC idempotence lemma]
+\label{lem:hc-idempotence-lemma}
+Once a state has been compensator-normalized, repeated compensator action does
+not move it to a different admissible sector. Equivalently,
+\[
+C(C(x)) = C(x).
+\]
+\end{lemma}
+
+\begin{proof}
+By Definition~\ref{def:tensor-structural-kernel}, the tensorial compensator
+satisfies $\mathcal C^2=\mathcal C$, and by
+Definition~\ref{def:semantic-structural-kernel} the semantic compensator is the
+corresponding map
+\[
+C(x)=\tfrac12\bigl(x+J(x)\bigr).
+\]
+Thus compensator action is projective rather than drifting: once a state lies
+in the compensator-selected channel, further application leaves it there.
+\end{proof}
+
+\begin{lemma}[HC admissibility lemma]
+\label{lem:hc-admissibility-lemma}
+If $x$ is structurally admissible, then its compensator-normalized image $C(x)$
+remains admissible.
+\end{lemma}
+
+\begin{proof}
+The semantic/tensor kernel was introduced precisely so that the compensator is
+not an external deformation but an internal normalization operator. Since
+Theorem~\ref{thm:hc-forcing-theorem} identifies HC as the required
+re-identification mechanism, using $C$ restores competing shifted presentations
+to a common admissible channel instead of producing a foreign state. In the
+tensor realization this is the admissible output selected by $\mathcal C$; on
+the semantic side the same role is expressed by the preservation of the common
+structural body under compensator projection. Hence admissibility is preserved.
+\end{proof}
+
+% ------------------------------------------------------------------
+% Spectral-projector block (v2.27.4 integration)
+% ------------------------------------------------------------------
+
+\begin{definition}[Spectral decomposition of the state space]
+\label{def:spectral-decomposition-M}
+Let $\mathcal{M}$ denote the Millennium matrix acting on the admissible state
+space $\mathcal{S}$. A \emph{spectral decomposition of $\mathcal{S}$ under
+$\mathcal{M}$} is an orthogonal direct sum
+\[
+  \mathcal{S} \;=\; \bigoplus_{\lambda} \mathcal{S}_\lambda,
+\]
+where each $\mathcal{S}_\lambda \subset \mathcal{S}$ is a closed
+$\mathcal{M}$-invariant subspace satisfying
+$\mathcal{M}|_{\mathcal{S}_\lambda} = \lambda\,\mathrm{id}$.
+A state $s \in \mathcal{S}$ is called \emph{spectrally stable} if
+$s \in \mathcal{S}_\lambda$ for some $\lambda$, i.e.\ $\mathcal{M}(s) =
+\lambda\,s$.
+\end{definition}
+
+\begin{remark}
+Definition~\ref{def:spectral-decomposition-M} extends the existing
+decomposition $\Hplus = \Hplusplus \oplus \Hplusminus$
+(cf.\ Theorem~\ref{thm:unity}) to the full admissible readout regime.
+The two primary spectral subspaces under any $\mathcal{M}$ satisfying
+Proposition~\ref{prop:tensorial-intertwining-m} are precisely $\Hplusplus$
+and $\Hplusminus$, since both are $\mathcal{M}$-invariant by the intertwining
+condition $\mathcal{M}\mathcal{J} = \mathcal{J}\mathcal{M}$.
+\end{remark}
+
+\begin{lemma}[Diagonal self-traversal forces scalar action on the compensated sector]
+\label{lem:diagonal-traversal-scalar-action}
+Assume the Sphaera self-traversal condition of Theorem~\ref{thm:fractal}:
+the cascade operator $\hat{K}$ transports the null axis $L_n$ of each
+stratum $S_n$ to the null axis $L_{n-1}$ of the preceding stratum,
+carrying the same structural content without generating new independent
+directions. Then the Millennium matrix $\mathcal{M}$, when restricted to
+the image of the compensator $\mathrm{im}(\mathcal{C})$, acts as a scalar
+multiple of the identity:
+\[
+  \mathcal{M}\big|_{\mathrm{im}(\mathcal{C})} \;=\; \lambda_0\,\mathrm{id},
+\]
+where $\lambda_0$ is the unique admissible eigenvalue of $\mathcal{M}$ on
+the closure-stable sector.
+\end{lemma}
+
+\begin{proof}
+By Theorem~\ref{thm:fractal}, the self-traversal of the Sphaera is
+\emph{diagonal}: the cascade does not generate a new structural object at
+each stratum, but transports one and the same null-axis content through
+admissible realization levels. In operator language this means that the
+cascade direction at each stratum is not a Jordan-chain descendant of the
+previous one---no new vector is generated from an existing vector by a
+nilpotent shift.
+
+By the intertwining condition $\mathcal{M}\mathcal{C} = \mathcal{C}\mathcal{M}$
+(Proposition~\ref{prop:tensorial-intertwining-m}), $\mathrm{im}(\mathcal{C})$
+is $\mathcal{M}$-invariant. Suppose for contradiction that
+$\mathcal{M}|_{\mathrm{im}(\mathcal{C})}$ had a non-trivial Jordan block:
+then there would exist $s,w \in \mathrm{im}(\mathcal{C})$ with $w\neq 0$ and
+\[
+  \mathcal{M}(s) = \lambda_0\,s + w.
+\]
+This would mean $\mathcal{M}$ generates $w$ from $s$---a new independent
+direction within the compensated sector---contradicting the diagonal
+self-traversal property. Hence $\mathcal{M}|_{\mathrm{im}(\mathcal{C})}$
+is diagonalizable. Since $\mathrm{im}(\mathcal{C})$ is the closure-stable
+sector (Lemma~\ref{lem:closure-forcing-lemma}), which is irreducible under
+$\mathcal{M}$, a diagonalizable action on an irreducible invariant subspace
+is scalar. Denoting this scalar $\lambda_0$ completes the proof.
+\end{proof}
+
+\begin{theorem}[HC as spectral projector of the Millennium matrix]
+\label{thm:hc-spectral-projector}
+Assume the admissible state space $\mathcal{S}$ carries a spectral
+decomposition under $\mathcal{M}$ as in
+Definition~\ref{def:spectral-decomposition-M}, that $\mathcal{M}$ satisfies
+the intertwining conditions of Proposition~\ref{prop:tensorial-intertwining-m},
+and that the Sphaera self-traversal is diagonal in the sense of
+Lemma~\ref{lem:diagonal-traversal-scalar-action}. Then the Heisenberg
+compensator $C$ coincides with the spectral projector of $\mathcal{M}$
+onto the closure-stable eigenspace $\mathcal{S}_0 :=
+\ker(\mathcal{M} - \lambda_0\,\mathrm{id})$:
+\[
+  C \;=\; \Pi^{(\mathcal{M})}_{\mathrm{spec}}.
+\]
+\end{theorem}
+
+\begin{remark}[Status of Theorem~\ref{thm:hc-spectral-projector}]
+\label{rem:hc-spectral-projector-conditional}
+As of v2.27.6, both open premises of this theorem are resolved:
+the bijection $\mathrm{ClosureStable}(x)\Leftrightarrow x\in\mathrm{im}(C)$
+is established by Lemma~\ref{lem:closure-stable-iff-im-C} (Roadmap A3),
+and the intertwining relation $\mathcal{M}\mathcal{C}=\mathcal{C}\mathcal{M}$
+is now a definitional condition (T4) of
+Definition~\ref{def:tensor-structural-kernel} (Roadmap A2,
+Remark~\ref{rem:a2-resolved}).
+The theorem therefore holds unconditionally within every admissible
+tensor realization.
+\end{remark}
+
+\begin{proof}
+We verify the three conditions characterizing a spectral projector.
+
+\smallskip
+\noindent\textbf{Step 1: Idempotence.}
+By Lemma~\ref{lem:hc-idempotence-lemma}, $C^2=C$. By
+Definition~\ref{def:tensor-structural-kernel},
+$\mathcal{C}^\mu{}_\alpha\mathcal{C}^\alpha{}_\nu = \mathcal{C}^\mu{}_\nu$
+in the tensor realization. Hence $C$ is a projector.
+
+\smallskip
+\noindent\textbf{Step 2: $\mathcal{M}$-compatibility.}
+By Proposition~\ref{prop:tensorial-intertwining-m},
+$\mathcal{M}\mathcal{C} = \mathcal{C}\mathcal{M}$. Hence $\mathrm{im}(C)$
+is $\mathcal{M}$-invariant and $C$ projects onto a $\mathcal{M}$-stable
+subspace.
+
+\smallskip
+\noindent\textbf{Step 3: Scalar eigenvalue on the image.}
+By Lemma~\ref{lem:diagonal-traversal-scalar-action}, the diagonal
+self-traversal forces $\mathcal{M}|_{\mathrm{im}(C)} = \lambda_0\,\mathrm{id}$.
+Hence $\mathrm{im}(C) \subseteq \mathcal{S}_0$.
+By Lemma~\ref{lem:closure-forcing-lemma}, the closure-stable states are
+exactly those in $\mathrm{im}(C)$, so $\mathrm{im}(C) = \mathcal{S}_0$.
+
+\smallskip
+\noindent\textbf{Conclusion.}
+A projector with $\mathcal{M}$-invariant image equal to a single eigenspace
+$\mathcal{S}_0$ is the spectral projector $\Pi^{(\mathcal{M})}_{\mathrm{spec}}$
+onto that eigenspace.
+\end{proof}
+
+\begin{corollary}[Structural fixpoint: $\mathcal{M}$ and $C$ mutually determine each other]
+\label{cor:M-HC-fixpoint}
+Under the hypotheses of Theorem~\ref{thm:hc-spectral-projector},
+\[
+  \mathcal{M}\,C \;=\; C\,\mathcal{M} \;=\; \lambda_0\,C.
+\]
+\end{corollary}
+
+\begin{proof}
+For any $s\in\mathcal{S}$: since $C(s)\in\mathcal{S}_0$, we have
+$\mathcal{M}(C(s))=\lambda_0\,C(s)$, giving $\mathcal{M}\,C=\lambda_0\,C$.
+For $s\in\mathcal{S}_0$: $C\,\mathcal{M}(s)=C(\lambda_0 s)=\lambda_0 C(s)$.
+For $s\in\ker(C)$: $C\,\mathcal{M}(s)=0$ (since $\ker(C)$ is
+$\mathcal{M}$-invariant and maps to a sector annihilated by $C$).
+Hence $C\,\mathcal{M}=\lambda_0\,C$.
+\end{proof}
+
+\begin{remark}[Phase-shifted frame and spectral measurement]
+\label{rem:frame-shift-spectral}
+The identification $C = \Pi^{(\mathcal{M})}_{\mathrm{spec}}$ has a direct
+consequence for the matter frame. Since matter observers reside at
+$\zminus = +\bsym \approx 0.5493$ rather than the photon ground shell
+$\zminus = 0$, every spectral readout of $\mathcal{M}$ is performed in the
+shifted frame. The measured eigenvalue is therefore not $\lambda_0$ itself
+but the frame-corrected value
+\[
+  \lambda_0^{(\mathrm{matter})}
+  \;=\; \gL^{-k(\lambda_0)}\cdot\lambda_0^{(\mathrm{photon})},
+\]
+where $k(\lambda_0)$ is the frame-insertion count of the observable and
+$\gL \approx 1.864$ is the matter--photon Lorentz factor
+(Theorem~\ref{thm:frame-offset}). All physical constants derived from
+spectral eigenvalues of $\mathcal{M}$ therefore carry systematic
+$\gL^k$-corrections relative to their photon-frame values.
+\end{remark}
+
+\begin{corollary}[Standard Model realization of the spectral decomposition]
+\label{cor:SM-spectral-realization}
+The octonionic decomposition $\OO = \mathbb{C}\oplus\mathbb{C}^3$
+(Theorem~\ref{thm:octonion-SU3}) is a concrete realization of
+Definition~\ref{def:spectral-decomposition-M}: the singlet $\mathbb{C}$ is
+the closure-stable eigenspace $\mathcal{S}_0 = \mathrm{im}(C)$, and the
+triplet $\mathbb{C}^3$ carries the three color eigenspaces
+$\mathcal{S}_{K_1},\mathcal{S}_{K_2},\mathcal{S}_{K_3}$.
+Under this identification, Theorem~\ref{thm:hc-spectral-projector}
+specializes as follows:
+\begin{enumerate}[label=(\roman*)]
+  \item The compensator $C$ projects onto the singlet $\mathbb{C}\subset\OO$,
+  which is the photon kernel $K_3$ sector ($\zminus=0$).
+  \item The triplet $\mathbb{C}^3$ is $\mathcal{M}$-invariant and carries
+  the SU(3) color action; matter ($K_1$) and tachyon ($K_2$) sectors are
+  spectral subspaces at non-zero frame offset.
+  \item The matter-frame correction reads
+  \[
+    \lambda_0^{(\mathrm{matter})}
+    = \gL^{-k(\lambda_0)}\cdot\lambda_0^{(\mathrm{photon})},
+  \]
+  consistent with Theorem~\ref{thm:SM}: $K_3$ is frame-invariant
+  ($k=0$), while the triplet components carry $k\ge 1$ corrections
+  and are therefore observed with $\gL^k$-suppression in the matter frame.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+By Theorem~\ref{thm:octonion-SU3}, the octonion automorphism group $G_2$
+restricts to $\mathrm{SU}(3)\subset G_2$, yielding the direct sum
+$\OO = \mathbb{C}\oplus\mathbb{C}^3$. The singlet $\mathbb{C}$ is the
+unique $\mathrm{SU}(3)$-invariant subspace, hence $\mathcal{M}$-stable at
+a scalar eigenvalue $\lambda_0$. By the remark in
+Theorem~\ref{thm:SM}, $K_3 = e_1 e_2$ is simultaneously the photon kernel
+and the projection of the Heisenberg compensator; hence
+$\mathrm{im}(C) = \mathbb{C} = \mathcal{S}_0$. The three kernels
+$(K_1,K_2,K_3)$ realize the three colors of $\mathbb{C}^3$, confirming
+$\mathcal{S}_{K_i}$ as spectral subspaces. Statement~(iii) then follows
+directly from Remark~\ref{rem:frame-shift-spectral} applied to each
+triplet component.
+\end{proof}
+
+% ------------------------------------------------------------------
+% Readout-Relative Lemmas and Structural Lifts (v2.27.4 integration)
+% ------------------------------------------------------------------
+

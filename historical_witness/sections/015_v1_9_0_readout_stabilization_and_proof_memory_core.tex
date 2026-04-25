@@ -1,0 +1,107 @@
+\section*{v1.9.0 Readout Stabilization and Proof Memory Core}
+\addcontentsline{toc}{section}{v1.9.0 Readout Stabilization and Proof Memory Core}
+\begin{quote}
+\textbf{Normalization note.} This block is retained as a historical precursor of the normalized readout architecture. Its proof-bearing content is re-exported later through the grouped-layer normalization, especially the readout/collapse phases and the semantic--tensor transport discipline. It should therefore be read as historical proof memory rather than as an independent new foundation.
+\end{quote}
+
+This release adds a further stabilization layer to the inherited closure, probe,
+projection, and appendix architecture. Its purpose is to make the final readout
+path more disciplined: not only must admissible content survive transport, it
+must also remain recoverable after compression. In this sense v1.9.0 pushes
+the document from a transport-stable monolith toward a proof-memory stable one.
+A statement is not treated as mature merely because it can be compressed into a
+lemma, table row, or projection line; it must also remain reconstructible as the
+same closure-supported content when the compression is unfolded again.
+
+\subsection*{1. Readout stabilization principle}
+The main strengthening of v1.9.0 is that every admissible readout must be
+stable under re-expansion. A readout is the visible endpoint of a structural
+chain, but it remains acceptable only if its origin can be reopened without
+changing the admissibility class. Thus the document now treats readout as a
+\emph{controlled fixed point} of compression and reconstruction:
+\[
+\begin{aligned}
+&\text{local structure} \Longrightarrow \text{HC} \Longrightarrow \text{closure}\\
+&\Longrightarrow \text{probe filtration} \Longrightarrow \text{table/tool compression}\\
+&\Longrightarrow \text{readout} \Longrightarrow \text{re-expansion to the same admissibility class}.
+\end{aligned}
+\]
+
+\paragraph{Stabilization Proposition A (readout fixed-point discipline).}
+If a statement is compressed into a readout form by admissibility-preserving
+transports and can be re-expanded to the same closure-licensed content, then the
+readout is structurally stable. If re-expansion changes the admissibility class,
+the readout was only heuristic.
+
+\paragraph{Proof sketch.}
+The admissibility source is fixed upstream by the ground condition, HC, and
+closure. Compression is legitimate only if it does not sever that source. Hence
+re-expansion must recover the same structural ancestry rather than a merely
+similar narrative.
+
+\subsection*{2. Tool-to-lemma synchronization}
+Previous versions upgraded tools and tables into proof interfaces. v1.9.0
+adds a stricter synchronization rule: every reusable tool should point to at
+least one lemma-level justification, and every repeated lemma pattern should be
+compressible into a named tool or interface move once stabilized. The goal is to
+prevent the appendix from splitting into disconnected ``tricks'' on one side and
+formal arguments on the other.
+
+\paragraph{Stabilization Proposition B (tool/lemma synchronization).}
+A reusable tool is mature only when it is synchronized with a lemma pattern that
+licenses its use, and a recurring lemma pattern is fully normalized only when it
+admits a stable compressed tool form.
+
+\paragraph{Proof sketch.}
+Tools without lemma ancestry become opaque shortcuts; lemmas without compressed
+interface forms bloat the running line unnecessarily. Synchronization preserves
+both transparency and speed while keeping the proof architecture auditable.
+
+\subsection*{3. Probe-to-readout compatibility}
+The probe channel now receives a further role. It is not only a gate before
+projection but also a compatibility filter for later readouts. Any sector that
+passes through probe filtration should emerge with enough structural trace to be
+placed into a table, a compressed lemma, or a projection sentence without losing
+its closure ancestry.
+
+\paragraph{Stabilization Proposition C (probe-filtered modes carry readout ancestry).}
+If a mode survives the probe filtration under the standing orthogonality and HC
+rules, then its later readout must retain a backward trace to the probe channel
+that selected it. Readout therefore cannot erase probe ancestry without lowering
+its status to heuristic interpretation.
+
+\subsection*{4. Appendix as proof memory lattice}
+The appendix is sharpened once more: it is now treated as a \emph{proof memory
+lattice}. Its entries are not merely stored results but nodes from which one can
+move upward to the local closure chain, sideways to equivalent interface forms,
+and downward to bounded projection language. This lattice viewpoint organizes the
+appendix as a recoverability structure rather than a list of leftovers.
+
+\paragraph{Stabilization Principle (memory-lattice admissibility).}
+An appendix entry is fully admissible only if it supports three motions:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item upward recovery to its closure/lemma ancestry,
+  \item lateral transport to equivalent tool or table interfaces, and
+  \item downward use in a bounded readout or projection context.
+\end{enumerate}
+If one of these motions fails, the entry must be marked as provisional,
+heuristic, or not yet fully normalized.
+
+\subsection*{5. Operational consequence for later versions}
+With v1.9.0 the monolith receives a clearer maturity criterion for future
+expansions. New derivations should not merely add content; they should improve
+recoverability. In practice this means that later mathematical deepening should
+prefer additions that tighten one of the following links: closure to probe,
+probe to table, table to lemma, lemma to tool, or readout back to structural
+ancestry. This keeps the entire project aligned with the structure-first rule
+while making the growing proof apparatus easier to audit and reuse.
+
+\paragraph{Operational rule for subsequent releases.}
+Whenever a new argument is introduced, one should ask not only whether the step
+is locally correct, but also whether it improves the global recoverability of
+compressed proof content. The strongest additions are those that make the same
+statement simultaneously easier to compress, easier to re-expand, and easier to
+locate inside the appendix memory lattice.
+
+
+
