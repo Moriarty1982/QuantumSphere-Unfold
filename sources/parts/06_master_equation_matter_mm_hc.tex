@@ -1,0 +1,687 @@
+\section{Toward a Structural ToE Master Equation}
+\label{sec:toe-master}
+%% ============================================================
+
+We now compress the previously established structural requirements into a
+single master equation. This equation is not introduced as an external ansatz,
+but as the minimal common form forced by the triolic structure, the
+Heisenberg compensator, the probe--closure system, the projected closure
+residue, and the phase-shifted observer frame.
+
+\begin{equation}\label{eq:toe_master_structural}
+\mathfrak G[\Psi,g]
++\mathfrak T_{\mathrm{tri}}[\Psi]
++\mathfrak H_{\mathrm{HC}}[\Psi]
++\mathfrak Q_{\mathrm{cl}}[\Psi]
++\mathfrak B_{\beta}[\Psi]
+=0 .
+\end{equation}
+
+Here $\mathfrak G[\Psi,g]$ denotes the geometric sector,
+$\mathfrak T_{\mathrm{tri}}[\Psi]$ the triolic sector dynamics,
+$\mathfrak H_{\mathrm{HC}}[\Psi]$ the Heisenberg-compensator contribution,
+$\mathfrak Q_{\mathrm{cl}}[\Psi]$ the closure term determined by the projected
+closure residue, and $\mathfrak B_{\beta}[\Psi]$ the phase-shifted observer
+term. Equation \eqref{eq:toe_master_structural} is therefore not an
+independent postulate, but the structural compression of the results obtained
+in the preceding sections.
+
+For a semi-concrete realization, one may write
+\begin{equation}\label{eq:toe_master_semiconcrete}
+\mathbf{R}[\Psi]
++\sum_{a=1}^{3} D_a\Psi_a
++\sum_{a\neq b}\Lambda_{ab}\Psi_b
++\lambda_{\mathrm{HC}}(I-C)\Psi
++\lambda_{\mathrm{cl}}\mathcal R_{\mathrm{cl}}[\Psi]
++\lambda_{\beta}(\Psi-U_{\beta}\Psi)
+=0 .
+\end{equation}
+Here $\mathbf{R}[\Psi]$ denotes the effective geometric contribution,
+$D_a$ are the operators of the triolic decomposition,
+$\Lambda_{ab}$ encode inter-sector couplings,
+$C$ is the Heisenberg compensator,
+$\mathcal R_{\mathrm{cl}}[\Psi]$ is the projected closure residue,
+and $U_{\beta}$ is the phase-shift operator of the observer frame.
+Equation \eqref{eq:toe_master_semiconcrete} should be read only as a
+semi-concrete representative of the structural master equation
+\eqref{eq:toe_master_structural}.
+
+\begin{theorem}[Structural necessity of the ToE master equation]
+\label{thm:toe_master_necessity}
+Assume that the theory is required to satisfy simultaneously:
+\begin{enumerate}
+\item a common underlying field structure $\Psi$;
+\item a triolic decomposition
+\[
+\Psi=\Psi_1\oplus\Psi_2\oplus\Psi_3;
+\]
+\item a dual unitary symmetry between the first two sectors;
+\item a Heisenberg compensator selecting the collapse/light output;
+\item a probe--closure system with projected closure residue;
+\item a phase-shifted observer frame;
+\item an Einstein limit on large-scale closure-stable configurations.
+\end{enumerate}
+Then the dynamics cannot be described by a purely geometric, purely sectorial,
+or purely observer-based equation alone. Instead, it must take the form of a
+single structural field equation
+\[
+\mathfrak G[\Psi,g]
++\mathfrak T_{\mathrm{tri}}[\Psi]
++\mathfrak H_{\mathrm{HC}}[\Psi]
++\mathfrak Q_{\mathrm{cl}}[\Psi]
++\mathfrak B_{\beta}[\Psi]
+=0,
+\]
+containing at least these five structural blocks.
+\end{theorem}
+
+\begin{proof}
+Each structural requirement excludes an incomplete description.
+
+A purely geometric equation does not encode the triolic decomposition, the
+Heisenberg compensator, or the phase-shifted observer frame. A purely
+triolic-sector equation does not account for the emergent geometric reading of
+the closure-stable background. A purely observer-based equation does not
+select physically admissible configurations. The projected closure residue
+shows that closure must enter dynamically, and the probe--closure system shows
+that this closure is not external to the field content itself. Finally, the
+Einstein limit demonstrates that the geometric sector is not optional, but a
+distinguished large-scale projection of the same structure.
+
+Hence none of the five structural contributions can be removed without
+violating one of the established premises. Therefore the dynamics must be
+governed by a single combined equation containing at least these five
+structural blocks.
+\end{proof}
+
+\begin{theorem}[Uniqueness up to structural equivalence]
+\label{thm:structural-uniqueness}
+Let $\Psi$ and $\widetilde\Psi$ be two nontrivial solutions realizing the
+structural core and satisfying the master equation
+\eqref{eq:toe_master_structural}. Then they belong to the same structural
+class up to sector-preserving unitary equivalence, compensator projection, and
+observer-frame phase shift.
+\end{theorem}
+
+\begin{proof}
+Both solutions are constrained by the same triolic decomposition, the same
+compensator logic, the same projected closure requirement, and the same
+observer-frame mechanism. Their admissible differences can therefore only lie
+in the choice of representative within one common structural organization:
+sector exchange is absorbed by unitary symmetry, collapse/light output is fixed
+up to compensator projection, and effective readout is changed only by the
+phase-shifted observer frame. Once these structurally allowed transformations
+are factored out, no independent second theory remains. Thus the admissible
+solutions are unique up to structural equivalence.
+\end{proof}
+
+\begin{proposition}[From local triolic structure to global field dynamics]
+\label{prop:local-to-global}
+The transition from local triolic structure to global field dynamics is forced
+by the following chain:
+\[
+\begin{aligned}
+&\text{local triolic decomposition}
+  \longrightarrow \text{duality and compensator action}
+  \longrightarrow \text{projected closure}\\
+&\text{closure-stable background geometry}
+  \longrightarrow \text{global master equation}.
+\end{aligned}
+\]
+In particular, Dirac-, QFT-, and Einstein-type regimes arise as structural
+projections of one common global dynamics rather than as separate starting
+points.
+\end{proposition}
+
+\begin{proof}
+Locally, the theory resolves into three sectors linked by duality and
+compensator projection. The projected closure residue then decides whether
+these local sectors assemble into a physically admissible configuration.
+Whenever closure is achieved, the resulting sector can be read as a stable
+background supporting geometric reconstruction, effective matter dynamics, and
+observer-frame projection. The global master equation is therefore not added
+from outside, but is the minimal common dynamics of all local closure-stable
+triolic realizations. Its distinguished restrictions yield the Dirac-, QFT-,
+and Einstein-type regimes established in the preceding sections.
+\end{proof}
+
+\begin{corollary}[Triolic realization of admissible solutions]
+\label{cor:toe_triolic_realization}
+Let $\Psi$ satisfy the structural master equation
+\eqref{eq:toe_master_structural}. Then every physically admissible solution
+decomposes into three necessary sectors,
+\[
+\Psi=\Psi_1\oplus\Psi_2\oplus\Psi_3,
+\]
+where $\Psi_1$ is the matter sector, $\Psi_2$ its dual tachyonic sector, and
+$\Psi_3$ the collapse/light sector selected by the Heisenberg compensator.
+\end{corollary}
+
+\begin{proof}
+The triolic term enforces the three-sector structure, the compensator term
+links the first two sectors and selects the collapse/light output, and the
+closure term excludes non-admissible configurations by the projected closure
+residue. Thus the three sectors are not optional additions, but the necessary
+realization of admissible solutions.
+\end{proof}
+
+\begin{corollary}[Structural projections of the master equation]
+\label{cor:toe_structural_projections}
+The master equation \eqref{eq:toe_master_structural} admits the following
+distinguished structural projections:
+\begin{enumerate}
+\item in the probe regime, it induces the effective Dirac-type equation of the
+probe--closure system;
+\item in the phase-shifted observer regime, it yields an effective QFT-type
+description after compensator decomposition;
+\item in the large-scale closure-stable regime, it reduces to the sharpened
+Einstein limit.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Each projection is obtained by restricting one and the same structural
+equation to a distinguished regime.
+
+In the probe regime, the auxiliary probe sector couples to the background
+through the same closure and compensator structure, yielding the effective
+Dirac-type operator. In the observer regime, the phase-shifted frame and the
+compensator decomposition produce the effective field description seen by a
+matter observer. In the large-scale regime, the closure residue and the
+sectorial fluctuations are suppressed, so that the geometric contribution
+dominates and yields the sharpened Einstein limit.
+
+Hence probe dynamics, effective QFT, and gravitational geometry are not
+separate theories, but structural projections of one common closure-stable
+equation.
+\end{proof}
+
+The significance of the master equation is that it does not add a new layer to
+the theory, but reveals the common body already implicit in the triolic
+structure, the Heisenberg compensator, the probe--closure system, and the
+closure analysis. Matter, tachyon, photon, probe dynamics, effective QFT, and
+the Einstein limit now appear as sectorial realizations or limiting
+projections of one and the same closure-stable structural equation.
+
+\section{Structural Reading of Matter, Gauge, Mass, and Higgs}
+\label{sec:structural-reading-physics}
+%% ============================================================
+
+The structural picture may now be read in compact physical form. Matter is not
+an externally added ingredient, but the closure-stable bound sector of the
+triolic decomposition. The tachyonic sector is its dual partner under the
+unitary exchange symmetry, while the photon/light sector is the
+Heisenberg-compensator output selected by collapse and closure. In this sense,
+matter, tachyon, and photon are not separate ontological primitives, but
+sectorial realizations of one common structural body.
+
+Gauge structure is read off from the admissible transitions that preserve
+closure and compensator consistency. What appears as gauge symmetry in the
+effective observer description is therefore the residual invariance of
+closure-compatible sector transport. In the same way, mass is not introduced
+as an independent primitive parameter, but as a closure/frame residue: the
+effective inertia seen by a matter observer records the nontrivial cost of
+maintaining a closure-stable bound sector under phase-shifted readout.
+
+This motivates the following compressed structural reading.
+
+\begin{proposition}[Structural reading of matter, gauge, and mass]
+\label{prop:structural-matter-gauge-mass}
+Within the closure-stable triolic system determined by
+\eqref{eq:toe_master_structural}:
+\begin{enumerate}
+\item matter is the closure-stable bound realization of the first sector;
+\item the photon/light sector is the compensator-selected collapse output;
+\item effective gauge symmetry is the invariance of closure-compatible
+sector transport;
+\item effective mass is the observer-frame residue of a nontrivial
+closure-stable bound configuration.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+The first two statements summarize the triolic decomposition together with the
+centrality of the Heisenberg compensator. Gauge structure was already shown to
+arise from the admissible symmetry content of the effective sector picture;
+within the present structural closure framework this means precisely that the
+allowed sector transitions must preserve closure and compensator consistency.
+Finally, the phase-shifted observer frame and the probe--closure analysis show
+that nontrivial bound sectors are not read out as pure closure identities but
+as effective residues. These residues are perceived as inertial or mass-like
+parameters by the observer frame.
+\end{proof}
+
+The Higgs question should then not be read as the introduction of an isolated
+extra object, but as the identification of the structural locus at which
+coupling, mediation, and effective mass readout are organized. At the present
+level of the theory, the safest statement is therefore not a final derivation,
+but a structural hypothesis.
+
+\begin{remark}[Structural role of the Higgs sector]
+\label{rem:structural-higgs-role}
+The Higgs sector is expected to arise either as the effective coupling locus of
+the closure-stable triolic system or as the observer-frame image of a deeper
+mediating point within the septinion/meta-septum organization. In either
+reading, Higgs physics is not external to the structural core, but a special
+readout of the same closure, compensator, and frame-shift mechanism.
+\end{remark}
+
+%% ============================================================
+
+
+
+\section{Structural Normalization for the Next Companion Stage}
+\label{sec:structural-normalization}
+
+\begin{remark}[Version note]
+Version \docversion\ introduces a structural normalization layer for the
+Companion. The Millennium matrix is read primarily as the global matrix
+realization of the Heisenberg compensator; the tool apparatus is split into
+general Millennium-matrix tools and special Heisenberg-compensator tools; the
+carrier/group/physical-readout distinction is made explicit; and the global
+reader orientation is organized through a master chain from triolic source to
+field-equation readout.
+\end{remark}
+
+\begin{remark}[Null axis versus light axis]
+In structurally prior parts of the Companion we use the term \emph{null axis}
+for the distinguished compensated axis selected by the MM/HC architecture.
+When the same axis is read at the physical propagation level, it may be called
+the \emph{light axis}. Thus ``light axis'' is not a second object, but the
+physical readout of the structurally prior null axis.
+\end{remark}
+
+\section{The Millennium Matrix as Global Heisenberg-Compensator}
+\label{sec:millennium-hc}
+
+\begin{definition}[Millennium matrix]
+The Millennium matrix $\mathcal M_{16}$ is the global structural matrix that
+transports one and the same Sphaera-object through its admissible algebraic,
+closure, and projection layers. It preserves identity through viewpoint
+change.
+\end{definition}
+
+\begin{definition}[Layer decomposition]
+We write
+\[
+\mathcal M_{16}
+=
+\mathcal M_{\mathrm{tri}}
++
+\mathcal M_{\mathrm{alg}}
++
+\mathcal M_{\mathrm{cl}}
++
+\mathcal M_{\mathrm{proj}},
+\]
+where $\mathcal M_{\mathrm{tri}}$ encodes the triolic kernel organization,
+$\mathcal M_{\mathrm{alg}}$ admissible algebraic realization changes,
+$\mathcal M_{\mathrm{cl}}$ closure compatibility, and
+$\mathcal M_{\mathrm{proj}}$ admissible final readout.
+\end{definition}
+
+\begin{definition}[Global Heisenberg-compensator reading]
+The Millennium matrix is said to be read as a global Heisenberg-compensator
+matrix if its action extends the local rule
+\[
+C=\tfrac12(\mathrm{id}+J)
+\]
+to the full multi-layer architecture of the Companion. Under this reading, the
+Millennium matrix is denoted by
+\[
+\mathcal H_{16},
+\]
+or identified with $\mathcal M_{16}$ when no ambiguity arises.
+\end{definition}
+
+\begin{theorem}[Structural role of the Millennium matrix]
+\label{thm:mm-role}
+The Millennium matrix is the global structural intermediary of the Companion in
+the following sense:
+\begin{enumerate}
+  \item it preserves the identity of the triolic core under admissible
+  realization change;
+  \item it transports structural content through admissible algebraic layers
+  without ontology change;
+  \item it enforces closure discipline before readout;
+  \item when read as $\mathcal H_{16}$, it becomes the global balancing
+  mechanism for physically admissible interpretation.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+The triolic layer supplies the primitive object. The admissible algebraic
+layers supply realizations of that object. Closure selects the admissible
+sector, while projection only reads out what closure has stabilized. The
+Millennium matrix is the unique global carrier of this ordered transport.
+Under the Heisenberg-compensator reading, the same transport becomes the
+global balancing mechanism across all admissible layers.
+\end{proof}
+
+\section{Carrier, Group, and Physical Readout Layers}
+\label{sec:carrier-group-readout}
+
+\begin{definition}[Carrier layer]
+The carrier layer is the total admissible structural support on which the
+Sphaera architecture is realized. It contains the triolic source structure,
+the admissible algebraic realizations, the closure discipline, and the
+transport induced by the Millennium matrix.
+\end{definition}
+
+\begin{definition}[Group layer]
+The group layer is the symmetry layer of the Companion. It consists of the
+admissible group actions, generators, and representation changes acting on
+already given carrier-layer structure.
+\end{definition}
+
+\begin{definition}[Physical readout layer]
+The physical readout layer is the final effective layer in which already
+stabilized structural and symmetry data are interpreted as physically
+meaningful sectors, observables, and field equations.
+\end{definition}
+
+\begin{theorem}[Order of interpretation]
+\label{thm:carrier-group-readout-order}
+The admissible order of interpretation is
+\[
+\text{carrier layer}
+\;\longrightarrow\;
+\text{group layer}
+\;\longrightarrow\;
+\text{physical readout layer}.
+\]
+\end{theorem}
+
+\begin{proof}
+Without a carrier there is nothing for a symmetry group to act on. Symmetries
+therefore organize admissible realizations of carrier-layer content. Only
+after structural transport and symmetry organization have been fixed may a
+physical interpretation be attached.
+\end{proof}
+
+\section{Master Structural Theorem of the Companion}
+\label{sec:master-structural-theorem}
+
+
+\begin{theorem}[Master structural theorem]
+\label{thm:master-structural}
+The Companion is governed by one common structural architecture with the
+following ordered logic:
+\[
+\begin{aligned}
+&\text{triolic source}
+ \;\longrightarrow\;
+ \text{admissible carrier}
+ \;\longrightarrow\;
+ \mathcal M_{16}
+ \;\longrightarrow\;
+ \mathcal H_{16}
+ \;\longrightarrow\;
+ \text{closure-stable sector}\\[0.2em]
+&\longrightarrow\;\text{group-layer symmetry readout}
+ \;\longrightarrow\;\text{null axis}\\[0.2em]
+&\longrightarrow\;\text{photon fix-sector}
+ \;\longrightarrow\;\text{residual localization}\\[0.2em]
+&\longrightarrow\;\text{matter / tachyon / photon sector readout}\\[0.2em]
+&\longrightarrow\;\text{Higgs mediation}
+ \;\longrightarrow\;\text{field-equation readout}.
+\end{aligned}
+\]
+\end{theorem}
+
+\begin{proof}
+The triolic source supplies the primitive structural object. The carrier layer
+provides its admissible support, while the Millennium matrix transports this
+same object through admissible realization changes. Under the
+Heisenberg-compensator reading, the same matrix becomes the global balancing
+mechanism that stabilizes the closure-compatible sector. The group layer then
+supplies admissible symmetry actions on already given stabilized structure.
+The null axis is the structurally distinguished sector carried through the
+cascade, and its terminal compensated readout is the photon fix-sector.
+Relative to that fix-sector, closure-stable residual localization yields the
+matter branch, while its $J$-dual realization yields the tachyon branch. The
+Higgs sector mediates between the compensated photon reference and the
+persistence of residual localization. Finally, the effective field equations
+read out the dynamical content of this already stabilized architecture.
+\end{proof}
+
+\begin{remark}[Compact roadmap for the reader]
+The reader may keep the following compact roadmap in mind:
+\[
+\boxed{\begin{aligned}
+&\text{one source} \to \text{one transported architecture}\\
+&\to \text{one compensated closure logic}\\
+&\to \text{three principal sector readouts} \to \text{one mediated field dynamics}
+\end{aligned}}
+\]
+\end{remark}
+
+\subsection{Schematic Master Diagram}
+\label{subsec:master-diagram}
+
+\begin{definition}[Schematic master diagram]
+\label{def:master-diagram}
+The structural logic of the Companion may be compressed into the following
+schematic master diagram:
+\[
+\mathfrak T
+\;\longrightarrow\;
+\mathfrak C
+\;\xrightarrow{\;\mathcal M_{16}\;}
+\mathfrak C^{\mathrm{adm}}
+\;\xrightarrow{\;\mathcal H_{16}\;}
+\mathfrak C^{\mathrm{cl}}
+\;\longrightarrow\;
+\mathfrak G
+\;\longrightarrow\;
+\mathfrak L
+\;\longrightarrow\;
+\mathfrak P
+\;\longrightarrow\;
+\mathfrak R
+\;\longrightarrow\;
+\mathfrak H
+\;\longrightarrow\;
+\mathfrak F.
+\]
+Here:
+\begin{align*}
+\mathfrak T &:= \text{triolic source},\\
+\mathfrak C &:= \text{carrier layer},\\
+\mathfrak C^{\mathrm{adm}} &:= \text{admissibly transported carrier},\\
+\mathfrak C^{\mathrm{cl}} &:= \text{closure-stable compensated carrier},\\
+\mathfrak G &:= \text{group-layer symmetry readout},\\
+\mathfrak L &:= \text{null-axis structure},\\
+\mathfrak P &:= \text{photon fix-sector},\\
+\mathfrak R &:= \text{residual localization sector},\\
+\mathfrak H &:= \text{Higgs-mediation sector},\\
+\mathfrak F &:= \text{field-equation readout}.
+\end{align*}
+\end{definition}
+
+\begin{remark}[Language regime along the master chain]
+\label{rem:language-regime-master-chain}
+The Companion follows a structure-first logic along the master chain up to the
+point at which a stable physical readout becomes available. Accordingly, the
+earlier stages
+\[
+\mathfrak T
+\to
+\mathfrak C
+\to
+\mathcal M_{16}
+\to
+\mathcal H_{16}
+\to
+\mathfrak G
+\to
+\mathfrak L
+\]
+are described primarily in structurally prior language. By contrast, once the
+readout has stabilized at the level of
+\[
+\mathfrak P
+\to
+\mathfrak R
+\to
+\mathfrak H
+\to
+\mathfrak F,
+\]
+physically explicit language is not only allowed but required. Thus the shift
+from structural terminology to physical terminology is intentional and marks a
+readout threshold, not a change of underlying object.
+\end{remark}
+
+\subsection{Matter, Tachyon, and Photon as Three Readouts of One Branch Architecture}
+\label{subsec:mtp-readout}
+
+\begin{definition}[Matter branch]
+The matter branch is the closure-stable bound branch whose physical readout
+retains nontrivial localization relative to the photon fix-sector.
+\end{definition}
+
+\begin{definition}[Tachyon branch]
+The tachyon branch is the $J$-dual readout of the matter branch:
+\[
+K_2 = J\!\cdot\!K_1.
+\]
+It is the branch in which the same structural source is read in its frame-dual,
+non-bound, or overextended transport mode relative to the compensated photon
+sector.
+\end{definition}
+
+\begin{definition}[Photon branch]
+The photon branch is the canonical compensated fix-sector readout $K_3$, i.e. the terminal null-axis sector selected by the Heisenberg compensator.
+\end{definition}
+
+\begin{theorem}[Three-readout principle]
+\label{thm:three-readout-principle}
+Matter, tachyon, and photon are three structurally linked readouts of one
+common branch architecture: matter is the bound closure-stable localization
+readout, tachyon is the $J$-dual unbound readout of the same branch source,
+and photon is the compensated fix-sector readout.
+\end{theorem}
+
+\begin{proof}
+Admissible sector transport does not create new ontology. The compensated
+sector is the canonical fix-sector. Hence the matter branch is determined by
+persistent closure-stable localization relative to this sector. The involution
+$J$ generates the frame-dual branch of the same source, which yields the
+tachyonic readout. The compensator selects the stabilized null/fix-sector,
+which yields the photon readout. Therefore all three branches belong to one
+common structural architecture and differ only by their mode of realization and
+readout.
+\end{proof}
+
+\subsection{Mass Readout Relative to the Null Axis and Photon Fix-Sector}
+\label{subsec:mass-null-axis}
+
+\begin{definition}[Photon fix-sector revisited]
+The photon sector is the canonical compensated readout of the global null
+axis:
+\[
+L=\bigcap_{n\ge 0} L_n = S_0.
+\]
+It is the sector in which the frame-sensitive imbalance has been fully
+neutralized and the structural readout lies entirely in the HC-fix sector.
+\end{definition}
+
+\begin{definition}[Massive branch]
+A branch is called massive if it remains closure-stably localized and does not
+collapse completely into the global null/fix sector. Equivalently, a massive
+branch is one whose physical readout retains a nontrivial localization residue
+relative to the photon sector.
+\end{definition}
+
+\begin{theorem}[Massive versus massless readout]
+\label{thm:massive-vs-massless}
+Within the MM/HC architecture, the distinction between massive and massless
+physical readout is the distinction between complete reduction to the
+compensated photon fix-sector and closure-stable persistence of localization
+relative to that fix-sector.
+\end{theorem}
+
+\begin{proof}
+If a branch reduces completely to the null/fix sector, no residual
+localization remains, and the physical readout is massless. If, however, a
+branch remains closure-stably localized and does not reduce completely to the
+null/fix sector, then a nonzero localization residue survives relative to the
+photon reference sector. This is precisely the massive readout.
+\end{proof}
+
+\subsection{Higgs Readout as Mediation Between Fix-Sector and Residual Localization}
+\label{subsec:higgs-fix-localization}
+
+\begin{definition}[Higgs mediation principle]
+\label{def:higgs-mediation}
+The Higgs readout is the effective mediation principle that governs how
+closure-stable localization is maintained, transferred, or expressed relative
+to the compensated photon fix-sector.
+\end{definition}
+
+\begin{theorem}[Structural role of the Higgs sector]
+\label{thm:higgs-role-refined}
+Within the MM/HC architecture, the Higgs sector is the distinguished coupling
+readout that mediates between the compensated photon/null fix-sector and the
+effective mass readout of closure-stable localized branches.
+\end{theorem}
+
+\begin{proof}
+By the previous null-axis analysis, the photon sector is the terminal
+compensated fix-sector. By the mass analysis, massive readout is residual
+localization relative to that fix-sector. Hence the remaining structural task
+is to identify the admissible interface through which this residual
+localization is expressed in the physical readout layer. The Higgs sector is
+precisely this interface.
+\end{proof}
+
+\section{Field Equations as Physical Readout of the MM/HC Structure}
+\label{sec:field-readout}
+
+\begin{definition}[Field-readout principle]
+\label{def:field-readout-principle}
+A field equation is admissible in the present framework if it is obtained as
+the effective physical readout of carrier-layer structure, group-layer symmetry
+organization, and MM/HC-mediated closure stabilization.
+\end{definition}
+
+\begin{definition}[Minimal structural field content]
+The minimal physical readout of the closure-stable MM/HC architecture is
+carried by the tuple
+\[
+(\Psi,\mathcal A_\mu,\hat P_{C_7},\mathcal H_C),
+\]
+where $\Psi$ is the effective matter/probe field, $\mathcal A_\mu$ the
+effective symmetry connection induced by the group layer,
+$\hat P_{C_7}$ the closure projector selecting the admissible stable sector,
+and $\mathcal H_C$ the effective Heisenberg-compensator field.
+\end{definition}
+
+\begin{theorem}[Minimal MM/HC field equation]
+\label{thm:minimal-mmhc-field-equation}
+The minimal local field equation compatible with the carrier layer, the group
+layer, and the MM/HC closure architecture is
+\[
+\bigl(i\Gamma^\mu\mathcal D_\mu-\Omega\bigr)\Psi=0,
+\]
+with effective operator
+\[
+\Omega
+=
+m_0\mathbf 1
++\alpha\,\hat P_{C_7}\mathcal M_{16}\hat P_{C_7}
++\beta\,\mathcal T
++\gamma\,\mathcal H_C.
+\]
+\end{theorem}
+
+\begin{proof}
+The carrier layer fixes the underlying admissible object and its triolic
+organization. The group layer supplies the symmetry transport term encoded by
+$\mathcal A_\mu$. The MM/HC architecture contributes closure-stable internal
+transport via $\hat P_{C_7}\mathcal M_{16}\hat P_{C_7}$ and compensator
+balancing via $\mathcal H_C$. Finally, the triolic source remains visible at
+the level of effective coupling, which yields the term $\mathcal T$. No term
+may be removed without losing one previously established layer.
+\end{proof}

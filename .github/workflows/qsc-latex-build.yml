@@ -1,0 +1,79 @@
+name: QSC LaTeX PDF Build
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_dir:
+        description: "Directory containing canonical TEX sources"
+        required: false
+        default: "sources"
+      build_historical:
+        description: "Build historical witness files as well"
+        required: true
+        type: boolean
+        default: true
+  push:
+    branches:
+      - main
+      - automation
+    tags:
+      - "v*"
+    paths:
+      - "sources/**"
+      - "scripts/qsc_latex_build.py"
+      - ".github/workflows/qsc-latex-build.yml"
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  SOURCE_DIR: ${{ github.event.inputs.source_dir || 'sources' }}
+  BUILD_HISTORICAL: ${{ github.event.inputs.build_historical || 'true' }}
+
+concurrency:
+  group: qsc-latex-build-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build-pdfs:
+    name: Build QSC PDFs
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install TeX Live and build helpers
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            latexmk \
+            texlive-latex-base \
+            texlive-latex-recommended \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-science \
+            texlive-pictures \
+            texlive-bibtex-extra \
+            texlive-extra-utils \
+            ghostscript \
+            poppler-utils \
+            zip \
+            python3
+
+      - name: Build release PDFs
+        run: |
+          python3 scripts/qsc_latex_build.py \
+            --source-dir "$SOURCE_DIR" \
+            --output-dir "build/qsc-pdf-artifacts" \
+            --build-historical "$BUILD_HISTORICAL"
+
+      - name: Upload PDF and audit artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: qsc-pdf-artifacts-${{ github.ref_name }}-${{ github.run_number }}
+          path: build/qsc-pdf-artifacts
+          if-no-files-found: error
+          retention-days: 30

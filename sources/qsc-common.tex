@@ -1,0 +1,85 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{geometry,hyperref,booktabs,array,longtable,graphicx,float}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,fit,calc}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{fancyhdr,bm}
+\usepackage{slashed}
+\usepackage{multicol}
+\setlength{\emergencystretch}{2em}
+\allowdisplaybreaks[1]
+\usepackage[style=ddmmyyyy]{datetime2}
+
+\newcommand{\safegraphic}[2][]{%
+  \IfFileExists{#2}{\includegraphics[#1]{#2}}{%
+    \fbox{\begin{minipage}{0.9\linewidth}\centering\small Placeholder figure not bundled in this release:\\texttt{\detokenize{#2}}\end{minipage}}%
+  }%
+}
+
+\geometry{margin=2.5cm}
+
+% Common layout and theorem/macro layer shared by active and historical entry points.
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\footnotesize\textcopyright\ 2026 Marc Brendecke. Preprint --- not peer reviewed.}
+\fancyfoot[R]{\footnotesize\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{axiom}{Axiom}
+
+% --- Document metadata ---
+\newcommand{\docversion}{3.35.0}
+\newcommand{\docdate}{\DTMdisplaydate{2026}{04}{25}{-1}}
+
+% --- Macros ---
+\newcommand{\bsym}{\beta_{\mathrm{sym}}}
+\newcommand{\gL}{\gamma_L}
+\newcommand{\gstring}{\gamma_{\mathrm{string}}}
+\newcommand{\gBI}{\gamma_{\mathrm{BI}}}
+\newcommand{\lP}{\ell_P}
+\newcommand{\zminus}{z^-}
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\OO}{\mathbb{O}}
+\newcommand{\Hplus}{H^+}
+\newcommand{\Hplusplus}{H^+_+}
+\newcommand{\Hplusminus}{H^+_-}
+\newcommand{\WA}{\mathcal{W}(A^1)}
+\newcommand{\KC}{\hat{K}}
+
+\lstdefinestyle{pyappendix}{
+  basicstyle=\ttfamily\scriptsize,
+  breaklines=true,
+  breakatwhitespace=false,
+  columns=fullflexible,
+  keepspaces=true,
+  showstringspaces=false,
+  frame=single,
+  framerule=0.2pt,
+  tabsize=4
+}
+
+
+% --- v3.31.0 pre-OP frontier macros ---
+\newcommand{\Rlive}{\mathbf{R}_{\mathrm{live}}}
+\newcommand{\Rcurr}{\mathbf{R}_{\mathrm{curr}}}
+\newcommand{\Rtilde}{\widetilde{\mathbf{R}}_{\mathrm{live}}}
+\newcommand{\Rcurrtilde}{\widetilde{\mathbf{R}}_{\mathrm{curr}}}
+\newcommand{\Ew}{\widetilde{\mathcal{E}}_{w}}
+\newcommand{\Wpref}{\mathfrak{W}^{\mathrm{pref}}_{\mathrm{curr}}}
+\newcommand{\Wdir}{\mathfrak{W}^{\mathrm{dir}}_{\mathrm{next}}}
+
+
+% Modular-source synchronization note: sources/ is the canonical current source tree; Git tags carry versions.

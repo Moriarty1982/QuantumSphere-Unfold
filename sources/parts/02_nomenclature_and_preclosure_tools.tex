@@ -1,0 +1,1084 @@
+\section*{Nomenclature}
+\begin{quote}\small
+\noindent\textbf{Status.} \emph{Reader-support block.}\par
+\noindent\textbf{Block function.} This section is a navigation aid: it fixes symbols and abbreviations so later sections can be read without repeatedly reopening earlier definitions.
+\end{quote}
+\addcontentsline{toc}{section}{Nomenclature}
+
+\noindent\begin{minipage}[t]{0.48\textwidth}
+\small
+\noindent\textbf{Spaces and operators}
+\begin{description}[leftmargin=1.8em, labelindent=0pt, itemsep=1pt]
+  \item[$\Hplus$] Hardy space; physical Hilbert space
+  \item[$\Hplusplus$] $J$-symmetric (bosonic) sector
+  \item[$\Hplusminus$] $J$-antisymmetric (fermionic) sector
+  \item[$L_0$] Self-adjoint generator on $\Hplusplus$
+  \item[$J$] Fundamental involution $J:s\mapsto 1-\bar s$
+  \item[$C(f)$] Heisenberg compensator: $\tfrac{1}{2}(f+Jf)$
+  \item[$A(f)$] Antisymmetric component: $\tfrac{1}{2}(f-Jf)$
+  \item[$\KC$] Cascade operator $\hat K:S_n\to S_{n-1}$
+  \item[$\WA$] Weyl algebra $\mathcal{W}(A^1)$
+\end{description}
+
+\medskip
+\noindent\textbf{Geometric quantities}
+\begin{description}[leftmargin=1.8em, labelindent=0pt, itemsep=1pt]
+  \item[$q_n$] Biquaternion ground state $\in\HH\otimes\mathbb{C}$
+  \item[$\tau_n$] Proper time: $\tau_n^2=|q_n|^2$
+  \item[$\zminus$] Frame variable; displacement from $z^-=0$
+  \item[$K_1,K_2,K_3$] Matter, tachyon, photon kernels
+  \item[$L_n$] Light axis of stratum $S_n$
+  \item[$S_n$] Stratum $n$; $S_0=\{z^-=0\}$ photon ground state
+\end{description}
+
+\medskip
+\noindent\textbf{Frame parameters}
+\begin{description}[leftmargin=1.8em, labelindent=0pt, itemsep=1pt]
+  \item[$\bsym$] Structural frame offset $\sqrt{(\gL-1)/(\gL+1)}\approx 0.5493$
+  \item[$\gL$] Frame Lorentz factor $\gBI/\gstring\approx 1.864$
+  \item[$\gBI$] Barbero--Immirzi parameter $\approx 0.2375$
+  \item[$\gstring$] String coupling $\ln 2/(\pi\sqrt{3})\approx 0.1274$
+  \item[$k(X)$] Frame-insertion count; $X^{(\gamma)}=\gL^{-k}\cdot X^{(m)}$
+\end{description}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\small
+\noindent\textbf{Physical constants (matter-frame CODATA)}
+\begin{description}[leftmargin=1.8em, labelindent=0pt, itemsep=1pt]
+  \item[$\lP$] Planck length $1.616\times10^{-35}$ m; $k=3/2$
+  \item[$\alpha$] Fine-structure constant; $k(\alpha^{-1})=1$
+  \item[$\hbar$] Reduced Planck constant; $k(\hbar)=1$
+  \item[$G_N$] Gravitational constant; $k(G_N)=2$
+  \item[$c$] Speed of light; $k(c)=0$ (frame-invariant)
+\end{description}
+
+\medskip
+\noindent\textbf{Lagrangian and field structure}
+\begin{description}[leftmargin=1.8em, labelindent=0pt, itemsep=1pt]
+  \item[$\mathcal{L}_{\mathrm{kin}}$] Kinetic term $\langle f,L_0 f\rangle$
+  \item[$\mathcal{L}_{\mathrm{HC}}$] HC confinement term
+  \item[$\mathcal{L}_{\mathrm{frame}}$] Frame term $\bsym^2\langle f,f\rangle$; source of $\Lambda_{\mathrm{obs}}$
+  \item[$\mathcal{M}_{16}$] $16\times16$ Millennium matrix
+  \item[$\hat P_{C_7}$] Meta-Septum closure projector
+  \item[$\hat{\mathcal{R}}_\beta$] Shifted GUE pacer $\hat R_{\mathrm{GUE}}\,e^{i\pi\bsym}$
+\end{description}
+
+\medskip
+\noindent\textbf{Cosmological quantities}
+\begin{description}[leftmargin=1.8em, labelindent=0pt, itemsep=1pt]
+  \item[$\Omega_\Lambda$] Dark energy fraction $1-\bsym^2\approx 2/3$
+  \item[$\Omega_M$] Matter fraction $\bsym^2\approx 1/3$
+  \item[$\Sigma(\tau)$] Trace formula $1-\Theta(\tau)+R(\tau)$
+\end{description}
+
+\medskip
+\noindent\textbf{Abbreviations}
+\begin{description}[leftmargin=1.8em, labelindent=0pt, itemsep=1pt]
+  \item[GUE] Gaussian Unitary Ensemble ($\beta=2$)
+  \item[HC] Heisenberg compensator
+  \item[LQG] Loop Quantum Gravity ($\Hplusminus$ sector)
+  \item[RH] Riemann Hypothesis ($z^-=0$ for all zeros)
+  \item[SM] Standard Model $U(1)\times SU(2)\times SU(3)$
+\end{description}
+\end{minipage}
+
+
+\clearpage
+
+\section*{Historical tool layer and pre-closure live cores}
+\begin{quote}\small
+\noindent\textbf{Status.} \emph{Historical proof-memory, not the active theorem core.}\par
+\noindent\textbf{Block function.} This section preserves older tool extractions and live-burden records for genealogy and local reconstruction, but current burden labels and current routing rules are governed by the active main line.
+\end{quote}
+\addcontentsline{toc}{section}{Historical tool layer and pre-closure live cores}
+\begin{remark}
+This block is retained only as a historical record of the last pre-closure burden analysis. It preserves the compression logic from which the OP transport theorem and the OP3 residual/shell interface were extracted, but it no longer states the active proof core of the document.
+\end{remark}
+
+\subsection*{Current extracted tool layer (historical extraction snapshot)}
+\begin{description}[leftmargin=2.2em, labelindent=0pt, itemsep=0.5em]
+  \item[Transport-first tool.] Whenever a candidate closure statement mixes continuum transport with visible readout, the admissible move is to fix the transport branch first and delay HC-readout to the downstream stage. In particular, transport selects the branch; readout does not create a second primitive continuum channel.
+  \item[Readout-after-transport tool.] Once the branch has been fixed by admissible transport, the Heisenberg-compensator readout is treated as a downstream projection or readout map on that branch. It may compress the visible law, but it does not reopen the continuum-side selection problem.
+  \item[Admissible-readout uniqueness tool.] Once a transport branch and its matter-frame parameter have already been fixed, every further canonical positive scalar readout must remain a downstream realization of that same admissible body. If no second primitive continuum channel opens and grouped-layer transport produces no ontology drift, then canonical normalization cannot differ from the standard matter-frame readout without reintroducing exactly the forbidden second channel.
+  \item[Checkpoint-absorption tool.] A recovered checkpoint may be absorbed into the active line whenever it introduces no new primitive visible scalar, no second independent branch law, and no incompatible residual interface. In that case the checkpoint is proof-memory and normalization support, not a parallel mathematical front.
+  \item[Epsilon-trap tool.] Let
+  \[
+    \mathfrak b_{N,m}:=\iota^{(Y)}_{N,m}+\sin|\kappa_{N,m}|,
+    \qquad
+    \mathfrak b_{\mathrm{crit}}:=0.578937.
+  \]
+  If on an admissible window one has entry slack
+  \[
+    \Sigma_{N,m}:=\mathfrak b_{\mathrm{crit}}-\mathfrak b_{N,m}\ge \varepsilon_{\mathrm{trap}}>0
+  \]
+  and the next-step drift of \(\mathfrak b\) does not exceed that slack, then the branch remains inside the admissible tube. This is the current non-escape tool for the first OP~5 valley window.
+
+  \item[OP~1 epsilon-bridge tool.] Let \(\gamma_{\mathrm{br}}\) be the distinguished bridge root and let \(T_\mu\) be the bridge self-consistency map from Section~3.8.16. If one works in a local tube \(|b-\beta_{\mathrm{br}}|\le \varepsilon_{\mathrm{br}}\) on which
+  \[
+    \sup_{|b-\beta_{\mathrm{br}}|\le \varepsilon_{\mathrm{br}}}\bigl|\partial_b T_{\gamma_{\mathrm{br}}}(b)\bigr|\le L_{\mathrm{br}}<1,
+  \]
+  then entry into that tube implies non-escape and convergence to the same bridge fixed point. In particular, once the normalization defect is shown to lie inside a contractive \(\varepsilon\)-tube around \(\gamma_{\mathrm{br}}\), OP~1 becomes a local fixed-point identification problem rather than a second branch-search problem.
+  \item[Shared matrix-leakage tool.] Let \(J\) denote the Umkehrwalze/involution, let \(C:=\tfrac12(\mathrm{id}+J)\) be the HC readout projector, and let \(\mathcal M\) denote the Millennium matrix on the active grouped transport layer. The first shared obstruction channel for OP~1 and OP~5 should be tested through the two leakage diagnostics
+  \[
+    E_{\mathrm{comm}}:=[\mathcal M,J],
+    \qquad
+    E_{\mathrm{leak}}:=(\mathrm{id}-C)\mathcal M C.
+  \]
+  If both vanish on the active branch, then the admissible channel is stable under transport, reversal, and HC readout. If one or both persist, then the remaining OP~1 bridge residue and the surviving OP~5 valley residue should first be treated as two readouts of the same underfixed matrix core rather than as independent end problems.
+
+  \item[Cryptanalytic translation tool.] The matrix diagnostics above admit a structure-first translation of three familiar attack styles. \emph{Linear cryptanalysis} becomes the search for biased linear masks on the even/odd and visible/orthogonal matrix blocks, especially for linear functionals that simultaneously see the OP~1 bridge scalar and the OP~5 first-window branch load. \emph{Differential cryptanalysis} becomes the study of controlled perturbations of branch/readout inputs and their propagation through \(\mathcal M\), \(J\), and \(C\), in order to detect whether small input differences are amplified mainly in the same shared leakage sector. \emph{Linear-differential cryptanalysis} becomes the mixed test in which one first propagates a controlled perturbation through the matrix layer and then reads the output through a chosen linear mask. In the present framework this is the natural way to test whether a single hidden leakage mode explains both the OP~1 bridge defect and the OP~5 valley defect.
+  \item[Shared phase-coupling tool.] Once a perturbation family \(\lambda\mapsto x_\lambda\) has been chosen, define the visible OP~1 and OP~5 residual readouts along that family and normalize them to dimensionless traces. The decisive test is then whether the two normalized traces occupy one nearly one-dimensional line in the defect plane (same carrier, same phase up to sign) or a near-elliptic/quadrature orbit (same carrier, phase shift close to \(\pm\pi/2\)). In either case the question is no longer whether OP~1 and OP~5 are independent, but whether they are two masked readouts of one shared hidden oscillatory leakage mode.
+  \item[Shared leakage probe-family tool.] Rather than perturbing the entire Millennium matrix blindly, choose a baseline HC-even state \(v\) and a bounded test matrix \(K\), and probe only the cross-sector channel through
+  \[
+    \Delta_{\mathrm{shared}}:= (\mathrm{id}-C)KC + CK(\mathrm{id}-C),
+    \qquad
+    \mathcal M_\lambda := \mathcal M + \lambda\,\Delta_{\mathrm{shared}}.
+  \]
+  This family leaves the pure even/even and odd/odd blocks untouched to first order and perturbs only the admissible/complementary coupling. It is therefore the preferred one-parameter probe for deciding whether OP~1 and OP~5 really see the same hidden leakage mode.
+\end{description}
+
+\subsection*{Historical live-burden record prior to OP transport closure}
+\paragraph{OP~1 and OP~5.}
+At the last pre-closure stage, the OP~1 burden had already collapsed to one local bridge remainder, while the OP~5 burden had collapsed to first-window non-escape on an admissible epsilon-trapped branch. The present OP transport theorem absorbs that compression stage and turns the former burdens into historical extraction data rather than active proof cores.
+
+\subsection*{Shared matrix leakage and cryptanalytic translation}
+\label{sec:working-shared-matrix-cryptanalytic-translation}
+The present state of the document suggests that the surviving OP~1 and OP~5 residues may be two visible readouts of one still underfixed HC/MM/J coupling. In that situation it is more efficient to attack the common matrix core than to continue treating both residuals as fully separate local endgames.
+
+\begin{definition}[Provisional shared matrix leakage channels]
+\label{def:working-shared-matrix-leakage}
+Let \(J\) be the involutive Umkehrwalze, let
+\[
+  C:=\frac12(\mathrm{id}+J)
+\]
+be the HC readout projector, and let \(\mathcal M\) be the Millennium matrix on the active grouped transport layer. Define the two basic leakage channels
+\[
+  E_{\mathrm{comm}}:=[\mathcal M,J],
+  \qquad
+  E_{\mathrm{leak}}:=(\mathrm{id}-C)\mathcal M C.
+\]
+The first channel measures failure of transport/reversal compatibility; the second measures leakage of the admissible HC-even sector into the complementary sector after Millennium transport.
+\end{definition}
+
+\begin{proposition}[Provisional stable-channel criterion]
+\label{prop:working-stable-channel-criterion}
+If on the active branch one has
+\[
+  E_{\mathrm{comm}}=0,
+  \qquad
+  E_{\mathrm{leak}}=0,
+\]
+then the admissible HC channel is stable under Millennium transport and Umkehrwalze reversal. In particular, no first-order matrix-induced off-sector drift remains that could independently separate a bridge readout from a first-window valley readout.
+\end{proposition}
+
+\begin{proof}
+The identity \(E_{\mathrm{comm}}=0\) says that \(\mathcal M\) and \(J\) commute, so reversal and Millennium transport preserve the same even/odd splitting. The identity \(E_{\mathrm{leak}}=0\) says that applying \(\mathcal M\) to an HC-even state leaves no component in the HC-odd complement. Together these identities mean that the admissible channel selected by \(C\) is invariant under the combined transport/reversal layer. Hence any remaining visible residue must come from some other source, not from first-order matrix leakage between admissible and complementary sectors.
+\end{proof}
+
+\begin{remark}[Provisional OP~1/OP~5 coupling heuristic]
+\label{rem:working-op1-op5-coupling-heuristic}
+If OP~1 and OP~5 both remain slightly open after branch-fixing and readout-fixing, then the most economical explanation is that the shared matrix core is not yet sharp enough. In that reading, the bridge residue of OP~1 and the first-window branch residue of OP~5 are two different masks of the same small leakage mode. The diagnostics of Definition~\ref{def:working-shared-matrix-leakage} are therefore not a side remark; they are the first place where the two remaining channels should be tested jointly.
+\end{remark}
+
+\paragraph{Cryptanalytic translation.}\label{par:working-cryptanalytic-translation}
+The same matrix question admits a structure-first translation of three familiar cryptanalytic styles.
+\begin{description}[leftmargin=2.2em, labelindent=0pt, itemsep=0.5em]
+  \item[Linear route.] Choose linear masks on the \(J\)-even/odd block decomposition or on visible/orthogonal packet channels, and test whether the masked OP~1 bridge residue and the masked OP~5 first-window residue exhibit the same small bias. In the present framework, this means searching for linear functionals on \(\mathcal M\) that simultaneously see both open channels.
+  \item[Differential route.] Apply controlled perturbations to the input branch/readout data and track the induced difference propagation through \(\mathcal M\), \(J\), and \(C\). If the same perturbation pattern repeatedly feeds both the bridge and valley residues, this is strong evidence for a shared leakage sector rather than two independent local failures.
+  \item[Linear-differential route.] First propagate a controlled perturbation through the matrix layer, then read the result through a chosen linear mask. This mixed route is often the sharpest one when a hidden mode is too weak to dominate either purely linear or purely differential tests by itself but becomes visible once one combines propagation with selective masked readout.
+\end{description}
+
+\paragraph{Provisional consequence.}
+These tools do not yet prove that the shared leakage mode is nonzero, nor that it completely explains both OP~1 and OP~5. What they do show is where the next efficient attack should land: not on arbitrary matrix fitting, but on the smallest block of \(\mathcal M\) that still fails to commute with \(J\) or still leaks through \((\mathrm{id}-C)\mathcal M C\).
+
+\subsection*{Shared phase-coupling diagnostic for OP~1 and OP~5}
+\label{sec:working-shared-phase-coupling-diagnostic}
+The remaining OP~1 and OP~5 residues may still be too coupled to close independently. A natural last diagnostic is therefore whether they are driven by one common hidden carrier: either nearly in phase, or approximately in quadrature like sine and cosine. This is stronger than asking whether both are merely small. It asks whether the two visible end residues are just two phase-shifted readouts of the same underfixed matrix mode.
+
+\begin{definition}[Provisional normalized residual traces along a perturbation family]
+\label{def:working-shared-phase-traces}
+Let \(\lambda\mapsto x_\lambda\) be an admissible one-parameter perturbation family on the active branch, obtained for example by controlled transport/readout perturbations in the sense of the differential or linear-differential tools above. Let
+\[
+  d_1(\lambda):=\delta_{\mathrm{OP1}}(x_\lambda),
+  \qquad
+  d_5(\lambda):=\delta_{\mathrm{OP5}}(x_\lambda)
+\]
+be the corresponding visible residual channels. Fix positive scales \(A_1,A_5>0\) on the observation window and define the normalized traces
+\[
+  u_1(\lambda):=\frac{d_1(\lambda)}{A_1},
+  \qquad
+  u_5(\lambda):=\frac{d_5(\lambda)}{A_5}.
+\]
+Define the complex defect trace
+\[
+  Z(\lambda):=u_1(\lambda)+ i\,u_5(\lambda).
+\]
+\end{definition}
+
+\begin{definition}[Provisional common-carrier and quadrature diagnostics]
+\label{def:working-common-carrier-diagnostic}
+We say that the normalized residues admit a \emph{common-carrier representation} on a window \(I\) if there are a phase function \(\theta:I\to\mathbb R\), an amplitude ratio \(\rho>0\), a phase shift \(\varphi\in[-\pi,\pi]\), and error terms \(e_1,e_5\) such that
+\[
+  u_1(\lambda)=\cos\theta(\lambda)+e_1(\lambda),
+  \qquad
+  u_5(\lambda)=\rho\cos\bigl(\theta(\lambda)+\varphi\bigr)+e_5(\lambda).
+\]
+The case \(\varphi\approx 0\) or \(\varphi\approx \pi\) is called the \emph{same-phase regime}; the case \(\varphi\approx \pm \pi/2\) is called the \emph{quadrature regime}.
+\end{definition}
+
+\begin{proposition}[Provisional one-mode image test]
+\label{prop:working-one-mode-image-test}
+Assume the OP~1 and OP~5 residues are driven to first order by one shared hidden leakage parameter \(\varepsilon_{\mathrm{shared}}(\lambda)\), in the sense that on a window \(I\)
+\[
+  d_1(\lambda)=a_1\,\varepsilon_{\mathrm{shared}}(\lambda)+r_1(\lambda),
+  \qquad
+  d_5(\lambda)=a_5\,\varepsilon_{\mathrm{shared}}(\lambda)+r_5(\lambda),
+\]
+with fixed nonzero coefficients \(a_1,a_5\) and small remainders \(r_1,r_5\). Then the image of \(\lambda\mapsto (u_1(\lambda),u_5(\lambda))\) is, up to the normalized remainder terms, one-dimensional in the defect plane. In particular, if the normalized trace does \emph{not} spread over a genuinely two-dimensional region, then OP~1 and OP~5 should first be treated as two readouts of one common carrier rather than as independent end defects.
+\end{proposition}
+
+\begin{proof}
+After normalization one has
+\[
+  u_1(\lambda)=\alpha_1\,\varepsilon_{\mathrm{shared}}(\lambda)+\tilde r_1(\lambda),
+  \qquad
+  u_5(\lambda)=\alpha_5\,\varepsilon_{\mathrm{shared}}(\lambda)+\tilde r_5(\lambda)
+\]
+for fixed nonzero constants \(\alpha_1,\alpha_5\). The leading image therefore lies on the line spanned by \((\alpha_1,\alpha_5)\). Any two-dimensional spread comes only from the remainders. Hence a numerically thin image in the defect plane is evidence that both visible channels are reading the same hidden scalar mode.
+\end{proof}
+
+\begin{proposition}[Provisional quadrature criterion]
+\label{prop:working-quadrature-criterion}
+Assume there are a phase function \(\theta\), a positive ratio \(\rho\), and a small error bound \(\eta_{\mathrm{ph}}>0\) such that on a window \(I\)
+\[
+  |u_1(\lambda)-\cos\theta(\lambda)|\le \eta_{\mathrm{ph}},
+  \qquad
+  |u_5(\lambda)-\rho\sin\theta(\lambda)|\le \eta_{\mathrm{ph}}.
+\]
+Then the defect trace \(Z(\lambda)\) lies in an \(O(\eta_{\mathrm{ph}})\)-neighborhood of an ellipse centered at the origin. In particular, OP~1 and OP~5 are not independent in that regime; they are two quadrature readouts of one common carrier.
+\end{proposition}
+
+\begin{proof}
+In the ideal case \(u_1=\cos\theta\) and \(u_5=\rho\sin\theta\), the image satisfies
+\[
+  u_1^2+\frac{u_5^2}{\rho^2}=1,
+\]
+so the trace is an ellipse. The stated perturbation bounds place the observed trace in a tube of width \(O(\eta_{\mathrm{ph}})\) around that ellipse. Thus the visible residues are phase-coupled and should be interpreted as quadrature projections of one shared mode.
+\end{proof}
+
+\begin{remark}[Why this is the last useful diagnostic]
+\label{rem:working-last-shared-phase-diagnostic}
+This test separates two very different endgames. If the defect trace is line-like or near-elliptic, then OP~1 and OP~5 should be closed through a \emph{shared carrier} argument, not through two isolated closure arguments. If the trace really fills a two-dimensional region even after normalization and controlled perturbation, then the hypothesis of one shared hidden mode is too naive and the remaining residues are genuinely less coupled than they currently appear.
+\end{remark}
+
+
+\subsection*{Concrete HC/MM/J probe family for the shared carrier test}
+The phase-coupling diagnostic becomes much more informative once one stops speaking about an abstract perturbation family and instead deforms only the suspected HC/MM/J leakage channel. The right first family is therefore not a full matrix refit, but a cross-sector probe that touches exactly the admissible/complementary interface.
+
+\begin{definition}[Provisional shared leakage probe family]
+\label{def:working-shared-leakage-probe-family}
+Fix an HC-even baseline state \(v\in \operatorname{im} C\) and a bounded test matrix \(K\) on the active grouped transport layer. Define
+\[
+  \Delta_{\mathrm{shared}}:=(\mathrm{id}-C)KC + CK(\mathrm{id}-C)
+\]
+and the one-parameter probe family
+\[
+  \mathcal M_\lambda:=\mathcal M+\lambda\,\Delta_{\mathrm{shared}},
+  \qquad |
+  \lambda|\le \lambda_0.
+\]
+The associated transported state is
+\[
+  y_\lambda:=\mathcal M_\lambda C v.
+\]
+Define the masked bridge and valley probe traces by
+\[
+  d^{\mathrm{probe}}_1(\lambda):=L_1\bigl((\mathrm{id}-C)y_\lambda\bigr),
+  \qquad
+  d^{\mathrm{probe}}_5(\lambda):=L_5\bigl((\mathrm{id}-C)y_\lambda\bigr),
+\]
+where \(L_1\) and \(L_5\) are fixed linear masks extracting the OP~1 bridge-sensitive and OP~5 first-window-sensitive visible directions from the complementary output channel.
+\end{definition}
+
+\begin{proposition}[Provisional first-order isolation of the shared leakage sector]
+\label{prop:working-first-order-shared-leakage-isolation}
+The probe family of Definition~\ref{def:working-shared-leakage-probe-family} perturbs the admissible/complementary coupling only. More precisely,
+\[
+  C\,\Delta_{\mathrm{shared}}\,C = 0,
+  \qquad
+  (\mathrm{id}-C)\,\Delta_{\mathrm{shared}}\,(\mathrm{id}-C)=0,
+\]
+and therefore
+\[
+  (\mathrm{id}-C)y_\lambda
+  = (\mathrm{id}-C)\mathcal M C v + \lambda\,(\mathrm{id}-C)KC v.
+\]
+Consequently,
+\[
+  d^{\mathrm{probe}}_j(\lambda)=d^{\mathrm{probe}}_j(0)+\lambda\,L_j\bigl((\mathrm{id}-C)KC v\bigr),
+  \qquad j\in\{1,5\}.
+\]
+\end{proposition}
+
+\begin{proof}
+Since \(C(\mathrm{id}-C)=0=(\mathrm{id}-C)C\), one has
+\[
+  C\Delta_{\mathrm{shared}}C
+  = C(\mathrm{id}-C)KC C + CCK(\mathrm{id}-C)C = 0,
+\]
+and similarly
+\[
+  (\mathrm{id}-C)\Delta_{\mathrm{shared}}(\mathrm{id}-C)=0.
+\]
+Applying \((\mathrm{id}-C)\) to
+\(y_\lambda=(\mathcal M+\lambda\Delta_{\mathrm{shared}})Cv\)
+and using \(Cv=v\) gives
+\[
+  (\mathrm{id}-C)y_\lambda
+  = (\mathrm{id}-C)\mathcal M C v + \lambda\,(\mathrm{id}-C)\Delta_{\mathrm{shared}} C v
+  = (\mathrm{id}-C)\mathcal M C v + \lambda\,(\mathrm{id}-C)KC v.
+\]
+Applying the linear masks \(L_1,L_5\) yields the stated first-order formulas.
+\end{proof}
+
+\begin{proposition}[Provisional concrete one-mode and quadrature tests on the probe family]
+\label{prop:working-concrete-probe-family-tests}
+Let
+\[
+  a_1:=L_1\bigl((\mathrm{id}-C)KC v\bigr),
+  \qquad
+  a_5:=L_5\bigl((\mathrm{id}-C)KC v\bigr).
+\]
+Then the probe family has the following first-order diagnostics.
+\begin{enumerate}[label=(\roman*), leftmargin=2em]
+  \item If \((a_1,a_5)\neq (0,0)\), the image of
+  \(\lambda\mapsto (d^{\mathrm{probe}}_1(\lambda),d^{\mathrm{probe}}_5(\lambda))\)
+  is first-order one-dimensional, hence consistent with a shared carrier mode.
+  \item If, in addition, one introduces the reversal-paired probe
+  \(\widetilde K:=JK\) and the corresponding coefficients
+  \((\tilde a_1,\tilde a_5)\), then a near-orthogonality relation
+  \[
+    a_1\tilde a_1 + a_5\tilde a_5 \approx 0
+  \]
+  is first-order evidence for a quadrature-type coupling between the OP~1 and OP~5 visible readouts.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Part (i) follows immediately from Proposition~\ref{prop:working-first-order-shared-leakage-isolation}, since both traces are affine functions of the same scalar parameter \(\lambda\) with direction vector \((a_1,a_5)\). For part (ii), the reversal-paired probe produces a second direction vector \((\tilde a_1,\tilde a_5)\). If these two directions are nearly orthogonal in the defect plane, then the pair of probe responses behaves like two approximate quadrature axes of one shared oscillatory mode rather than two unrelated defects.
+\end{proof}
+
+\begin{remark}[Why this is the right next experiment]
+\label{rem:working-why-probe-family-next}
+The family \(\mathcal M_\lambda=\mathcal M+\lambda\Delta_{\mathrm{shared}}\) is the cleanest next diagnostic because it does not refit the whole Millennium matrix. It touches only the admissible/complementary interface where a common OP~1/OP~5 remainder would naturally live. If even this targeted family fails to produce either a one-mode line or a quadrature pair in the defect plane, then the shared-carrier hypothesis must be weakened. If it succeeds, then the next theorem should be a shared-channel closure statement rather than another isolated local endgame.
+\end{remark}
+
+\subsection*{First-order rank and quadrature invariants of the probe family}
+The concrete probe family admits an even sharper reading than the earlier qualitative line-versus-ellipse distinction. Since both OP~1 and OP~5 are now tested by two explicit probe directions, one can read off from a single $2\times2$ response matrix whether the visible pair behaves like one masked mode, like a quadrature pair, or like a genuinely two-dimensional remainder.
+
+\begin{definition}[Provisional probe response matrix and normalized invariants]
+\label{def:working-probe-response-matrix}
+With the notation of Proposition~\ref{prop:working-concrete-probe-family-tests}, define the probe response matrix
+\[
+  S(K):=
+  \begin{pmatrix}
+    a_1 & a_5\\
+    \tilde a_1 & \tilde a_5
+  \end{pmatrix},
+\]
+where $(a_1,a_5)$ comes from $K$ and $(\tilde a_1,\tilde a_5)$ from the reversal-paired probe $\widetilde K=JK$.
+Assume both row vectors are nonzero and set
+\[
+  n:=\sqrt{a_1^2+a_5^2},
+  \qquad
+  \tilde n:=\sqrt{\tilde a_1^2+\tilde a_5^2}.
+\]
+Define the normalized one-mode defect and the normalized quadrature defect by
+\[
+  \mathfrak d_{\parallel}(K)
+  :=
+  \frac{|a_1\tilde a_5-a_5\tilde a_1|}{n\tilde n},
+  \qquad
+  \mathfrak d_{\perp}(K)
+  :=
+  \frac{|a_1\tilde a_1+a_5\tilde a_5|}{n\tilde n}.
+\]
+\end{definition}
+
+\begin{proposition}[Provisional classification of the shared probe response]
+\label{prop:working-classification-shared-probe-response}
+Under Definition~\ref{def:working-probe-response-matrix}, the following first-order interpretations hold.
+\begin{enumerate}[label=(\roman*), leftmargin=2em]
+  \item If $\mathfrak d_{\parallel}(K)\ll 1$, then the two probe directions are nearly collinear, hence the visible OP~1/OP~5 response is first-order compatible with one masked shared mode.
+  \item If $\mathfrak d_{\perp}(K)\ll 1$ and $\mathfrak d_{\parallel}(K)$ is bounded away from $0$, then the two probe directions are nearly orthogonal, hence the visible response is first-order compatible with a quadrature pair of one shared carrier.
+  \item If both $\mathfrak d_{\parallel}(K)$ and $\mathfrak d_{\perp}(K)$ stay away from $0$ on a stable test class of admissible probes $K$, then the shared-carrier hypothesis is weakened: the remaining OP~1/OP~5 defect is genuinely at least two-directional at first order.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+The quantity $|a_1\tilde a_5-a_5\tilde a_1|$ is the absolute determinant of the two response vectors, normalized by their lengths. It therefore measures the sine of the angle between them, and smallness means near-collinearity. Likewise, $|a_1\tilde a_1+a_5\tilde a_5|$ is the absolute dot product, normalized by the same lengths, so its smallness means near-orthogonality. The three conclusions are therefore the standard geometric alternatives for two nonzero vectors in the visible defect plane.
+\end{proof}
+
+\begin{corollary}[Provisional first-order phase picture from the probe invariants]
+\label{cor:working-first-order-phase-picture-from-invariants}
+Suppose there is a stable admissible test class of probes $K$ for which either
+\[
+  \mathfrak d_{\parallel}(K)\le \eta_{\parallel}
+\]
+or
+\[
+  \mathfrak d_{\perp}(K)\le \eta_{\perp}
+\]
+with small tolerances. Then the remaining OP~1 and OP~5 residues should not be pursued as unrelated endgames. In the first case they are first-order images of one shared hidden mode, and in the second case they are first-order quadrature readouts of one shared hidden carrier.
+\end{corollary}
+
+\begin{proof}
+This is the direct structural reading of Proposition~\ref{prop:working-classification-shared-probe-response}. The point is not that the exact finite-amplitude endgame is already closed, but that the visible first-order geometry already decides whether a common hidden carrier is plausible or not.
+\end{proof}
+
+\paragraph{Provisional diagnostic takeaway.}
+The matrix test is now decision-grade. Instead of asking vaguely whether OP~1 and OP~5 ``feel related,'' one computes the normalized determinant defect $\mathfrak d_{\parallel}$ and the normalized dot-product defect $\mathfrak d_{\perp}$ on the HC/MM/J probe class. Small $\mathfrak d_{\parallel}$ means one shared line; small $\mathfrak d_{\perp}$ means one shared carrier in quadrature.
+
+
+\subsection*{Canonical low-rank probe class and the first verdict on one-mode versus quadrature}
+The abstract probe family is useful, but it still leaves too much freedom in the choice of $K$. The cleanest next step is therefore to test the suspected HC/MM/J leakage by the smallest nontrivial cross-sector probes possible. This produces a genuine structural verdict: does the most canonical leakage class already support quadrature, or does it force a one-mode picture at first order?
+
+\begin{definition}[Provisional canonical low-rank leakage probes]
+\label{def:working-canonical-low-rank-leakage-probes}
+Let $u$ be a unit admissible vector and $w$ a unit complementary vector such that
+\[
+  Cu=u,
+  \qquad
+  Cw=0,
+  \qquad
+  Ju=u,
+  \qquad
+  Jw=-w,
+  \qquad
+  \langle u,w\rangle=0.
+\]
+Define the associated rank-two cross-sector probe by
+\[
+  K_{u,w}x
+  :=
+  \langle u,x\rangle w + \langle w,x\rangle u.
+\]
+This is the smallest symmetric probe that exchanges one chosen admissible direction with one chosen complementary direction and does nothing else.
+\end{definition}
+
+\begin{proposition}[Provisional exact support of the canonical low-rank probes]
+\label{prop:working-exact-support-canonical-low-rank-probes}
+For every probe $K_{u,w}$ from Definition~\ref{def:working-canonical-low-rank-leakage-probes},
+\[
+  CK_{u,w}C=0,
+  \qquad
+  (\mathrm{id}-C)K_{u,w}(\mathrm{id}-C)=0,
+  \qquad
+  \Delta_{\mathrm{shared}}(K_{u,w})=K_{u,w}.
+\]
+Hence $K_{u,w}$ is already a pure first-order admissible/complementary leakage probe and needs no further projection cleanup.
+\end{proposition}
+
+\begin{proof}
+Since $Cu=u$ and $Cw=0$, the operator $K_{u,w}$ sends $u$ into the complementary direction $w$ and $w$ back into the admissible direction $u$, while all purely admissible-to-admissible and purely complementary-to-complementary blocks vanish. This gives the first two identities. The defining formula
+\[
+  \Delta_{\mathrm{shared}}=(\mathrm{id}-C)KC + CK(\mathrm{id}-C)
+\]
+then reproduces $K_{u,w}$ itself, because the only nonzero parts of $K_{u,w}$ are already the two cross-sector pieces.
+\end{proof}
+
+\begin{proposition}[Provisional response geometry of the canonical low-rank class]
+\label{prop:working-response-geometry-canonical-low-rank-class}
+Fix a baseline admissible state $v$ with $Cv=v$, and define the probe coefficients for $K_{u,w}$ and the reversal-paired probe $\widetilde K_{u,w}:=JK_{u,w}$ by
+\[
+  a_j(u,w):=L_j\bigl((\mathrm{id}-C)K_{u,w}Cv\bigr),
+  \qquad
+  \widetilde a_j(u,w):=L_j\bigl((\mathrm{id}-C)\widetilde K_{u,w}Cv\bigr),
+  \qquad j\in\{1,5\}.
+\]
+Then
+\[
+  a_j(u,w)=\langle u,v\rangle\,L_j(w),
+  \qquad
+  \widetilde a_j(u,w)=-\langle u,v\rangle\,L_j(w)=-a_j(u,w).
+\]
+In particular, whenever the response vector is nonzero,
+\[
+  S(K_{u,w})=
+  \begin{pmatrix}
+    a_1 & a_5\\
+    -a_1 & -a_5
+  \end{pmatrix},
+\]
+and therefore
+\[
+  \mathfrak d_{\parallel}(K_{u,w})=0,
+  \qquad
+  \mathfrak d_{\perp}(K_{u,w})=1.
+\]
+\end{proposition}
+
+\begin{proof}
+Because $Cv=v$ and $K_{u,w}$ contains exactly one admissible-to-complementary leg,
+\[
+  (\mathrm{id}-C)K_{u,w}Cv
+  =
+  (\mathrm{id}-C)K_{u,w}v
+  =
+  \langle u,v\rangle w.
+\]
+Applying $L_j$ gives the formula for $a_j$. Since $Ju=u$ and $Jw=-w$,
+\[
+  (\mathrm{id}-C)JK_{u,w}Cv
+  =
+  J(\mathrm{id}-C)K_{u,w}Cv
+  =
+  -\langle u,v\rangle w,
+\]
+which yields $\widetilde a_j=-a_j$. The displayed matrix form follows immediately. Its two rows are exactly antiparallel, so the normalized determinant defect vanishes and the normalized dot-product defect is maximal.
+\end{proof}
+
+\begin{corollary}[Provisional first verdict from the canonical probe class]
+\label{cor:working-first-verdict-canonical-probe-class}
+The canonical low-rank HC/MM/J leakage probes are intrinsically first-order one-mode probes: they can only detect a shared line and never a genuine quadrature pair. Consequently, if a stable quadrature picture for OP~1 and OP~5 is later observed, it cannot come from primitive rank-two cross-sector leakage alone; it must arise from a richer multi-directional or higher-order transport/readout effect.
+\end{corollary}
+
+\begin{proof}
+This is the direct reading of Proposition~\ref{prop:working-response-geometry-canonical-low-rank-class}. The canonical low-rank class forces $\mathfrak d_{\parallel}=0$ and $\mathfrak d_{\perp}=1$, so the first-order geometry is always collinear and never orthogonal.
+\end{proof}
+
+\paragraph{Provisional structural takeaway.}
+This is already a nontrivial verdict. The smallest honest HC/MM/J leakage class does \emph{not} support a primitive sinus/cosinus split between OP~1 and OP~5. At first order it only supports one shared line. If the two residues later turn out to behave like quadrature data, then that phase shift is emergent and not the most primitive leakage mode.
+
+\subsection*{Minimal two-directional leakage plane and the first place where quadrature can appear}
+The canonical rank-two probes already showed that primitive cross-sector leakage is first-order one-mode only. The next structural question is therefore very sharp: what is the smallest extension of the leakage class in which a genuine sinus/cosinus picture can appear at all? The answer is: not a single exchange direction, but a \emph{two-directional leakage plane} equipped with an internal quarter-turn.
+
+\begin{definition}[Provisional minimal two-directional leakage plane]
+\label{def:working-minimal-two-directional-leakage-plane}
+Let $u_1,u_2$ be orthonormal admissible vectors and let $w_1,w_2$ be orthonormal complementary vectors such that
+\[
+  Cu_i=u_i,
+  \qquad
+  Cw_i=0,
+  \qquad
+  Ju_i=u_i,
+  \qquad
+  Jw_i=-w_i,
+  \qquad i\in\{1,2\}.
+\]
+Define the paired rank-four cross-sector probes
+\[
+  K_{\parallel} := K_{u_1,w_1}+K_{u_2,w_2},
+\]
+and
+\[
+  K_{\perp} := K_{u_1,w_2}-K_{u_2,w_1}.
+\]
+Equivalently, if $R_W$ denotes the quarter-turn on the complementary plane $W:=\operatorname{span}\{w_1,w_2\}$ given by
+\[
+  R_W w_1=w_2,
+  \qquad
+  R_W w_2=-w_1,
+\]
+then $K_{\perp}$ is the quarter-turn-dressed partner of $K_{\parallel}$ on the complementary output side.
+\end{definition}
+
+\begin{proposition}[Provisional exact support of the minimal two-directional class]
+\label{prop:working-exact-support-minimal-two-directional-class}
+Both operators $K_{\parallel}$ and $K_{\perp}$ from Definition~\ref{def:working-minimal-two-directional-leakage-plane} are pure first-order cross-sector probes:
+\[
+  CK_{\sharp}C=0,
+  \qquad
+  (\mathrm{id}-C)K_{\sharp}(\mathrm{id}-C)=0,
+  \qquad
+  \Delta_{\mathrm{shared}}(K_{\sharp})=K_{\sharp},
+\]
+for $\sharp\in\{\parallel,\perp\}$.
+\end{proposition}
+
+\begin{proof}
+Each summand $K_{u_i,w_j}$ exchanges exactly one admissible direction with one complementary direction and has no pure admissible or pure complementary block. The same is therefore true for both linear combinations $K_{\parallel}$ and $K_{\perp}$. Hence the support identities follow exactly as in Proposition~\ref{prop:working-exact-support-canonical-low-rank-probes}.
+\end{proof}
+
+\begin{proposition}[Provisional complementary output geometry of the minimal two-directional class]
+\label{prop:working-complementary-output-geometry-minimal-two-directional-class}
+Fix an admissible baseline state $v$ with $Cv=v$, and write
+\[
+  a:=\langle u_1,v\rangle,
+  \qquad
+  b:=\langle u_2,v\rangle.
+\]
+Then
+\[
+  (\mathrm{id}-C)K_{\parallel}Cv = a w_1 + b w_2,
+\]
+and
+\[
+  (\mathrm{id}-C)K_{\perp}Cv = a w_2 - b w_1 = R_W\bigl((\mathrm{id}-C)K_{\parallel}Cv\bigr).
+\]
+In particular,
+\[
+  \bigl\langle (\mathrm{id}-C)K_{\parallel}Cv,(\mathrm{id}-C)K_{\perp}Cv\bigr\rangle = 0,
+\]
+and
+\[
+  \bigl\|(\mathrm{id}-C)K_{\parallel}Cv\bigr\| = \bigl\|(\mathrm{id}-C)K_{\perp}Cv\bigr\| = \sqrt{a^2+b^2}.
+\]
+Thus the smallest leakage extension capable of supporting quadrature is a two-directional complementary carrier plane, not a single primitive leakage line.
+\end{proposition}
+
+\begin{proof}
+Since $Cv=v$, only the admissible-to-complementary legs contribute. For $K_{\parallel}$ one gets
+\[
+  (\mathrm{id}-C)K_{\parallel}Cv = a w_1 + b w_2.
+\]
+Likewise,
+\[
+  (\mathrm{id}-C)K_{\perp}Cv = a w_2 - b w_1.
+\]
+The displayed quarter-turn relation follows from the definition of $R_W$. Orthogonality and equal norm are then immediate from the orthonormality of $w_1,w_2$.
+\end{proof}
+
+\begin{corollary}[Provisional first place where quadrature becomes structurally possible]
+\label{cor:working-first-place-where-quadrature-becomes-possible}
+Quadrature between OP~1 and OP~5 cannot arise from the primitive canonical rank-two leakage class alone. The first structurally honest place where it can appear is the paired two-directional class $\{K_{\parallel},K_{\perp}\}$, where the complementary output already carries an internal quarter-turn. Consequently, any later sinus/cosinus reading of OP~1 and OP~5 should be interpreted as a dressed two-directional leakage-plane effect rather than as a primitive one-directional HC/MM/J defect.
+\end{corollary}
+
+\begin{proof}
+Corollary~\ref{cor:working-first-verdict-canonical-probe-class} showed that the primitive rank-two class is forced to be first-order collinear. Proposition~\ref{prop:working-complementary-output-geometry-minimal-two-directional-class} shows that the paired rank-four class is the smallest extension whose complementary outputs are already quarter-turned relative to one another. Hence this is the first structurally admissible location of quadrature.
+\end{proof}
+
+\paragraph{Provisional diagnostic takeaway.}
+The structural picture is now sharper. Primitive leakage gives one shared line. Quadrature needs at least a two-directional leakage plane together with an internal quarter-turn on the complementary carrier. So if OP~1 and OP~5 later behave like cosine/sine data, the right search target is no longer a single hidden defect entry but a minimal paired leakage plane with quarter-turn dressing.
+
+\subsection*{Theorem-level promotion for OP~1}
+The OP~1 epsilon-bridge tool can be upgraded from routing language to a genuine local fixed-point estimate. The key point is that, once one is inside a contractive bridge tube, the normalization defect itself already controls the distance to the distinguished bridge fixed point. This is exactly the kind of ``determine \(\varepsilon\) once, then prove non-escape'' move that the present structure seems to support.
+
+\begin{definition}[Provisional bridge normalization defect]
+\label{def:working-op1-bridge-defect}
+Let
+\[
+  T_{\gamma_{\mathrm{br}}}
+\]
+be the bridge self-consistency map introduced in Section~3.8.16, and let
+\[
+  \beta_{\mathrm{br}}:=\beta(\gamma_{\mathrm{br}})
+\]
+be its distinguished fixed point at the local bridge root from Section~3.8.16. For any positive amplitude \(b\), define the \emph{bridge normalization defect}
+\[
+  \delta_{\mathrm{br}}(b):=
+  \bigl|T_{\gamma_{\mathrm{br}}}(b)-b\bigr|.
+\]
+\end{definition}
+
+\begin{proposition}[Provisional residual-to-fixed-point estimate for the bridge tube]
+\label{prop:working-op1-residual-to-fixed-point}
+Assume there are numbers \(\varepsilon_{\mathrm{br}}>0\) and \(L_{\mathrm{br}}<1\) such that
+\[
+  \sup_{|b-\beta_{\mathrm{br}}|\le \varepsilon_{\mathrm{br}}}
+  \bigl|\partial_b T_{\gamma_{\mathrm{br}}}(b)\bigr|
+  \le L_{\mathrm{br}}.
+\]
+Then every \(b\) with \(|b-\beta_{\mathrm{br}}|\le \varepsilon_{\mathrm{br}}\) satisfies
+\[
+  |b-\beta_{\mathrm{br}}|
+  \le
+  \frac{\delta_{\mathrm{br}}(b)}{1-L_{\mathrm{br}}}.
+\]
+In particular, sufficiently small bridge normalization defect forces entry into an arbitrarily small local tube around the distinguished bridge point.
+\end{proposition}
+
+\begin{proof}
+Since \(\beta_{\mathrm{br}}\) is a fixed point of \(T_{\gamma_{\mathrm{br}}}\), one has
+\[
+  T_{\gamma_{\mathrm{br}}}(\beta_{\mathrm{br}})=\beta_{\mathrm{br}}.
+\]
+Hence for any \(b\) in the tube,
+\[
+  |b-\beta_{\mathrm{br}}|
+  \le
+  |b-T_{\gamma_{\mathrm{br}}}(b)|
+  +
+  |T_{\gamma_{\mathrm{br}}}(b)-T_{\gamma_{\mathrm{br}}}(\beta_{\mathrm{br}})|.
+\]
+The first term is exactly \(\delta_{\mathrm{br}}(b)\). For the second term, the mean-value estimate inside the tube gives
+\[
+  |T_{\gamma_{\mathrm{br}}}(b)-T_{\gamma_{\mathrm{br}}}(\beta_{\mathrm{br}})|
+  \le
+  L_{\mathrm{br}}|b-\beta_{\mathrm{br}}|.
+\]
+Therefore
+\[
+  |b-\beta_{\mathrm{br}}|
+  \le
+  \delta_{\mathrm{br}}(b)+L_{\mathrm{br}}|b-\beta_{\mathrm{br}}|,
+\]
+so
+\[
+  (1-L_{\mathrm{br}})|b-\beta_{\mathrm{br}}|
+  \le
+  \delta_{\mathrm{br}}(b).
+\]
+Dividing by \(1-L_{\mathrm{br}}>0\) proves the claim.
+\end{proof}
+
+\begin{theorem}[Provisional OP~1 epsilon-trapped bridge normalization theorem]
+\label{thm:working-op1-epsilon-trapped-bridge}
+Assume the local bridge tube of Proposition~\ref{prop:working-op1-residual-to-fixed-point}. Let \(b_{\mathrm{can}}>0\) be a candidate canonical normalized readout with
+\[
+  |b_{\mathrm{can}}-\beta_{\mathrm{br}}|\le \varepsilon_{\mathrm{br}}.
+\]
+If for some \(\varepsilon_{\mathrm{ent}}\in(0,\varepsilon_{\mathrm{br}}]\) one has
+\[
+  \delta_{\mathrm{br}}(b_{\mathrm{can}})
+  \le
+  (1-L_{\mathrm{br}})\,\varepsilon_{\mathrm{ent}},
+\]
+then
+\[
+  |b_{\mathrm{can}}-\beta_{\mathrm{br}}|\le \varepsilon_{\mathrm{ent}}.
+\]
+Moreover, the whole forward bridge orbit remains trapped inside the same local bridge tube and converges to \(\beta_{\mathrm{br}}\):
+\[
+  T_{\gamma_{\mathrm{br}}}^{\,n}(b_{\mathrm{can}})\to \beta_{\mathrm{br}}.
+\]
+Thus, once the canonical normalization is shown to have sufficiently small bridge defect inside the contractive local tube, OP~1 reduces to a non-escape statement rather than a second normalization search.
+\end{theorem}
+
+\begin{proof}
+The residual bound and Proposition~\ref{prop:working-op1-residual-to-fixed-point} give
+\[
+  |b_{\mathrm{can}}-\beta_{\mathrm{br}}|
+  \le
+  \frac{\delta_{\mathrm{br}}(b_{\mathrm{can}})}{1-L_{\mathrm{br}}}
+  \le
+  \varepsilon_{\mathrm{ent}}.
+\]
+This proves entry into the smaller \(\varepsilon_{\mathrm{ent}}\)-tube. Since \(\beta_{\mathrm{br}}\) is a fixed point,
+\[
+  |T_{\gamma_{\mathrm{br}}}(b)-\beta_{\mathrm{br}}|
+  =
+  |T_{\gamma_{\mathrm{br}}}(b)-T_{\gamma_{\mathrm{br}}}(\beta_{\mathrm{br}})|
+  \le
+  L_{\mathrm{br}}|b-\beta_{\mathrm{br}}|
+\]
+for every \(b\) in the local bridge tube. Hence if \(|b-\beta_{\mathrm{br}}|\le \varepsilon_{\mathrm{ent}}\), then
+\[
+  |T_{\gamma_{\mathrm{br}}}(b)-\beta_{\mathrm{br}}|
+  \le
+  L_{\mathrm{br}}\varepsilon_{\mathrm{ent}}
+  <
+  \varepsilon_{\mathrm{ent}}.
+\]
+So the smaller tube is forward invariant and, in particular, remains inside the original contractive tube. Standard fixed-point iteration for a contraction then gives
+\[
+  T_{\gamma_{\mathrm{br}}}^{\,n}(b_{\mathrm{can}})\to \beta_{\mathrm{br}}.
+\]
+This is exactly the announced non-escape statement.
+\end{proof}
+
+\begin{corollary}[Provisional exact-closure criterion for canonical normalization]
+\label{cor:working-op1-exact-closure-criterion}
+Under the hypotheses of Theorem~\ref{thm:working-op1-epsilon-trapped-bridge}, if the canonical normalization satisfies
+\[
+  \delta_{\mathrm{br}}(b_{\mathrm{can}})=0,
+\]
+then
+\[
+  b_{\mathrm{can}}=\beta_{\mathrm{br}}.
+\]
+Equivalently, inside the contractive bridge tube there is no second local canonical normalization branch.
+\end{corollary}
+
+\begin{proof}
+If \(\delta_{\mathrm{br}}(b_{\mathrm{can}})=0\), then Proposition~\ref{prop:working-op1-residual-to-fixed-point} gives
+\[
+  |b_{\mathrm{can}}-\beta_{\mathrm{br}}|=0.
+\]
+Hence \(b_{\mathrm{can}}=\beta_{\mathrm{br}}\).
+\end{proof}
+
+\paragraph{Provisional OP~1 status after theorem-level promotion.}
+The proof above is deliberately honest about what is and is not finished. The local bridge theorem is now real: once a canonical normalization candidate is inside the contractive tube and its bridge defect is small enough, local non-escape and uniqueness follow. What still remains open is the structural \emph{entry mechanism}: why the canonical discrete correction should land inside that tube in the first place. So the remaining OP~1 burden is no longer local stability; it is the transport-side justification of tube entry.
+
+\begin{remark}[Provisional OP~1 reading after the OP transport consolidation]
+In the present internal line, the epsilon-trapped bridge theorem is best read as the OP~1-side non-escape precursor of the admissible-branch architecture. Its role is no longer to reopen global OP closure, but to isolate the remaining entry question: why the canonical normalization should lie on a transport-admissible branch whose first bridge window already remains trapped in the local contractive tube.
+\end{remark}
+
+
+\noindent\textbf{Rounded-entry promotion.} The remaining OP~1 burden can be sharpened further. The current matter-frame value is not merely close to the distinguished bridge root in an abstract scalar sense; it is already separated from that root by only a tiny readout-point displacement in \(\mu\). Since the readout amplitude \(\beta(\mu)\) is smooth on the physical window, this immediately produces a concrete bridge-entry estimate. Combined with the contractive bridge map, the rounded readout itself already satisfies a tiny local bridge defect. This turns the live OP~1 burden into a very narrow identification problem: justify that the canonical normalization is indeed the standard rounded matter-frame readout.
+
+\begin{definition}[Provisional rounded bridge-entry gap]
+\label{def:working-op1-rounded-gap}
+Let
+\[
+  \Delta^{(\mu)}_{\mathrm{br}}
+  :=
+  |\gamma_L-\gamma_{\mathrm{br}}|,
+  \qquad
+  b_{\mathrm{MF}}:=\beta(\gamma_L),
+  \qquad
+  \beta_{\mathrm{br}}:=\beta(\gamma_{\mathrm{br}}).
+\]
+Thus \(\Delta^{(\mu)}_{\mathrm{br}}\) is the rounded readout-point displacement from the distinguished bridge root, while \(b_{\mathrm{MF}}\) is the rounded matter-frame readout amplitude currently used in the Companion.
+\end{definition}
+
+\begin{proposition}[Provisional transport-to-bridge entry estimate]
+\label{prop:working-op1-transport-to-bridge-entry}
+On the physical window \(I_{\mathrm{phys}}=[1.85,1.90]\), the readout amplitude
+\[
+  \beta(\mu)=\sqrt{\frac{\mu-1}{\mu+1}}
+\]
+satisfies
+\[
+  \beta'(\mu)=\frac{1}{\beta(\mu)(\mu+1)^2}.
+\]
+Moreover, on \(I_{\mathrm{phys}}\) one has the numerical bound
+\[
+  \beta'(\mu)<0.226.
+\]
+Hence
+\[
+  |b_{\mathrm{MF}}-\beta_{\mathrm{br}}|
+  \le
+  0.226\,\Delta^{(\mu)}_{\mathrm{br}}.
+\]
+Using the distinguished-root estimate from Section~3.8.12, this gives
+\[
+  |b_{\mathrm{MF}}-\beta_{\mathrm{br}}|
+  <7.24\times10^{-9}.
+\]
+\end{proposition}
+
+\begin{proof}
+Differentiating
+\[
+  \beta(\mu)=\biggl(\frac{\mu-1}{\mu+1}\biggr)^{1/2}
+\]
+gives
+\[
+  \beta'(\mu)
+  =
+  \frac{1}{2}\biggl(\frac{\mu-1}{\mu+1}\biggr)^{-1/2}\frac{2}{(\mu+1)^2}
+  =
+  \frac{1}{\beta(\mu)(\mu+1)^2}.
+\]
+Direct evaluation on the endpoints of \(I_{\mathrm{phys}}\) gives
+\[
+  \beta'(1.85)\approx 0.22544,
+  \qquad
+  \beta'(1.90)\approx 0.21344,
+\]
+and direct evaluation on the physical window gives the uniform bound \(\beta'(\mu)<0.226\). The mean-value theorem therefore yields
+\[
+  |b_{\mathrm{MF}}-\beta_{\mathrm{br}}|
+  =
+  |\beta(\gamma_L)-\beta(\gamma_{\mathrm{br}})|
+  \le
+  0.226\,|\gamma_L-\gamma_{\mathrm{br}}|
+  =
+  0.226\,\Delta^{(\mu)}_{\mathrm{br}}.
+\]
+By the distinguished-root estimate of Section~3.8.12,
+\[
+  \Delta^{(\mu)}_{\mathrm{br}}
+  \approx 3.200357\times10^{-8},
+\]
+so the final numerical estimate follows.
+\end{proof}
+
+\begin{proposition}[Provisional rounded-readout bridge-defect estimate]
+\label{prop:working-op1-rounded-defect}
+Assume the local bridge tube of Proposition~\ref{prop:working-op1-residual-to-fixed-point}. Then every \(b\) in that tube satisfies
+\[
+  \delta_{\mathrm{br}}(b)
+  \le
+  (1+L_{\mathrm{br}})|b-\beta_{\mathrm{br}}|.
+\]
+In particular, if \(b_{\mathrm{MF}}\) lies in the local bridge tube, then
+\[
+  \delta_{\mathrm{br}}(b_{\mathrm{MF}})
+  \le
+  (1+L_{\mathrm{br}})\,0.226\,\Delta^{(\mu)}_{\mathrm{br}}.
+\]
+\end{proposition}
+
+\begin{proof}
+Since \(T_{\gamma_{\mathrm{br}}}(\beta_{\mathrm{br}})=\beta_{\mathrm{br}}\), one has
+\[
+  \delta_{\mathrm{br}}(b)
+  =
+  |T_{\gamma_{\mathrm{br}}}(b)-b|
+  \le
+  |T_{\gamma_{\mathrm{br}}}(b)-T_{\gamma_{\mathrm{br}}}(\beta_{\mathrm{br}})|
+  +|\beta_{\mathrm{br}}-b|.
+\]
+Inside the bridge tube, the contraction bound gives
+\[
+  |T_{\gamma_{\mathrm{br}}}(b)-T_{\gamma_{\mathrm{br}}}(\beta_{\mathrm{br}})|
+  \le
+  L_{\mathrm{br}}|b-\beta_{\mathrm{br}}|,
+\]
+so
+\[
+  \delta_{\mathrm{br}}(b)
+  \le
+  (1+L_{\mathrm{br}})|b-\beta_{\mathrm{br}}|.
+\]
+Applying Proposition~\ref{prop:working-op1-transport-to-bridge-entry} to \(b=b_{\mathrm{MF}}\) yields the final estimate.
+\end{proof}
+
+\begin{theorem}[Provisional rounded-readout entry theorem for OP~1]
+\label{thm:working-op1-rounded-entry}
+Assume the local bridge tube of Proposition~\ref{prop:working-op1-residual-to-fixed-point} and suppose that
+\[
+  0.226\,\Delta^{(\mu)}_{\mathrm{br}}
+  \le
+  \varepsilon_{\mathrm{br}}.
+\]
+Let \(b_{\mathrm{MF}}=\beta(\gamma_L)\). If
+\[
+  \varepsilon_{\mathrm{ent}}
+  \ge
+  \frac{1+L_{\mathrm{br}}}{1-L_{\mathrm{br}}}
+  \cdot 0.226\,\Delta^{(\mu)}_{\mathrm{br}},
+\]
+then
+\[
+  |b_{\mathrm{MF}}-\beta_{\mathrm{br}}|
+  \le
+  \varepsilon_{\mathrm{ent}}
+\]
+and the forward bridge orbit
+\[
+  T_{\gamma_{\mathrm{br}}}^{\,n}(b_{\mathrm{MF}})
+\]
+remains trapped in the local bridge tube and converges to \(\beta_{\mathrm{br}}\).
+For the current numerical bridge data
+\[
+  \Delta^{(\mu)}_{\mathrm{br}}\approx 3.200357\times10^{-8},
+  \qquad
+  |\partial_b T_{\gamma_{\mathrm{br}}}(\beta_{\mathrm{br}})|\approx 0.00311,
+\]
+it is already enough that
+\[
+  \varepsilon_{\mathrm{ent}}\gtrsim 7.28\times10^{-9}.
+\]
+\end{theorem}
+
+\begin{proof}
+Proposition~\ref{prop:working-op1-transport-to-bridge-entry} gives
+\[
+  |b_{\mathrm{MF}}-\beta_{\mathrm{br}}|
+  \le
+  0.226\,\Delta^{(\mu)}_{\mathrm{br}},
+\]
+so the first displayed assumption ensures that \(b_{\mathrm{MF}}\) lies in the local bridge tube. Proposition~\ref{prop:working-op1-rounded-defect} then yields
+\[
+  \delta_{\mathrm{br}}(b_{\mathrm{MF}})
+  \le
+  (1+L_{\mathrm{br}})\,0.226\,\Delta^{(\mu)}_{\mathrm{br}}.
+\]
+By the lower bound on \(\varepsilon_{\mathrm{ent}}\), this implies
+\[
+  \delta_{\mathrm{br}}(b_{\mathrm{MF}})
+  \le
+  (1-L_{\mathrm{br}})\,\varepsilon_{\mathrm{ent}}.
+\]
+Theorem~\ref{thm:working-op1-epsilon-trapped-bridge} therefore applies with \(b_{\mathrm{can}}=b_{\mathrm{MF}}\), proving entry into the \(\varepsilon_{\mathrm{ent}}\)-tube and convergence of the forward orbit to \(\beta_{\mathrm{br}}\). The final numerical threshold is the explicit evaluation of
+\[
+  \frac{1+L_{\mathrm{br}}}{1-L_{\mathrm{br}}}
+  \cdot 0.226\,\Delta^{(\mu)}_{\mathrm{br}}
+\]
+at \(\Delta^{(\mu)}_{\mathrm{br}}\approx 3.200357\times10^{-8}\) and \(L_{\mathrm{br}}\approx 0.00311\).
+\end{proof}
+
+\begin{corollary}[Provisional narrowed live burden for OP~1 after rounded entry]
+\label{cor:working-op1-narrowed-live-burden}
+Under the hypotheses of Theorem~\ref{thm:working-op1-rounded-entry}, the current rounded matter-frame readout already enters the contractive bridge tube and converges to the distinguished bridge fixed point. Therefore the live OP~1 burden is no longer broad bridge entry. It has narrowed to the structural identification problem
+\[
+  b_{\mathrm{can}}=b_{\mathrm{MF}},
+\]
+i.e. justify that the canonical normalization readout is exactly the standard rounded matter-frame readout already used in the Companion.
+\end{corollary}
+
+\begin{proof}
+Theorem~\ref{thm:working-op1-rounded-entry} proves entry and convergence for \(b_{\mathrm{MF}}\). Hence the only remaining gap is whether the canonical normalization candidate should indeed be identified with this rounded matter-frame readout. No second local bridge-search mechanism remains.
+\end{proof}
+
+\paragraph{Provisional OP~1 status after rounded-entry promotion.}
+The local OP~1 story is now much tighter. The bridge point \(\gamma_{\mathrm{br}}\) and the standard rounded matter-frame value \(\gamma_L=1.864\) differ by only \(3.2\times 10^{-8}\), and this already forces the corresponding readout amplitude into any reasonable contractive bridge tube. So the bridge-entry problem is no longer genuinely numerical. What remains is the structural identification step: explain why the canonical normalization should be read as the standard rounded matter-frame readout, or equivalently why no second transport-side normalization survives after the bridge forcing, renormalization, and contraction lines.
+
+
+\paragraph{Admissible-readout uniqueness promotion.}
+The rounded-entry theorem reduced the live OP~1 burden to the structural identification
+\[
+  b_{\mathrm{can}}=b_{\mathrm{MF}}.
+\]
+The present document already contains almost all of this argument in implicit form: transport fixes the branch first, readout stays downstream, grouped-layer transport introduces no ontology drift, and document normalization forbids treating local readout blocks as second foundational centers. The missing step is to promote these points to an explicit uniqueness theorem for the positive scalar readout on the fixed bridge branch.
+
+\begin{theorem}[Provisional admissible-readout uniqueness theorem for OP~1]
+\label{thm:working-op1-admissible-readout-uniqueness}
+Assume the transport branch has already been fixed at the current matter-frame point
+\[
+  \mu=\gamma_L,
+\]
+and let
+\[
+  b_{\mathrm{MF}}:=\beta(\gamma_L)=\sqrt{\frac{\gamma_L-1}{\gamma_L+1}}.
+\]
+Let \(b_{\mathrm{can}}>0\) be a canonical normalization readout for OP~1 such that:
+\begin{enumerate}[label=(\roman*), leftmargin=2em]
+  \item \(b_{\mathrm{can}}\) is obtained only after branch selection, as a downstream admissible readout on the already fixed transport branch;
+  \item the readout law opens no second primitive continuum channel;
+  \item grouped-layer transport produces no ontology drift, so any alternative local readout regime remains an organizational realization of the same admissible structural body.
+\end{enumerate}
+Then
+\[
+  b_{\mathrm{can}}=b_{\mathrm{MF}}.
+\]
+\end{theorem}
+
+\begin{proof}
+By the transport-first tool in the current tool layer, the continuum branch is fixed before visible readout is interpreted. At the current matter-frame point \(\mu=\gamma_L\), the standard visible scalar on that branch is exactly
+\[
+  b_{\mathrm{MF}}=\beta(\gamma_L).
+\]
+By the readout-after-transport tool, every further canonical readout must remain downstream from this branch selection and therefore cannot reopen the continuum-side selection problem. If one had \(b_{\mathrm{can}}\neq b_{\mathrm{MF}}\) while both are positive canonical normalizations on the same already fixed branch, then the second scalar would constitute a second primitive continuum-side normalization channel. This contradicts hypothesis~(ii).
+
+Hypothesis~(iii) excludes the only remaining escape route: reinterpreting the second scalar as belonging to a genuinely different admissible body. By Proposition~\ref{prop:no-ontology-drift}, admissible transport across grouped layers does not create ontological multiplicity, and Remark~\ref{rem:document-normalization-consequence} says that local readout/integration blocks are organizational regimes rather than second foundational centers. Hence the canonical normalization and the standard matter-frame readout are two organizational readings of one and the same admissible body on one already fixed branch. Since no second primitive channel is allowed, they must coincide. Therefore
+\[
+  b_{\mathrm{can}}=b_{\mathrm{MF}}.
+\]
+\end{proof}
+
+\begin{corollary}[Provisional OP~1 structural promotion after readout uniqueness]
+\label{cor:working-op1-structural-promotion}
+Under the hypotheses of Theorem~\ref{thm:working-op1-admissible-readout-uniqueness} and Theorem~\ref{thm:working-op1-rounded-entry}, the canonical normalization readout itself already enters the local contractive bridge tube and converges to the distinguished bridge fixed point:
+\[
+  T_{\gamma_{\mathrm{br}}}^{\,n}(b_{\mathrm{can}})\longrightarrow \beta_{\mathrm{br}}.
+\]
+In particular, the former identification burden \(b_{\mathrm{can}}=b_{\mathrm{MF}}\) disappears. The live OP~1 burden is reduced to the explicit local bridge residue
+\[
+  \delta_{\mathrm{br}}(b_{\mathrm{MF}})=\bigl|T_{\gamma_{\mathrm{br}}}(b_{\mathrm{MF}})-b_{\mathrm{MF}}\bigr|,
+\]
+and exact OP~1 closure follows as soon as this already isolated residue vanishes.
+\end{corollary}
+
+\begin{proof}
+Theorem~\ref{thm:working-op1-admissible-readout-uniqueness} gives
+\[
+  b_{\mathrm{can}}=b_{\mathrm{MF}}.
+\]
+Applying Theorem~\ref{thm:working-op1-rounded-entry} to the right-hand side yields entry of \(b_{\mathrm{MF}}\) into the local bridge tube and convergence of its forward orbit to \(\beta_{\mathrm{br}}\). Substituting \(b_{\mathrm{can}}\) for \(b_{\mathrm{MF}}\) proves the same statement for the canonical normalization. Therefore the identification burden is gone, and only the explicit local bridge residue at the unique admissible readout remains. If that residue is zero, Corollary~\ref{cor:working-op1-exact-closure-criterion} yields exact local bridge closure.
+\end{proof}
+
+\paragraph{Provisional OP~1 status after uniqueness promotion.}
+At this point OP~1 has become much narrower than a generic matching problem. The transport branch is fixed, the rounded matter-frame readout already enters the contractive bridge tube at roughly the \(10^{-9}\)-level, and the admissible-readout uniqueness theorem removes the last structural ambiguity between canonical normalization and standard readout. So OP~1 no longer hangs at branch search, root search, or local entry. It hangs only at the exact vanishing of one already isolated local scalar defect:
+\[
+  \delta_{\mathrm{br}}(b_{\mathrm{MF}})=0.
+\]
+In plain language: the proof burden has collapsed to showing that the unique admissible readout is not merely bridge-close, but exactly bridge-stable.
+
+\clearpage
