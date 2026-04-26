@@ -30,6 +30,7 @@ jobs:
       - name: Resolve version
         id: version
         shell: bash
+        working-directory: ${{ github.workspace }}
         run: |
           VERSION="${GITHUB_REF_NAME}"
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
@@ -37,6 +38,7 @@ jobs:
       - name: Build PDFs from tagged source
         continue-on-error: true
         shell: bash
+        working-directory: ${{ github.workspace }}
         run: |
           python3 scripts/qsc_latex_build.py \
             --source-dir "$SOURCE_DIR" \
@@ -45,46 +47,41 @@ jobs:
 
       - name: Prepare release directory
         shell: bash
+        working-directory: ${{ github.workspace }}
         run: |
           VERSION="${{ steps.version.outputs.version }}"
           RELEASE_DIR="$RUNNER_TEMP/releases/$VERSION"
           mkdir -p "$RELEASE_DIR/logs" "$RELEASE_DIR/audit"
 
-          # Collect PDFs.
           cp -v build/qsc-pdf-artifacts/active-core/*.pdf "$RELEASE_DIR/" 2>/dev/null || true
           cp -v build/qsc-pdf-artifacts/historical-witness/*.pdf "$RELEASE_DIR/" 2>/dev/null || true
           cp -v build/qsc-pdf-artifacts/*.pdf "$RELEASE_DIR/" 2>/dev/null || true
 
-          # Collect logs.
           cp -v build/qsc-pdf-artifacts/active-core/*.log "$RELEASE_DIR/logs/" 2>/dev/null || true
           cp -v build/qsc-pdf-artifacts/historical-witness/*.log "$RELEASE_DIR/logs/" 2>/dev/null || true
           cp -v build/qsc-pdf-artifacts/logs/* "$RELEASE_DIR/logs/" 2>/dev/null || true
 
-          # Collect audit summaries.
           cp -v build/qsc-pdf-artifacts/*.json "$RELEASE_DIR/audit/" 2>/dev/null || true
           cp -v build/qsc-pdf-artifacts/*.md "$RELEASE_DIR/audit/" 2>/dev/null || true
           cp -v build/qsc-pdf-artifacts/*.txt "$RELEASE_DIR/audit/" 2>/dev/null || true
           cp -v build/qsc-pdf-artifacts/audit/* "$RELEASE_DIR/audit/" 2>/dev/null || true
 
-          # Source archive from the exact tagged checkout.
-          zip -r "$RELEASE_DIR/Quantum_Sphaera_Companion_${VERSION}_sources.zip" \
-            sources scripts docker .github/workflows \
-            -x "*/.git/*"
+          zip -r "$RELEASE_DIR/Quantum_Sphaera_Companion_${VERSION}_sources.zip" sources scripts docker .github/workflows -x "*/.git/*"
 
-          # Bundle archive.
           cd "$RUNNER_TEMP/releases"
           zip -r "Quantum_Sphaera_Companion_${VERSION}_release_bundle.zip" "$VERSION"
           mv "Quantum_Sphaera_Companion_${VERSION}_release_bundle.zip" "$RELEASE_DIR/"
 
-          # Checksums.
           cd "$RELEASE_DIR"
           find . -type f ! -name SHA256SUMS.txt -print0 | sort -z | xargs -0 sha256sum > SHA256SUMS.txt
 
       - name: Commit release directory to main
         shell: bash
+        working-directory: ${{ github.workspace }}
         run: |
           VERSION="${{ steps.version.outputs.version }}"
 
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
