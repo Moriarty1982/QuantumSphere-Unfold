@@ -70,6 +70,21 @@ jobs:
             --output-dir "build/qsc-pdf-artifacts" \
             --build-historical "$BUILD_HISTORICAL"
 
+      - name: Collect generated PDFs and logs
+        if: always()
+        run: |
+          mkdir -p build/qsc-pdf-artifacts/pdf build/qsc-pdf-artifacts/logs build/qsc-pdf-artifacts/audit
+
+          if [ -d sources/build/qsc-pdf-artifacts ]; then
+            find sources/build/qsc-pdf-artifacts -type f -name '*.pdf' -exec cp -v {} build/qsc-pdf-artifacts/pdf/ \;
+            find sources/build/qsc-pdf-artifacts -type f \( -name '*.log' -o -name '*.fls' -o -name '*.fdb_latexmk' \) -exec cp -v {} build/qsc-pdf-artifacts/logs/ \;
+            find sources/build/qsc-pdf-artifacts -maxdepth 1 -type f \( -name '*.json' -o -name '*.md' -o -name '*.txt' \) -exec cp -v {} build/qsc-pdf-artifacts/audit/ \;
+          fi
+
+          if [ -d build/qsc-pdf-artifacts ]; then
+            find build/qsc-pdf-artifacts -type f | sort > build/qsc-pdf-artifacts/audit/artifact-file-list.txt
+          fi
+
       - name: Upload PDF and audit artifacts
         if: always()
         uses: actions/upload-artifact@v4
