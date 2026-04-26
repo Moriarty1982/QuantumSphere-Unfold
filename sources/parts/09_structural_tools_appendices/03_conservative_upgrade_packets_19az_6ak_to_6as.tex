@@ -1,0 +1,798 @@
+\subsection*{19AZ$^{(6ak)}$. Probe-compatible conservative upgrade packets below the certificate-aware interface}
+\label{sec:probe-compatible-conservative-upgrade-packets-below-the-certificate-aware-interface}
+After 19AZ$^{(6ag)}$--19AZ$^{(6ai)}$, the line already knows four things for every certified finite extension word: the inherited horizon/boundary status, the forced route, the finite next-work menu, and the downstream diagnostic role of probe machinery. The next honest post-release step is therefore not a new closure slogan. It is a working packet that couples conservative matrix/crystal/field refinement to admissible probe use without allowing the probe layer to promote, erase, or reroute the certified status.
+
+\begin{definition}[Probe-compatible conservative upgrade packet]
+\label{def:probe-compatible-conservative-upgrade-packet}
+Fix a certified finite extension word \(\mathbf w\in\mathcal L^{\mathrm{ext}}_{m}\), let
+\[
+  \mathsf{Route}^{\mathrm{upg}}_{m}(\mathbf w)
+  \in
+  \{\mathcal U^{\mathrm{hor}}_{m}(\mathbf w),\mathcal U^{\mathrm{bdry}}_{m}(\mathbf w)\}
+\]
+be its inherited upgrade route from Definition~\ref{def:certificate-aware-upgrade-routing-map}, let
+\[
+  \mathcal F^{\mathrm{follow}}_{m}(\mathbf w)
+\]
+be its finite route-compatible follow-on menu from Definition~\ref{def:normalized-follow-on-upgrade-families}, and let
+\[
+  \mathsf{MCProbe}_{m,\mathbf w}
+\]
+be any certificate-aware probe family from Definition~\ref{def:certificate-aware-monte-carlo-probe-family}.
+
+A \emph{probe-compatible conservative upgrade packet} for \((m,\mathbf w)\) is one of the following two objects.
+\begin{enumerate}[label=(\roman*)]
+  \item If \(\mathsf{Route}^{\mathrm{upg}}_{m}(\mathbf w)=\mathcal U^{\mathrm{hor}}_{m}(\mathbf w)\), define the horizon-side packet
+  \[
+    \mathsf{Pack}^{\mathrm{hor}}_{m}(\mathbf w)
+    :=
+    \bigl(\mathsf{HZ}_{m}(\mathbf w),\mathsf{CRH}_{m}(\mathbf w),\mathsf{FEH}_{m}(\mathbf w),\mathcal F^{\mathrm{follow}}_{m}(\mathbf w),\mathsf{MCProbe}_{m,\mathbf w}\bigr)
+  \]
+  under the side condition that every downstream use of \(\mathsf{MCProbe}_{m,\mathbf w}\) remains confined to horizon-routed families from
+  \[
+    \{\mathsf{MSH}_{m}(\mathbf w),\mathsf{CRS}_{m}(\mathbf w),\mathsf{PDE}^{\mathrm{cons}}_{m}(\mathbf w),\mathsf{DEC}^{\mathrm{hor}}_{m}(\mathbf w)\}\cap \mathcal F^{\mathrm{follow}}_{m}(\mathbf w).
+  \]
+  \item If \(\mathsf{Route}^{\mathrm{upg}}_{m}(\mathbf w)=\mathcal U^{\mathrm{bdry}}_{m}(\mathbf w)\), define the boundary-side packet
+  \[
+    \mathsf{Pack}^{\mathrm{bdry}}_{m}(\mathbf w)
+    :=
+    \bigl(\mathsf{BD}_{m}(\mathbf w),\mathsf{CRB}_{m}(\mathbf w),\mathsf{FEB}_{m}(\mathbf w),\mathcal F^{\mathrm{follow}}_{m}(\mathbf w),\mathsf{MCProbe}_{m,\mathbf w}\bigr)
+  \]
+  under the side condition that every downstream use of \(\mathsf{MCProbe}_{m,\mathbf w}\) remains confined to boundary-routed families from
+  \[
+    \{\mathsf{SRC}_{m}(\mathbf w),\mathsf{DFX}_{m}(\mathbf w),\mathsf{MC}^{\mathrm{bdry}}_{m}(\mathbf w),\mathsf{DEC}^{\mathrm{bdry}}_{m}(\mathbf w)\}\cap \mathcal F^{\mathrm{follow}}_{m}(\mathbf w).
+  \]
+\end{enumerate}
+Finally define the \emph{conservative packet map}
+\[
+  \mathsf{Pack}^{\mathrm{cons}}_{m}(\mathbf w)
+  :=
+  \begin{cases}
+    \mathsf{Pack}^{\mathrm{hor}}_{m}(\mathbf w), & \text{if }\rho_m(\mathbf w)=\mathcal U^{\mathrm{hor}},\\[2mm]
+    \mathsf{Pack}^{\mathrm{bdry}}_{m}(\mathbf w), & \text{if }\rho_m(\mathbf w)=\mathcal U^{\mathrm{bdry}}.
+  \end{cases}
+\]
+\end{definition}
+
+\begin{proposition}[Every certified word inherits exactly one probe-compatible conservative upgrade packet]
+\label{prop:every-certified-word-inherits-exactly-one-probe-compatible-conservative-upgrade-packet}
+Assume the setting of Definition~\ref{def:probe-compatible-conservative-upgrade-packet}. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item every certified finite extension word \(\mathbf w\in\mathcal L^{\mathrm{ext}}_{m}\) inherits exactly one conservative packet \(\mathsf{Pack}^{\mathrm{cons}}_{m}(\mathbf w)\);
+  \item the packet is faithful to the inherited matrix/crystal/field tags and to the forced route \(\rho_m(\mathbf w)\);
+  \item certificate-aware probe output may reprioritize or sharpen work \emph{inside} the inherited follow-on menu, but it may not add extra-route tasks, promote theorematic status, or erase a certified boundary stop.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+By Proposition~\ref{prop:inherited-field-diagnostic-tag-forces-unique-conservative-upgrade-route}, every certified word inherits exactly one route \(\rho_m(\mathbf w)\). By Proposition~\ref{prop:every-certified-word-carries-a-finite-route-compatible-follow-on-upgrade-menu}, this route comes with exactly one finite compatible follow-on menu. Definition~\ref{def:probe-compatible-conservative-upgrade-packet} therefore assigns exactly one of the two packet forms, proving (i). Statement (ii) is immediate because the packet simply records the inherited matrix/crystal/field tags together with the already forced route and menu. Clause (iii) follows from Proposition~\ref{prop:certificate-aware-monte-carlo-probes-have-diagnostic-force-but-no-theorematic-authority}: probe families are downstream consumers only, so they may refine priority inside the inherited menu but they do not change theorematic status, add cross-route tasks, or smooth away a certified terminal boundary event.
+\end{proof}
+
+\begin{corollary}[The present \(\sigma_3\) package already carries a first conservative upgrade packet]
+\label{cor:present-sigma3-package-already-carries-a-first-conservative-upgrade-packet}
+In the current active working line, the first-stage word \(\mathbf w_3\in\{\mathsf A,\mathsf B\}\) already induces a first probe-compatible conservative packet
+\[
+  \mathsf{Pack}^{\mathrm{cons}}_{2}(\mathbf w_3),
+\]
+whose type is horizon-side in the transfer-positive case and boundary-side in the earliest-boundary case.
+\end{corollary}
+
+\begin{proof}
+Immediate from Corollary~\ref{cor:present-sigma3-package-already-carries-a-finite-next-work-menu}, Corollary~\ref{cor:present-sigma3-package-already-induces-a-first-explicit-qam-decoder-side-shadow}, and Proposition~\ref{prop:every-certified-word-inherits-exactly-one-probe-compatible-conservative-upgrade-packet}.
+\end{proof}
+
+\begin{remark}[What this conservative packet now buys]
+\label{rem:what-this-conservative-packet-now-buys}
+This is the first point at which the post-release line stops treating conservative refinement and probe use as two separate topics. The packet forces them to travel together. Matrix sharpening, crystal stabilization, field-profile refinement, and source/defect localization can now be discussed as probe-compatible working objects, while theorematic certification remains upstream and untouched.
+\end{remark}
+
+
+\noindent\textbf{Reader cue.} Read the next block as the finite work-queue normal form induced by a conservative packet. Its purpose is to let probe output guide attention among admissible matrix/crystal/field upgrades without letting that guidance impersonate theorematic certification or invent work outside the inherited route.
+
+\subsection*{19AZ$^{(6al)}$. Probe-ranked conservative work queues for matrix, crystal, and field upgrades}
+\label{sec:probe-ranked-conservative-work-queues-for-matrix-crystal-and-field-upgrades}
+After 19AZ$^{(6ak)}$, every certified word carries one conservative packet. The next honest compression step is to turn the inherited finite follow-on menu into a finite probe-ranked queue. This is exactly the place where Monte-Carlo/probe integration becomes genuinely useful for the next working phase: not by certifying anything new, but by telling the line which admissible conservative upgrade should be looked at first, second, and third.
+
+\begin{definition}[Probe-ranked conservative work queue]
+\label{def:probe-ranked-conservative-work-queue}
+Fix a conservative packet
+\[
+  \mathsf{Pack}^{\mathrm{cons}}_{m}(\mathbf w)
+\]
+from Definition~\ref{def:probe-compatible-conservative-upgrade-packet}. A \emph{probe-ranked conservative work queue} for \((m,\mathbf w)\) is a finite ordered list
+\[
+  \mathcal Q^{\mathrm{cons}}_{m}(\mathbf w)
+  =
+  \bigl(\mathsf U_1\succcurlyeq \mathsf U_2\succcurlyeq \cdots \succcurlyeq \mathsf U_r\bigr)
+\]
+with the following properties:
+\begin{enumerate}[label=(\roman*)]
+  \item every entry \(\mathsf U_j\) belongs to the inherited follow-on menu \(\mathcal F^{\mathrm{follow}}_{m}(\mathbf w)\);
+  \item the order relation \(\succcurlyeq\) is induced by downstream probe output only as a \emph{priority preorder}, not as new theorematic status;
+  \item if \(\mathsf{Route}^{\mathrm{upg}}_{m}(\mathbf w)=\mathcal U^{\mathrm{hor}}_{m}(\mathbf w)\), then every queue entry is horizon-routed and the queue may only prioritize among \(\mathsf{MSHARP},\mathsf{CSTAB},\mathsf{FPROF},\mathsf{DCH}\);
+  \item if \(\mathsf{Route}^{\mathrm{upg}}_{m}(\mathbf w)=\mathcal U^{\mathrm{bdry}}_{m}(\mathbf w)\), then every queue entry is boundary-routed and the queue may only prioritize among \(\mathsf{SLOC},\mathsf{DFRONT},\mathsf{MCPROB},\mathsf{DCB}\).
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}[Every conservative packet induces a finite route-compatible work queue]
+\label{prop:every-conservative-packet-induces-a-finite-route-compatible-work-queue}
+Assume the setting of Definition~\ref{def:probe-ranked-conservative-work-queue}. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item every conservative packet \(\mathsf{Pack}^{\mathrm{cons}}_{m}(\mathbf w)\) induces at least one finite probe-ranked conservative work queue \(\mathcal Q^{\mathrm{cons}}_{m}(\mathbf w)\);
+  \item any two such queues differ only by downstream prioritization inside the same inherited finite route-compatible menu;
+  \item in particular, probe ranking may move matrix, crystal, and field-style tasks forward or backward inside the queue, but it may not turn a boundary-routed queue into a continuation queue, nor a continuation queue into a boundary/source queue.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Existence in (i) is immediate because the inherited follow-on menu is finite by Proposition~\ref{prop:every-certified-word-carries-a-finite-route-compatible-follow-on-upgrade-menu}; one may therefore equip it with at least the trivial preorder, or with any finer probe-induced preorder satisfying Definition~\ref{def:probe-ranked-conservative-work-queue}. Statement (ii) follows because the queue entries are constrained to lie inside the same inherited route-compatible menu, so downstream variation can only affect the internal ordering. Clause (iii) is exactly the certificate-aware discipline inherited from 19AZ$^{(6af)}$ and 19AZ$^{(6ai)}$: probe ranking is a priority device, not a theorematic rerouting device.
+\end{proof}
+
+\begin{corollary}[The first \(\sigma_3\) packet already carries a finite conservative work queue]
+\label{cor:first-sigma3-packet-already-carries-a-finite-conservative-work-queue}
+The present first-stage packet \(\mathsf{Pack}^{\mathrm{cons}}_{2}(\mathbf w_3)\) already carries a finite route-compatible work queue
+\[
+  \mathcal Q^{\mathrm{cons}}_{2}(\mathbf w_3),
+\]
+so the next working phase may be organized as a conservative ranked queue of matrix/crystal/field upgrades together with probe-guided diagnostics before any broader OP-focused reopening is attempted.
+\end{corollary}
+
+\begin{proof}
+Immediate from Corollary~\ref{cor:present-sigma3-package-already-carries-a-first-conservative-upgrade-packet} and Proposition~\ref{prop:every-conservative-packet-induces-a-finite-route-compatible-work-queue}.
+\end{proof}
+
+\begin{remark}[What this queue interface now buys]
+\label{rem:what-this-queue-interface-now-buys}
+The next working stage can now be described honestly in one sentence: first sharpen the conservative matrix/crystal/field side and integrate probe diagnostics according to a finite route-compatible queue; only after that use the sharpened readout surface for the next OP-focused push. This is exactly the intended ordering for the post-v3.29.0 line.
+\end{remark}
+
+
+\noindent\textbf{Reader cue.} Read the next block as the first concrete working extraction from the probe-ranked conservative queue. Its purpose is not to let probe output overrule the certificate-aware route, but to turn the inherited queue into one honest conservative sharpening/program block that can actually be worked through on the matrix, crystal, and field side before the next OP-focused push.
+
+\subsection*{19AZ$^{(6am)}$. Queue-extracted conservative sharpening/program blocks below the probe-ranked interface}
+\label{sec:queue-extracted-conservative-sharpening-program-blocks-below-the-probe-ranked-interface}
+After 19AZ$^{(6al)}$, the active line finally has enough structure to speak about a genuine next working phase rather than only about menus and priorities. The next honest step is to extract, from the finite probe-ranked queue, the actual conservative sharpening/program block that should be worked through first on the inherited route. On the horizon side this means the matrix/crystal/field sharpening strand together with decoder support; on the boundary side it means the earliest-boundary profiling strand together with stop-sensitive probe/decoder support.
+
+\begin{definition}[Queue-extracted conservative sharpening/program block]
+\label{def:queue-extracted-conservative-sharpening-program-block}
+Fix a probe-ranked conservative work queue
+\[
+  \mathcal Q^{\mathrm{cons}}_{m}(\mathbf w)
+  =
+  \bigl(\mathsf U_1\succcurlyeq \mathsf U_2\succcurlyeq \cdots \succcurlyeq \mathsf U_r\bigr)
+\]
+from Definition~\ref{def:probe-ranked-conservative-work-queue}.
+\begin{enumerate}[label=(\roman*)]
+  \item If \(\mathsf{Route}^{\mathrm{upg}}_{m}(\mathbf w)=\mathcal U^{\mathrm{hor}}_{m}(\mathbf w)\), define the \emph{horizon-side conservative sharpening/program block}
+  \[
+    \mathcal P^{\mathrm{hor}}_{m}(\mathbf w)
+    :=
+    \bigl(\mathsf U_{j_1}\succcurlyeq \cdots \succcurlyeq \mathsf U_{j_s}\bigr)
+  \]
+  to be the ordered subsequence of \(\mathcal Q^{\mathrm{cons}}_{m}(\mathbf w)\) consisting exactly of those entries that lie in
+  \[
+    \{\mathsf{MSH}_{m}(\mathbf w),\mathsf{CRS}_{m}(\mathbf w),\mathsf{PDE}^{\mathrm{cons}}_{m}(\mathbf w),\mathsf{DEC}^{\mathrm{hor}}_{m}(\mathbf w)\}.
+  \]
+  \item If \(\mathsf{Route}^{\mathrm{upg}}_{m}(\mathbf w)=\mathcal U^{\mathrm{bdry}}_{m}(\mathbf w)\), define the \emph{boundary-side conservative profiling/program block}
+  \[
+    \mathcal P^{\mathrm{bdry}}_{m}(\mathbf w)
+    :=
+    \bigl(\mathsf U_{k_1}\succcurlyeq \cdots \succcurlyeq \mathsf U_{k_t}\bigr)
+  \]
+  to be the ordered subsequence of \(\mathcal Q^{\mathrm{cons}}_{m}(\mathbf w)\) consisting exactly of those entries that lie in
+  \[
+    \{\mathsf{SRC}_{m}(\mathbf w),\mathsf{DFX}_{m}(\mathbf w),\mathsf{MC}^{\mathrm{bdry}}_{m}(\mathbf w),\mathsf{DEC}^{\mathrm{bdry}}_{m}(\mathbf w)\}.
+  \]
+\end{enumerate}
+Finally define the \emph{queue-extracted conservative program block}
+\[
+  \mathcal P^{\mathrm{cons}}_{m}(\mathbf w)
+  :=
+  \begin{cases}
+    \mathcal P^{\mathrm{hor}}_{m}(\mathbf w), & \text{if }\rho_m(\mathbf w)=\mathcal U^{\mathrm{hor}},\\[2mm]
+    \mathcal P^{\mathrm{bdry}}_{m}(\mathbf w), & \text{if }\rho_m(\mathbf w)=\mathcal U^{\mathrm{bdry}}.
+  \end{cases}
+\]
+\end{definition}
+
+\begin{proposition}[Every probe-ranked conservative queue induces one route-faithful working program block]
+\label{prop:every-probe-ranked-conservative-queue-induces-one-route-faithful-working-program-block}
+Assume the setting of Definition~\ref{def:queue-extracted-conservative-sharpening-program-block}. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item every probe-ranked conservative queue \(\mathcal Q^{\mathrm{cons}}_{m}(\mathbf w)\) induces exactly one queue-extracted conservative program block \(\mathcal P^{\mathrm{cons}}_{m}(\mathbf w)\);
+  \item if \(\mathsf{Route}^{\mathrm{upg}}_{m}(\mathbf w)=\mathcal U^{\mathrm{hor}}_{m}(\mathbf w)\), then \(\mathcal P^{\mathrm{cons}}_{m}(\mathbf w)\) is a conservative horizon-side sharpening/program block built only from matrix sharpening, crystal stabilization, field-profile refinement, and decoder compression on the already certified range;
+  \item if \(\mathsf{Route}^{\mathrm{upg}}_{m}(\mathbf w)=\mathcal U^{\mathrm{bdry}}_{m}(\mathbf w)\), then \(\mathcal P^{\mathrm{cons}}_{m}(\mathbf w)\) is a conservative earliest-boundary profiling/program block built only from source localization, defect-front profiling, stop-sensitive probe diagnostics, and boundary-side decoder compression;
+  \item downstream probe output may change the internal order of the block, but it may not insert extra-route tasks, promote theorematic status, or convert a boundary-profile block into a horizon-sharpening block.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Statement (i) is immediate because each queue already lies entirely inside one inherited route-compatible menu by Proposition~\ref{prop:every-conservative-packet-induces-a-finite-route-compatible-work-queue}; taking the ordered subsequence of the relevant route-side task family therefore produces exactly one associated program block. Clauses (ii) and (iii) merely unpack which finite task families are admissible on the two certified routes, using Proposition~\ref{prop:inherited-field-diagnostic-tag-forces-unique-conservative-upgrade-route} together with Proposition~\ref{prop:every-certified-word-carries-a-finite-route-compatible-follow-on-upgrade-menu}. Clause (iv) is exactly the downstream discipline already fixed in Proposition~\ref{prop:certificate-aware-monte-carlo-probes-have-diagnostic-force-but-no-theorematic-authority} and Proposition~\ref{prop:every-conservative-packet-induces-a-finite-route-compatible-work-queue}: probe ranking is allowed to prioritize and sharpen, but not to reroute or recertify.
+\end{proof}
+
+\begin{corollary}[The present post-v3.29.0 line already carries a first concrete conservative working program]
+\label{cor:present-post-v3290-line-already-carries-a-first-concrete-conservative-working-program}
+The first-stage packet \(\mathsf{Pack}^{\mathrm{cons}}_{2}(\mathbf w_3)\) and its queue \(\mathcal Q^{\mathrm{cons}}_{2}(\mathbf w_3)\) already induce one concrete conservative program block
+\[
+  \mathcal P^{\mathrm{cons}}_{2}(\mathbf w_3),
+\]
+so the current working phase may now be read not merely as a list of admissible future tasks but as one finite route-faithful sharpening/profiling program to be worked through before the next OP-focused reopening.
+\end{corollary}
+
+\begin{proof}
+Immediate from Corollary~\ref{cor:first-sigma3-packet-already-carries-a-finite-conservative-work-queue} and Proposition~\ref{prop:every-probe-ranked-conservative-queue-induces-one-route-faithful-working-program-block}.
+\end{proof}
+
+\begin{remark}[What this first concrete program block now buys]
+\label{rem:what-this-first-concrete-program-block-now-buys}
+This is the first place where the post-release continuation genuinely stops looking like architecture alone. The line now has a concrete finite program block on which to spend the next working effort: either sharpen matrix/crystal/field readout conservatively on the certified horizon side, or profile the earliest honest boundary side in a stop-sensitive way, always under the same probe-compatible discipline. That is exactly the intended bridge from the tool-layer minor release to the next conservative upgrade stage.
+\end{remark}
+
+
+\noindent\textbf{Reader cue.} Read the next block as the first honest extraction of a \emph{lead task} from the queue-extracted conservative program block. Its purpose is not to guess a theorematic advance, but to say which concrete conservative sharpening/profiling task should be worked \emph{first} once the inherited route has already been fixed.
+
+\subsection*{19AZ$^{(6an)}$. Route-faithful lead-task extraction from the conservative program block}
+\label{sec:route-faithful-lead-task-extraction-from-the-conservative-program-block}
+After 19AZ$^{(6am)}$, the active line no longer lacks an admissible program block; what it still lacks is a normalized answer to the narrower practical question: \emph{which item in that program block should be worked first?} The present block fixes that first-step discipline. On the horizon side, the natural lead task is matrix sharpening, because the matrix/Heisenberg--Millennium readout is the earliest common interface that the crystal and conservative field profiles inherit. On the boundary side, the natural lead task is source/exposure localization, because the earliest honest boundary must be anchored before defect-front profiling, stop-sensitive Monte-Carlo diagnostics, or boundary-side decoder compression can be interpreted coherently.
+
+\begin{definition}[Route-faithful lead task]
+\label{def:route-faithful-lead-task}
+Fix a queue-extracted conservative program block
+\[
+  \mathcal P^{\mathrm{cons}}_{m}(\mathbf w)
+\]
+from Definition~\ref{def:queue-extracted-conservative-sharpening-program-block}.
+Define the associated \emph{route-faithful lead task}
+\[
+  \mathsf{Lead}^{\mathrm{cons}}_{m}(\mathbf w)
+\]
+by
+\[
+  \mathsf{Lead}^{\mathrm{cons}}_{m}(\mathbf w)
+  :=
+  \begin{cases}
+    \mathsf{MSH}_{m}(\mathbf w), & \text{if }\mathsf{Route}^{\mathrm{upg}}_{m}(\mathbf w)=\mathcal U^{\mathrm{hor}}_{m}(\mathbf w),\\[2mm]
+    \mathsf{SRC}_{m}(\mathbf w), & \text{if }\mathsf{Route}^{\mathrm{upg}}_{m}(\mathbf w)=\mathcal U^{\mathrm{bdry}}_{m}(\mathbf w).
+  \end{cases}
+\]
+Thus:
+\begin{enumerate}[label=(\roman*)]
+  \item on the horizon side, the lead task is \(\mathsf{MSH}_{m}(\mathbf w)\), i.e. matrix sharpening on the already certified range;
+  \item on the boundary side, the lead task is \(\mathsf{SRC}_{m}(\mathbf w)\), i.e. source/exposure localization at the earliest honest boundary.
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}[Every conservative program block carries exactly one normalized first task]
+\label{prop:every-conservative-program-block-carries-exactly-one-normalized-first-task}
+Assume the setting of Definition~\ref{def:route-faithful-lead-task}. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item every queue-extracted conservative program block \(\mathcal P^{\mathrm{cons}}_{m}(\mathbf w)\) carries exactly one route-faithful lead task \(\mathsf{Lead}^{\mathrm{cons}}_{m}(\mathbf w)\);
+  \item if \(\mathsf{Route}^{\mathrm{upg}}_{m}(\mathbf w)=\mathcal U^{\mathrm{hor}}_{m}(\mathbf w)\), then the first conservative sharpening step is matrix sharpening rather than crystal stabilization or conservative PDE refinement;
+  \item if \(\mathsf{Route}^{\mathrm{upg}}_{m}(\mathbf w)=\mathcal U^{\mathrm{bdry}}_{m}(\mathbf w)\), then the first conservative profiling step is source/exposure localization rather than defect-front profiling or stop-sensitive probe diagnostics.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Uniqueness in (i) is immediate from the already unique inherited route and the case distinction in Definition~\ref{def:route-faithful-lead-task}. For (ii), matrix sharpening is the earliest common sharpening interface on the continuation side: crystal stabilization and conservative PDE refinement are both read \emph{through} the inherited matrix/Heisenberg--Millennium side, so choosing either of them first would presuppose a matrix profile that the current conservative program has not yet sharpened. Thus the route-faithful first task on the horizon side is \(\mathsf{MSH}_{m}(\mathbf w)\). For (iii), the earliest honest boundary must first be localized before one can coherently speak about its defect-front geometry, stop-sensitive probe profile, or boundary-side decoder compression. Thus the route-faithful first task on the boundary side is \(\mathsf{SRC}_{m}(\mathbf w)\).
+\end{proof}
+
+\begin{corollary}[The present post-v3.29.0 line already carries a unique first conservative move]
+\label{cor:present-post-v3290-line-already-carries-a-unique-first-conservative-move}
+For the first-stage word \(\mathbf w_3\in\{\mathsf A,\mathsf B\}\), the current active line already carries a unique normalized first conservative move:
+\[
+  \mathsf{Lead}^{\mathrm{cons}}_{2}(\mathbf w_3)
+  =
+  \begin{cases}
+    \mathsf{MSH}_{2}(\mathbf w_3), & \text{if }\mathbf w_3=\mathsf A,\\[2mm]
+    \mathsf{SRC}_{2}(\mathbf w_3), & \text{if }\mathbf w_3=\mathsf B.
+  \end{cases}
+\]
+In other words, the current post-release continuation does \emph{not} begin by choosing freely among matrix, crystal, field, and probe tasks. It begins by sharpening the matrix side if the inherited status is horizon-certified, and by localizing the earliest source/exposure site if the inherited status is boundary-certified.
+\end{corollary}
+
+\begin{proof}
+Immediate from Corollary~\ref{cor:present-post-v3290-line-already-carries-a-first-concrete-conservative-working-program} and Proposition~\ref{prop:every-conservative-program-block-carries-exactly-one-normalized-first-task}.
+\end{proof}
+
+\begin{remark}[What the lead-task extraction now buys]
+\label{rem:what-the-lead-task-extraction-now-buys}
+This is the point where the post-release line stops saying merely \emph{what could be done next}. It now says which conservative move comes first. That sharply reduces drift in the next working phase: on the horizon side the matrix comes before crystal and field refinements; on the boundary side source localization comes before defect-front profiling and stop-sensitive probing. So the next version can begin with one normalized first move rather than another round of menu-building.
+\end{remark}
+
+
+
+\noindent\textbf{Reader cue.} Read the next block as the first actual execution packet attached to the normalized lead task. Its purpose is not to complete matrix sharpening or source localization in one stroke, but to package the exact first conservative move in a route-faithful form that later crystal, field, defect-front, probe, and decoder layers may inherit without reopening the route.
+
+\subsection*{19AZ$^{(6ao)}$. First-step conservative execution packets below the lead-task interface}
+\label{sec:first-step-conservative-execution-packets-below-the-lead-task-interface}
+After 19AZ$^{(6an)}$, the active line knows which conservative move comes first. The next honest compression step is therefore to turn that lead task into an explicit first-step execution packet. On the horizon side this packet should sharpen the matrix/Heisenberg--Millennium readout just enough to prepare later crystal and conservative field refinement on the already certified range. On the boundary side it should localize the earliest honest source/exposure site just enough to prepare later defect-front profiling, stop-sensitive probe diagnostics, and decoder compression without smoothing away the boundary stop.
+
+\begin{definition}[First-step conservative execution packet]
+\label{def:first-step-conservative-execution-packet}
+Fix a certified finite extension word \(\mathbf w\in\mathcal L^{\mathrm{ext}}_{m}\), its route-faithful lead task
+\[
+  \mathsf{Lead}^{\mathrm{cons}}_{m}(\mathbf w)
+\]
+from Definition~\ref{def:route-faithful-lead-task}, and a certificate-aware probe family \(\mathsf{MCProbe}_{m,\mathbf w}\).
+\begin{enumerate}[label=(\roman*)]
+  \item If \(\mathsf{Lead}^{\mathrm{cons}}_{m}(\mathbf w)=\mathsf{MSH}_{m}(\mathbf w)\), define the \emph{horizon-side first-step execution packet}
+  \[
+    \mathsf{Exec}^{(1),\mathrm{hor}}_{m}(\mathbf w)
+    :=
+    \bigl(\mathsf{MSH}_{m}(\mathbf w),\mathsf{HZ}_{m}(\mathbf w),\mathsf{CRH}_{m}(\mathbf w),\mathsf{FEH}_{m}(\mathbf w),\mathsf{MCProbe}_{m,\mathbf w}\bigr)
+  \]
+  under the side condition that every downstream readout remains confined to a conservative sharpening profile on the already certified range and may only prepare later tasks from
+  \[
+    \{\mathsf{CRS}_{m}(\mathbf w),\mathsf{PDE}^{\mathrm{cons}}_{m}(\mathbf w),\mathsf{DEC}^{\mathrm{hor}}_{m}(\mathbf w)\}.
+  \]
+  \item If \(\mathsf{Lead}^{\mathrm{cons}}_{m}(\mathbf w)=\mathsf{SRC}_{m}(\mathbf w)\), define the \emph{boundary-side first-step execution packet}
+  \[
+    \mathsf{Exec}^{(1),\mathrm{bdry}}_{m}(\mathbf w)
+    :=
+    \bigl(\mathsf{SRC}_{m}(\mathbf w),\mathsf{BD}_{m}(\mathbf w),\mathsf{CRB}_{m}(\mathbf w),\mathsf{FEB}_{m}(\mathbf w),\mathsf{MCProbe}_{m,\mathbf w}\bigr)
+  \]
+  under the side condition that every downstream readout remains confined to an earliest-boundary localization profile and may only prepare later tasks from
+  \[
+    \{\mathsf{DFX}_{m}(\mathbf w),\mathsf{MC}^{\mathrm{bdry}}_{m}(\mathbf w),\mathsf{DEC}^{\mathrm{bdry}}_{m}(\mathbf w)\}.
+  \]
+\end{enumerate}
+Finally define the \emph{first-step conservative execution map}
+\[
+  \mathsf{Exec}^{(1),\mathrm{cons}}_{m}(\mathbf w)
+  :=
+  \begin{cases}
+    \mathsf{Exec}^{(1),\mathrm{hor}}_{m}(\mathbf w), & \text{if }\mathsf{Lead}^{\mathrm{cons}}_{m}(\mathbf w)=\mathsf{MSH}_{m}(\mathbf w),\\[2mm]
+    \mathsf{Exec}^{(1),\mathrm{bdry}}_{m}(\mathbf w), & \text{if }\mathsf{Lead}^{\mathrm{cons}}_{m}(\mathbf w)=\mathsf{SRC}_{m}(\mathbf w).
+  \end{cases}
+\]
+\end{definition}
+
+\begin{proposition}[Every normalized lead task induces exactly one first-step conservative execution packet]
+\label{prop:every-normalized-lead-task-induces-exactly-one-first-step-conservative-execution-packet}
+Assume the setting of Definition~\ref{def:first-step-conservative-execution-packet}. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item every normalized lead task \(\mathsf{Lead}^{\mathrm{cons}}_{m}(\mathbf w)\) induces exactly one first-step execution packet \(\mathsf{Exec}^{(1),\mathrm{cons}}_{m}(\mathbf w)\);
+  \item if the lead task is matrix sharpening, then the first-step packet prepares later crystal, conservative field, and decoder refinement on the already certified range without extending theorematic authority beyond that range;
+  \item if the lead task is source/exposure localization, then the first-step packet anchors the earliest honest boundary site before any later defect-front profiling, stop-sensitive probe diagnostics, or boundary-side decoder compression is attempted;
+  \item certificate-aware probe output may profile or reprioritize work inside the packet's inherited route, but it may not convert the packet into the opposite route, promote theorematic status, or smooth away a certified terminal boundary event.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Clause (i) is immediate from Definition~\ref{def:route-faithful-lead-task}: every certified word carries exactly one lead task, namely either \(\mathsf{MSH}_{m}(\mathbf w)\) or \(\mathsf{SRC}_{m}(\mathbf w)\), so Definition~\ref{def:first-step-conservative-execution-packet} assigns exactly one corresponding first-step packet. Clause (ii) follows because the horizon-side packet records the inherited horizon/matrix/crystal/field status and constrains every downstream use to the conservative continuation-side family; this can sharpen the already certified readout surface, but it does not certify new continuation beyond the current range. Clause (iii) follows because the boundary-side packet records the inherited earliest-boundary tags and constrains downstream use to the boundary-side family; hence localization comes before any defect-front, stop-sensitive probe, or decoder readout that presupposes a fixed boundary anchor. Clause (iv) is exactly the probe discipline inherited from 19AZ$^{(6ai)}$, 19AZ$^{(6ak)}$, and 19AZ$^{(6al)}$: probes may sharpen internal priority and profile, but they do not reroute or recertify.
+\end{proof}
+
+\begin{corollary}[The present post-v3.29.0 line already carries a first executable conservative move]
+\label{cor:present-post-v3290-line-already-carries-a-first-executable-conservative-move}
+For the first-stage word \(\mathbf w_3\in\{\mathsf A,\mathsf B\}\), the current active line already carries one first executable conservative move:
+\[
+  \mathsf{Exec}^{(1),\mathrm{cons}}_{2}(\mathbf w_3)
+  =
+  \begin{cases}
+    \mathsf{Exec}^{(1),\mathrm{hor}}_{2}(\mathbf w_3), & \text{if }\mathbf w_3=\mathsf A,\\[2mm]
+    \mathsf{Exec}^{(1),\mathrm{bdry}}_{2}(\mathbf w_3), & \text{if }\mathbf w_3=\mathsf B.
+  \end{cases}
+\]
+So the post-release continuation now begins with one explicit executable packet: matrix sharpening first in the transfer-positive case, and source/exposure localization first in the earliest-boundary case.
+\end{corollary}
+
+\begin{proof}
+Immediate from Corollary~\ref{cor:present-post-v3290-line-already-carries-a-unique-first-conservative-move} and Proposition~\ref{prop:every-normalized-lead-task-induces-exactly-one-first-step-conservative-execution-packet}.
+\end{proof}
+
+\begin{remark}[What this first executable packet now buys]
+\label{rem:what-this-first-executable-packet-now-buys}
+This is the point where the post-release line stops at last saying only which move comes first and starts carrying the move in an executable normal form. The next working phase can therefore begin with one explicit conservative packet rather than a diffuse instruction: sharpen the matrix side just enough to support later crystal/field refinement, or anchor the earliest boundary just enough to support later defect/probe/decoder profiling. That is a genuinely operational starting point for the next version.
+\end{remark}
+
+
+\noindent\textbf{Reader cue.} Read the next block as the first normalized output stage extracted from the first-step execution packet. Its purpose is not to claim that matrix sharpening or source anchoring is already complete in every later detail, but to record the first conservative result surface that the current route-faithful packet is allowed to produce before any later crystal, field, defect-front, probe, or decoder refinement is attempted.
+
+\subsection*{19AZ$^{(6ap)}$. First conservative result forms extracted from the first execution packet}
+\label{sec:first-conservative-result-forms-extracted-from-the-first-execution-packet}
+After 19AZ$^{(6ao)}$, the post-release line carries an explicit first-step execution packet. The next honest compression step is therefore to record the first conservative result form that this packet may output. On the horizon side that result should be the first sharpened matrix/Heisenberg--Millennium readout surface still confined to the already certified range. On the boundary side it should be the first anchored source/exposure profile still confined to the earliest honest boundary event and its immediate diagnostic neighborhood.
+
+\begin{definition}[First conservative result form]
+\label{def:first-conservative-result-form}
+Fix a certified finite extension word \(\mathbf w\in\mathcal L^{\mathrm{ext}}_{m}\), its first-step conservative execution packet
+\[
+  \mathsf{Exec}^{(1),\mathrm{cons}}_{m}(\mathbf w)
+\]
+from Definition~\ref{def:first-step-conservative-execution-packet}, and the inherited certificate-aware probe family \(\mathsf{MCProbe}_{m,\mathbf w}\).
+\begin{enumerate}[label=(\roman*)]
+  \item If
+  \[
+    \mathsf{Exec}^{(1),\mathrm{cons}}_{m}(\mathbf w)=\mathsf{Exec}^{(1),\mathrm{hor}}_{m}(\mathbf w),
+  \]
+  define the \emph{first sharpened horizon-side readout}
+  \[
+    \mathsf{Res}^{(1),\mathrm{hor}}_{m}(\mathbf w)
+    :=
+    \bigl(\mathsf{HZ}^{\sharp}_{m}(\mathbf w),\mathsf{CRH}_{m}(\mathbf w),\mathsf{FEH}_{m}(\mathbf w),\mathsf{MCProbe}_{m,\mathbf w}\bigr),
+  \]
+  where \(\mathsf{HZ}^{\sharp}_{m}(\mathbf w)\) denotes the first conservative sharpened matrix/Heisenberg--Millennium readout produced by \(\mathsf{MSH}_{m}(\mathbf w)\) under the side conditions that:
+  \begin{itemize}[leftmargin=2em]
+    \item the sharpened readout remains confined to the already certified horizon-side range,
+    \item it does not certify any new continuation beyond that range, and
+    \item it may only feed later tasks from
+    \[
+      \{\mathsf{CRS}_{m}(\mathbf w),\mathsf{PDE}^{\mathrm{cons}}_{m}(\mathbf w),\mathsf{DEC}^{\mathrm{hor}}_{m}(\mathbf w)\}.
+    \]
+  \end{itemize}
+  \item If
+  \[
+    \mathsf{Exec}^{(1),\mathrm{cons}}_{m}(\mathbf w)=\mathsf{Exec}^{(1),\mathrm{bdry}}_{m}(\mathbf w),
+  \]
+  define the \emph{first anchored boundary-side source profile}
+  \[
+    \mathsf{Res}^{(1),\mathrm{bdry}}_{m}(\mathbf w)
+    :=
+    \bigl(\mathsf{BD}^{\mathrm{anch}}_{m}(\mathbf w),\mathsf{CRB}_{m}(\mathbf w),\mathsf{FEB}_{m}(\mathbf w),\mathsf{MCProbe}_{m,\mathbf w}\bigr),
+  \]
+  where \(\mathsf{BD}^{\mathrm{anch}}_{m}(\mathbf w)\) denotes the first conservative anchored source/exposure profile produced by \(\mathsf{SRC}_{m}(\mathbf w)\) under the side conditions that:
+  \begin{itemize}[leftmargin=2em]
+    \item the source profile remains anchored at the earliest honest boundary event,
+    \item it does not smooth away, postpone, or reclassify that boundary event, and
+    \item it may only feed later tasks from
+    \[
+      \{\mathsf{DFX}_{m}(\mathbf w),\mathsf{MC}^{\mathrm{bdry}}_{m}(\mathbf w),\mathsf{DEC}^{\mathrm{bdry}}_{m}(\mathbf w)\}.
+    \]
+  \end{itemize}
+\end{enumerate}
+Finally define the \emph{first conservative result map}
+\[
+  \mathsf{Res}^{(1),\mathrm{cons}}_{m}(\mathbf w)
+  :=
+  \begin{cases}
+    \mathsf{Res}^{(1),\mathrm{hor}}_{m}(\mathbf w), & \text{if }\mathsf{Exec}^{(1),\mathrm{cons}}_{m}(\mathbf w)=\mathsf{Exec}^{(1),\mathrm{hor}}_{m}(\mathbf w),\\[2mm]
+    \mathsf{Res}^{(1),\mathrm{bdry}}_{m}(\mathbf w), & \text{if }\mathsf{Exec}^{(1),\mathrm{cons}}_{m}(\mathbf w)=\mathsf{Exec}^{(1),\mathrm{bdry}}_{m}(\mathbf w).
+  \end{cases}
+\]
+\end{definition}
+
+\begin{proposition}[Every first-step execution packet yields exactly one first conservative result form]
+\label{prop:every-first-step-execution-packet-yields-exactly-one-first-conservative-result-form}
+Assume the setting of Definition~\ref{def:first-conservative-result-form}. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item every first-step conservative execution packet \(\mathsf{Exec}^{(1),\mathrm{cons}}_{m}(\mathbf w)\) yields exactly one first conservative result form \(\mathsf{Res}^{(1),\mathrm{cons}}_{m}(\mathbf w)\);
+  \item in the horizon-side case, the resulting sharpened readout \(\mathsf{HZ}^{\sharp}_{m}(\mathbf w)\) is certificate-aware and may support later crystal, conservative field, and decoder refinement without enlarging theorematic authority beyond the already certified range;
+  \item in the boundary-side case, the resulting anchored profile \(\mathsf{BD}^{\mathrm{anch}}_{m}(\mathbf w)\) is certificate-aware and fixes the earliest honest source/exposure site before any later defect-front, stop-sensitive probe, or boundary-side decoder refinement is attempted;
+  \item certificate-aware probe output may profile or reprioritize work inside the inherited result form, but it may not convert a sharpened horizon-side readout into a boundary profile, convert an anchored boundary profile into a continuation certificate, or erase the route-faithful stop condition.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Clause (i) is immediate from Definition~\ref{def:first-step-conservative-execution-packet}: every certified word carries exactly one first-step execution packet, and Definition~\ref{def:first-conservative-result-form} assigns exactly one corresponding result form according to whether that packet is horizon-side or boundary-side. Clause (ii) follows because the horizon-side result explicitly records the sharpened matrix readout together with the inherited crystal and field tags, while preserving the confinement conditions from the execution packet; this sharpens the readout surface, but it does not certify any further extension. Clause (iii) follows because the boundary-side result explicitly records the anchored source profile together with the inherited boundary-side crystal and field tags, while preserving the earliest-boundary confinement conditions; hence localization precedes any later profiling that presupposes a fixed source anchor. Clause (iv) is exactly the inherited probe discipline from 19AZ$^{(6ai)}$, 19AZ$^{(6ak)}$, and 19AZ$^{(6al)}$, now applied at result-form level rather than packet level.
+\end{proof}
+
+\begin{corollary}[The present post-v3.29.0 line already carries a first conservative output surface]
+\label{cor:present-post-v3290-line-already-carries-a-first-conservative-output-surface}
+For the first-stage word \(\mathbf w_3\in\{\mathsf A,\mathsf B\}\), the current active line already carries one first conservative output surface:
+\[
+  \mathsf{Res}^{(1),\mathrm{cons}}_{2}(\mathbf w_3)
+  =
+  \begin{cases}
+    \mathsf{Res}^{(1),\mathrm{hor}}_{2}(\mathbf w_3), & \text{if }\mathbf w_3=\mathsf A,\\[2mm]
+    \mathsf{Res}^{(1),\mathrm{bdry}}_{2}(\mathbf w_3), & \text{if }\mathbf w_3=\mathsf B.
+  \end{cases}
+\]
+So the post-release continuation now carries not only an executable first move, but also its first normalized conservative output: a sharpened matrix readout in the transfer-positive case, and an anchored source/exposure profile in the earliest-boundary case.
+\end{corollary}
+
+\begin{proof}
+Immediate from Corollary~\ref{cor:present-post-v3290-line-already-carries-a-first-executable-conservative-move} and Proposition~\ref{prop:every-first-step-execution-packet-yields-exactly-one-first-conservative-result-form}.
+\end{proof}
+
+\begin{remark}[What the first conservative result form now buys]
+\label{rem:what-the-first-conservative-result-form-now-buys}
+This is the point where the post-release line stops carrying only a certified task and an executable packet and begins to carry a first actual result surface. That is exactly the level at which later conservative sharpening can become cumulative: crystal refinement, conservative field profiling, decoder compression, defect-front profiling, and stop-sensitive probing can now inherit a normalized sharpened readout or anchored source profile rather than reconstructing the first move from scratch.
+\end{remark}
+
+
+
+\noindent\textbf{Reader cue.} Read the next block as the first honest second-stage continuation extracted from the newly available conservative result surface. The point is not yet to claim a global refinement theorem, but to show that once a sharpened horizon-side readout or an anchored boundary-side source profile exists, the next conservative move is no longer free: on the horizon side it is crystal stabilization from the sharpened readout; on the boundary side it is defect-front profiling from the anchored source profile.
+
+\subsection*{19AZ$^{(6aq)}$. First second-stage follow-on forms extracted from the first conservative result surface}
+\label{sec:first-second-stage-follow-on-forms-extracted-from-the-first-conservative-result-surface}
+After 19AZ$^{(6ap)}$, the post-release line carries a first conservative result surface. The next honest compression step is therefore to record the first second-stage follow-on form that this result surface allows. On the horizon side the sharpened matrix/Heisenberg--Millennium readout should feed crystal stabilization before any broader field or decoder refinement is attempted. On the boundary side the anchored source/exposure profile should feed defect-front profiling before any broader stop-sensitive probe or decoder compression is attempted.
+
+\begin{definition}[First second-stage follow-on form]
+\label{def:first-second-stage-follow-on-form}
+Fix a certified finite extension word \(\mathbf w\in\mathcal L^{\mathrm{ext}}_{m}\), its first conservative result form
+\[
+  \mathsf{Res}^{(1),\mathrm{cons}}_{m}(\mathbf w)
+\]
+from Definition~\ref{def:first-conservative-result-form}, and the inherited certificate-aware probe family \(\mathsf{MCProbe}_{m,\mathbf w}\).
+\begin{enumerate}[label=(\roman*)]
+  \item If
+  \[
+    \mathsf{Res}^{(1),\mathrm{cons}}_{m}(\mathbf w)=\mathsf{Res}^{(1),\mathrm{hor}}_{m}(\mathbf w),
+  \]
+  define the \emph{first horizon-side second-stage follow-on form}
+  \[
+    \mathsf{Foll}^{(2),\mathrm{hor}}_{m}(\mathbf w)
+    :=
+    \bigl(\mathsf{CRS}_{m}(\mathbf w),\mathsf{HZ}^{\sharp}_{m}(\mathbf w),\mathsf{FEH}_{m}(\mathbf w),\mathsf{DEC}^{\mathrm{hor}}_{m}(\mathbf w),\mathsf{MCProbe}_{m,\mathbf w}\bigr),
+  \]
+  where \(\mathsf{CRS}_{m}(\mathbf w)\) denotes the first conservative crystal-stabilization task extracted from the sharpened readout under the side conditions that:
+  \begin{itemize}[leftmargin=2em]
+    \item crystal stabilization remains confined to the already certified horizon-side range encoded by \(\mathsf{HZ}^{\sharp}_{m}(\mathbf w)\),
+    \item it does not replace, weaken, or bypass the sharpened readout that generated it, and
+    \item it may only feed later tasks from
+    \[
+      \{\mathsf{PDE}^{\mathrm{cons}}_{m}(\mathbf w),\mathsf{DEC}^{\mathrm{hor}}_{m}(\mathbf w)\}.
+    \]
+  \end{itemize}
+  \item If
+  \[
+    \mathsf{Res}^{(1),\mathrm{cons}}_{m}(\mathbf w)=\mathsf{Res}^{(1),\mathrm{bdry}}_{m}(\mathbf w),
+  \]
+  define the \emph{first boundary-side second-stage follow-on form}
+  \[
+    \mathsf{Foll}^{(2),\mathrm{bdry}}_{m}(\mathbf w)
+    :=
+    \bigl(\mathsf{DFX}_{m}(\mathbf w),\mathsf{BD}^{\mathrm{anch}}_{m}(\mathbf w),\mathsf{FEB}_{m}(\mathbf w),\mathsf{DEC}^{\mathrm{bdry}}_{m}(\mathbf w),\mathsf{MCProbe}_{m,\mathbf w}\bigr),
+  \]
+  where \(\mathsf{DFX}_{m}(\mathbf w)\) denotes the first conservative defect-front profiling task extracted from the anchored source profile under the side conditions that:
+  \begin{itemize}[leftmargin=2em]
+    \item defect-front profiling remains anchored at the earliest honest boundary event encoded by \(\mathsf{BD}^{\mathrm{anch}}_{m}(\mathbf w)\),
+    \item it does not smooth away, postpone, or reinterpret the anchored source/exposure site, and
+    \item it may only feed later tasks from
+    \[
+      \{\mathsf{MC}^{\mathrm{bdry}}_{m}(\mathbf w),\mathsf{DEC}^{\mathrm{bdry}}_{m}(\mathbf w)\}.
+    \]
+  \end{itemize}
+\end{enumerate}
+Finally define the \emph{first second-stage conservative follow-on map}
+\[
+  \mathsf{Foll}^{(2),\mathrm{cons}}_{m}(\mathbf w)
+  :=
+  \begin{cases}
+    \mathsf{Foll}^{(2),\mathrm{hor}}_{m}(\mathbf w), & \text{if }\mathsf{Res}^{(1),\mathrm{cons}}_{m}(\mathbf w)=\mathsf{Res}^{(1),\mathrm{hor}}_{m}(\mathbf w),\\[2mm]
+    \mathsf{Foll}^{(2),\mathrm{bdry}}_{m}(\mathbf w), & \text{if }\mathsf{Res}^{(1),\mathrm{cons}}_{m}(\mathbf w)=\mathsf{Res}^{(1),\mathrm{bdry}}_{m}(\mathbf w).
+  \end{cases}
+\]
+\end{definition}
+
+\begin{proposition}[Every first conservative result surface yields exactly one first second-stage follow-on form]
+\label{prop:every-first-conservative-result-surface-yields-exactly-one-first-second-stage-follow-on-form}
+Assume the setting of Definition~\ref{def:first-second-stage-follow-on-form}. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item every first conservative result form \(\mathsf{Res}^{(1),\mathrm{cons}}_{m}(\mathbf w)\) yields exactly one first second-stage follow-on form \(\mathsf{Foll}^{(2),\mathrm{cons}}_{m}(\mathbf w)\);
+  \item in the horizon-side case, crystal stabilization is the first honest second-stage follow-on because the sharpened readout \(\mathsf{HZ}^{\sharp}_{m}(\mathbf w)\) must be structurally stabilized before any broader conservative field or decoder refinement is allowed to reuse it;
+  \item in the boundary-side case, defect-front profiling is the first honest second-stage follow-on because the anchored source profile \(\mathsf{BD}^{\mathrm{anch}}_{m}(\mathbf w)\) must first fix the earliest honest boundary geometry before any broader stop-sensitive probe or decoder compression is allowed to reuse it; and
+  \item certificate-aware probe output may profile or reprioritize work inside the inherited follow-on form, but it may not convert crystal stabilization into a source-localization task, convert defect-front profiling into a continuation certificate, or erase the inherited horizon/boundary route.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Clause (i) is immediate from Definition~\ref{def:first-conservative-result-form}: every certified word carries exactly one first conservative result surface, and Definition~\ref{def:first-second-stage-follow-on-form} assigns exactly one corresponding second-stage follow-on form according to whether that surface is horizon-side or boundary-side. Clause (ii) follows because the sharpened horizon-side readout already isolates the admissible range, so the first honest reuse of that surface is to stabilize its crystal-side structure before allowing broader conservative field or decoder refinement. Clause (iii) follows because the anchored boundary-side source profile already isolates the earliest honest boundary site, so the first honest reuse of that surface is to profile the associated defect front before allowing broader stop-sensitive probing or boundary-side decoder compression. Clause (iv) is exactly the inherited probe discipline from 19AZ$^{(6ai)}$, 19AZ$^{(6ak)}$, and 19AZ$^{(6al)}$, now applied at second-stage follow-on level.
+\end{proof}
+
+\begin{corollary}[The present post-v3.29.0 line already carries a first second-stage conservative bifurcation]
+\label{cor:present-post-v3290-line-already-carries-a-first-second-stage-conservative-bifurcation}
+For the first-stage word \(\mathbf w_3\in\{\mathsf A,\mathsf B\}\), the current active line already carries one first second-stage conservative bifurcation:
+\[
+  \mathsf{Foll}^{(2),\mathrm{cons}}_{2}(\mathbf w_3)
+  =
+  \begin{cases}
+    \mathsf{Foll}^{(2),\mathrm{hor}}_{2}(\mathbf w_3), & \text{if }\mathbf w_3=\mathsf A,\\[2mm]
+    \mathsf{Foll}^{(2),\mathrm{bdry}}_{2}(\mathbf w_3), & \text{if }\mathbf w_3=\mathsf B.
+  \end{cases}
+\]
+So the post-release continuation now carries not only a first conservative output surface, but also its first honest second-stage bifurcation: crystal stabilization from the sharpened horizon-side readout, and defect-front profiling from the anchored boundary-side source profile.
+\end{corollary}
+
+\begin{proof}
+Immediate from Corollary~\ref{cor:present-post-v3290-line-already-carries-a-first-conservative-output-surface} and Proposition~\ref{prop:every-first-conservative-result-surface-yields-exactly-one-first-second-stage-follow-on-form}.
+\end{proof}
+
+\begin{remark}[What the first second-stage follow-on form now buys]
+\label{rem:what-the-first-second-stage-follow-on-form-now-buys}
+This is the point where the post-release line starts to behave like a genuine conservative upgrade staircase rather than a single executable packet with a single output surface. The first result form now exports an honest next layer: on the horizon side, crystal stabilization can proceed from a sharpened matrix/Heisenberg--Millennium readout; on the boundary side, defect-front profiling can proceed from an anchored source/exposure profile. Later conservative field refinement, stop-sensitive probes, and decoder compression therefore inherit a better-prepared surface instead of reaching directly back to the first move.
+\end{remark}
+
+
+
+\noindent\textbf{Reader cue.} Read the next block as the first third-stage continuation extracted from the conservative upgrade staircase that now exists after 19AZ$^{(6aq)}$. The point is not yet to claim a full operator or field closure, but to show that once crystal stabilization or defect-front profiling has been honestly reached, the next conservative reuse is again no longer free: on the horizon side it is conservative field refinement from the stabilized crystal side, and on the boundary side it is a stop-sensitive probe/decoder surface from the profiled defect front.
+
+\subsection*{19AZ$^{(6ar)}$. First third-stage continuation forms extracted from the conservative upgrade staircase}
+\label{sec:first-third-stage-continuation-forms-extracted-from-the-conservative-upgrade-staircase}
+After 19AZ$^{(6aq)}$, the post-release line carries a first second-stage conservative bifurcation. The next honest compression step is therefore to record the first third-stage continuation form that this bifurcation allows. On the horizon side, once a stabilized crystal-side structure exists, the first honest continuation is a conservative field/profile refinement still confined to the already certified range. On the boundary side, once the defect front attached to the earliest honest boundary event has been profiled, the first honest continuation is a stop-sensitive probe/decoder surface that may read the boundary geometry more finely without erasing its stop character.
+
+\begin{definition}[First third-stage continuation form]
+\label{def:first-third-stage-continuation-form}
+Fix a certified finite extension word \(\mathbf w\in\mathcal L^{\mathrm{ext}}_{m}\), its first second-stage conservative follow-on form
+\[
+  \mathsf{Foll}^{(2),\mathrm{cons}}_{m}(\mathbf w)
+\]
+from Definition~\ref{def:first-second-stage-follow-on-form}, and the inherited certificate-aware probe family \(\mathsf{MCProbe}_{m,\mathbf w}\).
+\begin{enumerate}[label=(\roman*)]
+  \item If
+  \[
+    \mathsf{Foll}^{(2),\mathrm{cons}}_{m}(\mathbf w)=\mathsf{Foll}^{(2),\mathrm{hor}}_{m}(\mathbf w),
+  \]
+  define the \emph{first horizon-side third-stage continuation form}
+  \[
+    \mathsf{Foll}^{(3),\mathrm{hor}}_{m}(\mathbf w)
+    :=
+    \bigl(\mathsf{PDE}^{\mathrm{cons}}_{m}(\mathbf w),\mathsf{CRS}_{m}(\mathbf w),\mathsf{FEH}_{m}(\mathbf w),\mathsf{DEC}^{\mathrm{hor}}_{m}(\mathbf w),\mathsf{MCProbe}_{m,\mathbf w}\bigr),
+  \]
+  where \(\mathsf{PDE}^{\mathrm{cons}}_{m}(\mathbf w)\) denotes the first conservative field/profile refinement task extracted from the stabilized crystal-side structure under the side conditions that:
+  \begin{itemize}[leftmargin=2em]
+    \item conservative field refinement remains confined to the already certified horizon-side range inherited from \(\mathsf{HZ}^{\sharp}_{m}(\mathbf w)\) and stabilized by \(\mathsf{CRS}_{m}(\mathbf w)\),
+    \item it does not reopen, replace, or bypass the sharpened matrix/Heisenberg--Millennium readout or the crystal stabilization that prepared it, and
+    \item it may only feed later horizon-side tasks that remain route-faithful to
+    \[
+      \{\mathsf{DEC}^{\mathrm{hor}}_{m}(\mathbf w),\mathsf{MCProbe}_{m,\mathbf w}\}.
+    \]
+  \end{itemize}
+  \item If
+  \[
+    \mathsf{Foll}^{(2),\mathrm{cons}}_{m}(\mathbf w)=\mathsf{Foll}^{(2),\mathrm{bdry}}_{m}(\mathbf w),
+  \]
+  define the \emph{first boundary-side third-stage continuation form}
+  \[
+    \mathsf{Foll}^{(3),\mathrm{bdry}}_{m}(\mathbf w)
+    :=
+    \bigl(\mathsf{StopSurf}_{m}(\mathbf w),\mathsf{DFX}_{m}(\mathbf w),\mathsf{FEB}_{m}(\mathbf w),\mathsf{DEC}^{\mathrm{bdry}}_{m}(\mathbf w),\mathsf{MCProbe}_{m,\mathbf w}\bigr),
+  \]
+  where \(\mathsf{StopSurf}_{m}(\mathbf w)\) denotes the first stop-sensitive probe/decoder surface extracted from the profiled defect front under the side conditions that:
+  \begin{itemize}[leftmargin=2em]
+    \item the stop-sensitive surface remains anchored at the earliest honest boundary event encoded by \(\mathsf{BD}^{\mathrm{anch}}_{m}(\mathbf w)\) and profiled by \(\mathsf{DFX}_{m}(\mathbf w)\),
+    \item it may cluster, compress, compare, or decoder-read boundary-side probe traces, but it may not smooth away, postpone, or reinterpret the inherited stop event, and
+    \item it may only feed later boundary-side tasks that remain route-faithful to
+    \[
+      \{\mathsf{DEC}^{\mathrm{bdry}}_{m}(\mathbf w),\mathsf{MCProbe}_{m,\mathbf w}\}.
+    \]
+  \end{itemize}
+\end{enumerate}
+Finally define the \emph{first third-stage conservative continuation map}
+\[
+  \mathsf{Foll}^{(3),\mathrm{cons}}_{m}(\mathbf w)
+  :=
+  \begin{cases}
+    \mathsf{Foll}^{(3),\mathrm{hor}}_{m}(\mathbf w), & \text{if }\mathsf{Foll}^{(2),\mathrm{cons}}_{m}(\mathbf w)=\mathsf{Foll}^{(2),\mathrm{hor}}_{m}(\mathbf w),\\[2mm]
+    \mathsf{Foll}^{(3),\mathrm{bdry}}_{m}(\mathbf w), & \text{if }\mathsf{Foll}^{(2),\mathrm{cons}}_{m}(\mathbf w)=\mathsf{Foll}^{(2),\mathrm{bdry}}_{m}(\mathbf w).
+  \end{cases}
+\]
+\end{definition}
+
+\begin{proposition}[Every first second-stage conservative bifurcation yields exactly one first third-stage continuation form]
+\label{prop:every-first-second-stage-conservative-bifurcation-yields-exactly-one-first-third-stage-continuation-form}
+Assume the setting of Definition~\ref{def:first-third-stage-continuation-form}. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item every first second-stage conservative follow-on form \(\mathsf{Foll}^{(2),\mathrm{cons}}_{m}(\mathbf w)\) yields exactly one first third-stage continuation form \(\mathsf{Foll}^{(3),\mathrm{cons}}_{m}(\mathbf w)\);
+  \item in the horizon-side case, conservative field refinement is the first honest third-stage continuation because the crystal-stabilized structure is the first admissible surface on which a conservative field/profile refinement can be run without reopening the sharpened readout;
+  \item in the boundary-side case, a stop-sensitive probe/decoder surface is the first honest third-stage continuation because the profiled defect front is the first admissible surface on which probe and decoder traces may be refined without erasing the inherited stop event; and
+  \item certificate-aware probe output may reprioritize or compress work inside the inherited third-stage continuation form, but it may not turn conservative field refinement into a continuation certificate, turn a stop-sensitive surface into a horizon extension, or erase the inherited horizon/boundary route.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Clause (i) is immediate from Definition~\ref{def:first-second-stage-follow-on-form}: every certified word carries exactly one first second-stage conservative follow-on form, and Definition~\ref{def:first-third-stage-continuation-form} assigns exactly one corresponding third-stage continuation form according to whether that form is horizon-side or boundary-side. Clause (ii) follows because the crystal-stabilized horizon-side structure is the first admissible surface on which conservative field refinement may proceed without reaching back behind the sharpened readout. Clause (iii) follows because the profiled defect front is the first admissible boundary-side surface on which stop-sensitive probe and decoder traces may be refined without smoothing away the earliest honest stop. Clause (iv) is exactly the inherited probe discipline from 19AZ$^{(6ai)}$, 19AZ$^{(6ak)}$, and 19AZ$^{(6al)}$, now applied at third-stage continuation level.
+\end{proof}
+
+\begin{corollary}[The present post-v3.29.0 line already carries a first third-stage conservative continuation]
+\label{cor:present-post-v3290-line-already-carries-a-first-third-stage-conservative-continuation}
+For the first-stage word \(\mathbf w_3\in\{\mathsf A,\mathsf B\}\), the current active line already carries one first third-stage conservative continuation:
+\[
+  \mathsf{Foll}^{(3),\mathrm{cons}}_{2}(\mathbf w_3)
+  =
+  \begin{cases}
+    \mathsf{Foll}^{(3),\mathrm{hor}}_{2}(\mathbf w_3), & \text{if }\mathbf w_3=\mathsf A,\\[2mm]
+    \mathsf{Foll}^{(3),\mathrm{bdry}}_{2}(\mathbf w_3), & \text{if }\mathbf w_3=\mathsf B.
+  \end{cases}
+\]
+So the post-release continuation now carries not only a first conservative output surface and its second-stage bifurcation, but also the first honest third-stage continuation: conservative field refinement from the crystal-stabilized horizon-side structure, and a stop-sensitive probe/decoder surface from the profiled boundary-side defect front.
+\end{corollary}
+
+\begin{proof}
+Immediate from Corollary~\ref{cor:present-post-v3290-line-already-carries-a-first-second-stage-conservative-bifurcation} and Proposition~\ref{prop:every-first-second-stage-conservative-bifurcation-yields-exactly-one-first-third-stage-continuation-form}.
+\end{proof}
+
+\begin{remark}[What the first third-stage continuation now buys]
+\label{rem:what-the-first-third-stage-continuation-now-buys}
+This is the point where the post-release line begins to carry a genuine conservative continuation staircase rather than only a first move, a first result surface, and one second-stage split. On the horizon side the line now reaches a first conservative field/profile refinement that is already prepared by both sharpened readout and crystal stabilization. On the boundary side the line now reaches a first stop-sensitive probe/decoder surface that is already prepared by both anchored source profiling and defect-front analysis. That makes later decoder compression, conservative field sharpening, and boundary-side diagnostic integration inherit a more mature surface instead of touching the raw first bifurcation directly.
+\end{remark}
+
+
+\noindent\textbf{Reader cue.} Read the next block as the first compact conservative readout surface extracted from the upgrade staircase that now exists after 19AZ$^{(6ar)}$. The purpose is to stop carrying the horizon-side and boundary-side continuations only as scattered tasks. Once the sharpened readout, crystal stabilization, and conservative field refinement have been honestly reached on the horizon side, and once the anchored source profile, defect-front profiling, and stop-sensitive probe/decoder surface have been honestly reached on the boundary side, the line may compress each side into one compact conservative working surface for downstream use.
+
+\subsection*{19AZ$^{(6as)}$. First compact conservative readout surfaces extracted from the continuation staircase}
+\label{sec:first-compact-conservative-readout-surfaces-extracted-from-the-continuation-staircase}
+After 19AZ$^{(6ar)}$, the post-release line carries a first third-stage conservative continuation on both the horizon side and the boundary side. The next honest compression step is therefore to record the first compact conservative readout surface that each side now supports. On the horizon side this surface should combine the sharpened matrix/Heisenberg--Millennium readout, the stabilized crystal structure, and the conservative field/profile refinement into one downstream-readable object. On the boundary side it should combine the anchored source/exposure profile, the defect-front profile, and the stop-sensitive probe/decoder surface into one downstream-readable object.
+
+\begin{definition}[First compact conservative readout surface]
+\label{def:first-compact-conservative-readout-surface}
+Fix a certified finite extension word \(\mathbf w\in\mathcal L^{\mathrm{ext}}_{m}\), its first third-stage conservative continuation form
+\[
+  \mathsf{Foll}^{(3),\mathrm{cons}}_{m}(\mathbf w)
+\]
+from Definition~\ref{def:first-third-stage-continuation-form}, and the inherited certificate-aware probe family \(\mathsf{MCProbe}_{m,\mathbf w}\).
+\begin{enumerate}[label=(\roman*)]
+  \item If
+  \[
+    \mathsf{Foll}^{(3),\mathrm{cons}}_{m}(\mathbf w)=\mathsf{Foll}^{(3),\mathrm{hor}}_{m}(\mathbf w),
+  \]
+  define the \emph{first compact horizon-side conservative readout surface}
+  \[
+    \mathsf{Surf}^{\mathrm{hor}}_{m}(\mathbf w)
+    :=
+    \bigl(\mathsf{HZ}^{\sharp}_{m}(\mathbf w),\mathsf{CRS}_{m}(\mathbf w),\mathsf{PDE}^{\mathrm{cons}}_{m}(\mathbf w),\mathsf{DEC}^{\mathrm{hor}}_{m}(\mathbf w),\mathsf{MCProbe}_{m,\mathbf w}\bigr),
+  \]
+  under the side conditions that:
+  \begin{itemize}[leftmargin=2em]
+    \item the surface remains confined to the already certified horizon-side range inherited from the sharpened readout and the crystal-stabilized structure,
+    \item the conservative field/profile component remains subordinate to that inherited range and may sharpen transport-side organization but may not certify any new continuation beyond it, and
+    \item downstream consumers may read, compare, compress, or decoder-organize the surface, but they may not reopen the route decision that produced it.
+  \end{itemize}
+  \item If
+  \[
+    \mathsf{Foll}^{(3),\mathrm{cons}}_{m}(\mathbf w)=\mathsf{Foll}^{(3),\mathrm{bdry}}_{m}(\mathbf w),
+  \]
+  define the \emph{first compact boundary-side conservative readout surface}
+  \[
+    \mathsf{Surf}^{\mathrm{bdry}}_{m}(\mathbf w)
+    :=
+    \bigl(\mathsf{BD}^{\mathrm{anch}}_{m}(\mathbf w),\mathsf{DFX}_{m}(\mathbf w),\mathsf{StopSurf}_{m}(\mathbf w),\mathsf{DEC}^{\mathrm{bdry}}_{m}(\mathbf w),\mathsf{MCProbe}_{m,\mathbf w}\bigr),
+  \]
+  under the side conditions that:
+  \begin{itemize}[leftmargin=2em]
+    \item the surface remains anchored at the earliest honest boundary event inherited from the anchored source/exposure profile and the profiled defect front,
+    \item the stop-sensitive probe/decoder component may refine clustering, exposure comparison, and decoder-readable boundary traces, but it may not smooth away, postpone, or reinterpret the inherited stop event, and
+    \item downstream consumers may read, compare, compress, or decoder-organize the surface, but they may not reroute it into a horizon-side continuation claim.
+  \end{itemize}
+\end{enumerate}
+Finally define the \emph{first compact conservative readout-surface map}
+\[
+  \mathsf{Surf}^{\mathrm{cons}}_{m}(\mathbf w)
+  :=
+  \begin{cases}
+    \mathsf{Surf}^{\mathrm{hor}}_{m}(\mathbf w), & \text{if }\mathsf{Foll}^{(3),\mathrm{cons}}_{m}(\mathbf w)=\mathsf{Foll}^{(3),\mathrm{hor}}_{m}(\mathbf w),\\[2mm]
+    \mathsf{Surf}^{\mathrm{bdry}}_{m}(\mathbf w), & \text{if }\mathsf{Foll}^{(3),\mathrm{cons}}_{m}(\mathbf w)=\mathsf{Foll}^{(3),\mathrm{bdry}}_{m}(\mathbf w).
+  \end{cases}
+\]
+\end{definition}
+
+\begin{proposition}[Every first third-stage conservative continuation yields exactly one compact conservative readout surface]
+\label{prop:every-first-third-stage-conservative-continuation-yields-exactly-one-compact-conservative-readout-surface}
+Assume the setting of Definition~\ref{def:first-compact-conservative-readout-surface}. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item every first third-stage conservative continuation form \(\mathsf{Foll}^{(3),\mathrm{cons}}_{m}(\mathbf w)\) yields exactly one compact conservative readout surface \(\mathsf{Surf}^{\mathrm{cons}}_{m}(\mathbf w)\);
+  \item in the horizon-side case, the compact surface is the first honest downstream object that combines sharpened readout, crystal stabilization, and conservative field refinement without reopening the route that produced them;
+  \item in the boundary-side case, the compact surface is the first honest downstream object that combines anchored source profiling, defect-front profiling, and stop-sensitive probe/decoder structure without erasing the inherited earliest-boundary stop; and
+  \item probe or decoder output may cluster, compare, or compress information inside the compact surface, but it may not turn that surface into a new theorematic certificate, a route change, or a denial of the inherited horizon/boundary distinction.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Clause (i) is immediate from Definition~\ref{def:first-third-stage-continuation-form}: every certified word carries exactly one first third-stage conservative continuation form, and Definition~\ref{def:first-compact-conservative-readout-surface} assigns exactly one corresponding compact conservative readout surface according to whether that continuation is horizon-side or boundary-side. Clause (ii) follows because the horizon-side continuation has already prepared the sharpened readout, crystal stabilization, and conservative field/profile refinement on one inherited certified range, so the first honest reuse is to package them into one downstream-readable surface rather than to scatter them again across separate layers. Clause (iii) follows because the boundary-side continuation has already prepared the anchored source profile, the profiled defect front, and the stop-sensitive probe/decoder structure on one inherited earliest-boundary event, so the first honest reuse is to package them into one downstream-readable surface rather than to let later diagnostics improvise their own boundary anchor. Clause (iv) is exactly the inherited certificate-aware probe discipline from 19AZ$^{(6ai)}$, 19AZ$^{(6ak)}$, and 19AZ$^{(6al)}$, now applied at compact-surface level.
+\end{proof}
+
+\begin{corollary}[The present post-v3.29.0 line already carries a first compact conservative readout surface]
+\label{cor:present-post-v3290-line-already-carries-a-first-compact-conservative-readout-surface}
+For the first-stage word \(\mathbf w_3\in\{\mathsf A,\mathsf B\}\), the current active line already carries one compact conservative readout surface:
+\[
+  \mathsf{Surf}^{\mathrm{cons}}_{2}(\mathbf w_3)
+  =
+  \begin{cases}
+    \mathsf{Surf}^{\mathrm{hor}}_{2}(\mathbf w_3), & \text{if }\mathbf w_3=\mathsf A,\\[2mm]
+    \mathsf{Surf}^{\mathrm{bdry}}_{2}(\mathbf w_3), & \text{if }\mathbf w_3=\mathsf B.
+  \end{cases}
+\]
+So the post-release continuation now carries not only a conservative upgrade staircase through first move, first result surface, second-stage bifurcation, and third-stage continuation, but also the first compact conservative working surface on each side: horizon-side matrix/crystal/field organization and boundary-side source/defect/probe/decoder organization.
+\end{corollary}
+
+\begin{proof}
+Immediate from Corollary~\ref{cor:present-post-v3290-line-already-carries-a-first-third-stage-conservative-continuation} and Proposition~\ref{prop:every-first-third-stage-conservative-continuation-yields-exactly-one-compact-conservative-readout-surface}.
+\end{proof}
+
+\begin{remark}[What the first compact conservative readout surface now buys]
+\label{rem:what-the-first-compact-conservative-readout-surface-now-buys}
+This is the point where the post-release line first begins to look like a usable conservative readout interface rather than only a staircase of preparatory follow-on forms. On the horizon side, matrix sharpening, crystal stabilization, and conservative field refinement are now available as one compact surface that later decoder or operator-side work may read without falling back behind the certified range. On the boundary side, anchored source profiling, defect-front profiling, and stop-sensitive probe/decoder structure are now available as one compact surface that later diagnostic or clustering work may read without erasing the inherited stop event. The next natural move is therefore no longer to invent another preparatory block, but to extract from these compact surfaces the first route-faithful conservative output or comparison layer that later OP-oriented work can consume.
+\end{remark}
+
+
+\noindent\textbf{Reader cue.} Read the next block as the first route-faithful conservative comparison/output layer extracted from the compact surfaces of 19AZ$^{(6as)}$. The purpose is to stop treating the horizon-side and boundary-side surfaces only as rich internal packages. Once each side already carries one compact conservative surface, the next honest step is to expose one downstream-readable output/comparison form that later OP-oriented work may consume without reopening the route, smoothing away an inherited stop, or pretending that horizon-side and boundary-side outputs are interchangeable.
+

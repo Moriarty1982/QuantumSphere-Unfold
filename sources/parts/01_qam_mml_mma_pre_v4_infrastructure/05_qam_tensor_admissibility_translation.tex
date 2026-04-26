@@ -1,0 +1,489 @@
+\subsection*{QAM tensor admissibility and tensor closure rules}
+
+We now strengthen the tensor-coded part of the QAM language. At the present stage, tensor composition is still not treated as a full tensor algebra. Instead, it is introduced as a controlled structural constructor equipped with admissibility, closure, transport, and readout compatibility rules.
+
+\begin{definition}[Tensor-coded formation]
+If $p$ and $q$ are QAM-coded objects, then
+\[
+p\otimes q := \langle 7,p,q\rangle
+\]
+is their tensor-coded composite. We write
+\[
+\mathrm{QTensor}(p\otimes q)
+\]
+for the statement that the code has the tensor tag.
+\end{definition}
+
+\begin{definition}[Tensor formation by kind]
+The following tensor formations are allowed in principle:
+\begin{enumerate}
+\item state-state tensors:
+\[
+s_1\otimes s_2;
+\]
+\item layer-layer tensors:
+\[
+\ell_1\otimes \ell_2;
+\]
+\item operator-operator tensors:
+\[
+o_1\otimes o_2;
+\]
+\item readout-readout tensors:
+\[
+r_1\otimes r_2;
+\]
+\item branch-branch tensors:
+\[
+b_1\otimes b_2;
+\]
+\item shell-shell tensors:
+\[
+\sigma_1\otimes \sigma_2.
+\]
+\end{enumerate}
+A tensor-coded composite is called \emph{well-typed} if both entries belong to one of the admissible kind-pairs listed above.
+\end{definition}
+
+\begin{remark}
+At this stage, mixed tensors between different kinds are not taken as primitive. They may be introduced later through derived coding conventions if needed.
+\end{remark}
+
+\begin{definition}[Tensor admissibility]
+For QAM-coded objects $x,y$, we write
+\[
+\mathrm{QTensorAdm}(x,y)
+\]
+iff:
+\begin{enumerate}
+\item $x\otimes y$ is well-typed;
+\item the tensor-coded composite preserves the intended closure-bearing structural regime;
+\item the tensor-coded composite is admitted as a legitimate QAM object of its corresponding kind.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}
+Thus tensor admissibility is not automatic from mere code formation. It is a structural compatibility condition.
+\end{remark}
+
+\begin{definition}[Tensor closure compatibility]
+For coded states $s_1,s_2,t_1,t_2$, we write
+\[
+\mathrm{QTensorCl}(s_1,s_2;t_1,t_2)
+\]
+iff
+\[
+\mathrm{QClEq}(s_1,t_1)
+\qquad\text{and}\qquad
+\mathrm{QClEq}(s_2,t_2)
+\]
+and the tensor composites
+\[
+s_1\otimes s_2
+\qquad\text{and}\qquad
+t_1\otimes t_2
+\]
+are tensor-admissible.
+\end{definition}
+
+\begin{axiom}[Tensor closure propagation schema]
+If
+\[
+\mathrm{QTensorCl}(s_1,s_2;t_1,t_2),
+\]
+then
+\[
+\mathrm{QClEq}(s_1\otimes s_2,\ t_1\otimes t_2).
+\]
+\end{axiom}
+
+\begin{remark}
+This is the first basic tensor closure principle: closure-equivalent components yield closure-equivalent tensor composites whenever tensor admissibility holds.
+\end{remark}
+
+\begin{definition}[Tensor-coded transport]
+Let
+\[
+o_1=\langle 2,\ell_1,\ell_1',G_1\rangle,
+\qquad
+o_2=\langle 2,\ell_2,\ell_2',G_2\rangle
+\]
+be coded operators. Their tensor-coded transport is
+\[
+o_1\otimes o_2.
+\]
+We say that
+\[
+\mathrm{QTensorTransport}(o_1,o_2;s_1,s_2;t_1,t_2)
+\]
+holds iff:
+\begin{enumerate}
+\item $\mathrm{QAdmTransport}(o_1,s_1,t_1)$;
+\item $\mathrm{QAdmTransport}(o_2,s_2,t_2)$;
+\item $\mathrm{QTensorAdm}(s_1,s_2)$ and $\mathrm{QTensorAdm}(t_1,t_2)$;
+\item $\mathrm{QTensorAdm}(o_1,o_2)$.
+\end{enumerate}
+\end{definition}
+
+\begin{axiom}[Tensor transport admissibility schema]
+If
+\[
+\mathrm{QTensorTransport}(o_1,o_2;s_1,s_2;t_1,t_2),
+\]
+then
+\[
+\mathrm{QAdmTransport}(o_1\otimes o_2,\ s_1\otimes s_2,\ t_1\otimes t_2).
+\]
+\end{axiom}
+
+\begin{remark}
+This is the tensorial lift of admissible transport: admissible componentwise transport induces admissible tensor transport whenever the tensor compatibility conditions are satisfied.
+\end{remark}
+
+\begin{definition}[Tensor-coded readout]
+Let
+\[
+r_1=\langle 3,\ell_1,W_1,R_1\rangle,
+\qquad
+r_2=\langle 3,\ell_2,W_2,R_2\rangle
+\]
+be coded readouts. Their tensor-coded readout is
+\[
+r_1\otimes r_2.
+\]
+We say that $r_1\otimes r_2$ is \emph{tensor closure-compatible} if:
+\begin{enumerate}
+\item $r_1$ and $r_2$ are closure-compatible;
+\item $\mathrm{QTensorAdm}(r_1,r_2)$;
+\item the closure-relevant readout factorization of $r_1\otimes r_2$ depends only on the tensor closure class of the source state.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}
+This is the tensor analogue of closure-compatible readout. It allows tensor-composite visible outputs to differ at raw level while preserving closure content after factorization.
+\end{remark}
+
+\begin{definition}[Tensor branch admissibility]
+Let $b_1,b_2$ be closure-admissible branch codes. Their tensor composite
+\[
+b_1\otimes b_2
+\]
+is called \emph{tensor branch-admissible} if:
+\begin{enumerate}
+\item $\mathrm{QTensorAdm}(b_1,b_2)$;
+\item componentwise branch refinement preserves closure class;
+\item the induced tensor branch refinement preserves closure class at the tensor-composite level.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Tensor shell admissibility]
+Let $\sigma_1,\sigma_2$ be shell-admissible refinement codes. Their tensor composite
+\[
+\sigma_1\otimes \sigma_2
+\]
+is called \emph{tensor shell-admissible} if:
+\begin{enumerate}
+\item $\mathrm{QTensorAdm}(\sigma_1,\sigma_2)$;
+\item componentwise shell refinement preserves closure class;
+\item the induced tensor shell refinement preserves closure class at the tensor-composite level.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}
+Tensor branch admissibility and tensor shell admissibility are the coded QAM precursors of coupled branch/shell transport across multiple structural sectors.
+\end{remark}
+
+\begin{proposition}[Tensor closure preservation principle]
+Let $s_1,s_2,t_1,t_2$ be coded states. Assume
+\[
+\mathrm{QClEq}(s_1,t_1),
+\qquad
+\mathrm{QClEq}(s_2,t_2),
+\qquad
+\mathrm{QTensorAdm}(s_1,s_2),
+\qquad
+\mathrm{QTensorAdm}(t_1,t_2).
+\]
+Then
+\[
+\mathrm{QClEq}(s_1\otimes s_2,\ t_1\otimes t_2).
+\]
+\end{proposition}
+
+\begin{proof}
+This is exactly the tensor closure propagation schema.
+\end{proof}
+
+\begin{proposition}[Tensor transport preservation principle]
+Assume
+\[
+\mathrm{QTensorTransport}(o_1,o_2;s_1,s_2;t_1,t_2).
+\]
+Then
+\[
+\mathrm{QClEq}(s_1\otimes s_2,\ t_1\otimes t_2).
+\]
+\end{proposition}
+
+\begin{proof}
+By tensor transport admissibility,
+\[
+\mathrm{QAdmTransport}(o_1\otimes o_2,\ s_1\otimes s_2,\ t_1\otimes t_2).
+\]
+Admissible transport implies closure preservation, hence
+\[
+\mathrm{QClEq}(s_1\otimes s_2,\ t_1\otimes t_2).
+\]
+\end{proof}
+
+\begin{theorem}[First tensor QAM transport theorem]
+Let
+\[
+o_1,o_2
+\]
+be coded operators,
+\[
+s_1,s_2
+\]
+coded source states,
+and
+\[
+t_1,t_2
+\]
+coded transported states. Assume
+\[
+\mathrm{QTensorTransport}(o_1,o_2;s_1,s_2;t_1,t_2),
+\]
+and let
+\[
+r_1\otimes r_2
+\]
+be a tensor closure-compatible readout. Then the tensor-composite source state and the tensor-composite transported state lie in the same coded closure class:
+\[
+\mathrm{QClEq}(s_1\otimes s_2,\ t_1\otimes t_2),
+\]
+and therefore their closure-relevant tensor readout content agrees after factorization through the tensor class-target map.
+\end{theorem}
+
+\begin{proof}
+By the previous proposition,
+\[
+\mathrm{QClEq}(s_1\otimes s_2,\ t_1\otimes t_2).
+\]
+Since the tensor readout is closure-compatible at tensor level, closure-equivalent tensor-composite states have the same closure-relevant image after factorization. This proves the claim.
+\end{proof}
+
+\begin{corollary}[Tensor branch-shell admissible support]
+If
+\[
+b_1\otimes b_2
+\]
+is tensor branch-admissible and
+\[
+\sigma_1\otimes \sigma_2
+\]
+is tensor shell-admissible, then admissible branch-shell support is preserved at tensor-composite level, provided the relevant tensor admissibility conditions hold.
+\end{corollary}
+
+\begin{remark}
+This is the first indication that the current branch-shell architecture of the Companion can be lifted into a tensor-coded QAM language without changing its closure-first logic. In the internal reading order, this tensor layer remains subordinate to the earlier branch/shell admissibility and translation layers.
+\end{remark}
+
+\begin{remark}[Current status of tensor QAM]
+At the present stage, the tensor rules do not yet define a full monoidal calculus. They only establish the first closure-preserving, transport-preserving, and readout-compatible tensor schemata needed for a structure-first QAM development over ZF.
+\end{remark}
+
+
+\subsection*{QAM translation theorem for the admissible OP fragment}
+
+We now make explicit that the present OP/branch/shell architecture may be translated into the coded QAM-over-ZF language without changing its closure-first logic. In v3.16.0 this translation block should be read as the theorem-level mirror of the front extraction theorem (Theorem~\ref{thm:compact-public-shape-preservation}): the front block states the compressed public-shape chain, while the present subsection states why that same chain is a faithful coded image of the already stabilized OP architecture. At the current stage, this is not yet claimed as a full equivalence of entire formal systems. It is claimed only as a faithful translation on the admissible fragment of the OP transport architecture. Accordingly, the present subsection is ordered to match the front reading guide: coded source state and closure-compatible coded readout first, closure-admissible branch code second, shell-admissible refinement code third, admissible routed support fourth, and closure-relevant readout content fifth.
+
+\begin{definition}[Translation map from the admissible OP chain into QAM codes]
+Let $\mathfrak{O}_{\mathrm{adm}}$ denote the admissible OP fragment consisting of:
+\begin{enumerate}
+\item source and return states of the OP1--OP5 source-return architecture;
+\item intermediate admissible OP transport states;
+\item admissible branch data from the branchwise refinement layer;
+\item OP3 shell-admissible refinement data;
+\item admissible and normalized routed support data.
+\end{enumerate}
+A \emph{QAM translation map} is a coding assignment
+\[
+\tau:\mathfrak{O}_{\mathrm{adm}}\to \mathfrak{Q}_{\mathrm{adm}}
+\]
+from admissible OP objects into admissible QAM-coded objects such that:
+\begin{enumerate}
+\item source/readout objects are sent to coded source states and coded closure-compatible readouts of the same front-facing type used in the public-shape extraction;
+\item OP transport maps are sent to coded operator maps preserving the admissible transport role between coded source, branch, shell, routed-support, and readout stages;
+\item admissible branches are sent to closure-admissible branch codes;
+\item OP3 shell-admissible refinements are sent to shell-admissible refinement codes;
+\item admissible and normalized routed support is sent to admissible and normalized routed support codes.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}[Reading-order convention for $\tau$]
+The point of $\tau$ is not merely syntactic recoding. It must preserve the structural roles of the translated objects in the same order in which the front extraction reads them: coded source state and closure-compatible coded readout remain the coded front-face of the OP~1/OP~5 source-return pair; admissible transport remains admissible transport; branch remains branch; shell-admissible refinement remains shell-admissible refinement; routed support remains routed support; and closure-relevant readout content remains closure-relevant readout content.
+\end{remark}
+
+\begin{definition}[Closure-faithful translation on the public-shape chain]
+The translation map $\tau$ is called \emph{closure-faithful} if for all admissible OP objects $X,Y\in\mathfrak{O}_{\mathrm{adm}}$,
+\[
+X \sim_{\mathrm{cl}} Y
+\qquad\Longrightarrow\qquad
+\mathrm{QClEq}(\tau(X),\tau(Y)),
+\]
+and whenever the OP-side relation expresses admissible preservation of the native closure-bearing mode along the source/transport/branch/shell/routed chain, the translated QAM-side relation expresses preservation of the same closure content in coded form.
+\end{definition}
+
+\begin{definition}[Readout compatibility of the translation]
+The translation map $\tau$ is called \emph{readout-compatible} if OP-side closure-compatible readout invariants correspond, after translation, to QAM-coded closure-compatible readouts on the image of $\tau$, with the same closure-relevant readout content as in the public-shape chain.
+\end{definition}
+
+Then the following OP-side chain is preserved under translation into QAM-over-ZF in exactly the order used by the front public-shape reading guide:
+\begin{theorem}[QAM translation theorem for the admissible OP fragment]\label{thm:qam-translation}
+Assume that:
+\begin{enumerate}
+\item the OP transport architecture is given on its admissible fragment $\mathfrak{O}_{\mathrm{adm}}$;
+\item there exists a closure-faithful and readout-compatible translation map
+\[
+\tau:\mathfrak{O}_{\mathrm{adm}}\to \mathfrak{Q}_{\mathrm{adm}};
+\]
+\item admissible OP transport, admissible branches, OP3 shell-admissible refinements, admissible routed support, and closure-compatible readout are translated according to the preceding definitions.
+\end{enumerate}
+Then the following OP-side chain is preserved under translation into QAM-over-ZF in exactly the order used by the front public-shape reading guide:
+\[
+\begin{aligned}
+\text{coded source state / OP1--OP5 readout face}
+&\longrightarrow \text{closure-admissible branch code}\\
+&\longrightarrow \text{shell-admissible refinement code}\\
+&\longrightarrow \text{admissible routed support code}\\
+&\longrightarrow \text{closure-relevant coded readout content}.
+\end{aligned}
+\]
+Equivalently, after naming the translated objects in public-shape order, one obtains the same compressed chain from Theorem~\ref{thm:compact-public-shape-preservation}:
+\[
+\begin{aligned}
+s_{\mathrm{in}}
+&\longrightarrow (b,\sigma)\\
+&\longrightarrow u\\
+&\longrightarrow r.
+\end{aligned}
+\]
+More precisely:
+
+\begin{enumerate}
+\item \textbf{OP closure preservation.}  
+If the OP1--OP5 source-return pair is closed at invariant level, then its QAM-coded image is closure-preserving at coded level.
+
+\item \textbf{Intermediate transport preservation.}  
+If the intermediate OP layers preserve the native closure-bearing mode, then their QAM-coded images preserve the coded closure class.
+
+\item \textbf{Branch admissibility preservation.}  
+If a branch is closure-admissible on the OP side, then its image under $\tau$ is a closure-admissible branch code on the QAM side.
+
+\item \textbf{Shell admissibility preservation.}  
+If an OP3 refinement is shell-admissible on the OP side, then its image under $\tau$ is a shell-admissible refinement code on the QAM side.
+
+\item \textbf{Routed admissible support preservation.}  
+If a routed support sector is admissible and normalized on the OP side, then its image under $\tau$ is an admissible and normalized routed support code on the QAM side, and its closure-relevant content is preserved.
+
+\item \textbf{Front-facing readout compatibility.}  
+If the translated routed support sector is evaluated by a closure-compatible OP readout, then the resulting coded readout is exactly of the public-shape type used in Theorem~\ref{thm:compact-public-shape-preservation}; in particular it remains a coded readout of preserved closure content and not a new primitive closure test.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Each clause follows from closure-faithfulness and readout compatibility of the translation map.
+
+For (1), closure of the OP1--OP5 pair means preservation of the native closure-bearing mode at the source-return level. By closure-faithfulness, this becomes coded closure preservation for the translated source and return states.
+
+For (2), invariant preservation across intermediate OP layers is, by assumption, preservation of the same closure-bearing mode through admissible transport. Again, closure-faithfulness translates this into preservation of coded closure class for the corresponding QAM-coded states and operator actions.
+
+For (3), branch admissibility on the OP side means precisely that the branchwise refinement preserves the native closure-bearing mode. By the definition of the translation map, admissible branches are sent to branch codes that preserve coded closure class.
+
+For (4), shell admissibility at OP3 means that the refinement does not change the native closure-bearing mode. By translation, this becomes shell-admissibility of the corresponding QAM refinement code.
+
+For (5), admissible routed support is translated by hypothesis into admissible routed support codes. Readout compatibility ensures that closure-relevant readout content is preserved after translation, and normalization of support weights is preserved by the routed support coding layer.
+
+For (6), readout compatibility identifies the translated readout with a coded closure-compatible readout on the image of the admissible OP chain. Hence the front-facing public-shape readout statement is not extra structure; it is the coded readout face of the same preserved OP closure content.
+\end{proof}
+
+
+\begin{remark}[Prospective local admissibility reading of the translation theorem]\label{rem:qam-zero-kernel-translation-local}
+The later local admissibility test may already be applied, in deferred form, to Theorem~\ref{thm:qam-translation}. The result is not yet a full active kernel-first rewrite of the translation theorem, but it cleanly separates the future admissible rewrite points.
+\begin{enumerate}
+\item Clauses~(1)--(2) are locally admissible exactly at those translated source/transport surfaces that already lie on the present visible state surface $\langle 0,a\rangle$; there the payload can be exposed directly and compared by kernel normal form.
+\item Clauses~(3)--(5) are locally admissible once the translated branch, shell, and routed-support codes are shown to inherit the same exposed-kernel discipline used in Propositions~\ref{prop:qam-kernel-first-branch-shell} and~\ref{prop:qam-kernel-first-routed}.
+\item Clause~(6) becomes locally admissible precisely when translated closure-compatible readout factors through the same kernel normal-form class, so that the coded public-shape readout is recovered from class level rather than re-established on the full visible translated chain.
+\end{enumerate}
+Accordingly, the translation theorem is already organized in the right order for later kernel-first compression, but it becomes genuinely rewrite-ready only stage by stage, in the same order isolated by the staged roadmap and the criterion-to-roadmap rule.
+\end{remark}
+
+\begin{remark}[How much clausewise load a future kernel-first translation proof could remove]\label{rem:qam-zero-kernel-translation-savings}
+At present, Theorem~\ref{thm:qam-translation} is proved clausewise on the visible translated chain, with six explicit front-facing obligations. A later kernel-first proof would not remove the need to show transport, branch, shell, routed-support, and readout preservation; however, it could compress the visible proof surface from six separate clause-level checks to two kernel-level obligations:
+\[
+\begin{aligned}
+&\text{(i) one common kernel-normal-form preservation statement}\\[-0.05em]
+&\text{\phantom{(i)} along the translated admissible chain,}\\[0.25em]
+&\text{(ii) one class-level readout factorization statement}\\[-0.05em]
+&\text{\phantom{(ii)} recovering the coded public-shape readout.}
+\end{aligned}
+\]
+In that sense, the prospective savings at theorem level are best read not as a reduction in mathematical content, but as a reduction from \emph{six visible surface checks} to \emph{one kernel-class propagation argument plus one class-level readout argument}. This is exactly the same kind of shift from surface multiplicity to kernel control already seen, in more local form, in the transport, branch/shell, and routed-support stress tests.
+\end{remark}
+
+\begin{corollary}[QAM image of the current OP core]
+The current OP core of the Companion --- including source-return closure, intermediate transport, admissible branches, OP3 shell admissibility, admissible routed support, and closure-compatible readout --- admits a faithful coded realization inside QAM-over-ZF.
+\end{corollary}
+
+\begin{remark}[Front theorem and translation theorem as mirrored statements]
+Theorem~\ref{thm:compact-public-shape-preservation} states the compressed public release chain in coded language. Theorem~\ref{thm:qam-translation} states that the same coded chain is the faithful image of the stabilized OP chain. Read together with Theorem~\ref{thm:qam-branch-shell}, Theorem~\ref{thm:qam-routed-support}, and Corollary~\ref{cor:qam-visible-structural}, the front block and the later QAM block are therefore intended to read almost as two projections of the same closure statement: first in compressed public-shape form, then in theorem-level translation form. In particular, the front reading order
+\[
+s_{\mathrm{in}}\longrightarrow (b,\sigma)\longrightarrow u\longrightarrow r
+\]
+is now the same order in which $\tau$, the closure-faithfulness condition, the readout-compatibility condition, and the partial decoding map $\delta$ are meant to be understood.
+\end{remark}
+
+\begin{remark}
+This corollary is the first formal justification for introducing QAM as a structure-first coded language over ZF. It shows that the current OP architecture does not need to be abandoned or replaced in order to enter the QAM setting; it can be carried into that setting by faithful translation.
+\end{remark}
+
+\begin{definition}[Partial decoding map]
+\label{def:partial-decoding-map}
+A \emph{partial decoding map} is a map
+\[
+\delta:\mathfrak{Q}_{\mathrm{adm}}\dashrightarrow \mathfrak{O}_{\mathrm{adm}}
+\]
+defined on the admissible QAM fragment such that for translated admissible OP objects,
+\[
+\delta(\tau(X))=X.
+\]
+\end{definition}
+
+\begin{remark}[How $\delta$ should be read]
+At the present stage, $\delta$ is only required on the image of the admissible OP fragment. No full decoding of arbitrary QAM-coded expressions is assumed yet. When it exists, $\delta$ should be read as the reverse reading map for the same public-shape chain: it sends coded source/readout, branch, shell, and routed-support objects back into the already stabilized OP architecture without introducing a second closure criterion.
+\end{remark}
+
+\begin{proposition}[Round-trip property on the admissible fragment]\label{prop:round-trip-property-admissible-fragment}
+If a partial decoding map $\delta$ exists on the image of $\tau$, then
+\[
+\delta\circ\tau = \mathrm{id}_{\mathfrak{O}_{\mathrm{adm}}}.
+\]
+Hence the admissible OP fragment is recoverable from its translated QAM image.
+\end{proposition}
+
+\begin{proof}
+This is immediate from the definition of the partial decoding map.
+\end{proof}
+
+\begin{remark}
+The round-trip property is intentionally weaker than full two-way interpretability. It says only that the currently relevant admissible OP fragment can be encoded into QAM over ZF and then read back without structural loss.
+\end{remark}
+
+\begin{corollary}[Tensor-compatible translation]
+If the admissible OP fragment contains tensorially paired sectors and the translation map respects tensor-coded formation, then admissible tensor closure and admissible tensor transport are preserved under translation as well.
+\end{corollary}
+
+\begin{remark}[Current status of the translation theorem]
+The present theorem should be read as a conservative first step. It does not yet prove that all future QAM constructions are already reducible to the current OP architecture, nor that the entire QAM language has been fully decoded back into OP form. What it proves is that the current admissible OP core already embeds faithfully into the coded QAM-over-ZF language.
+\end{remark}

@@ -1,0 +1,1349 @@
+\subsection*{19AZ$^{(6at)}$. First route-faithful conservative comparison/output layer extracted from the compact surfaces}
+\label{sec:first-route-faithful-conservative-comparison-output-layer-extracted-from-the-compact-surfaces}
+After 19AZ$^{(6as)}$, the post-release line carries a first compact conservative readout surface on each admissible side. The next honest compression step is therefore to expose a route-faithful comparison/output layer that makes each compact surface downstream-readable as one conservative output object. On the horizon side this output should preserve the already certified matrix/crystal/field organization. On the boundary side it should preserve the already anchored source/defect/probe/decoder organization together with the inherited stop sensitivity. The point is not to collapse both sides into one falsely uniform object, but to let later OP-oriented or diagnostic work compare and consume them through one disciplined interface.
+
+\begin{definition}[First route-faithful conservative output/comparison layer]
+\label{def:first-route-faithful-conservative-output-comparison-layer}
+Fix a certified finite extension word \(\mathbf w\in\mathcal L^{\mathrm{ext}}_{m}\), its first compact conservative readout surface
+\[
+  \mathsf{Surf}^{\mathrm{cons}}_{m}(\mathbf w)
+\]
+from Definition~\ref{def:first-compact-conservative-readout-surface}, and the inherited certificate-aware probe family \(\mathsf{MCProbe}_{m,\mathbf w}\).
+\begin{enumerate}[label=(\roman*)]
+  \item If
+  \[
+    \mathsf{Surf}^{\mathrm{cons}}_{m}(\mathbf w)=\mathsf{Surf}^{\mathrm{hor}}_{m}(\mathbf w),
+  \]
+  define the \emph{first route-faithful horizon-side conservative output/comparison object}
+  \[
+    \mathsf{OutCmp}^{\mathrm{hor}}_{m}(\mathbf w)
+    :=
+    \bigl(\mathsf{HOR},\mathsf{HZ}^{\sharp}_{m}(\mathbf w),\mathsf{CRS}_{m}(\mathbf w),\mathsf{PDE}^{\mathrm{cons}}_{m}(\mathbf w),\mathsf{DEC}^{\mathrm{hor}}_{m}(\mathbf w),\mathsf{MCProbe}_{m,\mathbf w}\bigr),
+  \]
+  under the side conditions that:
+  \begin{itemize}[leftmargin=2em]
+    \item the tag \(\mathsf{HOR}\) records that the output remains confined to the already certified horizon-side range,
+    \item downstream comparison or output work may compare this object with other horizon-side conservative outputs, may compress it, and may use it as an input surface for later OP-oriented tasks, but it may not reinterpret it as a boundary-side stop object, and
+    \item no component of the output may certify a continuation beyond the range already inherited by \(\mathsf{Surf}^{\mathrm{hor}}_{m}(\mathbf w)\).
+  \end{itemize}
+  \item If
+  \[
+    \mathsf{Surf}^{\mathrm{cons}}_{m}(\mathbf w)=\mathsf{Surf}^{\mathrm{bdry}}_{m}(\mathbf w),
+  \]
+  define the \emph{first route-faithful boundary-side conservative output/comparison object}
+  \[
+    \mathsf{OutCmp}^{\mathrm{bdry}}_{m}(\mathbf w)
+    :=
+    \bigl(\mathsf{BDRY},\mathsf{BD}^{\mathrm{anch}}_{m}(\mathbf w),\mathsf{DFX}_{m}(\mathbf w),\mathsf{StopSurf}_{m}(\mathbf w),\mathsf{DEC}^{\mathrm{bdry}}_{m}(\mathbf w),\mathsf{MCProbe}_{m,\mathbf w}\bigr),
+  \]
+  under the side conditions that:
+  \begin{itemize}[leftmargin=2em]
+    \item the tag \(\mathsf{BDRY}\) records that the output remains anchored at the earliest honest boundary event and retains inherited stop sensitivity,
+    \item downstream comparison or output work may compare this object with other boundary-side conservative outputs, may compress it, and may use it as an input surface for later OP-oriented tasks, but it may not smooth away the inherited stop event or relabel the object as horizon-side continuation, and
+    \item no component of the output may deny or postpone the earliest honest boundary anchor already inherited by \(\mathsf{Surf}^{\mathrm{bdry}}_{m}(\mathbf w)\).
+  \end{itemize}
+\end{enumerate}
+Finally define the \emph{first route-faithful conservative output/comparison map}
+\[
+  \mathsf{OutCmp}^{\mathrm{cons}}_{m}(\mathbf w)
+  :=
+  \begin{cases}
+    \mathsf{OutCmp}^{\mathrm{hor}}_{m}(\mathbf w), & \text{if }\mathsf{Surf}^{\mathrm{cons}}_{m}(\mathbf w)=\mathsf{Surf}^{\mathrm{hor}}_{m}(\mathbf w),\\[2mm]
+    \mathsf{OutCmp}^{\mathrm{bdry}}_{m}(\mathbf w), & \text{if }\mathsf{Surf}^{\mathrm{cons}}_{m}(\mathbf w)=\mathsf{Surf}^{\mathrm{bdry}}_{m}(\mathbf w).
+  \end{cases}
+\]
+\end{definition}
+
+\begin{proposition}[Every first compact conservative surface yields exactly one route-faithful conservative output/comparison object]
+\label{prop:every-first-compact-conservative-surface-yields-exactly-one-route-faithful-conservative-output-comparison-object}
+Assume the setting of Definition~\ref{def:first-route-faithful-conservative-output-comparison-layer}. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item every first compact conservative surface \(\mathsf{Surf}^{\mathrm{cons}}_{m}(\mathbf w)\) yields exactly one route-faithful conservative output/comparison object \(\mathsf{OutCmp}^{\mathrm{cons}}_{m}(\mathbf w)\);
+  \item in the horizon-side case, the object is the first honest downstream-readable output that packages the matrix/crystal/field surface together with an explicit horizon-side tag;
+  \item in the boundary-side case, the object is the first honest downstream-readable output that packages the source/defect/probe/decoder surface together with an explicit boundary-side stop-preserving tag; and
+  \item later OP-oriented, diagnostic, clustering, or decoder-side work may consume these objects as conservative outputs, but it may not use them to erase the inherited horizon/boundary distinction or to manufacture a fresh theorematic certificate.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Clause (i) is immediate from Definition~\ref{def:first-route-faithful-conservative-output-comparison-layer}: every compact conservative surface is either horizon-side or boundary-side, and the definition assigns exactly one corresponding route-faithful output/comparison object with the matching side tag. Clause (ii) follows because the horizon-side compact surface already carries sharpened readout, crystal stabilization, conservative field refinement, and decoder/probe organization on one inherited certified range, so the first honest downstream output is to expose that package with an explicit horizon-side tag rather than to reopen the route or invent a boundary anchor. Clause (iii) follows because the boundary-side compact surface already carries anchored source profiling, defect-front profiling, and stop-sensitive probe/decoder structure on one inherited earliest-boundary event, so the first honest downstream output is to expose that package with an explicit boundary-side tag rather than to smooth away the stop or relabel the object as horizon-side continuation. Clause (iv) is exactly the inherited certificate-aware discipline from 19AZ$^{(6ae)}$, 19AZ$^{(6af)}$, 19AZ$^{(6ai)}$, and 19AZ$^{(6as)}$, now applied at the first output/comparison level.
+\end{proof}
+
+\begin{corollary}[The present post-v3.29.0 line already carries a first route-faithful conservative output/comparison layer]
+\label{cor:the-present-post-v3290-line-already-carries-a-first-route-faithful-conservative-output-comparison-layer}
+For the first-stage word \(\mathbf w_3\in\{\mathsf A,\mathsf B\}\), the current active line already carries one route-faithful conservative output/comparison object:
+\[
+  \mathsf{OutCmp}^{\mathrm{cons}}_{2}(\mathbf w_3)
+  =
+  \begin{cases}
+    \mathsf{OutCmp}^{\mathrm{hor}}_{2}(\mathbf w_3), & \text{if }\mathbf w_3=\mathsf A,\\[2mm]
+    \mathsf{OutCmp}^{\mathrm{bdry}}_{2}(\mathbf w_3), & \text{if }\mathbf w_3=\mathsf B.
+  \end{cases}
+\]
+So the post-release continuation now carries not only a conservative upgrade staircase and a first compact conservative surface on each side, but also the first route-faithful conservative output/comparison layer that later OP-oriented work may consume directly.
+\end{corollary}
+
+\begin{proof}
+Immediate from Corollary~\ref{cor:present-post-v3290-line-already-carries-a-first-compact-conservative-readout-surface} and Proposition~\ref{prop:every-first-compact-conservative-surface-yields-exactly-one-route-faithful-conservative-output-comparison-object}.
+\end{proof}
+
+\begin{remark}[What the first route-faithful conservative output/comparison layer now buys]
+\label{rem:what-the-first-route-faithful-conservative-output-comparison-layer-now-buys}
+This is the point where the post-release line first becomes directly consumable as a disciplined conservative output interface. The horizon-side object now packages matrix/crystal/field organization together with an explicit horizon-side tag, while the boundary-side object packages source/defect/probe/decoder organization together with an explicit stop-preserving boundary-side tag. Later OP-oriented work can therefore start from a route-faithful output object rather than from scattered follow-on packets or even from the raw compact surface itself. The next natural move is to use these output/comparison objects to define the first conservative OP-facing intake layer without broadening the theorematic claims.
+\end{remark}
+
+
+\noindent\textbf{Reader cue.} Read the next block as the first conservative OP-facing intake layer extracted from the route-faithful output/comparison objects of 19AZ$^{(6at)}$. Its purpose is to let the next OP-oriented working stage consume the new conservative output surfaces without reopening the route decision, erasing the boundary stop, or inflating the theorematic range. The block does not yet solve any open problem; it defines the disciplined intake interface through which later OP-side work must begin.
+
+\subsection*{19AZ$^{(6au)}$. First conservative OP-facing intake layer extracted from the route-faithful output/comparison objects}
+\label{sec:first-conservative-op-facing-intake-layer-extracted-from-the-route-faithful-output-comparison-objects}
+After 19AZ$^{(6at)}$, the post-release line carries a first route-faithful conservative output/comparison object on each admissible side. The next honest step is therefore to define the first OP-facing intake layer that later OP-oriented work may consume. On the horizon side this intake should inherit the already certified matrix/crystal/field package together with its explicit horizon tag. On the boundary side it should inherit the anchored source/defect/probe/decoder package together with its explicit stop-preserving boundary tag. The point is not to broaden the theorematic status, but to make later OP-oriented work start from a disciplined conservative intake surface rather than from raw local branch data.
+
+\begin{definition}[First conservative OP-facing intake layer]
+\label{def:first-conservative-op-facing-intake-layer}
+Fix a certified finite extension word \(\mathbf w\in\mathcal L^{\mathrm{ext}}_{m}\), its first route-faithful conservative output/comparison object
+\[
+  \mathsf{OutCmp}^{\mathrm{cons}}_{m}(\mathbf w)
+\]
+from Definition~\ref{def:first-route-faithful-conservative-output-comparison-layer}, and the inherited certificate-aware probe family \(\mathsf{MCProbe}_{m,\mathbf w}\).
+\begin{enumerate}[label=(\roman*)]
+  \item If
+  \[
+    \mathsf{OutCmp}^{\mathrm{cons}}_{m}(\mathbf w)=\mathsf{OutCmp}^{\mathrm{hor}}_{m}(\mathbf w),
+  \]
+  define the \emph{first horizon-side conservative OP-facing intake object}
+  \[
+    \mathsf{OPIn}^{\mathrm{hor}}_{m}(\mathbf w)
+    :=
+    \bigl(\mathsf{HOR},\mathsf{HZ}^{\sharp}_{m}(\mathbf w),\mathsf{CRS}_{m}(\mathbf w),\mathsf{PDE}^{\mathrm{cons}}_{m}(\mathbf w),\mathsf{DEC}^{\mathrm{hor}}_{m}(\mathbf w),\mathsf{MCProbe}_{m,\mathbf w}\bigr),
+  \]
+  under the side conditions that:
+  \begin{itemize}[leftmargin=2em]
+    \item later OP-oriented work may use this intake object only as a conservative horizon-side input surface and may not reinterpret it as evidence for a boundary-side stop event,
+    \item no OP-facing consumer may certify any continuation beyond the horizon-side range already inherited by \(\mathsf{OutCmp}^{\mathrm{hor}}_{m}(\mathbf w)\), and
+    \item any later transport, matrix, crystal, or field-equation sharpening that starts from this object remains subordinate to the inherited horizon tag \(\mathsf{HOR}\).
+  \end{itemize}
+  \item If
+  \[
+    \mathsf{OutCmp}^{\mathrm{cons}}_{m}(\mathbf w)=\mathsf{OutCmp}^{\mathrm{bdry}}_{m}(\mathbf w),
+  \]
+  define the \emph{first boundary-side conservative OP-facing intake object}
+  \[
+    \mathsf{OPIn}^{\mathrm{bdry}}_{m}(\mathbf w)
+    :=
+    \bigl(\mathsf{BDRY},\mathsf{BD}^{\mathrm{anch}}_{m}(\mathbf w),\mathsf{DFX}_{m}(\mathbf w),\mathsf{StopSurf}_{m}(\mathbf w),\mathsf{DEC}^{\mathrm{bdry}}_{m}(\mathbf w),\mathsf{MCProbe}_{m,\mathbf w}\bigr),
+  \]
+  under the side conditions that:
+  \begin{itemize}[leftmargin=2em]
+    \item later OP-oriented work may use this intake object only as a conservative boundary-side input surface and may not relabel it as a horizon-continuation object,
+    \item no OP-facing consumer may smooth away, postpone, or reinterpret the inherited earliest honest boundary stop carried by \(\mathsf{OutCmp}^{\mathrm{bdry}}_{m}(\mathbf w)\), and
+    \item any later source, defect, probe, decoder, or field-side comparison that starts from this object remains subordinate to the inherited stop-preserving boundary tag \(\mathsf{BDRY}\).
+  \end{itemize}
+\end{enumerate}
+Finally define the \emph{first conservative OP-facing intake map}
+\[
+  \mathsf{OPIn}^{\mathrm{cons}}_{m}(\mathbf w)
+  :=
+  \begin{cases}
+    \mathsf{OPIn}^{\mathrm{hor}}_{m}(\mathbf w), & \text{if }\mathsf{OutCmp}^{\mathrm{cons}}_{m}(\mathbf w)=\mathsf{OutCmp}^{\mathrm{hor}}_{m}(\mathbf w),\\[2mm]
+    \mathsf{OPIn}^{\mathrm{bdry}}_{m}(\mathbf w), & \text{if }\mathsf{OutCmp}^{\mathrm{cons}}_{m}(\mathbf w)=\mathsf{OutCmp}^{\mathrm{bdry}}_{m}(\mathbf w).
+  \end{cases}
+\]
+\end{definition}
+
+\begin{proposition}[Every route-faithful conservative output/comparison object yields exactly one conservative OP-facing intake object]
+\label{prop:every-route-faithful-conservative-output-comparison-object-yields-exactly-one-conservative-op-facing-intake-object}
+Assume the setting of Definition~\ref{def:first-conservative-op-facing-intake-layer}. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item every route-faithful conservative output/comparison object \(\mathsf{OutCmp}^{\mathrm{cons}}_{m}(\mathbf w)\) yields exactly one conservative OP-facing intake object \(\mathsf{OPIn}^{\mathrm{cons}}_{m}(\mathbf w)\);
+  \item in the horizon-side case, the intake object is the first honest OP-facing surface that packages the matrix/crystal/field organization together with an explicit horizon-side tag;
+  \item in the boundary-side case, the intake object is the first honest OP-facing surface that packages the source/defect/probe/decoder organization together with an explicit stop-preserving boundary-side tag; and
+  \item later OP-oriented work may consume these intake objects as conservative inputs, but it may not use them to erase the inherited horizon/boundary distinction, to deny the inherited earliest-boundary stop, or to manufacture a fresh theorematic certificate.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Clause (i) is immediate from Definition~\ref{def:first-conservative-op-facing-intake-layer}: every route-faithful conservative output/comparison object is either horizon-side or boundary-side, and the definition assigns exactly one corresponding conservative OP-facing intake object with the matching side tag. Clause (ii) follows because the horizon-side output/comparison object already packages sharpened readout, crystal stabilization, conservative field refinement, and decoder/probe organization on one inherited certified range, so the first honest OP-facing use is to intake that package with its explicit horizon-side tag rather than to reopen the route or invent a boundary anchor. Clause (iii) follows because the boundary-side output/comparison object already packages anchored source profiling, defect-front profiling, and stop-sensitive probe/decoder structure on one inherited earliest-boundary event, so the first honest OP-facing use is to intake that package with its explicit stop-preserving boundary tag rather than to smooth away the stop or relabel the object as horizon-side continuation. Clause (iv) is exactly the inherited certificate-aware discipline from 19AZ$^{(6ae)}$, 19AZ$^{(6af)}$, 19AZ$^{(6ai)}$, and 19AZ$^{(6at)}$, now applied at the first OP-facing intake level.
+\end{proof}
+
+\begin{corollary}[The present post-v3.29.0 line already carries a first conservative OP-facing intake layer]
+\label{cor:the-present-post-v3290-line-already-carries-a-first-conservative-op-facing-intake-layer}
+For the first-stage word \(\mathbf w_3\in\{\mathsf A,\mathsf B\}\), the current active line already carries one conservative OP-facing intake object:
+\[
+  \mathsf{OPIn}^{\mathrm{cons}}_{2}(\mathbf w_3)
+  =
+  \begin{cases}
+    \mathsf{OPIn}^{\mathrm{hor}}_{2}(\mathbf w_3), & \text{if }\mathbf w_3=\mathsf A,\\[2mm]
+    \mathsf{OPIn}^{\mathrm{bdry}}_{2}(\mathbf w_3), & \text{if }\mathbf w_3=\mathsf B.
+  \end{cases}
+\]
+So the post-release continuation now carries not only a route-faithful conservative output/comparison layer, but also the first conservative OP-facing intake layer that the next OP-oriented working stage may consume directly.
+\end{corollary}
+
+\begin{proof}
+Immediate from Corollary~\ref{cor:the-present-post-v3290-line-already-carries-a-first-route-faithful-conservative-output-comparison-layer} and Proposition~\ref{prop:every-route-faithful-conservative-output-comparison-object-yields-exactly-one-conservative-op-facing-intake-object}.
+\end{proof}
+
+\begin{remark}[What the first conservative OP-facing intake layer now buys]
+\label{rem:what-the-first-conservative-op-facing-intake-layer-now-buys}
+This is the point where the post-release line first becomes ready for the next OP-oriented working stage without pretending that any open problem has already been solved. The horizon-side intake object exposes a disciplined matrix/crystal/field input surface under an explicit horizon tag, while the boundary-side intake object exposes a disciplined source/defect/probe/decoder input surface under an explicit stop-preserving boundary tag. Later OP-facing work can therefore begin from a conservative intake object that is already route-faithful, comparison-ready, and certificate-aware, instead of improvising from scattered packets or reopening the extension decision itself.
+\end{remark}
+
+
+
+
+\noindent\textbf{Reader cue.} Read the next block as the first conservative OP-facing work-request contract extracted from the intake layer of 19AZ$^{(6au)}$. Its purpose is to specify which kinds of OP-oriented demands may be posed from the new intake objects without reopening the route decision, erasing the inherited boundary stop, or inflating the theorematic range. The block does not yet answer any open problem; it fixes the finite admissible request menu through which the next OP-oriented stage must begin.
+
+\subsection*{19AZ$^{(6av)}$. First conservative OP-facing work-request contract extracted from the intake layer}
+\label{sec:first-conservative-op-facing-work-request-contract-extracted-from-the-intake-layer}
+After 19AZ$^{(6au)}$, the post-release line carries a first conservative OP-facing intake object on each admissible side. The next honest step is therefore to define which OP-oriented requests may be asked from those intake objects without violating the inherited certificate-aware discipline. On the horizon side the admissible requests should remain subordinate to the inherited matrix/crystal/field organization and explicit horizon tag. On the boundary side the admissible requests should remain subordinate to the inherited anchored source/defect/probe/decoder organization and explicit stop-preserving boundary tag. The point is not to authorize arbitrary OP-side speculation, but to specify the first finite request contract under which later OP-facing work may proceed.
+
+\begin{definition}[First conservative OP-facing work-request contract]
+\label{def:first-conservative-op-facing-work-request-contract}
+Fix a certified finite extension word \(\mathbf w\in\mathcal L^{\mathrm{ext}}_{m}\) and its first conservative OP-facing intake object
+\[
+  \mathsf{OPIn}^{\mathrm{cons}}_{m}(\mathbf w)
+\]
+from Definition~\ref{def:first-conservative-op-facing-intake-layer}.
+\begin{enumerate}[label=(\roman*)]
+  \item If
+  \[
+    \mathsf{OPIn}^{\mathrm{cons}}_{m}(\mathbf w)=\mathsf{OPIn}^{\mathrm{hor}}_{m}(\mathbf w),
+  \]
+  define the \emph{first horizon-side conservative OP-facing request menu}
+  \[
+    \mathcal Q^{\mathrm{hor}}_{m}(\mathbf w)
+    :=
+    \{\mathsf{QMSH}_{m}(\mathbf w),\mathsf{QCRS}_{m}(\mathbf w),\mathsf{QPDE}_{m}(\mathbf w),\mathsf{QDEC}^{\mathrm{hor}}_{m}(\mathbf w)\},
+  \]
+  where the four request forms ask respectively for:
+  \begin{itemize}[leftmargin=2em]
+    \item conservative matrix/MM-HC sharpening comparison relative to \(\mathsf{HZ}^{\sharp}_{m}(\mathbf w)\),
+    \item conservative crystal-stabilization comparison relative to \(\mathsf{CRS}_{m}(\mathbf w)\),
+    \item conservative field/profile comparison relative to \(\mathsf{PDE}^{\mathrm{cons}}_{m}(\mathbf w)\), and
+    \item horizon-side decoder/probe compression or comparison relative to \(\mathsf{DEC}^{\mathrm{hor}}_{m}(\mathbf w)\) and \(\mathsf{MCProbe}_{m,\mathbf w}\).
+  \end{itemize}
+  These requests are admissible only under the side conditions that:
+  \begin{itemize}[leftmargin=2em]
+    \item no request may ask for a fresh theorematic certificate beyond the horizon-side range already inherited by \(\mathsf{OPIn}^{\mathrm{hor}}_{m}(\mathbf w)\),
+    \item no request may relabel the horizon-side intake object as evidence for a boundary-side stop event, and
+    \item every admissible request remains subordinate to the inherited horizon tag \(\mathsf{HOR}\).
+  \end{itemize}
+  \item If
+  \[
+    \mathsf{OPIn}^{\mathrm{cons}}_{m}(\mathbf w)=\mathsf{OPIn}^{\mathrm{bdry}}_{m}(\mathbf w),
+  \]
+  define the \emph{first boundary-side conservative OP-facing request menu}
+  \[
+    \mathcal Q^{\mathrm{bdry}}_{m}(\mathbf w)
+    :=
+    \{\mathsf{QSRC}_{m}(\mathbf w),\mathsf{QDFX}_{m}(\mathbf w),\mathsf{QSTOP}_{m}(\mathbf w),\mathsf{QDEC}^{\mathrm{bdry}}_{m}(\mathbf w)\},
+  \]
+  where the four request forms ask respectively for:
+  \begin{itemize}[leftmargin=2em]
+    \item anchored source/exposure comparison relative to \(\mathsf{BD}^{\mathrm{anch}}_{m}(\mathbf w)\),
+    \item defect-front comparison relative to \(\mathsf{DFX}_{m}(\mathbf w)\),
+    \item stop-sensitive probe-surface comparison relative to \(\mathsf{StopSurf}_{m}(\mathbf w)\), and
+    \item boundary-side decoder/probe compression or comparison relative to \(\mathsf{DEC}^{\mathrm{bdry}}_{m}(\mathbf w)\) and \(\mathsf{MCProbe}_{m,\mathbf w}\).
+  \end{itemize}
+  These requests are admissible only under the side conditions that:
+  \begin{itemize}[leftmargin=2em]
+    \item no request may smooth away, postpone, or reinterpret the inherited earliest honest boundary stop carried by \(\mathsf{OPIn}^{\mathrm{bdry}}_{m}(\mathbf w)\),
+    \item no request may relabel the boundary-side intake object as a horizon-continuation object, and
+    \item every admissible request remains subordinate to the inherited stop-preserving boundary tag \(\mathsf{BDRY}\).
+  \end{itemize}
+\end{enumerate}
+Finally define the \emph{first conservative OP-facing request contract map}
+\[
+  \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w)
+  :=
+  \begin{cases}
+    \mathcal Q^{\mathrm{hor}}_{m}(\mathbf w), & \text{if }\mathsf{OPIn}^{\mathrm{cons}}_{m}(\mathbf w)=\mathsf{OPIn}^{\mathrm{hor}}_{m}(\mathbf w),\\[2mm]
+    \mathcal Q^{\mathrm{bdry}}_{m}(\mathbf w), & \text{if }\mathsf{OPIn}^{\mathrm{cons}}_{m}(\mathbf w)=\mathsf{OPIn}^{\mathrm{bdry}}_{m}(\mathbf w).
+  \end{cases}
+\]
+\end{definition}
+
+\begin{proposition}[Every conservative OP-facing intake object yields exactly one finite admissible work-request contract]
+\label{prop:every-conservative-op-facing-intake-object-yields-exactly-one-finite-admissible-work-request-contract}
+Assume the setting of Definition~\ref{def:first-conservative-op-facing-work-request-contract}. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item every conservative OP-facing intake object \(\mathsf{OPIn}^{\mathrm{cons}}_{m}(\mathbf w)\) yields exactly one finite admissible request contract \(\mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w)\);
+  \item in the horizon-side case, the contract authorizes only matrix/crystal/field/decoder-probe requests subordinate to the inherited horizon tag;
+  \item in the boundary-side case, the contract authorizes only source/defect/stop-surface/decoder-probe requests subordinate to the inherited stop-preserving boundary tag; and
+  \item no admissible request in either contract may manufacture a fresh theorematic certificate, erase the inherited horizon/boundary distinction, or deny the inherited earliest-boundary stop.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Clause (i) is immediate from Definition~\ref{def:first-conservative-op-facing-work-request-contract}: every conservative OP-facing intake object is either horizon-side or boundary-side, and the definition assigns exactly one corresponding finite request menu. Clause (ii) follows because the horizon-side intake object already packages the sharpened readout, crystal stabilization, conservative field refinement, and decoder/probe organization under one explicit horizon tag, so the only honest OP-facing requests are requests that compare, refine, or compress that inherited organization without leaving the inherited range. Clause (iii) follows because the boundary-side intake object already packages the anchored source profile, defect-front profile, stop-sensitive probe surface, and decoder/probe organization under one explicit stop-preserving boundary tag, so the only honest OP-facing requests are requests that compare, refine, or compress that inherited organization without smoothing away the stop or relabeling the route. Clause (iv) is exactly the inherited certificate-aware discipline from 19AZ$^{(6ae)}$, 19AZ$^{(6af)}$, 19AZ$^{(6ai)}$, 19AZ$^{(6at)}$, and 19AZ$^{(6au)}$, now expressed as the first finite OP-facing request contract.
+\end{proof}
+
+\begin{corollary}[The present post-v3.29.0 line already carries a first finite OP-facing request contract]
+\label{cor:the-present-post-v3290-line-already-carries-a-first-finite-op-facing-request-contract}
+For the first-stage word \(\mathbf w_3\in\{\mathsf A,\mathsf B\}\), the current active line already carries one finite conservative OP-facing request contract:
+\[
+  \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3)
+  =
+  \begin{cases}
+    \mathcal Q^{\mathrm{hor}}_{2}(\mathbf w_3), & \text{if }\mathbf w_3=\mathsf A,\\[2mm]
+    \mathcal Q^{\mathrm{bdry}}_{2}(\mathbf w_3), & \text{if }\mathbf w_3=\mathsf B.
+  \end{cases}
+\]
+So the post-release continuation now carries not only a conservative OP-facing intake layer, but also the first finite contract specifying which OP-oriented demands may honestly be posed from that intake surface.
+\end{corollary}
+
+\begin{proof}
+Immediate from Corollary~\ref{cor:the-present-post-v3290-line-already-carries-a-first-conservative-op-facing-intake-layer} and Proposition~\ref{prop:every-conservative-op-facing-intake-object-yields-exactly-one-finite-admissible-work-request-contract}.
+\end{proof}
+
+\begin{remark}[What the first conservative OP-facing work-request contract now buys]
+\label{rem:what-the-first-conservative-op-facing-work-request-contract-now-buys}
+This is the point where the post-release line first becomes able to formulate disciplined OP-oriented questions without pretending that it already owns their answers. The horizon-side intake object now supports a finite request menu for matrix/crystal/field/decoder-probe work under an explicit horizon tag, while the boundary-side intake object supports a finite request menu for source/defect/stop-surface/decoder-probe work under an explicit stop-preserving boundary tag. Later OP-facing work can therefore begin from a conservative intake contract instead of improvising its own admissible question set or silently broadening the inherited theorematic range.
+\end{remark}
+
+
+
+
+\noindent\textbf{Reader cue.} Read the next block as the first conservative OP-facing response/fulfillment layer extracted from the request contract of 19AZ$^{(6av)}$. Its purpose is to specify how an admissible OP-facing request may be answered conservatively without manufacturing a fresh theorematic certificate, erasing the inherited route, or denying the earliest honest boundary stop. The block does not yet close any open problem; it fixes the first disciplined fulfillment format through which later OP-oriented work may respond to admissible requests.
+
+\subsection*{19AZ$^{(6aw)}$. First conservative OP-facing response/fulfillment layer extracted from the request contract}
+\label{sec:first-conservative-op-facing-response-fulfillment-layer-extracted-from-the-request-contract}
+After 19AZ$^{(6av)}$, the post-release line carries a first finite admissible request contract on each intake side. The next honest step is therefore to define how an admissible OP-facing request may be fulfilled while remaining subordinate to the inherited certificate-aware route. On the horizon side a conservative response must stay within the inherited matrix/crystal/field/decoder organization under the explicit horizon tag. On the boundary side a conservative response must stay within the inherited source/defect/stop-surface/decoder organization under the explicit stop-preserving boundary tag. The point is not to authorize arbitrary new claims, but to define the first finite route-faithful response layer through which admissible OP-facing work may answer the requests that the contract actually allows.
+
+\begin{definition}[First conservative OP-facing response/fulfillment layer]
+\label{def:first-conservative-op-facing-response-fulfillment-layer}
+Fix a certified finite extension word \(\mathbf w\in\mathcal L^{\mathrm{ext}}_{m}\), its first conservative OP-facing request contract
+\[
+  \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w)
+\]
+from Definition~\ref{def:first-conservative-op-facing-work-request-contract}, and an admissible request
+\[
+  q\in \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w).
+\]
+Define the \emph{first conservative OP-facing fulfillment object}
+\[
+  \mathsf{Ful}^{\mathrm{cons}}_{m}(\mathbf w;q)
+\]
+by the following cases.
+\begin{enumerate}[label=(\roman*)]
+  \item If
+  \[
+    \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w)=\mathcal Q^{\mathrm{hor}}_{m}(\mathbf w),
+  \]
+  define the \emph{first horizon-side conservative fulfillment family}
+  \[
+    \mathcal F^{\mathrm{hor}}_{m}(\mathbf w)
+    :=
+    \{\mathsf{FMSH}_{m}(\mathbf w),\mathsf{FCRS}_{m}(\mathbf w),\mathsf{FPDE}_{m}(\mathbf w),\mathsf{FDEC}^{\mathrm{hor}}_{m}(\mathbf w)\},
+  \]
+  where:
+  \begin{itemize}[leftmargin=2em]
+    \item \(\mathsf{FMSH}_{m}(\mathbf w)\) is a route-faithful conservative sharpening response to \(\mathsf{QMSH}_{m}(\mathbf w)\),
+    \item \(\mathsf{FCRS}_{m}(\mathbf w)\) is a route-faithful conservative crystal response to \(\mathsf{QCRS}_{m}(\mathbf w)\),
+    \item \(\mathsf{FPDE}_{m}(\mathbf w)\) is a route-faithful conservative field/profile response to \(\mathsf{QPDE}_{m}(\mathbf w)\), and
+    \item \(\mathsf{FDEC}^{\mathrm{hor}}_{m}(\mathbf w)\) is a route-faithful conservative decoder/probe response to \(\mathsf{QDEC}^{\mathrm{hor}}_{m}(\mathbf w)\).
+  \end{itemize}
+  These fulfillment objects are admissible only if they:
+  \begin{itemize}[leftmargin=2em]
+    \item remain subordinate to the inherited horizon tag \(\mathsf{HOR}\),
+    \item do not claim a fresh theorematic certificate beyond the range already carried by \(\mathsf{OPIn}^{\mathrm{hor}}_{m}(\mathbf w)\), and
+    \item do not relabel the horizon-side route as a boundary-side stop event.
+  \end{itemize}
+  Define
+  \[
+    \mathsf{Ful}^{\mathrm{cons}}_{m}(\mathbf w;q)
+    :=
+    \begin{cases}
+      \mathsf{FMSH}_{m}(\mathbf w), & \text{if }q=\mathsf{QMSH}_{m}(\mathbf w),\\[2mm]
+      \mathsf{FCRS}_{m}(\mathbf w), & \text{if }q=\mathsf{QCRS}_{m}(\mathbf w),\\[2mm]
+      \mathsf{FPDE}_{m}(\mathbf w), & \text{if }q=\mathsf{QPDE}_{m}(\mathbf w),\\[2mm]
+      \mathsf{FDEC}^{\mathrm{hor}}_{m}(\mathbf w), & \text{if }q=\mathsf{QDEC}^{\mathrm{hor}}_{m}(\mathbf w).
+    \end{cases}
+  \]
+  \item If
+  \[
+    \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w)=\mathcal Q^{\mathrm{bdry}}_{m}(\mathbf w),
+  \]
+  define the \emph{first boundary-side conservative fulfillment family}
+  \[
+    \mathcal F^{\mathrm{bdry}}_{m}(\mathbf w)
+    :=
+    \{\mathsf{FSRC}_{m}(\mathbf w),\mathsf{FDFX}_{m}(\mathbf w),\mathsf{FSTOP}_{m}(\mathbf w),\mathsf{FDEC}^{\mathrm{bdry}}_{m}(\mathbf w)\},
+  \]
+  where:
+  \begin{itemize}[leftmargin=2em]
+    \item \(\mathsf{FSRC}_{m}(\mathbf w)\) is an anchored source/exposure response to \(\mathsf{QSRC}_{m}(\mathbf w)\),
+    \item \(\mathsf{FDFX}_{m}(\mathbf w)\) is a defect-front response to \(\mathsf{QDFX}_{m}(\mathbf w)\),
+    \item \(\mathsf{FSTOP}_{m}(\mathbf w)\) is a stop-sensitive surface response to \(\mathsf{QSTOP}_{m}(\mathbf w)\), and
+    \item \(\mathsf{FDEC}^{\mathrm{bdry}}_{m}(\mathbf w)\) is a boundary-side decoder/probe response to \(\mathsf{QDEC}^{\mathrm{bdry}}_{m}(\mathbf w)\).
+  \end{itemize}
+  These fulfillment objects are admissible only if they:
+  \begin{itemize}[leftmargin=2em]
+    \item remain subordinate to the inherited stop-preserving boundary tag \(\mathsf{BDRY}\),
+    \item do not smooth away, postpone, or reinterpret the inherited earliest honest boundary stop, and
+    \item do not relabel the boundary-side route as a horizon-continuation route.
+  \end{itemize}
+  Define
+  \[
+    \mathsf{Ful}^{\mathrm{cons}}_{m}(\mathbf w;q)
+    :=
+    \begin{cases}
+      \mathsf{FSRC}_{m}(\mathbf w), & \text{if }q=\mathsf{QSRC}_{m}(\mathbf w),\\[2mm]
+      \mathsf{FDFX}_{m}(\mathbf w), & \text{if }q=\mathsf{QDFX}_{m}(\mathbf w),\\[2mm]
+      \mathsf{FSTOP}_{m}(\mathbf w), & \text{if }q=\mathsf{QSTOP}_{m}(\mathbf w),\\[2mm]
+      \mathsf{FDEC}^{\mathrm{bdry}}_{m}(\mathbf w), & \text{if }q=\mathsf{QDEC}^{\mathrm{bdry}}_{m}(\mathbf w).
+    \end{cases}
+  \]
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}[Every admissible conservative OP-facing request yields exactly one route-faithful conservative fulfillment object]
+\label{prop:every-admissible-conservative-op-facing-request-yields-exactly-one-route-faithful-conservative-fulfillment-object}
+Assume the setting of Definition~\ref{def:first-conservative-op-facing-response-fulfillment-layer}. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item every admissible request \(q\in\mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w)\) yields exactly one fulfillment object \(\mathsf{Ful}^{\mathrm{cons}}_{m}(\mathbf w;q)\);
+  \item in the horizon-side case, the fulfillment object remains subordinate to the inherited horizon tag and inherited matrix/crystal/field/decoder organization;
+  \item in the boundary-side case, the fulfillment object remains subordinate to the inherited stop-preserving boundary tag and inherited source/defect/stop-surface/decoder organization; and
+  \item no admissible fulfillment object may manufacture a fresh theorematic certificate, erase the inherited horizon/boundary distinction, or deny the inherited earliest-boundary stop.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Clause (i) is immediate from Definition~\ref{def:first-conservative-op-facing-response-fulfillment-layer}: once the request side and request symbol are fixed, the definition assigns exactly one corresponding fulfillment object. Clause (ii) follows because the horizon-side responses are explicitly defined only as conservative sharpening, crystal, field/profile, or decoder/probe responses subordinate to the inherited horizon-side intake organization and explicit horizon tag. Clause (iii) follows because the boundary-side responses are explicitly defined only as anchored source, defect-front, stop-surface, or decoder/probe responses subordinate to the inherited stop-preserving boundary-side intake organization and explicit boundary tag. Clause (iv) is exactly the certificate-aware discipline inherited from 19AZ$^{(6ae)}$, 19AZ$^{(6af)}$, 19AZ$^{(6ai)}$, 19AZ$^{(6at)}$, 19AZ$^{(6au)}$, and 19AZ$^{(6av)}$, now expressed as the first finite OP-facing fulfillment layer.
+\end{proof}
+
+\begin{corollary}[The present post-v3.29.0 line already carries a first OP-facing fulfillment layer]
+\label{cor:the-present-post-v3290-line-already-carries-a-first-op-facing-fulfillment-layer}
+For the first-stage word \(\mathbf w_3\in\{\mathsf A,\mathsf B\}\), the current active line already carries a first conservative OP-facing fulfillment layer:
+\[
+  \mathsf{Ful}^{\mathrm{cons}}_{2}(\mathbf w_3;q)
+\]
+for every admissible request
+\[
+  q\in\mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3).
+\]
+So the post-release continuation now carries not only a conservative OP-facing intake object and request contract, but also the first disciplined response format through which admissible OP-oriented demands may be answered without reopening the route decision itself.
+\end{corollary}
+
+\begin{proof}
+Immediate from Corollary~\ref{cor:the-present-post-v3290-line-already-carries-a-first-finite-op-facing-request-contract} and Proposition~\ref{prop:every-admissible-conservative-op-facing-request-yields-exactly-one-route-faithful-conservative-fulfillment-object}.
+\end{proof}
+
+\begin{remark}[What the first conservative OP-facing response/fulfillment layer now buys]
+\label{rem:what-the-first-conservative-op-facing-response-fulfillment-layer-now-buys}
+This is the point where the post-release line first becomes able not only to ask disciplined OP-oriented questions, but also to answer them in a route-faithful conservative format. The horizon-side request family now terminates in finite sharpening/crystal/field/decoder responses under an explicit horizon tag, while the boundary-side request family now terminates in finite source/defect/stop-surface/decoder responses under an explicit stop-preserving boundary tag. Later OP-oriented work can therefore begin from a conservative ask-and-respond protocol instead of improvising both its questions and its response objects from scratch.
+\end{remark}
+
+
+
+\noindent\textbf{Reader cue.} Read the next block as the first conservative OP-facing response aggregation / resolution layer extracted from the fulfillment layer of 19AZ$^{(6aw)}$. Its purpose is to bundle finitely many admissible conservative fulfillment objects into one downstream-readable OP-facing resolution surface without manufacturing a fresh theorematic certificate, erasing the inherited horizon/boundary distinction, or denying the inherited earliest honest boundary stop. The block still does not close any open problem; it fixes the first disciplined way in which multiple conservative answers may be gathered into one route-faithful working resolution.
+
+\subsection*{19AZ$^{(6ax)}$. First conservative OP-facing response aggregation / resolution layer extracted from the fulfillment layer}
+\label{sec:first-conservative-op-facing-response-aggregation-resolution-layer-extracted-from-the-fulfillment-layer}
+After 19AZ$^{(6aw)}$, the post-release line already carries finite conservative fulfillment families on each intake side. The next honest step is therefore to define how finitely many such fulfillment objects may be aggregated into one conservative OP-facing resolution surface. On the horizon side the aggregation must remain subordinate to the inherited horizon tag and inherited matrix/crystal/field/decoder organization. On the boundary side the aggregation must remain subordinate to the inherited stop-preserving boundary tag and inherited source/defect/stop-surface/decoder organization. The point is not to solve more than the fulfillment layer already solved, but to package several admissible conservative responses into one finite route-faithful resolution object for later OP-oriented comparison, selection, or continuation.
+
+\begin{definition}[First conservative OP-facing response aggregation / resolution layer]
+\label{def:first-conservative-op-facing-response-aggregation-resolution-layer}
+Fix a certified finite extension word \(\mathbf w\in\mathcal L^{\mathrm{ext}}_{m}\), its first conservative OP-facing request contract
+\[
+  \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w),
+\]
+and its first conservative fulfillment map
+\[
+  q\mapsto \mathsf{Ful}^{\mathrm{cons}}_{m}(\mathbf w;q)
+\]
+from Definition~\ref{def:first-conservative-op-facing-response-fulfillment-layer}. Let
+\[
+  \mathcal S \subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w)
+\]
+be a finite nonempty admissible request subfamily. Define the \emph{first conservative OP-facing resolution object}
+\[
+  \mathsf{Res}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+\]
+by the following cases.
+\begin{enumerate}[label=(\roman*)]
+  \item If
+  \[
+    \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w)=\mathcal Q^{\mathrm{hor}}_{m}(\mathbf w),
+  \]
+  define the \emph{first horizon-side conservative resolution surface}
+  \[
+    \mathcal R^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S)
+    :=
+    \bigl(\mathsf{HOR},\{\mathsf{Ful}^{\mathrm{cons}}_{m}(\mathbf w;q):q\in\mathcal S\},\mathsf{OPIn}^{\mathrm{hor}}_{m}(\mathbf w)\bigr).
+  \]
+  This object is admissible only if every included fulfillment object remains subordinate to the inherited horizon tag and no included response claims a fresh theorematic certificate beyond the range already carried by \(\mathsf{OPIn}^{\mathrm{hor}}_{m}(\mathbf w)\). Define
+  \[
+    \mathsf{Res}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+    :=
+    \mathcal R^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S).
+  \]
+  \item If
+  \[
+    \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w)=\mathcal Q^{\mathrm{bdry}}_{m}(\mathbf w),
+  \]
+  define the \emph{first boundary-side conservative resolution surface}
+  \[
+    \mathcal R^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S)
+    :=
+    \bigl(\mathsf{BDRY},\{\mathsf{Ful}^{\mathrm{cons}}_{m}(\mathbf w;q):q\in\mathcal S\},\mathsf{OPIn}^{\mathrm{bdry}}_{m}(\mathbf w)\bigr).
+  \]
+  This object is admissible only if every included fulfillment object remains subordinate to the inherited stop-preserving boundary tag and no included response smooths away, postpones, or reinterprets the inherited earliest honest boundary stop. Define
+  \[
+    \mathsf{Res}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+    :=
+    \mathcal R^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S).
+  \]
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}[Every finite admissible conservative fulfillment family yields exactly one route-faithful conservative resolution object]
+\label{prop:every-finite-admissible-conservative-fulfillment-family-yields-exactly-one-route-faithful-conservative-resolution-object}
+Assume the setting of Definition~\ref{def:first-conservative-op-facing-response-aggregation-resolution-layer}. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item every finite nonempty admissible request subfamily \(\mathcal S\subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w)\) yields exactly one conservative resolution object \(\mathsf{Res}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)\);
+  \item in the horizon-side case, the resolution object remains subordinate to the inherited horizon tag and inherited matrix/crystal/field/decoder organization;
+  \item in the boundary-side case, the resolution object remains subordinate to the inherited stop-preserving boundary tag and inherited source/defect/stop-surface/decoder organization; and
+  \item no admissible conservative resolution object may manufacture a fresh theorematic certificate, erase the inherited horizon/boundary distinction, or deny the inherited earliest-boundary stop.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Clause (i) is immediate from Definition~\ref{def:first-conservative-op-facing-response-aggregation-resolution-layer}: once the intake side and finite admissible request subfamily \(\mathcal S\) are fixed, the definition assigns exactly one corresponding resolution surface. Clause (ii) follows because the horizon-side resolution surface is defined only by collecting fulfillment objects already subordinate to the inherited horizon tag together with the inherited horizon-side intake object. Clause (iii) follows because the boundary-side resolution surface is defined only by collecting fulfillment objects already subordinate to the inherited stop-preserving boundary tag together with the inherited boundary-side intake object. Clause (iv) is exactly the certificate-aware discipline inherited from 19AZ$^{(6ae)}$, 19AZ$^{(6af)}$, 19AZ$^{(6ai)}$, 19AZ$^{(6at)}$, 19AZ$^{(6au)}$, 19AZ$^{(6av)}$, and 19AZ$^{(6aw)}$, now expressed as the first finite OP-facing resolution layer.
+\end{proof}
+
+\begin{corollary}[The present post-v3.29.0 line already carries a first OP-facing conservative resolution surface]
+\label{cor:the-present-post-v3290-line-already-carries-a-first-op-facing-conservative-resolution-surface}
+For the first-stage word \(\mathbf w_3\in\{\mathsf A,\mathsf B\}\), the current active line already carries a first conservative OP-facing resolution surface
+\[
+  \mathsf{Res}^{\mathrm{cons}}_{2}(\mathbf w_3;\mathcal S)
+\]
+for every finite nonempty admissible request subfamily
+\[
+  \mathcal S\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3).
+\]
+So the post-release continuation now carries not only a conservative intake object, request contract, and fulfillment layer, but also the first disciplined aggregation surface through which several admissible OP-oriented answers may be bundled without reopening the route decision itself.
+\end{corollary}
+
+\begin{proof}
+Immediate from Corollary~\ref{cor:the-present-post-v3290-line-already-carries-a-first-op-facing-fulfillment-layer} and Proposition~\ref{prop:every-finite-admissible-conservative-fulfillment-family-yields-exactly-one-route-faithful-conservative-resolution-object}.
+\end{proof}
+
+\begin{remark}[What the first conservative OP-facing response aggregation / resolution layer now buys]
+\label{rem:what-the-first-conservative-op-facing-response-aggregation-resolution-layer-now-buys}
+This is the point where the post-release line first becomes able not only to ask and answer disciplined OP-oriented questions, but also to gather several conservative answers into one route-faithful resolution surface. The horizon-side line can now bundle finite sharpening/crystal/field/decoder responses under an explicit horizon tag, while the boundary-side line can now bundle finite source/defect/stop-surface/decoder responses under an explicit stop-preserving boundary tag. Later OP-oriented work can therefore begin from a conservative ask/respond/aggregate protocol instead of improvising both its intermediate bundles and its resolution surfaces from scratch.
+\end{remark}
+
+
+\noindent\textbf{Reader cue.} Read the next block as the first conservative resolution-to-task dispatch layer extracted from the resolution surface of 19AZ$^{(6ax)}$. Its purpose is to turn a finite route-faithful conservative resolution surface into the first finite OP-facing work or comparison program, without manufacturing a fresh theorematic certificate, erasing the inherited horizon/boundary distinction, or denying the inherited earliest honest boundary stop. The block still does not solve any open problem; it fixes the first disciplined way in which a conservative aggregate may be dispatched into explicit next-task families.
+
+\subsection*{19AZ$^{(6ay)}$. First conservative resolution-to-task dispatch layer extracted from the resolution surface}
+\label{sec:first-conservative-resolution-to-task-dispatch-layer-extracted-from-the-resolution-surface}
+After 19AZ$^{(6ax)}$, the post-release line already carries finite route-faithful conservative resolution surfaces on each intake side. The next honest step is therefore to define how such a resolution surface may be dispatched into a finite OP-facing work or comparison program. On the horizon side, the dispatch must remain subordinate to the inherited horizon tag and inherited matrix/crystal/field/decoder organization. On the boundary side, the dispatch must remain subordinate to the inherited stop-preserving boundary tag and inherited source/defect/stop-surface/decoder organization. The point is not to claim more than the resolution surface already carries, but to package that finite conservative aggregate into an explicit task family for later OP-oriented comparison, refinement, or packaging.
+
+\begin{definition}[First conservative resolution-to-task dispatch layer]
+\label{def:first-conservative-resolution-to-task-dispatch-layer}
+Fix a certified finite extension word \(\mathbf w\in\mathcal L^{\mathrm{ext}}_{m}\) and a finite nonempty admissible request subfamily
+\[
+  \mathcal S \subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w)
+\]
+together with its conservative resolution object
+\[
+  \mathsf{Res}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+\]
+from Definition~\ref{def:first-conservative-op-facing-response-aggregation-resolution-layer}. Define the \emph{first conservative dispatch object}
+\[
+  \mathsf{Disp}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+\]
+by the following cases.
+\begin{enumerate}[label=(\roman*)]
+  \item If
+  \[
+    \mathsf{Res}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+    =
+    \mathcal R^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S),
+  \]
+  define the \emph{first horizon-side conservative dispatch task family}
+  \[
+    \mathcal T^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S)
+    :=
+    \Bigl\{
+      \mathsf{TCMP}^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S),
+      \mathsf{TREF}^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S),
+      \mathsf{TPACK}^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S)
+    \Bigr\}.
+  \]
+  Here
+  \begin{align*}
+    \mathsf{TCMP}^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S) &:= \text{finite comparison of the dispatched horizon-side conservative fulfillment family},\\
+    \mathsf{TREF}^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S) &:= \text{route-faithful conservative refinement selection within the inherited horizon-side line},\\
+    \mathsf{TPACK}^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S) &:= \text{finite packaging of the dispatched horizon-side line for later OP-facing reuse}.
+  \end{align*}
+  This task family is admissible only if every task remains subordinate to the inherited horizon tag \(\mathsf{HOR}\), does not manufacture a fresh theorematic certificate, and does not relabel the horizon-side route as a boundary route. Define
+  \[
+    \mathsf{Disp}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+    :=
+    \bigl(\mathsf{HOR},\mathsf{Res}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S),\mathcal T^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S)\bigr).
+  \]
+  \item If
+  \[
+    \mathsf{Res}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+    =
+    \mathcal R^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S),
+  \]
+  define the \emph{first boundary-side conservative dispatch task family}
+  \[
+    \mathcal T^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S)
+    :=
+    \Bigl\{
+      \mathsf{TCMP}^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S),
+      \mathsf{TPROF}^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S),
+      \mathsf{TPACK}^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S)
+    \Bigr\}.
+  \]
+  Here
+  \begin{align*}
+    \mathsf{TCMP}^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S) &:= \text{finite comparison of the dispatched boundary-side conservative fulfillment family},\\
+    \mathsf{TPROF}^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S) &:= \text{route-faithful conservative profiling selection within the inherited boundary-side line},\\
+    \mathsf{TPACK}^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S) &:= \text{finite packaging of the dispatched boundary-side line for later OP-facing reuse}.
+  \end{align*}
+  This task family is admissible only if every task remains subordinate to the inherited stop-preserving boundary tag \(\mathsf{BDRY}\), does not smooth away, postpone, or reinterpret the inherited earliest honest boundary stop, and does not relabel the boundary-side route as a horizon-continuation route. Define
+  \[
+    \mathsf{Disp}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+    :=
+    \bigl(\mathsf{BDRY},\mathsf{Res}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S),\mathcal T^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S)\bigr).
+  \]
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}[Every finite admissible conservative resolution surface yields exactly one route-faithful conservative dispatch object]
+\label{prop:every-finite-admissible-conservative-resolution-surface-yields-exactly-one-route-faithful-conservative-dispatch-object}
+Assume the setting of Definition~\ref{def:first-conservative-resolution-to-task-dispatch-layer}. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item every finite admissible conservative resolution surface \(\mathsf{Res}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)\) yields exactly one dispatch object \(\mathsf{Disp}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)\);
+  \item in the horizon-side case, the dispatch object remains subordinate to the inherited horizon tag and inherited matrix/crystal/field/decoder organization;
+  \item in the boundary-side case, the dispatch object remains subordinate to the inherited stop-preserving boundary tag and inherited source/defect/stop-surface/decoder organization; and
+  \item no admissible conservative dispatch object may manufacture a fresh theorematic certificate, erase the inherited horizon/boundary distinction, or deny the inherited earliest-boundary stop.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Clause (i) is immediate from Definition~\ref{def:first-conservative-resolution-to-task-dispatch-layer}: once the intake side and finite admissible request subfamily \(\mathcal S\) are fixed, the corresponding conservative resolution surface is already fixed by 19AZ$^{(6ax)}$, and the present definition assigns exactly one corresponding dispatch task family and dispatch object. Clause (ii) follows because the horizon-side dispatch object is defined only from the inherited horizon-side resolution surface together with finite comparison, refinement-selection, and packaging tasks subordinate to the explicit horizon tag. Clause (iii) follows because the boundary-side dispatch object is defined only from the inherited boundary-side resolution surface together with finite comparison, profiling-selection, and packaging tasks subordinate to the explicit stop-preserving boundary tag. Clause (iv) is exactly the certificate-aware discipline inherited from 19AZ$^{(6ae)}$, 19AZ$^{(6af)}$, 19AZ$^{(6ai)}$, 19AZ$^{(6at)}$, 19AZ$^{(6au)}$, 19AZ$^{(6av)}$, 19AZ$^{(6aw)}$, and 19AZ$^{(6ax)}$, now expressed as the first finite OP-facing dispatch layer.
+\end{proof}
+
+\begin{corollary}[The present post-v3.29.0 line already carries a first conservative dispatch object]
+\label{cor:the-present-post-v3290-line-already-carries-a-first-conservative-dispatch-object}
+For the first-stage word \(\mathbf w_3\in\{\mathsf A,\mathsf B\}\), the current active line already carries a first conservative dispatch object
+\[
+  \mathsf{Disp}^{\mathrm{cons}}_{2}(\mathbf w_3;\mathcal S)
+\]
+for every finite nonempty admissible request subfamily
+\[
+  \mathcal S\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3).
+\]
+So the post-release continuation now carries not only a conservative ask/respond/aggregate protocol, but also the first disciplined dispatch format through which an admissible conservative aggregate may be turned into an explicit OP-facing work or comparison program without reopening the route decision itself.
+\end{corollary}
+
+\begin{proof}
+Immediate from Corollary~\ref{cor:the-present-post-v3290-line-already-carries-a-first-op-facing-conservative-resolution-surface} and Proposition~\ref{prop:every-finite-admissible-conservative-resolution-surface-yields-exactly-one-route-faithful-conservative-dispatch-object}.
+\end{proof}
+
+\begin{remark}[What the first conservative resolution-to-task dispatch layer now buys]
+\label{rem:what-the-first-conservative-resolution-to-task-dispatch-layer-now-buys}
+This is the point where the post-release line first becomes able not only to ask, answer, and aggregate disciplined OP-oriented questions, but also to dispatch the resulting conservative aggregate into a finite work or comparison program. The horizon-side line can now dispatch finite conservative fulfillment bundles into comparison, refinement-selection, and packaging tasks under an explicit horizon tag, while the boundary-side line can now dispatch finite conservative fulfillment bundles into comparison, profiling-selection, and packaging tasks under an explicit stop-preserving boundary tag. Later OP-oriented work can therefore begin from a conservative ask/respond/aggregate/dispatch protocol instead of improvising both its finite task programs and its dispatch interface from scratch.
+\end{remark}
+
+
+\noindent\textbf{Reader cue.} Read the next block as the first conservative OP-facing comparison/work program normal form extracted from the dispatch layer of 19AZ$^{(6ay)}$. Its purpose is to compress a route-faithful conservative dispatch object into one downstream-readable finite work/comparison program without reopening the route decision, manufacturing a fresh theorematic certificate, erasing the inherited horizon/boundary distinction, or denying the inherited earliest honest boundary stop. The block still does not solve any open problem; it fixes the first compact normal form in which the new dispatch layer may be consumed by later OP-oriented comparison and work.
+
+\subsection*{19AZ$^{(6az)}$. First conservative OP-facing comparison/work program normal form extracted from the dispatch layer}
+\label{sec:first-conservative-op-facing-comparison-work-program-normal-form-extracted-from-the-dispatch-layer}
+After 19AZ$^{(6ay)}$, the post-release line already carries route-faithful conservative dispatch objects whose task families remain subordinate either to the inherited horizon tag or to the inherited stop-preserving boundary tag. The next honest step is therefore to compress such a dispatch object into one finite downstream-readable normal form. On the horizon side, that normal form should package the inherited comparison, refinement-selection, and packaging tasks into one compact work/comparison program subordinate to the explicit horizon tag. On the boundary side, it should package the inherited comparison, profiling-selection, and packaging tasks into one compact work/comparison program subordinate to the explicit stop-preserving boundary tag. The point is not to add any new theorematic force, but only to normalize the already admissible dispatched task family into a short OP-facing work-program object.
+
+\begin{definition}[First conservative OP-facing comparison/work program normal form]
+\label{def:first-conservative-op-facing-comparison-work-program-normal-form}
+Fix a certified finite extension word \(\mathbf w\in\mathcal L^{\mathrm{ext}}_{m}\) and a finite nonempty admissible request subfamily
+\[
+  \mathcal S \subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w)
+\]
+together with its conservative dispatch object
+\[
+  \mathsf{Disp}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+\]
+from Definition~\ref{def:first-conservative-resolution-to-task-dispatch-layer}. Define the \emph{first conservative OP-facing comparison/work program normal form}
+\[
+  \mathsf{Prog}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+\]
+by the following cases.
+\begin{enumerate}[label=(\roman*)]
+  \item If
+  \[
+    \mathsf{Disp}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+    =
+    \bigl(\mathsf{HOR},\mathsf{Res}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S),\mathcal T^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S)\bigr),
+  \]
+  define the \emph{first horizon-side conservative comparison/work program normal form}
+  \[
+    \mathcal P^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S)
+    :=
+    \bigl(
+      \mathsf{HOR},
+      \mathsf{TCMP}^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S),
+      \mathsf{TREF}^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S),
+      \mathsf{TPACK}^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S)
+    \bigr).
+  \]
+  Define
+  \[
+    \mathsf{Prog}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+    :=
+    \mathcal P^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S).
+  \]
+  This normal form is admissible only if it remains subordinate to the inherited horizon tag \(\mathsf{HOR}\), does not manufacture a fresh theorematic certificate, and does not relabel the horizon-side route as a boundary route.
+
+  \item If
+  \[
+    \mathsf{Disp}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+    =
+    \bigl(\mathsf{BDRY},\mathsf{Res}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S),\mathcal T^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S)\bigr),
+  \]
+  define the \emph{first boundary-side conservative comparison/work program normal form}
+  \[
+    \mathcal P^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S)
+    :=
+    \bigl(
+      \mathsf{BDRY},
+      \mathsf{TCMP}^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S),
+      \mathsf{TPROF}^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S),
+      \mathsf{TPACK}^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S)
+    \bigr).
+  \]
+  Define
+  \[
+    \mathsf{Prog}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+    :=
+    \mathcal P^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S).
+  \]
+  This normal form is admissible only if it remains subordinate to the inherited stop-preserving boundary tag \(\mathsf{BDRY}\), does not smooth away, postpone, or reinterpret the inherited earliest honest boundary stop, and does not relabel the boundary-side route as a horizon-continuation route.
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}[Every finite admissible conservative dispatch object yields exactly one conservative comparison/work program normal form]
+\label{prop:every-finite-admissible-conservative-dispatch-object-yields-exactly-one-conservative-comparison-work-program-normal-form}
+Assume the setting of Definition~\ref{def:first-conservative-op-facing-comparison-work-program-normal-form}. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item every finite admissible conservative dispatch object \(\mathsf{Disp}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)\) yields exactly one program normal form \(\mathsf{Prog}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)\);
+  \item in the horizon-side case, the program normal form remains subordinate to the inherited horizon tag and inherited comparison/refinement/packaging organization;
+  \item in the boundary-side case, the program normal form remains subordinate to the inherited stop-preserving boundary tag and inherited comparison/profiling/packaging organization; and
+  \item no admissible conservative program normal form may manufacture a fresh theorematic certificate, erase the inherited horizon/boundary distinction, or deny the inherited earliest-boundary stop.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Clause (i) is immediate from Definition~\ref{def:first-conservative-op-facing-comparison-work-program-normal-form}: once the dispatch object is fixed by 19AZ$^{(6ay)}$, the present definition assigns exactly one corresponding compact program tuple. Clause (ii) follows because the horizon-side program normal form is defined only from the inherited horizon-side dispatch object together with the already admissible comparison, refinement-selection, and packaging tasks subordinate to the explicit horizon tag. Clause (iii) follows because the boundary-side program normal form is defined only from the inherited boundary-side dispatch object together with the already admissible comparison, profiling-selection, and packaging tasks subordinate to the explicit stop-preserving boundary tag. Clause (iv) is exactly the certificate-aware discipline inherited from 19AZ$^{(6ae)}$, 19AZ$^{(6af)}$, 19AZ$^{(6ai)}$, 19AZ$^{(6at)}$, 19AZ$^{(6au)}$, 19AZ$^{(6av)}$, 19AZ$^{(6aw)}$, 19AZ$^{(6ax)}$, and 19AZ$^{(6ay)}$, now expressed as the first compact OP-facing comparison/work program normal form.
+\end{proof}
+
+\begin{corollary}[The present post-v3.29.0 line already carries a first conservative comparison/work program normal form]
+\label{cor:the-present-post-v3290-line-already-carries-a-first-conservative-comparison-work-program-normal-form}
+For the first-stage word \(\mathbf w_3\in\{\mathsf A,\mathsf B\}\), the current active line already carries a first conservative comparison/work program normal form
+\[
+  \mathsf{Prog}^{\mathrm{cons}}_{2}(\mathbf w_3;\mathcal S)
+\]
+for every finite nonempty admissible request subfamily
+\[
+  \mathcal S\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3).
+\]
+So the post-release continuation now carries not only a conservative ask/respond/aggregate/dispatch protocol, but also the first compact downstream-readable work/comparison normal form through which an admissible conservative dispatch object may be consumed without reopening the route decision itself.
+\end{corollary}
+
+\begin{proof}
+Immediate from Corollary~\ref{cor:the-present-post-v3290-line-already-carries-a-first-conservative-dispatch-object} and Proposition~\ref{prop:every-finite-admissible-conservative-dispatch-object-yields-exactly-one-conservative-comparison-work-program-normal-form}.
+\end{proof}
+
+\begin{remark}[What the first conservative comparison/work program normal form now buys]
+\label{rem:what-the-first-conservative-comparison-work-program-normal-form-now-buys}
+This is the point where the post-release line first becomes able not only to dispatch conservative aggregates into explicit task families, but also to compress those task families into one compact OP-facing normal form. The horizon-side line can now hand downstream readers one finite comparison/refinement/packaging program under an explicit horizon tag, while the boundary-side line can now hand downstream readers one finite comparison/profiling/packaging program under an explicit stop-preserving boundary tag. Later OP-oriented work can therefore begin from a conservative ask/respond/aggregate/dispatch/program protocol instead of improvising both its compact work-program objects and its downstream comparison interface from scratch.
+\end{remark}
+
+
+\noindent\textbf{Reader cue.} Read the next block as the first conservative OP-facing program-to-execution / work-cycle layer extracted from the compact comparison/work program normal form of 19AZ$^{(6az)}$. Its purpose is to turn one downstream-readable conservative program object back into one disciplined, finite execution cycle without reopening the route decision, manufacturing a fresh theorematic certificate, erasing the inherited horizon/boundary distinction, or denying the inherited earliest honest boundary stop. The block still does not solve any open problem; it fixes the first controlled cycle in which the compact OP-facing program may actually be run.
+
+\subsection*{19AZ$^{(6ba)}$. Conservative program-to-execution / work-cycle layer}
+\label{sec:first-conservative-op-facing-program-to-execution-work-cycle-layer-extracted-from-the-program-normal-form}
+After 19AZ$^{(6az)}$, the post-release line already carries compact route-faithful conservative comparison/work program normal forms subordinate either to the inherited horizon tag or to the inherited stop-preserving boundary tag. The next honest step is therefore to define how such a compact program may be executed as a first finite conservative work cycle. On the horizon side, that cycle must remain subordinate to the inherited horizon tag and must execute only comparison, conservative refinement, and packaging moves already encoded in the compact program. On the boundary side, it must remain subordinate to the inherited stop-preserving boundary tag and must execute only comparison, conservative profiling, and packaging moves already encoded in the compact program. The point is not to add any new theorematic force, but only to turn the compact conservative program into a first controlled OP-facing work cycle that may later be iterated, compared, or packaged further.
+
+\begin{definition}[First conservative OP-facing program-to-execution / work-cycle layer]
+\label{def:first-conservative-op-facing-program-to-execution-work-cycle-layer}
+Fix a certified finite extension word \(\mathbf w\in\mathcal L^{\mathrm{ext}}_{m}\) and a finite nonempty admissible request subfamily
+\[
+  \mathcal S \subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w)
+\]
+together with its compact conservative comparison/work program normal form
+\[
+  \mathsf{Prog}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+\]
+from Definition~\ref{def:first-conservative-op-facing-comparison-work-program-normal-form}. Define the \emph{first conservative OP-facing work-cycle object}
+\[
+  \mathsf{Cycle}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+\]
+by the following cases.
+\begin{enumerate}[label=(\roman*)]
+  \item If
+  \[
+    \mathsf{Prog}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+    =
+    \mathcal P^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S),
+  \]
+define the \emph{first horizon-side conservative work cycle}
+\[
+  \mathcal C^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S)
+  :=
+  \bigl(
+    \mathsf{HOR},
+    \mathsf{TCMP}^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S),
+    \mathsf{TREF}^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S),
+    \mathsf{TPACK}^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S),
+    \mathsf{RET}^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S)
+  \bigr).
+\]
+Here
+\begin{align*}
+  \mathsf{RET}^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S)
+  &:= \text{the finite route-faithful return package produced after executing the admitted horizon-side comparison/refinement/packaging cycle}.
+\end{align*}
+This work cycle is admissible only if every executed move remains subordinate to the inherited horizon tag \(\mathsf{HOR}\), does not manufacture a fresh theorematic certificate, and does not relabel the horizon-side route as a boundary route. Define
+\[
+  \mathsf{Cycle}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+  :=
+  \mathcal C^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S).
+\]
+
+  \item If
+  \[
+    \mathsf{Prog}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+    =
+    \mathcal P^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S),
+  \]
+define the \emph{first boundary-side conservative work cycle}
+\[
+  \mathcal C^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S)
+  :=
+  \bigl(
+    \mathsf{BDRY},
+    \mathsf{TCMP}^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S),
+    \mathsf{TPROF}^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S),
+    \mathsf{TPACK}^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S),
+    \mathsf{RET}^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S)
+  \bigr).
+\]
+Here
+\begin{align*}
+  \mathsf{RET}^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S)
+  &:= \text{the finite stop-preserving return package produced after executing the admitted boundary-side comparison/profiling/packaging cycle}.
+\end{align*}
+This work cycle is admissible only if every executed move remains subordinate to the inherited stop-preserving boundary tag \(\mathsf{BDRY}\), does not smooth away, postpone, or reinterpret the inherited earliest honest boundary stop, and does not relabel the boundary-side route as a horizon-continuation route. Define
+\[
+  \mathsf{Cycle}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+  :=
+  \mathcal C^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S).
+\]
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}[Every finite admissible conservative comparison/work program normal form yields exactly one conservative work-cycle object]
+\label{prop:every-finite-admissible-conservative-comparison-work-program-normal-form-yields-exactly-one-conservative-work-cycle-object}
+Assume the setting of Definition~\ref{def:first-conservative-op-facing-program-to-execution-work-cycle-layer}. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item every finite admissible conservative comparison/work program normal form \(\mathsf{Prog}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)\) yields exactly one work-cycle object \(\mathsf{Cycle}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)\);
+  \item in the horizon-side case, the work-cycle object remains subordinate to the inherited horizon tag and inherited comparison/refinement/packaging organization;
+  \item in the boundary-side case, the work-cycle object remains subordinate to the inherited stop-preserving boundary tag and inherited comparison/profiling/packaging organization; and
+  \item no admissible conservative work-cycle object may manufacture a fresh theorematic certificate, erase the inherited horizon/boundary distinction, or deny the inherited earliest-boundary stop.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Clause (i) is immediate from Definition~\ref{def:first-conservative-op-facing-program-to-execution-work-cycle-layer}: once the compact program normal form is fixed by 19AZ$^{(6az)}$, the present definition assigns exactly one corresponding finite work-cycle object. Clause (ii) follows because the horizon-side work cycle is defined only from the inherited horizon-side program normal form together with the already admitted comparison, refinement-selection, and packaging tasks subordinate to the explicit horizon tag. Clause (iii) follows because the boundary-side work cycle is defined only from the inherited boundary-side program normal form together with the already admitted comparison, profiling-selection, and packaging tasks subordinate to the explicit stop-preserving boundary tag. Clause (iv) is exactly the certificate-aware discipline inherited from 19AZ$^{(6ae)}$, 19AZ$^{(6af)}$, 19AZ$^{(6ai)}$, 19AZ$^{(6at)}$, 19AZ$^{(6au)}$, 19AZ$^{(6av)}$, 19AZ$^{(6aw)}$, 19AZ$^{(6ax)}$, 19AZ$^{(6ay)}$, and 19AZ$^{(6az)}$, now expressed as the first controlled OP-facing work cycle.
+\end{proof}
+
+\begin{corollary}[The present post-v3.29.0 line already carries a first conservative work cycle]
+\label{cor:the-present-post-v3290-line-already-carries-a-first-conservative-work-cycle}
+For the first-stage word \(\mathbf w_3\in\{\mathsf A,\mathsf B\}\), the current active line already carries a first conservative work-cycle object
+\[
+  \mathsf{Cycle}^{\mathrm{cons}}_{2}(\mathbf w_3;\mathcal S)
+\]
+for every finite nonempty admissible request subfamily
+\[
+  \mathcal S\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3).
+\]
+So the post-release continuation now carries not only a conservative ask/respond/aggregate/dispatch/program protocol, but also the first controlled OP-facing execution cycle through which an admissible compact work/comparison program may be run without reopening the route decision itself.
+\end{corollary}
+
+\begin{proof}
+Immediate from Corollary~\ref{cor:the-present-post-v3290-line-already-carries-a-first-conservative-comparison-work-program-normal-form} and Proposition~\ref{prop:every-finite-admissible-conservative-comparison-work-program-normal-form-yields-exactly-one-conservative-work-cycle-object}.
+\end{proof}
+
+\begin{remark}[What the first conservative program-to-execution / work-cycle layer now buys]
+\label{rem:what-the-first-conservative-program-to-execution-work-cycle-layer-now-buys}
+This is the point where the post-release line first becomes able not only to package conservative OP-facing task families into compact program objects, but also to run those compact programs as controlled finite work cycles. The horizon-side line can now execute one finite comparison/refinement/packaging cycle under an explicit horizon tag, while the boundary-side line can now execute one finite comparison/profiling/packaging cycle under an explicit stop-preserving boundary tag. Later OP-oriented work can therefore begin from a conservative ask/respond/aggregate/dispatch/program/cycle protocol instead of improvising both its execution loop and its return package from scratch.
+\end{remark}
+
+
+
+\noindent\textbf{Reader cue.} Read the next block as the first conservative cycle-to-return / iteration interface extracted from the controlled work-cycle layer of 19AZ$^{(6ba)}$. Its purpose is to decide what a route-faithful return package may honestly do next: either prepare one further conservative cycle under the inherited route tag, or collapse into one compact conservative closing/comparison object without reopening the route decision, manufacturing a fresh theorematic certificate, erasing the inherited horizon/boundary distinction, or denying the inherited earliest honest boundary stop.
+
+\subsection*{19AZ$^{(6bb)}$. Conservative cycle-to-return / iteration interface}
+\label{sec:first-conservative-cycle-to-return-iteration-interface-extracted-from-the-work-cycle-layer}
+After 19AZ$^{(6ba)}$, the post-release line already carries controlled finite conservative work-cycle objects subordinate either to the inherited horizon tag or to the inherited stop-preserving boundary tag. The next honest step is therefore to define how the return package produced by such a cycle may be consumed. On the horizon side, a route-faithful return package may only either seed one further conservative horizon-side cycle under the inherited horizon tag or be collapsed into one compact conservative comparison/closing object that still records the inherited route. On the boundary side, a stop-preserving return package may only either seed one further conservative boundary-side cycle under the inherited stop-preserving boundary tag or be collapsed into one compact conservative comparison/closing object that still records the inherited earliest honest boundary stop. The point is not to force infinite iteration, but to define the first disciplined interface through which the conservative work cycle either continues or closes.
+
+\begin{definition}[First conservative cycle-to-return / iteration interface]
+\label{def:first-conservative-cycle-to-return-iteration-interface}
+Fix a certified finite extension word \(\mathbf w\in\mathcal L^{\mathrm{ext}}_{m}\), a finite nonempty admissible request subfamily
+\[
+  \mathcal S \subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w)
+\]
+and its controlled conservative work-cycle object
+\[
+  \mathsf{Cycle}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+\]
+from Definition~\ref{def:first-conservative-op-facing-program-to-execution-work-cycle-layer}. Define the associated \emph{first conservative cycle-to-return / iteration object}
+\[
+  \mathsf{Iter}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+\]
+by the following cases.
+\begin{enumerate}[label=(\roman*)]
+  \item If
+  \[
+    \mathsf{Cycle}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+    =
+    \mathcal C^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S),
+  \]
+define the \emph{first horizon-side conservative return/iteration object}
+\[
+  \mathcal I^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S)
+  :=
+  \bigl(
+    \mathsf{HOR},
+    \mathsf{RET}^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S),
+    \mathsf{NEXT}^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S),
+    \mathsf{CLOSE}^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S)
+  \bigr).
+\]
+Here
+\begin{align*}
+  \mathsf{NEXT}^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S)
+  &:= \text{the admissible option of seeding one further horizon-side conservative cycle subordinate to the inherited horizon tag},\\
+  \mathsf{CLOSE}^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S)
+  &:= \text{the admissible option of collapsing the return package into one compact horizon-side conservative comparison/closing object subordinate to the inherited horizon tag}.
+\end{align*}
+This return/iteration object is admissible only if both options remain subordinate to the inherited horizon tag \(\mathsf{HOR}\), do not manufacture a fresh theorematic certificate, and do not relabel the horizon-side route as a boundary route. Define
+\[
+  \mathsf{Iter}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+  :=
+  \mathcal I^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S).
+\]
+
+  \item If
+  \[
+    \mathsf{Cycle}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+    =
+    \mathcal C^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S),
+  \]
+define the \emph{first boundary-side conservative return/iteration object}
+\[
+  \mathcal I^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S)
+  :=
+  \bigl(
+    \mathsf{BDRY},
+    \mathsf{RET}^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S),
+    \mathsf{NEXT}^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S),
+    \mathsf{CLOSE}^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S)
+  \bigr).
+\]
+Here
+\begin{align*}
+  \mathsf{NEXT}^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S)
+  &:= \text{the admissible option of seeding one further boundary-side conservative cycle subordinate to the inherited stop-preserving boundary tag},\\
+  \mathsf{CLOSE}^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S)
+  &:= \text{the admissible option of collapsing the return package into one compact boundary-side conservative comparison/closing object subordinate to the inherited earliest honest boundary stop}.
+\end{align*}
+This return/iteration object is admissible only if both options remain subordinate to the inherited stop-preserving boundary tag \(\mathsf{BDRY}\), do not smooth away, postpone, or reinterpret the inherited earliest honest boundary stop, and do not relabel the boundary-side route as a horizon-continuation route. Define
+\[
+  \mathsf{Iter}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+  :=
+  \mathcal I^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S).
+\]
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}[Every finite admissible conservative work cycle yields exactly one conservative return/iteration object]
+\label{prop:every-finite-admissible-conservative-work-cycle-yields-exactly-one-conservative-return-iteration-object}
+Assume the setting of Definition~\ref{def:first-conservative-cycle-to-return-iteration-interface}. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item every finite admissible conservative work-cycle object \(\mathsf{Cycle}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)\) yields exactly one return/iteration object \(\mathsf{Iter}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)\);
+  \item in the horizon-side case, the return/iteration object remains subordinate to the inherited horizon tag and records exactly the two admissible next uses of the return package: further conservative cycling or compact horizon-side conservative closing/comparison;
+  \item in the boundary-side case, the return/iteration object remains subordinate to the inherited stop-preserving boundary tag and records exactly the two admissible next uses of the return package: further conservative cycling or compact boundary-side conservative closing/comparison; and
+  \item no admissible conservative return/iteration object may manufacture a fresh theorematic certificate, erase the inherited horizon/boundary distinction, or deny the inherited earliest-boundary stop.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Clause (i) is immediate from Definition~\ref{def:first-conservative-cycle-to-return-iteration-interface}: once the conservative work-cycle object is fixed by 19AZ$^{(6ba)}$, the present definition assigns exactly one corresponding return/iteration object. Clause (ii) follows because the horizon-side return/iteration object is defined only from the inherited horizon-side work cycle together with the two explicitly admitted horizon-side uses of the return package, namely further conservative cycling or compact horizon-side closing/comparison. Clause (iii) follows because the boundary-side return/iteration object is defined only from the inherited boundary-side work cycle together with the two explicitly admitted boundary-side uses of the return package, namely further conservative cycling or compact boundary-side closing/comparison subordinate to the inherited earliest honest boundary stop. Clause (iv) is exactly the certificate-aware discipline inherited from 19AZ$^{(6ae)}$, 19AZ$^{(6af)}$, 19AZ$^{(6ai)}$, 19AZ$^{(6at)}$, 19AZ$^{(6au)}$, 19AZ$^{(6av)}$, 19AZ$^{(6aw)}$, 19AZ$^{(6ax)}$, 19AZ$^{(6ay)}$, 19AZ$^{(6az)}$, and 19AZ$^{(6ba)}$, now expressed as the first disciplined conservative return/iteration interface.
+\end{proof}
+
+\begin{corollary}[The present post-v3.29.0 line already carries a first conservative return/iteration interface]
+\label{cor:the-present-post-v3290-line-already-carries-a-first-conservative-return-iteration-interface}
+For the first-stage word \(\mathbf w_3\in\{\mathsf A,\mathsf B\}\), the current active line already carries a first conservative return/iteration object
+\[
+  \mathsf{Iter}^{\mathrm{cons}}_{2}(\mathbf w_3;\mathcal S)
+\]
+for every finite nonempty admissible request subfamily
+\[
+  \mathcal S\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3).
+\]
+So the post-release continuation now carries not only a conservative ask/respond/aggregate/dispatch/program/cycle protocol, but also the first disciplined interface through which a finite conservative work cycle may either seed one further conservative cycle or collapse into one compact route-faithful conservative closing/comparison object without reopening the route decision itself.
+\end{corollary}
+
+\begin{proof}
+Immediate from Corollary~\ref{cor:the-present-post-v3290-line-already-carries-a-first-conservative-work-cycle} and Proposition~\ref{prop:every-finite-admissible-conservative-work-cycle-yields-exactly-one-conservative-return-iteration-object}.
+\end{proof}
+
+\begin{remark}[What the first conservative cycle-to-return / iteration interface now buys]
+\label{rem:what-the-first-conservative-cycle-to-return-iteration-interface-now-buys}
+This is the point where the post-release line first becomes able not only to run a compact conservative OP-facing program as a controlled finite work cycle, but also to state explicitly what the return package of that cycle is allowed to do next. The horizon-side line can now either seed one further horizon-side conservative cycle or collapse into one compact horizon-side conservative closing/comparison object under the inherited horizon tag, while the boundary-side line can now either seed one further boundary-side conservative cycle or collapse into one compact boundary-side conservative closing/comparison object under the inherited stop-preserving boundary tag. Later OP-oriented work can therefore begin from a conservative ask/respond/aggregate/dispatch/program/cycle/return protocol instead of improvising both its iteration interface and its compact closing interface from scratch.
+\end{remark}
+
+
+
+\noindent\textbf{Reader cue.} Read the next block as the first compact conservative closing/comparison form extracted from the return/iteration interface of 19AZ$^{(6bb)}$. Its purpose is to package the honest non-iterative exit of a controlled conservative work cycle into one downstream-readable closing object that still records the inherited route tag, does not reopen the route decision, does not manufacture a fresh theorematic certificate, and does not smooth away the inherited earliest honest boundary stop.
+
+\subsection*{19AZ$^{(6bc)}$. First compact conservative closing/comparison form extracted from the return/iteration interface}
+\label{sec:first-compact-conservative-closing-comparison-form-extracted-from-the-return-iteration-interface}
+After 19AZ$^{(6bb)}$, every controlled conservative work cycle already carries a disciplined return/iteration object with exactly two admitted next uses of the return package: one further conservative cycle, or one compact route-faithful closing/comparison object. The present block isolates the second option as a compact object in its own right. On the horizon side, this yields a compact horizon-side conservative closing/comparison form subordinate to the inherited horizon tag. On the boundary side, it yields a compact boundary-side conservative closing/comparison form subordinate to the inherited stop-preserving boundary tag and earliest honest boundary stop. The point is not to terminate the whole post-release line, but to define the first disciplined compact conservative exit object of the current ask/respond/aggregate/dispatch/program/cycle/return staircase.
+
+\begin{definition}[First compact conservative closing/comparison form]
+\label{def:first-compact-conservative-closing-comparison-form}
+Fix a certified finite extension word \(\mathbf w\in\mathcal L^{\mathrm{ext}}_{m}\), a finite nonempty admissible request subfamily
+\[
+  \mathcal S \subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w)
+\]
+and its conservative return/iteration object
+\[
+  \mathsf{Iter}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+\]
+from Definition~\ref{def:first-conservative-cycle-to-return-iteration-interface}. Define the associated \emph{first compact conservative closing/comparison object}
+\[
+  \mathsf{CloseCmp}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+\]
+by the following cases.
+\begin{enumerate}[label=(\roman*)]
+  \item If
+  \[
+    \mathsf{Iter}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+    =
+    \mathcal I^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S),
+  \]
+define the \emph{first horizon-side compact conservative closing/comparison object}
+\[
+  \mathcal K^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S)
+  :=
+  \bigl(
+    \mathsf{HOR},
+    \mathsf{RET}^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S),
+    \mathsf{CLOSE}^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S)
+  \bigr).
+\]
+This object is admissible only if it remains subordinate to the inherited horizon tag, records the compact horizon-side closing/comparison option exactly as provided by 19AZ$^{(6bb)}$, does not relabel the route as boundary-side, and does not manufacture a fresh theorematic certificate. Define
+\[
+  \mathsf{CloseCmp}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+  :=
+  \mathcal K^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S).
+\]
+
+  \item If
+  \[
+    \mathsf{Iter}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+    =
+    \mathcal I^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S),
+  \]
+define the \emph{first boundary-side compact conservative closing/comparison object}
+\[
+  \mathcal K^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S)
+  :=
+  \bigl(
+    \mathsf{BDRY},
+    \mathsf{RET}^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S),
+    \mathsf{CLOSE}^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S)
+  \bigr).
+\]
+This object is admissible only if it remains subordinate to the inherited stop-preserving boundary tag, records the compact boundary-side closing/comparison option exactly as provided by 19AZ$^{(6bb)}$, does not smooth away or postpone the inherited earliest honest boundary stop, and does not relabel the route as horizon-side. Define
+\[
+  \mathsf{CloseCmp}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+  :=
+  \mathcal K^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S).
+\]
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}[Every finite admissible conservative return/iteration object yields exactly one compact conservative closing/comparison object]
+\label{prop:every-finite-admissible-conservative-return-iteration-object-yields-exactly-one-compact-conservative-closing-comparison-object}
+Assume the setting of Definition~\ref{def:first-compact-conservative-closing-comparison-form}. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item every finite admissible conservative return/iteration object \(\mathsf{Iter}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)\) yields exactly one compact conservative closing/comparison object \(\mathsf{CloseCmp}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)\);
+  \item in the horizon-side case, the compact conservative closing/comparison object remains subordinate to the inherited horizon tag and records exactly the compact horizon-side closing/comparison option carried by the return package;
+  \item in the boundary-side case, the compact conservative closing/comparison object remains subordinate to the inherited stop-preserving boundary tag and records exactly the compact boundary-side closing/comparison option carried by the return package; and
+  \item no admissible compact conservative closing/comparison object may manufacture a fresh theorematic certificate, erase the inherited horizon/boundary distinction, or deny the inherited earliest-boundary stop.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Clause (i) is immediate from Definition~\ref{def:first-compact-conservative-closing-comparison-form}: once the conservative return/iteration object is fixed by 19AZ$^{(6bb)}$, the present definition assigns exactly one corresponding compact conservative closing/comparison object. Clauses (ii) and (iii) follow because the horizon-side and boundary-side compact objects are defined only from the inherited return package together with the corresponding compact closing/comparison option already recorded in the return/iteration object. Clause (iv) is exactly the certificate-aware discipline inherited from 19AZ$^{(6ae)}$ through 19AZ$^{(6bb)}$, now expressed as the first disciplined compact conservative closing/comparison interface.
+\end{proof}
+
+\begin{corollary}[The present post-v3.29.0 line already carries a first compact conservative closing/comparison form]
+\label{cor:the-present-post-v3290-line-already-carries-a-first-compact-conservative-closing-comparison-form}
+For the first-stage word \(\mathbf w_3\in\{\mathsf A,\mathsf B\}\), the current active line already carries a first compact conservative closing/comparison object
+\[
+  \mathsf{CloseCmp}^{\mathrm{cons}}_{2}(\mathbf w_3;\mathcal S)
+\]
+for every finite nonempty admissible request subfamily
+\[
+  \mathcal S\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3).
+\]
+So the post-release continuation now carries not only a conservative ask/respond/aggregate/dispatch/program/cycle/return protocol, but also the first disciplined compact conservative closing/comparison form to which that protocol may honestly collapse without reopening the route decision itself.
+\end{corollary}
+
+\begin{proof}
+Immediate from Corollary~\ref{cor:the-present-post-v3290-line-already-carries-a-first-conservative-return-iteration-interface} and Proposition~\ref{prop:every-finite-admissible-conservative-return-iteration-object-yields-exactly-one-compact-conservative-closing-comparison-object}.
+\end{proof}
+
+\begin{remark}[What the first compact conservative closing/comparison form now buys]
+\label{rem:what-the-first-compact-conservative-closing-comparison-form-now-buys}
+This is the point where the post-release line first becomes able not only to iterate a conservative work cycle, but also to exit one such cycle in a compact downstream-readable form that still remembers the inherited route. The horizon-side line can now close one controlled conservative cycle into a compact horizon-side comparison object under the inherited horizon tag, while the boundary-side line can now close one controlled conservative cycle into a compact boundary-side comparison object under the inherited stop-preserving boundary tag and earliest honest boundary stop. Later OP-oriented work can therefore begin from a conservative ask/respond/aggregate/dispatch/program/cycle/return/close protocol instead of improvising its compact conservative closing interface from scratch.
+\end{remark}
+
+
+\noindent\textbf{Reader cue.} Read the next block as the first admissible next-cycle promotion rule extracted from the same return/iteration interface of 19AZ$^{(6bb)}$. Its purpose is to state when the \emph{iterative} branch of the return package may honestly be promoted to one further conservative work cycle under the inherited route tag, rather than merely being mentioned abstractly as a possibility.
+
+\subsection*{19AZ$^{(6bd)}$. First admissible next-cycle promotion rule extracted from the return/iteration interface}
+\label{sec:first-admissible-next-cycle-promotion-rule-extracted-from-the-return-iteration-interface}
+After 19AZ$^{(6bb)}$, every controlled conservative work cycle already carries a return package with an explicitly recorded next-cycle option. The present block upgrades that option from a mere named possibility to a disciplined promotion rule. On the horizon side, a next-cycle promotion is admissible only if one chooses a new finite nonempty admissible request subfamily that remains subordinate to the inherited horizon tag and does not relabel the route. On the boundary side, a next-cycle promotion is admissible only if one chooses a new finite nonempty admissible request subfamily that remains subordinate to the inherited stop-preserving boundary tag and does not smooth away or postpone the inherited earliest honest boundary stop. The point is to define the first honest rule under which \(\mathsf{NEXT}\) may seed one further conservative cycle rather than being left as an unspecified placeholder.
+
+\begin{definition}[First admissible next-cycle promotion rule]
+\label{def:first-admissible-next-cycle-promotion-rule}
+Fix a certified finite extension word \(\mathbf w\in\mathcal L^{\mathrm{ext}}_{m}\), a finite nonempty admissible request subfamily
+\[
+  \mathcal S \subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w),
+\]
+its conservative return/iteration object
+\[
+  \mathsf{Iter}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S),
+\]
+and a second finite nonempty admissible request subfamily
+\[
+  \mathcal S^{+}\subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w).
+\]
+Define the associated \emph{first admissible next-cycle promotion object}
+\[
+  \mathsf{Prom}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S,\mathcal S^{+})
+\]
+by the following cases.
+\begin{enumerate}[label=(\roman*)]
+  \item If
+  \[
+    \mathsf{Iter}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+    =
+    \mathcal I^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S)
+  \]
+and
+\[
+  \mathcal S^{+}\subseteq \mathcal Q^{\mathrm{hor}}_{m}(\mathbf w),
+\]
+define the \emph{first horizon-side admissible next-cycle promotion object}
+\[
+  \Pi^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S,\mathcal S^{+})
+  :=
+  \bigl(
+    \mathsf{HOR},
+    \mathsf{NEXT}^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S),
+    \mathcal S^{+},
+    \mathsf{Cycle}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S^{+})
+  \bigr).
+\]
+This promotion object is admissible only if the promoted cycle remains subordinate to the inherited horizon tag, does not manufacture a fresh theorematic certificate, and does not relabel the horizon-side route as a boundary-side route. Define
+\[
+  \mathsf{Prom}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S,\mathcal S^{+})
+  :=
+  \Pi^{\mathrm{hor}}_{m}(\mathbf w;\mathcal S,\mathcal S^{+}).
+\]
+
+  \item If
+  \[
+    \mathsf{Iter}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)
+    =
+    \mathcal I^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S)
+  \]
+and
+\[
+  \mathcal S^{+}\subseteq \mathcal Q^{\mathrm{bdry}}_{m}(\mathbf w),
+\]
+define the \emph{first boundary-side admissible next-cycle promotion object}
+\[
+  \Pi^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S,\mathcal S^{+})
+  :=
+  \bigl(
+    \mathsf{BDRY},
+    \mathsf{NEXT}^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S),
+    \mathcal S^{+},
+    \mathsf{Cycle}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S^{+})
+  \bigr).
+\]
+This promotion object is admissible only if the promoted cycle remains subordinate to the inherited stop-preserving boundary tag, does not smooth away or postpone the inherited earliest honest boundary stop, does not manufacture a fresh theorematic certificate, and does not relabel the boundary-side route as a horizon-side route. Define
+\[
+  \mathsf{Prom}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S,\mathcal S^{+})
+  :=
+  \Pi^{\mathrm{bdry}}_{m}(\mathbf w;\mathcal S,\mathcal S^{+}).
+\]
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}[Every admissible next-cycle promotion object seeds exactly one further conservative work cycle under the inherited route tag]
+\label{prop:every-admissible-next-cycle-promotion-object-seeds-exactly-one-further-conservative-work-cycle-under-the-inherited-route-tag}
+Assume the setting of Definition~\ref{def:first-admissible-next-cycle-promotion-rule}. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item every admissible promotion object \(\mathsf{Prom}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S,\mathcal S^{+})\) determines exactly one further conservative work cycle \(\mathsf{Cycle}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S^{+})\);
+  \item in the horizon-side case, the promoted cycle remains subordinate to the inherited horizon tag;
+  \item in the boundary-side case, the promoted cycle remains subordinate to the inherited stop-preserving boundary tag and inherited earliest honest boundary stop; and
+  \item no admissible next-cycle promotion may manufacture a fresh theorematic certificate, erase the inherited horizon/boundary distinction, or deny the inherited earliest-boundary stop.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Clause (i) is immediate from Definition~\ref{def:first-admissible-next-cycle-promotion-rule}: once the return/iteration object and the new admissible request family \(\mathcal S^{+}\) are fixed, the present definition assigns exactly one further conservative work cycle. Clauses (ii) and (iii) follow because the promotion rule requires the new work cycle to remain subordinate to the inherited horizon or boundary tag respectively. Clause (iv) is exactly the certificate-aware discipline inherited from 19AZ$^{(6ae)}$ through 19AZ$^{(6bb)}$, now expressed as the first disciplined admissible next-cycle promotion rule.
+\end{proof}
+
+\begin{corollary}[The present post-v3.29.0 line already carries a first admissible next-cycle promotion rule]
+\label{cor:the-present-post-v3290-line-already-carries-a-first-admissible-next-cycle-promotion-rule}
+For the first-stage word \(\mathbf w_3\in\{\mathsf A,\mathsf B\}\), the current active line already carries a first admissible next-cycle promotion object
+\[
+  \mathsf{Prom}^{\mathrm{cons}}_{2}(\mathbf w_3;\mathcal S,\mathcal S^{+})
+\]
+for every pair of finite nonempty admissible request subfamilies
+\[
+  \mathcal S,\mathcal S^{+}\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3)
+\]
+that remain subordinate to the same inherited route tag. So the post-release continuation now carries not only a conservative ask/respond/aggregate/dispatch/program/cycle/return/close protocol, but also the first disciplined rule under which one such return package may honestly seed one further conservative cycle.
+\end{corollary}
+
+\begin{proof}
+Immediate from Corollary~\ref{cor:the-present-post-v3290-line-already-carries-a-first-conservative-return-iteration-interface} and Proposition~\ref{prop:every-admissible-next-cycle-promotion-object-seeds-exactly-one-further-conservative-work-cycle-under-the-inherited-route-tag}.
+\end{proof}
+
+\begin{remark}[What the first admissible next-cycle promotion rule now buys]
+\label{rem:what-the-first-admissible-next-cycle-promotion-rule-now-buys}
+This is the point where the post-release line first becomes able not only to mention iterative continuation as an option, but also to promote it in a disciplined way to one further conservative cycle under the inherited route tag. The horizon-side line can now honestly re-enter a further conservative comparison/refinement/packaging cycle under the inherited horizon tag, while the boundary-side line can now honestly re-enter a further conservative comparison/profiling/packaging cycle under the inherited stop-preserving boundary tag and earliest honest boundary stop. Later OP-oriented work can therefore begin from a conservative ask/respond/aggregate/dispatch/program/cycle/return/close/promote protocol instead of improvising its next-cycle promotion rule from scratch.
+\end{remark}
+
+
+\noindent\textbf{Reader cue.} Read the next block as the first branch-resolution rule extracted from the newly available \emph{close/promote} split of 19AZ$^{(6bc)}$--19AZ$^{(6bd)}$. Its purpose is to decide, in one route-faithful normalized step, when a conservative return object must honestly collapse into the compact closing/comparison form and when it may honestly be promoted into one further conservative cycle under the same inherited route tag.
+
+\subsection*{19AZ$^{(6be)}$. First conservative branch-resolution rule extracted from the close/promote protocol}
+\label{sec:first-conservative-branch-resolution-rule-extracted-from-the-close-promote-protocol}
+After 19AZ$^{(6bc)}$ and 19AZ$^{(6bd)}$, every controlled conservative work cycle already carries two disciplined continuations: an honest compact closing/comparison exit and an honest next-cycle promotion rule. The present block resolves these two possibilities into one normalized branch-resolution interface. On the horizon side, the rule says that a return object either closes into the compact horizon-side comparison form or promotes to one further horizon-side conservative cycle, but may not do both at once and may not leave the inherited horizon tag. On the boundary side, the rule says that a return object either closes into the compact boundary-side comparison form or promotes to one further boundary-side conservative cycle, but may not do both at once and may not smooth away, postpone, or deny the inherited earliest honest boundary stop. The point is to replace the loose phrase ``close or continue'' by one first route-faithful branch-resolution object.
+
+\begin{definition}[First conservative branch-resolution rule]
+\label{def:first-conservative-branch-resolution-rule}
+Fix a certified finite extension word \(\mathbf w\in\mathcal L^{\mathrm{ext}}_{m}\), a finite nonempty admissible request subfamily
+\[
+  \mathcal S \subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w),
+\]
+its conservative return/iteration object
+\[
+  \mathsf{Iter}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S),
+\]
+and choose a branch marker
+\[
+  \mathfrak b\in\{\mathsf{CL},\mathsf{PR}\}.
+\]
+When \(\mathfrak b=\mathsf{PR}\), also fix a second finite nonempty admissible request subfamily
+\[
+  \mathcal S^{+}\subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w).
+\]
+Define the associated \emph{first conservative branch-resolution object}
+\[
+  \mathsf{Branch}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S,\mathfrak b\mid\mathcal S^{+})
+\]
+by the following cases.
+\begin{enumerate}[label=(\roman*)]
+  \item If
+\[
+  \mathfrak b=\mathsf{CL},
+\]
+define
+\[
+  \mathsf{Branch}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S,\mathsf{CL})
+  :=
+  \mathsf{CloseCmp}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S).
+\]
+This branch is admissible only if it remains subordinate to the inherited route tag recorded by \(\mathsf{Iter}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)\), does not manufacture a fresh theorematic certificate, and does not erase the horizon/boundary distinction or the inherited earliest-boundary stop.
+
+  \item If
+\[
+  \mathfrak b=\mathsf{PR},
+\]
+and \(\mathcal S^{+}\) is fixed as above, define
+\[
+  \mathsf{Branch}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S,\mathsf{PR}\mid\mathcal S^{+})
+  :=
+  \mathsf{Prom}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S,\mathcal S^{+}).
+\]
+This branch is admissible only if the promoted cycle remains subordinate to the same inherited route tag, does not manufacture a fresh theorematic certificate, and, in the boundary-side case, does not smooth away, postpone, or deny the inherited earliest honest boundary stop.
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}[Every conservative return object admits exactly one honest branch choice at a time: close or promote]
+\label{prop:every-conservative-return-object-admits-exactly-one-honest-branch-choice-at-a-time-close-or-promote}
+Assume the setting of Definition~\ref{def:first-conservative-branch-resolution-rule}. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item every admissible branch-resolution object is either a compact conservative closing/comparison object or an admissible next-cycle promotion object;
+  \item no admissible branch-resolution object may simultaneously act as both a closing object and a promotion object for the same fixed branch marker;
+  \item in the horizon-side case, every admissible branch-resolution object remains subordinate to the inherited horizon tag;
+  \item in the boundary-side case, every admissible branch-resolution object remains subordinate to the inherited stop-preserving boundary tag and inherited earliest honest boundary stop; and
+  \item no admissible branch-resolution object may manufacture a fresh theorematic certificate, erase the horizon/boundary distinction, or deny the inherited earliest-boundary stop.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Clause (i) is immediate from Definition~\ref{def:first-conservative-branch-resolution-rule}: the branch marker \(\mathfrak b\) selects exactly one of the two previously disciplined objects, namely \(\mathsf{CloseCmp}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S)\) or \(\mathsf{Prom}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S,\mathcal S^{+})\). Clause (ii) follows because the branch marker is fixed to one of the two values \(\mathsf{CL}\) or \(\mathsf{PR}\), so the same admissible branch-resolution object cannot honestly instantiate both branches at once. Clauses (iii) and (iv) follow from 19AZ$^{(6bc)}$ and 19AZ$^{(6bd)}$, which already require both the compact closing branch and the promotion branch to remain subordinate to the inherited route tag, and in the boundary-side case to preserve the inherited earliest honest boundary stop. Clause (v) is exactly the certificate-aware route discipline inherited from 19AZ$^{(6ae)}$ through 19AZ$^{(6bd)}$, now compressed into one first branch-resolution rule.
+\end{proof}
+
+\begin{corollary}[The present post-v3.29.0 line already carries a first conservative branch-resolution rule]
+\label{cor:the-present-post-v3290-line-already-carries-a-first-conservative-branch-resolution-rule}
+For the first-stage word \(\mathbf w_3\in\{\mathsf A,\mathsf B\}\), the current active line already carries a first conservative branch-resolution object
+\[
+  \mathsf{Branch}^{\mathrm{cons}}_{2}(\mathbf w_3;\mathcal S,\mathfrak b\mid\mathcal S^{+})
+\]
+for every finite nonempty admissible request subfamily
+\[
+  \mathcal S\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3),
+\]
+every branch marker \(\mathfrak b\in\{\mathsf{CL},\mathsf{PR}\}\), and in the promotion case every second finite nonempty admissible request subfamily
+\[
+  \mathcal S^{+}\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3)
+\]
+that remains subordinate to the same inherited route tag. So the post-release continuation now carries not only a conservative ask/respond/aggregate/dispatch/program/cycle/return/close/promote protocol, but also the first disciplined rule that resolves each honest conservative return package into one route-faithful close-or-promote branch.
+\end{corollary}
+
+\begin{proof}
+Immediate from Corollary~\ref{cor:the-present-post-v3290-line-already-carries-a-first-compact-conservative-closing-comparison-form}, Corollary~\ref{cor:the-present-post-v3290-line-already-carries-a-first-admissible-next-cycle-promotion-rule}, and Proposition~\ref{prop:every-conservative-return-object-admits-exactly-one-honest-branch-choice-at-a-time-close-or-promote}.
+\end{proof}
+
+\begin{remark}[What the first conservative branch-resolution rule now buys]
+\label{rem:what-the-first-conservative-branch-resolution-rule-now-buys}
+This is the point where the post-release line first becomes able not only to name compact conservative closing and disciplined next-cycle promotion separately, but also to resolve them into one honest branch interface. The horizon-side line can now decide, under the inherited horizon tag, whether a controlled conservative return object should close into a compact comparison object or honestly promote to one further conservative cycle. The boundary-side line can now make the same decision under the inherited stop-preserving boundary tag and earliest honest boundary stop without smoothing boundary information away. Later OP-oriented work can therefore begin from a conservative ask/respond/aggregate/dispatch/program/cycle/return/close/promote/branch protocol instead of improvising the close-versus-continue split from scratch.
+\end{remark}
+
+
+
+\noindent\textbf{Reader cue.} Read the next block as the first downstream branch-consumption layer extracted from the new close/promote branch-resolution rule of 19AZ$^{(6be)}$. Its purpose is to let later OP-oriented work consume a resolved conservative branch not as a loose slogan but as one controlled downstream follow-on object that keeps the inherited route tag, preserves the horizon/boundary distinction, and does not smooth away the inherited earliest honest boundary stop.
+

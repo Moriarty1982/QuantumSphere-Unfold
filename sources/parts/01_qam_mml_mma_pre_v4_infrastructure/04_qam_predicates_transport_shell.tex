@@ -1,0 +1,1283 @@
+\subsection*{QAM minimal predicates and coded relations}
+\begin{quote}\small
+\noindent\textbf{Status.} \emph{Active formal-language layer.}\par
+\noindent\textbf{Block function.} This block introduces the smallest coded predicate/relation vocabulary needed to read the present admissible OP fragment in QAM-over-ZF form.
+\end{quote}
+
+We now pass from the entry-layer preview to the first explicit predicate layer of QAM-over-ZF. At this stage, the QAM language still remains conservative over ZF: the predicates below are intended as definable recognition or relation clauses on tagged set-codes rather than as commitments to a new ontology.
+
+\begin{definition}[Primitive QAM predicates]
+We introduce the primitive predicates
+\[
+\begin{aligned}
+&\mathrm{QState}(x),\quad \mathrm{QLayer}(x),\quad \mathrm{QOp}(x),\quad \mathrm{QReadout}(x),\\[0.15em]
+&\mathrm{QBranch}(x),\quad \mathrm{QShell}(x),\quad \mathrm{QWitness}(x),\quad \mathrm{QTensor}(x).
+\end{aligned}
+\]
+with the intended ZF-grounded readings
+\[
+\mathrm{QState}(x)\;:\Longleftrightarrow\;\exists a\,(x=\langle 0,a\rangle),
+\]
+\[
+\mathrm{QLayer}(x)\;:\Longleftrightarrow\;\exists \ell\,\exists D\,(x=\langle 1,\ell,D\rangle),
+\]
+\[
+\mathrm{QOp}(x)\;:\Longleftrightarrow\;\exists \ell_1\,\exists \ell_2\,\exists G\,(x=\langle 2,\ell_1,\ell_2,G\rangle),
+\]
+\[
+\mathrm{QReadout}(x)\;:\Longleftrightarrow\;\exists \ell\,\exists W\,\exists R\,(x=\langle 3,\ell,W,R\rangle),
+\]
+\[
+\mathrm{QBranch}(x)\;:\Longleftrightarrow\;\exists b\,\exists B\,(x=\langle 4,b,B\rangle),
+\]
+\[
+\mathrm{QShell}(x)\;:\Longleftrightarrow\;\exists r\,\exists s\,\exists T\,(x=\langle 5,r,s,T\rangle),
+\]
+\[
+\mathrm{QWitness}(x)\;:\Longleftrightarrow\;\exists u\,(x=\langle 6,u\rangle),
+\]
+\[
+\mathrm{QTensor}(x)\;:\Longleftrightarrow\;\exists p\,\exists q\,(x=\langle 7,p,q\rangle).
+\]
+\end{definition}
+
+\begin{remark}
+At this stage, these predicates are still recognition clauses rather than a full independent axiom system. Their purpose is to let the Companion speak explicitly about coded states, layers, operators, readouts, branches, shell/refinement objects, witnesses, and tensor composites inside one ZF-grounded language layer.
+\end{remark}
+
+\begin{definition}[Primitive QAM coded relations]
+We also introduce the primitive QAM-style relations
+\[
+\mathrm{QAdmTransport}(o,s,t),\qquad
+\mathrm{QClEq}(s,t),\qquad
+\mathrm{QRead}(r,s,w),
+\]
+\[
+\mathrm{QBranchRef}(b,s,t),\qquad
+\mathrm{QShellRef}(\sigma,s,t),\qquad
+\mathrm{QTensorAdm}(x,y).
+\]
+Their intended readings are as follows:
+\begin{enumerate}
+\item $\mathrm{QAdmTransport}(o,s,t)$ means that the operator-code $o$ transports the coded state $s$ admissibly to the coded state $t$;
+\item $\mathrm{QClEq}(s,t)$ means that $s$ and $t$ belong to the same coded closure class;
+\item $\mathrm{QRead}(r,s,w)$ means that the readout-code $r$ reads the coded state $s$ into the coded observable value $w$;
+\item $\mathrm{QBranchRef}(b,s,t)$ means that the branch-code $b$ refines the coded state $s$ to the coded state $t$;
+\item $\mathrm{QShellRef}(\sigma,s,t)$ means that the shell/refinement-code $\sigma$ refines the coded state $s$ to the coded state $t$;
+\item $\mathrm{QTensorAdm}(x,y)$ means that the tensor-coded composite $x\otimes y$ is admitted as a legitimate coded QAM object.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}
+These relations are the first minimal bridge between the current OP/branch/shell architecture and its coded QAM-over-ZF form. In particular, admissibility and closure-class preservation already appear here as primitive language-level notions rather than as only informal motivation.
+\end{remark}
+
+\begin{definition}[First QAM translation target]
+The first intended translation target of the QAM-over-ZF layer is the admissible OP fragment consisting of:
+\begin{enumerate}
+\item the OP~1/OP~5 source-return closure architecture;
+\item the intermediate OP~2--OP~4 transport bridge;
+\item admissible branch transport;
+\item OP~3 shell-admissible refinement;
+\item admissible routed support together with the visible packet/phase-lock/epsilon screening layer.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}
+The significance of the present predicate layer is that QAM is no longer only a roadmap note. Even at this first stage, the language already distinguishes object-kinds and relation-kinds closely enough to serve as a faithful coded entry interface for the current admissible OP fragment.
+\end{remark}
+
+
+
+\subsection*{QAM transport, closure, and readout schemata}
+\begin{quote}\small
+\noindent\textbf{Status.} \emph{Active theorem-core block inside the QAM formal layer.}\par
+\noindent\textbf{Block function.} This block turns the predicate language into actual transport, closure-class, and readout principles, so it is the first place where the QAM interface becomes theorem-usable.
+\end{quote}
+
+We now pass from the minimal predicate layer to the first theorematic QAM transport/closure layer. The point of this section is still conservative: it does not yet claim a fully independent QAM foundation, but it does begin to formulate admissible transport, closure-class preservation, and closure-compatible readout directly in the coded QAM-over-ZF language.
+
+\begin{definition}[QAM-coded transport graph]
+A QAM-operator code
+\[
+o=\langle 2,\ell_1,\ell_2,G\rangle
+\]
+is called a \emph{coded transport graph} if $G$ is a set of ordered pairs coding a functional transport rule from coded states on layer $\ell_1$ to coded states on layer $\ell_2$.
+\end{definition}
+
+\begin{definition}[QAM admissible transport]
+For a QAM-operator code $o$ and coded states $s,t$, we write
+\[
+\mathrm{QAdmTransport}(o,s,t)
+\]
+iff:
+\begin{enumerate}
+\item $o$ is a coded transport graph;
+\item $s$ is a coded state on the source layer of $o$;
+\item $t$ is a coded state on the target layer of $o$;
+\item the graph-code of $o$ sends $s$ to $t$;
+\item the transport from $s$ to $t$ preserves the intended closure-bearing structural mode.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}
+At this stage, the final clause is still schematic. Its precise intended mathematical content is supplied by the coded closure-class relation below.
+\end{remark}
+
+\begin{definition}[QAM closure-class equivalence]
+The relation
+\[
+\mathrm{QClEq}(s,t)
+\]
+is the coded closure-class relation on QAM-state codes. It is intended to mean that $s$ and $t$ represent the same closure-bearing structural mode, even if they differ by admissible transport, admissible frame-shifted realization, admissible branch refinement, or admissible shell refinement.
+\end{definition}
+
+\begin{axiom}[QAM closure-class schema]
+The relation $\mathrm{QClEq}$ is required to satisfy:
+\begin{enumerate}
+\item \textbf{reflexivity:}
+\[
+\mathrm{QClEq}(s,s);
+\]
+\item \textbf{symmetry:}
+\[
+\mathrm{QClEq}(s,t)\Longrightarrow \mathrm{QClEq}(t,s);
+\]
+\item \textbf{transitivity:}
+\[
+\mathrm{QClEq}(s,t)\wedge \mathrm{QClEq}(t,u)\Longrightarrow \mathrm{QClEq}(s,u).
+\]
+\end{enumerate}
+\end{axiom}
+
+\begin{remark}
+Thus $\mathrm{QClEq}$ is the coded QAM analogue of the native closure carrier-class relation used in the current OP architecture.
+\end{remark}
+
+\begin{axiom}[QAM admissibility implies closure preservation]
+For every operator code $o$ and state codes $s,t$,
+\[
+\mathrm{QAdmTransport}(o,s,t)\Longrightarrow \mathrm{QClEq}(s,t).
+\]
+\end{axiom}
+
+\begin{remark}
+This is the first central QAM principle. Admissibility is not defined merely by existence of transport, but by preservation of closure class.
+\end{remark}
+
+\begin{definition}[QAM-coded readout]
+A QAM-readout code
+\[
+r=\langle 3,\ell,W,R\rangle
+\]
+is called a \emph{coded readout} if $R$ is a graph-code sending coded states on layer $\ell$ into coded observable values in the target code $W$.
+\end{definition}
+
+\begin{definition}[QAM readout relation]
+We write
+\[
+\mathrm{QRead}(r,s,w)
+\]
+iff $r$ is a coded readout, $s$ is a coded state on the source layer of $r$, and the graph-code of $r$ sends $s$ to the coded observable value $w$.
+\end{definition}
+
+\begin{definition}[QAM closure-compatible readout]\label{def:qam-closure-compatible-readout}
+A coded readout $r$ is called \emph{closure-compatible} if there exists a coded class-target map $J$ such that for all coded states $s,t$,
+\[
+\mathrm{QClEq}(s,t)\Longrightarrow
+\bigl(
+\forall w_1\,\forall w_2\,
+(\mathrm{QRead}(r,s,w_1)\wedge \mathrm{QRead}(r,t,w_2)\Longrightarrow J(w_1)=J(w_2))
+\bigr).
+\]
+\end{definition}
+
+\begin{remark}
+This is the coded QAM version of readout factorization through closure class. Raw readouts may differ, but their closure-relevant image under $J$ must agree whenever the source states belong to the same closure class.
+\end{remark}
+
+\begin{definition}[First tensor-compatibility placeholder]
+We reserve the tensor-admissibility predicate
+\[
+\mathrm{QTensorAdm}(x,y)
+\]
+for the statement that the tensor-coded composite $x\otimes y$ is admitted as a legitimate coded QAM object of the intended kind.
+\end{definition}
+
+\begin{proposition}[First QAM transport principle]
+Let $o$ be a coded QAM-operator, let $s,t$ be coded QAM-states, and let $r$ be a closure-compatible coded readout. If
+\[
+\mathrm{QAdmTransport}(o,s,t),
+\]
+then:
+\begin{enumerate}
+\item \[
+\mathrm{QClEq}(s,t);
+\]
+\item the closure-relevant image of any readout of $s$ agrees with the closure-relevant image of any readout of $t$ under the factor map $J$ associated with $r$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+The first claim is exactly the admissibility-implies-closure-preservation schema. The second follows from closure-compatibility of the readout: since $\mathrm{QClEq}(s,t)$ holds, any coded readouts of $s$ and $t$ are identified after passage through the closure-relevant class-target map $J$.
+\end{proof}
+
+\begin{theorem}[First QAM version of the OP transport principle]\label{thm:qam-first-op-transport}
+Assume:
+\begin{enumerate}
+\item there is a coded source state $s_{\mathrm{in}}$;
+\item there are coded intermediate states $s_2,s_3,s_4$;
+\item there are coded operator maps $o_2,o_3,o_4,o_{\mathrm{fwd}},o_{\mathrm{bwd}}$;
+\item the transports
+\[
+\begin{aligned}
+&\mathrm{QAdmTransport}(o_2,s_{\mathrm{in}},s_2),\qquad
+\mathrm{QAdmTransport}(o_3,s_2,s_3),\\[0.15em]
+&\mathrm{QAdmTransport}(o_4,s_3,s_4),\qquad
+\mathrm{QAdmTransport}(o_{\mathrm{fwd}},s_{\mathrm{in}},t_{\mathrm{fwd}}),\\[0.15em]
+&\mathrm{QAdmTransport}(o_{\mathrm{bwd}},s_{\mathrm{in}},t_{\mathrm{bwd}}).
+\end{aligned}
+\]
+all hold;
+\item the relevant coded readout is closure-compatible.
+\end{enumerate}
+Then all coded states
+\[
+s_{\mathrm{in}},\ s_2,\ s_3,\ s_4,\ t_{\mathrm{fwd}},\ t_{\mathrm{bwd}}
+\]
+belong to the same coded closure class. Consequently, all closure-relevant readouts of these states agree after passage through the closure-factor map.
+\end{theorem}
+
+\begin{proof}
+Each admissible transport preserves closure class by the admissibility schema. Therefore
+\[
+\mathrm{QClEq}(s_{\mathrm{in}},s_2),\qquad
+\mathrm{QClEq}(s_2,s_3),\qquad
+\mathrm{QClEq}(s_3,s_4).
+\]
+By transitivity,
+\[
+\mathrm{QClEq}(s_{\mathrm{in}},s_4).
+\]
+Likewise,
+\[
+\mathrm{QClEq}(s_{\mathrm{in}},t_{\mathrm{fwd}})
+\qquad\text{and}\qquad
+\mathrm{QClEq}(s_{\mathrm{in}},t_{\mathrm{bwd}})
+\]
+follow from admissible forward and backward transport. Using transitivity again, all listed coded states lie in the same closure class. Closure-compatible readout then identifies their closure-relevant readout content after factorization through the associated class-target map.
+\end{proof}
+
+\begin{proposition}[Prospective kernel-first reduction of the first transport theorem]\label{prop:qam-kernel-first-transport}
+Assume the direct kernel constructor of Definition~\ref{def:qam-direct-kernel-constructor} and the bridge conditions of Theorem~\ref{thm:qam-direct-kernel-constructor}. Write
+\[
+s_{\mathrm{in}}=\langle 0,a_{\mathrm{in}}\rangle,
+\qquad
+s_2=\langle 0,a_2\rangle,
+\qquad
+s_3=\langle 0,a_3\rangle,
+\qquad
+s_4=\langle 0,a_4\rangle,
+\]
+\[
+t_{\mathrm{fwd}}=\langle 0,a_{\mathrm{fwd}}\rangle,
+\qquad
+t_{\mathrm{bwd}}=\langle 0,a_{\mathrm{bwd}}\rangle.
+\]
+Then the conclusion of Theorem~\ref{thm:qam-first-op-transport} may be read kernel-first as follows:
+\begin{enumerate}
+\item all exposed transport kernels lie in one canonical normal-form class,
+\[
+\operatorname{nf}(a_{\mathrm{in}})=\operatorname{nf}(a_2)=\operatorname{nf}(a_3)=\operatorname{nf}(a_4)=\operatorname{nf}(a_{\mathrm{fwd}})=\operatorname{nf}(a_{\mathrm{bwd}}),
+\]
+\item hence every closure-compatible coded readout of the transport chain factors through that single canonical kernel class,
+\item therefore the first transport theorem may be re-read as a kernel-normal-form preservation statement along the admissible transport chain before returning to the visible QAM state surface.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Theorem~\ref{thm:qam-first-op-transport} states that all six visible coded states belong to the same coded closure class. Since each state lies on the present state surface, the direct kernel constructor exposes exactly the exposed payload kernel of each state as its deferred kernel representative. The closure-reflection clause of Theorem~\ref{thm:qam-direct-kernel-constructor} therefore yields equality of the six corresponding kernel normal forms. By the class-level readout factorization clause, every closure-compatible coded readout depends only on that common kernel normal form. Hence the whole transport chain may be treated kernel-first and lifted back to the visible state surface only at the end.
+\end{proof}
+
+\begin{remark}[Axiom audit after the kernel-first transport reduction]\label{rem:qam-kernel-first-transport-audit}
+Proposition~\ref{prop:qam-kernel-first-transport} does \emph{not} strengthen the active proof status of Theorem~\ref{thm:qam-first-op-transport}. The active theorem still rests only on admissible transport, closure-class preservation, transitivity of coded closure, and closure-compatible coded readout. The kernel-first proposition adds force only under the deferred payload-level bridge hypotheses isolated in Definition~\ref{def:qam-kernel-bridge-datum} and Theorem~\ref{thm:qam-direct-kernel-constructor}. Thus no new hidden axiom has entered the live transport theorem; only a prospective kernel-level compression of its proof surface has been recorded.
+\end{remark}
+
+\begin{remark}[How much proof load the kernel-first transport reading removes]\label{rem:qam-kernel-first-transport-savings}
+For the present transport theorem the admissible chain contains five explicit transport links:
+\[
+s_{\mathrm{in}}\to s_2\to s_3\to s_4,
+\qquad
+s_{\mathrm{in}}\to t_{\mathrm{fwd}},
+\qquad
+s_{\mathrm{in}}\to t_{\mathrm{bwd}}.
+\]
+So the gain is again \emph{not} a reduction in the number of transport links, but a reduction in the size of the object carried through each link. On the visible state surface the proof transports closure across five state-surface steps and then factors a closure-compatible readout through the resulting six-state closure class. In the deferred kernel-first reading, those same five links are re-read as five kernel normal-form identifications, followed by one readout through the common kernel class. If one measures a visible-state transport comparison by cost $C_{\mathrm{surf}}$ and a kernel normal-form comparison by cost $C_{\mathrm{ker}}$, then the conceptual load changes from roughly
+\[
+5\,C_{\mathrm{surf}} + C_{\mathrm{read}}
+\]
+to
+\[
+5\,C_{\mathrm{ker}} + C_{\mathrm{class}},
+\]
+with intended gain $C_{\mathrm{ker}}<C_{\mathrm{surf}}$ and typically $C_{\mathrm{class}}\ll C_{\mathrm{read}}$. So the numerical savings are moderate but already real: the theorem still has five links, yet each link is checked on exposed kernels instead of full visible state surfaces, and the final readout is centralized on one canonical kernel class.
+\end{remark}
+
+\begin{remark}
+This theorem is only the first coded QAM shadow of the current OP transport architecture. It does not yet include the full branch-shell routed layer, but it already captures the source/intermediate/return logic in a ZF-grounded coded form.
+\end{remark}
+
+
+
+\subsection*{QAM branch, shell, and routed support layer}
+\begin{quote}\small
+\noindent\textbf{Status.} \emph{Active theorem-core branch-shell extension.}\par
+\noindent\textbf{Block function.} This block lifts the basic QAM transport layer to the branch/shell/routed regime and should be read as the coded counterpart of the admissible OP refinement chain.
+\end{quote}
+
+We now extend the QAM-over-ZF language from basic transport and readout to the branch/shell/routed layer. The point of this section is to translate the current admissible-branch, OP~3 shell-admissibility, and admissible routed-support architecture into a single coded QAM fragment without yet claiming a fully independent QAM foundation. For direct continuity with the compact front extraction, the present subsection should be read in the same order as the release dictionary of Remark~\ref{rem:public-shape-reading-guide}: branch admissibility first, shell admissibility second, admissible branch-shell support third, normalized routed support fourth, and only then the visible-versus-structural screening rule.
+
+\begin{definition}[Closure-admissible branch code]
+A branch code $b$ is called \emph{closure-admissible} if for all coded states $s,t$,
+\[
+\mathrm{QBranchRef}(b,s,t)\Longrightarrow \mathrm{QClEq}(s,t).
+\]
+Equivalently, branch refinement by $b$ preserves the coded closure class.
+\end{definition}
+
+\begin{definition}[Shell-admissible refinement code]
+A shell/refinement code $\sigma$ is called \emph{shell-admissible} if for all coded states $s,t$,
+\[
+\mathrm{QShellRef}(\sigma,s,t)\Longrightarrow \mathrm{QClEq}(s,t).
+\]
+Equivalently, shell-sensitive or residual-sensitive refinement by $\sigma$ preserves the coded closure class.
+\end{definition}
+
+\begin{remark}
+These are the direct coded QAM analogues of closure-admissible branches and OP~3 shell-admissible refinements in the current Companion line.
+\end{remark}
+
+\begin{definition}[Admissible branch set and shell family]
+We define the admissible branch class by
+\[
+\mathcal{B}^{\mathrm{QAM}}_{\mathrm{adm}}
+:=
+\{\,b:\mathrm{QBranch}(b)\ \wedge\ b\text{ is closure-admissible}\,\},
+\]
+and for each branch code $b$, the shell-admissible refinement class by
+\[
+\mathcal{F}^{\mathrm{QAM}}_{\mathrm{sh}}(b)
+:=
+\{\,\sigma:\mathrm{QShell}(\sigma)\ \wedge\ \sigma\text{ is shell-admissible on }b\,\}.
+\]
+\end{definition}
+
+\begin{remark}
+At this stage, the phrase ``shell-admissible on $b$'' may be read minimally as: shell refinement by $\sigma$ acts on branchwise states associated with $b$ without leaving the coded closure class.
+\end{remark}
+
+\begin{definition}[Routed support code]
+A \emph{routed support code} is a set-code
+\[
+u=\langle 8,\Omega,w\rangle,
+\]
+where $\Omega$ is a coded finite or set-sized support family of admissible branch-shell pairs and $w$ is a coded weight assignment on $\Omega$.
+\end{definition}
+
+\begin{definition}[Admissible routed support]
+A routed support code
+\[
+u=\langle 8,\Omega,w\rangle
+\]
+is called \emph{admissible} if every element of $\Omega$ has the form $(b,\sigma)$ with
+\[
+b\in \mathcal{B}^{\mathrm{QAM}}_{\mathrm{adm}}
+\qquad\text{and}\qquad
+\sigma\in \mathcal{F}^{\mathrm{QAM}}_{\mathrm{sh}}(b).
+\]
+\end{definition}
+
+\begin{remark}
+Thus admissible routed support is the coded QAM version of the admissible branch-shell support sector in the current OP architecture.
+\end{remark}
+
+\begin{definition}[Normalized routed support]
+An admissible routed support code
+\[
+u=\langle 8,\Omega,w\rangle
+\]
+is called \emph{normalized} if its coded weight assignment satisfies
+\[
+\sum_{(b,\sigma)\in\Omega} w(b,\sigma)=1
+\]
+in the intended decoded numerical target.
+\end{definition}
+
+\begin{remark}
+The normalization condition is stated semiformally at this stage. In the fully coded version, the sum relation would itself be represented by a suitable arithmetic coding layer over ZF.
+\end{remark}
+
+\begin{definition}[Branch-shell coded return realization]
+Let $b$ be a closure-admissible branch code and let $\sigma$ be a shell-admissible refinement code on $b$. A \emph{branch-shell coded return realization} is a coded state
+\[
+t_{b,\sigma}
+\]
+such that:
+\begin{enumerate}
+\item $t_{b,\sigma}$ is reached from the coded source state through admissible branch refinement by $b$;
+\item the OP~3-level shell refinement by $\sigma$ is shell-admissible;
+\item the resulting return-side coded state is read through a closure-compatible coded readout.
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}[QAM branch admissibility principle]\label{prop:qam-branch-admissibility-principle}
+Let $b$ be a closure-admissible branch code. If
+\[
+\mathrm{QBranchRef}(b,s,t),
+\]
+then
+\[
+\mathrm{QClEq}(s,t).
+\]
+Consequently, every closure-compatible readout identifies the closure-relevant image of $s$ and $t$ after passage through the associated class-factor map.
+\end{proposition}
+
+\begin{proof}
+The first claim is just the definition of closure-admissibility. The readout claim follows from closure-compatibility of coded readouts: closure-equivalent coded states have the same closure-relevant image after factorization.
+\end{proof}
+
+\begin{proposition}[QAM shell admissibility principle]\label{prop:qam-shell-admissibility-principle}
+Let $\sigma$ be a shell-admissible refinement code. If
+\[
+\mathrm{QShellRef}(\sigma,s,t),
+\]
+then
+\[
+\mathrm{QClEq}(s,t).
+\]
+Consequently, shell-sensitive refinement does not alter closure-relevant readout content as long as shell-admissibility is preserved.
+\end{proposition}
+
+\begin{proof}
+This is the direct content of shell-admissibility together with closure-compatible readout factorization.
+\end{proof}
+
+\begin{theorem}[QAM admissible branch-shell theorem]\label{thm:qam-branch-shell}
+Let $s_{\mathrm{in}}$ be a coded source state, let $b$ be a closure-admissible branch code, and let $\sigma$ be a shell-admissible refinement code on $b$. Assume there exists a branch-shell coded return realization
+\[
+t_{b,\sigma}
+\]
+associated with $(b,\sigma)$, and let $r$ be a closure-compatible coded readout. Then
+\[
+\mathrm{QClEq}(s_{\mathrm{in}},t_{b,\sigma}).
+\]
+Hence every closure-compatible readout of $s_{\mathrm{in}}$ and $t_{b,\sigma}$ agrees after passage through its associated closure-factor map.
+\end{theorem}
+
+\begin{proof}
+By closure-admissibility of $b$, branch refinement preserves the coded closure class. By shell-admissibility of $\sigma$, the shell-sensitive refinement preserves the same coded closure class at the OP~3 layer. Hence the final coded return realization $t_{b,\sigma}$ remains closure-equivalent to the coded source state $s_{\mathrm{in}}$. Closure-compatible readout then identifies the closure-relevant content of both states after factorization.
+\end{proof}
+
+
+
+\subsection*{Shell certificates and the first OP~3/QAM closure guide}
+\begin{quote}\small
+\noindent\textbf{Status.} \emph{Active closure-guide layer.}\par
+\noindent\textbf{Block function.} This block isolates the certificate vocabulary that lets readers track exactly when OP~3 shell behavior is still closure-preserving and when a local failure first becomes visible.
+\end{quote}
+The next narrow OP~3-oriented extension of the public-shape QAM line is not a broad new tensor layer, but a certificate layer. The goal is to say explicitly when a branch/shell refinement is still the same closure-bearing object, what counts as the first local failure of that claim, and how the deferred kernel bridge should later read that same situation in one compressed normal form. Mixed tensors remain deferred here: they are not introduced unless an actual OP~3 proof step later forces them.
+
+\begin{center}
+\fbox{\begin{minipage}{0.93\textwidth}
+\small
+\textbf{QAM reading key for the OP~3 closure block.}\\[0.2em]
+\textbf{Objects:} coded source state $s_{\mathrm{in}}$, closure-admissible branch code $b$, shell refinement code $\sigma$, intermediate branch state $s_b$, branch-shell return state $t_{b,\sigma}$.\\
+\textbf{Allowed move:} pass from $s_{\mathrm{in}}$ to $s_b$ by admissible branch refinement and from $s_b$ to $t_{b,\sigma}$ by shell refinement without leaving the closure class.\\
+\textbf{Invariant:} the closure-bearing class, and later its kernel/normal-form representative when the deferred bridge is activated.\\
+\textbf{Defect signal:} a broken branch clause, a broken shell clause, or a failure of closure-compatible readout factorization.\\
+\textbf{Plain-language reading:} OP~3 may change the visible shell, but it must not change the closure-bearing core.
+\end{minipage}}
+\end{center}
+
+\begin{definition}[Shell admissibility certificate]\label{def:qam-shell-certificate}
+Let $s_{\mathrm{in}}$ be a coded source state, let $b$ be a closure-admissible branch code, let $\sigma$ be a shell refinement code, and let $t_{b,\sigma}$ be a branch-shell coded return realization. A \emph{shell admissibility certificate} for $(s_{\mathrm{in}},b,\sigma,t_{b,\sigma})$ consists of coded data witnessing the following four clauses:
+\begin{enumerate}[leftmargin=2em]
+  \item there exists a coded branch state $s_b$ with $\mathrm{QBranchRef}(b,s_{\mathrm{in}},s_b)$;
+  \item the branch code $b$ is closure-admissible;
+  \item one has $\mathrm{QShellRef}(\sigma,s_b,t_{b,\sigma})$ and the refinement code $\sigma$ is shell-admissible on $b$;
+  \item the return state $t_{b,\sigma}$ is read through a closure-compatible coded readout.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Shell defect witness]\label{def:qam-shell-defect-witness}
+A \emph{shell defect witness} for $(s_{\mathrm{in}},b,\sigma,t_{b,\sigma})$ is coded data showing failure of at least one clause of Definition~\ref{def:qam-shell-certificate}. Thus a shell defect witness may record failure of admissible branch passage, failure of shell admissibility, or failure of closure-compatible readout factorization.
+\end{definition}
+
+\begin{lemma}[Certificate persistence of closure class]\label{lem:qam-shell-certificate-closure}
+Assume that $(s_{\mathrm{in}},b,\sigma,t_{b,\sigma})$ carries a shell admissibility certificate. Then
+\[
+\mathrm{QClEq}(s_{\mathrm{in}},t_{b,\sigma}).
+\]
+Hence every closure-compatible coded readout identifies the same closure-relevant image on $s_{\mathrm{in}}$ and $t_{b,\sigma}$ after passage through the associated class-factor map.
+\end{lemma}
+
+\begin{proof}
+By clause (1) of Definition~\ref{def:qam-shell-certificate}, there exists $s_b$ with
+\[
+\mathrm{QBranchRef}(b,s_{\mathrm{in}},s_b).
+\]
+By clause (2), the branch code $b$ is closure-admissible, so Proposition~\ref{prop:qam-branch-admissibility-principle} yields
+\[
+\mathrm{QClEq}(s_{\mathrm{in}},s_b).
+\]
+By clause (3), one has
+\[
+\mathrm{QShellRef}(\sigma,s_b,t_{b,\sigma}),
+\]
+and the refinement code $\sigma$ is shell-admissible on $b$. Proposition~\ref{prop:qam-shell-admissibility-principle} therefore gives
+\[
+\mathrm{QClEq}(s_b,t_{b,\sigma}).
+\]
+Transitivity of the coded closure relation yields
+\[
+\mathrm{QClEq}(s_{\mathrm{in}},t_{b,\sigma}).
+\]
+The final sentence is then the usual closure-compatible readout factorization claim.
+\end{proof}
+
+\begin{proposition}[Certified kernel persistence for OP~3 shell passage]\label{prop:qam-shell-certificate-kernel}
+Assume the direct kernel constructor of Definition~\ref{def:qam-direct-kernel-constructor} and the bridge conditions of Theorem~\ref{thm:qam-direct-kernel-constructor}. Let
+\[
+s_{\mathrm{in}}=\langle 0,a_{\mathrm{in}}\rangle
+\]
+be the coded source state, and let
+\[
+t_{b,\sigma}=\langle 0,a_{b,\sigma}\rangle
+\]
+be a branch-shell coded return realization. If $(s_{\mathrm{in}},b,\sigma,t_{b,\sigma})$ carries a shell admissibility certificate, then
+\[
+\operatorname{nf}(a_{b,\sigma})=\operatorname{nf}(a_{\mathrm{in}}).
+\]
+In particular, certified OP~3 shell passage preserves the kernel normal form of the coded source state.
+\end{proposition}
+
+\begin{proof}
+By Lemma~\ref{lem:qam-shell-certificate-closure}, one has
+\[
+\mathrm{QClEq}(s_{\mathrm{in}},t_{b,\sigma}).
+\]
+The deferred kernel bridge then reflects closure equivalence into equality of canonical kernel normal forms. Since
+\[
+s_{\mathrm{in}}=\langle 0,a_{\mathrm{in}}\rangle,
+\qquad
+ t_{b,\sigma}=\langle 0,a_{b,\sigma}\rangle,
+\]
+this yields
+\[
+\operatorname{nf}(a_{b,\sigma})=\operatorname{nf}(a_{\mathrm{in}}).
+\]
+\end{proof}
+
+\begin{theorem}[Shell-stable readout factorization]\label{thm:qam-shell-stable-readout}
+Assume the direct kernel constructor of Definition~\ref{def:qam-direct-kernel-constructor} and the bridge conditions of Theorem~\ref{thm:qam-direct-kernel-constructor}. Let
+\[
+s_{\mathrm{in}}=\langle 0,a_{\mathrm{in}}\rangle,
+\qquad
+ t_{b,\sigma}=\langle 0,a_{b,\sigma}\rangle,
+\]
+let $r$ be a closure-compatible coded readout, and assume that $(s_{\mathrm{in}},b,\sigma,t_{b,\sigma})$ carries a shell admissibility certificate. Then for every pair of coded observable values $w_{\mathrm{in}},w_{b,\sigma}$ with
+\[
+\mathrm{QRead}(r,s_{\mathrm{in}},w_{\mathrm{in}}),
+\qquad
+\mathrm{QRead}(r,t_{b,\sigma},w_{b,\sigma}),
+\]
+one has
+\[
+J_r(w_{\mathrm{in}})
+=
+\widetilde{\mathcal R}_r(\operatorname{nf}(a_{\mathrm{in}}))
+=
+\widetilde{\mathcal R}_r(\operatorname{nf}(a_{b,\sigma}))
+=
+J_r(w_{b,\sigma}).
+\]
+In particular, every closure-relevant coded readout of a certified OP~3 shell passage factors through one shell-stable kernel normal form.
+\end{theorem}
+
+\begin{proof}
+By Proposition~\ref{prop:qam-shell-certificate-kernel}, a shell admissibility certificate implies
+\[
+\operatorname{nf}(a_{b,\sigma})=\operatorname{nf}(a_{\mathrm{in}}).
+\]
+By clause~(4) of Theorem~\ref{thm:qam-direct-kernel-constructor}, every closure-compatible coded readout $r$ admits a factor map
+\[
+\widetilde{\mathcal R}_r:\operatorname{nf}(\mathcal A)\to \operatorname{Im}(J_r)
+\]
+such that whenever $\mathrm{QRead}(r,\langle 0,a\rangle,w)$,
+\[
+J_r(w)=\widetilde{\mathcal R}_r(\operatorname{nf}(a)).
+\]
+Applying this first to $s_{\mathrm{in}}=\langle 0,a_{\mathrm{in}}\rangle$ and then to $t_{b,\sigma}=\langle 0,a_{b,\sigma}\rangle$ yields
+\[
+J_r(w_{\mathrm{in}})=\widetilde{\mathcal R}_r(\operatorname{nf}(a_{\mathrm{in}})),
+\qquad
+J_r(w_{b,\sigma})=\widetilde{\mathcal R}_r(\operatorname{nf}(a_{b,\sigma})).
+\]
+Since the two kernel normal forms agree, the displayed chain follows. The final sentence is exactly the shell-stable readout factorization claim.
+\end{proof}
+
+\begin{proposition}[First converse shell-certificate criterion]\label{prop:qam-shell-converse-criterion}
+Assume the direct kernel constructor of Definition~\ref{def:qam-direct-kernel-constructor} and the bridge conditions of Theorem~\ref{thm:qam-direct-kernel-constructor}. Let
+\[
+s_{\mathrm{in}}=\langle 0,a_{\mathrm{in}}\rangle,
+\qquad
+ t_{b,\sigma}=\langle 0,a_{b,\sigma}\rangle,
+\]
+and suppose that the following data are given:
+\begin{enumerate}[leftmargin=2em]
+  \item there exists a coded branch state $s_b$ with $\mathrm{QBranchRef}(b,s_{\mathrm{in}},s_b)$;
+  \item the branch code $b$ is closure-admissible;
+  \item one has $\mathrm{QShellRef}(\sigma,s_b,t_{b,\sigma})$ and the refinement code $\sigma$ is shell-admissible on $b$;
+  \item there exists a closure-compatible coded readout on the return state $t_{b,\sigma}$;
+  \item the kernel normal forms agree, $\operatorname{nf}(a_{b,\sigma})=\operatorname{nf}(a_{\mathrm{in}})$.
+\end{enumerate}
+Then $(s_{\mathrm{in}},b,\sigma,t_{b,\sigma})$ carries a shell admissibility certificate. Hence every closure-relevant coded readout of the passage factors through the same shell-stable kernel normal form.
+\end{proposition}
+
+\begin{proof}
+The first four assumptions are exactly the four clauses required in Definition~\ref{def:qam-shell-certificate}, so they furnish a shell admissibility certificate for $(s_{\mathrm{in}},b,\sigma,t_{b,\sigma})$. The final sentence then follows from Theorem~\ref{thm:qam-shell-stable-readout}, using the additional kernel-persistence hypothesis only as the converse bridge datum that motivates the criterion.
+\end{proof}
+
+\begin{lemma}[First OP~3/QAM shell commuting-square lemma]\label{lem:qam-op3-shell-commuting-square}
+Assume the faithful translation theorem for the admissible OP fragment, Theorem~\ref{thm:qam-translation}, together with the OP~3 shell theorem, Theorem~\ref{thm:op3-shell}. Let
+\[
+\mathfrak T_{\mathrm{OP3}}
+\]
+denote the admissible OP~3 shell-refinement passage on the OP side, and let
+\[
+\Sigma_{b,\sigma}
+\]
+denote the corresponding coded branch-shell refinement on the QAM side. Then the source-to-refinement square commutes on closure-relevant content in the following sense: whenever an admissible OP~3 shell passage is translated into coded QAM data,
+\[
+\tau\bigl(\mathfrak T_{\mathrm{OP3}}(x)\bigr)
+\sim_{\mathrm{cl}}
+\Sigma_{b,\sigma}\bigl(\tau(x)\bigr),
+\]
+where $\sim_{\mathrm{cl}}$ means equality after passage to the common closure-bearing class and, under the deferred kernel bridge, equality of the induced kernel normal form. In particular, OP~3 refinement and QAM shell refinement are not two competing shell operations; they are two readings of the same closure-preserving shell step.
+\end{lemma}
+
+\begin{proof}
+By Theorem~\ref{thm:qam-translation}, the admissible OP fragment transports into coded QAM data without changing the source/return closure logic. By Theorem~\ref{thm:op3-shell}, the OP~3 shell passage is admissible exactly at the stage where the OP side isolates shell refinement without changing the closure-bearing content. The translated branch stage therefore produces a coded branch state $s_b$, and the translated shell stage produces a coded return state $t_{b,\sigma}$ with the same closure-relevant content as the OP-side refined state. Lemma~\ref{lem:qam-shell-certificate-closure} then identifies the translated source state and the coded branch-shell return state inside one coded closure class, while Proposition~\ref{prop:qam-shell-certificate-kernel} upgrades this to equality of kernel normal forms once the deferred bridge is activated. That is exactly the asserted commuting-square statement.
+\end{proof}
+
+\begin{theorem}[First OP~3/QAM shell correspondence theorem]\label{thm:qam-op3-shell-correspondence}
+Assume the faithful translation theorem for the admissible OP fragment, Theorem~\ref{thm:qam-translation}, together with the OP~3 shell theorem, Theorem~\ref{thm:op3-shell}. Then every translated OP~3-admissible shell passage determines a shell admissibility certificate in QAM, and every such certificate recovers the same closure-relevant shell content as the corresponding OP~3 step. Together with Proposition~\ref{prop:qam-shell-converse-criterion} and Lemma~\ref{lem:qam-op3-shell-commuting-square}, the QAM shell-certificate layer may already be read as a first narrow converse guide for OP~3: admissible branch-shell behavior, a closure-compatible return readout, and kernel persistence are sufficient to recover the certificate package. Consequently, the QAM shell-certificate layer may be read as the first explicit coded closure guide for OP~3.
+\end{theorem}
+
+\begin{proof}
+Theorem~\ref{thm:qam-translation} translates the admissible OP fragment into the coded QAM layer while preserving its source/return closure logic. Theorem~\ref{thm:op3-shell} isolates the OP~3 shell-admissible passage itself. Under that translation, the OP-side branch step provides clause (1) of Definition~\ref{def:qam-shell-certificate}, branch admissibility gives clause (2), OP~3 shell admissibility gives clause (3), and the translated closure-compatible readout gives clause (4). Hence each translated OP~3-admissible shell passage determines a shell certificate. Conversely, Lemma~\ref{lem:qam-shell-certificate-closure} and Theorem~\ref{thm:qam-shell-stable-readout} show that any such certificate preserves exactly the closure-relevant content that the OP~3 theorem already isolates on the OP side. Lemma~\ref{lem:qam-op3-shell-commuting-square} records the same fact in commuting-square form. Thus the certificate layer is not a second closure notion; it is the coded OP~3 closure guide.
+\end{proof}
+
+\begin{theorem}[First narrow shell-certificate iff package]\label{thm:qam-shell-iff-package}
+Assume the direct kernel constructor of Definition~\ref{def:qam-direct-kernel-constructor} and the bridge conditions of Theorem~\ref{thm:qam-direct-kernel-constructor}. Let
+\[
+s_{\mathrm{in}}=\langle 0,a_{\mathrm{in}}\rangle,
+\qquad
+ t_{b,\sigma}=\langle 0,a_{b,\sigma}\rangle,
+\]
+and let $r$ be any closure-compatible coded readout on the return state. Then the following are equivalent:
+\begin{enumerate}[leftmargin=2em,label=(\roman*)]
+  \item $(s_{\mathrm{in}},b,\sigma,t_{b,\sigma})$ carries a shell admissibility certificate;
+  \item there exists a coded branch state $s_b$ such that
+  \begin{enumerate}[leftmargin=2em,label=(\alph*)]
+    \item $\mathrm{QBranchRef}(b,s_{\mathrm{in}},s_b)$,
+    \item the branch code $b$ is closure-admissible,
+    \item $\mathrm{QShellRef}(\sigma,s_b,t_{b,\sigma})$ and the refinement code $\sigma$ is shell-admissible on $b$,
+    \item the return state $t_{b,\sigma}$ admits a closure-compatible coded readout,
+    \item $\operatorname{nf}(a_{b,\sigma})=\operatorname{nf}(a_{\mathrm{in}})$,
+    \item every closure-relevant coded readout of the passage factors through one shell-stable kernel normal form.
+  \end{enumerate}
+\end{enumerate}
+In particular, the present OP~3/QAM shell block already supports one narrow iff reading: a shell certificate is equivalent to the shell-stable kernel/readout package obtained from admissible branch-shell behavior together with kernel persistence.
+\end{theorem}
+
+\begin{proof}
+Assume \emph{(i)}. Then clauses (a)--(d) of \emph{(ii)} are exactly the four certificate clauses from Definition~\ref{def:qam-shell-certificate}. Clause~(e) is Proposition~\ref{prop:qam-shell-certificate-kernel}, and clause~(f) is Theorem~\ref{thm:qam-shell-stable-readout}. Hence \emph{(ii)} follows.
+
+Assume conversely \emph{(ii)}. Then clauses (a)--(d) are precisely the data required by Definition~\ref{def:qam-shell-certificate}, so $(s_{\mathrm{in}},b,\sigma,t_{b,\sigma})$ carries a shell admissibility certificate. This is exactly Proposition~\ref{prop:qam-shell-converse-criterion}. Thus \emph{(i)} follows, and the final sentence is only a repackaging of the same forward and converse implications.
+\end{proof}
+
+\begin{lemma}[First shell-obstruction lemma]\label{lem:qam-shell-obstruction}
+Assume the direct kernel constructor of Definition~\ref{def:qam-direct-kernel-constructor} and the bridge conditions of Theorem~\ref{thm:qam-direct-kernel-constructor}. Let
+\[
+s_{\mathrm{in}}=\langle 0,a_{\mathrm{in}}\rangle,
+\qquad
+ t_{b,\sigma}=\langle 0,a_{b,\sigma}\rangle,
+\]
+and let $r$ be any closure-compatible coded readout on the return state whenever such a readout exists. Suppose that at least one clause of the shell-stable kernel/readout package from Theorem~\ref{thm:qam-shell-iff-package} fails. Then no shell admissibility certificate exists for $(s_{\mathrm{in}},b,\sigma,t_{b,\sigma})$. Equivalently, the first local OP~3 obstruction in the present QAM reading is the first failure of one of the following items:
+\begin{enumerate}[leftmargin=2em,label=(\roman*)]
+  \item admissible branch passage,
+  \item shell-admissible branch refinement,
+  \item closure-compatible return readout,
+  \item kernel persistence,
+  \item shell-stable factorization of closure-relevant readout through one common kernel normal form.
+\end{enumerate}
+In particular, a visible shell mismatch that leaves all five items intact is not yet an OP~3 obstruction in the present QAM sense.
+\end{lemma}
+
+\begin{proof}
+By Theorem~\ref{thm:qam-shell-iff-package}, a shell admissibility certificate is equivalent to the shell-stable kernel/readout package. Therefore the failure of any one clause of that package prevents the certificate from existing. The displayed list simply unwraps the package into its five operative clauses. The final sentence is the contrapositive reading of the same equivalence: visible shell variation alone is not an obstruction as long as admissible branch-shell transport, closure-compatible readout, kernel persistence, and common readout factorization still hold.
+\end{proof}
+
+\begin{lemma}[First shell-obstruction stratification lemma]\label{lem:qam-shell-obstruction-stratification}
+Assume the setup of Lemma~\ref{lem:qam-shell-obstruction}. If no shell admissibility certificate exists for $(s_{\mathrm{in}},b,\sigma,t_{b,\sigma})$, then at least one of the following three strata fails:
+\begin{enumerate}[leftmargin=2em,label=(\arabic*)]
+  \item \textbf{Branch stratum:} admissible branch passage fails.
+  \item \textbf{Shell stratum:} admissible branch passage holds, but shell-admissible refinement fails.
+  \item \textbf{Readout/kernel stratum:} admissible branch passage and shell-admissible refinement both hold, but closure-compatible return readout, kernel persistence, or common shell-stable readout factorization fails.
+\end{enumerate}
+Equivalently, every first local OP~3 obstruction in the present QAM reading is either a branch obstruction, a shell obstruction in the narrow sense, or a readout/kernel obstruction. In particular, whenever the branch and shell strata both remain intact, the first local obstruction is already forced into the readout/kernel layer.
+\end{lemma}
+
+\begin{proof}
+Lemma~\ref{lem:qam-shell-obstruction} says that the first local obstruction is exactly the failure of one of five operative clauses. Group those clauses into the three strata above: clause~(i) is the branch stratum, clause~(ii) is the shell stratum, and clauses~(iii)--(v) together form the readout/kernel stratum. This yields the stated trichotomy. The final sentence is only the contrapositive reading of the same grouping.
+\end{proof}
+
+\begin{lemma}[Readout/kernel obstruction compression lemma]\label{lem:qam-readout-kernel-obstruction-compression}
+Assume the setup of Lemma~\ref{lem:qam-shell-obstruction-stratification}, and assume moreover that the branch and shell strata both remain intact. Then the following are equivalent:
+\begin{enumerate}[leftmargin=2em,label=(\roman*)]
+  \item the first local OP~3 obstruction lies in the readout/kernel stratum;
+  \item at least one of the following failures occurs:
+  \begin{enumerate}[leftmargin=2em,label=(\alph*)]
+    \item closure-compatible return readout fails,
+    \item kernel persistence fails,
+    \item common shell-stable readout factorization through one kernel normal form fails;
+  \end{enumerate}
+  \item there is no single shell-stable kernel/readout carrier through which all closure-relevant readout of the certified branch-shell passage can factor.
+\end{enumerate}
+Equivalently, once the branch and shell strata are fixed, the whole remaining OP~3 obstruction is compressed to the failure of one common readout/kernel carrier class.
+\end{lemma}
+
+\begin{proof}
+Under the standing assumption that the branch and shell strata remain intact, Lemma~\ref{lem:qam-shell-obstruction-stratification} says that any remaining first local obstruction must lie in the readout/kernel stratum. By definition of that stratum, this is exactly the disjunction of failures in clauses~(a)--(c). This proves the equivalence of \emph{(i)} and \emph{(ii)}.
+
+If a single shell-stable kernel/readout carrier exists, then closure-compatible return readout is available, kernel persistence identifies the same kernel normal form on source and return side, and Theorem~\ref{thm:qam-shell-stable-readout} gives the common factorization through that carrier. Hence \emph{(ii)} cannot occur. Conversely, if any one of clauses~(a)--(c) fails, then no single shell-stable kernel/readout carrier can support the whole closure-relevant readout package. This proves the equivalence of \emph{(ii)} and \emph{(iii)}. The final sentence is only a compressed restatement of the same equivalence.
+\end{proof}
+
+\begin{theorem}[First OP~3 shell-closure theorem in QAM form]\label{thm:qam-op3-shell-closure}
+Assume the faithful translation theorem for the admissible OP fragment, Theorem~\ref{thm:qam-translation}, together with the OP~3 shell theorem, Theorem~\ref{thm:op3-shell}. Let a translated OP~3-admissible shell passage determine coded data
+\[
+(s_{\mathrm{in}},b,\sigma,t_{b,\sigma},r).
+\]
+Then the following are equivalent:
+\begin{enumerate}[leftmargin=2em,label=(\roman*)]
+  \item the translated passage is \emph{QAM-shell-closed in the present narrow sense}, meaning that it carries a shell admissibility certificate and recovers the same closure-relevant shell content as the corresponding OP~3 step;
+  \item $(s_{\mathrm{in}},b,\sigma,t_{b,\sigma})$ carries a shell admissibility certificate;
+  \item the shell-stable kernel/readout package of Theorem~\ref{thm:qam-shell-iff-package} holds.
+\end{enumerate}
+Moreover, under these equivalent conditions the passage admits a common shell-stable kernel/readout carrier through which all closure-relevant coded readout factors. If the equivalent conditions fail, then the first local OP~3 obstruction occurs at exactly one of the branch, shell, or readout/kernel strata from Lemma~\ref{lem:qam-shell-obstruction-stratification}; and in the third stratum the whole remaining obstruction is precisely failure of one common shell-stable carrier in the sense of Lemma~\ref{lem:qam-readout-kernel-obstruction-compression}.
+\end{theorem}
+
+\begin{proof}
+By Theorem~\ref{thm:qam-op3-shell-correspondence}, every translated OP~3-admissible shell passage determines a shell admissibility certificate and recovers the same closure-relevant shell content as the corresponding OP~3 step. Thus \emph{(i)} and \emph{(ii)} are equivalent in the present narrow reading.
+
+The equivalence of \emph{(ii)} and \emph{(iii)} is exactly Theorem~\ref{thm:qam-shell-iff-package}. Under these equivalent conditions, Theorem~\ref{thm:qam-shell-stable-readout} gives factorization of every closure-relevant coded readout through the same shell-stable kernel normal form, hence through one common shell-stable kernel/readout carrier.
+
+If the equivalent conditions fail, then by Lemma~\ref{lem:qam-shell-obstruction} the first local OP~3 obstruction is the first failure of the shell-stable kernel/readout package. Lemma~\ref{lem:qam-shell-obstruction-stratification} refines that failure into the branch, shell, and readout/kernel strata. Finally, Lemma~\ref{lem:qam-readout-kernel-obstruction-compression} compresses the whole third stratum to failure of one common shell-stable carrier. This proves the final sentence.
+\end{proof}
+
+\begin{corollary}[Shell defect localization is the first local OP~3 failure]\label{cor:qam-shell-defect-localization}
+Within the present OP~3/QAM reading, visible packet mismatch, phase-lock deviation, or shell-sensitive surface variation is not yet by itself a shell defect. A genuine local OP~3 defect begins only when a shell defect witness in the sense of Definition~\ref{def:qam-shell-defect-witness} exists. Equivalently, by Theorem~\ref{thm:qam-op3-shell-closure}, the first local OP~3 failure is the first failure of the shell-stable kernel/readout package, stratified into branch, shell, and readout/kernel level and compressed in the third stratum to failure of one common shell-stable carrier. In particular, the first local failure is failure of a shell certificate clause, not failure of the entire OP~1--OP~5 closure chain.
+\end{corollary}
+
+\begin{remark}[How this block should be used in the next OP~3 proof pass]
+The present certificate block is intentionally narrow. It does not yet force a full equivalence between the OP and QAM formalisms, and it does not yet activate mixed tensors. Its current role is to give the next proof pass a fixed reading order: establish a shell certificate, pass to kernel persistence where the deferred bridge is available, use Theorem~\ref{thm:qam-shell-stable-readout} to factor readout through the shell-stable class, use Proposition~\ref{prop:qam-shell-converse-criterion} for the first narrow return direction, use Lemma~\ref{lem:qam-op3-shell-commuting-square} to read OP~3 refinement and QAM shell refinement as one commuting closure step, use Theorem~\ref{thm:qam-shell-iff-package} as the first closed iff package, use Lemma~\ref{lem:qam-shell-obstruction} to identify the first genuinely local obstruction, use Lemma~\ref{lem:qam-shell-obstruction-stratification} to decide whether that first obstruction sits at the branch, shell, or readout/kernel layer, use Lemma~\ref{lem:qam-readout-kernel-obstruction-compression} to compress the third stratum to failure of one common shell-stable carrier, and then use Theorem~\ref{thm:qam-op3-shell-closure} as the first bundled OP~3 shell-closure statement in public-shape QAM form before asking whether any further tensor layer is genuinely needed.
+\end{remark}
+
+
+\subsection*{Current extracted OP~3/QAM tool layer}
+\begin{remark}[Purpose of the extracted OP~3/QAM tools]\label{rem:qam-op3-tool-purpose}
+The certificate and obstruction chain above is no longer meant to be reread from first principles in every later proof pass. Its immediate use is as a compact tool layer: once a later argument can cite one of the extracted tools below, it may treat the corresponding shell passage as already compressed to the right closure-bearing datum and continue at the next structural interface.
+\end{remark}
+
+\begin{description}[leftmargin=2.2em,style=nextline]
+  \item[Shell-certificate tool.]\label{tool:qam-shell-certificate}
+  If one can exhibit an admissible branch passage, an admissible shell refinement, and a closure-compatible return readout, then the passage may be treated as a certified OP~3 shell step in the present narrow QAM sense. This is the entry tool for the whole block.
+
+  \item[Kernel-persistence tool.]\label{tool:qam-kernel-persistence}
+  Once a shell certificate is in place and the deferred kernel bridge is available, the visible shell variation may be replaced by equality of one kernel normal form. From that point onward the proof may work kernel-first instead of shell-first.
+
+  \item[Shell-stable readout tool.]\label{tool:qam-shell-stable-readout}
+  Once the shell certificate and kernel bridge are active, every closure-relevant readout may be pushed through one common shell-stable carrier. Later readout comparisons therefore no longer need to unfold the whole branch/shell passage.
+
+  \item[Converse reconstruction tool.]\label{tool:qam-shell-converse}
+  If admissible branch passage, admissible shell refinement, closure-compatible return readout, and kernel persistence are already known from another source, then the shell certificate may be reconstructed rather than reproved from scratch.
+
+  \item[Commuting-square tool.]\label{tool:qam-shell-commuting-square}
+  OP~3 shell refinement on the OP side and branch/shell refinement on the QAM side may be read as one closure-preserving square. This tool licenses switching between OP and QAM viewpoints without reopening the shell argument.
+
+  \item[Obstruction-stratification tool.]\label{tool:qam-shell-obstruction-stratification}
+  If the shell-certificate package fails, the first local obstruction should be classified immediately as branch, shell, or readout/kernel level. This prevents visible shell mismatch from being over-read as a full OP~3 failure.
+
+  \item[Carrier-compression tool.]\label{tool:qam-shell-carrier-compression}
+  Once branch and shell remain intact, every remaining local obstruction may be compressed to failure of one common shell-stable carrier. This is the shortest diagnostic form of the third obstruction stratum.
+
+  \item[Bundled OP~3 closure tool.]\label{tool:qam-op3-shell-closure}
+  Theorem~\ref{thm:qam-op3-shell-closure} may now be cited as the compact public-shape closure package for OP~3 in QAM form: certificate, kernel/readout package, stratified obstruction, and common carrier are read as one bundled result.
+\end{description}
+
+\begin{remark}[How to cite the extracted OP~3/QAM tools]\label{rem:qam-op3-tool-usage}
+A later argument should normally cite the smallest extracted tool that already matches its interface. Use the shell-certificate tool when the issue is admissible passage, the kernel-persistence or shell-stable readout tool when the issue is invariance under visible shell variation, the converse reconstruction tool when the shell certificate is to be recovered from already known transport/readout data, the commuting-square tool when the proof needs to switch languages, the obstruction-stratification or carrier-compression tool when the issue is failure localization, and the bundled OP~3 closure tool when the whole narrow closure package is intended at once.
+\end{remark}
+
+
+\subsection*{First OP~3 proof run through the extracted QAM tool layer}
+
+\begin{remark}[Reading key for the first OP~3 proof run]\label{rem:qam-op3-proof-run-reading-key}
+In the present narrow public-shape QAM reading, the first proof run should be read as a deliberately compressed structural pass rather than as a maximal theorem expansion. The input is a translated OP~3 shell passage. The allowed move is passage from visible shell data to the extracted tool layer. The invariant is the common closure-bearing kernel/readout carrier whenever the certificate package is active. The defect signal is the first obstruction stratum from Lemma~\ref{lem:qam-shell-obstruction-stratification}. In plain language: the proof run should decide as early as possible whether the shell step is already certified, and if not, where the first local failure sits.
+\end{remark}
+
+\begin{theorem}[First OP~3 proof run through extracted QAM form]\label{thm:qam-op3-proof-run}
+Assume the faithful translation theorem for the admissible OP fragment, Theorem~\ref{thm:qam-translation}, the OP~3 shell theorem, Theorem~\ref{thm:op3-shell}, the direct kernel constructor of Definition~\ref{def:qam-direct-kernel-constructor}, and the bridge conditions of Theorem~\ref{thm:qam-direct-kernel-constructor}. Let
+\[
+\tau(x)=s_{\mathrm{in}}=\langle 0,a_{\mathrm{in}}\rangle
+\]
+be the coded QAM source state obtained from an admissible OP~3 source configuration $x$, and let the translated branch/shell passage be encoded by a branch code $b$, a refinement code $\sigma$, a coded branch state $s_b$, and a coded return state
+\[
+t_{b,\sigma}=\langle 0,a_{b,\sigma}\rangle.
+\]
+Then the first OP~3 proof run through extracted QAM form has exactly two outcomes:
+\begin{enumerate}[leftmargin=2em,label=(\roman*)]
+  \item either the translated passage activates the bundled OP~3 closure tool, so that the OP~3 shell step is certified in QAM form, all closure-relevant coded readout factors through one common shell-stable carrier, and the passage may be continued kernel-first;
+  \item or the bundled closure package fails, in which case the first local obstruction is immediately localized by the obstruction-stratification tool at exactly one of the branch, shell, or readout/kernel strata, with the whole third stratum compressed to failure of one common shell-stable carrier.
+\end{enumerate}
+In particular, the extracted tool layer already supports a genuine proof run: it converts translated OP~3 shell data into either a compressed closure package or a minimal obstruction diagnosis, without reopening the whole OP/QAM comparison at each step.
+\end{theorem}
+
+\begin{proof}
+Translate the admissible OP fragment by Theorem~\ref{thm:qam-translation}. By the OP~3 shell theorem, Theorem~\ref{thm:op3-shell}, the translated branch and shell passage is exactly the stage at which the OP side isolates admissible shell refinement. Use the \hyperref[tool:qam-shell-commuting-square]{commuting-square tool} to identify the translated OP~3 shell step with the coded branch/shell refinement step on the QAM side.
+
+Now ask whether the \hyperref[tool:qam-shell-certificate]{shell-certificate tool} is activated. If it is, then by the \hyperref[tool:qam-kernel-persistence]{kernel-persistence tool} the visible shell passage may be replaced by equality of one kernel normal form, and by the \hyperref[tool:qam-shell-stable-readout]{shell-stable readout tool} every closure-relevant coded readout factors through one common shell-stable carrier. The bundled \hyperref[tool:qam-op3-shell-closure]{OP~3 closure tool} then yields outcome \emph{(i)}.
+
+If the shell-certificate package is not activated, apply the \hyperref[tool:qam-shell-obstruction-stratification]{obstruction-stratification tool}. This localizes the first failure immediately at exactly one of the branch, shell, or readout/kernel levels. If the failure lies in the third stratum, the \hyperref[tool:qam-shell-carrier-compression]{carrier-compression tool} compresses the remaining failure to absence of one common shell-stable carrier. This is outcome \emph{(ii)}.
+
+The two outcomes are exhaustive because Theorem~\ref{thm:qam-op3-shell-closure} already packages the positive direction as the bundled shell-closure theorem, while Lemma~\ref{lem:qam-shell-obstruction-stratification} together with Lemma~\ref{lem:qam-readout-kernel-obstruction-compression} packages the negative direction. Hence the extracted tool layer already yields a genuine first OP~3 proof run in QAM form.
+\end{proof}
+
+\begin{corollary}[First operational use of the extracted OP~3/QAM tools]\label{cor:qam-op3-proof-run-use}
+A later OP~3 argument no longer needs to reopen the whole branch/shell analysis from scratch whenever a translated shell passage appears. It is enough to test whether the shell-certificate tool is active. If yes, cite the bundled OP~3 closure tool and continue kernel-first; if not, cite the obstruction-stratification tool and, in the third stratum, the carrier-compression tool. Thus the proof interface has already been shortened to a certified-pass / localized-obstruction dichotomy.
+\end{corollary}
+
+\begin{proof}
+This is only a restatement of Theorem~\ref{thm:qam-op3-proof-run} in proof-interface language.
+\end{proof}
+
+
+\begin{remark}[Status separation for the present OP~3/QAM closure package]\label{rem:qam-op3-status-separation}
+The present block should now be read in two layers with different evidential status. The \emph{active public-shape result} is the certificate-level OP~3/QAM closure package: Definitions~\ref{def:qam-shell-certificate} and~\ref{def:qam-shell-defect-witness}, Lemma~\ref{lem:qam-shell-certificate-closure}, Theorem~\ref{thm:qam-shell-iff-package}, Theorem~\ref{thm:qam-op3-shell-closure}, and Corollary~\ref{cor:qam-op3-proof-run-use}. These statements already yield a closed certified-pass / localized-obstruction interface for translated OP~3 shell passages without leaving the active tuple surface. By contrast, the stronger kernel-first language --- in particular Proposition~\ref{prop:qam-shell-certificate-kernel}, Theorem~\ref{thm:qam-shell-stable-readout}, and the carrier-compression reading of the third obstruction stratum --- is a \emph{conditional strengthening}: it becomes authoritative only under the deferred bridge hypotheses of Definition~\ref{def:qam-kernel-bridge-datum} and Theorem~\ref{thm:qam-direct-kernel-constructor}. Accordingly, later use should distinguish carefully between active certificate-level closure and conditional kernel/readout compression.
+\end{remark}
+
+\begin{proposition}[Citation and use rule for the completed OP~3/QAM block]\label{prop:qam-op3-citation-use-rule}
+Let a later argument involve a translated OP~3 shell passage. Then the following citation discipline is valid.
+\begin{enumerate}[leftmargin=2em,label=(\roman*)]
+  \item If the argument needs only a certified-pass / localized-obstruction decision at the active tuple level, it may cite Theorem~\ref{thm:qam-op3-shell-closure}, Theorem~\ref{thm:qam-op3-proof-run}, and Corollary~\ref{cor:qam-op3-proof-run-use} without invoking any kernel-first hypothesis.
+  \item If the argument further needs invariance under visible shell variation in kernel normal-form language or one-carrier readout factorization, then it may additionally cite Proposition~\ref{prop:qam-shell-certificate-kernel}, Theorem~\ref{thm:qam-shell-stable-readout}, and Lemma~\ref{lem:qam-readout-kernel-obstruction-compression}, but only after the deferred bridge hypotheses have been assumed or discharged.
+  \item If neither the certificate package nor the bridge package is available, the argument must fall back to the earlier branch/shell/readout layer and may not treat visible shell data as a closure theorem by themselves.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Clause~(i) is exactly the active reading packaged by Theorem~\ref{thm:qam-op3-shell-closure}, Theorem~\ref{thm:qam-op3-proof-run}, and Corollary~\ref{cor:qam-op3-proof-run-use}. Clause~(ii) is the additional kernel-first strengthening isolated earlier in Proposition~\ref{prop:qam-shell-certificate-kernel}, Theorem~\ref{thm:qam-shell-stable-readout}, and Lemma~\ref{lem:qam-readout-kernel-obstruction-compression}; those statements explicitly depend on the deferred bridge hypotheses. Clause~(iii) is the corresponding fallback rule: absent both packages, one must continue on the earlier active branch/shell/readout surface.
+\end{proof}
+
+\begin{corollary}[Operational checklist for the completed OP~3/QAM block]\label{cor:qam-op3-operational-checklist}
+A translated OP~3 shell passage should now be tested in the following order.
+\begin{enumerate}[leftmargin=2em]
+  \item Check admissible branch passage and branch admissibility.
+  \item Check shell refinement and shell admissibility on the chosen branch.
+  \item Check existence of a closure-compatible return readout.
+  \item If all three checks succeed, activate the shell-certificate package and cite the bundled OP~3 closure tool.
+  \item Only if the deferred bridge hypotheses are additionally available, pass to kernel persistence and shell-stable readout factorization.
+  \item If one of the certificate checks fails, localize the first obstruction immediately at branch, shell, or readout/kernel level instead of reopening the whole OP~1--OP~5 chain.
+\end{enumerate}
+In particular, the completed block already provides one stable certified interface: \emph{certificate first, kernel compression second, obstruction localization immediately upon failure}.
+\end{corollary}
+
+\begin{remark}[Diagnostic handoff rule for visible shell data]\label{rem:qam-op3-diagnostic-handoff}
+Visible packet mismatch, phase-lock deviation, shell-sensitive surface variation, and analogous shell diagnostics remain \emph{screening-layer data} unless and until they witness failure of one clause of the shell-certificate package or, under the bridge hypotheses, failure of one common shell-stable carrier. Thus the present block fixes a handoff rule from pictures and visible diagnostics to theorematic closure language: diagnostics may guide attention to the relevant branch, shell, or readout/kernel stratum, but they do not create a second closure axiom beside the completed OP~3/QAM certificate package. This is the intended local counterpart of the earlier visible/structural separation principle and the correct interface toward the later OP~3 to OP~5 transfer line.
+\end{remark}
+
+\begin{proposition}[Prospective kernel-first reduction of the branch-shell theorem]\label{prop:qam-kernel-first-branch-shell}
+Assume the direct kernel constructor of Definition~\ref{def:qam-direct-kernel-constructor} and the bridge conditions of Theorem~\ref{thm:qam-direct-kernel-constructor}. Let
+\[
+s_{\mathrm{in}}=\langle 0,a_{\mathrm{in}}\rangle
+\]
+be the coded source state, let $b$ be a closure-admissible branch code, let $\sigma$ be a shell-admissible refinement code on $b$, and let
+\[
+t_{b,\sigma}=\langle 0,a_{b,\sigma}\rangle
+\]
+be an associated branch-shell coded return realization. Then the conclusion of Theorem~\ref{thm:qam-branch-shell} may be read kernel-first as follows:
+\begin{enumerate}
+\item one has
+\[
+\operatorname{nf}(a_{b,\sigma})=\operatorname{nf}(a_{\mathrm{in}}),
+\]
+\item hence every closure-compatible readout of $s_{\mathrm{in}}$ and $t_{b,\sigma}$ factors through the single canonical kernel class determined by $a_{\mathrm{in}}$,
+\item therefore branch choice and shell refinement may be treated as closure-preserving already at exposed-kernel level before returning to the visible QAM state surface.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Theorem~\ref{thm:qam-branch-shell} gives
+\[
+\mathrm{QClEq}(s_{\mathrm{in}},t_{b,\sigma}).
+\]
+Since both states lie on the present state surface, we may write
+\[
+s_{\mathrm{in}}=\langle 0,a_{\mathrm{in}}\rangle,
+\qquad
+ t_{b,\sigma}=\langle 0,a_{b,\sigma}\rangle.
+\]
+By the direct kernel constructor,
+\[
+\operatorname{ker}_{\mathrm{dir}}(s_{\mathrm{in}})=a_{\mathrm{in}},
+\qquad
+\operatorname{ker}_{\mathrm{dir}}(t_{b,\sigma})=a_{b,\sigma}.
+\]
+The bridge clause for closure reflection therefore yields
+\[
+\operatorname{nf}(a_{b,\sigma})=\operatorname{nf}(a_{\mathrm{in}}).
+\]
+Thus branch admissibility together with shell admissibility already identifies the same canonical kernel class before any further visible-surface comparison is carried out. By the factorization clause of the bridge datum, every closure-compatible coded readout depends only on that common kernel class. Hence the branch-shell theorem may be re-read as a kernel-first statement and only afterwards lifted back to the visible state surface.
+\end{proof}
+
+\begin{remark}[Axiom audit after the kernel-first branch-shell reduction]\label{rem:qam-kernel-first-branch-shell-audit}
+Proposition~\ref{prop:qam-kernel-first-branch-shell} does \emph{not} alter the active proof status of Theorem~\ref{thm:qam-branch-shell}. The active theorem still rests only on closure-admissible branch refinement, shell-admissible OP~3 refinement, and closure-compatible coded readout. The kernel-first proposition adds force only under the deferred payload-level bridge hypotheses isolated in Definition~\ref{def:qam-kernel-bridge-datum} and Theorem~\ref{thm:qam-direct-kernel-constructor}. Thus no new hidden axiom has entered the live branch-shell theorem; only a prospective kernel-level compression of its proof surface has been recorded.
+\end{remark}
+
+\begin{remark}[How much proof load the kernel-first branch-shell reading removes]\label{rem:qam-kernel-first-branch-shell-savings}
+At branch-shell level the cardinality factor is just $1$: there is one visible source surface
+\[
+s_{\mathrm{in}}=\langle 0,a_{\mathrm{in}}\rangle
+\]
+and one visible return surface
+\[
+t_{b,\sigma}=\langle 0,a_{b,\sigma}\rangle.
+\]
+So the gain is not a reduction in the number of cases, but a reduction in the \emph{size of the compared objects}. On the visible state surface the proof compares two full coded states and then passes a closure-compatible readout across that state-level identification. In the deferred kernel-first reading, that work is replaced by the single normal-form check
+\[
+\operatorname{nf}(a_{b,\sigma})=\operatorname{nf}(a_{\mathrm{in}})
+\]
+followed by one readout through the common kernel class. If one measures a visible-state comparison by cost $C_{\mathrm{surf}}$ and a kernel normal-form comparison by cost $C_{\mathrm{ker}}$, then the conceptual load changes from roughly
+\[
+C_{\mathrm{surf}} + C_{\mathrm{read}}
+\]
+to
+\[
+C_{\mathrm{ker}} + C_{\mathrm{class}},
+\]
+with intended gain $C_{\mathrm{ker}}<C_{\mathrm{surf}}$ and typically $C_{\mathrm{class}}\ll C_{\mathrm{read}}$. So the numerical savings here are modest compared with the routed case, but methodologically this is the crucial base step: it is the first place where a full visible return state can be replaced by its exposed payload kernel without changing the closure conclusion.
+\end{remark}
+
+\begin{remark}[Theorem-level unpacking of the compact chain, I]
+Theorem~\ref{thm:qam-branch-shell} is the first theorem-level unpacking of the compact front statement: it isolates the middle part of the release chain in which closure-preserving source-return transport passes through branch choice and shell refinement without losing closure-relevant readout content.
+\end{remark}
+
+\begin{corollary}[QAM branch-shell support class]
+Define the coded admissible branch-shell support class by
+\[
+\mathcal{S}^{\mathrm{QAM}}_{\mathrm{adm}}
+:=
+\{\, (b,\sigma): b\in \mathcal{B}^{\mathrm{QAM}}_{\mathrm{adm}}
+\ \wedge\
+\sigma\in \mathcal{F}^{\mathrm{QAM}}_{\mathrm{sh}}(b)\,\}.
+\]
+Then every coded return realization supported on
+\[
+\mathcal{S}^{\mathrm{QAM}}_{\mathrm{adm}}
+\]
+is closure-preserving at the coded QAM level.
+\end{corollary}
+
+\begin{remark}
+This is the coded QAM counterpart of the admissible branch-shell support sector in the present OP architecture.
+\end{remark}
+
+\begin{definition}[QAM branch-shell routed return]
+Let
+\[
+u=\langle 8,\Omega,w\rangle
+\]
+be an admissible routed support code with
+\[
+\Omega\subseteq \mathcal{S}^{\mathrm{QAM}}_{\mathrm{adm}}.
+\]
+A \emph{QAM branch-shell routed return} is a coded return aggregation associated with the support family $\Omega$ and the weight assignment $w$.
+\end{definition}
+
+\begin{theorem}[QAM routed admissible support theorem]\label{thm:qam-routed-support}
+Let $u=\langle 8,\Omega,w\rangle$ be a normalized admissible routed support code, and let $r$ be a closure-compatible coded readout. Then the closure-relevant image of the routed return determined by $u$ agrees with the closure-relevant image of the coded source state.
+\end{theorem}
+
+\begin{proof}
+Every element $(b,\sigma)\in\Omega$ lies in the admissible branch-shell support class, so each associated coded return realization is closure-equivalent to the coded source state by the previous theorem. Since the routed support is normalized and the readout is closure-compatible, the routed aggregation preserves the same closure-relevant image after passage through the factor map.
+\end{proof}
+
+\begin{proposition}[Prospective kernel-first reduction of the routed support theorem]\label{prop:qam-kernel-first-routed}
+Assume the direct kernel constructor of Definition~\ref{def:qam-direct-kernel-constructor} and the bridge conditions of Theorem~\ref{thm:qam-direct-kernel-constructor}. Let
+\[
+s_{\mathrm{in}}=\langle 0,a_{\mathrm{in}}\rangle
+\]
+be the coded source state, and let
+\[
+u=\langle 8,\Omega,w\rangle
+\]
+be a normalized admissible routed support code. For each $(b,\sigma)\in\Omega$, let
+\[
+t_{b,\sigma}=\langle 0,a_{b,\sigma}\rangle
+\]
+be an associated branch-shell coded return realization. Then the conclusion of Theorem~\ref{thm:qam-routed-support} may be read kernel-first as follows:
+\begin{enumerate}
+\item for every $(b,\sigma)\in\Omega$ one has
+\[
+\operatorname{nf}(a_{b,\sigma})=\operatorname{nf}(a_{\mathrm{in}}),
+\]
+\item hence every closure-compatible routed readout factors through the single canonical kernel class of $a_{\mathrm{in}}$,
+\item therefore the routed aggregation determined by $u$ has the same closure-relevant image as the coded source state without needing to compare the full family of visible state surfaces directly.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+For each $(b,\sigma)\in\Omega$, Theorem~\ref{thm:qam-branch-shell} gives
+\[
+\mathrm{QClEq}(s_{\mathrm{in}},t_{b,\sigma}).
+\]
+Since both states lie on the present state surface, we may write
+\[
+s_{\mathrm{in}}=\langle 0,a_{\mathrm{in}}\rangle,
+\qquad
+ t_{b,\sigma}=\langle 0,a_{b,\sigma}\rangle.
+\]
+By the direct kernel constructor, the kernel representatives are just the exposed payload kernels:
+\[
+\operatorname{ker}_{\mathrm{dir}}(s_{\mathrm{in}})=a_{\mathrm{in}},
+\qquad
+\operatorname{ker}_{\mathrm{dir}}(t_{b,\sigma})=a_{b,\sigma}.
+\]
+The bridge clause for closure reflection therefore yields
+\[
+\operatorname{nf}(a_{b,\sigma})=\operatorname{nf}(a_{\mathrm{in}})
+\]
+for every $(b,\sigma)\in\Omega$. Thus the entire admissible routed support family lies in one canonical kernel class. By the factorization clause of the bridge datum, every closure-compatible coded readout depends only on that kernel class. Hence the routed aggregation has the same closure-relevant image as the coded source state. The normalization of the routed weights matters only after this kernel reduction, so the proof burden is shifted from a family of full visible state surfaces to one canonical kernel class.
+\end{proof}
+
+\begin{remark}[Why the routed support theorem is the best stress test]
+Among the currently marked candidates, Theorem~\ref{thm:qam-routed-support} is the heaviest set-theoretic test case for the deferred zero-kernel language: it simultaneously carries a support family $\Omega$, a coded weight assignment $w$, branch admissibility, shell admissibility, routed aggregation, and closure-compatible readout. Exactly there the kernel-first reading is strongest, because the visible family of state surfaces is replaced by one canonical kernel class before the routed aggregation is evaluated.
+\end{remark}
+
+
+\begin{remark}[Axiom audit after the kernel-first routed reduction]\label{rem:qam-kernel-first-routed-audit}
+Proposition~\ref{prop:qam-kernel-first-routed} does \emph{not} strengthen the active QAM axiomatics. Its extra force comes only from deferred hypotheses already isolated earlier: the direct kernel constructor of Definition~\ref{def:qam-direct-kernel-constructor} and the four payload-level bridge conditions of Theorem~\ref{thm:qam-direct-kernel-constructor}. In particular, the active theorem chain still proves Theorem~\ref{thm:qam-routed-support} without mentioning kernels at all. The new proposition merely says that \emph{if} those deferred bridge conditions are later discharged, then the routed-support proof may be re-read kernel-first. Thus no silent new axiom has entered the then-present public line; only a prospective compression interface has been exhibited.
+\end{remark}
+
+\begin{remark}[How much comparison load the kernel-first reading removes]\label{rem:qam-kernel-first-routed-savings}
+Write $N:=|\Omega|$ for the size of the routed support family. On the visible state surface, the routed-support proof conceptually tracks $N$ branch-shell return states
+\[
+ t_{b,\sigma}=\langle 0,a_{b,\sigma}\rangle
+\]
+and compares each of them with the coded source state at full state-surface level before the routed aggregation is passed through a closure-compatible readout. In the deferred kernel-first reading, those $N$ state-surface comparisons are replaced by the $N$ normal-form checks
+\[
+\operatorname{nf}(a_{b,\sigma})=\operatorname{nf}(a_{\mathrm{in}}),
+\qquad (b,\sigma)\in\Omega,
+\]
+followed by a \emph{single} readout through the common canonical kernel class of $a_{\mathrm{in}}$.
+Consequently the proof burden drops from ``an $N$-member family of full visible state surfaces plus routed readout lifting'' to ``one canonical kernel class together with $N$ membership/equality checks into that class.''
+If one measures a full visible-state comparison by cost $C_{\mathrm{surf}}$ and a kernel normal-form comparison by cost $C_{\mathrm{ker}}$, then the conceptual comparison load changes from roughly
+\[
+N\,C_{\mathrm{surf}} + C_{\mathrm{route}}
+\]
+to
+\[
+N\,C_{\mathrm{ker}} + C_{\mathrm{class}},
+\]
+where typically $C_{\mathrm{class}}\ll C_{\mathrm{route}}$ and the intended gain is precisely that $C_{\mathrm{ker}}<C_{\mathrm{surf}}$. In proof-shape terms, nothing miraculous happens to the factor $N$ itself, but the \emph{object size} being compared is reduced from full state surfaces to exposed kernels, and the routed readout is evaluated once on a single kernel class instead of being conceptually re-established across the whole visible family.
+\end{remark}
+
+\begin{remark}[Theorem-level unpacking of the compact chain, II]
+Theorem~\ref{thm:qam-routed-support} is the routed continuation of Theorem~\ref{thm:qam-branch-shell}. Together they unpack the compressed public-shape chain
+\[
+s_{\mathrm{in}} \longrightarrow (b,\sigma) \longrightarrow u \longrightarrow r
+\]
+of Theorem~\ref{thm:compact-public-shape-preservation} into theorem-level branch/shell preservation followed by theorem-level routed aggregation.
+\end{remark}
+
+\begin{remark}[Staged proof compression pattern under the deferred zero-kernel language]\label{rem:qam-staged-kernel-compression}
+The three prospective kernel-first reductions now show a genuinely staged compression pattern.
+At the first stage, Proposition~\ref{prop:qam-kernel-first-transport} replaces the visible six-state transport chain by equality of six exposed kernel normal forms, so that admissible transport is already read as kernel-class preservation before any branch or shell data enter.
+At the second stage, Proposition~\ref{prop:qam-kernel-first-branch-shell} replaces one visible return-surface comparison
+\[
+\langle 0,a_{b,\sigma}\rangle \sim \langle 0,a_{\mathrm{in}}\rangle
+\]
+by the single kernel normal-form comparison
+\[
+\operatorname{nf}(a_{b,\sigma})=\operatorname{nf}(a_{\mathrm{in}}).
+\]
+At the third stage, Proposition~\ref{prop:qam-kernel-first-routed} repeats that reduced comparison only at the level of exposed kernels across the whole routed family $\Omega$ and then evaluates the closure-compatible readout once on the common kernel class. Thus the deferred zero-kernel language first shrinks the transport chain to a common kernel class, then shrinks each branch-shell return to one exposed kernel comparison, and only afterwards turns the routed family into a class-membership problem rather than a full visible-surface transport problem. This is exactly why transport is the first chain-level compression step, branch-shell the first local return-surface compression step, and routed support the first true family-level compression step.
+\end{remark}
+
+\begin{definition}[Prospective activation package for the deferred zero-kernel language]\label{def:qam-zero-kernel-activation-package}
+A \emph{zero-kernel activation package} for the present QAM surface consists of the following data and properties:
+\begin{enumerate}[label=(\roman*)]
+\item a total assignment on active state surfaces
+\[
+\ker:QState \to \mathcal A, \qquad \ker(\langle 0,a\rangle)=a,
+\]
+compatible with Definition~\ref{def:qam-visible-payload};
+\item kernel admissibility, meaning that every active exposed payload kernel lies in the admissible kernel class \(\mathcal A\);
+\item kernel normal-form reflection of closure, meaning that closure-equivalent active states have the same kernel normal form;
+\item kernel-level factorization of every closure-compatible readout through the corresponding kernel normal form;
+\item compatibility of the routed aggregation step with passage to the common kernel class.
+\end{enumerate}
+\end{definition}
+
+\begin{theorem}[Activation criterion for kernel-first proof compression on the present QAM surface]\label{thm:qam-zero-kernel-activation-criterion}
+Assume a zero-kernel activation package in the sense of Definition~\ref{def:qam-zero-kernel-activation-package}. Then the deferred zero-kernel language may be used as a genuine proof-compression layer for the present QAM surface in the following precise sense:
+\begin{enumerate}[label=(\alph*)]
+\item every active state-surface argument may be reduced to a kernel normal-form argument without loss of closure-relevant content;
+\item the first transport theorem may be read kernel-first by proving preservation of one common kernel normal-form class along the admissible transport chain;
+\item the branch-shell theorem may be read kernel-first by proving normal-form preservation of the exposed return kernels;
+\item the routed support theorem may be read kernel-first by proving membership of all exposed routed kernels in a single common normal-form class and evaluating the closure-compatible readout once on that class.
+\end{enumerate}
+In particular, the deferred zero-kernel language ceases to be merely heuristic at exactly the point where closure, readout, and routed aggregation all factor through kernel normal forms. The criterion identifies \emph{what} must hold; the later staged-roadmap remarks then specify \emph{in which order} those requirements should be established on the present QAM surface.
+\end{theorem}
+
+\begin{proof}
+This is just the joint content of Theorem~\ref{thm:qam-kernel-bridge}, Theorem~\ref{thm:qam-direct-kernel-constructor}, Proposition~\ref{prop:qam-kernel-first-transport}, Proposition~\ref{prop:qam-kernel-first-branch-shell}, and Proposition~\ref{prop:qam-kernel-first-routed}, collected as a single activation statement. Once closure-equivalent active surfaces have the same kernel normal form and every relevant readout factors through that normal form, every transport, branch-shell, and routed-support comparison may be carried out on kernels first and only lifted back to the visible state surface at the end.
+\end{proof}
+
+\begin{remark}[Criterion-to-roadmap reading rule]\label{rem:qam-zero-kernel-criterion-roadmap}
+The activation theorem above should be read together with the staged roadmap below. The theorem gives the logical threshold for activation, whereas the roadmap orders the internal work needed to reach that threshold:
+\[
+\begin{aligned}
+&\text{transport-class preservation}\\[0.15em]
+&\Longrightarrow\;\text{local branch-shell kernel reduction}\\[0.15em]
+&\Longrightarrow\;\text{routed family compression}.
+\end{aligned}
+\]
+In this combined reading, the criterion says \emph{when} kernel-first proof compression becomes legitimate, while the roadmap says \emph{how} the present document should approach that point without introducing premature changes at visible tuple level.
+\end{remark}
+
+\begin{remark}[Practical migration trigger for a later binary-tag version]\label{rem:qam-zero-kernel-migration-trigger}
+The activation criterion above, read together with the later criterion-to-roadmap rule, also isolates the only later migration trigger that would make a binary or power-of-two tag scheme genuinely worthwhile. Such a migration would become structurally justified only once the present state surface is already being used kernel-first in proofs, so that the visible tag layer has become a comparatively thin presentation layer while closure and readout are actually controlled at kernel-normal-form level. Before that point, a binary tag migration would mainly rename visible surfaces; after that point, it could act as a real simplification of the presentation layer.
+\end{remark}
+
+\begin{remark}[What still has to be shown before activation]\label{rem:qam-zero-kernel-activation-gap}
+At the present stage, the deferred zero-kernel language still stops short of activation for one simple reason: the document now contains the bridge data, the direct kernel candidate, and three staged stress tests, but it does not yet contain a fully internal proof that the active closure relation and every closure-compatible readout already factor through the exposed payload normal forms on the entire current QAM surface. The current status is therefore stronger than a mere metaphor but weaker than an active rewrite rule.
+\end{remark}
+
+
+\begin{remark}[Prospective staged activation roadmap for the zero-kernel language]\label{rem:qam-zero-kernel-roadmap}
+The current document already suggests a natural staged migration order for any later activation of the deferred zero-kernel language.
+Stage~I is the \emph{transport stage}: one first proves that admissible source-return transport preserves a single common kernel normal-form class all along the visible active chain.
+Stage~II is the \emph{local return stage}: one then proves that every admissible branch-shell return surface may be replaced by one exposed kernel comparison against the incoming kernel class.
+Stage~III is the \emph{family stage}: one finally proves that the whole routed family collapses to membership in that common kernel class, so that closure-compatible readout is evaluated once at class level rather than re-established on each visible routed surface.
+Only after these three stages are internally available would a later binary or power-of-two visible presentation acquire real proof-theoretic leverage, because only then would the visible tuple tags have become a thin presentation shell over an already kernel-first proof flow.
+\end{remark}
+
+\begin{remark}[Why this staged order matters]\label{rem:qam-zero-kernel-roadmap-why}
+The order above is not cosmetic. If routed family compression were attempted before transport-class preservation and local branch-shell reduction were available, then the family step would still depend on full visible surfaces and would not yet be a genuine kernel-first simplification. The staged order therefore identifies the first point at which the deferred zero-kernel language would cease to be merely suggestive and would begin to remove real set-theoretic comparison load in a controlled way. Together with the criterion-to-roadmap rule, it turns the activation block from a static admissibility test into a concrete migration sequence.
+\end{remark}
+
+\begin{remark}[Compressed synthesis of the deferred zero-kernel path]\label{rem:qam-zero-kernel-synthesis}
+The deferred zero-kernel material above should now be read as one compact path rather than as many separate addenda. The present visible state surface remains unchanged. A later kernel language would first expose the exposed payload kernel of a coded state as a candidate kernel, then compare closure only through kernel normal forms, then compress transport, local branch-shell return, and finally routed families in that order, and only afterwards consider whether a binary visible presentation would simplify the already kernel-first proof flow. In that reading, the deferred block does not introduce a second theory beside the current QAM package. It isolates one possible later proof-compression pipeline inside the same public branch/shell/routed line.
+\end{remark}
+
+\begin{remark}[Reading guide for the deferred block]\label{rem:qam-zero-kernel-reading-guide}
+A compact reader may keep only the following chain in view:
+\[
+\begin{aligned}
+&\text{visible state surface}
+\;\Longrightarrow\;
+\text{exposed payload kernel}
+\;\Longrightarrow\;
+\text{kernel normal form}
+\\[0.2em]
+&\Longrightarrow\;
+\text{transport/local/family compression}
+\;\Longrightarrow\;
+\text{possible later binary presentation}.
+\end{aligned}
+\]
+The detailed deferred notes are included only to justify each arrow in this chain and to mark exactly which theorem-level bridges would still need to be proved before activation.
+\end{remark}
+
+
+\begin{remark}[Dependency map for the deferred zero-kernel path]\label{rem:qam-zero-kernel-dependency-map}
+The deferred block now has a strict internal dependency order.
+First, Definitions~\ref{def:qam-zero-kernel}--\ref{def:qam-kernel-key} fix the later kernel vocabulary: carriers, filters, primitive zero-objects, recursive reuse, aspect projections, normal forms, and internal search keys.
+Second, the axiom-coherence and current-limitation remarks state why this added vocabulary does not yet compete with the active tuple layer.
+Third, Definition~\ref{def:qam-kernel-bridge-datum}, Theorem~\ref{thm:qam-kernel-bridge}, Definition~\ref{def:qam-visible-payload}, and Theorem~\ref{thm:qam-direct-kernel-constructor} isolate the exact interface through which active coded states could later be re-read kernel-first.
+Fourth, Propositions~\ref{prop:qam-kernel-first-transport}, \ref{prop:qam-kernel-first-branch-shell}, and \ref{prop:qam-kernel-first-routed} test that interface on the three currently most relevant proof stages.
+Finally, Definition~\ref{def:qam-zero-kernel-activation-package}, Theorem~\ref{thm:qam-zero-kernel-activation-criterion}, and the later activation-roadmap, synthesis, and reading-guide remarks convert those tests into an activation criterion and a migration order.
+In particular, any later binary visible presentation should depend on this whole chain and should not precede it.
+\end{remark}
+
+\begin{remark}[Local admissibility test for a later kernel-first rewrite]\label{rem:qam-zero-kernel-local-test}
+The deferred block can now also be read as a local test for whether a specific visible tuple-surface proof step is mature enough for later kernel-first rewriting. Given a proof step whose visible data consist of active coded states
+\[
+s_i=\langle 0,a_i\rangle,
+\]
+one should ask four questions in order.
+\begin{enumerate}
+\item \emph{Exposure:} do all exposed payload kernels $a_i$ already lie in the intended admissible kernel domain $\mathcal A$?
+\item \emph{Reduction target:} can the visible conclusion be reformulated as equality, preservation, or common membership of the corresponding kernel normal forms $\operatorname{nf}(a_i)$?
+\item \emph{Factorization:} does every closure-relevant readout or routed aggregation used in that proof step depend only on the resulting kernel normal-form class?
+\item \emph{Lift back:} once the kernel-class statement is proved, does the original visible state-surface conclusion follow again without adding new data?
+\end{enumerate}
+If the answer is yes in all four places, then the proof step is a genuine candidate for later kernel-first compression. If one of the four answers is still no, the corresponding proof step should remain on the visible state surface for the time being.
+\end{remark}
+
+\begin{remark}[Fallback rule for current proofs]\label{rem:qam-zero-kernel-fallback}
+Failure of the local admissibility test is not a defect of the present active proof line. It simply means that the relevant argument should continue to cite the active visible-surface theorem rather than its deferred kernel-first restatement. This fallback rule prevents premature theorem drift: the deferred block may prepare later compression, but it does not lower the evidential status required for current public proofs.
+\end{remark}
+
+\begin{remark}[Compressed rewrite schema]\label{rem:qam-zero-kernel-rewrite-schema}
+Whenever the later local admissibility test applies, the deferred zero-kernel path suggests one uniform later rewrite schema:
+\[
+\begin{aligned}
+&\text{visible tuple step}
+\;\Longrightarrow\;
+\text{expose payloads}
+\;\Longrightarrow\;
+\text{pass to }\operatorname{nf}
+\\[0.2em]
+&\Longrightarrow\;
+\text{prove closure/readout at class level}
+\;\Longrightarrow\;
+\text{lift back to the visible surface}.
+\end{aligned}
+\]
+This does not yet activate any new theorem in the present document. It simply records, in one line, the exact proof pattern that the three staged stress tests have already isolated separately for transport, local branch/shell return, and routed families.
+\end{remark}
+
+\begin{remark}
+This is the coded QAM analogue of the combined branch-shell transport theorem together with normalized routed admissible preservation.
+\end{remark}
+
+\begin{definition}[QAM screening layer]
+A coded diagnostic layer is called a \emph{screening layer} if it provides visible preselection information about admissible branch-shell support without itself constituting an independent closure proof.
+\end{definition}
+
+\begin{remark}
+In this sense, packet-, phase-lock-, and epsilon-type coded diagnostics should be treated in QAM as screening-layer data rather than as primary closure criteria. Their structural relevance begins only when they track loss of branch admissibility or loss of shell admissibility.
+\end{remark}
+
+\begin{corollary}[QAM visible/structural separation]\label{cor:qam-visible-structural}
+Visible coded mismatch in the screening layer does not by itself imply failure of closure at the QAM level. Closure failure begins only when coded branch admissibility or coded shell admissibility is lost.
+\end{corollary}
+
+\begin{remark}
+This is the QAM-over-ZF shadow of the visible-mismatch-versus-structural-mismatch principle already established in the current Companion line.
+\end{remark}
+
+

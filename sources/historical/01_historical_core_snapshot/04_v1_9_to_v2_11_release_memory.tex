@@ -1,0 +1,954 @@
+\section*{v1.9.0 Readout Stabilization and Proof Memory Core}
+\addcontentsline{toc}{section}{v1.9.0 Readout Stabilization and Proof Memory Core}
+\begin{quote}
+\textbf{Normalization note.} This block is retained as a historical precursor of the normalized readout architecture. Its proof-bearing content is re-exported later through the grouped-layer normalization, especially the readout/collapse phases and the semantic--tensor transport discipline. It should therefore be read as historical proof memory rather than as an independent new foundation.
+\end{quote}
+
+This release adds a further stabilization layer to the inherited closure, probe,
+projection, and appendix architecture. Its purpose is to make the final readout
+path more disciplined: not only must admissible content survive transport, it
+must also remain recoverable after compression. In this sense v1.9.0 pushes
+the document from a transport-stable monolith toward a proof-memory stable one.
+A statement is not treated as mature merely because it can be compressed into a
+lemma, table row, or projection line; it must also remain reconstructible as the
+same closure-supported content when the compression is unfolded again.
+
+\subsection*{1. Readout stabilization principle}
+The main strengthening of v1.9.0 is that every admissible readout must be
+stable under re-expansion. A readout is the visible endpoint of a structural
+chain, but it remains acceptable only if its origin can be reopened without
+changing the admissibility class. Thus the document now treats readout as a
+\emph{controlled fixed point} of compression and reconstruction:
+\[
+\begin{aligned}
+&\text{local structure} \Longrightarrow \text{HC} \Longrightarrow \text{closure}\\
+&\Longrightarrow \text{probe filtration} \Longrightarrow \text{table/tool compression}\\
+&\Longrightarrow \text{readout} \Longrightarrow \text{re-expansion to the same admissibility class}.
+\end{aligned}
+\]
+
+\paragraph{Stabilization Proposition A (readout fixed-point discipline).}
+If a statement is compressed into a readout form by admissibility-preserving
+transports and can be re-expanded to the same closure-licensed content, then the
+readout is structurally stable. If re-expansion changes the admissibility class,
+the readout was only heuristic.
+
+\paragraph{Proof sketch.}
+The admissibility source is fixed upstream by the ground condition, HC, and
+closure. Compression is legitimate only if it does not sever that source. Hence
+re-expansion must recover the same structural ancestry rather than a merely
+similar narrative.
+
+\subsection*{2. Tool-to-lemma synchronization}
+Previous versions upgraded tools and tables into proof interfaces. v1.9.0
+adds a stricter synchronization rule: every reusable tool should point to at
+least one lemma-level justification, and every repeated lemma pattern should be
+compressible into a named tool or interface move once stabilized. The goal is to
+prevent the appendix from splitting into disconnected ``tricks'' on one side and
+formal arguments on the other.
+
+\paragraph{Stabilization Proposition B (tool/lemma synchronization).}
+A reusable tool is mature only when it is synchronized with a lemma pattern that
+licenses its use, and a recurring lemma pattern is fully normalized only when it
+admits a stable compressed tool form.
+
+\paragraph{Proof sketch.}
+Tools without lemma ancestry become opaque shortcuts; lemmas without compressed
+interface forms bloat the running line unnecessarily. Synchronization preserves
+both transparency and speed while keeping the proof architecture auditable.
+
+\subsection*{3. Probe-to-readout compatibility}
+The probe channel now receives a further role. It is not only a gate before
+projection but also a compatibility filter for later readouts. Any sector that
+passes through probe filtration should emerge with enough structural trace to be
+placed into a table, a compressed lemma, or a projection sentence without losing
+its closure ancestry.
+
+\paragraph{Stabilization Proposition C (probe-filtered modes carry readout ancestry).}
+If a mode survives the probe filtration under the standing orthogonality and HC
+rules, then its later readout must retain a backward trace to the probe channel
+that selected it. Readout therefore cannot erase probe ancestry without lowering
+its status to heuristic interpretation.
+
+\subsection*{4. Appendix as proof memory lattice}
+The appendix is sharpened once more: it is now treated as a \emph{proof memory
+lattice}. Its entries are not merely stored results but nodes from which one can
+move upward to the local closure chain, sideways to equivalent interface forms,
+and downward to bounded projection language. This lattice viewpoint organizes the
+appendix as a recoverability structure rather than a list of leftovers.
+
+\paragraph{Stabilization Principle (memory-lattice admissibility).}
+An appendix entry is fully admissible only if it supports three motions:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item upward recovery to its closure/lemma ancestry,
+  \item lateral transport to equivalent tool or table interfaces, and
+  \item downward use in a bounded readout or projection context.
+\end{enumerate}
+If one of these motions fails, the entry must be marked as provisional,
+heuristic, or not yet fully normalized.
+
+\subsection*{5. Operational consequence for later versions}
+With v1.9.0 the monolith receives a clearer maturity criterion for future
+expansions. New derivations should not merely add content; they should improve
+recoverability. In practice this means that later mathematical deepening should
+prefer additions that tighten one of the following links: closure to probe,
+probe to table, table to lemma, lemma to tool, or readout back to structural
+ancestry. This keeps the entire project aligned with the structure-first rule
+while making the growing proof apparatus easier to audit and reuse.
+
+\paragraph{Operational rule for subsequent releases.}
+Whenever a new argument is introduced, one should ask not only whether the step
+is locally correct, but also whether it improves the global recoverability of
+compressed proof content. The strongest additions are those that make the same
+statement simultaneously easier to compress, easier to re-expand, and easier to
+locate inside the appendix memory lattice.
+
+
+
+\section*{v2.0.0 Structural Closure Ledger and Expansion Discipline Core}
+\addcontentsline{toc}{section}{v2.0.0 Structural Closure Ledger and Expansion Discipline Core}
+\begin{quote}
+\textbf{Normalization note.} This block is retained as a historical ledger/governance precursor. In the normalized architecture its active role belongs chiefly to the projection/translation layer and to the later formal unfolding phases that carry the actual proof-bearing closure and transport statements.
+\end{quote}
+
+This release upgrades the monolith from a proof-memory stable object to a more
+explicit \emph{closure ledger}. The point is not merely to preserve ancestry in
+principle, but to keep a disciplined account of how every compressed statement,
+interface row, or projection sentence remains licensed by the same upstream
+closure architecture. In this sense v2.0.0 turns recoverability into an
+operational bookkeeping rule: admissible content should be traceable, expandable,
+and relocatable without silently changing its structural status.
+
+\subsection*{1. Closure ledger principle}
+A closure ledger is the ordered record of the transports that make a statement
+usable. It does not store every intermediate calculation in full; rather, it
+stores the \emph{licensed path class} by which the content travels from local
+structure to admissible readout. The relevant chain is now treated as a ledgered
+sequence:
+\[
+\begin{aligned}
+&\text{local triolic structure} \Longrightarrow \text{ground condition} \Longrightarrow \text{HC compensation}\\
+&\Longrightarrow \text{closure confinement} \Longrightarrow \text{probe/interface filtration}\\
+&\Longrightarrow \text{lemma or tool compression} \Longrightarrow \text{bounded projection/readout}.
+\end{aligned}
+\]
+A later re-expansion is admissible only if it re-enters the same ledger class,
+not merely a similar verbal narrative.
+
+\paragraph{Ledger Proposition A (transport accountancy).}
+A compressed claim is structurally mature only if one can specify the closure
+ledger that licenses its transport. If the path cannot be stated, the claim may
+still be suggestive, but it has not yet acquired full structural status.
+
+\paragraph{Proof sketch.}
+The earlier versions already required closure ancestry and re-expandability. The
+present strengthening adds explicit accountancy: the transport steps must be
+stable enough to be named, tracked, and checked. This prevents hidden leaps from
+entering the proof line under the cover of familiar notation.
+
+\subsection*{2. Expansion discipline as a release criterion}
+The next layer of consolidation concerns how new material may be added. A later
+expansion should no longer be judged only by local correctness or plausibility;
+it should also improve the ledger quality of the monolith. Thus expansion is now
+classified by whether it strengthens one of the major controlled passages:
+closure to probe, probe to interface, interface to lemma, lemma to readout, or
+readout back to closure ancestry.
+
+\paragraph{Ledger Proposition B (expansion must improve auditability).}
+A new derivation is preferable to an older one when it makes the same structural
+content easier to audit across compression levels. Additions that only increase
+volume without sharpening one of the ledger passages remain secondary.
+
+\paragraph{Operational reading.}
+This gives the document a stricter maturity test. Future versions should not add
+formal bulk merely because it is available; they should add material that makes
+more of the proof architecture checkable under controlled compression and
+re-expansion.
+
+\subsection*{3. Probe-ledger compatibility}
+The probe channel is now interpreted as a \emph{ledger gate}. It does not simply
+filter modes before projection; it also determines which later compressed forms
+inherit admissibility in a controllable way. A mode that survives probe
+filtration under orthogonality and HC should arrive downstream with a stable
+ledger signature that can be recognized in lemma, table, and readout form.
+
+\paragraph{Ledger Proposition C (probe selection induces ledger signature).}
+If a mode is selected by the admissible probe channel, then any later compressed
+representation of that mode should preserve a recognizable signature of that
+selection. If the signature disappears completely, the downstream statement must
+be marked as heuristic or only partially normalized.
+
+\subsection*{4. Table and appendix discipline}
+The appendix and its tables now receive a slightly sharper role again. They are
+not only memory lattices; they function as \emph{ledger surfaces}. Each row,
+entry, or named tool should indicate which closure path class it abbreviates and
+which re-expansion channel it expects. This gives the appendix a more active
+status inside the proof architecture and reduces the danger that tables drift
+into mere summaries.
+
+\paragraph{Ledger Proposition D (rows abbreviate path classes).}
+A normalized table row is admissible only if it abbreviates a stable path class
+rather than an isolated sentence. The row then becomes reversible in two senses:
+it can be expanded upward into lemma ancestry and laterally into equivalent tool
+or interface forms.
+
+\subsection*{5. Transition to the next mathematical deepening}
+With v2.0.0 the project crosses a useful threshold. The document now has a
+more explicit rule for how future mathematical elaboration should be inserted:
+not as detached calculations, but as ledger-preserving thickening of already
+licensed paths. This is especially relevant for the larger companion roadmap,
+where many later lemmas and proof tools must remain structurally synchronized.
+
+\paragraph{Working rule for subsequent versions.}
+Whenever a new proof block is added, it should be possible to say which closure
+ledger it refines, which compressed interfaces it improves, and how its content
+returns to the appendix without losing admissibility. Material that satisfies
+all three demands strengthens the monolith in the intended structure-first way.
+
+
+\clearpage
+\section*{v2.1.0 Structural Audit and Re-Expansion Core}
+\addcontentsline{toc}{section}{v2.1.0 Structural Audit and Re-Expansion Core}
+\begin{quote}
+\textbf{Normalization note.} This block is retained as a historical audit precursor. Its main value is to preserve re-expansion discipline and proof-memory traceability; the normalized document no longer treats it as a separate generative core, but as supporting governance for the later unfolding phases.
+\end{quote}
+
+This release adds a further consolidation layer to the companion monolith. The
+new emphasis is not merely on carrying closure information forward, but on
+making explicit how later re-expansion remains auditable after several stages of
+compression. Earlier versions already introduced closure ladders, interface
+filters, ledger surfaces, and proof-memory discipline. Version~v2.1.0 now
+adds an \emph{audit core}: every admissible compressed statement should retain a
+recoverable expansion route that can be checked against the same closure class
+from which it descended.
+
+\subsection*{1. Auditability as structural maturity}
+A compressed statement becomes structurally mature only when it is possible to
+state not just where it came from, but how it may be unfolded again without
+changing its admissible class. This requirement sharpens the earlier ledger
+ideas. The ledger tracked which closure path licensed a statement; the audit
+core now asks whether that path can be re-opened in a controlled way.
+
+\paragraph{Audit Proposition A (licensed re-expansion).}
+A normalized claim is fully admissible only if there exists a bounded
+re-expansion route from the compressed form back to a compatible lemma, tool,
+probe, or closure ancestry class. A statement that cannot be re-opened under
+controlled transport may still be heuristically useful, but it has not yet
+reached final structural normalization.
+
+\paragraph{Proof sketch.}
+Closure ancestry alone prevents arbitrary insertion of unsupported projection
+claims, but it does not yet guarantee that later readers can recover the path.
+The present strengthening adds a re-opening condition. The compressed surface
+must not merely summarize the proof memory; it must preserve enough structure
+that the same memory can be reconstructed under admissible reversal.
+
+\subsection*{2. The audit ladder}
+The working audit ladder of this release is
+\[
+\begin{aligned}
+&\text{local triolic constraint} \Longrightarrow \text{HC compensation} \Longrightarrow \text{closure confinement}\\
+&\Longrightarrow \text{probe/interface filtration} \Longrightarrow \text{lemma or table compression}\\
+&\Longrightarrow \text{readout statement} \Longrightarrow \text{controlled re-expansion}.
+\end{aligned}
+\]
+The final arrow is new in emphasis. It makes explicit that a readout is not the
+terminal endpoint of the proof architecture. Instead, it is a temporarily stable
+surface from which the architecture should remain recoverable.
+
+\paragraph{Audit Proposition B (endpoints remain reversible).}
+A readout that has lost all reversible relation to its closure ladder should be
+classified as provisional. The stronger the reversible link to its generating
+path, the stronger its status inside the monolith.
+
+\subsection*{3. Probe-audit discipline}
+The probe channel receives an additional task in v2.1.0. It is no longer
+only a selection or filtration device; it also serves as an audit checkpoint.
+Probe-selected modes should leave a downstream trace that remains visible in the
+compressed lemma/table/readout layers. This makes the probe sector a bridge
+between admissible dynamics and later recoverable proof memory.
+
+\paragraph{Audit Proposition C (probe traces survive compression).}
+If a configuration is admissibly selected in the orthogonal probe channel, then
+its later compressed representations should preserve a recognizable probe trace.
+If no such trace remains, downstream formulations must be marked as reduced,
+heuristic, or not yet fully synchronized.
+
+\subsection*{4. Appendix as an audit surface}
+This version also sharpens the role of the appendix. Appendix entries, tables,
+and named tools now act as \emph{audit surfaces}. Each item should indicate not
+only what it abbreviates, but how it can be re-opened into the same structural
+class. The appendix therefore becomes more than a memory store or ledger sheet;
+it becomes a reversible interface between compressed exposition and detailed
+proof ancestry.
+
+\paragraph{Audit Proposition D (appendix entries carry reopening metadata).}
+A mature appendix entry should point both backward and forward: backward into
+its closure ancestry and forward into an admissible re-expansion channel. This
+dual role prevents tables from drifting into detached summaries.
+
+\subsection*{5. Consequence for the next mathematical thickening}
+With v2.1.0 the document takes another step toward a larger mathematically
+expanded companion. Future lemma growth should now be judged not only by local
+correctness, but also by whether it improves auditability across compression
+levels. New material is strongest when it reduces the gap between compressed
+statement, appendix row, probe trace, and recoverable closure ancestry.
+
+\paragraph{Working rule for subsequent versions.}
+Whenever a new mathematical block is added, it should be possible to specify
+which closure class licenses it, which compressed interfaces abbreviate it, and
+which controlled re-expansion route reconstructs it. Material satisfying all
+three demands strengthens the proof architecture in the intended structure-first
+sense.
+
+
+
+\clearpage
+\section*{v2.2.0 Structural Re-Expansion Governance Core}
+\addcontentsline{toc}{section}{v2.2.0 Structural Re-Expansion Governance Core}
+\begin{quote}
+\textbf{Normalization note.} This block is retained as a historical governance precursor. It contributes release and re-expansion discipline, but in the normalized architecture it is not an independent proof center; proof-bearing content is carried by the grouped unfolding phases and their semantic/tensor transport rules.
+\end{quote}
+
+This release adds a governance layer to the companion monolith. Earlier stages
+made closure transport, probe filtration, auditability, and ledger discipline
+explicit. Version~v2.2.0 now asks an additional question: under which
+rules may a compressed statement be enlarged again without damaging the closure
+class, the appendix interfaces, or the downstream readout status? The answer is
+cast as a governance core. Re-expansion is no longer only possible; it is to be
+performed under named admissibility rules.
+
+\subsection*{1. Governance as a proof-discipline layer}
+A mature structure-first document should not merely accumulate more lemmas. It
+should specify which later thickening operations are allowed and which ones are
+not. Governance therefore means that every future expansion step is judged by
+its compatibility with closure ancestry, probe traces, ledger surfaces, and the
+status labels already attached to the claim being enlarged.
+
+\paragraph{Governance Proposition A (admissible thickening preserves status).}
+A later elaboration is admissible only if it preserves the structural status of
+the compressed claim or improves it in a controlled way. An expansion that
+forces a change of admissibility class without explicit declaration should be
+regarded as a separate branch rather than a faithful thickening of the original
+path.
+
+\paragraph{Proof sketch.}
+Compression is useful only because it abbreviates a path already licensed by the
+monolith. When a later reader expands the statement again, the same path should
+remain visible. If the elaboration silently changes the closure ancestry, probe
+selection, or projection label, then it is not a recovery of the earlier path
+but a new construction. Governance marks this distinction explicitly.
+
+\subsection*{2. The re-expansion governance ladder}
+The practical ladder of this release is
+\[
+\begin{aligned}
+&\text{closure ancestry} \Longrightarrow \text{probe/interface trace} \Longrightarrow \text{ledger or appendix encoding}\\
+&\Longrightarrow \text{compressed readout} \Longrightarrow \text{governed re-expansion}\\
+&\Longrightarrow \text{status check} \Longrightarrow \text{return to the ledger}.
+\end{aligned}
+\]
+The final return arrow is part of the new emphasis. Re-expansion is not treated
+as a one-way release of detail. It must return to the ledger surface in a form
+that remains compatible with the proof memory of the monolith.
+
+\paragraph{Governance Proposition B (every governed expansion returns to a ledger surface).}
+A mathematically thickened block is fully integrated only when its added detail
+can be pushed back into a stable appendix, tool, lemma, or table interface.
+Otherwise the expansion remains locally useful but globally insufficiently
+synchronized.
+
+\subsection*{3. Probe governance and admissible branch formation}
+The probe channel now gains a sharper branching role. Not every elaboration of a
+probe-selected mode has to remain in the same local branch, but any branch split
+must be declared at the point where the probe trace ceases to determine a unique
+downstream continuation. This keeps the search-space logic compatible with the
+proof memory logic.
+
+\paragraph{Governance Proposition C (branching must occur at visible trace loss).}
+If a later derivation no longer preserves a unique recognizable probe trace,
+then a branch declaration is required. Continuing as if the same path remained
+in force would obscure which downstream statements are still inherited and which
+are newly introduced.
+
+\subsection*{4. Appendix governance and reversible table discipline}
+The appendix receives a correspondingly stronger role. Rows, tables, and named
+tools are now governed interfaces. They should not only compress results and
+carry reopening metadata; they should also state which kinds of later expansion
+may legitimately pass through them. In this sense the appendix becomes a modest
+control layer for future mathematical thickening.
+
+\paragraph{Governance Proposition D (table rows define admissible recovery windows).}
+A mature table row should delimit the window inside which a later elaboration is
+still regarded as a recovery of the same path class. Once an expansion leaves
+that window, the result should either be relabeled or entered as a new row,
+lemma, or branch.
+
+\subsection*{5. Consequence for the next proof cycle}
+With v2.2.0 the companion monolith now carries not only closure,
+projection, ledger, and audit discipline, but also a clearer rule for how later
+mathematical detail may be inserted without dissolving the structure-first
+architecture. The next proof cycle should therefore thicken selected paths under
+explicit governance rather than by unconstrained local expansion. This is the
+cleanest route toward the larger companion target with many more lemmas and
+technical proof tools.
+
+\paragraph{Working rule for subsequent versions.}
+Whenever a new technical derivation is inserted, it should be possible to say
+(i) which closure and probe ancestry it inherits, (ii) which appendix or ledger
+surface compresses it, (iii) which re-expansion window legitimizes its added
+detail, and (iv) how the resulting thickening returns to a synchronized proof
+interface. Material meeting all four demands strengthens the monolith in the
+intended disciplined way.
+
+
+\clearpage
+\section*{Mathematical Thickening of the HC/Closure Core (working expansion)}
+\addcontentsline{toc}{section}{Mathematical Thickening of the HC/Closure Core (working expansion)}
+
+This block deliberately reverses part of the recent compression trend. It does
+not introduce a new meta-layer. Instead it takes one of the central structure
+claims --- ground condition $\Rightarrow$ HC $\Rightarrow$ closure --- and writes it
+in a denser mathematical form. The purpose is not to declare a final axiomatic
+closure theorem, but to make explicit which quantitative objects control the
+transition from local triolic structure to confinement and later readout.
+
+\subsection*{1. Working state space and defect variables}
+Let $\mathcal H$ be a real or complex Hilbert space with orthogonal splitting
+\[
+\mathcal H = \mathcal H_A \oplus \mathcal H_B \oplus \mathcal H_C \oplus \mathcal H_R,
+\]
+where $\mathcal H_A,\mathcal H_B,\mathcal H_C$ carry the three triolic channels and
+$\mathcal H_R$ is a residual sector collecting modes not admitted by the intended
+closure regime. We write a state as
+\[
+\Psi = (A,B,C,R), \qquad A\in\mathcal H_A,\ B\in\mathcal H_B,\ C\in\mathcal H_C,
+\ R\in\mathcal H_R.
+\]
+The orthogonality discipline of the triolic block is encoded by the defect
+functional
+\[
+\delta_{\perp}(\Psi)
+:= |\langle A,C\rangle|^2 + |\langle B,C\rangle|^2,
+\]
+and the residual leakage into the non-admissible sector by
+\[
+\delta_R(\Psi) := \|R\|^2.
+\]
+The first quantity measures failure of the distinguished $C$-channel to remain
+orthogonal to the other two active channels. The second measures failure of the
+state to remain confined to the triolic/septinion envelope.
+
+\paragraph{Ground functional.}
+A compact way to encode the ground condition is through the non-negative
+functional
+\[
+\Gamma(\Psi) := \delta_{\perp}(\Psi) + \eta\,\delta_R(\Psi), \qquad \eta>0.
+\]
+The ideal ground regime is characterized by $\Gamma(\Psi)=0$. In particular,
+\[
+\Gamma(\Psi)=0 \quad \Longrightarrow \quad \langle A,C\rangle=\langle B,C\rangle=0
+\quad\text{and}\quad R=0.
+\]
+Thus the ground condition simultaneously imposes orthogonality and exclusion of
+residual leakage.
+
+\subsection*{2. A formal compensator model}
+To thicken the HC claim mathematically, introduce the gradient of $\Gamma$ with
+respect to the Hilbert structure. Since
+\[
+\nabla_A \Gamma = 2\langle A,C\rangle C,
+\qquad
+\nabla_B \Gamma = 2\langle B,C\rangle C,
+\]
+and
+\[
+\nabla_C \Gamma = 2\overline{\langle A,C\rangle}A + 2\overline{\langle B,C\rangle}B,
+\qquad
+\nabla_R \Gamma = 2\eta R,
+\]
+a natural working expression for the compensator is the feedback field
+\[
+\mathrm{HC}(\Psi) := -\kappa\,\nabla \Gamma(\Psi), \qquad \kappa>0.
+\]
+Written componentwise,
+\[
+\mathrm{HC}(\Psi) =
+\Bigl(
+-2\kappa\langle A,C\rangle C,
+-2\kappa\langle B,C\rangle C,
+-2\kappa\overline{\langle A,C\rangle}A -2\kappa\overline{\langle B,C\rangle}B,
+-2\kappa\eta R
+\Bigr).
+\]
+This is the simplest explicit model of the structural statement that the
+compensator opposes orthogonality defects and suppresses escape into the
+residual sector.
+
+\paragraph{Remark.}
+The point of this formula is not uniqueness. It is a minimal realization of the
+qualitative rule that the HC term points against the defect gradient generated
+by the ground functional.
+
+\subsection*{3. Closure as Lyapunov monotonicity}
+Assume the effective evolution has the form
+\[
+\partial_\tau \Psi = F(\Psi) + \mathrm{HC}(\Psi),
+\]
+where $F$ denotes the non-compensated structural drift. The cleanest closure
+statement occurs when the uncontrolled part is tangent or dissipative relative
+to the ground functional:
+\[
+\Re\,\langle \nabla\Gamma(\Psi),F(\Psi)\rangle \le 0.
+\tag{T}
+\]
+Under this hypothesis,
+\begin{align*}
+\frac{d}{d\tau}\Gamma(\Psi(\tau))
+&= \Re\,\langle \nabla\Gamma(\Psi),\partial_\tau\Psi\rangle \\
+&= \Re\,\langle \nabla\Gamma(\Psi),F(\Psi)\rangle
+   - \kappa\|\nabla\Gamma(\Psi)\|^2 \\
+&\le -\kappa\|\nabla\Gamma(\Psi)\|^2 \le 0.
+\end{align*}
+Hence $\Gamma$ is a Lyapunov functional for the compensated flow.
+
+\paragraph{Lemma 1 (monotone compensated closure).}
+Under \textup{(T)}, the map $\tau\mapsto \Gamma(\Psi(\tau))$ is non-increasing. In
+particular, the orthogonality defect and residual leakage cannot increase along
+the compensated flow.
+
+\paragraph{Corollary 1.}
+If $\Gamma(\Psi(0))=0$, then $\Gamma(\Psi(\tau))=0$ for all later $\tau$ for which
+the flow exists. Thus the exact ground class is forward invariant.
+
+\paragraph{Corollary 2.}
+If $\Gamma(\Psi(0))$ is small, then the trajectory remains trapped in the
+sublevel set
+\[
+\{\Psi\in\mathcal H: \Gamma(\Psi)\le \Gamma(\Psi(0))\}.
+\]
+This is the first explicit mathematical form of the closure/confinement claim.
+
+\subsection*{4. Septinion confinement as exclusion of the residual sector}
+The previous corollaries can be sharpened for the residual component. Since
+$\Gamma(\Psi)\ge \eta\|R\|^2$, monotonicity implies
+\[
+\|R(\tau)\|^2 \le \eta^{-1}\Gamma(\Psi(\tau)) \le \eta^{-1}\Gamma(\Psi(0)).
+\]
+Therefore a small initial ground defect bounds the entire future residual mass.
+In the exact case $\Gamma(\Psi(0))=0$ one obtains $R(\tau)=0$ identically.
+
+\paragraph{Lemma 2 (residual confinement).}
+Under \textup{(T)}, the residual sector $\mathcal H_R$ is dynamically suppressed by
+the compensator. Exact ground states never leave the triolic/septinion block,
+and approximate ground states can leak into $\mathcal H_R$ only at a level
+quantitatively controlled by their initial defect.
+
+This is a mathematically sharper version of the earlier verbal statement that
+``no component breaks out'' once the HC mechanism is active.
+
+\subsection*{5. First-layer master equation in decomposed form}
+The structure-first master equation can now be written in a way that makes the
+origin of the principal terms explicit:
+\[
+\partial_\tau \Psi
+= T_{\mathrm{int}}(\Psi)
++ T_{\mathrm{proj}}(\Psi)
+- \kappa\nabla\Gamma(\Psi).
+\]
+Here
+\begin{itemize}
+    \item $T_{\mathrm{int}}$ collects the intrinsic triolic or septinion-internal
+    couplings,
+    \item $T_{\mathrm{proj}}$ collects frame-shift or measurement-induced projection
+    terms,
+    \item $-\kappa\nabla\Gamma$ is the compensating closure term.
+\end{itemize}
+The point of this decomposition is that the HC contribution is no longer merely
+described verbally. It is isolated as the mathematically distinguished term that
+penalizes deviation from the admissible structural class.
+
+\paragraph{Lemma 3 (term-wise origin of stabilization).}
+Suppose $T_{\mathrm{int}}+T_{\mathrm{proj}}$ satisfies the tangency condition
+\textup{(T)}. Then every decrease of the ground functional is generated by the HC
+term, while all remaining contributions are either neutral or already
+compatible with closure. In that sense the master equation separates
+structurally allowed drift from explicitly compensating drift.
+
+\subsection*{6. Probe sector as constrained reduction}
+For the probe channel, write two incoming triolic probes as
+\[
+\Psi_1=(A_1,B_1,C_1,R_1), \qquad \Psi_2=(A_2,B_2,C_2,R_2),
+\]
+and let $Q$ denote the orthogonal third group used to delimit the search space.
+A natural probe defect is then
+\[
+\Gamma_{\mathrm{probe}}(\Psi_1,\Psi_2;Q)
+:= \Gamma(\Psi_1)+\Gamma(\Psi_2)
+   + \rho\,\Xi(\Psi_1,\Psi_2;Q), \qquad \rho>0,
+\]
+where $\Xi$ measures incompatibility with the orthogonal search geometry. For
+example, one may take
+\[
+\Xi(\Psi_1,\Psi_2;Q)
+:= |\langle A_1,Q\rangle|^2 + |\langle B_1,Q\rangle|^2
+ + |\langle A_2,Q\rangle|^2 + |\langle B_2,Q\rangle|^2,
+\]
+possibly supplemented by additional coupling terms between the two probes.
+Then the same compensated-flow idea yields
+\[
+\partial_\tau(\Psi_1,\Psi_2)
+= F_{\mathrm{probe}}(\Psi_1,\Psi_2;Q)
+- \kappa_p\nabla\Gamma_{\mathrm{probe}}(\Psi_1,\Psi_2;Q),
+\]
+with
+\[
+\frac{d}{d\tau}\Gamma_{\mathrm{probe}} \le -\kappa_p
+\|\nabla\Gamma_{\mathrm{probe}}\|^2
+\]
+under the corresponding tangency condition.
+
+\paragraph{Lemma 4 (probe-sector reduction principle).}
+Under the probe tangency hypothesis, the orthogonal search geometry reduces the
+effective probe dynamics to a controlled subspace determined by the sublevel
+sets of $\Gamma_{\mathrm{probe}}$. Thus the probe mechanism is mathematically read
+as a constrained reduction principle rather than a merely heuristic search
+picture.
+
+\subsection*{7. What this thickening achieves and what it does not yet do}
+This expansion does three concrete things.
+\begin{enumerate}
+    \item It replaces the purely verbal HC statement by an explicit compensator
+    model $-\kappa\nabla\Gamma$.
+    \item It turns closure into a Lyapunov monotonicity statement.
+    \item It gives the probe sector a quantitative defect functional that can be
+    minimized under orthogonal search constraints.
+\end{enumerate}
+At the same time, it is still a working expansion rather than a final theorem.
+The non-compensated drifts $F$, $T_{\mathrm{int}}$, $T_{\mathrm{proj}}$, and
+$F_{\mathrm{probe}}$ have not yet been specialized to a unique physical or number-
+theoretic model. That specialization is the next true mathematical step after
+this thickening: once the intrinsic drift is fixed more sharply, the above
+Lyapunov framework can be tested term-by-term instead of only at the abstract
+closure level.
+
+
+\section*{v2.3.0 Mathematical Deepening Core}
+\begin{quote}
+\textbf{Normalization note.} This block is retained as a historical deepening precursor. Its mathematical thickening remains part of the document's proof memory, but the normalized architecture reads it through the later unfolding phases rather than as a second autonomous mathematical foundation.
+\end{quote}
+
+This version continues the return from governance-style consolidation to
+explicit mathematical derivation. The focus is no longer merely that closure can
+be encoded by a defect functional, but that the induced closure flow can be
+separated into invariant, dissipative, and residual channels. In this way the
+HC term becomes a mathematically trackable transport law rather than a purely
+qualitative stabilizer.
+
+\subsection*{1. Orthogonal projector formulation of closure}
+Let $\mathcal H=\mathcal H_A\oplus\mathcal H_B\oplus\mathcal H_C\oplus\mathcal H_R$
+be the structural state space used in the previous thickening step, and let
+$\Pi_{\mathrm{cl}}$ denote the orthogonal projector onto the admissible closure
+manifold
+\[
+\mathfrak M_{\mathrm{cl}}:=\{\Psi\in\mathcal H\,:\,\Gamma(\Psi)=0\}.
+\]
+Whenever $\Gamma$ is locally quadratic near $\mathfrak M_{\mathrm{cl}}$, one may
+write, to leading order,
+\[
+\Gamma(\Psi)\asymp \| (I-\Pi_{\mathrm{cl}})\Psi\|^2,
+\]
+so that the distance to closure is measured by the defect component
+\[
+\Psi_{\perp}:=(I-\Pi_{\mathrm{cl}})\Psi,
+\qquad
+\Psi_{\parallel}:=\Pi_{\mathrm{cl}}\Psi.
+\]
+The compensated flow
+\[
+\partial_\tau \Psi = F(\Psi)-\kappa\nabla\Gamma(\Psi)
+\]
+therefore admits the splitting
+\[
+\partial_\tau \Psi_{\parallel}=\Pi_{\mathrm{cl}}F(\Psi)+\mathcal N_{\parallel}(\Psi),
+\qquad
+\partial_\tau \Psi_{\perp}=(I-\Pi_{\mathrm{cl}})F(\Psi)-\kappa\nabla\Gamma(\Psi)+\mathcal N_{\perp}(\Psi),
+\]
+where $\mathcal N_{\parallel},\mathcal N_{\perp}$ collect higher-order curvature
+terms of the closure manifold.
+
+\paragraph{Lemma 1 (normal damping near closure).}
+Assume that $\Gamma$ is $C^2$ in a neighborhood of $\mathfrak M_{\mathrm{cl}}$ and that
+its Hessian is strictly positive on the normal bundle of
+$\mathfrak M_{\mathrm{cl}}$. Then there are constants $c_1,c_2>0$ such that for all
+states sufficiently near closure,
+\[
+c_1\|\Psi_{\perp}\|^2\le \Gamma(\Psi)\le c_2\|\Psi_{\perp}\|^2,
+\]
+and the HC term damps the normal component at leading order.
+
+\begin{proof}
+By the Morse--Bott type expansion of $\Gamma$ around the zero set,
+\[
+\Gamma(\Psi_{\parallel}+\Psi_{\perp})=
+\tfrac12\langle H_{\Gamma}(\Psi_{\parallel})\Psi_{\perp},\Psi_{\perp}\rangle
++O(\|\Psi_{\perp}\|^3),
+\]
+with $H_{\Gamma}$ positive on normal directions. Hence $\Gamma$ is equivalent to
+the squared normal distance, and
+$\nabla\Gamma(\Psi)=H_{\Gamma}(\Psi_{\parallel})\Psi_{\perp}+O(\|\Psi_{\perp}\|^2)$.
+Therefore the compensator contributes a strictly contracting term in the normal
+direction.
+\end{proof}
+
+\subsection*{2. Differential inequality for the closure ladder}
+Set $E(\tau):=\Gamma(\Psi(\tau))$. Then
+\[
+\dot E = \langle \nabla\Gamma(\Psi),F(\Psi)\rangle - \kappa\|\nabla\Gamma(\Psi)\|^2.
+\]
+To make the structural content explicit, split the drift as
+\[
+F = F_{\mathrm{tan}} + F_{\mathrm{nor}} + F_{\mathrm{res}},
+\]
+where $F_{\mathrm{tan}}$ is tangent to $\mathfrak M_{\mathrm{cl}}$, $F_{\mathrm{nor}}$ is
+controlled by the closure defect, and $F_{\mathrm{res}}$ contains genuinely residual
+terms. Then
+\[
+\dot E
+= \langle \nabla\Gamma,F_{\mathrm{nor}}\rangle
+ + \langle \nabla\Gamma,F_{\mathrm{res}}\rangle
+ - \kappa\|\nabla\Gamma\|^2,
+\]
+because the tangential part drops out to first order.
+
+\paragraph{Proposition 1 (closure ladder with residual threshold).}
+Suppose there exist constants $a<\kappa$ and $b\ge 0$ such that
+\[
+|\langle \nabla\Gamma,F_{\mathrm{nor}}+F_{\mathrm{res}}\rangle|
+\le a\|\nabla\Gamma\|^2 + b\Gamma.
+\]
+Then for states near closure,
+\[
+\dot E \le -(\kappa-a)\|\nabla\Gamma\|^2 + bE.
+\]
+In particular, if $b$ is dominated by the coercivity constant relating
+$\|\nabla\Gamma\|^2$ and $E$, then the closure ladder is dissipative and the flow
+returns exponentially to the admissible structural sector.
+
+\begin{proof}
+Insert the estimate directly into the identity for $\dot E$. The final claim
+follows from the local coercivity
+$\|\nabla\Gamma\|^2\ge cE$ near $\mathfrak M_{\mathrm{cl}}$, which converts the
+inequality into $\dot E\le -\mu E$ for some $\mu>0$.
+\end{proof}
+
+This proposition sharpens the earlier Lyapunov statement. Closure is not only
+monotone under ideal tangency; it remains stable under a controlled class of
+residual perturbations, provided the compensator strength exceeds the residual
+threshold.
+
+\subsection*{3. Term-wise master equation refinement}
+Write the first-layer master equation in the refined form
+\[
+\partial_\tau \Psi
+= T_{\mathrm{tri}}(\Psi)
++ T_{\perp}(\Psi)
++ T_{\mathrm{meas}}(\Psi)
++ T_{\mathrm{res}}(\Psi)
+- \kappa\nabla\Gamma(\Psi).
+\]
+Here the meaning of the terms is:
+\begin{itemize}
+    \item $T_{\mathrm{tri}}$: internal triolic transport preserving the intrinsic
+    algebraic coupling,
+    \item $T_{\perp}$: orthogonality-restoring channel induced by the requirement
+    that one branch remains perpendicular to the other two,
+    \item $T_{\mathrm{meas}}$: frame-shift and measurement transport,
+    \item $T_{\mathrm{res}}$: unresolved residual transport not yet assigned to a
+    unique physical model.
+\end{itemize}
+The closure condition can then be tested term by term through the scalar
+pairings
+\[
+\sigma_{\mathrm{tri}}:=\langle \nabla\Gamma,T_{\mathrm{tri}}\rangle,
+\quad
+\sigma_{\perp}:=\langle \nabla\Gamma,T_{\perp}\rangle,
+\quad
+\sigma_{\mathrm{meas}}:=\langle \nabla\Gamma,T_{\mathrm{meas}}\rangle,
+\quad
+\sigma_{\mathrm{res}}:=\langle \nabla\Gamma,T_{\mathrm{res}}\rangle.
+\]
+Thus
+\[
+\dot E = \sigma_{\mathrm{tri}}+\sigma_{\perp}+\sigma_{\mathrm{meas}}+\sigma_{\mathrm{res}}
+-\kappa\|\nabla\Gamma\|^2.
+\]
+The mathematical advantage is that every structural claim can now be tied to one
+of these four channels. For instance, a perfect intrinsic closure sector is
+characterized by $\sigma_{\mathrm{tri}}=0$, while measurement-induced distortion is
+captured by the sign and size of $\sigma_{\mathrm{meas}}$.
+
+\paragraph{Corollary 2 (term-wise admissibility test).}
+If each non-compensated channel satisfies an estimate of the form
+$|\sigma_j|\le a_j\|\nabla\Gamma\|^2+b_jE$ with $\sum_j a_j<\kappa$, then the
+master flow is closure-admissible. In this sense the first-layer master
+equation acquires a concrete mathematical admissibility criterion instead of a
+purely narrative one.
+
+\subsection*{4. Probe reduction with quantitative search radius}
+For the probe functional
+\[
+\Gamma_{\mathrm{probe}}(\Psi_1,\Psi_2;Q)
+=\Gamma(\Psi_1)+\Gamma(\Psi_2)+\rho\,\Xi(\Psi_1,\Psi_2;Q),
+\]
+define the admissible search radius
+\[
+\mathcal R_\varepsilon(Q):=
+\{(\Psi_1,\Psi_2):\Gamma_{\mathrm{probe}}(\Psi_1,\Psi_2;Q)\le \varepsilon\}.
+\]
+This produces a genuinely quantitative reading of the earlier search-space
+language: the probe channel is restricted to a sublevel tube around the
+orthogonally compatible sector.
+
+\paragraph{Proposition 3 (quantitative probe reduction).}
+Assume the probe drift satisfies the analogue of the closure-ladder estimate.
+Then for every sufficiently small $\varepsilon>0$ the set
+$\mathcal R_\varepsilon(Q)$ is forward invariant under the compensated probe flow,
+provided the initial probe state lies in $\mathcal R_\varepsilon(Q)$. Hence the
+probe search does not merely heuristically prefer a smaller space; it is
+mathematically confined to a controlled admissible tube.
+
+\begin{proof}
+Apply the same differential-inequality argument to
+\[
+E_{\mathrm{probe}}(\tau):=\Gamma_{\mathrm{probe}}(\Psi_1(\tau),\Psi_2(\tau);Q).
+\]
+If $\dot E_{\mathrm{probe}}\le -\mu E_{\mathrm{probe}}$ or, more generally, $\dot E_{\mathrm{probe}}\le 0$ on the boundary level set $E_{\mathrm{probe}}=\varepsilon$, trajectories cannot leave the sublevel region.
+\end{proof}
+
+\subsection*{5. Consequence for the next development step}
+The present deepening changes the status of the HC/closure block in two ways.
+First, closure is now expressed through projector splitting and coercive defect
+control. Second, the master and probe channels both admit explicit admissibility
+tests in terms of scalar defect pairings. The next natural step is therefore no
+longer another meta-level consolidation, but the specialization of
+$T_{\mathrm{tri}},T_{\perp},T_{\mathrm{meas}},T_{\mathrm{res}}$ and of the probe drift to
+more definite structural or physical models. That is the point at which the
+current structure-first proof begins to turn into a truly term-resolved
+mathematical derivation.
+
+
+\section*{v2.4.0 Term-Resolved Channel Specialization Core}
+\addcontentsline{toc}{section}{v2.4.0 Term-Resolved Channel Specialization Core}
+\begin{quote}
+\textbf{Normalization note.} This block is retained as a historical specialization precursor. In the normalized architecture its active content belongs primarily to the projection/translation and field/probe realization layers; it should therefore be read as a later historical expansion, not as a competing core.
+\end{quote}
+
+The explicit task of v\docversion\ is to pass from the admissibility language of
+v2.3.0 to a first term-resolved structural model. The point is not yet to claim
+final physics. Rather, the point is to assign mathematically disciplined roles to
+\(T_{\mathrm{tri}},T_{\perp},T_{\mathrm{meas}},T_{\mathrm{res}}\) so that later field equations,
+appendix tables, and probe readouts can all be tested against the same channel map.
+The guiding principle is that every term must be readable simultaneously in four
+ways: as a structural transport rule, as a closure-defect source or sink, as a
+probe-interface contribution, and as a future physical interpretation slot.
+
+\subsection*{1. Channel factorization principle}
+Let the first-layer master equation be written as
+\[
+\partial_\tau \Psi
+= T_{\mathrm{tri}}(\Psi)
++ T_{\perp}(\Psi)
++ T_{\mathrm{meas}}(\Psi)
++ T_{\mathrm{res}}(\Psi)
+- \kappa \nabla\Gamma(\Psi).
+\]
+In v\docversion\ we impose the factorization rule
+\[
+T_j = A_j + B_j + C_j,
+\qquad j\in\{\mathrm{tri},\perp,\mathrm{meas},\mathrm{res}\},
+\]
+where:
+\begin{itemize}
+    \item $A_j$ is the closure-tangent component,
+    \item $B_j$ is the explicitly defect-producing normal component,
+    \item $C_j$ is a bookkeeping remainder reserved for later model refinement.
+\end{itemize}
+This factorization is not claimed to be unique. Its function is instead to force
+each channel into a common proof grammar: tangent transport, normal defect, and
+controlled unresolved remainder.
+
+\paragraph{Definition 1 (channel-adapted splitting).}
+Given the projector pair $(P_{\mathrm{tan}},P_{\mathrm{nor}})$ induced by the closure
+manifold, define
+\[
+A_j:=P_{\mathrm{tan}}T_j,
+\qquad
+B_j:=P_{\mathrm{nor}}T_j,
+\qquad
+C_j:=0
+\]
+at the first structural level. More general splittings with nonzero $C_j$ are
+allowed when one wants to isolate scale-separated or frame-shifted contributions.
+At the present stage, however, the projector-induced splitting is the canonical
+choice because it minimizes extra assumptions.
+
+\subsection*{2. Canonical specialization of the four channels}
+The structural role of the four channels is now fixed as follows.
+
+\paragraph{Triolic channel.}
+The term $T_{\mathrm{tri}}$ is the intrinsic coupling transport generated by the
+triolen architecture itself. Its preferred structural property is near tangency:
+\[
+P_{\mathrm{nor}}T_{\mathrm{tri}} = O(\Gamma).
+\]
+This expresses that the intrinsic triadic coupling should preserve admissibility to
+leading order and create only higher-order closure defects.
+
+\paragraph{Orthogonality channel.}
+The term $T_{\perp}$ enforces the standing project constraint that one branch is
+perpendicular to the other two. Its preferred structural property is restorative:
+\[
+\langle \nabla\Gamma, T_{\perp}\rangle \le -\lambda_{\perp}\Gamma
+\quad\text{for some }\lambda_{\perp}>0
+\]
+in the near-closure regime. Thus $T_{\perp}$ is not merely admissible; it is a
+coercive correction channel.
+
+\paragraph{Measurement channel.}
+The term $T_{\mathrm{meas}}$ encodes the phase-space shift between the measurement
+frame and the underlying structural dynamics. It is therefore not expected to be
+sign-definite. Instead it is controlled by a relative bound of the form
+\[
+|\langle \nabla\Gamma, T_{\mathrm{meas}}\rangle|
+\le a_{\mathrm{meas}}\|\nabla\Gamma\|^2 + b_{\mathrm{meas}}\Gamma.
+\]
+This formalizes the standing project rule that measurements do not access the raw
+structure directly, but only through a shifted interface.
+
+\paragraph{Residual channel.}
+The term $T_{\mathrm{res}}$ is the disciplined storage slot for all contributions not
+yet promoted to a stable structural or physical interpretation. In v\docversion\ it is no longer allowed to function as a dumping ground. Instead one requires
+\[
+T_{\mathrm{res}} = \sum_{m=1}^M T_{\mathrm{res}}^{(m)}
+\]
+with every summand tagged by its origin class, such as approximation residue,
+frame-conversion remainder, truncation error, or phenomenological placeholder.
+This turns residuality into an auditable notion.
+
+\subsection*{3. Channel ledger and admissibility matrix}
+To make the specialization operational, v2.4.0 introduces the channel
+ledger matrix
+\[
+\Lambda_{\mathrm{ch}}(\Psi)=
+\begin{pmatrix}
+\ell_{\mathrm{tri}} & \delta_{\mathrm{tri}} & r_{\mathrm{tri}}\\
+\ell_{\perp} & \delta_{\perp} & r_{\perp}\\
+\ell_{\mathrm{meas}} & \delta_{\mathrm{meas}} & r_{\mathrm{meas}}\\
+\ell_{\mathrm{res}} & \delta_{\mathrm{res}} & r_{\mathrm{res}}
+\end{pmatrix},
+\]
+where
+\[
+\ell_j := \|P_{\mathrm{tan}}T_j\|,
+\qquad

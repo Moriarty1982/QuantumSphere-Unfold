@@ -1,0 +1,2216 @@
+\section{Closure-Liquid Crystal and Holographic Julia Boundary}
+\label{sec:closure-liquid-crystal-holographic-julia-boundary}
+
+The present section introduces a cautious re-reading of the current closure architecture in cellular language. It does \emph{not} claim that the framework is literally a condensed-matter crystal. Instead, it proposes one structured pilot in which the same closure-bearing carrier is treated as a bulk order parameter whose visible sectors appear as phase-sensitive ordered domains and whose Julia-type diagnostics are read as boundary holograms of that same order. The point of this re-reading is organizational: it compresses the current OP~3/OP~5 language into one local compatibility / defect-transport / boundary-readout picture without creating a second closure theory.
+
+\begin{definition}[Closure-liquid-crystal cell]
+\label{def:closure-liquid-crystal-cell}
+A \emph{closure-liquid-crystal cell} is a quintuple
+\[
+  X=(K,\sigma,\rho,\phi,\delta)
+\]
+consisting of:
+\begin{enumerate}[leftmargin=2em,label=(\roman*)]
+  \item a closure-bearing carrier datum $K$;
+  \item a shell/refinement datum $\sigma$;
+  \item a branch/route datum $\rho$;
+  \item a local phase/readout datum $\phi$;
+  \item a local defect datum $\delta$.
+\end{enumerate}
+The intended reading is that $K$ records the bulk carrier order, while $(\sigma,\rho,\phi,\delta)$ records the visible local realization of that order in one readout domain.
+\end{definition}
+
+\begin{definition}[Local cell-compatibility equation]
+\label{def:local-cell-compatibility-equation}
+Let $X_n=(K_n,\sigma_n,\rho_n,\phi_n,\delta_n)$ and
+$X_{n+1}=(K_{n+1},\sigma_{n+1},\rho_{n+1},\phi_{n+1},\delta_{n+1})$
+be adjacent closure-liquid-crystal cells. Their local compatibility equation is written
+\[
+  \mathcal C_{\mathrm{cell}}(X_n,X_{n+1})=0
+\]
+and is required to mean that:
+\begin{enumerate}[leftmargin=2em,label=(\roman*)]
+  \item the carrier datum remains inside the same closure-bearing class;
+  \item the branch/shell transition between the two cells is admissible;
+  \item visible readout variation remains at screening level and does not yet generate a genuine shell defect witness.
+\end{enumerate}
+Thus the equation $\mathcal C_{\mathrm{cell}}=0$ is the local cellular form of admissible OP~3 passage.
+\end{definition}
+
+\begin{proposition}[OP~3 cell-compatibility reading]
+\label{prop:op3-cell-compatibility-reading}
+Let a translated OP~3 shell passage carry a shell admissibility certificate in the sense of Definition~\ref{def:qam-shell-certificate}. Then it determines two adjacent closure-liquid-crystal cells whose local compatibility equation holds:
+\[
+  \mathcal C_{\mathrm{cell}}(X_n,X_{n+1})=0.
+\]
+In particular, the current OP~3 certificate package may be read as a local cell-compatibility law on the same closure-bearing carrier medium.
+\end{proposition}
+
+\begin{proof}
+A shell admissibility certificate records admissible branch passage, shell-admissible refinement, and closure-compatible readout on the translated OP~3 side. By Lemma~\ref{lem:qam-shell-certificate-closure} and Theorem~\ref{thm:qam-op3-shell-closure}, the source state and the branch-shell return state remain in the same closure-bearing class and differ only by an admissible shell passage together with readout-screening data. This is exactly the content encoded by $\mathcal C_{\mathrm{cell}}(X_n,X_{n+1})=0$ in Definition~\ref{def:local-cell-compatibility-equation}.
+\end{proof}
+
+\begin{definition}[Locally corrected crystal compatibility equation]
+\label{def:locally-corrected-crystal-compatibility-equation}
+Let $X_n$ and $X_{n+1}$ be adjacent closure-liquid-crystal cells in the closure-phase regime. Their \emph{locally corrected crystal compatibility equation} is written
+\[
+  \mathcal C_{\mathrm{cell}}^{\sharp}(X_n,X_{n+1})=0
+\]
+and is required to mean that:
+\begin{enumerate}[leftmargin=2em,label=(\roman*)]
+  \item the original compatibility equation $\mathcal C_{\mathrm{cell}}(X_n,X_{n+1})=0$ holds at closure/readout level;
+  \item the local phase-side persistence defect stays below the active reinforced threshold;
+  \item the associated Teichmüller-side persistence defect stays below the active reinforced threshold;
+  \item the packet-side admissibility monitor remains inside the safe admissibility band.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}[Why the crystal equation must be corrected locally]
+\label{rem:why-crystal-equation-must-be-corrected-locally}
+The original crystal compatibility law is an OP~3-style admissible passage law. The present post-v3.32.0 local obstruction analysis shows that this is no longer enough for the active closure-phase trigger problem. The compatibility equation must therefore be tightened by a local persistence correction, not by changing the carrier class itself, but by sharpening the phase-side and Teichmüller-side persistence conditions on the second step.
+\end{remark}
+
+\begin{definition}[Local crystal persistence correction datum]
+\label{def:local-crystal-persistence-correction-datum}
+The \emph{local crystal persistence correction datum} at step $n$ is the quadruple
+\[
+  \mathfrak K_{\mathrm{cell}}^{\sharp}(n)
+  :=
+  (\eta_{\Theta}(n),\eta_T(n),\zeta_T(n),\lambda_T(n)),
+\]
+where:
+\begin{enumerate}[leftmargin=2em,label=(\roman*)]
+  \item $(\eta_{\Theta}(n),\eta_T(n))$ is the first local repair witness;
+  \item $(\zeta_T(n),\lambda_T(n))$ is the local Teichmüller-side repair datum.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Corrected crystal two-step window]
+\label{def:corrected-crystal-two-step-window}
+A two-step local crystal window
+\[
+  X_n,\;X_{n+1}
+\]
+is called \emph{corrected} if the locally corrected crystal compatibility equation holds and the corresponding reinforced trigger package passes on both steps.
+\end{definition}
+
+\begin{proposition}[Teichmüller repair lifts the crystal equation from screening compatibility to persistence compatibility]
+\label{prop:teichmueller-repair-lifts-crystal-equation}
+Assume the first local repair witness and the first local Teichmüller-persistence repair theorem. Then the local crystal compatibility equation can be lifted from
+\[
+  \mathcal C_{\mathrm{cell}}(X_n,X_{n+1})=0
+\]
+to the corrected form
+\[
+  \mathcal C_{\mathrm{cell}}^{\sharp}(X_n,X_{n+1})=0
+\]
+on every corrected crystal two-step window.
+\end{proposition}
+
+\begin{proof}
+The first local repair witness supplies the phase-side tightening required to repair the second-step drift, while the local Teichmüller-side repair datum supplies the remaining geometric persistence correction. If both corrections are applied and the reinforced trigger package passes on both steps, then the original admissible crystal passage is no longer merely screening-compatible but persistence-compatible on the active two-step window. This is exactly the meaning of the corrected equation $\mathcal C_{\mathrm{cell}}^{\sharp}(X_n,X_{n+1})=0$.
+\end{proof}
+
+\begin{theorem}[First local crystal-equation correction theorem]
+\label{thm:first-local-crystal-equation-correction-theorem}
+Assume:
+\begin{enumerate}[leftmargin=2em,label=(\roman*)]
+  \item the first local Theta-drift witness theorem applies;
+  \item the first local phase-side repair theorem applies;
+  \item the first local Teichmüller-persistence repair theorem applies.
+\end{enumerate}
+Then the present line supports a first local correction of the crystal equation.
+More precisely:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item the original crystal compatibility equation remains valid as the carrier/readout baseline;
+  \item the active local persistence problem is repaired not by changing the carrier class, but by replacing $\mathcal C_{\mathrm{cell}}=0$ with the corrected equation $\mathcal C_{\mathrm{cell}}^{\sharp}=0$ on the active two-step window;
+  \item the first crystal-equation correction is therefore a local persistence correction, not a new bulk crystal law.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+By the local obstruction analysis, the first failure is phase/geometry-prior rather than carrier-prior. The phase-side repair theorem supplies the first burden-side tightening, and the Teichmüller-persistence repair theorem supplies the remaining geometric tightening. Therefore the crystal equation is not replaced at bulk level; it is corrected locally by a persistence reinforcement on the active two-step window.
+\end{proof}
+
+\begin{corollary}[Current crystal-equation working rule]
+\label{cor:current-crystal-equation-working-rule}
+The current post-v3.32.0 line should not yet search first for a wholly new crystal equation. It should first search for the minimal local persistence correction that upgrades
+\[
+  \mathcal C_{\mathrm{cell}}=0
+\]
+to
+\[
+  \mathcal C_{\mathrm{cell}}^{\sharp}=0
+\]
+on the active closure-phase two-step window.
+\end{corollary}
+
+\begin{proof}
+Immediate from Theorem~\ref{thm:first-local-crystal-equation-correction-theorem}.
+\end{proof}
+
+
+\begin{definition}[Local compact reinforcement pair]
+\label{def:local-compact-reinforcement-pair}
+The \emph{local compact reinforcement pair} extracted from the crystal persistence correction datum
+\[
+  \mathfrak K_{\mathrm{cell}}^{\sharp}(n)
+  =
+  (\eta_{\Theta}(n),\eta_T(n),\zeta_T(n),\lambda_T(n))
+\]
+is the pair
+\[
+  \mathfrak A_{\mathrm{loc}}^{\sharp}(n)
+  :=
+  (A_{\mathrm{bur}}(n),A_{\mathrm{geo}}(n))
+\]
+defined by
+\[
+  A_{\mathrm{bur}}(n):=\eta_{\Theta}(n),
+  \qquad
+  A_{\mathrm{geo}}(n):=\max\{\eta_T(n),\zeta_T(n),\lambda_T(n)\}.
+\]
+\end{definition}
+
+\begin{remark}[Meaning of the compact pair]
+\label{rem:meaning-of-the-compact-pair}
+The first parameter records the burden-side phase reinforcement required to stop the second-step Theta drift.
+The second parameter records the total geometric persistence reinforcement required on the same two-step window.
+Thus the original four repair numbers are compressed into one burden-side and one geometric reinforcement scale.
+\end{remark}
+
+\begin{definition}[One-parameter shadow reinforcement]
+\label{def:one-parameter-shadow-reinforcement}
+The \emph{one-parameter shadow reinforcement} of the local compact reinforcement pair is
+\[
+  A_{\mathrm{tot}}(n)
+  :=
+  \max\{A_{\mathrm{bur}}(n),A_{\mathrm{geo}}(n)\}.
+\]
+\end{definition}
+
+\begin{remark}[Why the one-parameter shadow is secondary]
+\label{rem:why-the-one-parameter-shadow-is-secondary}
+The scalar shadow $A_{\mathrm{tot}}(n)$ is useful only as a coarse local size readout.
+It should not replace the two-parameter pair, because the current post-v3.32.0 line still distinguishes between burden-side repair and geometric persistence repair.
+\end{remark}
+
+\begin{definition}[Burden-dominant compact reinforcement]
+\label{def:burden-dominant-compact-reinforcement}
+The local compact reinforcement pair is called \emph{burden-dominant} if
+\[
+  A_{\mathrm{bur}}(n)\ge A_{\mathrm{geo}}(n).
+\]
+It is called \emph{geometrically dominant} if
+\[
+  A_{\mathrm{geo}}(n)>A_{\mathrm{bur}}(n).
+\]
+\end{definition}
+
+\begin{proposition}[The crystal persistence correction datum admits a conservative two-parameter compression]
+\label{prop:crystal-persistence-correction-datum-admits-two-parameter-compression}
+Every local crystal persistence correction datum
+\[
+  (\eta_{\Theta}(n),\eta_T(n),\zeta_T(n),\lambda_T(n))
+\]
+admits a conservative two-parameter compression into
+\[
+  (A_{\mathrm{bur}}(n),A_{\mathrm{geo}}(n)).
+\]
+Moreover, the compressed pair dominates the original repair data in the sense that:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item $A_{\mathrm{bur}}(n)$ retains the full burden-side strengthening requirement;
+  \item $A_{\mathrm{geo}}(n)$ bounds every geometric persistence strengthening requirement from above.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+The first claim is immediate from Definition~\ref{def:local-compact-reinforcement-pair}.
+The second follows because $A_{\mathrm{geo}}(n)$ is defined as the maximum of the three geometric persistence reinforcement terms.
+Hence the compressed pair conservatively dominates the original local correction datum.
+\end{proof}
+
+\begin{proposition}[Current local reinforcement is not purely geometric]
+\label{prop:current-local-reinforcement-is-not-purely-geometric}
+Assume the first local repair-orientation theorem and the first local Teichmüller-persistence repair theorem.
+Then the current local compact reinforcement pair is not geometrically dominant by default.
+More precisely, the burden-side component
+\[
+  A_{\mathrm{bur}}(n)=\eta_{\Theta}(n)
+\]
+remains genuinely active in every admissible local repair reading.
+\end{proposition}
+
+\begin{proof}
+By the local repair-orientation theorem, the first repair is Theta-dominant rather than purely geometric.
+By the Teichmüller-persistence repair theorem, the geometric side is genuinely active but enters only after the burden-side drift has already been identified as the first required strengthening.
+Therefore the current local compact reinforcement is not purely geometric by default.
+\end{proof}
+
+\begin{theorem}[First compact reinforcement theorem]
+\label{thm:first-compact-reinforcement-theorem}
+Assume:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item the first local crystal-equation correction theorem applies;
+  \item the first local repair-to-trigger calibration theorem applies;
+  \item the first local Teichmüller-persistence repair theorem applies.
+\end{enumerate}
+Then the current post-v3.32.0 local crystal persistence problem admits a first compact reinforcement form.
+
+More precisely:
+\begin{enumerate}[leftmargin=2em,label=(\arabic*)]
+  \item the four local repair parameters
+  \[
+    (\eta_{\Theta}(n),\eta_T(n),\zeta_T(n),\lambda_T(n))
+  \]
+  compress conservatively to the pair
+  \[
+    (A_{\mathrm{bur}}(n),A_{\mathrm{geo}}(n));
+  \]
+  \item the burden-side component $A_{\mathrm{bur}}(n)$ remains the first active repair scale;
+  \item the geometric component $A_{\mathrm{geo}}(n)$ records the total persistence reinforcement required to keep the corrected crystal equation valid on the active two-step window;
+  \item the scalar shadow $A_{\mathrm{tot}}(n)$ is only a coarse readout and should not replace the compact pair at the current stage.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+By Proposition~\ref{prop:crystal-persistence-correction-datum-admits-two-parameter-compression}, the four repair parameters admit a conservative compression into the compact pair.
+By Proposition~\ref{prop:current-local-reinforcement-is-not-purely-geometric}, the burden-side component remains genuinely active and therefore cannot be discarded.
+The geometric component dominates the three persistence-side repair contributions by definition, so it records the total persistence reinforcement requirement on the active two-step window.
+The scalar shadow is only the maximum of the two compact parameters and therefore loses the burden/geometry distinction still needed at the current stage.
+\end{proof}
+
+\begin{corollary}[Current compact reinforcement working rule]
+\label{cor:current-compact-reinforcement-working-rule}
+The next local audit should not first track the full four-parameter repair datum.
+It should first track the compact reinforcement pair
+\[
+  (A_{\mathrm{bur}}(n),A_{\mathrm{geo}}(n)),
+\]
+using the scalar shadow $A_{\mathrm{tot}}(n)$ only as a coarse size indicator.
+\end{corollary}
+
+\begin{proof}
+Immediate from Theorem~\ref{thm:first-compact-reinforcement-theorem}.
+\end{proof}
+
+
+\begin{definition}[Local reinforcement ratio]
+\label{def:local-reinforcement-ratio}
+The \emph{local reinforcement ratio} is the quantity
+\[
+  \chi_{\mathrm{loc}}(n)
+  :=
+  \frac{A_{\mathrm{geo}}(n)}{A_{\mathrm{bur}}(n)}
+\]
+whenever $A_{\mathrm{bur}}(n)>0$.
+\end{definition}
+
+\begin{remark}[Meaning of the local reinforcement ratio]
+\label{rem:meaning-of-the-local-reinforcement-ratio}
+The ratio $\chi_{\mathrm{loc}}(n)$ measures how much geometric persistence reinforcement is required relative to the burden-side phase reinforcement on the active two-step window.
+It is therefore the first compact indicator of whether the local repair is still burden-led or already close to a balanced coupled regime.
+\end{remark}
+
+\begin{definition}[Local reinforcement regime classes]
+\label{def:local-reinforcement-regime-classes}
+Assume $A_{\mathrm{bur}}(n)>0$.
+The local compact reinforcement pair is said to be:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item \emph{strictly burden-dominant} if
+  \[
+    \chi_{\mathrm{loc}}(n)<1;
+  \]
+  \item \emph{balanced-coupled} if
+  \[
+    \chi_{\mathrm{loc}}(n)=1;
+  \]
+  \item \emph{geometrically overcarried} if
+  \[
+    \chi_{\mathrm{loc}}(n)>1.
+  \]
+\end{enumerate}
+\end{definition}
+
+\begin{remark}[Why the ratio matters]
+\label{rem:why-the-ratio-matters}
+The compact pair already tells us that both burden-side and geometric reinforcement are active.
+The ratio tells us which of the two is currently driving the local repair budget.
+\end{remark}
+
+\begin{proposition}[Current compact repair is not balanced by default]
+\label{prop:current-compact-repair-is-not-balanced-by-default}
+Assume the first compact reinforcement theorem and the first local repair-orientation theorem.
+Then the current local compact repair is not balanced-coupled by default.
+More precisely, the post-v3.32.0 line should be read first as strictly burden-dominant unless a later local audit shows that the geometric reinforcement has risen to the same scale.
+\end{proposition}
+
+\begin{proof}
+By the first compact reinforcement theorem, the burden-side component $A_{\mathrm{bur}}(n)$ remains the first active repair scale, while the geometric component $A_{\mathrm{geo}}(n)$ records the total persistence reinforcement still required on the same window.
+By the local repair-orientation theorem, the first repair is Theta-dominant rather than geometric-dominant.
+Hence the default reading is not balanced-coupled, and the local repair is first to be read as burden-dominant unless later evidence forces a different regime class.
+\end{proof}
+
+\begin{definition}[Local reinforcement balance defect]
+\label{def:local-reinforcement-balance-defect}
+The \emph{local reinforcement balance defect} is
+\[
+  B_{\mathrm{loc}}(n)
+  :=
+  A_{\mathrm{geo}}(n)-A_{\mathrm{bur}}(n).
+\]
+\end{definition}
+
+\begin{remark}[Interpretation of the balance defect]
+\label{rem:interpretation-of-the-balance-defect}
+Negative balance defect means burden-side dominance.
+Zero balance defect means balanced coupled repair.
+Positive balance defect means that the geometric persistence side has overtaken the burden-side repair scale.
+\end{remark}
+
+\begin{theorem}[First local reinforcement-ratio theorem]
+\label{thm:first-local-reinforcement-ratio-theorem}
+Assume:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item the first compact reinforcement theorem applies;
+  \item the first local Theta-drift witness theorem applies;
+  \item the first local Teichmüller-persistence repair theorem applies.
+\end{enumerate}
+Then the current post-v3.32.0 local repair supports a first compact ratio reading.
+More precisely:
+\begin{enumerate}[leftmargin=2em,label=(\arabic*)]
+  \item the compact pair admits the ratio $\chi_{\mathrm{loc}}(n)$ and the balance defect $B_{\mathrm{loc}}(n)$;
+  \item the default local repair reading is strictly burden-dominant, hence
+  \[
+    B_{\mathrm{loc}}(n)<0
+    \quad\text{and therefore}\quad
+    \chi_{\mathrm{loc}}(n)<1
+  \]
+  in the default regime reading;
+  \item the geometric reinforcement remains genuinely active even in this burden-dominant regime, so the ratio does not collapse to zero.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Items (1) and the sign interpretation are immediate from the definitions of the ratio and balance defect.
+By the first compact reinforcement theorem, the burden-side component remains the first active repair scale.
+By the first local Teichmüller-persistence repair theorem, the geometric reinforcement is still genuinely active and therefore cannot be discarded.
+Hence the default regime is burden-dominant but not purely one-sided, which yields $B_{\mathrm{loc}}(n)<0$ and therefore $\chi_{\mathrm{loc}}(n)<1$ in the default reading.
+\end{proof}
+
+\begin{corollary}[Current compact-ratio working rule]
+\label{cor:current-compact-ratio-working-rule}
+The next local audit should not only record the pair
+\[
+  (A_{\mathrm{bur}}(n),A_{\mathrm{geo}}(n)),
+\]
+but also track the ratio $\chi_{\mathrm{loc}}(n)$ and balance defect $B_{\mathrm{loc}}(n)$ in order to measure whether the current repair remains burden-led or is moving toward balanced coupled repair.
+\end{corollary}
+
+\begin{proof}
+Immediate from Theorem~\ref{thm:first-local-reinforcement-ratio-theorem}.
+\end{proof}
+
+
+\begin{definition}[Local asymptotic repair orientation]
+\label{def:local-asymptotic-repair-orientation}
+The \emph{local asymptotic repair orientation} is the long-step tendency of the compact reinforcement ratio
+\[
+  \chi_{\mathrm{loc}}(n)
+  =
+  \frac{A_{\mathrm{geo}}(n)}{A_{\mathrm{bur}}(n)}
+\]
+along an admissible sequence of repaired local windows.
+\end{definition}
+
+\begin{definition}[Balance-seeking local repair family]
+\label{def:balance-seeking-local-repair-family}
+An admissible local repair family is called \emph{balance-seeking} if
+\[
+  \chi_{\mathrm{loc}}(n)\to 1
+\]
+along the family, equivalently if
+\[
+  B_{\mathrm{loc}}(n)\to 0.
+\]
+\end{definition}
+
+\begin{definition}[Persistently burden-dominant local repair family]
+\label{def:persistently-burden-dominant-local-repair-family}
+An admissible local repair family is called \emph{persistently burden-dominant} if there exists some \(\delta_{\mathrm{bal}}>0\) such that
+\[
+  \chi_{\mathrm{loc}}(n)\le 1-\delta_{\mathrm{bal}}
+\]
+for all sufficiently large local repair steps.
+\end{definition}
+
+\begin{remark}[Why the asymptotic question matters]
+\label{rem:why-the-asymptotic-question-matters}
+The current compact repair is already burden-dominant at first order.
+The real next question is whether this is only an initial orientation or whether the burden-side dominance remains structurally built into the repaired persistence problem.
+\end{remark}
+
+\begin{proposition}[The current line does not yet force balance-seeking behavior]
+\label{prop:current-line-does-not-yet-force-balance-seeking-behavior}
+Assume the current post-v3.32.0 local repair reading.
+Then the existing local theorems do not yet force
+\[
+  \chi_{\mathrm{loc}}(n)\to 1.
+\]
+In particular, no current result requires the geometric reinforcement to rise all the way to burden-side balance.
+\end{proposition}
+
+\begin{proof}
+The current local repair-orientation theorem yields burden-side dominance at first order, while the Teichmüller-side repair theorems only assert that the geometric reinforcement remains genuinely active. They do not assert that it asymptotically reaches the same scale as the burden-side reinforcement. Hence balance-seeking behavior is not yet forced.
+\end{proof}
+
+\begin{proposition}[The current line is naturally read as burden-dominant unless later balancing evidence appears]
+\label{prop:current-line-naturally-read-as-burden-dominant-unless-later-balancing-evidence-appears}
+Assume the first local reinforcement-ratio theorem and the first local repair-to-trigger calibration theorem.
+Then the default asymptotic reading of the current line is persistently burden-dominant unless a later local audit exhibits a genuine balancing mechanism reducing \(B_{\mathrm{loc}}(n)\) toward zero.
+\end{proposition}
+
+\begin{proof}
+The current ratio theorem places the local repair in the burden-dominant regime, and the first local repair-to-trigger calibration theorem still assigns the primary tightening to the Theta-side threshold. Thus the available repair logic continues to privilege the burden-side channel. Without an additional balancing mechanism, the natural default reading is that burden-side dominance persists.
+\end{proof}
+
+\begin{theorem}[First local asymptotic orientation theorem]
+\label{thm:first-local-asymptotic-orientation-theorem}
+Assume:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item the first local reinforcement-ratio theorem applies;
+  \item the first local repair-to-trigger calibration theorem applies;
+  \item no later local theorem has yet exhibited a balancing mechanism forcing \(B_{\mathrm{loc}}(n)\to 0\).
+\end{enumerate}
+Then the current post-v3.32.0 line should be read asymptotically as burden-dominant rather than balance-seeking.
+More precisely, the present local evidence supports persistent burden-side dominance as the default asymptotic orientation, while balanced-coupled repair remains only a later possibility to be justified by new local evidence.
+\end{theorem}
+
+\begin{proof}
+By the first local reinforcement-ratio theorem, the current compact repair is burden-dominant at first order. By the first local repair-to-trigger calibration theorem, the primary tightening remains Theta-side, although the geometric repair remains genuinely active. In the absence of an additional balancing mechanism driving the balance defect toward zero, the natural asymptotic reading continues the burden-dominant orientation rather than forcing convergence to balance.
+\end{proof}
+
+\begin{corollary}[Current asymptotic working rule]
+\label{cor:current-asymptotic-working-rule}
+The next local audit should not presuppose
+\[
+  \chi_{\mathrm{loc}}(n)\to 1.
+\]
+Instead, it should first test whether any genuine balancing mechanism exists at all; until then, the current local repair should be treated as asymptotically burden-dominant with genuine but subordinate geometric carry.
+\end{corollary}
+
+\begin{proof}
+Immediate from Theorem~\ref{thm:first-local-asymptotic-orientation-theorem}.
+\end{proof}
+
+\begin{definition}[Candidate local balancing mechanisms]
+\label{def:candidate-local-balancing-mechanisms}
+A \emph{candidate local balancing mechanism} for the compact reinforcement pair
+\[
+  \mathfrak A_{\mathrm{loc}}^{\sharp}(n)=(A_{\mathrm{bur}}(n),A_{\mathrm{geo}}(n))
+\]
+is any local structural effect capable of reducing the balance defect
+\[
+  B_{\mathrm{loc}}(n)=A_{\mathrm{geo}}(n)-A_{\mathrm{bur}}(n)
+\]
+toward zero. Three candidate types are distinguished:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item a \emph{crystal-side balancing mechanism}, acting through the corrected crystal compatibility equation;
+  \item a \emph{Teichm\"uller-side balancing mechanism}, acting through the geometric persistence layer alone;
+  \item a \emph{hybrid crystal--Teichm\"uller balancing mechanism}, acting by coupled improvement of the crystal compatibility side and the Teichm\"uller persistence side.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}[Why a pure crystal correction is probably not enough]
+\label{rem:why-pure-crystal-correction-probably-not-enough}
+The current local line already required a first burden-side repair followed by an explicit Teichm\"uller-side repair. This suggests that crystal-side correction alone is unlikely to be the full balancing mechanism.
+\end{remark}
+
+\begin{remark}[Why a pure Teichm\"uller correction is also probably not enough]
+\label{rem:why-pure-teichmueller-correction-probably-not-enough}
+The local repair-orientation theorem still forces positive burden-side reinforcement
+\[
+  \eta_{\Theta}(n)>0.
+\]
+Hence the geometric side alone does not erase the burden-side asymmetry.
+\end{remark}
+
+\begin{definition}[Hybrid balancing witness]
+\label{def:hybrid-balancing-witness}
+A \emph{hybrid balancing witness} is a local witness package showing simultaneously:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item improvement of the corrected crystal compatibility equation,
+  \item improvement of the Teichm\"uller-side persistence inequalities,
+  \item strict reduction of the balance defect
+  \[
+    B_{\mathrm{loc}}(n+1)>B_{\mathrm{loc}}(n)
+  \]
+  toward zero, equivalently
+  \[
+    |B_{\mathrm{loc}}(n+1)|<|B_{\mathrm{loc}}(n)|
+  \]
+  on the burden-dominant side.
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}[The current line does not yet support a purely crystal balancing mechanism]
+\label{prop:current-line-does-not-yet-support-purely-crystal-balancing}
+Assume the current post-v3.32.0 local repair line. Then the available local evidence does not yet support reading the first balancing mechanism as purely crystal-side.
+\end{proposition}
+
+\begin{proof}
+The local crystal-equation correction theorem already required the prior burden-side and Teichm\"uller-side repair data. Hence the crystal correction enters as part of a repaired persistence package, not as a self-sufficient balancing source on its own.
+\end{proof}
+
+\begin{proposition}[The current line does not yet support a purely Teichm\"uller balancing mechanism]
+\label{prop:current-line-does-not-yet-support-purely-teichmueller-balancing}
+Assume the first local repair-orientation theorem. Then the available local evidence does not yet support reading the first balancing mechanism as purely Teichm\"uller-side.
+\end{proposition}
+
+\begin{proof}
+The first local repair-orientation theorem keeps the dominant local repair on the burden side while the geometric side remains genuinely active but subordinate. Hence the currently visible repair is not purely Teichm\"uller-driven.
+\end{proof}
+
+\begin{theorem}[First local balancing-mechanism orientation theorem]
+\label{thm:first-local-balancing-mechanism-orientation-theorem}
+Assume:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item the first local asymptotic orientation theorem applies;
+  \item the first local crystal-equation correction theorem applies;
+  \item the first local Teichm\"uller-persistence repair theorem applies.
+\end{enumerate}
+Then the most plausible candidate for a future local balancing mechanism is not purely crystal-side and not purely Teichm\"uller-side, but hybrid crystal--Teichm\"uller.
+\end{theorem}
+
+\begin{proof}
+By the first local asymptotic orientation theorem, the current line remains burden-dominant unless a later balancing mechanism appears. By the local crystal-equation correction theorem, crystal-side correction is relevant but not self-sufficient. By the local Teichm\"uller-persistence repair theorem, geometric repair is genuinely active but likewise not self-sufficient. Therefore the first plausible balancing mechanism must couple both corrections if it is to reduce the balance defect toward zero.
+\end{proof}
+
+\begin{corollary}[Current balancing-mechanism working rule]
+\label{cor:current-balancing-mechanism-working-rule}
+The next local audit should not first search for a purely crystal balancing mechanism or a purely Teichm\"uller balancing mechanism. Instead, it should search for the first hybrid witness that lowers the balance defect by coordinated crystal-side and geometric-side repair.
+\end{corollary}
+
+\begin{proof}
+Immediate from Theorem~\ref{thm:first-local-balancing-mechanism-orientation-theorem}.
+\end{proof}
+
+
+\begin{definition}[First hybrid balancing step]
+\label{def:first-hybrid-balancing-step}
+A \emph{first hybrid balancing step} from the local state at step \(n\) to the next step \(n+1\) is a local repaired transition satisfying all of the following:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item the corrected crystal compatibility equation improves from
+  \[
+    \mathcal C_{\mathrm{cell}}^{\sharp}(X_n,X_{n+1})
+  \]
+  to a closer-to-compatible value on the updated two-step window;
+  \item the Teichm\"uller-side persistence repair data improve in the sense that the repaired geometric persistence test is strictly better satisfied on the updated window;
+  \item the compact reinforcement pair
+  \[
+    \mathfrak A_{\mathrm{loc}}^{\sharp}(n)=(A_{\mathrm{bur}}(n),A_{\mathrm{geo}}(n))
+  \]
+  is updated to
+  \[
+    \mathfrak A_{\mathrm{loc}}^{\sharp}(n+1)=(A_{\mathrm{bur}}(n+1),A_{\mathrm{geo}}(n+1))
+  \]
+  with strictly smaller balance defect magnitude
+  \[
+    |B_{\mathrm{loc}}(n+1)|<|B_{\mathrm{loc}}(n)|;
+  \]
+  \item the update remains inside the same local admissibility regime.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[First hybrid balancing witness package]
+\label{def:first-hybrid-balancing-witness-package}
+A \emph{first hybrid balancing witness package} at step \(n\) is a finite witness datum
+\[
+  \mathfrak W_{\mathrm{hyb}}(n)
+  =
+  \bigl(
+    \delta_{\mathrm{cell}}(n),
+    \delta_{T}(n),
+    \Delta B_{\mathrm{loc}}(n)
+  \bigr)
+\]
+such that:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item \(\delta_{\mathrm{cell}}(n)>0\) measures the crystal-side compatibility gain of the first hybrid balancing step;
+  \item \(\delta_{T}(n)>0\) measures the Teichm\"uller-side persistence gain of the same step;
+  \item
+  \[
+    \Delta B_{\mathrm{loc}}(n)
+    :=
+    |B_{\mathrm{loc}}(n)|-|B_{\mathrm{loc}}(n+1)|
+    >0
+  \]
+  measures the strict gain toward local balance.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}[Meaning of the hybrid witness package]
+\label{rem:meaning-of-the-hybrid-witness-package}
+The first hybrid balancing witness package is the first local datum that does more than merely diagnose burden-dominance.
+It certifies that crystal-side correction and Teichm\"uller-side repair improve together and that the resulting coupled improvement genuinely lowers the balance defect.
+\end{remark}
+
+\begin{definition}[Hybrid balancing efficiency ratio]
+\label{def:hybrid-balancing-efficiency-ratio}
+The \emph{hybrid balancing efficiency ratio} of a first hybrid balancing witness package is
+\[
+  \Xi_{\mathrm{hyb}}(n)
+  :=
+  \frac{\Delta B_{\mathrm{loc}}(n)}{\delta_{\mathrm{cell}}(n)+\delta_{T}(n)},
+\]
+provided the denominator is positive.
+\end{definition}
+
+\begin{remark}[Why the efficiency ratio is useful]
+\label{rem:why-the-efficiency-ratio-is-useful}
+This ratio records how much balance-defect reduction is obtained per unit of coupled crystal-plus-Teichm\"uller repair.
+It is therefore the first local scalar witness that the hybrid mechanism is not merely present, but actually effective.
+\end{remark}
+
+\begin{proposition}[A first hybrid balancing step is stronger than separate side repairs]
+\label{prop:first-hybrid-balancing-step-stronger-than-separate-side-repairs}
+Every first hybrid balancing step is stronger than a purely crystal-side repair and stronger than a purely Teichm\"uller-side repair considered separately.
+\end{proposition}
+
+\begin{proof}
+By definition, a first hybrid balancing step requires simultaneous crystal-side improvement, simultaneous Teichm\"uller-side persistence improvement, and strict reduction of the balance defect magnitude.
+A purely one-sided repair can satisfy at most one of the two side-improvement clauses, but not both together with the coupled balance reduction requirement.
+Hence the hybrid step is strictly stronger.
+\end{proof}
+
+\begin{lemma}[First hybrid balancing witness lemma]
+\label{lem:first-hybrid-balancing-witness-lemma}
+Assume:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item the first local balancing-mechanism orientation theorem applies;
+  \item a first hybrid balancing step exists on the current local window.
+\end{enumerate}
+Then a first hybrid balancing witness package exists.
+\end{lemma}
+
+\begin{proof}
+If a first hybrid balancing step exists, then by definition it produces strictly positive crystal-side compatibility gain, strictly positive Teichm\"uller-side persistence gain, and strict decrease of the balance defect magnitude.
+These three gains form the witness package
+\[
+  \mathfrak W_{\mathrm{hyb}}(n)
+  =
+  (\delta_{\mathrm{cell}}(n),\delta_{T}(n),\Delta B_{\mathrm{loc}}(n)).
+\]
+\end{proof}
+
+\begin{theorem}[First hybrid balancing witness theorem]
+\label{thm:first-hybrid-balancing-witness-theorem}
+Assume:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item the first local balancing-mechanism orientation theorem applies;
+  \item the current line is still asymptotically burden-dominant;
+  \item a local repaired two-step window exists on which crystal-side and Teichm\"uller-side improvements occur simultaneously.
+\end{enumerate}
+Then the current line supports a first hybrid balancing witness exactly when the simultaneous side improvements produce strict reduction of
+\[
+  |B_{\mathrm{loc}}(n)|.
+\]
+Equivalently, the first honest evidence for a genuine balancing mechanism is not the mere coexistence of crystal and geometric repair, but the existence of a positive witness package
+\[
+  \mathfrak W_{\mathrm{hyb}}(n)
+  =
+  (\delta_{\mathrm{cell}}(n),\delta_{T}(n),\Delta B_{\mathrm{loc}}(n))
+\]
+with
+\[
+  \Delta B_{\mathrm{loc}}(n)>0.
+\]
+\end{theorem}
+
+\begin{proof}
+By the balancing-mechanism orientation theorem, any plausible future balancing mechanism must be hybrid rather than purely one-sided.
+If simultaneous crystal-side and Teichm\"uller-side improvements occur but do not reduce \(|B_{\mathrm{loc}}(n)|\), then no genuine balancing has yet been witnessed; the system remains merely burden-dominant with parallel repairs.
+Conversely, if the simultaneous side improvements do reduce \(|B_{\mathrm{loc}}(n)|\), then the resulting gains define a positive hybrid witness package, and the first honest evidence for a balancing mechanism is present.
+\end{proof}
+
+\begin{corollary}[Current hybrid-balancing working rule]
+\label{cor:current-hybrid-balancing-working-rule}
+The next local audit should not merely ask whether crystal-side and Teichm\"uller-side repair are both visible.
+It should ask whether they jointly produce
+\[
+  \Delta B_{\mathrm{loc}}(n)>0,
+\]
+and hence a first genuine hybrid balancing witness package.
+\end{corollary}
+
+
+\begin{definition}[Hybrid witness existence obstruction]
+\label{def:hybrid-witness-existence-obstruction}
+A \emph{hybrid witness existence obstruction} at step \(n\) is the failure of the current local line to produce any witness package
+\[
+  \mathfrak W_{\mathrm{hyb}}(n)
+  =
+  (\delta_{\mathrm{cell}}(n),\delta_T(n),\Delta B_{\mathrm{loc}}(n))
+\]
+with
+\[
+  \delta_{\mathrm{cell}}(n)>0,
+  \qquad
+  \delta_T(n)>0,
+  \qquad
+  \Delta B_{\mathrm{loc}}(n)>0.
+\]
+Equivalently, the line remains burden-dominant because no first honest hybrid balancing witness is yet produced.
+\end{definition}
+
+\begin{definition}[Weak hybrid efficiency obstruction]
+\label{def:weak-hybrid-efficiency-obstruction}
+A \emph{weak hybrid efficiency obstruction} at step \(n\) is the situation in which a first hybrid balancing witness package exists but its hybrid balancing efficiency ratio
+\[
+  \Xi_{\mathrm{hyb}}(n)
+  =
+  \frac{\Delta B_{\mathrm{loc}}(n)}{\delta_{\mathrm{cell}}(n)+\delta_T(n)}
+\]
+remains too small to alter the current asymptotic burden-dominant orientation.
+\end{definition}
+
+\begin{remark}[Existence versus efficiency]
+\label{rem:existence-versus-efficiency}
+There are therefore two distinct post-r30 obstructions:
+first, the line may fail to produce any honest hybrid witness at all;
+second, it may produce such a witness, but only with negligible balancing efficiency.
+These two failure modes should not be confused.
+\end{remark}
+
+\begin{definition}[Existence-prior local regime]
+\label{def:existence-prior-local-regime}
+The current local line is said to be in an \emph{existence-prior local regime} if the first balancing obstruction is of witness-existence type rather than weak-efficiency type.
+\end{definition}
+
+\begin{definition}[Efficiency-prior local regime]
+\label{def:efficiency-prior-local-regime}
+The current local line is said to be in an \emph{efficiency-prior local regime} if a first hybrid balancing witness is already present, but its efficiency ratio remains too small to change the burden-dominant asymptotic orientation.
+\end{definition}
+
+\begin{proposition}[Asymptotic burden-dominance blocks efficiency-first readings]
+\label{prop:asymptotic-burden-dominance-blocks-efficiency-first-readings}
+Assume the first local asymptotic orientation theorem and the first hybrid balancing witness theorem.
+If no positive witness package
+\[
+  \mathfrak W_{\mathrm{hyb}}(n)
+\]
+with
+\[
+  \Delta B_{\mathrm{loc}}(n)>0
+\]
+is yet available, then the current line cannot honestly be read as efficiency-prior.
+\end{proposition}
+
+\begin{proof}
+An efficiency-prior reading presupposes that a first hybrid balancing witness already exists and that only its efficiency remains insufficient. If no positive witness package is available at all, then the obstruction occurs before efficiency becomes a meaningful variable. Hence the line cannot honestly be read as efficiency-prior.
+\end{proof}
+
+\begin{theorem}[First hybrid obstruction orientation theorem]
+\label{thm:first-hybrid-obstruction-orientation-theorem}
+Assume:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item the first local asymptotic orientation theorem applies;
+  \item the first local balancing-mechanism orientation theorem applies;
+  \item the first hybrid balancing witness theorem identifies positive hybrid witness data as the first honest balancing evidence.
+\end{enumerate}
+Then the current post-r30 line is obstruction-prior on the witness-existence side.
+More precisely, its first balancing obstruction is not that an existing hybrid witness is too weak, but that no first positive hybrid balancing witness package has yet been produced.
+\end{theorem}
+
+\begin{proof}
+By the first local asymptotic orientation theorem, the line remains burden-dominant by default unless a genuine balancing mechanism is exhibited. By the balancing-mechanism orientation theorem, any such genuine mechanism must be hybrid. By the first hybrid balancing witness theorem, the first honest evidence for that mechanism is exactly a positive witness package with \(\Delta B_{\mathrm{loc}}(n)>0\). Therefore, as long as no such package is present, the primary obstruction lies on the witness-existence side rather than on the efficiency side.
+\end{proof}
+
+\begin{corollary}[Current hybrid-balancing obstruction rule]
+\label{cor:current-hybrid-balancing-obstruction-rule}
+The next local audit should first ask whether a positive hybrid witness package exists at all. Only after such a package is found should the secondary question of hybrid efficiency be treated as the leading obstruction.
+\end{corollary}
+
+\begin{proof}
+Immediate from Theorem~\ref{thm:first-hybrid-obstruction-orientation-theorem}.
+\end{proof}
+
+
+
+
+\begin{definition}[Candidate positive hybrid construction step]
+\label{def:candidate-positive-hybrid-construction-step}
+A \emph{candidate positive hybrid construction step} at stage $n$ is a local update from step $n$ to $n+1$ such that:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item the burden-side repair is active with
+  \[
+    \delta_{\mathrm{cell}}(n)>0;
+  \]
+  \item the Teichm\"uller-side persistence repair is active with
+  \[
+    \delta_T(n)>0;
+  \]
+  \item both repairs act on the same local closure-phase window;
+  \item the updated local balance defect satisfies
+  \[
+    B_{\mathrm{loc}}(n+1)>B_{\mathrm{loc}}(n).
+  \]
+\end{enumerate}
+\end{definition}
+
+\begin{remark}[Why the construction is phrased this way]
+\label{rem:why-construction-phrased-this-way}
+The current line does not yet justify assuming that a positive hybrid witness appears automatically once both repair channels are nonzero.
+The real construction requirement is stronger: the simultaneous crystal-side and Teichm\"uller-side repairs must improve the local balance defect itself.
+\end{remark}
+
+\begin{definition}[Positive hybrid construction datum]
+\label{def:positive-hybrid-construction-datum}
+A \emph{positive hybrid construction datum} at stage $n$ is a quadruple
+\[
+  \mathfrak C_{\mathrm{hyb}}^{+}(n)
+  :=
+  \bigl(
+    \delta_{\mathrm{cell}}(n),
+    \delta_T(n),
+    B_{\mathrm{loc}}(n),
+    B_{\mathrm{loc}}(n+1)
+  \bigr)
+\]
+attached to a candidate positive hybrid construction step.
+\end{definition}
+
+\begin{definition}[Strictly positive hybrid construction]
+\label{def:strictly-positive-hybrid-construction}
+A candidate positive hybrid construction step is called \emph{strictly positive} if, in addition,
+\[
+  \Delta B_{\mathrm{loc}}(n)
+  :=
+  B_{\mathrm{loc}}(n+1)-B_{\mathrm{loc}}(n)
+  >0.
+\]
+\end{definition}
+
+\begin{definition}[Hybrid construction gate]
+\label{def:hybrid-construction-gate}
+The \emph{hybrid construction gate} at stage $n$ is the conjunction of the conditions
+\[
+  \delta_{\mathrm{cell}}(n)>0,
+  \qquad
+  \delta_T(n)>0,
+  \qquad
+  \Delta B_{\mathrm{loc}}(n)>0.
+\]
+\end{definition}
+
+\begin{remark}[Existence obstruction as gate failure]
+\label{rem:existence-obstruction-as-gate-failure}
+Under the current obstruction-oriented reading, the missing positive hybrid witness is equivalently the failure of the hybrid construction gate.
+This makes the existence problem testable in the same local language as the later efficiency problem.
+\end{remark}
+
+\begin{proposition}[Positive hybrid witness construction implies witness existence]
+\label{prop:positive-hybrid-witness-construction-implies-witness-existence}
+Every strictly positive hybrid construction step produces a positive hybrid witness package
+\[
+  \mathfrak W_{\mathrm{hyb}}(n)
+  =
+  \bigl(
+    \delta_{\mathrm{cell}}(n),
+    \delta_T(n),
+    \Delta B_{\mathrm{loc}}(n)
+  \bigr)
+\]
+with
+\[
+  \delta_{\mathrm{cell}}(n)>0,
+  \qquad
+  \delta_T(n)>0,
+  \qquad
+  \Delta B_{\mathrm{loc}}(n)>0.
+\]
+\end{proposition}
+
+\begin{proof}
+By definition, a strictly positive hybrid construction step already supplies positive crystal-side repair, positive Teichm\"uller-side repair, and a strictly positive balance-defect gain.
+These are exactly the components required for a positive hybrid witness package.
+\end{proof}
+
+\begin{proposition}[The current existence obstruction is equivalent to absence of a strictly positive hybrid construction]
+\label{prop:current-existence-obstruction-equivalent-to-absence-of-construction}
+Assume the first hybrid obstruction orientation theorem.
+Then the current line lies in the existence-prior regime if and only if no strictly positive hybrid construction step is yet available on the active local window.
+\end{proposition}
+
+\begin{proof}
+By the first hybrid obstruction orientation theorem, the current primary obstruction is the absence of a positive hybrid witness package.
+By Proposition~\ref{prop:positive-hybrid-witness-construction-implies-witness-existence}, every strictly positive hybrid construction step would already produce such a package.
+Hence the existence-prior obstruction holds exactly when no such construction step is yet available.
+\end{proof}
+
+\begin{theorem}[First positive hybrid witness construction theorem]
+\label{thm:first-positive-hybrid-witness-construction-theorem}
+Assume:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item the first hybrid obstruction orientation theorem applies;
+  \item the local crystal-side correction datum is available;
+  \item the local Teichm\"uller-side repair datum is available;
+  \item both data act on the same active closure-phase window.
+\end{enumerate}
+Then the first honest transition out of the existence-prior regime occurs exactly when a strictly positive hybrid construction step is produced.
+Equivalently, the first positive hybrid balancing witness arises exactly when the hybrid construction gate is opened on the active local window.
+\end{theorem}
+
+\begin{proof}
+By the first hybrid obstruction orientation theorem, the current line remains stuck before the efficiency question precisely because no positive hybrid witness yet exists.
+By Proposition~\ref{prop:positive-hybrid-witness-construction-implies-witness-existence}, every strictly positive hybrid construction step produces such a witness.
+Conversely, on the active local window a first positive witness must come from simultaneous positive crystal-side and Teichm\"uller-side repair that genuinely improves the local balance defect, which is exactly the content of a strictly positive hybrid construction step.
+Hence exiting the existence-prior regime is equivalent to producing such a step, or equivalently to opening the hybrid construction gate.
+\end{proof}
+
+\begin{corollary}[Current hybrid-construction working rule]
+\label{cor:current-hybrid-construction-working-rule}
+The next local audit should not yet optimize hybrid efficiency.
+It should first test whether the active local crystal-side and Teichm\"uller-side repairs can be synchronized into a strictly positive hybrid construction step with
+\[
+  \Delta B_{\mathrm{loc}}(n)>0.
+\]
+\end{corollary}
+
+\begin{proof}
+Immediate from Theorem~\ref{thm:first-positive-hybrid-witness-construction-theorem}.
+\end{proof}
+
+
+\begin{definition}[Crystal-side gate obstruction]
+\label{def:crystal-side-gate-obstruction}
+A \emph{crystal-side gate obstruction} at stage $n$ is the failure of the hybrid construction gate caused primarily by the crystal-side component, i.e. by one of the following:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item
+  \[
+    \delta_{\mathrm{cell}}(n)\le 0;
+  \]
+  \item the crystal-side correction datum is not available on the active local window;
+  \item the crystal-side correction fails to synchronize with the active Teichm\"uller-side repair on the same closure-phase window.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Teichm\"uller-side gate obstruction]
+\label{def:teichmueller-side-gate-obstruction}
+A \emph{Teichm\"uller-side gate obstruction} at stage $n$ is the failure of the hybrid construction gate caused primarily by the geometric persistence side, i.e. by one of the following:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item
+  \[
+    \delta_T(n)\le 0;
+  \]
+  \item the Teichm\"uller-side repair datum is not available on the active local window;
+  \item the geometric repair remains too weak to support
+  \[
+    \Delta B_{\mathrm{loc}}(n)>0
+  \]
+  even when the crystal-side correction is already positive.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Gate-side desynchronization defect]
+\label{def:gate-side-desynchronization-defect}
+The \emph{gate-side desynchronization defect} at stage $n$ is the obstruction datum
+\[
+  \mathfrak D_{\mathrm{gate}}(n)
+  :=
+  \bigl(
+    \delta_{\mathrm{cell}}(n),
+    \delta_T(n),
+    \Delta B_{\mathrm{loc}}(n)
+  \bigr)
+\]
+read under the question which side first fails to keep the hybrid construction gate open.
+\end{definition}
+
+\begin{remark}[What ``first out of sync'' means]
+\label{rem:what-first-out-of-sync-means}
+The present question is not yet one of hybrid efficiency.
+It asks which side fails first at the level of gate opening:
+the crystal-side correction, the Teichm\"uller-side persistence repair, or the synchronization of both on the same local closure-phase window.
+\end{remark}
+
+\begin{proposition}[The current line is not crystal-obstruction-prior]
+\label{prop:current-line-is-not-crystal-obstruction-prior}
+Under the current post-v3.32.0 reading, the active local line is not primarily blocked by absence of crystal-side correction.
+\end{proposition}
+
+\begin{proof}
+The local crystal-equation correction theorem and the compact reinforcement line already support a positive crystal-side correction datum on the active local window.
+The remaining obstruction therefore does not first arise from the total absence of the crystal-side contribution.
+\end{proof}
+
+\begin{proposition}[The current line is Teichm\"uller-side-prior at the gate]
+\label{prop:current-line-is-teichmueller-side-prior-at-the-gate}
+Under the current post-v3.32.0 reading, the first gate-side desynchronization is read primarily on the Teichm\"uller-side persistence channel.
+\end{proposition}
+
+\begin{proof}
+The tightened-package plausibility reading and the subsequent Teichm\"uller-persistence repair line already isolate the residual insufficiency on the geometric persistence side after the first burden-side repair has been introduced.
+The hybrid-construction obstruction then remains because a positive crystal-side correction does not yet suffice to produce
+\[
+  \Delta B_{\mathrm{loc}}(n)>0.
+\]
+Hence the first gate-side desynchronization is read primarily on the Teichm\"uller-side channel rather than on the crystal side.
+\end{proof}
+
+\begin{theorem}[First gate-side desynchronization orientation theorem]
+\label{thm:first-gate-side-desynchronization-orientation-theorem}
+Assume:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item the first positive hybrid witness construction theorem applies;
+  \item the local crystal-equation correction theorem applies;
+  \item the first local Teichm\"uller-persistence repair theorem applies;
+  \item the current line still lies in the existence-prior hybrid obstruction regime.
+\end{enumerate}
+Then the current gate failure is Teichm\"uller-side-prior.
+
+More precisely:
+\begin{enumerate}[leftmargin=2em,label=(\roman*)]
+  \item the crystal-side correction is not the first component to fall out of sync;
+  \item the primary remaining defect is the insufficient geometric persistence contribution needed to turn the positive local corrections into
+  \[
+    \Delta B_{\mathrm{loc}}(n)>0;
+  \]
+  \item the next local construction step should therefore strengthen the Teichm\"uller-side synchronization before attempting any efficiency optimization.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+By Proposition~\ref{prop:current-line-is-not-crystal-obstruction-prior}, the crystal-side correction is already locally present and is not the primary missing ingredient.
+By Proposition~\ref{prop:current-line-is-teichmueller-side-prior-at-the-gate}, the residual desynchronization sits on the Teichm\"uller-side persistence channel.
+Since the hybrid witness still does not yet exist, the active local task is not efficiency optimization but restoration of sufficient geometric persistence to open the gate.
+\end{proof}
+
+\begin{corollary}[Current gate-side working rule]
+\label{cor:current-gate-side-working-rule}
+The next local audit should first ask how the Teichm\"uller-side repair must be strengthened or synchronized so that the already present crystal-side correction becomes hybrid-gate-effective.
+Only after that should the line pass to hybrid efficiency questions.
+\end{corollary}
+
+\begin{proof}
+Immediate from Theorem~\ref{thm:first-gate-side-desynchronization-orientation-theorem}.
+\end{proof}
+
+
+
+
+\begin{definition}[Phase-lock synchronization defect]
+\label{def:phase-lock-synchronization-defect}
+A \emph{phase-lock synchronization defect} at stage $n$ is the failure of the second-step local repair to keep the phase-side burden correction aligned with the same closure-phase window on which the first-step near-trigger state was read.
+\end{definition}
+
+\begin{definition}[Teichm\"uller-carry synchronization defect]
+\label{def:teichmueller-carry-synchronization-defect}
+A \emph{Teichm\"uller-carry synchronization defect} at stage $n$ is the failure of the geometric persistence correction to carry the repaired second step inside the same local Teichm\"uller-safe band as the first step.
+\end{definition}
+
+\begin{definition}[Local Teichm\"uller-side synchronization datum]
+\label{def:local-teichmueller-side-synchronization-datum}
+The \emph{local Teichm\"uller-side synchronization datum} at stage $n$ is
+\[
+  \mathfrak S_T^{\mathrm{loc}}(n)
+  :=
+  \bigl(
+    \sigma_{\Theta}^{\mathrm{lock}}(n),
+    \sigma_{T}^{\mathrm{carry}}(n)
+  \bigr),
+\]
+where:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item $\sigma_{\Theta}^{\mathrm{lock}}(n)$ measures the remaining phase-lock misalignment of the repaired second step;
+  \item $\sigma_T^{\mathrm{carry}}(n)$ measures the remaining geometric carry defect on the same two-step local window.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}[What synchronization means locally]
+\label{rem:what-synchronization-means-locally}
+The present question is no longer whether geometry matters at all. It asks more precisely which kind of Teichm\"uller-side synchronization is still missing: the phase-side lock itself, the geometric carry of that lock, or both together.
+\end{remark}
+
+\begin{definition}[Locally synchronized repaired second step]
+\label{def:locally-synchronized-repaired-second-step}
+A repaired second step at stage $n$ is called \emph{locally synchronized} if
+\[
+  \sigma_{\Theta}^{\mathrm{lock}}(n)=0
+  \qquad\text{and}\qquad
+  \sigma_T^{\mathrm{carry}}(n)=0.
+\]
+\end{definition}
+
+\begin{proposition}[The current line is not raw-geometry-prior]
+\label{prop:current-line-is-not-raw-geometry-prior}
+Under the current post-v3.32.0 reading, the active local line is not primarily blocked by raw geometric carry alone.
+\end{proposition}
+
+\begin{proof}
+The current line already carries a positive Teichm\"uller-side repair contribution and a positive geometric witness contribution. The residual failure therefore cannot be read first as total absence of geometry, but only as insufficient synchronization of that geometric contribution with the repaired phase-side step.
+\end{proof}
+
+\begin{proposition}[The current line is phase-lock-prior on the Teichm\"uller side]
+\label{prop:current-line-is-phase-lock-prior-on-the-teichmueller-side}
+Under the current post-v3.32.0 reading, the first remaining Teichm\"uller-side synchronization defect is phase-lock-prior.
+\end{proposition}
+
+\begin{proof}
+The gate-side desynchronization orientation theorem already identifies the first remaining gate defect as Teichm\"uller-side-prior rather than crystal-side-prior. The local repair-orientation and tightened-package plausibility lines then show that the geometric channel is active but still fails to hold the repaired second step in the same closure-phase window. Hence the first remaining defect is best read as insufficient phase-lock synchronization, with geometric carry acting as the witness and support channel.
+\end{proof}
+
+\begin{theorem}[First Teichm\"uller-side synchronization orientation theorem]
+\label{thm:first-teichmueller-side-synchronization-orientation-theorem}
+Assume:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item the first local Theta-drift witness theorem applies;
+  \item the first local phase-side repair theorem applies;
+  \item the first local Teichm\"uller-persistence repair theorem applies;
+  \item the first gate-side desynchronization orientation theorem applies.
+\end{enumerate}
+Then the first remaining Teichm\"uller-side synchronization problem is phase-lock-prior rather than raw-carry-prior.
+
+More precisely:
+\begin{enumerate}[leftmargin=2em,label=(\roman*)]
+  \item the missing synchronization is not first the total absence of geometric carry;
+  \item the missing synchronization is first the failure to keep the repaired second step phase-locked inside the same closure-phase window;
+  \item the geometric carry defect remains genuinely active, but as the supporting witness of the phase-lock failure rather than as the primary independent obstruction.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+By Proposition~\ref{prop:current-line-is-not-raw-geometry-prior}, the active line is not blocked first by total absence of geometry. By Proposition~\ref{prop:current-line-is-phase-lock-prior-on-the-teichmueller-side}, the first remaining synchronization failure is read on the phase-lock component of the repaired second step. Therefore the current Teichm\"uller-side synchronization problem is phase-lock-prior, with the geometric carry defect remaining real but subordinate.
+\end{proof}
+
+\begin{corollary}[Current Teichm\"uller-side synchronization working rule]
+\label{cor:current-teichmueller-side-synchronization-working-rule}
+The next local audit should not ask first for more geometry in the abstract. It should ask first how the repaired second step can be phase-locked back into the same closure-phase window, while using the geometric channel to certify and carry that repaired lock.
+\end{corollary}
+
+\begin{proof}
+Immediate from Theorem~\ref{thm:first-teichmueller-side-synchronization-orientation-theorem}.
+\end{proof}
+
+
+
+\begin{definition}[Local phase-lock repair datum]
+\label{def:local-phase-lock-repair-datum}
+The \emph{local phase-lock repair datum} at stage $n$ is
+\[
+  \mathfrak R_{\mathrm{lock}}^{\mathrm{loc}}(n)
+  :=
+  \bigl(
+    \ell_{\Theta}^{\mathrm{lock}}(n),
+    \ell_{T}^{\mathrm{lock}}(n)
+  \bigr),
+\]
+where $\ell_{\Theta}^{\mathrm{lock}}(n)$ denotes the extra phase-side lock correction required to remove the residual phase-lock defect and $\ell_{T}^{\mathrm{lock}}(n)$ denotes the extra Teichm\"uller-side carry needed to stabilize that repaired lock on the same two-step window.
+\end{definition}
+
+\begin{definition}[Phase-lock repaired local window]
+\label{def:phase-lock-repaired-local-window}
+A repaired two-step local window at stage $n$ is called \emph{phase-lock repaired} if, after applying the local phase-lock repair datum, one has
+\[
+  \sigma_{\Theta}^{\mathrm{lock}}(n)=0
+  \qquad\text{and}\qquad
+  \sigma_T^{\mathrm{carry}}(n)\le \ell_T^{\mathrm{lock}}(n).
+\]
+Equivalently, the repaired second step is brought back into the same active closure-phase window while the remaining geometric carry defect is absorbed by the stated lock-carry allowance.
+\end{definition}
+
+\begin{definition}[Minimal local phase-lock repair]
+\label{def:minimal-local-phase-lock-repair}
+A local phase-lock repair datum
+\[
+  \mathfrak R_{\mathrm{lock}}^{\mathrm{loc}}(n)
+  =
+  \bigl(
+    \ell_{\Theta}^{\mathrm{lock}}(n),
+    \ell_{T}^{\mathrm{lock}}(n)
+  \bigr)
+\]
+is called \emph{minimal} if no strictly smaller pair of nonnegative corrections removes the phase-lock synchronization defect on the same two-step local window.
+\end{definition}
+
+\begin{remark}[What the phase-lock repair really does]
+\label{rem:what-the-phase-lock-repair-really-does}
+The phase-lock repair is not a fresh bulk law. It is the smallest local correction that forces the repaired second step back onto the same closure-phase slice as the first near-trigger step. Geometrically, one may think of it as a local re-aiming plus carry-stabilization of the second point so that both points lie again in the same admissible narrow corridor rather than in neighboring but misaligned corridors.
+\end{remark}
+
+\begin{lemma}[First local phase-lock repair lemma]
+\label{lem:first-local-phase-lock-repair-lemma}
+Assume:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item the first Teichm\"uller-side synchronization orientation theorem applies;
+  \item the active local obstruction is phase-lock-prior;
+  \item a local phase-lock repair datum exists.
+\end{enumerate}
+Then the vanishing condition
+\[
+  \sigma_{\Theta}^{\mathrm{lock}}(n)=0
+\]
+is the first honest local repair target for reopening the hybrid construction gate.
+\end{lemma}
+
+\begin{proof}
+By Theorem~\ref{thm:first-teichmueller-side-synchronization-orientation-theorem}, the first remaining synchronization obstruction is read on the phase-lock component rather than on raw geometric absence. Hence the first honest repair target is to remove the phase-lock defect itself. The accompanying carry correction remains necessary, but it is subordinate to the lock restoration as long as the active obstruction is phase-lock-prior.
+\end{proof}
+
+\begin{proposition}[Current line supports phase-lock-prior local repair]
+\label{prop:current-line-supports-phase-lock-prior-local-repair}
+Under the present post-v3.32.0 reading, the next local strengthening step should first reduce $\sigma_{\Theta}^{\mathrm{lock}}(n)$ and only then optimize the associated geometric carry.
+\end{proposition}
+
+\begin{proof}
+This is just the operational form of the phase-lock-prior diagnosis. Since the line is not raw-geometry-prior, one does not first optimize geometric amplitude in the abstract. One first restores alignment of the repaired second step with the active closure-phase window, and then uses the Teichm\"uller-side correction to support that restored lock.
+\end{proof}
+
+\begin{theorem}[First phase-lock repair theorem]
+\label{thm:first-phase-lock-repair-theorem}
+Assume:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item the first local Theta-drift witness theorem applies;
+  \item the first local phase-side repair theorem applies;
+  \item the first local Teichm\"uller-persistence repair theorem applies;
+  \item the first Teichm\"uller-side synchronization orientation theorem applies;
+  \item a minimal local phase-lock repair datum exists.
+\end{enumerate}
+Then the current post-v3.32.0 line supports a first concrete phase-lock repair candidate.
+
+More precisely:
+\begin{enumerate}[leftmargin=2em,label=(\roman*)]
+  \item the primary repair target is
+  \[
+    \sigma_{\Theta}^{\mathrm{lock}}(n) \to 0;
+  \]
+  \item the geometric carry repair remains genuinely active through
+  \[
+    \ell_T^{\mathrm{lock}}(n)>0
+  \]
+  whenever pure phase-side re-alignment does not by itself stabilize the repaired second step;
+  \item a phase-lock repaired local window is the first local candidate for reopening the hybrid construction gate.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Items (a)--(d) identify the present obstruction chain: the first failure is Theta-drift-prior, the first repair is burden-side with geometric carry, the next residual obstruction is Teichm\"uller-side-prior, and that obstruction is phase-lock-prior rather than raw-geometry-prior. Therefore the first concrete local repair must target vanishing of $\sigma_{\Theta}^{\mathrm{lock}}(n)$. If pure re-alignment is not enough to keep the repaired second step in the same local Teichm\"uller-safe band, a positive carry correction $\ell_T^{\mathrm{lock}}(n)$ remains necessary. This yields the first concrete phase-lock repair candidate.
+\end{proof}
+
+\begin{corollary}[Current phase-lock repair working rule]
+\label{cor:current-phase-lock-repair-working-rule}
+The next local audit should no longer ask merely whether the repaired second step is better than before. It should ask whether the applied local correction actually forces
+\[
+  \sigma_{\Theta}^{\mathrm{lock}}(n)=0
+\]
+and, if not, which remaining carry correction still prevents a fully phase-locked repaired window.
+\end{corollary}
+
+\begin{proof}
+Immediate from Theorem~\ref{thm:first-phase-lock-repair-theorem}.
+\end{proof}
+
+
+
+\begin{definition}[Local Heisenberg compensator]
+\label{def:local-heisenberg-compensator}
+A \emph{local Heisenberg compensator} at stage $n$ is a conservative local synchronization operator
+\[
+  \mathrm{HC}_{\mathrm{loc}}(n):(X_n,X_{n+1})\longmapsto (X_n,\widetilde X_{n+1})
+\]
+which acts only on the repaired second step and is intended to reduce the remaining phase-lock and Teichm\"uller-carry defects without changing the already accepted first-step near-trigger reading.
+\end{definition}
+
+\begin{definition}[HC-admissible local compensation]
+\label{def:hc-admissible-local-compensation}
+A local Heisenberg compensator is called \emph{HC-admissible} if it satisfies:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item the closure burden remains controlled;
+  \item the corrected second step stays inside the same admissibility band;
+  \item the phase-lock defect decreases:
+  \[
+    \sigma_{\Theta}^{\mathrm{lock}}(n;\widetilde X_{n+1})
+    <
+    \sigma_{\Theta}^{\mathrm{lock}}(n;X_{n+1});
+  \]
+  \item the Teichm\"uller-carry defect does not increase, and preferably also decreases;
+  \item the compensator does not manufacture a false entry certificate by destroying the route-faithful burden reading.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}[How the HC is read here]
+\label{rem:how-the-hc-is-read-here}
+The Heisenberg compensator is not used here as a new bulk law. It is read as the minimal local re-phasing operator that tries to snap the repaired second step back into the same narrow closure-phase corridor as the first near-trigger step.
+\end{remark}
+
+\begin{definition}[Bombe-guided compensator menu]
+\label{def:bombe-guided-compensator-menu}
+A \emph{Bombe-guided compensator menu} at stage $n$ is a finite family
+\[
+  \mathcal M_{\mathrm{HC}}(n)=\{H_1,\dots,H_r\}
+\]
+of candidate local Heisenberg compensators together with a contradiction-sensitive elimination rule that removes every candidate violating closure control, admissibility, or route-faithful burden preservation.
+\end{definition}
+
+\begin{remark}[Why the Bombe idea fits here]
+\label{rem:why-the-bombe-idea-fits-here}
+The present problem is not to guess one magical compensator. It is to eliminate locally incompatible synchronizers from a finite candidate menu until only the route-faithful phase-lock-capable ones remain. This is exactly the right local role for a Bombe-style elimination discipline.
+\end{remark}
+
+\begin{definition}[Compensator filter tower]
+\label{def:compensator-filter-tower}
+A \emph{compensator filter tower} is a finite ordered stack
+\[
+  \mathfrak F_{\mathrm{HC}}(n)=
+  (F_1,\dots,F_s)
+\]
+of local HC-compatible filters through which the repaired second step is passed before the final trigger test. The intended reading is:
+\begin{enumerate}[leftmargin=2em,label=(\roman*)]
+  \item burden-side pre-alignment;
+  \item phase-lock re-alignment;
+  \item Teichm\"uller-carry stabilization;
+  \item final closure-phase re-entry test.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}[Filter tower and the electromagnetic analogy]
+\label{rem:filter-tower-and-electromagnetic-analogy}
+The filter-tower language should be read structurally rather than as a literal new electrodynamics. It expresses that several local synchronization layers may act in series, each removing one kind of phase/carry mismatch before the final trigger decision is taken.
+\end{remark}
+
+\begin{definition}[Readout-relative informational gravitation principle]
+\label{def:readout-relative-informational-gravitation-principle}
+A \emph{readout-relative informational gravitation principle} is the principle that the apparent curvature/attraction acting on a local state is not necessarily a primitive force attached only to rest mass, but may be read as the effective curvature law induced by the chosen admissible readout on the underlying information-carrying structure.
+\end{definition}
+
+\begin{remark}[How far this principle should be claimed]
+\label{rem:how-far-this-principle-should-be-claimed}
+In the present document this principle is only an internal architecture hypothesis. It does not claim multiple literal physical gravities. It claims instead that one deeper ART/QFT-compatible carrier may have different gravitational-like readout shadows depending on the active admissible information/readout channel.
+\end{remark}
+
+\begin{proposition}[HC can serve as a local phase-lock operator]
+\label{prop:hc-can-serve-as-local-phase-lock-operator}
+Assume an HC-admissible local compensation exists at stage $n$. Then the Heisenberg compensator can serve as a local phase-lock operator for the repaired second step.
+\end{proposition}
+
+\begin{proof}
+By HC-admissibility, the compensator reduces the phase-lock defect while preserving closure control, admissibility, and the route-faithful burden reading. Therefore it acts exactly as the required local phase-lock operator.
+\end{proof}
+
+\begin{lemma}[Bombe-guided HC elimination lemma]
+\label{lem:bombe-guided-hc-elimination-lemma}
+Assume the compensator candidate menu is finite. Then Bombe-guided elimination reduces the local HC search to the subfamily of candidates that are simultaneously closure-compatible, admissibility-safe, and phase-lock-improving.
+\end{lemma}
+
+\begin{proof}
+By definition, Bombe-guided elimination removes every candidate violating one of the required local compatibility conditions. Hence the surviving menu consists exactly of those candidates satisfying the required conditions.
+\end{proof}
+
+\begin{theorem}[First local Heisenberg compensator theorem]
+\label{thm:first-local-heisenberg-compensator-theorem}
+Assume:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item the first phase-lock repair theorem applies;
+  \item a finite Bombe-guided compensator menu is available;
+  \item at least one surviving candidate is HC-admissible.
+\end{enumerate}
+Then the current post-v3.32.0 line supports a first local Heisenberg-compensated phase-lock repair.
+
+More precisely:
+\begin{enumerate}[leftmargin=2em,label=(\roman*)]
+  \item the repaired second step can be re-phased by a surviving HC candidate;
+  \item the corrected step is brought closer to the same closure-phase corridor as the first near-trigger step;
+  \item the compensator acts as a synchronization layer between the local crystal correction and the Teichm\"uller-side persistence repair.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+By the first phase-lock repair theorem, the current line already isolates the local phase-lock defect as the next concrete obstruction. By the Bombe-guided HC elimination lemma, the finite menu reduces to the candidates that are compatible with closure, admissibility, and phase-lock improvement. If one surviving candidate is HC-admissible, then by Proposition~\ref{prop:hc-can-serve-as-local-phase-lock-operator} it provides the required local re-phasing. Therefore the Heisenberg compensator acts as the missing synchronization layer between the crystal-side correction and the Teichm\"uller-side persistence repair.
+\end{proof}
+
+\begin{corollary}[Current HC working rule]
+\label{cor:current-hc-working-rule}
+The next local audit should not ask first for a new bulk equation. It should ask first for the smallest HC-admissible local compensator that phase-locks the repaired second step back into the same closure-phase corridor while preserving closure control and admissibility.
+\end{corollary}
+
+\begin{proof}
+Immediate from Theorem~\ref{thm:first-local-heisenberg-compensator-theorem}.
+\end{proof}
+
+
+
+\begin{definition}[Phase-side dominant HC candidate]
+\label{def:phase-side-dominant-hc-candidate}
+A local Heisenberg compensator candidate at stage $n$ is called \emph{phase-side dominant} if its primary improvement acts on the phase-lock defect, in the sense that it strictly lowers
+\[
+  \sigma_{\Theta}^{\mathrm{lock}}(n)
+\]
+while any improvement of the Teichm\"uller-carry defect remains subordinate to that phase-lock gain.
+\end{definition}
+
+\begin{definition}[Carry-dominant HC candidate]
+\label{def:carry-dominant-hc-candidate}
+A local Heisenberg compensator candidate at stage $n$ is called \emph{carry-dominant} if its primary improvement acts on the geometric carry defect, in the sense that it lowers
+\[
+  \sigma_T^{\mathrm{carry}}(n)
+\]
+without first removing the phase-lock misalignment.
+\end{definition}
+
+\begin{definition}[Two-component HC candidate]
+\label{def:two-component-hc-candidate}
+A local Heisenberg compensator candidate at stage $n$ is called \emph{two-component coupled} if it lowers both
+\[
+  \sigma_{\Theta}^{\mathrm{lock}}(n)
+  \qquad\text{and}\qquad
+  \sigma_T^{\mathrm{carry}}(n)
+\]
+with neither correction honestly subordinate to the other at first local order.
+\end{definition}
+
+\begin{remark}[What the classification is trying to decide]
+\label{rem:what-the-hc-classification-is-trying-to-decide}
+The present question is not whether a local HC helps at all. It asks which kind of local HC is the first plausible one for the current line: one that primarily restores phase-lock, one that primarily carries geometry, or one that is already fully two-component at first local order.
+\end{remark}
+
+\begin{proposition}[The current line is not carry-dominant on the HC side]
+\label{prop:current-line-is-not-carry-dominant-on-the-hc-side}
+Under the present post-v3.32.0 reading, the first plausible local HC candidate is not carry-dominant.
+\end{proposition}
+
+\begin{proof}
+By the first Teichm\"uller-side synchronization orientation theorem and the first phase-lock repair theorem, the current residual obstruction is phase-lock-prior rather than raw-carry-prior. Therefore a compensator that tries first to optimize geometric carry without first restoring phase-lock cannot be the default first candidate.
+\end{proof}
+
+\begin{proposition}[The current line is not yet fully two-component on the HC side]
+\label{prop:current-line-is-not-yet-fully-two-component-on-the-hc-side}
+Under the present post-v3.32.0 reading, the first plausible local HC candidate is not yet fully two-component at first local order.
+\end{proposition}
+
+\begin{proof}
+The current local repair line remains asymptotically burden-dominant and phase-lock-prior. Although the geometric carry correction is genuinely active, the present line has not yet produced a positive hybrid balancing witness with balanced first-order contributions. Hence the first plausible HC candidate cannot yet be classified as fully two-component at first local order.
+\end{proof}
+
+\begin{theorem}[First HC-candidate type orientation theorem]
+\label{thm:first-hc-candidate-type-orientation-theorem}
+Assume:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item the first local Heisenberg compensator theorem applies;
+  \item the first Teichm\"uller-side synchronization orientation theorem applies;
+  \item the first phase-lock repair theorem applies;
+  \item the current line has not yet produced a positive hybrid balancing witness.
+\end{enumerate}
+Then the first plausible local HC candidate is phase-side dominant rather than carry-dominant or fully two-component.
+
+More precisely:
+\begin{enumerate}[leftmargin=2em,label=(\roman*)]
+  \item the primary local HC task is to reduce
+  \[
+    \sigma_{\Theta}^{\mathrm{lock}}(n);
+  \]
+  \item the Teichm\"uller-side carry correction remains genuinely active as a supporting synchronization channel;
+  \item the current HC candidate should therefore be read as phase-side dominant but geometrically carried.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+By Proposition~\ref{prop:current-line-is-not-carry-dominant-on-the-hc-side}, the current line is not blocked first by raw geometric carry. By Proposition~\ref{prop:current-line-is-not-yet-fully-two-component-on-the-hc-side}, the current line has not yet reached a first-order balanced two-component compensator regime. Since the active residual obstruction is phase-lock-prior, the first plausible HC candidate must therefore act primarily on the phase-lock defect, with geometric carry serving as the supporting channel that stabilizes the repaired lock.
+\end{proof}
+
+\begin{corollary}[Current HC-candidate working rule]
+\label{cor:current-hc-candidate-working-rule}
+The next local audit should not search first for a carry-dominant or perfectly balanced HC. It should search first for the smallest phase-side dominant compensator whose geometric carry contribution is just strong enough to keep the repaired second step inside the same closure-phase corridor.
+\end{corollary}
+
+\begin{proof}
+Immediate from Theorem~\ref{thm:first-hc-candidate-type-orientation-theorem}.
+\end{proof}
+
+
+\begin{definition}[Local lock corridor]
+\label{def:local-lock-corridor}
+A \emph{local lock corridor} at stage $n$ is a narrow admissible closure-phase band
+\[
+  \mathfrak C_{\mathrm{lock}}^{\mathrm{loc}}(n)
+\]
+containing the first near-trigger step and characterized by the following properties:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item every point in $\mathfrak C_{\mathrm{lock}}^{\mathrm{loc}}(n)$ lies inside the same local closure-phase window;
+  \item the local burden pair remains trigger-near throughout the corridor;
+  \item the Teichm\"uller-side distortion stays inside the active safe band;
+  \item the corridor is narrow enough that leaving it produces a detectable phase-lock or carry defect.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}[Geometric meaning of the lock corridor]
+\label{rem:geometric-meaning-of-the-lock-corridor}
+The lock corridor is the thin local channel in which both the first near-trigger step and the repaired second step must lie if one is to read them as belonging to the same closure-phase passage. The current obstruction does not come from total loss of that channel, but from the failure of the second step to remain locked inside it.
+\end{remark}
+
+\begin{definition}[HC-captured repaired second step]
+\label{def:hc-captured-repaired-second-step}
+A repaired second step at stage $n$ is called \emph{HC-captured} if there exists an HC-admissible local Heisenberg compensator such that the compensated second step lies in the same local lock corridor as the first near-trigger step.
+\end{definition}
+
+\begin{definition}[Lock-corridor leakage defect]
+\label{def:lock-corridor-leakage-defect}
+The \emph{lock-corridor leakage defect} at stage $n$ is the residual amount by which the repaired second step fails to remain inside
+\[
+  \mathfrak C_{\mathrm{lock}}^{\mathrm{loc}}(n).
+\]
+It is denoted by
+\[
+  \lambda_{\mathrm{lock}}(n)\ge 0,
+\]
+and vanishes exactly when the repaired second step is HC-captured.
+\end{definition}
+
+\begin{definition}[Minimal local lock-corridor compensation]
+\label{def:minimal-local-lock-corridor-compensation}
+A local HC candidate is called \emph{minimally lock-corridor compensating} if it is HC-admissible and reduces the lock-corridor leakage defect to zero with no strictly smaller phase-side dominant correction achieving the same result on the active two-step local window.
+\end{definition}
+
+\begin{proposition}[Current line still exhibits lock-corridor leakage]
+\label{prop:current-line-still-exhibits-lock-corridor-leakage}
+Under the present post-v3.32.0 reading, the repaired second step still exhibits a nonzero lock-corridor leakage defect.
+\end{proposition}
+
+\begin{proof}
+The current line is phase-lock-prior on the Teichm\"uller side and has not yet produced a positive hybrid balancing witness. Hence the repaired second step is not yet fully locked into the same local closure-phase passage as the first near-trigger step, so the local lock-corridor leakage defect remains nonzero.
+\end{proof}
+
+\begin{lemma}[Phase-side dominant HC yields lock-corridor capture]
+\label{lem:phase-side-dominant-hc-yields-lock-corridor-capture}
+Assume:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item a local lock corridor exists;
+  \item the current HC candidate is phase-side dominant but geometrically carried;
+  \item the compensator reduces the phase-lock defect to zero while keeping admissibility and the geometric carry inside the safe band.
+\end{enumerate}
+Then the compensated second step is HC-captured.
+\end{lemma}
+
+\begin{proof}
+By assumption, the compensator restores the phase-lock condition and preserves the geometric safe-band control. Since the local lock corridor is defined exactly as the admissible narrow closure-phase band carrying the first near-trigger step, the compensated second step now lies in the same corridor. Hence it is HC-captured.
+\end{proof}
+
+\begin{theorem}[First explicit lock-corridor theorem]
+\label{thm:first-explicit-lock-corridor-theorem}
+Assume:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item the first HC-candidate type orientation theorem applies;
+  \item the first phase-lock repair theorem applies;
+  \item a local lock corridor exists around the first near-trigger step;
+  \item there exists a minimally lock-corridor compensating HC candidate.
+\end{enumerate}
+Then the current post-v3.32.0 line admits a first explicit local lock-corridor reading.
+
+More precisely:
+\begin{enumerate}[leftmargin=2em,label=(\roman*)]
+  \item the geometric problem is not to invent a new bulk path, but to return the repaired second step to the same narrow local closure-phase corridor as the first step;
+  \item the current HC task is to drive
+  \[
+    \lambda_{\mathrm{lock}}(n)\to 0;
+  \]
+  \item once the leakage defect vanishes under an HC-admissible phase-side dominant compensator, the repaired second step is locally synchronized in the same lock corridor as the first near-trigger step.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+By the HC-candidate orientation theorem, the first plausible compensator is phase-side dominant but geometrically carried. By the phase-lock repair theorem, the primary local repair target is vanishing of the phase-lock defect, with geometric carry remaining genuinely active. The local lock corridor isolates the thin admissible passage already occupied by the first near-trigger step. A minimally lock-corridor compensating HC candidate removes the leakage defect while preserving admissibility, so by Lemma~\ref{lem:phase-side-dominant-hc-yields-lock-corridor-capture} the repaired second step is returned to the same corridor.
+\end{proof}
+
+\begin{corollary}[Current lock-corridor working rule]
+\label{cor:current-lock-corridor-working-rule}
+The next local audit should no longer ask only whether the second step is improved. It should ask whether an HC-admissible compensator has actually reduced
+\[
+  \lambda_{\mathrm{lock}}(n)
+\]
+to zero, i.e. whether the repaired second step has truly re-entered the same local lock corridor as the first near-trigger step.
+\end{corollary}
+
+\begin{proof}
+Immediate from Theorem~\ref{thm:first-explicit-lock-corridor-theorem}.
+\end{proof}
+
+
+
+\begin{definition}[Lock-side leakage defect]
+\label{def:lock-side-leakage-defect}
+A \emph{lock-side leakage defect} at stage $n$ is the portion of the local leakage defect attributable to failure of the repaired second step to satisfy the phase-lock condition under the current corridor calibration. It is denoted by
+\[
+  \lambda_{\mathrm{lock}}^{\Theta}(n)\ge 0.
+\]
+\end{definition}
+
+\begin{definition}[Corridor-calibration leakage defect]
+\label{def:corridor-calibration-leakage-defect}
+A \emph{corridor-calibration leakage defect} at stage $n$ is the portion of the local leakage defect attributable to the active local lock corridor being too narrow or otherwise miscalibrated for the repaired second step, even after the primary phase-lock correction has been applied. It is denoted by
+\[
+  \lambda_{\mathrm{lock}}^{\mathrm{cal}}(n)\ge 0.
+\]
+\end{definition}
+
+\begin{remark}[How the leakage splits]
+\label{rem:how-the-leakage-splits}
+The total local lock-corridor leakage is now read as having two possible sources: a remaining failure of lock restoration itself, or a failure of the current corridor calibration to reflect the true admissible narrow passage. In symbols, one may think heuristically of
+\[
+  \lambda_{\mathrm{lock}}(n)
+  \sim
+  \lambda_{\mathrm{lock}}^{\Theta}(n)
+  +
+  \lambda_{\mathrm{lock}}^{\mathrm{cal}}(n),
+\]
+without yet forcing a rigid additive identity.
+\end{remark}
+
+\begin{definition}[Lock-side-prior local leakage regime]
+\label{def:lock-side-prior-local-leakage-regime}
+The local line is said to be in a \emph{lock-side-prior local leakage regime} at stage $n$ if
+\[
+  \lambda_{\mathrm{lock}}^{\Theta}(n)
+  >
+  \lambda_{\mathrm{lock}}^{\mathrm{cal}}(n).
+\]
+\end{definition}
+
+\begin{definition}[Corridor-calibration-prior local leakage regime]
+\label{def:corridor-calibration-prior-local-leakage-regime}
+The local line is said to be in a \emph{corridor-calibration-prior local leakage regime} at stage $n$ if
+\[
+  \lambda_{\mathrm{lock}}^{\mathrm{cal}}(n)
+  \ge
+  \lambda_{\mathrm{lock}}^{\Theta}(n).
+\]
+\end{definition}
+
+\begin{proposition}[The current line is not corridor-calibration-prior by default]
+\label{prop:current-line-is-not-corridor-calibration-prior-by-default}
+Under the present post-v3.32.0 reading, the local line should not yet be read as corridor-calibration-prior by default.
+\end{proposition}
+
+\begin{proof}
+The current diagnosis remains phase-lock-prior on the Teichm\"uller side, and the first local repair target is still the vanishing of the phase-lock defect rather than widening or re-centering the lock corridor itself. Hence the default reading is not that the corridor is already known to be primarily miscalibrated, but rather that the repaired second step still fails first to lock into the active corridor.
+\end{proof}
+
+\begin{proposition}[The current line is lock-side-prior on the leakage level]
+\label{prop:current-line-is-lock-side-prior-on-the-leakage-level}
+Under the present post-v3.32.0 reading, the first remaining local lock-corridor leakage is lock-side-prior.
+\end{proposition}
+
+\begin{proof}
+By the first phase-lock repair theorem and the current phase-lock repair working rule, the next local task is still to force
+\[
+  \sigma_{\Theta}^{\mathrm{lock}}(n)=0.
+\]
+This means that the dominant unresolved leakage continues to arise from incomplete phase-lock restoration rather than from demonstrated over-narrowness or miscentering of the corridor itself. Therefore the first remaining local leakage is lock-side-prior.
+\end{proof}
+
+\begin{theorem}[First lock-corridor leakage orientation theorem]
+\label{thm:first-lock-corridor-leakage-orientation-theorem}
+Assume:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item the first explicit lock-corridor theorem applies;
+  \item the first phase-lock repair theorem applies;
+  \item the current line still exhibits nonzero lock-corridor leakage.
+\end{enumerate}
+Then the current post-v3.32.0 line is lock-side-prior on the leakage level rather than corridor-calibration-prior.
+
+More precisely:
+\begin{enumerate}[leftmargin=2em,label=(\roman*)]
+  \item the next honest reduction target is first
+  \[
+    \lambda_{\mathrm{lock}}^{\Theta}(n)\downarrow;
+  \]
+  \item local corridor recalibration should be treated only as a secondary follow-on question unless the lock-side leakage has already been made negligible;
+  \item the present line should therefore first seek a stronger HC lock action before widening or re-centering the local corridor.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+By the first explicit lock-corridor theorem, the active local task is to return the repaired second step to the same narrow corridor as the first near-trigger step. By the first phase-lock repair theorem, the primary local repair target remains vanishing of the phase-lock defect. Therefore, as long as nonzero leakage remains, the default reading is that the dominant leakage sits on the lock-restoration side rather than already on the calibration side of the corridor. Hence the line is lock-side-prior on the leakage level.
+\end{proof}
+
+\begin{corollary}[Current leakage working rule]
+\label{cor:current-leakage-working-rule}
+The next local audit should not first widen, thicken, or re-center the active lock corridor. It should first ask whether the remaining leakage is still produced by incomplete lock restoration of the repaired second step under the current corridor geometry.
+\end{corollary}
+
+\begin{proof}
+Immediate from Theorem~\ref{thm:first-lock-corridor-leakage-orientation-theorem}.
+\end{proof}
+
+
+
+\begin{definition}[Minimal local HC-lock step]
+\label{def:minimal-local-hc-lock-step}
+A \emph{minimal local HC-lock step} at stage $n$ is an HC-admissible local compensation
+\[
+  \mathcal H^{\min}_{\mathrm{lock}}(n)
+\]
+which acts on the repaired second step only through the smallest phase-side dominant correction required to reduce the lock-side leakage defect from
+\[
+  \lambda_{\mathrm{lock}}^{\Theta}(n)>0
+\]
+to
+\[
+  \lambda_{\mathrm{lock}}^{\Theta,+}(n)=0,
+\]
+while preserving the active local lock corridor geometry.
+\end{definition}
+
+\begin{definition}[Lock-neutral corridor preservation]
+\label{def:lock-neutral-corridor-preservation}
+A local HC-lock step is said to satisfy \emph{lock-neutral corridor preservation} if it does not widen, thicken, or re-center the current local lock corridor
+\[
+  \mathfrak C_{\mathrm{lock}}^{\mathrm{loc}}(n),
+\]
+but only changes the repaired second-step placement inside that already fixed corridor geometry.
+\end{definition}
+
+\begin{definition}[HC-lock effectiveness defect]
+\label{def:hc-lock-effectiveness-defect}
+The \emph{HC-lock effectiveness defect} of a local HC compensation at stage $n$ is
+\[
+  E_{\mathrm{HC}}^{\mathrm{lock}}(n)
+  :=
+  \lambda_{\mathrm{lock}}^{\Theta,+}(n),
+\]
+that is, the residual lock-side leakage after the local HC action has been applied.
+\end{definition}
+
+\begin{remark}[What the minimal HC step is allowed to do]
+\label{rem:what-the-minimal-hc-step-is-allowed-to-do}
+The minimal HC-lock step is not allowed to solve the problem by changing the corridor itself. It must work only by re-locking the repaired second step inside the already accepted corridor. Geometrically, it is the smallest admissible local twist that makes the second point snap back into the same narrow channel without moving the channel walls.
+\end{remark}
+
+\begin{definition}[HC-captured local repaired second step]
+\label{def:hc-captured-local-repaired-second-step}
+A repaired second step at stage $n$ is called \emph{HC-captured} if there exists an HC-admissible local compensation satisfying lock-neutral corridor preservation such that
+\[
+  \lambda_{\mathrm{lock}}^{\Theta,+}(n)=0.
+\]
+\end{definition}
+
+\begin{proposition}[The current line calls first for a minimal HC-lock step]
+\label{prop:the-current-line-calls-first-for-a-minimal-hc-lock-step}
+Under the current post-v3.32.0 reading, the next local correction should first be sought as a minimal local HC-lock step rather than as a corridor recalibration.
+\end{proposition}
+
+\begin{proof}
+By the first lock-corridor leakage orientation theorem, the active leakage is lock-side-prior rather than corridor-calibration-prior. Therefore the first honest correction should try to eliminate the residual lock-side leakage while preserving the existing corridor geometry. This is exactly the role of a minimal local HC-lock step.
+\end{proof}
+
+\begin{lemma}[Minimal HC-lock step implies HC capture]
+\label{lem:minimal-hc-lock-step-implies-hc-capture}
+Assume a minimal local HC-lock step exists at stage $n$. Then the repaired second step is HC-captured at that stage.
+\end{lemma}
+
+\begin{proof}
+By definition, a minimal local HC-lock step is HC-admissible, preserves the corridor geometry, and reduces the residual lock-side leakage defect to zero. Hence the repaired second step satisfies the defining conditions of an HC-captured local repaired second step.
+\end{proof}
+
+\begin{theorem}[First minimal HC-lock step theorem]
+\label{thm:first-minimal-hc-lock-step-theorem}
+Assume:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item the first local Theta-drift witness theorem applies;
+  \item the first phase-lock repair theorem applies;
+  \item the first explicit lock-corridor theorem applies;
+  \item the first lock-corridor leakage orientation theorem applies;
+  \item an HC-admissible local compensation menu is available.
+\end{enumerate}
+Then the current post-v3.32.0 line admits the following first local repair target:
+\begin{enumerate}[leftmargin=2em,label=(\roman*)]
+  \item search first for a minimal local HC-lock step;
+  \item require lock-neutral corridor preservation;
+  \item accept the first candidate only if it yields
+  \[
+    E_{\mathrm{HC}}^{\mathrm{lock}}(n)=0;
+  \]
+  \item treat any remaining failure first as lack of sufficient HC lock action rather than as corridor miscalibration.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Items (a)--(d) identify the current obstruction chain: the line is phase-lock-prior, the local corridor is already the right object to preserve, and the leakage is lock-side-prior rather than corridor-calibration-prior. Hence the first honest local HC task is not to redesign the corridor but to search within the available HC menu for the smallest admissible lock action that drives the residual lock-side leakage to zero while leaving the corridor fixed. This is exactly the asserted minimal HC-lock step search.
+\end{proof}
+
+\begin{corollary}[Current minimal HC working rule]
+\label{cor:current-minimal-hc-working-rule}
+The next local audit should not first modify the local lock corridor. It should first scan the local HC menu for the smallest phase-side dominant compensator whose geometric carry is just sufficient to force
+\[
+  \lambda_{\mathrm{lock}}^{\Theta,+}(n)=0
+\]
+under lock-neutral corridor preservation.
+\end{corollary}
+
+\begin{proof}
+Immediate from Theorem~\ref{thm:first-minimal-hc-lock-step-theorem}.
+\end{proof}
+
+
+
+\begin{definition}[Local HC candidate family]
+\label{def:local-hc-candidate-family}
+The \emph{local HC candidate family} at stage $n$ is a finite admissible menu
+\[
+  \mathfrak M_{\mathrm{HC}}^{\mathrm{loc}}(n)
+  =
+  \{H_1^{(n)},\dots,H_{N(n)}^{(n)}\}
+\]
+of local Heisenberg-compensator actions acting on the repaired second step under the fixed local lock corridor.
+\end{definition}
+
+\begin{definition}[HC menu admissibility filter]
+\label{def:hc-menu-admissibility-filter}
+A local HC candidate
+\[
+  H_j^{(n)}\in \mathfrak M_{\mathrm{HC}}^{\mathrm{loc}}(n)
+\]
+passes the \emph{HC menu admissibility filter} if:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item it is phase-side dominant with genuinely active geometric carry;
+  \item it preserves the active local lock corridor;
+  \item it preserves local admissibility on the same two-step window;
+  \item it does not enlarge the corridor merely to hide the residual leakage.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[HC lock score]
+\label{def:hc-lock-score}
+The \emph{HC lock score} of an admissible local HC candidate is the pair
+\[
+  \mathfrak L_{\mathrm{HC}}(H_j^{(n)})
+  :=
+  \bigl(
+    \lambda_{\mathrm{lock}}^{\Theta,+}(n;H_j^{(n)}),
+    C_{\mathrm{HC}}(H_j^{(n)})
+  \bigr),
+\]
+where the first component is the residual lock-side leakage after applying the candidate and the second component is its local compensator cost.
+\end{definition}
+
+\begin{definition}[Bombe-guided HC elimination]
+\label{def:bombe-guided-hc-elimination}
+The \emph{bombe-guided HC elimination} is the finite contradiction-sensitive elimination of all candidates in
+\[
+  \mathfrak M_{\mathrm{HC}}^{\mathrm{loc}}(n)
+\]
+that fail the HC menu admissibility filter or leave a residual lock score incompatible with minimal HC capture.
+\end{definition}
+
+\begin{remark}[Why the HC scan is finite]
+\label{rem:why-the-hc-scan-is-finite}
+The present line does not search over an arbitrary continuum of compensators. It searches only over the finite local HC menu already licensed by the current route-faithful readout state. This is why the bombe-guided elimination picture is appropriate here.
+\end{remark}
+
+\begin{definition}[Minimal surviving HC candidate]
+\label{def:minimal-surviving-hc-candidate}
+A candidate
+\[
+  H_{\min}^{(n)}\in \mathfrak M_{\mathrm{HC}}^{\mathrm{loc}}(n)
+\]
+is called the \emph{minimal surviving HC candidate} if:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item it survives bombe-guided HC elimination;
+  \item it minimizes the residual lock-side leakage
+  \[
+    \lambda_{\mathrm{lock}}^{\Theta,+}(n;H_j^{(n)});
+  \]
+  \item among all candidates with the same minimal leakage, it minimizes the compensator cost
+  \[
+    C_{\mathrm{HC}}(H_j^{(n)}).
+  \]
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}[The current line reduces the HC problem to a finite menu scan]
+\label{prop:current-line-reduces-hc-to-finite-menu-scan}
+Under the current post-v3.32.0 reading, the first local HC problem is reduced to scanning the finite local HC candidate family under admissibility and lock-corridor preservation.
+\end{proposition}
+
+\begin{proof}
+By the current minimal HC working rule, the line must first search for a minimal local HC-lock step while preserving the active lock corridor. By the local Heisenberg-compensator theorem and the bombe-guided compensator menu reading, the admissible compensator actions are already organized as a finite local menu. Hence the first local HC problem is reduced to a finite menu scan with admissibility and corridor-preservation constraints.
+\end{proof}
+
+\begin{lemma}[Minimal surviving HC candidate yields the first executable HC-lock step]
+\label{lem:minimal-surviving-hc-candidate-yields-first-executable-hc-lock-step}
+Assume a minimal surviving HC candidate exists. Then it yields the first executable local HC-lock step under the current lock-side-prior regime.
+\end{lemma}
+
+\begin{proof}
+A minimal surviving HC candidate has already passed the admissibility and corridor-preservation filter. By minimality, it leaves no smaller admissible compensator with strictly lower residual lock-side leakage. Hence it is the first executable local HC-lock step compatible with the current regime.
+\end{proof}
+
+\begin{theorem}[First local HC menu-scan theorem]
+\label{thm:first-local-hc-menu-scan-theorem}
+Assume:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item the first minimal HC-lock step theorem applies;
+  \item the current line is lock-side-prior on the leakage level;
+  \item the local HC candidate family is finite;
+  \item bombe-guided HC elimination is available.
+\end{enumerate}
+Then the next local HC task is a finite menu-scan problem.
+
+More precisely:
+\begin{enumerate}[leftmargin=2em,label=(\roman*)]
+  \item all inadmissible or corridor-breaking HC candidates may be eliminated first;
+  \item the surviving candidates are ranked by residual lock-side leakage and compensator cost;
+  \item if a minimal surviving HC candidate exists, it determines the first executable HC-lock step;
+  \item if no such candidate exists, the current line records a local HC-menu exhaustion obstruction rather than immediately blaming corridor calibration.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+By Proposition~\ref{prop:current-line-reduces-hc-to-finite-menu-scan}, the present HC problem is already reduced to a finite candidate family with admissibility and corridor-preservation constraints. Bombe-guided HC elimination removes candidates that fail these constraints. The remaining candidates are compared by lock score. If a minimal surviving candidate exists, Lemma~\ref{lem:minimal-surviving-hc-candidate-yields-first-executable-hc-lock-step} yields the first executable HC-lock step. If not, the failure lies at the menu level itself, hence the correct reading is local HC-menu exhaustion rather than premature corridor redesign.
+\end{proof}
+
+\begin{corollary}[Current HC menu-scan working rule]
+\label{cor:current-hc-menu-scan-working-rule}
+The next local audit should first enumerate the finite HC menu, eliminate inadmissible and corridor-breaking candidates, and only then ask whether the surviving menu still contains a minimal lock-effective compensator.
+\end{corollary}
+
+\begin{proof}
+Immediate from Theorem~\ref{thm:first-local-hc-menu-scan-theorem}.
+\end{proof}
+
+
+
+\begin{definition}[Phase-side micro-lock HC candidate]
+\label{def:phase-side-micro-lock-hc-candidate}
+A local HC candidate
+\[
+  H_{\mathrm{lock}}^{(1)}(n)\in \mathfrak M_{\mathrm{HC}}^{\mathrm{loc}}(n)
+\]
+is called a \emph{phase-side micro-lock HC candidate} if it satisfies:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item phase-side dominance in the sense that its primary action falls on the residual lock component;
+  \item lock-neutral corridor preservation;
+  \item nonzero but minimal geometric carry sufficient to support the repaired second step inside the same local lock corridor;
+  \item no extra crystal-side widening or recentering action.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}[Why this is the first plausible HC menu entry]
+\label{rem:why-this-is-the-first-plausible-hc-menu-entry}
+The present line is phase-lock-prior, lock-side-prior on the leakage level, and not carry-dominant. Hence the first plausible HC candidate is not a broad geometric carrier and not a corridor redesign. It is the smallest local phase-side micro-lock action whose geometric carry is only as large as needed to prevent renewed leakage.
+\end{remark}
+
+\begin{definition}[HC micro-lock score]
+\label{def:hc-micro-lock-score}
+The \emph{HC micro-lock score} of a phase-side micro-lock candidate
+\[
+  H_{\mathrm{lock}}^{(1)}(n)
+\]
+is the tuple
+\[
+  \mathfrak L_{\mathrm{HC}}^{\mathrm{micro}}(H_{\mathrm{lock}}^{(1)}(n))
+  :=
+  \bigl(
+    \lambda_{\mathrm{lock}}^{\Theta,+}(n),
+    c_{\mathrm{HC}}(H_{\mathrm{lock}}^{(1)}(n))
+  \bigr),
+\]
+ordered lexicographically by residual lock-side leakage first and compensator cost second.
+\end{definition}
+
+\begin{definition}[Plausible surviving HC candidate]
+\label{def:plausible-surviving-hc-candidate}
+A phase-side micro-lock HC candidate is called \emph{plausibly surviving} if it passes the HC menu admissibility filter, preserves the local lock corridor, and yields no worse lock score than any other currently known phase-side dominant candidate.
+\end{definition}
+
+\begin{proposition}[The current line favors a phase-side micro-lock candidate]
+\label{prop:current-line-favors-a-phase-side-micro-lock-candidate}
+Under the present post-v3.32.0 reading, the first plausible HC menu entry is phase-side micro-lock rather than carry-dominant or fully two-component balanced.
+\end{proposition}
+
+\begin{proof}
+By the first HC-candidate type orientation theorem, the current line is phase-side dominant on the HC level and is neither carry-dominant nor already genuinely two-component balanced. By the first lock-corridor leakage orientation theorem, the residual leakage is lock-side-prior rather than corridor-calibration-prior. Therefore the first plausible HC entry is the smallest phase-side dominant candidate that closes the lock-side leakage while preserving the existing corridor.
+\end{proof}
+
+\begin{lemma}[Plausible survival of the phase-side micro-lock candidate]
+\label{lem:plausible-survival-of-the-phase-side-micro-lock-candidate}
+Assume:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item the local HC candidate family is finite;
+  \item the current line is phase-side dominant on the HC level;
+  \item lock-neutral corridor preservation is enforced.
+\end{enumerate}
+Then the first plausible surviving HC candidate, if it exists at all, may be taken from the phase-side micro-lock class.
+\end{lemma}
+
+\begin{proof}
+Because corridor redesign is excluded and carry-dominant candidates are not favored by the current orientation, the admissible search is restricted first to phase-side dominant candidates. Within that class, the lexicographic HC micro-lock score selects the candidates with smallest residual leakage and then smallest cost. Hence any first plausible survivor, if one exists, may be taken from the phase-side micro-lock class.
+\end{proof}
+
+\begin{theorem}[First plausible HC menu-entry theorem]
+\label{thm:first-plausible-hc-menu-entry-theorem}
+Assume:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item the first HC-candidate type orientation theorem applies;
+  \item the first lock-corridor leakage orientation theorem applies;
+  \item the first local HC menu-scan theorem applies.
+\end{enumerate}
+Then the first plausible HC menu entry is a phase-side micro-lock HC candidate.
+
+More precisely:
+\begin{enumerate}[leftmargin=2em,label=(\roman*)]
+  \item the candidate is sought first in the phase-side dominant subclass;
+  \item its geometric carry is only auxiliary but genuinely active;
+  \item its admissibility is tested under lock-neutral corridor preservation;
+  \item if a first plausible survivor exists, it determines the leading local HC hypothesis before any broader compensator class is tried.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Items (a) and (b) imply that the line is not looking first for a carry-dominant or fully balanced HC candidate. Item (c) reduces the search to the finite local HC menu with corridor-preserving admissibility. By Lemma~\ref{lem:plausible-survival-of-the-phase-side-micro-lock-candidate}, any first plausible survivor may be taken from the phase-side micro-lock class. This yields the asserted first plausible HC menu entry.
+\end{proof}
+
+\begin{corollary}[Current HC entry working rule]
+\label{cor:current-hc-entry-working-rule}
+The next local audit should first test the phase-side micro-lock HC candidates in the finite menu, ranked by residual lock-side leakage and cost, before considering broader compensator types.
+\end{corollary}
+
+\begin{proof}
+Immediate from Theorem~\ref{thm:first-plausible-hc-menu-entry-theorem}.
+\end{proof}
+
+
+
+\begin{definition}[Micro-lock update rule]
+\label{def:micro-lock-update-rule}
+Let
+\[
+  H_{\mathrm{lock}}^{(1)}(n)
+\]
+be a phase-side micro-lock HC candidate acting on the repaired second local step. The \emph{micro-lock update rule} is the local update
+\[
+  X_{n+1}^{\mathrm{rep}}
+  \longmapsto
+  X_{n+1}^{\mathrm{lock}}
+\]
+induced by $H_{\mathrm{lock}}^{(1)}(n)$ under the following constraints:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item lock-neutral corridor preservation is maintained;
+  \item the updated second step stays inside the same local admissibility band;
+  \item the lock-side leakage does not increase;
+  \item the phase-side component of the update is dominant, while the geometric carry remains auxiliary but genuinely active.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Successful micro-lock update]
+\label{def:successful-micro-lock-update}
+A micro-lock update is called \emph{successful} if it satisfies
+\[
+  \lambda_{\mathrm{lock}}^{\Theta,+}(n)=0
+\]
+while preserving the current local lock corridor and the active admissibility constraints.
+\end{definition}
+
+\begin{definition}[HC-captured local continuation]
+\label{def:hc-captured-local-continuation}
+A local continuation after stage $n$ is called \emph{HC-captured} if it is produced by a successful micro-lock update and the resulting repaired second step remains in the same local lock corridor as the first near-trigger step.
+\end{definition}
+
+\begin{remark}[Why capture is the right next target]
+\label{rem:why-capture-is-the-right-next-target}
+The present line no longer needs a broad compensator search. It needs the first concrete capture event in which the second repaired step is actually brought back into the same narrow local corridor. That is the smallest nontrivial success criterion beyond plausible HC menu survival.
+\end{remark}
+
+\begin{lemma}[Minimal HC-lock step yields local capture]
+\label{lem:minimal-hc-lock-step-yields-local-capture}
+Assume:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item a minimal surviving HC candidate exists in the local menu;
+  \item its associated micro-lock update is successful;
+  \item lock-neutral corridor preservation is enforced.
+\end{enumerate}
+Then the updated repaired second step is HC-captured.
+\end{lemma}
+
+\begin{proof}
+By success of the micro-lock update, the residual lock-side leakage is driven to zero. By lock-neutral corridor preservation, the active corridor is not widened or re-centered during the update. Hence the updated second step lies in the same local lock corridor as the first near-trigger step, which is exactly HC capture.
+\end{proof}
+
+\begin{definition}[First local HC-capture chain]
+\label{def:first-local-hc-capture-chain}
+A \emph{first local HC-capture chain} is a finite local sequence
+\[
+  X_n^{\mathrm{near}}
+  \to
+  X_{n+1}^{\mathrm{rep}}
+  \to
+  X_{n+1}^{\mathrm{lock}}
+\]
+consisting of:
+\begin{enumerate}[leftmargin=2em,label=(\roman*)]
+  \item a near-trigger first step;
+  \item a repaired but not yet fully locked second step;
+  \item a successful micro-lock update producing an HC-captured continuation.
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}[Current local line reduces to HC-capture chain search]
+\label{prop:current-local-line-reduces-to-hc-capture-chain-search}
+Under the present post-v3.32.0 reading, once the local corridor, the phase-lock repair target, and the HC menu scan are fixed, the next local task reduces to the search for a first local HC-capture chain.
+\end{proposition}
+
+\begin{proof}
+The preceding line already fixes: the right corridor object, the lock-side-prior leakage orientation, the minimal HC-lock target, and the first plausible HC candidate family. No broader redesign is currently preferred. Therefore the next local task is exactly to determine whether one of the plausible HC candidates yields an actual capture of the repaired second step.
+\end{proof}
+
+\begin{theorem}[First local HC-capture chain theorem]
+\label{thm:first-local-hc-capture-chain-theorem}
+Assume:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+  \item the first explicit lock-corridor theorem applies;
+  \item the first minimal HC-lock step theorem applies;
+  \item the first plausible HC menu-entry theorem applies;
+  \item a successful micro-lock update exists for the minimal surviving HC candidate.
+\end{enumerate}
+Then the current post-v3.32.0 line supports a first local HC-capture chain.
+
+More precisely:
+\begin{enumerate}[leftmargin=2em,label=(\roman*)]
+  \item the repaired second step is first updated by a phase-side dominant, geometrically carried micro-lock compensator;
+  \item the lock-side leakage is removed without redesigning the corridor;
+  \item the resulting continuation is HC-captured in the same local lock corridor as the first near-trigger step.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+By the first plausible HC menu-entry theorem, the first plausible surviving HC candidate is sought in the phase-side micro-lock class. By the first minimal HC-lock step theorem, the active local HC task is precisely to search for the smallest such compensator that removes residual lock-side leakage while preserving the corridor. If such a micro-lock update is successful, Lemma~\ref{lem:minimal-hc-lock-step-yields-local-capture} yields HC capture. This is exactly the stated HC-capture chain.
+\end{proof}
+
+\begin{corollary}[Current HC-capture working rule]
+\label{cor:current-hc-capture-working-rule}
+The next local audit should no longer stop at plausible HC menu survival. It should ask whether the best phase-side micro-lock candidate actually yields a successful micro-lock update and hence the first local HC-capture chain.
+\end{corollary}
+
+\begin{proof}
+Immediate from Theorem~\ref{thm:first-local-hc-capture-chain-theorem}.
+\end{proof}
+
+\begin{corollary}[Freeze threshold after v3.32.0]
+\label{cor:freeze-threshold-after-v3320}
+If the local line is stably organized by
+\[
+  \text{lock corridor}
+  \to
+  \text{minimal HC-lock step}
+  \to
+  \text{HC menu scan}
+  \to
+  \text{first local HC-capture chain},
+\]
+then the post-v3.32.0 line has reached a natural freeze threshold for a new minor release candidate.
+\end{corollary}
+
+\begin{proof}
+At that point the local HC line is no longer merely diagnostic. It carries a coherent operational chain from the residual lock defect to the first concrete capture event. This is exactly the kind of self-contained new kernel that supports a new freeze candidate before audit.
+\end{proof}
+
+
+

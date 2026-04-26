@@ -1,0 +1,394 @@
+\subsection*{QAM/MML/MMA store layer and Sphaera array extension}
+\begin{quote}\small
+\noindent\textbf{Status.} \emph{Active v3.34.0 infrastructure block; no OP closure claim.}\par
+\noindent\textbf{Block function.} This block internalizes the earlier ZFS/RAID analogy. QAM supplies the object store, MML supplies the store and array instructions, MMA supplies the execution/readout semantics, and finite Sphaera arrays supply guarded multi-object redundancy, comparison, and residual/parity witnesses.
+\end{quote}
+
+The preceding systems view should no longer be read merely as an external metaphor. At the present local layer it becomes a controlled internal interface. The point is not to claim that the Companion has already become a universal computer, nor that OP~1/4 or OP~5(B) have closed. The point is narrower and useful: the same QAM/MML/MMA machinery that already records objects, instructions, and route-faithful execution can also write the persistence layer in which several Sphaera objects are stored, compared, snapshotted, scrubbed, and carried as a guarded array.
+
+\paragraph{Human reading.}
+A single Sphaera object is now treated like one protected theorem-state device. Several Sphaera objects may be grouped into an array. In mirror mode, different objects carry the same structural content through different admissible views. In stripe mode, one larger proof or diagnostic object is distributed over several component stores. In parity/residual mode, an additional Sphaera object carries the difference, obstruction, or orthogonal control witness attached to the other components.
+
+\paragraph{LLM/audit reading.}
+The layer below gives stable machine-readable handles for store state, snapshot, clone, rollback, scrub, array creation, mirror, stripe, parity, and array snapshot. These handles are not theorematic shortcuts. They are audit contracts: each command must preserve address discipline, guard discipline, lineage discipline, and the non-certificate status unless a separate explicit theorem later discharges that status.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  node distance=8mm and 10mm,
+  box/.style={draw, rounded corners, align=center, inner sep=5pt, text width=0.2\textwidth},
+  bigbox/.style={draw, rounded corners, align=center, inner sep=6pt, text width=0.28\textwidth},
+  >=Latex
+]
+\node[box] (qam) {\textbf{QAM}\\Object store\\addresses, objects, guards, lineage};
+\node[box, right=of qam] (mml) {\textbf{MML}\\Instruction language\\store and array commands};
+\node[box, right=of mml] (mma) {\textbf{MMA}\\Execution semantics\\guard-faithful transitions};
+\node[bigbox, below=12mm of mml] (array) {\textbf{Sphaera array layer}\\mirror \quad stripe \quad parity/residual\\snapshot \quad clone \quad rollback \quad scrub};
+\draw[->] (qam) -- (mml);
+\draw[->] (mml) -- (mma);
+\draw[->] (qam.south) -- (array.north west);
+\draw[->] (mml.south) -- (array.north);
+\draw[->] (mma.south) -- (array.north east);
+\end{tikzpicture}
+\caption{Reader-facing systems map for the QAM/MML/MMA store-array extension. QAM supplies the stored object layer, MML supplies the allowed store and array commands, MMA supplies the guarded execution semantics, and the Sphaera array layer packages mirror, stripe, and parity/residual modes together with snapshot, clone, rollback, and scrub operations.}
+\label{fig:qam-mml-mma-store-array-map}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.18\textwidth} >{\raggedright\arraybackslash}p{0.26\textwidth} >{\raggedright\arraybackslash}p{0.26\textwidth} >{\raggedright\arraybackslash}p{0.20\textwidth}}
+\toprule
+\textbf{Layer} & \textbf{Human reading} & \textbf{LLM/audit reading} & \textbf{Typical outputs}\\
+\midrule
+QAM & protected object store & typed address/object/guard/ledger state & store state, snapshot anchor\\
+MML & allowed store and array actions & finite instruction alphabet & \texttt{STORE}, \texttt{SNAPSHOT}, \texttt{PARITY}\\
+MMA & how commands really act & deterministic guarded transition semantics & continue / halt / reject / guard\\
+Sphaera array & several Sphaera objects coupled as one working array & finite guarded family with cross-sphere guards and parity witnesses & mirror, stripe, parity/residual, scrub\\
+\bottomrule
+\end{tabular}
+\caption{Compact overview table for the store-array layer. This separates reader intuition from the audit contract without changing the theorematic status of the block.}
+\label{tab:qam-mml-mma-store-array-overview}
+\end{table}
+
+
+\begin{definition}[QAM store state]\label{def:qam-store-state}
+A \emph{QAM store state} is a finite guarded tuple
+\[
+  \mathcal S_n
+  :=
+  (\mathcal A_n,\mathcal O_n,\mathcal R_n,\mathcal G_n,\mathcal L_n),
+\]
+where \(\mathcal A_n\) is the finite address/tag domain, \(\mathcal O_n\) is the finite family of stored QAM objects, \(\mathcal R_n\) is the finite relation/link register between stored objects, \(\mathcal G_n\) is the finite guard register, and \(\mathcal L_n\) is the finite lineage/audit ledger. The state is \emph{admissible} if every ledger pointer lands in \(\mathcal A_n\), every relation in \(\mathcal R_n\) uses stored addresses, and every active guard in \(\mathcal G_n\) is satisfied by the displayed objects and relations.
+\end{definition}
+
+\begin{definition}[Store instruction alphabet]\label{def:mml-store-instructions}
+The local MML store alphabet is the finite instruction family
+\[
+\begin{split}
+  \mathcal I_{\mathrm{store}}
+  :=\{&\texttt{STORE},\texttt{LINK},\texttt{SNAPSHOT},\texttt{CLONE},\texttt{ROLLBACK},\texttt{SCRUB},\texttt{MERGE\_CAND},\texttt{EXPORT}\}.
+\end{split}
+\]
+Here \(\texttt{STORE}\) writes an object to an address, \(\texttt{LINK}\) writes a relation, \(\texttt{SNAPSHOT}\) freezes an admissible state, \(\texttt{CLONE}\) opens a guarded side branch from a snapshot, \(\texttt{ROLLBACK}\) returns to a recorded snapshot, \(\texttt{SCRUB}\) checks the guards and lineage, \(\texttt{MERGE\_CAND}\) proposes a guarded merge candidate, and \(\texttt{EXPORT}\) exposes a readout surface. None of these instructions is allowed to manufacture a theorematic certificate by syntax alone.
+\end{definition}
+
+\begin{definition}[MMA store transition semantics]\label{def:mma-store-transition}
+The local MMA store semantics is a partial deterministic transition map
+\[
+  \delta_{\mathrm{store}}
+  :
+  \mathcal S_n\times\mathcal I_{\mathrm{store}}
+  \dashrightarrow
+  \mathcal S_{n+1}\times
+  \{\mathsf{continue},\mathsf{halt},\mathsf{reject},\mathsf{guard}\}.
+\]
+It is \emph{guard-faithful} if every defined transition either preserves admissibility of the resulting store or returns the status \(\mathsf{guard}\) together with a defect entry in the ledger. It is \emph{lineage-faithful} if each defined transition records enough ledger data to identify its source state, instruction, guard status, and output state.
+\end{definition}
+
+\begin{definition}[Guarded snapshot and clone]\label{def:qam-store-snapshot}
+For an admissible QAM store \(\mathcal S_n\), a \emph{guarded snapshot} is a tuple
+\[
+  \operatorname{snap}(\mathcal S_n)
+  :=
+  (\mathcal S_n,\chi_n,\lambda_n),
+\]
+where \(\chi_n\) is a finite integrity witness for the address, relation, guard, and ledger registers, and \(\lambda_n\) is a lineage anchor. A \emph{clone} of \(\operatorname{snap}(\mathcal S_n)\) is a new working state \(\mathcal S'_n\) with the same stored content and a new branch tag in the ledger. The clone is not a new theorem; it is a new guarded working branch from the same stored state.
+\end{definition}
+
+\begin{proposition}[Snapshot stability of admissible QAM stores]\label{prop:qam-store-snapshot-stability}
+Every admissible finite QAM store state admits a guarded snapshot in the sense of Definition~\ref{def:qam-store-snapshot}. If the MMA store semantics is guard-faithful and lineage-faithful, then \(\texttt{SNAPSHOT}\), \(\texttt{CLONE}\), and \(\texttt{ROLLBACK}\) preserve the distinction between stored mathematical objects and release/audit metadata.
+\end{proposition}
+
+\begin{proof}
+Since the address, object, relation, guard, and ledger registers are finite, their displayed state can be recorded as a finite tuple together with a finite integrity witness and a lineage anchor. This gives \(\operatorname{snap}(\mathcal S_n)\). Guard-faithfulness prevents a failed guard from being silently stored as an admissible state, and lineage-faithfulness records the source and branch data. Thus snapshot, clone, and rollback may move between recorded store states, but they do not promote a release label, branch label, or audit label into the mathematical object language.
+\end{proof}
+
+\begin{definition}[Sphaera array]\label{def:sphaera-array}
+A \emph{Sphaera array} is a finite guarded family
+\[
+  \mathbb S_n
+  :=
+  \bigl((\mathcal S_n^{(1)},\ldots,\mathcal S_n^{(k)});\Gamma_n,\Pi_n,\Lambda_n\bigr),
+  \qquad k\ge 1,
+\]
+where each \(\mathcal S_n^{(i)}\) is an admissible QAM store state, \(\Gamma_n\) is the cross-sphere guard register, \(\Pi_n\) is the parity/residual witness register, and \(\Lambda_n\) is the array-level lineage ledger. The array is admissible if all component stores are admissible and all cross-sphere guards in \(\Gamma_n\) are satisfied.
+\end{definition}
+
+\begin{definition}[Array instruction alphabet]\label{def:sphaera-array-instructions}
+The local MML array alphabet is
+\[
+\begin{aligned}
+  \mathcal I_{\mathrm{array}}
+  :=\{&\texttt{ARRAY\_CREATE},\texttt{MIRROR},\texttt{STRIPE},\texttt{PARITY},\\
+       &\texttt{SCRUB\_ARRAY},\texttt{REPAIR\_CAND},\texttt{SNAPSHOT\_ARRAY}\}.
+\end{aligned}
+\]
+The command \(\texttt{REPAIR\_CAND}\) intentionally returns a candidate repair surface, not an automatic mathematical repair theorem. The command \(\texttt{PARITY}\) records a residual or orthogonal control witness, not a proof that the residual vanishes.
+\end{definition}
+
+\begin{definition}[Mirror, stripe, and parity modes]\label{def:sphaera-array-modes}
+Let \(\mathbb S_n\) be an admissible Sphaera array.
+\begin{enumerate}[leftmargin=2em]
+  \item In \emph{mirror mode}, two component stores \(\mathcal S_n^{(i)}\) and \(\mathcal S_n^{(j)}\) are coupled by a cross-guard requiring equality of the relevant closure-compatible readout, even if the visible store presentations differ.
+  \item In \emph{stripe mode}, an object \(X\) is stored as a finite guarded decomposition \(X\rightsquigarrow(X_1,\ldots,X_k)\), with each stripe \(X_i\) stored in a specified component and with a reconstruction witness recorded in \(\Pi_n\).
+  \item In \emph{parity/residual mode}, one component or register stores a residual witness \(P\) for a guarded comparison of other components. The condition \(P=0\), if ever needed, must be proved separately; it is not asserted by the existence of the parity register.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Triadic Sphaera array]\label{def:triadic-sphaera-array}
+A \emph{triadic Sphaera array} is an admissible Sphaera array of the form
+\[
+  \mathbb S_n^{ABC}
+  :=
+  (\mathcal S_A,\mathcal S_B,\mathcal S_C;\Gamma_{ABC},\Pi_{ABC},\Lambda_{ABC})
+\]
+in which \(\mathcal S_A\) and \(\mathcal S_B\) carry two active readout or probe-facing stores, while \(\mathcal S_C\) carries the orthogonal residual/parity witness. The guard register records the structural condition that \(\mathcal S_C\) is read orthogonally to the active \(A/B\) coupling channel and that the HC/MM readout of the array preserves the inherited route tag.
+\end{definition}
+
+\begin{proposition}[Guarded array snapshot]\label{prop:sphaera-array-snapshot}
+Every admissible finite Sphaera array admits a guarded array snapshot
+\[
+  \operatorname{snap}_{\mathrm{arr}}(\mathbb S_n)
+  :=
+  \bigl(\mathbb S_n,(\chi_n^{(1)},\ldots,\chi_n^{(k)}),\chi_n^{\Gamma},\chi_n^{\Pi},\lambda_n^{\mathrm{arr}}\bigr),
+\]
+preserving component stores, cross-sphere guards, parity/residual witnesses, and array lineage.
+\end{proposition}
+
+\begin{proof}
+Apply Proposition~\ref{prop:qam-store-snapshot-stability} to each finite component store. Since the cross-guard, parity/residual, and array-ledger registers are also finite, record their integrity witnesses and one array lineage anchor. The resulting tuple is a guarded array snapshot. It records the array state without adding an OP-closure certificate and without changing any component object into metadata.
+\end{proof}
+
+\begin{proposition}[Finite array scrub]\label{prop:sphaera-array-scrub}
+For every finite Sphaera array there is a deterministic scrub procedure
+\[
+  \operatorname{scrub}_{\mathrm{arr}}(\mathbb S_n)
+  \in
+  \{\mathsf{pass},\mathsf{fail}\}\times\mathcal D_n,
+\]
+where \(\mathcal D_n\) is a finite defect register. The scrub passes exactly when all component-store guards, cross-sphere guards, parity/residual registrations, and lineage pointers pass their finite checks.
+\end{proposition}
+
+\begin{proof}
+The component store registers, cross-guard register, parity/residual register, and lineage ledger are finite by definition. A deterministic scrub checks them in a fixed order and records every failed check in \(\mathcal D_n\). If no failed check is recorded, the result is \(\mathsf{pass}\); otherwise it is \(\mathsf{fail}\) with the finite defect register. No repair or closure claim is produced by this test.
+\end{proof}
+
+\begin{theorem}[QAM/MML/MMA Sphaera array layer]\label{thm:qam-mml-mma-sphaera-array-layer}
+The QAM/MML/MMA stack admits a conservative Sphaera array layer in the following sense. Given finite admissible QAM stores, the store instruction alphabet of Definition~\ref{def:mml-store-instructions}, the array instruction alphabet of Definition~\ref{def:sphaera-array-instructions}, and guard-faithful lineage-faithful MMA transition semantics, one obtains finite guarded snapshots, finite array snapshots, and deterministic array scrub surfaces. These surfaces preserve stored mathematical objects, cross-sphere guards, residual/parity witnesses, and audit lineage without manufacturing an OP-closure certificate.
+\end{theorem}
+
+\begin{proof}
+The store part follows from Definitions~\ref{def:qam-store-state}--\ref{def:qam-store-snapshot} and Proposition~\ref{prop:qam-store-snapshot-stability}. The array part follows by grouping finitely many admissible stores as in Definition~\ref{def:sphaera-array}, assigning finite cross-guards, finite parity/residual witnesses, and a finite lineage ledger, and then applying Propositions~\ref{prop:sphaera-array-snapshot} and~\ref{prop:sphaera-array-scrub}. The last clause follows from the explicit non-certificate restrictions in Definitions~\ref{def:mml-store-instructions}, \ref{def:sphaera-array-instructions}, and \ref{def:sphaera-array-modes}: mirror, stripe, parity, scrub, and repair-candidate language records infrastructure and diagnostic data only. It does not assert vanishing residuals or OP closure.
+\end{proof}
+
+\begin{corollary}[RAID-like reading without RAID overclaim]\label{cor:sphaera-array-raid-reading}
+The Sphaera array layer supports a RAID-like reading: mirror mode corresponds to redundant closure-compatible readout, stripe mode corresponds to guarded distribution of a larger object over several component stores, and parity/residual mode corresponds to an explicit diagnostic witness for cross-component mismatch. This reading is internal to QAM/MML/MMA, but it remains weaker than technical RAID reconstruction and weaker than any OP-closure theorem.
+\end{corollary}
+
+\begin{proof}
+This is only a translation of Definition~\ref{def:sphaera-array-modes} into systems language. The mathematical content remains the guarded store, snapshot, array, parity/residual, and scrub structure already proved above.
+\end{proof}
+
+\begin{remark}[Tool extraction from the Sphaera array layer]\label{rem:sphaera-array-tool-extraction}
+The new layer extracts four reusable tools for later Companion revisions.
+\begin{enumerate}[leftmargin=2em]
+  \item \textbf{Snapshot tool.} Freeze one admissible QAM store without changing the mathematical object language.
+  \item \textbf{Clone/rollback tool.} Open or return from a guarded branch while preserving lineage and non-certificate status.
+  \item \textbf{Array-scrub tool.} Test several Sphaera stores, cross-guards, and residual witnesses as one finite diagnostic surface.
+  \item \textbf{Triadic parity tool.} Use a third, orthogonal Sphaera object as residual/parity witness for a two-store active coupling.
+\end{enumerate}
+These tools are deliberately infrastructural. Their value is that later OP-facing work can compare, branch, and roll back several coupled Sphaera objects without confusing state persistence with theorematic closure.
+\end{remark}
+
+\begin{remark}[Human/LLM interface gain]\label{rem:sphaera-array-human-llm-gain}
+For a human reader, the store-array layer explains why the Companion keeps snapshots, historical witnesses, audit ledgers, and branch restrictions so visibly: they are the theorem-store equivalent of protected state persistence. For an LLM reader, the same layer supplies exact handles: \(\mathcal S_n\) for one store, \(\mathbb S_n\) for an array, \(\Gamma_n\) for cross-guards, \(\Pi_n\) for parity/residual witnesses, and \(\Lambda_n\) for lineage. This is the intended compromise between human readability and machine precision.
+\end{remark}
+
+
+\subsection*{Pre-v4 QAM Hilbert-shift and guarded mixed readouts}
+\begin{quote}\small
+\noindent\textbf{Status.} \emph{Pre-v4 preparation layer only.} The inherited QAM tuple tags are not globally migrated in Version~\docversion{}. The block below records the conservative Hilbert-shift plan, the mixed-readout package discipline, and an optional binary mask registry for future readout classification.
+\end{quote}
+
+The index-0 issue is now treated explicitly. In the inherited QAM tuple namespace, tag 0 occurs as an inhabited constructor tag, for instance on visible tuple surfaces of the form $\langle 0,a\rangle$. In a Boolean mask or IPv4-like readout registry, however, value 0 must mean no active kind. The next major QAM migration should therefore not identify these two uses. The preparation layer below records the planned Hilbert-hotel shift that can free tag 0 in the future while preserving the payloads and proofs.
+
+\begin{definition}[QAM Hilbert-shift plan]\label{def:qam-hilbert-shift-plan}
+Let $\mathcal K_{\mathrm{old}}$ be the inherited finite QAM tuple-tag namespace used by the current public syntax, and let $\mathcal K_{\mathrm{new}}$ be a shifted namespace with tag 0 reserved for the empty/no-active-kind marker. The planned Hilbert-shift is the constructor-level map
+\[
+  H_{\mathrm{QAM}}(\langle i,x_1,\ldots,x_m\rangle)
+  :=
+  \langle i+1,x_1,\ldots,x_m\rangle.
+\]
+It shifts only the constructor tag. It does not change the stored payload $(x_1,\ldots,x_m)$, the intended constructor distinction, or any mathematical content carried by the payload.
+\end{definition}
+
+\begin{definition}[Pre-v4 reserved-zero discipline]\label{def:pre-v4-reserved-zero-discipline}
+The preparation line distinguishes two uses of zero.
+\begin{enumerate}[leftmargin=2em]
+  \item In the inherited v3.x tuple syntax, tag 0 remains an inhabited tuple tag wherever the old QAM definitions still use it.
+  \item In the planned v4 shifted namespace and in every binary mask registry, tag or mask value 0 is reserved for empty, undefined, or no active kind.
+\end{enumerate}
+No Version~\docversion{} statement may silently replace the first convention by the second. Any global replacement is reserved for a later v4 migration theorem.
+\end{definition}
+
+\begin{proposition}[Conservative shape of the QAM Hilbert-shift]\label{prop:qam-hilbert-shift-conservative-shape}
+Suppose a finite QAM sublanguage is translated by $H_{\mathrm{QAM}}$ and every constructor predicate, admissibility predicate, readout predicate, and closure-relevant predicate is translated by the same tag shift. Then the translated sublanguage is a conservative reindexing of the old one: payloads, constructor distinctions, admissibility status, readout compatibility, and closure-relevant truth values are preserved under the translation.
+\end{proposition}
+
+\begin{proof}
+The map $H_{\mathrm{QAM}}$ is injective on constructor tags and leaves all payload coordinates unchanged. A constructor predicate in the shifted namespace is defined to hold exactly when the corresponding old predicate holds before applying the shift. The same translation is imposed on admissibility, readout, and closure-relevant predicates. Thus every proof step that used only constructor distinction, payload data, admissibility, readout compatibility, or closure-relevant class data has an isomorphic shifted proof step. The proposition records the required conservativity shape for a later v4 migration; it does not perform the global migration here.
+\end{proof}
+
+\begin{definition}[Guarded mixed QAM readout]\label{def:guarded-mixed-qam-readout}
+A \emph{guarded mixed QAM readout} is a finite derived package
+\[
+  R_{\mathrm{mix}}
+  :=
+  (r_1,\ldots,r_m;\Gamma_{\mathrm{mix}},\mu,J_{\mathrm{mix}},\sigma_{\mathrm{mix}}),
+\]
+where each $r_i$ is an already admissible component readout on its own allowed QAM kind, $\Gamma_{\mathrm{mix}}$ is a finite guard package, $\mu$ is a finite aggregation map on component readout values, $J_{\mathrm{mix}}$ is the closure-factor map for the aggregate, and $\sigma_{\mathrm{mix}}$ records the theorematic status. It is admissible only when all component readouts are admissible and the aggregation map does not identify non-equivalent closure-relevant classes.
+\end{definition}
+
+\begin{definition}[Binary mask registry for mixed readouts]\label{def:binary-mask-registry-mixed-readouts}
+A \emph{binary mask registry} for mixed QAM readouts assigns to each inhabited readout kind a nonzero power-of-two bit
+\[
+  \beta_j = 2^j,
+  \qquad j\ge 0,
+\]
+and reserves mask value 0 for no active kind. A mixed-readout mask is a finite Boolean OR of active kind bits. Boolean AND tests whether a component kind is present, XOR records symmetric difference between two masks, and complement is allowed only relative to a fixed finite mask universe $\Omega$.
+\end{definition}
+
+\begin{proposition}[Mixed readout factorization]\label{prop:mixed-readout-factorization}
+Let $R_{\mathrm{mix}}$ be a guarded mixed QAM readout whose component readouts $r_i$ are closure-compatible. If the aggregation map $\mu$ factors through the component closure-factor maps and $J_{\mathrm{mix}}$ factors through the resulting aggregate class, then $R_{\mathrm{mix}}$ is closure-compatible.
+\end{proposition}
+
+\begin{proof}
+Closure-compatible component readouts identify no closure-relevant distinction beyond their component class maps. Since $\mu$ factors through those class maps, it can only aggregate already class-level data. Since $J_{\mathrm{mix}}$ factors through that aggregate class, the mixed readout cannot introduce a new closure-relevant distinction that was invisible to the component closure classes. Therefore the mixed package is closure-compatible. The argument uses only factorization and guards; it does not introduce primitive mixed tensors.
+\end{proof}
+
+\begin{remark}[v4 migration trigger]\label{rem:v4-qam-migration-trigger}
+The full replacement of the inherited tuple tags by the shifted tags is intentionally not a Version~\docversion{} operation. It changes the visible QAM object-language namespace and therefore belongs to a major version. Version~\docversion{} only records why the shift is useful, what the conservative proof obligation looks like, and how mixed readouts can already be treated as derived packages without forcing the migration.
+\end{remark}
+
+
+% ============================================================================
+% Quantum Sphaera Companion v3.35.0-r03 insertion patch
+% Two-sided structural tensor notation for QAM/MML/MMA readouts
+%
+% Intended insertion point:
+%   In the active-core source, place this block after the short QAM/MML/MMA
+%   reader-orientation / pre-v4 QAM preparation material, and before any
+%   broad theorematic QAM continuation.  In older sources the closest safe
+%   anchor is after the remark "QAM normalization guide".
+%
+% Scope:
+%   Conservative notation/compression layer only.  This is not the separate
+%   pedagogical reader manual paper; that manual remains a future standalone
+%   companion/guide document.
+% ============================================================================
+
+\subsection*{Two-sided structural tensor notation for QAM/MML/MMA readouts}
+\begin{quote}\small
+\noindent\textbf{Status.} \emph{Active notation and compression layer; not a new tensor calculus and not a new closure criterion.}\par
+\noindent\textbf{Block function.} This block records the narrow two-sided tensor grammar used to separate readout-side, structure-side, comparison-side, and mask-side roles in later QAM/MML/MMA expressions.  It is included here as a conservative technical layer only.  A fuller pedagogical reader manual for the notation is intentionally kept as a separate future paper or companion guide.
+\end{quote}
+
+The QAM/MML/MMA line repeatedly alternates between four roles: frame-side readout, structure-side action, comparison of active channels, and compatibility testing of readout or mask modes.  The following notation is introduced only to make those roles visible in the formula syntax.  It does not replace classical tensor calculus and it does not turn every displayed expression into a new primitive tensor object.
+
+\begin{definition}[Two-sided structural tensor interface]\label{def:two-sided-structural-tensor-interface}
+A \emph{two-sided structural tensor display} is a tensor-like expression in which a structural object may carry front-side and back-side indices, written schematically as
+\[
+{}^{A}{}_{B}\mathcal{T}^{i}{}_{j}.
+\]
+The front indices \({}^{A}{}_{B}\) record the left-sided or readout-facing interface: frame, observer, language, readout, or external addressing data.  The back indices \({}^{i}{}_{j}\) record the right-sided or structure-facing interface: action, transport, field, operator, or internal structural data.  Thus the display is read as a typed structural interface rather than as a mere component array.
+\end{definition}
+
+\begin{definition}[Admissible contractions and comparisons]\label{def:two-sided-admissible-contractions}
+The two-sided notation obeys the following contraction discipline.
+\begin{enumerate}[leftmargin=2em]
+  \item \textbf{Classical action/readout.} Ordinary upper--lower contraction remains unchanged.  If
+  \[
+  A_\mu\,{}^\mu\mathcal{T}_\nu\,B^\nu
+  \]
+  is well-defined, it is read as a classical action, evaluation, or sandwich readout: first apply the structure-facing operation to \(B\), then read the result by \(A\).
+  \item \textbf{Active--active comparison.} Two upper indices are not contracted as a raw Einstein sum.  They may only be compared through an explicitly declared comparison tensor, for instance
+  \[
+  G_{\alpha\beta}X^\alpha Y^\beta .
+  \]
+  This means active structural comparison, such as angle, distance, coupling strength, orthogonality, channel similarity, or residual size.
+  \item \textbf{Passive--passive comparison.} Two lower indices are likewise not contracted raw.  They may only be compared through an explicitly declared dual comparison tensor, for instance
+  \[
+  G^{\alpha\beta}\omega_\alpha\eta_\beta .
+  \]
+  This means comparison of readout forms, observer modes, measurement channels, or passive projections.
+  \item \textbf{Mask and selector compatibility.} Boolean, finite, or mask-like compatibility tests must be carried by an explicit selector tensor, for instance
+  \[
+  \chi_{mn}R^mS^n .
+  \]
+  This expression says that readout modes \(m\) and \(n\) are first tested for admissible compatibility by \(\chi\), and only compatible contributions are admitted to the mixed readout.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}[Conservative reading rule]\label{rem:two-sided-conservative-reading-rule}
+The two-sided notation is conservative because the only unchanged contraction is the classical upper--lower action/readout contraction.  Same-variance pairings are not silently added to the calculus; they are admitted only when a comparison tensor or selector tensor has been declared.  Hence every two-sided display must be expandable into ordinary QAM-over-ZF role predicates together with explicit comparison or compatibility data.
+\end{remark}
+
+\begin{definition}[Guarded mixed QAM readout]\label{def:guarded-two-sided-mixed-qam-readout}
+Let \(R^m\) and \(S^n\) be QAM readout modes and let \(\chi_{mn}\) be an explicit admissibility or compatibility selector.  A \emph{guarded mixed QAM readout} is a derived readout expression of the form
+\[
+\operatorname{Mix}_{\chi}(R,S)(x)
+\quad\leadsto\quad
+\chi_{mn}R^m(x)S^n(x),
+\]
+where the right-hand display is read with the contraction discipline of Definition~\ref{def:two-sided-admissible-contractions}.  The mixed readout is therefore not a new primitive QAM object.  It is a compatibility-filtered package of already admitted readout modes.
+\end{definition}
+
+\begin{remark}[Residual comparison grammar]\label{ex:two-sided-residual-comparison}
+The live residual triple
+\[
+\rho=(\rho_{\mathrm{CL}},\rho_{\Theta},\rho_A)
+\]
+may be compressed into a residual-channel vector \(\rho^\alpha\).  Its total comparison size may then be written as
+\[
+\|\rho\|_G^2=G_{\alpha\beta}\rho^\alpha\rho^\beta .
+\]
+This is not a raw contraction of two upper indices.  It is the comparison of two active residual-channel entries through the declared comparison tensor \(G_{\alpha\beta}\).
+\end{remark}
+
+\begin{remark}[HC/MM sandwich grammar]\label{ex:two-sided-hc-mm-sandwich}
+An HC/MM-mediated readout may be displayed schematically as
+\[
+{}^{R}{}_{\Omega}\mathcal{M}^{i}{}_{j},
+\]
+where the front side records the readout or observer-side interface and the back side records the structure-side transport or matrix action.  When paired with ordinary upper--lower indices, the expression remains an ordinary sandwich readout.  When two readout channels or two structure channels are compared, the comparison must be mediated by an explicitly named comparison tensor or selector.
+\end{remark}
+
+\begin{proposition}[Conservative expansion of two-sided displays]\label{prop:two-sided-conservative-expansion}
+Every well-formed two-sided structural tensor display in the sense of Definitions~\ref{def:two-sided-structural-tensor-interface} and~\ref{def:two-sided-admissible-contractions} admits a conservative expansion into the inherited QAM-over-ZF language: front-side indices expand to readout/frame/language role data, back-side indices expand to structure/action/transport role data, classical upper--lower contractions remain ordinary action or evaluation clauses, and every same-variance pairing expands to an explicit comparison or compatibility predicate.
+\end{proposition}
+
+\begin{proof}
+Erase the visual sidedness notation and retain its role data as ordinary QAM codes.  Front-side symbols become readout, frame, observer, or language tags.  Back-side symbols become structure, action, transport, or field tags.  Classical upper--lower contractions are left unchanged.  A same-variance display is well formed only if it contains a named comparison tensor or selector, and so it expands to the corresponding comparison or compatibility predicate.  No new primitive closure relation, admissibility relation, or theorematic certificate is introduced by this erasure.  The display is therefore a conservative abbreviation of already typed QAM-over-ZF data.
+\end{proof}
+
+\begin{remark}[LLM-facing role stability]\label{rem:two-sided-llm-role-stability}
+For machine reading and LLM-assisted proof navigation, the notation functions as a syntactic guardrail.  The front/back split marks whether a symbol belongs to the readout-facing side or the structure-facing side, while the contraction discipline marks whether a formula is an action, a readout, a comparison, or a compatibility test.  This reduces the risk that a readout is mistaken for an operator, that a diagnostic comparison is mistaken for a proof of closure, or that a guarded mixed readout is mistaken for a new primitive tensor object.
+\end{remark}
+
+\begin{remark}[Use in the present release line]\label{rem:two-sided-present-release-use}
+In the present v3.35.x line this notation should be used locally and sparingly: first for guarded mixed QAM readouts, residual/drift comparisons, HC/MM sandwich expressions, triadic orthogonality comparisons, and Boolean or mask-like compatibility tests.  A global rewrite of the whole Companion into the two-sided notation is not part of this release line.  The separate pedagogical reader manual may later explain the notation at a slower pace without enlarging the active theorem core.
+\end{remark}
+
+
+% ============================================================================
+% Quantum Sphaera Companion v3.35.0-r03 insertion patch
+% Two-sided tensor stability, mixed-readout normal form, and Boolean masks
+%
+% Scope:
+%   Stabilization layer only.  This block makes the r02 notation explicitly
+%   expandable back into QAM-over-ZF role data and records the mask/readout
+%   grammar that will later help the v4 QAM reindexing.  It is not the separate
+%   pedagogical reader-manual paper.
+% ============================================================================
+

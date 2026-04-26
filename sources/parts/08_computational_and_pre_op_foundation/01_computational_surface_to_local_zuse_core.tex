@@ -1,0 +1,605 @@
+\section{Computational Interpretation, Enigma Analogy, and Bomba-Style Structural Search}
+\begin{quote}\small
+\noindent\textbf{Status.} \emph{Active compressed auxiliary layer, subordinate to the mathematics-first core.}\par
+\noindent\textbf{Block function.} This chapter packages the computational, machine, and decoder reading into a short theorem-usable interface, so later arguments can cite the route/decoder layer without reopening the full exploratory genealogy.
+\end{quote}
+\label{sec:computational-reading}
+\addcontentsline{toc}{section}{Computational Interpretation, Enigma Analogy, and Bomba-Style Structural Search}
+
+\paragraph{Status note.}
+For the current v\docversion\ release line, the computational/enigma/millennium-language material is now read through a compressed interface. The purpose of this chapter is no longer to carry a long exploratory ladder on every pass, but to preserve a short theorem-usable computational reading that remains subordinate to the mathematics-first architecture.
+
+\subsection*{1--19J. Compressed computational interpretation surface}
+The historical computational line can now be cited through a single bundled surface. Its content is unchanged in substance: the chapter still records (i) the historical genealogy from Turing, Zuse, and algorithmic state-transition thinking; (ii) the reason an Enigma-/reflector-/differencing-style comparison becomes structurally natural in the present routed architecture; (iii) the millennium-machine reading with collapse states, projector logic, HC-selection, and reversible return structure; (iv) the provisional language stack MML $\to$ MMA-0.1 $\to$ MCP together with certificate/export discipline; and (v) the Bomba/Bombe-style search idea, not as a literal cryptanalytic identity claim but as a constrained elimination picture for admissible structural menus.
+
+The primitive computational reserve remains represented by the normalized instruction family
+\[
+\begin{aligned}
+\{&\texttt{COLLAPSE},\texttt{PROJECT},\texttt{CLOSE},\texttt{PROBE},\texttt{TRACE},\texttt{COMPARE},\\
+&\texttt{DIFF},\texttt{HCSEL},\texttt{HOPF},\texttt{REJECT},\texttt{EXPORT\_BOOL},\texttt{FORWARD}\}
+\end{aligned}
+\]
+and the intended proof-compression reading still runs through the compilation chain
+\[
+\begin{aligned}
+&\text{MML source}
+\Longrightarrow \text{MMA-0.1 instruction stream}\\
+&\Longrightarrow \mathcal P_{\mathrm{MCP}}
+\Longrightarrow \text{Boolean-compatible host state}.
+\end{aligned}
+\]
+What changes in the active line is only the packaging: the long exploratory ladder is replaced by a short citation surface.
+
+\begin{definition}[Compressed computational interpretation surface]
+Write
+\[
+\mathfrak C^{\mathrm{comp}}
+=
+\langle
+\mathcal H_{\mathrm{hist}},
+\mathcal E_{\mathrm{route}},
+\mathcal B_{\mathrm{elim}},
+\mathfrak R^{\mathrm{comp}}
+\rangle
+\]
+for the compressed computational interpretation surface, where:
+\begin{itemize}[leftmargin=2em]
+    \item $\mathcal H_{\mathrm{hist}}$ denotes the historical genealogy and machine-reading motivation;
+    \item $\mathcal E_{\mathrm{route}}$ denotes the reflector-/projector-/routing-style structural comparison reading;
+    \item $\mathcal B_{\mathrm{elim}}$ denotes the constrained Bomba/Bombe-style elimination viewpoint on admissible local menus;
+    \item $\mathfrak R^{\mathrm{comp}}$ denotes the compressed computational reserve surface already carrying the instruction, macro, proof-template, and certificate workflow layers.
+\end{itemize}
+\end{definition}
+
+\begin{proposition}[Exact citation reading of the compressed computational interpretation surface]
+The compressed computational interpretation surface $\mathfrak C^{\mathrm{comp}}$ is citation-equivalent to the expanded ladder previously distributed across the historical computational line, the Enigma/reflector comparison, the Boolean/projector layer, the millennium-machine viewpoint, the MML/MMA/MCP language discussion, the computational reserve examples, and the Bomba/Bombe search outlook. Consequently later arguments may cite $\mathfrak C^{\mathrm{comp}}$ whenever they use only the existence of that computational reading and do not require reopening the internal historical examples or the micro-expansion of the reserve stack.
+\end{proposition}
+
+\begin{corollary}[What the compressed computational interpretation surface already buys]
+The active line keeps a usable computational reading without carrying the full exploratory staircase. Later proof-compression, host-interface, or search-orientation arguments may therefore appeal to a single computational interpretation surface instead of reopening the whole Turing/Zuse/Enigma/MML/MCP ladder each time.
+\end{corollary}
+
+
+\subsection*{19K. Local operational semantics and conditional route to universality}
+The compressed computational interpretation surface can be sharpened one step further without overclaiming. The correct present reading is not that universality has already been proved, but that the current release line now supports a \emph{conditional operational semantics} together with a \emph{conditional route} by which a later full universality theorem could be closed if the remaining component-identification obligations are discharged.
+
+\begin{definition}[Local operational semantics for the compressed computational surface]
+Fix a finite local machine state
+\[
+\Sigma=(\tau,h,q,\rho,\chi),
+\]
+where $\tau$ denotes a finite tape snapshot, $h$ a head position, $q$ a finite control state, $\rho$ a routed/readout state, and $\chi$ the current shell-/closure certificate. Interpret the primitive instruction family
+\[
+\begin{aligned}
+\{&\texttt{COLLAPSE},\texttt{PROJECT},\texttt{CLOSE},\texttt{PROBE},\texttt{TRACE},\texttt{COMPARE},\\
+&\texttt{DIFF},\texttt{HCSEL},\texttt{HOPF},\texttt{REJECT},\texttt{EXPORT\_BOOL},\texttt{FORWARD}\}
+\end{aligned}
+\]
+as generating a partial local transition relation
+\[
+\Sigma \xrightarrow{\,\iota\,} \Sigma'
+\]
+on shell-admissible states, with the following intended roles:
+\begin{itemize}[leftmargin=2em]
+  \item \texttt{PROJECT}, \texttt{COMPARE}, \texttt{DIFF}, and \texttt{EXPORT\_BOOL} produce the locally readable branch predicates;
+  \item \texttt{FORWARD} and \texttt{HOPF} move the effective read/write location along the admissible routed support;
+  \item \texttt{COLLAPSE}, \texttt{CLOSE}, and \texttt{HCSEL} update the local closure/control state while preserving admissibility;
+  \item \texttt{PROBE} and \texttt{TRACE} realize the controlled inspection/readout layer;
+  \item \texttt{REJECT} records a halted or discarded local branch.
+\end{itemize}
+The present Companion only uses this as a local operational semantics on admissible windows; it is not yet a global universality theorem.
+\end{definition}
+
+\begin{definition}[Spinorial tape hypothesis and conditional Z3-route hypothesis]
+For the current release line, write $\mathbf{STH}$ for the \emph{spinorial tape hypothesis}: the optimal line carried by the admissible spinorial transport acts as an effectively extendable read/write support for the local state component $\tau$, so that finite tape snapshots may be prolonged along that support without breaking shell-admissibility.
+
+Write $\mathbf{Z3H}$ for the accompanying \emph{conditional Z3-route hypothesis}: once conditional branching, locally persistent read/write support, and effective looping/return are available on that spinorial support, the present MML$\to$MMA-0.1$\to$MCP line can be organized so as to simulate a standard sequential control core in the same sense in which a Z3-style line becomes computationally universal only after the relevant strengthening assumptions are supplied.
+\end{definition}
+
+\begin{proposition}[Conditional route from the compressed computational surface to universality]
+Assume $\mathbf{STH}$ and $\mathbf{Z3H}$, and assume in addition the \emph{component identification hypothesis}: the current structural components really do instantiate the required computational roles, namely
+\begin{itemize}[leftmargin=2em]
+  \item a persistent effective tape support carried by the spinorial optimal line,
+  \item a finite control/update layer carried by the coded MML/MMA-0.1/MCP stack,
+  \item a locally decidable branch/readout layer carried by the projector/Boolean comparison interface,
+  \item and a return/loop discipline carried by the routed HC-selected closure structure.
+\end{itemize}
+Then the compressed computational interpretation surface $\mathfrak C^{\mathrm{comp}}$ supports a \emph{conditional route to universality}: to prove a true universality theorem it is sufficient to prove that these identified components realize a standard reference machine core (for example a register-machine or tape-machine core) under the local transition semantics above.
+\end{proposition}
+
+\begin{corollary}[What the conditional universality route already buys]
+The current v\docversion\ line may now state the computational claim in the correct sharpened form: the Companion does \emph{not} yet prove Turing-completeness, but it does isolate a specific route by which such a result would follow. The remaining hard step is no longer ``invent a machine reading from scratch,'' but ``prove that the present structural components are indeed the tape, control, branch, and return components required by the conditional route.''
+\end{corollary}
+
+
+\subsection*{19L. Component role-hardening and a conditional Zuse-style primitive core}
+The historical calibration from Z1 through Z3 suggests a useful discipline for the present line. The architectural idea already existed early, but reliability improved when storage, control, and arithmetic roles became cleaner and more stable across the machine family. In the same spirit, the present Companion should not jump immediately from a compressed computational reading to a full universality claim. The next correct step is to harden the four component roles separately and only then close stronger machine-theoretic statements.
+
+\begin{definition}[Local role certificate package]
+Write
+\[
+\mathbf{Role}=(\mathbf T,\mathbf Q,\mathbf B,\mathbf L)
+\]
+for a local role certificate package on an admissible computational window, where:
+\begin{itemize}[leftmargin=2em]
+  \item $\mathbf T$ certifies an effectively extendable sequential read/write support;
+  \item $\mathbf Q$ certifies a finite control/update layer with stable local instruction semantics;
+  \item $\mathbf B$ certifies a locally decidable branch predicate layer;
+  \item $\mathbf L$ certifies a loop/return discipline capable of resuming or repeating the local control flow without leaving admissibility.
+\end{itemize}
+A local machine reading is called \emph{Zuse-primitive} on the given window if it carries such a package, even if no full universality theorem has yet been proved.
+\end{definition}
+
+\begin{proposition}[Spinorial optimal line as conditional tape role]
+Assume $\mathbf{STH}$. Then the admissible spinorial optimal line carries the conditional tape certificate $\mathbf T$ in the following weak but machine-relevant sense: finite local snapshots may be written, read, and prolonged along that line by admissible transport, and the transition primitives \texttt{FORWARD} and \texttt{HOPF} provide the local sequential displacement needed for an effective head movement on admissible windows.
+\end{proposition}
+
+\begin{proposition}[Coded MML/MMA/MCP stack as conditional control role]
+Assume the component identification hypothesis for the coded MML$\to$MMA-0.1$\to$MCP line. Then the coded stack carries the conditional control certificate $\mathbf Q$: it provides a finite control/update discipline which selects, routes, and stabilizes the local instruction semantics on admissible computational windows.
+\end{proposition}
+
+\begin{proposition}[Projector/Boolean layer as conditional branch role]
+Assume the locally decidable projector/readout and Boolean export layer already isolated in the compressed computational surface. Then the current release line carries the conditional branch certificate $\mathbf B$: branch predicates can be extracted locally in a form sufficient to distinguish continuation, rejection, and comparison-sensitive update on admissible windows.
+\end{proposition}
+
+\begin{proposition}[Routed HC-selected closure as conditional loop/return role]
+Assume the routed HC-selected closure structure persists under admissible local updates. Then the current release line carries the conditional loop/return certificate $\mathbf L$: local computational segments can be closed, resumed, or re-entered through the routed closure discipline without immediately destroying admissibility.
+\end{proposition}
+
+\begin{theorem}[Conditional Zuse-core closure theorem]
+Assume $\mathbf{STH}$, the local operational semantics on admissible computational windows, the component identification hypothesis, and the conditional role certificates $\mathbf{Role}=(\mathbf T,\mathbf Q,\mathbf B,\mathbf L)$ above. Then the compressed computational interpretation surface $\mathfrak C^{\mathrm{comp}}$ closes to a \emph{conditional local Zuse-core} on every admissible certified window: there is a well-defined primitive sequential machine reading with
+\begin{itemize}[leftmargin=2em]
+  \item a persistent sequential storage/support component carried by the spinorial optimal line,
+  \item a finite control/update component carried by the coded MML$\to$MMA-0.1$\to$MCP stack,
+  \item a locally decidable branch/readout component carried by the projector/Boolean comparison interface,
+  \item and a routed loop/return component carried by the HC-selected closure structure.
+\end{itemize}
+Moreover this local Zuse-core is closed under admissible one-step execution and under finite concatenation of locally certified segments, so the present line already supports a genuine \emph{primitive Zuse-style computational apparatus} in the conditional sense of this chapter. What remains open is not the existence of that primitive core, but the proof that these components are globally stable, extendable, and strong enough to simulate a standard reference machine.
+\end{theorem}
+
+\begin{corollary}[Conditional Zuse-style primitive computational core]
+Assume $\mathbf{STH}$, the component identification hypothesis, and the conditional role certificates $\mathbf{Role}=(\mathbf T,\mathbf Q,\mathbf B,\mathbf L)$ above. Then the compressed computational interpretation surface $\mathfrak C^{\mathrm{comp}}$ already supports a \emph{conditional Zuse-style primitive computational core}: the current release line carries a genuine sequential storage/support reading, a finite control/update layer, a local branch/readout layer, and a routed loop/return discipline. What is still missing for stronger claims is not the existence of a primitive machine reading, but the final proof that these roles are globally stable and strong enough for an explicit reference-machine simulation.
+\end{corollary}
+
+\begin{corollary}[What the conditional Zuse-core closure theorem already buys]
+Later arguments may now cite a single bundled closure statement for the machine-reading side of the Companion: under the certified local role package, the present line is already closed as a primitive Zuse-style computational core on admissible windows. Thus one no longer needs to reopen the tape/control/branch/loop roles separately unless the proof requires strengthening one of the four certificates themselves.
+\end{corollary}
+
+
+\subsection*{19M. Reduced proof-obligation package for the conditional Zuse-core}
+Once the conditional Zuse-style primitive core has been isolated, the remaining machine-theoretic burden should be stated as a small explicit obligation package rather than left as a diffuse list of promises. The right next reading is therefore not ``prove universality all at once,'' but ``reduce the open universality route to a finite role-upgrade package.''
+
+\begin{definition}[Reduced universality-obligation package for the conditional Zuse-core]
+Write
+\[
+\mathbf U=(\mathbf U_T,\mathbf U_Q,\mathbf U_B,\mathbf U_L,\mathbf U_S)
+\]
+for the reduced universality-obligation package attached to the conditional Zuse-core, where:
+\begin{itemize}[leftmargin=2em]
+  \item $\mathbf U_T$ is the obligation that the spinorial optimal line is not merely locally readable, but globally prolongable as an effective read/write support;
+  \item $\mathbf U_Q$ is the obligation that the coded MML$\to$MMA-0.1$\to$MCP control layer composes stably across admissible local windows;
+  \item $\mathbf U_B$ is the obligation that the projector/Boolean layer yields executable and persistently decidable branch predicates under admissible concatenation;
+  \item $\mathbf U_L$ is the obligation that the routed HC-selected closure discipline provides genuine resumable loop/return control under repeated local execution;
+  \item $\mathbf U_S$ is the obligation that these upgraded components explicitly simulate a standard sequential reference-machine core on admissible windows.
+\end{itemize}
+A conditional Zuse-core is called \emph{universality-ready} if all five obligations in $\mathbf U$ are discharged.
+\end{definition}
+
+\begin{proposition}[Proof-obligation reduction for the conditional Zuse-core]
+Assume the conditional Zuse-core closure theorem. Then the remaining gap between the present release line and a genuine universality theorem is reduced to the package $\mathbf U=(\mathbf U_T,\mathbf U_Q,\mathbf U_B,\mathbf U_L,\mathbf U_S)$ above. In particular, one no longer needs to reopen the existence of a primitive machine reading itself; the open task is only to upgrade the four certified roles from local conditional availability to globally stable executable roles and then prove the explicit reference-machine simulation.
+\end{proposition}
+
+\begin{corollary}[What the reduced universality-obligation package already buys]
+The machine-theoretic remainder of the Companion is now sharply localized. Later revisions may therefore proceed componentwise: tape hardening, control hardening, branch hardening, loop/return hardening, and finally explicit simulation. This is a much narrower and more testable program than the earlier diffuse slogan ``show that the whole architecture is universal.''
+\end{corollary}
+
+\begin{remark}[What the Z1$\to$Z2$\to$Z3 improvement path suggests for the present model]
+The historical machine line suggests three concrete lessons for the current architecture.
+\begin{itemize}[leftmargin=2em]
+  \item First, one should keep the candidate storage support as stable as possible while improving the control/branch implementation; this favors treating the spinorial optimal line as the persistent support and hardening the projector/control stack around it.
+  \item Second, the decisive upgrade path may come from improving reliability of the control and branching layers before demanding full universality; this mirrors the move from more fragile early realization to a more robust relay-style execution discipline.
+  \item Third, the right immediate target is not yet ``prove Turing-completeness,'' but ``prove that the present line already forms a Zuse-primitive machine in the precise conditional sense above.''
+\end{itemize}
+\end{remark}
+
+
+
+
+\subsection*{19N. First hardening priority for the reduced universality-obligation package}
+Once the remaining universality route has been reduced to a finite package, the next question is no longer merely ``what is missing,'' but ``in which order should the missing pieces be hardened so that later upgrades do not have to be reopened unnecessarily.'' The Zuse-guided reading suggests that the first useful order is not to attack full simulation immediately, but to stabilize the executable control layers around the candidate storage support before demanding the final global machine theorem.
+
+\begin{definition}[First Zuse-guided hardening priority order for the reduced universality-obligation package]
+Write
+\[
+\mathbf H_1=(\mathbf U_Q,\mathbf U_B,\mathbf U_L,\mathbf U_T,\mathbf U_S)
+\]
+for the first Zuse-guided hardening priority order attached to the reduced universality-obligation package. Its intended reading is the following:
+\begin{itemize}[leftmargin=2em]
+  \item first harden the finite control/update stack so that local instruction semantics compose stably across admissible windows;
+  \item then harden the projector/Boolean branch layer so that executable branching survives admissible concatenation;
+  \item then harden the routed HC-selected loop/return discipline so that repeated local execution remains resumable;
+  \item only afterwards demand that the spinorial optimal line be upgraded from local readable support to globally prolongable effective tape;
+  \item and only at the end require the explicit reference-machine simulation.
+\end{itemize}
+\end{definition}
+
+\begin{proposition}[Zuse-guided priority reduction for the reduced universality-obligation package]
+Assume the conditional Zuse-core closure theorem and the reduced universality-obligation package $\mathbf U=(\mathbf U_T,\mathbf U_Q,\mathbf U_B,\mathbf U_L,\mathbf U_S)$. Then the first useful hardening route may be read through the priority order $\mathbf H_1=(\mathbf U_Q,\mathbf U_B,\mathbf U_L,\mathbf U_T,\mathbf U_S)$ above: the present line already has a persistent storage candidate, but its most leverage-sensitive uncertified parts lie first in the execution stack surrounding that candidate. In particular, upgrading control, then branch, then loop/return yields the cleanest path to a later tape hardening and finally to explicit simulation, because it stabilizes the executable local dynamics before asking for the strongest global machine claim.
+\end{proposition}
+
+\begin{corollary}[What the first Zuse-guided hardening priority order already buys]
+The open universality route is now not only finite but ordered. Later revisions therefore need not ask merely whether the current release line is already universal; they may instead proceed along a narrower program: first make the control layer compose, then make branching executable, then make local return resumable, then globalize the tape, and only afterwards prove explicit simulation. This turns the remaining machine-theoretic work from one undifferentiated challenge into a staged hardening schedule.
+\end{corollary}
+
+
+
+\subsection*{19O. First local hardening of the control obligation $\mathbf U_Q$}
+The priority order above says that the first leverage-sensitive remaining task is no longer the tape itself but the stability of the executable control stack around that tape candidate. The natural first hardening step is therefore to isolate a local criterion under which the instruction/update layer is not merely available pointwise, but composes across adjacent admissible windows without reopening its semantics at every cut.
+
+\begin{definition}[First local control-hardening certificate for $\mathbf U_Q$]
+Write
+\[
+\mathbf Q_{\mathrm{loc}}(I)=1
+\]
+for the first local control-hardening certificate on a finite admissible window $I$ if the following hold simultaneously on $I$:
+\begin{itemize}[leftmargin=2em]
+  \item the local operational semantics of the compressed computational surface assigns a well-defined successor state to every admissible instruction step on $I$;
+  \item adjacent admissible subwindows of $I$ compose without changing the decoded control meaning of the instruction stack;
+  \item the induced controller action remains compatible with the later-depth cycle-control layer whenever that layer is active on the same window.
+\end{itemize}
+In words, $\mathbf Q_{\mathrm{loc}}(I)=1$ means that the present line already carries a locally executable and composition-stable control role on the window $I$.
+\end{definition}
+
+\begin{proposition}[First reduction of the control obligation $\mathbf U_Q$]
+Assume the conditional Zuse-core closure theorem, the reduced universality-obligation package \(\mathbf U=(\mathbf U_T,\mathbf U_Q,\mathbf U_B,\mathbf U_L,\mathbf U_S)\), and the first Zuse-guided hardening priority order. Suppose moreover that there exists an admissible cover by finite windows on which the local control-hardening certificate \(\mathbf Q_{\mathrm{loc}}=1\) holds and is stable under admissible concatenation. Then the obligation \(\mathbf U_Q\) is discharged at the first hardening stage, and the remaining route reduces to
+\[
+(\mathbf U_B,\mathbf U_L,\mathbf U_T,\mathbf U_S).
+\]
+Equivalently, once the instruction/update layer composes locally and survives admissible concatenation without semantic drift, the first unresolved machine-theoretic gap no longer lies in control but in branch, loop/return, tape globalization, and explicit simulation.
+\end{proposition}
+
+\begin{corollary}[What the first local hardening of $\mathbf U_Q$ already buys]
+The first hardening stage is now no longer just an ordering slogan. It has been turned into a concrete target: prove local control compositionality on admissible windows and its persistence under admissible concatenation. If that certificate is obtained, later revisions need not reopen the instruction stack itself and may move directly to the branch obligation as the next active gap.
+\end{corollary}
+
+
+\subsection*{19P. First local hardening of the branch obligation $\mathbf U_B$}
+Once the control layer composes locally, the next leverage-sensitive open task is to certify that the projector/Boolean layer does not merely look branch-like, but already induces an executable local branch role on admissible windows. The natural next hardening step is therefore to isolate a local criterion under which branch alternatives are decoded, selected, and propagated without collapsing the admissible control meaning established at the previous stage.
+
+\begin{definition}[First local branch-hardening certificate for $\mathbf U_B$]
+Write
+\[
+\mathbf B_{\mathrm{loc}}(I)=1
+\]
+for the first local branch-hardening certificate on a finite admissible window $I$ if the following hold simultaneously on $I$:
+\begin{itemize}[leftmargin=2em]
+  \item the projector/Boolean layer assigns a well-defined admissible branch menu to every locally admissible branch site on $I$;
+  \item whenever a branch discriminator is active, exactly one admissible local branch successor is selected at the level of the compressed computational surface;
+  \item the selected local branch successor remains compatible with the already hardened local control meaning and with the later-depth cycle-control layer whenever that layer is active on the same window;
+  \item admissible concatenation of adjacent certified subwindows does not change the decoded local branch choice except at explicitly reopened branch sites.
+\end{itemize}
+In words, $\mathbf B_{\mathrm{loc}}(I)=1$ means that the present line already carries a locally executable and concatenation-stable branch role on the window $I$.
+\end{definition}
+
+\begin{proposition}[First reduction of the branch obligation $\mathbf U_B$]
+Assume the conditional Zuse-core closure theorem, the reduced universality-obligation package \(\mathbf U=(\mathbf U_T,\mathbf U_Q,\mathbf U_B,\mathbf U_L,\mathbf U_S)\), the first Zuse-guided hardening priority order, and that the local control-hardening certificate has already discharged \(\mathbf U_Q\). Suppose moreover that there exists an admissible cover by finite windows on which the local branch-hardening certificate \(\mathbf B_{\mathrm{loc}}=1\) holds and is stable under admissible concatenation away from explicitly reopened branch sites. Then the obligation \(\mathbf U_B\) is discharged at the second hardening stage, and the remaining route reduces to
+\[
+(\mathbf U_L,\mathbf U_T,\mathbf U_S).
+\]
+Equivalently, once the projector/Boolean layer yields an executable locally unique branch choice which survives admissible concatenation and remains compatible with the control stack, the next unresolved machine-theoretic gap no longer lies in branch but in loop/return, tape globalization, and explicit simulation.
+\end{proposition}
+
+\begin{corollary}[What the first local hardening of $\mathbf U_B$ already buys]
+The second hardening stage is now also no longer only a priority promise. It has become a concrete target: certify local executable branch selection on admissible windows and its persistence under admissible concatenation, except where the theory explicitly reopens the branch site. If that certificate is obtained, later revisions may treat branch as locally settled and move directly to the loop/return obligation as the next active gap.
+\end{corollary}
+
+
+\subsection*{19Q. First local hardening of the loop/return obligation $\mathbf U_L$}
+Once local control and local branch have been hardened, the next leverage-sensitive open task is to certify that routed HC-selected closure is not merely closure-like, but already induces a locally executable loop/return role on admissible windows. The natural third hardening step is therefore to isolate a local criterion under which admissible return sites are reopened, routed, and closed again without losing the local control-branch meaning established at the previous stages.
+
+\begin{definition}[First local loop/return-hardening certificate for $\mathbf U_L$]
+Write
+\[
+\mathbf L_{\mathrm{loc}}(I)=1
+\]
+for the first local loop/return-hardening certificate on a finite admissible window $I$ if the following hold simultaneously on $I$:
+\begin{itemize}[leftmargin=2em]
+  \item every admissible reopened return site on $I$ carries a well-defined routed HC-selected closure menu;
+  \item whenever a local return event is triggered, exactly one admissible routed return/closure successor is selected at the level of the compressed computational surface;
+  \item the selected routed return/closure successor remains compatible with the already hardened local control and local branch meanings on the same window;
+  \item admissible concatenation of adjacent certified subwindows preserves the decoded routed return/closure choice except at explicitly reopened return sites.
+\end{itemize}
+In words, $\mathbf L_{\mathrm{loc}}(I)=1$ means that the present line already carries a locally executable and concatenation-stable loop/return role on the window $I$.
+\end{definition}
+
+\begin{proposition}[First reduction of the loop/return obligation $\mathbf U_L$]
+Assume the conditional Zuse-core closure theorem, the reduced universality-obligation package \(\mathbf U=(\mathbf U_T,\mathbf U_Q,\mathbf U_B,\mathbf U_L,\mathbf U_S)\), the first Zuse-guided hardening priority order, and that the local control-hardening and local branch-hardening certificates have already discharged \(\mathbf U_Q\) and \(\mathbf U_B\). Suppose moreover that there exists an admissible cover by finite windows on which the local loop/return-hardening certificate \(\mathbf L_{\mathrm{loc}}=1\) holds and is stable under admissible concatenation away from explicitly reopened return sites. Then the obligation \(\mathbf U_L\) is discharged at the third hardening stage, and the remaining route reduces to
+\[
+(\mathbf U_T,\mathbf U_S).
+\]
+Equivalently, once routed HC-selected closure yields an executable locally unique return/closure choice which survives admissible concatenation and remains compatible with the hardened control and branch layers, the next unresolved machine-theoretic gap no longer lies in loop/return but in tape globalization and explicit reference-machine simulation.
+\end{proposition}
+
+\begin{corollary}[What the first local hardening of $\mathbf U_L$ already buys]
+The third hardening stage is now also no longer only a priority promise. It has become a concrete target: certify local executable routed return/closure selection on admissible windows and its persistence under admissible concatenation, except where the theory explicitly reopens the return site. If that certificate is obtained, later revisions may treat loop/return as locally settled and move directly to the tape-globalization obligation as the next active gap.
+\end{corollary}
+
+
+\subsection*{19R. First globalization of the tape obligation $\mathbf U_T$}
+Once local control, local branch, and local loop/return have been hardened, the remaining machine-theoretic gap before explicit reference-machine simulation is no longer a local choice problem but a persistence problem: the spinorial optimal line must be shown to support a globally extensible read/write track across admissibly concatenated windows. The natural fourth hardening step is therefore to isolate a globalization criterion under which the local tape role ceases to be merely windowwise heuristic and becomes a coherent tape support along an admissible chain.
+
+\begin{definition}[First tape-globalization certificate for $\mathbf U_T$]
+Write
+\[
+\mathbf T_{\mathrm{glob}}(\Gamma)=1
+\]
+for the first tape-globalization certificate on an admissible chain $\Gamma=(I_1,\dots,I_N)$ of finite windows if the following hold simultaneously along $\Gamma$:
+\begin{itemize}[leftmargin=2em]
+  \item each window $I_k$ in the chain carries the local control-hardening, local branch-hardening, and local loop/return-hardening certificates;
+  \item the spinorial optimal line induces on each $I_k$ a locally readable and writable tape segment whose head-position update is compatible with the compressed computational surface;
+  \item on every admissible overlap or concatenation interface $I_k\cap I_{k+1}$, the local tape segments glue to a persistent track without ambiguity in symbol transport, head continuation, or routed return-to-track placement;
+  \item admissible resurface/reentry events may reopen the local track, but after each certified reentry the tape continuation rejoins the same globalized track class on the remaining suffix of $\Gamma$.
+\end{itemize}
+In words, $\mathbf T_{\mathrm{glob}}(\Gamma)=1$ means that the spinorial optimal line is no longer only a local tape candidate on isolated windows, but already behaves as a globally extensible effective tape support along the admissible chain $\Gamma$.
+\end{definition}
+
+\begin{proposition}[First reduction of the tape obligation $\mathbf U_T$]
+Assume the conditional Zuse-core closure theorem, the reduced universality-obligation package \(\mathbf U=(\mathbf U_T,\mathbf U_Q,\mathbf U_B,\mathbf U_L,\mathbf U_S)\), the first Zuse-guided hardening priority order, and that the local control-hardening, local branch-hardening, and local loop/return-hardening certificates have already discharged \(\mathbf U_Q\), \(\mathbf U_B\), and \(\mathbf U_L\). Suppose moreover that there exists an admissible exhaustion by finite chains \(\Gamma\) on which the first tape-globalization certificate \(\mathbf T_{\mathrm{glob}}(\Gamma)=1\) holds and is stable under admissible extension of the chain. Then the obligation \(\mathbf U_T\) is discharged at the fourth hardening stage, and the remaining route reduces to
+\[
+(\mathbf U_S).
+\]
+Equivalently, once the spinorial optimal line supports a globally extensible read/write track compatible with the already hardened control, branch, and loop/return layers, the only unresolved machine-theoretic gap no longer lies in tape but solely in the explicit simulation of a standard reference machine.
+\end{proposition}
+
+\begin{corollary}[What the first globalization of $\mathbf U_T$ already buys]
+The fourth hardening stage is now also no longer only a priority promise. It has become a concrete target: certify a globally extensible spinorial tape support along admissible chains and its stability under admissible extension and reentry. If that certificate is obtained, later revisions may treat tape as globally settled and focus entirely on the last remaining obligation, namely explicit reference-machine simulation.
+\end{corollary}
+
+
+\subsection*{19S. First reduction of the reference-machine simulation obligation $\mathbf U_S$}
+Once control, branch, loop/return, and tape have been hardened, the final remaining machine-theoretic gap is no longer internal role identification but explicit comparison with a standard sequential reference core. The natural fifth step is therefore to isolate a simulation certificate which shows that the compressed computational surface can reproduce the transition semantics of a chosen admissible reference machine on the already globalized spinorial tape support.
+
+\begin{definition}[First reference-machine simulation certificate for $\mathbf U_S$]
+Write
+\[
+\mathbf S_{\mathrm{ref}}(\mathcal R,\Gamma)=1
+\]
+for the first reference-machine simulation certificate on an admissible chain $\Gamma$ for a chosen sequential reference core $\mathcal R$ if the following hold simultaneously:
+\begin{itemize}[leftmargin=2em]
+  \item there exists an explicit encoding of the machine state of $\mathcal R$ into the compressed computational surface, including control state, branch markers, loop/return status, head position, and tape symbols on the already globalized spinorial tape support;
+  \item every one-step transition of $\mathcal R$ on the encoded configuration is reproduced by a finite admissible move sequence of the present line without loss of the hardened control, branch, loop/return, or tape certificates;
+  \item halting, branch selection, and return-to-track events of $\mathcal R$ are reflected by the corresponding local cycle-control symbols and their decoder-driven actions on the encoded side;
+  \item admissible extension of $\Gamma$ preserves the simulation relation on the longer prefix/suffix decomposition whenever the encoded reference computation itself extends.
+\end{itemize}
+In words, $\mathbf S_{\mathrm{ref}}(\mathcal R,\Gamma)=1$ means that the present line does not merely admit a primitive computational reading, but explicitly simulates the chosen sequential reference core $\mathcal R$ along the admissible chain $\Gamma$.
+\end{definition}
+
+\begin{proposition}[First reduction of the reference-machine simulation obligation $\mathbf U_S$]
+Assume the conditional Zuse-core closure theorem, the reduced universality-obligation package \(\mathbf U=(\mathbf U_T,\mathbf U_Q,\mathbf U_B,\mathbf U_L,\mathbf U_S)\), the first Zuse-guided hardening priority order, and that the local control-hardening, local branch-hardening, local loop/return-hardening, and tape-globalization certificates have already discharged \(\mathbf U_Q\), \(\mathbf U_B\), \(\mathbf U_L\), and \(\mathbf U_T\). Suppose moreover that there exists a chosen admissible sequential reference core \(\mathcal R\) and an admissible exhaustion by finite chains \(\Gamma\) on which the first reference-machine simulation certificate \(\mathbf S_{\mathrm{ref}}(\mathcal R,\Gamma)=1\) holds and is stable under admissible extension. Then the final remaining obligation \(\mathbf U_S\) is discharged, and the reduced universality-obligation package collapses to the empty list.
+\[
+(\,).
+\]
+Equivalently, once the already hardened line explicitly simulates a chosen sequential reference core on the globalized spinorial tape support, the conditional Zuse-style primitive computational route is closed at the level of explicit reference-machine simulation.
+\end{proposition}
+
+\begin{corollary}[What the first reduction of $\mathbf U_S$ already buys]
+The fifth hardening stage is now also no longer only a distant final promise. It has become a concrete target: produce an explicit admissible simulation of a chosen sequential reference core on the already hardened control/branch/loop/tape stack. If that certificate is obtained, later revisions may treat the conditional Zuse-core route as closed up to the chosen reference-machine level, while any stronger universality claim would then depend only on the strength of the reference core and the separate unboundedness assumptions built into that choice.
+\end{corollary}
+
+
+\subsection*{19T. Conditional reference-core closure surface}
+Once the reduced universality-obligation package has collapsed to the empty list for a chosen admissible sequential reference core, the computational reading should no longer be cited only as a chain of discharged obligations. The right next compression is therefore a single bundled closure surface recording that the hardened line now simulates the chosen reference core on the globalized spinorial tape support.
+
+\begin{definition}[Conditional reference-core closure surface]
+Let $\mathcal R$ be a chosen admissible sequential reference core and let $(\Gamma_n)_{n\ge 1}$ be an admissible exhaustion by finite chains. Write
+\[
+\mathfrak Z^{\mathrm{ref}}(\mathcal R)=1
+\]
+if the following hold simultaneously:
+\begin{itemize}[leftmargin=2em]
+  \item the conditional Zuse-core closure theorem holds;
+  \item the local control-hardening, local branch-hardening, local loop/return-hardening, tape-globalization, and reference-machine simulation certificates discharge $\mathbf U_Q$, $\mathbf U_B$, $\mathbf U_L$, $\mathbf U_T$, and $\mathbf U_S$ on the exhaustion $(\Gamma_n)_{n\ge 1}$;
+  \item the explicit simulation relation for $\mathcal R$ is stable under admissible extension of the finite chains in the exhaustion.
+\end{itemize}
+In words, $\mathfrak Z^{\mathrm{ref}}(\mathcal R)=1$ means that the present line is already closed, in the conditional sense of this chapter, up to the explicit simulation of the chosen reference core $\mathcal R$.
+\end{definition}
+
+\begin{theorem}[Conditional reference-core closure theorem]
+Assume the conditional Zuse-core closure theorem and the hypotheses of the first reduction of the reference-machine simulation obligation $\mathbf U_S$. Suppose moreover that the discharged hardening certificates remain stable under admissible extension along an exhaustion of finite chains for a chosen admissible sequential reference core $\mathcal R$. Then the compressed computational interpretation surface $\mathfrak C^{\mathrm{comp}}$ closes to a \emph{conditional reference-core closure surface} for $\mathcal R$:
+\[
+\mathfrak Z^{\mathrm{ref}}(\mathcal R)=1.
+\]
+Equivalently, the present line is no longer merely a conditional primitive Zuse-style computational core, but a conditionally closed simulator of the chosen reference core on the globalized spinorial tape support. Any stronger universality claim therefore depends only on the strength of the chosen reference core and on whatever additional unboundedness assumptions one wishes to attach to it.
+\end{theorem}
+
+\begin{corollary}[What the conditional reference-core closure surface already buys]
+Later arguments may now cite a single bundled machine-theoretic endpoint: for a chosen admissible sequential reference core $\mathcal R$, the present line is conditionally closed up to explicit reference-core simulation. Thus one no longer needs to reopen the intermediate hardening ladder unless the proof specifically aims to strengthen the chosen reference core or to pass from reference-core closure to a stronger universality theorem.
+\end{corollary}
+
+
+\begin{remark}[Deferred LLM-superstructure note]
+The present line does not claim that it already constitutes a large language model in the strict modern sense. What is now reasonable to record for later work is a weaker architectural possibility: the combination of graph-structured objects, routed node logic, history-sensitive compression, cache-like admissible reuse along an optimal line, and the conditional Zuse-style primitive computational core may eventually support an \emph{LLM-superstructure reading}. In that later reading, the current release line would function not as the trained language-model core itself, but as a host/control/memory architecture into which a genuine next-symbol predictor or other trainable linguistic layer could be inserted. This is therefore deferred as a future-work hypothesis rather than used as an active theorematic ingredient. It may, however, be rechecked opportunistically in later revisions whenever the token/readout, predictive, or trainability side becomes structurally clearer.
+\end{remark}
+
+
+\subsection*{19U. Strength hierarchy above conditional reference-core closure}
+
+\begin{definition}[First machine-theoretic strength hierarchy on the compressed computational surface]
+For the compressed computational interpretation surface $\mathfrak C^{\mathrm{comp}}$, define the following five nested strength levels:
+\[
+\begin{aligned}
+\mathbf S_1&:=\text{disciplined computational reading},\\
+\mathbf S_2&:=\text{conditional Zuse-style primitive core closure},\\
+\mathbf S_3(\mathcal R)&:=\text{conditional reference-core closure for a chosen sequential reference core }\mathcal R,\\
+\mathbf S_4(\mathcal R)&:=\parbox[t]{0.68\linewidth}{conditional universality relative to a chosen reference core $\mathcal R$ strong enough for the intended claim},\\
+\mathbf S_5&:=\text{strict unbounded universality / Turing-style completeness}.
+\end{aligned}
+\]
+\end{definition}
+
+\begin{proposition}[Monotonicity of the first machine-theoretic strength hierarchy]
+On the admissible computational window one has the one-way implication chain
+\[
+\mathbf S_5\Longrightarrow \mathbf S_4(\mathcal R)\Longrightarrow \mathbf S_3(\mathcal R)\Longrightarrow \mathbf S_2\Longrightarrow \mathbf S_1.
+\]
+In particular, every stronger machine-theoretic endpoint automatically contains all weaker lower-level readings, while the converse implications need not hold without additional unboundedness or simulation arguments.
+\end{proposition}
+
+\begin{corollary}[What the first machine-theoretic strength hierarchy already buys]
+The present line may now be located unambiguously in the hierarchy: by the conditional reference-core closure theorem it reaches $\mathbf S_3(\mathcal R)$ for a chosen admissible sequential reference core $\mathcal R$. What remains open is therefore no longer the primitive computational reading itself, but the step from $\mathbf S_3(\mathcal R)$ to stronger levels $\mathbf S_4(\mathcal R)$ and $\mathbf S_5$. Later arguments can thus distinguish cleanly between primitive closure, reference-core closure, conditional universality claims, and strict Turing-style completeness claims.
+\end{corollary}
+
+
+\subsection*{19V. First upgrade criterion from reference-core closure to conditional universality}
+Once the present line has reached \(\mathbf S_3(\mathcal R)\) for a chosen admissible sequential reference core, the remaining machine-theoretic question is no longer whether the line simulates that reference core, but whether the chosen reference core is itself strong enough to transport an intended universality claim back through the already established simulation relation.
+
+\begin{definition}[First relative universality-upgrade certificate above \(\mathbf S_3(\mathcal R)\)]
+Let \(\mathcal R\) be a chosen admissible sequential reference core and let \(\mathcal K\) be a target class of sequential computations one wishes to cover. Write
+\[
+\mathfrak U^{\mathrm{rel}}(\mathcal R,\mathcal K)=1
+\]
+if the following hold simultaneously:
+\begin{itemize}[leftmargin=2em]
+  \item the conditional reference-core closure surface satisfies \(\mathfrak Z^{\mathrm{ref}}(\mathcal R)=1\);
+  \item the reference core \(\mathcal R\) carries a universality theorem for the target class \(\mathcal K\) under a specified admissible encoding/decoding discipline;
+  \item the simulation relation used in \(\mathfrak Z^{\mathrm{ref}}(\mathcal R)=1\) transports that admissible encoding/decoding discipline without breaking the globalized tape support, the hardened control/branch/loop stack, or the local readout semantics.
+\end{itemize}
+In words, \(\mathfrak U^{\mathrm{rel}}(\mathcal R,\mathcal K)=1\) means that the present line is not only closed up to the chosen reference core, but conditionally inherits the universality of \(\mathcal R\) for the intended target class \(\mathcal K\).
+\end{definition}
+
+\begin{proposition}[First conditional upgrade from \(\mathbf S_3(\mathcal R)\) to \(\mathbf S_4(\mathcal R)\)]
+Assume \(\mathfrak Z^{\mathrm{ref}}(\mathcal R)=1\) for a chosen admissible sequential reference core \(\mathcal R\). Suppose moreover that \(\mathcal R\) is already known to be universal for a target class \(\mathcal K\) under an admissible encoding/decoding discipline, and that this discipline is preserved by the conditional reference-core closure surface. Then the present line upgrades from \(\mathbf S_3(\mathcal R)\) to the relative universality level \(\mathbf S_4(\mathcal R)\) for the intended class \(\mathcal K\).
+\[
+\mathfrak U^{\mathrm{rel}}(\mathcal R,\mathcal K)=1
+\Longrightarrow
+\mathbf S_4(\mathcal R).
+\]
+Equivalently, no additional local hardening layer is required beyond \(\mathbf S_3(\mathcal R)\); what remains is the external strength theorem for the chosen reference core and the proof that its admissible coding discipline is faithfully transported by the already hardened simulation route.
+\end{proposition}
+
+\begin{corollary}[What the first upgrade criterion above \(\mathbf S_3(\mathcal R)\) already buys]
+The gap between the present line and conditional universality is now sharply isolated. To pass from the current reference-core closure level to \(\mathbf S_4(\mathcal R)\), later revisions no longer need to reopen the primitive computational hardening ladder. They need only choose a reference core \(\mathcal R\) strong enough for the intended target class \(\mathcal K\), certify the corresponding universality theorem for \(\mathcal R\), and verify that the admissible encoding/decoding discipline survives transport through the already established reference-core closure surface.
+\end{corollary}
+
+
+\subsection*{19W. First admissible reference-core selection principle above \(\mathbf S_3(\mathcal R)\)}
+Once the upgrade from \(\mathbf S_3(\mathcal R)\) to \(\mathbf S_4(\mathcal R)\) has been isolated, the next question is no longer whether one can choose some strong reference core at all, but which admissible reference core should be chosen first. A structure-first route should avoid importing unnecessary machine-theoretic strength too early; it should instead select the weakest admissible reference core already sufficient for the intended target claim.
+
+\begin{definition}[First conservative reference-core selection certificate above \(\mathbf S_3(\mathcal R)\)]
+Fix a target class \(\mathcal K\) and a chosen comparison family \(\mathfrak F_{\mathrm{ref}}\) of admissible sequential reference cores together with a strength preorder \(\preceq_{\mathrm{ref}}\). Write
+\[
+\mathfrak S^{\mathrm{ref}}(\mathcal R,\mathcal K)=1
+\]
+if the following hold:
+\begin{itemize}[leftmargin=2em]
+  \item \(\mathcal R\in\mathfrak F_{\mathrm{ref}}\) is admissible and satisfies \(\mathfrak Z^{\mathrm{ref}}(\mathcal R)=1\);
+  \item \(\mathcal R\) is strong enough to support the intended target claim for \(\mathcal K\) under an admissible encoding/decoding discipline;
+  \item for every \(\mathcal R'\in\mathfrak F_{\mathrm{ref}}\) with \(\mathcal R'\prec_{\mathrm{ref}}\mathcal R\), the same target claim for \(\mathcal K\) is not yet certified under the same admissible coding discipline.
+\end{itemize}
+Thus \(\mathfrak S^{\mathrm{ref}}(\mathcal R,\mathcal K)=1\) means that \(\mathcal R\) is not merely an admissible reference core, but the first conservatively sufficient one inside the chosen comparison family for the intended upgrade problem.
+\end{definition}
+
+\begin{proposition}[First conservative selection reduction for the universality-upgrade route]
+Assume \(\mathfrak U^{\mathrm{rel}}(\mathcal R,\mathcal K)=1\) and \(\mathfrak S^{\mathrm{ref}}(\mathcal R,\mathcal K)=1\). Then the passage from \(\mathbf S_3(\mathcal R)\) to \(\mathbf S_4(\mathcal R)\) may be formulated with no stronger external reference-core assumption than the one already needed for the chosen target class \(\mathcal K\) inside the comparison family \(\mathfrak F_{\mathrm{ref}}\). In particular, later revisions do not need to import a stronger machine model than necessary in order to state the first conditional universality claim above the present reference-core closure level.
+\end{proposition}
+
+\begin{corollary}[What the first conservative reference-core selection principle already buys]
+The relative universality route is now disciplined in two distinct ways: first by the already established reference-core closure surface, and second by a conservative selection rule on the external endpoint. Later upgrades above \(\mathbf S_3(\mathcal R)\) can therefore proceed by choosing the weakest admissible reference core sufficient for the intended claim, rather than by jumping prematurely to an unnecessarily strong machine-theoretic endpoint.
+\end{corollary}
+
+
+\subsection*{19X. First admissible tape-based reference-core family above \(\mathbf S_3(\mathcal R)\)}
+The conservative selection principle above becomes materially useful only once one fixes a first concrete comparison family of admissible reference cores. The present line already carries explicit tape, control, branch, and loop/return roles, so the most conservative first family should preserve exactly that architecture instead of importing richer machine features prematurely.
+
+\begin{definition}[First admissible tape-based reference-core family]
+Let \(\mathfrak F_{\mathrm{tape}}\) denote the class of admissible sequential reference cores \(\mathcal R\) satisfying all of the following:
+\begin{itemize}[leftmargin=2em]
+  \item \(\mathcal R\) has finite control state, finite local symbol alphabet, and a one-track sequential update discipline;
+  \item every local step of \(\mathcal R\) is determined by the currently scanned symbol together with the current control state and returns one next control state, one write/update instruction, and one move instruction in \(\{-1,0,+1\}\);
+  \item branch resolution is explicit and local, in the sense that each step chooses one of finitely many admissible successor clauses by a finite Boolean/projector-type test on the current scanned data;
+  \item loop/return structure is explicit and local, in the sense that every admissible return event is encoded by a finite control-side return symbol together with a deterministic reentry instruction on the same one-track support;
+  \item the tape support itself is one-dimensional and sequential, so that the already globalized spinorial optimal line may serve as the direct comparison support without introducing any extra addressing geometry.
+\end{itemize}
+Write
+\[
+\mathfrak A^{\mathrm{tape}}(\mathcal R)=1
+\]
+if \(\mathcal R\in\mathfrak F_{\mathrm{tape}}\).
+\end{definition}
+
+\begin{proposition}[First conservative tape-family reduction for the upgrade route]
+Assume the conditional reference-core closure surface \(\mathfrak Z^{\mathrm{ref}}(\mathcal R)=1\) for some chosen admissible sequential reference core \(\mathcal R\), together with the conservative selection discipline above. Suppose moreover that the intended universality-upgrade problem concerns only target classes whose admissible coding discipline is already one-track, sequential, and local in the same sense as the hardened tape/control/branch/loop architecture of the present line. Then the first conservative search for a reference core may be restricted to the admissible tape-based family \(\mathfrak F_{\mathrm{tape}}\) without loss for that upgrade problem.
+
+Equivalently, whenever the intended target class does not yet require richer addressing, parallel branching geometry, or nonlocal memory moves, the weakest natural external comparison family is the tape-based family already matched to the present hardened architecture.
+\end{proposition}
+
+\begin{corollary}[What the first admissible tape-based reference-core family already buys]
+The external universality-upgrade route is now no longer open-ended. Later revisions can first search for a minimally sufficient \emph{tape-based} reference core before importing any richer machine model. This keeps the passage above \(\mathbf S_3(\mathcal R)\) aligned with the already hardened internal architecture and reduces the chance of overstating the needed external strength.
+\end{corollary}
+
+\subsection*{19Y. First internal-to-tape transport certificate above \(\mathbf S_3(\mathcal R)\)}
+Choosing a first admissible tape-based comparison family becomes materially useful only once one can express the existing reference-core closure surface in a way that is transport-compatible with that family. The next conservative step is therefore not a stronger universality claim, but a certificate saying that the already hardened internal read/write/control/branch/return package can be read inside a chosen tape-based reference core without changing the local computational discipline.
+
+\begin{definition}[First internal-to-tape transport certificate above \(\mathbf S_3(\mathcal R)\)]
+Let \(\mathcal R\in\mathfrak F_{\mathrm{tape}}\) satisfy \(\mathfrak Z^{\mathrm{ref}}(\mathcal R)=1\). Write
+\[
+\mathfrak T^{\mathrm{tape}}(\mathcal R)=1
+\]
+if the following hold on every admissible later-depth window used by the present compressed computational surface:
+\begin{itemize}[leftmargin=2em]
+  \item the globalized spinorial optimal line induces a one-dimensional sequential support compatible with the tape support of \(\mathcal R\);
+  \item the already hardened local control state of the present line is encoded into the finite control state of \(\mathcal R\) without introducing extra addressing geometry;
+  \item the already hardened projector/Boolean branch layer is transported into the branch clauses of \(\mathcal R\) by a local admissible encoding/decoding discipline;
+  \item the already hardened routed HC-selected return/closure step is transported into the local return/reentry discipline of \(\mathcal R\) without changing the sequential one-track support;
+  \item one local step of the present compressed computational surface is transported to one admissible local step of \(\mathcal R\) up to the chosen local coding discipline.
+\end{itemize}
+Thus \(\mathfrak T^{\mathrm{tape}}(\mathcal R)=1\) means that the internal reference-core closure already lives on a support that can be read directly inside the first admissible tape-based comparison family.
+\end{definition}
+
+\begin{proposition}[First transport reduction from reference-core closure to the tape-based family]
+Assume \(\mathfrak Z^{\mathrm{ref}}(\mathcal R)=1\), \(\mathfrak A^{\mathrm{tape}}(\mathcal R)=1\), and \(\mathfrak T^{\mathrm{tape}}(\mathcal R)=1\). Then the external upgrade route above \(\mathbf S_3(\mathcal R)\) may be reformulated entirely inside the admissible tape-based comparison family without reopening the already hardened local obligations for control, branch, loop/return, or tape support. In particular, the passage to the first conditional universality-upgrade problem may be stated as an external strength question about the chosen tape-based reference core itself, rather than as a renewed local hardening problem for the present line.
+\end{proposition}
+
+\begin{corollary}[What the first internal-to-tape transport certificate already buys]
+The tape-based upgrade route is now disciplined in three layers: by the conditional reference-core closure surface, by the conservative tape-family selection principle, and by an explicit transport certificate from the present compressed computational surface into that family. Later work above \(\mathbf S_3(\mathcal R)\) can therefore focus directly on the external strength of the chosen tape-based reference core, instead of rechecking the already stabilized local computational roles.
+\end{corollary}
+
+
+\subsection*{19Z. First tape-family relative universality witness above \(\mathbf S_3(\mathcal R)\)}
+Once the admissible tape-based family has been selected and the internal reference-core closure has been transported into it, the remaining external question is no longer whether the present line can be read inside that family, but whether a chosen member of that family is already strong enough for the intended target class. The next conservative step is therefore to isolate the first explicit witness certifying that a transported tape-based reference core upgrades the present line from conditional reference-core closure to conditional universality relative to that core.
+
+\begin{definition}[First tape-family relative universality witness above \(\mathbf S_3(\mathcal R)\)]
+Let \(\mathcal R\in\mathfrak F_{\mathrm{tape}}\) satisfy
+\[
+\mathfrak Z^{\mathrm{ref}}(\mathcal R)=1,
+\qquad
+\mathfrak A^{\mathrm{tape}}(\mathcal R)=1,
+\qquad
+\mathfrak T^{\mathrm{tape}}(\mathcal R)=1.
+\]
+For a target class \(\mathcal K\), write
+\[
+\mathfrak U^{\mathrm{tape}}(\mathcal R,\mathcal K)=1
+\]
+if the following hold:
+\begin{itemize}[leftmargin=2em]
+  \item the chosen tape-based reference core \(\mathcal R\) is already known to simulate every machine in the intended target class \(\mathcal K\) under a one-track sequential local coding discipline compatible with \(\mathfrak F_{\mathrm{tape}}\);
+  \item the admissible encoding/decoding discipline used in that simulation is stable under the internal-to-tape transport certificate \(\mathfrak T^{\mathrm{tape}}(\mathcal R)=1\);
+  \item no extra addressing geometry, nonlocal branching discipline, or richer memory move is required beyond the tape-based family already selected.
+\end{itemize}
+Thus \(\mathfrak U^{\mathrm{tape}}(\mathcal R,\mathcal K)=1\) means that the chosen transported tape-based reference core is externally strong enough to witness the first conditional universality claim relevant to \(\mathcal K\).
+\end{definition}
+
+\begin{proposition}[First tape-family upgrade from \(\mathbf S_3(\mathcal R)\) to \(\mathbf S_4(\mathcal R)\)]
+Assume \(\mathfrak Z^{\mathrm{ref}}(\mathcal R)=1\), \(\mathfrak A^{\mathrm{tape}}(\mathcal R)=1\), \(\mathfrak T^{\mathrm{tape}}(\mathcal R)=1\), and \(\mathfrak U^{\mathrm{tape}}(\mathcal R,\mathcal K)=1\). Then the present compressed computational surface upgrades from the reference-core closure level \(\mathbf S_3(\mathcal R)\) to the relative universality level \(\mathbf S_4(\mathcal R)\) for the intended target class \(\mathcal K\).
+
+Equivalently, once the internal closure surface has been transported into a sufficiently strong admissible tape-based reference core, the remaining strength step above \(\mathbf S_3(\mathcal R)\) is discharged entirely by the external universality witness for that transported tape-based core.
+\end{proposition}
+
+\begin{corollary}[What the first tape-family relative universality witness already buys]
+The universality-upgrade route above the present compressed computational surface is now disciplined in four layers: by the conditional reference-core closure surface, by the conservative tape-family selection rule, by the internal-to-tape transport certificate, and by an explicit external universality witness for a chosen transported tape-based reference core. Later revisions can therefore state the first conditional universality claim without reopening the already discharged primitive machine-theoretic hardening ladder.
+\end{corollary}
+
+
+
+

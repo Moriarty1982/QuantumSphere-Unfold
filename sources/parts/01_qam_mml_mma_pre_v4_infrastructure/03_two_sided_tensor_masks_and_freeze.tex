@@ -1,0 +1,531 @@
+\subsection*{r03 stability layer: two-sided expansion, mixed-readout normal form, and Boolean masks}
+\begin{quote}\small
+\noindent\textbf{Status.} \emph{Conservative stabilization of the r02 notation layer; not a global rewrite, not a new tensor calculus, and not a closure theorem.}\par
+\noindent\textbf{Block function.} This block fixes the exact erasure route from two-sided displays back to ordinary QAM-over-ZF role data, normalizes guarded mixed readouts, and states the Boolean selector grammar used by IPv4-like readout masks.  The separate reader manual remains a future standalone paper or guide.
+\end{quote}
+
+The r02 notation made readout-side, structure-side, comparison-side, and mask-side roles visible in formulas.  The present r03 step turns that notation into a safer tool by recording the normal forms that an audit reader or LLM reader should recover whenever a two-sided display appears.  The rule is intentionally asymmetric: notation may compress role data, but every compressed display must expand back into explicit role data before it can be used as proof content.
+
+\begin{definition}[Two-sided role-erasure map]\label{def:r03-two-sided-role-erasure-map}
+Let \(E\) be a well-formed two-sided structural tensor display in the sense of Definitions~\ref{def:two-sided-structural-tensor-interface} and~\ref{def:two-sided-admissible-contractions}.  Its \emph{role-erasure expansion}
+\[
+\mathfrak{E}_{\mathrm{role}}(E)
+\]
+is the ordinary QAM-over-ZF package obtained by replacing:
+\begin{enumerate}[leftmargin=2em]
+  \item every front-side index by an explicit readout, frame, observer, or language-role tag;
+  \item every back-side index by an explicit structure, action, field, transport, or operator-role tag;
+  \item every classical upper--lower contraction by the corresponding ordinary action/evaluation clause;
+  \item every same-variance comparison by a named comparison predicate carrying its declared comparison tensor;
+  \item every Boolean or selector occurrence by a finite compatibility predicate over the declared mask universe.
+\end{enumerate}
+This expansion is an erasure of notation only.  It does not erase guards, selectors, comparison tensors, branch restrictions, or provenance data.
+\end{definition}
+
+\begin{proposition}[Role-erasure normal form]\label{prop:r03-role-erasure-normal-form}
+Every well-formed two-sided display \(E\) used in the v3.35.x line has a role-erasure expansion \(\mathfrak{E}_{\mathrm{role}}(E)\) whose clauses are built from already admitted QAM role predicates, admitted comparison data, admitted selector data, and ordinary finite tuple coding over ZF.  In particular, the two-sided display cannot by itself introduce a new primitive tensor kind, a new admissibility relation, or a new theorematic certificate.
+\end{proposition}
+
+\begin{proof}
+Proceed by structural inspection of the display grammar.  Front/back sidedness contributes only role tags.  Ordinary upper--lower contraction is already part of the inherited action/readout grammar.  A same-variance pairing is well formed only when it contains an explicitly named comparison tensor or selector, hence it expands to a comparison or compatibility predicate rather than to an untyped Einstein contraction.  All finite lists of such clauses are QAM tuple-coded over the existing ZF substrate.  Therefore the two-sided syntax is conservative under role erasure.
+\end{proof}
+
+\begin{definition}[Guarded mixed-readout normal form]\label{def:r03-guarded-mixed-readout-normal-form}
+A guarded mixed QAM readout is in \emph{r03 normal form} when it is presented as a finite package
+\[
+\mathcal R_{\mathrm{mix}}
+=
+\bigl(I,\{R_i\}_{i\in I},\Gamma_{\mathrm{mix}},\chi,\mu,J_{\mathrm{mix}}\bigr),
+\]
+where \(I\) is a finite index set, each \(R_i\) is an already admitted component readout, \(\Gamma_{\mathrm{mix}}\) is the inherited guard package, \(\chi\) is a finite selector or mask predicate over \(I\), \(\mu\) is an aggregation map defined only on selector-admissible component families, and \(J_{\mathrm{mix}}\) is the declared mixed readout surface.  A two-sided display such as
+\[
+\chi_{mn}R^mS^n
+\]
+is only an abbreviation for this finite package in the binary case \(I=\{m,n\}\).
+\end{definition}
+
+\begin{proposition}[Mixed-readout normal-form expansion]\label{prop:r03-mixed-readout-normal-form-expansion}
+Every guarded mixed readout admitted by Definition~\ref{def:guarded-two-sided-mixed-qam-readout} expands to an r03 guarded mixed-readout normal form in the sense of Definition~\ref{def:r03-guarded-mixed-readout-normal-form}.  Conversely, every r03 guarded mixed-readout normal form may be displayed in two-sided shorthand only after its guards, selector, aggregation map, and output surface have been declared.
+\end{proposition}
+
+\begin{proof}
+The binary shorthand \(\chi_{mn}R^mS^n\) already names the two component readouts and the selector.  The surrounding QAM context supplies the inherited guard package, the admissible aggregation rule, and the declared output surface.  Collecting these data gives the normal-form tuple.  Conversely, starting from the normal-form tuple, one may suppress the finite package into two-sided shorthand only because the suppressed guard, selector, aggregation, and output data remain recoverable.  Thus the shorthand and the normal form are not different mathematical objects; the former is a compact notation for the latter.
+\end{proof}
+
+\begin{definition}[Boolean selector and mask grammar]\label{def:r03-boolean-selector-mask-grammar}
+Fix a finite readout-kind universe \(\Omega=\{k_1,\dots,k_N\}\).  A \emph{Boolean selector mask} is a function
+\[
+\chi:\Omega\longrightarrow\{0,1\}
+\]
+or, equivalently, a finite bit mask whose value 0 denotes no active kind and whose nonzero bits denote active readout kinds.  The admissible Boolean operations are:
+\begin{align*}
+\chi_A\vee\chi_B &\quad\text{for union of active readout kinds,}\\
+\chi_A\wedge\chi_B &\quad\text{for intersection or compatibility testing,}\\
+\chi_A\oplus\chi_B &\quad\text{for diagnostic symmetric difference,}\\
+\neg_{\Omega}\chi_A &\quad\text{for relative complement inside the fixed universe }\Omega.
+\end{align*}
+No absolute complement is used without first declaring \(\Omega\).  A selector expression may filter a readout package, but it does not alter the payload of any component readout.
+\end{definition}
+
+\begin{proposition}[Mask-filter conservativity]\label{prop:r03-mask-filter-conservativity}
+Let \(\mathcal R_{\mathrm{mix}}\) be an r03 guarded mixed-readout normal form and let \(\chi\) be a Boolean selector mask over its finite readout-kind universe.  Applying \(\chi\) restricts the active component menu of \(\mathcal R_{\mathrm{mix}}\), but it does not change the underlying component payloads, the inherited guards, or the closure status of any component readout.
+\end{proposition}
+
+\begin{proof}
+A selector mask is a finite predicate on the index universe.  It chooses which already declared component clauses are active in the aggregation domain.  It neither rewrites the component readouts nor changes their guard packages.  Hence any closure-compatible status used by the mixed package still has to come from the component readouts and the declared factorization map, not from the mask itself.
+\end{proof}
+
+\begin{remark}[LLM/audit role table]\label{rem:r03-llm-audit-role-table}
+For later machine reading, the following table fixes the intended role parsing.  It is a local audit aid inside the Companion, not the separate pedagogical reader manual.
+\begin{center}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{|p{0.28\textwidth}|p{0.34\textwidth}|p{0.25\textwidth}|}
+\hline
+\textbf{Displayed form} & \textbf{Intended role} & \textbf{Audit guard} \\
+\hline
+front-side indices & readout, frame, observer, language, or addressing side & expand to explicit QAM role tags \\
+\hline
+back-side indices & structure, action, field, transport, or operator side & expand to explicit QAM role tags \\
+\hline
+upper--lower contraction & classical action, evaluation, or sandwich readout & ordinary tensor/QAM readout clause \\
+\hline
+upper--upper via \(G_{\alpha\beta}\) & active structural comparison & no raw same-variance contraction \\
+\hline
+lower--lower via \(G^{\alpha\beta}\) & passive readout comparison & no raw same-variance contraction \\
+\hline
+\(\chi_{mn}\) or a mask bit & compatibility or activation selector & filter only; no new payload \\
+\hline
+\end{tabular}
+\end{center}
+\end{remark}
+
+\begin{corollary}[r03 proof-neutrality of the tensor layer]\label{cor:r03-proof-neutrality-of-tensor-layer}
+The r03 tensor-stability layer may be cited to shorten repeated readout/action/comparison/mask passages, but it may not be cited as an independent proof of closure, OP resolution, primitive mixed-tensor existence, or global QAM namespace migration.
+\end{corollary}
+
+\begin{proof}
+By Propositions~\ref{prop:r03-role-erasure-normal-form}, \ref{prop:r03-mixed-readout-normal-form-expansion}, and~\ref{prop:r03-mask-filter-conservativity}, every r03 display reduces to already declared role data, normal-form mixed-readout data, and finite selector predicates.  The reduction supplies notation control only.  It does not add the missing theorematic hypotheses needed for closure, OP resolution, primitive mixed tensors, or v4 reindexing.
+\end{proof}
+
+\begin{remark}[Placement of the future reader manual]\label{rem:r03-reader-manual-placement}
+The present block deliberately stays short and formal.  A slower reader manual may later explain the same grammar with diagrams, examples, and human-facing intuition, but that manual should remain a separate paper or guide so that the Active Core remains the governing proof line.
+\end{remark}
+
+
+% Quantum Sphaera Companion v3.35.0-r04 release-candidate insertion
+% Release-candidate freeze/audit layer only.  No mathematical closure claim.
+
+\subsection*{r04 release-candidate freeze audit for the pre-v4 QAM/tensor layer}
+\addcontentsline{toc}{subsection}{r04 release-candidate freeze audit for the pre-v4 QAM/tensor layer}
+\label{subsec:r04-release-candidate-freeze-audit-qam-tensor}
+
+\noindent\textbf{Status.} \emph{Release-candidate audit layer only; no new theorematic certificate, no global QAM namespace migration, no primitive mixed tensor, and no OP closure.}\par
+\noindent\textbf{Block function.} This r04 block freezes the r02/r03 notation and mixed-readout preparation layer for release-candidate review.  It records what must remain true when the Active Core is read together with the separate Historical Witness PDF.
+
+\begin{definition}[r04 pre-v4 QAM/tensor release-candidate package]
+\label{def:r04-pre-v4-qam-tensor-release-candidate-package}
+The \emph{r04 pre-v4 QAM/tensor release-candidate package} consists of the following finite data:
+\begin{enumerate}[label=(\roman*)]
+  \item the inherited v3.34.0 public split-bundle baseline and its concept/version DOI record;
+  \item the v3.35.0 short-abstract and extended-orientation architecture;
+  \item the pre-v4 Hilbert-shift plan reserving global QAM tag migration for a later major version;
+  \item the guarded mixed-readout discipline and optional binary mask registry;
+  \item the r02 two-sided structural tensor notation;
+  \item the r03 role-erasure, mixed-readout normal form, Boolean selector grammar, and proof-neutrality layer;
+  \item the present r04 audit/handoff metadata saying that the Active Core is the governing proof line and that the Historical Witness PDF remains preserved proof memory.
+\end{enumerate}
+It is a packaging and audit object, not a closure object.
+\end{definition}
+
+\begin{proposition}[r04 release-candidate conservativity]
+\label{prop:r04-release-candidate-conservativity}
+The r04 pre-v4 QAM/tensor release-candidate package is conservative over the r03 tensor-stability layer with respect to theorematic content.  It may change release-candidate metadata, routing language, audit surfaces, and handoff wording, but it may not create any new OP certificate, global Hilbert-shift theorem, primitive mixed-tensor axiom, or replacement of the inherited QAM tuple namespace.
+\end{proposition}
+
+\begin{proof}
+Each mathematical role introduced by r02 is erased by Definition~\ref{def:r03-two-sided-role-erasure-map} and normalized by Proposition~\ref{prop:r03-role-erasure-normal-form}.  Each mixed readout is expanded by Proposition~\ref{prop:r03-mixed-readout-normal-form-expansion}, and each Boolean mask action is restricted by Proposition~\ref{prop:r03-mask-filter-conservativity}.  The r04 package adds only release-candidate metadata and bundle-handoff statements around these already guarded objects.  Hence no new theorematic content is introduced.
+\end{proof}
+
+\begin{corollary}[r04 freeze-readiness condition]
+\label{cor:r04-freeze-readiness-condition}
+If the build audit reports no duplicate labels, no undefined references, no undefined citations, and no fatal LaTeX errors for both the Active Core and the Historical Witness, then Version~\docversion{} is structurally ready to be treated as a freeze candidate for the v3.35.0 pre-v4 QAM/tensor preparation release, subject only to the external release decision and any assigned Zenodo version DOI.
+\end{corollary}
+
+\begin{remark}[Reader-manual separation at r04]
+\label{rem:r04-reader-manual-separation}
+The pedagogical reader manual for the two-sided notation remains outside the Active Core.  It may later be written as a separate guide with diagrams, examples, and slower explanations.  The present Companion keeps only the compact formal grammar and the proof-neutrality guards needed by the governing proof line.
+\end{remark}
+
+
+% Quantum Sphaera Companion v3.35.0 release-final DOI insertion
+% Release metadata only. No mathematical object is indexed by the DOI.
+
+\subsection*{v3.35.0 DOI-bearing release freeze}
+\addcontentsline{toc}{subsection}{v3.35.0 DOI-bearing release freeze}
+\label{subsec:v3350-doi-bearing-release-freeze}
+
+\noindent\textbf{Status.} \emph{Release-final metadata layer only; no new theorematic certificate, no global QAM namespace migration, no primitive mixed tensor, and no OP closure.}\par
+\noindent\textbf{Version DOI.} The public version-specific Zenodo DOI for this release is
+\[
+  \href{https://doi.org/10.5281/zenodo.19750674}{10.5281/zenodo.19750674}.
+\]
+The Companion concept DOI remains \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}. The version DOI is release metadata only and is not a mathematical subscript, superscript, route tag, or proof object.
+
+\begin{definition}[v3.35.0 release-final package]
+\label{def:v3350-release-final-package}
+The \emph{v3.35.0 release-final package} consists of the r04 release-candidate package of Definition~\ref{def:r04-pre-v4-qam-tensor-release-candidate-package}, the assigned public version DOI above, the Active Core PDF, the preserved Historical Witness PDF, the release manifest, checksums, audit report, Zenodo description, and release notes.  It is a release object, not a theorematic closure object.
+\end{definition}
+
+\begin{proposition}[v3.35.0 release-final conservativity]
+\label{prop:v3350-release-final-conservativity}
+The v3.35.0 release-final package is conservative over the r04 release-candidate package with respect to theorematic content.  DOI insertion, release-note generation, manifest creation, checksum creation, and Zenodo-description preparation do not create any new OP certificate, global QAM Hilbert-shift theorem, primitive mixed-tensor axiom, or replacement of the inherited QAM tuple namespace.
+\end{proposition}
+
+\begin{proof}
+By Proposition~\ref{prop:r04-release-candidate-conservativity}, the r04 package is conservative over r03.  The present layer adds only release metadata and publication packaging: the version DOI, release file names, manifest/checksum records, audit report, Zenodo description, and release notes.  None of these objects changes the payload of any QAM role, tensor grammar, mask selector, mixed readout, or OP-facing proof obligation.  Hence theorematic content is unchanged.
+\end{proof}
+
+
+\begin{remark}[How the systems view reads the present visual diagnostics]\label{rem:qam-vm-os-visuals}
+The same stack view also explains why Appendix~C may carry highly visible packet, Julia-boundary, and frame-flicker diagnostics without turning those figures into primary closure axioms. In the systems reading, such figures live on the visible-view layer: they are auditable readout surfaces of one and the same transported channel, not independent kernel identities. This is exactly why the OP~5 packet/breathing/frame-flicker block and the Julia-boundary block belong naturally to the same document architecture as the deferred kernel store. The figures make visible what the current theorem store is tracking, while closure itself still remains controlled at the structural layer beneath the pictures.
+\end{remark}
+
+
+\begin{remark}[QAM/systems crosswalk for the present document]\label{rem:qam-vm-os-crosswalk}
+The present document uses the systems analogy in a disciplined layer-by-layer way. The following crosswalk fixes the intended reading.
+\begin{center}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{|p{0.29\textwidth}|p{0.28\textwidth}|p{0.31\textwidth}|}
+\hline
+\textbf{QAM/document layer} & \textbf{Systems reading} & \textbf{Present mathematical status} \\
+\hline
+Visible coded tuples, packet diagnostics, Julia views, routed return surfaces & User-facing VM/view layer & Actively visible and auditable, but not by themselves closure-generating \\
+\hline
+Exposed payload kernels and later zero-kernel re-readings & VM-state identity layer & Deferred and prospective only; not yet activated on the public tuple surface \\
+\hline
+Admissible transport, branch/shell return, routed support organization & OS-level orchestration layer & Active theorem content in the present QAM export \\
+\hline
+Kernel normal forms, search keys, snapshots, clones, audits & ZFS-style theorem-store layer & Partly active as organizational discipline, partly deferred as later compression infrastructure \\
+\hline
+Pool/group structure of sphere objects and support families & Device / vdev / pool layer & Explanatory architecture only at the present stage \\
+\hline
+\end{tabular}
+\end{center}
+\end{remark}
+
+\begin{remark}[Visual-evidence discipline under the systems reading]\label{rem:qam-vm-os-visual-discipline}
+Under the crosswalk above, a figure may support only a controlled class of claims. It may expose \emph{where} a visible readout departs from a rigid carrier picture, \emph{which} packet or channel decomposition is plausible on the view layer, and \emph{why} a later kernel-first compression path is worth isolating. It may \emph{not} by itself create a new closure axiom, replace an active transport/branch/shell/routed theorem, or identify a kernel class solely from appearance. Any later proof use must therefore pass through the active theorem layer or through a deferred bridge that has itself already been discharged.
+\end{remark}
+
+
+\noindent\textbf{v3.16.0 checkpoint (deferred kernel-first path).} The deferred kernel-first material added in the present local v3.16.0 line should be read as one controlled checkpoint rather than as a second public language block. Its current role is to prepare a later proof-compression path while leaving the active coded tuple predicates unchanged.
+
+\begin{remark}[Checkpoint summary for the deferred kernel-first path in the v3.16.0 public release]\label{rem:qam-zero-kernel-checkpoint}
+At the present stage, the deferred kernel-first path contributes six concrete pieces of structure.
+\begin{enumerate}[leftmargin=2em]
+  \item It introduces a prospective recursive zero-kernel vocabulary in which the visible state surface $\langle 0,a\rangle$ may later be re-read through exposed payload kernels, kernel normal forms, and class-level readout factorization.
+  \item It records a normal-form and search-key discipline so that later graph/tree based proof search can be tied to canonical kernel representatives rather than to repeated visible tuple surfaces.
+  \item It isolates the missing bridge datum from active state surfaces to canonical kernels and identifies the direct visible payload as the simplest current kernel candidate on the present tuple surface.
+  \item It tests the resulting kernel-first viewpoint on the three most relevant compression stages of the current QAM line: admissible transport, local branch-shell return, and routed family compression.
+  \item It formulates an explicit activation package and a staged migration roadmap, making clear both what would have to be proved before activation and in which order the relevant closure/readout factorization work should be completed.
+  \item It remains strictly deferred: no active public predicate, closure theorem, transport theorem, branch-shell theorem, routed-support theorem, or translation theorem is replaced by the kernel language at the present stage.
+\end{enumerate}
+\end{remark}
+
+\begin{remark}[Why this checkpoint matters for later proof compression]\label{rem:qam-zero-kernel-checkpoint-why}
+The checkpoint above already shows where later proof compression would come from. Transport is the first chain-level reduction, branch-shell return the first local surface reduction, routed support the first family reduction, and the translation theorem then becomes the first clause-level reduction at theorem scale. This does not yet shorten the active proofs automatically, but it isolates a concrete path by which set-theoretic comparison load could later be shifted from repeated visible tuple surfaces to kernel normal forms and one final class-level readout step.
+\end{remark}
+
+\begin{remark}[Navigation guide for the deferred kernel-first checkpoint]\label{rem:qam-zero-kernel-navigation}
+A reader who wants the shortest route through the deferred material may follow the following order.
+\begin{enumerate}[leftmargin=2em]
+  \item \textbf{Purpose and fit.} Start with the roadmap-fit remark, the checkpoint summary, and the companion remark on why the checkpoint matters in order to see why the deferred path belongs to the inherited public-shape v3.16.0 release layer without changing the public branch/shell/routed extraction.
+  \item \textbf{Vocabulary.} Then read the terminological convention for the deferred kernel path together with Definitions~\ref{def:qam-zero-kernel}--\ref{def:qam-kernel-key} for the later kernel vocabulary, primitive zero-objects, recursive reuse, aspect projections, normal forms, and internal search keys.
+  \item \textbf{Compatibility.} Next read the axiom-coherence audit together with the current-limitation remark to see why this vocabulary remains deferred and does not compete with the active tuple layer.
+  \item \textbf{Bridge.} Then read Definition~\ref{def:qam-kernel-bridge-datum}, Theorem~\ref{thm:qam-kernel-bridge}, Definition~\ref{def:qam-visible-payload}, and Theorem~\ref{thm:qam-direct-kernel-constructor} for the exact interface between visible state surfaces and later kernel-first comparison.
+  \item \textbf{Stress tests.} Only afterwards read Propositions~\ref{prop:qam-kernel-first-transport}, \ref{prop:qam-kernel-first-branch-shell}, and \ref{prop:qam-kernel-first-routed}, which test the bridge on transport, local return, and routed family compression.
+  \item \textbf{Activation and use.} Finally read Definition~\ref{def:qam-zero-kernel-activation-package}, Theorem~\ref{thm:qam-zero-kernel-activation-criterion}, the later activation-roadmap and reading-guide remarks, and then the dependency-map, minimal-proof-obligation, local-admissibility, and rewrite-schema remarks for the activation threshold, staged migration order, dependency logic, and later local rewrite test.
+\end{enumerate}
+In that order, the deferred block reads as one controlled proof-compression path rather than as a loose collection of auxiliary notes.
+\end{remark}
+
+\begin{remark}[Execution rule for the deferred kernel-first path]\label{rem:qam-zero-kernel-execution-rule}
+The deferred block should be used in only one direction when later proof compression is attempted on the present tuple surface. Start with the visible state surface, expose the payload kernel, pass to kernel normal form, prove closure or readout agreement at class level, and lift back to the visible surface only at the end. If the later local admissibility test fails at any point, then the argument should remain on the active tuple surface rather than forcing a premature kernel-first rewrite.
+\end{remark}
+
+\begin{remark}[Present-use restriction for the deferred kernel-first path]\label{rem:qam-zero-kernel-present-use}
+Until the activation criterion of Theorem~\ref{thm:qam-zero-kernel-activation-criterion} has been fully discharged on the current QAM surface, the deferred block should be used in only three ways inside the document: as later migration vocabulary, as an audit of where proof compression could occur, and as a record of staged stress tests. It should not be cited as a replacement for any active tuple predicate, transport theorem, branch-shell theorem, routed-support theorem, or translation theorem. In particular, whenever both a visible-surface proof and a deferred kernel-first restatement are available, the visible-surface proof remains authoritative on the inherited public-shape v3.16.0 layer.
+\end{remark}
+
+
+\begin{remark}[Active/deferred correspondence rule]\label{rem:qam-zero-kernel-correspondence}
+The deferred kernel-first path may also be read as a controlled shadow of four active theorem layers, with one fixed discipline: the active visible-surface theorem remains authoritative, while the deferred statement records only the later compression route attached to that theorem. Concretely, Theorem~\ref{thm:qam-first-op-transport} is paired with Proposition~\ref{prop:qam-kernel-first-transport} as the chain-level compression test; Theorem~\ref{thm:qam-branch-shell} is paired with Proposition~\ref{prop:qam-kernel-first-branch-shell} as the local return-surface compression test; Theorem~\ref{thm:qam-routed-support} is paired with Proposition~\ref{prop:qam-kernel-first-routed} as the family-level compression test; and Theorem~\ref{thm:qam-translation} is paired with the later local admissibility reading of the translation theorem as the clause-level compression test. This correspondence is only a reading rule for later migration work. It does not transfer proof authority from the active theorem to its deferred companion; it only says where a later kernel-first rewrite would have to pay off if the activation package were eventually discharged.
+\end{remark}
+
+\subsection*{Prospective recursive zero-kernel scheme (deferred architecture note)}
+
+The following block records a possible later re-reading of the current $\langle 0,a\rangle$-entry as a recursive order-$0$ readout kernel. It is included here only as a controlled design note for future transfer work. It is \emph{not} activated as part of the present public QAM tag system and does not modify the inherited public-shape coded predicates from v3.16.0.
+
+\begin{remark}[Terminological convention for the deferred kernel path]\label{rem:qam-zero-kernel-terminology}
+Throughout the deferred block, four layers should be kept distinct and named consistently. The expression \emph{visible state surface} refers to the active public state-code presentation $s=\langle 0,a\rangle$ on the current tuple level. The expression \emph{exposed payload kernel} refers to the payload extracted from such a visible state surface by the deferred kernel constructor. The expression \emph{kernel normal form} refers to the canonical representative selected from the admissible kernel equivalence class. Finally, \emph{class-level readout factorization} means that closure-relevant readout depends only on that kernel normal-form class and is lifted back to the visible state surface only at the end. This convention is purely terminological, but it keeps the active tuple language and the deferred kernel language aligned.
+\end{remark}
+
+\begin{definition}[Carrier/filter readout kernels]\label{def:qam-zero-kernel}
+Let $\mathcal C$ be a class of admissible carriers, let $\Gamma$ be a class of admissible filters, and let $\mathcal A$ be a class of canonical readout kernels. For each $\gamma\in\Gamma$, assume a partial readout map
+\[
+\rho_\gamma:\mathcal C \dashrightarrow \mathcal A,
+\]
+whose defined values are written
+\[
+a=\rho_\gamma(T)\in\mathcal A.
+\]
+We read $a$ as the minimal canonical readout kernel of the carrier $T$ relative to the filter $\gamma$.
+\end{definition}
+
+\begin{definition}[Primitive zero-objects]\label{def:qam-zero-objects}
+Given $a,b\in\mathcal A$, define the primitive zero-objects
+\[
+Z_0(a):=\langle 0,a\rangle,
+\qquad
+Z_0(a,b):=\langle 0,a,b\rangle.
+\]
+The intended reading is that $Z_0(a)$ is the unary collapsed readout attached to the kernel $a$, while $Z_0(a,b)$ is the binary collapsed readout attached to the kernel pair $(a,b)$.
+\end{definition}
+
+\begin{axiom}[Recursive reusability of kernels]\label{ax:qam-zero-recursive}
+Every canonical readout kernel may again serve as an effective carrier for further admissible readout. Concretely, for admissible $\eta\in\Gamma$, one may again form
+\[
+\rho_\eta(a)\in\mathcal A
+\]
+whenever the corresponding readout is defined. Thus the kernel class $\mathcal A$ is recursively reusable as an effective carrier layer.
+\end{axiom}
+
+\begin{definition}[Aspect projections on kernels]\label{def:qam-kernel-aspects}
+Assume that each kernel $a\in\mathcal A$ comes equipped with aspect projections
+\[
+\pi_{\mathrm{type}}(a),\qquad
+\pi_{\mathrm{class}}(a),\qquad
+\pi_{\mathrm{sig}}(a),
+\]
+recording, respectively, its visible type aspect, filter/class aspect, and structured signature aspect. These are not treated as three competing objects; they are three admissible readings of the same kernel.
+\end{definition}
+
+\begin{lemma}[Unary and binary kernel collapse]\label{lem:qam-zero-collapse}
+If $a=\rho_\gamma(T)\in\mathcal A$, then the unary zero-object $Z_0(a)=\langle 0,a\rangle$ is well-defined. If additionally $b=\rho_\eta(U)\in\mathcal A$, then the binary zero-object $Z_0(a,b)=\langle 0,a,b\rangle$ is well-defined.
+\end{lemma}
+
+\begin{proof}
+The unary claim follows directly from Definition~\ref{def:qam-zero-objects} once $a\in\mathcal A$ is given by Definition~\ref{def:qam-zero-kernel}. The binary claim is identical after adjoining a second admissible kernel $b\in\mathcal A$.
+\end{proof}
+
+\begin{remark}[Compressed relation to the current $\langle 0,a\rangle$ state code]\label{rem:qam-zero-compressed}
+This deferred kernel notation is intended only as a future re-reading of the present visible state surface. In a later binary-tag or order-sensitive QAM line, one may reinterpret the current $\langle 0,a\rangle$ notation as a compressed public surface for a filtered order-$0$ readout kernel. For the present version, however, the active public predicates remain exactly those of the current tagged tuple language.
+\end{remark}
+
+\begin{remark}[Tree/graph viewpoint for recursive kernels]\label{rem:qam-zero-graph}
+The recursive kernel picture admits an immediate combinatorial visualization. One may regard repeated kernel readout
+\[
+T \xrightarrow{\rho_\gamma} a \xrightarrow{\rho_\eta} a' \xrightarrow{\rho_\theta} a''
+\]
+as a rooted readout tree whose vertices are kernels and whose edges are admissible filter applications. Equally, one may organize the same data as a directed multigraph: unary zero-objects $Z_0(a)$ mark collapsed kernel vertices, while binary zero-objects $Z_0(a,b)$ record elementary visible relations between kernel vertices. This suggests a later graph-based search or proof-compression interface without changing the current public tuple system.
+\end{remark}
+
+
+\subsection*{Prospective kernel normal forms and search keys (deferred architecture note)}
+
+The same deferred kernel language also suggests a later search discipline in which recursive kernel proofs are first normalized and only then indexed. This block is likewise prospective only: it does not alter the active inherited public-shape tuple predicates.
+
+\begin{definition}[Kernel equivalence and canonical normal form]\label{def:qam-kernel-normal-form}
+Assume an admissible equivalence relation $\sim$ on $\mathcal A$ such that equivalent kernels have the same admissible aspect projections and the same closure-relevant readout content. A \emph{kernel normal form} is a partial map
+\[
+\operatorname{nf}:\mathcal A \dashrightarrow \mathcal A
+\]
+selecting, whenever defined, one canonical representative from each admissible equivalence class. Thus
+\[
+a\sim b \Longrightarrow \operatorname{nf}(a)=\operatorname{nf}(b)
+\]
+whenever both normal forms are defined.
+\end{definition}
+
+\begin{definition}[Kernel search keys]\label{def:qam-kernel-key}
+Assume a fixed admissible serialization
+\[
+\operatorname{ser}:\operatorname{nf}(\mathcal A)\to \Sigma^*
+\]
+of canonical kernels into finite strings over an alphabet $\Sigma$, together with a deterministic key map
+\[
+\kappa := H\circ \operatorname{ser}\circ \operatorname{nf}.
+\]
+The value $\kappa(a)$ is called the \emph{kernel search key} of $a$ whenever the normal form is defined. It is intended as an internal search/index key rather than as part of the visible mathematical surface.
+\end{definition}
+
+\begin{lemma}[Normal-form invariance of primitive zero-objects]\label{lem:qam-zero-normal-form}
+Assume that $a,a',b,b'\in\mathcal A$ satisfy $a\sim a'$ and $b\sim b'$, and that their normal forms are defined. Then the unary zero-objects $Z_0(a)$ and $Z_0(a')$ determine the same canonical unary kernel surface, while the binary zero-objects $Z_0(a,b)$ and $Z_0(a',b')$ determine the same canonical binary kernel surface after passage to kernel normal form.
+\end{lemma}
+
+\begin{proof}
+By Definition~\ref{def:qam-kernel-normal-form}, equivalence implies equality of canonical normal forms. Applying the same normal-form representative at the unary or binary zero-object level yields the same canonical collapsed surface in either case.
+\end{proof}
+
+\begin{remark}[Graph search and proof-compression interface]\label{rem:qam-kernel-search}
+In the graph viewpoint introduced above, one may therefore index vertices by canonical kernel normal forms or, internally, by their kernel search keys $\kappa(a)$. Repeated readout branches that land in the same canonical kernel class can then be merged, memoized, or searched only once. This is exactly the kind of mechanism by which recursive kernel language could later compress set-theoretic proof search without changing the visible public theorem statements.
+\end{remark}
+
+
+\subsection*{Axiom-coherence audit and prospective proof reductions (deferred audit note)}
+
+The deferred zero-kernel language should be read together with the active public QAM tuple layer under the following discipline.
+
+\begin{remark}[Axiom-coherence audit]\label{rem:qam-zero-axiom-audit}
+At the present stage, the deferred zero-kernel layer is formally compatible with the active QAM tuple layer for four reasons.
+\begin{enumerate}
+\item The active tuple predicates remain unchanged: in particular,
+\[
+\mathrm{QState}(x)\Longleftrightarrow \exists a\,(x=\langle 0,a\rangle)
+\]
+continues to define the public visible state surface.
+\item The deferred zero-kernel definitions do not introduce a second active state predicate. They only record a possible later re-reading of the same public surface, as stated in Remark~\ref{rem:qam-zero-compressed}.
+\item The recursive kernel axiom (Axiom~\ref{ax:qam-zero-recursive}) and the kernel normal-form discipline (Definition~\ref{def:qam-kernel-normal-form}) are prospective only; no active theorem in the inherited public-shape QAM chain depends on them as hypotheses.
+\item Consequently, the current closure-class, admissible-transport, branch/shell, routed-support, and translation theorems remain exactly those of the active tuple language. The deferred kernel layer adds a controlled future interpretation, not a rival public axiom system.
+\end{enumerate}
+\end{remark}
+
+\begin{remark}[Where kernel notation could already shorten proofs]\label{rem:qam-zero-proof-opportunities}
+Even before formal activation, the deferred kernel language already points to three concrete proof-compression opportunities.
+\begin{enumerate}
+\item In the first QAM transport theorem, the chain
+\[
+s_{\mathrm{in}},\ s_2,\ s_3,\ s_4,\ t_{\mathrm{fwd}},\ t_{\mathrm{bwd}}
+\]
+is currently carried at full state-code level. A later kernel reduction could first pass each state to a canonical readout kernel and then prove closure agreement on kernel classes before lifting the result back to coded states.
+\item In the branch-shell theorem and the routed admissible support theorem, each return realization currently enters through full branch/shell state data. A kernel-first restatement could instead reduce every admissible branch-shell realization to unary kernel surfaces $Z_0(a)$ and compare routed sectors only through their canonical kernel classes.
+\item In closure-compatible readout arguments, one currently factors raw readouts through the class-target map $J$ after proving $\mathrm{QClEq}(s,t)$. A later kernel language could absorb much of this step by treating the closure-relevant image itself as the primitive kernel surface attached to the state.
+\end{enumerate}
+In all three cases, the expected gain is not a new theorem but a shorter proof path: reduce to kernels first, perform the closure comparison there, and only then return to the visible tuple layer.
+\end{remark}
+
+\begin{remark}[Current limitation of the kernel reduction]\label{rem:qam-zero-current-limit}
+The proof-compression opportunities recorded just above are not yet activated as a formal replacement inside the present proofs. The missing step is a theorem-level bridge showing that every active coded state relevant to the admissible OP fragment carries a canonical kernel representative with the same closure-relevant content. Until such a bridge is proved, the zero-kernel language should be treated as a planning interface rather than as a proof rule.
+\end{remark}
+
+
+
+\begin{definition}[Prospective kernel bridge datum on active state surfaces]\label{def:qam-kernel-bridge-datum}
+A \emph{kernel bridge datum} for the active admissible OP fragment consists of a partial map
+\[
+\operatorname{ker}:\mathcal S^{\mathrm{QAM}}_{\mathrm{act}} \dashrightarrow \mathcal A,
+\]
+where $\mathcal S^{\mathrm{QAM}}_{\mathrm{act}}$ is the class of active coded QAM-state surfaces relevant to the present admissible OP fragment, such that the following hold whenever the displayed expressions are defined.
+\begin{enumerate}
+\item \textbf{surface realization:}
+\[
+Z_0(\operatorname{ker}(s))=s;
+\]
+\item \textbf{closure reflection:} if $\mathrm{QClEq}(s,t)$, then
+\[
+\operatorname{nf}(\operatorname{ker}(s))=\operatorname{nf}(\operatorname{ker}(t));
+\]
+\item \textbf{closure-readout factorization:} for every closure-compatible coded readout $r$, there exists a map
+\[
+\mathcal R_r: \operatorname{nf}(\mathcal A) \to \operatorname{Im}(J_r)
+\]
+into the closure-relevant target of the associated class-factor map $J_r$ such that whenever $\mathrm{QRead}(r,s,w)$ holds,
+\[
+J_r(w)=\mathcal R_r(\operatorname{nf}(\operatorname{ker}(s))).
+\]
+\end{enumerate}
+\end{definition}
+
+\begin{theorem}[Prospective bridge from active state surfaces to canonical kernels]\label{thm:qam-kernel-bridge}
+Assume a kernel bridge datum in the sense of Definition~\ref{def:qam-kernel-bridge-datum}. Then every active closure comparison in the admissible OP fragment may be reduced to canonical kernel comparison before returning to the visible state surface. In particular:
+\begin{enumerate}
+\item if $\mathrm{QAdmTransport}(o,s,t)$, then
+\[
+\operatorname{nf}(\operatorname{ker}(s))=\operatorname{nf}(\operatorname{ker}(t));
+\]
+\item if $t_{b,\sigma}$ is a branch-shell coded return realization as in Theorem~\ref{thm:qam-branch-shell}, then
+\[
+\operatorname{nf}(\operatorname{ker}(s_{\mathrm{in}}))=\operatorname{nf}(\operatorname{ker}(t_{b,\sigma}));
+\]
+\item if $u$ is a normalized admissible routed support code as in Theorem~\ref{thm:qam-routed-support}, then for every closure-compatible coded readout $r$ the closure-relevant image of the routed return is determined solely by the canonical kernel class
+\[
+\operatorname{nf}(\operatorname{ker}(s_{\mathrm{in}})).
+\]
+\end{enumerate}
+Consequently, the present transport, branch/shell, and routed-support proofs admit a future kernel-first proof skeleton: first pass to $\operatorname{nf}(\operatorname{ker}(\cdot))$, then compare closure there, and only afterwards return to the visible QAM state surface.
+\end{theorem}
+
+\begin{proof}
+For (1), admissible transport implies $\mathrm{QClEq}(s,t)$ by the active closure-preservation axiom. The closure-reflection clause of Definition~\ref{def:qam-kernel-bridge-datum} therefore yields
+\[
+\operatorname{nf}(\operatorname{ker}(s))=\operatorname{nf}(\operatorname{ker}(t)).
+\]
+For (2), Theorem~\ref{thm:qam-branch-shell} gives $\mathrm{QClEq}(s_{\mathrm{in}},t_{b,\sigma})$, so the same closure-reflection clause yields equality of canonical kernel representatives. For (3), Theorem~\ref{thm:qam-routed-support} states that the routed return has the same closure-relevant image as the coded source state under every closure-compatible coded readout. By clause (3) of Definition~\ref{def:qam-kernel-bridge-datum}, those closure-relevant images factor through the same canonical kernel normal form. Hence the routed readout depends only on $\operatorname{nf}(\operatorname{ker}(s_{\mathrm{in}}))$. The final sentence is simply the proof reading order extracted from (1)--(3).
+\end{proof}
+
+\begin{remark}[What the bridge theorem still leaves open]\label{rem:qam-kernel-bridge-open}
+Theorem~\ref{thm:qam-kernel-bridge} is intentionally conditional. It does not yet prove that a kernel bridge datum exists inside the active public tuple system; it isolates exactly the missing interface that would be needed to turn the deferred zero-kernel language into an actual proof tool. This also identifies the next genuine activation step: construct $\operatorname{ker}$ canonically from active coded states and verify clauses (1)--(3) without leaving the current OP/QAM semantics.
+\end{remark}
+
+
+\begin{definition}[Visible payload extraction on active state surfaces]\label{def:qam-visible-payload}
+For every active coded state surface $s$ in the present public tuple language, define its \emph{exposed payload kernel} $\operatorname{vp}(s)$ by
+\[
+\operatorname{vp}(s)=a \quad\Longleftrightarrow\quad s=\langle 0,a\rangle.
+\]
+Equivalently, $\operatorname{vp}$ is the unique projection that removes the visible state tag $0$ and exposes the payload already carried by the active state surface.
+\end{definition}
+
+\begin{definition}[Prospective direct kernel constructor]\label{def:qam-direct-kernel-constructor}
+Assume that the exposed payload kernel of every active coded state surface relevant to the admissible OP fragment belongs to the deferred kernel class $\mathcal A$. Then define the \emph{direct kernel constructor}
+\[
+\operatorname{ker}_{\mathrm{dir}} : \mathcal S^{\mathrm{QAM}}_{\mathrm{act}} \dashrightarrow \mathcal A,
+\qquad
+\operatorname{ker}_{\mathrm{dir}}(s):=\operatorname{vp}(s).
+\]
+Thus, on the visible state surface, the simplest possible kernel candidate is obtained by forgetting only the active state tag and keeping the payload itself as the deferred kernel representative.
+\end{definition}
+
+\begin{theorem}[Simplest concrete kernel construction on the present state surface]\label{thm:qam-direct-kernel-constructor}
+Assume the following four conditions for the active admissible OP fragment.
+\begin{enumerate}
+\item \textbf{payload admissibility:} every active coded state surface $s$ relevant to the fragment has the form $s=\langle 0,a\rangle$ with $a\in\mathcal A$;
+\item \textbf{visible zero-surface realization:} for every such $a$,
+\[
+Z_0(a)=\langle 0,a\rangle;
+\]
+\item \textbf{closure reflection on exposed payload kernels:} whenever $\mathrm{QClEq}(\langle 0,a\rangle,\langle 0,b\rangle)$,
+\[
+\operatorname{nf}(a)=\operatorname{nf}(b);
+\]
+\item \textbf{class-level readout factorization:} for every closure-compatible coded readout $r$, there exists a map
+\[
+\widetilde{\mathcal R}_r:\operatorname{nf}(\mathcal A)\to \operatorname{Im}(J_r)
+\]
+such that whenever $\mathrm{QRead}(r,\langle 0,a\rangle,w)$,
+\[
+J_r(w)=\widetilde{\mathcal R}_r(\operatorname{nf}(a)).
+\]
+\end{enumerate}
+Then $\operatorname{ker}_{\mathrm{dir}}$ is a kernel bridge datum in the sense of Definition~\ref{def:qam-kernel-bridge-datum}. Consequently Theorem~\ref{thm:qam-kernel-bridge} applies with
+\[
+\operatorname{ker}=\operatorname{ker}_{\mathrm{dir}}.
+\]
+\end{theorem}
+
+\begin{proof}
+Clause (1) ensures that $\operatorname{ker}_{\mathrm{dir}}$ is defined on every active state surface relevant to the fragment. By Definition~\ref{def:qam-visible-payload}, if $s=\langle 0,a\rangle$, then $\operatorname{ker}_{\mathrm{dir}}(s)=a$. Clause (2) therefore gives
+\[
+Z_0(\operatorname{ker}_{\mathrm{dir}}(s))=Z_0(a)=\langle 0,a\rangle=s,
+\]
+which is exactly the surface-realization clause of Definition~\ref{def:qam-kernel-bridge-datum}. For closure reflection, if $\mathrm{QClEq}(s,t)$ with $s=\langle 0,a\rangle$ and $t=\langle 0,b\rangle$, clause (3) gives
+\[
+\operatorname{nf}(\operatorname{ker}_{\mathrm{dir}}(s))=\operatorname{nf}(a)=\operatorname{nf}(b)=\operatorname{nf}(\operatorname{ker}_{\mathrm{dir}}(t)).
+\]
+Finally, clause (4) is exactly the required closure-readout factorization after substituting $\operatorname{ker}_{\mathrm{dir}}(\langle 0,a\rangle)=a$. Hence all three clauses of Definition~\ref{def:qam-kernel-bridge-datum} hold.
+\end{proof}
+
+\begin{remark}[What this construction shows]\label{rem:qam-direct-kernel-constructor-meaning}
+Theorem~\ref{thm:qam-direct-kernel-constructor} shows that the difficult part of the bridge is not the extraction step itself: on the current public state surface, the most economical candidate is simply the exposed payload of the active state surface. The real work is pushed into the three semantic checks: that the payload already lies in the admissible kernel class, that closure equivalence is visible at payload-normal-form level, and that closure-relevant readout factors through that same normal form. If these three checks can later be discharged, then many current state-level proofs may be shortened by passing immediately from $\langle 0,a\rangle$ to $a$ before performing the closure comparison.
+\end{remark}
+

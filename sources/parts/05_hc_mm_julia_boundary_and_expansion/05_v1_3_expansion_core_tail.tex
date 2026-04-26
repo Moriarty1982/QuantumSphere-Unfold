@@ -1,0 +1,376 @@
+\section*{v1.3.0 Expansion Core}
+\addcontentsline{toc}{section}{v1.3.0 Expansion Core}
+
+\begin{remark}[Normalization note for v1.3.0]
+\label{rem:normalization-note-v130}
+This block is retained as a historical expansion precursor. Its proof-bearing content is now to be read primarily through Phase~I, Phase~II-D, and the normalized grouped architecture. In particular, the intermediate master-equation ladder and the micro-to-macro chain no longer function as independent foundations beside the later unfolding phases, but as early organizational anticipations of them.
+\end{remark}
+
+Version v1.3.0 is the first release that does more than freeze the next
+work path. It adds a genuine expansion layer on top of the v1.1.0
+consolidation core. The operative aim is threefold: first, the structural
+master equation is no longer presented only as a compressed global summary, but
+also as the endpoint of an explicit intermediate chain; second, the passage
+from local triolic organization to macroscopic effective geometry is stated in
+staged form; third, the technical apparatus is widened so that later proof
+layers can be attached without rewriting the monolith.
+
+\subsection*{1. Deepened master-equation programme}
+The master equation in the later main section remains the global compression of
+one common closure-stable dynamics. What v1.3.0 adds is a more explicit
+three-level reading of that equation.
+\begin{enumerate}[leftmargin=2em,label=(\roman*)]
+  \item \textbf{Structural level.} One starts from triolic organization,
+  orthogonality, frame shift, compensator action, and closure. At this level,
+  the equation is still read as a balance law on admissible sectors.
+  \item \textbf{Mesoscopic level.} The same balance law is rewritten as an
+  effective transport-and-selection equation for coupled sectors and probes.
+  Here one already sees how admissible interaction channels are filtered by HC
+  and by the closure residue.
+  \item \textbf{Macroscopic level.} After suppression of unstable local
+  residues and after passage to a closure-stable observer description, the same
+  equation becomes readable as effective matter dynamics plus background
+  geometry.
+\end{enumerate}
+In this sense, v1.3.0 does not replace the later master equation
+\eqref{eq:toe_master_structural}; it inserts the missing ladder by which that
+equation is reached.
+
+A convenient intermediate schematic form is
+\[
+\mathcal E_{\mathrm{micro}}[\Psi]
++\mathcal E_{\mathrm{coupl}}[\Psi,\Pi]
++\mathcal E_{\mathrm{HC}}[\Psi]
++\mathcal E_{\mathrm{cl}}[\Psi]
++\mathcal E_{\mathrm{obs}}[\Psi]
+=0,
+\]
+where the five blocks stand respectively for local triolic structure, sectorial
+coupling/probe interaction, Heisenberg-compensator balancing, closure
+selection, and observer-frame projection. The later master equation is to be
+read as the compressed global representative of this staged balance.
+
+\begin{lemma}[Intermediate balance principle]
+\label{lem:intermediate-balance}
+Every admissible global solution must pass through an intermediate regime in
+which local triolic transport, compensator balancing, and closure selection are
+all simultaneously active. Consequently, a direct jump from isolated local
+structure to macroscopic field form is structurally forbidden.
+\end{lemma}
+
+\begin{proof}
+Local triolic data alone do not yet determine which coupled configurations are
+admissible; they only provide possible sectorial directions. Conversely, a
+macroscopic field description is meaningful only after compensator balancing
+has removed representation drift and closure has excluded unstable residues.
+Therefore at least one intermediate regime must exist in which coupling, HC,
+and closure are jointly active. This regime is the structural source of the
+mesoscopic reading introduced in v1.3.0.
+\end{proof}
+
+\subsection*{2. Micro-to-macro closure chain}
+The new hardening target of v1.3.0 is the explicit micro-to-macro chain
+\[
+\begin{aligned}
+&\text{local triolic unit} \longrightarrow \text{coupled closure cell} \longrightarrow \text{probe-filtered admissible channel}\\
+&\longrightarrow \text{closure-stable sector regime} \longrightarrow \text{effective global geometry and field dynamics}.
+\end{aligned}
+\]
+The purpose of this chain is not rhetorical. It separates five logically
+distinct burdens that earlier drafts could too easily blend together:
+local decomposition, coupling, admissibility filtering, stable sector assembly,
+and macroscopic readout.
+
+\paragraph{Local triolic unit.}
+At the smallest relevant level, the system carries the standing triolic
+organization together with the orthogonal third direction. This level fixes the
+minimal sector inventory but does not yet decide which transitions survive.
+
+\paragraph{Coupled closure cell.}
+Once two or more local units interact, the question becomes whether their
+combination admits a common compensator-compatible representative. A coupled
+cell is called closure-ready if its local mismatches can be balanced without
+breaking the orthogonality and frame-shift discipline.
+
+\paragraph{Probe-filtered admissible channel.}
+The probe construction becomes technically important at precisely this stage.
+Two directed probes together with the orthogonal third group define a restricted
+search geometry. Kasisky-, hash-, rainbow-, Markov-, and Newton-type tools are
+not external decoration here; they are the operational means by which the space
+of candidate channels is compressed to closure-compatible paths.
+
+\paragraph{Closure-stable sector regime.}
+Only after probe filtering and compensator balancing does one obtain a stable
+sector regime. This is the first level at which effective matter, light/collapse,
+and dual sectors can be read as persistent rather than transient descriptions.
+
+\paragraph{Effective global geometry and field dynamics.}
+Macroscopic geometry is then not glued on from outside. It is the readout of a
+large-scale assembly of closure-stable sector regimes viewed in the
+phase-shifted observer frame. The gravitational, QFT-type, and Dirac-type
+limits are therefore downstream realizations of one common filtered closure
+architecture.
+
+\begin{proposition}[Macroscopic readout requires closure-stable assembly]
+\label{prop:macro-requires-closure-assembly}
+A macroscopic field or geometric description is admissible only if it is the
+observer-frame image of an assembly of closure-stable sector regimes. In
+particular, large-scale geometry cannot be read directly from uncoupled local
+triolic data.
+\end{proposition}
+
+\begin{proof}
+Uncoupled local data do not yet fix admissible transport and do not suppress
+representation drift. The observer frame, however, reads only stabilized
+configurations. Since stabilization in the present framework is exactly the
+combined action of HC and closure across coupled cells, the macroscopic image
+must descend from an assembly that has already passed the closure filter.
+\end{proof}
+
+\subsection*{3. Extended lemma and tool apparatus}
+Version v1.3.0 also widens the technical apparatus that the next proof
+layer can rely on. The point is not to over-formalize prematurely, but to mark
+where repeated arguments will later be detached into reusable blocks.
+
+\paragraph{Core lemmas now fixed by role.}
+\begin{enumerate}[leftmargin=2em]
+  \item \textbf{Orthogonality lemma:} the third triolic direction remains the
+  non-negotiable constraint that prevents degeneracy of the sector picture.
+  \item \textbf{Frame-shift lemma:} observational readout differs from the
+  underlying structural frame by a controlled phase displacement.
+  \item \textbf{Compensator lemma:} HC is the minimal identification mechanism
+  needed to prevent sectorial drift.
+  \item \textbf{Closure lemma:} admissibility is equivalent to vanishing of the
+  relevant closure residue in the chosen regime.
+  \item \textbf{Probe admissibility lemma:} the probe sector selects channels
+  that are compatible with both closure and orthogonality.
+  \item \textbf{Read-off lemma:} physical sector names arise only after the
+  preceding structural filters have been passed.
+\end{enumerate}
+
+\paragraph{Normalized tool classes.}
+The tool catalogue of v1.1.0 is retained, but v1.3.0 upgrades its use:
+closure-tools act as admissibility tests, frame-shift tools as translation
+operators between structure and observer descriptions, projection-tools as
+controlled reduction maps, probe-tools as search-space compressors,
+equivalence-tools as representative-identification devices, and read-off tools
+as disciplined output maps. This normalization matters because later technical
+proofs can now cite a \emph{tool class} instead of repeating the surrounding
+motivation every time.
+
+\begin{corollary}[Tool usage discipline]
+\label{cor:tool-usage-discipline}
+No computational shortcut is admissible in the proof architecture unless its
+role can be classified as one of the normalized tool classes and unless its use
+preserves the structural ordering
+\[
+\text{closure before projection before interpretation}.
+\]
+\end{corollary}
+
+\begin{proof}
+A shortcut that bypasses closure may produce effective formulas without fixing
+admissibility; a shortcut that bypasses projection discipline may confuse
+structural content with observer naming. The normalized tool classes are
+introduced exactly to block such category errors. Hence admissible shortcuts are
+those that preserve the structural order stated above.
+\end{proof}
+
+\subsection*{4. Version status of v1.3.0}
+With these additions, v1.3.0 should be read as the first expansion-stage
+companion release. Relative to v1.1.0, the new version contributes three hard
+improvements: the master-equation programme is given an explicit intermediate
+ladder, the micro-to-macro chain is stated as a formal burden rather than a
+mere promise, and the lemma/tool apparatus is widened enough that subsequent
+versions can deepen proofs without reopening the global organization of the
+monolith. The next versions may therefore focus on tightening derivations,
+\[
+\begin{aligned}
+&\text{ground condition}
+\Longrightarrow
+\text{triolic admissibility}
+\Longrightarrow
+\text{HC balancing}
+\\[0.2em]
+&\Longrightarrow
+\text{closure filtering}
+\Longrightarrow
+\text{observer-frame readout}.
+\end{aligned}
+\]
+Version v1.4.0 turns the earlier expansion layer into a genuine
+lemma-development release. The aim is not to replace the existing structural
+chapters, but to make the repeated internal moves of the proof architecture
+explicit enough that later sections may cite them as stable intermediate
+devices. Three burdens are addressed here: the closure spine is split into
+reusable intermediate steps, the passage from probes to admissible sectors is
+cast as a sequence of named reductions, and the projection discipline is tied
+to a small but durable family of proof lemmas.
+
+
+\begin{lemma}[Triolic admissibility precedes compensator balancing]
+\label{lem:triolic-before-hc}
+A configuration cannot enter the Heisenberg-compensator balancing regime unless
+its triolic decomposition is already admissible with respect to the standing
+orthogonality and frame-shift constraints.
+\end{lemma}
+
+\begin{proof}
+The compensator does not create a triolic decomposition; it only identifies and
+balances compatible representatives across already existing sector data. If the
+triolic organization were itself degenerate or incompatible with the orthogonal
+third direction, then there would be no well-defined data for HC to balance.
+Hence triolic admissibility is logically prior to the compensator step.
+\end{proof}
+
+\begin{lemma}[Closure filtering follows compensator balancing]
+\label{lem:closure-after-hc}
+Closure filtering is meaningful only after HC has removed representational drift
+between coupled sector descriptions.
+\end{lemma}
+
+\begin{proof}
+Closure tests are carried out on candidate configurations that are meant to
+represent one common admissible state. Without compensator balancing, distinct
+representatives may still differ by unresolved phase or sector drift, so a
+closure residue would not yet measure physical inadmissibility but only
+misalignment of representation. Therefore HC balancing is the prerequisite that
+turns closure filtering into a structurally meaningful test.
+\end{proof}
+
+\begin{proposition}[Closure ladder]
+\label{prop:closure-ladder}
+The passage from local structural data to observer-frame physics factors through
+the closure ladder described above, and none of its intermediate steps may be
+skipped without breaking the proof discipline
+\[
+\text{closure before projection before interpretation}.
+\]
+\end{proposition}
+
+\begin{proof}
+Lemma~\ref{lem:triolic-before-hc} places admissible triolic organization before
+HC balancing. Lemma~\ref{lem:closure-after-hc} places closure filtering after
+HC and before any observer readout. The observer frame, however, names only the
+output of the stabilized configuration, so projection necessarily comes after
+closure filtering. Interpretation is last because it depends on projected
+sector naming rather than on raw structural data. Thus the stated factorization
+is forced by the standing proof order.
+\end{proof}
+
+\subsection*{2. Probe reduction chain and admissible channels}
+The probe sector now receives a reusable reduction chain. Instead of speaking
+only about a general search space, v1.4.0 fixes the following sequence:
+\[
+\begin{aligned}
+&\text{probe pair}
+\Longrightarrow \text{orthogonal search geometry}\\[0.15em]
+&\Longrightarrow \text{candidate channel family}
+\Longrightarrow \text{tool-guided compression}\\[0.15em]
+&\Longrightarrow \text{closure-compatible channel}.
+\end{aligned}
+\]
+This makes explicit where frequency detection, routing compression, Markov
+transition guidance, and Newton-type convergence tools actually enter.
+
+\begin{lemma}[Orthogonal probe geometry restricts channel growth]
+\label{lem:probe-geometry-restricts}
+When two probes are coupled together with the standing orthogonal third group,
+the set of admissible candidate channels is a strict restriction of the naive
+pairwise interaction space.
+\end{lemma}
+
+\begin{proof}
+The naive pairwise space allows all pair couplings consistent with the two
+incoming probe descriptions. The orthogonal third group imposes an additional
+compatibility burden that forbids precisely those channels that would resolve
+the pairwise mismatch by leaving the triolic discipline. Hence the admissible
+candidate family is smaller than the unrestricted pairwise space.
+\end{proof}
+
+\begin{lemma}[Tool-guided compression preserves admissibility order]
+\label{lem:tool-compression-order}
+Kasisky-, hash-, rainbow-, Markov-, and Newton-type tools are admissible only
+when used to compress or navigate the candidate channel family without changing
+the structural order of admissibility testing.
+\end{lemma}
+
+\begin{proof}
+These tools may accelerate pattern detection, routing, transition guidance, or
+convergence, but none of them decides admissibility independently of closure.
+Their acceptable role is therefore subordinate: they reduce the burden of
+search inside the candidate family while the final decision remains the closure
+test. Consequently, they preserve admissibility only if they do not replace the
+closure filter by a purely computational surrogate.
+\end{proof}
+
+\begin{proposition}[Probe reduction principle]
+\label{prop:probe-reduction-principle}
+A probe channel is physically readable only if it is obtained as the end point
+of the probe reduction chain and survives closure filtering after tool-guided
+compression.
+\end{proposition}
+
+\begin{proof}
+By Lemma~\ref{lem:probe-geometry-restricts}, the orthogonal search geometry
+already restricts the candidate family. By Lemma~\ref{lem:tool-compression-order},
+the technical tools may only compress or navigate that family, not redefine its
+criterion of admissibility. Therefore the only physically readable channels are
+those that remain after the final closure-compatible selection step.
+\end{proof}
+
+\subsection*{3. Projection robustness and controlled interpretation}
+The next recurrent burden is the distinction between structural forcing,
+projective readout, and phenomenological naming. Version v1.4.0 fixes
+this burden by introducing small reusable robustness statements.
+
+\begin{lemma}[Projection does not create structure]
+\label{lem:projection-no-creation}
+A projection map may translate an already closure-stable structural state into
+an observer-frame description, but it cannot create a new admissible structure
+that was absent before projection.
+\end{lemma}
+
+\begin{proof}
+Projection acts on the representative of a state after the admissibility burden
+has already been settled. If projection could create admissibility, then the
+observer frame would retroactively decide structural existence, contradicting
+the standing principle that measurement is phase-shifted relative to the
+underlying structure. Thus projection is readout, not creation.
+\end{proof}
+
+\begin{corollary}[Interpretation discipline]
+\label{cor:interpretation-discipline}
+Matter, gauge, mass, Higgs, and geometric language are admissible only as
+controlled names for projected closure-stable regimes and not as independent
+axiomatic inputs to the structural proof.
+\end{corollary}
+
+\begin{proof}
+By Lemma~\ref{lem:projection-no-creation}, projection only reads out a state
+that has already survived the structural admissibility filter. Therefore the
+phenomenological names attached afterwards inherit their legitimacy from the
+closure-stable regime and cannot function as prior axioms of the construction.
+\end{proof}
+
+\subsection*{4. Technical use inside the monolith}
+The practical purpose of these new lemmas is modest but important. They create
+stable insertion points for later derivation chains. Subsequent versions may
+therefore reference:
+\begin{itemize}[leftmargin=2em]
+  \item the \emph{closure ladder} when passing from local triolic data to
+  observer-frame sectors;
+  \item the \emph{probe reduction principle} when compressing search spaces; and
+  \item the \emph{projection robustness statements} when interpreting effective
+  field sectors.
+\end{itemize}
+This means that the monolith can deepen individual proofs without reopening the
+global explanatory burden every time a local derivation is added.
+
+\subsection*{5. Version status of v1.4.0}
+Relative to the previous release, v1.4.0 contributes a stricter internal
+proof scaffold. The master-equation ladder and the micro-to-macro chain are
+retained, but they are no longer left as merely global narratives. They are now
+supported by named intermediate lemmas that later sections may invoke directly.
+That is the specific function of v1.4.0: not to conclude the full proof,
+but to make the next proof layer technically attachable in a disciplined way.

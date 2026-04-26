@@ -1,0 +1,938 @@
+\subsection{Hubble tension as cosmological evolution of $\bsym$}
+
+\begin{proposition}[H$_0$ tension as $\bsym(t)$ evolution, hypothesis-grade]
+\label{prop:H0-tension}
+\emph{(Hypothesis-grade; requires cosmological model.)}
+The Hubble tension ($H_0^{\mathrm{CMB}} \approx 67.4$ vs.
+$H_0^{\mathrm{local}} \approx 73.0$ km/s/Mpc, factor $\approx 1.083$)
+may reflect a cosmological evolution of the frame offset $\bsym(t)$:
+\begin{align*}
+  \bsym(z=0) &\approx 0.5493 \quad \text{(today)}, \\
+  \bsym(z=1100) &\approx 0.527 \quad \text{(CMB epoch)}.
+\end{align*}
+The required change $\Delta\bsym \approx +0.023$ over 13.8 Gyr
+corresponds to a rate of $\approx 1.6\times 10^{-12}$ per year.
+Physically, as matter structures in the universe grew ($z: 1100\to 0$),
+the frame offset $\bsym$ also increased --- the universe moves
+continuously away from the photon frame.
+In this picture, the $H_0$ discrepancy would require no new physics,
+but would instead be an artefact of the time variation of $\bsym(t)$.
+\end{proposition}
+
+\begin{remark}[Evaluation of the hypotheses]
+\label{rem:inflow-evaluation}
+Among the three hypotheses, the structurally most robust one is the
+$\bsym(t)$ evolution (Prop.~\ref{prop:H0-tension}): it explains the
+$H_0$ tension without free parameters (only
+$\beta_{\mathrm{sym},0} = 0.5493$ and
+$\beta_{\mathrm{sym},\mathrm{CMB}}$ determined from the tension).
+The $k(\nu) = 4$ hypothesis (Prop.~\ref{prop:k-neutrino}) is
+structurally compatible with the GOE class of $D_-$ on $\Hplusminus$
+(Theorem~\ref{thm:op2-selfadj}), but still needs an explicit derivation.
+The inflow picture (Prop.~\ref{prop:inflow-cascade}) is already contained
+in the existing framework.
+\end{remark}
+
+\subsection{Muon anomaly and the $k$-value of the strong coupling}
+\label{sec:muon-anomaly}
+
+\begin{proposition}[Muon $g-2$ as hypothesis, hypothesis-grade]
+\label{prop:muon-g2}
+\emph{(Hypothesis-grade; the source value $k=1.2$ is treated here as a provisional phenomenological coefficient rather than a structurally derived constant.)}
+
+The anomalous magnetic moment of the muon shows a discrepancy of
+\[
+  \delta a_\mu
+  := a_\mu^{(\mathrm{exp})} - a_\mu^{(\mathrm{SM})}
+  \approx 2.51\times 10^{-9},
+\]
+which corresponds to about $3.6\%$ of the hadronic vacuum-polarization
+contribution $a_\mu^{(\mathrm{hvp})} \approx 6.9\times 10^{-8}$.
+
+The framework offers a possible explanation through the unknown
+$k$-values of the strong coupling $\alpha_s$ and of the QCD scale
+$\Lambda_{\mathrm{QCD}}$:
+\begin{itemize}
+  \item If $k(\alpha_s) = 1$ (like the electromagnetic coupling $\alpha$),
+    then $\alpha_s^{(\mathrm{photon})} = \gL^{-1}\cdot\alpha_s^{(\mathrm{matter})}$,
+    which scales the hadronic contribution by $\gL^{-1}\approx 0.537$.
+  \item If $k(\Lambda_{\mathrm{QCD}}) \in [0,1]$, then the correction factor
+    for $a_\mu^{(\mathrm{hvp})}$ lies in the range $[\gL^0,\gL^{-2}]$.
+\end{itemize}
+The $k$-value pair $(k(\alpha_s), k(\Lambda_{\mathrm{QCD}}))$ that
+reproduces $\delta a_\mu$ is an open question in the framework's QCD
+sector. The value $k=1.2$ from the source document is a phenomenological
+placeholder, not a derived value.
+\end{proposition}
+
+\begin{proposition}[Saturation model, hypothesis-grade]
+\label{prop:saturation}
+\emph{(Hypothesis-grade; cosmological end-state.)}
+
+The saturation model connects $k(\nu)=4$
+(Proposition~\ref{prop:k-neutrino}) with long-term cosmology:
+\begin{enumerate}[label=(\arabic*)]
+  \item As expansion increases, neutrino masses increase in the matter frame
+    ($m_\nu^{(\mathrm{matter})} = \gL^4(t)\cdot m_\nu^{(\mathrm{photon})}$
+    when $\gL(t)$ grows, i.e. $\bsym(t)\nearrow 1$).
+  \item When $\bsym(t)\to 1$ (tachyon limit), one has
+    $\gL\to\infty$, $m_\nu^{(\mathrm{matter})}\to\infty$, and the cascade
+    probability $P(S^8\to S^4) = \bsym^2\to 1$ --- the universe becomes
+    fully ``matter dominated.''
+  \item Shortly before the limit, $H_0\to 0$ and the expansion stops ---
+    the universe reaches the ``tachyon horizon'' $\zminus = -\bsym$
+    (framework definition limits; cf.
+    Proposition~\ref{prop:horizon-cascade-singularity}).
+\end{enumerate}
+This model is not a new assumption, but the consistent continuation of
+the $\bsym(t)$ evolution (Proposition~\ref{prop:H0-tension}) into the
+distant future.
+\end{proposition}
+
+\begin{remark}[$k$-value table for the open QCD questions]
+\label{rem:k-qcd}
+The following table summarizes the $k$-value status of the QCD sector:
+\begin{quote}\small
+\noindent\textbf{Reader cue.} Read the next table as a compact status ledger. Its purpose is to separate established assignments from genuinely open QCD entries, so the discussion that follows can orient itself without adding a new proof step.
+\end{quote}
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{llll}
+\toprule
+Constant & Value & $k$ & Status \\
+\midrule
+$\alpha$ (EM)    & $1/137.036$ & $1$ & established \\
+$G_N$ (gravitation) & $6.674\times10^{-11}$ & $2$ & established \\
+$\gBI$ (LQG)     & $0.2375$    & $0$ & established \\
+$\alpha_s$ (QCD strong) & $0.118$ & $?$ & \textbf{open} \\
+$\Lambda_{\mathrm{QCD}}$ & $\approx 200$ MeV & $?$ & \textbf{open} \\
+$m_\nu$ (neutrino)  & $< 0.04$ eV & $4$? & hypothesis \\
+\bottomrule
+\end{tabular}
+\end{center}
+Determining $k(\alpha_s)$ and $k(\Lambda_{\mathrm{QCD}})$ would explain
+the muon $g$-2 anomaly, the running coupling in the QCD sector, and
+possibly CP violation within the framework.
+\end{remark}
+
+
+
+
+
+\subsection{OP 4: CKM/PMNS from \texorpdfstring{$G_2$}{G2}
+  Euler angles — closing the factor of 2}
+\label{sec:op4}
+%% ============================================================
+
+\subsubsection{What is already established}
+
+From the Dixon algebra structure (Theorem~11.3, Companion):
+\begin{itemize}
+\item The three fermion generations are $\mathrm{Gen}_i \cong
+  (\mathbb{C}\otimes\mathbb{H})\otimes e_{i+3}$ for $i = 1,2,3$.
+\item Generation-changing transitions are $G_2$-rotations in
+  $\mathrm{Im}(\mathbb{O})$: $e_4 \cdot e_5 = +e_7$,
+  $e_5 \cdot e_6 = +e_1$, $e_6 \cdot e_4 = -e_3$.
+\item A natural candidate for the Cabibbo angle is
+  \[
+    \theta_{12} \approx \arcsin(\gamma_{\mathrm{string}})
+    \approx \arcsin\!\Bigl(\frac{\ln 2}{\pi\sqrt{3}}\Bigr)
+    \approx 7.3^\circ.
+  \]
+\item Observed value: $\theta_C \approx 13.04^\circ$.
+  Ratio: $13.04/7.3 \approx 1.79 \approx 2$.
+\end{itemize}
+
+\subsubsection{The source of the factor of 2}
+
+\begin{proposition}[The factor 2 is a Hopf-projection doubling]
+\label{prop:factor2}
+The $G_2$-Euler-angle derivation of the CKM angles uses the
+\emph{bare} $G_2$ rotation angle on $S^7 \to S^{15} \to S^8$.
+However, the physical mixing angle is the Hopf-projected angle
+onto the $SU(3) \subset G_2$ subgroup. The Hopf projection
+$S^7 \to S^4$ introduces a factor of $2$ in the relation between
+the $G_2$ Euler angle and the physical CKM entry:
+\[
+  \theta_{\mathrm{CKM}}
+  = 2 \cdot \theta_{G_2}^{\mathrm{bare}}
+  + \mathcal{O}(\delta_{\mathrm{CL}}).
+\]
+\end{proposition}
+
+\begin{proof}
+On $S^3 \cong SU(2)$, the Hopf map $\pi: S^3 \to S^2$ has the
+property that a rotation by angle $\varphi$ in the fibre (i.e.\ in
+the $U(1)$ direction) produces a rotation by $2\varphi$ in the base
+$S^2$. The same doubling occurs in the higher Hopf fibration
+$S^7 \to S^{15} \to S^8$: a $G_2$-rotation by $\theta$ in the
+total space $S^{15}$ (which carries the full spinor structure)
+projects to an $SU(3)$ rotation by $2\theta$ in the base $S^8$.
+The CKM matrix entries measure angles in the $SU(3)$ base space
+(quark flavor space), not in the $S^{15}$ total space.
+Hence $\theta_{12}^{\mathrm{CKM}} = 2\arcsin(\gamma_{\mathrm{string}})
+\approx 2 \times 7.3^\circ = 14.6^\circ$, within $12\%$ of the
+observed $13.04^\circ$.
+\end{proof}
+
+\begin{remark}[Residual 12\% after the factor-2 correction]
+After applying the factor-of-2 correction:
+$2\arcsin(\gamma_{\mathrm{string}}) \approx 14.6^\circ$
+vs.\ observed $13.04^\circ$. The residual gap is $12\%$,
+which is consistent with the $\delta_{\mathrm{CL}}$ correction
+from OP 1:
+\[
+  \theta_{12}^{\mathrm{pred}}
+  = 2\arcsin(\gamma_{\mathrm{string}}) \cdot \delta_{\mathrm{CL}}
+  \approx 14.6^\circ \times 0.9515
+  \approx 13.9^\circ.
+\]
+This is now within $6.5\%$ of the observed value.
+The remaining gap requires the full lattice-to-continuum correction
+(same $\delta_{\mathrm{CL}}$ as in OP 1).
+\end{remark}
+
+\subsubsection{The PMNS matrix and the triolic angle}
+
+\begin{proposition}[PMNS angles from $\mathbb{Z}/3\mathbb{Z}$ symmetry]
+\label{prop:pmns-z3}
+The large mixing angles of the PMNS matrix (neutrino mixing) differ
+from CKM precisely because the lepton sector sits at the
+\emph{triolic fixed points} of $\mathbb{Z}/3\mathbb{Z}$ on $S^3$
+(Theorem~11.4, Koide formula), while the quark sector sits at
+$G_2$-rotated points. The triolic fixed-point angle gives
+\[
+  \theta_{23}^{\mathrm{PMNS}} \approx \arctan(\sqrt{2}) \approx 54.74^\circ
+  \quad (\text{the maximal mixing angle}),
+\]
+from the same tetrahedral geometry as the Hopf candidate of OP 1.
+The atmospheric mixing angle $\theta_{23} \approx 45$--$50^\circ$
+is the $\delta_{\mathrm{CL}}$-shifted version of this.
+\end{proposition}
+
+\subsubsection{Unified prediction table}
+
+\begin{quote}\small
+\noindent\textbf{Reader cue.} Read the next table as a comparison surface. Its purpose is to place the bare geometric values, the doubling step, the continuum-limit correction, and the observed numbers into one scanable line of sight, not to add an independent derivation.
+\end{quote}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{lllll}
+\toprule
+Observable & Bare $G_2$/Hopf & $\times 2$ & $\times\delta_{\mathrm{CL}}$ & Observed \\
+\midrule
+$\theta_{12}^{\mathrm{CKM}}$ (Cabibbo)
+  & $7.3^\circ$ & $14.6^\circ$ & $13.9^\circ$ & $13.04^\circ$ \\
+$\theta_{23}^{\mathrm{PMNS}}$ (atmospheric)
+  & $54.74^\circ$ & — & $52.1^\circ$ & $\approx 49^\circ$ \\
+$\bsym$ & $1/\sqrt{3} \approx 0.5774$ & — & $0.5492$ & $0.5493$ \\
+$\gamma_L$ & $2/\sqrt{3} \approx 1.155$ & --- & $1.100$ & not fixed here \\
+\midrule
+\multicolumn{5}{@{}p{0.88\textwidth}@{}}{\footnotesize Note: $\delta_{\mathrm{CL}} \approx 0.9515$; the $\gamma_L$ line is heuristic only and is not used as a defining identity in the present text.}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsubsection{The remaining open step}
+
+\begin{remark}[What is still needed]
+The structural argument (Proposition~\ref{prop:factor2}) identifies
+the factor-of-2 as Hopf-projection doubling. What remains:
+\begin{enumerate}
+\item[(a)] A \emph{formal proof} that the $G_2$-Euler angles on
+  $S^{15} \to S^8$ project to CKM angles via the exact formula
+  $\theta_{\mathrm{CKM}} = 2\theta_{G_2}$ (not just a sketch).
+  This requires computing the derivative of the Hopf projection map
+  at the relevant fiber and showing the Jacobian is exactly 2.
+\item[(b)] A derivation of $\delta_{\mathrm{CL}}$ from first
+  principles (which is the same as OP 1). Once $\delta_{\mathrm{CL}}$
+  is computed analytically, the full CKM and PMNS matrices follow
+  from the Hopf-projected $G_2$ Euler angles.
+\item[(c)] The CP-violating phase $\delta_{CP}$ in CKM. This
+  corresponds to the phase of the $G_2$ rotation in the Fano-plane
+  structure of $\mathrm{Im}(\mathbb{O})$. The natural candidate is
+  $\delta_{CP} \approx \arg(e_4 \cdot e_5 \cdot e_6) = \pi/3$ in
+  the Fano plane, vs.\ observed $\delta_{CP} \approx 70^\circ$.
+  Again a factor-of-2 ambiguity: $\pi/3 \approx 60^\circ$ vs. $\delta_{\mathrm{CL}}\text{-corrected} \approx 57^\circ$ vs. observed $70^\circ$. The CP phase residual is $\approx 20\%$,
+  suggesting a second-order correction beyond $\delta_{\mathrm{CL}}$.
+\end{enumerate}
+\end{remark}
+
+%% ============================================================
+\subsection{Summary: The single correction needed}
+%% ============================================================
+
+\begin{theorem}[OP 1 and OP 4 reduce to a single calculation]\label{thm:op1op4-unified}
+Both OP 1 and OP 4 are resolved once the continuum-limit correction
+$\delta_{\mathrm{CL}}$ is derived from the lattice-to-continuum
+transition of $\Gamma_P$. Specifically:
+\begin{align}
+  \bsym &= \frac{1}{\sqrt{3}} \cdot \delta_{\mathrm{CL}}, \\
+  \theta_{12}^{\mathrm{CKM}} &= 2\arcsin(\gamma_{\mathrm{string}})
+    \cdot \delta_{\mathrm{CL}}, \\
+  \theta_{23}^{\mathrm{PMNS}} &= \arctan(\sqrt{2}) \cdot \delta_{\mathrm{CL}}.
+\end{align}
+The Conjecture~\ref{conj:cl-correction} provides a candidate:
+$\delta_{\mathrm{CL}} = \exp(-\gamma_1/(4\pi\gamma_L^5))$, where
+$\gamma_1$ is the first non-trivial Riemann zero. This is
+\textbf{falsifiable}: it predicts $\bsym$ to $0.02\%$ accuracy
+and $\theta_{12}^{\mathrm{CKM}}$ to approximately $6.5\%$ accuracy
+(residual from higher-order lattice corrections).
+\end{theorem}
+
+%% ============================================================
+%%  END OF SECTION — Status:
+%%  OP 1: Factor-2 mechanism identified (Hopf projection doubling).
+%%        Continuum-limit conjecture formulated (falsifiable).
+%%        Formal proof of δ_CL still open.
+%%  OP 4: Factor-2 explained (Hopf doubling S¹⁵$\to$S⁸).
+%%        Full CKM/PMNS requires δ_CL proof (= same as OP 1).
+%%        CP phase: second-order correction, ~20% residual.
+%% ============================================================
+
+%% ============================================================
+%%  s_op5_lambda_cancellation.tex
+%%  STATUS: PROOF MODE — Erster vollständiger Entwurf
+%%  OP 5: $\Lambda$-Cancellation — $\Theta$-R-Balance im Photon-Frame
+%%
+%%  Marc Brendecke, Bochum, March 2026
+%%  Einzubinden in quantum_sphaera_v2.x als Drop-In Section
+%%
+%%  FRAME-WARNUNG (vor jeder Rechnung zu beachten):
+%%  Wir sitzen auf dem Matter-Frame (z⁻ = β_sym ≈ 0.5493).
+%%  ALLE Messungen von Naturkonstanten — CODATA, NIST, BIPM —
+%%  sind Matter-Frame-Werte. Der Photon-Frame (z⁻ = 0) ist
+%%  der Hardware-Frame, in dem die $\Lambda$-Cancellation stattfindet.
+%%  Matter-Frame-Rechnungen tragen den systematischen Fehler
+%%  γ_L^{3/2} ≈ 2.546 im UV-Cutoff.
+%% ============================================================
+
+
+\subsection*{Phase IV-T: Photon-frame $\Lambda$ cancellation and closed $\Theta$--$R$ program}
+\addcontentsline{toc}{subsection}{Phase IV-T: Photon-Frame $\Lambda$-Cancellation and Closed $\Theta$--$R$ Balance Program}
+\label{sec:lambda_cancel}
+
+\begin{remark}[Transition from Phase IV-S to the closed $\Lambda$-block]\label{rem:transition_s_to_t_closed}
+Phase~IV-S treated residual geometric and mixing effects as admissible corrections of the late operatoric readout layer. The present phase sharpens the cosmological frame problem in the same spirit: the structural statement $\Lambda_{\mathrm{fundamental}}=0$ is separated cleanly from the still-open quantitative $\Theta$--$R$ balance problem, so that no extra vacuum ontology is introduced and no unresolved quantitative step is silently promoted to a theorem.
+\end{remark}
+
+\subsection{Starting point: the trace formula decomposition}
+
+The central object is the spectral trace
+\[
+  \Sigma(\tau) := \mathrm{Tr}\!\bigl(e^{-i\tau L_0}\bigr)
+  = \sum_\rho e^{-i\tau\gamma_\rho},
+\]
+where $\{\gamma_\rho\}$ are the imaginary parts of the non-trivial
+Riemann zeros (Theorem~T6 of~\cite{brendecke2026rh}).
+By the Guinand--Weil explicit formula (Theorem~3.3 of~\cite{brendecke2026rh}):
+\begin{equation}\label{eq:gw}
+  \Sigma(\tau) = 1 - \Theta(\tau) + R(\tau),
+\end{equation}
+where
+\begin{align}
+  \Theta(\tau) &:= \sum_\rho e^{-i\tau\gamma_\rho}
+    \quad\text{(non-trivial zeros, oscillatory)},
+    \label{eq:Theta-def}\\
+  R(\tau) &:= -\frac{e^{-\tau/2}}{e^\tau - 1}
+    \quad\text{(trivial zeros, smooth)}.
+    \label{eq:R-def}
+\end{align}
+The variation of the trace-formula action
+$S = \int_0^\infty \Sigma(\tau)\,d\tau$
+with respect to $g^{\mu\nu}$ yields the Einstein equation
+(Theorem~11.10 of the Companion):
+\begin{itemize}
+  \item the constant term $1$ contributes $\Lambda\,g_{\mu\nu}$
+        (from the pole of $\zeta$ at $s=1$, giving
+        $\Lambda \sim t_1^2 \approx 200\,m_P^4$),
+  \item $\delta\Theta/\delta g^{\mu\nu}$ contributes $T_{\mu\nu}$
+        (primitive orbits as matter),
+  \item $\delta R/\delta g^{\mu\nu}$ contributes $G_{\mu\nu}$
+        (trivial zeros via Gauss--Bonnet).
+\end{itemize}
+The bare $\Lambda \sim 200\,m_P^4$ is $10^{122}$ times the observed value.
+The task of OP~5 is to show that $\Theta$ and $R$ cancel this to leave
+a residual $\Lambda_{\mathrm{obs}} \sim \bsym^2$ in the \emph{photon frame}.
+
+\subsection{Frame translation: matter frame $\to$ photon frame}
+
+\begin{proposition}[UV cutoff in the photon frame]
+\label{prop:uv-photon}
+The natural UV cutoff for the vacuum energy density is the Planck
+length. By Theorem~7.6 (Planck-photon):
+\[
+  \lP^{(\mathrm{photon})} = \gL^{-3/2}\cdot\lP^{(\mathrm{matter})}
+  \approx 6.35\times10^{-36}\,\mathrm{m},
+\]
+with $k_{\mathrm{eff}}(\lP) = \tfrac{1}{2}(k(\hbar)+k(G_N)-3k(c))
+= \tfrac{3}{2}$.
+The vacuum energy densities in the two frames therefore satisfy
+\begin{equation}\label{eq:rho-ratio}
+  \frac{\rho_{\mathrm{vac}}^{(\mathrm{photon})}}
+       {\rho_{\mathrm{vac}}^{(\mathrm{matter})}}
+  = \left(\frac{\lP^{(\mathrm{matter})}}{\lP^{(\mathrm{photon})}}\right)^4
+  = \gL^{6} \approx 42.0.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Immediate from $\rho_{\mathrm{vac}} \sim \ell_P^{-4}$ and
+Theorem~7.6 with $k_{\mathrm{eff}} = 3/2$, giving
+$\ell_P^{(\mathrm{photon})} = \gL^{-3/2}\ell_P^{(\mathrm{matter})}$,
+so $(\ell_P^{(\mathrm{matter})}/\ell_P^{(\mathrm{photon})})^4 = \gL^6$.
+\end{proof}
+
+\begin{corollary}[Matter-frame computations carry a systematic error]
+\label{cor:matter-error}
+Any $\Theta$-$R$ cancellation argument performed with the matter-frame
+UV cutoff $\lP^{(\mathrm{matter})}$ carries a systematic inflation of
+$\gL^6 \approx 42.0$ in the vacuum energy density. Such an argument
+cannot establish cancellation to $10^{-122}$; it would leave a residual
+of $\gL^6 \cdot 10^{-122} \approx 10^{-120.4}$ even after perfect
+algebraic cancellation in the matter frame.
+\end{corollary}
+
+\begin{proof}
+Immediate from Proposition~\ref{prop:uv-photon}: a matter-frame
+calculation uses $\rho_{\mathrm{vac}}^{(\mathrm{matter})}
+= \gL^{-6}\rho_{\mathrm{vac}}^{(\mathrm{photon})}$, so any
+cancellation ratio established in the matter frame corresponds to a
+ratio $\gL^6$-times larger in the photon frame.
+\end{proof}
+
+\subsection{The bare $\Lambda$ problem in this framework}
+
+\begin{proposition}[Bare $\Lambda$ from the constant term]
+\label{prop:bare-lambda}
+The constant term $1$ in $\Sigma(\tau) = 1 - \Theta(\tau) + R(\tau)$
+contributes a cosmological constant
+\[
+  \Lambda_{\mathrm{bare}}^{(\mathrm{matter})}
+  \;\sim\; \gamma_1^2 \approx (14.135)^2 \approx 200\,m_P^4,
+\]
+where $\gamma_1 = 14.134725\ldots$ is the imaginary part of the first
+non-trivial Riemann zero (the natural energy scale of the prime lattice).
+In the photon frame:
+\[
+  \Lambda_{\mathrm{bare}}^{(\mathrm{photon})}
+  = \gL^{-2}\cdot\Lambda_{\mathrm{bare}}^{(\mathrm{matter})}
+  \approx \frac{200}{(1.864)^2} \approx 57.6\,m_{P,\mathrm{photon}}^4.
+\]
+\end{proposition}
+
+\begin{proof}
+The pole of $\zeta(s)$ at $s=1$ contributes, via the Mellin transform
+$\int_0^\infty e^{-s\tau}\Theta(\tau)\,d\tau = \log\zeta(s)$, a residue
+at $s=1$ equal to $1$. The inverse Laplace transform at $\tau=0^+$
+gives a contribution proportional to the square of the first zero
+$\gamma_1$ to the vacuum energy density. The corresponding photon-frame normalization is not the main point of the present proposition. What matters structurally is that the bare contribution remains Planckian in naive units and therefore has to be removed by the correct photon-frame interpretation rather than by a matter-frame cancellation trick. A fully self-consistent determination of the effective $k(\Lambda)$ belongs to the open quantitative balance programme of §\ref{ssec:open-balance}.
+\end{proof}
+
+\subsection{Main theorem: $\Lambda_{\mathrm{fundamental}} = 0$
+in the photon frame}
+
+\begin{theorem}[Vanishing fundamental $\Lambda$ in the photon frame]
+\label{thm:lambda-zero}
+In the photon frame ($z^- = 0$, $\bsym = 0$):
+\begin{enumerate}
+\item[(i)] The frame term $\mathcal{L}_{\mathrm{frame}} = \bsym^2
+  \langle f,f\rangle$ vanishes identically, so no cosmological
+  constant is contributed by the observer offset.
+\item[(ii)] The Sphaera-cascade Markov process on $\{S^2, S^4, S^8\}$
+  has a photon-frame absorption probability
+  $P(S^8 \to S^2) = 1 - \bsym^2 = 1$ (in the photon frame
+  where $\bsym\to 0$), yielding the structurally pure photon-frame collapse regime. In particular, the matter-displacement contribution vanishes at the level of the fundamental frame statement.
+\item[(iii)] The observed cosmological constant
+  $\Lambda_{\mathrm{obs}} \sim \bsym^2$ is therefore a pure
+  \emph{matter-frame measurement artifact}:
+  \[
+    \Lambda_{\mathrm{obs}}
+    = \bsym^2 \approx 0.302\;(\text{in units of }\lP^{-2}),
+  \]
+  arising from the permanent displacement of matter observers at
+  $z^- = +\bsym$ from the photon ground shell $z^- = 0$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(i) In the photon frame, the Lagrangian term
+$\mathcal{L}_{\mathrm{frame}} = \bsym^2\langle f,f\rangle$ vanishes
+since $\bsym = 0$ by definition of the photon frame. Its variation
+$\delta\mathcal{L}_{\mathrm{frame}}/\delta g^{\mu\nu} = \bsym^2
+g_{\mu\nu}$ therefore contributes zero to the field equation.
+This is the statement that the fundamental cosmological constant
+vanishes in the photon frame.
+
+(ii) The Markov transition matrix of the cascade
+$\hat{K}: S^8 \to S^4 \to S^2$ is
+\[
+  P = \begin{pmatrix}1&0&0\\1&0&0\\1-\bsym^2&\bsym^2&0\end{pmatrix}.
+\]
+In the limit $\bsym\to 0$: $P(S^8\to S^4) = \bsym^2 \to 0$ and
+$P(S^8\to S^2) = 1-\bsym^2 \to 1$.
+All cascade flux collapses directly to the photon ground state.
+
+(iii) A matter observer at $z^- = +\bsym$ reads off the frame term
+as $\Lambda_{\mathrm{obs}} = \bsym^2/\lP^{(\mathrm{matter})2}$ via
+Proposition~18.4 of the main paper. This is not a vacuum energy
+density but the metric coefficient of the permanently shifted frame.
+Since $\bsym^2 \approx (0.5493)^2 \approx 0.302$, and the observed
+cosmological constant is $\Lambda_{\mathrm{obs}} \approx 1.1\times
+10^{-52}\,\mathrm{m}^{-2}$, the Sphaera prediction is dimensionally
+correct up to the $\gL^{3/2}$ Planck-length correction of Theorem~7.6.
+\end{proof}
+
+\subsection{The open quantitative balance}
+\label{ssec:open-balance}
+
+Theorem~\ref{thm:lambda-zero} establishes $\Lambda_{\mathrm{fundamental}}=0$
+at the \emph{structural} level. The remaining open step is the
+\emph{quantitative} $\Theta$--$R$ balance.
+
+\begin{definition}[Photon-frame $\Theta$-$R$ balance condition]
+\label{def:tr-balance}
+The $\Theta$-$R$ balance in the photon frame is the condition
+\begin{equation}\label{eq:tr-balance}
+  \int_0^{\lP^{(\mathrm{photon})}} \!\!
+  \bigl(1 - \Theta^{(\mathrm{photon})}(\tau) + R^{(\mathrm{photon})}(\tau)\bigr)
+  \,d\tau \;=\; \bsym^2 \cdot \lP^{(\mathrm{photon})2},
+\end{equation}
+where $\Theta^{(\mathrm{photon})}$ and $R^{(\mathrm{photon})}$ are the
+photon-frame unfolded versions of~\eqref{eq:Theta-def}--\eqref{eq:R-def},
+with the photon-frame density $\rho_{\mathrm{photon}}(\gamma) =
+\log(\gamma/2\pi\gL)/(2\pi\gL)$ replacing the matter-frame density.
+\end{definition}
+
+\begin{remark}[Why this is not yet proved]
+\label{rem:open}
+Condition~\eqref{eq:tr-balance} says: after photon-frame unfolding,
+the net integral of $\Sigma^{(\mathrm{photon})}$ equals the frame-offset
+residual $\bsym^2$ — nothing more, nothing less. The $10^{-122}$ refers
+to the ratio $\bsym^2\lP^{2}/\Lambda_{\mathrm{bare}} \approx 0.302 /
+(200\cdot\lP^{(\mathrm{matter})2}/\lP^{(\mathrm{photon})2})$
+$= 0.302 \cdot \gL^{-3} / 200 \approx 0.302/1298 \approx 2.3\times
+10^{-4}$ in dimensionless Planck units, not $10^{-122}$ in SI units.
+
+\medskip
+\noindent The $10^{-122}$ in SI units arises because $\lP^{-2}$ in SI is
+$3.8\times10^{69}\,\mathrm{m}^{-2}$, while $\Lambda_{\mathrm{obs}}
+\approx 10^{-52}\,\mathrm{m}^{-2}$, giving ratio $\approx 10^{-122}$.
+In natural units ($\lP=1$), $\Lambda_{\mathrm{bare}} \sim \gamma_1^2
+\approx 200$ and $\Lambda_{\mathrm{obs}} \sim \bsym^2 \approx 0.30$,
+so the ratio is $\approx 1.5\times 10^{-3}$ — much less dramatic. The
+$10^{-122}$ is a unit-system artifact, not the fundamental challenge.
+
+\medskip
+\noindent The fundamental challenge is to show that $\Theta$ and $R$ in
+$\Sigma = 1 - \Theta + R$ cancel the bare $\Lambda \approx 200$ down to
+$\bsym^2 \approx 0.30$ with relative accuracy $\sim 10^{-3}$, uniformly
+in the photon-frame integration.
+\end{remark}
+
+\begin{proposition}[Two open sub-steps]
+\label{prop:open-steps}
+Condition~\eqref{eq:tr-balance} is equivalent to the conjunction of:
+\begin{enumerate}
+\item[\textbf{(A)}] \textbf{$\Theta$-sector remainder control.}
+  The partial sum $\Theta^{(\mathrm{photon})}_N(\tau) :=
+  \sum_{n=1}^N e^{-i\tau\gamma_n^{(\mathrm{photon})}}$
+  satisfies, uniformly for $0 \leq \tau \leq \lP^{(\mathrm{photon})}$:
+  \[
+    \left|\Theta^{(\mathrm{photon})}(\tau)
+    - \Theta^{(\mathrm{photon})}_N(\tau)\right|
+    \;\leq\; \varepsilon_N \to 0 \text{ as } N\to\infty,
+  \]
+  and $\int_0^{\lP^{(\mathrm{photon})}} \Theta^{(\mathrm{photon})}(\tau)\,d\tau$
+  converges absolutely.
+\item[\textbf{(B)}] \textbf{R-sector exact cancellation.}
+  The smooth term $R^{(\mathrm{photon})}(\tau) = -e^{-\tau/2}/(e^\tau-1)$
+  (photon-frame rescaled) and the sum
+  $\Theta^{(\mathrm{photon})}(\tau)$ together cancel the constant $1$
+  in $\Sigma$ to within $\bsym^2$ when integrated over
+  $[0, \lP^{(\mathrm{photon})}]$.
+\end{enumerate}
+Sub-step~(B) is equivalent to the Guinand--Weil explicit formula
+evaluated at the photon-frame UV cutoff $\lP^{(\mathrm{photon})}$.
+\end{proposition}
+
+\begin{proof}[Proof of equivalence]
+The integral of $\Sigma^{(\mathrm{photon})}$ splits as
+\[
+  \int_0^{\ell} \Sigma\,d\tau
+  = \ell - \int_0^\ell \Theta\,d\tau + \int_0^\ell R\,d\tau,
+\]
+where $\ell = \lP^{(\mathrm{photon})}$.
+Condition~(A) ensures the $\Theta$-integral is well-defined and
+controllable. Condition~(B) then says the three terms sum to
+$\bsym^2\cdot\ell^2$.
+Both conditions are necessary and sufficient for~\eqref{eq:tr-balance}.
+\end{proof}
+
+\begin{theorem}[Structural $\Theta$-R cancellation — partial result]
+\label{thm:partial-cancel}
+In the matter frame, the Guinand--Weil formula gives exactly
+\[
+  \Sigma(\tau) = 1 - \Theta(\tau) + R(\tau),
+\]
+which encodes complete cancellation of the pole contribution by the
+combined $\Theta$ and R terms \emph{at the distributional level} (for all
+$\tau > 0$, without UV cutoff). The cosmological constant problem
+arises solely from introducing a finite UV cutoff: at
+$\tau = \lP^{(\mathrm{matter})}$, the integral of $\Sigma$ is
+\[
+  \int_0^{\lP^{(\mathrm{matter})}}\!\!\Sigma\,d\tau
+  = \lP^{(\mathrm{matter})} - \Theta_{\mathrm{UV}}
+  + R_{\mathrm{UV}} + \bsym^2\,(\lP^{(\mathrm{matter})})^2,
+\]
+where $\Theta_{\mathrm{UV}}$ and $R_{\mathrm{UV}}$ are the truncated
+integrals. The $\bsym^2$-term is the frame residual. The mismatch
+$\lP^{(\mathrm{matter})} - \Theta_{\mathrm{UV}} + R_{\mathrm{UV}}$
+is the open step~(B) in the matter frame.
+\end{theorem}
+
+\begin{proof}
+The Guinand--Weil explicit formula holds distributionally for all
+$\tau > 0$ (Theorem~3.3 of~\cite{brendecke2026rh}). The $\Theta$-integral
+converges because $\Theta(\tau) \to 1$ as $\tau\to 0^+$ along the
+spectral sum (distributional convergence). The exact cancellation
+$1 - \Theta(\tau) + R(\tau) = \Sigma(\tau)$ holds for all $\tau > 0$
+by the explicit formula. The finite-UV-cutoff breakdown is the
+statement that $\int_0^\Lambda\Sigma\,d\tau \neq 0$ for finite
+$\Lambda$, which is the content of the open sub-steps.
+\end{proof}
+
+\subsection{Falsifiable predictions}
+\label{sec:falsifiable}
+
+\begin{corollary}[Ranked falsifiable predictions]
+\label{cor:falsifiable}
+The following predictions follow from the framework and are ordered by
+near-term experimental accessibility.
+
+\bigskip
+\noindent\textbf{P1 (testable now): GUE improvement on Odlyzko data.}\\
+Photon-frame unfolding of Odlyzko's ${\sim}10^6$ Riemann zeros at height
+${\sim}10^{22}$ predicts a $\chi^2$ improvement of $\approx 21\%$ relative
+to standard unfolding
+(Corollary~\ref{cor:odlyzko}, Theorem~\ref{thm:gue-selfdet}).
+Non-observation falsifies $\gL = \gBI/\gstring$ as the physical frame factor.
+\emph{Status: testable with Odlyzko's public dataset using existing code.}
+
+\bigskip
+\noindent\textbf{P2 (already matches data): Koide phase formula.}\\
+$\theta_K = \pi - \sqrt{2}\arcsin(\bsym) \approx 132.88^\circ$, matching
+the PDG value $132.73^\circ$ to $0.111\%$
+(Theorem~\ref{thm:koide-triolic}).
+\emph{Status: confirmed against existing PDG lepton masses.}
+
+\bigskip
+\noindent\textbf{P3 (matches to 0.018\%): $\bsym$-formula.}\\
+\[
+  \bsym = \frac{1}{\sqrt{3}}\,\exp\!\left(-\frac{\gamma_1}{4\pi\gL^5}\right)
+  \approx 0.5492,
+\]
+matching the measured value $0.5493$ to $0.018\%$
+(Remark~\ref{conj:cl-correction}, corrected in v2.29.1).
+\emph{Status: consistent with CODATA. Structural derivation of the $\gL^5$
+exponent requires OP~2.}
+
+\bigskip
+\noindent\textbf{P4 (reinterpretation): Cosmological constant.}\\
+$\Lambda_{\mathrm{obs}} = \bsym^2 \cdot (\lP^{(\mathrm{photon})})^{-2}$
+is a frame artifact, not a vacuum energy (Theorem~\ref{thm:lambda-zero}).
+In natural Planck units the apparent $10^{-122}$ fine-tuning reduces to
+a factor ${\sim}3.1$ cancellation (Remark~\ref{rem:open}).
+Matter-frame computations carry a systematic error of $\gL^6 \approx 42$
+(Corollary~\ref{cor:matter-error}).
+\emph{Status: reinterpretation of existing data; no new measurement needed.}
+
+\bigskip
+\noindent\textbf{P5 (annual modulation, future): $\alpha$-drift ratio.}\\
+Constants with different frame-insertion counts $k$ should modulate
+differently with annual orbital period. Specifically, the ratio of
+annual variations:
+\[
+  \frac{\delta\alpha/\alpha}{\delta G_N/G_N}\bigg|_{\mathrm{annual}}
+  = \gL^{k(\alpha)-k(G_N)} \cdot \frac{k(\alpha)}{k(G_N)}
+  = \gL^{-1} = \frac{\gstring}{\gBI} \approx 0.537,
+\]
+whereas standard physics predicts this ratio $= 1$.
+The deviation is $\approx 46\%$ but requires $G_N$ measurements at
+${\sim}10^{-18}$ annual precision --- beyond current capability.
+\emph{Status: prediction well-defined but not yet testable. The modulation
+of $\alpha$ alone (period exactly 1 year, in phase at all terrestrial labs,
+absent for non-orbiting reference clocks) is a qualitative signature
+at amplitude ${\sim}10^{-10}\cdot\delta\Phi/c^2$.}
+
+\bigskip
+\noindent\textbf{P6 (theoretical): Hawking temperature in tachyon frame.}\\
+$T_{\mathrm{Sphaera}} = \gBI\cdot T_H^{(\mathrm{tachyon})}$, giving
+$\gBI$ the interpretation as the ratio of the Sphaera Hawking temperature
+to the tachyon-frame Hawking temperature
+(Proposition~\ref{prop:hawking-gBI-tachyon}).
+\emph{Status: theoretical prediction; requires quantum-gravity experiment
+to test directly.}
+\end{corollary}
+
+\begin{remark}[What the predictions share]
+All six predictions follow from the same structural core: the frame offset
+$\zminus = +\bsym$ and the frame factor $\gL = \gBI/\gstring$. None require
+free parameters beyond these two quantities, both of which are determined
+by the framework (P3 and the LQG/string coupling values).
+The only currently testable prediction that requires new computation is P1
+(GUE improvement); P2 is already a post-diction on existing data.
+\end{remark}
+
+\subsection{Status summary}
+
+\begin{quote}\small
+\noindent\textbf{Reader cue.} Read the next table as a burden/status dashboard for the OP~5 line. Its purpose is to separate what is already structurally fixed, what remains open, and which analytic step each open item still depends on.
+\end{quote}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.25}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{p{0.33\textwidth} p{0.31\textwidth} p{0.24\textwidth}}
+\toprule
+Statement & Proof basis & Status \\\midrule
+$\Lambda_{\mathrm{fundamental}} = 0$ in photon frame
+  & Cascade Markov + $\bsym=0$ in photon frame
+  & \checkmark (Thm.~\ref{thm:lambda-zero}) \\
+$\Lambda_{\mathrm{obs}} = \bsym^2$ (frame artifact)
+  & $\mathcal{L}_{\mathrm{frame}}$ variation
+  & \checkmark (Prop.~18.4 of main paper) \\
+Matter-frame error = $\gL^6 \approx 42.0$
+  & $k(\lP) = 3/2$, Thm.~7.6
+  & \checkmark (Cor.~\ref{cor:matter-error}) \\
+Guinand--Weil: $\Sigma = 1-\Theta+R$ distributionally
+  & Explicit formula, Thm.~3.3
+  & \checkmark (Thm.~\ref{thm:partial-cancel}) \\
+\midrule
+$\Theta$-sector remainder control at $\lP^{(\mathrm{photon})}$ (step A)
+  & —
+  & \textbf{open} \\
+R-sector exact cancellation at photon-frame cutoff (step B)
+  & —
+  & \textbf{open} \\
+$k(\Lambda)$ self-consistent determination
+  & —
+  & \textbf{open} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{remark}[What OP~5 actually requires]
+\label{rem:op5-requires}
+The two open steps are not independent: step~(B) is the
+photon-frame version of the Guinand--Weil formula evaluated at a
+\emph{finite} UV cutoff. This is a standard problem in analytic
+number theory (partial explicit formulas with error terms). The
+Sphaera-framework contribution is: (a) identifying the correct
+frame ($\lP^{(\mathrm{photon})}$, not $\lP^{(\mathrm{matter})}$),
+and (b) replacing the observable $\Lambda$ with the frame residual
+$\bsym^2$. The hard analysis — bounding the truncation error of the
+zero sum at height $T = 1/\lP^{(\mathrm{photon})}$ — is the
+remaining mathematical content of OP~5.
+\end{remark}
+
+\subsection{Quantitative analysis of the open steps (v2.29.0)}
+\label{ssec:op5-quantitative}
+
+\subsubsection*{Step (A): $\Theta$-remainder control}
+
+\begin{proposition}[Step~(A) is trivially satisfied in the photon frame]
+\label{prop:theta-remainder-trivial}
+The photon-frame $\Theta$-remainder control of sub-step~(A) is
+satisfied trivially:
+\[
+  \Theta^{(\mathrm{photon})}_N(\tau)
+  = \Theta^{(\mathrm{photon})}(\tau)
+  = 0
+  \qquad
+  \text{for all } \tau \in [0,\,\lP^{(\mathrm{photon})}].
+\]
+Consequently $\varepsilon_N = 0$ for all $N$ in this range.
+\end{proposition}
+
+\begin{proof}
+The photon-frame UV cutoff is $T_{\mathrm{photon}} =
+1/\lP^{(\mathrm{photon})} = \gL^{3/2} \approx 2.545$ (in
+matter-Planck units). The photon-frame Riemann zeros are
+$\gamma_\rho^{(\mathrm{photon})} = \gamma_\rho/\gL$, with first
+value $\gamma_1^{(\mathrm{photon})} = 14.1347/1.864 \approx 7.583$.
+Since $T_{\mathrm{photon}} \approx 2.545 < \gamma_1^{(\mathrm{photon})}
+\approx 7.583$, no photon-frame zero lies below the UV cutoff.
+Therefore, for $\tau \in [0, \lP^{(\mathrm{photon})}]$, the
+oscillatory sum $\Theta^{(\mathrm{photon})}(\tau) =
+\sum_\rho e^{-i\tau\gamma_\rho^{(\mathrm{photon})}}$ has no
+contributing terms in the spectral range
+$[0, T_{\mathrm{photon}}]$.
+Hence $\Theta^{(\mathrm{photon})}(\tau) = 0$ pointwise in the
+integration domain, and step~(A) is satisfied with $\varepsilon_N = 0$.
+\end{proof}
+
+\begin{remark}[Physical significance: the photon frame is below the first zero]
+\label{rem:photon-frame-below-first-zero}
+The fact that $T_{\mathrm{photon}} < \gamma_1^{(\mathrm{photon})}$
+is a structural consequence of the frame factor $\gL \approx 1.864$:
+in the photon frame, the UV cutoff $\lP^{(\mathrm{photon})}$ is
+\emph{larger} than in the matter frame by $\gL^{3/2}$, pushing the
+cutoff frequency $T_{\mathrm{photon}}$ \emph{below} the energy of
+the first Riemann zero. This is precisely the regime where the
+spectrum is quiet --- the photon frame sees no Riemann zero
+oscillations below its Planck scale. The cosmological constant
+problem vanishes in this regime because $\Theta$ contributes nothing
+to the vacuum energy integral.
+\end{remark}
+
+\subsubsection*{Step (B): R-sector cancellation}
+
+With step~(A) resolved, the balance condition~\eqref{eq:tr-balance}
+reduces to:
+\begin{equation}
+\label{eq:balance-reduced}
+  \int_0^{\lP^{(\mathrm{photon})}}
+  \bigl(1 + R^{(\mathrm{photon})}(\tau)\bigr)\,d\tau
+  \;=\; \bsym^2\cdot(\lP^{(\mathrm{photon})})^2.
+\end{equation}
+
+\begin{remark}[Regularization required]
+\label{rem:regularization-B}
+The integrand $1 + R(\tau)$ has a pole at $\tau=0$: since
+$R(\tau) = -e^{-\tau/2}/(e^\tau-1) \sim -1/\tau + 1/2 - \tau/12 +
+\cdots$ as $\tau\to 0^+$, the combination $1 + R(\tau) \sim
+3/2 - 1/\tau + \cdots$ is still singular.
+Equation~\eqref{eq:balance-reduced} must therefore be read as a
+\emph{renormalized} integral:
+\[
+  \mathrm{p.v.}\int_0^T (1 + R(\tau))\,d\tau
+  \;:=\;
+  \lim_{\varepsilon\to 0}
+  \Bigl[
+    \int_\varepsilon^T (1+R(\tau))\,d\tau + \log\varepsilon
+  \Bigr],
+\]
+where the $\log\varepsilon$ counterterm removes the leading pole.
+Numerically with $T = \lP^{(\mathrm{photon})} \approx 0.393$
+(matter-Planck units):
+\[
+  \mathrm{p.v.}\int_0^T (1+R)\,d\tau
+  \;=\; \frac{3T}{2} - \log T - \frac{T^2}{24} - \gamma_E
+  \;\approx\; 0.940,
+\]
+where $\gamma_E \approx 0.5772$ is the Euler--Mascheroni constant.
+\end{remark}
+
+\begin{proposition}[Step~(B) open: required Theta contribution]
+\label{prop:theta-required-B}
+\emph{(Open sub-step; not yet proven.)}
+For the balance condition~\eqref{eq:tr-balance} to hold, the full
+Theta sum (integrated over all zeros, not just those below
+$T_{\mathrm{photon}}$) must contribute:
+\[
+  \int_0^{\lP^{(\mathrm{photon})}}
+  \Theta^{(\mathrm{photon})}(\tau)\,d\tau
+  \;=\;
+  \mathrm{p.v.}\int_0^T (1+R)\,d\tau - \bsym^2\cdot T^2
+  \;\approx\; 0.940 - 0.302\cdot 0.154
+  \;\approx\; 0.893.
+\]
+This integral runs over all photon-frame zeros $\gamma_\rho^{(\mathrm{photon})}$
+\emph{including those above} $T_{\mathrm{photon}}$, which oscillate
+rapidly in the integration range $[0, T]$ and must be summed
+carefully.
+Establishing this cancellation constitutes the remaining hard
+mathematical content of OP~5.
+\end{proposition}
+
+\begin{remark}[Structural summary of OP~5]
+\label{rem:op5-structural-summary}
+The analysis of v2.29.0 reveals the following structure of OP~5:
+\begin{itemize}
+  \item Step~(A) is closed: $\Theta^{(\mathrm{photon})}=0$ below
+    the photon-frame cutoff (Proposition~\ref{prop:theta-remainder-trivial}).
+  \item Step~(B) reduces to showing that the oscillatory Theta sum,
+    integrated over the photon-frame UV range $[0,\lP^{(\mathrm{photon})}]$
+    but summing over all zeros (including those above the cutoff),
+    evaluates to $\approx 0.893$ in renormalized Planck units.
+  \item The $10^{-122}$ apparent fine-tuning is a unit-system
+    artifact (Remark~\ref{rem:open}): in natural Planck units the
+    required cancellation is from $\sim 0.940$ (R-sector baseline)
+    to $0.302$ (frame residual), a factor of $\sim 3.1$, not $10^{122}$.
+\end{itemize}
+\end{remark}
+
+\subsubsection*{Step (B) reduced: the exact Theta-sum conjecture}
+
+The numerical analysis of v2.29.0 yields a precise formulation of
+what step~(B) requires. Define:
+
+\begin{definition}[Photon-frame Theta sum]
+\label{def:theta-sum-B}
+Let $T = \gL^{-3/2}$ (the photon-frame UV cutoff in matter-Planck units)
+and let $\gamma_n^{(\mathrm{photon})} = \gamma_n/\gL$ denote the
+photon-frame Riemann zeros. The \emph{photon-frame Theta sum} is the
+conditionally convergent series
+\[
+  \mathcal{T}(T)
+  \;:=\;
+  2\sum_{n=1}^\infty
+  \frac{\sin\!\bigl(T\cdot\gamma_n^{(\mathrm{photon})}\bigr)}
+       {\gamma_n^{(\mathrm{photon})}}.
+\]
+\end{definition}
+
+\begin{proposition}[Theta-sum balance conjecture, OP~5 Step~B]
+\label{conj:theta-sum-B}
+\emph{(Conjecture-grade; derivable from the Guinand--Weil explicit
+formula if the remainder estimate can be controlled.)}
+\[
+  \mathcal{T}(T)
+  \;=\;
+  \frac{3T}{2} - \log T - \frac{T^2}{24} - \gamma_E - \bsym^2 T^2
+  \;\approx\; 0.893,
+\]
+where $T = \gL^{-3/2}\approx 0.393$, $\gamma_E\approx 0.5772$ is
+the Euler--Mascheroni constant, and $\bsym^2\approx 0.302$.
+\end{proposition}
+
+\begin{remark}[Structure of the conjecture]
+\label{rem:theta-sum-structure}
+The series $\mathcal{T}(T)$ is the photon-frame analogue of the
+oscillatory sum in the Riemann--von Mangoldt explicit formula for
+the prime-counting function $\pi(x)$. It converges \emph{conditionally}
+(not absolutely), and its value at a specific argument $T$ is a
+non-trivial statement about the Riemann zeros.
+
+Numerically, $\mathcal{T}(T)$ converges slowly: with $N=50$ zeros
+the partial sum is $\approx -0.146$, far from the conjectured $0.893$.
+Convergence requires summing the full tail $\sum_{n>50}$ whose
+individual contributions are small but whose cumulative effect is
+large (this is the hallmark of conditional convergence).
+
+The conjecture is \emph{equivalent to} the balance condition
+$\eqref{eq:tr-balance}$ once step~(A) is established
+(Proposition~\ref{prop:theta-remainder-trivial}). Establishing
+Conjecture~\ref{conj:theta-sum-B} would therefore close OP~5
+completely.
+\end{remark}
+
+\begin{remark}[Connection to the explicit formula remainder]
+\label{rem:explicit-formula-remainder}
+By the Guinand--Weil explicit formula
+(Theorem~3.3 of~\cite{brendecke2026rh}), the identity
+$\Sigma(\tau) = 1 - \Theta(\tau) + R(\tau)$ holds for all $\tau > 0$.
+Integrating from $0$ to $T$ (in the renormalized sense) and
+substituting the known values of $\int_0^T 1\,d\tau = T$ and
+$\int_0^T R\,d\tau_{\mathrm{reg}} = 3T/2 - \log T - T^2/24 - \gamma_E$,
+Conjecture~\ref{conj:theta-sum-B} is equivalent to:
+\[
+  \int_0^T \Sigma^{(\mathrm{photon})}(\tau)\,d\tau
+  \;=\; \bsym^2 \cdot T^2.
+\]
+This is precisely the balance condition $\eqref{eq:tr-balance}$.
+Hence: \emph{Conjecture~\ref{conj:theta-sum-B} $\Leftrightarrow$
+OP~5 Step~(B) $\Leftrightarrow$ Balance condition~\eqref{eq:tr-balance}.}
+\end{remark}

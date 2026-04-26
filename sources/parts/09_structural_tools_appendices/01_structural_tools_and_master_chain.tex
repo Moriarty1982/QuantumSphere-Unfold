@@ -1,0 +1,183 @@
+\section{Structural Tools for the Millennium Matrix}
+\label{app:mm-tools}
+
+\begin{remark}[Purpose of the general MM-tools]
+The following tools are completely general. They apply to every admissible
+Millennium matrix, independently of whether one later reads that matrix as an
+algebraic intertwiner, a closure operator, or a global Heisenberg-compensator
+matrix. Their role is structural discipline.
+\end{remark}
+
+\begin{definition}[Layer-identity principle]
+Let $X$ be a structural object of the Sphaera architecture, and let
+\[
+\mathcal M_{16}: X \mapsto X^{(\ell)}
+\]
+be an admissible realization of $X$ on some layer $\ell$. Then $X^{(\ell)}$
+is not a new object, but a new realization of the same underlying structural
+content.
+\end{definition}
+
+\begin{definition}[Projection discipline]
+A projection
+\[
+\Pi: X \mapsto X_{\mathrm{readout}}
+\]
+is admissible if it only extracts already stabilized structural content. In
+particular, projection may reduce visibility, but it may not create new
+structure.
+\end{definition}
+
+\begin{definition}[Closure-before-readout rule]
+Every admissible passage through the Millennium matrix must respect the
+ordering
+\[
+\text{triolic admissibility}
+\;\longrightarrow\;
+\text{closure compatibility}
+\;\longrightarrow\;
+\text{projection}
+\;\longrightarrow\;
+\text{interpretation}.
+\]
+\end{definition}
+
+\begin{definition}[Sector-stability criterion]
+A sector $\Sigma$ is structurally stable under the Millennium matrix if
+\[
+\mathcal M_{16}(\Sigma)\subseteq\Sigma
+\]
+or, in the strongest case,
+\[
+\mathcal M_{16}(\Sigma)=\Sigma.
+\]
+\end{definition}
+
+\section{Heisenberg-Compensator Tools for Physical Readout}
+\label{app:hc-tools}
+
+\begin{remark}[Transition from general MM-tools to HC-tools]
+We now impose the stronger reading that the Millennium matrix is not only a
+structural intertwiner, but the global matrix realization of the Heisenberg
+compensator across admissible layers.
+\end{remark}
+
+\begin{definition}[Global Heisenberg-compensator matrix]
+The Millennium matrix is called a global Heisenberg-compensator matrix if its
+action extends the local compensator rule
+\[
+C=\tfrac12(\mathrm{id}+J)
+\]
+to the full admissible multi-layer architecture of the Companion.
+\end{definition}
+
+\begin{definition}[Frame-balancing tool]
+Let $X=X^+ + X^-$ be decomposed into a frame-even and frame-sensitive part
+with respect to an involution $J$, so that
+\[
+J(X^+) = X^+,
+\qquad
+J(X^-) = -X^-.
+\]
+Then the compensator action satisfies
+\[
+C(X)=\tfrac12(X+JX)=X^+,
+\]
+and removes the frame-sensitive component.
+\end{definition}
+
+\begin{definition}[Fix-sector tool]
+A sector $\Sigma_{\mathrm{fix}}$ is an HC-fix sector if every object in it is
+invariant under the compensator:
+\[
+C(X)=X
+\qquad\text{for all }X\in\Sigma_{\mathrm{fix}}.
+\]
+\end{definition}
+
+\begin{definition}[Confinement tool]
+The confinement tool is the rule that the Heisenberg-compensator matrix
+prevents admissible structural content from escaping the closure-stable sector
+selected by the theory.
+\end{definition}
+
+\begin{definition}[Physical-readout tool]
+A physical regime is an HC-readout if it is obtained as an effective
+projection of already compensated and closure-stabilized structural content.
+\end{definition}
+
+\section{Notation for the Master Chain}
+\label{app:master-chain-notation}
+
+\begin{definition}[Stage symbols of the master chain]
+We use the following symbols for the principal stages of the Companion:
+\begin{align*}
+\mathfrak T &:= \text{triolic source},\\
+\mathfrak C &:= \text{carrier layer},\\
+\mathfrak C^{\mathrm{adm}} &:= \text{admissibly transported carrier},\\
+\mathfrak C^{\mathrm{cl}} &:= \text{closure-stable compensated carrier},\\
+\mathfrak G &:= \text{group-layer symmetry readout},\\
+\mathfrak L &:= \text{null-axis structure},\\
+\mathfrak P &:= \text{photon fix-sector},\\
+\mathfrak R &:= \text{residual-localization sector},\\
+\mathfrak H &:= \text{Higgs-mediation sector},\\
+\mathfrak F &:= \text{field-equation readout}.
+\end{align*}
+We further write $\mathcal M_{16}$ for the Millennium matrix and
+$\mathcal H_{16}$ for its global Heisenberg-compensator reading.
+\end{definition}
+
+\begin{definition}[Master chain]
+The full master chain is written as
+\[
+\mathfrak T
+\;\longrightarrow\;
+\mathfrak C
+\;\xrightarrow{\;\mathcal M_{16}\;}
+\mathfrak C^{\mathrm{adm}}
+\;\xrightarrow{\;\mathcal H_{16}\;}
+\mathfrak C^{\mathrm{cl}}
+\;\longrightarrow\;
+\mathfrak G
+\;\longrightarrow\;
+\mathfrak L
+\;\longrightarrow\;
+\mathfrak P
+\;\longrightarrow\;
+\mathfrak R
+\;\longrightarrow\;
+\mathfrak H
+\;\longrightarrow\;
+\mathfrak F.
+\]
+When intermediate carrier detail is not needed, we also use the short form
+\[
+\mathfrak T
+\to
+\mathfrak C
+\to
+\mathcal M_{16}
+\to
+\mathcal H_{16}
+\to
+\mathfrak G
+\to
+(\mathfrak P,\mathfrak R,J\!\cdot\!\mathfrak R)
+\to
+\mathfrak H
+\to
+\mathfrak F.
+\]
+\end{definition}
+
+\begin{remark}[Why this notation is useful]
+This notation is useful because it prevents long later sections from drifting
+into disconnected local language. Instead, one may always ask at which stage
+of the master chain a given statement belongs.
+\end{remark}
+
+\section{Further Technical Appendices}
+\label{app:further-technical}
+
+
+

@@ -1,0 +1,1108 @@
+\subsection*{19AZ$^{(6bf)}$. First downstream branch-consumption layer extracted from the conservative branch-resolution rule}
+\label{sec:first-downstream-branch-consumption-layer-extracted-from-the-conservative-branch-resolution-rule}
+After 19AZ$^{(6be)}$, every honest conservative return package already resolves into exactly one route-faithful branch: either a compact conservative closing/comparison object or an admissible next-cycle promotion object. The present block turns that resolved branch into one first downstream branch-consumption object. On the horizon side, downstream work may consume the branch only under the inherited horizon tag; in particular, a closing branch remains a closing-side downstream object and a promoted branch remains a next-cycle downstream object. On the boundary side, downstream work may consume the branch only under the inherited stop-preserving boundary tag and inherited earliest honest boundary stop; in particular, no downstream consumer may flatten the close/promote difference into one undifferentiated continuation object. The point is to make the first post-branch downstream intake explicit.
+
+\begin{definition}[First downstream branch-consumption object]
+\label{def:first-downstream-branch-consumption-object-second-level}
+Fix a certified finite extension word \(\mathbf w\in\mathcal L^{\mathrm{ext}}_{m}\), a finite nonempty admissible request subfamily
+\[
+  \mathcal S \subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w),
+\]
+a branch marker \(\mathfrak b\in\{\mathsf{CL},\mathsf{PR}\}\), and an admissible conservative branch-resolution object
+\[
+  \mathsf{Branch}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S,\mathfrak b\mid\mathcal S^{+}).
+\]
+When \(\mathfrak b=\mathsf{PR}\), also keep fixed the second finite nonempty admissible request subfamily
+\[
+  \mathcal S^{+}\subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w).
+\]
+Define the associated \emph{first downstream branch-consumption object}
+\[
+  \mathsf{Consm}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S,\mathfrak b\mid\mathcal S^{+})
+\]
+by the following cases.
+\begin{enumerate}[label=(\roman*)]
+  \item If \(\mathfrak b=\mathsf{CL}\), define
+\[
+  \mathsf{Consm}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S,\mathsf{CL})
+  :=
+  \bigl(\mathsf{Branch}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S,\mathsf{CL}),\mathsf{DCLOSE}_{m}(\mathbf w;\mathcal S)\bigr).
+\]
+This downstream object is admissible only if it remains subordinate to the same inherited route tag and, in the boundary-side case, preserves the inherited earliest honest boundary stop.
+
+  \item If \(\mathfrak b=\mathsf{PR}\), define
+\[
+  \mathsf{Consm}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S,\mathsf{PR}\mid\mathcal S^{+})
+  :=
+  \bigl(\mathsf{Branch}^{\mathrm{cons}}_{m}(\mathbf w;\mathcal S,\mathsf{PR}\mid\mathcal S^{+}),\mathsf{DNEXT}_{m}(\mathbf w;\mathcal S,\mathcal S^{+})\bigr).
+\]
+This downstream object is admissible only if it remains subordinate to the same inherited route tag, does not manufacture a fresh theorematic certificate, and, in the boundary-side case, does not smooth away, postpone, or deny the inherited earliest honest boundary stop.
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}[Every honest branch-resolution object yields exactly one route-faithful downstream branch-consumption object]
+\label{prop:every-honest-branch-resolution-object-yields-exactly-one-route-faithful-downstream-branch-consumption-object}
+Assume the setting of Definition~\ref{def:first-downstream-branch-consumption-object-second-level}. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item every admissible close branch yields exactly one downstream close-consumption object;
+  \item every admissible promote branch yields exactly one downstream next-cycle consumption object;
+  \item in the horizon-side case, every admissible downstream branch-consumption object remains subordinate to the inherited horizon tag;
+  \item in the boundary-side case, every admissible downstream branch-consumption object remains subordinate to the inherited stop-preserving boundary tag and inherited earliest honest boundary stop; and
+  \item no admissible downstream branch-consumption object may manufacture a fresh theorematic certificate, erase the horizon/boundary distinction, or collapse the close/promote difference into one undifferentiated downstream continuation.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Clauses (i) and (ii) are immediate from Definition~\ref{def:first-downstream-branch-consumption-object}: once the branch marker is fixed, the downstream consumer is defined by exactly one of the two displayed clauses. Clauses (iii) and (iv) follow because the downstream branch-consumption object is defined directly from a branch-resolution object that is already subordinate to the inherited route tag, and in the boundary-side case to the inherited earliest honest boundary stop, by Proposition~\ref{prop:every-conservative-return-object-admits-exactly-one-honest-branch-choice-at-a-time-close-or-promote}. Clause (v) is exactly the inherited certificate-aware route discipline from 19AZ$^{(6ae)}$ through 19AZ$^{(6be)}$, now made explicit at the first downstream post-branch intake layer.
+\end{proof}
+
+\begin{corollary}[The present post-v3.29.0 line already carries a first downstream branch-consumption layer]
+\label{cor:the-present-post-v3290-line-already-carries-a-first-downstream-branch-consumption-layer}
+For the first-stage word \(\mathbf w_3\in\{\mathsf A,\mathsf B\}\), the current active line already carries a first downstream branch-consumption object
+\[
+  \mathsf{Consm}^{\mathrm{branch}}_{2}(\mathbf w_3;\mathcal S,\mathfrak b\mid\mathcal S^{+})
+\]
+for every finite nonempty admissible request subfamily
+\[
+  \mathcal S\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3),
+\]
+every branch marker \(\mathfrak b\in\{\mathsf{CL},\mathsf{PR}\}\), and in the promotion case every second finite nonempty admissible request subfamily
+\[
+  \mathcal S^{+}\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3)
+\]
+that remains subordinate to the same inherited route tag. So the post-release continuation now carries not only a conservative ask/respond/aggregate/dispatch/program/cycle/return/close/promote/branch protocol, but also the first disciplined downstream layer that consumes each resolved branch as one controlled close-side or next-cycle-side follow-on object.
+\end{corollary}
+
+\begin{proof}
+Immediate from Corollary~\ref{cor:the-present-post-v3290-line-already-carries-a-first-conservative-branch-resolution-rule} and Proposition~\ref{prop:every-honest-branch-resolution-object-yields-exactly-one-route-faithful-downstream-branch-consumption-object}.
+\end{proof}
+
+\begin{remark}[What the first downstream branch-consumption layer now buys]
+\label{rem:what-the-first-downstream-branch-consumption-layer-now-buys}
+This is the point where the post-release line first becomes able not only to resolve a conservative return object into a close-or-promote branch, but also to pass that resolved branch downstream in a disciplined way. The horizon-side line can now hand a resolved close branch onward as one explicit closing-side downstream object or hand a resolved promote branch onward as one explicit next-cycle-side downstream object under the inherited horizon tag. The boundary-side line can now do the same under the inherited stop-preserving boundary tag and earliest honest boundary stop, without collapsing the two possibilities into one vague continuation gesture. Later OP-oriented work can therefore begin from a conservative ask/respond/aggregate/dispatch/program/cycle/return/close/promote/branch/consume protocol instead of improvising how resolved branches are actually consumed downstream.
+\end{remark}
+
+
+
+
+oindent	extbf{Reader cue.} Read the next block as the first downstream branch-to-task layer extracted from the new downstream branch-consumption interface of 19AZ$^{(6bf)}$. Its purpose is to turn each already consumed close-or-promote branch into one controlled finite downstream task family, so that later OP-oriented work does not merely receive a branch-side follow-on object, but receives it as a route-faithful downstream work program that preserves the inherited horizon/boundary distinction and does not smooth away the inherited earliest honest boundary stop.
+
+\subsection*{19AZ$^{(6bg)}$. First downstream branch-to-task layer extracted from the downstream branch-consumption layer}
+\label{sec:first-downstream-branch-to-task-layer-extracted-from-the-downstream-branch-consumption-layer}
+After 19AZ$^{(6bf)}$, every honest conservative close-or-promote branch already admits one controlled downstream consumption object. The present block turns that consumed branch into one finite downstream task family. On the close side, the downstream tasks are comparison, closing-side packaging, and honest archival/output stabilization under the inherited route tag. On the promote side, the downstream tasks are next-cycle comparison, request-family preparation, and next-cycle packaging under the same inherited route tag. On the boundary side, every such task family must remain subordinate to the inherited stop-preserving boundary tag and inherited earliest honest boundary stop. The point is to make the first post-consumption downstream work program explicit.
+
+\begin{definition}[First downstream branch-to-task object]
+\label{def:first-downstream-branch-to-task-object}
+Fix a certified finite extension word \(\mathbf w\in\mathcal L^{\mathrm{ext}}_{m}\), a finite nonempty admissible request subfamily
+\[
+  \mathcal S \subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w),
+\]
+a branch marker \(\mathfrak b\in\{\mathsf{CL},\mathsf{PR}\}\), and an admissible downstream branch-consumption object
+\[
+  \mathsf{Consm}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S,\mathfrak b\mid\mathcal S^{+}).
+\]
+When \(\mathfrak b=\mathsf{PR}\), also keep fixed the second finite nonempty admissible request subfamily
+\[
+  \mathcal S^{+}\subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w).
+\]
+Define the associated \emph{first downstream branch-to-task object}
+\[
+  \mathsf{Task}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S,\mathfrak b\mid\mathcal S^{+})
+\]
+by the following cases.
+\begin{enumerate}[label=(
+oman*)]
+  \item If \(\mathfrak b=\mathsf{CL}\), define
+\[
+  \mathsf{Task}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S,\mathsf{CL})
+  :=
+  \bigl(\mathsf{Consm}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S,\mathsf{CL}),\mathcal T^{\mathrm{close}}_{m}(\mathbf w;\mathcal S)\bigr),
+\]
+where
+\[
+  \mathcal T^{\mathrm{close}}_{m}(\mathbf w;\mathcal S)
+  :=
+  \{\mathsf{TCMP}^{\mathrm{close}}_{m},\mathsf{TSTAB}^{\mathrm{close}}_{m},\mathsf{TPACK}^{\mathrm{close}}_{m}\}.
+\]
+This downstream task family is admissible only if it remains subordinate to the same inherited route tag and, in the boundary-side case, preserves the inherited earliest honest boundary stop.
+
+  \item If \(\mathfrak b=\mathsf{PR}\), define
+\[
+  \mathsf{Task}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S,\mathsf{PR}\mid\mathcal S^{+})
+  :=
+  \bigl(\mathsf{Consm}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S,\mathsf{PR}\mid\mathcal S^{+}),\mathcal T^{\mathrm{next}}_{m}(\mathbf w;\mathcal S,\mathcal S^{+})\bigr),
+\]
+where
+\[
+  \mathcal T^{\mathrm{next}}_{m}(\mathbf w;\mathcal S,\mathcal S^{+})
+  :=
+  \{\mathsf{TCMP}^{\mathrm{next}}_{m},\mathsf{TPREP}^{\mathrm{next}}_{m},\mathsf{TPACK}^{\mathrm{next}}_{m}\}.
+\]
+This downstream task family is admissible only if it remains subordinate to the same inherited route tag, does not manufacture a fresh theorematic certificate, and, in the boundary-side case, does not smooth away, postpone, or deny the inherited earliest honest boundary stop.
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}[Every consumed branch yields exactly one route-faithful downstream task family]
+\label{prop:every-consumed-branch-yields-exactly-one-route-faithful-downstream-task-family}
+Assume the setting of Definition~
+ef{def:first-downstream-branch-to-task-object}. Then:
+\begin{enumerate}[label=(
+oman*)]
+  \item every admissible downstream close-consumption object yields exactly one downstream close-task family;
+  \item every admissible downstream next-cycle consumption object yields exactly one downstream next-cycle task family;
+  \item in the horizon-side case, every admissible downstream branch-to-task object remains subordinate to the inherited horizon tag;
+  \item in the boundary-side case, every admissible downstream branch-to-task object remains subordinate to the inherited stop-preserving boundary tag and inherited earliest honest boundary stop; and
+  \item no admissible downstream branch-to-task object may manufacture a fresh theorematic certificate, erase the horizon/boundary distinction, or collapse the close/promote difference into one undifferentiated downstream work program.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Clauses (i) and (ii) are immediate from Definition~
+ef{def:first-downstream-branch-to-task-object}: once the branch marker is fixed, the downstream task family is defined by exactly one of the two displayed clauses. Clauses (iii) and (iv) follow because the downstream branch-to-task object is defined directly from a downstream branch-consumption object that is already subordinate to the inherited route tag, and in the boundary-side case to the inherited earliest honest boundary stop, by Proposition~
+ef{prop:every-honest-branch-resolution-object-yields-exactly-one-route-faithful-downstream-branch-consumption-object}. Clause (v) is exactly the inherited certificate-aware route discipline from 19AZ$^{(6ae)}$ through 19AZ$^{(6bf)}$, now made explicit at the first downstream post-consumption task layer.
+\end{proof}
+
+\begin{corollary}[The present post-v3.29.0 line already carries a first downstream branch-to-task layer]
+\label{cor:the-present-post-v3290-line-already-carries-a-first-downstream-branch-to-task-layer}
+For the first-stage word \(\mathbf w_3\in\{\mathsf A,\mathsf B\}\), the current active line already carries a first downstream branch-to-task object
+\[
+  \mathsf{Task}^{\mathrm{branch}}_{2}(\mathbf w_3;\mathcal S,\mathfrak b\mid\mathcal S^{+})
+\]
+for every finite nonempty admissible request subfamily
+\[
+  \mathcal S\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3),
+\]
+every branch marker \(\mathfrak b\in\{\mathsf{CL},\mathsf{PR}\}\), and in the promotion case every second finite nonempty admissible request subfamily
+\[
+  \mathcal S^{+}\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3)
+\]
+that remains subordinate to the same inherited route tag. So the post-release continuation now carries not only a conservative ask/respond/aggregate/dispatch/program/cycle/return/close/promote/branch/consume protocol, but also the first disciplined downstream task layer that translates each consumed branch into one controlled close-side or next-cycle-side work family.
+\end{corollary}
+
+\begin{proof}
+Immediate from Corollary~
+ef{cor:the-present-post-v3290-line-already-carries-a-first-downstream-branch-consumption-layer} and Proposition~
+ef{prop:every-consumed-branch-yields-exactly-one-route-faithful-downstream-task-family}.
+\end{proof}
+
+\begin{remark}[What the first downstream branch-to-task layer now buys]
+\label{rem:what-the-first-downstream-branch-to-task-layer-now-buys}
+This is the point where the post-release line first becomes able not only to consume a resolved conservative branch downstream, but also to translate that consumed branch into one explicit downstream work family. The horizon-side line can now hand a consumed close branch onward as one closing-side task family or hand a consumed promote branch onward as one next-cycle task family under the inherited horizon tag. The boundary-side line can now do the same under the inherited stop-preserving boundary tag and earliest honest boundary stop, without collapsing the two possibilities into one vague continuation gesture. Later OP-oriented work can therefore begin from a conservative ask/respond/aggregate/dispatch/program/cycle/return/close/promote/branch/consume/task protocol instead of improvising how consumed branches are translated into downstream work.
+\end{remark}
+
+
+
+\noindent\textbf{Reader cue.} Read the next block as the first downstream task-to-program layer extracted from the downstream branch-to-task interface of 19AZ$^{(6bg)}$. Its purpose is to compress each already translated close-side or next-cycle-side downstream task family into one compact downstream-readable program object, so that later OP-oriented work does not merely receive a task bundle, but receives it in a finite normal form that remains faithful to the inherited horizon/boundary distinction and the inherited earliest honest boundary stop.
+
+\subsection*{19AZ$^{(6bh)}$. First downstream task-to-program layer extracted from the downstream branch-to-task layer}
+\label{sec:first-downstream-task-to-program-layer-extracted-from-the-downstream-branch-to-task-layer}
+After 19AZ$^{(6bg)}$, every honest consumed close-or-promote branch already yields one controlled downstream task family. The present block compresses that task family into one compact downstream program object. On the close side, the program records a finite closing-side comparison/stabilization/packaging normal form under the inherited route tag. On the promote side, the program records a finite next-cycle comparison/preparation/packaging normal form under the same inherited route tag. On the boundary side, every such program must remain subordinate to the inherited stop-preserving boundary tag and inherited earliest honest boundary stop. The point is to make the first post-task downstream program normal form explicit.
+
+\begin{definition}[First downstream task-to-program object]
+\label{def:first-downstream-task-to-program-object}
+Fix a certified finite extension word \(\mathbf w\in\mathcal L^{\mathrm{ext}}_{m}\), a finite nonempty admissible request subfamily
+\[
+  \mathcal S \subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w),
+\]
+a branch marker \(\mathfrak b\in\{\mathsf{CL},\mathsf{PR}\}\), and an admissible downstream branch-to-task object
+\[
+  \mathsf{Task}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S,\mathfrak b\mid\mathcal S^{+}).
+\]
+When \(\mathfrak b=\mathsf{PR}\), also keep fixed the second finite nonempty admissible request subfamily
+\[
+  \mathcal S^{+}\subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w).
+\]
+Define the associated \emph{first downstream task-to-program object}
+\[
+  \mathsf{Prog}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S,\mathfrak b\mid\mathcal S^{+})
+\]
+by the following cases.
+\begin{enumerate}[label=(\roman*)]
+  \item If \(\mathfrak b=\mathsf{CL}\), define
+\[
+  \mathsf{Prog}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S,\mathsf{CL})
+  :=
+  \bigl(\mathsf{Task}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S,\mathsf{CL}),\mathcal P^{\mathrm{close}}_{m}(\mathbf w;\mathcal S)\bigr),
+\]
+where
+\[
+  \mathcal P^{\mathrm{close}}_{m}(\mathbf w;\mathcal S)
+  :=
+  \bigl(\mathsf{CL},\mathsf{TCMP}^{\mathrm{close}}_{m},\mathsf{TSTAB}^{\mathrm{close}}_{m},\mathsf{TPACK}^{\mathrm{close}}_{m}\bigr).
+\]
+This downstream program is admissible only if it remains subordinate to the same inherited route tag and, in the boundary-side case, preserves the inherited earliest honest boundary stop.
+
+  \item If \(\mathfrak b=\mathsf{PR}\), define
+\[
+  \mathsf{Prog}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S,\mathsf{PR}\mid\mathcal S^{+})
+  :=
+  \bigl(\mathsf{Task}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S,\mathsf{PR}\mid\mathcal S^{+}),\mathcal P^{\mathrm{next}}_{m}(\mathbf w;\mathcal S,\mathcal S^{+})\bigr),
+\]
+where
+\[
+  \mathcal P^{\mathrm{next}}_{m}(\mathbf w;\mathcal S,\mathcal S^{+})
+  :=
+  \bigl(\mathsf{PR},\mathsf{TCMP}^{\mathrm{next}}_{m},\mathsf{TPREP}^{\mathrm{next}}_{m},\mathsf{TPACK}^{\mathrm{next}}_{m}\bigr).
+\]
+This downstream program is admissible only if it remains subordinate to the same inherited route tag, does not manufacture a fresh theorematic certificate, and, in the boundary-side case, does not smooth away, postpone, or deny the inherited earliest honest boundary stop.
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}[Every downstream task family yields exactly one compact downstream program normal form]
+\label{prop:every-downstream-task-family-yields-exactly-one-compact-downstream-program-normal-form}
+Assume the setting of Definition~\ref{def:first-downstream-task-to-program-object}. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item every admissible downstream close-task family yields exactly one downstream close-program normal form;
+  \item every admissible downstream next-cycle task family yields exactly one downstream next-cycle program normal form;
+  \item in the horizon-side case, every admissible downstream task-to-program object remains subordinate to the inherited horizon tag;
+  \item in the boundary-side case, every admissible downstream task-to-program object remains subordinate to the inherited stop-preserving boundary tag and inherited earliest honest boundary stop; and
+  \item no admissible downstream task-to-program object may manufacture a fresh theorematic certificate, erase the horizon/boundary distinction, or collapse the close/next-cycle difference into one undifferentiated downstream program normal form.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Clauses (i) and (ii) are immediate from Definition~\ref{def:first-downstream-task-to-program-object}: once the branch marker is fixed, the downstream program normal form is defined by exactly one of the two displayed clauses. Clauses (iii) and (iv) follow because the downstream task-to-program object is defined directly from a downstream branch-to-task object that is already subordinate to the inherited route tag, and in the boundary-side case to the inherited earliest honest boundary stop, by Proposition~\ref{prop:every-consumed-branch-yields-exactly-one-route-faithful-downstream-task-family}. Clause (v) is exactly the inherited certificate-aware route discipline from 19AZ$^{(6ae)}$ through 19AZ$^{(6bg)}$, now made explicit at the first downstream post-task program layer.
+\end{proof}
+
+\begin{corollary}[The present post-v3.29.0 line already carries a first downstream task-to-program layer]
+\label{cor:the-present-post-v3290-line-already-carries-a-first-downstream-task-to-program-layer}
+For the first-stage word \(\mathbf w_3\in\{\mathsf A,\mathsf B\}\), the current active line already carries a first downstream task-to-program object
+\[
+  \mathsf{Prog}^{\mathrm{branch}}_{2}(\mathbf w_3;\mathcal S,\mathfrak b\mid\mathcal S^{+})
+\]
+for every finite nonempty admissible request subfamily
+\[
+  \mathcal S\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3),
+\]
+every branch marker \(\mathfrak b\in\{\mathsf{CL},\mathsf{PR}\}\), and in the promotion case every second finite nonempty admissible request subfamily
+\[
+  \mathcal S^{+}\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3)
+\]
+that remains subordinate to the same inherited route tag. So the post-release continuation now carries not only a conservative ask/respond/aggregate/dispatch/program/cycle/return/close/promote/branch/consume/task protocol, but also the first disciplined downstream program layer that compresses each translated close-side or next-cycle-side task family into one controlled normal form.
+\end{corollary}
+
+\begin{proof}
+Immediate from Corollary~\ref{cor:the-present-post-v3290-line-already-carries-a-first-downstream-branch-to-task-layer} and Proposition~\ref{prop:every-downstream-task-family-yields-exactly-one-compact-downstream-program-normal-form}.
+\end{proof}
+
+\begin{remark}[What the first downstream task-to-program layer now buys]
+\label{rem:what-the-first-downstream-task-to-program-layer-now-buys}
+This is the point where the post-release line first becomes able not only to translate a consumed conservative branch into one explicit downstream task family, but also to compress that task family into one compact downstream-readable program object. The horizon-side line can now hand a closing-side task family onward as one explicit close-program normal form or hand a next-cycle-side task family onward as one explicit next-program normal form under the inherited horizon tag. The boundary-side line can now do the same under the inherited stop-preserving boundary tag and earliest honest boundary stop, without collapsing the two possibilities into one vague continuation gesture. Later OP-oriented work can therefore begin from a conservative ask/respond/aggregate/dispatch/program/cycle/return/close/promote/branch/consume/task/program protocol instead of improvising how translated downstream tasks are normalized.
+\end{remark}
+
+
+
+\noindent\textbf{Reader cue.} Read the next block as the first downstream program-to-cycle layer extracted from the downstream task-to-program interface of 19AZ$^{(6bh)}$. Its purpose is to turn each already normalized close-side or next-cycle-side downstream program object into one controlled downstream cycle object, so that later OP-oriented work receives not only a compact downstream program, but the first honest finite follow-on cycle that can be executed under the inherited horizon/boundary distinction and the inherited earliest honest boundary stop.
+
+\subsection*{19AZ$^{(6bi)}$. First downstream program-to-cycle layer extracted from the downstream task-to-program layer}
+\label{sec:first-downstream-program-to-cycle-layer-extracted-from-the-downstream-task-to-program-layer}
+After 19AZ$^{(6bh)}$, every honest consumed close-or-promote branch already yields one compact downstream program normal form. The present block turns that compact program object into one controlled downstream cycle object. On the close side, the cycle records one finite closing-side comparison/stabilization/packaging cycle under the inherited route tag. On the promote side, the cycle records one finite next-cycle comparison/preparation/packaging cycle that remains subordinate to the same inherited route tag. On the boundary side, every such downstream cycle must remain subordinate to the inherited stop-preserving boundary tag and inherited earliest honest boundary stop. The point is to make the first post-program downstream cycle layer explicit.
+
+\begin{definition}[First downstream program-to-cycle object]
+\label{def:first-downstream-program-to-cycle-object}
+Fix a certified finite extension word \(\mathbf w\in\mathcal L^{\mathrm{ext}}_{m}\), a finite nonempty admissible request subfamily
+\[
+  \mathcal S \subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w),
+\]
+a branch marker \(\mathfrak b\in\{\mathsf{CL},\mathsf{PR}\}\), and an admissible downstream task-to-program object
+\[
+  \mathsf{Prog}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S,\mathfrak b\mid\mathcal S^{+}).
+\]
+When \(\mathfrak b=\mathsf{PR}\), also keep fixed the second finite nonempty admissible request subfamily
+\[
+  \mathcal S^{+}\subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w).
+\]
+Define the associated \emph{first downstream program-to-cycle object}
+\[
+  \mathsf{Cycle}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S,\mathfrak b\mid\mathcal S^{+})
+\]
+by the following cases.
+\begin{enumerate}[label=(\roman*)]
+  \item If \(\mathfrak b=\mathsf{CL}\), define
+\[
+  \mathsf{Cycle}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S,\mathsf{CL})
+  :=
+  \bigl(\mathsf{Prog}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S,\mathsf{CL}),\mathcal C^{\mathrm{close}}_{m}(\mathbf w;\mathcal S)\bigr),
+\]
+where
+\[
+  \mathcal C^{\mathrm{close}}_{m}(\mathbf w;\mathcal S)
+  :=
+  \bigl(\mathsf{CL},\mathsf{TCMP}^{\mathrm{close}}_{m},\mathsf{TSTAB}^{\mathrm{close}}_{m},\mathsf{TPACK}^{\mathrm{close}}_{m},\mathsf{RET}^{\mathrm{close}}_{m}\bigr).
+\]
+This downstream cycle is admissible only if it remains subordinate to the same inherited route tag and, in the boundary-side case, preserves the inherited earliest honest boundary stop.
+
+  \item If \(\mathfrak b=\mathsf{PR}\), define
+\[
+  \mathsf{Cycle}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S,\mathsf{PR}\mid\mathcal S^{+})
+  :=
+  \bigl(\mathsf{Prog}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S,\mathsf{PR}\mid\mathcal S^{+}),\mathcal C^{\mathrm{next}}_{m}(\mathbf w;\mathcal S,\mathcal S^{+})\bigr),
+\]
+where
+\[
+  \mathcal C^{\mathrm{next}}_{m}(\mathbf w;\mathcal S,\mathcal S^{+})
+  :=
+  \bigl(\mathsf{PR},\mathsf{TCMP}^{\mathrm{next}}_{m},\mathsf{TPREP}^{\mathrm{next}}_{m},\mathsf{TPACK}^{\mathrm{next}}_{m},\mathsf{RET}^{\mathrm{next}}_{m}\bigr).
+\]
+This downstream cycle is admissible only if it remains subordinate to the same inherited route tag, does not manufacture a fresh theorematic certificate, and, in the boundary-side case, does not smooth away, postpone, or deny the inherited earliest honest boundary stop.
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}[Every downstream program normal form yields exactly one controlled downstream cycle form]
+\label{prop:every-downstream-program-normal-form-yields-exactly-one-controlled-downstream-cycle-form}
+Assume the setting of Definition~\ref{def:first-downstream-program-to-cycle-object}. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item every admissible downstream close-program normal form yields exactly one downstream close-cycle form;
+  \item every admissible downstream next-cycle program normal form yields exactly one downstream next-cycle cycle form;
+  \item in the horizon-side case, every admissible downstream program-to-cycle object remains subordinate to the inherited horizon tag;
+  \item in the boundary-side case, every admissible downstream program-to-cycle object remains subordinate to the inherited stop-preserving boundary tag and inherited earliest honest boundary stop; and
+  \item no admissible downstream program-to-cycle object may manufacture a fresh theorematic certificate, erase the horizon/boundary distinction, or collapse the close/next-cycle difference into one undifferentiated downstream cycle form.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Clauses (i) and (ii) are immediate from Definition~\ref{def:first-downstream-program-to-cycle-object}: once the branch marker is fixed, the downstream cycle form is defined by exactly one of the two displayed clauses. Clauses (iii) and (iv) follow because the downstream program-to-cycle object is defined directly from a downstream task-to-program object that is already subordinate to the inherited route tag, and in the boundary-side case to the inherited earliest honest boundary stop, by Proposition~\ref{prop:every-downstream-task-family-yields-exactly-one-compact-downstream-program-normal-form}. Clause (v) is exactly the inherited certificate-aware route discipline from 19AZ$^{(6ae)}$ through 19AZ$^{(6bh)}$, now made explicit at the first downstream post-program cycle layer.
+\end{proof}
+
+\begin{corollary}[The present post-v3.29.0 line already carries a first downstream program-to-cycle layer]
+\label{cor:the-present-post-v3290-line-already-carries-a-first-downstream-program-to-cycle-layer}
+For the first-stage word \(\mathbf w_3\in\{\mathsf A,\mathsf B\}\), the current active line already carries a first downstream program-to-cycle object
+\[
+  \mathsf{Cycle}^{\mathrm{branch}}_{2}(\mathbf w_3;\mathcal S,\mathfrak b\mid\mathcal S^{+})
+\]
+for every finite nonempty admissible request subfamily
+\[
+  \mathcal S\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3),
+\]
+every branch marker \(\mathfrak b\in\{\mathsf{CL},\mathsf{PR}\}\), and in the promotion case every second finite nonempty admissible request subfamily
+\[
+  \mathcal S^{+}\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3)
+\]
+that remains subordinate to the same inherited route tag. So the post-release continuation now carries not only a conservative ask/respond/aggregate/dispatch/program/cycle/return/close/promote/branch/consume/task/program protocol, but also the first disciplined downstream cycle layer that turns each normalized close-side or next-cycle-side downstream program object into one controlled follow-on cycle.
+\end{corollary}
+
+\begin{proof}
+Immediate from Corollary~\ref{cor:the-present-post-v3290-line-already-carries-a-first-downstream-task-to-program-layer} and Proposition~\ref{prop:every-downstream-program-normal-form-yields-exactly-one-controlled-downstream-cycle-form}.
+\end{proof}
+
+\begin{remark}[What the first downstream program-to-cycle layer now buys]
+\label{rem:what-the-first-downstream-program-to-cycle-layer-now-buys}
+This is the point where the post-release line first becomes able not only to normalize a translated downstream close-side or next-cycle-side task family into one compact program object, but also to turn that compact program into one explicit controlled downstream cycle. The horizon-side line can now hand a close-program normal form onward as one closing-side downstream cycle or hand a next-program normal form onward as one next-cycle downstream cycle under the inherited horizon tag. The boundary-side line can now do the same under the inherited stop-preserving boundary tag and earliest honest boundary stop, without collapsing the two possibilities into one vague continuation gesture. Later OP-oriented work can therefore begin from a conservative ask/respond/aggregate/dispatch/program/cycle/return/close/promote/branch/consume/task/program/cycle protocol instead of improvising how normalized downstream programs are executed.
+\end{remark}
+
+
+\noindent\textbf{Reader cue.} Read the next block as the first downstream cycle-to-return / close-or-promote interface extracted from the downstream program-to-cycle layer of 19AZ$^{(6bi)}$. Its purpose is to turn each already normalized close-side or next-cycle-side downstream cycle object into one honest downstream return object that either records a compact close-side exit or records an admissible next-cycle continuation under the inherited horizon/boundary distinction and inherited earliest honest boundary stop.
+
+\subsection*{19AZ$^{(6bj)}$. Downstream cycle-to-return / close-or-promote interface}
+\label{sec:first-downstream-cycle-to-return-close-or-promote-interface-extracted-from-the-downstream-program-to-cycle-layer}
+After 19AZ$^{(6bi)}$, every honest consumed close-or-promote branch already yields one controlled downstream cycle object. The present block turns that downstream cycle object into one first downstream return / close-or-promote interface. On the close side, the interface records one finite closing-side return package together with one compact closing-side downstream exit object. On the promote side, the interface records one finite next-cycle return package together with one admissible next-cycle continuation object that remains subordinate to the same inherited route tag. On the boundary side, every such downstream interface must remain subordinate to the inherited stop-preserving boundary tag and inherited earliest honest boundary stop. The point is to make the first post-cycle downstream return discipline explicit.
+
+\begin{definition}[First downstream cycle-to-return / close-or-promote interface object]
+\label{def:first-downstream-cycle-to-return-close-or-promote-interface-object}
+Fix a certified finite extension word \(\mathbf w\in\mathcal L^{\mathrm{ext}}_{m}\), a finite nonempty admissible request subfamily
+\[
+  \mathcal S \subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w),
+\]
+a branch marker \(\mathfrak b\in\{\mathsf{CL},\mathsf{PR}\}\), and an admissible downstream program-to-cycle object
+\[
+  \mathsf{Cycle}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S,\mathfrak b\mid\mathcal S^{+}).
+\]
+When \(\mathfrak b=\mathsf{PR}\), also keep fixed the second finite nonempty admissible request subfamily
+\[
+  \mathcal S^{+}\subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w).
+\]
+Define the associated \emph{first downstream cycle-to-return / close-or-promote interface object}
+\[
+  \mathsf{Iter}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S,\mathfrak b\mid\mathcal S^{+})
+\]
+by the following cases.
+\begin{enumerate}[label=(\roman*)]
+  \item If \(\mathfrak b=\mathsf{CL}\), define
+\[
+  \mathsf{Iter}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S,\mathsf{CL})
+  :=
+  \bigl(\mathsf{Cycle}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S,\mathsf{CL}),\mathsf{RET}^{\mathrm{close}}_{m},\mathsf{Close}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S)\bigr),
+\]
+where \(\mathsf{Close}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S)\) denotes the compact honest downstream closing object induced by the close-side cycle. This interface is admissible only if it remains subordinate to the same inherited route tag and, in the boundary-side case, preserves the inherited earliest honest boundary stop.
+
+  \item If \(\mathfrak b=\mathsf{PR}\), define
+\[
+  \mathsf{Iter}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S,\mathsf{PR}\mid\mathcal S^{+})
+  :=
+  \bigl(\mathsf{Cycle}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S,\mathsf{PR}\mid\mathcal S^{+}),\mathsf{RET}^{\mathrm{next}}_{m},\mathsf{Next}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S,\mathcal S^{+})\bigr),
+\]
+where \(\mathsf{Next}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S,\mathcal S^{+})\) denotes the admissible downstream next-cycle continuation object induced by the next-side cycle. This interface is admissible only if it remains subordinate to the same inherited route tag, does not manufacture a fresh theorematic certificate, and, in the boundary-side case, does not smooth away, postpone, or deny the inherited earliest honest boundary stop.
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}[Every downstream cycle object yields exactly one downstream return / close-or-promote interface object]
+\label{prop:every-downstream-cycle-object-yields-exactly-one-downstream-return-close-or-promote-interface-object}
+Assume the setting of Definition~\ref{def:first-downstream-cycle-to-return-close-or-promote-interface-object}. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item every admissible downstream close-cycle object yields exactly one downstream close-return / closing interface object;
+  \item every admissible downstream next-cycle cycle object yields exactly one downstream next-return / continuation interface object;
+  \item in the horizon-side case, every admissible downstream cycle-to-return interface object remains subordinate to the inherited horizon tag;
+  \item in the boundary-side case, every admissible downstream cycle-to-return interface object remains subordinate to the inherited stop-preserving boundary tag and inherited earliest honest boundary stop; and
+  \item no admissible downstream cycle-to-return interface object may manufacture a fresh theorematic certificate, erase the horizon/boundary distinction, or collapse the close/next-cycle difference into one undifferentiated downstream return object.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Clauses (i) and (ii) are immediate from Definition~\ref{def:first-downstream-cycle-to-return-close-or-promote-interface-object}: once the branch marker is fixed, the downstream return / close-or-promote interface object is defined by exactly one of the two displayed clauses. Clauses (iii) and (iv) follow because the downstream cycle-to-return interface object is defined directly from a downstream program-to-cycle object that is already subordinate to the inherited route tag, and in the boundary-side case to the inherited earliest honest boundary stop, by Proposition~\ref{prop:every-downstream-program-normal-form-yields-exactly-one-controlled-downstream-cycle-form}. Clause (v) is exactly the inherited certificate-aware route discipline from 19AZ$^{(6ae)}$ through 19AZ$^{(6bi)}$, now made explicit at the first downstream post-cycle return layer.
+\end{proof}
+
+\begin{corollary}[The present post-v3.29.0 line already carries a first downstream cycle-to-return interface]
+\label{cor:the-present-post-v3290-line-already-carries-a-first-downstream-cycle-to-return-interface}
+For the first-stage word \(\mathbf w_3\in\{\mathsf A,\mathsf B\}\), the current active line already carries a first downstream cycle-to-return / close-or-promote interface object
+\[
+  \mathsf{Iter}^{\mathrm{branch}}_{2}(\mathbf w_3;\mathcal S,\mathfrak b\mid\mathcal S^{+})
+\]
+for every finite nonempty admissible request subfamily
+\[
+  \mathcal S\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3),
+\]
+every branch marker \(\mathfrak b\in\{\mathsf{CL},\mathsf{PR}\}\), and in the promotion case every second finite nonempty admissible request subfamily
+\[
+  \mathcal S^{+}\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3)
+\]
+that remains subordinate to the same inherited route tag. So the post-release continuation now carries not only a conservative ask/respond/aggregate/dispatch/program/cycle/return/close/promote/branch/consume/task/program/cycle protocol, but also the first disciplined downstream cycle-to-return interface that turns each normalized close-side or next-cycle-side downstream cycle object into one honest downstream return object.
+\end{corollary}
+
+\begin{proof}
+Immediate from Corollary~\ref{cor:the-present-post-v3290-line-already-carries-a-first-downstream-program-to-cycle-layer} and Proposition~\ref{prop:every-downstream-cycle-object-yields-exactly-one-downstream-return-close-or-promote-interface-object}.
+\end{proof}
+
+\begin{remark}[What the first downstream cycle-to-return interface now buys]
+\label{rem:what-the-first-downstream-cycle-to-return-interface-now-buys}
+This is the point where the post-release line first becomes able not only to execute a normalized downstream close-side or next-cycle-side program as one explicit downstream cycle, but also to turn that cycle into one disciplined downstream return object that records either an honest close-side exit or an honest next-cycle continuation. The horizon-side line can now hand a close-cycle onward as one compact closing-side downstream return object or hand a next-cycle onward as one admissible downstream continuation object under the inherited horizon tag. The boundary-side line can now do the same under the inherited stop-preserving boundary tag and earliest honest boundary stop, without collapsing the two possibilities into one vague continuation gesture. Later OP-oriented work can therefore begin from a conservative ask/respond/aggregate/dispatch/program/cycle/return/close/promote/branch/consume/task/program/cycle/return protocol instead of improvising how normalized downstream cycles return.
+\end{remark}
+
+
+\noindent\textbf{Reader cue.} Read the next block as the first downstream close/promote branch-resolution rule extracted from the downstream cycle-to-return interface of 19AZ$^{(6bj)}$. Its purpose is to resolve each already normalized downstream return object into exactly one honest close-side or next-cycle branch on the consumed follow-on level, so that later OP-oriented work does not merely receive a downstream return package, but receives it as a route-faithful downstream branch choice that preserves the inherited horizon/boundary distinction and the inherited earliest honest boundary stop.
+
+\subsection*{19AZ$^{(6bk)}$. First downstream close/promote branch-resolution rule extracted from the downstream cycle-to-return interface}
+\label{sec:first-downstream-close-promote-branch-resolution-rule-extracted-from-the-downstream-cycle-to-return-interface}
+After 19AZ$^{(6bj)}$, every honest normalized close-side or next-cycle-side downstream cycle already yields one disciplined downstream return object. The present block resolves that downstream return object into exactly one honest branch. On the close side, the downstream branch is the compact close-side exit already recorded by the return interface. On the next-cycle side, the downstream branch is the admissible next-cycle continuation already recorded by the same interface. On the boundary side, every such downstream branch must remain subordinate to the inherited stop-preserving boundary tag and inherited earliest honest boundary stop. The point is to make the first post-return downstream branch discipline explicit.
+
+\begin{definition}[First downstream close/promote branch-resolution object]
+\label{def:first-downstream-close-promote-branch-resolution-object}
+Fix a certified finite extension word \(\mathbf w\in\mathcal L^{\mathrm{ext}}_{m}\), a finite nonempty admissible request subfamily
+\[
+  \mathcal S \subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w),
+\]
+a branch marker \(\mathfrak b\in\{\mathsf{CL},\mathsf{PR}\}\), and an admissible downstream cycle-to-return interface object
+\[
+  \mathsf{Iter}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S,\mathfrak b\mid\mathcal S^{+}).
+\]
+When \(\mathfrak b=\mathsf{PR}\), also keep fixed the second finite nonempty admissible request subfamily
+\[
+  \mathcal S^{+}\subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w).
+\]
+Define the associated \emph{first downstream close/promote branch-resolution object}
+\[
+  \mathsf{Branch}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathfrak b\mid\mathcal S^{+})
+\]
+by the following cases.
+\begin{enumerate}[label=(\roman*)]
+  \item If \(\mathfrak b=\mathsf{CL}\), define
+\[
+  \mathsf{Branch}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathsf{CL})
+  :=
+  \mathsf{Close}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S).
+\]
+This branch-resolution object is admissible only if it remains subordinate to the same inherited route tag and, in the boundary-side case, preserves the inherited earliest honest boundary stop.
+
+  \item If \(\mathfrak b=\mathsf{PR}\), define
+\[
+  \mathsf{Branch}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathsf{PR}\mid\mathcal S^{+})
+  :=
+  \mathsf{Next}^{\mathrm{branch}}_{m}(\mathbf w;\mathcal S,\mathcal S^{+}).
+\]
+This branch-resolution object is admissible only if it remains subordinate to the same inherited route tag, does not manufacture a fresh theorematic certificate, and, in the boundary-side case, does not smooth away, postpone, or deny the inherited earliest honest boundary stop.
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}[Every downstream return interface object admits exactly one honest downstream close-or-promote branch choice]
+\label{prop:every-downstream-return-interface-object-admits-exactly-one-honest-downstream-close-or-promote-branch-choice}
+Assume the setting of Definition~\ref{def:first-downstream-close-promote-branch-resolution-object}. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item every admissible downstream close-return interface object yields exactly one downstream close branch-resolution object;
+  \item every admissible downstream next-return interface object yields exactly one downstream next-cycle branch-resolution object;
+  \item in the horizon-side case, every admissible downstream branch-resolution object remains subordinate to the inherited horizon tag;
+  \item in the boundary-side case, every admissible downstream branch-resolution object remains subordinate to the inherited stop-preserving boundary tag and inherited earliest honest boundary stop; and
+  \item no admissible downstream branch-resolution object may manufacture a fresh theorematic certificate, erase the horizon/boundary distinction, or collapse the close/next-cycle difference into one undifferentiated downstream branch object.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Clauses (i) and (ii) are immediate from Definition~\ref{def:first-downstream-close-promote-branch-resolution-object}: once the branch marker is fixed, the downstream branch-resolution object is defined by exactly one of the two displayed clauses. Clauses (iii) and (iv) follow because the downstream branch-resolution object is defined directly from a downstream cycle-to-return interface object that is already subordinate to the inherited route tag, and in the boundary-side case to the inherited earliest honest boundary stop, by Proposition~\ref{prop:every-downstream-cycle-object-yields-exactly-one-downstream-return-close-or-promote-interface-object}. Clause (v) is exactly the inherited certificate-aware route discipline from 19AZ$^{(6ae)}$ through 19AZ$^{(6bj)}$, now made explicit at the first downstream post-return branch layer.
+\end{proof}
+
+\begin{corollary}[The present post-v3.29.0 line already carries a first downstream close/promote branch-resolution rule]
+\label{cor:the-present-post-v3290-line-already-carries-a-first-downstream-close-promote-branch-resolution-rule}
+For the first-stage word \(\mathbf w_3\in\{\mathsf A,\mathsf B\}\), the current active line already carries a first downstream close/promote branch-resolution object
+\[
+  \mathsf{Branch}^{\mathrm{down}}_{2}(\mathbf w_3;\mathcal S,\mathfrak b\mid\mathcal S^{+})
+\]
+for every finite nonempty admissible request subfamily
+\[
+  \mathcal S\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3),
+\]
+every branch marker \(\mathfrak b\in\{\mathsf{CL},\mathsf{PR}\}\), and in the promotion case every second finite nonempty admissible request subfamily
+\[
+  \mathcal S^{+}\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3)
+\]
+that remains subordinate to the same inherited route tag. So the post-release continuation now carries not only a conservative ask/respond/aggregate/dispatch/program/cycle/return/close/promote/branch/consume/task/program/cycle/return protocol, but also the first disciplined downstream close/promote branch-resolution rule that turns each normalized downstream return object into one honest downstream branch object.
+\end{corollary}
+
+\begin{proof}
+Immediate from Corollary~\ref{cor:the-present-post-v3290-line-already-carries-a-first-downstream-cycle-to-return-interface} and Proposition~\ref{prop:every-downstream-return-interface-object-admits-exactly-one-honest-downstream-close-or-promote-branch-choice}.
+\end{proof}
+
+\begin{remark}[What the first downstream close/promote branch-resolution rule now buys]
+\label{rem:what-the-first-downstream-close-promote-branch-resolution-rule-now-buys}
+This is the point where the post-release line first becomes able not only to execute a normalized downstream close-side or next-cycle-side program as one explicit downstream cycle and to turn that cycle into one disciplined downstream return object, but also to resolve that return object into exactly one honest downstream branch. The horizon-side line can now hand a downstream close-return onward as one compact close-side downstream branch or hand a downstream next-return onward as one admissible next-cycle downstream branch under the inherited horizon tag. The boundary-side line can now do the same under the inherited stop-preserving boundary tag and earliest honest boundary stop, without collapsing the two possibilities into one vague continuation gesture. Later OP-oriented work can therefore begin from a conservative ask/respond/aggregate/dispatch/program/cycle/return/close/promote/branch/consume/task/program/cycle/return/branch protocol instead of improvising how normalized downstream returns branch.
+\end{remark}
+
+
+
+\noindent\textbf{Reader cue.} Read the next block as the first downstream branch-consumption layer extracted from the downstream close/promote branch-resolution rule of 19AZ$^{(6bk)}$. Its purpose is to turn each already resolved downstream close-side or next-cycle branch into one controlled downstream follow-on object, so that later OP-oriented work does not merely receive a downstream branch choice, but receives it in a finite route-faithful consumption form that preserves the inherited horizon/boundary distinction and the inherited earliest honest boundary stop.
+
+\subsection*{19AZ$^{(6bl)}$. First downstream branch-consumption layer extracted from the downstream close/promote branch-resolution rule}
+\label{sec:first-downstream-branch-consumption-layer-extracted-from-the-downstream-close-promote-branch-resolution-rule}
+After 19AZ$^{(6bk)}$, every honest normalized downstream return object already resolves into exactly one downstream close-side branch or one admissible downstream next-cycle branch. The present block turns that resolved downstream branch into one controlled downstream follow-on object. On the close side, the downstream follow-on object records one honest consumed close-side continuation under the inherited route tag. On the next-cycle side, it records one honest consumed next-cycle continuation under the same inherited route tag. On the boundary side, every such downstream consumption object must remain subordinate to the inherited stop-preserving boundary tag and inherited earliest honest boundary stop. The point is to make the first post-branch downstream consumption discipline explicit.
+
+\begin{definition}[First downstream branch-consumption object]
+\label{def:first-downstream-branch-consumption-object}
+Fix a certified finite extension word \(\mathbf w\in\mathcal L^{\mathrm{ext}}_{m}\), a finite nonempty admissible request subfamily
+\[
+  \mathcal S \subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w),
+\]
+a branch marker \(\mathfrak b\in\{\mathsf{CL},\mathsf{PR}\}\), and an admissible downstream branch-resolution object
+\[
+  \mathsf{Branch}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathfrak b\mid\mathcal S^{+}).
+\]
+When \(\mathfrak b=\mathsf{PR}\), also keep fixed the second finite nonempty admissible request subfamily
+\[
+  \mathcal S^{+}\subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w).
+\]
+Define the associated \emph{first downstream branch-consumption object}
+\[
+  \mathsf{Consm}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathfrak b\mid\mathcal S^{+})
+\]
+by the following cases.
+\begin{enumerate}[label=(\roman*)]
+  \item If \(\mathfrak b=\mathsf{CL}\), define
+\[
+  \mathsf{Consm}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathsf{CL})
+  :=
+  \bigl(
+    \mathsf{Branch}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathsf{CL}),
+    \mathsf{DCLOSE}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S)
+  \bigr).
+\]
+This downstream consumption object is admissible only if it remains subordinate to the same inherited route tag and, in the boundary-side case, preserves the inherited earliest honest boundary stop.
+
+  \item If \(\mathfrak b=\mathsf{PR}\), define
+\[
+  \mathsf{Consm}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathsf{PR}\mid\mathcal S^{+})
+  :=
+  \bigl(
+    \mathsf{Branch}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathsf{PR}\mid\mathcal S^{+}),
+    \mathsf{DNEXT}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathcal S^{+})
+  \bigr).
+\]
+This downstream consumption object is admissible only if it remains subordinate to the same inherited route tag, does not manufacture a fresh theorematic certificate, and, in the boundary-side case, does not smooth away, postpone, or deny the inherited earliest honest boundary stop.
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}[Every resolved downstream branch yields exactly one route-faithful downstream consumption object]
+\label{prop:every-resolved-downstream-branch-yields-exactly-one-route-faithful-downstream-consumption-object}
+Assume the setting of Definition~\ref{def:first-downstream-branch-consumption-object}. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item every admissible resolved downstream close branch yields exactly one downstream close-side consumption object;
+  \item every admissible resolved downstream next-cycle branch yields exactly one downstream next-side consumption object;
+  \item in the horizon-side case, every admissible downstream consumption object remains subordinate to the inherited horizon tag;
+  \item in the boundary-side case, every admissible downstream consumption object remains subordinate to the inherited stop-preserving boundary tag and inherited earliest honest boundary stop; and
+  \item no admissible downstream consumption object may manufacture a fresh theorematic certificate, erase the horizon/boundary distinction, or collapse the close/next-cycle difference into one undifferentiated downstream follow-on object.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Clauses (i) and (ii) are immediate from Definition~\ref{def:first-downstream-branch-consumption-object-second-level}: once the branch marker is fixed, the downstream consumption object is defined by exactly one of the two displayed clauses. Clauses (iii) and (iv) follow because the downstream branch-consumption object is defined directly from a downstream branch-resolution object that is already subordinate to the inherited route tag, and in the boundary-side case to the inherited earliest honest boundary stop, by Proposition~\ref{prop:every-downstream-return-interface-object-admits-exactly-one-honest-downstream-close-or-promote-branch-choice}. Clause (v) is exactly the inherited certificate-aware route discipline from 19AZ$^{(6ae)}$ through 19AZ$^{(6bk)}$, now made explicit at the first downstream post-branch consumption layer.
+\end{proof}
+
+\begin{corollary}[The present post-v3.29.0 line already carries a first downstream branch-consumption layer]
+\label{cor:the-present-post-v3290-line-already-carries-a-first-downstream-branch-consumption-layer-second-level}
+For the first-stage word \(\mathbf w_3\in\{\mathsf A,\mathsf B\}\), the current active line already carries a first downstream branch-consumption object
+\[
+  \mathsf{Consm}^{\mathrm{down}}_{2}(\mathbf w_3;\mathcal S,\mathfrak b\mid\mathcal S^{+})
+\]
+for every finite nonempty admissible request subfamily
+\[
+  \mathcal S\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3),
+\]
+every branch marker \(\mathfrak b\in\{\mathsf{CL},\mathsf{PR}\}\), and in the promotion case every second finite nonempty admissible request subfamily
+\[
+  \mathcal S^{+}\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3)
+\]
+that remains subordinate to the same inherited route tag. So the post-release continuation now carries not only a conservative ask/respond/aggregate/dispatch/program/cycle/return/close/promote/branch/consume/task/program/cycle/return/branch protocol, but also the first disciplined downstream branch-consumption layer that turns each normalized downstream branch object into one honest downstream follow-on object.
+\end{corollary}
+
+\begin{proof}
+Immediate from Corollary~\ref{cor:the-present-post-v3290-line-already-carries-a-first-downstream-close-promote-branch-resolution-rule} and Proposition~\ref{prop:every-resolved-downstream-branch-yields-exactly-one-route-faithful-downstream-consumption-object}.
+\end{proof}
+
+\begin{remark}[What the first downstream branch-consumption layer now buys]
+\label{rem:what-the-first-downstream-branch-consumption-layer-now-buys-second-level}
+This is the point where the post-release line first becomes able not only to execute a normalized downstream close-side or next-cycle-side program as one explicit downstream cycle, to turn that cycle into one disciplined downstream return object, and to resolve that return object into exactly one honest downstream branch, but also to consume that resolved downstream branch into one controlled downstream follow-on object. The horizon-side line can now hand a downstream close branch onward as one compact close-side consumption object or hand a downstream next-cycle branch onward as one admissible next-cycle consumption object under the inherited horizon tag. The boundary-side line can now do the same under the inherited stop-preserving boundary tag and earliest honest boundary stop, without collapsing the two possibilities into one vague downstream continuation gesture. Later OP-oriented work can therefore begin from a conservative ask/respond/aggregate/dispatch/program/cycle/return/close/promote/branch/consume/task/program/cycle/return/branch/consume protocol instead of improvising how normalized downstream branches are consumed.
+\end{remark}
+
+
+\noindent\textbf{Reader cue.} Read the next block as the first downstream branch-to-task layer extracted from the downstream branch-consumption interface of 19AZ$^{(6bl)}$. Its purpose is to turn each already consumed downstream close-side or next-cycle branch into one controlled finite downstream task family, so that later OP-oriented work does not merely receive a downstream follow-on object, but receives it as a route-faithful downstream work menu that preserves the inherited horizon/boundary distinction and does not smooth away the inherited earliest honest boundary stop.
+
+\subsection*{19AZ$^{(6bm)}$. First downstream branch-to-task layer extracted from the downstream branch-consumption layer}
+\label{sec:first-downstream-branch-to-task-layer-extracted-from-the-downstream-branch-consumption-layer-second-level}
+After 19AZ$^{(6bl)}$, every honest downstream close-side or next-cycle branch already admits one controlled downstream consumption object. The present block turns that consumed downstream branch into one finite downstream task family. On the close side, the downstream tasks are comparison, closing-side stabilization, and compact packaging under the inherited route tag. On the next-cycle side, the downstream tasks are comparison, next-cycle preparation, and compact packaging under the same inherited route tag. On the boundary side, every such task family must remain subordinate to the inherited stop-preserving boundary tag and inherited earliest honest boundary stop. The point is to make the second post-consumption downstream work program explicit.
+
+\begin{definition}[First downstream branch-to-task object on the consumed follow-on level]
+\label{def:first-downstream-branch-to-task-object-on-the-consumed-follow-on-level}
+Fix a certified finite extension word \(\mathbf w\in\mathcal L^{\mathrm{ext}}_{m}\), a finite nonempty admissible request subfamily
+\[
+  \mathcal S \subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w),
+\]
+a branch marker \(\mathfrak b\in\{\mathsf{CL},\mathsf{PR}\}\), and an admissible downstream branch-consumption object
+\[
+  \mathsf{Consm}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathfrak b\mid\mathcal S^{+}).
+\]
+When \(\mathfrak b=\mathsf{PR}\), also keep fixed the second finite nonempty admissible request subfamily
+\[
+  \mathcal S^{+}\subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w).
+\]
+Define the associated \emph{first downstream branch-to-task object on the consumed follow-on level}
+\[
+  \mathsf{Task}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathfrak b\mid\mathcal S^{+})
+\]
+by the following cases.
+\begin{enumerate}[label=(\roman*)]
+  \item If \(\mathfrak b=\mathsf{CL}\), define
+\[
+  \mathsf{Task}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathsf{CL})
+  :=
+  \bigl(\mathsf{Consm}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathsf{CL}),\mathcal T^{\mathrm{close,down}}_{m}(\mathbf w;\mathcal S)\bigr),
+\]
+where
+\[
+  \mathcal T^{\mathrm{close,down}}_{m}(\mathbf w;\mathcal S)
+  :=
+  \{\mathsf{TCMP}^{\mathrm{close,down}}_{m},\mathsf{TSTAB}^{\mathrm{close,down}}_{m},\mathsf{TPACK}^{\mathrm{close,down}}_{m}\}.
+\]
+This downstream task family is admissible only if it remains subordinate to the same inherited route tag and, in the boundary-side case, preserves the inherited earliest honest boundary stop.
+
+  \item If \(\mathfrak b=\mathsf{PR}\), define
+\[
+  \mathsf{Task}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathsf{PR}\mid\mathcal S^{+})
+  :=
+  \bigl(\mathsf{Consm}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathsf{PR}\mid\mathcal S^{+}),\mathcal T^{\mathrm{next,down}}_{m}(\mathbf w;\mathcal S,\mathcal S^{+})\bigr),
+\]
+where
+\[
+  \mathcal T^{\mathrm{next,down}}_{m}(\mathbf w;\mathcal S,\mathcal S^{+})
+  :=
+  \{\mathsf{TCMP}^{\mathrm{next,down}}_{m},\mathsf{TPREP}^{\mathrm{next,down}}_{m},\mathsf{TPACK}^{\mathrm{next,down}}_{m}\}.
+\]
+This downstream task family is admissible only if it remains subordinate to the same inherited route tag, does not manufacture a fresh theorematic certificate, and, in the boundary-side case, does not smooth away, postpone, or deny the inherited earliest honest boundary stop.
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}[Every consumed downstream branch yields exactly one route-faithful downstream task family]
+\label{prop:every-consumed-downstream-branch-yields-exactly-one-route-faithful-downstream-task-family}
+Assume the setting of Definition~\ref{def:first-downstream-branch-to-task-object-on-the-consumed-follow-on-level}. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item every admissible downstream close-consumption object yields exactly one downstream close-side task family;
+  \item every admissible downstream next-cycle consumption object yields exactly one downstream next-cycle task family;
+  \item in the horizon-side case, every admissible downstream branch-to-task object remains subordinate to the inherited horizon tag;
+  \item in the boundary-side case, every admissible downstream branch-to-task object remains subordinate to the inherited stop-preserving boundary tag and inherited earliest honest boundary stop; and
+  \item no admissible downstream branch-to-task object may manufacture a fresh theorematic certificate, erase the horizon/boundary distinction, or collapse the close/promote difference into one undifferentiated downstream work program.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Clauses (i) and (ii) are immediate from Definition~\ref{def:first-downstream-branch-to-task-object-on-the-consumed-follow-on-level}: once the branch marker is fixed, the downstream task family is defined by exactly one of the two displayed clauses. Clauses (iii) and (iv) follow because the downstream branch-to-task object is defined directly from a downstream branch-consumption object that is already subordinate to the inherited route tag and, in the boundary-side case, to the inherited earliest honest boundary stop, by Proposition~\ref{prop:every-resolved-downstream-branch-yields-exactly-one-route-faithful-downstream-consumption-object}. Clause (v) is exactly the inherited certificate-aware route discipline from 19AZ$^{(6ae)}$ through 19AZ$^{(6bl)}$, now made explicit at the second downstream post-consumption task layer.
+\end{proof}
+
+\begin{corollary}[The present post-v3.29.0 line already carries a first downstream branch-to-task layer on the consumed follow-on level]
+\label{cor:the-present-post-v3290-line-already-carries-a-first-downstream-branch-to-task-layer-on-the-consumed-follow-on-level}
+For the first-stage word \(\mathbf w_3\in\{\mathsf A,\mathsf B\}\), the current active line already carries a first downstream branch-to-task object
+\[
+  \mathsf{Task}^{\mathrm{down}}_{2}(\mathbf w_3;\mathcal S,\mathfrak b\mid\mathcal S^{+})
+\]
+for every finite nonempty admissible request subfamily
+\[
+  \mathcal S\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3),
+\]
+every branch marker \(\mathfrak b\in\{\mathsf{CL},\mathsf{PR}\}\), and in the promotion case every second finite nonempty admissible request subfamily
+\[
+  \mathcal S^{+}\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3)
+\]
+that remains subordinate to the same inherited route tag. So the post-release continuation now carries not only a conservative ask/respond/aggregate/dispatch/program/cycle/return/close/promote/branch/consume/task/program/cycle/return/branch/consume protocol, but also the first disciplined downstream task layer that translates each consumed downstream branch into one controlled close-side or next-cycle-side work family.
+\end{corollary}
+
+\begin{proof}
+Immediate from Corollary~\ref{cor:the-present-post-v3290-line-already-carries-a-first-downstream-branch-consumption-layer-second-level} and Proposition~\ref{prop:every-consumed-downstream-branch-yields-exactly-one-route-faithful-downstream-task-family}.
+\end{proof}
+
+\begin{remark}[What the first downstream branch-to-task layer on the consumed follow-on level now buys]
+\label{rem:what-the-first-downstream-branch-to-task-layer-on-the-consumed-follow-on-level-now-buys}
+This is the point where the post-release line first becomes able not only to consume a resolved downstream close-side or next-cycle branch, but also to translate that consumed downstream branch into one explicit downstream work family on the follow-on level. The horizon-side line can now hand a consumed downstream close branch onward as one closing-side task family or hand a consumed downstream promote branch onward as one next-cycle task family under the inherited horizon tag. The boundary-side line can now do the same under the inherited stop-preserving boundary tag and earliest honest boundary stop, without collapsing the two possibilities into one vague continuation gesture. Later OP-oriented work can therefore begin from a conservative ask/respond/aggregate/dispatch/program/cycle/return/close/promote/branch/consume/task/program/cycle/return/branch/consume/task protocol instead of improvising how consumed downstream branches are translated into follow-on work.
+\end{remark}
+
+
+\noindent\textbf{Reader cue.} Read the next block as the first downstream task-to-program layer extracted from the downstream branch-to-task layer of 19AZ$^{(6bm)}$. Its purpose is to compress each already translated downstream close-side or next-cycle-side task family into one compact downstream-readable program object, so that the consumed follow-on level does not remain a loose task list but becomes one normalized downstream program form under the inherited horizon tag or inherited stop-preserving boundary tag.
+
+\subsection*{19AZ$^{(6bn)}$. First downstream task-to-program layer extracted from the downstream branch-to-task layer on the consumed follow-on level}
+\label{sec:first-downstream-task-to-program-layer-extracted-from-the-downstream-branch-to-task-layer-on-the-consumed-follow-on-level}
+After 19AZ$^{(6bm)}$, every consumed downstream close-side or next-cycle branch already yields one explicit downstream task family. The present block compresses that task family into one compact downstream program object. On the close side, the downstream program is the normalized close-side work form built from comparison, stabilization, and compact packaging under the inherited route tag. On the next-cycle side, the downstream program is the normalized next-cycle work form built from comparison, preparation, and compact packaging under the same inherited route tag. On the boundary side, every such program must remain subordinate to the inherited stop-preserving boundary tag and inherited earliest honest boundary stop. The point is to make the next compact downstream work normal form explicit.
+
+\begin{definition}[First downstream task-to-program object on the consumed follow-on level]
+\label{def:first-downstream-task-to-program-object-on-the-consumed-follow-on-level}
+Fix a certified finite extension word \(\mathbf w\in\mathcal L^{\mathrm{ext}}_{m}\), a finite nonempty admissible request subfamily
+\[
+  \mathcal S \subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w),
+\]
+a branch marker \(\mathfrak b\in\{\mathsf{CL},\mathsf{PR}\}\), and an admissible downstream branch-to-task object
+\[
+  \mathsf{Task}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathfrak b\mid\mathcal S^{+}).
+\]
+When \(\mathfrak b=\mathsf{PR}\), also keep fixed the second finite nonempty admissible request subfamily
+\[
+  \mathcal S^{+}\subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w).
+\]
+Define the associated \emph{first downstream task-to-program object on the consumed follow-on level}
+\[
+  \mathsf{Prog}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathfrak b\mid\mathcal S^{+})
+\]
+by the following cases.
+\begin{enumerate}[label=(\roman*)]
+  \item If \(\mathfrak b=\mathsf{CL}\), define
+\[
+  \mathsf{Prog}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathsf{CL})
+  :=
+  \bigl(\mathsf{Task}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathsf{CL}),\mathcal P^{\mathrm{close,down}}_{m}(\mathbf w;\mathcal S)\bigr),
+\]
+where
+\[
+  \mathcal P^{\mathrm{close,down}}_{m}(\mathbf w;\mathcal S)
+  :=
+  \bigl(\mathsf{CL},\mathsf{TCMP}^{\mathrm{close,down}}_{m},\mathsf{TSTAB}^{\mathrm{close,down}}_{m},\mathsf{TPACK}^{\mathrm{close,down}}_{m}\bigr).
+\]
+This downstream program object is admissible only if it remains subordinate to the same inherited route tag and, in the boundary-side case, preserves the inherited earliest honest boundary stop.
+
+  \item If \(\mathfrak b=\mathsf{PR}\), define
+\[
+  \mathsf{Prog}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathsf{PR}\mid\mathcal S^{+})
+  :=
+  \bigl(\mathsf{Task}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathsf{PR}\mid\mathcal S^{+}),\mathcal P^{\mathrm{next,down}}_{m}(\mathbf w;\mathcal S,\mathcal S^{+})\bigr),
+\]
+where
+\[
+  \mathcal P^{\mathrm{next,down}}_{m}(\mathbf w;\mathcal S,\mathcal S^{+})
+  :=
+  \bigl(\mathsf{PR},\mathsf{TCMP}^{\mathrm{next,down}}_{m},\mathsf{TPREP}^{\mathrm{next,down}}_{m},\mathsf{TPACK}^{\mathrm{next,down}}_{m}\bigr).
+\]
+This downstream program object is admissible only if it remains subordinate to the same inherited route tag, does not manufacture a fresh theorematic certificate, and, in the boundary-side case, does not smooth away, postpone, or deny the inherited earliest honest boundary stop.
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}[Every consumed downstream task family yields exactly one compact downstream program object]
+\label{prop:every-consumed-downstream-task-family-yields-exactly-one-compact-downstream-program-object}
+Assume the setting of Definition~\ref{def:first-downstream-task-to-program-object-on-the-consumed-follow-on-level}. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item every admissible downstream close-side task family yields exactly one downstream close-side program object;
+  \item every admissible downstream next-cycle task family yields exactly one downstream next-cycle program object;
+  \item in the horizon-side case, every admissible downstream task-to-program object remains subordinate to the inherited horizon tag;
+  \item in the boundary-side case, every admissible downstream task-to-program object remains subordinate to the inherited stop-preserving boundary tag and inherited earliest honest boundary stop; and
+  \item no admissible downstream task-to-program object may manufacture a fresh theorematic certificate, erase the horizon/boundary distinction, or collapse the close/next-cycle difference into one undifferentiated downstream work normal form.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Clauses (i) and (ii) are immediate from Definition~\ref{def:first-downstream-task-to-program-object-on-the-consumed-follow-on-level}: once the branch marker is fixed, the downstream program object is defined by exactly one of the two displayed clauses. Clauses (iii) and (iv) follow because the downstream task-to-program object is defined directly from a downstream branch-to-task object that is already subordinate to the inherited route tag and, in the boundary-side case, to the inherited earliest honest boundary stop, by Proposition~\ref{prop:every-consumed-downstream-branch-yields-exactly-one-route-faithful-downstream-task-family}. Clause (v) is exactly the inherited certificate-aware route discipline from 19AZ$^{(6ae)}$ through 19AZ$^{(6bm)}$, now made explicit at the second downstream compact program layer.
+\end{proof}
+
+\begin{corollary}[The present post-v3.29.0 line already carries a first downstream task-to-program layer on the consumed follow-on level]
+\label{cor:the-present-post-v3290-line-already-carries-a-first-downstream-task-to-program-layer-on-the-consumed-follow-on-level}
+For the first-stage word \(\mathbf w_3\in\{\mathsf A,\mathsf B\}\), the current active line already carries a first downstream task-to-program object
+\[
+  \mathsf{Prog}^{\mathrm{down}}_{2}(\mathbf w_3;\mathcal S,\mathfrak b\mid\mathcal S^{+})
+\]
+for every finite nonempty admissible request subfamily
+\[
+  \mathcal S\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3),
+\]
+every branch marker \(\mathfrak b\in\{\mathsf{CL},\mathsf{PR}\}\), and in the promotion case every second finite nonempty admissible request subfamily
+\[
+  \mathcal S^{+}\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3)
+\]
+that remains subordinate to the same inherited route tag. So the post-release continuation now carries not only a conservative ask/respond/aggregate/dispatch/program/cycle/return/close/promote/branch/consume/task/program/cycle/return/branch/consume/task protocol, but also the first disciplined downstream task-to-program layer that compresses each consumed downstream close-side or next-cycle-side task family into one compact work normal form.
+\end{corollary}
+
+\begin{proof}
+Immediate from Corollary~\ref{cor:the-present-post-v3290-line-already-carries-a-first-downstream-branch-to-task-layer-on-the-consumed-follow-on-level} and Proposition~\ref{prop:every-consumed-downstream-task-family-yields-exactly-one-compact-downstream-program-object}.
+\end{proof}
+
+\begin{remark}[What the first downstream task-to-program layer on the consumed follow-on level now buys]
+\label{rem:what-the-first-downstream-task-to-program-layer-on-the-consumed-follow-on-level-now-buys}
+This is the point where the post-release line first becomes able not only to translate a consumed downstream close-side or next-cycle branch into one explicit downstream work family, but also to compress that work family into one compact downstream program object. The horizon-side line can now hand a consumed downstream close-side task family onward as one normalized close-side downstream program or hand a consumed downstream next-cycle task family onward as one normalized next-cycle downstream program under the inherited horizon tag. The boundary-side line can now do the same under the inherited stop-preserving boundary tag and earliest honest boundary stop, without collapsing the two possibilities into one vague continuation gesture. Later OP-oriented work can therefore begin from a conservative ask/respond/aggregate/dispatch/program/cycle/return/close/promote/branch/consume/task/program/cycle/return/branch/consume/task/program protocol instead of improvising how consumed downstream task families are normalized.
+\end{remark}
+
+
+\noindent\textbf{Reader cue.} Read the next block as the first downstream program-to-cycle layer extracted from the downstream task-to-program layer of 19AZ$^{(6bn)}$. Its purpose is to turn each already normalized close-side or next-cycle-side downstream program object into one controlled downstream cycle on the consumed follow-on level, so that the second downstream loop does not stop at a static program form but becomes an executable route-faithful cycle under the inherited horizon tag or inherited stop-preserving boundary tag.
+
+\subsection*{19AZ$^{(6bo)}$. First downstream program-to-cycle layer extracted from the downstream task-to-program layer on the consumed follow-on level}
+\label{sec:first-downstream-program-to-cycle-layer-extracted-from-the-downstream-task-to-program-layer-on-the-consumed-follow-on-level}
+After 19AZ$^{(6bn)}$, every normalized downstream close-side or next-cycle-side task family already yields one compact downstream program object. The present block turns that downstream program into one controlled downstream cycle. On the close side, the downstream cycle executes the close-side comparison, stabilization, and packaging program and records one close-side return token under the inherited route tag. On the next-cycle side, the downstream cycle executes the next-cycle comparison, preparation, and packaging program and records one next-cycle return token under the same inherited route tag. On the boundary side, every such downstream cycle must remain subordinate to the inherited stop-preserving boundary tag and inherited earliest honest boundary stop. The point is to make the second downstream work cycle explicit.
+
+\begin{definition}[First downstream program-to-cycle object on the consumed follow-on level]
+\label{def:first-downstream-program-to-cycle-object-on-the-consumed-follow-on-level}
+Fix a certified finite extension word \(\mathbf w\in\mathcal L^{\mathrm{ext}}_{m}\), a finite nonempty admissible request subfamily
+\[
+  \mathcal S \subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w),
+\]
+a branch marker \(\mathfrak b\in\{\mathsf{CL},\mathsf{PR}\}\), and an admissible downstream task-to-program object
+\[
+  \mathsf{Prog}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathfrak b\mid\mathcal S^{+}).
+\]
+When \(\mathfrak b=\mathsf{PR}\), also keep fixed the second finite nonempty admissible request subfamily
+\[
+  \mathcal S^{+}\subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w).
+\]
+Define the associated \emph{first downstream program-to-cycle object on the consumed follow-on level}
+\[
+  \mathsf{Cycle}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathfrak b\mid\mathcal S^{+})
+\]
+by the following cases.
+\begin{enumerate}[label=(\roman*)]
+  \item If \(\mathfrak b=\mathsf{CL}\), define
+\[
+  \mathsf{Cycle}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathsf{CL})
+  :=
+  \bigl(\mathsf{Prog}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathsf{CL}),\mathcal C^{\mathrm{close,down}}_{m}(\mathbf w;\mathcal S)\bigr),
+\]
+where
+\[
+  \mathcal C^{\mathrm{close,down}}_{m}(\mathbf w;\mathcal S)
+  :=
+  \bigl(\mathsf{CL},\mathsf{TCMP}^{\mathrm{close,down}}_{m},\mathsf{TSTAB}^{\mathrm{close,down}}_{m},\mathsf{TPACK}^{\mathrm{close,down}}_{m},\mathsf{RET}^{\mathrm{close,down}}_{m}\bigr).
+\]
+This downstream cycle object is admissible only if it remains subordinate to the same inherited route tag and, in the boundary-side case, preserves the inherited earliest honest boundary stop.
+
+  \item If \(\mathfrak b=\mathsf{PR}\), define
+\[
+  \mathsf{Cycle}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathsf{PR}\mid\mathcal S^{+})
+  :=
+  \bigl(\mathsf{Prog}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathsf{PR}\mid\mathcal S^{+}),\mathcal C^{\mathrm{next,down}}_{m}(\mathbf w;\mathcal S,\mathcal S^{+})\bigr),
+\]
+where
+\[
+  \mathcal C^{\mathrm{next,down}}_{m}(\mathbf w;\mathcal S,\mathcal S^{+})
+  :=
+  \bigl(\mathsf{PR},\mathsf{TCMP}^{\mathrm{next,down}}_{m},\mathsf{TPREP}^{\mathrm{next,down}}_{m},\mathsf{TPACK}^{\mathrm{next,down}}_{m},\mathsf{RET}^{\mathrm{next,down}}_{m}\bigr).
+\]
+This downstream cycle object is admissible only if it remains subordinate to the same inherited route tag, does not manufacture a fresh theorematic certificate, and, in the boundary-side case, does not smooth away, postpone, or deny the inherited earliest honest boundary stop.
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}[Every normalized downstream program object yields exactly one controlled downstream cycle]
+\label{prop:every-normalized-downstream-program-object-yields-exactly-one-controlled-downstream-cycle}
+Assume the setting of Definition~\ref{def:first-downstream-program-to-cycle-object-on-the-consumed-follow-on-level}. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item every admissible downstream close-side program object yields exactly one downstream close-side cycle object;
+  \item every admissible downstream next-cycle program object yields exactly one downstream next-cycle cycle object;
+  \item in the horizon-side case, every admissible downstream program-to-cycle object remains subordinate to the inherited horizon tag;
+  \item in the boundary-side case, every admissible downstream program-to-cycle object remains subordinate to the inherited stop-preserving boundary tag and inherited earliest honest boundary stop; and
+  \item no admissible downstream program-to-cycle object may manufacture a fresh theorematic certificate, erase the horizon/boundary distinction, or collapse the close/next-cycle difference into one undifferentiated downstream execution cycle.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Clauses (i) and (ii) are immediate from Definition~\ref{def:first-downstream-program-to-cycle-object-on-the-consumed-follow-on-level}: once the branch marker is fixed, the downstream cycle object is defined by exactly one of the two displayed clauses. Clauses (iii) and (iv) follow because the downstream program-to-cycle object is defined directly from a downstream task-to-program object that is already subordinate to the inherited route tag and, in the boundary-side case, to the inherited earliest honest boundary stop, by Proposition~\ref{prop:every-consumed-downstream-task-family-yields-exactly-one-compact-downstream-program-object}. Clause (v) is exactly the inherited certificate-aware route discipline from 19AZ$^{(6ae)}$ through 19AZ$^{(6bn)}$, now made explicit at the second downstream cycle layer.
+\end{proof}
+
+\begin{corollary}[The present post-v3.29.0 line already carries a first downstream program-to-cycle layer on the consumed follow-on level]
+\label{cor:the-present-post-v3290-line-already-carries-a-first-downstream-program-to-cycle-layer-on-the-consumed-follow-on-level}
+For the first-stage word \(\mathbf w_3\in\{\mathsf A,\mathsf B\}\), the current active line already carries a first downstream program-to-cycle object
+\[
+  \mathsf{Cycle}^{\mathrm{down}}_{2}(\mathbf w_3;\mathcal S,\mathfrak b\mid\mathcal S^{+})
+\]
+for every finite nonempty admissible request subfamily
+\[
+  \mathcal S\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3),
+\]
+every branch marker \(\mathfrak b\in\{\mathsf{CL},\mathsf{PR}\}\), and in the promotion case every second finite nonempty admissible request subfamily
+\[
+  \mathcal S^{+}\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3)
+\]
+that remains subordinate to the same inherited route tag. So the post-release continuation now carries not only a conservative ask/respond/aggregate/dispatch/program/cycle/return/close/promote/branch/consume/task/program/cycle/return/branch/consume/task/program protocol, but also the first disciplined downstream program-to-cycle layer that turns each normalized consumed downstream program into one explicit follow-on cycle.
+\end{corollary}
+
+\begin{proof}
+Immediate from Corollary~\ref{cor:the-present-post-v3290-line-already-carries-a-first-downstream-task-to-program-layer-on-the-consumed-follow-on-level} and Proposition~\ref{prop:every-normalized-downstream-program-object-yields-exactly-one-controlled-downstream-cycle}.
+\end{proof}
+
+\begin{remark}[What the first downstream program-to-cycle layer on the consumed follow-on level now buys]
+\label{rem:what-the-first-downstream-program-to-cycle-layer-on-the-consumed-follow-on-level-now-buys}
+This is the point where the post-release line first becomes able not only to normalize a consumed downstream close-side or next-cycle work family as one compact downstream program, but also to execute that program as one explicit downstream cycle on the consumed follow-on level. The horizon-side line can now hand a normalized consumed downstream close-side program onward as one close-side downstream cycle or hand a normalized consumed downstream next-cycle program onward as one next-cycle downstream cycle under the inherited horizon tag. The boundary-side line can now do the same under the inherited stop-preserving boundary tag and earliest honest boundary stop, without collapsing the two possibilities into one vague continuation gesture. Later OP-oriented work can therefore begin from a conservative ask/respond/aggregate/dispatch/program/cycle/return/close/promote/branch/consume/task/program/cycle/return/branch/consume/task/program/cycle protocol instead of improvising how normalized consumed downstream programs execute.
+\end{remark}
+
+
+\noindent\textbf{Reader cue.} Read the next block as the first downstream cycle-to-return / close-or-promote interface extracted from the downstream program-to-cycle layer of 19AZ$^{(6bo)}$. Its purpose is to turn each already executed consumed downstream cycle into one disciplined return object that either records an honest compact close-side exit or an admissible next-cycle continuation, thereby bringing the second downstream loop to the same honest close-or-promote threshold as the earlier layers.
+
+\subsection*{19AZ$^{(6bp)}$. Downstream cycle-to-return / close-or-promote interface on the consumed follow-on level}
+\label{sec:first-downstream-cycle-to-return-close-or-promote-interface-extracted-from-the-downstream-program-to-cycle-layer-on-the-consumed-follow-on-level}
+After 19AZ$^{(6bo)}$, every normalized consumed downstream close-side or next-cycle-side program already yields one controlled downstream cycle. The present block turns that cycle into one disciplined downstream return object that either records a compact close-side exit or an admissible next-cycle continuation. On the close side, the return object packages the explicit close-side cycle together with its compact close-side exit under the inherited route tag. On the next-cycle side, the return object packages the explicit next-cycle cycle together with its admissible next-cycle continuation under the same inherited route tag. On the boundary side, every such return object must remain subordinate to the inherited stop-preserving boundary tag and inherited earliest honest boundary stop. The point is to make the second downstream loop honestly closable without forcing a third recursion before release packaging.
+
+\begin{definition}[First downstream cycle-to-return / close-or-promote interface object on the consumed follow-on level]
+\label{def:first-downstream-cycle-to-return-close-or-promote-interface-object-on-the-consumed-follow-on-level}
+Fix a certified finite extension word \(\mathbf w\in\mathcal L^{\mathrm{ext}}_{m}\), a finite nonempty admissible request subfamily
+\[
+  \mathcal S \subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w),
+\]
+a branch marker \(\mathfrak b\in\{\mathsf{CL},\mathsf{PR}\}\), and an admissible downstream program-to-cycle object
+\[
+  \mathsf{Cycle}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathfrak b\mid\mathcal S^{+}).
+\]
+When \(\mathfrak b=\mathsf{PR}\), also keep fixed the second finite nonempty admissible request subfamily
+\[
+  \mathcal S^{+}\subseteq \mathsf{Q}^{\mathrm{cons}}_{m}(\mathbf w).
+\]
+Define the associated \emph{first downstream cycle-to-return / close-or-promote interface object on the consumed follow-on level}
+\[
+  \mathsf{Iter}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathfrak b\mid\mathcal S^{+})
+\]
+by the following cases.
+\begin{enumerate}[label=(\roman*)]
+  \item If \(\mathfrak b=\mathsf{CL}\), define
+\[
+  \mathsf{Iter}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathsf{CL})
+  :=
+  \bigl(\mathsf{Cycle}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathsf{CL}),\mathsf{RET}^{\mathrm{close,down}}_{m},\mathsf{Close}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S)\bigr).
+\]
+This downstream return object is admissible only if it remains subordinate to the same inherited route tag and, in the boundary-side case, preserves the inherited earliest honest boundary stop.
+
+  \item If \(\mathfrak b=\mathsf{PR}\), define
+\[
+  \mathsf{Iter}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathsf{PR}\mid\mathcal S^{+})
+  :=
+  \bigl(\mathsf{Cycle}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathsf{PR}\mid\mathcal S^{+}),\mathsf{RET}^{\mathrm{next,down}}_{m},\mathsf{Next}^{\mathrm{down}}_{m}(\mathbf w;\mathcal S,\mathcal S^{+})\bigr).
+\]
+This downstream return object is admissible only if it remains subordinate to the same inherited route tag, does not manufacture a fresh theorematic certificate, and, in the boundary-side case, does not smooth away, postpone, or deny the inherited earliest honest boundary stop.
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}[Every consumed downstream cycle yields exactly one honest downstream return close-or-promote object]
+\label{prop:every-consumed-downstream-cycle-yields-exactly-one-honest-downstream-return-close-or-promote-object}
+Assume the setting of Definition~\ref{def:first-downstream-cycle-to-return-close-or-promote-interface-object-on-the-consumed-follow-on-level}. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item every admissible downstream close-side cycle yields exactly one downstream close-return object;
+  \item every admissible downstream next-cycle cycle yields exactly one downstream next-return object;
+  \item in the horizon-side case, every admissible downstream cycle-to-return object remains subordinate to the inherited horizon tag;
+  \item in the boundary-side case, every admissible downstream cycle-to-return object remains subordinate to the inherited stop-preserving boundary tag and inherited earliest honest boundary stop; and
+  \item no admissible downstream cycle-to-return object may manufacture a fresh theorematic certificate, erase the horizon/boundary distinction, or collapse the close/next-cycle difference into one undifferentiated downstream continuation gesture.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Clauses (i) and (ii) are immediate from Definition~\ref{def:first-downstream-cycle-to-return-close-or-promote-interface-object-on-the-consumed-follow-on-level}: once the branch marker is fixed, the downstream return object is defined by exactly one of the two displayed clauses. Clauses (iii) and (iv) follow because the downstream cycle-to-return object is defined directly from a downstream program-to-cycle object that is already subordinate to the inherited route tag and, in the boundary-side case, to the inherited earliest honest boundary stop, by Proposition~\ref{prop:every-normalized-downstream-program-object-yields-exactly-one-controlled-downstream-cycle}. Clause (v) is exactly the inherited certificate-aware route discipline from 19AZ$^{(6ae)}$ through 19AZ$^{(6bo)}$, now made explicit at the second downstream return interface.
+\end{proof}
+
+\begin{corollary}[The present post-v3.29.0 line already carries a first downstream cycle-to-return interface on the consumed follow-on level]
+\label{cor:the-present-post-v3290-line-already-carries-a-first-downstream-cycle-to-return-interface-on-the-consumed-follow-on-level}
+For the first-stage word \(\mathbf w_3\in\{\mathsf A,\mathsf B\}\), the current active line already carries a first downstream cycle-to-return interface object
+\[
+  \mathsf{Iter}^{\mathrm{down}}_{2}(\mathbf w_3;\mathcal S,\mathfrak b\mid\mathcal S^{+})
+\]
+for every finite nonempty admissible request subfamily
+\[
+  \mathcal S\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3),
+\]
+every branch marker \(\mathfrak b\in\{\mathsf{CL},\mathsf{PR}\}\), and in the promotion case every second finite nonempty admissible request subfamily
+\[
+  \mathcal S^{+}\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3)
+\]
+that remains subordinate to the same inherited route tag. So the post-release continuation now carries not only a conservative ask/respond/aggregate/dispatch/program/cycle/return/close/promote/branch/consume/task/program/cycle/return/branch/consume/task/program/cycle protocol, but also the first disciplined downstream cycle-to-return interface that brings the consumed follow-on level to one honest close-or-promote threshold.
+\end{corollary}
+
+\begin{proof}
+Immediate from Corollary~\ref{cor:the-present-post-v3290-line-already-carries-a-first-downstream-program-to-cycle-layer-on-the-consumed-follow-on-level} and Proposition~\ref{prop:every-consumed-downstream-cycle-yields-exactly-one-honest-downstream-return-close-or-promote-object}.
+\end{proof}
+
+\begin{remark}[What the first downstream cycle-to-return interface on the consumed follow-on level now buys]
+\label{rem:what-the-first-downstream-cycle-to-return-interface-on-the-consumed-follow-on-level-now-buys}
+This is the point where the post-release line first becomes able not only to execute a normalized consumed downstream close-side or next-cycle-side program as one explicit downstream cycle, but also to turn that cycle into one disciplined return object that either records an honest compact close-side exit or an admissible next-cycle continuation. The horizon-side line can now hand a consumed downstream close-cycle onward as one compact close-side downstream return object or hand a consumed downstream next-cycle onward as one admissible downstream continuation object under the inherited horizon tag. The boundary-side line can now do the same under the inherited stop-preserving boundary tag and earliest honest boundary stop, without collapsing the two possibilities into one vague continuation gesture. Later OP-oriented work can therefore begin from a conservative ask/respond/aggregate/dispatch/program/cycle/return/close/promote/branch/consume/task/program/cycle/return/branch/consume/task/program/cycle/return protocol instead of improvising how normalized consumed downstream cycles return.
+\end{remark}
+
+
+\noindent\textbf{Reader cue.} Read the next block as a release-oriented freeze point extracted from the now completed second downstream loop through task, program, cycle, and return on the consumed follow-on level. Its purpose is not to claim that no further conservative iteration is ever possible, but to record that the present post-v3.29.0 line has already reached a structurally stable, release-ready stopping point at which a new public version may honestly freeze before opening yet another recursive downstream pass.
+
+\subsection*{19AZ$^{(6bq)}$. First release-freeze stabilization point extracted from the completed second downstream loop}
+\label{sec:first-release-freeze-stabilization-point-extracted-from-the-completed-second-downstream-loop}
+After 19AZ$^{(6bn)}$--19AZ$^{(6bp)}$, the post-release line now carries a second downstream loop that again reaches an honest task/program/cycle/return threshold on the consumed follow-on level. The present block records the structural consequence relevant for release packaging: before opening a third recursive downstream pass, the current line may honestly stop and freeze here, because the second downstream loop is no longer dangling in the middle of an unfinished translation but already reaches a compact return threshold under the inherited route discipline.
+
+\begin{definition}[Release-freeze stabilization object for the completed second downstream loop]
+\label{def:release-freeze-stabilization-object-for-the-completed-second-downstream-loop}
+Fix the first-stage word \(\mathbf w_3\in\{\mathsf A,\mathsf B\}\), a finite nonempty admissible request subfamily
+\[
+  \mathcal S\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3),
+\]
+a branch marker \(\mathfrak b\in\{\mathsf{CL},\mathsf{PR}\}\), and in the promotion case a second finite nonempty admissible request subfamily
+\[
+  \mathcal S^{+}\subseteq \mathsf{Q}^{\mathrm{cons}}_{2}(\mathbf w_3)
+\]
+that remains subordinate to the same inherited route tag. The associated \emph{release-freeze stabilization object}
+\[
+  \mathsf{Freeze}^{\mathrm{cons}}_{2}(\mathbf w_3;\mathcal S,\mathfrak b\mid\mathcal S^{+})
+\]
+is the declaration that the active line already reaches the completed second downstream loop through
+\[
+  \mathsf{Task}^{\mathrm{down}}_{2},
+  \quad
+  \mathsf{Prog}^{\mathrm{down}}_{2},
+  \quad
+  \mathsf{Cycle}^{\mathrm{down}}_{2},
+  \quad
+  \mathsf{Iter}^{\mathrm{down}}_{2},
+\]
+and may therefore be frozen for public release packaging before a third recursive downstream pass is opened.
+\end{definition}
+
+\begin{proposition}[The completed second downstream loop already supplies an honest public freeze point]
+\label{prop:the-completed-second-downstream-loop-already-supplies-an-honest-public-freeze-point}
+Assume the setting of Definition~\ref{def:release-freeze-stabilization-object-for-the-completed-second-downstream-loop}. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item the present line already carries a completed second downstream loop through task, program, cycle, and return on the consumed follow-on level;
+  \item freezing the line at this point does not erase any already opened structural step, because the second downstream loop is no longer cut off mid-translation;
+  \item freezing the line at this point does not claim maximality, final completeness, or impossibility of later further downstream recursion; and
+  \item the only remaining steps needed for a public version after this structural freeze are release packaging steps such as DOI insertion, chronology update, and audit/freeze notes, rather than another mandatory structural rescue block.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Clause (i) follows from 19AZ$^{(6bm)}$ through 19AZ$^{(6bp)}$: the consumed follow-on level now carries explicit downstream task, program, cycle, and return objects. Clause (ii) follows because the second downstream loop now reaches the same kind of honest return threshold already reached earlier in the main post-release loop, so freezing here no longer leaves the line suspended between task and execution. Clause (iii) follows because Definition~\ref{def:release-freeze-stabilization-object-for-the-completed-second-downstream-loop} records only a release-oriented stopping point and does not assert that no later third recursive pass could be constructed. Clause (iv) is then immediate: once the line reaches a completed second downstream return threshold, the remaining work before release is packaging rather than structural rescue.
+\end{proof}
+
+\begin{corollary}[That inherited public release records the freeze point that needed DOI and audit rather than another mandatory rescue staircase]
+\label{cor:the-next-public-version-now-needs-doi-and-audit-rather-than-another-mandatory-rescue-staircase}
+For the current active post-v3.29.0 line, the structurally necessary continuation up to a public freeze point has now been completed. That inherited public release therefore recorded that freeze point, packaged it under the assigned version number and DOI, and did not require a third downstream rescue staircase merely to avoid ending in the middle of the second one.
+\end{corollary}
+
+\begin{proof}
+Immediate from Proposition~\ref{prop:the-completed-second-downstream-loop-already-supplies-an-honest-public-freeze-point}.
+\end{proof}
+
+\begin{remark}[What the release-freeze stabilization point now buys]
+\label{rem:what-the-release-freeze-stabilization-point-now-buys}
+This is the point where the post-v3.29.0 line first reached an honestly release-ready stopping point after the start of the conservative upgrade-plus-probe integration stage. The line already carries the main conservative staircase, an OP-facing intake/request/fulfillment/aggregation/dispatch/program/cycle/return stack, and a completed second downstream loop through consumed task, program, cycle, and return. That was enough structural closure for that inherited public release. Anything beyond this point would be a new optional recursive expansion rather than a necessary repair of an unfinished line.
+\end{remark}
+
+\clearpage
