@@ -42,6 +42,13 @@ def decode_process_bytes(data: bytes | None) -> str:
     return data.decode("utf-8", errors="replace")
 
 
+def tail_text(path: Path, max_lines: int = 120) -> str:
+    if not path.exists():
+        return ""
+    lines = path.read_text(encoding="utf-8", errors="replace").splitlines()
+    return "\n".join(lines[-max_lines:])
+
+
 def clean_auxiliary_files(directory: Path) -> None:
     suffixes = {
         ".aux", ".bbl", ".bcf", ".blg", ".fdb_latexmk", ".fls",
@@ -104,6 +111,14 @@ def run_latexmk(tex_path: Path, out_dir: Path) -> dict:
     if pdf_path and pdf_path.exists():
         result["pdf_sha256"] = sha256(pdf_path)
         result["pdf_bytes"] = pdf_path.stat().st_size
+
+    if proc.returncode != 0:
+        print(f"::error title=LaTeX build failed::{tex_path} returned {proc.returncode}", file=sys.stderr)
+        print(f"--- tail of {log_path} ---", file=sys.stderr)
+        print(tail_text(log_path), file=sys.stderr)
+        if tex_log_path:
+            print(f"--- tail of {tex_log_path} ---", file=sys.stderr)
+            print(tail_text(tex_log_path), file=sys.stderr)
 
     return result
 
