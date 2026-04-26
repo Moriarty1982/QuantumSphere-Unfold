@@ -35,6 +35,13 @@ def sha256(path: Path) -> str:
     return h.hexdigest()
 
 
+def decode_process_bytes(data: bytes | None) -> str:
+    """Decode process output without allowing locale bytes to crash the build."""
+    if not data:
+        return ""
+    return data.decode("utf-8", errors="replace")
+
+
 def clean_auxiliary_files(directory: Path) -> None:
     suffixes = {
         ".aux", ".bbl", ".bcf", ".blg", ".fdb_latexmk", ".fls",
@@ -58,10 +65,13 @@ def run_latexmk(tex_path: Path, out_dir: Path) -> dict:
         f"-outdir={job_out}",
         str(tex_path.resolve()),
     ]
-    proc = subprocess.run(cmd, cwd=str(tex_path.parent), text=True, capture_output=True)
+    proc = subprocess.run(cmd, cwd=str(tex_path.parent), text=False, capture_output=True)
+
+    stdout_text = decode_process_bytes(proc.stdout)
+    stderr_text = decode_process_bytes(proc.stderr)
 
     log_path = job_out / f"{tex_path.stem}.build.stdout.log"
-    log_path.write_text(proc.stdout + "\n\n--- STDERR ---\n" + proc.stderr, encoding="utf-8", errors="replace")
+    log_path.write_text(stdout_text + "\n\n--- STDERR ---\n" + stderr_text, encoding="utf-8", errors="replace")
 
     pdf_candidates = list(job_out.glob("*.pdf"))
     log_candidates = list(job_out.glob("*.log"))
