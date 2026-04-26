@@ -52,7 +52,7 @@ jobs:
         run: |
           python3 scripts/qsc_latex_build.py \
             --source-dir "$SOURCE_DIR" \
-            --output-dir "build/qsc-pdf-artifacts" \
+            --output-dir "$GITHUB_WORKSPACE/build/qsc-pdf-artifacts" \
             --build-historical "$BUILD_HISTORICAL"
 
       - name: Collect generated PDFs and logs
@@ -63,23 +63,28 @@ jobs:
           from pathlib import Path
           import shutil
 
-          src = Path('sources/build/qsc-pdf-artifacts')
           dst = Path('build/qsc-pdf-artifacts')
           logs = dst / 'logs'
           audit = dst / 'audit'
           logs.mkdir(parents=True, exist_ok=True)
           audit.mkdir(parents=True, exist_ok=True)
 
-          if src.exists():
-              for p in src.rglob('*'):
+          for d in [dst / 'active-core', dst / 'historical-witness']:
+              if not d.exists():
+                  continue
+              for p in d.rglob('*'):
                   if not p.is_file():
                       continue
                   if p.suffix == '.pdf':
                       shutil.copy2(p, dst / p.name)
                   elif p.suffix in {'.log', '.fls', '.fdb_latexmk'}:
                       shutil.copy2(p, logs / p.name)
-                  elif p.parent == src and p.suffix in {'.json', '.md', '.txt'}:
-                      shutil.copy2(p, audit / p.name)
+
+          for p in list(dst.glob('*.build.stdout.log')):
+              shutil.move(str(p), str(logs / p.name))
+          for d in [dst / 'active-core', dst / 'historical-witness']:
+              if d.exists():
+                  shutil.rmtree(d)
 
           file_list = sorted(str(p) for p in dst.rglob('*') if p.is_file())
           (audit / 'artifact-file-list.txt').write_text('\n'.join(file_list) + '\n', encoding='utf-8')
