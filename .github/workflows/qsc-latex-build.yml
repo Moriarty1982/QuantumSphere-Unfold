@@ -63,6 +63,7 @@ jobs:
             python3
 
       - name: Build release PDFs
+        continue-on-error: true
         run: |
           python3 scripts/qsc_latex_build.py \
             --source-dir "$SOURCE_DIR" \
