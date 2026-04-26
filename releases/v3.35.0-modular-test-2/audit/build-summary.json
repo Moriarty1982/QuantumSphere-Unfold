@@ -1,0 +1,39 @@
+{
+  "status": "ok",
+  "source_dir": "sources",
+  "build_historical": true,
+  "selected_tex_files": [
+    "sources/active-core.tex",
+    "sources/historical-witness.tex"
+  ],
+  "results": [
+    {
+      "tex": "sources/active-core.tex",
+      "returncode": 0,
+      "pdf": "/__w/QuantumSphere-Unfold/QuantumSphere-Unfold/build/qsc-pdf-artifacts/active-core/active-core.pdf",
+      "stdout_log": "/__w/QuantumSphere-Unfold/QuantumSphere-Unfold/build/qsc-pdf-artifacts/active-core/active-core.build.stdout.log",
+      "tex_log": "/__w/QuantumSphere-Unfold/QuantumSphere-Unfold/build/qsc-pdf-artifacts/active-core/active-core.build.stdout.log",
+      "undefined_refs": 1,
+      "undefined_citations": 0,
+      "overfull_hbox": 140,
+      "overfull_vbox": 0,
+      "fatal_errors": 0,
+      "pdf_sha256": "48c59cfea15aa3d2b3e1bc3f7f44a6706271a29f1929d183b0b7827adfa923a3",
+      "pdf_bytes": 2955579
+    },
+    {
+      "tex": "sources/historical-witness.tex",
+      "returncode": 0,
+      "pdf": "/__w/QuantumSphere-Unfold/QuantumSphere-Unfold/build/qsc-pdf-artifacts/historical-witness/historical-witness.pdf",
+      "stdout_log": "/__w/QuantumSphere-Unfold/QuantumSphere-Unfold/build/qsc-pdf-artifacts/historical-witness/historical-witness.build.stdout.log",
+      "tex_log": "/__w/QuantumSphere-Unfold/QuantumSphere-Unfold/build/qsc-pdf-artifacts/historical-witness/historical-witness.log",
+      "undefined_refs": 0,
+      "undefined_citations": 0,
+      "overfull_hbox": 11,
+      "overfull_vbox": 0,
+      "fatal_errors": 0,
+      "pdf_sha256": "82ceed04094102af6e9a9ac7ac2bff4eab93cda8731b175d92eecb340f3fe2e9",
+      "pdf_bytes": 1492155
+    }
+  ]
+}

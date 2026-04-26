@@ -1,0 +1,2 @@
+48c59cfea15aa3d2b3e1bc3f7f44a6706271a29f1929d183b0b7827adfa923a3  active-core/active-core.pdf
+82ceed04094102af6e9a9ac7ac2bff4eab93cda8731b175d92eecb340f3fe2e9  historical-witness/historical-witness.pdf

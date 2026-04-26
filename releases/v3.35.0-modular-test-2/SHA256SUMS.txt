@@ -1,0 +1,10 @@
+423a16f86ce8ed7ca793df39d5a94c577b2993f5a9cd147a31488b7f67df0011  ./Quantum_Sphaera_Companion_v3.35.0-modular-test-2_release_bundle.zip
+f5c496cbec85dbd913025626a3d18f09abce9a74eb169d845c00af399b301f3b  ./Quantum_Sphaera_Companion_v3.35.0-modular-test-2_sources.zip
+48c59cfea15aa3d2b3e1bc3f7f44a6706271a29f1929d183b0b7827adfa923a3  ./active-core.pdf
+18a27ef744c3fe87b6e2c5d4860b145063cce1e54ebb9cadeec6a50d8010c26f  ./audit/build-summary.json
+6d936eacf0fa39303438d96f6862a36a98cb871355b902a929301449e88be4ec  ./audit/build-summary.md
+82ceed04094102af6e9a9ac7ac2bff4eab93cda8731b175d92eecb340f3fe2e9  ./historical-witness.pdf
+cb86bdbf0ba11ea6e0749cec956695ed2d2c3065015534604111ed2d0eceb4cc  ./logs/active-core.build.stdout.log
+da7812efabc45d47ca6d80df900c75e8048786e6006146eb1356bebfac373e45  ./logs/active-core.log
+c0f2ba56951f750bcac700bdfcdcfc5944ef4ae44a191e8a464344090bb4e598  ./logs/historical-witness.build.stdout.log
+b24f83f357e8abc431d4940584252f17960dfefb74148a2954a8e1ed1fdb438d  ./logs/historical-witness.log
