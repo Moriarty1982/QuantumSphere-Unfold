@@ -24,6 +24,7 @@ on:
 
 permissions:
   contents: read
+  packages: read
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -38,29 +39,13 @@ jobs:
   build-pdfs:
     name: Build QSC PDFs
     runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/moriarty1982/quantumsphere-unfold/qsc-latex:latest
     timeout-minutes: 180
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: Install TeX Live and build helpers
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y --no-install-recommends \
-            latexmk \
-            texlive-latex-base \
-            texlive-latex-recommended \
-            texlive-latex-extra \
-            texlive-fonts-recommended \
-            texlive-science \
-            texlive-pictures \
-            texlive-bibtex-extra \
-            texlive-extra-utils \
-            ghostscript \
-            poppler-utils \
-            zip \
-            python3
 
       - name: Build release PDFs
         continue-on-error: true
