@@ -15,8 +15,6 @@ on:
   push:
     branches:
       - main
-    tags:
-      - "v*"
     paths:
       - "sources/**"
       - "scripts/qsc_latex_build.py"
@@ -37,7 +35,7 @@ concurrency:
 
 jobs:
   build-pdfs:
-    name: Build QSC PDFs
+    name: Build QSC preview PDFs
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/moriarty1982/quantumsphere-unfold/qsc-latex:latest
@@ -47,7 +45,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build release PDFs
+      - name: Build preview PDFs
         continue-on-error: true
         run: |
           python3 scripts/qsc_latex_build.py \
@@ -55,42 +53,7 @@ jobs:
             --output-dir "$GITHUB_WORKSPACE/build/qsc-pdf-artifacts" \
             --build-historical "$BUILD_HISTORICAL"
 
-      - name: Collect generated PDFs and logs
-        if: always()
-        run: |
-          mkdir -p build/qsc-pdf-artifacts/logs build/qsc-pdf-artifacts/audit
-          python3 - <<'PY'
-          from pathlib import Path
-          import shutil
-
-          dst = Path('build/qsc-pdf-artifacts')
-          logs = dst / 'logs'
-          audit = dst / 'audit'
-          logs.mkdir(parents=True, exist_ok=True)
-          audit.mkdir(parents=True, exist_ok=True)
-
-          for d in [dst / 'active-core', dst / 'historical-witness']:
-              if not d.exists():
-                  continue
-              for p in d.rglob('*'):
-                  if not p.is_file():
-                      continue
-                  if p.suffix == '.pdf':
-                      shutil.copy2(p, dst / p.name)
-                  elif p.suffix in {'.log', '.fls', '.fdb_latexmk'}:
-                      shutil.copy2(p, logs / p.name)
-
-          for p in list(dst.glob('*.build.stdout.log')):
-              shutil.move(str(p), str(logs / p.name))
-          for d in [dst / 'active-core', dst / 'historical-witness']:
-              if d.exists():
-                  shutil.rmtree(d)
-
-          file_list = sorted(str(p) for p in dst.rglob('*') if p.is_file())
-          (audit / 'artifact-file-list.txt').write_text('\n'.join(file_list) + '\n', encoding='utf-8')
-          PY
-
-      - name: Upload QSC PDFs and logs
+      - name: Upload QSC preview PDFs and logs
         if: always()
         uses: actions/upload-artifact@v4
         with:
