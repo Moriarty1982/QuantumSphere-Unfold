@@ -11,23 +11,26 @@
 \usepackage{fancyhdr,bm}
 \usepackage{slashed}
 \usepackage{multicol}
-\setlength{\emergencystretch}{2em}
+\setlength{\emergencystretch}{16em}
+\tolerance=5000
+\setlength{\arraycolsep}{1.8pt}
+\setlength{\tabcolsep}{3pt}
 \allowdisplaybreaks[1]
 \usepackage[style=ddmmyyyy]{datetime2}
 
 \newcommand{\safegraphic}[2][]{%
   \IfFileExists{#2}{\includegraphics[#1]{#2}}{%
-    \fbox{\begin{minipage}{0.9\linewidth}\centering\small Placeholder figure not bundled in this release:\\texttt{\detokenize{#2}}\end{minipage}}%
+    \fbox{\begin{minipage}{0.82\linewidth}\centering\scriptsize Placeholder figure not bundled in this release.\end{minipage}}%
   }%
 }
 
-\geometry{margin=2.5cm}
+\geometry{margin=2.15cm}
 \hypersetup{
   hidelinks,
-  pdftitle={Quantum Sphaera Companion: A Structure-First Mathematical Unfolding (v3.35.0-r01 historical witness working candidate)},
+  pdftitle={Quantum Sphaera Companion: A Structure-First Mathematical Unfolding (v4.0.0 preserved historical witness release final final)},
   pdfauthor={Marc Brendecke},
-  pdfsubject={Historical witness PDF of mathematical companion; v3.35.0-r01 historical witness working candidate; previous version DOI 10.5281/zenodo.19746821; preserved Part II/proof memory as separate PDF in the same release bundle above the public v3.33.0 release},
-  pdfkeywords={Quantum Sphaera, historical witness, preserved Part II, proof memory, audit store},
+  pdfsubject={Historical witness PDF of mathematical companion; v4.0.0 preserved historical witness release final final; concept DOI 10.5281/zenodo.19210728; prior version DOI 10.5281/zenodo.19750674; version DOI 10.5281/zenodo.19803231; preserved Part II/proof memory as separate PDF in the same preserved-release final bundle},
+  pdfkeywords={Quantum Sphaera, historical witness, preserved Part II, proof memory, audit store, v4.0.0},
   pdfcreator={OpenAI},
   pdfproducer={pdfLaTeX}
 }
@@ -50,8 +53,8 @@
 \newtheorem{axiom}{Axiom}
 
 % --- Document metadata ---
-\newcommand{\docversion}{3.35.0-r01}
-\newcommand{\docdate}{\DTMdisplaydate{2026}{04}{25}{-1}}
+\newcommand{\docversion}{4.0.0}
+\newcommand{\docdate}{\DTMdisplaydate{2026}{04}{27}{-1}}
 
 % --- Macros ---
 \newcommand{\bsym}{\beta_{\mathrm{sym}}}
@@ -99,10 +102,12 @@
   Marc Brendecke\\
   \small Independent Researcher, Bochum, Germany\\
   \small Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}\\
+  \small Version DOI: \href{https://doi.org/10.5281/zenodo.19805670}{10.5281/zenodo.19805670}\\
+  \small Prior Version DOI: \href{https://doi.org/10.5281/zenodo.19804512}{10.5281/zenodo.19804512}\\
   \small Companion Paper --- Preprint, not peer reviewed.\\
   \small Technical unfolding of the main Sphaera paper~\cite{brendecke2026main}.
 }
-\date{\docdate{} --- Version \docversion\ --- historical witness pre-v4 QAM preparation working candidate}
+\date{\docdate{} --- Version \docversion\ --- historical witness release final}
 
 
 \begin{document}
@@ -110,20 +115,20 @@
 \begin{center}
 {\LARGE\bfseries Quantum Sphaera Companion}\par\vspace{0.4em}
 {\Large\bfseries Historical Witness}\par\vspace{0.8em}
-{\large A preserved Part II / COMPLETE snapshot for v3.35.0-r01}\par\vspace{0.8em}
+{\large A preserved Part II / COMPLETE snapshot carried with v4.0.0}\par\vspace{0.8em}
 Marc Brendecke\par
 Independent Researcher, Bochum, Germany\par
 Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}\par
-\docdate{} --- Version \docversion{} --- historical witness pre-v4 QAM preparation working candidate
+\docdate{} --- Version \docversion{} --- historical witness release final
 \end{center}
 \thispagestyle{fancy}
 
 \begin{quote}\small
-\noindent\textbf{Status.} This PDF preserves the historical witness that was formerly integrated as Part II of the monolithic Companion. It is not deleted, shortened, or promoted into the active theorem core. It is carried as proof memory, genealogy, and reconstruction support in the same release bundle as the active core. The v3.35.0-r01 historical witness working candidate keeps this file separate for readability and archival clarity, not as a second theorematic line.
+\noindent\textbf{Status.} This PDF preserves the historical witness that was formerly integrated as Part II of the monolithic Companion. It is not deleted, shortened, or promoted into the active theorem core. It is carried as proof memory, genealogy, and reconstruction support in the same release bundle as the active core. The v3.35.0 historical witness release final keeps this file separate for readability and archival clarity, not as a second theorematic line.
 
 \medskip
 \noindent\textbf{Active companion file.} The governing current proof-line is provided as\par
-\texttt{Quantum\_Sphaera\_Companion\_v3\_35\_0\_r01\_active\_core\_pre\_v4\_qam.pdf}.
+\texttt{Quantum\_Sphaera\_Companion\_v3\_35\_0\_active\_core\_release\_final.pdf}.
 
 \medskip
 \noindent\textbf{Reading rule.} If a historical statement sounds stronger, flatter, or older than the active-core status ledger, the active-core reading governs. In particular, this historical witness does not close OP~1/4 or OP~5(B).
@@ -341,7 +346,7 @@ Both sectors share the same vacuum and the same minimal scale:
 String theory and loop quantum gravity are therefore not competing theories of quantum gravity, but bosonic and fermionic projections of the same object under the Heisenberg compensator.
 
 \paragraph*{Theorem 9.3 (Triolic structure of $\gamma_{\mathrm{BI}}$).}
-The Barbero--Immirzi parameter $\gamma_{\mathrm{BI}}$ and the string-sector candidate
+The Barbero--Immirzi parameter $\gamma_{\mathrm{BI}}$ and the string-sector final
 \[
 \gamma_{\mathrm{string}} = \frac{\ln 2}{\pi\sqrt{3}}
 \]
@@ -499,7 +504,7 @@ Generation O-unit Quarks Leptons Neutrino Gen 1 e4 u, d e $\nu$e Gen 2 e5 c, s $
 \paragraph*{Proof. Under SU(3) $\subset$G2, the imaginary octonions decompose as Im(O) =}
 C $\oplus$C3: singlet e7 and triplet (e4, e5, e6). The anti-triplet (e1, e2, e3) carries the conjugate color representation. Each generation (C$\otimes$H)$\otimes$ei+3 carries one copy of the spinor representation of the Lorentz group (from C$\otimes$H = M(2, C)) tensored with one color index. The Fano plane structure of O gives the cyclic e4 $\to$e5 $\to$e6 symmetry.
 \paragraph*{Remark (CKM mixing angles). The Cabibbo mixing angle $\theta$C $\approx$13 arises from}
-G2-rotations between the generation planes. A natural candidate is $\theta$12 $\approx$ arcsin($\gamma$string) $\approx$7.3, within a factor of $\approx$2 of the observed value. The precise derivation of the CKM matrix from G2 Euler angles is open.
+G2-rotations between the generation planes. A natural final is $\theta$12 $\approx$ arcsin($\gamma$string) $\approx$7.3, within a factor of $\approx$2 of the observed value. The precise derivation of the CKM matrix from G2 Euler angles is open.
 \paragraph*{Theorem 11.4 (Koide formula from the triolic structure). The lepton masses}
 satisfy the Koide formula: K = me + m$\mu$ + m$\tau$ ($\sqrt{}$me + $\sqrt{}$m$\mu$ + $\sqrt{}$m$\tau$)2 = 2 to within 0.005\% experimentally. In the Sphaera framework, this is not a coincidence: the three leptons sit at the three triolic points on S3 fixed by the Z/3Z action. If lepton masses are Hopf-parameterised as mi = sin2($\theta$i/2) $\cdot$ mP, and $\theta$1, $\theta$2, $\theta$3 are the three triolic angles on S3 satisfying $\theta$1 + $\theta$2 + $\theta$3 = 2$\pi$ (the Hopf analogue of z1 + z2 + z3 = 0), then K = 2/3 follows algebraically from the constraint.
 \paragraph*{Proof. The triolic constraint P}
@@ -1829,7 +1834,7 @@ Assume the stabilized visible generator-atlas-holonomy sector, the exact represe
   \item \textbf{Already closed as separate historical OPs.}
   OP~2 as an independent operator problem, OP~3 as a primary open problem, and OP~5 step~(A) no longer remain open fronts in the main line. Their surviving content is either already absorbed into OP~1-type correction work or reduced to the residual part of OP~5.
   \item \textbf{Reduced residual open core of OP~1.}
-  The remaining content of OP~1 is not the existence of a visible frame candidate, but the explicit prime-lattice / continuum-limit correction that moves the continuum fixed-point candidate to the measured matter-frame value.
+  The remaining content of OP~1 is not the existence of a visible frame final, but the explicit prime-lattice / continuum-limit correction that moves the continuum fixed-point final to the measured matter-frame value.
   \item \textbf{Reduced residual open core of OP~5.}
   The remaining content of OP~5 is the quantified Theta-sum / balance problem from step~(B). In particular, OP~5 is no longer a broad visible-sector problem, but a residual quantitative balance problem downstream of the same stabilized record.
   \item \textbf{Other live fronts remain downstream.}
@@ -1840,7 +1845,7 @@ Assume the stabilized visible generator-atlas-holonomy sector, the exact represe
 \end{theorem}
 
 \begin{proof}
-Item~(i) is the status reclassification already recorded in the 3.5.x cleanup line: OP~2 as a separate operator problem is absorbed, OP~3 is no longer carried as a primary main-line open front, and OP~5 step~(A) is already closed while only step~(B) remains. Item~(ii) is exactly the current reading of OP~1 in the synchronized historical-open-problems layer: the broad frame-candidate issue has collapsed to the explicit prime-lattice / continuum-limit correction. Item~(iii) is the corresponding synchronized reading of OP~5, whose remaining content is the Theta-sum / balance step after the earlier renormalization and step~(A) closure. Item~(iv) is the present status of the remaining live fronts, all of which are explicitly recorded as open but downstream structural or quantitative tasks rather than missing visible primitives. Finally, Item~(v) follows from Theorem~\ref{thm:mainline-3502}, Theorem~\ref{thm:mainline-3600}, and Lemma~\ref{lem:mainline-3610}: once visible truth is exactly representable at record level and all admissible later layers are conservative, no unresolved historical OP can legitimately force a second visible interface in the present stabilized reading without violating the already established residual-record discipline.
+Item~(i) is the status reclassification already recorded in the 3.5.x cleanup line: OP~2 as a separate operator problem is absorbed, OP~3 is no longer carried as a primary main-line open front, and OP~5 step~(A) is already closed while only step~(B) remains. Item~(ii) is exactly the current reading of OP~1 in the synchronized historical-open-problems layer: the broad frame-final issue has collapsed to the explicit prime-lattice / continuum-limit correction. Item~(iii) is the corresponding synchronized reading of OP~5, whose remaining content is the Theta-sum / balance step after the earlier renormalization and step~(A) closure. Item~(iv) is the present status of the remaining live fronts, all of which are explicitly recorded as open but downstream structural or quantitative tasks rather than missing visible primitives. Finally, Item~(v) follows from Theorem~\ref{thm:mainline-3502}, Theorem~\ref{thm:mainline-3600}, and Lemma~\ref{lem:mainline-3610}: once visible truth is exactly representable at record level and all admissible later layers are conservative, no unresolved historical OP can legitimately force a second visible interface in the present stabilized reading without violating the already established residual-record discipline.
 \end{proof}
 
 \begin{corollary}[3.7 OP-first corollary: defer later language growth]
@@ -1984,11 +1989,11 @@ In the present stabilized reading, QAM would primarily compress and reorganize p
 
 
 \subsection*{3.8.2 OP~1 scalar residual channel}
-The next useful closure move is to compress OP~1 to the smallest genuinely live mathematical object. The present document already contains the continuum fixed-point candidate, the self-consistent physical matching system, and the statement that the surviving burden is the prime-lattice / continuum-limit correction. What is added here is the observation that, in the present stabilized reading, this burden can be written as a single scalar residual channel rather than as a diffuse family of unrelated corrections.
+The next useful closure move is to compress OP~1 to the smallest genuinely live mathematical object. The present document already contains the continuum fixed-point final, the self-consistent physical matching system, and the statement that the surviving burden is the prime-lattice / continuum-limit correction. What is added here is the observation that, in the present stabilized reading, this burden can be written as a single scalar residual channel rather than as a diffuse family of unrelated corrections.
 
 \begin{definition}[OP~1 scalar residual profile]
 \label{def:mainline-3820}
-For \(\mu>1\), define the continuum-induced matter-frame candidate
+For \(\mu>1\), define the continuum-induced matter-frame final
 \[
   \beta_{\mathrm{cont}}(\mu):=\sqrt{\frac{\mu-1}{\mu+1}}
 \]
@@ -2019,7 +2024,7 @@ Assume the Tribonacci continuum fixed-point theorem, the self-consistent OP~1 ma
 \end{theorem}
 
 \begin{proof}
-The continuum side of OP~1 is already fixed by Theorem~\texttt{thm:tribonacci} in the active-core PDF: the uncorrected self-referential frame candidate is the Tribonacci value, equivalently read through the continuum expression \(\beta_{\mathrm{cont}}(\mu)=\sqrt{(\mu-1)/(\mu+1)}\). The physical matching side is already fixed by the self-consistent system (\texttt{eq:SC1}, active-core PDF)--(\texttt{eq:SC2}, active-core PDF), whose unresolved content is precisely the prime-lattice / continuum-limit correction law. Taking logarithms rewrites the matching problem as the vanishing of the single scalar expression \(\mathcal R_{1}(\mu)\). This loses no information because \(\mu>1\) and the exponential side of (\texttt{eq:SC1}, active-core PDF) is positive. By the 3.8.1 residual-controlled emergence principle, the field-equation burden cannot add a third independent OP~1 channel; it can only feed into the same residual family \(\mathcal E_{1}\). Hence the entire remaining OP~1 content is exhausted by the scalar residual channel \(\mathcal R_{1}(\mu)\), and any admissible closure must proceed by deriving, controlling, or eliminating that residual.
+The continuum side of OP~1 is already fixed by Theorem~\texttt{thm:tribonacci} in the active-core PDF: the uncorrected self-referential frame final is the Tribonacci value, equivalently read through the continuum expression \(\beta_{\mathrm{cont}}(\mu)=\sqrt{(\mu-1)/(\mu+1)}\). The physical matching side is already fixed by the self-consistent system (\texttt{eq:SC1}, active-core PDF)--(\texttt{eq:SC2}, active-core PDF), whose unresolved content is precisely the prime-lattice / continuum-limit correction law. Taking logarithms rewrites the matching problem as the vanishing of the single scalar expression \(\mathcal R_{1}(\mu)\). This loses no information because \(\mu>1\) and the exponential side of (\texttt{eq:SC1}, active-core PDF) is positive. By the 3.8.1 residual-controlled emergence principle, the field-equation burden cannot add a third independent OP~1 channel; it can only feed into the same residual family \(\mathcal E_{1}\). Hence the entire remaining OP~1 content is exhausted by the scalar residual channel \(\mathcal R_{1}(\mu)\), and any admissible closure must proceed by deriving, controlling, or eliminating that residual.
 \end{proof}
 
 \begin{corollary}[3.8.2 OP~1 closure test]
@@ -2044,7 +2049,7 @@ This step does not yet prove the prime-lattice correction from first principles.
 This is the first real 3.8 closure compression after the two-core reduction. It is also a useful diagnostic: if OP~1 later resists closure, the obstruction should now show up as a failure to control \(\mathcal R_{1}\), rather than as a vague demand for new visible machinery.
 
 \paragraph{C.32. Why the OP~1 residual channel is scalar.}
-The two ingredients entering the current OP~1 matching problem are already fixed: the continuum frame candidate and the prime-lattice spectral correction ansatz. Their discrepancy can therefore be measured by a single logarithmic mismatch. This is why the surviving burden is scalar even though its derivation may still be deep.
+The two ingredients entering the current OP~1 matching problem are already fixed: the continuum frame final and the prime-lattice spectral correction ansatz. Their discrepancy can therefore be measured by a single logarithmic mismatch. This is why the surviving burden is scalar even though its derivation may still be deep.
 
 \paragraph{C.33. What 3.8.2 does \emph{not} claim.}
 Section~3.8.2 does not claim a first-principles proof of the \(\mu^5\) exponent, nor a full arithmetic derivation of the prime-lattice correction. It claims something narrower: that all such work is now forced into a single residual channel and no longer distributed across several independent visible fronts.
@@ -2122,11 +2127,11 @@ and the corresponding relative mismatch is about \(1.8\times 10^{-4}\). No new v
 
 \begin{corollary}[3.8.3 OP~1 exact-vs-structural remainder]
 \label{cor:mainline-3830}
-After Theorem~\ref{thm:mainline-3830}, the remaining OP~1 burden is no longer to locate a candidate value for \(\gamma_L\), but only to explain structurally why the exact root \(\mu_\ast\) of the scalar residual channel must coincide with the framework value read as \(\gamma_L\). Equivalently, the surviving task is an exact prime-lattice / continuum derivation of the residual law, not a search for a second numerical branch.
+After Theorem~\ref{thm:mainline-3830}, the remaining OP~1 burden is no longer to locate a final value for \(\gamma_L\), but only to explain structurally why the exact root \(\mu_\ast\) of the scalar residual channel must coincide with the framework value read as \(\gamma_L\). Equivalently, the surviving task is an exact prime-lattice / continuum derivation of the residual law, not a search for a second numerical branch.
 \end{corollary}
 
 \begin{proof}
-Theorem~\ref{thm:mainline-3830} proves that the scalar residual channel already has a unique physical root in the relevant regime and that the current \(\gamma_L\)-value lies extremely close to that root. Therefore the numerical candidate is no longer underdetermined. What remains open is the structural identification of that unique root with the framework quantity \(\gamma_L\), i.e. the first-principles explanation of why the residual channel must vanish exactly there.
+Theorem~\ref{thm:mainline-3830} proves that the scalar residual channel already has a unique physical root in the relevant regime and that the current \(\gamma_L\)-value lies extremely close to that root. Therefore the numerical final is no longer underdetermined. What remains open is the structural identification of that unique root with the framework quantity \(\gamma_L\), i.e. the first-principles explanation of why the residual channel must vanish exactly there.
 \end{proof}
 
 \paragraph{3.8.3 working remark.}
@@ -2139,7 +2144,7 @@ Section~3.8.3 still does \emph{not} claim exact first-principles closure of OP~1
 A scalar residual channel can still hide several distinct physical branches. The value of Theorem~\ref{thm:mainline-3830} is precisely that this no longer happens in the currently relevant OP~1 window: the residual has a unique root there, so the closure burden becomes conceptual and structural rather than branch-selection driven.
 
 \paragraph{C.35. What 3.8.3 still leaves open.}
-The exponent \(\mu^5\), the prime-lattice interpretation of the correction, and the exact identification \(\mu_\ast=\gamma_L\) remain open. The present step only shows that these open points now live over a unique near-closure root rather than over a family of competing candidates.
+The exponent \(\mu^5\), the prime-lattice interpretation of the correction, and the exact identification \(\mu_\ast=\gamma_L\) remain open. The present step only shows that these open points now live over a unique near-closure root rather than over a family of competing finals.
 
 
 
@@ -2157,13 +2162,13 @@ the remaining work is downstream of the residual record in the present stabilize
         \textbf{[reduced residual open].}
         The value $\beta_{\mathrm{sym}} \approx 0.5493$ is determined from
         $\gamma_{\mathrm{BI}}$ and $\gamma_{\mathrm{string}}$. Its remaining
-        open content is no longer the broad existence of a frame candidate,
+        open content is no longer the broad existence of a frame final,
         but the explicit derivation of the prime-lattice / continuum-limit
-        correction that moves the continuum fixed-point candidate to the
+        correction that moves the continuum fixed-point final to the
         measured matter-frame value.
 
   \item \textbf{Field equation / controlled emergence [open].}
-        A natural variational candidate is
+        A natural variational final is
   \[
   \delta \int R \, \tau_n^2 \, d\mu = 0.
   \]
@@ -4032,7 +4037,7 @@ a metaphor: it becomes an admissible evolution subsystem with inherited energy
 control.
 
 \subsection*{6. Consequence for future field equations and appendix tools}
-The field-equation programme is sharpened once again. A candidate PDE or abstract
+The field-equation programme is sharpened once again. A final PDE or abstract
 operator equation must now be checked in the following order:
 \begin{enumerate}[label=(\arabic*)]
   \item identify the state space and channel decomposition;
@@ -4093,7 +4098,7 @@ generator does not hide uncontrolled growth modes behind formal notation. The le
 control from earlier versions is therefore promoted into a spectral entrance test.
 
 \paragraph{Principle 2 (spectral gatekeeping).}
-A candidate field equation or abstract operator model is structurally admissible only
+A final field equation or abstract operator model is structurally admissible only
 if its effective generator is spectrally admissible in the above sense and the
 corresponding resolvent bounds are compatible with the tagged-source decomposition.
 The proof programme may therefore reject an operator before any detailed PDE analysis
@@ -4155,7 +4160,7 @@ merely because it heuristically mirrors the main evolution, but because its spec
 remains subordinate to the same admissible comparison regime.
 
 \subsection*{6. Consequence for future field equations and appendix tools}
-The field-equation admission checklist is sharpened again. A candidate model should
+The field-equation admission checklist is sharpened again. A final model should
 now be tested in the following order:
 \begin{enumerate}[label=(\arabic*)]
   \item identify state space and admissible channel projector;
@@ -4285,7 +4290,7 @@ for matched ambient/probe states $(u,v)$. This prevents the probe sector from
 manufacturing fake observables that have no ambient structural parent.
 
 \subsection*{6. Consequence for future field equations and appendix tools}
-The admission checklist for candidate field equations is now extended once more:
+The admission checklist for final field equations is now extended once more:
 \begin{enumerate}[label=(\arabic*)]
   \item verify semigroup dissipativity and ledger closure;
   \item verify spectral admissibility and resolvent compatibility;
@@ -4433,7 +4438,7 @@ instrument of structural descent rather than an independent source of untracked
 observables.
 
 \subsection*{6. Consequence for field equations and appendix tools}
-The admission checklist for future candidate field equations is therefore extended
+The admission checklist for future final field equations is therefore extended
 once more:
 \begin{enumerate}[label=(\arabic*)]
   \item verify semigroup dissipativity and ledger closure;
@@ -4740,7 +4745,7 @@ of irreducibility. Stone--von Neumann compresses representation
 multiplicity, not regime multiplicity.
 
 \paragraph{Tool (Two-layer equivalence test).}
-For candidate sectors $S_1, S_2$: (1)~\emph{Representation layer} ---
+For final sectors $S_1, S_2$: (1)~\emph{Representation layer} ---
 test whether they are unitary realizations of the same irreducible
 Weyl-type kernel; if yes, SvN-compressible. (2)~\emph{Regime layer} ---
 test whether one sector is obtained from the other by projection,
@@ -4884,7 +4889,7 @@ To keep the extraction mathematically honest, each such tool should be marked in
 \begin{itemize}[leftmargin=2em]
   \item \textbf{operational tool:} reusable now, with the present support level;
   \item \textbf{assumption-backed tool:} reusable only under an explicitly declared hypothesis or contradiction setup;
-  \item \textbf{blocked tool candidate:} not yet safe to reuse because a real dependency gap remains.
+  \item \textbf{blocked tool final:} not yet safe to reuse because a real dependency gap remains.
 \end{itemize}
 Under the current chain check, the closure-transfer, projected transport, matrix-sector, and trace/branch persistence tools are best read as \emph{operational tools}, though some still sit in the ``proof-density weak'' zone rather than the fully unfolded zone.
 
@@ -4892,7 +4897,7 @@ Under the current chain check, the closure-transfer, projected transport, matrix
 The present scan suggests that the most useful immediate leverage point is not a new broad theorem family, but a single stronger organizing hypothesis: namely that the admissible stabilized sector behaves as the true fixed working domain for closure, transport, matrix action, and admissible continuation. Even if one initially formulates this only as a hypothesis-backed simplifier, it has unusually high leverage: if strengthened, it compresses several later arguments by replacing repeated local admissibility restoration with one global working-domain principle. In other words, many later proofs become shorter once they are allowed to start with ``assume the admissible stabilized sector has already been fixed'' and then work internally on that domain.
 
 \paragraph{Use of the computational layer as a secondary aid.}
-The computational chapter may already help here, but only in a subordinate role. MML/MMA/MCP should not drive the mathematics; however, the language layer can already serve as a \emph{notation and workflow aid} for tool extraction. In particular, compact MML-style descriptions can help identify whether a candidate move is really one reusable operation---for example \texttt{project -> transport -> trace}---or whether it still hides an unresolved mathematical gap. Thus the computational layer may already be used as a diagnostic simplifier for tool extraction, while the mathematical status of the extracted tool remains decided purely on the mathematics-first side.
+The computational chapter may already help here, but only in a subordinate role. MML/MMA/MCP should not drive the mathematics; however, the language layer can already serve as a \emph{notation and workflow aid} for tool extraction. In particular, compact MML-style descriptions can help identify whether a final move is really one reusable operation---for example \texttt{project -> transport -> trace}---or whether it still hides an unresolved mathematical gap. Thus the computational layer may already be used as a diagnostic simplifier for tool extraction, while the mathematical status of the extracted tool remains decided purely on the mathematics-first side.
 
 \paragraph{Current reading and local consequence.}
 The current reading is therefore positive. The first dependency spine is no longer merely a place where one asks whether the chain survives; it is already rich enough to yield a first family of reusable structural tools. At the same time, the highest-leverage next target is also visible: stabilize the admissible working-domain principle as far as possible, because this one point appears to simplify closure, transport, matrix action, and trace/branch continuation simultaneously. Any next local pass should therefore prefer a leverage-point clarification over broad diffuse proof growth.
@@ -5649,7 +5654,7 @@ These elements remain valuable, but in the current sequencing they are to follow
 \subsection*{Mathematical work matrix for the next pass}
 To make the mathematics-first agenda operational, the next pass is organized as a compact work matrix rather than as a loose wish list.
 \begin{center}
-{\scriptsize\setlength{\tabcolsep}{2pt}\begin{tabular}{@{}p{0.18\textwidth}p{0.24\textwidth}p{0.27\textwidth}p{0.06\textwidth}@{}}
+{\tiny\setlength{\tabcolsep}{1.5pt}\begin{tabular}{@{}p{0.18\textwidth}p{0.23\textwidth}p{0.25\textwidth}p{0.08\textwidth}@{}}
 \toprule
 \textbf{Block} & \textbf{Target state} & \textbf{Main dependencies} & \textbf{Priority}\\
 \midrule
@@ -5858,7 +5863,7 @@ This rule is not cosmetic. It is meant to prevent silent rollback, silent overwr
   \item \textbf{Probe Tools and Guided Search}
     \begin{enumerate}[label*=\arabic*., leftmargin=2.5em]
       \item Frequency and pattern detection
-      \item Routing and candidate compression
+      \item Routing and final compression
       \item Transition guidance
       \item Convergence tools
       \item Optional statistical layer
@@ -6642,7 +6647,7 @@ closure mechanism depends on these ingredients rather than on the label
 logic.
 
 \paragraph{Search space.}
-The search space is therefore not an unrestricted continuum of candidates. It
+The search space is therefore not an unrestricted continuum of finals. It
 is the region left after imposing triolic self-organization of each probe,
 orthogonality of the third group, compensator compatibility, and closure.
 Everything outside that region is structurally irrelevant for the probe readout.
@@ -6675,7 +6680,7 @@ v1.2.0.
 \paragraph{Canonical examples in the present project.}
 Kasisky detection is stored as a frequency/pattern detector rather than as a
 cryptographic side story. Hash and rainbow methods are stored as routing and
-candidate-compression devices. Markov organization is stored as a transition
+final-compression devices. Markov organization is stored as a transition
 controller over admissible search paths. Newton is stored as a convergence
 accelerator once a structural branch has already been selected. GARCH, where
 used at all, remains optional and secondary.
@@ -6831,7 +6836,7 @@ only insofar as they compress the closure-compatible microstructure.
 \subsection*{3. Probe-reduction and guided search principle}
 The probe sector is now equipped with a more explicit reduction principle. Two
 probes approaching one another do not explore an arbitrary ambient continuum;
-they reduce the candidate space by repeated closure tests.
+they reduce the final space by repeated closure tests.
 
 \begin{lemma}[Probe-reduction lemma]
 \label{lem:probe-reduction-lemma}
@@ -6852,7 +6857,7 @@ reduced search region relevant to structural read-off.
 \paragraph{Tool interlock.}
 This is the point where the normalized tools become operational rather than
 merely classificatory. Kasisky is attached to frequency-pattern selection.
-Hash/rainbow devices compress routing across candidate branches. Markov control
+Hash/rainbow devices compress routing across final branches. Markov control
 organizes transitions inside the still-admissible region, and Newton
 accelerates convergence once a branch has already been selected. The appendix
 can therefore store these devices as modular search operators without severing
@@ -7063,7 +7068,7 @@ material.
 \section*{Computational completeness layer: QAM / MML / MMA}
 
 The present block records the first explicit machine reading of the post-v3.31.0 line.  
-In the current v3.34.0-r09 working candidate it should be read together with the local HC/OP interface registry of Definition~\texttt{def:r07-local-language-version-registry} in the active-core PDF, the compression map of Definition~\texttt{def:compression-map-from-inherited-text-to-mml-mma-operations} in the active-core PDF, and the reusable tool normal forms of Definition~\texttt{def:first-reusable-hcop-tool-normal-form} in the active-core PDF. That registry gives the active sublanguage versions actually used by the present OP-entry chain, the compression map gives the active audit reading for inherited HC/OP text, and the r09 tool layer gives the controlled invocation form:
+In the current v3.34.0-r09 working final it should be read together with the local HC/OP interface registry of Definition~\texttt{def:r07-local-language-version-registry} in the active-core PDF, the compression map of Definition~\texttt{def:compression-map-from-inherited-text-to-mml-mma-operations} in the active-core PDF, and the reusable tool normal forms of Definition~\texttt{def:first-reusable-hcop-tool-normal-form} in the active-core PDF. That registry gives the active sublanguage versions actually used by the present OP-entry chain, the compression map gives the active audit reading for inherited HC/OP text, and the r09 tool layer gives the controlled invocation form:
 \[
   \mathrm{QAM}_{\mathrm{HCOP}}^{\mathrm{loc}}
   \to
@@ -7521,50 +7526,52 @@ v3.30.0 & public Zenodo release & 2026-04-21 & \href{https://doi.org/10.5281/zen
 v3.31.0 & public Zenodo release & 2026-04-24 & \href{https://doi.org/10.5281/zenodo.19699827}{10.5281/zenodo.19699827} --- prior public release; freezes the groundwork-complete pre-OP frontier synthesis above the public v3.30.0 baseline and publishes the full monolith with the integrated coupled prime-lattice trigger correction and the QAM/MML/MMA machine-realization layer while preserving the full historical witness in Part~II \\
 \hline
 v3.32.0 & public Zenodo release & 2026-04-24 & \href{https://doi.org/10.5281/zenodo.19704489}{10.5281/zenodo.19704489} --- prior public release; current release final built above the public v3.31.0 baseline; integrates the first machine-fused coupled OP-entry transition line, the coupled prime-lattice machine realization block, and the strengthened finite-to-stage-stable universality reading while preserving the full historical witness in Part~II \\
-v3.33.0 & public Zenodo release & 2026-04-24 & \href{https://doi.org/10.5281/zenodo.19716926}{10.5281/zenodo.19716926} --- prior public release; built above the public v3.32.0 baseline; carries the HC-captured local continuation line through lock-corridor capture, minimal HC-lock step, HC menu scan, plausible HC candidate, micro-lock update, and first local HC-capture chain while preserving the full historical witness in Part~II \\
+v3.33.0 & public Zenodo release & 2026-04-24 & \href{https://doi.org/10.5281/zenodo.19716926}{10.5281/zenodo.19716926} --- prior public release; built above the public v3.32.0 baseline; carries the HC-captured local continuation line through lock-corridor capture, minimal HC-lock step, HC menu scan, plausible HC final, micro-lock update, and first local HC-capture chain while preserving the full historical witness in Part~II \\
 \hline
-v3.34.0 & public Zenodo release & 2026-04-25 & \href{https://doi.org/10.5281/zenodo.19746821}{10.5281/zenodo.19746821} --- current public split-bundle release; promotes the locally audit-clean v3.34.0-r27 line into a reader-facing active core plus preserved historical witness bundle, adds the QAM/MML/MMA store-array layer, frontmatter reader architecture, and Sphaera array mirror/stripe/parity-residual infrastructure while preserving the non-closure status of OP~1/4 and OP~5(B) \\
+v3.34.0 & public Zenodo release & 2026-04-25 & \href{https://doi.org/10.5281/zenodo.19746821}{10.5281/zenodo.19746821} --- prior public split-bundle release; promotes the locally audit-clean v3.34.0-r27 line into a reader-facing active core plus preserved historical witness bundle, adds the QAM/MML/MMA store-array layer, frontmatter reader architecture, and Sphaera array mirror/stripe/parity-residual infrastructure while preserving the non-closure status of OP~1/4 and OP~5(B) \\
 \hline
-v3.34.0-r17 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- executes the first dispatched handoff-guard packet \(\mathsf W_{\mathrm{handoff}}^{\mathrm{guard}}\) after a stable lock/capture return, installs the handoff-guard defect register \(\Delta_{\mathrm{handoff}}^{\mathrm{guard}}\), and returns exactly one of handoff-ready source, bounded handoff-guard repair source, or smaller frontier source without manufacturing an OP closure certificate \\
-v3.34.0-r18 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- executes the first dispatched OP-normalization/type packet \(\mathsf W_{\mathrm{norm}}^{\mathrm{type}}\) after a handoff-ready return, installs the normalization/type-coherence defect register \(\Delta_{\mathrm{norm}}^{\mathrm{type}}\), and returns exactly one of route/rank-ready typed OP input, bounded normalization/type repair source, or smaller frontier source without manufacturing an OP closure certificate \\
-v3.34.0-r19 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- executes the first dispatched route/rank packet \(\mathsf W_{\mathrm{route}}^{\mathrm{rank}}\) after a normalization-ready return, installs the route/rank defect register \(\Delta_{\mathrm{route}}^{\mathrm{rank}}\), and returns exactly one of comparison-ready routed OP task, bounded route/rank repair source, or smaller frontier source without manufacturing an OP closure certificate \\
-v3.34.0-r20 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- executes the first dispatched comparison/defect packet \(\mathsf W_{\mathrm{cmp}}^{\Delta}\) after a route/rank-ready return, installs the comparison/defect register \(\Delta_{\mathrm{cmp}}^{\Delta}\), and returns exactly one of guarded bind candidate, guarded split candidate, or smaller comparison frontier without manufacturing an OP closure certificate \\
-v3.34.0-r21 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- executes the first dispatched resolve/return packet \(\mathsf W_{\mathrm{resolve}}^{\mathrm{next}}\) after a guarded comparison return, installs the resolve/return defect register \(\Delta_{\mathrm{resolve}}^{\mathrm{next}}\), and returns exactly one of guarded bind-work continuation, guarded split-work continuation, or smaller comparison-frontier descent without manufacturing an OP closure certificate \\
-v3.34.0-r22 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- executes the first continuation-queue packet after resolve/return, installs the continuation-queue defect register \(\Delta_{\mathrm{queue}}^{\mathrm{cont}}\), and returns exactly one of a guarded common-origin bind queue, guarded ranked split queue, or protected frontier-descent queue without manufacturing an OP closure certificate \\
-v3.34.0-r23 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- executes the first queue-head selection packet after continuation queue, installs the queue-head selection defect register \(\Delta_{\mathrm{head}}^{\mathrm{select}}\), and returns exactly one of a guarded common-origin-check head, guarded branch-rank-check head, or guarded frontier-descent-check head while retaining the finite tail and without manufacturing an OP closure certificate \\
-v3.34.0-r24 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- executes the first selected queue-head execution packet, installs the selected queue-head execution defect register \(\Delta_{\mathrm{head}}^{\mathrm{exec}}\), and returns exactly one of an executed common-origin-check surface, executed branch-rank-check surface, or executed frontier-descent-check surface while retaining the finite queue tail and without manufacturing an OP closure certificate \\
-v3.34.0-r25 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- executes the first executed-head tail-entry packet \(\mathsf W_{\mathrm{tail}}^{\mathrm{entry}}\), installs the tail-entry defect \(\Delta_{\mathrm{tail}}^{\mathrm{entry}}\), and returns exactly one of a guarded bind-tail, split-tail, or frontier-tail entry without manufacturing an OP closure certificate \\
-v3.34.0-r26 & local audit-freeze candidate & 2026-04-24 & no Zenodo DOI assigned --- installs the first audit-freeze ledger \(F_{\mathrm{HCOP}}^{\mathrm{audit}}\) with audit-freeze defect \(\Delta_{\mathrm{audit}}^{\mathrm{freeze}}\), recording baseline, DOI state, local spine, tail-entry output, preservation obligations, reference/compilation audit data, terminal bibliography, historical witness, and the no-false-certificate marker \\
-v3.34.0-r27 & local audit-freeze candidate & 2026-04-24 & no Zenodo DOI assigned --- installs the audit-freeze stabilization object \(F_{\mathrm{freeze}}^{\mathrm{audit}}\), permitting only audit, mechanical repair, metadata repair, release packaging, and Zenodo-description preparation before further theorem expansion \\
+v3.35.0 & public Zenodo release & 2026-04-25 & \href{https://doi.org/10.5281/zenodo.19750674}{10.5281/zenodo.19750674} --- current public pre-v4 QAM/tensor preparation release; adds the short/extended abstract architecture, Hilbert-hotel QAM reindexing plan for later v4, guarded mixed QAM readouts, optional binary mask registry, conservative two-sided structural tensor grammar, role-erasure and mixed-readout normal forms, Boolean selector grammar, and preserved-release final DOI packaging while preserving the non-closure status of OP~1/4 and OP~5(B) \\
 \hline
-v3.34.0-r15 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- turns the r14 tail-normalized HC/OP proof skeleton into the first controlled skeleton-to-workstep dispatch object \(\mathsf D_{\mathrm{HCOP}}^{\mathrm{skel}}\), assigning finite admissible next work packets to lock/capture, handoff, normalization, routing, comparison, and resolution nodes while preserving dependency order, guards, witnesses, route tags, theorematic status, and the no-false-certificate rule \\
-v3.34.0-r16 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- executes the first dispatched lock/capture stabilization packet \(\mathsf W_{\mathrm{lock}}^{\mathrm{stab}}\), installs the lock-stability defect register \(\Delta_{\mathrm{lock}}^{\mathrm{stab}}\), and returns exactly one of handoff-ready stable source, bounded local repair source, or smaller frontier source without manufacturing an OP closure certificate \\
+v3.34.0-r17 & local working final & 2026-04-24 & no Zenodo DOI assigned --- executes the first dispatched handoff-guard packet \(\mathsf W_{\mathrm{handoff}}^{\mathrm{guard}}\) after a stable lock/capture return, installs the handoff-guard defect register \(\Delta_{\mathrm{handoff}}^{\mathrm{guard}}\), and returns exactly one of handoff-ready source, bounded handoff-guard repair source, or smaller frontier source without manufacturing an OP closure certificate \\
+v3.34.0-r18 & local working final & 2026-04-24 & no Zenodo DOI assigned --- executes the first dispatched OP-normalization/type packet \(\mathsf W_{\mathrm{norm}}^{\mathrm{type}}\) after a handoff-ready return, installs the normalization/type-coherence defect register \(\Delta_{\mathrm{norm}}^{\mathrm{type}}\), and returns exactly one of route/rank-ready typed OP input, bounded normalization/type repair source, or smaller frontier source without manufacturing an OP closure certificate \\
+v3.34.0-r19 & local working final & 2026-04-24 & no Zenodo DOI assigned --- executes the first dispatched route/rank packet \(\mathsf W_{\mathrm{route}}^{\mathrm{rank}}\) after a normalization-ready return, installs the route/rank defect register \(\Delta_{\mathrm{route}}^{\mathrm{rank}}\), and returns exactly one of comparison-ready routed OP task, bounded route/rank repair source, or smaller frontier source without manufacturing an OP closure certificate \\
+v3.34.0-r20 & local working final & 2026-04-24 & no Zenodo DOI assigned --- executes the first dispatched comparison/defect packet \(\mathsf W_{\mathrm{cmp}}^{\Delta}\) after a route/rank-ready return, installs the comparison/defect register \(\Delta_{\mathrm{cmp}}^{\Delta}\), and returns exactly one of guarded bind final, guarded split final, or smaller comparison frontier without manufacturing an OP closure certificate \\
+v3.34.0-r21 & local working final & 2026-04-24 & no Zenodo DOI assigned --- executes the first dispatched resolve/return packet \(\mathsf W_{\mathrm{resolve}}^{\mathrm{next}}\) after a guarded comparison return, installs the resolve/return defect register \(\Delta_{\mathrm{resolve}}^{\mathrm{next}}\), and returns exactly one of guarded bind-work continuation, guarded split-work continuation, or smaller comparison-frontier descent without manufacturing an OP closure certificate \\
+v3.34.0-r22 & local working final & 2026-04-24 & no Zenodo DOI assigned --- executes the first continuation-queue packet after resolve/return, installs the continuation-queue defect register \(\Delta_{\mathrm{queue}}^{\mathrm{cont}}\), and returns exactly one of a guarded common-origin bind queue, guarded ranked split queue, or protected frontier-descent queue without manufacturing an OP closure certificate \\
+v3.34.0-r23 & local working final & 2026-04-24 & no Zenodo DOI assigned --- executes the first queue-head selection packet after continuation queue, installs the queue-head selection defect register \(\Delta_{\mathrm{head}}^{\mathrm{select}}\), and returns exactly one of a guarded common-origin-check head, guarded branch-rank-check head, or guarded frontier-descent-check head while retaining the finite tail and without manufacturing an OP closure certificate \\
+v3.34.0-r24 & local working final & 2026-04-24 & no Zenodo DOI assigned --- executes the first selected queue-head execution packet, installs the selected queue-head execution defect register \(\Delta_{\mathrm{head}}^{\mathrm{exec}}\), and returns exactly one of an executed common-origin-check surface, executed branch-rank-check surface, or executed frontier-descent-check surface while retaining the finite queue tail and without manufacturing an OP closure certificate \\
+v3.34.0-r25 & local working final & 2026-04-24 & no Zenodo DOI assigned --- executes the first executed-head tail-entry packet \(\mathsf W_{\mathrm{tail}}^{\mathrm{entry}}\), installs the tail-entry defect \(\Delta_{\mathrm{tail}}^{\mathrm{entry}}\), and returns exactly one of a guarded bind-tail, split-tail, or frontier-tail entry without manufacturing an OP closure certificate \\
+v3.34.0-r26 & local audit-freeze final & 2026-04-24 & no Zenodo DOI assigned --- installs the first audit-freeze ledger \(F_{\mathrm{HCOP}}^{\mathrm{audit}}\) with audit-freeze defect \(\Delta_{\mathrm{audit}}^{\mathrm{freeze}}\), recording baseline, DOI state, local spine, tail-entry output, preservation obligations, reference/compilation audit data, terminal bibliography, historical witness, and the no-false-certificate marker \\
+v3.34.0-r27 & local audit-freeze final & 2026-04-24 & no Zenodo DOI assigned --- installs the audit-freeze stabilization object \(F_{\mathrm{freeze}}^{\mathrm{audit}}\), permitting only audit, mechanical repair, metadata repair, release packaging, and Zenodo-description preparation before further theorem expansion \\
 \hline
-v3.34.0-r14 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- extracts the first tail-normalized HC/OP proof skeleton \(\mathsf S_{\mathrm{HCOP}}^{\mathrm{tail}}\), organizing the active r01--r04 spine as LOCK/CAPTURE, HANDOFF, NORMALIZE, ROUTE, COMPARE, and RESOLVE source nodes plus later guarded citation tails while preserving dependency order and preventing false OP-closure certificates \\
+v3.34.0-r15 & local working final & 2026-04-24 & no Zenodo DOI assigned --- turns the r14 tail-normalized HC/OP proof skeleton into the first controlled skeleton-to-workstep dispatch object \(\mathsf D_{\mathrm{HCOP}}^{\mathrm{skel}}\), assigning finite admissible next work packets to lock/capture, handoff, normalization, routing, comparison, and resolution nodes while preserving dependency order, guards, witnesses, route tags, theorematic status, and the no-false-certificate rule \\
+v3.34.0-r16 & local working final & 2026-04-24 & no Zenodo DOI assigned --- executes the first dispatched lock/capture stabilization packet \(\mathsf W_{\mathrm{lock}}^{\mathrm{stab}}\), installs the lock-stability defect register \(\Delta_{\mathrm{lock}}^{\mathrm{stab}}\), and returns exactly one of handoff-ready stable source, bounded local repair source, or smaller frontier source without manufacturing an OP closure certificate \\
 \hline
-v3.34.0-r13 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- turns the r12 ledger into the first guarded-reduction pilot normal form \(\mathrm{GRCite}_{\mathrm{HCOP}}(\ell;G,W,S)\), allowing only later repeated HC/OP tails to be rewritten as guarded tool citations while first occurrences, local guards, witnesses, certificate tests, proof-critical inequalities, theorematic status, and historical witness material remain explicit \\
+v3.34.0-r14 & local working final & 2026-04-24 & no Zenodo DOI assigned --- extracts the first tail-normalized HC/OP proof skeleton \(\mathsf S_{\mathrm{HCOP}}^{\mathrm{tail}}\), organizing the active r01--r04 spine as LOCK/CAPTURE, HANDOFF, NORMALIZE, ROUTE, COMPARE, and RESOLVE source nodes plus later guarded citation tails while preserving dependency order and preventing false OP-closure certificates \\
 \hline
-v3.34.0-r12 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- applies the r11 guarded-reduction protocol for the first time by installing the finite ledger \(\mathcal L_{\mathrm{HCOP}}^{(1)}\) over the active HC/OP proof spine, allowing later repeated lock/capture, handoff, normalization, route/frontier, paired-comparison, probe-diagnostic, and archive-to-tool tails to be cited in guarded normal form while keeping first occurrences, local guards, certificate tests, proof-critical inequalities, theorematic status, and historical witness material explicit \\
+v3.34.0-r13 & local working final & 2026-04-24 & no Zenodo DOI assigned --- turns the r12 ledger into the first guarded-reduction pilot normal form \(\mathrm{GRCite}_{\mathrm{HCOP}}(\ell;G,W,S)\), allowing only later repeated HC/OP tails to be rewritten as guarded tool citations while first occurrences, local guards, witnesses, certificate tests, proof-critical inequalities, theorematic status, and historical witness material remain explicit \\
 \hline
-v3.34.0-r11 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- keeps the r10 tool-contract application layer and adds the first tool-guarded reduction protocol \(\mathcal R_{\mathrm{HCOP}}^{(1)}\), defining reducible and non-reducible HC/OP occurrences, guarded citation normal form, and the partial simplification map \(\mathsf{Red}_{\mathrm{HCOP}}^{(1)}\) while preserving proof content, first definitions, local guards, certificate tests, theorematic status, and the full historical witness in Part~II \\
+v3.34.0-r12 & local working final & 2026-04-24 & no Zenodo DOI assigned --- applies the r11 guarded-reduction protocol for the first time by installing the finite ledger \(\mathcal L_{\mathrm{HCOP}}^{(1)}\) over the active HC/OP proof spine, allowing later repeated lock/capture, handoff, normalization, route/frontier, paired-comparison, probe-diagnostic, and archive-to-tool tails to be cited in guarded normal form while keeping first occurrences, local guards, certificate tests, proof-critical inequalities, theorematic status, and historical witness material explicit \\
 \hline
-v3.34.0-r10 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- applies the r09 reusable tool contracts back to the active r01--r04 HC/OP proof spine as a conservative cross-reference layer \(\mathcal P_{\mathrm{HCOP}}^{\mathrm{tool}}\), allowing repeated route, frontier, and no-false-certificate safety prose to be replaced by typed tool-contract citations only where the original hypotheses and guards remain visible, while preserving proof content and the full historical witness in Part~II \\
+v3.34.0-r11 & local working final & 2026-04-24 & no Zenodo DOI assigned --- keeps the r10 tool-contract application layer and adds the first tool-guarded reduction protocol \(\mathcal R_{\mathrm{HCOP}}^{(1)}\), defining reducible and non-reducible HC/OP occurrences, guarded citation normal form, and the partial simplification map \(\mathsf{Red}_{\mathrm{HCOP}}^{(1)}\) while preserving proof content, first definitions, local guards, certificate tests, theorematic status, and the full historical witness in Part~II \\
 \hline
-v3.34.0-r09 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- keeps the r08 compression map unchanged and extracts the first reusable HC/OP tool normal forms \(\mathbb T_{\mathrm{HCOP}}^{(1)}\), giving typed contracts for lock/capture, handoff, normalization, routing, comparison, resolution, probe ranking, certificate tests, frontier descent, and archive-to-tool extraction, so later text can cite tool contracts instead of repeating safety prose while preserving proof content and the full historical witness in Part~II \\
+v3.34.0-r10 & local working final & 2026-04-24 & no Zenodo DOI assigned --- applies the r09 reusable tool contracts back to the active r01--r04 HC/OP proof spine as a conservative cross-reference layer \(\mathcal P_{\mathrm{HCOP}}^{\mathrm{tool}}\), allowing repeated route, frontier, and no-false-certificate safety prose to be replaced by typed tool-contract citations only where the original hypotheses and guards remain visible, while preserving proof content and the full historical witness in Part~II \\
 \hline
-v3.34.0-r08 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- keeps the r07 QAM/MML/MMA interface unchanged and adds \(\mathfrak C_{\mathrm{HCOP}}\), a conservative MML/MMA compression map for inherited HC/OP text, so repeated capture, handoff, normalization, routing, comparison, probe, certificate-test, route-preservation, and historical-tool paragraphs can be reread as typed operations without deleting proof content or manufacturing OP closure certificates, while preserving the full historical witness in Part~II \\
+v3.34.0-r09 & local working final & 2026-04-24 & no Zenodo DOI assigned --- keeps the r08 compression map unchanged and extracts the first reusable HC/OP tool normal forms \(\mathbb T_{\mathrm{HCOP}}^{(1)}\), giving typed contracts for lock/capture, handoff, normalization, routing, comparison, resolution, probe ranking, certificate tests, frontier descent, and archive-to-tool extraction, so later text can cite tool contracts instead of repeating safety prose while preserving proof content and the full historical witness in Part~II \\
 \hline
-v3.34.0-r07 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- keeps the r04 paired OP-entry comparison execution and r06 bibliography hardening unchanged, assigns local interface versions \(\mathrm{QAM}_{\mathrm{HCOP}}^{\mathrm{loc}}\), \(\mathrm{MML}_{\mathrm{HCOP}}^{\mathrm{loc}}\), and \(\mathrm{MMA}_{\mathrm{HCOP}}^{\mathrm{loc}}\), and proves that the r01--r04 HC-routed OP-entry chain is executable as one finite typed MML/MMA program without manufacturing an OP closure certificate, while preserving the full historical witness in Part~II \\
-v3.34.0-r06 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- keeps the r04/r05 mathematical and bibliography-placement state unchanged, expands the terminal bibliography after a whole-document literature scan, adds compact front/back literature anchor notes for Teichmuller/quasiconformal geometry, Riemann--GUE/RMT, Hopf/fibre-bundle topology, division algebras, gauge/QFT landmarks, CKM/PMNS mixing, Julia dynamics, set-theoretic foundations, and probe/cryptographic/computational diagnostics, while preserving the full historical witness in Part~II \\
-v3.34.0-r05 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- keeps the r04 paired OP~1/4--OP~5(B) comparison execution layer unchanged and normalizes the bibliography/back-matter placement by moving the live bibliography to the terminal Final Bibliography block while preserving the full historical witness in Part~II \\
+v3.34.0-r08 & local working final & 2026-04-24 & no Zenodo DOI assigned --- keeps the r07 QAM/MML/MMA interface unchanged and adds \(\mathfrak C_{\mathrm{HCOP}}\), a conservative MML/MMA compression map for inherited HC/OP text, so repeated capture, handoff, normalization, routing, comparison, probe, certificate-test, route-preservation, and historical-tool paragraphs can be reread as typed operations without deleting proof content or manufacturing OP closure certificates, while preserving the full historical witness in Part~II \\
 \hline
-v3.34.0-r04 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- executes the paired OP~1/4--OP~5(B) comparison branch above the r03 task-routing layer; compares joint versus separated HC-compatible readouts and returns either a bound common-origin state, a split ranked single-branch state, or a smaller frontier-certified comparison state while preserving route tags and the full historical witness in Part~II \\
+v3.34.0-r07 & local working final & 2026-04-24 & no Zenodo DOI assigned --- keeps the r04 paired OP-entry comparison execution and r06 bibliography hardening unchanged, assigns local interface versions \(\mathrm{QAM}_{\mathrm{HCOP}}^{\mathrm{loc}}\), \(\mathrm{MML}_{\mathrm{HCOP}}^{\mathrm{loc}}\), and \(\mathrm{MMA}_{\mathrm{HCOP}}^{\mathrm{loc}}\), and proves that the r01--r04 HC-routed OP-entry chain is executable as one finite typed MML/MMA program without manufacturing an OP closure certificate, while preserving the full historical witness in Part~II \\
+v3.34.0-r06 & local working final & 2026-04-24 & no Zenodo DOI assigned --- keeps the r04/r05 mathematical and bibliography-placement state unchanged, expands the terminal bibliography after a whole-document literature scan, adds compact front/back literature anchor notes for Teichmuller/quasiconformal geometry, Riemann--GUE/RMT, Hopf/fibre-bundle topology, division algebras, gauge/QFT landmarks, CKM/PMNS mixing, Julia dynamics, set-theoretic foundations, and probe/cryptographic/computational diagnostics, while preserving the full historical witness in Part~II \\
+v3.34.0-r05 & local working final & 2026-04-24 & no Zenodo DOI assigned --- keeps the r04 paired OP~1/4--OP~5(B) comparison execution layer unchanged and normalizes the bibliography/back-matter placement by moving the live bibliography to the terminal Final Bibliography block while preserving the full historical witness in Part~II \\
 \hline
-v3.34.0-r03 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- extracts the first finite OP-entry task-routing layer from the HC-derived normal form; maps the selected live residual branch into OP~1/4 continuum-limit work, OP~5(B) routed $\Theta$--$R$ balance work, anchor/admissibility refinement, or paired OP~1/4--OP~5(B) comparison while preserving route tags and the full historical witness in Part~II \\
+v3.34.0-r04 & local working final & 2026-04-24 & no Zenodo DOI assigned --- executes the paired OP~1/4--OP~5(B) comparison branch above the r03 task-routing layer; compares joint versus separated HC-compatible readouts and returns either a bound common-origin state, a split ranked single-branch state, or a smaller frontier-certified comparison state while preserving route tags and the full historical witness in Part~II \\
 \hline
-v3.34.0-r02 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- extracts the first downstream-readable OP-entry normal form from the transport-stable HC-to-OP handoff packet; routes the terminal live residual triple into OP~1/4, OP~5(B), and anchor/admissibility request families while preserving route tags and the full historical witness in Part~II \\
+v3.34.0-r03 & local working final & 2026-04-24 & no Zenodo DOI assigned --- extracts the first finite OP-entry task-routing layer from the HC-derived normal form; maps the selected live residual branch into OP~1/4 continuum-limit work, OP~5(B) routed $\Theta$--$R$ balance work, anchor/admissibility refinement, or paired OP~1/4--OP~5(B) comparison while preserving route tags and the full historical witness in Part~II \\
 \hline
-v3.34.0-r01 & local working candidate & 2026-04-24 & no Zenodo DOI assigned --- begins the transport-stable HC-capture and OP-entry handoff line above the public v3.33.0 release; packages local HC capture into a route-faithful transport-stability test and an OP-facing handoff packet while preserving the full historical witness in Part~II \\
+v3.34.0-r02 & local working final & 2026-04-24 & no Zenodo DOI assigned --- extracts the first downstream-readable OP-entry normal form from the transport-stable HC-to-OP handoff packet; routes the terminal live residual triple into OP~1/4, OP~5(B), and anchor/admissibility request families while preserving route tags and the full historical witness in Part~II \\
+\hline
+v3.34.0-r01 & local working final & 2026-04-24 & no Zenodo DOI assigned --- begins the transport-stable HC-capture and OP-entry handoff line above the public v3.33.0 release; packages local HC capture into a route-faithful transport-stability test and an OP-facing handoff packet while preserving the full historical witness in Part~II \\
 \hline
 v3.25.0 & public Zenodo release & 2026-04-16 & \href{https://doi.org/10.5281/zenodo.19615952}{10.5281/zenodo.19615952} --- earlier public release; consolidates the optical-comparison and machine-theoretic overlay line, including compressed optical diagnostic control, bundled proof-use compression, conditional reference-core closure, and the capped machine-theoretic overlay line up to the present equivalence surface \\ 
 \hline
@@ -7608,7 +7615,7 @@ v3.4.7 & local working extension & 2026-04-03 & generator-shell probe classifier
 \hline
 v3.4.8 & local working extension & 2026-04-03 & shell-parity criterion: direct convergence versus spinorial/M\"obius lift determined by the even/odd reflector-crossing parity on sufficiently small regular shells; added first diagnostic Julia-type appendix render \\
 \hline
-v3.4.9 & local working extension & 2026-04-03 & added cautious frame-shifted detector-readout hypothesis for the diagnostic Julia/probe geometry, together with explicit candidate observables for later comparison work \\
+v3.4.9 & local working extension & 2026-04-03 & added cautious frame-shifted detector-readout hypothesis for the diagnostic Julia/probe geometry, together with explicit final observables for later comparison work \\
 \hline
 v3.4.10 & local working extension & 2026-04-03 & converted the detector-readout hypothesis into a quantitative tunnel-observable interface: tunnel width, edge intensification, opening angle, and shell parity are now organized as a minimal diagnostic comparison package \\
 \hline
@@ -7854,7 +7861,7 @@ v2.29.1 & local working state & 2026-03-28 & GOE/GUE split (\texttt{prop:goe-fer
 \hline
 v2.29.2 & Zenodo release & 2026-03-28 & \href{https://doi.org/10.5281/zenodo.19300351}{10.5281/zenodo.19300351} --- Einstein blunder reframed; $\Omega_M=\bsym^2$ determination; three-gap convergence \\
 \hline
-v2.29.3 & Zenodo release & 2026-03-28 & \href{https://doi.org/10.5281/zenodo.19300813}{10.5281/zenodo.19300813} --- OP~2 (T1)(T2) closed; $D_-=L_0|_{\Hplusminus}$ (corrected candidate); GOE essential self-adjointness; T4=OP1 equivalence; \textbf{Tribonacci theorem} $\gamma_L\to\mathbb{T}$; cascade normalization $1/\mathbb{T}+1/\mathbb{T}^2+1/\mathbb{T}^3=1$ \\
+v2.29.3 & Zenodo release & 2026-03-28 & \href{https://doi.org/10.5281/zenodo.19300813}{10.5281/zenodo.19300813} --- OP~2 (T1)(T2) closed; $D_-=L_0|_{\Hplusminus}$ (corrected final); GOE essential self-adjointness; T4=OP1 equivalence; \textbf{Tribonacci theorem} $\gamma_L\to\mathbb{T}$; cascade normalization $1/\mathbb{T}+1/\mathbb{T}^2+1/\mathbb{T}^3=1$ \\
 \hline
 \end{longtable}
 }
@@ -7905,8 +7912,8 @@ In parallel, several statement families are to remain explicitly outside theorem
 
 A practical promotion checklist for the next pass is therefore:
 \begin{enumerate}[leftmargin=*]
-  \item identify candidate statements that are currently written as heuristic summary sentences;
-  \item decide whether each candidate should become a Definition, Lemma, Proposition, or remain a Hypothesis;
+  \item identify final statements that are currently written as heuristic summary sentences;
+  \item decide whether each final should become a Definition, Lemma, Proposition, or remain a Hypothesis;
   \item verify that every promoted statement has stable notation, explicit assumptions, and stable backward references;
   \item verify that no promoted statement depends silently on teaser/computational language;
   \item record all non-promoted but still important claims explicitly as open, deferred, or interpretive.
@@ -8594,7 +8601,7 @@ In the systems language summarized in Figure~\texttt{fig:qam-vm-os-zfs} in the a
 
 
 \begin{remark}[Visual-to-proof workflow for the OP~5 block]\label{rem:appendixC-op5-visual-workflow}
-The present OP~5 figures should therefore be used in the following order. First, they identify a visible defect pattern at the readout layer. Second, they motivate a packet/carrier/slip decomposition that can be audited channelwise. Third, that decomposition must be checked against the active transport and closure-preservation architecture rather than treated as a proof by itself. Only after such a check has been made may the same pattern be recorded as a later kernel-first compression candidate. In particular, the figures are admissible as \emph{diagnostic entry points} and as \emph{audit surfaces}, but not as autonomous closure theorems.
+The present OP~5 figures should therefore be used in the following order. First, they identify a visible defect pattern at the readout layer. Second, they motivate a packet/carrier/slip decomposition that can be audited channelwise. Third, that decomposition must be checked against the active transport and closure-preservation architecture rather than treated as a proof by itself. Only after such a check has been made may the same pattern be recorded as a later kernel-first compression final. In particular, the figures are admissible as \emph{diagnostic entry points} and as \emph{audit surfaces}, but not as autonomous closure theorems.
 \end{remark}
 
 \begin{remark}[What the OP~5 figures are allowed to certify]\label{rem:appendixC-op5-allowed-certification}
@@ -10152,16 +10159,16 @@ The preceding operator-family/lambda layer is the last part of the internal QAM 
 
 We now add a first support-selection layer on top of the already translated admissible QAM fragment. The purpose of this layer is not to replace closure-admissibility or shell-admissibility, but to order admissible support after those primary filters have already been applied. Thus QAM selection is subordinate to closure preservation and only acts inside the admissible branch-shell sector.
 
-\begin{definition}[Support candidate code]
+\begin{definition}[Support final code]
 A set
 \[
 \varsigma = \langle 11,\Omega,w\rangle
 \]
-is called a \emph{support candidate code} if $\Omega$ codes a family of admissible branch-shell pairs and $w$ codes a weight or preference assignment on $\Omega$.
+is called a \emph{support final code} if $\Omega$ codes a family of admissible branch-shell pairs and $w$ codes a weight or preference assignment on $\Omega$.
 \end{definition}
 
 \begin{remark}
-A support candidate code is the QAM analogue of a visible support sector restricted in advance to admissible branch-shell data. It is therefore a post-admissibility object rather than a primitive closure object.
+A support final code is the QAM analogue of a visible support sector restricted in advance to admissible branch-shell data. It is therefore a post-admissibility object rather than a primitive closure object.
 \end{remark}
 
 \begin{definition}[Support preference relation]
@@ -10181,7 +10188,7 @@ A support candidate code is the QAM analogue of a visible support sector restric
 \end{definition}
 
 \begin{remark}
-Thus support preference never overrides admissibility. It only compares already admissible support candidates.
+Thus support preference never overrides admissibility. It only compares already admissible support finals.
 \end{remark}
 
 \begin{definition}[Closure-compatible support selector]
@@ -10191,14 +10198,14 @@ A lambda-like structural map
 \]
 is called a \emph{closure-compatible support selector} if:
 \begin{enumerate}
-\item its domain consists of admissible support candidate codes;
+\item its domain consists of admissible support final codes;
 \item its values are coded selected supports or coded preferred subsupports;
-\item whenever two input support candidates encode the same closure-bearing admissible content up to support degeneracy, their images under $\lambda_{\mathrm{sel}}$ are closure-equivalent or support-equivalent at coded level.
+\item whenever two input support finals encode the same closure-bearing admissible content up to support degeneracy, their images under $\lambda_{\mathrm{sel}}$ are closure-equivalent or support-equivalent at coded level.
 \end{enumerate}
 \end{definition}
 
 \begin{definition}[Support degeneracy]
-Two admissible support candidate codes $\varsigma_1,\varsigma_2$ are called \emph{support-degenerate} if they differ only by admissible re-indexing, admissible redistribution of coded visible weight, or admissible closure-equivalent regrouping, while preserving the same coded closure-bearing support content.
+Two admissible support final codes $\varsigma_1,\varsigma_2$ are called \emph{support-degenerate} if they differ only by admissible re-indexing, admissible redistribution of coded visible weight, or admissible closure-equivalent regrouping, while preserving the same coded closure-bearing support content.
 \end{definition}
 
 \begin{remark}
@@ -10206,7 +10213,7 @@ Support degeneracy is the QAM-over-ZF shadow of carrier degeneracy and readout m
 \end{remark}
 
 \begin{definition}[Selected routed support code]
-If $\lambda_{\mathrm{sel}}$ is a closure-compatible support selector and $\varsigma$ is an admissible support candidate code, then
+If $\lambda_{\mathrm{sel}}$ is a closure-compatible support selector and $\varsigma$ is an admissible support final code, then
 \[
 \lambda_{\mathrm{sel}}(\varsigma)
 \]
@@ -10214,7 +10221,7 @@ is called the corresponding \emph{selected routed support code}, whenever the va
 \end{definition}
 
 \begin{proposition}[Selection stays inside the admissible QAM fragment]
-Let $\lambda_{\mathrm{sel}}$ be a closure-compatible support selector and let $\varsigma$ be an admissible support candidate code. Then every selected routed support code
+Let $\lambda_{\mathrm{sel}}$ be a closure-compatible support selector and let $\varsigma$ be an admissible support final code. Then every selected routed support code
 \[
 \lambda_{\mathrm{sel}}(\varsigma)
 \]
@@ -10222,11 +10229,11 @@ remains inside the admissible QAM support fragment.
 \end{proposition}
 
 \begin{proof}
-By definition, the domain of $\lambda_{\mathrm{sel}}$ consists only of admissible support candidate codes, and the selector is required to return coded selected supports or preferred subsupports without leaving the closure-compatible admissible regime. Hence the selected support remains inside the admissible fragment.
+By definition, the domain of $\lambda_{\mathrm{sel}}$ consists only of admissible support final codes, and the selector is required to return coded selected supports or preferred subsupports without leaving the closure-compatible admissible regime. Hence the selected support remains inside the admissible fragment.
 \end{proof}
 
 \begin{proposition}[Closure preservation under support selection]
-Let $\varsigma$ be an admissible support candidate code and let $\lambda_{\mathrm{sel}}$ be a closure-compatible support selector. Then the closure-relevant content of
+Let $\varsigma$ be an admissible support final code and let $\lambda_{\mathrm{sel}}$ be a closure-compatible support selector. Then the closure-relevant content of
 \[
 \lambda_{\mathrm{sel}}(\varsigma)
 \]
@@ -10234,11 +10241,11 @@ agrees with the closure-relevant content of $\varsigma$ after passage through th
 \end{proposition}
 
 \begin{proof}
-Support selection acts only after admissibility has already been established and is required to be closure-compatible. Therefore the selector cannot change the coded closure-bearing content of the admissible support candidate; it may only refine, reduce, or prefer one admissible representation over another. Closure-compatible readout therefore identifies the closure-relevant content of the input and output supports after factorization.
+Support selection acts only after admissibility has already been established and is required to be closure-compatible. Therefore the selector cannot change the coded closure-bearing content of the admissible support final; it may only refine, reduce, or prefer one admissible representation over another. Closure-compatible readout therefore identifies the closure-relevant content of the input and output supports after factorization.
 \end{proof}
 
 \begin{corollary}[Support selection does not create closure]
-A selected routed support is closure-preserving only because it is selected from an already admissible support candidate. Selection itself is not an independent source of closure.
+A selected routed support is closure-preserving only because it is selected from an already admissible support final. Selection itself is not an independent source of closure.
 \end{corollary}
 
 \begin{remark}
@@ -10246,7 +10253,7 @@ This is the coded QAM analogue of the structure-first rule that preferred suppor
 \end{remark}
 
 \begin{proposition}[Degenerate supports may be identified after selection]
-Let $\varsigma_1,\varsigma_2$ be support-degenerate admissible support candidate codes. If $\lambda_{\mathrm{sel}}$ is a closure-compatible support selector, then
+Let $\varsigma_1,\varsigma_2$ be support-degenerate admissible support final codes. If $\lambda_{\mathrm{sel}}$ is a closure-compatible support selector, then
 \[
 \lambda_{\mathrm{sel}}(\varsigma_1)
 \qquad\text{and}\qquad
@@ -10262,7 +10269,7 @@ Since $\varsigma_1$ and $\varsigma_2$ differ only by admissible re-indexing, adm
 \begin{theorem}[First QAM support-selection theorem]
 Assume:
 \begin{enumerate}
-\item $\varsigma$ is an admissible support candidate code;
+\item $\varsigma$ is an admissible support final code;
 \item $\lambda_{\mathrm{sel}}$ is a closure-compatible support selector;
 \item $r$ is a closure-compatible coded readout on the relevant support fragment.
 \end{enumerate}
@@ -10270,7 +10277,7 @@ Then:
 \begin{enumerate}
 \item the selected routed support code $\lambda_{\mathrm{sel}}(\varsigma)$ remains admissible;
 \item the closure-relevant readout content of $\lambda_{\mathrm{sel}}(\varsigma)$ agrees with that of $\varsigma$ after factorization;
-\item support-degenerate admissible candidates yield equivalent selected supports at coded structural level.
+\item support-degenerate admissible finals yield equivalent selected supports at coded structural level.
 \end{enumerate}
 \end{theorem}
 
@@ -10319,7 +10326,7 @@ Zenodo, March 2026.
 
 \bibitem{brendecke2026sphaera}
 Marc Brendecke,
-\emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding} (v3.35.0-r01 historical witness working candidate),
+\emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding} (v3.35.0-r04 historical witness release final final),
 April 2026.
 \newblock Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}; version-specific DOI: \href{https://doi.org/10.5281/zenodo.19746821}{10.5281/zenodo.19746821}.
 
