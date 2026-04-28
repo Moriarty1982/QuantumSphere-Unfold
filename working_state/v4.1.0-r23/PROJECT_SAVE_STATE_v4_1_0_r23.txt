@@ -1,0 +1,23 @@
+Quantum Sphaera Companion project save state
+Saved local working line: v4.1.0-r23
+
+Basis: v4.1.0-r22 selector-to-route gate.
+
+Current mathematical status:
+- r23 defines selector-gated admissible graph G_{chi,adm}^{(1)}.
+- Reachability is now checked only after the first selector gate and ordinary
+  admissibility filters have been applied.
+- New obstruction: D_reach^{chi,(1)}.
+- OP 1/4: D_reach,1/4^{chi,(1)} records anchor components unreachable after
+  first selector filtering.
+- OP 5(B): D_reach,5B^{chi,(1)} records promoted boundary target unreachable
+  after first selector/boundary-sensitive filtering.
+- First two OP-facing route checks:
+  D_chi^(1)=empty, then D_reach^{chi,(1)}=empty.
+
+Non-claims:
+- OP 1/4 not closed.
+- OP 4 not closed.
+- OP 5(B) not closed.
+- Selector-gated reachability is still pre-TE and pre-residual.
+- Diagnostic script is not a proof certificate.
