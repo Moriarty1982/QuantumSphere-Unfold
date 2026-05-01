@@ -1,0 +1,442 @@
+\clearpage
+\section*{v4.2.0-r01 OP1/OP4 Joint HC--Dixon Reduction Candidate}
+\addcontentsline{toc}{section}{v4.2.0-r01 OP1/OP4 Joint HC--Dixon Reduction Candidate}
+\noindent\textbf{Development status.}  This r01 block belongs to the v4.2.0 development line.  It is a DEV-PATCH layer only: it adds no release metadata, reserves no DOI, builds no PDF, and does not promote OP1 or OP4 to global theorem status.  Its purpose is to record a local closure architecture for OP1 and the leading OP4 mixing readouts inside the OP5-inherited HC--Halo/Dixon grammar.
+
+\begin{remark}[Scope of the OP1/OP4 reduction]
+The purpose of this section is not to claim a global unconditional solution of OP1 or OP4.  It records a conditional local reduction inside the declared OP5-inherited HC--Halo/Dixon grammar.  OP1 is reduced to a continuum-compression determinant, and the leading CKM/PMNS part of OP4 is reduced to a finite Fano/Dixon selector normal form over the same compression factor.  All remaining proof obligations are kept as explicit residual registers.
+\end{remark}
+
+\begin{definition}[HS(0)-anchored Hilbert-shift ladder]
+The unshifted layer
+\[
+  \mathrm{HS}(0)
+\]
+is the raw kernel aim, namely the direct unshifted continuum/collapse target before HC capture.  It carries unit transport weight.  The active pre-Dixon compression layers are
+\[
+  \mathrm{HS}(1),\ldots,\mathrm{HS}(5),
+\]
+with structural readings
+\[
+\begin{array}{c|l}
+\mathrm{HS}(1) & \text{HC collar / no-through-collapse boundary},\\
+\mathrm{HS}(2) & \text{normal orbit / stable collar},\\
+\mathrm{HS}(3) & \text{Fano fibre / octonionic incidence},\\
+\mathrm{HS}(4) & M_{16}/P_{C_7}\text{ meta-septum leakage gate},\\
+\mathrm{HS}(5) & \text{two-sided front/back carrier}.
+\end{array}
+\]
+The next layer
+\[
+  \mathrm{HS}(6)
+\]
+is the Dixon addressing carrier
+\[
+  \mathbb C\otimes\mathbb H\otimes\mathbb O,
+\]
+and is not counted as a further pre-Dixon compression layer.
+\end{definition}
+
+\begin{lemma}[HS(0)-anchored pre-Dixon capacity]
+Under the HS(0)-anchored ladder, the active pre-Dixon compression capacity is
+\[
+  \Gamma_{\mathrm{preDix}}
+  =
+  \prod_{k=1}^{5}\gamma_L
+  =
+  \gamma_L^5.
+\]
+The layer \(\mathrm{HS}(0)\) has weight \(1\), while \(\mathrm{HS}(6)\) is the Dixon readout/addressing carrier.
+\end{lemma}
+
+\begin{definition}[Continuum-limit compression map]
+Let
+\[
+  \Xi_{\mathrm{CL}}^{\mathrm{HC/Dix}}
+  :
+  \mathcal R_{\mathrm{raw}}^{\mathrm{CL}}
+  \longrightarrow
+  \mathcal R_{\mathrm{adm}}^{\mathrm{HC/Dix}}
+\]
+be the raw-to-admissible continuum-limit readout map inside the HC/Dixon grammar.  Define the continuum-limit compression factor by
+\[
+  \delta_{\mathrm{CL}}
+  :=
+  \det_{\mathrm{norm}}
+  \left(
+    D\Xi_{\mathrm{CL}}^{\mathrm{HC/Dix}}
+  \right).
+\]
+\end{definition}
+
+\begin{definition}[OP1 compression load]
+The OP1 compression load is the normalized first spectral raw load
+\[
+  \Omega_{\mathrm{CL}}
+  :=
+  \frac{\gamma_1}{4\pi\gamma_L^5},
+\]
+where \(\gamma_1\) is the first non-trivial Riemann-zero height, \(4\pi\) is the spherical collar normalization, and \(\gamma_L^5\) is the five-stage pre-Dixon capacity.
+\end{definition}
+
+\begin{lemma}[Exponential HC/Dixon determinant]
+Let
+\[
+  \Xi_t:\mathcal R_{\mathrm{raw}}\to \mathcal R_{\mathrm{adm}},
+  \qquad 0\le t\le 1,
+\]
+be a route-faithful HC/Dixon readout homotopy.  Suppose the local admissibility-loss generator \(A(t)\) satisfies
+\[
+  \frac{d}{dt}
+  \log
+  \det_{\mathrm{norm}}D\Xi_t
+  =
+  -\operatorname{tr}A(t).
+\]
+If
+\[
+  \Omega
+  =
+  \int_0^1 \operatorname{tr}A(t)\,dt,
+\]
+then
+\[
+  \det_{\mathrm{norm}}D\Xi_1
+  =
+  e^{-\Omega}.
+\]
+\end{lemma}
+
+\begin{corollary}[OP1 compression factor]
+Assuming the OP1 load identity and the exponential determinant lemma,
+\[
+  \delta_{\mathrm{CL}}
+  =
+  \exp\left(
+    -\frac{\gamma_1}{4\pi\gamma_L^5}
+  \right).
+\]
+Consequently,
+\[
+  \beta_{\mathrm{sym}}
+  =
+  \frac{1}{\sqrt3}\delta_{\mathrm{CL}}
+  =
+  \frac{1}{\sqrt3}
+  \exp\left(
+    -\frac{\gamma_1}{4\pi\gamma_L^5}
+  \right).
+\]
+\end{corollary}
+
+\begin{definition}[CL-to-OP5 load factorization]
+Let
+\[
+  \Xi_{\mathrm{OP5}}^{\mathrm{Dix}}
+  :
+  \mathcal R_{\mathrm{nearK}}^{\mathrm{OP5}}
+  \longrightarrow
+  \{\mathsf{adm},\mathsf{block},\mathsf{abs},\mathsf{route}\}
+\]
+be the residual-free OP5 HC/Dixon route classifier.  A CL-to-OP5 factorization is a representation
+\[
+  \Xi_{\mathrm{CL}}^{\mathrm{Dix}}
+  =
+  \mathcal C_{\mathrm{load}}
+  \circ
+  \Xi_{\mathrm{OP5}}^{\mathrm{Dix}}
+  \big|_{\mathcal R_{\mathrm{raw}}^{\mathrm{CL}}},
+\]
+where
+\[
+  \mathcal R_{\mathrm{raw}}^{\mathrm{CL}}
+  \subseteq
+  \mathcal R_{\mathrm{nearK}}^{\mathrm{OP5}},
+\]
+and
+\[
+  \mathcal C_{\mathrm{load}}
+  :
+  \{\mathsf{adm},\mathsf{block},\mathsf{abs},\mathsf{route}\}
+  \to
+  \mathbb R_{\ge0}
+\]
+assigns compression load to classified OP5 route types.
+\end{definition}
+
+\begin{lemma}[CL residual inheritance from OP5]
+Assume the OP5 classifier has no residual class,
+\[
+  \mathcal I_{\mathrm{res}}^{\mathrm{OP5/Dix}}=\varnothing,
+\]
+and assume the CL-to-OP5 factorization.  Then the continuum-limit residual register is empty:
+\[
+  \mathcal R_{\mathrm{res}}^{\mathrm{CL/Dix}}=\varnothing.
+\]
+\end{lemma}
+
+\begin{definition}[Fano/Dixon mediator table]
+Let the quark generation carriers be represented by
+\[
+  \mathrm{Gen}_1\sim e_4,
+  \qquad
+  \mathrm{Gen}_2\sim e_5,
+  \qquad
+  \mathrm{Gen}_3\sim e_6.
+\]
+The three Fano products are
+\[
+  e_4e_5=e_7,\qquad
+  e_5e_6=e_1,\qquad
+  e_6e_4=-e_3.
+\]
+They are read as mediator types
+\[
+\begin{array}{c|c|c}
+\text{channel} & \text{mediator} & \text{type}\\
+\hline
+12 & e_7 & \text{HS(4)-gated late Fano edge},\\
+23 & e_1 & \text{quaternionic-over-triolic lift},\\
+13 & -e_3 & \text{orientation-inverted frame mediator}.
+\end{array}
+\]
+\end{definition}
+
+\begin{definition}[Finite Fano/Dixon selectors]
+The finite selector weights assigned to the mediator types are
+\[
+  \chi(e_7)=\frac{15}{16},
+  \qquad
+  \chi(e_1)=\frac43,
+  \qquad
+  \chi(-e_3)=\delta_{\mathrm{CL}}.
+\]
+The last selector means that the \(13\)-quark channel carries one additional frame-compression factor besides the universal \(\delta_{\mathrm{CL}}\).
+\end{definition}
+
+\begin{lemma}[Quark-sector selector normal form]
+Let
+\[
+  \gamma_s=\frac{\ln2}{\pi\sqrt3}.
+\]
+Assign Fano path lengths
+\[
+  d_{12}=1,
+  \qquad
+  d_{23}=2,
+  \qquad
+  d_{13}=3.
+\]
+Then the leading quark-sector readouts are
+\[
+  s_{ij}^{q}
+  =
+  2\gamma_s^{d_{ij}}
+  \chi(\mathfrak m_{ij})
+  \delta_{\mathrm{CL}},
+\]
+where \(\mathfrak m_{ij}\) is the mediator of the \(ij\)-channel.  Equivalently,
+\[
+  s_{12}^{q}
+  =
+  2\cdot\frac{15}{16}\gamma_s\delta_{\mathrm{CL}},
+\]
+\[
+  s_{23}^{q}
+  =
+  2\cdot\frac43\gamma_s^2\delta_{\mathrm{CL}},
+\]
+\[
+  s_{13}^{q}
+  =
+  2\gamma_s^3\delta_{\mathrm{CL}}^2.
+\]
+\end{lemma}
+
+\begin{theorem}[Leading CKM Fano/Dixon frame-readout candidate]
+Assume the quark-sector selector normal form.  Define
+\[
+  \Omega_{\mathrm{CL}}=-\log\delta_{\mathrm{CL}}
+\]
+and
+\[
+  \phi_q
+  =
+  \frac{\pi}{3}+2\Omega_{\mathrm{CL}}.
+\]
+Then
+\[
+  V_{\mathrm{CKM}}^{\mathrm{FD}}
+  =
+  R_{23}(s_{23}^{q})
+  R_{13}(s_{13}^{q},\phi_q)
+  R_{12}(s_{12}^{q})
+\]
+is unitary by construction and gives a leading CKM readout candidate inside the Fano/Dixon/frame grammar.
+\end{theorem}
+
+\begin{remark}[CKM status]
+The theorem is a local readout candidate, not a global derivation of the CKM matrix outside the declared grammar.  Its proof obligations are the HS(4)-gate value \(15/16\), the quaternionic-over-triolic lift \(4/3\), the orientation-inverted \(13\)-channel compression, the OP1 compression factor, and the frame-extraction map to standard matter-frame fit values.
+\end{remark}
+
+\begin{definition}[Triolic PMNS base angles]
+Define
+\[
+  \alpha_T=\arcsin\left(\frac1{\sqrt3}\right),
+  \qquad
+  \beta_T=\arctan(\sqrt2).
+\]
+\end{definition}
+
+\begin{lemma}[PMNS triolic/Fano-leakage readout candidate]
+The leading PMNS angle candidates are
+\[
+  \theta_{12}^{\ell}
+  =
+  \alpha_T\delta_{\mathrm{CL}},
+\]
+\[
+  \theta_{23}^{\ell}
+  =
+  \beta_T\delta_{\mathrm{CL}}^2,
+\]
+and
+\[
+  \theta_{13}^{\ell}
+  =
+  \arcsin\left(\frac76\gamma_s\right).
+\]
+The factor
+\[
+  \frac76
+  =
+  \frac{|\operatorname{Im}\mathbb O|}
+       {|\operatorname{OrEdges}(K_3)|}
+\]
+is read as the minimal Fano-over-oriented-edge leakage selector.
+\end{lemma}
+
+\begin{theorem}[Leading PMNS triolic/Fano readout candidate]
+Let
+\[
+  U_{\mathrm{PMNS}}^{\mathrm{FD}}
+  =
+  R_{23}(\theta_{23}^{\ell})
+  R_{13}(\theta_{13}^{\ell},\phi_\ell)
+  R_{12}(\theta_{12}^{\ell}).
+\]
+Then \(U_{\mathrm{PMNS}}^{\mathrm{FD}}\) is a leading PMNS readout candidate in which the solar and atmospheric angles arise from triolic fixed-point geometry and the reactor angle arises from a Fano-over-edge leakage selector.  The leptonic CP phase \(\phi_\ell\) remains an ordering-/matter-/propagation-sensitive branch.
+\end{theorem}
+
+\begin{definition}[Frame-extraction residual]
+Let \(O_{\mathrm{FD}}\) be a HC/Dixon/Fano/triolic readout and \(O_{\mathrm{std}}\) the corresponding standard matter-frame global-fit observable.  A frame-extraction map is a map
+\[
+  \mathcal E_{\mathrm{frame}}
+\]
+such that
+\[
+  O_{\mathrm{std}}
+  =
+  \mathcal E_{\mathrm{frame}}(O_{\mathrm{FD}}).
+\]
+The frame residual is
+\[
+  \rho_{\mathrm{frame}}
+  =
+  O_{\mathrm{std}}-O_{\mathrm{FD}}.
+\]
+\end{definition}
+
+\begin{remark}[Frame-sensitive residuals]
+The residual \(\rho_{\mathrm{frame}}\) is expected to split into ordinary frame compression, orientation-sensitive compression, phase-load correction, fit extraction, matter-effect, ordering, and octant contributions.  Thus percent-level residuals against standard global-fit values are not automatically contradictions; they must be localized in the appropriate frame/readout register.
+\end{remark}
+
+\begin{theorem}[Conditional OP1/OP4 local closure candidate]
+Assume:
+\begin{enumerate}
+  \item the OP5 HC/Dixon route classifier is residual-free;
+  \item the CL-to-OP5 factorization holds;
+  \item the HS(0)-anchored pre-Dixon capacity is \(\gamma_L^5\);
+  \item the OP1 load identity is
+  \[
+    \Omega_{\mathrm{CL}}
+    =
+    \frac{\gamma_1}{4\pi\gamma_L^5};
+  \]
+  \item the exponential determinant lemma applies;
+  \item the finite Fano/Dixon selector identities
+  \[
+    15/16,
+    \qquad
+    4/3,
+    \qquad
+    7/6
+  \]
+  hold in the indicated channels.
+\end{enumerate}
+Then OP1 locally closes inside the OP5-inherited HC/Dixon continuum-compression grammar, and the leading CKM/PMNS sector of OP4 is reduced to finite Fano/Dixon/triolic readout data over the same compression factor \(\delta_{\mathrm{CL}}\).
+\end{theorem}
+
+\begin{remark}[Non-global status of the joint closure candidate]
+The conclusion is local to the declared grammar.  It does not assert a global unconditional derivation of CKM or PMNS data, nor a global OP1/OP4 closure outside the HC/Dixon/Fano/triolic frame-readout setting.  The remaining proof obligations are finite and explicit.
+\end{remark}
+
+\begin{definition}[Joint OP1/OP4 residual ledger]
+Define the joint residual vector
+\[
+  \rho_{\mathrm{OP1/4}}
+  =
+  (
+    \rho_{\mathrm{fact}},
+    \rho_{\mathrm{CL}},
+    \rho_{15/16},
+    \rho_{4/3},
+    \rho_{7/6},
+    \rho_{\phi_q},
+    \rho_{\phi_\ell},
+    \rho_{\mathrm{frame}}
+  ).
+\]
+Here
+\[
+  \rho_{\mathrm{fact}}
+  =
+  \mathcal R_{\mathrm{res}}^{\mathrm{CL/Dix}},
+\]
+\[
+  \rho_{\mathrm{CL}}
+  =
+  \delta_{\mathrm{CL}}
+  -
+  \exp\left(
+    -\frac{\gamma_1}{4\pi\gamma_L^5}
+  \right),
+\]
+\[
+  \rho_{15/16}
+  =
+  \chi(e_7)-\frac{15}{16},
+\qquad
+  \rho_{4/3}
+  =
+  \chi(e_1)-\frac43,
+\qquad
+  \rho_{7/6}
+  =
+  \chi_{\ell13}-\frac76,
+\]
+\[
+  \rho_{\phi_q}
+  =
+  \phi_q-\left(\frac{\pi}{3}+2\Omega_{\mathrm{CL}}\right),
+\]
+while \(\rho_{\phi_\ell}\) and \(\rho_{\mathrm{frame}}\) record the leptonic CP branch and the frame-extraction residuals.
+\end{definition}
+
+\begin{remark}[Closure condition]
+If
+\[
+  \rho_{\mathrm{OP1/4}}=0,
+\]
+then OP1 and the leading CKM/PMNS part of OP4 locally close inside the declared OP5-inherited HC/Dixon/Fano/triolic readout grammar.
+\end{remark}
