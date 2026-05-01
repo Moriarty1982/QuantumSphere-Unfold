@@ -1,0 +1,46 @@
+Quantum Sphaera Companion v4.2.0-r01 DEV-PATCH source audit
+Date: 2026-05-01
+Mode: DEV-PATCH only; no PDFs, no release metadata, no DOI/Zenodo text.
+
+Basis source:
+- Quantum_Sphaera_Companion_v4_1_0_release_final.tex
+
+Generated files:
+- Quantum_Sphaera_Companion_v4_2_0_r01_active_core_op1_op4_joint_hcdixon_reduction.tex
+- OP1_OP4_Joint_HC_Dixon_Reduction_v4_2_0_r01_section.tex
+- v4_2_0_r01_op1_op4_joint_hcdixon_reduction.patch
+
+Scope:
+- Added a v4.2.0-r01 section titled "OP1/OP4 Joint HC--Dixon Reduction Candidate".
+- Adds HS(0)-anchored Hilbert-shift ladder.
+- Adds OP1 continuum-compression determinant candidate.
+- Adds CL-to-OP5 factorization and CL residual inheritance.
+- Adds exponential HC/Dixon determinant lemma.
+- Adds finite Fano/Dixon selector normal form for leading CKM readout.
+- Adds PMNS triolic/Fano-leakage readout candidate.
+- Adds frame-extraction residual and joint OP1/OP4 residual ledger.
+- Preserves non-global/non-release status language.
+
+Source hygiene scan:
+- Active source bytes: 2769680
+- Inserted section bytes: 13784
+- Patch bytes: 14715
+- Label count: 2651
+- Duplicate labels: 0
+- End document markers: 1
+- Raw lowercase \halo occurrences: 0
+- Raw lowercase \exit occurrences: 0
+- v4.2.0-r01 occurrences: 2
+- New section title occurrences: 2
+
+Build status:
+- No LaTeX/PDF build was run, by standing DEV-PATCH rule.
+- No release-facing Zenodo description, keyword list, upload checklist, or overview was emitted.
+- This is not a release candidate and not a freeze.
+
+Current mathematical status:
+- OP5 remains locally closed only inside the declared HC-halo/Dixon grammar under the inherited zero-register assumptions.
+- OP1 is recorded as a local closure candidate via OP5-inherited HC/Dixon continuum-compression grammar.
+- OP4 leading CKM/PMNS readouts are recorded as finite selector/readout candidates over the OP1 compression factor.
+- No global OP1 or OP4 closure is claimed.
+- No unconditional CKM/PMNS derivation is claimed.
