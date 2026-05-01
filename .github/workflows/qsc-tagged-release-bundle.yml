@@ -1,28 +1,43 @@
-name: QSC Tagged Release Bundle
+name: QSC Manual PDF Bundle
 
 on:
-  push:
-    tags:
-      - "v*"
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version label for the generated artifact directory, e.g. v4.1.0 or v4.1.1-r01"
+        required: true
+        default: "manual-build"
+      source_dir:
+        description: "Source directory to build from"
+        required: true
+        default: "sources"
+      build_historical:
+        description: "Build historical witness PDF as well"
+        required: true
+        default: "true"
+        type: choice
+        options:
+          - "true"
+          - "false"
 
 permissions:
-  contents: write
+  contents: read
   packages: read
 
 env:
-  SOURCE_DIR: sources
-  BUILD_HISTORICAL: true
+  SOURCE_DIR: ${{ inputs.source_dir }}
+  BUILD_HISTORICAL: ${{ inputs.build_historical }}
 
 jobs:
-  tagged-release-bundle:
-    name: Build and persist tagged release bundle
+  manual-pdf-bundle:
+    name: Build manual PDF bundle artifact
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/moriarty1982/quantumsphere-unfold/qsc-latex:latest
     timeout-minutes: 180
 
     steps:
-      - name: Checkout tagged source
+      - name: Checkout selected source
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -32,10 +47,13 @@ jobs:
         shell: bash
         working-directory: ${{ github.workspace }}
         run: |
-          VERSION="${GITHUB_REF_NAME}"
+          VERSION="${{ inputs.version }}"
+          if [ -z "$VERSION" ]; then
+            VERSION="manual-${GITHUB_RUN_NUMBER}"
+          fi
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
 
-      - name: Build PDFs from tagged source
+      - name: Build PDFs from selected source
         continue-on-error: true
         shell: bash
         working-directory: ${{ github.workspace }}
@@ -45,13 +63,14 @@ jobs:
             --output-dir "$GITHUB_WORKSPACE/build/qsc-pdf-artifacts" \
             --build-historical "$BUILD_HISTORICAL"
 
-      - name: Prepare release directory
+      - name: Prepare artifact directory
+        if: always()
         shell: bash
         working-directory: ${{ github.workspace }}
         run: |
           VERSION="${{ steps.version.outputs.version }}"
-          RELEASE_DIR="$RUNNER_TEMP/releases/$VERSION"
-          mkdir -p "$RELEASE_DIR/logs" "$RELEASE_DIR/audit"
+          RELEASE_DIR="$RUNNER_TEMP/qsc-manual-build/$VERSION"
+          mkdir -p "$RELEASE_DIR/logs" "$RELEASE_DIR/audit" "$RELEASE_DIR/sources"
 
           cp -v build/qsc-pdf-artifacts/active-core/*.pdf "$RELEASE_DIR/" 2>/dev/null || true
           cp -v build/qsc-pdf-artifacts/historical-witness/*.pdf "$RELEASE_DIR/" 2>/dev/null || true
@@ -66,40 +85,20 @@ jobs:
           cp -v build/qsc-pdf-artifacts/*.txt "$RELEASE_DIR/audit/" 2>/dev/null || true
           cp -v build/qsc-pdf-artifacts/audit/* "$RELEASE_DIR/audit/" 2>/dev/null || true
 
-          zip -r "$RELEASE_DIR/Quantum_Sphaera_Companion_${VERSION}_sources.zip" sources scripts docker .github/workflows -x "*/.git/*"
-
-          cd "$RUNNER_TEMP/releases"
-          zip -r "Quantum_Sphaera_Companion_${VERSION}_release_bundle.zip" "$VERSION"
-          mv "Quantum_Sphaera_Companion_${VERSION}_release_bundle.zip" "$RELEASE_DIR/"
+          zip -r "$RELEASE_DIR/sources/Quantum_Sphaera_Companion_${VERSION}_sources.zip" sources scripts docker .github/workflows -x "*/.git/*"
 
           cd "$RELEASE_DIR"
           find . -type f ! -name SHA256SUMS.txt -print0 | sort -z | xargs -0 sha256sum > SHA256SUMS.txt
 
-      - name: Commit release directory to main
-        shell: bash
-        working-directory: ${{ github.workspace }}
-        run: |
-          VERSION="${{ steps.version.outputs.version }}"
+          cd "$RUNNER_TEMP/qsc-manual-build"
+          zip -r "Quantum_Sphaera_Companion_${VERSION}_manual_pdf_bundle.zip" "$VERSION"
+          mv "Quantum_Sphaera_Companion_${VERSION}_manual_pdf_bundle.zip" "$RELEASE_DIR/"
 
-          git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git fetch origin main
-          git checkout main
-
-          mkdir -p "releases/$VERSION"
-          cp -rv "$RUNNER_TEMP/releases/$VERSION/." "releases/$VERSION/"
-
-          git add "releases/$VERSION"
-          git commit -m "Add release bundle $VERSION" || echo "No release changes to commit"
-          git push origin main
-
-      - name: Upload release bundle artifact
+      - name: Upload manual PDF bundle artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: qsc-release-bundle-${{ steps.version.outputs.version }}
-          path: ${{ runner.temp }}/releases/${{ steps.version.outputs.version }}
+          name: qsc-manual-pdf-bundle-${{ steps.version.outputs.version }}
+          path: ${{ runner.temp }}/qsc-manual-build/${{ steps.version.outputs.version }}
           if-no-files-found: warn
           retention-days: 30
