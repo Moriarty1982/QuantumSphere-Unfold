@@ -1,0 +1,9 @@
+MANIFEST_v4_2_0_r02.txt
+sources/parts/07_open_questions_and_op_transport.tex
+sources/parts/07_open_questions_and_op_transport/06_hs_split_refold_xor_register_memory.tex
+patches/v4.2.0/r02/README.md
+patches/v4.2.0/r02/HS_Split_Refold_XOR_Register_Memory_v4_2_0_r02_section.tex
+patches/v4.2.0/r02/SOURCE_AUDIT_v4_2_0_r02.txt
+patches/v4.2.0/r02/MANIFEST_v4_2_0_r02.txt
+patches/v4.2.0/r02/CHECKSUMS_v4_2_0_r02.sha256
+patches/v4.2.0/r02/v4_2_0_r02_hs_split_refold_xor_register_memory.patch
