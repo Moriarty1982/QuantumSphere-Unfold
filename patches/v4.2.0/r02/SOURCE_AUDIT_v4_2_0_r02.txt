@@ -1,0 +1,37 @@
+Quantum Sphaera Companion v4.2.0-r02 DEV-PATCH source audit
+Date: 2026-05-02
+Mode: DEV-PATCH only; no PDFs, no release metadata, no DOI/Zenodo text.
+
+Basis:
+- v4.2.0-r01 in main, commit c5679431d7f06df578fd345275388be616802cf5
+
+Scope:
+- Adds HS split/refold XOR register memory principle.
+- Defines even HS states S_m=(K_m,R_m).
+- Defines focal split signatures sigma_m.
+- Defines reversible XOR-like register update R_(m+1)=R_m xor sigma_m.
+- Adds no-erase refold guard Refold != Erase.
+- Adds higher-HS alternation convention.
+- Adds lens signatures as shift signatures.
+- Adds no higher-HS residual explosion criterion.
+- Adds OP1/OP4 register-closure strengthening candidate.
+- Adds r02 proof-obligation register.
+
+Source hygiene:
+- Section bytes: 14295
+- Section lines: 309
+- Wrapper added lines: 1
+- New labels in r02 section: 17
+- Raw lowercase \halo occurrences in r02 section: 0
+- Raw lowercase \exit occurrences in r02 section: 0
+
+Build status:
+- No LaTeX/PDF build was run by standing DEV-PATCH rule.
+- No release-facing Zenodo description, keywords, upload checklist, or overview was emitted.
+- This is not a release candidate and not a freeze.
+
+Mathematical status:
+- r02 does not prove OP1 or OP4.
+- r02 does not prove the OP1 compression load.
+- r02 does not prove selector values 15/16, 4/3, 7/6.
+- r02 strengthens the local closure architecture by adding reversible register-memory guards for higher HS split/refold layers.
