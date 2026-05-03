@@ -4,26 +4,46 @@ Mode: DEV-PATCH only. No PDFs, no release metadata, no DOI/Zenodo text.
 
 ## Scope
 
-This working patch extends the v4.2.0-r01 OP1/OP4 Joint HC-Dixon Reduction with a split/refold register-memory layer.
+This working patch extends the v4.2.0-r01 OP1/OP4 Joint HC-Dixon Reduction by adding a higher-HS split/refold register-memory layer.
+
+The intended section title is:
+
+```text
+HS split/refold XOR register memory
+```
 
 ## Main additions
 
 1. Even HS state `S_m=(K_m,R_m)`.
-2. Focal split signature `sigma_m`.
-3. XOR-like reversible register update:
+2. Focal split `K_m -> (K_m^-,K_m^+)`.
+3. Split signature `sigma_m` carrying branch, lens, selector, residual, and orientation data.
+4. XOR-like reversible register update:
    \[
    R_{m+1}=R_m\oplus\sigma_m.
    \]
-4. No-erase refold guard:
+5. No-erase refold guard:
    \[
    \operatorname{Refold}\neq\operatorname{Erase}.
    \]
-5. Higher-HS alternation convention.
-6. Lens signatures as finite shift data.
-7. No higher-HS residual explosion criterion.
-8. OP1/OP4 register-closure strengthening candidate.
-9. r02 proof-obligation register.
+6. Higher-HS alternation convention:
+   \[
+   \mathrm{HS}(2m)=(K_m,R_m),\quad
+   \mathrm{HS}(2m+1)=(K_m^-,K_m^+,R_m,\sigma_m).
+   \]
+7. Lens signatures for split layers.
+8. XOR reconstruction lemma.
+9. No higher-HS residual explosion criterion.
+10. OP1/OP4 register-closure strengthening candidate.
+11. r02 proof-obligation register.
 
-## Status
+## Governing status language
 
-This patch does not prove OP1, OP4, the OP1 compression load, or the selector values. It records a structural strengthening candidate explaining how higher HS layers may preserve route history through reversible register traces without visible exponential geometry.
+This patch does **not** claim OP1 or OP4 closure. It records a strengthening candidate: higher HS layers need not create visible exponential geometry if their split histories are stored as reversible finite register signatures.
+
+## Relation to r01
+
+r01 introduced the OP1/OP4 joint HC-Dixon reduction and finite Fano/Dixon selector normal form. r02 adds a mechanism explaining how those selectors and higher-HS histories can be treated as reversible register data rather than uncontrolled new geometry.
+
+## Build status
+
+No PDF build was run by standing DEV-PATCH rule. PDF builds are deferred until freeze/release capability.
