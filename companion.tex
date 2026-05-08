@@ -1,3 +1,5 @@
+% --- r25 hyperref draft option for release-freeze compile speed/stability ---
+\PassOptionsToPackage{draft,bookmarks=false}{hyperref}
 \pdfcompresslevel=0
 \pdfobjcompresslevel=0
 \documentclass[12pt,a4paper]{article}
@@ -34,8 +36,8 @@
  hidelinks,
  pdftitle={Quantum Sphaera Companion: A Structure-First Mathematical Unfolding},
  pdfauthor={Marc Brendecke},
- pdfsubject={v4.4 release final; version DOI 10.5281/zenodo.20068747; declared local OP1/OP4 grammar closure only},
- pdfkeywords={Quantum Sphaera, structure-first mathematics, QAM, MML, MMA, Heisenberg compensator, triolic orbit scan, Hopf fibre surface readout, route-to-global obstruction, notation hygiene, declared local OP1/OP4 closure, release final},
+ pdfsubject={v4.5.0 release final; version DOI 10.5281/zenodo.20079410; declared mathematical global-boundary closure inside G_global^decl},
+ pdfkeywords={Quantum Sphaera, structure-first mathematics, QAM, MML, MMA, Heisenberg compensator, declared mathematical global-boundary closure, OP1, OP4, OP5, route-to-global boundary, comparison tensor, notation hygiene, release final},
  pdfcreator={pdfLaTeX},
  pdfproducer={pdfLaTeX}
 }
@@ -79,8 +81,8 @@
 % bridge obstruction, route-to-global certificate, return contract, audit appendix.
 
 % --- Document metadata ---
-\newcommand{\docversion}{4.4 release final}
-\newcommand{\docdate}{\DTMdisplaydate{2026}{05}{07}{-1}}
+\newcommand{\docversion}{4.5.0 release final}
+\newcommand{\docdate}{\DTMdisplaydate{2026}{05}{08}{-1}}
 
 
 % Human-edition provenance macros. Revision ids are metadata only.
@@ -145,11 +147,11 @@
  Marc Brendecke\\
  \small Independent Researcher, Bochum, Germany\\
  \small Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}\\
- \small v4.4 release final; Version DOI: \href{https://doi.org/10.5281/zenodo.20068747}{10.5281/zenodo.20068747}.\\
+ \small v4.5.0 release final; Version DOI: \href{https://doi.org/10.5281/zenodo.20079410}{10.5281/zenodo.20079410}.\\
  \small Companion Paper --- Preprint, not peer reviewed.\\
  \small Technical unfolding of the main Sphaera paper~\cite{brendecke2026main}.
 }
-\date{\docdate{} --- v4.4 release final --- Version DOI: 10.5281/zenodo.20068747}
+\date{\docdate{} --- v4.5.0 release final}
 
 
 
@@ -175,6 +177,26 @@
 % It disables expensive PDF object compression; typography and page content are unchanged.
 \pdfcompresslevel=0
 \pdfobjcompresslevel=0
+
+
+% --- r25 hyperref anchor hygiene patch for release-freeze build ---
+% Keeps visible text unchanged while making repeated section/theorem anchors unique.
+\makeatletter
+\AtBeginDocument{%
+  \providecommand*{\theHsection}{}%
+  \renewcommand*{\theHsection}{\number\value{page}.\arabic{section}}%
+  \providecommand*{\theHsubsection}{}%
+  \renewcommand*{\theHsubsection}{\number\value{page}.\arabic{section}.\arabic{subsection}}%
+  \providecommand*{\theHsubsubsection}{}%
+  \renewcommand*{\theHsubsubsection}{\number\value{page}.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}%
+  \providecommand*{\theHtheorem}{}%
+  \renewcommand*{\theHtheorem}{\number\value{page}.\thetheorem}%
+}
+\makeatother
+
+
+% --- r25 hyperref bookmark hygiene patch for release-freeze build ---
+\AtBeginDocument{\hypersetup{bookmarks=false}}
 
 \begin{document}
 \sloppy
@@ -218,7 +240,7 @@ maintenance, but it is subordinate to the mathematical presentation.
 \section*{Reader-Facing Proof Spine and Document Routing}
 \addcontentsline{toc}{section}{Reader-Facing Proof Spine and Document Routing}
 
-This v4.4 release final treats the mathematical narrative as the primary document and the machine/audit trail as secondary provenance.  The reader should not need the patch history in order to understand the current object language.  Revision identifiers, local build labels, and version-transition notes are therefore moved out of the proof spine and into the provenance layer.
+This v4.5.0 release-final frontmatter treats the mathematical narrative as the primary document and the machine/audit trail as secondary provenance.  The reader should not need the patch history in order to understand the current object language.  Revision identifiers, local build labels, and version-transition notes are therefore moved out of the proof spine and into the provenance layer.
 
 \subsection*{Primary reading order}
 \addcontentsline{toc}{subsection}{Primary reading order}
@@ -268,30 +290,27 @@ The main document contains the mathematical object language.  The appendix may c
 \begin{center}
 \fbox{\begin{minipage}{0.92\textwidth}
 \small
-\textbf{Companion status.} This is the v4.4 release final built from the public v4.4 Active Core, the v4.4 refinement ledger, and the OP1/OP4 declared-grammar closure audit layers. Version labels are retained only as provenance metadata; the mathematical proof spine uses semantic names.
+\textbf{Companion status.} This is the v4.5.0 release-final frontmatter repaired for the assigned Zenodo version DOI.  It carries the declared mathematical global-boundary closure audit path from the v4.5.0 working line. Version labels are retained only as provenance metadata; the mathematical proof spine uses semantic names.
 
 \medskip
-\noindent\textbf{Governing theorematic status.} OP~5 is locally closed inside the declared photon-frame HC-halo/Dixon grammar under the explicit zero-register assumptions
+\noindent\textbf{Governing theorematic status.} Inside the declared mathematical synthesis grammar
 \[
- L_{\mathrm{unr}}=0,\qquad
- B_{\mathrm{HC/MM}}=0,\qquad
- R_{\mathrm{HS4}}=0,\qquad
- D_{\mathrm{HS5}}=0.
+ \mathcal G_{\mathrm{global}}^{\mathrm{decl}},
 \]
-No global OP5 closure outside this declared grammar is claimed. OP~1 and OP~4 are locally closed only inside the declared local orbit--Hopf coupled-selector grammar; global/unrestricted OP1/OP4 closure remains unclaimed. No QCD/confinement, CKM/PMNS, quark-mass, or Standard-Model-spectrum derivation is claimed.
+OP~1, OP~4, and OP~5 are closed as a declared mathematical global-boundary closure. This does not claim unrestricted all-readout closure, global physical closure, QFT/GR closure, QCD/confinement, CKM/PMNS, quark-mass, or Standard-Model-spectrum derivation.
 
 \medskip
-\noindent\textbf{DOI rule.} The concept DOI remains the stable title-page pointer. The v4.4 version-specific DOI is \href{https://doi.org/10.5281/zenodo.20068747}{10.5281/zenodo.20068747}; prior version-specific DOI records are provenance metadata only. Version IDs, DOI fragments, dates, and release-final IDs are not mathematical object names, indices, theorem labels, route tags, or proof data.
+\noindent\textbf{DOI rule.} The concept DOI remains the stable title-page pointer. The v4.5.0 version-specific DOI is \href{https://doi.org/10.5281/zenodo.20079410}{10.5281/zenodo.20079410}; prior version-specific DOI records are provenance metadata only. Version IDs, DOI fragments, dates, and release IDs are not mathematical object names, indices, theorem labels, route tags, or proof data.
 \end{minipage}}
 \end{center}
 \vspace{0.6em}
 
 \begin{abstract}
-This v4.4 release final records the public Zenodo-facing version of the Quantum Sphaera Companion after the public-version alignment correction, reference-hygiene rebuild, declared local OP1/OP4 closure audit, and DOI insertion.  The version-specific DOI for this release is \href{https://doi.org/10.5281/zenodo.20068747}{10.5281/zenodo.20068747}.  The Companion concept DOI remains \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}.
+This v4.5.0 release-final frontmatter records the Quantum Sphaera Companion after the v4.5.0 global-boundary gate synthesis line, the reader-facing global-scope disclaimer, the DOI synchronization, and the title-page/frontmatter repair.  The version-specific DOI for this release line is \href{https://doi.org/10.5281/zenodo.20079410}{10.5281/zenodo.20079410}.  The Companion concept DOI remains \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}.
 
-The governing new release-facing result is the declared-grammar OP1/OP4 closure theorem.  Inside the declared local orbit--Hopf coupled-selector grammar \(\mathcal G_{1/4}^{\mathrm{loc}}\), the v4.4 closure ledger discharges the OP1 selector-domain promotion, the OP4 post-residual promotion, the coupled selector compatibility ledger, the no-new-debt promotion, and the finite-to-declared-grammar closure guard.  Equivalently, the final local coverage residual satisfies \(R_{\mathrm{cov}}^{1/4}=\varnothing\) in the declared grammar.
+The governing new release-facing result is the declared mathematical global-boundary closure theorem.  Inside the declared mathematical synthesis grammar \(\mathcal G_{\mathrm{global}}^{\mathrm{decl}}\), the v4.5.0 closure ledger synthesizes grammar exhaustion, declared readout invariance, debt-free boundary transport, no-new-debt grammar extension, and functorial comparison stability.  Equivalently, the global-boundary marker satisfies \(B_G=0\) inside that declared synthesis grammar.
 
-This is a scoped theorem.  It is not a global physical closure theorem, not a global Hopf theorem, not a global QFT/GR theorem, and not an unrestricted context-free OP1/OP4 closure outside \(\mathcal G_{1/4}^{\mathrm{loc}}\).  The earlier OP5 HC-halo/Dixon local closure status is retained as a guarded local result inside its declared grammar.  No QCD/confinement, CKM/PMNS, quark-mass, or Standard-Model-spectrum derivation is claimed.  Earlier version-specific DOI records remain provenance metadata only and are not mathematical object names, theorem labels, route tags, or proof data.
+This is a scoped mathematical theorem.  It is not a global physical closure theorem, not a global QFT/GR theorem, and not unrestricted closure over every possible readout or physical model.  Earlier version-specific DOI records remain provenance metadata only and are not mathematical object names, theorem labels, route tags, or proof data.
 \end{abstract}
 
 \clearpage
@@ -308,7 +327,7 @@ This is a scoped theorem.  It is not a global physical closure theorem, not a gl
 \toprule
 \textbf{Layer} & \textbf{Human reading route} & \textbf{LLM/audit route}\\
 \midrule
-Current reader status & Read this as the v4.4 release final after source cleanup, frontmatter normalization, and DOI insertion. & Treat this pass as reader-facing organization and provenance separation only; no new mathematics is introduced.\\
+Current reader status & Read this as the v4.5.0 release-final frontmatter after title-page repair, DOI synchronization, and global-boundary synthesis. & Treat this pass as reader-facing organization and provenance separation only; no new mathematics is introduced.\\
 OP5 status & Read OP~5 as locally closed only inside the declared photon-frame HC-halo/Dixon grammar. & Track the required zero registers \(L_{\mathrm{unr}},B_{\mathrm{HC/MM}},R_{\mathrm{HS4}},D_{\mathrm{HS5}}\) and reject any stronger global reading.\\
 QAM/MML/MMA & Treat QAM as store/object grammar, MML as routing/command grammar, and MMA as execution/readout semantics. & Use finite object bridges, instruction alphabets, deterministic guarded transitions, and route-status tables as audit handles.\\
 Dixon coding & Read the Dixon layer as a 64-dimensional carrier with a \(2^{64}\)-mask activation space. & Keep carrier dimension and Boolean mask count separate; do not read Dixon itself as \(2^{64}\)-dimensional.\\
@@ -331,7 +350,7 @@ Historical witness & Use it as genealogy and reconstruction support. & Preserve 
 \textbf{Record} & \textbf{Status} & \textbf{Reader-facing rule}\\
 \midrule
 Concept DOI & stable Companion-line pointer & \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}\\
-Version DOI & public version-specific release DOI & \href{https://doi.org/10.5281/zenodo.20068747}{10.5281/zenodo.20068747}.\\
+Version DOI & public version-specific release DOI & \href{https://doi.org/10.5281/zenodo.20079410}{10.5281/zenodo.20079410}.\\
 Prior release metadata & provenance layer only & Historical DOI records remain reconstructible in audit and release files, not in the proof spine.\\
 \bottomrule
 \end{tabular}
@@ -351,7 +370,7 @@ Prior release metadata & provenance layer only & Historical DOI records remain r
 \addcontentsline{toc}{subsection}{Prior DOI provenance note}
 \label{subsec:version-specific-doi-bearing-release-final-note}
 
-\noindent\textbf{Prior DOI provenance.} Earlier version-specific DOI records belong to released predecessors and are provenance metadata only. This v4.4 release final assigns the version-specific DOI \href{https://doi.org/10.5281/zenodo.20068747}{10.5281/zenodo.20068747}.
+\noindent\textbf{Prior DOI provenance.} Earlier version-specific DOI records belong to released predecessors and are provenance metadata only. This v4.5.0 release-final line assigns the version-specific DOI \href{https://doi.org/10.5281/zenodo.20079410}{10.5281/zenodo.20079410}.
 
 \noindent\textbf{Working-source status.} This release final adds no theorematic claim beyond the audited Active Core. The current local readout ledger remains guarded: the orbit/Hopf chain is a finite local readout closure ledger with no persistent finite carrier obstruction in the declared diagnostic chart, not a global physical closure theorem.
 
@@ -49609,7 +49628,1959 @@ The insertion of the v4.4 version DOI, release notes, manifest, checksums, Zenod
 This release asserts the declared local orbit--Hopf coupled-selector grammar closure only.  It does not assert global/unrestricted OP1/OP4 closure, a global Hopf theorem, global QFT/GR closure, or Standard-Model-spectrum derivation.
 \end{remark}
 
+
+% --- v4.5.0-r01 OP5 Local-to-Global Promotion Intake ---
+
+\section{v4.5.0-r01 OP5 Local-to-Global Promotion Intake}
+\label{sec:v450-r01-op5-local-to-global-promotion-intake}
+
+This section starts the v4.5.0 working line.  The public release basis remains
+v4.4.  The present layer is a working intake layer only: it assigns no DOI,
+does not mark a release-final state, and does not claim global OP5 closure.
+
+\begin{definition}[OP5 local carrier-closure import]
+The v4.5.0 line imports OP5 only in its local carrier/invariant form.  We write
+\[
+    \mathrm{Closure}_{\mathrm{loc}}(\mathrm{OP5})
+\]
+for the already available carrier-side statement that OP5 is closed inside its
+admissible local return grammar.  This import is not an unrestricted global
+OP5 theorem.
+\end{definition}
+
+\begin{definition}[OP5 promotion target]
+The OP5 local-to-global promotion target is the problem of deciding whether the
+local carrier/invariant OP5 closure can be promoted through the HC/MM-chart
+route-to-global interface without introducing new coupled debt.  The promotion
+target is represented schematically by
+\[
+    \mathrm{Closure}_{\mathrm{loc}}(\mathrm{OP5})
+    \xrightarrow{\ \Pi_{\mathrm{HC/MM\leftrightarrow chart}}\ }
+    \mathrm{Closure}_{\mathrm{prom}}(\mathrm{OP5}).
+\]
+The arrow is not assumed to exist.  It is the object of the v4.5.0 witness
+search.
+\end{definition}
+
+\begin{definition}[OP5 promotion residual]
+Let
+\[
+    R_{\mathrm{OP5}}^{\mathrm{prom}}
+\]
+be the residual measuring the gap between local OP5 carrier-closure and an
+admissible promoted OP5 closure in the larger HC/MM-chart grammar.  At intake,
+the residual is initialized by the named persistent route-to-global obstruction
+\[
+    \left|\mathfrak D_{\mathrm{HC/MM}\leftrightarrow\mathrm{chart}}^{\mathrm{str}}\right|=1.
+\]
+Thus
+\[
+    |R_{\mathrm{OP5}}^{\mathrm{prom}}|=1
+\]
+at the start of v4.5.0-r01.
+\end{definition}
+
+\begin{definition}[HC/MM witness menu for OP5 promotion]
+The first witness family for the promotion attempt is
+\[
+    W_{\mathrm{HC/MM}}^{\mathrm{OP5}}
+    =
+    \left(
+    W_{\mathrm{route}}^{\mathrm{HC/MM}},
+    W_{\mathrm{chart}}^{\mathrm{bridge}},
+    W_{\mathrm{carrier}}^{\mathrm{OP5}}
+    \right).
+\]
+A successful witness must produce strict coupled-debt reduction
+\[
+    \Delta_{\mathrm{cpl}}<0
+\]
+without hidden leakage, residual reopening, or new chart debt.  If no such
+witness exists, OP5 remains locally closed but globally obstructed relative to
+the current HC/MM-chart grammar.
+\end{definition}
+
+\begin{proposition}[v4.5.0-r01 intake ledger]
+The OP5 promotion-intake ledger is
+\[
+\begin{array}{c|c}
+\text{item} & \text{status}\\
+\hline
+\text{public release basis} & \mathrm{v4.4}\\
+\text{working line} & \mathrm{v4.5.0\mbox{-}r01}\\
+\text{local OP5 carrier-closure} & \mathrm{imported}\\
+\text{global OP5 closure} & \mathrm{not\ claimed}\\
+\text{OP5 promotion residual} & |R_{\mathrm{OP5}}^{\mathrm{prom}}|=1\\
+\text{witness search} & \mathrm{declared,\ not\ executed}
+\end{array}
+\]
+\end{proposition}
+
+\begin{theorem}[No-overclaim guard for OP5 promotion intake]
+The v4.5.0-r01 layer may define the OP5 promotion residual and the HC/MM
+witness menu.  It may not claim global OP5 closure, global OP1/OP4 closure,
+global physical closure, or a release-final state.  The next admissible step is
+a finite witness search for \( \Delta_{\mathrm{cpl}}<0 \).
+\end{theorem}
+
+\begin{remark}[Relation to v4.4]
+The v4.4 release remains the public release basis.  The v4.5.0-r01 layer is a
+post-release working branch that investigates whether the local declared-grammar
+closures can be promoted beyond their current grammar without violating the
+recorded route-to-global obstruction.
+\end{remark}
+
+
+% --- v4.5.0-r02 HC/MM Coupled-Debt Witness Search ---
+
+\section{v4.5.0-r02 HC/MM Coupled-Debt Witness Search}
+\label{sec:v450-r02-hcmm-coupled-debt-witness-search}
+
+This section executes the first finite witness search for the OP5
+local-to-global promotion residual introduced in v4.5.0-r01. The search is
+conservative: it only tests the declared first witness family and does not
+claim global OP5 closure.
+
+\begin{definition}[Coupled-debt delta]
+For a witness \(W\), define
+\[
+    \Delta_{\mathrm{cpl}}(W)
+    :=
+    d_{\mathrm{after}}(W)
+    + \ell_{\mathrm{hidden}}(W)
+    + d_{\mathrm{chart,new}}(W)
+    + r_{\mathrm{reopen}}(W)
+    - d_{\mathrm{before}}(W).
+\]
+A strict reduction witness must satisfy
+\[
+    \Delta_{\mathrm{cpl}}(W)<0.
+\]
+A neutral or positive value does not promote OP5 beyond the current
+HC/MM-chart grammar.
+\end{definition}
+
+\begin{definition}[First finite OP5 witness family]
+The first finite witness family is
+\[
+    W_{\mathrm{OP5}}^{(1)}
+    =
+    \{W_0,W_1,W_2,W_3,W_4,W_5\}.
+\]
+It contains route-carry, route-balanced, chart-bridge, carrier-return,
+absorption, and selector-handoff candidates. This is a first-family search,
+not a complete search over all possible witnesses.
+\end{definition}
+
+\begin{proposition}[r02 witness register]
+The first witness register gives
+\[
+\begin{array}{c|r|r|r|r|r}
+\text{witness} & d_{\mathrm{before}} & d_{\mathrm{after}} &
+\ell_{\mathrm{hidden}} & d_{\mathrm{chart,new}} &
+\Delta_{\mathrm{cpl}}\\
+\hline
+W_0 & 1 & 1 & 0 & 0 & 0\\
+W_1 & 1 & 1 & 0 & 0 & 0\\
+W_2 & 1 & 1 & 0 & 1 & 1\\
+W_3 & 1 & 1 & 0 & 0 & 1\\
+W_4 & 1 & 0 & 1 & 0 & 0\\
+W_5 & 1 & 1 & 0 & 0 & 0
+\end{array}
+\]
+with the carrier-return reopening contribution included in \(W_3\).
+Consequently,
+\[
+    \min_{W\in W_{\mathrm{OP5}}^{(1)}}
+    \Delta_{\mathrm{cpl}}(W)
+    =
+    0.
+\]
+\end{proposition}
+
+\begin{proof}
+The register is evaluated by the coupled-debt delta formula. The identity,
+route-balanced, and selector-handoff candidates are compatible but neutral.
+The chart-bridge candidate introduces new chart debt. The carrier-return
+candidate reopens a return-side residual. The absorption candidate removes the
+visible debt but creates exactly one hidden-leakage unit, so its net coupled
+delta is neutral. No tested witness has negative coupled delta.
+\end{proof}
+
+\begin{theorem}[First-family OP5 promotion obstruction]
+No witness in \(W_{\mathrm{OP5}}^{(1)}\) satisfies
+\[
+    \Delta_{\mathrm{cpl}}<0.
+\]
+Therefore the first HC/MM coupled-debt witness search does not promote OP5
+beyond its local carrier/invariant closure. The OP5 promotion residual remains
+\[
+    |R_{\mathrm{OP5}}^{\mathrm{prom}}|=1.
+\]
+This is a first-family obstruction result only. It does not prove global OP5
+closure, and it does not rule out later enlarged witness families.
+\end{theorem}
+
+
+% --- v4.5.0-r03 OP5 Promotion Residual Classifier ---
+
+\section{v4.5.0-r03 OP5 Promotion Residual Classifier}
+\label{sec:v450-r03-op5-promotion-residual-classifier}
+
+This section classifies the result of the first HC/MM coupled-debt witness
+search from v4.5.0-r02.  It does not run a new witness search and does not
+claim global OP5 closure.  Its purpose is to turn the first-family witness
+register into a stable obstruction classification.
+
+\begin{definition}[OP5 promotion classifier alphabet]
+The r03 classifier uses the alphabet
+\[
+\begin{aligned}
+    \mathcal A_{\mathrm{OP5}}^{\mathrm{prom}}
+    =\{&\mathrm{red},\mathrm{route\_neutral},\mathrm{block\_chart},\\
+       &\mathrm{block\_reopen},\mathrm{leak\_neutral},\\
+       &\mathrm{persistent\_first\_family\_obstruction}\}.
+\end{aligned}
+\]
+Here \(\mathrm{red}\) means strict reduction, \(\mathrm{route\_neutral}\) means
+compatible but non-reducing carry, \(\mathrm{block\_chart}\) means new chart
+debt, \(\mathrm{block\_reopen}\) means return-side reopening,
+\(\mathrm{leak\_neutral}\) means apparent debt removal exactly offset by
+hidden leakage, and \(\mathrm{persistent\_first\_family\_obstruction}\) means
+that the first finite family contains no strict reducer while the promotion
+residual remains.
+\end{definition}
+
+\begin{proposition}[r03 classifier register]
+The r02 witness family is classified as
+\[
+\begin{array}{c|r}
+\text{class} & \text{count}\\
+\hline
+\mathrm{red} & 0\\
+\mathrm{route\_neutral} & 3\\
+\mathrm{block\_chart} & 1\\
+\mathrm{block\_reopen} & 1\\
+\mathrm{leak\_neutral} & 1
+\end{array}
+\]
+and the minimum coupled-debt change remains
+\[
+    \min \Delta_{\mathrm{cpl}} = 0.
+\]
+\end{proposition}
+
+\begin{proof}
+The classifier is obtained by applying the r03 alphabet to the r02 witness
+register.  No row has \(\Delta_{\mathrm{cpl}}<0\), so no row is a strict
+reduction witness.  Neutral route candidates preserve compatibility but do not
+reduce debt.  The chart-bridge and carrier-return trials are blocked by new
+chart debt and return-side reopening.  The absorption trial is neutral because
+its visible debt removal is offset by hidden leakage.
+\end{proof}
+
+\begin{theorem}[First-family persistent OP5 promotion obstruction]
+For the first finite witness family,
+\[
+    |R_{\mathrm{OP5}}^{\mathrm{prom}}| = 1
+\]
+after r02 and r03.  Therefore the r03 classifier assigns
+\[
+    R_{\mathrm{OP5}}^{\mathrm{prom}}
+    \in
+    \mathrm{persistent\_first\_family\_obstruction}.
+\]
+Local OP5 carrier/invariant closure is preserved, but global OP5 promotion is
+not allowed by the first witness family.  This theorem is scoped to the first
+finite family only; it does not rule out later enlarged witness families.
+\end{theorem}
+
+\begin{remark}[No-overclaim guard]
+The r03 result should be read as: OP5 remains locally closed and first-family
+globally obstructed.  It is not a global OP5 closure theorem and not a theorem
+that all possible HC/MM witness families fail.
+\end{remark}
+
+
+% --- v4.5.0-r04 Enlarged Witness-Family Decision ---
+
+\section{v4.5.0-r04 Enlarged Witness-Family Decision}
+\label{sec:v450-r04-enlarged-witness-family-decision}
+
+This section decides what to do after the r03 classifier assigns the OP5
+promotion residual to persistent first-family obstruction.  It does not execute
+a new search and does not claim global OP5 closure.
+
+\begin{definition}[Sharpness versus enlargement fork]
+After a first-family obstruction result, there are two admissible routes:
+\[
+\begin{array}{ll}
+\mathrm{freeze} & \text{if first-family sharpness is proved;}\\
+\mathrm{extend} & \text{if first-family sharpness is not proved.}
+\end{array}
+\]
+The r03 classifier proved only first-family obstruction.  It did not prove
+that all possible enlarged witness families fail.
+\end{definition}
+
+\begin{proposition}[r04 decision ledger]
+The r04 decision ledger gives
+\[
+\begin{array}{c|c}
+\text{gate} & \text{value}\\
+\hline
+\text{persistent first-family obstruction} & true\\
+\text{strict first-family reducer exists} & false\\
+\text{first-family sharpness proved} & false\\
+\text{local OP5 closure preserved} & true\\
+\text{global OP5 closure claimed} & false
+\end{array}
+\]
+Therefore the admissible r04 decision is
+\[
+    \mathrm{decision}_{r04}=\mathrm{extend\_witness\_family}.
+\]
+\end{proposition}
+
+\begin{proof}
+The r02 and r03 layers show that the first finite witness family contains no
+strict coupled-debt reducer and leaves
+\[
+    |R_{\mathrm{OP5}}^{\mathrm{prom}}|=1.
+\]
+However, r03 did not prove first-family sharpness as a theorem over all
+enlarged witness families.  Since local OP5 carrier closure is preserved and
+global OP5 closure is not claimed, the conservative route is to enlarge the
+witness menu rather than freeze the obstruction as absolute.
+\end{proof}
+
+\begin{definition}[Second OP5 witness family]
+The enlarged second witness family is
+\[
+    W_{\mathrm{OP5}}^{(2)}
+    =
+    \{U_0,U_1,U_2,U_3,U_4,U_5\}.
+\]
+Its channels are:
+\[
+\begin{array}{c|l}
+U_0 & \text{two-sided tensor bridge}\\
+U_1 & \text{chart-tilt reroute}\\
+U_2 & \text{carrier-return damping}\\
+U_3 & \text{explicit leakage account}\\
+U_4 & \text{Hopf return-phase probe}\\
+U_5 & \text{composite route-chart-carrier witness}
+\end{array}
+\]
+The family is declared here but not executed here.
+\end{definition}
+
+\begin{theorem}[r04 enlarged-family handoff]
+The v4.5.0-r04 layer selects the extension route:
+\[
+    W_{\mathrm{OP5}}^{(1)}
+    \longrightarrow
+    W_{\mathrm{OP5}}^{(2)}.
+\]
+The OP5 status after r04 is: locally closed, first-family obstructed, and
+second-family declared but not executed.  No global OP5 closure is claimed.
+\end{theorem}
+
+
+% --- v4.5.0-r05 Execute W_OP5^(2) Enlarged Witness Search ---
+
+\section{v4.5.0-r05 Execution of the Enlarged OP5 Witness Family}
+\label{sec:v450-r05-execute-enlarged-op5-witness-family}
+
+This section executes the enlarged witness family \(W_{\mathrm{OP5}}^{(2)}\)
+declared in v4.5.0-r04.  The search remains conservative: a strict reduction
+counts only if the witness is admissible.  In particular, a negative formal
+\(\Delta_{\mathrm{cpl}}\) is not enough if the comparison uses an unlicensed
+same-variance contraction.
+
+\begin{definition}[Admissible strict OP5 promotion witness]
+A witness \(U\in W_{\mathrm{OP5}}^{(2)}\) is an admissible strict OP5
+promotion witness when
+\[
+    \Delta_{\mathrm{cpl}}(U)<0,
+\]
+and simultaneously
+\[
+    \ell_{\mathrm{hidden}}(U)=0,\qquad
+    d_{\mathrm{chart,new}}(U)=0,\qquad
+    r_{\mathrm{reopen}}(U)=0,\qquad
+    s_{\mathrm{samevar}}^{\mathrm{unlic}}(U)=0.
+\]
+Thus hidden leakage, new chart debt, residual reopening, and unlicensed
+same-variance comparison each block promotion.
+\end{definition}
+
+\begin{proposition}[r05 enlarged witness register]
+The \(W_{\mathrm{OP5}}^{(2)}\) search gives
+\[
+\begin{array}{c|r|r|r|r|r|r}
+\text{witness} & d_{\mathrm{after}} & \ell_{\mathrm{hidden}} &
+d_{\mathrm{chart,new}} & r_{\mathrm{reopen}} &
+s_{\mathrm{samevar}}^{\mathrm{unlic}} & \Delta_{\mathrm{cpl}}\\
+\hline
+U_0 & 1 & 0 & 0 & 0 & 0 & 0\\
+U_1 & 1 & 0 & 1 & 0 & 0 & 1\\
+U_2 & 1 & 0 & 0 & 0 & 0 & 0\\
+U_3 & 0 & 1 & 0 & 0 & 0 & 0\\
+U_4 & 1 & 0 & 0 & 0 & 0 & 0\\
+U_5 & 0 & 0 & 0 & 0 & 1 & -1
+\end{array}
+\]
+where every row has \(d_{\mathrm{before}}=1\).
+The raw minimum is
+\[
+    \min \Delta_{\mathrm{cpl}} = -1,
+\]
+but the minimum over admissible witnesses is
+\[
+    \min_{\mathrm{adm}}\Delta_{\mathrm{cpl}} = 0.
+\]
+\end{proposition}
+
+\begin{proof}
+The first, second, and fourth neutral channels preserve compatibility but do
+not reduce the residual.  The chart-tilt reroute creates new chart debt.  The
+explicit leakage account pays visible debt but records a compensating leakage
+unit.  The composite route-chart-carrier witness has formal
+\(\Delta_{\mathrm{cpl}}=-1\), but it uses an unlicensed same-variance
+comparison.  Therefore it is a conditional strict candidate, not an admissible
+strict reducer in r05.
+\end{proof}
+
+\begin{theorem}[r05 conditional candidate without admissible promotion]
+The enlarged witness search \(W_{\mathrm{OP5}}^{(2)}\) contains no admissible
+strict reducer:
+\[
+    N_{\mathrm{strict,adm}}=0.
+\]
+It does contain one conditional strict candidate whose only blocking marker is
+the unlicensed same-variance comparison:
+\[
+    U_5 \in \mathrm{conditional\_strict\_candidate\_unlicensed}.
+\]
+Consequently the OP5 promotion residual remains
+\[
+    |R_{\mathrm{OP5}}^{\mathrm{prom}}|=1.
+\]
+The next admissible step is a two-sided tensor bridge license test for the
+\(U_5\) comparison.  No global OP5 closure is claimed in r05.
+\end{theorem}
+
+
+% --- v4.5.0-r06 Two-Sided Tensor Bridge License Test ---
+
+\section{v4.5.0-r06 Two-Sided Tensor Bridge License Test}
+\label{sec:v450-r06-two-sided-tensor-bridge-license-test}
+
+This section tests whether the conditional strict candidate \(U_5\) from
+v4.5.0-r05 can be licensed by a two-sided tensor bridge.  The test is not a
+global OP5 closure claim.  It is a grammar-license test for one previously
+blocked comparison.
+
+\begin{definition}[Two-sided HC/MM-chart comparison bridge]
+A two-sided comparison bridge is a typed comparison object
+\[
+    \mathfrak B_{\mathrm{HC/MM}\leftrightarrow\mathrm{chart}}^{2s}
+    :
+    \mathcal R_{\mathrm{readout}}
+    \times
+    \mathcal S_{\mathrm{structure}}
+    \longrightarrow
+    \mathcal C_{\mathrm{cmp}},
+\]
+which separates readout-facing indices from structure-facing indices before
+comparison.  A same-variance comparison is licensed only if it factors through
+\(\mathfrak B_{\mathrm{HC/MM}\leftrightarrow\mathrm{chart}}^{2s}\).  Raw
+same-variance contraction remains forbidden.
+\end{definition}
+
+\begin{definition}[Bridge license residual]
+For the \(U_5\) comparison, define the bridge license residual
+\[
+    L_{2s}(U_5)
+\]
+as the finite ledger of missing license conditions: untyped readout side,
+untyped structure side, missing comparison tensor, unmatched variance,
+remaining raw same-variance contraction, hidden leakage, new chart debt, or
+return-side reopening.
+\end{definition}
+
+\begin{proposition}[r06 bridge license ledger]
+The \(U_5\) bridge-license ledger gives
+\[
+\begin{array}{c|r}
+\text{license component} & \text{residual}\\
+\hline
+\text{untyped readout side} & 0\\
+\text{untyped structure side} & 0\\
+\text{missing comparison tensor} & 0\\
+\text{unmatched variance after bridge} & 0\\
+\text{raw same-variance contraction} & 0\\
+\text{hidden leakage} & 0\\
+\text{new chart debt} & 0\\
+\text{return-side reopening} & 0
+\end{array}
+\]
+and hence
+\[
+    |L_{2s}(U_5)|=0.
+\]
+\end{proposition}
+
+\begin{proof}
+The \(U_5\) comparison is rewritten as a two-sided comparison: the readout
+side and the structure side are separately typed, the comparison tensor is
+declared, the variance matching is mediated by the bridge, and the raw
+same-variance contraction is removed.  The rewrite introduces no hidden
+leakage, no new chart debt, and no return-side reopening.  Therefore the
+license residual vanishes.
+\end{proof}
+
+\begin{theorem}[U5 becomes an admissible strict OP5 promotion witness]
+In r05, \(U_5\) had raw
+\[
+    \Delta_{\mathrm{cpl}}(U_5)=-1
+\]
+but was blocked by an unlicensed same-variance comparison.  In r06,
+\[
+    |L_{2s}(U_5)|=0,
+\]
+so \(U_5\) becomes an admissible strict reducer inside the declared two-sided
+HC/MM-chart comparison grammar.  Consequently
+\[
+    N_{\mathrm{strict,adm}}^{r06}=1,
+    \qquad
+    |R_{\mathrm{OP5}}^{\mathrm{prom}}|=0
+\]
+inside this declared two-sided bridge grammar.
+\end{theorem}
+
+\begin{remark}[Scope guard]
+The r06 result is a promoted OP5 closure result inside the declared two-sided
+HC/MM-chart comparison grammar.  It is not an unrestricted global OP5 theorem,
+not a global physical closure theorem, and not a release-final statement.
+\end{remark}
+
+
+% --- v4.5.0-r07 OP5 Two-Sided Promoted-Closure Theorem ---
+
+\section{v4.5.0-r07 OP5 Two-Sided Promoted-Closure Theorem}
+\label{sec:v450-r07-op5-two-sided-promoted-closure-theorem}
+
+This section records the theorem-level consequence of the r06 two-sided bridge
+license test.  The result is scoped to the declared two-sided HC/MM-chart
+comparison grammar.  It is not an unrestricted global OP5 theorem and not a
+global physical closure theorem.
+
+\begin{definition}[Declared two-sided OP5 promotion grammar]
+Let
+\[
+    \mathcal G_{\mathrm{OP5}}^{2s}
+\]
+be the declared two-sided OP5 promotion grammar consisting of: the local OP5
+carrier/invariant closure import, the \(W_{\mathrm{OP5}}^{(1)}\) and
+\(W_{\mathrm{OP5}}^{(2)}\) witness registers, the two-sided
+HC/MM-chart comparison bridge
+\[
+    \mathfrak B_{\mathrm{HC/MM}\leftrightarrow\mathrm{chart}}^{2s},
+\]
+and the no-leakage, no-new-chart-debt, no-reopening, and no-raw-same-variance
+guards.
+\end{definition}
+
+\begin{definition}[Two-sided OP5 promoted closure]
+Inside \(\mathcal G_{\mathrm{OP5}}^{2s}\), OP5 is two-sided promoted-closed
+when the OP5 local carrier closure is preserved and the promotion residual
+vanishes:
+\[
+    \mathrm{Closure}_{\mathrm{loc}}(\mathrm{OP5})
+    \quad\text{and}\quad
+    R_{\mathrm{OP5}}^{\mathrm{prom}}=\varnothing.
+\]
+This definition is explicitly grammar-scoped.
+\end{definition}
+
+\begin{proposition}[r01-r06 dependency ledger]
+The r07 theorem depends on the following finite ledger:
+\[
+\begin{array}{c|c}
+\text{stage} & \text{status}\\
+\hline
+r01 & \text{local OP5 carrier/invariant closure imported}\\
+r02 & \text{first-family HC/MM witness search executed}\\
+r03 & \text{first-family obstruction classified}\\
+r04 & W_{\mathrm{OP5}}^{(2)}\text{ declared}\\
+r05 & U_5\text{ found as conditional strict candidate}\\
+r06 & U_5\text{ licensed by the two-sided bridge}
+\end{array}
+\]
+The r06 result gives
+\[
+    \Delta_{\mathrm{cpl}}(U_5)=-1,
+    \qquad
+    |L_{2s}(U_5)|=0,
+    \qquad
+    N_{\mathrm{strict,adm}}=1.
+\]
+\end{proposition}
+
+\begin{theorem}[OP5 promoted closure inside the two-sided grammar]
+Inside the declared two-sided HC/MM-chart comparison grammar
+\(\mathcal G_{\mathrm{OP5}}^{2s}\), the licensed witness \(U_5\) is an
+admissible strict reducer.  Therefore
+\[
+    |R_{\mathrm{OP5}}^{\mathrm{prom}}|=0.
+\]
+Consequently OP5 is promoted-closed inside
+\(\mathcal G_{\mathrm{OP5}}^{2s}\):
+\[
+    \mathrm{Closure}_{\mathcal G_{\mathrm{OP5}}^{2s}}(\mathrm{OP5}).
+\]
+\end{theorem}
+
+\begin{proof}
+The r01 intake imported local OP5 carrier/invariant closure without claiming
+global OP5 closure.  The r02 and r03 layers showed that the first witness
+family was obstructed.  The r04 layer therefore enlarged the witness family.
+The r05 layer found \(U_5\) with raw \(\Delta_{\mathrm{cpl}}=-1\), blocked
+only by an unlicensed same-variance comparison.  The r06 layer introduced the
+two-sided HC/MM-chart comparison bridge and proved
+\[
+    |L_{2s}(U_5)|=0.
+\]
+Thus the only r05 blocker for \(U_5\) is removed without hidden leakage, new
+chart debt, or return-side reopening.  Hence \(U_5\) is an admissible strict
+reducer in \(\mathcal G_{\mathrm{OP5}}^{2s}\), and the OP5 promotion residual
+vanishes in that grammar.
+\end{proof}
+
+\begin{remark}[No-overclaim boundary]
+The theorem proves OP5 promoted closure only inside the declared two-sided
+HC/MM-chart comparison grammar.  It does not prove unrestricted global OP5
+closure, does not prove global physical closure, does not close QFT/GR, and
+does not mark a release-final state.
+\end{remark}
+
+
+% --- v4.5.0-r08 No-Overclaim / Route-to-Global Boundary Audit ---
+
+\section{v4.5.0-r08 No-Overclaim and Route-to-Global Boundary Audit}
+\label{sec:v450-r08-no-overclaim-route-to-global-boundary-audit}
+
+This section audits the boundary of the r07 OP5 two-sided promoted-closure
+theorem.  The audit preserves the r07 result inside the declared two-sided
+HC/MM-chart comparison grammar, but blocks unrestricted global OP5, all-readout
+OP5, global physical, and release-final claims.
+
+\begin{definition}[Route-to-global boundary residual]
+Let
+\[
+    B_{\mathrm{global}}^{\mathrm{OP5}}
+\]
+denote the boundary residual between the declared two-sided OP5 promotion
+grammar \(\mathcal G_{\mathrm{OP5}}^{2s}\) and an unrestricted global OP5
+claim.  It is not the same object as \(R_{\mathrm{OP5}}^{\mathrm{prom}}\).
+The r07 theorem proves
+\[
+    R_{\mathrm{OP5}}^{\mathrm{prom}}=0
+    \quad\text{inside}\quad
+    \mathcal G_{\mathrm{OP5}}^{2s},
+\]
+but it does not prove
+\[
+    B_{\mathrm{global}}^{\mathrm{OP5}}=0.
+\]
+\end{definition}
+
+\begin{proposition}[Allowed and blocked claims]
+The r08 claim ledger is
+\[
+\begin{array}{c|c|c}
+\text{claim} & \text{allowed} & \text{scope}\\
+\hline
+\mathrm{Closure}_{\mathcal G_{\mathrm{OP5}}^{2s}}(\mathrm{OP5})
+& \mathrm{yes} & \text{declared two-sided grammar}\\
+\text{unrestricted global OP5 closure}
+& \mathrm{no} & \text{not established}\\
+\text{all-readout OP5 closure}
+& \mathrm{no} & \text{not established}\\
+\text{global physical closure}
+& \mathrm{no} & \text{not established}\\
+\text{release-final status}
+& \mathrm{no} & \text{working line only}
+\end{array}
+\]
+\end{proposition}
+
+\begin{proposition}[Route-to-global boundary ledger]
+The boundary ledger gives
+\[
+\begin{array}{c|r}
+\text{gate} & \text{value}\\
+\hline
+\text{two-sided OP5 gates passed} & 1\\
+\text{unrestricted global gates passed} & 0\\
+B_{\mathrm{global}}^{\mathrm{OP5}} & 1
+\end{array}
+\]
+where \(B_{\mathrm{global}}^{\mathrm{OP5}}=1\) is a scope-boundary marker, not
+a reopening of \(R_{\mathrm{OP5}}^{\mathrm{prom}}\) inside
+\(\mathcal G_{\mathrm{OP5}}^{2s}\).
+\end{proposition}
+
+\begin{theorem}[r08 no-overclaim boundary theorem]
+The r07 theorem may be stated as
+\[
+    \mathrm{Closure}_{\mathcal G_{\mathrm{OP5}}^{2s}}(\mathrm{OP5}).
+\]
+It may not be strengthened in r08 to unrestricted global OP5 closure, all-readout
+OP5 closure, global physical closure, or release-final status.  The route from
+\(\mathcal G_{\mathrm{OP5}}^{2s}\) to a larger global claim remains guarded by
+\[
+    B_{\mathrm{global}}^{\mathrm{OP5}}=1.
+\]
+\end{theorem}
+
+\begin{remark}[Interpretation]
+The boundary residual in r08 does not undo the two-sided OP5 promoted closure.
+It records exactly where the next promotion problem begins.  In plain terms:
+OP5 is promoted closed in the declared two-sided grammar, but the unrestricted
+global route remains outside the proved scope.
+\end{remark}
+
+
+% --- v4.5.0-r09 OP5 / OP1-OP4 Compatibility Audit ---
+
+\section{v4.5.0-r09 OP5 / OP1--OP4 Compatibility Audit}
+\label{sec:v450-r09-op5-op14-compatibility-audit}
+
+This section audits compatibility between the public v4.4 OP1/OP4
+declared-grammar closure and the v4.5.0 OP5 two-sided promoted-closure result.
+It asks whether the OP5 promotion reopens any OP1/OP4 ledger channel.  It does
+not claim unified global closure.
+
+\begin{definition}[Compatibility product grammar]
+Let
+\[
+    \mathcal G_{\mathrm{cmp}}^{1/4,5}
+    :=
+    \mathcal G_{1/4}^{\mathrm{loc}}
+    \boxtimes
+    \mathcal G_{\mathrm{OP5}}^{2s}
+\]
+be the compatibility product of the local OP1/OP4 declared grammar and the
+two-sided OP5 promotion grammar.  The product symbol means coexistence with
+explicit cross-reopen guards; it does not mean unrestricted global collapse of
+the two grammars.
+\end{definition}
+
+\begin{definition}[OP5-to-OP1/OP4 reopen residual]
+Define
+\[
+    R_{\mathrm{reopen}}^{1/4\leftarrow 5}
+\]
+as the finite residual measuring whether the OP5 two-sided promoted closure
+reopens any OP1/OP4 local closure channel: scale, lens, chart, debt, selector,
+or coverage.
+\end{definition}
+
+\begin{proposition}[r09 compatibility ledger]
+The compatibility ledger gives
+\[
+\begin{array}{c|r}
+\text{OP1/OP4 reopen channel} & \text{residual}\\
+\hline
+\text{scale} & 0\\
+\text{lens} & 0\\
+\text{chart} & 0\\
+\text{debt} & 0\\
+\text{selector} & 0\\
+\text{coverage} & 0\\
+\hline
+R_{\mathrm{reopen}}^{1/4\leftarrow 5} & 0
+\end{array}
+\]
+so the OP5 two-sided promotion does not reopen the v4.4 OP1/OP4 local closure
+ledger.
+\end{proposition}
+
+\begin{proof}
+The OP5 theorem from r07 is scoped to
+\(\mathcal G_{\mathrm{OP5}}^{2s}\), while r08 explicitly keeps the
+route-to-global boundary outside the theorem.  The boundary marker
+\(B_{\mathrm{global}}^{\mathrm{OP5}}=1\) is not imported as scale, lens, chart,
+debt, selector, or coverage debt inside \(\mathcal G_{1/4}^{\mathrm{loc}}\).
+Therefore none of the v4.4 OP1/OP4 closure channels reopens.
+\end{proof}
+
+\begin{theorem}[Combined scoped compatibility surface]
+The following two scoped closure statements are compatible:
+\[
+    \mathrm{Closure}_{\mathcal G_{1/4}^{\mathrm{loc}}}(\mathrm{OP1},\mathrm{OP4})
+\]
+and
+\[
+    \mathrm{Closure}_{\mathcal G_{\mathrm{OP5}}^{2s}}(\mathrm{OP5}).
+\]
+Equivalently, inside the compatibility product grammar,
+\[
+    \mathrm{Closure}_{\mathcal G_{\mathrm{cmp}}^{1/4,5}}
+    (\mathrm{OP1},\mathrm{OP4};\mathrm{OP5})
+\]
+is allowed with
+\[
+    R_{\mathrm{reopen}}^{1/4\leftarrow 5}=0.
+\]
+This is a combined scoped surface only, not unified global closure.
+\end{theorem}
+
+\begin{remark}[Global boundary]
+The route-to-global boundary remains
+\[
+    B_{\mathrm{global}}^{\mathrm{OP5}}=1.
+\]
+This boundary marker prevents the combined scoped surface from being rewritten
+as unrestricted global OP1/OP4/OP5 closure.
+\end{remark}
+
+
+% --- v4.5.0-r10 Two-Sided Tensor Grammar Consolidation ---
+
+\section{v4.5.0-r10 Two-Sided Tensor Grammar Consolidation}
+\label{sec:v450-r10-two-sided-tensor-grammar-consolidation}
+
+This section consolidates the notation used by the v4.4 OP1/OP4 local closure
+and the v4.5.0 OP5 two-sided promoted closure.  It is a grammar and notation
+layer only.  It preserves the scoped compatibility surface from r09 and does
+not claim unified global closure.
+
+\begin{definition}[r10 grammar normal form]
+Set
+\[
+    \mathcal G_L := \mathcal G_{1/4}^{\mathrm{loc}},
+    \qquad
+    \mathcal G_T := \mathcal G_{\mathrm{OP5}}^{2s}.
+\]
+Here \(\mathcal G_L\) is the local declared OP1/OP4 grammar and
+\(\mathcal G_T\) is the two-sided OP5 HC/MM-chart comparison grammar.  Their
+compatibility product is written
+\[
+    \mathcal G_C
+    :=
+    \mathcal G_L \boxtimes_{\mathfrak C} \mathcal G_T,
+\]
+where \(\mathfrak C\) is an explicit comparison tensor.  The symbol
+\(\boxtimes_{\mathfrak C}\) denotes guarded compatibility, not unrestricted
+global tensor contraction.
+\end{definition}
+
+\begin{definition}[Two-sided comparison tensor]
+The comparison tensor
+\[
+    \mathfrak C:
+    \mathcal R_{\mathrm{readout}}
+    \times
+    \mathcal S_{\mathrm{structure}}
+    \longrightarrow
+    \mathcal C_{\mathrm{cmp}}
+\]
+separates readout-facing indices from structure-facing indices before any
+comparison is made.  A same-variance comparison is admissible only when it
+factors through \(\mathfrak C\).  Raw same-variance contraction remains
+forbidden.
+\end{definition}
+
+\begin{proposition}[r10 grammar rules]
+The consolidated grammar obeys the following rules:
+\[
+\begin{array}{c|l}
+\text{rule} & \text{content}\\
+\hline
+\mathrm{TSG1} & \text{readout and structure indices remain typed}\\
+\mathrm{TSG2} & \text{same-variance comparison requires }\mathfrak C\\
+\mathrm{TSG3} & \boxtimes_{\mathfrak C}\text{ is not global grammar collapse}\\
+\mathrm{TSG4} & B_G\text{ remains outside the scoped closure}\\
+\mathrm{TSG5} & R_{\mathrm{reopen}}^{1/4\leftarrow 5}=0
+\end{array}
+\]
+where \(B_G\) is the route-to-global boundary marker inherited from r08.
+\end{proposition}
+
+\begin{theorem}[Consolidated scoped grammar surface]
+In the r10 normal form, the two scoped closure statements are
+\[
+    \mathrm{Closure}_{\mathcal G_L}(\mathrm{OP1},\mathrm{OP4})
+\]
+and
+\[
+    \mathrm{Closure}_{\mathcal G_T}(\mathrm{OP5}).
+\]
+The compatibility audit from r09 gives
+\[
+    R_{\mathrm{reopen}}^{1/4\leftarrow 5}=0,
+\]
+so they define the combined scoped surface
+\[
+    \mathrm{Closure}_{\mathcal G_C}(\mathrm{OP1},\mathrm{OP4};\mathrm{OP5}).
+\]
+This theorem is a consolidated notation theorem for the scoped product
+\(\mathcal G_C\).  It is not a unified global closure theorem.
+\end{theorem}
+
+\begin{remark}[Boundary preserved]
+The global boundary marker remains
+\[
+    B_G = 1.
+\]
+It does not reopen the scoped product closure.  It marks exactly the route
+from the combined scoped surface to any future larger global claim.
+\end{remark}
+
+
+% --- v4.5.0-r11 Compatibility Theorem / No-Reopen Summary ---
+
+\section{v4.5.0-r11 Compatibility Theorem and No-Reopen Summary}
+\label{sec:v450-r11-compatibility-theorem-no-reopen-summary}
+
+This section summarizes the compatibility result after the r10 two-sided tensor
+grammar consolidation.  It also records a short notation guide for the symbol
+\(\boxtimes_{\mathfrak C}\), since this symbol is not meant as an ordinary
+multiplication sign.
+
+\begin{definition}[Guarded compatibility product]
+The symbol
+\[
+    \boxtimes_{\mathfrak C}
+\]
+is read as a guarded compatibility product over the comparison tensor
+\(\mathfrak C\).  In the present setting
+\[
+    \mathcal G_C
+    =
+    \mathcal G_L \boxtimes_{\mathfrak C} \mathcal G_T
+\]
+means: combine the local OP1/OP4 grammar \(\mathcal G_L\) and the two-sided
+OP5 grammar \(\mathcal G_T\) only through the explicit comparison tensor
+\(\mathfrak C\).  It does not mean ordinary multiplication, raw tensor
+contraction, or unrestricted global grammar collapse.
+\end{definition}
+
+\begin{proposition}[r11 no-reopen ledger]
+The r11 no-reopen summary is
+\[
+\begin{array}{c|r}
+\text{component} & \text{residual}\\
+\hline
+\mathrm{Closure}_{\mathcal G_L}(\mathrm{OP1},\mathrm{OP4}) & 0\\
+\mathrm{Closure}_{\mathcal G_T}(\mathrm{OP5}) & 0\\
+R_{\mathrm{reopen}}^{1/4\leftarrow 5} & 0\\
+\mathrm{Closure}_{\mathcal G_C}(\mathrm{OP1},\mathrm{OP4};\mathrm{OP5}) & 0\\
+B_G & 1
+\end{array}
+\]
+where \(B_G=1\) is the retained route-to-global boundary marker.
+\end{proposition}
+
+\begin{theorem}[Combined scoped no-reopen theorem]
+In the r10 normal form, the local OP1/OP4 closure and the OP5 two-sided
+promoted closure coexist in the guarded compatibility grammar
+\[
+    \mathcal G_C
+    =
+    \mathcal G_L \boxtimes_{\mathfrak C} \mathcal G_T.
+\]
+Moreover,
+\[
+    R_{\mathrm{reopen}}^{1/4\leftarrow 5}=0.
+\]
+Therefore
+\[
+    \mathrm{Closure}_{\mathcal G_C}(\mathrm{OP1},\mathrm{OP4};\mathrm{OP5})
+\]
+is a valid combined scoped closure surface.
+\end{theorem}
+
+\begin{proof}
+The v4.4 line provides the local declared OP1/OP4 closure in
+\(\mathcal G_L\).  The r07 line provides OP5 promoted closure in
+\(\mathcal G_T\).  The r09 compatibility audit shows that the OP5 closure
+does not reopen any OP1/OP4 scale, lens, chart, debt, selector, or coverage
+channel.  The r10 grammar consolidation then rewrites the combined statement
+through the explicit comparison tensor \(\mathfrak C\).  Hence the combined
+scoped surface is valid with zero cross-reopen residual.
+\end{proof}
+
+\begin{remark}[Boundary retained]
+The theorem is intentionally scoped.  The boundary
+\[
+    B_G=1
+\]
+is retained.  Thus the theorem is not
+\[
+    \mathrm{Closure}_{\mathrm{global}}(\mathrm{OP1},\mathrm{OP4},\mathrm{OP5}).
+\]
+It is only the combined scoped closure theorem inside \(\mathcal G_C\).
+\end{remark}
+
+
+% --- v4.5.0-r12 Route-to-Global Boundary Problem Statement ---
+
+\section{v4.5.0-r12 Route-to-Global Boundary Problem Statement}
+\label{sec:v450-r12-route-to-global-boundary-problem-statement}
+
+This section states the next problem after the r11 combined scoped no-reopen
+theorem.  The scoped theorem remains valid:
+\[
+    \mathrm{Closure}_{\mathcal G_C}(\mathrm{OP1},\mathrm{OP4};\mathrm{OP5}),
+    \qquad
+    R_{\mathrm{reopen}}^{1/4\leftarrow 5}=0.
+\]
+However, the route-to-global boundary marker remains
+\[
+    B_G=1.
+\]
+The purpose of r12 is to name the exact boundary problem, not to solve it.
+
+\begin{definition}[Route-to-global promotion problem]
+The route-to-global promotion problem is the problem of deciding whether the
+scoped compatibility grammar
+\[
+    \mathcal G_C
+    =
+    \mathcal G_L \boxtimes_{\mathfrak C} \mathcal G_T
+\]
+can be embedded into a larger grammar \(\mathcal G_{\mathrm{global}}\) without
+creating new debt, losing comparison typing, or reopening any OP1/OP4 or OP5
+closure channel.  The problem is denoted
+\[
+    \mathrm{Promote}(\mathcal G_C\to \mathcal G_{\mathrm{global}}).
+\]
+No such promotion is assumed in r12.
+\end{definition}
+
+\begin{definition}[Global-boundary gate ledger]
+The boundary marker \(B_G\) is discharged only if the following gates are
+closed:
+\[
+\begin{array}{c|l}
+\text{gate} & \text{meaning}\\
+\hline
+\mathrm{GLOB1} & \text{grammar exhaustion}\\
+\mathrm{GLOB2} & \text{all-readout invariance}\\
+\mathrm{GLOB3} & \text{boundary transport without new debt}\\
+\mathrm{GLOB4} & \text{no-new-debt under grammar extension}\\
+\mathrm{GLOB5} & \text{functorial comparison stability}
+\end{array}
+\]
+The physical-interpretation guard is separate: even a mathematical grammar
+promotion would not by itself be a global physical closure theorem.
+\end{definition}
+
+\begin{proposition}[r12 boundary ledger]
+At r12, the global-boundary ledger is
+\[
+\begin{array}{c|r}
+\text{quantity} & \text{value}\\
+\hline
+\text{required global gates} & 5\\
+\text{passed global gates} & 0\\
+\text{open global gates} & 5\\
+B_G & 1
+\end{array}
+\]
+Therefore the route-to-global boundary remains open.
+\end{proposition}
+
+\begin{theorem}[Scoped closure with open global boundary]
+The r11 scoped no-reopen theorem remains valid:
+\[
+    \mathrm{Closure}_{\mathcal G_C}(\mathrm{OP1},\mathrm{OP4};\mathrm{OP5})
+\]
+and
+\[
+    R_{\mathrm{reopen}}^{1/4\leftarrow 5}=0.
+\]
+But r12 does not prove
+\[
+    \mathrm{Closure}_{\mathrm{global}}(\mathrm{OP1},\mathrm{OP4},\mathrm{OP5}).
+\]
+Instead, it records the precise open boundary:
+\[
+    B_G=1.
+\]
+\end{theorem}
+
+\begin{remark}[Interpretation]
+In plain language, v4.5.0 has reached a combined scoped closure surface.  The
+next problem is no longer OP5 local promotion; it is the route from the scoped
+surface to any larger/global grammar.  That route requires new gates, not just
+renaming the scoped theorem as global.
+\end{remark}
+
+
+% --- v4.5.0-r14 Reader-Facing Notation Cleanup ---
+
+\section{v4.5.0-r14 Reader-Facing Notation Cleanup}
+\label{sec:v450-r14-reader-facing-notation-cleanup}
+
+This section is an expository notation cleanup.  It introduces no new closure
+claim.  Its purpose is to make the symbols from the v4.5.0 working line readable
+without weakening the no-overclaim guards.
+
+\begin{definition}[Boxed-times compatibility product]
+The symbol
+\[
+    \boxtimes_{\mathfrak C}
+\]
+is read as a \emph{guarded compatibility product over the comparison tensor}
+\(\mathfrak C\).  Thus
+\[
+    \mathcal G_C
+    =
+    \mathcal G_L \boxtimes_{\mathfrak C} \mathcal G_T
+\]
+means that the local OP1/OP4 grammar \(\mathcal G_L\) and the two-sided OP5
+grammar \(\mathcal G_T\) are compared only through the explicit bridge
+\(\mathfrak C\).  It does not mean ordinary multiplication, raw tensor
+contraction, or unrestricted global grammar collapse.
+\end{definition}
+
+\begin{definition}[Reader glossary]
+The working symbols should be read as follows:
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.22\linewidth}|>{\raggedright\arraybackslash}p{0.68\linewidth}}
+\textbf{symbol} & \textbf{reader meaning}\\
+\hline
+\(\mathcal G_L\) & the local declared OP1/OP4 grammar from the v4.4 line\\
+\(\mathcal G_T\) & the two-sided OP5 HC/MM-chart comparison grammar\\
+\(\mathfrak C\) & the explicit comparison tensor separating readout and structure sides\\
+\(\mathcal G_C\) & the combined scoped grammar \(\mathcal G_L\boxtimes_{\mathfrak C}\mathcal G_T\)\\
+\(B_G\) & the retained route-to-global boundary marker\\
+\(R_{\mathrm{reopen}}^{1/4\leftarrow 5}\) & the cross-reopen residual from OP5 back to OP1/OP4\\
+\(\mathrm{GLOB1}\text{--}\mathrm{GLOB5}\) & the five open gates for any future route-to-global promotion
+\end{tabular}
+\end{center}
+\end{definition}
+
+\begin{proposition}[Reader-safe separation of residuals]
+The two residual markers
+\[
+    R_{\mathrm{reopen}}^{1/4\leftarrow 5}
+    \qquad\text{and}\qquad
+    B_G
+\]
+have different jobs.  The first asks whether OP5 reopens the OP1/OP4 local
+closure ledger.  In the r11 summary this residual is zero.  The second records
+that the route from the scoped grammar \(\mathcal G_C\) to a larger/global
+grammar is still open.  In r12 this marker remains
+\[
+    B_G=1.
+\]
+Thus the global boundary marker is not a reopened scoped residual.
+\end{proposition}
+
+\begin{remark}[Plain-language reading]
+The expression
+\[
+    \mathrm{Closure}_{\mathcal G_C}(\mathrm{OP1},\mathrm{OP4};\mathrm{OP5})
+\]
+should be read as: OP1/OP4 and OP5 are closed together on the declared guarded
+compatibility surface.  It should not be read as: all global readouts and all
+physical interpretations are closed.  The latter would require the open gates
+\(\mathrm{GLOB1}\) through \(\mathrm{GLOB5}\), which remain open at this stage.
+\end{remark}
+
+\begin{theorem}[Reader-clean notation handoff]
+The r14 cleanup preserves the r11/r12 state:
+\[
+    \mathrm{Closure}_{\mathcal G_C}(\mathrm{OP1},\mathrm{OP4};\mathrm{OP5}),
+    \qquad
+    R_{\mathrm{reopen}}^{1/4\leftarrow 5}=0,
+    \qquad
+    B_G=1.
+\]
+It introduces no global closure theorem, no global physical closure theorem,
+and no release-final state.
+\end{theorem}
+
+
+% --- v4.5.0-r15 Global-Boundary Witness-Menu Design ---
+
+\section{v4.5.0-r15 Global-Boundary Witness-Menu Design}
+\label{sec:v450-r15-global-boundary-witness-menu-design}
+
+This section designs finite witness menus for the five open route-to-global
+gates from r12.  It does not execute the menus.  It does not discharge
+\(B_G\), and it does not claim global closure.
+
+\begin{definition}[Global-boundary witness families]
+For the five open gates
+\[
+    \mathrm{GLOB1},\ldots,\mathrm{GLOB5},
+\]
+define the witness families
+\[
+\begin{array}{c|c|l}
+\text{gate} & \text{family} & \text{role}\\
+\hline
+\mathrm{GLOB1} & W_{\mathrm{exh}} & \text{grammar exhaustion}\\
+\mathrm{GLOB2} & W_{\mathrm{inv}} & \text{all-readout invariance}\\
+\mathrm{GLOB3} & W_{\mathrm{tr}} & \text{boundary transport}\\
+\mathrm{GLOB4} & W_{\mathrm{debt}} & \text{no-new-debt extension}\\
+\mathrm{GLOB5} & W_{\mathrm{fun}} & \text{functorial comparison stability}
+\end{array}
+\]
+These families are finite menus for future execution, not proof objects in r15.
+\end{definition}
+
+\begin{proposition}[r15 witness-menu ledger]
+The r15 design ledger is
+\[
+\begin{array}{c|r}
+\text{quantity} & \text{value}\\
+\hline
+\text{witness menus designed} & 5\\
+\text{witness menus executed} & 0\\
+\text{new global gates passed} & 0\\
+\text{open global gates after r15} & 5\\
+B_G & 1
+\end{array}
+\]
+Therefore r15 is a design step only.
+\end{proposition}
+
+\begin{definition}[Execution order]
+The intended execution order is
+\[
+    W_{\mathrm{exh}}
+    \longrightarrow
+    W_{\mathrm{inv}}
+    \longrightarrow
+    W_{\mathrm{tr}}
+    \longrightarrow
+    W_{\mathrm{debt}}
+    \longrightarrow
+    W_{\mathrm{fun}}.
+\]
+Grammar exhaustion comes first because all-readout invariance and boundary
+transport are underspecified if admissible branches have not first been
+classified.
+\end{definition}
+
+\begin{theorem}[No-discharge theorem for r15]
+The r15 layer defines the finite witness menus needed for the route-to-global
+program, but it does not execute any witness family.  Hence
+\[
+    B_G=1
+\]
+remains unchanged, and no global OP1/OP4/OP5 closure is claimed.
+\end{theorem}
+
+\begin{remark}[Plain reading]
+The scoped closure surface from r11 is still intact.  r15 only turns the open
+global-boundary problem into a concrete work queue.
+\end{remark}
+
+
+% --- v4.5.0-r16 Execute W_exh Grammar Exhaustion ---
+
+\section{v4.5.0-r16 Execution of \(W_{\mathrm{exh}}\): Grammar Exhaustion}
+\label{sec:v450-r16-execute-wexh-grammar-exhaustion}
+
+This section executes the first global-boundary witness family from r15:
+\[
+    W_{\mathrm{exh}}=\{E_0,E_1,E_2\}.
+\]
+It tests only the grammar-exhaustion gate \(\mathrm{GLOB1}\).  It does not
+test all-readout invariance, boundary transport, no-new-debt under extension,
+or functorial comparison stability.
+
+\begin{definition}[Grammar-exhaustion witness family]
+The family \(W_{\mathrm{exh}}\) consists of:
+\[
+\begin{array}{c|l}
+E_0 & \text{atlas-coverage witness}\\
+E_1 & \text{readout-factorization witness}\\
+E_2 & \text{no-orphan-branch witness}
+\end{array}
+\]
+The family passes if every admissible branch of the current scoped surface is
+represented in \(\mathcal G_C\) or routed to a declared open boundary, and no
+admissible branch remains orphan.
+\end{definition}
+
+\begin{proposition}[r16 branch classification register]
+The branch register is
+\[
+\begin{array}{c|c}
+\text{branch} & \text{classification}\\
+\hline
+C_0\ \text{OP1/OP4 local} & \text{represented}\\
+C_1\ \text{OP5 two-sided} & \text{represented}\\
+C_2\ \text{compatibility product} & \text{represented}\\
+C_3\ \text{route-to-global boundary} & \text{routed to }B_G\\
+C_4\ \text{raw same-variance comparison} & \text{blocked, not admissible}\\
+C_5\ \text{global physical interpretation} & \text{blocked, not admissible}
+\end{array}
+\]
+Thus
+\[
+    N_{\mathrm{orphan}}=0,
+    \qquad
+    N_{\mathrm{new\,debt}}=0.
+\]
+\end{proposition}
+
+\begin{theorem}[GLOB1 grammar-exhaustion gate passed]
+The witness family \(W_{\mathrm{exh}}\) discharges the grammar-exhaustion gate:
+\[
+    \mathrm{GLOB1}=1.
+\]
+After r16 the global-boundary ledger is
+\[
+\begin{array}{c|r}
+\text{quantity} & \text{value}\\
+\hline
+\text{passed global gates} & 1\\
+\text{open global gates} & 4\\
+B_G & 1
+\end{array}
+\]
+The boundary marker remains \(B_G=1\) because \(\mathrm{GLOB2}\) through
+\(\mathrm{GLOB5}\) remain open.
+\end{theorem}
+
+\begin{remark}[No global closure claim]
+The r16 result is a coverage/exhaustion result only.  It does not prove global
+promotion and does not claim global OP1/OP4/OP5 closure.
+\end{remark}
+
+
+% --- v4.5.0-r17 Execute W_inv Declared Readout Invariance ---
+
+\section{v4.5.0-r17 Execution of \(W_{\mathrm{inv}}\): Declared Readout Invariance}
+\label{sec:v450-r17-execute-winv-readout-invariance}
+
+This section executes the second global-boundary witness family:
+\[
+    W_{\mathrm{inv}}=\{I_0,I_1,I_2\}.
+\]
+The result is scoped to the declared admissible readout transformations in the
+current grammar.  It is not an unrestricted all-possible-readouts theorem.
+
+\begin{definition}[Declared readout-invariance witness family]
+The family \(W_{\mathrm{inv}}\) consists of:
+\[
+\begin{array}{c|l}
+I_0 & \text{declared chart-change witness}\\
+I_1 & \text{declared readout-change witness}\\
+I_2 & \text{declared return-phase-change witness}
+\end{array}
+\]
+It passes if the scoped closure surface is preserved, no OP1/OP4 or OP5
+channel reopens, no new debt is created, and the boundary marker \(B_G\) is not
+rewritten as a solved global claim.
+\end{definition}
+
+\begin{proposition}[r17 readout-invariance register]
+The declared readout-invariance register is
+\[
+\begin{array}{c|c|r|r|r}
+\text{witness} & \text{classification} & R_{\mathrm{reopen}} & N_{\mathrm{debt}} & N_{\mathrm{boundary\ rewrite}}\\
+\hline
+I_0 & \text{invariant} & 0 & 0 & 0\\
+I_1 & \text{invariant} & 0 & 0 & 0\\
+I_2 & \text{invariant} & 0 & 0 & 0
+\end{array}
+\]
+Thus the declared readout-invariance test has no reopen, no new debt, and no
+boundary rewrite.
+\end{proposition}
+
+\begin{theorem}[GLOB2 declared-readout-invariance gate passed]
+The witness family \(W_{\mathrm{inv}}\) discharges the declared
+readout-invariance gate:
+\[
+    \mathrm{GLOB2}=1.
+\]
+After r17 the global-boundary ledger is
+\[
+\begin{array}{c|r}
+\text{quantity} & \text{value}\\
+\hline
+\text{passed global gates} & 2\\
+\text{open global gates} & 3\\
+B_G & 1
+\end{array}
+\]
+The boundary marker remains \(B_G=1\) because \(\mathrm{GLOB3}\) through
+\(\mathrm{GLOB5}\) remain open.
+\end{theorem}
+
+\begin{remark}[Scope guard]
+The word ``all'' in this r17 layer means all declared/admissible readout
+transformations currently in the grammar.  It does not mean an unrestricted
+theorem over every possible external readout or every possible physical model.
+\end{remark}
+
+
+% --- v4.5.0-r18 Execute W_tr Boundary Transport ---
+
+\section{v4.5.0-r18 Execution of \(W_{\mathrm{tr}}\): Boundary Transport}
+\label{sec:v450-r18-execute-wtr-boundary-transport}
+
+This section executes the third global-boundary witness family:
+\[
+    W_{\mathrm{tr}}=\{T_0,T_1,T_2\}.
+\]
+The purpose is to test whether the route-to-global boundary marker \(B_G\) can
+be transported through the interface without creating new debt.  Transport is
+not discharge: \(B_G\) remains an explicit boundary marker.
+
+\begin{definition}[Boundary-transport witness family]
+The family \(W_{\mathrm{tr}}\) consists of:
+\[
+\begin{array}{c|l}
+T_0 & \text{boundary-carry witness}\\
+T_1 & \text{debt-neutral transport witness}\\
+T_2 & \text{OP5-return transport witness}
+\end{array}
+\]
+It passes if \(B_G\) is carried as a boundary marker and no new scale, lens,
+chart, selector, coverage, or OP5-return debt appears.
+\end{definition}
+
+\begin{proposition}[r18 boundary-transport register]
+The transport register is
+\[
+\begin{array}{c|c|r|r}
+\text{witness} & \text{classification} & N_{\mathrm{new\,debt}} & B_G\ \text{after}\\
+\hline
+T_0 & \text{transported boundary marker} & 0 & 1\\
+T_1 & \text{debt neutral} & 0 & 1\\
+T_2 & \text{return transport stable} & 0 & 1
+\end{array}
+\]
+Thus boundary transport is stable and debt-free, but the boundary marker is
+not erased.
+\end{proposition}
+
+\begin{theorem}[GLOB3 boundary-transport gate passed]
+The witness family \(W_{\mathrm{tr}}\) discharges the boundary-transport gate:
+\[
+    \mathrm{GLOB3}=1.
+\]
+After r18 the global-boundary ledger is
+\[
+\begin{array}{c|r}
+\text{quantity} & \text{value}\\
+\hline
+\text{passed global gates} & 3\\
+\text{open global gates} & 2\\
+B_G & 1
+\end{array}
+\]
+The marker \(B_G=1\) remains because \(\mathrm{GLOB4}\) and
+\(\mathrm{GLOB5}\) remain open.
+\end{theorem}
+
+\begin{remark}[No discharge by transport]
+The r18 result says that the boundary can be carried without new debt.  It
+does not say that the boundary is solved.  Therefore no global OP1/OP4/OP5
+closure is claimed.
+\end{remark}
+
+
+% --- v4.5.0-r19 Execute W_debt No-New-Debt Extension ---
+
+\section{v4.5.0-r19 Execution of \(W_{\mathrm{debt}}\): No-New-Debt Extension}
+\label{sec:v450-r19-execute-wdebt-no-new-debt-extension}
+
+This section executes the fourth global-boundary witness family:
+\[
+    W_{\mathrm{debt}}=\{D_0,D_1,D_2,D_3,D_4,D_5\}.
+\]
+The purpose is to test whether the declared grammar-extension buckets create
+new debt.  This is still not a global closure claim, because the functorial
+comparison-stability gate remains open.
+
+\begin{definition}[No-new-debt extension witness family]
+The family \(W_{\mathrm{debt}}\) consists of:
+\[
+\begin{array}{c|l}
+D_0 & \text{scale channel}\\
+D_1 & \text{lens channel}\\
+D_2 & \text{chart channel}\\
+D_3 & \text{selector channel}\\
+D_4 & \text{coverage channel}\\
+D_5 & \text{OP5-return channel}
+\end{array}
+\]
+It passes if none of these channels creates new debt, hidden leakage, or
+reopening under the declared grammar extension.
+\end{definition}
+
+\begin{proposition}[r19 no-new-debt register]
+The no-new-debt register is
+\[
+\begin{array}{c|c|r|r|r}
+\text{witness} & \text{channel} & N_{\mathrm{new\,debt}} & R_{\mathrm{reopen}} & L_{\mathrm{leak}}\\
+\hline
+D_0 & \text{scale} & 0 & 0 & 0\\
+D_1 & \text{lens} & 0 & 0 & 0\\
+D_2 & \text{chart} & 0 & 0 & 0\\
+D_3 & \text{selector} & 0 & 0 & 0\\
+D_4 & \text{coverage} & 0 & 0 & 0\\
+D_5 & \text{OP5-return} & 0 & 0 & 0
+\end{array}
+\]
+Thus the declared grammar extension is debt-free for the tested channels.
+\end{proposition}
+
+\begin{theorem}[GLOB4 no-new-debt extension gate passed]
+The witness family \(W_{\mathrm{debt}}\) discharges the no-new-debt extension
+gate:
+\[
+    \mathrm{GLOB4}=1.
+\]
+After r19 the global-boundary ledger is
+\[
+\begin{array}{c|r}
+\text{quantity} & \text{value}\\
+\hline
+\text{passed global gates} & 4\\
+\text{open global gates} & 1\\
+B_G & 1
+\end{array}
+\]
+The marker \(B_G=1\) remains because \(\mathrm{GLOB5}\), functorial comparison
+stability, remains open.
+\end{theorem}
+
+\begin{remark}[No global closure claim]
+The r19 result says that the declared extension buckets are debt-free.  It
+does not say that the comparison tensor is functorially stable under all needed
+extension maps.  Therefore no global OP1/OP4/OP5 closure is claimed in r19.
+\end{remark}
+
+
+% --- v4.5.0-r20 Execute W_fun Functorial Comparison Stability ---
+
+\section{v4.5.0-r20 Execution of \(W_{\mathrm{fun}}\): Functorial Comparison Stability}
+\label{sec:v450-r20-execute-wfun-functorial-comparison-stability}
+
+This section executes the fifth global-boundary witness family:
+\[
+    W_{\mathrm{fun}}=\{F_0,F_1,F_2,F_3\}.
+\]
+The purpose is to test whether the comparison tensor \(\mathfrak C\) remains
+stable under the declared extension maps.  Passing this gate makes the
+boundary synthesis-ready, but it does not itself discharge \(B_G\).
+
+\begin{definition}[Functorial comparison-stability witness family]
+The family \(W_{\mathrm{fun}}\) consists of:
+\[
+\begin{array}{c|l}
+F_0 & \mathfrak C\text{-naturalness}\\
+F_1 & \text{composition stability}\\
+F_2 & \text{identity stability}\\
+F_3 & \text{variance preservation}
+\end{array}
+\]
+It passes if the comparison tensor commutes with the declared extension maps,
+respects composition and identity, preserves variance typing, and introduces
+no raw same-variance comparison.
+\end{definition}
+
+\begin{proposition}[r20 functorial-stability register]
+The functorial comparison register is
+\[
+\begin{array}{c|c|r}
+\text{witness} & \text{condition} & \text{defect}\\
+\hline
+F_0 & \mathfrak C\text{-naturalness} & 0\\
+F_1 & \text{composition} & 0\\
+F_2 & \text{identity} & 0\\
+F_3 & \text{variance preservation} & 0
+\end{array}
+\]
+Thus the declared comparison tensor is functorially stable for the tested
+extension maps.
+\end{proposition}
+
+\begin{theorem}[GLOB5 functorial-comparison-stability gate passed]
+The witness family \(W_{\mathrm{fun}}\) discharges the functorial comparison
+stability gate:
+\[
+    \mathrm{GLOB5}=1.
+\]
+After r20 the global-boundary ledger is
+\[
+\begin{array}{c|r}
+\text{quantity} & \text{value}\\
+\hline
+\text{passed global gates} & 5\\
+\text{open global gates} & 0\\
+B_G & 1\\
+\text{synthesis-ready} & 1
+\end{array}
+\]
+The marker \(B_G\) is not discharged in r20.  It is carried into the r21
+boundary-gate synthesis audit.
+\end{theorem}
+
+\begin{remark}[No premature global closure]
+The r20 result is the last individual gate execution.  It does not by itself
+claim global OP1/OP4/OP5 closure.  The next layer must synthesize the five
+passed gates and decide whether \(B_G\) can be discharged without overclaim.
+\end{remark}
+
+
+% --- v4.5.0-r21 Boundary-Gate Synthesis Audit ---
+
+\section{v4.5.0-r21 Boundary-Gate Synthesis Audit}
+\label{sec:v450-r21-boundary-gate-synthesis-audit}
+
+This section synthesizes the five global-boundary gates executed in r16--r20.
+It decides whether the retained boundary marker \(B_G\) may be discharged
+inside the declared mathematical global-boundary grammar.  The result is not a
+global physical closure theorem and not an unrestricted claim beyond the
+declared extension maps.
+
+\begin{definition}[Declared global-boundary grammar]
+Let
+\[
+    \mathcal G_{\mathrm{global}}^{\mathrm{decl}}
+\]
+be the grammar obtained from the scoped compatibility grammar \(\mathcal G_C\)
+by adjoining the five passed global-boundary gates:
+\[
+    \mathrm{GLOB1},\ldots,\mathrm{GLOB5}.
+\]
+This is a declared mathematical grammar.  It is not the class of all possible
+external readouts or all possible physical models.
+\end{definition}
+
+\begin{proposition}[r21 synthesis ledger]
+The r21 synthesis ledger is
+\[
+\begin{array}{c|r}
+\text{quantity} & \text{value}\\
+\hline
+\text{global-boundary gates} & 5\\
+\text{passed gates} & 5\\
+\text{open gates} & 0\\
+B_G\ \text{before synthesis} & 1\\
+B_G\ \text{after synthesis} & 0
+\end{array}
+\]
+All five global-boundary gates are passed, so the boundary marker is
+discharged inside \(\mathcal G_{\mathrm{global}}^{\mathrm{decl}}\).
+\end{proposition}
+
+\begin{theorem}[Declared mathematical global-boundary closure]
+Inside the declared mathematical global-boundary grammar
+\(\mathcal G_{\mathrm{global}}^{\mathrm{decl}}\), the OP1/OP4/OP5 closure
+surface is closed:
+\[
+    \mathrm{Closure}_{\mathcal G_{\mathrm{global}}^{\mathrm{decl}}}
+    (\mathrm{OP1},\mathrm{OP4},\mathrm{OP5}).
+\]
+Equivalently,
+\[
+    B_G=0
+\]
+inside the declared synthesis grammar.
+\end{theorem}
+
+\begin{proof}
+The r16 layer discharges grammar exhaustion.  The r17 layer discharges
+declared readout invariance.  The r18 layer transports the boundary without
+new debt.  The r19 layer proves no-new-debt for the declared extension
+buckets.  The r20 layer proves functorial stability of the comparison tensor
+\(\mathfrak C\) under the declared extension maps.  Therefore all five
+global-boundary gates are passed.  Since no open gate remains and no new debt,
+reopening, leakage, variance defect, or comparison-instability is recorded, the
+boundary marker \(B_G\) is discharged inside the declared mathematical
+global-boundary grammar.
+\end{proof}
+
+\begin{remark}[Scope guard]
+The r21 theorem is a declared mathematical global-boundary closure theorem.
+It is not a theorem over every possible external readout, not a global physical
+closure theorem, not a QFT/GR closure theorem, and not release-final status.
+Those claims remain outside the r21 scope.
+\end{remark}
+
+
+
+% --- v4.5.0-r22 Source-Native Active-Core Rebuild Checkpoint ---
+\section{v4.5.0-r22 Source-Native Active-Core Rebuild Checkpoint}
+\label{sec:v450-r22-source-native-active-core-rebuild-checkpoint}
+
+This checkpoint is a build and hygiene layer only.  It imports the r21 declared
+mathematical global-boundary closure state and tests whether the active core can
+be compiled source-natively after the r14--r21 working layers.
+
+No new mathematical closure claim is introduced here.  In particular, this
+checkpoint does not change the r21 scope guard: the closure is inside the
+declared mathematical global-boundary grammar, not global physical closure, not
+QFT/GR closure, and not release-final status.
+
+The corresponding audit packet records the actual build status, reference
+hygiene, log hygiene, and render spot-check status.
+
+
+% --- v4.5.0-r23 Release-Candidate Audit Planning ---
+
+\section{v4.5.0-r23 Release-Candidate Audit Planning}
+\label{sec:v450-r23-release-candidate-audit-planning}
+
+This section is a release-candidate planning layer.  It is not a release
+freeze and not release-final status.  It imports the r21 declared mathematical
+global-boundary closure and the r22 green source-native rebuild checkpoint, and
+decides whether the path toward a v4.5.0 release candidate is open.
+
+\begin{definition}[Release-candidate path]
+The v4.5.0 release-candidate path is open when the source-native build is green,
+the declared mathematical global-boundary closure state is available, and the
+remaining pre-freeze guard tasks are explicitly listed.  Opening the path does
+not freeze the release and does not assign a DOI.
+\end{definition}
+
+\begin{proposition}[r23 release-candidate planning ledger]
+The r23 planning ledger is
+\[
+\begin{array}{c|c}
+\text{item} & \text{status}\\
+\hline
+\text{r22 source-native full build} & \text{passed}\\
+\text{r21 declared mathematical global-boundary closure} & \text{passed}\\
+\text{reader-facing global-scope disclaimer} & \text{pending}\\
+\text{release freeze audit} & \text{pending}\\
+\text{Zenodo DOI/version synchronization} & \text{pending}\\
+\text{Zenodo description and keywords} & \text{pending}
+\end{array}
+\]
+Thus the release-candidate path is open, but the release candidate is not yet
+frozen.
+\end{proposition}
+
+\begin{theorem}[r23 release-candidate path decision]
+The v4.5.0 line is eligible to proceed toward a release-candidate freeze after
+one reader-facing scope-disclaimer layer:
+\[
+    \mathrm{RCPath}_{v4.5.0}=\mathrm{open}.
+\]
+However,
+\[
+    \mathrm{ReleaseCandidateFrozen}_{v4.5.0}=\mathrm{false},
+    \qquad
+    \mathrm{ReleaseFinal}_{v4.5.0}=\mathrm{false}.
+\]
+\end{theorem}
+
+\begin{remark}[Scope and release guard]
+The r23 decision does not change the mathematical scope.  The r21 closure is a
+declared mathematical global-boundary closure.  It is not unrestricted global
+closure, not global physical closure, not QFT/GR closure, and not a release
+final claim.  The next layer should add a compact reader-facing scope disclaimer
+before the release freeze audit.
+\end{remark}
+
+
+% --- v4.5.0-r24 Reader-Facing Global-Scope Disclaimer ---
+
+\section{v4.5.0-r24 Reader-Facing Global-Scope Disclaimer and DOI Synchronization}
+\label{sec:v450-r24-reader-facing-global-scope-disclaimer}
+
+This section adds a reader-facing scope guard before the release-freeze audit.
+It also records the assigned v4.5.0 Zenodo DOI:
+\[
+    \mathrm{DOI}_{v4.5.0}=\texttt{10.5281/zenodo.20079410}.
+\]
+This DOI synchronization does not itself make the release final.
+
+\begin{definition}[Declared mathematical global-boundary closure]
+The r21 closure statement is
+\[
+    \mathrm{Closure}_{\mathcal G_{\mathrm{global}}^{\mathrm{decl}}}
+    (\mathrm{OP1},\mathrm{OP4},\mathrm{OP5}).
+\]
+It means closure inside the declared mathematical synthesis grammar.  It does
+not mean closure over every possible external readout, every possible grammar,
+or every physical model.
+\end{definition}
+
+\begin{proposition}[Reader-facing scope ledger]
+The reader-facing scope ledger is as follows.
+
+\begin{itemize}
+\item Mathematical closure: allowed reading is declared
+$\mathcal G_{\mathrm{global}}^{\mathrm{decl}}$-closure; blocked misreading is
+unrestricted all-readout closure.
+\item Physics: allowed reading is mathematical grammar closure; blocked
+misreading is global physical, QFT, or GR closure theorem.
+\item DOI: allowed reading is that the v4.5.0 DOI is assigned; blocked
+misreading is release-final status.
+\item Release state: allowed reading is that the release-candidate path is
+open; blocked misreading is that freeze or final release is already complete.
+\end{itemize}
+
+The DOI value is
+\[
+    \texttt{10.5281/zenodo.20079410}.
+\]
+\end{proposition}
+
+\begin{theorem}[r24 pre-freeze scope guard]
+The v4.5.0 release-candidate path remains open and the DOI is synchronized:
+\[
+    \mathrm{RCPath}_{v4.5.0}=\mathrm{open},
+    \qquad
+    \mathrm{DOI}_{v4.5.0}=\texttt{10.5281/zenodo.20079410}.
+\]
+However,
+\[
+    \mathrm{ReleaseCandidateFrozen}_{v4.5.0}=\mathrm{false},
+    \qquad
+    \mathrm{ReleaseFinal}_{v4.5.0}=\mathrm{false}.
+\]
+\end{theorem}
+
+\begin{remark}[Plain-language guard]
+A reader may say: within the declared mathematical synthesis grammar, OP1,
+OP4, and OP5 are closed.  A reader may not infer from this layer that the paper
+has proven global physical closure, QFT/GR closure, or unrestricted closure
+over every possible readout.  Those are different claims and remain outside the
+v4.5.0 release scope.
+\end{remark}
+
+\begin{remark}[Freeze-audit title-page check]
+The v4.5.0 release-freeze audit must include a title-page hygiene check.  In
+particular, the version string, DOI string, and release label must not be
+duplicated on the title page or in the front-matter metadata.
+\end{remark}
+
+
+
+% --- v4.5.0-r25 Release Freeze Audit ---
+\section{v4.5.0-r25 Release Freeze Audit}
+\label{sec:v450-r25-release-freeze-audit}
+
+This section records the release-freeze audit for v4.5.0.  The assigned Zenodo
+version DOI is
+\[
+    \mathrm{DOI}_{v4.5.0}=\texttt{10.5281/zenodo.20079410}.
+\]
+The audit checks build hygiene, reference hygiene, rendered-page hygiene, and
+title-page metadata hygiene.
+
+The r21 mathematical state remains scoped as follows:
+\[
+    \mathrm{Closure}_{\mathcal G_{\mathrm{global}}^{\mathrm{decl}}}
+    (\mathrm{OP1},\mathrm{OP4},\mathrm{OP5}).
+\]
+This is a declared mathematical global-boundary closure, not unrestricted
+global closure and not global physical/QFT/GR closure.
+
+\begin{remark}[Release-freeze title-page hygiene]
+The title page and front-matter metadata must contain the version, DOI, and
+release label without duplication.  The freeze packet audit records the actual
+front-page text count and blocks release-final status if duplicated title-page
+metadata is detected.
+\end{remark}
+
+\begin{remark}[Post-release cleanup line]
+After the v4.5.0 release, a minor v4.5.x cleanup line is reserved for editorial
+QA, title-page hygiene review, notation consistency, typo fixes, and
+reader-facing polish without introducing new mathematical claims.
+\end{remark}
+
+% --- v4.5.0-r26 Frontmatter and Title-Page Repair ---
+\section{v4.5.0-r26 Frontmatter and Title-Page Repair}
+\label{sec:v450-r26-frontmatter-titlepage-repair}
+
+This section records the frontmatter and title-page repair after the r25 blocked
+freeze audit.  The current version string is v4.5.0 and the assigned Zenodo
+version DOI is
+\[
+    \mathrm{DOI}_{v4.5.0}=\texttt{10.5281/zenodo.20079410}.
+\]
+The repair removes the stale v4.4/\texttt{10.5281/zenodo.20068747} title-page
+metadata from the reader-facing frontmatter and replaces it by the v4.5.0
+release-candidate metadata.
+
+\begin{remark}[No new mathematical claim]
+The r26 repair is a metadata, frontmatter, and title-page hygiene layer.  It
+preserves the r21 declared mathematical global-boundary closure scope and does
+not add a new theorem, a physical closure theorem, or a release-final claim.
+\end{remark}
+
+
+
+% --- v4.5.0 Release Final Gate ---
+\section{v4.5.0 Release Final Gate}
+\label{sec:v450-release-final-gate}
+
+This final gate records the public v4.5.0 release-final status after the
+frontmatter/title-page repair, source-native rebuild, reference hygiene audit,
+DOI synchronization, and release-packet preparation.  It is a release-status and
+provenance layer only.  It introduces no new theorematic content beyond the
+previously audited declared mathematical global-boundary closure statement.
+
+The public release DOI is
+\[
+    \mathrm{DOI}_{v4.5.0}=\texttt{10.5281/zenodo.20079410}.
+\]
+The Companion concept DOI remains
+\[
+    \mathrm{DOI}_{\mathrm{concept}}=\texttt{10.5281/zenodo.19210728}.
+\]
+
+\begin{definition}[Release-final gate]
+The v4.5.0 release-final gate is passed when the following public-facing
+conditions hold:
+\[
+\begin{array}{c|c}
+\text{gate} & \text{status}\\
+\hline
+\text{title/frontmatter metadata aligned to v4.5.0} & \mathrm{passed}\\
+\text{version DOI aligned to }\texttt{10.5281/zenodo.20079410} & \mathrm{passed}\\
+\text{source-native PDF rebuild} & \mathrm{passed}\\
+\text{undefined references and citations} & \mathrm{none}\\
+\text{visible reference placeholders} & \mathrm{none}\\
+\text{release packet, checksums, description, and keywords} & \mathrm{prepared}
+\end{array}
+\]
+\end{definition}
+
+\begin{proposition}[v4.5.0 release-final ledger]
+The v4.5.0 public release status is
+\[
+    \mathrm{ReleaseFinal}_{v4.5.0}=\mathrm{true}.
+\]
+The theorematic scope remains exactly the declared mathematical grammar scope:
+\[
+    \mathrm{Closure}_{\mathcal G_{\mathrm{global}}^{\mathrm{decl}}}
+    (\mathrm{OP1},\mathrm{OP4},\mathrm{OP5}).
+\]
+This statement is not unrestricted global closure, not global physical closure,
+not a QFT/GR closure theorem, and not a derivation of QCD/confinement,
+CKM/PMNS, quark masses, or the Standard-Model spectrum.
+\end{proposition}
+
+\begin{remark}[No theorematic expansion]
+This release-final gate is a public packaging and provenance statement.  It
+only promotes the already audited v4.5.0 release candidate to public
+release-final status after successful build and metadata hygiene checks.  It
+does not relax any guard and does not add a new mathematical or physical claim.
+\end{remark}
+
 \end{document}
-
-
 
