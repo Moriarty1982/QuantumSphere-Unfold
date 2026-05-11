@@ -1,0 +1,35 @@
+name: Release Audit Pilot
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Target version, e.g. v4.6.0"
+        required: true
+        default: "v4.6.0"
+        type: string
+
+jobs:
+  metadata-hygiene:
+    name: Metadata hygiene audit
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run metadata hygiene audit
+        run: |
+          python scripts/qsc_audit/metadata_hygiene_audit.py --version "${{ inputs.version }}"
+
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: metadata-hygiene-${{ inputs.version }}
+          path: audits/${{ inputs.version }}/metadata_hygiene_report.md
