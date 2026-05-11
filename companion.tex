@@ -36,8 +36,8 @@
  hidelinks,
  pdftitle={Quantum Sphaera Companion: A Structure-First Mathematical Unfolding},
  pdfauthor={Marc Brendecke},
- pdfsubject={v4.5.0 release final; version DOI 10.5281/zenodo.20079410; declared mathematical global-boundary closure inside G_global^decl},
- pdfkeywords={Quantum Sphaera, structure-first mathematics, QAM, MML, MMA, Heisenberg compensator, declared mathematical global-boundary closure, OP1, OP4, OP5, route-to-global boundary, comparison tensor, notation hygiene, release final},
+ pdfsubject={v4.6.0 release final; bounded readout closure and T2 scope boundary; Version DOI 10.5281/zenodo.20117361},
+ pdfkeywords={Quantum Sphaera, structure-first mathematics, QAM, MML, MMA, Heisenberg compensator, Millennium Matrix, bounded readout closure, T2 scope boundary, two-sided structural tensor notation, release final, no all-readout closure},
  pdfcreator={pdfLaTeX},
  pdfproducer={pdfLaTeX}
 }
@@ -81,9 +81,34 @@
 % bridge obstruction, route-to-global certificate, return contract, audit appendix.
 
 % --- Document metadata ---
-\newcommand{\docversion}{4.5.0 release final}
-\newcommand{\docdate}{\DTMdisplaydate{2026}{05}{08}{-1}}
+\newcommand{\docversion}{4.6.0 release final}
+\newcommand{\docdate}{\DTMdisplaydate{2026}{05}{11}{-1}}
 
+
+% v4.5.1-r13 internal glossary appendix extraction worksheet rule; inherits the v4.5.1-r12 glossary/index intake rule.
+% Glossary and index entries introduced in r12 are reader-routing aids only.  They
+% do not rename theorem labels, do not introduce mathematical objects, do not
+% alter DOI records, and do not authorize a public release refresh.
+
+% v4.5.1-r14 internal glossary appendix placement decision rule.
+% The r13 glossary worksheet is not promoted to a public appendix in this pass.
+% r14 records an internal placement decision: keep the glossary material as an
+% internal appendix candidate, prepare a compact public-appendix route only for a
+% future deliberate release-refresh decision, and preserve all theorem, DOI, and
+% scope guards unchanged.
+
+% v4.5.1-r15 internal compact glossary appendix skeleton rule.
+% r15 creates only a compact appendix skeleton for future editorial routing.
+% The skeleton is internal-only, is not a public appendix, does not authorize a
+% release refresh, does not introduce a DOI, and does not alter theorem, label,
+% cross-reference, or scope-guard content.
+
+
+% v4.5.1-r16 internal glossary appendix draft extraction rule.
+% r16 extracts the r15 skeleton into an internal glossary appendix draft object.
+% The draft remains internal-only, is not a public appendix, does not authorize a
+% release refresh, does not introduce a DOI, and does not alter theorem, label,
+% cross-reference, or scope-guard content.
 
 % Human-edition provenance macros. Revision ids are metadata only.
 \newcommand{\QSCtrace}[1]{}
@@ -147,11 +172,11 @@
  Marc Brendecke\\
  \small Independent Researcher, Bochum, Germany\\
  \small Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}\\
- \small v4.5.0 release final; Version DOI: \href{https://doi.org/10.5281/zenodo.20079410}{10.5281/zenodo.20079410}.\\
+ \small Version DOI: \href{https://doi.org/10.5281/zenodo.20117361}{10.5281/zenodo.20117361}\\
  \small Companion Paper --- Preprint, not peer reviewed.\\
  \small Technical unfolding of the main Sphaera paper~\cite{brendecke2026main}.
 }
-\date{\docdate{} --- v4.5.0 release final}
+\date{\docdate{} - v4.6.0 release final}
 
 
 
@@ -202,6 +227,33 @@
 \sloppy
 
 \maketitle
+
+\clearpage
+\section*{v4.6.0 Release-Final Status}
+\addcontentsline{toc}{section}{v4.6.0 Release-Final Status}
+\noindent\textbf{Release-final note.} This integrated source records v4.6.0 release final with the version DOI \href{https://doi.org/10.5281/zenodo.20117361}{10.5281/zenodo.20117361}. The main title remains \emph{Quantum Sphaera Companion}. The title page keeps the Concept DOI and the Version DOI as separate DOI records, and the bottom date line records \docdate{} - v4.6.0 release final. No all-readout/T2 closure is claimed.
+
+\noindent\textbf{Main title rule.} The main title remains \emph{Quantum Sphaera Companion}.  The phrase \emph{Bounded Readout Closure and T2 Scope Boundary} is a release-theme subtitle only, not a replacement for the main title.
+
+\medskip
+\noindent\textbf{DOI-line rule.} The title page carries the stable concept DOI and exactly one version DOI line: \emph{Version DOI: 10.5281/zenodo.20117361}.  The concept DOI remains the stable Companion-line pointer.  The date line remains the release-final version/date stamp.
+
+\medskip
+\noindent\textbf{Release-candidate scope.} This integrated candidate records the v4.6.0 bounded readout result and the T2 scope boundary.  It is not a public upload authorization, not a Zenodo release final, and not an all-readout closure theorem.
+
+\medskip
+\noindent\textbf{Governing v4.6.0 status.}
+\[
+\mathsf{BRead}_{\mathrm{bounded}}
+\in
+\mathsf{Cons}(\mathcal G_{\mathrm{global}}^{\mathrm{decl}}),
+\qquad
+\mathsf{BRead}_{\mathrm{bounded}}\not\Rightarrow T2,
+\qquad
+T2\in\mathsf{Ext}(\mathcal G_{\mathrm{global}}^{\mathrm{decl}}).
+\]
+No empirical validation, Standard-Model-spectrum derivation, unrestricted physical readout, or all-readout closure is claimed.
+
 
 
 \clearpage
@@ -284,6 +336,42 @@ No reader-facing claim is promoted unless the relevant guard is explicitly disch
 The main document contains the mathematical object language.  The appendix may contain provenance: source packets, diffs, checksums, machine-readable registers, build logs, and reconstruction notes.  Provenance may mention build labels.  The proof spine must not use them as mathematical exponents, object names, or physical states.
 
 
+\subsection*{Compressed chronology reading rule}
+\addcontentsline{toc}{subsection}{Compressed chronology reading rule}
+
+For reader navigation, inherited working chronology is to be compressed into semantic milestones rather than read as active mathematical notation.  The compression convention is:
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.16\textwidth}p{0.46\textwidth}p{0.26\textwidth}@{}}
+\toprule
+chronology stratum & reader-facing meaning & status\\
+\midrule
+$\mathrm{C}_0$ & earlier local readout and release genealogy & provenance\\
+$\mathrm{C}_1$ & v4.4 declared-local OP1/OP4 closure ledger & prior release result\\
+$\mathrm{C}_2$ & v4.5.0 declared global-boundary synthesis & current governing theorematic status\\
+$\mathrm{C}_3$ & v4.5.0 DOI/title/frontmatter repair & release metadata\\
+$\mathrm{C}_4$ & v4.5.1 editorial QA and chronology compression & post-release readability layer\\
+\bottomrule
+\end{tabular}
+\end{center}
+Old working strings such as release-candidate notes, prior version DOIs, and local revision labels are therefore genealogy unless a nearby release-final or governing-status block explicitly says otherwise.  This rule changes only reader navigation; it does not change labels, references, DOI records, theorem statements, or scope guards.
+
+\paragraph{Proof-spine phrase audit rule.}
+In running prose, build expressions such as source-native rebuild, release candidate, freeze audit, packet, and working layer are reader-facing provenance terms unless they are explicitly part of a displayed ledger.  Where such terms occur in the active proof spine, the preferred reader form names the mathematical role first---for example grammar exhaustion, readout invariance, debt-free boundary transport, no-new-debt extension, or functorial comparison stability---and keeps the build phrase only as provenance.  This rule does not rename labels, change theorem statements, alter DOI records, or change any scope guard.
+
+\subsection*{Reader-facing phrase-normalization rule}
+\addcontentsline{toc}{subsection}{Reader-facing phrase-normalization rule}
+
+Current-line section headings are allowed to use semantic names even when the
+source labels and audit ledgers retain their original revision identifiers.
+Thus a heading such as a witness execution, boundary audit, source-native
+checkpoint, or title-page repair is to be read by its mathematical function,
+not by the working-string that produced it.  Revision strings remain valid in
+labels, comments, diffs, ledgers, and reconstruction records, but they are not
+mathematical object names, proof data, tensor indices, route states, or closure
+witnesses.
+
+
 \thispagestyle{fancy}
 
 
@@ -293,7 +381,7 @@ The main document contains the mathematical object language.  The appendix may c
 \textbf{Companion status.} This is the v4.5.0 release-final frontmatter repaired for the assigned Zenodo version DOI.  It carries the declared mathematical global-boundary closure audit path from the v4.5.0 working line. Version labels are retained only as provenance metadata; the mathematical proof spine uses semantic names.
 
 \medskip
-\noindent\textbf{Governing theorematic status.} Inside the declared mathematical synthesis grammar
+\noindent\textbf{Governing theorematic status.} Inside the declared global-boundary synthesis grammar
 \[
  \mathcal G_{\mathrm{global}}^{\mathrm{decl}},
 \]
@@ -301,6 +389,18 @@ OP~1, OP~4, and OP~5 are closed as a declared mathematical global-boundary closu
 
 \medskip
 \noindent\textbf{DOI rule.} The concept DOI remains the stable title-page pointer. The v4.5.0 version-specific DOI is \href{https://doi.org/10.5281/zenodo.20079410}{10.5281/zenodo.20079410}; prior version-specific DOI records are provenance metadata only. Version IDs, DOI fragments, dates, and release IDs are not mathematical object names, indices, theorem labels, route tags, or proof data.
+
+\medskip
+\noindent\textbf{Internal r10 proofread status.} This v4.5.1-r10 layer is an internal selected-range proofread and metadata-hygiene pass. It does not authorize public upload, does not insert a new DOI, does not emit Zenodo release text, and does not change the declared mathematical closure scope.
+
+\medskip
+\noindent\textbf{Internal r11 terminology-sweep status.} This v4.5.1-r11 layer is an internal targeted terminology sweep over the older OP5 and OP1/OP4 compatibility pages. It does not authorize public upload, does not insert a new DOI, does not emit Zenodo release text, does not rename theorem labels, and does not change the declared mathematical closure scope.
+
+\medskip
+\noindent\textbf{Internal r12 glossary/index intake status.} This v4.5.1-r12 layer is an internal glossary and index intake for the declared global-boundary synthesis grammar and the OP5/OP1/OP4 terminology family.  It is a reader-routing layer only: no public upload is authorized, no new DOI is inserted, no Zenodo release text is emitted, no theorem label is renamed, and no mathematical closure scope is changed.
+
+\medskip
+\noindent\textbf{Internal r13 glossary-appendix worksheet status.} This v4.5.1-r13 layer is an internal extraction worksheet for a possible future glossary appendix. It does not create a public release refresh, does not insert a new DOI, does not emit Zenodo release text, does not rename theorem labels, and does not change the declared mathematical closure scope.
 \end{minipage}}
 \end{center}
 \vspace{0.6em}
@@ -308,7 +408,7 @@ OP~1, OP~4, and OP~5 are closed as a declared mathematical global-boundary closu
 \begin{abstract}
 This v4.5.0 release-final frontmatter records the Quantum Sphaera Companion after the v4.5.0 global-boundary gate synthesis line, the reader-facing global-scope disclaimer, the DOI synchronization, and the title-page/frontmatter repair.  The version-specific DOI for this release line is \href{https://doi.org/10.5281/zenodo.20079410}{10.5281/zenodo.20079410}.  The Companion concept DOI remains \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}.
 
-The governing new release-facing result is the declared mathematical global-boundary closure theorem.  Inside the declared mathematical synthesis grammar \(\mathcal G_{\mathrm{global}}^{\mathrm{decl}}\), the v4.5.0 closure ledger synthesizes grammar exhaustion, declared readout invariance, debt-free boundary transport, no-new-debt grammar extension, and functorial comparison stability.  Equivalently, the global-boundary marker satisfies \(B_G=0\) inside that declared synthesis grammar.
+The governing new release-facing result is the declared mathematical global-boundary closure theorem.  Inside the declared global-boundary synthesis grammar \(\mathcal G_{\mathrm{global}}^{\mathrm{decl}}\), the v4.5.0 closure ledger synthesizes grammar exhaustion, declared readout invariance, debt-free boundary transport, no-new-debt grammar extension, and functorial comparison stability.  Equivalently, the global-boundary marker satisfies \(B_G=0\) inside that declared global-boundary synthesis grammar.
 
 This is a scoped mathematical theorem.  It is not a global physical closure theorem, not a global QFT/GR theorem, and not unrestricted closure over every possible readout or physical model.  Earlier version-specific DOI records remain provenance metadata only and are not mathematical object names, theorem labels, route tags, or proof data.
 \end{abstract}
@@ -372,7 +472,7 @@ Prior release metadata & provenance layer only & Historical DOI records remain r
 
 \noindent\textbf{Prior DOI provenance.} Earlier version-specific DOI records belong to released predecessors and are provenance metadata only. This v4.5.0 release-final line assigns the version-specific DOI \href{https://doi.org/10.5281/zenodo.20079410}{10.5281/zenodo.20079410}.
 
-\noindent\textbf{Working-source status.} This release final adds no theorematic claim beyond the audited Active Core. The current local readout ledger remains guarded: the orbit/Hopf chain is a finite local readout closure ledger with no persistent finite carrier obstruction in the declared diagnostic chart, not a global physical closure theorem.
+\noindent\textbf{Working-source status.} This release-final adds no theorematic claim beyond the audited Active Core. The current local readout ledger remains guarded: the orbit/Hopf chain is a finite local readout closure ledger with no persistent finite carrier obstruction in the declared diagnostic chart, not a global physical closure theorem.
 
 \section{Alternating Triolic Orbit Scan and Hopf-Fibre Core Surface Readout}
 \label{sec:alternating-triolic-orbit-scan}
@@ -1131,7 +1231,7 @@ The current reader-facing edition does not by itself close OP~1 or OP~4, does no
 \noindent\textbf{Purpose.} The short abstract gives the release-facing summary. This extended abstract records the technical routing information needed by human readers and LLM/audit readers without turning inherited version genealogy into a current public claim.
 \end{quote}
 
-The present v4.3.0 release final belongs to the reader-cleanup line. It publishes the normalized public frontmatter after the source-native freeze audit and frontmatter normalization while keeping the mathematical body unchanged. Older version identifiers that remain later in the body are treated as theorem-memory, genealogy, release chronology, or inherited source references rather than as the current public-status sentence.
+The present v4.3.0 release-final belongs to the reader-cleanup line. It publishes the normalized public frontmatter after the source-native freeze audit and frontmatter normalization while keeping the mathematical body unchanged. Older version identifiers that remain later in the body are treated as theorem-memory, genealogy, release chronology, or inherited source references rather than as the current public-status sentence.
 
 The central current statement is the local OP5 closure inside the declared photon-frame HC-halo/Dixon grammar. The proof spine passes through HC-cone normalization, double-\(\varepsilon\) halo capture, tunnel reduction, normal-collar rank control, selector/overlap routing, Dixon 64-carrier coding, and image audit. The residual image is empty only under the explicit zero-register assumptions \(L_{\mathrm{unr}}=0\), \(B_{\mathrm{HC/MM}}=0\), \(R_{\mathrm{HS4}}=0\), and \(D_{\mathrm{HS5}}=0\).
 
@@ -1210,7 +1310,7 @@ The following inherited front block should therefore be read as the carried-forw
 \end{enumerate}
 
 \paragraph{Reading rule for the inherited active-front block.}
-The inherited \QSCver{legacy.30.0} front layer is kept intact as carried-forward baseline source material. It records the then-active retained-carrier optical and live-burden reading, including OP~1 and OP~5 Step~(B) closure language on the inherited admissible corridors, and should not be read as the governing present-release claim of \docversion. In the present release final, those statements are preserved for theorem-memory and genealogy; the governing current-state claim, however, remains the frontier-certified pre-entry synthesis developed in the new post-\QSCver{legacy.31.0} line. Accordingly, references below to live OP burden, route sharpening, kernel closure, or routed-balance obstruction inside the inherited front block should be read as preserved baseline source material rather than as the final current release claim of this release.
+The inherited \QSCver{legacy.30.0} front layer is kept intact as carried-forward baseline source material. It records the then-active retained-carrier optical and live-burden reading, including OP~1 and OP~5 Step~(B) closure language on the inherited admissible corridors, and should not be read as the governing present-release claim of \docversion. In the present release-final, those statements are preserved for theorem-memory and genealogy; the governing current-state claim, however, remains the frontier-certified pre-entry synthesis developed in the new post-\QSCver{legacy.31.0} line. Accordingly, references below to live OP burden, route sharpening, kernel closure, or routed-balance obstruction inside the inherited front block should be read as preserved baseline source material rather than as the final current release claim of this release.
 
 \subsection*{Compact public-shape branch/shell/routed extraction}
 \begin{quote}\small
@@ -2328,7 +2428,7 @@ Definitions~\ref{def:v3360-r16-router-language-role-split}, \ref{def:v3360-r16-d
 \end{proof}
 
 \paragraph{guard record.}
-This layer does not assert a global shifted QAM Hilbert-shift, does not introduce primitive mixed tensors, does not close OP~1/4 or OP~5(B), does not replace the standard physical calculations of QFT/QED/Lifshitz theory or general relativity, and does not claim Turing-completeness. It records the router, route-mask, HC-boundary, canonical theorem, and active-readout architecture as a controlled release final.
+This layer does not assert a global shifted QAM Hilbert-shift, does not introduce primitive mixed tensors, does not close OP~1/4 or OP~5(B), does not replace the standard physical calculations of QFT/QED/Lifshitz theory or general relativity, and does not claim Turing-completeness. It records the router, route-mask, HC-boundary, canonical theorem, and active-readout architecture as a controlled release-final.
 
 \begin{remark}[How the systems view reads the present visual diagnostics]\label{rem:qam-vm-os-visuals}
 The same stack view also explains why Appendix~C may carry highly visible packet, Julia-boundary, and frame-flicker diagnostics without turning those figures into primary closure axioms. In the systems reading, such figures live on the visible-view layer: they are auditable readout surfaces of one and the same transported channel, not independent kernel identities. This is exactly why the OP~5 packet/breathing/frame-flicker block and the Julia-boundary block belong naturally to the same document architecture as the deferred kernel store. The figures make visible what the current theorem store is tracking, while closure itself still remains controlled at the structural layer beneath the pictures.
@@ -12977,7 +13077,7 @@ If the local line is stably organized by
  \to
  \text{first local HC-capture chain},
 \]
-then the post-\QSCver{legacy.32.0} line has reached a natural freeze threshold for a new minor release final.
+then the post-\QSCver{legacy.32.0} line has reached a natural freeze threshold for a new minor release-final.
 \end{corollary}
 
 \begin{proof}
@@ -36329,7 +36429,7 @@ form $\mathcal N_4(X)$ is the governing active object form. They should not be
 used interchangeably.
 \end{remark}
 
-\subsection{Tensor notation hygiene, declared local OP1/OP4 closure, release final}
+\subsection{Tensor notation hygiene, declared local OP1/OP4 closure, release-final}
 \label{subsec:v403-tensor-notation-hygiene}
 
 \begin{definition}[Tensor payload hygiene rule]
@@ -37412,7 +37512,7 @@ Witness split.
 
 \begin{theorem}[Cleanup consolidation conservativity]
 \label{thm:v4010-cleanup-consolidation-conservativity}
-The \QSCver{shifted.0.13} cleanup consolidation is conservative over \QSCver{shifted.0.0} release final and
+The \QSCver{shifted.0.13} cleanup consolidation is conservative over \QSCver{shifted.0.0} release-final and
 over the local \QSCver{shifted.0.1}--\QSCver{shifted.0.9} cleanup sequence.
 \end{theorem}
 
@@ -37903,7 +38003,7 @@ For a small cleanup release, the recommended upload artifact set is:
 \label{rem:v4014-release-final state-artifacts-versus-release-final-artifacts}
 Candidate artifacts should not be uploaded as release-final artifacts unless
 their file names, metadata, DOI records, manifests, checksums, and Zenodo
-description have been normalized for release final.
+description have been normalized for release-final.
 \end{remark}
 
 \subsection{Zenodo description draft contract}
@@ -38291,7 +38391,7 @@ content, or OP-status guards. Therefore the pass is conservative.
 
 \begin{remark}[\QSCver{shifted.0.16} release-final non-claim]
 \label{rem:v4016-release-final-non-claim}
-Version~4.0.16 release final does not add new physics, does not close OP~1/4
+Version~4.0.16 release-final does not add new physics, does not close OP~1/4
 or OP~5(B), does not activate primitive mixed tensors, does not claim
 Turing-completeness, and does not replace standard QFT/QED/Lifshitz or
 general-relativistic calculations.
@@ -38561,7 +38661,7 @@ their internal consistency checks pass. It does not close OP~1/4 or OP~5(B).
 \begin{theorem}[Diagnostic appendix conservativity]
 \label{thm:v410r01-diagnostic-appendix-conservativity}
 The local proof line diagnostic-code appendix is conservative over \QSCver{shifted.0.16}
-release final.
+release-final.
 \end{theorem}
 
 \begin{proof}
@@ -38657,7 +38757,7 @@ physical readout.
 \begin{theorem}[First obstruction extraction conservativity]
 \label{thm:v410r02-first-obstruction-extraction-conservativity}
 The local proof line first OP obstruction extraction is conservative over the local proof line
-and over \QSCver{shifted.0.16} release final.
+and over \QSCver{shifted.0.16} release-final.
 \end{theorem}
 
 \begin{proof}
@@ -44287,7 +44387,7 @@ If these obligations are discharged, OP5 is no longer an all-routes problem. It 
 This delta layer executes the next obstruction left by the local pass. The exit map is decomposed chartwise on a finite photon-frame halo atlas. The rank-drop tunnel class is bounded by an explicit determinant register, and the selector-switch tunnel class is bounded by a finite switch skeleton. The result is not a global OP5 close. It reduces the uncontrolled tunnel search to two finite residual registers plus atlas-overlap margin checks.
 \end{abstract}
 
-\section{Purpose and notation hygiene, declared local OP1/OP4 closure, release final}
+\section{Purpose and notation hygiene, declared local OP1/OP4 closure, release-final}
 
 The local proof chain halo channel reduced the OP5 near-kernel route problem to a two-channel boundary problem. The printed operators in this layer are
 \[
@@ -46530,7 +46630,7 @@ Under the four zero-register assumptions, the local residual register of this sp
 \end{theorem}
 
 \begin{remark}[No version promotion]
-The present document is a v4.3.0 release final. A later public line should be reserved for broader OP4/OP1 promotion or for a genuinely new architecture beyond the OP5 hardening chain.
+The present document is a v4.3.0 release-final. A later public line should be reserved for broader OP4/OP1 promotion or for a genuinely new architecture beyond the OP5 hardening chain.
 \end{remark}
 
 
@@ -49631,7 +49731,7 @@ This release asserts the declared local orbit--Hopf coupled-selector grammar clo
 
 % --- v4.5.0-r01 OP5 Local-to-Global Promotion Intake ---
 
-\section{v4.5.0-r01 OP5 Local-to-Global Promotion Intake}
+\section{OP5 Local-to-Global Promotion Intake Layer}
 \label{sec:v450-r01-op5-local-to-global-promotion-intake}
 
 This section starts the v4.5.0 working line.  The public release basis remains
@@ -49733,7 +49833,7 @@ recorded route-to-global obstruction.
 
 % --- v4.5.0-r02 HC/MM Coupled-Debt Witness Search ---
 
-\section{v4.5.0-r02 HC/MM Coupled-Debt Witness Search}
+\section{HC/MM Coupled-Debt Witness Search Layer}
 \label{sec:v450-r02-hcmm-coupled-debt-witness-search}
 
 This section executes the first finite witness search for the OP5
@@ -49824,7 +49924,7 @@ closure, and it does not rule out later enlarged witness families.
 
 % --- v4.5.0-r03 OP5 Promotion Residual Classifier ---
 
-\section{v4.5.0-r03 OP5 Promotion Residual Classifier}
+\section{OP5 Promotion Residual Classifier}
 \label{sec:v450-r03-op5-promotion-residual-classifier}
 
 This section classifies the result of the first HC/MM coupled-debt witness
@@ -49904,7 +50004,7 @@ that all possible HC/MM witness families fail.
 
 % --- v4.5.0-r04 Enlarged Witness-Family Decision ---
 
-\section{v4.5.0-r04 Enlarged Witness-Family Decision}
+\section{Enlarged Witness-Family Decision}
 \label{sec:v450-r04-enlarged-witness-family-decision}
 
 This section decides what to do after the r03 classifier assigns the OP5
@@ -49989,7 +50089,7 @@ second-family declared but not executed.  No global OP5 closure is claimed.
 
 % --- v4.5.0-r05 Execute W_OP5^(2) Enlarged Witness Search ---
 
-\section{v4.5.0-r05 Execution of the Enlarged OP5 Witness Family}
+\section{Enlarged OP5 Witness-Family Execution}
 \label{sec:v450-r05-execute-enlarged-op5-witness-family}
 
 This section executes the enlarged witness family \(W_{\mathrm{OP5}}^{(2)}\)
@@ -50074,7 +50174,7 @@ The next admissible step is a two-sided tensor bridge license test for the
 
 % --- v4.5.0-r06 Two-Sided Tensor Bridge License Test ---
 
-\section{v4.5.0-r06 Two-Sided Tensor Bridge License Test}
+\section{Two-Sided Tensor Bridge License Test}
 \label{sec:v450-r06-two-sided-tensor-bridge-license-test}
 
 This section tests whether the conditional strict candidate \(U_5\) from
@@ -50169,7 +50269,7 @@ not a global physical closure theorem, and not a release-final statement.
 
 % --- v4.5.0-r07 OP5 Two-Sided Promoted-Closure Theorem ---
 
-\section{v4.5.0-r07 OP5 Two-Sided Promoted-Closure Theorem}
+\section{OP5 Two-Sided Promoted-Closure Theorem}
 \label{sec:v450-r07-op5-two-sided-promoted-closure-theorem}
 
 This section records the theorem-level consequence of the r06 two-sided bridge
@@ -50269,7 +50369,7 @@ does not mark a release-final state.
 
 % --- v4.5.0-r08 No-Overclaim / Route-to-Global Boundary Audit ---
 
-\section{v4.5.0-r08 No-Overclaim and Route-to-Global Boundary Audit}
+\section{No-Overclaim and Route-to-Global Boundary Audit}
 \label{sec:v450-r08-no-overclaim-route-to-global-boundary-audit}
 
 This section audits the boundary of the r07 OP5 two-sided promoted-closure
@@ -50356,7 +50456,7 @@ global route remains outside the proved scope.
 
 % --- v4.5.0-r09 OP5 / OP1-OP4 Compatibility Audit ---
 
-\section{v4.5.0-r09 OP5 / OP1--OP4 Compatibility Audit}
+\section{OP5 / OP1--OP4 Compatibility Audit}
 \label{sec:v450-r09-op5-op14-compatibility-audit}
 
 This section audits compatibility between the public v4.4 OP1/OP4
@@ -50451,7 +50551,7 @@ as unrestricted global OP1/OP4/OP5 closure.
 
 % --- v4.5.0-r10 Two-Sided Tensor Grammar Consolidation ---
 
-\section{v4.5.0-r10 Two-Sided Tensor Grammar Consolidation}
+\section{Two-Sided Tensor Grammar Consolidation}
 \label{sec:v450-r10-two-sided-tensor-grammar-consolidation}
 
 This section consolidates the notation used by the v4.4 OP1/OP4 local closure
@@ -50544,7 +50644,7 @@ from the combined scoped surface to any future larger global claim.
 
 % --- v4.5.0-r11 Compatibility Theorem / No-Reopen Summary ---
 
-\section{v4.5.0-r11 Compatibility Theorem and No-Reopen Summary}
+\section{Compatibility Theorem and No-Reopen Summary}
 \label{sec:v450-r11-compatibility-theorem-no-reopen-summary}
 
 This section summarizes the compatibility result after the r10 two-sided tensor
@@ -50630,7 +50730,7 @@ It is only the combined scoped closure theorem inside \(\mathcal G_C\).
 
 % --- v4.5.0-r12 Route-to-Global Boundary Problem Statement ---
 
-\section{v4.5.0-r12 Route-to-Global Boundary Problem Statement}
+\section{Route-to-Global Boundary Problem Statement}
 \label{sec:v450-r12-route-to-global-boundary-problem-statement}
 
 This section states the next problem after the r11 combined scoped no-reopen
@@ -50725,7 +50825,7 @@ renaming the scoped theorem as global.
 
 % --- v4.5.0-r14 Reader-Facing Notation Cleanup ---
 
-\section{v4.5.0-r14 Reader-Facing Notation Cleanup}
+\section{Reader-Facing Notation Cleanup}
 \label{sec:v450-r14-reader-facing-notation-cleanup}
 
 This section is an expository notation cleanup.  It introduces no new closure
@@ -50811,7 +50911,7 @@ and no release-final state.
 
 % --- v4.5.0-r15 Global-Boundary Witness-Menu Design ---
 
-\section{v4.5.0-r15 Global-Boundary Witness-Menu Design}
+\section{Global-Boundary Witness-Menu Design}
 \label{sec:v450-r15-global-boundary-witness-menu-design}
 
 This section designs finite witness menus for the five open route-to-global
@@ -50889,7 +50989,7 @@ global-boundary problem into a concrete work queue.
 
 % --- v4.5.0-r16 Execute W_exh Grammar Exhaustion ---
 
-\section{v4.5.0-r16 Execution of \(W_{\mathrm{exh}}\): Grammar Exhaustion}
+\section{Grammar Exhaustion Witness Execution}
 \label{sec:v450-r16-execute-wexh-grammar-exhaustion}
 
 This section executes the first global-boundary witness family from r15:
@@ -50963,7 +51063,7 @@ promotion and does not claim global OP1/OP4/OP5 closure.
 
 % --- v4.5.0-r17 Execute W_inv Declared Readout Invariance ---
 
-\section{v4.5.0-r17 Execution of \(W_{\mathrm{inv}}\): Declared Readout Invariance}
+\section{Declared Readout Invariance Witness Execution}
 \label{sec:v450-r17-execute-winv-readout-invariance}
 
 This section executes the second global-boundary witness family:
@@ -51031,7 +51131,7 @@ theorem over every possible external readout or every possible physical model.
 
 % --- v4.5.0-r18 Execute W_tr Boundary Transport ---
 
-\section{v4.5.0-r18 Execution of \(W_{\mathrm{tr}}\): Boundary Transport}
+\section{Boundary Transport Witness Execution}
 \label{sec:v450-r18-execute-wtr-boundary-transport}
 
 This section executes the third global-boundary witness family:
@@ -51098,7 +51198,7 @@ closure is claimed.
 
 % --- v4.5.0-r19 Execute W_debt No-New-Debt Extension ---
 
-\section{v4.5.0-r19 Execution of \(W_{\mathrm{debt}}\): No-New-Debt Extension}
+\section{No-New-Debt Extension Witness Execution}
 \label{sec:v450-r19-execute-wdebt-no-new-debt-extension}
 
 This section executes the fourth global-boundary witness family:
@@ -51171,7 +51271,7 @@ extension maps.  Therefore no global OP1/OP4/OP5 closure is claimed in r19.
 
 % --- v4.5.0-r20 Execute W_fun Functorial Comparison Stability ---
 
-\section{v4.5.0-r20 Execution of \(W_{\mathrm{fun}}\): Functorial Comparison Stability}
+\section{Functorial Comparison Stability Witness Execution}
 \label{sec:v450-r20-execute-wfun-functorial-comparison-stability}
 
 This section executes the fifth global-boundary witness family:
@@ -51219,7 +51319,7 @@ stability gate:
 \[
     \mathrm{GLOB5}=1.
 \]
-After r20 the global-boundary ledger is
+After the functorial-comparison-stability gate, the global-boundary ledger is
 \[
 \begin{array}{c|r}
 \text{quantity} & \text{value}\\
@@ -51230,12 +51330,12 @@ B_G & 1\\
 \text{synthesis-ready} & 1
 \end{array}
 \]
-The marker \(B_G\) is not discharged in r20.  It is carried into the r21
+The marker \(B_G\) is not discharged by that individual gate.  It is carried into the
 boundary-gate synthesis audit.
 \end{theorem}
 
 \begin{remark}[No premature global closure]
-The r20 result is the last individual gate execution.  It does not by itself
+The functorial-stability result is the last individual gate execution.  It does not by itself
 claim global OP1/OP4/OP5 closure.  The next layer must synthesize the five
 passed gates and decide whether \(B_G\) can be discharged without overclaim.
 \end{remark}
@@ -51243,16 +51343,16 @@ passed gates and decide whether \(B_G\) can be discharged without overclaim.
 
 % --- v4.5.0-r21 Boundary-Gate Synthesis Audit ---
 
-\section{v4.5.0-r21 Boundary-Gate Synthesis Audit}
+\section{Boundary-Gate Synthesis Audit}
 \label{sec:v450-r21-boundary-gate-synthesis-audit}
 
-This section synthesizes the five global-boundary gates executed in r16--r20.
+This section synthesizes the five previously executed global-boundary gates.
 It decides whether the retained boundary marker \(B_G\) may be discharged
-inside the declared mathematical global-boundary grammar.  The result is not a
+inside the declared mathematical declared global-boundary synthesis grammar.  The result is not a
 global physical closure theorem and not an unrestricted claim beyond the
 declared extension maps.
 
-\begin{definition}[Declared global-boundary grammar]
+\begin{definition}[Declared declared global-boundary synthesis grammar]
 Let
 \[
     \mathcal G_{\mathrm{global}}^{\mathrm{decl}}
@@ -51284,7 +51384,7 @@ discharged inside \(\mathcal G_{\mathrm{global}}^{\mathrm{decl}}\).
 \end{proposition}
 
 \begin{theorem}[Declared mathematical global-boundary closure]
-Inside the declared mathematical global-boundary grammar
+Inside the declared mathematical declared global-boundary synthesis grammar
 \(\mathcal G_{\mathrm{global}}^{\mathrm{decl}}\), the OP1/OP4/OP5 closure
 surface is closed:
 \[
@@ -51295,42 +51395,41 @@ Equivalently,
 \[
     B_G=0
 \]
-inside the declared synthesis grammar.
+inside the declared global-boundary synthesis grammar.
 \end{theorem}
 
 \begin{proof}
-The r16 layer discharges grammar exhaustion.  The r17 layer discharges
-declared readout invariance.  The r18 layer transports the boundary without
-new debt.  The r19 layer proves no-new-debt for the declared extension
-buckets.  The r20 layer proves functorial stability of the comparison tensor
+The grammar-exhaustion gate discharges grammar exhaustion.  The readout-invariance gate discharges
+declared readout invariance.  The debt-free transport gate transports the boundary without
+new debt.  The no-new-debt extension gate proves no-new-debt for the declared extension
+buckets.  The functorial-stability gate proves functorial stability of the comparison tensor
 \(\mathfrak C\) under the declared extension maps.  Therefore all five
 global-boundary gates are passed.  Since no open gate remains and no new debt,
 reopening, leakage, variance defect, or comparison-instability is recorded, the
 boundary marker \(B_G\) is discharged inside the declared mathematical
-global-boundary grammar.
+declared global-boundary synthesis grammar.
 \end{proof}
 
 \begin{remark}[Scope guard]
-The r21 theorem is a declared mathematical global-boundary closure theorem.
+The declared global-boundary theorem is a mathematical grammar-closure theorem.
 It is not a theorem over every possible external readout, not a global physical
 closure theorem, not a QFT/GR closure theorem, and not release-final status.
-Those claims remain outside the r21 scope.
+Those claims remain outside the declared grammar scope.
 \end{remark}
 
 
 
 % --- v4.5.0-r22 Source-Native Active-Core Rebuild Checkpoint ---
-\section{v4.5.0-r22 Source-Native Active-Core Rebuild Checkpoint}
+\section{Source-Native Active-Core Rebuild Checkpoint}
 \label{sec:v450-r22-source-native-active-core-rebuild-checkpoint}
 
-This checkpoint is a build and hygiene layer only.  It imports the r21 declared
+This checkpoint is a build and hygiene layer only.  It imports the declared
 mathematical global-boundary closure state and tests whether the active core can
-be compiled source-natively after the r14--r21 working layers.
+be compiled source-natively after the current synthesis-line layers.
 
-No new mathematical closure claim is introduced here.  In particular, this
-checkpoint does not change the r21 scope guard: the closure is inside the
-declared mathematical global-boundary grammar, not global physical closure, not
-QFT/GR closure, and not release-final status.
+No new mathematical closure claim is introduced here.  This checkpoint inherits
+the governing declared-grammar scope guard and records only build-hygiene status;
+it does not assert release-final status.
 
 The corresponding audit packet records the actual build status, reference
 hygiene, log hygiene, and render spot-check status.
@@ -51338,7 +51437,7 @@ hygiene, log hygiene, and render spot-check status.
 
 % --- v4.5.0-r23 Release-Candidate Audit Planning ---
 
-\section{v4.5.0-r23 Release-Candidate Audit Planning}
+\section{Release-Candidate Audit Planning}
 \label{sec:v450-r23-release-candidate-audit-planning}
 
 This section is a release-candidate planning layer.  It is not a release
@@ -51386,17 +51485,16 @@ However,
 \end{theorem}
 
 \begin{remark}[Scope and release guard]
-The r23 decision does not change the mathematical scope.  The r21 closure is a
-declared mathematical global-boundary closure.  It is not unrestricted global
-closure, not global physical closure, not QFT/GR closure, and not a release
-final claim.  The next layer should add a compact reader-facing scope disclaimer
-before the release freeze audit.
+The release-path decision does not change the mathematical scope.  It inherits
+the governing declared-grammar scope guard and records only release-path status;
+it is not a release-final claim.  The next layer should add a compact
+reader-facing scope disclaimer before the release-freeze audit.
 \end{remark}
 
 
 % --- v4.5.0-r24 Reader-Facing Global-Scope Disclaimer ---
 
-\section{v4.5.0-r24 Reader-Facing Global-Scope Disclaimer and DOI Synchronization}
+\section{Reader-Facing Global-Scope Disclaimer and DOI Synchronization}
 \label{sec:v450-r24-reader-facing-global-scope-disclaimer}
 
 This section adds a reader-facing scope guard before the release-freeze audit.
@@ -51404,15 +51502,15 @@ It also records the assigned v4.5.0 Zenodo DOI:
 \[
     \mathrm{DOI}_{v4.5.0}=\texttt{10.5281/zenodo.20079410}.
 \]
-This DOI synchronization does not itself make the release final.
+This DOI synchronization does not itself make the release-final.
 
 \begin{definition}[Declared mathematical global-boundary closure]
-The r21 closure statement is
+The declared closure statement is
 \[
     \mathrm{Closure}_{\mathcal G_{\mathrm{global}}^{\mathrm{decl}}}
     (\mathrm{OP1},\mathrm{OP4},\mathrm{OP5}).
 \]
-It means closure inside the declared mathematical synthesis grammar.  It does
+It means closure inside the declared global-boundary synthesis grammar.  It does
 not mean closure over every possible external readout, every possible grammar,
 or every physical model.
 \end{definition}
@@ -51454,7 +51552,7 @@ However,
 \end{theorem}
 
 \begin{remark}[Plain-language guard]
-A reader may say: within the declared mathematical synthesis grammar, OP1,
+A reader may say: within the declared global-boundary synthesis grammar, OP1,
 OP4, and OP5 are closed.  A reader may not infer from this layer that the paper
 has proven global physical closure, QFT/GR closure, or unrestricted closure
 over every possible readout.  Those are different claims and remain outside the
@@ -51470,7 +51568,7 @@ duplicated on the title page or in the front-matter metadata.
 
 
 % --- v4.5.0-r25 Release Freeze Audit ---
-\section{v4.5.0-r25 Release Freeze Audit}
+\section{Release Freeze Audit}
 \label{sec:v450-r25-release-freeze-audit}
 
 This section records the release-freeze audit for v4.5.0.  The assigned Zenodo
@@ -51481,13 +51579,9 @@ version DOI is
 The audit checks build hygiene, reference hygiene, rendered-page hygiene, and
 title-page metadata hygiene.
 
-The r21 mathematical state remains scoped as follows:
-\[
-    \mathrm{Closure}_{\mathcal G_{\mathrm{global}}^{\mathrm{decl}}}
-    (\mathrm{OP1},\mathrm{OP4},\mathrm{OP5}).
-\]
-This is a declared mathematical global-boundary closure, not unrestricted
-global closure and not global physical/QFT/GR closure.
+The audit inherits the same declared mathematical scope statement recorded by
+the preceding reader-facing scope ledger.  The freeze audit records release
+hygiene only and does not expand the mathematical or physical claim space.
 
 \begin{remark}[Release-freeze title-page hygiene]
 The title page and front-matter metadata must contain the version, DOI, and
@@ -51503,10 +51597,10 @@ reader-facing polish without introducing new mathematical claims.
 \end{remark}
 
 % --- v4.5.0-r26 Frontmatter and Title-Page Repair ---
-\section{v4.5.0-r26 Frontmatter and Title-Page Repair}
+\section{Frontmatter and Title-Page Repair}
 \label{sec:v450-r26-frontmatter-titlepage-repair}
 
-This section records the frontmatter and title-page repair after the r25 blocked
+This section records the frontmatter and title-page repair after the blocked
 freeze audit.  The current version string is v4.5.0 and the assigned Zenodo
 version DOI is
 \[
@@ -51517,15 +51611,15 @@ metadata from the reader-facing frontmatter and replaces it by the v4.5.0
 release-candidate metadata.
 
 \begin{remark}[No new mathematical claim]
-The r26 repair is a metadata, frontmatter, and title-page hygiene layer.  It
-preserves the r21 declared mathematical global-boundary closure scope and does
-not add a new theorem, a physical closure theorem, or a release-final claim.
+The frontmatter repair is a metadata, frontmatter, and title-page hygiene layer.
+It preserves the governing declared-grammar scope and does not add a new
+theorem, a physical closure theorem, or a release-final claim.
 \end{remark}
 
 
 
 % --- v4.5.0 Release Final Gate ---
-\section{v4.5.0 Release Final Gate}
+\section{Release-Final Gate}
 \label{sec:v450-release-final-gate}
 
 This final gate records the public v4.5.0 release-final status after the
@@ -51577,10 +51671,1490 @@ CKM/PMNS, quark masses, or the Standard-Model spectrum.
 
 \begin{remark}[No theorematic expansion]
 This release-final gate is a public packaging and provenance statement.  It
-only promotes the already audited v4.5.0 release candidate to public
-release-final status after successful build and metadata hygiene checks.  It
+only records the audited v4.5.0 release candidate as public release-final
+status after successful build and metadata hygiene checks.  It
 does not relax any guard and does not add a new mathematical or physical claim.
 \end{remark}
 
+
+% --- v4.5.1-r01 Editorial QA Intake ---
+\section{Editorial QA Intake}
+\label{sec:v451-r01-editorial-qa-intake}
+
+This section opens the post-release editorial QA line after the public
+v4.5.0 release-final packet.  It is an editorial, provenance, and reader-facing
+consistency layer only, inheriting the governing release-final and scope records
+without adding mathematical or physical content.
+
+The governing public-release basis remains the v4.5.0 release-final DOI
+\[
+    \mathrm{DOI}_{v4.5.0}=\texttt{10.5281/zenodo.20079410}.
+\]
+The Companion concept DOI remains
+\[
+    \mathrm{DOI}_{\mathrm{concept}}=\texttt{10.5281/zenodo.19210728}.
+\]
+No separate v4.5.1 release DOI is assigned by this intake layer.
+
+\begin{definition}[Editorial QA intake state]
+The v4.5.1-r01 editorial QA intake state is the finite audit object that
+classifies inherited version, DOI, release-candidate, and working-layer strings
+as either current public-status metadata or historical/provenance metadata.
+Only the former can affect the reader-facing release status.  The latter remain
+valid theorem-memory and reconstruction support.
+\end{definition}
+
+\begin{proposition}[Post-release provenance classification]
+The post-release QA scan of the v4.5.0 release-final source records the
+following inherited markers:
+\[
+\begin{array}{c|c|c}
+\text{marker family} & \text{count} & \text{classification}\\
+\hline
+\texttt{v4.4} & 169 & \text{historical/provenance}\\
+\texttt{10.5281/zenodo.20068747} & 3 & \text{prior version DOI provenance}\\
+\texttt{release candidate} & 3 & \text{historical pre-final layers}\\
+\texttt{r26} & 4 & \text{immediate repair-layer provenance}\\
+\texttt{r65}\text{--}\texttt{r73} & 0 & \text{absent}\\
+\texttt{Figure 05}/\texttt{Figures 01--05} & 0 & \text{absent}\\
+\texttt{TODO}/\texttt{FIXME} & 0 & \text{absent}
+\end{array}
+\]
+Thus the remaining old version and release-candidate strings are not current
+public-status claims.  They are retained only as provenance, genealogy, and
+checkpoint memory.
+\end{proposition}
+
+\begin{theorem}[No post-release theorematic drift]
+The v4.5.1-r01 editorial QA intake is conservative over the v4.5.0 release-final
+mathematical status.  The only governing theorematic closure statement remains
+\[
+    \mathrm{Closure}_{\mathcal G_{\mathrm{global}}^{\mathrm{decl}}}
+    (\mathrm{OP1},\mathrm{OP4},\mathrm{OP5}),
+\]
+inside the declared global-boundary synthesis grammar.  This intake layer does not
+promote that statement to unrestricted all-readout closure, global physical
+closure, QFT/GR closure, QCD/confinement, CKM/PMNS, quark-mass, or
+Standard-Model-spectrum derivation.
+\end{theorem}
+
+\begin{remark}[Next editorial target]
+The next editorial pass may normalize reader-facing section names and move more
+working-layer chronology into compact provenance language, but only if the
+mathematical labels, theorem statements, cross-references, and release DOI logic
+remain unchanged.
+\end{remark}
+
+
+% --- v4.5.1-r02 Reader-Facing Chronology Compression ---
+\section{Reader-Facing Chronology Compression}
+\label{sec:v451-r02-reader-facing-chronology-compression}
+
+This section performs the second post-release editorial pass after the public
+v4.5.0 release-final packet.  It compresses inherited working chronology into a
+reader-facing provenance map.  It is editorial and navigational only: it adds no
+new physical interpretation, no new closure theorem, and no new DOI.
+
+\begin{definition}[Chronology compression map]
+The v4.5.1-r02 chronology compression map
+\[
+    \mathsf{Chron}_{\mathrm{read}}:
+    \mathsf{ChronTokens}\longrightarrow \mathsf{ChronStrata}
+\]
+reads inherited version strings, release notes, DOI records, and working-gate prose as provenance unless the
+string occurs in an explicitly current release-final, DOI, or governing-status
+position.  The map has the following finite strata:
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.13\textwidth}p{0.50\textwidth}p{0.25\textwidth}@{}}
+\toprule
+stratum & compressed reader meaning & effect\\
+\midrule
+$\mathrm{C}_0$ & early local-readout and construction genealogy & historical memory\\
+$\mathrm{C}_1$ & v4.4 declared-local OP1/OP4 closure release & prior scoped result\\
+$\mathrm{C}_2$ & v4.5.0 declared global-boundary synthesis & current governing mathematical status\\
+$\mathrm{C}_3$ & DOI, title-page, and frontmatter repair & release metadata only\\
+$\mathrm{C}_4$ & v4.5.1 editorial QA and readability cleanup & post-release navigation only\\
+\bottomrule
+\end{tabular}
+\end{center}
+No element of this map is a physical field, tensor index, route tag, closure
+witness, obstruction, or proof datum.
+\end{definition}
+
+\begin{proposition}[Compressed chronology ledger]
+Under the r02 reader-facing compression, the old visible chronology markers are
+read as follows:
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.30\textwidth}p{0.20\textwidth}p{0.34\textwidth}@{}}
+\toprule
+marker family & compressed stratum & reader instruction\\
+\midrule
+\texttt{v4.4} & $\mathrm{C}_1$ & prior scoped release result\\
+\texttt{10.5281/zenodo.20068747} & $\mathrm{C}_1$ & prior version DOI provenance\\
+\texttt{release candidate} & $\mathrm{C}_3$ & pre-final gate memory\\
+\texttt{r26} & $\mathrm{C}_3$ & frontmatter repair provenance\\
+\texttt{v4.5.1-r01} & $\mathrm{C}_4$ & post-release QA intake\\
+\texttt{v4.5.1-r02} & $\mathrm{C}_4$ & chronology-compression pass\\
+\bottomrule
+\end{tabular}
+\end{center}
+Thus a reader need not interpret each working gate as a new mathematical layer.
+The mathematical status is governed by the semantic closure and scope-guard
+blocks, while the working chronology is retained for reconstruction.
+\end{proposition}
+
+\begin{theorem}[Chronology compression conservativity]
+The v4.5.1-r02 reader-facing chronology compression is conservative over the
+v4.5.0 release-final and v4.5.1-r01 editorial-intake states.  It preserves all
+mathematical labels, theorem statements, cross-references, DOI records, and
+scope guards.  In particular, the only governing current closure statement
+remains
+\[
+    \mathrm{Closure}_{\mathcal G_{\mathrm{global}}^{\mathrm{decl}}}
+    (\mathrm{OP1},\mathrm{OP4},\mathrm{OP5})
+\]
+inside the declared global-boundary synthesis grammar.  No unrestricted all-readout
+closure, global physical closure, QFT/GR closure, QCD/confinement,
+CKM/PMNS, quark-mass, or Standard-Model-spectrum claim is introduced.
+\end{theorem}
+
+\begin{remark}[Next editorial target]
+The next editorial step may be a local phrase-normalization pass: replace a
+small number of reader-visible working-gate headings by semantic headings while
+keeping the original labels and audit provenance intact.  That step should still
+avoid any new mathematical claim.
+\end{remark}
+
+
+% --- v4.5.1-r03 Reader-Facing Phrase Normalization ---
+
+\section{Reader-Facing Phrase Normalization}
+\label{sec:v451-r03-reader-facing-phrase-normalization}
+
+This section performs the third post-release editorial pass after the public
+v4.5.0 release-final packet.  It normalizes selected reader-visible current-line
+working-gate headings into semantic headings.  It is editorial and navigational
+only: it adds no new mathematical theorem, no new physical interpretation, no
+new closure claim, and no new DOI.
+
+\begin{definition}[Phrase-normalization map]
+The v4.5.1-r03 phrase-normalization map
+\[
+    \mathsf{Phrase}_{\mathrm{read}}:
+    \mathsf{WorkingHeadings}_{\mathrm{current}}
+    \longrightarrow
+    \mathsf{SemanticHeadings}_{\mathrm{current}}
+\]
+acts only on reader-visible section headings in the current v4.5.0/v4.5.1
+working spine.  It removes the visible revision-prefix role from those headings
+and leaves labels, cross-references, comments, theorem bodies, audit ledgers,
+DOI records, and historical provenance untouched.
+\end{definition}
+
+\begin{proposition}[Phrase-normalization ledger]
+The r03 pass applies the following reader-facing normalization classes:
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.30\textwidth}p{0.43\textwidth}p{0.17\textwidth}@{}}
+\toprule
+source heading family & normalized reader family & effect\\
+\midrule
+local-to-global intake and witness-search headings & semantic intake/search layer headings & readability only\\
+residual-classifier and witness-execution headings & semantic classifier/execution headings & readability only\\
+two-sided tensor, compatibility, and boundary-audit headings & semantic audit/consolidation headings & readability only\\
+source-native rebuild, release planning, freeze, and repair headings & semantic build/release hygiene headings & readability only\\
+post-release QA and chronology headings & semantic editorial-QA headings & readability only\\
+\bottomrule
+\end{tabular}
+\end{center}
+The original revision strings remain recoverable from labels, comments, diffs,
+checksums, manifests, and audit files.  Therefore the normalization is not a
+renumbering of mathematical objects.
+\end{proposition}
+
+\begin{theorem}[Phrase-normalization conservativity]
+The v4.5.1-r03 phrase-normalization pass is conservative over the v4.5.1-r02
+chronology-compression state.  It preserves the source labels, mathematical
+statements, cross-references, DOI records, and scope guards.  The only governing
+current closure statement remains
+\[
+    \mathrm{Closure}_{\mathcal G_{\mathrm{global}}^{\mathrm{decl}}}
+    (\mathrm{OP1},\mathrm{OP4},\mathrm{OP5})
+\]
+inside the declared global-boundary synthesis grammar.  No unrestricted
+all-readout closure, global physical closure, QFT/GR closure, QCD/confinement,
+CKM/PMNS, quark-mass, or Standard-Model-spectrum claim is introduced.
+\end{theorem}
+
+\begin{remark}[Next editorial target]
+The next editorial step may be a proof-spine phrase audit: identify remaining
+places where a historical build phrase appears in running prose and decide, one
+site at a time, whether it should remain provenance or be rewritten into a
+semantic reader-facing phrase.  That step should still avoid any change to
+mathematical content, labels, DOI logic, or scope guards.
+\end{remark}
+
+
+% --- v4.5.1-r04 Proof-Spine Phrase Audit ---
+\section{Proof-Spine Phrase Audit}
+\label{sec:v451-r04-proof-spine-phrase-audit}
+
+This section performs the fourth post-release editorial pass after the public
+v4.5.0 release-final packet.  It audits running prose in the active proof spine
+for residual build-facing phrases and rewrites only selected reader-visible
+phrases into semantic mathematical roles.  It is editorial and navigational only:
+it adds no new mathematical theorem, no new physical interpretation, no new
+closure claim, and no new DOI.
+
+\begin{definition}[Proof-spine phrase-audit map]
+The v4.5.1-r04 proof-spine phrase-audit map
+\[
+    \mathsf{SpinePhrase}_{\mathrm{read}}:
+    \mathsf{BuildPhrases}_{\mathrm{spine}}
+    \longrightarrow
+    \mathsf{SemanticRoles}_{\mathrm{spine}}
+\]
+acts only on running prose.  It does not act on labels, theorem bodies as
+mathematical statements, displayed ledgers, DOI records, comments, manifests,
+checksums, or historical provenance.  Typical replacements are of the form
+\[
+\begin{array}{c|c}
+\text{build-facing phrase} & \text{reader-facing semantic role}\\
+\hline
+\text{individual gate execution} & \text{named global-boundary gate}\\
+\text{working layer} & \text{declared synthesis-line layer}\\
+\text{revision-indexed proof reference} & \text{semantic proof-spine dependency}\\
+\text{release-candidate wording} & \text{release-status provenance}
+\end{array}
+\]
+when the replacement improves reader orientation without changing the assertion.
+\end{definition}
+
+\begin{proposition}[Phrase-audit ledger]
+The r04 pass applies the following local smoothing classes:
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.33\textwidth}p{0.39\textwidth}p{0.16\textwidth}@{}}
+\toprule
+source phrase family & normalized reader family & effect\\
+\midrule
+revision-indexed gate references in the current global-boundary synthesis proof & grammar-exhaustion, readout-invariance, debt-free transport, no-new-debt extension, and functorial-stability gate references & readability only\\
+source-native rebuild and checkpoint wording & build-hygiene provenance attached to the declared grammar state & readability only\\
+release-candidate and freeze-audit prose & release-status provenance, not theorem content & readability only\\
+frontmatter-repair prose & metadata hygiene, not mathematical promotion & readability only\\
+\bottomrule
+\end{tabular}
+\end{center}
+The original revision strings remain recoverable from labels, comments, diffs,
+checksums, manifests, and audit files.  Therefore the audit is not a renumbering
+of mathematical objects and not a change of proof dependencies.
+\end{proposition}
+
+\begin{theorem}[Proof-spine phrase-audit conservativity]
+The v4.5.1-r04 proof-spine phrase audit is conservative over the v4.5.1-r03
+phrase-normalization state.  It preserves mathematical labels, displayed closure
+statements, cross-references, DOI records, and scope guards.  The only governing
+current closure statement remains
+\[
+    \mathrm{Closure}_{\mathcal G_{\mathrm{global}}^{\mathrm{decl}}}
+    (\mathrm{OP1},\mathrm{OP4},\mathrm{OP5})
+\]
+inside the declared global-boundary synthesis grammar.  No unrestricted all-readout
+closure, global physical closure, QFT/GR closure, QCD/confinement, CKM/PMNS,
+quark-mass, or Standard-Model-spectrum claim is introduced.
+\end{theorem}
+
+\begin{remark}[Next editorial target]
+The next editorial step may be a local redundancy pass: identify repeated
+release-status reminders and collapse only those that are already covered by the
+frontmatter reading rule, while preserving all theorem statements, labels,
+ledger values, DOI records, and scope guards.
+\end{remark}
+
+% --- v4.5.1-r05 Local Redundancy Pass ---
+\section{Local Redundancy Pass}
+\label{sec:v451-r05-local-redundancy-pass}
+
+This section records a local reader-facing redundancy pass after the proof-spine
+phrase audit.  The purpose is to keep repeated release-state and scope reminders
+from obscuring the proof spine.  It does not remove any theorem statement,
+ledger value, DOI record, label, cross-reference, audit trail, or scope guard.
+
+\begin{definition}[Redundancy-normalization map]
+The v4.5.1-r05 redundancy-normalization map is the editorial map
+\[
+    \mathsf{Redund}_{\mathrm{read}}:
+    \mathsf{RepeatedScopeReleasePhrases}
+    \longrightarrow
+    \mathsf{SemanticPointers}.
+\]
+Its allowed targets are:
+\[
+\begin{array}{c|l}
+\text{pointer} & \text{reader-facing meaning}\\
+\hline
+\mathrm{scope}_{\mathrm{decl}} & \text{inherit the governing declared-grammar scope guard}\\
+\mathrm{rel}_{\mathrm{state}} & \text{inherit the current release-state ledger}\\
+\mathrm{prov}_{\mathrm{audit}} & \text{read the sentence as provenance or audit hygiene only}
+\end{array}
+\]
+The map is not allowed to rewrite theorem statements, change labels, delete DOI
+records, or weaken explicit non-claim guards.
+\end{definition}
+
+\begin{proposition}[Local redundancy ledger]
+The local redundancy pass touches only reader-facing prose in the following
+classes:
+{\scriptsize
+\[
+\begin{array}{c|c|c}
+\text{locus} & \text{old reader effect} & \text{normalized reader effect}\\
+\hline
+\text{build checkpoint prose} & \text{repeated full scope guard} & \mathrm{scope}_{\mathrm{decl}}+\mathrm{prov}_{\mathrm{audit}}\\
+\text{release-path remark} & \text{repeated scope and release guard} & \mathrm{scope}_{\mathrm{decl}}+\mathrm{rel}_{\mathrm{state}}\\
+\text{freeze-audit prose} & \text{repeated closure formula and non-claim list} & \mathrm{scope}_{\mathrm{decl}}+\mathrm{prov}_{\mathrm{audit}}\\
+\text{frontmatter repair prose} & \text{revision-specific scope reference} & \mathrm{scope}_{\mathrm{decl}}\\
+\text{post-release QA opening} & \text{repeated no-new-claim wording} & \mathrm{rel}_{\mathrm{state}}+\mathrm{scope}_{\mathrm{decl}}
+\end{array}
+\]
+}
+All replacements are local phrase normalizations.  The source labels and audit
+history still preserve the detailed revision chain.
+\end{proposition}
+
+\begin{theorem}[Redundancy-pass conservativity]
+The v4.5.1-r05 local redundancy pass is conservative over the v4.5.1-r04
+proof-spine phrase audit.  It preserves all theorem statements, definitions,
+labels, cross-references, DOI records, release-final records, ledger values, and
+scope guards.  The governing closure statement remains
+\[
+    \mathrm{Closure}_{\mathcal G_{\mathrm{global}}^{\mathrm{decl}}}
+    (\mathrm{OP1},\mathrm{OP4},\mathrm{OP5})
+\]
+inside the declared mathematical synthesis grammar.  No unrestricted all-readout
+closure, no global physical closure, no QFT/GR closure, and no Standard-Model
+spectrum claim is introduced.
+\end{theorem}
+
+\begin{remark}[Reader-facing effect]
+After this pass, repeated guard sentences should be read as pointers to the
+frontmatter, release-final ledger, or local audit trail.  The mathematical spine
+is unchanged; only the amount of repeated status prose in nearby reader-facing
+paragraphs is reduced.
+\end{remark}
+
+
+% --- v4.5.1-r06 Notation-Consistency Micro-Audit ---
+\section{Notation-Consistency Micro-Audit}
+\label{sec:v451-r06-notation-consistency-micro-audit}
+
+This section records a local reader-facing notation-consistency micro-audit after
+the local redundancy pass.  Its purpose is to keep the main closure vocabulary
+stable for readers.  It does not change any theorem statement, proof dependency,
+label, cross-reference, DOI record, ledger value, release record, or scope guard.
+
+\begin{definition}[Preferred reader vocabulary]
+The v4.5.1-r06 notation-consistency convention uses the following preferred
+reader-facing phrases:
+{\scriptsize
+\[
+\begin{array}{c|l}
+\text{preferred phrase} & \text{meaning}\\
+\hline
+\text{declared global-boundary synthesis grammar} &
+  \text{the governing grammar }\mathcal G_{\mathrm{global}}^{\mathrm{decl}}\\
+\text{declared grammar} &
+  \text{short form after the governing grammar has been named}\\
+\text{release-final} &
+  \text{the public frozen release state, not a new theorem}\\
+\text{provenance-only} &
+  \text{historical/audit material retained for reconstruction}
+\end{array}
+\]
+}
+The phrases \emph{synthesis grammar}, \emph{global-boundary grammar}, and
+\emph{declared grammar} may still occur where grammar context is already fixed,
+but new reader-facing prose should prefer the full phrase when ambiguity is
+possible.
+\end{definition}
+
+\begin{proposition}[Notation-consistency ledger]
+The r06 pass classifies vocabulary variants as follows:
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.29\textwidth}p{0.38\textwidth}p{0.21\textwidth}@{}}
+\toprule
+variant family & preferred reader treatment & effect\\
+\midrule
+\texttt{declared grammar} & allowed short form after the governing grammar is named & readability only\\
+\texttt{synthesis grammar} & expand to declared global-boundary synthesis grammar where ambiguity is possible & readability only\\
+\texttt{global-boundary grammar} & read as the declared synthesis grammar, not a separate grammar & readability only\\
+\texttt{release final} / \texttt{release-final} & hyphenate as release-final in new prose & style only\\
+\texttt{provenance only} / \texttt{provenance-only} & hyphenate as provenance-only in new prose & style only\\
+\bottomrule
+\end{tabular}
+\end{center}
+The pass is a notation and style audit, not a mathematical promotion.  In
+particular, it does not create a new grammar object and does not weaken the
+existing non-claim guards.
+\end{proposition}
+
+\begin{theorem}[Notation-consistency conservativity]
+The v4.5.1-r06 notation-consistency micro-audit is conservative over the
+v4.5.1-r05 local redundancy pass.  It preserves all theorem statements,
+definitions, labels, cross-references, DOI records, release-final records,
+ledger values, and scope guards.  The governing closure statement remains
+\[
+    \mathrm{Closure}_{\mathcal G_{\mathrm{global}}^{\mathrm{decl}}}
+    (\mathrm{OP1},\mathrm{OP4},\mathrm{OP5})
+\]
+inside the declared global-boundary synthesis grammar.  No unrestricted
+all-readout closure, no global physical closure, no QFT/GR closure, no
+QCD/confinement claim, no CKM/PMNS claim, no quark-mass claim, and no
+Standard-Model-spectrum claim is introduced.
+\end{theorem}
+
+\begin{remark}[Reader-facing effect]
+After this pass, the reader should treat the long phrase
+\emph{declared global-boundary synthesis grammar} as the canonical name of the
+current governing grammar.  Shorter phrases are abbreviations or provenance
+phrases unless a displayed definition says otherwise.
+\end{remark}
+
+
+
+% --- v4.5.1-r07 Final Post-Release Editorial Consolidation ---
+\section{Final Post-Release Editorial Consolidation}
+\label{sec:v451-r07-final-post-release-editorial-consolidation}
+
+This section closes the v4.5.1 post-release editorial cleanup line as a
+reader-facing consolidation layer.  It is not a new mathematical layer, not a
+new DOI-bearing release-final refresh, and not a change to any theorem statement
+or proof dependency.  Its function is to record that the preceding editorial
+passes now form one coherent post-release hygiene block.
+
+\begin{definition}[Consolidated editorial block]
+The v4.5.1 editorial block is the finite sequence
+\[
+\begin{array}{c|l|l}
+\text{stage} & \text{reader-facing role} & \text{mathematical effect}\\
+\hline
+r01 & \text{editorial QA intake} & \text{none}\\
+r02 & \text{chronology compression} & \text{none}\\
+r03 & \text{phrase normalization} & \text{none}\\
+r04 & \text{proof-spine phrase audit} & \text{none}\\
+r05 & \text{local redundancy pass} & \text{none}\\
+r06 & \text{notation-consistency micro-audit} & \text{none}\\
+r07 & \text{final editorial consolidation} & \text{none}
+\end{array}
+\]
+All seven stages are provenance-preserving reader-facing hygiene passes.  They
+are therefore treated as one consolidated editorial block over the v4.5.0
+release-final mathematical spine.
+\end{definition}
+
+\begin{proposition}[Post-release line closure]
+The v4.5.1 post-release editorial line is closed for the present public working
+cycle if the following ledger is accepted:
+\[
+\begin{array}{c|c}
+\text{gate} & \text{status}\\
+\hline
+\text{release-final DOI record preserved} & \mathrm{yes}\\
+\text{theorem statements changed} & \mathrm{no}\\
+\text{labels or cross-references reinterpreted} & \mathrm{no}\\
+\text{scope guard weakened} & \mathrm{no}\\
+\text{new physical claim introduced} & \mathrm{no}\\
+\text{reader-facing chronology made explicit} & \mathrm{yes}\\
+\text{terminology normalized around }\mathcal G_{\mathrm{global}}^{\mathrm{decl}} & \mathrm{yes}
+\end{array}
+\]
+This closes the editorial cleanup as a hygiene line.  It does not, by itself,
+prepare a new public Zenodo release unless a separate release-refresh decision is
+made.
+\end{proposition}
+
+\begin{theorem}[Consolidation conservativity]
+The v4.5.1-r07 final post-release editorial consolidation is conservative over
+the v4.5.1-r06 notation-consistency micro-audit.  It preserves all theorem
+statements, definitions, labels, cross-references, DOI records, release-final
+records, ledger values, and scope guards.  The governing closure statement
+remains
+\[
+    \mathrm{Closure}_{\mathcal G_{\mathrm{global}}^{\mathrm{decl}}}
+    (\mathrm{OP1},\mathrm{OP4},\mathrm{OP5})
+\]
+inside the declared global-boundary synthesis grammar.  No unrestricted
+all-readout closure, no global physical closure, no QFT/GR closure, no
+QCD/confinement claim, no CKM/PMNS claim, no quark-mass claim, and no
+Standard-Model-spectrum claim is introduced.
+\end{theorem}
+
+\begin{remark}[Reader-facing handoff]
+After this consolidation, the next document-level decision is external to the
+mathematical content: either keep v4.5.1 as a local post-release QA line, or
+prepare a small DOI-bearing v4.5.1 refresh packet.  In both cases, the
+mathematical closure spine remains the v4.5.0 release-final spine with the
+v4.5.1 editorial block as reader-facing hygiene.
+\end{remark}
+
+
+
+% --- v4.5.1-r08 Internal Release-Refresh Gate Audit ---
+\section{Internal Release-Refresh Gate Audit}
+\label{sec:v451-r08-internal-release-refresh-gate-audit}
+
+This section records an internal release-refresh gate audit for the
+v4.5.1 editorial line.  It is deliberately not a public release-final refresh,
+not a Zenodo upload packet, not a DOI-bearing publication step, and not a new
+mathematical layer.  Its function is to decide whether the closed v4.5.1
+editorial block is ready to be considered for a future public refresh, while
+keeping the present intermediate state internal.
+
+\begin{definition}[Internal refresh-gate state]
+The internal refresh-gate state is the ledger
+\[
+\begin{array}{c|c|l}
+\text{gate} & \text{state} & \text{meaning}\\
+\hline
+\text{v4.5.1 editorial block closed} & \mathrm{yes} & \text{r01--r07 form one hygiene block}\\
+\text{new mathematics introduced} & \mathrm{no} & \text{no theorem/proof promotion}\\
+\text{new DOI supplied} & \mathrm{no} & \text{no DOI-bearing refresh can be public}\\
+\text{public upload authorized} & \mathrm{no} & \text{this packet remains internal}\\
+\text{Zenodo release text generated} & \mathrm{no} & \text{no public-description artifact is emitted}\\
+\text{release-refresh gate outcome} & \mathrm{hold} & \text{internal audit only}
+\end{array}
+\]
+The word \emph{hold} means that the editorial block is internally coherent, but
+is not promoted to a public refresh in the absence of an explicit DOI and a
+separate public-release decision.
+\end{definition}
+
+\begin{proposition}[Internal-only refresh-gate rule]
+The v4.5.1 editorial block may be kept as an internal refresh candidate if and
+only if all of the following remain true:
+\[
+\begin{array}{c|c}
+\text{condition} & \text{required value}\\
+\hline
+\text{current public release DOI preserved} & \mathrm{yes}\\
+\text{new DOI inserted} & \mathrm{no}\\
+\text{public Zenodo description emitted} & \mathrm{no}\\
+\text{release-final wording promoted} & \mathrm{no}\\
+\text{scope guard weakened} & \mathrm{no}\\
+\text{theorem statements changed} & \mathrm{no}
+\end{array}
+\]
+Under this rule, the packet may be audited, rendered, checksummed, and archived
+as an internal working packet, but it is not suitable for direct public upload as
+a release-final artifact.
+\end{proposition}
+
+\begin{theorem}[Internal refresh-gate conservativity]
+The v4.5.1-r08 internal release-refresh gate audit is conservative over the
+v4.5.1-r07 final post-release editorial consolidation.  It preserves all theorem
+statements, definitions, labels, cross-references, DOI records, release-final
+records, ledger values, and scope guards.  The governing closure statement
+remains
+\[
+    \mathrm{Closure}_{\mathcal G_{\mathrm{global}}^{\mathrm{decl}}}
+    (\mathrm{OP1},\mathrm{OP4},\mathrm{OP5})
+\]
+inside the declared global-boundary synthesis grammar.  No unrestricted
+all-readout closure, no global physical closure, no QFT/GR closure, no
+QCD/confinement claim, no CKM/PMNS claim, no quark-mass claim, and no
+Standard-Model-spectrum claim is introduced.
+\end{theorem}
+
+\begin{remark}[Internal handoff]
+The next document-level decision is binary.  Either keep this r08 packet as an
+internal audit record, or start a separate public v4.5.1 refresh-preparation line
+only after an explicit public-release decision and DOI synchronization.  Until
+that decision is made, the r08 artifacts remain internal working artifacts.
+\end{remark}
+
+
+% --- v4.5.1-r09 Internal Proof-Read and Style-Only Pass ---
+\section{Internal Proof-Read and Style-Only Pass}
+\label{sec:v451-r09-internal-proof-read-style-pass}
+
+This section records a strictly internal proof-read and style-only pass over the
+post-release editorial line.  It does not promote the r08 internal gate to a
+public release, does not insert a new DOI, does not prepare Zenodo-facing release
+text, and does not change any mathematical claim.  Its purpose is reader-facing
+surface hygiene: sentence-level clarity, consistent internal-status language,
+and explicit separation between stylistic edits and theorem-bearing content.
+
+\begin{definition}[Internal style-pass ledger]
+The r09 style-pass ledger is
+\[
+\begin{array}{c|c|l}
+\text{item} & \text{state} & \text{meaning}\\
+\hline
+\text{internal-only status preserved} & \mathrm{yes} & \text{no public upload authorization}\\
+\text{new DOI inserted} & \mathrm{no} & \text{no DOI-bearing refresh step}\\
+\text{Zenodo release text emitted} & \mathrm{no} & \text{no public-release description}\\
+\text{mathematical statements changed} & \mathrm{no} & \text{theorem/proposition content preserved}\\
+\text{labels and cross-references changed} & \mathrm{no} & \text{stable source navigation}\\
+\text{style-only wording pass applied} & \mathrm{yes} & \text{reader-facing prose hygiene only}
+\end{array}
+\]
+Thus r09 is an internal editorial hygiene checkpoint, not a mathematical or
+public-release checkpoint.
+\end{definition}
+
+\begin{proposition}[Style-only admissibility rule]
+A prose edit in the r09 pass is admissible only if it preserves the theorem
+statement, definition content, label target, cross-reference target, DOI record,
+release-state ledger, and declared-scope guard of the surrounding block.  Edits
+may shorten duplicated phrasing, replace workflow jargon by reader-facing
+wording, or clarify that a block is provenance-only or internal-only.  Edits may
+not introduce a new closure claim, a new readout domain, a new release status, or
+a new public-upload instruction.
+\end{proposition}
+
+\begin{theorem}[r09 style-pass conservativity]
+The v4.5.1-r09 internal proof-read and style-only pass is conservative over the
+v4.5.1-r08 internal release-refresh gate audit.  It preserves all theorem
+statements, definitions, labels, cross-references, DOI records, release-final
+records, ledger values, and scope guards.  The governing closure statement
+remains
+\[
+    \mathrm{Closure}_{\mathcal G_{\mathrm{global}}^{\mathrm{decl}}}
+    (\mathrm{OP1},\mathrm{OP4},\mathrm{OP5})
+\]
+inside the declared global-boundary synthesis grammar.  No unrestricted
+all-readout closure, no global physical closure, no QFT/GR closure, no
+QCD/confinement claim, no CKM/PMNS claim, no quark-mass claim, and no
+Standard-Model-spectrum claim is introduced.
+\end{theorem}
+
+\begin{remark}[Internal handoff after proof-read]
+After r09, the editorial line can either remain archived as an internal
+post-release hygiene line or continue with another internal proof-read pass.  A
+public v4.5.1 refresh remains a separate decision requiring explicit DOI
+synchronization and a dedicated public-release gate.
+\end{remark}
+
+
+% --- v4.5.1-r10 Internal Line-Level Proofread over Selected Page Ranges ---
+\section{Internal Line-Level Proofread over Selected Page Ranges}
+\label{sec:v451-r10-internal-line-level-proofread-selected-ranges}
+
+This section records an internal line-level proofread over selected page ranges.
+It continues the internal v4.5.1 editorial line after r09.  It is not a public
+release refresh, not a Zenodo upload packet, not a DOI-bearing publication step,
+and not a mathematical layer.  Its function is to inspect concrete rendered
+page ranges and to record only reader-facing metadata or wording corrections
+that are conservative over the existing proof spine.
+
+\begin{definition}[Selected line-proofread window]
+The r10 selected proofread window is
+\[
+\begin{array}{c|l|l}
+\text{window} & \text{rendered pages inspected} & \text{purpose}\\
+\hline
+P_1 & 1\text{--}20 & \text{title page, frontmatter, abstract, routing rules}\\
+P_2 & 850\text{--}878 & \text{late proof-spine, internal editorial tail, handoff blocks}
+\end{array}
+\]
+The ranges are selected because they contain the public-facing status language
+and the current internal editorial handoff.  They are not selected to re-prove
+any theorem.
+\end{definition}
+
+\begin{proposition}[Line-level correction ledger]
+The r10 line-level correction ledger is
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.08\textwidth}p{0.22\textwidth}p{0.31\textwidth}p{0.27\textwidth}@{}}
+\toprule
+item & location & finding & r10 action\\
+\midrule
+$L_1$ & title/PDF metadata & current layer still displayed r07 & updated to r10 internal proofread\\
+$L_2$ & frontmatter status box & internal-only status could be missed & added r10 status note\\
+$L_3$ & late proof-spine pages & revision strings occur as provenance & theorem text unchanged\\
+$L_4$ & internal handoff tail & release-refresh boundary remains internal & no public-release language emitted\\
+\bottomrule
+\end{tabular}
+\end{center}
+Thus the only source edits made by the r10 proofread are metadata/status and
+reader-routing edits.  The theorem-bearing mathematical text in the selected
+late proof-spine pages remains unchanged.
+\end{proposition}
+
+\begin{theorem}[r10 selected-proofread conservativity]
+The v4.5.1-r10 internal line-level proofread over selected page ranges is
+conservative over the v4.5.1-r09 internal proof-read and style-only pass.  It
+preserves all theorem statements, definitions, labels, cross-references, DOI
+records, release-final records, ledger values, and scope guards.  The governing
+closure statement remains
+\[
+    \mathrm{Closure}_{\mathcal G_{\mathrm{global}}^{\mathrm{decl}}}
+    (\mathrm{OP1},\mathrm{OP4},\mathrm{OP5})
+\]
+inside the declared global-boundary synthesis grammar.  No unrestricted
+all-readout closure, no global physical closure, no QFT/GR closure, no
+QCD/confinement claim, no CKM/PMNS claim, no quark-mass claim, and no
+Standard-Model-spectrum claim is introduced.
+\end{theorem}
+
+\begin{remark}[Internal handoff after selected proofread]
+After r10, the internal editorial line has a checked frontmatter/current-status
+correction and a selected late-page proofread ledger.  A public v4.5.1 refresh
+remains a separate decision requiring explicit DOI synchronization and a
+dedicated public-release gate.
+\end{remark}
+
+
+% --- v4.5.1-r11 Internal Targeted Terminology Sweep over OP5 and OP1/OP4 Compatibility Pages ---
+\section{Internal Targeted Terminology Sweep over OP5 and OP1/OP4 Compatibility Pages}
+\label{sec:v451-r11-internal-targeted-terminology-sweep-op5-op14-compatibility}
+
+This section records an internal targeted terminology sweep over the older OP5
+and OP1/OP4 compatibility pages.  It continues the internal v4.5.1 editorial
+line after r10.  It is not a public release refresh, not a Zenodo upload packet,
+not a DOI-bearing publication step, and not a mathematical layer.  Its function
+is to make the inherited OP5/OP1--OP4 vocabulary readable without converting
+historical working phrases into new theorem objects.
+
+\begin{definition}[Targeted terminology sweep window]
+The r11 terminology sweep window is
+\begin{center}
+\small
+\begin{tabular}{@{}P{0.10\textwidth}P{0.18\textwidth}P{0.62\textwidth}@{}}
+\toprule
+window & rendered pages inspected & terminology focus\\
+\midrule
+$T_1$ & 762--779 & older OP5 halo, atlas, tunnel, and closure-candidate language\\
+$T_2$ & 834--843 & OP1/OP4 local closure, selector-domain, and coupled-selector language\\
+$T_3$ & 850--865 & OP5 route-to-global, OP1/OP4 compatibility, and boundary-gate language\\
+$T_4$ & 866--879 & internal editorial handoff and current-status language\\
+\bottomrule
+\end{tabular}
+\end{center}
+The window is selected because those pages contain the densest overlap between
+local OP5 carrier language, OP1/OP4 closure ledgers, compatibility ledgers,
+route-to-global boundary language, and internal editorial status phrases.
+\end{definition}
+
+\begin{definition}[Preferred r11 reader terminology]
+The r11 reader-facing terminology rule is the following finite normalization
+ledger:
+\begin{center}
+\small
+\begin{tabular}{@{}P{0.30\textwidth}P{0.58\textwidth}@{}}
+\toprule
+inherited phrase family & preferred reader interpretation\\
+\midrule
+global OP5 closure & unrestricted OP5 closure is not claimed; only declared-grammar closure statements may be used\\
+local OP5 closure & local closure inside the stated HC-halo/Dixon or two-sided OP5 grammar\\
+OP5 close / close OP5 & a scoped closure-candidate or closure theorem, depending on the explicit surrounding grammar\\
+OP1/OP4 closure & declared-grammar OP1/OP4 closure, not all-readout closure\\
+compatibility & ledger-preserving non-reopening of already declared local closure statements\\
+route-to-global boundary & the remaining transport interface from scoped grammar to any larger global claim\\
+declared grammar / synthesis grammar & short form for the declared global-boundary synthesis grammar when the context is current v4.5.x\\
+\bottomrule
+\end{tabular}
+\end{center}
+These normalizations are reading rules.  They do not rename labels, do not
+change theorem statements, do not identify different grammars, and do not create
+new proof obligations.
+\end{definition}
+
+\begin{proposition}[r11 terminology-sweep ledger]
+The r11 sweep makes no theorem-bearing change to the OP5 or OP1/OP4 proof
+spine.  Its ledger is
+\begin{center}
+\small
+\begin{tabular}{@{}P{0.08\textwidth}P{0.24\textwidth}P{0.31\textwidth}P{0.25\textwidth}@{}}
+\toprule
+item & location family & finding & r11 action\\
+\midrule
+$S_1$ & OP5 halo/atlas pages & closure and candidate language coexist & record scoped reading rule\\
+$S_2$ & OP1/OP4 ledgers & local closure terms recur beside selector terms & record declared-grammar reading rule\\
+$S_3$ & compatibility pages & compatibility means no-reopen under ledgers & record compatibility reading rule\\
+$S_4$ & route-to-global pages & boundary language is a transport interface & record route-to-global reading rule\\
+$S_5$ & current editorial tail & internal-only status remains controlling & preserve internal-only status\\
+\bottomrule
+\end{tabular}
+\end{center}
+No label, cross-reference, DOI record, theorem statement, scope guard, or public
+release state is changed by the r11 terminology sweep.
+\end{proposition}
+
+\begin{theorem}[r11 targeted-terminology conservativity]
+The v4.5.1-r11 internal targeted terminology sweep is conservative over the
+v4.5.1-r10 internal line-level proofread.  It preserves all theorem statements,
+definitions, labels, cross-references, DOI records, release-final records,
+internal-only records, ledgers, and scope guards.  The governing closure
+statement remains
+\[
+    \mathrm{Closure}_{\mathcal G_{\mathrm{global}}^{\mathrm{decl}}}
+    (\mathrm{OP1},\mathrm{OP4},\mathrm{OP5})
+\]
+inside the declared global-boundary synthesis grammar.  No unrestricted
+all-readout closure, no global physical closure, no QFT/GR closure, no
+QCD/confinement claim, no CKM/PMNS claim, no quark-mass claim, and no
+Standard-Model-spectrum claim is introduced.
+\end{theorem}
+
+\begin{remark}[Internal handoff after targeted terminology sweep]
+After r11, the older OP5 and OP1/OP4 compatibility pages have a single
+reader-facing terminology rule: closure claims are always read through their
+explicit declared grammar, and compatibility claims are read as non-reopening
+ledgers rather than as independent new proof data.  A public v4.5.1 refresh
+remains a separate decision requiring explicit DOI synchronization and a
+dedicated public-release gate.
+\end{remark}
+
+
+% --- v4.5.1-r12 Internal Glossary and Index Intake for Declared Grammar and OP Terminology ---
+\section{Internal Glossary and Index Intake for Declared Grammar and OP Terminology}
+\label{sec:v451-r12-internal-glossary-index-intake-declared-grammar-op-terminology}
+
+This section records an internal glossary and index intake after the r11 targeted
+terminology sweep.  It is not a public release refresh, not a Zenodo upload
+packet, not a DOI-bearing publication step, and not a mathematical layer.  Its
+function is to give the declared grammar and OP terminology a stable reader
+routing table so that later editorial passes can cite one controlled vocabulary
+instead of repeating local explanations.
+
+\begin{definition}[r12 glossary intake boundary]
+The r12 glossary intake boundary is the finite reader-facing vocabulary family
+\[
+\mathsf{Gloss}_{12}
+ =
+ \{\mathcal G_{\mathrm{global}}^{\mathrm{decl}},
+ B_G,
+ \mathrm{OP1},
+ \mathrm{OP4},
+ \mathrm{OP5},
+ \mathsf{closure},
+ \mathsf{compatibility},
+ \mathsf{route\mbox{-}to\mbox{-}global},
+ \mathsf{internal\mbox{-}only}\}.
+\]
+Each entry is a reader-routing handle for already present terminology.  It is
+not a new axiom, not a new theorem object, not a new selector, and not a new
+closure claim.
+\end{definition}
+
+\begin{definition}[Controlled glossary entries]
+The controlled glossary entries for the current internal line are:
+\begin{center}
+\small
+\begin{tabular}{@{}P{0.28\textwidth}P{0.60\textwidth}@{}}
+\toprule
+term & reader meaning\\
+\midrule
+declared global-boundary synthesis grammar & full reader-facing name for $\mathcal G_{\mathrm{global}}^{\mathrm{decl}}$; it names the declared mathematical grammar inside which the v4.5.x closure ledger is read\\
+declared grammar & local abbreviation for the declared global-boundary synthesis grammar when the surrounding paragraph already fixes the v4.5.x context\\
+global-boundary marker $B_G$ & the declared boundary residual marker used in the global-boundary closure ledger; $B_G=0$ is scoped to the declared grammar\\
+closure & a scoped closure statement relative to the explicitly named grammar, never an unrestricted all-readout claim unless separately proved\\
+compatibility & a non-reopening ledger condition showing that an already scoped closure statement remains compatible with the listed adjacent ledger\\
+route-to-global boundary & the transport interface between a local or declared grammar and any larger possible global claim; it is not itself a global theorem\\
+internal-only layer & a working/editorial layer that may be audited and archived internally but is not authorized for public upload or DOI release\\
+public release refresh & a separate future gate requiring explicit DOI synchronization, public-facing metadata, Zenodo text, and release authorization\\
+\bottomrule
+\end{tabular}
+\end{center}
+These entries are lexical and editorial.  They do not modify any theorem,
+proof, label, DOI record, release ledger, or scope guard.
+\end{definition}
+
+\begin{definition}[Index-routing ledger]
+For internal indexing, the OP terminology is routed as follows:
+\begin{center}
+\small
+\begin{tabular}{@{}P{0.22\textwidth}P{0.30\textwidth}P{0.34\textwidth}@{}}
+\toprule
+index token family & route target & exclusion guard\\
+\midrule
+OP1 & selector-domain and declared-grammar closure ledgers & not unrestricted all-readout closure\\
+OP4 & post-residual and declared-grammar closure ledgers & not unrestricted all-context promotion\\
+OP5 & HC-halo, two-sided OP5, and route-to-global boundary ledgers & not global physical closure\\
+compatibility & non-reopening comparison ledger & not a new proof obligation unless a separate obstruction is declared\\
+closure candidate & candidate state under the named grammar & not final closure unless the local theorem states it\\
+internal refresh gate & internal decision ledger & not a public release authorization\\
+\bottomrule
+\end{tabular}
+\end{center}
+This routing table is intended for later glossary or index extraction.  It is
+not a replacement for the theorem statements themselves.
+\end{definition}
+
+\begin{proposition}[r12 glossary/index intake ledger]
+The r12 glossary/index intake makes exactly the following editorial additions:
+\begin{center}
+\small
+\begin{tabular}{@{}P{0.08\textwidth}P{0.25\textwidth}P{0.33\textwidth}P{0.22\textwidth}@{}}
+\toprule
+item & location family & addition & mathematical effect\\
+\midrule
+$G_1$ & frontmatter & r12 internal glossary/index status note & none\\
+$G_2$ & editorial tail & glossary intake boundary & none\\
+$G_3$ & editorial tail & controlled glossary entries & none\\
+$G_4$ & editorial tail & OP index-routing ledger & none\\
+$G_5$ & audit package & glossary/index ledger files & none\\
+\bottomrule
+\end{tabular}
+\end{center}
+No theorem statement, definition with proof-bearing force, label,
+cross-reference, DOI record, release-final record, internal-only record, or
+scope guard is changed by this intake.
+\end{proposition}
+
+\begin{theorem}[r12 glossary/index conservativity]
+The v4.5.1-r12 internal glossary and index intake is conservative over the
+v4.5.1-r11 internal targeted terminology sweep.  It preserves all theorem
+statements, definitions, labels, cross-references, DOI records, release-final
+records, internal-only records, ledgers, and scope guards.  The governing closure
+statement remains
+\[
+    \mathrm{Closure}_{\mathcal G_{\mathrm{global}}^{\mathrm{decl}}}
+    (\mathrm{OP1},\mathrm{OP4},\mathrm{OP5})
+\]
+inside the declared global-boundary synthesis grammar.  No unrestricted
+all-readout closure, no global physical closure, no QFT/GR closure, no
+QCD/confinement claim, no CKM/PMNS claim, no quark-mass claim, and no
+Standard-Model-spectrum claim is introduced.
+\end{theorem}
+
+\begin{remark}[Internal handoff after glossary/index intake]
+After r12, the internal v4.5.1 editorial line has a controlled vocabulary for
+its declared grammar and OP terminology.  The next internal step should either
+extract a separate glossary appendix/index worksheet or stop the internal
+editorial line until a deliberate public-refresh decision is made.
+\end{remark}
+
+
+% --- v4.5.1-r13 Internal Glossary Appendix Extraction Worksheet ---
+\section{Internal Glossary Appendix Extraction Worksheet}
+\label{sec:v451-r13-internal-glossary-appendix-extraction-worksheet}
+
+This section records an internal glossary appendix extraction worksheet after
+r12.  It does not create an appendix in the public release sense, does not
+emit public metadata, does not authorize upload, and does not introduce a new
+mathematical layer.  Its only role is to separate controlled glossary material
+from proof-bearing theorem statements so that a later editorial pass can decide
+whether a compact glossary appendix should be formed.
+
+\begin{definition}[Extraction scope]
+The r13 extraction scope is the finite vocabulary family
+\[
+\mathsf{Gloss}_{13}
+=
+\{\mathcal G_{\mathrm{global}}^{\mathrm{decl}},
+B_G,
+\mathrm{Closure},
+\mathrm{compatibility},
+\mathrm{route\text{-}to\text{-}global},
+\mathrm{OP1},
+\mathrm{OP4},
+\mathrm{OP5},
+\mathrm{internal\text{-}only}\}.
+\]
+The scope is editorial.  It selects terms already present in the document; it
+does not define new proof objects and does not change the current closure
+claim.
+\end{definition}
+
+\begin{definition}[Glossary appendix candidate table]
+The controlled candidate entries for a possible future appendix are:
+\begin{center}
+\scriptsize
+\begin{tabular}{@{}P{0.20\textwidth}P{0.32\textwidth}P{0.32\textwidth}@{}}
+\toprule
+candidate term & reader-facing entry & exclusion guard\\
+\midrule
+declared global-boundary synthesis grammar & full name for $\mathcal G_{\mathrm{global}}^{\mathrm{decl}}$, the declared mathematical grammar in which the current OP closure ledger is read & not an unrestricted all-readout universe\\
+global-boundary marker $B_G$ & declared boundary-residual marker for the global-boundary ledger; $B_G=0$ is scoped to the declared grammar & not a physical global-boundary measurement\\
+closure & a theorem or ledger statement relative to the explicitly named grammar & not context-free closure unless separately proved\\
+compatibility & non-reopening comparison condition between already declared ledgers & not a new independent closure theorem\\
+route-to-global boundary & transport interface from scoped grammar to any larger possible global claim & not the larger global theorem itself\\
+OP1 & selector-domain and declared-grammar closure family & not all-context selector closure\\
+OP4 & post-residual and declared-grammar closure family & not unrestricted post-residual promotion\\
+OP5 & HC-halo, two-sided OP5, and route-to-global boundary family & not global physical closure\\
+internal-only layer & auditable working layer without public upload authorization & not a DOI-bearing release state\\
+public release refresh & separate future gate requiring DOI synchronization and public metadata & not implied by internal editorial success\\
+\bottomrule
+\end{tabular}
+\end{center}
+This table is a worksheet.  It may be copied or compressed in a later appendix,
+but it does not by itself create a final glossary appendix.
+\end{definition}
+
+\begin{definition}[Extraction decision ledger]
+The r13 worksheet routes each candidate entry through three decisions:
+\[
+\begin{array}{c|c|c|c}
+\text{decision} & \text{allowed value} & \text{meaning} & \text{present r13 value}\\
+\hline
+A & \mathrm{appendix}/\mathrm{inline}/\mathrm{defer} & \text{where the entry should live later} & \mathrm{defer}\\
+B & \mathrm{proof}/\mathrm{reader}/\mathrm{audit} & \text{whether the entry carries proof force} & \mathrm{reader}\\
+C & \mathrm{public}/\mathrm{internal} & \text{whether publication metadata is authorized} & \mathrm{internal}
+\end{array}
+\]
+Thus r13 selects the entries but does not promote them into public-facing
+appendix form.
+\end{definition}
+
+\begin{proposition}[r13 extraction worksheet ledger]
+The r13 worksheet has exactly the following internal effects:
+\begin{center}
+\small
+\begin{tabular}{@{}P{0.12\textwidth}P{0.32\textwidth}P{0.40\textwidth}@{}}
+\toprule
+item & worksheet action & guard\\
+\midrule
+$W_1$ & collect r12 glossary candidates into one extraction scope & no new term outside existing vocabulary\\
+$W_2$ & state a candidate appendix table & no public appendix promotion\\
+$W_3$ & separate proof-bearing objects from reader-facing definitions & theorem statements unchanged\\
+$W_4$ & record appendix/inline/defer decision variables & all present values remain internal/defer\\
+$W_5$ & package a ledger for later editorial use & no DOI or Zenodo text\\
+\bottomrule
+\end{tabular}
+\end{center}
+No theorem statement, definition with proof-bearing force, label, cross-reference,
+DOI record, release-final record, internal-only record, or scope guard is changed.
+\end{proposition}
+
+\begin{theorem}[r13 glossary-appendix worksheet conservativity]
+The v4.5.1-r13 internal glossary appendix extraction worksheet is conservative
+over the v4.5.1-r12 internal glossary and index intake.  It preserves all
+theorem statements, definitions with proof-bearing force, labels,
+cross-references, DOI records, release-final records, internal-only records,
+ledgers, and scope guards.  The governing closure statement remains
+\[
+    \mathrm{Closure}_{\mathcal G_{\mathrm{global}}^{\mathrm{decl}}}
+    (\mathrm{OP1},\mathrm{OP4},\mathrm{OP5})
+\]
+inside the declared global-boundary synthesis grammar.  No unrestricted
+all-readout closure, no global physical closure, no QFT/GR closure, no
+QCD/confinement claim, no CKM/PMNS claim, no quark-mass claim, and no
+Standard-Model-spectrum claim is introduced.
+\end{theorem}
+
+\begin{remark}[Internal handoff after r13]
+After r13, the internal line has a candidate glossary appendix worksheet but no
+public appendix promotion.  A later pass may either compress this material into
+a real appendix, keep it as an internal worksheet, or stop the internal line
+until a deliberate public-refresh decision is made.
+\end{remark}
+
+
+% --- v4.5.1-r14 Internal Glossary Appendix Placement Decision ---
+\section{Internal Glossary Appendix Placement Decision}
+\label{sec:v451-r14-internal-glossary-appendix-placement-decision}
+
+This section records the internal placement decision after the r13 glossary
+appendix extraction worksheet.  It is an editorial placement layer only.  It
+does not create a public appendix, does not authorize a public release refresh,
+does not emit Zenodo metadata, does not introduce a new DOI, and does not add a
+new mathematical theorem line.
+
+\begin{definition}[r14 placement alphabet]
+The r14 placement alphabet is
+\[
+\mathsf{Place}_{14}
+=\{\mathrm{main},\mathrm{appendix},\mathrm{worksheet},
+\mathrm{defer},\mathrm{public},\mathrm{internal}\}.
+\]
+For the present internal pass the active placement value is
+\[
+\pi_{14}(\mathsf{Gloss}_{13})
+=
+(\mathrm{worksheet},\mathrm{defer},\mathrm{internal}).
+\]
+Thus the r13 glossary material is kept as an internal worksheet and future
+appendix candidate.  It is not promoted to a public appendix in this pass.
+\end{definition}
+
+\begin{definition}[Placement decision table]
+The internal placement decision is:
+\begin{center}
+\small
+\begin{tabular}{@{}P{0.18\textwidth}P{0.28\textwidth}P{0.36\textwidth}@{}}
+\toprule
+object & r14 placement & guard\\
+\midrule
+r12 glossary/index intake & keep as reader-routing support & no new proof force\\
+r13 extraction worksheet & keep as internal appendix candidate & no public appendix promotion\\
+compact glossary appendix & prepare only as a future route & requires deliberate public-refresh gate\\
+current v4.5.1 internal line & remain internal & no DOI, no Zenodo text, no upload authorization\\
+governing OP closure wording & unchanged declared-grammar reading & no unrestricted closure claim\\
+\bottomrule
+\end{tabular}
+\end{center}
+The table is a placement ledger.  It is not a mathematical reduction, not a new
+closure theorem, and not a release-final metadata block.
+\end{definition}
+
+\begin{proposition}[r14 internal appendix-placement ledger]
+The r14 pass has exactly the following internal effects:
+\begin{center}
+\small
+\begin{tabular}{@{}P{0.12\textwidth}P{0.36\textwidth}P{0.36\textwidth}@{}}
+\toprule
+item & effect & invariant\\
+\midrule
+$P_1$ & classifies the r13 glossary worksheet as internal & public upload remains unauthorized\\
+$P_2$ & records a future compact-appendix route & no appendix is published now\\
+$P_3$ & keeps glossary entries reader-facing & theorem statements remain unchanged\\
+$P_4$ & keeps DOI state inherited from v4.5.0 & no new DOI is introduced\\
+$P_5$ & keeps scope language under the declared global-boundary synthesis grammar & no global physical closure is claimed\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{proposition}
+
+\begin{theorem}[r14 placement-decision conservativity]
+The v4.5.1-r14 internal glossary appendix placement decision is conservative
+over the v4.5.1-r13 internal glossary appendix extraction worksheet.  It
+changes only the editorial placement status of the glossary material.  It
+preserves all theorem statements, proof-bearing definitions, labels,
+cross-references, DOI records, release-final records, internal-only records,
+ledgers, and scope guards.  The governing closure statement remains
+\[
+    \mathrm{Closure}_{\mathcal G_{\mathrm{global}}^{\mathrm{decl}}}
+    (\mathrm{OP1},\mathrm{OP4},\mathrm{OP5})
+\]
+inside the declared global-boundary synthesis grammar.  No unrestricted
+all-readout closure, no global physical closure, no QFT/GR closure, no
+QCD/confinement claim, no CKM/PMNS claim, no quark-mass claim, and no
+Standard-Model-spectrum claim is introduced.
+\end{theorem}
+
+\begin{remark}[Internal handoff after r14]
+After r14 the glossary material has a definite internal placement: it remains an
+internal worksheet and future compact-appendix candidate.  The next internal
+step, if any, should either stop the editorial line or create a compact
+appendix skeleton without public-release status.  A public v4.5.1 refresh would
+require a separate DOI, metadata, and release-authorization gate.
+\end{remark}
+
+
+% --- v4.5.1-r15 Internal Compact Glossary Appendix Skeleton ---
+\section{Internal Compact Glossary Appendix Skeleton}
+\label{sec:v451-r15-internal-compact-glossary-appendix-skeleton}
+
+This section records a compact internal skeleton for a possible later glossary
+appendix.  It follows the r14 placement decision: the glossary material remains
+internal, deferred, and non-public.  The present layer is editorial only.  It
+does not create a public appendix, does not authorize a public release refresh,
+does not emit Zenodo metadata, does not introduce a new DOI, and does not add a
+new mathematical theorem line.
+
+\begin{definition}[r15 compact glossary skeleton]
+The r15 compact glossary skeleton is the finite routing object
+\[
+\mathsf{Skel}_{15}
+=
+(\mathsf{term},\mathsf{reader\ gloss},\mathsf{scope\ guard},
+\mathsf{index\ route},\mathsf{promotion\ status}).
+\]
+Its active promotion status is
+\[
+\mathsf{promotion}_{15}=\mathrm{internal\ candidate\ only}.
+\]
+Thus the skeleton may guide a future appendix extraction, but it is not itself
+an authorized public appendix.
+\end{definition}
+
+\begin{definition}[Compact glossary appendix skeleton table]
+The internal compact glossary skeleton is:
+\begin{center}
+\small
+\begin{tabular}{@{}P{0.20\textwidth}P{0.33\textwidth}P{0.31\textwidth}@{}}
+\toprule
+term & reader gloss & guard\\
+\midrule
+declared global-boundary synthesis grammar & governing mathematical grammar for the v4.5.0/v4.5.1 closure reading & not an unrestricted all-readout universe\\
+closure & discharge inside an explicitly declared grammar & never read without its grammar subscript or scope clause\\
+compatibility & non-reopening ledger between already routed objects & not a new closure theorem\\
+route-to-global boundary & interface where local routed certificates are compared with the declared global-boundary grammar & not a physical infinity boundary\\
+internal-only layer & local editorial or QA layer for project hygiene & no public upload authorization\\
+public release refresh & future DOI-bearing publication action & requires separate release gate\\
+OP1/OP4/OP5 & named project obligations read through their active grammar & no unrestricted physical or Standard-Model-spectrum claim\\
+\bottomrule
+\end{tabular}
+\end{center}
+This table is an index skeleton.  It does not rename mathematical objects, does
+not change labels, and does not alter the proof spine.
+\end{definition}
+
+\begin{proposition}[r15 skeleton-placement ledger]
+The r15 pass has exactly the following internal effects:
+\begin{center}
+\small
+\begin{tabular}{@{}P{0.12\textwidth}P{0.36\textwidth}P{0.36\textwidth}@{}}
+\toprule
+item & effect & invariant\\
+\midrule
+$S_1$ & creates a compact glossary skeleton & skeleton remains internal-only\\
+$S_2$ & records preferred reader glosses & theorem statements remain unchanged\\
+$S_3$ & separates glossary support from proof content & no new proof obligation is introduced\\
+$S_4$ & preserves r14 placement decision & no public appendix promotion occurs\\
+$S_5$ & preserves inherited v4.5.0 DOI state & no new DOI is introduced\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{proposition}
+
+\begin{theorem}[r15 compact-skeleton conservativity]
+The v4.5.1-r15 internal compact glossary appendix skeleton is conservative
+over the v4.5.1-r14 internal glossary appendix placement decision.  It adds only
+an internal reader-routing skeleton for possible later glossary extraction.  It
+preserves all theorem statements, proof-bearing definitions, labels,
+cross-references, DOI records, release-final records, internal-only records,
+ledgers, and scope guards.  The governing closure statement remains
+\[
+    \mathrm{Closure}_{\mathcal G_{\mathrm{global}}^{\mathrm{decl}}}
+    (\mathrm{OP1},\mathrm{OP4},\mathrm{OP5})
+\]
+inside the declared global-boundary synthesis grammar.  No unrestricted
+all-readout closure, no global physical closure, no QFT/GR closure, no
+QCD/confinement claim, no CKM/PMNS claim, no quark-mass claim, and no
+Standard-Model-spectrum claim is introduced.
+\end{theorem}
+
+\begin{remark}[Internal handoff after r15]
+After r15 the glossary material has both a placement decision and a compact
+internal skeleton.  The internal line can stop here, or a later pass can prepare
+a separate glossary appendix draft.  A public v4.5.1 refresh would still require
+a separate DOI, metadata, and release-authorization gate.
+\end{remark}
+
+
+% --- v4.5.1-r16 Internal Glossary Appendix Draft Extraction ---
+\section{Internal Glossary Appendix Draft Extraction}
+\label{sec:v451-r16-internal-glossary-appendix-draft-extraction}
+
+This section extracts the r15 compact glossary skeleton into a separate internal
+appendix-draft object.  The extraction is editorial and reader-facing only.  It
+keeps the r14 placement decision and the r15 skeleton status intact: the draft is
+internal, non-public, non-DOI-bearing, and not a release-refresh authorization.
+It does not add a new theorem line, does not rename proof-bearing objects, and
+does not change the governing scope guards.
+
+\begin{definition}[r16 glossary appendix draft object]
+The r16 glossary appendix draft is the finite editorial object
+\[
+\mathsf{GlossDraft}_{16}
+=
+(\mathsf{term},\mathsf{short\ gloss},\mathsf{scope\ guard},
+\mathsf{appendix\ route},\mathsf{public\ status}).
+\]
+Its public status is
+\[
+\mathsf{public\ status}(\mathsf{GlossDraft}_{16})
+=
+\mathrm{not\ authorized}.
+\]
+Thus the draft may be used for internal review or later appendix preparation,
+but it is not a public appendix and does not replace the current proof spine.
+\end{definition}
+
+\begin{definition}[Extracted compact glossary draft]
+The extracted internal glossary appendix draft is:
+\begin{center}
+\small
+\begin{tabular}{@{}P{0.19\textwidth}P{0.37\textwidth}P{0.28\textwidth}@{}}
+\toprule
+term & internal appendix draft gloss & publication guard\\
+\midrule
+declared global-boundary synthesis grammar & the declared mathematical grammar
+through which the v4.5.0/v4.5.1 OP1/OP4/OP5 closure ledger is read & not an
+unrestricted all-readout universe\\
+closure & discharge of a named obligation inside an explicitly declared grammar
+& never read without its grammar scope\\
+compatibility & non-reopening comparison ledger between already routed objects
+& not a new closure claim\\
+route-to-global boundary & comparison interface between local routed
+certificates and the declared global-boundary grammar & not a physical boundary
+or infinity claim\\
+internal-only layer & project-local editorial, QA, or routing layer & no public
+upload authorization\\
+public release refresh & separate future DOI-bearing publication action &
+requires a later release gate and metadata decision\\
+OP1 & named obligation read only through its active declared grammar & no
+unscoped theorem promotion\\
+OP4 & named obligation read only through its active declared grammar & no
+unscoped theorem promotion\\
+OP5 & named obligation read only through its active declared grammar & no global
+physical closure claim\\
+\bottomrule
+\end{tabular}
+\end{center}
+This table is a draft extraction of the r15 skeleton.  It is not a mathematical
+renaming table and does not alter existing references or proof labels.
+\end{definition}
+
+\begin{proposition}[r16 extraction ledger]
+The r16 pass has exactly the following internal effects:
+\begin{center}
+\small
+\begin{tabular}{@{}P{0.12\textwidth}P{0.38\textwidth}P{0.34\textwidth}@{}}
+\toprule
+item & effect & invariant\\
+\midrule
+$E_1$ & extracts the r15 glossary skeleton into a compact appendix-draft shape &
+appendix remains internal-only\\
+$E_2$ & separates term glosses from proof-bearing definitions & theorem content
+remains unchanged\\
+$E_3$ & records publication guards per term & no public release refresh is
+authorized\\
+$E_4$ & preserves the r14 placement decision & public appendix promotion remains
+deferred\\
+$E_5$ & preserves inherited DOI state & no new DOI is introduced\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{proposition}
+
+\begin{theorem}[r16 glossary-draft conservativity]
+The v4.5.1-r16 internal glossary appendix draft extraction is conservative over
+the v4.5.1-r15 internal compact glossary appendix skeleton.  It only extracts a
+compact internal appendix-draft object for reader routing.  It preserves all
+theorem statements, proof-bearing definitions, labels, cross-references, DOI
+records, release-final records, internal-only records, ledgers, and scope guards.
+The governing closure statement remains
+\[
+    \mathrm{Closure}_{\mathcal G_{\mathrm{global}}^{\mathrm{decl}}}
+    (\mathrm{OP1},\mathrm{OP4},\mathrm{OP5})
+\]
+inside the declared global-boundary synthesis grammar.  No unrestricted
+all-readout closure, no global physical closure, no QFT/GR closure, no
+QCD/confinement claim, no CKM/PMNS claim, no quark-mass claim, and no
+Standard-Model-spectrum claim is introduced.
+\end{theorem}
+
+\begin{remark}[Internal handoff after r16]
+After r16 the glossary material exists in three internal states: reader-routing
+entries, compact skeleton, and appendix-draft extraction.  The line can stop
+here, or a later internal pass can decide whether to keep the appendix draft as
+a separate file, fold it into an appendix candidate, or discard it before any
+public release-refresh decision.
+\end{remark}
+
+
+\clearpage
+\section*{v4.6.0 Integrated Bounded-Readout and T2 Scope-Boundary Appendix}
+\addcontentsline{toc}{section}{v4.6.0 Integrated Bounded-Readout and T2 Scope-Boundary Appendix}
+
+\begin{definition}[v4.6.0 bounded readout surface]
+The integrated v4.6.0 release-candidate surface is the finite guarded readout
+surface
+\[
+\begin{aligned}
+ W1&=\mathsf{pass},\\
+ W2,W3,W4,W5_{\mathrm{formal\text{-}symbolic}},W6
+   &=\mathsf{pass}_{\mathrm{bounded}},\\
+ W7&=\mathsf{scope\text{-}boundary\ locked}.
+\end{aligned}
+\]
+The status \(\mathsf{pass}_{\mathrm{bounded}}\) means that the corresponding
+readout packet is admitted only in the declared bounded grammar.  It is not an
+unrestricted all-readout witness.
+\end{definition}
+
+\begin{theorem}[Bounded readout closure in the declared grammar]
+Inside the declared global-boundary grammar, the v4.6.0 bounded readout surface
+is conservative and debt-free:
+\[
+ \mathsf{BRead}_{\mathrm{bounded}}
+ \in
+ \mathsf{Cons}(\mathcal G_{\mathrm{global}}^{\mathrm{decl}}),
+ \qquad
+ \Debt=0,
+ \qquad
+ \Leak=0.
+\]
+This theorem is a bounded formal-symbolic statement.  It does not promote an
+unrestricted physical readout and does not assert an all-readout completion.
+\end{theorem}
+
+\begin{theorem}[T2 scope-boundary and non-implication]
+The bounded readout theorem does not imply T2.  Equivalently,
+\[
+ \mathsf{BRead}_{\mathrm{bounded}}\not\Rightarrow T2,
+ \qquad
+ T2\in\mathsf{Ext}(\mathcal G_{\mathrm{global}}^{\mathrm{decl}}).
+\]
+The missing object is an all-readout witness family
+\[
+ \Theta^{\mathrm{all}}
+ =
+ \{\Theta_R:\mathcal G_{\mathrm{global}}^{\mathrm{decl}}\to R\}_{R\in\mathsf{Read}_{\mathrm{all}}}.
+\]
+No such family is constructed in this integrated candidate.
+\end{theorem}
+
+\begin{definition}[Frozen all-readout obstruction]
+The frozen v4.6.0 all-readout obstruction is
+\[
+\begin{aligned}
+\mathfrak O_{\mathrm{all}}^{4.6.0}=\{&
+\text{missing cofinal universal exterior selector},\\
+&\text{missing all-readout naturality family},\\
+&\text{unpromoted unrestricted exterior collar slot}\}.
+\end{aligned}
+\]
+This obstruction is a scope boundary, not a contradiction.
+\end{definition}
+
+\begin{remark}[Millennium-matrix and Heisenberg-compensator status]
+The v4.6.0 line separates the bounded, exterior, and mixed portions of the
+Millennium-matrix and Heisenberg-compensator bookkeeping:
+\[
+\mathcal M=\mathcal M_{\mathrm{bd}}\oplus\mathcal M_{\mathrm{ext}}\oplus\mathcal M_{\mathrm{mix}},
+\qquad
+\mathcal H=\mathcal H_{\mathrm{bd}}\oplus\mathcal H_{\mathrm{ext}}\oplus\mathcal H_{\mathrm{mix}}.
+\]
+The bounded and finite exterior/mixed fragments are sufficient for the bounded
+readout statement.  They are not sufficient for an all-readout theorem.
+\end{remark}
+
+\begin{definition}[Structure-first field-equation reset template]
+The release-candidate field-equation template is
+\[
+\mathfrak E_{\mathrm{decl}}(\Phi;\mathcal M,\mathcal H,\mathsf{QAM})
+=
+\mathfrak G_{\mathrm{struct}}(\Phi)
++
+\mathfrak C_{\mathcal H}(\Phi)
++
+\mathfrak M_{\mathcal M}(\Phi)
++
+\mathfrak Q_{\mathsf{QAM}}(\Phi)
+-
+\mathfrak J_{\mathrm{readout}}(\Phi).
+\]
+The bounded instance uses only the declared bounded and finite guarded fragments.
+The all-readout instance is deliberately not asserted.
+\end{definition}
+
+\begin{remark}[Two-sided structural tensor notation]
+The two-sided tensor notation is used only as a conservative compression layer.
+Front or left-sided indices denote frame, readout, or language interfaces; back
+or right-sided indices denote structure, action, or field interfaces.  Classical
+upper--lower contraction remains ordinary action or readout.  Same-variance
+comparisons require an explicitly declared comparison tensor and are not raw
+Einstein contractions.
+\end{remark}
+
+\begin{theorem}[Release-candidate conservativity]
+The v4.6.0-r87 integrated release candidate is conservative over the inherited
+v4.5.x active core plus the v4.6.0 bounded-readout packets.  It integrates the
+bounded readout theorem, the T2 scope boundary, the MM/HC exterior--mixed
+bookkeeping, the QAM tag extension, and the structure-first field-equation reset
+without adding a version DOI, without authorizing public upload, without opening
+an empirical validation gate, and without claiming T2 closure.
+\end{theorem}
+
 \end{document}
+
 
