@@ -10,8 +10,8 @@ on:
         type: string
 
 jobs:
-  metadata-hygiene:
-    name: Metadata hygiene audit
+  freeze-audit:
+    name: Freeze audit pilot
     runs-on: ubuntu-latest
 
     steps:
@@ -23,13 +23,13 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Run metadata hygiene audit
+      - name: Run freeze audit pilot
         run: |
-          python scripts/qsc_audit/metadata_hygiene_audit.py --version "${{ inputs.version }}"
+          python scripts/qsc_audit/freeze_audit.py --version "${{ inputs.version }}"
 
-      - name: Upload audit report
+      - name: Upload audit reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: metadata-hygiene-${{ inputs.version }}
-          path: audits/${{ inputs.version }}/metadata_hygiene_report.md
+          name: freeze-audit-${{ inputs.version }}
+          path: audits/${{ inputs.version }}/
