@@ -1,0 +1,52 @@
+name: Release Audit Pilot
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Target version, e.g. v4.6.0"
+        required: true
+        default: "v4.6.0"
+        type: string
+  push:
+    branches:
+      - pilot/release-guardian-mcp-audit
+    paths:
+      - ".github/workflows/release-audit.yml"
+      - "scripts/qsc_audit/**"
+      - "agents/**"
+
+jobs:
+  freeze-audit:
+    name: Freeze audit pilot
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Resolve audit version
+        id: audit-version
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "version=${{ inputs.version }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "version=v4.6.0" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Run freeze audit pilot
+        run: |
+          python scripts/qsc_audit/freeze_audit.py --version "${{ steps.audit-version.outputs.version }}"
+
+      - name: Upload audit reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: freeze-audit-${{ steps.audit-version.outputs.version }}
+          path: audits/${{ steps.audit-version.outputs.version }}/
