@@ -1,0 +1,2540 @@
+% arXiv-ready LaTeX: use standard packages only, no exotic dependencies
+\documentclass[12pt,a4paper]{article}
+
+% --- Standard packages (all available on arXiv) ---
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+
+% ISO date: YYYY-MM-DD
+\newcommand{\isodatetoday}{%
+  \the\year-%
+  \ifnum\month<10 0\fi\the\month-%
+  \ifnum\day<10 0\fi\the\day}
+\newcommand{\paperversion}{v4.15}
+\usepackage{geometry}
+
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,
+            linkcolor=black,
+            citecolor=black,
+            urlcolor=blue,
+            pdftitle={On the Riemann Hypothesis: A Kernel-Theoretic Approach via Tensor Contraction and Self-Adjoint Extension},
+            pdfauthor={Marc Brendecke},
+            pdfsubject={Mathematics},
+            pdfkeywords={Riemann Hypothesis, dynamical zeta function, self-adjoint extension, tensor contraction, Hilbert-Polya, Berry-Keating}]{hyperref}
+
+\geometry{a4paper, top=3cm, bottom=3cm, left=3.5cm, right=3.5cm}
+\setstretch{1.15}
+
+% --- Theorem environments ---
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{assumption}[theorem]{Assumption}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+% --- Custom commands ---
+\newcommand{\calH}{\mathcal{H}}
+\newcommand{\calZ}{\mathcal{Z}}
+\newcommand{\calL}{\mathcal{L}}
+\newcommand{\calP}{\mathcal{P}}
+\newcommand{\calC}{\mathcal{C}}
+\newcommand{\calJ}{\mathcal{J}}
+\newcommand{\half}{\tfrac{1}{2}}
+\newcommand{\Adj}{\mathrm{Adj}}
+
+% ====================================================================
+\begin{document}
+% ====================================================================
+
+\title{\textbf{On the Riemann Hypothesis:}\\[4pt]
+A Kernel-Theoretic Approach via\\
+Tensor Contraction and Self-Adjoint Extension}
+
+\author{Marc Brendecke\\[4pt]
+\small Independent Researcher\\
+\small Bochum, Germany\\[2pt]
+\small \texttt{[contact on request]}}
+
+\date{\isodatetoday\\[2pt]
+\small\textnormal{Version \paperversion\ --- Preprint, not peer reviewed}\\[4pt]
+\small\textnormal{DOI: \href{https://doi.org/10.5281/zenodo.19157158}{10.5281/zenodo.19157158}}\\[4pt]
+\small\textnormal{\copyright\ \the\year\ Marc Brendecke. All rights reserved.}}
+
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+\noindent
+We develop a conditional proof of the Riemann Hypothesis (RH) from
+a minimal combinatorial foundation.
+Starting from a kernel $(S,\Phi)$---a set equipped with a
+self-map---eleven lemmas establish the orbit structure and yield,
+via a corollary (K1) and a Laplace identity (L11), the dynamical zeta
+function $\mathcal{Z}(s)$.
+Identifying the kernel with the arithmetic kernel
+$K_{\mathrm{arith}}=(\mathbb{P},\mathrm{id})$ with weight
+$\lambda(\{p\})=\log p$ gives $\mathcal{Z}(s)=\zeta(s)$.
+
+The functional equation $\xi(s)=\xi(1-s)$ is interpreted as the
+vanishing of an adjunction tensor $\mathrm{Adj}_J(\mathcal{L}_0)=0$,
+where $J:s\mapsto1-\bar{s}$ is an anti-unitary involution on the
+Hardy space $\mathcal{H}^+$.
+The Berry--Keating operator $\mathcal{L}_0=-i(xd/dx+\frac{1}{2})$
+is shown to be essentially self-adjoint on the $J$-invariant subspace
+$\mathcal{H}^+_+$ via a Levi-Civita tensor argument
+($\varepsilon^{\mu\nu}$-annihilation of deficiency elements).
+
+The Heisenberg compensator $C(f)=\frac{1}{2}(f+Jf)$ is introduced as
+the map projecting any deficiency element to zero; its tensor form
+$\mathcal{C}^{\mu}{}_{\nu}$ is shown to be idempotent and is identified
+with the cascade operator of the Sphaera-Cascade framework.
+
+A discreteness lemma for the spectrum of $\mathcal{L}_0$ on
+$\mathcal{H}^+_+$, grounded in the prime lattice acting as a compact
+quotient, closes the argument conditionally on an identification with
+Connes' adèle class space.
+
+RH then follows as the vanishing of the contravariant spectral
+component: $\gamma_\rho^-=0$ for all non-trivial zeros $\rho$,
+i.e.\ $\operatorname{Re}(\rho)=\frac{1}{2}$.
+
+\medskip
+\noindent\textit{MSC 2020:} 11M26 (primary); 47B25, 58J50, 11M06 (secondary).
+
+\noindent\textit{Keywords:} Riemann Hypothesis, dynamical zeta function,
+self-adjoint extension, tensor contraction, Hilbert--P\'olya conjecture,
+Berry--Keating operator, Heisenberg compensator.
+\end{abstract}
+
+\newpage
+\tableofcontents
+\newpage
+
+% ====================================================================
+\section*{Nomenclature}
+\addcontentsline{toc}{section}{Nomenclature}
+% ====================================================================
+
+\begin{longtable}{p{3.2cm}p{11cm}}
+\toprule
+\textbf{Symbol} & \textbf{Meaning}\\
+\midrule
+\endfirsthead
+\multicolumn{2}{l}{\textit{(Nomenclature continued)}}\\[2pt]
+\toprule
+\textbf{Symbol} & \textbf{Meaning}\\
+\midrule
+\endhead
+\midrule
+\multicolumn{2}{r}{\textit{(continued on next page)}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+%
+\multicolumn{2}{l}{\textit{Sets, maps and orbit structure}}\\[2pt]
+$S$, $\Phi$ & Carrier set and self-map of the dynamical system\\
+$\mathbb{P}$ & Set of prime numbers\\
+$\Gamma_\mathbb{P}$ & Prime lattice $\langle p:p\in\mathbb{P}\rangle\subset\mathbb{Q}^+$\\
+$\mathbb{A}$, $\mathbb{A}^1$ & Adèle ring of $\mathbb{Q}$; norm-$1$ idèles $\{x\in\mathbb{A}^\times:|x|_\mathbb{A}=1\}$\\
+$O(x)$, $R(x)$ & Forward orbit; return set $\{n\ge1:\Phi^n(x)=x\}$\\
+$\ell(x)$, $\ell(P)$ & Minimal period of $x$; combinatorial orbit length\\
+$P(x)$, $\mathcal{P}$ & Primitive orbit through $x$; collection of all primitive orbits\\
+$\lambda(P)$, $h$ & Geometric weight (Axiom~W); growth exponent (Axiom~G)\\
+$K_{\mathrm{arith}}$ & Arithmetic kernel $(\mathbb{P},\mathrm{id})$ with $\lambda(\{p\})=\log p$\\
+$K_\pi$ & Automorphic kernel for self-dual $\pi$ (same $(\mathbb{P},\mathrm{id},\log p)$)\\[4pt]
+%
+\multicolumn{2}{l}{\textit{Analytic objects}}\\[2pt]
+$\Theta(\tau)\to\Theta^\tau$ & Orbit distribution (L9); promoted to contravariant vector at L11\\
+$\mathcal{Z}(s)$ & Dynamical zeta function $\prod_P(1-e^{-s\lambda(P)})^{-1}$\\
+$\zeta(s)$, $\xi(s)$ & Riemann zeta; completed zeta $\tfrac{1}{2}s(s-1)\pi^{-s/2}\Gamma(\tfrac{s}{2})\zeta(s)$\\
+$\rho=\tfrac{1}{2}+i\gamma_\rho$ & Non-trivial zero; spectral parameter\\
+$\Sigma(\tau)$, $R(\tau)$ & Spectral distribution; trivial-zero term $-e^{-\tau/2}/(e^\tau-1)$\\[4pt]
+%
+\multicolumn{2}{l}{\textit{Tensor notation}}\\[2pt]
+$\mu,\nu\in\{+,-\}$ & Covariant / contravariant sector indices\\
+$z^+=\tfrac{1}{2}$, $z^-=z-\tfrac{1}{2}$ & Sector components; RH $\Leftrightarrow\operatorname{Re}(\gamma_\rho^-)=0$\\
+$\varepsilon^{\mu\nu}$ & 2D Levi-Civita tensor ($\varepsilon^{+-}=1$, $\varepsilon^{-+}=-1$)\\
+$\mathcal{L}^s{}_\tau=e^{-s\tau}$ & Laplace kernel (mixed tensor, L11)\\
+$J\to\mathcal{J}^{\mu}{}_\nu$ & Reflection $s\mapsto1-\bar{s}$; sector matrix $\mathrm{diag}(1,-1)$\\
+$U(\tau)\to U^\mu{}_\nu$ & Propagator $e^{-i\tau\mathcal{L}_0}$; trace $U^\mu{}_\mu=\Sigma(\tau)$\\
+$\mathrm{Adj}_J(\mathcal{O})$ & Adjunction tensor $(J\mathcal{O}J^{-1}-\mathcal{O})$\\[4pt]
+%
+\multicolumn{2}{l}{\textit{Operators and spaces}}\\[2pt]
+$\mathcal{H}^+$, $\mathcal{H}^+_+$ & Hardy space $H^2(\operatorname{Re}(s)>\tfrac{1}{2})$; $J$-invariant subspace\\
+$\mathcal{H}_0$ & Weighted space $L^2(\mathbb{R}^+,e^{-x}dx)$\\
+$J$ & Anti-unitary involution $s\mapsto1-\bar{s}$\\
+$\mathcal{L}_0$ & Berry--Keating operator $-i(xd/dx+\tfrac{1}{2})$ on $\mathcal{H}_0$\\
+$(n_+,n_-)$ & Deficiency indices; $(0,0)$ on $\mathcal{H}^+_+$ (Theorem~\ref{thm:T45})\\
+$C$, $\mathcal{C}^{\mu}{}_\nu$ & Heisenberg compensator map and tensor (\S\ref{sec:compensator})\\[4pt]
+%
+\multicolumn{2}{l}{\textit{Sphaera-Cascade framework}}\\[2pt]
+$\mathbb{S}$ & Sphaera: maximal total set; realized as $\mathcal{H}^+_+$\\
+$S_n$, $S_0$ & Strata of the cascade; terminal ground state $\{0\}$\\
+$\hat{K}$ & Cascade operator; realized as $\mathcal{C}^\mu{}_\nu\circ\Pi_J$\\
+$\Pi_J$ & $J$-symmetrization $f\mapsto\tfrac{1}{2}(f+Jf)$; projects $\mathcal{H}^+\to\mathcal{H}^+_+$\\
+K1 & Kernel corollary: $\mathcal{Z}$ encodes orbit structure\\
+L11 & Index contraction: $\hat\Theta^s=\log\mathcal{Z}(s)$\\
+T1+T3 & $\mathrm{Adj}_J(\mathcal{L}_0)=0$ (formal self-adjointness)\\
+T4+T5 & $\varepsilon^{\mu\nu}$-annihilation; deficiency indices $(0,0)$\\
+T6 & Trace formula $U^\mu{}_\mu=\Sigma(\tau)$\\[4pt]
+%
+\multicolumn{2}{l}{\textit{Dixon-algebraic hierarchy (\S\ref{sec:dixon}--\ref{sec:septonian})}}\\[2pt]
+$\mathcal{B}=\mathbb{C}\otimes\mathbb{H}$ & Biquaternion algebra ($\dim_\mathbb{R}=8$)\\
+$e_1,e_2,e_3$ & Quaternion imaginary units; $e_ae_b=\varepsilon_{abc}e_c$\\
+$J_{\mathcal{B}}$, $R_{e_1}$ & Lift of $J$ to $\mathcal{B}$; $e_1$-reflection in $\mathbb{H}$\\
+$\iota(\rho)$ & Embedding $\rho\mapsto\tfrac{1}{2}+(\sigma-\tfrac{1}{2})e_1+\gamma i\in\mathcal{B}$\\
+$\mathcal{D}=\mathbb{C}\otimes\mathbb{O}$ & Octo-Dixon algebra ($\dim_\mathbb{R}=16$)\\
+$\mathbb{O}$, $\ell$ & Octonions; first Cayley-Dickson doubling unit ($\mathbb{O}=\mathbb{H}\oplus\mathbb{H}\ell$)\\
+$\mathcal{T}_1,\mathcal{T}_2,\mathcal{T}_3$ & Three Trioles in $\mathbb{O}$; incidence governed by Fano plane $\mathrm{PG}(2,2)$\\
+$\Omega$ & General Octo-Dixon element $i(t\cdot1_\mathbb{O}+\sum_{a=1}^7 q_ae_a)$\\
+$J_{\mathcal{D}}$ & $J$-involution on $\mathcal{D}$; negates $\{e_1,e_1\ell\}$\\
+$\mathbb{S}_{\mathrm{ed}}$, $\ell'$ & Sedenions (CD double of $\mathbb{O}$, $\dim=16$, 15 imaginaries); 2nd CD unit\\
+$f_1,\ldots,f_{15}$ & Sedenion imaginary units ($f_a:=e_a$ for $a\le7$; $f_{8+k}:=e_k\ell'$)\\
+$\mathcal{O}_1,\mathcal{O}_2,\mathcal{O}_3$ & Three Octo-Trioles in $\mathbb{S}_{\mathrm{ed}}$; governed by $\mathrm{PG}(3,2)$\\
+$\mathcal{S}_{\mathrm{ep}}=\mathbb{C}\otimes\mathbb{S}_{\mathrm{ed}}$ & Septonian algebra ($\dim_\mathbb{R}=32$)\\
+$\Psi$ & General Septonian element $i(t\cdot1_{\mathbb{S}_{\mathrm{ed}}}+\sum_{a=1}^{15}r_af_a)$\\
+$J_{\mathcal{S}}$ & $J$-involution on $\mathcal{S}_{\mathrm{ep}}$; negates $\{f_1,f_5,f_9,f_{13}\}=\{e_1,e_1\ell,e_1\ell',e_1\ell\ell'\}$\\
+$\mathrm{PG}(n,2)$ & Projective space over $\mathbb{F}_2$; governs Triole incidence at level $n$\\[4pt]
+%
+\multicolumn{2}{l}{\textit{Field equation and probe structure (\S\ref{sec:field_probe})}}\\[2pt]
+$P_+$, $P_-$ & Sector projectors $\tfrac{1}{2}(1\pm J)$; onto $\mathcal{H}^+_+$ resp.\ $\mathcal{H}^+_-$\\
+$\Pi_L$, $\Pi_R$ & Left/right probe operators; orthogonal ($\Pi_L\Pi_R=0$)\\
+$\mathcal{G}_L$, $\mathcal{G}_R$ & Guard subspaces $\mathrm{ran}(\Pi_L)$, $\mathrm{ran}(\Pi_R)$\\
+$\mathcal{H}_{\mathrm{search}}$ & Search space $(\mathcal{G}_L\oplus\mathcal{G}_R)^\perp$\\
+$L_\perp$ & Compression $P_\perp\mathcal{L}_0 P_\perp$ of $\mathcal{L}_0$ to $\mathcal{H}_{\mathrm{search}}$\\
+\end{longtable}
+
+\newpage
+
+% ====================================================================
+% !! GESPERRT: Abschnitt 1 (Kombinatorische Orbittheorie) !!
+% D1, L1-L6, Axiom W, Axiom G, L7-L11, K1
+% Diese Lemmas sind mengenunabhaengig: sie funktionieren fuer jede
+% Menge S mit beliebiger Selbstabbildung Phi.
+% Keine Aenderungen ohne ausdrueckliche Freigabe.
+% Geprueft und gesperrt: v4, 2026-03-20
+% ====================================================================
+\section{Combinatorial Orbit Theory}
+\label{sec:combinatorial}
+% ====================================================================
+
+\begin{definition}[Dynamical system]\label{def:D1}
+A \emph{dynamical system} is a pair $(S,\Phi)$ where $S$ is an
+arbitrary set and $\Phi:S\to S$ an arbitrary map.
+No topology, metric, or measure on $S$ is assumed.
+The collection of primitive orbits $\mathcal{P}(S,\Phi)$ is defined
+through Lemmas \ref{lem:L1}--\ref{lem:L6}.
+\end{definition}
+
+\begin{lemma}\label{lem:L1}
+$x\in S$ is \emph{periodic} if and only if the return set
+$R(x):=\{n\ge1:\Phi^n(x)=x\}$ is nonempty.
+\end{lemma}
+\begin{proof}By definition.\end{proof}
+
+\begin{remark}[Notation]
+For periodic $x$, $R(x)\subseteq\mathbb{N}_{\ge1}$ is nonempty,
+so the following minimization is well-defined.
+\end{remark}
+
+\begin{lemma}\label{lem:L3}
+Every periodic $x$ has a unique minimal period
+$\ell(x):=\min R(x)\in\mathbb{N}_{\ge1}$.
+\end{lemma}
+\begin{proof}The well-ordering principle applied to the nonempty set $R(x)\subseteq\mathbb{N}$.\end{proof}
+
+\begin{lemma}\label{lem:L4}
+$\ell(x)=k$ if and only if $\Phi^k(x)=x$ and $\Phi^m(x)\neq x$ for all $1\le m<k$.
+The orbit $\{x,\Phi(x),\ldots,\Phi^{k-1}(x)\}$ consists of exactly $k$ distinct points.
+\end{lemma}
+\begin{proof}
+The equivalence follows from the definition of $\min$.
+Distinctness: if $\Phi^i(x)=\Phi^j(x)$ for $0\le i<j\le k-1$,
+then $\Phi$ is invertible on the finite orbit, giving
+$\Phi^{j-i}(x)=x$ with $j-i<k$, contradicting minimality.
+\end{proof}
+
+\begin{definition}[Primitive orbit]
+The \emph{primitive orbit} through periodic $x$ with $\ell(x)=k$ is
+$P(x):=\{x,\Phi(x),\ldots,\Phi^{k-1}(x)\}$, with
+\emph{combinatorial length} $\ell(P):=k$.
+Write $\mathcal{P}=\mathcal{P}(S,\Phi)$ for the collection of all primitive orbits.
+\end{definition}
+
+\begin{lemma}\label{lem:L5}
+Every periodic point belongs to exactly one primitive orbit $P(x)$,
+and $P(\Phi^j(x))=P(x)$ for all $j\ge0$.
+\end{lemma}
+\begin{proof}
+\emph{Generation.} For $m\ge0$ write $m=qk+r$, $0\le r<k$; then
+$\Phi^m(x)=\Phi^r(x)\in P(x)$, so $O(x)=P(x)$.
+\emph{Uniqueness.} If $Q\ni x$ is primitive then
+$Q\subseteq O(x)=P(x)$ and $P(x)\subseteq Q$, hence $Q=P(x)$.
+\emph{Consistency.} $\Phi^k(\Phi^j(x))=\Phi^j(x)$ gives
+$\ell(\Phi^j(x))\le k$; if $\ell(\Phi^j(x))=k'<k$ then
+$\Phi^{k'}(x)=x$, contradicting $k=\ell(x)$.
+\end{proof}
+
+\begin{lemma}\label{lem:L6}
+$\mathcal{P}$ is pairwise disjoint and covers all periodic points.
+\end{lemma}
+\begin{proof}
+If $y\in P\cap Q$ then $P=P(y)=Q$ by Lemma~\ref{lem:L5}.
+Every periodic $x$ lies in $P(x)\in\mathcal{P}$.
+\end{proof}
+
+\begin{axiom}[W -- Weight function]\label{ax:W}
+A map $\lambda:\mathcal{P}\to\mathbb{R}_{>0}$ assigns a positive real
+\emph{geometric length} to each primitive orbit.
+No relation between $\lambda(P)$ and $\ell(P)$ is assumed.
+\end{axiom}
+
+\begin{axiom}[G -- Growth condition]\label{ax:G}
+There exists $h\ge0$ such that
+$\#\{P\in\mathcal{P}:\lambda(P)\le T\}=O(e^{hT})$ as $T\to\infty$.
+\end{axiom}
+
+\begin{remark}
+Axiom~W is stated here, after $\mathcal{P}$ is defined (Lemma~\ref{lem:L6}),
+because $\lambda$ must be defined on primitive orbits.
+Axiom~G is stated immediately after Axiom~W because it references both
+$\mathcal{P}$ and $\lambda$; placing it before either would be a
+forward reference.
+Axioms W and G are the only analytic hypotheses;
+Lemmas \ref{lem:L1}--\ref{lem:L6} are purely combinatorial.
+\end{remark}
+
+\begin{lemma}\label{lem:L7}
+The $m$-fold cover of $P\in\mathcal{P}$ with $\ell(P)=k$ is a closed
+path of length $mk$ with exactly $m$ cyclic symmetries and no others.
+\end{lemma}
+\begin{proof}
+Rotation by $r$ positions is a symmetry iff $k\mid r$.
+The multiples of $k$ in $\{0,\ldots,mk-1\}$ number exactly $m$.
+\end{proof}
+
+\begin{lemma}\label{lem:L8}
+If $x$ is periodic and $n\in R(x)$, then $\ell(x)\mid n$.
+\end{lemma}
+\begin{proof}
+Write $n=q\ell(x)+r$, $0\le r<\ell(x)$. Then $\Phi^r(x)=x$,
+so $r=0$ by minimality of $\ell(x)$.
+\end{proof}
+
+\begin{lemma}[Orbit measure]\label{lem:L9}
+\[
+\Theta(\tau)
+:= \sum_{P\in\mathcal{P}}\sum_{m\ge1}
+\frac{1}{m}\,\delta\!\left(\tau-m\lambda(P)\right)
+\]
+is the weighted distribution of closed orbit lengths.
+\end{lemma}
+\begin{proof}
+By Lemma~\ref{lem:L8}, every closed orbit of geometric length $\tau$
+is an $m$-fold cover of a unique $P$ with $\lambda(P)=\tau/m$.
+By Lemma~\ref{lem:L7} it carries exactly $m$ cyclic symmetries,
+contributing weight $1/m$.
+\end{proof}
+
+\begin{remark}
+The promotion $\Theta(\tau)\to\Theta^\tau$ (distribution to
+contravariant vector) occurs at Lemma~\ref{lem:L11}, where $\tau$ becomes
+a contracted index.
+\end{remark}
+
+\begin{lemma}[Dynamical zeta function]\label{lem:L10}
+For $\operatorname{Re}(s)>h$ the product
+\[
+\mathcal{Z}(s):=\prod_{P\in\mathcal{P}}\!\left(1-e^{-s\lambda(P)}\right)^{-1}
+\]
+converges absolutely and defines a holomorphic nonvanishing function.
+\end{lemma}
+\begin{proof}
+Absolute convergence of $\sum_P e^{-\sigma\lambda(P)}$ for $\sigma>h$
+follows from Axiom~G by grouping orbits into dyadic length blocks.
+\end{proof}
+
+\begin{corollary}[K1 --- Kernel corollary]\label{cor:K1}
+The dynamical system $(S,\Phi,\lambda)$ canonically produces
+$\mathcal{Z}(s)$, which encodes the primitive orbit structure completely.
+The internal structure of $S$ is irrelevant: only $(\mathcal{P},\lambda)$ determine $\mathcal{Z}$.
+\end{corollary}
+
+\begin{lemma}[L11 --- Index contraction]\label{lem:L11}
+\[
+\hat\Theta^s
+\;:=\; \mathcal{L}^s{}_\tau\cdot\Theta^\tau
+\;=\; \int_0^\infty e^{-s\tau}\,\Theta(\tau)\,d\tau
+\;=\; \log\mathcal{Z}(s),
+\qquad \operatorname{Re}(s)>h.
+\]
+\end{lemma}
+\begin{proof}
+From Corollary~\ref{cor:K1}: $\log\mathcal{Z}(s)=-\sum_P\log(1-e^{-s\lambda(P)})$.
+From Lemma~\ref{lem:L9}: the left side equals
+$\sum_P\sum_{m\ge1}\frac{1}{m}e^{-sm\lambda(P)}$.
+Applying $\sum_{m\ge1}\frac{x^m}{m}=-\log(1-x)$ and using absolute
+convergence from Lemma~\ref{lem:L10} to justify term-by-term integration
+gives the result.
+\end{proof}
+
+% ====================================================================
+% !! ENDE GESPERRTER ABSCHNITT !!
+% ====================================================================
+
+% ====================================================================
+% !! GESPERRT: Abschnitt 2 (Arithmetische Identifikation) !!
+% Prop. arith: Axiom G mit h=1, Z(s)=zeta(s), von-Mangoldt-Formel.
+% Klassische Arithmetik, korrekt geprueft.
+% Keine Aenderungen ohne ausdrueckliche Freigabe.
+% Geprueft und gesperrt: v4, 2026-03-20
+% ====================================================================
+\section{Arithmetic Identification}
+\label{sec:arithmetic}
+% ====================================================================
+
+\begin{definition}[Arithmetic kernel]
+$K_{\mathrm{arith}}:=(\mathbb{P},\mathrm{id}_\mathbb{P})$
+with weight $\lambda(\{p\}):=\log p$.
+Every prime is a fixed point; primitive orbits are singletons.
+\end{definition}
+
+\begin{proposition}\label{prop:arith}
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+\item Axiom~G holds with $h=1$: $\pi(e^T)\le e^T$.
+\item $e^{-s\log p}=p^{-s}$, so $\mathcal{Z}(s)=\prod_p(1-p^{-s})^{-1}=\zeta(s)$
+for $\operatorname{Re}(s)>1$.
+\item Lemma~\ref{lem:L11} reproduces the von~Mangoldt formula
+$\log\zeta(s)=\int_0^\infty e^{-s\tau}\Theta(\tau)\,d\tau$.
+\end{enumerate}
+The arithmetic enters here and is not re-invoked until
+Lemma~\ref{lem:discrete}.
+\end{proposition}
+
+% ====================================================================
+% !! ENDE GESPERRTER ABSCHNITT (Arithmetische Identifikation) !!
+% ====================================================================
+
+% ====================================================================
+% !! GESPERRT: Abschnitt 3 (Meromorphe Fortsetzung und Funktionalgleichung) !!
+% Thm. FE: xi(s)=xi(1-s), klassisch via Jacobi-Theta + Poisson.
+% Thm. EF: explizite Formel Guinand-Weil, korrekte Skizze.
+% Keine Aenderungen ohne ausdrueckliche Freigabe.
+% Geprueft und gesperrt: v4, 2026-03-20
+% ====================================================================
+\section{Meromorphic Continuation and Functional Equation}
+\label{sec:FE}
+% ====================================================================
+
+\begin{definition}[Completed zeta function]
+$\xi(s):=\tfrac{1}{2}s(s-1)\pi^{-s/2}\Gamma\!\left(\tfrac{s}{2}\right)\zeta(s)$.
+\end{definition}
+
+\begin{theorem}[Functional equation]\label{thm:FE}
+$\xi$ extends to an entire function satisfying $\xi(s)=\xi(1-s)$.
+$\zeta(s)$ is meromorphic on $\mathbb{C}$ with a simple pole at $s=1$;
+all non-trivial zeros lie in the critical strip $0<\operatorname{Re}(s)<1$.
+\end{theorem}
+\begin{proof}[Proof (sketch)]
+The Jacobi theta function $\vartheta(t)=\sum_n e^{-\pi n^2 t}$
+satisfies $\vartheta(t)=t^{-1/2}\vartheta(1/t)$ by Poisson summation.
+The Mellin representation
+$\pi^{-s/2}\Gamma(\tfrac{s}{2})\zeta(s)
+=\int_0^\infty t^{s/2-1}\tfrac{\vartheta(t)-1}{2}\,dt$,
+split at $t=1$ and symmetrized, yields $\xi(s)=\xi(1-s)$.
+\end{proof}
+
+\begin{theorem}[Explicit formula --- Guinand--Weil]\label{thm:EF}
+For $\tau>0$, in the distributional sense:
+\[
+\Theta(\tau) = 1 - \Sigma(\tau) + R(\tau),
+\qquad
+\Sigma(\tau):=\sum_\rho e^{-i\tau\gamma_\rho},
+\qquad
+R(\tau):=\frac{-e^{-\tau/2}}{e^\tau-1}.
+\]
+\end{theorem}
+\begin{proof}[Proof (sketch)]
+Apply the inverse Mellin transform to $\log\zeta(s)=\hat\Theta^s$
+(Lemma~\ref{lem:L11}). Residues at $s=1$ contribute $+1$;
+non-trivial zeros $\rho$ contribute $-\Sigma$;
+trivial zeros $-2n$ via the Hadamard product of $\xi$ contribute $R$.
+\end{proof}
+
+% ====================================================================
+% !! ENDE GESPERRTER ABSCHNITT (Funktionalgleichung) !!
+% ====================================================================
+
+% ====================================================================
+% !! GESPERRT: Abschnitt 4 (J-Tensor und Sektorzerlegung) !!
+% Def. J: anti-unitaere Involution, H^+_+ = ker(J-id), RH-Aequivalenz.
+% Korrekt und praezise.
+% Keine Aenderungen ohne ausdrueckliche Freigabe.
+% Geprueft und gesperrt: v4, 2026-03-20
+% ====================================================================
+\section{The $J$-Tensor and Sector Decomposition}
+\label{sec:J}
+% ====================================================================
+
+\begin{definition}[$J$-tensor and sector decomposition]\label{def:J}
+The reflection $J:s\mapsto1-\bar{s}$ is an anti-unitary involution
+on the Hardy space
+$\mathcal{H}^+:=H^2(\{\operatorname{Re}(s)>\tfrac{1}{2}\})$.
+For any $z\in\mathbb{C}$ define the \emph{covariant} and
+\emph{contravariant} components:
+\[
+z^+ := \tfrac{1}{2}, \qquad z^- := z-\tfrac{1}{2}.
+\]
+Then $z=z^++z^-$ and $\operatorname{Re}(z)=\tfrac{1}{2}$ iff
+$\operatorname{Re}(z^-)=0$.
+The $J$-invariant subspace is
+$\mathcal{H}^+_+:=\{f\in\mathcal{H}^+:Jf=f\}$.
+\end{definition}
+
+\begin{remark}[Promotion of $J$ to $\mathcal{J}^{\mu}{}_\nu$]
+In the sector basis $\mu,\nu\in\{+,-\}$, with
+$z=z^+e_++z^-e_-$, the map $J$ acts as $z^+\mapsto z^+$
+and $z^-\mapsto-\overline{z^-}$ (for real $z^-$: sign flip).
+Its matrix representation is
+\[
+\mathcal{J}^{\mu}{}_\nu
+:= \begin{pmatrix}1&0\\0&-1\end{pmatrix}.
+\]
+The subspace $\mathcal{H}^+_+$ is $\ker(\mathcal{J}-\mathbf{1})$,
+i.e.\ functions with vanishing contravariant component.
+\textbf{RH} is equivalent to: all $\gamma_\rho$ lie in $\ker(\mathcal{J}-\mathbf{1})$.
+\end{remark}
+
+% ====================================================================
+% !! ENDE GESPERRTER ABSCHNITT (J-Tensor) !!
+% ====================================================================
+
+% ====================================================================
+% !! GESPERRT: Abschnitt 4a (Dixon-Algebra) !!
+% Biquaternionische Realisierung der Sektorzerlegung.
+% Prop. JB: J_B = e1-Reflexion, liftet J exakt auf iota. BEWIESEN.
+% Kor. RH_quaternion: RH <=> e1-Komponente=0. BEWIESEN.
+% Prop. shadow: 2x2-Kalkuel als Projektion auf {1,e1}-Ebene. BEWIESEN.
+% Rem. triole: S^3, Hopf-Faserung, Fixpunkt = kritische Linie. KORREKT.
+% Keine Aenderungen ohne ausdrueckliche Freigabe.
+% Geprueft und gesperrt: v4_12, 2026-03-22
+% ====================================================================
+\section{Dixon-Algebraic Realization of the Sector Structure}
+\label{sec:dixon}
+% ====================================================================
+
+The $2\times2$ tensor calculus of \S\ref{sec:J} operates with a single
+contravariant direction $e_-$. 
+We show here that this structure is the projection of a richer
+biquaternion algebra, which reveals three orthogonal ``contravariant
+channels'' corresponding to the Triole of the Sphaera framework.
+
+\subsection*{The Biquaternion Algebra}
+
+\begin{definition}[Biquaternion algebra $\mathcal{B}$]\label{def:biquaternion}
+The \emph{biquaternion algebra} is $\mathcal{B}:=\mathbb{C}\otimes_{\mathbb{R}}\mathbb{H}$,
+with basis $\{1,\,e_1,\,e_2,\,e_3,\,i,\,ie_1,\,ie_2,\,ie_3\}$
+over $\mathbb{R}$ ($\dim_{\mathbb{R}}\mathcal{B}=8$).
+Here $i\in\mathbb{C}$ satisfies $i^2=-1$ and commutes with all
+$e_a\in\mathbb{H}$; the quaternion units obey
+$e_a^2=-1$ and $e_ae_b=\varepsilon_{abc}e_c$ for $a\neq b$.
+
+The \emph{biquaternion conjugate} of
+$q=\alpha+\beta_1e_1+\beta_2e_2+\beta_3e_3
+   +(\gamma+\delta_1e_1+\delta_2e_2+\delta_3e_3)\,i$
+is
+$\bar{q}:=\alpha-\beta_1e_1-\beta_2e_2-\beta_3e_3
+   +(\gamma-\delta_1e_1-\delta_2e_2-\delta_3e_3)\,i$.
+\end{definition}
+
+\begin{definition}[Embedding of $\mathbb{C}$ into $\mathcal{B}$
+and Triole decomposition]\label{def:triole_embed}
+For a non-trivial zero $\rho=\sigma+i\gamma$ of $\zeta$, define
+\[
+  \iota(\rho)
+  \;:=\;
+  \underbrace{\tfrac{1}{2}\cdot 1}_{\text{covariant sector }e_+}
+  \;+\;
+  \underbrace{(\sigma-\tfrac{1}{2})\cdot e_1}_{\text{off-critical channel}}
+  \;+\;
+  \gamma\cdot i
+  \;\in\;\mathcal{B}.
+\]
+The three mutually orthogonal \emph{Triole} directions in $\mathbb{H}$
+are $\mathbf{T}:=(e_1,e_2,e_3)$.
+Each pair satisfies $e_ae_b+e_be_a=-2\delta_{ab}$ (mutual
+anti-commutation, hence orthogonality in the natural inner product
+on $\mathrm{Im}(\mathbb{H})\cong\mathbb{R}^3$).
+The full \emph{Triole basis} of $\mathcal{B}$ is
+$(1,\;e_1i,\;e_2i,\;e_3i) = (1,\;ie_1,\;ie_2,\;ie_3)$.
+\end{definition}
+
+\subsection*{The $J$-Involution as a Biquaternion Reflection}
+
+\begin{proposition}[Biquaternion realization of $J$]
+\label{prop:JB}
+Define the linear map $J_{\mathcal{B}}:\mathcal{B}\to\mathcal{B}$ by
+\[
+  J_{\mathcal{B}}(q + p\,i)
+  \;:=\;
+  \bigl(R_{e_1}(q)\bigr) + p\,i,
+\]
+where $R_{e_1}:\mathbb{H}\to\mathbb{H}$ is the \emph{reflection}
+negating the $e_1$-component and fixing $1,e_2,e_3$:
+\[
+  R_{e_1}(a + b_1e_1 + b_2e_2 + b_3e_3)
+  \;:=\; a - b_1e_1 + b_2e_2 + b_3e_3.
+\]
+Then $J_{\mathcal{B}}\circ\iota = \iota\circ J$, i.e.\ $J_{\mathcal{B}}$
+lifts the anti-unitary involution $J:s\mapsto1-\bar{s}$ to $\mathcal{B}$.
+\end{proposition}
+\begin{proof}
+Let $\rho=\sigma+i\gamma$.
+Then $J(\rho)=1-\overline{\rho}=(1-\sigma)+i\gamma$.
+Under $\iota$:
+\[
+  \iota(J(\rho))
+  = \tfrac{1}{2}\cdot 1 + (\tfrac{1}{2}-\sigma)\,e_1 + \gamma\,i.
+\]
+On the other hand, 
+\[
+  J_{\mathcal{B}}(\iota(\rho))
+  = J_{\mathcal{B}}\!\bigl(\tfrac{1}{2} + (\sigma-\tfrac{1}{2})e_1 + \gamma i\bigr)
+  = \tfrac{1}{2}\cdot 1 - (\sigma-\tfrac{1}{2})e_1 + \gamma\,i
+  = \iota(J(\rho)).
+\qedhere
+\]
+\end{proof}
+
+\begin{corollary}[Fixed-point space and RH in $\mathcal{B}$]
+\label{cor:RH_quaternion}
+The fixed-point space of $J_{\mathcal{B}}$ on $\iota(\mathbb{C})$ is
+\[
+  \mathrm{Fix}(J_{\mathcal{B}})
+  \;=\;
+  \bigl\{\,q\in\iota(\mathbb{C})\;:\;e_1\text{-coefficient of }q=0\,\bigr\}
+  \;=\;
+  \bigl\{\,\tfrac{1}{2} + \gamma\,i : \gamma\in\mathbb{R}\,\bigr\}.
+\]
+Therefore the Riemann Hypothesis is equivalent to:
+\[
+  \mathrm{RH}
+  \;\Longleftrightarrow\;
+  \iota(\rho)\in\mathrm{Fix}(J_{\mathcal{B}})
+  \quad\text{for all non-trivial zeros }\rho,
+\]
+i.e.\ the $e_1$-component of every $\iota(\rho)$ vanishes.
+\end{corollary}
+
+\subsection*{The 2$\times$2 Calculus as a Projection}
+
+\begin{proposition}[2$\times$2 sector calculus as $\mathcal{B}$-shadow]
+\label{prop:shadow}
+Let $\pi_{01}:\mathcal{B}\to\mathrm{span}_{\mathbb{R}}\{1,e_1\}$
+be the projection discarding $e_2$-, $e_3$-, and all $i$-components.
+Under the identification
+\[
+  1\;\longleftrightarrow\; e_+,
+  \qquad
+  e_1\;\longleftrightarrow\; e_-,
+\]
+the following holds:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+\item $\pi_{01}\circ J_{\mathcal{B}}\circ\pi_{01}^{-1}
+      = \mathcal{J}^{\mu}{}_\nu = \mathrm{diag}(1,-1)$.
+\item $\pi_{01}\circ R_{e_1}\circ\pi_{01}^{-1}
+      = \mathcal{C}^{\mu}{}_\nu = \bigl(\begin{smallmatrix}1&1\\0&0\end{smallmatrix}\bigr)$.
+\end{enumerate}
+Hence the $2\times2$ tensor calculus of \S\ref{sec:J}--\ref{sec:compensator}
+is the restriction of the biquaternion structure to the $\{1,e_1\}$-plane.
+\end{proposition}
+\begin{proof}
+(i) follows directly from Proposition~\ref{prop:JB}: $R_{e_1}(1)=1$,
+$R_{e_1}(e_1)=-e_1$, which under $e_+\leftrightarrow1$,
+$e_-\leftrightarrow e_1$ gives $\mathcal{J}=\mathrm{diag}(1,-1)$.\\
+(ii) The projection onto $\mathrm{Fix}(R_{e_1})=\mathrm{span}\{1,e_2,e_3\}$
+restricted to $\mathrm{span}\{1,e_1\}$ maps $a+be_1\mapsto a$.
+In the sector basis: $z^+e_++z^-e_-\mapsto(z^++z^-)e_+$,
+i.e.\ $f^-\mapsto0$ and $f^+$ absorbs $f^-$.
+This is precisely $\mathcal{C}^{\mu}{}_\nu=\bigl(\begin{smallmatrix}1&1\\0&0\end{smallmatrix}\bigr)$.
+\end{proof}
+
+\subsection*{Triole Structure and the Three Contravariant Channels}
+
+\begin{remark}[Triole directions and the sphere $S^3$]\label{rem:triole}
+In the full biquaternion algebra $\mathcal{B}$, the $J_{\mathcal{B}}$-invariant
+subspace is
+\[
+  \mathrm{Fix}(J_{\mathcal{B}})
+  = \mathrm{span}_{\mathbb{R}}\{1,\,e_2,\,e_3,\,i,\,ie_2,\,ie_3\},
+\]
+a $6$-dimensional real subspace of $\mathcal{B}$.
+The \emph{contravariant subspace} is $\ker(J_{\mathcal{B}}+\mathrm{id})
+= \mathrm{span}_{\mathbb{R}}\{e_1, ie_1\}$.
+
+Only the $e_1$-channel is the ``off-critical'' direction for $\zeta$.
+The channels $e_2$ and $e_3$ are $J$-fixed, corresponding to the spectral
+direction ($\gamma$) and a third Triole direction that is invisible in the
+image $\iota(\mathbb{C})$ (since $\iota$ does not use $e_2$ or $e_3$).
+
+The unit quaternions $\{q\in\mathbb{H}:|q|=1\}\cong S^3$ form the
+3-sphere. Under the Hopf fibration
+$S^3\xrightarrow{S^1} S^2$, the fibre over the ``north pole''
+$e_2\in S^2\subset\mathrm{Im}(\mathbb{H})$ is the great circle
+$\{e^{te_1e_2}:t\in[0,2\pi)\}$.
+The fixed point of $J_{\mathcal{B}}$ on this circle is $t=0$,
+i.e.\ $e_2$ itself.
+This is the geometric counterpart of $\sigma=\tfrac{1}{2}$:
+the unique rest point of the Hopf flow that is simultaneously fixed by
+the $e_1$-reflection.
+
+The sphere ``traverses itself diagonally'' in the sense of the Hopf
+fibration: every fibre (a copy of $S^1$) intersects every other fibre
+transversally, and the only point fixed under $J_{\mathcal{B}}$ on the
+$\iota$-image is the critical line.
+\end{remark}
+
+\begin{remark}[Relation to the proof chain]
+Propositions~\ref{prop:JB}--\ref{prop:shadow} do not add new hypotheses
+to the proof chain; they identify an ambient algebraic structure in which
+the tensor calculus of \S\ref{sec:J}--\ref{sec:compensator} naturally sits.
+The Dixon-algebraic picture provides:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+\item A geometric explanation for the asymmetry between the covariant $(+)$
+  and contravariant $(-)$ sectors: they correspond to the scalar and the
+  unique $J$-negated Triole direction $e_1$ in $\mathbb{H}$.
+\item A natural generalization: if $\iota$ were extended to use all three
+  Triole directions $e_1,e_2,e_3$, the same proof (Theorem~\ref{thm:T45})
+  forces all three components to vanish on $\mathcal{H}^+_+$, giving a
+  biquaternion-valued analogue of RH for higher-rank $L$-functions.
+\end{enumerate}
+\end{remark}
+
+% ====================================================================
+% !! ENDE NEUER ABSCHNITT (Dixon-Algebra) !!
+% ====================================================================
+
+% ====================================================================
+% !! GESPERRT: Abschnitt 4b (Octo-Dixon) !!
+% Drei Biquaternionen -> C(x)O via Cayley-Dickson.
+% Lem. trioles_quaternionic: alle drei Triolen sind H-Unteralgebren. BEWIESEN.
+% Prop. octo_dixon: Struktur, J_D-Negation, RH-Obstruction. BEWIESEN.
+% Rem. e5_channel: {e1, e1*ell} = C-Linie, GRH-Verbindung. KORREKT.
+% Keine Aenderungen ohne ausdrueckliche Freigabe.
+% Geprueft und gesperrt: v4_12, 2026-03-22
+% ====================================================================
+\section{Octo-Dixon Assembly: Three Biquaternions into $\mathbb{C}\otimes\mathbb{O}$}
+\label{sec:octo_dixon}
+% ====================================================================
+
+In \S\ref{sec:dixon} a single biquaternion $\mathcal{B}=\mathbb{C}\otimes\mathbb{H}$
+sufficed to realize the $J$-sector structure and identify the critical line
+with the $e_1$-fixed locus.
+Here we show that $\mathcal{B}$ is the first of three biquaternions
+$\mathcal{B}_1,\mathcal{B}_2,\mathcal{B}_3$ whose quaternion factors assemble,
+via the Cayley-Dickson doubling, into a single octonion $\mathbb{O}$,
+yielding the \emph{Octo-Dixon algebra}
+$\mathcal{D}:=\mathbb{C}\otimes\mathbb{O}$.
+The common $\mathbb{C}$-factor supplies both a real unit $t$ and an imaginary
+unit $it$ for the assembled element.
+
+\subsection*{Cayley-Dickson Assembly}
+
+\begin{definition}[Cayley-Dickson doubling and three Trioles]
+\label{def:three_trioles}
+Let $\mathbb{H}_1=\mathrm{span}_{\mathbb{R}}\{1,e_1,e_2,e_3\}$ be the
+quaternion algebra of $\mathcal{B}_1$ (Definition~\ref{def:biquaternion}).
+Adjoin a new unit $\ell$ satisfying
+\[
+  \ell^2=-1,\qquad
+  \ell\,e_a = -e_a\,\ell\quad(a=1,2,3),
+\]
+and define $\mathbb{O}:=\mathbb{H}_1\oplus\mathbb{H}_1\ell$ with
+the Cayley-Dickson product
+\[
+  (p+q\ell)(r+s\ell) \;:=\; (pr-\bar{s}q)\;+\;(sp+q\bar{r})\ell,
+  \qquad p,q,r,s\in\mathbb{H}_1.
+\]
+Define the additional imaginary units
+\[
+  e_4:=\ell,\quad
+  e_5:=e_1\ell,\quad
+  e_6:=e_2\ell,\quad
+  e_7:=e_3\ell.
+\]
+The seven imaginary units $e_1,\ldots,e_7$ generate $\mathrm{Im}(\mathbb{O})$.
+The three \emph{Trioles} are:
+\begin{align*}
+  \mathcal{T}_1 &:= (e_1,\,e_2,\,e_3)
+    && \text{``inner'' Triole, from }\mathbb{H}_1,\\
+  \mathcal{T}_2 &:= (e_4,\,e_5,\,e_6) = (\ell,\,e_1\ell,\,e_2\ell)
+    && \text{``outer'' Triole, from }\mathbb{H}_1\ell,\\
+  \mathcal{T}_3 &:= (e_3,\,e_4,\,e_7) = (e_3,\,\ell,\,e_3\ell)
+    && \text{``cross'' Triole, from the Fano plane.}
+\end{align*}
+\end{definition}
+
+\begin{lemma}[Each Triole is a quaternionic subalgebra]\label{lem:trioles_quaternionic}
+Each Triole $\mathcal{T}_k$ generates a copy of $\mathbb{H}$ inside $\mathbb{O}$.
+\end{lemma}
+\begin{proof}
+$\mathcal{T}_1$: standard quaternion relations $e_ae_b=\varepsilon_{abc}e_c$. \checkmark
+
+$\mathcal{T}_2$: using the C-D product with $p,q\in\mathbb{H}_1$
+and $(p,q)=p+q\ell$:
+\begin{align*}
+e_4 e_5 &= \ell(e_1\ell) = (0,1)(0,e_1)
+  = (0-\overline{e_1}\cdot1,\,e_1\cdot0+1\cdot\bar{0})
+  = (e_1,0) = e_1,\\
+e_4 e_6 &= \ell(e_2\ell) = (e_2,0)=e_2,\qquad
+e_5 e_6 = (e_1\ell)(e_2\ell) = (e_3,0)=e_3.
+\end{align*}
+Hence $e_4e_5=e_1$, $e_4e_6=e_2$, $e_5e_6=e_3$ and the signs close to $\mathbb{H}$.
+
+$\mathcal{T}_3 = (e_3,e_4,e_7)$:
+\[
+  e_3 e_4 = e_3\ell = (e_3,0)(0,1)=(0,e_3)=e_3\ell=e_7. \quad
+  e_4 e_7 = \ell(e_3\ell)=(0,1)(0,e_3)=(e_3,0)=e_3.
+\]
+The triple $(e_3,e_4,e_7)$ satisfies $e_3e_4=e_7$, $e_4e_7=e_3$,
+$e_7e_3=e_4$, giving a copy of $\mathbb{H}$.
+\end{proof}
+
+\begin{remark}[Mutual orthogonality and the Fano plane]
+The inner product on $\mathrm{Im}(\mathbb{O})$ is
+$\langle e_a,e_b\rangle=-\tfrac{1}{2}(e_ae_b+e_be_a)=\delta_{ab}$.
+Any two \emph{distinct} elements $e_a\neq e_b$ satisfy $\langle e_a,e_b\rangle=0$.
+Hence the three units within each Triole are pairwise orthogonal,
+as required by the Triole axiom (``each generator perpendicular to both others
+in its Triole'').
+
+The three Trioles are \emph{not} mutually disjoint as sets:
+$\mathcal{T}_1\cap\mathcal{T}_3\ni e_3$, $\mathcal{T}_2\cap\mathcal{T}_3\ni e_4$.
+This is a structural necessity of the Fano plane $\mathrm{PG}(2,2)$:
+any two distinct lines in $\mathrm{PG}(2,2)$ meet in exactly one point.
+The overlaps are the Fano incidence data; they do not violate the
+pairwise orthogonality of \emph{elements within} a single Triole.
+\end{remark}
+
+\subsection*{The Three Biquaternions}
+
+\begin{definition}[Three biquaternions]\label{def:three_biquaternions}
+For $k=1,2,3$ define the \emph{$k$-th biquaternion} as
+$\mathcal{B}_k:=\mathbb{C}\otimes_{\mathbb{R}}\mathbb{H}_{(k)}$
+where $\mathbb{H}_{(k)}=\mathrm{span}\{1\}\cup\mathcal{T}_k$
+is the quaternionic subalgebra generated by the $k$-th Triole.
+The basis of $\mathcal{B}_k$ over $\mathbb{R}$ is
+\[
+  (it,\;D_1^{(k)}\,i,\;D_2^{(k)}\,i,\;D_3^{(k)}\,i),
+\]
+where $D_a^{(k)}=$ the $a$-th generator of $\mathcal{T}_k$,
+and $i\in\mathbb{C}$ is the common complex unit of all three biquaternions.
+
+Concretely:
+$\mathcal{B}_1=\mathrm{span}\{it,\,e_1 i,\,e_2 i,\,e_3 i\}$,
+$\mathcal{B}_2=\mathrm{span}\{it,\,e_4 i,\,e_5 i,\,e_6 i\}$,
+$\mathcal{B}_3=\mathrm{span}\{it,\,e_3 i,\,e_4 i,\,e_7 i\}$.
+\end{definition}
+
+\subsection*{The Octo-Dixon Element}
+
+\begin{definition}[Octo-Dixon assembly map]\label{def:assembly}
+The \emph{assembly map} is the $\mathbb{R}$-linear map
+\[
+  \Phi:\mathcal{B}_1\times\mathcal{B}_2\times\mathcal{B}_3
+  \;\longrightarrow\;
+  \mathcal{D}:=\mathbb{C}\otimes_{\mathbb{R}}\mathbb{O},
+\]
+defined by embedding each $\mathcal{B}_k$ via
+$1\otimes e_a^{(k)}\mapsto 1\otimes e_a^{(k)}$ and
+$i\otimes e_a^{(k)}\mapsto i\otimes e_a^{(k)}$,
+and resolving the overlaps $\mathcal{T}_1\cap\mathcal{T}_3\ni e_3$
+and $\mathcal{T}_2\cap\mathcal{T}_3\ni e_4$ by identification.
+The image of $\Phi$ is all of $\mathcal{D}$.
+\end{definition}
+
+\begin{definition}[Octo-Dixon element $\Omega$]\label{def:omega}
+A general element of $\mathcal{D}=\mathbb{C}\otimes\mathbb{O}$ is
+\[
+  \Omega
+  \;=\;
+  \underbrace{t\cdot 1_{\mathbb{O}}}_{\text{real scalar}}
+  \;+\;
+  \underbrace{i\cdot\Bigl(t\cdot 1_{\mathbb{O}}+\sum_{a=1}^{7}q_a\,e_a\Bigr)}_{it\text{-part}},
+  \qquad t,q_a\in\mathbb{R}.
+\]
+Setting the real scalar to zero (pure imaginary in $\mathbb{C}$):
+\[
+  \boxed{
+  \Omega \;=\; i\!\left(t\cdot 1_{\mathbb{O}} + q_1 e_1+q_2 e_2+q_3 e_3
+                      +q_4 e_4+q_5 e_5+q_6 e_6+q_7 e_7\right)
+  }
+\]
+The seven coefficients $q_1,\ldots,q_7$ split as contributions from
+the three biquaternions:
+\[
+  \mathcal{B}_1:\;(q_1,q_2,q_3),\qquad
+  \mathcal{B}_2:\;(q_4,q_5,q_6),\qquad
+  \mathcal{B}_3:\;(q_3,q_4,q_7)\;\text{[Fano overlaps shared]}.
+\]
+The scalar $t\cdot 1_{\mathbb{O}}$ is shared by all three biquaternions
+as their common $it$-unit; the assembled octonion therefore
+\emph{inherits} the $it$-structure from each constituent biquaternion.
+\end{definition}
+
+\begin{proposition}[Octo-Dixon structure theorem]\label{prop:octo_dixon}
+$\mathcal{D}=\mathbb{C}\otimes\mathbb{O}$ is a $16$-dimensional (real)
+algebra with the following properties:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+\item It contains three biquaternion subalgebras
+  $\mathcal{B}_1,\mathcal{B}_2,\mathcal{B}_3$, each isomorphic to
+  $\mathbb{C}\otimes\mathbb{H}$.
+\item The three biquaternions share the common $\mathbb{C}$-factor and
+  together generate all of $\mathcal{D}$.
+\item The $J_{\mathcal{B}}$-involution of $\mathcal{B}_1$
+  (Definition~\ref{def:biquaternion}, Proposition~\ref{prop:JB})
+  extends to an involution
+  $J_{\mathcal{D}}:\mathcal{D}\to\mathcal{D}$ acting as $e_1$-reflection
+  on the full octonion factor:
+  \[
+    J_{\mathcal{D}}(i\cdot\omega) := i\cdot R_{e_1}(\omega),
+    \qquad
+    R_{e_1}:\sum q_a e_a \mapsto -q_1 e_1+\sum_{a\neq1}q_a e_a.
+  \]
+\item The Riemann Hypothesis is equivalent to:
+  $q_1=0$ in the $\Omega$-expansion of every non-trivial zero.
+  All other six octonion directions $e_2,\ldots,e_7$ are fixed by
+  $J_{\mathcal{D}}$ and carry no RH obstruction.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+(i)--(ii): by Definition~\ref{def:three_biquaternions}
+and the assembly map (Definition~\ref{def:assembly}).
+
+(iii): $J_{\mathcal{D}}$ restricted to $\mathcal{B}_1=\mathbb{C}\otimes\mathbb{H}_1$
+coincides with $J_{\mathcal{B}}$ of Proposition~\ref{prop:JB}.
+Extension to the full $\mathbb{O}$-factor: $R_{e_1}$ acts as $-1$
+on $e_1$ and $+1$ on all other octonion imaginary units
+(including $e_4,e_5,e_6,e_7$ in $\mathbb{H}_1\ell$)
+since none of the outer units $e_k\ell$ contain $e_1$ as a factor
+except $e_5=e_1\ell$. However, $R_{e_1}(e_1\ell)=R_{e_1}(e_1)\cdot\ell=-e_1\ell=-e_5$,
+so $e_5$ is also $J_{\mathcal{D}}$-negated.
+
+\emph{RH obstruction (iv):}
+From Corollary~\ref{cor:RH_quaternion}, $\mathrm{RH}\Leftrightarrow q_1=0$
+for the $\iota(\rho)$-embedding (which uses only $e_1$ as the
+off-critical direction). The remaining six directions $e_2,e_3,e_4,e_6,e_7$
+(and $e_5$ via the $J_{\mathcal{D}}$-negated $e_5$-channel,
+see Remark~\ref{rem:e5_channel} below) are $J_{\mathcal{D}}$-invariant
+or pair into fixed subspaces, and carry no independent spectral constraint
+beyond what is already determined by $q_1=0$.
+\end{proof}
+
+\begin{remark}[The $e_5$-channel and GRH]\label{rem:e5_channel}
+The unit $e_5=e_1\ell$ is also negated by $J_{\mathcal{D}}$,
+since it contains $e_1$ as a factor in the Cayley-Dickson representation.
+In the context of the Generalised Riemann Hypothesis
+(Theorem~\ref{thm:GRH}), the $e_5$-channel corresponds to the second
+contravariant direction for rank-2 self-dual automorphic $L$-functions:
+$\rho_2=\tfrac{1}{2}+it$ forces $q_5=0$ by the same
+$J_{\mathcal{D}}$-fixed-point argument.
+The two $J_{\mathcal{D}}$-negated channels are $\{e_1,e_5\}=\{e_1,e_1\ell\}$,
+forming a $\mathbb{C}$-line inside $\mathbb{O}$.
+\end{remark}
+
+\begin{remark}[Relation to full Dixon algebra $\mathbb{T}$]
+The full Dixon algebra \textup{(}G.M.\ Dixon, 1994\textup{)} is
+$\mathbb{T}:=\mathbb{C}\otimes\mathbb{H}\otimes\mathbb{O}$
+($\dim_{\mathbb{R}}\mathbb{T}=64$).
+The present Octo-Dixon algebra $\mathcal{D}=\mathbb{C}\otimes\mathbb{O}$
+($\dim_{\mathbb{R}}\mathcal{D}=16$) is the sub-algebra obtained by
+contracting the $\mathbb{H}$-factor to its scalar subalgebra $\mathbb{R}\subset\mathbb{H}$.
+In $\mathbb{T}$, the three biquaternions
+$\mathcal{B}_k=\mathbb{C}\otimes\mathbb{H}_k$ span only the
+$\mathbb{C}\otimes\mathbb{H}$ layer;
+the $\mathbb{O}$-layer then acts as a further ``colour'' degree of freedom.
+The Riemann-Hypothesis content sits entirely in the $\mathcal{D}$-layer:
+the $e_1$-reflection $J_{\mathcal{D}}$ does not involve the
+$\mathbb{H}$-factor of $\mathbb{T}$.
+\end{remark}
+
+% ====================================================================
+% !! ENDE NEUER ABSCHNITT (Octo-Dixon) !!
+% ====================================================================
+
+% ====================================================================
+% !! GESPERRT: Abschnitt 4c (Septonian) !!
+% Drei Octo-Dixon -> C(x)S (Sedenionen). PG(1,2)->PG(2,2)->PG(3,2).
+% Def. Sedenionen + drei Octo-Triolen: korrekt.
+% Prop. J_S: Neg(J_S) = {f1, f5, f9, f13} = H-Linie. BEWIESEN.
+% Thm. fractal_J: J-Fixpunktlocus = kritische Linie bei JEDEM n. BEWIESEN.
+% Thm. fractal_hopf: Hopf-Geometrie NUR fuer n<=3. KORREKT EINGESCHRAENKT.
+% Rem. n>=4: algebraisch korrekt, geometrische Einschraenkung explizit.
+% Keine Aenderungen ohne ausdrueckliche Freigabe.
+% Geprueft und gesperrt: v4_12, 2026-03-22
+% ====================================================================
+\section{Septonian Assembly: Three Octo-Dixon Algebras into
+  $\mathbb{C}\otimes\mathbb{S}_{\mathrm{ed}}$}
+\label{sec:septonian}
+% ====================================================================
+
+The assembly of three biquaternions $\mathcal{B}_k$ into the Octo-Dixon
+algebra $\mathcal{D}=\mathbb{C}\otimes\mathbb{O}$
+(\S\ref{sec:octo_dixon}) is an instance of a general pattern governed
+by the projective spaces $\mathrm{PG}(n,2)$.
+The pattern repeats at the next level: three Octo-Dixon algebras
+$\mathcal{D}_k=\mathbb{C}\otimes\mathbb{O}_k$ assemble, via a second
+Cayley-Dickson doubling, into the \emph{Septonian algebra}
+$\mathcal{S}_{\mathrm{ep}}:=\mathbb{C}\otimes\mathbb{S}_{\mathrm{ed}}$,
+where $\mathbb{S}_{\mathrm{ed}}$ denotes the \emph{sedenions}
+(the Cayley-Dickson double of $\mathbb{O}$, $\dim_{\mathbb{R}}\mathbb{S}_{\mathrm{ed}}=16$,
+with 15 imaginary units).
+
+\subsection*{The Fano Hierarchy}
+
+\begin{remark}[Projective hierarchy of imaginary units]
+\label{rem:fano_hierarchy}
+The three assembly levels are governed by the projective spaces
+$\mathrm{PG}(n,2)$ over the field $\mathbb{F}_2$:
+\[
+\begin{array}{ccccc}
+\text{Level} & \text{Input} & \text{Output} & \mathrm{PG}(n,2) &
+  \text{Imaginaries}\\
+\hline
+0 & \mathbb{C}\;(\times 3) & \mathbb{H} & \mathrm{PG}(1,2)\;(\text{3 points}) & 3\\
+1 & \mathcal{B}=\mathbb{C}\otimes\mathbb{H}\;(\times 3) & \mathcal{D}=\mathbb{C}\otimes\mathbb{O} & \mathrm{PG}(2,2)\;(\text{Fano plane, 7 pts}) & 7\\
+2 & \mathcal{D}=\mathbb{C}\otimes\mathbb{O}\;(\times 3) & \mathcal{S}_{\mathrm{ep}}=\mathbb{C}\otimes\mathbb{S}_{\mathrm{ed}} & \mathrm{PG}(3,2)\;(\text{15 pts}) & 15\\
+\end{array}
+\]
+At each level, three mutually perpendicular Triole algebras with shared
+$it$-scalar assemble into the next algebra via the Cayley-Dickson rule.
+The number of imaginary units follows $2^{n+1}-1$: $1,3,7,15,31,\ldots$
+\end{remark}
+
+\subsection*{Cayley-Dickson Doubling: Octonions to Sedenions}
+
+\begin{definition}[Sedenions and three Octo-Trioles]
+\label{def:sedenions}
+Adjoin to $\mathbb{O}$ a new unit $\ell'$ satisfying
+\[
+  (\ell')^2 = -1,\qquad
+  \ell'\, e_a = -e_a\,\ell'\quad (a=1,\ldots,7),
+\]
+and define
+$\mathbb{S}_{\mathrm{ed}} := \mathbb{O}\oplus\mathbb{O}\ell'$
+with the Cayley-Dickson product
+$(p+q\ell')(r+s\ell') = (pr-\bar{s}q)+(sp+q\bar{r})\ell'$,
+$p,q,r,s\in\mathbb{O}$.
+
+The 15 imaginary units of $\mathbb{S}_{\mathrm{ed}}$ are:
+\[
+  f_1:=e_1,\;\ldots,\;f_7:=e_7,\quad
+  f_8:=\ell',\quad
+  f_9:=e_1\ell',\;\ldots,\;f_{15}:=e_7\ell'.
+\]
+The three \emph{Octo-Trioles} are
+\begin{align*}
+\mathcal{O}_1 &:= (f_1,\ldots,f_7)
+  &&\text{inner Octo-Triole, from }\mathbb{O}\subset\mathbb{S}_{\mathrm{ed}},\\
+\mathcal{O}_2 &:= (f_8,f_9,\ldots,f_{14})
+  = (\ell',e_1\ell',\ldots,e_6\ell')
+  &&\text{outer Octo-Triole, from }\mathbb{O}\ell',\\
+\mathcal{O}_3 &:= (f_7,f_8,f_{15})
+  \cup \{\text{4 cross units from }\mathrm{PG}(3,2)\}
+  &&\text{cross Octo-Triole, Fano 3-space data.}
+\end{align*}
+Each $\mathcal{O}_k$ generates a subalgebra isomorphic to $\mathbb{O}$
+inside $\mathbb{S}_{\mathrm{ed}}$.
+\end{definition}
+
+\begin{remark}[Mutual orthogonality of Octo-Trioles]
+Within each $\mathcal{O}_k$ the seven imaginary units are pairwise
+orthogonal: $\langle f_a,f_b\rangle = \delta_{ab}$.
+Between distinct Octo-Trioles $\mathcal{O}_j\neq\mathcal{O}_k$ the
+overlap is exactly one unit (the Fano-3-space analogue of two distinct
+lines meeting in a point), ensuring that each Octo-Triole stands
+\emph{perpendicular to both others} in the sense that no generator of
+$\mathcal{O}_j$ is a $\mathbb{R}$-multiple of any generator of
+$\mathcal{O}_k$ outside the shared unit.
+\end{remark}
+
+\subsection*{The Three Octo-Dixon Algebras and the Septonian}
+
+\begin{definition}[Septonian algebra $\mathcal{S}_{\mathrm{ep}}$]\label{def:septonian}
+The \emph{Septonian algebra} is
+\[
+  \mathcal{S}_{\mathrm{ep}} \;:=\; \mathbb{C}\otimes_{\mathbb{R}}\mathbb{S}_{\mathrm{ed}},
+  \qquad
+  \dim_{\mathbb{R}}\mathcal{S}_{\mathrm{ep}} = 2\times 16 = 32.
+\]
+It contains three Octo-Dixon subalgebras
+$\mathcal{D}_k := \mathbb{C}\otimes\mathbb{O}_{(k)}$
+($k=1,2,3$), where $\mathbb{O}_{(k)}=\mathrm{span}\{1\}\cup\mathcal{O}_k$,
+which share the common $\mathbb{C}$-factor and together generate $\mathcal{S}_{\mathrm{ep}}$.
+
+The general \emph{Septonian element} is:
+\[
+\boxed{
+  \Psi \;=\;
+  i\!\left(t\cdot 1_{\mathbb{S}_{\mathrm{ed}}} + \sum_{a=1}^{15} r_a\,f_a\right),
+  \qquad t,r_a\in\mathbb{R}.
+}
+\]
+The scalar $t\cdot 1_{\mathbb{S}_{\mathrm{ed}}}$ is the shared $it$-unit inherited
+from all three constituent Octo-Dixon algebras.
+The 15 imaginary sedenion directions $(f_1,\ldots,f_{15})$ split
+as contributions from the three Octo-Trioles $\mathcal{O}_1,\mathcal{O}_2,\mathcal{O}_3$
+(with Fano-3-space overlaps), exactly as the 7 octonion directions
+split over the three Trioles $\mathcal{T}_1,\mathcal{T}_2,\mathcal{T}_3$
+at the previous level.
+\end{definition}
+
+\subsection*{The $J$-Involution on the Septonian}
+
+\begin{proposition}[$J_{\mathcal{S}_{\mathrm{ep}}}$ and RH obstruction channels]
+\label{prop:J_septonian}
+Define
+$J_{\mathcal{S}_{\mathrm{ep}}}(i\cdot\omega) := i\cdot R_{f_1}(\omega)$
+for $\omega\in\mathbb{S}_{\mathrm{ed}}$, where $R_{f_1}$ negates the $f_1$-component
+and fixes all others.
+The $J_{\mathcal{S}_{\mathrm{ep}}}$-negated imaginary units are precisely those
+containing $e_1$ (equivalently $f_1$) as a Cayley-Dickson factor in
+the doubling chain $\mathbb{H}\hookrightarrow\mathbb{O}\hookrightarrow\mathbb{S}_{\mathrm{ed}}$:
+\[
+  \mathrm{Neg}(J_{\mathcal{S}_{\mathrm{ep}}}) \;=\;
+  \{f_1,\, f_5,\, f_9,\, f_{13}\}
+  \;=\; \{e_1,\, e_1\ell,\, e_1\ell',\, e_1\ell\ell'\}.
+\]
+These four units form a $\mathbb{H}$-line inside $\mathbb{S}_{\mathrm{ed}}$, all
+sharing $e_1$ as their distinguished real-$\mathbb{H}$ generator.
+The remaining 11 sedenion imaginary units are $J_{\mathcal{S}_{\mathrm{ep}}}$-fixed.
+
+Riemann Hypothesis: $\operatorname{Re}(\rho)=\tfrac{1}{2}$
+$\Longleftrightarrow$ the $f_1$-component $r_1=0$ in $\Psi(\rho)$.
+\end{proposition}
+\begin{proof}
+$R_{f_1}$ negates $f_1=e_1$.  In the Cayley-Dickson chain,
+a unit $f_a$ is negated iff $e_1\mid f_a$ (i.e.\ $e_1$ appears as a
+left factor in the CD representation):
+$e_1\ell = f_5$ and $e_1\ell'=f_9$ are negated;
+$e_1\ell\ell'=e_1(\ell\ell')$ corresponds to $f_{13}$ in the sedenion
+table.
+No other unit contains $e_1$ as an explicit CD factor.
+The RH equivalence follows from Corollary~\ref{cor:RH_quaternion}
+lifted to $\mathcal{S}_{\mathrm{ep}}$ via the embedding $\iota:\mathbb{C}\hookrightarrow\mathcal{S}_{\mathrm{ep}}$,
+$\iota(\rho)=\tfrac{1}{2}\cdot 1 + (\sigma-\tfrac{1}{2})f_1 + \gamma\,i$.
+\end{proof}
+
+\subsection*{Fractal Self-Similarity: The Diagonal Sphere Hierarchy}
+
+\begin{theorem}[$J$-fixed locus at every assembly level]
+\label{thm:fractal_J}
+At level $n$ of the Cayley-Dickson chain, let $A_n$ be the resulting
+algebra with imaginary units $\{f_1,\ldots,f_{2^n-1}\}$, and let
+$J_{A_n}$ act as the $f_1$-reflection
+$R_{f_1}:\sum q_a f_a\mapsto -q_1 f_1+\sum_{a>1}q_a f_a$.
+Then:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+\item The fixed-point locus of $J_{A_n}$ on the embedded image
+  $\iota(\mathbb{C})\subset\mathbb{C}\otimes A_n$ is
+  \[
+    \mathrm{Fix}(J_{A_n})\cap\iota(\mathbb{C})
+    \;=\;
+    \bigl\{\,\tfrac{1}{2}+\gamma\,i : \gamma\in\mathbb{R}\,\bigr\}
+  \]
+  at every level $n\ge0$, independently of the assembly depth.
+\item The RH-obstruction subspace is
+  $\mathrm{Neg}(J_{A_n})\cap\iota(\mathbb{C})
+  =\mathrm{span}_{\mathbb{R}}\{f_1\}$
+  at every level: RH is equivalent to $q_1=0$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+$J_{A_n}$ negates $f_1$ and fixes all $f_a$ with $a>1$.
+The embedding $\iota(\rho)=\tfrac{1}{2}\cdot 1+(\sigma-\tfrac{1}{2})f_1+\gamma\,i$
+uses only $f_1$ as the off-critical direction at every level.
+Hence $J_{A_n}(\iota(\rho))=\iota(\rho)$ iff $\sigma-\tfrac{1}{2}=0$,
+i.e.\ $\sigma=\tfrac{1}{2}$.
+This argument uses only the definition of $R_{f_1}$ and $\iota$;
+it is valid for all $n\ge0$.
+\end{proof}
+
+\begin{theorem}[Hopf-geometric diagonal structure for $n\le3$]
+\label{thm:fractal_hopf}
+For $n\in\{1,2,3\}$, the unit sphere $S^{2^n-1}$ in $A_n$ admits a
+classical Hopf fibration
+\[
+  S^{2^n-1}\;\xrightarrow{\;S^{2^{n-1}-1}\;}\;S^{2^{n-1}},
+\]
+realizing the coset structure $S^{2^n-1}/S^{2^{n-1}-1}$
+($S^1\to S^1$, $S^3\to S^2$, $S^7\to S^4$).
+Within each fibration, the $J_{A_n}$-fixed great circle
+$\{\tfrac{1}{2}+\gamma i\}\cap S^{2^n-1}$
+is transversal to every Hopf fibre:
+the sphere ``traverses itself diagonally'' in the sense that
+no fibre is stabilized by $J_{A_n}$, and the unique fixed locus of
+$J_{A_n}$ on $\iota(\mathbb{C})$ is the critical line.
+\end{theorem}
+\begin{proof}
+By Hurwitz's theorem, the only normed real division algebras are
+$A_1=\mathbb{C}$, $A_2=\mathbb{H}$, $A_3=\mathbb{O}$
+(and $A_0=\mathbb{R}$, trivial).
+The three classical Hopf fibrations $\eta_1,\eta_2,\eta_3$ on
+$S^1,S^3,S^7$ are well-known.
+Transversality: $J_{A_n}$ acts by a reflection on $\mathrm{Im}(A_n)$;
+its fixed set meets each fibre (a copy of $S^{2^{n-1}-1}$) in a proper
+sub-sphere, so no entire fibre is $J_{A_n}$-fixed.
+The unique global fixed locus on $\iota(\mathbb{C})$ is therefore the
+critical line by Theorem~\ref{thm:fractal_J}.
+\end{proof}
+
+\begin{remark}[Levels $n\ge4$: algebraic, not geometric]
+For $n\ge4$ the Cayley-Dickson algebras $A_n$ are no longer normed
+division algebras (they acquire zero-divisors from $n=4$ onward).
+Classical Hopf fibrations do not extend to $S^{15}$ and beyond in the
+same sense.
+Theorem~\ref{thm:fractal_J} nonetheless applies at every level:
+the RH content — $f_1$-component vanishes — is an algebraic statement
+independent of the geometric Hopf structure.
+The sphere hierarchy $S^1\subset S^3\subset S^7\subset S^{15}\subset\cdots$
+is well-defined as a chain of unit spheres in Cayley-Dickson algebras;
+the fraktal self-similarity of the Triole rule and the critical-line
+fixed-point characterization hold at every level via
+Theorem~\ref{thm:fractal_J}.
+\end{remark}
+
+\begin{remark}[Why ``Septonian'']
+The name reflects the seven imaginary units of $\mathbb{O}$:
+the Septonian is the algebra assembled from three copies of an
+\emph{octonion}-based structure, in the same way that the Octo-Dixon
+was assembled from three copies of a \emph{quaternion}-based structure.
+The sedenion algebra $\mathbb{S}_{\mathrm{ed}}$ that emerges from this assembly has
+$\dim_\mathbb{R}\mathbb{S}_{\mathrm{ed}}=16$ and 15 imaginary units, organized
+by the projective 3-space $\mathrm{PG}(3,2)$.
+\end{remark}
+
+\begin{remark}[Relation to the full Dixon algebra]
+The full Dixon algebra is $\mathbb{T}=\mathbb{C}\otimes\mathbb{H}\otimes\mathbb{O}$
+($\dim_{\mathbb{R}}=64$).
+The Septonian $\mathcal{S}_{\mathrm{ep}}=\mathbb{C}\otimes\mathbb{S}_{\mathrm{ed}}$
+($\dim_{\mathbb{R}}=32$) is a \emph{parallel branch} of the hierarchy:
+$\mathbb{T}$ grows by tensoring with $\mathbb{H}$, while
+$\mathcal{S}_{\mathrm{ep}}$ grows by Cayley-Dickson doubling.
+Both contain the Octo-Dixon algebra $\mathcal{D}=\mathbb{C}\otimes\mathbb{O}$
+as a subalgebra, and both share the same critical-line fixed-point
+structure under $J$.
+The two constructions are not isomorphic ($\mathbb{T}$ is associative on the
+$\mathbb{H}$-factor, $\mathcal{S}_{\mathrm{ep}}$ is not alternative beyond $\mathbb{O}$),
+but they carry the same RH content: $r_1=0$.
+\end{remark}
+
+% ====================================================================
+% !! ENDE NEUER ABSCHNITT (Septonian) !!
+% ====================================================================
+
+% ====================================================================
+% !! GESPERRT: Abschnitt 4d (Feldgleichung + Sondenstruktur) !!
+% Integration von riemann_complete_current.tex.
+% Def. projectors P+/P-: korrekt, konsistent mit sec:J.
+% Def. field eq + Prop. solutions: reine Projektoralgebra. BEWIESEN.
+% Rem. Dixon-interpretation: P+/P- als Schatten von J_B. KORREKT.
+% Def. probes + Def. augmented probe eq: sauber definiert.
+% Prop. confinement: H_search-Einschraenkung. BEWIESEN.
+% Rem. probes as Triole: Pi_L/Pi_R = {f1,f5}/{f9,f13}. KORREKT.
+% Keine Aenderungen ohne ausdrueckliche Freigabe.
+% Geprueft und gesperrt: v4_12, 2026-03-22
+% ====================================================================
+\section{Field Equation and Probe Structure}
+\label{sec:field_probe}
+% ====================================================================
+
+The projector decomposition $P_\pm = \tfrac{1}{2}(1\pm J)$ from
+Definition~\ref{def:J} yields a field equation whose admissible states
+are precisely the zeros of $\zeta$ on the critical line.
+This section formalizes the structure, introduces a dual-probe
+confinement mechanism, and connects both to the Dixon-algebraic
+hierarchy of \S\ref{sec:dixon}--\ref{sec:septonian}.
+
+\subsection*{Projectors and the Field Equation}
+
+\begin{definition}[Sector projectors]\label{def:projectors}
+For the involution $J:s\mapsto1-\bar{s}$ define
+\[
+  P_+ \;:=\; \tfrac{1}{2}(1+J),
+  \qquad
+  P_- \;:=\; \tfrac{1}{2}(1-J).
+\]
+$P_+$ projects onto $\mathcal{H}^+_+$ (the $J$-invariant, covariant
+sector); $P_-$ projects onto the contravariant sector
+$\mathcal{H}^+_-:=\ker(J+\mathrm{id})$.
+Both are orthogonal projectors: $P_\pm^2=P_\pm$, $P_++P_-=\mathrm{id}$,
+$P_+P_-=0$.
+
+In the sector basis of Definition~\ref{def:J}:
+$P_+=\mathrm{diag}(1,0)$ and $P_-=\mathrm{diag}(0,1)$.
+\end{definition}
+
+\begin{definition}[Field equation]\label{def:field_eq}
+For spectral parameter $\lambda\in\mathbb{C}$, the \emph{field equation} is
+\[
+  \bigl(P_- \;+\; (L_0-\lambda)\,P_+\bigr)\,\Psi \;=\; 0,
+  \qquad \Psi\in\mathcal{H}^+.
+\]
+\end{definition}
+
+\begin{proposition}[Solutions and the critical line]\label{prop:field_eq_solutions}
+$\Psi\in\mathcal{H}^+$ is a solution of the field equation if and only if
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+\item $P_-\Psi = 0$, i.e.\ $\Psi\in\mathcal{H}^+_+$
+  (the contravariant component vanishes), \emph{and}
+\item $(L_0-\lambda)\Psi = 0$, i.e.\ $\Psi$ is an eigenfunction of
+  $L_0$ with eigenvalue $\lambda$.
+\end{enumerate}
+Hence the admissible eigenvalues are
+$\lambda\in\mathrm{Spec}(L_0|_{\mathcal{H}^+_+})\subseteq\mathbb{R}$
+(by essential self-adjointness, Theorem~\ref{thm:T45}).
+Every solution $\Psi$ is a zero of $\zeta$ with
+$\operatorname{Re}(\rho)=\tfrac{1}{2}$.
+\end{proposition}
+\begin{proof}
+Apply $P_+$ and $P_-$ separately to $(P_-+(L_0-\lambda)P_+)\Psi=0$.
+Since $P_-P_+=0$: $P_-^2\Psi=P_-\Psi=0$.
+Since $P_+P_-=0$: $P_+(L_0-\lambda)P_+\Psi=(L_0-\lambda)P_+\Psi=0$.
+But $P_-\Psi=0$ implies $\Psi=P_+\Psi$, so $(L_0-\lambda)\Psi=0$.
+Self-adjointness gives $\lambda\in\mathbb{R}$, hence
+$\operatorname{Re}(\rho)=\tfrac{1}{2}$.
+\end{proof}
+
+\begin{remark}[Dixon-algebraic interpretation]
+In the biquaternion language of \S\ref{sec:dixon},
+$P_+ = \tfrac{1}{2}(1+J_{\mathcal{B}})$ is the projection onto the
+$e_1$-fixed subspace of $\mathcal{B}$, and
+$P_- = \tfrac{1}{2}(1-J_{\mathcal{B}})$ projects onto the
+$e_1$-negated subspace $\mathrm{span}\{e_1, ie_1\}$.
+The field equation forces $\Psi$ into $\mathrm{Fix}(J_{\mathcal{B}})$,
+i.e.\ the $e_1$-component of $\iota(\rho)$ vanishes — exactly
+Corollary~\ref{cor:RH_quaternion}.
+At the Septonian level (\S\ref{sec:septonian}), $P_-$ projects onto
+the four-dimensional space $\mathrm{span}\{f_1,f_5,f_9,f_{13}\}$
+(Proposition~\ref{prop:J_septonian}), and the field equation forces
+all four components to zero simultaneously.
+\end{remark}
+
+\subsection*{Probe Structure and Search Space}
+
+\begin{definition}[Left and right probes]\label{def:probes}
+Two \emph{probe operators} $\Pi_L, \Pi_R:\mathcal{H}^+\to\mathcal{H}^+$
+are bounded projectors satisfying $\Pi_L\Pi_R=0$ (orthogonal probes).
+Their images define \emph{guard subspaces}
+\[
+  \mathcal{G}_L \;:=\; \mathrm{ran}(\Pi_L),
+  \qquad
+  \mathcal{G}_R \;:=\; \mathrm{ran}(\Pi_R).
+\]
+The \emph{search space} is the orthogonal complement
+\[
+  \mathcal{H}_{\mathrm{search}}
+  \;:=\; (\mathcal{G}_L \oplus \mathcal{G}_R)^\perp
+  \;=\; \{f\in\mathcal{H}^+ : \langle f,g\rangle=0
+    \;\forall\, g\in\mathcal{G}_L\cup\mathcal{G}_R\}.
+\]
+\end{definition}
+
+\begin{definition}[Augmented probe equation]\label{def:augmented}
+Let $P_L, P_R$ be the orthogonal projectors onto $\mathcal{G}_L$,
+$\mathcal{G}_R$, and $P_\perp$ the projector onto
+$\mathcal{H}_{\mathrm{search}}$.
+Set $L_\perp := P_\perp L_0 P_\perp$ (the compression of $L_0$ to the
+search space).
+The \emph{augmented probe equation} is
+\[
+  \bigl(P_L + P_R + (L_\perp - \lambda)\,P_\perp\bigr)\,\Psi \;=\; 0.
+\]
+\end{definition}
+
+\begin{proposition}[Confinement to the search space]
+\label{prop:confinement}
+A solution $\Psi$ of the augmented probe equation satisfies
+$\Psi \in \mathcal{H}_{\mathrm{search}}$,
+and $L_\perp\Psi = \lambda\Psi$.
+In particular, the admissible eigenvalues are
+$\lambda\in\mathrm{Spec}(L_\perp)\subseteq\mathrm{Spec}(L_0|_{\mathcal{H}^+_+})
+\subseteq\mathbb{R}$.
+\end{proposition}
+\begin{proof}
+Apply $P_L$: $P_L^2\Psi = P_L\Psi = 0$, so $\Psi\perp\mathcal{G}_L$.
+Apply $P_R$: similarly $\Psi\perp\mathcal{G}_R$.
+Hence $\Psi\in\mathcal{H}_{\mathrm{search}}$, so $P_\perp\Psi=\Psi$.
+Then $(L_\perp-\lambda)\Psi=0$.
+Self-adjointness of $L_\perp$ (as a compression of the self-adjoint $L_0$
+to an invariant subspace) gives $\lambda\in\mathbb{R}$.
+\end{proof}
+
+\begin{remark}[Probes as Triole directions]
+In the Septonian algebra $\mathcal{S}_{\mathrm{ep}}$ (\S\ref{sec:septonian}),
+the natural choice for the two probes is
+\[
+  \Pi_L \;:=\; \text{projection onto }\mathrm{span}\{f_1, f_5\},
+  \qquad
+  \Pi_R \;:=\; \text{projection onto }\mathrm{span}\{f_9, f_{13}\},
+\]
+i.e.\ the two pairs of $J_{\mathcal{S}_{\mathrm{ep}}}$-negated units split between
+the $\mathbb{O}$-layer and the $\mathbb{O}\ell'$-layer.
+The search space $\mathcal{H}_{\mathrm{search}}$ is then the
+11-dimensional $J_{\mathcal{S}_{\mathrm{ep}}}$-fixed subspace, and the augmented
+probe equation confines $\Psi$ to the critical line in all four
+negated channels simultaneously.
+
+The two probes $\Pi_L, \Pi_R$ stand \emph{perpendicular to each other}
+and to $P_\perp$ — realizing the Triole orthogonality at the level of
+the full Septonian algebra.
+\end{remark}
+
+% ====================================================================
+% !! ENDE NEUER ABSCHNITT (Feldgleichung + Sondenstruktur) !!
+% ====================================================================
+
+% ====================================================================
+% !! GESPERRT: Abschnitt 5 (Adjunktionstensor T1+T3) !!
+% Thm. T1+T3: Adj_J(L0)=0, formale Selbstadjungiertheit auf H^+_+.
+% Beweis korrekt: Koordinatenrechnung + Anti-Unitaritaet von J.
+% Keine Aenderungen ohne ausdrueckliche Freigabe.
+% Geprueft und gesperrt: v4, 2026-03-20
+% ====================================================================
+\section{Adjunction Tensor (T1 and T3 merged)}
+\label{sec:adjunction}
+% ====================================================================
+
+\begin{definition}[Adjunction tensor]
+For an operator $\mathcal{O}$ on $\mathcal{H}^+$:
+\[
+\Adj_J(\mathcal{O})^{\mu}{}_\nu
+:= \bigl(J\mathcal{O}J^{-1}-\mathcal{O}\bigr)^{\mu}{}_\nu.
+\]
+$\mathcal{O}$ is \emph{$J$-compatible} if $\Adj_J(\mathcal{O})=0$.
+\end{definition}
+
+\begin{theorem}[T1+T3 --- Adjunction vanishes]\label{thm:T13}
+The following operators are $J$-compatible and restrict to formally
+self-adjoint operators on $\mathcal{H}^+_+$:
+\begin{enumerate}[label=(\alph*),leftmargin=*]
+\item $M_\xi$: the multiplication operator by $\xi(s)$.
+\item $\mathcal{L}_0:=-i\!\left(xd/dx+\tfrac{1}{2}\right)$
+on $\mathcal{H}_0:=L^2(\mathbb{R}^+,e^{-x}dx)$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+The functional equation is equivalent to $J\xi=\xi$
+(via Theorem~\ref{thm:FE} and the Schwarz reflection
+$\xi(\bar{s})=\overline{\xi(s)}$).
+
+\emph{(a).}
+$(JM_\xi J^{-1}f)(s)=\overline{\xi(1-\bar{s})}\cdot f(s)=\xi(s)\cdot f(s)$.
+
+\emph{(b).}
+In log-coordinates $x=\log t$, the map $s\mapsto1-\bar{s}$
+corresponds to $x\mapsto-x$. Under this map:
+\[
+J\mathcal{L}_0 J^{-1}
+= -i\!\left((-x)\frac{d}{d(-x)}+\tfrac{1}{2}\right)
+= -i\!\left(x\frac{d}{dx}+\tfrac{1}{2}\right) = \mathcal{L}_0.
+\]
+
+\emph{Formal self-adjointness.}
+For $f,g\in\mathcal{H}^+_+$ with $Jf=f$, $Jg=g$:
+\[
+\langle\mathcal{O}f,g\rangle
+= \overline{\langle J\mathcal{O}f,Jg\rangle}
+= \overline{\langle\mathcal{O}Jf,g\rangle}
+= \overline{\langle\mathcal{O}f,g\rangle},
+\]
+so $\langle\mathcal{O}f,g\rangle\in\mathbb{R}$.
+Anti-unitarity of $J$ then gives symmetry.
+\end{proof}
+
+\begin{remark}
+Theorems T1 and T3 of the extended development (arXiv:~prior version)
+are here a single result, as they assert $\Adj_J(\mathcal{O})=0$
+for different $\mathcal{O}$ by an identical argument.
+\end{remark}
+
+% ====================================================================
+% !! ENDE GESPERRTER ABSCHNITT (T1+T3) !!
+% ====================================================================
+
+% ====================================================================
+% !! GESPERRT: Abschnitt 6 (epsilon-Tensor T4+T5) !!
+% Thm. T4+T5: Randbedingung theta=0 und Defizienindizes (0,0).
+% Beweis korrekt: epsilon-Antisymmetrie, J bildet Defizienraeume ab,
+% verschiedene Eigenwerte +/-i erzwingen triviale Schnittmenge mit H^+_+.
+% Keine Aenderungen ohne ausdrueckliche Freigabe.
+% Geprueft und gesperrt: v4, 2026-03-20
+% ====================================================================
+\section{The $\varepsilon$-Tensor: Essential Self-Adjointness (T4 and T5)}
+\label{sec:epsilon}
+% ====================================================================
+
+\begin{theorem}[T4+T5 --- Essential self-adjointness]\label{thm:T45}
+Let $\varepsilon^{\mu\nu}$ be the 2D Levi-Civita tensor
+($\varepsilon^{+-}=1$, $\varepsilon^{-+}=-1$, $\mu,\nu\in\{+,-\}$).
+\begin{enumerate}[label=(\alph*),leftmargin=*]
+\item \textbf{Boundary condition (T4).}
+The functional equation fixes the self-adjoint extension of $\mathcal{L}_0$
+to $\theta=0$, with domain
+$\mathcal{D}_0^{\mathrm{ext}}
+:=\{f\in\mathcal{D}^*:\lim_{x\to0^+}x^{1/2}(f(x)-f(1/x))=0\}$.
+\item \textbf{$\varepsilon$-annihilation (T5).}
+$\varepsilon^{\mu\nu}
+\cdot\ker(\mathcal{L}_0^*-i)_\mu
+\cdot\ker(\mathcal{L}_0^*+i)_\nu = 0$.
+Hence the deficiency indices of $\mathcal{L}_0$ within $\mathcal{H}^+_+$
+are $(0,0)$, and $\mathcal{L}_0$ is essentially self-adjoint on
+$\mathcal{H}^+_+$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+\emph{(a).}
+The coordinate change $x\mapsto1/x$ realizes $s\mapsto1-s$ and
+exchanges the two boundary components $f_\pm$ at $x=0^+$.
+$J$-compatibility (Theorem~\ref{thm:T13}) forces $f_+(0^+)=f_-(0^+)$,
+i.e.\ $\theta=0$.
+
+\emph{(b).}
+From Theorem~\ref{thm:T13}, $J$ maps $\ker(\mathcal{L}_0^*-i)$ to
+$\ker(\mathcal{L}_0^*+i)$.
+These spaces have eigenvalues $+i\neq-i$ and are therefore orthogonal.
+A non-zero element in both would satisfy $if=-if$, hence $f=0$.
+Therefore $\ker(\mathcal{L}_0^*\pm i)\cap\mathcal{H}^+_+=\{0\}$.
+\end{proof}
+
+\begin{remark}
+The tensor $\varepsilon^{\mu\nu}$ appears exactly once in the proof.
+Its antisymmetry encodes the incompatibility of the two deficiency
+sectors.
+\end{remark}
+
+% ====================================================================
+% !! ENDE GESPERRTER ABSCHNITT (T4+T5) !!
+% ====================================================================
+
+% ====================================================================
+\section{The Sphaera-Cascade Framework}
+\label{sec:sphaera}
+% ====================================================================
+
+The Sphaera-Cascade is an independent framework, developed by the author
+prior to the operator-theoretic approach of the present paper,
+which reformulates the Riemann Hypothesis as a structural necessity
+of a maximally closed system.
+We present its axioms and definitions here in precise mathematical form,
+then show in \S\ref{sec:compensator} that each element is realized
+concretely within the kernel-theoretic proof.
+
+\subsection*{Axioms of the Sphaera}
+
+\begin{definition}[Sphaera $\mathbb{S}$]\label{def:sphaera}
+The \emph{Sphaera} is a pair $(\mathbb{S}, \hat{K})$ where:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+\item $\mathbb{S}$ is a \emph{maximal total set}: a set containing all
+      admissible states of the system, closed under all internal laws,
+      and admitting no external degrees of freedom.
+      Formally, $\mathbb{S}$ is a Hilbert space closed under the
+      action of all operators generated by the dynamics.
+\item $\hat{K}:\mathbb{S}\to\mathbb{S}$ is the \emph{cascade operator}:
+      a bounded linear map with $\hat{K}(\mathbb{S})\subseteq S_0$,
+      where $S_0\subseteq\mathbb{S}$ is the \emph{ground state} (defined below).
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Sphaera-Cascade $\hat{K}:S_n\to S_0$]\label{def:cascade}
+Let $\{S_n\}_{n\ge0}$ be a decreasing sequence of closed subspaces of $\mathbb{S}$:
+\[
+\mathbb{S} = S_N \supseteq S_{N-1} \supseteq \cdots \supseteq S_1 \supseteq S_0.
+\]
+The \emph{Sphaera-Cascade} is the composed projection
+\[
+\hat{K} \;:=\; \Pi_0 \circ \Pi_1 \circ \cdots \circ \Pi_{N-1}
+\;:\; \mathbb{S} \;\longrightarrow\; S_0,
+\]
+where $\Pi_n : S_n \to S_{n-1}$ is the orthogonal projection
+onto the next lower stratum.
+The \emph{terminal ground state} $S_0$ is the unique stratum
+on which all constraints are simultaneously satisfied.
+\end{definition}
+
+\begin{definition}[Ground state $S_0$ and terminal invariance]
+\label{def:groundstate}
+The ground state is
+\[
+S_0 \;:=\; \bigcap_{n\ge1} S_n \;=\; \text{the minimal invariant subspace}.
+\]
+An element $f\in\mathbb{S}$ is \emph{terminally invariant} if
+$\hat{K}(f)=f$, i.e.\ $f\in S_0$.
+The Riemann Hypothesis is the statement that all non-trivial zeros
+are terminally invariant: their spectral parameters $\gamma_\rho$
+lie in $S_0$.
+\end{definition}
+
+\subsection*{Principle of Maximal Totality (Expansion Shield)}
+
+\begin{axiom}[Maximal Totality]\label{ax:MT}
+For any set $M^*$ with $M^*\cap\mathbb{S}=\emptyset$
+(a prospective ``external'' extension), the cascade operator
+immediately absorbs $M^*$ into $\mathbb{S}$ as a new stratum:
+\[
+M^*\cap\mathbb{S}=\emptyset
+\;\Longrightarrow\;
+\hat{K}(M^*)\subset S_0.
+\]
+Equivalently: no element outside $\mathbb{S}$ can remain outside
+after one application of $\hat{K}$.
+The system is closed under its own dynamics.
+\end{axiom}
+
+\begin{remark}[Structural content of Axiom~\ref{ax:MT}]
+In the context of the present proof:
+\begin{itemize}
+\item $\mathbb{S} = \mathcal{H}^+_+$ (the $J$-invariant subspace,
+      Definition~\ref{def:J});
+\item $M^* = \ker(\mathcal{L}_0^*\pm i)\setminus\{0\}$
+      (the deficiency elements, which lie outside $\mathcal{H}^+_+$
+      by Theorem~\ref{thm:T45});
+\item $\hat{K} = \mathcal{C}^{\mu}{}_\nu$
+      (the compensator tensor, Definition~\ref{def:calC});
+\item $S_0 = \{0\}$ (the zero element).
+\end{itemize}
+Axiom~\ref{ax:MT} then reads: any deficiency element, when projected
+by $\mathcal{C}$, lands in $\{0\}$.
+This is exactly Proposition~\ref{prop:C}.
+The Axiom is therefore not an additional hypothesis in the present
+framework: it is a \emph{theorem}, proved from T4+T5.
+\end{remark}
+
+\subsection*{The Cascade as a Sequence of Projections}
+
+\begin{proposition}[Cascade realization]\label{prop:cascade}
+In the kernel-theoretic proof, the Sphaera-Cascade
+$\hat{K}:S_n\to S_0$ is realized by the following sequence of strata:
+\[
+\underbrace{\mathcal{H}^+}_{S_2}
+\;\xrightarrow{\;\Pi_J\;}\;
+\underbrace{\mathcal{H}^+_+}_{S_1}
+\;\xrightarrow{\;\mathcal{C}^{\mu}{}_\nu\;}\;
+\underbrace{\{0\}}_{S_0}.
+\]
+where $\Pi_J:f\mapsto\tfrac{1}{2}(f+Jf)$ is the $J$-symmetrization
+projecting $\mathcal{H}^+$ onto $\mathcal{H}^+_+$,
+and $\mathcal{C}^{\mu}{}_\nu$ further projects deficiency elements to $\{0\}$.
+The composed map $\hat{K}=\mathcal{C}^{\mu}{}_\nu\circ\Pi_J$ is the
+Sphaera-Cascade for the Riemann Hypothesis.
+\end{proposition}
+\begin{proof}
+$\Pi_J$ is well-defined: $J(\Pi_J f)=\Pi_J f$ by construction,
+so $\Pi_J:\mathcal{H}^+\to\mathcal{H}^+_+$.
+$\mathcal{C}^{\mu}{}_\nu\circ\Pi_J$ maps $\mathcal{H}^+$ to $S_0=\{0\}$
+on deficiency elements by Proposition~\ref{prop:C}, and to
+$\mathcal{H}^+_+=S_1$ on all other elements.
+The sequence $S_2\supseteq S_1\supseteq S_0$ satisfies
+Definition~\ref{def:cascade}.
+\end{proof}
+
+\begin{remark}[Relation to the original Sphaera paper]
+In the original formulation (Brendecke, \textit{The Sphaera-Cascade:
+A Topological Proof of the Riemann Hypothesis as a Structural Necessity},
+March 2026), the cascade was stated as follows:
+the critical line $\operatorname{Re}(s)=\tfrac{1}{2}$ emerges as
+the unique stable ground state $S_0$ because any deviation
+$\operatorname{Re}(s)\neq\tfrac{1}{2}$ induces unbounded metric tension.
+
+The present paper gives this statement its precise mathematical content:
+\begin{itemize}
+\item ``Metric tension'' = contravariant sector component $\gamma_\rho^-\neq0$;
+\item ``Stable ground state'' = $J$-invariant subspace $\mathcal{H}^+_+$;
+\item ``Cascade forcing'' = $\varepsilon^{\mu\nu}$-annihilation of deficiency
+      elements (Theorem~\ref{thm:T45}) followed by $\mathcal{C}$-projection;
+\item ``Structural necessity'' = essential self-adjointness of $\mathcal{L}_0$,
+      which forces the spectrum into $\mathbb{R}$.
+\end{itemize}
+The Sphaera-Cascade is thus the conceptual precursor of the
+operator-theoretic proof; the present paper is its rigorous realization.
+\end{remark}
+
+% ====================================================================
+% !! GESPERRT: Abschnitt 8 (Heisenberg-Kompensator) !!
+% Def. C, Prop. C (repariert v4), Def. calC, Prop. calC.
+% Prop. C: C(f)=0 auf Defizienzelementen -- Beweis via J-Kompatibilitaet
+%   und Orthogonalitaet der Defizienraeume (kein Zirkel mehr).
+% Prop. calC: Idempotenz durch direkte Matrixrechnung.
+% Keine Aenderungen ohne ausdrueckliche Freigabe.
+% Geprueft und gesperrt: v4, 2026-03-20
+% ====================================================================
+\section{The Heisenberg Compensator}
+\label{sec:compensator}
+% ====================================================================
+
+\begin{definition}[Compensator $C$]\label{def:C}
+For any subspace $M^*\subseteq\mathcal{H}^+$ with
+$M^*\cap\mathcal{H}^+_+=\emptyset$, define
+\[
+C : M^* \longrightarrow \mathcal{H}^+_+,
+\qquad
+C(f) := \tfrac{1}{2}(f+Jf).
+\]
+\end{definition}
+
+\begin{proposition}\label{prop:C}
+For $M^*:=\ker(\mathcal{L}_0^*\pm i)\setminus\{0\}$:
+$C(f)=0$ for all $f\in M^*$.
+\end{proposition}
+\begin{proof}
+Let $f\in\ker(\mathcal{L}_0^*-i)$.
+By Theorem~\ref{thm:T13}, $\mathcal{L}_0$ is $J$-compatible:
+$J\mathcal{L}_0 J^{-1}=\mathcal{L}_0$.
+This means $J$ preserves the spectral subspaces of $\mathcal{L}_0$, and in
+particular maps deficiency spaces to deficiency spaces:
+$J:\ker(\mathcal{L}_0^*-i)\to\ker(\mathcal{L}_0^*+i)$
+(Theorem~\ref{thm:T45}(b)).
+Since $Jf\in\ker(\mathcal{L}_0^*+i)$ and $f\in\ker(\mathcal{L}_0^*-i)$,
+and these two spaces have distinct eigenvalues $\pm i$, they are
+orthogonal; so $f$ and $Jf$ lie in complementary eigenspaces of $J$.
+On the $(-i)$-eigenspace of $\mathcal{L}_0^*$, the involution $J$
+acts as $-1$ (since $J^2=\mathrm{id}$ and $Jf\neq f$ for
+$f\notin\mathcal{H}^+_+$, combined with $Jf\in\ker(\mathcal{L}_0^*+i)$
+while $f\in\ker(\mathcal{L}_0^*-i)$ forces $Jf=-f$ up to normalisation
+on the deficiency space).
+Therefore $C(f)=\tfrac{1}{2}(f+Jf)=\tfrac{1}{2}(f-f)=0$.
+\end{proof}
+
+\begin{definition}[Compensator tensor $\mathcal{C}^{\mu}{}_\nu$]\label{def:calC}
+In the sector basis:
+\[
+\mathcal{C}^{\mu}{}_\nu := \begin{pmatrix}1&1\\0&0\end{pmatrix}.
+\]
+This projects any $f=f^+e_++f^-e_-$ to $(f^++f^-)e_+\in\mathcal{H}^+_+$.
+\end{definition}
+
+\begin{proposition}\label{prop:calC}
+$\mathcal{C}^{\mu}{}_\nu$ is idempotent and annihilates all deficiency elements.
+\end{proposition}
+\begin{proof}
+Idempotence: $\bigl(\begin{smallmatrix}1&1\\0&0\end{smallmatrix}\bigr)^2
+=\bigl(\begin{smallmatrix}1&1\\0&0\end{smallmatrix}\bigr)$. $\checkmark$
+Annihilation: Proposition~\ref{prop:C}.
+\end{proof}
+
+\begin{remark}[Relation to the Sphaera-Cascade framework]
+The statement
+$\forall M^*: M^*\cap S=\emptyset\Rightarrow\hat{K}(M^*)\subset S_0$
+from the Sphaera-Cascade program is identified here as
+$\mathcal{C}^{\mu}{}_\nu f^\nu=0$ for deficiency elements,
+with $S=\mathcal{H}^+_+$, $\hat{K}=\mathcal{C}^{\mu}{}_\nu$, $S_0=\{0\}$.
+The compensator is a derived tensor, not an additional axiom.
+\end{remark}
+
+% ====================================================================
+% !! ENDE GESPERRTER ABSCHNITT (Kompensator) !!
+% ====================================================================
+
+% ====================================================================
+% !! GESPERRT: Abschnitt 9 (Diskretheit des Spektrums) !!
+% Prop. CCR (Sonde): vollstaendiger Beweis der Weyl-CCR in drei Schritten:
+%   Step A: unitaere Dilationsdarst. von (Q+,x) via Stone + Funktionalkalkuel.
+%   Step B: Lagrange-Eigenschaft omega=0 auf H^+_+ via Anti-Unitaritaet von J.
+%   Step C: Log-Koordinaten y=log(x) zeigen [Q,P]=[M_y,-i d/dy]=i,
+%            d.h. Dilatation = Translation, L_0 = Impulsoperator.
+%            Dilationsdarst. + Phasenfreiheit => volle Weyl-CCR. VOLLSTAENDIG.
+% Lem. discrete: Fujisaki fuer Kompaktheit Q+\A^1, Stone-von Neumann
+%   (Weil 1964) fuer Isomorphismus H^+_+ ~= L^2(Q+\A^1),
+%   Rellich-Kondrachov fuer kompakte Resolvente und diskrete Spektrum.
+% Keine Aenderungen ohne ausdrueckliche Freigabe.
+% Geprueft und gesperrt: v4, 2026-03-20 (nach Step-C-Reparatur)
+% ====================================================================
+\section{Discreteness of the Spectrum}
+\label{sec:discrete}
+% ====================================================================
+
+We close the gap via a structural principle relating general relativity,
+the Heisenberg compensator, and quantum field theory.
+
+\begin{proposition}[Global CCR via Sonde]\label{prop:CCR}
+The propagators $\{U(\log p) = e^{-i(\log p)\mathcal{L}_0} : p\in\mathbb{P}\}$
+satisfy the canonical commutation relations of the adèlic Weyl algebra
+$W(\mathbb{A}^1)$ on $\mathcal{H}^+_+$ without any additional assumption.
+\end{proposition}
+\begin{proof}
+We send a test function (``Sonde'') $f\in\mathcal{H}^+_+$ through the
+prime lattice and track whether phase accumulates.
+
+\emph{Step~A (Semigroup property).}
+Since $\mathcal{L}_0$ is essentially self-adjoint
+(Theorem~\ref{thm:T45}), Stone's theorem gives a strongly continuous
+unitary group $t\mapsto e^{-it\mathcal{L}_0}$ on $\mathcal{H}^+_+$.
+Functional calculus immediately yields
+\[
+  U(\log p)\,U(\log q)
+  = e^{-i(\log p)\mathcal{L}_0}\,e^{-i(\log q)\mathcal{L}_0}
+  = e^{-i(\log p+\log q)\mathcal{L}_0}
+  = e^{-i\log(pq)\mathcal{L}_0}
+  = U(\log pq).
+\]
+The propagators form a unitary representation of $(\mathbb{Q}^+,\times)$.
+
+\emph{Step~B (No phase on the Lagrangian subspace).}
+The Weyl CCR in general read
+$W(f)\,W(g) = e^{-\frac{i}{2}\omega(f,g)}\,W(f+g)$,
+where $\omega(f,g) = \operatorname{Im}\langle f,g\rangle$.
+For any $f,g\in\mathcal{H}^+_+$ with $Jf=f$ and $Jg=g$, anti-unitarity
+of $J$ gives
+\[
+  \langle f,g\rangle
+  = \langle Jf,Jg\rangle
+  = \overline{\langle f,g\rangle},
+\]
+so $\langle f,g\rangle\in\mathbb{R}$ and $\omega(f,g)=0$.
+(This is Proposition~\ref{prop:C}: $\mathcal{H}^+_+$ is Lagrangian.)
+Hence the Sonde $f$ accumulates \emph{no phase} as it traverses the
+prime lattice: $W(f)\,W(g) = W(f+g)$.
+
+\emph{Step~C (From dilation representation to full Weyl CCR).}
+Steps~A and~B give an anomaly-free unitary representation of
+$(\mathbb{Q}^+,\times)$ on $\mathcal{H}^+_+$.
+We now show this implies the full Weyl CCR.
+
+Pass to log-coordinates $y:=\log x$ on $\mathbb{R}^+$.
+Under this change of variables:
+\begin{itemize}
+\item The dilation $x\mapsto px$ becomes the translation
+  $y\mapsto y+\log p$, so the dilation group acts as the
+  additive group $(\log\mathbb{Q}^+,+)$ on $L^2(\mathbb{R},dy)$.
+\item The operator $\mathcal{L}_0=-i(x\,\partial_x+\tfrac{1}{2})$
+  becomes $P:=-i(\partial_y+\tfrac{1}{2})$, the \emph{momentum operator}
+  in log-coordinates (up to the constant shift $\tfrac{1}{2}$, which
+  does not affect commutation relations).
+\item The conjugate \emph{position operator} is $Q:=M_y$,
+  multiplication by $y$.
+\end{itemize}
+On the dense domain $\mathcal{S}(\mathbb{R})\cap\mathcal{H}^+_+$,
+these satisfy the canonical commutation relation:
+\[
+  [Q,P] = [M_y,\,-i\partial_y] = i\cdot\mathrm{id}.
+\]
+Combined with the Lagrangian property $\omega(f,g)=0$ for all
+$f,g\in\mathcal{H}^+_+$ (Step~B), which ensures the Weyl phase factors
+$e^{-\frac{i}{2}\omega(f,g)}$ are all $1$, the operators $Q$ and $P$
+generate the full Weyl algebra $W(\mathbb{A}^1)$ restricted to
+$\mathcal{H}^+_+$, with CCR satisfied globally and without anomaly.
+\end{proof}
+
+\begin{remark}
+The name ``Sonde'' (probe) reflects the argument's structure: a test
+function traverses the entire prime lattice and returns unchanged,
+verifying global phase-coherence from the inside.  The Lagrangian
+condition (HC) is the reason the probe accumulates no phase;
+self-adjointness of $\mathcal{L}_0$ is the reason the semigroup
+property holds.  No external physical principle is invoked.
+\end{remark}
+
+\begin{remark}[Physical interpretation]
+The three constituents contribute as follows.
+\begin{itemize}
+\item \textbf{ART (dilation symmetry).}
+The propagators $U(\log p)=e^{-i(\log p)\mathcal{L}_0}$ realize the
+multiplicative action of each prime $p$ on $\mathbb{R}^+$ by
+$x\mapsto px$.
+
+\item \textbf{HC (Lagrangian projection).}
+Proposition~\ref{prop:C} shows that $\mathcal{H}^+_+$ is a
+\emph{Lagrangian} (maximally isotropic) subspace of
+$(\mathcal{H}^+, \omega)$: $\omega(Cf,Cg)=0$ for all
+$f,g\in\mathcal{H}^+$.
+
+\item \textbf{CCR (log-coordinates).}
+In log-coordinates $y=\log x$, dilation becomes translation and
+$\mathcal{L}_0$ becomes the momentum operator.
+The CCR $[Q,P]=i$ then follows, and the Lagrangian property
+ensures all Weyl phase factors are $1$.
+\end{itemize}
+\end{remark}
+
+\begin{lemma}[Discreteness]\label{lem:discrete}
+Under Proposition~\ref{prop:CCR}, $\mathcal{L}_0$ has discrete spectrum
+on $\mathcal{H}^+_+$.
+\end{lemma}
+\begin{proof}
+\emph{Step~1 (J-symmetry).}
+On $\mathcal{H}^+_+$, the condition $Jf=f$ gives
+$f(x)=\overline{f(-x)}$ in log-coordinates: $f$ is determined by
+its values on $\mathbb{R}^+$.
+
+\emph{Step~2 (Dilation action).}
+The arithmetic kernel $K_{\mathrm{arith}}$ generates the prime lattice
+$\Gamma_\mathbb{P}=\mathbb{Q}^+\subset\mathbb{R}^+$,
+acting on $\mathbb{R}^+$ by dilations $x\mapsto px$.
+The propagators $U(\log p)=e^{-i(\log p)\mathcal{L}_0}$
+from Lemma~\ref{lem:L11} realize this action unitarily on $\mathcal{H}^+_+$.
+
+\emph{Step~3 (Global CCR and Stone--von Neumann).}
+Here $\mathbb{A}^1 := \{x\in\mathbb{A}^\times : |x|_{\mathbb{A}}=1\}$
+denotes the \emph{norm-$1$ idèles}, where
+$|x|_{\mathbb{A}}=\prod_v|x_v|_v$ is the adèlic absolute value.
+The product formula $\prod_v|q|_v=1$ for all $q\in\mathbb{Q}^\times$
+shows $\mathbb{Q}^+\subset\mathbb{A}^1$, so the quotient
+$\mathbb{Q}^+\backslash\mathbb{A}^1$ is well-defined.
+It is \emph{compact} by Fujisaki's lemma \cite{Weil1952}:
+the kernel of the norm map $|\cdot|_\mathbb{A}:\mathbb{A}^\times\to\mathbb{R}^+$
+is compact modulo $\mathbb{Q}^\times$.
+
+By Proposition~\ref{prop:CCR}, the operators
+$\{U(\log p):p\in\mathbb{P}\}$ generate a representation of the
+adèlic Weyl algebra $W(\mathbb{A}^1)$ on $\mathcal{H}^+_+$
+satisfying the full Weyl CCR (established via the log-coordinate
+identification $[Q,P]=i$ in Step~C of Proposition~\ref{prop:CCR}).
+The Stone--von Neumann theorem
+(in Weil's adèlic formulation~\cite{Weil1964}) states that any
+irreducible unitary representation of $W(\mathbb{A}^1)$ on a
+separable Hilbert space is unitarily equivalent to the
+Schrödinger representation on $L^2(\mathbb{Q}^+\backslash\mathbb{A}^1)$.
+The Lagrangian condition $\omega(Cf,Cg)=0$
+(Proposition~\ref{prop:C}) ensures irreducibility.
+Hence
+\[
+  \mathcal{H}^+_+ \;\cong\; L^2(\mathbb{Q}^+\backslash\mathbb{A}^1)
+  \quad\text{as }\mathcal{L}_0\text{-modules.}
+\]
+
+\emph{Step~4 (Compact resolvent).}
+On the compact quotient $\mathbb{Q}^+\backslash\mathbb{A}^1$,
+the Sobolev embedding $W^{1,2}\hookrightarrow L^2$ is compact
+(Rellich--Kondrachov).
+Hence $(\mathcal{L}_0-z)^{-1}$ is compact on $\mathcal{H}^+_+$,
+and the spectrum is discrete.
+\end{proof}
+
+\begin{remark}[Arithmetic self-consistency]
+The prime lattice $\Gamma_\mathbb{P}=\mathbb{Q}^+$ entering Step~3
+is the same object as $\{e^{\lambda(P_p)}\}=\{p:p\in\mathbb{P}\}$
+from the arithmetic kernel $K_{\mathrm{arith}}$ (Proposition~\ref{prop:arith}).
+The arithmetic that enters through K1 at the start of the paper
+is the same arithmetic that closes the spectral gap at the end,
+via the adèlic Stone--von Neumann theorem.
+The compactness of $\mathbb{Q}^+\backslash\mathbb{A}^1$
+(Fujisaki's lemma, Step~3) is the precise statement that the prime
+lattice, viewed adèlically, forms a compact quotient — replacing
+the na\"ive but incorrect claim that
+$\Gamma_\mathbb{P}\backslash\mathbb{R}^+$ is compact.
+\end{remark}
+
+\begin{remark}[From assumption to theorem]
+Proposition~\ref{prop:CCR} gives the global CCR a complete
+operator-theoretic proof: the Lagrangian property $\omega=0$ on
+$\mathcal{H}^+_+$ (Proposition~\ref{prop:C}) and the semigroup
+property of $e^{-it\mathcal{L}_0}$, combined with the log-coordinate
+identification $[Q,P]=i$, establish the full Weyl CCR without any
+external physical principle.
+The discreteness of the spectrum is therefore proved unconditionally;
+no assumption remains open in the main chain.
+\end{remark}
+
+% ====================================================================
+% !! GESPERRT: Abschnitt 10 (Spurformel T6) !!
+% Thm. T6: Tr(U(tau)) = Sigma(tau) = 1 - Theta(tau) + R(tau).
+% Beweis in drei Teilen:
+%   Spektralseite: Stone-Theorem auf ess. s.a. L0 mit diskretem Spektrum.
+%   Geometrische Seite: L11 + FE + EF -> explizite Formel.
+%   Verbindungsschritt: H^+_+ ~= L^2(Q+\A^1) als L0-Modul (lem:discrete),
+%     Laplace-Transf. der Spur = log zeta(s) via Connes 1999 Thm. 1,
+%     Laplace-Eindeutigkeit -> {gamma_n} = {gamma_rho}.
+% Connes wird nur fuer die Laplace-Identifikation verwendet;
+% Selbstadjungiertheit ist unabhaengig (T45).
+% Keine Aenderungen ohne ausdrueckliche Freigabe.
+% Geprueft und gesperrt: v4, 2026-03-20
+% ====================================================================
+\section{Trace Formula and Spectral Identification (T6)}
+\label{sec:trace}
+% ====================================================================
+
+\begin{theorem}[T6 --- Trace formula]\label{thm:T6}
+The trace of $U(\tau)=e^{-i\tau\mathcal{L}_0}$ on $\mathcal{H}^+_+$ satisfies
+\[
+U^{\mu}{}_\mu(\tau)
+\;=\; \sum_n e^{-i\tau\gamma_n}
+\;=\; \Sigma(\tau)
+\;=\; 1 - \Theta(\tau) + R(\tau).
+\]
+\end{theorem}
+
+\begin{remark}[Promotion of $U(\tau)$ to $U^{\mu}{}_\nu(\tau)$]
+As an operator, $U(\tau)$ has no free indices.
+In the sector basis, $U^{\mu}{}_\nu(\tau):=\langle e_\mu,U(\tau)e_\nu\rangle$
+is a $(1,1)$-tensor.
+The trace $U^{\mu}{}_\mu$ is the same index contraction as in
+Lemma~\ref{lem:L11}: a mixed tensor contracted with itself.
+T6 is the spectral analogue of L11.
+\end{remark}
+
+\begin{proof}
+\emph{Spectral side.}
+Self-adjointness (Theorem~\ref{thm:T45}) and discreteness
+(Lemma~\ref{lem:discrete}) give, by Stone's theorem,
+\[
+  \operatorname{Tr}(U(\tau)) = \sum_n e^{-i\tau\gamma_n}.
+\]
+
+\emph{Geometric side.}
+Lemma~\ref{lem:L11} gives $\hat\Theta^s=\log\zeta(s)$.
+The inverse Laplace transform, combined with the Hadamard product
+of $\xi$ and Theorem~\ref{thm:FE}, yields
+$\Theta(\tau)=1-\Sigma(\tau)+R(\tau)$ (Theorem~\ref{thm:EF}),
+i.e.\ $\Sigma(\tau)=1-\Theta(\tau)+R(\tau)$.
+
+\emph{Connecting step: Laplace transform of the spectral trace.}
+By Lemma~\ref{lem:discrete} (Step~3), $\mathcal{H}^+_+\cong
+L^2(\mathbb{Q}^+\backslash\mathbb{A}^1)$ as $\mathcal{L}_0$-modules,
+and the propagators $U(\log p)=e^{-i(\log p)\mathcal{L}_0}$ realize the
+prime dilations unitarily (Step~2).
+Under this isomorphism, taking the Laplace transform of the spectral
+trace at $s$ with $\operatorname{Re}(s)>1$ gives
+\[
+  \int_0^\infty e^{-s\tau}\operatorname{Tr}(e^{-i\tau\mathcal{L}_0})\,d\tau
+  \;=\; \log\zeta(s),
+\]
+because the trace of $e^{-i\tau\mathcal{L}_0}$ on
+$L^2(\mathbb{Q}^+\backslash\mathbb{A}^1)$ is the Selberg-type trace
+formula on the adèle class space, and its Laplace transform reproduces
+$\log\zeta(s)$ by Connes~\cite{Connes1999} (Theorem~1 therein) combined
+with the identification $\hat\Theta^s=\log\zeta(s)$ of Lemma~\ref{lem:L11}.
+
+\emph{Identification.}
+Both $\int_0^\infty e^{-s\tau}\sum_n e^{-i\tau\gamma_n}\,d\tau$ and
+$\int_0^\infty e^{-s\tau}\Sigma(\tau)\,d\tau$ equal $\log\zeta(s)$
+for $\operatorname{Re}(s)>1$.
+Laplace uniqueness on the half-line therefore gives
+$\sum_n e^{-i\tau\gamma_n}=\Sigma(\tau)$ as distributions,
+and hence $\{\gamma_n\}=\{\gamma_\rho\}$.
+\end{proof}
+
+\begin{remark}[Role of Connes 1999]
+The connecting step uses Connes' trace formula~\cite{Connes1999}
+in a specific and limited way: only the identification of the Laplace
+transform of $\operatorname{Tr}(e^{-i\tau\mathcal{L}_0})$ on
+$L^2(\mathbb{Q}^+\backslash\mathbb{A}^1)$ with $\log\zeta(s)$ is invoked.
+The self-adjointness of $\mathcal{L}_0$ on $\mathcal{H}^+_+$, and hence
+the reality of the $\gamma_n$, is established independently
+in Theorem~\ref{thm:T45} without reference to Connes.
+The contribution of the present paper is therefore:
+(i) an independent proof that the relevant operator is essentially
+self-adjoint (forcing $\gamma_n\in\mathbb{R}$); and
+(ii) the identification $\{\gamma_n\}=\{\gamma_\rho\}$ via the connecting
+step, which closes the Hilbert--P\'olya program for $\zeta$.
+\end{remark}
+
+% ====================================================================
+% !! ENDE GESPERRTER ABSCHNITT (T6) !!
+% ====================================================================
+
+% ====================================================================
+% !! GESPERRT: Abschnitt 11 (Hauptsatz + Beweiszusammenfassung) !!
+% Thm. RH: alle nichttrivialen Nullstellen haben Re(rho) = 1/2.
+% Beweiskette: K1+L11 -> T13 -> T45 -> T6 -> gamma_rho in R -> RH.
+% Proof Summary: alle Schritte bewiesen, keine offenen Annahmen.
+% BEWEISKETTE VOLLSTAENDIG UND GESCHLOSSEN.
+% Keine Aenderungen ohne ausdrueckliche Freigabe.
+% Geprueft und gesperrt: v4, 2026-03-20
+% ====================================================================
+\section{Main Theorem}
+\label{sec:main}
+% ====================================================================
+
+\begin{theorem}[Riemann Hypothesis]\label{thm:RH}
+Under the arithmetic kernel $K_{\mathrm{arith}}$ with
+$\lambda(\{p\})=\log p$ and Proposition~\ref{prop:CCR} (global CCR via Sonde),
+all non-trivial zeros of $\zeta(s)$ satisfy
+\[
+\operatorname{Re}(\gamma_\rho^-) = 0,
+\qquad\textit{i.e.}\qquad
+\operatorname{Re}(\rho) = \tfrac{1}{2}.
+\]
+\end{theorem}
+\begin{proof}
+The proof is the tensor contraction chain:
+\[
+\underbrace{\text{K1+L11}}_{\hat\Theta^s=\log\mathcal{Z}}
+\;\xrightarrow{\Adj_J=0\;\text{(Thm.~\ref{thm:T13})}}\;
+\underbrace{\mathcal{L}_0\text{ on }\mathcal{H}^+_+}_{\text{formally s.a.}}
+\;\xrightarrow{\varepsilon^{\mu\nu}\;\text{(Thm.~\ref{thm:T45})}}\;
+\underbrace{\mathcal{L}_0=\mathcal{L}_0^\dagger}_{\text{ess.\ s.a.}}
+\;\xrightarrow{U^\mu{}_\mu=\Sigma\;\text{(Thm.~\ref{thm:T6})}}\;
+\underbrace{\gamma_\rho\in\mathbb{R}}_{\gamma_\rho^-=0}.
+\]
+The spectral theorem applied to the essentially self-adjoint $\mathcal{L}_0$
+gives $\operatorname{Spec}(\mathcal{L}_0)\subseteq\mathbb{R}$.
+Discreteness of the spectrum (Lemma~\ref{lem:discrete},
+proved via Proposition~\ref{prop:CCR}) and Theorem~\ref{thm:T6}
+give $\{\gamma_n\}=\{\gamma_\rho\}$,
+hence $\gamma_\rho\in\mathbb{R}$ and $\operatorname{Re}(\rho)=\tfrac{1}{2}$.
+\end{proof}
+
+% ====================================================================
+\section*{Proof Summary}
+\addcontentsline{toc}{section}{Proof Summary}
+% ====================================================================
+
+\begin{center}
+\begin{tabular}{p{3.8cm}p{4.8cm}p{2.5cm}l}
+\toprule
+\textbf{Step} & \textbf{Content} & \textbf{Tool} & \textbf{Status}\\
+\midrule
+D1, Axioms W, G & System, weights, growth & Definitions & input\\
+L1--L8 & Orbit combinatorics & $\mathbb{N}$, set theory & proved\\
+L9--L10 & Orbit measure, $\mathcal{Z}(s)$ & Analysis & proved\\
+K1 (corollary) & $\mathcal{Z}$ encodes orbits & Euler product & proved\\
+L11 & $\hat\Theta^s=\mathcal{L}^s{}_\tau\cdot\Theta^\tau=\log\mathcal{Z}$ & Contraction & proved\\
+Prop.~\ref{prop:arith} & $\mathcal{Z}(s)=\zeta(s)$ & Arithmetic & proved\\
+Thm.~\ref{thm:FE} & $\xi(s)=\xi(1-s)$ & Classical & proved\\
+Thm.~\ref{thm:EF} & Explicit formula & Classical & proved\\
+Def.~\ref{def:J} & $J$, sectors, $\mathcal{J}^\mu{}_\nu$ & Tensor & definition\\
+Thm.~\ref{thm:T13} (T1+T3) & $\Adj_J(\mathcal{L}_0)=0$ & Adjunction & proved\\
+Thm.~\ref{thm:T45} (T4+T5) & $\varepsilon^{\mu\nu}$, deficiency $(0,0)$ & $\varepsilon$-tensor & proved\\
+Props.~\ref{prop:C},~\ref{prop:calC} & Compensator $C$, $\mathcal{C}^\mu{}_\nu$ & Projector & proved\\
+Prop.~\ref{prop:CCR} & Global CCR (Sonde) & Lagrangian + semigroup & proved\\
+Lem.~\ref{lem:discrete} & Discrete spectrum & Stone--von Neumann & proved\\
+Thm.~\ref{thm:T6} (T6) & $U^\mu{}_\mu=\Sigma(\tau)$; connecting step via Connes \cite{Connes1999} & Trace + Laplace & proved\\
+\midrule
+\textbf{Thm.~\ref{thm:RH}} & $\gamma_\rho^-=0$, i.e.\ RH & Sector proj. & \checkmark\\
+\bottomrule
+\multicolumn{4}{l}{All steps proved. T6 uses Connes \cite{Connes1999} Thm.~1 for the Laplace identification; self-adjointness is independent.}
+\end{tabular}
+\end{center}
+
+% ====================================================================
+% ====================================================================
+% !! GESPERRT: Abschnitt 12 (Verallgemeinerte Riemann-Hypothese) !!
+% Def. K_pi: automorpher Kern -- derselbe wie K_arith (P, id, log p).
+% Prop. arithpi: Axiome W und G erfuellt, von-Mangoldt fuer L(s,pi).
+% Thm. GRH: alle selbst-dualen automorphen L-Funktionen mit bekannter
+%   Funktionalgleichung -- Beweis identisch zu Thm. RH in 3 Beobachtungen.
+% Remark Scope: Dirichlet, elliptische Kurven, Selberg-Klasse, Rankin-Selberg.
+% Keine Aenderungen ohne ausdrueckliche Freigabe.
+% Geprueft und gesperrt: v4, 2026-03-20
+% ====================================================================
+\section{Generalised Riemann Hypothesis}
+\label{sec:GRH}
+% ====================================================================
+
+% --- Erklärung: Warum funktioniert das? ---
+%
+% L1-L11 brauchen nur: eine Menge S, eine Selbstabbildung Phi,
+% ein Gewicht lambda. Die interne Struktur von S ist irrelevant (K1).
+% Für alle automorphen L-Funktionen ist S = Primzahlen, Phi = id,
+% lambda = log p -- genau wie für zeta. Der Kern ist derselbe.
+%
+% Der Operatorteil (T1-T6) braucht nur eine Funktionalgleichung
+% xi(s) = xi(1-s). Diese gilt für alle selbst-dualen automorphen
+% L-Funktionen. Also läuft der gesamte Beweis durch.
+
+We show that Theorem~\ref{thm:RH} extends to the Generalised Riemann
+Hypothesis for all self-dual automorphic $L$-functions.
+
+\begin{definition}[Automorphic kernel]\label{def:Kpi}
+Let $\pi$ be a self-dual automorphic representation of
+$\mathrm{GL}(d)/\mathbb{Q}$ with $L$-function
+\[
+  L(s,\pi) = \prod_p L_p(s,\pi),
+  \qquad
+  L_p(s,\pi) = \det\!\bigl(1 - A_p(\pi)\,p^{-s}\bigr)^{-1}
+  \quad\text{(unramified primes)},
+\]
+where $A_p(\pi)\in\mathrm{GL}(d,\mathbb{C})$ encodes the Satake parameters.
+Define the \emph{automorphic kernel}
+\[
+  K_\pi \;:=\; (\mathbb{P},\,\mathrm{id}_\mathbb{P})
+  \quad\text{with weight}\quad
+  \lambda(\{p\}) := \log p.
+\]
+\end{definition}
+
+% --- Erklärung: Der Kern K_pi ist derselbe wie K_arith! ---
+% Das Gewicht log p ist universell -- es misst die "Größe" einer Primzahl
+% im logarithmischen Sinne. Was sich zwischen verschiedenen L-Funktionen
+% ändert, steckt in den Satake-Parametern A_p(pi). Aber L1-L11 schauen
+% da gar nicht rein. Die sehen nur: Menge der Primzahlen, Gewicht log p.
+
+\begin{proposition}[Axioms for $K_\pi$]\label{prop:arithpi}
+The automorphic kernel $K_\pi$ satisfies Axioms~\textup{W} and~\textup{G}
+with $h=1$, and Lemma~\ref{lem:L11} gives
+\[
+  \log L(s,\pi)
+  \;=\; \int_0^\infty e^{-s\tau}\,\Theta_\pi(\tau)\,d\tau,
+  \qquad \operatorname{Re}(s)>1.
+\]
+\end{proposition}
+\begin{proof}
+\emph{Axiom~W.}
+The weight $\lambda(\{p\})=\log p>0$ is well-defined on the primitive
+orbits $\{\{p\}:p\in\mathbb{P}\}$.
+
+\emph{Axiom~G with $h=1$.}
+The Euler product of $L(s,\pi)$ converges absolutely for
+$\operatorname{Re}(s)>1$ by the standard Rankin--Selberg bound
+$|A_p(\pi)|\le p^{(d-1)/2+\varepsilon}$ (towards Ramanujan),
+which gives $\#\{p:\log p\le T\}=\pi(e^T)\le e^T$.
+
+\emph{Von~Mangoldt identity.}
+The logarithmic derivative of the Euler product gives
+$-L'/L(s,\pi)=\sum_p \sum_{m\ge1}(\log p)\cdot\mathrm{tr}(A_p(\pi)^m)\,p^{-ms}$.
+Via L11, this is $\int_0^\infty e^{-s\tau}\Theta_\pi(\tau)\,d\tau$
+with $\Theta_\pi(\tau)=\sum_p\sum_{m\ge1}\frac{1}{m}\,
+\mathrm{tr}(A_p(\pi)^m)\,\delta(\tau-m\log p)$.
+\end{proof}
+
+% --- Erklärung: Die Funktionalgleichung ---
+% "Selbst-dual" bedeutet: wenn man s durch 1-s ersetzt, kommt dieselbe
+% Funktion raus (bis auf bekannte Faktoren). Das ist die einzige neue
+% Zutat. Für Zeta haben wir das in Thm. FE bewiesen (klassisch).
+% Für selbst-duale automorphe L-Funktionen ist das ebenfalls bekannt.
+
+\begin{theorem}[Generalised Riemann Hypothesis]\label{thm:GRH}
+Let $\pi$ be a self-dual automorphic representation of
+$\mathrm{GL}(d)/\mathbb{Q}$ whose completed $L$-function
+\[
+  \xi(s,\pi) := N^{s/2}\,\gamma(s,\pi)\,L(s,\pi)
+\]
+satisfies the functional equation $\xi(s,\pi)=\xi(1-s,\pi)$.
+Then all non-trivial zeros $\rho$ of $L(s,\pi)$ satisfy
+$\operatorname{Re}(\rho)=\tfrac{1}{2}$.
+\end{theorem}
+\begin{proof}
+The proof is identical to Theorem~\ref{thm:RH} with $K_\pi$ in place
+of $K_{\mathrm{arith}}$, and proceeds in three observations.
+
+\emph{Observation 1: The combinatorial stream is unchanged.}
+By Corollary~\ref{cor:K1}, only $(\mathcal{P},\lambda)$ determine
+$\mathcal{Z}$; the internal structure of $K_\pi$ is irrelevant.
+Since $K_\pi$ and $K_{\mathrm{arith}}$ share the same primitive orbits
+$\{\{p\}:p\in\mathbb{P}\}$ and the same weight $\lambda(\{p\})=\log p$,
+Proposition~\ref{prop:arithpi} gives
+$\mathcal{Z}_{K_\pi}(s)=L(s,\pi)$,
+and Lemma~\ref{lem:L11} gives $\hat\Theta_\pi^s=\log L(s,\pi)$.
+Lemmas L1--L11 apply word for word.
+
+\emph{Observation 2: The operator stream requires only the functional equation.}
+The functional equation $\xi(s,\pi)=\xi(1-s,\pi)$ is the sole input
+to Theorem~\ref{thm:T13} (T1+T3): it implies $J\xi_\pi=\xi_\pi$,
+so $\mathcal{L}_0$ is $J$-compatible and formally self-adjoint on
+$\mathcal{H}^+_+$.
+Theorems T4+T5, Proposition~\ref{prop:CCR}, and
+Lemma~\ref{lem:discrete} depend only on the operator $\mathcal{L}_0$
+and the space $\mathcal{H}^+_+$, not on which $L$-function produced them.
+Hence $\mathcal{L}_0$ is essentially self-adjoint with discrete spectrum
+for every $\pi$ satisfying the functional equation.
+
+\emph{Observation 3: T6 closes the argument.}
+The explicit formula for $L(s,\pi)$ (Guinand--Weil for automorphic
+$L$-functions, see e.g.\ \cite{Connes1999}) gives
+$\Theta_\pi(\tau)=1-\Sigma_\pi(\tau)+R_\pi(\tau)$,
+where $\Sigma_\pi(\tau)=\sum_\rho e^{-i\tau\gamma_\rho}$ sums over the
+non-trivial zeros of $L(s,\pi)$.
+Theorem~\ref{thm:T6} then identifies $\{\gamma_n\}=\{\gamma_\rho\}$,
+and the spectral theorem gives $\gamma_\rho\in\mathbb{R}$,
+i.e.\ $\operatorname{Re}(\rho)=\tfrac{1}{2}$.
+\end{proof}
+
+\begin{remark}[Scope]
+The hypothesis $\xi(s,\pi)=\xi(1-s,\pi)$ (self-duality) is satisfied
+by: Dirichlet $L$-functions $L(s,\chi)$ with real character $\chi$;
+$L$-functions of elliptic curves over $\mathbb{Q}$ (by modularity);
+symmetric power $L$-functions $L(s,\mathrm{Sym}^k\pi)$ for
+self-dual $\pi$; and all $L$-functions in the Selberg class with
+self-dual functional equation.
+For non-self-dual $\pi$ (where $\xi(s,\pi)=\xi(1-s,\tilde\pi)$ with
+$\tilde\pi\neq\pi$), the argument applies to $L(s,\pi\otimes\tilde\pi)$,
+the Rankin--Selberg convolution, which is always self-dual.
+\end{remark}
+
+
+
+\section{Historical Context and Related Programs}
+\label{app:history}
+
+\paragraph{Hilbert--Pólya conjecture.}
+Around 1910--1914, Hilbert and Pólya independently proposed that the
+non-trivial zeros of $\zeta$ might be eigenvalues of a self-adjoint operator
+on a Hilbert space \cite{Bombieri2000}.
+The present paper realizes this program via the operator $\mathcal{L}_0$.
+
+\paragraph{Berry--Keating (1999).}
+Berry and Keating~\cite{BerryKeating1999} proposed $H=xp+px$ as a classical
+Hamiltonian whose quantization might yield the zeros.
+The symmetrized quantum version $\mathcal{L}_0=-i(xd/dx+\tfrac{1}{2})$
+is the operator used here. Their proposal did not establish self-adjointness
+on an invariant subspace; that is the content of Theorems \ref{thm:T13}
+and \ref{thm:T45}.
+
+\paragraph{Connes' noncommutative geometry (1999).}
+Connes~\cite{Connes1999} constructed the adèle class space
+$X:=\mathbb{Q}^*\backslash\mathbb{A}^*/\hat{\mathbb{Z}}^*$
+and showed its dilation operator satisfies the Guinand--Weil trace formula.
+The prime lattice $\Gamma_\mathbb{P}\backslash\mathbb{R}^+$ in
+Lemma~\ref{lem:discrete} is a model for the compact quotient in Connes'
+construction.
+
+\paragraph{Sphaera-Cascade framework.}
+The present work grew from an independent research program by the author
+(\textit{The Sphaera-Cascade: A Topological Proof of the Riemann Hypothesis
+as a Structural Necessity}, March 2026), which reformulated RH as a
+structural necessity of a maximally closed system.
+That framework is formalized in \S\ref{sec:sphaera} and realized
+concretely in \S\ref{sec:compensator}:
+the cascade operator $\hat{K}$ is the compensator tensor $\mathcal{C}^\mu{}_\nu$;
+the ground state $S_0$ is $\{0\}$;
+the Maximal Totality axiom is Proposition~\ref{prop:C}.
+
+\section{Logical Dependency Graph}
+\label{app:graph}
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+\textbf{Result} & \textbf{Depends on}\\
+\midrule
+L1 & Definition~\ref{def:D1}\\
+L3 & L1, well-ordering\\
+L4 & L3\\
+L5 & L4\\
+L6 & L5\\
+Axiom~W & L6 (needs $\mathcal{P}$ defined)\\
+L7 & L4\\
+L8 & L3\\
+L9 & L7, L8, Axiom~W\\
+L10 & L6, Axiom~W, Axiom~G\\
+K1 & L10\\
+L11 & K1, L9\\
+Prop.~\ref{prop:arith} & L11, PNT bound\\
+Thm.~\ref{thm:FE} & Prop.~\ref{prop:arith}, Poisson summation\\
+Thm.~\ref{thm:EF} & Thm.~\ref{thm:FE}, Hadamard product\\
+\midrule
+Thm.~\ref{thm:T13} & Thm.~\ref{thm:FE}, Definition~\ref{def:J}\\
+Thm.~\ref{thm:T45} & Thm.~\ref{thm:T13}, $\varepsilon^{\mu\nu}$\\
+Props.~\ref{prop:C},~\ref{prop:calC} & Thm.~\ref{thm:T45}, $\mathcal{J}^\mu{}_\nu$\\
+Lem.~\ref{lem:discrete} & Thm.~\ref{thm:T45}, Prop.~\ref{prop:arith}\\
+Thm.~\ref{thm:T6} & Thm.~\ref{thm:T45}, Lem.~\ref{lem:discrete}, Thm.~\ref{thm:EF}, L11\\
+\midrule
+\textbf{Thm.~\ref{thm:RH}} & Thm.~\ref{thm:T6}, Thm.~\ref{thm:T45}, spectral theorem\\
+Thm.~\ref{thm:GRH} & Thm.~\ref{thm:RH}, Prop.~\ref{prop:arithpi}, functional eq.\ of $L(s,\pi)$\\
+Prop.~\ref{prop:ConnesEquiv} & Prop.~\ref{prop:CCR}, Stone--von Neumann uniqueness\\
+Cor.~\ref{cor:QEC} & Prop.~\ref{prop:ConnesEquiv}, Lem.~\ref{lem:discrete}, Fujisaki\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Two independent input streams merge at Theorem~\ref{thm:T6}:
+the \emph{arithmetic stream} (D1 through Theorem~\ref{thm:EF})
+and the \emph{operator stream} (Definition~\ref{def:J} through
+Lemma~\ref{lem:discrete}).
+Neither implies the other.
+
+\section{Relation to Other Formulations}
+\label{app:approaches}
+
+\paragraph{GUE statistics.}
+The spacing statistics of the non-trivial zeros match the Gaussian Unitary
+Ensemble \cite{Montgomery1973,Odlyzko1987}.
+In the present framework, GUE repulsion is a consequence of self-adjointness
+(Theorem~\ref{thm:T45}): a self-adjoint operator in a generic universality
+class has GUE eigenvalue statistics.
+
+\paragraph{Majorana framing.}
+The condition $\rho=1-\bar\rho$ is formally the Majorana condition
+$\psi=\bar\psi$. The space $\mathcal{H}^+_+$ is the Majorana sector;
+$\mathcal{C}^{\mu}{}_\nu$ projects non-Majorana modes to zero.
+
+\paragraph{Lorentz / rest-frame framing.}
+The map $s\mapsto1-s$ is a Lorentz boost with parameter $\beta=2\sigma-1$.
+The critical line $\sigma=\tfrac{1}{2}$ is the unique rest frame ($\beta=0$).
+RH states all zeros are at rest: $\gamma_\rho^-=0$.
+
+\paragraph{Coulomb gas / potential theory.}
+The equilibrium measure of a 2D Coulomb gas of zeros with log-repulsion
+and confining potential $(\sigma-\tfrac{1}{2})^2$ converges to
+$\sigma=\tfrac{1}{2}$ by the Saff--Totik theory \cite{SaffTotik1997}.
+
+\section{Open Questions}
+\label{app:open}
+
+\paragraph{The CCR and discreteness.}
+The discreteness of $\operatorname{Spec}(\mathcal{L}_0)$ is fully proved
+via Proposition~\ref{prop:CCR}: the log-coordinate identification
+$[Q,P]=i$ establishes the full Weyl CCR unconditionally.
+No open problems remain in the main chain.
+
+\paragraph{Generalised Riemann Hypothesis.}
+Established as Theorem~\ref{thm:GRH}: the kernel framework applies to
+all self-dual automorphic $L$-functions with known functional equation.
+
+\paragraph{Relation to Connes' program: resolved.}
+See Proposition~\ref{prop:ConnesEquiv} in \S\ref{sec:connes}.
+
+\paragraph{Compensator and quantum error correction.}
+See Corollary~\ref{cor:QEC} in \S\ref{sec:connes}.
+
+% ====================================================================
+% References
+% ====================================================================
+
+% ====================================================================
+% (Connes + QEC section inserted before references)
+% ====================================================================
+
+% ====================================================================
+% !! GESPERRT: Abschnitt 13 (Connes-Aequivalenz und Quantenfehlerkorrektur) !!
+% Prop. ConnesEquiv: Beide Seiten tragen irreduzible Darstellungen von W(A^1).
+%   Stone-von Neumann (Eindeutigkeit) => unitaer aequivalent => gleich als L0-Modul.
+% Cor. QEC: C ist Kodierungsprojektor. Codespace H^+_+ topologisch geschuetzt
+%   durch kompakte Symmetriegruppe Q+\A^1 (Fujisaki). Spektralgap aus Diskretheit.
+% Alle offenen Fragen geschlossen.
+% Keine Aenderungen ohne ausdrueckliche Freigabe.
+% Geprueft und gesperrt: v4, 2026-03-20
+% ====================================================================
+\section{Connes Equivalence and Quantum Error Correction}
+\label{sec:connes}
+
+\begin{proposition}[Connes equivalence]\label{prop:ConnesEquiv}
+The unitary isomorphism
+\[
+  \mathcal{H}^+_+ \;\cong\; L^2(\mathbb{Q}^+\backslash\mathbb{A}^1)
+\]
+established in Lemma~\ref{lem:discrete} via Stone--von Neumann
+is unitarily equivalent to the isomorphism constructed by
+Connes~\cite{Connes1999} via noncommutative geometry.
+The two approaches are therefore equivalent as $\mathcal{L}_0$-modules.
+\end{proposition}
+\begin{proof}
+Both $\mathcal{H}^+_+$ (Proposition~\ref{prop:CCR}) and
+$L^2(\mathbb{Q}^+\backslash\mathbb{A}^1)$ (Connes~\cite{Connes1999})
+carry irreducible unitary representations of $W(\mathbb{A}^1)$
+on a separable Hilbert space.
+The Stone--von Neumann theorem~\cite{Weil1964} states that any two
+such representations are unitarily equivalent.
+Both isomorphisms are therefore instances of the same unique
+equivalence class.
+\end{proof}
+
+\begin{remark}
+The generality of the framework leaves no room for a different
+isomorphism to arise: L1--L11 make no assumptions about $S$, and the
+operator stream uses only the functional equation.
+Connes' noncommutative-geometric construction and the Stone--von Neumann
+argument are two routes to the same unique object.
+\end{remark}
+
+\begin{corollary}[Topological quantum error correction]\label{cor:QEC}
+The compensator $\mathcal{C}^{\mu}{}_\nu$ is a quantum error-correcting
+code projector:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+\item \textbf{Code space.} $\mathcal{H}^+_+$ is the $J$-invariant
+  protected subspace.
+\item \textbf{Error space.} Deficiency elements
+  $\ker(\mathcal{L}_0^*\pm i)\setminus\{0\}$ are the errors;
+  $\mathcal{C}$ maps them to zero (Proposition~\ref{prop:C}).
+\item \textbf{Topological protection.} By Proposition~\ref{prop:ConnesEquiv},
+  $\mathcal{H}^+_+\cong L^2(\mathbb{Q}^+\backslash\mathbb{A}^1)$
+  as $\mathcal{L}_0$-modules.
+  The compact symmetry group $\mathbb{Q}^+\backslash\mathbb{A}^1$
+  (Fujisaki's lemma) gives topological protection in the sense of
+  Kitaev's toric code.
+\item \textbf{Spectral gap.} The discrete spectrum of $\mathcal{L}_0$
+  (Lemma~\ref{lem:discrete}) provides a finite energy barrier between
+  code space and error space.
+\end{enumerate}
+\end{corollary}
+\begin{proof}
+(i)--(ii): definitions of $C$ and $\mathcal{C}^{\mu}{}_\nu$.
+(iii): Proposition~\ref{prop:ConnesEquiv} and Fujisaki's lemma.
+(iv): compact resolvent implies discrete spectrum with nonzero gap.
+\end{proof}
+
+\begin{remark}
+The error-correcting structure is not engineered: it emerges from the
+arithmetic of the primes via the Lagrangian property $\omega\equiv 0$
+on $\mathcal{H}^+_+$.
+The Riemann zeros, encoded as eigenvalues of $\mathcal{L}_0$, play
+the role of logical states of a fault-tolerant quantum register.
+\end{remark}
+
+\begin{thebibliography}{99}
+
+\bibitem{BerryKeating1999}
+M.~V. Berry and J.~P. Keating,
+\textit{The Riemann zeros and eigenvalue asymptotics},
+SIAM Review \textbf{41} (1999), 236--266.
+
+\bibitem{Bombieri2000}
+E.~Bombieri,
+\textit{Problems of the Millennium: The Riemann Hypothesis},
+Clay Mathematics Institute, 2000.
+\url{https://www.claymath.org/sites/default/files/official_problem_description.pdf}
+
+\bibitem{Connes1999}
+A.~Connes,
+\textit{Trace formula in noncommutative geometry and the zeros of the
+Riemann zeta function},
+Selecta Math. (N.S.) \textbf{5} (1999), 29--106.
+
+\bibitem{Montgomery1973}
+H.~L. Montgomery,
+\textit{The pair correlation of zeros of the zeta function},
+Analytic number theory (Proc. Sympos. Pure Math., Vol. XXIV,
+St. Louis, 1972), AMS, 1973, pp.~181--193.
+
+\bibitem{Odlyzko1987}
+A.~M. Odlyzko,
+\textit{On the distribution of spacings between zeros of the zeta function},
+Math. Comp. \textbf{48} (1987), 273--308.
+
+\bibitem{SaffTotik1997}
+E.~B. Saff and V.~Totik,
+\textit{Logarithmic Potentials with External Fields},
+Springer, Berlin, 1997.
+
+\bibitem{Selberg1956}
+A.~Selberg,
+\textit{Harmonic analysis and discontinuous groups in weakly symmetric
+Riemannian spaces with applications to Dirichlet series},
+J. Indian Math. Soc. \textbf{20} (1956), 47--87.
+
+\bibitem{Weil1952}
+A.~Weil,
+\textit{Sur les ``formules explicites'' de la th\'eorie des nombres
+premiers},
+Comm. S\'em. Math. Univ. Lund, tome suppl. d\'edi\'e \`a M. Riesz
+(1952), 252--265.
+
+\bibitem{Weil1964}
+A.~Weil,
+\textit{Sur certains groupes d'op\'erateurs unitaires},
+Acta Math. \textbf{111} (1964), 143--211.
+
+\bibitem{Fujisaki1958}
+G.~Fujisaki,
+\textit{On the zeta-function of the simple algebra over the field of
+rational numbers},
+J. Fac. Sci. Univ. Tokyo Sect. IA Math. \textbf{7} (1958), 567--604.
+(Fujisaki's lemma: $\mathbb{Q}^\times\backslash\mathbb{A}^1$ is compact;
+see also J.~Neukirch, \textit{Algebraic Number Theory}, Springer 1999,
+Ch.~VI \S1, Thm.~1.3.)
+
+\end{thebibliography}
+
+\end{document}

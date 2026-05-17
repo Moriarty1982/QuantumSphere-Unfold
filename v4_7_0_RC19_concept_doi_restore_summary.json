@@ -1,0 +1,22 @@
+{
+  "rc": "RC19",
+  "basis": "RC18 final PDF compile source / RC16 conservative compression basis",
+  "pages": 1014,
+  "latex_passes": 3,
+  "version_doi": "10.5281/zenodo.20232911",
+  "concept_doi": "10.5281/zenodo.19210728",
+  "previous_baseline_doi": "10.5281/zenodo.20117361",
+  "titlepage_version_doi_visible_lines": 1,
+  "titlepage_concept_doi_visible_lines": 1,
+  "pdf_version_doi_hits": 4,
+  "pdf_concept_doi_hits": 9,
+  "expired_doi_hits_pdf": 0,
+  "raw_question_mark_markers_pdf": 0,
+  "raw_question_mark_markers_source": 0,
+  "undefined_refs": 0,
+  "undefined_citations": 0,
+  "duplicate_label_warnings": 0,
+  "rerun_warnings": 0,
+  "overfull_hbox_warnings": 45,
+  "labels_total": 3290
+}
