@@ -1,0 +1,96 @@
+% QSC v4.8.0-r01 candidate insertion
+% Planck-Readout Metric Layer and MM/HC Field-Equation Refactor
+% Internal research branch only. Not a public v4.7.0 mutation.
+
+\section{Planck-Readout Metric Layer}
+\label{sec:v480-r01-planck-readout-metric-layer}
+
+\begin{quote}\small
+\noindent\textbf{Status.} Internal v4.8.0-r01 research branch. This section is a
+conservative readout-calibration layer. It does not alter the public v4.7.0
+release, does not assert global T2 closure, and does not promote negative length
+as a physical observable.
+\end{quote}
+
+\begin{definition}[Readout-calibrated effective Planck scale]
+Let $R$ be an admissible readout/interface mode and let $\lambda_R$ denote the
+local calibration factor induced by the MM/HC/QAM transport from the structural
+interface to the physical readout. The effective Planck scale seen by $R$ is
+\[
+    \ell_{\mathrm{eff}}(R) := \ell_P\,\lambda_R .
+\]
+If $\lambda_R>0$, the readout preserves length orientation. If $\lambda_R<0$,
+the sign is read as orientation, phase, or order reversal at the interface level,
+not as a negative physical distance.
+\end{definition}
+
+\begin{remark}[Why the raw Planck ruler need not be invariant below physics]
+The usual Planck length is a stabilized physical-readout scale. In the present
+structure-first language, the lower information/interface layer need not carry
+the same raw ruler. It carries a transport law whose physical projection may
+reconstruct $\ell_P$ after calibration. Thus the invariant object is not the
+unqualified number $\ell_P$ in every layer, but the guarded recovery of the
+physical Planck scale under an admissible readout.
+\end{remark}
+
+\begin{lemma}[Matter readout recovery]
+Assume that $R_{\mathrm m}$ is a stable matter readout and that its calibration
+factor satisfies
+\[
+    0 < \lambda_{R_{\mathrm m}} = 1 + \varepsilon_{\mathrm m},
+    \qquad |\varepsilon_{\mathrm m}| \leq \delta_{\mathrm m} .
+\]
+Then
+\[
+    \ell_{\mathrm{eff}}(R_{\mathrm m})
+    = \ell_P(1+\varepsilon_{\mathrm m})
+\]
+recovers the ordinary Planck scale up to the declared local calibration error.
+\end{lemma}
+
+\begin{proof}
+This is immediate from the definition of $\ell_{\mathrm{eff}}(R)$ and the
+bounded calibration assumption. No global statement is used.
+\end{proof}
+
+\begin{lemma}[Opposite-orientation readout]
+Assume that $R_{\tau}$ is a tachyon/opposite-orientation readout with
+\[
+    \lambda_{R_{\tau}} = -\mu_{R_{\tau}},
+    \qquad \mu_{R_{\tau}}>0 .
+\]
+Then
+\[
+    \ell_{\mathrm{eff}}(R_{\tau}) = -\ell_P\mu_{R_{\tau}}
+\]
+is an oriented interface length. Its observable magnitude is
+\[
+    |\ell_{\mathrm{eff}}(R_{\tau})|=\ell_P\mu_{R_{\tau}},
+\]
+so the negative sign records orientation/phase/order reversal rather than a
+negative physical distance.
+\end{lemma}
+
+\begin{proof}
+The statement separates the signed interface coordinate from the positive metric
+magnitude. The sign is therefore part of the readout grammar, while the physical
+length magnitude remains non-negative.
+\end{proof}
+
+\begin{remark}[Connection to two-sided structural tensor notation]
+Using the two-sided notation, the same calibration can be recorded schematically as
+\[
+    {}^{R}{}_{\mathrm{phys}}\mathcal T^{\mathrm{struct}}{}_{\mathrm{HC/MM}}
+\]
+where the left indices encode the readout-facing interface and the right indices
+encode the structure/action-facing transport. Ordinary upper--lower contractions
+remain classical readouts; same-variance comparisons remain guarded by explicit
+comparison tensors.
+\end{remark}
+
+\begin{remark}[No global closure claim]
+This section does not prove exact through-collapse transport, exact all-readout
+terminality, C6/T2 closure, or a global photon-clock/RH theorem. It only defines
+a local readout-calibrated length grammar suitable for later MM/HC field-equation
+refactoring.
+\end{remark}
