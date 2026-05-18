@@ -46,6 +46,8 @@ def load_json(path: Path) -> Dict[str, Any]:
     try:
         with path.open("r", encoding="utf-8") as f:
             data = json.load(f)
+    except JSONDecodeError as exc:  # type: ignore[name-defined]
+        raise ZenodoError(f"Invalid JSON in {path}: {exc}") from exc
     except json.JSONDecodeError as exc:
         raise ZenodoError(f"Invalid JSON in {path}: {exc}") from exc
     if not isinstance(data, dict):
@@ -73,11 +75,11 @@ def validate_metadata(payload: Dict[str, Any]) -> None:
             raise ZenodoError("each creator must be an object with a non-empty 'name'")
 
 
-def expand_files(patterns: Iterable[str]) -> List[Path]:
+def expand_files(patterns: Iterable[str], *, allow_missing: bool = False) -> List[Path]:
     files: List[Path] = []
     for pattern in patterns:
         matches = sorted(Path(p) for p in glob.glob(pattern))
-        if not matches:
+        if not matches and not allow_missing:
             raise ZenodoError(f"File pattern matched nothing: {pattern}")
         files.extend(p for p in matches if p.is_file())
     unique: Dict[str, Path] = {}
@@ -142,6 +144,9 @@ def token_from_env(env_name: str) -> str:
 
 
 def print_manifest(files: List[Path]) -> None:
+    if not files:
+        print("Upload manifest: no files selected")
+        return
     print("Upload manifest:")
     for path in files:
         print(f"  {path}  size={path.stat().st_size}  sha256={sha256_file(path)}")
@@ -164,7 +169,7 @@ def publish_deposition(api_base: str, token: str, deposition_id: str) -> Dict[st
 def main() -> int:
     parser = argparse.ArgumentParser(description="Create/update/publish a Zenodo deposition.")
     parser.add_argument("--metadata", required=True, help="Path to Zenodo metadata JSON")
-    parser.add_argument("--files", nargs="+", required=True, help="File paths or glob patterns to upload")
+    parser.add_argument("--files", nargs="*", default=[], help="File paths or glob patterns to upload")
     parser.add_argument("--environment", choices=["sandbox", "production"], default="sandbox")
     parser.add_argument("--token-env", default=None, help="Environment variable containing the token")
     parser.add_argument("--deposition-id", default=None, help="Existing draft deposition ID to update")
@@ -179,7 +184,7 @@ def main() -> int:
 
     payload = normalize_metadata(load_json(Path(args.metadata)))
     validate_metadata(payload)
-    files = expand_files(args.files)
+    files = expand_files(args.files, allow_missing=args.dry_run)
 
     print(f"Zenodo environment: {args.environment}")
     print(f"API base: {api_base}")
@@ -189,8 +194,13 @@ def main() -> int:
     if args.publish and not args.confirm_publish:
         raise ZenodoError("--publish requires --confirm-publish")
 
+    if not args.dry_run and not files:
+        raise ZenodoError("Non-dry-run requires at least one upload file")
+
     if args.dry_run:
-        print("Dry-run only: no Zenodo API mutation performed.")
+        print("Dry-run only: metadata validated; no Zenodo API mutation performed.")
+        if not files:
+            print("Note: no files were present. Add release files before non-dry-run upload.")
         return 0
 
     token = token_from_env(token_env)
