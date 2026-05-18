@@ -1,0 +1,36 @@
+% Smoke-test wrapper for QSC v4.8.0-r01 research candidate.
+% Purpose: compile the candidate section in isolation before active-core insertion.
+% This file is research-only and does not mutate the public v4.7.0 payload.
+
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{geometry}
+\usepackage{hyperref}
+
+\geometry{margin=1in}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\title{QSC v4.8.0-r01 Smoke Test\\Planck-Readout Metric Layer}
+\author{Internal research wrapper}
+\date{2026-05-18}
+
+\begin{document}
+\maketitle
+
+\begin{quote}\small
+This wrapper exists only to test whether the candidate section compiles in an
+isolated LaTeX environment. It is not an active-core insertion, not a public
+release payload, and not a mathematical upgrade beyond the candidate file.
+\end{quote}
+
+\input{planck_readout_metric_layer_candidate.tex}
+
+\end{document}
