@@ -1,0 +1,37 @@
+{
+  "title": "Quantum Sphaera Companion: A Structure-First Mathematical Unfolding",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "creators": [
+    {
+      "name": "Brendecke, Marc",
+      "affiliation": "Independent Researcher, Bochum"
+    }
+  ],
+  "description": "<p>Quantum Sphaera Companion v4.7.0 release.</p><p>This release records the guarded v4.7.0 version of the Quantum Sphaera Companion after the conservative compression pass, concept-DOI restoration, full-monolith recovery, reference/metadata hygiene, and final PDF compile audit.</p><p>Main release-facing result: v4.7.0 formalizes a guarded local/restricted/effective closure layer for the Quantum Sphaera Companion framework. The release records the conservative relative-seam neutralization of the C4 obstruction, the detector-threshold terminality of the C5 collar at theta = 1/256 after n = 20, local photon-clock selector preservation under Delta_gamma &lt; 1/5, local typed mixed-comparison control, terminal-data bridge semantics, restricted terminal-data naturality, and the terminal-blocker freeze distinguishing terminal-data zero from exact all-readout zero.</p><p>The v4.7.0 release also introduces the matter-frame epsilon-terminality interpretation and the tachyon-frame signed-scale separation. In this framing, matter-frame closure is treated as effective epsilon-terminality rather than exact all-readout zero, while tachyon/information-frame scale is represented as a spacelike or signed norm rather than as a negative material length.</p><p><strong>Scope guard:</strong> this is a guarded local/restricted/effective release. It does not claim exact finite C5 zero closure, exact all-readout terminality, C6/T2 closure, a global photon-clock or Riemann-Hypothesis theorem, or global all-readout closure. The release should be read as an effective/local frame-typed closure and metadata-clean release, not as a global TOE-closure claim.</p><p>Version DOI: 10.5281/zenodo.20232911<br>Concept DOI: 10.5281/zenodo.19210728<br>Previous/baseline DOI: 10.5281/zenodo.20117361</p>",
+  "version": "v4.7.0",
+  "language": "eng",
+  "license": "cc-by-4.0",
+  "keywords": [
+    "Quantum Sphaera",
+    "structure-first mathematics",
+    "effective closure",
+    "frame-typed readouts",
+    "local closure",
+    "mathematical physics",
+    "preprint"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.19210728",
+      "relation": "isVersionOf",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.20117361",
+      "relation": "isNewVersionOf",
+      "scheme": "doi"
+    }
+  ],
+  "notes": "Guarded local/restricted/effective scope only. This release does not claim global all-readout closure, C6/T2 closure, exact finite C5 zero closure, exact all-readout terminality, or a global photon-clock/RH theorem."
+}
