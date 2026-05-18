@@ -77,7 +77,16 @@ jobs:
           echo "publish=${{ inputs.publish }}"
           echo "confirm_publish=${{ inputs.confirm_publish }}"
           test -f "${{ inputs.metadata }}"
-          compgen -G "${{ inputs.files_glob }}" >/dev/null
+
+          if ! compgen -G "${{ inputs.files_glob }}" >/dev/null; then
+            if [[ "${{ inputs.dry_run }}" == "true" ]]; then
+              echo "No files matched ${{ inputs.files_glob }}; allowed for metadata-only dry-run."
+            else
+              echo "No files matched ${{ inputs.files_glob }}; non-dry-run upload requires files." >&2
+              exit 2
+            fi
+          fi
+
           if [[ "${{ inputs.publish }}" == "true" && "${{ inputs.confirm_publish }}" != "true" ]]; then
             echo "publish=true requires confirm_publish=true" >&2
             exit 2
