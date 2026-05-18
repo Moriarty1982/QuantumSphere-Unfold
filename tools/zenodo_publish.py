@@ -46,8 +46,6 @@ def load_json(path: Path) -> Dict[str, Any]:
     try:
         with path.open("r", encoding="utf-8") as f:
             data = json.load(f)
-    except JSONDecodeError as exc:  # type: ignore[name-defined]
-        raise ZenodoError(f"Invalid JSON in {path}: {exc}") from exc
     except json.JSONDecodeError as exc:
         raise ZenodoError(f"Invalid JSON in {path}: {exc}") from exc
     if not isinstance(data, dict):
