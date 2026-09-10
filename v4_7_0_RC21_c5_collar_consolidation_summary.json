@@ -1,0 +1,69 @@
+{
+  "rc": "RC21",
+  "basis": "RC20 source with r86 C5 asymptotic-collar bookkeeping consolidation",
+  "round": "r86",
+  "branch": "Q5 of the r48 queue",
+  "supersedes": "RC20",
+  "toolchain": "MiKTeX 25.12 pdfLaTeX",
+  "pages": 1019,
+  "latex_passes": 3,
+  "latex_errors": 0,
+  "version_doi": "10.5281/zenodo.20232911",
+  "concept_doi": "10.5281/zenodo.19210728",
+  "previous_baseline_doi": "10.5281/zenodo.20117361",
+  "expired_doi": "10.5281/zenodo.20181842",
+  "titlepage_version_doi_visible_lines": 1,
+  "titlepage_concept_doi_visible_lines": 1,
+  "pdf_version_doi_hits": 6,
+  "pdf_concept_doi_hits": 9,
+  "pdf_previous_baseline_doi_hits": 15,
+  "expired_doi_hits_pdf": 0,
+  "undefined_refs": 0,
+  "undefined_citations": 0,
+  "duplicate_label_warnings": 0,
+  "rerun_warnings": 0,
+  "overfull_hbox_warnings": 58,
+  "labels_total": 3305,
+  "comparison_same_toolchain": {
+    "rc19": {"pages": 1014, "labels_total": 3290, "overfull_hbox_warnings": 58},
+    "rc20": {"pages": 1016, "labels_total": 3296, "overfull_hbox_warnings": 58},
+    "rc21": {"pages": 1019, "labels_total": 3305, "overfull_hbox_warnings": 58}
+  },
+  "overfull_baseline_note": "The RC19 report records 45; the same source under MiKTeX 25.12 yields 58. Toolchain effect, not a regression. RC19, RC20 and RC21 all yield 58 here.",
+  "r86_results": {
+    "collar_recursion": "Phi_5^(n+1) = (3/4) Phi_5^(n), Phi_5^(n) = (3/4)^n",
+    "threshold_function": "n_min(theta) = ceil(log_{4/3}(1/theta))",
+    "threshold_verification": "exact rational arithmetic vs brute force over 40 thresholds, 0 deviations",
+    "threshold_at_1_over_256": 20,
+    "halving_cost_stages": 2.409421,
+    "finite_zero_exclusion": "no finite N with Phi^(N)=0 for any q in (0,1) with Phi^(0)>0; depends on q>0 only, not on q=3/4",
+    "status_split": {
+      "a_finite_stage_in_declared_recursion": "Excluded_rec",
+      "b_route_outside_multiplicative_collar": "Open_undecided"
+    },
+    "new_classes_introduced": ["Excluded_rec", "Open_undecided"],
+    "search_directions": [
+      "subtractive channel Phi^(n+1) = q Phi^(n) - c with its own guard",
+      "truncation rule (forbidden by the r11 limit guard)",
+      "object unrelated to the collar iteration"
+    ]
+  },
+  "guard_state": {
+    "R_glob": [0, 1, 1, 1, 1],
+    "Gamma_guard": [1, 1, 1, 1, 1],
+    "R_eff_local": [0, 0, 0, 0, 0],
+    "R_exact_global": [1, 1, 1, 1, 1]
+  },
+  "guard_note": "r86 spends no guard; it strengthens the justification of the standing C5 guard.",
+  "claim_scope": "guarded effective/local and frame-typed closures, not exact global closure",
+  "queue_state": {
+    "Q1": "discharged (r49-r54)",
+    "Q2": "discharged (r55-r80)",
+    "Q3": "open, guard-neutral",
+    "Q4": "inadmissible while beta_4 = 1/256 stays unspent",
+    "Q5": "discharged (r86)"
+  },
+  "main_paper_divergence": "unity theorem item (vi) unchanged in brendecke2026main (10.5281/zenodo.19210213)",
+  "public_release_performed": false,
+  "new_doi_requested": false
+}

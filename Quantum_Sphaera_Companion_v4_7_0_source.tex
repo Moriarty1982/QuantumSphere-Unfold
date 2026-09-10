@@ -63337,4 +63337,225 @@ rule is otherwise unchanged: compact-titlepage discipline and final-handoff nami
 no public release is authorized by r85 itself.
 
 
+% ============================================================================
+\clearpage
+\section*{v4.7.0-r86 Source-Only: C5 Asymptotic-Collar Bookkeeping Consolidation}
+\addcontentsline{toc}{section}{v4.7.0-r86 Source-Only: C5 Asymptotic-Collar Bookkeeping Consolidation}
+\label{sec:r86-c5-asymptotic-collar-bookkeeping}
+% ============================================================================
+
+\paragraph{Purpose.}
+This layer executes branch \(Q_5\) of the r48 queue.  The C5 collar facts are currently
+spread over r04--r13 and the compressed r55--r80 chain, and the r83 table lists
+\(C5_{\rm zero}\) as \(\mathsf{Open}_{\rm exact/global}\) with the reason
+``\(\nexists N<\infty:\Phi_5^{(N)}=0\)''.  Consolidating the bookkeeping shows that this
+entry mixes two different things: a question that the declared recursion answers, and a
+question that it does not reach at all.  Separating them is the whole content of r86.  No
+new mathematical result is produced; the gain is in classification.
+
+\noindent\textbf{Source-only status.}
+This r86 layer is source-only.  It does not build a PDF, does not assign a new DOI, and does
+not authorize a public release.  The intended reserved v4.7.0 Version DOI remains
+\href{https://doi.org/10.5281/zenodo.20232911}{10.5281/zenodo.20232911}.
+
+\subsection*{r86 collar inventory}
+\label{subsec:r86-collar-inventory}
+
+The declared C5 collar data, collected:
+\[
+\begin{array}{l|l|l}
+\text{object} & \text{content} & \text{origin}\\
+\hline
+\mathcal D_5^{\rm bd} & \text{bounded finite-stage collar domain} &
+\text{Def.~\ref{def:v470-r09-bounded-c5-operator-domain}}\\
+\mathcal U_5^{\rm bd} & \Phi\mapsto\tfrac34\Phi \text{ on }\mathcal D_5^{\rm bd} &
+\text{Def.~\ref{def:v470-r09-bounded-c5-operator-domain}}\\
+\text{admissibility} & \mathcal U_5^{\rm bd}\text{ preserves }\mathcal D_5^{\rm bd} &
+\text{Lem.~\ref{lem:v470-r09-c5-finite-stage-admissibility}}\\
+\Phi_5^{(n)} & (3/4)^n\text{ with }\Phi_5^{(0)}=1 &
+\text{Thm.~\ref{thm:v470-r09-c5-bounded-operator-theorem}}\\
+\text{finite positivity} & \Phi_5^{(n)}>0\ \forall n<\infty &
+\text{Lem.~\ref{lem:v470-r11-finite-positive-guard}}\\
+\mathsf{LG}_5^{\rm bd} & \text{limit may not replace a finite stage} &
+\text{Def.~\ref{def:v470-r11-bounded-collar-limit-guard}}\\
+\varepsilon\text{-use rule} & \varepsilon\text{-smallness allowed, promotion not} &
+\text{Prop.~\ref{prop:v470-r11-asymptotic-use-guard}}\\
+C5_{\rm det/eff} & \text{detector zero at }\theta=1/256,\ n=20 &
+\text{r63--r64, compressed}
+\end{array}
+\]
+
+Everything in this table is inherited.  r86 adds no entry to it.
+
+\subsection*{r86 threshold function}
+\label{subsec:r86-threshold-function}
+
+The detector threshold is currently recorded only at the single point
+\(\theta=1/256\), \(n=20\).  It is a value of a function, and writing that function down
+costs nothing.
+
+\paragraph{Theoremlet r86.1.}
+For a detector threshold \(\theta\in(0,1)\), the least declared bounded stage at which the
+collar score falls to or below \(\theta\) is
+\[
+n_{\min}(\theta)
+=\left\lceil \log_{4/3}\!\frac1\theta \right\rceil
+=\left\lceil \frac{\ln(1/\theta)}{\ln(4/3)} \right\rceil .
+\]
+In particular \(n_{\min}(1/256)=20\), and each halving of the threshold costs
+\(\ln 2/\ln(4/3)=2.4094\ldots\) further stages.
+
+\paragraph{Proof.}
+By Theorem~\ref{thm:v470-r09-c5-bounded-operator-theorem},
+\(\Phi_5^{(n)}=(3/4)^n\).  Since \(\ln(3/4)<0\), the condition
+\((3/4)^n\le\theta\) is equivalent to \(n\ln(3/4)\le\ln\theta\), that is
+\(n\ge\ln(1/\theta)/\ln(4/3)\); the least such integer is the stated ceiling.  For
+\(\theta=2^{-8}\) this is \(\lceil 8\ln 2/\ln(4/3)\rceil=\lceil 19.276\ldots\rceil=20\),
+which agrees with the inherited r63--r64 detector stage.  The halving cost is
+\(\log_{4/3}2\). \(\square\)
+
+\paragraph{Remark.}
+The agreement at \(\theta=1/256\) is a consistency check on the inherited chain, not a new
+claim: \((3/4)^{19}=0.004228\ldots>1/256\) while \((3/4)^{20}=0.003171\ldots\le 1/256\).
+
+\subsection*{r86 finite-zero exclusion}
+\label{subsec:r86-finite-zero-exclusion}
+
+\paragraph{Theoremlet r86.2.}
+Let \(\Phi^{(n+1)}=q\,\Phi^{(n)}\) be any purely multiplicative collar recursion with
+\(q\in(0,1)\) and \(\Phi^{(0)}>0\).  Then
+\[
+\nexists\,N<\infty:\ \Phi^{(N)}=0 .
+\]
+The conclusion depends only on \(q>0\), not on the particular value \(q=3/4\).
+
+\paragraph{Proof.}
+\(\Phi^{(n)}=q^{n}\Phi^{(0)}\) is a product of finitely many strictly positive factors and is
+therefore strictly positive for every finite \(n\). \(\square\)
+
+\paragraph{Why this is worth recording.}
+The proof is immediate and the statement is already implicit in
+Remark~\ref{rem:v470-r09-not-c5-closure} and
+Lemma~\ref{lem:v470-r11-finite-positive-guard}.  What has not been recorded is its
+\emph{status consequence}.  ``No finite \(N\) with \(\Phi_5^{(N)}=0\)'' has been carried as
+the reason for an \emph{open} entry, as though a finite closure might still be found by
+working harder inside the collar.  Theoremlet r86.2 shows the opposite: inside the declared
+recursion the answer is settled, and settled negatively.  Searching for a finite collar stage
+that discharges C5 is not a hard open problem but a provably empty search.
+
+The exclusion is also robust in a useful way.  Because it turns on \(q>0\) alone, no
+refinement of the contraction factor can help: replacing \(3/4\) by any smaller positive
+factor accelerates the decay and changes \(n_{\min}\), but leaves the exclusion untouched.
+
+\subsection*{r86 status refinement}
+\label{subsec:r86-status-refinement}
+
+The r83 classes are \(\mathsf{Closed}_{\rm eff/local}\), \(\mathsf{Closed}_{\rm typed}\) and
+\(\mathsf{Open}_{\rm exact/global}\).  The last of these conflates two situations.  We
+separate them:
+\[
+\mathsf{Excluded}_{\rm rec}
+\quad\text{versus}\quad
+\mathsf{Open}_{\rm undecided}.
+\]
+\(\mathsf{Excluded}_{\rm rec}\) means: inside the declared structure the question has an
+answer, and the answer is negative.  \(\mathsf{Open}_{\rm undecided}\) means: the declared
+structure does not reach the question at all.
+
+Applying this to \(C5_{\rm zero}\) splits it into two independent questions:
+\[
+\begin{array}{c|l|c}
+& \text{question} & \text{r86 status}\\
+\hline
+(a) & \text{does }\mathcal U_5^{\rm bd}\text{ reach zero at a finite stage?} &
+\mathsf{Excluded}_{\rm rec}\\
+(b) & \text{is there a route to }C5=0\text{ outside the multiplicative collar?} &
+\mathsf{Open}_{\rm undecided}
+\end{array}
+\]
+Thus the r86 C5 decision datum is
+\[
+\mathsf D_{C5}^{r86}=\bigl(\mathsf{Excluded}_{\rm rec},\ \mathsf{Open}_{\rm undecided}\bigr).
+\]
+
+This is a refinement of the record, not a change of result.  \(C5=0\) remains unproved and
+remains a forbidden assertion; question (b) is exactly the part that was never addressed, and
+it is now stated as the open question in its own right rather than hidden inside (a).
+
+\subsection*{r86 search direction}
+\label{subsec:r86-search-direction}
+
+Theoremlet r86.2 also says what a finite discharge would have to look like.  Since the
+exclusion follows from multiplicativity together with positivity of the factor, any candidate
+mechanism must leave that form.  The admissible shapes are:
+\[
+\begin{array}{c|l|l}
+\text{shape} & \text{modification} & \text{what it would require}\\
+\hline
+\text{(i)} & \Phi^{(n+1)}=q\Phi^{(n)}-c,\ c>0 &
+\text{a declared subtractive channel with its own guard}\\
+\text{(ii)} & \Phi^{(n+1)}=0\text{ for }\Phi^{(n)}<\delta &
+\text{a truncation rule; not admissible under }\mathsf{LG}_5^{\rm bd}\\
+\text{(iii)} & \text{a non-collar object} &
+\text{a separate witness, unrelated to }\mathcal U_5^{\rm bd}
+\end{array}
+\]
+Shape (ii) is precisely what the r11 limit guard forbids, and r86 does not reopen it.
+Shape (i) would need a subtractive term that is not currently declared anywhere in the
+bounded--exterior--mixed grammar.  Shape (iii) is the honest reading of question (b): a
+finite C5 discharge, if one exists, will not come from the collar iteration.
+
+Nothing in r86 supplies any of the three.  The layer states the search space; it does not
+enter it.
+
+\subsection*{r86 ledger}
+\label{subsec:r86-ledger}
+
+The consolidation closes cleanly:
+\[
+R_{\rm cons}^{r86}=(0,0,0,0)
+\]
+for the four consolidated items
+\[
+(\text{inventory},\ \text{threshold function},\ \text{finite-zero exclusion},
+\ \text{status split}).
+\]
+The exact/global ledger is unchanged, because question (b) remains unanswered:
+\[
+R_{\rm exact/global}^{r86}=(1,1,1,1,1).
+\]
+The first component keeps the value \(1\), now with a sharper reason: not ``no finite
+closure has been found'' but ``no finite closure exists inside the declared recursion, and
+no route outside it has been declared''.
+
+\subsection*{r86 guard update}
+\label{subsec:r86-guard-update}
+
+r86 spends no guard.  It strengthens the justification of the standing C5 guard rather than
+consuming it:
+\[
+R_{\rm glob}^{(r86,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{r86}=(1,1,1,1,1),
+\qquad
+R_{\rm eff/local}^{r86}=(0,0,0,0,0).
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.  The
+detector-threshold result \(C5_{\rm det/eff}\) is unaffected and remains
+\(\mathsf{Closed}_{\rm eff/local}\) at \(\theta=1/256\), \(n=20\).
+
+\subsection*{r86 queue update}
+\label{subsec:r86-queue-update}
+
+Branch \(Q_5\) of the r48 queue is discharged as a bookkeeping task.  The remaining
+guard-neutral branch is
+\[
+Q_3:\ \text{photon-clock selector-window calibration},
+\]
+which would sharpen the provenance of the bound \(\Delta_\gamma<1/5\) carried by
+\(W_{\rm clk}^{\rm loc}\).  \(Q_4\) remains inadmissible while \(\beta_4=1/256\) is to stay
+unspent.
+
+
 \end{document}
