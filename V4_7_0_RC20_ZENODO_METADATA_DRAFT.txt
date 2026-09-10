@@ -1,0 +1,38 @@
+Title:
+Quantum Sphaera Companion: A Structure-First Mathematical Unfolding
+
+Version:
+4.7.0
+
+Version DOI:
+10.5281/zenodo.20232911
+
+Creators:
+Marc Brendecke
+Independent Researcher, Bochum, Germany
+
+Description:
+Version 4.7.0 of the Quantum Sphaera Companion is a guarded, structure-first full-monolith release. It preserves the full proof/provenance spine while conservatively compressing release-safe audit and solve-pass layers. The release formalizes local/restricted/effective closure results, including conservative relative-seam treatment of the C4 obstruction, detector-threshold terminality for C5 at theta=1/256 after n=20, local photon-clock selector preservation under Delta_gamma<1/5, typed mixed-comparison local control, terminal-data and restricted naturality layers, matter-frame epsilon terminality, tachyon-frame signed-scale separation, and effective/local closure reclassification.
+
+The r85 layer adds two source repairs found by a systematic cross-reference audit against the two cited source papers. Two passages that supported the Stone-von Neumann step with the wrong theorem number now cite the correct location, and the gauge group U(1)xSU(2)xSU(3) has been moved out of the unitary-equivalence list of the central unity theorem into a separate consequence, since a Lie group is not a Hilbert-space representation of the Weyl algebra and no Stone-von Neumann equivalence can be asserted for it. Both repairs narrow what is asserted; no result is withdrawn and the gauge-structure theorem is unchanged.
+
+The release explicitly does not claim exact finite C5 zero closure, exact all-readout terminality, C6/T2 closure, a global photon-clock/RH theorem, or global all-readout closure. The previous/baseline DOI 10.5281/zenodo.20117361 is retained only as provenance.
+
+Files:
+- Quantum_Sphaera_Companion_v4_7_0_r85.pdf
+- Quantum_Sphaera_Companion_v4_7_0_source.tex
+
+Keywords:
+Quantum Sphaera; structure-first mathematics; guarded effective closure; QAM; MML; Heisenberg compensator; Millennium Matrix; photon-clock selector; matter-frame epsilon terminality; tachyon-frame signed scale; terminal-data naturality; local readout closure
+
+Concept DOI: 10.5281/zenodo.19210728
+
+DOI records for upload:
+- Version DOI: 10.5281/zenodo.20232911
+- Concept DOI: 10.5281/zenodo.19210728
+- Previous/baseline DOI: 10.5281/zenodo.20117361
+
+Note:
+This is a draft for a future upload decision. RC20 does not authorize a public release.
+On an actual release the PDF would be renamed from Quantum_Sphaera_Companion_v4_7_0_r85.pdf
+to the release filename.

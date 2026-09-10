@@ -1,0 +1,58 @@
+{
+  "rc": "RC20",
+  "basis": "RC19 final PDF compile source with r85 citation repair and unity-theorem scope separation",
+  "round": "r85",
+  "toolchain": "MiKTeX 25.12 pdfLaTeX",
+  "pages": 1016,
+  "latex_passes": 3,
+  "latex_errors": 0,
+  "version_doi": "10.5281/zenodo.20232911",
+  "concept_doi": "10.5281/zenodo.19210728",
+  "previous_baseline_doi": "10.5281/zenodo.20117361",
+  "expired_doi": "10.5281/zenodo.20181842",
+  "titlepage_version_doi_visible_lines": 1,
+  "titlepage_concept_doi_visible_lines": 1,
+  "pdf_version_doi_hits": 5,
+  "pdf_concept_doi_hits": 9,
+  "pdf_previous_baseline_doi_hits": 15,
+  "expired_doi_hits_pdf": 0,
+  "undefined_refs": 0,
+  "undefined_citations": 0,
+  "duplicate_label_warnings": 0,
+  "rerun_warnings": 0,
+  "overfull_hbox_warnings": 58,
+  "labels_total": 3296,
+  "rc19_rebuilt_same_toolchain": {
+    "pages": 1014,
+    "labels_total": 3290,
+    "overfull_hbox_warnings": 58,
+    "undefined_refs": 0,
+    "pdf_version_doi_hits": 4,
+    "pdf_concept_doi_hits": 9
+  },
+  "overfull_baseline_note": "The RC19 report records 45; the same source under MiKTeX 25.12 yields 58. Toolchain effect, not a regression. RC19 and RC20 both yield 58 here, so r85 adds no overfull box.",
+  "citation_sweep": {
+    "numbered_references_checked": 9,
+    "numbered_mismatches": 0,
+    "symbolic_references": 7,
+    "sources": [
+      "brendecke2026rh = riemann_arxiv_v4__15_.tex",
+      "brendecke2026main = quantum_sphaera_v3_1_4_monolith_stable_main.tex"
+    ]
+  },
+  "repairs": [
+    "proof of Theorem Unity of the Sphaera: Theorem 3.2 -> Lemma 13.2 Step 3",
+    "GUE universality argument: Theorem 3.2 -> Proposition 13.1 and Lemma 13.2 Step 3",
+    "unity theorem item (vi) gauge group moved out of the unitary-equivalence list"
+  ],
+  "guard_state": {
+    "R_glob": [0, 1, 1, 1, 1],
+    "Gamma_guard": [1, 1, 1, 1, 1],
+    "R_eff_local": [0, 0, 0, 0, 0],
+    "R_exact_global": [1, 1, 1, 1, 1]
+  },
+  "claim_scope": "guarded effective/local and frame-typed closures, not exact global closure",
+  "main_paper_divergence": "unity theorem item (vi) unchanged in brendecke2026main (10.5281/zenodo.19210213)",
+  "public_release_performed": false,
+  "new_doi_requested": false
+}

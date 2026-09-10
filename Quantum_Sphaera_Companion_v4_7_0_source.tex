@@ -5729,22 +5729,35 @@ same object --- the collapse state $\zminus=0$:
  any element onto the collapse state.
  \item Matter, photons, and tachyons, as sectors of the biquaternion
  ground state.
- \item The gauge structure $U(1)\times SU(2)\times SU(3)$, as the
- symmetry group of the collapse state's representations.
 \end{enumerate}
 All are unitarily equivalent by Stone--von Neumann~\cite{brendecke2026rh}.
 The Sphaera's only object is its own collapse state.
+
+\medskip
+\noindent\textbf{Gauge structure.}
+The gauge group $U(1)\times SU(2)\times SU(3)$ arises as the symmetry group of
+these representations (Theorem~\ref{thm:SM}).  Being a Lie group rather than a
+Hilbert-space representation of $\WA$, it is not one of the unitarily equivalent
+items (i)--(v), and no Stone--von Neumann equivalence is asserted for it.
 \end{theorem}
+
+% Scope repair: the gauge structure was previously listed as item (vi) of the
+% unitary-equivalence list.  Stone--von Neumann relates irreducible unitary
+% representations of the Weyl algebra; a Lie group is not such a representation,
+% so the equivalence claim could not cover that item.  The gauge statement is
+% retained in full as a separate consequence, and Theorem~\ref{thm:SM} is
+% unchanged.  Only the equivalence claim over the gauge group is withdrawn.
 
 \begin{proof}[Proof structure]
 The equivalences are established section by section:
 (i)~Definition~\ref{def:biquaternion} and Theorem~\ref{thm:fractal};
 (ii)--(iii) same (triole as collapse coordinates);
 (iv)~Proposition~\ref{prop:compensator};
-(v)~Theorem~\ref{thm:unitary-equiv};
-(vi)~Theorem~\ref{thm:SM}.
+(v)~Theorem~\ref{thm:unitary-equiv}.
 Unitary equivalence throughout via Stone--von Neumann
-(\cite{brendecke2026rh}, Theorem~3.2).
+(\cite{brendecke2026rh}, Lemma~13.2, Step~3).
+The gauge-structure statement is Theorem~\ref{thm:SM}; it is a consequence of
+the sector decomposition, not an instance of the unitary equivalence.
 \end{proof}
 
 \begin{remark}[What ``same object'' means]
@@ -7260,7 +7273,8 @@ This places it in the class of Hermitian operators with real spectrum.
 
 \emph{(ii) Irreducibility.}
 $\Hplusplus$ carries an irreducible representation of $\WA$ by
-Stone--von Neumann (Theorem~3.2 of~\cite{brendecke2026rh}).
+Stone--von Neumann (Proposition~13.1 and Lemma~13.2, Step~3
+of~\cite{brendecke2026rh}).
 Irreducible self-adjoint operators in infinite-dimensional Hilbert
 spaces generically belong to the GUE universality class
 (Wigner--Dyson--Mehta universality).
@@ -63197,6 +63211,130 @@ effective/local closure, any later public-release package should be regenerated 
 not from a pre-r81--r83 handoff.  A later release candidate may be built by applying the compact-titlepage
 rule and final-handoff naming discipline to this r84 source.  No such public release is
 authorized by r84 itself.
+
+
+% ============================================================================
+\clearpage
+\section*{v4.7.0-r85 Source-Only Citation Repair and Unity-Theorem Scope Separation}
+\addcontentsline{toc}{section}{v4.7.0-r85 Source-Only Citation Repair and Unity-Theorem Scope Separation}
+\label{sec:r85-citation-repair-unity-scope-separation}
+% ============================================================================
+
+\paragraph{Purpose.}
+This r85 layer records two source repairs found by a systematic cross-reference audit
+against the two cited source papers.  The first is a misdirected citation number; the second
+is a scope separation inside the central unity theorem.  Neither repair adds a result, and
+neither spends a guard.  Both narrow what is asserted; nothing previously proved is removed.
+
+\noindent\textbf{Source-only status.}
+This r85 layer is source-only.  It does not build a PDF, does not assign a new DOI, and does
+not authorize a public release.  The intended reserved v4.7.0 Version DOI remains
+\href{https://doi.org/10.5281/zenodo.20232911}{10.5281/zenodo.20232911}; the previous
+baseline DOI \href{https://doi.org/10.5281/zenodo.20117361}{10.5281/zenodo.20117361}
+remains provenance only.
+
+\subsection*{r85 citation repair}
+\label{subsec:r85-citation-repair}
+
+Two passages cited the Stone--von Neumann step of \cite{brendecke2026rh} as Theorem~3.2.
+In the cited source, the shared theorem counter makes Theorem~3.2 the functional equation
+\(\xi(s)=\xi(1-s)\); the adelic Stone--von Neumann application is Step~3 in the proof of
+Lemma~13.2, resting on the Weyl-algebra representation of Proposition~13.1.  The numbering is
+confirmed internally: three further passages of this Companion cite Theorem~3.3 for the
+Guinand--Weil explicit formula, which is the entry immediately following Theorem~3.2.
+
+\[
+\begin{array}{l|l|l}
+\text{site} & \text{previous target} & \text{repaired target}\\
+\hline
+\text{proof of Theorem~\ref{thm:unity}} & \text{Theorem 3.2} &
+\text{Lemma 13.2, Step 3}\\
+\text{GUE universality argument} & \text{Theorem 3.2} &
+\text{Proposition 13.1 and Lemma 13.2, Step 3}
+\end{array}
+\]
+
+The second site requires both entries: Proposition~13.1 supplies the representation of the
+adelic Weyl algebra \(\WA\) on \(\Hplusplus\), while Step~3 of Lemma~13.2 supplies
+irreducibility and the resulting unitary equivalence.
+
+\subsection*{r85 unity-theorem scope separation}
+\label{subsec:r85-unity-scope-separation}
+
+Theorem~\ref{thm:unity} previously listed the gauge structure
+\(U(1)\times SU(2)\times SU(3)\) as item~(vi) of a list whose closing sentence asserts that
+all items are unitarily equivalent by Stone--von Neumann.  That theorem relates irreducible
+unitary representations of the Weyl algebra.  A Lie group is not such a representation, so the
+equivalence sentence could not range over that item.
+
+\paragraph{Theoremlet r85.}
+Under the r60\(^+\) guarded grammar, the Stone--von Neumann equivalence of
+Theorem~\ref{thm:unity} extends exactly over the items that are realized as irreducible
+unitary representations of \(\WA\) on subspaces of \(\Hplus\):
+\[
+\mathsf{SvN}_{\rm scope}^{r85}=\{(\mathrm{i}),(\mathrm{ii}),(\mathrm{iii}),
+(\mathrm{iv}),(\mathrm{v})\},
+\qquad
+U(1)\times SU(2)\times SU(3)\notin\mathsf{SvN}_{\rm scope}^{r85}.
+\]
+The gauge structure is retained in full as the symmetry group of those representations by
+Theorem~\ref{thm:SM}, which is unchanged.
+
+\paragraph{Proof sketch.}
+Items (ii), (iii) and (v) are the three kernels and their sector reading, carried by
+Theorem~\ref{thm:unitary-equiv}; item (iv) is the compensator image \(C(f)\in\Hplusplus\);
+item (i) is the Sphaera, which \cite{brendecke2026rh} defines as a Hilbert space closed under
+the generated dynamics, not as a bare geometric space.  Each is therefore a subspace of
+\(\Hplus\) carrying the representation to which Lemma~13.2, Step~3 applies.  A Lie group
+carries no such structure, so the equivalence cannot be asserted for it; the gauge statement
+follows instead from the algebraic sector decomposition of Theorem~\ref{thm:SM}.  \(\square\)
+
+\subsection*{r85 repair ledger}
+\label{subsec:r85-repair-ledger}
+
+The repairs close cleanly:
+\[
+R_{\rm rep}^{r85}=(0,0,0)
+\]
+for the three repaired items
+\[
+(\text{citation site 1},\;\text{citation site 2},\;\text{unity-theorem scope}).
+\]
+The repair is claim-reducing, not claim-adding.  No result is withdrawn: only the assertion
+that the Stone--von Neumann equivalence ranges over the gauge group is withdrawn, while
+Theorem~\ref{thm:SM} and every sector statement remain intact.
+
+\paragraph{Divergence note.}
+The same unity theorem also appears in the main paper \cite{brendecke2026main}, where it is
+not modified by r85.  The two documents therefore differ in the scope sentence of that theorem
+until the main paper is revised.  This is provenance information, not a claim change: the
+present Companion carries the narrower and correct scope.
+
+\subsection*{r85 guard update}
+\label{subsec:r85-guard-update}
+
+The r85 layer spends no guard and changes no residual:
+\[
+R_{\rm glob}^{(r85,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{r85}=(1,1,1,1,1),
+\]
+with the effective/local and exact/global ledgers unchanged from r84,
+\[
+R_{\rm eff/local}^{r85}=(0,0,0,0,0),
+\qquad
+R_{\rm exact/global}^{r85}=(1,1,1,1,1).
+\]
+The repairs do not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+\subsection*{r85 release-path implication}
+\label{subsec:r85-release-path-implication}
+
+Because r85 corrects two citation targets and one scope sentence in the proof spine, any
+later public-release package should be regenerated from r85 or later.  The r84 release-path
+rule is otherwise unchanged: compact-titlepage discipline and final-handoff naming apply, and
+no public release is authorized by r85 itself.
 
 
 \end{document}
