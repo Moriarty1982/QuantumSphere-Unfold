@@ -1,0 +1,55 @@
+% ---------------------------------------------------------------------------
+% Geruest fuer eine neue Runde. Vor \end{document} einfuegen.
+% Platzhalter: <NN> Rundennummer, <TITEL>, <SLUG> kebab-case des Titels.
+% Jede eckige Klammer ist zu ersetzen oder zu loeschen -- nichts stehen lassen.
+% ---------------------------------------------------------------------------
+
+\clearpage
+\section*{v4.7.0-r<NN> <TITEL>}
+\addcontentsline{toc}{section}{v4.7.0-r<NN> <TITEL>}
+\label{sec:r<NN>-<SLUG>}
+
+\paragraph{Purpose.}
+<Ein bis drei Saetze: was diese Runde tut und woran sie anschliesst.>
+
+\noindent\textbf{Source-only status.}
+This r<NN> layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The intended reserved v4.7.0 Version DOI remains
+\href{https://doi.org/10.5281/zenodo.20232911}{10.5281/zenodo.20232911}; the previous
+baseline DOI \href{https://doi.org/10.5281/zenodo.20117361}{10.5281/zenodo.20117361}
+remains provenance only.
+
+% --------------------------------------------------------------- Hauptinhalt
+\subsection*{r<NN> <ERSTER UNTERABSCHNITT>}
+\label{subsec:r<NN>-<SLUG-1>}
+
+<Aufbau des Objekts, Annahmen, Notation.>
+
+\paragraph{Theoremlet r<NN>.}
+<Aussage. Nur effektiv/lokal/frame-typisiert formulieren.
+ Niemals: C5 = 0, 0_termdata => 0_all, C6/T2, W_gamma^glob, W_all.>
+
+\paragraph{Proof sketch.}
+<Beweisskizze mit Verweisen auf die Runden, aus denen die Voraussetzungen stammen.>
+\(\square\)
+
+% ------------------------------------------------------------- Guard-Bilanz
+\subsection*{r<NN> guard update}
+\label{subsec:r<NN>-guard-update}
+
+The r<NN> layer does not spend any global guard:
+\[
+R_{\rm <BEREICH>}^{r<NN>}=(0,0,0),
+\qquad
+R_{\rm glob}^{(r<NN>,+)}=(0,1,1,1,1),
+\]
+with
+\[
+\Gamma_{\rm guard}^{r<NN>}=(1,1,1,1,1).
+\]
+The result does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% Falls diese Runde doch einen Guard veraendert: den geaenderten Vektor hier
+% eintragen UND begruenden, warum die Aenderung zulaessig ist. Eine solche
+% Aenderung ist ein Ereignis und braucht die ausdrueckliche Zustimmung des Autors.
