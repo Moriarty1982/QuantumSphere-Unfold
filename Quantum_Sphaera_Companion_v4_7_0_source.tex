@@ -63664,39 +63664,40 @@ G^{\rm req}/G^{\rm avail} & \text{missing }S\\
 \hline
 V0 & 4 & 1 & 4 & 12\\
 V6\ (\text{pre-r16}) & 15/2 & 3/2 & 64/45\approx1.422 & 19/6\approx3.167\\
-V9 & 3 & 3 & 16/9\approx1.778 & 7/3\approx2.333
+V9\ (\text{pre-r17}) & 3 & 3 & 16/9\approx1.778 & 7/3\approx2.333
 \end{array}
 \]
 By gain ratio the order is \(V6<V9<V0\); by missing overlap flux it is \(V9<V6<V0\).  The
 two measures correspond to two different lift mechanisms: raising the available clock gain
-acts multiplicatively, adding packets acts through \(S\).  Since the r16 lift in fact
-proceeded through \(S\), the additive column is the relevant one for a repetition of that
-move, and there \(V9\) is the nearer target, not \(V6\).
+acts multiplicatively, adding packets acts through \(S\).  Both r16 and r17 in fact proceeded
+through \(S\), by adding a single packet, so the additive column is the one that governed the
+executed moves.  It also explains why \(V9\) yielded to the smaller lift: it needed \(7/3\)
+where \(V6\) needed \(19/6\).
 
-\subsection*{r87 reduction of the remaining blocked edge}
+\subsection*{r87 lift formula against the recorded V9 micro-lift}
 \label{subsec:r87-v9-reduction}
 
-The edge \(V8\to V9\) is the only blocked edge left inside the r16 chain structure.  By the
-table above it needs \(\Delta S\ge7/3\), which is smaller than the \(11/2\) actually
-delivered by the single-packet lift at \(V6\).  Whether one packet suffices at \(V9\) depends
-entirely on its decomposition \(S_9=N_9+\kappa_9N_9(N_9-1)\), and that decomposition is not
-recorded in the present source:
+The chart parameters are recorded in the r14 scan ledger, which lists
+\((N_9,\kappa_9,G_9)=(2,\tfrac12,3)\), hence \(S_9=3\) and \(G_9S_9=9<16\).  The blocked
+edge \(V8\to V9\) needs \(\Delta S\ge7/3\) by the ranking table above, and Theoremlet r87.2
+gives for a single added packet
 \[
-\begin{array}{c|c|c|c|c}
-(N_9,\kappa_9) & \Delta S=1+2\kappa_9N_9 & S_9' & G_9S_9' & \text{crosses }16?\\
-\hline
-(2,1/2) & 3 & 6 & 18 & \text{yes}\\
-(3,0) & 1 & 4 & 12 & \text{no}
-\end{array}
+\Delta S=1+2\kappa_9N_9=1+2\cdot\tfrac12\cdot2=3\ \ge\ \tfrac73 .
 \]
-These are the only decompositions with \(S_9=3\), \(N_9\ge2\) and \(\kappa_9\in[0,1]\).
+So one packet suffices, with \(S_9'=6\) and \(G_9S_9'=18\ge16\).
 
-\paragraph{Consequence.}
-The question ``can the last blocked relay edge be lifted by the r16 move?'' is therefore not
-open in the broad sense.  It is reduced to one missing number: the packet count \(N_9\) of
-the sparse reentry front.  If \(N_9=2\), the r16 move suffices and the edge closes; if the
-flux is carried by three packets with vanishing overlap coefficient, it does not.  r87
-supplies no such datum and makes no claim about which case holds.
+This is exactly the move carried out in
+Section~\ref{sec:v470-r17-atlas-gap-bridge-v9-microlift}: the r17 guarded micro-lift takes
+\((2,\tfrac12,3)\mapsto(3,\tfrac12,3)\) and records \(H_9'=18>16\) with margin
+\(\mu_9'=2\).  The r87 formula therefore reproduces an already executed lift from the chart
+parameters alone, without reference to the r17 computation.
+
+\paragraph{Status of the chain.}
+After the r16 lift of \(V6\), the r17 atlas-gap bridge \(V6\to V7\) and the r17 micro-lift of
+\(V9\), the finite chart chain runs \(V1\to\cdots\to V9\).  The only chart outside it is
+\(V0\), which needs \(\Delta S=12\) --- four times the largest lift so far executed --- and
+which r15--r17 keep explicitly guarded.  The calibration confirms that ordering: by the
+additive measure \(V0\) is far outside the range in which single-packet moves operate.
 
 \subsection*{r87 provenance gap for \texorpdfstring{\(\Delta_\gamma<1/5\)}{Delta gamma < 1/5}}
 \label{subsec:r87-provenance-gap}
@@ -63769,8 +63770,8 @@ Q_4 & \text{C4 mixed-kernel localization} & \text{inadmissible, }\beta_4\text{ u
 Q_5 & \text{C5 asymptotic-collar bookkeeping} & \text{done (r86)}
 \end{array}
 \]
-Two concrete items remain that need no new guard: the packet count \(N_9\), and the
-uncompressed r65 text.
+One concrete item remains that needs no new guard: the uncompressed r65 text carrying the
+derivation of \(\Delta_\gamma<1/5\).
 
 
 % ============================================================================
@@ -63947,6 +63948,103 @@ Corollary r88.3 strengthens \(\mathsf{LG}_5^{\rm bd}\) by showing that the most 
 around it collapses back into it.  The layer does not imply exact
 finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global
 photon-clock/RH theorem, or global all-readout closure.
+
+
+% ============================================================================
+\clearpage
+\section*{v4.7.0-r89 Source-Only: r87 Correction --- Recorded V9 Data and Executed Micro-Lift}
+\addcontentsline{toc}{section}{v4.7.0-r89 Source-Only: r87 Correction --- Recorded V9 Data and Executed Micro-Lift}
+\label{sec:r89-r87-correction}
+% ============================================================================
+
+\paragraph{Purpose.}
+The r87 layer, as first written, asserted that the decomposition of the \(V9\) overlap flux
+was not recorded in this source and that \(V8\to V9\) was the last blocked relay edge.  Both
+assertions were wrong.  This layer records the correction and its cause.
+
+\noindent\textbf{Source-only status.}
+This r89 layer is source-only.  It does not build a PDF, does not assign a new DOI, and does
+not authorize a public release.
+
+\subsection*{r89 what was wrong}
+\label{subsec:r89-what-was-wrong}
+
+\[
+\begin{array}{l|l|l}
+\text{r87 assertion} & \text{status} & \text{actual location}\\
+\hline
+\text{``}(N_9,\kappa_9)\text{ not recorded''} & \text{false} &
+\text{r14 chart ledger: }(2,\tfrac12,3)\\
+\text{``}V8\to V9\text{ is the only blocked edge''} & \text{false} &
+\text{r17 stitched it}\\
+\text{``no claim which case holds''} & \text{moot} &
+\text{decided in r17}
+\end{array}
+\]
+
+The r14 finite valley-front chart scan lists all ten charts with packet count, coherence
+parameter and available gain; \(V9\) appears there as \((N,\kappa,G)=(2,\tfrac12,3)\) with
+clock score \(9/16\) and status blocked.  The r17 guarded micro-lift then performed
+\((2,\tfrac12,3)\mapsto(3,\tfrac12,3)\), obtaining \(H_9'=18>16\) with margin
+\(\mu_9'=2\), and stitched the chain to \(V1\to\cdots\to V9\).  Both facts stand in the same
+document as r87.
+
+\subsection*{r89 what was right}
+\label{subsec:r89-what-was-right}
+
+The defect was in the source survey, not in the calculation.  The r87 single-packet lift
+formula
+\[
+\Delta S=1+2\kappa N
+\]
+applied to the r14 parameters gives \(\Delta S=3\), hence \(S_9'=6\) and \(G_9S_9'=18\) ---
+precisely the values r17 reports.  The formula therefore reproduces the executed micro-lift
+from the chart parameters alone.  What r87 presented as an open alternative was in fact a
+correct prediction of a step already taken.
+
+The corrected r87 text records this as a verification rather than as a question.  The r87
+ledger is unchanged: \(R_{\rm cal}^{r87}=(0,0,0,1)\), whose single open component was always
+the \(\Delta_\gamma\) provenance and never the \(V9\) datum.
+
+\subsection*{r89 cause and rule}
+\label{subsec:r89-cause-and-rule}
+
+The survey behind r87 read r15 and r16 and inferred from the absence of the decomposition
+\emph{there} that it was absent from the document.  It did not read r14, one round earlier,
+where the chart ledger is tabulated, nor r17, one round later, where the lift is executed.
+
+\paragraph{Rule r89.}
+A claim that a datum is missing from this source is a claim about the whole monolith and must
+be checked against the rounds adjacent to the one being read, not only against the round in
+which the datum is used.  Absence in the round of use is evidence of nothing: the solve chain
+habitually tabulates in one round and consumes in another.
+
+\subsection*{r89 ledger and provenance}
+\label{subsec:r89-ledger-provenance}
+
+The correction is editorial and touches no result:
+\[
+R_{\rm corr}^{r89}=(0,0,0)
+\]
+for (chart datum restored, chain status restored, prediction reclassified as verification).
+
+RC22 was packaged before the correction and therefore carries the erroneous r87 text.  It is
+retained unchanged as provenance; the present source and any later release candidate carry
+the corrected text.  No earlier round is modified by r89.
+
+\subsection*{r89 guard update}
+\label{subsec:r89-guard-update}
+
+r89 spends no guard and changes no ledger value:
+\[
+R_{\rm glob}^{(r89,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{r89}=(1,1,1,1,1).
+\]
+The finite relay chain \(V1\to\cdots\to V9\) is inherited from r17 and is not extended here.
+\(V0\) remains outside it and guarded.  The layer does not imply exact finite \(C5\) zero
+closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem, or
+global all-readout closure.
 
 
 \end{document}
