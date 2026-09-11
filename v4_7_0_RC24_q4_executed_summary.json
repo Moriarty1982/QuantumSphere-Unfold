@@ -1,0 +1,84 @@
+{
+  "rc": "RC24",
+  "basis": "RC23 source with r91, Q4 of the r48 queue executed",
+  "rounds": ["r91"],
+  "supersedes": "RC23",
+  "toolchain": "MiKTeX 25.12 pdfLaTeX",
+  "pages": 1033,
+  "latex_passes": 3,
+  "latex_errors": 0,
+  "version_doi": "10.5281/zenodo.20232911",
+  "concept_doi": "10.5281/zenodo.19210728",
+  "previous_baseline_doi": "10.5281/zenodo.20117361",
+  "expired_doi": "10.5281/zenodo.20181842",
+  "titlepage_version_doi_visible_lines": 1,
+  "titlepage_concept_doi_visible_lines": 1,
+  "pdf_version_doi_hits": 6,
+  "pdf_concept_doi_hits": 9,
+  "pdf_previous_baseline_doi_hits": 15,
+  "expired_doi_hits_pdf": 0,
+  "undefined_refs": 0,
+  "undefined_citations": 0,
+  "duplicate_label_warnings": 0,
+  "rerun_warnings": 0,
+  "overfull_hbox_warnings": 58,
+  "labels_total": 3343,
+  "comparison_same_toolchain": {
+    "rc19": {"pages": 1014, "labels_total": 3290, "overfull_hbox_warnings": 58},
+    "rc20": {"pages": 1016, "labels_total": 3296, "overfull_hbox_warnings": 58},
+    "rc21": {"pages": 1019, "labels_total": 3305, "overfull_hbox_warnings": 58},
+    "rc22": {"pages": 1025, "labels_total": 3322, "overfull_hbox_warnings": 58},
+    "rc23": {"pages": 1030, "labels_total": 3335, "overfull_hbox_warnings": 58},
+    "rc24": {"pages": 1033, "labels_total": 3343, "overfull_hbox_warnings": 58}
+  },
+  "r91_q4_executed": {
+    "prior_status": "inadmissible since r54, reason given as 'beta_4 = 1/256 remains unspent'",
+    "finding_1_commutator": {
+      "claim": "C4 is no longer a commutator problem",
+      "evidence": "r07 split: S_4^comm -> routed_comm + zero_2s, neither carries active leakage",
+      "note": "the antisymmetric part is read through a declared comparison channel, not contracted away; the source states this is not a global commutator vanishing theorem",
+      "remaining_support": "Supp_4^r07 = { S_4,out^collar }, a boundary-crossing seam",
+      "consequence": "the queue description 'C4 mixed-kernel localization' points at the wrong object"
+    },
+    "finding_2_absorbability": {
+      "source": "r13 non-absorption test",
+      "result": "not absorbable by declared bounded, comparison-routed or selector-routed channels",
+      "requirements_for_absorption": ["new comparison tensor", "new selector", "identification with C5 contraction debt (forbidden)"]
+    },
+    "finding_3_threshold_identity": {
+      "explicit": "r13 defines Theta_v := beta_4^r12 = 1/256",
+      "same_value": "theta_det = 1/256 in the detector chain",
+      "r81_typing": "eps_M^len = l_P/L_ref or dimensionlessly theta_det = 1/256; these are terminal scales, not exact all-readout zeros",
+      "two_readings": "either one terminal scale in three roles, or three quantities sharing a dyadic value; the argument needs only the explicit identity plus the r81 typing"
+    },
+    "theoremlet_r91": "spending beta_4 requires treating a residual at the terminal scale as an exact zero; under 0_M^eps =/=> 0_all that inference is unavailable",
+    "status_change": "inadmissible_policy -> Excluded_typed",
+    "planning_consequence": "building a comparison tensor would not help; a future C4 closure must come from a route not passing through a terminal-scale bound, structurally the same requirement as r88 shape (iii) for C5",
+    "physical_reading": "recorded as interpretation, not claim: a residual at the resolution scale of the readout cannot be declared absent by that same readout; the recorded zero is a statement about the frame, not the object",
+    "explicitly_not_claimed": ["beta_4 equals a physical constant", "1/256 has dimensional meaning", "the seam corresponds to a measurable quantity"],
+    "R_Q4": [0, 0, 1]
+  },
+  "guard_state": {
+    "R_glob": [0, 1, 1, 1, 1],
+    "Gamma_guard": [1, 1, 1, 1, 1],
+    "beta_4": "1/256 unspent"
+  },
+  "guard_note": "No guard spent. beta_4 remains unspent not as a reserve but because the spending operation does not exist in the declared typing.",
+  "claim_scope": "guarded effective/local and frame-typed closures, not exact global closure",
+  "queue_state": {
+    "Q1": "done (r49-r54)",
+    "Q2": "done (r55-r80)",
+    "Q3": "calibrated (r87); provenance reconstructed, not recovered (r90)",
+    "Q4": "executed and negatively settled (r91), Excluded_typed",
+    "Q5": "done (r86)",
+    "summary": "r48 queue fully worked through; no guard spent across the whole chain"
+  },
+  "open_items": [
+    "a C5 witness outside the collar iteration meeting the four r88 shape (iii) requirements",
+    "a C4 route not passing through a terminal-scale bound",
+    "chart V0, needing Delta S = 12 against the largest executed lift of 11/2",
+    "the uncompressed r65 text carrying the derivation of Delta_gamma < 1/5"
+  ],
+  "public_release_performed": false,
+  "new_doi_requested": false
+}
