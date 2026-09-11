@@ -64365,4 +64365,139 @@ closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theo
 global all-readout closure.
 
 
+% ============================================================================
+\clearpage
+\section*{v4.7.0-r92 Source-Only: Sharpened Reconstruction of \texorpdfstring{\(\Delta_\gamma<1/5\)}{Delta gamma < 1/5}}
+\addcontentsline{toc}{section}{v4.7.0-r92 Source-Only: Sharpened Reconstruction of Delta gamma < 1/5}
+\label{sec:r92-delta-gamma-sharpened}
+% ============================================================================
+
+\paragraph{Purpose.}
+r90 reconstructed the bound \(\Delta_\gamma<1/5\) to within a rounding: the coherence
+argument gave \(2/9=0.2222\ldots\), and \(1/5\) was read as a conservative rounding of it.
+This layer replaces that with an exact account.  The constant is not a rounding.  It is the
+relative gain reserve of a single named chart, and it can be traced through the arithmetic
+that produces it.  As in r90 this is a reconstruction, not a recovery of the r65 text, which
+a fourth search has again failed to locate.
+
+\subsection*{r92 the arithmetic signature}
+\label{subsec:r92-arithmetic-signature}
+
+Every threshold in the declared chain is dyadic:
+\[
+\beta_4=\Theta_v=\theta_{\rm det}=\frac1{256}=2^{-8},
+\qquad
+a=\frac1{64}=2^{-6},
+\qquad
+\frac{\Theta_v}{a^2}=16=2^4 .
+\]
+The bound \(\Delta_\gamma<1/5\) is the only non-dyadic constant in the layer.  A factor of
+five cannot arise from products and quotients of powers of two, so it must be produced by a
+division that introduces it.  In the finite chart family there is exactly one such division.
+The overlap flux of \(V3\) is
+\[
+S_{V3}=N+\kappa N(N-1)=5+\tfrac14\cdot5\cdot4=10,
+\]
+and the required gain is
+\[
+G_{V3}^{\rm req}=\frac{16}{S_{V3}}=\frac{16}{10}=\frac85 .
+\]
+The five enters here, by cancellation of \(16/10\), and nowhere else: \(V5\) shares
+\(S=10\) and therefore the same \(8/5\), while every other chart yields a denominator free of
+five.
+
+\subsection*{r92 the perturbation picture}
+\label{subsec:r92-perturbation-picture}
+
+r90 let the perturbation act on the coherence factor \(K\) inside
+\(\mathcal C_\gamma=1+\eta K\), giving \(\mathrm{Var}(\varphi)\le1-\rho_V\).  A second reading
+is available and is the one the constant selects.  At full coherence
+\(\mathcal C_\gamma=G_V^{\rm avail}\); a frequency spread lowers the probe value itself, and
+the window survives while the probe stays above \(G_V^{\rm req}\).  The admissible
+\emph{relative} drop is therefore
+\[
+\Delta_\gamma^{\max}(V)=1-\frac{G_V^{\rm req}}{G_V^{\rm avail}} .
+\]
+
+\paragraph{Theoremlet r92.}
+For the charts carrying windows, the admissible relative drop is
+\[
+\begin{array}{c|c|c|c|c}
+\text{chart} & \text{chain} & G^{\rm req} & G^{\rm avail} & 1-G^{\rm req}/G^{\rm avail}\\
+\hline
+V3 & \mathcal R_A & 8/5 & 2 & 1/5\\
+V5 & \mathcal R_A & 8/5 & 5/2 & 9/25\\
+V8 & \mathcal R_B & 16/9 & 2 & 1/9
+\end{array}
+\]
+Minimized over the primary relay chain \(\mathcal R_A\) of
+Section~\ref{sec:v470-r15-zero-clock-phase-window-relay-stitching}, this is
+\[
+\min_{V\in\mathcal R_A}\Bigl(1-\frac{G_V^{\rm req}}{G_V^{\rm avail}}\Bigr)
+=\min\Bigl\{\frac15,\frac9{25}\Bigr\}
+=\frac15 ,
+\]
+attained at \(V3\), which is the weakest assisted chart of that chain.
+
+\paragraph{Proof.}
+Substitute the r14 parameters into \(S=N+\kappa N(N-1)\) and \(G^{\rm req}=16/S\), then form
+the quotient.  For \(V3\): \(S=10\), \(G^{\rm req}=8/5\), \(G^{\rm req}/G^{\rm avail}=4/5\),
+so the admissible drop is \(1/5\).  For \(V5\): \(G^{\rm req}/G^{\rm avail}=16/25\), giving
+\(9/25>1/5\).  The minimum over the two is \(1/5\). \(\square\)
+
+\subsection*{r92 comparison with r90}
+\label{subsec:r92-comparison}
+
+The two reconstructions differ in where the perturbation is applied and in how well they fit:
+\[
+\begin{array}{l|c|c}
+& \text{value on }\mathcal R_A & \text{fit to }1/5\\
+\hline
+\text{r90, spread acts on coherence }K & 2/5 & \text{no}\\
+\text{r90, minimum over all three charts} & 2/9 & \text{by rounding}\\
+\text{r92, spread lowers the probe relatively} & 1/5 & \text{exact}
+\end{array}
+\]
+An exact hit through a chain of four elementary steps --- packet count, overlap flux, required
+gain, relative reserve --- is considerably stronger evidence than agreement after rounding.
+r90 is therefore superseded as an account of the constant, though its coherence bound remains
+correct as a statement in its own right.
+
+\subsection*{r92 what remains uncertain}
+\label{subsec:r92-uncertain}
+
+Two points are not settled by the fit.
+
+First, the minimum is taken over \(\mathcal R_A\) alone.  Including \(V8\), which belongs to
+the separate chain \(\mathcal R_B\) in the r15 stitching, would give \(1/9\) instead.  The
+restriction is consistent with the guard being written \(W_{\rm clk}^{\rm loc}\), a local
+statement, and with the two chains being separate at the time the windows were extracted;
+but the source does not state it.
+
+Second, the linear response of \(\mathcal C_\gamma\) to the frequency spread is assumed, not
+derived.  What the fit establishes is that the constant \(1/5\) is the relative gain reserve
+of \(V3\); it does not establish that the original argument reached it by this route.
+
+\subsection*{r92 ledger and guard update}
+\label{subsec:r92-ledger-guard}
+
+The reconstruction improves but does not close the provenance entry:
+\[
+R_{\rm rec}^{r92}=(0,0,1)
+\]
+for (arithmetic origin of the five located, exact value derived, r65 text still absent).  The
+third component can only be closed by the original text.
+
+r92 spends no guard:
+\[
+R_{\rm glob}^{(r92,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{r92}=(1,1,1,1,1).
+\]
+All statements are finite, local and chart-bound.  The layer makes no spectral identification
+between Riemann zeros and photon ticks and does not imply exact finite \(C5\) zero closure,
+exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem, or global
+all-readout closure.
+
+
 \end{document}
