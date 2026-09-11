@@ -64192,4 +64192,177 @@ closure.  \(W_{\rm clk}^{\rm loc}\) continues to be carried as a conditional loc
 under its inherited bound, whose status as an inherited constant is unchanged by r90.
 
 
+% ============================================================================
+\clearpage
+\section*{v4.7.0-r91 Source-Only: Q4 Executed --- Why \texorpdfstring{\(\beta_4\)}{beta 4} Cannot Be Spent}
+\addcontentsline{toc}{section}{v4.7.0-r91 Source-Only: Q4 Executed --- Why beta 4 Cannot Be Spent}
+\label{sec:r91-q4-beta4-not-spendable}
+% ============================================================================
+
+\paragraph{Purpose.}
+Branch \(Q_4\) of the r48 queue has been carried as \emph{inadmissible} since r54, with the
+reason recorded as ``\(\beta_4=1/256\) remains unspent''.  That reads as a policy: a guard
+held back by choice.  This layer executes the branch and finds that it is not a policy.  The
+attempt terminates for a structural reason already present in the source, and the guard
+survives not because it is protected but because spending it would be the very operation the
+matter-frame typing forbids.  \textbf{No guard is spent here.}
+
+\noindent\textbf{Source-only status.}
+This r91 layer is source-only.  It does not build a PDF, does not assign a new DOI, and does
+not authorize a public release.
+
+\subsection*{r91 what C4 still is}
+\label{subsec:r91-what-c4-is}
+
+The first finding is that \(C4\) is no longer a commutator problem.  The r07 split test
+(Lemma~\ref{lem:v470-r07-commutator-component-routed}) decomposes
+\[
+S_4^{\rm comm}\leadsto S_{4,-}^{\rm comm}\oplus S_{4,+}^{\rm comm},
+\qquad
+S_{4,-}^{\rm comm}:\mathsf{routed}_{\rm comm},
+\quad
+S_{4,+}^{\rm comm}:\mathsf{zero}_{2s},
+\]
+and neither component carries active leakage afterwards.  The antisymmetric mixed-transport
+part is not contracted away; it is \emph{read through a declared commutator comparison
+channel}, and the source is explicit that this ``does not mean a global commutator vanishing
+theorem''.  The active support reduces to a single class,
+\[
+\operatorname{Supp}_4^{r07}=\{S_{4,\rm out}^{\rm collar}\},
+\]
+the component that crosses the bounded--exterior interface.  What remains of \(C4\) is
+therefore a boundary-crossing seam, not a commutator remainder.
+
+\subsection*{r91 what r13 already settled}
+\label{subsec:r91-what-r13-settled}
+
+Lemma~\ref{lem:v470-r13-nonabsorption-test} tests absorbability of that residual kernel and
+finds it negative: it is not absorbable by the declared bounded, comparison-routed or
+selector-routed channels.  The same layer enumerates what an absorption would require --- a
+new declared comparison tensor, a new selector, or an identification with bounded \(C5\)
+contraction debt --- and records that the first two are absent from the datum while the third
+is forbidden by the separation rule.
+
+So \(Q_4\) cannot proceed by absorption inside the present grammar.  That much was known.
+The question r91 asks is different: what would it \emph{mean} to spend \(\beta_4\)?
+
+\subsection*{r91 the threshold identity}
+\label{subsec:r91-threshold-identity}
+
+The bound \(\beta_4=1/256\) does not occur once.  The source states in
+Definition~\ref{def:v470-r13-local-relay-threshold}
+\[
+\Theta_v:=\beta_4^{r12}=\frac1{256},
+\]
+making the residual \(C4\) bound and the local ridge-front relay threshold the same quantity
+by definition.  The detector chain carries the same value as \(\theta_{\rm det}=1/256\), and
+r81 types it explicitly:
+\[
+\varepsilon_{\mathsf M}^{\rm len}=\frac{\ell_{\rm P}}{L_{\rm ref}}
+\qquad\text{or, dimensionlessly,}\qquad
+\theta_{\rm det}=\frac1{256},
+\]
+with the accompanying sentence \emph{``These are terminal scales, not exact all-readout
+zeros.''}
+
+Two readings are possible and should be distinguished.  Either \(1/256\) is one terminal
+scale appearing in three roles --- seam bound, relay threshold, detector threshold --- or it is
+three quantities that happen to share a dyadic value.  The source settles the first two by
+definition; for the third it supplies equality of value and equality of role, but no explicit
+identification.  The argument below needs only the first two plus the r81 typing.
+
+\subsection*{r91 why spending is not available}
+\label{subsec:r91-why-not-spendable}
+
+\paragraph{Theoremlet r91.}
+Spending \(\beta_4\) --- declaring the residual seam absorbed --- requires treating a residual
+at the terminal scale as an exact zero.  Under the matter-frame typing of r81 that inference
+is unavailable:
+\[
+\Phi\le\varepsilon_{\mathsf M}
+\ \Longrightarrow\
+0_{\mathsf M}^{\varepsilon}
+\ \Longrightarrow\
+0_{\rm termdata},
+\qquad\text{but}\qquad
+0_{\mathsf M}^{\varepsilon}\not\Rightarrow 0_{\rm all}.
+\]
+Hence \(Q_4\) is not blocked by a missing tensor or an unbuilt selector.  It is blocked by the
+same typing that blocks \(C5=0\), and no refinement of the localization can remove that
+block.
+
+\paragraph{Proof.}
+The residual seam is bounded by \(\beta_4\), and \(\beta_4=\Theta_v\) is a terminal threshold
+of the declared chain.  A spending step asserts that the seam contributes nothing, that is
+\(S_{4,\rm out}^{\rm collar}=0\) as an all-readout statement.  What the bound supports is
+\(S_{4,\rm out}^{\rm collar}\le\beta_4\), which by
+Theoremlet~r81 yields \(0_{\mathsf M}^{\varepsilon}\) and terminal data, and explicitly not
+\(0_{\rm all}\).  The step from the bound to the assertion is exactly the forbidden
+promotion. \(\square\)
+
+\subsection*{r91 status reclassification}
+\label{subsec:r91-status-reclassification}
+
+Using the r86 vocabulary, the queue entry changes class without changing value:
+\[
+Q_4:\quad
+\mathsf{inadmissible}_{\rm policy}
+\ \longmapsto\
+\mathsf{Excluded}_{\rm typed}.
+\]
+The practical difference matters for anyone planning further work.  Under the old reading,
+\(Q_4\) was a branch one might open later, once a suitable comparison tensor had been built.
+Under the corrected reading, building that tensor would not help: the obstruction is not the
+absence of a channel but the typing of the scale at which the residual sits.  A future
+\(C4\) closure, if one exists, must come from a route that does not pass through a
+terminal-scale bound --- structurally the same requirement that r88 placed on shape (iii) for
+\(C5\).
+
+\subsection*{r91 physical reading}
+\label{subsec:r91-physical-reading}
+
+The formal result has a reading in the physical layer that the document otherwise keeps
+separate, and it is recorded here as interpretation, not as a claim.
+
+The commutator component was routed rather than eliminated.  In the compensator language of
+the main line, where \(C=\tfrac12(\mathrm{id}+J)\) splits the space into symmetric and
+antisymmetric parts, an antisymmetric transport remainder is not something a change of chart
+removes; it is read through a comparison channel and kept.  That is the expected behaviour of
+a noncommutative structure, and r07 treats it accordingly.
+
+What survives as \(C4\) is a seam at the bounded--exterior interface, bounded by the terminal
+resolution.  Read physically, the statement of r91 is that a residual sitting at the
+resolution scale of the readout cannot be declared absent by that same readout.  This is the
+same discipline that r81 expresses by pairing \(\theta_{\rm det}\) with \(\ell_{\rm P}/L_{\rm
+ref}\): below the terminal scale the frame records a zero, and that record is a statement
+about the frame, not about the object.
+
+No claim is made that \(\beta_4\) equals a physical constant, that \(1/256\) has dimensional
+meaning, or that the seam corresponds to a measurable quantity.
+
+\subsection*{r91 ledger and guard update}
+\label{subsec:r91-ledger-guard}
+
+\(Q_4\) is executed and terminates negatively:
+\[
+R_{Q_4}^{r91}=(0,0,1)
+\]
+for (commutator component already routed, absorbability already settled, spending shown
+unavailable).  The third component is recorded as \(1\) because a negative result closes the
+branch, not the obstruction: \(C4\) remains open in the exact/global ledger.
+
+The guard vector is unchanged, and pointedly so:
+\[
+R_{\rm glob}^{(r91,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{r91}=(1,1,1,1,1),
+\qquad
+\beta_4=\frac1{256}\ \text{unspent}.
+\]
+\(\beta_4\) remains unspent not as a reserve held back, but because the spending operation is
+not available in the declared typing.  The layer does not imply exact finite \(C5\) zero
+closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem, or
+global all-readout closure.
+
+
 \end{document}
