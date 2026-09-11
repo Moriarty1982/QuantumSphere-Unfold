@@ -14,16 +14,29 @@ Kein Software-Repository im üblichen Sinn, sondern ein einzelnes LaTeX-Monolith
 
 ## Versionskontrolle
 
-Git-Repository, Branch `main`. Ein Commit pro Dokumentstand, RCs als annotierte Tags:
+Git-Repository, Branch `main`, 74 Commits von v0.6.0 bis heute. Ein Commit pro Dokumentstand.
 
 ```
-RC19  Stand r84   1014 Seiten   Ausgangsstand
-RC20  Stand r85   1016 Seiten   Zitatreparatur, Scope-Trennung
-RC21  Stand r86   1019 Seiten   C5-Kollar-Konsolidierung (Q5)
-RC22  Stand r88   1025 Seiten   Fensterkalibrierung (Q3), Non-Collar-Routen
-                                 — r87 darin fehlerhaft, siehe r89
-HEAD  Stand r89   1027 Seiten   Korrektur von r87
+v0.6.0     1.238 Zeilen   Beginn der archivierten Historie
+v1.0.0     1.378
+v2.9.0     6.933
+v3.0.0    20.034
+v4.0.0    35.108          ab hier zweigeteilt: Kern + historischer Teil
+v4.4      49.615          zu einem Monolithen zusammengeführt
+v4.6.0    53.160
+RC19      63.202  r84     Datei trägt ab hier ihren Release-Namen
+RC20              r85     Zitatreparatur, Scope-Trennung
+RC21              r86     C5-Kollar-Konsolidierung (Q5)
+RC22              r88     Fensterkalibrierung (Q3), Non-Collar-Routen
+                          — r87 darin fehlerhaft, siehe r89
+HEAD      64.000+ r89     Korrektur von r87
 ```
+
+Bis v4.6.0 heißt die Datei `companion.tex` (bei zweigeteilten Ständen zusätzlich `companion_historical.tex`), ab RC19 `Quantum_Sphaera_Companion_v4_7_0_source.tex`. Git erkennt den Übergang als Rename, `git log --follow` läuft durch.
+
+**Die Daten vor v4.0.0 sind Archivierungs-, keine Entstehungsdaten** — die Quelldateien stammen aus einem Download-Ordner, in dem ganze Versionsblöcke denselben Zeitstempel tragen. Die *Reihenfolge* stimmt (aus den Versionsnummern), die Tage nicht. Ab v4.0.0 kommen die Daten aus den Release-Archiven und sind belastbar.
+
+Aufgenommen sind die 58 Hauptversionen `x.y.0` aus v0–v3 plus alle v4-Stände. Die Mikroversionen (etwa v2.26.1 bis v2.26.44) und die Arbeitsstände liegen weiterhin in `C:\Users\marcb\Downloads\Quantum Sphere`. Zwei Versionen (v3.17.0, v3.29.0) fehlen: dort existiert nur eine Wrapper-Datei ohne Volltext.
 
 **`.gitattributes` mit `* -text` ist nicht verhandelbar.** Die SHA256-Werte in den Manifesten gelten für die Bytes der Dateien. Jede Zeilenenden-Konvertierung beim Checkout würde jeden dieser Hashes brechen und die Provenienzkette entwerten. Verifiziert: ein Checkout von Tag `RC19` reproduziert `019e7a35…` exakt.
 
