@@ -64500,4 +64500,164 @@ exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem, or g
 all-readout closure.
 
 
+% ============================================================================
+\clearpage
+\section*{v4.7.0-r93 Source-Only: The Two-Sided Typing Read as a Routing Grammar}
+\addcontentsline{toc}{section}{v4.7.0-r93 Source-Only: The Two-Sided Typing Read as a Routing Grammar}
+\label{sec:r93-routing-reading}
+% ============================================================================
+
+\paragraph{Purpose.}
+The two-sided structural tensor notation of
+Definition~\ref{def:two-sided-structural-tensor-interface} has been in continuous use since
+r26 without being named for what its index slots actually carry.  Read from the definition
+alone, the front indices look like role annotations attached to an otherwise ordinary tensor
+display.  Read from the sites that use them, they are addresses in a labelled graph, and the
+contraction discipline is the forwarding rule of that graph.  This layer records the reading.
+It introduces no object, no new contraction and no new claim; it names a structure already
+present in the source since r26.
+
+\subsection*{r93 what the index slots carry}
+\label{subsec:r93-slot-content}
+
+The decisive evidence is in the application layer, not in the definition layer.  The r26
+transition typing (\S\ref{subsec:v470-r26-two-sided-transition-typing}) types four atlas
+cells as
+\[
+{}^{\partial\mathrm{src}}{}_{\mathrm{loc}}\mathcal A_0{}^{V0}_{\mathrm{relay}},
+\quad
+{}^{\mathrm{core}}{}_{\mathrm{loc}}\mathcal A_1{}^{V5}_{\mathrm{relay}},
+\quad
+{}^{\mathrm{shadow}}{}_{\mathrm{loc}}\mathcal A_2{}^{V7}_{\mathrm{bridge}},
+\quad
+{}^{\gamma\mathrm{clock}}{}_{\mathrm{loc}}\mathcal A_3{}^{V9}_{\mathrm{tail}} .
+\]
+The back upper slot carries a chart name from the finite scan of
+\S\ref{sec:v470-r14-finite-valley-front-chart-scan}; the back lower slot carries an edge
+kind, one of \(\mathrm{relay}\), \(\mathrm{bridge}\), \(\mathrm{tail}\).  The accompanying
+r26 audit ledger lists the transitions \(\tau_{01},\tau_{12},\tau_{23}\) by source type,
+target type and status.  Node, edge kind, source, target, status: this is the data of a
+labelled directed graph, recorded in index position.
+
+The r50 refinement (\S\ref{subsec:r50-two-sided-domain-typing}) makes the four slots explicit
+and names them:
+\[
+{}^{L_x}{}_{G_x}\mathcal O_x{}^{R_x}_{M_x},
+\]
+with \(L_x\) the local readout/source side, \(G_x\) the guard or selector side, \(R_x\) the
+relay/structure side, and \(M_x\) the monitor codomain side.  The r49 recap
+(\S\ref{subsec:r49-two-sided-typing-recap}) shows the same grammar carrying a transport
+condition: a local boundary source may feed a local relay monitor only after the guard
+projection has separated it from \(C4\), \(C6/T2\) and the all-readout channel.
+
+\paragraph{Theoremlet r93.}
+The two-sided display grammar of
+Definitions~\ref{def:two-sided-structural-tensor-interface}
+and~\ref{def:two-sided-admissible-contractions}, as instantiated from r26 onward, is an
+interface grammar over a labelled directed graph.  Under the correspondence
+\[
+\begin{array}{lcl}
+\text{back upper slot} &\longleftrightarrow& \text{node of the finite chart family}\\
+\text{back lower slot} &\longleftrightarrow& \text{edge kind at that node}\\
+\text{front upper slot} &\longleftrightarrow& \text{local source/readout attachment}\\
+\text{front lower slot} &\longleftrightarrow& \text{guard or selector governing the attachment}
+\end{array}
+\]
+the admissible-contraction rules of
+Definition~\ref{def:two-sided-admissible-contractions} read as a forwarding discipline:
+classical upper--lower contraction is transport along a declared edge, and the prohibition on
+same-variance pairing without a declared comparison tensor or selector is the prohibition on
+joining two channels without a declared admission element.
+
+\emph{Proof sketch.}
+The correspondence is read off the instantiations rather than postulated.  In every
+two-sided display occurring from r26 onward the back upper slot is filled by a member of the
+r14 chart family or by an obstruction name carried in the same position, and the back lower
+slot is filled by an edge kind or monitor role.  The r26 transition ledger supplies source,
+target and status for each transition, which is the incidence data of the graph.  The
+forwarding reading of the contraction rules is a restatement, not an extension: rule~1 of
+Definition~\ref{def:two-sided-admissible-contractions} permits exactly the pairings in which
+one slot is a declared codomain of the other, and rules~2--4 admit a pairing only in the
+presence of a named \(G_{\alpha\beta}\), \(G^{\alpha\beta}\) or \(\chi_{mn}\).  No pairing is
+added and none is removed.  \(\square\)
+
+\subsection*{r93 consequence for the relay arithmetic}
+\label{subsec:r93-admission-reading}
+
+Under the routing reading the finite relay layer of
+\S\ref{sec:v470-r15-zero-clock-phase-window-relay-stitching} is an admission calculation.
+With the overlap flux and required gain
+\[
+S_V=N+\kappa N(N-1),
+\qquad
+G_V^{\rm req}=\frac{16}{S_V},
+\]
+a chart is admissible exactly when its available gain covers its required gain, and the
+window criterion \(16/G_{\rm avail}\le S_V<16\) is the corresponding capacity band.  The
+three charts recorded as blocked in the r14 scan are those whose requirement exceeds what the
+node supplies.  The guarded micro-lift of
+\S\ref{sec:v470-r17-atlas-gap-bridge-v9-microlift}, which carried \(V9\) from \((2,1/2,3)\) to
+\((3,1/2,3)\) and obtained \(H_9'=18>16\), is a capacity increase on a single node, executed
+until the link carries and no further.
+
+This also sharpens the reading of \S\ref{sec:r92-delta-gamma-sharpened}.  The relative reserve
+\[
+1-\frac{G_{V}^{\rm req}}{G_{V}^{\rm avail}},
+\qquad
+\text{attained as } 1-\tfrac45=\tfrac15 \text{ at } V3,
+\]
+is the margin by which the weakest assisted node exceeds its own requirement.  Minimising it
+over the chain is the ordinary statement that a chain is limited by its weakest link.  The
+r92 derivation is unchanged; only its interpretation is now stated in the vocabulary the
+notation already uses.
+
+\subsection*{r93 conservativity is not inertness}
+\label{subsec:r93-conservativity}
+
+Proposition~\ref{prop:two-sided-conservative-expansion} states that every well-formed
+two-sided display expands into the inherited QAM-over-ZF language and that the notation cannot
+by itself introduce a new primitive tensor kind, a new admissibility relation or a new
+theorematic certificate.  That proposition is not weakened here, and this layer relies on it.
+
+It is worth recording that conservativity in that sense does not mean the notation is
+decorative.  A routing table is likewise definable in the language of the objects it routes
+between, and it still determines what reaches what.  The two statements are compatible: the
+graph structure carried in the index slots adds no mathematical primitive, and it does
+determine which transports are admissible.  Reading conservativity as inertness is a misreading
+that this layer is written to prevent.
+
+\subsection*{r93 what is not claimed}
+\label{subsec:r93-not-claimed}
+
+The front slots carry readout, frame, guard and selector data.  They are not asserted to
+transform tensorially under any coordinate change, and no transformation law is supplied or
+implied for them.  The graph reading is a reading of the declared typing; it is not a claim
+that the chart family is a physical network, that the edges are physical channels, or that
+the node capacities are measurable quantities.  The notation is used locally and sparingly in
+the present release line, as recorded at its introduction, and r93 does not rewrite the
+monolith into it.
+
+\subsection*{r93 ledger and guard update}
+\label{subsec:r93-ledger-guard}
+
+The naming is complete for the sites that instantiate the notation; the source is not
+uniform in its use:
+\[
+R_{\rm route}^{r93}=(0,0,1)
+\]
+for (slot semantics identified, forwarding reading of the contraction rules stated, uniform
+use across the monolith not performed).  The third component is a presentation entry and
+carries no obstruction.
+
+r93 spends no guard:
+\[
+R_{\rm glob}^{(r93,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{r93}=(1,1,1,1,1).
+\]
+All statements are finite, local and chart-bound.  The layer makes no spectral identification
+between Riemann zeros and photon ticks and does not imply exact finite \(C5\) zero closure,
+exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem, or global
+all-readout closure.
+
 \end{document}
