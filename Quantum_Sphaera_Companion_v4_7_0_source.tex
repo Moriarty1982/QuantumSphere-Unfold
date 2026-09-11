@@ -63558,4 +63558,395 @@ which would sharpen the provenance of the bound \(\Delta_\gamma<1/5\) carried by
 unspent.
 
 
+% ============================================================================
+\clearpage
+\section*{v4.7.0-r87 Source-Only: Photon-Clock Selector-Window Calibration}
+\addcontentsline{toc}{section}{v4.7.0-r87 Source-Only: Photon-Clock Selector-Window Calibration}
+\label{sec:r87-photon-clock-window-calibration}
+% ============================================================================
+
+\paragraph{Purpose.}
+This layer executes branch \(Q_3\) of the r48 queue.  The r15 finite window family is
+recorded as a table of three computed values; the rules behind that table are not written
+down in closed form.  r87 extracts them, verifies the inherited numbers, and reduces the one
+remaining blocked relay edge to a single missing datum.  As in r86, no new mathematical
+result is produced: everything below follows from the r15 extraction rule and the r16 lift
+computation.
+
+\noindent\textbf{Source-only status.}
+This r87 layer is source-only.  It does not build a PDF, does not assign a new DOI, and does
+not authorize a public release.  It makes no spectral identification between Riemann zeros
+and photon ticks and does not touch the \(W_\gamma^{\rm glob}\) guard.
+
+\subsection*{r87 window inventory}
+\label{subsec:r87-window-inventory}
+
+The inherited photon-clock window data, from
+Section~\ref{sec:v470-r15-zero-clock-phase-window-relay-stitching}:
+\[
+\begin{array}{l|l}
+\text{overlap flux} & S_V=N_V+\kappa_V N_V(N_V-1)\\
+\text{required gain} & G_V^{\rm req}=16/S_V,\quad 16=\Theta_v/a^2
+ \text{ at }\Theta_v=1/256,\ a=1/64\\
+\text{relay criterion} & G_VS_V\ge16\\
+\text{window} & I_V=\{\tau:\mathcal C_\gamma(\tau)\ge G_V^{\rm req}\}\\
+\text{half-width} & \delta_V=\sigma_V\arccos\sqrt{(G_V^{\rm req}-1)/(G_V^{\rm avail}-1)}
+\end{array}
+\]
+
+\subsection*{r87 window-existence criterion}
+\label{subsec:r87-window-existence}
+
+\paragraph{Theoremlet r87.1.}
+A chart \(V\) has a nonempty zero-clock phase window exactly when its overlap flux lies in
+the half-open interval
+\[
+\frac{16}{G_V^{\rm avail}}\ \le\ S_V\ <\ 16 .
+\]
+The upper end is the direct/assisted boundary: for \(S_V\ge16\) the chart needs no clock
+window at all.  The lower end is the assisted/blocked boundary.
+
+\paragraph{Proof.}
+The r15 extraction condition is \(1<G_V^{\rm req}\le G_V^{\rm avail}\) with
+\(G_V^{\rm req}=16/S_V\).  The left inequality \(1<16/S_V\) is equivalent to \(S_V<16\); the
+right inequality \(16/S_V\le G_V^{\rm avail}\) is equivalent to
+\(S_V\ge16/G_V^{\rm avail}\). \(\square\)
+
+\paragraph{Verification against the inherited table.}
+\[
+\begin{array}{c|c|c|c|c}
+\text{chart} & S_V & \text{admissible band} & \text{in band} & \delta_V/\sigma_V\\
+\hline
+V3 & 10 & [8,16) & \text{yes} & 0.684719\\
+V5 & 10 & [32/5,16) & \text{yes} & 0.886077\\
+V8 & 9 & [8,16) & \text{yes} & 0.490883
+\end{array}
+\]
+The three half-widths were recomputed from the r15 formula in exact rational ratios
+\(3/5\), \(2/5\), \(7/9\) and agree with the inherited values to six decimals.
+
+\paragraph{Remark.}
+The half-width is monotone in both arguments: it tends to \(\pi/2\,\sigma_V\) as
+\(G_V^{\rm req}\to1^+\), and it closes to zero as \(G_V^{\rm req}\to G_V^{\rm avail}\).  A
+chart sitting at the lower band edge therefore has a window in principle but no timing margin
+in practice.  Of the three extracted charts, \(V8\) is closest to that edge.
+
+\subsection*{r87 single-packet lift formula}
+\label{subsec:r87-single-packet-lift}
+
+The r16 shadow-basin lift moved \(N_6:3\to4\) at fixed \(\kappa_6=3/4\), \(G_6=3/2\), which
+raised \(S_6\) from \(15/2\) to \(13\).  That step is an instance of a general rule.
+
+\paragraph{Theoremlet r87.2.}
+Adding one admissible packet at fixed \(\kappa\) changes the overlap flux by
+\[
+\Delta S(N\to N+1)=1+2\kappa N .
+\]
+
+\paragraph{Proof.}
+\(S(N+1)-S(N)=\bigl[(N+1)+\kappa(N+1)N\bigr]-\bigl[N+\kappa N(N-1)\bigr]=1+2\kappa N\).
+\(\square\)
+
+For the r16 lift this gives \(1+2\cdot\tfrac34\cdot3=\tfrac{11}{2}\), and indeed
+\(15/2+11/2=13\).  The gain is quadratic in \(N\): a single packet is worth more at a
+populated front than at a sparse one.
+
+\subsection*{r87 blocked-chart ranking}
+\label{subsec:r87-blocked-ranking}
+
+r15 ranks the blocked charts by the gain ratio \(G^{\rm req}/G^{\rm avail}\) and concludes
+that \(V6\) is closest.  That ranking is correct for its own measure, but it is not the only
+measure, and the two do not agree:
+\[
+\begin{array}{c|c|c|c|c}
+\text{chart} & S_V & G_V^{\rm avail} &
+G^{\rm req}/G^{\rm avail} & \text{missing }S\\
+\hline
+V0 & 4 & 1 & 4 & 12\\
+V6\ (\text{pre-r16}) & 15/2 & 3/2 & 64/45\approx1.422 & 19/6\approx3.167\\
+V9 & 3 & 3 & 16/9\approx1.778 & 7/3\approx2.333
+\end{array}
+\]
+By gain ratio the order is \(V6<V9<V0\); by missing overlap flux it is \(V9<V6<V0\).  The
+two measures correspond to two different lift mechanisms: raising the available clock gain
+acts multiplicatively, adding packets acts through \(S\).  Since the r16 lift in fact
+proceeded through \(S\), the additive column is the relevant one for a repetition of that
+move, and there \(V9\) is the nearer target, not \(V6\).
+
+\subsection*{r87 reduction of the remaining blocked edge}
+\label{subsec:r87-v9-reduction}
+
+The edge \(V8\to V9\) is the only blocked edge left inside the r16 chain structure.  By the
+table above it needs \(\Delta S\ge7/3\), which is smaller than the \(11/2\) actually
+delivered by the single-packet lift at \(V6\).  Whether one packet suffices at \(V9\) depends
+entirely on its decomposition \(S_9=N_9+\kappa_9N_9(N_9-1)\), and that decomposition is not
+recorded in the present source:
+\[
+\begin{array}{c|c|c|c|c}
+(N_9,\kappa_9) & \Delta S=1+2\kappa_9N_9 & S_9' & G_9S_9' & \text{crosses }16?\\
+\hline
+(2,1/2) & 3 & 6 & 18 & \text{yes}\\
+(3,0) & 1 & 4 & 12 & \text{no}
+\end{array}
+\]
+These are the only decompositions with \(S_9=3\), \(N_9\ge2\) and \(\kappa_9\in[0,1]\).
+
+\paragraph{Consequence.}
+The question ``can the last blocked relay edge be lifted by the r16 move?'' is therefore not
+open in the broad sense.  It is reduced to one missing number: the packet count \(N_9\) of
+the sparse reentry front.  If \(N_9=2\), the r16 move suffices and the edge closes; if the
+flux is carried by three packets with vanishing overlap coefficient, it does not.  r87
+supplies no such datum and makes no claim about which case holds.
+
+\subsection*{r87 provenance gap for \texorpdfstring{\(\Delta_\gamma<1/5\)}{Delta gamma < 1/5}}
+\label{subsec:r87-provenance-gap}
+
+The stated aim of \(Q_3\) was to sharpen the provenance of the bound \(\Delta_\gamma<1/5\)
+carried by \(W_{\rm clk}^{\rm loc}\).  That bound occurs in the present source only inside
+summary and guard layers, never with a derivation: it enters through the compressed
+r55--r80 chain, where the detailed r65 step has been replaced by the chain invariant.  The
+uncompressed log is not part of this source packet.
+
+Accordingly r87 does \emph{not} discharge that part of \(Q_3\).  What can be said from the
+present source is negative and worth recording:
+\[
+\Delta_\gamma<1/5 \notin \{\text{quantities derivable from the r15--r16 window layer}\}.
+\]
+The r15 layer produces the ratios \(3/5\), \(2/5\), \(7/9\), the gains \(8/5\), \(16/9\),
+\(32/15\), \(16/3\) and the threshold constant \(16\); none of these yields \(1/5\), and the
+window half-widths are measured in units of \(\sigma_V\) rather than as a bound on a
+frequency spread.  The bound therefore belongs to a different layer and must be recovered
+from the uncompressed r65 text, not reconstructed from the finite chart family.
+
+\subsection*{r87 ledger}
+\label{subsec:r87-ledger}
+
+The calibration closes in three of four items:
+\[
+R_{\rm cal}^{r87}=(0,0,0,1)
+\]
+for
+\[
+(\text{window-existence criterion},\ \text{lift formula},\ \text{blocked-chart ranking},
+\ \Delta_\gamma\text{ provenance}).
+\]
+The fourth component stays at \(1\): the bound \(\Delta_\gamma<1/5\) remains an inherited
+constant whose derivation is outside this source.  This is a recorded documentation gap, not
+a mathematical obstruction, and it does not affect the standing of
+\(W_{\rm clk}^{\rm loc}\), which is carried as a conditional local statement.
+
+\subsection*{r87 guard update}
+\label{subsec:r87-guard-update}
+
+r87 spends no guard:
+\[
+R_{\rm glob}^{(r87,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{r87}=(1,1,1,1,1),
+\qquad
+R_{\rm eff/local}^{r87}=(0,0,0,0,0).
+\]
+All statements are finite, local and chart-bound.  The layer does not identify Riemann zeros
+with photon ticks, does not prove a global photon-clock/RH theorem, does not prove
+\(C6/T2\), and does not remove the all-readout blocker.  The relay chains remain finite:
+the longest certified chain is the length-six chain of
+Corollary~\ref{cor:v470-r16-finite-chain-status}.
+
+\subsection*{r87 queue update}
+\label{subsec:r87-queue-update}
+
+Branch \(Q_3\) is discharged in its calibration part and left open in its provenance part.
+The r48 queue after r87:
+\[
+\begin{array}{c|l|l}
+\text{branch} & \text{content} & \text{status}\\
+\hline
+Q_1 & \text{local field-interface elaboration} & \text{done (r49--r54)}\\
+Q_2 & \text{theoremlet-to-lemma packaging} & \text{done (r55--r80)}\\
+Q_3 & \text{photon-clock selector-window calibration} &
+\text{calibrated (r87); }\Delta_\gamma\text{ provenance open}\\
+Q_4 & \text{C4 mixed-kernel localization} & \text{inadmissible, }\beta_4\text{ unspent}\\
+Q_5 & \text{C5 asymptotic-collar bookkeeping} & \text{done (r86)}
+\end{array}
+\]
+Two concrete items remain that need no new guard: the packet count \(N_9\), and the
+uncompressed r65 text.
+
+
+% ============================================================================
+\clearpage
+\section*{v4.7.0-r88 Source-Only: Admissibility Test for Non-Collar Routes to Finite C5 Discharge}
+\addcontentsline{toc}{section}{v4.7.0-r88 Source-Only: Admissibility Test for Non-Collar Routes to Finite C5 Discharge}
+\label{sec:r88-non-collar-route-admissibility}
+% ============================================================================
+
+\paragraph{Purpose.}
+r86 split the \(C5_{\rm zero}\) entry into question (a), settled negatively inside the
+declared multiplicative collar recursion, and question (b): whether a route to a finite
+\(C5\) discharge exists \emph{outside} that recursion.  r86 listed three candidate shapes
+without examining them.  This layer examines them.  Two are eliminated; the third is not,
+and question (b) remains open.  Nothing here asserts that a finite discharge exists.
+
+\noindent\textbf{Source-only status.}
+This r88 layer is source-only.  It does not build a PDF, does not assign a new DOI, and does
+not authorize a public release.  The forbidden assertion \(C5=0\) is not made, and no guard
+is spent.  The analysis is conditional throughout: it asks what a candidate mechanism would
+have to satisfy, not what holds.
+
+\subsection*{r88 subtractive channel: closed form}
+\label{subsec:r88-subtractive-closed-form}
+
+Shape (i) of the r86 table is the constant-subtraction recursion
+\[
+\Phi^{(n+1)}=q\,\Phi^{(n)}-c,
+\qquad q\in(0,1),\ c>0,\ \Phi^{(0)}>0 .
+\]
+
+\paragraph{Theoremlet r88.1.}
+This recursion has the closed form
+\[
+\Phi^{(n)}
+=q^{n}\!\left(\Phi^{(0)}+\frac{c}{1-q}\right)-\frac{c}{1-q},
+\]
+and it attains the value zero at an integer stage \(N\) if and only if
+\[
+c=c_\star(N):=\frac{(1-q)\,q^{N}\,\Phi^{(0)}}{1-q^{N}} .
+\]
+For \(q=3/4\), \(\Phi^{(0)}=1\) this is
+\[
+c_\star(N)=\frac{1}{4\bigl((4/3)^{N}-1\bigr)} .
+\]
+
+\paragraph{Proof.}
+Writing \(\psi^{(n)}=\Phi^{(n)}+c/(1-q)\) turns the recursion into
+\(\psi^{(n+1)}=q\psi^{(n)}\), whence \(\psi^{(n)}=q^n\psi^{(0)}\) and the displayed form.
+Setting \(\Phi^{(N)}=0\) gives \(q^{N}(\Phi^{(0)}+c/(1-q))=c/(1-q)\); solving for \(c\)
+yields \(c_\star(N)\).  Conversely \(c=c_\star(N)\) returns \(\Phi^{(N)}=0\) by substitution.
+\(\square\)
+
+\paragraph{Verified instances.}
+For \(q=3/4\), \(\Phi^{(0)}=1\): \(c_\star(1)=3/4\), \(c_\star(2)=9/28\),
+\(c_\star(3)=27/148\), \(c_\star(4)=81/700\), \(c_\star(5)=243/3124\).  Each was checked by
+running the recursion in exact rational arithmetic; each reaches zero at its own stage and at
+no earlier one.
+
+\paragraph{Remark on genericity.}
+For \(c\ne c_\star(N)\) for every \(N\), the orbit does not meet zero at all: it passes from
+positive to negative between two consecutive stages.  Sample runs with
+\(c=1/10,1/5,1/4,3/10\) cross zero at stages \(5,3,3,3\) respectively without ever taking the
+value zero.  Exact finite discharge by a constant subtractive channel therefore requires the
+channel strength to be tuned to the target stage --- a measure-zero condition on \(c\), not a
+structural feature.
+
+\subsection*{r88 the admissibility obstruction}
+\label{subsec:r88-admissibility-obstruction}
+
+Tuning is not the decisive objection.  The decisive objection is what happens immediately
+afterwards.
+
+\paragraph{Theoremlet r88.2.}
+Let \(c=c_\star(N)\), so that \(\Phi^{(N)}=0\).  Then
+\[
+\Phi^{(N+1)}=-c<0 ,
+\]
+and \(\Phi^{(n)}<0\) for all \(n>N\).  Hence the orbit leaves the bounded collar domain
+\(\mathcal D_5^{\rm bd}\) at the stage immediately after the discharge.
+
+\paragraph{Proof.}
+\(\Phi^{(N+1)}=q\cdot0-c=-c<0\).  For \(n>N\) the closed form of Theoremlet r88.1 is
+strictly decreasing once negative, since \(q\Phi-c<\Phi\) whenever \(\Phi<c/(1-q)\), which
+holds for all \(\Phi\le0\).  Admissibility of \(\mathcal U_5^{\rm bd}\) on
+\(\mathcal D_5^{\rm bd}\) was established in
+Lemma~\ref{lem:v470-r09-c5-finite-stage-admissibility} precisely through preservation of
+positivity; a map whose next iterate is negative fails that condition. \(\square\)
+
+\paragraph{Corollary r88.3 (shape (i) collapses into shape (ii)).}
+A subtractive channel can deliver a finite discharge only if it is accompanied by a stopping
+rule that halts the recursion at stage \(N\) instead of continuing into the negative range.
+Such a rule is a truncation, which is shape (ii) of the r86 table, and truncation is
+forbidden by the bounded-collar limit guard
+\(\mathsf{LG}_5^{\rm bd}\) of
+Definition~\ref{def:v470-r11-bounded-collar-limit-guard}.  Shapes (i) and (ii) are therefore
+not two independent candidates but one, and it is already excluded by a standing guard.
+
+\subsection*{r88 the free-parameter trap}
+\label{subsec:r88-free-parameter-trap}
+
+One might weaken shape (i) to a stage-dependent channel
+\(\Phi^{(n+1)}=q\Phi^{(n)}-c_n\).  This does produce a finite zero: choosing
+\(c_N=q\Phi^{(N)}\) sets \(\Phi^{(N+1)}=0\) for any prescribed \(N\).
+
+\paragraph{Remark r88.4.}
+That freedom is the objection, not the solution.  A family with an unconstrained sequence
+\((c_n)\) can realize \emph{any} prescribed orbit whatsoever, including orbits that violate
+every other guard in the ledger.  A mechanism that can produce the desired conclusion and its
+negation with equal ease carries no information about \(C5\); it records the desired answer
+rather than deriving it.  An admissible stage-dependent channel would therefore have to fix
+\((c_n)\) by an independent structural rule --- and it is that rule, not the resulting zero,
+that would constitute the mathematical content.  No such rule is declared anywhere in the
+bounded--exterior--mixed grammar.
+
+\subsection*{r88 what remains: shape (iii)}
+\label{subsec:r88-shape-three}
+
+Shape (iii) is the only surviving candidate: an object unrelated to the collar iteration.
+r88 does not supply one.  What it can do is state the burden such an object would carry.
+
+\[
+\begin{array}{c|l}
+& \text{requirement on a shape-(iii) witness}\\
+\hline
+(\alpha) & \text{it must exhibit the vanishing of the }C5\text{ obstruction itself,}\\
+ & \text{not the smallness of the score }\Phi_5\\
+(\beta) & \text{it must be independent of }\mathcal U_5^{\rm bd}\text{, since by r86 that
+ recursion}\\
+ & \text{cannot deliver the conclusion}\\
+(\gamma) & \text{it must remain compatible with }C5_{\rm det/eff}\text{, which is already}\\
+ & \text{established at }\theta=1/256,\ n=20\\
+(\delta) & \text{it must not import the all-readout slot, since }0_{\rm termdata}
+ \not\Rightarrow0_{\rm all}\\
+ & \text{remains frozen}
+\end{array}
+\]
+
+Requirement \((\alpha)\) is the substantive one.  The collar layer measures \(C5\) through a
+score whose finite values are positive and whose limit is zero.  Any statement about \(C5\)
+obtained \emph{through that score} is therefore a statement about the limit, which is exactly
+what the standing guard separates from finite discharge.  A shape-(iii) route must reach the
+obstruction by some other access; otherwise it re-enters the collar layer and inherits its
+verdict.
+
+\subsection*{r88 ledger}
+\label{subsec:r88-ledger}
+
+Of the three r86 shapes, two are now closed and one is not:
+\[
+\mathsf D_{(b)}^{r88}
+=\bigl(\text{(i) excluded},\ \text{(ii) excluded},\ \text{(iii) open}\bigr),
+\qquad
+R_{(b)}^{r88}=(0,0,1).
+\]
+Question (b) of the r86 split therefore remains \(\mathsf{Open}_{\rm undecided}\), but its
+search space is narrower: it is no longer ``some mechanism outside the collar'' but
+specifically a witness meeting \((\alpha)\)--\((\delta)\), with the two parametric
+modifications of the collar recursion ruled out.
+
+\subsection*{r88 guard update}
+\label{subsec:r88-guard-update}
+
+r88 spends no guard.  It closes two candidate routes and leaves every ledger value where it
+stood:
+\[
+R_{\rm glob}^{(r88,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{r88}=(1,1,1,1,1),
+\qquad
+R_{\rm exact/global}^{r88}=(1,1,1,1,1).
+\]
+Corollary r88.3 strengthens \(\mathsf{LG}_5^{\rm bd}\) by showing that the most natural way
+around it collapses back into it.  The layer does not imply exact
+finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global
+photon-clock/RH theorem, or global all-readout closure.
+
+
 \end{document}

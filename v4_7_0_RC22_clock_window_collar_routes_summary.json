@@ -1,0 +1,97 @@
+{
+  "rc": "RC22",
+  "basis": "RC21 source with r87 photon-clock window calibration and r88 non-collar route admissibility test",
+  "rounds": ["r87", "r88"],
+  "branches": ["Q3 of the r48 queue", "question (b) of the r86 C5 split"],
+  "supersedes": "RC21",
+  "toolchain": "MiKTeX 25.12 pdfLaTeX",
+  "pages": 1025,
+  "latex_passes": 3,
+  "latex_errors": 0,
+  "version_doi": "10.5281/zenodo.20232911",
+  "concept_doi": "10.5281/zenodo.19210728",
+  "previous_baseline_doi": "10.5281/zenodo.20117361",
+  "expired_doi": "10.5281/zenodo.20181842",
+  "titlepage_version_doi_visible_lines": 1,
+  "titlepage_concept_doi_visible_lines": 1,
+  "pdf_version_doi_hits": 6,
+  "pdf_concept_doi_hits": 9,
+  "pdf_previous_baseline_doi_hits": 15,
+  "expired_doi_hits_pdf": 0,
+  "undefined_refs": 0,
+  "undefined_citations": 0,
+  "duplicate_label_warnings": 0,
+  "rerun_warnings": 0,
+  "overfull_hbox_warnings": 58,
+  "labels_total": 3322,
+  "comparison_same_toolchain": {
+    "rc19": {"pages": 1014, "labels_total": 3290, "overfull_hbox_warnings": 58},
+    "rc20": {"pages": 1016, "labels_total": 3296, "overfull_hbox_warnings": 58},
+    "rc21": {"pages": 1019, "labels_total": 3305, "overfull_hbox_warnings": 58},
+    "rc22": {"pages": 1025, "labels_total": 3322, "overfull_hbox_warnings": 58}
+  },
+  "overfull_baseline_note": "The RC19 report records 45; the same source under MiKTeX 25.12 yields 58. Toolchain effect, not a regression. RC19 through RC22 all yield 58 here.",
+  "r87_results": {
+    "window_existence_criterion": "16/G_avail <= S_V < 16",
+    "half_width_formula": "delta_V = sigma_V * arccos(sqrt((G_req-1)/(G_avail-1)))",
+    "verified_windows": {
+      "V3": {"S": 10, "ratio": "3/5", "delta_over_sigma": 0.684719},
+      "V5": {"S": 10, "ratio": "2/5", "delta_over_sigma": 0.886077},
+      "V8": {"S": 9, "ratio": "7/9", "delta_over_sigma": 0.490883}
+    },
+    "single_packet_lift_formula": "Delta S(N -> N+1) = 1 + 2*kappa*N",
+    "r16_lift_reproduced": "N 3->4 at kappa=3/4 gives Delta S = 11/2, S: 15/2 -> 13",
+    "blocked_ranking_multiplicative": ["V6 1.422", "V9 1.778", "V0 4.0"],
+    "blocked_ranking_additive_missing_S": ["V9 7/3", "V6 19/6", "V0 12"],
+    "v9_reduction": {
+      "needs_delta_S": "7/3",
+      "admissible_decompositions_of_S9_equals_3": [
+        {"N": 2, "kappa": "1/2", "delta_S": 3, "S_new": 6, "G_times_S": 18, "crosses_16": true},
+        {"N": 3, "kappa": "0", "delta_S": 1, "S_new": 4, "G_times_S": 12, "crosses_16": false}
+      ],
+      "missing_datum": "the packet count N_9"
+    },
+    "delta_gamma_provenance": "not derivable from the r15/r16 window layer; originates in r65 inside the compressed r55-r80 chain",
+    "R_cal": [0, 0, 0, 1]
+  },
+  "r88_results": {
+    "shape_i_closed_form": "Phi^(n) = q^n (Phi0 + c/(1-q)) - c/(1-q)",
+    "shape_i_tuning_condition": "c*(N) = (1-q) q^N Phi0 / (1 - q^N)",
+    "shape_i_tuned_values_q_three_quarters": ["3/4", "9/28", "27/148", "81/700", "243/3124"],
+    "generic_c_behaviour": "orbit crosses zero between stages without attaining it; samples c=1/10,1/5,1/4,3/10 cross at stages 5,3,3,3",
+    "admissibility_obstruction": "Phi^(N+1) = -c < 0, orbit leaves D_5^bd immediately after discharge; r09 admissibility rests on positivity preservation",
+    "collapse_result": "shape (i) plus a stopping rule is shape (ii), forbidden by LG_5^bd; the two are one candidate and it is already excluded",
+    "free_parameter_trap": "unconstrained (c_n) realizes any orbit and therefore carries no information about C5",
+    "shape_iii_requirements": [
+      "exhibit vanishing of the C5 obstruction itself, not smallness of the score",
+      "be independent of U_5^bd",
+      "stay compatible with C5_det/eff at theta=1/256, n=20",
+      "not import the all-readout slot"
+    ],
+    "D_b": ["excluded", "excluded", "open"],
+    "R_b": [0, 0, 1]
+  },
+  "guard_state": {
+    "R_glob": [0, 1, 1, 1, 1],
+    "Gamma_guard": [1, 1, 1, 1, 1],
+    "R_eff_local": [0, 0, 0, 0, 0],
+    "R_exact_global": [1, 1, 1, 1, 1]
+  },
+  "guard_note": "Neither r87 nor r88 spends a guard. r88 strengthens LG_5^bd by showing the natural way around it collapses back into it.",
+  "claim_scope": "guarded effective/local and frame-typed closures, not exact global closure",
+  "queue_state": {
+    "Q1": "done (r49-r54)",
+    "Q2": "done (r55-r80)",
+    "Q3": "calibrated (r87); Delta_gamma provenance open",
+    "Q4": "inadmissible while beta_4 = 1/256 stays unspent",
+    "Q5": "done (r86)"
+  },
+  "blocking_data_gaps": [
+    "packet count N_9 of the sparse reentry front",
+    "uncompressed r65 text carrying the derivation of Delta_gamma < 1/5"
+  ],
+  "data_gap_location": "RC16 source packet, RC14_uncompressed_reference_source.tex, not in this working directory",
+  "main_paper_divergence": "unity theorem item (vi) unchanged in brendecke2026main (10.5281/zenodo.19210213)",
+  "public_release_performed": false,
+  "new_doi_requested": false
+}
