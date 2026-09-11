@@ -1,0 +1,94 @@
+{
+  "rc": "RC23",
+  "basis": "RC22 source with r89 correction of r87 and r90 reconstruction attempt for Delta_gamma",
+  "rounds": ["r89", "r90"],
+  "supersedes": "RC22",
+  "toolchain": "MiKTeX 25.12 pdfLaTeX",
+  "pages": 1030,
+  "latex_passes": 3,
+  "latex_errors": 0,
+  "version_doi": "10.5281/zenodo.20232911",
+  "concept_doi": "10.5281/zenodo.19210728",
+  "previous_baseline_doi": "10.5281/zenodo.20117361",
+  "expired_doi": "10.5281/zenodo.20181842",
+  "titlepage_version_doi_visible_lines": 1,
+  "titlepage_concept_doi_visible_lines": 1,
+  "pdf_version_doi_hits": 6,
+  "pdf_concept_doi_hits": 9,
+  "pdf_previous_baseline_doi_hits": 15,
+  "expired_doi_hits_pdf": 0,
+  "undefined_refs": 0,
+  "undefined_citations": 0,
+  "duplicate_label_warnings": 0,
+  "rerun_warnings": 0,
+  "overfull_hbox_warnings": 58,
+  "labels_total": 3335,
+  "comparison_same_toolchain": {
+    "rc19": {"pages": 1014, "labels_total": 3290, "overfull_hbox_warnings": 58},
+    "rc20": {"pages": 1016, "labels_total": 3296, "overfull_hbox_warnings": 58},
+    "rc21": {"pages": 1019, "labels_total": 3305, "overfull_hbox_warnings": 58},
+    "rc22": {"pages": 1025, "labels_total": 3322, "overfull_hbox_warnings": 58},
+    "rc23": {"pages": 1030, "labels_total": 3335, "overfull_hbox_warnings": 58}
+  },
+  "r89_correction": {
+    "corrected_layer": "r87",
+    "false_assertions": [
+      "decomposition (N_9, kappa_9) not recorded in this source",
+      "V8 -> V9 is the only blocked relay edge left"
+    ],
+    "actual_locations": {
+      "chart_parameters": "r14 finite valley-front chart scan: V9 = (N=2, kappa=1/2, G=3)",
+      "executed_lift": "r17 guarded micro-lift: (2,1/2,3) -> (3,1/2,3), H' = 18 > 16, margin 2"
+    },
+    "calculation_was_correct": "the r87 lift formula dS = 1 + 2 kappa N gives dS=3, S'=6, G S'=18, exactly the r17 values",
+    "defect": "source survey, not calculation",
+    "rule_r89": "a claim that a datum is missing concerns the whole monolith and must be checked against adjacent rounds",
+    "R_corr": [0, 0, 0]
+  },
+  "r90_reconstruction": {
+    "status": "reconstruction, not recovery",
+    "absence_confirmed_by": [
+      "project directory",
+      "archive of 841 tex files, v0.1 to v3.35",
+      "nine v4 release packets",
+      "git pickaxe: Delta_gamma and W_clk first appear in RC19"
+    ],
+    "derivation": "coherence factor to first order is 1 - Var(phi); selector survives while Var <= 1 - (G_req-1)/(G_avail-1) = 1 - rho_V",
+    "chart_bounds": {"V3": "1-3/5 = 2/5", "V5": "1-2/5 = 3/5", "V8": "1-7/9 = 2/9"},
+    "family_bound": "min = 2/9 = 0.2222 at V8",
+    "recorded_bound": "1/5 = 0.2",
+    "margin": "exactly 10 percent below 2/9",
+    "assessment": "correct magnitude, correct place in the argument, plausible safety margin; matches the rounding discipline used for 1/256 and 1/64",
+    "rejected_alternative": "rho_V3 - rho_V5 = 1/5 exactly, but carries no mechanism and does not depend on gamma",
+    "limits": [
+      "Delta_gamma is nowhere defined in this source",
+      "expansion is first order, valid for small spread only",
+      "the ten-percent margin is plausible but not derived"
+    ],
+    "R_rec": [0, 0, 1]
+  },
+  "guard_state": {
+    "R_glob": [0, 1, 1, 1, 1],
+    "Gamma_guard": [1, 1, 1, 1, 1]
+  },
+  "guard_note": "Neither r89 nor r90 spends a guard.",
+  "claim_scope": "guarded effective/local and frame-typed closures, not exact global closure",
+  "version_control": {
+    "system": "git",
+    "history_from": "v0.6.0",
+    "commits": 75,
+    "tags": ["v1.0.0", "v2.9.0", "v3.0.0", "v4.0.0", "v4.4", "v4.6.0", "RC19", "RC20", "RC21", "RC22", "RC23"],
+    "date_caveat": "dates before v4.0.0 are archiving dates, not authoring dates; ordering derives from version numbers",
+    "snapshot_files": "no longer required for future RCs; a tag carries the same information"
+  },
+  "queue_state": {
+    "Q1": "done (r49-r54)",
+    "Q2": "done (r55-r80)",
+    "Q3": "calibrated (r87); provenance reconstructed but not recovered (r90)",
+    "Q4": "inadmissible while beta_4 = 1/256 stays unspent",
+    "Q5": "done (r86)"
+  },
+  "relay_chain": "V1 ... V9 stitched; only V0 outside, needing dS = 12 against the largest executed lift of 11/2",
+  "public_release_performed": false,
+  "new_doi_requested": false
+}

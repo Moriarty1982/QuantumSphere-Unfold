@@ -64047,4 +64047,149 @@ closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theo
 global all-readout closure.
 
 
+% ============================================================================
+\clearpage
+\section*{v4.7.0-r90 Source-Only: Reconstruction Attempt for the Bound \texorpdfstring{\(\Delta_\gamma<1/5\)}{Delta gamma < 1/5}}
+\addcontentsline{toc}{section}{v4.7.0-r90 Source-Only: Reconstruction Attempt for the Bound Delta gamma < 1/5}
+\label{sec:r90-delta-gamma-reconstruction}
+% ============================================================================
+
+\paragraph{Purpose and status.}
+r87 recorded that the bound \(\Delta_\gamma<1/5\) carried by \(W_{\rm clk}^{\rm loc}\) has no
+derivation in this source: it enters through the compressed r55--r80 chain, and the detailed
+r65 text is not part of the source packet.  This layer attempts a reconstruction from the
+material that \emph{is} present.  It arrives at a bound of the right size from the r15 clock
+model.  \textbf{This is a reconstruction, not a recovery.}  It does not establish that r65
+argued this way, and it does not replace the missing text.  The provenance component of
+\(R_{\rm cal}^{r87}\) stays open.
+
+\subsection*{r90 what the source fixes}
+\label{subsec:r90-what-is-fixed}
+
+Three ingredients are stated in
+Section~\ref{sec:v470-r15-zero-clock-phase-window-relay-stitching}.  The photon-clock probe is
+\[
+\mathcal C_\gamma(\tau)
+=1+\eta\,
+\frac{\bigl|\sum_{m=1}^{M}w_me^{i\gamma_m\tau}\bigr|^2}
+{\bigl(\sum_{m=1}^{M}|w_m|\bigr)^2},
+\]
+its local normalized form is
+\[
+G_V(\tau)=1+(G_V^{\rm avail}-1)\cos^2\!\Bigl(\frac{\tau-\tau_V}{\sigma_V}\Bigr),
+\]
+so that \(\eta=G_V^{\rm avail}-1\), and window membership requires
+\(\mathcal C_\gamma(\tau)\ge G_V^{\rm req}\).
+
+\subsection*{r90 coherence bound}
+\label{subsec:r90-coherence-bound}
+
+\paragraph{Theoremlet r90.}
+Let the clock phases be \(\varphi_m=\gamma_m\tau\), centred so that
+\(\langle\varphi\rangle=0\), and write \(\mathrm{Var}(\varphi)\) for their weighted variance.
+To first order in the spread,
+\[
+\frac{\bigl|\sum_m w_me^{i\varphi_m}\bigr|^2}{\bigl(\sum_m|w_m|\bigr)^2}
+=1-\mathrm{Var}(\varphi)+O\bigl(\mathrm{Var}^2\bigr),
+\]
+and the selector is preserved on chart \(V\) exactly while
+\[
+\mathrm{Var}(\varphi)\ \le\ 1-\frac{G_V^{\rm req}-1}{G_V^{\rm avail}-1}
+\ =\ 1-\rho_V ,
+\]
+where \(\rho_V\) is the ratio already tabulated in the r15 half-width formula.
+
+\paragraph{Proof.}
+Expanding \(\langle e^{i\varphi}\rangle=1+i\langle\varphi\rangle-\tfrac12\langle\varphi^2\rangle
++O(\varphi^3)\) with \(\langle\varphi\rangle=0\) gives
+\(\langle e^{i\varphi}\rangle=1-\tfrac12\mathrm{Var}+O(\mathrm{Var}^2)\), hence
+\(|\langle e^{i\varphi}\rangle|^2=1-\mathrm{Var}+O(\mathrm{Var}^2)\).  Substituting into
+\(\mathcal C_\gamma\ge G^{\rm req}\) with \(\eta=G^{\rm avail}-1\) yields
+\(1+(G^{\rm avail}-1)(1-\mathrm{Var})\ge G^{\rm req}\), which rearranges to the display.
+\(\square\)
+
+\subsection*{r90 the resulting numerical bound}
+\label{subsec:r90-numerical-bound}
+
+Applied to the three charts that actually carry windows:
+\[
+\begin{array}{c|c|c|c}
+\text{chart} & \rho_V & 1-\rho_V & \text{decimal}\\
+\hline
+V3 & 3/5 & 2/5 & 0.4000\\
+V5 & 2/5 & 3/5 & 0.6000\\
+V8 & 7/9 & 2/9 & 0.2222
+\end{array}
+\]
+A bound valid for the whole family is the minimum,
+\[
+\Delta_\gamma^{\max}=\min_V\bigl(1-\rho_V\bigr)=\frac29=0.2222\ldots,
+\]
+attained at the narrowest window \(V8\).  The recorded bound \(1/5=0.2\) sits just below it,
+with a margin of ten percent:
+\[
+\frac15<\frac29,
+\qquad
+1-\frac{1/5}{2/9}=\frac1{10}.
+\]
+
+\paragraph{Assessment.}
+A conservative rounding of \(2/9\) to the nearest simple fraction below is \(1/5\), and that
+matches the rounding discipline used elsewhere in this document, where thresholds are carried
+as \(1/256\) and \(1/64\) rather than as decimals.  The reconstruction therefore produces a
+bound of the correct magnitude, at the correct place in the argument, with a plausible safety
+margin.
+
+\subsection*{r90 rejected alternative}
+\label{subsec:r90-rejected-alternative}
+
+One numerical coincidence in the same table should be recorded and dismissed:
+\[
+\rho_{V3}-\rho_{V5}=\frac35-\frac25=\frac15 .
+\]
+This reproduces the constant exactly rather than approximately, but it carries no mechanism:
+a difference of two window ratios is not a spread of clock frequencies, it does not depend on
+\(\gamma\) at all, and nothing in the grammar would make such a difference a preservation
+threshold.  It is rejected as coincidence.
+
+\subsection*{r90 limits of the reconstruction}
+\label{subsec:r90-limits}
+
+Three gaps remain and are stated rather than papered over:
+\[
+\begin{array}{c|l}
+(\alpha) & \Delta_\gamma\text{ is nowhere defined in this source; whether it denotes a
+ variance,}\\
+ & \text{a standard deviation or a maximal deviation is not recorded}\\
+(\beta) & \text{the expansion is first order and holds only for small spread}\\
+(\gamma) & \text{the ten-percent margin is plausible but not derived}
+\end{array}
+\]
+Under reading \((\alpha)\) as a standard deviation the bound would instead compare against
+\(\sqrt{2/9}=0.471\), and \(1/5\) would be far more conservative than necessary; under the
+variance reading it is a close fit.  That is evidence for the variance reading, not proof.
+
+\subsection*{r90 ledger and guard update}
+\label{subsec:r90-ledger-guard}
+
+The reconstruction is recorded as such:
+\[
+R_{\rm rec}^{r90}=(0,0,1)
+\]
+for (coherence bound derived, numerical match established, r65 provenance still missing).
+The third component stays at \(1\): only the original text can close it.
+
+r90 spends no guard:
+\[
+R_{\rm glob}^{(r90,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{r90}=(1,1,1,1,1).
+\]
+All statements are local and chart-bound.  The layer makes no spectral identification between
+Riemann zeros and photon ticks, and it does not imply exact finite \(C5\) zero closure, exact
+all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem, or global all-readout
+closure.  \(W_{\rm clk}^{\rm loc}\) continues to be carried as a conditional local statement
+under its inherited bound, whose status as an inherited constant is unchanged by r90.
+
+
 \end{document}

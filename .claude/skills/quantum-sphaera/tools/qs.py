@@ -140,6 +140,13 @@ class Numbering:
                     for cname, w in self.within.items():
                         if w == "section":
                             counters[cname] = 0
+                # Gliederungsknoten als eigener Eintrag, damit --label auch
+                # Abschnittsmarken findet und nicht faelschlich "fehlt" meldet.
+                titel, _ = brace_arg(line, line.index("{")) if "{" in line else (None, 0)
+                pending = {"env": "section", "number": str(sec) if not m.group("star") else "*",
+                           "line": idx, "title": (titel or "").strip()[:60],
+                           "label": None, "section": sec}
+                entries.append(pending)
 
             for mb in self.RE_BEGIN.finditer(line):
                 env = mb.group("env")
