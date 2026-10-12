@@ -1,0 +1,27 @@
+{
+  "status": "diagnostic_only",
+  "selector_edge_failures": {},
+  "D_chi_1_empty": true,
+  "OP_1_4_reachability": {
+    "K1_anchor": true,
+    "K2_anchor": true
+  },
+  "OP_1_4_D_reach_chi_1": [],
+  "OP_5B_reachability": {
+    "Y5B_prom": true
+  },
+  "OP_5B_D_reach_chi_1": [],
+  "passed_edges": [
+    ["q_clk", "z_QAM", "e_QM"],
+    ["z_QAM", "z_MML", "e_QM"],
+    ["z_MML", "z_sel", "e_MS"],
+    ["z_sel", "K1_anchor", "e_SA_K1"],
+    ["z_sel", "K2_anchor", "e_SA_K2"],
+    ["q_clk", "z_HC", "e_H_boundary"],
+    ["z_HC", "z_boundary_collar", "e_H_boundary"],
+    ["z_boundary_collar", "z_MMA", "e_boundary_M"],
+    ["z_MMA", "Y5B_prom", "e_MR"],
+    ["z_HC", "z_MML_MM", "e_HMM"]
+  ],
+  "rule": "selector gate first, then reachability in selector-gated graph"
+}

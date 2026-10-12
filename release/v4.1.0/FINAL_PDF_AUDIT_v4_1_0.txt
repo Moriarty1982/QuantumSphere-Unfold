@@ -1,0 +1,27 @@
+Quantum Sphaera Companion v4.1.0 final PDF audit
+
+Version DOI: 10.5281/zenodo.19937999
+Concept DOI: 10.5281/zenodo.19210728
+
+Active Core PDF:
+- File: Quantum_Sphaera_Companion_v4_1_0_release_final.pdf
+- Build: source-native pdflatex, 3 passes
+- Pages: 791
+- Undefined references after final pass: 0 observed in final grep audit
+- Undefined citations after final pass: 0 observed in final grep audit
+- Fatal/LaTeX/undefined-control errors: 0 observed in final grep audit
+- Overfull hbox warnings: 2 observed in final grep audit
+- Overfull vbox warnings: 0 observed in final grep audit
+- Render spotcheck pages generated: 1, 2, 3, 789, 790, 791
+
+Historical Witness PDF:
+- File: Quantum_Sphaera_Companion_v4_1_0_historical_witness_preserved.pdf
+- Build: source-native pdflatex, 3 passes
+- Pages: 232
+- Undefined references after final pass: 0 observed in final grep audit
+- Fatal/LaTeX/undefined-control errors: 0 observed in final grep audit
+- Overfull hbox/vbox warnings: 0 observed in final grep audit
+- Render spotcheck pages generated: 1, 2, 3, 230, 231, 232
+
+Governing status:
+OP5 is locally closed inside the declared photon-frame HC-halo/Dixon grammar under the explicit zero-register assumptions L_unr=0, B_HC/MM=0, R_HS4=0, and D_HS5=0. This is not a global OP5 closure theorem outside that grammar. OP1 and OP4 remain open.

@@ -1,0 +1,309 @@
+% ============================================================
+%  v4.2.0-r02 development patch
+%  HS Split/Refold XOR Register Memory
+%  Scope: source-only DEV-PATCH; no release claim, no PDF freeze.
+% ============================================================
+
+\subsection{HS split/refold XOR register memory}
+\label{ssec:hs-split-refold-xor-register-memory}
+
+\begin{remark}[Scope of the r02 split/refold register layer]
+\label{rem:r02-split-refold-scope}
+This subsection records a structural strengthening of the Hilbert-shift
+ladder introduced in Subsection~\ref{ssec:op1-op4-joint-hcdixon-reduction}.
+It is a DEV-PATCH layer only.  It does not claim a new global OP closure,
+and it does not replace the OP1 compression proof or the finite OP4
+selector proofs.  Its role is to explain how higher Hilbert shifts may
+alternate between visible split and refolded center while preserving
+route history in a reversible register.
+\end{remark}
+
+\begin{definition}[Even shift state]
+\label{def:even-hs-state}
+An even Hilbert-shift state is a pair
+\[
+  S_m=(K_m,R_m),
+\]
+where \(K_m\) is the effective refolded center at the \(m\)-th
+split/refold cycle, and \(R_m\) is a finite register carrying the
+accumulated route, lens, selector, orientation, and residual history.
+The visible geometry is therefore allowed to remain small even when the
+registered history grows.
+\end{definition}
+
+\begin{definition}[Focal split signature]
+\label{def:focal-split-signature}
+The next odd Hilbert-shift layer unfolds the effective center \(K_m\)
+into a focal pair
+\[
+  K_m\longmapsto (K_m^-,K_m^+).
+\]
+The split produces a finite signature
+\[
+  \sigma_m.
+\]
+This signature may contain, depending on the active layer, branch data,
+lens observables, selector data, residual data, and orientation data:
+\[
+  \sigma_m
+  =
+  (b_m,\Delta\theta_m,\Delta L_m,\chi_m,\rho_m,\omega_m).
+\]
+The entries are not required to be real-valued; they may be symbolic,
+Boolean, selector-valued, or mask-valued, provided they live in the
+declared finite register grammar.
+\end{definition}
+
+\begin{definition}[XOR-like register update]
+\label{def:xor-like-register-update}
+Let \((\mathcal X_m,\oplus)\) be the finite register algebra used at the
+\(m\)-th split/refold step.  In the binary case \(\oplus\) is ordinary
+XOR.  More generally, it is an explicitly declared reversible update
+operation satisfying the inversion rule
+\[
+  (R_m\oplus\sigma_m)\oplus\sigma_m=R_m
+\]
+whenever the same signature \(\sigma_m\) is supplied.  The register update
+is
+\[
+  R_{m+1}=R_m\oplus\sigma_m.
+\]
+Thus the update writes the shift signature without making the visible
+refold irreversible.
+\end{definition}
+
+\begin{definition}[No-erase refold guard]
+\label{def:no-erase-refold-guard}
+A refold map
+\[
+  \operatorname{Refold}_m
+\]
+is admissible only if it compresses the visible focal pair
+\[
+  (K_m^-,K_m^+)
+\]
+to an effective center \(K_{m+1}\) without erasing the updated register
+\(R_{m+1}\).  We record this as the guard
+\[
+  \boxed{\operatorname{Refold}\neq \operatorname{Erase}.}
+\]
+In the minimal midpoint model one writes
+\[
+  K_{m+1}
+  =
+  \frac12(K_m^-+K_m^+),
+\]
+but in the full register model the refold may depend on the written
+history:
+\[
+  K_{m+1}
+  =
+  \operatorname{Refold}_m(K_m^-,K_m^+;R_{m+1}).
+\]
+\end{definition}
+
+\begin{lemma}[HS split/refold recursion]
+\label{lem:hs-split-refold-recursion}
+Let \(S_m=(K_m,R_m)\) be an even Hilbert-shift state.  Suppose the next
+odd shift produces a focal pair and signature
+\[
+  K_m\mapsto(K_m^-,K_m^+),
+  \qquad
+  \sigma_m,
+\]
+and suppose the register is updated by
+\[
+  R_{m+1}=R_m\oplus\sigma_m.
+\]
+If the following refold is no-erase admissible, then the next even state is
+\[
+  S_{m+1}
+  =
+  (K_{m+1},R_{m+1}),
+\]
+where
+\[
+  K_{m+1}
+  =
+  \operatorname{Refold}_m(K_m^-,K_m^+;R_{m+1}).
+\]
+The visible geometry may therefore alternate
+\[
+  1\longrightarrow2\longrightarrow1
+\]
+while the route history remains stored in the register chain.
+\end{lemma}
+
+\begin{remark}[Active geometry versus addressable history]
+\label{rem:active-geometry-vs-history}
+The split/refold recursion separates two notions which should not be
+identified.  The active visible geometry is locally \(1\)- or \(2\)-centered:
+\[
+  K_m
+  \quad\text{or}\quad
+  (K_m^-,K_m^+).
+\]
+The addressable history space, however, may grow like a binary register
+space.  For \(m\) binary signatures there are \(2^m\) possible histories,
+but a single realized route carries only its register path.  Thus higher
+Hilbert shifts need not produce a visible exponential point cloud; they
+produce reversible exponential addressability.
+\end{remark}
+
+\begin{definition}[Higher-HS alternation convention]
+\label{def:higher-hs-alternation-convention}
+We read higher Hilbert-shift layers by the convention
+\[
+  \mathrm{HS}(2m): (K_m,R_m),
+\]
+and
+\[
+  \mathrm{HS}(2m+1): (K_m^-,K_m^+,R_m,\sigma_m).
+\]
+The subsequent even layer writes and refolds:
+\[
+  (K_m^-,K_m^+,R_m,\sigma_m)
+  \longmapsto
+  (K_{m+1},R_m\oplus\sigma_m).
+\]
+This convention refines the HS(0)-anchored ladder by treating odd shifts
+as focal/split layers and even shifts as effective refold/write layers.
+\end{definition}
+
+\begin{remark}[Reading the low HS layers]
+\label{rem:low-hs-layers-split-refold-reading}
+Under this convention one may read the low layers as follows:
+\[
+\begin{array}{c|l}
+\mathrm{HS}(0) & \text{raw forbidden kernel }K_0,\\
+\mathrm{HS}(1) & \text{first focal/ellipsoid HC split }(K_0^-,K_0^+),\\
+\mathrm{HS}(2) & \text{effective stable collar/orbit center }K_1,\\
+\mathrm{HS}(3) & \text{Fano/octonionic split over }K_1,\\
+\mathrm{HS}(4) & \text{selector/leakage refold over }K_2,\\
+\mathrm{HS}(5) & \text{front/back or readout/action split over }K_2,\\
+\mathrm{HS}(6) & \text{Dixon carrier refold }K_3.
+\end{array}
+\]
+This table is a structural reading, not an additional claim that all layers
+are globally solved.
+\end{remark}
+
+\begin{definition}[Lens signature of a split]
+\label{def:lens-signature-of-split}
+For a split layer with focal pair \((K_m^-,K_m^+)\), and two admissible
+test readouts \(A,B\), define the lens signature schematically by
+\[
+  \mathcal L_m(A,B)
+  =
+  (\Delta\theta_m,\Delta L_m,\mu_m,\rho_m),
+\]
+where \(\Delta\theta_m\) records angular displacement, \(\Delta L_m\)
+records path-length or time-delay displacement, \(\mu_m\) records
+magnification or readout amplification, and \(\rho_m\) records residual
+debt.  The split signature \(\sigma_m\) may include \(\mathcal L_m(A,B)\)
+when the layer is read as a lens/readout layer.
+\end{definition}
+
+\begin{lemma}[XOR reconstruction under known signatures]
+\label{lem:xor-reconstruction-known-signatures}
+Assume that the signatures \(\sigma_0,\ldots,\sigma_{m-1}\) are stored or
+deterministically reconstructible from the declared shift grammar.  If
+\[
+  R_{j+1}=R_j\oplus\sigma_j
+\]
+for each \(j<m\), then the register chain can be inverted stepwise:
+\[
+  R_j=R_{j+1}\oplus\sigma_j.
+\]
+Consequently, a refolded even state can preserve reconstructible route
+history even though its visible geometry has been compressed to one
+effective center.
+\end{lemma}
+
+\begin{lemma}[No higher-HS residual explosion criterion]
+\label{lem:no-higher-hs-residual-explosion}
+Suppose every higher-HS split produces a unique finite signature
+\(\sigma_m\), every register update is reversible, and every refold
+satisfies the no-erase guard.  Then higher Hilbert shifts do not create
+an uncontrolled visible exponential residual geometry.  Any additional
+history is routed into the finite register chain
+\[
+  R_m
+  =
+  R_0\oplus\sigma_0\oplus\cdots\oplus\sigma_{m-1}.
+\]
+Thus possible exponential addressability is represented as register
+history rather than as uncontrolled new geometric branches.
+\end{lemma}
+
+\begin{theorem}[OP1/OP4 register-closure strengthening candidate]
+\label{thm:op1-op4-register-closure-strengthening}
+Assume the OP1/OP4 joint HC--Dixon reduction of
+Theorem~\ref{thm:conditional-op1-op4-local-closure}.  Add the following
+split/refold register assumptions:
+\begin{enumerate}
+  \item each pre-Dixon Hilbert-shift split writes a unique finite
+  signature \(\sigma_m\);
+  \item the register update is reversible,
+  \(R_{m+1}=R_m\oplus\sigma_m\);
+  \item the refold map satisfies \(\operatorname{Refold}\neq
+  \operatorname{Erase}\);
+  \item the signatures associated with the OP4 selectors are finite
+  register data:
+  \[
+    \sigma_{15/16},\qquad
+    \sigma_{4/3},\qquad
+    \sigma_{7/6},\qquad
+    \sigma_{\delta^2}.
+  \]
+\end{enumerate}
+Then the OP1 compression route and the leading OP4 selector readouts may
+be read as finite reversible register data over the OP5-inherited
+HC/Dixon route grammar.  In particular, higher HS layers do not by
+themselves create a new uncontrolled OP1/OP4 residual channel merely by
+splitting, provided their split signatures are written and refolded
+without erasure.
+\end{theorem}
+
+\begin{remark}[Status of the strengthening theorem]
+\label{rem:register-strengthening-status}
+Theorem~\ref{thm:op1-op4-register-closure-strengthening} is a
+strengthening candidate, not a proof of the OP1 load identity or of the
+finite OP4 selector values.  Its role is to explain how the pre-Dixon
+Hilbert-shift ladder can remain geometrically controlled while still
+carrying enough reversible memory to reconstruct route history and
+selector origin.
+\end{remark}
+
+\begin{definition}[r02 proof-obligation register]
+\label{def:r02-proof-obligation-register}
+The r02 split/refold register layer has the following proof obligations:
+\[
+  \rho_{\mathrm{r02}}
+  =
+  (
+    \rho_{\mathrm{sig}},
+    \rho_{\oplus},
+    \rho_{\mathrm{noerase}},
+    \rho_{\mathrm{lens}},
+    \rho_{\mathrm{selector\;trace}}
+  ).
+\]
+Here \(\rho_{\mathrm{sig}}\) records signature uniqueness,
+\(\rho_{\oplus}\) records reversible update validity,
+\(\rho_{\mathrm{noerase}}\) records the no-erase refold guard,
+\(\rho_{\mathrm{lens}}\) records the adequacy of lens signatures, and
+\(\rho_{\mathrm{selector\;trace}}\) records the identification of
+\(15/16,4/3,7/6,\delta_{\mathrm{CL}}^2\) as finite shift signatures.
+\end{definition}
+
+\begin{remark}[Impact on OP1 and OP4]
+\label{rem:r02-impact-op1-op4}
+The r02 register layer can help OP1 by giving a structural reason why
+\(\gamma_L^5\) may be read as five controlled pre-Dixon signature stages
+rather than as an uncontrolled geometric expansion.  It can help OP4 by
+reading the finite selectors \(15/16\), \(4/3\), \(7/6\), and the
+double-frame channel \(\delta_{\mathrm{CL}}^2\) as registered split/refold
+signatures.  These are compatibility mechanisms, not substitutes for the
+remaining selector, compression, or frame-extraction proofs.
+\end{remark}

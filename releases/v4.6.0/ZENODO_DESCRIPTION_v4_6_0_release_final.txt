@@ -1,0 +1,10 @@
+Quantum Sphaera Companion v4.6.0 release final.
+
+This release records the public Zenodo-facing v4.6.0 version of the Quantum Sphaera Companion after source-native release-final rebuild, title-page DOI-line repair, bounded-readout theorem consolidation, and T2 scope-boundary freeze.
+
+Main release-facing result: inside the declared global grammar, the bounded formal-symbolic readout surface is consolidated as an internal consequence. In compact notation, BRead_bounded belongs to Cons(G_global^decl). The release also records the corresponding scope boundary: BRead_bounded does not imply T2, and no all-readout/T2 closure is claimed.
+
+Scope guard: this release does not claim a full all-readout witness family, unrestricted physical readout, empirical validation, Standard-Model-spectrum derivation, QCD/confinement result, CKM/PMNS derivation, quark-mass spectrum derivation, or global physical closure. The T2 obstruction is treated as a scope boundary, not as a contradiction of the bounded formal-symbolic result.
+
+Version DOI: 10.5281/zenodo.20117361
+Concept DOI: 10.5281/zenodo.19210728

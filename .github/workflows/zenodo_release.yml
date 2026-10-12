@@ -1,0 +1,123 @@
+name: Zenodo Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "sandbox or production"
+        required: true
+        default: "sandbox"
+        type: choice
+        options:
+          - sandbox
+          - production
+      deposition_id:
+        description: "Existing draft deposition ID to update; leave empty to create a new draft"
+        required: false
+        default: ""
+      publish:
+        description: "Publish after upload? Must be true plus confirm_publish=true"
+        required: true
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+      confirm_publish:
+        description: "Final safety confirmation for publish"
+        required: true
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+      dry_run:
+        description: "Validate metadata and manifest only; no API mutation"
+        required: true
+        default: "true"
+        type: choice
+        options:
+          - "true"
+          - "false"
+      metadata:
+        description: "Path to Zenodo metadata JSON"
+        required: true
+        default: "release/zenodo/metadata_v4_7_0.json"
+      files_glob:
+        description: "Quoted file globs to upload"
+        required: true
+        default: "release/v4.7.0/*"
+
+permissions:
+  contents: read
+
+env:
+  PYTHONUNBUFFERED: "1"
+
+jobs:
+  zenodo-release:
+    name: Zenodo release helper
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate inputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "environment=${{ inputs.environment }}"
+          echo "dry_run=${{ inputs.dry_run }}"
+          echo "publish=${{ inputs.publish }}"
+          echo "confirm_publish=${{ inputs.confirm_publish }}"
+          test -f "${{ inputs.metadata }}"
+
+          if ! compgen -G "${{ inputs.files_glob }}" >/dev/null; then
+            if [[ "${{ inputs.dry_run }}" == "true" ]]; then
+              echo "No files matched ${{ inputs.files_glob }}; allowed for metadata-only dry-run."
+            else
+              echo "No files matched ${{ inputs.files_glob }}; non-dry-run upload requires files." >&2
+              exit 2
+            fi
+          fi
+
+          if [[ "${{ inputs.publish }}" == "true" && "${{ inputs.confirm_publish }}" != "true" ]]; then
+            echo "publish=true requires confirm_publish=true" >&2
+            exit 2
+          fi
+          if [[ "${{ inputs.environment }}" == "production" && "${{ inputs.dry_run }}" == "false" ]]; then
+            echo "Production mutation requested. Continuing because this is manually dispatched."
+          fi
+
+      - name: Run Zenodo helper
+        shell: bash
+        env:
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+          ZENODO_SANDBOX_TOKEN: ${{ secrets.ZENODO_SANDBOX_TOKEN }}
+        run: |
+          set -euo pipefail
+          args=(
+            --metadata "${{ inputs.metadata }}"
+            --files ${{ inputs.files_glob }}
+            --environment "${{ inputs.environment }}"
+          )
+
+          if [[ -n "${{ inputs.deposition_id }}" ]]; then
+            args+=(--deposition-id "${{ inputs.deposition_id }}")
+          fi
+
+          if [[ "${{ inputs.dry_run }}" == "true" ]]; then
+            args+=(--dry-run)
+          fi
+
+          if [[ "${{ inputs.publish }}" == "true" ]]; then
+            args+=(--publish --confirm-publish)
+          fi
+
+          python tools/zenodo_publish.py "${args[@]}"

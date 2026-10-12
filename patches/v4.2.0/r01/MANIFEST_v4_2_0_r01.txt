@@ -1,0 +1,5 @@
+MANIFEST_v4_2_0_r01.txt
+Quantum_Sphaera_Companion_v4_2_0_r01_active_core_op1_op4_joint_hcdixon_reduction.tex
+OP1_OP4_Joint_HC_Dixon_Reduction_v4_2_0_r01_section.tex
+v4_2_0_r01_op1_op4_joint_hcdixon_reduction.patch
+SOURCE_AUDIT_v4_2_0_r01.txt

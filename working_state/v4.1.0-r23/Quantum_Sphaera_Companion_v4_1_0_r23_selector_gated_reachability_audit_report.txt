@@ -1,0 +1,29 @@
+Quantum Sphaera Companion v4.1.0-r23 selector-gated reachability audit
+Date: 2026-04-28
+
+Basis: Quantum_Sphaera_Companion_v4_1_0_r22_selector_to_route_gate_tex_and_py.zip
+
+Standalone report:
+- PDF: Quantum_Sphaera_Companion_v4_1_0_r23_selector_gated_reachability_report.pdf
+- Pages: 1
+- Return code: 0
+- Undefined refs/cites: 0 / 0
+- Overfull hbox: 0
+- Fatal errors: 0
+
+PDF render verification:
+- render_pdf.py return code: 0
+
+Diagnostic helper:
+- selector_gated_reachability.py return code: 0
+- report: python_diagnostics/selector_gated_reachability_report.json
+
+Mathematical move:
+- Reachability is checked only inside G_{chi,adm}^(1).
+- New obstruction: D_reach^{chi,(1)}.
+
+Non-claims:
+- OP 1/4 remains open.
+- OP 4 remains open.
+- OP 5(B) remains open.
+- This is still pre-TE, pre-residual, and pre-OP-4-stability.

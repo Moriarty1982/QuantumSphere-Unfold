@@ -1,0 +1,16 @@
+Quantum Sphaera Companion v4.1.0 final DOI-insertion source audit
+Date: 2026-05-01
+Concept DOI: 10.5281/zenodo.19210728
+Version DOI: 10.5281/zenodo.19937999
+
+Source-level checks:
+r64 occurrences: 0
+v4.1.0-r64 occurrences: 0
+pending Zenodo occurrences: 0
+v4.2.0 occurrences: 0
+Version DOI 10.5281/zenodo.19937999 occurrences: 9
+Concept DOI 10.5281/zenodo.19210728 occurrences: 13
+raw lowercase \halo occurrences: 0
+raw lowercase \exit occurrences: 0
+
+PDF rebuild status: attempted, but pdflatex timed out in the current execution environment before completion; no DOI-bearing final PDF freeze is claimed in this packet.
