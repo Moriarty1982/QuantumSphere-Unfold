@@ -40,7 +40,7 @@ jobs:
         shell: bash
         working-directory: ${{ github.workspace }}
         run: |
-          python3 scripts/qsc_latex_build.py \
+          python3 .github/scripts/qsc_latex_build.py \
             --source-dir "$SOURCE_DIR" \
             --output-dir "$GITHUB_WORKSPACE/build/qsc-pdf-artifacts" \
             --build-historical "$BUILD_HISTORICAL"
@@ -66,7 +66,7 @@ jobs:
           cp -v build/qsc-pdf-artifacts/*.txt "$RELEASE_DIR/audit/" 2>/dev/null || true
           cp -v build/qsc-pdf-artifacts/audit/* "$RELEASE_DIR/audit/" 2>/dev/null || true
 
-          zip -r "$RELEASE_DIR/Quantum_Sphaera_Companion_${VERSION}_sources.zip" sources scripts docker .github/workflows -x "*/.git/*"
+          zip -r "$RELEASE_DIR/Quantum_Sphaera_Companion_${VERSION}_sources.zip" sources docker .github/workflows .github/scripts -x "*/.git/*"
 
           cd "$RUNNER_TEMP/releases"
           zip -r "Quantum_Sphaera_Companion_${VERSION}_release_bundle.zip" "$VERSION"

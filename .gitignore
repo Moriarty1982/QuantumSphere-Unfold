@@ -1,0 +1,26 @@
+# Build outputs
+/build/
+/dist/
+/tmp/
+/temp/
+
+# LaTeX auxiliary files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

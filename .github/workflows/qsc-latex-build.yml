@@ -17,7 +17,7 @@ on:
       - main
     paths:
       - "sources/**"
-      - "scripts/qsc_latex_build.py"
+      - ".github/scripts/qsc_latex_build.py"
       - ".github/workflows/qsc-latex-build.yml"
 
 permissions:
@@ -48,7 +48,7 @@ jobs:
       - name: Build preview PDFs
         continue-on-error: true
         run: |
-          python3 scripts/qsc_latex_build.py \
+          python3 .github/scripts/qsc_latex_build.py \
             --source-dir "$SOURCE_DIR" \
             --output-dir "$GITHUB_WORKSPACE/build/qsc-pdf-artifacts" \
             --build-historical "$BUILD_HISTORICAL"
