@@ -2702,6 +2702,300 @@ clear reconstruction pipeline
 \]
 \end{remark}
 
+\subsection*{Carrier-current conservation and projected geometric readouts}
+\label{subsec:carrier-current-geometric-readout}
+
+\begin{quote}\small
+\noindent\textbf{Status.} Conditional reconstruction refinement.
+The identities below follow under the stated kinetic and pairing
+assumptions. The explicit local construction is an illustrative model,
+not a determination of the native resonance coefficients, a derivation
+of the physical gravitational coupling, or an OP~5 closure theorem.
+\end{quote}
+
+The geometric probe current need not be identified with a conserved
+current of the entire structural carrier. To make this distinction
+precise, write the triolic carrier of
+Corollary~\ref{cor:toe_triolic_realization} as
+$\Upsilon=\Upsilon_M\oplus\Upsilon_T\oplus\Upsilon_\gamma$ and
+reserve $\Psi_\triangle$ for the auxiliary geometric probe. The sector
+labels denote linked readouts of one carrier, as in
+Theorem~\ref{thm:three-readout-principle}; they do not by themselves
+specify different conservation laws. Likewise, the orthogonal probe
+channel is not automatically a physical photon field or a particular
+OP residual component.
+
+\begin{proposition}[Conditional compatibility of the real-part coframe]
+\label{prop:real-coframe-current-compatibility}
+Suppose $j^a=\bar\Psi_\triangle\Gamma^a\Psi_\triangle$ is real,
+the Dirac pairing is compatible with the Lorentz spin connection, and
+the remaining internal connection is pairing-compatible and commutes
+with the Clifford frame. Suppose also that the pointwise bilinear
+coframe $E$ is the nondegenerate geometric coframe $e$ whose connection
+is torsion-free and metric-compatible. Then, in four dimensions,
+\[
+  2E^a{}_{\mu}=D^L_\mu j^a,
+  \qquad \nabla_\mu j^\nu=2\delta_\mu{}^\nu,
+  \qquad \nabla_\mu j^\mu=8,
+\]
+where $j^\mu=e_a{}^\mu j^a$ and $D^L$ is the Lorentz vector derivative.
+Thus this particular current cannot simultaneously be conserved.
+\end{proposition}
+\begin{proof}
+Reality of the current bilinear gives
+$2\operatorname{Re}(\bar\Psi\Gamma^a\partial_\mu\Psi)=\partial_\mu j^a$.
+For $\mathcal B^L_\mu=\tfrac14\omega_{\mu bc}\Sigma^{bc}$,
+pairing compatibility gives
+\[
+  2\operatorname{Re}(\bar\Psi\Gamma^a\mathcal B^L_\mu\Psi)
+  =\bar\Psi[\Gamma^a,\mathcal B^L_\mu]\Psi
+  =\omega_\mu{}^a{}_b j^b.
+\]
+A compatible Clifford-commuting internal connection contributes zero
+to the real part. The tetrad postulate therefore yields
+$\nabla_\mu j^\nu=e_a{}^\nu D^L_\mu j^a=2\delta_\mu{}^\nu$.
+Taking the trace gives $8$.
+\end{proof}
+
+This is a compatibility test, not an additional unconditional claim
+about every probe realization. In particular, identifying a microscopic
+bilinear with its coarse-grained geometric coframe is an assumption.
+The value $8$ reflects the unscaled definition and the dimension, not
+a measured production rate. The same hypotheses imply
+$\nabla_\mu j_\nu=2g_{\mu\nu}$ and $R^a{}_b j^b=0$ by vanishing
+torsion; curvature is constrained but need not vanish. With no Lorentz
+connection, however, $E^a=d(j^a/2)$ is an exact coframe and induces a
+locally flat metric wherever it has rank four.
+
+If an actual internal connection contributes
+$Z^a{}_{\mu}=\operatorname{Re}(\bar\Psi\Gamma^a\mathbb A_\mu\Psi)$,
+the identity instead reads $e=\tfrac12D^Lj+Z$, giving
+\[
+  \nabla_\mu j^\mu=8-2e_a{}^\mu Z^a{}_{\mu}.
+\]
+Conservation would require the independently computed trace
+$e_a{}^\mu Z^a{}_{\mu}=4$. An arbitrary repair tensor cannot be
+inserted in place of a connection satisfying the field equations.
+Under the explicit exactly closed compensator conditions,
+$\mathcal H_C=0$ and $(I-\hat P_{C_7})\Psi=0$, those stabilization
+terms cannot themselves supply a nonzero repair on the same background.
+
+\paragraph{Sector currents and exchange.}
+In a positive orthogonal realization of the triolic direct sum, let
+$P_M,P_T,P_\gamma$ be the Hermitian coordinate projectors with
+$P_MP_T=0$ and $\sum_aP_a=I$ on the declared carrier. These sector
+masks are not the HC even/odd projectors or off-$C_7$ leakage masks.
+For $\bar\Upsilon=\Upsilon^\dagger A_D$, put
+$K^\mu=A_D\Gamma^\mu$ and assume these current matrices are Hermitian,
+commute with $P_a$, and obey the covariant current Leibniz rule.
+For a specified kinetic realization
+\[
+  iK^\mu\mathcal D_\mu\Upsilon=\mathcal V\Upsilon,
+  \qquad \mathcal V=A_D\Omega,
+\]
+the real projected currents $j_a^\mu=\Upsilon^\dagger K^\mu P_a\Upsilon$
+obey the exact identity
+\[
+\begin{aligned}
+  \nabla_\mu j_a^\mu={}&
+  i\Upsilon^\dagger(\mathcal V^\dagger P_a-P_a\mathcal V)\Upsilon\\
+  &+\Upsilon^\dagger K^\mu(\mathcal D_\mu P_a)\Upsilon,
+  \qquad
+  \mathcal D_\mu P_a=\partial_\mu P_a+[\mathcal B_\mu,P_a].
+\end{aligned}
+\]
+Indeed differentiating the projected bilinear gives a differentiated
+bra, ket and projector; substituting the equation and its conjugate
+gives the two potential terms. Summing over the masks gives
+\[
+  \nabla_\mu j_{\rm tot}^\mu
+  =i\Upsilon^\dagger(\mathcal V^\dagger-\mathcal V)\Upsilon.
+\]
+If $\mathcal V=\mathcal V^\dagger$, define the sector sources by the
+right-hand side of the projected identity. Then
+$S_M+S_T+S_\gamma=0$: individual currents may exchange charge while
+the total is conserved. Hermiticity of $\Omega$ in some other comparison
+metric is not a substitute for this convention-dependent reality check.
+For parallel masks a commuting diagonal phase term produces no sector
+charge exchange, although it can affect other phase-sensitive readouts.
+Information transfer and charge transfer are distinct questions.
+
+\paragraph{A paired HC-even probe map.}
+For a diagnostic three-slot realization choose
+\[
+  J_s=\begin{pmatrix}0&1&0\\1&0&0\\0&0&1\end{pmatrix},\qquad
+  C_s=\frac{I+J_s}{2},\qquad
+  P_M=\operatorname{diag}(1,0,0),\quad
+  P_T=\operatorname{diag}(0,1,0).
+\]
+The candidate tachyon-facing map and its matter companion are
+\[
+  \mathcal W_T=\sqrt2\,C_sP_T,\qquad
+  \mathcal W_M=\sqrt2\,C_sP_M.
+\]
+Direct multiplication proves
+\[
+  \mathcal W_T^\dagger\mathcal W_T=P_T,\qquad
+  C_s\mathcal W_T=\mathcal W_T,\qquad
+  \mathcal W_TJ_s=\mathcal W_M.
+\]
+Thus the single-sector map is isometric on its input sector and its
+output is HC-even. But $J_s\mathcal W_T=\mathcal W_T$ whereas
+$\mathcal W_TJ_s\ne\mathcal W_T$, so it is not a full-carrier
+$J_s$-intertwining MM converter. Its frame/readout label must remain
+explicit. The matrix $C_s$ models the even-sector role; identifying it
+or these masks with a particular native realization requires its own
+witness and domain checks.
+
+For a geometric probe reconstruction
+$\Psi_\triangle=\mathcal W_T\Upsilon$, also require
+$\hat P_{C_7}\mathcal W_T=\mathcal W_T$ on a proved probe domain.
+If it satisfies
+\[
+  \mathcal W_T^\dagger K_{\rm probe}^\mu\mathcal W_T
+  =K_{\rm carrier}^\mu P_T,
+\]
+then $j_{\rm geom}=j_T$, not $j_{\rm tot}$. Under
+Proposition~\ref{prop:real-coframe-current-compatibility}, this requires
+$S_T=8$ and $S_M+S_\gamma=-8$, with these sources computed from the
+coupled dynamics rather than assigned by hand. Merely partitioning
+the old full-field coframe does not achieve this: if its input is still
+the conserved total carrier, its current still has to satisfy the
+incompatible total divergence identity. The distinction is between
+different field/readout roles, not different coordinates for one current.
+
+\begin{proposition}[Local conserved carrier with a curved projected readout]
+\label{prop:local-carrier-projected-coframe}
+There is an illustrative finite-interval geometric and kinetic
+realization of this distinction with positive sector densities,
+an HC-even carrier and an HC-even projected probe.
+\end{proposition}
+\begin{proof}
+Use dimensionless coordinates $t>0$, a positive budget $N_0$, and
+the domain $N_0>4t^4$. Let $\gamma_{\rm std}^a$ be standard Dirac
+matrices of signature $(+---)$, set $\Gamma^a=i\gamma_{\rm std}^a$,
+and take $A_D=-\Gamma^0$ with $u=(1,0,0,0)^T$.
+Declare the coframe and compatible spin connection
+\[
+  e^0=dt,\quad e^i=t\,dx^i,\qquad
+  \mathcal B_t=0,\quad
+  \mathcal B_i=-\tfrac12\Gamma^0\Gamma^i.
+\]
+Here $g=\operatorname{diag}(-1,t^2,t^2,t^2)$ and
+$\Gamma^\mu=e_a{}^\mu\Gamma^a$. Define
+\[
+  \Upsilon_M=\Upsilon_T=-i\sqrt{2t}\,u,\qquad
+  \Upsilon_\gamma=t^{-3/2}\sqrt{N_0-4t^4}\,u.
+\]
+The sector currents have no spatial components and satisfy
+\[
+  (j_M^0,j_T^0,j_\gamma^0)
+  =(2t,2t,N_0/t^3-4t),\qquad
+  j_{\rm tot}^0=N_0/t^3.
+\]
+Using $\sqrt{|g|}=t^3$ gives
+\[
+  (\nabla_\mu j_M^\mu,\nabla_\mu j_T^\mu,
+    \nabla_\mu j_\gamma^\mu)=(8,8,-16),
+  \qquad \nabla_\mu j_{\rm tot}^\mu=0.
+\]
+The conserved comoving charge is $N_0$ per unit coordinate volume.
+
+For the kinetic realization take the deliberately constructed coupling
+\[
+  h(t)=\frac{2\sqrt2\,t}{\sqrt{N_0-4t^4}},\qquad
+  H(t)=h(t)\begin{pmatrix}0&0&1\\0&0&1\\1&1&0\end{pmatrix},
+  \quad \Omega_{\rm toy}=iH(t)\otimes I_4.
+\]
+With $\sin\theta=2t^2/\sqrt{N_0}$, the volume-rescaled amplitudes
+are
+\[
+  y=\begin{pmatrix}
+    -i\sin\theta/\sqrt2\\-i\sin\theta/\sqrt2\\\cos\theta
+  \end{pmatrix},\qquad \|y\|=1.
+\]
+They obey $i\dot y=Hy$, since
+$h=\dot\theta/\sqrt2$. On these homogeneous upper spinors,
+\[
+  i\Gamma^\mu\mathcal D_\mu\Upsilon
+  =-(\partial_t+3/(2t))\Upsilon
+  =\Omega_{\rm toy}\Upsilon.
+\]
+Moreover $A_D\Omega_{\rm toy}=-iH\otimes\Gamma^0$ is Hermitian,
+$[H,J_s]=0$ and $J_s\Upsilon=\Upsilon$.
+
+The proposed readout gives
+\[
+  \Psi_\triangle=\mathcal W_T\Upsilon
+  =(\Upsilon_T/\sqrt2,\Upsilon_T/\sqrt2,0)^T.
+\]
+Evaluating the unchanged real-part bilinear on its two equal copies
+gives $E=\operatorname{diag}(1,t,t,t)$ and recovers the declared
+geometry. Its curvature is
+\[
+  R_{\mu\nu}=\operatorname{diag}(0,2,2,2),\qquad R=6/t^2.
+\]
+The projected current has divergence $8$ while the full
+carrier current is conserved.
+\end{proof}
+
+\begin{remark}[What this construction does and does not establish]
+\label{rem:projected-current-model-status}
+The auxiliary probe is sourced: before the even embedding,
+$i\Gamma^\mu\mathcal D_\mu\Upsilon_T=ih(t)\Upsilon_\gamma$.
+Dropping this supply term would not give its induced dynamics.
+Equivalently, a reduced modal projection $z=L_TP_Ty$ obeys
+\[
+  i\dot z=L_TP_THP_TL_T^\dagger z
+  +L_TP_TH(I-P_T)y
+\]
+for a constant isometric embedding $L_T$. Eliminating the hidden
+slots yields retarded memory; replacing it by an autonomous local
+operator requires a justified approximation or an enlarged history
+state. A passive moving basis must also retain its connection term
+$H'=W^\dagger HW-iW^\dagger\dot W$. None of these bookkeeping
+operations licenses absorption of protected data or changes the
+divergence of the same covariant current by a frame relabeling.
+
+Strict even symmetry implies $j_M=j_T$ for compatible current
+matrices and exchanged masks. Hence the example does not put a
+conserved raw matter current beside a growing raw tachyon current:
+both grow and the third slot supplies the compensating $-16$.
+The conserved quantity is the common carrier current. The numbers
+are dimensionless model normalizations, not universal physical rates.
+The third slot is an internal amplitude with a spinor profile here,
+not a derived Maxwell photon.
+
+The construction holds only for $0<t<(N_0/4)^{1/4}$; its coupling
+diverges as the finite third-slot budget is exhausted. No regular
+all-time continuation is established. Its $\Omega_{\rm toy}$ was
+constructed for this example, not extracted from the native
+$\mathcal M_{16}$, $\mathcal T$ and closure fields. It also does not
+solve their resonance-source equation or derive a microscopic
+stress-energy tensor satisfying the effective Einstein equation.
+In particular, a geometric current is not a stress-energy tensor.
+Inserting a gravitational source still requires a conserved complete
+stress-energy balance and the corresponding constrained metric response.
+
+Before using this route natively, one must derive the carrier-to-probe
+map and its sourced dynamics, verify the actual closure domain and
+guard invariance, and identify physical current normalization and the
+coarse-grained metric/source relation. Applying the coframe to the
+entire carrier instead of the projected probe produces a different
+coframe and does not preserve this background identification.
+No OP~5 residual contraction factor or global closure conclusion
+follows from the conserved-current construction alone.
+\end{remark}
+
+\paragraph{Symbolic verification.}
+Independent Wolfram Language calculations checked the partial-isometry
+and even-image identities, failure of full-carrier $J_s$ intertwining,
+Hermitian modal and current generators, the exact spinor equation,
+projected coframe, divergence partition and conserved volume charge.
+Direct curvature calculation gives the Ricci tensor and scalar above.
+These checks support the displayed model identities, not an empirical
+validation or an evaluation of the native field and OP readouts.
+
 \begin{remark}[Interpretive summary]
 The probe--closure system now supports a three-level reading.
 At the exact algebraic level, closure means vanishing leakage between the
