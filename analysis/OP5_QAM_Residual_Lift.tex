@@ -10,7 +10,7 @@
 \newtheorem{remark}{Remark}
 \title{OP5: A Conditional QAM Residual Lift}
 \author{Working note for the Quantum Sphaera Companion}
-\date{12 October 2026}
+\date{13 October 2026}
 \begin{document}
 \maketitle
 \noindent\textbf{Status.} This note instantiates the three-component fit score
@@ -6081,6 +6081,348 @@ background compatibility and
 physical-current calibration are the next native obligations. Until
 they are evaluated, this construction neither repairs the full-field
 coframe by relabeling nor proves the gravitational C5 contraction.
+
+\section{Native-data continuation: normalized readout and triadic supply}
+\label{sec:native-normalized-readout}
+
+\paragraph{Source audit and level of identification.}
+The active source supplies three relevant pieces: the Meta-Septum
+projector $Q:=\hat P_{C_7}$ and the probe resonance in
+\texttt{thm:master-field-equation}; the operator-valued three-mode
+matrix in \texttt{prop:triadic-two-probe}; and the conditional spectral
+identity $\mathcal M C=C\mathcal M=\lambda_0C$ in
+\texttt{cor:M-HC-fixpoint}, under the hypotheses of
+\texttt{thm:hc-spectral-projector}. The first two are in the active
+physics-baseline part; the spectral statement is in the structural-core
+part. The global master-equation part calls the first two global
+branches matter and its $J$-dual tachyon branch, but does not evaluate
+their map to the two probe modes.
+
+In particular, the labels ART/QFT/$\perp$ of the probe architecture
+do not by themselves identify its mode fibers with the global
+matter/tachyon/photon fibers. No evaluated $16\times16$ Millennium
+matrix, joint projector realization or branch-to-probe embedding has
+been located in these definitions. The following results identify a
+normalized candidate from the named projectors and the existing
+triadic source leg, conditional on an explicit common realization.
+They are not a numerical extraction of a native background.
+
+\subsection{A canonical candidate on the common retained sector}
+
+Assume a specified positive Hilbert carrier, a self-adjoint unitary
+involution $J$, $C=(I+J)/2$, and orthogonal projectors $Q$ and $P_T$.
+Assume also that $J P_T J=P_M$ with $P_MP_T=0$. These are realization
+hypotheses, not consequences of a sector name. Write
+\[
+ E:=\Pi_{\operatorname{Ran}Q\cap\operatorname{Ran}C},
+ \qquad A_T:=EP_T,\qquad G_T:=A_T^\dagger A_T=P_TEP_T,
+ \qquad R_T:=\operatorname{supp}G_T.
+\]
+The common-sector projector is available without assuming commuting
+masks:
+\[
+ E=\mathbf1_{\{1\}}(CQC)
+   =\mathop{\mathrm{s\!-\!lim}}_{n\to\infty}(CQC)^n.
+\]
+Indeed $CQC$ is a positive contraction. Its eigenvalue-one space is
+exactly the intersection: $CQCv=v$ implies $Cv=v$ and
+$\|Qv\|=\|v\|$, hence $Qv=v$. The spectral theorem then gives the
+strong limit. Only when $[Q,C]=0$ can this be replaced by $E=QC$.
+Commutation of both masks with $\mathcal M$ does not imply their
+commutation with each other.
+
+\begin{proposition}[Normalized common-sector readout]
+The polar partial isometry
+\[
+ W_T:=\mathop{\mathrm{s\!-\!lim}}_{\epsilon\downarrow0}
+       A_T(G_T+\epsilon I)^{-1/2}
+\]
+satisfies
+\[
+ W_T^\dagger W_T=R_T,\qquad QW_T=CW_T=W_T.
+\]
+It is isometric on the retained input $R_T\mathcal H$, not necessarily
+on the entire tachyon-labelled input $P_T\mathcal H$.
+\end{proposition}
+\begin{proof}
+Use the polar decomposition $A_T=W_TG_T^{1/2}$, with $W_T$ zero on
+$\ker G_T$. The regularized positive factor tends strongly to the
+support projector. The image of $A_T$, and therefore its closure,
+lies in the closed common sector $E\mathcal H$. This gives both
+image constraints and the initial projection $R_T$.
+\end{proof}
+
+In finite dimensions the formula is $W_T=A_TG_T^{-1/2}$ with the
+inverse restricted to the support and extended by zero. For a field
+family, pointwise existence does not imply differentiability:
+$E(x)$ and $A_T(x)$ must be smooth of locally constant rank, and a
+uniform positive bound $G_T\ge g_*R_T$, $g_*>0$, supplies stable
+inversion on that support. Rank changes require a separate analysis.
+
+\begin{proposition}[Origin and limits of the square-root factor]
+If additionally $[Q,J]=[Q,P_T]=0$, then
+\[
+ G_T=\tfrac12P_TQ,\qquad R_T=P_TQ,
+ \qquad W_T=\sqrt2\,QC P_T.
+\]
+With $W_M:=\sqrt2\,QC P_M$, one has $W_TJ=W_M$.
+\end{proposition}
+\begin{proof}
+Orthogonality of the exchanged sectors gives $P_TJP_T=0$, so
+$P_TCP_T=P_T/2$. The two added commutation conditions allow $Q$
+to be moved through this expression. Thus every retained singular
+value of $A_T$ is $1/\sqrt2$, and its polar normalization is $\sqrt2$.
+Finally $P_TJ=JP_M$ and $CJ=C$ give the paired-readout identity.
+\end{proof}
+
+The factor is therefore derived in this compatible realization,
+not a freely chosen coupling or an OP5 contraction constant. Without
+these hypotheses a fixed $\sqrt2$ need not normalize the map.
+Nor is $W_TJ=W_M$ a full-carrier intertwining $W_TJ=JW_T$.
+If the masks and $W_T$ act only on internal indices and commute with
+the common Dirac-current matrices $K^\mu$, then
+\[
+ W_T^\dagger K^\mu W_T=K^\mu R_T.
+\]
+This follows by commuting $K^\mu$ through $W_T$ and using its initial
+projection. A positive-Hilbert partial isometry without this kinetic
+compatibility does not establish physical-current preservation.
+
+\paragraph{Nonzero overlap is an independent obligation.}
+Even a rank-seven orthogonal $Q$ need not retain a common sector.
+For an algebraic diagnostic on $\mathbb C^{7}\oplus\mathbb C^{7}
+\oplus\mathbb C^2$, take
+\[
+ J=\begin{pmatrix}0&I_7&0\\I_7&0&0\\0&0&I_2\end{pmatrix},
+ \quad C=(I+J)/2,\quad Q=(I-J)/2,\quad \mathcal M=I_{16}.
+\]
+Then $\operatorname{rank}Q=7$, both closure commutators with
+$\mathcal M$ vanish, and $QC=0$. This disproves the implication from
+those limited algebraic constraints to a nonzero $W_T$; it is not
+asserted to be an admissible native Meta-Septum realization.
+Likewise, if a particular spectral reading makes $P_T$ orthogonal
+to the compensated photon sector $C$, then $CP_T=0$ and this direct
+candidate vanishes. The source's photon-fix-sector language does not
+license replacing that reading by an exchanged-pair mask silently.
+A nonzero branch embedding or an explicitly different readout would
+then have to be supplied.
+
+\subsection{What MM closure does and does not transport}
+
+On a bounded common realization, $[\mathcal M,Q]=[\mathcal M,C]=0$
+implies $[\mathcal M,E]=0$. The unnormalized map therefore has the
+exact defect
+\[
+ A_T\mathcal M-\mathcal M A_T=E[P_T,\mathcal M].
+\]
+On a fixed-rank, gapped support put $N_T=G_T^{-1/2}$, extended by
+zero. The normalized defect is
+\[
+ W_T\mathcal M-\mathcal M W_T
+ =E[P_T,\mathcal M]N_T+A_T[N_T,\mathcal M].
+\]
+These identities follow by expanding the products. An additional
+$[\mathcal M,P_T]=0$ makes both terms vanish; MM/HC commutation
+alone does not. For unbounded operators, compatible domains are
+required before these products or conclusions can be used. A full
+operator defect may also vanish on a specified smaller witness
+domain; that restriction must be checked rather than inferred.
+
+Under the stronger spectral hypothesis actually stated for
+\texttt{cor:M-HC-fixpoint}, namely
+$\mathcal M C=C\mathcal M=\lambda_0C$, one obtains
+\[
+ E Q\mathcal M Q E=\lambda_0 E.
+\]
+The proof is $QE=CE=E$ and $\mathcal ME=\lambda_0E$.
+Consequently the MM term $\alpha Q\mathcal M Q$ has no mixed
+channel blocks inside this common sector: it is scalar there.
+This does not imply that the whole resonance or kinetic operator is
+scalar, nor that it preserves $E$ without further conditions.
+The spectral hypothesis is stronger than merely imposing
+$[\mathcal M,C]=0$. Its scalar readout cannot on its own supply the
+three-channel exchange needed by the preceding conserved-carrier
+example; the triadic and connection terms remain available.
+
+\subsection{A missing full-field closure test}
+
+Use the actual probe form $L=i\Gamma^\mu\mathcal D_\mu-\Omega$ and
+assume $[\Gamma^\mu,Q]=0$. For a section satisfying $Q\Psi=\Psi$,
+the complementary part of its field equation is
+\[
+ (I-Q)L\Psi=\mathcal K_Q\Psi,
+ \qquad
+ \mathcal K_Q:=i(I-Q)\Gamma^\mu(\mathcal D_\mu Q)Q
+                 -(I-Q)\Omega Q.
+\]
+Here, if $\mathcal D_\mu=\partial_\mu+B_\mu$, its action on an
+endomorphism is $\mathcal D_\mu Q=\partial_\mu Q+[B_\mu,Q]$.
+Differentiate $Q\Psi=\Psi$ to obtain
+$\mathcal D_\mu\Psi=(\mathcal D_\mu Q)\Psi+
+Q\mathcal D_\mu\Psi$, which proves the identity.
+
+In the minimal exact-MM-closure sector, $\mathcal H_C=0$, so the
+source resonance gives
+\[
+ \boxed{\displaystyle
+ \mathcal K_Q=
+ i(I-Q)\Gamma^\mu(\mathcal D_\mu Q)Q
+ -\beta g_Y(I-Q)\mathcal T Q.}
+\]
+The projected MM term contributes no complementary block because
+it is $Q\mathcal M Q$. The scalar mass term contributes none either.
+For the displayed native connection, exact closure also reduces
+$\mathcal D_\mu Q$ to
+$\partial_\mu Q+i[\mathcal A_\mu,Q]$: the penalty
+$\eta(I-Q)n_\mu$ commutes with $Q$.
+
+A constrained solution must satisfy $\mathcal K_Q\Psi=0$ in
+addition to the projected equation. An autonomous equation on the
+entire $Q$-domain requires this compatibility on every admissible
+section, together with well-posedness of the restricted evolution.
+Strong sufficient algebraic conditions are
+$\mathcal D_\mu Q=0$ and $(I-Q)\mathcal T Q=0$. Neither is separately
+necessary, because their contributions may cancel. Such cancellation
+needs an evaluated connection and coupling, not just a closure label.
+Thus $[\mathcal M,Q]=0$ certifies MM block closure, but not by itself
+full-field dynamical invariance. This is an additional audit of the
+legacy autonomy claim, not a claim that no constrained solution exists.
+
+For example, a constant $Q=\operatorname{diag}(1,1,0)$ and a scalar
+$\mathcal M$ commute, while the symmetric coupling with nonzero
+entries $\mathcal T_{13}=\mathcal T_{23}=
+\mathcal T_{31}=\mathcal T_{32}=1$ has
+$(I-Q)\mathcal T Q\ne0$. With $\mathcal DQ=0$ and nonzero
+$\beta g_Y$, it fails this compatibility on generic retained states.
+Supply from an unobserved mode \emph{inside} $Q$ is different:
+it may source a narrower readout without violating $C_7$ closure.
+
+\subsection{The exact field-map defect and the existing supply leg}
+
+For distinct carrier and probe connections define
+\[
+ \nabla_\mu W:=\partial_\mu W+B^p_\mu W-WB^c_\mu,
+ \quad L_c=i\Gamma_c^\mu\mathcal D^c_\mu-\Omega_c,
+ \quad L_p=i\Gamma_p^\mu\mathcal D^p_\mu-\Omega_p.
+\]
+Expanding the covariant derivative gives the exact formula
+\begin{align*}
+ L_p(W\Upsilon)-WL_c\Upsilon
+ &=i(\Gamma_p^\mu W-W\Gamma_c^\mu)
+                   \mathcal D^c_\mu\Upsilon\\
+ &\quad+
+ \bigl(i\Gamma_p^\mu\nabla_\mu W+W\Omega_c-\Omega_pW\bigr)
+                   \Upsilon.
+\end{align*}
+The first term is a principal-symbol defect, not a potential term.
+It vanishes only with kinetic intertwining. Even then the second
+term sources the probe unless it vanishes on the specified carrier
+solutions. For the \emph{constructed} compression
+$\Omega_p=W\Omega_cW^\dagger$ on the image and $R=W^\dagger W$,
+\[
+ W\Omega_c-\Omega_pW=W\Omega_c(I-R).
+\]
+Compression therefore retains hidden-mode supply; it does not
+identify this compressed operator with the independently written
+native probe resonance automatically.
+
+To locate that supply in the existing source, suppose the two probe
+fibers have been explicitly identified and their exchange acts as
+$J_s(\Psi_1,\Psi_2,\Psi_\perp)=(\Psi_2,\Psi_1,\Psi_\perp)$.
+Require a common connection preserving this exchange. In this local
+three-mode realization put
+\[
+ G_{12}=g_Y\mathcal T_{12},\quad G_{21}=g_Y\mathcal T_{21},
+ \quad V_a=\chi\mathcal T_{a\perp},\quad
+ U_a=\chi\mathcal T_{\perp a},
+ \quad a=1,2.
+\]
+The already displayed resonance, not a newly introduced coupling,
+is
+\[
+ \Omega_\triangle=
+ \begin{pmatrix}\Omega_1&G_{12}&V_1\\
+ G_{21}&\Omega_2&V_2\\U_1&U_2&\Omega_\perp\end{pmatrix}.
+\]
+In the exchange basis
+$a=(\Psi_1+\Psi_2)/\sqrt2$,
+$d=(\Psi_1-\Psi_2)/\sqrt2$, $b=\Psi_\perp$, its blocks are
+\[
+ \Omega'_\triangle=
+ \begin{pmatrix}
+ \frac{\Omega_1+\Omega_2+G_{12}+G_{21}}2&
+ \frac{\Omega_1-\Omega_2-G_{12}+G_{21}}2&
+ \frac{V_1+V_2}{\sqrt2}\\[2pt]
+ \frac{\Omega_1-\Omega_2+G_{12}-G_{21}}2&
+ \frac{\Omega_1+\Omega_2-G_{12}-G_{21}}2&
+ \frac{V_1-V_2}{\sqrt2}\\[2pt]
+ \frac{U_1+U_2}{\sqrt2}&\frac{U_1-U_2}{\sqrt2}&\Omega_\perp
+ \end{pmatrix}.
+\]
+This basis change does not require the resonance blocks to commute.
+Exchange invariance of this matrix requires
+\[
+ \Omega_1=\Omega_2,\quad G_{12}=G_{21},\quad
+ V_1=V_2,\quad U_1=U_2.
+\]
+On the even subspace $d=0$ the matrix then reduces to
+\[
+ \Omega_+=
+ \begin{pmatrix}
+  \Omega_1+g_Y\mathcal T_{12}&\sqrt2\chi\mathcal T_{1\perp}\\
+  \sqrt2\chi\mathcal T_{\perp1}&\Omega_\perp
+ \end{pmatrix}.
+\]
+Restrict to a compatible retained fiber where $Q$ acts as identity,
+and identify the tachyon-facing mask with the second mode only
+as an explicit additional branch-to-probe hypothesis. The normalized
+map $\sqrt2 C_sP_2$ sends an even carrier $(a,0,b)$ in exchange
+coordinates to $(z,0,0)$, where $z=a/\sqrt2$. Dividing the first
+even field equation by $\sqrt2$ proves
+\[
+ \boxed{\displaystyle
+ (i\Gamma^\mu\mathcal D_\mu-
+       \Omega_1-g_Y\mathcal T_{12})z
+       =\chi\mathcal T_{1\perp}b.}
+\]
+This is the source-native \emph{symbolic identification} of the
+feeding leg that was freely constructed in the earlier cone model.
+The twin probe uses the corresponding $\chi\mathcal T_{2\perp}$;
+exchange symmetry makes these legs equal, not opposite sources.
+It neither evaluates their coefficients nor proves that the global
+branch embedding satisfies the assumptions above.
+
+If $b$ belongs to $Q$, this is exchange within a closed carrier and
+may yield a nonautonomous projected probe. If $b$ lies outside $Q$,
+a nonzero mixed leg requires the preceding $\mathcal K_Q$ test;
+with a parallel $Q$ it cannot simply be ignored. Homogeneous
+autonomous readout for arbitrary hidden $b$ requires the feeding
+leg to vanish, or a justified enlarged state/history description.
+The third slot here remains the source's orthogonal probe component,
+not a derived physical photon field. A resonance matrix also is not
+automatically a self-adjoint time generator: kinetic inversion,
+the current pairing and domains must be specified before invoking
+conservation or damping.
+
+\paragraph{Executed checks and remaining native obligations.}
+Exact symbolic matrix calculations verified the normalized map and
+paired covariance on a six-dimensional internal carrier with a
+nontrivial commuting $Q$; a noncommuting-mask example verified that
+the naive product need not have HC image and that intersection can
+lose a tachyon-labelled direction. The rank-seven zero-overlap
+example and the closed-MM/nonclosed-triad example were checked
+exactly. The full exchange-basis transformation was checked with
+nine independent $2\times2$ matrix blocks, without assuming their
+commutation. These are algebraic diagnostics, not native measurements.
+
+The advance is a derived normalization, an explicit full-field
+compatibility defect, and a supply leg already named in the source.
+To upgrade it to a native gravitational OP5 construction still needs
+an evaluated joint carrier and branch embedding, nonzero retained
+overlap, compatible kinetic/current data, an actual coupled solution
+including connection and total stress conservation, and the C5
+residual and guard estimates. In particular, neither the scalar
+$3/4$ bound nor its failed third benchmark follows from this map.
 
 \paragraph{Transport reference.}
 Andre Massing, NTNU, \emph{Weak formulation and well-posedness of the
