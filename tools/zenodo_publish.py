@@ -132,6 +132,15 @@ def put_file(bucket_url: str, token: str, path: Path) -> Dict[str, Any]:
     except urllib.error.HTTPError as exc:
         body = exc.read().decode("utf-8", errors="replace")
         raise ZenodoError(f"HTTP {exc.code} uploading {filename}: {body[:1000]}") from exc
+    except (urllib.error.URLError, TimeoutError, ConnectionError) as exc:
+        raise ZenodoError(f"Network error uploading {filename}: {exc}") from exc
+
+
+def note(message: str) -> None:
+    """Print a line; inside GitHub Actions also emit it as a notice annotation."""
+    print(message)
+    if os.environ.get("GITHUB_ACTIONS") == "true":
+        print("::notice::" + message.replace("\n", " "))
 
 
 def token_from_env(env_name: str) -> str:
@@ -244,7 +253,7 @@ def main() -> int:
     token = token_from_env(token_env)
     if args.new_version_of:
         dep = create_new_version(api_base, token, args.new_version_of)
-        print(f"Created new-version draft of deposition {args.new_version_of}.")
+        note(f"Created new-version draft of deposition {args.new_version_of}.")
     else:
         dep = create_or_fetch_deposition(api_base, token, args.deposition_id)
     deposition_id = str(dep.get("id"))
@@ -256,11 +265,11 @@ def main() -> int:
         raise ZenodoError(f"Deposition {deposition_id} is already published; refusing to modify it")
 
     doi_before = reserved_doi(dep)
-    print(f"Using draft deposition id: {deposition_id}")
-    print(f"Reserved DOI: {doi_before or 'none reported'}")
+    note(f"Using draft deposition id: {deposition_id}")
+    note(f"Reserved DOI: {doi_before or 'none reported'}")
 
     updated = set_metadata(api_base, token, deposition_id, payload)
-    print("Metadata set.")
+    note("Metadata set.")
     doi_after = reserved_doi(updated)
     if doi_before and doi_after and doi_after != doi_before:
         raise ZenodoError(f"Reserved DOI changed from {doi_before} to {doi_after}; stopping")
@@ -274,12 +283,13 @@ def main() -> int:
 
     if args.replace_files:
         removed = remove_draft_files(api_base, token, deposition_id)
-        print(f"Removed {len(removed)} inherited file(s): {', '.join(removed) or '-'}")
+        note(f"Removed {len(removed)} inherited file(s): {', '.join(removed) or '-'}")
 
     for path in files:
         print(f"Uploading {path.name} ...")
         put_file(bucket_url, token, path)
-    print("Files uploaded.")
+        note(f"Uploaded {path.name} ({path.stat().st_size} bytes)")
+    note("Files uploaded.")
 
     if args.sleep_after_upload > 0:
         time.sleep(args.sleep_after_upload)
@@ -301,4 +311,11 @@ if __name__ == "__main__":
         raise SystemExit(main())
     except ZenodoError as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
+        if os.environ.get("GITHUB_ACTIONS") == "true":
+            print("::error::" + str(exc).replace("\n", " ")[:900])
         raise SystemExit(2)
+    except Exception as exc:  # unexpected: report the type, never the token
+        print(f"UNEXPECTED {type(exc).__name__}: {exc}", file=sys.stderr)
+        if os.environ.get("GITHUB_ACTIONS") == "true":
+            print(f"::error::UNEXPECTED {type(exc).__name__}: " + str(exc).replace("\n", " ")[:900])
+        raise SystemExit(3)
