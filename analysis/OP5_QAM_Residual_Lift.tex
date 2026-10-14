@@ -6424,6 +6424,1867 @@ including connection and total stress conservation, and the C5
 residual and guard estimates. In particular, neither the scalar
 $3/4$ bound nor its failed third benchmark follows from this map.
 
+\section{Identification test: branch carrier, light output and probe modes}
+\label{sec:branch-probe-identification-test}
+
+\paragraph{A stronger source-level obstruction.}
+The preceding continuation left the branch embedding undetermined.
+A closer comparison isolates a conflict in a literal, same-fiber
+linear reading of the existing definitions. In the physics-baseline
+part, \texttt{prop:compensator} states both
+$C(f)=(f+Jf)/2\in K_3$ and orthogonality of this output to both
+inputs. In the structural-core part,
+\texttt{def:semantic-structural-kernel} requires the third sector to
+be orthogonal to the first two. The global master-equation part,
+\texttt{cor:toe\_triolic\_realization}, also writes an explicit
+three-sector direct sum. These statements must be typed consistently
+before using the same three indices for the probe matrix.
+
+\begin{proposition}[No direct linear three-slot identification]
+Suppose a common vector carrier has the direct-sum decomposition
+$\mathcal H=K_M\oplus K_T\oplus K_\gamma$, with $JK_M=K_T$,
+$J^2=I$ and $C=(I+J)/2$. If $Cf\in K_\gamma$ for every
+$f\in K_M$, then $K_M=\{0\}$.
+In a positive Hilbert realization with unitary $J$, the weaker
+condition $Cf\perp f$ already forces $Cf=0$ for that input.
+\end{proposition}
+\begin{proof}
+For $f\in K_M$, the vector $Cf$ lies in $K_M+K_T$ by its formula.
+The direct sum makes its intersection with $K_\gamma$ zero, so
+$f+Jf=0$. But then $f=-Jf$ belongs to $K_M\cap K_T=\{0\}$.
+For the Hilbert assertion, unitary involution implies
+$J^\dagger=J$ and $C^\dagger=C=C^2$. Hence
+$\langle f,Cf\rangle=\|Cf\|^2$, which vanishes if $Cf\perp f$.
+\end{proof}
+
+The direct-sum argument does not depend on a positive metric; it
+already holds at the vector-space level. It is not a claim about
+nonlinear or differently typed structural readouts. It does rule out
+the literal identification of a nonzero averaging projector with
+an independent orthogonal third slot in one linear carrier.
+The quaternion product $e_1e_2=e_3$ is not the vector average
+$(e_1+e_2)/2$ and does not supply the missing identification.
+A passive unitary phase/frame change preserves this range obstruction.
+
+\subsection{An explicit typed light readout}
+
+A possible repair is to distinguish the compensated internal
+subspace from its light-output representation. This is a proposed
+typing correction, not a theorem that all literal legacy claims are
+already consistent. Let
+$\mathcal H_{\rm pair}=K_M\oplus K_T$, choose the duality unitary
+$S:K_M\to K_T$, and set
+\[
+ J_{\rm pair}(m,t)=(S^\dagger t,Sm),\qquad
+ C_{\rm pair}=\frac12
+ \begin{pmatrix}I&S^\dagger\\S&I\end{pmatrix}.
+\]
+Let $K_\gamma$ now denote a \emph{separate output fiber}, and assume
+a specified unitary $U:K_M\to K_\gamma$ at the internal-amplitude
+level. A representation-equivalence statement does not evaluate this
+$U$, and does not identify spinorial amplitudes with a Maxwell field.
+Define
+\[
+ F_\gamma:\mathcal H_{\rm pair}\longrightarrow K_\gamma,
+ \qquad F_\gamma(m,t)=\frac{U(m+S^\dagger t)}{\sqrt2}.
+\]
+Direct multiplication proves
+\[
+ F_\gamma^\dagger F_\gamma=C_{\rm pair},\qquad
+ F_\gamma F_\gamma^\dagger=I_{K_\gamma},\qquad
+ F_\gamma J_{\rm pair}=F_\gamma.
+\]
+Thus $F_\gamma$ is a coisometry, unitary when restricted to the
+compensated subspace, and annihilates the odd combination. Equivalently,
+$F_\gamma=L_\gamma C_{\rm pair}$, where
+$L_\gamma:\operatorname{Ran}C_{\rm pair}\to K_\gamma$ is the
+unitary output identification. Unlike $C_{\rm pair}$,
+$F_\gamma$ is not an endomorphism and cannot be called the same
+orthogonal projector onto a third slot.
+
+The normalized one-input maps are particularly concrete:
+\[
+ W_{\gamma T}=\sqrt2 F_\gamma P_T,\qquad
+ W_{\gamma M}=\sqrt2 F_\gamma P_M,
+\]
+\[
+ W_{\gamma T}(m,t)=US^\dagger t,\qquad
+ W_{\gamma M}(m,t)=Um,\qquad
+ W_{\gamma T}J_{\rm pair}=W_{\gamma M}.
+\]
+Their initial projections are respectively $P_T$ and $P_M$.
+These formulas identify the algebraic role of duality and the
+normalization, but leave the output calibration $U$, the $C_7$
+restriction, Clifford/current compatibility and physical interpretation
+to be supplied from native data.
+
+\subsection{Three readouts are not three independent state coordinates}
+
+One can place the three labelled outputs in orthogonal registers:
+\[
+ \mathcal R y=(m,t,F_\gamma y),\qquad y=(m,t),\qquad
+ \mathcal R:\mathcal H_{\rm pair}\to
+ K_M\oplus K_T\oplus K_\gamma.
+\]
+The output registers are orthogonal by construction, but the third
+value is dependent. Their attainable triples satisfy the graph
+constraint $\phi=F_\gamma(m,t)$. For finite common amplitude
+dimension $d$, this graph has dimension $2d$, not $3d$.
+Moreover
+\[
+ \mathcal R^\dagger\mathcal R=I+C_{\rm pair},\qquad
+ \|\mathcal R y\|^2=\|y\|^2+\|C_{\rm pair}y\|^2.
+\]
+Counting the output-copy norm as an additional independent carrier
+charge would therefore double-count the retained even information.
+A normalized graph embedding is
+\[
+ \mathcal E=\mathcal R\bigl((I-C_{\rm pair})+
+                     C_{\rm pair}/\sqrt2\bigr),
+ \qquad \mathcal E^\dagger\mathcal E=I.
+\]
+If $J_3=J_{\rm pair}\oplus I_{K_\gamma}$ acts on the output
+registers, then $J_3\mathcal E=\mathcal E J_{\rm pair}$.
+This supplies an explicit duality-compatible three-register
+realization, but its projector $\mathcal E\mathcal E^\dagger$
+is a graph projector, not automatically the native Meta-Septum.
+Normalization also changes the branch amplitudes and must not be
+introduced after a physical-current calibration as though nothing
+had changed. Literal independent three-sector fields would require
+additional degrees of freedom rather than this dependent readout.
+
+\paragraph{Compatibility with the actual triadic equation.}
+Writing a possible three-mode resonance as
+\[
+ \Omega_\triangle=\begin{pmatrix}A&V\\U_0&Z\end{pmatrix}
+\]
+in pair/third blocks, the graph $\phi=Fy$ is dynamically preserved
+only if its field equation is compatible with that constraint.
+Assume $F$ intertwines the Clifford action and use the induced
+pair-to-third connection derivative $\nabla_\mu F$. Substitution
+in the two block equations gives the necessary identity on the
+retained domain
+\[
+ \boxed{\displaystyle
+ U_0+ZF-FA-FVF-i\Gamma_\gamma^\mu\nabla_\mu F=0.}
+\]
+Indeed the pair equation has resonance $A+VF$, while the derivative
+of $Fy$ contributes $i\Gamma_\gamma^\mu(\nabla_\mu F)y$ in
+the third equation. This also proves sufficiency for a lifted pair
+solution when the kinetic intertwining and graph relation hold.
+The source supplies names for $V,U_0,Z$, not this evaluated identity.
+
+For the even exchange reduction of the previous section, let
+$X=\Omega_1+g_Y\mathcal T_{12}$ and write $b=Ua$, with the
+unitary output identification $U$. The same condition is
+\[
+ \sqrt2\chi\mathcal T_{\perp1}+\Omega_\perp U-UX
+ -\sqrt2\,U\chi\mathcal T_{1\perp}U
+ -i\Gamma^\mu\nabla_\mu U=0.
+\]
+In a common chart with $U=I$, $\nabla U=0$ and reciprocal blocks
+$\mathcal T_{\perp1}=\mathcal T_{1\perp}$, this requires
+$\Omega_\perp=X$. These are extra evaluated conditions, not
+identities established by the triadic block notation alone.
+If the third field is an independent reservoir instead, this
+dependent light-output graph must not be imposed on it.
+
+\subsection{Why symmetry does not fix the ART/QFT identification}
+
+The actual bidirectional-probe setup identifies its two modes as
+ART and phase-shifted QFT \emph{regime readouts}
+(\texttt{sec:bidirectional-probe-lensing}), not as matter and tachyon
+sector projectors. Duality compatibility alone leaves a continuous
+ambiguity. In exchange coordinates $(a,d,b)$, with
+$J_s=\operatorname{diag}(1,-1,1)$, the matrices
+\[
+ B_\vartheta=
+ \begin{pmatrix}
+ \cos\vartheta&0&\sin\vartheta\\
+ 0&1&0\\-\sin\vartheta&0&\cos\vartheta
+ \end{pmatrix}
+\]
+are unitary and commute with $J_s$ and $C_s$. On a common retained
+fiber where $Q=I$ and the MM action is scalar on the even sector,
+these constraints also fail to select $\vartheta$. They can mix the
+even pair amplitude and third amplitude while preserving the named
+structural symmetry constraints. Co-transporting all observables
+would make this a passive basis choice; holding the ART/QFT readout
+roles fixed instead requires their explicit maps and calibration.
+The example demonstrates underdetermination, not distinct physical
+predictions without such maps. The source's QFT frame offset and
+ART geometric role are not an evaluated intertwiner selecting one
+of these possibilities.
+
+\subsection{Testing the earlier cone carrier against the identification}
+
+There is an exact test using the already constructed carrier rather
+than a further arbitrary example. Its volume-rescaled even amplitudes
+are
+\[
+ a=-i\sin\theta,\qquad b=\cos\theta,\qquad
+ \theta=\arcsin(2t^2/\sqrt{N_0}),\quad 0<\theta<\pi/2.
+\]
+Any unitary light-output identification $b=Ua$ would require
+$\|b\|=\|a\|$. Here
+\[
+ \|b\|^2-\|a\|^2=\cos(2\theta).
+\]
+It vanishes only at $\theta=\pi/4$, equivalently $t^4=N_0/8$,
+not on a time interval. This remains true for a time-dependent
+unitary $U(t)$. Consequently the cone's independent supply slot
+is not the norm-preserving compensated light output constructed
+above. A phase shift alone cannot change this amplitude mismatch.
+
+A time-dependent, nonisometric graph gain does fit that particular
+trajectory:
+\[
+ F_\theta=i\cot\theta,\qquad b=F_\theta a.
+\]
+In the even time equation the off-diagonal coupling is
+$k=\dot\theta=\sqrt2h$. Direct differentiation verifies
+\[
+ k-kF_\theta^2-i\dot F_\theta=0.
+\]
+Thus this gain satisfies the time version of the graph compatibility
+condition, not merely the instantaneous amplitude relation.
+The reduced equation is
+\[
+ i\dot a=i\dot\theta\cot\theta\,a.
+\]
+Its usual amplitude norm is not conserved. The inherited full-carrier
+charge is instead
+\[
+ |a|^2+|b|^2=G_\theta|a|^2=1,
+ \qquad G_\theta=1+|F_\theta|^2=\csc^2\theta,
+ \qquad \dot G_\theta+2G_\theta\dot\theta\cot\theta=0.
+\]
+This is a compatible weighted reduction of the existing trajectory,
+not creation of charge or damping proved from gravity. The gain
+and weight diverge as $\theta\downarrow0$; the prescription
+depends on the chosen coupling, charge budget and initial relation.
+It does not identify a universal native light operator, a physical
+photon field or an unlimited supply, and cannot be substituted for
+the fixed normalized readout while retaining its current claims.
+
+\paragraph{Verification and identification outcome.}
+Exact symbolic checks verified the typed readout factorization,
+coisometry and duality; the three-output Gram matrix and normalized
+graph embedding; the continuous symmetry-compatible ambiguity;
+the block graph defect with independent matrix entries; and the
+cone gain, its evolution identity and weighted-charge balance.
+The same-fiber obstruction follows directly from the stated
+subspace identities and does not depend on numerical tests.
+
+The current identification result is therefore sharper than a
+missing-matrix diagnosis: the literal independent orthogonal
+light-slot/averaging-projector identification is incompatible;
+an explicitly typed dependent light readout is constructible;
+and the earlier cone reservoir is not that normalized readout.
+Before any native upgrade, the main-paper architecture must choose
+and specify its carrier versus output typing, give the ART/QFT
+readout maps and evaluate their graph or independent-channel
+dynamics. This working note records the proposed repair without
+silently changing the main-paper definitions. Native gravitational
+response, C5 contraction and the guard certificates remain open.
+
+\section{A causal relay channel and the scope of a wormhole interpretation}
+\label{sec:causal-relay-channel}
+
+\paragraph{Research question and source levels.}
+The proposed ``tunnel through the photon frame'' can first be tested
+as mediated transport, without postulating a spacetime wormhole.
+The Companion's photon frame is a reference/readout designation;
+it does not by itself define a new propagation region or field.
+An actual intermediate degree of freedom and its dynamics must be
+identified separately. The preceding linear obstruction still rules
+out identifying an averaging projector with an independent orthogonal
+third slot on the same carrier. A transport kernel is a different
+object, not a way to evade that proof while retaining its premises.
+
+The AIPR archive was consulted on 13 October 2026. Volume 2,
+Issue 8 lists EPR as a \emph{featured legacy paper}, separately from
+the contemporary evaluation of the Quantum Sphaera Companion.
+It is not evidence that the Companion's channels realize an
+Einstein--Rosen bridge. AIPR explicitly evaluates manuscript
+structure, not physical correctness or empirical validity:
+\href{https://aiphysicsreview.org/vol-02_issue-08/}{issue and scope notice}.
+The useful external sources located through that archive are
+distinguished below from equations derived directly from the
+Companion. No structural score is used as a physical premise.
+
+\subsection{An exact relay already available in the native probe blocks}
+
+Use the source's actual three probe modes, not a presumed
+matter/tachyon/photon identification. On a specified background set
+\[
+ L_a=i\Gamma^\mu\mathcal D_\mu-\Omega_a\quad(a=1,2),
+ \qquad L_X=i\Gamma^\mu\mathcal D_\mu-\Omega_\perp,
+ \qquad X:=\Psi_\perp.
+\]
+Write the source vertices as multiplication operators
+\[
+ G_{12}=g_Y\mathcal T_{12},\quad G_{21}=g_Y\mathcal T_{21},
+ \qquad V_a=\chi\mathcal T_{a\perp},\quad
+ U_a=\chi\mathcal T_{\perp a}.
+\]
+The equations of \texttt{prop:triadic-two-probe} then read
+\[
+ L_1\Psi_1=G_{12}\Psi_2+V_1X,\qquad
+ L_2\Psi_2=G_{21}\Psi_1+V_2X,
+ \qquad L_XX=U_1\Psi_1+U_2\Psi_2.
+\]
+Assume the constrained intermediate equation has a well-posed
+Cauchy problem and an appropriate retarded solution operator
+$\mathcal R_X^{\rm ret}$, with specified boundary conditions.
+Keep the homogeneous solution $X_{\rm hom}$ determined by the
+initial intermediate data. Exact elimination gives
+\[
+ X=X_{\rm hom}+\mathcal R_X^{\rm ret}
+                         (U_1\Psi_1+U_2\Psi_2),
+\]
+\[
+ \boxed{\displaystyle
+ (L_2-V_2\mathcal R_X^{\rm ret}U_2)\Psi_2
+ =(G_{21}+\mathcal B_{21}^{\rm ret})\Psi_1+V_2X_{\rm hom},
+ \qquad \mathcal B_{21}^{\rm ret}:=V_2\mathcal R_X^{\rm ret}U_1.}
+\]
+The first equation has the corresponding $1\leftrightarrow2$
+form. Both the direct coupling and the intermediate self-response
+remain present; neither may be deleted without an additional
+approximation or model choice. For spatially varying $\chi$, the
+two vertex factors must stay in their displayed order, not be
+replaced by a freely commuted overall $\chi^2$.
+
+This is a concrete, source-native \emph{symbolic} relay: entry into
+the orthogonal probe component, its evolution, and exit into the
+other probe. It does not evaluate that component's coefficients,
+identify it with a Maxwell photon, or assign probe 1/2 to global
+matter/tachyon. Those are precisely the missing identification
+obligations of the preceding section. In particular, a photon-frame
+reference is not a propagator by itself.
+
+\paragraph{Causality and closure hypotheses.}
+Suppose the background is globally hyperbolic, the vertices are
+local, and the intermediate operator admits a causal retarded
+Green kernel $G_X^{\rm ret}(x,y)$ supported where
+$x\in J^+(y)$. Then
+\[
+ \mathcal B_{21}^{\rm ret}(x,y)
+   =V_2(x)G_X^{\rm ret}(x,y)U_1(y)
+\]
+has the same causal support. Such Green-operator hypotheses must
+be proved for the actual constrained operator; their standard
+framework is described by Baer, Ginoux and Pfaeffle,
+\href{https://arxiv.org/abs/0806.1036}{\emph{Wave Equations on Lorentzian
+Manifolds and Quantization}}, Chapter 3. A time-retarded modal
+equation alone would establish temporal ordering, not relativistic
+finite-speed propagation. The full-field $\mathcal K_Q$ test from
+Section~\ref{sec:native-normalized-readout} still applies: an
+unobserved mode within $C_7$ differs from leakage outside $C_7$.
+The intermediate initial term is also essential; the earlier cone
+construction had a nonzero initial supply slot, not an initially
+empty channel driven only by the retained fields.
+
+\subsection{A conservative modal realization and its memory}
+
+For an independently justified positive-current, time-generator
+reduction, put $\hbar=1$ and consider a Hermitian block Hamiltonian
+\[
+ H(t)=\begin{pmatrix}H_R(t)&V(t)\\V(t)^\dagger&H_X(t)\end{pmatrix},
+ \qquad r=(r_1,r_2),\qquad V=\begin{pmatrix}V_{1X}\\V_{2X}\end{pmatrix}.
+\]
+The source resonance $\Omega_\triangle$ is not automatically this
+$H$: kinetic inversion, the current pairing, domains and the
+branch embedding are prerequisites. $H_R$ may contain the existing
+direct 1/2 coupling. If $\mathcal U_X(t,s)$ solves
+$i\partial_t\mathcal U_X=H_X(t)\mathcal U_X$, the exact time
+reduction is
+\begin{align*}
+ x(t)&=\mathcal U_X(t,t_0)x_0
+       -i\int_{t_0}^t\mathcal U_X(t,s)V(s)^\dagger r(s)\,ds,\\
+ i\dot r(t)&=H_R(t)r(t)+V(t)\mathcal U_X(t,t_0)x_0\\
+ &\quad-i\int_{t_0}^t
+        V(t)\mathcal U_X(t,s)V(s)^\dagger r(s)\,ds.
+\end{align*}
+Differentiating the first line and substituting it proves the
+formula. The total positive charge $\|r\|^2+\|x\|^2$ is conserved
+when the closed evolution is unitary. The retained charge alone
+may change; the integral stores delayed feedback rather than
+automatically generating irreversible damping.
+
+For constant coefficients and $z$ outside the intermediate
+spectrum, elimination in the resolvent equation instead gives
+\[
+ H_{\rm eff}(z)=H_R+V(z-H_X)^{-1}V^\dagger,
+ \qquad \Sigma_{21}(z)=V_{2X}(z-H_X)^{-1}V_{X1}.
+\]
+For self-adjoint $H_X$ and bounded vertices,
+\[
+ \|\Sigma_{21}(z)\|
+ \le\frac{\|V_{2X}\|\,\|V_{X1}\|}
+ {\operatorname{dist}(z,\sigma(H_X))}.
+\]
+A near-resonant channel can therefore be significant even when
+its vertices are small. A real resolvent away from the spectrum
+does not by itself produce absorption. A continuum, physical
+loss mechanism or controlled reduced description is needed before
+interpreting an imaginary response as damping. Frequency-domain
+expressions also omit the independent initial-data response unless
+it is separately retained.
+
+\paragraph{Exact finite-channel test.}
+Take a diagnostic constant model with no direct 1/2 vertex,
+\[
+ H=g\begin{pmatrix}0&0&1\\0&0&1\\1&1&0\end{pmatrix},
+ \qquad y(0)=(0,1,0)^T,
+\]
+where $g$ is real. Direct differentiation verifies
+\[
+ y(t)=\begin{pmatrix}
+ [\cos(\sqrt2gt)-1]/2\\
+ [\cos(\sqrt2gt)+1]/2\\
+ -i\sin(\sqrt2gt)/\sqrt2
+ \end{pmatrix},\qquad i\dot y=Hy,\qquad\|y(t)\|^2=1.
+\]
+The initially empty intermediate component mediates transfer
+between the first two. Nevertheless their combined charge is
+$1-\tfrac12\sin^2(\sqrt2gt)$ and returns periodically. This
+demonstrates transport, not monotone contraction, a native HC
+witness, physical tachyon propagation or a spacetime wormhole.
+
+\subsection{The physically relevant phase is a path-relative phase}
+
+The source contains both a direct leg $G_{21}$ and an indirect
+leg $\mathcal B_{21}^{\rm ret}$. This permits interference, a
+more precise phase hypothesis than changing a frame label alone.
+For a scalar, stationary modal test let $\Delta=z-E_X$ be real
+and nonzero, let $d$ be the direct amplitude, and put
+$b=v_{2X}v_{X1}/\Delta$. Then
+\[
+ |d+b|^2=|d|^2+|b|^2+2\operatorname{Re}(d^*b).
+\]
+Under a passive rephasing of each mode, both $d$ and $b$ acquire
+the same phase $e^{i(\phi_2-\phi_1)}$. Hence $d^*b$ is invariant;
+the intermediate-frame phase cancels along the path. With nonzero
+amplitudes the invariant loop phase is
+$\arg(d^*v_{2X}v_{X1}/\Delta)$. It can give constructive or
+destructive interference if the physical couplings or propagation
+change. An arbitrary relabelling of independently shifted frames
+cannot change this observable when all operators are co-transported.
+Time-dependent rephasing additionally requires the usual connection
+and generator derivative terms.
+
+Thus phase-sensitive transmission can change an observed amplitude
+even though a phase multiplication of a \emph{single} amplitude
+cannot repair the cone's norm mismatch. This possibility requires
+coherent alternative paths and evaluated vertices; it is not a
+proof that the failed third benchmark is caused by a phase shift.
+Destructive cancellation of one off-diagonal element also does not
+control the diagonal self-responses or the complete C5 residual.
+
+\subsection{When the channel would genuinely respond to gravity}
+
+A triadic vertex is not gravitational merely because it joins two
+frame-labelled modes. To test gravity, let the evaluated relay
+depend on an admissible background metric $g$, fix its retarded
+initial/boundary prescription, and write $R_X=\mathcal R_X^{\rm ret}$.
+Differentiating the intermediate equation yields
+$\delta R_X=-R_X(\delta L_X)R_X$. Consequently
+\[
+ \delta\mathcal B_{21}
+ = (\delta V_2)R_XU_1
+ -V_2R_X(\delta L_X)R_XU_1
+ +V_2R_X(\delta U_1).
+\]
+This is the exact first-variation structure on a fixed admissible
+domain, provided the solution operators are differentiable.
+A changed homogeneous initial field has its own additional response.
+The metric perturbation may be supplied by the conserved-source
+Einstein response $\delta g=\mathcal R_E\delta T_{\rm tot}$
+already constructed earlier in this note. All exchanging sectors
+and interactions must contribute to $\delta T_{\rm tot}$.
+This supplies a testable gravity-to-relay sensitivity; it does not
+derive a topology-changing or self-consistent wormhole solution,
+and the bilinear coframe constraints must still be checked separately.
+
+\subsection{What the AIPR-associated papers actually contribute}
+
+\paragraph{A record/relay distinction, not a new transport law.}
+Taekyung Lee, \emph{Black Holes as Information Relay Stations}, v4,
+Sections 3--4 and Theorem 4.A,
+\href{https://zenodo.org/records/20251654}{primary manuscript and files},
+is evaluated in AIPR Volume 2, Issue 8, entry 9. The primary text
+separates recording from redistribution and explicitly does not
+derive a new black-hole microphysical mechanism or establish
+traversable astrophysical channels. Its reference-information
+accounting assumes global unitary evolution with a spectator
+reference; mutual information with the whole evolving system is
+preserved, while subsystem accessibility may change. This supports
+keeping retained readout and total carrier accounting distinct.
+It supplies neither the Companion's $V_a,U_a$ nor a C5 contraction.
+Information accounting is also not a gravitational stress tensor.
+
+\paragraph{A phase-active portal with an important boundary limitation.}
+Horia Ionutas, \emph{On Information and Time---A Spacelike 5D
+Informational Metric}, Section 8,
+\href{https://zenodo.org/records/20113592}{primary manuscript and files},
+is evaluated in the same issue, entry 6. Its extra informational
+coordinate is spacelike, with one physical time; its minimal
+derivative scalar portal is phase-active under stated conserved-current
+conditions. It does not furnish a wormhole geometry. The local
+identity underlying that limitation can be checked independently:
+\[
+ \int_M\!\sqrt{|g|}\,f(x)(\partial_\mu\varphi)j^\mu
+ =\int_{\partial M}\!\varphi f j^\mu\,d\Sigma_\mu
+ -\int_M\!\sqrt{|g|}\,\varphi
+       \bigl[(\partial_\mu f)j^\mu+f\nabla_\mu j^\mu\bigr].
+\]
+For constant $f$ and a conserved current, this portal is a boundary
+term on that regime, not a bulk source of carrier-charge exchange.
+Nonconstant gating or a nonconserved component current changes
+the test, but its interaction and gating reservoir must then be
+included in total balance. The identity does not show that the
+full scalar sector has zero stress energy. This source is useful
+for distinguishing a phase label from an energetic supply leg,
+not for replacing the latter by an assumed energy-free portal.
+
+\paragraph{ER=EPR gives a geometric comparison, not automatic transmission.}
+Maldacena and Susskind's \emph{Cool horizons for entangled black holes}
+is also listed in
+\href{https://aiphysicsreview.org/issue-2026-s1/#paper-004}{AIPR's curated
+special issue}. Its primary
+\href{https://arxiv.org/abs/1306.0533}{manuscript}, especially
+Section 3.1, makes the no-signal distinction explicit: the
+entanglement/bridge correspondence does not itself give a channel
+between the two exterior regions. The separate traversable model
+of Gao, Jafferis and Wall,
+\href{https://arxiv.org/abs/1608.05687}{\emph{Traversable Wormholes via
+a Double Trace Deformation}}, requires an added boundary interaction
+and negative averaged null energy in its specified AdS setting,
+while preserving causality. No corresponding boundary theory,
+energy calculation or throat geometry is evaluated for the Companion.
+These papers are therefore external comparison and constraint
+sources, not evidence that frame sectors are spacetime mouths.
+
+The archive survey is targeted, not an exhaustive audit of every
+AIPR entry. Primary texts were inspected for the claims used above;
+AIPR summaries served to locate them. The contemporary papers
+remain proposals within their stated regimes, not independent
+validation of the Sphaera architecture.
+
+\paragraph{Checks, OP5 interface and next test.}
+Exact symbolic calculations verified the conservative relay solution,
+ordered matrix resolvent elimination, inverse-operator variation,
+direct/indirect interference and invariance of its loop phase under
+complete rephasing. The retarded field reduction and portal boundary
+identity are explicit substitutions and integration by parts.
+Existence of the native Green operator and all-readout guard
+preservation have not been inferred from these diagnostic checks.
+
+To connect this channel to OP5, evaluate its response between the
+actual witness injection and the three-component residual derivative
+$L_5$, retaining the intermediate initial state and memory. If the
+resulting baseline and relay correction on the declared residual
+Hilbert space are $A$ and $D$, the note's squared-score condition
+$\Phi^+\le(3/4)\Phi$, with $\Phi=\|R\|_\oplus^2$, requires
+\[
+ (A+D)^\dagger(A+D)\ \le\ \frac34 I
+\]
+in that calibrated residual inner product, or equivalently
+$\|A+D\|\le\sqrt3/2$. A separate $3/4$ \emph{amplitude-norm}
+threshold would instead require the stronger bound
+$(A+D)^\dagger(A+D)\le(9/16)I$. These thresholds must not be
+interchanged or applied to a benchmark ratio without identifying
+its observable. This is only a linearized criterion; a nonlinear
+witness update needs a uniform estimate and
+independently preserved domain/guards. Small vertices, a tunnel
+metaphor or a phase cancellation at one frequency do not imply it.
+The immediate usable advance is the native symbolic kernel
+$V_2\mathcal R_X^{\rm ret}U_1$ and a gauge-invariant interference
+test, with a gravitational sensitivity formula if its metric
+dependence and conserved source are actually evaluated.
+
+\section{First executed C5 relay test: residual reachability and a third control}
+\label{sec:executed-c5-relay-reachability}
+
+\paragraph{What was rechecked before computing.}
+The frozen v4.7.0 source, r04, defines
+$\Phi_5=\|\rho_{5,\mathrm{bd}}\|^2+
+\|\rho_{5,\mathrm{ext}}\|^2+\|\rho_{5,\mathrm{mix}}\|^2$
+and the guards $(\Lambda_5^{\rm new},A_4^{\rm abs},U_6^{\rm all})$.
+Its finite ledger assigns $1$ and $3/4$ to the reference and bounded
+witness, but still does not evaluate the component functions from
+probe fields or give numerical triadic vertices. The active probe
+equations likewise name their coupling blocks without evaluating
+them. The older \texttt{sec:lens-extreme-local-refitting} does provide
+a geometric residual formula; the preceding provenance investigation
+links that method to C5 without proving a component dictionary.
+The following test uses that available formula and an explicitly
+declared extra response. It does not fill missing native data with
+invented physical measurements.
+
+\subsection{The derivative that the relay must actually supply}
+
+For fixed Euclidean sample axes and fixed positive weights, use the
+signed lens residual from Section~\ref{sec:c5-bifocal-update-investigation}:
+\[
+ r_i=\sqrt{w_i}\bigl(S_i(x_i,c)-2A\bigr),\qquad
+ S_i=\|x_i+ce_i\|+\|x_i-ce_i\|.
+\]
+Away from a focus its differential is
+\[
+ \delta r_i=\sqrt{w_i}\left[
+ -2\delta A+\tau_i\delta c+b_i\cdot\delta x_i\right],
+ \quad b_i=\frac{x_i+ce_i}{\|x_i+ce_i\|}
+          +\frac{x_i-ce_i}{\|x_i-ce_i\|},
+\]
+where $\tau_i=\partial_cS_i$ was already evaluated above.
+This exposes a concrete third-control test: does the relay generate
+a sample displacement whose column is independent of the existing
+$A$ and $c$ columns? Fixed boundary/exterior/mixed sample assignments
+and norm weights must be preserved, not reclassified to improve the
+score. Three residual blocks need not mean three scalar dimensions.
+
+The derivative must include the entire reduced field response, not
+only its off-diagonal vertex. Write the previous section's equation as
+\[
+ L_{\rm eff}\Psi_2=K_{21}\Psi_1+s_2,\quad
+ L_{\rm eff}=L_2-V_2\mathcal R_X^{\rm ret}U_2,\quad
+ K_{21}=G_{21}+\mathcal B_{21}^{\rm ret},\quad s_2=V_2X_{\rm hom}.
+\]
+On a fixed initial-data prescription, a differentiable control
+parameter $u_a$ has response
+\[
+ \partial_a\Psi_2=\mathcal R_{\rm eff}^{\rm ret}
+ \left[(\partial_aK_{21})\Psi_1+K_{21}\partial_a\Psi_1
+       +\partial_as_2-(\partial_aL_{\rm eff})\Psi_2\right].
+\]
+Here existence of the effective retarded solution operator is an
+additional well-posedness obligation. If the actual trajectory
+extraction is $x_i=\mathcal X_i(\Psi_2)$, its differential supplies
+$\partial_ax_i=D\mathcal X_i[\partial_a\Psi_2]$, plus any explicit
+parameter dependence of $\mathcal X_i$. The lens formula then gives
+the corresponding residual-response column. Neither
+$\mathcal X_i$ nor the actual r04 residual dictionary is evaluated
+in the inspected source, so these columns are not yet native numbers.
+
+Real C5 residuals also require real derivatives. For a linearized
+coherent field response $e^{i\phi}\delta\Psi$, a real-linear
+readout yields
+\[
+ \delta r=d_c\cos\phi+d_s\sin\phi,
+ \qquad d_c=L_5\delta\Psi,\quad d_s=L_5(i\delta\Psi).
+\]
+It is not generally legitimate to replace this by $e^{i\phi}d_c$.
+A fixed-amplitude phase sweep traces an ellipse in the two-column
+response plane, not every vector in that plane. Free quadrature
+controls or variable amplitude are extra assumptions; any control
+or energy cap further restricts attainability.
+
+\subsection{A necessary reachability test before optimizing phases}
+
+Let $E$ be the real finite residual space with its fixed calibrated
+inner product, and let $J:\mathbb R^k\to E$ be the evaluated local
+response of the allowed controls. These may include fit parameters
+and relay quadratures. If differentiable guard measurements give
+$Gu=0$ at first order, choose a basis $Z$ of $\ker G$ and put
+$J_g=JZ$. Discrete admissibility flags cannot be differentiated
+instead of being recomputed. Let $P_g$ be the orthogonal projector
+onto $\operatorname{Ran}J_g$ in the declared residual norm.
+
+\begin{proposition}[Best unconstrained linearized C5 lowering]
+For a nonzero residual $r$, unrestricted tangent controls give
+\[
+ \inf_\eta\|r+J_g\eta\|^2=\|(I-P_g)r\|^2.
+\]
+Writing $p=\|P_gr\|^2/\|r\|^2$, a squared-score ratio at most
+$3/4$ is attainable in this linear model if and only if $p\ge1/4$.
+With relaxation $\alpha\in[0,1]$ of the least-squares cancellation,
+\[
+ r^+=(I-\alpha P_g)r,\qquad
+ \frac{\|r^+\|^2}{\|r\|^2}=1-(2\alpha-\alpha^2)p.
+\]
+For $p\ge1/4$, the choice
+$\alpha=1-\sqrt{1-1/(4p)}$ gives exactly $3/4$.
+\end{proposition}
+\begin{proof}
+Decompose $r=P_gr+(I-P_g)r$. An allowed control can cancel the
+first part, while no allowed control changes the orthogonal part.
+Orthogonality gives both the infimum and the relaxation identity.
+The minimum ratio is $1-p$, proving the threshold and formula.
+\end{proof}
+
+This is an optimistic necessary test for a bounded physical control:
+finite amplitude, phase-circle restrictions, energy budgets and
+nonlinear guards can only increase its minimum. If $J_g$ has rank
+below $\dim E$, some residual direction has $p=0$; no uniform
+strict contraction of the entire residual space follows from these
+controls alone. That direction need not occur in a smaller native
+witness family, which must be specified before applying this
+obstruction. A contracting baseline can also change the test: apply
+it to the actual baseline residual rather than silently using the
+identity update.
+
+First-order guard tangency is not exact guard invariance, and a
+tight linearized $3/4$ estimate leaves no margin for nonlinear
+errors. A uniform slack estimate or an exact nonlinear construction
+is needed for a genuine finite-step certificate.
+
+\subsection{An explicit three-sample rank and nonlinear return test}
+
+Take a deliberately declared minimal sample family from the earlier
+ellipse diagnostic, with unit weights, fixed axis $e=(1,0)$ and
+one sample in each labelled residual block:
+\[
+ x_1=(2,0),\qquad x_2=(0,\sqrt3),\qquad
+ x_3(\vartheta)=\operatorname{Rot}(\vartheta)(1,3/2).
+\]
+The reference is $(A,c,\vartheta)=(2,1,0)$, where all three focal
+sums equal $4$. The third control is a \emph{physical displacement
+of one sample relative to the fixed foci}, not a passive frame
+rephasing. Its realization by the native relay has not been proved.
+Direct differentiation gives the exact Jacobians
+\[
+ J_{A,c}=\begin{pmatrix}-2&0\\-2&1\\-2&4/5\end{pmatrix},
+ \qquad n=\frac{(-1,-4,5)^T}{\sqrt{42}},
+ \qquad J_{A,c}^Tn=0,
+\]
+\[
+ J_{A,c,\vartheta}=
+ \begin{pmatrix}-2&0&0\\-2&1&0\\-2&4/5&2/5\end{pmatrix},
+ \qquad \det J_{A,c,\vartheta}=-4/5\ne0.
+\]
+For example $b_3=(4/5,8/5)$ and
+$\partial_\vartheta x_3=(-3/2,1)$ at the reference, so their
+scalar product is $2/5$. The two fit parameters leave the
+$n$-direction inaccessible to first order; the specified sample
+response removes that rank defect. Three labels alone did not do so.
+
+The inverse-function theorem now gives a local inverse for this
+\emph{constructed} residual map $R_{\rm lens}(A,c,\vartheta)$.
+Choose a sufficiently small residual ball
+inside its image. The exact local update
+\[
+ F=R_{\rm lens}^{-1}\circ
+       \left(\frac{\sqrt3}{2}I\right)\circ R_{\rm lens}
+\]
+is defined on its preimage and obeys
+\[
+ R_{\rm lens}(Fp)=\frac{\sqrt3}{2}R_{\rm lens}(p),\qquad
+ \Phi_{\rm lens}(Fp)=\frac34\Phi_{\rm lens}(p).
+\]
+The residual ball is invariant under this scaling, so the local
+model supports all finite iterates there. This is a nonlinear
+coordinate realization, not a proof that the physical relay
+implements the inverse-map update.
+
+A narrowly specified geometric guard can be preserved exactly:
+take $K=\{0\}$ and $\varepsilon=3$ in
+$g_i=d(x_i,K)-\varepsilon$. Changing $A,c$ does not move the
+samples, and rotating $x_3$ preserves its radius. All three $g_i$
+are therefore constant with positive margins
+$\varepsilon-\|x_i\|$. This is a declared diagnostic anchor,
+not the native HC anchor or the full r04 guard tuple. If the real
+guard disallows this angular motion, the third column must be
+removed; the rank defect then returns. A larger sample family also
+need not be controllable by these three parameters.
+
+\paragraph{Executed nonlinear and rejection checks.}
+The companion script \texttt{OP5\_Relay\_C5\_Check.py} implements
+the real, norm-whitened response test with an SVD and optional
+linear guard constraints. It rejects zero-score ratios and
+nonfinite input. Its diagnostics assume unbounded tangent controls
+and explicitly report that neither native readout identity nor
+nonlinear guard invariance has been certified. Numerical rank
+decisions are floating-point tests, not rigorous spectral-gap proofs.
+
+The constructed nonlinear fit was checked at 80 decimal digits.
+An initial target $R_0=10^{-3}n$ was inverted near $(2,1,0)$,
+then twelve updates used $R_{k+1}=(\sqrt3/2)R_k$. The initial
+score was $10^{-6}$ and the final score was
+\[
+ 10^{-6}(3/4)^{12}=3.16763520240783691\times10^{-8}.
+\]
+The largest discrepancy in an individual squared-score ratio was
+below $9.1\times10^{-62}$, and the largest squared-radius discrepancy
+below $8.5\times10^{-81}$. All iterates stayed inside the declared
+test box $1.9<A<2.1$, $0.9<c<1.1$, $|\vartheta|<0.1$.
+The factor $3/4$ was selected as the target: these checks establish
+attainability in this construction, not a predicted physical decay rate.
+They are not an interval-arithmetic certificate or the source's
+original finite scan. A separate exact symbolic differentiation also
+verified the displayed Jacobian, null direction, determinant and
+radial-guard identity directly from the lens formula.
+Seven reproducible tests passed, including an unreachable direction,
+the exact quarter-accessibility threshold, a full-rank augmentation
+and rejection of that augmentation when a linear guard fixes its
+third control. No genuine native coupling has been fitted to make
+the answer equal $3/4$.
+
+\paragraph{What this establishes and what to evaluate next.}
+There is now an executed response-to-score test, a source-linked
+geometric derivative and an exact local construction showing how
+an additional allowed channel can remove a missing residual
+direction. The concrete native task is to evaluate the complete
+retarded field response above, map it through the actual trajectory
+and witness extraction, and compare its residual column with the
+existing fit columns \emph{after} imposing the real guards.
+That test may fail through rank, amplitude budget or guard coupling
+even if transport exists. The missing native $R_5$, its dictionary
+to the lens fit and the evaluated vertices remain explicit data
+obligations; the construction is not a gravitational or global
+OP5 solution and does not explain the separate Riemann benchmark
+without its own readout identification.
+
+\section{Executed frame-value transport with an explicit HC guard}
+\label{sec:frame-value-hc-transport}
+
+\paragraph{Inputs and hypotheses, not a recovered native dictionary.}
+The source's symmetric frame gives $\beta=0.5493$ approximately;
+its cascade reading supplies the probability $w=\beta^2$, and its
+Dirac-probe clock displays $e^{i\pi\beta}$. A common scalar clock
+phase preserves every quadratic norm. Holding the GUE operator and
+projector fixed also gives
+\[
+ [e^{i\pi\beta}R_{\rm GUE},Q]
+   =e^{i\pi\beta}[R_{\rm GUE},Q],
+\]
+so its absolute commutator mismatch cannot change from that scalar
+factor alone. An evaluated change of clock spectrum, projector,
+coupling or physical readout would be needed for a different result.
+
+The present calculation therefore tests an explicit extra realization:
+two intermediate spectral modes have phases $e^{\pm i\phi}$,
+$\phi=\pi\beta$, and the visible fit has their weights $(w,1-w)$.
+The negative phase is a mirrored extension of the displayed clock,
+and a cascade probability is not automatically a C5 spectral weight.
+These are declared hypotheses. Unlike the earlier inverse-fit test,
+the visible score below is computed from these inputs, not assigned
+the target $3/4$. The native $R_5$ and its embedding remain unevaluated.
+
+\subsection{Why the direct raw-frame assignment fails the fixed HC test}
+
+On the diagnostic three-mode carrier let
+\[
+ J_s=\begin{pmatrix}0&1&0\\1&0&0\\0&0&1\end{pmatrix},
+ \qquad C_s=(I+J_s)/2,
+ \qquad f_+=(1,1,0)^T/\sqrt2.
+\]
+Assigning the opposite phases directly to the raw exchanged pair
+would give $D=\operatorname{diag}(e^{i\phi},e^{-i\phi},1)$.
+Exact multiplication yields
+\[
+ \|(I-C_s)Df_+\|^2=\sin^2\phi,
+ \qquad \|[D,J_s]\|_{\rm F}^2=8\sin^2\phi.
+\]
+With the stated frame value these are respectively
+$0.9762032204$ and $7.8096257633$. Thus this $D$ cannot serve as
+a fixed-$J_s$ admissible MM transport preserving the HC-even input
+sector. This conditional obstruction concerns that direct raw-frame
+identification, not every possible native frame readout. If the
+projector is passively co-transported to $DC_sD^\dagger$ the image
+constraint changes consistently, but co-transporting the fit
+selector as well leaves the measured norm unchanged. That is not
+a physical lowering mechanism.
+
+\subsection{A guard-compatible realization within the even sector}
+
+The even sector is two-dimensional: the pair combination $f_+$
+and the independent orthogonal probe mode $e_\perp$ are both
+$J_s$-even. The spectral phases can act \emph{within} this sector
+without being assigned to the raw matter/tachyon slots. In the
+$(f_+,e_\perp)$ basis define
+\[
+ S_w=\begin{pmatrix}\sqrt w&\sqrt{1-w}\\
+                     \sqrt{1-w}&-\sqrt w\end{pmatrix},
+ \qquad
+ U_+=S_w\begin{pmatrix}e^{i\phi}&0\\0&e^{-i\phi}\end{pmatrix}S_w^T.
+\]
+Extend $U_+$ by the identity on the odd combination $f_-$ to
+obtain $U$ on the three-mode carrier. Put
+\[
+ a=\cos\phi+i(2w-1)\sin\phi,
+ \qquad b=2i\sqrt{w(1-w)}\sin\phi.
+\]
+Then
+\[
+ Uf_+=a f_++b e_\perp,\qquad
+ U^\dagger U=I,\qquad [U,J_s]=[U,C_s]=0,
+ \qquad C_sUf_+=Uf_+.
+\]
+For the fixed visible selector $P=|f_+\rangle\langle f_+|$,
+\[
+ \boxed{\displaystyle
+ q=|a|^2=1-4w(1-w)\sin^2\phi
+      =0.17729809232764920886,\qquad |b|^2=1-q.}
+\]
+This is a strong visible lowering with full norm conserved and
+zero HC-odd leakage in this realization. The unseen fraction is
+inside HC, not outside the licensed sector. The source's $\perp$
+mode remains a probe degree of freedom, not an identified Maxwell
+photon or wormhole throat.
+
+For an abstract residual Hilbert space $E$, the construction can
+be tensored with $I_E$. Its visible compression is $aI_E$, so it
+has the uniform one-step squared-norm bound $q<3/4$ on that
+declared space. Real residuals require an explicitly compatible
+realification and quadrature norm. Identification with the actual
+three C5 blocks still requires the original residual metric and
+witness dictionary; tensoring does not provide them.
+Any licensed gate $Q$ containing the visible and history images
+and commuting with $U$ preserves those images. The actual $C_7$
+gate has not been extracted. Protected C4/C6 registers can be
+kept separate in the model, but no native dependency map has
+established their invariance under this transport.
+
+\paragraph{The generator conditions are now explicit.}
+One time-generator representative realizing this step in duration
+$\tau>0$, in units $\hbar=1$, is
+\[
+ H_+=-\frac{\phi}{\tau}
+ \begin{pmatrix}
+ 2w-1&2\sqrt{w(1-w)}\\
+ 2\sqrt{w(1-w)}&1-2w
+ \end{pmatrix},\qquad U_+=e^{-i\tau H_+}.
+\]
+Thus the off-diagonal rate magnitude must obey
+$\kappa\tau=2\phi\sqrt{w(1-w)}$ and the diagonal detuning
+magnitude obeys $|\Delta|\tau=2\phi|2w-1|$ for this representative.
+The phase and weight do not fix $\tau$ or a unique generator;
+logarithm branches and overall phases also matter. To match the
+native even triad, its kinetic reduction must produce these rates
+from $\chi\mathcal T_{1\perp}$ and the diagonal resonances,
+not by setting them after asking for a desired score.
+No such evaluated equality is present in the inspected source.
+
+\subsection{The second step disproves repeated lowering by this fixed channel}
+
+Keeping the same finite carrier and applying $U$ again gives
+\[
+ q_n=\|PU^nf_+\|^2
+     =1-4w(1-w)\sin^2(n\phi).
+\]
+For the supplied frame value,
+\[
+ (q_1,q_2,q_3,q_4)
+ =(0.1772980923,\ 0.9216893762,\ 0.3264651774,\ 0.7158646149).
+\]
+In particular $q_2/q_1\approx5.19853$, not a number at most
+$3/4$. Previously stored amplitude returns from $e_\perp$.
+The homogeneous history term cannot be discarded merely because
+the visible first-step score was small. The finite unitary model
+therefore proves a conditional single-step bound and \emph{fails}
+the repeated C5-lowering requirement.
+
+The prepared history construction shows exactly what would repair
+this at the model level. On $E\oplus\ell^2(\mathbb N_0;E)$ define
+\[
+ V(\xi,h_0,h_1,\ldots)=(a\xi,b\xi,h_0,h_1,\ldots).
+\]
+Since $|a|^2+|b|^2=1$, this is norm-preserving. Starting with
+empty history, its visible component is $a^n\xi_0$ and its score
+is $q^n\|\xi_0\|^2$. The old history is shifted, not reset or
+destroyed. $V$ is an isometry, not a surjective unitary on this
+one-sided space; a closed unitary realization requires its own
+incoming/history dilation. Unlimited history is not supplied by
+a finite native matrix or finite positive budget automatically.
+All-history gate compatibility, native admissibility and physical
+realization remain obligations. The protected C4 register cannot
+be used as that history reservoir.
+
+\paragraph{Executed checks and exact outcome.}
+Wolfram independently verified the symbolic weighted compression,
+unitarity, fixed-duality commutation, HC-even image, total norm and
+the contrasting raw-frame leakage. The companion script reproduces
+the numerical frame test and explicitly tests the second-step
+failure. Its eleven tests pass, including the earlier lens and
+guard-rejection tests. Numerical and symbolic checks are distinct
+from extracting a physical coupling or native witness.
+
+The first-step guard issue is now narrowed: place the fit/history
+mixing inside an admissible HC sector, rather than treating opposite
+raw-frame phases as an admissible MM converter. Repeated lowering
+additionally needs justified one-way history transport, damping or
+another evaluated return-prevention mechanism. The source's
+unevaluated C5 extraction and C4/C6 guard dependencies prevent
+promotion of this calculation to a native OP5 proof. It is not
+evidence for a physical wormhole or superluminal channel.
+
+\section{A proved no-return realization and its native spectral test}
+\label{sec:proved-no-return-realization}
+
+\paragraph{The strengthened question.}
+The last frame-value test left a precise obstruction: a reused
+finite two-mode unitary returns history to the visible fit. This
+section proves a finite autonomous no-return implementation, a
+local causal amplitude-port realization, and quantitative return
+limits. These establish realizability under declared embeddings
+and boundary conditions, not identity with the native C5 witness.
+The distinction between the source's QAM tag shift, an amplitude
+history shift and actual spatial propagation remains essential.
+
+\subsection{An autonomous unitary conveyor for a finite horizon}
+
+Keep the previous frame-derived amplitudes $a,b$, with
+$|a|^2=q$, $|b|^2=1-q$, $b$ purely imaginary, and
+$q\approx0.1772980923$. Its local scattering matrix is
+\[
+ S=\begin{pmatrix}a&b\\b&a^*\end{pmatrix},\qquad S^\dagger S=I.
+\]
+For a positive integer $N$, take a fixed carrier
+$\mathcal K_N=E_{\rm vis}\oplus E_0\oplus\cdots\oplus E_{N-1}$.
+Apply $S$ to the visible amplitude and slot $0$, leaving the other
+slots fixed. Then cyclically advance the history slots so that the
+newly emitted slot becomes the last slot. The resulting autonomous
+unitary is
+\[
+ U_N(\xi,h_0,h_1,\ldots,h_{N-1})
+ =\bigl(a\xi+bh_0,\ h_1,\ldots,h_{N-1},\ b\xi+a^*h_0\bigr).
+\]
+It is a unitary scattering followed by a unitary permutation.
+Starting with empty history, direct induction gives for $0\le n\le N$
+\[
+ \xi_n=a^n\xi_0,\qquad
+ (h_0,\ldots,h_{N-1})_n
+ =(0,\ldots,0,b\xi_0,ba\xi_0,\ldots,ba^{n-1}\xi_0).
+\]
+The next active input remains empty through those $N$ applications.
+Hence the visible score is $q^n\|\xi_0\|^2$, the history norm is
+$(1-q^n)\|\xi_0\|^2$, and no amplitude has been erased.
+On application $N+1$, the oldest record returns:
+\[
+ \xi_{N+1}=(a^{N+1}+b^2)\xi_0.
+\]
+This makes the finite validity horizon explicit rather than
+silently treating a closed finite memory as an unlimited reservoir.
+
+The script checks $N=20$ on a fixed unitary carrier and obtains
+\[
+ \frac{\Phi_{20}}{\Phi_0}
+ =q^{20}\approx9.4206583741\times10^{-16},\qquad
+ \frac{\Phi_{21}}{\Phi_0}\approx0.6768384501.
+\]
+The large return is not a numerical instability. The maximum
+relative discrepancy from $q^n$ through step 20 was below
+$2.1\times10^{-15}$; the fit-plus-history norm discrepancy was
+below $2.3\times10^{-16}$. Separate protected and forbidden test
+registers were respectively fixed and unexcited. These are declared
+model projections, not evaluations of the native r04 guard functions.
+This frame-model recurrence is also not the source's exact
+$(3/4)^n$ ledger recurrence, although it satisfies the stronger
+single-step inequality on its no-return interval.
+
+\paragraph{A sharp capacity bound for a fixed power dilation.}
+Suppose a fixed unitary $U$ and fit isometry $\iota:E\to\mathcal K$
+obey $\iota^\dagger U^n\iota=a^nI_E$ for $0\le n\le N$,
+with $|a|<1$ and finite dimension $d=\dim E$. Then
+\[
+ \dim\mathcal K\ge(N+1)d.
+\]
+Indeed the Gram operator of the maps
+$\iota,U\iota,\ldots,U^N\iota$ is $T_N\otimes I_E$, where
+\[
+ (T_N)_{jk}=
+ \begin{cases}a^{k-j},&k\ge j,\\(a^*)^{j-k},&j>k.\end{cases}
+\]
+It is positive definite: a lower triangular Cholesky factor has
+$L_{j0}=(a^*)^j$ and
+$L_{jk}=(a^*)^{j-k}\sqrt{1-|a|^2}$ for $1\le k\le j$.
+Thus $\det T_N=(1-|a|^2)^N>0$, and the $(N+1)d$ images are
+linearly independent. The conveyor attains this bound before
+independent protected coordinates are counted.
+
+This is a bound for the stated \emph{fixed, uniform amplitude}
+power-dilation requirement, not every scalar score sequence.
+Dimensions must be counted over the same field and metric: three
+complex fit directions require 63 complex coordinates at $N=20$;
+they are not three real scalar slots. A matrix labelled
+$\mathcal M_{16}$ may be an internal operator on a larger spatial
+carrier, so this count is not a general impossibility result for
+the Companion. Native licensed embeddings still need evaluation.
+
+Time-dependent controllers can avoid this fixed-carrier bound.
+For example the unitary matrices
+\[
+ B_n=\begin{pmatrix}a^n&-\sqrt{1-q^n}\\
+                    \sqrt{1-q^n}&(a^*)^n\end{pmatrix}
+\]
+give stage-dependent steps $B_nB_{n-1}^\dagger$ and the prepared
+orbit $(a^n,\sqrt{1-q^n})^T$ with only two amplitude coordinates.
+This compresses a known coherent history through an explicitly
+stage-dependent control; it does not provide a fixed autonomous
+transport or store arbitrary independent incoming histories.
+The required native time-dependent coupling is a separate obligation.
+
+\subsection{A local causal port whose output cannot return}
+
+There is also a continuum realization in which the outgoing
+record is spatial rather than a growing symbolic list. Let
+$\xi(t)\in E$ be the visible amplitude, $u(t)$ its incoming
+port amplitude, and $y(t)$ its outgoing amplitude. For a declared
+rate $\lambda>0$ and real $\omega$, set
+\[
+ \dot\xi=-(\lambda/2+i\omega)\xi-\sqrt\lambda\,u,
+ \qquad y=u+\sqrt\lambda\,\xi.
+\]
+This is a model boundary law, not an extracted Sphaera equation.
+Differentiation proves its local balance exactly:
+\[
+ \frac{d}{dt}\|\xi\|^2+\|y\|^2-\|u\|^2=0.
+\]
+In particular the reduced damping is transfer to output, not loss
+of the combined norm. On a finite window $[0,T]$ the linear map
+\[
+ (\xi(0),u|_{[0,T]})\longmapsto(\xi(T),y|_{[0,T]})
+\]
+preserves the norm on $E\oplus L^2([0,T];E)$. It is onto:
+given $\xi(T)$ and $y$, solve backward
+$\dot\xi=(\lambda/2-i\omega)\xi-\sqrt\lambda y$ and recover
+$u=y-\sqrt\lambda\xi$. Bounded finite-window ODE solution operators
+provide the inverse. Thus the joint input/output map is unitary,
+even though the visible subsystem alone is damped.
+
+Embed the field in a one-way guide with velocity $0<v\le c$:
+\[
+ (\partial_t+v\partial_x)z=0\quad(x\ne0),\qquad
+ u=\sqrt v\,z(0^-,t),\quad y=\sqrt v\,z(0^+,t).
+\]
+The guide has local norm flux
+$\partial_t\|z\|^2+v\partial_x\|z\|^2=0$ away from the port.
+With empty incoming excitations and no initial guide field, the
+explicit output is
+\[
+ z(x,t)=\sqrt{\lambda/v}\,
+ e^{-(\lambda/2+i\omega)(t-x/v)}\xi_0
+ \quad(0<x<vt),
+\]
+and is zero outside its outgoing causal support. Consequently
+\[
+ \|\xi(t)\|^2=e^{-\lambda t}\|\xi_0\|^2,
+ \qquad \int_0^{vt}\!\|z(x,t)\|^2dx
+   =(1-e^{-\lambda t})\|\xi_0\|^2.
+\]
+The emitted record moves away; the right-moving equation has no
+left-moving reflection channel. This proves causal no-return for
+this boundary/guide model. A finite reflecting guide, dispersion
+or a different native operator can destroy that property.
+Temporal retardation by itself does not forbid later return.
+
+For a declared sampling interval $\tau$, the previous complex
+frame amplitude is reproduced by
+\[
+ \lambda\tau=-\log q\approx1.7299228255,\qquad
+ \omega\tau=-\arg a\approx1.9458894365
+ \quad\text{modulo }2\pi.
+\]
+These are matching conditions, not rates predicted by the
+frame offset alone. The script checks finite-window conservation
+and its inverse at 80 decimal digits using a nonzero complex
+incoming signal; both errors were below $5.3\times10^{-82}$.
+The outgoing pulse, transport equation and integrated history norm
+were also verified by symbolic differentiation and integration.
+
+This construction concerns amplitudes and their declared positive
+norm, not a derived four-dimensional stress tensor or a Maxwell
+photon. Zero incoming excitation amplitude is not the zero quantum
+vacuum state or the disappearance of quantum input fluctuations.
+Spectral stability, finite bandwidth and the microscopic origin
+of the boundary law have not been established. In particular a
+global state of finite Hamiltonian variance initially wholly in
+the visible space has zero first derivative of its survival
+probability; an exact exponential from $t=0$ is not automatically
+that regular closed-system survival law. A coarse-grained port
+description needs its own regime and error estimates.
+
+The related established framework is Gardiner and Collett,
+\href{https://journals.aps.org/pra/abstract/10.1103/PhysRevA.31.3761}{
+\emph{Input and output in damped quantum systems}}, which keeps
+bath inputs, outputs, causality and reversed dynamics explicit.
+That reference motivates the comparison; the balance and finite-window
+inverse above are proved here for the displayed amplitude equations.
+
+\subsection{Which native spectrum would have to produce this port}
+
+The native $\Psi_\perp(x)$ is a spacetime field, not necessarily
+one finite oscillator. Its spatial modes could supply a larger
+carrier, but an outgoing spectrum and its coupling weights must
+actually be calculated. After a justified positive time-generator
+reduction, let $H_X$ be self-adjoint and $V$ the licensed coupling.
+If its spectral measure has an absolutely continuous density on
+the relevant window, define the operator-valued density
+\[
+ \mathcal J_X(\nu)
+ =V\frac{dE_{H_X}(\nu)}{d\nu}V^\dagger\ge0,
+ \qquad
+ \Sigma^{\rm ret}(\Omega)
+ =\int\frac{\mathcal J_X(\nu)}{\Omega-\nu+i0}\,d\nu.
+\]
+For a continuous density, the imaginary part follows from
+$\operatorname{Im}(x+i\epsilon)^{-1}
+=-\epsilon/(x^2+\epsilon^2)$:
+\[
+ -2\operatorname{Im}\Sigma^{\rm ret}(\Omega)
+ =2\pi\mathcal J_X(\Omega).
+\]
+Thus the scalar port requires a density giving approximately
+$2\pi\mathcal J_X(\Omega)=\lambda I_E$ across its operating
+window, with the real principal-value shift included in $\omega$.
+The return kernel must be short or otherwise bounded relative to
+the actual update interval; a Markov replacement is not licensed
+by an operator name. A finite isolated spectrum gives poles rather
+than this smooth irreversible response. A spectral gap at the
+operating frequency gives no such continuum damping there.
+
+This narrows the native task to measurable operator data:
+the spectral density of the constrained intermediate field,
+its matrix elements through $\chi\mathcal T_{a\perp}$,
+the allowed outgoing boundary condition, and their map through
+the actual C5 witness extraction. Neither $w=\beta^2$ nor the
+frame phase evaluates $\mathcal J_X$.
+
+\subsection{Quantitative tolerance for an imperfect outgoing channel}
+
+For a discrete incoming amplitude $\eta_n$, the exact local
+scatterer gives $\xi_{n+1}=a\xi_n+b\eta_n$. If
+$\|\eta_n\|\le\epsilon\|\xi_n\|$, then
+\[
+ \|\xi_{n+1}\|\le
+ (\sqrt q+\sqrt{1-q}\,\epsilon)\|\xi_n\|.
+\]
+A sufficient worst-phase condition for squared-score lowering
+by at most $3/4$ is
+\[
+ \boxed{\displaystyle
+ \epsilon\le\frac{\sqrt{3/4}-\sqrt q}{\sqrt{1-q}}
+ \approx0.4905659271.}
+\]
+For the exact original $q=3/4$ model this worst-phase tolerance
+is zero. The stronger frame-model one-step bound has slack, but
+the tolerance is relative to the shrinking visible amplitude,
+not the initial charge.
+
+For example, consider the first isolated return of the oldest
+emission after $N$ steps, with amplitude reflection coefficient
+$r_{\rm refl}$. Before any earlier return,
+$\eta_N=r_{\rm refl}b\xi_0$ and $\xi_N=a^N\xi_0$. The
+above sufficient condition becomes
+\[
+ |r_{\rm refl}|\le
+ \frac{\sqrt{3/4}-\sqrt q}{1-q}\,q^{N/2}.
+\]
+At $N=20$ it is approximately $1.66003\times10^{-8}$.
+This is a single-return worst-phase amplitude bound; coherent
+multiple returns need their full summed-kernel estimate. It shows
+why a small absolute reflection can be large compared with an
+already tiny visible residual. For a fixed finite horizon, a
+propagation delay excluding return during that horizon is another
+solution; it does not prove permanent no-return.
+
+\subsection{Guard preservation and source-compatible registration}
+
+Let the permitted amplitude copies reduce an orthogonal licensed
+gate $Q$, let $J$ act evenly on them, and let scatterer and history
+transport intertwine these same selectors. Then their product has
+zero off-$Q$ debt and zero HC-odd leakage. Extending it by the
+identity on a specified protected C4 space gives
+$P_4U=UP_4=P_4$, so the protected vector and its norm are unchanged.
+These are exact operator statements about the declared decomposition.
+They become statements about r04 only after those projections are
+identified with the actual leakage/absorption/scope evaluations.
+Keeping a copied zero flag is not that identification.
+
+The active QAM/MML/MMA store-array layer supplies finite store states,
+fresh stored objects, links, lineage and explicit scrub operations
+through \texttt{def:qam-store-state},
+\texttt{def:mml-store-instructions} and
+\texttt{def:mma-store-transition}. A finite outgoing record can be
+registered at fresh local addresses with its parent, emitted amplitude,
+selector and step. This uses the existing namespace rather than
+performing a global QAM tag migration. The actual guards and links
+must pass the store/array scrub before a transition is called
+admissible; the source explicitly forbids manufacturing certificates
+by command syntax. Coding a history is not proof of a physical
+guide, nor of native closure-class equality.
+
+Finally the native score must select the visible component rather
+than counting all stored history. If it counts the full preserved
+norm, its ratio is one and none of these mechanisms lowers C5.
+The unprovided residual dictionary, native guard dependencies and
+spectral density therefore remain indispensable.
+
+\paragraph{Verification and status.}
+Fifteen executable tests now pass. They cover the finite twenty-step
+conveyor, explicit first recirculation, protected/forbidden test
+registers, the continuum-port balance and inverse, and the earlier
+fit/frame diagnostics. Exact symbolic checks separately verified
+the flux identity, outgoing advection, history integral and an
+instance of the power-dilation Gram determinant; the general
+capacity argument is given above.
+
+The no-return mechanism is now proved for an explicit causal
+norm-conserving port and for a finite autonomous unitary horizon.
+It is not proved to be the source's physical intermediate field.
+The next native obligation is no longer an unspecified ``fresh
+history'' assumption: compute a licensed outgoing spectral density
+and return bound, then evaluate the actual C5 extraction and guards.
+No gravitational, wormhole, all-readout or exact finite-zero claim
+is promoted by this construction.
+
+\section{Native outgoing audit: shared-channel rank and slow modes}
+\label{sec:native-outgoing-rank-audit}
+
+\paragraph{Source boundary and scope.}
+The active source's \texttt{prop:triadic-two-probe} supplies
+$\Psi_\perp$, $\Omega_\perp$ and the vertices
+$\chi\mathcal T_{a\perp}$, but not their evaluated dispersion,
+polarizations or outgoing boundary condition. The core/Hawking
+block \texttt{thm:core} describes boundary discharge structurally;
+it does not evaluate a retarded Green function, a reflection
+coefficient or the C5 extraction. Its designation as a theorem
+does not supply those missing calculations. In particular, a
+photon-frame label does not by itself select a one-way massless
+propagation operator.
+
+Assume, only for this audit, that a positive-current Hamiltonian
+reduction and reciprocal vertices have been licensed. For two
+scalar probe amplitudes and one open bath polarization at frequency
+$\nu$, let $v(\nu)=(v_1(\nu),v_2(\nu))^T$ be the evaluated
+coupling vector and $\rho(\nu)\geq0$ its spectral density. Then
+\[
+ \mathcal J_X(\nu)=\rho(\nu)v(\nu)v(\nu)^\dagger,
+ \qquad \Gamma(\nu)=2\pi\mathcal J_X(\nu),
+ \qquad \operatorname{rank}\Gamma(\nu)\leq1.
+\]
+This is an exact rank calculation, not an assertion that the native
+field has only one polarization. Orthogonality of the third
+component does not determine its spectral multiplicity. Multiple
+open polarizations contribute a sum of such positive matrices.
+
+\subsection{An exact dark combination, with an important qualification}
+
+For equal vertices $v_1=v_2$, set
+\[
+ b=(\Psi_1+\Psi_2)/\sqrt2,\qquad
+ d=(\Psi_1-\Psi_2)/\sqrt2.
+\]
+The channel couples to $b$ and annihilates $d$. If, in addition,
+the probe Hamiltonian preserves these combinations and the kernel
+has this same coupling direction throughout the relevant frequency
+band, $d$ is an invariant dark mode. A single-frequency rank defect
+alone is insufficient: Hamiltonian mixing or rotating coupling
+directions can eventually expose an instantaneous dark vector to
+the bath.
+
+In the constant Markov reduction with bright score-decay rate
+$\lambda>0$, no incoming field and no bright--dark mixing,
+\[
+ \|r(t)\|^2=e^{-\lambda t}|b_0|^2+|d_0|^2.
+\]
+Thus uniform contraction on the whole two-probe space is impossible,
+even with perfect outward propagation. On a particular state, with
+$p=|b_0|^2/\|r_0\|^2$ and $q=e^{-\lambda\tau}$,
+\[
+ \frac{\|r(\tau)\|^2}{\|r_0\|^2}=1-(1-q)p\leq\frac34
+ \quad\Longleftrightarrow\quad
+ p\geq\frac{1}{4(1-q)}.
+\]
+For the earlier conditional frame realization $q\simeq0.17729809$,
+the required bright fraction is about $0.30388$, not just $1/4$.
+As $t\to\infty$, the remaining score fraction is $1-p$. These are
+amplitude-score statements; a third C5 block has not been identified
+with $d$, and three residual norms are not three scalar probe modes.
+
+\subsection{Relative frequency detuning can produce slow decay}
+
+After subtracting a common frequency, two different probe frequencies
+give, in the bright/dark basis,
+\[
+ H=\begin{pmatrix}0&\delta\\\delta&0\end{pmatrix},\qquad
+ \delta=(\epsilon_1-\epsilon_2)/2,\qquad
+ A=-iH-\tfrac12\Gamma
+   =\begin{pmatrix}-\lambda/2&-i\delta\\-i\delta&0\end{pmatrix}.
+\]
+Here $\delta$ is real; a common frequency only rotates the entire
+state. The exact amplitude eigenvalues are
+\[
+ s_\pm=-\lambda/4\pm\sqrt{\lambda^2/16-\delta^2}.
+\]
+When $0<|\delta|\ll\lambda$, the slow eigenmode has
+\[
+ s_+=-2\delta^2/\lambda+O(\delta^4/\lambda^3),
+ \qquad \text{asymptotic score-decay rate}
+       =4\delta^2/\lambda+O(\delta^4/\lambda^3).
+\]
+An initially dark state is not exactly this eigenmode, but its
+late-time decay is controlled by it. Small detuning therefore
+removes exact darkness while leaving a parametrically slow tail.
+Passive rephasing does not create this effect: it conjugates both
+Hamiltonian and vertices and leaves the decay spectrum unchanged.
+A physical accumulated relative phase must arise from an actual
+frequency/coupling change, not just a change of notation.
+
+\paragraph{HC compatibility is a separate test.}
+If the fixed native involution really exchanges these same two
+probes, $J=\operatorname{diag}(1,-1)$ in the bright/dark basis and
+$C=(I+J)/2$ excludes $d$. Then
+\[
+ [H,J]=\begin{pmatrix}0&-2\delta\\2\delta&0\end{pmatrix},
+ \qquad \|[H,J]\|_F=2\sqrt2|\delta|.
+\]
+The detuned model is not HC-preserving on the fixed even sector.
+It cannot be used to justify an admissible native update by simply
+claiming independent frame shifts. Either the readout really uses
+only the bright even sector with a dynamics preserving it, or the
+source must license a different embedding, an internal even-sector
+slow mode, or a consistently transported selector. The active
+source does not identify ART/QFT probes with global matter/tachyon
+frames, so that exchange itself remains conditional.
+
+\subsection{A finite-time test stronger than instantaneous rank}
+
+For a constant finite-dimensional outgoing reduction
+$A=-iH-\Gamma/2$ with $H=H^\dagger$ and $\Gamma\geq0$, define
+\[
+ W_\tau=\int_0^\tau e^{A^\dagger s}\Gamma e^{As}\,ds.
+\]
+Differentiating $e^{A^\dagger s}e^{As}$ gives exactly
+\[
+ e^{A^\dagger\tau}e^{A\tau}=I-W_\tau.
+\]
+For an isometric allowed-state inclusion $E$, uniform squared-norm
+contraction by $3/4$ is therefore equivalent to
+\[
+ E^\dagger W_\tau E\geq\tfrac14 I.
+\]
+Moreover $W_\tau$ has a zero direction precisely when a nonzero
+allowed $r$ satisfies $\Gamma^{1/2}e^{As}r=0$ for every
+$s\in[0,\tau]$. This identifies the invariant dark subspace,
+not just an instantaneous rank deficiency. A positive minimum
+eigenvalue can still be too small for the specified threshold.
+For a different norm-whitened residual extraction $L_5$, the actual
+inequality is instead
+\[
+ E^\dagger e^{A^\dagger\tau}L_5^\dagger L_5 e^{A\tau}E
+ \leq\tfrac34 E^\dagger L_5^\dagger L_5 E.
+\]
+Nonlinear residuals require their evaluated update, not substitution
+of this linear extraction without proof. Memory kernels require a
+corresponding enlarged evolution or a controlled approximation.
+
+\subsection{One explicit finite-band density, not a native assignment}
+
+To exhibit what a spectral calculation would actually require,
+consider the envelope operator $H_X=-iv\partial_x$ on
+$L^2(\mathbb R)$, $v>0$, and coupling profile
+$f=L^{-1/2}\mathbf1_{[0,L]}$ with strength $g$.
+Using the unitary Fourier convention, direct transformation gives
+\[
+ \mathcal J_X(\nu)=\frac{|g|^2L}{2\pi v}
+   \operatorname{sinc}^2\!\left(\frac{\nu L}{2v}\right),
+ \qquad \operatorname{sinc}(x)=\sin(x)/x,
+\]
+and translation overlap gives the exact memory kernel
+\[
+ K(t)=|g|^2\langle f,e^{-iH_Xt}f\rangle
+     =|g|^2(1-v|t|/L)_+.
+\]
+At the envelope resonance $\nu=0$, $2\pi\mathcal J_X(0)
+=|g|^2L/v=\lambda$, while
+$\int_0^\infty K(t)dt=\lambda/2$. This reproduces the Markov
+amplitude coefficient only when replacing the finite-memory
+convolution by its area is justified; it is not an exact exponential
+law from $t=0$. With empty bath the exact visible derivative at
+$t=0$ is zero. The bath translation is one-way, but a finite spatial
+coupling region still has a finite memory time $L/v$.
+
+This is an envelope/collective-mode example: $H_X$ has spectrum
+$\mathbb R$, not a bounded-below physical energy spectrum, and a
+single amplitude coupled over a finite region is not a proof of a
+local relativistic field theory. Neither $g$, $L$, the polarization
+rank nor this dispersion has been extracted from $\Omega_\perp$.
+A flat free test field also does not automatically solve the
+source's connection equation with nonzero total current.
+
+\paragraph{Verification and native conclusion.}
+The executable check now independently integrates $W_\tau$ and
+verifies the finite-time flux identity, exact dark-state preservation,
+slow detuning-dependent decay and the nonzero fixed-$J$ commutator.
+All eighteen tests pass. The source supplies a candidate channel
+architecture, not the numerical spectral and readout dictionary.
+The concrete native next step is to evaluate its open polarization
+matrix and effective Hamiltonian, determine which dark/slow modes
+the C5 readout sees, and test the finite-time inequality together
+with the actual Q/HC/C4/C6 guards. Slow decay is now explained by a
+specific conditional mechanism, not identified as a native fact.
+
+\section{An HC-even slow supply mode already allowed by the triadic block}
+\label{sec:hc-even-slow-supply}
+
+The preceding odd dark mode need not be imported into the HC-even
+sector. Under the explicit probe-exchange embedding used in
+Section~\ref{sec:native-normalized-readout}, the source's existing
+triad has an even probe $a=(\Psi_1+\Psi_2)/\sqrt2$, an odd probe
+$d=(\Psi_1-\Psi_2)/\sqrt2$, and an even intermediate component
+$b=\Psi_\perp$. Hence
+\[
+ J_s=\operatorname{diag}(1,-1,1),\qquad
+ C_s=\operatorname{diag}(1,0,1)
+\]
+in the $(a,d,b)$ basis. HC-even does not mean one-dimensional.
+This embedding is a conditional realization of the source, not
+an established identification of global frame labels.
+
+\subsection{Source-shaped conservative coupling inside the even sector}
+
+With the source symmetry conditions
+$\Omega_1=\Omega_2$, $G_{12}=G_{21}$, $V_1=V_2$ and $U_1=U_2$,
+the even resonance block is already
+\[
+ \Omega_+=\begin{pmatrix}
+  \Omega_1+g_Y\mathcal T_{12}&\sqrt2\chi\mathcal T_{1\perp}\\
+  \sqrt2\chi\mathcal T_{\perp1}&\Omega_\perp
+ \end{pmatrix}.
+\]
+Assume a common positive-current time reduction turns this into
+the Hermitian scalar-mode block
+\[
+ H_+=\begin{pmatrix}\epsilon_a&k\\k^*&\epsilon_b\end{pmatrix}.
+\]
+Only in a reduction with the requisite common kinetic normalization
+can $k$ be read directly as $\sqrt2\chi\mathcal T_{1\perp}$.
+The general operator-valued vertices need not be scalar or mutually
+commuting. For this scalar block a fixed internal basis can make
+$k\geq0$ real. Subtract the common frequency $\epsilon_a$ and put
+$\Delta=\epsilon_b-\epsilon_a$.
+
+An outgoing Markov load on the intermediate component gives
+\[
+ \frac{d}{dt}\begin{pmatrix}a\\b\end{pmatrix}
+ =A_+\begin{pmatrix}a\\b\end{pmatrix},\qquad
+ A_+=\begin{pmatrix}0&-ik\\-ik&-\gamma/2-i\Delta\end{pmatrix},
+ \quad \gamma>0.
+\]
+The load is the effective result of eliminating outgoing spatial
+modes, not an imaginary mass inserted into the native conservative
+resonance. Its spectral density and no-return conditions still
+need the preceding native audit. It is not a new independent
+physical component added by fiat to the finite triad.
+
+Extended by an arbitrary uncoupled odd probe, both the Hermitian
+coupling and the damping matrix commute with $J_s$ and $C_s$.
+Thus $d(0)=0$ implies $d(t)=0$ exactly, even for $k\ne0$ and
+$\Delta\ne0$. The bath can also be assigned the same even parity
+in a conservative dilation. For the full field this requires
+kinetic, connection and domain intertwining as well; a potential
+commutator alone does not suffice. All participating modes must
+lie inside a licensed reducing $Q$ sector. This calculation does
+not evaluate the native C4/C6 guard functions.
+
+\subsection{Exact poles and the slow-detuning law}
+
+Writing $D=\gamma/2+i\Delta$, the exact amplitude poles obey
+\[
+ s^2+Ds+k^2=0,\qquad
+ s_\pm=-D/2\pm\sqrt{D^2/4-k^2}.
+\]
+For $k\ll|D|$, the pole continuous from $s=0$ at $k=0$ is
+\[
+ s_{\rm slow}=-\frac{k^2}{D}+O(k^4/|D|^3),\qquad
+ \boxed{\displaystyle
+ -2\operatorname{Re}s_{\rm slow}
+  =\frac{\gamma k^2}{\Delta^2+\gamma^2/4}
+      +O(k^4/|D|^3).}
+\]
+The boxed quantity is the late-time squared-amplitude decay rate
+of the slow eigenmode, not an exact finite-time score law for an
+arbitrary initial state. At fixed $k,\gamma$, frequency mismatch
+suppresses the drain through the intermediate component. Large
+$\gamma$ can also suppress transfer at resonance in the regime
+$k\ll\gamma$, where the rate is $4k^2/\gamma$.
+This is distinct from the previous forbidden even--odd detuning:
+both components here are even under the fixed selector.
+
+For prepared $a(0)=1$, $b(0)=0$, the exact transfer matrix is
+\[
+ T(t)=e^{-Dt/2}\left[
+ \cosh(\zeta t)I+
+ \frac{\sinh(\zeta t)}{\zeta}(A_++D I/2)\right],
+ \qquad \zeta=\sqrt{D^2/4-k^2},
+\]
+with the continuous quotient $t$ at $\zeta=0$. The illustrative
+model units $\gamma=1$, $k=0.1$, $t=20$ give
+\[
+ |a(20)|^2\simeq
+ \begin{cases}
+ 0.4743633505,&\Delta=0,\\
+ 0.9503816423,&\Delta=2.
+ \end{cases}
+\]
+The exact slow eigenmode score-decay rates are respectively
+$0.04174243050$ and $0.002337735282$. These numbers are calculated
+from declared model parameters, not measured or inferred native
+frame values. A frequency mismatch corresponds to an accumulated
+relative phase, but it is a probe--intermediate mismatch. Calling
+it a matter--tachyon mismatch requires the missing branch embedding.
+
+\paragraph{The MM degeneracy constraint.}
+Under the earlier strong premise $\mathcal M C=\lambda_0 C$, if
+both retained modes lie in the same licensed even intersection,
+the compressed MM contribution is $\lambda_0 I$. It cannot alone
+generate their frequency difference or off-diagonal mixing.
+A common scalar $m_0 I$ likewise cancels from $\Delta$ in the
+common time normalization. The already displayed triadic and
+connection contributions must supply any nontrivial difference
+or coupling, or the stronger degeneracy premise must not apply
+to that realization. Arbitrary independent frame phases are not
+a substitute for evaluating these source terms.
+
+\subsection{Conservation does not imply visible-only contraction}
+
+The reduced block obeys the exact flux identity
+\[
+ \frac{d}{dt}(|a|^2+|b|^2)=-\gamma|b|^2.
+\]
+Adding the outgoing history integral restores unit total norm
+for the prepared unit state. But
+\[
+ \frac{d}{dt}|a|^2=2k\operatorname{Im}(a^*b)
+\]
+has no fixed sign. With $\gamma=\Delta=0$, the prepared solution
+is $a=\cos(kt)$, $b=-i\sin(kt)$: its visible score vanishes at
+$kt=\pi/2$ and returns to one at $kt=\pi$. HC remains preserved
+throughout. Outgoing propagation must control this internal
+feeding memory as well as distant reflected waves.
+
+There is a stronger quantifier obstruction. If the readout were
+only $L_5(a,b)=a$ and arbitrary hidden $b$ were admissible, then
+\[
+ |L_5 T(\tau)r|^2\leq\tfrac34|L_5 r|^2
+ \quad\text{for all }r
+\]
+would require $T_{ab}(\tau)=0$, by testing $r=(0,b)$.
+For generic $k\ne0$ this entry is nonzero. In the example
+$\Delta=2$, $|T_{ab}(20)|^2\simeq0.002227115239$:
+an initially invisible state produces a positive visible score
+and violates any such uniform multiplicative bound. Empty hidden
+initial data licenses the narrower condition
+$|T_{aa}(\tau)|^2\leq3/4$ for that preparation; it is not
+automatically renewed at each step because $b$ is subsequently
+populated. A history/preparation constraint, evaluated incoming
+bound, or enlarged native residual is needed. Actual C5 is not
+yet identified with this scalar extraction.
+
+\paragraph{Verification and result.}
+Twenty-one executable tests now pass. The new tests verify zero
+HC commutators and odd leakage, exact two-mode return without
+the load, detuning-suppressed visible decay, and nonzero hidden
+supply. Independent integration checks retained plus emitted
+norm to about $1.6\times10^{-36}$ in the declared example.
+The existing source architecture permits an HC-even slow-mode
+mechanism without the earlier even--odd violation. It does not
+yet identify that mechanism with the failed third C5 bound.
+Its decisive native obligations are evaluated $k,\Delta,\gamma$,
+an admissible initial/history domain, and the actual readout and
+guard inequalities; a scalar spectral MM term cannot provide
+the missing detuning by itself.
+
+\section{Repeated visible lowering without resetting the intermediate mode}
+\label{sec:invariant-supply-cone}
+
+The hidden-supply obstruction can be resolved on a specified
+invariant preparation domain, rather than by changing C5's score
+or deleting hidden amplitude at each step. This section proves
+that resolution for the preceding constant outgoing reduction.
+It does not assert that the native witness domain or physical
+sampling clock has already been identified with it.
+
+\subsection{The invariant graph and exact transient coordinates}
+
+Let $k>0$, $\gamma>0$, $D=\gamma/2+i\Delta$, and suppose the
+two poles of $A_+$ are distinct. Label them $s_s,s_f$ with
+$\operatorname{Re}s_s\geq\operatorname{Re}s_f$ and choose the
+slow pole continuous from zero in the weak-coupling regime.
+Both real parts are strictly negative: an undamped eigenvector
+would have $b=0$ by the flux identity, and the second field equation
+would then force $a=0$. This argument uses a positive current metric.
+
+Set
+\[
+ z=\frac{i s_s}{k},\qquad \eta=b-za.
+\]
+The characteristic equation implies
+$-ik-Dz=s_sz$. Substitution into the field equations therefore
+gives exactly
+\[
+ \dot a=s_s a-ik\eta,\qquad
+ \dot\eta=s_f\eta.
+\]
+The graph $b=za$ is invariant, lies entirely in the even sector,
+and has $a(t)=e^{s_st}a(0)$. Its hidden amplitude is retained and
+decays together with the visible amplitude; it is not reset.
+For a sampling interval $\tau>0$, put
+\[
+ u=e^{s_s\tau},\qquad v=e^{s_f\tau},\qquad
+ F=-ik\frac{u-v}{s_s-s_f}.
+\]
+The full sampled dynamics, including preparation error, is
+\[
+ a_{n+1}=u a_n+F\eta_n,\qquad
+ \eta_{n+1}=v\eta_n.
+\]
+This is an exact change of coordinates in the model, not a
+Markov approximation additional to the already assumed outgoing
+load. At coincident poles a different Jordan-limit estimate is
+needed; the executable certificate rejects that special case.
+
+\subsection{A robust invariant cone and a repeated bound}
+
+For $\varepsilon>0$ define the nonzero preparation cone
+\[
+ \mathcal K_\varepsilon=
+ \{(a,b):a\ne0,\ |b-za|\leq\varepsilon|a|\}.
+\]
+It excludes arbitrary initially invisible hidden states, which
+caused the earlier uniform-bound obstruction. On this cone,
+\[
+ \ell |a_n|\leq|a_{n+1}|\leq m|a_n|,
+ \qquad
+ \ell=|u|-|F|\varepsilon,\quad
+ m=|u|+|F|\varepsilon.
+\]
+If
+\[
+ \boxed{\quad \ell>0,\qquad |v|\leq\ell,
+              \qquad m\leq\sqrt{3/4},\quad}
+\]
+then the cone is invariant and every sampled visible score obeys
+\[
+ 0<\ell^2|a_n|^2\leq|a_{n+1}|^2
+       \leq\tfrac34|a_n|^2.
+\]
+Indeed $|\eta_{n+1}|\leq|v|\varepsilon|a_n|
+\leq\varepsilon|a_{n+1}|$. Induction proves the inequality for
+every finite step with the same update, without a hidden reset.
+The lower bound excludes exact visible zero at finite steps.
+It does not license native limit closure or removal of C4/C6.
+
+For distinct poles with
+$\operatorname{Re}s_f<\operatorname{Re}s_s$, the ratio
+$|v|/|u|$ tends to zero as $\tau$ grows, and
+$|F|/|u|$ tends to $k/|s_s-s_f|$.
+Thus choosing $\varepsilon<|s_s-s_f|/k$ and then a sufficiently
+large $\tau$ makes the boxed conditions possible. Degenerate
+real parts do not automatically yield this cone argument.
+The required sampling interval may be long; a freely chosen
+interval is not a prediction of a native QAM step duration.
+
+\paragraph{Explicit example, including empty initial intermediate field.}
+With the previous declared model values
+$\gamma=1$, $k=0.1$, $\Delta=2$, choose
+\[
+ \tau=\frac{\log(1/2)}{2\operatorname{Re}s_s}
+        \simeq296.50370843,\qquad \varepsilon=1.
+\]
+The exact graph coefficient is
+$z\simeq-0.04697433276-0.01168867641i$. The cone conditions give
+\[
+ 0.4528600456\,|a_n|^2
+ \leq |a_{n+1}|^2
+ \leq0.5494734940\,|a_n|^2 <\tfrac34|a_n|^2.
+\]
+Since $|z|<1$, $b_0=0$ belongs to this cone as well:
+$\eta_0=-za_0$. Subsequent $b_n$ is evolved, not emptied. The
+test follows twenty consecutive updates from this preparation
+and from cone-boundary phases; the largest empty-preparation
+step ratio is $1/2$. The algebraic proof covers all cone phases
+and all finite steps, not just the tested samples. This longer
+sampling interval resolves the example's failure at $t=20$;
+it does not show that the same threshold held at that earlier
+time or at every continuous-time instant.
+
+\subsection{Explicit transfer and residual-dictionary error budgets}
+
+Let an evaluated one-step deviation contribute $\delta a,\delta b$
+with
+\[
+ |\delta a|,|\delta b|\leq d S|a_n|,\qquad
+ S=1+|z|+\varepsilon.
+\]
+For example, an entrywise bound $d$ on a linear transfer-matrix
+error gives this inequality since $|b_n|\leq(|z|+\varepsilon)|a_n|$.
+Independent incoming forcing must be included in the same budget;
+it is not controlled by a transfer-matrix comparison alone.
+The perturbed visible upper/lower factors become
+$m+dS$ and $\ell-dS$, while
+\[
+ |\eta_{n+1}|\leq
+ \bigl(|v|\varepsilon+d(1+|z|)S\bigr)|a_n|.
+\]
+Hence both cone invariance and the $3/4$ score bound survive if
+\[
+ d\leq\min\left\{
+  \frac{\sqrt{3/4}-m}{S},\quad
+  \frac{\varepsilon(\ell-|v|)}{S^2}
+ \right\}.
+\]
+In the example this separate entrywise budget is approximately
+$0.06090617040$. An arbitrary matrix error is not thereby proved
+conservative or Q/HC/guard-preserving: those are independent
+requirements on the evaluated dynamics. Native finite-band,
+nonlinear, gravitational and return effects have not been shown
+to lie within this budget. It specifies what they must satisfy.
+
+The frozen r04 source defines its score as the sum of the squared
+norms of three fixed residual blocks. It does not authorize a new
+Lyapunov metric or counting the intermediate/history norm instead.
+To transfer the present visible bound, suppose an actual witness
+trajectory has been evaluated and satisfies, in that same fixed
+normalized residual space,
+\[
+ R_5(W_n)=a_n r_*+e_n,\qquad r_*\ne0,\qquad
+ \|e_n\|\leq\delta_R\,|a_n|\|r_*\|,\quad 0\leq\delta_R<1.
+\]
+This is a dictionary test, not a definition of the native residuals.
+If the unperturbed visible upper factor is $m$, then
+\[
+ \frac{\Phi_5(W_{n+1})}{\Phi_5(W_n)}
+ \leq m^2\left(\frac{1+\delta_R}{1-\delta_R}\right)^2
+ \leq\frac34
+\]
+provided
+\[
+ \delta_R\leq
+ \frac{\sqrt{3/4}-m}{\sqrt{3/4}+m}.
+\]
+For the example this separate dictionary tolerance is about
+$0.07762170799$. Transfer and dictionary budgets cannot each be
+spent to their maximum simultaneously: with both present use
+$m+dS$ instead of $m$ in the last condition. These tolerances
+neither manufacture residual values nor prove the actual guards
+$\Lambda_5^{\rm new}=A_4^{\rm abs}=U_6^{\rm all}=0$.
+
+\paragraph{Verification and remaining identification.}
+Twenty-seven executable tests pass. The added checks independently
+compare the graph with a matrix exponential, test exact upper/lower
+extremizing phases and twenty-step cone evolution, verify empty
+hidden preparation without resets, reject excessive tolerance and
+the coincident-pole case, and check perturbed transfer matrices
+within the stated separate error budget. The helper accepts
+\texttt{--cone-data} with declared load, coupling, detuning,
+eigenmode score and cone tolerance; it never marks a native
+identification as certified on the basis of these numbers alone.
+
+The repeated-lowering obstruction is now solved for the specified
+outgoing model and preparation domain, with an explicit robustness
+margin and unchanged visible-score meaning. For the native paper,
+the unresolved step is to produce a guard-admissible witness map,
+evaluate its fixed three-block dictionary and physical time scale,
+and bound its actual dynamics by this certificate. Unevaluated
+native residual symbols cannot establish that step. No C4
+absorption, C6 unblocking, exact finite zero or physical wormhole
+claim is implied.
+
 \paragraph{Transport reference.}
 Andre Massing, NTNU, \emph{Weak formulation and well-posedness of the
 advection-reaction-diffusion problem},
