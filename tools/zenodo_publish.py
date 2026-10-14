@@ -112,28 +112,39 @@ def request_json(
         raise ZenodoError(f"Network error calling {url}: {exc}") from exc
 
 
-def put_file(bucket_url: str, token: str, path: Path) -> Dict[str, Any]:
+def put_file(bucket_url: str, token: str, path: Path, attempts: int = 3) -> Dict[str, Any]:
+    """Stream one file into the deposition bucket.
+
+    Zenodo's bucket API expects application/octet-stream with an explicit
+    Content-Length; the file is streamed rather than read into memory, and a
+    dropped connection is retried, since a PUT to the same key replaces it.
+    """
     filename = path.name
     url = bucket_url.rstrip("/") + "/" + urllib.parse.quote(filename)
-    mime = mimetypes.guess_type(filename)[0] or "application/octet-stream"
+    size = path.stat().st_size
     headers = {
         "Authorization": f"Bearer {token}",
-        "Content-Type": mime,
+        "Content-Type": "application/octet-stream",
+        "Content-Length": str(size),
     }
-    with path.open("rb") as f:
-        data = f.read()
-    req = urllib.request.Request(url, data=data, headers=headers, method="PUT")
-    try:
-        with urllib.request.urlopen(req, timeout=600) as resp:
-            body = resp.read().decode("utf-8")
-            if resp.status not in (200, 201):
-                raise ZenodoError(f"Unexpected status {resp.status} uploading {filename}: {body[:500]}")
-            return json.loads(body) if body else {}
-    except urllib.error.HTTPError as exc:
-        body = exc.read().decode("utf-8", errors="replace")
-        raise ZenodoError(f"HTTP {exc.code} uploading {filename}: {body[:1000]}") from exc
-    except (urllib.error.URLError, TimeoutError, ConnectionError) as exc:
-        raise ZenodoError(f"Network error uploading {filename}: {exc}") from exc
+    last: Optional[Exception] = None
+    for attempt in range(1, attempts + 1):
+        try:
+            with path.open("rb") as f:
+                req = urllib.request.Request(url, data=f, headers=headers, method="PUT")
+                with urllib.request.urlopen(req, timeout=900) as resp:
+                    body = resp.read().decode("utf-8")
+                    if resp.status not in (200, 201):
+                        raise ZenodoError(f"Unexpected status {resp.status} uploading {filename}: {body[:500]}")
+                    return json.loads(body) if body else {}
+        except urllib.error.HTTPError as exc:
+            body = exc.read().decode("utf-8", errors="replace")
+            raise ZenodoError(f"HTTP {exc.code} uploading {filename}: {body[:1000]}") from exc
+        except (urllib.error.URLError, TimeoutError, ConnectionError) as exc:
+            last = exc
+            print(f"Upload attempt {attempt}/{attempts} for {filename} failed: {exc}")
+            time.sleep(5 * attempt)
+    raise ZenodoError(f"Network error uploading {filename} after {attempts} attempts: {last}")
 
 
 def note(message: str) -> None:
@@ -285,7 +296,7 @@ def main() -> int:
         removed = remove_draft_files(api_base, token, deposition_id)
         note(f"Removed {len(removed)} inherited file(s): {', '.join(removed) or '-'}")
 
-    for path in files:
+    for path in sorted(files, key=lambda p: p.stat().st_size):
         print(f"Uploading {path.name} ...")
         put_file(bucket_url, token, path)
         note(f"Uploaded {path.name} ({path.stat().st_size} bytes)")
