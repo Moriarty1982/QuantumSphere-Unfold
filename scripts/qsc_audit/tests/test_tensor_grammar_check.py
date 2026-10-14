@@ -195,6 +195,25 @@ class TensorGrammarTests(unittest.TestCase):
         with self.assertRaises(audit.InputError):
             self.report()
 
+    def test_standalone_catalog_without_source_checkout(self):
+        with patch.object(audit, "ROOT", audit.ROOT / "build" / "absent-source-checkout"):
+            report = self.report()
+            self.assertEqual(report["source_binding"]["mode"], "bundled_rule_catalog")
+            self.assertFalse(report["source_binding"]["source_text_available"])
+            self.assertEqual(len(report["source_binding"]["catalog_hash"]), 128)
+            self.assertEqual(report["counts"]["accepted"], 7)
+
+    def test_partial_source_checkout_cannot_use_catalog_silently(self):
+        with patch.object(Path, "is_file", side_effect=[True, False, False]):
+            with self.assertRaises(audit.InputError):
+                audit.source_fingerprints()
+
+    def test_catalog_must_cover_every_required_rule_group(self):
+        with patch.object(Path, "is_file", return_value=False), patch.object(audit, "load_json", return_value={
+            "schema": "qsc-rule-catalog/1", "publications": [], "rules": {}}):
+            with self.assertRaises(audit.InputError):
+                audit.source_fingerprints()
+
 
 if __name__ == "__main__":
     unittest.main()

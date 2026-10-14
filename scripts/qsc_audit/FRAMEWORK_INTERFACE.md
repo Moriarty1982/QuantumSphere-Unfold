@@ -105,4 +105,10 @@ Die Felder `closure_proved` und `mathematical_relations_proved` bleiben immer `f
 
 Die Schnittstelle liest und prüft Daten. Sie verändert weder TeX-Quellen noch gespeicherte mathematische Payloads. Sie führt keine Shell-Kommandos, freien Ausdrücke, LLM-Aufrufe oder numerischen Operatoren aus. Unbekannte Befehle werden zurückgewiesen.
 
+## Eigenständiges öffentliches Paket
+
+Die Schnittstelle kann ohne den privaten Companion-Checkout laufen. Dann nutzt sie den mitgelieferten `rule_catalog.json`: knappe Zusammenfassungen der unterstützten Regeln mit Links zu den öffentlichen Zenodo-Veröffentlichungen. Private TeX-Dateien und Forschungshistorie gehören nicht zum Paket.
+
+Das Protokoll weist diesen Modus als `source_binding.mode = "bundled_rule_catalog"` und `source_text_available = false` aus. Die Fingerabdrücke binden den Regelkatalog, nicht den Inhalt nicht mitgelieferter Originalquellen. In einem vollständigen Companion-Checkout werden die vorhandenen Quellen verwendet; ein nur teilweise vorhandener Quellensatz wird zurückgewiesen.
+
 Exitcodes: `0` für `continue` bzw. ein exakt reproduziertes Protokoll; `1` für `guard`, `reject` oder einen abweichenden Bericht; `2` für ungültige Kontextdaten oder Dateifehler.

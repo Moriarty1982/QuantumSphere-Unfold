@@ -14,6 +14,8 @@ The rules come from these existing Companion blocks:
 
 The report records SHA-512 fingerprints of these files and of the checker. No QEC source was copied. The useful engineering patterns adopted are reproducible representation, a chained audit record and recomputation of saved reports.
 
+In the standalone package, original source files are absent. The checker instead fingerprints the bundled `rule_catalog.json` and its operational rule summaries, linked to the public Zenodo publications. Reports explicitly identify `source_binding.mode = "bundled_rule_catalog"` and `source_text_available = false`; these fingerprints do not authenticate unavailable original source text. A partially present source checkout fails instead of silently falling back. In a complete Companion checkout, `repository_source_files` is used.
+
 ## Inputs
 
 The versioned JSON schema is `qam-role-audit/2`. Start from `examples/tensor_roles_valid.json`.

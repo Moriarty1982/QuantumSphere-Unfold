@@ -215,6 +215,7 @@ class FrameworkInterface:
         for name, guard in guard_records.items():
             if guard["status"] is not True:
                 obligations.append(f"Framework guard {'failed' if guard['status'] is False else 'unresolved'}: {name}")
+        source_hashes, source_binding = tensor.source_fingerprints((*tensor.RULE_SOURCES, tensor.PREDICATE_SOURCE))
         body = {"schema": VERSION, "hash_algorithm": tensor.HASH_ALGORITHM, "scope": context["scope"],
                 "context_hash": self.context_hash, "request_hash": tensor.digest(request),
                 "mma_status": "reject" if errors else "guard" if obligations else "continue",
@@ -223,9 +224,7 @@ class FrameworkInterface:
                 "mathematical_relations_proved": False,
                 "implementation_hash": tensor.digest_bytes(Path(__file__).read_bytes()),
                 "tensor_adapter_hash": tensor.digest_bytes(Path(tensor.__file__).read_bytes()),
-                "source_hashes": {path: tensor.digest_bytes((tensor.ROOT / path).read_bytes())
-                                  for path in (*tensor.RULE_SOURCES,
-                                      "sources/parts/01_qam_mml_mma_pre_v4_infrastructure/04_qam_predicates_transport_shell.tex")}}
+                "source_hashes": source_hashes, "source_binding": source_binding}
         return dict(body, receipt_hash=tensor.digest(body))
 
     def verify(self, request: dict, receipt: dict) -> bool:

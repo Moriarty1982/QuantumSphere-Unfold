@@ -1,0 +1,43 @@
+{
+  "schema": "qsc-rule-catalog/1",
+  "publications": [
+    "https://doi.org/10.5281/zenodo.19210728",
+    "https://doi.org/10.5281/zenodo.20232911"
+  ],
+  "rules": {
+    "sources/parts/01_qam_mml_mma_pre_v4_infrastructure/02_store_array_and_pre_v4_readouts.tex": {
+      "definitions": [
+        "Two-sided structural tensor interface: retain separate front readout/frame roles and back structure/action roles.",
+        "Admissible contractions and comparisons: ordinary upper-lower pairings; same-variance comparisons require an explicit comparison object.",
+        "Binary mask registry: readout kind j has bit 2^j; zero activates no kind.",
+        "Guarded mixed QAM readout: retain component readouts, selector, declared aggregation and explicit compatibility assumptions.",
+        "QAM store and MML/MMA audit boundary: register objects, relationships, guards, provenance and residual witnesses without manufacturing a closure certificate."
+      ],
+      "scope": "Operational summary for the supported interface, not the original TeX text or a complete formalization."
+    },
+    "sources/parts/01_qam_mml_mma_pre_v4_infrastructure/03_two_sided_tensor_masks_and_freeze.tex": {
+      "definitions": [
+        "Role-erasure expansion retains explicit role data and guards.",
+        "Boolean selectors use union, intersection, symmetric difference and complement relative to a declared finite universe.",
+        "Mask-filter conservativity: selection does not rewrite component payloads or promote their mathematical status."
+      ],
+      "scope": "Operational summary of the role and selector checks; no independent mathematical proof."
+    },
+    "sources/parts/01_qam_mml_mma_pre_v4_infrastructure/04_qam_predicates_transport_shell.tex": {
+      "definitions": [
+        "Record QClEq, QAdmTransport, QRead, QBranchRef, QShellRef and QTensorAdm as separate typed declarations.",
+        "Representation equality does not establish closure-class equivalence.",
+        "Check references and declared guards without evaluating the truth of structural relations."
+      ],
+      "scope": "Supported predicate interface only; mathematical relations remain declarations."
+    },
+    "sources/parts/01_qam_mml_mma_pre_v4_infrastructure/05_qam_tensor_admissibility_translation.tex": {
+      "definitions": [
+        "Supported primitive formation uses same-kind pairs of states, layers, operators, readouts, branches or shells.",
+        "Tensor typing alone does not establish structural tensor admissibility.",
+        "Tensor admissibility needs a separate explicit declaration for the checked pair."
+      ],
+      "scope": "Operational subset; no tensor closure propagation or numerical transport engine."
+    }
+  }
+}

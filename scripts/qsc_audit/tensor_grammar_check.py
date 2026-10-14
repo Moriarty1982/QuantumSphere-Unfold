@@ -17,6 +17,8 @@ RULE_SOURCES = (
     "sources/parts/01_qam_mml_mma_pre_v4_infrastructure/03_two_sided_tensor_masks_and_freeze.tex",
     "sources/parts/01_qam_mml_mma_pre_v4_infrastructure/05_qam_tensor_admissibility_translation.tex",
 )
+PREDICATE_SOURCE = "sources/parts/01_qam_mml_mma_pre_v4_infrastructure/04_qam_predicates_transport_shell.tex"
+RULE_CATALOG = Path(__file__).with_name("rule_catalog.json")
 ROLES = {
     "front": {"readout", "frame", "observer", "language", "address"},
     "back": {"structure", "action", "field", "transport", "operator"},
@@ -41,6 +43,32 @@ def digest(value: Any) -> str:
 
 def digest_bytes(value: bytes) -> str:
     return hashlib.sha512(value).hexdigest()
+
+
+def source_fingerprints(paths: tuple[str, ...] = RULE_SOURCES) -> tuple[dict, dict]:
+    """Bind local source bytes or an explicitly identified standalone rule catalog."""
+    present = [(ROOT / path).is_file() for path in paths]
+    if all(present):
+        return ({path: digest_bytes((ROOT / path).read_bytes()) for path in paths},
+                {"mode": "repository_source_files", "source_text_available": True})
+    if any(present):
+        raise InputError("Incomplete source checkout; cannot silently substitute the rule catalog")
+    catalog = load_json(RULE_CATALOG)
+    _keys(catalog, {"schema", "publications", "rules"})
+    if catalog["schema"] != "qsc-rule-catalog/1" or not isinstance(catalog["rules"], dict):
+        raise InputError("Invalid standalone rule catalog")
+    _strings(catalog["publications"])
+    hashes = {}
+    for path in paths:
+        if path not in catalog["rules"]:
+            raise InputError("Rule catalog is missing a required rule group")
+        entry = catalog["rules"][path]
+        _keys(entry, {"definitions", "scope"})
+        _strings(entry["definitions"])
+        _text(entry["scope"])
+        hashes[path] = digest({"publications": catalog["publications"], "rule_group": entry})
+    return hashes, {"mode": "bundled_rule_catalog", "source_text_available": False,
+                    "catalog_hash": digest_bytes(RULE_CATALOG.read_bytes())}
 
 
 def _keys(value: Any, required: set[str], optional: set[str] | None = None) -> None:
@@ -247,11 +275,12 @@ def _check_operation(document: dict, op: dict) -> tuple[dict, list[str], list[st
 
 def check_document(document: Any, rule_sources: dict[str, str] | None = None) -> dict:
     validate_document(document)
-    sources = rule_sources if rule_sources is not None else {
-        path: digest_bytes((ROOT / path).read_bytes()) for path in RULE_SOURCES
-    }
+    if rule_sources is None:
+        sources, source_binding = source_fingerprints()
+    else:
+        sources, source_binding = rule_sources, {"mode": "caller_supplied_fingerprints", "source_text_available": False}
     context = {"schema": VERSION, "hash_algorithm": HASH_ALGORITHM,
-               "input_hash": digest(document), "rule_sources": sources,
+               "input_hash": digest(document), "rule_sources": sources, "source_binding": source_binding,
                "implementation_hash": digest_bytes(Path(__file__).read_bytes())}
     previous = digest(context)
     receipts = []

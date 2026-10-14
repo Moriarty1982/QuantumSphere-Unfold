@@ -57,4 +57,6 @@ Post-`v4.7.0` work is tracked through GitHub issues and separated into metadata-
 
 The [QAM/MML/MMA framework interface](scripts/qsc_audit/FRAMEWORK_INTERFACE.md) provides a shared conceptual object, relation, guard and residual context, with fixed `EXPORT` and `SCRUB` requests. The tensor role checker is its first audit adapter; mathematical equivalence remains a separate declared relation.
 
+The standalone interface package is available at [Moriarty1982/qam-framework-interface](https://github.com/Moriarty1982/qam-framework-interface), including a rule catalog for use without this repository's TeX sources.
+
 The [QAM tensor role checker](scripts/qsc_audit/TENSOR_GRAMMAR.md) checks explicit role data, index pairings, declared comparisons, finite readout masks, and recorded guard assumptions. It produces reproducible audit reports; it does not establish mathematical admissibility or closure. This is post-release research infrastructure.

@@ -2,6 +2,7 @@
 
 from pathlib import Path
 import unittest
+from unittest.mock import patch
 
 from scripts.qsc_audit import tensor_grammar_check as tensor
 from scripts.qsc_audit.framework_interface import FrameworkInterface
@@ -144,6 +145,14 @@ class FrameworkInterfaceTests(unittest.TestCase):
             self.context["provenance"]["parent_context_hash"] = invalid
             with self.assertRaises(tensor.InputError):
                 self.interface()
+
+    def test_framework_standalone_binding_is_explicit(self):
+        with patch.object(tensor, "ROOT", tensor.ROOT / "build" / "absent-source-checkout"):
+            receipt = self.receipt()
+            self.assertEqual(receipt["mma_status"], "continue")
+            self.assertEqual(receipt["source_binding"]["mode"], "bundled_rule_catalog")
+            self.assertFalse(receipt["source_binding"]["source_text_available"])
+            self.assertEqual(len(receipt["source_hashes"]), 4)
 
 
 if __name__ == "__main__":
