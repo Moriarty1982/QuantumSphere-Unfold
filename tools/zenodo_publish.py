@@ -156,6 +156,34 @@ def create_or_fetch_deposition(api_base: str, token: str, deposition_id: Optiona
     return request_json("POST", f"{api_base}/deposit/depositions", token, payload={})
 
 
+def create_new_version(api_base: str, token: str, previous_id: str) -> Dict[str, Any]:
+    """Create a new-version draft of an existing published deposition.
+
+    Unlike a plain POST to /deposit/depositions, this keeps the record under the
+    existing concept DOI.  Zenodo returns the *previous* deposition; the new
+    draft is reached through links.latest_draft.
+    """
+    result = request_json("POST", f"{api_base}/deposit/depositions/{previous_id}/actions/newversion", token, payload={})
+    draft_url = result.get("links", {}).get("latest_draft")
+    if not draft_url:
+        raise ZenodoError("newversion response did not include links.latest_draft")
+    return request_json("GET", draft_url, token)
+
+
+def reserved_doi(dep: Dict[str, Any]) -> Optional[str]:
+    return (dep.get("metadata", {}).get("prereserve_doi") or {}).get("doi")
+
+
+def remove_draft_files(api_base: str, token: str, deposition_id: str) -> List[str]:
+    """Delete files a new-version draft inherited from its predecessor."""
+    files = request_json("GET", f"{api_base}/deposit/depositions/{deposition_id}/files", token)
+    removed: List[str] = []
+    for entry in files if isinstance(files, list) else []:
+        request_json("DELETE", f"{api_base}/deposit/depositions/{deposition_id}/files/{entry['id']}", token)
+        removed.append(entry.get("filename", entry["id"]))
+    return removed
+
+
 def set_metadata(api_base: str, token: str, deposition_id: str, payload: Dict[str, Any]) -> Dict[str, Any]:
     return request_json("PUT", f"{api_base}/deposit/depositions/{deposition_id}", token, payload=payload)
 
@@ -171,6 +199,12 @@ def main() -> int:
     parser.add_argument("--environment", choices=["sandbox", "production"], default="sandbox")
     parser.add_argument("--token-env", default=None, help="Environment variable containing the token")
     parser.add_argument("--deposition-id", default=None, help="Existing draft deposition ID to update")
+    parser.add_argument("--new-version-of", default=None,
+                        help="Published deposition ID to create a new-version draft from (keeps the concept DOI)")
+    parser.add_argument("--replace-files", action="store_true",
+                        help="Delete files inherited by the draft before uploading")
+    parser.add_argument("--reserve-only", action="store_true",
+                        help="Create or fetch the draft, set metadata, print the reserved DOI; upload nothing")
     parser.add_argument("--dry-run", action="store_true", help="Validate and print manifest only")
     parser.add_argument("--publish", action="store_true", help="Publish after upload")
     parser.add_argument("--confirm-publish", action="store_true", help="Required together with --publish")
@@ -182,7 +216,7 @@ def main() -> int:
 
     payload = normalize_metadata(load_json(Path(args.metadata)))
     validate_metadata(payload)
-    files = expand_files(args.files, allow_missing=args.dry_run)
+    files = expand_files(args.files, allow_missing=args.dry_run or args.reserve_only)
 
     print(f"Zenodo environment: {args.environment}")
     print(f"API base: {api_base}")
@@ -192,7 +226,13 @@ def main() -> int:
     if args.publish and not args.confirm_publish:
         raise ZenodoError("--publish requires --confirm-publish")
 
-    if not args.dry_run and not files:
+    if args.new_version_of and args.deposition_id:
+        raise ZenodoError("Use either --new-version-of or --deposition-id, not both")
+
+    if args.reserve_only and args.publish:
+        raise ZenodoError("--reserve-only cannot be combined with --publish")
+
+    if not args.dry_run and not files and not args.reserve_only:
         raise ZenodoError("Non-dry-run requires at least one upload file")
 
     if args.dry_run:
@@ -202,16 +242,39 @@ def main() -> int:
         return 0
 
     token = token_from_env(token_env)
-    dep = create_or_fetch_deposition(api_base, token, args.deposition_id)
+    if args.new_version_of:
+        dep = create_new_version(api_base, token, args.new_version_of)
+        print(f"Created new-version draft of deposition {args.new_version_of}.")
+    else:
+        dep = create_or_fetch_deposition(api_base, token, args.deposition_id)
     deposition_id = str(dep.get("id"))
     links = dep.get("links", {})
     bucket_url = links.get("bucket")
     if not deposition_id or not bucket_url:
         raise ZenodoError("Deposition response did not include id and bucket link")
+    if dep.get("submitted"):
+        raise ZenodoError(f"Deposition {deposition_id} is already published; refusing to modify it")
 
+    doi_before = reserved_doi(dep)
     print(f"Using draft deposition id: {deposition_id}")
-    set_metadata(api_base, token, deposition_id, payload)
+    print(f"Reserved DOI: {doi_before or 'none reported'}")
+
+    updated = set_metadata(api_base, token, deposition_id, payload)
     print("Metadata set.")
+    doi_after = reserved_doi(updated)
+    if doi_before and doi_after and doi_after != doi_before:
+        raise ZenodoError(f"Reserved DOI changed from {doi_before} to {doi_after}; stopping")
+
+    if args.reserve_only:
+        print(json.dumps({"deposition_id": deposition_id, "reserved_doi": doi_after or doi_before,
+                          "published": False, "files_uploaded": 0}, indent=2))
+        print("Draft reserved. Put the reserved DOI on the title page, build, then re-run with "
+              "--deposition-id and the final files.")
+        return 0
+
+    if args.replace_files:
+        removed = remove_draft_files(api_base, token, deposition_id)
+        print(f"Removed {len(removed)} inherited file(s): {', '.join(removed) or '-'}")
 
     for path in files:
         print(f"Uploading {path.name} ...")
@@ -226,7 +289,8 @@ def main() -> int:
         print("Published deposition.")
         print(json.dumps({"deposition_id": deposition_id, "record_url": result.get("links", {}).get("html")}, indent=2))
     else:
-        print(json.dumps({"deposition_id": deposition_id, "published": False}, indent=2))
+        print(json.dumps({"deposition_id": deposition_id, "reserved_doi": doi_after or doi_before,
+                          "published": False}, indent=2))
         print("Draft prepared. Re-run with --publish --confirm-publish only after manual review.")
 
     return 0

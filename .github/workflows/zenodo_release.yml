@@ -15,6 +15,26 @@ on:
         description: "Existing draft deposition ID to update; leave empty to create a new draft"
         required: false
         default: ""
+      new_version_of:
+        description: "Published deposition ID to branch a new version from (keeps the concept DOI); leave empty otherwise"
+        required: false
+        default: ""
+      reserve_only:
+        description: "Create/fetch the draft, set metadata and print the reserved DOI; upload nothing"
+        required: true
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+      replace_files:
+        description: "Delete files the draft inherited from the previous version before uploading"
+        required: true
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
       publish:
         description: "Publish after upload? Must be true plus confirm_publish=true"
         required: true
@@ -79,8 +99,8 @@ jobs:
           test -f "${{ inputs.metadata }}"
 
           if ! compgen -G "${{ inputs.files_glob }}" >/dev/null; then
-            if [[ "${{ inputs.dry_run }}" == "true" ]]; then
-              echo "No files matched ${{ inputs.files_glob }}; allowed for metadata-only dry-run."
+            if [[ "${{ inputs.dry_run }}" == "true" || "${{ inputs.reserve_only }}" == "true" ]]; then
+              echo "No files matched ${{ inputs.files_glob }}; allowed for dry-run or reserve-only."
             else
               echo "No files matched ${{ inputs.files_glob }}; non-dry-run upload requires files." >&2
               exit 2
@@ -110,6 +130,18 @@ jobs:
 
           if [[ -n "${{ inputs.deposition_id }}" ]]; then
             args+=(--deposition-id "${{ inputs.deposition_id }}")
+          fi
+
+          if [[ -n "${{ inputs.new_version_of }}" ]]; then
+            args+=(--new-version-of "${{ inputs.new_version_of }}")
+          fi
+
+          if [[ "${{ inputs.reserve_only }}" == "true" ]]; then
+            args+=(--reserve-only)
+          fi
+
+          if [[ "${{ inputs.replace_files }}" == "true" ]]; then
+            args+=(--replace-files)
           fi
 
           if [[ "${{ inputs.dry_run }}" == "true" ]]; then
