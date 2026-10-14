@@ -65219,6 +65219,70 @@ Items 1--3 are applications of the lemma to \(\hbar c\,\lP^{-4}\), to \(\alpha=(
 and to \(\lP^{-2}\), \(\hbar c\,\lP^{-4}\) and \(G_N\rho/c^4\) respectively.  Item 4 holds because a
 ratio of two quantities of the same dimension is invariant under change of units.  \(\square\)
 
+\subsection*{v4.8.0-r03 re-check of P4}
+\label{subsec:v480-r03-p4-recheck}
+
+F4 was checked a second time, against the main paper and against a reading of P4 that is
+dimensionally consistent.
+
+\paragraph{Origin of the unit \(\lP^{-2}\).}
+The main paper states the frame contribution without a unit.  Its Theorem~11.6 (Dark energy as
+permanent frame offset) gives \(\Lambda_{\mathrm{eff}}\sim\bsym^2\rho_P\), its Proposition~12.4
+(Frame term gives the cosmological constant) gives \(\Lambda_{\mathrm{obs}}\sim\bsym^2\), and its
+remark on the cosmological-constant problem records that reducing the bare value by
+\(10^{122}\) through the \(\Theta\)--\(R\) cancellation ``is not yet established''
+\cite{brendecke2026main}.  The unit \(\lP^{-2}\) and the statement that \(10^{-122}\) is a unit
+artefact enter only in the photon-frame \(\Lambda\) block of the companion,
+\S\ref{sec:lambda_cancel}.  The error recorded in F4 therefore lies in that later
+reinterpretation, not in the main paper.
+
+\paragraph{F8 --- ``dimensionally correct''.}
+The proof of Theorem~\ref{thm:lambda-zero}(iii) calls \(\Lambda_{\mathrm{obs}}=\bsym^2/\lP^{(\mathrm{matter})2}\)
+``dimensionally correct up to the \(\gL^{3/2}\) Planck-length correction''.  The unit
+\(\mathrm{m}^{-2}\) is correct; the value is \(1.2\times10^{69}\,\mathrm{m}^{-2}\), a factor
+\(10^{121}\) above the measurement, and no power of \(\gL\) closes that gap.  The theorem uses the
+matter-frame Planck length, P4 the photon-frame one.
+
+\paragraph{F9 --- citation.}
+The proof of Theorem~\ref{thm:lambda-zero}(iii) and the status table of the \(\Lambda\) block cite
+``Proposition~18.4 of the main paper''.  The main paper has no numbered environment 18.4.  The
+statement meant is its Proposition~12.4, which asserts only the proportionality
+\(\Lambda_{\mathrm{obs}}\sim\bsym^2\).
+
+\paragraph{F10 --- units of the balance condition.}
+In Equation~\eqref{eq:tr-balance} the integrand \(\Sigma(\tau)\) contains \(e^{-\tau/2}\), so
+\(\tau\) is a pure number, while the upper limit \(\lP^{(\mathrm{photon})}\) and the right-hand
+side \(\bsym^2\lP^{(\mathrm{photon})2}\) are written as a length and a squared length.  The
+condition is consistent only when read in matter-frame Planck units, where
+\(\lP^{(\mathrm{photon})}=\gL^{-3/2}=0.3928\ldots\) and the right-hand side is
+\(\bsym^2\gL^{-3}=0.0466\ldots\).  This reading is not stated in the source.
+
+\paragraph{A dimensionally consistent reading, offered and not adopted.}
+Since \(\bsym^2\) is a pure number, the consistent place for it is a dimensionless fraction of
+the critical density, not \(\Lambda\) itself.  If the Markov statement of
+Theorem~\ref{thm:dark-energy}, \(\Omega_\Lambda=1-\bsym^2\), is taken as the prediction, then
+\[
+\Lambda_{\mathrm{obs}}=\frac{3\,\Omega_\Lambda H_0^2}{c^2}
+=\frac{3\,(1-\bsym^2)\,H_0^2}{c^2}
+=1.112\times10^{-52}\,\mathrm{m}^{-2}
+\qquad(H_0=67.4\ \mathrm{km\,s^{-1}\,Mpc^{-1}}),
+\]
+which differs from \(\Lambda_{\mathrm{obs}}=1.1056\times10^{-52}\,\mathrm{m}^{-2}\) by \(0.6\%\).
+At the level of the fraction, \(1-\bsym^2=0.6982\ldots\) compares with the Planck 2018 values
+\(0.6847\) and \(0.6889\) by \(2.0\%\) and \(1.4\%\).
+
+The reading has a price.  It predicts the fraction \(\Omega_\Lambda\), and takes the absolute scale
+from the measured \(H_0\).  The number \(10^{-122}\) does not disappear: it becomes
+\(\Lambda_{\mathrm{obs}}\lP^2=3\Omega_\Lambda(\lP/R_H)^2\) with the Hubble radius \(R_H=c/H_0\), so
+that the remaining question is the hierarchy \(R_H/\lP=8.49\times10^{60}\).  The source
+quantity closest to it is the active zero count \(n_H\sim10^{62}\) at the Hubble time
+(Theorem~11.5 of the main paper); it differs from \(R_H/\lP\) by a factor of about \(12\), and the
+source does not identify the two.  The reading also selects \(1-\bsym^2\) among the two
+conflicting predictions of F5.
+
+Whether P4 is restated in this form, restated otherwise, or withdrawn is left to the author.
+r03 records the reading as an option and asserts nothing beyond the arithmetic above.
+
 \subsection*{v4.8.0-r03 status of the affected statements}
 \label{subsec:v480-r03-status}
 
@@ -65229,7 +65293,9 @@ ratio of two quantities of the same dimension is invariant under change of units
 \text{Eq.~\eqref{eq:rho-ratio}, Cor.~\ref{cor:matter-error}} & \text{F1} & \text{corrected: } \gL^5\approx22.5\\
 \alpha\text{-drift corollary} & \text{F2} & \text{exponent corrected; no observed drift}\\
 \Lambda\text{ in Prop.~\ref{prop:bare-lambda}, Thm.~\ref{thm:dark-offset}, P4} & \text{F3} & \text{open: one type for }\Lambda\text{ to be chosen}\\
-\text{Rem.~\ref{rem:open}, P4} & \text{F4} & \text{contradicted by measurement as stated}\\
+\text{Rem.~\ref{rem:open}, P4} & \text{F4} & \text{contradicted as stated; }\Omega\text{-reading offered}\\
+\text{Thm.~\ref{thm:lambda-zero}(iii)} & \text{F8, F9} & \text{value off by }10^{121}\text{; citation corrected}\\
+\text{Eq.~\eqref{eq:tr-balance}} & \text{F10} & \text{Planck units made explicit}\\
 \Omega\text{ statements, Rem.~\ref{rem:omega-bsym}} & \text{F5} & \text{values corrected; two predictions conflict}\\
 \text{Prop.~\ref{prop:hawking-gBI-tachyon}} & \text{F6} & \text{assumption } k(M)=0 \text{ made explicit}\\
 \text{Thm.~\ref{thm:dark-offset}} & \text{F7} & \text{notation only}
@@ -65249,7 +65315,7 @@ the contradiction and does not supply a replacement; a reformulation of the
 R_{\rm dim}^{v480\text{-}r03}=(0,0,1,1,1)
 \]
 for (\(k\)-calculus corrections F1, F2, F6 derived; numerical corrections F1, F5 recorded; single
-type for \(\Lambda\) not chosen; replacement for P4 not supplied; one of the two
+type for \(\Lambda\) not chosen; a replacement for P4 offered in \S\ref{subsec:v480-r03-p4-recheck} but not adopted; one of the two
 \(\Omega_\Lambda/\Omega_M\) predictions not selected).
 
 The layer spends no guard:
