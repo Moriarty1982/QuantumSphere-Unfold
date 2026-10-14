@@ -18,7 +18,8 @@ Ein weiterer endlicher Kontraktionsschritt kann das nicht reparieren.
 ## Quellen und Reichweite
 
 Gelesene Basis:
-`C:\Users\marcb\OneDrive\Dokumente\Papers\Physik\Quantum Sphera\Quantum_Sphaera_Companion_v4_7_0_source (1) (1).tex`.
+`Quantum_Sphaera_Companion_v4_7_0_source (1) (1).tex`
+(lokale v4.7.0-Quellkopie; identifiziert durch den folgenden SHA256).
 
 SHA256: `019E7A35ADB3E299B1EED7E5310397D922D18575FE8A5122C3B448CF1A383329`.
 
