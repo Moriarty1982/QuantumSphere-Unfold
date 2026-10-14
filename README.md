@@ -53,6 +53,8 @@ Use the `CITATION.cff` file in this repository, or cite the public Zenodo record
 
 Post-`v4.7.0` work is tracked through GitHub issues and separated into metadata-only stabilization work versus research-only follow-up branches.
 
+The [analysis notes](analysis/README.md), [historical working states](working_state/README.md), and [project savepoints](project_state/README.md) document research and development history. Their presence in the repository does not make them part of the published v4.7.0 baseline or promote their stated mathematical status.
+
 ## Research audit tools
 
 The [QAM/MML/MMA framework interface](scripts/qsc_audit/FRAMEWORK_INTERFACE.md) provides a shared conceptual object, relation, guard and residual context, with fixed `EXPORT` and `SCRUB` requests. The tensor role checker is its first audit adapter; mathematical equivalence remains a separate declared relation.
