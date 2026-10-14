@@ -7,7 +7,7 @@ Structure-first mathematical companion material for the Quantum Sphaera / Sphere
 - Public version: `v4.7.0`
 - Version DOI: `10.5281/zenodo.20232911`
 - Concept DOI: `10.5281/zenodo.19210728`
-- Repository: `Moriarty1982/QuantumSphere-Unfold`
+- Repository and source history: [Moriarty1982/QuantumSphere-Unfold](https://github.com/Moriarty1982/QuantumSphere-Unfold)
 
 The current public baseline is the Zenodo-published `v4.7.0` release. Repository changes after that release should be treated as post-release maintenance, research notes, or explicitly versioned follow-up work.
 
