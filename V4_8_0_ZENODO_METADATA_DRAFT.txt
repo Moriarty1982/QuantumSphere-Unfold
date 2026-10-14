@@ -1,0 +1,59 @@
+Title:
+Quantum Sphaera Companion: A Structure-First Mathematical Unfolding
+
+Version:
+4.8.0
+
+Version DOI:
+10.5281/zenodo.23365244
+
+Creators:
+Marc Brendecke
+Independent Researcher, Bochum, Germany
+
+Description:
+Version 4.8.0 of the Quantum Sphaera Companion is a guarded, structure-first full-monolith release. It carries the complete v4.7.0 monolith together with the source-only layers recorded after the v4.7.0 release (v4.7.0-r85 through r94), and it opens the v4.8.0 line with the Planck-Readout Metric Layer (v4.8.0-r01). Earlier layers are not rewritten.
+
+The r85 layer adds two source repairs found by a systematic cross-reference audit against the two cited source papers. Two passages that supported the Stone-von Neumann step with the wrong theorem number now cite the correct location, and the gauge group U(1)xSU(2)xSU(3) has been moved out of the unitary-equivalence list of the central unity theorem into a separate consequence, since a Lie group is not a Hilbert-space representation of the Weyl algebra. Both repairs narrow what is asserted; no result is withdrawn.
+
+The r86 layer consolidates the C5 asymptotic-collar bookkeeping. It records the threshold function n_min(theta) = ceil(log_{4/3}(1/theta)) whose single value theta=1/256, n=20 was already carried, and it separates two questions that had been recorded as one open entry: whether the declared multiplicative collar recursion reaches zero at a finite stage, which is provably excluded and depends only on positivity of the contraction factor, and whether a route to exact C5 zero exists outside that recursion, which remains undecided.
+
+The r87 layer calibrates the photon-clock selector windows. It states the window-existence criterion 16/G_avail <= S_V < 16 in closed form, derives the single-packet lift formula Delta S = 1 + 2 kappa N, verifies the three inherited window half-widths in exact rational arithmetic, and reduces the last blocked relay edge to a single missing datum, the packet count of the sparse reentry front. It also records negatively that the bound Delta_gamma < 1/5 is not derivable from the finite chart family and must be recovered from the uncompressed solve log.
+
+The r88 layer tests the candidate routes to a finite C5 discharge outside the collar recursion. A constant subtractive channel attains zero only for a channel strength tuned to the target stage and leaves the admissible domain at the following stage, so it requires a stopping rule, which is the truncation already forbidden by the bounded-collar limit guard. Two of the three candidate shapes are thereby closed; the third, a witness unrelated to the collar iteration, remains open with its requirements stated.
+
+The r89 layer corrects two false factual assertions in r87: the chart parameters of the sparse reentry front are recorded in the r14 scan ledger, and the corresponding relay edge was already closed by the r17 micro-lift. The r87 lift formula had in fact predicted that lift correctly from the chart parameters alone; the defect was in the source survey, not in the calculation.
+
+The r90 layer attempts a reconstruction of the bound Delta_gamma < 1/5, whose derivation is not part of this source packet. From the r15 clock model, expanding the coherence factor to first order gives a selector-preservation condition Var(phi) <= 1 - rho_V, whose minimum over the three charts carrying windows is 2/9 = 0.2222. The recorded bound 1/5 sits ten percent below it, consistent with the rounding discipline used elsewhere for 1/256 and 1/64. This is a reconstruction of the right magnitude, not a recovery of the original argument: Delta_gamma is nowhere defined in this source, and the provenance entry stays open.
+
+The r91 layer executes branch Q4 of the internal queue, which had been carried as inadmissible because it would spend the bound beta_4 = 1/256. Two findings emerge. First, C4 is no longer a commutator problem: the antisymmetric mixed-transport part was routed into a declared comparison channel in r07 rather than contracted away, and what remains is a seam crossing the bounded-exterior interface. Second, the bound beta_4 is by definition the same quantity as the local relay threshold Theta_v, and carries the same value as the detector threshold theta_det, which the matter-frame layer types as a terminal scale alongside l_P/L_ref. Spending beta_4 would therefore mean treating a residual at the terminal resolution scale as an exact zero, which is precisely the promotion the matter-frame typing forbids. Q4 is accordingly reclassified from a policy restriction to a structural exclusion. No guard is spent.
+
+The r92 layer sharpens the r90 reconstruction into an exact one. Substituting the r14 chart parameters into the required gain G_req = 16/S with S = N + kappa N(N-1) gives the admissible relative drop 1 - G_req/G_avail for each chart carrying a window: 1/5 for V3, 9/25 for V5 and 1/9 for V8. Minimised over the primary relay chain, which contains V3 and V5, this is exactly 1/5, attained at V3, the weakest assisted chart of that chain. The bound Delta_gamma < 1/5 is thereby recovered from data recorded in the source.
+
+The r93 layer names a structure that the two-sided tensor notation has carried since r26. Read from the sites that use it, the back slots carry a node of the finite chart family and an edge kind, the front slots a source or readout attachment and the guard or selector governing it, and the admissible-contraction rules read as a forwarding discipline: classical contraction is transport along a declared edge, and same-variance pairing without a declared comparison tensor or selector is the prohibition on joining two channels without an admission element. The reading adds no primitive and removes no pairing.
+
+The r94 layer traces the C5 contraction factor 3/4 to its origin. It enters as a ledger entry in r04; the trace values of r04, r05 and r07 are recorded entries and the r08 value is the candidate operator's own prediction, so the phrase "four independent bounded lowering steps" in the r09 admissibility proof is corrected to "consecutive". The factor is a declared value, not a derived one. The recorded detector stage n = 20 at threshold 1/256 fixes the factor only to the interval (0.7469, 0.7579]; none of the structural conclusions of r86 and r88 depends on the exact value, and the guarded detector claim needs only that interval.
+
+The v4.8.0-r01 layer opens the v4.8.0 line with a Planck-readout metric layer. It defines a readout-calibrated Planck scale l_eff(R) = l_P lambda_R with an orientation code, recovers the matter-frame Planck scale up to a declared calibration error, identifies the photon-frame Planck length of the main corpus as the instance lambda = gamma_L^(-3/2), and separates the orientation code of an opposite-orientation readout from the interval signature of the r82 tachyon-frame scale; neither is a negative material length. The MM/HC field-equation refactor announced for this research line is not carried out in this release.
+
+The v4.8.0-r02 layer integrates these layers into the release. Guard and residual vectors are unchanged from v4.7.0, and beta_4 = 1/256 remains unspent.
+
+The release explicitly does not claim exact finite C5 zero closure, exact all-readout terminality, C6/T2 closure, a global photon-clock/RH theorem, global all-readout closure, or a negative physical length. No spectral identification between Riemann zeros and photon ticks is made. The v4.7.0 Version DOI 10.5281/zenodo.20232911 and the v4.6.0 DOI 10.5281/zenodo.20117361 are retained only as provenance.
+
+Files:
+- Quantum_Sphaera_Companion_v4_8_0.pdf
+- Quantum_Sphaera_Companion_v4_8_0_source.tex
+- V4_8_0_SHA256_MANIFEST.csv
+
+Keywords:
+Quantum Sphaera; structure-first mathematics; guarded effective closure; QAM; MML; Heisenberg compensator; Millennium Matrix; photon-clock selector; selector window; matter-frame epsilon terminality; tachyon-frame signed scale; Planck readout; terminal-data naturality; local readout closure; asymptotic collar; detector threshold; relay chain
+
+DOI records for upload:
+- Version DOI: 10.5281/zenodo.23365244 (reserved, Zenodo draft deposition 23365244)
+- Concept DOI: 10.5281/zenodo.19210728
+- Previous version DOI (v4.7.0): 10.5281/zenodo.20232911
+- Previous/baseline DOI (v4.6.0): 10.5281/zenodo.20117361
+
+Note:
+The Zenodo draft was created as a new version of deposition 20232911 and stays unpublished
+until the author publishes it. RC19 through RC24 are retained unchanged as provenance.

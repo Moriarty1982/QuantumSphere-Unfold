@@ -1,0 +1,66 @@
+{
+  "release": "v4.8.0",
+  "basis": "v4.7.0 monolith with r85-r94 and v4.8.0-r01, r02",
+  "rounds": [
+    "r85",
+    "r86",
+    "r87",
+    "r88",
+    "r89",
+    "r90",
+    "r91",
+    "r92",
+    "r93",
+    "r94",
+    "v4.8.0-r01",
+    "v4.8.0-r02"
+  ],
+  "supersedes": "v4.7.0 (10.5281/zenodo.20232911)",
+  "toolchain": "TeX Live 2022 pdfTeX 1.40.22 (Linux VM); RC19-RC24 were built with MiKTeX 25.12",
+  "pages": 1045,
+  "latex_passes": 3,
+  "latex_errors": 0,
+  "version_doi": "10.5281/zenodo.23365244",
+  "concept_doi": "10.5281/zenodo.19210728",
+  "previous_version_doi": "10.5281/zenodo.20232911",
+  "previous_baseline_doi": "10.5281/zenodo.20117361",
+  "expired_doi": "10.5281/zenodo.20181842",
+  "zenodo_draft_deposition": 23365244,
+  "titlepage_version_doi_visible_lines": 1,
+  "titlepage_concept_doi_visible_lines": 1,
+  "titlepage_previous_doi_lines": 0,
+  "pdf_version_doi_hits": 3,
+  "pdf_concept_doi_hits": 12,
+  "pdf_previous_version_doi_hits": 9,
+  "pdf_previous_baseline_doi_hits": 17,
+  "expired_doi_hits_pdf": 0,
+  "undefined_refs": 0,
+  "undefined_citations": 0,
+  "duplicate_label_warnings": 0,
+  "rerun_warnings": 0,
+  "overfull_hbox_warnings": 45,
+  "labels_total": 3369,
+  "guards": {
+    "Gamma_guard": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "R_glob": [
+      0,
+      1,
+      1,
+      1,
+      1
+    ],
+    "beta_4": "1/256 unspent"
+  },
+  "open_items": [
+    "r88 shape (iii)",
+    "independent derivation of the C5 factor 3/4 (r94)",
+    "uniform use of two-sided notation (r93)",
+    "MM/HC field-equation refactor (v4.8.0-r01)"
+  ]
+}

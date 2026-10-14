@@ -566,8 +566,9 @@ def cmd_audit(args):
 # ------------------------------------------------------------------------ doi
 
 DOI_ROLES = [
-    ("Version DOI (v4.7.0)", "10.5281/zenodo.20232911"),
+    ("Version DOI (v4.8.0)", "10.5281/zenodo.23365244"),
     ("Concept DOI", "10.5281/zenodo.19210728"),
+    ("Previous DOI (v4.7.0)", "10.5281/zenodo.20232911"),
     ("Previous/baseline DOI (v4.6.0)", "10.5281/zenodo.20117361"),
     ("ABGELAUFEN - darf nicht vorkommen", "10.5281/zenodo.20181842"),
 ]
@@ -603,6 +604,9 @@ def cmd_doi(args):
         flag = ""
         if "ABGELAUFEN" in role and total:
             flag = "  <-- FEHLER"
+            bad += 1
+        if role.startswith("Previous") and on_title:
+            flag = "  <-- Vorgaenger-DOI gehoert nicht auf die Titelseite"
             bad += 1
         if role.startswith(("Version", "Concept")) and on_title != 1:
             flag = "  <-- Titelseite soll genau 1 Zeile haben"

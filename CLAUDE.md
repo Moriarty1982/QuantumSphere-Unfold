@@ -29,10 +29,12 @@ RC20              r85     Zitatreparatur, Scope-Trennung
 RC21              r86     C5-Kollar-Konsolidierung (Q5)
 RC22              r88     Fensterkalibrierung (Q3), Non-Collar-Routen
                           — r87 darin fehlerhaft, siehe r89
-HEAD      64.000+ r89     Korrektur von r87
+                  r89     Korrektur von r87
+RC23/RC24         r90/r91 Δ_γ-Rekonstruktion, Q4 ausgeführt
+v4.8.0    65.000+ r94     + v4.8.0-r01 (Planck-Readout), r02 (Release)
 ```
 
-Bis v4.6.0 heißt die Datei `companion.tex` (bei zweigeteilten Ständen zusätzlich `companion_historical.tex`), ab RC19 `Quantum_Sphaera_Companion_v4_7_0_source.tex`. Git erkennt den Übergang als Rename, `git log --follow` läuft durch.
+Bis v4.6.0 heißt die Datei `companion.tex` (bei zweigeteilten Ständen zusätzlich `companion_historical.tex`), ab RC19 `Quantum_Sphaera_Companion_v4_7_0_source.tex`, ab v4.8.0 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Git erkennt die Übergänge als Rename, `git log --follow` läuft durch.
 
 **Die Daten vor v4.0.0 sind Archivierungs-, keine Entstehungsdaten** — die Quelldateien stammen aus einem Download-Ordner, in dem ganze Versionsblöcke denselben Zeitstempel tragen. Die *Reihenfolge* stimmt (aus den Versionsnummern), die Tage nicht. Ab v4.0.0 kommen die Daten aus den Release-Archiven und sind belastbar.
 
@@ -50,12 +52,13 @@ Das Repository liegt in einem OneDrive-Ordner. Bisher unauffällig; falls je Syn
 
 | Datei | Rolle |
 |---|---|
-| `Quantum_Sphaera_Companion_v4_7_0_source.tex` | **Die Arbeitsdatei.** Hier wird editiert. |
+| `Quantum_Sphaera_Companion_v4_8_0_source.tex` | **Die Arbeitsdatei.** Hier wird editiert. |
+| `Quantum_Sphaera_Companion_v4_8_0.pdf` + `V4_8_0_*` + `v4_8_0_release_summary.json` | **Release v4.8.0**, Zenodo-Entwurf 23365244 |
 | `Quantum_Sphaera_Companion_v4_7_0_RC19_concept_doi_restore_source.tex` | **Eingefrorener RC19-Snapshot** — nicht editieren |
 | `Quantum_Sphaera_Companion_v4_7_0.pdf` | RC19-PDF — eingefroren, nie überschreiben |
 | `..._RC20_citation_repair_source.tex` + `..._r85.pdf` + `V4_7_0_RC20_*` | RC20 (Stand r85), eingefroren |
 | `..._RC21_c5_collar_consolidation_source.tex` + `..._r86.pdf` + `V4_7_0_RC21_*` | RC21 (Stand r86), eingefroren |
-| `..._RC22_clock_window_collar_routes_source.tex` + `..._r88.pdf` + `V4_7_0_RC22_*` | **RC22 (Stand r88), aktuell** |
+| `..._RC22_clock_window_collar_routes_source.tex` + `..._r88.pdf` + `V4_7_0_RC22_*` | RC22 (Stand r88), eingefroren |
 | `quantum_sphaera_v3_1_4_monolith_stable_main (1).tex` | Hauptpapier, Bibkey `brendecke2026main` |
 | `riemann_arxiv_v4__15_ (1).tex` | Riemann-Arbeit v4.15, Bibkey `brendecke2026rh` |
 | `V4_7_0_RC19_CONCEPT_DOI_RESTORE_AUDIT_REPORT.md` | Compile-Audit der letzten Runde |
@@ -80,7 +83,7 @@ Nicht in diesem Verzeichnis, aber referenziert: `RC14_uncompressed_reference_sou
 
 ## Der Runden-Workflow
 
-Das Dokument wächst **append-only in nummerierten Runden** (`rNN`). Eine neue Runde ist ein neuer Abschnitt unmittelbar vor `\end{document}`; bestehende Runden werden nicht umgeschrieben. Aktueller Stand: **r94**.
+Das Dokument wächst **append-only in nummerierten Runden** (`rNN`). Eine neue Runde ist ein neuer Abschnitt unmittelbar vor `\end{document}`; bestehende Runden werden nicht umgeschrieben. Aktueller Stand: **r94** und **v4.8.0-r02**. Runden der v4.8.0-Linie heißen `v4.8.0-rNN`, Labels `sec:v480-rNN-...`; `qs.py outline/ledger` erkennen diese Form noch nicht.
 
 Eine Runde folgt einem festen Muster:
 
@@ -130,9 +133,10 @@ Wenn eine neue Runde diese Vektoren nicht verändert, ist das der Normalfall und
 
 ## DOI-Disziplin
 
-Drei DOIs, die nie vermischt werden dürfen:
+Vier DOIs, die nie vermischt werden dürfen:
 
-- **Version-DOI** `10.5281/zenodo.20232911` — v4.7.0, gehört als einzige sichtbare DOI-Zeile auf die Titelseite
+- **Version-DOI** `10.5281/zenodo.23365244` — v4.8.0, gehört als einzige sichtbare DOI-Zeile auf die Titelseite
+- **Vorgänger-DOI** `10.5281/zenodo.20232911` — v4.7.0, seit v4.8.0 nur Provenienz
 - **Concept-DOI** `10.5281/zenodo.19210728` — stabil über alle Versionen
 - **Previous/Baseline-DOI** `10.5281/zenodo.20117361` — nur Provenienz, nie als aktuelle DOI
 
@@ -153,7 +157,7 @@ Es liegt **nicht im PATH** — den Pfad im Aufruf voranstellen oder für die Sit
 Gebaut wird mit **drei pdfLaTeX-Durchläufen**, außerhalb des Projektverzeichnisses:
 
 ```bash
-pdflatex -interaction=nonstopmode Quantum_Sphaera_Companion_v4_7_0_source.tex
+pdflatex -interaction=nonstopmode Quantum_Sphaera_Companion_v4_8_0_source.tex
 ```
 
 Danach `qs.py audit <log>` gegen die Baseline. Das RC19-PDF im Projektordner nie überschreiben — es ist im Manifest gehasht.
