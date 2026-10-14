@@ -65283,6 +65283,62 @@ conflicting predictions of F5.
 Whether P4 is restated in this form, restated otherwise, or withdrawn is left to the author.
 r03 records the reading as an option and asserts nothing beyond the arithmetic above.
 
+\subsection*{v4.8.0-r03 provenance of the frame parameters}
+\label{subsec:v480-r03-frame-parameter-provenance}
+
+\paragraph{F11 --- both inputs of \(\gL\) are values of the same LQG parameter.}
+The frame factor \(\gL=\gBI/\gstring=1.864\ldots\) enters every frame conversion of the monolith,
+\(\bsym=\sqrt{(\gL-1)/(\gL+1)}\), the cosmological fractions of
+Theorem~\ref{thm:dark-energy}, the photon-frame Planck length of
+Theorem~\ref{thm:planck-photon} and the instance \(\lambda_\gamma=\gL^{-3/2}\) of
+v4.8.0-r01.  Its two inputs have the following origin in the literature.
+\begin{enumerate}[leftmargin=2em]
+ \item \(\gstring=\ln2/(\pi\sqrt3)=0.12738\ldots\), introduced in the nomenclature as
+ ``string coupling'', is the value of the Barbero--Immirzi parameter obtained by Ashtekar, Baez,
+ Corichi and Krasnov from the state counting of quantum isolated horizons
+ (arXiv \texttt{gr-qc/9710007}, \texttt{gr-qc/0005126}).  It is not a string-theory coupling.
+ \item \(\gBI\approx0.2375\) is the value of the same parameter after the corrected state
+ counting of Domagala and Lewandowski and of Meissner (arXiv \texttt{gr-qc/0407051},
+ \texttt{gr-qc/0407052}).  Domagala and Lewandowski show that the earlier counting contains a
+ spurious constraint that suppresses spins above \(j=\tfrac12\), and that the earlier value
+ therefore does not hold.
+\end{enumerate}
+Hence \(\gL\) is the ratio of the corrected to the superseded determination of one parameter.
+Theorem~\ref{thm:frame-offset} reads this ratio as a Lorentz factor between the matter and the
+photon frame.  The source supplies no derivation of either input from the HC trace formula: the
+proof of Theorem~\ref{thm:frame-offset} says that \(\gstring\) is computed in the photon frame
+from that formula, while the proof of the OP~1/T4 statement around
+Remark~\ref{rem:goe-gue-string-lqg} calls it extrinsically given.  The two statements are
+incompatible, and only the second is supported by the text.
+
+\paragraph{F11a --- the entropy factor.}
+The remark ``The entropy factor'' in \S\ref{sec:bh} writes the LQG entropy as
+\(S=A\ln2/(8\pi\gBI\lP^2)\), finds agreement with \(S_{BH}=A/(4\lP^2)\) at
+\(\gBI=\ln2/(2\pi)\approx0.110\), and records a discrepancy factor \(2.15\) as an open quantitative
+problem.  The entropy formula of the counting that produced \(\ln2/(\pi\sqrt3)\) is
+\[
+S=\frac{\ln2}{4\pi\sqrt3\,\gamma}\,\frac{A}{\lP^2},
+\]
+which agrees with \(S_{BH}\) exactly at \(\gamma=\ln2/(\pi\sqrt3)=\gstring\).  The factor \(2.15\)
+is produced by the formula used in the remark and is not a property of the framework; the
+discrepancy between the two countings is \(\gBI/\gstring=\gL\) itself.
+
+\paragraph{Consequence.}
+The agreement of \(1-\bsym^2\) with the measured \(\Omega_\Lambda\) at the \(1\)--\(2\%\) level
+recorded in \S\ref{subsec:v480-r03-p4-recheck} rests on \(\bsym\), and \(\bsym\) rests on the ratio
+of two countings of one parameter, one of which is superseded.  As long as that is not stated,
+the agreement reads as better supported than it is.
+
+\paragraph{A reading in the readout vocabulary, offered and not adopted.}
+The superseded counting admits only minimal spins \(j=\tfrac12\) at the horizon punctures, the
+corrected one all spins.  \(\gL\) could therefore be read as the ratio between a minimal-spin
+readout and a full-spin readout of the same horizon, two readouts in the sense of r81--r82 and
+r93.  Under that reading \(\gL\) is not a Lorentz factor, and the chain
+\(\gL\to\bsym\to\Omega_\Lambda\) would need a new justification: why the cosmological fraction
+should be governed by the ratio of two horizon readouts.  r03 records the reading as an option
+and asserts nothing beyond the provenance above.  Whether \(\gstring\) is renamed, the chain is
+rederived, or this reading is adopted is left to the author.
+
 \subsection*{v4.8.0-r03 status of the affected statements}
 \label{subsec:v480-r03-status}
 
@@ -65296,6 +65352,8 @@ r03 records the reading as an option and asserts nothing beyond the arithmetic a
 \text{Rem.~\ref{rem:open}, P4} & \text{F4} & \text{contradicted as stated; }\Omega\text{-reading offered}\\
 \text{Thm.~\ref{thm:lambda-zero}(iii)} & \text{F8, F9} & \text{value off by }10^{121}\text{; citation corrected}\\
 \text{Eq.~\eqref{eq:tr-balance}} & \text{F10} & \text{Planck units made explicit}\\
+\gstring,\ \text{Thm.~\ref{thm:frame-offset}} & \text{F11} & \text{provenance recorded; readout reading offered}\\
+\text{entropy-factor remark, \S\ref{sec:bh}} & \text{F11a} & \text{corrected: no factor }2.15\\
 \Omega\text{ statements, Rem.~\ref{rem:omega-bsym}} & \text{F5} & \text{values corrected; two predictions conflict}\\
 \text{Prop.~\ref{prop:hawking-gBI-tachyon}} & \text{F6} & \text{assumption } k(M)=0 \text{ made explicit}\\
 \text{Thm.~\ref{thm:dark-offset}} & \text{F7} & \text{notation only}
@@ -65312,11 +65370,11 @@ the contradiction and does not supply a replacement; a reformulation of the
 \label{subsec:v480-r03-ledger-guard}
 
 \[
-R_{\rm dim}^{v480\text{-}r03}=(0,0,1,1,1)
+R_{\rm dim}^{v480\text{-}r03}=(0,0,1,1,1,1)
 \]
 for (\(k\)-calculus corrections F1, F2, F6 derived; numerical corrections F1, F5 recorded; single
 type for \(\Lambda\) not chosen; a replacement for P4 offered in \S\ref{subsec:v480-r03-p4-recheck} but not adopted; one of the two
-\(\Omega_\Lambda/\Omega_M\) predictions not selected).
+\(\Omega_\Lambda/\Omega_M\) predictions not selected; independent justification of \(\gL\) as a frame factor not supplied, \S\ref{subsec:v480-r03-frame-parameter-provenance}).
 
 The layer spends no guard:
 \[
