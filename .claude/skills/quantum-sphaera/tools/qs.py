@@ -192,7 +192,7 @@ def fmt_entry(e):
 
 # -------------------------------------------------------------------- outline
 
-RE_ROUND = re.compile(r"v?4\.7\.0-r(\d+)|(?:^|\s)r(\d{2})\b")
+RE_ROUND = re.compile(r"v?4\.\d+\.\d+-r(\d+)|(?:^|\s)r(\d{2})\b")
 
 
 def cmd_outline(args):
@@ -436,7 +436,7 @@ def cmd_guards(args):
 RE_LEDGER = re.compile(
     r"(?P<name>R_\{?\\(?:rm|mathrm)\s*\{?(?:glob|eff/local|exact/global)\}?\}?"
     r"|\\Gamma_\{?\\(?:rm|mathrm)\s*\{?guard\}?\}?)"
-    r"\^?\{?\(?r(?P<round>\d+)[,+)]*\}?\s*=\s*\((?P<vec>[01,\s]+)\)")
+    r"\^?\{?\(?(?:v(?P<ver>\d{3})\\text\{-\})?r(?P<round>\d+)[,+)]*\}?\s*=\s*\((?P<vec>[01,\s]+)\)")
 
 
 def cmd_ledger(args):
@@ -448,19 +448,21 @@ def cmd_ledger(args):
             name = re.sub(r"\s+", "",
                           re.sub(r"[\\{}]|rm|mathrm", "", m.group("name")))
             vec = "(" + re.sub(r"\s+", "", m.group("vec")) + ")"
-            rows.append((int(m.group("round")), name, vec, idx))
+            ver = int(m.group("ver") or 470)  # Runden ohne Praefix gehoeren zur v4.7.0-Linie
+            rows.append(((ver, int(m.group("round"))), name, vec, idx))
     if not rows:
         print("Keine Ledger-Vektoren gefunden.")
         return 1
     rows.sort()
-    print("%-6s %-16s %-14s %s" % ("Runde", "Groesse", "Wert", "Zeile"))
+    print("%-10s %-16s %-14s %s" % ("Runde", "Groesse", "Wert", "Zeile"))
     prev = {}
     for rnd, name, vec, idx in rows:
         mark = ""
         if name in prev and prev[name] != vec:
             mark = "  <-- geaendert (vorher %s)" % prev[name]
         prev[name] = vec
-        print("r%-5d %-16s %-14s %-7d%s" % (rnd, name, vec, idx, mark))
+        tag = ("r%d" % rnd[1]) if rnd[0] == 470 else ("v%d-r%02d" % rnd)
+        print("%-10s %-16s %-14s %-7d%s" % (tag, name, vec, idx, mark))
     return 0
 
 

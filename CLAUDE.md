@@ -83,7 +83,7 @@ Nicht in diesem Verzeichnis, aber referenziert: `RC14_uncompressed_reference_sou
 
 ## Der Runden-Workflow
 
-Das Dokument wächst **append-only in nummerierten Runden** (`rNN`). Eine neue Runde ist ein neuer Abschnitt unmittelbar vor `\end{document}`; bestehende Runden werden nicht umgeschrieben. Aktueller Stand: **r94** und **v4.8.0-r02**. Runden der v4.8.0-Linie heißen `v4.8.0-rNN`, Labels `sec:v480-rNN-...`; `qs.py outline/ledger` erkennen diese Form noch nicht.
+Das Dokument wächst **append-only in nummerierten Runden** (`rNN`). Eine neue Runde ist ein neuer Abschnitt unmittelbar vor `\end{document}`; bestehende Runden werden nicht umgeschrieben. Aktueller Stand: **r94** und **v4.8.0-r02**. Runden der v4.8.0-Linie heißen `v4.8.0-rNN`, Labels `sec:v480-rNN-...`; `qs.py outline` und `ledger` erkennen beide Formen.
 
 Eine Runde folgt einem festen Muster:
 
@@ -164,7 +164,7 @@ Danach `qs.py audit <log>` gegen die Baseline. Das RC19-PDF im Projektordner nie
 
 Die Präambel setzt `\pdfcompresslevel=0` und `\pdfobjcompresslevel=0` — daher die 14 MB PDF-Größe. Das ist Absicht (Diffbarkeit), nicht zu „optimieren".
 
-`\PassOptionsToPackage{bookmarks=false}{hyperref}` schaltet PDF-Lesezeichen ab, laut Kommentar ein r27-Notbehelf für Build-Stabilität. Für ein 1014-Seiten-Dokument ist das ein bekannter, ungelöster Usability-Mangel — nicht stillschweigend umschalten, das kann den Build brechen.
+PDF-Lesezeichen sind seit dem Stand nach v4.8.0 wieder an (`bookmarks=true,bookmarksnumbered=true`); der r25/r27-Notbehelf `bookmarks=false` ist entfernt. Getestet mit drei pdfLaTeX-Läufen unter TeX Live 2022: 968 Lesezeichen, Seiten, Labels und harte Audit-Werte unverändert. `\pdfstringdefDisableCommands` in der Präambel hält Symbole wie `\to` und `\Lambda` im Lesezeichentext lesbar; die übrigen „Token not allowed in PDF string“-Warnungen (37) sind harmlos. Das veröffentlichte v4.8.0-PDF ist noch ohne Lesezeichen gebaut. Unter MiKTeX ist der Test noch nicht gelaufen.
 
 ### Audit-Baseline (RC19)
 

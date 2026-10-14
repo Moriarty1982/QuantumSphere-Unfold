@@ -6,7 +6,8 @@
 % This source applies conservative release-safe compression of editorial/provenance and r55-r80 solve-log layers.
 % It preserves compact title-page discipline and guarded effective/local claim scope.
 % --- r27 hyperref draft option for source-only internal build stability ---
-\PassOptionsToPackage{bookmarks=false}{hyperref}
+% v4.8.0-post: PDF bookmarks re-enabled; tested with three pdfLaTeX passes (pages, labels and hard audit values unchanged).
+\PassOptionsToPackage{bookmarks=true,bookmarksnumbered=true}{hyperref}
 \pdfcompresslevel=0
 \pdfobjcompresslevel=0
 \documentclass[12pt,a4paper]{article}
@@ -234,7 +235,11 @@
 
 
 % --- r25 hyperref bookmark hygiene patch for release-freeze build ---
-\AtBeginDocument{\hypersetup{bookmarks=false}}
+% Former r25 line \AtBeginDocument{\hypersetup{bookmarks=false}} removed in v4.8.0-post; bookmarks are on again.
+% Math in section titles is dropped from bookmark strings; keep the few symbols that carry meaning as text.
+\AtBeginDocument{\pdfstringdefDisableCommands{%
+  \def\to{->}\def\Lambda{Lambda}\def\delta{delta}\def\beta{beta}%
+  \def\Theta{Theta}\def\Pi{Pi}\def\gamma{gamma}\def\Delta{Delta}}}
 
 \begin{document}
 \sloppy
