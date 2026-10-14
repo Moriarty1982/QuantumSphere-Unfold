@@ -64660,4 +64660,189 @@ between Riemann zeros and photon ticks and does not imply exact finite \(C5\) ze
 exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem, or global
 all-readout closure.
 
+% ============================================================================
+\clearpage
+\section*{v4.7.0-r94 Source-Only: Provenance of the C5 Contraction Factor 3/4}
+\addcontentsline{toc}{section}{v4.7.0-r94 Source-Only: Provenance of the C5 Contraction Factor 3/4}
+\label{sec:r94-c5-factor-provenance}
+% ============================================================================
+
+\paragraph{Purpose.}
+Since r09 the bounded C5 collar runs on the update
+\(\mathcal U_5^{\rm bd}:\Phi\mapsto\tfrac34\Phi\), and r86 inherits it without revisiting
+where the factor comes from.  This layer traces the factor to its first occurrence, records
+what the source does and does not supply as its justification, and separates the results that
+depend on the exact value \(3/4\) from those that hold for every \(q\in(0,1)\).  The question
+was raised in an external OP5/QAM working note kept in the repository folder
+\texttt{analysis/} (sections ``Re-audit of the origin and necessity of the factor three
+quarters'' and ``Step twenty does not identify a unique coefficient'' of
+\texttt{OP5\_QAM\_Residual\_Lift.tex}), which was written against the RC19 source and did not
+see r85--r93.  r94 checks its two findings against the current monolith and records them in
+source.  It introduces no new object and no new claim about \(C5\).
+
+\noindent\textbf{Source-only status.}
+This r94 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The intended reserved v4.7.0 Version DOI remains
+\href{https://doi.org/10.5281/zenodo.20232911}{10.5281/zenodo.20232911}; the previous
+baseline DOI \href{https://doi.org/10.5281/zenodo.20117361}{10.5281/zenodo.20117361}
+remains provenance only.
+
+\subsection*{r94 provenance trace}
+\label{subsec:r94-provenance-trace}
+
+The C5 chain introduces and propagates the factor as follows.
+\[
+\begin{array}{l|l|l|l}
+\text{layer} & \text{object} & \text{value} & \text{how the value enters}\\
+\hline
+\text{r04} & \text{Def.~\ref{def:v470-r04-finite-c5-witness-ledger}, row }W_5^{\rm bd}
+ & \Phi_5=\tfrac34,\ \Delta_5=-\tfrac14 & \text{ledger entry}\\
+\text{r05} & \text{Def.~\ref{def:v470-r05-finite-c5-iteration-ledger}, row }Z_5^{\rm bd2}
+ & \Phi_5^{(2)}=\tfrac9{16} & \text{ledger entry}\\
+\text{r05} & \text{same ledger, row }Z_5^{\rm collar}
+ & \Phi_5^{(2)}=\tfrac58 & \text{ledger entry, ratio }\tfrac56\\
+\text{r06} & \text{Def.~\ref{def:v470-r06-c5-decision-alphabet}}
+ & q_1=q_2\le\tfrac34 & \text{decision criterion}\\
+\text{r07} & \text{Def.~\ref{def:v470-r07-third-step-c5-probe}}
+ & \Phi_5^{(3)}=\tfrac{27}{64} & \text{probe entry}\\
+\text{r08} & \text{Lem.~\ref{lem:v470-r08-fourth-c5-bounded-step}}
+ & \Phi_5^{(4)}=\tfrac{81}{256} & \text{computed by the candidate update}\\
+\text{r09} & \text{Def.~\ref{def:v470-r09-bounded-c5-operator-domain}}
+ & \mathcal U_5^{\rm bd}=\tfrac34\,\cdot & \text{operator definition}
+\end{array}
+\]
+The r04 value \(\Delta_5(W_5^{\rm bd})=-\tfrac14\) is defined as the difference of two listed
+scores; it is not an independent computation of a removed quarter.
+
+\paragraph{Theoremlet r94.1 (provenance).}
+In the present source the C5 contraction factor \(3/4\) is a declared value, not a derived
+one.  Specifically:
+\begin{enumerate}[leftmargin=2em]
+ \item its first occurrence in the C5 sense is the r04 ledger entry \(\Phi_5(W_5^{\rm bd})=3/4\);
+ \item the trace values \(3/4\), \(9/16\), \(27/64\) of r04, r05 and r07 are ledger or probe
+ entries, and the r08 value \(81/256\) is produced by applying the candidate update itself
+ (Proposition~\ref{prop:v470-r08-finite-induction-candidate-status} correctly classifies it as a
+ prediction, \(\mathsf{cand}_{\rm ind}\));
+ \item no layer supplies a mechanism --- a projection identity, an energy partition, a dynamical
+ rate --- that produces the value \(3/4\) from MM/HC, collar or readout data.
+\end{enumerate}
+Consequently the phrase ``four independent bounded lowering steps'' in the proof of
+Lemma~\ref{lem:v470-r09-c5-finite-stage-admissibility} is to be read as ``four consecutive
+bounded lowering steps'': three of them are recorded entries and the fourth is the operator's
+own prediction.  The lemma itself is unaffected, because its proof of admissibility rests on
+positivity and domain preservation, which hold for the declared factor regardless of its
+origin.
+
+\paragraph{Proof sketch.}
+Items 1 and 2 are read off the cited definitions and lemmas.  For item 3 the working file was
+searched in full for the forms \texttt{\string\tfrac34}, \texttt{\string\frac34},
+\texttt{\string\frac\{3\}\{4\}}, \texttt{3/4} and \texttt{quarter}.  The occurrences before r04
+belong to other objects: the quarter-turn \(R_W\) of the minimal two-directional leakage plane
+(Corollary~\ref{cor:working-first-place-where-quadrature-becomes-possible}), which is an
+isometry and therefore cannot contract a norm, and the equal quarter-load shells of
+Corollary~\ref{cor:op1-quarter-shells}, which concern OP~1 and are explicitly declared not
+necessary.  From r05 onward every C5 occurrence either restates the r04--r09 trace or applies
+Theorem~\ref{thm:v470-r09-c5-bounded-operator-theorem}; the r86 inventory
+(\S\ref{subsec:r86-collar-inventory}) lists Definition~\ref{def:v470-r09-bounded-c5-operator-domain}
+as the origin of \(\mathcal U_5^{\rm bd}\) and states that everything in it is inherited.  The
+only occurrences that use the word ``calibrated'' concern the relay coupling \(\kappa=3/4\) of
+the comfort-calibrated clock seed \((N,\kappa,G)=(5,3/4,1)\), a different parameter, chosen with
+positive margin above the requirement \(\kappa\ge11/20\); no line of the source identifies
+\(\kappa\) with the C5 ratio.  \(\square\)
+
+\paragraph{Remark (why a single projection does not explain the factor).}
+The working note observes that an orthogonal least-squares correction \(r'=r-d\) with
+\(\langle r-d,d\rangle=0\) gives \(\|r'\|^2=\|r\|^2-\|d\|^2\), hence the score ratio \(3/4\) when
+the removed component carries one quarter of the residual energy.  This explains one step at
+most: the projection is idempotent, so applying it again changes nothing, and a geometric
+recurrence would need a refreshed fit direction with a new one-quarter identity at every stage.
+The source declares neither.  The remark is recorded as a constraint on any future derivation,
+not as a candidate mechanism.
+
+\subsection*{r94 what the detector stage determines}
+\label{subsec:r94-detector-stage-interval}
+
+r86 computes the detector stage from the factor
+(\S\ref{subsec:r86-threshold-function}).  The converse direction is not recorded there.
+
+\paragraph{Theoremlet r94.2.}
+Let \(\Phi^{(n)}=q^n\) with \(q\in(0,1)\) and detector threshold \(\theta=1/256\).  The first
+stage with \(\Phi^{(n)}\le\theta\) equals \(20\) if and only if
+\[
+\Bigl(\tfrac1{256}\Bigr)^{1/19}<q\le\Bigl(\tfrac1{256}\Bigr)^{1/20},
+\qquad\text{numerically}\qquad
+0.746879\ldots<q\le0.757858\ldots .
+\]
+Hence the recorded detector stage \(n=20\) is consistent with \(q=3/4\) but does not single it
+out: every factor in a half-open interval of width \(0.01098\ldots\) produces the same stage.
+
+\paragraph{Proof sketch.}
+For \(q\in(0,1)\) the sequence \(q^n\) is strictly decreasing, so the first crossing is at
+stage \(20\) exactly when \(q^{20}\le1/256<q^{19}\).  Taking the \(19\)th and \(20\)th roots gives
+the interval.  For \(q=3/4\) the exact rational check is
+\((3/4)^{19}=0.004228\ldots>1/256\ge0.003171\ldots=(3/4)^{20}\), as in the remark to
+Theoremlet r86.1.  \(\square\)
+
+\paragraph{Illustration from the r05 ledger.}
+The tolerated collar row \(Z_5^{\rm collar}\) of
+Definition~\ref{def:v470-r05-finite-c5-iteration-ledger} has ratio \((5/8)/(3/4)=5/6\).  Iterated
+at that ratio the score would first reach \(1/256\) at stage \(31\), not \(20\).  The stage
+\(n=20\) therefore records the choice of the strict row \(Z_5^{\rm bd2}\) over the tolerated row,
+which r05 makes by minimality, and not a property of the collar as such.  The figures \(20\)
+and \(31\) were checked by iterating in exact rational arithmetic.
+
+\subsection*{r94 which results depend on the exact value}
+\label{subsec:r94-value-dependence}
+
+\[
+\begin{array}{l|l}
+\text{holds for every } q\in(0,1) & \text{depends on } q=3/4 \text{ or the r94.2 interval}\\
+\hline
+\text{finite positivity, Lem.~\ref{lem:v470-r11-finite-positive-guard}}
+ & \text{stage } n=20 \text{ at } \theta=1/256 \text{ (interval)}\\
+\text{limit zero, Thm.~\ref{thm:v470-r09-c5-bounded-operator-theorem}}
+ & \text{halving cost } \ln2/\ln(4/3) \text{ of r86.1}\\
+\text{finite-zero exclusion, Theoremlet r86.2}
+ & \text{instances } c_\star(1),\dots,c_\star(5) \text{ of r88.1}\\
+\text{subtractive obstruction, Theoremlet r88.2} & \\
+\text{r88 shape (iii): } (\alpha),(\beta),(\delta) &
+ \text{r88 shape (iii): } (\gamma) \text{ (interval)}
+\end{array}
+\]
+r86.2 already notes that the exclusion depends only on \(q>0\).  r94 extends that observation to
+the whole status picture: none of the structural conclusions of r86 and r88 uses the particular
+value, and the one guarded claim that mentions it,
+\(C5_{\rm det/eff}\) at \(\theta=1/256\) after \(n=20\), needs only the interval of
+Theoremlet r94.2.
+
+This is the same situation r88 records for the subtractive channel
+(\S\ref{subsec:r88-free-parameter-trap}): a value that is fixed by declaration rather than by an
+independent structural rule carries the content of the declaration, not of a derivation.  For
+\(q\) this is harmless, because no guarded conclusion depends on more than the interval; it
+becomes relevant only if a later layer wants to treat \(3/4\) itself as a physical or
+geometric constant.
+
+\subsection*{r94 ledger and guard update}
+\label{subsec:r94-ledger-guard}
+
+\[
+R_{\rm prov}^{r94}=(1,0,0)
+\]
+for (independent derivation of the factor \(3/4\) not available, detector-stage interval
+determined, value-dependence of the C5 and r86/r88 results sorted).  The first component is
+an open provenance item.  It is not an obstruction, it does not enter the r48 branch queue, and
+none of the guarded claims depends on closing it.
+
+r94 spends no guard and changes no status:
+\[
+R_{\rm glob}^{(r94,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{r94}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The admissible claim \(C5_{\rm det/eff}\) at \(\theta=1/256\) after \(n=20\) is unchanged.  The
+layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
 \end{document}

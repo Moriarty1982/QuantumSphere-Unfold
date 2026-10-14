@@ -48,6 +48,6 @@ ungespendet.
 ## Was daraus folgt
 
 1. **Doppelt:** Die Finite-Null-Ausschlüsse der Analyse sind durch r86.2 und r88 abgedeckt. Kanonisch sind die Runden.
-2. **Neu und übernehmbar:** die Herkunftsprüfung der 3/4 und die Intervallaussage zu `q`. Beide sind guard-neutral und könnten als eigene Runde (r94) in den Monolithen aufgenommen werden.
+2. **Neu und übernehmbar:** die Herkunftsprüfung der 3/4 und die Intervallaussage zu `q`. Beide sind guard-neutral und als **r94** in den Monolithen aufgenommen (`sec:r94-c5-factor-provenance`).
 3. **Zu korrigieren:** In `OP5_QAM_Residual_Lift.tex` die Bezeichnung „compressed“ für `Δ_γ < 1/5` mit einem Verweis auf r92 versehen. Das sollte auf GitHub geschehen, wo die Datei gepflegt wird.
 4. **Offen wie zuvor:** Form (iii) aus r88. Die Grenzwertlinie der Analyse beantwortet sie nicht.
