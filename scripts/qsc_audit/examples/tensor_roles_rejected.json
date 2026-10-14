@@ -1,0 +1,22 @@
+{
+  "schema": "qam-role-audit/2",
+  "metadata": {"description": "Negative controls: raw same-variance pairing, mixed primitive tensor, unknown guard, out-of-universe mask."},
+  "spaces": {"V": {"dimension": 3}},
+  "objects": {
+    "X": {"kind": "state", "payload": {"symbol": "X"}, "indices": {
+      "alpha": {"label": "alpha", "side": "back", "variance": "upper", "role": "structure", "space": "V"}
+    }},
+    "Y": {"kind": "state", "payload": {"symbol": "Y"}, "indices": {
+      "beta": {"label": "beta", "side": "back", "variance": "upper", "role": "structure", "space": "V"}
+    }},
+    "R": {"kind": "readout", "payload": {"symbol": "R"}, "indices": {}}
+  },
+  "guards": {"admissibility_pending": {"status": null, "evidence": "Structural admissibility has not been supplied."}},
+  "mask_universes": {"menu": ["angle", "residual"]},
+  "operations": [
+    {"id": "raw_upper_pair", "type": "contract", "guards": [], "left": {"object": "X", "index": "alpha"}, "right": {"object": "Y", "index": "beta"}},
+    {"id": "mixed_primitive", "type": "tensor_product", "guards": [], "left": "X", "right": "R"},
+    {"id": "pending_admissibility", "type": "tensor_product", "guards": ["admissibility_pending"], "left": "X", "right": "Y"},
+    {"id": "outside_universe", "type": "mask", "guards": [], "universe": "menu", "operator": "union", "left": 4, "right": 1}
+  ]
+}

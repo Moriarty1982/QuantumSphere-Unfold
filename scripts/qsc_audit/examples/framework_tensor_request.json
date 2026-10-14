@@ -1,0 +1,99 @@
+{
+  "id": "audit_framework_tensor_roles",
+  "instruction": "SCRUB",
+  "guards": [],
+  "arguments": {
+    "view": "tensor_roles",
+    "operations": [
+      {
+        "id": "sandwich_action",
+        "type": "contract",
+        "guards": [],
+        "left": {
+          "object": "T",
+          "index": "nu"
+        },
+        "right": {
+          "object": "B",
+          "index": "nu"
+        }
+      },
+      {
+        "id": "sandwich_readout",
+        "type": "contract",
+        "guards": [],
+        "left": {
+          "object": "A",
+          "index": "mu"
+        },
+        "right": {
+          "object": "T",
+          "index": "mu"
+        }
+      },
+      {
+        "id": "active_comparison",
+        "type": "compare",
+        "guards": [],
+        "left": {
+          "object": "X",
+          "index": "alpha"
+        },
+        "right": {
+          "object": "Y",
+          "index": "beta"
+        },
+        "comparison": "G",
+        "comparison_slots": [
+          "alpha",
+          "beta"
+        ]
+      },
+      {
+        "id": "state_tensor",
+        "type": "tensor_product",
+        "guards": [],
+        "left": "X",
+        "right": "Y",
+        "admissibility_relation": "XY_admissible"
+      },
+      {
+        "id": "menu_union",
+        "type": "mask",
+        "guards": [],
+        "universe": "readout_menu",
+        "operator": "union",
+        "left": 1,
+        "right": 2
+      },
+      {
+        "id": "menu_complement",
+        "type": "mask",
+        "guards": [],
+        "universe": "readout_menu",
+        "operator": "complement",
+        "left": 1
+      },
+      {
+        "id": "selected_readout",
+        "type": "mixed_readout",
+        "guards": [
+          "example_readout_compatibility"
+        ],
+        "universe": "readout_menu",
+        "mask": 1,
+        "components": [
+          {
+            "object": "R",
+            "readout_kind": "angle"
+          },
+          {
+            "object": "S",
+            "readout_kind": "residual"
+          }
+        ],
+        "aggregation": "declared_mu"
+      }
+    ]
+  }
+}

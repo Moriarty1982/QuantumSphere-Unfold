@@ -1,0 +1,43 @@
+{
+  "schema": "qam-role-audit/2",
+  "metadata": {"description": "Symbolic examples from the Companion role grammar; guards are example declarations."},
+  "spaces": {"V": {"dimension": 3}},
+  "objects": {
+    "X": {"kind": "state", "payload": {"symbol": "X"}, "indices": {
+      "alpha": {"label": "alpha", "side": "back", "variance": "upper", "role": "structure", "space": "V"}
+    }},
+    "Y": {"kind": "state", "payload": {"symbol": "Y"}, "indices": {
+      "beta": {"label": "beta", "side": "back", "variance": "upper", "role": "structure", "space": "V"}
+    }},
+    "G": {"kind": "comparison", "payload": {"symbol": "G", "meaning": "declared comparison, not numerically evaluated"}, "indices": {
+      "alpha": {"label": "alpha", "side": "back", "variance": "lower", "role": "structure", "space": "V"},
+      "beta": {"label": "beta", "side": "back", "variance": "lower", "role": "structure", "space": "V"}
+    }},
+    "A": {"kind": "readout", "payload": {"symbol": "A"}, "indices": {
+      "mu": {"label": "mu", "side": "front", "variance": "lower", "role": "readout", "space": "V"}
+    }},
+    "T": {"kind": "operator", "payload": {"symbol": "T"}, "indices": {
+      "mu": {"label": "mu", "side": "back", "variance": "upper", "role": "action", "space": "V"},
+      "nu": {"label": "nu", "side": "back", "variance": "lower", "role": "operator", "space": "V"}
+    }},
+    "B": {"kind": "state", "payload": {"symbol": "B"}, "indices": {
+      "nu": {"label": "nu", "side": "back", "variance": "upper", "role": "structure", "space": "V"}
+    }},
+    "R": {"kind": "readout", "payload": {"symbol": "R", "data": [1, 2]}, "indices": {}},
+    "S": {"kind": "readout", "payload": {"symbol": "S", "data": [3, 4]}, "indices": {}}
+  },
+  "guards": {
+    "example_tensor_admissibility": {"status": true, "evidence": "Example declaration only: assume QTensorAdm(X,Y)."},
+    "example_readout_compatibility": {"status": true, "evidence": "Example declaration only: assume compatibility of selected components."}
+  },
+  "mask_universes": {"readout_menu": ["angle", "residual"]},
+  "operations": [
+    {"id": "sandwich_action", "type": "contract", "guards": [], "left": {"object": "T", "index": "nu"}, "right": {"object": "B", "index": "nu"}},
+    {"id": "sandwich_readout", "type": "contract", "guards": [], "left": {"object": "A", "index": "mu"}, "right": {"object": "T", "index": "mu"}},
+    {"id": "active_comparison", "type": "compare", "guards": [], "left": {"object": "X", "index": "alpha"}, "right": {"object": "Y", "index": "beta"}, "comparison": "G", "comparison_slots": ["alpha", "beta"]},
+    {"id": "state_tensor", "type": "tensor_product", "guards": ["example_tensor_admissibility"], "left": "X", "right": "Y"},
+    {"id": "menu_union", "type": "mask", "guards": [], "universe": "readout_menu", "operator": "union", "left": 1, "right": 2},
+    {"id": "menu_complement", "type": "mask", "guards": [], "universe": "readout_menu", "operator": "complement", "left": 1},
+    {"id": "selected_readout", "type": "mixed_readout", "guards": ["example_readout_compatibility"], "universe": "readout_menu", "mask": 1, "components": [{"object": "R", "readout_kind": "angle"}, {"object": "S", "readout_kind": "residual"}], "aggregation": "declared_mu"}
+  ]
+}
