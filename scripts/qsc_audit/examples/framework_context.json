@@ -1,0 +1,221 @@
+{
+  "schema": "qsc-framework-interface/2",
+  "scope": {
+    "regime": "local",
+    "description": "Conceptual QAM/MML/MMA interface; declared assumptions only."
+  },
+  "provenance": {
+    "source": "Quantum Sphaera Companion role and store definitions",
+    "parent_context_hash": null
+  },
+  "qam": {
+    "spaces": {
+      "V": {
+        "dimension": 3
+      }
+    },
+    "objects": {
+      "X": {
+        "kind": "state",
+        "payload": {
+          "symbol": "X"
+        },
+        "indices": {
+          "alpha": {
+            "label": "alpha",
+            "side": "back",
+            "variance": "upper",
+            "role": "structure",
+            "space": "V"
+          }
+        },
+        "guards": [],
+        "source": "Companion symbolic example"
+      },
+      "Y": {
+        "kind": "state",
+        "payload": {
+          "symbol": "Y"
+        },
+        "indices": {
+          "beta": {
+            "label": "beta",
+            "side": "back",
+            "variance": "upper",
+            "role": "structure",
+            "space": "V"
+          }
+        },
+        "guards": [],
+        "source": "Companion symbolic example"
+      },
+      "G": {
+        "kind": "comparison",
+        "payload": {
+          "symbol": "G",
+          "meaning": "declared comparison, not numerically evaluated"
+        },
+        "indices": {
+          "alpha": {
+            "label": "alpha",
+            "side": "back",
+            "variance": "lower",
+            "role": "structure",
+            "space": "V"
+          },
+          "beta": {
+            "label": "beta",
+            "side": "back",
+            "variance": "lower",
+            "role": "structure",
+            "space": "V"
+          }
+        },
+        "guards": [],
+        "source": "Companion symbolic example"
+      },
+      "A": {
+        "kind": "readout",
+        "payload": {
+          "symbol": "A"
+        },
+        "indices": {
+          "mu": {
+            "label": "mu",
+            "side": "front",
+            "variance": "lower",
+            "role": "readout",
+            "space": "V"
+          }
+        },
+        "guards": [],
+        "source": "Companion symbolic example"
+      },
+      "T": {
+        "kind": "operator",
+        "payload": {
+          "symbol": "T"
+        },
+        "indices": {
+          "mu": {
+            "label": "mu",
+            "side": "back",
+            "variance": "upper",
+            "role": "action",
+            "space": "V"
+          },
+          "nu": {
+            "label": "nu",
+            "side": "back",
+            "variance": "lower",
+            "role": "operator",
+            "space": "V"
+          }
+        },
+        "guards": [],
+        "source": "Companion symbolic example"
+      },
+      "B": {
+        "kind": "state",
+        "payload": {
+          "symbol": "B"
+        },
+        "indices": {
+          "nu": {
+            "label": "nu",
+            "side": "back",
+            "variance": "upper",
+            "role": "structure",
+            "space": "V"
+          }
+        },
+        "guards": [],
+        "source": "Companion symbolic example"
+      },
+      "R": {
+        "kind": "readout",
+        "payload": {
+          "symbol": "R",
+          "data": [
+            1,
+            2
+          ]
+        },
+        "indices": {},
+        "guards": [],
+        "source": "Companion symbolic example"
+      },
+      "S": {
+        "kind": "readout",
+        "payload": {
+          "symbol": "S",
+          "data": [
+            3,
+            4
+          ]
+        },
+        "indices": {},
+        "guards": [],
+        "source": "Companion symbolic example"
+      },
+      "P": {
+        "kind": "witness",
+        "payload": {
+          "register": "rho",
+          "meaning": "open residual witness"
+        },
+        "indices": {},
+        "guards": [],
+        "source": "Framework concept example"
+      }
+    },
+    "guards": {
+      "example_tensor_admissibility": {
+        "status": true,
+        "evidence": "Example declaration only: assume QTensorAdm(X,Y)."
+      },
+      "example_readout_compatibility": {
+        "status": true,
+        "evidence": "Example declaration only: assume compatibility of selected components."
+      }
+    },
+    "active_guards": [],
+    "mask_universes": {
+      "readout_menu": [
+        "angle",
+        "residual"
+      ]
+    },
+    "relations": {
+      "XY_admissible": {
+        "predicate": "QTensorAdm",
+        "arguments": {
+          "left": "X",
+          "right": "Y"
+        },
+        "status": true,
+        "evidence": "Example assumption, not independently proved.",
+        "guards": [
+          "example_tensor_admissibility"
+        ]
+      },
+      "XY_equivalent": {
+        "predicate": "QClEq",
+        "arguments": {
+          "source": "X",
+          "target": "Y"
+        },
+        "status": null,
+        "evidence": "Equivalence remains an open statement despite distinct representations.",
+        "guards": []
+      }
+    },
+    "residuals": {
+      "rho": {
+        "witness": "P",
+        "status": "open",
+        "evidence": "No zero-residual claim supplied."
+      }
+    }
+  }
+}

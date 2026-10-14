@@ -1,0 +1,8 @@
+{
+  "id": "inspect_framework",
+  "instruction": "EXPORT",
+  "guards": [],
+  "arguments": {
+    "view": "framework"
+  }
+}
