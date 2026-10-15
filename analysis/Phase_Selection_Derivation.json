@@ -1,0 +1,169 @@
+{
+  "status": "explicit minimal-HC substitution and conditional selection rules; no native numerical phase prediction",
+  "explicit_minimal_HC_audit": {
+    "native_identity": "Lambda=(rho+sigma) diag(G*G,F*F) for M=[[A,F],[G,D]]",
+    "norm_independent_on_shell_result": "H_C=Lambda implies R=0 and U_HC=0 for every admissible phase",
+    "exact_closure_result": "[M,P]=0 implies Lambda=H_C=0 in the minimal source system",
+    "conditional_bridge_not_source_identification": "F=s_M B*, G=s_M B; s_M is NOT the field coupling mu",
+    "comparison_for_quartic_and_source_checks": "positive finite carrier; Hilbert-Schmidt (Frobenius) matrix norm squared",
+    "cyclic_matrix_identity": "B^2=(a^2+2r^2)I+(2ar exp(i theta)+r^2 exp(-2i theta))U+adjoint",
+    "affine_cosine_matrix_residual_not_derived": true,
+    "trace_B4": "3a^4+36a^2r^2+18r^4+24ar^3 cos(Phi)",
+    "normalized_trace_B4_coefficients": {
+      "constant": 0.7083333333333334,
+      "cos_phi": 0.23570226039551587
+    },
+    "frozen_isotropic_HC_penalty": "constant+48 lambda_H t^2 a r^3 cos(Phi), t=(rho+sigma)s_M^2",
+    "frozen_isotropic_minimum_in_chamber": "zero-root boundary unless t=0, which is phase blind",
+    "source_free_relaxation_check": {
+      "illustrative_phase_radians": 0.5,
+      "matching_residual_norm": 0.0,
+      "effective_penalty": 0.0,
+      "frozen_H_second_derivative_at_match": 0.03835716131444579,
+      "elimination_Hessian_subtraction": 0.03835716131444579,
+      "relaxed_second_derivative": 0.0,
+      "commutator_norm": 1.4142135623730951,
+      "bridge_family_is_not_exactly_closed": true,
+      "H_equals_Lambda_is_not_by_itself_exact_closure": true,
+      "positive_H_example": true
+    },
+    "other_action_terms": {
+      "H_variation": "probe bilinear + curvature variation - 2 lambda_H <H-Lambda,delta H> = 0",
+      "probe_term": "bar(Psi) (i kappa Gamma.n-gamma) delta H Psi",
+      "curvature_term_after_boundary_free_integration": "kappa n_nu Tr[(D_mu^ad F^{mu nu}) delta H]",
+      "H_equals_Lambda_requires_other_H_forces_to_cancel": true,
+      "full_variational_equivalence_needs_this_additional_condition": true
+    },
+    "conditional_static_source_elimination": {
+      "hypotheses": "E=lambda_H||H-Lambda||_F^2+<J,H>; J fixed Hermitian; unconstrained or interior H variation",
+      "H_star": "Lambda-J/(2 lambda_H)",
+      "effective_energy": "<J,Lambda>-||J||_F^2/(4 lambda_H)",
+      "isotropic_block_source_has_no_phase_force": true,
+      "generation_resolved_phase_force": "-(4t/3) Im[j (ar exp(i theta)-r^2 exp(-2i theta))], j=Tr[(J11+J22)U]",
+      "native_state_or_current_not_computed": true,
+      "illustrative_source_energy_at_phi_half": -0.6075
+    },
+    "conclusion": "The minimal HC penalty alone does not derive a nontrivial numerical phase or the earlier residual coefficients."
+  },
+  "source_action_audit": {
+    "source": "sources/research/parts/v470/10_sphaera_and_physics.tex",
+    "label": "thm:variational-form",
+    "explicit_tensor_term": "-bar(Psi) c_T T Psi",
+    "HC_penalty": "lambda_H ||H_C-Lambda[M,P]||^2",
+    "T_as_external_operator_has_no_independent_Euler_Lagrange_equation": true,
+    "T_as_free_multiplier_gives_bilinear_constraint_not_T_value": true,
+    "fixed_other_fields_zero_probe_action_is_phase_independent": true,
+    "could_be_closed_by_T_as_evaluated_function_of_existing_fields": true,
+    "no_claim_about_complete_quantum_effective_action": true
+  },
+  "spectral_invariants": {
+    "assumptions": "fixed Hermitian cyclic family, radius a/sqrt(2), no extra generation spurion",
+    "determinant": "a^3-3*a*r^2+2*r^3*cos(Phi)",
+    "positive_root_chamber_Phi": [
+      -0.7853981633974483,
+      0.7853981633974483
+    ],
+    "trace_harmonics": {
+      "1": {
+        "constant": 1.2247448713915892,
+        "cos_phi": 0.0,
+        "cos_2phi": 0.0,
+        "max_sine_or_higher_harmonic": 0.0
+      },
+      "2": {
+        "constant": 1.0000000000000004,
+        "cos_phi": -3.4066002673796926e-17,
+        "cos_2phi": -5.474789215068275e-18,
+        "max_sine_or_higher_harmonic": 2.220446049250313e-16
+      },
+      "3": {
+        "constant": 0.8164965809277264,
+        "cos_phi": 0.1443375672974065,
+        "cos_2phi": 1.2969917612456195e-17,
+        "max_sine_or_higher_harmonic": 1.5700924586837752e-16
+      },
+      "4": {
+        "constant": 0.7083333333333337,
+        "cos_phi": 0.23570226039551592,
+        "cos_2phi": 7.928287815805571e-18,
+        "max_sine_or_higher_harmonic": 7.979727989493313e-17
+      },
+      "5": {
+        "constant": 0.6293827811317891,
+        "cos_phi": 0.3007032652029302,
+        "cos_2phi": -8.616592021099855e-18,
+        "max_sine_or_higher_harmonic": 1.0408340855860843e-16
+      },
+      "6": {
+        "constant": 0.5694444444444449,
+        "cos_phi": 0.34373246307679417,
+        "cos_2phi": 0.003472222222222223,
+        "max_sine_or_higher_harmonic": 1.1882855810441129e-16
+      }
+    },
+    "first_nonlinear_phase_spectral_polynomial_degree": 6,
+    "not_a_universal_bound_with_extra_generation_tensors": true
+  },
+  "HC_penalty_selection_rule": {
+    "general_derivative": "U'=lambda_H [2 Re(R'* G R)+R* G' R]",
+    "extra_reduction_assumptions": "R=R0+cos(Phi)R1; constant positive G; lambda_H>0; other phase forces vanish",
+    "cosine_stationary": "-Re(R1* G R0)/(R1* G R1)",
+    "native_R0_R1_and_G_not_extracted": true,
+    "minimal_native_residual_vanishes_when_H_matches_Lambda": true,
+    "two_harmonic_equivalent": "lambda1=2 lambda_H Re(R1*G R0); lambda2=lambda_H(R1*G R1)/2",
+    "unfitted_illustrative_residual_selection": {
+      "status": "stable_interior_conditional",
+      "phase_radians": 0.6435011087932843,
+      "conjugate_phase_radians": -0.6435011087932843,
+      "theta_positive_branch_radians": 2.3088954719909567,
+      "unconstrained_cosine": 0.8,
+      "selected_cosine": 0.8,
+      "minimum_penalty": 0.04000000000000001,
+      "interior_phase_curvature": 0.7199999999999996,
+      "first_harmonic_coefficient": -1.6,
+      "second_harmonic_coefficient": 0.5
+    }
+  },
+  "two_harmonic_completion": {
+    "formula": "V=lambda1*cos(Phi)+lambda2*cos(2*Phi)",
+    "stationary_rule": "cos(Phi)=-lambda1/(4*lambda2)",
+    "interior_positive_chamber_ratio_interval": [
+      -4,
+      -2.8284271247461903
+    ],
+    "lambda2_must_be_positive": true,
+    "is_not_already_a_source_potential": true
+  },
+  "historical_target_condition_not_prediction": {
+    "baseline_assumed_phase_radians": 0.6743854663918256,
+    "benchmark_inverted_phase_radians": 0.6666874590034055,
+    "baseline_equivalent_lambda1_over_lambda2": -3.1243632963738817,
+    "benchmark_required_lambda1_over_lambda2": -3.143497613015586,
+    "relative_ratio_shift": 0.006124229107386858,
+    "required_residual_projection_cosine": 0.7858744032538965,
+    "target_phase_curvature_per_lambda2": 1.5296056892413286,
+    "masses_enter_only_this_diagnostic_not_selection_functions": true
+  },
+  "minimal_trimer_ground_energy_test": {
+    "scope": "fixed scalar link moduli, simple lowest one-excitation level",
+    "analytic_ground_energy_derivative": -0.0019363231018149545,
+    "full_matrix_derivative": -0.0019363231018149536,
+    "minimum_loop_phase_mod_2pi": 3.141592653589793,
+    "endpoint_low_energies": [
+      0.41377232669141994,
+      0.40401906218469114
+    ],
+    "not_the_native_quantum_vacuum": true
+  },
+  "scale_boundary": {
+    "mu_product": "sqrt(2)*abs(chi)*||T_perp1||_F under the previous canonical equal-leg assumptions",
+    "phase_selection_alone_does_not_fix_mu_or_Delta": true,
+    "radius_and_generation_embedding_still_assumed": true
+  },
+  "remaining_native_derivation": [
+    "derive the generation tensor from existing carrier/field data, or give its dynamics",
+    "evaluate the non-penalty probe/curvature forces; the minimal matching residual alone is zero on shell",
+    "retain other phase-dependent forces and metric derivatives in the full stationarity equation",
+    "fix radial/kinetic and gap/scale data independently of historical masses"
+  ]
+}

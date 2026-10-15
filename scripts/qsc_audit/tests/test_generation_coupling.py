@@ -302,3 +302,178 @@ class GenerationCouplingTests(unittest.TestCase):
         omega = np.diag([1.0, 2.0, 3.0])
         q = adjoint(omega) @ omega
         self.assertGreater(abs(spectral_ratio(omega)-spectral_ratio(q)), 0.02)
+
+    def test_minimal_penalty_terms_coincide_for_nonhermitian_millennium_matrix(self):
+        m = np.arange(36).reshape(6, 6)/13+1j*np.eye(6, k=1)
+        c = m @ self.p-self.p @ m
+        e = (np.eye(6)-self.p) @ m @ self.p+self.p @ m @ (np.eye(6)-self.p)
+        self.assertGreater(np.linalg.norm(m-adjoint(m)), 1)
+        self.assertMatrixEqual(adjoint(c) @ c, adjoint(e) @ e)
+
+    def test_penalty_identity_requires_the_declared_orthogonal_metric(self):
+        p = np.array([[1.0, 1.0], [0.0, 0.0]])
+        m = np.array([[1.0, 2.0], [3.0, 4.0]])
+        self.assertMatrixEqual(p @ p, p)
+        c = m @ p-p @ m
+        e = (np.eye(2)-p) @ m @ p+p @ m @ (np.eye(2)-p)
+        self.assertGreater(np.linalg.norm(adjoint(c) @ c-adjoint(e) @ e), 1)
+
+    def test_minimal_penalty_compresses_to_millennium_transition_gram(self):
+        m = np.arange(36).reshape(6, 6)/17+1j*np.eye(6, k=-2)
+        c = m @ self.p-self.p @ m
+        rho, sigma, reference = 2.0, 0.7, 3.0
+        h = (rho+sigma)*adjoint(c) @ c
+        q = defect_gram(self.p, m/reference, self.s)[1]
+        self.assertMatrixEqual(adjoint(self.s) @ h @ self.s,
+                               (rho+sigma)*reference**2*q)
+        self.assertMatrixEqual(h @ self.p, self.p @ h)
+        self.assertMatrixEqual(defect_gram(self.p, h, self.s)[1], np.zeros((3, 3)))
+
+    def test_closed_millennium_star_polynomial_cannot_supply_defect_clock(self):
+        m = np.block([[np.array([[1, 2, 0], [0, 3, 1], [0, 0, 4]]), np.zeros((3, 3))],
+                      [np.zeros((3, 3)), np.diag([5, 6, 7])]])
+        r = np.eye(6)+m @ m+1j*adjoint(m) @ m
+        self.assertMatrixEqual(m @ self.p, self.p @ m)
+        self.assertMatrixEqual(defect_gram(self.p, r, self.s)[1], np.zeros((3, 3)))
+
+    def test_millennium_closure_does_not_imply_an_independent_clock_is_closed(self):
+        m = np.eye(6)
+        r = np.block([[np.zeros((3, 3)), np.eye(3)], [np.eye(3), np.zeros((3, 3))]])
+        self.assertMatrixEqual(m @ self.p, self.p @ m)
+        self.assertMatrixEqual(defect_gram(self.p, r, self.s)[1], np.eye(3))
+
+    def test_simple_clock_spectrum_leaves_joint_orientation_undetermined(self):
+        values = np.array([1.0, 2.0, 3.0, 4.0, 6.0, 8.0])
+        grams = []
+        for theta in (np.full(3, math.pi/12), np.array([math.pi/12, math.pi/8, math.pi/4])):
+            c, s = np.diag(np.cos(theta)), np.diag(np.sin(theta))
+            o = np.block([[c, -s], [s, c]])
+            r = o @ np.diag(values) @ adjoint(o)
+            self.assertMatrixEqual(np.linalg.eigvalsh(r), values)
+            q = defect_gram(self.p, r, self.s)[1]
+            expected = (values[:3]-values[3:])**2*np.sin(2*theta)**2/4
+            self.assertMatrixEqual(q, np.diag(expected))
+            self.assertGreater(min(np.linalg.eigvalsh(q)), 0)
+            grams.append(q)
+        self.assertGreater(abs(spectral_ratio(grams[0])-spectral_ratio(grams[1])), 0.02)
+
+    def test_simultaneous_frame_and_seed_changes_only_conjugate_and_scale_gram(self):
+        rng = np.random.default_rng(48101)
+        f = np.linalg.qr(rng.normal(size=(6, 6))+1j*rng.normal(size=(6, 6)))[0]
+        v = np.linalg.qr(rng.normal(size=(3, 3))+1j*rng.normal(size=(3, 3)))[0]
+        t = np.eye(6)[:, :3] @ np.diag([0.6, 0.8, 0.7])
+        t += np.eye(6)[:, 3:] @ np.diag(np.sqrt(1-np.array([0.6, 0.8, 0.7])**2))
+        s0 = closed_seeds(self.p, t)
+        r0 = rng.normal(size=(6, 6))+1j*rng.normal(size=(6, 6))
+        b0, q0 = defect_gram(self.p, r0, s0)
+        scale, phase = 2.7, np.exp(0.91j)
+        pf, tf, rf = f @ self.p @ adjoint(f), f @ t @ v, scale*phase*f @ r0 @ adjoint(f)
+        sf = closed_seeds(pf, tf)
+        bf, qf = defect_gram(pf, rf, sf)
+        self.assertMatrixEqual(sf, f @ s0 @ v)
+        self.assertMatrixEqual(bf, scale*phase*f @ b0 @ v)
+        self.assertMatrixEqual(qf, scale**2*adjoint(v) @ q0 @ v)
+        self.assertAlmostEqual(spectral_ratio(qf), spectral_ratio(q0))
+
+    def test_one_scalar_complementary_channel_has_at_most_one_mass(self):
+        b = np.array([[1.0, 2.0, 3.0]])
+        q = adjoint(b) @ b
+        self.assertEqual(np.linalg.matrix_rank(b), 1)
+        self.assertEqual(np.linalg.matrix_rank(q), 1)
+        self.assertMatrixEqual(np.linalg.eigvalsh(q), [0.0, 0.0, 14.0])
+
+    def test_operator_valued_channel_can_carry_three_independent_outputs(self):
+        b = np.diag([0.2, 0.5, 0.8])
+        self.assertEqual(np.linalg.matrix_rank(adjoint(b) @ b), 3)
+
+    def test_schur_equation_recovers_exact_light_eigenvectors(self):
+        a = np.diag([0.1, 0.2, 0.3])
+        h = np.diag([7.0, 9.0, 12.0])
+        v = np.array([[0.2, 0.1j, 0.0], [0.1, 0.3, 0.2], [0.0, 0.1, 0.4]])
+        omega = np.block([[a, adjoint(v)], [v, h]])
+        values, states = np.linalg.eigh(omega)
+        for i in range(3):
+            value, x, y = values[i], states[:3, i], states[3:, i]
+            effective = a-adjoint(v) @ np.linalg.solve(h-value*np.eye(3), v)
+            self.assertMatrixEqual(effective @ x, value*x)
+            self.assertMatrixEqual(y, -np.linalg.solve(h-value*np.eye(3), v @ x))
+
+    def test_schur_zero_energy_error_obeys_the_gap_bound(self):
+        h = np.diag([4.0, 7.0, 10.0])
+        v = np.array([[0.2, 0.1j, 0.0], [0.1, 0.3, 0.2], [0.0, 0.1, 0.4]])
+        for value in (-0.3, 0.0, 0.7):
+            difference = adjoint(v) @ (np.linalg.inv(h-value*np.eye(3))-np.linalg.inv(h)) @ v
+            bound = np.linalg.norm(v, ord=2)**2*abs(value)/(4*(4-abs(value)))
+            self.assertLessEqual(np.linalg.norm(difference, ord=2), bound+1e-14)
+
+    def test_nonflat_gap_gives_a_weighted_gram_not_a_common_scale(self):
+        b = np.diag([1.0, 2.0, 3.0])
+        h = np.diag([2.0, 4.0, 8.0])
+        weighted = adjoint(b) @ np.linalg.solve(h, b)
+        q = adjoint(b) @ b
+        self.assertMatrixEqual(np.diag(weighted)/np.diag(q), [0.5, 0.25, 0.125])
+        self.assertGreater(abs(spectral_ratio(weighted)-spectral_ratio(q)), 0.01)
+
+    def test_flat_gap_exact_light_mass_magnitudes_match_block_spectrum(self):
+        b = cyclic_root(0.7, 0.12, 0.4)
+        q = adjoint(b) @ b
+        gap, mu = 7.0, 0.8
+        v = mu*b
+        omega = np.block([[np.zeros((3, 3)), adjoint(v)], [v, gap*np.eye(3)]])
+        values = np.linalg.eigvalsh(omega)
+        qvalues = np.linalg.eigvalsh(q)
+        masses = 2*mu**2*qvalues/(np.sqrt(gap**2+4*mu**2*qvalues)+gap)
+        self.assertMatrixEqual(np.sort(-values[:3]), masses)
+        self.assertTrue(np.all(values[:3] < 0))
+        self.assertMatrixEqual(np.sort(values[3:]), gap+masses)
+
+    def test_flat_gap_light_state_complementary_weight_is_nonzero_and_controlled(self):
+        gap, mu = 5.0, 0.7
+        b = np.diag([0.2, 0.5, 0.8])
+        v = mu*b
+        omega = np.block([[np.zeros((3, 3)), adjoint(v)], [v, gap*np.eye(3)]])
+        values, states = np.linalg.eigh(omega)
+        for i in range(3):
+            mass = -values[i]
+            weight = np.sum(abs(states[3:, i])**2)
+            self.assertAlmostEqual(weight, mass/(gap+2*mass))
+            self.assertGreater(weight, 0)
+            self.assertLess(weight, 0.02)
+
+    def test_flat_gap_gram_mass_is_only_a_weak_coupling_approximation(self):
+        gap = 5.0
+        q = np.array([0.04, 0.25, 0.64])
+        errors = []
+        for mu in (0.5, 0.25):
+            exact = 2*mu**2*q/(np.sqrt(gap**2+4*mu**2*q)+gap)
+            leading = mu**2*q/gap
+            self.assertTrue(np.all(exact < leading))
+            self.assertTrue(np.all(leading-exact <= mu**4*q*q/gap**3))
+            errors.append(np.max(leading-exact))
+        self.assertGreater(errors[0]/errors[1], 15)
+
+    def test_finite_gap_correction_does_not_preserve_koide_automatically(self):
+        l = cyclic_root(1.0, 1/math.sqrt(2), 2.3)
+        q = np.linalg.eigvalsh(l @ l)
+        gap, mu = 10.0, 1.0
+        masses = 2*mu**2*q/(np.sqrt(gap**2+4*mu**2*q)+gap)
+        self.assertAlmostEqual(root_ratio(np.sqrt(q)), 2/3, places=12)
+        self.assertGreater(abs(root_ratio(np.sqrt(masses))-2/3), 1e-4)
+
+    def test_dressed_light_projector_is_not_original_strict_closure(self):
+        v = np.diag([0.2, 0.5, 0.8])
+        omega = np.block([[np.zeros((3, 3)), adjoint(v)], [v, 5*np.eye(3)]])
+        values, states = np.linalg.eigh(omega)
+        light = states[:, :3]
+        dressed = light @ adjoint(light)
+        self.assertMatrixEqual(dressed @ dressed, dressed)
+        self.assertMatrixEqual(omega @ dressed, dressed @ omega)
+        self.assertGreater(np.linalg.norm(dressed-self.p), 0.1)
+        self.assertGreater(np.linalg.norm(omega @ self.p-self.p @ omega), 0.1)
+        self.assertEqual(np.linalg.matrix_rank(v), 3)
+        self.assertTrue(np.all(values[:3] < 0))
+
+    def test_direct_closed_mass_block_can_be_nonzero_without_defect_coupling(self):
+        omega = np.diag([1.0, 2.0, 3.0, 8.0, 9.0, 10.0])
+        self.assertMatrixEqual(defect_gram(self.p, omega, self.s)[1], np.zeros((3, 3)))
+        self.assertMatrixEqual(adjoint(self.s) @ omega @ self.s, np.diag([1.0, 2.0, 3.0]))
