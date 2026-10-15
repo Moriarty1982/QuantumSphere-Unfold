@@ -1,0 +1,57 @@
+\section{Compressed Post-r54 Guarded Solve Chain: r55--r80}
+\label{sec:rc16-compressed-r55-r80-guarded-solve-chain}
+
+\noindent\textbf{Compression status.}
+The detailed r55--r80 solve-pass log is superseded, for reader-facing release purposes, by
+the r83 effective/local closure reclassification and the r84 release-scope refresh.  The
+full r55--r80 text remains in the RC16 source packet as
+\texttt{RC14\_uncompressed\_reference\_source.tex}.  This section keeps the mathematical
+endpoint and the guard state, while removing repeated no-release, no-promotion, residual,
+and handoff prose from the main PDF.
+
+\begin{theoremlet}[Post-r54 chain compression invariant]
+\label{thm:rc16-r55-r80-compression-invariant}
+The r55--r80 chain has the following release-facing invariant:
+\[
+C4_{\rm rel}^{+}\quad\wedge\quad C5_{\rm det/eff}\quad\wedge\quad
+W_{\rm clk}^{\rm loc}\quad\wedge\quad
+\mathsf C_{\rm mix}^{\rm typed,loc}\quad\wedge\quad
+0_{\rm termdata}\not\Rightarrow 0_{\rm all}.
+\]
+Equivalently, the effective/local residual vanishes in its declared layer, while the exact
+/global residual remains active:
+\[
+R_{\rm eff/local}=(0,0,0,0,0),\qquad
+R_{\rm exact/global}=(1,1,1,1,1),\qquad
+R_{\rm glob}^{+}=(0,1,1,1,1).
+\]
+The compression of the stepwise log does not alter the terminal blocker, the guard vector,
+or any forbidden global claim.
+\end{theoremlet}
+
+\noindent\textbf{Chain endpoint.}
+The compressed r55--r80 endpoint is:
+\[
+C4\text{ relative-seam neutralization in the conservative }r60^{+}\text{ grammar},
+\]
+\[
+C5\text{ detector-threshold terminality at }\theta=1/256\text{ after }n=20,
+\]
+\[
+\Delta_\gamma<1/5\Rightarrow W_{\rm clk}^{\rm loc}\text{ selector preservation},
+\]
+\[
+\mathsf C_{\rm mix}^{\rm typed}\text{ local control},\qquad
+0_{\rm termdata}\not\Rightarrow0_{\rm all}.
+\]
+Thus the chain supports guarded effective/local closure and frame-typed terminal-data
+semantics.  It does not support exact finite \(C5\) zero closure, exact all-readout
+terminality, \(C6/T2\) closure, a global photon-clock/RH theorem, or global all-readout
+closure.
+
+\noindent\textbf{Why the full log is not needed in the main PDF.}
+The removed stepwise log mainly repeated local residual vectors, no-action/no-promotion
+audits, release-gate statements, and candidate searches that terminate in the invariant
+above.  The preserved invariant is the object used by r81--r84 and by the final release
+scope.  The detailed log remains available as provenance in the source packet.
+

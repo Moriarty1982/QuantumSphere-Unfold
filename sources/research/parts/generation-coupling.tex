@@ -1,0 +1,346 @@
+\section{Generation States and a Closure-Defect Coupling}
+\label{v480:generation-coupling}
+
+This section constructs a conditional operator interface from objects
+already named in the paper: the generation slots, the closure projector
+and the shifted pacer. It provides explicit formulas, not yet evaluated
+native matrix elements or a derived Yukawa interaction. In particular,
+it separates a mass readout in fixed slots from one in coupling
+eigenstates. Neither is identified with physical lepton masses merely
+by giving it that name.
+
+\subsection{Closure-Compatible Generation States}
+\label{v480:generation-states}
+
+Use the positive-metric real Hilbert realization from
+Section~\ref{v480:hc-mass-identification}. For a nonzero odd sector,
+one may choose a unit vector $\phi_-=P_-g/\|P_-g\|$ with
+$P_-g\ne0$. The inherited Dixon dictionary
+(Theorem~\ref{thm:three-generations}) suggests the normalized seed
+slots $\phi_-\otimes e_4$, $\phi_-\otimes e_5$,
+$\phi_-\otimes e_6$. This requires a declared tensor-product metric
+and a generation-neutral extension of the real $J$-action; the
+dictionary alone does not prove that factorization in a native carrier.
+
+On the complexification of this real realization, let
+$T:\mathbb C^3\to\mathcal K$ isometrically embed those slots.
+Here $J$ denotes the complex-linear extension of the real involution,
+not an unannounced identification with the inherited anti-unitary
+convention. Realize $P=\hat P_{C_7}$ as an orthogonal closure
+projector on $\mathcal K$, commuting with this $J$ on the declared
+realization. It is \emph{not} the HC projector $C$. An action of the
+pacer on this same carrier must still be supplied; a bosonic clock
+does not automatically define its action on the probe slots.
+
+\begin{proposition}[Normalized closed generation seeds]
+\label{v480:generation-closed-seeds}
+If $G=T^*PT$ is positive definite, then
+\[
+ S=PTG^{-1/2},\qquad S^*S=I_3,\quad PS=S,\quad JS=-S.
+\]
+Thus $\psi_i=S\varepsilon_i$ are three orthonormal closed odd states,
+where $\varepsilon_i$ is the standard generation-coordinate basis.
+If $G$ has rank less than three, this construction cannot produce
+three independent closed states from these seeds.
+\end{proposition}
+\begin{proof}
+The positive inverse square root exists in the three-dimensional
+seed space. Since $P^2=P=P^*$,
+$S^*S=G^{-1/2}T^*PTG^{-1/2}=I_3$ and $PS=S$.
+Commutation with $J$ and $JT=-T$ give $JS=-S$.
+Multiplication by $P$ cannot restore a dimension lost in $PT$.
+\end{proof}
+
+The choice of $g$, the common carrier and $P$ remain native input
+obligations. If $G$ is not diagonal in the seed slots, this
+orthonormalization already mixes them; it is not a proof that the
+original octonion labels are physical mass eigenstates.
+
+\paragraph{The spectral restriction is not the new coupling.}
+The inherited proposal $D_-=L_0|_{H_-}$ must not be identified with
+the new mass coupling $D_\beta$ by its letter. On the real grading
+used here, a sector-preserving real-linear $A:H_-\to H_-$ commutes
+with $J=-I$ there. Requiring also $AJ=-JA$ forces $A=0$.
+For the inclusion $\iota:H_-\hookrightarrow H$, the correctly typed
+relation $J\iota A=-\iota A$ only records that the output is
+odd, not anticommutation. This qualifies the D1 argument in
+Theorem~\ref{thm:op2-existence}; its nonzero restriction cannot be
+borrowed as an already verified anticommuting mass coupling.
+Domain and self-adjointness questions for that spectral proposal
+are not settled by the finite construction here.
+
+\subsection{Constructing the Coupling From the Pacer and Closure}
+\label{v480:generation-defect}
+
+Fix a bounded realization of $R_\beta$ on the common carrier, or a
+declared finite matrix realization. In the inherited notation it is
+the proposed $\hat{\mathcal R}_\beta$ of
+Theorem~\ref{thm:dirac-probe}. Fix a positive reference $r_{\rm ref}$
+with the same units as $R_\beta$, and put
+$\widetilde R_\beta=R_\beta/r_{\rm ref}$. These domain/unit data
+are additional specifications, not inferred from a clock label.
+
+\begin{proposition}[A positive closure-defect readout]
+\label{v480:generation-defect-gram}
+For the closed embedding above, define
+\[
+ D_\beta=(I-P)\widetilde R_\beta P,\qquad
+ B_\beta=D_\beta S,\qquad Q_\beta=B_\beta^*B_\beta.
+\]
+Then $D_\beta S=[\widetilde R_\beta,P]S$ and
+$Q_\beta$ is positive semidefinite. Its entries are
+\[
+ (Q_\beta)_{ij}
+ =\langle (I-P)\widetilde R_\beta\psi_i,
+                 (I-P)\widetilde R_\beta\psi_j\rangle.
+\]
+For every $P\psi=\psi$,
+$\langle\psi,[\widetilde R_\beta,P]\psi\rangle=0$,
+even though $D_\beta\psi$ may be nonzero.
+\end{proposition}
+\begin{proof}
+On a closed input,
+$[\widetilde R_\beta,P]\psi=(I-P)\widetilde R_\beta\psi$,
+which is orthogonal to $\psi\in\operatorname{im}P$.
+For $v\in\mathbb C^3$,
+$\langle v,Q_\beta v\rangle=\|B_\beta v\|^2\geq0$,
+and the matrix-entry formula is the defining Gram identity.
+\end{proof}
+
+Thus the commutator \emph{expectation} used for mass in
+Proposition~\ref{prop:three-compatible-readings} vanishes on an
+exactly closed state under these projector assumptions. Replacing it
+by a transition norm is a genuine change of readout, not an equivalent
+rewriting of that inherited claim. The norm measures a tendency to
+leave the selected closure space under the pacer; it does not prove
+that a physical state actually leaves it or that such leakage is a
+derived mass mechanism. In particular, exact $[R_\beta,P]=0$ makes
+this candidate vanish. A common mass scale $\kappa>0$ is still needed.
+
+\subsection{Coordinate Readouts and Candidate Mass Eigenstates}
+\label{v480:generation-spectrum}
+
+\begin{proposition}[The Gram spectrum and the slot diagonal differ]
+\label{v480:generation-mass-spectrum}
+Let $Q_\beta=V\operatorname{diag}(q_0,q_1,q_2)V^*$,
+with $V$ unitary and $q_i\geq0$. The states
+$\chi_i=SV\varepsilon_i$ are orthonormal closed odd states and
+$\|D_\beta\chi_i\|^2=q_i$. If one additionally postulates the
+effective mass matrix $M_\beta=\kappa Q_\beta$, its candidate
+eigenmasses are $\kappa q_i$, whereas the fixed-slot norm readouts
+are $\kappa(Q_\beta)_{ii}$. When $Q_\beta\ne0$, the spectral
+Koide diagnostic is
+\[
+ K_{\rm spec}
+ =\frac{\operatorname{Tr}Q_\beta}
+        {(\operatorname{Tr}\sqrt{Q_\beta})^2}.
+\]
+It is invariant under unitary changes of generation coordinates.
+\end{proposition}
+\begin{proof}
+Use $S^*S=I_3$ and $V^*Q_\beta V=\operatorname{diag}(q_i)$.
+The principal root masses are $\sqrt\kappa\sqrt{q_i}$; the
+common scale cancels. Trace and functional calculus are unitarily
+invariant. The fixed-slot formula is the diagonal Gram identity.
+\end{proof}
+
+For example, $Q=\tfrac13\mathbf1\mathbf1^*$, with
+$\mathbf1=(1,1,1)^{\mathsf T}$, has three equal diagonal entries
+but eigenvalues $(1,0,0)$. Its slot diagnostic is $1/3$ and its
+spectral diagnostic is $1$. Equal diagonal readouts do not establish
+degenerate eigenmasses. Conversely, diagonalizing a positive matrix
+does not identify it with the native first-order mass operator
+$\Omega$ of Theorem~\ref{thm:master-field-equation}; a physical
+derivation must justify $M_\beta=\kappa Q_\beta$ and its units,
+rather than confuse that hypothesis with $\Omega^*\Omega$.
+
+\subsection{A Cyclic Coupling That Produces the Brannen Form}
+\label{v480:generation-cyclic}
+
+There is a precise sufficient link to a generation action on the
+carrier. If a unitary $W$ satisfies $WS=SU$, $WP=PW$ and
+$W\widetilde R_\beta=\widetilde R_\beta W$, then
+$B_\beta U=WB_\beta$, whence $Q_\beta U=UQ_\beta$.
+These follow by moving $W$ through the defining projectors and
+pacer and then taking adjoints. The three compatibility relations
+must be supplied for the native realization, not inferred merely
+from the existence of three seed slots.
+
+\begin{proposition}[A Hermitian cyclic root coupling]
+\label{v480:generation-cyclic-root}
+Let $U\varepsilon_i=\varepsilon_{i+1\bmod3}$ and set
+\[
+ L=aI_3+zU+\bar zU^*,\qquad a>0,\quad z=r e^{i\theta},\ r\geq0.
+\]
+Choose the Fourier labels so $U$ has eigenvalues
+$e^{2\pi i k/3}$. Then $L$ has eigenvalues
+\[
+ \ell_k=a+2r\cos(\theta+2\pi k/3).
+\]
+If all $\ell_k\geq0$, and if the closure-defect Gram matrix is
+independently established to be $Q=L^2$, its candidate masses are
+$m_k=\kappa\ell_k^2$ and
+\[
+ K_{\rm spec}=\frac13+\frac{2r^2}{3a^2}.
+ \qquad K_{\rm spec}=\frac23\ \Longleftrightarrow\ r=a/\sqrt2.
+\]
+Conversely, every nonzero positive semidefinite $Q$ commuting with
+$U$ has a positive root $L=\sqrt Q$ of the displayed form, with
+\[
+ a=\tfrac13\operatorname{Tr}\sqrt Q,\qquad
+ z=\tfrac13\operatorname{Tr}(U^*\sqrt Q).
+\]
+\end{proposition}
+\begin{proof}
+Fourier diagonalization gives the eigenvalues. Since
+$\operatorname{Tr}U=\operatorname{Tr}U^2=0$,
+$\operatorname{Tr}L=3a$ and
+$\operatorname{Tr}L^2=3a^2+6r^2$.
+Positivity gives $\sqrt{L^2}=L$, so division gives the result.
+Conversely, $\sqrt Q$ commutes with $U$ by spectral calculus.
+The three distinct Fourier eigenvalues of $U$ make its commutant
+the span of $I_3,U,U^2$. Hermiticity and $U^*=U^2$ give the stated
+coefficient form; the trace identities recover $a$ and $z$.
+\end{proof}
+
+This constructs the familiar three-phase harmonic form as eigenvalues
+of a concrete coupling matrix, without identifying three raw triolic
+coordinates with mass roots. It does not derive $r/a=1/\sqrt2$,
+$\theta$ or $\kappa$, nor does it establish cyclic compatibility
+or the coefficients of the native $B_\beta^*B_\beta$. Once those
+native data are given, the converse specifies the coefficients
+without a mass fit. For negative $\ell_k$ in a proposed $L$,
+the root trace is $\sum_k|\ell_k|$ instead, and the displayed Koide
+formula is not valid. For real $z$, two $\ell_k$ coincide; a generic
+complex relative coefficient can lift this pair degeneracy. That is
+an internal generation phase, not an overall phase of the pacer.
+
+There is no conflict with Proposition~\ref{v480:hc-mass-equivariant-obstruction}:
+the seed slots form a cyclic \emph{orbit}, not one invariant input,
+and the spectral states are Fourier combinations of those slots.
+A complex Hermitian circulant matrix may have three different
+eigenvalues while its diagonal entries are all equal. If one insists
+on a real symmetric cyclic matrix, it is of the form
+$a_0I+b_0(U+U^*)$ and has a doubly degenerate eigenvalue.
+The choice of scalar field and physical generation basis matters.
+
+\begin{proposition}[Positive phase chambers and a small-root boundary]
+\label{v480:generation-phase-chambers}
+At $r=a/\sqrt2$, the cyclic root matrix is positive semidefinite
+exactly for the phase chambers
+\[
+ \theta\in\bigcup_{j=0}^2
+ \left[\frac{2\pi j}{3}-\frac{\pi}{12},
+       \frac{2\pi j}{3}+\frac{\pi}{12}\right]
+ \pmod{2\pi}.
+\]
+Near the upper boundary $\theta_b=3\pi/4$ of the chamber centered
+at $2\pi/3$, put $\theta=\theta_b-\delta$, $\delta\geq0$.
+Then $\ell_0=a\delta+O(\delta^2)$ and
+$m_0=\kappa a^2\delta^2+O(\delta^3)$, while the other two
+root eigenvalues tend to $a(3-\sqrt3)/2$ and $a(3+\sqrt3)/2$.
+\end{proposition}
+\begin{proof}
+Each $\ell_k\geq0$ requires
+$\cos(\theta+2\pi k/3)\geq-1/\sqrt2$.
+Intersecting these three conditions in each cyclic period gives
+the displayed intervals. At $3\pi/4$ the zeroth root vanishes
+and its phase derivative is $-a$. Taylor expansion and squaring
+give the small-mass law. Substitution gives the other limits.
+\end{proof}
+
+A relative generation phase near such a boundary can therefore
+produce a parametrically light eigenmass within this candidate.
+This explains a possible amplification mechanism, not why a native
+state should select that phase or the Koide radius in the first place.
+
+\subsection{Overall Phase, Relative Phase and Underdetermination}
+\label{v480:generation-phase}
+
+\begin{proposition}[A common pacer phase cancels]
+\label{v480:generation-global-phase}
+For fixed $P$, $S$ and normalization, if
+$R_\beta=e^{i\varphi(\beta)}R_0$, then
+$B_\beta=e^{i\varphi(\beta)}B_0$ and $Q_\beta=Q_0$.
+Both slot and spectral norm-based mass readouts are unchanged.
+\end{proposition}
+\begin{proof}
+Pull the scalar through the projectors and use its unit modulus in
+$B_\beta^*B_\beta$.
+\end{proof}
+
+The written pacer $\hat R_{\rm GUE}e^{i\pi\bsym}$ in
+Theorem~\ref{thm:dirac-probe} has exactly this common-phase form.
+It supplies no $\beta$-dependent mass ratios for this norm readout
+when $P$ and $S$ are fixed. Allowing them to vary requires their
+own independently specified frame laws.
+The absolute commutator expectation in the inherited mass formula
+also loses this common phase, even on inputs that are not exactly
+closed: its expectation acquires only the same unit-modulus factor.
+
+\begin{proposition}[A two-channel relative phase can survive]
+\label{v480:generation-relative-phase}
+As an additional ansatz, let
+$\widetilde R_\beta=R_a+e^{i\varphi(\beta)}R_b$ with matched
+domains and units. Put $A=(I-P)R_aS$, $B=(I-P)R_bS$. Then
+\[
+ Q_\beta=A^*A+B^*B
+       +e^{i\varphi(\beta)}A^*B
+       +e^{-i\varphi(\beta)}B^*A.
+\]
+The phase cancels when $A^*B=0$; it can otherwise affect the Gram
+matrix through interference. A varying matrix alone does not imply
+varying eigenmass ratios: the variation could be a basis conjugation.
+\end{proposition}
+\begin{proof}
+Expand $(A+e^{i\varphi}B)^*(A+e^{i\varphi}B)$.
+Unitary conjugation preserves its eigenvalues.
+\end{proof}
+
+The triadic channels in Proposition~\ref{prop:triadic-two-probe}
+are a place to seek such extra matrix elements, not a specification
+of them. They must be realized on the same generation/probe carrier
+and converted to compatible units before adding them to a clock
+operator. A term of the form $PXP$ cannot itself contribute to
+$(I-P)\widetilde R_\beta P$. The internal coupling must actually
+connect the selected and complementary spaces for this candidate
+to be nonzero.
+
+\begin{proposition}[Even unitary pacers leave the Gram matrix free]
+\label{v480:generation-unitary-dilation}
+Every three-dimensional positive contraction $0\leq Q\leq I_3$
+can occur as the closed-to-complementary Gram matrix of a unitary
+pacer. On $\mathbb C^3\oplus\mathbb C^3$, take
+\[
+ P=\begin{pmatrix}I_3&0\\0&0\end{pmatrix},\quad
+ S=\begin{pmatrix}I_3\\0\end{pmatrix},\quad
+ R=\begin{pmatrix}\sqrt{I_3-Q}&-\sqrt Q\\
+                   \sqrt Q&\sqrt{I_3-Q}\end{pmatrix}.
+\]
+Then $R^*R=RR^*=I_6$ and
+$((I-P)RS)^*((I-P)RS)=Q$.
+\end{proposition}
+\begin{proof}
+The positive square roots are commuting functions of $Q$.
+Block multiplication cancels the off-diagonal terms and gives
+$(I_3-Q)+Q=I_3$ on each diagonal. The lower block of $RS$
+is $\sqrt Q$.
+\end{proof}
+
+This is a consistency witness, not a recovery of the native pacer.
+It also proves why closure, positivity and unitarity alone do not
+predict a hierarchy or Koide: all positive contraction spectra remain
+available. Any nonzero positive candidate can be scaled into this
+range, but that rescaling does not derive a physical mass unit.
+
+\paragraph{Concrete next gate.}
+Generation states and an operator-valued coupling now have explicit
+conditional formulas: $S=PT(T^*PT)^{-1/2}$ and
+$D_\beta=(I-P)\widetilde R_\beta P$, with the computable
+three-dimensional Gram matrix $Q_\beta=(D_\beta S)^*D_\beta S$.
+What is not supplied is a native evaluated $P$, the action of the
+pacer on these seeds, a physical mass-matrix law and any required
+relative channel. The cyclic root form explains how a Brannen-type
+spectrum can be represented; its Koide radius and phase are still
+independent obligations. No lepton-mass fit, native activation,
+OP2 closure or parameter-free spectrum is asserted.

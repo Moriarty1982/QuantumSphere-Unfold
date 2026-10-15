@@ -1,0 +1,200 @@
+\clearpage
+\section{Core proof details, counterexamples and verification scope}
+\label{app:core-proof-details}
+
+The main text states the hypotheses, conclusions and proof ideas of the
+MM/HC spectral identification and the fixed-exponent correction model.
+This appendix supplies the complete arguments and their limits. It is a
+direct reference target, not a background process. No guarded citation,
+command name or compiler result supplies an omitted mathematical premise.
+
+\subsection{Complete proofs of the conditional spectral statements}
+\label{app:hc-spectral-proof}
+
+\begin{proof}[Proof of Lemma~\ref{lem:diagonal-traversal-scalar-action}]
+Let $S_C=\mathrm{im}(C)$ in the bounded complex Hilbert realization of
+the lemma. Commutation implies invariance: if $x=Cx$, then
+$C\mathcal Mx=\mathcal MCx=\mathcal Mx$.
+By the complete-eigenvector hypothesis, every $x\in S_C$ is a limit
+of finite linear combinations of eigenvectors in $S_C$. The
+single-eigenvalue hypothesis assigns eigenvalue $\lambda_0$ to each
+of them. Thus $\mathcal Mx=\lambda_0 x$ on that span, and boundedness
+extends the identity to its closure, all of $S_C$. In finite dimensions
+this is exactly diagonalizability together with one eigenvalue.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:hc-spectral-projector}]
+Set $\mathcal S_0=\ker(\mathcal M-\lambda_0 I)$. The preceding
+lemma gives $S_C\subseteq\mathcal S_0$. If $x\in\mathcal S_0$,
+commutation gives
+\[
+ (\mathcal M-\lambda_0 I)(I-C)x
+   =(I-C)(\mathcal M-\lambda_0 I)x=0,
+ \qquad C(I-C)x=0.
+\]
+The complement-exclusion hypothesis makes $(I-C)x=0$, so $x=Cx$
+and $\mathcal S_0\subseteq S_C$. Hence the two spaces are equal.
+The assumed orthogonal pure-point decomposition defines the spectral
+projector onto the full $\lambda_0$ eigenspace as its orthogonal
+projection. Since $C$ is orthogonal with exactly that image, it is
+this projector. Neither the decomposition nor complement exclusion
+is inferred from $[\mathcal M,C]=0$ alone.
+\end{proof}
+
+The scalar compatibility in Corollary~\ref{cor:M-HC-fixpoint}
+follows by applying the scalar action to $Cx$ and then using
+commutation. A native identification with closure-stable states is
+separate. Unbounded realizations need a common invariant domain and
+an appropriate spectral-measure argument; no such extension is proved here.
+
+\subsection{Independent spectral failure modes}
+\label{app:hc-spectral-counterexamples}
+
+\paragraph{Several eigenvalues without Jordan chains.}
+For $\mathcal M=\mathrm{diag}(1,2,3)$ and
+$C=\mathrm{diag}(1,1,0)$, both operators are diagonal and commute.
+The compensated image nevertheless carries eigenvalues $1$ and $2$.
+There are no nontrivial Jordan blocks, but no scalar action on this image.
+The cascade statement $\hat K(L_n)=L_{n-1}$ concerns another operator
+and does not establish the Jordan or spectral structure of $\mathcal M$.
+
+\paragraph{One eigenvalue without diagonalizability.}
+The block
+\[
+ J_2=\begin{pmatrix}2&1\\0&2\end{pmatrix}
+\]
+has only eigenvalue $2$ but is not $2I$. The complete-eigenvector
+condition cannot be dropped merely because the eigenvalue is unique.
+
+\paragraph{Scalar action without full spectral selection.}
+For $\mathcal M=\mathrm{diag}(2,2,3)$ and
+$C=\mathrm{diag}(1,0,0)$, the identities
+$\mathcal MC=C\mathcal M=2C$ hold, but the full eigenvalue-$2$
+projector is $\mathrm{diag}(1,1,0)$. This distinguishes image
+scalarity from exclusion of equal eigenvectors on the complement.
+
+\paragraph{A projection does not determine the full operator.}
+The same $C=\mathrm{diag}(1,1,0)$ obeys the same scalar compatibility
+with either $\mathrm{diag}(2,2,3)$ or $\mathrm{diag}(2,2,4)$.
+The action on $\ker C$ remains free until independently specified.
+
+The older scalar-action argument invoked irreducibility not supplied
+by Lemma~\ref{lem:closure-forcing-lemma}. A possible finite-dimensional
+repair would specify an irreducible represented algebra on $S_C$
+commuting with $\mathcal M$. Every $\mathcal M$ eigenspace is then
+invariant under that algebra. Over the complex field an eigenvector
+exists, and irreducibility forces its eigenspace to be all of $S_C$.
+This would establish scalarity, but the represented algebra, its
+irreducibility and its commutation must actually be exhibited.
+
+\subsection{Complete proof for the fixed-exponent ansatz}
+\label{app:fixed-exponent-proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:self-consistent-gL}]
+Equation (SC2) supplies the stated relation between $\mu$ and
+$\bsym$. Equation (SC1) is assumed as a correction ansatz; it is
+not the Weyl-density ratio rejected by the earlier numerical test.
+For $\mu>1$ both sides are positive. Taking logarithms reduces
+(SC1)--(SC2) to
+\[
+ f(\mu)=\tfrac12\log3+\tfrac12\log\frac{\mu-1}{\mu+1}
+                 +\frac{a}{\mu^5}=0,
+ \qquad a=\frac{\gamma_1}{4\pi}.
+\]
+Differentiation gives
+\[
+ f'(\mu)=\frac1{\mu^2-1}-\frac{5a}{\mu^6}.
+\]
+For $t=\mu^2>1$, the exact factorization
+\[
+ t^3-\frac{27}{4}(t-1)
+       =\left(t-\frac32\right)^2(t+3)\geq0
+\]
+proves $\mu^6/(\mu^2-1)\geq27/4$. The hypothesis
+$0<a<27/20$ therefore makes $f'>0$ everywhere on $(1,\infty)$.
+Moreover $f(1+)=-\infty$ and $f(2)=a/32>0$. The intermediate
+value theorem gives a root in $(1,2)$ and strict monotonicity gives
+uniqueness on $(1,\infty)$. This establishes the scalar model theorem.
+\end{proof}
+
+At the fixed numeric input $\gamma_1=14.134725141734694\ldots$,
+$a\simeq1.12480568777618$ lies in the stated interval. Bisection
+gives $\mu^*\simeq1.863662249889$ and
+$\bsym\simeq0.549175395418$. The approximately $0.03957\%$
+difference from the inherited comparison value $1.8644$ is arithmetic
+proximity, not an observational uncertainty or a derivation of the ansatz.
+
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.24\textwidth}p{0.37\textwidth}p{0.27\textwidth}@{}}
+\toprule
+Comparison & Declared condition & Values $(\gL,\bsym)$\\
+\midrule
+Continuum & $\gamma_1\to0$ in (SC1) & $(2,1/\sqrt3)$\\
+Self-referential & $\gL=1/\bsym$ together with (SC2) &
+$(\mathbb T,1/\mathbb T)$, $\mathbb T\approx1.839$\\
+Fixed exponent & First-zero input, exponent $5$ assumed &
+$(1.8637,0.5492)$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The self-referential row is a different condition, not a second
+solution of the same fixed-input system. Their common physical
+prime-lattice origin is not established by this comparison table.
+
+\subsection{Inverse exponent, rounding and back-substitution}
+\label{app:inverse-exponent-check}
+
+\begin{proof}[Proof of Proposition~\ref{prop:exponent-5}]
+For $g>1$ and $0<\beta<1/\sqrt3$, taking logarithms of the
+proposed correction law gives
+\[
+ \log(\beta\sqrt3)=-\frac{\gamma_1}{4\pi g^n}<0,
+ \qquad g^n=\frac{\gamma_1}{4\pi|\log(\beta\sqrt3)|}=:A(g,\beta)>0.
+\]
+A second logarithm yields $n\log g=\log A(g,\beta)$.
+Division by $\log g\ne0$ gives the inverse exponent. This solves
+for a calibrated exponent, not for an independently predicted $g$.
+\end{proof}
+
+With independent rounded inputs $(g,\beta)=(1.864,0.5493)$,
+$A\simeq22.58446676436$ and $n_{\rm exact}\simeq5.00584331607$.
+Enforcing $\beta=\sqrt{(g-1)/(g+1)}$ at the same $g$ gives
+$\beta\simeq0.549250377928$, $A\simeq22.54357460599$ and
+$n_{\rm exact}\simeq5.00293308442$. Both have nearest integer $5$,
+but neither establishes a structural integer-exponent law.
+
+As stated explicitly in Remark~\ref{rem:exact-sc}, substitution
+$g^{n_{\rm exact}}=\exp(\log A)=A$ is an identity for all allowed
+input pairs. It remains an identity after imposing the frame relation
+for $1<g<2$. A determining equation requires an independent exponent
+law or another independently derived relation.
+
+\subsection{Verification ledger: executed checks and unproved obligations}
+\label{app:verification-ledger}
+
+The reproducible algebraic checks are in
+\path{scripts/qsc_audit/tests/test_spectral_and_exponent_contracts.py}.
+They test exact rational matrix examples, inverse-exponent evaluation,
+the derivative-bound factorization and numerical bisection. They do
+not prove that an actual MM/HC realization satisfies the hypotheses
+or certify the location of a Riemann zero; its ordinate is a declared input.
+
+The relay and readout checks in \path{analysis/OP5_Relay_C5_Check.py}
+test declared outgoing models and supplied residual dictionaries.
+They do not identify the native C5 residuals, prove an exact
+$\Theta$--$R$ balance or establish a gravitational intermediate field.
+The framework/adapter checks under \path{scripts/qsc_audit/tests/}
+check their implemented grammar and guard behavior, not every formal
+MML command or every mathematical assertion of this manuscript.
+
+The executable entry points are
+\begin{quote}\small\ttfamily
+python -B -m unittest discover -s scripts/qsc\_audit/tests\par
+python -B -m unittest discover -s analysis -p OP5\_Relay\_C5\_Check.py
+\end{quote}
+Reading-route regression tests additionally check unique definition
+inclusion and resolution of the new appendix targets. A successful
+LaTeX compilation checks document processing, not proof correctness.
+No unattended verifier, Monte Carlo balance certificate or automatic
+OP closure is claimed behind these references.

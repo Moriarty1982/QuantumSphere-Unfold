@@ -1,0 +1,233 @@
+\section{HC and Lepton Mass Readout: An Identification Test}
+\label{v480:hc-mass-identification}
+
+The sufficient construction in Proposition~\ref{v480:koide-hc-mixing}
+is not yet an identification with the Companion's HC. This section tests
+that identification against the actual inherited definitions. Its
+negative results concern specified readout routes, not every possible
+nonlinear, coupled or symmetry-breaking realization of the framework.
+
+\subsection{What the Existing Definitions Supply}
+\label{v480:hc-mass-source-map}
+
+The inherited decomposition is $C=(I+J)/2$, $P_-=(I-J)/2$, with
+$CP_-=0$; see Sections~\ref{sec:central} and~\ref{sec:stringlqg}.
+The fermionic input lane is declared $J$-odd, while $C$ selects the
+compensated photon/fix output. The refined mass discussion instead
+assigns massive readout to localization remaining relative to that
+output (Section~\ref{subsec:mass-null-axis}) and names Higgs mediation
+as its interface (Definition~\ref{def:higgs-mediation}).
+
+Proposition~\ref{prop:spectral-to-mass-realization-map} names
+$\mathcal R_m:\mathcal S_{\rm spec}\to\mathcal S_{\rm mass}$,
+but its argument does not provide a numerical mass functional,
+generation-resolved coupling, or action on three principal mass roots.
+The inherited remark ``Mass spectrum beyond Koide'' explicitly leaves
+the Yukawa mechanism undeveloped. The symbolic effective operator in
+Theorem~\ref{thm:minimal-mmhc-field-equation} does not supply these
+missing matrix elements or a lepton spectral assignment either.
+
+Two different triples must not be identified by their cardinality:
+$(K_1,K_2,K_3)$ denotes matter/tachyon/photon sector readouts,
+whereas $(e,\mu,\tau)$ denotes three generations within the lepton
+readout. The generation discussion in Theorem~\ref{thm:three-generations} does not
+construct a map equating their components or their scalar products.
+
+There is also a scalar-field issue. The inherited unitary-equivalence
+argument calls $J$ unitary, whereas the proof of
+Theorem~\ref{thm:gauge-invariance} calls it anti-unitary. An
+anti-unitary involution and $(I+J)/2$ are generally only real-linear.
+The following operator tests therefore explicitly use a real Hilbert
+realization, where $J$ is an orthogonal involution. They do not silently
+assert a complex-linear three-dimensional representation of either
+inherited convention.
+
+\subsection{The Exact Linear HC-to-Root Interface}
+\label{v480:hc-mass-interface}
+
+\begin{proposition}[A sufficient norm-controlled descent]
+\label{v480:hc-mass-descent}
+Let $H$ be a real Hilbert space, $J$ an orthogonal involution, and
+$B:H\to\mathbb R^3$ a bounded coisometry, $BB^*=I_3$. If
+$\ker B$ is $J$-invariant, then
+\[
+ J_m=BJB^*,\qquad J_m^*=J_m,\qquad J_m^2=I_3,
+ \qquad BC=C_mB,\quad C_m=(I_3+J_m)/2.
+\]
+Conversely, any relation $BJ=J_mB$ requires $\ker B$ to be
+$J$-invariant. The descended operator is unique because $B$ is onto.
+\end{proposition}
+\begin{proof}
+Put $E=B^*B$, the orthogonal projection onto $(\ker B)^\perp$.
+Since $J$ is self-adjoint and preserves $\ker B$, it also preserves
+its orthogonal complement, so $JE=EJ$. Thus $J_m^*=J_m$ and
+$J_m^2=BJEJB^*=BEB^*=I_3$. Also
+$J_mB=BJE=BJ$, since $J$ preserves $\ker B$ and $B$ kills it.
+The identity for $C$ follows by averaging. Conversely,
+$Bk=0$ implies $BJk=J_mBk=0$. Surjectivity gives uniqueness.
+\end{proof}
+
+Coisometry is a sufficient metric-control assumption, not a consequence
+of merely naming a readout. Without invariant kernel, compression
+$BJB^*$ need not even be an involution. A general invertible change of
+coordinates gives an involution $BJB^{-1}$, but need not preserve the
+Euclidean scalar product used in Koide. A different root-space metric
+cannot be substituted without re-deriving the physical ratio.
+
+If an independently supplied seed $f_0$ satisfies $Bf_0=e$ and the
+\emph{physical} root readout is proved to be
+\[
+ x=\alpha BCf_0=\alpha C_m e,\qquad
+ e=(1,1,1)/\sqrt3,\quad \alpha>0,
+\]
+with nonzero nonnegative components, the earlier proposition applies.
+Here $\alpha$ carries square-root mass units for a dimensionless seed.
+Its missing condition can now be stated on the original carrier:
+\[
+ \langle e,J_me\rangle
+   =\langle B^*e,JB^*e\rangle=0.
+\]
+The paper presently supplies neither this $B$, this seed/root law,
+nor that independently justified orthogonality. The displayed
+interface is one linear route to investigate, not a requirement that
+every physical mass readout be linear. In particular, a globally
+nonnegative linear root map on all of $H$ would have to vanish, since
+both $Bf$ and $B(-f)=-Bf$ would be nonnegative. A nonzero physical
+linear root law must be restricted to an admitted state cone.
+
+\subsection{Obstructions to the Direct Identification}
+\label{v480:hc-mass-obstructions}
+
+\begin{proposition}[The pure HC output loses the odd input]
+\label{v480:hc-mass-odd-obstruction}
+If $Jf=-f$, then $Cf=0$. Consequently any homogeneous linear
+root readout $x=BCf$ is zero. Any readout $F(Cf)$ with $F(0)=0$
+has the same obstruction on this input lane. If instead a seed is
+$J$-fixed and the descended linear route has $Bf_0=e$, then
+$J_me=e$ and its nonzero root output has $K=1/3$.
+\end{proposition}
+\begin{proof}
+The first statement follows from $Cf=(f+Jf)/2=0$.
+For the second, $J_me=BJf_0=Bf_0=e$, so $C_me=e$ and
+all three roots are equal.
+\end{proof}
+
+This rules out direct identification of the declared odd fermionic
+input with a positive root vector obtained only from its compensated
+output. It does not rule out a mass readout of the residual input or
+of a coupled state. Nor does quaternionic orthogonality establish the
+needed root correlation: for an orthogonal projection $C$ one has
+$\langle Cf,f\rangle=\|Cf\|^2$. Its nonzero output cannot be
+orthogonal to its own input in that same Hilbert metric. The inherited
+quaternion-sector wording in Proposition~\ref{prop:compensator} must
+not be used as the proof of $\langle e,J_me\rangle=0$.
+
+\begin{proposition}[Equivariant readout cannot split a fixed input]
+\label{v480:hc-mass-equivariant-obstruction}
+Let $U$ preserve an admitted state set and let $P$ cyclically permute
+the three root coordinates. For any readout $F$ satisfying
+$F(Uf)=PF(f)$, an input $Uf_0=f_0$ has
+$F(f_0)=a(1,1,1)$. If this is a nonzero nonnegative root vector,
+then $K=1/3$. No linearity assumption on $F$ is needed.
+\end{proposition}
+\begin{proof}
+Equivariance gives $PF(f_0)=F(Uf_0)=F(f_0)$. The fixed vectors
+of the three-cycle are exactly the constant triples.
+\end{proof}
+
+A common frame parameter does not evade this result if the input
+remains fixed and the readout remains equivariant at each parameter
+value. An asymmetric input, a selected symmetry-breaking state or
+an explicitly non-equivariant coupling is needed. The generation
+action $U$ and the matter/tachyon involution $J$ are distinct data.
+
+\begin{proposition}[Closed-triole amplitudes do not yield Koide by norms]
+\label{v480:hc-mass-triole-bound}
+Let $z_0+z_1+z_2=0$ in a normed vector space, not all $z_i=0$.
+Under the specific identification $m_i=\kappa\|z_i\|^2$ with a
+common $\kappa>0$, the principal-root ratio satisfies
+\[
+ \frac13\leq K\leq\frac12.
+\]
+In particular it cannot equal $2/3$.
+\end{proposition}
+\begin{proof}
+Put $r_i=\|z_i\|$ and $s=\sum_i r_i>0$. The triangle inequality
+gives $r_i\leq s-r_i$, hence $r_i\leq s/2$. Therefore
+$\sum_i r_i^2\leq(s/2)\sum_i r_i=s^2/2$.
+Cauchy--Schwarz gives the lower bound, and the common mass scale
+cancels from $K$.
+\end{proof}
+
+This excludes a natural but additional identification, not every
+generation readout of a triole. Unequal generation couplings or a
+different nonlinear realization need not obey this bound; they are
+precisely additional data that must be constructed rather than read
+off from $z_0+z_1+z_2=0$ alone.
+
+\begin{proposition}[An unrestricted fitted HC shape predicts no roots]
+\label{v480:hc-mass-fit-freedom}
+For every nonzero nonnegative triple $x$, there exist an orthogonal
+involution $J_x$ and $\alpha_x>0$ such that
+$x=\alpha_x(I+J_x)e/2$. Thus existence of an HC-shaped operator
+chosen after the masses is not a prediction of Koide or a hierarchy.
+\end{proposition}
+\begin{proof}
+Set $C_x=xx^{\mathsf T}/\|x\|^2$ and $J_x=2C_x-I_3$.
+This is an orthogonal involution. Since $s=\sum_i x_i>0$,
+$C_xe=sx/(\sqrt3\|x\|^2)$, so choose
+$\alpha_x=\sqrt3\|x\|^2/s$.
+\end{proof}
+
+\subsection{A Residual Coupling Test Compatible With the Mass Language}
+\label{v480:hc-mass-residual-test}
+
+The refined massive-branch definition suggests testing the component
+that $C$ removes, rather than identifying the masses with $Cf$.
+The following is an explicit \emph{additional effective ansatz}, not
+a recovered Yukawa interaction. Put $H_-=\ker(J+I)$ and normalize
+the declared states dimensionlessly. Fix a mass scale $\kappa>0$ and a dimensionless
+bounded linear coupling $D_\beta:H_-\to V$ to a declared real
+Hilbert output space. For three admitted generation states define
+\[
+ u_i=P_-\psi_i,\qquad
+ m_i(\beta)=\kappa\|D_\beta u_i\|^2,\qquad
+ x_i=\sqrt\kappa\|D_\beta u_i\|.
+\]
+The quadratic form is positive, is zero on a fully fixed input,
+and is unchanged when $\psi_i$ is replaced by $J\psi_i$, since
+$P_-J\psi_i=-P_-\psi_i$. Unlike a pure $BC\psi_i$ law, it can
+be nonzero on the declared fermionic input lane. It assigns the
+same mass to $J$-dual inputs; a different dual-sector mass law
+would require a different frame-labelled coupling or readout.
+
+For $q_i=\|D_\beta u_i\|^2$, not all zero, Koide still requires
+the independent equation
+\[
+ \sum_i q_i=\frac23\left(\sum_i\sqrt{q_i}\right)^2.
+\]
+Neither positivity nor the residual decomposition proves it.
+In particular, if all $\|u_i\|=1$ and
+$D_\beta^*D_\beta=\beta^2 I$ on their span, all masses are
+$\kappa\beta^2$ and $K=1/3$ for $\beta\ne0$. Thus the isotropic
+frame term $\beta^2\langle f,f\rangle$ in
+Definition~\ref{def:lagrangian}, used alone on equally normalized
+generations, does not generate a hierarchy. A common positive
+rescaling leaves $K$ unchanged. At $\beta=0$ in this particular
+ansatz all masses vanish and $K$ is undefined, not a nonzero
+degenerate Koide limit.
+
+\paragraph{Identification status and the next concrete object.}
+No native HC-to-lepton-root identification is established by the
+current definitions. The pure odd-input HC route and the common-norm
+closed-triole route are excluded under their stated assumptions.
+The remaining constructive target suggested by the existing
+mass/Higgs language is an independently specified generation-resolved
+coupling $D_\beta$ and generation states $\psi_i$, or an explicit
+alternative mass realization. Their domains, generation action,
+positivity, physical units and relation to the effective field
+operator must be supplied before testing the equal-norm/Koide law,
+the phase and the absolute scale. Assigning entries from the observed
+masses would only fit the missing map. The inherited assertions that
+historical OP~3 is closed, and P2 is confirmed, do not discharge this
+obligation; their physical derivation remains unestablished here.

@@ -1,0 +1,236 @@
+% RC19 final PDF compile candidate generated from RC18 source with Concept DOI restoration.
+% Reserved/intended Version DOI: 10.5281/zenodo.20232911. Previous/baseline DOI: 10.5281/zenodo.20117361 (provenance only).
+% Expired prior reserved DOI (not final): 10.5281/zenodo.20181842. Active v4.7.0 DOI: 10.5281/zenodo.20232911.
+% This source applies conservative release-safe compression of editorial/provenance and r55-r80 solve-log layers.
+% It preserves compact title-page discipline and guarded effective/local claim scope.
+% --- r27 hyperref draft option for source-only internal build stability ---
+\PassOptionsToPackage{bookmarks=false}{hyperref}
+\pdfcompresslevel=0
+\pdfobjcompresslevel=0
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{centernot}
+\usepackage{geometry,booktabs,array,longtable,graphicx,float}
+\usepackage{hyperref}
+\usepackage{ragged2e}
+\newcolumntype{P}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,fit,calc}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{fancyhdr,bm}
+\usepackage{slashed}
+\usepackage{multicol}
+\setlength{\emergencystretch}{16em}
+\tolerance=5000
+\setlength{\arraycolsep}{1.8pt}
+\setlength{\tabcolsep}{3pt}
+\allowdisplaybreaks[1]
+\usepackage[style=ddmmyyyy]{datetime2}
+
+\newcommand{\safegraphic}[2][]{%
+ \IfFileExists{#2}{\includegraphics[#1]{#2}}{%
+ \fbox{\begin{minipage}{0.9\linewidth}\centering\small Placeholder figure not bundled in this release:\\texttt{\detokenize{#2}}\end{minipage}}%
+ }%
+}
+
+\geometry{margin=2.15cm}
+\hypersetup{
+ hidelinks,
+ pdftitle={Quantum Sphaera Companion: A Structure-First Mathematical Unfolding},
+ pdfauthor={Marc Brendecke},
+ pdfsubject={v4.7.0 full-monolith release; Version DOI 10.5281/zenodo.20232911; Concept DOI 10.5281/zenodo.19210728; guarded effective/local scope},
+ pdfkeywords={Quantum Sphaera, structure-first mathematics, QAM, MML, MMA, Heisenberg compensator, Millennium Matrix, exterior-mixed term extraction, finite classification, selector/leakage bounds, finite witness-fit lowering, C5 lowering iteration, C5 convergence collar decision, C4 leakage-source inventory, C4 split test, C5 third-step contraction, C4 bounded-seam absorption, C5 operator-admissibility, mixed seam resolver, C5 asymptotic-collar packaging, route-stable mixed-kernel normal form, ridge-front reentry normal form, valley overlap relay equation, photon-frame zero-clock probe, bounded readout, T2 scope boundary, two-sided structural tensor notation, guarded effective closure, no all-readout closure},
+ pdfcreator={pdfLaTeX},
+ pdfproducer={pdfLaTeX}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\footnotesize\textcopyright\ 2026 Marc Brendecke. Preprint --- not peer reviewed.}
+\fancyfoot[R]{\footnotesize\thepage}
+\fancyhead[L]{\footnotesize Quantum Sphaera Companion}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{theoremlet}[theorem]{Theoremlet}
+\newtheorem{axiom}{Axiom}
+
+
+% Human-edition appendix numbering guard.
+% The source contains more than 26 appendix-style section blocks; alphabetic
+% appendix numbering would overflow TeX's \Alph counter.  For the reader-facing release,
+% appendix sections are numbered semantically with arabic counters.
+\makeatletter
+\renewcommand{\appendix}{%
+  \clearpage
+  \renewcommand{\thesection}{A.\arabic{section}}%
+  \renewcommand{\thesubsection}{A.\arabic{section}.\arabic{subsection}}%
+  \renewcommand{\thesubsubsection}{A.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}%
+}
+\makeatother
+
+
+
+% --- Human semantic prose cleanup note ---
+% Revision identifiers, old release labels, and patch-step markers are provenance metadata.
+% Reader-facing prose must use semantic layer names: proof spine, local grammar,
+% bridge obstruction, route-to-global certificate, return contract, audit appendix.
+
+% --- Document metadata ---
+\newcommand{\docversion}{4.7.0}
+\newcommand{\docdate}{\DTMdisplaydate{2026}{05}{13}{-1}}
+
+
+% v4.5.1-r13 internal glossary appendix extraction worksheet rule; inherits the v4.5.1-r13 glossary/index intake rule.
+% Glossary and index entries introduced in r13 are reader-routing aids only.  They
+% do not rename theorem labels, do not introduce mathematical objects, do not
+% alter DOI records, and do not authorize a public release refresh.
+
+% v4.5.1-r14 internal glossary appendix placement decision rule.
+% The r13 glossary worksheet is not promoted to a public appendix in this pass.
+% r14 records an internal placement decision: keep the glossary material as an
+% internal appendix candidate, prepare a compact public-appendix route only for a
+% future deliberate release-refresh decision, and preserve all theorem, DOI, and
+% scope guards unchanged.
+
+% v4.5.1-r15 internal compact glossary appendix skeleton rule.
+% r15 creates only a compact appendix skeleton for future editorial routing.
+% The skeleton is internal-only, is not a public appendix, does not authorize a
+% release refresh, does not introduce a DOI, and does not alter theorem, label,
+% cross-reference, or scope-guard content.
+
+
+% v4.5.1-r16 internal glossary appendix draft extraction rule.
+% r16 extracts the r15 skeleton into an internal glossary appendix draft object.
+% The draft remains internal-only, is not a public appendix, does not authorize a
+% release refresh, does not introduce a DOI, and does not alter theorem, label,
+% cross-reference, or scope-guard content.
+
+% Human-edition provenance macros. Revision ids are metadata only.
+\newcommand{\QSCtrace}[1]{}
+
+% Human public-face macro: old version tokens render as semantic provenance markers.
+\DeclareRobustCommand{\QSCver}[1]{archival stage}
+
+
+% Human front-layer semantic macros.
+\providecommand{\HC}{\mathrm{HC}}
+\providecommand{\MM}{\mathrm{MM}}
+\providecommand{\chart}{\mathrm{chart}}
+\providecommand{\Bridge}{\mathcal B}
+\providecommand{\Obs}{\mathcal O}
+\providecommand{\Debt}{\mathfrak D}
+\providecommand{\Return}{\mathcal R}
+
+% --- Macros ---
+\newcommand{\bsym}{\beta_{\mathrm{sym}}}
+\newcommand{\gL}{\gamma_L}
+\newcommand{\gstring}{\gamma_{\mathrm{string}}}
+\newcommand{\gBI}{\gamma_{\mathrm{BI}}}
+\newcommand{\lP}{\ell_P}
+\newcommand{\zminus}{z^-}
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\OO}{\mathbb{O}}
+\newcommand{\Hplus}{H^+}
+\newcommand{\Hplusplus}{H^+_+}
+\newcommand{\Hplusminus}{H^+_-}
+\newcommand{\WA}{\mathcal{W}(A^1)}
+\newcommand{\KC}{\hat{K}}
+
+\lstdefinestyle{pyappendix}{
+ basicstyle=\ttfamily\scriptsize,
+ breaklines=true,
+ breakatwhitespace=false,
+ columns=fullflexible,
+ keepspaces=true,
+ showstringspaces=false,
+ frame=single,
+ framerule=0.2pt,
+ tabsize=4
+}
+
+
+% --- legacy.31.0 pre-OP frontier macros ---
+\newcommand{\Rlive}{\mathbf{R}_{\mathrm{live}}}
+\newcommand{\Rcurr}{\mathbf{R}_{\mathrm{curr}}}
+\newcommand{\Rtilde}{\widetilde{\mathbf{R}}_{\mathrm{live}}}
+\newcommand{\Rcurrtilde}{\widetilde{\mathbf{R}}_{\mathrm{curr}}}
+\newcommand{\Ew}{\widetilde{\mathcal{E}}_{w}}
+\newcommand{\Wpref}{\mathfrak{W}^{\mathrm{pref}}_{\mathrm{curr}}}
+\newcommand{\Wdir}{\mathfrak{W}^{\mathrm{dir}}_{\mathrm{next}}}
+
+
+\title{%
+ Quantum Sphaera Companion:\\
+ A Structure-First Mathematical Unfolding
+}
+\author{%
+ Marc Brendecke\\
+ \small Independent Researcher, Bochum, Germany\\
+ \small Version DOI: \href{https://doi.org/10.5281/zenodo.20232911}{10.5281/zenodo.20232911}\\
+ \small Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}\\
+ \small Companion Paper --- Preprint, not peer reviewed.\\
+ \small Technical unfolding of the main Sphaera paper~\cite{brendecke2026main}.
+}
+\date{2026-05-16 --- v4.7.0}
+
+
+
+% inherited layout hygiene: widen ToC number boxes for H10/H10.x headings.
+% The release build widens the ToC page-number box so four-digit page numbers
+% do not create harmless but noisy overfull hbox warnings.
+\makeatletter
+\renewcommand{\@pnumwidth}{3.0em}
+\renewcommand{\@tocrmarg}{4.0em}
+\renewcommand*\l@section{\@dottedtocline{1}{1.5em}{4.2em}}
+\renewcommand*\l@subsection{\@dottedtocline{2}{4.2em}{5.0em}}
+\renewcommand*\l@subsubsection{\@dottedtocline{3}{9.2em}{6.0em}}
+\makeatother
+
+
+% shifted.1.0 display hygiene helpers inherited from prior source (non-theorematic).
+\newcommand{\vfourDisplayTriple}[3]{\left(#1,\ #2,\ #3\right)}
+\newcommand{\vfourTableHead}{\text{pre-shift source}\ /\ \text{shifted display}\ /\ \text{backtranslation}}
+
+% Human-edition typography guard: keep long archival tables and headings readable
+% without reporting harmless justification badness as document warnings.
+\setlength{\emergencystretch}{3em}
+\tolerance=9999
+\hbadness=10000
+
+% Build-speed guard for the long human-edition monolith.
+% It disables expensive PDF object compression; typography and page content are unchanged.
+\pdfcompresslevel=0
+\pdfobjcompresslevel=0
+
+
+% --- r25 hyperref anchor hygiene patch for release-freeze build ---
+% Keeps visible text unchanged while making repeated section/theorem anchors unique.
+\makeatletter
+\AtBeginDocument{%
+  \providecommand*{\theHsection}{}%
+  \renewcommand*{\theHsection}{\number\value{page}.\arabic{section}}%
+  \providecommand*{\theHsubsection}{}%
+  \renewcommand*{\theHsubsection}{\number\value{page}.\arabic{section}.\arabic{subsection}}%
+  \providecommand*{\theHsubsubsection}{}%
+  \renewcommand*{\theHsubsubsection}{\number\value{page}.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}%
+  \providecommand*{\theHtheorem}{}%
+  \renewcommand*{\theHtheorem}{\number\value{page}.\thetheorem}%
+}
+\makeatother
+
+
+% --- r25 hyperref bookmark hygiene patch for release-freeze build ---
+\AtBeginDocument{\hypersetup{bookmarks=false}}
+

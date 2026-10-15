@@ -1,0 +1,303 @@
+\section{Koide and Local Kernel Construction}
+\label{v480:koide-kernel}
+
+This section supplies explicit arguments for the two proposed compression
+sites. It supersedes the claim that cyclic symmetry alone proves the
+inherited Koide theorem. It also constructs a relative kernel model,
+without declaring the full prospective native zero-kernel layer active.
+
+\subsection{The Exact Additional Koide Condition}
+\label{v480:koide-condition}
+
+Let $x_i=\sqrt{m_i}\geq0$, $x\ne0$, and write
+\[
+ A=\frac{x_0+x_1+x_2}{3}>0,\qquad
+ u=A(1,1,1),\quad d=x-u,\quad \sum_i d_i=0.
+\]
+The cyclic permutation preserves the one-dimensional symmetric line
+and its two-dimensional orthogonal plane. It preserves their norms
+separately; it does not prescribe their ratio.
+
+\begin{proposition}[Koide as an equal-norm condition]
+\label{v480:koide-equal-norm}
+For these nonnegative principal roots,
+\[
+ K=\frac{\sum_i x_i^2}{(\sum_i x_i)^2}
+   =\frac13+\frac{\|d\|^2}{9A^2}.
+\]
+Consequently $K=2/3$ if and only if
+$\|d\|^2=\|u\|^2=3A^2$.
+\end{proposition}
+\begin{proof}
+Since $u\perp d$, $\|x\|^2=3A^2+\|d\|^2$, while
+$(\sum_i x_i)^2=9A^2$. Division proves both assertions.
+\end{proof}
+
+Thus Cauchy--Schwarz supplies only $K\geq1/3$. For example,
+the cyclic orbit of $x=(1,2,3)$ preserves both sums used in the
+inherited argument, but gives $K=14/36=7/18$, not $2/3$.
+Even the fully symmetric choice $x=(1,1,1)$ gives $K=1/3$.
+The missing model obligation is an independently derived equal-norm
+law, not a normalization of the Cauchy--Schwarz inequality by a
+count of sectors.
+
+\begin{proposition}[A sufficient HC-shaped mass-root realization]
+\label{v480:koide-hc-mixing}
+In a declared real three-root representation, let
+$e=(1,1,1)/\sqrt3$, let $J_m$ be an orthogonal involution, and put
+$C_m=(I+J_m)/2$. Suppose $x=\alpha C_m e$ is nonzero and
+componentwise nonnegative, with $\alpha>0$. For
+$h=\langle e,J_m e\rangle$, one has $h>-1$ and
+\[
+ K=\frac{2}{3(1+h)}.
+\]
+Hence Koide holds precisely when $\langle e,J_m e\rangle=0$.
+\end{proposition}
+\begin{proof}
+An orthogonal involution is self-adjoint, so $C_m$ is an
+orthogonal projector. Thus
+$\|C_m e\|^2=\langle e,C_m e\rangle=(1+h)/2>0$ and
+$(\sum_i x_i)^2=3\alpha^2(1+h)^2/4$. Dividing
+$\|x\|^2=\alpha^2(1+h)/2$ by this denominator gives the formula.
+\end{proof}
+
+This condition is realizable: take $v=(2,-1,-1)/\sqrt6$, a unit
+vector orthogonal to $e$ with $e+v$ positive. Let $J_m$ exchange $e$ and $v$, and let it
+act as $+1$ on their orthogonal complement. Then
+$C_m e=(e+v)/2$ has equal symmetric and orthogonal norms.
+The direction of $v$ still determines a free phase. Conversely,
+$J_m=I$ is an equally valid orthogonal involution but gives $K=1/3$.
+Therefore HC projection axioms alone do not force Koide. The
+representation of the native HC on mass roots, positivity and the
+orthogonality condition must be derived rather than selected to fit.
+
+\begin{proposition}[Radius and phase in the three-root parametrization]
+\label{v480:koide-radius-phase}
+Every nonzero nonnegative three-root vector admits
+\[
+ x_k=A\bigl(1+r\cos(\theta+2\pi k/3)\bigr),\qquad r\geq0,
+\]
+with $K=1/3+r^2/6$. The condition $K=2/3$ is precisely $r=\sqrt2$;
+it does not fix $A$ or $\theta$.
+\end{proposition}
+\begin{proof}
+The vectors $(\cos(2\pi k/3))_{k=0}^2$ and
+$(\sin(2\pi k/3))_{k=0}^2$ form an orthogonal basis of the
+zero-sum plane, each with squared norm $3/2$. Expressing $d/A$
+in that basis gives coefficients $r\cos\theta$ and
+$-r\sin\theta$. Therefore $\|d\|^2=(3/2)A^2r^2$ and the
+previous proposition gives the formula for $K$. If $r=0$ the
+phase is arbitrary.
+\end{proof}
+
+The root formula must retain $1+r\cos(\theta+2\pi k/3)\geq0$.
+Squaring a negative bracket and then calling it a principal square
+root changes the denominator to a sum of absolute values; the
+displayed identity for the physical $K$ no longer follows.
+The phase ansatz $\theta=\pi-\sqrt2\arcsin\beta$ also does not
+give mass degeneracy at $\beta=0$: with $r=\sqrt2$ it gives
+\[
+ (m_0,m_1,m_2)/A^2
+ =\bigl(3-2\sqrt2,\;3/2+\sqrt2,\;3/2+\sqrt2\bigr),
+\]
+and the first signed-root bracket is negative. A degenerate
+nonzero three-mass limit has $r=0$ and $K=1/3$, so it cannot
+be obtained by changing only the phase at fixed Koide radius.
+
+\begin{proposition}[Cyclic-equivariant linear maps preserve symmetric inputs]
+\label{v480:koide-equivariant-obstruction}
+Let $P$ cyclically permute three real coordinates. If a linear map
+$T$ satisfies $TP=PT$, then $T(A(1,1,1))$ remains on the symmetric
+line. It cannot produce a nondegenerate root hierarchy from that input.
+\end{proposition}
+\begin{proof}
+$Pu=u$ implies $P(Tu)=T(Pu)=Tu$. The fixed space of $P$ is
+exactly the line spanned by $(1,1,1)$.
+\end{proof}
+
+A hierarchy mechanism must therefore identify an asymmetric source,
+a symmetry-breaking selection or a non-equivariant coupling; cyclic
+symmetry alone is insufficient. A derivation of the phase law and the
+equal-norm condition remains open. Using only the fixed mass inputs
+quoted in the inherited text, the phase diagnostic is about
+$132.73279^\circ$, while the stated $\beta=0.5493$ ansatz gives
+$132.87981^\circ$. With $A$ fixed by the quoted roots, the respective
+mass errors are approximately $-12.80\%$, $+1.20\%$, $-0.0666\%$.
+These reproduce a historical-input comparison, not a new empirical
+measurement or a physical derivation. The inherited
+\texttt{thm:koide-triolic} and dependent phase-prediction wording
+must be read with these limitations.
+
+\subsection{A Quotient Kernel on a Declared Fragment}
+\label{v480:kernel-fragment}
+
+Fix a nonempty \emph{set} $A_F$ of admitted payloads for one declared
+fragment, with tagged embeddings $j_t(a)=\langle t,a\rangle$ and
+payload projection $p_t(j_t(a))=a$. Here $t=0$ denotes the retained
+pre-shift display and $t=1$ its inhabited shifted state display.
+This local notation does not undo the later shifted normal form.
+Assume a supplied equivalence relation $E_F$ on $A_F$ expressing
+the restricted closure-class schema. Its native interpretation is
+input data, not something derived from the tag.
+
+\begin{proposition}[Choice-free semantic quotient]
+\label{v480:kernel-quotient}
+The set $Q_F=A_F/E_F$ and map $q_F(a)=[a]_{E_F}$ are defined in ZF.
+They satisfy $q_F(a)=q_F(b)$ if and only if $aE_Fb$.
+If a total closure-relevant readout $f:A_F\to Y$ is constant on
+$E_F$-classes, there is a unique $\bar f:Q_F\to Y$ with
+$f=\bar f\circ q_F$.
+\end{proposition}
+\begin{proof}
+Each class is a subset of $A_F$ defined by Separation, and their
+collection is a set by Replacement. Reflexivity, symmetry and
+transitivity give the equality criterion for classes. Define
+\[
+ \operatorname{graph}(\bar f)
+ =\{\,([a]_{E_F},f(a)):a\in A_F\,\}.
+\]
+Class constancy makes this a function, and surjectivity of $q_F$
+gives uniqueness. No representative or choice function is required.
+\end{proof}
+
+This quotient packages the supplied closure relation; it does not
+compute it, prove a native closure claim or guarantee a cheaper
+algorithm. The quotient kernel and the raw payload have distinct
+roles: $j_t\circ p_t$ reconstructs the syntactic state, whereas
+$q_F$ may identify different payloads and cannot reconstruct each
+original state by itself.
+
+\begin{proposition}[Finite representative normal forms]
+\label{v480:kernel-finite-normal-form}
+If $A_F$ is finite with a declared injective integer coding, let
+$N_F(a)$ be the least-coded member of $[a]_{E_F}$. Then
+$N_F:A_F\to A_F$ is total and idempotent, and
+\[
+ N_F(a)=N_F(b)\quad\Longleftrightarrow\quad aE_Fb.
+\]
+Every total class-constant readout factors uniquely through
+$N_F(A_F)$. An admissible transport pair $aE_FT(a)$ gives
+$N_F(T(a))=N_F(a)$ wherever the declared fragment contains both sides.
+\end{proposition}
+\begin{proof}
+Each nonempty finite class has a unique least code. Equivalent
+payloads have the same class and minimum. Conversely, equal minima
+belong to both classes, which are then equal. The minimum of a
+minimum's class is unchanged. Apply the quotient factorization
+after identifying a class with its minimum; the transport assertion
+uses the equality criterion.
+\end{proof}
+
+Thus total payload extraction and finite normal-form construction
+can genuinely be discharged on this relative fragment. Identifying
+$A_F$ with the paper's intended native kernel class still requires
+the corresponding admissibility proof. Moreover, each aspect map
+required to survive normalization must be constant on $E_F$-classes.
+A signature distinguishing equivalent payloads does not descend;
+calling it an invariant does not repair this conflict.
+
+\subsection{Readout Domains and Routed Aggregation}
+\label{v480:kernel-factor-and-route}
+
+The definition of closure-compatible readout constrains $J_r\circ r$
+when readouts exist, not necessarily the raw readout $r$. For a
+partial readout, this distinction also includes its domain.
+
+\begin{proposition}[Exact factorization of a partial readout]
+\label{v480:kernel-partial-factorization}
+Let $N:A_F\to K$ be total and $f:D\to Y$, $D\subseteq A_F$.
+A factor $\bar f:N(D)\to Y$ with $\bar f(N(a))=f(a)$ on $D$
+exists exactly when $f$ is constant on the fibres of $N$ inside $D$.
+Equality as partial functions, $f=\bar f\circ N$, additionally requires
+\[
+ D=N^{-1}(N(D)).
+\]
+If $D=A_F$, this is the total factorization case. The empty-domain
+case needs no artificial extension to unobserved classes.
+\end{proposition}
+\begin{proof}
+Define $\bar f(N(a))=f(a)$ for $a\in D$. Fibre constancy is
+necessary and sufficient for well-definedness. The composite has
+domain $N^{-1}(N(D))$, so equality of partial functions is
+equivalent to the displayed domain condition.
+\end{proof}
+
+For example, a readout defined only at one of two equivalent
+payloads is pairwise compatible wherever defined, yet its quotient
+factor composed with $N_F$ becomes defined at both. Exact domain
+preservation therefore cannot be inferred from the old pairwise
+readout condition alone.
+
+Nor does the proposed display macro establish a sufficient normal
+form: take $A_F=\{0,1\}$, closure equivalence equal to equality,
+payload extraction $p(j(a))=a$, and $N(a)=0$ for both payloads.
+The macro's identity $N(p(j(a)))=N(a)$ holds, but the compatible
+readout $f(a)=a$ cannot factor through this constant $N$.
+This is a counterexample to sufficiency of the bare macro, not to
+the complete admissible-kernel conditions.
+
+\begin{proposition}[A sufficient routed-state condition]
+\label{v480:kernel-routed-condition}
+Fix an admitted weight record $w$ and an operation
+$G_w:A_F^n\to A_F$, $n\geq1$. Suppose $G_w$ respects componentwise
+$E_F$-equivalence, and $G_w(a,\ldots,a)E_Fa$. If every input
+$a_iE_Fa_0$, then $G_w(a_1,\ldots,a_n)E_Fa_0$. The operation
+also descends uniquely to the quotient.
+\end{proposition}
+\begin{proof}
+Congruence compares the given input tuple with $(a_0,\ldots,a_0)$.
+The diagonal condition and transitivity give the class-preservation
+claim. Congruence is exactly the representative-independence
+needed to define the operation on quotient classes.
+\end{proof}
+
+Normalized weights alone do not imply this condition: with classes
+$\{0,1\}$ and $\{2,3\}$ and weights $(1/2,1/2)$, the constant
+operation $G_w(a,b)=2$ is congruent but sends inputs $0,1$ to the
+wrong class. By contrast, if the aggregate is specified only at
+the level of a vector-valued class readout and all values equal
+$v_0$, linear aggregation gives
+$\sum_i w_i v_0=v_0$ when $\sum_i w_i=1$. This proves a readout
+identity, not the existence or class preservation of a native
+state-level aggregator.
+
+\subsection{Shift Compatibility and the Activation Boundary}
+\label{v480:kernel-activation-boundary}
+
+For the payload-preserving tag migration
+$U(j_0(a))=j_1(a)$, define the shifted closure relation by
+transport through $U$. Then $p_1\circ U=p_0$ and both $q_F\circ p_t$
+and the finite $N_F\circ p_t$ commute with this display change.
+This is a proof for an explicitly declared encoding change, not
+an assertion that arbitrary physical frame changes preserve the payload.
+
+The local kernel package is therefore justified when the fragment,
+closure equivalence, invariant aspects, readout domains and routed
+operations have been supplied with the properties above. The finite
+checker validates those supplied finite relations, normal forms,
+readout fibres and complete aggregation tables using exact code
+equality. It neither infers a native equivalence nor silently
+completes an invalid relation.
+
+The original global activation package remains unproved: a native
+kernel identification, its aspect/recursive-filter compatibility,
+all relevant readouts and routed operations, and a compatible
+normal-form construction across the full active surface are still
+needed. A quotient class is not a canonical native payload
+representative; finite representative selection does not construct
+one on an arbitrary proper class. The symbols
+\texttt{WARN\_022} and \texttt{WARN\_081} are not declared cleared,
+and no external evaluator outcome is inferred from this work.
+
+\paragraph{Explicit positive finite instance.}
+Take $A_F=\{0,1,2,3\}$ with classes $\{0,1\}$ and $\{2,3\}$.
+Then $N_F=(0,0,2,2)$, and the total class readout
+$f=(7,7,11,11)$ factors as $\bar f(0)=7$, $\bar f(2)=11$.
+With $c(a)=\lfloor a/2\rfloor$, declare the aspect tuple
+$(\mathrm{state},c(a),(\mathrm{class},c(a)))$, constant on each class.
+Let $T$ swap $0,1$ and swap $2,3$, and set $G_w(a,b)=a$ for
+the admitted weight record $(1/2,1/2)$. The transport stays in
+each class, the aggregator is congruent and diagonal-preserving,
+and the payload-preserving tag shift commutes with all these
+normal-form comparisons. This is a fully specified consistent
+local model, not a recovered native QAM witness.

@@ -1,0 +1,152 @@
+\section{Closure-Liquid Crystal and Holographic Julia Boundary}
+\label{sec:closure-liquid-crystal-holographic-julia-boundary}
+
+The present section introduces a cautious re-reading of the current closure architecture in cellular language. It does \emph{not} claim that the framework is literally a condensed-matter crystal. Instead, it proposes one structured pilot in which the same closure-bearing carrier is treated as a bulk order parameter whose visible sectors appear as phase-sensitive ordered domains and whose Julia-type diagnostics are read as boundary holograms of that same order. The point of this re-reading is organizational: it compresses the current OP~3/OP~5 language into one local compatibility / defect-transport / boundary-readout picture without creating a second closure theory.
+
+\begin{definition}[Closure-liquid-crystal cell]
+\label{def:closure-liquid-crystal-cell}
+A \emph{closure-liquid-crystal cell} is a quintuple
+\[
+ X=(K,\sigma,\rho,\phi,\delta)
+\]
+consisting of:
+\begin{enumerate}[leftmargin=2em,label=(\roman*)]
+ \item a closure-bearing carrier datum $K$;
+ \item a shell/refinement datum $\sigma$;
+ \item a branch/route datum $\rho$;
+ \item a local phase/readout datum $\phi$;
+ \item a local defect datum $\delta$.
+\end{enumerate}
+The intended reading is that $K$ records the bulk carrier order, while $(\sigma,\rho,\phi,\delta)$ records the visible local realization of that order in one readout domain.
+\end{definition}
+
+\begin{definition}[Local cell-compatibility equation]
+\label{def:local-cell-compatibility-equation}
+Let $X_n=(K_n,\sigma_n,\rho_n,\phi_n,\delta_n)$ and
+$X_{n+1}=(K_{n+1},\sigma_{n+1},\rho_{n+1},\phi_{n+1},\delta_{n+1})$
+be adjacent closure-liquid-crystal cells. Their local compatibility equation is written
+\[
+ \mathcal C_{\mathrm{cell}}(X_n,X_{n+1})=0
+\]
+and is required to mean that:
+\begin{enumerate}[leftmargin=2em,label=(\roman*)]
+ \item the carrier datum remains inside the same closure-bearing class;
+ \item the branch/shell transition between the two cells is admissible;
+ \item visible readout variation remains at screening level and does not yet generate a genuine shell defect witness.
+\end{enumerate}
+Thus the equation $\mathcal C_{\mathrm{cell}}=0$ is the local cellular form of admissible OP~3 passage.
+\end{definition}
+
+\begin{proposition}[OP~3 cell-compatibility reading]
+\label{prop:op3-cell-compatibility-reading}
+Let a translated OP~3 shell passage carry a shell admissibility certificate in the sense of Definition~\ref{def:qam-shell-certificate}. Then it determines two adjacent closure-liquid-crystal cells whose local compatibility equation holds:
+\[
+ \mathcal C_{\mathrm{cell}}(X_n,X_{n+1})=0.
+\]
+In particular, the current OP~3 certificate package may be read as a local cell-compatibility law on the same closure-bearing carrier medium.
+\end{proposition}
+
+\begin{proof}
+A shell admissibility certificate records admissible branch passage, shell-admissible refinement, and closure-compatible readout on the translated OP~3 side. By Lemma~\ref{lem:qam-shell-certificate-closure} and Theorem~\ref{thm:qam-op3-shell-closure}, the source state and the branch-shell return state remain in the same closure-bearing class and differ only by an admissible shell passage together with readout-screening data. This is exactly the content encoded by $\mathcal C_{\mathrm{cell}}(X_n,X_{n+1})=0$ in Definition~\ref{def:local-cell-compatibility-equation}.
+\end{proof}
+
+\begin{definition}[Locally corrected crystal compatibility equation]
+\label{def:locally-corrected-crystal-compatibility-equation}
+Let $X_n$ and $X_{n+1}$ be adjacent closure-liquid-crystal cells in the closure-phase regime. Their \emph{locally corrected crystal compatibility equation} is written
+\[
+ \mathcal C_{\mathrm{cell}}^{\sharp}(X_n,X_{n+1})=0
+\]
+and is required to mean that:
+\begin{enumerate}[leftmargin=2em,label=(\roman*)]
+ \item the original compatibility equation $\mathcal C_{\mathrm{cell}}(X_n,X_{n+1})=0$ holds at closure/readout level;
+ \item the local phase-side persistence defect stays below the active reinforced threshold;
+ \item the associated Teichmüller-side persistence defect stays below the active reinforced threshold;
+ \item the packet-side admissibility monitor remains inside the safe admissibility band.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}[Why the crystal equation must be corrected locally]
+\label{rem:why-crystal-equation-must-be-corrected-locally}
+The original crystal compatibility law is an OP~3-style admissible passage law. The present post-\QSCver{legacy.32.0} local obstruction analysis shows that this is no longer enough for the active closure-phase trigger problem. The compatibility equation must therefore be tightened by a local persistence correction, not by changing the carrier class itself, but by sharpening the phase-side and Teichmüller-side persistence conditions on the second step.
+\end{remark}
+
+\begin{definition}[Local crystal persistence correction datum]
+\label{def:local-crystal-persistence-correction-datum}
+The \emph{local crystal persistence correction datum} at step $n$ is the quadruple
+\[
+ \mathfrak K_{\mathrm{cell}}^{\sharp}(n)
+ :=
+ (\eta_{\Theta}(n),\eta_T(n),\zeta_T(n),\lambda_T(n)),
+\]
+where:
+\begin{enumerate}[leftmargin=2em,label=(\roman*)]
+ \item $(\eta_{\Theta}(n),\eta_T(n))$ is the first local repair witness;
+ \item $(\zeta_T(n),\lambda_T(n))$ is the local Teichmüller-side repair datum.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Corrected crystal two-step window]
+\label{def:corrected-crystal-two-step-window}
+A two-step local crystal window
+\[
+ X_n,\;X_{n+1}
+\]
+is called \emph{corrected} if the locally corrected crystal compatibility equation holds and the corresponding reinforced trigger package passes on both steps.
+\end{definition}
+
+\begin{proposition}[Teichmüller repair lifts the crystal equation from screening compatibility to persistence compatibility]
+\label{prop:teichmueller-repair-lifts-crystal-equation}
+Assume the first local repair witness and the first local Teichmüller-persistence repair theorem. Then the local crystal compatibility equation can be lifted from
+\[
+ \mathcal C_{\mathrm{cell}}(X_n,X_{n+1})=0
+\]
+to the corrected form
+\[
+ \mathcal C_{\mathrm{cell}}^{\sharp}(X_n,X_{n+1})=0
+\]
+on every corrected crystal two-step window.
+\end{proposition}
+
+\begin{proof}
+The first local repair witness supplies the phase-side tightening required to repair the second-step drift, while the local Teichmüller-side repair datum supplies the remaining geometric persistence correction. If both corrections are applied and the reinforced trigger package passes on both steps, then the original admissible crystal passage is no longer merely screening-compatible but persistence-compatible on the active two-step window. This is exactly the meaning of the corrected equation $\mathcal C_{\mathrm{cell}}^{\sharp}(X_n,X_{n+1})=0$.
+\end{proof}
+
+\begin{theorem}[First local crystal-equation correction theorem]
+\label{thm:first-local-crystal-equation-correction-theorem}
+Assume:
+\begin{enumerate}[leftmargin=2em,label=(\roman*)]
+ \item the first local Theta-drift witness theorem applies;
+ \item the first local phase-side repair theorem applies;
+ \item the first local Teichmüller-persistence repair theorem applies.
+\end{enumerate}
+Then the present line supports a first local correction of the crystal equation.
+More precisely:
+\begin{enumerate}[leftmargin=2em,label=(\alph*)]
+ \item the original crystal compatibility equation remains valid as the carrier/readout baseline;
+ \item the active local persistence problem is repaired not by changing the carrier class, but by replacing $\mathcal C_{\mathrm{cell}}=0$ with the corrected equation $\mathcal C_{\mathrm{cell}}^{\sharp}=0$ on the active two-step window;
+ \item the first crystal-equation correction is therefore a local persistence correction, not a new bulk crystal law.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+By the local obstruction analysis, the first failure is phase/geometry-prior rather than carrier-prior. The phase-side repair theorem supplies the first burden-side tightening, and the Teichmüller-persistence repair theorem supplies the remaining geometric tightening. Therefore the crystal equation is not replaced at bulk level; it is corrected locally by a persistence reinforcement on the active two-step window.
+\end{proof}
+
+\begin{corollary}[Current crystal-equation working rule]
+\label{cor:current-crystal-equation-working-rule}
+The current post-\QSCver{legacy.32.0} line should not yet search first for a wholly new crystal equation. It should first search for the minimal local persistence correction that upgrades
+\[
+ \mathcal C_{\mathrm{cell}}=0
+\]
+to
+\[
+ \mathcal C_{\mathrm{cell}}^{\sharp}=0
+\]
+on the active closure-phase two-step window.
+\end{corollary}
+
+\begin{proof}
+Immediate from Theorem~\ref{thm:first-local-crystal-equation-correction-theorem}.
+\end{proof}
+
+

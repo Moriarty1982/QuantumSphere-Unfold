@@ -1,8 +1,48 @@
-% Modular wrapper generated for finer source-tree editing.
-% The included files preserve the previous content byte-for-byte at line level.
+% Compact main-text interface; the unchanged formal modules are included once
+% in the technical appendix, at app:qam-runtime-details.
+\section*{The mathematical route and its formal-language interface}
+\addcontentsline{toc}{section}{The mathematical route and its formal-language interface}
+\label{sec:compact-qam-interface}
 
-\input{parts/01_qam_mml_mma_pre_v4_infrastructure/01_working_orientation_and_public_shape}
-\input{parts/01_qam_mml_mma_pre_v4_infrastructure/02_store_array_and_pre_v4_readouts}
-\input{parts/01_qam_mml_mma_pre_v4_infrastructure/03_two_sided_tensor_masks_and_freeze}
-\input{parts/01_qam_mml_mma_pre_v4_infrastructure/04_qam_predicates_transport_shell}
-\input{parts/01_qam_mml_mma_pre_v4_infrastructure/05_qam_tensor_admissibility_translation}
+The main argument follows the Sphaera construction through MM transport,
+HC sector selection and physical readouts to the remaining OP burdens.
+Three distinctions govern that route: an invariant sector need not be
+a single eigenspace; a calibrated numerical fit is not a structural
+derivation; and a finite detector result is not exact global closure.
+Definitions and theorem hypotheses remain binding wherever a later
+readout uses them.
+
+\paragraph{What QAM, MML and MMA contribute.}
+QAM codes states, operators, readouts and witnesses as set-theoretic
+objects. MML names operations on those objects; MMA specifies guarded
+transitions and return statuses. These layers record and transport
+mathematical data. They do not make a stored assertion true, identify
+an unspecified residual or prove that a physical state satisfies a guard.
+
+For precise use, the unchanged formal definitions are collected in
+Appendix~\ref{app:qam-runtime-details}. In particular,
+Definition~\ref{def:qam-store-state} fixes the store state,
+Definition~\ref{def:mml-store-instructions} the
+\texttt{STORE}, \texttt{LINK}, \texttt{SNAPSHOT}, \texttt{CLONE},
+\texttt{ROLLBACK} and \texttt{SCRUB}
+alphabet, and Definition~\ref{def:mma-store-transition} its guarded
+transition semantics. The same appendix retains the coded predicates,
+mixed-readout rules, masks and translation clauses. Current pre-v4 tags
+are unchanged; relocating their definitions performs no Hilbert shift.
+
+\paragraph{How to read the core.}
+For the MM/HC identification, use the explicit spectral hypotheses of
+Theorem~\ref{thm:hc-spectral-projector} and the proof in
+Appendix~\ref{app:core-proof-details}. For OP1, distinguish the assumed
+fixed-exponent equation of Theorem~\ref{thm:self-consistent-gL} from
+the inverse diagnostic in Proposition~\ref{prop:exponent-5}. For OP5,
+start at the open balance condition in Definition~\ref{def:tr-balance}
+and its status guide, Remark~\ref{rem:op5-reading-contract}.
+
+\paragraph{What a short reference means.}
+A citation or guarded token points to specified hypotheses, a witness
+and a status; it does not run a background verifier. Complete proofs,
+counterexamples and the limits of the executed checks are available in
+Appendix~\ref{app:core-proof-details}. Formal command typing and a
+successful LaTeX build are not substitutes for those proofs. This
+reading-route change does not declare a new release or OP closure.

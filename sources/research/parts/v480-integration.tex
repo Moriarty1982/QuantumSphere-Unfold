@@ -1,0 +1,99 @@
+\section{v4.8 Research Integration}
+\label{v480:integration}
+
+This is a proposed integration layer for the research program named in
+the repository, not a new release theorem. The complete v4.7 baseline
+is retained below it. The layer separates what can be defined now from
+what still requires a physical or mathematical construction.
+
+\subsection{Typed Scale Record}
+\label{v480:scale-record}
+
+For a declared readout $R$, introduce the candidate scale record
+\[
+ \ell_{\rm eff}(R)=\ell_P\lambda_R,\qquad
+ \lambda_R\geq0,
+ \qquad \varepsilon_R^{\rm len}
+       =\frac{\ell_P\lambda_R}{L_{\rm ref}},\quad L_{\rm ref}>0.
+\]
+Here $\ell_P$ and $L_{\rm ref}$ have units of length, and the new
+$\lambda_R$ is dimensionless. The positive scale magnitude must be
+kept separate from an orientation/signature marker $\sigma_R$.
+In the inherited tachyon-facing passages a symbol such as
+$\lambda_{\mathsf T}$ denotes a native scale magnitude, not
+automatically this dimensionless coefficient. Identifying them
+requires an explicit unit conversion and comparison map.
+
+A signed interval class can therefore be recorded separately from
+the length magnitude. A negative signature or orientation code
+does not give a negative material length. Nor does a dimensionless
+fit-score threshold such as $1/256$ equal
+$\varepsilon_R^{\rm len}$ without a specified calibration between
+the residual's norm and a length observable.
+
+\subsection{Metric Ansatz and Null Limit}
+\label{v480:metric-candidate}
+
+If $g_{\rm ref}$ is a declared Lorentzian metric and $\lambda_R$
+is smooth and strictly positive on a region, one possible additional
+ansatz is
+\[
+ g_R=\lambda_R^2 g_{\rm ref}.
+\]
+Pointwise positive multiplication preserves signature and
+nondegeneracy, and at a fixed point scales non-null interval
+magnitudes by $\lambda_R$. This elementary property does not show
+that the physical readout has this isotropic conformal form.
+For a varying factor, connection and curvature terms also involve
+derivatives of the factor; a length convention alone does not
+determine their dynamics.
+
+At $\lambda_R=0$ the proposed tensor is degenerate and is not a
+Lorentzian metric. A null photon trajectory instead satisfies
+$g(v,v)=0$ for a nonzero tangent in a nondegenerate metric; it does
+not require the whole metric tensor to vanish. A photon-clock
+boundary therefore needs its own null/readout construction, not
+the substitution $\lambda_\gamma=0$ into a material metric ansatz.
+
+\subsection{From MM/HC to Dynamics}
+\label{v480:dynamics-handoff}
+
+Before a metric or field equation can be claimed, specify the
+state space and operator domains, the readout map and its units,
+the represented MM and compensator, and the actual residual
+functions. Proposition~\ref{v480:conditional-mm} states one
+sufficient spectral interface; it does not construct the native
+operator or its couplings.
+
+The next dynamical package must also provide an evolution or action,
+its boundary/initial conditions, the transformation of the readout
+under admissible changes, and the required conservation or exchange
+identities. Merely putting coefficient tags into geometric,
+kinetic and mixed slots does not derive such a package.
+The constant offset and nonlinear remainder in the C5 dictionary
+must be retained when testing a finite contraction bound.
+
+\subsection{Integration and Acceptance Gates}
+
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Source and scope gate.} Keep the full-source map,
+shifted normal form, backtranslation and terminal/global boundary.
+Do not replace the later baseline with the older modular pilot.
+\item \textbf{Scale gate.} Supply $R$, $L_{\rm ref}$, units,
+positive magnitude, orientation/signature data and an evaluated
+calibration before comparing length and detector residuals.
+\item \textbf{Operator and residual gate.} Supply domains,
+the spectral premises actually used and the native three-block
+residual evaluation with its fixed norms. Synthetic regression
+examples remain examples rather than native witnesses.
+\item \textbf{Dynamical gate.} Derive the claimed equation from
+the declared model and prove the needed well-posedness,
+conservation, stability or approximation statements at the scope
+being claimed. A fluid or gravitational interpretation is still
+an interpretation until this map is constructed.
+\item \textbf{Release gate.} Audit the corrected mathematical
+statements and every dependent use, reconcile historical claims
+with the current ledger, verify complete source inclusion and
+layout, then make a deliberate version/DOI decision. No public
+upload or exact all-readout claim follows from the present pass.
+\end{enumerate}

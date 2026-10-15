@@ -1,0 +1,115 @@
+\section*{v4.6.0 Integrated Bounded-Readout and T2 Scope-Boundary Appendix}
+\addcontentsline{toc}{section}{v4.6.0 Integrated Bounded-Readout and T2 Scope-Boundary Appendix}
+
+\begin{definition}[v4.6.0 bounded readout surface]
+The integrated v4.6.0 release-final bounded-readout surface is the finite guarded readout
+surface
+\[
+\begin{aligned}
+ W1&=\mathsf{pass},\\
+ W2,W3,W4,W5_{\mathrm{formal\text{-}symbolic}},W6
+   &=\mathsf{pass}_{\mathrm{bounded}},\\
+ W7&=\mathsf{scope\text{-}boundary\ locked}.
+\end{aligned}
+\]
+The status \(\mathsf{pass}_{\mathrm{bounded}}\) means that the corresponding
+readout packet is admitted only in the declared bounded grammar.  It is not an
+unrestricted all-readout witness.
+\end{definition}
+
+\begin{theorem}[Bounded readout closure in the declared grammar]
+Inside the declared global-boundary grammar, the v4.6.0 bounded readout surface
+is conservative and debt-free:
+\[
+ \mathsf{BRead}_{\mathrm{bounded}}
+ \in
+ \mathsf{Cons}(\mathcal G_{\mathrm{global}}^{\mathrm{decl}}),
+ \qquad
+ \Debt=0,
+ \qquad
+ \Leak=0.
+\]
+This theorem is a bounded formal-symbolic statement.  It does not promote an
+unrestricted physical readout and does not assert an all-readout completion.
+\end{theorem}
+
+\begin{theorem}[T2 scope-boundary and non-implication]
+The bounded readout theorem does not imply T2.  Equivalently,
+\[
+ \mathsf{BRead}_{\mathrm{bounded}}\not\Rightarrow T2,
+ \qquad
+ T2\in\mathsf{Ext}(\mathcal G_{\mathrm{global}}^{\mathrm{decl}}).
+\]
+The missing object is an all-readout witness family
+\[
+ \Theta^{\mathrm{all}}
+ =
+ \{\Theta_R:\mathcal G_{\mathrm{global}}^{\mathrm{decl}}\to R\}_{R\in\mathsf{Read}_{\mathrm{all}}}.
+\]
+No such family is constructed in this v4.6.0 release-final source.
+\end{theorem}
+
+\begin{definition}[Frozen all-readout obstruction]
+The frozen v4.6.0 all-readout obstruction is
+\[
+\begin{aligned}
+\mathfrak O_{\mathrm{all}}^{4.6.0}=\{&
+\text{missing cofinal universal exterior selector},\\
+&\text{missing all-readout naturality family},\\
+&\text{unpromoted unrestricted exterior collar slot}\}.
+\end{aligned}
+\]
+This obstruction is a scope boundary, not a contradiction.
+\end{definition}
+
+\begin{remark}[Millennium-matrix and Heisenberg-compensator status]
+The v4.6.0 line separates the bounded, exterior, and mixed portions of the
+Millennium-matrix and Heisenberg-compensator bookkeeping:
+\[
+\mathcal M=\mathcal M_{\mathrm{bd}}\oplus\mathcal M_{\mathrm{ext}}\oplus\mathcal M_{\mathrm{mix}},
+\qquad
+\mathcal H=\mathcal H_{\mathrm{bd}}\oplus\mathcal H_{\mathrm{ext}}\oplus\mathcal H_{\mathrm{mix}}.
+\]
+The bounded and finite exterior/mixed fragments are sufficient for the bounded
+readout statement.  They are not sufficient for an all-readout theorem.
+\end{remark}
+
+\begin{definition}[Structure-first field-equation reset template]
+The release-final field-equation template is
+\[
+\mathfrak E_{\mathrm{decl}}(\Phi;\mathcal M,\mathcal H,\mathsf{QAM})
+=
+\mathfrak G_{\mathrm{struct}}(\Phi)
++
+\mathfrak C_{\mathcal H}(\Phi)
++
+\mathfrak M_{\mathcal M}(\Phi)
++
+\mathfrak Q_{\mathsf{QAM}}(\Phi)
+-
+\mathfrak J_{\mathrm{readout}}(\Phi).
+\]
+The bounded instance uses only the declared bounded and finite guarded fragments.
+The all-readout instance is deliberately not asserted.
+\end{definition}
+
+\begin{remark}[Two-sided structural tensor notation]
+The two-sided tensor notation is used only as a conservative compression layer.
+Front or left-sided indices denote frame, readout, or language interfaces; back
+or right-sided indices denote structure, action, or field interfaces.  Classical
+upper--lower contraction remains ordinary action or readout.  Same-variance
+comparisons require an explicitly declared comparison tensor and are not raw
+Einstein contractions.
+\end{remark}
+
+\begin{remark}[v4.7 exterior--mixed notation guard]
+The next MM/HC exterior--mixed field-equation program should write each proposed
+mixed term with explicit sidedness.  Front-side indices carry readout, frame, or
+language interfaces; back-side indices carry structure, action, or field
+interfaces.  Any same-variance comparison between exterior and bounded channels
+must pass through a declared comparison tensor or selector.  Thus the v4.7
+program may sharpen \(\mathcal M_{\mathrm{ext}}\), \(\mathcal M_{\mathrm{mix}}\),
+\(\mathcal H_{\mathrm{ext}}\), and \(\mathcal H_{\mathrm{mix}}\), but it may not
+silently replace a comparison/readout distinction by an undeclared contraction.
+\end{remark}
+

@@ -10,7 +10,7 @@
 \newtheorem{remark}{Remark}
 \title{OP5: A Conditional QAM Residual Lift}
 \author{Working note for the Quantum Sphaera Companion}
-\date{13 October 2026}
+\date{15 October 2026}
 \begin{document}
 \maketitle
 \noindent\textbf{Status.} This note instantiates the three-component fit score
@@ -8284,6 +8284,336 @@ and bound its actual dynamics by this certificate. Unevaluated
 native residual symbols cannot establish that step. No C4
 absorption, C6 unblocking, exact finite zero or physical wormhole
 claim is implied.
+
+\section{A source audit and fixed three-block C5 dictionary test}
+\label{sec:fixed-native-c5-dictionary-audit}
+
+This step investigates the existing residual definitions rather
+than assigning a different score to the outgoing model. The
+three r04 block names describe bounded, exterior and mixed fit
+residuals. They are not three scalar amplitudes and are not an
+identification of matter, tachyon and photon frames.
+
+\subsection{What the frozen source actually provides}
+
+In the frozen v4.7.0 source, \texttt{def:v470-r01-admissibility-residual}
+introduces five residual slots. The extracted C5 candidate in
+\texttt{def:v470-r02-extracted-candidate-family} is the bounded
+finite witness-fit interface, not the full intermediate field.
+Its symbolic r02 row in
+\texttt{def:v470-r02-symbolic-residual-ledger} is
+\[
+ C_5:\quad
+ (\rho_{\rm bd},\rho_{\rm ext},\rho_{\rm mix},
+   \rho_{\rm leak},\rho_{\rm fit})
+ =(0,0,\epsilon^{\rm fit}_{\rm mix},0,\rho_{\rm fit}).
+\]
+The source explicitly calls these named slots non-numerical.
+The r04 definition
+\texttt{def:v470-r04-c5-lowering-score} later assigns to fit
+packages $W$ the three-block score
+\[
+ \Phi_5(W)=\|\rho_{5,\rm bd}(W)\|^2
+          +\|\rho_{5,\rm ext}(W)\|^2
+          +\|\rho_{5,\rm mix}(W)\|^2.
+\]
+It gives ledger values, but not evaluation formulas, norm-space
+dimensions or a map from the five candidate slots to those three
+witness residuals. If an independent bridge identified the r04
+components with the r02 C5 row without alteration, the bounded
+and exterior components would vanish and only the mixed fit
+component would contribute. The superscripted r04 witness
+$W_5^{\rm bd}$ does not itself mean that only the bounded residual
+component is nonzero. That bridge cannot be inferred from its name.
+
+The independent slots $\rho_{\rm leak}$ and $\rho_{\rm fit}$
+must not silently be appended to r04's score or absorbed into it.
+Likewise C4's persistent mixed leakage is explicitly excluded
+from the r04 fit-lowering test. Equality of names containing
+``mixed'' does not identify the C5 fit rest with protected C4.
+The active older MM/HC field equations do not supply the missing
+numeric dictionary or identify these residuals with wave amplitudes.
+
+\paragraph{The concrete lens readout is not yet that bridge.}
+The source's bounded symmetric bifocal refit does define
+\[
+ \Delta_{\rm lens}(x;A,c)
+  =\left|\|x+ce\|+\|x-ce\|-2A\right|.
+\]
+For fixed samples, axes and fit parameters this residual is
+unchanged by decay of a separate field amplitude. To obtain
+an update one needs an evaluated map from the field/witness
+state to $(x,A,c,e)$ and a typed assignment of those sample
+residuals to the r04 blocks. The earlier synthetic lens inverse
+provides neither the original scan nor that native assignment.
+Similarly the equation defect of an exact field solution is
+already zero; it is not automatically a positive C5 fit residual.
+
+\subsection{Deriving a dictionary response from evaluated witness data}
+
+Suppose a fit package $W$ and a fixed normalized residual
+dictionary have actually been evaluated. A proposed local witness
+chart $W=W_*+E_a a+E_b b$ gives, for differentiable residuals,
+\[
+ \rho_{5,j}(W)=c_j+L_j a+B_j b+\mathcal N_j(a,b),
+ \quad c_j=\rho_{5,j}(W_*),\quad
+ L_j=D\rho_{5,j}(W_*)E_a,\quad
+ B_j=D\rho_{5,j}(W_*)E_b,
+\]
+where $j\in\{\rm bd,ext,mix\}$ and $\mathcal N_j$ is the
+Taylor remainder. A general real-linear response needs both
+complex quadratures (or conjugate columns); the scalar complex-
+linear formula here is a restricted case, not a universal model
+of nonlinear tensor residuals. If the derivative is Lipschitz
+with constant $M_j$, the local remainder is bounded by
+$M_j\|E_a a+E_b b\|^2/2$ in its declared chart. Chart existence,
+norms, bounds and preservation of the actual guards need proof.
+
+For an exact affine dictionary, stack the three fixed block
+vectors as $c,L,B$. In the preceding supply coordinates
+$b=za+\eta$, put $h=L+zB$. Then exactly
+\[
+ R_5=c+ha+B\eta.
+\]
+On the invariant graph $\eta=0$, if $c=0$ and $h\ne0$,
+\[
+ R_5(W_{n+1})=uR_5(W_n),\qquad
+ \Phi_5(W_{n+1})=|u|^2\Phi_5(W_n).
+\]
+Thus the readout need not ignore the intermediate component:
+\emph{any fixed homogeneous complex-linear three-block dictionary}
+has this identity on the graph, provided it does not annihilate
+that graph. Every nonzero block scales with the same factor.
+The conclusion is derived from the restricted state evolution,
+not from setting all three native residuals equal to a guessed
+amplitude. If $h=0$, the graph is invisible and its zero score
+cannot certify strict positive lowering.
+
+On the preparation cone $|\eta|\leq\varepsilon|a|$, let
+$H=\|h\|$ and $B_0=\|B\|$. With $c=0$ and
+$H>\varepsilon B_0$,
+\[
+ (H-\varepsilon B_0)|a|\leq\|R_5\|
+       \leq(H+\varepsilon B_0)|a|.
+\]
+The earlier state bounds $\ell|a_n|\leq|a_{n+1}|\leq m|a_n|$
+therefore imply
+\[
+ \ell^2\left(\frac{H-\varepsilon B_0}{H+\varepsilon B_0}\right)^2
+ \leq\frac{\Phi_5(W_{n+1})}{\Phi_5(W_n)}
+ \leq m^2\left(\frac{H+\varepsilon B_0}{H-\varepsilon B_0}\right)^2.
+\]
+This is a fixed-dictionary contraction and positivity test.
+Separate native guard tests remain indispensable.
+
+\subsection{A persistent offset prevents uniform lowering, not every finite fit}
+
+If $c\ne0$ and the field state tends to zero, continuity gives
+$R_5\to c$ and $\Phi_5\to\|c\|^2>0$. Hence a uniform
+$\Phi_{n+1}\leq3\Phi_n/4$ for every step is impossible.
+More strongly, a homogeneous linear state update cannot satisfy
+that uniform inequality on a whole preparation cone containing
+arbitrarily small state amplitudes: take the amplitude to zero
+at one step and both readouts tend to $c$.
+
+This does not require C5 to be completely solved before a finite
+lowering test. For $0<\ell<1$, $|a_0|=A_0>0$ and steps
+$0\leq n\leq N$, the lower bound gives $|a_n|\geq\ell^N A_0$.
+If $\mathcal N_n$ denotes the evaluated stacked nonlinear
+remainder and
+\[
+ \delta_N:=\frac{\varepsilon B_0}{H}
+       +\frac{\|c\|}{H\ell^N A_0}
+       +\sup_{0\leq n\leq N}
+          \frac{\|\mathcal N_n\|}{H|a_n|}<1,
+\]
+then for all $N$ steps
+\[
+ \frac{\Phi_5(W_{n+1})}{\Phi_5(W_n)}
+ \leq m^2\left(\frac{1+\delta_N}{1-\delta_N}\right)^2.
+\]
+Requiring this upper bound to be at most $3/4$ proves finite
+lowering without setting $c=0$. The lower bound on residual
+norm also keeps all tested finite scores positive. As $N$ grows,
+the fixed offset consumes the margin; it cannot be discarded
+or identified with an exactly closed endpoint.
+If $W_*$ itself is a proposed zero-residual witness, its existence
+and admissibility cannot be assumed merely to obtain $c=0$.
+In particular, the frozen finite r04 ledger contains no admissible
+zero-score row: its two zero-score rows are blocked by C4 or C6.
+A finite estimate with nonzero $c$ avoids assuming such a witness.
+
+For nonlinear residuals there is another issue: their degree of
+homogeneity must be determined. On an invariant graph, a norm-
+homogeneous block of degree $p_j$ scales in squared norm by
+$|u|^{2p_j}$. Bilinear current defects may have degree two,
+whereas a frozen structural fit can have degree zero. Their
+scaling is not automatically the field-amplitude scaling, and
+the field equation alone does not decide those degrees.
+
+\subsection{Executable audit with the dictionary held fixed}
+
+The helper's \texttt{--readout-data} accepts exactly the named
+\texttt{bd}, \texttt{ext}, \texttt{mix} blocks in their supplied
+norm-whitened coordinates. Each affine block has fixed
+\texttt{offset}, \texttt{probe} and \texttt{hidden} vectors;
+the evaluated two-mode transfer, graph coefficient and cone
+tolerance are separate inputs. Nonempty block dimensions may
+differ. Explicit real/imaginary complex entries are supported.
+No fitted rotation, block reweighting, leakage slot or history
+norm is inserted into the score. Its fields are numerical
+diagnostics, not interval-certified native theorems.
+
+For a general supplied matrix $T$, the audit also tests graph
+defect rather than assuming an invariant eigenvector:
+\[
+ u=T_{aa}+zT_{ab},\quad F=T_{ab},\quad
+ r=T_{ba}+zT_{bb}-zu,\quad v=T_{bb}-zF,
+\]
+so that $a'=ua+F\eta$ and $\eta'=ra+v\eta$.
+The sufficient cone condition becomes
+$|r|+|v|\varepsilon\leq\varepsilon\ell$ with
+$\ell=|u|-|F|\varepsilon>0$.
+Native provenance, nonlinear dictionary validity, clock
+identification and the evaluated guard functions are never
+inferred from passing this numeric test.
+
+In explicitly synthetic examples with four residual coordinates
+distributed across the three blocks, the exact graph gives
+ratio $1/2$ in each block; a cone of tolerance $0.1$ gives
+an upper total-score bound of about $0.53927056$.
+A fixed mixed-block offset of one instead gives asymptotic score
+one and a twentieth step ratio of about $0.99262890$.
+An offset of $10^{-6}$ is still nonzero but passes the finite
+twenty-step bound. These are counterexamples and construction
+checks, not recovered native C5 measurements.
+
+\paragraph{Verification and result.}
+Thirty-four tests pass, including fixed three-block propagation,
+different block dimensions, constant-offset obstruction, finite
+lowering with a small nonzero offset, an invisible graph,
+failed cone invariance, malformed inputs and explicit complex
+encoding. The source audit fixes the roles of the named slots
+and proves a transfer criterion for an independently evaluated
+dictionary. It does not recover numeric r04 residuals from the
+ledger: that evaluation map remains unprovided in the examined
+source. A concrete native continuation must supply the fit
+package and its typed block functions, or the original calibration
+data and their block assignment, then apply these tests with
+the actual guards. No complete prior solution of C5 is required
+for the finite test, but the missing dictionary cannot be
+replaced by synthetic vectors.
+
+\section{Working-source corrections to the MM/HC and OP1 premises}
+\label{sec:mm-hc-exponent-source-corrections}
+
+The canonical modular working sources have been corrected at
+\texttt{lem:diagonal-traversal-scalar-action},
+\texttt{thm:hc-spectral-projector},
+\texttt{thm:self-consistent-gL}, \texttt{prop:exponent-5} and
+\texttt{rem:exact-sc}. Historical labels are retained so existing
+references remain resolvable; a historical label is not the current
+theorematic status. The frozen public v4.7.0 source and release
+artifacts are unchanged. The same issues remain in that archived
+version and require a later corrected release, not silent replacement.
+
+\subsection{The spectral identification is explicitly conditional}
+
+In a bounded complex Hilbert realization, commutation with an
+orthogonal $C$ preserves its image, but does not make that image
+a single eigenspace. The corrected scalar lemma requires a complete
+eigenvector decomposition on the image with one eigenvalue.
+The old cascade-to-Jordan argument did not supply this condition,
+and the cited closure-forcing lemma did not establish irreducibility
+of the required representation. No such derivation is now assumed.
+
+Even $\mathcal MC=C\mathcal M=\lambda_0 C$ does not force $C$
+to be the full spectral projector. The corrected theorem additionally
+requires
+\[
+ \ker(\mathcal M-\lambda_0 I)\cap\ker C=\{0\},
+\]
+within an explicitly assumed orthogonal pure-point decomposition.
+Then an eigenvector $x$ satisfies
+$(I-C)x\in\ker(\mathcal M-\lambda_0 I)\cap\ker C$, hence
+$x=Cx$, proving full eigenspace equality. The examples
+$\mathcal M=\mathrm{diag}(1,2,3)$, $C=\mathrm{diag}(1,1,0)$ and
+$\mathcal M=\mathrm{diag}(2,2,3)$, $C=\mathrm{diag}(1,0,0)$
+separately exhibit the missing single-eigenvalue and complement
+conditions. A projection also does not determine the operator's
+action on its complement.
+
+Immediate singlet, frame-readout and meta-field uses now inherit
+the spectral hypotheses; color representation alone does not
+identify individual $\mathcal M$ eigendirections. Native closure
+classification, kinetic compatibility and physical interpretation
+are separate obligations. These corrections do not establish the
+missing premise in an actual MM/HC realization, nor repair every
+historical closure argument. In particular they do not justify
+promoting projected fixed-point data to equality of the original
+unprojected state without its own proof.
+
+\subsection{An inverse exponent cannot predict its own inputs}
+
+For $g>1$ and $0<\beta<1/\sqrt3$, define
+\[
+ A(g,\beta)=\frac{\gamma_1}{4\pi|\log(\beta\sqrt3)|},\qquad
+ n_{\rm exact}(g,\beta)=\frac{\log A(g,\beta)}{\log g}.
+\]
+Then $g^{n_{\rm exact}}=A$ is an identity for every allowed pair.
+The additional relation $\beta(g)=\sqrt{(g-1)/(g+1)}$ leaves it
+an identity for all $1<g<2$. It cannot determine $g$ from the
+first zero ordinate alone. The inverse diagnostic gives about
+$5.00584$ for the independent rounded pair $(1.864,0.5493)$,
+but about $5.00293$ if the frame relation is enforced exactly
+at $g=1.864$. These are distinct input choices, not a structural
+derivation of exponent five.
+
+With the exponent independently fixed to $5$ as an ansatz, a genuine
+scalar equation remains:
+\[
+ f(g)=\tfrac12\log3+\tfrac12\log\frac{g-1}{g+1}
+              +\frac{a}{g^5}=0,\qquad a=\gamma_1/(4\pi).
+\]
+For $0<a<27/20$, $f'>0$ follows from
+$g^6/(g^2-1)\geq27/4>5a$. Together with
+$f(1+)=-\infty$ and $f(2)=a/32>0$ this proves a unique root
+in $(1,2)$. At the stated first-zero input it is
+$g\simeq1.863662249889$, $\beta\simeq0.549175395418$.
+The approximately $0.03957\%$ difference from the inherited
+comparison value $1.8644$ is retained as a numerical comparison,
+not as a first-principles solution of OP1 or a physical uncertainty.
+The exponent and the correction's lattice origin remain open.
+
+\paragraph{Verification.}
+Ten added standard-library regression tests check exact rational
+matrix counterexamples, a positive noncoordinate projector example,
+the inverse-exponent identity and domain, rounded-input sensitivity,
+the derivative bound and the conditional model root. Together with
+the existing framework tests and six reading-route checks, all 63
+audit tests pass. The separate
+34 C5 relay/readout tests remain model diagnostics, not a substitute
+for the corrected source premises or a native closure proof.
+
+\paragraph{Editorial reading-route pilot.}
+The modular main source now begins with a compact QAM/MML/MMA
+interface. Its five original formal-language modules are retained
+unchanged and included exactly once in a technical appendix.
+The MM/HC and fixed-exponent statements keep their hypotheses,
+conclusions and proof ideas in the main text; complete proofs,
+counterexamples, input conventions and the verification ledger
+are directly linked in the new core-proof appendix. No anonymous
+token is substituted for a missing argument.
+
+The OP5 balance has an explicit reading contract: endpoint
+regularization, full-sum control and a remainder estimate remain
+obligations, and the separate C5 fit interface is not silently
+identified with that balance. Existing quantitative blocks are
+retained for audit rather than hidden or certified by this editorial
+pass. The routing tests check unique inclusion, retained labels,
+visible hypotheses and the new reference targets, not mathematical
+truth. Published artifacts and historical sources remain unchanged;
+no v4.8.0 release is declared by this working-source reorganization.
 
 \paragraph{Transport reference.}
 Andre Massing, NTNU, \emph{Weak formulation and well-posedness of the

@@ -1,0 +1,25 @@
+\clearpage
+\section{QAM, MML and MMA: preserved formal-language definitions}
+\label{app:qam-runtime-details}
+
+This appendix is the definition-level target of
+\hyperref[sec:compact-qam-interface]{the compact main-text interface}.
+The five source modules below
+are included unchanged and exactly once. Their historical orientation
+paragraphs describe the inherited reading sequence; the current main-text
+route is the compact interface. Moving their types, predicates and command
+semantics here changes neither their content nor their proof obligations.
+
+\paragraph{Definition and execution are different.}
+The specified instruction alphabet is a formal interface. It is not a
+claim that every named operation has a running implementation or that any
+stored witness is correct. The executed numerical and grammar checks are
+identified separately in Appendix~\ref{app:verification-ledger}.
+No unavailable guard, closure certificate or machine proof is inferred
+from a command name.
+
+\input{parts/01_qam_mml_mma_pre_v4_infrastructure/01_working_orientation_and_public_shape}
+\input{parts/01_qam_mml_mma_pre_v4_infrastructure/02_store_array_and_pre_v4_readouts}
+\input{parts/01_qam_mml_mma_pre_v4_infrastructure/03_two_sided_tensor_masks_and_freeze}
+\input{parts/01_qam_mml_mma_pre_v4_infrastructure/04_qam_predicates_transport_shell}
+\input{parts/01_qam_mml_mma_pre_v4_infrastructure/05_qam_tensor_admissibility_translation}

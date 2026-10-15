@@ -1,0 +1,1870 @@
+\section{\QSCver{legacy.37.0} Migration Map and Backtranslation Contract for the shifted QAM Shift}
+\label{sec:v3370-migration-map-backtranslation-contract}
+
+\begin{quote}\small
+\noindent\textbf{Status.}
+This section is a migration-map layer only. It prepares the later shifted global
+QAM Hilbert-shift, but does not perform that global migration. The local
+HC-boundary activation shift introduced in Version~3.36.0 remains the first
+structural shift:
+\[
+ 0_{\mathrm{mask}}\longrightarrow 1_{\mathrm{mask}}.
+\]
+The present layer records how a later shifted line may move the whole QAM tag
+language without losing the historical release line Active Core, its router/readout separation,
+or the Historical Witness.
+\end{quote}
+
+\subsection{Separation of the two shifts}
+\label{subsec:v3370-two-shift-separation}
+
+\begin{definition}[Local boundary shift versus global language shift]
+\label{def:v3370-local-boundary-shift-versus-global-language-shift}
+The Companion distinguishes two shifts.
+\begin{enumerate}[leftmargin=*]
+ \item \emph{Shift A}, the local HC-boundary activation shift, is the
+ already-admitted historical release line structural reading
+ \[
+ 0_{\mathrm{mask}}\longrightarrow 1_{\mathrm{mask}}.
+ \]
+ It says that the transition from no active readout to the first active
+ readout requires the Heisenberg Compensator as a minimal boundary/readout
+ normalizer.
+
+ \item \emph{Shift B}, the global shifted QAM Hilbert-shift, is the future
+ language migration
+ \[
+ k\longmapsto k+1
+ \]
+ applied uniformly to inhabited QAM tags so that tag $0$ becomes globally
+ reserved for the empty or no-active-kind marker.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}[Why Shift A belongs to the legacy preparation line and Shift B belongs to shifted]
+\label{rem:v3370-shift-a-legacy-shift-b-shifted}
+Shift A is structural and local: it explains why HC appears internally at the
+first active readout boundary. Shift B is linguistic and global: it changes
+the whole QAM namespace. Therefore Shift A belongs to the legacy preparation
+line, while Shift B must be treated as the first major shifted migration.
+\end{remark}
+
+\subsection{Old and new QAM namespaces}
+\label{subsec:v3370-old-new-qam-namespaces}
+
+\begin{definition}[Pre-shift and shifted tag namespaces]
+\label{def:v3370-pre-shift-shifted-tag-namespaces}
+Let $\mathcal N_{3}$ denote the inherited pre-shift QAM tag namespace used through
+Version~3.36.0. Let $\mathcal N_{4}$ denote the future shifted namespace. The
+planned migration map is a partial translation
+\[
+ \Sigma_{4}\colon \mathcal N_{3}^{\mathrm{inh}}\longrightarrow
+ \mathcal N_{4}^{\mathrm{inh}},
+ \qquad
+ \Sigma_{4}(k)=k+1,
+\]
+defined on inhabited tags. The target tag $0\in\mathcal N_{4}$ is reserved for
+the empty or no-active-kind marker and is not the image of an inhabited
+pre-shift tag.
+\end{definition}
+
+\begin{definition}[Backtranslation map]
+\label{def:v3370-backtranslation-map}
+The formal backtranslation associated with $\Sigma_{4}$ is the partial map
+\[
+ \mathrm{B}_{4}\colon \mathcal N_{4}^{\mathrm{inh}}\longrightarrow
+ \mathcal N_{3}^{\mathrm{inh}},
+ \qquad
+ \mathrm{B}_{4}(a)=a-1
+\]
+for inhabited shifted tags $a\geq 1$. The value $0$ has no inhabited
+backtranslation; it is read only as the empty/no-active-kind marker.
+\end{definition}
+
+\begin{lemma}[Round-trip on inhabited tags]
+\label{lem:v3370-round-trip-inhabited-tags}
+For every inhabited pre-shift tag $k\in\mathcal N_{3}^{\mathrm{inh}}$,
+\[
+ \mathrm{B}_{4}(\Sigma_{4}(k))=k.
+\]
+For every inhabited shifted tag $a\geq 1$,
+\[
+ \Sigma_{4}(\mathrm{B}_{4}(a))=a.
+\]
+\end{lemma}
+
+\begin{proof}
+Both identities are the elementary identities $(k+1)-1=k$ and $(a-1)+1=a$.
+The reserved value $0$ is excluded from the inhabited backtranslation domain by
+definition. Thus the round-trip statement is exact on inhabited tags and
+honestly undefined on the reserved empty marker.
+\end{proof}
+
+\subsection{Migration obligations}
+\label{subsec:v3370-migration-obligations}
+
+\begin{definition}[shifted migration obligation list]
+\label{def:v3370-shifted-migration-obligation-list}
+A later shifted global QAM Hilbert-shift must discharge the following obligations:
+\begin{enumerate}[leftmargin=*]
+ \item translate every inhabited QAM tag through $\Sigma_{4}$;
+ \item reserve tag $0$ globally for the empty or no-active-kind marker;
+ \item preserve all payloads attached to translated tags;
+ \item translate route-mask examples and bitstream examples coherently;
+ \item preserve the two-sided structural tensor grammar under tag erasure and
+ reindexing;
+ \item preserve router-object guards and backtranslation records;
+ \item state explicitly that the HC-boundary activation shift is not being
+ redefined by the global tag migration;
+ \item prove a conservativity theorem by erasing shifted tags back to the
+ pre-shift namespace through $\mathrm{B}_{4}$ on inhabited components.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}[What is not migrated]
+\label{rem:v3370-what-is-not-migrated}
+The shifted tag migration should not change classical upper--lower tensor
+contraction, same-variance comparison rules, the OP status, the Historical
+Witness, or the physical meaning of an already guarded readout. It changes
+the QAM namespace and routing labels, not the underlying mathematical payloads.
+\end{remark}
+
+\subsection{Router-package migration}
+\label{subsec:v3370-router-package-migration}
+
+\begin{definition}[Router-package translation]
+\label{def:v3370-router-package-translation}
+Let
+\[
+ \mathfrak R=(K,M,C,T,B,G)
+\]
+be a guarded router object, with kind registry $K$, route-mask registry $M$,
+classical collars $C$, trace record $T$, backtranslation record $B$, and guard
+record $G$. Its shifted translation is the object
+\[
+ \Sigma_{4}(\mathfrak R)
+ =
+ (\Sigma_{4}K,\Sigma_{4}M,C,T,\mathrm{B}_{4}^{\mathfrak R},G),
+\]
+where collars, traces, and guards are preserved, while kind and mask registries
+are reindexed and the backtranslation record is replaced by the corresponding
+shifted-to-pre-shift decoding data.
+\end{definition}
+
+\begin{lemma}[Router guard preservation]
+\label{lem:v3370-router-guard-preservation}
+If a router object $\mathfrak R$ is guarded before migration, then
+$\Sigma_{4}(\mathfrak R)$ carries the same guard record after migration.
+\end{lemma}
+
+\begin{proof}
+By Definition~\ref{def:v3370-router-package-translation}, the guard record
+$G$ is copied unchanged. The migration reindexes registries and replaces the
+backtranslation ledger; it does not modify the guard predicates. Hence guard
+status is preserved.
+\end{proof}
+
+\subsection{Readout-package migration}
+\label{subsec:v3370-readout-package-migration}
+
+\begin{definition}[Readout-package translation]
+\label{def:v3370-readout-package-translation}
+A guarded readout package may be translated to shifted only by translating its
+QAM/router labels while leaving its declared readout target, comparison tensor,
+boundary collar, residual map, and non-claim guard unchanged.
+\end{definition}
+
+\begin{proposition}[Machine/content preservation under migration]
+\label{prop:v3370-machine-content-preservation}
+The future shifted global QAM Hilbert-shift preserves the historical release line machine/content
+separation: QAM/MML/MMA remains the router/compiler language, and physical or
+mathematical content remains in the guarded readout package.
+\end{proposition}
+
+\begin{proof}
+The migration acts on labels, kinds, masks, and routing registries. It does not
+act on the declared target of a physical readout, the comparison tensor, the
+boundary collar, or the residual map. Therefore it changes the machine
+addressing language while preserving the separation between machine layer and
+content layer.
+\end{proof}
+
+\subsection{Conservativity statement for the future shifted shift}
+\label{subsec:v3370-conservativity-statement-future-shifted-shift}
+
+\begin{theorem}[shifted migration conservativity contract]
+\label{thm:v3370-shifted-migration-conservativity-contract}
+Suppose a future shifted text translates every inhabited pre-shift QAM tag through
+$\Sigma_{4}$, reserves $0$ only for the empty/no-active-kind marker, and equips
+each translated router or readout object with its backtranslation ledger
+$\mathrm{B}_{4}$. Then every finite guarded shifted router/readout package has an
+inhabited-component backtranslation to a finite guarded pre-shift package with the
+same payloads and the same theorematic status.
+\end{theorem}
+
+\begin{proof}
+Apply $\mathrm{B}_{4}$ to every inhabited shifted tag and leave non-tag payloads fixed.
+Round-trip correctness on inhabited tags follows from
+Lemma~\ref{lem:v3370-round-trip-inhabited-tags}. Router guards are preserved
+by Lemma~\ref{lem:v3370-router-guard-preservation}. Readout targets,
+comparison tensors, boundary collars, residual maps, and non-claim guards are
+unchanged by Definition~\ref{def:v3370-readout-package-translation}. Hence
+the translated object backtranslates to a pre-shift guarded object with identical
+payloads and unchanged theorematic status. The reserved value $0$ has no
+inhabited backtranslation and therefore cannot be used to manufacture a new
+certificate.
+\end{proof}
+
+\subsection{historical release line handoff to shifted}
+\label{subsec:v3370-handoff-to-shifted}
+
+\begin{definition}[shifted entry checklist]
+\label{def:v3370-shifted-entry-checklist}
+A later \QSCver{shifted.0.0} draft should begin only after the following checklist is
+satisfied:
+\begin{enumerate}[leftmargin=*]
+ \item the global tag translation $\Sigma_{4}$ is fixed;
+ \item every occurrence class of QAM tags has an entry in the migration ledger;
+ \item every route-mask example has a shifted and pre-shift display pair;
+ \item every router object carries a backtranslation record;
+ \item the HC-boundary activation shift remains local and is not redefined;
+ \item the shifted text carries the conservativity contract of
+ Theorem~\ref{thm:v3370-shifted-migration-conservativity-contract};
+ \item OP~1/4 and OP~5(B) are not claimed closed merely by the migration.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}[historical release line non-claim]
+\label{rem:v3370-non-claim}
+Version~3.37.0 is a migration-map and backtranslation-contract layer. It does
+not execute the shifted global QAM Hilbert-shift, does not close OP~1/4 or OP~5(B),
+does not activate primitive mixed tensors, and does not claim
+Turing-completeness. Its purpose is to make the later shifted migration auditable
+before the namespace is actually changed.
+\end{remark}
+
+
+
+\clearpage
+\section{\QSCver{legacy.37.1} Concrete Migration Ledger and Route-Mask Examples}
+\label{sec:v3371-concrete-migration-ledger-route-mask-examples}
+
+\begin{quote}\small
+\noindent\textbf{Status.}
+This section is a concrete-audit layer for the historical release line migration map. It still
+does not execute the global shifted QAM Hilbert-shift. Its purpose is to make the
+future migration visually and mechanically checkable before the namespace is
+changed.
+\end{quote}
+
+\subsection{Minimal tag ledger}
+\label{subsec:v3371-minimal-tag-ledger}
+
+\begin{definition}[Concrete migration ledger]
+\label{def:v3371-concrete-migration-ledger}
+The concrete migration ledger is the finite display of the rule
+\[
+ \Sigma_4(k)=k+1,
+ \qquad
+ \mathrm B_4(a)=a-1\quad(a\geq 1),
+\]
+together with the reserved value
+\[
+ 0_{\mathrm{shift}}=\varnothing_{\mathrm{active}},
+\]
+which has no inhabited pre-shift backtranslation.
+\end{definition}
+
+\begin{center}
+\small
+\begin{tabular}{@{}llll@{}}
+\toprule
+pre-shift tag & shifted tag & reading & backtranslation\\
+\midrule
+reserved / none & $0$ & empty/no-active-kind & none\\
+$0$ & $1$ & first inhabited kind & $\mathrm B_4(1)=0$\\
+$1$ & $2$ & second inhabited kind & $\mathrm B_4(2)=1$\\
+$2$ & $3$ & third inhabited kind & $\mathrm B_4(3)=2$\\
+$k$ & $k+1$ & inhabited kind $k$ & $\mathrm B_4(k+1)=k$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{remark}[Why the ledger is not a new theorem]
+\label{rem:v3371-ledger-not-new-theorem}
+The ledger is a bookkeeping surface. It records how inhabited tags will be
+renamed in shifted. It does not change the underlying readout, comparison tensor,
+boundary collar, residual map, or OP status.
+\end{remark}
+
+\subsection{Route payload example}
+\label{subsec:v3371-route-payload-example}
+
+\begin{definition}[Route payload migration]
+\label{def:v3371-route-payload-migration}
+For a finite ordered route payload
+\[
+ r=\langle k_1,\ldots,k_n\rangle,
+\]
+the future shifted route payload is
+\[
+ \Sigma_4(r)
+ =
+ \langle k_1+1,\ldots,k_n+1\rangle.
+\]
+Its backtranslation is applied componentwise:
+\[
+ \mathrm B_4(\langle a_1,\ldots,a_n\rangle)
+ =
+ \langle a_1-1,\ldots,a_n-1\rangle
+\]
+whenever all $a_i\geq 1$.
+\end{definition}
+
+\begin{remark}[Example: two-entry route payload]
+\label{rem:v3371-two-entry-route-payload-example}
+The pre-shift payload
+\[
+ r=\langle 5,12\rangle
+\]
+migrates to
+\[
+ \Sigma_4(r)=\langle 6,13\rangle.
+\]
+Backtranslation returns
+\[
+ \mathrm B_4(\langle 6,13\rangle)=\langle 5,12\rangle.
+\]
+Thus the route addresses change, while the ordered route structure and the
+payload role are preserved.
+\end{remark}
+
+\subsection{Packed mask example}
+\label{subsec:v3371-packed-mask-example}
+
+\begin{definition}[Support mask versus packed mask]
+\label{def:v3371-support-mask-versus-packed-mask}
+A support mask is a finite inhabited support set
+\[
+ S\subseteq \mathbb N.
+\]
+Its pre-shift packed integer is
+\[
+ m_3(S)=\sum_{k\in S}2^k.
+\]
+After migration the support becomes
+\[
+ \Sigma_4(S)=\{k+1:k\in S\},
+\]
+and its shifted packed integer is
+\[
+ m_4(\Sigma_4(S))=\sum_{k\in S}2^{k+1}.
+\]
+\end{definition}
+
+\begin{lemma}[Packed-mask doubling rule]
+\label{lem:v3371-packed-mask-doubling-rule}
+For every finite inhabited support $S$,
+\[
+ m_4(\Sigma_4(S))=2\,m_3(S).
+\]
+\end{lemma}
+
+\begin{proof}
+By definition,
+\[
+ m_4(\Sigma_4(S))
+ =
+ \sum_{k\in S}2^{k+1}
+ =
+ 2\sum_{k\in S}2^k
+ =
+ 2\,m_3(S).
+\]
+The rule applies to the packed integer representation of the support. It is
+not the same operation as adding $1$ to the packed integer.
+\end{proof}
+
+\begin{remark}[Example: packed mask for the route support $\{5,12\}$]
+\label{rem:v3371-packed-mask-five-twelve-example}
+For
+\[
+ S=\{5,12\},
+\]
+the pre-shift packed mask is
+\[
+ m_3(S)=2^5+2^{12}=32+4096=4128.
+\]
+The shifted support is
+\[
+ \Sigma_4(S)=\{6,13\},
+\]
+and the shifted packed mask is
+\[
+ m_4(\Sigma_4(S))=2^6+2^{13}=64+8192=8256.
+\]
+This equals $2\cdot 4128$. Backtranslation of the support gives
+\[
+ \mathrm B_4(\{6,13\})=\{5,12\}.
+\]
+\end{remark}
+
+\begin{remark}[No accidental activation of the reserved bit]
+\label{rem:v3371-no-accidental-reserved-bit-activation}
+Since inhabited supports are shifted upward, the shifted bit $0$ is not produced by
+migration. It remains reserved for the empty/no-active-kind marker. This is
+the operational reason why the global shift is compatible with the
+HC-boundary interpretation: the first active bit is no longer confused with the
+empty marker.
+\end{remark}
+
+\subsection{Two-sided tensor ledger example}
+\label{subsec:v3371-two-sided-tensor-ledger-example}
+
+\begin{definition}[Tensor-index migration ledger]
+\label{def:v3371-tensor-index-migration-ledger}
+A two-sided structural tensor expression may carry QAM/router tags inside its
+front-side or back-side index payloads. A future shifted migration applies
+$\Sigma_4$ only to those tag payloads. It does not change front/back sidedness,
+upper/lower variance, or the declared contraction/comparison rule.
+\end{definition}
+
+\begin{remark}[Example: front-side route migration]
+\label{rem:v3371-front-side-route-migration-example}
+A readout-facing tensor package with front-side route payload
+\[
+ {}^{\langle 5,12\rangle}{}_{\langle 2\rangle}
+ \mathcal T^{i}{}_{j}
+\]
+migrates to
+\[
+ {}^{\langle 6,13\rangle}{}_{\langle 3\rangle}
+ \mathcal T^{i}{}_{j}.
+\]
+The front-side payloads are reindexed. The back-side structural indices
+$i,j$ are not changed in this example. The tensor still has the same
+front/back and upper/lower grammar.
+\end{remark}
+
+\begin{remark}[Example: full payload migration]
+\label{rem:v3371-full-payload-migration-example}
+If both front-side and back-side QAM payloads are explicitly tagged, then
+\[
+ {}^{\langle 5,12\rangle}{}_{\langle 2\rangle}
+ \mathcal T^{\langle 7\rangle}{}_{\langle 10\rangle}
+\]
+migrates to
+\[
+ {}^{\langle 6,13\rangle}{}_{\langle 3\rangle}
+ \mathcal T^{\langle 8\rangle}{}_{\langle 11\rangle}.
+\]
+This is a label migration only. It does not turn an upper index into a lower
+index, a front-side readout into a back-side action, or a comparison tensor into
+a contraction tensor.
+\end{remark}
+
+\begin{proposition}[Tensor grammar preservation under the migration ledger]
+\label{prop:v3371-tensor-grammar-preservation-under-ledger}
+The concrete migration ledger preserves the two-sided structural tensor
+grammar.
+\end{proposition}
+
+\begin{proof}
+The migration acts on tag payloads by $k\mapsto k+1$. The syntactic positions
+of the payloads are unchanged: front-side payloads remain front-side payloads,
+back-side payloads remain back-side payloads, upper payloads remain upper
+payloads, and lower payloads remain lower payloads. Therefore classical
+upper--lower readout and explicit same-variance comparison requirements are
+unchanged.
+\end{proof}
+
+\subsection{shifted readiness consequence}
+\label{subsec:v3371-shifted-readiness-consequence}
+
+\begin{theorem}[Concrete ledger supports the shifted conservativity contract]
+\label{thm:v3371-concrete-ledger-supports-shifted-conservativity-contract}
+The concrete tag ledger, route payload example, packed-mask rule, and
+two-sided tensor ledger examples support the historical release line backtranslation contract:
+every migrated finite example displayed in this section backtranslates to its
+pre-shift source example on inhabited components.
+\end{theorem}
+
+\begin{proof}
+The tag ledger backtranslates by $\mathrm B_4(a)=a-1$ for $a\geq 1$. Route
+payloads backtranslate componentwise. Packed masks backtranslate at the level
+of support sets, not by subtracting $1$ from the packed integer. Tensor
+payloads backtranslate by applying the same rule to the tags carried inside
+their index payloads, while preserving sidedness and variance. Hence each
+finite example returns to its pre-shift source example on inhabited components.
+\end{proof}
+
+\begin{remark}[\QSCver{legacy.37.1} non-claim]
+\label{rem:v3371-non-claim}
+Version~3.37.1 still does not execute the global shifted QAM Hilbert-shift. It only
+adds concrete ledger examples. The actual global migration remains a shifted task.
+\end{remark}
+
+
+
+\clearpage
+\section{Global QAM Hilbert-Shift Activation Candidate}
+\label{sec:v400-r01-global-qam-hilbert-shift-activation}
+
+\begin{quote}\small
+\noindent\textbf{Status.}
+This is the first shifted activation release-final state. It executes the global QAM
+namespace decision prepared in Versions~3.37.0--3.37.1: from this layer
+forward, the active QAM language reserves tag $0$ for the empty/no-active-kind
+marker and reads inhabited tags in the shifted shifted namespace. The earlier
+historical release line HC-boundary shift remains local and structural; the present layer is the
+global language shift.
+\end{quote}
+
+\subsection{Governing shifted namespace convention}
+\label{subsec:v400-r01-governing-shifted-namespace-convention}
+
+\begin{definition}[Global shifted QAM Hilbert-shift convention]
+\label{def:v400-r01-global-shifted-qam-hilbert-shift-convention}
+The governing shifted QAM namespace is obtained from the inhabited pre-shift namespace
+by the shift
+\[
+ \Sigma_4(k)=k+1.
+\]
+The tag $0$ in the shifted namespace is reserved globally for the empty or
+no-active-kind marker:
+\[
+ 0_{\mathrm{shift}}=\varnothing_{\mathrm{active}}.
+\]
+It is not the image of an inhabited pre-shift tag.
+\end{definition}
+
+\begin{definition}[shifted backtranslation ledger]
+\label{def:v400-r01-shifted-backtranslation-ledger}
+The shifted backtranslation ledger is the partial map
+\[
+ \mathrm B_4(a)=a-1
+\]
+defined on inhabited shifted tags $a\geq 1$. The reserved tag $0$ has no inhabited
+backtranslation.
+\end{definition}
+
+\begin{remark}[What is executed in]
+\label{rem:v400-r01-what-is-executed}
+The executed decision is the global namespace convention: shifted readout packages
+use the shifted tag convention by default. The text does not pretend that the
+Historical Witness has been rewritten. Historical material remains readable by
+the backtranslation ledger.
+\end{remark}
+
+\subsection{Compatibility with the first HC-boundary shift}
+\label{subsec:v400-r01-compatibility-first-hc-boundary-shift}
+
+\begin{definition}[Shift A and Shift B in the shifted text]
+\label{def:v400-r01-shift-a-shift-b-shifted-text}
+The shifted text keeps the following distinction.
+\begin{enumerate}[leftmargin=*]
+ \item \emph{Shift A} is the local historical release line HC-boundary activation
+ \[
+ 0_{\mathrm{mask}}\longrightarrow 1_{\mathrm{mask}}.
+ \]
+ It explains why the Heisenberg Compensator appears as a boundary/readout
+ normalizer at the first active readout transition.
+
+ \item \emph{Shift B} is the global shifted QAM Hilbert-shift
+ \[
+ k\longmapsto k+1
+ \]
+ applied to inhabited QAM tags.
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}[HC-boundary shift is not redefined by shifted]
+\label{prop:v400-r01-hc-boundary-shift-not-redefined}
+The global shifted QAM Hilbert-shift does not redefine the historical release line HC-boundary
+activation principle.
+\end{proposition}
+
+\begin{proof}
+Shift A concerns the structural boundary from inactive mask state to first
+active readout state. Shift B concerns the global label namespace for
+inhabited QAM tags. These acts have different domains: the first is a local
+boundary-normalization reading, the second is a global language migration.
+Therefore the shifted namespace convention preserves the HC-boundary reading rather
+than replacing it.
+\end{proof}
+
+\subsection{Governing shifted ledger}
+\label{subsec:v400-r01-governing-shifted-ledger}
+
+\begin{center}
+\small
+\begin{tabular}{@{}llll@{}}
+\toprule
+pre-shift tag & shifted tag & shifted reading & backtranslation\\
+\midrule
+none & $0$ & empty/no-active-kind & none\\
+$0$ & $1$ & first inhabited kind & $\mathrm B_4(1)=0$\\
+$1$ & $2$ & second inhabited kind & $\mathrm B_4(2)=1$\\
+$2$ & $3$ & third inhabited kind & $\mathrm B_4(3)=2$\\
+$k$ & $k+1$ & inhabited kind $k$ & $\mathrm B_4(k+1)=k$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{lemma}[shifted inhabited round-trip]
+\label{lem:v400-r01-shifted-inhabited-round-trip}
+For every inhabited pre-shift tag $k$,
+\[
+ \mathrm B_4(\Sigma_4(k))=k.
+\]
+For every inhabited shifted tag $a\geq 1$,
+\[
+ \Sigma_4(\mathrm B_4(a))=a.
+\]
+\end{lemma}
+
+\begin{proof}
+Both claims are the identities $(k+1)-1=k$ and $(a-1)+1=a$. The reserved
+value $0$ is excluded from the inhabited backtranslation domain, so it cannot
+generate an inhabited source tag.
+\end{proof}
+
+\subsection{Route-mask and support migration}
+\label{subsec:v400-r01-route-mask-support-migration}
+
+\begin{definition}[shifted route payload]
+\label{def:v400-r01-shifted-route-payload}
+A pre-shift ordered route payload
+\[
+ r=\langle k_1,\ldots,k_n\rangle
+\]
+is read in the shifted language as
+\[
+ r^{(4)}=\Sigma_4(r)=\langle k_1+1,\ldots,k_n+1\rangle.
+\]
+\end{definition}
+
+\begin{definition}[shifted support and packed mask]
+\label{def:v400-r01-shifted-support-and-packed-mask}
+For a finite inhabited support $S\subseteq\mathbb N$, the migrated shifted support is
+\[
+ S^{(4)}=\{k+1:k\in S\}.
+\]
+If the pre-shift packed integer is
+\[
+ m_3(S)=\sum_{k\in S}2^k,
+\]
+then the shifted packed integer is
+\[
+ m_4(S^{(4)})=\sum_{k\in S}2^{k+1}.
+\]
+\end{definition}
+
+\begin{lemma}[shifted packed-mask doubling]
+\label{lem:v400-r01-shifted-packed-mask-doubling}
+For every finite inhabited support $S$,
+\[
+ m_4(S^{(4)})=2\,m_3(S).
+\]
+\end{lemma}
+
+\begin{proof}
+The proof is the direct calculation
+\[
+ m_4(S^{(4)})
+ =
+ \sum_{k\in S}2^{k+1}
+ =
+ 2\sum_{k\in S}2^k
+ =
+ 2\,m_3(S).
+\]
+\end{proof}
+
+\begin{remark}[Example: route and mask]
+\label{rem:v400-r01-example-route-and-mask}
+The pre-shift route payload $\langle 5,12\rangle$ is read in shifted as
+$\langle 6,13\rangle$. The support $\{5,12\}$ has packed value
+$2^5+2^{12}=4128$ before migration and packed value
+$2^6+2^{13}=8256$ after migration. The packed integer doubles; the support
+backtranslates by subtracting one from inhabited support entries.
+\end{remark}
+
+\subsection{Two-sided tensor grammar under shifted}
+\label{subsec:v400-r01-two-sided-tensor-grammar-under-shifted}
+
+\begin{definition}[shifted tensor-payload migration]
+\label{def:v400-r01-shifted-tensor-payload-migration}
+In a two-sided structural tensor expression, the shifted shift acts only on QAM or
+router tag payloads carried by index positions. It does not alter front/back
+sidedness, upper/lower variance, classical upper--lower contraction, or the
+requirement that same-variance comparisons use explicit comparison or selector
+tensors.
+\end{definition}
+
+\begin{remark}[Example: front-side migration]
+\label{rem:v400-r01-example-front-side-migration}
+The front-side route display
+\[
+ {}^{\langle 5,12\rangle}{}_{\langle 2\rangle}\mathcal T^{i}{}_{j}
+\]
+is read in shifted as
+\[
+ {}^{\langle 6,13\rangle}{}_{\langle 3\rangle}\mathcal T^{i}{}_{j}.
+\]
+The expression changes its tag payloads, not its tensor grammar.
+\end{remark}
+
+\begin{remark}[Example: full payload migration]
+\label{rem:v400-r01-example-full-payload-migration}
+If both front-side and back-side payloads are tagged, then
+\[
+ {}^{\langle 5,12\rangle}{}_{\langle 2\rangle}
+ \mathcal T^{\langle 7\rangle}{}_{\langle 10\rangle}
+\]
+is read in shifted as
+\[
+ {}^{\langle 6,13\rangle}{}_{\langle 3\rangle}
+ \mathcal T^{\langle 8\rangle}{}_{\langle 11\rangle}.
+\]
+The front/back positions and the upper/lower variance are preserved.
+\end{remark}
+
+\begin{theorem}[shifted tensor-grammar preservation]
+\label{thm:v400-r01-shifted-tensor-grammar-preservation}
+The global shifted QAM Hilbert-shift preserves the two-sided structural tensor
+grammar.
+\end{theorem}
+
+\begin{proof}
+The shift is a function on tag payloads. It does not move an index from front
+to back, from back to front, from upper to lower, or from lower to upper.
+Therefore the grammar of sidedness and variance is unchanged. Since classical
+upper--lower contraction and explicit same-variance comparison are defined by
+position and variance rather than by the numerical tag name, those rules are
+preserved.
+\end{proof}
+
+\subsection{shifted router and readout activation}
+\label{subsec:v400-r01-router-readout-activation}
+
+\begin{definition}[shifted router object]
+\label{def:v400-r01-shifted-router-object}
+A shifted router object is a guarded router object whose inhabited kind registry and
+route-mask registry are read in the shifted shifted namespace, while its collars,
+trace records, backtranslation ledger, and guard record remain explicit.
+\end{definition}
+
+\begin{definition}[shifted readout object]
+\label{def:v400-r01-shifted-readout-object}
+A shifted readout object is a guarded readout package whose QAM/router labels are
+read in the shifted shifted namespace, while its readout target, comparison tensor,
+boundary collar, residual map, and non-claim guard remain unchanged.
+\end{definition}
+
+\begin{theorem}[shifted activation conservativity]
+\label{thm:v400-r01-shifted-activation-conservativity}
+Every finite guarded shifted router/readout package admitted by
+Definitions~\ref{def:v400-r01-shifted-router-object} and
+\ref{def:v400-r01-shifted-readout-object} backtranslates on inhabited components to
+a finite guarded pre-shift package with the same payloads and the same theorematic
+status.
+\end{theorem}
+
+\begin{proof}
+Apply $\mathrm B_4(a)=a-1$ to every inhabited shifted tag. By
+Lemma~\ref{lem:v400-r01-shifted-inhabited-round-trip}, this recovers the
+corresponding pre-shift tag on inhabited components. Collars, trace records,
+comparison tensors, readout targets, boundary collars, residual maps, and
+non-claim guards are kept fixed by definition. The reserved value $0$ has no
+inhabited backtranslation, so it cannot create a new active component. Hence
+the package backtranslates without changing payloads or theorematic status.
+\end{proof}
+
+\subsection{handoff}
+\label{subsec:v400-r01-handoff}
+
+\begin{remark}[non-claims]
+\label{rem:v400-r01-non-claims}
+This shifted activation release-final state performs the namespace decision, but it does not
+close OP~1/4 or OP~5(B), does not activate primitive mixed tensors, does not
+claim Turing-completeness, and does not replace standard QFT/QED/Lifshitz or
+general-relativistic calculations. It is a language and router/readout
+migration step.
+\end{remark}
+
+\begin{theorem}[handoff theorem]
+\label{thm:v400-r01-handoff-theorem}
+The local proof line layer is a well-formed global QAM Hilbert-shift activation
+release-final state over the \QSCver{legacy.37.1} release line.
+\end{theorem}
+
+\begin{proof}
+Definition~\ref{def:v400-r01-global-shifted-qam-hilbert-shift-convention} fixes the
+global namespace convention. Definition~\ref{def:v400-r01-shifted-backtranslation-ledger}
+provides the backtranslation ledger. The route and mask rules preserve finite
+payloads by Lemma~\ref{lem:v400-r01-shifted-packed-mask-doubling}. The two-sided
+tensor grammar is preserved by Theorem~\ref{thm:v400-r01-shifted-tensor-grammar-preservation}.
+Finally, finite router/readout packages remain conservative under
+Theorem~\ref{thm:v400-r01-shifted-activation-conservativity}. Therefore the layer
+is well formed as a global QAM language activation release-final state, while all stated
+non-claims remain in force.
+\end{proof}
+
+
+
+\clearpage
+\section{Occurrence Ledger and Shift-Audit Map}
+\label{sec:v400-r02-occurrence-ledger-shift-audit-map}
+
+\begin{quote}\small
+\noindent\textbf{Status.}
+This layer is an occurrence ledger for the shifted global QAM Hilbert-shift.
+Version~4.0.0-fixed the governing shifted namespace. The present layer
+records where that shift is allowed to act, where it is forbidden to act, and
+where a backtranslation or historical reading must be retained. It is an audit
+map, not a new physical promotion.
+\end{quote}
+
+\subsection{Occurrence classes}
+\label{subsec:v400-r02-occurrence-classes}
+
+\begin{definition}[shifted occurrence class]
+\label{def:v400-r02-occurrence-class}
+A \emph{shifted occurrence class} is a declared role assigned to a visible tag,
+mask, route, tensor-index payload, or OP-facing label in the Active Core. The
+role determines whether the global shifted shift is applied, whether the object is
+kept historical, or whether the object is read only through an explicit
+backtranslation ledger.
+\end{definition}
+
+\begin{definition}[The five primary occurrence classes]
+\label{def:v400-r02-five-primary-occurrence-classes}
+The occurrence ledger uses the following primary classes.
+\begin{enumerate}[leftmargin=*]
+ \item \textbf{Class A: historical/pre-shift witness occurrences.}
+ These remain unchanged and are read through the Historical Witness or through
+ the backtranslation ledger.
+
+ \item \textbf{Class B: active shifted router occurrences.}
+ These are read in the shifted shifted namespace by default.
+
+ \item \textbf{Class C: example, table, route, and mask occurrences.}
+ These must carry a shifted display and, when useful, a pre-shift backtranslation
+ display.
+
+ \item \textbf{Class D: two-sided tensor-index payload occurrences.}
+ These shift only their QAM/router tag payloads. The tensor grammar itself is
+ not shifted.
+
+ \item \textbf{Class E: OP-facing and physical-readout occurrences.}
+ These may have shifted router labels, but their theorematic status, physical
+ readout target, residual map, and non-claim guard remain unchanged.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}[Why occurrence classes are needed]
+\label{rem:v400-r02-why-occurrence-classes-needed}
+Without occurrence classes, the symbol $5$ could ambiguously mean a pre-shift tag,
+a shifted tag, a packed mask integer, a tensor component, or a mere example number.
+The occurrence ledger prevents that ambiguity by assigning a role before any
+shift is read.
+\end{remark}
+
+\subsection{Class A: historical and pre-shift witness occurrences}
+\label{subsec:v400-r02-class-a-historical-pre-shift}
+
+\begin{definition}[Class A occurrence]
+\label{def:v400-r02-class-a-occurrence}
+A Class A occurrence is any tag, route, mask, or notation block that belongs to
+the preserved historical line, to the pre-shift witness text, or to an explicitly
+quoted earlier version. Class A occurrences are not rewritten by the shifted Active
+Core. They remain recoverable by the Historical Witness and readable by
+backtranslation.
+\end{definition}
+
+\begin{lemma}[Class A preservation]
+\label{lem:v400-r02-class-a-preservation}
+The shifted occurrence ledger preserves Class A occurrences without applying the
+global shift to their displayed historical form.
+\end{lemma}
+
+\begin{proof}
+Class A is defined as historical or pre-shift witness material. Its function is
+to preserve genealogy and reconstruction memory, not to govern the active shifted
+namespace. Therefore applying the shifted shift directly to Class A would corrupt
+the witness role. The correct operation is preservation plus optional
+backtranslation annotation.
+\end{proof}
+
+\subsection{Class B: active shifted router occurrences}
+\label{subsec:v400-r02-class-b-active-router}
+
+\begin{definition}[Class B occurrence]
+\label{def:v400-r02-class-b-occurrence}
+A Class B occurrence is a tag or route occurrence inside an active shifted router
+object, shifted kind registry, shifted route-mask registry, or shifted machine-language
+package. Class B occurrences are read in the shifted namespace:
+\[
+ k_{\mathrm{pre}}\longmapsto k_{\mathrm{shift}}=k_{\mathrm{pre}}+1.
+\]
+\end{definition}
+
+\begin{remark}[Class B default]
+\label{rem:v400-r02-class-b-default}
+From the local proof line onward, active router-language statements default to Class B
+unless the text explicitly marks the occurrence as historical, illustrative, or
+unshifted for comparison.
+\end{remark}
+
+\begin{lemma}[Class B backtranslation]
+\label{lem:v400-r02-class-b-backtranslation}
+Every finite Class B tag family with inhabited shifted tags has a componentwise
+backtranslation by $\mathrm B_4(a)=a-1$.
+\end{lemma}
+
+\begin{proof}
+Class B contains active inhabited shifted router labels. By the shifted ledger, every
+inhabited shifted tag satisfies $a\geq 1$, so $\mathrm B_4(a)=a-1$ is defined.
+Applying this componentwise gives the pre-shift label family.
+\end{proof}
+
+\subsection{Class C: examples, tables, routes, and masks}
+\label{subsec:v400-r02-class-c-examples-tables-routes-masks}
+
+\begin{definition}[Class C occurrence]
+\label{def:v400-r02-class-c-occurrence}
+A Class C occurrence is a displayed example, table entry, route payload, support
+set, or packed mask integer used for exposition or audit. Class C occurrences
+must declare whether the displayed value is a pre-shift value, a shifted value, or a
+packed integer derived from a support.
+\end{definition}
+
+\begin{definition}[Class C display contract]
+\label{def:v400-r02-class-c-display-contract}
+A Class C route or mask example is well displayed if it separates:
+\[
+ \text{support},\qquad \text{route payload},\qquad \text{packed integer}.
+\]
+In particular, support migration is
+\[
+ S\mapsto S^{(4)}=\{k+1:k\in S\},
+\]
+while packed-mask migration is
+\[
+ m_3(S)=\sum_{k\in S}2^k
+ \quad\mapsto\quad
+ m_4(S^{(4)})=2m_3(S).
+\]
+\end{definition}
+
+\begin{remark}[Class C warning]
+\label{rem:v400-r02-class-c-warning}
+The packed integer should not be shifted by adding $1$. The support is shifted
+by adding $1$ to each inhabited support entry; the packed integer then changes
+according to the support rule, often by doubling in the pure support-shift
+case.
+\end{remark}
+
+\subsection{Class D: two-sided tensor-index payloads}
+\label{subsec:v400-r02-class-d-two-sided-tensor-index-payloads}
+
+\begin{definition}[Class D occurrence]
+\label{def:v400-r02-class-d-occurrence}
+A Class D occurrence is a QAM/router tag payload carried inside a front-side or
+back-side index position of a two-sided structural tensor expression. The shifted
+shift acts on the payload label only. It does not alter sidedness, variance,
+ordinary upper--lower contraction, or explicit same-variance comparison.
+\end{definition}
+
+\begin{proposition}[Class D grammar invariance]
+\label{prop:v400-r02-class-d-grammar-invariance}
+Class D migration preserves the two-sided structural tensor grammar.
+\end{proposition}
+
+\begin{proof}
+The migration rule changes only the numerical or route-label payload carried by
+an index. It does not move that payload from the front side to the back side,
+from the back side to the front side, from upper position to lower position, or
+from lower position to upper position. Thus the grammar of sidedness and
+variance is unchanged.
+\end{proof}
+
+\subsection{Class E: OP-facing and physical-readout occurrences}
+\label{subsec:v400-r02-class-e-op-facing-physical-readout}
+
+\begin{definition}[Class E occurrence]
+\label{def:v400-r02-class-e-occurrence}
+A Class E occurrence is an OP-facing label, residual package, physical-readout
+package, boundary-readout package, or diagnostic object whose router address may
+be shifted but whose physical or theorematic status is not changed by the
+shift.
+\end{definition}
+
+\begin{definition}[Class E invariance contract]
+\label{def:v400-r02-class-e-invariance-contract}
+A Class E occurrence remains valid under shifted only if the following data remain
+unchanged:
+\begin{enumerate}[leftmargin=*]
+ \item its OP status;
+ \item its physical or mathematical readout target;
+ \item its comparison tensor or boundary collar;
+ \item its residual map or diagnostic map;
+ \item its non-claim guard.
+\end{enumerate}
+\end{definition}
+
+\begin{lemma}[Class E status preservation]
+\label{lem:v400-r02-class-e-status-preservation}
+The shifted occurrence ledger does not close OP~1/4 or OP~5(B).
+\end{lemma}
+
+\begin{proof}
+Class E migration may reindex router labels, but
+Definition~\ref{def:v400-r02-class-e-invariance-contract} fixes the OP status
+and non-claim guard. Since no closure certificate is added by reindexing, the
+OP status remains unchanged.
+\end{proof}
+
+\subsection{Occurrence decision table}
+\label{subsec:v400-r02-occurrence-decision-table}
+
+\begin{center}
+\tiny
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{@{}p{0.10\textwidth}P{0.24\textwidth}P{0.23\textwidth}P{0.26\textwidth}@{}}
+\toprule
+Class & Where it occurs & Shift action & Required audit note\\
+\midrule
+A & Historical/pre-shift witness blocks & preserve displayed form & read via witness/backtranslation\\
+B & active router/kind/route registries & shift inhabited tags & keep $\mathrm B_4$ ledger\\
+C & examples, tables, masks, routes & display pre-shift and shifted roles & separate support from packed integer\\
+D & tensor-index tag payloads & shift payload only & preserve sidedness/variance\\
+E & OP-facing/readout packages & shift router address only & preserve OP status/guard\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Ambiguity filters}
+\label{subsec:v400-r02-ambiguity-filters}
+
+\begin{definition}[Ambiguity filter]
+\label{def:v400-r02-ambiguity-filter}
+Before a visible integer, tuple, support, or tensor payload is read as shifted,
+the reader must determine whether it is:
+\[
+\begin{array}{lll}
+ \text{tag},&
+ \text{route payload},&
+ \text{support set},\\
+ \text{packed mask integer},&
+ \text{tensor component},&
+ \text{historical witness value}.
+\end{array}
+\]
+Only tag, route-payload, support, and tag-payload occurrences are subject to
+the shifted shift.
+\end{definition}
+
+\begin{remark}[Packed values are not tags]
+\label{rem:v400-r02-packed-values-are-not-tags}
+A packed integer such as $4128$ is not itself a tag occurrence. It encodes a
+support. The support migrates first, and the packed integer is recomputed from
+the migrated support.
+\end{remark}
+
+\subsection{shifted occurrence-ledger conservativity}
+\label{subsec:v400-r02-occurrence-ledger-conservativity}
+
+\begin{theorem}[Occurrence-ledger conservativity]
+\label{thm:v400-r02-occurrence-ledger-conservativity}
+Every finite shifted occurrence family classified by Classes A--E has an honest
+reading that either preserves its displayed historical form or backtranslates
+its inhabited shifted components to the pre-shift source language without changing
+payloads, tensor grammar, OP status, or non-claim guards.
+\end{theorem}
+
+\begin{proof}
+Class A is preserved by Lemma~\ref{lem:v400-r02-class-a-preservation}. Class B
+backtranslates by Lemma~\ref{lem:v400-r02-class-b-backtranslation}. Class C
+separates support, route payload, and packed integer by
+Definition~\ref{def:v400-r02-class-c-display-contract}. Class D preserves the
+two-sided tensor grammar by Proposition~\ref{prop:v400-r02-class-d-grammar-invariance}.
+Class E preserves OP and readout status by Lemma~\ref{lem:v400-r02-class-e-status-preservation}.
+The five cases cover the declared occurrence classes; hence the occurrence
+ledger is conservative for finite classified occurrence families.
+\end{proof}
+
+\begin{remark}[non-claim]
+\label{rem:v400-r02-non-claim}
+The occurrence ledger does not add a new physical equation, does not close
+an OP, does not activate primitive mixed tensors, and does not claim
+Turing-completeness. It makes the global shifted shift auditable by assigning
+roles to visible occurrences.
+\end{remark}
+
+
+
+\clearpage
+\section{Global Reindexed Display Layer}
+\label{sec:v400-r03-global-reindexed-display-layer}
+
+\begin{quote}\small
+\noindent\textbf{Status.}
+This layer adds normalized side-by-side displays for the global shifted QAM
+Hilbert-shift. It does not add new physics, close OP~1/4, close OP~5(B), or
+alter the two-sided tensor grammar. It only standardizes how active examples
+are displayed in three synchronized forms:
+\[
+ \text{pre-shift source},\qquad
+ \text{shifted display},\qquad
+ \text{backtranslation}.
+\]
+\end{quote}
+
+\subsection{Reindexed display triple}
+\label{subsec:v400-r03-reindexed-display-triple}
+
+\begin{definition}[Reindexed display triple]
+\label{def:v400-r03-reindexed-display-triple}
+A \emph{shifted reindexed display triple} is a finite record
+\[
+ \mathfrak D_4(X)
+ =
+ (X_{\mathrm{pre}},X_{\mathrm{shift}},\mathrm B_4(X_{\mathrm{shift}})),
+\]
+where $X_{\mathrm{pre}}$ is the pre-shift source display, $X_{\mathrm{shift}}$ is the
+shifted shifted display, and $\mathrm B_4(X_{\mathrm{shift}})$ is the explicit
+backtranslation on inhabited components.
+\end{definition}
+
+\begin{remark}[Display triples are audit objects]
+\label{rem:v400-r03-display-triples-are-audit-objects}
+A display triple is not a new theorematic certificate. It is an audit object
+showing that the visible shifted display can be read back to the pre-shift source where
+the components are inhabited.
+\end{remark}
+
+\subsection{Tag and route display triples}
+\label{subsec:v400-r03-tag-route-display-triples}
+
+\begin{definition}[Tag display triple]
+\label{def:v400-r03-tag-display-triple}
+For an inhabited pre-shift tag $k$, the shifted tag display triple is
+\[
+ \mathfrak D_4(k)
+ =
+ (k,\ k+1,\ \mathrm B_4(k+1)=k).
+\]
+The reserved value $0_{\mathrm{shift}}$ has no inhabited pre-shift source and is
+displayed separately as
+\[
+ (\varnothing_{\mathrm{active}},\ 0_{\mathrm{shift}},\ \text{no inhabited backtranslation}).
+\]
+\end{definition}
+
+\begin{definition}[Route display triple]
+\label{def:v400-r03-route-display-triple}
+For a finite pre-shift route payload
+\[
+ r=\langle k_1,\ldots,k_n\rangle,
+\]
+the shifted display triple is
+\[
+ \mathfrak D_4(r)
+ =
+ \left(
+ \langle k_1,\ldots,k_n\rangle,\ 
+ \langle k_1+1,\ldots,k_n+1\rangle,\ 
+ \langle k_1,\ldots,k_n\rangle
+ \right).
+\]
+\end{definition}
+
+\begin{center}
+\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+pre-shift source & shifted display & backtranslation\\
+\midrule
+$5$ & $6$ & $\mathrm B_4(6)=5$\\
+$12$ & $13$ & $\mathrm B_4(13)=12$\\
+$\langle 5,12\rangle$ & $\langle 6,13\rangle$ & $\langle 5,12\rangle$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Support and packed-mask display triples}
+\label{subsec:v400-r03-support-packed-mask-display-triples}
+
+\begin{definition}[Support display triple]
+\label{def:v400-r03-support-display-triple}
+For a finite inhabited support set $S$, the support display triple is
+\[
+ \mathfrak D_4(S)
+ =
+ (S,\ S^{(4)},\ \mathrm B_4(S^{(4)})),
+ \qquad
+ S^{(4)}=\{k+1:k\in S\}.
+\]
+\end{definition}
+
+\begin{definition}[Packed-mask display triple]
+\label{def:v400-r03-packed-mask-display-triple}
+For a finite inhabited support $S$, the packed-mask display triple is
+\[
+ \mathfrak D_4(m(S))
+ =
+ \left(
+ m_3(S),\
+ m_4(S^{(4)}),\
+ S=\mathrm B_4(S^{(4)})
+ \right).
+\]
+The backtranslation is attached to the support, not to the packed integer by
+subtraction.
+\end{definition}
+
+\begin{center}
+\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+pre-shift source & shifted display & backtranslation\\
+\midrule
+$\{5,12\}$ & $\{6,13\}$ & $\{5,12\}$\\
+$2^5+2^{12}=4128$ & $2^6+2^{13}=8256$ & support returns to $\{5,12\}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{lemma}[Packed-mask display consistency]
+\label{lem:v400-r03-packed-mask-display-consistency}
+The packed-mask display triple for a finite support $S$ is consistent with the
+packed-mask doubling rule:
+\[
+ m_4(S^{(4)})=2\,m_3(S).
+\]
+\end{lemma}
+
+\begin{proof}
+This is exactly Lemma~\ref{lem:v400-r02-class-b-backtranslation} applied to the
+inhabited support entries together with the packed-mask calculation
+\[
+ \sum_{k\in S}2^{k+1}=2\sum_{k\in S}2^k.
+\]
+The displayed packed integer is recomputed from the migrated support, not
+shifted as a tag.
+\end{proof}
+
+\subsection{Two-sided tensor display triples}
+\label{subsec:v400-r03-two-sided-tensor-display-triples}
+
+\begin{definition}[Tensor display triple]
+\label{def:v400-r03-tensor-display-triple}
+A two-sided structural tensor display triple is obtained by applying the shifted
+tag shift to QAM/router payloads inside index positions while leaving sidedness
+and variance unchanged.
+\end{definition}
+
+\begin{center}
+\tiny
+\setlength{\tabcolsep}{1.5pt}
+\begin{tabular}{@{}p{0.29\textwidth}P{0.29\textwidth}P{0.29\textwidth}@{}}
+\toprule
+pre-shift source & shifted display & backtranslation\\
+\midrule
+${}^{\langle 5,12\rangle}{}_{\langle 2\rangle}\mathcal T^{i}{}_{j}$
+&
+${}^{\langle 6,13\rangle}{}_{\langle 3\rangle}\mathcal T^{i}{}_{j}$
+&
+${}^{\langle 5,12\rangle}{}_{\langle 2\rangle}\mathcal T^{i}{}_{j}$
+\\[0.6em]
+${}^{\langle 5,12\rangle}{}_{\langle 2\rangle}\mathcal T^{\langle 7\rangle}{}_{\langle 10\rangle}$
+&
+${}^{\langle 6,13\rangle}{}_{\langle 3\rangle}\mathcal T^{\langle 8\rangle}{}_{\langle 11\rangle}$
+&
+${}^{\langle 5,12\rangle}{}_{\langle 2\rangle}\mathcal T^{\langle 7\rangle}{}_{\langle 10\rangle}$
+\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{proposition}[Display triples preserve tensor grammar]
+\label{prop:v400-r03-display-triples-preserve-tensor-grammar}
+Tensor display triples preserve the two-sided structural tensor grammar.
+\end{proposition}
+
+\begin{proof}
+Only QAM/router tag payloads inside the displayed index positions are shifted.
+The index positions themselves are not moved. Hence front-side remains
+front-side, back-side remains back-side, upper remains upper, lower remains
+lower, and the ordinary contraction/comparison rules remain those of the
+underlying tensor grammar.
+\end{proof}
+
+\subsection{OP-facing display triples}
+\label{subsec:v400-r03-op-facing-display-triples}
+
+\begin{definition}[OP-facing display triple]
+\label{def:v400-r03-op-facing-display-triple}
+An OP-facing display triple records only the router-address migration of an
+OP-facing package. Its OP status, residual target, comparison surface, and
+non-claim guard are displayed as invariant data.
+\end{definition}
+
+\begin{center}
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{@{}p{0.24\textwidth}P{0.25\textwidth}P{0.35\textwidth}@{}}
+\toprule
+pre-shift address & shifted address & invariant data\\
+\midrule
+OP package tag $k$ & OP package tag $k+1$ & OP status unchanged; guard unchanged\\
+residual route $\langle 5,12\rangle$ & residual route $\langle 6,13\rangle$ & residual target unchanged\\
+boundary readout route $\langle 2\rangle$ & boundary readout route $\langle 3\rangle$ & boundary collar unchanged\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{lemma}[OP-facing display triples do not close OPs]
+\label{lem:v400-r03-op-facing-display-triples-do-not-close-ops}
+OP-facing display triples do not close OP~1/4 or OP~5(B).
+\end{lemma}
+
+\begin{proof}
+By Definition~\ref{def:v400-r03-op-facing-display-triple}, the triple changes
+only router-address display. It explicitly leaves OP status, residual target,
+comparison surface, and non-claim guard invariant. Therefore no OP closure
+certificate is introduced.
+\end{proof}
+
+\subsection{Display-layer conservativity}
+\label{subsec:v400-r03-display-layer-conservativity}
+
+\begin{theorem}[Global reindexed display conservativity]
+\label{thm:v400-r03-global-reindexed-display-conservativity}
+Every finite display triple has a backtranslation to its pre-shift source
+display on inhabited components and preserves the occurrence class assigned in
+the occurrence ledger.
+\end{theorem}
+
+\begin{proof}
+Tag and route triples backtranslate componentwise by
+$\mathrm B_4(a)=a-1$. Support triples backtranslate by applying the same rule
+to support entries. Packed-mask triples backtranslate through their support
+sets, not by subtracting from the packed integer. Tensor triples preserve
+grammar by Proposition~\ref{prop:v400-r03-display-triples-preserve-tensor-grammar}.
+OP-facing triples preserve status by
+Lemma~\ref{lem:v400-r03-op-facing-display-triples-do-not-close-ops}. Hence the
+display layer is conservative over the occurrence ledger.
+\end{proof}
+
+\begin{remark}[non-claim]
+\label{rem:v400-r03-non-claim}
+The layer is a display layer only. It does not add a new physical equation,
+does not close OP~1/4 or OP~5(B), does not activate primitive mixed tensors, and
+does not claim Turing-completeness.
+\end{remark}
+
+
+
+\clearpage
+\section{Physical Readout Compatibility Check}
+\label{sec:v400-r04-physical-readout-compatibility-check}
+
+\begin{quote}\small
+\noindent\textbf{Status.}
+This layer checks that the global shifted QAM Hilbert-shift is compatible with
+the active physical and mathematical readout packages. It does not promote a
+new physical law. It verifies that the shifted shift changes router addresses and
+tag payloads only, while readout targets, comparison surfaces, residual maps,
+and non-claim guards remain fixed.
+\end{quote}
+
+\subsection{Readout compatibility principle}
+\label{subsec:v400-r04-readout-compatibility-principle}
+
+\begin{definition}[Readout compatibility package]
+\label{def:v400-r04-readout-compatibility-package}
+A \emph{shifted readout compatibility package} is a tuple
+\[
+ \mathcal C_4(R)
+ =
+ (R_{\mathrm{pre}},R_{\mathrm{shift}},\mathrm B_4(R_{\mathrm{shift}}),
+ T_R,G_R,S_R),
+\]
+where $R_{\mathrm{pre}}$ is the pre-shift router address, $R_{\mathrm{shift}}$ is the
+shifted shifted router address, $\mathrm B_4(R_{\mathrm{shift}})$ is the inhabited
+backtranslation, $T_R$ is the readout target, $G_R$ is the guard record, and
+$S_R$ is the theorematic status record.
+\end{definition}
+
+\begin{definition}[Readout compatibility]
+\label{def:v400-r04-readout-compatibility}
+A readout package is \emph{shifted-compatible} if the migration from
+$R_{\mathrm{pre}}$ to $R_{\mathrm{shift}}$ changes only the router address and
+leaves $T_R$, $G_R$, and $S_R$ unchanged.
+\end{definition}
+
+\begin{lemma}[Readout compatibility is address-local]
+\label{lem:v400-r04-readout-compatibility-address-local}
+If a readout package is shifted-compatible, then the global shifted QAM Hilbert-shift
+does not change its physical or mathematical target.
+\end{lemma}
+
+\begin{proof}
+By Definition~\ref{def:v400-r04-readout-compatibility}, the shift is applied to
+the router address only. The readout target $T_R$ is explicitly preserved.
+Hence the physical or mathematical target of the package is unchanged.
+\end{proof}
+
+\subsection{HC-boundary readout compatibility}
+\label{subsec:v400-r04-hc-boundary-readout-compatibility}
+
+\begin{definition}[HC-boundary compatibility record]
+\label{def:v400-r04-hc-boundary-compatibility-record}
+The HC-boundary readout package is shifted-compatible when the local structural
+shift
+\[
+ 0_{\mathrm{mask}}\longrightarrow 1_{\mathrm{mask}}
+\]
+remains the HC-boundary activation principle, while global shifted router labels are
+read in the shifted namespace.
+\end{definition}
+
+\begin{proposition}[HC-boundary readout survives the global shift]
+\label{prop:v400-r04-hc-boundary-survives-global-shift}
+The global shifted QAM Hilbert-shift preserves the historical release line HC-boundary activation
+reading.
+\end{proposition}
+
+\begin{proof}
+The HC-boundary reading belongs to Shift A: the local transition from inactive
+mask state to first active readout state. The shifted QAM Hilbert-shift belongs to
+Shift B: the global namespace migration of inhabited tags. Since the local proof chain
+separate these two acts, the global shift cannot redefine the local HC-boundary
+activation. It can only change how the active router address is displayed.
+\end{proof}
+
+\subsection{Photon-compatible null-side readout compatibility}
+\label{subsec:v400-r04-photon-null-side-readout-compatibility}
+
+\begin{definition}[Null-side readout compatibility]
+\label{def:v400-r04-null-side-readout-compatibility}
+A photon-compatible null-side readout is shifted-compatible when the null-side
+readout target and its guard remain unchanged while its router address is
+displayed in the shifted shifted namespace.
+\end{definition}
+
+\begin{lemma}[Null-side target preservation]
+\label{lem:v400-r04-null-side-target-preservation}
+The shifted shift preserves the null-side readout target of a photon-compatible
+readout package.
+\end{lemma}
+
+\begin{proof}
+By Definition~\ref{def:v400-r04-null-side-readout-compatibility}, the null-side
+target is part of the invariant data. The shifted shift operates only on router
+address labels, so the null-side target remains fixed.
+\end{proof}
+
+\begin{remark}[No photon proof claim]
+\label{rem:v400-r04-no-photon-proof-claim}
+This compatibility check does not prove a new photon theory. It only says that
+the already guarded null-side readout remains address-stable under the shifted tag
+migration.
+\end{remark}
+
+\subsection{HC-normalized singularity projection compatibility}
+\label{subsec:v400-r04-singularity-projection-compatibility}
+
+\begin{definition}[Singularity projection compatibility]
+\label{def:v400-r04-singularity-projection-compatibility}
+An HC-normalized singularity projection package is shifted-compatible when its
+projection target, HC-normalization guard, and residual diagnostic remain
+unchanged under router-address migration.
+\end{definition}
+
+\begin{proposition}[Singularity projection status preservation]
+\label{prop:v400-r04-singularity-projection-status-preservation}
+The shifted shift does not promote an HC-normalized singularity projection package
+from diagnostic status to theorematic closure.
+\end{proposition}
+
+\begin{proof}
+The migration changes the router address. It does not add a new projection
+identity, a new residual estimate, or a new closure certificate. The
+diagnostic guard is part of the invariant record in
+Definition~\ref{def:v400-r04-singularity-projection-compatibility}. Therefore
+the theorematic status is preserved.
+\end{proof}
+
+\subsection{Casimir boundary readout compatibility}
+\label{subsec:v400-r04-casimir-boundary-readout-compatibility}
+
+\begin{definition}[Casimir boundary compatibility]
+\label{def:v400-r04-casimir-boundary-compatibility}
+A Casimir boundary readout package is shifted-compatible when its boundary collar,
+comparison surface, and non-replacement guard remain unchanged while its
+router-address labels are shifted.
+\end{definition}
+
+\begin{lemma}[Casimir boundary collar preservation]
+\label{lem:v400-r04-casimir-boundary-collar-preservation}
+The shifted shift preserves the boundary collar of a shifted-compatible Casimir boundary
+readout package.
+\end{lemma}
+
+\begin{proof}
+By Definition~\ref{def:v400-r04-casimir-boundary-compatibility}, the boundary
+collar is invariant data. The shift acts only on router labels. Therefore the
+boundary collar is unchanged.
+\end{proof}
+
+\begin{remark}[No replacement of standard Casimir calculations]
+\label{rem:v400-r04-no-replacement-standard-casimir}
+The compatibility statement does not replace standard QFT, QED, or Lifshitz
+calculations. It keeps the Companion readout package address-stable under the
+shifted namespace shift.
+\end{remark}
+
+\subsection{OP-facing residual package compatibility}
+\label{subsec:v400-r04-op-facing-residual-package-compatibility}
+
+\begin{definition}[OP-facing residual compatibility]
+\label{def:v400-r04-op-facing-residual-compatibility}
+An OP-facing residual package is shifted-compatible when its route address may be
+shifted but its residual target, status flag, and non-claim guard remain
+unchanged.
+\end{definition}
+
+\begin{lemma}[OP-facing residual status preservation]
+\label{lem:v400-r04-op-facing-residual-status-preservation}
+The shifted shift does not close OP~1/4 or OP~5(B).
+\end{lemma}
+
+\begin{proof}
+By Definition~\ref{def:v400-r04-op-facing-residual-compatibility}, OP-facing
+residual packages preserve their status flags and non-claim guards. A router
+address migration is not a proof certificate. Therefore the OP status remains
+unchanged.
+\end{proof}
+
+\subsection{Compatibility table}
+\label{subsec:v400-r04-compatibility-table}
+
+\begin{center}
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{@{}p{0.22\textwidth}P{0.30\textwidth}P{0.34\textwidth}@{}}
+\toprule
+Readout package & Shifted data & Invariant data\\
+\midrule
+HC-boundary & active router address & local HC-boundary activation principle\\
+null-side/photon-compatible & router address & null-side target and guard\\
+singularity projection & router address & projection target, HC guard, residual diagnostic\\
+Casimir boundary & router address & boundary collar, comparison surface, non-replacement guard\\
+OP-facing residual & route address & residual target, OP status, non-claim guard\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Physical-readout compatibility theorem}
+\label{subsec:v400-r04-physical-readout-compatibility-theorem}
+
+\begin{theorem}[Physical readout compatibility under the shifted shift]
+\label{thm:v400-r04-physical-readout-compatibility}
+For the readout packages listed in Section~\ref{subsec:v400-r04-compatibility-table},
+the global shifted QAM Hilbert-shift preserves the declared readout target,
+comparison or boundary data, residual data, and non-claim guard. It changes
+only the router-address display.
+\end{theorem}
+
+\begin{proof}
+Each listed package is declared shifted-compatible by its corresponding definition:
+HC-boundary compatibility by
+Definition~\ref{def:v400-r04-hc-boundary-compatibility-record}, null-side
+compatibility by Definition~\ref{def:v400-r04-null-side-readout-compatibility},
+singularity projection compatibility by
+Definition~\ref{def:v400-r04-singularity-projection-compatibility}, Casimir
+boundary compatibility by
+Definition~\ref{def:v400-r04-casimir-boundary-compatibility}, and OP-facing
+residual compatibility by
+Definition~\ref{def:v400-r04-op-facing-residual-compatibility}. In each case,
+the shifted component is the router or route address. The physical or
+mathematical readout target and the guard/status records are invariant data.
+Therefore the shifted shift is compatible with these readout packages without
+changing their theorematic status.
+\end{proof}
+
+\begin{remark}[non-claim]
+\label{rem:v400-r04-non-claim}
+The layer is a compatibility check. It does not add a new physical
+equation, does not close OP~1/4 or OP~5(B), does not activate primitive mixed
+tensors, and does not claim Turing-completeness.
+\end{remark}
+
+
+
+\clearpage
+\section{Governing shifted Normal Form and Release-Freeze Handoff}
+\label{sec:v400-r05-governing-shifted-normal-form-release-freeze-handoff}
+
+\begin{quote}\small
+\noindent\textbf{Status.}
+This layer compresses the \QSCver{shifted.0.0}-the local proof chain migration work into one governing
+normal form. It is intended as a release-freeze handoff: after this layer,
+new active QAM/router/readout material should be written either in the shifted
+normal form or with an explicit pre-shift backtranslation record.
+\end{quote}
+
+\subsection{Governing normal-form object}
+\label{subsec:v400-r05-governing-normal-form-object}
+
+\begin{definition}[Governing shifted normal-form object]
+\label{def:v400-r05-governing-shifted-normal-form-object}
+A governing shifted normal-form object is a finite record
+\[
+ \mathcal N_4(X)
+ =
+ (C_X,\ X_{\mathrm{shift}},\ \mathrm B_4(X_{\mathrm{shift}}),\
+ P_X,\ G_X,\ S_X),
+\]
+where $C_X$ is the occurrence class, $X_{\mathrm{shift}}$ is the shifted shifted
+display, $\mathrm B_4(X_{\mathrm{shift}})$ is the inhabited-component
+backtranslation, $P_X$ is the payload or readout target, $G_X$ is the guard
+record, and $S_X$ is the theorematic status record.
+\end{definition}
+
+\begin{remark}[Why the pre-shift source is not always the first field]
+\label{rem:v400-r05-pre-shift-source-not-always-first-field}
+The shifted Active Core now governs by the shifted namespace. Therefore the normal
+form puts the shifted display first and keeps the pre-shift source as a backtranslation
+ledger when needed. Historical source displays remain available through the
+Historical Witness.
+\end{remark}
+
+\subsection{Normal-form admissibility}
+\label{subsec:v400-r05-normal-form-admissibility}
+
+\begin{definition}[shifted-normal admissibility]
+\label{def:v400-r05-shifted-normal-admissibility}
+A finite object is \emph{shifted-normal admissible} if:
+\begin{enumerate}[leftmargin=*]
+ \item it carries an occurrence class $C_X$;
+ \item all active inhabited tags are read in the shifted shifted namespace;
+ \item every shifted inhabited tag has a backtranslation by $\mathrm B_4$;
+ \item packed masks are reconstructed from shifted supports, not shifted as
+ integers;
+ \item tensor-index payload migration preserves sidedness and variance;
+ \item physical/readout payloads preserve their target, collar, residual map,
+ guard, and theorematic status.
+\end{enumerate}
+\end{definition}
+
+\begin{lemma}[Normal admissibility implies ledger readability]
+\label{lem:v400-r05-normal-admissibility-implies-ledger-readability}
+Every shifted-normal admissible object is readable through the namespace ledger,
+the occurrence ledger, the display triple, and the readout
+compatibility check.
+\end{lemma}
+
+\begin{proof}
+The occurrence class invokes the local pass. The shifted tag convention invokes the local pass. The
+backtranslation field invokes whenever a visible pre-shift comparison is
+needed. The payload/guard/status fields invoke for readout packages and
+the tensor-grammar rules for tensor payloads. Hence the object is readable
+through the whole the local proof chain ledger chain.
+\end{proof}
+
+\subsection{Normal forms by class}
+\label{subsec:v400-r05-normal-forms-by-class}
+
+\begin{definition}[Class-wise shifted-namespace normal forms]
+\label{def:v400-r05-class-wise-shifted-normal-forms}
+The following class-wise normal forms are used:
+\[
+\begin{array}{ll}
+\text{Class A:} & (A,\ X_{\mathrm{hist}},\ \mathrm{witness/backtranslation},\ P_X,\ G_X,\ S_X),\\[0.2em]
+\text{Class B:} & (B,\ X_{\mathrm{shift}},\ \mathrm B_4(X_{\mathrm{shift}}),\ P_X,\ G_X,\ S_X),\\[0.2em]
+\text{Class C:} & (C,\ \text{shifted display},\ \text{pre-shift display},\ \text{support/payload split},\ G_X,\ S_X),\\[0.2em]
+\text{Class D:} & (D,\ \text{shifted tag payload},\ \text{backtranslated payload},\ \text{tensor grammar},\ G_X,\ S_X),\\[0.2em]
+\text{Class E:} & (E,\ \text{shifted route address},\ \text{backtranslated address},\ \text{readout target},\ G_X,\ S_X).
+\end{array}
+\]
+\end{definition}
+
+\begin{remark}[Class C special rule]
+\label{rem:v400-r05-class-c-special-rule}
+For Class C objects, a packed mask integer is never the primary shifted object.
+The primary shifted object is the support or route payload. The packed integer
+is recomputed from that shifted support.
+\end{remark}
+
+\subsection{Normal-form examples}
+\label{subsec:v400-r05-normal-form-examples}
+
+\begin{center}
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{@{}p{0.14\textwidth}P{0.24\textwidth}P{0.25\textwidth}P{0.25\textwidth}@{}}
+\toprule
+Class & shifted display & backtranslation & invariant data\\
+\midrule
+B & $\langle 6,13\rangle$ & $\langle 5,12\rangle$ & router role\\
+C & support $\{6,13\}$, mask $8256$ & support $\{5,12\}$, mask $4128$ & support/mask split\\
+D & ${}^{\langle 6,13\rangle}{}_{\langle 3\rangle}\mathcal T^{i}{}_{j}$ & ${}^{\langle 5,12\rangle}{}_{\langle 2\rangle}\mathcal T^{i}{}_{j}$ & sidedness/variance\\
+E & route $\langle 6,13\rangle$ & route $\langle 5,12\rangle$ & readout target and guard\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Release-freeze discipline}
+\label{subsec:v400-r05-release-freeze-discipline}
+
+\begin{definition}[shifted release-freeze discipline]
+\label{def:v400-r05-shifted-release-freeze-discipline}
+The shifted release-freeze discipline is the rule that, after the local pass, every new active
+QAM/router/readout object must either:
+\begin{enumerate}[leftmargin=*]
+ \item be written directly as a shifted-normal admissible object; or
+ \item be marked as historical/pre-shift and supplied with an explicit
+ backtranslation or witness pointer.
+\end{enumerate}
+\end{definition}
+
+\begin{lemma}[Release-freeze prevents mixed namespace drift]
+\label{lem:v400-r05-release-freeze-prevents-mixed-namespace-drift}
+The shifted release-freeze discipline prevents uncontrolled mixing of pre-shift and shifted
+tag namespaces.
+\end{lemma}
+
+\begin{proof}
+Every new object must either be shifted-normal or explicitly historical/pre-shift. In
+the first case, inhabited tags are shifted and backtranslated by the shifted ledger.
+In the second case, the object is not treated as an active shifted governing object.
+Thus no object may silently mix pre-shift and shifted tag meanings.
+\end{proof}
+
+\subsection{Governing shifted normal-form theorem}
+\label{subsec:v400-r05-governing-shifted-normal-form-theorem}
+
+\begin{theorem}[Governing shifted normal-form theorem]
+\label{thm:v400-r05-governing-shifted-normal-form-theorem}
+The normal form is conservative over the local proof chain shifted migration chain:
+every finite shifted-normal admissible object has a controlled reading in the
+shifted shifted namespace and an inhabited-component backtranslation that preserves
+payloads, tensor grammar, physical/readout targets, guards, and theorematic
+status.
+\end{theorem}
+
+\begin{proof}
+Let $\mathcal N_4(X)$ be shifted-normal admissible. By
+Definition~\ref{def:v400-r05-shifted-normal-admissibility}, it carries an occurrence
+class and a backtranslation ledger for all inhabited shifted tags. Class A is
+handled by witness preservation. Class B is handled by router backtranslation.
+Class C is handled by support/payload separation and packed-mask recomputation.
+Class D is handled by preservation of sidedness and variance. Class E is
+handled by preservation of readout target, guard, and theorematic status.
+These are exactly the local proof chain conservation mechanisms. Hence the normal form
+is conservative over the shifted migration chain.
+\end{proof}
+
+\subsection{\QSCver{shifted.0.0} release-final handoff}
+\label{subsec:v400-r05-release-final-handoff}
+
+\begin{definition}[\QSCver{shifted.0.0} release-final readiness]
+\label{def:v400-r05-v400-release-final-readiness}
+The \QSCver{shifted.0.0} line is ready for a release-final pass when:
+\begin{enumerate}[leftmargin=*]
+ \item the shifted namespace is fixed;
+ \item the occurrence ledger is present;
+ \item the reindexed display triples are present;
+ \item physical/readout compatibility is present;
+ \item the governing shifted-namespace normal form is present;
+ \item all non-claims remain explicit.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}[non-claim]
+\label{rem:v400-r05-non-claim}
+The layer is a normal-form and release-freeze handoff. It does not close
+OP~1/4 or OP~5(B), does not activate primitive mixed tensors, does not claim
+Turing-completeness, and does not replace standard physical calculations.
+\end{remark}
+
+
+
+\clearpage
+\section{\QSCver{shifted.0.0} Release-Final Closure Note}
+\label{sec:v400-release-final-closure-note}
+
+\begin{quote}\small
+\noindent\textbf{Status.}
+This closure note records the \QSCver{shifted.0.0} Active Core as the first shifted
+release-final state built from the local proof chain migration chain. The release-final state
+contains the global QAM Hilbert-shift activation, occurrence-ledger audit map,
+reindexed display layer, physical-readout compatibility check, and governing
+shifted-namespace normal form. It records historical DOI-bearing status for that layer; current \QSCver{shifted.1.0} DOI metadata is governed by the frontmatter Version and DOI record.
+\end{quote}
+
+\subsection{Release-release-final state contents}
+\label{subsec:v400-release-final-contents}
+
+\begin{definition}[\QSCver{shifted.0.0} release-final content]
+\label{def:v400-release-final-content}
+The \QSCver{shifted.0.13} historical source-hygiene layer consists of the following recorded layers:
+\begin{enumerate}[leftmargin=*]
+ \item the local pass: global QAM Hilbert-shift activation;
+ \item the local pass: occurrence ledger and shift-audit map;
+ \item the local pass: global reindexed display layer;
+ \item the local pass: physical readout compatibility check;
+ \item the local pass: governing shifted-namespace normal form and release-freeze handoff.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[\QSCver{shifted.0.0} release-final governing rule]
+\label{def:v400-release-final-governing-rule}
+From this release-final state onward, active QAM/router/readout objects are governed by
+the shifted-namespace normal form unless explicitly marked as historical or pre-shift witness
+material. Inhabited active tags are read in the shifted namespace, and the
+reserved tag $0_{\mathrm{shift}}$ denotes the empty/no-active-kind marker.
+\end{definition}
+
+\subsection{Release-release-final state conservativity}
+\label{subsec:v400-release-final-conservativity}
+
+\begin{theorem}[\QSCver{shifted.0.0} release-final conservativity]
+\label{thm:v400-release-final-conservativity}
+Every finite active object admitted by the \QSCver{shifted.0.0} release-final normal form
+has an inhabited-component backtranslation that preserves its payload, tensor
+grammar, readout target, guard record, and theorematic status.
+\end{theorem}
+
+\begin{proof}
+The result is the direct combination of the namespace ledger, the local pass
+occurrence ledger, the display triples, the physical-readout
+compatibility check, and the governing normal-form theorem. The ledger
+supplies $\mathrm B_4(a)=a-1$ on inhabited shifted tags. The ledger assigns a
+role to visible occurrences. The display layer supplies the explicit
+pre-shift/shifted/backtranslation display form. The compatibility check preserves
+physical and mathematical readout data. The normal form requires all new
+active material to be shifted-normal or explicitly historical/pre-shift. Therefore the
+release-final state is conservative over the prepared migration chain.
+\end{proof}
+
+\subsection{Release-release-final state non-claims}
+\label{subsec:v400-release-final-non-claims}
+
+\begin{remark}[\QSCver{shifted.0.0} release-final non-claims]
+\label{rem:v400-release-final-non-claims}
+The \QSCver{shifted.0.13} historical source-hygiene layer does not close OP~1/4 or OP~5(B), does not
+activate primitive mixed tensors, does not claim Turing-completeness, and does
+not replace standard QFT/QED/Lifshitz or general-relativistic calculations. It
+is a global QAM/router/readout language migration and normal-form release
+release-final state.
+\end{remark}
+
+
+
+\clearpage

@@ -1,5 +1,18 @@
 \input{qsc-common}
 
+% Longer appendix identifiers need their own TOC number columns.
+% Keep this local to the active entry point, not the historical witness.
+\makeatletter
+\renewcommand*\l@section[2]{%
+  \addvspace{1em plus 1pt}%
+  \begingroup\bfseries
+    \@dottedtocline{1}{0em}{3em}{#1}{#2}%
+  \endgroup
+}
+\renewcommand*\l@subsection{\@dottedtocline{2}{3em}{4.5em}}
+\renewcommand*\l@subsubsection{\@dottedtocline{3}{7.5em}{5em}}
+\makeatother
+
 \hypersetup{
   hidelinks,
   pdftitle={Quantum Sphaera Companion: A Structure-First Mathematical Unfolding (v3.35.0 modular source synchronization baseline)},

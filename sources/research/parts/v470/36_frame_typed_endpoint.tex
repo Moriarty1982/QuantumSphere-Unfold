@@ -1,0 +1,496 @@
+\section{r81 Matter-frame epsilon terminality and Planck/information scale split}
+\label{sec:r81-matter-frame-epsilon-terminality}
+
+This source-only addendum records the physical interpretation suggested by the r60--r80
+endpoint.  The terminal blocker
+\[
+0_{\rm termdata}\not\Rightarrow 0_{\rm all}
+\]
+is not merely a missing algebraic shortcut.  It is the correct typing if the matter
+readout is an operational, finite-resolution readout rather than an exact all-readout
+zero object.
+
+\subsection*{Scale typing}
+\label{subsec:r81-scale-typing}
+
+Let \(\mathsf I\) denote the information-side layer, \(\mathsf M\) the matter/detector
+readout, and \(\mathsf P\) the photon/clock-boundary readout.  The matter readout is
+modelled as a coarse or terminal projection
+\[
+\pi_{\mathsf I\to\mathsf M}:\mathsf I\longrightarrow \mathsf M.
+\]
+It is therefore not required that a native information-scale refinement appears as a
+shorter material length.  The frame-typed scale relation is
+\[
+\ell_{\mathsf I}^{\rm native}\leq \ell_{\mathsf M}^{\rm eff},
+\]
+where \(\ell_{\mathsf M}^{\rm eff}\) is the matter-frame terminal resolution.  In a
+Planck-compatible normalization one may set
+\[
+\varepsilon_{\mathsf M}^{\rm len}=\frac{\ell_{\rm P}}{L_{\rm ref}}
+\]
+or, in the already dimensionless detector chain,
+\[
+\theta_{\rm det}=\frac1{256}.
+\]
+These are terminal scales, not exact all-readout zeros.
+
+\subsection*{Matter-frame epsilon terminality theoremlet}
+\label{subsec:r81-matter-epsilon-theoremlet}
+
+\paragraph{Theoremlet r81.}
+Assume a matter-frame residual \(\Phi\) is read only through a terminal matter detector
+\(D_{\varepsilon_{\mathsf M}}\).  If
+\[
+\Phi\leq \varepsilon_{\mathsf M},
+\]
+then
+\[
+D_{\varepsilon_{\mathsf M}}(\Phi)=0_{\mathsf M}^{\varepsilon}
+\quad\Rightarrow\quad
+0_{\rm termdata}.
+\]
+However, in the guarded grammar,
+\[
+0_{\mathsf M}^{\varepsilon}\not\Rightarrow 0_{\rm all},
+\qquad
+0_{\rm termdata}\not\Rightarrow 0_{\rm all}.
+\]
+Consequently matter-frame closure is an effective/epsilon closure, not exact global
+all-readout closure.
+
+\paragraph{Proof sketch.}
+The detector map is typed as a terminal projection.  Its zero is a record zero: it states
+that the residual has fallen below the matter-frame operational terminal scale.  The r63
+and r64 ledgers already show this for \(\theta_{\rm det}=1/256\), where
+\[
+\Phi_5^{(20)}\leq \frac1{256}
+\]
+while \(\Phi_5^{(n)}>0\) for every finite \(n\).  The r73--r80 bridge and quotient scans
+show that no guard-admissible implication from terminal data to exact all-readout zero is
+available.  Therefore the implication stops at terminal data. \(\square\)
+
+\subsection*{Photon-frame null note}
+\label{subsec:r81-photon-frame-null-note}
+
+The theoremlet does not prove that the photon/clock frame carries an exact global zero.
+It only permits a cleaner typing:
+\[
+0_{\mathsf M}^{\varepsilon}\neq 0_{\rm all},
+\qquad
+0_{\mathsf P}\text{ remains a separate candidate null object.}
+\]
+Thus a photon-frame or boundary-clock zero, if later constructed, must still be related to
+\(0_{\rm all}\) by a separate theorem.  It must not be imported from the matter-frame
+terminal detector.
+
+\subsection*{Effective closure layer}
+\label{subsec:r81-effective-closure-layer}
+
+We introduce the scoped closure layer
+\[
+\mathsf{Closure}_{\mathsf M,\rm eff}^{\varepsilon}
+\]
+with the admissibility rule
+\[
+\Phi\leq\varepsilon_{\mathsf M}
+\quad\Longrightarrow\quad
+0_{\mathsf M}^{\varepsilon}\quad\Longrightarrow\quad 0_{\rm termdata},
+\]
+and the explicit non-promotion guard
+\[
+\mathsf{Closure}_{\mathsf M,\rm eff}^{\varepsilon}
+\not\Rightarrow
+\mathsf{Closure}_{\rm all}^{\rm glob}.
+\]
+This separates three levels:
+\[
+\mathsf{Closure}_{\rm loc},
+\qquad
+\mathsf{Closure}_{\mathsf M,\rm eff}^{\varepsilon},
+\qquad
+\mathsf{Closure}_{\rm all}^{\rm glob}.
+\]
+The first two are compatible with the v4.7.0 guarded release scope.  The third remains a
+forbidden claim.
+
+\subsection*{r81 guard update}
+\label{subsec:r81-guard-update}
+
+The r81 scale-typing lift changes the interpretation of the terminal blocker but does not
+spend any global guard:
+\[
+R_{\mathsf M,\rm eff}^{r81}=(0,0,0),
+\qquad
+R_{\rm glob}^{(r81,+)}=(0,1,1,1,1),
+\]
+with
+\[
+\Gamma_{\rm guard}^{r81}=(1,1,1,1,1).
+\]
+The release wording may now say controlled matter-frame/effective closure.  It must not
+say exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), global
+photon-clock/RH theorem, or global all-readout closure.
+
+
+% -----------------------------------------------------------------------------
+\section*{v4.7.0-r82: Tachyon-frame signed-scale separation}
+\label{sec:r82-tachyon-frame-signed-scale}
+
+\paragraph{Purpose.}
+The r81 matter-frame theoremlet separates effective matter-frame terminality from exact
+all-readout zero.  The present r82 note adds the corresponding tachyon/information-facing
+scale typing.  It answers a possible ambiguity in the phrase ``negative length'': the
+framework does not introduce negative material lengths.  It introduces a signed or
+spacelike norm class for a tachyon-frame readout, relative to the matter-frame metric
+convention.
+
+\subsection*{Signed scale convention}
+\label{subsec:r82-signed-scale-convention}
+
+Let \(\mathsf T\) denote a tachyonic, superluminal, or information-facing readout channel.
+Its native scale is written as a positive magnitude
+\[
+\lambda_{\mathsf T}>0.
+\]
+When this channel is expressed through the matter-frame interval convention, it is typed as
+opposite-sign/spacelike:
+\[
+\ell_{\mathsf T}^{2}=-\lambda_{\mathsf T}^{2}
+\]
+for the matter-frame signature used in this branch.  If the opposite metric signature is
+used, the sign convention is reversed, but the content is unchanged: the tachyon-frame
+scale carries the opposite interval sign from an ordinary matter-frame material length.
+
+The guard is
+\[
+\ell_{\mathsf T}^{2}<0
+\not\Rightarrow
+L_{\mathsf M}<0.
+\]
+Thus the negative sign is not a negative material length.  It is a signature marker for a
+spacelike, dual, or information-facing scale class.
+
+\subsection*{Theoremlet r82: tachyon-frame signed-scale separation}
+\label{subsec:r82-theoremlet-signed-scale-separation}
+
+\paragraph{Theoremlet.}
+Assume the r81 matter-frame effective terminal layer
+\(\mathsf{Closure}_{\mathsf M,\rm eff}^{\varepsilon}\) and the r60+ guarded relative-seam
+extension.  A tachyon-frame native scale may be finer than the matter-frame effective
+terminal scale,
+\[
+\lambda_{\mathsf T}\leq \ell_{\mathsf M}^{\rm eff},
+\]
+without becoming a shorter material length in the matter frame.  Matter-frame access is
+mediated by a projection or coarse-graining map
+\[
+\pi_{\mathsf T\to\mathsf M}:\mathsf T\to\mathsf M,
+\]
+so that tachyon-frame substructure is read in the matter frame only as projected residual,
+phase/address data, or terminal data.  Consequently
+\[
+0_{\mathsf T}^{\varepsilon}
+\not\Rightarrow
+0_{\mathsf M}^{\varepsilon}
+\not\Rightarrow
+0_{\rm all},
+\]
+and
+\[
+\ell_{\mathsf T}^{2}<0
+\not\Rightarrow
+L_{\mathsf M}<0.
+\]
+
+\paragraph{Interpretation.}
+The tachyon frame is allowed to carry a native information or phase resolution below the
+matter-frame terminal scale.  The matter frame does not measure this as a material length
+shorter than its effective Planck-compatible terminal scale.  It sees it through
+coarse-graining, residual phase structure, detector records, or relay data.
+
+\paragraph{Proof sketch.}
+The r81 theoremlet already establishes that matter-frame residuals below
+\(\varepsilon_{\mathsf M}\) yield \(0_{\mathsf M}^{\varepsilon}\) and terminal data, but
+not exact all-readout zero.  A tachyon-frame scale has different variance and interval
+signature from a matter-frame material length.  The comparison therefore requires an
+explicit typed comparison map or projection.  The projection
+\(\pi_{\mathsf T\to\mathsf M}\) can preserve relay-relevant terminal data, but it does not
+convert an opposite-sign interval into a negative matter-frame length and does not provide
+an all-readout zero bridge.  The implication therefore stops at projected terminal or
+residual data. \(\square\)
+
+\subsection*{Frame-scale table}
+\label{subsec:r82-frame-scale-table}
+
+The branch now distinguishes four scale/readout roles:
+\[
+\begin{array}{c|c|c}
+\text{readout} & \text{scale type} & \text{zero status}\\
+\hline
+\mathsf M & \ell_{\mathsf M}^{\rm eff}\sim\varepsilon_{\mathsf M} &
+0_{\mathsf M}^{\varepsilon}\Rightarrow0_{\rm termdata},\;0_{\mathsf M}^{\varepsilon}\not\Rightarrow0_{\rm all}\\
+\gamma & \ell_{\gamma}\text{ / clock selector} &
+0_{\gamma}\text{ remains a separate candidate null object}\\
+\mathsf T & \ell_{\mathsf T}^{2}=-\lambda_{\mathsf T}^{2},\;\lambda_{\mathsf T}>0 &
+0_{\mathsf T}^{\varepsilon}\not\Rightarrow0_{\rm all}\\
+\mathsf I & \ell_{\mathsf I}^{\rm native}\text{ / address scale} &
+\text{native information scale, not a material length}
+\end{array}
+\]
+
+This prevents three overclaims:
+\[
+\lambda_{\mathsf T}<\ell_{\mathsf M}^{\rm eff}
+\not\Rightarrow
+\text{shorter matter length},
+\]
+\[
+\ell_{\mathsf T}^{2}<0
+\not\Rightarrow
+\text{negative material length},
+\]
+\[
+0_{\mathsf T}^{\varepsilon}
+\not\Rightarrow
+0_{\rm all}.
+\]
+
+\subsection*{r82 guard update}
+\label{subsec:r82-guard-update}
+
+The r82 signed-scale typing adds a tachyon-frame separation layer but does not spend any
+global guard:
+\[
+R_{\mathsf T,\rm scale}^{r82}=(0,0,0),
+\qquad
+R_{\rm glob}^{(r82,+)}=(0,1,1,1,1),
+\]
+with
+\[
+\Gamma_{\rm guard}^{r82}=(1,1,1,1,1).
+\]
+The effective matter-frame residual remains zero only inside the scoped
+\(\mathsf{Closure}_{\mathsf M,\rm eff}^{\varepsilon}\) layer.  The tachyon-frame signed
+scale does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+
+
+% ============================================================================
+\section*{v4.7.0-r83 Source-Only Addendum: Effective/Local Closure Reclassification}
+\label{sec:r83-effective-local-closure-reclassification}
+% ============================================================================
+
+\paragraph{Purpose.}
+The r81--r82 frame-scale separation turns several previously open-looking residuals into
+scoped closure statements.  This r83 addendum does not claim global all-readout closure.
+Instead it reclassifies the status of the affected objects by separating effective/local
+closure from exact/global closure.
+
+\subsection*{r83 closure classes}
+\label{subsec:r83-closure-classes}
+
+We use the following scoped closure labels:
+\[
+\mathsf{Closed}_{\rm eff/local},
+\qquad
+\mathsf{Closed}_{\rm typed},
+\qquad
+\mathsf{Open}_{\rm exact/global}.
+\]
+Here \(\mathsf{Closed}_{\rm eff/local}\) means closed only inside the declared
+matter-frame effective, detector-terminal, or local relay/clock layer.  It is not an
+all-readout zero claim.  \(\mathsf{Closed}_{\rm typed}\) means that an ambiguity or
+misreading has been eliminated by a typing/separation guard.  \(\mathsf{Open}_{\rm
+exact/global}\) means that no exact all-readout, finite-zero, or T2/global witness has
+been supplied.
+
+\subsection*{r83 reclassification theoremlet}
+\label{subsec:r83-reclassification-theoremlet}
+
+\paragraph{Theoremlet r83.}
+Under the r60 conservative relative-seam extension and the r81--r82 frame-scale guards,
+the following reclassification is admissible:
+\[
+\begin{array}{c|c|c}
+\text{object} & \text{r83 status} & \text{scope guard}\\
+\hline
+\text{matter-frame zero problem} & \mathsf{Closed}_{\rm eff/local} &
+0_{\mathsf M}^{\varepsilon}\Rightarrow0_{\rm termdata},\;0_{\mathsf M}^{\varepsilon}\not\Rightarrow0_{\rm all}\\
+\text{tachyon negative-length ambiguity} & \mathsf{Closed}_{\rm typed} &
+\ell_{\mathsf T}^{2}<0\not\Rightarrow L_{\mathsf M}<0\\
+OP5_{\rm eff} & \mathsf{Closed}_{\rm eff/local} &
+\Phi_5^{(20)}\le 1/256\Rightarrow0_{\mathsf M}^{\varepsilon}\\
+OP5_{\rm exact} & \mathsf{Open}_{\rm exact/global} &
+\Phi_5^{(n)}>0\text{ for finite }n\\
+C5_{\rm det/eff} & \mathsf{Closed}_{\rm eff/local} &
+D_{1/256}(\Phi_5)=0_{\rm det}\text{ at }n=20\\
+C5_{\rm zero} & \mathsf{Open}_{\rm exact/global} &
+\nexists N<\infty:\Phi_5^{(N)}=0\\
+W_{\rm clk}^{\rm loc} & \mathsf{Closed}_{\rm eff/local}\text{ conditionally} &
+\Delta_{\gamma}<1/5\\
+W_{\gamma}^{\rm glob} & \mathsf{Open}_{\rm exact/global} &
+\text{no global photon-clock/RH theorem}\\
+\mathsf C_{\rm mix}^{\rm typed} & \mathsf{Closed}_{\rm typed} &
+\text{local typed mixed comparison only}\\
+C6/T2 & \mathsf{Open}_{\rm exact/global} &
+0_{\rm termdata}\not\Rightarrow0_{\rm all}
+\end{array}
+\]
+
+\paragraph{Proof sketch.}
+The matter-frame implication is exactly the r81 effective terminality guard:
+\[
+\Phi\le\varepsilon_{\mathsf M}\Rightarrow0_{\mathsf M}^{\varepsilon}\Rightarrow0_{\rm termdata},
+\qquad
+0_{\mathsf M}^{\varepsilon}\not\Rightarrow0_{\rm all}.
+\]
+The tachyon-frame ambiguity is removed by the r82 signed-scale convention
+\(\ell_{\mathsf T}^{2}=-\lambda_{\mathsf T}^{2}\), \(\lambda_{\mathsf T}>0\), with the
+explicit guard \(\ell_{\mathsf T}^{2}<0\not\Rightarrow L_{\mathsf M}<0\).  The OP5/C5
+finite detector statement follows from the previously established threshold
+\(\Phi_5^{(20)}\le1/256\).  The exact OP5/C5 statement remains open because the bounded
+collar recurrence remains positive for every finite step.  The clock and mixed-comparison
+closures inherit their local/typed guards from r65 and r69 respectively.  The final T2/global
+row remains open because r75--r80 freeze the terminal blocker
+\(0_{\rm termdata}\not\Rightarrow0_{\rm all}\).  \(\square\)
+
+\subsection*{r83 status ledger}
+\label{subsec:r83-status-ledger}
+
+The reclassification changes the narrative, not the global residual.  The correct public
+reading is:
+\[
+\text{effective/local/frame-typed closures gained; exact/global closure not claimed.}
+\]
+Thus the effective/local ledger is
+\[
+R_{\rm eff/local}^{r83}=(0,0,0,0,0),
+\]
+for the scoped classes
+\[
+(0_{\mathsf M}^{\varepsilon},\;\ell_{\mathsf T}^{2},\;OP5_{\rm eff},\;C5_{\rm det/eff},\;W_{\rm clk}^{\rm loc}),
+\]
+while the exact/global ledger remains
+\[
+R_{\rm exact/global}^{r83}=(1,1,1,1,1),
+\]
+for
+\[
+(C5_{\rm zero},\;0_{\rm all},\;C6/T2,\;W_{\gamma}^{\rm glob},\;W_{\rm all}).
+\]
+Equivalently, the main global residual remains
+\[
+R_{\rm glob}^{(r83,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{r83}=(1,1,1,1,1).
+\]
+The first component stays zero only in the r60+ relative-seam setting; the remaining
+components are not promoted by the r83 reclassification.
+
+\subsection*{r83 release-scope implication}
+\label{subsec:r83-release-scope-implication}
+
+For v4.7.0 release language, r83 supports the phrase ``controlled effective/local
+closure'' but forbids replacing it by ``global closure.''  The safe formulation is:
+\[
+\boxed{\text{v4.7.0 establishes guarded effective/local and frame-typed closures, not T2/global closure.}}
+\]
+The forbidden formulations remain:
+\[
+C5=0,
+\qquad
+0_{\rm termdata}\Rightarrow0_{\rm all},
+\qquad
+C6/T2,
+\qquad
+W_{\gamma}^{\rm glob},
+\qquad
+W_{\rm all}.
+\]
+
+
+\clearpage
+\section*{v4.7.0-r84 Post-r83 Full-Monolith Integration and Release-Scope Refresh}
+\addcontentsline{toc}{section}{v4.7.0-r84 Post-r83 Full-Monolith Integration and Release-Scope Refresh}
+\label{sec:r84-post-r83-full-monolith-release-scope-refresh}
+
+\noindent\textbf{Source-only status.}
+This r84 layer integrates the r83 effective/local closure reclassification back into the
+full-monolith source path after the pre-r81--r83 handoff.  It does not create a public release and it
+does not create a new PDF.  The intended reserved v4.7.0 DOI remains
+\href{https://doi.org/10.5281/zenodo.20232911}{10.5281/zenodo.20232911}; the previous
+baseline DOI \href{https://doi.org/10.5281/zenodo.20117361}{10.5281/zenodo.20117361} remains
+provenance only.
+
+\subsection*{r84 integration ledger}
+\label{subsec:r84-integration-ledger}
+The full-monolith integration keeps the r81--r83 additions in the proof spine while preserving
+the corrected compact title-page discipline introduced during full-monolith recovery.  In particular,
+the title page carries one version DOI line only, and release notices, previous DOI provenance,
+and claim-scope explanations remain in the body/provenance layers rather than on the title page.
+
+The post-r83 source object is
+\[
+\mathfrak M_{r84}
+=\bigl(\mathfrak M_{r83},\mathsf{Scope}_{\rm eff/local}^{r83},
+\mathsf{Guard}_{\rm exact/global}^{r83},\mathsf{Meta}_{\rm DOI}^{r84}\bigr).
+\]
+The integration residual is
+\[
+R_{\rm int}^{r84}=(0,0,0,0),
+\]
+corresponding to source continuity, title-page compactness, DOI separation, and claim-scope
+preservation.
+
+\subsection*{r84 release-scope refresh}
+\label{subsec:r84-release-scope-refresh}
+The safe v4.7.0 release phrase after r83 is:
+\[
+\boxed{\text{guarded effective/local and frame-typed closures, not exact global closure.}}
+\]
+The allowed local/effective assertions are
+\[
+\begin{gathered}
+0_{\mathsf M}^{\varepsilon}\Rightarrow0_{\rm termdata},\qquad
+\ell_{\mathsf T}^{2}=-\lambda_{\mathsf T}^{2},\;\lambda_{\mathsf T}>0,\\
+OP5_{\rm eff},\qquad C5_{\rm det/eff}\text{ at }\theta=1/256\text{ after }n=20,\\
+W_{\rm clk}^{\rm loc}\text{ under }\Delta_{\gamma}<1/5,
+\qquad \mathsf C_{\rm mix}^{\rm typed}\text{ locally.}
+\end{gathered}
+\]
+The forbidden exact/global assertions remain
+\[
+C5=0,
+\qquad
+0_{\rm termdata}\Rightarrow0_{\rm all},
+\qquad
+C6/T2,
+\qquad
+W_{\gamma}^{\rm glob},
+\qquad
+W_{\rm all}.
+\]
+Thus the refreshed ledgers are
+\[
+R_{\rm eff/local}^{r84}=(0,0,0,0,0),
+\qquad
+R_{\rm exact/global}^{r84}=(1,1,1,1,1),
+\]
+and the global residual remains
+\[
+R_{\rm glob}^{(r84,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{r84}=(1,1,1,1,1).
+\]
+
+\subsection*{r84 release-path implication}
+\label{subsec:r84-release-path-implication}
+Because r83 changes the conceptual framing from ``unresolved failure'' to scoped
+effective/local closure, any later public-release package should be regenerated from r84 or later,
+not from a pre-r81--r83 handoff.  A later release candidate may be built by applying the compact-titlepage
+rule and final-handoff naming discipline to this r84 source.  No such public release is
+authorized by r84 itself.
+
+

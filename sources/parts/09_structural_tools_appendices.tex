@@ -1,8 +1,15 @@
-% Modular wrapper generated for finer source-tree editing.
-% The included files preserve the previous content byte-for-byte at line level.
+% Single appendix boundary, independent of the computational modules' location.
+\clearpage
+\appendix
+\setcounter{section}{0}
+\renewcommand{\thesection}{H\arabic{section}}
+\renewcommand{\thesubsection}{H\arabic{section}.\arabic{subsection}}
 
 \input{parts/09_structural_tools_appendices/01_structural_tools_and_master_chain}
 \input{parts/09_structural_tools_appendices/02_extension_certificates_19az_6g_to_6aj}
 \input{parts/09_structural_tools_appendices/03_conservative_upgrade_packets_19az_6ak_to_6as}
 \input{parts/09_structural_tools_appendices/04_op_facing_protocol_19az_6at_to_6be}
 \input{parts/09_structural_tools_appendices/05_downstream_protocol_19az_6bf_to_6bq}
+\input{parts/09_structural_tools_appendices/06_core_proof_details}
+\input{parts/09_structural_tools_appendices/07_qam_runtime_details}
+\input{parts/09_structural_tools_appendices/08_extended_reading_details}

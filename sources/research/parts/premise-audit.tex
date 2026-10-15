@@ -1,0 +1,107 @@
+\section{Premise Audit and Scope}
+\label{v480:premise-audit}
+
+The following qualifications apply before reading the inherited core.
+The original assertions and proofs are retained for audit, not silently
+re-certified. This section records conditional replacements for specific
+known issues; it does not claim a complete scientific validation of the
+monolith or repair every downstream use of the older assertions.
+
+\subsection{MM/HC Spectral Identification}
+\label{v480:spectral-premises}
+
+Commutation with an orthogonal projector preserves its image but does
+not make that image a single eigenspace. Absence of nontrivial Jordan
+chains also does not imply a single eigenvalue. For example,
+$M=\operatorname{diag}(1,2,3)$ and $C=\operatorname{diag}(1,1,0)$
+commute while $M$ is not scalar on $\operatorname{im}C$.
+Even scalar action does not identify the full spectral projector:
+$M=\operatorname{diag}(2,2,3)$ and $C=\operatorname{diag}(1,0,0)$
+omit one direction of the eigenvalue-two eigenspace.
+Thus the inherited labels
+\texttt{lem:diagonal-traversal-scalar-action} and
+\texttt{thm:hc-spectral-projector} must not be used without the
+missing support premises.
+
+\begin{proposition}[A sufficient conditional MM/HC identification]
+\label{v480:conditional-mm}
+Let $M$ be a bounded self-adjoint operator on a complex Hilbert space,
+let $C$ be a nonzero orthogonal projector, and suppose for a real
+$\lambda_0$ that
+\[
+ MC=CM=\lambda_0 C,
+ \qquad \ker(M-\lambda_0 I)\cap\ker C=\{0\}.
+\]
+Then $\operatorname{im}C=\ker(M-\lambda_0 I)$, and $C$ is the
+orthogonal eigenprojection for that eigenvalue. These conditions
+are sufficient hypotheses, not a derived identification of a native MM.
+\end{proposition}
+\begin{proof}
+The scalar relation gives the image-to-kernel inclusion. Conversely,
+if $Mx=\lambda_0x$, commutation implies that $(I-C)x$ lies in both
+$\ker(M-\lambda_0I)$ and $\ker C$. The second assumption forces
+$(I-C)x=0$, so $x=Cx$. Orthogonality identifies the projection onto
+the resulting closed eigenspace.
+\end{proof}
+
+One must still supply the realized operator, domain, scalar action and
+complement exclusion. A representation label, an invariant carrier or
+an audit token does not supply these hypotheses.
+
+\subsection{OP1: Inverse Diagnostic and Fixed Exponent}
+\label{v480:exponent-premises}
+
+For $g>1$, $0<\beta<1/\sqrt3$ and $\gamma_1>0$, set
+\[
+ A(g,\beta)=\frac{\gamma_1}{4\pi|\log(\beta\sqrt3)|},
+ \qquad n(g,\beta)=\frac{\log A(g,\beta)}{\log g}.
+\]
+The relation $g^{n(g,\beta)}=A(g,\beta)$ is then an identity.
+Substituting $\beta(g)=\sqrt{(g-1)/(g+1)}$ leaves an identity on
+$1<g<2$; it does not predict $g$. The inherited inverse-exponent
+and self-consistency passages must be read with this restriction,
+not as an independent arithmetic derivation of the frame factor.
+
+\begin{proposition}[Unique root under an independently fixed ansatz]
+\label{v480:fixed-exponent}
+Assume the exponent five and prefactor $1/\sqrt3$ independently,
+and put $a=\gamma_1/(4\pi)$ with $0<a<27/20$. The equation
+\[
+ f(g)=\tfrac12\log3+\tfrac12\log\frac{g-1}{g+1}
+                   +\frac{a}{g^5}=0
+\]
+has exactly one root in $(1,2)$.
+\end{proposition}
+\begin{proof}
+Here $f'(g)=1/(g^2-1)-5a/g^6$. For $t=g^2>1$,
+\[
+ t^3-\tfrac{27}{4}(t-1)=(t-\tfrac32)^2(t+3)\geq0.
+\]
+Consequently $g^6/(g^2-1)\geq27/4>5a$, so $f'>0$.
+Also $f(1+)=-\infty$ and $f(2)=a/32>0$. Continuity and strict
+monotonicity give existence and uniqueness.
+\end{proof}
+
+At the stated first-zero input $\gamma_1=14.134725141734694$,
+the model root is $g\simeq1.863662249889$ and
+$\beta\simeq0.549175395418$. This is a conditional scalar-model
+calculation. The exponent, prefactor and prime-lattice interpretation
+still need independent justification; the result does not close OP1/4.
+
+\subsection{OP5: Detector Evidence and Full Balance}
+\label{v480:op5-premises}
+
+The full $\Theta$ sum, its regularization, endpoint conventions and
+remainder control are separate obligations. An empty truncated
+frequency sum does not make the full oscillatory sum vanish.
+The inherited quantitative passages are therefore retained as audit
+material, not certified by their relocation or compilation.
+
+The later C5 fit score is another interface. Applying a transfer or
+contraction estimate to it requires the native evaluated boundary,
+exterior and mixed residual blocks, their fixed norm conventions,
+their guards and their calibration. Synthetic residual vectors or a
+fitted contraction constant do not recover this missing dictionary.
+A sufficient bound such as $3/4$ is not a measured universal physical
+threshold, and a positive residual below a detector tolerance is not
+an exact all-readout zero.

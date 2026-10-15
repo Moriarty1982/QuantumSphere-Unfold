@@ -45,6 +45,8 @@ Initial working formula:
 
 For tachyonic, opposite-orientation, or dual-readout contexts, a negative sign must be read as an orientation, phase, or order code unless a later formal proof explicitly upgrades the interpretation. It must not be presented as a directly observable negative physical distance.
 
+The [full-source research working copy](sources/research/README.md) now has a separate entry point, `sources/research/v480-companion.tex`, derived from the complete 1,014-page v4.7.0 monolith. It retains the entire baseline source with a byte-level map, separates the human reading route from complete technical support, and proposes the guarded v4.8 integration interface. This is not a published v4.8 release, a complete correction of all inherited arguments, or a replacement of the frozen v4.7.0 payload. The older modular `sources/active-core.tex` is a different source/version scope.
+
 ## Citation
 
 Use the `CITATION.cff` file in this repository, or cite the public Zenodo record through the version DOI above.

@@ -1,0 +1,610 @@
+\subsection{The single underlying gap}
+
+\begin{remark}[OP 1 and OP 4 are coupled]
+The two open problems
+\begin{itemize}
+\item OP 1: why does $\bsym \approx 0.5493$ rather than $1/\sqrt{3}
+ \approx 0.5774$? (gap: $5.1\%$)
+\item OP 4: why does the $G_2$-Euler-angle derivation of the Cabibbo
+ angle yield $\theta_{12} \approx \arcsin(\gamma_{\mathrm{string}})
+ \approx 7.3^\circ$ instead of the observed $\theta_C \approx 13.0^\circ$?
+ (gap: factor $\approx 1.78 \approx 2$)
+\end{itemize}
+share a single origin: the \emph{continuum-limit correction} from the
+discrete prime lattice $\Gamma_P$ to the smooth manifold geometry.
+\begin{equation}
+\boxed{
+ \delta_{\mathrm{CL}}
+ := \frac{\beta_{\mathrm{sym}}^{\mathrm{measured}}}{\beta_{\mathrm{sym}}^{\mathrm{Hopf}}}
+ = \frac{0.5493}{1/\sqrt{3}}
+ = 0.5493 \cdot \sqrt{3}
+ \approx 0.9515,
+ \quad
+ \text{so } \delta_{\mathrm{CL}} \approx 1 - 4.85\%.
+}
+\end{equation}
+The ART--QFT computation (Section 10) identifies the same gap as a
+$1.4\%$ effect in $\gamma_L$: the ratio
+$\gamma_L^{\mathrm{measured}}/\gamma_L^{\mathrm{Hopf}}
+= 1.864 / (2/\sqrt{3}) \approx 0.9853$,
+i.e.\ a $1.47\%$ shift in $\gamma_L$ propagating to a $4.85\%$ shift
+in $\bsym$ via the nonlinear formula
+$\bsym = \sqrt{(\gamma_L-1)/(\gamma_L+1)}$.
+\end{remark}
+
+%% ============================================================
+\subsection{OP 1: \texorpdfstring{$\bsym = 1/\sqrt{3}$}{β\_sym = 1/√3}
+ from Hopf fixed-point geometry}
+\label{sec:op1}
+%% ============================================================
+
+\subsubsection{The Hopf setup (already established)}
+
+From Theorems~11.1--11.2 (Companion v2.19):
+\begin{enumerate}
+\item The cascade $\KC: S^{15} \to S^8 \to S^4 \to S^2$ identifies
+ the photon ground state with the north pole of $S^3 \cong SU(2)$
+ ($\theta_H = 0$, $z^- = 0$).
+\item The matter observer sits at Hopf angle $\theta_H \approx 66.6^\circ$,
+ giving $\bsym = \sin(\theta_H/2) \approx 0.5493$.
+\item The triolic angle $2\pi/3$ is a useful geometric comparison, but it
+ is not the correct Hopf final for $\bsym$; the sign-corrected value
+ is discussed in Remark~\ref{rem:hopf-final-fix}.
+\end{enumerate}
+
+\begin{remark}[Sign-corrected Hopf final]
+\label{rem:hopf-final-fix}
+Careful: the Hopf final in the open problem list is
+$\bsym = 1/\sqrt{3} \approx 0.5774$, which corresponds to
+$\sin(\theta_H/2) = 1/\sqrt{3}$, i.e. $\theta_H/2 = \arcsin(1/\sqrt{3}) \approx 35.26^\circ$,
+so $\theta_H \approx 70.53^\circ$.
+This is \emph{not} the triolic angle $2\pi/3$.
+
+It is instead the \textbf{tetrahedral angle}: on $S^3 \cong SU(2)$,
+the regular tetrahedron inscribed in $S^3$ has its vertices at angles
+separated by $\arccos(-1/3)$ along great circles. The tetrahedral
+vertex at unit distance from the north pole has half-angle
+$\arctan(\sqrt{2}) \approx 54.74^\circ$ (the Euler characteristic
+angle), and the supplementary Hopf projection gives $\sin(\theta/2)
+= 1/\sqrt{3}$.
+
+So the \textbf{Hopf final is the tetrahedral fixed point of
+$\mathbb{Z}/3\mathbb{Z}$ acting on $S^3$}, not the equator or the
+triolic angle.
+\end{remark}
+
+\subsubsection[The Z/3Z fixed-point structure]{The \texorpdfstring{$\mathbb{Z}/3\mathbb{Z}$}{Z/3Z} fixed-point structure}
+
+\begin{proposition}[$\mathbb{Z}/3\mathbb{Z}$ orbits on $S^3$]
+\label{prop:z3z-orbits}
+The triolic $\mathbb{Z}/3\mathbb{Z}$ action on $S^3$ (cyclic
+generation permutation $\mathrm{Gen}_1 \to \mathrm{Gen}_2 \to
+\mathrm{Gen}_3 \to \mathrm{Gen}_1$ via $G_2$-rotation
+$e_4 \to e_5 \to e_6 \to e_4$) has fixed points at:
+\begin{itemize}
+\item North pole: $\theta_H = 0$ (photon, $\bsym = 0$).
+\item South pole: $\theta_H = \pi$ (tachyon, $\bsym = 1$).
+\item Tetrahedral orbit: $\cos(\theta_H) = -1/3$, i.e. $\theta_H = \arccos(-1/3) \approx 109.47^\circ$, giving $\sin(\theta_H/2) = \sqrt{(1 - (-1/3))/2} = \sqrt{2/3} \approx 0.8165$. \emph{This is not the final.}
+\item \textbf{The tetrahedral half-angle orbit:} $\theta_H/2 =
+ \arcsin(1/\sqrt{3})$, i.e.\ the unique $\mathbb{Z}/3\mathbb{Z}$
+ orbit on $S^3$ whose Hopf projection to $S^2$ lands at the
+ tetrahedral vertex $(1/3, 1/3, 1/3)/\|(1,1,1)\|$.
+\end{itemize}
+\end{proposition}
+
+\begin{proof}
+Under the $\mathbb{Z}/3\mathbb{Z}$ rotation $R_{2\pi/3}$ on the
+triplet $(e_4, e_5, e_6)$, the Hopf-invariant point of $S^3$
+(invariant under both the $U(1)$ fibre and $R_{2\pi/3}$) satisfies
+$q = R_{2\pi/3} q$ in quaternion coordinates. Writing
+$q = a + b\mathbf{i} + c\mathbf{j} + d\mathbf{k}$ with $a^2 + b^2
++ c^2 + d^2 = 1$, the constraint $R_{2\pi/3} q = q$ forces
+$b = c = d$ (equal imaginary parts) and $|b| = 1/\sqrt{3 + a^2/(1-a^2)}$.
+At the unit sphere, $a^2 + 3b^2 = 1$ with $b = c = d$ gives
+$b^2 = (1 - a^2)/3$. The Hopf projection $\pi: S^3 \to S^2$ maps
+$q \mapsto \sin(\theta_H/2)$ where $\cos(\theta_H) = 2a^2 - 1$.
+The unique non-polar fixed point satisfies $\sin(\theta_H/2) =
+|b|\sqrt{3} = \sqrt{1 - a^2}$; combined with the normalization,
+$\sin^2(\theta_H/2) = 1 - a^2 = 3b^2$. The Cauchy--Schwarz minimum
+of the action on the orbit gives $a = \sqrt{2/3}$, so
+$\sin^2(\theta_H/2) = 1/3$, i.e.\ $\sin(\theta_H/2) = 1/\sqrt{3}$.
+\end{proof}
+
+\subsubsection{The continuum-limit correction $\delta_{\mathrm{CL}}$}
+
+The Hopf final $\bsym^{\mathrm{Hopf}} = 1/\sqrt{3}$ is derived
+from the \emph{continuous} $S^3$ geometry. The actual framework sits
+on the discrete prime lattice $\Gamma_P = \{\log p : p \text{ prime}\}$.
+
+\begin{proposition}[Effective closure-side continuum-limit shift]
+\label{prop:cl-shift}
+The observable continuum-limit correction on the closure side is still
+read through a multiplicative factor
+\[
+ \bsym = \bsym^{\mathrm{Hopf}} \cdot \delta_{\mathrm{CL}},
+ \quad
+ \delta_{\mathrm{CL}} = \frac{0.5493}{1/\sqrt{3}} \approx 0.9515.
+\]
+However, in the post-\QSCver{legacy.31.0} reading this scalar factor is not treated as
+the primitive prime-lattice correction object itself. Instead, it is read
+as the \emph{effective closure-side projection} of a deeper coupled
+prime-lattice correction datum
+\[
+ \mathfrak{C}_{\Gamma_P}^{\mathrm{cpl}}
+ =
+ \bigl(
+ \Delta_{\mathrm{CL}},
+ \Delta_{\Theta R}(T),
+ \rho_A
+ \bigr),
+\]
+whose closure-side readout yields the observed scalar factor
+$\delta_{\mathrm{CL}}$.
+\end{proposition}
+
+\begin{proof}[Proof sketch --- corrected structural reading]
+The continuum-limit shift $\delta_{\mathrm{CL}} \approx 0.9515$ is
+numerically established from the observed ratio
+$\bsym/(1/\sqrt{3}) \approx 0.9515$.
+A natural final expression is the ratio of Weyl spectral densities:
+\[
+ \delta_{\mathrm{CL}}
+ \stackrel{?}{=}
+ \frac{\rho_{\mathrm{photon}}(\gamma_1)}{\rho_{\mathrm{continuum}}(\gamma_1)}
+ = \frac{\log(\gamma_1/(2\pi\gL))/(2\pi\gL)}{\log(\gamma_1/(2\pi))/(2\pi)}.
+\]
+\emph{Correction (\QSCver{v2.29.1}):} Numerical evaluation gives
+$\rho_{\mathrm{photon}}(\gamma_1)/\rho_{\mathrm{continuum}}(\gamma_1) \approx 0.124$,
+which does \emph{not} reproduce the observed $\delta_{\mathrm{CL}} \approx 0.951$.
+The corrected effective fit for the closure-side factor is given in
+Remark~\ref{conj:cl-correction}:
+$\delta_{\mathrm{CL}} = \exp(-\gamma_1/(4\pi\gamma_L^5)) \approx 0.9512$,
+matching to $0.018\%$.
+
+The structural reading, however, is no longer purely scalar. On the
+current closure-phase transfer line, the first-principles prime-lattice
+correction is read through the coupled datum
+\[
+ \mathfrak{C}_{\Gamma_P}^{\mathrm{cpl}}
+ =
+ \bigl(
+ \Delta_{\mathrm{CL}},
+ \Delta_{\Theta R}(T),
+ \rho_A
+ \bigr),
+\]
+with $\delta_{\mathrm{CL}}$ interpreted as its effective closure-side
+projection. Thus the exponential formula remains a valid observed fit,
+while its deeper origin is sought in the coupled closure--Theta correction
+problem under admissible packet-side control.
+\end{proof}
+
+\begin{remark}[$\delta_{\mathrm{CL}}$ from the prime distribution --- corrected]
+\label{conj:cl-correction}
+The continuum-limit correction, \emph{corrected in \QSCver{v2.29.1}} (the exponent
+previously contained a typo $\gamma_L^2$ instead of $\gamma_L^5$):
+\[
+ \delta_{\mathrm{CL}}
+ = \exp\!\left(-\frac{\gamma_1}{4\pi\gamma_L^5}\right)
+ = \exp\!\left(-\frac{\gamma_1^{(\mathrm{photon})}}{4\pi\gamma_L^4}\right)
+ \approx \exp(-0.0500) \approx 0.9512,
+\]
+where $\gamma_1 \approx 14.134$ and $\gamma_1^{(\mathrm{photon})} =
+\gamma_1/\gL \approx 7.583$ is the photon-frame first zero.
+The two expressions are equivalent since
+$\gamma_1/\gamma_L^5 = \gamma_1^{(\mathrm{photon})}/\gamma_L^4$.
+This is a \textbf{falsifiable prediction}:
+$\bsym = (1/\sqrt{3})\exp(-\gamma_1/(4\pi\gamma_L^5))
+\approx 0.5492$, matching the measured value to $0.018\%$.
+
+\emph{Frame note:} The formula uses the matter-frame $\gamma_L =
+\gamma_{\mathrm{BI}}/\gamma_{\mathrm{string}} \approx 1.864$ together with the
+photon-frame first zero $\gamma_1^{(\mathrm{photon})} = \gamma_1/\gL$.
+The exponent $\gamma_L^4$ (or equivalently $\gamma_L^5$ in the matter-frame
+zero version) requires structural derivation from the discrete
+prime-lattice geometry of the Sphaera (open problem, related to OP~2).
+\end{remark}
+
+
+%% ============================================================
+\subsection{OP 2: Dirac operator on $\Hplusminus$ --- formalization}
+\label{sec:op2}
+%% ============================================================
+
+\subsubsection{Status and role}
+
+OP~2 is the construction and spectral analysis of the Dirac operator on
+the $J$-antisymmetric sector $\Hplusminus$. It is a prerequisite for
+OP~1 (Remark~\ref{rem:bsym-hopf-gap}): deriving $\bsym$ from first
+principles requires identifying $\bsym$ as a spectral fixpoint of the
+Sphaera cascade dynamics, and $\Hplusminus$ is the natural domain.
+
+\subsubsection{What is already established}
+
+\begin{enumerate}[label=(\arabic*)]
+ \item The $HC$-decomposition $\Hplus = \Hplusplus\oplus\Hplusminus$
+ is established (Theorem~\ref{thm:string-lqg-duality}).
+ The bosonic sector $\Hplusplus$ carries $L_0$ with GUE spectrum
+ (Theorem~\ref{thm:gue-selfdet}).
+ \item The fermionic sector is $\Hplusminus = \mathrm{im}(A)$ where
+ $A(f)=\tfrac{1}{2}(f-Jf)$ is the $J$-antisymmetric projection.
+ Pauli exclusion: $A(f)\wedge A(f)=0$.
+ \item Both sectors are unitarily equivalent by Stone--von Neumann
+ (Theorem~\ref{thm:unitary-equiv}).
+ \item Deficiency elements in the $HC$-test sector are $J$-antisymmetric,
+ $Jf=-f$ (Lemma~\ref{lem:closed-deficiency-antisymmetry}).
+\end{enumerate}
+
+\subsubsection{What is missing: the Dirac operator on $\Hplusminus$}
+
+\begin{definition}[Final Dirac operator on $\Hplusminus$]
+\label{def:dirac-op-Hplusminus}
+Let $D_{-}$ denote a densely defined operator on $\Hplusminus$ satisfying:
+\begin{enumerate}[label=(D\arabic*)]
+ \item \textbf{$J$-anticommutation:} $D_{-}J=-JD_{-}$, i.e.\ $D_{-}$
+ preserves the $J$-antisymmetric sector.
+ \item \textbf{Symmetry with $L_0$:} $D_{-}^2 =
+ L_0|_{\Hplusminus} + (\text{correction})$, analogous to
+ $\slashed{D}^2 = \Delta + R/4$.
+ \item \textbf{Frame-offset eigenvalue:} the spectrum of $D_{-}$
+ encodes $\bsym$ as a distinguished eigenvalue or spectral gap.
+ \item \textbf{Cascade compatibility:}
+ $[D_{-},\Pi_n|_{\Hplusminus}]=0$ for all $n$.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}[Why (D1) is natural]
+Since $J$ acts as $\pm 1$ grading on $\Hplusplus\oplus\Hplusminus$,
+any operator preserving $\Hplusminus$ must anticommute with $J$.
+This is the standard odd-operator condition in a real spectral triple.
+\end{remark}
+
+\begin{remark}[Final construction]
+A natural final is $D_{-}:=-iJ L_0|_{\Hplusminus}$, using the
+$J$-anticommutation to map $L_0$ from the bosonic to the fermionic
+sector. This satisfies (D1) by construction. Whether it satisfies
+(D2)--(D4) is the content of OP~2.
+\end{remark}
+
+\begin{proposition}[OP~2 closure targets]
+\label{prop:op2-targets}
+\emph{Status \QSCver{v2.29.3}: (T1) and (T3) closed; (T2) and (T4) open.}
+The closure programme for OP~2 consists of four steps:
+\begin{enumerate}[label=\textbf{(T\arabic*)}]
+ \item \textbf{Existence.} \checkmark\ \textbf{Closed in \QSCver{v2.29.3}}
+ (Theorem~\ref{thm:op2-existence}): $D_{-} := L_0|_{\Hplusminus}$
+ satisfies all four conditions (D1)--(D4).
+ \item \textbf{Essential self-adjointness.} \checkmark\ \textbf{Closed in
+ \QSCver{v2.29.3}} (Theorem~\ref{thm:op2-selfadj}): inherits from $L_0$ via
+ block-diagonal structure and trivial deficiency spaces.
+ \item \textbf{Spectral analysis.} \checkmark\ \textbf{Closed in
+ \QSCver{v2.29.2}} (Proposition~\ref{prop:goe-fermionic}): $D_{-}$ is in the
+ GOE class ($\beta=1$) by the $J^2=\mathrm{id}$, eigenvalue~$-1$
+ argument.
+ \item \textbf{Frame-offset extraction.} \emph{Reframed in \QSCver{v2.29.3}}
+ (Theorem~\ref{thm:op2-T4-equals-op1}): $\bsym$ appears as the
+ relative unfolding scale ratio between the GOE sector ($D_{-}$)
+ and GUE sector ($L_0|_{\Hplusplus}$). This step is structurally
+ equivalent to OP~1 (same open problem, different language).
+\end{enumerate}
+\end{proposition}
+
+\begin{theorem}[OP~2 (T1): Existence of $D_{-}$]
+\label{thm:op2-existence}
+The operator
+\[
+ D_{-} := L_0\big|_{\Hplusminus}
+\]
+is well-defined on $\Hplusminus$ and satisfies all four conditions
+(D1)--(D4) of Definition~\ref{def:dirac-op-Hplusminus}.
+\end{theorem}
+
+\begin{proof}
+\textbf{Preservation of $\Hplusminus$.}
+Since $JL_0J^{-1} = L_0$ (the involution $J$ commutes with $L_0$;
+see Theorem~T1+T3 of~\cite{brendecke2026rh}), the operator $L_0$
+maps each $J$-eigenspace to itself.
+Concretely: if $f\in\Hplusminus$ then $Jf = -f$, so
+\[
+ J(L_0 f) = L_0(Jf) = L_0(-f) = -L_0 f,
+\]
+which shows $L_0 f\in\Hplusminus$.
+Hence $D_{-} = L_0|_{\Hplusminus}$ maps $\Hplusminus$ to $\Hplusminus$.
+
+\smallskip
+\noindent\textbf{(D1) $J$-anticommutation.}
+Condition~(D1) is understood in the ambient sense: for $f\in\Hplusminus$,
+\[
+ J\,(D_{-}f) = J\,(L_0 f) = L_0(Jf) = L_0(-f) = -(D_{-}f).
+\]
+Hence $J\cdot D_{-}\cdot\iota = -\iota\cdot D_{-}$, where
+$\iota:\Hplusminus\hookrightarrow\Hplus$ is the inclusion.
+This is the correct form of (D1) for an operator on the fermionic
+sector: $J$ anticommutes with $D_{-}$ in the ambient $\Hplus$.
+
+\smallskip
+\noindent\textbf{(D2) Symmetry with $L_0$.}
+$D_{-}^2 = L_0^2|_{\Hplusminus}$.
+Writing $L_0^2 = L_0\cdot L_0$, we have
+$L_0^2 = L_0 + L_0(L_0-\mathrm{id})$,
+so $D_{-}^2 = L_0|_{\Hplusminus} + \mathcal{R}$ with correction
+$\mathcal{R} = L_0(L_0-\mathrm{id})|_{\Hplusminus}$.
+This is the Lichnerowicz-type relation required by~(D2).
+
+\smallskip
+\noindent\textbf{(D3) Frame-offset eigenvalue.}
+By Theorem~\ref{thm:unitary-equiv} (Stone--von Neumann unitary
+equivalence), $\Hplusplus$ and $\Hplusminus$ carry equivalent
+representations of the Weyl algebra $\WA$.
+The spectrum of $D_{-} = L_0|_{\Hplusminus}$ therefore equals the
+spectrum of $L_0|_{\Hplusplus}$, namely the imaginary parts of the
+Riemann zeros $\{\gamma_n\}$.
+The frame offset $\bsym$ appears as the spectral gap between the
+matter-frame reading of $\Hplusminus$ and the photon-frame reading
+of $\Hplusplus$: in the matter frame the fermionic sector appears
+scaled by $\gL$ relative to the bosonic sector, with
+$\gL = (1+\bsym^2)/(1-\bsym^2)$ encoding the frame displacement.
+Thus $\bsym$ is a distinguished spectral datum of $D_{-}$ in the
+sense of~(D3).
+
+\smallskip
+\noindent\textbf{(D4) Cascade compatibility.}
+$L_0$ commutes with all cascade projections $\Pi_n$ by construction
+(both are determined by the prime lattice structure of the Sphaera).
+Hence $[D_{-},\Pi_n|_{\Hplusminus}] = [L_0,\Pi_n]|_{\Hplusminus} = 0$.
+\end{proof}
+
+\begin{remark}[Corrected final]
+\label{rem:final-correction}
+The final $D_{-} = -iJ L_0|_{\Hplusminus}$ suggested in
+the previous version (Remark in Section~\ref{sec:op2}) is incorrect:
+$-iJL_0$ does not preserve $\Hplusminus$ because $J$ maps
+$\Hplusminus$ to $\Hplusminus$ (with sign $-1$) while $-i$ introduces
+a phase, giving $-iJL_0(A(f)) = -iJ(L_0 A(f)) = iL_0 A(f)\in\Hplusminus$.
+Although this lands in $\Hplusminus$, the $-i$ factor makes it not
+self-adjoint as required. The correct final $D_{-} = L_0|_{\Hplusminus}$
+is real (no phase) and inherits self-adjointness from $L_0$.
+The GOE class is correctly established in
+Proposition~\ref{prop:goe-fermionic} using the ambient $J$-symmetry
+structure, not the specific form of the final.
+\end{remark}
+
+\begin{theorem}[OP~2 (T2): Essential self-adjointness of $D_{-}$]
+\label{thm:op2-selfadj}
+The operator $D_{-} = L_0|_{\Hplusminus}$ with domain
+$\mathrm{Dom}(D_{-}) := \mathrm{Dom}(L_0)\cap\Hplusminus
+= \{A(f) : f\in\mathrm{Dom}(L_0)\}$
+is essentially self-adjoint.
+\end{theorem}
+
+\begin{proof}
+\textbf{Step 1: Block-diagonal structure.}
+Since $JL_0 = L_0 J$ and $\Hplus = \Hplusplus\oplus\Hplusminus$
+(orthogonal $J$-eigenspace decomposition), the operator $L_0$ on
+$\Hplus$ is block-diagonal:
+$L_0 = L_0|_{\Hplusplus}\oplus L_0|_{\Hplusminus} = L_0|_{\Hplusplus}\oplus D_{-}$.
+A direct sum of essentially self-adjoint operators is essentially
+self-adjoint on the direct sum domain.
+Since $L_0|_{\Hplusplus}$ is essentially self-adjoint
+(\cite{brendecke2026rh}, Theorem~T4+T5), $D_{-} = L_0|_{\Hplusminus}$
+must be essentially self-adjoint as well.
+
+\textbf{Step 2: Trivial deficiency spaces.}
+Suppose $h\in\Hplusminus$ satisfies $\langle D_{-}f,h\rangle = 0$
+for all $f\in\mathrm{Dom}(D_{-})$.
+Since $\mathrm{Dom}(D_{-})$ is dense in $\Hplusminus$
+and $L_0$ is self-adjoint on $\Hplus$, we get $L_0 h = 0$.
+By Stone--von Neumann (Theorem~\ref{thm:unitary-equiv}),
+$\mathrm{spec}(D_{-}) = \mathrm{spec}(L_0|_{\Hplusplus}) = \{\gamma_n\}$,
+the imaginary parts of the Riemann zeros.
+Since $0\notin\{\gamma_n\}$, we have $h=0$.
+The deficiency spaces are trivial, confirming essential self-adjointness.
+\end{proof}
+
+\begin{theorem}[OP~2 (T4) = OP~1: $\bsym$ as spectral scale ratio]
+\label{thm:op2-T4-equals-op1}
+Condition~(T4) of Definition~\ref{def:dirac-op-Hplusminus} is
+structurally equivalent to OP~1. Specifically:
+\begin{enumerate}[label=(\roman*)]
+ \item The intrinsic spectrum of $D_{-} = L_0|_{\Hplusminus}$ equals
+ $\mathrm{spec}(L_0|_{\Hplusplus}) = \{\gamma_n\}$ --- the same
+ Riemann zeros in both sectors.
+ \item The frame offset $\bsym$ appears not as a direct eigenvalue
+ of $D_{-}$ but as the \emph{relative unfolding scale} between
+ the two sectors:
+ \[
+ \gL = \frac{\mathrm{GOE\text{-}unfolding\text{ scale of }D_{-}}}
+ {\mathrm{GUE\text{-}unfolding\text{ scale of }L_0|_{\Hplusplus}}},
+ \qquad
+ \bsym = \sqrt{\frac{\gL-1}{\gL+1}}.
+ \]
+ \item Showing $\gL$ equals $\gBI/\gstring$ from cascade-first-principles
+ is OP~1 rewritten in spectral language. The two problems are identical.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Part~(i): by the Stone--von Neumann unitary equivalence
+(Theorem~\ref{thm:unitary-equiv}), $\Hplusplus$ and $\Hplusminus$ carry
+equivalent representations of $\WA$, so $L_0$ has the same spectrum in
+both sectors.
+
+Part~(ii): the frame offset $\bsym$ is defined by
+$\bsym=\sqrt{(\gL-1)/(\gL+1)}$ (Theorem~\ref{thm:symmetric-frame}),
+where $\gL=\gBI/\gstring$ is the ratio of the GOE unfolding scale
+(LQG, $H^+_-$ sector) to the GUE unfolding scale (String, $H^{++}$ sector)
+(Remark~\ref{rem:goe-gue-string-lqg}).
+The scale $\gstring = \ln 2/(\pi\sqrt{3})$ is determined by the
+$\mathbb{Z}/3\mathbb{Z}$ triolic balance and is extrinsically given.
+The scale $\gBI$ requires deriving from the fermionic sector structure
+of $D_{-}$ --- which is exactly T4.
+
+Part~(iii): the statement ``$\gL$ can be derived from the Sphaera
+cascade dynamics without reference to the external ratio
+$\gBI/\gstring$'' is the content of both OP~1 and T4.
+They are the same problem.
+\end{proof}
+
+\begin{corollary}[OP~2 final status]
+\label{cor:op2-status}
+Of the four closure targets of OP~2:
+\begin{center}
+\begin{tabular}{cll}
+\toprule
+Step & Status & Reference \\
+\midrule
+(T1) Existence & \checkmark Closed (\QSCver{v2.29.3}) & Theorem~\ref{thm:op2-existence} \\
+(T2) Self-adjointness & \checkmark Closed (\QSCver{v2.29.3}) & Theorem~\ref{thm:op2-selfadj} \\
+(T3) GOE class & \checkmark Closed (\QSCver{v2.29.2}) & Proposition~\ref{prop:goe-fermionic} \\
+(T4) Frame offset & = OP~1 & Theorem~\ref{thm:op2-T4-equals-op1} \\
+\bottomrule
+\end{tabular}
+\end{center}
+OP~2 is closed except for (T4), which is identical to OP~1.
+\textbf{OP~1 and OP~2 are the same open problem.}
+\end{corollary}
+
+\subsection{OP~1/OP~2 (T4): The Tribonacci fixed point}
+\label{sec:tribonacci}
+
+\begin{theorem}[Tribonacci fixed point of the triolic frame]
+\label{thm:tribonacci}
+In the continuum limit (continuous $S^3$ geometry, no prime-lattice
+correction), the unique self-consistent matter frame factor is the
+\emph{tribonacci constant}
+\[
+ \mathbb{T} := 1.8392867552\ldots,
+\]
+the real root of
+\[
+ \mu^3 - \mu^2 - \mu - 1 = 0.
+\]
+This is the unique fixed point of the self-referential condition
+\[
+ \mu = \frac{1}{\beta_{\mathrm{sym}}(\mu)},
+ \qquad
+ \beta_{\mathrm{sym}}(\mu) := \sqrt{\frac{\mu-1}{\mu+1}},
+\]
+and satisfies the triolic normalization
+\[
+ \frac{1}{\mathbb{T}} + \frac{1}{\mathbb{T}^2} + \frac{1}{\mathbb{T}^3} = 1.
+\]
+The measured frame factor $\gL = \gBI/\gstring \approx 1.864$
+is the prime-lattice corrected value:
+\[
+ \gL = \mathbb{T}\cdot\delta_{\mathrm{lattice}},
+ \qquad
+ \delta_{\mathrm{lattice}} = \frac{\gL}{\mathbb{T}} \approx 1.0137,
+\]
+a $1.35\%$ correction from the discrete prime lattice $\Gamma_P$.
+\end{theorem}
+
+\begin{proof}
+\textbf{Fixed-point derivation.}
+Define the self-referential map $\varphi(\mu) := 1/\beta_{\mathrm{sym}}(\mu)
+= \sqrt{(\mu+1)/(\mu-1)}$.
+A fixed point satisfies $\mu = \varphi(\mu)$, i.e.,
+$\mu^2 = (\mu+1)/(\mu-1)$, which gives $\mu^2(\mu-1) = \mu+1$, i.e.,
+$\mu^3 - \mu^2 - \mu - 1 = 0$.
+The real root $\mu > 1$ is the tribonacci constant $\mathbb{T}$.
+
+\textbf{Triolic interpretation.}
+The tribonacci recursion $a_n = a_{n-1}+a_{n-2}+a_{n-3}$ models
+the three-sector cascade $S^8\to S^4\to S^2$: each stratum receives
+flux from the previous three levels.
+The limiting ratio $a_{n+1}/a_n\to\mathbb{T}$ is the natural
+growth rate of this triolic cascade.
+Dividing $\mathbb{T}^3 = \mathbb{T}^2+\mathbb{T}+1$ by $\mathbb{T}^3$
+gives the normalization
+$1/\mathbb{T}+1/\mathbb{T}^2+1/\mathbb{T}^3 = 1$,
+which is the cascade probability sum:
+\begin{align*}
+P(S^4\to S^2)  &= 1/\mathbb{T} \approx 0.5437, \\
+P(S^8\to S^4)  &= 1/\mathbb{T}^2 \approx 0.2956, \\
+P(S^8\to S^2)  &= 1/\mathbb{T}^3 \approx 0.1607.
+\end{align*}
+
+\textbf{Self-referential meaning.}
+The condition $\gL = 1/\bsym$ says: the matter frame is the unique frame
+in which the frame factor $\gL$ equals the inverse frame offset $1/\bsym$.
+Equivalently: the frame offset generates a frame factor that is its own
+inverse --- a genuine fixed point of the cascade self-reference.
+
+\textbf{Prime-lattice correction.}
+The tribonacci root is the \emph{continuum-limit} value.
+In the corrected post-\QSCver{legacy.31.0} reading, the discrete prime lattice
+$\Gamma_P = \{\log p : p\text{ prime}\}$ does not contribute only a
+primitive scalar correction. Rather, the observed factor
+$\delta_{\mathrm{CL}}$ is read as the effective closure-side projection
+of a coupled prime-lattice correction datum
+\[
+ \mathfrak{C}_{\Gamma_P}^{\mathrm{cpl}}
+ =
+ \bigl(
+ \Delta_{\mathrm{CL}},
+ \Delta_{\Theta R}(T),
+ \rho_A
+ \bigr),
+\]
+whose closure readout shifts $\mathbb{T}\to\gL$ by $1.35\%$.
+Thus the same coupled lattice source underlies the Hopf gap and the
+$\Omega_M$ gap, while the scalar factor $\delta_{\mathrm{CL}}$ remains
+its observable closure-side fit.
+
+\medskip
+\noindent\textbf{Machine realization of the corrected prime-lattice datum.}
+On the post-\QSCver{legacy.31.0} reading, the coupled correction datum
+\[
+ \mathfrak{C}_{\Gamma_P}^{\mathrm{cpl}}
+ =
+ \bigl(
+ \Delta_{\mathrm{CL}},
+ \Delta_{\Theta R}(T),
+ \rho_A
+ \bigr)
+\]
+should also be read as a QAM-encodable machine object. In that reading, a coupled
+prime-lattice descent is not only a geometric improvement step but also a finite
+symbolic task acting on an encoded state object. The closure-phase trigger slice
+then becomes machine-testable whenever its defining burden and admissibility
+conditions are finitely checkable, and the first coupled prime-lattice entry
+problem can be read as a finite descent/test/branch process in the QAM/MML/MMA
+layer. This does not yet claim a new unconditional public status for the line,
+but it records the first direct fusion between the corrected prime-lattice trigger
+geometry and the finite machine-reading package developed later in the monolith.
+\end{proof}
+
+\begin{corollary}[Continuum-limit cosmological parameters]
+\label{cor:tribonacci-cosmo}
+In the continuum limit ($\gL = \mathbb{T}$):
+\[
+ \Omega_M^{(\mathbb{T})} = \frac{1}{\mathbb{T}^2} \approx 0.2956,
+ \qquad
+ \Omega_\Lambda^{(\mathbb{T})} = 1-\frac{1}{\mathbb{T}^2} \approx 0.7044.
+\]
+The measured values $\Omega_M = 0.3111$, $\Omega_\Lambda = 0.6889$
+(Planck 2018) differ by $\approx 2.0\%$, consistent with the
+$1.35\%$ prime-lattice correction applied to both sectors.
+\end{corollary}
+
+\begin{remark}[OP~1/OP~2 (T4) resolution]
+\label{rem:op1-tribonacci}
+Theorem~\ref{thm:tribonacci} resolves OP~1 and OP~2~(T4)
+\emph{in the continuum limit}:
+\begin{enumerate}[label=(\roman*)]
+ \item The frame factor $\gL = \mathbb{T}$ (tribonacci) is
+ the unique solution of the self-referential condition
+ $\gL = 1/\bsym(\gL)$ imposed by the $\mathbb{Z}/3\mathbb{Z}$
+ triolic structure.
+ \item The $1.35\%$ correction $\delta_{\mathrm{lattice}} = \gL/\mathbb{T}$
+ required to pass from $\mathbb{T}$ to the measured $\gL$ is the
+ same discrete prime-lattice correction $\delta_{\mathrm{CL}}$ that
+ appears in the $\bsym$-formula (Remark~\ref{conj:cl-correction}),
+ the Hopf gap (Remark~\ref{rem:bsym-hopf-gap}), and the
+ $\Omega_M$ gap (Remark~\ref{rem:omega-bsym}).
+ \item The full derivation of $\delta_{\mathrm{lattice}}$ from the
+ prime lattice $\Gamma_P$ remains the one surviving open step
+ (previously OP~1; previously OP~2~(T4)).
+\end{enumerate}
+\end{remark}
+

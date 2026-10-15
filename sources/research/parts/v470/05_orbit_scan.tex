@@ -1,0 +1,712 @@
+\section{Alternating Triolic Orbit Scan and Hopf-Fibre Core Surface Readout}
+\label{sec:alternating-triolic-orbit-scan}
+
+\begin{quote}\small
+\noindent\textbf{Reader status.}
+This section is a reader-facing geometric normal form.  It is not a claim that ordinary physical particles literally cross a collapse core.  It gives a controlled local scan model: test trajectories are used as readout curves around a guarded core, and the remaining question is whether the resulting local surface data can be promoted into the global HC/MM-to-chart bridge without residual debt.
+\end{quote}
+
+\subsection{Triolic scan construction}
+\label{subsec:triolic-scan-construction}
+
+Let $K$ denote the guarded collapse core.  The local lens geometry is represented by two conjugate focal lenses
+\[
+F_- ,\qquad F_+,
+\]
+and by their midpoint
+\[
+M := \frac{1}{2}(F_-+F_+).
+\]
+The first triolic balance is the focal-lens triol
+\[
+\mathcal T_{\mathrm{lens}} := (F_-,K,F_+),
+\]
+where $K$ is not treated as a point to be crossed, but as the balancing object between the two focal lenses.
+
+A test-orbit scan uses paired test readouts
+\[
+P_n,\qquad Q_n
+\]
+on a bounded local orbit family.  At selected readout phases one obtains the particle triol
+\[
+\mathcal T_n := (P_n,K,Q_n).
+\]
+The triol is called \emph{core-sighted} when the sightline from $P_n$ to $Q_n$ passes through $K$.  In affine notation this means that there is a scalar $\lambda_n$ with
+\[
+K=(1-\lambda_n)P_n+\lambda_n Q_n.
+\]
+If $\lambda_n=\tfrac12$, the triol is centrally balanced; otherwise it is projectively balanced.  Thus the model separates two cases which should not be confused:
+\[
+\text{collinearity through }K
+\qquad\neq\qquad
+\text{midpoint symmetry at }K.
+\]
+
+\begin{definition}[Bifocal elliptic readout body]
+\label{def:bifocal-elliptic-readout-body}
+A local orbit curve $\gamma$ is a bifocal elliptic readout body for the lens pair $(F_-,F_+)$ if, on the admissible scan domain,
+\[
+ d(\gamma(s),F_-)+d(\gamma(s),F_+) = 2a
+\]
+up to the declared tolerance of the local grammar.  The curve is used as a stable computational body, not as an unrestricted through-core physical trajectory.
+\end{definition}
+
+\subsection{Shift as a Kronecker-style transport selector}
+\label{subsec:shift-as-transport-selector}
+
+The discrete shift is represented by a shifted selector rather than by the identity Kronecker tensor.  In an indexed scan basis one writes
+\[
+\Sigma^i{}_j := \delta^i_{j+1},
+\]
+so that the $k$-fold shift is
+\[
+(\Sigma^k)^i{}_j = \delta^i_{j+k}.
+\]
+Thus $\delta^i_j$ preserves an index, while $\Sigma^i{}_j$ transports the readout to the next admissible scan state.
+
+The parity projectors are
+\[
+\Pi_{\mathrm{even}}(n)=\delta_{n\bmod 2,0},
+\qquad
+\Pi_{\mathrm{odd}}(n)=\delta_{n\bmod 2,1}.
+\]
+An alternating triolic scan has two structure classes $\mathcal A$ and $\mathcal B$ with
+\[
+\Sigma(\mathcal A)=\mathcal B,
+\qquad
+\Sigma(\mathcal B)=\mathcal A,
+\]
+and therefore
+\[
+\Sigma^2(\mathcal A)=\mathcal A,
+\qquad
+\Sigma^2(\mathcal B)=\mathcal B.
+\]
+The single shift is the toggle; the double shift is the same-regime evolution step.
+
+\begin{assumption}[Alternating triolic shift hypothesis]
+\label{ass:alternating-triolic-shift-hypothesis}
+Along a guarded bifocal scan there are two complementary triolic regimes:
+\[
+\mathcal A_{2n}:=\mathcal T_{2n},
+\qquad
+\mathcal B_{2n+1}:=\mathcal T_{2n+1}.
+\]
+One regime is core-sighted and the other is lens-sighted, or conversely.  The local shift operator $\Sigma$ exchanges these regimes, while $\Sigma^2$ preserves the regime type.
+\end{assumption}
+
+\subsection{Orbit scan and guarded core surface}
+\label{subsec:orbit-scan-guarded-core-surface}
+
+For each scan curve $\gamma_{\theta,\varphi}$ around the guarded core, define its minimal core distance by
+\[
+\rho_{\min}(\theta,\varphi)
+:=
+\min_s d(\gamma_{\theta,\varphi}(s),K).
+\]
+The effective measured core surface is the periapsis envelope
+\[
+\Sigma_K
+:=
+\operatorname{env}\{\gamma_{\theta,\varphi}\}
+\]
+or, equivalently, the surface reconstructed from the field of minimal distances $\rho_{\min}(\theta,\varphi)$.
+
+\begin{definition}[Guarded orbit-scan surface]
+\label{def:guarded-orbit-scan-surface}
+A guarded orbit-scan surface is the readout surface obtained from all admissible parity-shifted test orbits whose minimal distance from $K$ is positive:
+\[
+\rho_{\min}(\theta,\varphi)>0.
+\]
+The inequality states that the scan measures the effective boundary of the guarded core; it does not license a trajectory through the collapse state.
+\end{definition}
+
+\begin{proposition}[Periapsis envelope as core-surface readout]
+\label{prop:periapsis-envelope-core-surface-readout}
+Suppose a scan family satisfies the bifocal elliptic readout condition, the alternating triolic shift hypothesis, and the guarded-core inequality $\rho_{\min}>0$.  Then the scan does not measure a through-core path.  It measures a bounded periapsis envelope around $K$.  This envelope is the local surface data available to the HC/MM-to-chart bridge.
+\end{proposition}
+
+\begin{proof}
+The bifocal condition supplies a stable bounded readout body.  The alternating shift separates the scan into two complementary regimes, so that the same geometric orbit is not forced to carry all sightline conditions at once.  The condition $\rho_{\min}>0$ excludes a through-core trajectory.  Therefore the admissible data are the nearest admissible approach points of the scan family, i.e. the periapsis envelope.  This is exactly the effective local surface readout around the guarded core.
+\end{proof}
+
+\subsection{Hopf-fibre interpretation and the possible residual point}
+\label{subsec:hopf-fibre-interpretation-residual-point}
+
+The Hopf picture gives the natural topological comparison.  In the ideal Hopf model, a three-sphere is decomposed into circular fibres.  In that idealized fibre space there is no missing ordinary point: every point lies on a fibre.  Apparent exceptional points may arise only after projection into a lower-dimensional picture.
+
+The guarded collapse model is different.  If the HC guard excludes the core itself, the scan space is not the full ideal fibre space but a punctured or core-excised domain,
+\[
+X = S^3\setminus\{K\}
+\qquad\text{or}\qquad
+X = S^3\setminus B_\epsilon(K).
+\]
+In that case a residual point or residual core is not a defect of the Hopf fibration.  It is the excluded guarded kernel which the orbit scan is designed to measure from outside.
+
+\begin{proposition}[Hopf completion versus guarded-core remainder]
+\label{prop:hopf-completion-vs-guarded-core-remainder}
+There are two distinct readings of the ring filling picture.
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item In the ideal Hopf reading, circular fibres fill the ambient three-sphere, and no ordinary minimal leftover point remains.
+\item In the guarded-core reading, the core $K$ is removed or shielded.  A minimal leftover point or core neighbourhood can remain, but it is not an unfilled Hopf gap; it is the HC-guarded kernel itself.
+\end{enumerate}
+\end{proposition}
+
+\begin{remark}[Operational meaning]
+\label{rem:operational-meaning-triolic-orbit-scan}
+The useful experimental image is therefore not ``send a particle through the collapse''.  It is: send admissible test readouts around the guarded region, track their even/odd triolic alternation, collect the minimal approach points, and reconstruct the effective core surface from the resulting periapsis envelope.  If the linked orbit family behaves Hopf-like, the linking and twisting of the rings provide additional topological data; if a residual core remains, that remainder is the object being measured.
+\end{remark}
+
+\subsection{Finite scan checklist}
+\label{subsec:finite-scan-checklist}
+
+For a finite numerical or symbolic probe, the following quantities are the minimal diagnostic payload:
+\[
+\begin{aligned}
+E(s)&:=d(\gamma(s),F_-)+d(\gamma(s),F_+),\\
+\rho_K(s)&:=d(\gamma(s),K),\\
+\chi_n&:=\begin{cases}
+1,& P_n,K,Q_n\text{ are collinear},\\
+0,& \text{otherwise},
+\end{cases}\\
+\pi_n&:=n\bmod 2.
+\end{aligned}
+\]
+The expected signature of the alternating scan is
+\[
+E(s)\approx 2a,
+\qquad
+\rho_K(s)>0,
+\qquad
+\chi_{n+2}=\chi_n,
+\]
+with complementary behaviour between the even and odd subsequences.  A successful scan therefore yields three outputs: the local bifocal fit, the parity/toggle law, and the reconstructed guarded-core surface.
+
+
+\subsection{Strict mathematical orbit-scan formulation}
+\label{subsec:strict-mathematical-orbit-scan-formulation}
+
+This subsection records the strict mathematical form of the preceding geometric picture.  It is a readout model.  No physical through-core trajectory is asserted.
+
+\begin{definition}[Guarded scan space]
+\label{def:guarded-scan-space}
+Let $(X,d)$ be a compact metric scan chart or a compact chart domain inside a larger metric space.  Let $K$ be a distinguished guarded core and let $\varepsilon>0$ be a guard radius.  The admissible scan domain is
+\[
+X_K:=X\setminus B_\varepsilon(K),
+\qquad
+B_\varepsilon(K):=\{x\in X:d(x,K)<\varepsilon\}.
+\]
+An admissible test orbit is a continuous curve
+\[
+\gamma:S^1\longrightarrow X_K .
+\]
+Thus every admissible orbit satisfies
+\[
+ d(\gamma(s),K)\geq \varepsilon
+ \qquad\text{for all }s\in S^1.
+\]
+\end{definition}
+
+\begin{definition}[Bifocal defect]
+\label{def:bifocal-defect-strict}
+Fix two focal points or focal charts $F_-,F_+\in X$ and a constant $a>0$.  The bifocal defect of a scan point $x\in X_K$ is
+\[
+\mathcal E_F(x)
+:=
+\bigl|d(x,F_-)+d(x,F_+)-2a\bigr|.
+\]
+A scan orbit is $\eta$-bifocal if
+\[
+\sup_{s\in S^1}\mathcal E_F(\gamma(s))\leq \eta .
+\]
+The exact ellipse is the special case $\eta=0$ in a chart where the focal distance expression is exact.
+\end{definition}
+
+\begin{definition}[Triolic sight predicate]
+\label{def:triolic-sight-predicate}
+Let $P,Q\in X_K$.  In a geodesic chart, the ordered triple $(P,K,Q)$ is called core-sighted if $K$ lies on an admissible geodesic segment from $P$ to $Q$.  In an affine chart this is equivalent to the existence of $\lambda\in[0,1]$ such that
+\[
+K=(1-\lambda)P+\lambda Q .
+\]
+It is centrally balanced if, in addition, $\lambda=1/2$.  The two predicates are kept separate:
+\[
+\operatorname{Sight}_K(P,Q)
+\quad\not\Rightarrow\quad
+K=\frac{P+Q}{2}.
+\]
+\end{definition}
+
+\begin{definition}[Shift selector and parity sectors]
+\label{def:shift-selector-parity-sectors}
+Let $I$ be a finite cyclic index set or $I=\mathbb Z$.  On the scan basis $(e_j)_{j\in I}$ define the shift selector by
+\[
+\Sigma e_j=e_{j+1},
+\qquad
+\Sigma^i{}_j:=\delta^i_{j+1}.
+\]
+For $k\geq0$,
+\[
+(\Sigma^k)^i{}_j=\delta^i_{j+k}.
+\]
+Let $\Pi_0$ and $\Pi_1$ be the even and odd parity projectors,
+\[
+\Pi_0 e_j=\begin{cases}e_j,&j\equiv0\pmod2,\\0,&j\equiv1\pmod2,
+\end{cases}
+\qquad
+\Pi_1 e_j=\begin{cases}0,&j\equiv0\pmod2,\\e_j,&j\equiv1\pmod2.
+\end{cases}
+\]
+\end{definition}
+
+\begin{lemma}[Parity exchange law]
+\label{lem:parity-exchange-law}
+The shift selector exchanges parity sectors, while the double shift preserves them:
+\[
+\Pi_0\Sigma=\Sigma\Pi_1,
+\qquad
+\Pi_1\Sigma=\Sigma\Pi_0,
+\]
+and
+\[
+\Pi_r\Sigma^2=\Sigma^2\Pi_r
+\qquad(r=0,1).
+\]
+\end{lemma}
+
+\begin{proof}
+It is enough to test the identities on basis vectors.  Since $\Sigma e_j=e_{j+1}$, the parity of the index is flipped by $\Sigma$ and preserved by $\Sigma^2$.  The displayed identities are exactly this parity statement in projector form.
+\end{proof}
+
+\begin{definition}[Alternating triolic scan]
+\label{def:alternating-triolic-scan-strict}
+Let $(P_n,Q_n)_{n\in I}$ be paired scan readouts.  An alternating triolic scan consists of two disjoint regime predicates $\mathcal A$ and $\mathcal B$ on pairs $(P,Q)$ such that
+\[
+\mathcal A(P_n,Q_n)\Longleftrightarrow n\equiv0\pmod2,
+\qquad
+\mathcal B(P_n,Q_n)\Longleftrightarrow n\equiv1\pmod2,
+\]
+up to a declared finite tolerance set.  One admissible interpretation is
+\[
+\mathcal A=\text{core-sighted regime},
+\qquad
+\mathcal B=\text{lens-sighted regime},
+\]
+although the formal definition only requires two complementary predicates exchanged by $\Sigma$.
+\end{definition}
+
+\begin{definition}[Periapsis envelope]
+\label{def:periapsis-envelope-strict}
+Let $U$ be a compact parameter space of admissible scan orbits
+\[
+\Gamma:U\times S^1\longrightarrow X_K,
+\qquad
+\gamma_u(s):=\Gamma(u,s).
+\]
+For each $u\in U$ define
+\[
+\rho(u):=\min_{s\in S^1} d(\gamma_u(s),K)
+\]
+and the periapsis set
+\[
+\mathcal P(u):=
+\{\gamma_u(s):d(\gamma_u(s),K)=\rho(u)\}.
+\]
+The orbit-scan surface is the closed periapsis envelope
+\[
+\Sigma_K^\Gamma
+:=
+\overline{\bigcup_{u\in U}\mathcal P(u)}.
+\]
+\end{definition}
+
+\begin{proposition}[Existence and guardedness of the scan surface]
+\label{prop:existence-guardedness-scan-surface}
+For a compact scan family $\Gamma:U\times S^1\to X_K$, the function $\rho(u)$ and the sets $\mathcal P(u)$ are well defined.  Moreover,
+\[
+\rho(u)\geq\varepsilon
+\qquad\text{for all }u\in U,
+\]
+so the periapsis envelope $\Sigma_K^\Gamma$ is an outside readout of the guarded core and not a through-core trajectory.
+\end{proposition}
+
+\begin{proof}
+For fixed $u$, the map $s\mapsto d(\gamma_u(s),K)$ is continuous on the compact set $S^1$, hence it attains a minimum.  Because $\gamma_u(S^1)\subset X_K$, every scan point has distance at least $\varepsilon$ from $K$.  Therefore each periapsis point remains outside the excluded core.  Taking the union and closure gives a surface readout generated by nearest admissible approaches, not by points inside the guarded core.
+\end{proof}
+
+\begin{theorem}[Strict alternating triolic orbit-scan theorem]
+\label{thm:strict-alternating-triolic-orbit-scan}
+Assume the following data:
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item a guarded scan space $X_K=X\setminus B_\varepsilon(K)$ with $\varepsilon>0$;
+\item a compact family of admissible orbits $\Gamma:U\times S^1\to X_K$;
+\item paired readouts $(P_n,Q_n)$ sampled from the scan family;
+\item an alternating triolic scan structure exchanged by the selector $\Sigma^i{}_j=\delta^i_{j+1}$;
+\item a bifocal defect bound $\sup_s\mathcal E_F(\gamma_u(s))\leq\eta$ for all $u\in U$.
+\end{enumerate}
+Then the scan determines three mathematically controlled readout objects:
+\[
+\begin{aligned}
+&\textup{(a) the bifocal defect field }\mathcal E_F,\\
+&\textup{(b) the parity law }\Pi_0,\Pi_1,\Sigma,\\
+&\textup{(c) the guarded periapsis envelope }\Sigma_K^\Gamma.
+\end{aligned}
+\]
+It does not determine, by itself, a physical through-core orbit or a global closure of the HC/MM-to-chart bridge.
+\end{theorem}
+
+\begin{proof}
+The bifocal defect field is defined by the focal data and the metric.  The parity law follows from Lemma~\ref{lem:parity-exchange-law} and the alternating scan predicates.  The guarded periapsis envelope exists and remains outside the excluded core by Proposition~\ref{prop:existence-guardedness-scan-surface}.  None of these constructions supplies a point of any scan curve inside $B_\varepsilon(K)$, and none asserts compatibility with a global bridge unless an additional promotion theorem is supplied.  Hence the outputs are exactly local readout objects with a guarded-core interpretation.
+\end{proof}
+
+\begin{proposition}[Hopf comparison without a hidden gap]
+\label{prop:hopf-comparison-without-hidden-gap}
+Let $\pi:S^3\to S^2$ be the Hopf fibration.  In the ideal Hopf space every point of $S^3$ lies on exactly one circular fibre.  Therefore a leftover point is not produced by the Hopf fibration itself.  If the scan domain is instead $S^3\setminus B_\varepsilon(K)$ or $S^3\setminus\{K\}$, any residual core is the explicitly removed guarded set, not an unfilled Hopf gap.
+\end{proposition}
+
+\begin{proof}
+The Hopf fibration partitions $S^3$ into fibres $\pi^{-1}(y)\cong S^1$ indexed by $y\in S^2$.  Hence each point of $S^3$ belongs to one fibre.  Removing $K$ or a neighbourhood of $K$ changes the domain before the scan is performed.  The remaining excluded set is therefore part of the guarded-core model, not a failure of the Hopf decomposition.
+\end{proof}
+
+\begin{remark}[Promotion guard]
+\label{rem:strict-orbit-scan-promotion-guard}
+The strict formulation proves only local scan coherence: bifocal control, parity alternation, and an outside periapsis envelope.  A global physical or theorematic promotion would require an additional result showing that the envelope data kill, strictly reduce, or otherwise control the remaining route-to-global obstruction without hidden leakage or residual reopening.
+\end{remark}
+
+
+\subsection{Executable finite orbit-scan probe layer}
+\label{subsec:executable-finite-orbit-scan-probe-layer}
+
+The preceding strict formulation is now turned into a finite probe grammar.  The purpose is not to replace the continuous definitions, but to give a computable audit surface: a finite family of sampled orbits, a finite parity test, a finite bifocal defect table, and a finite periapsis-envelope estimator.
+
+\begin{definition}[Finite scan grid]
+\label{def:finite-scan-grid}
+Let $U_N=\{u_1,\ldots,u_N\}\subset U$ be a finite set of admissible orbit parameters and let
+\[
+S_M=\{s_0,\ldots,s_{M-1}\}\subset S^1,
+\qquad
+s_m=\frac{2\pi m}{M}.
+\]
+The finite scan sample is the table
+\[
+x_{\ell m}:=\Gamma(u_\ell,s_m)\in X_K.
+\]
+It is admissible when
+\[
+d(x_{\ell m},K)\geq\varepsilon
+\qquad
+(1\leq \ell\leq N,\,0\leq m<M).
+\]
+\end{definition}
+
+\begin{definition}[Finite bifocal and guarded-distance registers]
+\label{def:finite-bifocal-guarded-distance-registers}
+For a finite scan grid define
+\[
+E_{\ell m}:=\mathcal E_F(x_{\ell m}),
+\qquad
+R_{\ell m}:=d(x_{\ell m},K)-\varepsilon .
+\]
+The finite bifocal defect and finite guard-margin defect are
+\[
+E_{N,M}:=\max_{\ell,m}E_{\ell m},
+\qquad
+R_{N,M}^{\min}:=\min_{\ell,m}R_{\ell m}.
+\]
+The grid passes the local readout screen at tolerances $(\eta,\mu)$ when
+\[
+E_{N,M}\leq\eta,
+\qquad
+R_{N,M}^{\min}\geq\mu\geq0.
+\]
+\end{definition}
+
+\begin{definition}[Finite parity and triolic indicators]
+\label{def:finite-parity-triolic-indicators}
+Let $(P_n,Q_n)_{n=0}^{L-1}$ be the sampled paired readouts.  Let
+\[
+\chi_A(n),\chi_B(n)\in\{0,1\}
+\]
+be the finite indicators for the two complementary triolic regimes.  The finite alternation defect is
+\[
+D_{\mathrm{alt}}
+:=
+\sum_{n=0}^{L-1}
+\Bigl|\chi_A(n)-\mathbf 1_{n\equiv0\, (2)}\Bigr|
++
+\sum_{n=0}^{L-1}
+\Bigl|\chi_B(n)-\mathbf 1_{n\equiv1\, (2)}\Bigr| .
+\]
+The finite scan is parity-clean when
+\[
+D_{\mathrm{alt}}=0.
+\]
+\end{definition}
+
+\begin{definition}[Finite periapsis estimator]
+\label{def:finite-periapsis-estimator}
+For each sampled orbit $u_\ell$ define
+\[
+\rho_{\ell,M}:=\min_{0\leq m<M} d(x_{\ell m},K)
+\]
+and the finite periapsis sample
+\[
+\mathcal P_{\ell,M}
+:=
+\{x_{\ell m}:d(x_{\ell m},K)=\rho_{\ell,M}\}.
+\]
+The finite orbit-scan surface estimator is
+\[
+\Sigma_{K}^{N,M}
+:=
+\bigcup_{\ell=1}^{N}\mathcal P_{\ell,M}.
+\]
+\end{definition}
+
+\begin{lemma}[Finite shift-selector audit]
+\label{lem:finite-shift-selector-audit}
+On a cyclic sample of length $L$, the matrix
+\[
+\Sigma_L{}^i{}_j=\delta^i_{j+1\,\mathrm{mod}\,L}
+\]
+exchanges the finite even and odd sectors when $L$ is even, and the double shift preserves them:
+\[
+\Pi_0\Sigma_L=\Sigma_L\Pi_1,
+\qquad
+\Pi_1\Sigma_L=\Sigma_L\Pi_0,
+\qquad
+\Pi_r\Sigma_L^2=\Sigma_L^2\Pi_r.
+\]
+\end{lemma}
+
+\begin{proof}
+The proof is the finite cyclic version of Lemma~\ref{lem:parity-exchange-law}.  Since $L$ is even, adding one modulo $L$ flips parity and adding two modulo $L$ preserves parity.
+\end{proof}
+
+\begin{proposition}[Finite probe certificate]
+\label{prop:finite-probe-certificate}
+A finite orbit-scan probe with data
+\[
+\mathcal C_{N,M,L}
+:=
+\bigl(E_{N,M},R_{N,M}^{\min},D_{\mathrm{alt}},\Sigma_{K}^{N,M}\bigr)
+\]
+is a local finite scan certificate at tolerances $(\eta,\mu)$ if
+\[
+E_{N,M}\leq\eta,
+\qquad
+R_{N,M}^{\min}\geq\mu\geq0,
+\qquad
+D_{\mathrm{alt}}=0.
+\]
+Such a certificate verifies only the finite local readout: bifocal fit, guarded outside motion, and even/odd triolic alternation.  It does not certify a through-core orbit and does not certify global HC/MM-to-chart closure.
+\end{proposition}
+
+\begin{proof}
+The three inequalities are exactly the finite versions of bifocal control, guarded-domain admissibility, and parity-clean alternation.  The periapsis set $\Sigma_K^{N,M}$ records the measured outside surface points.  No sample point lies inside the guarded core, and no bridge-promotion hypothesis is part of the finite certificate.  Therefore the certificate is local and diagnostic only.
+\end{proof}
+
+\begin{proposition}[Consistency of the finite periapsis estimator]
+\label{prop:finite-periapsis-estimator-consistency}
+Assume $U$ is compact, $\Gamma$ is continuous, the finite sets $U_N$ become dense in $U$, and the circular grids $S_M$ become dense in $S^1$.  Then every cluster point of finite periapsis samples $\Sigma_K^{N,M}$ belongs to the continuous periapsis envelope $\Sigma_K^\Gamma$.  If, in addition, each orbit has a unique nondegenerate periapsis depending continuously on $u$, then $\Sigma_K^{N,M}$ converges to $\Sigma_K^\Gamma$ in Hausdorff distance.
+\end{proposition}
+
+\begin{proof}
+Let $x_{\ell m}$ be a convergent sequence of finite periapsis samples with parameters $u_\ell\to u$ and grid points $s_m\to s$.  By continuity, $x_{\ell m}\to\Gamma(u,s)$.  Since each $x_{\ell m}$ minimizes the sampled distance along its finite grid and the grids are dense, the limiting point is a minimizer of $s\mapsto d(\Gamma(u,s),K)$; hence it lies in $\Sigma_K^\Gamma$.  Under uniqueness and nondegeneracy of the minimizer, the argmin varies continuously, which upgrades cluster containment to Hausdorff convergence.
+\end{proof}
+
+\begin{remark}[Executable toy chart]
+\label{rem:executable-toy-chart}
+A numerical toy chart may take $X\subset\mathbb R^3$, $K=0$, two focal points $F_\pm=(\pm c,0,0)$ in a local plane, and a family of rotated ellipses
+\[
+\gamma_u(s)=R_u(a\cos s,b\sin s,0),
+\qquad
+b>\varepsilon .
+\]
+The toy chart tests the finite registers above.  It is not a physical simulation; it is a reproducible diagnostic for the readout grammar.
+\end{remark}
+
+\begin{theorem}[Executable orbit-scan handoff]
+\label{thm:executable-orbit-scan-handoff}
+The strict alternating triolic scan admits a finite executable handoff: choose $(N,M,L)$, compute the registers $E_{N,M}$, $R_{N,M}^{\min}$, $D_{\mathrm{alt}}$, and $\Sigma_K^{N,M}$, and report whether the finite certificate conditions hold.  A successful finite handoff provides a controlled local scanner for the guarded core surface; a failed handoff identifies whether the failure is bifocal, guard-margin, or parity-alternation failure.
+\end{theorem}
+
+\begin{proof}
+All four registers are finite maxima, minima, sums, or finite sets over explicitly sampled data.  Therefore they are computable.  Proposition~\ref{prop:finite-probe-certificate} gives the pass conditions and their interpretation.  The failure modes are separated by which of the three inequalities fails.
+\end{proof}
+
+\begin{remark}[Human reading]
+\label{rem:finite-probe-human-reading}
+In ordinary language: this layer says how to send many sampled ring-like test readouts around the guarded core, measure their nearest approaches, check whether the even/odd shift pattern is stable, and turn those nearest approach points into a finite surface estimate.  It is the bridge from the strict definition to an actual table, plot, or numerical probe.
+\end{remark}
+
+
+\subsection{Finite perturbation lemma for orbit-scan robustness}
+\label{subsec:finite-perturbation-lemma-orbit-scan-robustness}
+
+The executable scan layer separates two questions which should not be conflated.  The shifted Kronecker selector
+\[
+\Sigma_L{}^i{}_j=\delta^i_{j+1\,\mathrm{mod}\,L}
+\]
+is an index-level rule and therefore remains exact under geometric perturbations.  The triolic sightline condition is geometric and may fail when the core, the pairing rule, or the lens data are perturbed.  The present subsection records this distinction as a finite robustness lemma.
+
+\begin{definition}[Finite perturbation register]
+\label{def:finite-perturbation-register}
+Let $x_{\ell m}$ be an admissible finite scan grid as in Definition~\ref{def:finite-scan-grid}.  A perturbed finite scan consists of data
+\[
+\widetilde x_{\ell m},\qquad \widetilde K,\qquad \widetilde F_-,\widetilde F_+
+\]
+together with the same cyclic index set of length $L$.  Define the finite perturbation amplitudes
+\[
+\Delta_X:=\max_{\ell,m} d(\widetilde x_{\ell m},x_{\ell m}),
+\qquad
+\Delta_K:=d(\widetilde K,K),
+\qquad
+\Delta_F:=d(\widetilde F_-,F_-)+d(\widetilde F_+,F_+).
+\]
+The perturbed bifocal defect and guard reserve are
+\[
+\widetilde E_{N,M}:=\max_{\ell,m}
+\left|d(\widetilde x_{\ell m},\widetilde F_-)+d(\widetilde x_{\ell m},\widetilde F_+)-2a\right|,
+\]
+\[
+\widetilde R_{N,M}^{\min}:=\min_{\ell,m}\bigl(d(\widetilde x_{\ell m},\widetilde K)-\varepsilon\bigr).
+\]
+\end{definition}
+
+\begin{definition}[Finite triolic residuals under perturbation]
+\label{def:finite-triolic-residuals-perturbation}
+For a paired sample $(\widetilde P_n,\widetilde Q_n)$ define the normalized core-sightline residual
+\[
+C_n:=
+\frac{\| (\widetilde P_n-\widetilde K)\times(\widetilde Q_n-\widetilde K)\|}
+{\max\{\|\widetilde P_n-\widetilde K\|\,\|\widetilde Q_n-\widetilde K\|,\tau\}},
+\qquad \tau>0.
+\]
+Define also the midpoint residual
+\[
+M_n:=d\left(\widetilde K,\frac{\widetilde P_n+\widetilde Q_n}{2}\right).
+\]
+For declared thresholds $c_{\mathrm{even}},c_{\mathrm{odd}},m_{\mathrm{even}}>0$, the perturbed scan passes the finite triolic robustness screen when
+\[
+\operatorname{p95}\{C_n:n\equiv0\,(2)\}\leq c_{\mathrm{even}},
+\]
+\[
+\operatorname{p05}\{C_n:n\equiv1\,(2)\}\geq c_{\mathrm{odd}},
+\]
+\[
+\operatorname{p95}\{M_n:n\equiv0\,(2)\}\leq m_{\mathrm{even}}.
+\]
+The even sector is then interpreted as core-sighted to the declared tolerance, while the odd sector remains a distinct complementary regime.
+\end{definition}
+
+\begin{lemma}[Index parity is perturbation-invariant]
+\label{lem:index-parity-perturbation-invariant}
+Let $L$ be even and let $\Sigma_L{}^i{}_j=\delta^i_{j+1\,\mathrm{mod}\,L}$.  For every geometric perturbation of the points, core, or foci, the identities
+\[
+\Pi_0\Sigma_L=\Sigma_L\Pi_1,
+\qquad
+\Pi_1\Sigma_L=\Sigma_L\Pi_0,
+\qquad
+\Pi_r\Sigma_L^2=\Sigma_L^2\Pi_r
+\]
+remain unchanged.
+\end{lemma}
+
+\begin{proof}
+The operators $\Pi_0,\Pi_1$ and $\Sigma_L$ act on the finite index set only.  A perturbation changes the values assigned to the indices, but not the parity of the indices themselves.  Hence the parity-exchange identities are invariant under all geometric perturbations of the sampled points.
+\end{proof}
+
+\begin{lemma}[Guard robustness under small perturbations]
+\label{lem:guard-robustness-small-perturbations}
+Assume the unperturbed grid has guard reserve
+\[
+R_{N,M}^{\min}\geq \mu>0.
+\]
+If
+\[
+\Delta_X+\Delta_K<\mu,
+\]
+then the perturbed grid remains outside the protected core:
+\[
+\widetilde R_{N,M}^{\min}>0.
+\]
+\end{lemma}
+
+\begin{proof}
+For every sample, the triangle inequality gives
+\[
+d(\widetilde x_{\ell m},\widetilde K)
+\geq d(x_{\ell m},K)-d(\widetilde x_{\ell m},x_{\ell m})-d(\widetilde K,K)
+\geq \varepsilon+\mu-\Delta_X-\Delta_K.
+\]
+If $\Delta_X+\Delta_K<\mu$, the right hand side is strictly larger than $\varepsilon$.
+\end{proof}
+
+\begin{proposition}[Finite perturbation screen]
+\label{prop:finite-perturbation-screen}
+A perturbed finite orbit scan is a stable local readout at thresholds
+\[
+(\eta,\mu,c_{\mathrm{even}},c_{\mathrm{odd}},m_{\mathrm{even}})
+\]
+when the following four screens pass:
+\[
+\widetilde E_{N,M}\leq\eta,
+\qquad
+\widetilde R_{N,M}^{\min}\geq\mu\geq0,
+\]
+\[
+\operatorname{p95}\{C_n:n\equiv0\,(2)\}\leq c_{\mathrm{even}},
+\qquad
+\operatorname{p05}\{C_n:n\equiv1\,(2)\}\geq c_{\mathrm{odd}},
+\]
+\[
+\operatorname{p95}\{M_n:n\equiv0\,(2)\}\leq m_{\mathrm{even}}.
+\]
+A failure of the first screen is a bifocal-lens defect, a failure of the second is a core-guard defect, and a failure of the last two is a triolic sightline or midpoint-balance defect.
+\end{proposition}
+
+\begin{proof}
+The first inequality is precisely the finite bifocal readout requirement.  The second inequality is precisely the guarded-domain requirement.  The last two inequalities are the declared even/odd triolic separation requirements.  Since the screens are independent finite statistics, the failed inequality identifies the local failure class without requiring a global physical promotion.
+\end{proof}
+
+\begin{theorem}[Finite robustness handoff]
+\label{thm:finite-robustness-handoff}
+The orbit-scan construction admits a finite robustness handoff.  Symmetry-preserving perturbations may preserve the local scan certificate, while perturbations which move the core away from the balancing centre or break the antipodal pairing are detected as triolic obstructions.  In all cases the shifted Kronecker selector remains index-clean by Lemma~\ref{lem:index-parity-perturbation-invariant}; what changes is the geometric quality of the triolic readout.
+\end{theorem}
+
+\begin{proof}
+The finite registers of Definition~\ref{def:finite-perturbation-register} and Definition~\ref{def:finite-triolic-residuals-perturbation} are computable from the sampled data.  Lemma~\ref{lem:index-parity-perturbation-invariant} fixes the index-level shift law independently of the geometry.  Proposition~\ref{prop:finite-perturbation-screen} then separates bifocal, guard, and triolic failure modes.  Hence perturbation stability is a finite diagnostic property, not an unobserved assumption.
+\end{proof}
+
+\begin{remark}[Executed finite robustness probe]
+\label{rem:executed-finite-robustness-probe}
+A deterministic toy robustness probe was executed with seven deformation scenarios.  The ideal chart, a symmetric radial ripple, a moderate lens asymmetry, a twist coupling, and a mild combined deformation passed the declared local readout screens.  A displaced core failed the even core-sightline screen while preserving the bifocal and guard screens.  A strong combined deformation failed both the bifocal mean-stability screen and the even core-sightline screen while still preserving the outside guard.  The result supports the intended diagnostic reading: the shift selector remains exact, while the orbit geometry itself decides whether a valid triolic core scan is present.
+\end{remark}
+
+\begin{center}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}P{0.28\textwidth}ccccc@{}}
+\toprule
+Scenario & Bifocal & Guard & Even triole & Odd distinct & Overall\\
+\midrule
+Ideal chart & yes & yes & yes & yes & yes\\
+Symmetric radial ripple & yes & yes & yes & yes & yes\\
+Lens asymmetry & yes & yes & yes & yes & yes\\
+Core offset & yes & yes & no & yes & no\\
+Twist coupling & yes & yes & yes & yes & yes\\
+Mild combined deformation & yes & yes & yes & yes & yes\\
+Strong combined deformation & no & yes & no & yes & no\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{remark}[Human reading]
+\label{rem:finite-perturbation-human-reading}
+In ordinary language: the clock of the scan is robust because it is an index clock.  The geometry is allowed to fail.  That is desirable.  If the core is shifted away from the balancing centre or if the antipodal relation of the paired readouts is broken, the finite scan reports a triolic obstruction instead of silently pretending that the same core surface is still being measured.
+\end{remark}
+
+
+\clearpage
+
+
