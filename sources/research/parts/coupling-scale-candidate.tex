@@ -1,0 +1,416 @@
+\section{An Evaluated Coupling Candidate and Its Scale Limits}
+\label{v480:coupling-scale-candidate}
+
+The original field equation names effective coefficients and triadic
+operators but does not evaluate their joint action. This section
+therefore does two separate things: it evaluates a declared cyclic
+candidate using the inherited phase input, and tests whether its
+remaining scales could produce the required mass ratios. It does
+not identify that candidate with the native clock cross block.
+
+\subsection{Separating Shape, Normalization and Physical Scale}
+\label{v480:coupling-normalization}
+
+For a nonzero supplied cross block $V$ on a finite positive-metric
+realization, the convention $\operatorname{Tr}(B^*B)=1$ fixes
+$\mu=\|V\|_{\rm F}$ and $B=V/\mu$. It removes a redundancy,
+not an undetermined physical coupling.
+
+\begin{proposition}[Coupling and gap scales remain independent input]
+\label{v480:coupling-scale-freedom}
+In $V=\mu B$, replacing $(\mu,B)$ by $(t\mu,B/t)$, $t>0$,
+leaves $V$ unchanged. Normalizing $B$ removes this redundancy.
+For normalized $B$ in the flat-gap model of
+Proposition~\ref{v480:native-flat-gap-mass}, put
+$\eta=\mu/\Delta$. Then
+\[
+ m_i=\Delta\,\frac{\sqrt{1+4\eta^2q_i}-1}{2}.
+\]
+The shape $q_i$ and $\eta$ determine ratios, but do not fix
+$\Delta$. Simultaneously scaling $(\mu,\Delta)$ by $s>0$
+scales all masses by $s$, leaving ratios and complementary weights
+unchanged.
+\end{proposition}
+\begin{proof}
+Substitution proves the redundancy and dimensionless mass formula.
+The exact complementary weight is $m_i/(\Delta+2m_i)$, which
+is invariant under the simultaneous scaling.
+\end{proof}
+
+Even a supplied $Q$ leaves $B$ undetermined up to output isometries
+in its polar decomposition; these do not change $B^*B$.
+The source symbols $g_Y$, $\chi$ and the paired triadic operators
+specify products, not a numerical factorization into a scale and a
+normalized matrix. A physical normalization needs canonical kinetic
+terms, common units and actual matrix elements.
+
+\subsection{A Minimal Two-Channel Guess Is Insufficient}
+
+\begin{proposition}[Two cyclic harmonics cannot give the Koide ratio]
+\label{v480:coupling-two-harmonic-bound}
+For the generation cycle $U$, let $B=b_0I+b_1U$, with arbitrary
+complex $b_0,b_1$ not both zero. If the candidate masses are
+proportional to the eigenvalues of $B^*B$, their Koide diagnostic
+satisfies $K\leq1/2$, not $2/3$.
+\end{proposition}
+\begin{proof}
+In the Fourier basis let $\omega=e^{2\pi i/3}$ and
+$\lambda_k=b_0+b_1\omega^k$. The numbers
+$z_k=\omega^k\lambda_k$ have zero sum, since both
+$\sum_k\omega^k$ and $\sum_k\omega^{2k}$ vanish.
+Their magnitudes are the principal root masses up to a common
+factor. The closed-triole norm bound of
+Proposition~\ref{v480:hc-mass-triole-bound} therefore gives
+$\sum_k|z_k|^2/(\sum_k|z_k|)^2\leq1/2$.
+\end{proof}
+
+Thus a two-channel relative phase is not by itself enough in this
+minimal cyclic realization. More general operator-valued channels
+are not excluded by the proposition.
+
+\subsection{Numerical Three-Channel Candidate From the Written Phase}
+\label{v480:coupling-evaluated-matrix}
+
+Take the \emph{inherited hypotheses}, not newly proved laws,
+$r/a=1/\sqrt2$ and
+$\theta=\pi-\sqrt2\arcsin(\bsym)$, with the paper's rounded
+input $\bsym=0.5493$. Fix only the normalization
+$\operatorname{Tr}(B^*B)=1$. On the positive-root phase branch,
+\[
+ \theta=2.319190257857\ldots,\qquad
+ B=\frac{I_3}{\sqrt6}
+   +\frac{e^{i\theta}U+e^{-i\theta}U^*}{\sqrt{12}}.
+\]
+In the convention $U\varepsilon_i=\varepsilon_{i+1\bmod3}$,
+\[
+ B\simeq
+ \begin{pmatrix}
+  0.408248&-0.196433-0.211536i&-0.196433+0.211536i\\
+  -0.196433+0.211536i&0.408248&-0.196433-0.211536i\\
+  -0.196433-0.211536i&-0.196433+0.211536i&0.408248
+ \end{pmatrix}.
+\]
+Its normalized Gram matrix has diagonal $1/3$ and lower cyclic
+coefficient $-0.166548+0.255824i$. Its ascending eigenvalues are
+\[
+ (q_e,q_\mu,q_\tau)
+ \simeq(0.0002366350,\ 0.0567819436,\ 0.9429814214).
+\]
+The subscripts denote an attempted ascending lepton assignment,
+not an independently derived generation dictionary. The leading
+ratio prediction \emph{conditional on this shape} is
+\[
+ \frac{q_e}{q_\tau}=0.0002509434\ldots,\qquad
+ \frac{q_\mu}{q_\tau}=0.0602153365\ldots.
+\]
+The inherited mass benchmark in Theorem~\ref{thm:koide-triolic},
+used here only for comparison, instead gives approximately
+$0.0002875860$ and $0.0594633229$. The relative ratio differences
+are $-12.74\%$ and $+1.265\%$. No measured lepton mass enters
+the construction of $B$. Nevertheless the radius, phase law and
+rounded frame input are assumptions, so this is not a parameter-free
+native derivation. The Koide diagnostic $2/3$ is inherited from the
+imposed radius.
+At $\bsym=0$ the same fixed-radius formula is not a positive root
+matrix and does not give three degenerate masses. This local candidate
+is not a valid interpolation to the proposed photon limit.
+
+An explicit effective six-dimensional realization is
+\[
+ P=\begin{pmatrix}I_3&0\\0&0\end{pmatrix},\quad
+ S=\begin{pmatrix}I_3\\0\end{pmatrix}.
+\]
+\[
+ \widetilde R_{\rm cand}=\begin{pmatrix}0&B^*\\B&0\end{pmatrix},
+ \quad
+ \Omega_{\rm cand}=\begin{pmatrix}0&\mu B^*\\\mu B&\Delta I_3\end{pmatrix}.
+\]
+It realizes the candidate Gram matrix and field cross block, with
+$V=\mu B$. It has not been shown to be the paper's
+$R_{\mathrm{GUE}}$, a native Millennium realization or a
+generation-compatible embedding of its Dixon carrier. Its imposed
+Hermitian off-sector clock is not that missing identification.
+
+\subsection{A Scale Choice Cannot Repair the Fixed Shape}
+
+\begin{proposition}[The positive-gap correction increases smaller mass ratios]
+\label{v480:coupling-gap-ratio-obstruction}
+In the flat positive-gap model, for $0<q_i<q_j$ and $\mu>0$,
+\[
+ \frac{m_i}{m_j}
+ =\frac{q_i}{q_j}
+  \frac{\sqrt{\Delta^2+4\mu^2q_j}+\Delta}
+       {\sqrt{\Delta^2+4\mu^2q_i}+\Delta}
+ >\frac{q_i}{q_j}.
+\]
+Consequently no positive $\mu,\Delta$ can reproduce the quoted
+muon/tau benchmark with the fixed numerical shape above.
+\end{proposition}
+\begin{proof}
+Rationalize each exact mass from
+Proposition~\ref{v480:native-flat-gap-mass}. The numerator of the
+second factor is strictly larger than its denominator. Already
+$q_\mu/q_\tau$ exceeds the quoted benchmark; the correction can
+only increase that ratio. Common scaling cannot alter it.
+\end{proof}
+
+This excludes this fixed shape with zero direct block and flat
+positive gap, not all coupling matrices, non-flat gaps or direct
+internal mass terms. A change of the relative phase, radius or
+field blocks needs an independent structural law; fitting it to
+the benchmark is not such a derivation.
+
+\subsection{Reference Scales and Explicit Calibration Boundaries}
+\label{v480:coupling-scale-reference}
+
+A reference mass $m_{\rm ref}$ permits the parametrization
+$\mu=u\,m_{\rm ref}$, $\Delta=d\,m_{\rm ref}$ with $u,d>0$.
+It does not fix the dimensionless coefficients $u,d$.
+For comparison only, the ordinary single-frame Planck reference is
+$m_{\rm P}=\sqrt{\hbar c/G}$, or $\hbar/(c\ell_{\rm P})$.
+The external CODATA central reference is
+$m_{\rm P}c^2=1.220890\times10^{19}\,\mathrm{GeV}$
+\footnote{NIST, 2022 CODATA, Planck mass energy equivalent:
+\url{https://physics.nist.gov/cgi-bin/cuu/Value?plkmc2gev}.}.
+This external normalization is not predicted by the present construction.
+
+As an independently defined electroweak reference, use
+$v_F=(\sqrt2G_F)^{-1/2}=246.21965\ldots\,\mathrm{GeV}$ and
+$\mu_{\rm EW}=v_F/\sqrt2=174.10358\ldots\,\mathrm{GeV}$,
+with the CODATA central value
+$G_F=1.1663787\times10^{-5}\,\mathrm{GeV}^{-2}$
+\footnote{NIST, 2022 CODATA, Fermi coupling constant:
+\url{https://physics.nist.gov/cgi-bin/cuu/Value?gf}.}.
+Using this reference for $\mu$ would be an additional choice,
+not a recovered Yokamono/Higgs coupling.
+
+With $\Delta=m_{\rm P}$ and $\mu=\mu_{\rm EW}$, the leading
+coefficient is $\kappa=2.48278\times10^{-6}\,\mathrm{eV}$ and
+the exact positive masses are approximately
+\[
+ (5.8751\times10^{-10},\ 1.4098\times10^{-7},\
+  2.3412\times10^{-6})\,\mathrm{eV}.
+\]
+Thus this particular Planck-gap/electroweak-mixing choice does not
+give the charged-lepton scales quoted in the source. Choosing
+both scales at the Planck reference instead gives masses of
+Planck order for the larger candidate eigenvalues; neither
+choice is a model-derived scale identification.
+
+For clarity, a single mass can always be used as a calibration:
+\[
+ \mu^2=\frac{m_\tau(m_\tau+\Delta)}{q_\tau},\qquad
+ \Delta=\frac{\mu^2q_\tau}{m_\tau}-m_\tau.
+\]
+With the inherited $m_\tau=1.77686\,\mathrm{GeV}$, fixing
+$\Delta=m_{\rm P}$ gives $\mu\simeq4.7964\times10^9\,\mathrm{GeV}$;
+fixing $\mu=\mu_{\rm EW}$ gives
+$\Delta\simeq1.6085\times10^4\,\mathrm{GeV}$.
+These are explicitly one-mass calibrations, not predictions, and
+neither removes the muon/tau ratio obstruction.
+
+The paper's proposed frame-insertion assignments must also be kept
+consistent if used. Formally applying
+$\hbar_f=\gamma_L^{-1}\hbar_m$, $G_f=\gamma_L^{-2}G_m$ and
+$c_f=c_m$ gives $m_{{\rm P},f}=\gamma_L^{1/2}m_{{\rm P},m}$.
+Using $\hbar_m/(c_m\ell_{{\rm P},f})$ instead would mix frame
+assignments and introduce an extra factor $\gamma_L$.
+This is conditional bookkeeping, not validation of the frame laws.
+
+\subsection{Diagnosing the Matrix Discrepancy}
+\label{v480:matrix-phase-diagnosis}
+
+The matrix introduces no extra distortion of the inherited Brannen
+spectrum: its Fourier eigenvalues are exactly those root coordinates,
+up to the common normalization. Direct diagonalization and the
+analytic formula agree. Six-decimal rounding of its displayed entries
+changes the electron/tau ratio by about $0.01225\%$, not $12.74\%$.
+Cyclic relabelling and complex conjugation only permute its spectrum.
+
+For a diagnostic inversion of the \emph{historical comparison only},
+put $x_k=\sqrt{m_k/\sum_jm_j}$ in the ascending assignment above.
+Then
+\[
+ a_{\rm cmp}=\tfrac13\sum_kx_k,\qquad
+ z_{\rm cmp}=\tfrac13\sum_kx_k e^{-2\pi i k/3},\qquad
+ \rho_{\rm cmp}=|z_{\rm cmp}|/a_{\rm cmp}.
+\]
+The discrete inverse Fourier identity reconstructs these three positive
+roots. It gives
+\[
+ \theta_{\rm cmp}=2.316624255394\ldots,\qquad
+ \rho_{\rm cmp}=0.707100578472\ldots.
+\]
+Relative to the imposed $\rho=1/\sqrt2$, the radius difference is
+about $-8.77$ parts per million, whereas the phase difference is
+$-0.00256600246\ldots$ rad, or $-0.147021\ldots$ degrees.
+Changing only the phase to this comparison-derived value gives
+ratios approximately $(0.0002874631,0.0594619634,1)$; changing
+only the radius leaves $(0.0002510584,0.0602167023,1)$.
+Thus the phase accounts for almost all of this fixed-ansatz discrepancy.
+These inversions are post-hoc diagnostics, not a new derived phase law.
+This $\theta$ is the relative coefficient phase of $U$ and $U^*$,
+not the common pacer phase, which still cancels from the Gram matrix.
+
+\begin{proposition}[Relative-phase sensitivity near a small root]
+\label{v480:matrix-phase-sensitivity}
+Let $h_k=1+2\rho\cos\phi_k>0$, with
+$\phi_k=\theta+2\pi k/3$ and
+$q_k=h_k^2/(3+6\rho^2)$. For a fixed reference mode $j$,
+\[
+ \partial_\theta\log\frac{q_i}{q_j}
+ =-4\rho\left(\frac{\sin\phi_i}{h_i}
+                    -\frac{\sin\phi_j}{h_j}\right),
+ \qquad
+ \partial_\rho\log\frac{q_i}{q_j}
+ =4\left(\frac{\cos\phi_i}{h_i}
+                    -\frac{\cos\phi_j}{h_j}\right).
+\]
+For the inherited phase law,
+$\partial_\beta\theta=-\sqrt2/\sqrt{1-\beta^2}$.
+\end{proposition}
+\begin{proof}
+The common normalization cancels from $q_i/q_j$.
+Differentiate $2\log h_i-2\log h_j$ and apply the chain rule.
+\end{proof}
+
+At the candidate, the electron/tau and muon/tau logarithmic derivatives
+with respect to $\beta$ are approximately $92.6426$ and $-8.28621$.
+The small electron root is close to the phase-chamber boundary, which
+explains the large relative amplification. This is not evidence of an
+unrepresented physical frame interaction by itself.
+
+Within the stated phase law, the comparison phase would correspond to
+$\beta_{\rm cmp}=0.5508152849\ldots$, a shift of $0.00151528$.
+That is about thirty half-steps of four-decimal rounding. If decimal
+rounding alone is tested on $[0.54925,0.54935]$, the middle/largest
+ratio ranges from about $0.06024029$ down to $0.06019039$ and remains
+above the comparison. Its monotonic decrease here follows from the
+signs in the displayed derivative. This interval is a rounding test,
+not an assigned experimental uncertainty.
+Using the exact written $\gamma_{\rm string}=\log2/(\pi\sqrt3)$
+with the still approximate $\gamma_{\rm BI}=0.2375$ gives
+$\beta=0.5493482484\ldots$ and ratio $0.06019127\ldots$;
+it does not remove the discrepancy. Inverting to a new
+$\gamma_{\rm BI}\simeq0.2383454$ would be another calibration,
+not a justified revision of that input.
+
+\subsection{What the Planck Test Does and Does Not Exclude}
+\label{v480:planck-assumption-diagnosis}
+
+An independent SI reconstruction gives
+$m_{\rm P}=2.17643434\ldots\times10^{-8}\,\mathrm{kg}$ and
+$\ell_{\rm P}=1.61625502\ldots\times10^{-35}\,\mathrm{m}$.
+Converting $m_{\rm P}c^2$ from joules to GeV reproduces
+$1.22089013\ldots\times10^{19}\,\mathrm{GeV}$, consistent with
+the rounded CODATA reference above
+\footnote{The SI check uses the exact defining values of $h,c,e$
+and the NIST CODATA central $G=6.67430\times10^{-11}$ in SI units:
+\url{https://physics.nist.gov/cgi-bin/cuu/Value?bg}.}.
+There is no missing GeV/eV factor or missing power of $c$ in the
+micro-eV estimate.
+
+The suppression comes from the three added assumptions
+$A=0$, $\Delta=m_{\rm P}$ and $\mu=\mu_{\rm EW}$:
+the leading energy is $\mu^2q_i/\Delta$. The largest value is
+about $7.59\times10^{14}$ times below the quoted tau mass.
+Substituting the reduced reference $m_{\rm P}/\sqrt{8\pi}$ as
+the physical gap changes the result by only $\sqrt{8\pi}$,
+to about $1.174\times10^{-5}\,\mathrm{eV}$ for the largest mass.
+That substitution is another gap choice, not a unit correction.
+The paper's conditional consistent Planck frame factor is only
+$\gamma_L^{1/2}\simeq1.3654$; even the inconsistent mixed-$\hbar$
+factor is only $\gamma_L^{3/2}\simeq2.5453$.
+Neither accounts for the required hierarchy.
+
+A minimum reference length or UV cutoff does not, without a spectral
+equation, fix the complementary mass gap in this block model.
+Keeping $\mu=\mu_{\rm EW}$ and calibrating the tau mass gives
+$\Delta\simeq16.085\,\mathrm{TeV}$, corresponding to the inverse
+energy length $\hbar c/\Delta\simeq1.227\times10^{-20}\,\mathrm m$.
+This is about $7.59\times10^{14}\ell_{\rm P}$, an effective gap
+length, not a new fundamental Planck length. Keeping the gap at the
+Planck reference instead requires an intermediate mixing reference
+$\mu\simeq4.7964\times10^9\,\mathrm{GeV}$, about
+$2.755\times10^7\mu_{\rm EW}$, in that one-mass calibration.
+Neither possibility is fixed by the source or repairs the flat-gap
+ratio obstruction.
+
+\begin{proposition}[Non-flat gaps can absorb a target spectrum]
+\label{v480:planck-nonflat-fit-freedom}
+Suppose the positive candidate is
+$B=F\operatorname{diag}(\sqrt{q_i})F^*$, $q_i>0$.
+For any target magnitudes $t_i>0$, choose $\mu$ such that
+$\mu^2q_i>t_i^2$ and set
+\[
+ \Delta_i=\frac{\mu^2q_i}{t_i}-t_i>0,\qquad
+ H_\perp=F\operatorname{diag}(\Delta_i)F^*.
+\]
+Then $\left(\begin{smallmatrix}0&\mu B^*\\\mu B&H_\perp
+\end{smallmatrix}\right)$ has light signed eigenvalues $-t_i$.
+\end{proposition}
+\begin{proof}
+Conjugating by $\operatorname{diag}(F,F)$ splits the system into
+three $2\times2$ blocks. Their light magnitudes obey
+$t_i(t_i+\Delta_i)=\mu^2q_i$, exactly the defining relation.
+\end{proof}
+
+For the historical comparison, fixing $\Delta_\tau=m_{\rm P}$
+and the tau-calibrated intermediate $\mu$ gives
+\[
+ (\Delta_e,\Delta_\mu,\Delta_\tau)/m_{\rm P}
+ \simeq(0.87258583,1.01264668,1).
+\]
+All gaps remain of Planck order and all three historical masses are
+reproduced, by construction. This is an exact fitted counterexample
+to a blanket exclusion of Planck-order gaps, not a prediction of these
+anisotropies. It uses the target masses to define $H_\perp$.
+It cannot determine whether a physical discrepancy belongs to the
+root coupling, the gap or another term. With electroweak mixing
+and every gap still of Planck order, this modest gap anisotropy
+does not fix the absolute suppression.
+
+\begin{proposition}[A retained direct block makes the Planck sector a small correction]
+\label{v480:planck-direct-block-bound}
+For the Hermitian block model of Proposition~\ref{v480:native-schur-mass},
+let $H_\perp\geq\Delta I$ and $|\lambda|\leq E<\Delta$.
+Every such eigenvalue satisfies
+\[
+ \operatorname{dist}(\lambda,\operatorname{spec}A)
+ \leq\frac{\|V\|^2}{\Delta-E}.
+\]
+\end{proposition}
+\begin{proof}
+The closed coordinate $x$ cannot vanish, since otherwise the
+eigenvalue would lie in $\operatorname{spec}H_\perp$.
+The Schur equation gives
+$(A-\lambda I)x=V^*(H_\perp-\lambda I)^{-1}Vx$.
+The inverse norm is at most $(\Delta-E)^{-1}$. For self-adjoint
+$A$, the spectral theorem bounds
+$\|(A-\lambda I)x\|$ below by
+$\operatorname{dist}(\lambda,\operatorname{spec}A)\|x\|$.
+\end{proof}
+
+With the candidate $\|V\|^2=\mu_{\rm EW}^2q_{\max}$,
+$\Delta=m_{\rm P}$ and $E=2\,\mathrm{GeV}$, the bound is about
+$2.3412\times10^{-6}\,\mathrm{eV}$. A direct block at charged-lepton
+scales could therefore coexist with Planck-gap corrections that are
+tiny. The original $\Omega$ already contains direct/projected/triadic
+terms; setting their compressed sum $A$ to zero was an additional
+choice of the earlier induced-mass test. This alternative does not
+derive $A$ or its hierarchy, but it shows why that test does not
+exclude the paper's general use of the Planck reference.
+
+\paragraph{Determination reached.}
+There is now an explicit numerical normalized coupling candidate
+and a testable six-dimensional block realization. Its relative
+shape is conditional on the inherited radius and phase hypotheses.
+No numerical native values of $g_Y$, $\chi$, $\mu$ or $\Delta$
+have been established. The missing physical input is a represented
+cross-block interaction and gap equation that fixes them independently
+of the target lepton masses, and resolves the strict-versus-dressed
+closure boundary of Section~\ref{v480:native-operator-link}.
+The discrepancy diagnosis separates the inherited relative-phase
+ansatz from matrix arithmetic, and the extra flat-Planck-gap induced
+mass hypothesis from unit conversion or a fundamental length claim.
+It does not uniquely identify a physical cause from the mass data.

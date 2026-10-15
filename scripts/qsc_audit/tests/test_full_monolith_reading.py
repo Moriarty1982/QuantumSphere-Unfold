@@ -167,6 +167,21 @@ class FullMonolithReadingTests(unittest.TestCase):
         self.assertGreaterEqual(self.text.count(r"\addcontentsline"),
                                 self.raw.decode("utf-8").count(r"\addcontentsline"))
 
+    def test_native_link_keeps_closure_spectral_and_mass_law_qualifications(self):
+        self.assertLess(self.entry.index("parts/generation-coupling"),
+                        self.entry.index("parts/native-operator-link"))
+        self.assertLess(self.entry.index("parts/native-operator-link"),
+                        self.entry.index("parts/v470/10_sphaera_and_physics"))
+        source = (audit.WORKING / "parts/native-operator-link.tex").read_text(encoding="utf-8")
+        source = " ".join(source.split())
+        for token in ("v480:native-penalty-identity", "v480:native-closure-transfer",
+                      "v480:native-isospectral-freedom", "v480:native-frame-covariance",
+                      "v480:native-channel-rank", "v480:native-schur-mass",
+                      "v480:native-flat-gap-mass", "not exactly $P$-closed",
+                      "Hermiticity requires adjoint relations", "not supplied by the source",
+                      "positive inverse root", "not an identification of a Lorentz boost"):
+            self.assertIn(token, source)
+
     def test_aux_metric_counts_entire_document(self):
         source = "\\newlabel{boundary}{{H1}{124}{Title}{anchor}{}}\n\\gdef\\@abspage@last{1024}\n"
         with patch.object(Path, "read_text", return_value=source):
@@ -174,10 +189,45 @@ class FullMonolithReadingTests(unittest.TestCase):
                              {"total": 1024, "main_and_frontmatter": 123,
                               "appendices_and_bibliography": 901})
 
+    def test_evaluated_coupling_candidate_keeps_scale_and_fit_boundaries(self):
+        self.assertLess(self.entry.index("parts/native-operator-link"),
+                        self.entry.index("parts/coupling-scale-candidate"))
+        self.assertLess(self.entry.index("parts/coupling-scale-candidate"),
+                        self.entry.index("parts/v470/10_sphaera_and_physics"))
+        source = " ".join((audit.WORKING / "parts/coupling-scale-candidate.tex").read_text(encoding="utf-8").split())
+        for token in ("v480:coupling-scale-freedom", "v480:coupling-two-harmonic-bound",
+                      "v480:coupling-gap-ratio-obstruction", "not predictions",
+                      "not a parameter-free", "not a valid interpolation",
+                      "No measured lepton mass enters", "single-frame Planck reference"):
+            self.assertIn(token, source)
+
+    def test_matrix_planck_diagnosis_keeps_fits_and_direct_block_scope_explicit(self):
+        source = " ".join((audit.WORKING / "parts/coupling-scale-candidate.tex").read_text(encoding="utf-8").split())
+        for token in ("v480:matrix-phase-sensitivity", "v480:planck-nonflat-fit-freedom",
+                      "v480:planck-direct-block-bound", "post-hoc diagnostics",
+                      "not an assigned experimental uncertainty", "not a unit correction",
+                      "not a new fundamental Planck length", "an additional choice",
+                      "exact fitted counterexample", "does not uniquely identify a physical cause"):
+            self.assertIn(token, source)
+
     def test_missing_aux_boundary_is_not_guessed(self):
         with patch.object(Path, "read_text", return_value="\\gdef\\@abspage@last{1024}\n"):
             with self.assertRaisesRegex(ValueError, "Missing settled page"):
                 audit.aux_pages(Path("test.aux"), "boundary")
+
+    def test_tensor_shift_extension_keeps_covariance_and_physical_fit_distinct(self):
+        self.assertLess(self.entry.index("parts/coupling-scale-candidate"),
+                        self.entry.index("parts/tensor-shift-coupling"))
+        self.assertLess(self.entry.index("parts/tensor-shift-coupling"),
+                        self.entry.index("parts/v470/10_sphaera_and_physics"))
+        source = " ".join((audit.WORKING / "parts/tensor-shift-coupling.tex").read_text(encoding="utf-8").split())
+        for token in ("v480:tensor-generalized-spectrum", "v480:tensor-chart-covariance",
+                      "v480:tensor-comparison-fit-freedom", "v480:tensor-metric-scale-bound",
+                      "v480:tensor-identity-extension", "post-hoc metric fit",
+                      "not merely metric condition numbers", "not a native metric extraction",
+                      "def:v400-r01-shifted-tensor-payload-migration",
+                      "def:v400-r05-governing-shifted-normal-form-object"):
+            self.assertIn(token, source)
 
     def test_mismatched_published_baseline_cannot_be_accepted(self):
         def include(path, files):
