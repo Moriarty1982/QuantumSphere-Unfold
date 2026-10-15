@@ -4,12 +4,14 @@ Structure-first mathematical companion material for the Quantum Sphaera / Sphere
 
 ## Current public baseline
 
-- Public version: `v4.7.0`
-- Version DOI: `10.5281/zenodo.20232911`
+- Public version: `v4.8.0` (2026-10-14)
+- Version DOI: `10.5281/zenodo.23365244`
 - Concept DOI: `10.5281/zenodo.19210728`
+- Previous version: `v4.7.0`, DOI `10.5281/zenodo.20232911`
+- Release files: [`release/v4.8.0/`](release/v4.8.0/) (PDF, TeX source, SHA256 manifest)
 - Repository and source history: [Moriarty1982/QuantumSphere-Unfold](https://github.com/Moriarty1982/QuantumSphere-Unfold)
 
-The current public baseline is the Zenodo-published `v4.7.0` release. Repository changes after that release should be treated as post-release maintenance, research notes, or explicitly versioned follow-up work.
+The current public baseline is the Zenodo-published `v4.8.0` release. It carries the full v4.7.0 monolith, the source-only layers v4.7.0-r85 to r94 recorded after the v4.7.0 release, and the opening layer of the v4.8.0 line, v4.8.0-r01 (Planck-Readout Metric Layer). Guard and residual vectors are unchanged from v4.7.0. Repository changes after this release should be treated as post-release maintenance, research notes, or explicitly versioned follow-up work.
 
 ## Scope guard
 
@@ -19,7 +21,7 @@ Allowed public-facing language should remain local, bounded, effective, or reado
 
 ## Release-line discipline
 
-### `v4.7.x` stabilization line
+### `v4.8.x` stabilization line
 
 Use this line only for public-facing hygiene:
 
@@ -29,21 +31,23 @@ Use this line only for public-facing hygiene:
 - broken links or obvious public-facing wording defects;
 - release-note cleanup.
 
-Do not silently mutate the published `v4.7.0` TeX/PDF payload.
+Do not silently mutate the published `v4.8.0` or `v4.7.0` TeX/PDF payloads.
 
-### `v4.8.0-r01` research line
-
-The next research branch is reserved for the guarded internal program:
+### `v4.8.0` research line: Planck-Readout Metric Layer
 
 > Planck-Readout Metric Layer and MM/HC Field-Equation Refactor
 
-Initial working formula:
+The first part is published as v4.8.0-r01. It defines the readout-calibrated Planck scale
 
 ```tex
 \ell_{\mathrm{eff}}(R)=\ell_P\lambda_R
 ```
 
-For tachyonic, opposite-orientation, or dual-readout contexts, a negative sign must be read as an orientation, phase, or order code unless a later formal proof explicitly upgrades the interpretation. It must not be presented as a directly observable negative physical distance.
+with an orientation code $o_R=\operatorname{sgn}\lambda_R$, recovers the matter-frame Planck scale up to a declared calibration error, and identifies the photon-frame Planck length of the main corpus as the instance $\lambda_\gamma=\gamma_L^{-3/2}$.
+
+A negative sign is an orientation code. It is kept separate from the interval signature of the r82 tachyon-frame scale and must not be presented as a directly observable negative physical distance.
+
+Still open on this line: the MM/HC field-equation refactor.
 
 The [full-source research working copy](sources/research/README.md) now has a separate entry point, `sources/research/v480-companion.tex`, derived from the complete 1,014-page v4.7.0 monolith. It retains the entire baseline source with a byte-level map, separates the human reading route from complete technical support, and proposes the guarded v4.8 integration interface. This is not a published v4.8 release, a complete correction of all inherited arguments, or a replacement of the frozen v4.7.0 payload. The older modular `sources/active-core.tex` is a different source/version scope.
 
@@ -53,9 +57,9 @@ Use the `CITATION.cff` file in this repository, or cite the public Zenodo record
 
 ## Status
 
-Post-`v4.7.0` work is tracked through GitHub issues and separated into metadata-only stabilization work versus research-only follow-up branches.
+Post-`v4.8.0` work is tracked through GitHub issues and separated into metadata-only stabilization work versus research-only follow-up branches.
 
-The [analysis notes](analysis/README.md), [historical working states](working_state/README.md), and [project savepoints](project_state/README.md) document research and development history. Their presence in the repository does not make them part of the published v4.7.0 baseline or promote their stated mathematical status.
+The [analysis notes](analysis/README.md), [historical working states](working_state/README.md), and [project savepoints](project_state/README.md) document research and development history. Their presence in the repository does not make them part of a published release or promote their stated mathematical status. Two findings of the OP5/QAM analysis notes, the provenance of the C5 factor 3/4 and the interval to which the detector stage fixes it, were taken into v4.8.0 as layer r94.
 
 ## Research audit tools
 
