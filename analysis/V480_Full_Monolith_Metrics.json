@@ -4,12 +4,12 @@
   "original_bytes_preserved": 3403614,
   "byte_identical_reconstruction_in_current_checkout": true,
   "inherited_fragments": 38,
-  "included_files": 51,
+  "included_files": 52,
   "original_label_occurrences": 3290,
-  "new_label_occurrences": 95,
+  "new_label_occurrences": 102,
   "missing_labels": {},
   "new_duplicate_labels": {},
-  "working_expanded_sha256": "87156ad4bc1f51880fceb512e2e14d0119fed849f8366a9f392b53e3e9b26070",
+  "working_expanded_sha256": "a2e25eb0e291de174fdd20b97acfe114129eeb80df43a0216821d82fe4c8063f",
   "published_pdf_pages": 1014,
   "baseline_rebuilt_pages": {
     "total": 1014,
@@ -17,8 +17,8 @@
     "appendices_and_bibliography": 491
   },
   "research_pages": {
-    "total": 1031,
-    "main_and_frontmatter": 147,
+    "total": 1037,
+    "main_and_frontmatter": 153,
     "appendices_and_bibliography": 884
   },
   "baseline_matches_published_page_count": true,

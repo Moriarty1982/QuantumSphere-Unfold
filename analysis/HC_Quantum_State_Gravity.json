@@ -1,0 +1,57 @@
+{
+  "status": "state-sensitive stress derived in explicit scalar comparisons; NOT a native HC derivation or a complete renormalized quantum-gravity solution",
+  "fixed_mass_quantum_source": {
+    "field": "free complex scalar, two equal-energy positive-frequency modes in a periodic flat box",
+    "mass": 0.6,
+    "one_particle_mean_number": 1,
+    "occupation": "N_rs=conj(c_r)c_s, c=(sqrt(.8),sqrt(.2) exp(i delta)); compare its diagonal mixture",
+    "one_particle_mean_field_is_zero_but_stress_is_not": true,
+    "same_source_can_be_realized_by_a_bosonic_coherent_state": true,
+    "fixed_total_energy_for_all_relative_phases": 1.16619037896906,
+    "energy_density_at_origin_phase_zero": 0.007079798430679832,
+    "energy_density_at_origin_phase_pi": 0.00232305886006682,
+    "mixture_energy_density": 0.004701428645373326,
+    "KG_residual_norm": 6.992893892674703e-18,
+    "stress_divergence_norm": 1.21217487951527e-19,
+    "global_phase_is_unobservable_and_no_direct_phase_gravity_term_is_added": true
+  },
+  "massive_linear_response": {
+    "scope": "zero-mean interference source only, on a fixed flat reference, first order in gravitational coupling; not the positive homogeneous source or a nonlinear massive solution",
+    "equation": "Box bar_h_mn=-2 kappa_eff delta T_mn; bar_h=2 kappa_eff delta T/Q^2",
+    "Q_squared": 2.0,
+    "Einstein_residual_norm": 3.0665868333667484e-19,
+    "source_conservation_norm": 7.511572993685796e-19,
+    "no_semiclassical_validity_certificate_for_the_one_particle_state": true
+  },
+  "sourced_null_parent": {
+    "added_field": "independent minimally coupled complex scalar phi with S_phi=-integral sqrt|g(E)| |d phi|^2; the previous reference-Dirac probes remain fixed-reference probes",
+    "source": "phi=f(u), rho(u)=2|f'(u)|^2, T_phi=rho du tensor du",
+    "derived_profile_equation": "Delta_perp h+kappa_eff kappa |grad_perp h|^2=-kappa_eff rho/kappa",
+    "Helmholtz_equation": "(Delta_perp+kappa_eff^2 rho) w=0, w=exp(kappa_eff kappa h)",
+    "positive_local_witness": "w=2 cos(kappa_eff sqrt(rho(u)) Y^1), h=log(w)/(kappa_eff kappa)",
+    "all_declared_fields_varied": "Psi,E,h,u,phi,lambda,zeta; lambda=zeta=0 solves the full independent equations on this branch",
+    "phase_zero_flux_at_origin": 0.5,
+    "phase_pi_flux_at_origin": 0.01999999999999999,
+    "sample_reference_probe_residual_norm": 1.3771587721039253e-15,
+    "sample_Einstein_residual_component_norm": 1.8048137892242083e-11,
+    "sample_independent_curvature_pullback_error": 1.8048137925420358e-11,
+    "sample_h_EL": 3.775726520017641e-16,
+    "sample_u_EL": -1.4399560103323106e-20,
+    "sample_KG_residual_norm": 9.095044866448993e-13,
+    "sample_coframe_constraint_norm": 2.7769124835677133e-17,
+    "adding_mass_breaks_the_unchanged_null_scalar_branch": "Box f(u)=0, so (Box-m^2)f=-m^2 f; its potential also adds transverse stress"
+  },
+  "quantum_scope": {
+    "coherent_shift_identity": "on a fixed geometry and a zero-mean reference state, <T>_displaced,ren-<T>_reference,ren=T_classical[f] for the free scalar",
+    "reference_vacuum_stress_counterterms_and_stress_fluctuations_not_computed": true,
+    "interference_is_not_exclusively_quantum_and_does_not_prove_quantized_gravity": true,
+    "orthogonal_uncoupled_channels_have_no_phase_interference_in_their_summed_stress": true
+  },
+  "native_obligations": [
+    "identify the scalar observable with an allowed native triadic operator, not a new unnamed field",
+    "derive common metric/gamma/readout and mass/Yukawa/gauge/projector equations",
+    "retain the prior HC current-span and null-cone exclusions until their hypotheses actually change",
+    "derive physical units, Newton coupling, quantum state, vacuum subtraction and controlled validity"
+  ],
+  "main_TeX_changed": false
+}

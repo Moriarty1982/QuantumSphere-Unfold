@@ -1,0 +1,468 @@
+\section{HC Dynamics, Real Actions and the Geometry Interface}
+\label{v480:hc-dynamics-geometry}
+
+This section carries the conditional coupling program through its
+projected dynamics, action and bilinear geometry. The retained source
+provides the ordered master equation
+(Theorem~\ref{thm:master-field-equation}), the curvature action
+(Theorem~\ref{thm:variational-form}) and a conditional Einstein
+reconstruction (Proposition~\ref{prop:bilinear-einstein-reconstruction}).
+These are not already a common solved field system. In particular,
+the source has not derived an identification between the microscopic
+coordinate gamma matrices and the inverse of its reconstructed coframe.
+The distinction becomes essential below.
+
+All finite examples here use commuting effective amplitudes and declared
+adjoints. A dagger denotes the ordinary positive internal adjoint where
+specified, not an identification with the Lorentzian metric or the
+native QAM comparison. Dimensionless local charts are used in the
+explicit examples; a physical normalization requires the scale record
+of Section~\ref{v480:scale-record}.
+
+\subsection{Root Positivity Is an Additional Dynamical Obligation}
+
+For a complex two-mode input $\chi=(u,v)$ set
+\[
+ X_0=|u|^2+|v|^2,\quad X_1=|u|^2-|v|^2,\quad
+ X_2=2\operatorname{Re}(\overline u v),\quad
+ X_3=2\operatorname{Im}(\overline u v).
+\]
+Then $X_0^2=X_1^2+X_2^2+X_3^2$. Let $U$ be the three-cycle
+permutation matrix, and introduce the orthonormal Hermitian matrices
+\[
+ E_0=I/\sqrt3,\qquad E_1=(U+U^\dagger)/\sqrt6,\qquad
+ E_2=i(U-U^\dagger)/\sqrt6.
+\]
+The following is an additional quadratic root readout, not an evaluated
+native mass operator:
+\[
+ L_\zeta=X_0E_0+\zeta X_1E_1+\zeta X_2E_2,\qquad \zeta\geq0.
+\]
+
+\begin{proposition}[Balance and full-input positivity are different]
+\label{v480:hc-root-domain}
+For $X_0>0$ and $L_\zeta\geq0$, its candidate root ratio is
+\[
+ \frac{\operatorname{Tr}(L_\zeta^2)}{(\operatorname{Tr}L_\zeta)^2}
+ =\frac{1+\zeta^2[1-(X_3/X_0)^2]}3.
+\]
+Positivity for every input $\chi$ holds if and only if
+$\zeta\leq1/\sqrt2$. The aligned real or purely imaginary slice
+has $X_3=0$; attaining $2/3$ on it requires $\zeta=1$, outside
+the full-input positive range.
+\end{proposition}
+\begin{proof}
+Orthogonality gives $\operatorname{Tr}L_\zeta=\sqrt3X_0$ and
+$\operatorname{Tr}L_\zeta^2=X_0^2+\zeta^2(X_1^2+X_2^2)$.
+In the three Fourier modes, the traceless part has eigenvalues
+$\zeta\sqrt{2/3}(X_1\cos\varphi_j-X_2\sin\varphi_j)$,
+where $\varphi_j=2\pi j/3$. Their minimum over all inputs with
+fixed $X_0$ is $-\zeta\sqrt{2/3}X_0$, attained on the equator
+$X_3=0$. Comparing with $X_0/\sqrt3$ proves the bound.
+\end{proof}
+
+Thus an isometric coefficient choice does not derive a physical
+positive domain or a mass law. On the aligned slice
+$\chi=ib(\cos(\theta/2),\sin(\theta/2))$, $b>0$, the
+$\zeta=1$ positive domain consists of the three closed chambers
+$|\theta-2\pi j/3|\leq\pi/12$, modulo $2\pi$.
+Preparation and preservation of a chosen chamber must be checked.
+A fixed-radius phase minimum of a separately constrained energy does
+not prove stationarity or stability against amplitude, hidden-mode
+and background variations. Taking absolute values of signed roots
+does not preserve the displayed ratio in general.
+
+\subsection{Projection Retains Hidden States and Moving Frames}
+
+Write $D_\mu=\partial_\mu+\mathcal B_\mu$ and suppose
+$\Gamma^0$ is invertible. The ordered master equation gives the
+formal generator
+\[
+ \partial_t\Psi=\mathcal G\Psi,\qquad
+ \mathcal G=-\mathcal B_0-(\Gamma^0)^{-1}
+       \sum_{a=1}^3\Gamma^a(\partial_a+\mathcal B_a)
+       -i(\Gamma^0)^{-1}\Omega.
+\]
+This rearrangement asserts neither a self-adjoint Hamiltonian nor
+well-posedness on an unspecified domain. Its full HC contribution is
+\[
+ \mathcal G_{\rm HC}=-(\Gamma^0)^{-1}
+       [\kappa\Gamma^\mu n_\mu+i\gamma I]H_C.
+\]
+The order matters. Positivity of $H_C$ alone is not a decay theorem.
+
+\begin{proposition}[Exact projected autonomy criterion]
+\label{v480:hc-projected-autonomy}
+Let $u$ be the realification of a finite modal state,
+$\dot u=\mathcal G_{\mathbb R}u$, and let $r=T(t)u$ be a
+surjective real-linear extraction. For any right inverse $R_s$,
+write $u=R_sr+z$, $Tz=0$. Then
+\[
+ \dot r=K r+q_z,\quad
+ K=(\dot T+T\mathcal G_{\mathbb R})R_s,\quad
+ q_z=(\dot T+T\mathcal G_{\mathbb R})z.
+\]
+The instantaneous equation is independent of every hidden lift if and
+only if $(\dot T+T\mathcal G_{\mathbb R})\ker T=0$.
+\end{proposition}
+\begin{proof}
+Differentiate $r=Tu$ and substitute the decomposition. Two lifts of
+the same $r$ differ by an arbitrary element of $\ker T$, giving
+both necessity and sufficiency.
+\end{proof}
+
+For example, $\dot f=-iHf$ with $H=S+iB$ Hermitian has
+$S$ real symmetric and $B$ real skew. Writing $f=x+ir$ gives
+$\dot x=Bx+Sr$, $\dot r=Br-Sx$. For constant blocks, eliminating
+$x$ yields the exact memory equation
+\[
+ \dot r(t)=Br(t)-Se^{Bt}x(0)
+  -\int_0^t Se^{B(t-s)}S r(s)\,ds.
+\]
+It is not automatically a Markovian damping law. In two real
+dimensions an autonomous linear generator gives
+$\dot\theta=2(\omega+c\cos\theta+d\sin\theta)$ on the aligned
+slice. Forward invariance requires inward signs at the lower and upper
+boundaries. Summing over the equally spaced lower and upper boundary
+triples forces $\omega=0$; the same signs then force each boundary
+value to vanish. A nonzero first harmonic cannot have those six
+distinct zeros. Only scalar radial evolution remains. This does not
+exclude nonlinear feedback or one separately selected chamber.
+
+\subsection{A Conservative Inertia Can Be Derived Without Viscosity}
+
+For a declared positive canonical two-mode action, let
+\begin{align*}
+ L&=\frac i2(f^\dagger\dot f-\dot f^\dagger f)-\mathcal E(f),\\
+ e&=(\cos(\theta/2),\sin(\theta/2)),\qquad
+ N=\begin{pmatrix}0&-1\\1&0\end{pmatrix},\\
+ f&=(a+ib)e+cNe,\qquad b>0.
+\end{align*}
+The four real coordinates are essential. The kinetic term is
+$b\dot a-a\dot b-bc\dot\theta$, or
+$-2a\dot b-bc\dot\theta$ up to a total derivative.
+Setting $a=c=0$ before variation deletes the canonical partners.
+
+\begin{proposition}[Regular hidden-block elimination]
+\label{v480:hc-collective-inertia}
+Put $q=(b,\theta)$, $h=(a,c)$ and $D=\operatorname{diag}(2,b)$.
+If $\mathcal E=V+j^Th+\tfrac12h^TWh$, with $W$ positive
+definite, algebraic elimination in the action gives
+\[
+ h=-W^{-1}(D\dot q+j),\qquad
+ L_{\rm eff}=\tfrac12(D\dot q+j)^TW^{-1}(D\dot q+j)-V.
+\]
+The induced kinetic metric is $DW^{-1}D$; its coordinate dependence
+must be retained in the Euler--Lagrange equations.
+\end{proposition}
+\begin{proof}
+Modulo the total derivative, $L=-h^TD\dot q-\mathcal E$.
+Its $h$ equation is $Wh+D\dot q+j=0$. Substitution completes
+the square and proves the formula.
+\end{proof}
+
+For $H=mI+\omega\sigma_y$, $m>|\omega|$, and
+$\mathcal E=f^\dagger Hf$, this gives
+\[
+ L_{\rm eff}=\dot b^2/m+
+      b^2(\dot\theta-2\omega)^2/(4m)-mb^2,
+ \qquad I_\theta=b^2/(2m).
+\]
+The equation $\ddot\theta=-2(\dot b/b)(\dot\theta-2\omega)$
+describes reversible amplitude exchange: the apparent damping changes
+sign under contraction. It is not viscosity. The native positive
+modal adjoint and coefficients have not been extracted. More generally,
+a full-action pullback tests tangent equations only; omitted normal
+field equations remain necessary.
+
+\subsection{The Null Kinetic Term and the Real-Action Choice}
+
+Suppress a constant commuting closure background and take flat fixed
+spacetime, constant real null $n$, $A=0$, and $H_C=hT_0$, with
+$T_0$ fixed Hermitian, $c_T=\operatorname{Tr}T_0^2>0$.
+For $\mathcal B_\mu=\kappa H_Cn_\mu$ the printed curvature
+action reduces exactly to
+\[
+ F_{\mu\nu}=\kappa T_0(n_\nu\partial_\mu h-n_\mu\partial_\nu h),
+ \qquad
+ L_{\rm HC}=\frac{\kappa^2c_T}{2}(n\mathbin{\cdot}\partial h)^2.
+\]
+Before imposing nullity its principal tensor is
+$\kappa^2c_T(n^\mu n^\nu-n^2g^{\mu\nu})$; for nonzero null
+$n$ and $\kappa\ne0$ it has rank one. A positive homogeneous
+temporal inertia is not a Lorentzian wave operator or fluid viscosity.
+If minimal exact closure makes $H_C=0$ identically on a branch, this
+contribution vanishes there. Vanishing at one point is insufficient.
+
+There is a separate reality issue. For ordinary Hermitian internal
+$A_\mu,H$, set
+\[
+ D_\mu^AH=\partial_\mu H+i[A_\mu,H],\quad
+ F^A_{\mu\nu}=\partial_\mu A_\nu-\partial_\nu A_\mu+i[A_\mu,A_\nu],
+ \quad X_{\mu\nu}=n_\nu D_\mu^AH-n_\mu D_\nu^AH.
+\]
+Then $F=iF^A+\kappa X$. The literal $-\operatorname{Tr}(FF)/4$
+can be complex, with real part
+\[
+ \operatorname{Re}L_F=\tfrac14\operatorname{Tr}(F^AF^A)
+                         -\tfrac{\kappa^2}4\operatorname{Tr}(XX).
+\]
+The electric kinetic signs are opposite for signature $(-,+,+,+)$.
+This is a convention-dependent diagnostic, not a native ghost theorem.
+An explicitly \emph{different} unitary-internal comparison action is
+\[
+ L_F^\dagger=-\tfrac14\operatorname{Tr}(F_{\mu\nu}^\dagger F^{\mu\nu})
+ =-\tfrac14\operatorname{Tr}(F^AF^A)
+  -\tfrac{\kappa^2}4\operatorname{Tr}(XX).
+\]
+It is not silently substituted into Theorem~\ref{thm:variational-form}.
+The traced cross commutator vanishes, but its field equations must be
+derived from its own allowed variations.
+
+\subsection{Probe Reality, Matrix Currents and Background Reactions}
+
+Assume a factorization into internal and spin spaces,
+$\bar\Psi=\Psi^\dagger\eta_D$, $\eta_D^\dagger=\eta_D$, constant Hermitian
+$K^\mu=\eta_D\Gamma^\mu$, and
+$(\eta_D\Omega)^\dagger=\eta_D\Omega$. Internal Hermitian fields
+commute with the spin weights. Then
+\[
+ \operatorname{Re}(i\kappa\bar\Psi\Gamma^\mu n_\mu H\Psi)=0.
+\]
+A genuinely real symmetric probe action therefore removes this ordered
+transport term, while retaining a real $\gamma H$ mass-like coupling.
+This is a change of probe law, not an equivalent reading of the original.
+For noncommuting weights the Hermitian part is instead
+$i[K^\mu n_\mu,H]/2$, not the original ordered product.
+
+For the paired curvature action, $\Omega=mI+\gamma H$, and an
+independent Hermitian matching target $\Lambda$, the real test action
+with penalty $\lambda_H\operatorname{Tr}(H-\Lambda)^2$ has sources
+\[
+ j^\mu=\operatorname{Tr}_{\rm spin}
+       [(I\otimes K^\mu)|\Psi\rangle\langle\Psi|],\qquad
+ S=\operatorname{Tr}_{\rm spin}
+       [(I\otimes\eta_D)|\Psi\rangle\langle\Psi|].
+\]
+Here $S$ need not be positive. Independent $A,H$ variations give
+\begin{align*}
+ E_A^\nu&=D_\mu^AF_A^{\mu\nu}
+          +i\kappa^2n_\mu[H,X^{\mu\nu}]-j^\nu,\\
+ E_H&=\kappa^2n_\nu D_\mu^AX^{\mu\nu}
+           -2\lambda_H(H-\Lambda)-\gamma S.
+\end{align*}
+Integration by parts in the two curvature terms gives the displayed
+derivatives; varying the probe and penalty terms gives the last terms.
+The probe equation yields $D_\mu^Aj^\mu=-i\gamma[H,S]$ on shell,
+so its ordinary trace is conserved. Gauge covariance also requires
+the target reaction $E_\Lambda=2\lambda_H(H-\Lambda)$ in the
+Ward identity. For fixed transforming $\Lambda$ and no other
+reactions, all other equations on shell require $[H,\Lambda]=0$.
+This is not an instruction to impose $E_\Lambda=0$ or $H=\Lambda$.
+A functional $\Lambda[M,P]$ instead transfers the reaction through
+its chain rule. The inherited scalar gradient-trace currents are not
+automatically these matrix currents.
+
+Keeping the original ordered equation gives a different balance:
+for the same constant weights and suppressed closure load,
+\[
+ \partial_\mu(\Psi^\dagger K^\mu\Psi)
+       =-2\kappa\Psi^\dagger(K^\mu n_\mu)H_C\Psi.
+\]
+Its sign is not fixed by $H_C\geq0$. An open completion needs an
+explicit return law or reservoir; a moving comparison needs its own
+compatibility equations. Neither is derived by calling this loss
+gravitational transport. No native viscosity or reservoir is supplied.
+
+\subsection{An Explicit Null Geometry, Kept Off Shell}
+
+In the fixed Hermitian factorization above, with the closure load
+suppressed, the inherited real coframe has the exact identity
+\[
+ E^a{}_\mu=\operatorname{Re}(\bar\Psi\Gamma^aD_\mu\Psi)
+       =\tfrac12\partial_\mu j^a+\kappa v_H^a n_\mu,
+ \quad j^a=\Psi^\dagger K^a\Psi,\quad
+ v_H^a=\Psi^\dagger K^aH_C\Psi.
+\]
+Differentiation proves the first term; the purely internal Hermitian
+gauge term has zero real part. Unlike the $i$-weighted probe-action
+term, the real HC coframe contribution survives.
+
+\begin{proposition}[Gradient flatness and a null-preserving update]
+\label{v480:hc-null-coframe}
+If $H_C=0$ and $E$ has rank four in this fixed-frame branch, then
+$Y^a=j^a/2$ are local coordinates and $g=\eta_{ab}dY^a dY^b$
+is flat. More generally let $E=E_0+\kappa v n^T$, with $E_0$
+invertible and $d=1+\kappa n^TE_0^{-1}v\ne0$. For
+$g=E^T\eta E$, $g_0=E_0^T\eta E_0$,
+\[
+ \det E=(\det E_0)d,\qquad
+ n^Tg^{-1}n=\frac{n^Tg_0^{-1}n}{d^2}.
+\]
+Thus this nonsingular rank-one update preserves a null covector.
+\end{proposition}
+\begin{proof}
+The inverse function theorem proves the flat-coordinate statement.
+The matrix determinant lemma gives the determinant, and the rank-one
+inverse formula gives $n^TE^{-1}=n^TE_0^{-1}/d$. Contracting with
+$\eta^{-1}$ proves the second identity.
+\end{proof}
+
+Variable Clifford/adjoint weights or a noncommuting geometric spin
+connection can escape the gradient statement; it is not a theorem
+about every native or coarse-grained metric. HC alone has rank at
+most one and cannot furnish a four-dimensional coframe.
+
+For a concrete local branch use $\eta=\operatorname{diag}(-1,1,1,1)$,
+$n=(-1,0,0,1)^T$, $l=\eta^{-1}n$, and
+\[
+ E=I+\kappa h(x,y)ln^T,\qquad
+ g=\eta+2\kappa h\,nn^T,\qquad \det E=1.
+\]
+This dictionary can be realized by a common local probe, not just by
+independent choices of $E_0,v_H$. In a declared three-internal-mode,
+four-spinor representation take $K^a=(I,\alpha_i)$,
+$\eta_D=\beta=\operatorname{diag}(I_2,-I_2)$,
+$\Gamma^a=\beta K^a$, with Pauli off-diagonal $\alpha_i$.
+Let $\Psi_1=(1,0,1,0)^T/\sqrt2$, $\Psi_3=0$,
+$H_C=\operatorname{diag}(h,0,0)$, and set
+$J^a=2(x^a+c^a)-l^a$, $c=(3,0,0,0)$.
+On a future-timelike patch for $J$, put
+\[
+ m_J=\sqrt{(J^0)^2-|\boldsymbol J|^2},\quad
+ \Psi_2=\sqrt{\frac{J^0+m_J}{2}}
+ \begin{pmatrix}\xi\\
+ (\boldsymbol\sigma\mathbin{\cdot}\boldsymbol J)\xi/(J^0+m_J)
+ \end{pmatrix},\qquad \xi=(1,0)^T.
+\]
+Direct Pauli contraction gives $j^a=2(x^a+c^a)$ and $v_H=hl$.
+This uses $\{\Gamma^a,\Gamma^b\}=-2\eta^{ab}I$ and is not
+an identification of the native septonic carrier. It is off shell.
+
+The null coordinates $u=z-t$, $v=(z+t)/2$ put this metric in the
+form $2du\,dv+dx^2+dy^2+2\kappa h\,du^2$. Its nonzero curvature
+components are determined by
+\[
+ R_{\mu i\nu j}=-\kappa h_{,ij}n_\mu n_\nu,\quad
+ R_{\mu\nu}=-\kappa\Delta_\perp h\,n_\mu n_\nu,\quad R=0,
+ \qquad i,j\in\{x,y\}.
+\]
+These follow directly from the Levi--Civita connection; a vanishing
+scalar curvature does not imply flatness.
+
+Varying an independent unconstrained metric in the paired HC action
+at fixed $n,F$ \emph{before} this null restriction gives
+\[
+ T^{\rm HC}_{\mu\nu}=\kappa^2c_T|\nabla_\perp h|^2n_\mu n_\nu.
+\]
+The contracted curvature action vanishes on the profile, but its metric
+variation need not. Omitting all other stresses and the cosmological
+term, taking $\kappa\ne0$ and $\kappa_{\rm eff}$ as an input, the isolated equation
+$G_{\mu\nu}=\kappa_{\rm eff}T^{\rm HC}_{\mu\nu}$ reduces to
+\[
+ \Delta_\perp h+a|\nabla_\perp h|^2=0,\quad
+ a=\kappa_{\rm eff}\kappa c_T,\qquad
+ \Delta_\perp e^{ah}=0.
+\]
+For $a\ne0$, any positive harmonic $F$ gives the local solution
+$h=\log F/a$. Positive affine $F$ supplies nonconstant examples;
+restrict further to $h\geq0$ if $H_C\geq0$ is required.
+This is an isolated off-shell geometry/stress match, not a full probe,
+gauge, projector or minimal-closure solution, nor a derivation of
+Newton's constant. A metric-enforced null constraint or an induced
+metric variation changes the variational problem. Restricting the
+action to this null family first loses normal Einstein equations.
+
+\subsection{A Necessary Current Test and a Same-Frame Exclusion}
+
+For the constructed transverse profile let $Y=x+c$. Its induced
+coordinate current and volume satisfy
+\[
+ \mathcal J^\mu=(E^{-1})^\mu{}_a j^a
+       =2Y^\mu-2\kappa h(n\mathbin{\cdot}Y)l^\mu,
+ \qquad \sqrt{|\det g|}=1,\qquad
+ \nabla_\mu\mathcal J^\mu=8.
+\]
+The last equality uses $n\mathbin{\cdot}l=0$ and
+$l\mathbin{\cdot}\partial h=0$. Hence the unchanged construction
+cannot solve the closed real probe theory with this induced phase
+current. A purely internal Hermitian gauge field does not alter this
+coframe or cancel a central divergence by a commutator. The number
+$8$ is a normalization-dependent dimensionless diagnostic, not a
+predicted production rate.
+
+There is a stronger pointwise test which does not require the
+factorized current construction.
+
+\begin{proposition}[Conditional same-frame trace obstruction]
+\label{v480:hc-same-frame-obstruction}
+Suppose the same probe, adjoint and derivative define a real
+classical full-rank coframe
+\[
+ E^a{}_\mu=s_0\operatorname{Re}(\bar\Psi\Gamma^aD_\mu\Psi),
+ \qquad s_0\in\mathbb R\setminus\{0\},
+\]
+and make the additional identification
+$\Gamma^\mu=(E^{-1})^\mu{}_a\Gamma^a$ in the same ordered
+master equation. Set $R_\Psi=(i\Gamma^\mu D_\mu-\Omega)\Psi$
+and $w=\bar\Psi\Omega\Psi$. Then
+\[
+ \operatorname{Im}(\bar\Psi R_\Psi)=4/s_0-\operatorname{Im}w.
+\]
+In particular, a real $w$ excludes an on-shell full-rank coframe
+under these same-frame assumptions.
+\end{proposition}
+\begin{proof}
+Reality of the inverse frame and its contraction with $E$ give
+\[
+ 4=(E^{-1})^\mu{}_aE^a{}_\mu
+  =s_0\operatorname{Re}(\bar\Psi\Gamma^\mu D_\mu\Psi).
+\]
+Multiply the master residual by the same adjoint and take the imaginary
+part, using $\operatorname{Im}(iz)=\operatorname{Re}z$.
+On shell the left side vanishes. This proves both statements.
+\end{proof}
+
+A sufficient reality condition is
+$(\eta_D\Omega)^\dagger=\eta_D\Omega$; Hermiticity of $\Omega$
+alone is insufficient without its relation to the adjoint. For finite
+commuting amplitudes the same identity gives
+\[
+ \|R_\Psi\|\geq
+ \frac{|4/s_0-\operatorname{Im}w|}{\|\eta_D\Psi\|}.
+\]
+Neither a finite real normalization nor a change of connection removes
+the obstruction while all its assumptions are retained. It uses no
+weak-field or Clifford approximation.
+
+This is \emph{not} a universal inconsistency theorem for the paper.
+The retained reconstruction has not derived that additional same-frame
+identification. A reference/microscopic probe and a separately derived
+effective geometry are not excluded. Changing the coframe functional,
+deriving a changed probe equation from a composite-metric action, or
+allowing a nonreal bilinear changes the problem and requires a new
+common action and current balance. Merely inserting an imaginary
+constant to meet the trace condition is not a derivation.
+
+\subsection{Native Identification Still Required}
+\label{v480:hc-geometry-obligations}
+
+The construction establishes conditional inertia, a null kinetic
+tensor, explicit real-action alternatives and a local curved metric
+with an isolated stress match. It also identifies a definite forbidden
+direct identification. It does not establish masses, an irreversible
+fluid, a photon rest frame, a wormhole or inter-sector information flow.
+The retained variational and Einstein statements must be read with
+these qualifications, not promoted by a successful compiler run.
+
+A native continuation must fix the common carrier and adjoint, decide
+independent versus functional HC variations, derive every current and
+background reaction from that same action, and specify the relation
+between microscopic gamma matrices and effective geometry. Only then
+can a common solution be tested against all tangent and normal
+equations, the positive root domain and the physical scale record.
+The executable HC root-readout, projected-residual, collective-action,
+null-axis, real-current and bilinear-geometry audits in the repository
+retain expanded examples and counterexamples. Their finite regression
+checks support these identities; they are not native closure or
+proof-assistant certificates.

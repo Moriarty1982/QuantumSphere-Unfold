@@ -241,3 +241,68 @@ class FullMonolithReadingTests(unittest.TestCase):
              patch.object(audit, "aux_pages", side_effect=[{"total": 1013}, {"total": 1008}]):
             with self.assertRaisesRegex(ValueError, "does not match"):
                 audit.measure(Path("before.aux"), Path("after.aux"), Path("never-written.json"))
+
+
+class HCDynamicsMainIntegrationTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.entry = (audit.WORKING / "v480-companion.tex").read_text(encoding="utf-8")
+        cls.source = " ".join((audit.WORKING / "parts/hc-dynamics-and-geometry.tex")
+                              .read_text(encoding="utf-8").split())
+
+    def test_new_results_are_in_main_before_inherited_field_claims(self):
+        include = r"\input{parts/hc-dynamics-and-geometry}"
+        self.assertEqual(self.entry.count(include), 1)
+        self.assertLess(self.entry.index("parts/tensor-shift-coupling"), self.entry.index(include))
+        self.assertLess(self.entry.index(include), self.entry.index("parts/v470/10_sphaera_and_physics"))
+        self.assertLess(self.entry.index(include), self.entry.index("parts/v470/25_appendix_switch"))
+
+    def test_conditional_results_have_visible_proofs(self):
+        for label in ("hc-root-domain", "hc-projected-autonomy", "hc-collective-inertia",
+                      "hc-null-coframe", "hc-same-frame-obstruction"):
+            self.assertIn(r"\label{v480:" + label + "}", self.source)
+        self.assertEqual(self.source.count(r"\begin{proposition}"), 5)
+        self.assertEqual(self.source.count(r"\begin{proof}"), 5)
+        self.assertNotIn("GRCite", self.source)
+
+    def test_root_and_projected_laws_retain_missing_domain_and_hidden_state(self):
+        for token in ("full-input positive range", "Preparation and preservation",
+                      r"(\dot T+T\mathcal G_{\mathbb R})\ker T=0",
+                      "hidden lift", "not automatically a Markovian damping law",
+                      "does not exclude nonlinear feedback"):
+            self.assertIn(token, self.source)
+
+    def test_inertia_is_not_promoted_to_native_viscosity(self):
+        for token in ("Setting $a=c=0$ before variation", "coordinate dependence",
+                      "reversible amplitude exchange", "It is not viscosity",
+                      "omitted normal field equations remain necessary"):
+            self.assertIn(token, self.source)
+
+    def test_real_action_remains_an_explicit_alternative(self):
+        for token in ("rank one", "not a native ghost theorem",
+                      r"\emph{different}", "not silently substituted",
+                      "change of probe law", "target reaction", "chain rule",
+                      "not automatically these matrix currents"):
+            self.assertIn(token, self.source)
+
+    def test_stress_match_keeps_independent_variation_and_off_shell_scope(self):
+        for token in ("independent unconstrained metric", "before",
+                      "isolated off-shell geometry/stress match", "all other stresses",
+                      "not a full probe", "loses normal Einstein equations",
+                      "not an identification of the native septonic carrier"):
+            self.assertIn(token, self.source)
+
+    def test_trace_exclusion_keeps_same_frame_and_real_bilinear_hypotheses(self):
+        for token in ("same probe, adjoint and derivative", "additional identification",
+                      r"4/s_0-\operatorname{Im}w", "real $w$",
+                      r"\nabla_\mu\mathcal J^\mu=8", "purely internal Hermitian gauge field",
+                      r"\emph{not} a universal inconsistency theorem",
+                      "has not derived that additional same-frame identification",
+                      "a new common action and current balance"):
+            self.assertIn(token, self.source)
+
+    def test_current_integration_gates_reference_the_new_proofs(self):
+        for name in ("current-v4-synthesis.tex", "v480-integration.tex"):
+            source = (audit.WORKING / "parts" / name).read_text(encoding="utf-8")
+            self.assertIn("v480:hc-dynamics-geometry", source)
+            self.assertIn("v480:hc-same-frame-obstruction", source)
