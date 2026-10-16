@@ -10,6 +10,8 @@ The new main section `sources/research/parts/hc-mass-identification.tex` contain
 
 The subsequent [generation-coupling construction](Generation_Closure_Coupling.md) now supplies conditional seed and coupling formulas from the named closure projector and pacer. It distinguishes slot and eigenstate mass laws, identifies a cyclic harmonic spectrum and a possible small-root boundary, and tests the inherited overall phase. It still does not supply the native evaluated operator action or derive the Koide radius.
 
+The later [explicit root-readout test](HC_Root_Readout.md) computes the nonlinear Gram/principal-root interface and a quadratic two-mode alternative to the excluded linear HC output. It separates antiunitary alignment from the still-unproved isometric singlet/doublet transfer. Its further positivity theorem excludes a globally positive isometric readout in that specific family: all-input positivity requires `eta<=1/sqrt(2)`, giving `K<=1/2`. The `eta=1` branch therefore needs a physically selected, dynamically preserved restricted domain or a different readout. Stronger fixed-clock countermodels also show that even seedwise HC channel balance plus exact Millennium closure does not force root norm balance. This narrows the missing native identification; it does not close it or change the five main-text propositions.
+
 ## Existing Objects Actually Found
 
 | Existing object | Source location in the retained fragment | What it supplies, and what it does not |

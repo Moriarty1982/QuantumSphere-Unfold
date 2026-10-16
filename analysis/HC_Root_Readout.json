@@ -1,0 +1,232 @@
+{
+  "status": "explicit conditional HC/root identification test; no native mass law or radius prediction",
+  "source_dictionary": {
+    "fragment": "sources/research/parts/v470/10_sphaera_and_physics.tex",
+    "labels": [
+      "sec:central",
+      "thm:three-generations",
+      "thm:hopf",
+      "thm:gauge-invariance"
+    ],
+    "unitary_and_antiunitary_J_conventions_are_not_identified": true,
+    "native_two_mode_extraction_and_readout_metric_not_evaluated": true
+  },
+  "actual_root_readout_candidate": {
+    "transition": "A=(I-P) R_tilde S",
+    "principal_root": "L=sqrt(A* A)",
+    "candidate_physical_roots": "sqrt(kappa) eig(L), conditional on M_mass=kappa A*A",
+    "nonlinear_and_spectral_not_linear_HC_output": true,
+    "native_J_on_transition_output_is_lost_by_Gram": "L(J A)=L(A) for unitary J"
+  },
+  "strong_balance_countermodels": {
+    "hypotheses": "positive carrier, fixed complex-linear orthogonal J, C=(I+J)/2, exact Millennium closure, cyclic R",
+    "C_is_exact_M_spectral_projector": "M=C+3(I-C), eigenvalue 1 only on im(C)",
+    "all_seedwise_HC_channel_norms_equal": "A* C A=A*(I-C)A=Q/2; A*J A=0",
+    "clock_scope": "fixed finite simple self-adjoint spectrum, not native Riemann zero data or a full field solution",
+    "examples": [
+      {
+        "input_readout_weight": 0.0,
+        "Koide_ratio": 0.33333333333333326,
+        "same_M_P_J_C_and_closed_odd_seeds": true,
+        "equal_HC_channel_Gram_error": 6.927911392589096e-16,
+        "HC_null_transition_error": 1.0606644101639845e-17,
+        "clock_spectrum": [
+          1.0000000000000002,
+          2.000000000000001,
+          3.000000000000002,
+          3.9999999999999996,
+          6.000000000000002,
+          8.000000000000007,
+          10.000000000000004,
+          10.999999999999998,
+          11.999999999999995
+        ]
+      },
+      {
+        "input_readout_weight": 0.5,
+        "Koide_ratio": 0.41666666666666663,
+        "same_M_P_J_C_and_closed_odd_seeds": true,
+        "equal_HC_channel_Gram_error": 1.1674691568086233e-15,
+        "HC_null_transition_error": 4.590151931379717e-17,
+        "clock_spectrum": [
+          0.9999999999999971,
+          1.999999999999998,
+          3.0000000000000027,
+          4.000000000000004,
+          6.000000000000003,
+          8.00000000000001,
+          10.000000000000007,
+          11.000000000000002,
+          12.000000000000005
+        ]
+      },
+      {
+        "input_readout_weight": 1.0,
+        "Koide_ratio": 0.6666666666666666,
+        "same_M_P_J_C_and_closed_odd_seeds": true,
+        "equal_HC_channel_Gram_error": 1.4111854002395978e-15,
+        "HC_null_transition_error": 6.599139844627494e-17,
+        "clock_spectrum": [
+          0.9999999999999973,
+          2.0000000000000013,
+          3.000000000000001,
+          4.000000000000001,
+          6.000000000000005,
+          8.00000000000001,
+          9.999999999999996,
+          11.000000000000004,
+          12.0
+        ]
+      }
+    ],
+    "channel_balance_does_not_imply_root_singlet_doublet_balance": true
+  },
+  "quadratic_two_mode_candidate": {
+    "input": "dimensionless INTERNAL chi=(u,v), not identified with the physical spin of a lepton",
+    "coordinates": "X0=|u|^2+|v|^2; X1=|u|^2-|v|^2; X2=2Re(conj(u)v); X3=2Im(conj(u)v)",
+    "identity": "X0^2=X1^2+X2^2+X3^2",
+    "root_operator": "L_eta=X0 E0+eta X1 E1+eta X2 E2",
+    "basis": "E0=I/sqrt(3), E1=(U+U*)/sqrt(6), E2=i(U-U*)/sqrt(6)",
+    "physical_ratio_only_if_L_is_nonzero_positive": "K=[1+eta^2(1-(X3/X0)^2)]/3",
+    "antiunitary_odd_condition_in_aligned_basis": "J=conjugation, J chi=-chi implies X3=0",
+    "reduced_ratio": "K=(1+eta^2)/3",
+    "Koide_requires_independent_isometric_readout_eta_one": true,
+    "norm_isometry_is_not_proved_by_HC_idempotence": true,
+    "illustrative_angle_radians_not_predicted": 2.25,
+    "example": {
+      "root_eigenvalues": [
+        0.06444865400752595,
+        0.28362024300173083,
+        1.383981910559621
+      ],
+      "root_trace": 1.7320508075688776,
+      "gram_trace": 2.000000000000001,
+      "singlet_norm_squared": 1.0000000000000002,
+      "traceless_norm_squared": 1.0000000000000004,
+      "Koide_ratio": 0.6666666666666666,
+      "balance_difference": 2.220446049250313e-16
+    }
+  },
+  "alignment_and_state_cone_checks": {
+    "rotated_odd_state_with_fixed_readout_K": 0.4648673667615367,
+    "rotated_odd_state_with_cotransported_readout_K": 0.6666666666666666,
+    "state_only_global_phase_at_fixed_J_can_annihilate_residual": 0.0,
+    "only_joint_frame_covariance_was_checked_not_a_native_local_gauge_theory": true,
+    "some_odd_states_give_negative_signed_roots_and_are_not_admissible": true,
+    "raw_quadratic_map_is_degree_two_and_mass_Gram_degree_four": true,
+    "internal_background_vs_probe_amplitude_role_remains_to_be_identified": true
+  },
+  "comparison_tensor_freedom": {
+    "native_definition": "def:two-sided-admissible-contractions requires a declared comparison, not its numerical weights",
+    "shift_contract": "def:v3370-readout-package-translation preserves the declared comparison tensor",
+    "even_assuming_coefficient_plane_C3_symmetry": "G=diag(g_s,g_d,g_d), with independent g_s,g_d>0",
+    "not_cycle_conjugation_on_circulants": "U L U*=L acts trivially and is not the coefficient-plane rotation",
+    "pullback_of_fixed_Hilbert_Schmidt_comparison": "diag(1,eta^2,eta^2)",
+    "declaring_the_pullback_metric_is_not_a_prediction_of_eta": true,
+    "commuting_readout_is_not_a_Clifford_algebra_embedding": true
+  },
+  "full_cone_positivity_obstruction": {
+    "scope": "this linear-in-density quadratic-amplitude candidate, not every nonlinear native mass law",
+    "signed_root_forms": "F_k=[I+sqrt(2)eta(cos(phi_k)sigma_z-sin(phi_k)sigma_x)]/3; phi_k=2pi k/3",
+    "root_eigenvalue_identity": "ell_k=sqrt(3)Tr(F_k rho); sum_k F_k=I",
+    "form_eigenvalues": "(1-sqrt(2)eta)/3 and (1+sqrt(2)eta)/3",
+    "all_input_positivity_iff": "0<=eta<=1/sqrt(2), including all aligned odd inputs",
+    "max_relative_weight": 0.7071067811865475,
+    "max_Koide_ratio_for_this_globally_positive_family": 0.5,
+    "isometric_eta_one_is_outside_this_bound": true,
+    "examples": [
+      {
+        "relative_weight": 0.0,
+        "form_eigenvalues": [
+          [
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          [
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          [
+            0.3333333333333333,
+            0.3333333333333333
+          ]
+        ],
+        "all_positive_two_mode_inputs_have_positive_roots": true,
+        "aligned_pure_ratio_on_admitted_branch": 0.3333333333333333
+      },
+      {
+        "relative_weight": 0.7071067811865475,
+        "form_eigenvalues": [
+          [
+            0.0,
+            0.6666666666666666
+          ],
+          [
+            0.0,
+            0.6666666666666667
+          ],
+          [
+            -1.3877787807814457e-17,
+            0.6666666666666666
+          ]
+        ],
+        "all_positive_two_mode_inputs_have_positive_roots": true,
+        "aligned_pure_ratio_on_admitted_branch": 0.5
+      },
+      {
+        "relative_weight": 1.0,
+        "form_eigenvalues": [
+          [
+            -0.1380711874576984,
+            0.8047378541243649
+          ],
+          [
+            -0.1380711874576983,
+            0.804737854124365
+          ],
+          [
+            -0.13807118745769842,
+            0.8047378541243652
+          ]
+        ],
+        "all_positive_two_mode_inputs_have_positive_roots": false,
+        "aligned_pure_ratio_on_admitted_branch": 0.6666666666666666
+      }
+    ],
+    "negative_odd_witness_at_eta_one": {
+      "state": "chi=(0,i)",
+      "minimum_signed_root": -0.23914631173810033,
+      "absolute_root_repair_K": 0.4093647857764433
+    }
+  },
+  "restricted_isometric_cone": {
+    "aligned_angle": "chi=i(cos(theta/2),sin(theta/2))",
+    "allowed_angles": "theta=2pi k/3+delta modulo 2pi; |delta|<=pi/12",
+    "half_width_radians": 0.2617993877991496,
+    "fraction_of_coefficient_angle_circle": 0.25000000000000017,
+    "this_geometric_fraction_is_not_a_physical_probability": true,
+    "coherent_superposition_is_not_closed": {
+      "two_admitted_states": "i(1/2,sqrt(3)/2) and i(-1/2,sqrt(3)/2)",
+      "input_minimum_roots": [
+        0.16910197872576252,
+        0.16910197872576252
+      ],
+      "sum_minimum_root": -0.7174389352143009,
+      "incoherent_density_sum_minimum_root": 0.3382039574515253
+    },
+    "constant_nonzero_angular_drift_preserves_chambers": false,
+    "autonomous_angle_flow_boundary_guard": "theta_dot=f(theta): f(left)>=0 and f(right)<=0 at each chamber edge",
+    "passive_joint_frame_covariance_does_not_select_eta_or_an_active_phase_flow": true,
+    "native_domain_and_invariance_not_derived": true
+  },
+  "remaining_native_identification": [
+    "construct a specified two-mode extraction from the native carrier and resolve the J convention",
+    "prove its reversal/readout-frame alignment independently of the masses",
+    "derive the singlet/doublet metric transfer eta=1 AND a physically admitted restricted cone, or replace this candidate map",
+    "derive the native equality A*A=L_eta^2, or a physical alternative mass readout",
+    "prove the admitted principal-root cone, gauge covariance and physical background/state role",
+    "derive phase and scale; the quadratic construction alone fixes neither"
+  ],
+  "historical_masses_or_target_phase_used": false,
+  "main_TeX_changed": false
+}
