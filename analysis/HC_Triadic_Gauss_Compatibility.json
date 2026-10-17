@@ -1,0 +1,146 @@
+{
+  "status": "conditional fixed-triadic Gauss compatibility and local hard-dependent eigenmode comparison; NOT native M_16/C7 identification or physical masses",
+  "native_HC_domain_audit": {
+    "source": "sources/research/parts/v470/10_sphaera_and_physics.tex",
+    "hard_reading": "prop:closure-equation and thm:closed-master-system impose H=Lambda; exact closure sets H=0",
+    "finite_penalty_reading": "thm:variational-form lists H as a field with finite ||H-Lambda||^2; this alone does not derive algebraic equality",
+    "independent_soft_H_equation_is_not_silently_added_to_hard_lift": true
+  },
+  "fixed_matrix_gate": {
+    "Ward": "D_mu j^mu=-i[Omega,S] with ordinary adjoint and fixed Hermitian resonance",
+    "Gauss": "A''=-g^2 rho; C=[A,A']-g^2(U V^T-V U^T)=0 is the remaining spatial gauge equation",
+    "propagation": "C'=g^2[Omega,S]; solving Dirac plus temporal Gauss does not automatically preserve C",
+    "scope": "full unitary matrix source with no additional adjoint-field currents; not every native gauge algebra or dynamical resonance",
+    "mixed_initial_C_norm": 0.0,
+    "mixed_initial_C_first_norm": 0.8688928127220297,
+    "mixed_initial_torque_norm": 1.3576450198781713,
+    "flat_Dirac_residual_norm": 1.3877787807814457e-17,
+    "flat_Ward_residual_norm": 0.0,
+    "ordinary_trace_divergence_abs": 0.0,
+    "stabilizer_projected_torque_norm": 5.0700352902584447e-17
+  },
+  "prepared_resonance": {
+    "matrix": [
+      [
+        0.6,
+        0.0,
+        4.0
+      ],
+      [
+        0.0,
+        0.6,
+        0.7
+      ],
+      [
+        4.0,
+        0.7,
+        0.6
+      ]
+    ],
+    "eigenvalues": [
+      -3.4607881008493906,
+      0.6,
+      4.660788100849391
+    ],
+    "selected_positive_eigenvalue": 4.660788100849389,
+    "selected_vector": [
+      0.6965217230011511,
+      0.12189130152520133,
+      0.7071067811865476
+    ],
+    "component_weights": [
+      0.4851425106124923,
+      0.014857489387507548,
+      0.5000000000000001
+    ],
+    "unchanged_weak_basis_vector_residual": 4.0,
+    "not_native_M16_or_measured_masses": true
+  },
+  "carrier_gate": {
+    "comparison_lift_admits_all_three_generation_components": true,
+    "if_third_component_is_excluded": {
+      "visible_projector": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "resonance_off_sector_norm": 4.060788100849391,
+      "selected_eigenmode_outside_probability": 0.5000000000000001,
+      "single_dark_vector": [
+        -0.1723803317522482,
+        0.9850304671557042,
+        0.0
+      ],
+      "dark_eigen_residual_norm": 1.1102230246251565e-16,
+      "dark_state_does_not_make_the_whole_visible_projector_invariant": true
+    },
+    "native_C7_assignment_of_the_orthogonal_triadic_component_remains_unknown": true
+  },
+  "eigenmode_lift": {
+    "carrier": "Hopf rank-one image in C2 tensor C3; P=P_Hopf tensor I3",
+    "connection": "B^u=B_geom tensor I3+i a(z) P_Hopf tensor q dt; Omega=I2 tensor prepared triad",
+    "domain": "H=Lambda=0 eliminated before variation, not the independent finite-penalty domain",
+    "local_existence_bounds": {
+      "lower": [
+        0.4,
+        0.0,
+        -0.1,
+        -0.07
+      ],
+      "upper": [
+        0.6,
+        0.2,
+        0.1,
+        0.13
+      ],
+      "rhs_abs_bounds": [
+        1.132157620169878,
+        2.316472860509634,
+        0.13,
+        0.25600000000000006
+      ],
+      "available_box_radius": 0.1,
+      "interval": 0.03,
+      "max_displacement_bound": 0.06949418581528902,
+      "Jacobian_infinity_norm_bound": 5.86078810084939,
+      "Picard_contraction_bound": 0.17582364302548167
+    },
+    "point": [
+      0.4,
+      0.9,
+      0.4,
+      0.02
+    ],
+    "rho": 0.2824708251466922,
+    "scalar": 0.24433765457179302,
+    "closure_transport_norm": 2.047155244893744e-16,
+    "resonance_projector_commutator_norm": 0.0,
+    "resonance_scalar_commutator_norm": 3.2133316813259694e-16,
+    "full_matrix_residual_norms": {
+      "Dirac": 1.0751398496344263e-15,
+      "gauge": 2.2226144922435544e-10,
+      "current_divergence": 3.4305612784886316e-12,
+      "Ward": 3.43050782156877e-12
+    },
+    "independent_HC_equation_not_solved_or_imposed": true
+  },
+  "remaining_native_obligations": [
+    "fix hard/soft field domain and real action/current dictionary before interpreting any comparison as native",
+    "identify actual gauge algebra and Omega=m0 I+alpha P M16 P+beta gY T+gamma H on the same carrier",
+    "choose a compatible state/gauge stabilizer OR derive the dynamical adjoint torque current; a basis rotation alone does not remove a nonzero torque",
+    "evaluate global patching, finite-energy data, metric/axis backreaction and temporal stability"
+  ],
+  "main_TeX_changed": false
+}

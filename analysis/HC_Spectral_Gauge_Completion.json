@@ -1,0 +1,184 @@
+{
+  "status": "local maximal fixed-resonance centralizer comparison without fixed channel labels; NOT native gauge selection, C7, physical masses or metric backreaction",
+  "gauge_field_space": {
+    "algebra": "u(2) direct sum u(2) direct sum u(2), the maximal unitary commutant of I2 tensor prepared triad",
+    "projection": "Pi_Omega(X)=sum_r (I2 tensor q_r) X (I2 tensor q_r)",
+    "fixed_channel_projectors_not_required": true,
+    "maximal_compatible_algebra_is_a_declared_choice_not_the_native_gauge_group": true
+  },
+  "common_truncation_test": {
+    "old_common_gauge_residual": 1.1404320221792144e-10,
+    "extra_spectral_gauge_residual": 0.06374010847240796,
+    "consistency_condition": "a_r=a for every spectral block requires rho_r=sum rho/3 pointwise when all blocks have the same full-trace coupling",
+    "equal_initial_density_not_sufficient": true,
+    "equal_density_first_derivatives": [
+      -0.23071920672329277,
+      0.04000000000000001,
+      0.3107192067232928
+    ],
+    "source_covariance_is_not_source_invariance_and_does_not_select_a_gauge_group": true
+  },
+  "native_cross_readout_gate": {
+    "resonance_only_dimension": 12,
+    "resonance_and_fixed_cross_readout_dimension": 4,
+    "allowed_resonance_generator_commutator_norm": 1.3322676295501878e-15,
+    "same_generator_fixed_readout_commutator_norm": 0.9854785645505358,
+    "fixed_readout_before": 1.0,
+    "fixed_readout_after": 0.9616684816649841,
+    "covariantly_transformed_readout_after": 0.9999999999999999,
+    "source": "12_structural_core.tex, Cross-bilinear geometry channel: Re(bar Psi_ART Gamma^a D_mu Psi_QFT), with probes exchanged",
+    "state_independent_fixed_observable_invariance_is_a_condition_not_yet_a_native_gauge_law": true
+  },
+  "local_completion": {
+    "ODEs": "u_r'=(omega-a_r+m_r)v_r; v_r'=(m_r-omega+a_r)u_r; a_r''=-g_full^2 rho_r",
+    "trace": "each spectral projector has rank one in channel space; each block has 1/g_full^2, not 3/g_full^2",
+    "same_initial_probe_potentials_and_electric_fields_as_common_branch": true,
+    "initial_modal_states": [
+      [
+        0.3482608615005756,
+        0.06965217230011513,
+        0.0,
+        0.03
+      ],
+      [
+        -0.08619016587612412,
+        -0.017238033175224824,
+        0.0,
+        0.03
+      ],
+      [
+        0.3482608615005756,
+        0.06965217230011513,
+        0.0,
+        0.03
+      ]
+    ],
+    "signed_resonance_eigenvalues": [
+      -3.4607881008493906,
+      0.6,
+      4.66078810084939
+    ],
+    "point": [
+      0.4,
+      0.9,
+      0.4,
+      0.02
+    ],
+    "modal_states": [
+      [
+        0.34546868822794363,
+        0.039413389229937305,
+        0.0005841092674127707,
+        0.028422091452343375
+      ],
+      [
+        -0.08669943829746717,
+        -0.016719875104043498,
+        0.0005990080610497015,
+        0.029900655804983682
+      ],
+      [
+        0.35747529647656995,
+        0.09617701894443939,
+        0.0005834294364368514,
+        0.02831969997346447
+      ]
+    ],
+    "modal_densities": [
+      0.12090202979652666,
+      0.00779634682459113,
+      0.13703860656405065
+    ],
+    "potential_splitting_norm": 1.2451636663771904e-05,
+    "potential_commutator_with_resonance_norm": 2.0379912391526577e-19,
+    "potential_commutator_with_channel_label_norm": 3.689830800965134e-06,
+    "full_matrix_residual_norms": {
+      "Dirac": 2.8443827262004467e-16,
+      "spectral_gauge": 1.4115668306190295e-10,
+      "spectral_current_divergence": 2.505475089401327e-12,
+      "full_Ward": 1.4907258173501094e-09,
+      "unprojected_U6_equation_not_imposed": 0.12336982491074881
+    },
+    "local_existence_bounds": {
+      "lower": [
+        [
+          0.2482608615005756,
+          -0.03034782769988488,
+          -0.1,
+          -0.07
+        ],
+        [
+          -0.18619016587612414,
+          -0.11723803317522483,
+          -0.1,
+          -0.07
+        ],
+        [
+          0.2482608615005756,
+          -0.03034782769988488,
+          -0.1,
+          -0.07
+        ]
+      ],
+      "upper": [
+        [
+          0.44826086150057565,
+          0.16965217230011514,
+          0.1,
+          0.13
+        ],
+        [
+          0.013809834123875889,
+          0.08276196682477518,
+          0.1,
+          0.13
+        ],
+        [
+          0.44826086150057565,
+          0.16965217230011514,
+          0.1,
+          0.13
+        ]
+      ],
+      "rhs_abs_bounds": [
+        [
+          0.451408481339397,
+          1.9995967170582643,
+          0.13,
+          0.1470205820924072
+        ],
+        [
+          0.18758085308035974,
+          0.07447606635044966,
+          0.13,
+          0.030983381946735198
+        ],
+        [
+          0.9603649982397423,
+          1.730640200157919,
+          0.13,
+          0.1470205820924072
+        ]
+      ],
+      "Jacobian_infinity_norm_bound": 5.830440273149505,
+      "interval": 0.03,
+      "available_box_radius": 0.1,
+      "max_displacement_bound": 0.059987901511747925,
+      "Picard_contraction_bound": 0.17491320819448514
+    },
+    "ODE_defect_at_interval_edge": 3.575671340932952e-49,
+    "spatial_first_integrals": [
+      -0.5157743251898623,
+      -0.001971223089751365,
+      0.42985492327961355
+    ]
+  },
+  "remaining_obligations": [
+    "identify native resonance/gauge/readout algebra and C7 embedding rather than either chosen comparison algebra",
+    "the source forces different connection responses if the larger algebra is gauged; it does not remove those gauge directions",
+    "signed finite resonance values are not measured masses, generations or tachyon-frame assignments",
+    "hard-dependent HC, real action/source dictionary, product metric and separated spin/internal curvature remain assumptions",
+    "global finite energy, causal/temporal stability, bilinear metric and metric/axis response remain unsolved"
+  ],
+  "main_TeX_changed": false
+}

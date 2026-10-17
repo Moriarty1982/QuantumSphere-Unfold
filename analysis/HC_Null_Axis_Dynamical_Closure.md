@@ -185,6 +185,8 @@ There is now a concrete conditional route from the printed connection equation t
 
 The native task is consequently sharper: identify the intended adjoint, real or complex stationarity and admissible fields; then derive the actual sourced constraint equations, their propagation and their relation to the native C7 carrier. Normal connection curvature, projector/axis motion, nonempty probes and metric reactions cannot be omitted from that identification. Choosing the version that removes an unwanted mode would not itself justify it physically.
 
+The subsequent [sourced current calculation](HC_Sourced_Closure_Current.md) inserts a nonzero probe. Fixed-M hard closure makes the printed trace-gradient currents vanish, exposing a trace/support mismatch for direct Hermitian current insertion in the stated real form. A compatible unitary source convention instead admits a local charged massless Dirac--gauge branch with the same probe generating its own nonzero current and Gauss flux. The internal gauge and external spin curvatures are kept distinct; restoring mass without changing the fields fails. This is not a selected native action, massive C7 solution or metric backreaction result.
+
 ## Reproduction
 
 - [Matrix calculation](HC_Null_Axis_Dynamical_Closure.py) and [saved results](HC_Null_Axis_Dynamical_Closure.json).
