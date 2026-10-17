@@ -1,0 +1,151 @@
+{
+  "status": "existing-load curvature/constraint audit in a declared R1,1 x S2 realization; NOT a full native stability, Wick rotation or C7 identification",
+  "assumptions": [
+    "fixed product metric -dt^2+dz^2+R^2 dOmega^2, coordinates (t,theta,phi,z)",
+    "rank-one round degree-one projector, M=0.6 I, H=Lambda=0",
+    "unitary part B^u=alpha[P,dP], full B=B^u+eta Q n, constant n=-dt+dz",
+    "empty probe for the source-free residual; nonzero closed probe only for an instantaneous penalty test",
+    "R,g,eta are comparison inputs; actual native domain, adjoint and metric not evaluated"
+  ],
+  "existing_penalties": {
+    "reason": "U_C7 penalizes Q Psi, not D P; U_HC vanishes on H=Lambda; Lambda has no connection argument",
+    "samples": [
+      {
+        "alpha": 0,
+        "U_C7_unit_coefficient": 1.103819607987719e-33,
+        "H_equals_Lambda_norm": 3.4706197991980913e-34,
+        "U_HC_on_matching_branch": 0.0,
+        "normal_operator_norm_squared": 2.0
+      },
+      {
+        "alpha": 0.8,
+        "U_C7_unit_coefficient": 1.103819607987719e-33,
+        "H_equals_Lambda_norm": 3.4706197991980913e-34,
+        "U_HC_on_matching_branch": 0.0,
+        "normal_operator_norm_squared": 0.07999999999999992
+      },
+      {
+        "alpha": 1,
+        "U_C7_unit_coefficient": 1.103819607987719e-33,
+        "H_equals_Lambda_norm": 3.4706197991980913e-34,
+        "U_HC_on_matching_branch": 0.0,
+        "normal_operator_norm_squared": 4.37939083237366e-32
+      },
+      {
+        "alpha": 1.2,
+        "U_C7_unit_coefficient": 1.103819607987719e-33,
+        "H_equals_Lambda_norm": 3.4706197991980913e-34,
+        "U_HC_on_matching_branch": 0.0,
+        "normal_operator_norm_squared": 0.08000000000000003
+      },
+      {
+        "alpha": 2,
+        "U_C7_unit_coefficient": 1.103819607987719e-33,
+        "H_equals_Lambda_norm": 3.4706197991980913e-34,
+        "U_HC_on_matching_branch": 0.0,
+        "normal_operator_norm_squared": 2.0
+      }
+    ],
+    "eta_does_not_change_the_normal_operator": true
+  },
+  "curvature_identity": {
+    "formula": "F=G-eta[(D^u P) wedge n], G=F(B^u), D^u P=(1-alpha)dP",
+    "full_matrix_error": 9.763824407868654e-17,
+    "load_curvature_norm": 0.25150181123797977,
+    "null_load_dagger_scalar": 4.336808689942018e-19,
+    "null_load_literal_scalar": 0.0
+  },
+  "null_axis": {
+    "n_squared": 0.0,
+    "static_integrals": [
+      {
+        "alpha": 0,
+        "plus_dagger_contraction": 2.4267614118851437e-17,
+        "minus_literal_contraction": -1.0568278597439068e-16,
+        "literal_imaginary_part": 0.0,
+        "dagger_load_T00_integral": 6.157521601035995
+      },
+      {
+        "alpha": 0.8,
+        "plus_dagger_contraction": 2.8952917895483536,
+        "minus_literal_contraction": 2.895291789548353,
+        "literal_imaginary_part": 1.2577158290088406e-35,
+        "dagger_load_T00_integral": 0.24630086404143955
+      },
+      {
+        "alpha": 1,
+        "plus_dagger_contraction": 3.1415926535897922,
+        "minus_literal_contraction": 3.1415926535897922,
+        "literal_imaginary_part": 2.407105301133776e-34,
+        "dagger_load_T00_integral": 1.412014823014978e-31
+      },
+      {
+        "alpha": 1.2,
+        "plus_dagger_contraction": 2.8952917895483536,
+        "minus_literal_contraction": 2.8952917895483536,
+        "literal_imaginary_part": -7.791349472365012e-35,
+        "dagger_load_T00_integral": 0.24630086404143978
+      },
+      {
+        "alpha": 2,
+        "plus_dagger_contraction": -6.055231083951557e-17,
+        "minus_literal_contraction": -7.409600891657381e-17,
+        "literal_imaginary_part": -5.702986602441078e-34,
+        "dagger_load_T00_integral": 6.157521601035996
+      }
+    ],
+    "dagger_load_stress": "T_mu,nu=eta^2 (1-alpha)^2 n_mu n_nu/(g^2 R^2)",
+    "nonzero_stress_does_not_prove_native_on_shell_or_stability": true,
+    "zero_scalar_is_not_zero_field_or_zero_stress": true
+  },
+  "printed_complex_resonance": {
+    "equation": "D^mu F_mu,nu=0 (empty probe, scalar M, H=0)",
+    "formula": "angular YM residual plus eta (1-alpha)^2 K n_nu/R^2",
+    "direct_curved_coordinate_error": 3.108707522096555e-11,
+    "background_residual_norm": 2.6099205719684908e-11,
+    "linearized_static_angular_residual_independent_of_eta": true,
+    "not_a_complete_hyperbolic_stability_analysis": true
+  },
+  "Euclidean_real_axis_comparison": {
+    "not_a_derived_Wick_rotation": true,
+    "axis_squared": 2.0,
+    "dagger_energy": "pi (2alpha-alpha^2)^2/(g^2 R^2)+2pi eta^2 |n_E|^2 (1-alpha)^2/g^2",
+    "minus_literal_energy": "pi (2alpha-alpha^2)^2/(g^2 R^2)-2pi eta^2 |n_E|^2 (1-alpha)^2/g^2",
+    "dagger_Hessian_at_alpha_1_R_g_1_eta_0p7": -0.2513274122871856,
+    "minus_literal_Hessian_at_alpha_1_R_g_1_eta_0p7": -24.88141381643116,
+    "dagger_no_negative_alpha_direction_condition": "eta^2 |n_E|^2 R^2 >= 1; equality has a quartic minimum along this path",
+    "not_a_full_field_stability_threshold_or_native_mass": true,
+    "samples": [
+      {
+        "eta": 0,
+        "plus_dagger_contraction": 2.8952917895483536,
+        "minus_literal_contraction": 2.8952917895483536,
+        "literal_imaginary_part": 0.0,
+        "dagger_load_T00_integral": 0.0
+      },
+      {
+        "eta": 0.7,
+        "plus_dagger_contraction": 3.141592653589793,
+        "minus_literal_contraction": 2.6489909255069137,
+        "literal_imaginary_part": 9.460232959834912e-19,
+        "dagger_load_T00_integral": 2.374315127490163e-17
+      },
+      {
+        "eta": 1,
+        "plus_dagger_contraction": 3.3979466141227204,
+        "minus_literal_contraction": 2.3926369649739865,
+        "literal_imaginary_part": 1.3894142914761736e-20,
+        "dagger_load_T00_integral": 5.565312347535819e-17
+      }
+    ]
+  },
+  "remaining_obligations": [
+    "derive hard D P=0 or evaluate all native stabilizing interactions without imposing it",
+    "fix the native real form/action and its relation to the printed complex resonance equation",
+    "solve the full time-dependent constrained system, source reactions and metric/background variations",
+    "identify actual C7 bundle, admissible M spectrum and physical R,g,eta"
+  ],
+  "main_TeX_changed": false,
+  "literature_context_only": "https://arxiv.org/html/1902.07281v3",
+  "not_claimed_to_be_a_universal_or_VSI_Yang_Mills_solution": true
+}

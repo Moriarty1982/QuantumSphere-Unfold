@@ -1,0 +1,167 @@
+{
+  "status": "conditional global S2 bundle/positive-curvature-functional selection, NOT a derived native topological sector, stable unconstrained vacuum or spacetime metric",
+  "assumptions": [
+    "closed oriented round S2 with given radius R; not identified with physical spacetime",
+    "smooth rank-one projector in a trivial C2 bundle, chosen oriented flux number +1",
+    "hard D P=0, unitary traceless connection, fixed P/topological class",
+    "positive functional E=(1/(2g^2)) integral Tr(F^dagger wedge *F), g and R inputs",
+    "native C7/HC spectral-admissibility and integration measure not supplied"
+  ],
+  "global_flux": {
+    "definition": "q=(1/(2 pi i)) integral Tr(P F) for compatible connections; oriented sign fixed here",
+    "north_connection": "a_N=i(1-u)dphi/2+i c",
+    "south_connection": "a_S=-i(1+u)dphi/2+i c",
+    "transition": "V_S=exp(-i phi) V_N; a_S=a_N-i dphi",
+    "flat_compatible_connection_impossible_for_q_nonzero": true,
+    "ambient_rank_two_bundle_itself_is_trivial": true
+  },
+  "constrained_selection": {
+    "general_form": "B=[P,dP]+i c (2P-I), c a globally smooth real one-form",
+    "bound": "E >= (2 pi q)^2/(g^2 Area)=pi q^2/(g^2 R^2)",
+    "minimizer": "f=(2 pi q/Area) dArea; curvature unique, connection unique modulo gauge on S2",
+    "identity_projector_integrals": {
+      "ambient_projected_flux": 1.0000000000000002,
+      "bundle_flux": 1.0000000000000002,
+      "energy": 3.141592653589794,
+      "unit_charge_bound": 3.141592653589793,
+      "max_covariant_P_derivative": 3.0157758462357515e-16,
+      "radius": 1.0,
+      "coupling": 1.0
+    },
+    "nonuniform_projector": "u=x+epsilon(1-x^2), x=cos(theta), epsilon=0.3",
+    "selected_block": "c_phi=epsilon sin(theta)^2/2, equivalently Legendre stream amplitude -epsilon/2",
+    "unselected": {
+      "ambient_projected_flux": 1.0000000000000002,
+      "bundle_flux": 1.0000000000000002,
+      "energy": 3.5185837720205693,
+      "unit_charge_bound": 3.141592653589793,
+      "max_covariant_P_derivative": 4.0200828334527675e-16,
+      "radius": 1.0,
+      "coupling": 1.0
+    },
+    "selected": {
+      "ambient_projected_flux": 1.0000000000000002,
+      "bundle_flux": 1.0,
+      "energy": 3.1415926535897922,
+      "unit_charge_bound": 3.141592653589793,
+      "max_covariant_P_derivative": 3.631195407349553e-16,
+      "radius": 1.0,
+      "coupling": 1.0
+    },
+    "unselected_D_star_F_norm": 0.3323374617893404,
+    "selected_D_star_F_norm": 1.2214547814033192e-11
+  },
+  "constrained_Hessian": {
+    "gauge": "c=d chi+*d psi; remove exact gauge part; constant psi gives no one-form",
+    "Rayleigh_modes": [
+      {
+        "mode": 1,
+        "one_form_norm_squared": 8.377580409572753,
+        "derivative_norm_squared": 16.75516081914568,
+        "Rayleigh": 2.000000000000021,
+        "expected": 2.0
+      },
+      {
+        "mode": 2,
+        "one_form_norm_squared": 15.079644737230963,
+        "derivative_norm_squared": 90.47786842338722,
+        "Rayleigh": 6.000000000000096,
+        "expected": 6.0
+      },
+      {
+        "mode": 3,
+        "one_form_norm_squared": 21.54234962461567,
+        "derivative_norm_squared": 258.5081954953937,
+        "Rayleigh": 12.000000000000261,
+        "expected": 12.0
+      },
+      {
+        "mode": 4,
+        "one_form_norm_squared": 27.925268031909194,
+        "derivative_norm_squared": 558.5053606381998,
+        "Rayleigh": 20.000000000000572,
+        "expected": 20.0
+      }
+    ],
+    "energy_Hessian": "2 l(l+1)/(g^2 R^2) for L2-normalized coexact one-forms",
+    "not_a_four_dimensional_mass_or_particle_spectrum": true
+  },
+  "relaxed_compatibility_negative_control": {
+    "path": "B_alpha=alpha [P,dP], P fixed; D_alpha P=(1-alpha) dP",
+    "curvature": "F_alpha=(2 alpha-alpha^2) F_1",
+    "energy": "E_alpha=(2 alpha-alpha^2)^2 E_1",
+    "second_derivative_at_alpha_1": -12.566370614359172,
+    "samples": [
+      {
+        "alpha": 0,
+        "ambient_projected_flux": 0.0,
+        "bundle_flux": 1.0000000000000002,
+        "energy": 0.0,
+        "unit_charge_bound": 3.141592653589793,
+        "max_covariant_P_derivative": 0.999624104261381,
+        "radius": 1.0,
+        "coupling": 1.0
+      },
+      {
+        "alpha": 0.9,
+        "ambient_projected_flux": 0.9899999999999999,
+        "bundle_flux": 1.0,
+        "energy": 3.0790749597833567,
+        "unit_charge_bound": 3.141592653589793,
+        "max_covariant_P_derivative": 0.09996241042613796,
+        "radius": 1.0,
+        "coupling": 1.0
+      },
+      {
+        "alpha": 1,
+        "ambient_projected_flux": 1.0000000000000002,
+        "bundle_flux": 1.0000000000000002,
+        "energy": 3.141592653589794,
+        "unit_charge_bound": 3.141592653589793,
+        "max_covariant_P_derivative": 3.0157758462357515e-16,
+        "radius": 1.0,
+        "coupling": 1.0
+      },
+      {
+        "alpha": 1.1,
+        "ambient_projected_flux": 0.9899999999999997,
+        "bundle_flux": 1.0,
+        "energy": 3.0790749597833553,
+        "unit_charge_bound": 3.141592653589793,
+        "max_covariant_P_derivative": 0.09996241042613836,
+        "radius": 1.0,
+        "coupling": 1.0
+      },
+      {
+        "alpha": 2,
+        "ambient_projected_flux": -6.305883611633167e-16,
+        "bundle_flux": 1.0000000000000002,
+        "energy": 2.7473586122507354e-30,
+        "unit_charge_bound": 3.141592653589793,
+        "max_covariant_P_derivative": 0.9996241042613815,
+        "radius": 1.0,
+        "coupling": 1.0
+      }
+    ],
+    "global_flat_incompatible_connections_do_not_violate_the_bundle_flux_theorem": true,
+    "compressed_curvature_keeps_q_1_while_P_F_P_alone_does_not": true,
+    "not_an_unconstrained_Yang_Mills_minimum": true
+  },
+  "native_source_audit": {
+    "path": "sources/research/parts/v470/10_sphaera_and_physics.tex",
+    "label": "thm:hopf",
+    "anchor": "the standard S1 -> S3 -> S2 fibration is present",
+    "gap": "no evaluation identifies native P_C7 with this degree-one rank-one projector or derives R,g and a hard integration domain"
+  },
+  "remaining_obligations": [
+    "native projector bundle, its actual topological class and admissibility",
+    "derive whether D P=0 is an operator/measure constraint or only a particular-probe condition",
+    "native real action and stability against all allowed modes, not only block variations",
+    "metric/scale origin, common probe backreaction and quantum determinant/vacuum matching"
+  ],
+  "main_TeX_changed": false,
+  "sources": [
+    "https://www.math.utoronto.ca/mgualt/Morse%20Theory/Atiyah-Bott.pdf",
+    "https://authors.library.caltech.edu/records/2pepc-k9f58"
+  ]
+}

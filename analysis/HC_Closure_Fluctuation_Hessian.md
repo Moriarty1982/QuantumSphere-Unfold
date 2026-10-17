@@ -195,4 +195,6 @@ The missing decision is not another free numerical coefficient. It is the native
 
 ## Reproduction
 
+The subsequent [hard-closure transport analysis](HC_Hard_Closure_Transport.md) follows the dependent-HC reading and derives the missing full-master invariance conditions. A compatible moving-projector connection gives an exact reduced probe dictionary and a local source-free family with the same projector but different internal curvatures. Its orientation curvature starts at quartic action order around constant P. It supplies neither an independent HC determinant nor the native metric/measure/connection-selection law.
+
 Run `python -B analysis/HC_Closure_Fluctuation_Hessian.py --output analysis/HC_Closure_Fluctuation_Hessian.json`. The finite example is not an evaluated `C7/M16` representation. Thirty-eight tests in `scripts/qsc_audit/tests/test_hc_closure_fluctuation_hessian.py` cover the constrained Taylor expansion, nonlinear action check, gauge/ghost identities, principal and full ranks, central-HC heat obstruction and ordinary-gauge negative control. The main TeX, open OP5 note and PDF remain unchanged.

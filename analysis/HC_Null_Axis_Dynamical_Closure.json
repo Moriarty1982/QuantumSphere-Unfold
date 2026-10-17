@@ -1,0 +1,73 @@
+{
+  "status": "conditional dynamical closure/real-form distinction on a fixed auxiliary R1,1 x S2; NOT native C7 stability, gravity or a selected physical action",
+  "assumptions": [
+    "fixed product metric, degree-one round P independent of t,z, unitary normal connection zero",
+    "M scalar, H_C=Lambda=0, empty probe and zero printed currents; no native C7/scale identification",
+    "B^u_a=(1+w)[P,d_a P]+i v d_a P, w,v real; B=B^u+eta Q(-dt+dz)",
+    "normal connection equations are checked after variation, not discarded by this ansatz",
+    "real literal and dagger actions are distinct comparisons; neither is silently adopted"
+  ],
+  "two_mode_curvature": {
+    "G_angular": "(1-w^2-v^2) G_background",
+    "W": "-w dP-i v [P,dP]",
+    "printed_angular": "D_u^mu G_mu,a +2 eta (partial_t+partial_z) W_a",
+    "printed_normal": "i(v partial_rho w-w partial_rho v)K/R^2+eta(w^2+v^2)K n_rho/R^2",
+    "full_printed_residual_error": 2.9064001791465623e-11,
+    "unitary_residual_error": 2.4984961385673153e-11
+  },
+  "constraint_theorem": {
+    "identity": "Tr(P D_a W^a)=-Tr(W_a W^a), W=D_u P Hermitian and purely angular",
+    "trace_P_laplacian": -0.048707840000000016,
+    "positive_transport_norm_squared": 0.04870784000000003,
+    "consequence": "Hermitian normal part of the printed source-free equation forces D_a W^a=0, hence W=0 pointwise",
+    "equivariant_consequence_for_eta_nonzero": "w=v=0 exactly",
+    "requires_nonzero_eta_and_this_source_normal_sector": true,
+    "not_a_general_native_or_sourced_superselection_theorem": true
+  },
+  "linearized_dynamics": {
+    "real_action_equations": "(partial_t^2-partial_z^2)w-w/R^2=0, and likewise v",
+    "growth_rate": "sqrt(R^-2-k^2) for |k|<R^-1; no derived physical mass",
+    "example_R": 1.0,
+    "example_k": 0.4,
+    "example_growth_rate": 0.916515138991168,
+    "printed_additional_conditions_eta_nonzero": "(partial_t+partial_z)w=(partial_t+partial_z)v=0",
+    "joint_equations_have_only_zero_mode_at_finite_R_in_this_sector": true,
+    "not_damping_of_arbitrary_Cauchy_data": true,
+    "growing_mode_real_action_residual_norm": 2.1376874026444586e-05,
+    "growing_mode_printed_residual_norm": 0.034331114770198394
+  },
+  "exact_real_action_pulse": {
+    "profile": "w=sqrt(2) sech((t-t0)/R), v=0",
+    "equation": "w_tt=w(1-w^2)/R^2",
+    "dagger_gauge_residual_norm": 7.055999614275861e-11,
+    "real_literal_gauge_residual_norm": 7.055999614275861e-11,
+    "projector_tangent_residual_norm": 0.0,
+    "printed_complex_residual_norm": 2.475976146242334,
+    "homogeneous_reduced_energy_R_g_1": 3.141592653589796,
+    "energy_formula": "pi/(g^2 R^2), conserved along the pulse, not irreversible damping",
+    "not_a_native_on_shell_probe_metric_solution": true
+  },
+  "reduced_actions": {
+    "dagger": "2pi[(w_t^2+v_t^2)-(w_z^2+v_z^2)]/g^2-pi(1-w^2-v^2)^2/(g^2 R^2)",
+    "real_literal": "minus the dagger action on this null sector; full actions differ outside it",
+    "literal_imaginary": "-4pi eta [v(partial_t+partial_z)w-w(partial_t+partial_z)v]/g^2",
+    "full_matrix_integral": {
+      "dagger_L": -2.6767273360322457,
+      "real_literal_L": 2.6767273360322448,
+      "literal_imaginary_L": 0.30234486636218355
+    },
+    "formula": {
+      "dagger_L": -2.676727336032246,
+      "real_literal_L": 2.676727336032246,
+      "literal_imaginary_L": 0.30234486636218344
+    },
+    "varying_only_w_after_setting_v_and_normal_connection_zero_misses_constraints": true
+  },
+  "remaining_obligations": [
+    "native adjoint, real versus complex stationarity and consistent field space",
+    "nonempty currents, dynamical projector/axis and normal connection/curvature",
+    "constraint propagation and full Cauchy problem outside the declared truncation",
+    "actual C7 carrier, M spectrum, metric/backreaction and physical scales"
+  ],
+  "main_TeX_changed": false
+}
