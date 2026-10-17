@@ -1,0 +1,131 @@
+{
+  "status": "full-triad metric/readout audit and candidate internal-gauge invariants; NOT induced product geometry, a new native readout law or quantum coherence certification",
+  "native_source_distinction": {
+    "metric_source": "10_sphaera_and_physics.tex prop:bilinear-einstein-reconstruction: E from the complete Psi_triangle, no fixed ART/QFT selector",
+    "cross_source": "12_structural_core.tex Cross-bilinear geometry channel: additional ART/QFT mixed readout with heuristic focusing functional",
+    "full_metric_alone_does_not_force_common_internal_gauge_factor": true
+  },
+  "full_coframe_on_spectral_solution": {
+    "coframe": [
+      [
+        1.3877787807814457e-17,
+        -1.9172808180573533e-17,
+        3.5180587792767354e-18,
+        0.22797896422202488
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        6.938893903907228e-18,
+        7.872432801983205e-19,
+        1.1366861235215972e-18,
+        3.469446951953614e-18
+      ]
+    ],
+    "singular_values": [
+      0.22797896422202485,
+      1.426585782573436e-17,
+      1.508259478598293e-33,
+      0.0
+    ],
+    "rank": 1,
+    "metric": [
+      [
+        -1.4444474582904269e-34,
+        2.715387612077887e-34,
+        -4.093552882106134e-35,
+        -3.163843690118585e-18
+      ],
+      [
+        2.715387612077887e-34,
+        -3.6697682154684998e-34,
+        6.834591465549258e-35,
+        4.370996950234719e-18
+      ],
+      [
+        -4.093552882106134e-35,
+        6.834591465549258e-35,
+        -1.1084682231039558e-35,
+        -8.020433965717114e-19
+      ],
+      [
+        -3.163843690118585e-18,
+        4.370996950234719e-18,
+        -8.020433965717114e-19,
+        -0.0519744081277473
+      ]
+    ],
+    "invariant_coframe_residual": 8.589947089146474e-17,
+    "invariant_metric_residual": 3.533766823478576e-17,
+    "analytic_rank_one_residual": 2.5192527138617162e-17,
+    "rho_first": 0.45595792844404975,
+    "two_sum_m_uv": 0.22797896422202482,
+    "prescribed_metric_rank": 4,
+    "prescribed_metric_is_not_the_reconstructed_metric": true
+  },
+  "fixed_bilinear_selector_classification": {
+    "Hermitian_selectors_invariant_under_common_factor": 9,
+    "Hermitian_selectors_invariant_under_maximal_spectral_factor": 3,
+    "spectral_result": "R=sum_r c_r (I2 tensor q_r); fixed bilinear inter-mode selectors are not invariant"
+  },
+  "bare_cross_metric_negative_control": {
+    "off_shell_free_point_jet_not_a_field_solution": true,
+    "original_coframe_rank": 4,
+    "transformed_coframe_rank": 4,
+    "bare_metric_change_norm": 0.12156629280538472,
+    "transported_selector_metric_change_norm": 0.0
+  },
+  "candidate_matrix_readouts": {
+    "pair_tensor": "C_rs^{mu nu}=Tr(E_r J^mu E_s J^nu); internal-gauge invariant, real part symmetric in mu/nu for Hermitian currents",
+    "loop_tensor": "L^{mu nu lambda}=Tr(E_1 J^mu E_2 J^nu E_3 J^lambda)",
+    "pair_covariance_residual": 8.827247809288161e-18,
+    "loop_covariance_residual": 5.671137542485703e-20,
+    "time_chart_pair_components": [
+      [
+        0.01461730080892022,
+        0.0009370289230662901,
+        0.01620202721836043
+      ],
+      [
+        0.0009370289230662901,
+        6.0783023809312185e-05,
+        0.0010628235810158113
+      ],
+      [
+        0.01620202721836043,
+        0.0010628235810158115,
+        0.018779579689016664
+      ]
+    ],
+    "on_shell_time_loop_real_imag": [
+      0.00012702574996867444,
+      8.850764190837191e-22
+    ],
+    "off_shell_complex_time_loop_real_imag": [
+      0.24999999999999994,
+      -0.24999999999999994
+    ],
+    "time_components_are_not_Lorentz_scalars": true,
+    "current_angular_components_norm": 0.0,
+    "pair_tensors_and_internal_linear_combinations_have_rank_at_most_two": true,
+    "quartic_sextic_classical_products_not_native_metric_replacements_or_quantum_observables": true
+  },
+  "remaining_obligations": [
+    "specify whether cross-readouts are fixed invariants, covariant references or part of another invariant functional",
+    "the complete native coframe is internally gauge invariant but degenerate on this stationary single-polarization branch",
+    "new angular/spin structure is needed to escape this rank deficiency; more internal phases alone cannot do it",
+    "the earlier same-induced-frame real-bilinear trace obstruction still applies under its hypotheses; rank alone is not the entire geometry problem",
+    "no physical C7 embedding, quantum ordering, scale calibration or metric backreaction is derived"
+  ],
+  "main_TeX_changed": false
+}

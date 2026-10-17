@@ -1,0 +1,276 @@
+{
+  "status": "active-source/variational audit and curved same-coframe OFF-SHELL control; NOT a new native probe law or full solution",
+  "audited_sources": {
+    "entrypoint": {
+      "path": "sources/research/v480-companion.tex",
+      "sha256": "f90dfe3eda2630b7741bdc8799bf6f27076efe93e78da6c624ab799d37d15315",
+      "canonical_LF_sha256": "c0c8b9772cf716fc8314ac891878652df475d74e6addf82ceb2655b9a167d9b7",
+      "anchors": {
+        "parts/hc-dynamics-and-geometry": [
+          13
+        ],
+        "parts/v470/10_sphaera_and_physics": [
+          16
+        ],
+        "parts/v470/13_hc_hypotheses": [
+          18
+        ],
+        "parts/v470/16_master_model": [
+          20
+        ]
+      },
+      "all_anchors_found": true
+    },
+    "legacy_probe": {
+      "path": "sources/research/parts/v470/10_sphaera_and_physics.tex",
+      "sha256": "6531f1c5f2e08eae434c11fbba2c8e0e096828d3320fec956d9c41071e756df7",
+      "canonical_LF_sha256": "f9028451ba02d68b125f84f203807123874becc7c450c20e69debd9b8a859272",
+      "anchors": {
+        "thm:dirac-probe": [
+          2074,
+          2098,
+          2177,
+          2199
+        ],
+        "thm:master-field-equation": [
+          2175
+        ],
+        "prop:triadic-two-probe": [
+          2260
+        ],
+        "thm:variational-form": [
+          2300
+        ],
+        "thm:closed-master-system": [
+          2425
+        ],
+        "prop:bilinear-einstein-reconstruction": [
+          2645
+        ]
+      },
+      "all_anchors_found": true
+    },
+    "structural_core": {
+      "path": "sources/research/parts/v470/12_structural_core.tex",
+      "sha256": "4d663bedef288c803b1538b417e8a846006d77fe2c540adc066a86851e952b15",
+      "canonical_LF_sha256": "952cce6fb727fe57948eeb5c9ab34433860ab997a1dc40ec9d747905d0bdee59",
+      "anchors": {
+        "thm:hc-spectral-projector": [
+          296,
+          615,
+          630,
+          677,
+          719,
+          934,
+          1009,
+          1597,
+          1886
+        ],
+        "rem:hc-shadow-vs-core": [
+          924,
+          1830,
+          1883
+        ]
+      },
+      "all_anchors_found": true
+    },
+    "later_hypotheses": {
+      "path": "sources/research/parts/v470/13_hc_hypotheses.tex",
+      "sha256": "fa97bc7dc07be0263a95d2cd4083b3ee0e4572073fb386464b24ceaa75ee2b47",
+      "canonical_LF_sha256": "73f20099e31058e1474bfb06f07a5db649d3a420e8f197950753c052cefda240",
+      "anchors": {
+        "hyp:hc-meta-generator": [
+          16,
+          39,
+          92,
+          102,
+          111,
+          184
+        ],
+        "hyp:frame-dependent-defect-readout": [
+          219,
+          262,
+          271
+        ],
+        "thm:theorem-level-shadow-fluid-type-readout": [
+          331,
+          353,
+          357
+        ]
+      },
+      "all_anchors_found": true
+    },
+    "later_synthesis": {
+      "path": "sources/research/parts/v470/16_master_model.tex",
+      "sha256": "3cde6869502ff4b3cbe4f3fc0534cc5d331d1815014904299eb935ea026493b3",
+      "canonical_LF_sha256": "680da3b9b23ac9c73ddb046860627dfb6ff9bf343d2553c0df93665b8022ecf2",
+      "anchors": {
+        "thm:minimal-mmhc-field-equation": [
+          662
+        ]
+      },
+      "all_anchors_found": true
+    },
+    "current_qualification": {
+      "path": "sources/research/parts/hc-dynamics-and-geometry.tex",
+      "sha256": "472297781d9eb837bc4e5f6ecac59d9e4abe792a03bc8df7eacd4247fda3546f",
+      "canonical_LF_sha256": "472297781d9eb837bc4e5f6ecac59d9e4abe792a03bc8df7eacd4247fda3546f",
+      "anchors": {
+        "v480:hc-dynamics-geometry": [
+          2
+        ],
+        "A genuinely real symmetric probe action": [
+          232
+        ],
+        "v480:hc-same-frame-obstruction": [
+          398
+        ]
+      },
+      "all_anchors_found": true
+    }
+  },
+  "source_conclusions": {
+    "later_active_synthesis_still_prints_ordered_master_equation": true,
+    "free_Dirac_block_is_a_limit_not_the_full_transport_law": true,
+    "later_fluid_shadow_explicitly_retains_original_kernel": true,
+    "deeper_frame_dependent_HC_is_not_identical_to_minimal_visible_defect": true,
+    "no_evaluated_superseding_native_probe_law_found_in_audited_blocks": true,
+    "real_action_and_composite_geometry_require_distinct_variations": true
+  },
+  "fixed_background_real_action": {
+    "EL": "R_sym=i K^mu D_mu psi-W psi+(i/2) Z psi",
+    "compatibility_defect": "Z=volume^(-1) partial_mu(volume K^mu)-B_mu^dagger K^mu-K^mu B_mu",
+    "Ward_identity": "volume^(-1) partial_mu(volume j^mu)=2 Im(psi^dagger R_sym), W Hermitian",
+    "composite_chain_reactions_are_additional_not_included_in_this_partial_EL": true
+  },
+  "independent_periodic_action_check": {
+    "grid_points": 65,
+    "direct_action_variation": -2.5167431929785793,
+    "derived_EL_variation": -2.5167431929785806,
+    "analytic_variation_error": 1.3322676295501878e-15,
+    "finite_difference_variation_error": 7.803606649758876e-10,
+    "unchanged_ordered_equation_variation_error": 0.09002115787508647,
+    "Ward_identity_max_error": 2.6645352591003757e-15
+  },
+  "curved_same_coframe_control": {
+    "time": 1.2,
+    "metric": [
+      [
+        -1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.44,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.44,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.44
+      ]
+    ],
+    "frame": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.2,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.2,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.2
+      ]
+    ],
+    "frame_reconstruction_error": 3.8459253727671276e-16,
+    "ricci": [
+      [
+        -3.3306690738754696e-16,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        2.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        2.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        2.0
+      ]
+    ],
+    "ricci_formula_error": 3.3306690738754696e-16,
+    "scalar_curvature": 4.166666666666667,
+    "scalar_prediction": 4.166666666666667,
+    "compatibility_defect_norm": 0.0,
+    "same_induced_probe_residual_norm": 2.7442060175334264,
+    "imaginary_probe_trace": 4.000000000000001,
+    "phase_current_divergence": 8.0,
+    "homothetic_current_error": 4.440892098500626e-16,
+    "curvature_annihilates_current_error": 6.526751786450489e-16,
+    "curved_geometry_does_not_solve_probe_gauge_or_einstein_equations": true
+  },
+  "half_density_control": {
+    "coframe_transport_error": 4.440892098500626e-16,
+    "probe_equation_transport_error": 2.220446049250313e-16,
+    "naively_keeping_old_connection_changes_coframe_error": 3.000000000000001,
+    "normalized_imaginary_probe_trace": 4.000000000000001
+  },
+  "on_shell_fixed_cone_control": {
+    "probe_residual_norm": 5.551115123125783e-17,
+    "phase_current_divergence": 0.0,
+    "coframe_definition_error": 2.336210071247728,
+    "does_not_solve_the_joint_reconstruction": true
+  },
+  "surviving_projector_comparison": {
+    "projector_norm": 1.0,
+    "visible_minimal_HC_norm": 2.436092337203327e-32,
+    "reduced_connection_Hermitian_part_norm": 7.252228519226796e-18,
+    "internal_bundle_curvature_norm": 0.16970562748477144,
+    "coframe_change_norm": 1.1316849498418344e-16,
+    "probe_operator_lift_error": 3.599047946526265e-16,
+    "imaginary_full_probe_trace": 4.0,
+    "orthogonal_factorized_model_not_native_C_M16_or_a_sourced_gauge_solution": true
+  },
+  "phase_blind_composite_constraint": {
+    "local_phase_coframe_error": 2.7755575615628914e-17,
+    "real_phase_invariant_geometry_and_constraint_do_not_supply_extra_phase_current": true,
+    "under_compatible_same_frame_HC_zero_hypotheses_current_divergence_is_eight_so_closed_phase_symmetric_action_cannot_be_stationary": true,
+    "not_a_no_go_for_all_native_readouts_adjoint_choices_or_quantum_completions": true
+  },
+  "main_TeX_changed": false
+}

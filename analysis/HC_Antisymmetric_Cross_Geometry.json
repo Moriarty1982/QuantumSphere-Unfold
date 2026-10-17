@@ -1,0 +1,105 @@
+{
+  "status": "candidate antisymmetric existing-cross readout, reference on-shell curved diagnostic and parent-current variation; NOT native full-coframe replacement or a joint induced/gauge/Einstein solution",
+  "source": {
+    "path": "sources/research/parts/v470/12_structural_core.tex",
+    "ingredient": "Cross-bilinear geometry channel and similarly with probes exchanged",
+    "new_choice": "C_minus=Re(B_ART,QFT-B_QFT,ART)/2; its adoption as a coframe remains additional"
+  },
+  "identities": {
+    "exchange_even": "C_plus=(covariant derivative of Re(bar psi_ART Gamma^a psi_QFT))/2 for the compatible common transport",
+    "exchange_odd": "C_minus=Re(Psi^dagger R_minus K^a D_mu Psi)=Im(Psi^dagger Q K^a D_mu Psi), Q=i R_minus Hermitian",
+    "fixed_connection_local_phase": "delta C_minus^a_mu=q^a partial_mu alpha, q^a=Psi^dagger Q K^a Psi",
+    "parent_conserved_flux_density": "volume J_D^mu+lambda_a^mu q^a",
+    "kinetic_density_weights": "volume K_coordinate^mu+lambda_a^mu (Q tensor K_frame^a)"
+  },
+  "existing_sourced_stationary_branch": {
+    "odd_rank": 2,
+    "odd_singular_values": [
+      0.007355436439200089,
+      1.5756288826319596e-06,
+      0.0,
+      0.0
+    ],
+    "angular_columns_norm": 6.893345423572658e-21,
+    "still_not_four_dimensional_geometry": true
+  },
+  "reference_on_shell_curved_diagnostic": {
+    "point": [
+      0.1,
+      0.02,
+      -0.03,
+      0.01
+    ],
+    "coframe": [
+      [
+        0.22834968975771286,
+        2.168404344971009e-18,
+        1.3755815063409838e-18,
+        0.0
+      ],
+      [
+        0.009727980062417863,
+        -0.008802839565906845,
+        0.0007356606366776238,
+        0.0
+      ],
+      [
+        -0.011472547004548,
+        -0.0007356606366776238,
+        -0.008802839565906845,
+        0.0
+      ],
+      [
+        0.00414412316449844,
+        0.0,
+        0.0,
+        -0.008802839565906894
+      ]
+    ],
+    "coframe_singular_values": [
+      0.22888287495571255,
+      0.008833525966195601,
+      0.008816260943565182,
+      0.008799531834919837
+    ],
+    "metric_eigenvalues": [
+      -0.051900519382966824,
+      7.750553750639636e-05,
+      7.80311809954519e-05,
+      7.83808861041667e-05
+    ],
+    "reference_probe_residual_norm": 1.348777453093201e-15,
+    "coframe_determinant": -1.568524810610237e-07,
+    "Ricci_scalar_not_physically_calibrated": 721993.9814432261,
+    "Riemann_component_norm_not_invariant": 5009.435503596055,
+    "induced_probe_residual_norm": 525.8369559282681,
+    "own_spin_changes_readout_norm": 0.0019661767347758457,
+    "neutral_reference_equation_has_no_solved_charged_Gauss_or_Einstein_sector": true
+  },
+  "parent_action_check": {
+    "grid_points": 65,
+    "direct_parent_density_action_error": 2.842170943040401e-14,
+    "independent_probe_variation_error": 2.3090207697251675e-09,
+    "phase_Ward_identity_max_error": 9.325873406851315e-15,
+    "minimum_temporal_weight_eigenvalue": 0.8546336263140649,
+    "off_shell_variation_not_joint_field_solution": true
+  },
+  "flat_reference_temporal_positivity": {
+    "exact_condition": "abs(lambda_0^0)+norm(lambda_spatial^0)<2 volume",
+    "not_derived_multiplier_dynamics_or_general_hyperbolicity": true
+  },
+  "quadrature_locked_kinetic_limit": {
+    "identity": "psi_QFT=exp(i delta) psi_ART gives C_minus=-sin(delta) Im(bar psi_ART Gamma^a D_mu psi_ART)",
+    "quadrature_not_derived_or_preserved_by_real_triadic_coupling": true,
+    "same_derivative_kinetic_volume_identity_error": 8.881784197001252e-16,
+    "same_derivative_pure_trace_stress_identity_error": 9.164628277597125e-16,
+    "on_shell_fixed_metric_Dirac_stress_if_kinetic_frame_is_own_frame": "T_ab=-eta_ab/s; not generic matter and not a derived cosmological constant"
+  },
+  "remaining_obligations": [
+    "justify the exchange-odd observable and its physical normalization",
+    "transport the readout covariantly under the actual gauge group and retain its reaction",
+    "solve coframe, multiplier, probe, gauge and geometry variations together with the same connection",
+    "check positive temporal weights, constraints, boundary data and physical scale calibration"
+  ],
+  "main_TeX_changed": false
+}

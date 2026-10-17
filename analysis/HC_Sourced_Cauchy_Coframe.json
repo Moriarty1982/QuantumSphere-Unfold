@@ -1,0 +1,217 @@
+{
+  "status": "local analytic sourced flat-reference comparison with full-rank but flat induced coframe; NOT native C7, same-induced-frame solution, Einstein solution or continuation of the Hopf flux sector",
+  "dictionary": {
+    "mass_matrix": [
+      [
+        "3/5",
+        "0",
+        "4"
+      ],
+      [
+        "0",
+        "3/5",
+        "7/10"
+      ],
+      [
+        "4",
+        "7/10",
+        "3/5"
+      ]
+    ],
+    "common_U1_full_trace_coupling": "16/75",
+    "projector": "I3; hard H=Lambda=0 eliminated before variation",
+    "adjoint": "ordinary Hermitian real-symmetric probe comparison"
+  },
+  "initial_data": {
+    "psi": [
+      [
+        "1",
+        "0",
+        "z/2",
+        "-x/2 - I*y/2"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "electric": [
+      "16*x*(x**2/20 + y**2/20 + z**2/20 + 1/3)/75",
+      "16*y*(x**2/20 + y**2/20 + z**2/20 + 1/3)/75",
+      "16*z*(x**2/20 + y**2/20 + z**2/20 + 1/3)/75"
+    ],
+    "current": [
+      "x**2/4 + y**2/4 + z**2/4 + 1",
+      "-x",
+      "-y",
+      "z"
+    ],
+    "coframe": [
+      [
+        "1/2",
+        "x/4",
+        "y/4",
+        "z/4"
+      ],
+      [
+        "-x/4 + 3*y/5",
+        "-1/2",
+        "0",
+        "0"
+      ],
+      [
+        "-3*x/5 - y/4",
+        "0",
+        "-1/2",
+        "0"
+      ],
+      [
+        "z/4",
+        "0",
+        "0",
+        "1/2"
+      ]
+    ],
+    "coframe_determinant": "-(x**2 + y**2 + z**2 - 4)/64",
+    "timelike_current_margin": "(x**2 + y**2 + z**2 - 4)**2/16",
+    "full_rank_on_initial_ball_r_less_than_two": true
+  },
+  "exact_Taylor_substitution": {
+    "time_polynomial_degree": 3,
+    "zero_coefficients_by_equation": {
+      "dirac": [
+        true,
+        true,
+        true
+      ],
+      "potential": [
+        true,
+        true,
+        true
+      ],
+      "electric": [
+        true,
+        true,
+        true
+      ],
+      "continuity": [
+        true,
+        true,
+        true
+      ],
+      "gauss": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    "evolution_and_continuity_residual_order_at_least": 3,
+    "gauss_residual_order_at_least": 4,
+    "finite_Taylor_polynomial_is_not_exact_solution": true
+  },
+  "local_analytic_existence": {
+    "method": "second-time-order analytic normal form; first-order Dirac residual has time derivative zero; Gauss propagates by current continuity",
+    "reference": "https://www.math.mcgill.ca/gantumur/math580f14/analytic.pdf, Theorem 33",
+    "no_global_finite_energy_stability_or_explicit_lifespan_claim": true
+  },
+  "geometry_at_origin": {
+    "coframe": [
+      [
+        0.5,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -0.5,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -0.5,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.5
+      ]
+    ],
+    "metric": [
+      [
+        -0.25,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.25,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.25,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.25
+      ]
+    ],
+    "reference_probe_stress": [
+      [
+        0.6,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "spin_connection_norm": 0.0,
+    "curvature_norm": 5.17892563931115e-15,
+    "general_identity": "E=d(j/2), so the metric is locally flat wherever E is invertible"
+  },
+  "same_induced_frame_negative_control": {
+    "reference_Dirac_residual_norm": 0.0,
+    "induced_Dirac_residual_norm": 5.688585061331157,
+    "imaginary_bilinear_residual": 4.0,
+    "induced_coordinate_current_divergence": 8,
+    "same_frame_obstruction_is_not_removed": true
+  },
+  "main_TeX_changed": false
+}
