@@ -185,6 +185,8 @@ These established tools motivate the declared comparison. The Helmholtz reductio
 
 ## 7. Reproduction
 
+The subsequent [common-metric Dirac continuation](HC_Dirac_State_Gravity.md) uses the already prepared triadic spinor carrier without adding scalar matter. It computes both the positive diagonal source and interference, and solves the metric and spinor reaction through first gravitational order. Its general weak metric has a nonzero scalar curvature; the old pure-null geometry cannot support its nonzero mass trace alone. The native bilinear coframe is still degenerate for the selected modes, so the independent-metric comparison is not a completed native reconstruction.
+
 `python -B analysis/HC_Quantum_State_Gravity.py --output analysis/HC_Quantum_State_Gravity.json` reproduces the numerical report. Thirty-two focused tests cover independent metric and field variations, the off-shell Ward identity, finite-Fock operators, state/mode normalization, phase invariance and dephasing, fixed total energy, all linear Einstein components and nonlinear first-order convergence, sourced profile jets and all enlarged-parent equations, plus mass-restoration and missing-source negative controls. They use the existing NumPy installation.
 
 The proofs and first-order versus exact scope remain essential. These tests are not an empirical result or a proof-assistant certificate. No new main-paper theorem or release claim is adopted.

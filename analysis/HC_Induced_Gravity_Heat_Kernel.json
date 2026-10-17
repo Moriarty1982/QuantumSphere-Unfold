@@ -1,0 +1,837 @@
+{
+  "status": "conditional regulated one-loop Euclidean Dirac comparison, NOT native HC/trace-formula Einstein derivation",
+  "assumptions": [
+    "four-dimensional smooth Euclidean spin metric already supplied",
+    "torsion-free positive elliptic D_E^2=-nabla^2+R/4",
+    "constant finite Hermitian internal M commuting with D_E",
+    "parity-even determinant modulus only; determinant phase not computed",
+    "proper-time window is a regulator, not a native fast/slow projector"
+  ],
+  "formulae": {
+    "effective_action": "Gamma_E=-1/2 Tr log(D_E^2+M^2)=+1/2 integral ds/s Tr exp[-s(D_E^2+M^2)]",
+    "heat_density": "(4 pi s)^(-2) Tr_internal exp(-s M^2) [4-R s/3+O(s^2)]",
+    "A": "sum I/(96 pi^2), I=integral ds s^-2 exp(-m^2 s)",
+    "rho": "sum J/(8 pi^2), J=integral ds s^-3 exp(-m^2 s)",
+    "Einstein_normalization": "Gamma_E=int sqrt(g)[rho-A R]; 1/G=16 pi A, kappa=1/(2 A), Lambda_cos=kappa rho",
+    "unsubtracted_vacuum_bound": "3 (UV^2+IR^2) <= Lambda_cos_truncated < 6 UV^2 for nonnegative m_i^2",
+    "bound_is_not_a_solution_of_the_full_large_curvature_effective_action": true
+  },
+  "prepared_carrier": {
+    "matrix": [
+      [
+        0.6,
+        0.0,
+        4.0
+      ],
+      [
+        0.0,
+        0.6,
+        0.7
+      ],
+      [
+        4.0,
+        0.7,
+        0.6
+      ]
+    ],
+    "mass_eigenvalues": [
+      -3.4607881008493906,
+      0.6,
+      4.660788100849391
+    ],
+    "negative_eigenvalue_is_not_negative_mass_squared": true,
+    "dimensionless_example_not_native_C7_M16_spectrum": true
+  },
+  "sample": {
+    "masses": [
+      -3.4607881008493906,
+      0.6,
+      4.660788100849391
+    ],
+    "I": [
+      352.69384094737796,
+      394.3579373537174,
+      326.9478661712345
+    ],
+    "J": [
+      75527.57909975729,
+      79849.73651207634,
+      72220.10514117648
+    ],
+    "UV": 20.0,
+    "IR": 2.0,
+    "A": 1.1335303667644416,
+    "rho_vac": 2882.55500807977,
+    "inverse_G": 56.97745076556982,
+    "kappa": 0.44109978405537037,
+    "Lambda_cos_truncated": 1271.4943915917129,
+    "R_vac_truncated": 5085.9775663668515,
+    "Lambda_cos_over_UV_squared": 3.178735978979282
+  },
+  "independent_truncated_action_quadrature": {
+    "R": 0.01,
+    "direct": 2882.5436727761016,
+    "coefficient_expression": 2882.543672776102
+  },
+  "sphere_spectral_check": [
+    {
+      "heat_trace": 1633.4558857883294,
+      "tail_bound": 1.0115227390061956e-12,
+      "cutoff_k": 44,
+      "radius": 1.0,
+      "s": 0.02,
+      "a2_per_scalar_curvature": -0.33210780878337176,
+      "a4_remainder": 0.12255245499621736
+    },
+    {
+      "heat_trace": 6600.122386788336,
+      "tail_bound": 5.315764871502964e-12,
+      "cutoff_k": 62,
+      "radius": 1.0,
+      "s": 0.01,
+      "a2_per_scalar_curvature": -0.3327213993916519,
+      "a4_remainder": 0.12238678833698202
+    },
+    {
+      "heat_trace": 26533.455637702024,
+      "tail_bound": 3.796900273389935e-11,
+      "cutoff_k": 87,
+      "radius": 1.0,
+      "s": 0.005,
+      "a2_per_scalar_curvature": -0.3330275724116113,
+      "a4_remainder": 0.12230436869262462
+    },
+    {
+      "heat_trace": 106400.12226326132,
+      "tail_bound": 1.5524198258221094e-10,
+      "cutoff_k": 123,
+      "radius": 1.0,
+      "s": 0.0025,
+      "a2_per_scalar_curvature": -0.33318050425667306,
+      "a4_remainder": 0.12226326133048815
+    }
+  ],
+  "massless_window": {
+    "computed": {
+      "masses": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "I": [
+        396.0,
+        396.0,
+        396.0
+      ],
+      "J": [
+        79992.0,
+        79992.0,
+        79992.0
+      ],
+      "UV": 20.0,
+      "IR": 2.0,
+      "A": 1.25384964757393,
+      "rho_vac": 3039.331545719206,
+      "inverse_G": 63.02535746439055,
+      "kappa": 0.3987718949935094,
+      "Lambda_cos_truncated": 1212.0,
+      "R_vac_truncated": 4848.0,
+      "Lambda_cos_over_UV_squared": 3.03
+    },
+    "expected_inverse_G": 63.02535746439055,
+    "expected_Lambda_cos": 1212
+  },
+  "UV_sensitivity_at_fixed_IR_2": [
+    {
+      "masses": [
+        -3.4607881008493906,
+        0.6,
+        4.660788100849391
+      ],
+      "I": [
+        68.7727732997923,
+        94.85651768799102,
+        55.369826649329184
+      ],
+      "J": [
+        4023.3716445053574,
+        4957.646738488958,
+        3422.2935591452706
+      ],
+      "UV": 10.0,
+      "IR": 2.0,
+      "A": 0.23113801891270636,
+      "rho_vac": 157.08978088284078,
+      "inverse_G": 11.61826403490331,
+      "kappa": 2.1632096803115477,
+      "Lambda_cos_truncated": 339.8181346837811,
+      "R_vac_truncated": 1359.2725387351245,
+      "Lambda_cos_over_UV_squared": 3.398181346837811
+    },
+    {
+      "masses": [
+        -3.4607881008493906,
+        0.6,
+        4.660788100849391
+      ],
+      "I": [
+        352.69384094737796,
+        394.3579373537174,
+        326.9478661712345
+      ],
+      "J": [
+        75527.57909975729,
+        79849.73651207634,
+        72220.10514117648
+      ],
+      "UV": 20.0,
+      "IR": 2.0,
+      "A": 1.1335303667644416,
+      "rho_vac": 2882.55500807977,
+      "inverse_G": 56.97745076556982,
+      "kappa": 0.44109978405537037,
+      "Lambda_cos_truncated": 1271.4943915917129,
+      "R_vac_truncated": 5085.9775663668515,
+      "Lambda_cos_over_UV_squared": 3.178735978979282
+    },
+    {
+      "masses": [
+        -3.4607881008493906,
+        0.6,
+        4.660788100849391
+      ],
+      "I": [
+        1536.2237678093452,
+        1593.8589928609365,
+        1497.2709044086034
+      ],
+      "J": [
+        1261254.011402851,
+        1279417.826329373,
+        1246476.4805972495
+      ],
+      "UV": 40.0,
+      "IR": 2.0,
+      "A": 4.883843234140651,
+      "rho_vac": 47964.7937802789,
+      "inverse_G": 245.48873641056775,
+      "kappa": 0.10237838850042016,
+      "Lambda_cos_truncated": 4910.55829197993,
+      "R_vac_truncated": 19642.23316791972,
+      "Lambda_cos_over_UV_squared": 3.069098932487456
+    },
+    {
+      "masses": [
+        -3.4607881008493906,
+        0.6,
+        4.660788100849391
+      ],
+      "I": [
+        6319.653613689448,
+        6393.35995726451,
+        6267.2667935301015
+      ],
+      "J": [
+        20403863.44863818,
+        20477689.916157603,
+        20342532.628698703
+      ],
+      "UV": 80.0,
+      "IR": 2.0,
+      "A": 20.0323382540932,
+      "rho_vac": 775412.1075351418,
+      "inverse_G": 1006.9351470925598,
+      "kappa": 0.02495964243703978,
+      "Lambda_cos_truncated": 19354.008945428577,
+      "R_vac_truncated": 77416.03578171431,
+      "Lambda_cos_over_UV_squared": 3.024063897723215
+    }
+  ],
+  "explicit_vacuum_subtraction_INPUT_not_derivation": {
+    "A_total": 1.1335303667644416,
+    "rho_total": 0.0,
+    "inverse_G": 56.97745076556982,
+    "kappa": 0.44109978405537037,
+    "Lambda_cos": 0.0
+  },
+  "finite_Einstein_counterterm_INPUT_not_prediction": {
+    "A_total": 2.2670607335288833,
+    "rho_total": 0.0,
+    "inverse_G": 113.95490153113964,
+    "kappa": 0.22054989202768518,
+    "Lambda_cos": 0.0
+  },
+  "vacuum_balance_follow_through": {
+    "status": "ordinary scalar/Dirac determinant comparison; added scalar partners are NOT native HC fields",
+    "mass_matched_minimal_scalars": {
+      "fermion_squared_masses": [
+        11.97705427898073,
+        0.36,
+        21.722945721019276
+      ],
+      "scalar_squared_masses": [
+        11.97705427898073,
+        11.97705427898073,
+        11.97705427898073,
+        11.97705427898073,
+        0.36,
+        0.36,
+        0.36,
+        0.36,
+        21.722945721019276,
+        21.722945721019276,
+        21.722945721019276,
+        21.722945721019276
+      ],
+      "scalar_xi": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "UV": 20.0,
+      "IR": 2.0,
+      "A": 3.4005911002933256,
+      "rho_vac": 0.0,
+      "inverse_G": 170.9323522967095,
+      "Einstein_coefficient_numerically_resolved": true,
+      "positive_Einstein_coefficient": true,
+      "kappa": 0.1470332613517901,
+      "Lambda_cos_truncated": 0.0,
+      "signed_mass_moments_0_1_2": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "heat_samples": [
+        {
+          "s": 0.003,
+          "W0": 0.0,
+          "B2": 2.900536546780513
+        },
+        {
+          "s": 0.03,
+          "W0": 0.0,
+          "B2": 2.208579975746303
+        },
+        {
+          "s": 0.3,
+          "W0": 0.0,
+          "B2": 0.9266183251306436
+        },
+        {
+          "s": 3.0,
+          "W0": 0.0,
+          "B2": 0.33959552564493933
+        }
+      ]
+    },
+    "curvature_coupling_control": [
+      {
+        "fermion_squared_masses": [
+          11.97705427898073,
+          0.36,
+          21.722945721019276
+        ],
+        "scalar_squared_masses": [
+          11.97705427898073,
+          11.97705427898073,
+          11.97705427898073,
+          11.97705427898073,
+          0.36,
+          0.36,
+          0.36,
+          0.36,
+          21.722945721019276,
+          21.722945721019276,
+          21.722945721019276,
+          21.722945721019276
+        ],
+        "scalar_xi": [
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666
+        ],
+        "UV": 20.0,
+        "IR": 2.0,
+        "A": 1.1335303667644419,
+        "rho_vac": 0.0,
+        "inverse_G": 56.97745076556983,
+        "Einstein_coefficient_numerically_resolved": true,
+        "positive_Einstein_coefficient": true,
+        "kappa": 0.4410997840553703,
+        "Lambda_cos_truncated": 0.0,
+        "signed_mass_moments_0_1_2": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "heat_samples": [
+          {
+            "s": 0.003,
+            "W0": 0.0,
+            "B2": 0.9668455155935045
+          },
+          {
+            "s": 0.03,
+            "W0": 0.0,
+            "B2": 0.7361933252487678
+          },
+          {
+            "s": 0.3,
+            "W0": 0.0,
+            "B2": 0.3088727750435479
+          },
+          {
+            "s": 3.0,
+            "W0": 0.0,
+            "B2": 0.11319850854831312
+          }
+        ]
+      },
+      {
+        "fermion_squared_masses": [
+          11.97705427898073,
+          0.36,
+          21.722945721019276
+        ],
+        "scalar_squared_masses": [
+          11.97705427898073,
+          11.97705427898073,
+          11.97705427898073,
+          11.97705427898073,
+          0.36,
+          0.36,
+          0.36,
+          0.36,
+          21.722945721019276,
+          21.722945721019276,
+          21.722945721019276,
+          21.722945721019276
+        ],
+        "scalar_xi": [
+          0.25,
+          0.25,
+          0.25,
+          0.25,
+          0.25,
+          0.25,
+          0.25,
+          0.25,
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "UV": 20.0,
+        "IR": 2.0,
+        "A": -8.999128876959774e-17,
+        "rho_vac": 0.0,
+        "inverse_G": -4.523455546970335e-15,
+        "Einstein_coefficient_numerically_resolved": false,
+        "positive_Einstein_coefficient": false,
+        "kappa": null,
+        "Lambda_cos_truncated": null,
+        "signed_mass_moments_0_1_2": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "heat_samples": [
+          {
+            "s": 0.003,
+            "W0": 0.0,
+            "B2": -5.551115123125783e-17
+          },
+          {
+            "s": 0.03,
+            "W0": 0.0,
+            "B2": -8.326672684688674e-17
+          },
+          {
+            "s": 0.3,
+            "W0": 0.0,
+            "B2": -5.735429492448318e-17
+          },
+          {
+            "s": 3.0,
+            "W0": 0.0,
+            "B2": -1.387778780781447e-17
+          }
+        ]
+      },
+      {
+        "fermion_squared_masses": [
+          11.97705427898073,
+          0.36,
+          21.722945721019276
+        ],
+        "scalar_squared_masses": [
+          11.97705427898073,
+          11.97705427898073,
+          11.97705427898073,
+          11.97705427898073,
+          0.36,
+          0.36,
+          0.36,
+          0.36,
+          21.722945721019276,
+          21.722945721019276,
+          21.722945721019276,
+          21.722945721019276
+        ],
+        "scalar_xi": [
+          0.3,
+          0.3,
+          0.3,
+          0.3,
+          0.3,
+          0.3,
+          0.3,
+          0.3,
+          0.3,
+          0.3,
+          0.3,
+          0.3
+        ],
+        "UV": 20.0,
+        "IR": 2.0,
+        "A": -0.6801182200586652,
+        "rho_vac": 0.0,
+        "inverse_G": -34.1864704593419,
+        "Einstein_coefficient_numerically_resolved": true,
+        "positive_Einstein_coefficient": false,
+        "kappa": -0.7351663067589504,
+        "Lambda_cos_truncated": -0.0,
+        "signed_mass_moments_0_1_2": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "heat_samples": [
+          {
+            "s": 0.003,
+            "W0": 0.0,
+            "B2": -0.5801073093561027
+          },
+          {
+            "s": 0.03,
+            "W0": 0.0,
+            "B2": -0.44171599514926063
+          },
+          {
+            "s": 0.3,
+            "W0": 0.0,
+            "B2": -0.18532366502612868
+          },
+          {
+            "s": 3.0,
+            "W0": 0.0,
+            "B2": -0.06791910512898788
+          }
+        ]
+      }
+    ],
+    "squared_mass_splitting": {
+      "delta_q": 1e-05,
+      "computed": {
+        "fermion_squared_masses": [
+          11.97705427898073,
+          0.36,
+          21.722945721019276
+        ],
+        "scalar_squared_masses": [
+          11.97706427898073,
+          11.97706427898073,
+          11.97706427898073,
+          11.97706427898073,
+          0.36001,
+          0.36001,
+          0.36001,
+          0.36001,
+          21.722955721019275,
+          21.722955721019275,
+          21.722955721019275,
+          21.722955721019275
+        ],
+        "scalar_xi": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "UV": 20.0,
+        "IR": 2.0,
+        "A": 3.4005908922756647,
+        "rho_vac": 0.00013602363777718069,
+        "inverse_G": 170.9323418406014,
+        "Einstein_coefficient_numerically_resolved": true,
+        "positive_Einstein_coefficient": true,
+        "kappa": 0.14703327034596672,
+        "Lambda_cos_truncated": 2.000000030673406e-05,
+        "signed_mass_moments_0_1_2": [
+          0.0,
+          -0.00011999999999701139,
+          -0.002724801199915028
+        ],
+        "heat_samples": [
+          {
+            "s": 0.003,
+            "W0": 3.4806437998469164e-07,
+            "B2": 2.9005364887697835
+          },
+          {
+            "s": 0.03,
+            "W0": 2.650295573225492e-06,
+            "B2": 2.2085795340303744
+          },
+          {
+            "s": 0.3,
+            "W0": 1.1119403222511343e-05,
+            "B2": 0.9266164718967732
+          },
+          {
+            "s": 3.0,
+            "W0": 4.0750851811433036e-05,
+            "B2": 0.3395887338363041
+          }
+        ]
+      },
+      "predicted_rho_derivative_at_matching": 13.6023644011733
+    },
+    "one_missing_partner": {
+      "fermion_squared_masses": [
+        11.97705427898073,
+        0.36,
+        21.722945721019276
+      ],
+      "scalar_squared_masses": [
+        11.97705427898073,
+        11.97705427898073,
+        11.97705427898073,
+        11.97705427898073,
+        0.36,
+        0.36,
+        0.36,
+        0.36,
+        21.722945721019276,
+        21.722945721019276,
+        21.722945721019276
+      ],
+      "scalar_xi": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "UV": 20.0,
+      "IR": 2.0,
+      "A": 3.228055971179752,
+      "rho_vac": 228.66957923994013,
+      "inverse_G": 162.25979079095958,
+      "Einstein_coefficient_numerically_resolved": true,
+      "positive_Einstein_coefficient": true,
+      "kappa": 0.15489198590855469,
+      "Lambda_cos_truncated": 35.41908524534794,
+      "signed_mass_moments_0_1_2": [
+        1.0,
+        21.722945721019276,
+        471.8863707983497
+      ],
+      "heat_samples": [
+        {
+          "s": 0.003,
+          "W0": 0.9369092649205581,
+          "B2": 2.744385002627087
+        },
+        {
+          "s": 0.03,
+          "W0": 0.5211651131346126,
+          "B2": 2.121719123557201
+        },
+        {
+          "s": 0.3,
+          "W0": 0.001478268636352475,
+          "B2": 0.9263719470245848
+        },
+        {
+          "s": 3.0,
+          "W0": 4.983490423437127e-29,
+          "B2": 0.33959552564493933
+        }
+      ]
+    },
+    "first_three_mass_moments_cancel_but_vacuum_does_not": {
+      "fermion_squared_masses": [
+        0.0,
+        2.0000000000000004,
+        2.0000000000000004,
+        2.0000000000000004
+      ],
+      "scalar_squared_masses": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "scalar_xi": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "UV": 20.0,
+      "IR": 2.0,
+      "A": 4.932195939091644,
+      "rho_vac": 0.002615001239853131,
+      "inverse_G": 247.91920845305148,
+      "Einstein_coefficient_numerically_resolved": true,
+      "positive_Einstein_coefficient": true,
+      "kappa": 0.10137472358652572,
+      "Lambda_cos_truncated": 0.0002650950278685332,
+      "signed_mass_moments_0_1_2": [
+        0.0,
+        5.329070518200751e-15,
+        2.1316282072803006e-14
+      ],
+      "heat_samples": [
+        {
+          "s": 0.003,
+          "W0": 1.0751521273277831e-07,
+          "B2": 3.9820538742426037
+        },
+        {
+          "s": 0.03,
+          "W0": 0.00010325934397403813,
+          "B2": 3.8252763908620837
+        },
+        {
+          "s": 0.3,
+          "W0": 0.0696423459853055,
+          "B2": 2.6348278506178615
+        },
+        {
+          "s": 3.0,
+          "W0": 3.431806566489282,
+          "B2": 0.435468495448452
+        }
+      ]
+    },
+    "independent_paired_action_at_R_0_01": -0.03400591100293326,
+    "full_operator_mirror_warning": "opposite equal COMPLETE metric-dependent heat kernels cancel both the vacuum and the Einstein term",
+    "native_anchors": [
+      {
+        "path": "sources/research/parts/v470/10_sphaera_and_physics.tex",
+        "label": "thm:string-lqg-duality",
+        "gap": "J parity labels do not provide independent integration variables, Grassmann statistics or matched Hessian spectra"
+      },
+      {
+        "path": "sources/research/parts/v470/10_sphaera_and_physics.tex",
+        "label": "thm:variational-form",
+        "gap": "full real gauge-fixed Hessian, constraint measure and ghosts are not evaluated; the tested null HC principal tensor is rank one"
+      },
+      {
+        "path": "sources/research/parts/v470/23_physical_readouts.tex",
+        "label": "def:tr-balance",
+        "gap": "no identification of the trace-formula balance with the signed four-dimensional determinant coefficients W0 and B2"
+      }
+    ],
+    "source_value_unit_check": {
+      "historical_paper_values_not_new_measurements": {
+        "ell_P_m": 1.616e-35,
+        "Lambda_obs_per_m2": 1.1e-52,
+        "beta": 0.5493
+      },
+      "observed_dimensionless_Lambda_ellP_squared": 2.8726016e-122,
+      "written_beta_squared": 0.30173049,
+      "ratio_between_written_and_observed_dimensionless_values": 1.0503736055845684e+121,
+      "dimensionless_hierarchy_cannot_be_changed_by_unit_conversion": true
+    },
+    "not_a_native_spectrum_or_a_higher_loop_protection_mechanism": true
+  },
+  "native_source_audit": [
+    {
+      "label": "thm:einstein",
+      "gap": "unitary exp(-i tau L0) replaced by heat exp(-tau L0), without a four-dimensional metric-dependent elliptic operator/domain or regulated determinant"
+    },
+    {
+      "label": "prop:bilinear-einstein-reconstruction",
+      "gap": "the Einstein-Hilbert term is explicitly assumed after coarse-graining, not evaluated from closure"
+    },
+    {
+      "label": "prop:bilinear-einstein-reconstruction",
+      "gap": "constant action density and cosmological curvature coefficient require normalization; they are not the same Lambda"
+    }
+  ],
+  "remaining_obligations": [
+    "derive the native metric/coframe, elliptic operator, domain and admissible Wick rotation",
+    "derive the spectrum, physical UV/IR scales and renormalization/matching conditions",
+    "justify vacuum cancellation or its replacement rather than erase rho by a frame label",
+    "evaluate higher curvature/nonlocal terms and justify the weak-curvature regime",
+    "avoid double-counting fields integrated out and explicit low-energy probes",
+    "specify the Lorentzian state, retarded/in-in response and free gravitational data",
+    "include native HC/gauge/projector/Yukawa sectors and test actual closure"
+  ],
+  "main_TeX_changed": false,
+  "sources": [
+    "https://arxiv.org/html/1805.03148v1",
+    "https://arxiv.org/pdf/gr-qc/9505009",
+    "https://arxiv.org/html/gr-qc/0204062v1"
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "status": "native closed-sector Taylor identities plus a FULL finite constant-background Euclidean dagger-comparison Hessian; NOT native quantization",
+  "native_gaussian_jets": {
+    "projector_tangent": "P0 pi+pi P0=pi; pi has only off-diagonal P0/Q0 blocks",
+    "Lambda_first": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "Lambda_quadratic_coefficient": [
+      [
+        0.8829000000000001,
+        0.0
+      ],
+      [
+        -0.0,
+        0.8829000000000001
+      ]
+    ],
+    "independent_H_penalty": "lambda ||H-Lambda||^2=epsilon^2 lambda ||h||^2+O(epsilon^3), no h/pi quadratic mixing",
+    "dependent_H": "H=Lambda implies delta H=0 on an exactly closed background; no independent HC Gaussian field",
+    "fixed_M_gapped_example": "(a_i-d_j) pi_ij=0 under linearized exact closure; all cross gaps in the sample nonzero, hence pi=0",
+    "M_is_not_the_earlier_prepared_triadic_Dirac_mass_matrix": true,
+    "positive_H_at_zero_is_a_cone_boundary_not_an_unconstrained_Hermitian_Gaussian": true
+  },
+  "comparison_assumptions": [
+    "finite U(N) carrier, ordinary Hermitian fields and Hilbert-Schmidt norm",
+    "Euclidean real nonzero fixed axis, NOT a justified continuation of a real null Lorentzian axis",
+    "positive Tr(F^dagger F)/4, different from the literal printed Tr(F F) action",
+    "flat B0=eta Q0 n, empty probe background; independent unconstrained H with soft matching penalty",
+    "projector tangent kept, exact closure constraint NOT imposed on off-shell fluctuation integration",
+    "full unitary gauge directions concern the curvature/matching quadratic form; fixed noncentral M restricts actual admissible symmetries"
+  ],
+  "quadratic_dictionary": {
+    "u": "kappa h-eta pi",
+    "f": "i(k_mu a_nu-k_nu a_mu)",
+    "d": "d_mu=i k_mu u-eta C a_mu, C=i[Q0,.]",
+    "X": "n_nu d_mu-n_mu d_nu",
+    "H": "F_map^dagger F_map+X_map^dagger X_map+2 lambda H_block+(gauge_map^dagger gauge_map)/zeta",
+    "ghost": "k^2 per complex FP ghost in the declared unitary comparison",
+    "q": "|n|^2 |k|^2-(n.k)^2, zero for all k parallel n",
+    "no_valid_native_heat_trace_or_physical_mode_count_follows": true
+  },
+  "example": {
+    "N": 2,
+    "P_rank": 1,
+    "Hermitian_color_dimension": 4,
+    "projector_tangent_dimension": 2,
+    "real_field_component_count": 22,
+    "generic_gauge_fixed_rank": 22,
+    "generic_principal_rank": 20,
+    "parallel_gauge_fixed_rank": 20,
+    "parallel_eigenvalues": [
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.4899999999999998,
+      1.4899999999999998,
+      1.4899999999999998,
+      1.4899999999999998,
+      1.4899999999999998,
+      1.4899999999999998,
+      2.4,
+      2.4,
+      2.4,
+      2.4
+    ],
+    "quadratic_gauge_null_error": 5.45663604615762e-16,
+    "ghost_variation_error": 0.0,
+    "independent_finite_action": {
+      "epsilon": [
+        0.04,
+        0.02,
+        0.01
+      ],
+      "predicted_quadratic": 1.6668650638295406,
+      "finite_action_quotients": [
+        1.667206813875703,
+        1.666950503756499,
+        1.6668864239622638
+      ],
+      "absolute_errors": [
+        0.00034175004616243676,
+        8.543992695830838e-05,
+        2.1360132723247105e-05
+      ]
+    }
+  },
+  "massless_Maxwell_plus_Dirac_negative_control": {
+    "Dirac_count": 1,
+    "Maxwell_count": 2,
+    "vacuum_weight": 0,
+    "curvature_weight": -1.0,
+    "rho": 0.0,
+    "A": -1.25384964757393
+  },
+  "remaining_obligations": [
+    "choose the native real action, adjoint and field integration domain",
+    "decide hard H=Lambda/closure versus an independent soft HC integration; do not count both",
+    "derive admissible gauge group, constraint measure and all ghost factors",
+    "find an allowed background and a controlled elliptic/causal operator or a different valid quantization",
+    "evaluate the actual bosonic and fermionic spectra and metric heat coefficients together",
+    "supply physical scales, renormalization and vacuum-matching protection"
+  ],
+  "main_TeX_changed": false,
+  "sources": [
+    "sources/research/parts/v470/10_sphaera_and_physics.tex: thm:variational-form, prop:equivalent-closure-criteria, thm:closed-master-system",
+    "https://arxiv.org/html/gr-qc/0204062v1"
+  ]
+}
