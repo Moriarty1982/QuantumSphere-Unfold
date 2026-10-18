@@ -304,3 +304,45 @@ Verification of the regional-scope stage: all 2,124 audit tests plus 34
 separate OP5 checks passed (2,158 total), including sixteen new smooth
 residual/gate tests. Full-monolith preservation and whitespace checks
 passed. No commit, push or PDF build was performed.
+
+## Actual Normal Source Reduction (2026-10-18)
+
+After commit afcbfed was pushed, the [normal reduction](HC_Cartan_Normal_Source_Reduction.md)
+returns to the actual parent normal equations plus their twelve mixed-curl
+consequences. The 68-by-56 map has rank 40, 28 left compatibility rows and
+an explicit 10-leading-gauge plus 6-unresolved-source kernel split. Its
+[independent derivation](HC_Cartan_Normal_Source_Reduction_Derivation.md)
+gives the compatible pseudoinverse formula with all source coordinates
+exposed. Thirteen tests cover exact reconstruction identities, actual
+equation recomputation and rejection of incompatible targets to declared
+numerical tolerance. Every remaining source direction is detected by the
+CURRENT frozen-higher 384-equation response. This is not a full gauge or
+physical-mode classification, a proved zero-source closure or a regional
+PDE evolution. Main TeX/PDF and native/physical identifications are unchanged.
+
+Verification of this post-push normal-source stage: all 2,137 audit tests
+plus 34 separate OP5 checks passed (2,171 total), including thirteen new
+checks. Full-monolith preservation and whitespace checks passed. Commit
+afcbfed was already pushed before this stage; these subsequent additions
+remain uncommitted, with no later push or PDF build.
+
+## Normal Sources and Tangential Jet Data (2026-10-18)
+
+The [higher-source compatibility calculation](HC_Cartan_Normal_Source_Compatibility.md)
+eliminates 1200 higher increments: their rank-332 response absorbs all six
+sources at the current 384-row order. Preserving the finite tangential E,
+E_t, psi and lambda germ leaves 464 free coordinates, a rank-200 response
+and an injective rank-six source gate. A conditional law recovers q from
+736 prescribed coordinates and rejects incompatible inputs. Independent
+[affine](HC_Cartan_Normal_Source_Compatibility_Derivation.md) and
+[mask](HC_Cartan_Source_Cauchy_Jet_Mask.md) derivations delimit the result.
+Nonzero-source recovery errors are below 2.5e-15 with all 68 normal and
+384 higher equations small. Frozen highest jets fail the later 1114 rows;
+surface compatibility, re-preparation and regional evolution remain open.
+Main TeX/PDF and native physical identifications are unchanged.
+
+Verification of the higher-source compatibility stage: all 2,153 audit
+tests plus 34 separate OP5 checks passed (2,187 total), including sixteen
+new tests. Full-monolith preservation and whitespace checks passed. These
+post-afcbfed additions remain uncommitted; no later push or PDF build was
+performed.
