@@ -151,6 +151,8 @@ The old positive lambda=0 branch is temporally rank-degenerate, and the frozen s
 
 Next construct the spatial constitutive/gravitational constraints and their propagation on that branch, and reduce the remaining multiplier/gauge system. A singular-branch crossing would instead require its own compatibility analysis. Neither route is yet a full Cauchy or native-gravity proof. No coupling scale, physical frame identification, quantum ground state or new main-paper result is asserted.
 
+The following [spatial-integrability audit](HC_Cartan_Spatial_Propagation.md) derives a 24-component curl criterion that cannot be repaired by higher spinor derivatives alone. The saved regular point fails it. Re-solving first spinor/geometric/multiplier data on the same regular temporal block completes all point equations and first constraint/probe derivatives. Six additional normal restrictions and six lower-data compatibility projections appear, but a sixteen-dimensional normal kernel remains; this is not full gravitational propagation or a Cauchy solution.
+
 ## Reproduction
 
 - [Calculation](HC_Cartan_Cauchy_Rank.py), [saved rank audit and regular point](HC_Cartan_Cauchy_Rank.json), [38 focused tests](../scripts/qsc_audit/tests/test_hc_cartan_cauchy_rank.py).

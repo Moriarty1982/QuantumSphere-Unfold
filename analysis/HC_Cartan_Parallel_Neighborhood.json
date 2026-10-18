@@ -1,0 +1,426 @@
+{
+  "status": "analytic temporal-block neighborhood estimate on finite Taylor fields; not an evolved/full-PDE/native result",
+  "regular_gravity_input_sha256": "9719ef580419e7a1d4c49a7aec2f41987832d806215defacd74d8db8c09f4cdc",
+  "coefficient_norms": {
+    "coframe_second": 1.1701069685655754,
+    "coframe_third": 523.81562758609,
+    "spinor_value": 5.9662465628378865,
+    "spinor_first": 18.829937614979293,
+    "spinor_second": 1228.1004505707265,
+    "spinor_third": 475.61668352431747,
+    "multiplier_first_temporal_column": 1.3119758730216498,
+    "multiplier_second_temporal_column": 385.3482137587054,
+    "minimum_base_probe_eigenvalue": 0.9680741759643272,
+    "minimum_base_constraint_singular_value": 0.03392304155288692
+  },
+  "regular_neighborhood": {
+    "radius": 0.0001220703125,
+    "coframe_change_bound": 8.876778788985172e-09,
+    "spinor_change_bound": 0.0023077265745944076,
+    "temporal_multiplier_change_bound": 0.00016302437273670297,
+    "probe_weight_change_bound": 0.00011532370023794546,
+    "probe_eigenvalue_lower_bound": 0.9679588522640893,
+    "resolved": true,
+    "constraint_block_change_bound": 0.016417387337896328,
+    "constraint_singular_value_lower_bound": 0.01750565421499059,
+    "probe_inverse_norm_upper_bound": 1.0331017663209188,
+    "constraint_inverse_norm_upper_bound": 57.12440036337925
+  },
+  "sample_checks_not_the_proof": [
+    {
+      "coframe_change": 1.7640078996433017e-09,
+      "spinor_change": 0.0011061333979481905,
+      "probe_weight_change": 5.853288712256554e-05,
+      "constraint_block_change": 0.00039804780595208616,
+      "probe_minimum_eigenvalue": 0.9680677658704615,
+      "constraint_minimum_singular_value": 0.033938191866475766,
+      "constraint_equation_residual": 3.968827376483654e-08
+    },
+    {
+      "coframe_change": 1.4262551578961473e-09,
+      "spinor_change": 0.0009987758546754454,
+      "probe_weight_change": 4.4497572047412096e-05,
+      "constraint_block_change": 0.0002419954623335431,
+      "probe_minimum_eigenvalue": 0.9680711187700527,
+      "constraint_minimum_singular_value": 0.03398081792465659,
+      "constraint_equation_residual": 1.501262755189348e-08
+    },
+    {
+      "coframe_change": 1.908270200175992e-09,
+      "spinor_change": 0.0013606524109512424,
+      "probe_weight_change": 7.605028911203797e-05,
+      "constraint_block_change": 0.00018040375471874785,
+      "probe_minimum_eigenvalue": 0.9680310490372714,
+      "constraint_minimum_singular_value": 0.03386811475030892,
+      "constraint_equation_residual": 7.401217181945787e-09
+    },
+    {
+      "coframe_change": 1.414921119495167e-09,
+      "spinor_change": 0.0010998560568488349,
+      "probe_weight_change": 1.6850923605415018e-05,
+      "constraint_block_change": 0.00013885054395961388,
+      "probe_minimum_eigenvalue": 0.9680866220771933,
+      "constraint_minimum_singular_value": 0.03390466640223706,
+      "constraint_equation_residual": 2.6448417920132318e-08
+    },
+    {
+      "coframe_change": 1.7549365927245165e-09,
+      "spinor_change": 0.0011059653578992035,
+      "probe_weight_change": 5.868589438405856e-05,
+      "constraint_block_change": 0.0003962660215796855,
+      "probe_minimum_eigenvalue": 0.9680799797328423,
+      "constraint_minimum_singular_value": 0.03390765844715156,
+      "constraint_equation_residual": 3.968487535534652e-08
+    },
+    {
+      "coframe_change": 1.4297422792217073e-09,
+      "spinor_change": 0.000999904212579881,
+      "probe_weight_change": 4.476312610131379e-05,
+      "constraint_block_change": 0.0002435407256249481,
+      "probe_minimum_eigenvalue": 0.9680768803032523,
+      "constraint_minimum_singular_value": 0.0338654694562839,
+      "constraint_equation_residual": 1.5013394445553703e-08
+    },
+    {
+      "coframe_change": 1.9032274266364448e-09,
+      "spinor_change": 0.0013611234250561102,
+      "probe_weight_change": 7.626821585602115e-05,
+      "constraint_block_change": 0.0001800450111169472,
+      "probe_minimum_eigenvalue": 0.9681171520536397,
+      "constraint_minimum_singular_value": 0.03397834982849706,
+      "constraint_equation_residual": 7.3996628734349434e-09
+    },
+    {
+      "coframe_change": 1.417474742577306e-09,
+      "spinor_change": 0.0010996271434958295,
+      "probe_weight_change": 1.6758596270505083e-05,
+      "constraint_block_change": 0.0001393821840787255,
+      "probe_minimum_eigenvalue": 0.9680620315464723,
+      "constraint_minimum_singular_value": 0.03394153477304217,
+      "constraint_equation_residual": 2.645625490401045e-08
+    },
+    {
+      "coframe_change": 1.994953848253619e-09,
+      "spinor_change": 0.001146857798615892,
+      "probe_weight_change": 2.1561903979936356e-05,
+      "constraint_block_change": 0.00016600197100148022,
+      "probe_minimum_eigenvalue": 0.9680836557240879,
+      "constraint_minimum_singular_value": 0.033899601565471255,
+      "constraint_equation_residual": 1.4024707443746728e-08
+    },
+    {
+      "coframe_change": 1.1811369742060195e-09,
+      "spinor_change": 0.0010748584560466834,
+      "probe_weight_change": 4.7097869989461656e-05,
+      "constraint_block_change": 0.0004045801893004436,
+      "probe_minimum_eigenvalue": 0.9680800593128793,
+      "constraint_minimum_singular_value": 0.03395952251805507,
+      "constraint_equation_residual": 3.3453593121007884e-08
+    },
+    {
+      "coframe_change": 2.5373056281487466e-09,
+      "spinor_change": 0.0006048405510048422,
+      "probe_weight_change": 4.186760813516806e-05,
+      "constraint_block_change": 0.000257811538213593,
+      "probe_minimum_eigenvalue": 0.9680709245992107,
+      "constraint_minimum_singular_value": 0.03390825319881273,
+      "constraint_equation_residual": 1.5159540964247746e-08
+    },
+    {
+      "coframe_change": 3.2335618447500525e-09,
+      "spinor_change": 0.0013406959005391496,
+      "probe_weight_change": 7.962307781036153e-05,
+      "constraint_block_change": 0.0001640293454116195,
+      "probe_minimum_eigenvalue": 0.9680421669567604,
+      "constraint_minimum_singular_value": 0.03384707686056865,
+      "constraint_equation_residual": 1.319213051029549e-08
+    },
+    {
+      "coframe_change": 2.242323132483814e-09,
+      "spinor_change": 0.0013969001187431563,
+      "probe_weight_change": 5.1961787182865434e-05,
+      "constraint_block_change": 0.0004014112676566697,
+      "probe_minimum_eigenvalue": 0.9680567014701417,
+      "constraint_minimum_singular_value": 0.0339252077314432,
+      "constraint_equation_residual": 6.15213374935283e-08
+    },
+    {
+      "coframe_change": 1.527526226351113e-09,
+      "spinor_change": 0.0012608489367674587,
+      "probe_weight_change": 5.0957185387647365e-05,
+      "constraint_block_change": 0.00027471040734340077,
+      "probe_minimum_eigenvalue": 0.9680578283881358,
+      "constraint_minimum_singular_value": 0.033892994255865234,
+      "constraint_equation_residual": 2.9956831447876013e-08
+    },
+    {
+      "coframe_change": 1.8236371948817156e-09,
+      "spinor_change": 0.0010007884012852145,
+      "probe_weight_change": 4.760616583097626e-05,
+      "constraint_block_change": 0.00024262842758479168,
+      "probe_minimum_eigenvalue": 0.9680716012909198,
+      "constraint_minimum_singular_value": 0.03398457657303467,
+      "constraint_equation_residual": 1.2918993384979832e-08
+    },
+    {
+      "coframe_change": 1.2157782389723072e-09,
+      "spinor_change": 0.0009800408956308177,
+      "probe_weight_change": 3.729370870431054e-05,
+      "constraint_block_change": 0.00028367587711084315,
+      "probe_minimum_eigenvalue": 0.9680591496205665,
+      "constraint_minimum_singular_value": 0.033955737150378536,
+      "constraint_equation_residual": 1.3084149937017626e-08
+    },
+    {
+      "coframe_change": 1.395096612819179e-09,
+      "spinor_change": 0.0010116525519463578,
+      "probe_weight_change": 4.598586212474678e-05,
+      "constraint_block_change": 0.00020498541949573064,
+      "probe_minimum_eigenvalue": 0.9681084743373669,
+      "constraint_minimum_singular_value": 0.03392250588497538,
+      "constraint_equation_residual": 1.3063285718325901e-08
+    },
+    {
+      "coframe_change": 2.042836800174924e-09,
+      "spinor_change": 0.0013108137069456356,
+      "probe_weight_change": 3.414189472982717e-05,
+      "constraint_block_change": 0.00025799772140544215,
+      "probe_minimum_eigenvalue": 0.968066079075993,
+      "constraint_minimum_singular_value": 0.033929383212137836,
+      "constraint_equation_residual": 1.8847845567668466e-08
+    },
+    {
+      "coframe_change": 1.7152587391670838e-09,
+      "spinor_change": 0.0012423012819026194,
+      "probe_weight_change": 5.990853156282952e-05,
+      "constraint_block_change": 0.0002526597857127119,
+      "probe_minimum_eigenvalue": 0.9680966979941404,
+      "constraint_minimum_singular_value": 0.033988026273481124,
+      "constraint_equation_residual": 2.786854706026365e-08
+    },
+    {
+      "coframe_change": 2.6161211635921605e-09,
+      "spinor_change": 0.0010945249916692443,
+      "probe_weight_change": 4.485028762240951e-05,
+      "constraint_block_change": 0.0002725376353713834,
+      "probe_minimum_eigenvalue": 0.9680932649848812,
+      "constraint_minimum_singular_value": 0.033879064688947844,
+      "constraint_equation_residual": 4.253616836755167e-08
+    }
+  ],
+  "not_interval_certified_input_norms": true,
+  "not_full_normal_rank_control": true,
+  "not_Cauchy_existence_or_physical_scale": true,
+  "main_TeX_changed": false,
+  "next_scalar_input_sha256": "9d3a8191eabf668fbbce0bd81d3ba01bdfd6bf926c293c15bb62b2d574867c0f",
+  "completed_scalar_jet": {
+    "retained_lower_point_and_couplings_verified": true,
+    "coefficient_norms": {
+      "coframe_second": 1.1701069685655754,
+      "coframe_third": 595.2456302501444,
+      "spinor_value": 5.9662465628378865,
+      "spinor_first": 18.829937614979293,
+      "spinor_second": 1224.0505608090389,
+      "spinor_third": 517.0497587767964,
+      "multiplier_first_temporal_column": 1.3119758730216498,
+      "multiplier_second_temporal_column": 392.8348657316948,
+      "minimum_base_probe_eigenvalue": 0.9680741759643272,
+      "minimum_base_constraint_singular_value": 0.03392304155288692
+    },
+    "regular_neighborhood": {
+      "radius": 0.0001220703125,
+      "coframe_change_bound": 8.898433858642034e-09,
+      "spinor_change_bound": 0.0023076964131253834,
+      "temporal_multiplier_change_bound": 0.00016308015264062886,
+      "probe_weight_change_bound": 0.00011536325983144225,
+      "probe_eigenvalue_lower_bound": 0.9679588127044958,
+      "resolved": true,
+      "constraint_block_change_bound": 0.016417953407894446,
+      "constraint_singular_value_lower_bound": 0.01750508814499247,
+      "probe_inverse_norm_upper_bound": 1.0331018085428454,
+      "constraint_inverse_norm_upper_bound": 57.12624762109874
+    },
+    "sample_checks_not_the_proof": [
+      {
+        "coframe_change": 1.764078662235244e-09,
+        "spinor_change": 0.0011062759449385424,
+        "probe_weight_change": 5.853357398635909e-05,
+        "constraint_block_change": 0.0003982301034552521,
+        "probe_minimum_eigenvalue": 0.9680677460971254,
+        "constraint_minimum_singular_value": 0.03393822637432832,
+        "constraint_equation_residual": 3.5826602105435795e-08
+      },
+      {
+        "coframe_change": 1.4266048958736589e-09,
+        "spinor_change": 0.000998783318174094,
+        "probe_weight_change": 4.4499519669832525e-05,
+        "constraint_block_change": 0.00024195562424410188,
+        "probe_minimum_eigenvalue": 0.9680711640671098,
+        "constraint_minimum_singular_value": 0.0339807820432,
+        "constraint_equation_residual": 1.4798381393711421e-08
+      },
+      {
+        "coframe_change": 1.9080330365171697e-09,
+        "spinor_change": 0.0013605948438520242,
+        "probe_weight_change": 7.604630062256221e-05,
+        "constraint_block_change": 0.00018024738009528809,
+        "probe_minimum_eigenvalue": 0.9680310388960328,
+        "constraint_minimum_singular_value": 0.033868143900941595,
+        "constraint_equation_residual": 8.415088345025933e-09
+      },
+      {
+        "coframe_change": 1.4160931541183106e-09,
+        "spinor_change": 0.0010997564054713894,
+        "probe_weight_change": 1.694440059010129e-05,
+        "constraint_block_change": 0.00013903708125512164,
+        "probe_minimum_eigenvalue": 0.9680867125565391,
+        "constraint_minimum_singular_value": 0.03390461555697769,
+        "constraint_equation_residual": 2.1994322319713454e-08
+      },
+      {
+        "coframe_change": 1.7547801401919103e-09,
+        "spinor_change": 0.0011058235245573333,
+        "probe_weight_change": 5.8685751236360484e-05,
+        "constraint_block_change": 0.0003960842821214904,
+        "probe_minimum_eigenvalue": 0.9680799600034721,
+        "constraint_minimum_singular_value": 0.033907693005548384,
+        "constraint_equation_residual": 3.5826827004697607e-08
+      },
+      {
+        "coframe_change": 1.4293915064986351e-09,
+        "spinor_change": 0.0009998970502035982,
+        "probe_weight_change": 4.47611251355454e-05,
+        "constraint_block_change": 0.00024358164770592092,
+        "probe_minimum_eigenvalue": 0.9680769255802483,
+        "constraint_minimum_singular_value": 0.03386543359451983,
+        "constraint_equation_residual": 1.4800003691792378e-08
+      },
+      {
+        "coframe_change": 1.9034661916200295e-09,
+        "spinor_change": 0.0013611812969901783,
+        "probe_weight_change": 7.627226790279563e-05,
+        "constraint_block_change": 0.0001802024111487665,
+        "probe_minimum_eigenvalue": 0.9681171419036723,
+        "constraint_minimum_singular_value": 0.03397837902183156,
+        "constraint_equation_residual": 8.413374121300002e-09
+      },
+      {
+        "coframe_change": 1.4164406903625854e-09,
+        "spinor_change": 0.0010997272258434316,
+        "probe_weight_change": 1.6665548928106194e-05,
+        "constraint_block_change": 0.0001391978296637214,
+        "probe_minimum_eigenvalue": 0.968062122049243,
+        "constraint_minimum_singular_value": 0.03394148395538664,
+        "constraint_equation_residual": 2.199915739860281e-08
+      },
+      {
+        "coframe_change": 1.994421332711748e-09,
+        "spinor_change": 0.001146962932374911,
+        "probe_weight_change": 2.1561670433948364e-05,
+        "constraint_block_change": 0.00016612587248987772,
+        "probe_minimum_eigenvalue": 0.9680837450416657,
+        "constraint_minimum_singular_value": 0.03389956270355206,
+        "constraint_equation_residual": 1.2549884124419266e-08
+      },
+      {
+        "coframe_change": 1.1819871475477388e-09,
+        "spinor_change": 0.0010746655669842,
+        "probe_weight_change": 4.713301214196345e-05,
+        "constraint_block_change": 0.0004045222722920047,
+        "probe_minimum_eigenvalue": 0.9680800555680519,
+        "constraint_minimum_singular_value": 0.03395955901977206,
+        "constraint_equation_residual": 3.41252590781954e-08
+      },
+      {
+        "coframe_change": 2.5368282429263655e-09,
+        "spinor_change": 0.0006047478230143954,
+        "probe_weight_change": 4.187363584371256e-05,
+        "constraint_block_change": 0.0002578024845115004,
+        "probe_minimum_eigenvalue": 0.968071043238154,
+        "constraint_minimum_singular_value": 0.03390823421162013,
+        "constraint_equation_residual": 1.2963097206024023e-08
+      },
+      {
+        "coframe_change": 3.232224667494784e-09,
+        "spinor_change": 0.0013406037351053133,
+        "probe_weight_change": 7.966486527753032e-05,
+        "constraint_block_change": 0.0001640080861843544,
+        "probe_minimum_eigenvalue": 0.9680421391766516,
+        "constraint_minimum_singular_value": 0.0338470675878964,
+        "constraint_equation_residual": 1.622312320713285e-08
+      },
+      {
+        "coframe_change": 2.241778169477723e-09,
+        "spinor_change": 0.0013968655587509075,
+        "probe_weight_change": 5.196188514984828e-05,
+        "constraint_block_change": 0.00040176771272068247,
+        "probe_minimum_eigenvalue": 0.9680566533302369,
+        "constraint_minimum_singular_value": 0.033925246106349026,
+        "constraint_equation_residual": 5.6874799026086296e-08
+      },
+      {
+        "coframe_change": 1.5283340110939866e-09,
+        "spinor_change": 0.001260885710911772,
+        "probe_weight_change": 5.0966349808265836e-05,
+        "constraint_block_change": 0.00027462566616906633,
+        "probe_minimum_eigenvalue": 0.9680578164407909,
+        "constraint_minimum_singular_value": 0.03389298313305062,
+        "constraint_equation_residual": 2.8692132964046802e-08
+      },
+      {
+        "coframe_change": 1.822981818416729e-09,
+        "spinor_change": 0.001000797019151135,
+        "probe_weight_change": 4.7594420854307145e-05,
+        "constraint_block_change": 0.0002426414119270979,
+        "probe_minimum_eigenvalue": 0.9680716068576037,
+        "constraint_minimum_singular_value": 0.033984557455678334,
+        "constraint_equation_residual": 1.525071043170521e-08
+      },
+      {
+        "coframe_change": 1.2151143255350135e-09,
+        "spinor_change": 0.0009800053542411867,
+        "probe_weight_change": 3.7298582818446114e-05,
+        "constraint_block_change": 0.00028361937676936363,
+        "probe_minimum_eigenvalue": 0.968059183414692,
+        "constraint_minimum_singular_value": 0.03395572944215509,
+        "constraint_equation_residual": 1.496904147737872e-08
+      },
+      {
+        "coframe_change": 1.395289099828855e-09,
+        "spinor_change": 0.001011538861626715,
+        "probe_weight_change": 4.6050557882672467e-05,
+        "constraint_block_change": 0.00020497912260517538,
+        "probe_minimum_eigenvalue": 0.9681085324086532,
+        "constraint_minimum_singular_value": 0.03392248951403269,
+        "constraint_equation_residual": 1.4791151604062506e-08
+      },
+      {
+        "coframe_change": 2.0482673645745613e-09,
+        "spinor_change": 0.0013107887591693001,
+        "probe_weight_change": 3.415456873286204e-05,
+        "constraint_block_change": 0.0002578775287604685,
+        "probe_minimum_eigenvalue": 0.9680661125413081,
+        "constraint_minimum_singular_value": 0.0339293615180404,
+        "constraint_equation_residual": 1.9163883637041152e-08
+      },
+      {
+        "coframe_change": 1.714072523822587e-09,
+        "spinor_change": 0.0012421811583176623,
+        "probe_weight_change": 5.992240161707236e-05,
+        "constraint_block_change": 0.0002526626044682637,
+        "probe_minimum_eigenvalue": 0.9680967499613907,
+        "constraint_minimum_singular_value": 0.033987984125788344,
+        "constraint_equation_residual": 2.8238391297087615e-08
+      },
+      {
+        "coframe_change": 2.6155534381682534e-09,
+        "spinor_change": 0.0010944712363583956,
+        "probe_weight_change": 4.482866169172439e-05,
+        "constraint_block_change": 0.0002722782812984962,
+        "probe_minimum_eigenvalue": 0.9680932468838389,
+        "constraint_minimum_singular_value": 0.033879061052371935,
+        "constraint_equation_residual": 3.9086204167874475e-08
+      }
+    ]
+  }
+}
