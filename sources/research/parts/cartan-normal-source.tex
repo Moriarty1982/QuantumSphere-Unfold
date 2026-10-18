@@ -1,0 +1,302 @@
+\section{Cartan Comparison: Residuals and Normal Source Compatibility}
+\label{v490:cartan-source}
+
+This section records a new research result, not an identification of the
+native MM/HC action. It follows the action and geometry distinctions in
+Section~\ref{v480:hc-dynamics-geometry}. The model below is an explicitly
+added neutral Einstein--Cartan comparison with three complex commuting
+spinors. Its finite jets do not constitute a solution on an open set.
+Neither its matrices nor its six source coordinates are identified with
+matter, photon or tachyon frames, C7 carriers, physical masses or a
+measured gravitational coupling.
+
+\subsection{Declared Model and Residual Convention}
+\label{v490:cartan-model}
+
+Take independent fields: an invertible real coframe $E^a{}_{\mu}$, a real
+Lorentz connection $\omega_{\mu,ab}=-\omega_{\mu,ba}$, the spinor triple
+$\Psi$, and a real multiplier density $\lambda_a{}^\mu$ of coordinate
+weight one. Put $v=|\det E|$, $e=E^{-1}$ and
+$\eta=\operatorname{diag}(-1,1,1,1)$. In the declared Dirac convention,
+$K^a=\beta\Gamma^a$ and
+\[
+ B_\mu=-\tfrac14\omega_{\mu,ab}\Gamma^a\Gamma^b,
+ \qquad D_\mu\Psi=\partial_\mu\Psi+B_\mu\Psi,
+ \qquad C^a{}_{\mu}=\operatorname{Im}
+       (\Psi^\dagger QK^aD_\mu\Psi).
+\]
+Here $Q$ acts on the three channels and $K^a$ on spin indices; tensor
+products are implicit. A dagger is the ordinary complex adjoint, not a
+new native comparison map. The assumed action is
+\begin{align}
+ S_{\rm cmp}&=\int d^4x\,
+ \left\{v\left(\frac c2 R(E,\omega)-u\right)
+             +\mathcal L_D+\lambda_a{}^\mu(E^a{}_{\mu}-C^a{}_{\mu})\right\},
+ \label{v490:cartan-action}\\
+ \mathcal L_D&=-v\operatorname{Im}
+  (\Psi^\dagger e_a{}^\mu K^aD_\mu\Psi)
+  -v\operatorname{Re}(\Psi^\dagger(M\otimes\beta)\Psi).
+ \nonumber
+\end{align}
+The numerical branch uses $c=1$, $u=0$ and fixed dimensionless comparison
+matrices
+\[
+ M=\begin{pmatrix}0.6&0&4\\0&0.6&0.7\\4&0.7&0.6\end{pmatrix},
+ \qquad Q=\frac i2(E_{12}-E_{21}),
+\]
+where $E_{jk}$ denotes a channel matrix unit. These choices are not a
+prediction of couplings or a derivation of the Einstein term. No internal
+charged equation is suppressed: neutrality is part of this comparison.
+
+Write $F=C-E$, and denote the independent coframe and full real-action
+probe Euler densities by $\mathfrak E_a{}^\mu$ and $\mathcal R$. Thus the
+reduced variation after exact algebraic Cartan elimination is
+\[
+ \delta S_{\rm cmp}=\int d^4x\,
+ \left\{\mathfrak E_a{}^\mu\delta E^a{}_{\mu}
+       +2\operatorname{Re}(\delta\Psi^\dagger\mathcal R)
+       -F^a{}_{\mu}\delta\lambda_a{}^\mu\right\}.
+\]
+The connection solution must be differentiated compatibly. Setting only
+its point Euler value to zero while selecting unrelated connection
+derivatives does not define this reduced field theory. Its sourced
+Cartan curvature is not generally the Levi--Civita curvature of $E$.
+
+\subsection{Ward Identities and a Conditional Subsidiary System}
+\label{v490:cartan-ward}
+
+For compactly supported coordinate variations, the spinor is a coordinate
+scalar and $\lambda$ is a vector density. Its variation includes
+$\lambda_a{}^\mu\partial_\nu\xi^\nu$, in addition to transport and
+contravariant-index terms. Integration by parts therefore gives
+\begin{align}
+0={}&E^a{}_{\nu}\partial_\mu\mathfrak E_a{}^\mu
+ +\mathfrak E_a{}^\mu(\partial_\mu E^a{}_{\nu}
+                             -\partial_\nu E^a{}_{\mu})\nonumber\\
+ &+\lambda_a{}^\mu(\partial_\mu F^a{}_{\nu}
+                             -\partial_\nu F^a{}_{\mu})
+ +F^a{}_{\nu}\partial_\mu\lambda_a{}^\mu
+ -2\operatorname{Re}((\partial_\nu\Psi)^\dagger\mathcal R).
+ \label{v490:coordinate-identity}
+\end{align}
+For $J^T\eta+\eta J=0$ and
+$S_J=-(\eta J)_{ab}\Gamma^a\Gamma^b/4$, Lorentz invariance similarly gives
+\[
+ \mathfrak E:(JE)+2\operatorname{Re}((S_J\Psi)^\dagger\mathcal R)
+                          +F:(J^T\lambda)=0.
+\]
+These identities retain all residual sources. Their source-free
+specialization requires $F=\mathcal R=0$ as field equations on an open
+region, not merely at the prepared point.
+
+\begin{proposition}[Conditional gravitational constraint propagation]
+\label{v490:subsidiary}
+Assume exact compatible Cartan elimination, $F=\mathcal R=0$ on an open
+region, a sufficiently smooth Lorentzian metric with spacelike slices,
+and the spatially projected trace-reversed coframe Euler evolution
+equations. With zero initial gravitational constraints and no incoming
+constraint flux, the four gravitational constraints remain zero.
+This statement does not propagate $F$ or $\mathcal R$ from initial data.
+\end{proposition}
+\begin{proof}
+The two identities make the coframe Euler tensor density symmetric and
+Levi--Civita divergence-free under the stated hypotheses. Divide out the
+volume density to obtain a symmetric residual tensor $T^{\mu\nu}$ with
+$\nabla_\mu T^{\mu\nu}=0$. For the unit slice normal $n$, put
+$H=T(n,n)$ and $M_i=-T(n,\partial_i)$. The spatial projection of
+$T^{\mu\nu}-g^{\mu\nu}\operatorname{tr}_g T/2$ vanishes by the chosen
+evolution equations and gives spatial stress $P^{ij}=Hh^{ij}$.
+In lapse $N>0$, shift $\beta^i$ and positive slice metric $h_{ij}$, the
+principal symbol for $U=(H,M_i)$ is
+\[
+ A(\xi)=-(\beta\cdot\xi)I_4+
+ N\begin{pmatrix}0&(h^{-1}\xi)^T\\\xi&0_{3\times3}\end{pmatrix},
+ \qquad W=\operatorname{diag}(1,h^{-1})>0.
+\]
+Since $WA(\xi)$ is symmetric, the energy
+$\tfrac12\int(H^2+h^{ij}M_iM_j)\sqrt{\det h}\,d^3x$ obeys
+$\mathcal E'(t)\leq C(t)\mathcal E(t)$ with bounded coefficient
+derivatives and no incoming flux. Gronwall's inequality proves the claim.
+With nonzero shift the evolution condition is the geometric spatial
+projection, not simply the vanishing of contravariant coordinate $ij$
+components. The full lower-order lapse, shift and connection terms must
+be retained in the energy estimate.
+\end{proof}
+
+The saved Taylor fields do not satisfy the open-set hypotheses of this
+proposition. In particular, the constitutive identity
+\[
+ \partial_0F^a{}_{i}=\partial_iF^a{}_{0}
+              +(\partial_0F^a{}_{i}-\partial_iF^a{}_{0})
+\]
+does not close evolution unless its mixed-curl source is controlled.
+Ward identities alone are not a full coupled propagation theorem.
+
+\subsection{Finite Normal Reduction with Exposed Source Coordinates}
+\label{v490:normal-reduction}
+
+At the prepared normal point $E=I$, $\partial E=0$, hold the lower and
+spatial data and all action coefficients fixed. The real normal unknowns
+are
+\[
+ x=(E_{,00}\ [16],\ \operatorname{realify}\Psi_{,0}\ [24],
+                    \lambda_{,0}\ [16])\in\mathbb R^{56}.
+\]
+The 16 constitutive, 24 real probe and 16 coframe Euler rows, together
+with twelve mixed constitutive curls, form an affine residual
+$b+Nx\in\mathbb R^{68}$. The curls are necessary consequences of
+$F=0$ as a field equation, not twelve independent additional action laws.
+The numerical rank rises from 34 for the original rows to 40 with the
+curls. Its kernel has an exhibited ten-dimensional leading normal gauge
+span and a six-dimensional complementary span. This is not a complete
+regional gauge reduction.
+
+\begin{proposition}[Compatible finite normal inverse]
+\label{v490:normal-inverse}
+Assume $\operatorname{rank}N=40$, and orthonormal matrices
+$G\in\mathbb R^{56\times10}$, $U\in\mathbb R^{56\times6}$ with
+$\ker N=\operatorname{im}G\mathbin{\oplus}\operatorname{im}U$.
+Let $L_N$ span $\ker N^T$ orthonormally. Then $Nx=r$ is solvable if and
+only if $L_N^Tr=0$. Every solution is uniquely parametrized by
+\[
+ x=N^+r+Gg+Uq,\qquad g\in\mathbb R^{10},\quad q\in\mathbb R^6.
+\]
+\end{proposition}
+\begin{proof}
+$\operatorname{im}N=(\ker N^T)^\perp$ gives compatibility.
+For compatible $r$, $NN^+r=r$; subtracting this particular solution
+leaves exactly $\ker N$. Orthogonality gives unique $g,q$.
+For incompatible $r$ the same expression leaves residual $-L_NL_N^Tr$;
+a least-squares output is not an exact solution.
+\end{proof}
+
+There are 28 left compatibility rows on arbitrary $r$, not necessarily
+28 independent physical field laws. For increments about the saved jet,
+$r$ is the target residual minus its saved value, rather than the absolute
+right-hand side $-b$. The chosen $Uq$ changes only $E_{,00}$ and the
+spatial-column entries $\lambda_{a,0}{}^i$, leaving all $\Psi_{,0}$
+and $\lambda_{a,0}{}^0$ fixed. These six coordinates are neither the
+earlier mixed-curl defects nor established gauge or physical modes.
+
+\subsection{Determination from Compatible Tangential Jets}
+\label{v490:source-law}
+
+Use the same current saved joint jet throughout. Let $q$ now be a source
+increment with gauge and normal residual target fixed. Let $z$ contain
+increments of $(\Psi_{,2},\lambda_{,2},E_{,3},\Psi_{,3})$ in the real
+unique-symmetric convention, of dimensions $(240,160,320,480)$.
+Direct differentiation of the current equations gives the jointly affine
+384-row residual
+\begin{equation}
+ \mathcal H(q,z)=h_0+Bq+Az.
+ \label{v490:higher-affine}
+\end{equation}
+Its blocks are first constitutive derivatives (64), first real probe
+derivatives (96), first coframe Euler derivatives (64), and second
+constitutive derivatives in unique pairs (160). Affinity is specific to
+this source variation and order: the lower spinor and its first jet are
+fixed, so variable factors multiply fixed lower factors. It does not
+extend automatically to later derivative equations.
+
+For all 1200 higher coordinates allowed, $\operatorname{rank}A=332$ and
+$\operatorname{rank}(L_A^TB)=0$ numerically, where $L_A$ spans
+$\ker A^T$. Thus the frozen-higher rank-six response of $B$ can be
+absorbed by higher increments at this order. It does not fix $q$.
+
+Instead preserve the represented finite tangential germ of $E$, $E_{,0}$,
+$\Psi$ and $\lambda$ on $x^0=0$. Split $z$ into free coordinates $w$ and
+prescribed tangential coordinates $d$. With $i,j,k\in\{1,2,3\}$, the
+free slots and real dimensions are
+\[
+ \begin{array}{c|c|r}
+ \text{block}&\text{allowed derivative indices}&\text{dimension}\\\hline
+ \Psi_{,2}&\text{at least one }0&96\\
+ \lambda_{,2}&\text{at least one }0&64\\
+ E_{,3}&\text{at least two }0&64\\
+ \Psi_{,3}&\text{at least one }0&240
+ \end{array}
+\]
+Thus $w\in\mathbb R^{464}$ and $d\in\mathbb R^{736}$. In particular
+$E_{,0ij}$ is prescribed because it differentiates the fixed $E_{,0}$
+trace tangentially. This is a finite germ at a point, not a construction
+of admissible surface functions. Write $Az=A_fw+A_dd$.
+
+\begin{proposition}[Conditional source law for prescribed tangential data]
+\label{v490:source-law-theorem}
+Let $L_f$ span $\ker A_f^T$ orthonormally, set
+\[
+ J=L_f^TB,\qquad b(d)=-L_f^T(h_0+A_dd),
+\]
+and assume $\operatorname{rank}J=6$. A source and higher lift exist if
+and only if $(I-JJ^+)b(d)=0$. For compatible $d$ the source is unique:
+\[
+ q(d)=J^+b(d),\qquad
+ w=-A_f^+(h_0+A_dd+Bq(d))+k,\quad k\in\ker A_f.
+\]
+\end{proposition}
+\begin{proof}
+Eliminating $w$ requires and suffices for
+$L_f^T(h_0+A_dd+Bq)=0$, namely $Jq=b(d)$.
+Full column rank makes $q$ unique if this equation is consistent.
+The orthogonal projector $JJ^+$ tests that consistency; the remaining
+formula gives exactly all higher lifts.
+\end{proof}
+
+The numerical response for this mask has rank 200 and the six singular
+values of $J$ are approximately
+\[
+ 1.89152,\ 1.22410,\ 0.48769,\ 0.45652,\ 0.26352,\ 0.13424.
+\]
+The residual compatibility map on $d$ has numerical rank 126. This is a
+finite matrix rank, not a count of physical constraints. All ranks are
+pointwise floating calculations with declared cutoffs, not certified
+regional bounds. Incompatible prescribed data are rejected, not silently
+projected onto admissible ones. In particular $q=0$ is not an added law;
+near-zero increments for unchanged data refer to the saved germ only.
+
+\subsection{Reproducibility, Negative Control and Remaining Obligations}
+\label{v490:cartan-evidence}
+
+Four compatible-data controls use
+$q=a(1,-0.5,0.3,0.2,0.4,-0.1)$ with
+$a\in\{0,0.01,-0.01,0.02\}$. An unrestricted compatible lift supplies
+the prescribed $d$, which is then held exactly fixed while the conditional
+law recovers $q$. Recovery errors are below $2.5\times10^{-15}$;
+direct residual norms are below $2.4\times10^{-14}$ for all 68 normal
+rows and $3.7\times10^{-11}$ for all 384 higher rows. These controls
+verify a known compatible family, not arbitrary surface admissibility.
+The computed $\|h_0\|\simeq4.78\times10^{-11}$ is retained in the law.
+
+A separate saved completion satisfies all 1114 packed rows of the later
+joint hierarchy to residual about $5.38\times10^{-10}$. The new source
+lifts do not automatically preserve it. For $a=0.01$, retaining its old
+highest $E_{,4},\lambda_{,3},\Psi_{,4}$ gives a later residual about
+98.96, with third constitutive block about 98.60, even after recomputing
+the changed Levi--Civita cubic. This is a failed frozen-highest control,
+not a nonexistence proof for a re-prepared completion. The earlier
+coefficient-domain neighborhood estimate does not transfer to the new
+witnesses without recalculation.
+
+The source files and pinned numerical reports are
+\nolinkurl{analysis/HC_Cartan_Normal_Source_Reduction.py} and
+\nolinkurl{analysis/HC_Cartan_Normal_Source_Compatibility.py}, with
+their matching JSON reports and derivation notes. The latter module uses
+the fingerprint-checked current joint loader, not the older regular-point
+completion. Sixteen source-compatibility and thirteen normal-reduction
+tests supplement the full audit; a test count is not a proof certificate.
+
+For a future smooth normal chart
+$x=x_{\rm part}+Gg+Uq$, spatial differentiation must retain
+\[
+ \partial_i x=\partial_i x_{\rm part}+(\partial_iG)g+G\partial_i g
+                              +(\partial_iU)q+U\partial_iq.
+\]
+A QR/SVD frame at one point supplies neither these derivatives nor
+arbitrary source functions. The next obligations are compatible surface
+data, higher re-preparation with the prescribed tangential germ retained,
+a smooth gauge/source chart, and a closed full evolution and subsidiary
+estimate. No regional existence, full hyperbolicity, native-action
+identification, OP5 closure or physical scale follows from the finite
+source law alone.
+
+\clearpage

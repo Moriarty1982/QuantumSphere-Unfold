@@ -346,3 +346,100 @@ tests plus 34 separate OP5 checks passed (2,187 total), including sixteen
 new tests. Full-monolith preservation and whitespace checks passed. These
 post-afcbfed additions remain uncommitted; no later push or PDF build was
 performed.
+
+## v4.9.0 Main-Text Research Candidate (2026-10-18)
+
+The subsequent [candidate change record](V490_Research_Candidate.md) now
+documents deliberate adoption of the bounded Cartan synthesis into the
+main reading route, rather than treating all later notes as adopted.
+`parts/cartan-normal-source.tex` states the comparison action, sourced Ward
+identities, conditional subsidiary result and finite normal/source-law
+proofs with their numerical evidence and remaining obligations. Working
+metadata are 4.9.0-draft; the historical entry filename and all inherited
+source records remain unchanged. Earlier statements in this log that the
+main TeX/PDF were unchanged refer to their respective research stages.
+
+The rebuilt candidate has 1044 pages: 160 main/frontmatter and 884 support,
+versus 1037 = 153 + 884 previously. The current measurement is separately
+saved in `V490_Full_Monolith_Metrics.json`. The title and new pages 43--47
+were visually checked; the final local pdfLaTeX run exits successfully,
+with settled references and no new overfull box beyond the 58 inherited
+ones. The built-in XeTeX backend cannot compile the inherited pdfTeX
+compression primitive, so the existing local toolchain was used with
+installation and shell escape disabled. Public releases, CITATION.cff,
+physical scales and native identification remain unchanged. No release,
+DOI, commit or push is performed by this integration.
+
+The new integration has eight focused tests. Two full 2161-test runs
+exposed only stale provenance records in sequence, first the changed
+entrypoint and then its dependent report fingerprint. After both metadata
+repairs, all 101 affected integration/provenance/regularity/preservation
+tests pass; there was no third full run after the final hash-only change.
+The separate OP5 check also completed successfully. Full build and test
+details are recorded in `V490_Research_Candidate.md`.
+
+Final verification after both provenance repairs: a fresh complete run
+passes all 2161 audit tests in 278.176 seconds; all 34 separate OP5 checks
+also pass (2195 total). This supersedes the preceding targeted-only status.
+The repeated settled-length check confirms the same 1044-page PDF and
+source hash. Public release payloads, CITATION.cff and .zenodo.json are
+unchanged. No commit, push, publication or new mathematical closure claim
+was made during this verification.
+
+## Post-Integration Next Cauchy-Jet Gate (2026-10-18)
+
+The [next finite completion audit](HC_Cartan_Cauchy_Next_Completion.md)
+and [independent highest-mask derivation](HC_Cartan_Highest_Cauchy_Mask.md)
+remain outside the main TeX. The chosen 384-row shifted source witness
+does not pass a highest-only repair, even with unrestricted highest jets.
+Allowing 368 earlier trace-preserving mixed entries with psi2 fixed gives
+an affine 1114-by-1168 response of numerical rank 568. Enforcing all old
+394 rows first succeeds to about 3e-11, but its reduced new-order gate
+still has minimum residual about 33.16. This excludes that restricted
+finite continuation numerically, not every same-source completion or
+regional solution. The 96 normal-containing psi2 entries remain frozen;
+their larger generally nonlinear re-preparation is the next finite task.
+The reviewed 1044-page v4.9.0 draft is unchanged by this follow-up.
+
+Verification: 2175 audit tests plus 34 separate OP5 checks passed (2209
+total), including fourteen new highest-mask/completion tests. The full
+origin-preservation check and whitespace checks pass, and the main expanded
+TeX hash is unchanged. No further PDF build, commit, push, issue update
+or publication was performed.
+
+## Persistent Matrix/SVD Cache (2026-10-18)
+
+The [numerical cache](Numerical_Matrix_Cache.md) is integrated into the
+current next-Cauchy analysis only. SHA-256 selects collision buckets;
+actual typed canonical input bytes select a matching entry. Numeric NPZ
+files use no pickle, atomic unique-entry writes and integrity checks.
+Copies and a bounded memory layer prevent accidental mutation of stored
+results. Source/data/NumPy changes invalidate relevant entries; rank
+cutoffs, RHS solves and actual field residuals are still evaluated anew.
+
+The complete script takes 70.227 seconds cold and 3.985 seconds in a new
+warm process, with seven disk hits and a byte-identical scientific JSON
+report (about 17.6x for this repeat). Seventy-two targeted tests pass;
+the fourteen numerical ones also pass cache-free. No new full-suite run
+was used for this narrow performance change. Main TeX/PDF and scientific
+conclusions are unchanged; the current report fingerprints are refreshed.
+
+The follow-up clean-code refactor separates cache lookup/compute/publish
+and introduces explicit affine-system and SVD-reduction data containers.
+Coordinate ownership/dimensions and complete wide-matrix kernels are
+checked. All pre-refactor numerical report values are unchanged; only
+input provenance fingerprints are refreshed. Eighty-five targeted tests
+pass, with no additional full-suite run. The measured warm process takes
+4.270 seconds, retaining the cache benefit; no extra performance gain is
+claimed for the structural refactor itself. No Docker/dependency, main
+TeX/PDF, release, commit or push change is introduced.
+
+The following [DI composition root](Numerical_Dependency_Injection.md)
+now explicitly supplies scoped cache and SVD-backend instances to the
+current numerical pipeline. Providers resolve once per container, custom
+backend identities isolate cache entries, and disabling a scope does not
+mutate global environment variables. The old helper API has a separate
+compatibility adapter. All 103 targeted checks pass, including eighteen
+new DI checks; the complete numerical report values match the pre-DI
+baseline except refreshed source fingerprints. The latest warm process
+takes 4.350 seconds. No main-TeX/PDF or scientific-claim change is made.

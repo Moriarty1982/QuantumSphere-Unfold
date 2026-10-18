@@ -51,6 +51,17 @@ Still open on this line: the MM/HC field-equation refactor.
 
 The [full-source research working copy](sources/research/README.md) now has a separate entry point, `sources/research/v480-companion.tex`, derived from the complete 1,014-page v4.7.0 monolith. It retains the entire baseline source with a byte-level map, separates the human reading route from complete technical support, and proposes the guarded v4.8 integration interface. This is not a published v4.8 release, a complete correction of all inherited arguments, or a replacement of the frozen v4.7.0 payload. The older modular `sources/active-core.tex` is a different source/version scope.
 
+## Research Candidate
+
+The unreleased **v4.9.0 research candidate** now integrates the conditional
+neutral Cartan comparison and finite normal-source compatibility into the
+main reading route of the existing full-source working copy. It includes
+proofs of the finite inverse/source laws, explicit assumptions and numerical
+negative controls; it does not claim full regional existence or native
+physical identification. See the [candidate change record](analysis/V490_Research_Candidate.md).
+The historical entry filename remains `sources/research/v480-companion.tex`.
+No v4.9.0 release, upload or version DOI has been created.
+
 ## Citation
 
 Use the `CITATION.cff` file in this repository, or cite the public Zenodo record through the version DOI above.

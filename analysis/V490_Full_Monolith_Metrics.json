@@ -1,0 +1,33 @@
+{
+  "origin_sha256": "0b74890e4f5d8ebbfd4820a4ff7bb44a621c61655720a9021e3c42d6d115e803",
+  "canonical_origin_sha256": "019e7a35adb3e299b1eed7e5310397d922d18575fe8a5122c3b448cf1a383329",
+  "original_bytes_preserved": 3403614,
+  "byte_identical_reconstruction_in_current_checkout": true,
+  "inherited_fragments": 38,
+  "included_files": 53,
+  "original_label_occurrences": 3290,
+  "new_label_occurrences": 114,
+  "missing_labels": {},
+  "new_duplicate_labels": {},
+  "working_expanded_sha256": "f998e7b97373b87b9395192709059db1543a5edfeeee0e2bf968c53c85eb4ba8",
+  "published_pdf_pages": 1014,
+  "baseline_rebuilt_pages": {
+    "total": 1014,
+    "main_and_frontmatter": 523,
+    "appendices_and_bibliography": 491
+  },
+  "research_pages": {
+    "total": 1044,
+    "main_and_frontmatter": 160,
+    "appendices_and_bibliography": 884
+  },
+  "baseline_matches_published_page_count": true,
+  "baseline_layout_warnings": {
+    "overfull_boxes": 58,
+    "duplicate_destinations": 0
+  },
+  "research_layout_warnings": {
+    "overfull_boxes": 58,
+    "duplicate_destinations": 0
+  }
+}

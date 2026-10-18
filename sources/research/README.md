@@ -1,6 +1,6 @@
-# Full-Source v4.8.0-r01 Research Working Copy
+# Full-Source v4.9.0 Research Candidate
 
-Entry point: `v480-companion.tex`. This is the full-monolith-derived working line, not the older `sources/active-core.tex` modular synchronization baseline. It is unreleased and has no assigned v4.8 DOI.
+Entry point: `v480-companion.tex` (historical filename retained for existing audits and builds). Its working metadata now identifies `v4.9.0-draft`. This is the full-monolith-derived working line, not the older `sources/active-core.tex` modular synchronization baseline. The candidate is unreleased and has no assigned version DOI; the public baseline remains v4.8.0.
 
 ## Origin and Preservation
 
@@ -10,9 +10,11 @@ Entry point: `v480-companion.tex`. This is the full-monolith-derived working lin
 - `v480-source-map.json` records origin hash, byte offsets, first source lines and fragment hashes. Do not regenerate it over existing work or silently edit inherited fragments.
 - Captured CRLF byte offsets/hashes and canonical LF offsets/hashes are both recorded. The local reconstruction is byte-identical; portable checks permit only Git's CRLF/LF checkout conversion, not changes to prose, formulas or guards.
 - The main entry and `parts/support-route.tex` define the reading order. The later macro-defining v4 chains keep their mutual order. The bibliography is placed after the complete retained development.
-- New prose, premise qualifications and research integration are outside the preserved fragments. `docversion` stays 4.7.0 for inherited records; working metadata separately identifies 4.8.0-r01.
+- New prose, premise qualifications and research integration are outside the preserved fragments. `docversion` stays 4.7.0 for inherited records; working metadata separately identifies 4.9.0-draft.
 
 ## What This Candidate Does
+
+The new main section `parts/cartan-normal-source.tex` integrates the declared neutral odd-cross Cartan comparison, the full residual-source Ward identities, a conditional gravitational subsidiary theorem and two finite-dimensional propositions with proofs. It distinguishes the rank-40 normal inverse from the higher-jet source gate: unrestricted higher increments absorb all six sources at the 384-row order, whereas compatible prescribed tangential jets give unique source values. It retains the failed frozen-highest 1114-row control and the remaining surface, higher-order, gauge and regional-existence obligations. No native action, frame assignment, physical scale or OP5 closure is claimed. See [the candidate change record](../../analysis/V490_Research_Candidate.md). Historical statements below that an analysis was outside the main TeX describe its status at that stage; only this explicit synthesis is newly adopted, not every intervening note.
 
 The main line keeps the core construction, operator/closure hypotheses, master model and physical readouts, with an early qualification of known MM/HC, inverse-exponent and OP5 issues. It adds a compact current-v4 synthesis and a proposed Planck-readout/MM-HC integration interface. Supporting infrastructure, all later v4 material and provenance remain compiled in the appendices.
 
@@ -147,5 +149,9 @@ The `measure` subcommand takes `--before-aux`, `--after-aux` and `--output`; it 
 The [normal-source compatibility calculation](../../analysis/HC_Cartan_Normal_Source_Compatibility.md) distinguishes unrestricted higher-jet absorption from fixed tangential data. All 1200 higher increments absorb the six normal sources at the 384-row order; preserving the finite E, E_t, psi and lambda tangential germ instead gives an injective rank-six source gate. A conditional law recovers q from compatible prescribed tangential jets and rejects incompatible inputs. Independent affine and mask derivations support the scope. This is not yet surface evolution or preservation of the later 1114-row completion; main TeX/PDF are unchanged.
 
 ## Integration Discipline
+
+The [persistent numerical matrix cache](../../analysis/Numerical_Matrix_Cache.md) accelerates the current next-Cauchy script without changing its field equations. It stores response matrices and SVD factors under `build/numerical-cache/`, verifies exact canonical inputs inside fingerprint collision buckets, and supports a cache-free execution mode. The caller still evaluates actual residuals; cache hits do not establish mathematical compatibility. Historical calculation modules and the main TeX/PDF are not rewritten by this infrastructure change.
+
+The post-integration [next Cauchy-jet completion](../../analysis/HC_Cartan_Cauchy_Next_Completion.md) remains outside the main TeX. Its independent [highest-mask derivation](../../analysis/HC_Cartan_Highest_Cauchy_Mask.md) retains the complete 1114-row gate and the 800 allowed highest coordinates. For the chosen shifted source witness, re-preparing 368 earlier mixed coordinates with psi2 fixed restores all old 394 rows but still leaves a substantial new-order residual. The [normal-Hessian follow-up](../../analysis/HC_Cartan_Normal_Hessian_Completion.md) now releases the remaining 96 normal psi2 coordinates: the attempted fit still leaves a full residual about 31.95 and is not a completion. This restricts the attempted finite witness, not the source law generally or all possible surface data. No native, regional-existence or main-PDF conclusion is added.
 
 Keep edits in new working modules until a deliberate mathematical repair replaces an inherited statement with its full dependency audit. Do not use a preservation hash to defend an incorrect claim. Do not merge the old modular pre-v4 metadata over the later shifted normal form. Do not modify the published payload, invent a DOI, activate publication or promote detector terminality to all-readout zero.

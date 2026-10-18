@@ -3,20 +3,20 @@
   "audited_sources": {
     "entrypoint": {
       "path": "sources/research/v480-companion.tex",
-      "sha256": "f90dfe3eda2630b7741bdc8799bf6f27076efe93e78da6c624ab799d37d15315",
-      "canonical_LF_sha256": "c0c8b9772cf716fc8314ac891878652df475d74e6addf82ceb2655b9a167d9b7",
+      "sha256": "2539821bc89877ec37360b5be3aff7ab4f769c261d7020fc717a789cc8adc49f",
+      "canonical_LF_sha256": "6d1f240729f3c6f29ad2c7a3161a11817b4585731fca455fe56c962397fd54aa",
       "anchors": {
         "parts/hc-dynamics-and-geometry": [
           13
         ],
         "parts/v470/10_sphaera_and_physics": [
-          16
+          17
         ],
         "parts/v470/13_hc_hypotheses": [
-          18
+          19
         ],
         "parts/v470/16_master_model": [
-          20
+          21
         ]
       },
       "all_anchors_found": true
