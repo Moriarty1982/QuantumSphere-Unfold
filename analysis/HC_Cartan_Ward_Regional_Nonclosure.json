@@ -1,0 +1,373 @@
+{
+  "scope": "Formal necessary Ward residual system ONLY, not parent-realizable fields",
+  "input_sha256": {
+    "HC_Cartan_Regular_Gravity.py": "89cf5597fc935d463eed604f9c9eb247cda17b576ae294dbfad6e45dacbc063f",
+    "HC_Cartan_Regular_Gravity.json": "9719ef580419e7a1d4c49a7aec2f41987832d806215defacd74d8db8c09f4cdc",
+    "HC_Cartan_Regular_Gravity.md": "a2197dd64fb5ef2732021d819e3dfb5e3ebedb3b14654f2bad59cd74e2bf92f4",
+    "HC_Cartan_Spatial_Propagation.py": "1eaa40763d84f28dfb0846032a96da28dd18ab8080cdc2a400c82827eb21feaf",
+    "HC_Cartan_Spatial_Propagation.json": "1ca98d6b4658d279867469948cfdafe68442fa04456320ab4267d0df5befb75b",
+    "HC_Cartan_Spatial_Propagation.md": "6322e87811753bcb255aba65e5ec14d96d4d3ba1df9f0b50fa48e5216cc0098b",
+    "HC_Cartan_Third_Constraint_Reprepare.py": "8e91386218bf8372c4f7329f7825b1443eab018fe9dc65a1513c10c56a87d9c0",
+    "HC_Cartan_Second_Probe_Affine.py": "2d2f8abd51f13f2f0b56ca04add9ecfb4aa3ff749fe6f4372203a31cec5787f9",
+    "HC_Cartan_Second_Gravity_Affine.py": "663ad2ff16c8bc687f8cd366f649bd83a9cd31baafff532e6fa481b34394b46c",
+    "HC_Cartan_Third_Constraint_Diagnostic.py": "b780bfa91bad83b5d0c9454a49e9b44ac3170f94846facadf972117dfa79eab0",
+    "HC_Cartan_Next_Scalar_Compatibility.py": "916e412e18312e7ac72583029a3a2435b6cb4197b19bd5f49e4713b4cc5dcfbc",
+    "HC_Cartan_Next_Scalar_Compatibility.json": "9d3a8191eabf668fbbce0bd81d3ba01bdfd6bf926c293c15bb62b2d574867c0f",
+    "HC_Cartan_Next_Joint_Completion.py": "f78a2a3fb072bc66d81ae3763d40b48abf3dc786fd09fc99a164b3c6b4d92b78",
+    "HC_Cartan_Next_Joint_Completion.json": "259e7358b88fbaae09c54499aace8ec00066c29f34994c1b7e0f71dce1225d78",
+    "HC_Cartan_Regular_Neighborhood.py": "2a79d22186df80113f6b0e39b2d668d6af826be3d6330c42126bcdb8cb855eea",
+    "HC_Cartan_Joint_Neighborhood.py": "a942bb82e2a3bbf3722e2c95b5a624c8c87326fd98d08162c953368a31885d80",
+    "HC_Cartan_Constitutive_Transport.py": "72d3bf0b903700a2213a2b9546578ab55c5c68b9696eeae06dc26b9f577b9c21",
+    "HC_Cartan_Cauchy_Rank.py": "9159a761c6195efcc8cf52923092ad2b485522a1806b6bd23187760a0c8653c7",
+    "HC_Cartan_Constitutive_First_Closure.py": "4d4e21781e909b4634b267d3af959667bfaec0557280af03a35d616854b1f22a",
+    "HC_Cartan_Constitutive_Second_Closure.py": "e164e41e594a7d06871fb73efa44243636dd44b153a798fcd6ddeff2360a1cbe",
+    "HC_Cartan_Ward_Regional_Nonclosure.py": "a3a6aabe05fee7c41068e28d1ac07e687513ef5fb7656c69a2ef310f59af2ddb",
+    "HC_Cartan_Diffeomorphism_Residual_Identity.py": "659f15908fe1f79a5db111ea9d934ee33342e8b2f4a44914b5422a30f433d3f4",
+    "HC_Cartan_Lorentz_Residual_Identity.py": "a2fdc574a2687f859df62c3b31f8f61e06dbd0114f7cbd320928ad36f2e008d2"
+  },
+  "gate_matrix": [
+    [
+      0.010000000000000002,
+      0.020000000000000004,
+      -0.03,
+      0.04000000000000001
+    ],
+    [
+      -0.2045241655696958,
+      -0.10195843984715591,
+      -0.5167017728758491,
+      0.0023467144244679813
+    ],
+    [
+      0.49884980671353507,
+      0.7374757134687321,
+      0.13030798756019457,
+      0.007015265638874917
+    ],
+    [
+      -0.011155205664619163,
+      -0.0972368158289423,
+      0.24438112304943288,
+      -0.024280631589634415
+    ]
+  ],
+  "spatial_radius": 0.01,
+  "temporal_multiplier_lower_norm": 0.04522853104148983,
+  "uniform_gate_singular_lower_bound": 0.008574959437496046,
+  "uniform_invertibility_derivation": "M(x)=T(x)M(0), T=I+e0*(0,x), ||T^-1||<=1+|x|",
+  "reuses_only_temporal_multiplier_value_and_spatial_temporal_column_gradient": true,
+  "spatial_multiplier_columns_identically_zero_not_saved_parent_jets": true,
+  "formal_zero_Euler_and_probe_residuals_not_evaluated_parent_equations": true,
+  "zero_initial_data_with_smooth_nonzero_later_formal_residual": true,
+  "not_a_parent_solution_or_parent_nonuniqueness_counterexample": true,
+  "control_fields": [
+    {
+      "profile": "linear",
+      "time": 0.0,
+      "spatial_point": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "constraint_norm": 0.0,
+      "constraint_first_norm": 1.0451475174985267,
+      "constraint_second_norm": 14.834474834100783,
+      "coordinate_Ward_norm": 4.336808689942018e-19,
+      "Lorentz_Ward_norm": 0.0,
+      "differentiated_coordinate_Ward_norm": 1.2915537617188397e-16,
+      "omitted_second_constitutive_source_norm": 0.5396339236064195
+    },
+    {
+      "profile": "linear",
+      "time": 0.0,
+      "spatial_point": [
+        0.003,
+        -0.002,
+        0.001
+      ],
+      "constraint_norm": 0.0,
+      "constraint_first_norm": 1.0504751615783647,
+      "constraint_second_norm": 14.91791873104516,
+      "coordinate_Ward_norm": 1.0228342838563028e-18,
+      "Lorentz_Ward_norm": 0.0,
+      "differentiated_coordinate_Ward_norm": 6.939029427855326e-17,
+      "omitted_second_constitutive_source_norm": 0.5525592909718118
+    },
+    {
+      "profile": "linear",
+      "time": 0.0,
+      "spatial_point": [
+        -0.002,
+        0.004,
+        0.001
+      ],
+      "constraint_norm": 0.0,
+      "constraint_first_norm": 1.0361741111222937,
+      "constraint_second_norm": 14.493378672274858,
+      "coordinate_Ward_norm": 1.801211927639142e-18,
+      "Lorentz_Ward_norm": 0.0,
+      "differentiated_coordinate_Ward_norm": 4.4498277765247575e-17,
+      "omitted_second_constitutive_source_norm": 0.5165459829018082
+    },
+    {
+      "profile": "linear",
+      "time": 0.125,
+      "spatial_point": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "constraint_norm": 0.13064343968731584,
+      "constraint_first_norm": 1.6767721741447823,
+      "constraint_second_norm": 50.687720979165725,
+      "coordinate_Ward_norm": 4.336808689942018e-19,
+      "Lorentz_Ward_norm": 0.0,
+      "differentiated_coordinate_Ward_norm": 1.2915537617188397e-16,
+      "omitted_second_constitutive_source_norm": 0.5396339236064195
+    },
+    {
+      "profile": "linear",
+      "time": 0.125,
+      "spatial_point": [
+        0.003,
+        -0.002,
+        0.001
+      ],
+      "constraint_norm": 0.1313093951972956,
+      "constraint_first_norm": 1.6858604340541503,
+      "constraint_second_norm": 51.2684637379491,
+      "coordinate_Ward_norm": 1.0228342838563028e-18,
+      "Lorentz_Ward_norm": 0.0,
+      "differentiated_coordinate_Ward_norm": 6.939029427855326e-17,
+      "omitted_second_constitutive_source_norm": 0.5525592909718118
+    },
+    {
+      "profile": "linear",
+      "time": 0.125,
+      "spatial_point": [
+        -0.002,
+        0.004,
+        0.001
+      ],
+      "constraint_norm": 0.12952176389028672,
+      "constraint_first_norm": 1.6476453233365558,
+      "constraint_second_norm": 48.54068375433532,
+      "coordinate_Ward_norm": 1.801211927639142e-18,
+      "Lorentz_Ward_norm": 0.0,
+      "differentiated_coordinate_Ward_norm": 4.4498277765247575e-17,
+      "omitted_second_constitutive_source_norm": 0.5165459829018082
+    },
+    {
+      "profile": "linear",
+      "time": 0.25,
+      "spatial_point": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "constraint_norm": 0.2612868793746317,
+      "constraint_first_norm": 2.822987725078676,
+      "constraint_second_norm": 98.06526042098865,
+      "coordinate_Ward_norm": 4.336808689942018e-19,
+      "Lorentz_Ward_norm": 0.0,
+      "differentiated_coordinate_Ward_norm": 1.2915537617188397e-16,
+      "omitted_second_constitutive_source_norm": 0.5396339236064195
+    },
+    {
+      "profile": "linear",
+      "time": 0.25,
+      "spatial_point": [
+        0.003,
+        -0.002,
+        0.001
+      ],
+      "constraint_norm": 0.2626187903945912,
+      "constraint_first_norm": 2.838662962938312,
+      "constraint_second_norm": 99.22796278468789,
+      "coordinate_Ward_norm": 1.0228342838563028e-18,
+      "Lorentz_Ward_norm": 0.0,
+      "differentiated_coordinate_Ward_norm": 6.939029427855326e-17,
+      "omitted_second_constitutive_source_norm": 0.5525592909718118
+    },
+    {
+      "profile": "linear",
+      "time": 0.25,
+      "spatial_point": [
+        -0.002,
+        0.004,
+        0.001
+      ],
+      "constraint_norm": 0.25904352778057343,
+      "constraint_first_norm": 2.763687768249349,
+      "constraint_second_norm": 93.77962380677221,
+      "coordinate_Ward_norm": 1.801211927639142e-18,
+      "Lorentz_Ward_norm": 0.0,
+      "differentiated_coordinate_Ward_norm": 4.4498277765247575e-17,
+      "omitted_second_constitutive_source_norm": 0.5165459829018082
+    },
+    {
+      "profile": "flat",
+      "time": 0.0,
+      "spatial_point": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "constraint_norm": 0.0,
+      "constraint_first_norm": 0.0,
+      "constraint_second_norm": 0.0,
+      "coordinate_Ward_norm": 0.0,
+      "Lorentz_Ward_norm": 0.0,
+      "differentiated_coordinate_Ward_norm": 0.0,
+      "omitted_second_constitutive_source_norm": 0.0
+    },
+    {
+      "profile": "flat",
+      "time": 0.0,
+      "spatial_point": [
+        0.003,
+        -0.002,
+        0.001
+      ],
+      "constraint_norm": 0.0,
+      "constraint_first_norm": 0.0,
+      "constraint_second_norm": 0.0,
+      "coordinate_Ward_norm": 0.0,
+      "Lorentz_Ward_norm": 0.0,
+      "differentiated_coordinate_Ward_norm": 0.0,
+      "omitted_second_constitutive_source_norm": 0.0
+    },
+    {
+      "profile": "flat",
+      "time": 0.0,
+      "spatial_point": [
+        -0.002,
+        0.004,
+        0.001
+      ],
+      "constraint_norm": 0.0,
+      "constraint_first_norm": 0.0,
+      "constraint_second_norm": 0.0,
+      "coordinate_Ward_norm": 0.0,
+      "Lorentz_Ward_norm": 0.0,
+      "differentiated_coordinate_Ward_norm": 0.0,
+      "omitted_second_constitutive_source_norm": 0.0
+    },
+    {
+      "profile": "flat",
+      "time": 0.125,
+      "spatial_point": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "constraint_norm": 0.01914254451596,
+      "constraint_first_norm": 1.2400956510795085,
+      "constraint_second_norm": 52.48137216887993,
+      "coordinate_Ward_norm": 8.940560153363745e-19,
+      "Lorentz_Ward_norm": 0.0,
+      "differentiated_coordinate_Ward_norm": 9.132046387570332e-17,
+      "omitted_second_constitutive_source_norm": 0.6325593649207003
+    },
+    {
+      "profile": "flat",
+      "time": 0.125,
+      "spatial_point": [
+        0.003,
+        -0.002,
+        0.001
+      ],
+      "constraint_norm": 0.019240123721054016,
+      "constraint_first_norm": 1.2464327489163072,
+      "constraint_second_norm": 52.75859340471241,
+      "coordinate_Ward_norm": 2.1466107833567237e-18,
+      "Lorentz_Ward_norm": 0.0,
+      "differentiated_coordinate_Ward_norm": 1.5581641236221424e-16,
+      "omitted_second_constitutive_source_norm": 0.6477104920355009
+    },
+    {
+      "profile": "flat",
+      "time": 0.125,
+      "spatial_point": [
+        -0.002,
+        0.004,
+        0.001
+      ],
+      "constraint_norm": 0.018978190845171054,
+      "constraint_first_norm": 1.2290226627216558,
+      "constraint_second_norm": 51.91463650033702,
+      "coordinate_Ward_norm": 8.673617379884035e-19,
+      "Lorentz_Ward_norm": 0.0,
+      "differentiated_coordinate_Ward_norm": 9.15467340958845e-17,
+      "omitted_second_constitutive_source_norm": 0.6054956603043699
+    },
+    {
+      "profile": "flat",
+      "time": 0.25,
+      "spatial_point": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "constraint_norm": 0.3844882846790783,
+      "constraint_first_norm": 4.934800083169655,
+      "constraint_second_norm": 149.68228913138768,
+      "coordinate_Ward_norm": 3.6799042000400975e-18,
+      "Lorentz_Ward_norm": 0.0,
+      "differentiated_coordinate_Ward_norm": 3.505558112192639e-16,
+      "omitted_second_constitutive_source_norm": 1.588161810027859
+    },
+    {
+      "profile": "flat",
+      "time": 0.25,
+      "spatial_point": [
+        0.003,
+        -0.002,
+        0.001
+      ],
+      "constraint_norm": 0.3864482154059294,
+      "constraint_first_norm": 4.961547154983089,
+      "constraint_second_norm": 151.3908273243146,
+      "coordinate_Ward_norm": 2.3354429532350846e-18,
+      "Lorentz_Ward_norm": 0.0,
+      "differentiated_coordinate_Ward_norm": 2.5646934735344165e-16,
+      "omitted_second_constitutive_source_norm": 1.6262016254143883
+    },
+    {
+      "profile": "flat",
+      "time": 0.25,
+      "spatial_point": [
+        -0.002,
+        0.004,
+        0.001
+      ],
+      "constraint_norm": 0.3811871529559854,
+      "constraint_first_norm": 4.8490787263823405,
+      "constraint_second_norm": 143.37678009486586,
+      "coordinate_Ward_norm": 5.553824967135427e-18,
+      "Lorentz_Ward_norm": 0.0,
+      "differentiated_coordinate_Ward_norm": 1.5367731108738363e-16,
+      "omitted_second_constitutive_source_norm": 1.520213180234165
+    }
+  ],
+  "actual_point_mixed_Lorentz2_gate_shape": [
+    18,
+    12
+  ],
+  "actual_point_mixed_Lorentz2_gate_singular_values": [
+    2.282503836941482,
+    2.233317102342708,
+    1.7563610025171752,
+    1.5587459457804371,
+    0.9991761393367211,
+    0.9734708321402303,
+    0.8835946467892114,
+    0.7315642632186079,
+    0.6367586793912692,
+    0.47545019655824644,
+    0.43860566812135093,
+    0.08574653824177271
+  ],
+  "actual_point_mixed_Lorentz2_gate_rank": 12,
+  "main_TeX_PDF_changed": false
+}

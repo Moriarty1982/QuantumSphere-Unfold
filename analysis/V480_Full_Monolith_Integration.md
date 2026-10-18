@@ -169,3 +169,138 @@ audit tests still belong to the pre-existing unrelated uncommitted metadata
 work; the research-scope total excluding those is 1,986 plus 34 = 2,020.
 The full-monolith preservation and whitespace checks passed. No commit, push
 or PDF build was performed.
+
+## Joint Coefficient Domain and Normal Cone (2026-10-18)
+
+The [updated quartic neighborhood](HC_Cartan_Joint_Neighborhood.md) recomputes
+the changed finite Taylor fields rather than inheriting the previous ball.
+The conservative dyadic radius is 1/16384, with temporal probe lower margin
+0.96800847 and derived constraint singular margin 0.025576865. Geometric norm
+bounds retain timelike coordinate dt and spacelike t=constant slices.
+The independent [Cartan regularity](HC_Cartan_Joint_Cartan_Regularity.md)
+derives the exact Hessian congruence and gives singular lower margin about
+0.9999999821 on that same ball. The [tilted-normal estimate](HC_Cartan_Joint_Normal_Cone.md)
+controls the normalized 28-real-dimensional partial probe/constitutive block
+for spatial normal slopes up to about 0.0002377643. The required n_mu factors
+and spatial multiplier columns are retained. All 1114 origin residuals remain
+unchanged. These are coefficient estimates with floating inputs, not uniform
+field-equation solutions, interval certificates, full-symbol hyperbolicity or
+constraint propagation. Main TeX/PDF and release artifacts are unchanged.
+
+Verification of the coefficient-domain stage: 2,026 audit tests plus 34 separate
+OP5 checks passed, for 2,060 total. The 34 new tests comprise 16 quartic
+neighborhood, ten tilted-normal and eight independent Cartan-regularity checks.
+The metadata tests are now part of the committed baseline, so no uncommitted
+metadata-test subtraction applies to this count. Full-monolith preservation
+and whitespace checks passed. No new commit, push or PDF build was performed.
+
+## Conditional Gravitational Constraint Propagation (2026-10-18)
+
+The [coordinate residual identity](HC_Cartan_Diffeomorphism_Residual_Identity.md)
+and [independent Lorentz audit](HC_Cartan_Lorentz_Residual_Identity.md) supply the
+off-shell source terms of the added neutral Cartan comparison. Neither drops
+the nonzero probe or constitutive residuals. Only assuming R=F=0 on an OPEN
+region yields a symmetric, LC-divergence-free gravitational Euler density.
+The [subsidiary construction](HC_Cartan_Gravitational_Subsidiary.md) and its
+[independent analytic derivation](HC_Cartan_Constraint_Propagation_Derivation.md)
+then show conditional zero propagation for four gravitational constraints,
+given spatial trace-reversed evolution, regular coefficients and no incoming
+constraint flux. The positive symmetrizer is diag(1,h^-1); the naive spatial
+Euler choice has a non-diagonalizable nilpotent control symbol. Tests cover
+general-shift projection, the full lower terms and the exact local energy law.
+R/F propagation, full parent reduction/existence and native identification
+remain open; the saved Taylor fields do not satisfy the open-set hypotheses.
+The LC derivative in this residual argument does not equate sourced Cartan
+curvature to metric LC curvature. Main TeX/PDF and release files are unchanged.
+
+Verification of the conditional propagation stage: 2,056 audit tests and 34
+separate OP5 checks pass, for 2,090 total. Thirty new tests cover nine coordinate
+Ward, eight Lorentz residual and thirteen subsidiary/energy checks. The
+full-monolith preservation and whitespace checks pass. No commit, push or PDF
+build was performed.
+
+## Constitutive Transport Closure Audit (2026-10-18)
+
+The [transport audit](HC_Cartan_Constitutive_Transport.md) and its
+[independent derivation](HC_Cartan_Constitutive_Transport_Derivation.md)
+derive the exact coordinate identity partial_t F_i=partial_i F_0+J_0i,
+where J=dC-dE. The symmetric spinor Hessian cancels from J. Twelve mixed
+curls add six effective conditions to the normal block (rank 34 to 40).
+A new witness based on the latest joint point keeps the 56 original point
+equations below 2e-14 and all first spatial F derivatives below 2e-13,
+but has nonzero temporal spatial-column drift. Its deliberately nonzero
+frozen-higher first probe derivative is retained as a negative control.
+This is a point-jet non-implication, not a full PDE counterexample. Closure
+of the mixed-curl/probe/multiplier system remains necessary before removing
+the open-set hypotheses of conditional gravitational propagation. No native
+action, physical scale, main TeX/PDF or release artifact was changed.
+
+Verification of the transport stage: all 2,068 audit tests plus 34 separate
+OP5 checks passed, for 2,102 total, including twelve new transport tests.
+Full-monolith preservation and whitespace checks passed. No commit, push
+or PDF build was performed.
+
+## First Constitutive Closure (2026-10-18)
+
+The [first closure calculation](HC_Cartan_Constitutive_First_Closure.md)
+adds full R1 and FE1 to the spatial/temporal-column constitutive first jets.
+The [independent Ward derivation](HC_Cartan_Constitutive_Ward_Gates.md)
+identifies three necessary contractions ell_a X_ai=0; differentiated Lorentz
+identities add no rows here. The 212-by-742 affine system has numerical rank
+175. Its mixed-defect image has rank three, down from the original six.
+A new finite witness satisfies all original point equations and every
+imposed first derivative equation while retaining defect norm 0.0484821.
+Its nonzero unimposed second constitutive derivative is explicitly retained.
+This is not an open-set solution, complete propagation disproof or physical
+mode count. Action coefficients and spinor value/first jet are fixed; main
+TeX/PDF and release files are unchanged.
+
+Verification of this first-closure stage: all 2,083 audit tests and 34
+separate OP5 checks passed (2,117 total), including fifteen new closure
+checks. Full-monolith preservation and whitespace checks passed. No commit,
+push or PDF build was performed.
+
+## Second Constitutive Compatibility and Coordinate Gate (2026-10-18)
+
+The [second closure audit](HC_Cartan_Constitutive_Second_Closure.md) adds full
+F2 with psi3 free to vary. Its 372-by-1222 affine system has numerical rank
+335 and retains a rank-three mixed first-curl image. The independent
+[principal symmetry audit](HC_Cartan_Second_Constitutive_Symmetry.md) shows
+that psi3 has rank 80 on the 160 F2 components, with 80 compatibility rows.
+The [next coordinate Ward derivative](HC_Cartan_Second_Coordinate_Ward_Gates.md)
+then supplies a conditional exclusion: nine spatial derivatives of full
+gravitational Euler divergences, together with the earlier hypotheses and
+an invertible multiplier/spatial-gradient matrix, force the remaining
+mixed defect to zero. The smallest stored matrix singular value is about
+0.00866071. Actual FE2 and independent E4/lambda3 changes retain the forced
+nonzero divergence of a nonzero-defect witness. The proof needs R1 but not
+R2. This is a necessary finite-jet compatibility result, not a closed
+regional evolution or full constraint propagation theorem. Main TeX/PDF,
+action coefficients, spinor value/first jet and release files are unchanged.
+
+Verification of the second-compatibility stage: 2,108 audit tests plus 34
+separate OP5 checks passed (2,142 total), including seventeen enlarged
+closure/Ward tests and eight independent symmetry tests. Full-monolith
+preservation and whitespace checks passed. No commit, push or PDF build
+was performed.
+
+## Regional Ward Scope and Second Lorentz Gate (2026-10-18)
+
+The [regional scope audit](HC_Cartan_Ward_Regional_Nonclosure.md) keeps the
+F2 source terms. A smooth necessary-Ward-system control has zero initial
+residual jets but nonzero later F with a uniformly invertible temporal
+multiplier gate. F is prescribed rather than reconstructed; its multiplier
+background differs from the saved parent spatial jets. It is therefore no
+parent solution or parent nonuniqueness counterexample. The independent
+[second Lorentz gate](HC_Cartan_Second_Lorentz_Transport_Gates.md) instead
+uses the actual point and has rank 12 on twelve mixed components, conditional
+on regional F_0=0, mixed R2/FE2 and other stated lower hypotheses. It avoids
+full F2=0 there, but its spatial F2 source returns away from the special
+zero-spatial-multiplier locus. The parent still needs an Euler-based reduced
+evolution and a closed sourced subsidiary estimate. No main TeX/PDF, native
+action, physical scale or release artifact was changed.
+
+Verification of the regional-scope stage: all 2,124 audit tests plus 34
+separate OP5 checks passed (2,158 total), including sixteen new smooth
+residual/gate tests. Full-monolith preservation and whitespace checks
+passed. No commit, push or PDF build was performed.

@@ -1,0 +1,331 @@
+{
+  "scope": "Uniform algebraic Cartan invertibility on saved joint1114 quartic Taylor fields",
+  "input_sha256_LF_normalized": {
+    "Coupling_Scale_Candidate.json": "d51a437d35d5e6ade074d2dbea7b5338f0377d7413e5259a86005efb15b5c392",
+    "Coupling_Scale_Candidate.py": "bfde0194e15fd9ef3f3c22e2caf666fe40407620858c57cd8a66b0e5ef9f67be",
+    "HC_Antisymmetric_Cross_Geometry.json": "459f8dd2dcd3e5d4665cba94c7252ac064c24f240d99c576a251ec6dbb467300",
+    "HC_Antisymmetric_Cross_Geometry.py": "e9f85d83840c02e26622e8ab76327ccfcae23ec435d4a2bb7bab10705ee56961",
+    "HC_Background_Coframe_Origin.json": "82cae401275c223130b0d70b95c2c2099e6d44d42d509c8e5a39b87e73ec29d1",
+    "HC_Background_Coframe_Origin.py": "47d8b930e0ae588c52fd8b80d028e5dab8c029089858186ef59a3ccddddcb63d",
+    "HC_Bilinear_Geometry_Bridge.json": "d51e90e0896632398d9176352ad05c94f323fd7c3296370efc495461ffeef894",
+    "HC_Bilinear_Geometry_Bridge.py": "be63e0e10667790cc41f6915baa44ccb10716a31b5b7e143f32b7acd7b0d4ef6",
+    "HC_Cartan_Cauchy_Rank.json": "a230dad26098b4c44af59d42610df7245a02e7d346bedfdae02976cf52014459",
+    "HC_Cartan_Cauchy_Rank.py": "9159a761c6195efcc8cf52923092ad2b485522a1806b6bd23187760a0c8653c7",
+    "HC_Cartan_Compatible_Jets.json": "7e8c6817af67e99a79c47043929ca266ccbd46a3060ae8b2fee87d0412b00ff9",
+    "HC_Cartan_Compatible_Jets.py": "45122837ddbbe8dbee47f6850564250fafe058460e78d5630481fc6c228fd7ad",
+    "HC_Cartan_Joint_Cartan_Regularity.py": "d7e9a0d3b90e34a54eece8915b59cdce7cd48ccdf7917bb96d8065fe2e4a774f",
+    "HC_Cartan_Joint_Neighborhood.json": "2eca734e4a7ace0d7d7892a8427479323ce9f24f5ae585a1c227f928831bf936",
+    "HC_Cartan_Next_Joint_Completion.json": "b3d57c52f48ec021eaa5730bb82de9f8d330726af19d9e80458dbb2b4a1a3145",
+    "HC_Cartan_Next_Joint_Completion.py": "f78a2a3fb072bc66d81ae3763d40b48abf3dc786fd09fc99a164b3c6b4d92b78",
+    "HC_Cartan_Next_Scalar_Compatibility.json": "25c5295a5c83d4247a07abdd1a8d88b377675da1d490241b26bfe64f70bc1055",
+    "HC_Cartan_Next_Scalar_Compatibility.py": "916e412e18312e7ac72583029a3a2435b6cb4197b19bd5f49e4713b4cc5dcfbc",
+    "HC_Cartan_Prolongation.json": "b19ec42db42e1f0e395a3cabc51b935ea8c4653fd06569e40e8cf42744a7bfcf",
+    "HC_Cartan_Prolongation.py": "530d46b8eb4f7268e7baed38ee4fc64c995575cafe357070375d67300843e786",
+    "HC_Cartan_Regular_Gravity.json": "bd2223c86c22b1f2a1fbcd93f853ef22505b59e707747347f132ed832b7d88d6",
+    "HC_Cartan_Regular_Gravity.py": "89cf5597fc935d463eed604f9c9eb247cda17b576ae294dbfad6e45dacbc063f",
+    "HC_Cartan_Second_Gravity_Affine.py": "663ad2ff16c8bc687f8cd366f649bd83a9cd31baafff532e6fa481b34394b46c",
+    "HC_Cartan_Second_Probe_Affine.py": "2d2f8abd51f13f2f0b56ca04add9ecfb4aa3ff749fe6f4372203a31cec5787f9",
+    "HC_Cartan_Spatial_Propagation.json": "a829b746ac38670a692c0aa549478673436930f4e746b812dc5c478407570d5c",
+    "HC_Cartan_Spatial_Propagation.py": "1eaa40763d84f28dfb0846032a96da28dd18ab8080cdc2a400c82827eb21feaf",
+    "HC_Cartan_Third_Constraint_Diagnostic.json": "93273f4e178dad0186c6442f48ae013881f0cbd38c2a3ae0220e9cb2590a4225",
+    "HC_Cartan_Third_Constraint_Diagnostic.py": "b780bfa91bad83b5d0c9454a49e9b44ac3170f94846facadf972117dfa79eab0",
+    "HC_Cartan_Third_Constraint_Reprepare.json": "4c9f5c88087b65da817f5f3734a7c095748ccbdd50e7bb2534b43ef862d410da",
+    "HC_Cartan_Third_Constraint_Reprepare.py": "8e91386218bf8372c4f7329f7825b1443eab018fe9dc65a1513c10c56a87d9c0",
+    "HC_Closure_Fluctuation_Hessian.json": "4fe5b31f68ebd1339c9be36ee750f8e8099d825fe47787391d1373be1fe59201",
+    "HC_Closure_Fluctuation_Hessian.py": "da23ba53e335230ac40d50aa2b608296ebc8e2a65e11e6cd5fa93b44e8aa8216",
+    "HC_Closure_Load_Stability.json": "7b0cc1548fae5e2948d8bf405c783c0236fe4c2b052004bb61265c40a186b44a",
+    "HC_Closure_Load_Stability.py": "035a03a970f7aa2e795fc3b0ffc8b19d323bfc1bf57d175966f370c944ffa314",
+    "HC_Cross_Cartan_Parent.json": "4f08f16f0b521866fab197a3eed9ee1d1aa0b39deaaf93274091ca906f39be73",
+    "HC_Cross_Cartan_Parent.py": "0ffa49d95232daf76ea8a49b6e5f4d87b6e496ce6ebfd1c05dc0a7128708866f",
+    "HC_Derived_Background_Curved_Parent.json": "7cd9ea9e6fdfd2fc0c5a18229deb4bf0b8215bd0a249249f3035d47d13647f29",
+    "HC_Derived_Background_Curved_Parent.py": "e9a68e9aea34d84f0c0c3b378defdd19d42ea938962fbf8fa83b1cda50642c7a",
+    "HC_Dirac_State_Gravity.json": "18b960d8a242c817cc77a7fcce92aba919ed28aa1af1701f5a5e744587e9e0dd",
+    "HC_Dirac_State_Gravity.py": "068b6f18cf9ac41e4f066156851dbdc33f13375cbec9c04bde0a486c96f16556",
+    "HC_Gauge_Invariant_Geometry_Readouts.json": "49900688ae0445dad525e6fa10e9edd2c4b1ce8c4274ef17fa0d5a12d0c9b33d",
+    "HC_Gauge_Invariant_Geometry_Readouts.py": "1226cf275dc39cd53010b84d5084098927f46989fbff30ce828c17873ddbb2c3",
+    "HC_Global_Flux_Selection.json": "3251db1382737ec6eb9550a8be9acd88eccf0e874bc7870e8544eaf8cf076822",
+    "HC_Global_Flux_Selection.py": "14943db64d1ec03dc89ff921a36262497737bb147fd2caaa012256ce8e1b6e2a",
+    "HC_Hard_Closure_Transport.json": "3d5148d85675d8edaf2bf2fbf61b03c3a19864be9759971e6a4842d2e1974428",
+    "HC_Hard_Closure_Transport.py": "2112e3a49e27b5efbf1754f70480f5e5ac9dfdcfaf1c5b5a8a3aa64153cc25a1",
+    "HC_Induced_Gravity_Heat_Kernel.json": "edbfa520f4234876ace0e464f90228b0a1ce07d06512b79fcc0894cdc0ed4e2e",
+    "HC_Induced_Gravity_Heat_Kernel.py": "bf459056f6f2b3088ea3f3ef9f2ea699582f165ceec1f3e59ecbf390d35842c2",
+    "HC_Massive_Soft_Closure.json": "6c18faf79b35e7599a67c67c4ebecf1b5011b3a197f49c4152e21125bfbd754d",
+    "HC_Massive_Soft_Closure.py": "900ee03f0607a6fe50640d445c3cc16fe81965e1eaf8ca925727f6945f062b08",
+    "HC_Null_Axis_Action_Check.json": "a1f89aaa79cd534c001d99c31b60a62fef26652e507745b4527e9af4af8ad997",
+    "HC_Null_Axis_Action_Check.py": "26e42c65b087c815fe58a32c674ceee5bdf62ab0c7634bac61e9a2eff9da446b",
+    "HC_Null_Axis_Dynamical_Closure.json": "94edb926afef0d89a289ffda8674e6f1a155fc71f94cc883104a97f8f621bdf3",
+    "HC_Null_Axis_Dynamical_Closure.py": "354e66d0b66925dd5eb59fe790a4495839985fc07887fbd89b4a2069ea4ff3da",
+    "HC_Probe_Law_Revision_Audit.json": "62e89a81fa6ddf8ecb128d3587bf797f2b9929e091c775fcec9a2d7bcd77636c",
+    "HC_Probe_Law_Revision_Audit.py": "dac01938ba5a92dbc55c7547e49beaaa9c70734c81a9986e04eed7bd66c65123",
+    "HC_Quantum_State_Gravity.json": "5caa0fd4e7e1782483fee972525f8d452ba543106bf8c530cfda86b8aab10b6e",
+    "HC_Quantum_State_Gravity.py": "67aa8d88d04e0a4a282e73b27435aeb77c9f9d0b1f69993204716af72a6a7d32",
+    "HC_Real_Probe_Current_Closure.json": "ceb30b7c52750c45a4a5de8e0aa930b741e1826ba0ef3c13394792b7222190c4",
+    "HC_Real_Probe_Current_Closure.py": "fb9d6b7c8ad2131a1b280382706cf99b15c19da5e8c099ce94c5fe5e3e27edde",
+    "HC_Source_Backreaction.json": "341639616b78392b8e69c887796aa72b208538a269aecfd50320050e1c08e7bf",
+    "HC_Source_Backreaction.py": "a53bec5556883fd8926b7b7b5659bbb9eee4be0947a2253757146278397bf35c",
+    "HC_Sourced_Closure_Current.json": "2acecfa4ac9418e3b34648e10ace93262fd4bb66b7ce43444e7006c456babaa5",
+    "HC_Sourced_Closure_Current.py": "47701a702341f8846c782de2fe8c9a763a3382b72752fbd1c2fda05984d80b47",
+    "HC_Spectral_Gauge_Completion.json": "a5b63af972e0f1689931a100922a16403c587be45839d018c2be6a424a2be5b9",
+    "HC_Spectral_Gauge_Completion.py": "68d0dbbd52581ecceaa19ba623ae53b947af59e012db542d883f602ec8153edb",
+    "HC_Triadic_Gauge_Factorization.json": "73464bf764c646e875913615aae1717878d4cf1931045627d332c36b26e787c0",
+    "HC_Triadic_Gauge_Factorization.py": "aeece32f579573f5ae1baf0892ac9735ab530299b5e89ae03da0aa82d73ffad3",
+    "HC_Triadic_Gauss_Compatibility.json": "d0ad21d764caa4b638aa35ee02c63952df0d042c390f3d2b9bf3f2a5b8d2ea4c",
+    "HC_Triadic_Gauss_Compatibility.py": "de506856a8cb281147b75e54daa87a69eb498d68df9a65892cbe12287db83bc8",
+    "HC_Triadic_Intertwiner_Classification.json": "d33c0aea5f4117530d2b6e9d3539755e7f3f7df4234ed49ac7b55902e5eb3cb5",
+    "HC_Triadic_Intertwiner_Classification.py": "2b86819ea6692bec1d516bd4ec88b459169fbb915b7972605448a41a01d16a91",
+    "HC_Two_Frame_Action_Bridge.json": "56b7df09ef570a77b54d429f47f2321af5edb37a5c681233eb44535227327bf6",
+    "HC_Two_Frame_Action_Bridge.py": "3c3107663f5ac45437b0dfc23b7033e44df726a0a2616459b6c335dec440bf22",
+    "Phase_Selection_Derivation.json": "dda93780eb9010127ecaddfaf53214427cabc7a1472b780c77da7b96a3b51fad",
+    "Phase_Selection_Derivation.py": "0dc45582745d35af3a80cd607ed24bba81b70df5bf57588adf6c08b08e910d79"
+  },
+  "fixed_couplings": "Q, M unchanged; Einstein coefficient 1; vacuum 0",
+  "coefficient_norms": {
+    "coframe_second": 1.1701069685655754,
+    "coframe_third": 21371.624850375254,
+    "coframe_fourth": 35772.44462138257,
+    "coframe_fourth_unique_unweighted": 12464.611562931486,
+    "minimum_base_hessian_singular_value": 0.9999999999999997,
+    "base_hessian_operator_norm": 2.0000000000000004
+  },
+  "regular_neighborhood": {
+    "coframe_change_bound": 0.013819390297026394,
+    "hessian_change_bound": 0.17249832572992652,
+    "perturbation_singular_value_lower_bound": 0.8275016742700732,
+    "hessian_singular_value_lower_bound": 0.9202475081672985,
+    "hessian_inverse_norm_upper_bound": 1.086664175805845,
+    "resolved": true,
+    "radius": 0.015625
+  },
+  "at_joint_temporal_neighborhood_radius": {
+    "coframe_change_bound": 2.989405569583791e-09,
+    "hessian_change_bound": 3.587286713884805e-08,
+    "perturbation_singular_value_lower_bound": 0.9999999641271325,
+    "hessian_singular_value_lower_bound": 0.9999999820635661,
+    "hessian_inverse_norm_upper_bound": 1.0000000179364341,
+    "resolved": true,
+    "radius": 6.103515625e-05
+  },
+  "sample_checks_not_the_proof": [
+    {
+      "coframe_change": 0.0,
+      "hessian_change": 0.0,
+      "hessian_minimum_singular_value": 0.9999999999999997,
+      "hessian_inverse_norm": 1.0000000000000002,
+      "polarized_hessian_error": 0.0,
+      "congruence_error": 0.0,
+      "Cartan_residual_norm": 1.5202354861220294e-16
+    },
+    {
+      "coframe_change": 0.0010062438696183016,
+      "hessian_change": 0.0015344242782652003,
+      "hessian_minimum_singular_value": 0.9990845253306871,
+      "hessian_inverse_norm": 1.0009163135311403,
+      "polarized_hessian_error": 0.0,
+      "congruence_error": 3.4017718210539694e-16,
+      "Cartan_residual_norm": 2.774977664579937e-15
+    },
+    {
+      "coframe_change": 0.0018524658242978153,
+      "hessian_change": 0.003087804784210127,
+      "hessian_minimum_singular_value": 0.9989241363901606,
+      "hessian_inverse_norm": 1.0010770223389809,
+      "polarized_hessian_error": 0.0,
+      "congruence_error": 2.48253502566421e-16,
+      "Cartan_residual_norm": 2.0065194834725773e-15
+    },
+    {
+      "coframe_change": 0.001081370877458614,
+      "hessian_change": 0.0018117482717831287,
+      "hessian_minimum_singular_value": 0.9992879309572829,
+      "hessian_inverse_norm": 1.000712576446345,
+      "polarized_hessian_error": 0.0,
+      "congruence_error": 3.401771745057297e-16,
+      "Cartan_residual_norm": 2.216647184076057e-15
+    },
+    {
+      "coframe_change": 0.0014264420804318235,
+      "hessian_change": 0.0021832943739410163,
+      "hessian_minimum_singular_value": 0.9990709056121077,
+      "hessian_inverse_norm": 1.0009299584070295,
+      "polarized_hessian_error": 0.0,
+      "congruence_error": 2.0005536230335678e-16,
+      "Cartan_residual_norm": 1.1895005325908541e-15
+    },
+    {
+      "coframe_change": 0.0010073902293367119,
+      "hessian_change": 0.0015364814481226223,
+      "hessian_minimum_singular_value": 0.9990867308149021,
+      "hessian_inverse_norm": 1.0009141040081206,
+      "polarized_hessian_error": 0.0,
+      "congruence_error": 3.8459259340480766e-16,
+      "Cartan_residual_norm": 4.559514164728541e-15
+    },
+    {
+      "coframe_change": 0.0018526025183209184,
+      "hessian_change": 0.003071353135457606,
+      "hessian_minimum_singular_value": 0.9992589825969591,
+      "hessian_inverse_norm": 1.0007415669170319,
+      "polarized_hessian_error": 0.0,
+      "congruence_error": 3.1401868497545816e-16,
+      "Cartan_residual_norm": 1.9130972191230336e-15
+    },
+    {
+      "coframe_change": 0.0010565308195036817,
+      "hessian_change": 0.0017984071374035162,
+      "hessian_minimum_singular_value": 0.999316824398345,
+      "hessian_inverse_norm": 1.000683642649633,
+      "polarized_hessian_error": 0.0,
+      "congruence_error": 3.59275809209304e-16,
+      "Cartan_residual_norm": 3.518028753842431e-15
+    },
+    {
+      "coframe_change": 0.001421582234120314,
+      "hessian_change": 0.002138699263630247,
+      "hessian_minimum_singular_value": 0.9992008625788434,
+      "hessian_inverse_norm": 1.0007997765525283,
+      "polarized_hessian_error": 0.0,
+      "congruence_error": 3.243260574829788e-16,
+      "Cartan_residual_norm": 3.635768524850865e-15
+    },
+    {
+      "coframe_change": 0.0017999066929308984,
+      "hessian_change": 0.0029619146990111324,
+      "hessian_minimum_singular_value": 0.9990359483709161,
+      "hessian_inverse_norm": 1.0009649819214776,
+      "polarized_hessian_error": 0.0,
+      "congruence_error": 3.1401860846188406e-16,
+      "Cartan_residual_norm": 1.7910547349592614e-15
+    },
+    {
+      "coframe_change": 0.001851581445302481,
+      "hessian_change": 0.0034268554209228295,
+      "hessian_minimum_singular_value": 0.9984984818391498,
+      "hessian_inverse_norm": 1.0015037761079866,
+      "polarized_hessian_error": 0.0,
+      "congruence_error": 2.482536206451067e-16,
+      "Cartan_residual_norm": 2.1571152151432058e-15
+    },
+    {
+      "coframe_change": 0.001619447933917583,
+      "hessian_change": 0.0024798967120736575,
+      "hessian_minimum_singular_value": 0.9986988445040419,
+      "hessian_inverse_norm": 1.0013028507073163,
+      "polarized_hessian_error": 0.0,
+      "congruence_error": 3.140185617206483e-16,
+      "Cartan_residual_norm": 3.5417624519260735e-15
+    },
+    {
+      "coframe_change": 0.0018719673755365454,
+      "hessian_change": 0.0029704046477243627,
+      "hessian_minimum_singular_value": 0.9983307223187711,
+      "hessian_inverse_norm": 1.0016720688284055,
+      "polarized_hessian_error": 0.0,
+      "congruence_error": 3.14018636546273e-16,
+      "Cartan_residual_norm": 3.772405788602243e-15
+    },
+    {
+      "coframe_change": 0.0013071707848193758,
+      "hessian_change": 0.002060619397133726,
+      "hessian_minimum_singular_value": 0.9993881281359198,
+      "hessian_inverse_norm": 1.0006122464804754,
+      "polarized_hessian_error": 0.0,
+      "congruence_error": 2.482877405203764e-16,
+      "Cartan_residual_norm": 3.887344620273571e-15
+    },
+    {
+      "coframe_change": 0.0013814182845394353,
+      "hessian_change": 0.0024664683386331683,
+      "hessian_minimum_singular_value": 0.9992966686241149,
+      "hessian_inverse_norm": 1.0007038263990746,
+      "polarized_hessian_error": 0.0,
+      "congruence_error": 3.1401859203418614e-16,
+      "Cartan_residual_norm": 3.4221921973913878e-15
+    },
+    {
+      "coframe_change": 0.0019843887970252875,
+      "hessian_change": 0.0030695062034436908,
+      "hessian_minimum_singular_value": 0.9987542900901198,
+      "hessian_inverse_norm": 1.001247263638555,
+      "polarized_hessian_error": 0.0,
+      "congruence_error": 3.140189613530316e-16,
+      "Cartan_residual_norm": 4.032254175947217e-15
+    },
+    {
+      "coframe_change": 0.0012334120009415115,
+      "hessian_change": 0.002228334080672188,
+      "hessian_minimum_singular_value": 0.998516699851834,
+      "hessian_inverse_norm": 1.0014855035958699,
+      "polarized_hessian_error": 0.0,
+      "congruence_error": 2.6803160431593478e-16,
+      "Cartan_residual_norm": 2.7117051780044775e-15
+    }
+  ],
+  "norm_scaling_countercontrols": [
+    {
+      "fourth_tensor_norm_factor": 1.0,
+      "same_radius_bound": {
+        "coframe_change_bound": 0.013819390297026394,
+        "hessian_change_bound": 0.17249832572992652,
+        "perturbation_singular_value_lower_bound": 0.8275016742700732,
+        "hessian_singular_value_lower_bound": 0.9202475081672985,
+        "hessian_inverse_norm_upper_bound": 1.086664175805845,
+        "resolved": true,
+        "radius": 0.015625
+      },
+      "reselected_bound": {
+        "coframe_change_bound": 0.013819390297026394,
+        "hessian_change_bound": 0.17249832572992652,
+        "perturbation_singular_value_lower_bound": 0.8275016742700732,
+        "hessian_singular_value_lower_bound": 0.9202475081672985,
+        "hessian_inverse_norm_upper_bound": 1.086664175805845,
+        "resolved": true,
+        "radius": 0.015625
+      }
+    },
+    {
+      "fourth_tensor_norm_factor": 16.0,
+      "same_radius_bound": {
+        "coframe_change_bound": 0.01515201770602942,
+        "hessian_change_bound": 0.18985785442471778,
+        "perturbation_singular_value_lower_bound": 0.8101421455752819,
+        "hessian_singular_value_lower_bound": 0.91288197853381,
+        "hessian_inverse_norm_upper_bound": 1.0954318559405798,
+        "resolved": true,
+        "radius": 0.015625
+      },
+      "reselected_bound": {
+        "coframe_change_bound": 0.01515201770602942,
+        "hessian_change_bound": 0.18985785442471778,
+        "perturbation_singular_value_lower_bound": 0.8101421455752819,
+        "hessian_singular_value_lower_bound": 0.91288197853381,
+        "hessian_inverse_norm_upper_bound": 1.0954318559405798,
+        "resolved": true,
+        "radius": 0.015625
+      }
+    },
+    {
+      "fourth_tensor_norm_factor": 4096.0,
+      "same_radius_bound": {
+        "coframe_change_bound": 0.3776266729548524,
+        "hessian_change_bound": 16.59748525549736,
+        "perturbation_singular_value_lower_bound": -15.59748525549736,
+        "hessian_singular_value_lower_bound": 0.07905708591320725,
+        "hessian_inverse_norm_upper_bound": 12.649087535276081,
+        "resolved": true,
+        "radius": 0.015625
+      },
+      "reselected_bound": {
+        "coframe_change_bound": 0.02447768075445215,
+        "hessian_change_bound": 0.3150777473783202,
+        "perturbation_singular_value_lower_bound": 0.6849222526216794,
+        "hessian_singular_value_lower_bound": 0.8628669567661676,
+        "hessian_inverse_norm_upper_bound": 1.15892721601923,
+        "resolved": true,
+        "radius": 0.0078125
+      }
+    }
+  ],
+  "finite_float_not_interval_certified": true,
+  "not_full_PDE_existence": true,
+  "main_TeX_PDF_changed": false
+}
