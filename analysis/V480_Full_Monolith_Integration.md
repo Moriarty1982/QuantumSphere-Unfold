@@ -123,3 +123,49 @@ The existing manual QSC LaTeX workflow can target `sources/research` with histor
 Frozen source SHA-256: `0b74890e4f5d8ebbfd4820a4ff7bb44a621c61655720a9021e3c42d6d115e803`.
 
 Canonical LF source SHA-256: `019e7a35adb3e299b1eed7e5310397d922d18575fe8a5122c3b448cf1a383329`.
+
+## Next Frozen-Jet Gate (2026-10-18)
+
+The follow-up [third-constraint diagnostic](HC_Cartan_Third_Constraint_Diagnostic.md)
+retains the saved 394-completion and fits only the new psi4/E4/lambda3 variables.
+The spinor-image rank 140 and 180 compatibility conditions are derived from
+symmetry. The added connection-response quotient has numerical rank 135 and
+leaves full C3 residual about 26799.511. Independent displaced-field checks
+validate the highest-jet map. The separate
+[second-probe diagnostic](HC_Cartan_Second_Probe_Diagnostic.md) finds frozen R2
+norm about 10453.163 despite the solved scalar Hessian. These results do not
+replace the earlier completion with a successful higher solution: the chosen
+earlier higher jets need joint re-preparation. Full FE2 and native identification
+remain open. Main TeX/PDF are unchanged. The earlier recorded suite totals refer
+to the previous committed research state, not this added diagnostic stage.
+
+Verification of this working checkout: 1,960 audit tests plus 34 separate OP5
+checks passed (1,994 total), including 18 new third-constraint tests and seven
+second-probe tests. Six audit tests belong to the pre-existing, unrelated
+uncommitted metadata-hygiene work; excluding them, the research scope is 1,954
+audit tests plus 34 OP5 checks (1,988). The full-monolith preservation check and
+`git diff --check` also passed. No new commit, push or PDF build was performed.
+
+## Joint Next-Derivative Completion (2026-10-18)
+
+The next [analytic C3 re-preparation](HC_Cartan_Third_Constraint_Reprepare.md)
+repairs that frozen obstruction by changing lambda2/E3/psi3 while keeping psi2
+and the lower point/couplings fixed. The separate
+[joint completion](HC_Cartan_Next_Joint_Completion.md) then includes the full
+second probe and independent-coframe Euler equations, not only the scalar gate.
+Its 974-by-1840 affine system has numerical rank 681. Every one of the 1114
+packed real components is re-evaluated without the solver projection, giving
+total norm 5.38e-10; the old 394 norm remains 4.78e-11. The old frozen diagnostic
+remains a valid negative control for its fixed data, not a general obstruction.
+Independent R2/FE2 derivations and actual-field remainder checks are retained.
+There is no full constraint propagation, neighborhood/existence or native
+identification claim. In particular the previous neighborhood bound must be
+recomputed for the changed higher coefficients. Main TeX/PDF are unchanged.
+
+Verification of this subsequent stage: all 1,992 audit tests plus 34 separate
+OP5 checks passed (2,026 checkout checks). This adds 11 C3 re-preparation,
+five analytic R2, six analytic FE2 and ten joint-integration tests. Six of the
+audit tests still belong to the pre-existing unrelated uncommitted metadata
+work; the research-scope total excluding those is 1,986 plus 34 = 2,020.
+The full-monolith preservation and whitespace checks passed. No commit, push
+or PDF build was performed.
