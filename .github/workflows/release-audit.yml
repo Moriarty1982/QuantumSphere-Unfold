@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: "Target version, e.g. v4.6.0"
+        description: "Target version, e.g. v4.8.0"
         required: true
-        default: "v4.6.0"
+        default: "v4.8.0"
         type: string
   push:
     branches:
@@ -38,8 +38,11 @@ jobs:
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "version=${{ inputs.version }}" >> "$GITHUB_OUTPUT"
           else
-            echo "version=v4.6.0" >> "$GITHUB_OUTPUT"
+            echo "version=v4.8.0" >> "$GITHUB_OUTPUT"
           fi
+
+      - name: Test metadata marker detection
+        run: python -m unittest scripts.qsc_audit.tests.test_metadata_hygiene_audit
 
       - name: Run freeze audit pilot
         run: |

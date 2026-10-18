@@ -55,6 +55,12 @@ The [full-source research working copy](sources/research/README.md) now has a se
 
 Use the `CITATION.cff` file in this repository, or cite the public Zenodo record through the version DOI above.
 
+The Zenodo upload helper (`tools/zenodo_publish.py`) always includes this GitHub
+repository in the related-work metadata, including when a future metadata file
+omits the link. Existing DOI relations are preserved. The manual Zenodo Release
+workflow defaults to the v4.8.0 metadata and files; select the new release's paths
+when preparing a later version. A dry run validates locally without uploading.
+
 ## Status
 
 Post-`v4.8.0` work is tracked through GitHub issues and separated into metadata-only stabilization work versus research-only follow-up branches.

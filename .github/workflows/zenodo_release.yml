@@ -62,11 +62,11 @@ on:
       metadata:
         description: "Path to Zenodo metadata JSON"
         required: true
-        default: "release/zenodo/metadata_v4_7_0.json"
+        default: "release/zenodo/metadata_v4_8_0.json"
       files_glob:
         description: "Quoted file globs to upload"
         required: true
-        default: "release/v4.7.0/*"
+        default: "release/v4.8.0/*"
 
 permissions:
   contents: read

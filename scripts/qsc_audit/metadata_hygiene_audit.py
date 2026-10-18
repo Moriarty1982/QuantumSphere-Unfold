@@ -14,13 +14,16 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_INCLUDE_SUFFIXES = {".tex", ".bib", ".md", ".txt", ".yml", ".yaml", ".json"}
-DEFAULT_EXCLUDED_DIRS = {".git", ".venv", "venv", "__pycache__", "node_modules"}
+DEFAULT_EXCLUDED_DIRS = {".git", ".venv", "venv", "__pycache__", "node_modules", "audits"}
 
 DOI_RE = re.compile(r"10\.5281/zenodo\.\d+")
 INTERNAL_REVISION_RE = re.compile(r"\bv\d+\.\d+\.\d+-r\d+\b|\br\d{2,}\b")
 UNDEFINED_MARKER_RE = re.compile(r"\b(?:Proposition|Theorem|Lemma|Figure|Table|Section)\s*\?\?|\?\?")
 DRAFT_MARKER_RE = re.compile(r"\b(?:draft|working candidate|source/audit candidate|TODO|FIXME)\b", re.IGNORECASE)
 VERSION_RE = re.compile(r"\bv\d+\.\d+\.\d+\b")
+ZERO_MARKER_SUMMARY_RE = re.compile(
+    r"^\s*-\s+Visible\s+`\?\?`\s*/\s*`\[\?\]`\s*:\s*0\s*/\s*0\b[^?]*$"
+)
 
 
 @dataclass(frozen=True)
@@ -102,7 +105,15 @@ def scan_file(path: Path, target_version: str | None) -> list[Finding]:
         seen.add(doi)
 
     add_regex_findings(findings, rel, text, INTERNAL_REVISION_RE, "info", "internal-revision-token", "internal revision token")
-    add_regex_findings(findings, rel, text, UNDEFINED_MARKER_RE, "error", "undefined-marker", "undefined reference marker")
+    # A zero-count build summary documents the absence of unresolved references.
+    # Mask only that complete Markdown line; retain offsets and all other markers.
+    marker_text = "".join(
+        " " * len(line.rstrip("\r\n")) + line[len(line.rstrip("\r\n")):]
+        if path.suffix.lower() == ".md" and ZERO_MARKER_SUMMARY_RE.fullmatch(line.rstrip("\r\n"))
+        else line
+        for line in text.splitlines(keepends=True)
+    )
+    add_regex_findings(findings, rel, marker_text, UNDEFINED_MARKER_RE, "error", "undefined-marker", "undefined reference marker")
     add_regex_findings(findings, rel, text, DRAFT_MARKER_RE, "warning", "draft-marker", "draft marker")
 
     return findings

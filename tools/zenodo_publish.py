@@ -28,6 +28,7 @@ from typing import Any, Dict, Iterable, List, Optional, Tuple
 
 ZENODO_API = "https://zenodo.org/api"
 SANDBOX_API = "https://sandbox.zenodo.org/api"
+REPOSITORY_URL = "https://github.com/Moriarty1982/QuantumSphere-Unfold"
 
 
 class ZenodoError(RuntimeError):
@@ -54,10 +55,23 @@ def load_json(path: Path) -> Dict[str, Any]:
 
 
 def normalize_metadata(raw: Dict[str, Any]) -> Dict[str, Any]:
-    """Accept either Zenodo's {'metadata': {...}} shape or a direct metadata object."""
+    """Accept both metadata shapes and retain the project repository relation."""
     if "metadata" in raw and isinstance(raw["metadata"], dict):
-        return raw
-    return {"metadata": raw}
+        payload = dict(raw)
+        payload["metadata"] = dict(raw["metadata"])
+    else:
+        payload = {"metadata": dict(raw)}
+    md = payload["metadata"]
+    related = list(md.get("related_identifiers", []))
+    if not any(entry.get("identifier", "").rstrip("/") == REPOSITORY_URL
+               for entry in related):
+        related.append({
+            "identifier": REPOSITORY_URL,
+            "relation": "isSupplementTo",
+            "scheme": "url",
+        })
+    md["related_identifiers"] = related
+    return payload
 
 
 def validate_metadata(payload: Dict[str, Any]) -> None:
