@@ -132,9 +132,12 @@ they do not certify differential identities by themselves.
 
 ## Next Work
 
-A quantitative coefficient bound for N(x)-N(0) is still needed before
-claiming a uniform full-normal chart on an explicit radius. The sampled
-maximum above cannot be substituted for it. In parallel, the left
+The [uniform-majorant follow-up](HC_Cartan_Uniform_Normal_Bound.md) now
+provides a conservative analytic coefficient bound and a positive
+augmented-chart inverse estimate at radius 2^-32, evaluated in floating
+arithmetic rather than certified intervals. It does not prove exact
+rank 40 everywhere or compatibility propagation. The sampled
+maximum above is not used as that bound. In parallel, the left
 compatibility conditions must be propagated or imposed on evolving
 tangential data. Neither an origin inverse nor a sampled augmented
 inverse proves that propagation. Native HC/C7, global closure, physical

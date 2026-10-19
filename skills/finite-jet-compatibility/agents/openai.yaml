@@ -1,0 +1,4 @@
+interface:
+  display_name: "Finite-Jet Compatibility"
+  short_description: "Source gates and constraint residual attribution"
+  default_prompt: "Use $finite-jet-compatibility to identify the source gate and attribute the remaining finite-jet compatibility residuals."
