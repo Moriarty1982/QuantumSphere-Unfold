@@ -31,3 +31,5 @@ Thumbs.db
 # Archive der v4-Release-Staende. Ihr Inhalt ist als Commit-Historie
 # abgebildet (Tags v4.0.0 bis RC19); die ZIPs selbst waeren reine Dopplung.
 *.zip
+__pycache__/
+*.pyc
