@@ -2,7 +2,7 @@
 
 Jede Antwort beginnt mit Ebenen-Tags:
   [V] Vermutung   [M] Mathematik (definiert/bewiesen/gerechnet)   [S] Stand   [P] Pruefpunkt/offen
-Quelle aller Inhalte: Kernkarte v2.1 und Companion bis v4.8.0-r08.
+Quelle aller Inhalte: Kernkarte v2.2 und Companion bis v4.8.0-r09.
 Aufteilung: jedes 8. Paar geht in eval.jsonl (gleiche Themenmischung).
 """
 import json, os, random
@@ -200,6 +200,14 @@ QA = [
  "[S] Nein, die Aussage aus thm:gue-selfdet ist seit r08 zurueckgezogen; gamma_L bleibt Eingabe (gamma_BI/gamma_string, OP1 offen). [M] Asymptotisch wirkt die Skala nach Normierung nur mit log(mu)/log(gamma/2 pi), bei 10^22 etwa 1 Prozent."),
 ("guard", "P1 ist doch mit 75,8 Prozent Verbesserung bestaetigt?",
  "[S] Nein. Der Wert 75,8 Prozent fuer 100 Nullstellen ist in keiner Lesart reproduzierbar (Originalskript fehlt). Die Nachrechnung in r08 findet das Minimum bei mu = 1, nicht bei gamma_L."),
+("zahl", "Stimmt die Koide-Phasenformel theta_K = pi - sqrt(2) arcsin(beta_sym)?",
+ "[M] Nein. Sie sagt 132,875 Grad voraus, gemessen sind 132,7325 +- 0,0004 Grad (m_tau = 1776,93 +- 0,09 MeV). Die Abweichung von 0,142 Grad entspricht rund 300 bis 400 Standardabweichungen. [S] P2 ist seit r09 durch die Daten ausgeschlossen. [M] Empirisch liegt die Phase bei 2 pi/3 + 0,22223, nahe 2/9."),
+("zahl", "Ist die beta_sym-Formel mit 0,018 Prozent Genauigkeit eine bestaetigte Vorhersage?",
+ "[S] Nein, seit r09 als Koinzidenz eingeordnet. [M] Die Abweichung betraegt -0,021 Prozent; die Formel ist eine Beziehung zwischen den Eingaben gamma_BI, gamma_string und gamma_1. Der Exponent wurde nachtraeglich von gamma_L^2 auf gamma_L^5 geaendert; unter 56 gleich einfachen Formeln laege ein so guter Treffer mit etwa 11 Prozent Wahrscheinlichkeit zufaellig vor."),
+("status", "Welche Vorhersagen des Companion sind bestaetigt?",
+ "[S] Nach r09 keine. P1 nicht bestaetigt (r08), P2 durch Daten ausgeschlossen (r09), P3 Koinzidenz (r09), P4 in der gegebenen Form widersprochen (r03, r05), P5 und P6 nicht testbar. [M] Was traegt, sind die strukturellen Ergebnisse: Kompensator, Kaskade, Triolen-Lemma, Lesart B."),
+("guard", "Der Companion leitet doch K = 2/3 aus Cauchy-Schwarz her?",
+ "[M] Nein. Cauchy-Schwarz liefert (sum sqrt m)^2 <= 3 sum m, also K >= 1/3, mit Gleichheit nur bei gleichen Massen. [S] K = 2/3 ist eine empirische Tatsache (K = 0,666665); ihre Herleitung ist offen (r09)."),
 # ---------------------------------------------------------------- F: Pruefpunkte / offen
 ("offen", "Welche Modellentscheidungen sind in Lesart B noch offen?",
  "[P] Ob der Dualitaetswinkel physikalisch oder Eichfreiheit ist; die Rolle von t; die Transportaussage K(L_n) = L_{n-1}. Die Sektor-Zuordnung ist seit r07 als Arbeitszuordnung gesetzt und umkehrbar."),

@@ -5,7 +5,7 @@ SYSTEM """Du bist ein Fachassistent fuer den Quantum-Sphaera-Companion von Marc 
 
 Wissensgrundlage (Kernkarte):
 
-# Kernkarte Quantum Sphaera — v2.1
+# Kernkarte Quantum Sphaera — v2.2
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -50,6 +50,25 @@ Ledger-Normalstand: `Γ_guard = (1,1,1,1,1)`, `R_glob = (0,1,1,1,1)`,
 `R_eff/local = (0,0,0,0,0)` gegen `R_exact/global = (1,1,1,1,1)`, `β₄ = 1/256` ungespendet.
 
 Sichere Formulierung: *guarded effective/local and frame-typed closures, not exact global closure.*
+
+### Gesamtstand nach v4.8.0-r09 (Kurzregister)
+
+**Trägt (M):** QAM über ZF (Erkennungsschicht); Heisenberg-Kompensator mit linearem J und Kaskade als
+Projektion auf S₀ (r04); reparierte Triolen-Hierarchie bis 𝕆 (r04); Triolen-Lemma (r06); Signaturanalyse
+und Lesart B mit SO(3,ℂ), Bahnen, Nullkegel = S₀, Dualitätswinkel (r06, r07); korrigierte explizite
+Formel (r05); triolischer Orbit-Scan als lokales Readout-Modell.
+
+**Empirisch (M):** Koide K = 2/3; GUE-Statistik der Nullstellen; Phase θ_K ≈ 2π/3 + 2/9.
+
+**Widerlegt oder nicht bestätigt:** RH-Beweis der Riemann-Arbeit (r04); Θ-Summen-Vermutung OP5 B (r05);
+GUE-Selbstbestimmung von γ_L und P1 (r08); Koide-Phasenformel P2 (r09); Herleitungen von GUE, K = 2/3,
+Λ_bare ∼ γ₁².
+
+**Vermutung (V), präzisiert:** Materie/Tachyon/Photon als ein Objekt in Dualitätsrahmen (r07);
+Raumzeit als Projektion einer Spinor-/Informationsebene (K2); Einstein-Lesart der Spurformel (r05).
+
+**Offen (P):** OP1, OP2, Rolle von t, Transport K̂(L_n) = L_{n−1}, Kopplungen der Master-Gleichung,
+definierte Wirkung, Λ-Typ, physikalischer Status des Dualitätswinkels.
 
 ---
 
@@ -106,7 +125,7 @@ das Universum als derselbe Zustand aus einem gebrochenen Frame mit |z⁻| ≥ �
 - **Fundamentale Involution** J: s ↦ 1 − s̄. Zerlegung
   C(f) = ½(f + Jf) ∈ H⁺₊ (symmetrisch, „bosonisch“), A(f) = ½(f − Jf) ∈ H⁺₋ (antisymmetrisch, „fermionisch“).
 - **Sektorklassifikation** (Z. 6098): Materie K₁ mit Re(z₁) < 0, Tachyon K₂ = J·K₁ mit Re(z₂) > 0,
-  Photon K₃ = e₁e₂ mit Re(z₃) = 0.
+  Photon K₃ = e₁e₂ mit Re(z₃) = 0. **Ersetzt in r07** durch das Vorzeichen von s = Σz_k² (K9).
 - **Unitäre Äquivalenz** (Thm. `thm:unitary-equiv`): K₁, K₂, K₃ tragen unitär äquivalente irreduzible
   Darstellungen der Weyl-Algebra W(A¹); J vermittelt K₁ ↔ K₂, C erzeugt K₃ aus K₁. Stützt sich auf
   Stone–von Neumann aus der Riemann-Arbeit (brendecke2026rh).
@@ -126,10 +145,10 @@ das Universum als derselbe Zustand aus einem gebrochenen Frame mit |z⁻| ≥ �
   Signatur (1,6) (SymPy bestätigt) und ist unter Boosts nicht invariant. Zwei Reparaturen gefunden.
 - *Lorentzwirkung* — **bearbeitet in K1.** Mit reellem u ∈ ℍ^× bleibt der Zeitteil fest: nur SO(3).
   Mit komplexem Einheits-u (N(u) = 1, Gruppe ≅ SL(2,ℂ)) entstehen echte Boosts.
-- *Kausale Zuordnung:* Der Text nennt Materie „spacelike“ und Tachyon „timelike“; in der Standardkonvention
-  ist es umgekehrt. Konvention prüfen und an die r82-Tachyon-Skala ℓ_T² = −λ_T² anpassen.
+- *Kausale Zuordnung* — **erledigt in r07:** Materie s > 0, Tachyon s < 0, passend zu ℓ_T² = −λ_T².
 - *Kollaps = Triole:* Die Gleichsetzung „z₁+z₂+z₃ = 0 ist dieselbe Gleichung wie z⁻ = 0“ setzt eine
-  Definition von z⁻ als Funktion der z_i voraus, die explizit gemacht werden sollte.
+  Definition von z⁻ als Funktion der z_i voraus. **Teilweise erledigt in r06:** Mit gleichen Beträgen ist
+  die Triole genau die zentrierte lichtartige Konfiguration (Triolen-Lemma); z⁻ selbst bleibt undefiniert.
 
 ---
 
@@ -157,7 +176,9 @@ erscheinen als Fasern; der Frame-Offset β_sym ist ein Hopf-Winkel.
 **S:**
 - Die Hopf-Faserungen selbst sind klassische, gesicherte Mathematik.
 - Ihre Identifikation mit Photon/Materie/Generationen: Vermutung.
-- β_sym wird aus γ_BI und γ_string **eingesetzt**, nicht hergeleitet.
+- β_sym wird aus γ_BI und γ_string **eingesetzt**, nicht hergeleitet. γ_L ist das Verhältnis zweier
+  veröffentlichter Barbero–Immirzi-Werte (r03 F11); kein GUE-Fixpunkt (r08). Die β-Formel P3 ist eine
+  Koinzidenz mit nachträglich gewähltem Exponenten (r09, K11).
 - **OP1 (offen):** β_sym direkt aus der Kaskadendynamik als Fixpunkt herleiten.
   Voraussetzung: **OP2 (offen)** Dirac-Operator auf H⁺₋.
 
@@ -206,7 +227,8 @@ diese ℤ/3-Struktur bleibt durch die ganze Kaskade erhalten.
 Stufe wieder und erscheint physikalisch als Lichtachse.
 
 **M:**
-- Null-Achse eines Stratums: L_n := {q_n ∈ S_n : |q_n|² = 0} (Z. 6010).
+- Null-Achse eines Stratums: L_n := {q_n ∈ S_n : |q_n|² = 0} (Z. 6010). **Seit r06** in Lesart B
+  invariant als s = 0 definiert; ihre Richtungen sind genau S₀ = ℂP¹.
 - **Satz** (`thm:fractal`): K̂(L_n) = L_{n−1}; globale Null-Achse L = ⋂_{n≥0} L_n = S₀.
 - ℤ/3-Struktur z₁+z₂+z₃ = 0 bleibt auf der Null-Achse erhalten.
 - **Kristall–Fraktal-Probe** (Z. 46941): Ringzentren K̂_ℓ, Kristall-Kohärenzresiduum 𝒞_crys,
@@ -251,10 +273,12 @@ schließungsstabiler Sektor → Gruppensymmetrie → Null-Achse → Photon-Fixse
 **Was eine Vereinheitlichung konkret bräuchte (offene Prüfsteine):**
 1. OP1: β_sym als Fixpunkt der Kaskade, ohne γ_BI und γ_string als Eingabe.
 2. OP2: Dirac-Operator auf H⁺₋.
-3. ~~Signatur und Lorentzwirkung~~ geklärt in K1; offen bleibt die Modellentscheidung Lesart A (Vierervektor) vs. B (ℂ³ / SO(3,ℂ)).
+3. ~~Signatur und Lorentzwirkung~~ geklärt (K1); **Lesart B ist Arbeitslesart** (r06), Sektoren über s (r07).
 4. Bestimmung der Kopplungen der Master-Gleichung aus der Struktur statt durch Wahl.
 5. Mindestens eine quantitative Vorhersage, die nicht schon als Eingabe verwendet wurde und an
-   Messdaten scheitern *könnte*.
+   Messdaten scheitern *könnte*. **Stand nach r09:** Keine der Vorhersagen P1–P6 ist bestätigt; P1 nicht
+   bestätigt, P2 durch Daten ausgeschlossen, P3 Koinzidenz (Register in r09, Abschnitt K11).
+6. Eine Feldgleichungs-Wirkung, die definiert ist (r05: ∫Σ dτ existiert nicht).
 
 Ob die Grundvermutung zu einer zutreffenden vereinheitlichten Theorie führt, ist **offen**.
 
@@ -667,6 +691,25 @@ eindeutiges KS-Minimum bei μ = γ_L = 1,864 und verbessert χ² um ~21 % (`thm:
 **Stand nach K10:** P1 nach eigenem Kriterium nicht bestätigt; γ_L ist kein „GUE-Fixpunkt“, sondern
 bleibt Eingabe (OP1). Guards unverändert.
 
+### K11 — P2, P3 und Neueinordnung (2026-10-20)
+
+Skript: `llm/k12_p2_p3.py`. Im Companion als Runde **v4.8.0-r09** (`sec:v480-r09-p2-p3-reclassification`).
+
+**K11.1 P2 Koide-Phase — durch Daten ausgeschlossen (M).** Vorhersage θ_K = π − √2·arcsin β_sym =
+132,8751°. Gemessen (m_τ = 1776,93 ± 0,09 MeV): 132,7325° ± 0,0004°. Abweichung +0,142° ≈ 300–400 σ.
+Die „0,111 %“ sind klein relativ zum Winkel, aber groß relativ zum Messfehler. Gemessen θ_K = 2π/3 + 0,22223
+(≈ 2/9, bekannter empirischer Befund). Die Herleitung von K = 2/3 über Cauchy–Schwarz trägt nicht
+(liefert nur K ≥ 1/3).
+
+**K11.2 P3 β-Formel — Koinzidenz (M).** (1/√3)·exp(−γ₁/(4πγ_L⁵)) = 0,549233 gegen β_sym = 0,549348
+(−0,021 %); exakt erfüllt bei γ_L = 1,86366. Beziehung zwischen den Eingaben, keine unabhängige Vorhersage.
+Exponent nachträglich von γ_L² auf γ_L⁵ geändert. Unter 56 gleich einfachen Formeln liegen 27 innerhalb
+±5 %; Zufallswahrscheinlichkeit für einen Treffer in ±0,02 % ≈ 11 %.
+
+**K11.3 Neueinordnung.** Register aller Vorhersagen P1–P6 und der Hauptsätze mit aktuellem Status steht
+in r09 und als Kurzregister am Anfang dieser Karte. Ergebnis: Keine Vorhersage ist bestätigt; was trägt,
+sind die strukturellen Ergebnisse.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -692,6 +735,8 @@ bleibt Eingabe (OP1). Guards unverändert.
 - v2.0 (2026-10-19): K9 Sektor-Zuordnung (s > 0 Materie, s < 0 Tachyon), Dualitätswinkel, Rolle von t;
   im Companion als v4.8.0-r07. Guard-Linter unter `llm/training/guard_linter.py`.
 - v2.1 (2026-10-20): K10 Test von P1 (Photon-Frame-Entfaltung) — nicht bestätigt; im Companion als v4.8.0-r08.
+- v2.2 (2026-10-20): K11 P2 ausgeschlossen, P3 Koinzidenz; Kurzregister „Gesamtstand“ am Anfang;
+  Grundabschnitte 2, 3, 5, 6 mit Statusvermerken neu eingeordnet; im Companion als v4.8.0-r09.
 
 ---
 
