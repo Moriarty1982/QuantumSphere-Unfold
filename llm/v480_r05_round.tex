@@ -1,0 +1,196 @@
+
+% ============================================================================
+\clearpage
+\section*{v4.8.0-r05 Source-Only: Corrected Explicit Formula in the Field-Equation and \texorpdfstring{$\Theta$}{Theta}--\texorpdfstring{$R$}{R} Layer}
+\addcontentsline{toc}{section}{v4.8.0-r05 Source-Only: Corrected Explicit Formula in the Field-Equation and Theta--R Layer}
+\label{sec:v480-r05-corrected-explicit-formula}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.8.0-r04 recorded that the explicit formula \(\Sigma=1-\Theta+R\) taken from
+\cite{brendecke2026rh} is misstated (finding A1) and listed the sites that use it.  This layer
+carries the corrected formula into those sites: the Einstein-equation reading of
+Theorem~\ref{thm:einstein}, the bare-\(\Lambda\) proposition, the \(\Theta\)--\(R\) cancellation
+statement, the photon-frame \(\Theta\)-sum conjecture of OP~5 Step~(B), and the GUE theorem.
+Two statements can now be decided numerically; both are decided here.  Earlier layers are not
+rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.8.0-r05 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.8.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23365244}{10.5281/zenodo.23365244} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.8.0-r05 corrected trace decomposition}
+\label{subsec:v480-r05-trace-decomposition}
+
+Write \(\Sigma(\tau):=\sum_\rho e^{i\gamma_\rho\tau}\), summed over all non-trivial zeros
+\(\rho=\tfrac12+i\gamma_\rho\) (the zeros are used as numerically known data; no statement about
+their real parts is assumed).
+
+\paragraph{Theoremlet v4.8.0-r05.1.}
+For \(\tau>0\), in the sense of distributions,
+\[
+\Sigma(\tau)
+=\underbrace{e^{\tau/2}}_{M(\tau)}
+\;-\;\underbrace{e^{-\tau/2}\sum_{n\ge2}\Lambda(n)\,\delta(\tau-\log n)}_{P(\tau)}
+\;-\;\underbrace{\frac{e^{-\tau/2}}{e^{2\tau}-1}}_{Z(\tau)} .
+\]
+\(M\) comes from the pole of \(\zeta\) at \(s=1\), \(P\) from the prime powers with von Mangoldt
+weights, \(Z\) from the trivial zeros.
+
+\paragraph{Proof sketch.}
+This is the classical explicit formula
+\(\sum_n\Lambda(n)\delta(\tau-\log n)=e^\tau-\sum_\rho e^{\rho\tau}-\sum_{k\ge1}e^{-2k\tau}\),
+multiplied by \(e^{-\tau/2}\), with \(\sum_k e^{-2k\tau}=1/(e^{2\tau}-1)\).  Paired with a smooth
+test function supported in \((0.6,3.2)\) and 300 zeros, both sides of the unmultiplied identity
+agree to six digits (\(4.393268\)), while the form \(1-\Theta+R\) of the source gives
+\(2.1587\) against \(0.5198\) (r04, A1).  \(\square\)
+
+\paragraph{What changes.}
+The three-part structure survives: pole, primes, trivial zeros.  What changes is every
+functional form.  The constant \(1\) becomes the growing term \(e^{\tau/2}\); the primes enter with
+weight \(\Lambda(n)=\log p\) and damping \(e^{-\tau/2}\), not with weight \(1/m\); the trivial-zero
+term has denominator \(e^{2\tau}-1\) and positive sign inside \(Z\).  In addition,
+equation~\eqref{eq:Theta-def} uses \(\Theta\) for the zero sum itself, which is also the
+definition of \(\Sigma\); read literally, \eqref{eq:gw} then gives \(2\Sigma=1+R\).  The symbol
+\(\Theta\) is reserved here for the prime-side distribution only.
+
+\subsection*{v4.8.0-r05 the Einstein-equation reading}
+\label{subsec:v480-r05-einstein-reading}
+
+Theorem~\ref{thm:einstein} varies \(S=\int_0^\infty\Sigma(\tau)\,d\tau\).  With the corrected
+decomposition this integral does not exist: \(M\) grows like \(e^{\tau/2}\), \(Z(\tau)\sim1/(2\tau)\)
+as \(\tau\to0^+\), and \(\Sigma\) is a distribution, not a function.  Moreover
+\(\mathrm{Tr}\,e^{-i\tau L_0}\) is the trace of a unitary group, not a heat kernel, so the heat-kernel
+variation formula used in the proof does not apply.
+
+\paragraph{Theoremlet v4.8.0-r05.2.}
+The correspondence
+\[
+M\ \leftrightarrow\ \Lambda g_{\mu\nu},\qquad
+P\ \leftrightarrow\ T_{\mu\nu},\qquad
+Z\ \leftrightarrow\ G_{\mu\nu}
+\]
+is retained as a structural conjecture.  Theorem~\ref{thm:einstein} is not derived: a well-defined
+action requires a test-function pairing \(\langle\Sigma,\varphi\rangle\) and an explicit dependence
+of \(\varphi\) on \(g^{\mu\nu}\), neither of which is supplied.
+
+\paragraph{Proof sketch.}
+Divergence of the three pieces is read off from Theoremlet r05.1; the trace statement follows
+from the unitarity of \(e^{-i\tau L_0}\).  \(\square\)
+
+\paragraph{Bare \(\Lambda\).}
+Proposition~\ref{prop:bare-lambda} assigns to the constant term a size \(\gamma_1^2\).  In the corrected
+formula the pole term is \(M(\tau)=e^{\tau/2}\); it carries no dependence on any zero, so no
+\(\gamma_1^2\) can arise from it.  The proposition is withdrawn as a derivation; the scale
+\(\gamma_1^2\) remains an unsupported ansatz.
+
+\paragraph{Cancellation.}
+Theorem~\ref{thm:partial-cancel} reads the explicit formula as a cancellation of the pole by the
+other terms.  The formula is an identity between distributions; it does not by itself fix the value
+of a truncated integral.  The open content of Step~(B) is exactly such a value, decided below.
+
+\subsection*{v4.8.0-r05 decision of the \texorpdfstring{$\Theta$}{Theta}-sum conjecture}
+\label{subsec:v480-r05-theta-sum-decision}
+
+Proposition~\ref{conj:theta-sum-B} states
+\[
+\mathcal T(T)=2\sum_{n\ge1}\frac{\sin(T\gamma_n/\gL)}{\gamma_n/\gL}
+=\frac{3T}{2}-\log T-\frac{T^2}{24}-\gamma_E-\bsym^2T^2\approx0.8934,
+\qquad T=\gL^{-3/2}\approx0.3928 .
+\]
+
+\paragraph{Theoremlet v4.8.0-r05.3.}
+\(\mathcal T(T)=-0.1097\pm0.0009\).  The conjecture is false; the two sides differ by \(1.003\).
+Satisfying the equation would require \(\bsym^2\approx6.80\), outside \([0,1)\).
+
+\paragraph{Proof sketch.}
+\(\mathcal T(T)=\gL\,S(a)\) with \(S(a)=2\sum_{\gamma>0}\sin(a\gamma)/\gamma\) and
+\(a=T/\gL\approx0.2107<\log2\).  For \(x=e^a\in(1,2)\) one has \(\psi_0(x)=0\), so the
+Riemann--von Mangoldt formula gives exactly
+\(\sum_\rho x^\rho/\rho=x-\log2\pi-\tfrac12\log(1-x^{-2})\).  Pairing \(\rho\) with \(\bar\rho\),
+\[
+S(a)=e^{-a/2}\Bigl(x-\log2\pi-\tfrac12\log(1-x^{-2})\Bigr)
+-\sum_{\gamma>0}\frac{\cos a\gamma}{\tfrac14+\gamma^2}
++\sum_{\gamma>0}\frac{\sin a\gamma}{2\gamma(\tfrac14+\gamma^2)},
+\]
+with both remaining sums absolutely convergent.  With the first 2000 zeros the value is
+\(-0.109652\) (50 zeros: \(-0.109464\); 500: \(-0.109661\)), and the tail is bounded by
+\(8.2\cdot10^{-4}\) through the zero density \((2\pi)^{-1}\log(\gamma/2\pi)\).  The direct partial sums
+converge to the same value (\(-0.1449\), \(-0.1117\), \(-0.1053\) at \(N=50,500,2000\)); the
+first agrees with the \(-0.146\) recorded in Remark~\ref{rem:theta-sum-structure}.  \(\square\)
+
+\paragraph{Consequence.}
+By Remark~\ref{rem:explicit-formula-remainder} the conjecture was stated as equivalent to the
+balance condition~\eqref{eq:tr-balance} and to OP~5 Step~(B).  That equivalence used the old
+\(R\); with the corrected decomposition it would have to be re-derived.  Either way, the balance
+statement in the form given there does not hold.  The defect of almost exactly \(1\) suggests that
+the constant term was mishandled in the regularization; even a shift by \(1\) leaves a gap of
+\(0.003\), larger than the error bound.  Prediction P4 and the photon-frame \(\Lambda\) programme,
+already marked open in r03, lose this route.
+
+\subsection*{v4.8.0-r05 GUE statistics: empirical, not derived}
+\label{subsec:v480-r05-gue}
+
+Theorem~\ref{thm:gue} derives GUE statistics from self-adjointness, irreducibility and the
+absence of time reversal.  The derivation does not hold: self-adjointness and irreducibility do not
+imply any random-matrix class (the harmonic oscillator has neither GUE nor GOE spacings), and an
+antiunitary \(J\) with \(J^2=1\) commuting with \(L_0\), as asserted in the proof, would be a
+time-reversal-type symmetry and would point to GOE, not GUE.
+
+\paragraph{Theoremlet v4.8.0-r05.4.}
+The nearest-neighbour spacings of the zeros follow GUE statistics empirically.  For zeros
+\(101\)--\(2000\), unfolded with \(N(t)=\tfrac{t}{2\pi}\log\tfrac{t}{2\pi e}+\tfrac78\), the
+Kolmogorov--Smirnov distance to the Wigner surmise is \(0.041\) for GUE (\(\beta=2\)), \(0.108\)
+for GOE (\(\beta=1\)) and \(0.315\) for Poisson; small spacings \(s<0.1\) occur with frequency
+\(0.0005\) (GUE surmise \(0.0011\), GOE \(0.0078\), Poisson \(0.095\)).
+
+\paragraph{Proof sketch.}
+Direct computation from 2000 zeros.  The residual GUE distance reflects the Wigner surmise as an
+approximation and the low height; it is consistent with the Montgomery--Odlyzko results.
+\(\square\)
+
+Theorem~\ref{thm:gue} is therefore retained as an empirical statement about the zeros and
+withdrawn as a consequence of the Sphaera structure.
+
+\subsection*{v4.8.0-r05 status of the affected statements}
+\label{subsec:v480-r05-status}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after r05\\
+\midrule
+\eqref{eq:gw}, \eqref{eq:Theta-def}, \eqref{eq:R-def} & replaced by Theoremlet r05.1\\
+Thm.~\ref{thm:einstein} & structural conjecture (r05.2); action not defined\\
+Prop.~\ref{prop:bare-lambda} & withdrawn as derivation; \(\gamma_1^2\) unsupported\\
+Thm.~\ref{thm:partial-cancel} & identity, not cancellation; content moved to Step~(B)\\
+Prop.~\ref{conj:theta-sum-B}, Rem.~\ref{rem:explicit-formula-remainder} & false: \(\mathcal T(T)=-0.1097\), not \(0.893\)\\
+Thm.~\ref{thm:gue} & empirical fact (r05.4); derivation withdrawn\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.8.0-r05 ledger and guard update}
+\label{subsec:v480-r05-ledger-guard}
+
+\[
+R_{\rm fe}^{v480\text{-}r05}=(0,0,1,1,0)
+\]
+for (corrected trace decomposition; \(\Theta\)-sum conjecture decided; Einstein-equation reading
+not derived; photon-frame balance condition without a valid form; GUE statement settled
+empirically).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v480\text{-}r05,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v480\text{-}r05}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
