@@ -65387,4 +65387,244 @@ R_{\rm glob}^{(v480\text{-}r03,+)}=(0,1,1,1,1),
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
 
+% ============================================================================
+\clearpage
+\section*{v4.8.0-r04 Source-Only: Decoupling from the Riemann Source and Standalone Sphaera Transformations}
+\addcontentsline{toc}{section}{v4.8.0-r04 Source-Only: Decoupling from the Riemann Source and Standalone Sphaera Transformations}
+\label{sec:v480-r04-riemann-decoupling}
+% ============================================================================
+
+\paragraph{Purpose.}
+The Companion cites the Riemann source \cite{brendecke2026rh} at 23 sites for seven distinct
+results.  A full audit of that source (v4.15) and a recomputation of its central formulas
+show that its proof chain for RH does not hold.  The author used the source as a starting
+point; what the Companion needs from it are the Heisenberg compensator and the Sphaera model
+of the basic transformations (reflection, cascade, triole hierarchy).  This layer records the
+audit, gives standalone definitions of those three objects that do not depend on any RH
+statement, repairs the triole hierarchy where it fails, and reclassifies every other
+dependency.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.8.0-r04 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.8.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23365244}{10.5281/zenodo.23365244} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.8.0-r04 audit of the Riemann source}
+\label{subsec:v480-r04-source-audit}
+
+The combinatorial orbit theory (L1--L11, Axioms W and G, K1), the arithmetic identification
+\(\mathcal Z=\zeta\) for \(\operatorname{Re}s>1\) and the functional-equation sketch are correct.
+The following findings concern the steps that carry the claim.  Numerical checks are recorded
+in the audit scripts of the working folder \texttt{llm/}.
+
+\paragraph{A1 --- explicit formula.}
+The source states \(\Theta(\tau)=1-\Sigma(\tau)+R(\tau)\) with
+\(\Theta=\sum_{p,m}m^{-1}\delta(\tau-m\log p)\).  Against a smooth test function supported in
+\((0.6,3.2)\) with 300 zeros the two sides give \(2.1587\) and \(0.5198\).  The correct form,
+which matches to six digits (\(4.393268\) on both sides), is
+\[
+\tau\,\Theta(\tau)=\sum_{n}\Lambda(n)\,\delta(\tau-\log n)
+=e^{\tau}-\sum_{\rho}e^{\rho\tau}-\sum_{k\ge1}e^{-2k\tau}\qquad(\tau>0).
+\]
+
+\paragraph{A2 --- the reflection on the Hardy space.}
+\(s\mapsto1-\bar s\) maps \(\operatorname{Re}s>\tfrac12\) outside itself.  It acts only on
+boundary values, where it is complex conjugation; an \(H^2\) function with real boundary
+values vanishes.  In the only well-defined reading the source's \(\Hplusplus\) is \(\{0\}\).
+The antilinearity of \(J\) also makes \(\tfrac12(1\pm J)\) only real-linear.
+
+\paragraph{A3 --- self-adjointness.}
+A conjugation commuting with a symmetric operator gives equal deficiency indices, not
+essential self-adjointness.  The operator \(-i(x\,d/dx+\tfrac12)\) is already self-adjoint on
+\(L^2(\mathbb R^+,dx)\), with continuous spectrum \(\mathbb R\); self-adjointness is not the
+bottleneck.
+
+\paragraph{A4 --- discreteness and identification.}
+The one-dimensional relation \([Q,P]=i\) does not produce a representation of an adelic Weyl
+algebra; Stone--von Neumann for a locally compact abelian group yields \(L^2\) of the group,
+not of \(\mathbb Q^+\backslash\mathbb A^1\).  The identification step uses Connes' trace formula
+on the adele class space, whose validity is equivalent to RH; moreover the source's own formula
+gives \(\mathcal L[\Sigma](s)=1/s-\log\zeta(s)+\mathcal L[R](s)\), not \(\log\zeta(s)\), and
+\(\mathcal L[R]\) diverges.
+
+\paragraph{A5 --- the set argument.}
+The source assigns the same kernel \((\mathbb P,\mathrm{id},\log p)\) to \(\zeta\) and to every
+self-dual automorphic \(L\)-function, and its operator stream is independent of the
+\(L\)-function.  It would therefore assign one spectrum to all of them, while their zeros differ:
+the first zero of \(\zeta\) is \(\tfrac12+14.1347251417\,i\), that of \(L(s,\chi_{-4})\) is
+\(\tfrac12+6.0209489047\,i\).  The Davenport--Heilbronn function satisfies a Riemann-type
+functional equation and has the zero \(0.8085171825+85.69934849\,i\) off the critical line.
+Where the zeros lie is therefore not determined by the set \((\mathbb P,\log p)\) together with
+the functional equation; it requires the multiplicative structure of the Euler product.
+
+\paragraph{Theoremlet v4.8.0-r04.1.}
+The Riemann source is not a proof source for RH.  None of the five guards of the release scope
+depends on it, and the guard \(W_\gamma^{\rm glob}\), which forbids a global photon-clock/RH
+theorem, is confirmed rather than affected.
+
+\paragraph{Proof sketch.}
+A1--A4 each break a link of the chain K1/L11 \(\to\) T1+T3 \(\to\) T4+T5 \(\to\) T6, and A5 shows
+that the chain could not distinguish \(\zeta\) from other \(L\)-functions.  The guards concern
+\(C5\), all-readout terminality, \(C6/T2\), \(W_\gamma^{\rm glob}\) and \(W_{\rm all}\); the
+Companion already treated the RH channel as a local photon-clock probe, so no guarded statement
+used RH as an input.  \(\square\)
+
+\subsection*{v4.8.0-r04 standalone Heisenberg compensator}
+\label{subsec:v480-r04-standalone-compensator}
+
+\paragraph{Definition v4.8.0-r04.1.}
+Let \(\mathcal H\) be a complex Hilbert space and \(J:\mathcal H\to\mathcal H\) a
+\emph{linear} unitary involution, \(J^2=1\), \(J^*=J\).  The Heisenberg compensator and its
+antisymmetric partner are
+\[
+C:=\tfrac12(1+J),\qquad A:=\tfrac12(1-J).
+\]
+
+\paragraph{Theoremlet v4.8.0-r04.2.}
+\(C\) and \(A\) are complementary orthogonal projections, \(C+A=1\), \(CA=0\);
+\(\operatorname{ran}C=\ker(J-1)\), \(\operatorname{ran}A=\ker(J+1)\); \(C(Jf)=C(f)\) and
+\(A(Jf)=-A(f)\).  The terms \(\mathcal L_{\rm HC}\) and \(\mathcal L_{\rm frame}\) of
+Theorem~\ref{thm:gauge-invariance} are \(J\)-invariant.  \(\mathcal L_{\rm kin}\) is
+\(J\)-invariant if and only if \(JL_0J=L_0\).
+
+\paragraph{Proof sketch.}
+\(C^2=\tfrac14(1+2J+J^2)=C\) and \(C^*=C\) since \(J^*=J\); likewise for \(A\), and
+\(CA=\tfrac14(1-J^2)=0\).  \(CJ=\tfrac12(J+1)=C\) and \(AJ=-A\).  \(\langle Jf,Jf\rangle=\langle
+f,f\rangle\) by unitarity; \(\langle Jf,L_0Jf\rangle=\langle f,JL_0Jf\rangle\).  \(\square\)
+
+\paragraph{Instances.}
+(a) The \(e_1\)-reflection on \(\mathbb C\otimes\HH\) with the Euclidean inner product of the
+coefficients is a linear unitary involution; on \(\HH\) it is an anti-automorphism.
+(b) The linear reflection \(s\mapsto1-s\) restricted to the critical line acts on the ordinate as
+the parity \(t\mapsto-t\), \((Jf)(t)=f(-t)\) on \(L^2(\mathbb R)\).  For (b), in logarithmic
+coordinates \(L_0=-i(\partial_y+\tfrac12)\) and parity sends \(\partial_y\mapsto-\partial_y\), so
+\(JL_0J\neq L_0\): the kinetic invariance is open for this instance.
+
+The compensator therefore requires no RH statement.  What it loses relative to the earlier
+text is the claim that its image is a space whose \(L_0\)-spectrum consists of zeta zeros.
+
+\subsection*{v4.8.0-r04 standalone Sphaera cascade}
+\label{subsec:v480-r04-standalone-cascade}
+
+\paragraph{Definition v4.8.0-r04.2.}
+Let \(\mathbb S\) be a fixed Hilbert space (a set, not a universal collection: ZF admits no
+set of all sets), and let \(\mathbb S=S_N\supseteq S_{N-1}\supseteq\cdots\supseteq S_0\) be
+closed subspaces with orthogonal projections \(\Pi_n:S_n\to S_{n-1}\).  The cascade is
+\(\KC:=\Pi_1\circ\cdots\circ\Pi_N\).
+
+\paragraph{Theoremlet v4.8.0-r04.3.}
+\(\KC\) is the orthogonal projection of \(\mathbb S\) onto \(S_0\); in particular
+\(\KC^2=\KC\), and \(\KC f=f\) if and only if \(f\in S_0\).
+
+\paragraph{Proof sketch.}
+For nested closed subspaces \(V\subseteq W\) the projections satisfy \(P_VP_W=P_V\); induction
+over the chain gives \(\KC=P_{S_0}\).  \(\square\)
+
+The Maximal Totality principle is read inside this definition: \(\KC\) is defined on
+\(\mathbb S\) and maps every element of \(\mathbb S\) into \(S_0\).  It is not applied to
+elements outside its domain.
+
+\subsection*{v4.8.0-r04 repaired triole hierarchy}
+\label{subsec:v480-r04-triole-hierarchy}
+
+Use the Cayley--Dickson convention of the Riemann source,
+\((p+q\ell)(r+s\ell)=(pr-\bar sq)+(sp+q\bar r)\ell\), with \(e_4=\ell\), \(e_5=e_1\ell\),
+\(e_6=e_2\ell\), \(e_7=e_3\ell\).  Explicit multiplication gives the seven quaternionic triples
+(lines of the Fano plane)
+\[
+(1,2,3),\ (1,4,5),\ (1,6,7),\ (2,4,6),\ (2,5,7),\ (3,4,7),\ (3,5,6).
+\]
+
+\paragraph{Theoremlet v4.8.0-r04.4.}
+Three quaternionic triples cover all seven imaginary units of \(\OO\) if and only if they pass
+through a common unit.  There are exactly seven such configurations, one per unit.  The source's
+second triole \((e_4,e_5,e_6)\) is not quaternionic, since \(e_4e_5=e_1\).
+
+\paragraph{Proof sketch.}
+Two distinct lines of the Fano plane meet in exactly one point.  For three distinct lines,
+\(|L_1\cup L_2\cup L_3|=9-|L_1\cap L_2|-|L_1\cap L_3|-|L_2\cap L_3|+|L_1\cap L_2\cap L_3|\),
+which is \(7\) if the three lines are concurrent and \(6\) otherwise.  Each point lies on three
+lines, so each point gives exactly one concurrent triple.  \(e_4e_5=\ell(e_1\ell)=e_1\) is the
+source's own computation.  \(\square\)
+
+\paragraph{Replacement.}
+The triole configuration through \(e_4=\ell\) is
+\[
+\mathcal T_1'=(e_1,e_4,e_5),\qquad \mathcal T_2'=(e_2,e_4,e_6),\qquad
+\mathcal T_3'=(e_3,e_4,e_7),
+\]
+which keeps the source's third triole and shares one common axis.  Equally admissible is the
+configuration through \(e_1\), which keeps the inner triole \((e_1,e_2,e_3)\).
+
+\paragraph{Reflection as algebra symmetry.}
+The reflection negating \(e_1\) alone is not an automorphism of \(\OO\).  Of the
+\(2^7\) sign changes exactly eight are automorphisms; those negating \(e_1\) negate four units
+and fix one quaternionic line pointwise, for example \(\{e_1,e_2,e_4,e_7\}\) with fixed line
+\((3,5,6)\).  A reflection meant as a symmetry of the algebra must have this form.
+
+\paragraph{Above the octonions.}
+In the sedenions the source's outer octo-triole \((f_8,\dots,f_{14})\) is not closed
+(\(f_8f_9=f_1\)), and zero divisors exist, e.g. \((e_3+f_{10})(e_6-f_{15})=0\).  The hierarchy
+continues algebraically, not geometrically; the Hopf structure ends at \(\OO\), as the source
+itself states.  Theorem~\ref{thm:three-generations} uses \(e_4,e_5,e_6\) as an \(SU(3)\)
+triplet, not as a quaternionic triole, and is not changed by this layer.
+
+\subsection*{v4.8.0-r04 dependency map}
+\label{subsec:v480-r04-dependency-map}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.31\textwidth}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.33\textwidth}@{}}
+\toprule
+site & used from the Riemann source & status after r04\\
+\midrule
+Thm.~\ref{thm:unity}, equivalence clause & Stone--von Neumann (Lem.~13.2, Step~3) & open\\
+Thm.~\ref{thm:unitary-equiv} & Stone--von Neumann, T4+T5 & open\\
+Thms.~\ref{thm:bell-consistency}, \ref{thm:string-lqg-duality} & Stone--von Neumann & equivalence open\\
+Thms.~\ref{thm:einstein}, \ref{thm:gue} & T6, \(\Sigma=1-\Theta+R\) & open; formula to be replaced (A1)\\
+Thm.~\ref{thm:toe}, row ``Riemann Hypothesis'' & RH as a result & withdrawn: violates \(W_\gamma^{\rm glob}\)\\
+Thm.~\ref{thm:gauge-invariance} & \(\mathrm{Adj}_J(L_0)=0\) & \(\mathcal L_{\rm HC}\), \(\mathcal L_{\rm frame}\) standalone; \(\mathcal L_{\rm kin}\) open\\
+Thm.~\ref{thm:eom} & field equation & projector algebra kept; zero reading withdrawn\\
+Thms.~\ref{thm:op2-existence}, \ref{thm:op2-selfadj} & T1+T3, T4+T5 & open (OP2 stays open)\\
+Thm.~\ref{thm:partial-cancel}, Rem.~\ref{rem:explicit-formula-remainder} & explicit formula (Thm.~3.3) & to be replaced by A1\\
+prime lattice \(\Gamma_P\) & classical arithmetic & unaffected\\
+\S\ref{sec:rh} & RH as consequence & read as conjecture only\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Theoremlet v4.8.0-r04.5.}
+After this layer the Heisenberg compensator, the Sphaera cascade and the triole hierarchy up to
+\(\OO\) rest on Definitions v4.8.0-r04.1 and r04.2 and on Theoremlet r04.4, without any statement
+of \cite{brendecke2026rh} beyond classical arithmetic.  The statements listed as open lose their
+previous justification but are not refuted by this layer.
+
+\paragraph{Proof sketch.}
+Theoremlets r04.2--r04.4 use only Hilbert-space projections and explicit Cayley--Dickson
+multiplication.  For the open items the audit A1--A5 removes the cited justification; whether
+an independent justification exists is not decided here.  \(\square\)
+
+\subsection*{v4.8.0-r04 ledger and guard update}
+\label{subsec:v480-r04-ledger-guard}
+
+\[
+R_{\rm dec}^{v480\text{-}r04}=(0,0,0,1,1,1)
+\]
+for (standalone compensator; standalone cascade; repaired triole hierarchy; Stone--von Neumann
+equivalence of the kernels open; trace-formula field equations open pending A1; kinetic
+\(J\)-invariance open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v480\text{-}r04,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v480\text{-}r04}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+
 \end{document}

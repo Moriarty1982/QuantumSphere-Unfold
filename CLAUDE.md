@@ -60,7 +60,7 @@ Das Repository liegt in einem OneDrive-Ordner. Bisher unauffällig; falls je Syn
 | `..._RC21_c5_collar_consolidation_source.tex` + `..._r86.pdf` + `V4_7_0_RC21_*` | RC21 (Stand r86), eingefroren |
 | `..._RC22_clock_window_collar_routes_source.tex` + `..._r88.pdf` + `V4_7_0_RC22_*` | RC22 (Stand r88), eingefroren |
 | `quantum_sphaera_v3_1_4_monolith_stable_main (1).tex` | Hauptpapier, Bibkey `brendecke2026main` |
-| `riemann_arxiv_v4__15_ (1).tex` | Riemann-Arbeit v4.15, Bibkey `brendecke2026rh` |
+| `riemann_arxiv_v4__15_ (1).tex` | Riemann-Arbeit v4.15, Bibkey `brendecke2026rh`. **Seit v4.8.0-r04 keine Beweisquelle mehr** (Gutachten `llm/Pruefung_Riemann_Paper_v4_15.md`); nur noch Startpunkt und klassische Arithmetik |
 | `V4_7_0_RC19_CONCEPT_DOI_RESTORE_AUDIT_REPORT.md` | Compile-Audit der letzten Runde |
 | `v4_7_0_RC19_concept_doi_restore_summary.json` | Dieselben Audit-Zahlen maschinenlesbar |
 | `V4_7_0_RC19_SHA256_MANIFEST.csv` | Hashes aller Release-Dateien |
@@ -83,7 +83,7 @@ Nicht in diesem Verzeichnis, aber referenziert: `RC14_uncompressed_reference_sou
 
 ## Der Runden-Workflow
 
-Das Dokument wächst **append-only in nummerierten Runden** (`rNN`). Eine neue Runde ist ein neuer Abschnitt unmittelbar vor `\end{document}`; bestehende Runden werden nicht umgeschrieben. Aktueller Stand: **r94** und **v4.8.0-r03** (r03: Dimensions- und Zahlenaudit der Konstantenschicht, source-only). Runden der v4.8.0-Linie heißen `v4.8.0-rNN`, Labels `sec:v480-rNN-...`; `qs.py outline` und `ledger` erkennen beide Formen.
+Das Dokument wächst **append-only in nummerierten Runden** (`rNN`). Eine neue Runde ist ein neuer Abschnitt unmittelbar vor `\end{document}`; bestehende Runden werden nicht umgeschrieben. Aktueller Stand: **r94** und **v4.8.0-r04** (r03: Dimensions- und Zahlenaudit der Konstantenschicht; r04: Entkopplung von der Riemann-Arbeit, eigenständiger Heisenberg-Kompensator, Kaskade und reparierte Triolen-Hierarchie; beide source-only). Runden der v4.8.0-Linie heißen `v4.8.0-rNN`, Labels `sec:v480-rNN-...`; `qs.py outline` und `ledger` erkennen beide Formen.
 
 Eine Runde folgt einem festen Muster:
 
