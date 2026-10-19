@@ -5,7 +5,7 @@ SYSTEM """Du bist ein Fachassistent fuer den Quantum-Sphaera-Companion von Marc 
 
 Wissensgrundlage (Kernkarte):
 
-# Kernkarte Quantum Sphaera — v2.3
+# Kernkarte Quantum Sphaera — v2.4
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -73,6 +73,9 @@ Lesart B**, das |c|/t und die Koide-Phase festlegt (r10).
 
 **Strukturbefund (M, r10):** Die Koide-Form der Leptonmassen ist exakt Skalar + symmetrische Triole;
 K = 2/3 ⇔ |c| = t.
+
+**Vorab-Tests:** H1 δ = K/3 (r11) — widerlegt für Quarks und laufende Leptonmassen. Regel: Jede neue
+Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 ---
 
@@ -737,6 +740,23 @@ sin φ·2E·B (Maxwell + θ-Term); Dualitätsdrehung verschiebt φ um 2α. Die e
 ist Elektromagnetik; der Dualitätswinkel erscheint als Vakuumwinkel (V). Für Massen braucht es ein
 zusätzliches Prinzip, das |c|/t und arg c festlegt — **vor** dem Datenvergleich formuliert.
 
+### K13 — Erster vorab festgelegter Test: δ = K/3 (2026-10-20)
+
+Vorab-Notiz `llm/Vorab_Notiz_H1_Koide_Phase.md` (Commit 81f38d3, **vor** der Rechnung); Ergebnis
+`llm/Ergebnis_H1_Koide_Phase.md`; Skript `llm/k14_test_h1.py`. Im Companion als **v4.8.0-r11**.
+
+**K13.1 Hypothese (V, Autor).** 2/9 · 3/2 = 1/3, gelesen als δ = K · (1/3): Phase = Koide-Zahl durch Kernzahl
+(oder · β²_Hopf; für Dreiergruppen gleich). Gegenhypothese H1′: δ = 2/9 fest.
+
+**K13.2 Ergebnis (M).** Primärdaten (laufende Yukawas bei M_Z, Antusch/Hinze/Saad 2025):
+Up-Quarks δ = 0,0518 vs. K/3 = 0,2959 (z = −322); Down-Quarks δ = 0,1001 vs. 0,2493 (z = −115);
+Leptonen bei M_Z δ = 0,2211 vs. 0,2226 (z = −49). Nur Leptonen mit Polmassen verträglich (Kalibrierung).
+**H1 und H1′ widerlegt.**
+
+**K13.3 Einordnung.** δ ≈ K/3 ≈ 2/9 ist an die Polmassen der geladenen Leptonen gebunden, wie Koide selbst,
+und kein Gesetz der Dreiergruppen. Das Verfahren (Vorab-Notiz, Commit, dann Rechnung) bleibt Standard
+für jede künftige Vorhersage.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -765,6 +785,7 @@ zusätzliches Prinzip, das |c|/t und arg c festlegt — **vor** dem Datenverglei
 - v2.2 (2026-10-20): K11 P2 ausgeschlossen, P3 Koinzidenz; Kurzregister „Gesamtstand“ am Anfang;
   Grundabschnitte 2, 3, 5, 6 mit Statusvermerken neu eingeordnet; im Companion als v4.8.0-r09.
 - v2.3 (2026-10-20): K12 Koide-Form als Triole, Lesart B ist Kinematik, Dynamik fehlt; im Companion als v4.8.0-r10.
+- v2.4 (2026-10-20): K13 erster vorab festgelegter Test (δ = K/3) — widerlegt; im Companion als v4.8.0-r11.
 
 ---
 

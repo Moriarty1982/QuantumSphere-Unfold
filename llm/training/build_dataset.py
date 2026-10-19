@@ -2,7 +2,7 @@
 
 Jede Antwort beginnt mit Ebenen-Tags:
   [V] Vermutung   [M] Mathematik (definiert/bewiesen/gerechnet)   [S] Stand   [P] Pruefpunkt/offen
-Quelle aller Inhalte: Kernkarte v2.3 und Companion bis v4.8.0-r10.
+Quelle aller Inhalte: Kernkarte v2.4 und Companion bis v4.8.0-r11.
 Aufteilung: jedes 8. Paar geht in eval.jsonl (gleiche Themenmischung).
 """
 import json, os, random
@@ -214,6 +214,12 @@ QA = [
  "[S] Nein. [M] Fuer jede Triole ist s = 0 und N(q) = -t^2; die Invarianten legen weder |c|/t noch die Koide-Phase fest. Lesart B ist Kinematik; ihre einfachste Dynamik Re(e^{-i phi} s) ist Elektromagnetik mit theta-Term. [P] Fuer Massen fehlt ein dynamisches Prinzip, das vor dem Datenvergleich formuliert werden muss."),
 ("guard", "Dann folgt die Koide-Phase 2/9 doch aus der Triolen-Struktur?",
  "[S] Nein. Kein vorab festgelegter kanonischer Winkel der Struktur ergibt 0,222225; am naechsten liegt die ausgeschlossene P2-Formel. [M] 2/9 ist kein rationales Vielfaches von pi. Da der Wert bekannt ist, waere jede jetzt gefundene Formel eine Nachhersage."),
+("zahl", "Gilt die Phasenbeziehung delta = K/3 fuer alle Teilchen-Dreiergruppen?",
+ "[M] Nein. Im vorab festgelegten Test (r11) mit laufenden Yukawas bei M_Z: Up-Quarks delta = 0,0518 gegen K/3 = 0,2959 (z = -322), Down-Quarks 0,1001 gegen 0,2493 (z = -115), Leptonen bei M_Z 0,2211 gegen 0,2226 (z = -49). Nur die Leptonen mit Polmassen sind vertraeglich. [S] H1 und die Gegenhypothese delta = 2/9 sind widerlegt."),
+("status", "Wie werden Vorhersagen im Companion heute geprueft?",
+ "[S] Seit r11 mit Vorab-Notiz: Hypothese, Definitionen, Daten und Entscheidungskriterium werden vor der Rechnung ins Repository committet; der Git-Zeitstempel belegt die Reihenfolge. Erst danach wird gerechnet."),
+("guard", "Die Leptonen erfuellen delta = K/3 doch auf 0,5 sigma, also ist das ein Gesetz?",
+ "[S] Nein. Bei den Leptonen-Polmassen war die Beziehung Kalibrierung, nicht Test. Im vorab festgelegten Test (r11) ist sie fuer beide Quarkgruppen und fuer die laufenden Leptonmassen bei M_Z widerlegt."),
 # ---------------------------------------------------------------- F: Pruefpunkte / offen
 ("offen", "Welche Modellentscheidungen sind in Lesart B noch offen?",
  "[P] Ob der Dualitaetswinkel physikalisch oder Eichfreiheit ist; die Rolle von t; die Transportaussage K(L_n) = L_{n-1}. Die Sektor-Zuordnung ist seit r07 als Arbeitszuordnung gesetzt und umkehrbar."),
