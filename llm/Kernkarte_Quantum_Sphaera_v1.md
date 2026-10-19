@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v1.8
+# Kernkarte Quantum Sphaera — v1.9
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -601,6 +601,25 @@ das mit L₀ vertauscht, würde sogar auf GOE zeigen).
 **Stand nach K7:** Die Feldgleichungsschicht hat jetzt die richtige Formel. Die Θ-Summen-Vermutung und
 mit ihr die Balance-Bedingung von OP5 Step B sind in der bisherigen Form widerlegt. Guards unverändert.
 
+### K8 — Lesart B im Companion (2026-10-19)
+
+Skript: `llm/k9_lesart_b.py`. Im Companion als Runde **v4.8.0-r06** (`sec:v480-r06-complex-vector-reading`).
+
+**K8.1 Übernommen (M).** Signatur (1,6) der alten Norm; natürliche Norm N(q) = q q̄ = −t² + Σz_k²
+(multiplikativ); Lesart A (Vierervektor, reeller Schnitt) und Lesart B (ℂ³ mit SO(3,ℂ) ≅ SO⁺(1,3)).
+**Lesart B ist Arbeitslesart** (Entscheidung des Autors). `thm:lorentz` zeigte nur J-Invarianz; die
+Lorentzwirkung kommt jetzt aus Lesart B.
+
+**K8.2 Neu bewiesen bzw. geprüft (M).**
+- Triolen-Lemma: Σz = 0 ∧ Σz² = 0 ⇔ z = c(1, ω, ω²).
+- Bahnen von SO(3,ℂ) auf ℂ³: Niveaumengen von s (s ≠ 0), punktierter Nullkegel, {0}; konstruktiv geprüft.
+- Veronese: z(ψ) = (ψ₁² − ψ₂², i(ψ₁² + ψ₂²), −2ψ₁ψ₂); jeder Nullvektor hat genau ±ψ als Urbild;
+  projektivierter Nullkegel ≅ ℂP¹ = S₀; SL(2,ℂ)-äquivariant.
+- Null-Achse in Lesart B invariant als s = 0 definiert; ihre Richtungen sind genau S₀.
+
+**K8.3 Offen.** Zuordnung elektrisch ↔ Materie / magnetisch ↔ Tachyon; Bedeutung nicht-reeller s;
+Rolle von t; Transportaussage K̂(L_n) = L_{n−1}.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -621,6 +640,8 @@ mit ihr die Balance-Bedingung von OP5 Step B sind in der bisherigen Form widerle
   Triolen-Satz (konkurrente Fano-Linien), Abhängigkeitskarte; `R_dec = (0,0,0,1,1,1)`, Guards unverändert.
 - v1.8 (2026-10-19): K7 korrigierte explizite Formel, Θ-Summen-Vermutung widerlegt (−0,1097 statt 0,893),
   GUE empirisch bestätigt; im Companion als v4.8.0-r05.
+- v1.9 (2026-10-19): K8 Lesart B als v4.8.0-r06 in den Companion übernommen (Signatur, N(q), SO(3,ℂ),
+  Triolen-Lemma, invariante Sektoren, Nullkegel = S₀).
 
 ---
 

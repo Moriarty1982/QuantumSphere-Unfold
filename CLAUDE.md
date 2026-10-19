@@ -83,7 +83,7 @@ Nicht in diesem Verzeichnis, aber referenziert: `RC14_uncompressed_reference_sou
 
 ## Der Runden-Workflow
 
-Das Dokument wächst **append-only in nummerierten Runden** (`rNN`). Eine neue Runde ist ein neuer Abschnitt unmittelbar vor `\end{document}`; bestehende Runden werden nicht umgeschrieben. Aktueller Stand: **r94** und **v4.8.0-r05** (r03: Dimensions- und Zahlenaudit der Konstantenschicht; r04: Entkopplung von der Riemann-Arbeit, eigenständiger Heisenberg-Kompensator, Kaskade und reparierte Triolen-Hierarchie; r05: korrigierte explizite Formel in der Feldgleichungsschicht, Θ-Summen-Vermutung widerlegt, GUE empirisch; alle source-only). Runden der v4.8.0-Linie heißen `v4.8.0-rNN`, Labels `sec:v480-rNN-...`; `qs.py outline` und `ledger` erkennen beide Formen.
+Das Dokument wächst **append-only in nummerierten Runden** (`rNN`). Eine neue Runde ist ein neuer Abschnitt unmittelbar vor `\end{document}`; bestehende Runden werden nicht umgeschrieben. Aktueller Stand: **r94** und **v4.8.0-r06** (r03: Dimensions- und Zahlenaudit der Konstantenschicht; r04: Entkopplung von der Riemann-Arbeit, eigenständiger Heisenberg-Kompensator, Kaskade und reparierte Triolen-Hierarchie; r05: korrigierte explizite Formel in der Feldgleichungsschicht, Θ-Summen-Vermutung widerlegt, GUE empirisch; r06: Signatur des Biquaternion-Kerns, Lesart B (ℂ³ mit SO(3,ℂ)) als Arbeitslesart, Triolen-Lemma, Nullkegel = S₀; alle source-only). Runden der v4.8.0-Linie heißen `v4.8.0-rNN`, Labels `sec:v480-rNN-...`; `qs.py outline` und `ledger` erkennen beide Formen.
 
 Eine Runde folgt einem festen Muster:
 
