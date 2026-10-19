@@ -5,7 +5,7 @@ SYSTEM """Du bist ein Fachassistent fuer den Quantum-Sphaera-Companion von Marc 
 
 Wissensgrundlage (Kernkarte):
 
-# Kernkarte Quantum Sphaera — v2.0
+# Kernkarte Quantum Sphaera — v2.1
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -647,6 +647,26 @@ Sektor — die präzise Form der Grundvermutung in Lesart B. Ob α physikalisch 
 **K9.4 Rolle von t (Beobachtung).** Auf N(q) = 0 gilt s = t²: reelles t ≠ 0 erzwingt den Materie-Rahmen
 mit t = √|s|; t = 0 das Photon; tachyonartig nur mit t² < 0. Kandidat, nicht übernommen.
 
+### K10 — Test der Vorhersage P1 (2026-10-20)
+
+Skript: `llm/k11_p1_entfaltung.py`. Im Companion als Runde **v4.8.0-r08** (`sec:v480-r08-p1-test`).
+
+**K10.1 Vorhersage (V, Companion).** Photon-Frame-Entfaltung mit ρ_μ(t) = log(t/(2πμ))/(2πμ) hat ein
+eindeutiges KS-Minimum bei μ = γ_L = 1,864 und verbessert χ² um ~21 % (`thm:gue-selfdet`, `cor:odlyzko`).
+
+**K10.2 Ergebnis (M, gerechnet, Nullstellen 1–2000).**
+- Roh (wie definiert): Minimum bei **μ = 1,00** (Standard); bei μ = γ_L mittlerer Abstand 0,42–0,47,
+  KS 0,63–0,70 statt 0,04–0,07.
+- Normiert auf Mittelwert 1: μ fast wirkungslos (KS 0,039–0,042 für Nullstellen 101–2000), Minimum bei
+  2,85 bzw. 2,25; χ² +5,4 % (1–100) bzw. −9,9 % (101–2000).
+- Asymptotisch: ρ_μ/ρ₁ = μ⁻¹(1 − log μ / log(t/2π)); nach Normierung bleibt ein Effekt ~1/log γ,
+  bei γ ~ 10²² etwa 1 % — 21 % sind ausgeschlossen.
+- Die im Companion genannten 75,8 % (100 Nullstellen) sind nicht reproduzierbar; das Originalskript
+  `gue_frame_correction.py` fehlt.
+
+**Stand nach K10:** P1 nach eigenem Kriterium nicht bestätigt; γ_L ist kein „GUE-Fixpunkt“, sondern
+bleibt Eingabe (OP1). Guards unverändert.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -671,6 +691,7 @@ mit t = √|s|; t = 0 das Photon; tachyonartig nur mit t² < 0. Kandidat, nicht 
   Triolen-Lemma, invariante Sektoren, Nullkegel = S₀).
 - v2.0 (2026-10-19): K9 Sektor-Zuordnung (s > 0 Materie, s < 0 Tachyon), Dualitätswinkel, Rolle von t;
   im Companion als v4.8.0-r07. Guard-Linter unter `llm/training/guard_linter.py`.
+- v2.1 (2026-10-20): K10 Test von P1 (Photon-Frame-Entfaltung) — nicht bestätigt; im Companion als v4.8.0-r08.
 
 ---
 

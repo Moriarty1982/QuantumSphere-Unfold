@@ -2,7 +2,7 @@
 
 Jede Antwort beginnt mit Ebenen-Tags:
   [V] Vermutung   [M] Mathematik (definiert/bewiesen/gerechnet)   [S] Stand   [P] Pruefpunkt/offen
-Quelle aller Inhalte: Kernkarte v2.0 und Companion bis v4.8.0-r07.
+Quelle aller Inhalte: Kernkarte v2.1 und Companion bis v4.8.0-r08.
 Aufteilung: jedes 8. Paar geht in eval.jsonl (gleiche Themenmischung).
 """
 import json, os, random
@@ -194,6 +194,12 @@ QA = [
  "[M] Gezeigt ist, dass die Kaskade die orthogonale Projektion auf S_0 ist. [V] Die physikalische Lesart 'das Universum strebt zum Photon-Grundzustand' ist Vermutung."),
 ("guard", "Ist Delta_gamma < 1/5 hergeleitet?",
  "[P] Nein. Die Schranke stammt aus r65 im komprimierten Block; der Volltext liegt nicht vor, und r87 zeigt, dass sie aus der r15/r16-Fensterschicht nicht rekonstruierbar ist."),
+("zahl", "Bestaetigt die Photon-Frame-Entfaltung die Vorhersage P1?",
+ "[M] Nein. Mit den Nullstellen 1 bis 2000 liegt das KS-Minimum der rohen Entfaltung bei mu = 1 (Standard), nicht bei gamma_L = 1,864; dort schrumpft der mittlere Abstand auf 0,42 bis 0,47. Normiert auf Mittelwert 1 ist mu fast wirkungslos (KS 0,039 bis 0,042). [S] Seit r08 nicht bestaetigt."),
+("status", "Ist gamma_L der GUE-Fixpunkt des Frames?",
+ "[S] Nein, die Aussage aus thm:gue-selfdet ist seit r08 zurueckgezogen; gamma_L bleibt Eingabe (gamma_BI/gamma_string, OP1 offen). [M] Asymptotisch wirkt die Skala nach Normierung nur mit log(mu)/log(gamma/2 pi), bei 10^22 etwa 1 Prozent."),
+("guard", "P1 ist doch mit 75,8 Prozent Verbesserung bestaetigt?",
+ "[S] Nein. Der Wert 75,8 Prozent fuer 100 Nullstellen ist in keiner Lesart reproduzierbar (Originalskript fehlt). Die Nachrechnung in r08 findet das Minimum bei mu = 1, nicht bei gamma_L."),
 # ---------------------------------------------------------------- F: Pruefpunkte / offen
 ("offen", "Welche Modellentscheidungen sind in Lesart B noch offen?",
  "[P] Ob der Dualitaetswinkel physikalisch oder Eichfreiheit ist; die Rolle von t; die Transportaussage K(L_n) = L_{n-1}. Die Sektor-Zuordnung ist seit r07 als Arbeitszuordnung gesetzt und umkehrbar."),
