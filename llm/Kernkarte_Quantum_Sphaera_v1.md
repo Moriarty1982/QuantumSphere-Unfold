@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v2.2
+# Kernkarte Quantum Sphaera — v2.3
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -61,7 +61,11 @@ GUE-Selbstbestimmung von γ_L und P1 (r08); Koide-Phasenformel P2 (r09); Herleit
 Raumzeit als Projektion einer Spinor-/Informationsebene (K2); Einstein-Lesart der Spurformel (r05).
 
 **Offen (P):** OP1, OP2, Rolle von t, Transport K̂(L_n) = L_{n−1}, Kopplungen der Master-Gleichung,
-definierte Wirkung, Λ-Typ, physikalischer Status des Dualitätswinkels.
+definierte Wirkung, Λ-Typ, physikalischer Status des Dualitätswinkels, **ein dynamisches Prinzip für
+Lesart B**, das |c|/t und die Koide-Phase festlegt (r10).
+
+**Strukturbefund (M, r10):** Die Koide-Form der Leptonmassen ist exakt Skalar + symmetrische Triole;
+K = 2/3 ⇔ |c| = t.
 
 ---
 
@@ -703,6 +707,29 @@ Exponent nachträglich von γ_L² auf γ_L⁵ geändert. Unter 56 gleich einfach
 in r09 und als Kurzregister am Anfang dieser Karte. Ergebnis: Keine Vorhersage ist bestätigt; was trägt,
 sind die strukturellen Ergebnisse.
 
+### K12 — Koide-Struktur in Lesart B (2026-10-20)
+
+Skript: `llm/k13_koide_lesart_b.py`. Im Companion als Runde **v4.8.0-r10** (`sec:v480-r10-koide-reading-b`).
+
+**K12.1 Die Koide-Form ist eine Triole (M).** √m_k = A(1 + √2 cos(θ + 2πk/3)) ist exakt
+v = t·(1,1,1) + √2·Re(c(1, ω, ω²)) mit t = A, c = |c|e^{iθ}. Allgemein K = (1 + |c|²/t²)/3,
+also **K = 2/3 ⇔ |c| = t**. Gemessen: |c|/t = 0,999997, θ mod 2π/3 = 0,222225.
+
+**K12.2 Lesart B legt nichts fest (M).** Für jede Triole s = 0 und N(q) = −t²; weder |c|/t noch arg c sind
+bestimmt. Die Struktur liefert die richtige Form, keine Zahlen.
+
+**K12.3 Kandidat für K = 2/3 (V).** |c| = t ⇔ jeder Kern einzeln lichtartig in der alten Pro-Kern-Norm
+(−t² + |z_k|² = 0). Hängt am Faktor √2 der Brannen-Form (Konvention) — Kandidat, keine Herleitung.
+
+**K12.4 Phase (M).** Kein vorab festgelegter kanonischer Winkel der Struktur (jπ/12, Hopf-Winkel, arcsin β,
+arctan β, Tetraeder-/magischer Winkel …) ergibt 0,222225; am nächsten die ausgeschlossene P2-Formel.
+2/9 ist kein rationales Vielfaches von π.
+
+**K12.5 Dynamik fehlt (M/V).** Einzige quadratische Lorentz-Invarianten: Re(e^{−iφ}s) = cos φ(E² − B²) +
+sin φ·2E·B (Maxwell + θ-Term); Dualitätsdrehung verschiebt φ um 2α. Die einfachste Dynamik von Lesart B
+ist Elektromagnetik; der Dualitätswinkel erscheint als Vakuumwinkel (V). Für Massen braucht es ein
+zusätzliches Prinzip, das |c|/t und arg c festlegt — **vor** dem Datenvergleich formuliert.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -730,6 +757,7 @@ sind die strukturellen Ergebnisse.
 - v2.1 (2026-10-20): K10 Test von P1 (Photon-Frame-Entfaltung) — nicht bestätigt; im Companion als v4.8.0-r08.
 - v2.2 (2026-10-20): K11 P2 ausgeschlossen, P3 Koinzidenz; Kurzregister „Gesamtstand“ am Anfang;
   Grundabschnitte 2, 3, 5, 6 mit Statusvermerken neu eingeordnet; im Companion als v4.8.0-r09.
+- v2.3 (2026-10-20): K12 Koide-Form als Triole, Lesart B ist Kinematik, Dynamik fehlt; im Companion als v4.8.0-r10.
 
 ---
 

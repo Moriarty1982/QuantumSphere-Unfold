@@ -66393,4 +66393,109 @@ It does not imply exact finite \(C5\) zero closure, exact all-readout terminalit
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
 
 
+% ============================================================================
+\clearpage
+\section*{v4.8.0-r10 Source-Only: The Koide Structure in the Complex-Vector Reading}
+\addcontentsline{toc}{section}{v4.8.0-r10 Source-Only: The Koide Structure in the Complex-Vector Reading}
+\label{sec:v480-r10-koide-reading-b}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer r09 excluded the phase formula of Theorem~\ref{thm:koide-triolic} and noted that the observed
+Koide phase lies close to \(2\pi/3+2/9\).  This layer asks what Reading~B (r06, r07) says about the
+lepton masses before any number is fitted.  Because the observed values are known, nothing found here
+can count as a prediction; the layer records what the structure fixes and what it leaves free.
+Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.8.0-r10 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.8.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23365244}{10.5281/zenodo.23365244} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.8.0-r10 the Koide form is a triole}
+\label{subsec:v480-r10-koide-triole}
+
+\paragraph{Theoremlet v4.8.0-r10.1.}
+For \(v=(\sqrt{m_e},\sqrt{m_\mu},\sqrt{m_\tau})\) the Brannen form
+\(\sqrt{m_k}=A\bigl(1+\sqrt2\cos(\theta+2\pi k/3)\bigr)\) is identical to
+\[
+v=t\,(1,1,1)+\sqrt2\,\operatorname{Re}\bigl(c\,(1,\omega,\omega^2)\bigr),\qquad
+t=A,\quad c=|c|e^{i\theta},
+\]
+a scalar plus the real part of a symmetric triole.  For any \(t,c\),
+\(K=\sum m_k/(\sum\sqrt{m_k})^2=\tfrac13\bigl(1+|c|^2/t^2\bigr)\); hence \(K=2/3\) if and only if
+\(|c|=t\).  From the measured masses, \(|c|/t=0.999997\) and \(\theta\bmod 2\pi/3=0.222225\).
+
+\paragraph{Proof sketch.}
+Discrete Fourier decomposition of \(v\) over \(\mathbb Z/3\): the constant mode is \(t\), the first mode
+is \(c\); the reconstruction is exact.  \(\sum v_k^2=3t^2+3|c|^2\) and \(\sum v_k=3t\) give \(K\).
+\(\square\)
+
+\paragraph{Theoremlet v4.8.0-r10.2.}
+Embed the triole as the kernel part of Reading~B, \(q=it\cdot\mathbf 1+\sum_k z_ke_k\) with
+\(z=c(1,\omega,\omega^2)\).  Then \(s(z)=0\) and \(N(q)=-t^2\) for every \(c\); the Reading-B invariants
+therefore fix neither \(|c|/t\) (i.e.\ \(K\)) nor \(\arg c\) (the Koide phase).
+
+\paragraph{Proof sketch.}
+\(s=c^2(1+\omega^2+\omega^4)=0\) by the triole lemma r06.2, and \(N(q)=-t^2+s\).  \(\square\)
+
+\paragraph{Observation (conjecture).}
+The condition \(|c|=t\) is equivalent to \(-t^2+|z_k|^2=0\) for each kernel separately, i.e.\ each
+kernel is light-like in the original per-kernel norm of Definition~\ref{def:biquaternion}.  This
+equivalence depends on the factor \(\sqrt2\) of the Brannen form, which is a convention; it is
+recorded as a candidate principle for \(K=2/3\), not as a derivation.
+
+\subsection*{v4.8.0-r10 no canonical angle gives the phase}
+\label{subsec:v480-r10-phase}
+
+The following angles of the framework were fixed before comparison: \(j\pi/12\) for \(j=0,\dots,7\);
+\(\arcsin\bsym\), \(2\arcsin\bsym\), \(\arcsin(1/\sqrt3)\), \(2\arcsin(1/\sqrt3)\), \(\arctan\bsym\),
+\(\bsym\) and \(1/\sqrt3\) read as radians; the P2 angle; the tetrahedral and magic angles.  Reduced
+modulo \(2\pi/3\), the closest is the excluded P2 value (\(0.2247\), \(356\sigma\) away), the next
+\(\pi/12\) (\(0.2618\)).  None reproduces \(\delta_{\rm obs}=0.222225\).  The value \(2/9\) is not a
+rational multiple of \(\pi\), which is what angular structures of this type produce.
+
+\subsection*{v4.8.0-r10 what is missing: dynamics}
+\label{subsec:v480-r10-dynamics}
+
+Reading~B is kinematic: it fixes how the kernels transform, not which configuration is realised.
+
+\paragraph{Theoremlet v4.8.0-r10.3.}
+The quadratic Lorentz-invariant real functionals of \(z\in\mathbb C^3\) are
+\(\operatorname{Re}(e^{-i\varphi}s)=\cos\varphi\,(E^2-B^2)+\sin\varphi\,2E\cdot B\) for \(z=E+iB\), and a
+duality rotation \(z\mapsto e^{ia}z\) maps \(\varphi\mapsto\varphi-2a\).
+
+\paragraph{Proof sketch.}
+\(s\) is the only quadratic \(SO(3,\mathbb C)\)-invariant up to complex scale; its real-linear functionals
+are the real parts of \(e^{-i\varphi}s\).  \(s(e^{ia}z)=e^{2ia}s(z)\).  Checked numerically.  \(\square\)
+
+\paragraph{Reading.}
+\(\varphi=0\) is the Maxwell Lagrangian; \(\sin\varphi\,2E\cdot B\) is the topological \(\theta\)-type term.
+The simplest dynamics of Reading~B is thus electromagnetism, consistent with the photon sector, while the
+duality angle of r07 reappears as a vacuum angle.  Lepton masses, \(K=2/3\) and the Koide phase require an
+additional principle that fixes \(|c|/t\) and \(\arg c\).  Any such principle has to be stated before it is
+compared with the known values; only then can it yield a prediction.
+
+\subsection*{v4.8.0-r10 ledger and guard update}
+\label{subsec:v480-r10-ledger-guard}
+
+\[
+R_{\rm Koide}^{v480\text{-}r10}=(0,0,0,1,1)
+\]
+for (Koide form identified as triole; Reading-B invariants shown not to fix it; canonical angles excluded;
+principle for \(|c|=t\) open; principle for the phase open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v480\text{-}r10,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v480\text{-}r10}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+
 \end{document}

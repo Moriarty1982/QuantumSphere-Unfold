@@ -2,7 +2,7 @@
 
 Jede Antwort beginnt mit Ebenen-Tags:
   [V] Vermutung   [M] Mathematik (definiert/bewiesen/gerechnet)   [S] Stand   [P] Pruefpunkt/offen
-Quelle aller Inhalte: Kernkarte v2.2 und Companion bis v4.8.0-r09.
+Quelle aller Inhalte: Kernkarte v2.3 und Companion bis v4.8.0-r10.
 Aufteilung: jedes 8. Paar geht in eval.jsonl (gleiche Themenmischung).
 """
 import json, os, random
@@ -208,6 +208,12 @@ QA = [
  "[S] Nach r09 keine. P1 nicht bestaetigt (r08), P2 durch Daten ausgeschlossen (r09), P3 Koinzidenz (r09), P4 in der gegebenen Form widersprochen (r03, r05), P5 und P6 nicht testbar. [M] Was traegt, sind die strukturellen Ergebnisse: Kompensator, Kaskade, Triolen-Lemma, Lesart B."),
 ("guard", "Der Companion leitet doch K = 2/3 aus Cauchy-Schwarz her?",
  "[M] Nein. Cauchy-Schwarz liefert (sum sqrt m)^2 <= 3 sum m, also K >= 1/3, mit Gleichheit nur bei gleichen Massen. [S] K = 2/3 ist eine empirische Tatsache (K = 0,666665); ihre Herleitung ist offen (r09)."),
+("lesartB", "Wie haengt die Koide-Formel mit den Triolen zusammen?",
+ "[M] Die Brannen-Form sqrt(m_k) = A(1 + sqrt2 cos(theta + 2 pi k/3)) ist exakt v = t(1,1,1) + sqrt2 Re(c(1, w, w^2)), also ein Skalar plus der Realteil einer symmetrischen Triole. Allgemein ist K = (1 + |c|^2/t^2)/3, also K = 2/3 genau dann, wenn |c| = t. Gemessen ist |c|/t = 0,999997 (r10)."),
+("lesartB", "Sagt Lesart B die Leptonmassen voraus?",
+ "[S] Nein. [M] Fuer jede Triole ist s = 0 und N(q) = -t^2; die Invarianten legen weder |c|/t noch die Koide-Phase fest. Lesart B ist Kinematik; ihre einfachste Dynamik Re(e^{-i phi} s) ist Elektromagnetik mit theta-Term. [P] Fuer Massen fehlt ein dynamisches Prinzip, das vor dem Datenvergleich formuliert werden muss."),
+("guard", "Dann folgt die Koide-Phase 2/9 doch aus der Triolen-Struktur?",
+ "[S] Nein. Kein vorab festgelegter kanonischer Winkel der Struktur ergibt 0,222225; am naechsten liegt die ausgeschlossene P2-Formel. [M] 2/9 ist kein rationales Vielfaches von pi. Da der Wert bekannt ist, waere jede jetzt gefundene Formel eine Nachhersage."),
 # ---------------------------------------------------------------- F: Pruefpunkte / offen
 ("offen", "Welche Modellentscheidungen sind in Lesart B noch offen?",
  "[P] Ob der Dualitaetswinkel physikalisch oder Eichfreiheit ist; die Rolle von t; die Transportaussage K(L_n) = L_{n-1}. Die Sektor-Zuordnung ist seit r07 als Arbeitszuordnung gesetzt und umkehrbar."),
