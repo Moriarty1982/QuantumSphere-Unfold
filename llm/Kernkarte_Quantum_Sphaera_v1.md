@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v1.9
+# Kernkarte Quantum Sphaera — v2.0
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -620,6 +620,26 @@ Lorentzwirkung kommt jetzt aus Lesart B.
 **K8.3 Offen.** Zuordnung elektrisch ↔ Materie / magnetisch ↔ Tachyon; Bedeutung nicht-reeller s;
 Rolle von t; Transportaussage K̂(L_n) = L_{n−1}.
 
+### K9 — Sektor-Zuordnung und Dualitätswinkel (2026-10-19)
+
+Skript: `llm/k10_dualitaet.py`. Im Companion als Runde **v4.8.0-r07** (`sec:v480-r07-sector-assignment`).
+
+**K9.1 Arbeitszuordnung (vom Autor übernommen).** s > 0 Materie, s < 0 Tachyon, s = 0 Photon. Begründung:
+Das Vorzeichen von s trägt genau die Intervall-Signatur der r82-Tachyonskala ℓ_T² = −λ_T² (nicht den
+Orientierungscode aus r01). Die alte Einteilung (Photon = rein imaginäres z) wird ersetzt — rein
+imaginäres z ist in Lesart B tachyonartig.
+
+**K9.2 Dualitätswinkel (M, bewiesen/geprüft).** Jedes z mit s ≠ 0 ist eindeutig z = e^{iα} z_m mit
+s(z_m) = |s| > 0 und α = ½ arg s (mod π). Materie: α = 0; Tachyon: α = π/2. Unter SO(3,ℂ) × U(1)_dual
+sind die Bahnen die Schalen {|s| = r} und der Nullkegel.
+
+**K9.3 Lesart (V).** Nicht-reelles s ist kein eigener Sektor, sondern Materie im gedrehten Dualitätsrahmen.
+Materie und Tachyon = ein Objekt in zwei Dualitätsrahmen; das Photon ist der einzige dualitätsinvariante
+Sektor — die präzise Form der Grundvermutung in Lesart B. Ob α physikalisch oder Eichfreiheit ist: offen.
+
+**K9.4 Rolle von t (Beobachtung).** Auf N(q) = 0 gilt s = t²: reelles t ≠ 0 erzwingt den Materie-Rahmen
+mit t = √|s|; t = 0 das Photon; tachyonartig nur mit t² < 0. Kandidat, nicht übernommen.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -642,6 +662,8 @@ Rolle von t; Transportaussage K̂(L_n) = L_{n−1}.
   GUE empirisch bestätigt; im Companion als v4.8.0-r05.
 - v1.9 (2026-10-19): K8 Lesart B als v4.8.0-r06 in den Companion übernommen (Signatur, N(q), SO(3,ℂ),
   Triolen-Lemma, invariante Sektoren, Nullkegel = S₀).
+- v2.0 (2026-10-19): K9 Sektor-Zuordnung (s > 0 Materie, s < 0 Tachyon), Dualitätswinkel, Rolle von t;
+  im Companion als v4.8.0-r07. Guard-Linter unter `llm/training/guard_linter.py`.
 
 ---
 

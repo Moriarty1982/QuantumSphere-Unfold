@@ -1,0 +1,111 @@
+
+% ============================================================================
+\clearpage
+\section*{v4.8.0-r07 Source-Only: Sector Assignment and Duality Angle in the Complex-Vector Reading}
+\addcontentsline{toc}{section}{v4.8.0-r07 Source-Only: Sector Assignment and Duality Angle in the Complex-Vector Reading}
+\label{sec:v480-r07-sector-assignment}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.8.0-r06 left the assignment of the two massive types of Reading~B to matter and tachyon
+open.  This layer adopts a working assignment, justifies it from the signed tachyon-frame scale of
+\S\ref{sec:r82-tachyon-frame-signed-scale}, and shows that every non-light-like kernel configuration
+has a unique duality angle, so that non-real values of \(s\) need no separate sector.  Earlier
+layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.8.0-r07 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.8.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23365244}{10.5281/zenodo.23365244} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.8.0-r07 working assignment}
+\label{subsec:v480-r07-assignment}
+
+For \(z\in\mathbb C^3\) let \(s(z)=z_1^2+z_2^2+z_3^2\) as in r06.  The working assignment is
+\[
+s>0\ \ \text{matter},\qquad s<0\ \ \text{tachyon},\qquad s=0\ \ \text{photon}.
+\]
+It is adopted as the author's working choice (2026-10-19) and can be reversed without affecting
+the theoremlets below, which are stated for the sign of \(s\).
+
+\paragraph{Motivation.}
+Layer r82 types the tachyon frame by the signed scale \(\ell_T^2=-\lambda_T^2\), \(\lambda_T>0\),
+an allowed effective statement of the release scope.  Under the working assignment the sign of
+\(s\) carries exactly this interval signature: positive for matter, negative for tachyon, zero for
+the photon.  It is not the orientation code of
+\S\ref{subsec:v480-r01-orientation-vs-signature}, which r01 keeps separate from the r82 signature.
+
+\paragraph{Consequence for the earlier classification.}
+The classification of \S\ref{sec:unitary} placed the photon kernel at purely imaginary \(z\).  In
+Reading~B a purely imaginary non-zero \(z=iy\) has \(s=-|y|^2<0\) and is tachyon-type, not
+light-like.  The earlier classification is therefore replaced, not translated.
+
+\subsection*{v4.8.0-r07 duality angle}
+\label{subsec:v480-r07-duality-angle}
+
+\paragraph{Theoremlet v4.8.0-r07.1.}
+Every \(z\in\mathbb C^3\) with \(s(z)\neq0\) can be written as
+\[
+z=e^{i\alpha}z_m,\qquad s(z_m)=|s(z)|>0,
+\]
+with \(\alpha=\tfrac12\arg s(z)\) determined modulo \(\pi\) and \(z_m\) determined up to sign.
+The configuration is of matter type exactly when \(\alpha\equiv0\) and of tachyon type exactly when
+\(\alpha\equiv\pi/2\pmod\pi\).
+
+\paragraph{Proof sketch.}
+\(s(e^{i\alpha}z_m)=e^{2i\alpha}s(z_m)\), so \(s(z_m)=e^{-2i\alpha}s(z)\) is real positive iff
+\(2\alpha\equiv\arg s(z)\pmod{2\pi}\).  Replacing \(\alpha\) by \(\alpha+\pi\) replaces \(z_m\) by
+\(-z_m\).  The two special values follow from the sign of \(s\).  Checked numerically for 500 random
+configurations.  \(\square\)
+
+\paragraph{Theoremlet v4.8.0-r07.2.}
+Under the group \(SO(3,\mathbb C)\times U(1)_{\rm dual}\), acting by \(z\mapsto e^{i\alpha}Rz\), the
+orbits in \(\mathbb C^3\setminus\{0\}\) are the shells \(\{|s|=r\}\), \(r>0\), and the punctured null
+cone.  In particular, a matter configuration and a tachyon configuration with the same \(|s|\) lie in
+one orbit, related by \(\alpha=\pi/2\); the null cone is the only orbit fixed by the whole duality
+circle.
+
+\paragraph{Proof sketch.}
+By Theoremlet r06.3 the \(SO(3,\mathbb C)\)-orbits are the level sets of \(s\); the duality circle
+rotates \(s\) through all values of fixed modulus and fixes \(s=0\).  Transitivity on each shell was
+checked constructively for 200 random pairs.  \(\square\)
+
+\paragraph{Reading (conjecture).}
+Non-real \(s\) is not a further sector: it is a matter configuration seen in a rotated duality frame.
+In this precise sense matter and tachyon are one object in two duality frames, distinguished
+Lorentz-invariantly but exchanged by duality, while the photon is the duality-invariant fix-sector.
+This is the form the initial conjecture of Theorem~\ref{thm:unity} takes in Reading~B.  Whether the
+duality angle is physical, or a gauge freedom to be fixed, is not decided here.
+
+\subsection*{v4.8.0-r07 the parameter \texorpdfstring{$t$}{t}}
+\label{subsec:v480-r07-parameter-t}
+
+\paragraph{Observation.}
+On the null set of the natural norm, \(N(q)=-t^2+s(z)=0\), one has \(s=t^2\).  For real
+\(t\neq0\) this forces \(\alpha\equiv0\), the matter frame, with \(t=\sqrt{|s|}\); for \(t=0\) it forces
+the photon sector; a tachyon-type kernel on this set requires \(t^2<0\).  The condition \(N(q)=0\)
+therefore ties \(t\) to the invariant magnitude \(\sqrt{|s|}\) and fixes the duality frame.  Whether
+the Sphaera kernel is meant to satisfy \(N(q)=0\) is open; the observation is recorded as a candidate
+role for \(t\), not adopted.
+
+\subsection*{v4.8.0-r07 ledger and guard update}
+\label{subsec:v480-r07-ledger-guard}
+
+\[
+R_{\rm sect}^{v480\text{-}r07}=(0,0,0,1,1)
+\]
+for (working assignment adopted; duality angle; orbit structure; physical status of the duality angle
+open; role of \(t\) open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v480\text{-}r07,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v480\text{-}r07}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
