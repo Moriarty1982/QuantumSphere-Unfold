@@ -1,0 +1,79 @@
+
+% ============================================================================
+\clearpage
+\section*{v4.8.0-r15 Source-Only: The Octonionic Hopf Fibration as Carrier of the Triality Slots}
+\addcontentsline{toc}{section}{v4.8.0-r15 Source-Only: Octonionic Hopf Fibration as Carrier of the Triality Slots}
+\label{sec:v480-r15-hopf-triality-carrier}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer r14 proposed the three triality slots of \(\operatorname{Re}((xy)z)\) as generation index but left their
+carrier open.  This layer shows that the octonionic Hopf fibration of Theorem~\ref{thm:hopf}, which the Companion
+already attaches to \(S_2\cong\OO P^1\) and to three generations, carries the slots.  Model construction only; no
+prediction is made and no data are compared.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.8.0-r15 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.8.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23365244}{10.5281/zenodo.23365244} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.8.0-r15 unit triples and the Hopf map}
+\label{subsec:v480-r15-triples}
+
+\paragraph{Theoremlet v4.8.0-r15.1.}
+Let \(\mathcal T=\{(a,b,c)\in(S^7)^3:(ab)c=1\}\).  Then \(\mathcal T\) is a fourteen-dimensional manifold
+(\(a,b\) free, \(c=\overline{ab}\)), closed under the cyclic shift \((a,b,c)\mapsto(b,c,a)\) and under
+\((a,b,c)\mapsto(\bar a,\bar c,\bar b)\), and invariant under \(G_2\) acting diagonally.  For the Hopf map
+\(h(x,y)=(|x|^2-|y|^2,\,2x\bar y)\colon S^{15}\to S^8\), the points over the equator \(|x|=|y|=1/\sqrt2\) give
+unit triples \((\sqrt2\,x,\sqrt2\,\bar y,\bar v)\in\mathcal T\) with \(v=2x\bar y\), and the fibre over \(v\) is
+\(\{(a,\bar a v)\}\cong S^7\).
+
+\paragraph{Proof sketch.}
+\(c=\overline{ab}\) gives \((ab)c=|ab|^2=1\).  By alternativity \(b(\bar b\bar a)=\bar a\), so \(bc=\bar a\) and
+\((bc)a=1\); the remaining cyclic and reflected identities follow in the same way.  Elements of \(G_2\) preserve
+products and conjugation.  The Hopf statements are the norm identity \((|x|^2-|y|^2)^2+4|x|^2|y|^2=1\) and
+\(a(\bar a v)=v\).  All identities were also checked numerically (script \texttt{k29\_hopf\_triality\_traeger.py}).
+\(\square\)
+
+\paragraph{Theoremlet v4.8.0-r15.2 (symmetric point).}
+\((a,a,a)\in\mathcal T\) if and only if \(a^3=1\), i.e.\ \(a=\exp(2\pi u/3)\) for an imaginary unit \(u\).  For
+\(u=e_7\) the point is \(\omega\) in \(\mathrm{span}(1,e_7)\), the complex plane at the end of the cascade, and
+its stabilizer in \(G_2\) is the colour group \(SU(3)\) (dimension \(8\)).
+
+\paragraph{Proof sketch.}
+\(a\) and its powers lie in the commutative subalgebra \(\mathrm{span}(1,u)\cong\mathbb C\); the stabilizer of
+\(a\) in \(G_2\) is the stabilizer of \(u\).  The dimension was computed from the derivation algebra.  \(\square\)
+
+\subsection*{v4.8.0-r15 reading and a check}
+\label{subsec:v480-r15-reading}
+
+The two components of the Hopf total space and the base point are the three triality slots; the triole is their
+cyclic symmetry, and \(G_2\) acts as the colour side.  Choosing the symmetric generation point fixes \(u\) and breaks
+\(G_2\) to the colour \(SU(3)\).  This gives a natural carrier for the assignment of r14; it does not derive the
+existence of three generations.
+
+Check: in \(\mathrm{span}(1,e_7)\) the condition \((ab)c=1\) becomes \(\alpha_1+\alpha_2+\alpha_3\equiv0\pmod{2\pi}\)
+for the phases.  Reading the Koide phases \(\delta+2\pi k/3\) of layer r10 as these phases requires
+\(3\delta\equiv0\), against \(\delta=0.2222\) for the charged leptons.  The direct reading fails.  That
+\(3\delta\approx2/3\) is the known value \(2/9\cdot3\), whose generality was refuted in r11; it is not counted.  How
+a mass hierarchy and \(K=2/3\) could arise from deviations from the symmetric triple remains open.
+
+\subsection*{v4.8.0-r15 ledger and guard update}
+\label{subsec:v480-r15-ledger-guard}
+
+\[
+R_{\rm cg}^{v480\text{-}r15}=(0,0,1)
+\]
+for (separation consistent with \(G_2\); carrier of the triality slots identified; mass mechanism open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v480\text{-}r15,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v480\text{-}r15}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
