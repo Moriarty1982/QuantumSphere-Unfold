@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v3.6
+# Kernkarte Quantum Sphaera — v3.7
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1011,6 +1011,20 @@ TM1 verlangt sin²θ₁₂ = 0,3182, gemessen 0,3046 (2,4σ).
 Nachträglich gefunden (K17.4); heutiger Abstand zu JUNO 0,8σ zählt nicht. Getestet wird die nächste
 JUNO-Veröffentlichung mit σ ≤ 0,004: |z| < 2 verträglich, ≥ 3 widerlegt.
 
+### K24 — Neunter vorab festgelegter Test: Assoziator als Auswahlkriterium (2026-10-20)
+
+Vorab-Notiz `llm/Vorab_Notiz_H10_Assoziator.md` (Commit a6b5bcb); Ergebnis `llm/Ergebnis_H10_Assoziator.md`;
+Skript `llm/k27_test_h10.py`.
+
+**K24.1 Strukturbefund (M).** [e₄,e₅,e₆] = −2e₇: Der Assoziator des Generationen-Tripels zeigt auf das
+SU(3)-Singulett (Kaskaden-Ende, komplexe Struktur der Lesart B). Fano-Linien haben Assoziator 0, Nicht-Linien
+Norm 2. Jedes Element von Stab(+e₇) erhält ihn.
+
+**K24.2 Ergebnis (M).** Kriterien S1 (Haupt: [x, h(x), e₇] = 0), S2, S3, S4 trennen für keinen der vier
+Triolen-Lifts zwischen TM1- und θ₁₃ = 0-Lift. **Kein Auswahlgrund.** Damit wählen weder Minimalität (H6),
+Kaskade (K19.3), Kompensator (H7) noch Assoziator (H10) den TM1-Lift; nach JUNO 2026 ist TM1 ohnehin
+disfavorisiert (K23).
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1068,6 +1082,8 @@ JUNO-Veröffentlichung mit σ ≤ 0,004: |z| < 2 verträglich, ≥ 3 widerlegt.
   θ₂₃-Zeile von `thm:op1op4-unified` als widerlegt eingeordnet.
 - v3.6 (2026-10-20): K23 Nachprüfung mit JUNO 2026 (H2 gestützt, TM1 und H8 disfavorisiert); Vorab-Notiz H9
   (sin²θ₁₂ = 0,3086 für künftige JUNO-Daten).
+- v3.7 (2026-10-20): K24 neunter vorab festgelegter Test (Assoziator) — kein Auswahlgrund; Strukturbefund
+  [e₄,e₅,e₆] = −2e₇.
 
 ---
 

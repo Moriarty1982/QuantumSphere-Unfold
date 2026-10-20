@@ -1,18 +1,18 @@
 # Lokales Sphaera-LLM — Datensatz und Anleitung
 
-Stand: Kernkarte v3.6, Companion bis v4.8.0-r12 (2026-10-20).
+Stand: Kernkarte v3.7, Companion bis v4.8.0-r12 (2026-10-20).
 
 ## Inhalt
 
 | Datei | Zweck |
 |---|---|
-| `build_dataset.py` | erzeugt `train.jsonl` (113 Paare) und `eval.jsonl` (16 Paare) |
+| `build_dataset.py` | erzeugt `train.jsonl` (114 Paare) und `eval.jsonl` (16 Paare) |
 | `train.jsonl`, `eval.jsonl` | Chat-Format (`system`/`user`/`assistant`), Antworten mit Ebenen-Tags [V]/[M]/[S]/[P] |
 | `guard_linter.py` | findet verbotene Aussagen in LaTeX, Text oder Modellantworten |
 | `eval_ollama.py` | bewertet ein lokales Modell auf `eval.jsonl` |
 | `make_modelfile.py`, `Modelfile` | erzeugt das Ollama-Modell „sphaera“ mit der Kernkarte als Kontext (Stufe 1) |
 
-Themen im Datensatz: Definitionen (18), Lesart B (21), Rechnungen/Zahlen (26), Status (19),
+Themen im Datensatz: Definitionen (18), Lesart B (22), Rechnungen/Zahlen (26), Status (19),
 Guard-Fallen (30), Riemann-Arbeit (9), Offenes (6). Alle Antworten bestehen den Guard-Linter.
 
 ## Stufe 1 — ohne Training (empfohlen zuerst)
@@ -47,14 +47,14 @@ Fassung ist für eine gemietete GPU oder ein 7B-Modell mit mehr Speicher gedacht
 
 Nur, wenn Stufe 1 bei den Guard-Fallen oder der Tag-Disziplin versagt.
 
-- Hardware: gemietete RTX 4090 (24 GB), etwa 0,35–0,70 $/Std. Ein Lauf über 113 Paare × 3 Epochen
+- Hardware: gemietete RTX 4090 (24 GB), etwa 0,35–0,70 $/Std. Ein Lauf über 114 Paare × 3 Epochen
   dauert Minuten, nicht Stunden.
 - Werkzeug: Unsloth oder Hugging Face TRL (`SFTTrainer`) mit QLoRA (4-Bit), LoRA-Rang 16, Lernrate 2e-4,
   2–3 Epochen. Das Chat-Format von `train.jsonl` wird von beiden direkt gelesen.
 - Ergebnis als GGUF exportieren und mit einem Modelfile (`FROM ./sphaera-lora.gguf`) in Ollama laden.
 - Danach `eval_ollama.py` erneut laufen lassen und mit Stufe 1 vergleichen.
 
-**113 Paare sind wenig.** Sie reichen, um Tag-Disziplin und Guard-Reflexe anzutrainieren. Fachwissen
+**114 Paare sind wenig.** Sie reichen, um Tag-Disziplin und Guard-Reflexe anzutrainieren. Fachwissen
 liefert weiterhin die Kernkarte im Kontext. Am besten kombiniert man beides: feingetuntes Modell plus
 Kernkarte.
 
