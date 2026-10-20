@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v2.4
+# Kernkarte Quantum Sphaera — v2.5
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -67,7 +67,8 @@ Lesart B**, das |c|/t und die Koide-Phase festlegt (r10).
 **Strukturbefund (M, r10):** Die Koide-Form der Leptonmassen ist exakt Skalar + symmetrische Triole;
 K = 2/3 ⇔ |c| = t.
 
-**Vorab-Tests:** H1 δ = K/3 (r11) — widerlegt für Quarks und laufende Leptonmassen. Regel: Jede neue
+**Vorab-Tests:** H1 δ = K/3 (r11) — widerlegt für Quarks und laufende Leptonmassen. H2 Neutrinos mit r = 1
+(K14) — verträglich, Vorhersage normale Ordnung, Σm_ν = 0,0592 eV (schwach trennend). Regel: Jede neue
 Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 ---
@@ -750,6 +751,23 @@ Leptonen bei M_Z δ = 0,2211 vs. 0,2226 (z = −49). Nur Leptonen mit Polmassen 
 und kein Gesetz der Dreiergruppen. Das Verfahren (Vorab-Notiz, Commit, dann Rechnung) bleibt Standard
 für jede künftige Vorhersage.
 
+### K14 — Zweiter vorab festgelegter Test: Neutrinos als lichtartige Triole (2026-10-20)
+
+Vorab-Notiz `llm/Vorab_Notiz_H2_Neutrino_Triole.md` (Commit 434c5a8, **vor** der Rechnung); Ergebnis
+`llm/Ergebnis_H2_Neutrino_Triole.md`; Skript `llm/k15_test_h2.py`.
+
+**K14.1 Hypothese (V).** r = 1 (K = 2/3) gilt für alle Leptonen, also auch für Neutrinos:
+m_k = t²(1 + √2 cos(δ + 2πk/3))², Vorzeichen der v_k frei. Vorab offengelegt: Mit nur positiven Wurzeln ist
+K ≤ 0,585 (NO) bzw. 0,500 (IO), H2 braucht ein negatives Vorzeichen. Nicht neu (Brannen 2006).
+
+**K14.2 Ergebnis (M).** NuFIT 6.0 (IC24 + SK-atm). Je Ordnung genau eine Lösung, das leichteste v_k ist negativ.
+NO: m = (0,36; 8,66; 50,1) meV, Σ = 0,0592 ± 0,0002 eV. IO: m = (2,9; 49,2; 49,9) meV, Σ = 0,102 eV.
+Gegen Σ < 0,0642 eV (DESI DR2 + CMB): **NO verträglich, IO disfavorisiert.**
+
+**K14.3 Einordnung.** H2 ist verträglich, aber schwach trennend: Σ liegt nur 0,4 meV über dem NO-Minimum (m₁ = 0).
+Widerlegbar durch eine gemessene invertierte Ordnung (JUNO, DUNE) oder Σ ≳ 0,07 eV. Offen: Bedeutung des
+negativen Vorzeichens (bei geladenen Leptonen sind alle v_k positiv).
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -779,6 +797,8 @@ für jede künftige Vorhersage.
   Grundabschnitte 2, 3, 5, 6 mit Statusvermerken neu eingeordnet; im Companion als v4.8.0-r09.
 - v2.3 (2026-10-20): K12 Koide-Form als Triole, Lesart B ist Kinematik, Dynamik fehlt; im Companion als v4.8.0-r10.
 - v2.4 (2026-10-20): K13 erster vorab festgelegter Test (δ = K/3) — widerlegt; im Companion als v4.8.0-r11.
+- v2.5 (2026-10-20): K14 zweiter vorab festgelegter Test (Neutrinos, r = 1) — verträglich, Vorhersage NO,
+  Σm_ν = 0,0592 eV festgeschrieben.
 
 ---
 

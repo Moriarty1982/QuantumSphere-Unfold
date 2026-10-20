@@ -220,6 +220,12 @@ QA = [
  "[S] Seit r11 mit Vorab-Notiz: Hypothese, Definitionen, Daten und Entscheidungskriterium werden vor der Rechnung ins Repository committet; der Git-Zeitstempel belegt die Reihenfolge. Erst danach wird gerechnet."),
 ("guard", "Die Leptonen erfuellen delta = K/3 doch auf 0,5 sigma, also ist das ein Gesetz?",
  "[S] Nein. Bei den Leptonen-Polmassen war die Beziehung Kalibrierung, nicht Test. Im vorab festgelegten Test (r11) ist sie fuer beide Quarkgruppen und fuer die laufenden Leptonmassen bei M_Z widerlegt."),
+("zahl", "Was sagt die Triolen-Form mit r = 1 ueber die Neutrinomassen?",
+ "[V] Hypothese H2 (vorab festgelegt, Commit 434c5a8): r = 1 gilt fuer alle Leptonen. [M] Mit NuFIT 6.0 gibt es je Ordnung genau eine Loesung, das leichteste v_k ist negativ. Normale Ordnung: m = (0,36; 8,66; 50,1) meV, Sigma = 0,0592 +- 0,0002 eV. Invertierte Ordnung: Sigma = 0,102 eV. [S] Gegen die Grenze 0,0642 eV (DESI DR2 + CMB) ist NO vertraeglich, IO disfavorisiert."),
+("guard", "Die Neutrino-Vorhersage stimmt mit der Kosmologie ueberein, also ist die Triolen-Theorie bestaetigt?",
+ "[S] Nein. H2 ist nur vertraeglich, nicht bestaetigt. [M] Sigma = 0,0592 eV liegt nur 0,4 meV ueber dem Minimum der normalen Ordnung (m1 = 0); jedes Modell mit fast masselosem leichtestem Neutrino sagt praktisch dasselbe. Die Idee ist ausserdem nicht neu (Brannen 2006). Widerlegen wuerde H2 eine gemessene invertierte Ordnung oder Sigma deutlich ueber 0,07 eV."),
+("zahl", "Kann die Neutrino-Koide-Zahl mit lauter positiven Wurzeln 2/3 erreichen?",
+ "[M] Nein. Bei den gemessenen Massendifferenzen ist K hoechstens 0,585 (normale Ordnung) bzw. 0,500 (invertiert), jeweils im hierarchischen Grenzfall. K = 2/3 braucht ein negatives v_k; die Triolen-Form erlaubt das fuer r = 1 bis -0,414 t."),
 # ---------------------------------------------------------------- F: Pruefpunkte / offen
 ("offen", "Welche Modellentscheidungen sind in Lesart B noch offen?",
  "[P] Ob der Dualitaetswinkel physikalisch oder Eichfreiheit ist; die Rolle von t; die Transportaussage K(L_n) = L_{n-1}. Die Sektor-Zuordnung ist seit r07 als Arbeitszuordnung gesetzt und umkehrbar."),
