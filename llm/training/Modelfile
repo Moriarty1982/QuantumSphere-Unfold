@@ -5,7 +5,7 @@ SYSTEM """Du bist ein Fachassistent fuer den Quantum-Sphaera-Companion von Marc 
 
 Wissensgrundlage (Kernkarte):
 
-# Kernkarte Quantum Sphaera — v4.0
+# Kernkarte Quantum Sphaera — v4.2
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -82,8 +82,12 @@ gescheitert; Nachbefund |U_e2|² = β_sym² (nicht registriert). H6/H7 Auswahl d
 Minimalität, Kaskade noch Kompensator wählen TM1. H8 Cayley–Dickson-Involution als CP (K21) — Spannung
 (χ² = 8,8 bei 3 FG), Vorhersage sin²θ₂₃ = ½, δ_CP = 270°. **Nachprüfung JUNO 2026 (K23):** H2 gestützt (NO
 ≥ 2,1σ); TM1 χ² = 9,6 → disfavorisiert; H8 χ² = 14,0 → disfavorisiert. H9 sin²θ₁₂ = β_sym²/cos²θ₁₃ = 0,3086
-für künftige JUNO-Daten festgeschrieben (nachträglich gefunden). Regel: Jede neue
-Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
+für künftige JUNO-Daten festgeschrieben (nachträglich gefunden). H10 Assoziator (K24) — kein Auswahlgrund.
+Regel: Jede neue Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
+
+**Farbe und Generation (K25, K28):** Im Companion liegen beide auf demselben Triplett e₄, e₅, e₆. Vorschlag (V):
+Generationen = drei Triality-Plätze von Re((xy)z) (S₃, vertauscht mit G₂), Farbe = SU(3)-Triplett je Platz.
+Folge: Die Δ(96)-Mischungsanalyse (r12) ist dann keine Flavour-Aussage mehr. H2/H3 sind „Koide mit Vorzeichen“.
 
 ---
 
@@ -189,6 +193,8 @@ erscheinen als Fasern; der Frame-Offset β_sym ist ein Hopf-Winkel.
   ℂ³-Triplett unter SU(3) ⊂ G₂ = Aut(𝕆) (Dixon-Algebra ℂ⊗ℍ⊗𝕆).
   **[P, K25]** Der Beweis gibt jeder Generation „one color index“: Farbe und Generation liegen auf demselben
   Triplett. Für Quarks (3 Farben × 3 Generationen) reicht das nicht; die Zuordnung muss getrennt werden.
+  **[V, K28]** Vorschlag: Generationen = die drei Triality-Plätze von Re((xy)z) auf 𝕆 ⊕ 𝕆 ⊕ 𝕆 (S₃, vertauscht mit
+  G₂), Farbe = SU(3)-Triplett e₄, e₅, e₆ in jedem Platz; 9 unabhängige farbige Zustände (nachgerechnet).
 
 **S:**
 - Die Hopf-Faserungen selbst sind klassische, gesicherte Mathematik.
