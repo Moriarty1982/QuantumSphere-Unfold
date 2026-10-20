@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v2.6
+# Kernkarte Quantum Sphaera — v2.7
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -69,7 +69,8 @@ K = 2/3 ⇔ |c| = t.
 
 **Vorab-Tests:** H1 δ = K/3 (r11) — widerlegt für Quarks und laufende Leptonmassen. H2 Neutrinos mit r = 1
 (K14) — verträglich, Vorhersage normale Ordnung, Σm_ν = 0,0592 eV (schwach trennend). H3 Vorzeichen als
-Majorana-Parität (K15) — verträglich, m_ββ ≤ 3,5 meV, nicht prüfbar. Regel: Jede neue
+Majorana-Parität (K15) — verträglich, m_ββ ≤ 3,5 meV, nicht prüfbar. H4 TM1 gegen TM2 (K16) — TM1 stark
+bevorzugt (Δχ² = 10,3), Vorhersage sin²θ₁₂ = 0,318, δ_CP ≈ 262°. Regel: Jede neue
 Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 ---
@@ -801,6 +802,23 @@ vollen δ_CP-Bereich, 95 %-Obergrenze 3,50 meV. Mit η₁ = +1 wäre m_ββ rund
 selbst wirkt weniger als die δ_CP-Unsicherheit. Widerlegt durch ein 0νββ-Signal über 3,5 meV oder durch
 Dirac-Neutrinos. Ausbleibende Signale bei LEGEND-1000/nEXO bestätigen nichts.
 
+### K16 — Vierter vorab festgelegter Test: TM1 gegen TM2, 1:1 (2026-10-20)
+
+Vorab-Notiz `llm/Vorab_Notiz_H4_TM1_gegen_TM2.md` (Commit 00d297e); Ergebnis `llm/Ergebnis_H4_TM1_gegen_TM2.md`;
+Skript `llm/k18_test_h4.py`.
+
+**K16.1 Ausgangspunkt (M).** Die Triolen-Form ist das Spektrum einer hermiteschen zyklischen Matrix; deren
+Eigenvektoren sind feste Fourier-Vektoren. Die naive Mischung daraus ist ausgeschlossen (θ₁₃ ≈ 35°).
+Minimalvarianten: TM2 erhält (1,1,1)/√3 (Skalar-Richtung), TM1 erhält (2,−1,−1)/√6 (Triolen-Ebene).
+Beide mit gleichem Vorab-Gewicht, ohne freie Parameter über θ₁₃, θ₂₃ hinaus. Offengelegt: θ₁₂-Teil nicht blind.
+
+**K16.2 Ergebnis (M).** NuFIT 6.0, NO, Gauß-Näherung: χ²(TM1) = 4,4, χ²(TM2) = 14,7 (2 FG), Δχ² = 10,3
+(etwa 170 : 1). Blinder Teil δ_CP allein: Δχ² = 2,8 für TM1. **TM1 stark bevorzugt, TM2 disfavorisiert.**
+
+**K16.3 Einordnung.** Die naheliegende Skalar-Richtung verliert. Warum die Triolen-Ebene eine Spalte
+auszeichnet, ist offen. Festgeschrieben für TM1: sin²θ₁₂ = 0,318 (JUNO prüft bald auf etwa 0,5 %; bei
+Mittelwert 0,308 wäre auch TM1 ausgeschlossen), δ_CP = 259–267° (DUNE, Hyper-K).
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -834,6 +852,8 @@ Dirac-Neutrinos. Ausbleibende Signale bei LEGEND-1000/nEXO bestätigen nichts.
   Σm_ν = 0,0592 eV festgeschrieben; K14.4 Bedeutung des Vorzeichens (kubische Invariante, nicht beobachtbar).
 - v2.6 (2026-10-20): K15 dritter vorab festgelegter Test (Vorzeichen als Majorana-CP-Parität) — verträglich,
   nicht prüfbar; m_ββ ≤ 3,5 meV festgeschrieben. k15-MC-Fenster korrigiert (Werte unverändert).
+- v2.7 (2026-10-20): K16 vierter vorab festgelegter Test (TM1 gegen TM2, 1:1) — TM1 stark bevorzugt
+  (Δχ² = 10,3), TM2 disfavorisiert; Vorhersagen sin²θ₁₂ = 0,318, δ_CP ≈ 262° festgeschrieben.
 
 ---
 

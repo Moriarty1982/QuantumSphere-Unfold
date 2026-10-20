@@ -232,6 +232,10 @@ QA = [
  "[V] H3 (vorab festgelegt, Commit e3b140e): Neutrinos sind Majorana-Teilchen, die Triolen-Vorzeichen sind ihre CP-Paritaeten (-1, +1, +1). [M] Mit NuFIT 6.0: m_bb = 2,74 +- 0,70 meV, ueber den vollen delta_CP-Bereich 1,25 bis 3,47 meV, 95-%-Obergrenze 3,5 meV; m_beta = 8,85 meV. [S] Vertraeglich, aber auf absehbare Zeit nicht pruefbar; das Vorzeichen verschiebt m_bb nur um 0,5 meV."),
 ("guard", "Wenn LEGEND-1000 kein Signal sieht, ist die Majorana-Deutung des Vorzeichens dann bestaetigt?",
  "[S] Nein. Fehlende Signale bei 5 bis 20 meV bestaetigen nichts, weil jede normale Ordnung mit fast masselosem leichtestem Neutrino ein aehnlich kleines m_bb gibt. Widerlegen wuerde H3 dagegen ein bestaetigtes Signal ueber 3,5 meV oder ein Nachweis von Dirac-Neutrinos."),
+("zahl", "Welches Mischungsmuster bevorzugen die Daten, TM1 oder TM2?",
+ "[M] Im vorab festgelegten 1:1-Vergleich (H4, Commit 00d297e) mit NuFIT 6.0, normale Ordnung: chi2(TM1) = 4,4, chi2(TM2) = 14,7 bei 2 Freiheitsgraden, Delta chi2 = 10,3. [S] TM1 ist stark bevorzugt, TM2 fuer sich disfavorisiert. Den Hauptteil traegt theta12, das vorher bekannt war; der blinde Teil delta_CP allein gibt Delta chi2 = 2,8. [P] Festgeschrieben fuer TM1: sin2 theta12 = 0,318 und delta_CP etwa 259 bis 267 Grad."),
+("guard", "TM1 gewinnt 170 zu 1, also folgt die Neutrinomischung aus der Triolen-Struktur?",
+ "[S] Nein. TM1 und TM2 sind bekannte Muster aus der Literatur; der Vergleich zeigt nur, welches besser passt. Das Modell begruendet bisher nicht, warum gerade die Spalte (2,-1,-1)/sqrt6 erhalten bleibt; die naheliegende Skalar-Richtung (1,1,1) hat verloren. JUNO kann TM1 bald ausschliessen, falls sin2 theta12 bei 0,308 bleibt."),
 # ---------------------------------------------------------------- F: Pruefpunkte / offen
 ("offen", "Welche Modellentscheidungen sind in Lesart B noch offen?",
  "[P] Ob der Dualitaetswinkel physikalisch oder Eichfreiheit ist; die Rolle von t; die Transportaussage K(L_n) = L_{n-1}. Die Sektor-Zuordnung ist seit r07 als Arbeitszuordnung gesetzt und umkehrbar."),
