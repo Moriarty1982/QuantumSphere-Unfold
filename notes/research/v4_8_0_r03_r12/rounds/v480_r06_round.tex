@@ -1,0 +1,198 @@
+
+% ============================================================================
+\clearpage
+\section*{v4.8.0-r06 Source-Only: Signature of the Biquaternion Kernel and the Complex-Vector Reading}
+\addcontentsline{toc}{section}{v4.8.0-r06 Source-Only: Signature of the Biquaternion Kernel and the Complex-Vector Reading}
+\label{sec:v480-r06-complex-vector-reading}
+% ============================================================================
+
+\paragraph{Purpose.}
+Definition~\ref{def:biquaternion} gives the kernel
+\(q_n=it\cdot\mathbf 1+z_1e_1+z_2e_2+z_3e_3\) with \(z_k\in\mathbb C\) and the norm
+\(|q_n|^2=-(ct)^2+|z_1|^2+|z_2|^2+|z_3|^2\), read as a Minkowski metric of signature
+\((-,+,+,+)\) on which the Lorentz group acts by quaternion conjugation.  This layer computes
+the signature, identifies the natural invariant of \(\mathbb C\otimes\HH\), and adopts as working
+reading the one under which the kernels \((z_1,z_2,z_3)\) carry the Lorentz group.  In that reading
+the symmetric triole is exactly the light-like centred configuration, and the photon sector is the
+base \(S_0\cong\mathbb CP^1\) of Theorem~\ref{thm:hopf}.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.8.0-r06 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.8.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23365244}{10.5281/zenodo.23365244} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.8.0-r06 signature and natural norm}
+\label{subsec:v480-r06-signature}
+
+Write \(z_k=x_k+iy_k\) with \(x_k,y_k\in\mathbb R\).
+
+\paragraph{Theoremlet v4.8.0-r06.1.}
+\begin{enumerate}[label=(\roman*)]
+\item The norm of Definition~\ref{def:biquaternion} is the real quadratic form
+\(-t^2+\sum_k(x_k^2+y_k^2)\) of signature \((1,6)\), not \((1,3)\).
+\item Conjugation \(q\mapsto uqu^{-1}\) by \(u\in\HH^\times\) fixes the scalar part and acts by
+\(SO(3)\) on \((x_k)\) and on \((y_k)\) separately; it contains no boost.
+\item The natural invariant of \(\mathbb C\otimes\HH\) is the complex-bilinear norm
+\[
+N(q):=q\bar q=-t^2+z_1^2+z_2^2+z_3^2,\qquad
+\operatorname{Re}N=-t^2+|x|^2-|y|^2,\quad \operatorname{Im}N=2\,x\cdot y,
+\]
+where \(\bar q\) is quaternion conjugation without complex conjugation; \(N(pq)=N(p)N(q)\).
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(i) The Hessian of the form has eigenvalues \(-1\) once and \(+1\) six times.  (ii) For real
+\(u\), \(u e_k u^{-1}\) is a rotation of the imaginary units and \(u\mathbf 1u^{-1}=\mathbf 1\).
+(iii) Direct expansion of \(q\bar q\); the vector part vanishes because the coefficients commute.
+Multiplicativity is inherited from \(\HH\).  \(\square\)
+
+Hence the Minkowski reading of Definition~\ref{def:biquaternion} and the Lorentz statement of the
+subsequent remark do not hold as written, and Theorem~\ref{thm:lorentz} establishes invariance
+under the involution \(J\), not under the Lorentz group.
+
+\subsection*{v4.8.0-r06 two admissible readings}
+\label{subsec:v480-r06-readings}
+
+\paragraph{Reading A (four-vector).}
+On the real slice \(\{q:q^\dagger=-q\}\), where \(q^\dagger\) combines quaternion and complex
+conjugation, the \(z_k\) are real and \(N(q)=-t^2+x_1^2+x_2^2+x_3^2\) is exactly Minkowski
+\((1,3)\).  The map \(q\mapsto uqu^\dagger\) with \(N(u)=1\) preserves the slice and \(N\), and
+changes the time component: these are genuine boosts.  The kernels then carry no phase, so the
+\(120^\circ\) triole has no place.
+
+\paragraph{Reading B (complex three-vector).}
+The kernels form \(z=(z_1,z_2,z_3)\in\mathbb C^3\), and \(q\mapsto uqu^{-1}\) with
+\(u\in\mathbb C\otimes\HH\), \(N(u)=1\), fixes the scalar part and acts on \(z\) by
+\(SO(3,\mathbb C)\).  Since \(SO(3,\mathbb C)\cong PSL(2,\mathbb C)\cong SO^+(1,3)\), this is the
+proper orthochronous Lorentz group.  The invariant is \(s(z):=z_1^2+z_2^2+z_3^2\).  The conjugation
+formula of the remark after Definition~\ref{def:biquaternion} becomes correct once \(u\) is taken
+complex.  Formally, \(z\) is the Riemann--Silberstein vector \(E+iB\), and
+\(s=E^2-B^2+2i\,E\cdot B\) collects the two field invariants.
+
+\paragraph{Decision.}
+Reading~B is adopted as the working reading of the kernel (author's decision, 2026-10-19).
+Reading~A remains available as the four-vector structure of \(\mathbb C\otimes\HH\); the two
+are not exclusive.  In Reading~B the scalar \(t\) is an invariant parameter, not the time
+coordinate of a four-vector; its role is open.
+
+\subsection*{v4.8.0-r06 the triole is the light-like centred configuration}
+\label{subsec:v480-r06-triole-lemma}
+
+\paragraph{Theoremlet v4.8.0-r06.2.}
+For \((z_1,z_2,z_3)\in\mathbb C^3\),
+\[
+z_1+z_2+z_3=0\ \text{ and }\ z_1^2+z_2^2+z_3^2=0
+\quad\Longleftrightarrow\quad
+(z_1,z_2,z_3)=c\,(1,\omega,\omega^2)\ \text{up to order},
+\]
+with \(\omega=e^{2\pi i/3}\) and \(c\in\mathbb C\).
+
+\paragraph{Proof sketch.}
+With elementary symmetric functions \(e_1,e_2,e_3\) and \(p_2=\sum z_k^2\) one has
+\(p_2=e_1^2-2e_2\).  Hence \(e_1=p_2=0\) gives \(e_2=0\), and the \(z_k\) are the roots of
+\(\lambda^3-e_3\), i.e.\ the three cube roots of \(e_3\).  Conversely \(1+\omega+\omega^2=0\) and
+\(1+\omega^2+\omega^4=0\).  \(\square\)
+
+The triole condition of Theorem~\ref{thm:unity}, read with equal moduli and \(120^\circ\) phases,
+is therefore not only a phase condition: in Reading~B it is equivalent to the Lorentz-invariant
+null condition \(s=0\) together with centring \(\sum z_k=0\).
+
+\subsection*{v4.8.0-r06 invariant sectors}
+\label{subsec:v480-r06-sectors}
+
+\paragraph{Theoremlet v4.8.0-r06.3.}
+The orbits of \(SO(3,\mathbb C)\) on \(\mathbb C^3\) are the level sets \(\{s=c\}\) for \(c\neq0\),
+the punctured null cone \(\{s=0\}\setminus\{0\}\), and \(\{0\}\).  The duality rotation
+\(z\mapsto iz\) maps \(s\mapsto-s\) and preserves the null cone.
+
+\paragraph{Proof sketch.}
+For \(s\neq0\) put \(e_1=z/\sqrt s\), complete it to a complex-orthonormal basis with determinant
+\(1\), and rotate \(z\) to \((\sqrt s,0,0)\); this was checked constructively.  Null vectors are
+treated through Theoremlet r06.4 below.  \(s(iz)=-s(z)\) is immediate.  \(\square\)
+
+\paragraph{Sector reading (conjecture).}
+The classification of \S\ref{sec:unitary} by the sign of \(\operatorname{Re}z\) is not
+Lorentz-invariant in Reading~B.  A Lorentz-invariant candidate is: \(s=0\) null (photon-type);
+\(s\) real positive, electric-dominated; \(s\) real negative, magnetic-dominated.  The duality
+\(z\mapsto iz\) exchanges the two massive types and fixes the null sector, matching the reading of
+the tachyon as \(J\)-dual of matter and of the photon as fix-sector.  The assignment
+electric \(\leftrightarrow\) matter, magnetic \(\leftrightarrow\) tachyon is a model decision and is
+not made here; the meaning of non-real \(s\) is open.
+
+\subsection*{v4.8.0-r06 the null cone and the photon base}
+\label{subsec:v480-r06-null-cone}
+
+For \(\psi=(\psi_1,\psi_2)\in\mathbb C^2\) put
+\(z(\psi):=(\psi_1^2-\psi_2^2,\ i(\psi_1^2+\psi_2^2),\ -2\psi_1\psi_2)\).
+
+\paragraph{Theoremlet v4.8.0-r06.4.}
+\(z(\psi)\) lies on the null cone, every non-zero null vector has exactly the two preimages
+\(\pm\psi\), and the projectivized null cone \(\{[z]\in\mathbb CP^2:s(z)=0\}\) is a smooth conic
+isomorphic to \(\mathbb CP^1\cong S^2\).  Under the identification of Theorem~\ref{thm:hopf} this is
+the photon base \(S_0\).  The map is equivariant: \(SL(2,\mathbb C)\) on \(\psi\) induces
+\(SO(3,\mathbb C)\) on \(z\).
+
+\paragraph{Proof sketch.}
+\(s(z(\psi))=(a-b)^2-(a+b)^2+4ab=0\) with \(a=\psi_1^2\), \(b=\psi_2^2\).  For a null \(z\), set
+\(\psi_1^2=\tfrac12(z_1-iz_2)\), \(\psi_2^2=\tfrac12(-z_1-iz_2)\); the null condition gives
+\(z_3^2=4\psi_1^2\psi_2^2\), which fixes the relative sign, so the preimage is \(\pm\psi\).  The
+conic is the Veronese image of \(\mathbb CP^1\).  Equivariance and invariance of the null cone
+were checked numerically for random unit biquaternions.  \(\square\)
+
+\paragraph{Consequences.}
+The symmetric triole \((1,\omega,\omega^2)\) is the image of the spinor
+\(\psi\approx(0.9744+0.1283i,\ 0.3097+0.4036i)\).  For the null axis of
+Theorem~\ref{thm:fractal}, the natural Lorentz-invariant definition in Reading~B is \(s=0\), not
+\(|q_n|^2=0\); its directions then form exactly \(S_0\).  The transport statement
+\(\KC(L_n)=L_{n-1}\) of that theorem is not addressed and remains as stated there.
+
+\paragraph{Information-level reading (conjecture).}
+A normalized \(\psi\) is a qubit; its Bloch vector is the Hopf image \(S^3\to S^2\), and
+\(k(\psi)=(|\psi|^2,\psi^\dagger\sigma\psi)\) is a light-like four-vector.  Every future time-like
+vector is a sum \(k(\psi_a)+k(\psi_b)\) (checked constructively).  This supports the author's
+conjecture that space-time is a projection of an information level, with single spinors as
+light-like and spinor pairs as massive readouts, in line with
+\(S_0=\mathbb CP^1\) and \(S_1=\HH P^1\) of Theorem~\ref{thm:hopf}.  No derivation of space-time
+points is claimed.
+
+\subsection*{v4.8.0-r06 status of the affected statements}
+\label{subsec:v480-r06-status}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after r06\\
+\midrule
+Def.~\ref{def:biquaternion}, Minkowski reading & signature \((1,6)\); replaced by \(N(q)\) and Reading~B\\
+Lorentz action by quaternion conjugation & correct only with complex \(u\), \(N(u)=1\)\\
+Thm.~\ref{thm:lorentz} & shows \(J\)-invariance; Lorentz invariance supplied by r06 (Reading~B)\\
+Sector classification, \S\ref{sec:unitary} & not invariant; invariant candidate via \(s\) (conjecture)\\
+Triole condition, Thm.~\ref{thm:unity} & equivalent to centred null configuration (r06.2)\\
+Null axis, Thm.~\ref{thm:fractal} & invariant definition \(s=0\); directions \(=S_0\) (r06.4)\\
+Prop.~\ref{prop:orthogonality-third-kernel} & unaffected\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.8.0-r06 ledger and guard update}
+\label{subsec:v480-r06-ledger-guard}
+
+\[
+R_{\rm kern}^{v480\text{-}r06}=(0,0,0,0,1,1)
+\]
+for (signature computed; Lorentz action supplied in Reading~B; triole lemma; null cone \(=S_0\);
+sector assignment not chosen; role of \(t\) open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v480\text{-}r06,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v480\text{-}r06}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+

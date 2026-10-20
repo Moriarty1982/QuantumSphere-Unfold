@@ -1,0 +1,151 @@
+
+% ============================================================================
+\clearpage
+\section*{v4.8.0-r09 Source-Only: Tests of P2 and P3, and Re-Classification of Earlier Results}
+\addcontentsline{toc}{section}{v4.8.0-r09 Source-Only: Tests of P2 and P3, and Re-Classification of Earlier Results}
+\label{sec:v480-r09-p2-p3-reclassification}
+% ============================================================================
+
+\paragraph{Purpose.}
+Corollary~\ref{cor:falsifiable} lists P2 (Koide phase) as ``already matches data'' and P3
+(\(\bsym\)-formula) as ``matches to \(0.018\%\)''.  This layer tests both against the measurement
+precision and against the freedom in choosing the formula.  Since layers r03--r08 changed the status
+of many earlier statements, it then collects the current status of all predictions and of the main
+results in one register, so that no earlier ``proved'' or ``\checkmark'' is read without its
+present qualification.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.8.0-r09 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.8.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23365244}{10.5281/zenodo.23365244} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.8.0-r09 P2: Koide phase}
+\label{subsec:v480-r09-p2}
+
+Theorem~\ref{thm:koide-triolic} predicts, in the Brannen form
+\(\sqrt{m_k}=A\bigl(1+\sqrt2\cos(\theta_K+2\pi k/3)\bigr)\), the phase
+\(\theta_K=\pi-\sqrt2\arcsin\bsym=2.319109\) rad \(=132.8751^\circ\).
+
+\paragraph{Theoremlet v4.8.0-r09.1.}
+From \(m_e=0.51099895\), \(m_\mu=105.6583755\) and \(m_\tau=1776.93\pm0.09\) MeV the observed phase is
+\(\theta_K^{\rm obs}=132.7325^\circ\pm0.0004^\circ\) (with \(m_\tau=1776.86\pm0.12\):
+\(132.7328^\circ\pm0.0005^\circ\)).  The prediction differs by \(+0.142^\circ\), i.e.\ by roughly
+\(300\)--\(400\) standard deviations.  P2 is excluded by the data.
+
+\paragraph{Proof sketch.}
+Solve the Brannen form for \(\theta\) from the three masses; propagate the \(\tau\)-mass error, which
+dominates.  Script \texttt{k12\_p2\_p3.py} in the working folder.  \(\square\)
+
+\paragraph{Remarks.}
+(i) The relative deviation of \(0.11\%\) quoted in Theorem~\ref{thm:koide-triolic} is small compared with
+the angle, but large compared with the measurement error; a prediction is tested against the error.
+(ii) The observed phase is \(\theta_K^{\rm obs}=2\pi/3+0.22223\), within \(10^{-5}\) of
+\(2\pi/3+2/9\); this empirical regularity is known in the literature and is not produced by the formula
+of Theorem~\ref{thm:koide-triolic}.
+(iii) Step~1 of the proof of Theorem~\ref{thm:koide-triolic} derives \(K=2/3\) from Cauchy--Schwarz.
+Cauchy--Schwarz gives \((\sum\sqrt{m_i})^2\le3\sum m_i\), i.e.\ \(K\ge1/3\), with equality only for equal
+masses; it does not yield \(K=2/3\).  The Koide value \(K=0.666665\) is an empirical fact; its derivation
+is open.
+
+\subsection*{v4.8.0-r09 P3: the \texorpdfstring{$\bsym$}{beta}-formula}
+\label{subsec:v480-r09-p3}
+
+Remark~\ref{conj:cl-correction} states \(\bsym=\tfrac1{\sqrt3}\exp\bigl(-\gamma_1/(4\pi\gL^5)\bigr)\).
+
+\paragraph{Theoremlet v4.8.0-r09.2.}
+With \(\gL=\gBI/\gstring=1.86444\) the formula gives \(0.549233\) against
+\(\bsym=\sqrt{(\gL-1)/(\gL+1)}=0.549348\), a deviation of \(-0.021\%\); it holds exactly for
+\(\gL=1.86366\).  It is a relation between the two inputs \(\gBI,\gstring\) and \(\gamma_1\), not a
+prediction of an independently measured quantity.  Among the 56 formulas
+\(\tfrac1{\sqrt3}\exp(-\gamma_1/(c\,\gL^n))\), \(n=1,\dots,8\),
+\(c\in\{1,2,\pi,2\pi,4\pi,8\pi,16\pi\}\), 27 lie within \(\pm5\%\); the chance that one of these lands
+within \(\pm0.02\%\) is about \(11\%\).
+
+\paragraph{Proof sketch.}
+Both sides are functions of \(\gL\) alone; solve by bisection.  Enumerate the family and estimate the
+look-elsewhere probability with a uniform density over \(\pm5\%\).  \(\square\)
+
+\paragraph{Assessment.}
+The exponent was changed from \(\gL^2\) to \(\gL^5\) after the fact (Remark~\ref{conj:cl-correction}),
+and Remark~\ref{conj:cl-correction} itself marks it as requiring structural derivation.  P3 is
+recorded as a numerical coincidence of moderate significance, not as a confirmed prediction.  A
+derivation of the exponent before comparison with data would change this.
+
+\subsection*{v4.8.0-r09 register of predictions}
+\label{subsec:v480-r09-predictions}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.27\textwidth}>{\raggedright\arraybackslash}p{0.31\textwidth}>{\raggedright\arraybackslash}p{0.34\textwidth}@{}}
+\toprule
+prediction (Cor.~\ref{cor:falsifiable}) & earlier status & status after r09\\
+\midrule
+P1 GUE photon-frame unfolding & testable now & not confirmed (r08); minimum at \(\mu=1\)\\
+P2 Koide phase & matches to \(0.111\%\) & excluded by data, \(\sim300\)--\(400\sigma\) (r09.1)\\
+P3 \(\bsym\)-formula & matches to \(0.018\%\) & coincidence, exponent chosen post hoc; \(\sim11\%\) look-elsewhere (r09.2)\\
+P4 \(\Lambda\) as frame artefact & reinterpretation & contradicted as stated (r03 F4); \(\Lambda\) type open (r03 F3); \(\Theta\)-sum route false (r05)\\
+P5 \(\alpha\)-drift ratio & not yet testable & exponent corrected (r03 F2); untestable at present\\
+P6 Hawking, tachyon frame & theoretical & assumption \(k(M)=0\) made explicit (r03 F6); untested\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.8.0-r09 register of main results}
+\label{subsec:v480-r09-results}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & current status (layer)\\
+\midrule
+Thm.~\ref{thm:unity}, equivalence of (i)--(v) & conjecture; Stone--von Neumann justification withdrawn (r04); Reading~B gives a precise form via duality (r07)\\
+Thm.~\ref{thm:unitary-equiv} & open (r04)\\
+Def.~\ref{def:biquaternion}, Minkowski reading & replaced: signature \((1,6)\); natural norm \(N(q)\), Reading~B (r06)\\
+Thm.~\ref{thm:lorentz} & shows \(J\)-invariance; Lorentz action from Reading~B (r06)\\
+Thm.~\ref{thm:hopf} & Hopf fibrations classical; physical identification conjecture; the chain \(S^{15}\to S^8\to S^4\to S^2\) is not a composition of Hopf maps (recorded here)\\
+Thm.~\ref{thm:fractal} & null axis redefined as \(s=0\), directions \(=S_0\) (r06); transport open\\
+triole structure & triole lemma proved (r06.2); octonionic triole configuration repaired (r04.4)\\
+Heisenberg compensator, cascade & standalone, proved (r04.2, r04.3)\\
+Thm.~\ref{thm:einstein} & structural conjecture; action undefined (r05)\\
+Thm.~\ref{thm:gue} & empirical fact; derivation withdrawn (r05)\\
+Thm.~\ref{thm:gue-selfdet} & not confirmed (r08)\\
+Thm.~\ref{thm:koide-triolic} & \(K=2/3\) empirical, derivation open; phase formula excluded (r09)\\
+Thm.~\ref{thm:lambda-zero} & (i) holds by definition of the photon frame; (iii) value off by \(10^{121}\) (r03 F8, F9)\\
+Cor.~\ref{cor:matter-error} & corrected to \(\gL^5\approx22.5\) (r03 F1)\\
+\(\gL=\gBI/\gstring\) & ratio of two published Barbero--Immirzi values (r03 F11); input, not derived (OP1)\\
+OP5 Step~(B) & no valid form (r05)\\
+RH & not proved; forbidden as global claim (\(W_\gamma^{\rm glob}\)); Riemann source no proof source (r04)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Theoremlet v4.8.0-r09.3.}
+After r09 no prediction of Corollary~\ref{cor:falsifiable} stands as confirmed.  The results that carry
+are the structural ones: the standalone compensator and cascade, the repaired triole hierarchy, the
+triole lemma, the signature analysis and Reading~B with its orbit, null-cone and duality structure.
+None of the five guards is affected.
+
+\paragraph{Proof sketch.}
+Collect the decisions of r03--r09 as listed in the two registers.  \(\square\)
+
+\subsection*{v4.8.0-r09 ledger and guard update}
+\label{subsec:v480-r09-ledger-guard}
+
+\[
+R_{\rm pred}^{v480\text{-}r09}=(0,0,0,1)
+\]
+for (P2 decided; P3 classified; register compiled; derivations of \(K=2/3\) and of the P3 exponent open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v480\text{-}r09,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v480\text{-}r09}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
