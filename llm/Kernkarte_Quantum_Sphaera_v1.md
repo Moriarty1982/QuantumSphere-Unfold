@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v2.8
+# Kernkarte Quantum Sphaera — v2.9
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -850,6 +850,26 @@ Familie hängt physikalisch nur von γ ab.
 β_sym eingesetzt, viele Konstanten). Trennt aber bei JUNO klar von TM1 (0,318); wäre vor JUNO als eigene
 Vorab-Notiz festzuschreiben.
 
+### K18 — Rückwärtsanalyse: Was müsste sich ändern, damit Bekanntes herauskommt? (2026-10-20)
+
+Regel: Jede Änderung kostet Stellschrauben; sie lohnt nur, wenn sie mehr Messwerte erklärt, als sie Schrauben
+hinzufügt.
+
+| Lücke | minimale Änderung | Kosten | Gewinn |
+|---|---|---|---|
+| Lepton-Phase δ = 2/9 | Mechanismus für die Phase (nur Leptonen, H1 widerlegt allgemein) | 0, falls hergeleitet | Elektron/Myon-Verhältnis |
+| Quarks r = 1,115 / 1,290 | r als Funktion von Ladung/Farbe | 1 Formel für 2 Zahlen | nur bei einer Formel für beide |
+| Mischung TM1 | Restsymmetrie Z₂ für Neutrinos, Z₃ (Triole) für geladene Leptonen, aus S₄ | Gruppe + Brechungsmuster | θ₁₂, δ_CP-Relation |
+| Massenskala t | Dynamik (Higgs/Yukawa) | offen | absolute Massen |
+| β_sym | Herleitung (OP1) statt Barbero–Immirzi | 0 | ganze Frame-Kette |
+
+**K18.1 Befund (M, nachgerechnet).** GL(3,2) (= Symmetrie der Fano-Ebene) hat Ordnung 168; der Stabilisator eines
+Punkts hat Ordnung 24 und dieselbe Ordnungsstatistik wie S₄ (1, 9, 8, 6 Elemente der Ordnung 1, 2, 3, 4).
+**K18.2 Weg (V).** S₄ ist die übliche Flavour-Gruppe für TBM/TM1. Die Fano-Ebene ist im Companion bereits
+vorhanden (Oktonionen-Multiplikation, Triolen-Satz über konkurrente Fano-Linien, r04). Eine Flavour-Symmetrie
+aus dem Punkt-Stabilisator der Fano-Ebene wäre also keine von außen geholte Zutat. Offen: Brechungsmuster
+herleiten, dann TM1 oder TM2 vorhersagen — vor dem Datenvergleich festzulegen.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -888,6 +908,8 @@ Vorab-Notiz festzuschreiben.
   K16.4 Überlagerung: beide exakt ⇒ tribimaximal (ausgeschlossen); 1:1 ausgeschlossen; freies Gewicht ohne Test.
 - v2.8 (2026-10-20): K17 fünfter vorab festgelegter Test (Hopf-Winkel als Mischwinkel) — gescheitert
   ((i) 0/32, (ii) entartet); Strukturbefund |w_e|² = sin²(γ/2); Nachbefund |U_e2|² = β_sym² (nur Kandidat).
+- v2.9 (2026-10-20): K18 Rückwärtsanalyse (Lücken, minimale Änderungen, Kosten); Fano-Punkt-Stabilisator ≅ S₄
+  (Ordnungsstatistik) als modellinterner Weg zu einer Flavour-Symmetrie.
 
 ---
 
