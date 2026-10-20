@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v3.4
+# Kernkarte Quantum Sphaera — v3.5
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -980,6 +980,20 @@ ohne Zusatzannahme scharfe, bald prüfbare Werte liefert: θ₂₃ = 45°, δ_CP
 bekannt; die Wahl 270° statt 90° trifft der Datenvergleich. Gauß-Näherung überzeichnet die Spannung eher.
 m_ββ (H2-Massen, reelle Paritäten): 3,56 meV für (−1, +1, +1), 1,34–4,05 meV insgesamt.
 
+### K22 — Companion-Runde v4.8.0-r12 und Neueinordnung der alten PMNS-Aussagen (2026-10-20)
+
+Runde `sec:v480-r12-neutrino-flavour` (Snippet `llm/v480_r12_round.tex`): Theoremlets r12.1 (Triolen-Produkt und
+Vorzeichen, zyklische Matrix), r12.2 (Stab(+e₇) mit Δ(96)-Invarianten), r12.3 (Involutionen-Tabelle), r12.4
+(Cayley–Dickson-CP ⇒ θ₂₃ = 45°, δ_CP ∈ {90°, 270°}); Tabelle H2–H8 mit Commits.
+
+**Neueinordnung (S).**
+- `prop:pmns-z3`: arctan√2 = 54,74° ist **nicht** der maximale Mischungswinkel (der ist 45°). Der verschobene Wert
+  52,1° gibt sin²θ₂₃ = 0,622 gegen 0,470 (NO, θ₂₃ = 43,3°): etwa 9σ, gegen IO (0,550) etwa 6σ.
+  → **widerlegt**, ebenso die θ₂₃-Zeile der Vorhersagetabelle. Ersatz: r12.4 mit offener Auswahlfrage.
+- `thm:op1op4-unified`: CKM- und PMNS-Zeile hängen an der δ_CL-Vermutung, deren β-Formel in r09 als Koinzidenz
+  eingestuft ist. CKM-Zeile erbt diesen Status; PMNS-Zeile widerlegt. CKM-Phase (π/3 gegen ≈ 70°) unberührt, offen.
+- Ledger: R_mix^{r12} = (0,0,1); Guards unverändert, β₄ = 1/256 unverbraucht.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1033,6 +1047,8 @@ m_ββ (H2-Massen, reelle Paritäten): 3,56 meV für (−1, +1, +1), 1,34–4,05
   Nebenbefund: Cayley–Dickson-Involution kommutiert mit Triole und Lifts, wirkt CP-artig (Kandidat für H8).
 - v3.4 (2026-10-20): K21 achter vorab festgelegter Test (Cayley–Dickson-CP) — μ-τ-Spiegelung exakt, sin²θ₂₃ = ½,
   δ_CP = 270°; gegen NuFIT Spannung (χ² = 8,8 bei 3 FG); Kurzregister ergänzt.
+- v3.5 (2026-10-20): K22 Companion-Runde v4.8.0-r12 (H2–H8, Δ(96), Cayley–Dickson-CP); `prop:pmns-z3` und die
+  θ₂₃-Zeile von `thm:op1op4-unified` als widerlegt eingeordnet.
 
 ---
 

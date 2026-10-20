@@ -66589,4 +66589,153 @@ It does not imply exact finite \(C5\) zero closure, exact all-readout terminalit
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
 
 
+% ============================================================================
+\clearpage
+\section*{v4.8.0-r12 Source-Only: Pre-Registered Neutrino Tests, the Octonionic Flavour Group, and Reclassification of the PMNS Claims}
+\addcontentsline{toc}{section}{v4.8.0-r12 Source-Only: Pre-Registered Neutrino Tests, Octonionic Flavour Group, PMNS Reclassification}
+\label{sec:v480-r12-neutrino-flavour}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer r11 introduced pre-registration.  This layer records the seven further pre-registered tests
+H2--H8, which apply the triole form to neutrinos and to lepton mixing, the structural facts they rest on,
+and a reclassification of the earlier PMNS statements of the Companion.  For every test the hypothesis,
+data and decision criterion were committed to the repository before the computation; the commits are
+listed below.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.8.0-r12 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.8.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23365244}{10.5281/zenodo.23365244} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.8.0-r12 structural facts}
+\label{subsec:v480-r12-structure}
+
+\paragraph{Theoremlet v4.8.0-r12.1 (triole spectrum and sign).}
+For \(v_k=t\bigl(1+\sqrt2\,r\cos(\delta+2\pi k/3)\bigr)\) one has
+\(v_0v_1v_2=t^3\bigl(1-\tfrac32r^2+\tfrac{r^3}{\sqrt2}\cos3\delta\bigr)\).  For \(r=1\) at most one
+component is negative, and exactly one is negative if and only if \(\cos3\delta<1/\sqrt2\); the boundary
+\(\delta=\pi/12\) is the point where one mass vanishes.  The vector \(v\) is the spectrum of the Hermitian
+circulant matrix \(t\,\mathbf 1+\tfrac{c}{\sqrt2}P+\tfrac{\bar c}{\sqrt2}P^2\) (\(P\) the cyclic shift),
+whose eigenvectors are the fixed Fourier vectors.
+
+\paragraph{Proof sketch.}
+Expand the product with \(\sum_k\cos\theta_k=0\), \(\sum_k\cos^2\theta_k=3/2\) and
+\(\prod_k\cos\theta_k=\tfrac14\cos3\delta\) for \(\theta_k=\delta+2\pi k/3\).  The circulant statement is the
+discrete Fourier diagonalization.  The identities were also checked numerically to \(10^{-15}\).  \(\square\)
+
+\paragraph{Theoremlet v4.8.0-r12.2 (octonionic flavour group).}
+In the Cayley--Dickson convention of layer r04 the automorphisms of \(\OO\) that permute
+\(e_1,\dots,e_7\) up to sign form a group of order \(1344\).  Its stabilizer of \(+e_7\) has order \(96\),
+acts unitarily with determinant one and irreducibly on \(\mathbb C^3=\mathrm{span}_{\mathbb C}(e_4,e_5,e_6)\)
+with complex structure \(L_{e_7}\), and has the same element-order statistics and the same number of
+conjugacy classes (ten) as \(\Delta(96)\subset SU(3)\).
+
+\paragraph{Proof sketch.}
+An automorphism is fixed by the images of \(e_1,e_2,e_4\); all \(14\cdot12\cdot8\) choices extend and
+preserve the full multiplication table.  Restriction, unitarity, determinant, irreducibility
+(\(\langle|\chi|^2\rangle=1\)) and the class data were computed exhaustively (scripts
+\texttt{k22\_oktonion\_triplett.py}, \texttt{k23\_test\_h6.py}).  The identification with \(\Delta(96)\) is by
+these invariants; an explicit isomorphism is not written out here.  \(\square\)
+
+\paragraph{Theoremlet v4.8.0-r12.3 (residual reflections).}
+With the triole \(e_4\to e_5\to e_6\) as charged-lepton symmetry and the electron along its invariant
+direction, the fifteen involutions of the stabilizer preserve the following columns of the lepton mixing
+matrix:
+\begin{center}
+\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.40\textwidth}>{\raggedright\arraybackslash}p{0.07\textwidth}>{\raggedright\arraybackslash}p{0.20\textwidth}>{\raggedright\arraybackslash}p{0.21\textwidth}}
+\toprule
+Involution & count & preserved \(|U_{\alpha i}|^2\) & pattern\\
+\midrule
+pure sign changes (one generation fixed) & 3 & \((\tfrac13,\tfrac13,\tfrac13)\) & TM2\\
+Fano centre in \(\{e_1,e_2,e_3\}\), first lift & 3 & \((\tfrac23,\tfrac16,\tfrac16)\) & TM1\\
+Fano centre in \(\{e_1,e_2,e_3\}\), second lift & 3 & \((0,\tfrac12,\tfrac12)\) & \(\theta_{13}=0\)\\
+Fano centre in \(\{e_4,e_5,e_6\}\) & 6 & \((\tfrac13,\tfrac{2\mp\sqrt3}{6})\) & \(\Delta(96)\) column\\
+Fano centre \(e_7\) & 0 & --- & only order-4 lifts\\
+\bottomrule
+\end{tabular}
+\end{center}
+The TM1 lift and the \(\theta_{13}=0\) lift over the same Fano image differ by a pure sign change.
+
+\paragraph{Theoremlet v4.8.0-r12.4 (Cayley--Dickson involution as CP).}
+The involution \(p+q\ell\mapsto p-q\ell\) commutes with every lift of the triole and with all TM1 and
+\(\theta_{13}=0\) involutions, and acts on the triplet as \(z\mapsto-\bar z\) in the basis in which the
+triole is the plain cyclic shift.  If the Majorana mass matrix is invariant under it and under a residual
+reflection, then \(\sin^2\theta_{23}=\tfrac12\) and \(\delta_{CP}\in\{90^\circ,270^\circ\}\) exactly.
+
+\paragraph{Proof sketch.}
+\(X=-\mathbf1\) forces a real mass matrix in the generation basis; the Fourier matrix of the triole turns
+this into the \(\mu\)--\(\tau\) reflection, whose consequences are classical.  Checked on 2000 random
+points of the four-dimensional solution space for each reflection type (script \texttt{k26\_test\_h8.py}).
+\(\square\)
+
+\subsection*{v4.8.0-r12 pre-registered tests}
+\label{subsec:v480-r12-tests}
+
+Data: NuFIT 6.0 (IC24 with SK atmospheric data, normal ordering unless stated), DESI DR2 with CMB for
+\(\sum m_\nu<0.0642\) eV, KamLAND-Zen for \(m_{\beta\beta}\); Gaussian approximation with asymmetric
+errors where a \(\chi^2\) is quoted.
+\begin{center}
+\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.06\textwidth}>{\raggedright\arraybackslash}p{0.10\textwidth}>{\raggedright\arraybackslash}p{0.36\textwidth}>{\raggedright\arraybackslash}p{0.38\textwidth}}
+\toprule
+Test & commit & hypothesis & result under the fixed criterion\\
+\midrule
+H2 & \texttt{434c5a8} & neutrinos are an \(r=1\) triole, signs free & compatible: normal ordering, \(\sum m_\nu=0.0592\pm0.0002\) eV; inverted ordering disfavoured (\(0.102\) eV); weakly discriminating\\
+H3 & \texttt{e3b140e} & triole signs are Majorana CP parities & compatible, \(m_{\beta\beta}=2.7\pm0.7\) meV (\(\le3.5\) meV); not testable in the foreseeable future\\
+H4 & \texttt{00d297e} & TM1 against TM2, equal prior & TM1 strongly preferred, \(\chi^2=4.4\) vs.\ \(14.7\) (2 d.o.f.); the \(\theta_{12}\) part was not blind\\
+H5 & \texttt{16eff15} & polar angle of the preserved column is a Hopf angle of the Companion & failed: \(0/32\) canonical combinations compatible; free azimuth degenerate\\
+H6 & \texttt{e1e2393} & list of algebraic selection criteria for the TM1 lift & main criterion (dihedral \(S_3\) with the triole) selects the \(\theta_{13}=0\) lift, i.e.\ speaks against TM1\\
+H7 & \texttt{e6da7db} & Heisenberg compensator \(J\) as sign automorphism selects the lift & no selection for any \(J\); the candidates negating \(e_1\) and fixing \(e_7\) do not commute with the triole\\
+H8 & \texttt{f6734ab} & Cayley--Dickson involution as CP symmetry & tension, \(\chi^2=8.8\) (3 d.o.f.); fixed predictions \(\sin^2\theta_{23}=\tfrac12\), \(\delta_{CP}=270^\circ\), with TM1 \(\sin^2\theta_{12}=0.318\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Reading.}
+The octonionic structure already present in the Companion produces the known mixing patterns TM1, TM2
+and \(\Delta(96)\) as candidates and, through the Cayley--Dickson involution, a definite CP structure.  It
+does not select TM1: neither minimality, nor the cascade projections (they commute with all sign changes),
+nor the compensator distinguishes the TM1 lift from the excluded one.  The predictions of H4 and H8 will be
+tested by JUNO (\(\theta_{12}\)) and by DUNE and Hyper-Kamiokande (\(\theta_{23}\), \(\delta_{CP}\)).
+
+\subsection*{v4.8.0-r12 reclassification of earlier PMNS statements}
+\label{subsec:v480-r12-reclassification}
+
+\paragraph{Proposition~\ref{prop:pmns-z3}.}
+The value \(\arctan\sqrt2=54.74^\circ\) is not the maximal mixing angle; maximal mixing is \(45^\circ\).
+The shifted value \(\arctan(\sqrt2)\,\delta_{\rm CL}=52.1^\circ\) gives \(\sin^2\theta_{23}=0.622\), against
+\(0.470\) (normal ordering, \(\theta_{23}=43.3^\circ\)) about \(9\sigma\) in the Gaussian approximation and
+about \(6\sigma\) against the inverted-ordering value \(0.550\).  The proposition and the
+\(\theta_{23}^{\rm PMNS}\) line of the unified prediction table are reclassified as \emph{refuted}.  The
+replacement statement of this layer is Theoremlet~r12.4 with the open selection problem.
+
+\paragraph{Theorem~\ref{thm:op1op4-unified}.}
+Its CKM and PMNS lines rest on the continuum-limit conjecture for \(\delta_{\rm CL}\), whose \(\beta\)-formula
+was classified in layer r09 as a coincidence with an exponent chosen after the fact.  The CKM line inherits
+that status; the PMNS line is refuted as above.  The CKM phase remark (\(\pi/3\) against \(\approx70^\circ\))
+is unaffected and remains open.
+
+\subsection*{v4.8.0-r12 ledger and guard update}
+\label{subsec:v480-r12-ledger-guard}
+
+\[
+R_{\rm mix}^{v480\text{-}r12}=(0,0,1)
+\]
+for (protocols committed before computation; all seven hypotheses decided; selection principle for the
+residual reflection still open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v480\text{-}r12,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v480\text{-}r12}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
 \end{document}
