@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v3.3
+# Kernkarte Quantum Sphaera — v3.4
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -71,7 +71,9 @@ K = 2/3 ⇔ |c| = t.
 (K14) — verträglich, Vorhersage normale Ordnung, Σm_ν = 0,0592 eV (schwach trennend). H3 Vorzeichen als
 Majorana-Parität (K15) — verträglich, m_ββ ≤ 3,5 meV, nicht prüfbar. H4 TM1 gegen TM2 (K16) — TM1 stark
 bevorzugt (Δχ² = 10,3), Vorhersage sin²θ₁₂ = 0,318, δ_CP ≈ 262°. H5 Hopf-Winkel als Mischwinkel (K17) —
-gescheitert; Nachbefund |U_e2|² = β_sym² (nicht registriert). Regel: Jede neue
+gescheitert; Nachbefund |U_e2|² = β_sym² (nicht registriert). H6/H7 Auswahl des TM1-Lifts (K19, K20) — weder
+Minimalität, Kaskade noch Kompensator wählen TM1. H8 Cayley–Dickson-Involution als CP (K21) — Spannung
+(χ² = 8,8 bei 3 FG), Vorhersage sin²θ₂₃ = ½, δ_CP = 270°. Regel: Jede neue
 Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 ---
@@ -958,7 +960,25 @@ Vorzeichen-Automorphismus, der mit der Triole kommutiert: feste Linie (1,2,3), n
 Involution p + qℓ ↦ p − qℓ. Sie kommutiert mit allen Triolen-Lifts und allen sechs TM1-/θ₁₃ = 0-Involutionen
 (24 von 96 Elementen von Stab(+e₇)), negiert e₇ und wirkt auf dem Triplett antilinear (CP-artig).
 [V] Als verallgemeinerte CP-Symmetrie könnte sie CP-Phasen festlegen; das wäre eine neue Hypothese (H8) mit
-eigener Vorab-Notiz.
+eigener Vorab-Notiz. → geprüft in K21.
+
+### K21 — Achter vorab festgelegter Test: Cayley–Dickson-Involution als CP-Symmetrie (2026-10-20)
+
+Vorab-Notiz `llm/Vorab_Notiz_H8_CP_Cayley_Dickson.md` (Commit f6734ab); Ergebnis `llm/Ergebnis_H8_CP_Cayley_Dickson.md`;
+Skript `llm/k26_test_h8.py`.
+
+**K21.1 Struktur (M).** Auf dem Triplett wirkt die Involution als z ↦ −z̄ (X = −1) in der Basis, in der die Triole
+die reine zyklische Vertauschung ist. Massenmatrix hᵀ m h = m, Xᵀ m X = m* ⇒ m reell, Lösungsraum Dimension 4.
+In der Massenbasis der geladenen Leptonen wird daraus die μ-τ-Spiegelung: **sin²θ₂₃ = ½ und δ_CP ∈ {90°, 270°}
+exakt** (2000 Stichproben je Typ; gilt für TM1- und TM2-Spiegelungen). Mit TM1: sin²θ₁₂ = 0,318.
+
+**K21.2 Datenvergleich (M).** NuFIT 6.0 NO, ein Winkel angepasst: χ²_min = 8,82 bei 3 FG (θ₁₂ 0,73; θ₂₃ 3,11;
+δ_CP 4,98 mit δ = 270°). Nach Kriterium: **Spannung** (zwischen 95 % und 99 %).
+
+**K21.3 Einordnung.** Erste Stelle, an der eine schon vorhandene Struktur des Modells (Cayley–Dickson-Verdopplung)
+ohne Zusatzannahme scharfe, bald prüfbare Werte liefert: θ₂₃ = 45°, δ_CP = 270°. Die μ-τ-Spiegelung selbst ist
+bekannt; die Wahl 270° statt 90° trifft der Datenvergleich. Gauß-Näherung überzeichnet die Spannung eher.
+m_ββ (H2-Massen, reelle Paritäten): 3,56 meV für (−1, +1, +1), 1,34–4,05 meV insgesamt.
 
 ---
 
@@ -1011,6 +1031,8 @@ eigener Vorab-Notiz.
   Korrektur: ⟨Triole, h_TM1⟩ = Vorzeichen-Kern ⋊ S₃, nicht der Fano-Punkt-Stabilisator.
 - v3.3 (2026-10-20): K20 siebter vorab festgelegter Test (Heisenberg-Kompensator) — kein Auswahlgrund;
   Nebenbefund: Cayley–Dickson-Involution kommutiert mit Triole und Lifts, wirkt CP-artig (Kandidat für H8).
+- v3.4 (2026-10-20): K21 achter vorab festgelegter Test (Cayley–Dickson-CP) — μ-τ-Spiegelung exakt, sin²θ₂₃ = ½,
+  δ_CP = 270°; gegen NuFIT Spannung (χ² = 8,8 bei 3 FG); Kurzregister ergänzt.
 
 ---
 
