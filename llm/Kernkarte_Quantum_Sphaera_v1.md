@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v3.1
+# Kernkarte Quantum Sphaera — v3.2
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -925,7 +925,22 @@ S₄-Ordnungsstatistik, ⟨g₃, h_θ₁₃=0⟩ ist S₃. B, D–G trennen nich
 
 **K19.2 Einordnung (S).** Minimalität (S₃) gibt θ₁₃ = 0 und ist empirisch widerlegt; TM1 entspricht
 Vollständigkeit (Triole und Restspiegelung erzeugen den ganzen Fano-Punkt-Stabilisator S₄). Dieses Prinzip ist
-nachträglich gefunden und zählt nur, wenn es sich unabhängig begründen lässt.
+nachträglich gefunden und zählt nur, wenn es sich unabhängig begründen lässt. **→ Deutung korrigiert in K19.3.**
+
+**K19.3 Prüfung: Erzwingt die Kaskade Vollständigkeit? (M; Skript `llm/k24_kaskade_vollstaendigkeit.py`)**
+(a) *Korrektur:* ⟨g₃, h_TM1⟩ (Ordnung 24) hat als Fano-Bild nur S₃ (6 Elemente, dasselbe wie ⟨g₃, h_θ₁₃=0⟩)
+und enthält den ganzen Vorzeichen-Kern V (4 Elemente): 24 = 4 · 6. Es ist **nicht** der Fano-Punkt-Stabilisator.
+Den vollen Fano-Stabilisator erreicht nur die Δ(96)-Spiegelung (erzeugt ganz Stab(+e₇)). Richtig: TM1 ⇔ die
+Gruppe enthält die Oktonionen-Vorzeichen-Symmetrien; θ₁₃ = 0 ⇔ sie enthält keine.
+(b) *Vorzeichen-Kern:* Jedes Kern-Element ist auf einer der drei quaternionischen Linien durch e₇ die Identität
+und auf den beiden anderen die e₇-Konjugation (Drehung um π um e₇).
+(c) *Kaskade:* Die Projektionen auf span(1, L) für L durch e₇ und auf span(1, e₇) kommutieren mit allen
+Kern-Elementen. TM1-Lift und θ₁₃ = 0-Lift über demselben Fano-Bild unterscheiden sich genau um ein Kern-Element
+und wirken auf alle Kaskaden-Projektionen gleich. **Die Kaskade sieht den Unterschied nicht und kann
+Vollständigkeit nicht erzwingen. Vermutung widerlegt.**
+(d) *Offen (V):* Ein Auswahlgrund müsste aus der Multiplikation selbst kommen, nicht aus Projektionen. Im
+Companion treten Vorzeichen-Automorphismen bisher nur bei der reparierten J-Spiegelung auf (K6.2: muss vier
+Einheiten negieren und eine Linie festhalten); ob das hier hilft, ist ungeprüft.
 
 ---
 
@@ -974,6 +989,8 @@ nachträglich gefunden und zählt nur, wenn es sich unabhängig begründen läss
   Δ(96)-Spalte.
 - v3.1 (2026-10-20): K19 sechster vorab festgelegter Test (Kriterienliste für den Lift) — Hauptkriterium (S₃ mit
   der Triole) spricht gegen TM1; Hinweis: TM1 ⇔ Triole und Restspiegelung erzeugen S₄.
+- v3.2 (2026-10-20): K19.3 Kaskade erzwingt Vollständigkeit nicht (sieht die Vorzeichen-Symmetrien nicht);
+  Korrektur: ⟨Triole, h_TM1⟩ = Vorzeichen-Kern ⋊ S₃, nicht der Fano-Punkt-Stabilisator.
 
 ---
 

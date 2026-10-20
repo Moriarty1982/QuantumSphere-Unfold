@@ -42,3 +42,11 @@ nach der Regel aber nur als Hinweis.
 
 [S] H6: Hauptkriterium spricht gegen TM1; kein modellinterner Auswahlgrund aus A. Hinweis aus C: TM1 ⇔
 ⟨Triole, Restspiegelung⟩ = S₄. Guards unberührt.
+
+## Nachtrag 2026-10-20 (k24): Deutung von C korrigiert
+
+Die Ergebnisse oben bleiben unverändert. Falsch war die Deutung „ganzer Fano-Punkt-Stabilisator“: Das Fano-Bild
+von ⟨g₃, h_TM1⟩ hat nur 6 Elemente (S₃, dasselbe wie bei h_θ₁₃=0). Die Ordnung 24 kommt vom vollständigen
+Vorzeichen-Kern (4 Elemente): 24 = 4 · 6. Richtig ist: TM1 ⇔ die Gruppe aus Triole und Restspiegelung enthält
+die Oktonionen-Vorzeichen-Symmetrien; θ₁₃ = 0 ⇔ sie enthält keine. Den ganzen Fano-Stabilisator (S₄) erreicht nur
+die Δ(96)-Spiegelung. Siehe Kernkarte K19.3.
