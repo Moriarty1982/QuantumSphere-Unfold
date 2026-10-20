@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v2.9
+# Kernkarte Quantum Sphaera — v3.0
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -889,6 +889,29 @@ Generationen-Einheit e₄, e₅ oder e₆; die ausgeschlossene Variante = Zentru
 stammt aus der Wirkung auf die 4 Linien nicht durch P. Ob die G₂-Wirkung auf das Triplett (mit den Vorzeichen
 der Gruppe 2³·GL(3,2)) dieselbe Darstellung liefert, ist **ungeprüft**. [V] Welche Klasse das Modell auswählt,
 ist offen; beide Kandidaten (e₇ oder Generationen-Einheit) sind modellintern naheliegend.
+**→ Die Zuordnung in K18.3–4 ist durch K18.5 überholt** (sie galt nur für die Ersatz-Darstellung, nicht für die
+echte Oktonionen-Wirkung).
+
+**K18.5 Echte G₂-Wirkung auf das Triplett (M; Skript `llm/k22_oktonion_triplett.py`).** Oktonionen nach
+Companion-Konvention (Fano-Linien aus der Multiplikation reproduziert). Die Automorphismen, die e₁…e₇ bis aufs
+Vorzeichen permutieren, bilden eine Gruppe der Ordnung 1344 (2³·GL(3,2)). Ihr Stabilisator von +e₇ (Teil von
+SU(3) ⊂ G₂) hat Ordnung 96, wirkt unitär mit Determinante 1 und irreduzibel auf ℂ³ = span(e₄,e₅,e₆) und hat
+dieselbe Ordnungsstatistik und Klassenzahl (10) wie **Δ(96)**, eine bekannte Flavour-Gruppe. Die 15 Involutionen
+(Dreier-Element = Companion-Zyklik e₄→e₅→e₆, Elektron = Eigenwert-1-Richtung):
+
+| Fano-Zentrum | Anzahl | erhaltene Spalte | Muster |
+|---|---|---|---|
+| keins (reine Vorzeichenwechsel, z. B. e₄, e₅ → −, e₆ fest) | 3 | (1/3, 1/3, 1/3) | TM2 |
+| e₁, e₂, e₃ (erster Lift) | 3 | (2/3, 1/6, 1/6) | **TM1** |
+| e₁, e₂, e₃ (zweiter Lift) | 3 | (0, 1/2, 1/2) | θ₁₃ = 0, ausgeschlossen |
+| e₄, e₅, e₆ | 6 | (1/3, (2−√3)/6, (2+√3)/6) | Δ(96)-Spalte |
+| e₇ | — | nur Lifts der Ordnung 4, keine Involution | — |
+
+Befund: TM1 und die ausgeschlossene Variante haben dieselbe Fano-Lage (Zentrum im Anti-Triplett); sie
+unterscheiden sich **nur durch die Oktonionen-Vorzeichen**. Die Fano-Geometrie allein trennt sie nicht; die
+Vorzeichenstruktur der Oktonionen tut es. TM2 entsteht aus reinen Vorzeichenwechseln, die eine Generation
+festhalten. Die Δ(96)-Spalte hätte mit dieser Konvention als ν₂ einen der Einträge |U_μ2|², |U_τ2|² bei 0,045;
+gemessen sind beide etwa 0,2 oder größer (3σ-Bereiche); sie scheidet für ν₂ aus (grobe Prüfung, kein Fit). [V] Offen bleibt, welcher Lift ausgewählt wird.
 
 ---
 
@@ -931,6 +954,10 @@ ist offen; beide Kandidaten (e₇ oder Generationen-Einheit) sind modellintern n
 - v2.9 (2026-10-20): K18 Rückwärtsanalyse (Lücken, minimale Änderungen, Kosten); Fano-Punkt-Stabilisator ≅ S₄
   (Ordnungsstatistik) als modellinterner Weg zu einer Flavour-Symmetrie. K18.3–4: Brechung der Fano-Symmetrie;
   TM2 ↔ Zentrum e₇, TM1 ↔ Zentrum in e₄,e₅,e₆, ausgeschlossene Variante ↔ Zentrum in e₁,e₂,e₃.
+- v3.0 (2026-10-20): K18.5 echte Oktonionen-Wirkung: Stab(+e₇) ≅ Δ(96) (Ordnungsstatistik, 10 Klassen), Triplett
+  irreduzibel. **Korrektur von K18.3–4:** TM1 = Lift mit Zentrum im Anti-Triplett e₁,e₂,e₃ (zweiter Lift dort
+  gibt θ₁₃ = 0); TM2 = reine Vorzeichenwechsel; Zentrum e₇ liefert keine Involution; e₄,e₅,e₆ gibt die
+  Δ(96)-Spalte.
 
 ---
 
