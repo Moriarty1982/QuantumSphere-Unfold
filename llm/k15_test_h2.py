@@ -9,6 +9,7 @@ D21, s21 = 7.49e-5, 0.19e-5
 D31_NO, s31_NO = 2.513e-3, 0.020e-3   # (+0.021/-0.019) gemittelt
 D32_IO, s32_IO = 2.484e-3, 0.020e-3
 SIG_COSMO = 0.0642
+W = {"NO": 0.05, "IO": 0.004}  # Suchfenster: NO-Loesungen weit getrennt, IO-Loesungen 0,011 auseinander
 P = 2*np.pi/3
 
 def v(d):
@@ -75,7 +76,7 @@ def solve_fast(order, d21, dbig, ref):
     for k, s in enumerate(ref):
         d0 = s['delta']
         try:
-            d = brentq(lambda x: ratio(x, order) - target, d0 - 0.004, d0 + 0.004, xtol=1e-13)
+            d = brentq(lambda x: ratio(x, order) - target, d0 - W[order], d0 + W[order], xtol=1e-13)
         except ValueError:
             continue
         (a, b, c), _ = sorted_masses(d)

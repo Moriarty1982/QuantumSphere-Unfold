@@ -228,6 +228,10 @@ QA = [
  "[M] Nein. Bei den gemessenen Massendifferenzen ist K hoechstens 0,585 (normale Ordnung) bzw. 0,500 (invertiert), jeweils im hierarchischen Grenzfall. K = 2/3 braucht ein negatives v_k; die Triolen-Form erlaubt das fuer r = 1 bis -0,414 t."),
 ("zahl", "Was bedeutet das negative Vorzeichen beim leichtesten Neutrino?",
  "[M] Es ist das Vorzeichen der kubischen Invariante e3 = v0 v1 v2 = t^3 (cos 3 delta / sqrt2 - 1/2) fuer r = 1; negativ jenseits der Grenzphase pi/12, wo eine Masse null ist. Hoechstens eine Komponente kann negativ sein; auf 75 % des Kreises ist eine negativ. Alle geladenen Dreiergruppen liegen knapp im positiven Bogen, die Neutrinos jenseits davon. [S] Lesart B macht das Vorzeichen nicht invariant (nur |v| und der 45-Grad-Winkel sind SO(3)-invariant), und physikalisch ist das Vorzeichen von sqrt m nicht beobachtbar, weil m = v^2. [P] Eine Deutung waere eine neue Hypothese mit Vorab-Notiz."),
+("zahl", "Was sagt H3 fuer den neutrinolosen Doppelbetazerfall voraus?",
+ "[V] H3 (vorab festgelegt, Commit e3b140e): Neutrinos sind Majorana-Teilchen, die Triolen-Vorzeichen sind ihre CP-Paritaeten (-1, +1, +1). [M] Mit NuFIT 6.0: m_bb = 2,74 +- 0,70 meV, ueber den vollen delta_CP-Bereich 1,25 bis 3,47 meV, 95-%-Obergrenze 3,5 meV; m_beta = 8,85 meV. [S] Vertraeglich, aber auf absehbare Zeit nicht pruefbar; das Vorzeichen verschiebt m_bb nur um 0,5 meV."),
+("guard", "Wenn LEGEND-1000 kein Signal sieht, ist die Majorana-Deutung des Vorzeichens dann bestaetigt?",
+ "[S] Nein. Fehlende Signale bei 5 bis 20 meV bestaetigen nichts, weil jede normale Ordnung mit fast masselosem leichtestem Neutrino ein aehnlich kleines m_bb gibt. Widerlegen wuerde H3 dagegen ein bestaetigtes Signal ueber 3,5 meV oder ein Nachweis von Dirac-Neutrinos."),
 # ---------------------------------------------------------------- F: Pruefpunkte / offen
 ("offen", "Welche Modellentscheidungen sind in Lesart B noch offen?",
  "[P] Ob der Dualitaetswinkel physikalisch oder Eichfreiheit ist; die Rolle von t; die Transportaussage K(L_n) = L_{n-1}. Die Sektor-Zuordnung ist seit r07 als Arbeitszuordnung gesetzt und umkehrbar."),

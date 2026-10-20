@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v2.5
+# Kernkarte Quantum Sphaera — v2.6
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -68,7 +68,8 @@ Lesart B**, das |c|/t und die Koide-Phase festlegt (r10).
 K = 2/3 ⇔ |c| = t.
 
 **Vorab-Tests:** H1 δ = K/3 (r11) — widerlegt für Quarks und laufende Leptonmassen. H2 Neutrinos mit r = 1
-(K14) — verträglich, Vorhersage normale Ordnung, Σm_ν = 0,0592 eV (schwach trennend). Regel: Jede neue
+(K14) — verträglich, Vorhersage normale Ordnung, Σm_ν = 0,0592 eV (schwach trennend). H3 Vorzeichen als
+Majorana-Parität (K15) — verträglich, m_ββ ≤ 3,5 meV, nicht prüfbar. Regel: Jede neue
 Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 ---
@@ -785,6 +786,21 @@ Bedeutung hätte es nur, wenn v selbst die fundamentale Größe ist (m als Quadr
 Seesaw m_ν ∝ m_D², Yukawaon-Modelle). [P] Eine Deutung (etwa Dirac ↔ Majorana oder θ = π im Triolenkern)
 wäre eine neue Hypothese und braucht eine Vorab-Notiz.
 
+### K15 — Dritter vorab festgelegter Test: Vorzeichen als Majorana-CP-Parität (2026-10-20)
+
+Vorab-Notiz `llm/Vorab_Notiz_H3_Vorzeichen_Majorana.md` (Commit e3b140e, **vor** der Rechnung); Ergebnis
+`llm/Ergebnis_H3_Vorzeichen_Majorana.md`; Skript `llm/k17_test_h3.py`.
+
+**K15.1 Hypothese (V).** e₃ < 0 ⇔ Majorana; die Triolen-Vorzeichen sind die CP-Paritäten (η = −1, +1, +1),
+keine weiteren Majorana-Phasen.
+
+**K15.2 Ergebnis (M).** NuFIT 6.0 (IC24 + SK-atm, NO). m_ββ = 2,74 ± 0,70 meV (MC), 1,25–3,47 meV über den
+vollen δ_CP-Bereich, 95 %-Obergrenze 3,50 meV. Mit η₁ = +1 wäre m_ββ rund 0,5 meV größer. m_β = 8,85 meV.
+
+**K15.3 Einordnung.** Verträglich (KamLAND-Zen 28–122 meV), auf absehbare Zeit nicht prüfbar; das Vorzeichen
+selbst wirkt weniger als die δ_CP-Unsicherheit. Widerlegt durch ein 0νββ-Signal über 3,5 meV oder durch
+Dirac-Neutrinos. Ausbleibende Signale bei LEGEND-1000/nEXO bestätigen nichts.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -816,6 +832,8 @@ wäre eine neue Hypothese und braucht eine Vorab-Notiz.
 - v2.4 (2026-10-20): K13 erster vorab festgelegter Test (δ = K/3) — widerlegt; im Companion als v4.8.0-r11.
 - v2.5 (2026-10-20): K14 zweiter vorab festgelegter Test (Neutrinos, r = 1) — verträglich, Vorhersage NO,
   Σm_ν = 0,0592 eV festgeschrieben; K14.4 Bedeutung des Vorzeichens (kubische Invariante, nicht beobachtbar).
+- v2.6 (2026-10-20): K15 dritter vorab festgelegter Test (Vorzeichen als Majorana-CP-Parität) — verträglich,
+  nicht prüfbar; m_ββ ≤ 3,5 meV festgeschrieben. k15-MC-Fenster korrigiert (Werte unverändert).
 
 ---
 
