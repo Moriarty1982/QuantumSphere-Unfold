@@ -768,6 +768,23 @@ Gegen Σ < 0,0642 eV (DESI DR2 + CMB): **NO verträglich, IO disfavorisiert.**
 Widerlegbar durch eine gemessene invertierte Ordnung (JUNO, DUNE) oder Σ ≳ 0,07 eV. Offen: Bedeutung des
 negativen Vorzeichens (bei geladenen Leptonen sind alle v_k positiv).
 
+**K14.4 Bedeutung des Vorzeichens (M, S; Skript `llm/k16_vorzeichen.py`).**
+(a) Höchstens eine Komponente kann negativ sein. Das Vorzeichen ist das der kubischen Invariante
+e₃ = v₀v₁v₂ = t³(1 − 3r²/2 + r³ cos 3δ/√2), für r = 1: t³(cos 3δ/√2 − 1/2). Negativ ⇔ δ jenseits der
+Grenzphase π/12 (dort ist eine Masse exakt null). Auf dem r = 1-Kreis haben 75 % der Phasen eine negative
+Komponente; „alle positiv“ ist der Sonderfall.
+(b) Alle geladenen Dreiergruppen liegen knapp **innerhalb** des positiven Bogens (Leptonen 0,222 vs. 0,262;
+Down 0,100 vs. 0,163; Up 0,052 vs. 0,057), daher das jeweils fast masselose leichteste Teilchen. Die Neutrinos
+(0,479) liegen **jenseits** der Grenze. Das ist ein Ordnungsbefund, keine Erklärung.
+(c) Lesart B gibt dem Vorzeichen keine Bedeutung: Die SO(3)-Invarianten von (v, (1,1,1)) sind |v| und der
+45°-Winkel, für alle δ gleich. e₃ braucht den festen Generationen-Rahmen (S₃), also Flavour-Struktur, die das
+Modell nicht liefert.
+(d) Physikalisch ist das Vorzeichen von √m nicht beobachtbar: m = v² ist immer positiv; ein Massenvorzeichen
+lässt sich chiral wegdrehen; die messbaren Majorana-Phasen betreffen das Vorzeichen von m, nicht von √m.
+Bedeutung hätte es nur, wenn v selbst die fundamentale Größe ist (m als Quadrat einer Amplitude, z. B.
+Seesaw m_ν ∝ m_D², Yukawaon-Modelle). [P] Eine Deutung (etwa Dirac ↔ Majorana oder θ = π im Triolenkern)
+wäre eine neue Hypothese und braucht eine Vorab-Notiz.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -798,7 +815,7 @@ negativen Vorzeichens (bei geladenen Leptonen sind alle v_k positiv).
 - v2.3 (2026-10-20): K12 Koide-Form als Triole, Lesart B ist Kinematik, Dynamik fehlt; im Companion als v4.8.0-r10.
 - v2.4 (2026-10-20): K13 erster vorab festgelegter Test (δ = K/3) — widerlegt; im Companion als v4.8.0-r11.
 - v2.5 (2026-10-20): K14 zweiter vorab festgelegter Test (Neutrinos, r = 1) — verträglich, Vorhersage NO,
-  Σm_ν = 0,0592 eV festgeschrieben.
+  Σm_ν = 0,0592 eV festgeschrieben; K14.4 Bedeutung des Vorzeichens (kubische Invariante, nicht beobachtbar).
 
 ---
 

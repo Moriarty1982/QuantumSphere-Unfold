@@ -226,6 +226,8 @@ QA = [
  "[S] Nein. H2 ist nur vertraeglich, nicht bestaetigt. [M] Sigma = 0,0592 eV liegt nur 0,4 meV ueber dem Minimum der normalen Ordnung (m1 = 0); jedes Modell mit fast masselosem leichtestem Neutrino sagt praktisch dasselbe. Die Idee ist ausserdem nicht neu (Brannen 2006). Widerlegen wuerde H2 eine gemessene invertierte Ordnung oder Sigma deutlich ueber 0,07 eV."),
 ("zahl", "Kann die Neutrino-Koide-Zahl mit lauter positiven Wurzeln 2/3 erreichen?",
  "[M] Nein. Bei den gemessenen Massendifferenzen ist K hoechstens 0,585 (normale Ordnung) bzw. 0,500 (invertiert), jeweils im hierarchischen Grenzfall. K = 2/3 braucht ein negatives v_k; die Triolen-Form erlaubt das fuer r = 1 bis -0,414 t."),
+("zahl", "Was bedeutet das negative Vorzeichen beim leichtesten Neutrino?",
+ "[M] Es ist das Vorzeichen der kubischen Invariante e3 = v0 v1 v2 = t^3 (cos 3 delta / sqrt2 - 1/2) fuer r = 1; negativ jenseits der Grenzphase pi/12, wo eine Masse null ist. Hoechstens eine Komponente kann negativ sein; auf 75 % des Kreises ist eine negativ. Alle geladenen Dreiergruppen liegen knapp im positiven Bogen, die Neutrinos jenseits davon. [S] Lesart B macht das Vorzeichen nicht invariant (nur |v| und der 45-Grad-Winkel sind SO(3)-invariant), und physikalisch ist das Vorzeichen von sqrt m nicht beobachtbar, weil m = v^2. [P] Eine Deutung waere eine neue Hypothese mit Vorab-Notiz."),
 # ---------------------------------------------------------------- F: Pruefpunkte / offen
 ("offen", "Welche Modellentscheidungen sind in Lesart B noch offen?",
  "[P] Ob der Dualitaetswinkel physikalisch oder Eichfreiheit ist; die Rolle von t; die Transportaussage K(L_n) = L_{n-1}. Die Sektor-Zuordnung ist seit r07 als Arbeitszuordnung gesetzt und umkehrbar."),
