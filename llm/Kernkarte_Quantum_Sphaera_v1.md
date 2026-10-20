@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v3.7
+# Kernkarte Quantum Sphaera — v3.8
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -180,6 +180,8 @@ erscheinen als Fasern; der Frame-Offset β_sym ist ein Hopf-Winkel.
 - **Hopf-Lücke:** 4,9 % in β_sym, 6,8 % in γ_L.
 - Drei Generationen (Thm. `thm:three-generations`): Gen_i ≅ (ℂ⊗ℍ)⊗e_{i+3}, e₄,e₅,e₆ ∈ Im 𝕆 als
   ℂ³-Triplett unter SU(3) ⊂ G₂ = Aut(𝕆) (Dixon-Algebra ℂ⊗ℍ⊗𝕆).
+  **[P, K25]** Der Beweis gibt jeder Generation „one color index“: Farbe und Generation liegen auf demselben
+  Triplett. Für Quarks (3 Farben × 3 Generationen) reicht das nicht; die Zuordnung muss getrennt werden.
 
 **S:**
 - Die Hopf-Faserungen selbst sind klassische, gesicherte Mathematik.
@@ -1025,6 +1027,23 @@ Triolen-Lifts zwischen TM1- und θ₁₃ = 0-Lift. **Kein Auswahlgrund.** Damit 
 Kaskade (K19.3), Kompensator (H7) noch Assoziator (H10) den TM1-Lift; nach JUNO 2026 ist TM1 ohnehin
 disfavorisiert (K23).
 
+### K25 — Prüfung: Quark-Werte aus der Oktonionen-Struktur? (2026-10-20)
+
+Dokument `llm/Pruefung_Quarks_Oktonionen.md`. Kein Datenvergleich, keine Vorhersage.
+
+**K25.1 Zielwerte schemaabhängig (M).** r_u = 1,2895 (M_Z) bzw. 1,2435 (PDG-Standardskalen), r_d = 1,1151 bzw.
+1,0926: Spanne 3,6 % bzw. 2,0 %, rund hundertmal größer als der statistische Fehler. Koide gilt bei Leptonen nur
+für Polmassen; Quarks haben keine sauberen Polmassen. In x = r² − 1 treffen zufällige Konstanten die Bänder mit
+etwa 12 % bzw. 5 %. Strukturtreffer wären Zufall; **es wird nicht gefittet.**
+
+**K25.2 Farbe = Generation im Companion (S).** `thm:three-generations` legt die Generationen auf e₄, e₅, e₆, das
+Triplett unter SU(3) ⊂ G₂, und gibt jeder Generation einen Farbindex. In der Dixon-Lesart ist dieses SU(3) die
+Farbgruppe. Folgen: (a) Quarks brauchen 3 × 3 Zustände, ein Triplett reicht nicht. (b) Die r12-Flavour-Analyse
+(Δ(96), TM1/TM2, Cayley–Dickson-CP) ist mathematisch richtig, setzt physikalisch aber „Triplett = Generationen“
+voraus; als Farbe gelesen würde eine gebrochene Flavour-Symmetrie in SU(3)_c die Farbe brechen.
+**Ergebnis:** Quark-Werte aus der jetzigen Struktur nicht ableitbar; zuerst müssen Farbe und Generation getrennt
+werden.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1084,6 +1103,8 @@ disfavorisiert (K23).
   (sin²θ₁₂ = 0,3086 für künftige JUNO-Daten).
 - v3.7 (2026-10-20): K24 neunter vorab festgelegter Test (Assoziator) — kein Auswahlgrund; Strukturbefund
   [e₄,e₅,e₆] = −2e₇.
+- v3.8 (2026-10-20): K25 Quark-Prüfung — Zielwerte schemaabhängig (2–4 %), Farbe und Generation im Companion auf
+  demselben Triplett; r12-Flavour-Analyse gilt nur unter „Triplett = Generationen“; Vermerk in Abschnitt 3.
 
 ---
 
