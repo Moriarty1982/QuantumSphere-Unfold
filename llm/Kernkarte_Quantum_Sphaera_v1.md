@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v3.0
+# Kernkarte Quantum Sphaera — v3.1
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -913,6 +913,20 @@ Vorzeichenstruktur der Oktonionen tut es. TM2 entsteht aus reinen Vorzeichenwech
 festhalten. Die Δ(96)-Spalte hätte mit dieser Konvention als ν₂ einen der Einträge |U_μ2|², |U_τ2|² bei 0,045;
 gemessen sind beide etwa 0,2 oder größer (3σ-Bereiche); sie scheidet für ν₂ aus (grobe Prüfung, kein Fit). [V] Offen bleibt, welcher Lift ausgewählt wird.
 
+### K19 — Sechster vorab festgelegter Test: Kriterien für die Auswahl des Lifts (2026-10-20)
+
+Vorab-Notiz `llm/Vorab_Notiz_H6_Lift_Kriterien.md` (Commit e1e2393); Ergebnis `llm/Ergebnis_H6_Lift_Kriterien.md`;
+Skript `llm/k23_test_h6.py`.
+
+**K19.1 Ergebnis (M).** Die Triole e₄→e₅→e₆ hat 4 Lifts der Ordnung 3, einer vorzeichenfrei; alle Befunde sind
+für alle Lifts gleich. Hauptkriterium A (h g₃ h = g₃⁻¹, Diedergruppe S₃) gilt für die θ₁₃ = 0-Lifts, nicht für
+TM1: **Hauptkriterium spricht gegen TM1.** Nebenkriterium C trennt umgekehrt: ⟨g₃, h_TM1⟩ hat Ordnung 24 mit
+S₄-Ordnungsstatistik, ⟨g₃, h_θ₁₃=0⟩ ist S₃. B, D–G trennen nicht; H fällt mit A zusammen.
+
+**K19.2 Einordnung (S).** Minimalität (S₃) gibt θ₁₃ = 0 und ist empirisch widerlegt; TM1 entspricht
+Vollständigkeit (Triole und Restspiegelung erzeugen den ganzen Fano-Punkt-Stabilisator S₄). Dieses Prinzip ist
+nachträglich gefunden und zählt nur, wenn es sich unabhängig begründen lässt.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -958,6 +972,8 @@ gemessen sind beide etwa 0,2 oder größer (3σ-Bereiche); sie scheidet für ν�
   irreduzibel. **Korrektur von K18.3–4:** TM1 = Lift mit Zentrum im Anti-Triplett e₁,e₂,e₃ (zweiter Lift dort
   gibt θ₁₃ = 0); TM2 = reine Vorzeichenwechsel; Zentrum e₇ liefert keine Involution; e₄,e₅,e₆ gibt die
   Δ(96)-Spalte.
+- v3.1 (2026-10-20): K19 sechster vorab festgelegter Test (Kriterienliste für den Lift) — Hauptkriterium (S₃ mit
+  der Triole) spricht gegen TM1; Hinweis: TM1 ⇔ Triole und Restspiegelung erzeugen S₄.
 
 ---
 
