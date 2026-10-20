@@ -1,10 +1,10 @@
-# v4.8.0-r03 to r14: local research line (source-only)
+# v4.8.0-r03 to r15: local research line (source-only)
 
 This folder records a research line that was developed in a local working copy of the published
 v4.8.0 source after the Zenodo release. It is **not** a release, does not change the frozen payload in
 [`release/v4.8.0/`](../../../release/v4.8.0/), and has not been merged into the full-source working copy in
 [`sources/research/`](../../../sources/research/) or into the v4.9.0 research candidate. (The folder name
-keeps its original range r03–r12; it now also contains r13 and r14.)
+keeps its original range r03–r12; it now also contains r13–r15.)
 
 - Public baseline: v4.8.0, Version DOI `10.5281/zenodo.23365244`, Concept DOI `10.5281/zenodo.19210728`
   (unchanged by this line).
@@ -16,12 +16,12 @@ keeps its original range r03–r12; it now also contains r13 and r14.)
 
 | Path | Content |
 |---|---|
-| `Quantum_Sphaera_Companion_v4_8_0_r14_working_source.tex` | complete working source after layer r14 |
-| `rounds/v480_r03_round.tex` … `v480_r14_round.tex` | each layer as a separate append-only block |
-| `llm/` | working material in German: core map (`Kernkarte`), check scripts `k1`–`k28`, pre-registration notes and results H1–H10, JUNO 2026 re-check, quark check, comparison with the v4.9.0 candidate, separation of colour and generation, review of the Riemann source, training data for a local guard-discipline model |
+| `Quantum_Sphaera_Companion_v4_8_0_r15_working_source.tex` | complete working source after layer r15 |
+| `rounds/v480_r03_round.tex` … `v480_r15_round.tex` | each layer as a separate append-only block |
+| `llm/` | working material in German: core map (`Kernkarte`), check scripts `k1`–`k29`, pre-registration notes and results H1–H10, JUNO 2026 re-check, quark check, comparison with the v4.9.0 candidate, separation of colour and generation, review of the Riemann source, training data for a local guard-discipline model |
 
 The working source differs from `release/v4.8.0/Quantum_Sphaera_Companion_v4_8_0_source.tex` only by
-(a) the appended layers r03–r14 and (b) a preamble change that re-enables PDF bookmarks
+(a) the appended layers r03–r15 and (b) a preamble change that re-enables PDF bookmarks
 (`bookmarks=true`, removal of the r25 `bookmarks=false` line, `\pdfstringdefDisableCommands` for math in
 section titles). Build: three pdfLaTeX passes; audit against the previous layer without hard deviations
 (0 undefined references or citations, 0 duplicate labels, no new overfull boxes).
@@ -42,6 +42,7 @@ section titles). Build: three pdfLaTeX passes; audit against the previous layer 
 | r12 | Pre-registered neutrino tests, octonionic flavour group, PMNS reclassification |
 | r13 | JUNO 2026 re-check, associator of the generation triple, colour–generation assignment |
 | r14 | Separating colour and generation (sedenions G₂ × S₃; triality form) |
+| r15 | The octonionic Hopf fibration as carrier of the triality slots |
 
 ## Pre-registration evidence
 

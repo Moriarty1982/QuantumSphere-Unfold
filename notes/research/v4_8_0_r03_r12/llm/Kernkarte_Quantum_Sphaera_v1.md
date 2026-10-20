@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v4.2
+# Kernkarte Quantum Sphaera — v4.4
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1106,6 +1106,30 @@ Beweis über Re-Teil des Assoziators, Rang 9), vorgeschlagene Zuordnung (V), Fol
 Aut(𝕊) genau G₂ × S₃ ist, wird aus der Literatur übernommen, nicht neu bewiesen. Ledger R_cg^{r14} = (0,1,1);
 Guards unverändert, β₄ unverbraucht.
 
+### K30 — Träger der Triality-Plätze: die oktonionische Hopf-Faserung (2026-10-20)
+
+Dokument `llm/Traeger_Triality_Hopf.md`; Skript `llm/k29_hopf_triality_traeger.py`. Modellbau, kein Datenvergleich.
+
+**K30.1 (M).** Die Hopf-Abbildung h(x,y) = (|x|² − |y|², 2xȳ) aus `thm:hopf` ist das Triality-Produkt. Die
+Einheits-Tripel {(a,b,c) : (ab)c = 1} sind zyklisch (Triole) und unter (a,b,c) → (ā,c̄,b̄) abgeschlossen (S₃),
+Dimension 14, G₂-diagonal invariant. Über dem Äquator von 𝕆P¹ ist (√2·x, √2·ȳ, v̄) mit v = 2xȳ ein Einheits-
+Tripel; die Faser über v ist {(a, ā·v)} ≅ S⁷. Die drei Plätze sind die beiden Totalraum-Komponenten und der Basispunkt.
+
+**K30.2 (M).** Symmetrischer Punkt a = b = c ⇔ a³ = 1, a = exp(2πu/3). Für u = e₇ ist a = ω in span(1, e₇); sein
+Stabilisator in G₂ hat Dimension 8 = SU(3), die Farbgruppe. Generationen-Symmetriepunkt und Farbgruppe hängen über
+e₇ zusammen.
+
+**K30.3 Probe (M).** In span(1, e₇) wird (ab)c = 1 zu α₁ + α₂ + α₃ ≡ 0. Koide-Phasen δ + 2πk/3 verlangen dann
+3δ ≡ 0; gemessen 3δ = 0,667 → direkte Lesart scheitert. (3δ ≈ 2/3 ist die bekannte 2/9-Zahl, in r11 als nicht
+allgemein widerlegt; zählt nicht.) **Offen:** Massenhierarchie aus Abweichungen vom symmetrischen Tripel.
+
+### K31 — Companion-Runde v4.8.0-r15 (2026-10-20)
+
+Runde `sec:v480-r15-hopf-triality-carrier` (Snippet `llm/v480_r15_round.tex`) hält K30 fest: Theoremlet r15.1
+(Einheits-Tripel 𝒯, Hopf-Abbildung, Äquator-Faser), Theoremlet r15.2 (symmetrischer Punkt, Stabilisator SU(3)),
+Probe der Koide-Phasen (scheitert). Ledger R_cg^{r15} = (0,0,1); Guards unverändert, β₄ unverbraucht.
+Build 3 Läufe, Audit gegen r14 ohne harte Abweichung.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1173,6 +1197,8 @@ Guards unverändert, β₄ unverbraucht.
 - v4.1 (2026-10-20): K28 Trennung von Farbe und Generation (Sedenionen: nur 2 farbige Generationen; Triality:
   3 × 3 unabhängig, empfohlen); Δ(96)-Mischungs-Lesart entfällt; Vermerk in Abschnitt 3.
 - v4.2 (2026-10-20): K29 Companion-Runde v4.8.0-r14 (Trennung von Farbe und Generation im Paper).
+- v4.3 (2026-10-20): K30 Hopf-Faserung als Träger der Triality-Plätze; symmetrischer Punkt ω ↔ Farbgruppe SU(3).
+- v4.4 (2026-10-20): K31 Companion-Runde v4.8.0-r15.
 
 ---
 
