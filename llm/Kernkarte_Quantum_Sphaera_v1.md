@@ -819,6 +819,15 @@ Beide mit gleichem Vorab-Gewicht, ohne freie Parameter über θ₁₃, θ₂₃ 
 auszeichnet, ist offen. Festgeschrieben für TM1: sin²θ₁₂ = 0,318 (JUNO prüft bald auf etwa 0,5 %; bei
 Mittelwert 0,308 wäre auch TM1 ausgeschlossen), δ_CP = 259–267° (DUNE, Hyper-K).
 
+**K16.4 Überlagerung von TM1 und TM2 (M; Skript `llm/k19_tm_ueberlagerung.py`, reine Strukturrechnung).**
+(a) Beide Spalten exakt erhalten erzwingt durch Unitarität die dritte: tribimaximal, |U_e3|² = 0 —
+ausgeschlossen (gemessen 0,022). (b) Überlagerung = erhalten bleibt w = cos a · (1,1,1)/√3 − sin a · e^{ib}
+(2,−1,−1)/√6 (a = 0: TM2, a = 90°: TM1). Gleichgewicht 1:1 (a = 45°): |U_e|² von w ist 0,029 (b = 0),
+0,500 (b = 90°) oder 0,971 (b = 180°); keiner passt zu ν₁ (0,677) oder ν₂ (0,301) — ausgeschlossen.
+(c) Mit freiem Gewicht passt θ₁₂ immer, und zwar bei a = 90,6° (fast reines TM1) oder a = 2,0° (fast reines
+TM2); θ₁₂ ist dann Eingabe, kein Test. Die Daten verlangen also keine echte Überlagerung, sondern fast reine
+Endpunkte. Zwischen „TM1“ und „TM2 + 2° Beimischung“ entscheidet erst δ_CP.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -854,6 +863,7 @@ Mittelwert 0,308 wäre auch TM1 ausgeschlossen), δ_CP = 259–267° (DUNE, Hype
   nicht prüfbar; m_ββ ≤ 3,5 meV festgeschrieben. k15-MC-Fenster korrigiert (Werte unverändert).
 - v2.7 (2026-10-20): K16 vierter vorab festgelegter Test (TM1 gegen TM2, 1:1) — TM1 stark bevorzugt
   (Δχ² = 10,3), TM2 disfavorisiert; Vorhersagen sin²θ₁₂ = 0,318, δ_CP ≈ 262° festgeschrieben.
+  K16.4 Überlagerung: beide exakt ⇒ tribimaximal (ausgeschlossen); 1:1 ausgeschlossen; freies Gewicht ohne Test.
 
 ---
 

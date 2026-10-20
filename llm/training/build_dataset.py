@@ -236,6 +236,8 @@ QA = [
  "[M] Im vorab festgelegten 1:1-Vergleich (H4, Commit 00d297e) mit NuFIT 6.0, normale Ordnung: chi2(TM1) = 4,4, chi2(TM2) = 14,7 bei 2 Freiheitsgraden, Delta chi2 = 10,3. [S] TM1 ist stark bevorzugt, TM2 fuer sich disfavorisiert. Den Hauptteil traegt theta12, das vorher bekannt war; der blinde Teil delta_CP allein gibt Delta chi2 = 2,8. [P] Festgeschrieben fuer TM1: sin2 theta12 = 0,318 und delta_CP etwa 259 bis 267 Grad."),
 ("guard", "TM1 gewinnt 170 zu 1, also folgt die Neutrinomischung aus der Triolen-Struktur?",
  "[S] Nein. TM1 und TM2 sind bekannte Muster aus der Literatur; der Vergleich zeigt nur, welches besser passt. Das Modell begruendet bisher nicht, warum gerade die Spalte (2,-1,-1)/sqrt6 erhalten bleibt; die naheliegende Skalar-Richtung (1,1,1) hat verloren. JUNO kann TM1 bald ausschliessen, falls sin2 theta12 bei 0,308 bleibt."),
+("zahl", "Koennen TM1 und TM2 gleichzeitig gelten oder sich ueberlagern?",
+ "[M] Gelten beide exakt, legt die Unitaritaet die dritte Spalte fest: tribimaximal mit theta13 = 0, ausgeschlossen. Eine Ueberlagerung erhaelt die Spalte w = cos a (1,1,1)/sqrt3 - sin a e^{ib} (2,-1,-1)/sqrt6. Bei 1:1 (a = 45 Grad) hat w |U_e|^2 = 0,029, 0,500 oder 0,971, passend weder zu nu1 (0,677) noch zu nu2 (0,301). [S] Mit freiem Gewicht passt theta12 immer (a = 90,6 oder 2,0 Grad), dann ist es Eingabe statt Test; die Daten wollen fast reine Endpunkte."),
 # ---------------------------------------------------------------- F: Pruefpunkte / offen
 ("offen", "Welche Modellentscheidungen sind in Lesart B noch offen?",
  "[P] Ob der Dualitaetswinkel physikalisch oder Eichfreiheit ist; die Rolle von t; die Transportaussage K(L_n) = L_{n-1}. Die Sektor-Zuordnung ist seit r07 als Arbeitszuordnung gesetzt und umkehrbar."),
