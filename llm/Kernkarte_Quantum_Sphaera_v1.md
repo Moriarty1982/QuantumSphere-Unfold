@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v3.2
+# Kernkarte Quantum Sphaera — v3.3
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -940,7 +940,25 @@ und wirken auf alle Kaskaden-Projektionen gleich. **Die Kaskade sieht den Unters
 Vollständigkeit nicht erzwingen. Vermutung widerlegt.**
 (d) *Offen (V):* Ein Auswahlgrund müsste aus der Multiplikation selbst kommen, nicht aus Projektionen. Im
 Companion treten Vorzeichen-Automorphismen bisher nur bei der reparierten J-Spiegelung auf (K6.2: muss vier
-Einheiten negieren und eine Linie festhalten); ob das hier hilft, ist ungeprüft.
+Einheiten negieren und eine Linie festhalten); ob das hier hilft, ist ungeprüft. → geprüft in K20.
+
+### K20 — Siebter vorab festgelegter Test: Heisenberg-Kompensator als Auswahlkriterium (2026-10-20)
+
+Vorab-Notiz `llm/Vorab_Notiz_H7_Heisenberg_Kompensator.md` (Commit e6da7db); Ergebnis
+`llm/Ergebnis_H7_Heisenberg_Kompensator.md`; Skript `llm/k25_test_h7.py`.
+
+**K20.1 Ergebnis (M).** J als Vorzeichen-Automorphismus (alle 7 Kandidaten, Haupt: negiert e₁, hält e₇ — Linien
+(2,5,7), (3,4,7)). Für alle J und alle vier Triolen-Lifts gilt: Kommutieren mit h (K1), J-Eigenvektor (K2) und
+J-gerade Spalte (K3) verhalten sich für TM1- und θ₁₃ = 0-Lift gleich. **Kein Auswahlgrund aus dem Kompensator.**
+Grund (vorab offengelegt, bestätigt): Die beiden Lifts unterscheiden sich um ein Element der abelschen
+Vorzeichengruppe.
+
+**K20.2 Nebenbefunde (M).** (a) Die Haupt-Kandidaten für J kommutieren nicht mit der Triole. (b) Einziger
+Vorzeichen-Automorphismus, der mit der Triole kommutiert: feste Linie (1,2,3), negiert e₄…e₇ = Cayley–Dickson-
+Involution p + qℓ ↦ p − qℓ. Sie kommutiert mit allen Triolen-Lifts und allen sechs TM1-/θ₁₃ = 0-Involutionen
+(24 von 96 Elementen von Stab(+e₇)), negiert e₇ und wirkt auf dem Triplett antilinear (CP-artig).
+[V] Als verallgemeinerte CP-Symmetrie könnte sie CP-Phasen festlegen; das wäre eine neue Hypothese (H8) mit
+eigener Vorab-Notiz.
 
 ---
 
@@ -991,6 +1009,8 @@ Einheiten negieren und eine Linie festhalten); ob das hier hilft, ist ungeprüft
   der Triole) spricht gegen TM1; Hinweis: TM1 ⇔ Triole und Restspiegelung erzeugen S₄.
 - v3.2 (2026-10-20): K19.3 Kaskade erzwingt Vollständigkeit nicht (sieht die Vorzeichen-Symmetrien nicht);
   Korrektur: ⟨Triole, h_TM1⟩ = Vorzeichen-Kern ⋊ S₃, nicht der Fano-Punkt-Stabilisator.
+- v3.3 (2026-10-20): K20 siebter vorab festgelegter Test (Heisenberg-Kompensator) — kein Auswahlgrund;
+  Nebenbefund: Cayley–Dickson-Involution kommutiert mit Triole und Lifts, wirkt CP-artig (Kandidat für H8).
 
 ---
 
