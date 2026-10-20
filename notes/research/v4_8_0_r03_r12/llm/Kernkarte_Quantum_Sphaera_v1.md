@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v4.4
+# Kernkarte Quantum Sphaera — v4.6
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -75,7 +75,8 @@ gescheitert; Nachbefund |U_e2|² = β_sym² (nicht registriert). H6/H7 Auswahl d
 Minimalität, Kaskade noch Kompensator wählen TM1. H8 Cayley–Dickson-Involution als CP (K21) — Spannung
 (χ² = 8,8 bei 3 FG), Vorhersage sin²θ₂₃ = ½, δ_CP = 270°. **Nachprüfung JUNO 2026 (K23):** H2 gestützt (NO
 ≥ 2,1σ); TM1 χ² = 9,6 → disfavorisiert; H8 χ² = 14,0 → disfavorisiert. H9 sin²θ₁₂ = β_sym²/cos²θ₁₃ = 0,3086
-für künftige JUNO-Daten festgeschrieben (nachträglich gefunden). H10 Assoziator (K24) — kein Auswahlgrund.
+für künftige JUNO-Daten festgeschrieben (nachträglich gefunden). H10 Assoziator (K24) — kein Auswahlgrund. H11 Massen aus invarianten
+Funktionen auf dem Tripel-Raum (K32) — widerlegt: bis Grad 4 höchstens zwei verschiedene Normen; Grad ≥ 6 nötig.
 Regel: Jede neue Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 **Farbe und Generation (K25, K28):** Im Companion liegen beide auf demselben Triplett e₄, e₅, e₆. Vorschlag (V):
@@ -1130,6 +1131,34 @@ Runde `sec:v480-r15-hopf-triality-carrier` (Snippet `llm/v480_r15_round.tex`) h�
 Probe der Koide-Phasen (scheitert). Ledger R_cg^{r15} = (0,0,1); Guards unverändert, β₄ unverbraucht.
 Build 3 Läufe, Audit gegen r14 ohne harte Abweichung.
 
+### K32 — Elfter vorab festgelegter Test H11: Massen aus dem Tripel-Raum (2026-10-20)
+
+Vorab-Notiz `llm/Vorab_Notiz_H11_Massen_Tripelraum.md` (Commit 8e5eaa9), Ergebnis `llm/Ergebnis_H11_Massen_Tripelraum.md`,
+Skript `llm/k30_test_h11.py`. Ablesung (verbindlich): √m_k ∝ n_k = |Platz k|.
+
+**K32.1 H11a (M).** Die Triality-Form t = Re((ab)c) hat bei fester Gesamtnorm ihre Extrema bei gleichen Normen
+(K = 1/3, t = ±1); die übrigen kritischen Punkte haben zwei leere Plätze (K = 1).
+
+**K32.2 H11b (M).** Für V = αS + βS² + γQ − κt (allgemeinstes G₂ × S₃-invariantes Potential bis Grad 4) erfüllt
+x_k = n_k² an jedem kritischen Punkt mit n_k ≠ 0 dieselbe quadratische Gleichung (2α + 4βS)x + 4γx² = κP. Also höchstens
+zwei verschiedene Normen. Gitter (210 Punkte): 180 × gleiche Normen, 25 × ein besetzter Platz, 5 × flach, 0 × drei
+verschiedene.
+
+**K32.3 Urteil (S).** H11a und H11b **widerlegt** nach dem festgelegten Kriterium. Toleranz für „verschieden“ von 10⁻⁶ auf
+10⁻⁴ geändert (offengelegt; das Urteil folgt analytisch, unabhängig davon). Mindestgrad für drei verschiedene Normen: 6
+(notwendig, nicht als hinreichend gezeigt). Jede Erweiterung bringt ≥ 2 neue Parameter, also Anpassung statt Vorhersage.
+
+**K32.4 Neueinordnung.** K30.3 „offen: Hierarchie aus Abweichungen vom symmetrischen Tripel“ ist für natürliche
+Invarianten bis Grad 4 negativ beantwortet. Der Massenmechanismus bleibt offen (P); die Triole liefert weiterhin die
+Form (K12), nicht die Dynamik.
+
+### K33 — Companion-Runde v4.8.0-r16 (2026-10-20)
+
+Runde `sec:v480-r16-triple-space-masses` (Snippet `llm/v480_r16_round.tex`) hält K32 fest: Rahmen und Hypothesen
+H11a/H11b mit festem Kriterium, Theoremlet r16.1 (dieselbe quadratische Gleichung für alle x_k, höchstens zwei
+Normen), Gitterbefund, offengelegte Toleranz-Abweichung, Urteil (widerlegt, Mindestgrad 6). Ledger R_cg^{r16} = (0,0,1);
+Guards unverändert, β₄ unverbraucht. Build 3 Läufe (1084 Seiten), Audit gegen r15 ohne harte Abweichung.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1199,6 +1228,8 @@ Build 3 Läufe, Audit gegen r14 ohne harte Abweichung.
 - v4.2 (2026-10-20): K29 Companion-Runde v4.8.0-r14 (Trennung von Farbe und Generation im Paper).
 - v4.3 (2026-10-20): K30 Hopf-Faserung als Träger der Triality-Plätze; symmetrischer Punkt ω ↔ Farbgruppe SU(3).
 - v4.4 (2026-10-20): K31 Companion-Runde v4.8.0-r15.
+- v4.5 (2026-10-20): K32 elfter vorab festgelegter Test (H11, Massen aus dem Tripel-Raum) — widerlegt; Mindestgrad 6.
+- v4.6 (2026-10-20): K33 Companion-Runde v4.8.0-r16.
 
 ---
 
