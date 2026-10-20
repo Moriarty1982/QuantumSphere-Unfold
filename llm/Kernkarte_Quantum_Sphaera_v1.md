@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v3.9
+# Kernkarte Quantum Sphaera — v4.0
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1063,6 +1063,13 @@ Widerspruch, aber H2/H3 sind so zu benennen. (b) Beide Linien legen Farbe und Ge
 **K26.3 Empfehlungen.** v4.9: r04/r05 und K25.2 übernehmen. Lokal: H2/H3 umbenennen, v4.9-Kammern als
 unabhängige Bestätigung zitieren. Zusammenführung über Entwurf-PR #19 (berührt keine v4.9-Datei).
 
+### K27 — Companion-Runde v4.8.0-r13 (2026-10-20)
+
+Runde `sec:v480-r13-juno-associator-colour` (Snippet `llm/v480_r13_round.tex`) hält K23–K26 fest: Nachprüfung mit
+JUNO 2026 (Tabelle H2/H4/H8), H9 (b75170d), Theoremlet r13.1 [e₄,e₅,e₆] = −2e₇ mit Beweis aus der Multiplikation,
+H10 (a6b5bcb), Farbe/Generation (Folgen für r12 und für Quarks, Schemaabhängigkeit), Abgleich mit v4.9 (H2/H3 als
+Koide mit Vorzeichen neu eingeordnet). Ledger R_mix^{r13} = (0,0,1,1); Guards unverändert, β₄ unverbraucht.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1126,6 +1133,7 @@ unabhängige Bestätigung zitieren. Zusammenführung über Entwurf-PR #19 (berü
   demselben Triplett; r12-Flavour-Analyse gilt nur unter „Triplett = Generationen“; Vermerk in Abschnitt 3.
 - v3.9 (2026-10-20): K26 Abgleich mit v4.9 (Phasenkammern unabhängig bestätigt; H2/H3 als „Koide mit Vorzeichen“
   neu eingeordnet; Farbe/Generation betrifft beide Linien).
+- v4.0 (2026-10-20): K27 Companion-Runde v4.8.0-r13 (K23–K26 im Paper).
 
 ---
 
