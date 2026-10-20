@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v4.0
+# Kernkarte Quantum Sphaera — v4.2
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -75,8 +75,12 @@ gescheitert; Nachbefund |U_e2|² = β_sym² (nicht registriert). H6/H7 Auswahl d
 Minimalität, Kaskade noch Kompensator wählen TM1. H8 Cayley–Dickson-Involution als CP (K21) — Spannung
 (χ² = 8,8 bei 3 FG), Vorhersage sin²θ₂₃ = ½, δ_CP = 270°. **Nachprüfung JUNO 2026 (K23):** H2 gestützt (NO
 ≥ 2,1σ); TM1 χ² = 9,6 → disfavorisiert; H8 χ² = 14,0 → disfavorisiert. H9 sin²θ₁₂ = β_sym²/cos²θ₁₃ = 0,3086
-für künftige JUNO-Daten festgeschrieben (nachträglich gefunden). Regel: Jede neue
-Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
+für künftige JUNO-Daten festgeschrieben (nachträglich gefunden). H10 Assoziator (K24) — kein Auswahlgrund.
+Regel: Jede neue Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
+
+**Farbe und Generation (K25, K28):** Im Companion liegen beide auf demselben Triplett e₄, e₅, e₆. Vorschlag (V):
+Generationen = drei Triality-Plätze von Re((xy)z) (S₃, vertauscht mit G₂), Farbe = SU(3)-Triplett je Platz.
+Folge: Die Δ(96)-Mischungsanalyse (r12) ist dann keine Flavour-Aussage mehr. H2/H3 sind „Koide mit Vorzeichen“.
 
 ---
 
@@ -182,6 +186,8 @@ erscheinen als Fasern; der Frame-Offset β_sym ist ein Hopf-Winkel.
   ℂ³-Triplett unter SU(3) ⊂ G₂ = Aut(𝕆) (Dixon-Algebra ℂ⊗ℍ⊗𝕆).
   **[P, K25]** Der Beweis gibt jeder Generation „one color index“: Farbe und Generation liegen auf demselben
   Triplett. Für Quarks (3 Farben × 3 Generationen) reicht das nicht; die Zuordnung muss getrennt werden.
+  **[V, K28]** Vorschlag: Generationen = die drei Triality-Plätze von Re((xy)z) auf 𝕆 ⊕ 𝕆 ⊕ 𝕆 (S₃, vertauscht mit
+  G₂), Farbe = SU(3)-Triplett e₄, e₅, e₆ in jedem Platz; 9 unabhängige farbige Zustände (nachgerechnet).
 
 **S:**
 - Die Hopf-Faserungen selbst sind klassische, gesicherte Mathematik.
@@ -1070,6 +1076,36 @@ JUNO 2026 (Tabelle H2/H4/H8), H9 (b75170d), Theoremlet r13.1 [e₄,e₅,e₆] = 
 H10 (a6b5bcb), Farbe/Generation (Folgen für r12 und für Quarks, Schemaabhängigkeit), Abgleich mit v4.9 (H2/H3 als
 Koide mit Vorzeichen neu eingeordnet). Ledger R_mix^{r13} = (0,0,1,1); Guards unverändert, β₄ unverbraucht.
 
+### K28 — Trennung von Farbe und Generation (2026-10-20)
+
+Dokument `llm/Trennung_Farbe_Generation.md`; Skript `llm/k28_sedenion_generationen.py`. Modellbau, kein Datenvergleich.
+
+**K28.1 Weg A, Sedenionen (M).** Aut(𝕊) = G₂ × S₃ (Gillard–Gresnigt) in der Companion-Konvention bestätigt: ψ
+(120°-Drehung in den sieben Ebenen (eᵢ, eᵢ₊₈)) und ε (a + b·e₈ ↦ a − b·e₈) erzeugen S₃ und vertauschen mit ganz
+G₂; Farbalgebra Stab(e₇) hat Dimension 8. Triolen-Relation 1 + ψ + ψ² = 0 auf 14 Richtungen. Aber
+𝕊 = 1 ⊕ sgn ⊕ 7·(Dublett): farbige Zustände tragen nur das S₃-Dublett; die 9 Zustände ψᵏ(e_c) haben Rang 6.
+**Nur zwei unabhängige farbige Generationen**; die Triolen-Relation selbst erzwingt die Abhängigkeit.
+
+**K28.2 Weg B, Triality (M).** t(x,y,z) = Re((xy)z) auf 𝕆 ⊕ 𝕆 ⊕ 𝕆 ist zyklisch invariant (ℤ₃-Triole), invariant
+unter (x,y,z) → (x̄,z̄,ȳ) (zusammen S₃) und unter diagonalem G₂ (vertauscht mit S₃). 3 Farben × 3 Generationen:
+**Rang 9**. Passt zu Abschnitt 3 (S₂ = 𝕆P¹ ↔ drei Generationen; G₂ = Triality-Fixgruppe in Spin(8)).
+
+**K28.3 Empfehlung (V).** Weg B: Generationenindex = Triality-Platz, Farbindex = SU(3)-Triplett je Platz.
+
+**K28.4 Folgen (S).** Δ(96) ⊂ SU(3) liegt danach in der Farbgruppe, ist also keine Flavour-Symmetrie:
+r12.2–r12.4 bleiben Mathematik, verlieren ihre Mischungs-Lesart (H4/H8 ohnehin disfavorisiert, K23). Reine
+Generationen-S₃ mit ℤ₃ (Triole) und Transposition gibt die Spalte (0, ½, ½), also θ₁₃ = 0 (= H6-Minimalität);
+Mischung braucht weitere Brechung. Die Triolen-Form ist die S₃-Zerlegung Singulett ⊕ Dublett; K = 2/3 bleibt
+Gleich-Norm-Bedingung ohne Herleitung.
+
+### K29 — Companion-Runde v4.8.0-r14 (2026-10-20)
+
+Runde `sec:v480-r14-colour-generation` (Snippet `llm/v480_r14_round.tex`) hält K28 fest: Anforderungen (a)–(c),
+Theoremlet r14.1 (Sedenionen, G₂ × S₃, 𝕊 = (1,1) ⊕ (1,sgn) ⊕ (7,2), Rang 6), Theoremlet r14.2 (Triality-Form,
+Beweis über Re-Teil des Assoziators, Rang 9), vorgeschlagene Zuordnung (V), Folgen für r12/r13. Dass
+Aut(𝕊) genau G₂ × S₃ ist, wird aus der Literatur übernommen, nicht neu bewiesen. Ledger R_cg^{r14} = (0,1,1);
+Guards unverändert, β₄ unverbraucht.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1134,6 +1170,9 @@ Koide mit Vorzeichen neu eingeordnet). Ledger R_mix^{r13} = (0,0,1,1); Guards un
 - v3.9 (2026-10-20): K26 Abgleich mit v4.9 (Phasenkammern unabhängig bestätigt; H2/H3 als „Koide mit Vorzeichen“
   neu eingeordnet; Farbe/Generation betrifft beide Linien).
 - v4.0 (2026-10-20): K27 Companion-Runde v4.8.0-r13 (K23–K26 im Paper).
+- v4.1 (2026-10-20): K28 Trennung von Farbe und Generation (Sedenionen: nur 2 farbige Generationen; Triality:
+  3 × 3 unabhängig, empfohlen); Δ(96)-Mischungs-Lesart entfällt; Vermerk in Abschnitt 3.
+- v4.2 (2026-10-20): K29 Companion-Runde v4.8.0-r14 (Trennung von Farbe und Generation im Paper).
 
 ---
 
