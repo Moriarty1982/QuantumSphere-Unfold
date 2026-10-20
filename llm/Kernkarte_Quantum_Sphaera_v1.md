@@ -870,6 +870,26 @@ vorhanden (Oktonionen-Multiplikation, Triolen-Satz über konkurrente Fano-Linien
 aus dem Punkt-Stabilisator der Fano-Ebene wäre also keine von außen geholte Zutat. Offen: Brechungsmuster
 herleiten, dann TM1 oder TM2 vorhersagen — vor dem Datenvergleich festzulegen.
 
+**K18.3 Wie die Fano-Symmetrie bricht (M; Skript `llm/k21_fano_brechung.py`, ohne Datenvergleich).**
+Ein fester Punkt P und eine Linie L nicht durch P zerlegen die 7 Punkte in {P} ∪ L ∪ R (R = 3 Punkte, nicht auf
+einer Linie). Das Dreier-Element von Stab(P) ≅ S₄ fixiert P und L und vertauscht L und R zyklisch. Die neun
+Involutionen zerfallen nach Fano-Geometrie in drei Klassen zu je 3; ihre erhaltene Spalte (in der Eigenbasis des
+Dreier-Elements):
+- Zentrum = P (S₄-Doppeltranspositionen): (1/3, 1/3, 1/3) → **TM2**;
+- Achse durch P, Zentrum auf L: (0, 1/2, 1/2) → dritte TBM-Spalte (erzwingt θ₁₃ = 0, ausgeschlossen);
+- Achse durch P, Zentrum in R: 2/3 auf der Eigenwert-1-Richtung, 1/6, 1/6 → **TM1**.
+Die drei TBM-Spalten entsprechen also genau den drei Lagen des Zentrums.
+
+**K18.4 Übersetzung in den Companion (M, Konventionen aus r04).** Linien (1,2,3), (1,4,5), (1,6,7), (2,4,6),
+(2,5,7), (3,4,7), (3,5,6). Mit P = e₇ (SU(3)-Singulett) und L = {e₁,e₂,e₃} (Anti-Triplett) ist R = {e₄,e₅,e₆},
+das Generationen-Triplett; die Companion-Zyklik e₄→e₅→e₆ ist ein Fano-Automorphismus dieses Typs (nachgeprüft).
+Damit: TM2 = Restsymmetrie mit Zentrum im Singulett e₇; TM1 = Restsymmetrie mit Zentrum in einer
+Generationen-Einheit e₄, e₅ oder e₆; die ausgeschlossene Variante = Zentrum im Anti-Triplett.
+[S] Annahmen: Elektron = Eigenwert-1-Richtung des Dreier-Elements (Standardkonvention); die 3-dim. Darstellung
+stammt aus der Wirkung auf die 4 Linien nicht durch P. Ob die G₂-Wirkung auf das Triplett (mit den Vorzeichen
+der Gruppe 2³·GL(3,2)) dieselbe Darstellung liefert, ist **ungeprüft**. [V] Welche Klasse das Modell auswählt,
+ist offen; beide Kandidaten (e₇ oder Generationen-Einheit) sind modellintern naheliegend.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -909,7 +929,8 @@ herleiten, dann TM1 oder TM2 vorhersagen — vor dem Datenvergleich festzulegen.
 - v2.8 (2026-10-20): K17 fünfter vorab festgelegter Test (Hopf-Winkel als Mischwinkel) — gescheitert
   ((i) 0/32, (ii) entartet); Strukturbefund |w_e|² = sin²(γ/2); Nachbefund |U_e2|² = β_sym² (nur Kandidat).
 - v2.9 (2026-10-20): K18 Rückwärtsanalyse (Lücken, minimale Änderungen, Kosten); Fano-Punkt-Stabilisator ≅ S₄
-  (Ordnungsstatistik) als modellinterner Weg zu einer Flavour-Symmetrie.
+  (Ordnungsstatistik) als modellinterner Weg zu einer Flavour-Symmetrie. K18.3–4: Brechung der Fano-Symmetrie;
+  TM2 ↔ Zentrum e₇, TM1 ↔ Zentrum in e₄,e₅,e₆, ausgeschlossene Variante ↔ Zentrum in e₁,e₂,e₃.
 
 ---
 
