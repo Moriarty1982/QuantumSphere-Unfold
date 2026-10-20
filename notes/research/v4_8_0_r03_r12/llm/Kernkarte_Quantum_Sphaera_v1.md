@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v3.5
+# Kernkarte Quantum Sphaera — v4.0
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -73,7 +73,9 @@ Majorana-Parität (K15) — verträglich, m_ββ ≤ 3,5 meV, nicht prüfbar. H4
 bevorzugt (Δχ² = 10,3), Vorhersage sin²θ₁₂ = 0,318, δ_CP ≈ 262°. H5 Hopf-Winkel als Mischwinkel (K17) —
 gescheitert; Nachbefund |U_e2|² = β_sym² (nicht registriert). H6/H7 Auswahl des TM1-Lifts (K19, K20) — weder
 Minimalität, Kaskade noch Kompensator wählen TM1. H8 Cayley–Dickson-Involution als CP (K21) — Spannung
-(χ² = 8,8 bei 3 FG), Vorhersage sin²θ₂₃ = ½, δ_CP = 270°. Regel: Jede neue
+(χ² = 8,8 bei 3 FG), Vorhersage sin²θ₂₃ = ½, δ_CP = 270°. **Nachprüfung JUNO 2026 (K23):** H2 gestützt (NO
+≥ 2,1σ); TM1 χ² = 9,6 → disfavorisiert; H8 χ² = 14,0 → disfavorisiert. H9 sin²θ₁₂ = β_sym²/cos²θ₁₃ = 0,3086
+für künftige JUNO-Daten festgeschrieben (nachträglich gefunden). Regel: Jede neue
 Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 ---
@@ -178,6 +180,8 @@ erscheinen als Fasern; der Frame-Offset β_sym ist ein Hopf-Winkel.
 - **Hopf-Lücke:** 4,9 % in β_sym, 6,8 % in γ_L.
 - Drei Generationen (Thm. `thm:three-generations`): Gen_i ≅ (ℂ⊗ℍ)⊗e_{i+3}, e₄,e₅,e₆ ∈ Im 𝕆 als
   ℂ³-Triplett unter SU(3) ⊂ G₂ = Aut(𝕆) (Dixon-Algebra ℂ⊗ℍ⊗𝕆).
+  **[P, K25]** Der Beweis gibt jeder Generation „one color index“: Farbe und Generation liegen auf demselben
+  Triplett. Für Quarks (3 Farben × 3 Generationen) reicht das nicht; die Zuordnung muss getrennt werden.
 
 **S:**
 - Die Hopf-Faserungen selbst sind klassische, gesicherte Mathematik.
@@ -772,6 +776,8 @@ Gegen Σ < 0,0642 eV (DESI DR2 + CMB): **NO verträglich, IO disfavorisiert.**
 **K14.3 Einordnung.** H2 ist verträglich, aber schwach trennend: Σ liegt nur 0,4 meV über dem NO-Minimum (m₁ = 0).
 Widerlegbar durch eine gemessene invertierte Ordnung (JUNO, DUNE) oder Σ ≳ 0,07 eV. Offen: Bedeutung des
 negativen Vorzeichens (bei geladenen Leptonen sind alle v_k positiv).
+**[Neueinordnung K26]** H2 ist „Koide mit Vorzeichen“: Mit nicht-negativen Wurzeln (v4.9-Konvention für das
+physikalische K) ergeben die H2-Massen K = 0,525. JUNO 2026 stützt die NO-Vorhersage (K23).
 
 **K14.4 Bedeutung des Vorzeichens (M, S; Skript `llm/k16_vorzeichen.py`).**
 (a) Höchstens eine Komponente kann negativ sein. Das Vorzeichen ist das der kubischen Invariante
@@ -994,6 +1000,76 @@ Vorzeichen, zyklische Matrix), r12.2 (Stab(+e₇) mit Δ(96)-Invarianten), r12.3
   eingestuft ist. CKM-Zeile erbt diesen Status; PMNS-Zeile widerlegt. CKM-Phase (π/3 gegen ≈ 70°) unberührt, offen.
 - Ledger: R_mix^{r12} = (0,0,1); Guards unverändert, β₄ = 1/256 unverbraucht.
 
+### K23 — Nachprüfung mit JUNO 2026 und Vorab-Notiz H9 (2026-10-20)
+
+Daten: JUNO, arXiv:2609.37895 (29.09.2026, 207,2 Tage): sin²θ₁₂ = 0,3036 ± 0,0064, Δm²₂₁ = 7,388(78)·10⁻⁵ eV²,
+Δm²₃₁ = +2,509·10⁻³ eV² (NO), NO bevorzugt mit ≥ 2,1σ. Lag beim Festschreiben von H2–H8 vor, war aber nicht
+bekannt (Datenbasis NuFIT 6.0) → unabhängige Nachprüfung. Dokument `llm/Nachpruefung_JUNO_2026.md`.
+Kombiniert mit NuFIT 6.0: sin²θ₁₂ = 0,3046 ± 0,0056.
+
+**K23.1 Ergebnisse (M).** H2: Σ = 0,0591 eV (NO), NO-Vorhersage gestützt. H4: χ²(TM1) = 9,6, χ²(TM2) = 49,1 —
+TM1 weit vor TM2, aber für sich **disfavorisiert**. H8: χ² = 14,0 bei 3 FG — **disfavorisiert**. Ursache:
+TM1 verlangt sin²θ₁₂ = 0,3182, gemessen 0,3046 (2,4σ).
+
+**K23.2 H9 (V, Vorab-Notiz b75170d).** sin²θ₁₂ = β_sym²/cos²θ₁₃ = 0,30862 ± 0,00018 (γ_BI = 0,2375 eingesetzt).
+Nachträglich gefunden (K17.4); heutiger Abstand zu JUNO 0,8σ zählt nicht. Getestet wird die nächste
+JUNO-Veröffentlichung mit σ ≤ 0,004: |z| < 2 verträglich, ≥ 3 widerlegt.
+
+### K24 — Neunter vorab festgelegter Test: Assoziator als Auswahlkriterium (2026-10-20)
+
+Vorab-Notiz `llm/Vorab_Notiz_H10_Assoziator.md` (Commit a6b5bcb); Ergebnis `llm/Ergebnis_H10_Assoziator.md`;
+Skript `llm/k27_test_h10.py`.
+
+**K24.1 Strukturbefund (M).** [e₄,e₅,e₆] = −2e₇: Der Assoziator des Generationen-Tripels zeigt auf das
+SU(3)-Singulett (Kaskaden-Ende, komplexe Struktur der Lesart B). Fano-Linien haben Assoziator 0, Nicht-Linien
+Norm 2. Jedes Element von Stab(+e₇) erhält ihn.
+
+**K24.2 Ergebnis (M).** Kriterien S1 (Haupt: [x, h(x), e₇] = 0), S2, S3, S4 trennen für keinen der vier
+Triolen-Lifts zwischen TM1- und θ₁₃ = 0-Lift. **Kein Auswahlgrund.** Damit wählen weder Minimalität (H6),
+Kaskade (K19.3), Kompensator (H7) noch Assoziator (H10) den TM1-Lift; nach JUNO 2026 ist TM1 ohnehin
+disfavorisiert (K23).
+
+### K25 — Prüfung: Quark-Werte aus der Oktonionen-Struktur? (2026-10-20)
+
+Dokument `llm/Pruefung_Quarks_Oktonionen.md`. Kein Datenvergleich, keine Vorhersage.
+
+**K25.1 Zielwerte schemaabhängig (M).** r_u = 1,2895 (M_Z) bzw. 1,2435 (PDG-Standardskalen), r_d = 1,1151 bzw.
+1,0926: Spanne 3,6 % bzw. 2,0 %, rund hundertmal größer als der statistische Fehler. Koide gilt bei Leptonen nur
+für Polmassen; Quarks haben keine sauberen Polmassen. In x = r² − 1 treffen zufällige Konstanten die Bänder mit
+etwa 12 % bzw. 5 %. Strukturtreffer wären Zufall; **es wird nicht gefittet.**
+
+**K25.2 Farbe = Generation im Companion (S).** `thm:three-generations` legt die Generationen auf e₄, e₅, e₆, das
+Triplett unter SU(3) ⊂ G₂, und gibt jeder Generation einen Farbindex. In der Dixon-Lesart ist dieses SU(3) die
+Farbgruppe. Folgen: (a) Quarks brauchen 3 × 3 Zustände, ein Triplett reicht nicht. (b) Die r12-Flavour-Analyse
+(Δ(96), TM1/TM2, Cayley–Dickson-CP) ist mathematisch richtig, setzt physikalisch aber „Triplett = Generationen“
+voraus; als Farbe gelesen würde eine gebrochene Flavour-Symmetrie in SU(3)_c die Farbe brechen.
+**Ergebnis:** Quark-Werte aus der jetzigen Struktur nicht ableitbar; zuerst müssen Farbe und Generation getrennt
+werden.
+
+### K26 — Abgleich mit der GitHub-Linie v4.9.0-Kandidat (2026-10-20)
+
+Dokument `llm/Abgleich_v49_Linie.md`; GitHub `main` 651b624, `sources/research/parts/`.
+
+**K26.1 Übereinstimmungen (S).** Koide als Gleich-Norm-Bedingung ohne Herleitung (v4.9 `v480:koide-equal-norm` =
+r10); **Phasenkammern |θ − 2πj/3| ≤ π/12 unabhängig gleich gefunden** (v4.9 `v480:generation-phase-chambers` =
+K14.4, inkl. leichtem Teilchen nahe der Grenze); Phasen-Ansatz π − √2 arcsin β verworfen (= r09/r11);
+Riemann/GUE nicht als Satz (= r04/r05); β_sym = 0,5493482 mit γ_BI = 0,2375 (= H9).
+
+**K26.2 Spannungen (S).** (a) v4.9 lässt für das physikalische K nur nicht-negative Wurzeln zu; H2/H3 testen
+„Koide mit Vorzeichen“ außerhalb dieses Bereichs (nicht-negatives K der H2-Massen: 0,525). Kein mathematischer
+Widerspruch, aber H2/H3 sind so zu benennen. (b) Beide Linien legen Farbe und Generation auf dasselbe Triplett
+(K25.2 betrifft auch v4.9). (c) Die Θ-Summe führt v4.9 als offen; r05 hat die Vermutung widerlegt.
+
+**K26.3 Empfehlungen.** v4.9: r04/r05 und K25.2 übernehmen. Lokal: H2/H3 umbenennen, v4.9-Kammern als
+unabhängige Bestätigung zitieren. Zusammenführung über Entwurf-PR #19 (berührt keine v4.9-Datei).
+
+### K27 — Companion-Runde v4.8.0-r13 (2026-10-20)
+
+Runde `sec:v480-r13-juno-associator-colour` (Snippet `llm/v480_r13_round.tex`) hält K23–K26 fest: Nachprüfung mit
+JUNO 2026 (Tabelle H2/H4/H8), H9 (b75170d), Theoremlet r13.1 [e₄,e₅,e₆] = −2e₇ mit Beweis aus der Multiplikation,
+H10 (a6b5bcb), Farbe/Generation (Folgen für r12 und für Quarks, Schemaabhängigkeit), Abgleich mit v4.9 (H2/H3 als
+Koide mit Vorzeichen neu eingeordnet). Ledger R_mix^{r13} = (0,0,1,1); Guards unverändert, β₄ unverbraucht.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1049,6 +1125,15 @@ Vorzeichen, zyklische Matrix), r12.2 (Stab(+e₇) mit Δ(96)-Invarianten), r12.3
   δ_CP = 270°; gegen NuFIT Spannung (χ² = 8,8 bei 3 FG); Kurzregister ergänzt.
 - v3.5 (2026-10-20): K22 Companion-Runde v4.8.0-r12 (H2–H8, Δ(96), Cayley–Dickson-CP); `prop:pmns-z3` und die
   θ₂₃-Zeile von `thm:op1op4-unified` als widerlegt eingeordnet.
+- v3.6 (2026-10-20): K23 Nachprüfung mit JUNO 2026 (H2 gestützt, TM1 und H8 disfavorisiert); Vorab-Notiz H9
+  (sin²θ₁₂ = 0,3086 für künftige JUNO-Daten).
+- v3.7 (2026-10-20): K24 neunter vorab festgelegter Test (Assoziator) — kein Auswahlgrund; Strukturbefund
+  [e₄,e₅,e₆] = −2e₇.
+- v3.8 (2026-10-20): K25 Quark-Prüfung — Zielwerte schemaabhängig (2–4 %), Farbe und Generation im Companion auf
+  demselben Triplett; r12-Flavour-Analyse gilt nur unter „Triplett = Generationen“; Vermerk in Abschnitt 3.
+- v3.9 (2026-10-20): K26 Abgleich mit v4.9 (Phasenkammern unabhängig bestätigt; H2/H3 als „Koide mit Vorzeichen“
+  neu eingeordnet; Farbe/Generation betrifft beide Linien).
+- v4.0 (2026-10-20): K27 Companion-Runde v4.8.0-r13 (K23–K26 im Paper).
 
 ---
 

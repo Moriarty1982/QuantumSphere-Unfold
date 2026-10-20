@@ -1,9 +1,10 @@
-# v4.8.0-r03 to r12: local research line (source-only)
+# v4.8.0-r03 to r13: local research line (source-only)
 
 This folder records a research line that was developed in a local working copy of the published
 v4.8.0 source after the Zenodo release. It is **not** a release, does not change the frozen payload in
 [`release/v4.8.0/`](../../../release/v4.8.0/), and has not been merged into the full-source working copy in
-[`sources/research/`](../../../sources/research/) or into the v4.9.0 research candidate.
+[`sources/research/`](../../../sources/research/) or into the v4.9.0 research candidate. (The folder name
+keeps its original range r03–r12; it now also contains r13.)
 
 - Public baseline: v4.8.0, Version DOI `10.5281/zenodo.23365244`, Concept DOI `10.5281/zenodo.19210728`
   (unchanged by this line).
@@ -15,12 +16,12 @@ v4.8.0 source after the Zenodo release. It is **not** a release, does not change
 
 | Path | Content |
 |---|---|
-| `Quantum_Sphaera_Companion_v4_8_0_r12_working_source.tex` | complete working source after layer r12 |
-| `rounds/v480_r03_round.tex` … `v480_r12_round.tex` | each layer as a separate append-only block |
-| `llm/` | working material in German: core map (`Kernkarte`), check scripts `k1`–`k26`, pre-registration notes and results H1–H8, review of the Riemann source, training data for a local guard-discipline model |
+| `Quantum_Sphaera_Companion_v4_8_0_r13_working_source.tex` | complete working source after layer r13 |
+| `rounds/v480_r03_round.tex` … `v480_r13_round.tex` | each layer as a separate append-only block |
+| `llm/` | working material in German: core map (`Kernkarte`), check scripts `k1`–`k27`, pre-registration notes and results H1–H10, JUNO 2026 re-check, quark check, comparison with the v4.9.0 candidate, review of the Riemann source, training data for a local guard-discipline model |
 
 The working source differs from `release/v4.8.0/Quantum_Sphaera_Companion_v4_8_0_source.tex` only by
-(a) the appended layers r03–r12 and (b) a preamble change that re-enables PDF bookmarks
+(a) the appended layers r03–r13 and (b) a preamble change that re-enables PDF bookmarks
 (`bookmarks=true`, removal of the r25 `bookmarks=false` line, `\pdfstringdefDisableCommands` for math in
 section titles). Build: three pdfLaTeX passes; audit against the previous layer without hard deviations
 (0 undefined references or citations, 0 duplicate labels, no new overfull boxes).
@@ -39,6 +40,7 @@ section titles). Build: three pdfLaTeX passes; audit against the previous layer 
 | r10 | The Koide structure in the complex-vector reading |
 | r11 | Pre-registered test of the phase relation δ = K/3 |
 | r12 | Pre-registered neutrino tests, octonionic flavour group, PMNS reclassification |
+| r13 | JUNO 2026 re-check, associator of the generation triple, colour–generation assignment |
 
 ## Pre-registration evidence
 
@@ -49,16 +51,21 @@ The original commits are preserved, with their hashes, on the branch
 ancestor of the corresponding result commit. Commit dates were set by the local machine; GitHub only
 attests the push date.
 
-| Test | Note commit | Result (fixed criterion) |
+| Test | Note commit | Result (fixed criterion; NuFIT 6.0 unless stated) |
 |---|---|---|
 | H1 δ = K/3 for all charged triplets | `81f38d3` | refuted |
-| H2 neutrinos as an r = 1 triole | `434c5a8` | compatible (normal ordering, Σmν = 0.0592 eV), weakly discriminating |
+| H2 neutrinos as a signed-root r = 1 triole | `434c5a8` | compatible (normal ordering, Σmν = 0.059 eV); JUNO 2026 supports normal ordering |
 | H3 triole signs as Majorana CP parities | `e3b140e` | compatible, m_ββ ≤ 3.5 meV, not testable soon |
-| H4 TM1 against TM2 | `00d297e` | TM1 strongly preferred (Δχ² = 10.3) |
+| H4 TM1 against TM2 | `00d297e` | TM1 strongly preferred over TM2; with JUNO 2026 TM1 alone disfavoured (χ² = 9.6, 2 d.o.f.) |
 | H5 Hopf angle as mixing angle | `16eff15` | failed |
 | H6 algebraic selection criteria for the TM1 lift | `e1e2393` | main criterion speaks against TM1 |
 | H7 Heisenberg compensator as selector | `e6da7db` | no selection |
-| H8 Cayley–Dickson involution as CP symmetry | `f6734ab` | tension (χ² = 8.8, 3 d.o.f.); predicts θ₂₃ = 45°, δ_CP = 270° |
+| H8 Cayley–Dickson involution as CP symmetry | `f6734ab` | tension (χ² = 8.8); with JUNO 2026 disfavoured (χ² = 14.0, 3 d.o.f.) |
+| H9 sin²θ₁₂ = β_sym²/cos²θ₁₃ = 0.30862 | `b75170d` | found after the fact; test is the next JUNO release with σ ≤ 0.004 |
+| H10 associator as selector | `a6b5bcb` | no selection; [e₄,e₅,e₆] = −2e₇ |
+
+The JUNO 2026 data (arXiv:2609.37895) existed when H2–H8 were fixed but had not been used; the re-check
+is independent but not a test fixed before the measurement.
 
 ## Reclassified earlier statements
 
@@ -66,3 +73,13 @@ attests the push date.
   maximal mixing angle; the shifted value 52.1° is about 9σ from current data.
 - The CKM line of `thm:op1op4-unified` rests on the δ_CL conjecture, classified in r09 as a coincidence.
 - The Riemann source is no longer used as a proof source (r04); the Θ-sum conjecture is refuted (r05).
+- `thm:three-generations` places colour and generation on the same octonionic triplet (r13). The octonionic
+  flavour analysis of r12 is therefore conditional on reading the triplet as generation space; quark
+  statements require separating the two first.
+
+## Relation to the v4.9.0 research candidate
+
+Independent agreement on the Koide equal-norm condition, on the positive phase chambers
+|θ − 2πj/3| ≤ π/12, and on not asserting a Riemann or GUE theorem. The candidate admits only non-negative
+roots for the physical Koide ratio; H2 and H3 are tests of the signed-root relation. See
+`llm/Abgleich_v49_Linie.md`.

@@ -5,7 +5,7 @@ SYSTEM """Du bist ein Fachassistent fuer den Quantum-Sphaera-Companion von Marc 
 
 Wissensgrundlage (Kernkarte):
 
-# Kernkarte Quantum Sphaera — v3.5
+# Kernkarte Quantum Sphaera — v4.0
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -80,7 +80,9 @@ Majorana-Parität (K15) — verträglich, m_ββ ≤ 3,5 meV, nicht prüfbar. H4
 bevorzugt (Δχ² = 10,3), Vorhersage sin²θ₁₂ = 0,318, δ_CP ≈ 262°. H5 Hopf-Winkel als Mischwinkel (K17) —
 gescheitert; Nachbefund |U_e2|² = β_sym² (nicht registriert). H6/H7 Auswahl des TM1-Lifts (K19, K20) — weder
 Minimalität, Kaskade noch Kompensator wählen TM1. H8 Cayley–Dickson-Involution als CP (K21) — Spannung
-(χ² = 8,8 bei 3 FG), Vorhersage sin²θ₂₃ = ½, δ_CP = 270°. Regel: Jede neue
+(χ² = 8,8 bei 3 FG), Vorhersage sin²θ₂₃ = ½, δ_CP = 270°. **Nachprüfung JUNO 2026 (K23):** H2 gestützt (NO
+≥ 2,1σ); TM1 χ² = 9,6 → disfavorisiert; H8 χ² = 14,0 → disfavorisiert. H9 sin²θ₁₂ = β_sym²/cos²θ₁₃ = 0,3086
+für künftige JUNO-Daten festgeschrieben (nachträglich gefunden). Regel: Jede neue
 Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 ---
@@ -185,6 +187,8 @@ erscheinen als Fasern; der Frame-Offset β_sym ist ein Hopf-Winkel.
 - **Hopf-Lücke:** 4,9 % in β_sym, 6,8 % in γ_L.
 - Drei Generationen (Thm. `thm:three-generations`): Gen_i ≅ (ℂ⊗ℍ)⊗e_{i+3}, e₄,e₅,e₆ ∈ Im 𝕆 als
   ℂ³-Triplett unter SU(3) ⊂ G₂ = Aut(𝕆) (Dixon-Algebra ℂ⊗ℍ⊗𝕆).
+  **[P, K25]** Der Beweis gibt jeder Generation „one color index“: Farbe und Generation liegen auf demselben
+  Triplett. Für Quarks (3 Farben × 3 Generationen) reicht das nicht; die Zuordnung muss getrennt werden.
 
 **S:**
 - Die Hopf-Faserungen selbst sind klassische, gesicherte Mathematik.
