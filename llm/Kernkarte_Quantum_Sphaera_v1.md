@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v2.7
+# Kernkarte Quantum Sphaera — v2.8
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -70,7 +70,8 @@ K = 2/3 ⇔ |c| = t.
 **Vorab-Tests:** H1 δ = K/3 (r11) — widerlegt für Quarks und laufende Leptonmassen. H2 Neutrinos mit r = 1
 (K14) — verträglich, Vorhersage normale Ordnung, Σm_ν = 0,0592 eV (schwach trennend). H3 Vorzeichen als
 Majorana-Parität (K15) — verträglich, m_ββ ≤ 3,5 meV, nicht prüfbar. H4 TM1 gegen TM2 (K16) — TM1 stark
-bevorzugt (Δχ² = 10,3), Vorhersage sin²θ₁₂ = 0,318, δ_CP ≈ 262°. Regel: Jede neue
+bevorzugt (Δχ² = 10,3), Vorhersage sin²θ₁₂ = 0,318, δ_CP ≈ 262°. H5 Hopf-Winkel als Mischwinkel (K17) —
+gescheitert; Nachbefund |U_e2|² = β_sym² (nicht registriert). Regel: Jede neue
 Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 ---
@@ -828,6 +829,27 @@ ausgeschlossen (gemessen 0,022). (b) Überlagerung = erhalten bleibt w = cos a �
 TM2); θ₁₂ ist dann Eingabe, kein Test. Die Daten verlangen also keine echte Überlagerung, sondern fast reine
 Endpunkte. Zwischen „TM1“ und „TM2 + 2° Beimischung“ entscheidet erst δ_CP.
 
+### K17 — Fünfter vorab festgelegter Test: Hopf-Winkel als Mischwinkel (2026-10-20)
+
+Vorab-Notiz `llm/Vorab_Notiz_H5_Hopf_Mischwinkel.md` (Commit 16eff15); Ergebnis `llm/Ergebnis_H5_Hopf_Mischwinkel.md`;
+Skript `llm/k20_test_h5.py`.
+
+**K17.1 Zuordnung (M).** Die erhaltene Spalte w = cos a · c₂ − sin a · e^{ib} · c₁ ist ein Punkt auf S³; die
+Hopf-Abbildung gibt den S²-Punkt mit Polwinkel 2a, Azimut b. TM2 = Nordpol, TM1 = Südpol, 1:1 = Äquator.
+
+**K17.2 Hypothese (V) und Ergebnis.** Polwinkel = Hopf-Winkel des Companion (66,64° oder 70,53°, auch gespiegelt).
+(i) kanonische Azimute: 0 von 32 verträglich (bestes χ² = 92; Zufallserwartung 0,6) — **widerlegt**.
+(ii) freier Azimut: χ² = 3,74, δ_CP = 262°, aber für alle Polwinkel identisch — **entartet, kein Test**.
+
+**K17.3 Strukturbefund (M).** Für jede Spalte in span(c₁, c₂) gilt |w_μ| = |w_τ| und |w_e|² = sin²(γ/2), γ =
+Abstand auf der Hopf-Sphäre zum Punkt E (Polwinkel arccos(1/3) = 70,53°, b = 0; dort ist w_e = 0). Die ganze
+Familie hängt physikalisch nur von γ ab.
+
+**K17.4 Nachbefund (nicht vorab registriert, wie P3).** Als ν₂ verlangen die Daten γ = 66,57°; der Companion-Winkel
+θ_H = 66,64°. Gleichwertig |U_e2|² = β_sym², sin²θ₁₂ = 0,3086 (gemessen 0,308). Kein Beleg (nachträglich,
+β_sym eingesetzt, viele Konstanten). Trennt aber bei JUNO klar von TM1 (0,318); wäre vor JUNO als eigene
+Vorab-Notiz festzuschreiben.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -864,6 +886,8 @@ Endpunkte. Zwischen „TM1“ und „TM2 + 2° Beimischung“ entscheidet erst �
 - v2.7 (2026-10-20): K16 vierter vorab festgelegter Test (TM1 gegen TM2, 1:1) — TM1 stark bevorzugt
   (Δχ² = 10,3), TM2 disfavorisiert; Vorhersagen sin²θ₁₂ = 0,318, δ_CP ≈ 262° festgeschrieben.
   K16.4 Überlagerung: beide exakt ⇒ tribimaximal (ausgeschlossen); 1:1 ausgeschlossen; freies Gewicht ohne Test.
+- v2.8 (2026-10-20): K17 fünfter vorab festgelegter Test (Hopf-Winkel als Mischwinkel) — gescheitert
+  ((i) 0/32, (ii) entartet); Strukturbefund |w_e|² = sin²(γ/2); Nachbefund |U_e2|² = β_sym² (nur Kandidat).
 
 ---
 
