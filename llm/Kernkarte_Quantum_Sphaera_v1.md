@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v3.8
+# Kernkarte Quantum Sphaera — v3.9
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -776,6 +776,8 @@ Gegen Σ < 0,0642 eV (DESI DR2 + CMB): **NO verträglich, IO disfavorisiert.**
 **K14.3 Einordnung.** H2 ist verträglich, aber schwach trennend: Σ liegt nur 0,4 meV über dem NO-Minimum (m₁ = 0).
 Widerlegbar durch eine gemessene invertierte Ordnung (JUNO, DUNE) oder Σ ≳ 0,07 eV. Offen: Bedeutung des
 negativen Vorzeichens (bei geladenen Leptonen sind alle v_k positiv).
+**[Neueinordnung K26]** H2 ist „Koide mit Vorzeichen“: Mit nicht-negativen Wurzeln (v4.9-Konvention für das
+physikalische K) ergeben die H2-Massen K = 0,525. JUNO 2026 stützt die NO-Vorhersage (K23).
 
 **K14.4 Bedeutung des Vorzeichens (M, S; Skript `llm/k16_vorzeichen.py`).**
 (a) Höchstens eine Komponente kann negativ sein. Das Vorzeichen ist das der kubischen Invariante
@@ -1044,6 +1046,23 @@ voraus; als Farbe gelesen würde eine gebrochene Flavour-Symmetrie in SU(3)_c di
 **Ergebnis:** Quark-Werte aus der jetzigen Struktur nicht ableitbar; zuerst müssen Farbe und Generation getrennt
 werden.
 
+### K26 — Abgleich mit der GitHub-Linie v4.9.0-Kandidat (2026-10-20)
+
+Dokument `llm/Abgleich_v49_Linie.md`; GitHub `main` 651b624, `sources/research/parts/`.
+
+**K26.1 Übereinstimmungen (S).** Koide als Gleich-Norm-Bedingung ohne Herleitung (v4.9 `v480:koide-equal-norm` =
+r10); **Phasenkammern |θ − 2πj/3| ≤ π/12 unabhängig gleich gefunden** (v4.9 `v480:generation-phase-chambers` =
+K14.4, inkl. leichtem Teilchen nahe der Grenze); Phasen-Ansatz π − √2 arcsin β verworfen (= r09/r11);
+Riemann/GUE nicht als Satz (= r04/r05); β_sym = 0,5493482 mit γ_BI = 0,2375 (= H9).
+
+**K26.2 Spannungen (S).** (a) v4.9 lässt für das physikalische K nur nicht-negative Wurzeln zu; H2/H3 testen
+„Koide mit Vorzeichen“ außerhalb dieses Bereichs (nicht-negatives K der H2-Massen: 0,525). Kein mathematischer
+Widerspruch, aber H2/H3 sind so zu benennen. (b) Beide Linien legen Farbe und Generation auf dasselbe Triplett
+(K25.2 betrifft auch v4.9). (c) Die Θ-Summe führt v4.9 als offen; r05 hat die Vermutung widerlegt.
+
+**K26.3 Empfehlungen.** v4.9: r04/r05 und K25.2 übernehmen. Lokal: H2/H3 umbenennen, v4.9-Kammern als
+unabhängige Bestätigung zitieren. Zusammenführung über Entwurf-PR #19 (berührt keine v4.9-Datei).
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1105,6 +1124,8 @@ werden.
   [e₄,e₅,e₆] = −2e₇.
 - v3.8 (2026-10-20): K25 Quark-Prüfung — Zielwerte schemaabhängig (2–4 %), Farbe und Generation im Companion auf
   demselben Triplett; r12-Flavour-Analyse gilt nur unter „Triplett = Generationen“; Vermerk in Abschnitt 3.
+- v3.9 (2026-10-20): K26 Abgleich mit v4.9 (Phasenkammern unabhängig bestätigt; H2/H3 als „Koide mit Vorzeichen“
+  neu eingeordnet; Farbe/Generation betrifft beide Linien).
 
 ---
 
