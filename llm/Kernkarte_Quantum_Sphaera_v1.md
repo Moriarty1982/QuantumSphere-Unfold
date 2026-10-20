@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v3.5
+# Kernkarte Quantum Sphaera — v3.6
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -73,7 +73,9 @@ Majorana-Parität (K15) — verträglich, m_ββ ≤ 3,5 meV, nicht prüfbar. H4
 bevorzugt (Δχ² = 10,3), Vorhersage sin²θ₁₂ = 0,318, δ_CP ≈ 262°. H5 Hopf-Winkel als Mischwinkel (K17) —
 gescheitert; Nachbefund |U_e2|² = β_sym² (nicht registriert). H6/H7 Auswahl des TM1-Lifts (K19, K20) — weder
 Minimalität, Kaskade noch Kompensator wählen TM1. H8 Cayley–Dickson-Involution als CP (K21) — Spannung
-(χ² = 8,8 bei 3 FG), Vorhersage sin²θ₂₃ = ½, δ_CP = 270°. Regel: Jede neue
+(χ² = 8,8 bei 3 FG), Vorhersage sin²θ₂₃ = ½, δ_CP = 270°. **Nachprüfung JUNO 2026 (K23):** H2 gestützt (NO
+≥ 2,1σ); TM1 χ² = 9,6 → disfavorisiert; H8 χ² = 14,0 → disfavorisiert. H9 sin²θ₁₂ = β_sym²/cos²θ₁₃ = 0,3086
+für künftige JUNO-Daten festgeschrieben (nachträglich gefunden). Regel: Jede neue
 Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 ---
@@ -994,6 +996,21 @@ Vorzeichen, zyklische Matrix), r12.2 (Stab(+e₇) mit Δ(96)-Invarianten), r12.3
   eingestuft ist. CKM-Zeile erbt diesen Status; PMNS-Zeile widerlegt. CKM-Phase (π/3 gegen ≈ 70°) unberührt, offen.
 - Ledger: R_mix^{r12} = (0,0,1); Guards unverändert, β₄ = 1/256 unverbraucht.
 
+### K23 — Nachprüfung mit JUNO 2026 und Vorab-Notiz H9 (2026-10-20)
+
+Daten: JUNO, arXiv:2609.37895 (29.09.2026, 207,2 Tage): sin²θ₁₂ = 0,3036 ± 0,0064, Δm²₂₁ = 7,388(78)·10⁻⁵ eV²,
+Δm²₃₁ = +2,509·10⁻³ eV² (NO), NO bevorzugt mit ≥ 2,1σ. Lag beim Festschreiben von H2–H8 vor, war aber nicht
+bekannt (Datenbasis NuFIT 6.0) → unabhängige Nachprüfung. Dokument `llm/Nachpruefung_JUNO_2026.md`.
+Kombiniert mit NuFIT 6.0: sin²θ₁₂ = 0,3046 ± 0,0056.
+
+**K23.1 Ergebnisse (M).** H2: Σ = 0,0591 eV (NO), NO-Vorhersage gestützt. H4: χ²(TM1) = 9,6, χ²(TM2) = 49,1 —
+TM1 weit vor TM2, aber für sich **disfavorisiert**. H8: χ² = 14,0 bei 3 FG — **disfavorisiert**. Ursache:
+TM1 verlangt sin²θ₁₂ = 0,3182, gemessen 0,3046 (2,4σ).
+
+**K23.2 H9 (V, Vorab-Notiz b75170d).** sin²θ₁₂ = β_sym²/cos²θ₁₃ = 0,30862 ± 0,00018 (γ_BI = 0,2375 eingesetzt).
+Nachträglich gefunden (K17.4); heutiger Abstand zu JUNO 0,8σ zählt nicht. Getestet wird die nächste
+JUNO-Veröffentlichung mit σ ≤ 0,004: |z| < 2 verträglich, ≥ 3 widerlegt.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1049,6 +1066,8 @@ Vorzeichen, zyklische Matrix), r12.2 (Stab(+e₇) mit Δ(96)-Invarianten), r12.3
   δ_CP = 270°; gegen NuFIT Spannung (χ² = 8,8 bei 3 FG); Kurzregister ergänzt.
 - v3.5 (2026-10-20): K22 Companion-Runde v4.8.0-r12 (H2–H8, Δ(96), Cayley–Dickson-CP); `prop:pmns-z3` und die
   θ₂₃-Zeile von `thm:op1op4-unified` als widerlegt eingeordnet.
+- v3.6 (2026-10-20): K23 Nachprüfung mit JUNO 2026 (H2 gestützt, TM1 und H8 disfavorisiert); Vorab-Notiz H9
+  (sin²θ₁₂ = 0,3086 für künftige JUNO-Daten).
 
 ---
 

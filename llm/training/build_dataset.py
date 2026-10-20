@@ -262,6 +262,10 @@ QA = [
  "[S] Beides ist ueberholt (v4.8.0-r12). Maximale Mischung ist 45 Grad, nicht 54,74 Grad. 52,1 Grad gibt sin2 theta23 = 0,622 gegen gemessene 0,470 (normale Ordnung), etwa 9 sigma; prop:pmns-z3 und die theta23-Zeile der Vorhersagetabelle sind widerlegt. Die CKM-Zeile haengt an der delta_CL-Vermutung, die seit r09 als Koinzidenz gilt."),
 ("status", "Was steht in der Companion-Runde v4.8.0-r12?",
  "[S] r12 haelt die vorab festgelegten Tests H2 bis H8 mit ihren Commits fest, dazu vier Theoremlets: Triolen-Produkt und Vorzeichen, die Oktonionen-Gruppe Stab(+e7) mit Delta(96)-Invarianten, die Involutionen-Tabelle (TM1, TM2, theta13 = 0, Delta(96)-Spalte) und die Cayley-Dickson-Involution als CP mit theta23 = 45 Grad und delta_CP = 90 oder 270 Grad. Sie ordnet prop:pmns-z3 als widerlegt ein und spendet keinen Guard."),
+("status", "Wie stehen TM1 und H8 nach den JUNO-Daten von 2026?",
+ "[M] JUNO (arXiv:2609.37895, 207 Tage) misst sin2 theta12 = 0,3036 +- 0,0064; kombiniert mit NuFIT 6.0 0,3046 +- 0,0056. TM1 verlangt 0,3182, das sind 2,4 sigma. Mit den unveraenderten Kriterien: chi2(TM1) = 9,6 bei 2 Freiheitsgraden, also disfavorisiert; H8 chi2 = 14,0 bei 3 Freiheitsgraden, ebenfalls disfavorisiert. [S] H2 wird gestuetzt, JUNO bevorzugt die normale Ordnung mit mindestens 2,1 sigma."),
+("guard", "JUNO misst 0,3036 und beta_sym^2/cos^2 theta13 = 0,3086, also ist der solare Winkel aus der Hopf-Struktur bestaetigt?",
+ "[S] Nein. Die Relation wurde nachtraeglich gefunden, beta_sym ist eingesetzt und nicht hergeleitet, und bei rund zehn Konstanten ist ein Treffer auf 1 sigma wahrscheinlich. Die heutige Uebereinstimmung (0,8 sigma) zaehlt deshalb nicht. Als H9 festgeschrieben ist nur die Vorhersage 0,3086 fuer die naechste JUNO-Messung mit Fehler hoechstens 0,004."),
 # ---------------------------------------------------------------- F: Pruefpunkte / offen
 ("offen", "Welche Modellentscheidungen sind in Lesart B noch offen?",
  "[P] Ob der Dualitaetswinkel physikalisch oder Eichfreiheit ist; die Rolle von t; die Transportaussage K(L_n) = L_{n-1}. Die Sektor-Zuordnung ist seit r07 als Arbeitszuordnung gesetzt und umkehrbar."),
