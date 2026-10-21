@@ -81,9 +81,9 @@ def run_latexmk(tex_path: Path, out_dir: Path) -> dict:
     log_path.write_text(stdout_text + "\n\n--- STDERR ---\n" + stderr_text, encoding="utf-8", errors="replace")
 
     pdf_candidates = list(job_out.glob("*.pdf"))
-    log_candidates = list(job_out.glob("*.log"))
+    tex_log_candidate = job_out / f"{tex_path.stem}.log"  # not the *.build.stdout.log written above
     pdf_path = pdf_candidates[0] if pdf_candidates else None
-    tex_log_path = log_candidates[0] if log_candidates else None
+    tex_log_path = tex_log_candidate if tex_log_candidate.exists() else None
 
     result = {
         "tex": str(tex_path),
