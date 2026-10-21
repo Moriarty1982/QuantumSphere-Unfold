@@ -256,9 +256,45 @@ widersprechen, und lässt die Wahl offen. Zählt man die Verwendungen im Hauptko
 Verwendungen werden damit widerspruchsfrei, und keine andere Stelle ändert sich. Das ist eine Lesartentscheidung
 (Registereintrag), keine Neuberechnung. Für E11 ändert sich nur das Vorzeichen, nicht der Betrag.
 
+### E14: Wovon hängt der lokale Faktor γ_L^(local) laut Dokument ab? (Quellenprüfung)
+
+Fundstellen, Grep über die ganze Datei nach „local“, „Phi“, „orbit“, „β_sym(t)“, „frame-offset“:
+
+| Abhängigkeit | Stelle | Was dort steht | Was fehlt |
+|---|---|---|---|
+| **Beobachter** | `thm:frame-offset` | „Every matter observer carries a nonzero contravariant component z⁻ ≠ 0“; gemessene Konstanten = frame-invariante Werte × Lorentzfaktor des Beobachters (β ≈ 0,844) | wie z⁻ von Bewegung oder Ort abhängt |
+| **Kosmische Zeit** | `prop:H0-tension`, `prop:saturation` | β_sym(t) wächst, „as matter structures in the universe grew“ | eine Größe, die die Strukturbildung misst; ein Gesetz β_sym(Struktur) |
+| **Bahn der Erde** | Korollar „α-drift as a frame effect“ | γ_L^(local)(t) ändert sich, „as Earth moves through the Sphaera-Cascade geometry over its orbit“; Periode genau ein Jahr, phasengleich in allen Labors, fehlt bei nicht mitkreisender Uhr | was die „Sphaera-Cascade geometry“ im Raum ist; ob Geschwindigkeit oder Ort zählt |
+| **Gravitationspotential** | P5 (bei `cor:falsifiable`) | Amplitude der α-Modulation ≈ 10⁻¹⁰ · δΦ/c² | Herleitung des Koeffizienten 10⁻¹⁰ |
+| **k-Gewichtung** | P5 | δ ln X ∝ k(X) · δ ln γ_L^(local) (Verhältnis k(α)/k(G_N)) | — |
+
+**Kein Feldgesetz.** Das Dokument gibt für γ_L^(local)(x, t) keine Gleichung an. Genannt sind vier Einflüsse: Beobachter,
+Zeit, Bahn und Potential. Für keinen gibt es einen hergeleiteten Zusammenhang.
+
+**Datenlage für die Potentialkopplung.** Der Koeffizient 10⁻¹⁰ liegt nach meiner Umrechnung unter den heutigen
+Schranken. Für die Yb⁺-E3/E2-Kopplung ans Sonnenpotential gilt (−2,4 ± 3,0) · 10⁻⁹ (Filzinger et al. 2023, zitiert in
+arXiv:2410.07281). Geteilt durch die α-Empfindlichkeit des Frequenzverhältnisses, etwa −7 (aus dem Gedächtnis), ergeben
+sich für α etwa 3 · 10⁻¹⁰ ± 4 · 10⁻¹⁰. Die Vorhersage ist damit verträglich und liegt etwa eine Größenordnung unter der
+heutigen Empfindlichkeit. Mit der jährlichen Amplitude δΦ/c² ≈ 3 · 10⁻¹⁰ ergäbe sich δα/α ≈ 3 · 10⁻²⁰. Das ist
+verträglich mit r03 (F2).
+
+**Neue innere Widersprüche.**
+1. `thm:frame-offset` nennt γ_BI „the Lorentz-transformed γ_string, observed from a matter frame“. γ_BI hängt dort also
+   vom Beobachter ab. `thm:k-values` setzt dagegen k(γ_BI) = 0, „frame-invariant by construction“.
+2. `thm:frame-offset` projiziert *alle* Konstanten einschließlich c mit *einem* Lorentzfaktor, was k = 1 für alle
+   bedeutet. `thm:k-values` vergibt k(c) = 0 und k(G_N) = 2.
+3. Driftet γ_L^(local), wie die Zeitabhängigkeit verlangt, müsste nach (1) γ_BI mitdriften. Nach `thm:k-values` und
+   r08 (strukturelles γ_L fest) darf es das nicht.
+
+Die Trennung „strukturelles γ_L fest, lokaler Faktor variabel“ (r18, r08) löst (3), wenn man `thm:frame-offset` als
+Aussage über den *strukturellen* Faktor liest. Dann bleibt aber offen, woraus der lokale Faktor besteht.
+
 ## Stand
 
-13 Einträge, davon 8 gezählte Versuche. Neu: E12 (keine tragfähige H₀-Erklärung im Rahmen) und E13 (Vorzeichen von
+14 Einträge, davon 8 gezählte Versuche. E14: Der lokale Faktor hängt laut Dokument von Beobachter, Zeit, Erdbahn und
+Potential ab, ohne Feldgesetz. Zwei neue innere Widersprüche zwischen `thm:frame-offset` und `thm:k-values`.
+
+Vorige Zwischenbilanz: 13 Einträge, davon 8 gezählte Versuche. Neu: E12 (keine tragfähige H₀-Erklärung im Rahmen) und E13 (Vorzeichen von
 k(α) lösbar, 3 Verwendungen gegen 1).
 
 Vorige Zwischenbilanz: 11 Einträge, davon 8 gezählte Versuche, 0 Treffer im Sinne einer Erklärung, 1 Auffälligkeit (E9), 1 Folgerung (E10, durch
