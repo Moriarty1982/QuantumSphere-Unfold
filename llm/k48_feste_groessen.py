@@ -17,3 +17,15 @@ print("k-Gesetz mit |k(alpha)| = 1: |d ln alpha/dt| = %.2e pro Jahr; Atomuhren 1
 b1100 = 0.527; g1100 = (1 + b1100 ** 2) / (1 - b1100 ** 2)
 print("seit z = 1100: Delta ln alpha = %.3f (|Delta alpha/alpha| ~ %.1f %%)" % (math.log(g0 / g1100), 100 * abs(g0 / g1100 - 1)))
 print("Vorzeichen: thm:k-values k(alpha^-1)=1 -> alpha^matter = alpha^photon / gamma_L; Korollar: alpha^matter = gamma_L alpha^photon")
+
+print("\nE11b: Photon-Frame als Grundlage (Nachbarschritt statt gamma_L)")
+eta0, eta1 = math.atanh(b0), math.atanh(b1100)
+deta_dt = rate_b / (1 - b0 ** 2)
+for name, f0, f1, rate in (("gamma_L = cosh 2 eta", g0, g1100, rate_g),
+                           ("Nachbar Lorentz cosh eta", math.cosh(eta0), math.cosh(eta1), math.tanh(eta0) * deta_dt),
+                           ("Nachbar Doppler e^eta", math.exp(eta0), math.exp(eta1), deta_dt)):
+    kH = math.log(1.083) / math.log(f0 / f1)
+    print("   %-26s Exponent fuer H0 = %.2f; |d ln alpha/dt| bei |k(alpha)| = 1: %.2e /Jahr; Delta alpha/alpha seit z=1100: %.1f %%"
+          % (name, kH, rate, 100 * (f0 / f1 - 1)))
+print("   lesartunabhaengig: Delta ln alpha = ln(1.083) * k(alpha)/k(H0); Atomuhren (2 sigma, 3.2e-18/Jahr) verlangen")
+print("   k(alpha)/k(H0) < %.1e (bei linearer Drift ueber 13.8 Gyr)" % (3.2e-18 / (math.log(1.083) / 13.8e9)))

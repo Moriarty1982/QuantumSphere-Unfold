@@ -191,6 +191,31 @@ Materie-Frame-Werte mit γ_L^(local)(t)^k. Die Quelle unterscheidet dabei selbst
 Bewertung: E11 ist eine Prüfung bestehender Aussagen der Quelle gegen bekannte Daten, keine neue Vorhersage. Sie wird
 nicht als Versuch gezählt.
 
+**E11b: Photon-Frame als Grundlage (Frage des Autors).** Zwei Lesarten wurden geprüft.
+
+1. **Neutrale Achse (r01).** Man rechnet mit dem Nachbarschritt Materie–Photon statt mit γ_L. Der Nachbarschritt kann
+   der Lorentzfaktor cosh η oder der Doppler-Faktor e^η sein. Das ändert die Zahlen, nicht den Befund:
+
+   | Faktor | Exponent für H0 = 1,083 | d ln α/dt bei \|k(α)\| = 1 | Δα/α seit z = 1100 |
+   |---|---|---|---|
+   | γ_L = cosh 2η | 1,52 | 3,9 · 10⁻¹² / Jahr | 5,4 % |
+   | cosh η | 4,72 | 1,3 · 10⁻¹² / Jahr | 1,7 % |
+   | e^η | 2,54 | 2,3 · 10⁻¹² / Jahr | 3,2 % |
+
+   Alle Varianten liegen um etwa sechs Größenordnungen über der Atomuhr-Schranke.
+
+2. **Photon-Frame als Messframe.** Man könnte meinen, wir messen über Photonen und lesen deshalb Photon-Frame-Werte ab,
+   die konstant sind. Atomuhren vergleichen aber ein *Verhältnis* zweier Übergangsfrequenzen. Ein gemeinsamer
+   Frame-Faktor auf beiden Frequenzen kürzt sich. Die α-Abhängigkeit kommt aus dem Inneren des Atoms, und das Atom ist
+   Materie. Gemessen wird also α^(matter). Wäre die Physik im Atom selbst Photon-Frame-Physik, gäbe es gar kein
+   driftendes α^(matter). Dann entfiele aber auch die jährliche Drift-Vorhersage des Korollars, und
+   `prop:H0-tension` verlöre den Mechanismus.
+
+**Lesartunabhängig:** Erklärt ein driftender Frame-Faktor die Hubble-Spannung (ln 1,083) über einen Exponenten k(H₀),
+dann ändert sich α um ln 1,083 · k(α)/k(H₀). Bei linearer Drift verlangen die Atomuhren (2σ, 3,2 · 10⁻¹⁸ pro Jahr)
+k(α)/k(H₀) < 5,5 · 10⁻⁷. Die Quelle hat k(α) = 1. Die Drift-Erklärung bräuchte also entweder k(α) ≈ 0 oder einen
+eigenen Faktor für H₀, der α nicht berührt.
+
 ## Stand
 
 11 Einträge, davon 8 gezählte Versuche, 0 Treffer im Sinne einer Erklärung, 1 Auffälligkeit (E9), 1 Folgerung (E10, durch
