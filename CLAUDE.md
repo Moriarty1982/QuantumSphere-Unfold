@@ -137,16 +137,19 @@ Wenn eine neue Runde diese Vektoren nicht verändert, ist das der Normalfall und
 
 ## DOI-Disziplin
 
-Vier DOIs, die nie vermischt werden dürfen:
+DOIs, die nie vermischt werden dürfen:
 
-- **Version-DOI** `10.5281/zenodo.23365244` — v4.8.0, gehört als einzige sichtbare DOI-Zeile auf die Titelseite
-- **Vorgänger-DOI** `10.5281/zenodo.20232911` — v4.7.0, seit v4.8.0 nur Provenienz
+- **Version-DOI** `10.5281/zenodo.23534954` — **v4.9.0, veröffentlicht 2026-10-21** (Zenodo-Record `23534954`, vom Nutzer veröffentlicht), aktuelle Version; gehört als einzige sichtbare DOI-Zeile auf die Titelseite eines 4.9.x-Stands
+- **Vorgänger-DOI** `10.5281/zenodo.23365244` — v4.8.0, seit v4.9.0 nur Provenienz
+- **Frühere Version-DOI** `10.5281/zenodo.20232911` — v4.7.0, nur Provenienz
 - **Concept-DOI** `10.5281/zenodo.19210728` — stabil über alle Versionen
-- **Previous/Baseline-DOI** `10.5281/zenodo.20117361` — nur Provenienz, nie als aktuelle DOI
+- **Previous/Baseline-DOI** `10.5281/zenodo.20117361` — v4.6.0, nur Provenienz, nie als aktuelle DOI
 
 Abgelaufen und nicht mehr zu verwenden: `10.5281/zenodo.20181842`.
 
-**Reserviert für v4.9.0** (2026-10-21): `10.5281/zenodo.23534954`, Zenodo-Entwurf `23534954`, neue Version von v4.8.0, **unveröffentlicht**. Gilt erst nach der Veröffentlichung als aktuelle Version-DOI; bis dahin bleibt v4.8.0 die aktuelle. Ablauf und Stand im Skill `zenodo-release`; `qs.py doi <pdf> --version-doi 10.5281/zenodo.23534954 --version-label v4.9.0` prüft die 4.9.0-Titelseite.
+**Achtung, lokale Arbeitsdatei:** `Quantum_Sphaera_Companion_v4_8_0_source.tex` trägt auf ihrer Titelseite weiterhin die v4.8.0-DOI und in den Source-only-Klauseln der Runden „v4.8.0 Version DOI … unchanged". Das ist für die Runden bis v4.8.0-r20 richtig (sie sind so in v4.9.0 veröffentlicht). Neue Runden nach dem 4.9.0-Release heißen **`v4.9.0-rNN`** (Labels `sec:v490-rNN-...`) und nennen in ihrer Source-only-Klausel die v4.9.0-Version-DOI. `qs.py doi` kennt ohne Parameter noch v4.8.0 als aktuell; für 4.9.x-PDFs `--version-doi 10.5281/zenodo.23534954 --version-label v4.9.0` angeben.
+
+**Offener Arbeitsschritt zum 4.9.0-Release (auf Wunsch des Nutzers für die nächste Version zurückgestellt):** PR #21 (`release/v4.9.0-prep`, enthält Payload, Titelseite, `CITATION.cff`, README mit DOI-Badge) in `main` mergen, Tag `v4.9.0` setzen, GitHub-Release `v4.9.0` mit Verweis auf DOI und Zenodo-Record anlegen; danach `DOI_ROLES` in `qs.py` auf v4.9.0 umstellen. Bis dahin zeigt GitHub `main` noch v4.8.0 als aktuelle Version. Details im Skill `zenodo-release`.
 
 Die **Compact-Titlepage-Regel**: auf der Titelseite steht genau eine Version-DOI-Zeile und eine Concept-DOI-Zeile. Release-Hinweise, Provenienz der Vorgänger-DOI und Claim-Scope-Erklärungen gehören in den Fließtext, nicht auf die Titelseite.
 
