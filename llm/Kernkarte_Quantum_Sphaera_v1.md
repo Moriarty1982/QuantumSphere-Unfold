@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v5.5
+# Kernkarte Quantum Sphaera — v5.6
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1308,6 +1308,15 @@ des gleichseitigen hyperbolischen Dreiecks (Gegenprobe). cos δ = 0,878 gegen f(
 geschlossen. Andere Konstruktionen nicht gerechnet, bräuchten eigene Notiz. Da f(+) nur eine Anpassung ist (K39),
 fällt eine Erklärung des Faktors weg, nicht der Faktor.
 
+**K42.3 Nachbefund (nicht registriert, zählt nicht).** cos²(δ/2) = (1 + cos δ)/2 = 0,939 trifft f(+) mit z = −0,5; einer
+von vier naheliegenden Kandidaten (cos δ −7,9; cos(δ/2) +3,1; 1 − δ/2π −2,8). Herkunft: halber Winkel aus r06.4
+erzwungen, wenn der Spinor ψ (K2.2) ausgelesen wird; Quadrat = Born-Regel (Deutung, wie tanh²η, sech²η in r18 (c));
+Ausrichtung des Spinors in der Ebene = Wahl. Strukturbefund (M): Das Triolen-Photon c(1,ω,ω²) breitet sich entlang
+(1,1,1) aus, der Drehachse — es erhält nur die Phase δ/2 = 14,28°, keine Abschwächung; cos²(δ/2) gilt für Spinoren in
+der Ebene (Helizität eines Materie-Frames). Lesart (V): Materie-Lesungen um cos²(δ/2) abgeschwächt, Photon nur
+Phase. Hopf-Start → β = 0,5500, γ_L = 1,8675 (0,12 % / 0,16 %), Kategorie wie P3. Eine Photonphase δ/2 wäre
+vorab festzulegen.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1392,6 +1401,7 @@ fällt eine Erklärung des Faktors weg, nicht der Faktor.
   als photonzentrierte Sicht.
 - v5.4 (2026-10-21): K41 Companion-Runde v4.8.0-r19.
 - v5.5 (2026-10-21): K42 dreizehnter vorab festgelegter Test (H13, Wigner-Holonomie) — widerlegt, z = −7,9.
+- v5.6 (2026-10-21): K42.3 Nachbefund Halbwinkel (nicht registriert): Spinor-Herkunft, Triolen-Photon auf der Drehachse.
 
 ---
 
