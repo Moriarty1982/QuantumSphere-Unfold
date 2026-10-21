@@ -69448,4 +69448,125 @@ R_{\rm glob}^{(v490\text{-}r10,+)}=(0,1,1,1,1),
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
 
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r11 Source-Only: A Minimal Dynamics for Reading B --- Kicked Duality Rotation}
+\addcontentsline{toc}{section}{v4.9.0-r11 Source-Only: A Minimal Dynamics for Reading B --- Kicked Duality Rotation}
+\label{sec:v490-r11-kicked-duality-dynamics}
+% ============================================================================
+
+\paragraph{Purpose.}
+r10 found that the open threads of the core meet at one gap: Reading~B has no dynamics (r10 of v4.8.0).  The C5 factor
+\(3/4\) would be derived if a dynamics produced the alternation ``rotate, then compensate'' of r10.1.  A shape-(iii) witness
+would need a dynamics that changes the invariant \(s\) (r10.2).  This layer proposes the smallest dynamics with these
+properties and checks what it does.  It is a model proposal, not a derivation from the source.  The script is
+\texttt{llm/k52\_kick\_dynamik.py}.  No value is compared with data.  Earlier layers are not rewritten.
+This layer does not assert or approach an exact finite C5 zero closure.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r11 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r11 the proposal}
+\label{subsec:v490-r11-proposal}
+
+\paragraph{Definition (kicked duality dynamics, proposal).}
+Between kicks the field turns in the duality circle at a constant rate, \(z(t)=e^{i\omega t}z\), on the doublet
+\(F\mapsto FR_{\omega t}^{\mathsf T}\).  At the times \(t_n=n\tau\) the compensator \(C_{\HC}\) is applied, and the content of the
+partner port is handed to a reservoir:
+\[
+F_{n+1}=F_nR_{\omega\tau}^{\mathsf T}C_{\HC},\qquad
+\mathcal E_{\rm res}^{(n+1)}=\mathcal E_{\rm res}^{(n)}+\|F_nR_{\omega\tau}^{\mathsf T}A\|^2 .
+\]
+The rotation is the transport of Reading~B, the kick is the readout of the main body, and the reservoir is the partner
+sector \(\operatorname{ran}A\) of r03.1.
+
+\subsection*{v4.9.0-r11 what it does}
+\label{subsec:v490-r11-properties}
+
+\paragraph{Theoremlet v4.9.0-r11.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Each stage keeps \(\cos^2\omega\tau\) of the content and exports \(\sin^2\omega\tau\).  Retained plus exported
+content is conserved.
+\item[(b)] The stage factor equals \(3/4\) for exactly one \(\omega\tau\in(0,\pi/2)\), namely \(\omega\tau=\pi/6\).  Then the
+retained content runs through \(3/4,9/16,27/64,81/256,\ldots\) and first falls below \(1/256\) at stage \(20\).
+\item[(c)] In the state disk of r04 a stage is a rotation of the Bloch vector by \(2\omega\tau=60^\circ\) followed by a
+measurement along the \(J\)-axis, kept with probability \((1+\cos60^\circ)/2=3/4\).
+\item[(d)] The duality phase accumulates in steps of \(30^\circ\).  Three stages make the quarter turn from matter to
+tachyon, six the half turn \(z\mapsto-z\) (the charge conjugation of r02.2), twelve the full turn, twenty-four the return of
+the spinor of r06.4.
+\item[(e)] The rotation leaves \(|s|\) unchanged.  The kick changes it: it sets \(\operatorname{Re}s=0\) and lowers
+\(|s|\) (in the checked example from \(2.15\) to \(0.83\)).  The dynamics therefore leaves the transport group of
+Reading~B, as r10.2 requires of any witness that changes \(s\).
+\item[(f)] Dividing the same phase \(\pi/6\) into \(m\) kicks keeps \(\cos^{2m}(\pi/6m)\): \(0.75\), \(0.87\), \(0.95\), \(0.99\)
+for \(m=1,2,5,50\).  The stage factor is set by how often the readout acts per phase, which is the quantum Zeno pattern.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a)--(b) \(C_{\HC}R_\alpha C_{\HC}=\cos\alpha\,C_{\HC}\) (r10.1) and \(C_{\HC}+A=1\).  (c) \(G\mapsto RGR^{\mathsf T}\) turns the
+Bloch vector by twice the angle (r04.2).  (e) direct computation.  All items were checked numerically, (b) also in exact
+rational arithmetic.  \(\square\)
+
+\subsection*{v4.9.0-r11 what it does not do}
+\label{subsec:v490-r11-limits}
+
+\begin{enumerate}[leftmargin=2em]
+\item \emph{No finite closure.}  The retained content after \(n\) stages is \((3/4)^n>0\) for every \(n\).  It vanishes in
+one stage only for \(\omega\tau=\pi/2\), and then the whole content sits in the reservoir: it is exported, not annihilated.
+The dynamics reproduces \(C5_{\rm det/eff}\) at \(\theta=1/256\), \(n=20\), and keeps
+\(0_{\rm termdata}\not\Rightarrow0_{\rm all}\).  The all-readout slot includes the reservoir.
+\item \emph{No scale.}  Only the product \(\omega\tau\) is fixed.  The source supplies neither a rate \(\omega\) nor an interval
+\(\tau\).  The oscillator frequency of Theorem~\ref{thm:spring}, \(\gstring\sqrt{2/3}\), is a dimensionless candidate for
+\(\omega\) in the source's units.  Without a unit of time it fixes nothing.
+\item \emph{No mechanism for the kick.}  Why the readout acts at regular intervals, and three times per quarter turn, is
+not explained.  The triolic division of r10 is assumed, not derived.
+\item \emph{Not the field equations.}  The proposal acts on the doublet at a point.  It is not a field theory and makes no
+claim about the Maxwell or Einstein limits of the main body.
+\end{enumerate}
+
+\paragraph{Remark.}
+The structure, a fixed polarisation rotation followed by a polariser at every cycle, is the one used in quantum Zeno
+experiments with photons, among them the interaction-free measurements of Kwiat and co-workers (1995).  There a rotation of
+\(\pi/(2N)\) per cycle with \(N\) cycles per quarter turn leaves \(\cos^{2N}(\pi/2N)\).  The proposal of this layer is that
+structure with \(N=3\).  The correspondence concerns the algebra only.  On a light wave the compensator of r03 is not a
+polariser (r03.2).
+
+\subsection*{v4.9.0-r11 register entries}
+\label{subsec:v490-r11-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r11\\
+\midrule
+dynamics of Reading~B (r10 of v4.8.0) & proposal: kicked duality rotation with compensator kicks and partner reservoir; model decision, not derived\\
+C5 factor \(3/4\) & produced by the proposal at \(\omega\tau=\pi/6\), uniquely in \((0,\pi/2)\) (r11.1)\\
+shape (iii) & the kick changes \(s\), but the dynamics exports instead of annihilating; no finite closure (r11)\\
+scale of the dynamics & open: only \(\omega\tau\) fixed\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r11 ledger and guard update}
+\label{subsec:v490-r11-ledger-guard}
+
+\[
+R_{\rm dyn}^{v490\text{-}r11}=(0,0,1)
+\]
+for (a minimal dynamics proposed, its stage factor and cycles established, its scale and kick mechanism open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r11,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r11}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
 \end{document}
