@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v5.2
+# Kernkarte Quantum Sphaera — v5.4
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1261,6 +1261,40 @@ nicht beobachtbar, der dritte Index ist empirisch eine einzige Zahl.
 **K39.5 Grenzen (P).** JUNO geht über eine nachträglich gefundene Relation ein; Planck und JUNO trennen sich nur
 mit 1,7σ; LQG ist kein Messwert. Ein Test bräuchte f(+) ohne JUNO festgelegt und eine Vorab-Notiz vor der Rechnung.
 
+### K40 — Würfel pro Frame, Übergangsgruppe, Holonomie (2026-10-21)
+
+**K40.1 Würfelfamilie (M).** Ein Auslesewürfel T^(d)_abc pro Frame d mit festen Übergängen Λ(d′←d) trägt die
+Information eines Würfels plus des Übergangsgesetzes, also keinen zusätzlichen Parameter. Neu ist nur, ob die
+Übergänge auf einem geschlossenen Weg zur Identität zusammensetzen; der Rest ist die Holonomie, der Teil, den keine
+Wahl des lesenden Frames entfernt. Vertauschen die Übergänge, ist sie trivial.
+
+**K40.2 Zwei Übergangsgruppen (M).** Alte Lesart (thm:symmetric-frame): kollineare Boosts, vertauschbar, Holonomie
+trivial. Lesart B (r06, Riemann–Silberstein z = E + iB): SO(3,ℂ) erhält s = E² − B² + 2iE·B. Kein Lorentz-Übergang
+verbindet Materie (s > 0, elektrisch) mit Tachyon (s < 0, magnetisch) oder mit dem Photon (Nullfeld); Materie ↔ Tachyon
+geht nur über die Dualitätsdrehung α = π/2 (E → −B, B → E). γ_L als Lorentzfaktor zwischen Materie und Tachyon hat in
+Lesart B kein Gegenstück (r19.1).
+
+**K40.3 Z₂-Holonomie (M).** s → e^{2iα}s: α von 0 bis π umläuft s = 0 einmal, z kehrt als −z zurück (r19.2). Das
+Photon ist Verzweigungspunkt von z über s. Kann nur ±1 beitragen, keinen Faktor wie 0,944.
+
+**K40.4 Alte Lesart als photonzentrierte Sicht (M + V).** Die reelle s-Achse reproduziert die Sektorstruktur von
+thm:symmetric-frame (r19.3). Lesart (nicht übernommen): Das Photon wählt keine Bezugsrichtung aus; die alte Lesart ist
+die Sicht vom Photon aus mit der reellen Achse als gewählter Referenz (Dualitätswinkel als Eichung fixiert). Dort führt
+der gerade Weg Materie → Tachyon durch den Verzweigungspunkt, in Lesart B läuft er um das Photon herum. Die Sicht
+sieht die Z₂-Holonomie nicht und liefert zusätzlich eine Metrik (Abstand als Boost mit γ_L), die Lesart B nicht hat.
+Eichung oder physikalisch: offen seit r07.
+
+**K40.5 Folge (P).** Eine kontinuierliche Holonomie braucht geschlossene Wege in einer SO(3,ℂ)-Bahn und eine
+Transportregel (Zusammenhang); das Dokument liefert keines. Kandidat: Wigner-Rotation aus nicht kollinearen Boosts in
+Triolen-Richtungen — Modellwahl, Vergleich mit f(+) nur mit Vorab-Notiz.
+
+### K41 — Companion-Runde v4.8.0-r19 (2026-10-21)
+
+Runde `sec:v480-r19-frame-cubes-holonomy` (Snippet `llm/v480_r19_round.tex`): H12 und K39 festgehalten, Würfelfamilie,
+Theoremlets r19.1 (keine Lorentz-Verbindung zwischen den Sektoren), r19.2 (Z₂-Holonomie), r19.3 (reelle s-Achse),
+photonzentrierte Lesart als Option, Register-Nachtrag. Ledger R_hol^{r19} = (0,0,1); Guards unverändert, β₄
+unverbraucht. Build 3 Läufe MiKTeX (1093 Seiten), Audit gegen r18 ohne harte Abweichung.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1341,6 +1375,9 @@ mit 1,7σ; LQG ist kein Messwert. Ein Test bräuchte f(+) ohne JUNO festgelegt u
 - v5.1 (2026-10-21): K38 zwölfter vorab festgelegter Test (H12, Drei-Frame-Zuordnung) — nicht trennbar von H9, kein Test.
 - v5.2 (2026-10-21): K39 Rückwärtsanalyse 3×3×3 mit Auslese-Index — einziger tragfähiger Ansatz ist ein Auslesefaktor
   f(+) ≈ 0,944, zahlenmäßig die bekannte Hopf-Lücke.
+- v5.3 (2026-10-21): K40 Würfelfamilie mit Übergängen, Übergangsgruppen beider Lesarten, Z₂-Holonomie, alte Lesart
+  als photonzentrierte Sicht.
+- v5.4 (2026-10-21): K41 Companion-Runde v4.8.0-r19.
 
 ---
 

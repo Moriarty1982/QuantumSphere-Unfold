@@ -67405,4 +67405,164 @@ R_{\rm glob}^{(v480\text{-}r18,+)}=(0,1,1,1,1),
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
 
+% ============================================================================
+\clearpage
+\section*{v4.8.0-r19 Source-Only: Frame Cubes, Transition Group and Holonomy}
+\addcontentsline{toc}{section}{v4.8.0-r19 Source-Only: Frame Cubes, Transition Group and Holonomy}
+\label{sec:v480-r19-frame-cubes-holonomy}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer r18 typed the frame offset by cross terms between the three frames.  Two working results followed outside the
+source: the pre-registered test H12 (\texttt{llm/Ergebnis\_H12\_Drei\_Frame\_Zuordnung.md}) and a backward analysis
+with a readout index (\texttt{llm/k34\_rueckwaerts\_3x3x3.py}, map entry K39).  This layer records both, asks what a
+family of readout cubes linked by transition maps adds, and compares the transition group of the earlier reading with
+that of Reading~B (\S\ref{subsec:v480-r06-readings}).  It contains typing and arithmetic, no new prediction.  Earlier
+layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.8.0-r19 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.8.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23365244}{10.5281/zenodo.23365244} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.8.0-r19 records of H12 and of the backward analysis}
+\label{subsec:v480-r19-records}
+
+\paragraph{H12.}
+With \(\cosh(\eta_++\eta_s)=\gL\), \(\Omega_M=\tanh^2\eta_s\) (Planck 2018 with BAO) and
+\(\sin^2\theta_{12}=\tanh^2\eta_+/\cos^2\theta_{13}\), the assignment gives \(\beta_+=0.5408\), \(\beta_s=0.5578\) and
+\(\sin^2\theta_{12}=0.2991\pm0.0057\), against \(0.3086\) for the symmetric relation H9.  At the precision fixed for
+the next JUNO release the two are \(1.36\sigma\) apart; by the fixed criterion they cannot be separated, and the
+result is recorded as no test.  The limit is set by the uncertainty of \(\Omega_M\), not by JUNO.
+
+\paragraph{Backward analysis (does not count as a test).}
+Let \(T_{abc}\) be the offset of frame \(a\) against frame \(b\), read from frame \(c\), starting from the Hopf value
+\(\bsym=1/\sqrt3\).  Pure kinematics makes \(T_{abc}=\eta_a-\eta_b\) independent of \(c\), since a boost into \(c\)
+shifts all rapidities equally.  Of the readout terms tried, those depending on the distance between reading and read
+frame fail, because they vanish for a self-reading (\(\chi^2\approx34\)).  A single factor on everything read from
+the matter frame, \(T_{abc}=(\eta_a-\eta_b)f(c)\), fits the two measurements with \(f(+)=0.944\pm0.008\)
+(\(\chi^2=2.9\), one degree of freedom).  In \(\beta\) this is \(0.956\pm0.007\), numerically the known Hopf gap
+\(\delta_{\mathrm{CL}}=0.951\) of Remark~\ref{conj:cl-correction}.  The backward analysis yields no new number; it
+offers a different reading of a known one.  Only \(f(+)\) is accessible, since every measurement is made from the
+matter frame.
+
+\subsection*{v4.8.0-r19 cubes linked by transition maps}
+\label{subsec:v480-r19-cubes}
+
+Take one readout cube \(T^{(d)}_{abc}\) per frame \(d\in\{+,0,-\}\) and transition maps
+\(\Lambda(d'\!\leftarrow\!d)\) with \(T^{(d')}=\Lambda(d'\!\leftarrow\!d)\,T^{(d)}\).  If the maps are fixed by the
+theory, the three cubes carry the information of one cube and the transition law; the family adds no parameter.
+What it adds is a consistency question: whether the maps compose to the identity around a closed path of frames.  The
+residue, if any, is the holonomy of the family.  It depends on the transition group and the positions of the frames
+only, and it is the part that no choice of the reading frame can remove.  If the transition maps commute, the
+holonomy is trivial and the family adds nothing.
+
+\subsection*{v4.8.0-r19 the transition group in the two readings}
+\label{subsec:v480-r19-transition-group}
+
+\paragraph{Earlier reading.}
+Theorem~\ref{thm:symmetric-frame} places matter and tachyon at \(\pm\bsym\) on one axis around the photon and calls
+\(\gL\) the Lorentz factor between them.  The transitions are collinear boosts; they commute, and the holonomy is
+trivial.
+
+\paragraph{Reading~B.}
+By \S\ref{subsec:v480-r06-readings} the kernel is the Riemann--Silberstein vector \(z=E+iB\) under
+\(SO(3,\mathbb C)\cong SO^+(1,3)\), with \(s=E^2-B^2+2i\,E\cdot B\).  The working assignment of r07 reads matter as
+\(s>0\) (electric type), tachyon as \(s<0\) (magnetic type), photon as \(s=0\) (null field).
+
+\paragraph{Theoremlet v4.8.0-r19.1.}
+In Reading~B no Lorentz transformation relates matter to tachyon, and none relates either of them to the photon.
+Matter and tachyon with equal \(|s|\) are related by the duality rotation \(z\mapsto e^{i\pi/2}z\), that is
+\(E\mapsto-B\), \(B\mapsto E\).  The photon is reached by neither group action.
+
+\paragraph{Proof sketch.}
+\(SO(3,\mathbb C)\) preserves \(s\) (Theoremlet r06.3), so it preserves its sign and the null cone.  The duality
+rotation multiplies \(s\) by \(e^{2i\alpha}\) and maps \(s>0\) to \(s<0\) at \(\alpha=\pi/2\)
+(Theoremlet r07.2); it preserves \(s=0\).  This is the familiar statement that a radiation field is null in every
+frame and under every duality rotation.  \(\square\)
+
+\paragraph{Consequence.}
+The Lorentz factor \(\gL\) between matter and tachyon in Theorem~\ref{thm:symmetric-frame} has no counterpart in
+Reading~B, where the two are related by a duality rotation and not by a boost.  On this point the two readings
+disagree about the transition group itself.
+
+\paragraph{Theoremlet v4.8.0-r19.2.}
+The duality circle carries a \(\mathbb Z_2\) holonomy around the photon.  Under \(z\mapsto e^{i\alpha}z\) one has
+\(s\mapsto e^{2i\alpha}s\); as \(\alpha\) runs from \(0\) to \(\pi\), \(s\) encircles \(s=0\) once and \(z\) returns as
+\(-z\).  Paths of \(s\) that do not encircle \(s=0\) have trivial holonomy.  The photon is the branch point of
+\(z\) over \(s\).
+
+\paragraph{Proof sketch.}
+\(s\) is quadratic in \(z\), so the map from the duality circle of \(z\) to the circle of \(s\) is two to one.
+Theoremlet r07.1 states the sign ambiguity of \(z_m\) under \(\alpha\mapsto\alpha+\pi\).  \(\square\)
+
+\subsection*{v4.8.0-r19 the earlier reading as a photon-centred view}
+\label{subsec:v480-r19-photon-centred}
+
+\paragraph{Theoremlet v4.8.0-r19.3.}
+The real axis of the \(s\)-plane reproduces the sector structure of Theorem~\ref{thm:symmetric-frame}: matter and
+tachyon at \(\pm|s|\), mirror-symmetric about the photon at \(s=0\), the mirror \(s\mapsto-s\) being the half-turn of
+the duality circle.
+
+\paragraph{Proof sketch.}
+Theoremlet r07.1 with \(\alpha=0\) and \(\alpha=\pi/2\).  \(\square\)
+
+\paragraph{Reading, offered and not adopted.}
+The photon is fixed by the whole duality circle, so it picks out no reference direction in the \(s\)-plane.  The
+earlier reading can then be taken as the view centred on the photon with the real axis chosen as reference, that is,
+with the duality angle fixed as a gauge.  On this axis the straight path from matter to tachyon passes through the
+photon, the branch point, where the phase is undefined; in Reading~B the path runs around the photon on
+\(|s|=\mathrm{const}\).  The photon-centred view therefore cannot see the \(\mathbb Z_2\) holonomy.  It also supplies
+something Reading~B lacks: a metric along the axis, in which the mirror distance is read as a boost with factor
+\(\gL\).  No correspondence between \(|s|\) and \(\bsym\) is given in the source, and by r19.1 the boost reading has no
+counterpart in Reading~B.  Whether the duality angle is a gauge, which would make the earlier reading a gauge-fixed
+projection, or physical, which would make it a projection that loses information, is the question left open in r07.
+
+\subsection*{v4.8.0-r19 consequence for the readout factor}
+\label{subsec:v480-r19-readout-factor}
+
+The \(\mathbb Z_2\) holonomy can only contribute \(\pm1\); it cannot produce a factor such as \(f(+)=0.944\).  A
+continuous holonomy would need closed paths in an \(SO(3,\mathbb C)\)-orbit together with a rule for transporting
+frames along them, i.e.\ a connection.  The source supplies neither.  Composing boosts in non-collinear directions
+yields a Wigner rotation, and the triole directions are a candidate for such directions, but choosing them is a model
+decision.  Any comparison of such a holonomy with \(f(+)\) is a prediction and requires a pre-registration note.
+
+\subsection*{v4.8.0-r19 register entries}
+\label{subsec:v480-r19-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after r19\\
+\midrule
+Thm.~\ref{thm:symmetric-frame} & sector structure reproduced by the real \(s\)-axis of Reading~B (r19.3); \(\gL\) as a Lorentz factor between matter and tachyon has no counterpart in Reading~B (r19.1)\\
+duality circle of r07 & \(\mathbb Z_2\) holonomy around the photon, photon as branch point (r19.2)\\
+Rem.~\ref{conj:cl-correction}, \(\delta_{\mathrm{CL}}\) & numerically equal to the readout factor \(f(+)\) of the backward analysis; reinterpretation only, not a test (r19)\\
+H12 & not separable from H9 by the fixed criterion; no test (r19)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.8.0-r19 ledger and guard update}
+\label{subsec:v480-r19-ledger-guard}
+
+\[
+R_{\rm hol}^{v480\text{-}r19}=(0,0,1)
+\]
+for (transition groups of both readings compared, \(\mathbb Z_2\) holonomy of the duality circle recorded,
+continuous holonomy open for lack of a connection).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v480\text{-}r19,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v480\text{-}r19}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
 \end{document}
