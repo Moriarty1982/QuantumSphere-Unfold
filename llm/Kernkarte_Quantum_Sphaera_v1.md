@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v6.0
+# Kernkarte Quantum Sphaera — v6.1
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1402,6 +1402,28 @@ thm:core „Photon bei β = 0“ gilt nur für Re s. Enigma-Komposit: R_{π/2}�
 Seite, Durchgang ↔ Seitenwechsel notiert, nicht übernommen (ρ_r, ρ_h, K, Tunnelselektor ohne Gegenstück).
 Ledger R_uw = (0,0,1); Guards unverändert.
 
+### K47 — Companion-Runde v4.9.0-r03: Kompensator als Zweiarm-Interferometer (2026-10-21)
+
+`sec:v490-r03-compensator-interferometer`, Snippet `llm/v490_r03_round.tex`, Skript `llm/k39_kompensator.py`. Kein
+Datenvergleich. Anlass (Autor): Michelson–Morley mit halbdurchlässigem Spiegel; Tachyonenspiegel als Periskop.
+
+**K47.1 Ausgänge (M).** C = ½(1+J) und A = ½(1−J) sind die beiden Ausgänge eines Zweiarm-Interferometers mit J in
+einem Arm; Energie verlustfrei aufgeteilt. Mit antilinearem J nur reell-linear, A(f) = −i C(if): Boson/Fermion-
+Aufteilung des Pauli-Punkts (sec:central) wird Real-/Imaginärteil-Aufteilung.
+
+**K47.2 Ladung und Licht (M).** Coulombfeld → J_B: Feld einer magnetischen Ladung; C, A: Dyonen (q/2, ±q/2).
+Lichtwelle: J_B = Umkehr der Ausbreitung + 90°-Polarisationsdrehung (phasenkonjugierender Spiegel + Rotator, existiert);
+C(Licht) hat E ∥ B, kein Licht. Fehlender Tachyonenspiegel = fehlende magnetische Ladung (unter r07-Zuordnung).
+
+**K47.3 Auslese (M).** Dualitätsphase φ im Referenzarm: D(φ) = Im(e^{iφ} s); Amplitude |s|, Phase arg s; D(0) = 2E·B
+(Seite des Photons). Materie und Tachyon um eine halbe Periode versetzt, Licht ohne Streifen (Nullresultat).
+Sichtbarkeit V = |s|/|z|² = √(1 − (|E×B|/u)²) = 1/cosh 2η_f, η_f Rapidität des Systems mit E ∥ B; Energie läuft mit
+tanh 2η_f. Arithmetik bei η_sym: V = 1/γ_L = 0,536, 0,844 — nicht identifiziert, nur mit Vorab-Notiz.
+
+**K47.4 Summe und Produkt (M).** prop:compensator „orthogonal zu beiden Eingängen“ gilt nicht für den Mittelwert
+(Re⟨f, Cf⟩ = |Cf|²), wohl für das Produkt: z × J_B z = 2 E×B, z · J_B z = 2iu; lichtartig genau für Licht.
+Welche Lesart gemeint ist, offen. Ledger R_comp = (0,0,1); Guards unverändert.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1494,6 +1516,8 @@ Ledger R_uw = (0,0,1); Guards unverändert.
   von Lorentz- und Doppler-Faktor).
 - v6.0 (2026-10-21): K46 Companion-Runde v4.9.0-r02 (Rundlauf um das Photon, Umkehrwalze = C, involutive
   Umkehrwalze antilinear E ↔ B).
+- v6.1 (2026-10-21): K47 Companion-Runde v4.9.0-r03 (Kompensator als Interferometer, Dyon, Sichtbarkeit
+  1/cosh 2η_f, Produktlesart).
 
 ---
 
