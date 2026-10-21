@@ -9,7 +9,10 @@ sind die, an denen zwei Rollen in einem Satz verbunden werden.
 """
 import re, os, collections
 here = os.path.dirname(os.path.abspath(__file__))
-src = os.path.join(here, "..", "Quantum_Sphaera_Companion_v4_8_0_source.tex")
+src = next(p for p in (os.path.join(here, "..", n) for n in
+           ("Quantum_Sphaera_Companion_v4_8_0_source.tex",                   # lokale Arbeitskopie
+            "Quantum_Sphaera_Companion_v4_8_0_r20_working_source.tex"))      # notes/research auf GitHub
+           if os.path.exists(p))
 L = open(src, encoding="utf-8").read().split("\n")
 START_ROUNDS = next(i for i, l in enumerate(L) if "v4.7.0-r94 Source-Only" in l)
 
