@@ -149,9 +149,55 @@ auf die Neutrino-Entkopplung nur schwach. **Eine Drift von 8 % in sin²θ_W bei 
 Abschätzung kosmologisch nicht ausgeschlossen, aber auch nicht prüfbar.** Hält man statt α und v andere Größen fest,
 ändert sich das. H15 legt nicht fest, welche Größen konstant bleiben.
 
+### E11: Was bleibt laut Dokument bei der Drift fest? (Prüfung der Quelle; Skript `llm/k48_feste_groessen.py`)
+
+**Was die Quelle sagt.**
+- Definition des Frame-Insertion-Counts: X^(photon) = γ_L^{−k} X^(matter).
+- `thm:k-values`: k(α⁻¹) = 1, k(m_e) = 1, k(ħ) = 1, k(G_N) = 2, k(c) = 0, k(γ_BI) = 0 („frame-invariant by
+  construction“).
+- Korollar „α-drift as a frame effect“: „The hardware value α^(photon) is strictly constant“, und
+  α^(matter)(t) = γ_L^(local)(t) · α^(photon).
+- `prop:saturation` (1) schreibt die Neutrinomasse ebenso als γ_L(t)⁴ mal Photon-Frame-Wert.
+
+**Fest bleiben** damit die Werte im Photon-Frame und alle Größen mit k = 0 (c, γ_BI). **Es driften** die
+Materie-Frame-Werte mit γ_L^(local)(t)^k. Die Quelle unterscheidet dabei selbst zwei Faktoren: das strukturelle
+γ_L = γ_BI/γ_string, fest, weil beide Eingaben k = 0 haben bzw. feste Zahlen sind, und den lokalen Faktor
+γ_L^(local)(t), der driften kann. Das ist die Trennung aus r18.
+
+**Folge für H15 und E10.**
+- H15 ist mit dem strukturellen γ_L = γ_BI/γ_string festgelegt, und der ist fest. **H15 sagt deshalb keine Drift von
+  θ_W voraus.**
+- Unabhängig davon ist m_W/m_Z ein Verhältnis von Massen mit gleichem k. Im k-Gesetz kürzt es sich und driftet nicht.
+- Die Folgerung E10 (d), sin²θ_W = 0,242 bei z = 1100, gilt deshalb nur, wenn man H15 statt mit dem strukturellen mit
+  dem lokalen Faktor liest. Nach den Regeln der Quelle ist das nicht die naheliegende Lesart. **E10 (d) wird damit auf
+  diese Zusatzannahme eingeschränkt.**
+
+**Nebenbefund 1: Die Drift aus `prop:H0-tension` verträgt sich nicht mit konstantem α.**
+- Wirkt die Drift über den lokalen Faktor, wie r18 sie liest, dann driftet nach dem Korollar auch α^(matter).
+- Bei 1,6 · 10⁻¹² pro Jahr in β_sym folgt |d ln α/dt| = 3,9 · 10⁻¹² pro Jahr.
+- Atomuhren geben (1/α) dα/dt = 1,0(1,1) · 10⁻¹⁸ pro Jahr (Lange et al., PRL 126, 011102, 2021). Das ist ein Abstand von
+  etwa 3,5 · 10⁶ σ.
+- Seit z = 1100 ergäbe sich |Δα/α| ≈ 5 %, gegen Schranken im Bereich von 10⁻³ aus der Hintergrundstrahlung.
+- `prop:H0-tension` kann also nicht zugleich die Hubble-Spannung über den lokalen Frame-Faktor erklären und α konstant
+  lassen. Es sei denn, der Faktor, der α setzt, ist ein anderer als der, der die Hubble-Spannung erzeugt. Das sagt die
+  Quelle nicht.
+- Die jährliche Modulation aus P5 ist davon nicht betroffen. Ihre Amplitude ist klein, etwa 10⁻¹⁰ · δΦ/c².
+
+**Nebenbefund 2: Das Vorzeichen für α ist uneinheitlich.**
+- `thm:k-values` gibt k(α⁻¹) = 1, also α^(matter) = α^(photon)/γ_L.
+- Das Korollar schreibt α^(matter) = γ_L · α^(photon).
+- Für den Betrag der Drift ist das gleichgültig.
+
+Bewertung: E11 ist eine Prüfung bestehender Aussagen der Quelle gegen bekannte Daten, keine neue Vorhersage. Sie wird
+nicht als Versuch gezählt.
+
 ## Stand
 
-10 Einträge, davon 8 gezählte Versuche, 0 Treffer im Sinne einer Erklärung, 1 Auffälligkeit (E9), 1 Folgerung (E10).
+11 Einträge, davon 8 gezählte Versuche, 0 Treffer im Sinne einer Erklärung, 1 Auffälligkeit (E9), 1 Folgerung (E10, durch
+E11 auf eine Zusatzannahme eingeschränkt), 1 Quellenprüfung (E11). H15 sagt nach den Regeln der Quelle einen zeitlich
+konstanten Weinberg-Winkel voraus. Die Drift aus `prop:H0-tension` steht in ihrer Frame-Faktor-Form gegen die Atomuhren.
+
+Vorige Zwischenbilanz: 10 Einträge, davon 8 gezählte Versuche, 0 Treffer im Sinne einer Erklärung, 1 Auffälligkeit (E9), 1 Folgerung (E10).
 Die Folgerung E10 macht H15 zusammen mit `prop:H0-tension` zu einer Aussage über eine frühere Epoche. Mit heutigen
 Schranken lässt sie sich nicht prüfen, solange offen ist, welche Größen bei der Drift fest bleiben.
 
