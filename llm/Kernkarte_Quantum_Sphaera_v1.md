@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v5.1
+# Kernkarte Quantum Sphaera — v5.2
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1234,6 +1234,33 @@ gegen H9 0,3086. Unsicherheit fast ganz aus Ω_M (σ_P ≈ σ_Ω). JUNO 2026 (z�
 Grenze setzt Ω_M, nicht JUNO (auch bei fehlerfreiem θ₁₂ nur 1,67σ). Kein Test, als Ergebnis festgehalten. Ein Messwert
 nahe 0,299 wäre eine Spannung für H9 nach dessen eigenem Kriterium, keine Stütze für H12. H9 unverändert.
 
+### K39 — Rückwärtsanalyse: 3×3×3 mit Auslese-Index (2026-10-21)
+
+Wie K18: zählt nicht als Test. Skript `llm/k34_rueckwaerts_3x3x3.py`. T_abc = Versatz von a gegen b, gelesen aus c.
+Starteinstellung: Hopf-Kontinuum β = 1/√3 (η_H = 0,6585), J-symmetrisch.
+
+**K39.1 Kinematik (M).** Ein Boost in c verschiebt alle Rapiditäten gleich; T_abc = η_a − η_b hängt nicht von c ab.
+Der dritte Index trägt nur Information, wenn die Auslesung auf das System wirkt.
+
+**K39.2 Daten (M).** Planck Ω_M als T−0+: η = 0,6296 ± 0,0073 (−4,4 % gg. Hopf); JUNO θ₁₂ über die nachträgliche
+H9-Relation als T+0+: η = 0,6111 ± 0,0082 (−7,2 %); LQG γ_L/2 = 0,6175 (Theorie, kein Messwert, −6,2 %). Die beiden
+Messungen unterscheiden sich nur um 1,7σ.
+
+**K39.3 Ansätze (M).** M0 nur Kinematik χ² = 49 (2 FG). M1 Auslesung zieht das gelesene Objekt zum lesenden Frame,
+χ² = 34 (1 FG); M2 κ·ε_abc χ² = 34: beide verschwinden bei Selbstlesung (JUNO: Materie aus Materie), gerade dort ist
+die Absenkung am größten. M1′ mit lichtartigem Neutrino (H2) χ² = 14. **M3 Auslesefaktor T_abc = (η_a − η_b)·f(c):
+1 Parameter, χ² = 2,9 (1 FG), f(+) = 0,944 ± 0,008**; LQG-Kontrolle 0,6 % daneben. M4 freier Faktor je Kontext:
+0 FG, erklärt nichts.
+
+**K39.4 Was man lernt (S).** Die nötige Anregung ist nicht abstandsabhängig, sondern ein gleicher Faktor auf alles,
+was aus dem Materie-Frame gelesen wird. In β ist das 0,956 ± 0,007 — zahlenmäßig die bekannte Hopf-Lücke
+(δ_CL = 0,951, conj:cl-correction; P3 seit r09 Koinzidenz). Kein neuer Wert, nur eine andere Deutung: Auslesefaktor
+statt Gitterkorrektur. Zugänglich ist nur f(+), weil jede Messung aus dem Materie-Frame erfolgt; f(0), f(−) sind
+nicht beobachtbar, der dritte Index ist empirisch eine einzige Zahl.
+
+**K39.5 Grenzen (P).** JUNO geht über eine nachträglich gefundene Relation ein; Planck und JUNO trennen sich nur
+mit 1,7σ; LQG ist kein Messwert. Ein Test bräuchte f(+) ohne JUNO festgelegt und eine Vorab-Notiz vor der Rechnung.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1312,6 +1339,8 @@ nahe 0,299 wäre eine Spannung für H9 nach dessen eigenem Kriterium, keine Stü
   prop:saturation (2), K34.5.
 - v5.0 (2026-10-21): K37 Companion-Runde v4.8.0-r18.
 - v5.1 (2026-10-21): K38 zwölfter vorab festgelegter Test (H12, Drei-Frame-Zuordnung) — nicht trennbar von H9, kein Test.
+- v5.2 (2026-10-21): K39 Rückwärtsanalyse 3×3×3 mit Auslese-Index — einziger tragfähiger Ansatz ist ein Auslesefaktor
+  f(+) ≈ 0,944, zahlenmäßig die bekannte Hopf-Lücke.
 
 ---
 
