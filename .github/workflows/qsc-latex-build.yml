@@ -18,6 +18,7 @@ on:
     paths:
       - "sources/**"
       - ".github/scripts/qsc_latex_build.py"
+      - ".github/scripts/qsc_research_gate.py"
       - ".github/workflows/qsc-latex-build.yml"
 
 permissions:
@@ -53,11 +54,37 @@ jobs:
             --output-dir "$GITHUB_WORKSPACE/build/qsc-pdf-artifacts" \
             --build-historical "$BUILD_HISTORICAL"
 
+      # The v4.9.0 research candidate lives one level below sources/ and is not
+      # selected by the step above. Build it separately unless it was already
+      # the chosen source directory.
+      - name: Build research candidate PDF
+        if: env.SOURCE_DIR != 'sources/research'
+        continue-on-error: true
+        run: |
+          python3 .github/scripts/qsc_latex_build.py \
+            --source-dir sources/research \
+            --output-dir "$GITHUB_WORKSPACE/build/qsc-pdf-artifacts/research" \
+            --build-historical false
+
+      # Artifact names may not contain '/', which branch names often do.
+      - name: Derive artifact name
+        if: always()
+        run: echo "ARTIFACT_REF=$(printf '%s' "$GITHUB_REF_NAME" | tr '/' '-')" >> "$GITHUB_ENV"
+
       - name: Upload QSC preview PDFs and logs
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: qsc-pdf-artifacts-${{ github.ref_name }}-${{ github.run_number }}
+          name: qsc-pdf-artifacts-${{ env.ARTIFACT_REF }}-${{ github.run_number }}
           path: build/qsc-pdf-artifacts
           if-no-files-found: warn
           retention-days: 30
+
+      # The build steps continue on error so that previews are always uploaded.
+      # This check makes a broken research-candidate build fail the job.
+      - name: Check research candidate build
+        if: always()
+        run: |
+          python3 .github/scripts/qsc_research_gate.py \
+            "$GITHUB_WORKSPACE/build/qsc-pdf-artifacts/research/build-summary.json" \
+            "$GITHUB_WORKSPACE/build/qsc-pdf-artifacts/build-summary.json"
