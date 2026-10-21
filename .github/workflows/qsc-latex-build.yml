@@ -66,11 +66,16 @@ jobs:
             --output-dir "$GITHUB_WORKSPACE/build/qsc-pdf-artifacts/research" \
             --build-historical false
 
+      # Artifact names may not contain '/', which branch names often do.
+      - name: Derive artifact name
+        if: always()
+        run: echo "ARTIFACT_REF=$(printf '%s' "$GITHUB_REF_NAME" | tr '/' '-')" >> "$GITHUB_ENV"
+
       - name: Upload QSC preview PDFs and logs
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: qsc-pdf-artifacts-${{ github.ref_name }}-${{ github.run_number }}
+          name: qsc-pdf-artifacts-${{ env.ARTIFACT_REF }}-${{ github.run_number }}
           path: build/qsc-pdf-artifacts
           if-no-files-found: warn
           retention-days: 30
