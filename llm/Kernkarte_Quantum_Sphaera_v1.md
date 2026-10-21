@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v4.6
+# Kernkarte Quantum Sphaera — v4.8
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -55,7 +55,8 @@ Formel (r05); triolischer Orbit-Scan als lokales Readout-Modell.
 
 **Widerlegt oder nicht bestätigt:** RH-Beweis der Riemann-Arbeit (r04); Θ-Summen-Vermutung OP5 B (r05);
 GUE-Selbstbestimmung von γ_L und P1 (r08); Koide-Phasenformel P2 (r09); Herleitungen von GUE, K = 2/3,
-Λ_bare ∼ γ₁².
+Λ_bare ∼ γ₁²; zeitabhängiges β_sym aus prop:H0-tension/prop:saturation mit Ω_Λ = 1 − β_sym² (r17, Vorzeichen
+umgekehrt).
 
 **Vermutung (V), präzisiert:** Materie/Tachyon/Photon als ein Objekt in Dualitätsrahmen (r07);
 Raumzeit als Projektion einer Spinor-/Informationsebene (K2); Einstein-Lesart der Spurformel (r05).
@@ -1159,6 +1160,34 @@ H11a/H11b mit festem Kriterium, Theoremlet r16.1 (dieselbe quadratische Gleichun
 Normen), Gitterbefund, offengelegte Toleranz-Abweichung, Urteil (widerlegt, Mindestgrad 6). Ledger R_cg^{r16} = (0,0,1);
 Guards unverändert, β₄ unverbraucht. Build 3 Läufe (1084 Seiten), Audit gegen r15 ohne harte Abweichung.
 
+### K34 — Zeitrichtung der kosmologischen Anteile (2026-10-21)
+
+Konsistenzprüfung, keine neue Vorhersage, daher ohne Vorab-Notiz. Skript `llm/k31_kosmologie_vorzeichen.py`.
+
+**K34.1 Die drei Aussagen (M).** thm:dark-energy: Ω_Λ = 1 − β_sym², Ω_M = β_sym². prop:H0-tension: β_sym steigt von
+0,527 (z = 1100) auf 0,5493 (heute). prop:saturation („konsistente Fortsetzung“): β_sym → 1, Ω_M → 1, Universum wird
+materiedominiert, Expansion stoppt. Beide Propositionen wenden thm:dark-energy zu allen Zeiten an; bis r16 waren sie
+in keiner Runde geprüft und nicht im Register.
+
+**K34.2 Abgleich (M).** Mit ΛCDM (Planck 2018) verlangt die Zuordnung β_sym = √(1 − Ω_Λ(z)): 1,000 bei z = 1100,
+0,885 bei z = 1, 0,558 heute, 0,231 bei z = −0,5, Grenze 0. Also dβ_sym/dt < 0. prop:H0-tension gibt
+Ω_Λ(1100) = 0,722 statt 1,3 · 10⁻⁹ (Faktor 5,8 · 10⁸).
+
+**K34.3 Urteil (S).** Die drei Aussagen sind zusammen nicht haltbar: sie beschreiben ein Universum, das Λ-dominiert
+beginnt und materiedominiert endet, umgekehrt zur beobachteten Geschichte. Der heutige Wert (1,4 % gegen Planck)
+bleibt unberührt. Auswege, nicht gewählt: (a) thm:dark-energy nur heute gültig; (b) β_sym läuft abwärts, frühes
+Universum an der Tachyon-Grenze; (c) zeitabhängige Brücke zwischen Kaskaden- und kosmologischen Anteilen.
+
+**K34.4 Korrektur.** Eine vermutete Nähe zu DESI (veränderliche dunkle Energie) besteht nicht: DESI betrifft die
+Dichte, prop:H0-tension den Anteil, und der Anteil steigt mit der Zeit für jedes w < 0.
+
+### K35 — Companion-Runde v4.8.0-r17 (2026-10-21)
+
+Runde `sec:v480-r17-cosmological-time-direction` (Snippet `llm/v480_r17_round.tex`) hält K34 fest: drei Aussagen,
+Tabelle β_sym(z), Theoremlet r17.1 (dβ_sym/dt < 0 verlangt, > 0 angenommen), Auswege (a)–(c), Register-Nachtrag für
+thm:dark-energy, prop:H0-tension, prop:saturation. Ledger R_cos^{r17} = (0,0,1); Guards unverändert, β₄
+unverbraucht. Build 3 Läufe unter MiKTeX 25.12 (1087 Seiten), Audit gegen r16 ohne harte Abweichung.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1230,6 +1259,9 @@ Guards unverändert, β₄ unverbraucht. Build 3 Läufe (1084 Seiten), Audit geg
 - v4.4 (2026-10-20): K31 Companion-Runde v4.8.0-r15.
 - v4.5 (2026-10-20): K32 elfter vorab festgelegter Test (H11, Massen aus dem Tripel-Raum) — widerlegt; Mindestgrad 6.
 - v4.6 (2026-10-20): K33 Companion-Runde v4.8.0-r16.
+- v4.7 (2026-10-21): K34 Zeitrichtung der kosmologischen Anteile — thm:dark-energy mit prop:H0-tension und
+  prop:saturation nicht vereinbar (Vorzeichen von dβ_sym/dt umgekehrt); DESI-Nähe zurückgenommen.
+- v4.8 (2026-10-21): K35 Companion-Runde v4.8.0-r17.
 
 ---
 

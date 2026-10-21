@@ -67120,4 +67120,138 @@ R_{\rm glob}^{(v480\text{-}r16,+)}=(0,1,1,1,1),
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
 
+% ============================================================================
+\clearpage
+\section*{v4.8.0-r17 Source-Only: Time Direction of the Cosmological Fractions}
+\addcontentsline{toc}{section}{v4.8.0-r17 Source-Only: Time Direction of the Cosmological Fractions}
+\label{sec:v480-r17-cosmological-time-direction}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer r03 examined the assignment \(\Omega_\Lambda=1-\bsym^2\) of Theorem~\ref{thm:dark-energy} at the present
+epoch (\S\ref{subsec:v480-r03-p4-recheck}) and the provenance of \(\bsym\)
+(\S\ref{subsec:v480-r03-frame-parameter-provenance}).  Two hypothesis-grade statements that make the same
+assignment time-dependent, Proposition~\ref{prop:H0-tension} and Proposition~\ref{prop:saturation}, have not been
+checked by any layer since r85 and do not appear in the registers of \S\ref{sec:v480-r09-p2-p3-reclassification}.
+This layer compares them with the measured expansion history.  It is a consistency check of existing statements,
+not a new prediction, and therefore carries no pre-registration note.  The computation is
+\texttt{llm/k31\_kosmologie\_vorzeichen.py}.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.8.0-r17 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.8.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23365244}{10.5281/zenodo.23365244} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.8.0-r17 the three statements}
+\label{subsec:v480-r17-statements}
+
+\begin{enumerate}[leftmargin=2em]
+\item Theorem~\ref{thm:dark-energy}: \(\Omega_\Lambda=P(S^8\to S^2)=1-\bsym^2\) and
+\(\Omega_M=P(S^8\to S^4)=\bsym^2\).
+\item Proposition~\ref{prop:H0-tension}: \(\bsym\) evolves, with \(\bsym(z=1100)\approx0.527\) and
+\(\bsym(z=0)\approx0.5493\); ``the universe moves continuously away from the photon frame''.
+\item Proposition~\ref{prop:saturation}, stated there as ``the consistent continuation'' of item~2:
+\(\bsym(t)\nearrow1\), \(P(S^8\to S^4)=\bsym^2\to1\), ``the universe becomes fully matter dominated'', and the
+expansion stops.
+\end{enumerate}
+Items~2 and~3 use item~1 at all epochs, not only today; item~3 does so explicitly through \(\bsym^2\to1\).
+
+\subsection*{v4.8.0-r17 comparison with the expansion history}
+\label{subsec:v480-r17-comparison}
+
+In flat \(\Lambda\)CDM with the Planck 2018 values \(\Omega_M=0.3111\), \(\Omega_r=9.1\times10^{-5}\), the
+\(\Lambda\) fraction at redshift \(z\) is
+\(\Omega_\Lambda(z)=\Omega_\Lambda/\bigl(\Omega_r(1+z)^4+\Omega_M(1+z)^3+\Omega_\Lambda\bigr)\).  Under item~1 the
+value of \(\bsym\) that reproduces it is \(\sqrt{1-\Omega_\Lambda(z)}\):
+\begin{center}
+\small
+\begin{tabular}{@{}rrr@{}}
+\toprule
+\(z\) & \(\Omega_\Lambda(z)\) & required \(\bsym\)\\
+\midrule
+\(-0.5\) & \(0.947\) & \(0.231\)\\
+\(0\) & \(0.689\) & \(0.558\)\\
+\(0.5\) & \(0.396\) & \(0.777\)\\
+\(1\) & \(0.217\) & \(0.885\)\\
+\(2\) & \(0.0757\) & \(0.961\)\\
+\(5\) & \(0.0101\) & \(0.995\)\\
+\(1100\) & \(1.3\times10^{-9}\) & \(1.000\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+Proposition~\ref{prop:H0-tension} gives instead \(\Omega_\Lambda(1100)=1-0.527^2=0.722\), larger than the
+\(\Lambda\)CDM value by a factor \(5.8\times10^{8}\).
+
+\paragraph{Theoremlet v4.8.0-r17.1.}
+Under the assignment of Theorem~\ref{thm:dark-energy} held at all epochs, the measured expansion history requires
+\(\mathrm d\bsym/\mathrm dt<0\): \(\bsym\) decreases from \(\bsym\approx1\) at recombination to \(0.558\) today and
+tends to \(0\) in the \(\Lambda\)-dominated future.  Propositions~\ref{prop:H0-tension} and~\ref{prop:saturation}
+assume \(\mathrm d\bsym/\mathrm dt>0\) and an end state \(\bsym\to1\).  The three statements together describe a
+universe that starts \(\Lambda\)-dominated and ends matter-dominated, the reverse of the observed history.  They are
+therefore not jointly tenable.
+
+\paragraph{Proof sketch.}
+\(\Omega_\Lambda(z)\) is monotonically decreasing in \(z\) for \(\Omega_M,\Omega_\Lambda>0\), so
+\(\sqrt{1-\Omega_\Lambda(z)}\) is increasing in \(z\), i.e.\ decreasing in cosmic time.  The table evaluates it.
+Items~2 and~3 state the opposite monotonicity.  \(\square\)
+
+\paragraph{What the comparison does not decide.}
+The present-epoch agreement \(1-\bsym^2=0.698\) against \(\Omega_\Lambda=0.689\) (\(1.4\%\)) is untouched, as are
+the caveats of r03 F3--F5 and F11.  The check uses \(\Lambda\)CDM as the description of the measured history; a
+different background would change the numbers, not the sign, because the ratio of matter to dark-energy density
+scales as \(a^{3w}\) and falls with expansion for every dark-energy equation of state \(w<0\).  This also removes a possible affinity with the
+current evidence for evolving dark energy: that evidence concerns the dark-energy density, while
+Proposition~\ref{prop:H0-tension} concerns the fraction, which increases with time in every such model.
+
+\paragraph{Ways out, recorded and not chosen.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Theorem~\ref{thm:dark-energy} holds only at the present epoch.  Then
+Propositions~\ref{prop:H0-tension} and~\ref{prop:saturation} lose their basis, and the \(1.4\%\) agreement becomes
+a statement about one epoch, which r03 F11 already qualifies.
+\item[(b)] \(\bsym\) runs the other way, from \(\approx1\) at recombination downward.  Then the early universe sits at
+what Proposition~\ref{prop:saturation} calls the tachyon limit, and Proposition~\ref{prop:H0-tension} would need the
+opposite sign of \(\Delta\bsym\), which it would have to re-derive.
+\item[(c)] The cascade probabilities are not the cosmological fractions at other epochs, but some other function of
+them.  Then item~1 needs a time-dependent bridge that the source does not supply.
+\end{enumerate}
+Which way is taken is left to the author.
+
+\subsection*{v4.8.0-r17 register entries}
+\label{subsec:v480-r17-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after r17\\
+\midrule
+Thm.~\ref{thm:dark-energy} & present-epoch value \(1.4\%\) from Planck; not tenable at all epochs together with Props.~\ref{prop:H0-tension}, \ref{prop:saturation} (r17.1)\\
+Prop.~\ref{prop:H0-tension} & sign of \(\mathrm d\bsym/\mathrm dt\) opposite to the one required by Thm.~\ref{thm:dark-energy}; \(\Omega_\Lambda(1100)\) off by \(5.8\times10^8\) (r17)\\
+Prop.~\ref{prop:saturation} & end state \(\Omega_M\to1\) reverses the observed trend \(\Omega_\Lambda\to1\) (r17)\\
+\bottomrule
+\end{tabular}
+\end{center}
+These entries extend the register of \S\ref{subsec:v480-r09-results}.
+
+\subsection*{v4.8.0-r17 ledger and guard update}
+\label{subsec:v480-r17-ledger-guard}
+
+\[
+R_{\rm cos}^{v480\text{-}r17}=(0,0,1)
+\]
+for (present-epoch agreement recorded, time direction checked against the expansion history, choice among
+(a)--(c) open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v480\text{-}r17,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v480\text{-}r17}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
 \end{document}
