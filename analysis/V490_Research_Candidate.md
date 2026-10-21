@@ -129,3 +129,49 @@ not hidden results of this editorial pass. A publication restricted to the
 stated conditional comparison results does not require claiming these
 questions solved. It must keep these limits visible and must not describe
 this candidate as a completed OP5 or unified-field proof.
+
+## Integration of the v4.8.0 Line
+
+The candidate was built from the v4.7.0 source and did not contain the layers
+published with v4.8.0 or recorded after it. This pass carries them in, so that
+the next version continues the published baseline instead of branching beside
+it.
+
+| Item | Change |
+|---|---|
+| `parts/v480-release-layers.tex` | new: v4.7.0-r85 to r94 and v4.8.0-r01, r02, verbatim (1822 lines) |
+| `parts/v480-post-release-layers.tex` | new: v4.8.0-r03 to r20, verbatim (2663 lines) |
+| `parts/support-route.tex` | two sections after the frame-typed endpoint that input the new parts |
+| `parts/premise-audit.tex` | OP5: the Θ-sum conjecture decided (r05); new subsection *Carried Corrections from the v4.8.0 Line* |
+| Preserved fragments | unchanged; the two in-monolith repairs of r85 are carried as qualifications |
+
+Source of the carried blocks: the full-monolith working source after
+v4.8.0-r20, SHA256 `a1b988d3c9e3642f93e201bcb56d6ff03020ae6f284339f29c7030f7b092ebe5`
+(also `notes/research/v4_8_0_r03_r12/Quantum_Sphaera_Companion_v4_8_0_r20_working_source.tex`).
+Each part records its line range and the SHA256 of its carried block in a header
+comment.
+
+Reference check before the build: the carried layers contain 183 labels and 87
+distinct outward references; all 87 resolve against the 3403 labels of the
+candidate, and no label collides.
+
+| Build (MiKTeX 25.12, three passes) | Before | After |
+|---|---:|---:|
+| Pages | 1044 | 1124 |
+| Labels | 3404 | 3590 |
+| Undefined references / citations | 0 / 0 | 0 / 0 |
+| Duplicate labels / rerun warnings | 0 / 0 | 0 / 0 |
+| Overfull hbox warnings | 58 | 58 |
+
+Title page: unchanged. It still comes from the preserved fragment
+`01_opening` and therefore shows the v4.7.0 Version DOI; the candidate has no
+Version DOI of its own. Assigning one, and applying the compact-titlepage rule
+for 4.9.0, belongs to the release decision.
+
+Guard and residual vectors are unchanged in every carried layer:
+`R_glob = (0,1,1,1,1)`, `Gamma_guard = (1,1,1,1,1)`, `beta_4 = 1/256` unspent.
+The carried layers are predominantly audits, corrections and pre-registered
+tests; their registers state that no prediction of the inherited falsifiability
+corollary stands as confirmed. Nothing in this pass changes the candidate's own
+claim scope.
+

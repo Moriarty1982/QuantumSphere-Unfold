@@ -12,6 +12,16 @@ Entry point: `v480-companion.tex` (historical filename retained for existing aud
 - The main entry and `parts/support-route.tex` define the reading order. The later macro-defining v4 chains keep their mutual order. The bibliography is placed after the complete retained development.
 - New prose, premise qualifications and research integration are outside the preserved fragments. `docversion` stays 4.7.0 for inherited records; working metadata separately identifies 4.9.0-draft.
 
+## Carried v4.8.0 Line
+
+The published v4.8.0 layers (v4.7.0-r85 to r94, v4.8.0-r01, r02) and the layers recorded after the release
+(v4.8.0-r03 to r20) are appended after the last preserved fragment of the support route, as
+`parts/v480-release-layers.tex` and `parts/v480-post-release-layers.tex`, verbatim from the full-monolith working
+source. The preserved fragments are not edited: the two repairs that r85 made inside the monolith are carried as
+qualifications in `parts/premise-audit.tex` (*Carried Corrections from the v4.8.0 Line*), together with the
+decided Θ-sum conjecture. See [the change record](../../analysis/V490_Research_Candidate.md#integration-of-the-v480-line)
+and `notes/research/v4_8_0_r03_r12/`.
+
 ## What This Candidate Does
 
 The new main section `parts/cartan-normal-source.tex` integrates the declared neutral odd-cross Cartan comparison, the full residual-source Ward identities, a conditional gravitational subsidiary theorem and two finite-dimensional propositions with proofs. It distinguishes the rank-40 normal inverse from the higher-jet source gate: unrestricted higher increments absorb all six sources at the 384-row order, whereas compatible prescribed tangential jets give unique source values. It retains the failed frozen-highest 1114-row control and the remaining surface, higher-order, gauge and regional-existence obligations. No native action, frame assignment, physical scale or OP5 closure is claimed. See [the candidate change record](../../analysis/V490_Research_Candidate.md). Historical statements below that an analysis was outside the main TeX describe its status at that stage; only this explicit synthesis is newly adopted, not every intervening note.

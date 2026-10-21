@@ -1,0 +1,112 @@
+
+% ============================================================================
+\clearpage
+\section*{v4.8.0-r13 Source-Only: JUNO 2026 Re-Check, Associator of the Generation Triple, and the Colour--Generation Assignment}
+\addcontentsline{toc}{section}{v4.8.0-r13 Source-Only: JUNO 2026 Re-Check, Associator, Colour--Generation Assignment}
+\label{sec:v480-r13-juno-associator-colour}
+% ============================================================================
+
+\paragraph{Purpose.}
+This layer re-checks the fixed predictions of layer r12 against the JUNO data of September 2026, records two
+further pre-registered items (H9, H10), states an obstruction for quark statements, and compares the local
+line with the independent v4.9.0 research candidate.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.8.0-r13 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.8.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23365244}{10.5281/zenodo.23365244} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.8.0-r13 re-check against JUNO 2026}
+\label{subsec:v480-r13-juno}
+
+JUNO (arXiv:2609.37895, 207.2 live days) reports \(\sin^2\theta_{12}=0.3036\pm0.0064\),
+\(\Delta m^2_{21}=(7.388\pm0.078)\times10^{-5}\) eV\(^2\), \(\Delta m^2_{31}=+2.509^{+0.027}_{-0.025}\times10^{-3}\)
+eV\(^2\) for normal ordering, and prefers normal ordering by at least \(2.1\sigma\).  These data existed when H2--H8
+were fixed but had not been used (the data basis was NuFIT~6.0); they are an independent re-check, not a test
+fixed in advance of the measurement.  Data choice made before the computation: \(\sin^2\theta_{12}\) is the
+inverse-variance mean of NuFIT~6.0 and JUNO, \(0.3046\pm0.0056\); for H2 the JUNO mass splittings; all other
+inputs as in r12.  The decision criteria of r12 are unchanged.
+\begin{center}
+\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.10\textwidth}>{\raggedright\arraybackslash}p{0.25\textwidth}>{\raggedright\arraybackslash}p{0.25\textwidth}>{\raggedright\arraybackslash}p{0.28\textwidth}}
+\toprule
+Test & NuFIT 6.0 (r12) & with JUNO 2026 & verdict under the fixed criterion\\
+\midrule
+H2 & normal ordering, \(\sum m_\nu=0.0592\) eV & \(\sum m_\nu=0.0591\) eV; normal ordering preferred & compatible, ordering supported\\
+H4 & \(\chi^2(\mathrm{TM1})=4.4\), \(\chi^2(\mathrm{TM2})=14.7\) & \(9.6\) and \(49.1\) & TM1 far ahead of TM2 but disfavoured on its own (\(\chi^2>9\), 2 d.o.f.)\\
+H8 & \(\chi^2=8.8\), tension & \(\chi^2=14.0\) & disfavoured (\(\ge11.34\), 3 d.o.f.)\\
+\bottomrule
+\end{tabular}
+\end{center}
+The shift is driven by \(\theta_{12}\): TM1 requires \(\sin^2\theta_{12}=0.3182\), \(2.4\sigma\) above the combined
+value.
+
+\paragraph{H9 (note committed as \texttt{b75170d}).}
+The relation \(|U_{e2}|^2=\beta_{\rm sym}^2\), found after the fact in the evaluation of H5, gives
+\(\sin^2\theta_{12}=\beta_{\rm sym}^2/\cos^2\theta_{13}=0.30862\pm0.00018\) with
+\(\beta_{\rm sym}=0.549348\) from \(\gamma_{\rm string}=\ln2/(\pi\sqrt3)\) and the inserted
+\(\gamma_{\rm BI}=0.2375\).  Its present distance to JUNO (\(0.8\sigma\)) is disclosed and does not count.  The
+test is the next JUNO result with \(\sigma\le0.004\): \(|z|<2\) compatible, \(|z|\ge3\) refuted.
+
+\subsection*{v4.8.0-r13 associator of the generation triple}
+\label{subsec:v480-r13-associator}
+
+\paragraph{Theoremlet v4.8.0-r13.1.}
+In the convention of layer r04, \([e_4,e_5,e_6]=(e_4e_5)e_6-e_4(e_5e_6)=-2e_7\).  The associator vanishes on Fano
+lines and has norm \(2\) on non-collinear triples.  Hence every element of the stabilizer of \(+e_7\) fixes the
+associator of the generation triple.
+
+\paragraph{Proof sketch.}
+From the multiplication of r04, \(e_4e_5=e_1\) and \((e_4e_5)e_6=e_1e_6=-e_7\), while \(e_5e_6=-e_3\) and
+\(e_4(e_5e_6)=-e_4e_3=e_7\); the difference is \(-2e_7\).  All triples were also evaluated numerically
+(script \texttt{k27\_test\_h10.py}).  An automorphism fixing \(e_7\)
+maps \([e_4,e_5,e_6]\) to \([he_4,he_5,he_6]=h(-2e_7)=-2e_7\).  \(\square\)
+
+\paragraph{H10 (note committed as \texttt{a6b5bcb}).}
+Four associator criteria were fixed in advance for selecting the TM1 lift over the \(\theta_{13}=0\) lift.  None
+separates the two, for any of the four lifts of the triole.  Together with r12 (minimality, cascade projections,
+compensator) no internal selection principle for the TM1 lift has been found.
+
+\subsection*{v4.8.0-r13 colour and generation}
+\label{subsec:v480-r13-colour-generation}
+
+Theorem~\ref{thm:three-generations} places the generations on \(e_4,e_5,e_6\), the triplet of
+\(SU(3)\subset G_2\), and its proof gives each generation one colour index.  In the Dixon reading this \(SU(3)\)
+is the colour group, so one octonionic triplet is made to carry both colour and generation.  Quarks require
+\(3\times3\) such labels.  Consequences: (i) the octonionic flavour analysis of r12 is mathematically correct but
+physically conditional on reading the triplet as generation space; read as colour, a broken flavour symmetry
+inside \(SU(3)_c\) would break colour; (ii) quark values of the triole radius cannot be addressed before colour
+and generation are separated.  In addition, the quark radii are scheme dependent at the \(2\)--\(4\%\) level
+(\(r_u=1.290\) at \(M_Z\) against \(1.244\) at standard PDG scales; \(r_d=1.115\) against \(1.093\)), about
+a hundred times the statistical error, so a structural match would carry no weight.  No fit is made.
+
+\subsection*{v4.8.0-r13 comparison with the v4.9.0 research candidate}
+\label{subsec:v480-r13-v49}
+
+The repository's v4.9.0 research candidate (independent of this line) agrees with it on the Koide condition as an
+equal-norm law without derivation, on rejecting the phase ansatz \(\pi-\sqrt2\arcsin\beta\), and on not
+asserting a Riemann or GUE theorem.  It finds, independently, the positive phase chambers
+\(|\theta-2\pi j/3|\le\pi/12\) with a parametrically light state near the boundary, the boundary of
+Theoremlet~r12.1.  It admits only non-negative roots for the physical Koide ratio; H2 and H3 are therefore
+reclassified as tests of the \emph{signed-root} Koide relation (for the H2 masses the non-negative-root ratio is
+\(0.525\)).  The colour--generation assignment above concerns both lines.
+
+\subsection*{v4.8.0-r13 ledger and guard update}
+\label{subsec:v480-r13-ledger-guard}
+
+\[
+R_{\rm mix}^{v480\text{-}r13}=(0,0,1,1)
+\]
+for (protocols committed; hypotheses decided; selection principle open; colour--generation separation open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v480\text{-}r13,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v480\text{-}r13}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.

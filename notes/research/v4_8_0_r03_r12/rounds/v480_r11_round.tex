@@ -1,0 +1,91 @@
+
+% ============================================================================
+\clearpage
+\section*{v4.8.0-r11 Source-Only: Pre-Registered Test of the Phase Relation \texorpdfstring{$\delta=K/3$}{delta = K/3}}
+\addcontentsline{toc}{section}{v4.8.0-r11 Source-Only: Pre-Registered Test of the Phase Relation delta = K/3}
+\label{sec:v480-r11-preregistered-h1}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer r10 wrote the lepton masses as a scalar plus a triole and left the phase open.  For the charged
+leptons the phase satisfies \(\delta\approx K/3\approx2/9\).  This layer records the first
+pre-registered test of the Companion: the hypothesis that \(\delta=K/3\) holds for every triplet of
+charged fermions.  Hypothesis, definitions, data and decision criterion were committed to the
+repository before any computation (working-folder note \texttt{Vorab\_Notiz\_H1\_Koide\_Phase.md},
+commit \texttt{81f38d3}).  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.8.0-r11 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.8.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23365244}{10.5281/zenodo.23365244} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.8.0-r11 hypothesis and protocol}
+\label{subsec:v480-r11-protocol}
+
+\paragraph{Hypotheses.}
+H1: \(\delta=K/3\) for each triplet.  H1\('\): \(\delta=2/9\) for each triplet.  For quarks
+\(K\neq2/3\), so the two differ.  The factor \(1/3\) may be read as \(1/N\) for \(N=3\) kernels or as
+\(\beta_{\rm sym,Hopf}^2\); for triplets both readings predict the same number.
+
+\paragraph{Protocol.}
+\(v_k=\sqrt{m_k}\) in ascending order, all roots positive; \(t\) and \(c\) as in Theoremlet r10.1;
+\(\delta=\arg c\) reduced to \([0,2\pi/3)\).  Primary data: running \(\overline{\rm MS}\) Yukawa couplings
+at \(\mu=M_Z\) with PDG-2024 inputs (Antusch, Hinze, Saad, arXiv:2510.01312), for which masses are
+proportional to couplings and the common factor cancels.  Error propagation by \(10^6\) Monte-Carlo
+draws.  Criterion: \(|z|<2\) compatible, \(|z|>3\) refuted; H1 is refuted if it is refuted for at least
+one quark triplet.
+
+\subsection*{v4.8.0-r11 result}
+\label{subsec:v480-r11-result}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.27\textwidth}rrrrr@{}}
+\toprule
+triplet (at \(M_Z\)) & \(K\) & \(\delta\) & \(K/3\) & \(z\)(H1) & \(z\)(H1\('\))\\
+\midrule
+up quarks \((u,c,t)\) & 0.8876 & 0.0518 & 0.2959 & \(-322\) & \(-353\)\\
+down quarks \((d,s,b)\) & 0.7478 & 0.1001 & 0.2493 & \(-115\) & \(-128\)\\
+leptons \((e,\mu,\tau)\) & 0.6678 & 0.2211 & 0.2226 & \(-49\) & \(-46\)\\
+leptons, pole masses & 0.6667 & 0.2222 & 0.2222 & \(+0.4\) & \(+0.4\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Theoremlet v4.8.0-r11.1.}
+By the pre-registered criterion both H1 and H1\('\) are refuted.  The relation
+\(\delta\approx K/3\approx2/9\) holds only for the charged leptons with pole masses, where it served as
+calibration; it fails for both quark triplets and already for the running lepton masses at \(M_Z\).
+
+\paragraph{Proof sketch.}
+Direct computation (script \texttt{k14\_test\_h1.py}, seed 20261020), following the committed protocol
+without deviation.  The secondary data set (PDG-2024 masses at their standard scales) gives the same
+verdict.  \(\square\)
+
+\paragraph{Assessment.}
+The lepton coincidence is tied to pole masses, as is the Koide relation itself, and is not a law of the
+triole structure for all triplets.  Hypotheses read off from the quark values found here would again be
+post-dictions and would need their own pre-registration.  The procedure itself is retained: it is the
+Companion's first test that could have failed and was fixed before the data were examined.
+
+\subsection*{v4.8.0-r11 ledger and guard update}
+\label{subsec:v480-r11-ledger-guard}
+
+\[
+R_{\rm H1}^{v480\text{-}r11}=(0,0,1)
+\]
+for (protocol committed before computation; hypothesis decided; principle for the triole parameters
+still open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v480\text{-}r11,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v480\text{-}r11}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+

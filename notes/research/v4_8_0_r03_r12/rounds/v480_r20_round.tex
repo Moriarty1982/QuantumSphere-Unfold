@@ -1,0 +1,150 @@
+% ============================================================================
+\clearpage
+\section*{v4.8.0-r20 Source-Only: The Tachyon Frame, Complex Rapidity and the Holonomy Test H13}
+\addcontentsline{toc}{section}{v4.8.0-r20 Source-Only: The Tachyon Frame, Complex Rapidity and the Holonomy Test H13}
+\label{sec:v480-r20-tachyon-complex-rapidity}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer r19 found no Lorentz transformation between the sectors of Reading~B and read the earlier reading as a
+photon-centred view.  This layer records the pre-registered holonomy test H13 and a post-hoc finding attached to it,
+and examines the tachyon frame under the holonomy and spinor structure.  The computations are
+\texttt{llm/k35\_test\_h13.py} and \texttt{llm/k36\_tachyon\_frame.py}; only H13 is compared with data.  Earlier layers
+are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.8.0-r20 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.8.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23365244}{10.5281/zenodo.23365244} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.8.0-r20 the holonomy test H13}
+\label{subsec:v480-r20-h13}
+
+The note \texttt{llm/Vorab\_Notiz\_H13\_Wigner\_Holonomie.md} fixed, before any computation, one construction: three
+matter frames moving with rapidity \(\eta_H=\operatorname{artanh}(1/\sqrt3)\) in the three triole directions, linked by
+pure boosts into a closed loop, with \(\cos\delta\) of the resulting Wigner rotation to be compared with the readout
+factor \(f(+)=0.944\pm0.008\) of the backward analysis recorded in \S\ref{subsec:v480-r19-records}.
+
+The holonomy is a pure rotation (boost part \(10^{-16}\)) by \(\delta=0.4985\) rad \(=28.56^\circ\), equal to the
+angular defect of the equilateral hyperbolic triangle with vertices at the three velocities.  Then
+\(\cos\delta=0.878\), at \(z=-7.9\) from \(f(+)\).  By the fixed criterion H13 is refuted for this construction, and the
+holonomy route with triole boosts is closed for \(f(+)\).  Since \(f(+)\) is itself a fit, this removes an explanation
+of the factor, not the factor.
+
+\paragraph{Post-hoc finding, not registered and not counting.}
+Asked after the result: \(\cos^2(\delta/2)=(1+\cos\delta)/2=0.939\) meets \(f(+)\) at \(z=-0.5\).  It is one of four
+obvious functions of \(\delta\) (\(\cos\delta\): \(-7.9\); \(\cos(\delta/2)\): \(+3.1\); \(1-\delta/2\pi\): \(-2.8\)), roughly
+the rate expected by chance.  Its parts have different standing.  The half angle is forced once the spinor is read
+out: by Theoremlet r06.4 (\S\ref{subsec:v480-r06-null-cone}) \(z\) is quadratic in \(\psi\in\mathbb C^2\), so a rotation
+of the frames by \(\delta\) turns \(\psi\) by \(\delta/2\).  The square is a Born-type reading of \(|\langle\psi|U\psi\rangle|^2\).
+The orientation is a choice: \(|\langle\psi|U\psi\rangle|^2=\cos^2(\delta/2)+\sin^2(\delta/2)\cos^2\theta\), with \(\theta\) the
+angle to the rotation axis, which is normal to the triole plane.  The triole photon \(c(1,\omega,\omega^2)\) is a null
+field whose direction \(E\times B\) is \((1,1,1)\), the normal of the plane \(z_1+z_2+z_3=0\); its spinor lies on the
+axis and acquires only the phase \(\delta/2=14.28^\circ\).  The factor \(\cos^2(\delta/2)\) belongs to a spinor in the plane,
+such as the helicity of a matter frame moving in a triole direction.
+
+\subsection*{v4.8.0-r20 the tachyon frame}
+\label{subsec:v480-r20-tachyon}
+
+\paragraph{Theoremlet v4.8.0-r20.1.}
+The duality rotation \(z\mapsto iz\) commutes with every element of \(SO(3,\mathbb C)\).  Hence every closed path in
+the tachyon sector has the same holonomy as its matter image (for the triole loop \(\delta=28.56^\circ\)), and \(z\) and
+\(iz\) have the same two principal null directions.  Matter and tachyon with \(z_T=iz_M\) differ only in the overall
+phase of the spinor product.
+
+\paragraph{Proof sketch.}
+\(iz\) is a scalar multiple of \(z\), and \(SO(3,\mathbb C)\) acts linearly.  Writing \(z\) as a symmetric 2-spinor
+\(F_{AB}\) with \(F_{11}=\tfrac12(z_1-iz_2)\), \(F_{22}=\tfrac12(-z_1-iz_2)\), \(F_{12}=-\tfrac12z_3\) (the polarisation of the
+map of r06.4), the principal spinors are the roots of \(F_{11}\lambda^2+2F_{12}\lambda+F_{22}\), which do not change when
+\(F\) is multiplied by \(i\).  Checked numerically.  \(\square\)
+
+\paragraph{Theoremlet v4.8.0-r20.2.}
+For a speed \(v>1\),
+\[
+\operatorname{artanh}v=\operatorname{artanh}\frac1v+\frac{i\pi}{2}.
+\]
+The four-velocity at rapidity \(\eta+i\pi/2\) is \(i\,w\) with \(w=(\sinh\eta,\cosh\eta)\) spacelike: the real
+four-velocity turns from timelike to spacelike and the factor \(i\) carries the phase.  For \(v=1/\bsym=1.8203\) the real
+part is \(\eta_{\rm sym}=0.6174\) and the imaginary part is \(\pi/2\), the duality angle that relates matter and tachyon
+in Theoremlet r07.2 (\S\ref{subsec:v480-r07-duality-angle}).
+
+\paragraph{Proof sketch.}
+\(\tanh(x+i\pi/2)=\coth x\); \(\cosh(\eta+i\pi/2)=i\sinh\eta\), \(\sinh(\eta+i\pi/2)=i\cosh\eta\).  \(\square\)
+
+\paragraph{The same structure in three places.}
+A phase \(\pi/2\) on the representative and a change of sign of the real invariant occur in the duality rotation
+\(z_T=iz_M\), \(s\mapsto-s\) (r07.2), in the superluminal rapidity of r20.2, and in the signed tachyon scale
+\(\ell_T^2=-\lambda_T^2\) of \S\ref{sec:r82-tachyon-frame-signed-scale}, where \(\ell_T=i\lambda_T\).  The last is an
+allowed effective statement of the release scope; r20 records the parallel and adds nothing to it.
+
+\paragraph{Reading, offered and not adopted.}
+The earlier reading places the tachyon at \(-\bsym\), the real part of its rapidity; Reading~B keeps the imaginary part
+\(\pi/2\) as the duality angle.  The two readings are then related by keeping or dropping one imaginary part, which is
+the photon-centred view of \S\ref{subsec:v480-r19-photon-centred} expressed in rapidities.
+
+\subsection*{v4.8.0-r20 cross terms with complex tachyon rapidity}
+\label{subsec:v480-r20-cross-terms}
+
+With the tachyon at \(-\eta+i\pi/2\) the cross terms of \S\ref{subsec:v480-r18-cross-terms} become
+\begin{center}
+\small
+\begin{tabular}{@{}lcc@{}}
+\toprule
+pair & real (r18) & with \(i\pi/2\)\\
+\midrule
+matter--photon & \(\cosh\eta=1.197\) & \(1.197\)\\
+photon--tachyon & \(\cosh\eta=1.197\) & \(-i\sinh\eta=-0.657\,i\)\\
+matter--tachyon & \(\cosh2\eta=1.864=\gL\) & \(-i\sinh2\eta=-1.574\,i\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+The matter--tachyon term becomes purely imaginary with modulus \(\sinh2\eta=\sqrt{\gL^2-1}\), the proper velocity of the
+pair instead of its Lorentz factor; for tachyons \(\cosh\) and \(\sinh\) exchange their roles.  The real factor \(\gL\)
+arises only when the imaginary part is dropped.  This is Theoremlet r19.1 in numbers: Reading~B has no real Lorentz factor
+between matter and tachyon.
+
+\paragraph{The tribonacci condition.}
+The fixed-point condition \(\mu=1/\bsym(\mu)\) of Theorem~\ref{thm:tribonacci} reads, in rapidities,
+\(\cosh2\eta=\coth\eta=\tanh(\eta+i\pi/2)\): the Lorentz factor of the opposite term equals the speed of a tachyon with
+real rapidity \(\eta\).  This is a reformulation, not a new value.
+
+\subsection*{v4.8.0-r20 register entries}
+\label{subsec:v480-r20-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after r20\\
+\midrule
+H13, readout factor as triole holonomy & refuted for the fixed construction, \(z=-7.9\) (r20)\\
+\(\cos^2(\delta/2)\) for \(f(+)\) & post-hoc, not registered, does not count; half angle from r06.4, square and orientation are readings (r20)\\
+tachyon sector of Reading~B & same holonomy and same principal spinors as matter (r20.1)\\
+Thm.~\ref{thm:symmetric-frame}, tachyon at \(-\bsym\) & real part of the superluminal rapidity \(\eta_{\rm sym}+i\pi/2\); imaginary part equals the duality angle (r20.2)\\
+\(\gL\) as matter--tachyon factor & real only with the imaginary part dropped; with it \(-i\sinh2\eta\) (r20)\\
+Thm.~\ref{thm:tribonacci} & equivalent to \(\cosh2\eta=\coth\eta\) (r20)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.8.0-r20 ledger and guard update}
+\label{subsec:v480-r20-ledger-guard}
+
+\[
+R_{\rm tach}^{v480\text{-}r20}=(0,0,1)
+\]
+for (H13 decided, tachyon frame related to both readings through the complex rapidity, physical status of the
+imaginary part open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v480\text{-}r20,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v480\text{-}r20}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+

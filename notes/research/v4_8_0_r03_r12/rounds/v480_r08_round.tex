@@ -1,0 +1,110 @@
+
+% ============================================================================
+\clearpage
+\section*{v4.8.0-r08 Source-Only: Test of Prediction P1 (Photon-Frame Unfolding)}
+\addcontentsline{toc}{section}{v4.8.0-r08 Source-Only: Test of Prediction P1 (Photon-Frame Unfolding)}
+\label{sec:v480-r08-p1-test}
+% ============================================================================
+
+\paragraph{Purpose.}
+Corollary~\ref{cor:falsifiable} lists P1 as testable now: unfolding the zeta zeros with the
+photon-frame density should improve the GUE fit by about \(21\%\) (Corollary~\ref{cor:odlyzko}),
+and Theorem~\ref{thm:gue-selfdet} states that the Kolmogorov--Smirnov distance has a unique global
+minimum at \(\mu=\gL\).  This layer performs the test on the first 2000 zeros.  Earlier layers are
+not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.8.0-r08 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.8.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23365244}{10.5281/zenodo.23365244} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.8.0-r08 setup}
+\label{subsec:v480-r08-setup}
+
+As in Theorem~\ref{thm:gue-selfdet},
+\(\tilde\gamma_n(\mu)=\int_0^{\gamma_n}\frac{\log(t/2\pi\mu)}{2\pi\mu}\,dt
+=\frac{\gamma_n}{2\pi\mu}\bigl(\log\frac{\gamma_n}{2\pi\mu}-1\bigr)\) and
+\(s_n(\mu)=\tilde\gamma_{n+1}(\mu)-\tilde\gamma_n(\mu)\).  The comparison law is the Wigner surmise
+\(p(s)=\frac{32}{\pi^2}s^2e^{-4s^2/\pi}\); \(\chi^2\)/dof uses 15 bins on \([0,3]\).  The scale runs over
+\(\mu\in[0.5,3]\) in steps of \(0.05\).  Two readings are tested: (a) raw, exactly as defined, and
+(b) normalized to mean spacing \(1\), since a pure rescaling would otherwise move the mean.
+
+\subsection*{v4.8.0-r08 result}
+\label{subsec:v480-r08-result}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.26\textwidth}>{\raggedright\arraybackslash}p{0.33\textwidth}>{\raggedright\arraybackslash}p{0.33\textwidth}@{}}
+\toprule
+ & zeros 1--100 & zeros 101--2000\\
+\midrule
+(a) raw: KS minimum & \(\mu=1.00\) & \(\mu=1.00\)\\
+(a) KS at \(\mu=1\) / \(\mu=\gL\) & \(0.068\) / \(0.699\) & \(0.041\) / \(0.628\)\\
+(a) mean spacing at \(\mu=\gL\) & \(0.419\) & \(0.473\)\\
+(b) normalized: KS minimum & \(\mu=2.85\) & \(\mu=2.25\)\\
+(b) KS range over \(\mu\) & \(0.037\)--\(0.070\) & \(0.039\)--\(0.042\)\\
+(b) \(\chi^2\)/dof change \(\mu=1\to\gL\) & \(+5.4\%\) improvement & \(-9.9\%\) (worse)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Theoremlet v4.8.0-r08.1.}
+On the first 2000 zeros, neither reading of the photon-frame unfolding singles out \(\mu=\gL\).
+In reading (a) the unique minimum is the standard unfolding \(\mu=1\); in reading (b) the
+dependence on \(\mu\) is flat within the statistical scatter and its minimum is not at \(\gL\).
+Moreover, in reading (b) the effect of \(\mu\) vanishes with height: the local stretch it introduces
+is of relative size \(\log\mu/\log(\gamma/2\pi)\), about \(1\%\) at \(\gamma\sim10^{22}\), so an
+asymptotic improvement of \(21\%\) cannot occur.
+
+\paragraph{Proof sketch.}
+Direct computation, script \texttt{k11\_p1\_entfaltung.py} in the working folder.  For reading (b),
+\(\rho_\mu(t)/\rho_1(t)=\mu^{-1}\bigl(1-\log\mu/\log(t/2\pi)\bigr)\); after normalization the constant
+factor \(\mu^{-1}\) drops out and only the second term, which decays like \(1/\log t\), remains.
+\(\square\)
+
+\paragraph{Reproducibility note.}
+The value of \(75.8\%\) for 100 zeros stated in Corollary~\ref{cor:odlyzko} is not reproduced in
+either reading.  The original script \texttt{gue\_frame\_correction.py} is not in the source folders,
+so its exact procedure could not be compared.
+
+\subsection*{v4.8.0-r08 consequences}
+\label{subsec:v480-r08-consequences}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after r08\\
+\midrule
+Thm.~\ref{thm:gue-selfdet} (unique minimum at \(\gL\)) & not confirmed; contradicted on zeros 1--2000\\
+Cor.~\ref{cor:odlyzko}, P1 in Cor.~\ref{cor:falsifiable} & by its own criterion falsified at low height; the asymptotic form excluded by the \(1/\log\gamma\) decay\\
+\(\gL\) as ``GUE fixpoint of the frame'' & withdrawn; \(\gL\) remains an input (cf.\ r03 F11, OP1)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Corollary~\ref{cor:odlyzko} states that non-observation falsifies \(\gL=\gBI/\gstring\) as the
+physical frame factor.  This layer records the non-observation on the accessible zeros and the
+reason why the stated asymptotic effect cannot appear.  It does not by itself decide the physical
+status of \(\gL\); that remains with OP1.
+
+\subsection*{v4.8.0-r08 ledger and guard update}
+\label{subsec:v480-r08-ledger-guard}
+
+\[
+R_{\rm P1}^{v480\text{-}r08}=(0,0,1)
+\]
+for (test performed; prediction not confirmed; physical status of \(\gL\) open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v480\text{-}r08,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v480\text{-}r08}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
