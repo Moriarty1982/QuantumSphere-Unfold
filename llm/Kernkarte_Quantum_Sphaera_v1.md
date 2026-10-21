@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v6.6
+# Kernkarte Quantum Sphaera — v6.7
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1520,6 +1520,24 @@ Reale Teilcheneffekte (bekannt oder dunkel) können die H14-Lücke höchstens zu
 gestützt nur bei SM-Ausschluss mit 3σ (SM 80,359 ± 0,006). Ergebnis ausstehend (`llm/Ergebnis_H15_W_Masse_gamma_L.md`).
 R_ew = (0,0,1); Guards unverändert.
 
+### K53 — Companion-Runde v4.9.0-r08: Frame-Drift, Atomuhren, Hubble-Spannung (2026-10-21)
+
+`sec:v490-r08-drift-clocks-hubble`, Snippet `llm/v490_r08_round.tex`; Erkundungsprotokoll E10–E13; Skripte k47, k48.
+
+**K53.1 Feste Größen (S).** Photon-Frame-Werte und k = 0 (c, γ_BI) fest; Materie-Frame-Werte driften mit
+γ_L^(local)(t)^k; strukturelles γ_L = γ_BI/γ_string fest (Trennung wie r18).
+
+**K53.2 α-Vorzeichen gelöst (S).** P5, prop:muon-g2 und α-Korollar nutzen k(α) = +1 für α; nur die Tabellenzeile
+nennt α⁻¹ ⇒ k = 1 gehört zu α (schließt r03 F2), keine Zahl des Hauptkorpus ändert sich.
+
+**K53.3 Drift gegen Atomuhren (D).** Drift aus prop:H0-tension über den lokalen Faktor: |d ln α/dt| = 3,9e-12 (γ_L),
+1,3e-12 (cosh η), 2,3e-12 (e^η) pro Jahr gegen 1,0(1,1)e-18 (Yb⁺, Lange 2021) ⇒ ~6 Größenordnungen; lesartunabhängig
+k(α)/k(H₀) < 5,5e-7 nötig. Statische Typisierung (k(H₀) = 1 ⇒ 1,864) und Frühzeit-Änderung (m_e, α falsche Richtung)
+tragen nicht ⇒ prop:H0-tension ohne tragfähigen Mechanismus.
+
+**K53.4 Compton-Uhr (M).** m_e c²/ħ hat k = 0 ⇒ frame-invariante Uhr; Verhältnis zur Atomuhr (k = 2) liest
+γ_L^(local)^{±2} direkt. H15 sagt konstantes θ_W voraus (strukturelles γ_L). R_drift = (0,0,1); Guards unverändert.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1621,6 +1639,7 @@ R_ew = (0,0,1); Guards unverändert.
   Portgewichtung).
 - v6.5 (2026-10-21): K51 Vorab-Test H14 (Kegelwinkel = 2θ_W exakt widerlegt, als Näherung nicht entscheidbar).
 - v6.6 (2026-10-21): K52 Companion-Runde v4.9.0-r07, Vorab-Notiz H15 (m_W = 80,3615 GeV vorhergesagt).
+- v6.7 (2026-10-21): K53 Companion-Runde v4.9.0-r08 (Drift gegen Atomuhren, α-Vorzeichen, Compton-Uhr).
 
 ---
 
