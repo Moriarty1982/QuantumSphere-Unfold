@@ -61,9 +61,50 @@ Bewertung „Fehlschlag“ bleibt, die Begründung lautet jetzt so.
 | E6 | Kombinationen von Beiträgen weglassen (Vorschlag des Autors) | Der strukturelle Winkel könnte der Winkel ohne einen Teil der Schleifen sein | Nur zwei Stücke sind groß: Top 0,00934 und Rest (Higgs, bosonisch, höhere Ordnung) 0,00108. Leichte Dubletts liegen bei ≤ 5 · 10⁻⁷. Die vier Teilmengen ergeben 0,22321 / 0,22404 / 0,23039 / 0,23122, das Ziel ist 0,22533 | **Fehlschlag**: Keine Teilmenge trifft. Am nächsten kommt „Rest weglassen“ mit −0,00129. Leichte Teilchen können nichts beitragen |
 | E7 | Gemischter Zustand oder dunkler Sektor (Z–Z′-Mischung, dunkles Photon, Dunkle Materie mit Z-Kopplung; Vorschlag des Autors) | Eine Beimischung eines dunklen Zustands zu Z oder Photon verschiebt die Massen | Größenschranke unabhängig vom Mechanismus: Ein neuer Beitrag Δρ = 0,00275 höbe m_W um 155 MeV gegen die SM-Vorhersage. Gemessen minus SM-Fit: +10 ± 14 MeV, also 2σ-Raum Δρ_neu ∈ [−0,0003; 0,0007]. Unsichtbare Z-Breite N_ν = 2,9963 ± 0,0074 | **Fehlschlag**: Jeder reale Effekt in den Massen darf höchstens etwa ein Viertel der Lücke ausmachen |
 
+### E8 und E9: Ableitung aus der Struktur (Skript `llm/k45_struktur_weinberg.py`)
+
+**E8, Umformung von H14 (Mathematik, kein Versuch im Sinn der Zählung).** cos 2θ = tanh η ist gleichwertig mit
+- tan θ = e^{−η},
+- sin²θ = 1/(1 + e^{2η}),
+- ϑ_c = 2θ = Π(η), wobei Π der Parallelitätswinkel nach Lobatschewski ist (cos Π(x) = tanh x).
+
+In der Sprache von r05.1(d) heißt das: Die Portgewichtung e^{tσ_x} bei t = η hat das Gewichtsverhältnis
+e^{2η} = cot²θ = (g/g′)². **H14 ist also eine Aussage über ein Kopplungsverhältnis**, g/g′ = e^η, den Doppler-Faktor aus
+r01, Weg (C). Ein Massenverhältnis ist es nicht. Kopplungsverhältnisse laufen mit der Skala. Im MS-bar-Schema hat sin²θ_W
+sein Minimum bei μ = M_W, etwa 0,231 (PDG Abb. 10.1). Darüber steigt es (Ein-Schleife: 0,235 bei 200 GeV, 0,243 bei
+1 TeV), darunter ebenfalls. **Kein Skalenwert erreicht 0,22533.** Die Struktur verweist damit auf das Schema, in dem der
+Abstand *größer* ist. Die Nähe zum On-shell-Wert wird von ihr nicht gestützt.
+
+| Nr. | Variante | Begründung | Ergebnis | Bewertung |
+|---|---|---|---|---|
+| E8 | H14 als Kopplungsverhältnis g/g′ = e^η bei laufender Skala | Strukturelle Lesart über die Portgewichtung (r05.1d) | MS-bar-Minimum ≈ 0,231 > 0,22533 auf jeder Skala | **Fehlschlag** der Skalenrettung |
+| E9 | cot θ_W (on-shell) gegen die drei Dokumentkonstanten 1/β_sym, e^η, γ_L (*aufgefallen* beim Rechnen von E8) | r01.3: γ_L (Weg A) und e^η (Weg C) fallen am Tribonacci-Punkt zusammen | cot θ_W = m_W/√(m_Z² − m_W²) = 1,86550 ± 0,00140. γ_L = 1,86444: z = −0,8. e^η: z = −8,1. 1/β_sym: z = −32 | **Auffällig, kein Beleg** (siehe unten) |
+
+### E9 im Einzelnen
+
+- **Form.** cot θ_W = γ_L, also g/g′ = cosh 2η, der Materie–Tachyon-Lorentzfaktor. H14 war g/g′ = e^η. Nach r01.3 sind
+  beide am Tribonacci-Punkt gleich. Sie unterscheiden sich nur um die 0,55 % zwischen Weg (A) und Weg (C). Die On-shell-Daten
+  liegen bei (A).
+- **Gleichwertige Vorhersage.** m_W = m_Z γ_L/√(1 + γ_L²) = 80,3590 GeV mit γ_BI = 0,2375 und 80,3614 GeV mit
+  γ_BI = 0,237532. Gemessen: 80,3692 ± 0,0133. Die SM-Vorhersage aus dem Fit ist 80,359 ± 0,006. **Die Beziehung fällt
+  derzeit mit der SM-Vorhersage zusammen** und lässt sich von ihr erst bei einer Genauigkeit von wenigen MeV trennen.
+  Dafür müsste außerdem die Ziffernfolge von γ_BI festgelegt sein, denn die vierte Stelle verschiebt m_W um 2,4 MeV. Mit
+  γ_BI = 0,274 (andere Zählweise der Literatur) ergäbe sich 82,7 GeV, ausgeschlossen.
+- **Warum kein Beleg.**
+  - Die Beziehung ist nachträglich gefunden.
+  - Die drei Dokumentkonstanten 1,820 / 1,854 / 1,864 liegen im selben Bereich wie cot θ_W über die Schemata
+    (1,823 bis 1,866). Irgendeine Paarung ist dadurch fast erwartbar.
+  - Geschätzt liegt die Wahrscheinlichkeit, dass der On-shell-Wert innerhalb von 1σ an einer der drei Konstanten liegt,
+    bei etwa 3 · 2 · 0,0014 / 0,05 ≈ 0,17.
+- **Was es wert ist.** Es ist der erste Kandidat dieses Protokolls, der eine echte, künftige Messung betrifft. Ein Test
+  bräuchte eine Vorab-Notiz mit festgelegtem γ_BI, festgelegter Fehlerrechnung und einer künftigen m_W-Kombination, deren
+  Genauigkeit die SM-Vorhersage von der Beziehung trennt.
+
 ## Stand
 
-7 Versuche, 0 Treffer. Keine Variante hat die Lücke physikalisch erklärt. Die Tribonacci-Korrektur verschiebt in die
+9 Einträge, davon 8 gezählte Versuche, 0 Treffer im Sinne einer Erklärung, 1 Auffälligkeit (E9).
+
+Frühere Zwischenbilanz: 7 Versuche, 0 Treffer. Keine Variante hat die Lücke physikalisch erklärt. Die Tribonacci-Korrektur verschiebt in die
 falsche Richtung. Das Weglassen von Beiträgen trifft in keiner Kombination. E7 schließt allgemein aus, dass ein in der
 Natur vorhandener Zusatzeffekt die Lücke füllt: Er wäre in der W-Masse sichtbar. Übrig bleiben zwei Möglichkeiten. Die
 Lücke ist ein Unterschied zwischen einer strukturellen und der physikalischen Größe, für den eine Vorschrift fehlt, oder
