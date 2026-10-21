@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v5.6
+# Kernkarte Quantum Sphaera — v5.7
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1317,6 +1317,30 @@ der Ebene (Helizität eines Materie-Frames). Lesart (V): Materie-Lesungen um cos
 Phase. Hopf-Start → β = 0,5500, γ_L = 1,8675 (0,12 % / 0,16 %), Kategorie wie P3. Eine Photonphase δ/2 wäre
 vorab festzulegen.
 
+### K43 — Der Tachyon-Frame unter Holonomie und Spinorstruktur (2026-10-21)
+
+Strukturrechnung ohne Datenvergleich, Skript `llm/k36_tachyon_frame.py`.
+
+**K43.1 Gleiche Holonomie (M).** Die Dualität z ↦ iz vertauscht mit jeder SO(3,ℂ)-Wirkung (numerisch exakt). Jede
+Schleife hat im Tachyon-Sektor dieselbe Holonomie wie ihr Materie-Bild; für die Triole δ = 28,56°.
+
+**K43.2 Gleiche Hauptspinoren (M).** z und iz haben dieselben zwei Hauptnullrichtungen; Materie und Tachyon mit
+z_T = i z_M unterscheiden sich nur in der Gesamtphase des Spinorprodukts. Im Auslesebild von K42.3 werden Materie- und
+Tachyon-Lesungen gleich abgeschwächt; nur das Photon (auf der Drehachse) unterscheidet sich.
+
+**K43.3 Überlichtrapidität (M).** Für v > 1 ist artanh v = artanh(1/v) + iπ/2. Bei v = 1/β_sym = 1,8203: Realteil
+η_sym = 0,6174, Imaginärteil π/2. u(η + iπ/2) = i·w mit w = (sinh η, cosh η) raumartig: Die reelle Vierergeschwindigkeit
+kippt von zeitartig zu raumartig, der Faktor i trägt die Phase — dieselbe Struktur wie z_T = i z_M mit s → −s, und
+derselbe Faktor i wie in der erlaubten Aussage ℓ_T² = −λ_T² (r82). Für Tachyonen tauschen cosh und sinh die Rollen.
+
+**K43.4 Kreuzterme mit komplexer Tachyon-Rapidität (M).** Tachyon bei −η + iπ/2: Photon–Tachyon cosh = −i·sinh η
+(|·| = 0,657), Materie–Tachyon cosh = −i·sinh 2η (|·| = 1,574 = β·γ des Paars statt γ_L = 1,864). Der reelle Faktor
+γ_L entsteht nur, wenn der Imaginärteil fallen gelassen wird — passt zu r19.1 und r19.3.
+
+**K43.5 Tribonacci (M).** thm:tribonacci μ = 1/β_sym(μ) ist in Rapiditäten cosh 2η = coth η = tanh(η + iπ/2): Der
+Lorentzfaktor des Gegenüber-Terms ist gleich der Geschwindigkeit eines Tachyons mit reeller Rapidität η. Umformulierung,
+kein neuer Wert.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1402,6 +1426,8 @@ vorab festzulegen.
 - v5.4 (2026-10-21): K41 Companion-Runde v4.8.0-r19.
 - v5.5 (2026-10-21): K42 dreizehnter vorab festgelegter Test (H13, Wigner-Holonomie) — widerlegt, z = −7,9.
 - v5.6 (2026-10-21): K42.3 Nachbefund Halbwinkel (nicht registriert): Spinor-Herkunft, Triolen-Photon auf der Drehachse.
+- v5.7 (2026-10-21): K43 Tachyon-Frame: gleiche Holonomie und Hauptspinoren wie Materie, Überlichtrapidität mit iπ/2,
+  Kreuzterme imaginär, Tribonacci als cosh 2η = coth η.
 
 ---
 
