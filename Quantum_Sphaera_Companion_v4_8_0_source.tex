@@ -68470,4 +68470,179 @@ R_{\rm glob}^{(v490\text{-}r04,+)}=(0,1,1,1,1),
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
 
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r05 Source-Only: The Millennium Matrix on the Doublet, a Third Axis near Rotating Black Holes, and a Photon from Matter and Tachyon}
+\addcontentsline{toc}{section}{v4.9.0-r05 Source-Only: The Millennium Matrix on the Doublet, a Third Axis near Rotating Black Holes, and a Photon from Matter and Tachyon}
+\label{sec:v490-r05-layer-transport-kerr-photon}
+% ============================================================================
+
+\paragraph{Purpose.}
+Three questions of the author follow r04.
+\begin{enumerate}[leftmargin=2em]
+\item Can the Millennium matrix of the main body be the doublet matrix of r04?  The author also asks for a more
+meaningful name.
+\item Can amplitudes, the missing third axis of r04, enter near a black hole?
+\item Can a photon arise when a tachyon meets a forming massive particle, and could such a photon run back and create
+the tachyon at its origin?
+\end{enumerate}
+The computations are \texttt{llm/k41\_schichttransport\_kerr\_photon.py}.  No value is compared with data.  Earlier
+layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r05 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r05 the Millennium matrix on the doublet}
+\label{subsec:v490-r05-millennium}
+
+The main body asks three things of the Millennium matrix \(\mathcal M\).  It transports one object through its layers
+(\S\ref{sec:millennium-hc}).  It commutes with the involution and with the compensator, condition (T4) of
+Definition~\ref{def:tensor-structural-kernel}.  And the compensator is its spectral projector
+(Theorem~\ref{thm:hc-spectral-projector}).
+
+\paragraph{Theoremlet v4.9.0-r05.1.}
+On the doublet of r04, with \(J=\sigma_x\) and \(C_{\HC}=\tfrac12(1+\sigma_x)\) acting from the right:
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] The real \(2\times2\) matrices satisfying (T4) are exactly \(M=\lambda_+C_{\HC}+\lambda_-A\).  Together with
+spatial rotations acting from the left, these are all transports of the doublet compatible with (T4).
+\item[(b)] For \(\lambda_+\neq\lambda_-\), \(C_{\HC}\) is the spectral projector of \(M\) onto the eigenvalue \(\lambda_+\),
+as Theorem~\ref{thm:hc-spectral-projector} requires.
+\item[(c)] Of the transports of Reading~B, (T4) holds for spatial rotations, for \(J_B\) itself and for the duality
+rotation by \(\pi\), that is \(C\).  It fails for every other duality rotation, for \(T\) and for boosts (r02, r04).
+\item[(d)] The invertible members with determinant \(1\) are \(e^{t\sigma_x}=e^{t}C_{\HC}+e^{-t}A\).  They preserve
+\(\operatorname{Re}s=E^2-B^2\), the matter--tachyon coordinate, and weight the two ports of r03 by \(e^{\pm t}\).
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+\(M\sigma_x=\sigma_xM\) is a linear condition with a two-dimensional solution space spanned by \(1\) and \(\sigma_x\).
+\(e^{t\sigma_x}{}^{\mathsf T}\sigma_ze^{t\sigma_x}=\sigma_z\) since \(\sigma_x\sigma_z=-\sigma_z\sigma_x\).  Checked
+numerically.  \(\square\)
+
+\paragraph{Consequence.}
+On the doublet the Millennium matrix can only be a \emph{port-weighting matrix}.  It leaves the compensator port and the
+partner port invariant and multiplies them by two factors.  It is not the Lorentz transport of Reading~B, since boosts
+violate (T4).  The doublet therefore realises the compensator part of \(\mathcal H_{16}\), not the full \(\mathcal M_{16}\).
+The four-term layer decomposition \(\mathcal M_{\rm tri}+\mathcal M_{\rm alg}+\mathcal M_{\rm cl}+\mathcal M_{\rm proj}\)
+and the index \(16\) have no counterpart on a two-dimensional doublet.  With \(t=\eta_{\rm sym}\) the port weights would be
+the Doppler factors \(e^{\pm\eta}\) of way~(C) in r01.  That is arithmetic, not an identification.
+
+\paragraph{Naming (author's request, 2026-10-21).}
+From this layer on, \(\mathcal M_{16}\) is called the \emph{layer-transport matrix}.  The name says what
+\S\ref{sec:millennium-hc} defines: one object carried through its layers.  Its restriction to the doublet is called the
+\emph{port-weighting matrix}.  Symbols, labels and the wording of earlier layers stay unchanged, so ``Millennium matrix''
+in earlier text means the same object.  A renaming of the earlier text and of the PDF keywords would rewrite released
+layers.  It is not done here.
+
+\subsection*{v4.9.0-r05 a third axis, and rotating black holes}
+\label{subsec:v490-r05-third-axis}
+
+\paragraph{Theoremlet v4.9.0-r05.2.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] At a point, \(E\) and \(B\) are real, so the state matrix of r04 has no \(\sigma_y\) part anywhere, near a black
+hole or not.
+\item[(b)] For time-harmonic fields with complex amplitudes \(\hat E,\hat B\), the matrix of time averages
+\(\hat G=\hat F^\dagger\hat F\) is Hermitian, and its \(\sigma_y\) part is \(-2\operatorname{Im}(\hat E^*\cdot\hat B)\).  For a plane
+wave this is \(\pm1\) (relative to \(\operatorname{tr}\hat G\)) for the two circular polarisations and \(0\) for linear
+polarisation.  The third axis is helicity, the quantity generated by the duality rotation.  With it the disk of r04
+becomes a sphere, with light on the helicity axis.
+\item[(c)] The gravitational field has the same structure.  Its Weyl curvature is a complex symmetric \(3\times3\) matrix,
+gravito-electric plus \(i\) gravito-magnetic.  For a Schwarzschild black hole the only component
+\(\Psi_2=-M/r^3\) is real.  For a Kerr black hole \(\Psi_2=-M/(r-ia\cos\theta)^3\) is complex.  \(\operatorname{Im}\Psi_2^2\), the
+Pontryagin part of the curvature, is positive in one hemisphere, zero on the equator and negative in the other.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(b): \(\operatorname{tr}(\hat G\sigma_y)=-2\operatorname{Im}\hat G_{12}\); for \(\hat B=\hat z\times\hat E\) with
+\(\hat E=(1,\pm i,0)/\sqrt2\) one gets \(\mp1\) up to orientation.  (c): standard form of \(\Psi_2\) in the Kinnersley tetrad;
+the sign of \(\operatorname{Im}\Psi_2^2\) follows the sign of \(\cos\theta\).  Checked numerically for \(M=1\), \(a=0.9\),
+\(r=3\).  \(\square\)
+
+\paragraph{Reading.}
+Amplitudes do not enter because a black hole is near.  They enter with waves and quantum states.  What a black hole adds
+depends on its rotation.  A static one is mirror-symmetric and singles out neither helicity.  A rotating one puts its own
+curvature off the real axis, on opposite sides in its two hemispheres, which is the gravitational counterpart of the two
+sides of the photon in r02.1.  Whether this couples to the helicity axis of (b), and whether Hawking radiation of a
+rotating black hole would then carry a helicity imbalance between the hemispheres, is open.  A quantitative statement is a
+prediction and requires a pre-registration note.  Theorem~\ref{thm:core} treats the static case only.
+
+\subsection*{v4.9.0-r05 a photon from matter and tachyon}
+\label{subsec:v490-r05-photon}
+
+\paragraph{Author's question (2026-10-21).}
+A tachyon meets a massive particle that is just forming.  Instead of reaching a massive state, the encounter yields a
+photon.  The tachyon develops a pull through the impact, so the photon is drawn along the tachyon's former path,
+collides again and again, reaches the tachyon's origin, vanishes there, and thereby creates the tachyon.
+
+\paragraph{Theoremlet v4.9.0-r05.3.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Let \(z_M\) be of matter type and \(z_T\) of tachyon type with \(s(z_T)=-s(z_M)\).  Then
+\(s(z_M+z_T)=2\,z_M\cdot z_T\).  The superposition is a null field exactly when \(z_M\cdot z_T=0\).  For a static electric
+field \(E\) and a static magnetic field \(B\) of equal strength, the superposition is null exactly when \(E\perp B\).  Its
+energy then flows at the speed of light along \(E\times B\), perpendicular to both.
+\item[(b)] At an angle \(\vartheta\) between \(E\) and \(B\), the superposition sits at \(b=(0,\cos\vartheta)\) in the disk of
+r04.  \(\vartheta=90^\circ\) is the photon at the centre, and \(\vartheta=0\) is the dyon of r03.2 at the edge.
+\item[(c)] Let a tachyon leave the origin \(O\) and meet the particle at \(K\), a distance \(d\) away, at speed \(v>1\).  A
+photon running back from \(K\) to \(O\) arrives \(d(1+1/v)\) after the departure, and this arrival lies in the future light
+cone of the departure in every frame.  The order of departure and meeting is frame-dependent (for observer speeds above
+\(1/v\) it reverses), but the photon leg is not.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a) Expand \(s\).  For \(z_M=E\), \(z_T=iB\): \(z_M\cdot z_T=iE\cdot B\).  Null fields have \(|E\times B|=u\) (r03.3).
+(b) \(s=2i|E|^2\cos\vartheta\) and \(u=|E|^2\).  (c) The separation of departure \((0,0)\) and photon arrival
+\((d/v+d,0)\) is timelike and future-directed; the tachyon leg is spacelike.  Checked numerically for \(v=1/\bsym\).
+\(\square\)
+
+\paragraph{Reading.}
+The first part of the picture has a precise form.  Matter and tachyon can combine to a photon, but only with crossed
+orientation.  With parallel orientation they give the dyon of r03.  The photon does not move along the tachyon's path.
+It moves perpendicular to both inputs.  The last part, a photon that arrives at the origin and thereby creates the
+tachyon, cannot hold for a photon running forward in time: it always arrives after the tachyon has left.  What does hold
+is the familiar reinterpretation of tachyon exchange.  Since the tachyon leg is spacelike, ``emitted at \(O\), absorbed at
+\(K\)'' and ``emitted at \(K\), absorbed at \(O\)'' are the same exchange seen by different observers.  A closed
+self-creation would need a photon leg running backward in time.  Without one, the repeated encounter of the picture is a
+cycle of period \(d(1+1/v)\), not a self-creation.  If such a cycle returns on the other side of the photon, the tachyon
+created in the next cycle is the charge conjugate of the first (r02.1).  Reading~B has no dynamics (r10), so the pull of
+the picture cannot be derived or excluded here.
+
+\subsection*{v4.9.0-r05 register entries}
+\label{subsec:v490-r05-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r05\\
+\midrule
+Millennium matrix, (T4), Thm.~\ref{thm:hc-spectral-projector} & on the doublet only \(\lambda_+C_{\HC}+\lambda_-A\) (port weighting); boosts and general duality rotations violate (T4); full \(\mathcal M_{16}\) not identified (r05.1)\\
+name & \(\mathcal M_{16}\): layer-transport matrix; doublet restriction: port-weighting matrix; earlier wording unchanged\\
+third axis of r04 & helicity, for complex amplitudes; Kerr curvature off the real axis with opposite sides in the two hemispheres; coupling open (r05.2)\\
+photon from matter \(+\) tachyon & null exactly for crossed orientation, flux perpendicular to both; return photon cannot create the tachyon (r05.3)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r05 ledger and guard update}
+\label{subsec:v490-r05-ledger-guard}
+
+\[
+R_{\rm lt}^{v490\text{-}r05}=(0,0,1)
+\]
+for (doublet form of the layer-transport matrix decided, third axis and photon question answered structurally,
+identification of the full \(\mathcal M_{16}\) and the Kerr coupling open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r05,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r05}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
 \end{document}

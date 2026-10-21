@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v6.2
+# Kernkarte Quantum Sphaera — v6.3
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1443,6 +1443,31 @@ einer Richtung. Summenlesart = Projektor, Produktlesart = Spur/Determinante (+ S
 app:hc-tools: Dublett liefert konkrete X^±; Identifikation mit der Millennium-Matrix nicht gemacht. R_mat = (0,0,1);
 Guards unverändert.
 
+### K49 — Companion-Runde v4.9.0-r05: Millennium-Matrix auf dem Dublett, dritte Achse/Kerr, Photon aus Materie + Tachyon (2026-10-21)
+
+`sec:v490-r05-layer-transport-kerr-photon`, Snippet `llm/v490_r05_round.tex`, Skript
+`llm/k41_schichttransport_kerr_photon.py`. Kein Datenvergleich.
+
+**K49.1 Millennium-Matrix (M).** (T4) [M, J] = [M, C] = 0 erzwingt auf dem Dublett M = λ₊C_HC + λ₋A
+(Portgewichtung); C_HC ist dann Spektralprojektor (thm:hc-spectral-projector). Erfüllt von Drehungen, J_B, C;
+verletzt von Boosts, allgemeinen Dualitätsdrehungen, T. det-1-Glieder e^{tσ_x} = e^t C + e^{−t} A erhalten Re s; bei
+t = η_sym Doppler-Gewichte (Arithmetik). Volles M_16 (Vierschichtzerlegung, Index 16) nicht identifiziert.
+**Umbenennung (Autorwunsch):** M_16 = „layer-transport matrix“ (Schichttransportmatrix), Dublett-Einschränkung =
+„port-weighting matrix“ (Portgewichtungsmatrix); ab r05 als Lesename, frühere Wortlaute/PDF-Keywords unverändert.
+
+**K49.2 Dritte Achse (M).** An einem Punkt E, B reell ⇒ nie σ_y. Komplexe Amplituden: Ĝ hermitesch, σ_y-Anteil
+−2 Im(Ê*·B̂) = Helizität (zirkular ±1, linear 0); Scheibe → Kugel, Licht auf der Helizitätsachse. Kerr:
+Ψ₂ = −M/(r − ia cos θ)³ komplex, Im Ψ₂² (Pontrjagin-Anteil) Halbkugeln mit entgegengesetztem Vorzeichen, Äquator 0;
+Schwarzschild reell. Kopplung an Helizität / Helizitätsungleichgewicht der Kerr-Hawking-Strahlung offen, nur mit
+Vorab-Notiz.
+
+**K49.3 Photon aus Materie + Tachyon (M).** s(z_M + z_T) = 2 z_M·z_T bei s_T = −s_M; Nullfeld genau bei
+Orthogonalität (E ⊥ B gleich stark), Energiefluss längs E×B senkrecht zu beiden; Winkel ϑ: b = (0, cos ϑ),
+parallel = Dyon. Rücklaufendes Photon kommt d(1 + 1/v) nach dem Abflug an, in jedem System zukunftsartig ⇒ kann
+das Tachyon nicht erzeugen; Tachyon-Reihenfolge rahmenabhängig (Umdeutung). Zyklus mit Periode d(1 + 1/v); Rückkehr
+auf der anderen Seite ⇒ C-konjugiertes Tachyon. Sog nicht ableitbar (keine Dynamik, r10). R_lt = (0,0,1); Guards
+unverändert.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1538,6 +1563,8 @@ Guards unverändert.
 - v6.1 (2026-10-21): K47 Companion-Runde v4.9.0-r03 (Kompensator als Interferometer, Dyon, Sichtbarkeit
   1/cosh 2η_f, Produktlesart).
 - v6.2 (2026-10-21): K48 Companion-Runde v4.9.0-r04 (Kompensator als 2×2-Matrix auf (E, B), Zustandsscheibe).
+- v6.3 (2026-10-21): K49 Companion-Runde v4.9.0-r05 (Portgewichtung, Umbenennung, Helizitätsachse/Kerr,
+  Photon aus Materie + Tachyon).
 
 ---
 
