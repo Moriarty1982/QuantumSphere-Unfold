@@ -131,9 +131,9 @@ Vorgänger, nur Provenienz), `DOI_ROLES` in `qs.py` aktualisieren.
 - `git show "github/main:.github/…"` unter Git-Bash mit `MSYS_NO_PATHCONV=1`, sonst wird der Pfad umgeschrieben.
 - Backslashes in Heredocs der Bash werden verschluckt: LaTeX und Regex-Skripte mit dem Write-Tool als Datei anlegen.
 - Artefaktnamen dürfen kein `/` enthalten; der LaTeX-Workflow ersetzt es seit PR #20 selbst.
-- `build-summary` des LaTeX-Workflows kann Overfull dreifach zählen: `qsc_latex_build.py` nimmt die erste `*.log` im
-  Ausgabeordner, manchmal das latexmk-Konsolenprotokoll aller Läufe. Maßgeblich ist `<name>.log`
-  (`qs.py audit`). Bei v4.9.0: 135 gemeldet, tatsächlich 45.
+- Bis PR #22 (`8d26f14`) konnte `build-summary` Overfull dreifach zählen, weil `qsc_latex_build.py` die erste `*.log`
+  im Ausgabeordner nahm (manchmal das latexmk-Konsolenprotokoll aller Läufe; bei v4.9.0: 135 gemeldet, tatsächlich 45).
+  Seitdem liest es `<name>.log`. Bei Läufen vor diesem Stand im Zweifel `qs.py audit` auf das `.log` anwenden.
 - Manifest nie in den Ordner schreiben, den es beschreibt, ohne `--only`: sonst zählt es sich selbst leer mit.
 - Die Präambel des v4.9-Kandidaten ist ein eingefrorenes v4.7-Fragment mit `bookmarks=false`; das Release-PDF hat
   deshalb keine Lesezeichen (wie das veröffentlichte v4.8.0-PDF).
