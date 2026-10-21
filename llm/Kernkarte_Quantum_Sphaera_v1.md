@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v4.8
+# Kernkarte Quantum Sphaera — v5.0
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -55,8 +55,8 @@ Formel (r05); triolischer Orbit-Scan als lokales Readout-Modell.
 
 **Widerlegt oder nicht bestätigt:** RH-Beweis der Riemann-Arbeit (r04); Θ-Summen-Vermutung OP5 B (r05);
 GUE-Selbstbestimmung von γ_L und P1 (r08); Koide-Phasenformel P2 (r09); Herleitungen von GUE, K = 2/3,
-Λ_bare ∼ γ₁²; zeitabhängiges β_sym aus prop:H0-tension/prop:saturation mit Ω_Λ = 1 − β_sym² (r17, Vorzeichen
-umgekehrt).
+Λ_bare ∼ γ₁²; prop:saturation (2), driftendes β_sym in Ω_M = β_sym² eingesetzt (r17/r18, Vorzeichen umgekehrt;
+prop:H0-tension selbst nicht betroffen).
 
 **Vermutung (V), präzisiert:** Materie/Tachyon/Photon als ein Objekt in Dualitätsrahmen (r07);
 Raumzeit als Projektion einer Spinor-/Informationsebene (K2); Einstein-Lesart der Spurformel (r05).
@@ -1181,12 +1181,46 @@ Universum an der Tachyon-Grenze; (c) zeitabhängige Brücke zwischen Kaskaden- u
 **K34.4 Korrektur.** Eine vermutete Nähe zu DESI (veränderliche dunkle Energie) besteht nicht: DESI betrifft die
 Dichte, prop:H0-tension den Anteil, und der Anteil steigt mit der Zeit für jedes w < 0.
 
+**K34.5 Eingrenzung durch K36.** Der Konflikt sitzt nur in prop:saturation (2); prop:H0-tension nutzt die Drift über
+den Frame-Faktor und erwähnt Ω nicht. Das Datensatz-Urteil „H0-Spannung in der vorliegenden Form nein“ war zu stark.
+
 ### K35 — Companion-Runde v4.8.0-r17 (2026-10-21)
 
 Runde `sec:v480-r17-cosmological-time-direction` (Snippet `llm/v480_r17_round.tex`) hält K34 fest: drei Aussagen,
 Tabelle β_sym(z), Theoremlet r17.1 (dβ_sym/dt < 0 verlangt, > 0 angenommen), Auswege (a)–(c), Register-Nachtrag für
 thm:dark-energy, prop:H0-tension, prop:saturation. Ledger R_cos^{r17} = (0,0,1); Guards unverändert, β₄
 unverbraucht. Build 3 Läufe unter MiKTeX 25.12 (1087 Seiten), Audit gegen r16 ohne harte Abweichung.
+
+### K36 — Drei-Frame-Typisierung des Versatzes und Eingrenzung von r17 (2026-10-21)
+
+Skript `llm/k32_bsym_rollen.py` (Rollen aller 261 \bsym-Stellen im Hauptkorpus; Kreuzterme). Keine neue Vorhersage.
+
+**K36.1 Eingrenzung von r17 (S).** prop:H0-tension erwähnt Ω nicht; die Drift wirkt über den Frame-Faktor
+(rekonstruiert: (γ_L(0)/γ_L(1100))^{3/2} = 1,082 gegen 1,083, Exponent nicht im Text). Ω_Λ(1100) = 0,722 entsteht nur, wenn
+man das driftende β_sym in thm:dark-energy einsetzt — das tut nur prop:saturation (2). r17.1 bleibt (konditional).
+„Permanent“ in thm:dark-offset heißt „nie null“, kein Widerspruch zu langsamer Drift.
+
+**K36.2 Kreuzterme (M).** Materie +, Photon 0, Tachyon − bei Rapiditäten +η, 0, −η mit η = artanh β_sym = 0,6174.
+Kreuzterme η_a − η_b: Nachbar (+0, 0−) β = 0,5493, γ = 1,197; Gegenüber (+−) β = 0,844, γ = cosh 2η = 1,864 = γ_L.
+Unter J-Symmetrie genau zwei Beträge (Theoremlet r18.1).
+
+**K36.3 Befunde (M).** (a) Konstantenumrechnung Materie → Photon (Definition k, thm:frame-offset) benutzt γ_L, den
+Gegenüber-Term; der Nachbarfaktor wäre 1,197; cosh 2η ≠ (cosh η)^n, also nicht in k verschiebbar. (b) z₋ = β/2 = 0,422
+in thm:frame-offset ist eine Halbierung in der Geschwindigkeit; in der Rapidität ergibt sie β_sym = 0,5493. (c) Ω_M = tanh²η,
+Ω_Λ = sech²η, Summe identisch 1; offen, warum eine Kaskade aus S⁸ den +0-Term benutzt.
+
+**K36.4 Lesart (V, nicht übernommen).** Driftet der Materie-Frame und bleibt der Tachyon-Frame strukturell fest, bricht
+die J-Symmetrie, drei verschiedene Kreuzterme. Strukturelles und beobachtetes β fallen genau am symmetrischen Punkt
+zusammen; thm:spring hat diesen Punkt als Gleichgewicht (Nettokraft null nur für z_T = −z_M), aber ungedämpft. Der
+Abstand 0,5493 (γ_L) zu 0,5578 (Planck) wäre dann Symmetrieabweichung statt δ_CL. Zuordnung der Messwerte zu
+Kreuztermen ist eine Vorhersage — nur mit Vorab-Notiz.
+
+### K37 — Companion-Runde v4.8.0-r18 (2026-10-21)
+
+Runde `sec:v480-r18-three-frame-typing` (Snippet `llm/v480_r18_round.tex`) hält K36 fest: Eingrenzung von r17,
+Kreuzterm-Tabelle, Theoremlet r18.1, Befunde (a)–(c), Symmetrie-Lesart als Option, Register-Nachtrag.
+Ledger R_fr^{r18} = (0,0,1); Guards unverändert, β₄ unverbraucht. Build 3 Läufe unter MiKTeX 25.12 (1090 Seiten),
+Audit gegen r17 ohne harte Abweichung.
 
 ---
 
@@ -1262,6 +1296,9 @@ unverbraucht. Build 3 Läufe unter MiKTeX 25.12 (1087 Seiten), Audit gegen r16 o
 - v4.7 (2026-10-21): K34 Zeitrichtung der kosmologischen Anteile — thm:dark-energy mit prop:H0-tension und
   prop:saturation nicht vereinbar (Vorzeichen von dβ_sym/dt umgekehrt); DESI-Nähe zurückgenommen.
 - v4.8 (2026-10-21): K35 Companion-Runde v4.8.0-r17.
+- v4.9 (2026-10-21): K36 Drei-Frame-Typisierung (Kreuzterme, Befunde a–c, Symmetrie-Lesart); Eingrenzung von r17 auf
+  prop:saturation (2), K34.5.
+- v5.0 (2026-10-21): K37 Companion-Runde v4.8.0-r18.
 
 ---
 

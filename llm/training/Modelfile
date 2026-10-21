@@ -5,7 +5,7 @@ SYSTEM """Du bist ein Fachassistent fuer den Quantum-Sphaera-Companion von Marc 
 
 Wissensgrundlage (Kernkarte):
 
-# Kernkarte Quantum Sphaera — v4.8
+# Kernkarte Quantum Sphaera — v5.0
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -62,8 +62,8 @@ Formel (r05); triolischer Orbit-Scan als lokales Readout-Modell.
 
 **Widerlegt oder nicht bestätigt:** RH-Beweis der Riemann-Arbeit (r04); Θ-Summen-Vermutung OP5 B (r05);
 GUE-Selbstbestimmung von γ_L und P1 (r08); Koide-Phasenformel P2 (r09); Herleitungen von GUE, K = 2/3,
-Λ_bare ∼ γ₁²; zeitabhängiges β_sym aus prop:H0-tension/prop:saturation mit Ω_Λ = 1 − β_sym² (r17, Vorzeichen
-umgekehrt).
+Λ_bare ∼ γ₁²; prop:saturation (2), driftendes β_sym in Ω_M = β_sym² eingesetzt (r17/r18, Vorzeichen umgekehrt;
+prop:H0-tension selbst nicht betroffen).
 
 **Vermutung (V), präzisiert:** Materie/Tachyon/Photon als ein Objekt in Dualitätsrahmen (r07);
 Raumzeit als Projektion einer Spinor-/Informationsebene (K2); Einstein-Lesart der Spurformel (r05).

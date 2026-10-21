@@ -67254,4 +67254,155 @@ R_{\rm glob}^{(v480\text{-}r17,+)}=(0,1,1,1,1),
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
 
+% ============================================================================
+\clearpage
+\section*{v4.8.0-r18 Source-Only: Three-Frame Typing of the Frame Offset and Correction of r17}
+\addcontentsline{toc}{section}{v4.8.0-r18 Source-Only: Three-Frame Typing of the Frame Offset and Correction of r17}
+\label{sec:v480-r18-three-frame-typing}
+% ============================================================================
+
+\paragraph{Purpose.}
+The single symbol \(\bsym\) is used in 261 lines of the main body in at least three roles: as a frame factor in
+the conversion of constants, as a branching probability of the cascade, and as a Hopf angle
+(\texttt{llm/k32\_bsym\_rollen.py}).  This layer types the frame offset over the three frames of the triolic
+system, records three findings that the single symbol hides, narrows the register entries of r17, and records a
+reading of why the offsets coincide today.  It contains arithmetic and typing, no new prediction.  Earlier layers
+are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.8.0-r18 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.8.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23365244}{10.5281/zenodo.23365244} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.8.0-r18 correction of r17}
+\label{subsec:v480-r18-r17-correction}
+
+Proposition~\ref{prop:H0-tension} does not mention the cosmological fractions.  It states that \(\bsym\) drifts
+and that the \(H_0\) discrepancy is a frame artefact; the drift acts through the frame factor.  (The ratio
+\(\gL(z{=}0)/\gL(z{=}1100)=1.8642/1.7690=1.054\) raised to the power \(3/2\) gives \(1.082\) against the quoted
+\(1.083\); the exponent is a reconstruction, the source does not state it.)  The value
+\(\Omega_\Lambda(1100)=0.722\) of \S\ref{subsec:v480-r17-comparison} arises only when the drifting offset is inserted
+into Theorem~\ref{thm:dark-energy}.  The one statement of the source that makes this insertion is item~(2) of
+Proposition~\ref{prop:saturation}, \(P(S^8\to S^4)=\bsym^2\to1\).
+
+Theoremlet r17.1 stands, because it is conditional on the assignment holding at all epochs.  The register entries of
+\S\ref{subsec:v480-r17-register} are narrowed as follows: Proposition~\ref{prop:H0-tension} is not refuted by r17;
+the conflict with the expansion history sits in item~(2) of Proposition~\ref{prop:saturation} and in the tacit
+identification of two offsets that \S\ref{subsec:v480-r18-reading} separates.  Item~(1) of
+Proposition~\ref{prop:saturation} uses the frame factor only and is not affected.  The word ``permanent'' in
+Theorem~\ref{thm:dark-offset} means non-vanishing (``we can never fully reach \(\zminus=0\)''); it does not
+conflict with a slow drift.
+
+\subsection*{v4.8.0-r18 three frames and their cross terms}
+\label{subsec:v480-r18-cross-terms}
+
+Write \(\eta=\operatorname{artanh}\bsym=0.6174\) for the rapidity of the offset.  By
+Theorem~\ref{thm:symmetric-frame} matter (\(+\)), photon (\(0\)) and tachyon (\(-\)) sit at rapidities
+\(\eta_+=\eta\), \(\eta_0=0\), \(\eta_-=-\eta\).  Rapidities add, so the offset of frame \(a\) seen from frame \(b\) is
+\(\eta_{ab}=\eta_a-\eta_b\), with velocity \(\tanh\eta_{ab}\) and Lorentz factor \(\cosh\eta_{ab}\):
+\begin{center}
+\small
+\begin{tabular}{@{}c|ccc@{}}
+\toprule
+from\,\(\backslash\)\,to & \(+\) & \(0\) & \(-\)\\
+\midrule
+\(+\) & \(0\) & \(0.5493,\ \gamma=1.197\) & \(0.8440,\ \gamma=1.864\)\\
+\(0\) & \(-0.5493,\ \gamma=1.197\) & \(0\) & \(0.5493,\ \gamma=1.197\)\\
+\(-\) & \(-0.8440,\ \gamma=1.864\) & \(-0.5493,\ \gamma=1.197\) & \(0\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Theoremlet v4.8.0-r18.1.}
+Under the symmetry \(\eta_-=-\eta_+\) of Theorem~\ref{thm:symmetric-frame} the nine cross terms take exactly two
+non-trivial magnitudes: the neighbour term (\(+0\), \(0-\)) with \(\cosh\eta=1.197\) and the opposite term (\(+-\))
+with \(\cosh2\eta=(1+\bsym^2)/(1-\bsym^2)=\gL=1.864\).  The frame factor \(\gL\) is the opposite term.
+
+\paragraph{Proof sketch.}
+\(\cosh2\eta=(1+\tanh^2\eta)/(1-\tanh^2\eta)\) with \(\tanh\eta=\bsym\); this is the formula of
+Theorem~\ref{thm:symmetric-frame}, which names \(\gL\) the Lorentz factor between the matter and tachyon frames.
+\(\square\)
+
+\subsection*{v4.8.0-r18 findings}
+\label{subsec:v480-r18-findings}
+
+\paragraph{(a) The conversion of constants uses the opposite term for a neighbour pair.}
+The definition of the frame-insertion count in \S\ref{sec:phase-constants} converts matter to photon by
+\(X^{(\mathrm{photon})}=\gL^{-k(X)}X^{(\mathrm{matter})}\), and the proof of Theorem~\ref{thm:frame-offset} reads
+\(\gL\) as a Lorentz factor between the matter frame and the photon frame, with \(\beta=0.844\).  By r18.1 the
+matter--photon pair is a neighbour pair, with factor \(1.197\); \(1.864\) belongs to matter--tachyon.  Since
+\(\cosh2\eta\neq(\cosh\eta)^n\) for integer \(n\) (\((\cosh\eta)^2=1.432\)), the difference cannot be absorbed into the
+counts \(k\).  Either the conversion is meant to pass through the tachyon frame, which would have to be stated, or
+every frame-corrected constant of \S\ref{sec:phase-constants} uses the wrong cross term.  r18 does not choose.
+
+\paragraph{(b) The observer position \(\zminus=\beta/2=0.422\).}
+Theorem~\ref{thm:frame-offset} places the observer at \(\zminus=\beta/2\approx0.422\), halving the opposite offset
+\(0.844\) in velocity.  Halving in rapidity gives \(\tanh\eta=0.5493=\bsym\), the position of
+Theorem~\ref{thm:symmetric-frame}.  The value \(0.422\) is a halving in the wrong variable; the two theorems agree
+once the halving is done in rapidity.
+
+\paragraph{(c) The cascade split is the neighbour term.}
+Theorem~\ref{thm:dark-energy} has \(\Omega_M=\tanh^2\eta=0.3018\) and \(\Omega_\Lambda=\operatorname{sech}^2\eta=0.6982\),
+which sum to one identically.  The split is therefore internally consistent.  Open: the cascade starts in the
+tachyon stratum \(S^8\), yet uses the neighbour term \(+0\) and no term of the \(-\) row.
+
+\subsection*{v4.8.0-r18 a reading of the coincidence, offered and not adopted}
+\label{subsec:v480-r18-reading}
+
+A single \(\bsym\) is the statement \(\eta_-=-\eta_+\).  If the matter frame drifts, as
+Proposition~\ref{prop:H0-tension} has it, while the tachyon frame stays at a structural value \(-\eta_s\), the symmetry
+is broken and the cross terms become three distinct numbers, \(\eta_+(t)\), \(\eta_s\) and \(\eta_+(t)+\eta_s\).
+A structural offset (cascade side) and an observed offset (frame side) then coincide exactly at the symmetric point
+\(\eta_+=\eta_s\).
+
+The source supplies a reason for that point.  In Theorem~\ref{thm:spring} the net force on the photon,
+\(k(z^-_T-z^-_\gamma)+k(z^-_M-z^-_\gamma)\), vanishes for \(z^-_\gamma=0\) only if \(z^-_T=-z^-_M\): the symmetric
+configuration is the mechanical equilibrium of the triple.  Under this reading ``the offsets agree today'' means
+``the triple is near its equilibrium today'', and the gap between \(0.5493\) (from \(\gL\)) and \(0.5578\) (from
+\(\Omega_M\), Remark~\ref{rem:omega-bsym}), \(1.5\%\), would be a departure from symmetry rather than the lattice
+correction \(\delta_{\mathrm{CL}}\) to which the remark attributes it.  The system of Theorem~\ref{thm:spring} is
+undamped: it supplies an equilibrium, not a relaxation towards it.
+
+Which measured value belongs to which cross term under broken symmetry is not decided here.  Any such assignment is a
+prediction and requires a pre-registration note before it is computed.
+
+\subsection*{v4.8.0-r18 register entries}
+\label{subsec:v480-r18-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after r18\\
+\midrule
+Prop.~\ref{prop:H0-tension} & not refuted by r17; uses the offset only through the frame factor (r18)\\
+Prop.~\ref{prop:saturation} & item (2) carries the conflict of r17.1; item (1) unaffected (r18)\\
+\(\gL\) in \S\ref{sec:phase-constants}, Thm.~\ref{thm:frame-offset} & opposite cross term (\(+-\)) used for the neighbour pair matter--photon (r18 (a))\\
+Thm.~\ref{thm:frame-offset}, \(\zminus=0.422\) & halving in velocity; in rapidity \(\zminus=\bsym\) (r18 (b))\\
+Thm.~\ref{thm:dark-energy} & split \(\tanh^2\eta+\operatorname{sech}^2\eta=1\) consistent; choice of the \(+0\) term for a cascade from \(S^8\) open (r18 (c))\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.8.0-r18 ledger and guard update}
+\label{subsec:v480-r18-ledger-guard}
+
+\[
+R_{\rm fr}^{v480\text{-}r18}=(0,0,1)
+\]
+for (three-frame cross terms typed, findings (a)--(c) recorded, assignment of the measured values to cross terms
+open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v480\text{-}r18,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v480\text{-}r18}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
 \end{document}
