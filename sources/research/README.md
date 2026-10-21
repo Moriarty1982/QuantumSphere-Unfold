@@ -1,6 +1,6 @@
 # Full-Source v4.9.0 Research Candidate
 
-Entry point: `v480-companion.tex` (historical filename retained for existing audits and builds). Its working metadata now identifies `v4.9.0-draft`. This is the full-monolith-derived working line, not the older `sources/active-core.tex` modular synchronization baseline. The candidate is unreleased and has no assigned version DOI; the public baseline remains v4.8.0.
+Entry point: `v480-companion.tex` (historical filename retained for existing audits and builds). Its working metadata identifies `v4.9.0`. This is the full-monolith-derived working line, not the older `sources/active-core.tex` modular synchronization baseline. The Version DOI 10.5281/zenodo.23534954 is reserved on Zenodo (unpublished draft deposition 23534954) and becomes public with the release; until then the public baseline remains v4.8.0.
 
 ## Origin and Preservation
 
@@ -10,7 +10,7 @@ Entry point: `v480-companion.tex` (historical filename retained for existing aud
 - `v480-source-map.json` records origin hash, byte offsets, first source lines and fragment hashes. Do not regenerate it over existing work or silently edit inherited fragments.
 - Captured CRLF byte offsets/hashes and canonical LF offsets/hashes are both recorded. The local reconstruction is byte-identical; portable checks permit only Git's CRLF/LF checkout conversion, not changes to prose, formulas or guards.
 - The main entry and `parts/support-route.tex` define the reading order. The later macro-defining v4 chains keep their mutual order. The bibliography is placed after the complete retained development.
-- New prose, premise qualifications and research integration are outside the preserved fragments. `docversion` stays 4.7.0 for inherited records; working metadata separately identifies 4.9.0-draft.
+- New prose, premise qualifications and research integration are outside the preserved fragments. `docversion` stays 4.7.0 for inherited records; working metadata separately identifies 4.9.0.
 
 ## Carried v4.8.0 Line
 
