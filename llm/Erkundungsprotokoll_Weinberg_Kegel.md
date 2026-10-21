@@ -100,9 +100,62 @@ Abstand *größer* ist. Die Nähe zum On-shell-Wert wird von ihr nicht gestützt
   bräuchte eine Vorab-Notiz mit festgelegtem γ_BI, festgelegter Fehlerrechnung und einer künftigen m_W-Kombination, deren
   Genauigkeit die SM-Vorhersage von der Beziehung trennt.
 
+### E10: H15 zusammen mit der Drift von β_sym (Folgerung, kein gezählter Versuch; Skript `llm/k47_drift_weinberg.py`)
+
+`prop:H0-tension` lässt β_sym driften, von 0,527 zur Zeit der Hintergrundstrahlung (z = 1100) auf 0,5493 heute,
+mit etwa 1,6 · 10⁻¹² pro Jahr. Hält H15 (cot θ_W = γ_L), dann driftet auch der Weinberg-Winkel.
+
+**(a) Frame-Umrechnung.** H15 vergleicht m_W/m_Z. Haben W und Z dieselbe k-Zahl, kürzt sich der Faktor γ^{−k}. Der
+On-shell-Winkel ist dann in jedem Frame gleich. Die k-Gleichheit ist naheliegend, steht aber nicht in der Quelle.
+
+**(b) Für den Test von H15 bedeutungslos.** Heute beträgt die Drift etwa 7 · 10⁻⁸ MeV pro Jahr in m_W.
+
+**(c) Welche Lesart?** Zur Wahl stehen zwei:
+- **symmetrisch:** γ_L = cosh 2η(t), z = 1100: γ_L = 1,7690;
+- **nur der Materie-Frame driftet** (r18, „angeboten, nicht übernommen“): γ_L = cosh(η₊(t) + η_s), z = 1100: 1,8157.
+
+Für die symmetrische Lesart sprechen drei Punkte:
+1. **`thm:spring`.** Das Photon ist Gleichgewichtspunkt nur für z_T = −z_M. Bei kleiner Auslenkung gilt x_γ = x_M/3
+   und x_T = −x_γ. Relativ zum mitgeführten Photon liegen Materie und Tachyon damit wieder symmetrisch, beide bei
+   β + 2δ/3. Die Dynamik der Quelle erhält also die Symmetrie um das Photon.
+2. **Neutrale Photonachse (r01, Autorangabe).** Driftet nur der Materie-Frame, wandert die Mitte, und das Photon ist
+   nicht mehr der neutrale Mittelpunkt.
+3. **Lesart B.** Der Tachyon ist das Dualitätsbild z_T = iz_M mit gleichem |s|. Er folgt der Materie, statt fest zu
+   bleiben (r19.1, r20.1).
+
+Der H0-Faktor entscheidet **nicht**. Symmetrisch trifft er 1,083 mit dem Exponenten 1,52, nur Materie mit dem Exponenten
+3,03. Der Exponent steht nicht in der Quelle (r18).
+
+**Ergebnis (c):** Die symmetrische Lesart ist die mit der Quelle verträgliche. Die andere stützt sich nur auf die nicht
+übernommene Lesart aus r18.
+
+**(d) Folgerung.** Mit H15, Drift und symmetrischer Lesart war zur Zeit der Hintergrundstrahlung sin²θ_W = 0,2422 und
+m_W/m_Z = 0,8705. Heute sind es 0,2234 und 0,8812, also etwa 8 % mehr in sin²θ_W. Ist die Drift linear in der Zeit,
+gilt derselbe Wert praktisch auch zur Zeit der Elementsynthese.
+
+**(e) Schranken (Literaturrecherche 2026-10-21).**
+- Eine veröffentlichte Schranke speziell für eine zeitliche Änderung von sin²θ_W wurde **nicht gefunden**.
+- Yang und Rafelski (arXiv:2603.02652, „Weinberg Angle, Neutron Abundance in BBN, and Lifetime“) untersuchen die
+  Empfindlichkeit von Neutronenanteil und Neutronenlebensdauer auf s²_W. Sie halten α und v fest und geben ausdrücklich
+  keine Schranke an.
+- Für die Higgs-VEV finden Burns, Keus, Sher und Tait (arXiv:2403.09325) mit ⁴He −0,014 ≤ δv/v ≤ 0,026 und mit
+  Deuterium −0,005 ≤ δv/v ≤ −0,001. Ältere Werte stammen von Yoo und Scherrer (astro-ph/0211545).
+- Für α gilt aus BBN Δα/α = (−7 ± 9) · 10⁻³.
+
+**Eigene Abschätzung**, nicht veröffentlicht, nur führende Ordnung: Bei festem α und v hängt G_F nur über den
+Schleifenterm 3c²/(32π² s²) von θ_W ab (Yang/Rafelski, Gl. 8). Die Änderung von cot²θ_W von 3,48 auf 3,13 gibt
+ΔG_F/G_F ≈ +0,33 %, gleichwertig mit δv/v ≈ −0,16 %. Das liegt innerhalb der ⁴He-Schranke. Neutrale Ströme (g_V^e) wirken
+auf die Neutrino-Entkopplung nur schwach. **Eine Drift von 8 % in sin²θ_W bei festem α und v ist nach dieser
+Abschätzung kosmologisch nicht ausgeschlossen, aber auch nicht prüfbar.** Hält man statt α und v andere Größen fest,
+ändert sich das. H15 legt nicht fest, welche Größen konstant bleiben.
+
 ## Stand
 
-9 Einträge, davon 8 gezählte Versuche, 0 Treffer im Sinne einer Erklärung, 1 Auffälligkeit (E9).
+10 Einträge, davon 8 gezählte Versuche, 0 Treffer im Sinne einer Erklärung, 1 Auffälligkeit (E9), 1 Folgerung (E10).
+Die Folgerung E10 macht H15 zusammen mit `prop:H0-tension` zu einer Aussage über eine frühere Epoche. Mit heutigen
+Schranken lässt sie sich nicht prüfen, solange offen ist, welche Größen bei der Drift fest bleiben.
+
+Frühere Zwischenbilanz: 9 Einträge, davon 8 gezählte Versuche, 0 Treffer im Sinne einer Erklärung, 1 Auffälligkeit (E9).
 
 Frühere Zwischenbilanz: 7 Versuche, 0 Treffer. Keine Variante hat die Lücke physikalisch erklärt. Die Tribonacci-Korrektur verschiebt in die
 falsche Richtung. Das Weglassen von Beiträgen trifft in keiner Kombination. E7 schließt allgemein aus, dass ein in der
