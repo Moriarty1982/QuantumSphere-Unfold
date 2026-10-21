@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v5.4
+# Kernkarte Quantum Sphaera — v5.5
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1295,6 +1295,19 @@ Theoremlets r19.1 (keine Lorentz-Verbindung zwischen den Sektoren), r19.2 (Z₂-
 photonzentrierte Lesart als Option, Register-Nachtrag. Ledger R_hol^{r19} = (0,0,1); Guards unverändert, β₄
 unverbraucht. Build 3 Läufe MiKTeX (1093 Seiten), Audit gegen r18 ohne harte Abweichung.
 
+### K42 — Dreizehnter vorab festgelegter Test H13: Wigner-Holonomie als Auslesefaktor (2026-10-21)
+
+Vorab-Notiz `llm/Vorab_Notiz_H13_Wigner_Holonomie.md` (Commit 645295f), Ergebnis `llm/Ergebnis_H13_Wigner_Holonomie.md`,
+Skript `llm/k35_test_h13.py`. Konstruktion: drei Materie-Frames mit Rapidität η_H in Triolen-Richtungen, reine Boosts
+v₀ → v₁ → v₂ → v₀, Vergleichsgröße cos δ.
+
+**K42.1 Werte (M).** Holonomie reine Rotation (Boostanteil 10⁻¹⁶), δ = 0,4985 rad = 28,56°, gleich dem Winkeldefekt
+des gleichseitigen hyperbolischen Dreiecks (Gegenprobe). cos δ = 0,878 gegen f(+) = 0,944 ± 0,008: z = −7,9.
+
+**K42.2 Urteil (S).** **Widerlegt** für diese Konstruktion; die Holonomie-Route mit Triolen-Boosts ist für f(+)
+geschlossen. Andere Konstruktionen nicht gerechnet, bräuchten eigene Notiz. Da f(+) nur eine Anpassung ist (K39),
+fällt eine Erklärung des Faktors weg, nicht der Faktor.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1378,6 +1391,7 @@ unverbraucht. Build 3 Läufe MiKTeX (1093 Seiten), Audit gegen r18 ohne harte Ab
 - v5.3 (2026-10-21): K40 Würfelfamilie mit Übergängen, Übergangsgruppen beider Lesarten, Z₂-Holonomie, alte Lesart
   als photonzentrierte Sicht.
 - v5.4 (2026-10-21): K41 Companion-Runde v4.8.0-r19.
+- v5.5 (2026-10-21): K42 dreizehnter vorab festgelegter Test (H13, Wigner-Holonomie) — widerlegt, z = −7,9.
 
 ---
 
