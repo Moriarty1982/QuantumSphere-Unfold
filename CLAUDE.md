@@ -32,6 +32,7 @@ RC22              r88     Fensterkalibrierung (Q3), Non-Collar-Routen
                   r89     Korrektur von r87
 RC23/RC24         r90/r91 Δ_γ-Rekonstruktion, Q4 ausgeführt
 v4.8.0    65.000+ r94     + v4.8.0-r01 (Planck-Readout), r02 (Release)
+RC25      67.700+ v480-r20 v4.8.0-r03 bis r20 auf dem Release; nur Tag, keine Snapshot-Datei
 ```
 
 Bis v4.6.0 heißt die Datei `companion.tex` (bei zweigeteilten Ständen zusätzlich `companion_historical.tex`), ab RC19 `Quantum_Sphaera_Companion_v4_7_0_source.tex`, ab v4.8.0 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Git erkennt die Übergänge als Rename, `git log --follow` läuft durch.
@@ -54,6 +55,7 @@ Das Repository liegt in einem OneDrive-Ordner. Bisher unauffällig; falls je Syn
 |---|---|
 | `Quantum_Sphaera_Companion_v4_8_0_source.tex` | **Die Arbeitsdatei.** Hier wird editiert. |
 | `Quantum_Sphaera_Companion_v4_8_0.pdf` + `V4_8_0_*` + `v4_8_0_release_summary.json` | **Release v4.8.0**, Zenodo-Entwurf 23365244 |
+| `Quantum_Sphaera_Companion_v4_8_0_r20.pdf` + `V4_8_0_RC25_*` + `v4_8_0_RC25_post_release_layers_summary.json` | **RC25 (Stand v4.8.0-r20)**, Tag `RC25`, keine neue DOI, kein Release |
 | `Quantum_Sphaera_Companion_v4_7_0_RC19_concept_doi_restore_source.tex` | **Eingefrorener RC19-Snapshot** — nicht editieren |
 | `Quantum_Sphaera_Companion_v4_7_0.pdf` | RC19-PDF — eingefroren, nie überschreiben |
 | `..._RC20_citation_repair_source.tex` + `..._r85.pdf` + `V4_7_0_RC20_*` | RC20 (Stand r85), eingefroren |
@@ -164,7 +166,9 @@ Danach `qs.py audit <log>` gegen die Baseline. Das RC19-PDF im Projektordner nie
 
 Die Präambel setzt `\pdfcompresslevel=0` und `\pdfobjcompresslevel=0` — daher die 14 MB PDF-Größe. Das ist Absicht (Diffbarkeit), nicht zu „optimieren".
 
-PDF-Lesezeichen sind seit dem Stand nach v4.8.0 wieder an (`bookmarks=true,bookmarksnumbered=true`); der r25/r27-Notbehelf `bookmarks=false` ist entfernt. Getestet mit drei pdfLaTeX-Läufen unter TeX Live 2022: 968 Lesezeichen, Seiten, Labels und harte Audit-Werte unverändert. `\pdfstringdefDisableCommands` in der Präambel hält Symbole wie `\to` und `\Lambda` im Lesezeichentext lesbar; die übrigen „Token not allowed in PDF string“-Warnungen (37) sind harmlos. Das veröffentlichte v4.8.0-PDF ist noch ohne Lesezeichen gebaut. Unter MiKTeX ist der Test noch nicht gelaufen.
+PDF-Lesezeichen sind seit dem Stand nach v4.8.0 wieder an (`bookmarks=true,bookmarksnumbered=true`); der r25/r27-Notbehelf `bookmarks=false` ist entfernt. Getestet mit drei pdfLaTeX-Läufen unter TeX Live 2022: 968 Lesezeichen, Seiten, Labels und harte Audit-Werte unverändert. `\pdfstringdefDisableCommands` in der Präambel hält Symbole wie `\to` und `\Lambda` im Lesezeichentext lesbar; die übrigen „Token not allowed in PDF string“-Warnungen (37) sind harmlos. Das veröffentlichte v4.8.0-PDF ist noch ohne Lesezeichen gebaut. Unter MiKTeX 25.12 seit RC25 geprüft: 986 Lesezeichen, Seiten, Labels und harte Audit-Werte unverändert gegenüber den Einzelbuilds.
+
+Unter MiKTeX 25.12: v4.8.0 (Tag neu gebaut) 1045 Seiten / 3369 Labels, RC25 (v4.8.0-r20) 1096 / 3474, Overfull durchgehend 58 (das v4.8.0-Release meldete unter TeX Live 45), alle harten Werte 0.
 
 ### Audit-Baseline (RC19)
 

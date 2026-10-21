@@ -1,0 +1,44 @@
+Title:
+Quantum Sphaera Companion: A Structure-First Mathematical Unfolding
+
+Version:
+4.8.0 line, release candidate RC25 (version number of a release to be decided by the author)
+
+Version DOI:
+none requested by RC25 (title page carries the v4.8.0 Version DOI 10.5281/zenodo.23365244)
+
+Creators:
+Marc Brendecke
+Independent Researcher, Bochum, Germany
+
+Description:
+This candidate carries the published v4.8.0 monolith together with eighteen source-only layers, v4.8.0-r03 through r20, recorded after that release. Earlier layers are not rewritten; every change of status is a new register entry.
+
+The layers are predominantly audits, corrections and tests. Layer r03 audits the dimensions and numbers of the physical-constant layer and finds that both inputs of the frame factor are published values of the same Barbero-Immirzi parameter, one of them from a superseded state counting. Layer r04 decouples the Companion from the Riemann source, which is no longer used as a proof source, and proves the Heisenberg compensator and the cascade on their own. Layers r05 through r07 correct the explicit formula of the field-equation layer, refute the Theta-sum conjecture, establish the signature of the biquaternion kernel and adopt Reading B, the kernel as a complex three-vector under SO(3,C) in Riemann-Silberstein form, with the sector assignment s > 0 matter, s < 0 tachyon, s = 0 photon.
+
+Layers r08 and r09 test the predictions of the falsifiability corollary and record a register of all predictions and main results: none of the predictions stands as confirmed. Layers r10 through r16 study the Koide structure, neutrino mixing, colour and generation, and the octonionic Hopf fibration, and record eleven tests that were fixed in committed notes before computation. One is supported (neutrinos as light-like triole, normal ordering, consistent with JUNO 2026), one is open and will be decided by the next JUNO release (solar angle from the frame offset), and the others are refuted, disfavoured or without selection power.
+
+Layers r17 through r20 examine the frame offset. The cosmological fractions Omega_Lambda = 1 - beta_sym^2, held at all epochs, are incompatible with the drift of beta_sym assumed in the saturation model: the sign of the drift is reversed relative to the measured expansion history. Typing the offset by rapidity cross terms between the matter, photon and tachyon frames shows that the frame factor used for converting constants between matter and photon frame is the matter-tachyon term, and that one recorded observer position is a halving in the wrong variable. In Reading B no Lorentz transformation connects the three sectors; the duality rotation carries a Z2 holonomy around the photon, and the earlier reading appears as a photon-centred view. The rapidity of a superluminal speed, artanh(1/v) + i pi/2, has the duality angle as its imaginary part and relates the two readings. Two further tests were fixed in advance: an assignment of measured values to cross terms cannot be separated from the open solar-angle test, and a holonomy explanation of a readout factor is refuted.
+
+Guard and residual vectors are unchanged over all twenty v4.8.0 layers, and beta_4 = 1/256 remains unspent. The candidate does not claim exact finite C5 zero closure, exact all-readout terminality, C6/T2 closure, a global photon-clock/RH theorem, or global all-readout closure.
+
+Files:
+- Quantum_Sphaera_Companion_v4_8_0_r20.pdf
+- Quantum_Sphaera_Companion_v4_8_0_source.tex
+- V4_8_0_RC25_SHA256_MANIFEST.csv
+
+Keywords:
+Quantum Sphaera; structure-first mathematics; guarded effective closure; pre-registered tests; Riemann-Silberstein vector; complex rapidity; duality rotation; frame offset; holonomy; Heisenberg compensator; triole; Koide relation; neutrino mixing; Hopf fibration; Barbero-Immirzi parameter
+
+DOI records for upload:
+- Version DOI on the title page (v4.8.0): 10.5281/zenodo.23365244
+- Concept DOI: 10.5281/zenodo.19210728
+- Previous version DOI (v4.7.0): 10.5281/zenodo.20232911
+- Previous/baseline DOI (v4.6.0): 10.5281/zenodo.20117361
+
+Note:
+This is a draft for a future upload decision. RC25 does not authorize a public release and does not request a new
+DOI. A release of this state would need a new version number and a new Version DOI, and the title page would then be
+updated under the compact-titlepage rule. On an actual release the PDF would be renamed from
+Quantum_Sphaera_Companion_v4_8_0_r20.pdf to the release filename. The v4.8.0 release artefacts and RC19 through RC24
+are retained unchanged as provenance.
