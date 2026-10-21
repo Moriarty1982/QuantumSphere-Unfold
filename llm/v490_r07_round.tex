@@ -1,0 +1,148 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r07 Source-Only: The Cone Angle and the Weak Mixing Angle}
+\addcontentsline{toc}{section}{v4.9.0-r07 Source-Only: The Cone Angle and the Weak Mixing Angle}
+\label{sec:v490-r07-cone-weak-mixing}
+% ============================================================================
+
+\paragraph{Purpose.}
+This layer records three things.  First, the pre-registered test H14 of the relation between the cone angle of r06.2 and
+the weak mixing angle, with its result.  Second, an exploration that followed it, kept as a protocol in which every
+variant is counted.  Third, the structural reading that came out of the exploration, and the pre-registered hypothesis
+H15 it led to.  Files, all under \texttt{llm/}:
+\begin{itemize}[leftmargin=2em]
+\item \texttt{Vorab\_Notiz\_H14\_Kegelwinkel\_Weinberg.md};
+\item \texttt{Ergebnis\_H14\_Kegelwinkel\_Weinberg.md};
+\item \texttt{Erkundungsprotokoll\_Weinberg\_Kegel.md};
+\item \texttt{Vorab\_Notiz\_H15\_W\_Masse\_gamma\_L.md};
+\item \texttt{Ergebnis\_H15\_W\_Masse\_gamma\_L.md};
+\item scripts \texttt{k43\_test\_h14.py} to \texttt{k46\_test\_h15.py}.
+\end{itemize}
+Data: Particle Data Group, Review of Particle Physics
+2024 with the 2025 update (summary tables and the review of the electroweak model), retrieved 2026-10-21.  Earlier layers
+are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r07 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r07 test H14}
+\label{subsec:v490-r07-h14}
+
+H14 states \(\vartheta_c=2\theta_W\), equivalently \(\sin^2\theta_W=(1-\bsym)/2\).  It was formulated after the closeness
+\(56.7^\circ\) against \(2\theta_W\approx57.5^\circ\) had been noticed.  The note says so, fixes the on-shell definition
+\(\sin^2\theta_W=1-m_W^2/m_Z^2\) as decisive, and states the expected outcome in advance.
+
+\paragraph{Result.}
+The prediction is \(0.22533\).  The on-shell value from the masses is \(0.22321\pm0.00026\), so \(z=+8.2\).  As an exact
+relation H14 is \textbf{refuted}.  The prediction lies inside the band spanned by the on-shell and the
+\(\overline{\rm MS}\) value (\(0.23122\)), so as a tree-level relation it is \textbf{not decidable}.  A random simple
+relation would land in that band with probability of about \(0.02\), so no outcome counts as support.
+
+\subsection*{v4.9.0-r07 exploration, counted}
+\label{subsec:v490-r07-exploration}
+
+The exploration asked whether a physical effect can close the gap of \(+0.00212\) in \(\sin^2\theta_W\).  The gap is
+equivalent to removing a contribution \(\Delta\rho_X=+0.00275\) present in nature, or to an \(m_W\) smaller by
+\(110\) MeV.  The variants tried, each counted, were:
+\begin{itemize}[leftmargin=2em]
+\item the tribonacci value in place of \(\bsym\), which moves the prediction the wrong way;
+\item removal of the top-quark contribution, which overshoots to \(0.2304\);
+\item the tree-level angle from \((\alpha,G_F,m_Z)\), giving \(0.212\) or \(0.234\) depending on \(\alpha\);
+\item a fraction of the top contribution, with no meaning;
+\item neutrinos, eleven orders of magnitude too small;
+\item every combination of omitted contributions, of which only two are large (top \(0.00934\), remainder \(0.00108\))
+and none hits;
+\item mixing with a dark state.
+\end{itemize}
+The last variant gives a general bound.  Any real contribution of the required size would shift \(m_W\) by \(155\) MeV
+against the Standard-Model prediction.  The measured value differs from that prediction by \(+10\pm14\) MeV.  Real effects
+of particles, known or dark, can therefore account for at most about a quarter of the gap.
+
+\subsection*{v4.9.0-r07 the structural reading}
+\label{subsec:v490-r07-structure}
+
+\paragraph{Theoremlet v4.9.0-r07.1.}
+With \(\Pi(x)=2\arctan e^{-x}\), Lobachevsky's angle of parallelism, the following are equivalent:
+\[
+\cos2\theta=\tanh\eta,\qquad \tan\theta=e^{-\eta},\qquad \sin^2\theta=\frac1{1+e^{2\eta}},\qquad 2\theta=\Pi(\eta).
+\]
+The cone angle of r06.2 is \(\vartheta_c=\Pi(\eta)\).  For the port weighting \(e^{t\sigma_x}=e^tC_{\HC}+e^{-t}A\) of
+r05.1(d) at \(t=\eta\), the ratio of the weights is \(e^{2\eta}=\cot^2\theta\).
+
+\paragraph{Proof sketch.}
+\(\cos2\theta=(1-\tan^2\theta)/(1+\tan^2\theta)\) with \(\tan^2\theta=e^{-2\eta}\) gives \(\tanh\eta\);
+\(\cos\Pi(x)=\tanh x\).  Checked numerically.  \(\square\)
+
+\paragraph{Consequence.}
+H14 is a statement about a ratio of couplings, \(g/g'=e^{\eta}\), the Doppler factor of way (C) in r01.  It is not a
+statement about a ratio of masses.  Couplings run.  In the \(\overline{\rm MS}\) scheme \(\sin^2\theta_W\) has its minimum,
+about \(0.231\), at \(\mu=M_W\), and rises above and below.  No scale reaches \(0.22533\).  The structural reading thus
+points to the scheme in which the gap is larger, and it does not support the closeness to the on-shell value.
+
+\subsection*{v4.9.0-r07 an observation, and hypothesis H15}
+\label{subsec:v490-r07-h15}
+
+\paragraph{Observation (found during the exploration).}
+The on-shell coupling ratio is \(\cot\theta_W=m_W/\sqrt{m_Z^2-m_W^2}=1.86550\pm0.00140\).  The three constants of the
+source in this range sit at the following distances: \(\gL=\cosh2\eta=1.86444\) at \(z=-0.8\), \(e^{\eta}=1.85419\) at
+\(z=-8.1\), \(1/\bsym=1.82034\) at \(z=-32\).  By Theoremlet r01.3, \(\gL\) (way A) and \(e^\eta\) (way C) coincide at the
+tribonacci point and differ by \(0.55\%\) otherwise.  The data sit at way (A).  The cone relation used way (C).
+
+\paragraph{Why this is not evidence.}
+The relation was found after the fact.  The three constants \(1.820\), \(1.854\), \(1.864\) lie in the range that
+\(\cot\theta_W\) covers across schemes, \(1.823\) to \(1.866\), so some pairing is nearly expected.  The chance of a
+\(1\sigma\) hit of one of the three at the on-shell value is about \(0.17\).  Reading~B contains no
+\(SU(2)\times U(1)\), so the identification of the weight ratio with \((g/g')^2\) is formal.
+
+\paragraph{Hypothesis H15 (pre-registered).}
+\(\cot\theta_W=\gL\) in the on-shell definition, that is \(m_W=m_Z\gL/\sqrt{1+\gL^2}\).  Here \(\gBI\) is the root of the
+state-counting equation \(\sum_{j}2\exp(-2\pi\gamma\sqrt{j(j+1)})=1\) that r03 cites, and \(\gstring=\ln2/(\pi\sqrt3)\).
+Computed immediately after the note was committed and before any comparison:
+\[
+\gBI=0.237532957966,\qquad \gL=1.8646997646,\qquad m_W^{\rm pred}=80.3615\pm0.0018\ \text{GeV}.
+\]
+The comparison is with the first world average or combination of \(m_W\) published after 2026-10-21.  Known values do not
+count.  The prediction lies within a few MeV of the Standard-Model prediction (\(80.359\pm0.006\) GeV).  A comparison can
+therefore refute H15, but it can support H15 over the Standard Model only once the measurement excludes the
+Standard-Model value at \(3\sigma\), which needs a precision below about \(1\) MeV.  The result is pending.
+
+\subsection*{v4.9.0-r07 register entries}
+\label{subsec:v490-r07-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r07\\
+\midrule
+H14, \(\vartheta_c=2\theta_W\) & refuted as exact relation (\(z=+8.2\)); not decidable at tree level; no support\\
+cone angle & \(\vartheta_c=\Pi(\eta)\), the angle of parallelism (r07.1); not measured\\
+gap of H14 by real particle effects & bounded by \(m_W\) to at most about a quarter (exploration, 8 counted variants)\\
+H15, \(\cot\theta_W=\gL\) & pre-registered; prediction \(m_W=80.3615\pm0.0018\) GeV; comparison pending\\
+r01 ways (A)/(C) & the on-shell coupling ratio lies at way (A) (observation, not a test)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r07 ledger and guard update}
+\label{subsec:v490-r07-ledger-guard}
+
+\[
+R_{\rm ew}^{v490\text{-}r07}=(0,0,1)
+\]
+for (H14 decided, structural reading of the cone established, H15 pending).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r07,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r07}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+

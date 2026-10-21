@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v6.5
+# Kernkarte Quantum Sphaera — v6.6
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1502,6 +1502,24 @@ Vorab-Notiz `llm/Vorab_Notiz_H14_Kegelwinkel_Weinberg.md` (Commit 5911161), Erge
 **nicht entscheidbar**. ϑ_c = 56,68° gegen 2θ_W = 56,39° (on-shell) / 57,48° (MS-bar). Nachträgliche Hypothese,
 Look-elsewhere 2 % je Beziehung, 9 % für fünf: **kein Beleg**. Route ruht ohne Schema-/Skalenvorschrift.
 
+### K52 — Companion-Runde v4.9.0-r07 und Vorab-Notiz H15: Kegelwinkel, Weinberg-Winkel, W-Masse (2026-10-21)
+
+`sec:v490-r07-cone-weak-mixing`, Snippet `llm/v490_r07_round.tex`; Erkundungsprotokoll
+`llm/Erkundungsprotokoll_Weinberg_Kegel.md` (8 gezählte Versuche); Skripte k43–k46.
+
+**K52.1 (M).** cos 2θ = tanh η ⇔ tan θ = e^{−η} ⇔ sin²θ = 1/(1 + e^{2η}) ⇔ 2θ = Π(η) (Parallelitätswinkel);
+Kegel ϑ_c = Π(η). Portgewichtung bei t = η: Gewichtsverhältnis e^{2η} = cot²θ. H14 ist ein Kopplungsverhältnis
+g/g′ = e^η; MS-bar-Minimum ≈ 0,231 bei μ = M_W ⇒ keine Skala erreicht 0,22533.
+
+**K52.2 (D, Beobachtung).** cot θ_W on-shell = 1,86550 ± 0,00140; γ_L = 1,86444 (z = −0,8), e^η (z = −8,1),
+1/β_sym (z = −32). Daten bei Weg (A) aus r01, Kegel benutzte Weg (C). Nachträglich, Look-elsewhere ≈ 0,17, kein Beleg.
+Reale Teilcheneffekte (bekannt oder dunkel) können die H14-Lücke höchstens zu etwa einem Viertel füllen (m_W-Schranke).
+
+**K52.3 H15 (vorab festgelegt, Commit 62c505d).** cot θ_W (on-shell) = γ_L, γ_BI aus der Meissner-Zählgleichung
+= 0,237532957966 ⇒ **m_W = 80,3615 ± 0,0018 GeV**. Vergleich mit der ersten m_W-Weltmittelung nach 2026-10-21;
+gestützt nur bei SM-Ausschluss mit 3σ (SM 80,359 ± 0,006). Ergebnis ausstehend (`llm/Ergebnis_H15_W_Masse_gamma_L.md`).
+R_ew = (0,0,1); Guards unverändert.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1602,6 +1620,7 @@ Look-elsewhere 2 % je Beziehung, 9 % für fünf: **kein Beleg**. Route ruht ohne
 - v6.4 (2026-10-21): K50 Companion-Runde v4.9.0-r06 (Trefferkette, Kegel 56,68°, Beschleunigung, Higgs als
   Portgewichtung).
 - v6.5 (2026-10-21): K51 Vorab-Test H14 (Kegelwinkel = 2θ_W exakt widerlegt, als Näherung nicht entscheidbar).
+- v6.6 (2026-10-21): K52 Companion-Runde v4.9.0-r07, Vorab-Notiz H15 (m_W = 80,3615 GeV vorhergesagt).
 
 ---
 
