@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v5.0
+# Kernkarte Quantum Sphaera — v5.1
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1222,6 +1222,18 @@ Kreuzterm-Tabelle, Theoremlet r18.1, Befunde (a)–(c), Symmetrie-Lesart als Opt
 Ledger R_fr^{r18} = (0,0,1); Guards unverändert, β₄ unverbraucht. Build 3 Läufe unter MiKTeX 25.12 (1090 Seiten),
 Audit gegen r17 ohne harte Abweichung.
 
+### K38 — Zwölfter vorab festgelegter Test H12: Zuordnung zu den Kreuztermen (2026-10-21)
+
+Vorab-Notiz `llm/Vorab_Notiz_H12_Drei_Frame_Zuordnung.md` (Commit a593f5d), Ergebnis `llm/Ergebnis_H12_Drei_Frame_Zuordnung.md`,
+Skript `llm/k33_test_h12.py`. Regeln: cosh(η₊ + η_s) = γ_L; Ω_M = tanh²η_s (Planck 2018 mit BAO); sin²θ₁₂ = tanh²η₊/cos²θ₁₃.
+
+**K38.1 Werte (M).** η_s = 0,6296 (β_s = 0,5578), η₊ = 0,6053 (β₊ = 0,5408); Vorhersage sin²θ₁₂ = 0,2991 ± 0,0057
+gegen H9 0,3086. Unsicherheit fast ganz aus Ω_M (σ_P ≈ σ_Ω). JUNO 2026 (zählt nicht): beide verträglich, Δχ² = 0,34.
+
+**K38.2 Urteil (S).** Nach dem festgelegten Kriterium **nicht trennbar**: |P₁₂ − H9|/σ = 1,36 < 2 bei σ_x = 0,004. Die
+Grenze setzt Ω_M, nicht JUNO (auch bei fehlerfreiem θ₁₂ nur 1,67σ). Kein Test, als Ergebnis festgehalten. Ein Messwert
+nahe 0,299 wäre eine Spannung für H9 nach dessen eigenem Kriterium, keine Stütze für H12. H9 unverändert.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1299,6 +1311,7 @@ Audit gegen r17 ohne harte Abweichung.
 - v4.9 (2026-10-21): K36 Drei-Frame-Typisierung (Kreuzterme, Befunde a–c, Symmetrie-Lesart); Eingrenzung von r17 auf
   prop:saturation (2), K34.5.
 - v5.0 (2026-10-21): K37 Companion-Runde v4.8.0-r18.
+- v5.1 (2026-10-21): K38 zwölfter vorab festgelegter Test (H12, Drei-Frame-Zuordnung) — nicht trennbar von H9, kein Test.
 
 ---
 
