@@ -1,0 +1,169 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r01 Source-Only: The Photon Frame as Neutral Axis and the Conversion of Constants}
+\addcontentsline{toc}{section}{v4.9.0-r01 Source-Only: The Photon Frame as Neutral Axis and the Conversion of Constants}
+\label{sec:v490-r01-neutral-axis-conversion}
+% ============================================================================
+
+\paragraph{Purpose.}
+Finding~(a) of \S\ref{subsec:v480-r18-findings} records that the conversion of constants between the matter and the
+photon frame uses \(\gL=\cosh2\eta\), the matter--tachyon cross term, where the matter--photon pair is a neighbour pair
+with factor \(\cosh\eta\).  This layer records where the factor came from, the working assumption under which it was
+chosen, and what the assumption implies for a conversion law over three frames.  The computations are
+\texttt{llm/k37\_gl\_umrechnungen.py}.  No value is compared with data.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r01 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r01 provenance of the factor}
+\label{subsec:v490-r01-provenance}
+
+In the archived versions v2.28.0 to v2.29.0 the splitting factor reads
+``\(\gL=\gBI/\gstring\approx1.197\)'', while the same versions already carry \(1/\bsym\approx1.820\), that is
+\(\bsym\approx0.5495\).  The value \(1.197\) is \((1-\bsym^2)^{-1/2}\), the Lorentz factor of the matter-frame
+offset; the ratio \(\gBI/\gstring\) is \(1.864\).  In v2.29.1 the value was changed to \(1.864\) and the change recorded
+as an arithmetic correction (``previous version used incorrect \(\gL\approx1.197\)''); the note carried in
+Corollary~\ref{cor:gue-frame} calls the earlier value \(\gBI\), which it is not (\(\gBI\approx0.2375\)).  Since then
+every conversion uses \(1.864\).
+
+\paragraph{Author's statement (2026-10-21).}
+The photon frame was assumed to be neutral, and the work was meant to proceed on that neutral axis first.  The archive
+records the change of value only as an arithmetic correction and does not mention a neutral axis.
+
+\paragraph{Theoremlet v4.9.0-r01.1.}
+The two values the factor has carried are the two cross terms of Theoremlet r18.1:
+\[
+1.197=\cosh\eta=\sqrt{\tfrac{1+\gL}{2}}\quad\text{(matter--photon)},\qquad
+1.864=\cosh2\eta=\gL\quad\text{(matter--tachyon)},
+\]
+with \(\eta=\operatorname{artanh}\bsym\).  Both follow from the single input \(\gBI/\gstring\).
+
+\paragraph{Proof sketch.}
+\(\cosh2\eta=2\cosh^2\eta-1\) and \(\cosh\eta=(1-\tanh^2\eta)^{-1/2}\).  \(\square\)
+
+\subsection*{v4.9.0-r01 the neutral assumption in Reading~B}
+\label{subsec:v490-r01-neutral}
+
+The assumption has structural support in the complex-vector reading.  The photon is the sector fixed by the whole duality
+circle (\S\ref{subsec:v480-r07-duality-angle}), the branch point of the duality holonomy (Theoremlet r19.2), and the
+centre of the real \(s\)-axis on which matter and tachyon are mirror images (\S\ref{subsec:v480-r19-photon-centred}).
+On the rapidity axis of Theorem~\ref{thm:symmetric-frame} it sits at rapidity \(0\), between matter at \(+\eta\) and
+tachyon at \(-\eta\).  If the photon frame is neutral, a value on the neutral axis is reached from the matter frame by the
+neighbour step, and the factor carried before v2.29.1 is the factor of that step.
+
+\paragraph{Theoremlet v4.9.0-r01.2.}
+A conversion law \(X^{(b)}=\gamma_{ab}^{-k}X^{(a)}\) with \(\gamma_{ab}\) the Lorentz factor of the pair is not
+consistent over the three frames: from matter to tachyon through the photon it gives
+\((\cosh\eta)^{2k}=\bigl(\tfrac{1+\gL}{2}\bigr)^k\), directly it gives \(\gL^{\,k}\) (for \(k=1\): \(1.432\) against
+\(1.864\); for \(k=6\): \(8.63\) against \(42.0\)).  A law with the Doppler factor, \(X^{(b)}=e^{-k\eta_{ab}}X^{(a)}\),
+composes exactly.
+
+\paragraph{Proof sketch.}
+\(\cosh^2\eta\neq\cosh2\eta\) for \(\eta\neq0\), while \(e^{\eta}e^{\eta}=e^{2\eta}\).  \(\square\)
+
+\paragraph{Consequence.}
+With the Lorentz-factor law one pair at a time is consistent.  Working on one axis first, as the author describes, is the
+regime in which the law of \S\ref{sec:phase-constants} is free of contradiction; the obstruction of r01.2 appears only
+once both pairs are used.  Under the neutral assumption the primary pair is matter--photon, with factor \(\cosh\eta\);
+\(\gL\) is the factor across the neutral axis, from matter to tachyon.
+
+\subsection*{v4.9.0-r01 a frame-order finding in the Hawking proposition}
+\label{subsec:v490-r01-hawking}
+
+Items~(i) and~(ii) of Proposition~\ref{prop:hawking-gBI-tachyon} give \(T_H^{(\mathrm{photon})}=\gL\,T_H^{(\mathrm{matter})}\)
+and \(T_H^{(\mathrm{tachyon})}=\gL^{-1}T_H^{(\mathrm{matter})}\).  Reciprocal factors place photon and tachyon on opposite
+sides of matter.  On the axis of Theorem~\ref{thm:symmetric-frame} the photon lies between matter and tachyon.  A law along
+the axis moves the tachyon value beyond the photon value in the same direction; a mirror law about a neutral photon gives
+the tachyon the matter value.  Neither gives reciprocal factors, so item~(ii) carries a frame order that does not match the
+axis.  This is also the one statement of the main body in which the same factor serves both pairs.
+
+\subsection*{v4.9.0-r01 ways forward, recorded and not chosen}
+\label{subsec:v490-r01-ways}
+
+\begin{enumerate}[leftmargin=2em]
+\item[(A)] Keep \(\gL\) and the Lorentz-factor law, and read each conversion of \S\ref{sec:phase-constants} as one across
+the neutral axis (matter--tachyon).  Statements whose endpoint is the photon frame then need the neighbour factor.
+\item[(B)] Use the neighbour factor \(\cosh\eta=1.197\) for matter--photon, the value carried before v2.29.1, in line with
+the neutral assumption.  This changes the photon-frame numbers of the main body (table below).
+\item[(C)] Use a composable law with the Doppler factor, \(e^{\eta}=\sqrt{(1+\bsym)/(1-\bsym)}=1.854\) per neighbour step.
+It is consistent over three frames.  At \(\bsym\) its neighbour factor lies \(0.55\%\) below \(\gL\), so the numbers of the
+main body change little while their meaning changes.  By Theoremlet r01.3 below the closeness is structural: in the
+continuum limit of Theorem~\ref{thm:tribonacci} the two factors are equal.
+\end{enumerate}
+
+\paragraph{Theoremlet v4.9.0-r01.3.}
+The full-span Lorentz factor equals the neighbour-step Doppler factor, \(\cosh2\eta=e^{\eta}\), exactly when \(e^{\eta}=1\)
+or \(e^{\eta}=\mathbb T\), the tribonacci constant of Theorem~\ref{thm:tribonacci}.  At that point
+\(\cosh2\eta=e^{\eta}=\coth\eta=\mathbb T=1.83929\), \(\beta=0.54369\): the self-referential condition
+\(\gL=1/\bsym(\gL)\) of Theorem~\ref{thm:tribonacci} is the condition that the matter--tachyon Lorentz factor and the
+matter--photon Doppler factor coincide.
+
+\paragraph{Proof sketch.}
+With \(x=e^{\eta}\), \(\cosh2\eta=(x^2+x^{-2})/2\), so \(\cosh2\eta=x\) is \(x^4-2x^3+1=0\), which factors as
+\((x-1)(x^3-x^2-x-1)=0\).  Further \(\coth\eta=(x^2+1)/(x^2-1)\), and \(\coth\eta=x\) is again \(x^3-x^2-x-1=0\).
+Checked numerically to \(10^{-16}\).  \(\square\)
+
+\paragraph{Consequence for the neutral axis.}
+In the continuum limit the author's choice of \(\gL\) for the step from matter to the neutral photon frame is exactly the
+factor a composable law assigns to that step: reading (A) and reading (C) agree there.  With the measured
+\(\gL=\gBI/\gstring\), which lies \(1.37\%\) above \(\mathbb T\) (the lattice correction of
+Remark~\ref{rem:op1-tribonacci}), they differ by \(0.55\%\).  The Lorentz-factor law of reading (B) does not share this
+property.
+
+\begin{center}
+\small
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+quantity in the main body & \(\gL\) & neighbour, Lorentz & neighbour, Doppler\\
+\midrule
+\(\lP^{(\mathrm{matter})}/\lP^{(\mathrm{photon})}\) (Theorem~\ref{thm:planck-photon}), power \(3/2\) & \(2.546\) & \(1.309\) & \(2.525\)\\
+vacuum-energy ratio, power \(6\) & \(42.0\) & \(2.94\) & \(40.6\)\\
+\(m_\nu^{(\mathrm{matter})}/m_\nu^{(\mathrm{photon})}\) (Proposition~\ref{prop:k-neutrino}), power \(4\) & \(12.08\) & \(2.05\) & \(11.82\)\\
+matter error (Corollary~\ref{cor:matter-error}), power \(5\) & \(22.53\) & \(2.46\) & \(21.92\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+The table is arithmetic on the formulas of the main body; photon-frame values are not measured.  Statements that are
+compared with data, among them Corollary~\ref{cor:falsifiable} and Proposition~\ref{prop:muon-g2}, are not re-evaluated
+here; a re-evaluation under (A), (B) or (C) is a prediction and requires a pre-registration note.
+
+\subsection*{v4.9.0-r01 register entries}
+\label{subsec:v490-r01-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r01\\
+\midrule
+conversion law of \S\ref{sec:phase-constants} & factor \(\gL\) is the matter--tachyon term; consistent for one pair at a time (r01.2); under the neutral photon assumption the matter--photon factor is \(\cosh\eta\); choice among (A)--(C) open\\
+Cor.~\ref{cor:gue-frame}, v2.29.1 note & the earlier value \(1.197\) was \(\cosh\eta\), the matter--photon Lorentz factor, not \(\gBI\) (r01.1)\\
+Prop.~\ref{prop:hawking-gBI-tachyon} (ii) & reciprocal factors put the tachyon on the far side of matter; does not match the axis order (r01)\\
+Thm.~\ref{thm:tribonacci} & equivalent to \(\cosh2\eta=e^{\eta}\): matter--tachyon Lorentz factor equals matter--photon Doppler factor (r01.3)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r01 ledger and guard update}
+\label{subsec:v490-r01-ledger-guard}
+
+\[
+R_{\rm conv}^{v490\text{-}r01}=(0,0,1)
+\]
+for (provenance of the factor recorded, consistency of the conversion law over three frames decided and its relation to
+the tribonacci fixed point established, choice among (A)--(C) open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r01,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r01}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+

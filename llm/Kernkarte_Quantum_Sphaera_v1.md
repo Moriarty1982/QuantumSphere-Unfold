@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v5.8
+# Kernkarte Quantum Sphaera — v5.9
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1350,6 +1350,34 @@ Parallele zu z_T = i z_M und ℓ_T² = −λ_T² (r82, ohne Zusatz), Kreuzterm-T
 Tribonacci als cosh 2η = coth η, Register-Nachtrag. Ledger R_tach^{r20} = (0,0,1); Guards unverändert, β₄ unverbraucht.
 Build 3 Läufe MiKTeX (1096 Seiten), Audit gegen r19 ohne harte Abweichung.
 
+### K45 — Companion-Runde v4.9.0-r01: Photon-Frame als neutrale Achse, Konstantenumrechnung (2026-10-21)
+
+Erste Runde nach dem 4.9.0-Release (`sec:v490-r01-neutral-axis-conversion`, Snippet `llm/v490_r01_round.tex`, Skript
+`llm/k37_gl_umrechnungen.py`). Kein Datenvergleich.
+
+**K45.1 Herkunft (M, Archiv).** v2.28.0–v2.29.0: „γ_L = γ_BI/γ_string ≈ 1,197“, bei schon geführtem 1/β_sym ≈ 1,820.
+1,197 = (1 − β_sym²)^{−1/2} = cosh η (Nachbarterm Materie–Photon). v2.29.1: auf 1,864 geändert, als Rechenfehler
+verbucht; die Notiz in cor:gue-frame nennt 1,197 fälschlich γ_BI. Autor (2026-10-21): Photon-Frame als neutral
+vermutet, zuerst auf der neutralen Achse arbeiten — im Archiv nicht vermerkt.
+
+**K45.2 Strukturbefunde (M).** r01.1: 1,197 = cosh η = √((1+γ_L)/2), 1,864 = cosh 2η = γ_L, beide aus γ_BI/γ_string.
+Neutralannahme in Lesart B gestützt (Photon dualitätsfest, Verzweigungspunkt, Mitte der reellen s-Achse). r01.2: Das
+Lorentzfaktor-Potenzgesetz komponiert über drei Frames nicht ((cosh η)^{2k} gegen γ_L^k; k = 6: 8,6 gegen 42); ein
+Doppler-Gesetz e^{−kη} komponiert exakt. Ein Paar zugleich ist konsistent — passt zu „erst eine Achse“.
+**r01.3: cosh 2η = e^η genau bei e^η = 𝕋 (Tribonacci)**, dort cosh 2η = e^η = coth η = 1,83929, β = 0,54369;
+thm:tribonacci ist die Bedingung „Lorentzfaktor Materie–Tachyon = Doppler-Faktor Materie–Photon“. Im Kontinuum ist
+die γ_L-Wahl für den Schritt zur neutralen Achse also genau der Faktor eines komponierbaren Gesetzes; gemessen
+(γ_L 1,37 % über 𝕋) 0,55 % Abstand.
+
+**K45.3 Hawking (M).** prop:hawking-gBI-tachyon (i)/(ii): reziproke Faktoren setzen Photon und Tachyon auf
+entgegengesetzte Seiten der Materie; die Achse von thm:symmetric-frame hat das Photon zwischen Materie und Tachyon.
+
+**K45.4 Wege (offen).** (A) γ_L behalten, Umrechnungen als über die neutrale Achse lesen; (B) Nachbarfaktor 1,197
+(Wert vor v2.29.1); (C) komponierbares Doppler-Gesetz, 1,854 je Nachbarschritt. Tabelle (Arithmetik): ℓ_P-Verhältnis
+2,546 / 1,309 / 2,525; Vakuum γ⁶ 42,0 / 2,94 / 40,6; m_ν γ⁴ 12,08 / 2,05 / 11,82. Datenvergleiche (cor:falsifiable,
+prop:muon-g2) nicht neu bewertet — nur mit Vorab-Notiz. Ledger R_conv = (0,0,1); Guards unverändert. Build MiKTeX
+1099 Seiten, Audit gegen r20 ohne harte Abweichung.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1438,6 +1466,8 @@ Build 3 Läufe MiKTeX (1096 Seiten), Audit gegen r19 ohne harte Abweichung.
 - v5.7 (2026-10-21): K43 Tachyon-Frame: gleiche Holonomie und Hauptspinoren wie Materie, Überlichtrapidität mit iπ/2,
   Kreuzterme imaginär, Tribonacci als cosh 2η = coth η.
 - v5.8 (2026-10-21): K44 Companion-Runde v4.8.0-r20.
+- v5.9 (2026-10-21): K45 Companion-Runde v4.9.0-r01 (neutrale Achse, Konstantenumrechnung, Tribonacci = Gleichheit
+  von Lorentz- und Doppler-Faktor).
 
 ---
 
