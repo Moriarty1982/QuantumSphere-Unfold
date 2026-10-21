@@ -66,9 +66,40 @@ Ergebnis: Kein Zeuge aus der Transportgruppe von Lesart B erfüllt (α) und (δ)
 ändern, also Dynamik tragen. Die Klasse ist geschlossen, Form (iii) bleibt im Sinn von r88 offen. Keine Aussage über
 C5 = 0. Gezählt als Versuch 4. Festgehalten in Runde v4.9.0-r10.
 
+### K5: Minimale Dynamik, gekickte Dualitätsdrehung (Skript `llm/k52_kick_dynamik.py`; Runde v4.9.0-r11)
+
+Vorschlag: Zwischen den Kicks dreht sich das Feld im Dualitätskreis (z → e^{iωt} z). Bei t_n = nτ wirkt C_HC, und der
+A-Anteil geht an ein Reservoir. Ergebnisse:
+- Stufenfaktor cos²ωτ; 3/4 eindeutig bei ωτ = π/6.
+- Bloch-Bild: 60° drehen, dann längs der J-Achse messen.
+- Zyklen: 3 Stufen = Vierteldrehung, 6 = z → −z, 12 = 2π, 24 = Spinor zurück.
+- Der Kick ändert s, die Drehung nicht. Zeno-Grenze bei vielen Teilkicks.
+- Kein endlicher Abschluss: Export statt Vernichtung. Die Skala (ω, τ einzeln) ist offen.
+
+Gezählt als Versuch 5.
+
+### K6: Rekonstruktion von Δ_γ < 1/5 (Skript `llm/k53_r65_rekonstruktion.py`; Runde v4.9.0-r12)
+
+Der Autor bestätigt, dass der r65-Text verloren ist (2026-10-22). Prämissen:
+- P1: r14-Daten.
+- P2: strikte Relaisbedingung aus r23.
+- P3: multiplikativer Verlust je Auslese (r11).
+- P4: Uhrenfenster-Charts der Kette R_A.
+
+⇒ Δ_γ < min{1/5, 9/25} = 1/5, strikt. Bindend ist V3, die einzige ausgeglichene Chart mit κ(N − 1) = 1, also S = 2N.
+
+Folgen unter P3:
+- tolerierte Drift tan α < 1/2;
+- die C5-Stufe (Export 1/4) liegt außerhalb, die r05-Toleranzzeile (Export 1/6) innerhalb;
+- die r05-Nullzeilen verlagern nach A_4 bzw. U_6 (blockiert durch C4 und C6), wie die Vierteldrehung in r10.2.
+
+Ableitungsanteil unter den Prämissen geschlossen, Provenienz offen. Gezählt als Versuch 6.
+
 ## Stand
 
-4 gezählte Versuche. K1 (Faktor 3/4) und K4 (Zeugenklasse) stehen in r10.
+6 gezählte Versuche. K5 und K6 stehen in r11 und r12.
+
+Vorige Zwischenbilanz: 4 gezählte Versuche. K1 (Faktor 3/4) und K4 (Zeugenklasse) stehen in r10.
 
 Vorige Zwischenbilanz: 2 gezählte Versuche. K1 liefert einen nicht idempotenten Mechanismus mit exakt 3/4, aus Teilen, die das Dokument schon
 hat (Kompensator, Dualitätsdrehung, Triole bzw. Hopf-Wert).

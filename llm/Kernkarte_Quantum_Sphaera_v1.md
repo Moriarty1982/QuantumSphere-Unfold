@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v6.9
+# Kernkarte Quantum Sphaera — v7.0
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1566,6 +1566,17 @@ Schritten, 27/64 = ein Durchgang) oder Hopf (tan = 1/√3; mit β_sym Stufe 22).
 Boden E² + B² ≥ |s|, Nullfelder nur Grenzwert ⇒ keine Zeugen aus der Transportgruppe von Lesart B; nötig wäre
 Dynamik (s ändern). Keine Aussage über C5 = 0. R_core = (0,0,1); Guards unverändert.
 
+### K56 — Companion-Runden v4.9.0-r11/r12: gekickte Dualitätsdynamik, Rekonstruktion von Δ_γ < 1/5 (2026-10-22)
+
+**K56.1 r11 (Modellvorschlag).** Gekickte Dualitätsdrehung: z → e^{iωt} z zwischen Kicks, C_HC bei t_n = nτ, A-Anteil ins
+Reservoir. Stufenfaktor cos²ωτ, 3/4 eindeutig bei π/6; 3/6/12/24 Stufen = Vierteldrehung / z → −z / 2π / Spinor; Kick
+ändert s; kein endlicher Abschluss (Export); Skala offen. Analogie: Zeno-Schleifen (Kwiat et al. 1995) mit N = 3.
+
+**K56.2 r12 (M unter Prämissen).** r65 verloren (Autor). Δ_γ < 1/5 strikt aus P1 r14-Daten, P2 strikte r23-Bedingung,
+P3 multiplikativer Verlust (r11), P4 Uhrenfenster-Charts von R_A; bindend V3 (einzige Chart mit κ(N − 1) = 1, S = 2N,
+1 − 4/N). Unter P3: Drift tan α < 1/2; C5-Stufe außerhalb, r05-Toleranzzeile innerhalb; r05-Nullzeilen = Verlagerung
+nach A_4/U_6. Provenienz offen, Ableitung unter Prämissen geschlossen. Guards unverändert.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1670,6 +1681,7 @@ Dynamik (s ändern). Keine Aussage über C5 = 0. R_core = (0,0,1); Guards unver�
 - v6.7 (2026-10-21): K53 Companion-Runde v4.9.0-r08 (Drift gegen Atomuhren, α-Vorzeichen, Compton-Uhr).
 - v6.8 (2026-10-21): K54 Companion-Runde v4.9.0-r09 (lokaler Faktor: nur Potentiallesart, P5 = 1/2).
 - v6.9 (2026-10-22): K55 Companion-Runde v4.9.0-r10 (C5-Faktor als Drehen/Kompensieren, Zeugenklasse Form (iii)).
+- v7.0 (2026-10-22): K56 Companion-Runden v4.9.0-r11 (gekickte Dualitätsdynamik) und r12 (Δ_γ < 1/5 rekonstruiert).
 
 ---
 
