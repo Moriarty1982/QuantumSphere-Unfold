@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v4.6
+# Kernkarte Quantum Sphaera — v5.8
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -55,7 +55,8 @@ Formel (r05); triolischer Orbit-Scan als lokales Readout-Modell.
 
 **Widerlegt oder nicht bestätigt:** RH-Beweis der Riemann-Arbeit (r04); Θ-Summen-Vermutung OP5 B (r05);
 GUE-Selbstbestimmung von γ_L und P1 (r08); Koide-Phasenformel P2 (r09); Herleitungen von GUE, K = 2/3,
-Λ_bare ∼ γ₁².
+Λ_bare ∼ γ₁²; prop:saturation (2), driftendes β_sym in Ω_M = β_sym² eingesetzt (r17/r18, Vorzeichen umgekehrt;
+prop:H0-tension selbst nicht betroffen).
 
 **Vermutung (V), präzisiert:** Materie/Tachyon/Photon als ein Objekt in Dualitätsrahmen (r07);
 Raumzeit als Projektion einer Spinor-/Informationsebene (K2); Einstein-Lesart der Spurformel (r05).
@@ -1159,6 +1160,196 @@ H11a/H11b mit festem Kriterium, Theoremlet r16.1 (dieselbe quadratische Gleichun
 Normen), Gitterbefund, offengelegte Toleranz-Abweichung, Urteil (widerlegt, Mindestgrad 6). Ledger R_cg^{r16} = (0,0,1);
 Guards unverändert, β₄ unverbraucht. Build 3 Läufe (1084 Seiten), Audit gegen r15 ohne harte Abweichung.
 
+### K34 — Zeitrichtung der kosmologischen Anteile (2026-10-21)
+
+Konsistenzprüfung, keine neue Vorhersage, daher ohne Vorab-Notiz. Skript `llm/k31_kosmologie_vorzeichen.py`.
+
+**K34.1 Die drei Aussagen (M).** thm:dark-energy: Ω_Λ = 1 − β_sym², Ω_M = β_sym². prop:H0-tension: β_sym steigt von
+0,527 (z = 1100) auf 0,5493 (heute). prop:saturation („konsistente Fortsetzung“): β_sym → 1, Ω_M → 1, Universum wird
+materiedominiert, Expansion stoppt. Beide Propositionen wenden thm:dark-energy zu allen Zeiten an; bis r16 waren sie
+in keiner Runde geprüft und nicht im Register.
+
+**K34.2 Abgleich (M).** Mit ΛCDM (Planck 2018) verlangt die Zuordnung β_sym = √(1 − Ω_Λ(z)): 1,000 bei z = 1100,
+0,885 bei z = 1, 0,558 heute, 0,231 bei z = −0,5, Grenze 0. Also dβ_sym/dt < 0. prop:H0-tension gibt
+Ω_Λ(1100) = 0,722 statt 1,3 · 10⁻⁹ (Faktor 5,8 · 10⁸).
+
+**K34.3 Urteil (S).** Die drei Aussagen sind zusammen nicht haltbar: sie beschreiben ein Universum, das Λ-dominiert
+beginnt und materiedominiert endet, umgekehrt zur beobachteten Geschichte. Der heutige Wert (1,4 % gegen Planck)
+bleibt unberührt. Auswege, nicht gewählt: (a) thm:dark-energy nur heute gültig; (b) β_sym läuft abwärts, frühes
+Universum an der Tachyon-Grenze; (c) zeitabhängige Brücke zwischen Kaskaden- und kosmologischen Anteilen.
+
+**K34.4 Korrektur.** Eine vermutete Nähe zu DESI (veränderliche dunkle Energie) besteht nicht: DESI betrifft die
+Dichte, prop:H0-tension den Anteil, und der Anteil steigt mit der Zeit für jedes w < 0.
+
+**K34.5 Eingrenzung durch K36.** Der Konflikt sitzt nur in prop:saturation (2); prop:H0-tension nutzt die Drift über
+den Frame-Faktor und erwähnt Ω nicht. Das Datensatz-Urteil „H0-Spannung in der vorliegenden Form nein“ war zu stark.
+
+### K35 — Companion-Runde v4.8.0-r17 (2026-10-21)
+
+Runde `sec:v480-r17-cosmological-time-direction` (Snippet `llm/v480_r17_round.tex`) hält K34 fest: drei Aussagen,
+Tabelle β_sym(z), Theoremlet r17.1 (dβ_sym/dt < 0 verlangt, > 0 angenommen), Auswege (a)–(c), Register-Nachtrag für
+thm:dark-energy, prop:H0-tension, prop:saturation. Ledger R_cos^{r17} = (0,0,1); Guards unverändert, β₄
+unverbraucht. Build 3 Läufe unter MiKTeX 25.12 (1087 Seiten), Audit gegen r16 ohne harte Abweichung.
+
+### K36 — Drei-Frame-Typisierung des Versatzes und Eingrenzung von r17 (2026-10-21)
+
+Skript `llm/k32_bsym_rollen.py` (Rollen aller 261 \bsym-Stellen im Hauptkorpus; Kreuzterme). Keine neue Vorhersage.
+
+**K36.1 Eingrenzung von r17 (S).** prop:H0-tension erwähnt Ω nicht; die Drift wirkt über den Frame-Faktor
+(rekonstruiert: (γ_L(0)/γ_L(1100))^{3/2} = 1,082 gegen 1,083, Exponent nicht im Text). Ω_Λ(1100) = 0,722 entsteht nur, wenn
+man das driftende β_sym in thm:dark-energy einsetzt — das tut nur prop:saturation (2). r17.1 bleibt (konditional).
+„Permanent“ in thm:dark-offset heißt „nie null“, kein Widerspruch zu langsamer Drift.
+
+**K36.2 Kreuzterme (M).** Materie +, Photon 0, Tachyon − bei Rapiditäten +η, 0, −η mit η = artanh β_sym = 0,6174.
+Kreuzterme η_a − η_b: Nachbar (+0, 0−) β = 0,5493, γ = 1,197; Gegenüber (+−) β = 0,844, γ = cosh 2η = 1,864 = γ_L.
+Unter J-Symmetrie genau zwei Beträge (Theoremlet r18.1).
+
+**K36.3 Befunde (M).** (a) Konstantenumrechnung Materie → Photon (Definition k, thm:frame-offset) benutzt γ_L, den
+Gegenüber-Term; der Nachbarfaktor wäre 1,197; cosh 2η ≠ (cosh η)^n, also nicht in k verschiebbar. (b) z₋ = β/2 = 0,422
+in thm:frame-offset ist eine Halbierung in der Geschwindigkeit; in der Rapidität ergibt sie β_sym = 0,5493. (c) Ω_M = tanh²η,
+Ω_Λ = sech²η, Summe identisch 1; offen, warum eine Kaskade aus S⁸ den +0-Term benutzt.
+
+**K36.4 Lesart (V, nicht übernommen).** Driftet der Materie-Frame und bleibt der Tachyon-Frame strukturell fest, bricht
+die J-Symmetrie, drei verschiedene Kreuzterme. Strukturelles und beobachtetes β fallen genau am symmetrischen Punkt
+zusammen; thm:spring hat diesen Punkt als Gleichgewicht (Nettokraft null nur für z_T = −z_M), aber ungedämpft. Der
+Abstand 0,5493 (γ_L) zu 0,5578 (Planck) wäre dann Symmetrieabweichung statt δ_CL. Zuordnung der Messwerte zu
+Kreuztermen ist eine Vorhersage — nur mit Vorab-Notiz.
+
+### K37 — Companion-Runde v4.8.0-r18 (2026-10-21)
+
+Runde `sec:v480-r18-three-frame-typing` (Snippet `llm/v480_r18_round.tex`) hält K36 fest: Eingrenzung von r17,
+Kreuzterm-Tabelle, Theoremlet r18.1, Befunde (a)–(c), Symmetrie-Lesart als Option, Register-Nachtrag.
+Ledger R_fr^{r18} = (0,0,1); Guards unverändert, β₄ unverbraucht. Build 3 Läufe unter MiKTeX 25.12 (1090 Seiten),
+Audit gegen r17 ohne harte Abweichung.
+
+### K38 — Zwölfter vorab festgelegter Test H12: Zuordnung zu den Kreuztermen (2026-10-21)
+
+Vorab-Notiz `llm/Vorab_Notiz_H12_Drei_Frame_Zuordnung.md` (Commit a593f5d), Ergebnis `llm/Ergebnis_H12_Drei_Frame_Zuordnung.md`,
+Skript `llm/k33_test_h12.py`. Regeln: cosh(η₊ + η_s) = γ_L; Ω_M = tanh²η_s (Planck 2018 mit BAO); sin²θ₁₂ = tanh²η₊/cos²θ₁₃.
+
+**K38.1 Werte (M).** η_s = 0,6296 (β_s = 0,5578), η₊ = 0,6053 (β₊ = 0,5408); Vorhersage sin²θ₁₂ = 0,2991 ± 0,0057
+gegen H9 0,3086. Unsicherheit fast ganz aus Ω_M (σ_P ≈ σ_Ω). JUNO 2026 (zählt nicht): beide verträglich, Δχ² = 0,34.
+
+**K38.2 Urteil (S).** Nach dem festgelegten Kriterium **nicht trennbar**: |P₁₂ − H9|/σ = 1,36 < 2 bei σ_x = 0,004. Die
+Grenze setzt Ω_M, nicht JUNO (auch bei fehlerfreiem θ₁₂ nur 1,67σ). Kein Test, als Ergebnis festgehalten. Ein Messwert
+nahe 0,299 wäre eine Spannung für H9 nach dessen eigenem Kriterium, keine Stütze für H12. H9 unverändert.
+
+### K39 — Rückwärtsanalyse: 3×3×3 mit Auslese-Index (2026-10-21)
+
+Wie K18: zählt nicht als Test. Skript `llm/k34_rueckwaerts_3x3x3.py`. T_abc = Versatz von a gegen b, gelesen aus c.
+Starteinstellung: Hopf-Kontinuum β = 1/√3 (η_H = 0,6585), J-symmetrisch.
+
+**K39.1 Kinematik (M).** Ein Boost in c verschiebt alle Rapiditäten gleich; T_abc = η_a − η_b hängt nicht von c ab.
+Der dritte Index trägt nur Information, wenn die Auslesung auf das System wirkt.
+
+**K39.2 Daten (M).** Planck Ω_M als T−0+: η = 0,6296 ± 0,0073 (−4,4 % gg. Hopf); JUNO θ₁₂ über die nachträgliche
+H9-Relation als T+0+: η = 0,6111 ± 0,0082 (−7,2 %); LQG γ_L/2 = 0,6175 (Theorie, kein Messwert, −6,2 %). Die beiden
+Messungen unterscheiden sich nur um 1,7σ.
+
+**K39.3 Ansätze (M).** M0 nur Kinematik χ² = 49 (2 FG). M1 Auslesung zieht das gelesene Objekt zum lesenden Frame,
+χ² = 34 (1 FG); M2 κ·ε_abc χ² = 34: beide verschwinden bei Selbstlesung (JUNO: Materie aus Materie), gerade dort ist
+die Absenkung am größten. M1′ mit lichtartigem Neutrino (H2) χ² = 14. **M3 Auslesefaktor T_abc = (η_a − η_b)·f(c):
+1 Parameter, χ² = 2,9 (1 FG), f(+) = 0,944 ± 0,008**; LQG-Kontrolle 0,6 % daneben. M4 freier Faktor je Kontext:
+0 FG, erklärt nichts.
+
+**K39.4 Was man lernt (S).** Die nötige Anregung ist nicht abstandsabhängig, sondern ein gleicher Faktor auf alles,
+was aus dem Materie-Frame gelesen wird. In β ist das 0,956 ± 0,007 — zahlenmäßig die bekannte Hopf-Lücke
+(δ_CL = 0,951, conj:cl-correction; P3 seit r09 Koinzidenz). Kein neuer Wert, nur eine andere Deutung: Auslesefaktor
+statt Gitterkorrektur. Zugänglich ist nur f(+), weil jede Messung aus dem Materie-Frame erfolgt; f(0), f(−) sind
+nicht beobachtbar, der dritte Index ist empirisch eine einzige Zahl.
+
+**K39.5 Grenzen (P).** JUNO geht über eine nachträglich gefundene Relation ein; Planck und JUNO trennen sich nur
+mit 1,7σ; LQG ist kein Messwert. Ein Test bräuchte f(+) ohne JUNO festgelegt und eine Vorab-Notiz vor der Rechnung.
+
+### K40 — Würfel pro Frame, Übergangsgruppe, Holonomie (2026-10-21)
+
+**K40.1 Würfelfamilie (M).** Ein Auslesewürfel T^(d)_abc pro Frame d mit festen Übergängen Λ(d′←d) trägt die
+Information eines Würfels plus des Übergangsgesetzes, also keinen zusätzlichen Parameter. Neu ist nur, ob die
+Übergänge auf einem geschlossenen Weg zur Identität zusammensetzen; der Rest ist die Holonomie, der Teil, den keine
+Wahl des lesenden Frames entfernt. Vertauschen die Übergänge, ist sie trivial.
+
+**K40.2 Zwei Übergangsgruppen (M).** Alte Lesart (thm:symmetric-frame): kollineare Boosts, vertauschbar, Holonomie
+trivial. Lesart B (r06, Riemann–Silberstein z = E + iB): SO(3,ℂ) erhält s = E² − B² + 2iE·B. Kein Lorentz-Übergang
+verbindet Materie (s > 0, elektrisch) mit Tachyon (s < 0, magnetisch) oder mit dem Photon (Nullfeld); Materie ↔ Tachyon
+geht nur über die Dualitätsdrehung α = π/2 (E → −B, B → E). γ_L als Lorentzfaktor zwischen Materie und Tachyon hat in
+Lesart B kein Gegenstück (r19.1).
+
+**K40.3 Z₂-Holonomie (M).** s → e^{2iα}s: α von 0 bis π umläuft s = 0 einmal, z kehrt als −z zurück (r19.2). Das
+Photon ist Verzweigungspunkt von z über s. Kann nur ±1 beitragen, keinen Faktor wie 0,944.
+
+**K40.4 Alte Lesart als photonzentrierte Sicht (M + V).** Die reelle s-Achse reproduziert die Sektorstruktur von
+thm:symmetric-frame (r19.3). Lesart (nicht übernommen): Das Photon wählt keine Bezugsrichtung aus; die alte Lesart ist
+die Sicht vom Photon aus mit der reellen Achse als gewählter Referenz (Dualitätswinkel als Eichung fixiert). Dort führt
+der gerade Weg Materie → Tachyon durch den Verzweigungspunkt, in Lesart B läuft er um das Photon herum. Die Sicht
+sieht die Z₂-Holonomie nicht und liefert zusätzlich eine Metrik (Abstand als Boost mit γ_L), die Lesart B nicht hat.
+Eichung oder physikalisch: offen seit r07.
+
+**K40.5 Folge (P).** Eine kontinuierliche Holonomie braucht geschlossene Wege in einer SO(3,ℂ)-Bahn und eine
+Transportregel (Zusammenhang); das Dokument liefert keines. Kandidat: Wigner-Rotation aus nicht kollinearen Boosts in
+Triolen-Richtungen — Modellwahl, Vergleich mit f(+) nur mit Vorab-Notiz.
+
+### K41 — Companion-Runde v4.8.0-r19 (2026-10-21)
+
+Runde `sec:v480-r19-frame-cubes-holonomy` (Snippet `llm/v480_r19_round.tex`): H12 und K39 festgehalten, Würfelfamilie,
+Theoremlets r19.1 (keine Lorentz-Verbindung zwischen den Sektoren), r19.2 (Z₂-Holonomie), r19.3 (reelle s-Achse),
+photonzentrierte Lesart als Option, Register-Nachtrag. Ledger R_hol^{r19} = (0,0,1); Guards unverändert, β₄
+unverbraucht. Build 3 Läufe MiKTeX (1093 Seiten), Audit gegen r18 ohne harte Abweichung.
+
+### K42 — Dreizehnter vorab festgelegter Test H13: Wigner-Holonomie als Auslesefaktor (2026-10-21)
+
+Vorab-Notiz `llm/Vorab_Notiz_H13_Wigner_Holonomie.md` (Commit 645295f), Ergebnis `llm/Ergebnis_H13_Wigner_Holonomie.md`,
+Skript `llm/k35_test_h13.py`. Konstruktion: drei Materie-Frames mit Rapidität η_H in Triolen-Richtungen, reine Boosts
+v₀ → v₁ → v₂ → v₀, Vergleichsgröße cos δ.
+
+**K42.1 Werte (M).** Holonomie reine Rotation (Boostanteil 10⁻¹⁶), δ = 0,4985 rad = 28,56°, gleich dem Winkeldefekt
+des gleichseitigen hyperbolischen Dreiecks (Gegenprobe). cos δ = 0,878 gegen f(+) = 0,944 ± 0,008: z = −7,9.
+
+**K42.2 Urteil (S).** **Widerlegt** für diese Konstruktion; die Holonomie-Route mit Triolen-Boosts ist für f(+)
+geschlossen. Andere Konstruktionen nicht gerechnet, bräuchten eigene Notiz. Da f(+) nur eine Anpassung ist (K39),
+fällt eine Erklärung des Faktors weg, nicht der Faktor.
+
+**K42.3 Nachbefund (nicht registriert, zählt nicht).** cos²(δ/2) = (1 + cos δ)/2 = 0,939 trifft f(+) mit z = −0,5; einer
+von vier naheliegenden Kandidaten (cos δ −7,9; cos(δ/2) +3,1; 1 − δ/2π −2,8). Herkunft: halber Winkel aus r06.4
+erzwungen, wenn der Spinor ψ (K2.2) ausgelesen wird; Quadrat = Born-Regel (Deutung, wie tanh²η, sech²η in r18 (c));
+Ausrichtung des Spinors in der Ebene = Wahl. Strukturbefund (M): Das Triolen-Photon c(1,ω,ω²) breitet sich entlang
+(1,1,1) aus, der Drehachse — es erhält nur die Phase δ/2 = 14,28°, keine Abschwächung; cos²(δ/2) gilt für Spinoren in
+der Ebene (Helizität eines Materie-Frames). Lesart (V): Materie-Lesungen um cos²(δ/2) abgeschwächt, Photon nur
+Phase. Hopf-Start → β = 0,5500, γ_L = 1,8675 (0,12 % / 0,16 %), Kategorie wie P3. Eine Photonphase δ/2 wäre
+vorab festzulegen.
+
+### K43 — Der Tachyon-Frame unter Holonomie und Spinorstruktur (2026-10-21)
+
+Strukturrechnung ohne Datenvergleich, Skript `llm/k36_tachyon_frame.py`.
+
+**K43.1 Gleiche Holonomie (M).** Die Dualität z ↦ iz vertauscht mit jeder SO(3,ℂ)-Wirkung (numerisch exakt). Jede
+Schleife hat im Tachyon-Sektor dieselbe Holonomie wie ihr Materie-Bild; für die Triole δ = 28,56°.
+
+**K43.2 Gleiche Hauptspinoren (M).** z und iz haben dieselben zwei Hauptnullrichtungen; Materie und Tachyon mit
+z_T = i z_M unterscheiden sich nur in der Gesamtphase des Spinorprodukts. Im Auslesebild von K42.3 werden Materie- und
+Tachyon-Lesungen gleich abgeschwächt; nur das Photon (auf der Drehachse) unterscheidet sich.
+
+**K43.3 Überlichtrapidität (M).** Für v > 1 ist artanh v = artanh(1/v) + iπ/2. Bei v = 1/β_sym = 1,8203: Realteil
+η_sym = 0,6174, Imaginärteil π/2. u(η + iπ/2) = i·w mit w = (sinh η, cosh η) raumartig: Die reelle Vierergeschwindigkeit
+kippt von zeitartig zu raumartig, der Faktor i trägt die Phase — dieselbe Struktur wie z_T = i z_M mit s → −s, und
+derselbe Faktor i wie in der erlaubten Aussage ℓ_T² = −λ_T² (r82). Für Tachyonen tauschen cosh und sinh die Rollen.
+
+**K43.4 Kreuzterme mit komplexer Tachyon-Rapidität (M).** Tachyon bei −η + iπ/2: Photon–Tachyon cosh = −i·sinh η
+(|·| = 0,657), Materie–Tachyon cosh = −i·sinh 2η (|·| = 1,574 = β·γ des Paars statt γ_L = 1,864). Der reelle Faktor
+γ_L entsteht nur, wenn der Imaginärteil fallen gelassen wird — passt zu r19.1 und r19.3.
+
+**K43.5 Tribonacci (M).** thm:tribonacci μ = 1/β_sym(μ) ist in Rapiditäten cosh 2η = coth η = tanh(η + iπ/2): Der
+Lorentzfaktor des Gegenüber-Terms ist gleich der Geschwindigkeit eines Tachyons mit reeller Rapidität η. Umformulierung,
+kein neuer Wert.
+
+### K44 — Companion-Runde v4.8.0-r20 (2026-10-21)
+
+Runde `sec:v480-r20-tachyon-complex-rapidity` (Snippet `llm/v480_r20_round.tex`): H13 widerlegt (K42), Halbwinkel-
+Nachbefund als nicht registriert gekennzeichnet (K42.3), Theoremlets r20.1 (Dualität vertauscht mit SO(3,ℂ): gleiche
+Holonomie und Hauptspinoren im Tachyon-Sektor) und r20.2 (artanh v = artanh(1/v) + iπ/2, Imaginärteil = Dualitätswinkel),
+Parallele zu z_T = i z_M und ℓ_T² = −λ_T² (r82, ohne Zusatz), Kreuzterm-Tabelle mit komplexer Tachyon-Rapidität,
+Tribonacci als cosh 2η = coth η, Register-Nachtrag. Ledger R_tach^{r20} = (0,0,1); Guards unverändert, β₄ unverbraucht.
+Build 3 Läufe MiKTeX (1096 Seiten), Audit gegen r19 ohne harte Abweichung.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1230,6 +1421,23 @@ Guards unverändert, β₄ unverbraucht. Build 3 Läufe (1084 Seiten), Audit geg
 - v4.4 (2026-10-20): K31 Companion-Runde v4.8.0-r15.
 - v4.5 (2026-10-20): K32 elfter vorab festgelegter Test (H11, Massen aus dem Tripel-Raum) — widerlegt; Mindestgrad 6.
 - v4.6 (2026-10-20): K33 Companion-Runde v4.8.0-r16.
+- v4.7 (2026-10-21): K34 Zeitrichtung der kosmologischen Anteile — thm:dark-energy mit prop:H0-tension und
+  prop:saturation nicht vereinbar (Vorzeichen von dβ_sym/dt umgekehrt); DESI-Nähe zurückgenommen.
+- v4.8 (2026-10-21): K35 Companion-Runde v4.8.0-r17.
+- v4.9 (2026-10-21): K36 Drei-Frame-Typisierung (Kreuzterme, Befunde a–c, Symmetrie-Lesart); Eingrenzung von r17 auf
+  prop:saturation (2), K34.5.
+- v5.0 (2026-10-21): K37 Companion-Runde v4.8.0-r18.
+- v5.1 (2026-10-21): K38 zwölfter vorab festgelegter Test (H12, Drei-Frame-Zuordnung) — nicht trennbar von H9, kein Test.
+- v5.2 (2026-10-21): K39 Rückwärtsanalyse 3×3×3 mit Auslese-Index — einziger tragfähiger Ansatz ist ein Auslesefaktor
+  f(+) ≈ 0,944, zahlenmäßig die bekannte Hopf-Lücke.
+- v5.3 (2026-10-21): K40 Würfelfamilie mit Übergängen, Übergangsgruppen beider Lesarten, Z₂-Holonomie, alte Lesart
+  als photonzentrierte Sicht.
+- v5.4 (2026-10-21): K41 Companion-Runde v4.8.0-r19.
+- v5.5 (2026-10-21): K42 dreizehnter vorab festgelegter Test (H13, Wigner-Holonomie) — widerlegt, z = −7,9.
+- v5.6 (2026-10-21): K42.3 Nachbefund Halbwinkel (nicht registriert): Spinor-Herkunft, Triolen-Photon auf der Drehachse.
+- v5.7 (2026-10-21): K43 Tachyon-Frame: gleiche Holonomie und Hauptspinoren wie Materie, Überlichtrapidität mit iπ/2,
+  Kreuzterme imaginär, Tribonacci als cosh 2η = coth η.
+- v5.8 (2026-10-21): K44 Companion-Runde v4.8.0-r20.
 
 ---
 

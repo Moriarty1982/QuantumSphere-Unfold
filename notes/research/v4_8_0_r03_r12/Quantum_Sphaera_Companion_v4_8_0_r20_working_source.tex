@@ -67120,4 +67120,599 @@ R_{\rm glob}^{(v480\text{-}r16,+)}=(0,1,1,1,1),
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
 
+% ============================================================================
+\clearpage
+\section*{v4.8.0-r17 Source-Only: Time Direction of the Cosmological Fractions}
+\addcontentsline{toc}{section}{v4.8.0-r17 Source-Only: Time Direction of the Cosmological Fractions}
+\label{sec:v480-r17-cosmological-time-direction}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer r03 examined the assignment \(\Omega_\Lambda=1-\bsym^2\) of Theorem~\ref{thm:dark-energy} at the present
+epoch (\S\ref{subsec:v480-r03-p4-recheck}) and the provenance of \(\bsym\)
+(\S\ref{subsec:v480-r03-frame-parameter-provenance}).  Two hypothesis-grade statements that make the same
+assignment time-dependent, Proposition~\ref{prop:H0-tension} and Proposition~\ref{prop:saturation}, have not been
+checked by any layer since r85 and do not appear in the registers of \S\ref{sec:v480-r09-p2-p3-reclassification}.
+This layer compares them with the measured expansion history.  It is a consistency check of existing statements,
+not a new prediction, and therefore carries no pre-registration note.  The computation is
+\texttt{llm/k31\_kosmologie\_vorzeichen.py}.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.8.0-r17 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.8.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23365244}{10.5281/zenodo.23365244} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.8.0-r17 the three statements}
+\label{subsec:v480-r17-statements}
+
+\begin{enumerate}[leftmargin=2em]
+\item Theorem~\ref{thm:dark-energy}: \(\Omega_\Lambda=P(S^8\to S^2)=1-\bsym^2\) and
+\(\Omega_M=P(S^8\to S^4)=\bsym^2\).
+\item Proposition~\ref{prop:H0-tension}: \(\bsym\) evolves, with \(\bsym(z=1100)\approx0.527\) and
+\(\bsym(z=0)\approx0.5493\); ``the universe moves continuously away from the photon frame''.
+\item Proposition~\ref{prop:saturation}, stated there as ``the consistent continuation'' of item~2:
+\(\bsym(t)\nearrow1\), \(P(S^8\to S^4)=\bsym^2\to1\), ``the universe becomes fully matter dominated'', and the
+expansion stops.
+\end{enumerate}
+Items~2 and~3 use item~1 at all epochs, not only today; item~3 does so explicitly through \(\bsym^2\to1\).
+
+\subsection*{v4.8.0-r17 comparison with the expansion history}
+\label{subsec:v480-r17-comparison}
+
+In flat \(\Lambda\)CDM with the Planck 2018 values \(\Omega_M=0.3111\), \(\Omega_r=9.1\times10^{-5}\), the
+\(\Lambda\) fraction at redshift \(z\) is
+\(\Omega_\Lambda(z)=\Omega_\Lambda/\bigl(\Omega_r(1+z)^4+\Omega_M(1+z)^3+\Omega_\Lambda\bigr)\).  Under item~1 the
+value of \(\bsym\) that reproduces it is \(\sqrt{1-\Omega_\Lambda(z)}\):
+\begin{center}
+\small
+\begin{tabular}{@{}rrr@{}}
+\toprule
+\(z\) & \(\Omega_\Lambda(z)\) & required \(\bsym\)\\
+\midrule
+\(-0.5\) & \(0.947\) & \(0.231\)\\
+\(0\) & \(0.689\) & \(0.558\)\\
+\(0.5\) & \(0.396\) & \(0.777\)\\
+\(1\) & \(0.217\) & \(0.885\)\\
+\(2\) & \(0.0757\) & \(0.961\)\\
+\(5\) & \(0.0101\) & \(0.995\)\\
+\(1100\) & \(1.3\times10^{-9}\) & \(1.000\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+Proposition~\ref{prop:H0-tension} gives instead \(\Omega_\Lambda(1100)=1-0.527^2=0.722\), larger than the
+\(\Lambda\)CDM value by a factor \(5.8\times10^{8}\).
+
+\paragraph{Theoremlet v4.8.0-r17.1.}
+Under the assignment of Theorem~\ref{thm:dark-energy} held at all epochs, the measured expansion history requires
+\(\mathrm d\bsym/\mathrm dt<0\): \(\bsym\) decreases from \(\bsym\approx1\) at recombination to \(0.558\) today and
+tends to \(0\) in the \(\Lambda\)-dominated future.  Propositions~\ref{prop:H0-tension} and~\ref{prop:saturation}
+assume \(\mathrm d\bsym/\mathrm dt>0\) and an end state \(\bsym\to1\).  The three statements together describe a
+universe that starts \(\Lambda\)-dominated and ends matter-dominated, the reverse of the observed history.  They are
+therefore not jointly tenable.
+
+\paragraph{Proof sketch.}
+\(\Omega_\Lambda(z)\) is monotonically decreasing in \(z\) for \(\Omega_M,\Omega_\Lambda>0\), so
+\(\sqrt{1-\Omega_\Lambda(z)}\) is increasing in \(z\), i.e.\ decreasing in cosmic time.  The table evaluates it.
+Items~2 and~3 state the opposite monotonicity.  \(\square\)
+
+\paragraph{What the comparison does not decide.}
+The present-epoch agreement \(1-\bsym^2=0.698\) against \(\Omega_\Lambda=0.689\) (\(1.4\%\)) is untouched, as are
+the caveats of r03 F3--F5 and F11.  The check uses \(\Lambda\)CDM as the description of the measured history; a
+different background would change the numbers, not the sign, because the ratio of matter to dark-energy density
+scales as \(a^{3w}\) and falls with expansion for every dark-energy equation of state \(w<0\).  This also removes a possible affinity with the
+current evidence for evolving dark energy: that evidence concerns the dark-energy density, while
+Proposition~\ref{prop:H0-tension} concerns the fraction, which increases with time in every such model.
+
+\paragraph{Ways out, recorded and not chosen.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Theorem~\ref{thm:dark-energy} holds only at the present epoch.  Then
+Propositions~\ref{prop:H0-tension} and~\ref{prop:saturation} lose their basis, and the \(1.4\%\) agreement becomes
+a statement about one epoch, which r03 F11 already qualifies.
+\item[(b)] \(\bsym\) runs the other way, from \(\approx1\) at recombination downward.  Then the early universe sits at
+what Proposition~\ref{prop:saturation} calls the tachyon limit, and Proposition~\ref{prop:H0-tension} would need the
+opposite sign of \(\Delta\bsym\), which it would have to re-derive.
+\item[(c)] The cascade probabilities are not the cosmological fractions at other epochs, but some other function of
+them.  Then item~1 needs a time-dependent bridge that the source does not supply.
+\end{enumerate}
+Which way is taken is left to the author.
+
+\subsection*{v4.8.0-r17 register entries}
+\label{subsec:v480-r17-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after r17\\
+\midrule
+Thm.~\ref{thm:dark-energy} & present-epoch value \(1.4\%\) from Planck; not tenable at all epochs together with Props.~\ref{prop:H0-tension}, \ref{prop:saturation} (r17.1)\\
+Prop.~\ref{prop:H0-tension} & sign of \(\mathrm d\bsym/\mathrm dt\) opposite to the one required by Thm.~\ref{thm:dark-energy}; \(\Omega_\Lambda(1100)\) off by \(5.8\times10^8\) (r17)\\
+Prop.~\ref{prop:saturation} & end state \(\Omega_M\to1\) reverses the observed trend \(\Omega_\Lambda\to1\) (r17)\\
+\bottomrule
+\end{tabular}
+\end{center}
+These entries extend the register of \S\ref{subsec:v480-r09-results}.
+
+\subsection*{v4.8.0-r17 ledger and guard update}
+\label{subsec:v480-r17-ledger-guard}
+
+\[
+R_{\rm cos}^{v480\text{-}r17}=(0,0,1)
+\]
+for (present-epoch agreement recorded, time direction checked against the expansion history, choice among
+(a)--(c) open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v480\text{-}r17,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v480\text{-}r17}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.8.0-r18 Source-Only: Three-Frame Typing of the Frame Offset and Correction of r17}
+\addcontentsline{toc}{section}{v4.8.0-r18 Source-Only: Three-Frame Typing of the Frame Offset and Correction of r17}
+\label{sec:v480-r18-three-frame-typing}
+% ============================================================================
+
+\paragraph{Purpose.}
+The single symbol \(\bsym\) is used in 261 lines of the main body in at least three roles: as a frame factor in
+the conversion of constants, as a branching probability of the cascade, and as a Hopf angle
+(\texttt{llm/k32\_bsym\_rollen.py}).  This layer types the frame offset over the three frames of the triolic
+system, records three findings that the single symbol hides, narrows the register entries of r17, and records a
+reading of why the offsets coincide today.  It contains arithmetic and typing, no new prediction.  Earlier layers
+are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.8.0-r18 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.8.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23365244}{10.5281/zenodo.23365244} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.8.0-r18 correction of r17}
+\label{subsec:v480-r18-r17-correction}
+
+Proposition~\ref{prop:H0-tension} does not mention the cosmological fractions.  It states that \(\bsym\) drifts
+and that the \(H_0\) discrepancy is a frame artefact; the drift acts through the frame factor.  (The ratio
+\(\gL(z{=}0)/\gL(z{=}1100)=1.8642/1.7690=1.054\) raised to the power \(3/2\) gives \(1.082\) against the quoted
+\(1.083\); the exponent is a reconstruction, the source does not state it.)  The value
+\(\Omega_\Lambda(1100)=0.722\) of \S\ref{subsec:v480-r17-comparison} arises only when the drifting offset is inserted
+into Theorem~\ref{thm:dark-energy}.  The one statement of the source that makes this insertion is item~(2) of
+Proposition~\ref{prop:saturation}, \(P(S^8\to S^4)=\bsym^2\to1\).
+
+Theoremlet r17.1 stands, because it is conditional on the assignment holding at all epochs.  The register entries of
+\S\ref{subsec:v480-r17-register} are narrowed as follows: Proposition~\ref{prop:H0-tension} is not refuted by r17;
+the conflict with the expansion history sits in item~(2) of Proposition~\ref{prop:saturation} and in the tacit
+identification of two offsets that \S\ref{subsec:v480-r18-reading} separates.  Item~(1) of
+Proposition~\ref{prop:saturation} uses the frame factor only and is not affected.  The word ``permanent'' in
+Theorem~\ref{thm:dark-offset} means non-vanishing (``we can never fully reach \(\zminus=0\)''); it does not
+conflict with a slow drift.
+
+\subsection*{v4.8.0-r18 three frames and their cross terms}
+\label{subsec:v480-r18-cross-terms}
+
+Write \(\eta=\operatorname{artanh}\bsym=0.6174\) for the rapidity of the offset.  By
+Theorem~\ref{thm:symmetric-frame} matter (\(+\)), photon (\(0\)) and tachyon (\(-\)) sit at rapidities
+\(\eta_+=\eta\), \(\eta_0=0\), \(\eta_-=-\eta\).  Rapidities add, so the offset of frame \(a\) seen from frame \(b\) is
+\(\eta_{ab}=\eta_a-\eta_b\), with velocity \(\tanh\eta_{ab}\) and Lorentz factor \(\cosh\eta_{ab}\):
+\begin{center}
+\small
+\begin{tabular}{@{}c|ccc@{}}
+\toprule
+from\,\(\backslash\)\,to & \(+\) & \(0\) & \(-\)\\
+\midrule
+\(+\) & \(0\) & \(0.5493,\ \gamma=1.197\) & \(0.8440,\ \gamma=1.864\)\\
+\(0\) & \(-0.5493,\ \gamma=1.197\) & \(0\) & \(0.5493,\ \gamma=1.197\)\\
+\(-\) & \(-0.8440,\ \gamma=1.864\) & \(-0.5493,\ \gamma=1.197\) & \(0\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Theoremlet v4.8.0-r18.1.}
+Under the symmetry \(\eta_-=-\eta_+\) of Theorem~\ref{thm:symmetric-frame} the nine cross terms take exactly two
+non-trivial magnitudes: the neighbour term (\(+0\), \(0-\)) with \(\cosh\eta=1.197\) and the opposite term (\(+-\))
+with \(\cosh2\eta=(1+\bsym^2)/(1-\bsym^2)=\gL=1.864\).  The frame factor \(\gL\) is the opposite term.
+
+\paragraph{Proof sketch.}
+\(\cosh2\eta=(1+\tanh^2\eta)/(1-\tanh^2\eta)\) with \(\tanh\eta=\bsym\); this is the formula of
+Theorem~\ref{thm:symmetric-frame}, which names \(\gL\) the Lorentz factor between the matter and tachyon frames.
+\(\square\)
+
+\subsection*{v4.8.0-r18 findings}
+\label{subsec:v480-r18-findings}
+
+\paragraph{(a) The conversion of constants uses the opposite term for a neighbour pair.}
+The definition of the frame-insertion count in \S\ref{sec:phase-constants} converts matter to photon by
+\(X^{(\mathrm{photon})}=\gL^{-k(X)}X^{(\mathrm{matter})}\), and the proof of Theorem~\ref{thm:frame-offset} reads
+\(\gL\) as a Lorentz factor between the matter frame and the photon frame, with \(\beta=0.844\).  By r18.1 the
+matter--photon pair is a neighbour pair, with factor \(1.197\); \(1.864\) belongs to matter--tachyon.  Since
+\(\cosh2\eta\neq(\cosh\eta)^n\) for integer \(n\) (\((\cosh\eta)^2=1.432\)), the difference cannot be absorbed into the
+counts \(k\).  Either the conversion is meant to pass through the tachyon frame, which would have to be stated, or
+every frame-corrected constant of \S\ref{sec:phase-constants} uses the wrong cross term.  r18 does not choose.
+
+\paragraph{(b) The observer position \(\zminus=\beta/2=0.422\).}
+Theorem~\ref{thm:frame-offset} places the observer at \(\zminus=\beta/2\approx0.422\), halving the opposite offset
+\(0.844\) in velocity.  Halving in rapidity gives \(\tanh\eta=0.5493=\bsym\), the position of
+Theorem~\ref{thm:symmetric-frame}.  The value \(0.422\) is a halving in the wrong variable; the two theorems agree
+once the halving is done in rapidity.
+
+\paragraph{(c) The cascade split is the neighbour term.}
+Theorem~\ref{thm:dark-energy} has \(\Omega_M=\tanh^2\eta=0.3018\) and \(\Omega_\Lambda=\operatorname{sech}^2\eta=0.6982\),
+which sum to one identically.  The split is therefore internally consistent.  Open: the cascade starts in the
+tachyon stratum \(S^8\), yet uses the neighbour term \(+0\) and no term of the \(-\) row.
+
+\subsection*{v4.8.0-r18 a reading of the coincidence, offered and not adopted}
+\label{subsec:v480-r18-reading}
+
+A single \(\bsym\) is the statement \(\eta_-=-\eta_+\).  If the matter frame drifts, as
+Proposition~\ref{prop:H0-tension} has it, while the tachyon frame stays at a structural value \(-\eta_s\), the symmetry
+is broken and the cross terms become three distinct numbers, \(\eta_+(t)\), \(\eta_s\) and \(\eta_+(t)+\eta_s\).
+A structural offset (cascade side) and an observed offset (frame side) then coincide exactly at the symmetric point
+\(\eta_+=\eta_s\).
+
+The source supplies a reason for that point.  In Theorem~\ref{thm:spring} the net force on the photon,
+\(k(z^-_T-z^-_\gamma)+k(z^-_M-z^-_\gamma)\), vanishes for \(z^-_\gamma=0\) only if \(z^-_T=-z^-_M\): the symmetric
+configuration is the mechanical equilibrium of the triple.  Under this reading ``the offsets agree today'' means
+``the triple is near its equilibrium today'', and the gap between \(0.5493\) (from \(\gL\)) and \(0.5578\) (from
+\(\Omega_M\), Remark~\ref{rem:omega-bsym}), \(1.5\%\), would be a departure from symmetry rather than the lattice
+correction \(\delta_{\mathrm{CL}}\) to which the remark attributes it.  The system of Theorem~\ref{thm:spring} is
+undamped: it supplies an equilibrium, not a relaxation towards it.
+
+Which measured value belongs to which cross term under broken symmetry is not decided here.  Any such assignment is a
+prediction and requires a pre-registration note before it is computed.
+
+\subsection*{v4.8.0-r18 register entries}
+\label{subsec:v480-r18-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after r18\\
+\midrule
+Prop.~\ref{prop:H0-tension} & not refuted by r17; uses the offset only through the frame factor (r18)\\
+Prop.~\ref{prop:saturation} & item (2) carries the conflict of r17.1; item (1) unaffected (r18)\\
+\(\gL\) in \S\ref{sec:phase-constants}, Thm.~\ref{thm:frame-offset} & opposite cross term (\(+-\)) used for the neighbour pair matter--photon (r18 (a))\\
+Thm.~\ref{thm:frame-offset}, \(\zminus=0.422\) & halving in velocity; in rapidity \(\zminus=\bsym\) (r18 (b))\\
+Thm.~\ref{thm:dark-energy} & split \(\tanh^2\eta+\operatorname{sech}^2\eta=1\) consistent; choice of the \(+0\) term for a cascade from \(S^8\) open (r18 (c))\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.8.0-r18 ledger and guard update}
+\label{subsec:v480-r18-ledger-guard}
+
+\[
+R_{\rm fr}^{v480\text{-}r18}=(0,0,1)
+\]
+for (three-frame cross terms typed, findings (a)--(c) recorded, assignment of the measured values to cross terms
+open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v480\text{-}r18,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v480\text{-}r18}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.8.0-r19 Source-Only: Frame Cubes, Transition Group and Holonomy}
+\addcontentsline{toc}{section}{v4.8.0-r19 Source-Only: Frame Cubes, Transition Group and Holonomy}
+\label{sec:v480-r19-frame-cubes-holonomy}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer r18 typed the frame offset by cross terms between the three frames.  Two working results followed outside the
+source: the pre-registered test H12 (\texttt{llm/Ergebnis\_H12\_Drei\_Frame\_Zuordnung.md}) and a backward analysis
+with a readout index (\texttt{llm/k34\_rueckwaerts\_3x3x3.py}, map entry K39).  This layer records both, asks what a
+family of readout cubes linked by transition maps adds, and compares the transition group of the earlier reading with
+that of Reading~B (\S\ref{subsec:v480-r06-readings}).  It contains typing and arithmetic, no new prediction.  Earlier
+layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.8.0-r19 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.8.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23365244}{10.5281/zenodo.23365244} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.8.0-r19 records of H12 and of the backward analysis}
+\label{subsec:v480-r19-records}
+
+\paragraph{H12.}
+With \(\cosh(\eta_++\eta_s)=\gL\), \(\Omega_M=\tanh^2\eta_s\) (Planck 2018 with BAO) and
+\(\sin^2\theta_{12}=\tanh^2\eta_+/\cos^2\theta_{13}\), the assignment gives \(\beta_+=0.5408\), \(\beta_s=0.5578\) and
+\(\sin^2\theta_{12}=0.2991\pm0.0057\), against \(0.3086\) for the symmetric relation H9.  At the precision fixed for
+the next JUNO release the two are \(1.36\sigma\) apart; by the fixed criterion they cannot be separated, and the
+result is recorded as no test.  The limit is set by the uncertainty of \(\Omega_M\), not by JUNO.
+
+\paragraph{Backward analysis (does not count as a test).}
+Let \(T_{abc}\) be the offset of frame \(a\) against frame \(b\), read from frame \(c\), starting from the Hopf value
+\(\bsym=1/\sqrt3\).  Pure kinematics makes \(T_{abc}=\eta_a-\eta_b\) independent of \(c\), since a boost into \(c\)
+shifts all rapidities equally.  Of the readout terms tried, those depending on the distance between reading and read
+frame fail, because they vanish for a self-reading (\(\chi^2\approx34\)).  A single factor on everything read from
+the matter frame, \(T_{abc}=(\eta_a-\eta_b)f(c)\), fits the two measurements with \(f(+)=0.944\pm0.008\)
+(\(\chi^2=2.9\), one degree of freedom).  In \(\beta\) this is \(0.956\pm0.007\), numerically the known Hopf gap
+\(\delta_{\mathrm{CL}}=0.951\) of Remark~\ref{conj:cl-correction}.  The backward analysis yields no new number; it
+offers a different reading of a known one.  Only \(f(+)\) is accessible, since every measurement is made from the
+matter frame.
+
+\subsection*{v4.8.0-r19 cubes linked by transition maps}
+\label{subsec:v480-r19-cubes}
+
+Take one readout cube \(T^{(d)}_{abc}\) per frame \(d\in\{+,0,-\}\) and transition maps
+\(\Lambda(d'\!\leftarrow\!d)\) with \(T^{(d')}=\Lambda(d'\!\leftarrow\!d)\,T^{(d)}\).  If the maps are fixed by the
+theory, the three cubes carry the information of one cube and the transition law; the family adds no parameter.
+What it adds is a consistency question: whether the maps compose to the identity around a closed path of frames.  The
+residue, if any, is the holonomy of the family.  It depends on the transition group and the positions of the frames
+only, and it is the part that no choice of the reading frame can remove.  If the transition maps commute, the
+holonomy is trivial and the family adds nothing.
+
+\subsection*{v4.8.0-r19 the transition group in the two readings}
+\label{subsec:v480-r19-transition-group}
+
+\paragraph{Earlier reading.}
+Theorem~\ref{thm:symmetric-frame} places matter and tachyon at \(\pm\bsym\) on one axis around the photon and calls
+\(\gL\) the Lorentz factor between them.  The transitions are collinear boosts; they commute, and the holonomy is
+trivial.
+
+\paragraph{Reading~B.}
+By \S\ref{subsec:v480-r06-readings} the kernel is the Riemann--Silberstein vector \(z=E+iB\) under
+\(SO(3,\mathbb C)\cong SO^+(1,3)\), with \(s=E^2-B^2+2i\,E\cdot B\).  The working assignment of r07 reads matter as
+\(s>0\) (electric type), tachyon as \(s<0\) (magnetic type), photon as \(s=0\) (null field).
+
+\paragraph{Theoremlet v4.8.0-r19.1.}
+In Reading~B no Lorentz transformation relates matter to tachyon, and none relates either of them to the photon.
+Matter and tachyon with equal \(|s|\) are related by the duality rotation \(z\mapsto e^{i\pi/2}z\), that is
+\(E\mapsto-B\), \(B\mapsto E\).  The photon is reached by neither group action.
+
+\paragraph{Proof sketch.}
+\(SO(3,\mathbb C)\) preserves \(s\) (Theoremlet r06.3), so it preserves its sign and the null cone.  The duality
+rotation multiplies \(s\) by \(e^{2i\alpha}\) and maps \(s>0\) to \(s<0\) at \(\alpha=\pi/2\)
+(Theoremlet r07.2); it preserves \(s=0\).  This is the familiar statement that a radiation field is null in every
+frame and under every duality rotation.  \(\square\)
+
+\paragraph{Consequence.}
+The Lorentz factor \(\gL\) between matter and tachyon in Theorem~\ref{thm:symmetric-frame} has no counterpart in
+Reading~B, where the two are related by a duality rotation and not by a boost.  On this point the two readings
+disagree about the transition group itself.
+
+\paragraph{Theoremlet v4.8.0-r19.2.}
+The duality circle carries a \(\mathbb Z_2\) holonomy around the photon.  Under \(z\mapsto e^{i\alpha}z\) one has
+\(s\mapsto e^{2i\alpha}s\); as \(\alpha\) runs from \(0\) to \(\pi\), \(s\) encircles \(s=0\) once and \(z\) returns as
+\(-z\).  Paths of \(s\) that do not encircle \(s=0\) have trivial holonomy.  The photon is the branch point of
+\(z\) over \(s\).
+
+\paragraph{Proof sketch.}
+\(s\) is quadratic in \(z\), so the map from the duality circle of \(z\) to the circle of \(s\) is two to one.
+Theoremlet r07.1 states the sign ambiguity of \(z_m\) under \(\alpha\mapsto\alpha+\pi\).  \(\square\)
+
+\subsection*{v4.8.0-r19 the earlier reading as a photon-centred view}
+\label{subsec:v480-r19-photon-centred}
+
+\paragraph{Theoremlet v4.8.0-r19.3.}
+The real axis of the \(s\)-plane reproduces the sector structure of Theorem~\ref{thm:symmetric-frame}: matter and
+tachyon at \(\pm|s|\), mirror-symmetric about the photon at \(s=0\), the mirror \(s\mapsto-s\) being the half-turn of
+the duality circle.
+
+\paragraph{Proof sketch.}
+Theoremlet r07.1 with \(\alpha=0\) and \(\alpha=\pi/2\).  \(\square\)
+
+\paragraph{Reading, offered and not adopted.}
+The photon is fixed by the whole duality circle, so it picks out no reference direction in the \(s\)-plane.  The
+earlier reading can then be taken as the view centred on the photon with the real axis chosen as reference, that is,
+with the duality angle fixed as a gauge.  On this axis the straight path from matter to tachyon passes through the
+photon, the branch point, where the phase is undefined; in Reading~B the path runs around the photon on
+\(|s|=\mathrm{const}\).  The photon-centred view therefore cannot see the \(\mathbb Z_2\) holonomy.  It also supplies
+something Reading~B lacks: a metric along the axis, in which the mirror distance is read as a boost with factor
+\(\gL\).  No correspondence between \(|s|\) and \(\bsym\) is given in the source, and by r19.1 the boost reading has no
+counterpart in Reading~B.  Whether the duality angle is a gauge, which would make the earlier reading a gauge-fixed
+projection, or physical, which would make it a projection that loses information, is the question left open in r07.
+
+\subsection*{v4.8.0-r19 consequence for the readout factor}
+\label{subsec:v480-r19-readout-factor}
+
+The \(\mathbb Z_2\) holonomy can only contribute \(\pm1\); it cannot produce a factor such as \(f(+)=0.944\).  A
+continuous holonomy would need closed paths in an \(SO(3,\mathbb C)\)-orbit together with a rule for transporting
+frames along them, i.e.\ a connection.  The source supplies neither.  Composing boosts in non-collinear directions
+yields a Wigner rotation, and the triole directions are a candidate for such directions, but choosing them is a model
+decision.  Any comparison of such a holonomy with \(f(+)\) is a prediction and requires a pre-registration note.
+
+\subsection*{v4.8.0-r19 register entries}
+\label{subsec:v480-r19-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after r19\\
+\midrule
+Thm.~\ref{thm:symmetric-frame} & sector structure reproduced by the real \(s\)-axis of Reading~B (r19.3); \(\gL\) as a Lorentz factor between matter and tachyon has no counterpart in Reading~B (r19.1)\\
+duality circle of r07 & \(\mathbb Z_2\) holonomy around the photon, photon as branch point (r19.2)\\
+Rem.~\ref{conj:cl-correction}, \(\delta_{\mathrm{CL}}\) & numerically equal to the readout factor \(f(+)\) of the backward analysis; reinterpretation only, not a test (r19)\\
+H12 & not separable from H9 by the fixed criterion; no test (r19)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.8.0-r19 ledger and guard update}
+\label{subsec:v480-r19-ledger-guard}
+
+\[
+R_{\rm hol}^{v480\text{-}r19}=(0,0,1)
+\]
+for (transition groups of both readings compared, \(\mathbb Z_2\) holonomy of the duality circle recorded,
+continuous holonomy open for lack of a connection).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v480\text{-}r19,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v480\text{-}r19}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.8.0-r20 Source-Only: The Tachyon Frame, Complex Rapidity and the Holonomy Test H13}
+\addcontentsline{toc}{section}{v4.8.0-r20 Source-Only: The Tachyon Frame, Complex Rapidity and the Holonomy Test H13}
+\label{sec:v480-r20-tachyon-complex-rapidity}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer r19 found no Lorentz transformation between the sectors of Reading~B and read the earlier reading as a
+photon-centred view.  This layer records the pre-registered holonomy test H13 and a post-hoc finding attached to it,
+and examines the tachyon frame under the holonomy and spinor structure.  The computations are
+\texttt{llm/k35\_test\_h13.py} and \texttt{llm/k36\_tachyon\_frame.py}; only H13 is compared with data.  Earlier layers
+are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.8.0-r20 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.8.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23365244}{10.5281/zenodo.23365244} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.8.0-r20 the holonomy test H13}
+\label{subsec:v480-r20-h13}
+
+The note \texttt{llm/Vorab\_Notiz\_H13\_Wigner\_Holonomie.md} fixed, before any computation, one construction: three
+matter frames moving with rapidity \(\eta_H=\operatorname{artanh}(1/\sqrt3)\) in the three triole directions, linked by
+pure boosts into a closed loop, with \(\cos\delta\) of the resulting Wigner rotation to be compared with the readout
+factor \(f(+)=0.944\pm0.008\) of the backward analysis recorded in \S\ref{subsec:v480-r19-records}.
+
+The holonomy is a pure rotation (boost part \(10^{-16}\)) by \(\delta=0.4985\) rad \(=28.56^\circ\), equal to the
+angular defect of the equilateral hyperbolic triangle with vertices at the three velocities.  Then
+\(\cos\delta=0.878\), at \(z=-7.9\) from \(f(+)\).  By the fixed criterion H13 is refuted for this construction, and the
+holonomy route with triole boosts is closed for \(f(+)\).  Since \(f(+)\) is itself a fit, this removes an explanation
+of the factor, not the factor.
+
+\paragraph{Post-hoc finding, not registered and not counting.}
+Asked after the result: \(\cos^2(\delta/2)=(1+\cos\delta)/2=0.939\) meets \(f(+)\) at \(z=-0.5\).  It is one of four
+obvious functions of \(\delta\) (\(\cos\delta\): \(-7.9\); \(\cos(\delta/2)\): \(+3.1\); \(1-\delta/2\pi\): \(-2.8\)), roughly
+the rate expected by chance.  Its parts have different standing.  The half angle is forced once the spinor is read
+out: by Theoremlet r06.4 (\S\ref{subsec:v480-r06-null-cone}) \(z\) is quadratic in \(\psi\in\mathbb C^2\), so a rotation
+of the frames by \(\delta\) turns \(\psi\) by \(\delta/2\).  The square is a Born-type reading of \(|\langle\psi|U\psi\rangle|^2\).
+The orientation is a choice: \(|\langle\psi|U\psi\rangle|^2=\cos^2(\delta/2)+\sin^2(\delta/2)\cos^2\theta\), with \(\theta\) the
+angle to the rotation axis, which is normal to the triole plane.  The triole photon \(c(1,\omega,\omega^2)\) is a null
+field whose direction \(E\times B\) is \((1,1,1)\), the normal of the plane \(z_1+z_2+z_3=0\); its spinor lies on the
+axis and acquires only the phase \(\delta/2=14.28^\circ\).  The factor \(\cos^2(\delta/2)\) belongs to a spinor in the plane,
+such as the helicity of a matter frame moving in a triole direction.
+
+\subsection*{v4.8.0-r20 the tachyon frame}
+\label{subsec:v480-r20-tachyon}
+
+\paragraph{Theoremlet v4.8.0-r20.1.}
+The duality rotation \(z\mapsto iz\) commutes with every element of \(SO(3,\mathbb C)\).  Hence every closed path in
+the tachyon sector has the same holonomy as its matter image (for the triole loop \(\delta=28.56^\circ\)), and \(z\) and
+\(iz\) have the same two principal null directions.  Matter and tachyon with \(z_T=iz_M\) differ only in the overall
+phase of the spinor product.
+
+\paragraph{Proof sketch.}
+\(iz\) is a scalar multiple of \(z\), and \(SO(3,\mathbb C)\) acts linearly.  Writing \(z\) as a symmetric 2-spinor
+\(F_{AB}\) with \(F_{11}=\tfrac12(z_1-iz_2)\), \(F_{22}=\tfrac12(-z_1-iz_2)\), \(F_{12}=-\tfrac12z_3\) (the polarisation of the
+map of r06.4), the principal spinors are the roots of \(F_{11}\lambda^2+2F_{12}\lambda+F_{22}\), which do not change when
+\(F\) is multiplied by \(i\).  Checked numerically.  \(\square\)
+
+\paragraph{Theoremlet v4.8.0-r20.2.}
+For a speed \(v>1\),
+\[
+\operatorname{artanh}v=\operatorname{artanh}\frac1v+\frac{i\pi}{2}.
+\]
+The four-velocity at rapidity \(\eta+i\pi/2\) is \(i\,w\) with \(w=(\sinh\eta,\cosh\eta)\) spacelike: the real
+four-velocity turns from timelike to spacelike and the factor \(i\) carries the phase.  For \(v=1/\bsym=1.8203\) the real
+part is \(\eta_{\rm sym}=0.6174\) and the imaginary part is \(\pi/2\), the duality angle that relates matter and tachyon
+in Theoremlet r07.2 (\S\ref{subsec:v480-r07-duality-angle}).
+
+\paragraph{Proof sketch.}
+\(\tanh(x+i\pi/2)=\coth x\); \(\cosh(\eta+i\pi/2)=i\sinh\eta\), \(\sinh(\eta+i\pi/2)=i\cosh\eta\).  \(\square\)
+
+\paragraph{The same structure in three places.}
+A phase \(\pi/2\) on the representative and a change of sign of the real invariant occur in the duality rotation
+\(z_T=iz_M\), \(s\mapsto-s\) (r07.2), in the superluminal rapidity of r20.2, and in the signed tachyon scale
+\(\ell_T^2=-\lambda_T^2\) of \S\ref{sec:r82-tachyon-frame-signed-scale}, where \(\ell_T=i\lambda_T\).  The last is an
+allowed effective statement of the release scope; r20 records the parallel and adds nothing to it.
+
+\paragraph{Reading, offered and not adopted.}
+The earlier reading places the tachyon at \(-\bsym\), the real part of its rapidity; Reading~B keeps the imaginary part
+\(\pi/2\) as the duality angle.  The two readings are then related by keeping or dropping one imaginary part, which is
+the photon-centred view of \S\ref{subsec:v480-r19-photon-centred} expressed in rapidities.
+
+\subsection*{v4.8.0-r20 cross terms with complex tachyon rapidity}
+\label{subsec:v480-r20-cross-terms}
+
+With the tachyon at \(-\eta+i\pi/2\) the cross terms of \S\ref{subsec:v480-r18-cross-terms} become
+\begin{center}
+\small
+\begin{tabular}{@{}lcc@{}}
+\toprule
+pair & real (r18) & with \(i\pi/2\)\\
+\midrule
+matter--photon & \(\cosh\eta=1.197\) & \(1.197\)\\
+photon--tachyon & \(\cosh\eta=1.197\) & \(-i\sinh\eta=-0.657\,i\)\\
+matter--tachyon & \(\cosh2\eta=1.864=\gL\) & \(-i\sinh2\eta=-1.574\,i\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+The matter--tachyon term becomes purely imaginary with modulus \(\sinh2\eta=\sqrt{\gL^2-1}\), the proper velocity of the
+pair instead of its Lorentz factor; for tachyons \(\cosh\) and \(\sinh\) exchange their roles.  The real factor \(\gL\)
+arises only when the imaginary part is dropped.  This is Theoremlet r19.1 in numbers: Reading~B has no real Lorentz factor
+between matter and tachyon.
+
+\paragraph{The tribonacci condition.}
+The fixed-point condition \(\mu=1/\bsym(\mu)\) of Theorem~\ref{thm:tribonacci} reads, in rapidities,
+\(\cosh2\eta=\coth\eta=\tanh(\eta+i\pi/2)\): the Lorentz factor of the opposite term equals the speed of a tachyon with
+real rapidity \(\eta\).  This is a reformulation, not a new value.
+
+\subsection*{v4.8.0-r20 register entries}
+\label{subsec:v480-r20-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after r20\\
+\midrule
+H13, readout factor as triole holonomy & refuted for the fixed construction, \(z=-7.9\) (r20)\\
+\(\cos^2(\delta/2)\) for \(f(+)\) & post-hoc, not registered, does not count; half angle from r06.4, square and orientation are readings (r20)\\
+tachyon sector of Reading~B & same holonomy and same principal spinors as matter (r20.1)\\
+Thm.~\ref{thm:symmetric-frame}, tachyon at \(-\bsym\) & real part of the superluminal rapidity \(\eta_{\rm sym}+i\pi/2\); imaginary part equals the duality angle (r20.2)\\
+\(\gL\) as matter--tachyon factor & real only with the imaginary part dropped; with it \(-i\sinh2\eta\) (r20)\\
+Thm.~\ref{thm:tribonacci} & equivalent to \(\cosh2\eta=\coth\eta\) (r20)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.8.0-r20 ledger and guard update}
+\label{subsec:v480-r20-ledger-guard}
+
+\[
+R_{\rm tach}^{v480\text{-}r20}=(0,0,1)
+\]
+for (H13 decided, tachyon frame related to both readings through the complex rapidity, physical status of the
+imaginary part open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v480\text{-}r20,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v480\text{-}r20}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
 \end{document}
