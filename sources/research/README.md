@@ -1,6 +1,6 @@
 # Full-Source v4.9.0 Research Candidate
 
-Entry point: `v480-companion.tex` (historical filename retained for existing audits and builds). Its working metadata identifies `v4.9.0`. This is the full-monolith-derived working line, not the older `sources/active-core.tex` modular synchronization baseline. The Version DOI 10.5281/zenodo.23534954 is reserved on Zenodo (unpublished draft deposition 23534954) and becomes public with the release; until then the public baseline remains v4.8.0.
+Entry point: `v480-companion.tex` (historical filename retained for existing audits and builds). Its working metadata identifies `v4.9.0`. This is the full-monolith-derived working line, not the older `sources/active-core.tex` modular synchronization baseline. It was published on Zenodo on 2026-10-21 as v4.9.0, Version DOI 10.5281/zenodo.23534954; the release source in `release/v4.9.0/` is a single file flattened from these sources.
 
 ## Origin and Preservation
 
