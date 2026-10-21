@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v5.7
+# Kernkarte Quantum Sphaera — v5.8
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1341,6 +1341,15 @@ derselbe Faktor i wie in der erlaubten Aussage ℓ_T² = −λ_T² (r82). Für T
 Lorentzfaktor des Gegenüber-Terms ist gleich der Geschwindigkeit eines Tachyons mit reeller Rapidität η. Umformulierung,
 kein neuer Wert.
 
+### K44 — Companion-Runde v4.8.0-r20 (2026-10-21)
+
+Runde `sec:v480-r20-tachyon-complex-rapidity` (Snippet `llm/v480_r20_round.tex`): H13 widerlegt (K42), Halbwinkel-
+Nachbefund als nicht registriert gekennzeichnet (K42.3), Theoremlets r20.1 (Dualität vertauscht mit SO(3,ℂ): gleiche
+Holonomie und Hauptspinoren im Tachyon-Sektor) und r20.2 (artanh v = artanh(1/v) + iπ/2, Imaginärteil = Dualitätswinkel),
+Parallele zu z_T = i z_M und ℓ_T² = −λ_T² (r82, ohne Zusatz), Kreuzterm-Tabelle mit komplexer Tachyon-Rapidität,
+Tribonacci als cosh 2η = coth η, Register-Nachtrag. Ledger R_tach^{r20} = (0,0,1); Guards unverändert, β₄ unverbraucht.
+Build 3 Läufe MiKTeX (1096 Seiten), Audit gegen r19 ohne harte Abweichung.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1428,6 +1437,7 @@ kein neuer Wert.
 - v5.6 (2026-10-21): K42.3 Nachbefund Halbwinkel (nicht registriert): Spinor-Herkunft, Triolen-Photon auf der Drehachse.
 - v5.7 (2026-10-21): K43 Tachyon-Frame: gleiche Holonomie und Hauptspinoren wie Materie, Überlichtrapidität mit iπ/2,
   Kreuzterme imaginär, Tribonacci als cosh 2η = coth η.
+- v5.8 (2026-10-21): K44 Companion-Runde v4.8.0-r20.
 
 ---
 
