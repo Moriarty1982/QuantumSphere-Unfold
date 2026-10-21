@@ -216,9 +216,52 @@ dann ändert sich α um ln 1,083 · k(α)/k(H₀). Bei linearer Drift verlangen 
 k(α)/k(H₀) < 5,5 · 10⁻⁷. Die Quelle hat k(α) = 1. Die Drift-Erklärung bräuchte also entweder k(α) ≈ 0 oder einen
 eigenen Faktor für H₀, der α nicht berührt.
 
+**Nachtrag zu E11:** Nebenbefund 2, das uneinheitliche Vorzeichen für α, steht bereits in v4.8.0-r03 (F2). Dort ist
+auch schon die jährliche Modulation durch die Atomuhren auf |Δγ_L^(local)/γ_L| ≲ 10⁻¹⁷ begrenzt. Neu an E11 ist nur die
+Anwendung auf die säkulare Drift aus `prop:H0-tension`.
+
+### E12: Andere Erklärungen der Hubble-Spannung im Rahmen des Dokuments (Prüfung, kein gezählter Versuch)
+
+1. **Drift des Frame-Faktors.** Durch die Atomuhren ausgeschlossen (E11, E11b), solange k(α) = 1.
+2. **Statische Frame-Typisierung.** Der aus der Hintergrundstrahlung erschlossene Wert wäre dann ein anders typisierter
+   Wert als der lokale. Ein *konstanter* Faktor stört keine Uhr. Nach `cor:gue-frame` transformiert eine Taktfrequenz mit
+   γ_L, also hätte H₀ k = 1. Das gibt den Faktor 1,864 (Nachbar: 1,197 bzw. 1,854). Gemessen ist 1,083 ± 0,017. Passen
+   würden nur gebrochene Exponenten (≈ 0,13 mit γ_L, ≈ 0,44 mit cosh η), für die die k-Tabelle keine Grundlage hat. Das
+   Verhältnis ist außerdem so unscharf (±1,6 %), dass jede Suche nach „dem richtigen Exponenten“ Zahlenmystik wäre.
+   **Kein tragfähiger Weg.**
+3. **Änderung nur in der Frühzeit.** In der Literatur wird eine um etwa 1–2 % größere Elektronmasse zur Zeit der
+   Rekombination als Entlastung der Spannung diskutiert: frühere Rekombination, kleinerer Schallhorizont, größeres
+   H₀ aus der Hintergrundstrahlung. Im Dokument gilt m_e^(matter) = γ_L^k m_e^(photon) mit k = 1. Mit der Drift aus
+   `prop:H0-tension` (β früher kleiner) war m_e früher *kleiner*. Das ist die **falsche Richtung**. Für α mit k(α) = +1
+   gilt dasselbe. Die richtige Richtung ergäbe sich nur mit dβ/dt < 0, dem Vorzeichen, das r17 für `thm:dark-energy`
+   verlangt. Dann müsste die Änderung aber vor z ≈ 3 aufgehört haben, wegen der Quasar-Schranken bei 10⁻⁵ bis 10⁻⁶ und
+   wegen der Uhren, und sie wäre mit 5 % zu groß. **Kein tragfähiger Weg ohne neue Annahmen.**
+
+**Ergebnis E12:** Im Rahmen des Dokuments findet sich keine Erklärung der Hubble-Spannung, die mit Atomuhren,
+Quasar-Spektren und der Größe des Effekts zugleich verträglich ist. `prop:H0-tension` bleibt eine Hypothese ohne
+tragfähigen Mechanismus.
+
+### E13: Leicht lösbare Stelle, das Vorzeichen von k für α
+
+r03 (F2) hält fest, dass `thm:k-values` (Zeile „α⁻¹ … k = 1“) und das Korollar „α-drift as a frame effect“ einander
+widersprechen, und lässt die Wahl offen. Zählt man die Verwendungen im Hauptkorpus, ergibt sich:
+- **P5** (jährliches α/G_N-Verhältnis) rechnet mit γ_L^{k(α)−k(G_N)} = γ_L^{−1}, also k(α) = 1 **für α selbst**.
+- **`prop:muon-g2`** schreibt „k(α_s) = 1 (like the electromagnetic coupling α)“ mit
+  α_s^(photon) = γ_L^{−1} α_s^(matter), also ebenfalls k(α) = 1 für α.
+- **Das Korollar** schreibt α^(matter) = γ_L α^(photon), gleichwertig mit k(α) = +1.
+- **Nur die Tabelle** schreibt α⁻¹ in die Zeile mit k = 1. Ein Photon-Frame-Wert von α⁻¹ (73,5 bzw. 255,5) wird im
+  Hauptkorpus nirgends benutzt (Grep über die ganze Datei; 73,5 nur in r03).
+
+**Lösung:** Die Tabellenzeile zeigt den CODATA-Wert von α⁻¹, die Zuordnung k = 1 gehört aber zu α. Alle drei
+Verwendungen werden damit widerspruchsfrei, und keine andere Stelle ändert sich. Das ist eine Lesartentscheidung
+(Registereintrag), keine Neuberechnung. Für E11 ändert sich nur das Vorzeichen, nicht der Betrag.
+
 ## Stand
 
-11 Einträge, davon 8 gezählte Versuche, 0 Treffer im Sinne einer Erklärung, 1 Auffälligkeit (E9), 1 Folgerung (E10, durch
+13 Einträge, davon 8 gezählte Versuche. Neu: E12 (keine tragfähige H₀-Erklärung im Rahmen) und E13 (Vorzeichen von
+k(α) lösbar, 3 Verwendungen gegen 1).
+
+Vorige Zwischenbilanz: 11 Einträge, davon 8 gezählte Versuche, 0 Treffer im Sinne einer Erklärung, 1 Auffälligkeit (E9), 1 Folgerung (E10, durch
 E11 auf eine Zusatzannahme eingeschränkt), 1 Quellenprüfung (E11). H15 sagt nach den Regeln der Quelle einen zeitlich
 konstanten Weinberg-Winkel voraus. Die Drift aus `prop:H0-tension` steht in ihrer Frame-Faktor-Form gegen die Atomuhren.
 
