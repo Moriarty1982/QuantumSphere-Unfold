@@ -131,6 +131,14 @@ Vorgänger, nur Provenienz), `DOI_ROLES` in `qs.py` aktualisieren.
 - `git show "github/main:.github/…"` unter Git-Bash mit `MSYS_NO_PATHCONV=1`, sonst wird der Pfad umgeschrieben.
 - Backslashes in Heredocs der Bash werden verschluckt: LaTeX und Regex-Skripte mit dem Write-Tool als Datei anlegen.
 - Artefaktnamen dürfen kein `/` enthalten; der LaTeX-Workflow ersetzt es seit PR #20 selbst.
+- `build-summary` des LaTeX-Workflows kann Overfull dreifach zählen: `qsc_latex_build.py` nimmt die erste `*.log` im
+  Ausgabeordner, manchmal das latexmk-Konsolenprotokoll aller Läufe. Maßgeblich ist `<name>.log`
+  (`qs.py audit`). Bei v4.9.0: 135 gemeldet, tatsächlich 45.
+- Manifest nie in den Ordner schreiben, den es beschreibt, ohne `--only`: sonst zählt es sich selbst leer mit.
+- Die Präambel des v4.9-Kandidaten ist ein eingefrorenes v4.7-Fragment mit `bookmarks=false`; das Release-PDF hat
+  deshalb keine Lesezeichen (wie das veröffentlichte v4.8.0-PDF).
+- Shell-Prüfungen auf CR mit `$'\r'` sind hier unzuverlässig (das Muster wird leer und passt auf jede Zeile); Bytes mit
+  Python prüfen.
 
 ## Stand v4.9.0
 
@@ -141,4 +149,6 @@ Vorgänger, nur Provenienz), `DOI_ROLES` in `qs.py` aktualisieren.
 | Metadaten | `release/zenodo/metadata_v4_9_0.json` auf Zweig `release/v4.9.0-prep` |
 | Reservierungslauf | GitHub Actions `39605210856` (Trockenlauf `39605097888`) |
 | Titelseite | erledigt auf `release/v4.9.0-prep` (`c8f5d91`): Version-DOI und Concept-DOI je einmal, Vorgänger-DOIs in `working-orientation.tex`; MiKTeX 1124 Seiten / 3590 Labels, GitHub-Build `39607324287` grün; `qs.py doi --version-doi` ohne Beanstandung |
-| Offen | Payload (5), Upload und Veröffentlichung (6); Zweig noch nicht gemergt |
+| Payload | erledigt (`36e1c9b`): Einzeldatei aus 54 `\input` zusammengeführt (Skript im Scratchpad: Zeilen, die nur `\input{…}` enthalten, bytegenau ersetzen), SHA256 `787226d2…`; PDF aus dem TeX-Live-Container (Lauf `39608246966`), 1123 Seiten, SHA256 `57d20e0b…`; Text auf allen Seiten identisch mit dem modularen Build; `CITATION.cff` mit vorläufigem `date-released` |
+| PR | #21 (Entwurf), erst zum Release mergen |
+| Offen | Upload in Entwurf 23534954 (6), Prüfung auf Zenodo, Veröffentlichung, Datum setzen, Merge, Tag |
