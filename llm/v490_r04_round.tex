@@ -1,0 +1,185 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r04 Source-Only: The Compensator as a Matrix on the Electric--Magnetic Doublet}
+\addcontentsline{toc}{section}{v4.9.0-r04 Source-Only: The Compensator as a Matrix on the Electric--Magnetic Doublet}
+\label{sec:v490-r04-doublet-matrix}
+% ============================================================================
+
+\paragraph{Purpose.}
+On \(\mathbb C^3\) the involution \(J_B\) of r02.3 is antilinear.  It has no complex matrix, and the compensator built from
+it is only real-linear (r03.1).  This layer writes the field as the real pair \((E,B)\) instead.  Then \(J_B\), the
+compensator and the readout of r03 become ordinary \(2\times2\) matrices, and the state of a field becomes a
+\(2\times2\) matrix of the kind used for polarisation in optics.  The computations are
+\texttt{llm/k40\_dublett\_matrix.py}.  No value is compared with data.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r04 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\paragraph{Author's question (2026-10-21).}
+Would it be better to put the compensator into a matrix?
+
+\subsection*{v4.9.0-r04 the doublet and its matrices}
+\label{subsec:v490-r04-doublet}
+
+Write \(F=[\,E\mid B\,]\in\mathbb R^{3\times2}\) for \(z=E+iB\), and let
+\(\sigma_x=\bigl(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\bigr)\),
+\(\sigma_z=\bigl(\begin{smallmatrix}1&0\\0&-1\end{smallmatrix}\bigr)\), \(R_\alpha\) the rotation of \(\mathbb R^2\) by
+\(\alpha\).
+
+\paragraph{Theoremlet v4.9.0-r04.1.}
+The operations of r02 act on \(F\) from the right by real \(2\times2\) matrices:
+\[
+e^{i\alpha}z\leftrightarrow FR_\alpha^{\mathsf T},\qquad
+J_Bz=i\bar z\leftrightarrow F\sigma_x,\qquad
+T:\ \bar z\leftrightarrow F\sigma_z,\qquad
+C:\ -z\leftrightarrow -F .
+\]
+They generate \(O(2)\): \(\sigma_x\) and \(\sigma_z\) are reflections and \(R_\alpha\) rotations.  The relation
+\(J_BR_\alpha=R_{-\alpha}J_B\) of r02.5 is the relation between a reflection and a rotation in \(O(2)\), and the Enigma
+composite of r02.5 is the matrix identity \(R_{\pi/2}\sigma_xR_{\pi/2}^{-1}=-\sigma_x\).  Spatial rotations act from the
+left, \(F\mapsto RF\), and commute with all of these.  Boosts mix \(E\) and \(B\) through cross products, are not of the
+form \(F\mapsto LFM\), and do not commute with \(\sigma_x\).  The compensator and its partner are ordinary orthogonal
+projections,
+\[
+C_{\HC}=\tfrac12(1+\sigma_x)=\tfrac12\begin{pmatrix}1&1\\1&1\end{pmatrix},\qquad
+A=\tfrac12(1-\sigma_x)=\tfrac12\begin{pmatrix}1&-1\\-1&1\end{pmatrix},
+\]
+and \(FC_{\HC}\) is the compensator of r02.4 and r03.
+
+\paragraph{Proof sketch.}
+\(e^{i\alpha}(E+iB)=(E\cos\alpha-B\sin\alpha)+i(E\sin\alpha+B\cos\alpha)\); \(i(E-iB)=B+iE\); \(E-iB\).  The boost
+formula \(E'=\gamma(E+v\times B)-\dots\) couples the columns through \(v\times\).  Checked numerically.  \(\square\)
+
+\paragraph{Consequence.}
+The antilinearity of r02.3 is not lost.  It is the statement that \(\sigma_x\) is a reflection, \(\det\sigma_x=-1\),
+while the duality circle consists of rotations.  Over \(\mathbb R\) the compensator is linear, and the obstruction of
+r03.1 disappears.
+
+\subsection*{v4.9.0-r04 the state matrix}
+\label{subsec:v490-r04-state}
+
+\paragraph{Theoremlet v4.9.0-r04.2.}
+The \(2\times2\) Gram matrix \(G=F^{\mathsf T}F\) of \(E\) and \(B\) decomposes as
+\[
+G=u\,\mathbf 1+\tfrac12\bigl(\operatorname{Re}s\;\sigma_z+\operatorname{Im}s\;\sigma_x\bigr),
+\qquad
+\det G=|E\times B|^2,\qquad
+u^2-\det G=\tfrac14|s|^2 .
+\]
+Put \(\rho=G/\operatorname{tr}G\) and \(b=(\operatorname{Re}s,\operatorname{Im}s)/(2u)\), so that
+\(\rho=\tfrac12(\mathbf 1+b_1\sigma_z+b_2\sigma_x)\).  Then:
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \(|b|=1/\cosh2\eta_f\le1\), with \(\eta_f\) as in r03.3.  \(|b|=1\) exactly when \(E\parallel B\), and \(b=0\)
+exactly for a null field.  Matter (\(b_1>0\)) and tachyon (\(b_1<0\)) lie on opposite sides of the unit disk, light at its
+centre, and the side of the photon of r02.1 is the sign of \(b_2\).
+\item[(b)] The duality rotation by \(\alpha\) rotates \(b\) by \(2\alpha\).  \(J_B\) reflects \(b_1\mapsto-b_1\), and
+\(T\) reflects \(b_2\mapsto-b_2\).
+\item[(c)] Under a boost the traceless part of \(G\), that is \(s\), is unchanged and \(u\) changes, so \(b\) moves along its
+own direction.  It reaches \(|b|=1\) in the frame with \(E\parallel B\) and tends to \(0\) as the boost grows.
+\end{enumerate}
+\(G\) is symmetric and has no \(\sigma_y\) part, so the states fill a disk, not a sphere.
+
+\paragraph{Proof sketch.}
+\(G_{11}=E^2\), \(G_{22}=B^2\), \(G_{12}=E\cdot B\); \(\det G=E^2B^2-(E\cdot B)^2\).  (a) follows from r03.3.  (b): \(G\mapsto
+R_\alpha GR_\alpha^{\mathsf T}\), and the traceless part of a symmetric matrix turns by twice the angle.  (c): \(s\) is
+Lorentz-invariant (r06.3).  Checked numerically, including a boost scan through the frame \(E\parallel B\).  \(\square\)
+
+\paragraph{Reading.}
+This is the formalism of Stokes parameters for the doublet \((E,B)\) in place of two polarisation components.  The doubled
+angle in (b) is the half-angle of the spinor of r06.4 seen from the other side: a duality rotation by \(\alpha\) moves the
+state by \(2\alpha\).  Light is the unpolarised centre, and matter and tachyon are the two fully polarised ends of one
+axis.  Boosting any field moves it towards light.
+
+\subsection*{v4.9.0-r04 the interferometer as a measurement}
+\label{subsec:v490-r04-measurement}
+
+\paragraph{Theoremlet v4.9.0-r04.3.}
+The energy in the compensator port of r03.1 is \(|FC_{\HC}|^2=\operatorname{tr}(GC_{\HC})=u+E\cdot B\).  With the duality phase
+\(\varphi\) in the reference arm, the port difference of r03.3 is
+\[
+D(\varphi)=\operatorname{Im}(e^{i\varphi}s)=2u\;b\cdot(\sin\varphi,\cos\varphi).
+\]
+The interferometer measures the component of \(b\) along a direction set by \(\varphi\).  The compensator is the
+measurement along \(\sigma_x\), and its partner is the opposite outcome.
+
+\paragraph{Proof sketch.}
+\(C_{\HC}\) is a symmetric projection, so \(|FC_{\HC}|^2=\operatorname{tr}(C_{\HC}GC_{\HC})=\operatorname{tr}(GC_{\HC})\).
+Expand \(\operatorname{Im}(e^{i\varphi}s)\).  Checked numerically.  \(\square\)
+
+\paragraph{Both readings of r03 in one matrix.}
+The average reading of r03.4 is the projection \(F\mapsto FC_{\HC}\), linear in \(F\).  The product reading is
+quadratic.  Its scalar part is \(\operatorname{tr}G=2u\), its magnitude is \(\sqrt{\det G}=|E\times B|\), and its direction is
+the cross product of the two columns of \(F\).  The trace, traceless part and determinant of \(G\) are energy, the
+invariant \(s\), and the magnitude of the energy flux.  The \(3\times2\) matrix \(F\) carries in addition the direction of
+the flux, which \(G\) does not see.
+
+\subsection*{v4.9.0-r04 relation to the compensator matrix of the main body}
+\label{subsec:v490-r04-hc-matrix}
+
+Section~\ref{app:hc-tools} defines a \emph{global Heisenberg-compensator matrix} only as the extension of
+\(C=\tfrac12(\mathrm{id}+J)\) to the multi-layer architecture, and a frame-balancing tool that splits \(X=X^++X^-\) by
+\(J\).  The doublet supplies concrete instances in Reading~B: \(X^+=FC_{\HC}\) and \(X^-=FA\).  In matrix form the leakage
+diagnostics of Definition~\ref{def:working-shared-matrix-leakage}, with \(J=\sigma_x\) acting from the right, read
+(relative norms on a random field):
+\begin{center}
+\small
+\begin{tabular}{@{}lrr@{}}
+\toprule
+transport \(\mathcal M\) & \(|E_{\rm comm}|/|F|\) & \(|E_{\rm leak}|/|FC_{\HC}|\)\\
+\midrule
+spatial rotation (left) & \(0\) & \(0\)\\
+boost, \(\eta=0.6174\) & \(1.113\) & \(0.505\)\\
+duality rotation, \(\alpha=0.4\) (right) & \(0.779\) & \(0.389\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+This repeats r02 in matrix form.  Left and right multiplication commute, so rotations cannot leak.  Duality rotations
+leak because \(R_\alpha\) does not commute with \(\sigma_x\), and boosts leak because they do not factorise.  The values
+for the boost differ from the r02 table because the random field differs; vanishing and non-vanishing agree.  Identifying
+the Millennium matrix of the main body with a matrix on the doublet is not done here.
+
+\paragraph{Open: the third axis.}
+\(G\) is real and symmetric, so the state space is a disk.  A \(\sigma_y\) part would need an antisymmetric component of
+the state matrix, for instance from complex amplitudes of time-harmonic fields.  Whether such a third axis, which would
+turn the disk into a sphere, has a meaning in the source is not decided here.
+
+\subsection*{v4.9.0-r04 register entries}
+\label{subsec:v490-r04-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r04\\
+\midrule
+compensator \(C=\tfrac12(1+J)\) & on the doublet \((E,B)\) the linear projection \(\tfrac12(1+\sigma_x)\); \(J_B\), \(T\), duality, \(C\) generate \(O(2)\) (r04.1)\\
+state of a field & Gram matrix \(G=u\mathbf 1+\tfrac12(\operatorname{Re}s\,\sigma_z+\operatorname{Im}s\,\sigma_x)\), \(\det G=|E\times B|^2\); point \(b\) in the unit disk, light at the centre, \(|b|=1/\cosh2\eta_f\) (r04.2)\\
+interferometer of r03 & measurement of \(b\) along a direction set by \(\varphi\) (r04.3)\\
+global HC matrix (\S\ref{app:hc-tools}) & doublet gives concrete \(X^\pm\); identification with the Millennium matrix not made\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r04 ledger and guard update}
+\label{subsec:v490-r04-ledger-guard}
+
+\[
+R_{\rm mat}^{v490\text{-}r04}=(0,0,1)
+\]
+for (doublet matrix form of the compensator established, state disk and readout as measurement established,
+identification with the global compensator matrix of the main body open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r04,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r04}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+

@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v6.1
+# Kernkarte Quantum Sphaera — v6.2
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1424,6 +1424,25 @@ tanh 2η_f. Arithmetik bei η_sym: V = 1/γ_L = 0,536, 0,844 — nicht identifiz
 (Re⟨f, Cf⟩ = |Cf|²), wohl für das Produkt: z × J_B z = 2 E×B, z · J_B z = 2iu; lichtartig genau für Licht.
 Welche Lesart gemeint ist, offen. Ledger R_comp = (0,0,1); Guards unverändert.
 
+### K48 — Companion-Runde v4.9.0-r04: Kompensator als Matrix auf dem (E, B)-Dublett (2026-10-21)
+
+`sec:v490-r04-doublet-matrix`, Snippet `llm/v490_r04_round.tex`, Skript `llm/k40_dublett_matrix.py`. Kein
+Datenvergleich. Anlass (Autor): Kompensator besser als Matrix?
+
+**K48.1 Dublett (M).** F = [E | B] ∈ ℝ^{3×2}. Dualität, J_B, T, C wirken von rechts als reelle 2×2-Matrizen
+(R_α, σ_x, σ_z, −1) und erzeugen O(2); Antilinearität = σ_x ist Spiegelung. Drehungen von links (vertauschen),
+Boosts faktorisieren nicht. C_HC = ½(1+σ_x) gewöhnlicher Projektor; Enigma-Komposit = R σ_x R⁻¹ = −σ_x.
+
+**K48.2 Zustandsmatrix (M).** G = FᵀF = u·1 + ½(Re s σ_z + Im s σ_x), det G = |E×B|², u² − det G = |s|²/4.
+Bloch-Vektor b = (Re s, Im s)/2u in der Einheitsscheibe: |b| = 1/cosh 2η_f, Licht in der Mitte, Materie/Tachyon
+gegenüber, Seite = sign b₂. Dualität dreht b um 2α; Boost: s fest, u ändert sich, |b| = 1 im System E ∥ B, → 0 bei
+großem Boost. Stokes-Formalismus für (E, B); kein σ_y-Anteil (Scheibe statt Kugel, dritte Achse offen).
+
+**K48.3 Messung (M).** Ausgang 1: tr(G C_HC) = u + E·B; D(φ) = 2u b·(sin φ, cos φ): Interferometer misst b längs
+einer Richtung. Summenlesart = Projektor, Produktlesart = Spur/Determinante (+ Spaltenkreuzprodukt für die Richtung).
+app:hc-tools: Dublett liefert konkrete X^±; Identifikation mit der Millennium-Matrix nicht gemacht. R_mat = (0,0,1);
+Guards unverändert.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1518,6 +1537,7 @@ Welche Lesart gemeint ist, offen. Ledger R_comp = (0,0,1); Guards unverändert.
   Umkehrwalze antilinear E ↔ B).
 - v6.1 (2026-10-21): K47 Companion-Runde v4.9.0-r03 (Kompensator als Interferometer, Dyon, Sichtbarkeit
   1/cosh 2η_f, Produktlesart).
+- v6.2 (2026-10-21): K48 Companion-Runde v4.9.0-r04 (Kompensator als 2×2-Matrix auf (E, B), Zustandsscheibe).
 
 ---
 
