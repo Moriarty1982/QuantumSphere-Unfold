@@ -146,6 +146,8 @@ Vier DOIs, die nie vermischt werden dürfen:
 
 Abgelaufen und nicht mehr zu verwenden: `10.5281/zenodo.20181842`.
 
+**Reserviert für v4.9.0** (2026-10-21): `10.5281/zenodo.23534954`, Zenodo-Entwurf `23534954`, neue Version von v4.8.0, **unveröffentlicht**. Gilt erst nach der Veröffentlichung als aktuelle Version-DOI; bis dahin bleibt v4.8.0 die aktuelle. Ablauf und Stand im Skill `zenodo-release`; `qs.py doi <pdf> --version-doi 10.5281/zenodo.23534954 --version-label v4.9.0` prüft die 4.9.0-Titelseite.
+
 Die **Compact-Titlepage-Regel**: auf der Titelseite steht genau eine Version-DOI-Zeile und eine Concept-DOI-Zeile. Release-Hinweise, Provenienz der Vorgänger-DOI und Claim-Scope-Erklärungen gehören in den Fließtext, nicht auf die Titelseite.
 
 ## Kompilieren

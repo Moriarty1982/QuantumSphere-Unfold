@@ -596,11 +596,20 @@ def cmd_doi(args):
         flat = re.sub(r"\s+", "", hay)
         return flat.count(re.sub(r"\s+", "", needle))
 
+    roles = list(DOI_ROLES)
+    version_doi = getattr(args, "version_doi", None)
+    if version_doi:
+        label = getattr(args, "version_label", None) or "neu"
+        # Die bisherige Version-DOI (v4.8.0) wird zur Vorgaenger-DOI.
+        roles = [("Version DOI (%s)" % label, version_doi)] + [
+            (("Previous DOI (v4.8.0)" if r.startswith("Version DOI (v4.8.0)") else r), d)
+            for r, d in DOI_ROLES]
+
     print("PDF: %s (%d Seiten)\n" % (os.path.basename(args.pdf), len(pages)))
     print("%-34s %-26s %8s %10s" % ("Rolle", "DOI", "gesamt", "Titelseite"))
     print("-" * 82)
     bad = 0
-    for role, doi in DOI_ROLES:
+    for role, doi in roles:
         total = count(doi, full)
         on_title = count(doi, title)
         flag = ""
@@ -691,6 +700,10 @@ def main():
 
     d = sub.add_parser("doi", help="DOI-Vorkommen und Titelseiten-Regel im PDF")
     d.add_argument("pdf")
+    d.add_argument("--version-doi", default=None,
+                   help="aktuelle Version-DOI, wenn es nicht v4.8.0 ist (z. B. 10.5281/zenodo.23534954); "
+                        "die v4.8.0-DOI wird dann als Vorgaenger gefuehrt")
+    d.add_argument("--version-label", default=None, help="Bezeichnung der aktuellen Version, z. B. v4.9.0")
     d.set_defaults(func=cmd_doi)
 
     m = sub.add_parser("manifest", help="SHA256-Manifest erzeugen")
