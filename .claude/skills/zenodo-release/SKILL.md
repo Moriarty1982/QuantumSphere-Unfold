@@ -151,4 +151,5 @@ Vorgänger, nur Provenienz), `DOI_ROLES` in `qs.py` aktualisieren.
 | Titelseite | erledigt auf `release/v4.9.0-prep` (`c8f5d91`): Version-DOI und Concept-DOI je einmal, Vorgänger-DOIs in `working-orientation.tex`; MiKTeX 1124 Seiten / 3590 Labels, GitHub-Build `39607324287` grün; `qs.py doi --version-doi` ohne Beanstandung |
 | Payload | erledigt (`36e1c9b`): Einzeldatei aus 54 `\input` zusammengeführt (Skript im Scratchpad: Zeilen, die nur `\input{…}` enthalten, bytegenau ersetzen), SHA256 `787226d2…`; PDF aus dem TeX-Live-Container (Lauf `39608246966`), 1123 Seiten, SHA256 `57d20e0b…`; Text auf allen Seiten identisch mit dem modularen Build; `CITATION.cff` mit vorläufigem `date-released` |
 | PR | #21 (Entwurf), erst zum Release mergen |
-| Offen | Upload in Entwurf 23534954 (6), Prüfung auf Zenodo, Veröffentlichung, Datum setzen, Merge, Tag |
+| Upload | erledigt (Lauf `39620093156`, Trockenlauf `39619973773`): drei geerbte v4.8.0-Dateien entfernt, PDF, Quelltext und Manifest hochgeladen, Metadaten gesetzt, **nicht veröffentlicht**. MD5 zum Abgleich im Entwurf: PDF `8392b108…aff3`, Quelltext `6f00f594…cb78a`, Manifest `66c49875…ad90`. Das Hilfsskript prüft Zenodos Prüfsummen nicht selbst |
+| Offen | Prüfung des Entwurfs durch den Nutzer, Veröffentlichung, Datum setzen (Metadaten, `CITATION.cff`), PR #21 mergen, Tag `v4.9.0` |
