@@ -48,11 +48,26 @@ Abschätzungen in führender Ordnung, mit einer Genauigkeit von etwa 10⁻³ in 
   erheblich, gleichwertig mit 110 MeV in m_W. Vor jeder weiteren Verfolgung müssten die bestehenden Schranken für solche
   Effekte geprüft werden.
 
+### Berichtigung zu E5 (2026-10-21, beim Rechnen von E6)
+
+Der Punkt „Richtung“ oben ist falsch gerahmt und bleibt zur Nachvollziehbarkeit stehen. Richtig ist: Die Vorhersage
+entspricht dem On-shell-Wert, aus dem ein **in der Natur vorhandener** Beitrag Δρ_X = +0,00275 herausgerechnet ist.
+Positive Beiträge, also Dubletts, haben damit die *richtige* Richtung, genau wie das Top-Quark in E2. Das Problem ist
+die Größe. Für leichte Neutrinos ist sie elf Größenordnungen zu klein, für neue Teilchen ist sie durch E7 begrenzt. Die
+Bewertung „Fehlschlag“ bleibt, die Begründung lautet jetzt so.
+
+| Nr. | Variante | Begründung | Ergebnis | Bewertung |
+|---|---|---|---|---|
+| E6 | Kombinationen von Beiträgen weglassen (Vorschlag des Autors) | Der strukturelle Winkel könnte der Winkel ohne einen Teil der Schleifen sein | Nur zwei Stücke sind groß: Top 0,00934 und Rest (Higgs, bosonisch, höhere Ordnung) 0,00108. Leichte Dubletts liegen bei ≤ 5 · 10⁻⁷. Die vier Teilmengen ergeben 0,22321 / 0,22404 / 0,23039 / 0,23122, das Ziel ist 0,22533 | **Fehlschlag**: Keine Teilmenge trifft. Am nächsten kommt „Rest weglassen“ mit −0,00129. Leichte Teilchen können nichts beitragen |
+| E7 | Gemischter Zustand oder dunkler Sektor (Z–Z′-Mischung, dunkles Photon, Dunkle Materie mit Z-Kopplung; Vorschlag des Autors) | Eine Beimischung eines dunklen Zustands zu Z oder Photon verschiebt die Massen | Größenschranke unabhängig vom Mechanismus: Ein neuer Beitrag Δρ = 0,00275 höbe m_W um 155 MeV gegen die SM-Vorhersage. Gemessen minus SM-Fit: +10 ± 14 MeV, also 2σ-Raum Δρ_neu ∈ [−0,0003; 0,0007]. Unsichtbare Z-Breite N_ν = 2,9963 ± 0,0074 | **Fehlschlag**: Jeder reale Effekt in den Massen darf höchstens etwa ein Viertel der Lücke ausmachen |
+
 ## Stand
 
-5 Versuche, 0 Treffer. Keine Variante hat die Lücke physikalisch erklärt. Die beiden naheliegenden Korrekturen, Top und
-Tribonacci, verschieben in die falsche Richtung. Die Vorhersage liegt weiterhin zwischen den Schemata, ohne dass sich
-ein Schema oder eine Skala als „das richtige“ ausweisen lässt.
+7 Versuche, 0 Treffer. Keine Variante hat die Lücke physikalisch erklärt. Die Tribonacci-Korrektur verschiebt in die
+falsche Richtung. Das Weglassen von Beiträgen trifft in keiner Kombination. E7 schließt allgemein aus, dass ein in der
+Natur vorhandener Zusatzeffekt die Lücke füllt: Er wäre in der W-Masse sichtbar. Übrig bleiben zwei Möglichkeiten. Die
+Lücke ist ein Unterschied zwischen einer strukturellen und der physikalischen Größe, für den eine Vorschrift fehlt, oder
+die Beziehung ist ein Zufall.
 
 ## Offene Fragen
 

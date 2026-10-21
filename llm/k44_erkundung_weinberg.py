@@ -17,7 +17,7 @@ s2_os = 1 - (mW / mZ) ** 2
 s2_ms = 0.23122; c2_ms = 1 - s2_ms
 a0 = 1 / 137.035999084; aZ = 1 / 127.930; GF = 1.1663785e-5
 drho_t = 0.00934
-s2 = lambda: None
+
 print("Referenz: Vorhersage %.5f (beta_sym = %.5f); on-shell %.5f; MS-bar %.5f" % (pred(b), b, s2_os, s2_ms))
 
 print("\nE1  beta_sym durch den Tribonacci-Wert ersetzen")
@@ -50,3 +50,34 @@ me, mnu = 0.000511, 0.05e-9
 print("    leichtes Neutrino im Dublett mit dem Elektron: Delta rho = %.1e (noetig %.1e)" % (k * F(me, mnu), need))
 dm = math.sqrt(need / k)
 print("    schweres Dirac-Dublett: Delta rho = k F >= 0 (falsche Richtung); Betrag waere mit Aufspaltung ~%.0f GeV erreicht" % dm)
+
+print("\nE5-Korrektur: Rahmen")
+print("    Vorhersage = on-shell + c_hat^2 * X mit X = %.5f: das entspricht einem in der Natur vorhandenen Beitrag" % need)
+print("    Delta rho_X = +%.5f, der fuer den 'strukturellen' Winkel herausgerechnet wird. Positive Beitraege (Dubletts)" % need)
+print("    haben also die richtige Richtung; das Problem ist die Groesse (siehe E7).")
+
+print("\nE6  Kombinationen weglassen (fuehrende Ordnung)")
+drho_rest = (s2_ms - s2_os) / c2_ms - drho_t
+k = 0.00934 / (3 * 172.61 ** 2)
+light = {"(c,s)": 3 * k * 1.27 ** 2, "(u,d)": 3 * k * 0.005 ** 2, "(nu_tau,tau)": k * 1.777 ** 2,
+         "(nu_mu,mu)": k * 0.1057 ** 2, "(nu_e,e)": k * 0.000511 ** 2}
+parts = {"Top": drho_t, "Rest (Higgs, bosonisch, hoehere Ordnung)": drho_rest}
+print("    Rest aus MS-bar/on-shell: Delta rho_rest = %.5f" % drho_rest)
+for n, v in light.items():
+    print("    leichtes Dublett %-14s Delta rho ~ %.1e" % (n, v))
+import itertools
+names = list(parts)
+for r in range(len(names) + 1):
+    for comb in itertools.combinations(names, r):
+        rem = sum(parts[c] for c in comb)
+        print("    weglassen %-55s Delta rho = %.5f -> sin^2 = %.5f (Ziel %.5f, Abstand %+.5f)" %
+              ("{" + ", ".join(comb) + "}", rem, s2_os + c2_ms * rem, pred(b), s2_os + c2_ms * rem - pred(b)))
+
+print("\nE7  gemischte Zustaende / dunkler Sektor (Z-Z'-Mischung, dunkles Photon): Groessenschranke")
+mW_sm, s_sm, s_mW = 80.359, 0.006, 0.013
+dmW_drho = mW * (1 - s2_os) / (2 * (1 - 2 * s2_os))
+print("    dm_W/d(Delta rho) = %.1f GeV; noetiges X = %.5f -> m_W um %+.0f MeV gegen die SM-Vorhersage" % (dmW_drho, need, 1e3 * dmW_drho * need))
+diff = mW - mW_sm; sd = math.hypot(s_sm, s_mW)
+print("    gemessen - SM-Fit = %+.0f +- %.0f MeV -> zulaessig (2 sigma) Delta rho_neu in [%.5f, %.5f]" %
+      (1e3 * diff, 1e3 * sd, (diff - 2 * sd) / dmW_drho, (diff + 2 * sd) / dmW_drho))
+print("    unsichtbare Z-Breite: N_nu = 2.9963 +- 0.0074 (PDG) -> wenig Raum fuer leichte Teilchen mit Z-Kopplung")
