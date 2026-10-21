@@ -140,4 +140,5 @@ Vorgänger, nur Provenienz), `DOI_ROLES` in `qs.py` aktualisieren.
 | Reservierte Version-DOI | `10.5281/zenodo.23534954`, Entwurf `23534954`, unveröffentlicht, keine Dateien hochgeladen (erbt die v4.8.0-Dateien) |
 | Metadaten | `release/zenodo/metadata_v4_9_0.json` auf Zweig `release/v4.9.0-prep` |
 | Reservierungslauf | GitHub Actions `39605210856` (Trockenlauf `39605097888`) |
-| Offen | Titelseite (Schritt 3), Payload (5), Upload und Veröffentlichung (6) |
+| Titelseite | erledigt auf `release/v4.9.0-prep` (`c8f5d91`): Version-DOI und Concept-DOI je einmal, Vorgänger-DOIs in `working-orientation.tex`; MiKTeX 1124 Seiten / 3590 Labels, GitHub-Build `39607324287` grün; `qs.py doi --version-doi` ohne Beanstandung |
+| Offen | Payload (5), Upload und Veröffentlichung (6); Zweig noch nicht gemergt |
