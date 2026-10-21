@@ -69308,4 +69308,144 @@ R_{\rm glob}^{(v490\text{-}r09,+)}=(0,1,1,1,1),
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
 
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r10 Source-Only: A Reading of the C5 Factor 3/4 and a Class of Shape-(iii) Witnesses}
+\addcontentsline{toc}{section}{v4.9.0-r10 Source-Only: A Reading of the C5 Factor 3/4 and a Class of Shape-(iii) Witnesses}
+\label{sec:v490-r10-c5-factor-shape-three}
+% ============================================================================
+
+\paragraph{Purpose.}
+r94 found that the C5 contraction factor \(3/4\) is declared, not derived, and that a single projection explains at most
+one step.  r88 left shape (iii), a witness outside the collar iteration, as the only open route to a finite C5 discharge.
+This layer offers a reading of the factor built from objects the source already has, and uses the same reading to
+exclude a class of shape-(iii) witnesses.  The reading is an interpretation, admitted as such by the author
+(2026-10-22), and is not a derivation.  Files: \texttt{llm/Erkundungsprotokoll\_Kern.md} and the scripts
+\texttt{llm/k50\_c5\_faktor.py}, \texttt{llm/k51\_c5\_form\_iii.py}.  Earlier layers are not rewritten.
+This layer does not assert or approach an exact finite C5 zero closure.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r10 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r10 rotate, then compensate}
+\label{subsec:v490-r10-rotate-compensate}
+
+On the doublet of r04, with \(C_{\HC}=\tfrac12(1+\sigma_x)\), \(A=\tfrac12(1-\sigma_x)\) and the duality rotation
+\(R_\alpha\), write \(u\) for the unit vector spanning \(\operatorname{ran}C_{\HC}\).
+
+\paragraph{Theoremlet v4.9.0-r10.1.}
+\(C_{\HC}R_\alpha C_{\HC}=\cos\alpha\,C_{\HC}\).  One step ``rotate by \(\alpha\), then compensate'' keeps the fraction
+\(\cos^2\alpha\) of the energy in the compensator port and sends \(\sin^2\alpha\) to the partner port.  Because the rotation
+lies between the projections, the step is not idempotent: every repetition removes the same fraction again.  For
+\(\alpha=\pi/6\):
+\[
+\cos^2\tfrac\pi6=\tfrac34,\qquad
+\bigl(\tfrac34\bigr)^n:\ \tfrac34,\ \tfrac9{16},\ \tfrac{27}{64},\ \tfrac{81}{256},\ \ldots,
+\]
+which are the ledger values of r04, r05, r07 and r08.  The first stage with \((3/4)^n\le1/256\) is \(n=20\).
+
+\paragraph{Proof sketch.}
+\(\langle u,R_\alpha u\rangle=\cos\alpha\) in two dimensions.  The stage was checked in exact rational arithmetic.
+\(\square\)
+
+\paragraph{Reading.}
+The step meets the condition r94 set for any derivation: a refreshed one-quarter identity at every stage.  Two sources for
+\(\pi/6\) are available in the source.
+\begin{itemize}[leftmargin=2em]
+\item \emph{Triolic.}  The quarter turn from matter to tachyon (\(\pi/2\), Theoremlet r07.2) is divided into three equal
+steps.  Then \(27/64\), the r07 probe entry, is one complete passage from matter to tachyon.  This reading needs no value of
+\(\bsym\).
+\item \emph{Hopf.}  \(\tan\alpha=1/\sqrt3\), the Hopf value of \(\bsym\) in Theorem~\ref{thm:dark-energy}, so
+\(q=1/(1+\bsym^2)=3/4\).  With the measured \(\bsym=0.5493\) the same formula gives \(q=0.7682\) and stage \(22\), outside the
+interval of Theoremlet r94.2.  This reading holds only at the Hopf value.
+\end{itemize}
+
+\paragraph{A Zeno pattern.}
+A single quarter turn followed by compensation empties the compensator port, \(C_{\HC}R_{\pi/2}u=0\).  Three compensated
+steps of \(\pi/6\) leave \(27/64\), six leave \(0.66\), three hundred leave \(0.99\).  The more often the content is
+compensated, the less of it leaves.  This is the pattern of the quantum Zeno effect.
+
+\paragraph{Observations, not interpretations.}
+\begin{enumerate}[leftmargin=2em]
+\item The relay couplings of the r14 chart family take the values \(0,\tfrac14,\tfrac12,\tfrac34,1\).  These are
+\(\sin^2\) of \(0,\pi/6,\pi/4,\pi/3,\pi/2\).  A uniform grid of quarters has this property anyway, so it carries little
+weight.
+\item Chart \(V3\), whose relay coupling \(\kappa=1/4\) produces the five in \(\Delta_\gamma<1/5\) (r92), and the clock seed,
+\((N,\kappa,G)=(5,\tfrac34,1)\), have couplings that are the two port fractions of one \(\pi/6\) step.  In \(V3\),
+\(\kappa(N-1)=1\) doubles the overlap flux, \(S=2N=10\), and gives \(G^{\rm req}/G^{\rm avail}=4/5\).
+\item The tolerated collar row of r05 has ratio \(5/6=1/(1+\tfrac15)\), the form of the Hopf reading with \(1/5\) in place of
+\(1/3\).
+\end{enumerate}
+None of these is used below.
+
+\subsection*{v4.9.0-r10 a class of shape-(iii) witnesses}
+\label{subsec:v490-r10-shape-three}
+
+r88 requires of a shape-(iii) witness that it exhibit the vanishing of the obstruction itself, not of the score
+\((\alpha)\), and that it not import the all-readout slot \((\delta)\).  Under the reading above, the C5 content is the field
+content of the doublet, and the score is its energy in the compensator port.  The transports available in Reading~B are
+spatial rotations, duality rotations and boosts.
+
+\paragraph{Theoremlet v4.9.0-r10.2 (conditional on the reading).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \emph{Isometric witnesses} (spatial and duality rotations) conserve
+\(\|FC_{\HC}\|^2+\|FA\|^2=\|F\|^2\).  A witness of this kind that empties the compensator port puts the whole content into the
+partner port.  It satisfies \((\alpha)\) only by importing the partner readout, which is \((\delta)\).
+\item[(b)] \emph{Boosts} change the total \(E^2+B^2\), but \(E^2+B^2\ge|s|\) for every boost, with equality in the frame
+where \(E\parallel B\).  For a non-null field the content therefore has a positive floor that no boost removes.
+\item[(c)] For a null field the total falls like \(e^{-2\eta}\) under a boost along the propagation, and reaches zero only in
+the limit \(\eta\to\infty\), never at a finite stage.
+\end{enumerate}
+Hence no witness built from the transports of Reading~B meets \((\alpha)\) and \((\delta)\) at a finite stage.  The obstruction
+behaves like the invariant \(s\), which no group action of Reading~B changes (Theoremlet r19.1).
+
+\paragraph{Proof sketch.}
+(a) \(C_{\HC}+A=1\), \(C_{\HC}A=0\), both symmetric.  (b) \(u^2-|E\times B|^2=\tfrac14|s|^2\) (r03.3) gives \(2u\ge|s|\); checked
+over \(16200\) boosts.  (c) Doppler factor of a plane wave.  \(\square\)
+
+\paragraph{Consequence.}
+Under this reading, a shape-(iii) witness would have to lie outside the transport group of Reading~B.  It would have to
+change the invariant \(s\), that is, carry dynamics.  Reading~B has no dynamics (r10 of v4.8.0).  The route therefore stays
+open in the sense of r88, and the class of witnesses examined here is closed.  The layer does not assert, and does not
+approach, an exact finite C5 zero closure.  It records why the transports at hand cannot supply one.
+
+\subsection*{v4.9.0-r10 register entries}
+\label{subsec:v490-r10-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r10\\
+\midrule
+C5 factor \(3/4\) (r94) & reading offered: rotate by \(\pi/6\), then compensate; reproduces \(3/4,9/16,27/64,81/256\) and \(n=20\); interpretation, not derivation (r10.1)\\
+source of \(\pi/6\) & triolic division of the matter--tachyon quarter turn, or Hopf value \(1/\sqrt3\) (only at that value)\\
+shape (iii) (r88) & under the reading: isometric witnesses relocate, boosts meet the floor \(|s|\), null fields reach zero only as a limit; witnesses would need dynamics (r10.2)\\
+\(\Delta_\gamma<1/5\) (r92) & observation: \(V3\) coupling \(1/4\) and clock-seed coupling \(3/4\) are the two port fractions of one \(\pi/6\) step; not used\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r10 ledger and guard update}
+\label{subsec:v490-r10-ledger-guard}
+
+\[
+R_{\rm core}^{v490\text{-}r10}=(0,0,1)
+\]
+for (a reading of the factor offered, a class of shape-(iii) witnesses closed under it, a derivation of the reading open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r10,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r10}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
 \end{document}

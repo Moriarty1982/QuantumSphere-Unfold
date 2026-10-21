@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v6.8
+# Kernkarte Quantum Sphaera — v6.9
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1553,6 +1553,19 @@ Compton-Uhr 0, α κ, Atomuhr und G_N 2κ.
 **K54.3 (M).** P5 korrigiert: (δα/α)/(δG/G) = k(α)/k(G_N) = 1/2 (statischer Faktor gehört nicht hinein; P5s Ausdruck
 ergäbe 0,268, geschrieben 0,537). R_loc = (0,0,1); Guards unverändert.
 
+### K55 — Companion-Runde v4.9.0-r10: Deutung des C5-Faktors 3/4, Zeugenklasse für Form (iii) (2026-10-22)
+
+`sec:v490-r10-c5-factor-shape-three`, Snippet `llm/v490_r10_round.tex`; `llm/Erkundungsprotokoll_Kern.md` (K1–K4);
+Skripte k50, k51.
+
+**K55.1 (M + Deutung).** C_HC R_α C_HC = cos α C_HC: „drehen, dann kompensieren“ hält cos²α, nicht idempotent. α = π/6
+gibt 3/4, 9/16, 27/64, 81/256 (Ledger r04–r08) und n = 20. π/6 triolisch (Vierteldrehung Materie→Tachyon in drei
+Schritten, 27/64 = ein Durchgang) oder Hopf (tan = 1/√3; mit β_sym Stufe 22). Zeno-Muster.
+
+**K55.2 (M, bedingt auf die Deutung).** Form (iii): isometrische Zeugen verlagern C → A (verletzt δ), Boosts haben den
+Boden E² + B² ≥ |s|, Nullfelder nur Grenzwert ⇒ keine Zeugen aus der Transportgruppe von Lesart B; nötig wäre
+Dynamik (s ändern). Keine Aussage über C5 = 0. R_core = (0,0,1); Guards unverändert.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1656,6 +1669,7 @@ ergäbe 0,268, geschrieben 0,537). R_loc = (0,0,1); Guards unverändert.
 - v6.6 (2026-10-21): K52 Companion-Runde v4.9.0-r07, Vorab-Notiz H15 (m_W = 80,3615 GeV vorhergesagt).
 - v6.7 (2026-10-21): K53 Companion-Runde v4.9.0-r08 (Drift gegen Atomuhren, α-Vorzeichen, Compton-Uhr).
 - v6.8 (2026-10-21): K54 Companion-Runde v4.9.0-r09 (lokaler Faktor: nur Potentiallesart, P5 = 1/2).
+- v6.9 (2026-10-22): K55 Companion-Runde v4.9.0-r10 (C5-Faktor als Drehen/Kompensieren, Zeugenklasse Form (iii)).
 
 ---
 

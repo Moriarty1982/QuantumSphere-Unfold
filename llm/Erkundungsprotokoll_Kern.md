@@ -46,7 +46,29 @@ Drehung zwischen den Projektionen liegt, ist der Schritt **nicht idempotent**. I
 Das Verhältnis 5/6 der Toleranzzeile Z_5^collar ist 1/(1 + 1/5) = cos²(arctan(1/√5)). Das ist dieselbe Form wie in
 K1(b), mit „β²“ = 1/5, und 1/5 ist auch die Δ_γ-Schranke. Notiert, nicht gedeutet. Gezählt als Versuch 2.
 
+### K3: Δ_γ-Bezug (Beobachtung)
+
+Chart V3 trägt die Fünf aus r92, mit κ = 1/4. Die Uhrensaat (5, 3/4, 1) hat κ = 3/4. Das sind die beiden Portanteile
+eines π/6-Schritts. In V3 gilt κ(N − 1) = 1, das verdoppelt den Überlappfluss auf S = 2N = 10 und gibt das
+Verhältnis 4/5. Die κ-Werte der r14-Familie (0, 1/4, 1/2, 3/4, 1) sind sin² der Standardwinkel. Das gilt für ein
+Viertelraster aber ohnehin und trägt daher wenig. Keine Herleitung von 1/5. Gezählt als Versuch 3.
+
+### K4: Form (iii) unter der Deutung K1 (Skript `llm/k51_c5_form_iii.py`)
+
+Bedingungen aus r88: (α) die Obstruktion selbst muss verschwinden, nicht der Score; (δ) kein Import der
+All-Readout-Stelle.
+- **Isometrische Zeugen** (Raum- und Dualitätsdrehungen) erhalten |FC|² + |FA|². Leert ein solcher Zeuge den C-Port,
+  liegt alles im A-Port. Erfüllt wird (α) dann nur über den A-Port, und das verletzt (δ).
+- **Boosts:** E² + B² ≥ |s|, Gleichheit im System E ∥ B. Das ist ein positiver Boden (über 16200 Boosts geprüft).
+- **Nullfelder:** e^{−2η}, null nur im Grenzwert.
+
+Ergebnis: Kein Zeuge aus der Transportgruppe von Lesart B erfüllt (α) und (δ) in endlicher Stufe. Ein Zeuge müsste s
+ändern, also Dynamik tragen. Die Klasse ist geschlossen, Form (iii) bleibt im Sinn von r88 offen. Keine Aussage über
+C5 = 0. Gezählt als Versuch 4. Festgehalten in Runde v4.9.0-r10.
+
 ## Stand
 
-2 gezählte Versuche. K1 liefert einen nicht idempotenten Mechanismus mit exakt 3/4, aus Teilen, die das Dokument schon
+4 gezählte Versuche. K1 (Faktor 3/4) und K4 (Zeugenklasse) stehen in r10.
+
+Vorige Zwischenbilanz: 2 gezählte Versuche. K1 liefert einen nicht idempotenten Mechanismus mit exakt 3/4, aus Teilen, die das Dokument schon
 hat (Kompensator, Dualitätsdrehung, Triole bzw. Hopf-Wert).
