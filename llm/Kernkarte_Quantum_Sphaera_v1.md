@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v6.3
+# Kernkarte Quantum Sphaera — v6.4
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1468,6 +1468,30 @@ das Tachyon nicht erzeugen; Tachyon-Reihenfolge rahmenabhängig (Umdeutung). Zyk
 auf der anderen Seite ⇒ C-konjugiertes Tachyon. Sog nicht ableitbar (keine Dynamik, r10). R_lt = (0,0,1); Guards
 unverändert.
 
+### K50 — Companion-Runde v4.9.0-r06: Tachyon-Trefferkette, Beschleunigung, Higgs-Feld (2026-10-21)
+
+`sec:v490-r06-hit-chain-higgs`, Snippet `llm/v490_r06_round.tex`, Skript `llm/k42_tachyon_trefferkette.py`. Kein
+Datenvergleich. Anlass (Autor): Tachyon läuft doch schon rückwärts; Higgs-Feld erzeugt entlang einer Linie Materie,
+jeder Treffer des Tachyons ein gleiches Photon.
+
+**K50.1 Kreisschluss (M).** Photon braucht d, Tachyon nimmt höchstens d/v zurück ⇒ Lücke d(1 − 1/v) = 0,451 d.
+Ein Photon- + ein Tachyonbein schließen nie; zwei Tachyonbeine in relativ bewegten Frames (Tolman) schon. Bei
+v = 1/β_sym, u = β_sym exakt zurück zum Start = dieselbe raumartige Linie (r02.1 Fall a). r05.3(c) steht.
+
+**K50.2 Trefferkette (M).** Feste v: Huygens-Kegel cos ϑ = 1/v ⇒ 56,68° bei v = 1/β_sym; Beobachter mit u = 1/v
+= β_sym (Materie-Frame) sieht alle Treffer gleichzeitig; Boost nimmt η aus η + iπ/2, übrig iπ/2 (reine Phase);
+Aberration der Senkrechten gibt wieder 56,68°. Tachyon: E = μ sinh η, p = μ cosh η = 1,197 μ.
+
+**K50.3 Beschleunigung (M).** Konstante Eigenbeschleunigung t = R cosh σ, x = R sinh σ: v und dv/dt divergieren bei
+(R, 0), Eigenbeschleunigung bleibt 1/R, Trefferrate divergiert (Blitz), dahinter Paarereignis, Emission ↔ Absorption.
+Energieabgabe an Treffer: nach E₀/ε Treffern E = 0, v = ∞, p = μ; Kegel öffnet 56,68° → 90°.
+
+**K50.4 Higgs (M + Lesart).** Elektroschwache Massenmatrix auf (W³, B) hat Rang 1 = Portgewichtung mit masselosem
+Photonport; bei θ_W = 45° genau 0·C_HC + m_Z²·A; gemessenes θ_W ≠ 45° ⇒ gedrehter Kompensator (formal, anderes
+Dublett). Higgs bei φ = 0 tachyonisch (m² < 0), Masse durch Kondensation. Tachyonische Felder: Instabilität, keine
+Überlichtsignale ⇒ Trefferkette braucht vorkorrelierte Auslöser. Kondensiertes Vakuum liefert keine Energie: Energie
+vom Tachyon (K50.3) oder vom noch abrollenden Feld (Symmetriebrechung). R_chain = (0,0,1); Guards unverändert.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1565,6 +1589,8 @@ unverändert.
 - v6.2 (2026-10-21): K48 Companion-Runde v4.9.0-r04 (Kompensator als 2×2-Matrix auf (E, B), Zustandsscheibe).
 - v6.3 (2026-10-21): K49 Companion-Runde v4.9.0-r05 (Portgewichtung, Umbenennung, Helizitätsachse/Kerr,
   Photon aus Materie + Tachyon).
+- v6.4 (2026-10-21): K50 Companion-Runde v4.9.0-r06 (Trefferkette, Kegel 56,68°, Beschleunigung, Higgs als
+  Portgewichtung).
 
 ---
 
