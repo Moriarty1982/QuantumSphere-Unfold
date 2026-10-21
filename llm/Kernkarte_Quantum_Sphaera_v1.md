@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v6.4
+# Kernkarte Quantum Sphaera — v6.5
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1492,6 +1492,16 @@ Dublett). Higgs bei φ = 0 tachyonisch (m² < 0), Masse durch Kondensation. Tach
 Überlichtsignale ⇒ Trefferkette braucht vorkorrelierte Auslöser. Kondensiertes Vakuum liefert keine Energie: Energie
 vom Tachyon (K50.3) oder vom noch abrollenden Feld (Symmetriebrechung). R_chain = (0,0,1); Guards unverändert.
 
+### K51 — Vorab-Test H14: Kegelwinkel = 2 θ_W (2026-10-21)
+
+Vorab-Notiz `llm/Vorab_Notiz_H14_Kegelwinkel_Weinberg.md` (Commit 5911161), Ergebnis
+`llm/Ergebnis_H14_Kegelwinkel_Weinberg.md`, Skript `llm/k43_test_h14.py`. Daten PDG 2024/2025.
+
+**K51.1 (D).** Vorhersage sin²θ_W = (1 − β_sym)/2 = 0,22533; on-shell aus m_W, m_Z: 0,22321 ± 0,00026 ⇒ z = +8,2:
+**exakt widerlegt.** Band On-shell…MS-bar [0,22243; 0,23140] enthält die Vorhersage ⇒ als Baumgraphen-Beziehung
+**nicht entscheidbar**. ϑ_c = 56,68° gegen 2θ_W = 56,39° (on-shell) / 57,48° (MS-bar). Nachträgliche Hypothese,
+Look-elsewhere 2 % je Beziehung, 9 % für fünf: **kein Beleg**. Route ruht ohne Schema-/Skalenvorschrift.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1591,6 +1601,7 @@ vom Tachyon (K50.3) oder vom noch abrollenden Feld (Symmetriebrechung). R_chain 
   Photon aus Materie + Tachyon).
 - v6.4 (2026-10-21): K50 Companion-Runde v4.9.0-r06 (Trefferkette, Kegel 56,68°, Beschleunigung, Higgs als
   Portgewichtung).
+- v6.5 (2026-10-21): K51 Vorab-Test H14 (Kegelwinkel = 2θ_W exakt widerlegt, als Näherung nicht entscheidbar).
 
 ---
 
