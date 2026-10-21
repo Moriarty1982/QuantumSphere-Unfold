@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v5.9
+# Kernkarte Quantum Sphaera — v6.0
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1378,6 +1378,30 @@ entgegengesetzte Seiten der Materie; die Achse von thm:symmetric-frame hat das P
 prop:muon-g2) nicht neu bewertet — nur mit Vorab-Notiz. Ledger R_conv = (0,0,1); Guards unverändert. Build MiKTeX
 1099 Seiten, Audit gegen r20 ohne harte Abweichung.
 
+### K46 — Companion-Runde v4.9.0-r02: Rundlauf um das Photon und Umkehrwalze (2026-10-21)
+
+`sec:v490-r02-round-trip-umkehrwalze`, Snippet `llm/v490_r02_round.tex`, Skript `llm/k38_umkehrwalze.py`. Kein
+Datenvergleich. Anlass (Autor): Umkehrwalze war für den Rundlauf M→P→T→P→M gedacht, als Paralleltransport über die Sphäre.
+
+**K46.1 Zwei Seiten (M).** Ein Durchgang Materie→Tachyon bei festem |s| läuft oben oder unten um s = 0 (z → ±iz).
+Seite = sign Im s = sign(E·B): Lorentz-invariant, P- und T-ungerade, C-gerade (Dichte des θ-Terms FF̃). Rundlauf auf
+derselben Seite zurück: z → z; Seitenwechsel (gleicher Drehsinn): z → −z. Spinor ψ → ±iψ, zwei Rundläufe ψ → −ψ.
+Der „doppelte Tunnelpunkt“ ist ein Punkt mit zwei Seiten.
+
+**K46.2 Rundlauf-Umkehrwalze = C (M).** z → −z ist auf den Feldstärken Ladungskonjugation C = PT = Dualität um π;
+zentral, also kein Kandidat für das J des Projektors ½(1+J) (der wäre null).
+
+**K46.3 Involutive Umkehrwalze ist antilinear (M).** Keine C-lineare Involution mit s → −s (det M² = −1). Antilineare
+mit s → −s̄: J z = iR z̄, R ∈ O(3,ℂ), R R̄ = 1. Vertreter J_B = i z̄: E ↔ B = Dualität(π/2) nach T; passt zur
+zeitumgekehrten Innensicht von thm:core. Nicht Lorentz-invariant (J_B Λ = Λ̄ J_B). Eigenkanäle E = ±B auf den beiden
+imaginären Halbachsen, je einer pro Seite; ½(1+J_B) bildet auf Re s = 0, Im s ≥ 0 ab, nie auf den Nullkegel ⇒
+thm:core „Photon bei β = 0“ gilt nur für Re s. Enigma-Komposit: R_{π/2}⁻¹ J_B R_{π/2} = −J_B = C·J_B.
+
+**K46.4 OP5 (M + Lesart).** Leckdiagnosen von def:working-shared-matrix-leakage mit J_B: null nur für reelle Drehungen
+(Boost η = 0,6174: 0,985 / 0,526; Dualität α = 0,4: 0,779 / 0,389). Entsprechung Wendepunkt ↔ Rückweg auf gleicher
+Seite, Durchgang ↔ Seitenwechsel notiert, nicht übernommen (ρ_r, ρ_h, K, Tunnelselektor ohne Gegenstück).
+Ledger R_uw = (0,0,1); Guards unverändert.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1468,6 +1492,8 @@ prop:muon-g2) nicht neu bewertet — nur mit Vorab-Notiz. Ledger R_conv = (0,0,1
 - v5.8 (2026-10-21): K44 Companion-Runde v4.8.0-r20.
 - v5.9 (2026-10-21): K45 Companion-Runde v4.9.0-r01 (neutrale Achse, Konstantenumrechnung, Tribonacci = Gleichheit
   von Lorentz- und Doppler-Faktor).
+- v6.0 (2026-10-21): K46 Companion-Runde v4.9.0-r02 (Rundlauf um das Photon, Umkehrwalze = C, involutive
+  Umkehrwalze antilinear E ↔ B).
 
 ---
 
