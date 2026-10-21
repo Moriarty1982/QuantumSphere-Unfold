@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v6.7
+# Kernkarte Quantum Sphaera — v6.8
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1538,6 +1538,21 @@ tragen nicht ⇒ prop:H0-tension ohne tragfähigen Mechanismus.
 **K53.4 Compton-Uhr (M).** m_e c²/ħ hat k = 0 ⇒ frame-invariante Uhr; Verhältnis zur Atomuhr (k = 2) liest
 γ_L^(local)^{±2} direkt. H15 sagt konstantes θ_W voraus (strukturelles γ_L). R_drift = (0,0,1); Guards unverändert.
 
+### K54 — Companion-Runde v4.9.0-r09: Was der lokale Frame-Faktor sein kann (2026-10-21)
+
+`sec:v490-r09-local-frame-factor`, Snippet `llm/v490_r09_round.tex`; Erkundungsprotokoll E14/E15; Skript k49.
+
+**K54.1 (S).** Vier Einflüsse laut Quelle (Beobachter thm:frame-offset, Zeit prop:H0-tension, Erdbahn α-Korollar,
+Potential P5 mit 1e-10 δΦ/c²), kein Feldgesetz. Zwei Widersprüche thm:frame-offset ↔ thm:k-values (γ_BI
+beobachterabhängig vs k = 0; ein Faktor für alle vs k(c) = 0, k(G) = 2), aufgelöst durch strukturelle Lesart.
+
+**K54.2 (D).** Geschwindigkeitslesart ausgeschlossen (1,6e-4 jährlich, ~1e13 über Uhrenschranke); Potentiallesart
+überlebt (1,6e-20), treibt aber nur ~1e-15 kosmische Drift; Dichtelesart ohne Form. Muster β_X = k(X) κ:
+Compton-Uhr 0, α κ, Atomuhr und G_N 2κ.
+
+**K54.3 (M).** P5 korrigiert: (δα/α)/(δG/G) = k(α)/k(G_N) = 1/2 (statischer Faktor gehört nicht hinein; P5s Ausdruck
+ergäbe 0,268, geschrieben 0,537). R_loc = (0,0,1); Guards unverändert.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1640,6 +1655,7 @@ tragen nicht ⇒ prop:H0-tension ohne tragfähigen Mechanismus.
 - v6.5 (2026-10-21): K51 Vorab-Test H14 (Kegelwinkel = 2θ_W exakt widerlegt, als Näherung nicht entscheidbar).
 - v6.6 (2026-10-21): K52 Companion-Runde v4.9.0-r07, Vorab-Notiz H15 (m_W = 80,3615 GeV vorhergesagt).
 - v6.7 (2026-10-21): K53 Companion-Runde v4.9.0-r08 (Drift gegen Atomuhren, α-Vorzeichen, Compton-Uhr).
+- v6.8 (2026-10-21): K54 Companion-Runde v4.9.0-r09 (lokaler Faktor: nur Potentiallesart, P5 = 1/2).
 
 ---
 

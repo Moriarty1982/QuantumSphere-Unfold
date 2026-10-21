@@ -289,9 +289,23 @@ verträglich mit r03 (F2).
 Die Trennung „strukturelles γ_L fest, lokaler Faktor variabel“ (r18, r08) löst (3), wenn man `thm:frame-offset` als
 Aussage über den *strukturellen* Faktor liest. Dann bleibt aber offen, woraus der lokale Faktor besteht.
 
+### E15: Drei Lesarten des lokalen Faktors gegen die Uhren (Skript `llm/k49_lokaler_faktor.py`; Runde v4.9.0-r09)
+
+| Lesart | Rechnung | Ergebnis |
+|---|---|---|
+| **V** Geschwindigkeit gegen ein ausgezeichnetes System | Erdbahn auf den CMB-Dipol projiziert: δη ≈ 9,8 · 10⁻⁵ ⇒ δ ln γ_L ≈ 1,6 · 10⁻⁴ jährlich | **ausgeschlossen**, etwa Faktor 10¹³ über der Jahresamplitude aus r03 F2 |
+| **P** Gravitationspotential, κ δΦ/c² | κ ≈ 10⁻¹⁰ (P5), δΦ/c² ≈ 1,6 · 10⁻¹⁰ ⇒ δα/α ≈ 1,6 · 10⁻²⁰ | **überlebt**; erzeugt aber nur ~10⁻¹⁵ kosmische Drift statt 5 · 10⁻² |
+| **D** Materiedichte | keine Form in der Quelle | **nicht prüfbar**, bräuchte Abschirmung |
+
+Folge: Lokaler Faktor = Potentialkopplung mit dem Muster β_X = k(X) κ. Die Compton-Uhr koppelt nicht, α koppelt mit κ,
+Atomuhr und G_N koppeln mit 2κ. Nebenbefund: P5 ist doppelt falsch gerechnet. Aus dem k-Gesetz folgt
+(δα/α)/(δG/G) = k(α)/k(G_N) = 1/2. P5 schreibt γ_L^{−1} = 0,537, und der Ausdruck dort ergäbe sogar 0,268.
+
 ## Stand
 
-14 Einträge, davon 8 gezählte Versuche. E14: Der lokale Faktor hängt laut Dokument von Beobachter, Zeit, Erdbahn und
+15 Einträge, davon 8 gezählte Versuche. E15: nur die Potentiallesart überlebt, P5 korrigiert auf 1/2.
+
+Vorige Zwischenbilanz: 14 Einträge, davon 8 gezählte Versuche. E14: Der lokale Faktor hängt laut Dokument von Beobachter, Zeit, Erdbahn und
 Potential ab, ohne Feldgesetz. Zwei neue innere Widersprüche zwischen `thm:frame-offset` und `thm:k-values`.
 
 Vorige Zwischenbilanz: 13 Einträge, davon 8 gezählte Versuche. Neu: E12 (keine tragfähige H₀-Erklärung im Rahmen) und E13 (Vorzeichen von
