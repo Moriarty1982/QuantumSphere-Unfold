@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v7.0
+# Kernkarte Quantum Sphaera — v7.1
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1577,6 +1577,15 @@ P3 multiplikativer Verlust (r11), P4 Uhrenfenster-Charts von R_A; bindend V3 (ei
 1 − 4/N). Unter P3: Drift tan α < 1/2; C5-Stufe außerhalb, r05-Toleranzzeile innerhalb; r05-Nullzeilen = Verlagerung
 nach A_4/U_6. Provenienz offen, Ableitung unter Prämissen geschlossen. Guards unverändert.
 
+### K57 — Companion-Runde v4.9.0-r13: Zeitskala der gekickten Dualitätsdynamik (2026-10-22)
+
+**K57.1 (M).** r15-Tick cos²((τ−τ_V)/σ_V) = C-Port-Energie zwischen Kicks ⇒ ω = 1/σ_V, τ_k = (π/6)σ_V. Zwei-Term-Sonde:
+σ = 2/Δγ, Schwebung T_b = 2π/Δγ ⇒ τ_k = T_b/6 für jedes Paar; 3/6/12/20/24 Stufen = ½/1/2/10/3/4 Schwebungen. Mit
+γ₁, γ₂: τ_k = 0,15205 Uhreneinheiten; keine Sekunden (Quelle verweigert die Identifikation; global = W_γ^glob).
+
+**K57.2.** Fenster in Grad: V3 39,23°, V5 50,77° (R_A) fassen eine C5-Stufe, V8 28,13° (R_B) nicht ⇒ zweiter Grund für
+r12-P4. Stufenwinkel Hopf 30° (3/4) gegen Gitter 28,78° (0,7683). R_time = (0,0,1); Guards unverändert.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1682,6 +1691,7 @@ nach A_4/U_6. Provenienz offen, Ableitung unter Prämissen geschlossen. Guards u
 - v6.8 (2026-10-21): K54 Companion-Runde v4.9.0-r09 (lokaler Faktor: nur Potentiallesart, P5 = 1/2).
 - v6.9 (2026-10-22): K55 Companion-Runde v4.9.0-r10 (C5-Faktor als Drehen/Kompensieren, Zeugenklasse Form (iii)).
 - v7.0 (2026-10-22): K56 Companion-Runden v4.9.0-r11 (gekickte Dualitätsdynamik) und r12 (Δ_γ < 1/5 rekonstruiert).
+- v7.1 (2026-10-22): K57 Companion-Runde v4.9.0-r13 (Zeitskala: τ_k = T_b/6).
 
 ---
 

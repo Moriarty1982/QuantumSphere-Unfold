@@ -95,9 +95,31 @@ Folgen unter P3:
 
 Ableitungsanteil unter den Prämissen geschlossen, Provenienz offen. Gezählt als Versuch 6.
 
+### K7: Zeitskala (Skript `llm/k54_zeitskala.py`; Runde v4.9.0-r13)
+
+Die r15-Tickform cos²((τ − τ_V)/σ_V) hat dieselbe Gestalt wie die C-Port-Energie cos²(ωt) zwischen zwei Kicks, also
+ω = 1/σ_V. Die kleinste Sonde mit Profil hat zwei Terme und ergibt cos²(Δγ τ/2), also σ = 2/Δγ.
+
+Daraus folgt τ_k = T_b/6 für jedes Frequenzpaar:
+- 3 Stufen = ½ Schwebung,
+- 6 Stufen = 1 Schwebung,
+- 20 Stufen = 10/3 Schwebungen.
+
+Mit γ₁, γ₂ ergibt sich τ_k = 0,15205 Uhreneinheiten. In Sekunden gibt es keine Umrechnung; die Quelle verweigert
+die Identifikation, und global wäre sie W_γ^glob.
+
+Weitere Befunde:
+- Fenster: V3 39,23°, V5 50,77° (R_A) fassen eine C5-Stufe (30°), V8 28,13° (R_B) nicht. Das ist ein zweiter Grund
+  für P4 in r12.
+- Hopf gegen Gitter (β = (1/√3) e^{−γ₁/(4πγ_L⁵)}): Stufenwinkel 30° gegen 28,78°. 3/4 ist der Kontinuumswert.
+
+Gezählt als Versuch 7.
+
 ## Stand
 
-6 gezählte Versuche. K5 und K6 stehen in r11 und r12.
+7 gezählte Versuche. K7 steht in r13.
+
+Vorige Zwischenbilanz: 6 gezählte Versuche. K5 und K6 stehen in r11 und r12.
 
 Vorige Zwischenbilanz: 4 gezählte Versuche. K1 (Faktor 3/4) und K4 (Zeugenklasse) stehen in r10.
 
