@@ -90,7 +90,7 @@ Nicht in diesem Verzeichnis, aber referenziert: `RC14_uncompressed_reference_sou
 
 ## Der Runden-Workflow
 
-Die **Runden** wachsen append-only: eine neue Runde ist ein neuer Abschnitt unmittelbar vor `\end{document}`, bestehende Runden werden nicht umgeschrieben. Aktueller Stand: **r94**, **v4.8.0-r20**, **v4.9.0-r25**. Runden der v4.8.0-Linie heißen `v4.8.0-rNN` (Labels `sec:v480-rNN-...`), danach `v4.9.0-rNN` (`sec:v490-rNN-...`); `qs.py outline` und `ledger` erkennen alle Formen. Inhalt jeder Runde ausführlich in der Kernkarte (`llm/Kernkarte_Quantum_Sphaera_v1.md`, Abschnitt 7).
+Die **Runden** wachsen append-only: eine neue Runde ist ein neuer Abschnitt unmittelbar vor `\end{document}`, bestehende Runden werden nicht umgeschrieben. Aktueller Stand: **r94**, **v4.8.0-r20**, **v4.9.0-r26**. Runden der v4.8.0-Linie heißen `v4.8.0-rNN` (Labels `sec:v480-rNN-...`), danach `v4.9.0-rNN` (`sec:v490-rNN-...`); `qs.py outline` und `ledger` erkennen alle Formen. Inhalt jeder Runde ausführlich in der Kernkarte (`llm/Kernkarte_Quantum_Sphaera_v1.md`, Abschnitt 7).
 
 **Der Hauptkorpus wird seit v4.9.0-r25 überarbeitet** (Autorauftrag 2026-10-22: alte Arbeit nicht verlieren, falsche Aussagen nicht stehen lassen). Regel (`sec:v490-r25-main-body-revision`, Skript `llm/aufraeumen_v490.py`):
 - **(A) Sackgasse** (widerlegt, ausgeschlossen, zurückgezogen): Original wortgleich in den Archiv-Anhang `sec:v490-archive`; an der alten Stelle bleibt dieselbe Umgebung mit **gleicher Nummer und gleichem Label**, kurzer Aussage dessen, was bleibt, und Verweis. Alle `\ref` lösen weiter auf.
@@ -128,6 +128,7 @@ Guard-Linter für neue Runden: `python llm/training/guard_linter.py <tex> --star
 | r23 | F auf 113 Hauptkorpus-Aussagen angewandt (Liste `llm/k62_frame_regel_hauptkorpus.py`) |
 | r24 | Widersprüche als Ein-Frame-Artefakte: β-Vorzeichen = Orientierungscode, Hauptkorpus-Tachyon = Projektion T\|_R (−β), Hauptkorpus-„Photon-Frame“ = Bezugsframe R (reiner Zustand); F5–F7 |
 | r25 | **Überarbeitung des Hauptkorpus**: 15 Sackgassen archiviert, bekannte Fehler korrigiert, Statusvermerke |
+| r26 | Vorab-Test H16 (Grad-6-Potentiale auf dem Tripel-Raum) widerlegt; Theoremlet r26.1: bis Grad 6 ist jeder kritische Punkt mit drei verschiedenen Normen ein Sattel, Minima mit Hierarchie brauchen Grad ≥ 8 |
 
 Ältere Runden (r03–r94, v4.8.0-r01–r20): Kernkarte und die genannten Register. Kurzstand v4.8.0: Lesart B (ℂ³, SO(3,ℂ)) als Arbeitslesart, Sektoren nach Vorzeichen von s, vorab festgelegte Tests H2–H13 mit Ergebnissen, Riemann-Arbeit seit r04 keine Beweisquelle.
 

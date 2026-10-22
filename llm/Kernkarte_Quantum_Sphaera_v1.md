@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v8.3
+# Kernkarte Quantum Sphaera — v8.4
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -77,7 +77,8 @@ Minimalität, Kaskade noch Kompensator wählen TM1. H8 Cayley–Dickson-Involuti
 (χ² = 8,8 bei 3 FG), Vorhersage sin²θ₂₃ = ½, δ_CP = 270°. **Nachprüfung JUNO 2026 (K23):** H2 gestützt (NO
 ≥ 2,1σ); TM1 χ² = 9,6 → disfavorisiert; H8 χ² = 14,0 → disfavorisiert. H9 sin²θ₁₂ = β_sym²/cos²θ₁₃ = 0,3086
 für künftige JUNO-Daten festgeschrieben (nachträglich gefunden). H10 Assoziator (K24) — kein Auswahlgrund. H11 Massen aus invarianten
-Funktionen auf dem Tripel-Raum (K32) — widerlegt: bis Grad 4 höchstens zwei verschiedene Normen; Grad ≥ 6 nötig.
+Funktionen auf dem Tripel-Raum (K32) — widerlegt: bis Grad 4 höchstens zwei verschiedene Normen. H16 Grad 6 (K70) — widerlegt: bis Grad 6 ist jeder
+kritische Punkt mit drei verschiedenen Normen ein Sattel; Minima mit Hierarchie brauchen Grad ≥ 8.
 Regel: Jede neue Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 **Farbe und Generation (K25, K28):** Im Companion liegen beide auf demselben Triplett e₄, e₅, e₆. Vorschlag (V):
@@ -1147,6 +1148,7 @@ verschiedene.
 
 **K32.3 Urteil (S).** H11a und H11b **widerlegt** nach dem festgelegten Kriterium. Toleranz für „verschieden“ von 10⁻⁶ auf
 10⁻⁴ geändert (offengelegt; das Urteil folgt analytisch, unabhängig davon). Mindestgrad für drei verschiedene Normen: 6
+[Neu eingeordnet durch K70: gilt für kritische Punkte; für Minima ist Grad 6 nicht ausreichend, nötig ist Grad ≥ 8.]
 (notwendig, nicht als hinreichend gezeigt). Jede Erweiterung bringt ≥ 2 neue Parameter, also Anpassung statt Vorhersage.
 
 **K32.4 Neueinordnung.** K30.3 „offen: Hierarchie aus Abweichungen vom symmetrischen Tripel“ ist für natürliche
@@ -1764,6 +1766,30 @@ Statusvermerke an 20 Stellen (Sektordefinition, §phase-constants = Bezugsframe 
 **K69.3 (D).** Build 1176 Seiten / 3635 Labels, Overfull 58, harte Werte 0. Auf GitHub liegt der Hauptkorpus in eingefrorenen
 Fragmenten; Übernahme (premise-audit oder neue Basis) ist Autorentscheidung. R_rev = (0,0,0).
 
+### K70 — Vorab festgelegter Test H16 und Companion-Runde v4.9.0-r26: Grad-6-Potentiale auf dem Tripel-Raum (2026-10-22)
+
+`sec:v490-r26-degree-six-triple-space`, Snippet `llm/v490_r26_round.tex`. Vorab-Notiz `llm/Vorab_Notiz_H16_Grad6_Tripelraum.md`
+(Commit d0360b8, als „H12“ angelegt, Nummer war vergeben; Umbenennung ohne Inhaltsänderung 6bd2f1b). Ergebnis
+`llm/Ergebnis_H16_Grad6_Tripelraum.md`, Skripte `llm/k64_test_h16.py`, `llm/k65_sattel_grad6.py`.
+
+**K70.1 (M).** V₆ = −S + βS² + γQ − κP + δH (δ > 0). Feste Verteilung N = 2000: globale Minima 1585 × gleiche Normen,
+398 × ein Platz, 17 × entartetes Paar, 0 × drei verschiedene. Lepton-Tripel: auf der Vieta-Familie überall kritischer
+Punkt, auf dem Gitter 41 × 41 nirgends lokales Minimum (1139 × δ ≤ 0, 542 × Hessematrix indefinit).
+
+**K70.2 Urteil (S).** H16a, H16b, H16c **widerlegt** nach dem festgelegten Kriterium.
+
+**K70.3 Theoremlet r26.1 (M, nach dem Urteil gefunden).** Alle Norm-Invarianten bis Grad 6 sind linear in
+e₂ = Σ_{i<j} x_ix_j (Q = S² − 2e₂, H = S³ − 3Se₂ + 3P², SQ = S³ − 2Se₂), also V = A(S,P) + e₂(b₀ + b₁S). Bei drei
+verschiedenen Normen ist die Hessematrix in (S, e₂, P) [[·, b₁, ·], [b₁, 0, 0], [·, 0, ·]], Hauptminor −b₁² < 0:
+Sattelpunkt, oder flach (b₀ = b₁ = 0). Exakt geprüft (40 Stellen, 2000 von 2000); in doppelter Genauigkeit kann der
+negative Eigenwert bis 5·10⁻¹⁵ des größten schrumpfen.
+
+**K70.4 Neueinordnung.** K32.3 „Mindestgrad 6“ gilt für kritische Punkte; Minima mit drei verschiedenen Normen brauchen
+Grad ≥ 8 (hinreichend nicht gezeigt, ≥ 4 neue Koeffizienten, also Anpassung). K = 2/3 braucht Σn_k, kein polynomiales
+Invariant. Im Rahmen „Normen und t = P“ erzeugt die Generationen-S₃ keine Massenhierarchie; nötig wären explizite
+S₃-Brechung oder Invarianten jenseits der Normen (Realteile der Plätze sind G₂-invariant). Frames: Urteil und r26.1
+frame-frei; Massen-Lesart nur Materie. R_cg^{r26} = (0,0,1); Guards unverändert, β₄ unverbraucht.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1882,6 +1908,7 @@ Fragmenten; Übernahme (premise-audit oder neue Basis) ist Autorentscheidung. R_
 - v8.1 (2026-10-22): K67 Companion-Runde v4.9.0-r23 (Konvention F auf 113 Hauptkorpus-Aussagen angewandt).
 - v8.2 (2026-10-22): K68 Companion-Runde v4.9.0-r24 (r23-Widersprüche als Ein-Frame-Artefakte korrigiert; F5–F7).
 - v8.3 (2026-10-22): K69 Companion-Runde v4.9.0-r25 (Überarbeitung des Hauptkorpus: Archiv, Korrekturen, Statusvermerke).
+- v8.4 (2026-10-22): K70 Vorab-Test H16 (Grad-6-Potentiale auf dem Tripel-Raum) widerlegt; Theoremlet r26.1 (bis Grad 6 nur Sattelpunkte); Companion-Runde v4.9.0-r26; K32.3 neu eingeordnet.
 
 ---
 

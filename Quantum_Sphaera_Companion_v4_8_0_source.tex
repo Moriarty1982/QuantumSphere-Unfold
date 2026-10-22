@@ -71623,4 +71623,106 @@ R_{\rm glob}^{(v490\text{-}r25,+)}=(0,1,1,1,1),
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
 
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r26 Source-Only: Pre-Registered Test of Degree-Six Potentials on the Triple Space}
+\addcontentsline{toc}{section}{v4.9.0-r26 Source-Only: Pre-Registered Test of Degree-Six Potentials on the Triple Space}
+\label{sec:v490-r26-degree-six-triple-space}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.8.0-r16 showed that invariant potentials up to degree four on the triple space of the triality slots give at
+most two distinct slot norms, and named degree six as necessary for three.  This layer records the pre-registered test
+H16 of degree six (note \texttt{llm/Vorab\_Notiz\_H16\_Grad6\_Tripelraum.md}, commit \texttt{d0360b8}, fixed before
+computing; created under the label H12, which was already taken, and renamed without change of content in commit
+\texttt{6bd2f1b}).  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r26 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r26 setting and hypotheses}
+\label{subsec:v490-r26-setting}
+
+As in v4.8.0-r16: slot norms \(n_k\), \(x_k=n_k^2\), \(S=\sum x_k\), \(Q=\sum x_k^2\), \(H=\sum x_k^3\),
+\(P=n_1n_2n_3\), \(t=\operatorname{Re}((ab)c)=P\) at the minimum, reading \(\sqrt{m_k}\propto n_k\).  Only \(H\) adds a
+term \(x_k^3\) to the condition at critical points, so the fixed minimal extension is
+\[
+V_6=-S+\beta S^2+\gamma Q-\kappa P+\delta H,\qquad \delta>0,\ \kappa\ge0 .
+\]
+H16a: for part of a fixed parameter distribution (\(N=2000\)), \(V_6\) has a global minimum with three distinct non-zero
+norms.  H16b: for some parameters the charged-lepton triple is the global minimum.  H16c: \(K=2/3\) is singled out among
+such minima (at least half within \(0.01\)).
+
+\subsection*{v4.9.0-r26 results}
+\label{subsec:v490-r26-results}
+
+Script \texttt{llm/k64\_test\_h16.py}.  Global minima over the distribution: 1585 with equal norms, 398 with one occupied
+slot, 17 with a degenerate pair, \textbf{none} with three distinct norms.  The lepton triple is a critical point on the
+whole two-parameter family given by Vieta's relations, but on the \(41\times41\) grid it is nowhere even a local minimum
+(1139 points with \(\delta\le0\), 542 with an indefinite Hessian).
+
+\paragraph{Verdict.}
+H16a, H16b and H16c are refuted under the fixed criterion.
+
+\paragraph{Theoremlet v4.9.0-r26.1 (found after the verdict).}
+Every polynomial potential in the slot norms and \(P\) of degree at most six has the form
+\(V=A(S,P)+e_2\,(b_0+b_1S)\) with \(e_2=\sum_{i<j}x_ix_j\).  At a critical point with three distinct non-zero norms it is
+a saddle if \(b_1\neq0\); if \(b_0=b_1=0\) it does not depend on \(e_2\) and the norms are not fixed.  Hence no potential of
+degree at most six has a minimum with three distinct norms; degree at least eight is necessary.
+
+\paragraph{Proof sketch.}
+\(Q=S^2-2e_2\), \(H=S^3-3Se_2+3P^2\), \(SQ=S^3-2Se_2\); the other invariants \(S,S^2,S^3,P,SP,P^2\) do not contain
+\(e_2\).  For distinct \(x_k\) the map \(n\mapsto(S,e_2,P)\) is a local diffeomorphism (Vandermonde), and at a critical
+point the Hessian transforms by congruence.  In these coordinates it reads
+\(\left(\begin{smallmatrix}\ast&b_1&\ast\\ b_1&0&0\\ \ast&0&\ast\end{smallmatrix}\right)\), whose leading
+\(2\times2\) minor is \(-b_1^2<0\).  For \(V_6\), \(b_1=-3\delta\), and \(\partial V/\partial e_2=0\) is the Vieta relation
+\(2\gamma+3\delta S=0\).  Checked exactly with 40 digits at 2000 random critical points of the general degree-six ansatz
+(script \texttt{llm/k65\_sattel\_grad6.py}); in double precision the negative eigenvalue can fall to \(5\cdot10^{-15}\) of
+the largest.  \(\square\)
+
+\paragraph{Reclassification.}
+The statement of v4.8.0-r16 that degree six is necessary holds for critical points; for minima degree six is not enough.
+Whether degree eight suffices is not shown.  It adds at least four coefficients, so the two lepton ratios could at best be
+fitted, and \(K=2/3\) involves \(\sum n_k\), which is not a polynomial invariant.  Within this framework the generation
+\(S_3\) with natural invariants does not produce a mass hierarchy; one needs an explicit breaking of \(S_3\) or invariants
+beyond the norms, such as the real parts of the individual slots, which \(G_2\) leaves fixed.
+
+\subsection*{v4.9.0-r26 status in the three frames}
+\label{subsec:v490-r26-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+H16 verdict, r26.1 & frame-free: statements about octonion norms and polynomial invariants, no frame quantity enters\\
+mass reading \(\sqrt{m_k}\propto n_k\) & matter frame M (charged-lepton masses, as the Koide phase in v4.9.0-r22); not evaluated in T or P\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r26 ledger and guard update}
+\label{subsec:v490-r26-ledger-guard}
+
+\[
+R_{\rm cg}^{v490\text{-}r26}=(0,0,1)
+\]
+for (separation consistent with \(G_2\); carrier of the triality slots identified; mass mechanism open, with all
+norm-invariant potentials up to degree six excluded).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r26,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r26}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
 \end{document}
