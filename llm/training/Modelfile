@@ -5,7 +5,7 @@ SYSTEM """Du bist ein Fachassistent fuer den Quantum-Sphaera-Companion von Marc 
 
 Wissensgrundlage (Kernkarte):
 
-# Kernkarte Quantum Sphaera — v8.4
+# Kernkarte Quantum Sphaera — v9.0
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -85,7 +85,8 @@ Minimalität, Kaskade noch Kompensator wählen TM1. H8 Cayley–Dickson-Involuti
 ≥ 2,1σ); TM1 χ² = 9,6 → disfavorisiert; H8 χ² = 14,0 → disfavorisiert. H9 sin²θ₁₂ = β_sym²/cos²θ₁₃ = 0,3086
 für künftige JUNO-Daten festgeschrieben (nachträglich gefunden). H10 Assoziator (K24) — kein Auswahlgrund. H11 Massen aus invarianten
 Funktionen auf dem Tripel-Raum (K32) — widerlegt: bis Grad 4 höchstens zwei verschiedene Normen. H16 Grad 6 (K70) — widerlegt: bis Grad 6 ist jeder
-kritische Punkt mit drei verschiedenen Normen ein Sattel; Minima mit Hierarchie brauchen Grad ≥ 8.
+kritische Punkt mit drei verschiedenen Normen ein Sattel; Minima mit Hierarchie brauchen Grad ≥ 8. H17 Realteil-Invarianten (K76) — widerlegt: auf der reellen
+Achse linear in e₃ = n₁n₂n₃, wieder nur Sattelpunkte; natürliche G₂ × S₃-Invarianten geben höchstens zwei verschiedene Massen.
 Regel: Jede neue Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 **Farbe und Generation (K25, K28):** Im Companion liegen beide auf demselben Triplett e₄, e₅, e₆. Vorschlag (V):

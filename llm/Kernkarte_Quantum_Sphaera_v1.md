@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v8.9
+# Kernkarte Quantum Sphaera — v9.0
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -78,7 +78,8 @@ Minimalität, Kaskade noch Kompensator wählen TM1. H8 Cayley–Dickson-Involuti
 ≥ 2,1σ); TM1 χ² = 9,6 → disfavorisiert; H8 χ² = 14,0 → disfavorisiert. H9 sin²θ₁₂ = β_sym²/cos²θ₁₃ = 0,3086
 für künftige JUNO-Daten festgeschrieben (nachträglich gefunden). H10 Assoziator (K24) — kein Auswahlgrund. H11 Massen aus invarianten
 Funktionen auf dem Tripel-Raum (K32) — widerlegt: bis Grad 4 höchstens zwei verschiedene Normen. H16 Grad 6 (K70) — widerlegt: bis Grad 6 ist jeder
-kritische Punkt mit drei verschiedenen Normen ein Sattel; Minima mit Hierarchie brauchen Grad ≥ 8.
+kritische Punkt mit drei verschiedenen Normen ein Sattel; Minima mit Hierarchie brauchen Grad ≥ 8. H17 Realteil-Invarianten (K76) — widerlegt: auf der reellen
+Achse linear in e₃ = n₁n₂n₃, wieder nur Sattelpunkte; natürliche G₂ × S₃-Invarianten geben höchstens zwei verschiedene Massen.
 Regel: Jede neue Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 **Farbe und Generation (K25, K28):** Im Companion liegen beide auf demselben Triplett e₄, e₅, e₆. Vorschlag (V):
@@ -1865,6 +1866,30 @@ Selbststabilisierung. Mit Rückweg S² → S⁸ (Rate r): eindeutig stationär (
 Dublett: geschlossen → Photon, nachgefüllt → stabil. Rückweg vorgeschlagen: Vakuumpaare (r29). Statusvermerk erweitert (Regel C).
 R_Mk = (0,0,1).
 
+### K76 — Vorab festgelegter Test H17 und Companion-Runde v4.9.0-r32: Realteil-Invarianten auf dem Tripel-Raum (2026-10-23)
+
+`sec:v490-r32-real-part-triple-space`, Snippet `llm/v490_r32_round.tex`. Vorab-Notiz `llm/Vorab_Notiz_H17_Realteile_Tripelraum.md`
+(im Container festgelegt 2026-10-22 21:11, Rechner nicht erreichbar, dem Autor vor der Rechnung geschickt; lokal mit
+ursprünglichem Zeitstempel als 1a39d6f). Ergebnis `llm/Ergebnis_H17_Realteile_Tripelraum.md`, Skripte `llm/k69_test_h17.py`,
+`llm/k70_achse_e3.py` (im Container als k66/k67 gerechnet, Namen waren vergeben, Code unverändert).
+
+**K76.1 (M).** V_R = −S + βS² + γQ − κt − μL − νR₂ − λL² (L = ΣRe a_k, R₂ = Σ(Re a_k)², G₂-invariant je Platz), Minimierung
+über alle 24 Koordinaten. N = 2000: 1483 × gleiche Normen, 517 × entartetes Paar, 0 × drei verschiedene; 1629 Minima auf der
+reellen Achse (G₂ ungebrochen). Lepton-Tripel (Vieta-Gitter 21 × 4 × 7 × 3): 696 unbeschränkt, 1061 indefinit, 7 lokal nicht
+global, 0 global.
+
+**K76.2 Urteil (S).** H17a, H17b, H17c **widerlegt**.
+
+**K76.3 Theoremlet r32.1 (M, nach dem Urteil).** Auf der Achse t = e₃, R₂ = S, L = e₁ und V_R = A(e₁,e₂) + e₃(4γe₁ − κ),
+weil Q = e₁⁴ − 4e₁²e₂ + 2e₂² + 4e₁e₃. Hessematrix in (e₁,e₂,e₃): H₃₃ = 0, H₁₃ = 4γ → Sattel. Allgemein: symmetrische Polynome
+in n vom Grad ≤ 5 sind linear in e₃. Die 7 „lokalen Minima“ haben exakt (50 Stellen) einen negativen Eigenwert, relativ ≈ 10⁻⁹,
+unter der festgelegten Toleranz 10⁻⁸.
+
+**K76.4 Einordnung.** Realteile verschieben das Hindernis von e₂ (r26.1) nach e₃, heben es nicht auf. Auf der Achse generisch
+Grad ≥ 6 nötig, ohne Realteile Grad ≥ 8; jeweils Anpassung. Abseits der Achse kein Satz, numerisch kein Gegenbeispiel. H11, H16,
+H17: natürliche G₂ × S₃-Invarianten geben höchstens zwei verschiedene Massen. Nächster prüfbarer Weg: explizite S₃-Brechung.
+Frames: Urteil und r32.1 frame-frei, Massen-Lesart nur Materie. R_cg^{r32} = (0,0,1); Guards unverändert, β₄ unverbraucht.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1994,6 +2019,7 @@ R_Mk = (0,0,1).
 - v8.8 (2026-10-22): K74 Companion-Runde v4.9.0-r30 (Kompensator umgeht die klassische 1/2; Partner = Tachyon durch T; Austausch kohärent).
 
 - v8.9 (2026-10-22): K75 Companion-Runde v4.9.0-r31 (Markov-Kaskade: geschlossen keine Stabilisierung, mit Rückweg stabile Flussanteile β²; Statusvermerk thm:dark-energy).
+- v9.0 (2026-10-23): K76 Vorab-Test H17 (Realteil-Invarianten auf dem Tripel-Raum) widerlegt; Theoremlet r32.1 (auf der Achse linear in e₃, Sattelpunkte); Companion-Runde v4.9.0-r32.
 
 ---
 
