@@ -2,15 +2,17 @@
 #
 # Mathlib braucht unter .lake/ rund 5 GB. Im OneDrive-Ordner würde das hochgeladen; ein
 # Verzeichnislink hilft nicht, OneDrive verfolgt ihn (getestet 2026-10-22). Deshalb wird
-# der Quelltext nach $BuildDir gespiegelt (ohne .lake/), dort gebaut, und ein geändertes
+# der Quelltext in den Zielordner gespiegelt (ohne .lake/), dort gebaut, und ein geändertes
 # lake-manifest.json wird zurückkopiert.
 #
 #   .\build.ps1                    # lake build
 #   .\build.ps1 exe cache get      # beliebige lake-Argumente
 #
-# Zielordner: $env:QS_FORMAL_BUILD_DIR, sonst %LOCALAPPDATA%\qs-formal.
+# Zielordner: $env:QS_FORMAL_BUILD_DIR, sonst %USERPROFILE%\.qs-formal-build. Nicht
+# %LOCALAPPDATA%: aus einer paketierten App (etwa der Claude-Desktop-App) heraus wird das auf
+# einen app-eigenen Ordner umgeleitet, und eine normale Shell fände den Build dort nicht.
 
-$BuildDir = if ($env:QS_FORMAL_BUILD_DIR) { $env:QS_FORMAL_BUILD_DIR } else { "$env:LOCALAPPDATA\qs-formal" }
+$BuildDir = if ($env:QS_FORMAL_BUILD_DIR) { $env:QS_FORMAL_BUILD_DIR } else { "$env:USERPROFILE\.qs-formal-build" }
 if (-not [System.IO.Path]::IsPathRooted($BuildDir)) { throw "Zielordner muss absolut sein: $BuildDir" }
 
 $src = $PSScriptRoot
