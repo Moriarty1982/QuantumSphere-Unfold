@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v8.4
+# Kernkarte Quantum Sphaera — v8.5
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1790,6 +1790,20 @@ Invariant. Im Rahmen „Normen und t = P“ erzeugt die Generationen-S₃ keine 
 S₃-Brechung oder Invarianten jenseits der Normen (Realteile der Plätze sind G₂-invariant). Frames: Urteil und r26.1
 frame-frei; Massen-Lesart nur Materie. R_cg^{r26} = (0,0,1); Guards unverändert, β₄ unverbraucht.
 
+### K71 — Companion-Runde v4.9.0-r27: Dynamik der gekickten Dualitätsdrehung (2026-10-22)
+
+`sec:v490-r27-kick-measurement-dynamics`, Snippet `llm/v490_r27_round.tex`, Skript `llm/k64_dynamik_kick_messung.py`.
+
+**K71.1 (M).** Modell: Dualitätsdrehung U_α = exp(−iασ_y), dann Messung {C_HC, A}. Selektiv: Überleben cos²α, 3/4 bei π/6, n = 20
+bis unter 1/256 (C5-Rekursion). Nicht-selektiv: ein π/6-Kick aus R (|b| = 1) gibt den Hopf-Zustand (|b| = 1/2, γ_L = 2,
+Eigenwerte 3/4, 1/4); gemessener Abstand ⇔ Kickwinkel 28,78°, Überleben 0,768 (r13-Gitterwert). Fluss aller Zustände zu b = 0
+(Photon als Attraktor), Entropie monoton. Spur fest, |s| schrumpft: außerhalb der Transportgruppe von Lesart B (wie r10.2
+verlangt). Dichte Kicks: Γ = 2ω²τ → 0 (Zeno), kontinuierlich Dephasierung in der Kompensatorbasis.
+
+**K71.2 (M).** Grenzen: (cos²α)^n > 0 für jedes endliche n (kein endlicher Score-Nullpunkt, nur C5_det/eff); leer erst bei α = π/2
+(Vierteldrehung, durch C4/C6 blockiert, r12.2(c)); α = π/4 erreicht b = 0 in einem Schritt, Score dort 1/2. Offen: Uhr-Einheit,
+κ, messender Agent. Form (iii) offen. R_dyn = (0,0,1).
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1909,6 +1923,8 @@ frame-frei; Massen-Lesart nur Materie. R_cg^{r26} = (0,0,1); Guards unverändert
 - v8.2 (2026-10-22): K68 Companion-Runde v4.9.0-r24 (r23-Widersprüche als Ein-Frame-Artefakte korrigiert; F5–F7).
 - v8.3 (2026-10-22): K69 Companion-Runde v4.9.0-r25 (Überarbeitung des Hauptkorpus: Archiv, Korrekturen, Statusvermerke).
 - v8.4 (2026-10-22): K70 Vorab-Test H16 (Grad-6-Potentiale auf dem Tripel-Raum) widerlegt; Theoremlet r26.1 (bis Grad 6 nur Sattelpunkte); Companion-Runde v4.9.0-r26; K32.3 neu eingeordnet.
+
+- v8.5 (2026-10-22): K71 Companion-Runde v4.9.0-r27 (Dynamik: Drehung plus Kompensator-Messung).
 
 ---
 
