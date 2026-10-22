@@ -1,0 +1,45 @@
+{
+  "title": "Quantum Sphaera Companion: A Structure-First Mathematical Unfolding",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "creators": [
+    {
+      "name": "Brendecke, Marc",
+      "affiliation": "Independent Researcher, Bochum"
+    }
+  ],
+  "description": "<p>Quantum Sphaera Companion v4.9.0.</p><p>v4.9.0 is the full-source research line built from the complete v4.7.0 source, with the published v4.8.0 layers carried in. All inherited source text is retained; new prose, premise qualifications and research sections are added outside the preserved fragments, and earlier layers are not rewritten.</p><p><strong>New main sections.</strong> A premise audit that qualifies known MM/HC spectral, inverse-exponent and OP5 issues before the inherited core is read; a declared neutral odd-cross Cartan comparison with residual-source Ward identities, a conditional gravitational subsidiary theorem and finite-dimensional compatibility propositions (rank-40 normal inverse against the higher-jet source gate); the equal-norm condition for the Koide relation with a conditional HC-shaped realization and a finite local kernel; tests of the HC-to-mass identification with a norm-controlled descent criterion and stated obstructions; conditional closed generation states and a closure-defect coupling; an operator link with a closure-transfer obstruction and frame underdetermination; a coupling-scale candidate with a two-harmonic Koide obstruction; declared comparison and kinetic tensors; and a section on HC dynamics and geometry. These are conditional results with stated hypotheses; native matrix elements, the physical mass law and a native action are not derived.</p><p><strong>Carried v4.8.0 line.</strong> The layers published with v4.8.0 (v4.7.0-r85 to r94, v4.8.0-r01, r02) and the layers recorded after it (v4.8.0-r03 to r20) are appended verbatim. They are predominantly audits, corrections and pre-registered tests: a dimensional and numerical audit of the physical-constant layer; decoupling from the Riemann source, which is no longer used as a proof source; refutation of the Theta-sum conjecture; the complex-vector reading of the biquaternion kernel; thirteen tests fixed in committed notes before computation, of which one is supported, one awaits the next JUNO release and the others are refuted, disfavoured, without selection power or not separable; and a typing of the frame offset showing that the frame factor used between matter and photon frame is the matter-tachyon term and that no real Lorentz transformation relates the sectors of the complex-vector reading. Their registers state that no prediction of the inherited falsifiability corollary stands as confirmed. Two repairs made inside the v4.8.0 monolith are carried as premise qualifications.</p><p><strong>Scope guard:</strong> this is a guarded local/restricted/effective release. Guard and residual vectors are unchanged. It does not claim exact finite C5 zero closure, exact all-readout terminality, C6/T2 closure, a global photon-clock or Riemann-Hypothesis theorem, global all-readout closure, a native action, a frame assignment, a physical scale, or OP5 closure.</p><p>Version DOI: 10.5281/zenodo.23534954<br>Concept DOI: 10.5281/zenodo.19210728<br>Previous version DOI (v4.8.0): 10.5281/zenodo.23365244<br>Earlier version DOI (v4.7.0): 10.5281/zenodo.20232911</p>",
+  "version": "v4.9.0",
+  "language": "eng",
+  "license": "cc-by-4.0",
+  "keywords": [
+    "Quantum Sphaera",
+    "structure-first mathematics",
+    "effective closure",
+    "frame-typed readouts",
+    "Cartan comparison",
+    "Koide relation",
+    "pre-registered tests",
+    "mathematical physics",
+    "preprint"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Moriarty1982/QuantumSphere-Unfold",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "10.5281/zenodo.19210728",
+      "relation": "isVersionOf",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.23365244",
+      "relation": "isNewVersionOf",
+      "scheme": "doi"
+    }
+  ],
+  "notes": "Guarded local/restricted/effective scope only. This release does not claim global all-readout closure, C6/T2 closure, exact finite C5 zero closure, exact all-readout terminality, a global photon-clock/RH theorem, a native action, a frame assignment, a physical scale, or OP5 closure.",
+  "publication_date": "2026-10-21"
+}

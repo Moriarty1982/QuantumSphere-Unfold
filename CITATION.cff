@@ -1,22 +1,22 @@
 cff-version: 1.2.0
 message: "If you use this work, please cite the Zenodo public release."
 title: "Quantum Sphaera Companion: A Structure-First Mathematical Unfolding"
-version: "v4.8.0"
-date-released: "2026-10-14"
+version: "v4.9.0"
+date-released: "2026-10-21"
 authors:
   - family-names: "Brendecke"
     given-names: "Marc"
-doi: "10.5281/zenodo.23365244"
+doi: "10.5281/zenodo.23534954"
 identifiers:
   - type: doi
-    value: "10.5281/zenodo.23365244"
-    description: "Version DOI for v4.8.0"
+    value: "10.5281/zenodo.23534954"
+    description: "Version DOI for v4.9.0"
   - type: doi
     value: "10.5281/zenodo.19210728"
     description: "Concept DOI for the Quantum Sphaera Companion record"
   - type: doi
-    value: "10.5281/zenodo.20232911"
-    description: "Version DOI for the previous release v4.7.0"
+    value: "10.5281/zenodo.23365244"
+    description: "Version DOI for the previous release v4.8.0"
 repository-code: "https://github.com/Moriarty1982/QuantumSphere-Unfold"
 abstract: >-
   Structure-first mathematical companion material for the Quantum Sphaera / Sphere Framework project.
@@ -26,6 +26,8 @@ keywords:
   - readout geometry
   - tensor notation
   - Planck readout
+  - Cartan comparison
+  - pre-registered tests
   - mathematical physics
   - Quantum Sphaera
 license: "CC-BY-4.0"

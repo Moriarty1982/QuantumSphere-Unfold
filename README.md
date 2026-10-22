@@ -1,17 +1,19 @@
 # Quantum Sphaera Companion
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23534954.svg)](https://doi.org/10.5281/zenodo.23534954)
+
 Structure-first mathematical companion material for the Quantum Sphaera / Sphere Framework project.
 
 ## Current public baseline
 
-- Public version: `v4.8.0` (2026-10-14)
-- Version DOI: `10.5281/zenodo.23365244`
-- Concept DOI: `10.5281/zenodo.19210728`
-- Previous version: `v4.7.0`, DOI `10.5281/zenodo.20232911`
-- Release files: [`release/v4.8.0/`](release/v4.8.0/) (PDF, TeX source, SHA256 manifest)
+- Public version: `v4.9.0` (2026-10-21)
+- Version DOI: [`10.5281/zenodo.23534954`](https://doi.org/10.5281/zenodo.23534954) ([Zenodo record](https://zenodo.org/records/23534954))
+- Concept DOI: [`10.5281/zenodo.19210728`](https://doi.org/10.5281/zenodo.19210728)
+- Previous version: `v4.8.0`, DOI `10.5281/zenodo.23365244`; earlier `v4.7.0`, DOI `10.5281/zenodo.20232911`
+- Release files: [`release/v4.9.0/`](release/v4.9.0/) (PDF, single-file TeX source, SHA256 manifest)
 - Repository and source history: [Moriarty1982/QuantumSphere-Unfold](https://github.com/Moriarty1982/QuantumSphere-Unfold)
 
-The current public baseline is the Zenodo-published `v4.8.0` release. It carries the full v4.7.0 monolith, the source-only layers v4.7.0-r85 to r94 recorded after the v4.7.0 release, and the opening layer of the v4.8.0 line, v4.8.0-r01 (Planck-Readout Metric Layer). Guard and residual vectors are unchanged from v4.7.0. Repository changes after this release should be treated as post-release maintenance, research notes, or explicitly versioned follow-up work.
+The current public baseline is the Zenodo-published `v4.9.0` release. It is built from the full-source research line in [`sources/research/`](sources/research/README.md), which retains the complete v4.7.0 monolith in preserved fragments, adds the v4.9.0 main sections (premise audit, conditional Cartan comparison and finite normal-source compatibility, Koide equal-norm condition and local kernel, HC mass identification, generation coupling and related conditional results), and carries the published v4.8.0 layers (v4.7.0-r85 to r94, v4.8.0-r01, r02) together with the layers recorded after v4.8.0 (v4.8.0-r03 to r20). The release source in `release/v4.9.0/` is a single file flattened from the modular sources. Guard and residual vectors are unchanged. Repository changes after this release should be treated as post-release maintenance, research notes, or explicitly versioned follow-up work.
 
 ## Scope guard
 
@@ -21,7 +23,7 @@ Allowed public-facing language should remain local, bounded, effective, or reado
 
 ## Release-line discipline
 
-### `v4.8.x` stabilization line
+### `v4.9.x` stabilization line
 
 Use this line only for public-facing hygiene:
 
@@ -31,7 +33,7 @@ Use this line only for public-facing hygiene:
 - broken links or obvious public-facing wording defects;
 - release-note cleanup.
 
-Do not silently mutate the published `v4.8.0` or `v4.7.0` TeX/PDF payloads.
+Do not silently mutate the published `v4.9.0`, `v4.8.0` or `v4.7.0` TeX/PDF payloads.
 
 ### `v4.8.0` research line: Planck-Readout Metric Layer
 
@@ -51,16 +53,14 @@ Still open on this line: the MM/HC field-equation refactor.
 
 The [full-source research working copy](sources/research/README.md) now has a separate entry point, `sources/research/v480-companion.tex`, derived from the complete 1,014-page v4.7.0 monolith. It retains the entire baseline source with a byte-level map, separates the human reading route from complete technical support, and proposes the guarded v4.8 integration interface. This is not a published v4.8 release, a complete correction of all inherited arguments, or a replacement of the frozen v4.7.0 payload. The older modular `sources/active-core.tex` is a different source/version scope.
 
-## Research Candidate
+## Full-source research line
 
-The unreleased **v4.9.0 research candidate** now integrates the conditional
-neutral Cartan comparison and finite normal-source compatibility into the
-main reading route of the existing full-source working copy. It includes
-proofs of the finite inverse/source laws, explicit assumptions and numerical
-negative controls; it does not claim full regional existence or native
-physical identification. See the [candidate change record](analysis/V490_Research_Candidate.md).
-The historical entry filename remains `sources/research/v480-companion.tex`.
-No v4.9.0 release, upload or version DOI has been created.
+The **v4.9.0 release** comes from the full-source research line in `sources/research/`. It integrates the
+conditional neutral Cartan comparison and finite normal-source compatibility into the main reading route, with
+proofs of the finite inverse/source laws, explicit assumptions and numerical negative controls; it does not claim
+full regional existence or native physical identification. See the
+[change record](analysis/V490_Research_Candidate.md). The historical entry filename remains
+`sources/research/v480-companion.tex`; the modular sources stay the working form for later layers.
 
 ## Citation
 
