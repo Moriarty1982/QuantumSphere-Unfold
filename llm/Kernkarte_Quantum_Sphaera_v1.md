@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v7.8
+# Kernkarte Quantum Sphaera — v7.9
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1680,6 +1680,22 @@ ohne entsprechende Lesart, 16 rahmenfrei.
 (1/6) nur am Hopf-Punkt innen. Guard: Schranke frame-typisiert, enger = weniger behauptet, kein Guard verbraucht.
 R_prov = (0,0,1).
 
+### K65 — Companion-Runde v4.9.0-r21: Uhrschranke je Frame, Herleitung der 1/5 (2026-10-22)
+
+`sec:v490-r21-clock-bound-per-frame`, Snippet `llm/v490_r21_round.tex`, Skript `llm/k60_delta_gamma_je_frame.py`.
+
+**K65.1 (M).** Prämissen: D1 G = 1/|b| = |γ| (Uhr hebt Sichtbarkeit auf 1, Auslese); D2 κ = Partnerport (Materie p₋, Tachyon p₊
+durch J_B); D3 Balance κ(N−1) = 1; D4 N frame-invariant; D5 Tachyon = Uhrsaat (5, 3/4, 1). Reserven
+Δ_M = (10x²−5x+1)/((1+x)(1+2x)), Δ_T = (1+3x−14x²)/((1+x)(1+2x)), x = β². Frame-Konsistenz G_M S_M = G_T S_T ⇒ x = 1/3 eindeutig,
+N = 5, Δ = 1/5 in beiden Frames. Ohne D3 (N = 5): 4p₋² − 9p₋ + 2 = 0 ⇒ p₋ = 1/4.
+
+**K65.2 (M).** Je Frame gemessen: Materie 0,1925 (1/5 um 0,0075 zu großzügig; Kollarzeile innen, C5-Stufe außen); Tachyon kein
+Fenster nötig (S = 22,9 ≥ 16), Reserve 0,302; Photon entartet (Scheibe: G → ∞; σ-Linie: blockiert) = Informationssingularität
+in der Uhrenschicht. Frame-frei nur am Hopf-Punkt. Uhrsaat = J_B-Bild von V3. r20-Folge 3 (Kollarzeile außen) unter D3 aufgehoben.
+
+**K65.3 (D).** Regel für Frame-Unterscheidung: Tachyon = J_B-Bild (x → 1/x, p± getauscht, γ negativ), Photon = entarteter
+Fixpunkt p± = 1/2. Anwendung auf andere Schichten offen. R_frame = (0,0,1).
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1793,6 +1809,7 @@ R_prov = (0,0,1).
 - v7.6 (2026-10-22): K62 Companion-Runde v4.9.0-r18 (Wege A und C zugleich: Klassentrennung Skala/Auslese).
 - v7.7 (2026-10-22): K63 Companion-Runde v4.9.0-r19 (Klassentrennung angewandt: P5 = 1/2 automatisch, P3 verloren, P6 nur genähert).
 - v7.8 (2026-10-22): K64 Companion-Runde v4.9.0-r20 (Herkunftshypothese Δ_γ < 1/5: Photon-Frame-Uhrgewinn am Hopf-Punkt).
+- v7.9 (2026-10-22): K65 Companion-Runde v4.9.0-r21 (Uhrschranke je Frame, 1/5 aus Frame-Konsistenz hergeleitet).
 
 ---
 

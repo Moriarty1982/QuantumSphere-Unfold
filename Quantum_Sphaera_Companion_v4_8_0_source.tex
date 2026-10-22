@@ -70683,4 +70683,167 @@ R_{\rm glob}^{(v490\text{-}r20,+)}=(0,1,1,1,1),
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
 
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r21 Source-Only: The Clock Bound Frame by Frame, and a Derivation of \texorpdfstring{\(1/5\)}{1/5}}
+\addcontentsline{toc}{section}{v4.9.0-r21 Source-Only: The Clock Bound Frame by Frame, and a Derivation of 1/5}
+\label{sec:v490-r21-clock-bound-per-frame}
+% ============================================================================
+
+\paragraph{Purpose.}
+r20 traced \(\Delta_\gamma<1/5\) to the Hopf point and found that the bound changes away from it.  How it changes depended on
+how the chart was carried over.  On 2026-10-22 the author asked to compute the bound separately for each frame, since a
+distinction by frame may have to be built in everywhere, and to attempt a concrete derivation.  This layer states five
+premises, derives the bound per frame from them, and shows that \(1/5\) follows from one consistency condition.  The script is
+\texttt{llm/k60\_delta\_gamma\_je\_frame.py}.  No new prediction is made and nothing is compared with data.  Earlier layers are
+not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r21 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r21 premises}
+\label{subsec:v490-r21-premises}
+
+The window condition is that of r12, \(G(1-\Delta_\gamma)S>16\) with \(S=N+\kappa N(N-1)\).  The doublet state of r17 at
+\(x=\bsym^2\) has \(|b|=1/\gamma\), \(\gamma=(1+x)/(1-x)\), \(p_-=x/(1+x)\), \(p_+=1/(1+x)\).
+\begin{enumerate}[leftmargin=2em]
+\item[(D1)] \emph{Clock gain.}  The photon-frame clock restores the visibility \(|b|\) of the compensator readout to \(1\), so
+\(G=1/|b|=|\gamma|\).  This is a readout quantity in the sense of r19 and keeps \(\gL\) (way A).
+\item[(D2)] \emph{Pair coupling.}  \(\kappa\) is the content of the partner port.  In the matter frame (\(b_1>0\)) that is \(p_-\).  In
+the tachyon frame (\(b_1<0\)) \(J_B\) exchanges the ports (r02, r04), so it is \(p_+\).
+\item[(D3)] \emph{Balance.}  In the frame that needs the clock, the partner content of the other packets refills one packet:
+\(\kappa(N-1)=1\).  This is the balance condition that singles out \(V3\) in r12.
+\item[(D4)] \emph{Packet count.}  \(N\) counts packets and is the same in every frame.
+\item[(D5)] \emph{Tachyon description.}  In the tachyon frame the chart is the clock seed of the source,
+\((N,\kappa,G)=(5,\tfrac34,1)\), so \(G_T=1\).
+\end{enumerate}
+(D2) and (D3) follow from r02, r04 and r12.  (D1) gives a mechanism to the gain that r14 calls photon-frame timing.  (D4) and
+(D5) are assumptions.  (D5) is taken from the data of the source.
+
+\subsection*{v4.9.0-r21 the derivation}
+\label{subsec:v490-r21-derivation}
+
+\paragraph{Theoremlet v4.9.0-r21.1.}
+Under (D1)--(D5), with \(N=1+1/p_-=2+1/x\) from (D3), the survival reserves \(1-16/(GS)\) are
+\[
+\Delta_M^{\max}(x)=\frac{10x^2-5x+1}{(1+x)(1+2x)},\qquad
+\Delta_T^{\max}(x)=\frac{1+3x-14x^2}{(1+x)(1+2x)} .
+\]
+Require that the window's margin be the same whichever frame describes it, \(G_MS_M=G_TS_T\).  This has the single solution
+\(x=1/3\), the Hopf point.  There \(N=5\), \(S_M=10\), \(S_T=20\), and
+\[
+\Delta_\gamma^{\max}=\frac15
+\]
+in both frames.  Without (D3), with \(N=5\) held fixed, the same condition reads \(4p_-^2-9p_-+2=0\), with the admissible root
+\(p_-=1/4\), again the Hopf point.
+
+\paragraph{Proof sketch.}
+Substitute (D1)--(D5) and simplify symbolically; solve \(\gamma S_M=S_T\) for \(x>0\).  Checked with a computer algebra system.  \(\square\)
+
+\paragraph{Reading.}
+This is a derivation of \(1/5\) from the doublet state and one consistency condition: one physical window must not survive in
+one frame and fail in the other.  The integer chart \((5,\tfrac14,2)\) and the seed \((5,\tfrac34,1)\) of the source are then its
+matter and tachyon descriptions at that point.  The seed is the tachyon image of \(V3\) under \(J_B\).  It needs no gain, because
+in the tachyon frame the major content sits in the partner port and the pair flux alone reaches \(S=20\ge16\).  The derivation
+does not recover r65.  It shows that a calculation which fixes the frame factor at its Hopf value \(\gL=2\), as r20 proposed,
+lands on the one point where matter and tachyon agree.
+
+\subsection*{v4.9.0-r21 the bound in each frame}
+\label{subsec:v490-r21-per-frame}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.33\textwidth}rrrrrl@{}}
+\toprule
+frame, point & \(|G|\) & \(\kappa\) & \(N\) & \(S\) & reserve & remark\\
+\midrule
+matter, Hopf & \(2\) & \(0.250\) & \(5\) & \(10\) & \(0.200\) & window\\
+tachyon, Hopf & \(1\) & \(0.750\) & \(5\) & \(20\) & \(0.200\) & no window needed\\
+matter, measured & \(1.864\) & \(0.232\) & \(5.31\) & \(10.63\) & \(0.1925\) & window\\
+tachyon, measured & \(1\) & \(0.768\) & \(5.31\) & \(22.92\) & \(0.302\) & no window needed\\
+photon, disk (\(b=0\)) & \(\infty\) & \(0.5\) & --- & --- & \(\to1\) & degenerate\\
+photon, scale line (\(G=1\), \(N=5\)) & \(1\) & \(0.5\) & \(5\) & \(15\) & \(<0\) & blocked\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Theoremlet v4.9.0-r21.2.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Matter frame: at the measured offset the bound is \(0.1925\), \(0.0075\) below \(1/5\).  The frame-free \(1/5\) is slightly
+too generous there.  The collar row of r05 (\(1/6\)) stays inside and the C5 stage (\(1/4\)) outside.
+\item[(b)] Tachyon frame: the pair flux reaches the relay threshold without the clock.  \(W_{\rm clk}^{\rm loc}\) has no content
+there.  The unassisted reserve is \(0.302\).
+\item[(c)] Photon frame: the bound is degenerate.  In the state disk the gain \(1/|b|\) diverges and every drift is tolerated.
+On the scale line of r17, with no frame factor, the window is closed.  This is the information singularity of r17.2 in the
+clock layer: at the photon the quantity that the bound constrains is not defined.
+\item[(d)] Away from the Hopf point the matter and tachyon reserves differ, \(0.19\) against \(0.30\).  A frame-free bound
+exists only at \(x=1/3\).
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+Numerical evaluation of r21.1 and of the window condition at the stated values.  \(\square\)
+
+\paragraph{Relation to r20.}
+r20 listed several ways to carry the chart away from the Hopf point.  The readings with the chart held fixed gave \(0.10\) to
+\(0.14\) and put the collar row outside.  They violate (D3).  Under (D1)--(D5) the balanced reading is selected, the matter bound
+is \(0.1925\), and consequence 3 of r20 does not apply.
+
+\subsection*{v4.9.0-r21 a rule for frame distinction}
+\label{subsec:v490-r21-rule}
+
+The computation suggests a rule for building the frame distinction into other places.  The tachyon frame is the \(J_B\) image
+of the matter frame: \(x\to1/x\), \(p_\pm\) exchanged, \(|\gamma|\) unchanged and \(\gamma\) negative, the phase \(i\pi\) of the
+superluminal rapidity of r20 (v4.8.0).  The photon frame is the fixed point \(p_+=p_-=\tfrac12\), where readout quantities
+degenerate.  A statement that is valid in one frame needs a separate check in the other two.  It is frame-free only where the
+descriptions agree.  For the clock bound that is the Hopf point alone.  This layer proposes the rule.  Applying it to the other
+layers is left open.
+
+\subsection*{v4.9.0-r21 guard status}
+\label{subsec:v490-r21-guard}
+
+\(W_{\rm clk}^{\rm loc}\) stays a local statement.  Its condition becomes frame-typed: \(\Delta_\gamma<\Delta_M^{\max}(\bsym^2)\) in the
+matter frame, \(1/5\) at the Hopf point and \(0.1925\) at the measured offset; empty in the tachyon frame; undefined at the
+photon.  The narrower matter-frame value claims less than \(1/5\).  No guard is spent.  The photon-frame degeneracy is no route
+to \(W_\gamma^{\rm glob}\): it is the absence of the constrained quantity, not a global clock statement.
+
+\subsection*{v4.9.0-r21 register entries}
+\label{subsec:v490-r21-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r21\\
+\midrule
+\(\Delta_\gamma<1/5\) & derived under (D1)--(D5) as the unique frame-consistent bound, at the Hopf point (r21.1); r65 text still lost\\
+clock bound per frame & matter \(0.1925\) (measured), tachyon no window (reserve \(0.302\)), photon degenerate (r21.2)\\
+clock seed \((5,\tfrac34,1)\) & tachyon image of \(V3\) under \(J_B\)\\
+r20 consequence 3 & superseded under (D3): collar row inside\\
+frame distinction & rule proposed (tachyon = \(J_B\) image, photon = degenerate fixed point); application to other layers open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r21 ledger and guard update}
+\label{subsec:v490-r21-ledger-guard}
+
+\[
+R_{\rm frame}^{v490\text{-}r21}=(0,0,1)
+\]
+for (bound derived under stated premises, values per frame computed, application of the frame rule elsewhere open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r21,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r21}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
 \end{document}
