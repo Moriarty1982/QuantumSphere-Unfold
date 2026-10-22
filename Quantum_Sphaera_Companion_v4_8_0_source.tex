@@ -69921,4 +69921,123 @@ R_{\rm glob}^{(v490\text{-}r14,+)}=(0,1,1,1,1),
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
 
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r15 Source-Only: Consolidated Register of v4.9.0-r01 to r14 and the Ways Out of r17 after r08}
+\addcontentsline{toc}{section}{v4.9.0-r15 Source-Only: Consolidated Register of v4.9.0-r01 to r14 and the Ways Out of r17 after r08}
+\label{sec:v490-r15-consolidated-register}
+% ============================================================================
+
+\paragraph{Purpose.}
+Fourteen layers since the 4.9.0 release have changed the status of several statements of the main body and added
+readings of their own.  This layer collects the statuses in one register, in the manner of
+\S\ref{sec:v480-r09-p2-p3-reclassification}, and lists the assumptions that only the author can confirm.  It also draws one
+consequence that r08 makes available: r17 left three ways out for the cosmological fractions, and r08 decides between
+them.  No new computation and no new prediction enter.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r15 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r15 the ways out of r17 after r08}
+\label{subsec:v490-r15-r17-ways}
+
+r17 found that Theorem~\ref{thm:dark-energy}, held at all epochs, needs \(\bsym\) to decrease from about \(1\) at
+recombination to \(0.558\) today.  Propositions~\ref{prop:H0-tension} and~\ref{prop:saturation} assume the opposite.  It
+recorded three ways out: (a) the theorem holds only at the present epoch; (b) \(\bsym\) runs downward; (c) the cascade
+probabilities are some other function of the fractions at other epochs.
+
+\paragraph{Theoremlet v4.9.0-r15.1.}
+Under the rules of r08 (photon-frame values and \(k=0\) fixed, matter-frame values drifting with the local factor,
+\(k(\alpha)=1\)):
+\begin{enumerate}[leftmargin=2em]
+\item[(b)] is excluded.  A decrease of \(\bsym\) from about \(1\) to \(0.558\) changes the local factor by far more than the
+\(5\%\) that r08.1 already finds incompatible with atomic clocks.
+\item[(a)] and (c) remain.  Both treat \(\bsym\) as fixed and read Theorem~\ref{thm:dark-energy} at one epoch, (a) directly,
+(c) through a time-dependent bridge with fixed \(\bsym\) that the source does not supply.
+\item Item~(1) of Proposition~\ref{prop:saturation} lets the neutrino mass grow with \(\gL(t)^4\).  By the clock bound on the
+same local factor this growth is excluded too.  Together with item~(2), which r17 already rejected, the proposition loses
+its basis.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(b): a local factor diverging towards recombination; the clock bound of r08.1 applies a fortiori.  (a), (c): neither needs a
+drift.  Item~(1): \(k(m_\nu)=4\) drifts faster than \(\alpha\) with the same factor.  \(\square\)
+
+\paragraph{Consequence.}
+With r08, Theorem~\ref{thm:dark-energy} is a statement about the present epoch, \(1-\bsym^2=0.698\) against \(0.689\).
+Its cosmological reach beyond that epoch is not supported by any statement of the source that survives the clocks.
+
+\subsection*{v4.9.0-r15 register}
+\label{subsec:v490-r15-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.14\textwidth}>{\raggedright\arraybackslash}p{0.48\textwidth}@{}}
+\toprule
+statement & layer & status\\
+\midrule
+conversion law, \S\ref{sec:phase-constants} & r01 & factor \(\gL\) is matter--tachyon; ways (A)--(C) open; on-shell \(\cot\theta_W\) lies at (A) (r07, observation)\\
+Thm.~\ref{thm:tribonacci} & r01 & equivalent to \(\cosh2\eta=e^\eta\)\\
+Prop.~\ref{prop:hawking-gBI-tachyon} (ii) & r01 & frame order does not match the axis\\
+Umkehrwalze & r02 & round trip with side change \(=C=PT\); involutive form antilinear, \(J_B\colon E\leftrightarrow B\)\\
+Thm.~\ref{thm:core}, compensator & r02, r03 & output \(\operatorname{Re}s=0\), not null; for a charge a dyon\\
+Prop.~\ref{prop:compensator} & r03 & orthogonality holds for the product \(z\times J_Bz\), not the average\\
+compensator as matrix & r04 & \(\tfrac12(1+\sigma_x)\) on the doublet; state disk, light at the centre\\
+Millennium matrix & r05 & on the doublet only port weighting; reading name ``layer-transport matrix''\\
+photon from matter \(+\) tachyon & r05 & only for crossed orientation\\
+tachyon hit chain & r06 & cone \(56.68^\circ\), simultaneous hits in the matter frame\\
+electroweak mass matrix & r06 & port weighting with massless photon port (formal)\\
+H14 & r07 & refuted as exact relation, undecidable at tree level\\
+H15 & r07 & pre-registered, \(m_W=80.3615\pm0.0018\) GeV, comparison pending\\
+Prop.~\ref{prop:H0-tension} & r08, r09 & no working mechanism; drift excluded by clocks\\
+Thm.~\ref{thm:k-values}, \(\alpha\) row & r08 & \(k=1\) belongs to \(\alpha\) (closes r03 F2)\\
+P5 & r09 & corrected to \(k(\alpha)/k(G_N)=1/2\)\\
+local frame factor & r09 & only a weak potential coupling survives; no field law\\
+C5 factor \(3/4\) & r10, r11, r14 & produced by kicked duality rotation read out at triole \(\cup\,J_B\)(triole); interpretation\\
+C5 shape (iii) & r10 & witnesses from the transport group of Reading~B excluded under the reading\\
+\(\Delta_\gamma<1/5\) & r12 & derived under premises (P1)--(P4); r65 text lost, provenance open\\
+time scale & r13 & kick interval one sixth of the clock beat; unit of the clock open\\
+Thm.~\ref{thm:dark-energy} & r15 & present-epoch statement; r17 way (b) excluded (r15.1)\\
+Prop.~\ref{prop:saturation} & r15 & no basis left (items (1) and (2))\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r15 assumptions for the author}
+\label{subsec:v490-r15-author}
+
+The following steps are interpretations of these layers.  Only the author can say whether they match the original
+intention.
+\begin{enumerate}[leftmargin=2em]
+\item Theorem~\ref{thm:frame-offset} speaks about the fixed structural factor, not the local one (r09).  This resolves its two
+conflicts with Theorem~\ref{thm:k-values}.
+\item The C5 recursion is an alternation of duality rotation and compensation (r10, r11).
+\item The readout acts at discrete directions, and the triole lies on the phase of \(s\) (r14).
+\item The guard \(W_{\rm clk}^{\rm loc}\) refers to the windows of the primary chain \(\mathcal R_A\) (r12, r13).
+\item Which of the ways (A)--(C) of r01 the conversion of constants takes.
+\item Whether Theorem~\ref{thm:dark-energy} is meant for the present epoch only (way (a)) or through a bridge (way (c)).
+\end{enumerate}
+
+\subsection*{v4.9.0-r15 ledger and guard update}
+\label{subsec:v490-r15-ledger-guard}
+
+\[
+R_{\rm reg}^{v490\text{-}r15}=(0,0,1)
+\]
+for (register consolidated, r17 way (b) excluded, author decisions listed and open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r15,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r15}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
 \end{document}

@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v7.2
+# Kernkarte Quantum Sphaera — v7.3
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1593,6 +1593,16 @@ und Tachyon) ⇒ 30° Dualität, q = 3/4; Triole allein 1/4, Viertelraster 1/2. 
 Kicks = z → −z (r02) = eine Schwebung (r13). Annahme: Triole auf arg s gelegt (Quelle: Komponentenbedingung). A₂/SU(3)
 nur Bemerkung. R_kick = (0,0,1); Guards unverändert.
 
+### K59 — Companion-Runde v4.9.0-r15: Sammelregister v4.9.0-r01–r14, r17-Auswege nach r08 (2026-10-22)
+
+**K59.1 (S).** r17-Weg (b) (β läuft von ~1 abwärts) durch die Uhrenschranke von r08 ausgeschlossen; (a) und (c) bleiben,
+beide mit festem β ⇒ thm:dark-energy ist eine Aussage über die heutige Epoche. prop:saturation (1) (m_ν ∝ γ_L(t)⁴)
+ebenfalls ausgeschlossen ⇒ Proposition ohne Grundlage.
+
+**K59.2.** Register aller Statusänderungen r01–r14 in einer Tabelle; Liste der sechs Autorentscheidungen
+(thm:frame-offset strukturell? C5 = Drehen/Kompensieren? Triole auf arg s / diskrete Auslese? W_clk^loc auf R_A?
+Wege A–C? dark-energy (a) oder (c)?). Guards unverändert.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1700,6 +1710,7 @@ nur Bemerkung. R_kick = (0,0,1); Guards unverändert.
 - v7.0 (2026-10-22): K56 Companion-Runden v4.9.0-r11 (gekickte Dualitätsdynamik) und r12 (Δ_γ < 1/5 rekonstruiert).
 - v7.1 (2026-10-22): K57 Companion-Runde v4.9.0-r13 (Zeitskala: τ_k = T_b/6).
 - v7.2 (2026-10-22): K58 Companion-Runde v4.9.0-r14 (Kick-Richtungen Triole ∪ J_B(Triole)).
+- v7.3 (2026-10-22): K59 Companion-Runde v4.9.0-r15 (Sammelregister, r17-Weg (b) ausgeschlossen).
 
 ---
 
