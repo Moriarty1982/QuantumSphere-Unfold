@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v8.2
+# Kernkarte Quantum Sphaera — v8.3
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1746,6 +1746,24 @@ R; in P sind Rahmenterm und p₋/p₊ maximal.
 **K68.4 (D).** Konvention F ergänzt: F5 Bezugsframe R, Umrechnung M → R; F6 Projektion T|_R bei −β; F7 Vorzeichen von β =
 Orientierungscode. R_F = (0,0,0): beide Tachyon-Lagen mit Typisierung behalten.
 
+### K69 — Companion-Runde v4.9.0-r25: Überarbeitung des Hauptkorpus (2026-10-22)
+
+`sec:v490-r25-main-body-revision`, Snippet `llm/v490_r25_round.tex`, Skript `llm/aufraeumen_v490.py`, Sicherungstag
+`vor-aufraeumen-v490-r24`. Autorauftrag: alte Arbeit nicht verlieren, Sackgassen nicht stehen lassen.
+
+**K69.1 (D).** Regel: (A) Sackgasse → Original wortgleich in Archiv-Anhang `sec:v490-archive`, an alter Stelle gleiche
+Umgebung, gleiche Nummer, gleiches Label, Status, Verweis; (B) bekannter Fehler → im Text korrigiert, `\qsstatus` mit altem
+Wortlaut; (C) umgedeutet/offen → `\qsstatus`. Runden, Vorab-Notizen, Tests nie archiviert.
+
+**K69.2 (D).** Archiviert (15): Koide-Phasenformel (K = 2/3 bleibt), GUE-Herleitung (GUE empirisch bleibt), thm:gue-selfdet,
+cor:odlyzko (P1), P3-Komplex (conj:cl-correction, prop:exponent-5, thm:self-consistent-gL, cor:op1-resolved), prop:pmns-z3,
+prop:H0-tension, prop:saturation, prop:bare-lambda, Θ-Summen-Vermutung samt Restabschätzung, RH-Zeile in thm:toe.
+Korrigiert: γ_L⁶ → γ_L⁵ (Vakuum, Matter-Fehler, P4), P5 → 1/2, k = 1 für α, Kompensator-Orthogonalität (Produkt).
+Statusvermerke an 20 Stellen (Sektordefinition, §phase-constants = Bezugsframe R, thm:symmetric-frame u. a.).
+
+**K69.3 (D).** Build 1176 Seiten / 3635 Labels, Overfull 58, harte Werte 0. Auf GitHub liegt der Hauptkorpus in eingefrorenen
+Fragmenten; Übernahme (premise-audit oder neue Basis) ist Autorentscheidung. R_rev = (0,0,0).
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1863,6 +1881,7 @@ Orientierungscode. R_F = (0,0,0): beide Tachyon-Lagen mit Typisierung behalten.
 - v8.0 (2026-10-22): K66 Companion-Runde v4.9.0-r22 (Frame-Regel als Konvention F, Pflichtabschnitt, Linter-Prüfung).
 - v8.1 (2026-10-22): K67 Companion-Runde v4.9.0-r23 (Konvention F auf 113 Hauptkorpus-Aussagen angewandt).
 - v8.2 (2026-10-22): K68 Companion-Runde v4.9.0-r24 (r23-Widersprüche als Ein-Frame-Artefakte korrigiert; F5–F7).
+- v8.3 (2026-10-22): K69 Companion-Runde v4.9.0-r25 (Überarbeitung des Hauptkorpus: Archiv, Korrekturen, Statusvermerke).
 
 ---
 
