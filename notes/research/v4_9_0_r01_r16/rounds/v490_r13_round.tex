@@ -1,0 +1,115 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r13 Source-Only: The Time Scale of the Kicked Duality Dynamics}
+\addcontentsline{toc}{section}{v4.9.0-r13 Source-Only: The Time Scale of the Kicked Duality Dynamics}
+\label{sec:v490-r13-time-scale}
+% ============================================================================
+
+\paragraph{Purpose.}
+The dynamics proposed in r11 fixes only the product \(\omega\tau=\pi/6\).  This layer derives the time scale from the clock
+model the source already contains (Section~\ref{sec:v470-r15-zero-clock-phase-window-relay-stitching}).  It follows the
+source in reading the photon-clock probe as a diagnostic timing function, not as an identity between Riemann zeros and
+photons.  All statements are local, in the clock's own units, and make no global photon-clock statement.  The script is
+\texttt{llm/k54\_zeitskala.py}.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r13 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r13 the rate from the tick profile}
+\label{subsec:v490-r13-rate}
+
+r15 writes the local clock tick as \(G_V(\tau)=1+(G_V^{\rm avail}-1)\cos^2\bigl((\tau-\tau_V)/\sigma_V\bigr)\).  Between two kicks of
+r11 the energy in the compensator port is \(\cos^2(\omega t)\).  Both are \(\cos^2\) of an angle linear in time.
+
+\paragraph{Theoremlet v4.9.0-r13.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Identifying the two profiles gives \(\omega=1/\sigma_V\): the tick width of r15 is the time the duality rotation of r11
+needs for one radian.  The kick interval is \(\tau_{\rm k}=\tfrac\pi6\,\sigma_V\).
+\item[(b)] The smallest probe with a profile has two terms.  For
+\(\mathcal C_\gamma\propto|e^{i\gamma_a\tau}+e^{i\gamma_b\tau}|^2\) the coherent part is exactly
+\(\cos^2\bigl(\tfrac12(\gamma_b-\gamma_a)\tau\bigr)\), so \(\sigma=2/(\gamma_b-\gamma_a)\).  The beat period is
+\(T_{\rm b}=2\pi/(\gamma_b-\gamma_a)\).
+\item[(c)] Hence \(\tau_{\rm k}=T_{\rm b}/6\) for every pair of clock frequencies.  Three stages, the quarter turn from matter to
+tachyon, take half a beat.  Six stages, the half turn \(z\mapsto-z\), take one beat.  Twelve take two beats, and twenty-four,
+the return of the spinor, take four.  The detector stage \(n=20\) lies at \(10/3\) beats.
+\item[(d)] For the two lowest frequencies the source uses, \(\gamma_1=14.1347\ldots\) and \(\gamma_2=21.0220\ldots\):
+\(\sigma=0.29039\), \(T_{\rm b}=0.91228\), \(\tau_{\rm k}=0.15205\) in clock units.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(b) \(|e^{ia}+e^{ib}|^2=4\cos^2\tfrac{b-a}2\); checked numerically to \(10^{-15}\).  (c) \(\tau_{\rm k}=\tfrac\pi6\cdot\tfrac2{\Delta\gamma}=
+\tfrac16\cdot\tfrac{2\pi}{\Delta\gamma}\).  \(\square\)
+
+\paragraph{What is fixed and what is not.}
+The relative statement (c) holds for any pair of frequencies.  The absolute value (d) depends on which pair carries the
+tick, and the source names none.  The first two are the minimal choice.  The clock unit itself has no conversion to
+seconds in the source.  Supplying one would require identifying clock frequencies with physical frequencies.  The source
+expressly declines that identification, and as a global statement it would touch the forbidden global photon-clock
+statement.  The time scale is therefore derived up to the unit of the clock.
+
+\subsection*{v4.9.0-r13 the windows of the primary chain}
+\label{subsec:v490-r13-windows}
+
+\paragraph{Theoremlet v4.9.0-r13.2.}
+In the angle of r13.1(a), the half-widths \(\delta_V/\sigma_V\) of r15 are \(39.23^\circ\) for \(V3\), \(50.77^\circ\) for \(V5\)
+and \(28.13^\circ\) for \(V8\).  A timing offset of one C5 stage, \(30^\circ\), stays inside every window of the primary chain
+\(\mathcal R_A=\{V3,V5\}\) and leaves the window of \(V8\) on the chain \(\mathcal R_B\).
+
+\paragraph{Proof sketch.}
+Conversion of the r15 table.  \(\square\)
+
+\paragraph{Reading.}
+This is a second, independent reason for the restriction (P4) of r12 to \(\mathcal R_A\): only there does a single C5 stage
+fit into the clock window.  The tolerance \(26.57^\circ\) of r12 concerns the loss of clock content per readout, a different
+quantity from a timing offset within one window, so the two numbers do not contradict each other.  The window of \(V8\)
+lies between them.
+
+\subsection*{v4.9.0-r13 the stage angle between Hopf and lattice}
+\label{subsec:v490-r13-hopf-lattice}
+
+The main body relates the Hopf value and the measured value of the offset by
+\(\bsym=\tfrac1{\sqrt3}\exp\bigl(-\gamma_1/(4\pi\gL^5)\bigr)=0.5492\) (the table with ``Hopf (continuum \(S^3\))'' and
+``Physical (prime lattice)'' rows).  The stage angle \(\arctan\bsym\) of r10 is therefore \(30^\circ\) in the continuum limit
+\(\gamma_1\to0\) and \(28.78^\circ\) on the lattice, with \(q=0.7683\).  The C5 factor \(3/4\) is the continuum value.  On the
+lattice the Hopf reading would give stage \(22\) (r10), while the triolic reading keeps \(\pi/6\).  Which of the two describes
+the C5 recursion is open.  The detector stage \(n=20\) favours the continuum value or the triolic reading.
+
+\subsection*{v4.9.0-r13 register entries}
+\label{subsec:v490-r13-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r13\\
+\midrule
+time scale of r11 & \(\omega=1/\sigma_V\), \(\tau_{\rm k}=T_{\rm b}/6\) (one sixth of the clock beat) for every frequency pair (r13.1)\\
+absolute value & \(\tau_{\rm k}=0.15205\) clock units for the two lowest frequencies; no conversion to seconds, by the source's own restriction\\
+r12 premise (P4) & second reason: one C5 stage fits only into the windows of \(\mathcal R_A\) (r13.2)\\
+C5 factor \(3/4\) & continuum value of the Hopf reading; lattice value \(0.7683\); triolic reading unaffected\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r13 ledger and guard update}
+\label{subsec:v490-r13-ledger-guard}
+
+\[
+R_{\rm time}^{v490\text{-}r13}=(0,0,1)
+\]
+for (relative time scale derived, windows of the primary chain checked, unit of the clock open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r13,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r13}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+

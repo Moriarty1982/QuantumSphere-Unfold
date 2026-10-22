@@ -1,0 +1,163 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r03 Source-Only: The Compensator as a Two-Arm Interferometer}
+\addcontentsline{toc}{section}{v4.9.0-r03 Source-Only: The Compensator as a Two-Arm Interferometer}
+\label{sec:v490-r03-compensator-interferometer}
+% ============================================================================
+
+\paragraph{Purpose.}
+Theoremlet r02.4 found that the compensator \(C(f)=\tfrac12(f+Jf)\) with the involution \(J_Bz=i\bar z\) of r02.3 does
+not produce a null field.  This layer looks at the compensator itself in Reading~B: as the output of an interferometer,
+on a static charge, on a light wave, and in its product form.  The computations are \texttt{llm/k39\_kompensator.py}.
+No value is compared with data.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r03 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\paragraph{Author's motivation (2026-10-21).}
+The picture behind the compensator was the Michelson--Morley interferometer with its half-silvered mirror; a mirror
+for the tachyon would act as a periscope that lays both images over each other.
+
+\subsection*{v4.9.0-r03 the two output ports}
+\label{subsec:v490-r03-ports}
+
+\paragraph{Theoremlet v4.9.0-r03.1.}
+Split a field \(f\) at a beam splitter.  Send one half through the identity and one through \(J\), then recombine.  The
+two output ports carry \(C(f)=\tfrac12(f+Jf)\) and \(A(f)=\tfrac12(f-Jf)\), the compensator and its antisymmetric
+partner of Definition~r04.1.  The energy splits without loss, \(|Cf|^2+|Af|^2=|f|^2\).  For antilinear \(J\) (r02.3) both
+maps are real-linear only, and
+\[
+A(f)=-i\,C(if),\qquad \operatorname{ran}A=i\,\operatorname{ran}C .
+\]
+The two ports differ by a duality quarter turn.
+
+\paragraph{Proof sketch.}
+\(C+A=1\), \(C^2=C\), \(CA=0\) (Theoremlet r04.2), and \(\operatorname{Re}\langle Cf,Af\rangle=0\) for anti-unitary \(J\).
+\(C(if)=\tfrac12(if-iJf)=iA(f)\).  Checked numerically.  \(\square\)
+
+\paragraph{Consequence.}
+The bosonic/fermionic split \(C(f)\in\Hplusplus\), \(A(f)\in\Hplusminus\) of the Pauli item in
+\S\ref{sec:central} becomes, with an antilinear \(J\), a split into two real subspaces that are images of each other
+under multiplication by \(i\).  That is a split into real and imaginary parts, not two independent sectors.  Remark A2 of
+r04 already noted that \(\tfrac12(1\pm J)\) is only real-linear for antilinear \(J\).
+
+\subsection*{v4.9.0-r03 a charge and a light wave in the interferometer}
+\label{subsec:v490-r03-charge-light}
+
+\paragraph{Theoremlet v4.9.0-r03.2.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] For the Coulomb field of a charge \(q\) (matter type, \(s>0\)), \(J_Bf\) is the field of a magnetic charge
+\(q\) (tachyon type).  \(C(f)\) and \(A(f)\) are the fields of dyons with electric charge \(q/2\) and magnetic charge
+\(\pm q/2\), with \(s=\pm\tfrac i2|E_0|^2\).
+\item[(b)] For a plane light wave, \(J_B\) reverses the direction of propagation and rotates the polarisation by
+\(90^\circ\).  This is what a phase-conjugating mirror (time reversal, r02.3) followed by a polarisation rotator (duality
+quarter turn) does.  \(C\) of the wave has \(E\parallel B\) and is not a light wave.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+\(J_B\): \(E\mapsto B\), \(B\mapsto E\), and \(C\), \(A\) give \(E=\pm B=\tfrac12E_0\).  For \(E=\hat x\), \(B=\hat y\):
+\(J_B\) gives \(E=\hat y\), \(B=\hat x\), \(E\times B=-\hat z\).  Checked numerically.  \(\square\)
+
+\paragraph{Reading.}
+For light the mirror of r02.3 is an existing optical device, but on light it does not change the type: \(s=0\) stays
+\(0\).  A mirror that turns a matter-type field into a tachyon-type field of the same shape must turn electric charge into
+magnetic charge.  Under the assignment of r07 the missing tachyon mirror is therefore, in Reading~B, the missing magnetic
+charge.  The periscope image, that is the overlay of a field with its mirror image, is a dyon.  This is the content of the
+``photon at \(\beta=0\)'' of Theorem~\ref{thm:hawking-triolic} and Theorem~\ref{thm:core} when \(f\) is a static matter
+field.
+
+\subsection*{v4.9.0-r03 what the interferometer reads out}
+\label{subsec:v490-r03-readout}
+
+\paragraph{Theoremlet v4.9.0-r03.3.}
+Put a duality phase \(\varphi\) into the reference arm, \(f\mapsto e^{i\varphi}f\).  The difference of the two port
+energies is
+\[
+D(\varphi)=\bigl|\tfrac12(e^{i\varphi}f+J_Bf)\bigr|^2-\bigl|\tfrac12(e^{i\varphi}f-J_Bf)\bigr|^2
+=\operatorname{Im}\bigl(e^{i\varphi}s\bigr).
+\]
+The fringe has amplitude \(|s|\) and phase \(\arg s\).  At \(\varphi=0\) it reads \(2E\cdot B\), the side of the photon
+(r02.1).  Matter and tachyon give fringes half a period apart, and light gives no fringe.  The visibility is
+\[
+V=\frac{|s|}{|f|^2}=\sqrt{1-\Bigl(\frac{|E\times B|}{u}\Bigr)^2}=\frac1{\cosh2\eta_f},
+\qquad u=\tfrac12(E^2+B^2),
+\]
+where \(\eta_f\) is the rapidity of the frame in which \(E\parallel B\).  That frame exists for every non-null field.
+
+\paragraph{Proof sketch.}
+\(D(\varphi)=\operatorname{Re}\langle e^{i\varphi}f,J_Bf\rangle\) and \(\langle z,i\bar z\rangle=i\bar s\).  Further
+\(u^2-|E\times B|^2=\tfrac14|s|^2\).  The frame with \(E\parallel B\) moves along \(E\times B\) with speed \(v\),
+\(v/(1+v^2)=|E\times B|/(2u)\), so \(|E\times B|/u=\tanh2\eta_f\).  Checked numerically, including the boost to
+\(E\parallel B\).  \(\square\)
+
+\paragraph{Reading.}
+In this interferometer light gives a null result, and the visibility of any other field is the inverse Lorentz factor of
+its energy transport, \(|E\times B|/u=\tanh2\eta_f\).  The double rapidity \(2\eta_f\) appears unforced: the field's rest
+frame moves at \(\tanh\eta_f\), its energy at \(\tanh2\eta_f\).  If \(\eta_f\) were \(\eta_{\rm sym}\), the visibility would be
+\(1/\gL=0.536\) and the energy speed \(0.844\).  This is arithmetic.  No field is identified with \(\eta_{\rm sym}\), and an
+identification would be a prediction requiring a pre-registration note.
+
+\subsection*{v4.9.0-r03 sum and product}
+\label{subsec:v490-r03-product}
+
+Proposition~\ref{prop:compensator} calls \(C(f)\) the projection onto \(K_3=e_1e_2\) and states that it is orthogonal to
+both inputs.  A projection is not orthogonal to its input: \(\operatorname{Re}\langle f,Cf\rangle=|Cf|^2\).
+
+\paragraph{Theoremlet v4.9.0-r03.4.}
+The product of a field with its mirror image has the properties claimed for \(e_3=e_1e_2\):
+\[
+z\times J_Bz=2\,E\times B,\qquad z\cdot J_Bz=2iu .
+\]
+The vector part is twice the Poynting vector, real and orthogonal to \(E\) and to \(B\).  The scalar part is the energy
+density.  The pair \((u,E\times B)\) is null, \(|E\times B|=u\), exactly for light.
+
+\paragraph{Proof sketch.}
+\(z\times\bar z=-2iE\times B\) and \(z\cdot\bar z=E^2+B^2\).  Checked numerically.  \(\square\)
+
+\paragraph{Consequence.}
+The orthogonality in Proposition~\ref{prop:compensator} holds for the product of \(f\) with \(Jf\), not for their
+average.  In Reading~B the product yields the energy and momentum of the field, and it is light-like exactly on the
+photon sector.  The average yields a dyon.  Which of the two the main body means by the compensator is not decided here.
+Both readings are recorded.
+
+\subsection*{v4.9.0-r03 register entries}
+\label{subsec:v490-r03-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r03\\
+\midrule
+compensator \(C\), partner \(A\) & the two output ports of a two-arm interferometer with \(J\) in one arm; real-linear, \(A(f)=-iC(if)\) (r03.1)\\
+Pauli item, \(\Hplusplus\)/\(\Hplusminus\) split & with antilinear \(J\) a real/imaginary split, the sectors are \(i\)-images of each other (r03.1)\\
+Thm.~\ref{thm:hawking-triolic}, Thm.~\ref{thm:core}, photon at \(\beta=0\) & for a static matter field \(C(f)\) is a dyon field (r03.2)\\
+Prop.~\ref{prop:compensator}, orthogonal to both inputs & false for the average; true for the product \(z\times J_Bz=2E\times B\) (r03.4)\\
+tachyon mirror & on light: phase conjugation plus polarisation rotation; on matter-type fields it needs magnetic charge (r03.2)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r03 ledger and guard update}
+\label{subsec:v490-r03-ledger-guard}
+
+\[
+R_{\rm comp}^{v490\text{-}r03}=(0,0,1)
+\]
+for (interferometer form of the compensator established, readout \(D(\varphi)=\operatorname{Im}(e^{i\varphi}s)\) and
+visibility \(1/\cosh2\eta_f\) derived, choice between average and product reading open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r03,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r03}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+

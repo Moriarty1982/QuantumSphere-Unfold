@@ -1,0 +1,144 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r09 Source-Only: What the Local Frame Factor Can Be}
+\addcontentsline{toc}{section}{v4.9.0-r09 Source-Only: What the Local Frame Factor Can Be}
+\label{sec:v490-r09-local-frame-factor}
+% ============================================================================
+
+\paragraph{Purpose.}
+r08 separated a fixed structural factor \(\gL=\gBI/\gstring\) from a local factor \(\gL^{(\mathrm{local})}\) that may vary.
+This layer collects what the source says the local factor depends on.  It records two contradictions found on the way,
+tests three readings of the local factor against clock data, and corrects the arithmetic of prediction P5.  Files:
+\texttt{llm/Erkundungsprotokoll\_Weinberg\_Kegel.md} (entries E14, E15) and the script
+\texttt{llm/k49\_lokaler\_faktor.py}.  No new prediction is made.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r09 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r09 what the source says}
+\label{subsec:v490-r09-source}
+
+The source names four influences on the local factor.  For none of them does it give a derived relation, and it gives
+no field law for \(\gL^{(\mathrm{local})}(x,t)\).
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.17\textwidth}>{\raggedright\arraybackslash}p{0.33\textwidth}>{\raggedright\arraybackslash}p{0.42\textwidth}@{}}
+\toprule
+influence & place & content\\
+\midrule
+observer & Theorem~\ref{thm:frame-offset} & every matter observer carries \(\zminus\neq0\); measured constants are frame-invariant values times a Lorentz factor of the observer\\
+cosmic time & Proposition~\ref{prop:H0-tension} & \(\bsym\) grows ``as matter structures in the universe grew''\\
+Earth's orbit & corollary ``\(\alpha\)-drift as a frame effect'' & the factor varies ``as Earth moves through the Sphaera-Cascade geometry over its orbit'', with a period of one year, absent for a clock that does not co-orbit\\
+potential & prediction P5 near Corollary~\ref{cor:falsifiable} & amplitude of the \(\alpha\) modulation \(\sim10^{-10}\,\delta\Phi/c^2\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Two contradictions.}
+\begin{enumerate}[leftmargin=2em]
+\item Theorem~\ref{thm:frame-offset} calls \(\gBI\) ``the Lorentz-transformed \(\gstring\), observed from a matter frame''.
+In that theorem \(\gBI\) depends on the observer.  Theorem~\ref{thm:k-values} sets \(k(\gBI)=0\), ``frame-invariant by
+construction''.
+\item Theorem~\ref{thm:frame-offset} projects all constants, including \(c\), with one Lorentz factor, which means
+\(k=1\) for all.  Theorem~\ref{thm:k-values} gives \(k(c)=0\) and \(k(G_N)=2\).
+\end{enumerate}
+Both are resolved if Theorem~\ref{thm:frame-offset} is read as a statement about the structural factor alone.  That is the
+separation of r18 and r08.  What the local factor consists of then remains open.
+
+\subsection*{v4.9.0-r09 three readings tested}
+\label{subsec:v490-r09-readings}
+
+With the rule \(\delta\ln X=k(X)\,\delta\ln\gL^{(\mathrm{local})}\), three readings were tested.
+
+\paragraph{Theoremlet v4.9.0-r09.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(V)] \emph{Velocity against a preferred frame.}  If the observer's rapidity adds to \(\eta\), Earth's orbital motion
+projected on the dipole of the microwave background gives \(\delta\eta\approx9.8\times10^{-5}\).  That yields
+\(\delta\ln\gL=2\tanh2\eta\,\delta\eta\approx1.6\times10^{-4}\), and with \(k(\alpha)=1\) an annual \(\alpha\) modulation of the
+same size.  The clock fit quoted in r03 (F2) allows about \(2\times10^{-17}\).  The reading is \textbf{excluded}, by a factor
+of about \(10^{13}\).  The static part, \(370\) km/s against the background, would make \(\alpha\) depend on direction at the
+level of \(2\times10^{-3}\).
+\item[(P)] \emph{Gravitational potential.}  \(\delta\ln\gL^{(\mathrm{local})}=\kappa\,\delta\Phi/c^2\).  The source's own
+coefficient \(\kappa\sim10^{-10}\) and the eccentricity of Earth's orbit (\(\delta\Phi/c^2\approx1.6\times10^{-10}\)) give an
+annual \(\delta\alpha/\alpha\approx1.6\times10^{-20}\), inside the bounds.  The reading \textbf{survives}.  It cannot drive the
+cosmological drift of Proposition~\ref{prop:H0-tension}: potentials of large-scale structure, \(\sim10^{-5}\), give
+\(\delta\ln\gL\sim10^{-15}\), against about \(5\times10^{-2}\) needed.
+\item[(D)] \emph{Matter density.}  The source gives no functional form.  Density differs between laboratory, space and
+astrophysical environments by many orders of magnitude, so any appreciable coupling would have to be screened.  The
+reading is \textbf{not testable} as stated.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(V) \({\rm d}\ln\cosh2\eta/{\rm d}\eta=2\tanh2\eta\), with \(29.8\cos11^\circ\) km/s against \(c\).  (P) \(GM_\odot/(c^2a)=9.87\times
+10^{-9}\) times the eccentricity \(0.0167\).  Checked numerically.  \(\square\)
+
+\paragraph{Consequence.}
+Of the three readings only the potential reading is compatible with the clocks.  It is also the one the source itself
+states in P5.  It describes a small violation of local position invariance and cannot explain the Hubble tension.
+Within it, every constant couples to the potential with \(\beta_X=k(X)\,\kappa\):
+\begin{itemize}[leftmargin=2em]
+\item the Compton clock of r08.2, with \(k=0\), does not couple;
+\item \(\alpha\) couples with \(\kappa\);
+\item an atomic clock and \(G_N\), with \(k=2\), couple with \(2\kappa\).
+\end{itemize}
+The ratio of the couplings, not their size, is the content of the source.  The size \(\kappa\) is not derived.
+
+\subsection*{v4.9.0-r09 the arithmetic of P5}
+\label{subsec:v490-r09-p5}
+
+P5 states
+\(\frac{\delta\alpha/\alpha}{\delta G_N/G_N}\big|_{\rm annual}=\gL^{k(\alpha)-k(G_N)}\cdot\frac{k(\alpha)}{k(G_N)}=\gL^{-1}\approx
+0.537\).
+
+\paragraph{Theoremlet v4.9.0-r09.2.}
+From \(X^{(\mathrm{matter})}=\gL^{k}X^{(\mathrm{photon})}\) with fixed photon-frame values follows
+\(\delta X/X=k(X)\,\delta\gL/\gL\).  Hence
+\[
+\frac{\delta\alpha/\alpha}{\delta G_N/G_N}=\frac{k(\alpha)}{k(G_N)}=\frac12 .
+\]
+The static factor \(\gL^{k(\alpha)-k(G_N)}\) does not belong in a ratio of relative changes.  The middle expression of P5
+equals \(\gL^{-1}/2=0.268\), not \(\gL^{-1}\).  The corrected value \(0.5\) is the same in every reading of the local factor.
+
+\paragraph{Proof sketch.}
+Logarithmic differentiation.  \(\square\)
+
+\subsection*{v4.9.0-r09 register entries}
+\label{subsec:v490-r09-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r09\\
+\midrule
+local factor \(\gL^{(\mathrm{local})}\) & four influences named (observer, time, orbit, potential), no field law; only the potential reading survives the clocks (r09.1)\\
+Thm.~\ref{thm:frame-offset} vs Thm.~\ref{thm:k-values} & two contradictions (\(\gBI\) observer-dependent vs \(k=0\); one factor for all vs \(k(c)=0\), \(k(G_N)=2\)); resolved by reading Thm.~\ref{thm:frame-offset} as structural\\
+P5, annual ratio & corrected to \(k(\alpha)/k(G_N)=1/2\); the stated \(\gL^{-1}=0.537\) is wrong twice (r09.2)\\
+potential coupling & \(\beta_X=k(X)\kappa\); Compton clock uncoupled; \(\kappa\sim10^{-10}\) not derived, below present bounds\\
+Prop.~\ref{prop:H0-tension} & the surviving reading gives \(10^{-15}\) instead of \(5\times10^{-2}\); unchanged: hypothesis without working mechanism\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r09 ledger and guard update}
+\label{subsec:v490-r09-ledger-guard}
+
+\[
+R_{\rm loc}^{v490\text{-}r09}=(0,0,1)
+\]
+for (influences and contradictions recorded, readings of the local factor decided against clocks, size of \(\kappa\) open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r09,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r09}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+

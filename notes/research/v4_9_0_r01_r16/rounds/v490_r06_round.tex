@@ -1,0 +1,186 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r06 Source-Only: The Tachyon Hit Chain, its Acceleration, and the Higgs Field}
+\addcontentsline{toc}{section}{v4.9.0-r06 Source-Only: The Tachyon Hit Chain, its Acceleration, and the Higgs Field}
+\label{sec:v490-r06-hit-chain-higgs}
+% ============================================================================
+
+\paragraph{Purpose.}
+Theoremlet r05.3(c) stated that a photon returning to the origin of a tachyon cannot create it.  The author objected that the
+tachyon already runs backward in time, and then refined the picture.  The Higgs field tries to create matter along a line.
+A tachyon that has been travelling along this line for a long time hits it again and again.  Each hit is a point of
+spacetime at which an essentially identical photon arises.  This layer makes r05.3(c) precise, works out the hit chain,
+asks what an accelerating or infinitely accelerated tachyon does to the hits, and checks the picture against the Higgs
+field.  Special relativity is used with \(c=1\).  The computations are \texttt{llm/k42\_tachyon\_trefferkette.py}.  No
+value is compared with data.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r06 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r06 closing the loop, made precise}
+\label{subsec:v490-r06-loop}
+
+\paragraph{Theoremlet v4.9.0-r06.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] A photon needs the time \(d\) for the distance \(d\).  A tachyon of speed \(v>1\) covers the same distance in the
+time \(d/v\), and even read backward it takes back only \(d/v<d\).  One photon leg and one tachyon leg therefore never close
+a loop.  The remaining gap is \(d(1-1/v)\), which is \(0.451\,d\) for \(v=1/\bsym\).
+\item[(b)] Two tachyon legs emitted in frames moving relative to each other can close or overshoot a loop.  A return leg
+that is instantaneous in a frame of speed \(u\) arrives at the origin at \(d/v-ud\), before the start for \(u>1/v\).
+\item[(c)] For \(v=1/\bsym\) and \(u=\bsym\) the return arrives exactly at the start.  It runs back along the same
+spacelike line, because the outgoing leg is itself instantaneous in that frame.  This is one exchange read in two
+directions, case (a) of Theoremlet r02.1, and carries no information around a loop.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+Arithmetic on the worldlines; the return leg is the line of simultaneity \(t-t_B=u(x-x_B)\) through
+\(B=(d/v,d)\).  Checked numerically.  \(\square\)
+
+\paragraph{Correction of wording in r05.}
+The phrase ``a photon leg running backward in time'' in the reading of r05.3 is made precise by (a) and (b).  What fails
+is one null leg plus one tachyon leg.  Two tachyon legs do not fail.  The statement r05.3(c) itself stands.
+
+\subsection*{v4.9.0-r06 the hit chain at constant speed}
+\label{subsec:v490-r06-chain}
+
+\paragraph{Theoremlet v4.9.0-r06.2.}
+Let hits occur along a line at speed \(v>1\), each emitting an identical light signal.  The energy of each signal comes
+from the field at the hit, so nothing is carried faster than light.
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] The signals superpose to a cone, the envelope of their Huygens wavelets, with \(\cos\vartheta=1/v\).  For
+\(v=1/\bsym\) this gives \(\cos\vartheta=\bsym\), \(\vartheta=56.68^\circ\).
+\item[(b)] The hits are spacelike separated.  Observers slower than \(1/v\) see them run in the direction of the
+tachyon, observers faster than \(1/v\) see them run the other way, and the observer of speed exactly \(u=1/v\) sees all hits
+at once.  For \(v=1/\bsym\) that observer moves at \(\bsym\), the matter-frame offset.
+\item[(c)] The superluminal rapidity of r20.2 is \(\operatorname{artanh}v=\eta+i\pi/2\).  The boost to the observer of (b)
+removes \(\eta\) and leaves \(i\pi/2\), the duality quarter turn of r07.2.  In that frame the tachyon is no longer a moving
+object but a phase.  The plane wave emitted there perpendicular to the line appears in the original frame at
+\(\cos\vartheta'=\bsym\), which is the cone of (a).
+\item[(d)] With imaginary mass \(i\mu\), the tachyon at \(v=1/\bsym\) has energy \(\mu\sinh\eta\) and momentum
+\(\mu\cosh\eta=1.197\,\mu\), the neighbour cross term of r18.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a) Minimal arrival time over emission points; checked by a discrete Huygens sum.  (b)
+\(\Delta t'=\gamma(\Delta t-u\Delta x)\) with \(\Delta t=\Delta x/v\).  (c) \(\tanh(x+i\pi/2)=\coth x\) and the aberration
+formula with \(\vartheta=90^\circ\).  (d) \(E=\mu/\sqrt{v^2-1}\), \(p=\mu v/\sqrt{v^2-1}\).  \(\square\)
+
+\paragraph{Reading.}
+``The tachyon was already on its way before the experiment started'' is the frame dependence of (b).  There is an
+observer for whom the whole path exists at one instant.  For \(v=1/\bsym\) this observer is the matter frame.  A
+superluminal chain of locally triggered emissions is the situation of a light spot sweeping faster than light across a
+screen.  It is permitted because each point emits by itself.
+
+\subsection*{v4.9.0-r06 acceleration and infinite speed}
+\label{subsec:v490-r06-acceleration}
+
+\paragraph{Theoremlet v4.9.0-r06.3.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \emph{Constant proper acceleration.}  The tachyonic counterpart of hyperbolic motion is
+\(t=R\cosh\sigma\), \(x=R\sinh\sigma\), with proper acceleration \(1/R\) everywhere.  Its speed \(v=\coth\sigma\) and its
+coordinate acceleration \(dv/dt\) diverge at \(\sigma=0\), that is \(t=R\), \(x=0\).  The hit rate per unit time diverges
+there as well, so the hits near that point arrive at once as a flash.  Beyond \(\sigma=0\) the parameter runs backward in
+time.  By reinterpretation that part is a partner moving forward, and the point \((R,0)\) is a pair event.  A signal emitted
+along the backward part is read as absorbed.
+\item[(b)] \emph{Energy given to the hits.}  Write \(E=\mu\sinh\chi\), \(p=\mu\cosh\chi\), \(v=\coth\chi\).  If each hit
+takes the energy \(\varepsilon\) from the tachyon, \(E\) falls and \(v\) rises.  After \(E_0/\varepsilon\) hits \(E=0\),
+\(v=\infty\), \(p=\mu\).  Along the way the cone of r06.2 opens from \(56.68^\circ\) to \(90^\circ\), and the observer
+seeing simultaneous hits slows from \(\bsym\) to rest.
+\end{enumerate}
+In both cases the infinite acceleration is a coordinate effect at a single point.  There the tachyon passes through infinite
+speed, rapidity \(i\pi/2\) in the frame at hand.  The proper acceleration stays finite.
+
+\paragraph{Proof sketch.}
+(a) \(dx/dt=\coth\sigma\); \(dv/dt=-1/(R\sinh^3\sigma)\); the second derivative with respect to proper length has Minkowski
+norm \(1/R\).  (b) \(p^2-E^2=\mu^2\) and \(v=p/E\).  Checked numerically, (b) with six hits from \(v=1/\bsym\).  \(\square\)
+
+\paragraph{Reading.}
+A tachyon that pays for the photons of its hits accelerates by itself and ends at infinite speed after finitely many
+hits.  At that point the lab frame has become the frame of simultaneous hits, the cone has become a plane wave, and the
+tachyon is the pure phase of r06.2(c).  Continuing past this point turns emission into absorption in the lab description.
+This is the nearest the hit chain comes to the author's first picture of photons returning to the origin: a chain of
+emissions meets a chain of absorptions at the point of infinite speed.
+
+\subsection*{v4.9.0-r06 the Higgs field}
+\label{subsec:v490-r06-higgs}
+
+The main body assigns the Higgs sector the role of mediating between the compensated photon fix-sector and the mass
+readout of localised branches (Definition~\ref{def:higgs-mediation}, Theorem~\ref{thm:higgs-role-refined}).
+
+\paragraph{Theoremlet v4.9.0-r06.4.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] In the electroweak theory the Higgs field gives the neutral pair \((W^3,B)\) the mass matrix
+\(\tfrac{v_H^2}{4}\bigl(\begin{smallmatrix}g^2&-gg'\\-gg'&g'^2\end{smallmatrix}\bigr)\).  It has rank one: the photon is its massless
+eigenvector \((\sin\theta_W,\cos\theta_W)\), the \(Z\) the massive one.  This is a port-weighting matrix in the sense of
+r05.1, with weight \(0\) on the photon port and \(m_Z^2\) on the other.  For \(g=g'\) (\(\theta_W=45^\circ\)) it is exactly
+\(0\cdot C_{\HC}+m_Z^2A\), and the photon is the compensator port.  The measured mixing angle differs from \(45^\circ\), so the
+electroweak photon port is a compensator rotated by \(\theta_W-45^\circ\).
+\item[(b)] At \(\phi=0\) the Higgs potential has negative mass squared.  The field there is tachyonic in the
+field-theoretic sense, and mass arises when it condenses away from \(\phi=0\).
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a) The kernel of the matrix is spanned by \((g',g)\); for \(g=g'\) the matrix is \(\tfrac{v_H^2g^2}{2}A\).  (b) The
+potential \(-\mu_H^2|\phi|^2+\lambda|\phi|^4\) has curvature \(-\mu_H^2\) at the origin.  \(\square\)
+
+\paragraph{Reading.}
+The Higgs part of the author's picture fits the main body in three respects.
+\begin{itemize}[leftmargin=2em]
+\item The photon is the direction the Higgs field does not weight, which is Theorem~\ref{thm:higgs-role-refined} in
+electroweak form.
+\item A field ``trying to create matter'' is a field leaving its tachyonic top.
+\item A hit that yields a photon instead of a massive state lands in the unweighted port.
+\end{itemize}
+Three points need care.
+\begin{itemize}[leftmargin=2em]
+\item The doublet of r04 is \((E,B)\), the electroweak doublet is \((W^3,B)\).  The correspondence is formal.
+\item A field with negative mass squared is an instability that grows; it is not a particle that carries signals faster
+than light.  A superluminal chain of hits therefore needs triggers correlated in advance, as for the sweeping light spot,
+and not a signal along the line.
+\item The condensed Higgs vacuum is the minimum of its potential and supplies no energy.  The energy of the photons comes
+either from the tachyon, case r06.3(b), or from the field while it is still rolling off its tachyonic top, that is during
+symmetry breaking.
+\end{itemize}
+Comparing \(\theta_W\) or any other measured quantity with the values of this layer is a prediction and requires a
+pre-registration note.
+
+\subsection*{v4.9.0-r06 register entries}
+\label{subsec:v490-r06-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r06\\
+\midrule
+r05.3(c), return photon & stands; one photon plus one tachyon leg leaves the gap \(d(1-1/v)\); two tachyon legs can close a loop (r06.1)\\
+hit chain at speed \(1/\bsym\) & cone \(56.68^\circ\); all hits simultaneous for the observer at \(\bsym\), where the tachyon is the phase \(i\pi/2\) (r06.2)\\
+accelerating tachyon & infinite speed at one point after finite time or finitely many hits; there a pair event, emission turns into absorption (r06.3)\\
+Higgs mediation (Def.~\ref{def:higgs-mediation}) & electroweak mass matrix is a port weighting with massless photon port; compensator port for \(\theta_W=45^\circ\); formal correspondence (r06.4)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r06 ledger and guard update}
+\label{subsec:v490-r06-ledger-guard}
+
+\[
+R_{\rm chain}^{v490\text{-}r06}=(0,0,1)
+\]
+for (loop condition decided, hit chain and acceleration worked out, physical status of the trigger and of the Higgs
+correspondence open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r06,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r06}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+

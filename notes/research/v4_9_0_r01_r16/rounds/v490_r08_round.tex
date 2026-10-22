@@ -1,0 +1,185 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r08 Source-Only: Frame Drift, Atomic Clocks and the Hubble Tension}
+\addcontentsline{toc}{section}{v4.9.0-r08 Source-Only: Frame Drift, Atomic Clocks and the Hubble Tension}
+\label{sec:v490-r08-drift-clocks-hubble}
+% ============================================================================
+
+\paragraph{Purpose.}
+Proposition~\ref{prop:H0-tension} explains the Hubble tension by a drift of the frame offset.  r17 and r18 tested that
+drift against the expansion history.  This layer tests it against the constancy of the fine-structure constant, using
+the source's own rule for which quantities stay fixed.  It also checks the other explanations of the tension available
+in the source, settles the sign of \(k\) for \(\alpha\) left open in r03, names a frame-invariant clock, and states what
+the drift means for H15 of r07.  Files: \texttt{llm/Erkundungsprotokoll\_Weinberg\_Kegel.md} (entries E10 to E13) and
+scripts \texttt{llm/k47\_drift\_weinberg.py}, \texttt{llm/k48\_feste\_groessen.py}.  No new prediction is made.  Earlier
+layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r08 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r08 what stays fixed under drift}
+\label{subsec:v490-r08-fixed}
+
+The source fixes this in four places.
+\begin{itemize}[leftmargin=2em]
+\item The definition in \S\ref{sec:phase-constants}: \(X^{(\mathrm{photon})}=\gL^{-k(X)}X^{(\mathrm{matter})}\).
+\item Theorem~\ref{thm:k-values}: \(k(c)=0\), \(k(\gBI)=0\) (``frame-invariant by construction'').
+\item The corollary ``\(\alpha\)-drift as a frame effect'' in the same section: ``the hardware value
+\(\alpha^{(\mathrm{photon})}\) is strictly constant'', with \(\alpha^{(\mathrm{matter})}(t)=\gL^{(\mathrm{local})}(t)\,
+\alpha^{(\mathrm{photon})}\).
+\item Item (1) of Proposition~\ref{prop:saturation}, which writes the neutrino mass in the same way.
+\end{itemize}
+Photon-frame values and quantities with \(k=0\) stay fixed.  Matter-frame values drift with a local factor
+\(\gL^{(\mathrm{local})}(t)^{k}\).  The structural factor \(\gL=\gBI/\gstring\) is fixed, since both inputs are fixed
+numbers.  The source thus separates a fixed structural factor from a local one that may drift.  This is the separation
+r18 offered.
+
+\subsection*{v4.9.0-r08 the sign of \texorpdfstring{$k$}{k} for \texorpdfstring{$\alpha$}{alpha}}
+\label{subsec:v490-r08-alpha-sign}
+
+r03 (F2) found that Theorem~\ref{thm:k-values}, whose row reads ``\(\alpha^{-1}\ldots k=1\)'', and the corollary above are
+inverse to each other, and left the choice open.  The main body uses \(k\) for \(\alpha\) in three places:
+\begin{itemize}[leftmargin=2em]
+\item prediction P5 among the predictions around Corollary~\ref{cor:falsifiable}, with
+\(\gL^{k(\alpha)-k(G_N)}=\gL^{-1}\);
+\item Proposition~\ref{prop:muon-g2}, ``\(k(\alpha_s)=1\) (like the electromagnetic coupling \(\alpha\))'' with
+\(\alpha_s^{(\mathrm{photon})}=\gL^{-1}\alpha_s^{(\mathrm{matter})}\);
+\item the corollary, \(\alpha^{(\mathrm{matter})}=\gL\,\alpha^{(\mathrm{photon})}\).
+\end{itemize}
+All three mean \(k(\alpha)=+1\) for \(\alpha\) itself.  No photon-frame value of \(\alpha^{-1}\) is used anywhere in the main
+body.
+
+\paragraph{Resolution (reading decision).}
+The table row shows the CODATA value of \(\alpha^{-1}\), and its entry \(k=1\) belongs to \(\alpha\).  With this reading all
+three uses agree and nothing else changes.  The resolution changes no number of the main body.
+
+\subsection*{v4.9.0-r08 the drift against atomic clocks}
+\label{subsec:v490-r08-clocks}
+
+\paragraph{Theoremlet v4.9.0-r08.1.}
+Suppose the drift of Proposition~\ref{prop:H0-tension}, \(1.6\times10^{-12}\) per year in \(\bsym\), acts through the local
+frame factor, as r18 reads it.  Then the corollary gives \(|{\rm d}\ln\alpha/{\rm d}t|\) for each choice of the factor:
+
+\begin{center}
+\small
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+factor & exponent needed for \(1.083\) & \(|{\rm d}\ln\alpha/{\rm d}t|\) per year & \(|\Delta\alpha/\alpha|\) since \(z=1100\)\\
+\midrule
+\(\gL=\cosh2\eta\) & \(1.52\) & \(3.9\times10^{-12}\) & \(5.4\%\)\\
+neighbour, \(\cosh\eta\) & \(4.72\) & \(1.3\times10^{-12}\) & \(1.7\%\)\\
+neighbour, \(e^{\eta}\) & \(2.54\) & \(2.3\times10^{-12}\) & \(3.2\%\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The comparison of two \({}^{171}\mathrm{Yb}^+\) clocks gives \((1/\alpha)\,{\rm d}\alpha/{\rm d}t=(1.0\pm1.1)\times10^{-18}\)
+per year (Lange et al., Phys.\ Rev.\ Lett.\ 126, 011102, 2021).  Every choice lies about six orders of magnitude above
+that bound.
+
+Independently of the reading: if a drifting factor with exponent \(k(H_0)\) produces the tension \(\ln1.083\), then
+\(\alpha\) changes by \(\ln1.083\cdot k(\alpha)/k(H_0)\).  For a drift linear in time, the clocks require
+\(k(\alpha)/k(H_0)<5.5\times10^{-7}\) at \(2\sigma\).
+
+\paragraph{Proof sketch.}
+\({\rm d}\ln\gL/{\rm d}t=4\bsym(1-\bsym^2)^{-2}\dot\bsym/\gL\), and correspondingly for the neighbour factors.  The
+exponents follow from the ratios of the factors at \(z=0\) and \(z=1100\).  Checked numerically.  \(\square\)
+
+\paragraph{Why measuring through photons does not help.}
+A clock comparison measures the ratio of two transition frequencies of atoms.  A common frame factor on both frequencies
+cancels.  The dependence on \(\alpha\) comes from inside the atom, which is matter.  If the atom's internal physics were
+photon-frame physics, there would be no drifting \(\alpha^{(\mathrm{matter})}\) at all.  The corollary's annual-drift
+prediction would then lapse too, and Proposition~\ref{prop:H0-tension} would lose its mechanism.
+
+\paragraph{Consequence.}
+In its frame-factor form, Proposition~\ref{prop:H0-tension} cannot explain the tension and keep \(\alpha\) constant at the
+same time.  Two ways out would remain, and the source contains neither.  One is \(k(\alpha)\approx0\), which contradicts the
+resolution above and the corollary.  The other is a separate factor for the expansion that does not touch the
+constants.  r03 already bounded the annual modulation of the local factor by \(10^{-17}\).  The present layer applies the
+same clocks to the secular drift.
+
+\subsection*{v4.9.0-r08 other explanations in the source}
+\label{subsec:v490-r08-other}
+
+\begin{enumerate}[leftmargin=2em]
+\item \emph{Static frame typing.}  The value inferred from the microwave background would be read in another frame than
+the local value.  A constant factor disturbs no clock.  By Corollary~\ref{cor:gue-frame} a clock frequency transforms with
+\(\gL\), so \(k(H_0)=1\), which gives a factor \(1.864\) (neighbour factors \(1.197\), \(1.854\)) against the observed
+\(1.083\pm0.017\).  Only fractional exponents near \(0.13\) or \(0.44\) would fit, and Theorem~\ref{thm:k-values} gives no
+basis for them.  The observed ratio is too loose to single out an exponent.
+\item \emph{A change confined to the early universe.}  A larger electron mass at recombination, by about one to two
+percent, is discussed in the literature as a relief of the tension.  With the drift of
+Proposition~\ref{prop:H0-tension}, \(\bsym\) was smaller earlier, so \(m_e^{(\mathrm{matter})}\) with \(k=1\) was smaller.
+That is the wrong direction, and the same holds for \(\alpha\) with \(k(\alpha)=+1\).  The opposite sign of the drift, the one
+r17 found Theorem~\ref{thm:dark-energy} to require, would point the right way.  The change would then have to stop before
+\(z\approx3\), because of quasar spectra and clocks, and at \(5\%\) it would be too large.
+\end{enumerate}
+No explanation of the tension within the source survives the clocks, the quasar spectra and the size of the effect
+together.  Proposition~\ref{prop:H0-tension} stays a hypothesis without a working mechanism.
+
+\subsection*{v4.9.0-r08 a frame-invariant clock}
+\label{subsec:v490-r08-compton}
+
+\paragraph{Theoremlet v4.9.0-r08.2.}
+By Theorem~\ref{thm:k-values} the Compton frequency \(m_ec^2/\hbar\) has \(k=k(m_ec^2)-k(\hbar)=1-1=0\).  A clock ticking
+at a Compton frequency is frame-invariant in the source's sense.  An atomic transition frequency scales as
+\(\alpha^2m_ec^2/\hbar\) and has \(k=2k(\alpha)=2\).  The ratio of the two clocks reads \(\gL^{(\mathrm{local})}(t)^{\pm2}\)
+directly, a local test of the frame factor that needs no cosmology.
+
+\paragraph{Proof sketch.}
+Additivity of \(k\) (Lemma v4.8.0-r03.1).  \(\square\)
+
+\paragraph{Remark.}
+Clocks tied to the Compton frequency of a mass have been built by atom interferometry (Lan et al., Science 339, 554, 2013).
+A comparison of such a clock with an atomic clock would read the drift of r08.1 at twice the rate.  Existing clock
+comparisons already exclude that drift.  The clock concerns local readout only.  It touches neither the local selector
+guard nor the forbidden global photon-clock statement.
+
+\subsection*{v4.9.0-r08 consequence for H15}
+\label{subsec:v490-r08-h15}
+
+H15 (r07) is stated with the structural factor \(\gL=\gBI/\gstring\), which is fixed.  It predicts a weak mixing angle that
+is constant in time.  In addition, \(m_W/m_Z\) is a ratio of masses, and if both carry the same \(k\) the frame factor
+cancels.  A drift of \(\theta_W\), with \(\sin^2\theta_W=0.242\) at \(z=1100\), would follow only if H15 were read with the
+local factor, which the source's rules do not suggest.  The pre-registered comparison of H15 is unaffected.
+
+\subsection*{v4.9.0-r08 register entries}
+\label{subsec:v490-r08-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r08\\
+\midrule
+Prop.~\ref{prop:H0-tension} & frame-factor drift incompatible with atomic clocks by about six orders of magnitude in every reading (r08.1); static typing and early-only change do not work; hypothesis without working mechanism\\
+Thm.~\ref{thm:k-values}, row \(\alpha^{-1}\) & resolved: \(k=1\) belongs to \(\alpha\); consistent with P5, Prop.~\ref{prop:muon-g2} and the corollary (closes r03 F2)\\
+fixed quantities under drift & photon-frame values and \(k=0\); structural \(\gL=\gBI/\gstring\) fixed; local factor may drift\\
+Compton clock & \(k=0\), frame-invariant; ratio to an atomic clock reads \(\gL^{(\mathrm{local})}{}^{\pm2}\) (r08.2)\\
+H15 & predicts a constant \(\theta_W\); comparison unaffected\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r08 ledger and guard update}
+\label{subsec:v490-r08-ledger-guard}
+
+\[
+R_{\rm drift}^{v490\text{-}r08}=(0,0,1)
+\]
+for (drift against clocks decided, sign of \(k(\alpha)\) resolved, a mechanism for the Hubble tension open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r08,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r08}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
