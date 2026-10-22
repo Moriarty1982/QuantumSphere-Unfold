@@ -1,0 +1,140 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r27 Source-Only: A Dynamics for the Kicked Duality Rotation, Rotation plus Compensator Measurement}
+\addcontentsline{toc}{section}{v4.9.0-r27 Source-Only: A Dynamics for the Kicked Duality Rotation, Rotation plus Compensator Measurement}
+\label{sec:v490-r27-kick-measurement-dynamics}
+% ============================================================================
+
+\paragraph{Purpose.}
+Reading~B is kinematics: its transports (spatial and duality rotations, boosts) leave the invariant \(s\) fixed.  r10.2 found
+that a witness of shape (iii) would have to change \(s\), that is, carry dynamics.  r16 recorded the author's reading of the C5
+recursion as a kicked duality rotation read out at the compensator.  On 2026-10-22 the author asked to attempt a dynamics.  This
+layer proposes one on the state disk of r04 and r17: a duality rotation followed by a measurement in the compensator basis.  It is
+a model, not a derivation from the earlier text.  The script is \texttt{llm/k64\_dynamik\_kick\_messung.py}.  No new prediction is
+made, and nothing is compared with data.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r27 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r27 the model}
+\label{subsec:v490-r27-model}
+
+The doublet state is \(\rho=\tfrac12(1+b_x\sigma_x+b_z\sigma_z)\), with the compensator axis along \(x\), \(C_{\HC}=\tfrac12(1+\sigma_x)\),
+\(A=\tfrac12(1-\sigma_x)\) (r04).  One step consists of two parts.
+\begin{enumerate}[leftmargin=2em]
+\item A duality rotation \(U_\alpha=e^{-i\alpha\sigma_y}\): angle \(\alpha\) on the doublet, angle \(2\alpha\) on the disk.
+\item A measurement \(\{C_{\HC},A\}\).  \emph{Selective}: the state is kept in the compensator port, with survival probability
+\(p=\operatorname{tr}(C_{\HC}U_\alpha\rho U_\alpha^{\mathsf T})\).  \emph{Non-selective}: \(\rho\mapsto C_{\HC}\rho'C_{\HC}+A\rho'A\), the
+content of the other port going to the partner reservoir of r11.
+\end{enumerate}
+
+\paragraph{Theoremlet v4.9.0-r27.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Selective steps reproduce the C5 recursion.  From a state on the compensator axis the survival per step is \(\cos^2\alpha\),
+\(3/4\) at \(\alpha=\pi/6\), and \((3/4)^n<1/256\) first at \(n=20\).
+\item[(b)] One non-selective step at \(\alpha=\pi/6\) takes the pure reference state R (\(|b|=1\), v4.9.0-r24) to the Hopf state:
+\(|b|=\cos2\alpha=\tfrac12\), \(\gL=1/|b|=2\), eigenvalues \(3/4\) and \(1/4\), entropy \(0.811\) bit (r17.1).  The measured offset
+\(|b|=1/\gL=0.5364\) corresponds to the kick angle \(\alpha=28.78^\circ\), with survival \(\cos^2\alpha=0.7682\), the lattice value of r13.
+\item[(c)] Non-selective steps contract the Bloch vector: after the first step it lies on the compensator axis, and each further
+step multiplies its length by \(|\cos2\alpha|\).  For \(0<\alpha<\pi/2\) every state flows to \(b=0\), the photon of Convention F.  The
+entropy never decreases.
+\item[(d)] The trace \(2u\) is kept and \(|b|=|s|/2u\) shrinks, so the step changes \(|s|\).  It therefore lies outside the transport
+group of Reading~B, as r10.2 requires of a witness of shape (iii).
+\item[(e)] In the limit of dense kicks, \(\alpha=\omega\tau\) with \(\tau\to0\), the contraction rate of \(|b|\) is
+\(\Gamma=2\omega^2\tau\), which tends to \(0\) (quantum Zeno effect).  The continuous form is a dephasing in the compensator basis.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a) \(C_{\HC}U_\alpha C_{\HC}=\cos\alpha\,C_{\HC}\) on the compensator ray (r10.1).  (b), (c) the rotation turns \(b\) by \(2\alpha\); the
+non-selective measurement removes the component across the axis, leaving \(b_x\cos2\alpha\).  (c) the step is a unital channel, so the
+entropy cannot fall; checked on \(20\,000\) steps from random states.  (d) \(\operatorname{tr}\rho\) fixed, \(|b|\) reduced.
+(e) \(-\ln\cos2\omega\tau/\tau\to2\omega^2\tau\), checked at \(\tau=0.2,0.05,0.01\).  \(\square\)
+
+\paragraph{Reading.}
+The dynamics joins three earlier results.  The C5 factor \(3/4\) is the survival of one selective step (r10).  The Hopf point is the
+state after one non-selective step from R (r17).  The lattice value \(0.768\) is the survival at a kick angle \(1.22^\circ\) below
+\(\pi/6\) (r13).  The photon is the attractor of the non-selective flow.  It is reached kinematically only in the limit (r19.1, r17.2),
+but here it is approached through loss of information.  The Zeno limit (e) is the pattern that r10 noted: denser compensation
+lets less content leave.
+
+\subsection*{v4.9.0-r27 what the dynamics does not give}
+\label{subsec:v490-r27-limits}
+
+\paragraph{Theoremlet v4.9.0-r27.2.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] For \(0\le\alpha<\pi/2\) the selective survival \((\cos^2\alpha)^n\) is positive for every finite \(n\).  The compensator score
+does not vanish at a finite stage.  It falls below the detector threshold \(1/256\) after \(n=20\), which is the permitted statement
+\(C5_{\rm det/eff}\).
+\item[(b)] The score is empty in one step only at \(\alpha=\pi/2\).  That is the quarter turn of r10.2, which moves the whole content
+into the partner port.  r12.2(c) records that this relocation is blocked by \(C4\) and \(C6\).
+\item[(c)] At \(\alpha=\pi/4\) one non-selective step reaches \(b=0\) exactly.  This is a statement about the doublet state.  The
+compensator score there is \(1/2\), not \(0\).  It is no clock statement and no global statement.
+\end{enumerate}
+The model therefore supplies dynamics of the kind that r10.2 asked for, and it changes \(s\).  It does not supply a finite zero of
+the compensator score.  Its time unit is the kick interval of r13, in clock units.  It gives no unit in seconds and no value of the
+coupling \(\kappa\) of r09.  What physically performs the measurement is not identified.
+
+\paragraph{Proof sketch.}
+(a) \(\cos^2\alpha>0\) for \(\alpha<\pi/2\); \((3/4)^{19}>1/256>(3/4)^{20}\).  (b) \(\cos^2(\pi/2)=0\).  (c) \(\cos(\pi/2)=0\);
+survival \(\cos^2(\pi/4)=1/2\).  \(\square\)
+
+\subsection*{v4.9.0-r27 status in the three frames}
+\label{subsec:v490-r27-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r27.1(a) survival \(3/4\) & frame-free: in T the ports are exchanged by \(J_B\), and the survival in the tachyon's compensator port is again \(3/4\)\\
+r27.1(b) Hopf state after one kick & in M from R; in T the image with \(b\to-b\), same \(|b|\)\\
+r27.1(c) flow to \(b=0\) & frame-free in direction of \(|b|\); P is the attractor, degenerate as (F2) requires\\
+r27.1(d) change of \(s\) & in M and T alike; at P \(s=0\) and the step acts trivially\\
+r27.2 limits & frame-free\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r27 register entries}
+\label{subsec:v490-r27-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r27\\
+\midrule
+dynamics of Reading~B & model proposed: duality rotation plus compensator measurement; changes \(s\) (r27.1)\\
+C5 factor \(3/4\), \(n=20\) & survival of selective steps at \(\alpha=\pi/6\) (r27.1(a))\\
+Hopf point & state after one non-selective step from R (r27.1(b))\\
+lattice value \(0.768\) & survival at kick angle \(28.78^\circ\) (r27.1(b))\\
+photon & attractor of the non-selective flow (r27.1(c))\\
+shape (iii) & the model changes \(s\) but gives no finite zero of the score (r27.2); open\\
+clock unit, \(\kappa\), measuring agent & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r27 ledger and guard update}
+\label{subsec:v490-r27-ledger-guard}
+
+\[
+R_{\rm dyn}^{v490\text{-}r27}=(0,0,1)
+\]
+for (model stated, earlier results joined, physical agent and scale open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r27,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r27}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
