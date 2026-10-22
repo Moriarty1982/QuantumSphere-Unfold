@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v7.7
+# Kernkarte Quantum Sphaera — v7.8
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1662,6 +1662,24 @@ z₋-Einfügung ein Doppler-Faktor; Gewichte additiv, auch k(ℓ_P) = 3/2.
 auf −0,55 % (γ_string e^η = 0,23619), exakt nur am Tribonacci-Punkt. Unverändert (Auslese): P2, H15, Ω_M, thm:frame-offset.
 R_split = (0,0,1).
 
+### K64 — Companion-Runde v4.9.0-r20: Herkunftshypothese für Δ_γ < 1/5 (2026-10-22)
+
+`sec:v490-r20-delta-gamma-provenance`, Snippet `llm/v490_r20_round.tex`, Skript `llm/k59_herkunft_delta_gamma.py`. Anlass:
+Autorhinweis, der Wert sei bei einer Photon-Frame-Rechnung entstanden und müsse nicht allgemein stimmen.
+
+**K64.1 (M).** r14 nennt G den Gewinn der Photon-Frame-Uhr. Am Hopf-Punkt β² = 1/3: γ_L = 2 = G(V3), p₋ = 1/4 = κ(V3),
+N = 1 + 1/p₋ = 2 + 1/β² = 5 (Balance κ(N−1) = 1), p₊ = 3/4 = κ(Uhrsaat). Damit 1 − 16/(G S) = 1/5 exakt. Kollarzeile 5/6 und
+C5-Faktor 3/4 am selben Punkt.
+
+**K64.2 (H).** Hypothese: Δ_γ < 1/5 entstand mit Photon-Frame-Uhrgewinn = γ_L am Hopf-Punkt (Kontinuum ohne δ_CL) bzw.
+γ_L = 1,864 aufs Halbgitter gerundet. Gewicht: vier Treffer an einem Punkt plus Balance; dagegen Viertel-/Halbgitter, V5/V8
+ohne entsprechende Lesart, 16 rahmenfrei.
+
+**K64.3 (M).** Beim gemessenen Abstand mit Kartenform fest: 0,142 (G = γ_L), 0,137 (G = e^η), 0,110/0,105 (κ = p₋), 0,1925
+(balanciert); alle unter 1/5, also 1/5 dort nicht konservativ. Alternative tan α < 1/γ_L gibt 0,223. r12.2(b): Kollarzeile
+(1/6) nur am Hopf-Punkt innen. Guard: Schranke frame-typisiert, enger = weniger behauptet, kein Guard verbraucht.
+R_prov = (0,0,1).
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1774,6 +1792,7 @@ R_split = (0,0,1).
 - v7.5 (2026-10-22): K61 Companion-Runde v4.9.0-r17 (Entropie, Informationssingularität, Skalen-Dimension).
 - v7.6 (2026-10-22): K62 Companion-Runde v4.9.0-r18 (Wege A und C zugleich: Klassentrennung Skala/Auslese).
 - v7.7 (2026-10-22): K63 Companion-Runde v4.9.0-r19 (Klassentrennung angewandt: P5 = 1/2 automatisch, P3 verloren, P6 nur genähert).
+- v7.8 (2026-10-22): K64 Companion-Runde v4.9.0-r20 (Herkunftshypothese Δ_γ < 1/5: Photon-Frame-Uhrgewinn am Hopf-Punkt).
 
 ---
 

@@ -1,0 +1,136 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r20 Source-Only: A Provenance Hypothesis for \texorpdfstring{\(\Delta_\gamma<1/5\)}{Delta gamma < 1/5}, the Photon-Frame Clock Gain at the Hopf Point}
+\addcontentsline{toc}{section}{v4.9.0-r20 Source-Only: A Provenance Hypothesis for Delta gamma < 1/5, the Photon-Frame Clock Gain at the Hopf Point}
+\label{sec:v490-r20-delta-gamma-provenance}
+% ============================================================================
+
+\paragraph{Purpose.}
+r12 derived \(\Delta_\gamma<1/5\) from the chart data of r14 under the premises (P1)--(P4).  It left open where those
+data, and therefore the five, come from.  The r65 text is lost.  On 2026-10-22 the author suggested that the value was produced
+in a photon-frame calculation, and that it need not be correct or generally valid.  This layer proposes a provenance on that
+basis and examines how far the value holds away from it.  The script is \texttt{llm/k59\_herkunft\_delta\_gamma.py}.  The
+proposal is a hypothesis about origin.  It does not recover r65, makes no new prediction, and compares nothing with data.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r20 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r20 the hypothesis}
+\label{subsec:v490-r20-hypothesis}
+
+r14 calls the charts with a window ``photon-frame timing-assisted'' (Proposition~\ref{prop:v470-r14-finite-flowrate-classification}).
+The gain \(G\) is therefore the gain of the photon-frame clock.  A clock frequency converts between frames with the frame factor
+(Corollary~\ref{cor:gue-frame}).
+
+\paragraph{Theoremlet v4.9.0-r20.1.}
+At the Hopf point \(\bsym^2=1/3\), the doublet state of r17 has \(\gL=2\), \(p_+=3/4\) and \(p_-=1/4\).  The binding chart \(V3\) of
+r12 and the clock seed of r15 consist of exactly these numbers:
+\[
+G_{V3}=2=\gL,\qquad \kappa_{V3}=\tfrac14=p_-,\qquad
+N_{V3}=5=1+\frac1{p_-}=2+\frac1{\bsym^2},\qquad \kappa_{\rm seed}=\tfrac34=p_+ .
+\]
+The value \(N=5\) is the balance condition \(\kappa(N-1)=1\) of r12 at \(\kappa=p_-\).  With these values
+\(1-16/(GS)=1-16/(2\cdot10)=1/5\) exactly.  The collar row of r05 (ratio \(5/6=1/(1+\tfrac15)\)) and the C5 factor \(3/4=p_+\)
+(r17) belong to the same point.
+
+\paragraph{Proof sketch.}
+r17.1 with \(\bsym^2=1/3\): \(\gL=(1+\bsym^2)/(1-\bsym^2)=2\), \(p_-=\bsym^2/(1+\bsym^2)=1/4\).  Exact rational arithmetic.  \(\square\)
+
+\paragraph{Hypothesis.}
+The bound \(\Delta_\gamma<1/5\) was obtained with the photon-frame clock gain set to the frame factor at the Hopf point,
+\(\gL=2\), the continuum value \(\bsym=1/\sqrt3\) without the lattice correction of Remark~\ref{conj:cl-correction}.  A rounding
+of \(\gL=1.864\) to the half-integer grid of r14 gives the same \(G=2\).  The hypothesis explains why the five arises at
+exactly one chart (r92).  It also explains why the C5 factor and the clock bound share one point.
+
+\paragraph{Weight of the evidence.}
+The r14 values lie on grids of quarters (\(\kappa\)) and halves (\(G\)).  A single coincidence such as \(G=2\) would carry little
+weight.  Four numbers that match at one point, together with the balance condition, carry more.  Against the hypothesis:
+the other window charts \(V5\) (\(G=5/2\)) and \(V8\) (\(G=2\), \(\kappa=1\)) have no comparable reading, and the threshold \(16\) is
+dyadic and frame-free.
+
+\subsection*{v4.9.0-r20 the bound away from the Hopf point}
+\label{subsec:v490-r20-away}
+
+\paragraph{Theoremlet v4.9.0-r20.2.}
+Keep the chart form of r12 and the threshold \(16\), and replace the Hopf values by those at the measured offset.  Then the bound
+of \(V3\) becomes:
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.50\textwidth}rrr@{}}
+\toprule
+reading & \(G\) & \(\kappa\), \(N\) & bound\\
+\midrule
+Hopf point (source) & \(2\) & \(1/4\), \(5\) & \(0.2000\)\\
+\(G=\gL\), chart fixed & \(1.8644\) & \(1/4\), \(5\) & \(0.1418\)\\
+\(G=e^\eta\) (clock as scale quantity, r19), chart fixed & \(1.8542\) & \(1/4\), \(5\) & \(0.1371\)\\
+\(G=\gL\), \(\kappa=p_-=0.2318\), \(N=5\) & \(1.8644\) & \(0.2318\), \(5\) & \(0.1095\)\\
+\(G=e^\eta\), \(\kappa=p_-\), \(N=5\) & \(1.8542\) & \(0.2318\), \(5\) & \(0.1045\)\\
+\(G=\gL\), balanced \(N=1+1/p_-=5.31\) & \(1.8644\) & \(0.2318\), \(5.31\) & \(0.1925\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+In every reading the bound lies below \(1/5\).  A different generalization, \(\tan\alpha<1/\gL\) in place of \(\tan\alpha<1/2\),
+gives \(1/(1+\gL^2)=0.2234\) instead and lies above it.
+
+\paragraph{Proof sketch.}
+\(\Delta_\gamma^{\max}=1-16/(GS)\) with \(S=N+\kappa N(N-1)\) and the values of r17.1 at \(\bsym=\tanh\eta\).  Numerical.  \(\square\)
+
+\paragraph{Consequences.}
+\begin{enumerate}[leftmargin=2em]
+\item \(1/5\) is a value of the Hopf point.  It is not frame-invariant.  At the measured offset the bound depends on how the
+chart is carried over, and the readings that keep the chart form give \(0.10\) to \(0.19\).
+\item In those readings \(1/5\) is not conservative.  A drift loss between the true bound and \(1/5\) would be admitted by the
+stated condition and still close the \(V3\) window.
+\item r12.2(b) changes with it.  For the readings with the chart fixed, the bound is about \(0.14\).  The tolerated collar row
+of r05, which exports \(1/6=0.167\), then lies outside, and so does the C5 stage (\(1/4\)).  The separation of the C5 stage from
+the clock selector stays, but the reading that r05 tolerated that row for this reason holds only at the Hopf point.
+\end{enumerate}
+
+\subsection*{v4.9.0-r20 guard status}
+\label{subsec:v490-r20-guard}
+
+\(W_{\rm clk}^{\rm loc}\) under \(\Delta_\gamma<1/5\) is a permitted local statement.  This layer makes its bound frame-typed:
+\(\Delta_\gamma<\Delta_\gamma^{\max}(\eta)\), with \(\Delta_\gamma^{\max}=1/5\) at the Hopf point.  At the measured offset the
+condition becomes narrower, about \(0.14\) for the chart fixed.  A narrower local condition claims less, not more.  No guard is
+spent, and nothing global is approached.  Which carrying-over is right is not decided here.  It needs the clock dynamics that
+r13 left open.
+
+\subsection*{v4.9.0-r20 register entries}
+\label{subsec:v490-r20-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r20\\
+\midrule
+provenance of \(\Delta_\gamma<1/5\) & hypothesis: photon-frame clock gain \(G=\gL=2\) at the Hopf point; \(V3\) and clock seed are Hopf data (r20.1); r65 text still lost\\
+\(\Delta_\gamma<1/5\) & exact at the Hopf point; frame-typed, at the measured offset \(0.10\)--\(0.19\) with the chart form kept (r20.2)\\
+r12.2(b), collar row of r05 & inside only at the Hopf point; outside at about \(0.14\)\\
+Hopf point & now carries the C5 factor \(3/4\), the export \(1/4\), the \(V3\) coupling and gain, and \(\Delta_\gamma=1/5\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r20 ledger and guard update}
+\label{subsec:v490-r20-ledger-guard}
+
+\[
+R_{\rm prov}^{v490\text{-}r20}=(0,0,1)
+\]
+for (provenance hypothesis stated with its evidence, bound away from the Hopf point computed, choice of carrying-over open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r20,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r20}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
