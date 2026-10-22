@@ -145,13 +145,15 @@ Vorgänger, nur Provenienz), `DOI_ROLES` in `qs.py` aktualisieren.
 | Feld | Wert |
 |---|---|
 | Vorgänger | v4.8.0, veröffentlicht 2026-10-14, Record `23365244` |
-| Reservierte Version-DOI | `10.5281/zenodo.23534954`, Entwurf `23534954`, unveröffentlicht, keine Dateien hochgeladen (erbt die v4.8.0-Dateien) |
+| Version-DOI | `10.5281/zenodo.23534954` (anfangs reservierter Entwurf `23534954`, seit 2026-10-21 veröffentlicht) |
 | Metadaten | `release/zenodo/metadata_v4_9_0.json` auf Zweig `release/v4.9.0-prep` |
 | Reservierungslauf | GitHub Actions `39605210856` (Trockenlauf `39605097888`) |
 | Titelseite | erledigt auf `release/v4.9.0-prep` (`c8f5d91`): Version-DOI und Concept-DOI je einmal, Vorgänger-DOIs in `working-orientation.tex`; MiKTeX 1124 Seiten / 3590 Labels, GitHub-Build `39607324287` grün; `qs.py doi --version-doi` ohne Beanstandung |
 | Payload | erledigt (`36e1c9b`): Einzeldatei aus 54 `\input` zusammengeführt (Skript im Scratchpad: Zeilen, die nur `\input{…}` enthalten, bytegenau ersetzen), SHA256 `787226d2…`; PDF aus dem TeX-Live-Container (Lauf `39608246966`), 1123 Seiten, SHA256 `57d20e0b…`; Text auf allen Seiten identisch mit dem modularen Build; `CITATION.cff` mit vorläufigem `date-released` |
-| PR | #21 (Entwurf), erst zum Release mergen |
+| PR | #21, am 2026-10-22 in `main` gemergt (Merge-Commit `a412bd7`) |
 | Upload | erledigt (Lauf `39620093156`, Trockenlauf `39619973773`): drei geerbte v4.8.0-Dateien entfernt, PDF, Quelltext und Manifest hochgeladen, Metadaten gesetzt, **nicht veröffentlicht**. MD5 zum Abgleich im Entwurf: PDF `8392b108…aff3`, Quelltext `6f00f594…cb78a`, Manifest `66c49875…ad90`. Das Hilfsskript prüft Zenodos Prüfsummen nicht selbst |
 | Veröffentlicht | **2026-10-21 vom Nutzer**, https://zenodo.org/records/23534954; MD5 aller drei Dateien bestätigt; GitHub-Link als „Is supplement to" und „External resources" vorhanden. Datum in Metadaten und `CITATION.cff` passt (21.10.) |
 | README | auf `release/v4.9.0-prep` aktualisiert (`fd4f8ca`): DOI-Badge, v4.9.0 als aktuelle Version, Links zu DOI und Record |
-| **Zurückgestellt** (Nutzer: Arbeitsschritt für die nächste Version) | PR #21 in `main` mergen, Tag `v4.9.0`, GitHub-Release `v4.9.0` mit Verweis auf DOI/Record (Dateien nur auf Zenodo, nicht anhängen, sofern nicht anders gewünscht), danach `DOI_ROLES` in `qs.py` auf v4.9.0 |
+| GitHub-Abschluss | erledigt 2026-10-22: Tag und GitHub-Release `v4.9.0` auf `a412bd7` (https://github.com/Moriarty1982/QuantumSphere-Unfold/releases/tag/v4.9.0), Release-Notiz mit DOI/Record, ohne angehängte Dateien; `DOI_ROLES` in `qs.py` auf v4.9.0 |
+| Danach | PR #23 (Runden v4.9.0-r01–r16, `parts/v490-post-release-layers.tex`, Notizordner `notes/research/v4_9_0_r01_r16/`) am 2026-10-22 gemergt (`67f965f`), Grundlage der nächsten Version |
+| Freigabe | Merges in diesem Repository laufen über die projektlokale Regel in `.claude/settings.local.json` (`gh pr ready`/`gh pr merge … --repo Moriarty1982/QuantumSphere-Unfold`); ohne sie blockiert der Auto-Modus-Filter einen Merge ohne Review. Befehle einzeln absetzen, nicht mit `cd … &&` verketten, sonst greift die Regel nicht |
