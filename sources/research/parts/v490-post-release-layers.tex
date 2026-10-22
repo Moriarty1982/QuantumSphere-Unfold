@@ -2418,3 +2418,421 @@ R_{\rm glob}^{(v490\text{-}r16,+)}=(0,1,1,1,1),
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
 
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r17 Source-Only: Entropy between the Frames, the Photon as Information Singularity, and a Scale Dimension}
+\addcontentsline{toc}{section}{v4.9.0-r17 Source-Only: Entropy between the Frames, the Photon as Information Singularity, and a Scale Dimension}
+\label{sec:v490-r17-entropy-scale}
+% ============================================================================
+
+\paragraph{Purpose.}
+The main body works from the photon frame.  The author asked, on 2026-10-22, three things.  Must several structures coincide
+for that frame to arise at all?  Should the photon be treated as an information singularity?  Would a new degree of freedom
+help, one in which conversions between frames can be parked?  This layer answers the second and third questions in the state
+disk of r04 and records a coincidence that bears on the first.  The script is \texttt{llm/k56\_entropie\_skala.py}.  No value
+is compared with data.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r17 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r17 the frame factor in the state disk}
+\label{subsec:v490-r17-frame-factor}
+
+In the state disk of r04 a field has the Bloch vector \(b\) with \(|b|=1/\cosh2\eta_f\), where \(\eta_f\) is the rapidity of the
+observer against the frame in which \(E\parallel B\).  The state matrix \(\rho=\tfrac12(1+b\cdot\sigma)\) has the eigenvalues
+\(\tfrac12(1\pm|b|)\).
+
+\paragraph{Theoremlet v4.9.0-r17.1.}
+For an observer offset by \(\eta\):
+\[
+|b|=\frac1{\cosh2\eta},\qquad
+p_\pm=\frac12\Bigl(1\pm\frac1{\cosh2\eta}\Bigr),\qquad
+p_+=\frac1{1+\beta^2},\qquad p_-=\frac{\beta^2}{1+\beta^2},\qquad \frac{p_-}{p_+}=\beta^2,
+\]
+with \(\beta=\tanh\eta\).  At the offset of the source, \(\cosh2\eta=\gL\), the frame factor is the inverse length of the Bloch
+vector, \(\gL=1/|b|\).  At the Hopf value of the source, \(\beta=1/\sqrt3\) and \(\gL=2\), the eigenvalues are \(3/4\) and \(1/4\).
+At the measured value they are \(0.76818\) and \(0.23182\).
+
+\paragraph{Proof sketch.}
+\(\cosh2\eta=(1+\beta^2)/(1-\beta^2)\), hence \(\tfrac12(1+1/\cosh2\eta)=1/(1+\beta^2)\).  Checked numerically.  \(\square\)
+
+\paragraph{Consequence.}
+Three numbers of the earlier layers are one.  The C5 factor \(3/4\) (r10, r11) is the larger eigenvalue of the doublet state at
+the Hopf offset.  The exported quarter is the smaller one.  The lattice value \(0.7683\) of r13 is the larger eigenvalue at the
+measured offset.  The frame factor \(\gL\) is the inverse length of the same Bloch vector.  The eigenvalue ratio is \(\bsym^2\), the
+quantity that Theorem~\ref{thm:dark-energy} calls \(\Omega_M\).  The eigenvalue itself, \(0.2318\), is not \(\Omega_M\).
+
+\subsection*{v4.9.0-r17 entropy as order parameter, and the photon}
+\label{subsec:v490-r17-entropy}
+
+\paragraph{Theoremlet v4.9.0-r17.2.}
+The entropy \(S=-p_+\log_2p_+-p_-\log_2p_-\) of the doublet state increases monotonically from \(0\) in the frame with
+\(E\parallel B\) to \(1\) bit as \(\eta_f\to\infty\).  It is \(0.811\) bit at the Hopf offset and \(0.781\) bit at the measured
+offset.  The photon, \(b=0\), is the maximally mixed state.  In the Bures metric of the disk,
+\(\mathrm ds^2=\tfrac14\bigl(\mathrm dr^2/(1-r^2)+r^2\mathrm d\theta^2\bigr)\), the radial distance from the state with \(E\parallel B\)
+to the state at offset \(\eta\) is \(\tfrac12\operatorname{gd}(2\eta)\).  The photon lies at the finite distance \(\pi/4\), and the remaining
+distance is \(\tfrac12\Pi(2\eta)\), half the angle of parallelism of r07 at twice the rapidity.
+
+\paragraph{Proof sketch.}
+\(r=\operatorname{sech}2\eta\) gives \(\mathrm dr^2/(1-r^2)=4\operatorname{sech}^22\eta\,\mathrm d\eta^2\), hence \(\mathrm ds=\operatorname{sech}2\eta\,\mathrm d\eta\)
+and \(\int_0^\eta\operatorname{sech}2x\,\mathrm dx=\tfrac12\operatorname{gd}(2\eta)\), with \(\operatorname{gd}(\infty)=\pi/2\) and
+\(\Pi=\pi/2-\operatorname{gd}\).  Checked numerically.  \(\square\)
+
+\paragraph{The photon as information singularity, made precise.}
+The metric itself is regular at the photon.  What becomes singular is the direction: \(r^2\,\mathrm d\theta^2\to0\), so the angle
+\(\theta\), which carries the distinction between matter and tachyon (\(b_1\)) and the side of r02 (\(b_2\)), is undefined at
+\(b=0\).  This is the polar-coordinate form of the branch point of r19.2.  In this sense the photon is an information
+singularity.  It is the state of maximal entropy, in which the information that distinguishes the frames is absent.  It is
+reached by no finite boost (Theoremlet r19.1), only in the limit, and at a finite information distance.
+
+\paragraph{On the author's first question.}
+The photon is the point where the two eigenvalues coincide, \(p_+=p_-=\tfrac12\), and where matter and tachyon lose their
+distinction.  In the state disk the special frame is therefore the frame in which the structures that separate the other
+frames fall together.  This supports the author's conjecture.  It also shows that the photon frame is not a frame like the
+others: it is the limit point and reference of the disk.  A finite factor \(\gL\) ``to the photon frame'', as in
+\S\ref{sec:phase-constants}, corresponds to the state with \(|b|=1/\gL\), not to \(b=0\).
+
+\subsection*{v4.9.0-r17 a scale dimension for the conversions}
+\label{subsec:v490-r17-scale}
+
+The rule \(X^{(\mathrm{matter})}=\gL^{k}X^{(\mathrm{photon})}\) is a scaling with weights \(k\).  Carrying the scale as a coordinate
+\(\sigma\) of its own parks the conversion there, \(X(\sigma)=e^{k\sigma}X(0)\), with the photon frame at \(\sigma=0\).
+
+\paragraph{Theoremlet v4.9.0-r17.3.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \(\sigma\) is a coordinate in which conversions compose as shifts only if the factor is a homomorphism of the
+rapidity: \(\sigma=\eta\), \(X=e^{k\eta}X(0)\), the Doppler law of way (C) in r01.  The Lorentz factor is not one,
+\(\cosh\eta_1\cosh\eta_2\neq\cosh(\eta_1+\eta_2)\).  Way (A), \(\cosh2\eta=e^{\sigma}\), holds only at the tribonacci point (r01.3).
+\item[(b)] Combinations of total weight \(0\) are independent of \(\sigma\), for example the Compton frequency
+\(m_ec^2/\hbar\) of r08.2.  Every measurable ratio of weight \(w\neq0\) moves as \(e^{w\sigma}\).
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a) \(e^{\eta_1}e^{\eta_2}=e^{\eta_1+\eta_2}\); the Lorentz case numerically \(1.432\) against \(1.864\).  (b) additivity of \(k\).  \(\square\)
+
+\paragraph{Reading.}
+The author's parking dimension has a definite form.  It is a line on which frames are points and conversions are shifts.
+Its coordinate is the rapidity, and the conversion law it allows is the Doppler law.  It also locates the photon: on the
+\(\sigma\)-line of the source the photon frame sits at \(\sigma=0\), while in the state disk it sits at \(\eta_f=\infty\).  The two
+pictures differ because \S\ref{sec:phase-constants} measures offsets from the photon, whereas the disk measures them from the
+rest frame of the field.  Way (C) follows from the request that the parked conversions compose.  The observation of r07
+(on-shell \(\cot\theta_W\) close to \(\gL\), way A) points the other way.  It is not a test, and decision 5 of r15 stays with
+the author.
+
+\subsection*{v4.9.0-r17 register entries}
+\label{subsec:v490-r17-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r17\\
+\midrule
+frame factor \(\gL\) & inverse length of the Bloch vector at the offset, \(\gL=1/|b|\) (r17.1)\\
+C5 factor \(3/4\), lattice value \(0.768\) & larger eigenvalue of the doublet state at the Hopf, respectively measured, offset (r17.1)\\
+photon & maximally mixed state; information singularity as undefined direction at finite Bures distance \(\pi/4\); reached only in the limit (r17.2)\\
+photon frame of \S\ref{sec:phase-constants} & reference and limit point; finite \(\gL\) corresponds to \(|b|=1/\gL\), not \(b=0\)\\
+scale dimension \(\sigma\) & composable only as rapidity, giving the Doppler law (way C); weight-0 combinations invariant (r17.3)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r17 ledger and guard update}
+\label{subsec:v490-r17-ledger-guard}
+
+\[
+R_{\rm info}^{v490\text{-}r17}=(0,0,1)
+\]
+for (eigenvalue identities established, photon as information singularity made precise, choice of conversion way left to the
+author).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r17,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r17}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r18 Source-Only: The Old Conversions on the Scale Line, and How Ways A and C Can Hold Together}
+\addcontentsline{toc}{section}{v4.9.0-r18 Source-Only: The Old Conversions on the Scale Line, and How Ways A and C Can Hold Together}
+\label{sec:v490-r18-scale-line-a-and-c}
+% ============================================================================
+
+\paragraph{Purpose.}
+r17 introduced the state disk as a tool for the frames and the scale line \(\sigma\), and found that composable conversions
+along \(\sigma\) need the Doppler law (way C of r01).  The observation of r07 points to the Lorentz-factor reading \(\gL\)
+(way A).  On 2026-10-22 the author asked to read the conversions of the main body with these tools and to examine what could
+or must hold for ways A and C to be valid at the same time.  The script is \texttt{llm/k57\_a\_und\_c.py}.  No value is compared
+with data.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r18 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r18 three readings of one offset}
+\label{subsec:v490-r18-three-readings}
+
+\paragraph{Theoremlet v4.9.0-r18.1.}
+For an offset of rapidity \(\eta\) there are three natural factors:
+\[
+\coth\eta=\frac1\beta=\sqrt{\frac{p_+}{p_-}},\qquad
+e^{\eta}\ \text{(Doppler)},\qquad
+\cosh2\eta=\frac1{|b|}\ \text{(inverse Bloch length)}.
+\]
+They are the square root of the eigenvalue ratio of the doublet state (r17.1), the transport factor of way C, and the factor
+of way A.  At the measured offset they are \(1.82034\), \(1.85419\) and \(1.86444\), the three constants \(1/\bsym\), \(e^\eta\) and
+\(\gL\) that occur in the main body and in r01.  All three are equal exactly at the tribonacci point,
+\(\coth\eta=e^\eta=\cosh2\eta=\mathbb T=1.83929\).
+
+\paragraph{Proof sketch.}
+r01.3 shows \(\cosh2\eta=e^\eta\Leftrightarrow\coth\eta=e^\eta\Leftrightarrow x^3-x^2-x-1=0\) for \(x=e^\eta\neq1\).  \(\square\)
+
+\paragraph{Consequence.}
+Ways A and C agree numerically exactly when the offset sits at the self-referential fixed point of
+Theorem~\ref{thm:tribonacci}.  That fixed point is the condition that the three readings of the offset coincide.  The measured
+offset lies \(1.37\%\) above it in \(\gL\).  So that the two ways also agree in numbers, the source's lattice correction
+(Remark~\ref{rem:op1-tribonacci}) has to be carried as a separate offset, for example as a fixed shift on the scale line,
+rather than being folded into the factor.
+
+\subsection*{v4.9.0-r18 two classes on one scale line}
+\label{subsec:v490-r18-two-classes}
+
+\paragraph{Theoremlet v4.9.0-r18.2.}
+On the scale line \(\sigma\) of r17 there are two kinds of quantity.
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \emph{Scale quantities} (frequencies, lengths, masses, energies) move by a homomorphism, \(X(\sigma)=e^{k\sigma}X(0)\).
+This is way C, and it composes.
+\item[(b)] \emph{Readout quantities} (visibility, contrast of the compensator ports, eigenvalue ratios, mixing ratios) are state
+functions of the total offset, for example \(V(\sigma)=\operatorname{sech}2\sigma\), \(p_-/p_+=\tanh^2\sigma\).  Their factor
+\(\cosh2\sigma\) is way A.  They compose as well, through addition of rapidities: after two boosts the visibility is
+\(\operatorname{sech}2(\sigma_1+\sigma_2)\), not the product of the single values.
+\end{enumerate}
+The obstruction of Theoremlet r01.2 arises only if Lorentz factors are multiplied as though they were transports.  With the
+two classes separated, ways A and C hold at the same time, each for its own class.
+
+\paragraph{Proof sketch.}
+(a) \(e^{\sigma_1}e^{\sigma_2}=e^{\sigma_1+\sigma_2}\).  (b) the visibility of r03.3 is a function of the rapidity to the frame
+with \(E\parallel B\), and rapidities add along a line.  Checked numerically: \(\operatorname{sech}2(\sigma_1+\sigma_2)=0.311\) against
+the product \(0.452\) for \(\sigma_1=0.3\), \(\sigma_2=\eta\).  \(\square\)
+
+\paragraph{What must hold.}
+Both ways are valid together if, and in this reading only if:
+\begin{enumerate}[leftmargin=2em]
+\item every conversion is assigned to one class, scale or readout;
+\item frames are added as rapidities on one scale line, never by multiplying Lorentz factors;
+\item for equality in numbers in addition, the offset sits at the tribonacci point, and the lattice correction is carried
+separately.
+\end{enumerate}
+Items 1 and 2 give consistency.  Item 3 gives equal values.  The author's idea of parking conversions in a dimension of their own
+(r17) is what makes item 2 possible.
+
+\subsection*{v4.9.0-r18 the conversions of the main body, read again}
+\label{subsec:v490-r18-main-body}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.40\textwidth}>{\raggedright\arraybackslash}p{0.08\textwidth}>{\raggedright\arraybackslash}p{0.10\textwidth}rrr@{}}
+\toprule
+conversion & \(k\) & class & A & C & C/A\\
+\midrule
+clock frequency, Cor.~\ref{cor:gue-frame} & \(1\) & scale & \(1.8644\) & \(1.8542\) & \(-0.55\%\)\\
+Planck length, Thm.~\ref{thm:planck-photon} & \(3/2\) & scale & \(2.5458\) & \(2.5248\) & \(-0.82\%\)\\
+neutrino mass, Prop.~\ref{prop:k-neutrino} & \(4\) & scale & \(12.084\) & \(11.820\) & \(-2.18\%\)\\
+matter error, Cor.~\ref{cor:matter-error} & \(5\) & scale & \(22.529\) & \(21.916\) & \(-2.72\%\)\\
+vacuum energy (\(k=5\) after r03) & \(5\) & scale & \(22.529\) & \(21.916\) & \(-2.72\%\)\\
+Hawking temperature, Prop.~\ref{prop:hawking-gBI-tachyon} & \(1\) & scale & \(1.8644\) & \(1.8542\) & \(-0.55\%\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+Readout quantities, way A as state function: the visibility and compensator contrast of r03 (\(1/\gL=0.536\)), the eigenvalue
+ratio \(p_-/p_+=\bsym^2=0.302\), which is the \(\Omega_M\) of Theorem~\ref{thm:dark-energy}, the mixing ratio observed in r07
+(\(\cot\theta_W\approx\gL\)), and the structural ratio \(\gBI/\gstring\) of Theorem~\ref{thm:frame-offset}.
+
+\paragraph{Reading.}
+All conversions of \S\ref{sec:phase-constants} in the table are scale quantities.  Under the class reading they take way C,
+and their values change by \(0.55\%\) to \(2.7\%\).  The quantities that keep \(\gL\) are readouts.  These include the mixing ratio
+of r07 and the cascade fraction of Theorem~\ref{thm:dark-energy}.  The tension between r07 (way A) and r17 (way C) disappears,
+because the two concern different classes.  This is an offered reading.  Whether the author's conversions were meant this way
+is decision 5 of r15.  No compared value of the main body (Corollary~\ref{cor:falsifiable}, Proposition~\ref{prop:muon-g2}) is
+re-evaluated here.
+
+\subsection*{v4.9.0-r18 register entries}
+\label{subsec:v490-r18-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r18\\
+\midrule
+\(1/\bsym\), \(e^\eta\), \(\gL\) & three readings of one offset (eigenvalue ratio, Doppler, inverse Bloch length), equal at the tribonacci point (r18.1)\\
+ways A and C & can hold together: C for scale quantities, A as state function for readout quantities, frames added as rapidities (r18.2); numerical equality needs the tribonacci point and a separate lattice offset\\
+conversions of \S\ref{sec:phase-constants} & scale quantities; under the class reading way C, changes \(0.55\%\)--\(2.7\%\)\\
+r07 against r17 & tension removed under the class reading (different classes)\\
+decision 5 of r15 & refined; still with the author\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r18 ledger and guard update}
+\label{subsec:v490-r18-ledger-guard}
+
+\[
+R_{\rm conv}^{v490\text{-}r18}=(0,0,1)
+\]
+for (three readings identified, conditions for A and C together stated, assignment of classes left to the author).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r18,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r18}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r19 Source-Only: The Class Split Applied to the Main Body}
+\addcontentsline{toc}{section}{v4.9.0-r19 Source-Only: The Class Split Applied to the Main Body}
+\label{sec:v490-r19-class-split-applied}
+% ============================================================================
+
+\paragraph{Purpose.}
+r18 offered a reading under which ways A and C of r01 hold together: scale quantities move by the Doppler factor, readout
+quantities keep \(\gL\) as a state function.  On 2026-10-22 the author asked to apply that split.  This layer goes through every
+place in the main body where \(\gL\) converts between frames, assigns each place to a class by a fixed rule, and recomputes it.
+The script is \texttt{llm/k58\_klassentrennung.py}.  No new prediction is made, no value is compared with new data, and no
+earlier layer is rewritten.  The applied split remains an offered reading.  Decision 5 of r15 stays with the author.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r19 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r19 the rule}
+\label{subsec:v490-r19-rule}
+
+\paragraph{Rule.}
+A quantity that is a monomial in constants with frame-insertion counts, \(X=\prod_iX_i^{n_i}\), has the weight
+\(k(X)=\sum_in_ik(X_i)\) and is a \emph{scale quantity}.  It converts by \(e^{k\eta}\) (way C).  A quantity that is a function of
+the doublet state is a \emph{readout quantity}.  Examples are a visibility, an eigenvalue ratio, a mixing angle, or a ratio of
+two constants with \(k=0\).  It keeps \(\gL\) (way A).  The rule fixes the class from the form of the quantity alone, before any
+comparison value is read.  A dimensionless constant can be a scale quantity: \(\alpha\) is a monomial with \(k=1\).  The offset is
+\(\eta=\tfrac12\operatorname{arcosh}\gL\) as in r18, so \(e^\eta=1.85419\).
+
+\paragraph{Theoremlet v4.9.0-r19.1.}
+Under the rule, the definition of \S\ref{sec:phase-constants}, \(X^{(\mathrm{photon})}=\gL^{-k(X)}X^{(\mathrm{matter})}\), becomes
+\(X^{(\mathrm{photon})}=e^{-k(X)\eta}X^{(\mathrm{matter})}\).  Each insertion of \(\zminus\) contributes one Doppler factor, and the
+weights add: \(k(XY)=k(X)+k(Y)\) is now exact, also for half-integer weights such as \(k(\lP)=3/2\).  With \(\gL\) per insertion the
+additivity holds as well, but the composition of two frame steps does not (Theoremlet r01.2).
+
+\paragraph{Proof sketch.}
+\(e^{k_1\eta}e^{k_2\eta}=e^{(k_1+k_2)\eta}\), and \(e^{k\eta_1}e^{k\eta_2}=e^{k(\eta_1+\eta_2)}\) for consecutive steps.  \(\square\)
+
+\subsection*{v4.9.0-r19 scale quantities of the main body}
+\label{subsec:v490-r19-scale}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.47\textwidth}>{\raggedright\arraybackslash}p{0.06\textwidth}rrr@{}}
+\toprule
+place & \(k\) & A (\(\gL\)) & C (\(e^\eta\)) & C/A\\
+\midrule
+photon-frame Planck length, Thm.~\ref{thm:planck-photon} & \(3/2\) & \(6.35\times10^{-36}\,\mathrm m\) & \(6.40\times10^{-36}\,\mathrm m\) & \(+0.83\%\)\\
+vacuum ratio, Prop.~\ref{prop:uv-photon} (\(k=5\) after r03) & \(5\) & \(22.53\) & \(21.92\) & \(-2.72\%\)\\
+residual of Cor.~\ref{cor:matter-error} (\(\log_{10}\)) & \(5\) & \(-120.6\) & \(-120.7\) & ---\\
+neutrino factor, Prop.~\ref{prop:k-neutrino} & \(4\) & \(12.08\) & \(11.82\) & \(-2.18\%\)\\
+neutrino photon-frame suppression & \(-3\) & \(0.1543\) & \(0.1569\) & \(+1.67\%\)\\
+hadronic factor at \(k(\alpha_s)=1\), Prop.~\ref{prop:muon-g2} & \(-1\) & \(0.5364\) & \(0.5393\) & \(+0.55\%\)\\
+lower end of the range there & \(-2\) & \(0.2877\) & \(0.2909\) & \(+1.11\%\)\\
+\(\Lambda_{\rm bare}^{(\mathrm{photon})}\), Prop.~\ref{prop:bare-lambda} (\(m_P^4\)) & \(-2\) & \(57.5\) & \(58.1\) & \(+1.11\%\)\\
+\(\bsym^2\gL^{-3}/200\), Remark~\ref{rem:open} & \(-3\) & \(2.33\times10^{-4}\) & \(2.37\times10^{-4}\) & \(+1.67\%\)\\
+first zero in the photon frame, Cor.~\ref{cor:gue-frame} & \(-1\) & \(7.581\) & \(7.623\) & \(+0.55\%\)\\
+\(\beta_{\rm eff}\) of Cor.~\ref{cor:gue-frame}(iii) & \(1\) & \(3.729\) & \(3.708\) & \(-0.55\%\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+None of these places changes its qualitative statement.  The residual of Corollary~\ref{cor:matter-error} still lies near
+\(10^{-120.7}\), Remark~\ref{rem:open} still reads as a cancellation at the level \(10^{-3}\) to \(10^{-4}\), and the neutrino factor
+stays near \(12\).  The changes are of order \(1\%\).
+
+\subsection*{v4.9.0-r19 places where the split matters}
+\label{subsec:v490-r19-matters}
+
+\paragraph{Theoremlet v4.9.0-r19.2.}
+Three statements of Corollary~\ref{cor:falsifiable} respond to the split.
+\begin{enumerate}[leftmargin=2em]
+\item[(P5)] Under C, \(\mathrm d\ln X=k(X)\,\mathrm d\sigma\) for every scale quantity.  The ratio of annual modulations is therefore
+\(k(\alpha)/k(G_N)=1/2\) exactly, with no prefactor.  The correction of r09, which replaced the stated \(\gL^{-1}\approx0.537\) by
+\(1/2\), follows from the rule without a separate argument.
+\item[(P3)] The exponent \(\gL^5\) of Remark~\ref{conj:cl-correction} has weight \(5\) and is a scale factor.  Under C the formula gives
+\(\bsym=0.54847\), \(-0.15\%\) against \(0.5493\), instead of \(0.54923\) (\(-0.01\%\)).  Solved self-consistently with
+\(\eta=\operatorname{artanh}\bsym\) it gives \(0.54824\) (\(-0.19\%\)).  The match of P3 does not survive the split.  This agrees with r09,
+which had already classed P3 as a coincidence.
+\item[(P6)] The Hawking temperature has \(k=-1\) (Proposition~\ref{prop:hawking-gBI-tachyon}) and is a scale quantity.  Under C,
+\(T_{\rm Sphaera}/T_H^{(\mathrm{tachyon})}=\gstring e^\eta=0.23619\).  The value \(\gBI=\gstring\gL=0.23750\) is a readout and
+unchanged, so the identification \(\gBI=T_{\rm Sphaera}/T_H^{(\mathrm{tachyon})}\) of item (iii) there holds to \(-0.55\%\), not
+exactly.  It becomes exact only at the tribonacci point.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(P5) \(\mathrm d\ln e^{k\sigma}=k\,\mathrm d\sigma\).  (P3), (P6) numerical, \texttt{llm/k58\_klassentrennung.py}.  \(\square\)
+
+\paragraph{Readout quantities, unchanged.}
+\(\gBI/\gstring=\gL\) (Theorem~\ref{thm:frame-offset}), the visibility \(1/\gL\) of r03, \(\Omega_M=\bsym^2\) of
+Theorem~\ref{thm:dark-energy}, the Koide phase of P2 (\(132.88^\circ\), a function of \(\bsym\) alone), and the mixing ratio
+\(\cot\theta_W\approx\gL\) of r07.  The pre-registered test H15 rests on that mixing ratio and is not affected.
+
+\subsection*{v4.9.0-r19 register entries}
+\label{subsec:v490-r19-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r19, under the class split\\
+\midrule
+conversions of \S\ref{sec:phase-constants} & one Doppler factor per insertion; values change by \(0.55\%\) to \(2.7\%\), statements unchanged (r19.1)\\
+P5 & \(1/2\) exactly, the r09 correction follows from the rule (r19.2)\\
+P3 & match lost (\(-0.15\%\)); consistent with the r09 class ``coincidence''\\
+P6, item (iii) of Prop.~\ref{prop:hawking-gBI-tachyon} & \(\gBI\) as Hawking ratio only to \(-0.55\%\); exact only at the tribonacci point\\
+P2, H15, \(\Omega_M\), Thm.~\ref{thm:frame-offset} & readouts, unchanged\\
+class split & applied; still an offered reading, decision 5 of r15 with the author\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r19 ledger and guard update}
+\label{subsec:v490-r19-ledger-guard}
+
+\[
+R_{\rm split}^{v490\text{-}r19}=(0,0,1)
+\]
+for (all conversion places classified, consequences computed, adoption of the split left to the author).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r19,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r19}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+

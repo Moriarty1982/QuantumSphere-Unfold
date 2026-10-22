@@ -1,0 +1,132 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r19 Source-Only: The Class Split Applied to the Main Body}
+\addcontentsline{toc}{section}{v4.9.0-r19 Source-Only: The Class Split Applied to the Main Body}
+\label{sec:v490-r19-class-split-applied}
+% ============================================================================
+
+\paragraph{Purpose.}
+r18 offered a reading under which ways A and C of r01 hold together: scale quantities move by the Doppler factor, readout
+quantities keep \(\gL\) as a state function.  On 2026-10-22 the author asked to apply that split.  This layer goes through every
+place in the main body where \(\gL\) converts between frames, assigns each place to a class by a fixed rule, and recomputes it.
+The script is \texttt{llm/k58\_klassentrennung.py}.  No new prediction is made, no value is compared with new data, and no
+earlier layer is rewritten.  The applied split remains an offered reading.  Decision 5 of r15 stays with the author.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r19 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r19 the rule}
+\label{subsec:v490-r19-rule}
+
+\paragraph{Rule.}
+A quantity that is a monomial in constants with frame-insertion counts, \(X=\prod_iX_i^{n_i}\), has the weight
+\(k(X)=\sum_in_ik(X_i)\) and is a \emph{scale quantity}.  It converts by \(e^{k\eta}\) (way C).  A quantity that is a function of
+the doublet state is a \emph{readout quantity}.  Examples are a visibility, an eigenvalue ratio, a mixing angle, or a ratio of
+two constants with \(k=0\).  It keeps \(\gL\) (way A).  The rule fixes the class from the form of the quantity alone, before any
+comparison value is read.  A dimensionless constant can be a scale quantity: \(\alpha\) is a monomial with \(k=1\).  The offset is
+\(\eta=\tfrac12\operatorname{arcosh}\gL\) as in r18, so \(e^\eta=1.85419\).
+
+\paragraph{Theoremlet v4.9.0-r19.1.}
+Under the rule, the definition of \S\ref{sec:phase-constants}, \(X^{(\mathrm{photon})}=\gL^{-k(X)}X^{(\mathrm{matter})}\), becomes
+\(X^{(\mathrm{photon})}=e^{-k(X)\eta}X^{(\mathrm{matter})}\).  Each insertion of \(\zminus\) contributes one Doppler factor, and the
+weights add: \(k(XY)=k(X)+k(Y)\) is now exact, also for half-integer weights such as \(k(\lP)=3/2\).  With \(\gL\) per insertion the
+additivity holds as well, but the composition of two frame steps does not (Theoremlet r01.2).
+
+\paragraph{Proof sketch.}
+\(e^{k_1\eta}e^{k_2\eta}=e^{(k_1+k_2)\eta}\), and \(e^{k\eta_1}e^{k\eta_2}=e^{k(\eta_1+\eta_2)}\) for consecutive steps.  \(\square\)
+
+\subsection*{v4.9.0-r19 scale quantities of the main body}
+\label{subsec:v490-r19-scale}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.47\textwidth}>{\raggedright\arraybackslash}p{0.06\textwidth}rrr@{}}
+\toprule
+place & \(k\) & A (\(\gL\)) & C (\(e^\eta\)) & C/A\\
+\midrule
+photon-frame Planck length, Thm.~\ref{thm:planck-photon} & \(3/2\) & \(6.35\times10^{-36}\,\mathrm m\) & \(6.40\times10^{-36}\,\mathrm m\) & \(+0.83\%\)\\
+vacuum ratio, Prop.~\ref{prop:uv-photon} (\(k=5\) after r03) & \(5\) & \(22.53\) & \(21.92\) & \(-2.72\%\)\\
+residual of Cor.~\ref{cor:matter-error} (\(\log_{10}\)) & \(5\) & \(-120.6\) & \(-120.7\) & ---\\
+neutrino factor, Prop.~\ref{prop:k-neutrino} & \(4\) & \(12.08\) & \(11.82\) & \(-2.18\%\)\\
+neutrino photon-frame suppression & \(-3\) & \(0.1543\) & \(0.1569\) & \(+1.67\%\)\\
+hadronic factor at \(k(\alpha_s)=1\), Prop.~\ref{prop:muon-g2} & \(-1\) & \(0.5364\) & \(0.5393\) & \(+0.55\%\)\\
+lower end of the range there & \(-2\) & \(0.2877\) & \(0.2909\) & \(+1.11\%\)\\
+\(\Lambda_{\rm bare}^{(\mathrm{photon})}\), Prop.~\ref{prop:bare-lambda} (\(m_P^4\)) & \(-2\) & \(57.5\) & \(58.1\) & \(+1.11\%\)\\
+\(\bsym^2\gL^{-3}/200\), Remark~\ref{rem:open} & \(-3\) & \(2.33\times10^{-4}\) & \(2.37\times10^{-4}\) & \(+1.67\%\)\\
+first zero in the photon frame, Cor.~\ref{cor:gue-frame} & \(-1\) & \(7.581\) & \(7.623\) & \(+0.55\%\)\\
+\(\beta_{\rm eff}\) of Cor.~\ref{cor:gue-frame}(iii) & \(1\) & \(3.729\) & \(3.708\) & \(-0.55\%\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+None of these places changes its qualitative statement.  The residual of Corollary~\ref{cor:matter-error} still lies near
+\(10^{-120.7}\), Remark~\ref{rem:open} still reads as a cancellation at the level \(10^{-3}\) to \(10^{-4}\), and the neutrino factor
+stays near \(12\).  The changes are of order \(1\%\).
+
+\subsection*{v4.9.0-r19 places where the split matters}
+\label{subsec:v490-r19-matters}
+
+\paragraph{Theoremlet v4.9.0-r19.2.}
+Three statements of Corollary~\ref{cor:falsifiable} respond to the split.
+\begin{enumerate}[leftmargin=2em]
+\item[(P5)] Under C, \(\mathrm d\ln X=k(X)\,\mathrm d\sigma\) for every scale quantity.  The ratio of annual modulations is therefore
+\(k(\alpha)/k(G_N)=1/2\) exactly, with no prefactor.  The correction of r09, which replaced the stated \(\gL^{-1}\approx0.537\) by
+\(1/2\), follows from the rule without a separate argument.
+\item[(P3)] The exponent \(\gL^5\) of Remark~\ref{conj:cl-correction} has weight \(5\) and is a scale factor.  Under C the formula gives
+\(\bsym=0.54847\), \(-0.15\%\) against \(0.5493\), instead of \(0.54923\) (\(-0.01\%\)).  Solved self-consistently with
+\(\eta=\operatorname{artanh}\bsym\) it gives \(0.54824\) (\(-0.19\%\)).  The match of P3 does not survive the split.  This agrees with r09,
+which had already classed P3 as a coincidence.
+\item[(P6)] The Hawking temperature has \(k=-1\) (Proposition~\ref{prop:hawking-gBI-tachyon}) and is a scale quantity.  Under C,
+\(T_{\rm Sphaera}/T_H^{(\mathrm{tachyon})}=\gstring e^\eta=0.23619\).  The value \(\gBI=\gstring\gL=0.23750\) is a readout and
+unchanged, so the identification \(\gBI=T_{\rm Sphaera}/T_H^{(\mathrm{tachyon})}\) of item (iii) there holds to \(-0.55\%\), not
+exactly.  It becomes exact only at the tribonacci point.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(P5) \(\mathrm d\ln e^{k\sigma}=k\,\mathrm d\sigma\).  (P3), (P6) numerical, \texttt{llm/k58\_klassentrennung.py}.  \(\square\)
+
+\paragraph{Readout quantities, unchanged.}
+\(\gBI/\gstring=\gL\) (Theorem~\ref{thm:frame-offset}), the visibility \(1/\gL\) of r03, \(\Omega_M=\bsym^2\) of
+Theorem~\ref{thm:dark-energy}, the Koide phase of P2 (\(132.88^\circ\), a function of \(\bsym\) alone), and the mixing ratio
+\(\cot\theta_W\approx\gL\) of r07.  The pre-registered test H15 rests on that mixing ratio and is not affected.
+
+\subsection*{v4.9.0-r19 register entries}
+\label{subsec:v490-r19-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r19, under the class split\\
+\midrule
+conversions of \S\ref{sec:phase-constants} & one Doppler factor per insertion; values change by \(0.55\%\) to \(2.7\%\), statements unchanged (r19.1)\\
+P5 & \(1/2\) exactly, the r09 correction follows from the rule (r19.2)\\
+P3 & match lost (\(-0.15\%\)); consistent with the r09 class ``coincidence''\\
+P6, item (iii) of Prop.~\ref{prop:hawking-gBI-tachyon} & \(\gBI\) as Hawking ratio only to \(-0.55\%\); exact only at the tribonacci point\\
+P2, H15, \(\Omega_M\), Thm.~\ref{thm:frame-offset} & readouts, unchanged\\
+class split & applied; still an offered reading, decision 5 of r15 with the author\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r19 ledger and guard update}
+\label{subsec:v490-r19-ledger-guard}
+
+\[
+R_{\rm split}^{v490\text{-}r19}=(0,0,1)
+\]
+for (all conversion places classified, consequences computed, adoption of the split left to the author).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r19,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r19}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
