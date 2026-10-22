@@ -32,6 +32,6 @@ Build of the candidate with the carried layers under MiKTeX 25.12, three pdfLaTe
 
 | Layer | Title | Result |
 |---|---|---|
-| r17 | Entropy between the frames, the photon as information singularity, and a scale dimension | `gL = 1/|b|`; eigenvalues `1/(1+beta^2)`, `beta^2/(1+beta^2)` (Hopf 3/4 and 1/4); photon = maximally mixed state at Bures distance pi/4 with undefined direction; a composable scale dimension requires the Doppler law |
+| r17 | Entropy between the frames, the photon as information singularity, and a scale dimension | `gL = 1/abs(b)`; eigenvalues `1/(1+beta^2)`, `beta^2/(1+beta^2)` (Hopf 3/4 and 1/4); photon = maximally mixed state at Bures distance pi/4 with undefined direction; a composable scale dimension requires the Doppler law |
 | r18 | The old conversions on the scale line, and how ways A and C can hold together | `1/beta`, `e^eta`, `gL` are three readings of one offset, equal at the tribonacci point; scale quantities follow way C, readout quantities way A as state function |
 | r19 | The class split applied to the main body | scale places change by 0.55–2.7 %, no statement flips; P5 = 1/2 exactly; P3 match lost (−0.15 %); P6 holds to −0.55 %; P2, H15, Omega_M unchanged |
