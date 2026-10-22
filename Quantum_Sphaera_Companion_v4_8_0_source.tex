@@ -70994,4 +70994,189 @@ R_{\rm glob}^{(v490\text{-}r22,+)}=(0,1,1,1,1),
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
 
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r23 Source-Only: Convention F Applied to the Main Body}
+\addcontentsline{toc}{section}{v4.9.0-r23 Source-Only: Convention F Applied to the Main Body}
+\label{sec:v490-r23-convention-f-main-body}
+% ============================================================================
+
+\paragraph{Purpose.}
+r22 adopted the frame rule as Convention F and applied it to the statements that the v4.9.0 line had touched.  On 2026-10-22
+the author asked to apply it to the rest of the main body.  This layer does that for every statement environment of the main
+body (lines 1 to about 52\,100) that depends on a frame.  The script \texttt{llm/k62\_frame\_regel\_hauptkorpus.py} lists and
+classifies them.  Earlier layers are not edited.  No prediction is made, and nothing is compared with data.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r23 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r23 scope and categories}
+\label{subsec:v490-r23-scope}
+
+The scan takes every theorem, proposition, corollary, lemma, conjecture and definition of the main body that contains
+\(\bsym\), \(\gL\), \(\zminus\), \(\gBI\), \(\gstring\) or the words ``photon frame'', ``matter frame'' or ``tachyon''.  It finds \(113\)
+of the \(2234\) statement environments there.  Each one gets a category:
+\begin{itemize}[leftmargin=2em]
+\item[F] frame-free: it depends only on \(|b|\), on \(|\gamma|\), on \(k=0\) quantities, or on pure arithmetic;
+\item[M] matter only: it depends on the ordered or signed offset \(\bsym\), which becomes \(1/\bsym\) in the tachyon frame;
+\item[C] conversion of weight \(k\): matter value as stated; tachyon value of the magnitude of its class (r19) with phase \((-1)^k\) (F3);
+\item[S] a statement at the photon frame of the main body (\(\bsym=0\), \(\sigma=0\));
+\item[P] a statement in the limit \(\beta\to1\);
+\item[D] it defines the sectors or frames themselves;
+\item[N] it carries the photon-frame name without any frame quantity.
+\end{itemize}
+
+\subsection*{v4.9.0-r23 the classification}
+\label{subsec:v490-r23-classification}
+
+\begin{center}
+\small
+\begin{tabular}{@{}lrl@{}}
+\toprule
+category & count & content\\
+\midrule
+F & \(7\) & structural constants, \(k\)-table, tribonacci fixed point in \(|\gamma|\), Guinand--Weil identity\\
+M & \(29\) & cosmology, Koide, OP1/OP2 complex, Hopf angle, quasiconformal reading\\
+C & \(12\) & constant conversions of \S\ref{sec:phase-constants} and the hypothesis propositions\\
+S & \(9\) & vanishing of \(\Lambda\) and the \(\Theta\)--\(R\) balance in the photon frame\\
+P & \(3\) & horizon and saturation limit\\
+D & \(13\) & sector and frame definitions, axioms\\
+N & \(40\) & OP1 working layer, OP5 halo/collar/Dixon grammar\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent\textbf{F:} Theorems~\ref{thm:origin}, \ref{thm:triolic-gBI}, \ref{thm:gue-selfdet}, \ref{thm:k-values}, \ref{thm:tribonacci},
+\ref{thm:partial-cancel}; Proposition~\ref{prop:shared-vacuum-planck}.
+
+\noindent\textbf{M:} Theorems~\ref{thm:hawking-triolic}, \ref{thm:dual-origin}, \ref{thm:artqft}, \ref{thm:bsym-hopf},
+\ref{thm:koide-triolic}, \ref{thm:expansion}, \ref{thm:dark-offset}, \ref{thm:spring}, \ref{thm:light-equil}, \ref{thm:dark-energy},
+\ref{thm:dirac-probe}, \ref{thm:op2-T4-equals-op1}, \ref{thm:self-consistent-gL}, \ref{thm:hc-quasiconformal},
+\ref{thm:tribonacci-beltrami}, \ref{thm:op1op4-unified}; Definitions~\ref{def:lagrangian}, \ref{def:dirac-op-Hplusminus};
+Propositions~\ref{prop:three-compatible-readings}, \ref{prop:z3z-orbits}, \ref{prop:cl-shift}, \ref{prop:op2-targets},
+\ref{prop:exponent-5}, \ref{prop:inflow-cascade}, \ref{prop:H0-tension}; Corollaries~\ref{cor:tribonacci-cosmo},
+\ref{cor:op1-resolved}, \ref{cor:falsifiable} (mixed: P1 and P6 are C, P2--P4 are M, P5 is F); the unlabelled corollary
+``Cosmological constant revisited'' of \S\ref{sec:phase-constants}.
+
+\noindent\textbf{C:} Theorems~\ref{thm:frame-offset}, \ref{thm:planck-photon}; Propositions~\ref{prop:hawking-gBI-tachyon},
+\ref{prop:k-neutrino}, \ref{prop:muon-g2}, \ref{prop:uv-photon}, \ref{prop:bare-lambda}; Corollaries~\ref{cor:gue-frame},
+\ref{cor:odlyzko}, \ref{cor:matter-error}; the definition of \(k\) and the \(\alpha\)-drift corollary of \S\ref{sec:phase-constants}.
+
+\noindent\textbf{S:} Theorem~\ref{thm:lambda-zero}; Propositions~\ref{prop:lambda-from-frame}, \ref{prop:open-steps},
+\ref{prop:theta-remainder-trivial}, \ref{prop:theta-required-B}; Definitions~\ref{def:tr-balance}, \ref{def:theta-sum-B},
+\ref{def:delta-theta-r-residual}; Conjecture~\ref{conj:theta-sum-B}.
+
+\noindent\textbf{P:} Propositions~\ref{prop:horizon-cascade-singularity}, \ref{prop:saturation}; the Schwarzschild-horizon definition
+preceding Proposition~\ref{prop:horizon-cascade-singularity}.
+
+\noindent\textbf{D:} Theorems~\ref{thm:unity}, \ref{thm:wick}, \ref{thm:symmetric-frame}, \ref{thm:core}, \ref{thm:toe},
+\ref{thm:hc-readout-geometry}, \ref{thm:master-structural}, \ref{thm:three-readout-principle}; Proposition~\ref{prop:compensator};
+Corollaries~\ref{cor:SM-spectral-realization}, \ref{cor:toe_triolic_realization}; the sector-classification definition of
+\S\ref{sec:unitary}; the definition of the tachyon branch.
+
+\noindent\textbf{N:} the OP1 working statements (Definition~\ref{def:working-op1-rounded-gap},
+Corollary~\ref{cor:working-op1-narrowed-live-burden}, Theorem~\ref{thm:working-op1-admissible-readout-uniqueness},
+Definition~\ref{def:psi-cl}, Corollary~\ref{cor:op1-r03-target}), the live OP5 Step~(B) kernel
+(Definition~\ref{def:routed-balance-witness-live-op5b-kernel},
+Proposition~\ref{prop:live-op5b-kernel-carrier-upgraded-witness-problem}), one OP queue placement, and \(32\) unlabelled
+statements of the OP5 halo, collar, tunnel and Dixon grammar.
+
+\subsection*{v4.9.0-r23 what the classification shows}
+\label{subsec:v490-r23-findings}
+
+\paragraph{Theoremlet v4.9.0-r23.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \emph{The tachyon of the main body is not the tachyon of Convention F.}  Theorem~\ref{thm:symmetric-frame} puts the tachyon at
+\(-\bsym\).  Convention F follows Reading~B and the superluminal rapidity of r20 (v4.8.0), and puts it at \(1/\bsym\) with
+\(\gamma\mapsto-\gamma\).  Under the main body's own tachyon, every even function of \(\bsym\) would be frame-free.  \(18\) statements are of that
+kind, \(12\) of the matter-only ones and \(6\) of the S statements: \(\Omega_M\), \(\Lambda_{\rm obs}\sim\bsym^2\), the frame term of the Lagrangian, the
+\(\bsym^2\) term of the proper time, the Beltrami coefficient.  Under F they hold in the matter frame only.
+\item[(b)] \emph{The photon frame of the main body is not the photon of Convention F.}  The main body measures offsets from the photon,
+so its photon frame is \(\bsym=0\).  In the state disk \(\bsym=0\) is the pure state \(|b|=1\), and the photon is the centre \(b=0\),
+reached as \(\beta\to1\) (r17).  The nine S statements (\(\Lambda=0\), the frame term vanishing, Step~(A) trivial in the photon
+frame) hold at \(\sigma=0\) on the scale line.  They do not carry over to P.  At P, \(p_-/p_+=1\) and the frame term is maximal.
+\item[(c)] \emph{The limit \(\beta\to1\) of the main body is the photon of Convention F.}  The Schwarzschild horizon (\(\beta\to1\)), the cascade
+singularity of Proposition~\ref{prop:horizon-cascade-singularity}, and the saturation end state of Proposition~\ref{prop:saturation}
+sit where F places the photon fixed point.  The undefined cascade there is the degeneracy of (F2).
+\item[(d)] \emph{The quasiconformal reading sees the tachyon as an orientation reversal.}  In Theorem~\ref{thm:hc-quasiconformal}
+\(\mu=\bsym^2\) and \(K=\gL\).  In the tachyon frame \(\mu=1/\bsym^2>1\) and \(K=-\gL\): an orientation-reversing map, the same sign
+change \(\gamma\mapsto-\gamma\) as in F.
+\item[(e)] \emph{Conversions acquire a tachyon sign.}  By (F3), quantities of odd weight change sign in the tachyon frame: the Hawking
+temperature (\(k=-1\)), \(\alpha\) (\(k=1\)), the vacuum ratio (\(k=5\)).  Even weights do not (neutrino factor, \(k=4\)).  Lengths take
+the phase \(\mp i\), consistent with \(\ell_T^2=-\lambda_T^2\) (r22.2).
+\item[(f)] \emph{The N statements, including the local OP5 closure of the declared grammar, contain no frame quantity.}  Convention F neither
+narrows nor widens them.  They stay local within their grammar.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a) count of the M and S statements whose \(\bsym\)-dependence is even; listed in the script.  (b), (c) \(|b|=\operatorname{sech}2\eta\) is \(1\) at
+\(\eta=0\) and \(0\) as \(\eta\to\infty\).  (d) \(K=(1+\mu)/(1-\mu)\) at \(\mu=1/\bsym^2\).  (e) (F3).  (f) by inspection: no frame macro, no
+offset.  \(\square\)
+
+\paragraph{A sign remark.}
+The sector-classification definition of \S\ref{sec:unitary} gives matter \(\beta<0\).  Theorem~\ref{thm:symmetric-frame} gives matter
+\(+\bsym\).  The two signs disagree within the main body.  v4.8.0-r06 recorded that the classification by \(\operatorname{Re}z\) is not
+invariant, and v4.8.0-r07 replaced it by the sign of \(s\).  Convention F rests on that assignment, so the disagreement does not
+enter here.  It is noted, not corrected.
+
+\subsection*{v4.9.0-r23 status in the three frames}
+\label{subsec:v490-r23-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+category & M / T / P\\
+\midrule
+F (\(7\)) & same in M and T; at P only where no port quantity enters\\
+M (\(29\)) & valid in M; in T the inverse ratio, an undefined angle or a different equation; at P degenerate\\
+C (\(12\)) & M as stated; T with magnitude by class and phase \((-1)^k\); at P no conversion defined\\
+S (\(9\)) & statements at \(\sigma=0\) of the scale line; neither M nor T; not P\\
+P (\(3\)) & statements about P itself, degenerate as (F2) requires\\
+D, N (\(53\)) & define the frames, or carry no frame quantity\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r23 register entries}
+\label{subsec:v490-r23-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r23\\
+\midrule
+frame-dependent statements of the main body & \(113\) classified under Convention F (r23); list in \texttt{llm/k62\_frame\_regel\_hauptkorpus.py}\\
+tachyon of Thm.~\ref{thm:symmetric-frame} & \(-\bsym\) (real part); Convention F uses \(1/\bsym\) (Reading~B); \(18\) statements frame-free only under the former\\
+photon frame of the main body & \(\bsym=0\), the scale-line reference; under F the pure state, not P\\
+horizon, saturation limit & at the photon fixed point of F\\
+local OP5 closure & no frame quantity; unchanged and local\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r23 ledger and guard update}
+\label{subsec:v490-r23-ledger-guard}
+
+\[
+R_{\rm F}^{v490\text{-}r23}=(0,0,1)
+\]
+for (main body classified, discrepancies of tachyon and photon placement recorded, choice between the two tachyon placements for
+the even statements left to the author).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r23,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r23}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
 \end{document}

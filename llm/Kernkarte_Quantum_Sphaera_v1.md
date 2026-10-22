@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v8.0
+# Kernkarte Quantum Sphaera — v8.1
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1710,6 +1710,23 @@ Eigenwert-Lesart 3/4, Ω_M (T: 3,31), Koide-Phase (T: undefiniert), Uhrschranke.
 **K66.3 (M).** Vorzeichenskala r82 ℓ_T² = −λ_T² folgt aus F3 ((−1)^{3/2} = ∓i, Quadrat −1), nicht aus dem Doppler-Faktor bei
 η + iπ/2 (e^{3iπ/4}, Quadrat −i). Klassentrennung und erlaubte Tachyon-Skala damit verträglich. R_F = (0,0,1).
 
+### K67 — Companion-Runde v4.9.0-r23: Konvention F auf den Hauptkorpus angewandt (2026-10-22)
+
+`sec:v490-r23-convention-f-main-body`, Snippet `llm/v490_r23_round.tex`, Skript `llm/k62_frame_regel_hauptkorpus.py`.
+
+**K67.1 (D).** 113 von 2234 Aussage-Umgebungen des Hauptkorpus hängen von einem Frame ab: F 7 (Strukturkonstanten,
+k-Tabelle, Tribonacci in |γ|, Guinand–Weil), M 29 (Kosmologie, Koide, OP1/OP2, Hopf-Winkel, Quasikonformität), C 12
+(Konstantenumrechnungen, Hypothesen), S 9 (Λ = 0 und Θ–R-Bilanz im Photon-Frame), P 3 (Horizont, Sättigung), D 13, N 40
+(OP1-Arbeitsschicht, OP5-Grammatik).
+
+**K67.2 (M).** (a) Tachyon des Hauptkorpus (−β, thm:symmetric-frame) ≠ Tachyon von F (1/β); 18 Aussagen (12 M, 6 S) wären
+unter −β frame-frei. (b) Photon-Frame des Hauptkorpus (β = 0, σ = 0) ist unter F der reine Zustand |b| = 1, nicht P; die
+S-Aussagen übertragen sich nicht. (c) β → 1 (Horizont, Sättigung) = Photon-Fixpunkt von F. (d) Quasikonform: Tachyon |μ| > 1,
+K = −γ_L, orientierungsumkehrend. (e) Ungerade Gewichte wechseln im Tachyon-Frame das Vorzeichen (T_H, α, Vakuum k = 5).
+(f) N-Aussagen samt lokaler OP5-Schließung ohne Frame-Größe, unverändert lokal. Vorzeichen-Widerspruch Sektordefinition
+(Materie β < 0) gegen thm:symmetric-frame (+β) vermerkt, durch v4.8.0-r07 (Vorzeichen von s) überholt. R_F = (0,0,1),
+Wahl der Tachyon-Lage für die geraden Aussagen beim Autor.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1825,6 +1842,7 @@ Eigenwert-Lesart 3/4, Ω_M (T: 3,31), Koide-Phase (T: undefiniert), Uhrschranke.
 - v7.8 (2026-10-22): K64 Companion-Runde v4.9.0-r20 (Herkunftshypothese Δ_γ < 1/5: Photon-Frame-Uhrgewinn am Hopf-Punkt).
 - v7.9 (2026-10-22): K65 Companion-Runde v4.9.0-r21 (Uhrschranke je Frame, 1/5 aus Frame-Konsistenz hergeleitet).
 - v8.0 (2026-10-22): K66 Companion-Runde v4.9.0-r22 (Frame-Regel als Konvention F, Pflichtabschnitt, Linter-Prüfung).
+- v8.1 (2026-10-22): K67 Companion-Runde v4.9.0-r23 (Konvention F auf 113 Hauptkorpus-Aussagen angewandt).
 
 ---
 
