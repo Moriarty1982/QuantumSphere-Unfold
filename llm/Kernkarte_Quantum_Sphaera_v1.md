@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v8.1
+# Kernkarte Quantum Sphaera — v8.2
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1727,6 +1727,25 @@ K = −γ_L, orientierungsumkehrend. (e) Ungerade Gewichte wechseln im Tachyon-F
 (Materie β < 0) gegen thm:symmetric-frame (+β) vermerkt, durch v4.8.0-r07 (Vorzeichen von s) überholt. R_F = (0,0,1),
 Wahl der Tachyon-Lage für die geraden Aussagen beim Autor.
 
+### K68 — Companion-Runde v4.9.0-r24: Korrektur der drei r23-Widersprüche als Ein-Frame-Artefakte (2026-10-22)
+
+`sec:v490-r24-single-frame-correction`, Snippet `llm/v490_r24_round.tex`, Skript `llm/k63_widersprueche_ein_frame.py`.
+Autorhinweis: der Hauptkorpus arbeitete nur in einem Frame.
+
+**K68.1 (M).** Vorzeichen: β in Sektordefinition und thm:symmetric-frame ist Orientierungscode (v4.8.0-r01); die zwei
+Konventionen unterscheiden sich um z → −z = C, das s erhält; Sektor nach Vorzeichen von s (v4.8.0-r07). Notation, nicht Physik.
+
+**K68.2 (M).** Tachyon: Rapidität −η + iπ/2, tanh = −1/β; reelle Projektion auf die Achse des Bezugsframes = −β (Hauptkorpus,
+T|_R), im eigenen Frame β_T² = 1/β² (F). Die 18 geraden Aussagen sind frame-frei zwischen M und T|_R, im Tachyon-Eigenframe
+bei 1/β² (Ω_M → 3,31).
+
+**K68.3 (M).** Photon: der „Photon-Frame“ des Hauptkorpus (β = 0) ist der reine Zustand R, |b| = 1, Entropie 0; Umrechnungs-
+faktor |b_R|/|b_M| = cosh 2η = γ_L. Zum echten Photon P (b = 0) wäre er unendlich. S-Aussagen (Λ = 0, Rahmenterm 0) gelten in
+R; in P sind Rahmenterm und p₋/p₊ maximal.
+
+**K68.4 (D).** Konvention F ergänzt: F5 Bezugsframe R, Umrechnung M → R; F6 Projektion T|_R bei −β; F7 Vorzeichen von β =
+Orientierungscode. R_F = (0,0,0): beide Tachyon-Lagen mit Typisierung behalten.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1843,6 +1862,7 @@ Wahl der Tachyon-Lage für die geraden Aussagen beim Autor.
 - v7.9 (2026-10-22): K65 Companion-Runde v4.9.0-r21 (Uhrschranke je Frame, 1/5 aus Frame-Konsistenz hergeleitet).
 - v8.0 (2026-10-22): K66 Companion-Runde v4.9.0-r22 (Frame-Regel als Konvention F, Pflichtabschnitt, Linter-Prüfung).
 - v8.1 (2026-10-22): K67 Companion-Runde v4.9.0-r23 (Konvention F auf 113 Hauptkorpus-Aussagen angewandt).
+- v8.2 (2026-10-22): K68 Companion-Runde v4.9.0-r24 (r23-Widersprüche als Ein-Frame-Artefakte korrigiert; F5–F7).
 
 ---
 

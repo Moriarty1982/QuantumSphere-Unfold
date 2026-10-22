@@ -71179,4 +71179,147 @@ R_{\rm glob}^{(v490\text{-}r23,+)}=(0,1,1,1,1),
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
 
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r24 Source-Only: Correction of the Three Discrepancies of r23 as Single-Frame Artefacts}
+\addcontentsline{toc}{section}{v4.9.0-r24 Source-Only: Correction of the Three Discrepancies of r23 as Single-Frame Artefacts}
+\label{sec:v490-r24-single-frame-correction}
+% ============================================================================
+
+\paragraph{Purpose.}
+r23 recorded three discrepancies between the main body and Convention F: the sign of the matter offset, the position of the
+tachyon, and the position of the photon.  On 2026-10-22 the author asked for a correction and pointed out that the main body
+worked in one frame only, which may be where the discrepancies come from.  This layer shows that this is so for all three.  It
+corrects them by typing, not by editing: the main body is not rewritten, and its statements receive the frame they were made
+in.  The script is \texttt{llm/k63\_widersprueche\_ein\_frame.py}.  No prediction is made, and nothing is compared with data.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r24 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r24 the single frame of the main body}
+\label{subsec:v490-r24-single-frame}
+
+The main body describes everything from one frame and along one real axis.  It calls that frame the photon frame and measures
+the offset \(\bsym\) from it.  Three features of that frame matter here.  First, it fixes an orientation on the axis.  Second, it
+sees only real rapidities.  Third, it is the zero of its own scale line.  Each discrepancy of r23 comes from one of these.
+
+\subsection*{v4.9.0-r24 the three corrections}
+\label{subsec:v490-r24-corrections}
+
+\paragraph{Theoremlet v4.9.0-r24.1 (sign).}
+The sign of \(\beta\) in the sector definition of \S\ref{sec:unitary} (matter \(\beta<0\)) and in Theorem~\ref{thm:symmetric-frame}
+(matter \(+\bsym\)) is an orientation code in the sense of v4.8.0-r01
+(\S\ref{subsec:v480-r01-orientation-vs-signature}).  The two choices differ by the reflection \(z\mapsto-z\), which is charge
+conjugation \(C\) (v4.9.0-r02).  \(C\) reverses \(\operatorname{Re}z\) and leaves \(s=z\cdot z\) unchanged.  The sector is fixed by the sign
+of \(s\) (v4.8.0-r07), so both choices assign the same sectors.  The two passages use opposite orientation conventions.  That is
+a conflict of notation, not of physics.
+
+\paragraph{Correction.}
+Read \(\beta\) of the sector definition and \(\pm\bsym\) of Theorem~\ref{thm:symmetric-frame} as orientation codes, and read
+\(\bsym=|\beta|\ge0\) as the magnitude of the offset.  Matter and tachyon are told apart by the sign of \(s\).
+
+\paragraph{Theoremlet v4.9.0-r24.2 (tachyon).}
+The tachyon rapidity is \(-\eta+i\pi/2\), with \(\tanh(-\eta+i\pi/2)=-\coth\eta=-1/\bsym\).  Projected onto the single real axis of the
+main body, dropping the imaginary part, it is \(-\eta\), that is \(\beta=-\bsym\).  This is the tachyon of
+Theorem~\ref{thm:symmetric-frame}.  In its own frame the tachyon has \(\beta_T^2=1/\bsym^2\), which is the tachyon of Convention F.
+Both describe the same tachyon, the first as seen along the axis of the reference frame and the second in its own frame.
+
+\paragraph{Correction.}
+Convention F receives a fourth entry, \(T|_R\), the tachyon seen from the reference frame of the main body, at \(-\bsym\).  The \(18\)
+even statements of r23.1(a), among them \(\Omega_M\), \(g_{tt}=-\bsym^2\) and the Beltrami coefficient, hold for M and for \(T|_R\)
+alike.  They are frame-free in the description of the main body.  In the tachyon's own frame they take the values at
+\(1/\bsym^2\) (\(\Omega_M\to3.31\)).  The two values are different typings, and neither contradicts the other.
+
+\paragraph{Theoremlet v4.9.0-r24.3 (photon).}
+The frame that the main body calls the photon frame, \(\bsym=0\), is in the state disk the pure state \(|b|=1\), with entropy \(0\).
+The main-body conversion factor to it is the ratio of Bloch lengths:
+\[
+\frac{|b_R|}{|b_M|}=\frac{1}{\operatorname{sech}2\eta}=\cosh2\eta=\gL .
+\]
+To the photon of Convention F, \(b=0\), the same factor would diverge.  The reference frame of the main body is therefore the
+pure-state frame R, the zero of the scale line.  The photon P of Convention F is the maximally mixed state, reached for
+\(\beta\to1\).
+
+\paragraph{Proof sketch.}
+r24.1: \(s(-z)=s(z)\) and \(\operatorname{Re}(-z)=-\operatorname{Re}z\), checked on \(1000\) random \(z\).  r24.2: \(\tanh(x+i\pi/2)=\coth x\).
+r24.3: \(|b|=\operatorname{sech}2\eta\), equal to \(1\) at \(\eta=0\).  Numerically \(|b_R|/|b_M|=1.86444=\gL\).  \(\square\)
+
+\paragraph{Correction.}
+Read ``photon frame'' in the main body, where it denotes the zero of the offset or the target of a \(\gL^{-k}\) conversion, as the
+reference frame R.  The nine S statements of r23 become R statements and hold there.  \(\Lambda=0\) and the vanishing frame term
+hold in R, the frame where the doublet state is pure.  At the photon P the frame term \(\bsym^2\) and the ratio \(p_-/p_+\) are
+maximal (\(1\)).  This also explains why a finite \(\gL\) points to \(|b|=1/\gL\) and not to \(b=0\) (r17): the conversion goes from M to
+R, not from M to P.
+
+\subsection*{v4.9.0-r24 Convention F completed}
+\label{subsec:v490-r24-convention}
+
+\begin{enumerate}[leftmargin=2em]
+\item[(F5)] \emph{Reference frame.}  R is the pure state \(|b|=1\), \(\bsym=0\), \(\sigma=0\).  It is the frame of the main body.  The
+conversion \(X^{(R)}=\gL^{-k}X^{(M)}\) of \S\ref{sec:phase-constants} goes from M to R.
+\item[(F6)] \emph{Projection.}  \(T|_R\) is the tachyon seen from R along the real axis: \(\beta=-\bsym\), imaginary part dropped.  A
+statement of the main body about the tachyon is a statement about \(T|_R\) unless it says otherwise.
+\item[(F7)] \emph{Orientation.}  The sign of \(\beta\) is an orientation code.  The sector is fixed by the sign of \(s\).
+\end{enumerate}
+The r23 classification becomes: S \(\to\) R (valid in R); the \(18\) even statements are frame-free between M and \(T|_R\) and
+matter-only in the tachyon's own frame; P keeps the three \(\beta\to1\) statements.
+
+\subsection*{v4.9.0-r24 status in the three frames}
+\label{subsec:v490-r24-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P (and R, \(T|_R\))\\
+\midrule
+r24.1 sign & orientation code in every frame; sector by the sign of \(s\), unchanged under \(C\)\\
+r24.2 tachyon & \(T|_R\) at \(-\bsym\), T at \(1/\bsym\); even statements equal in M and \(T|_R\), different in T\\
+r24.3 photon & R is the pure state, P the maximally mixed state; S statements hold in R, not in P\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r24 register entries}
+\label{subsec:v490-r24-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r24\\
+\midrule
+sign of the matter offset & orientation code; the two conventions differ by \(C\); sector by \(s\) (r24.1)\\
+tachyon of Thm.~\ref{thm:symmetric-frame} & \(T|_R\), the real projection of the tachyon onto the reference axis (r24.2)\\
+photon frame of the main body & reference frame R, the pure state; conversions go from M to R (r24.3)\\
+S statements of r23 & valid in R\\
+\(18\) even statements of r23 & frame-free between M and \(T|_R\); in the tachyon's own frame at \(1/\bsym^2\)\\
+discrepancies of r23 & resolved as single-frame artefacts; no edit of the main body\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r24 ledger and guard update}
+\label{subsec:v490-r24-ledger-guard}
+
+\[
+R_{\rm F}^{v490\text{-}r24}=(0,0,0)
+\]
+for (sign resolved, tachyon placement resolved, photon placement resolved).  The open component of r23, the choice between the
+two tachyon placements, is closed: both are kept with their typings.
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r24,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r24}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
 \end{document}
