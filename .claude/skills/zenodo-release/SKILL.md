@@ -81,7 +81,8 @@ Ab hier nicht mehr `new_version_of` verwenden — das legte einen zweiten Entwur
 
 Im v4.9-Kandidaten kommt die Titelseite aus `sources/research/parts/working-preamble.tex` (`\title`, `\author`,
 `\date`, `\workingversion`, `\hypersetup`), **nicht** aus dem eingefrorenen Fragment `parts/v470/01_opening.tex`, das nur
-`\maketitle` aufruft. Fragmente unter `parts/v470/` nie editieren.
+`\maketitle` aufruft. Fragmente unter `parts/v470/` waren bis v4.9.0 eingefroren; seit der 4.10-Basis (PR #25) nur nach der
+Überarbeitungsregel aus v4.9.0-r25 ändern (Archiv `parts/v4100-archive.tex`, Statusvermerke), eingefrorener Stand unter Tag `v4.9.0`.
 
 Compact-Titlepage-Regel: genau eine Version-DOI-Zeile, genau eine Concept-DOI-Zeile; Vorgänger-DOIs und
 Provenienz in den Fließtext. `\workingversion` von `X.Y.Z-draft` auf `X.Y.Z`; PDF-Metadaten (`pdftitle`, `pdfsubject`)
