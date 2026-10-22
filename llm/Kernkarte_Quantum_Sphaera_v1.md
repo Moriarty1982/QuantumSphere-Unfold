@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v8.6
+# Kernkarte Quantum Sphaera — v8.7
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1822,6 +1822,20 @@ reversibel; 40 Frequenzen Kohärenz ≈ N^(−1/2) mit Teil-Wiederkehr → nur n
 eindeutiger Attraktor |b| = sin²θ/(1 − cos²θ cos 2α) auf der Partnerport-Achse (selbststabilisiert, offenes System). Nachträglich:
 sin²θ = β² selbstkonsistent genau bei β² = 1/3 (Hopf), gemessen 0,4825 gegen 0,5364. R_meas = (0,0,1).
 
+### K73 — Companion-Runde v4.9.0-r29: Woher das Tachyon-Reservoir kommen könnte (2026-10-22)
+
+`sec:v490-r29-reservoir-source`, Snippet `llm/v490_r29_round.tex`, Skript `llm/k66_tachyon_reservoir_quelle.py` (Kandidaten und
+Kriterien vorab: nachliefern, Bezugszustand b_T = (−1, 0), kohärenter Austausch, keine verbotene Aussage).
+
+**K73.1 (M).** Vakuum = Bezugsframe R (r24); sein Bild unter z → iz ist genau der Tachyon-Bezugszustand → Paarerzeugung aus dem
+Vakuum liefert passende Tachyonen (K2). Horizont liegt am Photon-Fixpunkt, b_T = 0, Attraktor 0 (K1 scheidet aus); übrige Moden nur
+Dephasierung (K4 scheidet aus); thermisches Bad nur teilweise (|b| = 0,500 / 0,193 / 0 bei |b_T| = 1 / 0,5 / 0), T → 0 = Vakuum (K5);
+Trefferkette verteilt statt nachzuliefern, Paarereignis = K2 (K6).
+
+**K73.2 (M).** Kaskade K3: Austauschstärke β² nur kohärent selbstkonsistent (Hopf, |b| = 1/2); als Markov-Ersetzung 0,378, schräg
+(41°), selbstkonsistent erst bei p = 0,3865 (kein benannter Punkt). Bilanz: gebrauchter Tachyon (−0,750, 0,144), ein frisches
+Vakuumpaar je Kick nötig. Offen: Paarerzeugungsrate, Kohärenz des Austauschs, Verbleib der gebrauchten Tachyonen. R_res = (0,0,1).
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1945,6 +1959,8 @@ sin²θ = β² selbstkonsistent genau bei β² = 1/3 (Hopf), gemessen 0,4825 geg
 - v8.5 (2026-10-22): K71 Companion-Runde v4.9.0-r27 (Dynamik: Drehung plus Kompensator-Messung).
 
 - v8.6 (2026-10-22): K72 Companion-Runde v4.9.0-r28 (Tachyon als Messgerät, Selbststabilisierung, Tachyon-Abbildung z → iz).
+
+- v8.7 (2026-10-22): K73 Companion-Runde v4.9.0-r29 (Quelle des Tachyon-Reservoirs: Paarerzeugung aus dem Vakuum).
 
 ---
 
