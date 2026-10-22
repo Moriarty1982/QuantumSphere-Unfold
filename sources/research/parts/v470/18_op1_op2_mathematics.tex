@@ -179,30 +179,9 @@ while its deeper origin is sought in the coupled closure--Theta correction
 problem under admissible packet-side control.
 \end{proof}
 
-\begin{remark}[$\delta_{\mathrm{CL}}$ from the prime distribution --- corrected]
-\label{conj:cl-correction}
-The continuum-limit correction, \emph{corrected in \QSCver{v2.29.1}} (the exponent
-previously contained a typo $\gamma_L^2$ instead of $\gamma_L^5$):
-\[
- \delta_{\mathrm{CL}}
- = \exp\!\left(-\frac{\gamma_1}{4\pi\gamma_L^5}\right)
- = \exp\!\left(-\frac{\gamma_1^{(\mathrm{photon})}}{4\pi\gamma_L^4}\right)
- \approx \exp(-0.0500) \approx 0.9512,
-\]
-where $\gamma_1 \approx 14.134$ and $\gamma_1^{(\mathrm{photon})} =
-\gamma_1/\gL \approx 7.583$ is the photon-frame first zero.
-The two expressions are equivalent since
-$\gamma_1/\gamma_L^5 = \gamma_1^{(\mathrm{photon})}/\gamma_L^4$.
-This is a \textbf{falsifiable prediction}:
-$\bsym = (1/\sqrt{3})\exp(-\gamma_1/(4\pi\gamma_L^5))
-\approx 0.5492$, matching the measured value to $0.018\%$.
-
-\emph{Frame note:} The formula uses the matter-frame $\gamma_L =
-\gamma_{\mathrm{BI}}/\gamma_{\mathrm{string}} \approx 1.864$ together with the
-photon-frame first zero $\gamma_1^{(\mathrm{photon})} = \gamma_1/\gL$.
-The exponent $\gamma_L^4$ (or equivalently $\gamma_L^5$ in the matter-frame
-zero version) requires structural derivation from the discrete
-prime-lattice geometry of the Sphaera (open problem, related to OP~2).
+\begin{remark}[\(\bsym\)-formula P3; archived]\label{conj:cl-correction}
+The formula \(\bsym=(1/\sqrt3)\exp(-\gamma_1/(4\pi\gL^5))\) matched the measured value to \(0.018\%\) with an exponent fixed after the fact.  v4.8.0-r09 classes the match as a coincidence (look-elsewhere about \(11\%\)); under the class split of v4.9.0-r19 it is lost (\(-0.15\%\)).  The continuum value \(\bsym^{\rm Hopf}=1/\sqrt3\) and the existence of a lattice correction are not affected.
+\emph{Archived in the v4.9.0 revision; original text in \S\ref{sec:v490-archive}.}
 \end{remark}
 
 
@@ -573,6 +552,8 @@ layer. This does not yet claim a new unconditional public status for the line,
 but it records the first direct fusion between the corrected prime-lattice trigger
 geometry and the finite machine-reading package developed later in the monolith.
 \end{proof}
+\qsstatus{Status (v4.9.0 revision): equivalent to \(\cosh2\eta=e^\eta\), the point where the three readings of the offset coincide (v4.9.0-r01, r18).}
+
 
 \begin{corollary}[Continuum-limit cosmological parameters]
 \label{cor:tribonacci-cosmo}

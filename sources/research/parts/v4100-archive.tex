@@ -1,0 +1,469 @@
+% ============================================================================
+\clearpage
+\section*{Archived Statements of the Main Body}
+\addcontentsline{toc}{section}{Archived Statements of the Main Body}
+\label{sec:v490-archive}
+% ============================================================================
+
+This appendix was created in the v4.9.0 revision (v4.9.0-r25, 2026-10-22, at the author's request) and opens the
+4.10 base.  It keeps, word for word, statements of the main body that later layers refuted, excluded or withdrew.  At
+their original place each statement keeps its number and label, followed by its status and a pointer here, so every
+earlier reference still resolves.  Nothing is deleted; the frozen state of the fragments is kept under the tag
+\texttt{v4.9.0}.  The rounds, including all tests and refutations, are not touched.
+
+\begin{center}
+\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.32\textwidth}>{\raggedright\arraybackslash}p{0.60\textwidth}@{}}
+\toprule
+statement & reason\\
+\midrule
+Theorem~\ref{thm:koide-triolic} & phase formula excluded by data (v4.8.0-r09); \(K=2/3\) stays as empirical fact\\
+Theorem~\ref{thm:gue} & derivation withdrawn (v4.8.0-r05); GUE stays as empirical fact\\
+Theorem~\ref{thm:gue-selfdet} & not confirmed, contradicted on zeros 1--2000 (v4.8.0-r08)\\
+Corollary~\ref{cor:odlyzko} & falsified at low height, asymptotic form excluded (v4.8.0-r08)\\
+Remark~\ref{conj:cl-correction} & coincidence, exponent post hoc (v4.8.0-r09); lost under the class split (v4.9.0-r19)\\
+Proposition~\ref{prop:exponent-5} & exponent chosen post hoc (v4.8.0-r09)\\
+Theorem~\ref{thm:self-consistent-gL} & rests on the archived P3 formula; \(\gL\) remains an input (v4.8.0-r03 F11)\\
+Corollary~\ref{cor:op1-resolved} & claimed resolution rests on the archived P3 formula; OP1 open\\
+Proposition~\ref{prop:pmns-z3} & refuted (v4.8.0-r12)\\
+Proposition~\ref{prop:H0-tension} & drift excluded by atomic clocks (v4.9.0-r08); no mechanism left (v4.9.0-r09)\\
+Proposition~\ref{prop:saturation} & no basis left (v4.9.0-r15)\\
+Proposition~\ref{prop:bare-lambda} & withdrawn as derivation; \(\gamma_1^2\) unsupported (v4.8.0-r05)\\
+Proposition~\ref{conj:theta-sum-B} & false: \(\mathcal T(T)=-0.1097\), not \(0.893\) (v4.8.0-r05)\\
+Remark~\ref{rem:explicit-formula-remainder} & withdrawn with the Theta-sum conjecture (v4.8.0-r05)\\
+Table row of Thm.~\ref{thm:toe} & the row ``Riemann Hypothesis'' was withdrawn (v4.8.0-r04)\\
+\bottomrule
+\end{longtable}
+\end{center}
+
+\begin{qsarchived}{Theorem~\ref{thm:koide-triolic} [Koide formula from the triolic structure]}
+\begin{theorem}[Koide formula from the triolic structure]
+
+The lepton masses satisfy the Koide relation
+\[
+ K = \frac{m_e+m_\mu+m_\tau}{(\sqrt{m_e}+\sqrt{m_\mu}+\sqrt{m_\tau})^2}
+ = \frac{2}{3}
+\]
+to within $0.005\%$ experimentally.
+In the Sphaera framework, the lepton mass hierarchy is a frame effect.
+Using the Brannen parametrization
+$\sqrt{m_k} = A\bigl(1+\sqrt{2}\cos(\theta_K + 2\pi k/3)\bigr)$
+with $A = (\sqrt{m_e}+\sqrt{m_\mu}+\sqrt{m_\tau})/3$
+and $k=0,1,2$, the Koide phase angle is
+\[
+ \theta_K \;=\; \pi - \sqrt{2}\cdot\arcsin(\bsym) \;\approx\; 2.3192\;\text{rad}
+ \;\approx\; 132.88^\circ,
+\]
+predicting the observed value $\theta_K^{\rm obs}\approx 132.73^\circ$
+to within $0.111\%$.
+\end{theorem}
+
+\begin{proof}
+\textbf{Step 1: $K=2/3$ from the $\mathbb{Z}/3\mathbb{Z}$ constraint.}
+The $\mathbb{Z}/3\mathbb{Z}$ symmetry on $S^3$ imposes two simultaneous
+conservation conditions on the triolic sector: $\sum_i\sqrt{m_i}=\mathrm{const}$
+and $\sum_i m_i=\mathrm{const}$.
+By the Cauchy--Schwarz identity applied to the vectors $(1,1,1)$ and
+$(\sqrt{m_e},\sqrt{m_\mu},\sqrt{m_\tau})$,
+\[
+ \Bigl(\sum_i\sqrt{m_i}\Bigr)^2
+ \;\le\;
+ 3\,\sum_i m_i,
+\]
+with equality iff all $m_i$ are equal. The triolic $\mathbb{Z}/3\mathbb{Z}$
+orbit structure forces the unique ratio consistent with both conservation
+conditions to be $K=2/3$, which is the Cauchy--Schwarz bound normalized
+to the triolic sector count (2 stable sectors out of 3).
+
+\textbf{Step 2: The Koide phase angle from the frame offset.}
+The lepton mass hierarchy is a readout-relative effect
+(Section~\ref{sec:readout-relative-lemmas}): in the photon frame
+($\bsym=0$) all three lepton masses become degenerate, while the
+matter-frame offset $\bsym\approx 0.5493$
+(Theorem~\ref{thm:symmetric-frame}) breaks the degeneracy. The
+Hopf-angle structure of the Sphaera (Theorem~\ref{thm:hopf}) maps
+the frame offset $\bsym$ to the Koide phase via the Brannen
+parametrization as
+\[
+ \theta_K = \pi - \sqrt{2}\cdot\arcsin(\bsym).
+\]
+Numerically with $\bsym=0.5493$:
+$\theta_K\approx 2.3192\,\text{rad}\approx 132.88^\circ$.
+
+\textbf{Step 3: Numerical comparison.}
+The observed Koide phase extracted from the PDG lepton masses
+($m_e=0.51100\,\text{MeV}$, $m_\mu=105.658\,\text{MeV}$,
+$m_\tau=1776.86\,\text{MeV}$) via the Brannen parametrization is
+$\theta_K^{\rm obs}\approx 132.73^\circ$. The formula gives
+$132.88^\circ$, a relative discrepancy of $0.111\%$ in the angle.
+\end{proof}
+\end{qsarchived}
+
+\begin{qsarchived}{Theorem~\ref{thm:gue} [GUE from the Sphaera]}
+\begin{theorem}[GUE from the Sphaera]
+The eigenvalues $\{\gamma_\rho\}$ of $L_0$ on $\Hplusplus$ --- which
+are the imaginary parts of the non-trivial Riemann zeros
+(Theorem~T6 of~\cite{brendecke2026rh}) --- follow the
+Gaussian Unitary Ensemble (GUE) statistics.
+Specifically, the normalized pair-correlation function is:
+\[
+ R_2(s) = 1-\left(\frac{\sin\pi s}{\pi s}\right)^2,
+\]
+and the nearest-neighbor spacing distribution follows the Wigner--Dyson
+law:
+\[
+ p(s) = \frac{32}{\pi^2}\,s^2\,e^{-4s^2/\pi}.
+\]
+$L_0$ is in the GUE universality class ($\beta=2$) because it is
+self-adjoint, irreducible on $\Hplusplus$ (Stone--von Neumann), and
+has no time-reversal symmetry.
+\end{theorem}
+
+\begin{proof}
+We establish that $L_0$ lies in the GUE universality class by verifying
+three conditions.
+
+\emph{(i) Self-adjointness.}
+$L_0$ is essentially self-adjoint on $\Hplusplus$ by Theorem~T4+T5
+of~\cite{brendecke2026rh}.
+This places it in the class of Hermitian operators with real spectrum.
+
+\emph{(ii) Irreducibility.}
+$\Hplusplus$ carries an irreducible representation of $\WA$ by
+Stone--von Neumann (Theorem~3.2 of~\cite{brendecke2026rh}).
+Irreducible self-adjoint operators in infinite-dimensional Hilbert
+spaces generically belong to the GUE universality class
+(Wigner--Dyson--Mehta universality).
+
+\emph{(iii) Absence of time-reversal symmetry.}
+The three symmetry classes are distinguished by the presence of time
+reversal $T$:
+\begin{itemize}
+ \item $T$ present, $T^2=+1$: GOE ($\beta=1$)
+ \item $T$ absent: GUE ($\beta=2$)
+ \item $T$ present, $T^2=-1$: GSE ($\beta=4$)
+\end{itemize}
+The operator $J:s\mapsto 1-\bar{s}$ satisfies $JL_0 J^{-1}=L_0$,
+so $J$ is a symmetry of $L_0$.
+However, $J$ is a space reflection ($\sigma\mapsto 1-\sigma$,
+$t\mapsto t$), not a time reversal.
+True time reversal $T$ would send $L_0\mapsto -L_0$ (since $L_0$ is
+odd under $t\mapsto -t$).
+Since $L_0\neq -L_0$, the operator has no time-reversal symmetry.
+Therefore $L_0$ is in the GUE class ($\beta=2$).
+\end{proof}
+\end{qsarchived}
+
+\begin{qsarchived}{Theorem~\ref{thm:gue-selfdet} [GUE self-determination of $\gL$]}
+\begin{theorem}[GUE self-determination of $\gL$]
+Define the photon-frame unfolding of the Riemann zeros
+$0<\gamma_1<\gamma_2<\cdots$ by
+\[
+ \tilde\gamma_n(\mu)
+ := \int_0^{\gamma_n}
+ \frac{\log\!\bigl(t/(2\pi\mu)\bigr)}{2\pi\mu}\,dt,
+\]
+with unfolded spacings $s_n(\mu):=\tilde\gamma_{n+1}(\mu)-\tilde\gamma_n(\mu)$.
+Let $\mathcal{F}(\mu) := D_{\mathrm{KS}}\bigl[P_\mu,\,P_{\mathrm{GUE}}\bigr]$
+be the Kolmogorov--Smirnov distance between the empirical spacing
+distribution at scale $\mu$ and the Wigner--Dyson law.
+Then $\mathcal{F}$ has a unique global minimum at $\mu=\gL^*$, and
+$\gL^* = \gBI/\gstring$ to the available numerical precision.
+
+In particular: $\gL$ is not a free parameter of the Sphaera-Cascade.
+It is the GUE fixpoint of the frame itself, determined by the Riemann
+zero sequence alone.
+\end{theorem}
+
+\begin{proof}
+The critical line $\mathrm{Re}(s)=\tfrac{1}{2}$ is the fixed-point set
+of $J:s\mapsto 1-\bar s$ (Theorem~\ref{thm:unity}) and is frame-invariant.
+By Theorem~\ref{thm:gue}, $L_0$ on $\Hplusplus$ lies in the GUE class
+with $\beta=2$ --- a photon-frame statement.
+Any $\mu\neq\gL^*$ shifts the mean of $P_\mu$ away from 1 and increases
+$\mathcal{F}$.
+The Wigner--Dyson distribution singles out exactly one unfolding scale,
+yielding the unique minimiser $\gL^*$.
+Numerical verification with the first 100 zeros confirms
+$\gL^*=\gBI/\gstring$ (simulation \texttt{gue\_frame\_correction.py};
+$\chi^2$ improvement $\approx 21\%$ over standard unfolding).
+Full formal proof: Appendix~\ref{app:formal-reintegrated}; the detailed witness lemma formerly labelled \texttt{lem:gue-selfdet-formal} is preserved in the historical-witness PDF of the same release bundle.
+\end{proof}
+\end{qsarchived}
+
+\begin{qsarchived}{Corollary~\ref{cor:odlyzko} [Falsifiable prediction --- frame-clarified \QSCver{v2.29.1}]}
+\begin{corollary}[Falsifiable prediction --- frame-clarified \QSCver{v2.29.1}]
+
+\emph{Frame: this is a matter-observer prediction.}
+We (matter observers at $\zminus=+\bsym$) unfold the Riemann zeros
+with the photon-frame density $\rho_{\mathrm{ph}}(\gamma) =
+\log(\gamma/(2\pi\gL))/(2\pi\gL)$ instead of the standard
+$\rho(\gamma) = \log(\gamma/(2\pi))/(2\pi)$.
+
+For Odlyzko's dataset (${\sim}10^6$ zeros at height ${\sim}10^{22}$),
+photon-frame unfolding ($\mu=\gL\approx 1.864$) predicts an improvement
+in $\chi^2$/dof relative to GUE of $\gtrsim 20\%$ relative to standard
+unfolding. With $N=100$ zeros the numerical test gives $75.8\%$ improvement
+(Section~\ref{sec:gue-selfdet}); the effect is expected to stabilize near
+${\sim}21\%$ asymptotically at large height where the Weyl formula is accurate.
+
+Non-observation falsifies $\gL=\gBI/\gstring\approx 1.864$ as the physical
+frame factor. Importantly, a \emph{tachyon-frame} observer ($\mu=1/\gL$)
+would see a \emph{worse} fit --- the prediction is directional and specific
+to the matter frame.
+\end{corollary}
+\end{qsarchived}
+
+\begin{qsarchived}{Remark~\ref{conj:cl-correction} [$\delta_{\mathrm{CL}}$ from the prime distribution --- corrected]}
+\begin{remark}[$\delta_{\mathrm{CL}}$ from the prime distribution --- corrected]
+
+The continuum-limit correction, \emph{corrected in \QSCver{v2.29.1}} (the exponent
+previously contained a typo $\gamma_L^2$ instead of $\gamma_L^5$):
+\[
+ \delta_{\mathrm{CL}}
+ = \exp\!\left(-\frac{\gamma_1}{4\pi\gamma_L^5}\right)
+ = \exp\!\left(-\frac{\gamma_1^{(\mathrm{photon})}}{4\pi\gamma_L^4}\right)
+ \approx \exp(-0.0500) \approx 0.9512,
+\]
+where $\gamma_1 \approx 14.134$ and $\gamma_1^{(\mathrm{photon})} =
+\gamma_1/\gL \approx 7.583$ is the photon-frame first zero.
+The two expressions are equivalent since
+$\gamma_1/\gamma_L^5 = \gamma_1^{(\mathrm{photon})}/\gamma_L^4$.
+This is a \textbf{falsifiable prediction}:
+$\bsym = (1/\sqrt{3})\exp(-\gamma_1/(4\pi\gamma_L^5))
+\approx 0.5492$, matching the measured value to $0.018\%$.
+
+\emph{Frame note:} The formula uses the matter-frame $\gamma_L =
+\gamma_{\mathrm{BI}}/\gamma_{\mathrm{string}} \approx 1.864$ together with the
+photon-frame first zero $\gamma_1^{(\mathrm{photon})} = \gamma_1/\gL$.
+The exponent $\gamma_L^4$ (or equivalently $\gamma_L^5$ in the matter-frame
+zero version) requires structural derivation from the discrete
+prime-lattice geometry of the Sphaera (open problem, related to OP~2).
+\end{remark}
+\end{qsarchived}
+
+\begin{qsarchived}{Proposition~\ref{prop:exponent-5} [Structural derivation of the $\gL^5$ exponent]}
+\begin{proposition}[Structural derivation of the $\gL^5$ exponent]
+
+The exponent $n=5$ in the formula
+$\bsym = (1/\sqrt{3})\exp(-\gamma_1/(4\pi\gL^n))$ is the integer
+nearest to the exact non-integer value
+\[
+ n_{\mathrm{exact}}(\gL)
+ = \frac{\log\!\bigl(\gamma_1/(4\pi\,|\log(\bsym\sqrt{3})|)\bigr)}
+ {\log\gL},
+\]
+which equals $n_{\mathrm{exact}} \approx 5.003$ at the measured
+$\gL = 1.864$ and $\bsym = 0.5493$, and $\approx 4.808$ at the
+Tribonacci value $\gL = \mathbb{T}$.
+\end{proposition}
+
+\begin{proof}
+From the self-consistent equation~\eqref{eq:SC1}: setting
+$\bsym = (1/\sqrt{3})\exp(-\gamma_1/(4\pi\gL^n))$ and solving for
+$\gL^n$ gives
+\[
+ \gL^n
+ = -\frac{\gamma_1}{4\pi\log(\bsym\sqrt{3})}
+ = \frac{\gamma_1}{4\pi\,|\log(\bsym\sqrt{3})|},
+\]
+since $\bsym\sqrt{3} < 1$ (i.e., $\bsym < 1/\sqrt{3}$) implies
+$\log(\bsym\sqrt{3}) < 0$.
+Numerically at the measured values:
+\[
+ \gL^n
+ = \frac{14.135}{4\pi\,|\log(0.5493\cdot\sqrt{3})|}
+ = \frac{14.135}{4\pi\cdot 0.04985}
+ \approx 22.58,
+ \quad\gL^5 \approx 22.53.
+\]
+The match is within $0.25\%$, confirming $n=5$ as the correct integer.
+Taking logarithms: $n\log\gL = \log(22.58)$, giving
+$n_{\mathrm{exact}} = \log(22.58)/\log(1.864) \approx 5.003$.
+\end{proof}
+\end{qsarchived}
+
+\begin{qsarchived}{Theorem~\ref{thm:self-consistent-gL} [Self-consistent determination of $\gL$]}
+\begin{theorem}[Self-consistent determination of $\gL$]
+
+The matter frame factor $\gL = \gBI/\gstring$ is the unique solution
+$\mu > 1$ of the coupled system
+\begin{align}
+ \bsym &= \frac{1}{\sqrt{3}}\,
+ \exp\!\left(-\frac{\gamma_1}{4\pi\mu^5}\right),
+ \tag{SC1}\label{eq:SC1}\\
+ \bsym &= \sqrt{\frac{\mu-1}{\mu+1}},
+ \tag{SC2}\label{eq:SC2}
+\end{align}
+where $\gamma_1 = 14.134725\ldots$ is the imaginary part of the first
+non-trivial Riemann zero. This system has \emph{no free parameters}:
+$\gamma_1$ is determined by the Riemann spectrum, and the Hopf prefactor
+$1/\sqrt{3}$ is fixed by the $\mathbb{Z}/3\mathbb{Z}$ triolic geometry.
+Numerically: $\mu^* \approx 1.8637$, matching $\gL = 1.8644$ to $0.04\%$.
+\end{theorem}
+
+\begin{proof}
+\textbf{(SC2)} is the definition of $\bsym$ from $\gL$
+(Theorem~\ref{thm:symmetric-frame}).
+\textbf{(SC1)} is the prime-lattice spectral correction established
+in Remark~\ref{conj:cl-correction} (corrected in \QSCver{v2.29.1}): it equates
+$\bsym$ to the discrete Weyl-density ratio at the first Riemann zero.
+Setting (SC1) equal to (SC2) gives a transcendental equation in $\mu$
+whose unique real solution $\mu^* > 1$ is verified numerically
+to lie within $0.04\%$ of the measured $\gL$.
+\end{proof}
+\end{qsarchived}
+
+\begin{qsarchived}{Corollary~\ref{cor:op1-resolved} [OP~1 resolved up to $0.04\%$]}
+\begin{corollary}[OP~1 resolved up to $0.04\%$]
+
+OP~1 ($\bsym$ from first principles, without reference to the external
+ratio $\gBI/\gstring$) is resolved at the $0.04\%$ level by the
+self-consistent system~\eqref{eq:SC1}--\eqref{eq:SC2}:
+\begin{itemize}
+ \item Input: $\gamma_1$ from the Riemann spectrum (no free parameter).
+ \item Output: $\gL = \mu^* \approx 1.8637$ and
+ $\bsym \approx 0.5492$.
+ \item Residual: $0.04\%$ gap to the measured $\gL = 1.8644$,
+ arising from the $0.018\%$ precision of~(SC1)
+ (structural derivation of the $\gL^5$ exponent remains open,
+ as noted in Remark~\ref{conj:cl-correction}).
+\end{itemize}
+\end{corollary}
+\end{qsarchived}
+
+\begin{qsarchived}{Proposition~\ref{prop:pmns-z3} [PMNS angles from $\mathbb{Z}/3\mathbb{Z}$ symmetry]}
+\begin{proposition}[PMNS angles from $\mathbb{Z}/3\mathbb{Z}$ symmetry]
+
+The large mixing angles of the PMNS matrix (neutrino mixing) differ
+from CKM precisely because the lepton sector sits at the
+\emph{triolic fixed points} of $\mathbb{Z}/3\mathbb{Z}$ on $S^3$
+(Theorem~11.4, Koide formula), while the quark sector sits at
+$G_2$-rotated points. The triolic fixed-point angle gives
+\[
+ \theta_{23}^{\mathrm{PMNS}} \approx \arctan(\sqrt{2}) \approx 54.74^\circ
+ \quad (\text{the maximal mixing angle}),
+\]
+from the same tetrahedral geometry as the Hopf final of OP 1.
+The atmospheric mixing angle $\theta_{23} \approx 45$--$50^\circ$
+is the $\delta_{\mathrm{CL}}$-shifted version of this.
+\end{proposition}
+\end{qsarchived}
+
+\begin{qsarchived}{Proposition~\ref{prop:H0-tension} [H$_0$ tension as $\bsym(t)$ evolution, hypothesis-grade]}
+\begin{proposition}[H$_0$ tension as $\bsym(t)$ evolution, hypothesis-grade]
+
+\emph{(Hypothesis-grade; requires cosmological model.)}
+The Hubble tension ($H_0^{\mathrm{CMB}} \approx 67.4$ vs.
+$H_0^{\mathrm{local}} \approx 73.0$ km/s/Mpc, factor $\approx 1.083$)
+may reflect a cosmological evolution of the frame offset $\bsym(t)$:
+\begin{align*}
+ \bsym(z=0) &\approx 0.5493 \quad \text{(today)}, \\
+ \bsym(z=1100) &\approx 0.527 \quad \text{(CMB epoch)}.
+\end{align*}
+The required change $\Delta\bsym \approx +0.023$ over 13.8 Gyr
+corresponds to a rate of $\approx 1.6\times 10^{-12}$ per year.
+Physically, as matter structures in the universe grew ($z: 1100\to 0$),
+the frame offset $\bsym$ also increased --- the universe moves
+continuously away from the photon frame.
+In this picture, the $H_0$ discrepancy would require no new physics,
+but would instead be an artefact of the time variation of $\bsym(t)$.
+\end{proposition}
+\end{qsarchived}
+
+\begin{qsarchived}{Proposition~\ref{prop:saturation} [Saturation model, hypothesis-grade]}
+\begin{proposition}[Saturation model, hypothesis-grade]
+
+\emph{(Hypothesis-grade; cosmological end-state.)}
+
+The saturation model connects $k(\nu)=4$
+(Proposition~\ref{prop:k-neutrino}) with long-term cosmology:
+\begin{enumerate}[label=(\arabic*)]
+ \item As expansion increases, neutrino masses increase in the matter frame
+ ($m_\nu^{(\mathrm{matter})} = \gL^4(t)\cdot m_\nu^{(\mathrm{photon})}$
+ when $\gL(t)$ grows, i.e. $\bsym(t)\nearrow 1$).
+ \item When $\bsym(t)\to 1$ (tachyon limit), one has
+ $\gL\to\infty$, $m_\nu^{(\mathrm{matter})}\to\infty$, and the cascade
+ probability $P(S^8\to S^4) = \bsym^2\to 1$ --- the universe becomes
+ fully ``matter dominated.''
+ \item Shortly before the limit, $H_0\to 0$ and the expansion stops ---
+ the universe reaches the ``tachyon horizon'' $\zminus = -\bsym$
+ (framework definition limits; cf.
+ Proposition~\ref{prop:horizon-cascade-singularity}).
+\end{enumerate}
+This model is not a new assumption, but the consistent continuation of
+the $\bsym(t)$ evolution (Proposition~\ref{prop:H0-tension}) into the
+distant future.
+\end{proposition}
+\end{qsarchived}
+
+\begin{qsarchived}{Proposition~\ref{prop:bare-lambda} [Bare $\Lambda$ from the constant term]}
+\begin{proposition}[Bare $\Lambda$ from the constant term]
+
+The constant term $1$ in $\Sigma(\tau) = 1 - \Theta(\tau) + R(\tau)$
+contributes a cosmological constant
+\[
+ \Lambda_{\mathrm{bare}}^{(\mathrm{matter})}
+ \;\sim\; \gamma_1^2 \approx (14.135)^2 \approx 200\,m_P^4,
+\]
+where $\gamma_1 = 14.134725\ldots$ is the imaginary part of the first
+non-trivial Riemann zero (the natural energy scale of the prime lattice).
+In the photon frame:
+\[
+ \Lambda_{\mathrm{bare}}^{(\mathrm{photon})}
+ = \gL^{-2}\cdot\Lambda_{\mathrm{bare}}^{(\mathrm{matter})}
+ \approx \frac{200}{(1.864)^2} \approx 57.6\,m_{P,\mathrm{photon}}^4.
+\]
+\end{proposition}
+
+\begin{proof}
+The pole of $\zeta(s)$ at $s=1$ contributes, via the Mellin transform
+$\int_0^\infty e^{-s\tau}\Theta(\tau)\,d\tau = \log\zeta(s)$, a residue
+at $s=1$ equal to $1$. The inverse Laplace transform at $\tau=0^+$
+gives a contribution proportional to the square of the first zero
+$\gamma_1$ to the vacuum energy density. The corresponding photon-frame normalization is not the main point of the present proposition. What matters structurally is that the bare contribution remains Planckian in naive units and therefore has to be removed by the correct photon-frame interpretation rather than by a matter-frame cancellation trick. A fully self-consistent determination of the effective $k(\Lambda)$ belongs to the open quantitative balance programme of §\ref{ssec:open-balance}.
+\end{proof}
+\end{qsarchived}
+
+\begin{qsarchived}{Proposition~\ref{conj:theta-sum-B} [Theta-sum balance conjecture, OP~5 Step~B]}
+\begin{proposition}[Theta-sum balance conjecture, OP~5 Step~B]
+
+\emph{(Conjecture-grade; derivable from the Guinand--Weil explicit
+formula if the remainder estimate can be controlled.)}
+\[
+ \mathcal{T}(T)
+ \;=\;
+ \frac{3T}{2} - \log T - \frac{T^2}{24} - \gamma_E - \bsym^2 T^2
+ \;\approx\; 0.893,
+\]
+where $T = \gL^{-3/2}\approx 0.393$, $\gamma_E\approx 0.5772$ is
+the Euler--Mascheroni constant, and $\bsym^2\approx 0.302$.
+\end{proposition}
+\end{qsarchived}
+
+\begin{qsarchived}{Remark~\ref{rem:explicit-formula-remainder} [Connection to the explicit formula remainder]}
+\begin{remark}[Connection to the explicit formula remainder]
+
+By the Guinand--Weil explicit formula
+(Theorem~3.3 of~\cite{brendecke2026rh}), the identity
+$\Sigma(\tau) = 1 - \Theta(\tau) + R(\tau)$ holds for all $\tau > 0$.
+Integrating from $0$ to $T$ (in the renormalized sense) and
+substituting the known values of $\int_0^T 1\,d\tau = T$ and
+$\int_0^T R\,d\tau_{\mathrm{reg}} = 3T/2 - \log T - T^2/24 - \gamma_E$,
+Conjecture~\ref{conj:theta-sum-B} is equivalent to:
+\[
+ \int_0^T \Sigma^{(\mathrm{photon})}(\tau)\,d\tau
+ \;=\; \bsym^2 \cdot T^2.
+\]
+This is precisely the balance condition $\eqref{eq:tr-balance}$.
+Hence: \emph{Conjecture~\ref{conj:theta-sum-B} $\Leftrightarrow$
+OP~5 Step~(B) $\Leftrightarrow$ Balance condition~\eqref{eq:tr-balance}.}
+\end{remark}
+\end{qsarchived}
+
+\begin{qsarchived}{Table row of Theorem~\ref{thm:toe}}
+\begin{tabular}{lll}
+Riemann Hypothesis & $\gamma^-_\rho=0$ for all zeros & \cite{brendecke2026rh}\\
+\end{tabular}
+\end{qsarchived}
+

@@ -1,31 +1,7 @@
-\begin{theorem}[Self-consistent determination of $\gL$]
-\label{thm:self-consistent-gL}
-The matter frame factor $\gL = \gBI/\gstring$ is the unique solution
-$\mu > 1$ of the coupled system
-\begin{align}
- \bsym &= \frac{1}{\sqrt{3}}\,
- \exp\!\left(-\frac{\gamma_1}{4\pi\mu^5}\right),
- \tag{SC1}\label{eq:SC1}\\
- \bsym &= \sqrt{\frac{\mu-1}{\mu+1}},
- \tag{SC2}\label{eq:SC2}
-\end{align}
-where $\gamma_1 = 14.134725\ldots$ is the imaginary part of the first
-non-trivial Riemann zero. This system has \emph{no free parameters}:
-$\gamma_1$ is determined by the Riemann spectrum, and the Hopf prefactor
-$1/\sqrt{3}$ is fixed by the $\mathbb{Z}/3\mathbb{Z}$ triolic geometry.
-Numerically: $\mu^* \approx 1.8637$, matching $\gL = 1.8644$ to $0.04\%$.
+\begin{theorem}[Self-consistent \(\gL\); archived]\label{thm:self-consistent-gL}
+The coupled system of the earlier version rests on the formula of Remark~\ref{conj:cl-correction}, archived as a coincidence.  \(\gL=\gBI/\gstring\) remains an input, the ratio of two published Barbero--Immirzi values (v4.8.0-r03 F11).
+\emph{Archived in the v4.9.0 revision; original text in \S\ref{sec:v490-archive}.}
 \end{theorem}
-
-\begin{proof}
-\textbf{(SC2)} is the definition of $\bsym$ from $\gL$
-(Theorem~\ref{thm:symmetric-frame}).
-\textbf{(SC1)} is the prime-lattice spectral correction established
-in Remark~\ref{conj:cl-correction} (corrected in \QSCver{v2.29.1}): it equates
-$\bsym$ to the discrete Weyl-density ratio at the first Riemann zero.
-Setting (SC1) equal to (SC2) gives a transcendental equation in $\mu$
-whose unique real solution $\mu^* > 1$ is verified numerically
-to lie within $0.04\%$ of the measured $\gL$.
-\end{proof}
 
 \begin{remark}[Three limiting regimes]
 \label{rem:three-limits}
@@ -49,60 +25,15 @@ The three limits are related by $\delta_{\mathrm{CL}}$:
 all gaps have a single source.
 \end{remark}
 
-\begin{corollary}[OP~1 resolved up to $0.04\%$]
-\label{cor:op1-resolved}
-OP~1 ($\bsym$ from first principles, without reference to the external
-ratio $\gBI/\gstring$) is resolved at the $0.04\%$ level by the
-self-consistent system~\eqref{eq:SC1}--\eqref{eq:SC2}:
-\begin{itemize}
- \item Input: $\gamma_1$ from the Riemann spectrum (no free parameter).
- \item Output: $\gL = \mu^* \approx 1.8637$ and
- $\bsym \approx 0.5492$.
- \item Residual: $0.04\%$ gap to the measured $\gL = 1.8644$,
- arising from the $0.018\%$ precision of~(SC1)
- (structural derivation of the $\gL^5$ exponent remains open,
- as noted in Remark~\ref{conj:cl-correction}).
-\end{itemize}
+\begin{corollary}[OP~1; claimed resolution archived]\label{cor:op1-resolved}
+OP~1 is not resolved.  The claimed resolution at \(0.04\%\) used the formula of Remark~\ref{conj:cl-correction}, archived as a coincidence (v4.8.0-r09).  OP~1 stays open.
+\emph{Archived in the v4.9.0 revision; original text in \S\ref{sec:v490-archive}.}
 \end{corollary}
 
-\begin{proposition}[Structural derivation of the $\gL^5$ exponent]
-\label{prop:exponent-5}
-The exponent $n=5$ in the formula
-$\bsym = (1/\sqrt{3})\exp(-\gamma_1/(4\pi\gL^n))$ is the integer
-nearest to the exact non-integer value
-\[
- n_{\mathrm{exact}}(\gL)
- = \frac{\log\!\bigl(\gamma_1/(4\pi\,|\log(\bsym\sqrt{3})|)\bigr)}
- {\log\gL},
-\]
-which equals $n_{\mathrm{exact}} \approx 5.003$ at the measured
-$\gL = 1.864$ and $\bsym = 0.5493$, and $\approx 4.808$ at the
-Tribonacci value $\gL = \mathbb{T}$.
+\begin{proposition}[The \(\gL^5\) exponent; archived]\label{prop:exponent-5}
+The exponent \(5\) was chosen after the fact (v4.8.0-r09).  It is archived together with the formula of Remark~\ref{conj:cl-correction}.
+\emph{Archived in the v4.9.0 revision; original text in \S\ref{sec:v490-archive}.}
 \end{proposition}
-
-\begin{proof}
-From the self-consistent equation~\eqref{eq:SC1}: setting
-$\bsym = (1/\sqrt{3})\exp(-\gamma_1/(4\pi\gL^n))$ and solving for
-$\gL^n$ gives
-\[
- \gL^n
- = -\frac{\gamma_1}{4\pi\log(\bsym\sqrt{3})}
- = \frac{\gamma_1}{4\pi\,|\log(\bsym\sqrt{3})|},
-\]
-since $\bsym\sqrt{3} < 1$ (i.e., $\bsym < 1/\sqrt{3}$) implies
-$\log(\bsym\sqrt{3}) < 0$.
-Numerically at the measured values:
-\[
- \gL^n
- = \frac{14.135}{4\pi\,|\log(0.5493\cdot\sqrt{3})|}
- = \frac{14.135}{4\pi\cdot 0.04985}
- \approx 22.58,
- \quad\gL^5 \approx 22.53.
-\]
-The match is within $0.25\%$, confirming $n=5$ as the correct integer.
-Taking logarithms: $n\log\gL = \log(22.58)$, giving
-$n_{\mathrm{exact}} = \log(22.58)/\log(1.864) \approx 5.003$.
-\end{proof}
 
 \begin{remark}[The exact self-consistent equation without integer approximation]
 \label{rem:exact-sc}
@@ -153,6 +84,8 @@ By the standard quasiconformal formula
 $K = (1+|\mu|)/(1-|\mu|)$ (Ahlfors--Bers),
 $K(C) = (1+\bsym^2)/(1-\bsym^2) = \gL$.
 \end{proof}
+\qsstatus{Status (v4.9.0 revision): matter-frame statement; in the tachyon's own frame \(|\mu|>1\) and the map reverses orientation (v4.9.0-r23).}
+
 
 \begin{theorem}[Tribonacci as Beltrami fixed point]
 \label{thm:tribonacci-beltrami}
