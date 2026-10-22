@@ -70129,4 +70129,146 @@ R_{\rm glob}^{(v490\text{-}r16,+)}=(0,1,1,1,1),
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
 
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r17 Source-Only: Entropy between the Frames, the Photon as Information Singularity, and a Scale Dimension}
+\addcontentsline{toc}{section}{v4.9.0-r17 Source-Only: Entropy between the Frames, the Photon as Information Singularity, and a Scale Dimension}
+\label{sec:v490-r17-entropy-scale}
+% ============================================================================
+
+\paragraph{Purpose.}
+The main body works from the photon frame.  The author asked, on 2026-10-22, three things.  Must several structures coincide
+for that frame to arise at all?  Should the photon be treated as an information singularity?  Would a new degree of freedom
+help, one in which conversions between frames can be parked?  This layer answers the second and third questions in the state
+disk of r04 and records a coincidence that bears on the first.  The script is \texttt{llm/k56\_entropie\_skala.py}.  No value
+is compared with data.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r17 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r17 the frame factor in the state disk}
+\label{subsec:v490-r17-frame-factor}
+
+In the state disk of r04 a field has the Bloch vector \(b\) with \(|b|=1/\cosh2\eta_f\), where \(\eta_f\) is the rapidity of the
+observer against the frame in which \(E\parallel B\).  The state matrix \(\rho=\tfrac12(1+b\cdot\sigma)\) has the eigenvalues
+\(\tfrac12(1\pm|b|)\).
+
+\paragraph{Theoremlet v4.9.0-r17.1.}
+For an observer offset by \(\eta\):
+\[
+|b|=\frac1{\cosh2\eta},\qquad
+p_\pm=\frac12\Bigl(1\pm\frac1{\cosh2\eta}\Bigr),\qquad
+p_+=\frac1{1+\beta^2},\qquad p_-=\frac{\beta^2}{1+\beta^2},\qquad \frac{p_-}{p_+}=\beta^2,
+\]
+with \(\beta=\tanh\eta\).  At the offset of the source, \(\cosh2\eta=\gL\), the frame factor is the inverse length of the Bloch
+vector, \(\gL=1/|b|\).  At the Hopf value of the source, \(\beta=1/\sqrt3\) and \(\gL=2\), the eigenvalues are \(3/4\) and \(1/4\).
+At the measured value they are \(0.76818\) and \(0.23182\).
+
+\paragraph{Proof sketch.}
+\(\cosh2\eta=(1+\beta^2)/(1-\beta^2)\), hence \(\tfrac12(1+1/\cosh2\eta)=1/(1+\beta^2)\).  Checked numerically.  \(\square\)
+
+\paragraph{Consequence.}
+Three numbers of the earlier layers are one.  The C5 factor \(3/4\) (r10, r11) is the larger eigenvalue of the doublet state at
+the Hopf offset.  The exported quarter is the smaller one.  The lattice value \(0.7683\) of r13 is the larger eigenvalue at the
+measured offset.  The frame factor \(\gL\) is the inverse length of the same Bloch vector.  The eigenvalue ratio is \(\bsym^2\), the
+quantity that Theorem~\ref{thm:dark-energy} calls \(\Omega_M\).  The eigenvalue itself, \(0.2318\), is not \(\Omega_M\).
+
+\subsection*{v4.9.0-r17 entropy as order parameter, and the photon}
+\label{subsec:v490-r17-entropy}
+
+\paragraph{Theoremlet v4.9.0-r17.2.}
+The entropy \(S=-p_+\log_2p_+-p_-\log_2p_-\) of the doublet state increases monotonically from \(0\) in the frame with
+\(E\parallel B\) to \(1\) bit as \(\eta_f\to\infty\).  It is \(0.811\) bit at the Hopf offset and \(0.781\) bit at the measured
+offset.  The photon, \(b=0\), is the maximally mixed state.  In the Bures metric of the disk,
+\(\mathrm ds^2=\tfrac14\bigl(\mathrm dr^2/(1-r^2)+r^2\mathrm d\theta^2\bigr)\), the radial distance from the state with \(E\parallel B\)
+to the state at offset \(\eta\) is \(\tfrac12\operatorname{gd}(2\eta)\).  The photon lies at the finite distance \(\pi/4\), and the remaining
+distance is \(\tfrac12\Pi(2\eta)\), half the angle of parallelism of r07 at twice the rapidity.
+
+\paragraph{Proof sketch.}
+\(r=\operatorname{sech}2\eta\) gives \(\mathrm dr^2/(1-r^2)=4\operatorname{sech}^22\eta\,\mathrm d\eta^2\), hence \(\mathrm ds=\operatorname{sech}2\eta\,\mathrm d\eta\)
+and \(\int_0^\eta\operatorname{sech}2x\,\mathrm dx=\tfrac12\operatorname{gd}(2\eta)\), with \(\operatorname{gd}(\infty)=\pi/2\) and
+\(\Pi=\pi/2-\operatorname{gd}\).  Checked numerically.  \(\square\)
+
+\paragraph{The photon as information singularity, made precise.}
+The metric itself is regular at the photon.  What becomes singular is the direction: \(r^2\,\mathrm d\theta^2\to0\), so the angle
+\(\theta\), which carries the distinction between matter and tachyon (\(b_1\)) and the side of r02 (\(b_2\)), is undefined at
+\(b=0\).  This is the polar-coordinate form of the branch point of r19.2.  In this sense the photon is an information
+singularity.  It is the state of maximal entropy, in which the information that distinguishes the frames is absent.  It is
+reached by no finite boost (Theoremlet r19.1), only in the limit, and at a finite information distance.
+
+\paragraph{On the author's first question.}
+The photon is the point where the two eigenvalues coincide, \(p_+=p_-=\tfrac12\), and where matter and tachyon lose their
+distinction.  In the state disk the special frame is therefore the frame in which the structures that separate the other
+frames fall together.  This supports the author's conjecture.  It also shows that the photon frame is not a frame like the
+others: it is the limit point and reference of the disk.  A finite factor \(\gL\) ``to the photon frame'', as in
+\S\ref{sec:phase-constants}, corresponds to the state with \(|b|=1/\gL\), not to \(b=0\).
+
+\subsection*{v4.9.0-r17 a scale dimension for the conversions}
+\label{subsec:v490-r17-scale}
+
+The rule \(X^{(\mathrm{matter})}=\gL^{k}X^{(\mathrm{photon})}\) is a scaling with weights \(k\).  Carrying the scale as a coordinate
+\(\sigma\) of its own parks the conversion there, \(X(\sigma)=e^{k\sigma}X(0)\), with the photon frame at \(\sigma=0\).
+
+\paragraph{Theoremlet v4.9.0-r17.3.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \(\sigma\) is a coordinate in which conversions compose as shifts only if the factor is a homomorphism of the
+rapidity: \(\sigma=\eta\), \(X=e^{k\eta}X(0)\), the Doppler law of way (C) in r01.  The Lorentz factor is not one,
+\(\cosh\eta_1\cosh\eta_2\neq\cosh(\eta_1+\eta_2)\).  Way (A), \(\cosh2\eta=e^{\sigma}\), holds only at the tribonacci point (r01.3).
+\item[(b)] Combinations of total weight \(0\) are independent of \(\sigma\), for example the Compton frequency
+\(m_ec^2/\hbar\) of r08.2.  Every measurable ratio of weight \(w\neq0\) moves as \(e^{w\sigma}\).
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a) \(e^{\eta_1}e^{\eta_2}=e^{\eta_1+\eta_2}\); the Lorentz case numerically \(1.432\) against \(1.864\).  (b) additivity of \(k\).  \(\square\)
+
+\paragraph{Reading.}
+The author's parking dimension has a definite form.  It is a line on which frames are points and conversions are shifts.
+Its coordinate is the rapidity, and the conversion law it allows is the Doppler law.  It also locates the photon: on the
+\(\sigma\)-line of the source the photon frame sits at \(\sigma=0\), while in the state disk it sits at \(\eta_f=\infty\).  The two
+pictures differ because \S\ref{sec:phase-constants} measures offsets from the photon, whereas the disk measures them from the
+rest frame of the field.  Way (C) follows from the request that the parked conversions compose.  The observation of r07
+(on-shell \(\cot\theta_W\) close to \(\gL\), way A) points the other way.  It is not a test, and decision 5 of r15 stays with
+the author.
+
+\subsection*{v4.9.0-r17 register entries}
+\label{subsec:v490-r17-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r17\\
+\midrule
+frame factor \(\gL\) & inverse length of the Bloch vector at the offset, \(\gL=1/|b|\) (r17.1)\\
+C5 factor \(3/4\), lattice value \(0.768\) & larger eigenvalue of the doublet state at the Hopf, respectively measured, offset (r17.1)\\
+photon & maximally mixed state; information singularity as undefined direction at finite Bures distance \(\pi/4\); reached only in the limit (r17.2)\\
+photon frame of \S\ref{sec:phase-constants} & reference and limit point; finite \(\gL\) corresponds to \(|b|=1/\gL\), not \(b=0\)\\
+scale dimension \(\sigma\) & composable only as rapidity, giving the Doppler law (way C); weight-0 combinations invariant (r17.3)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r17 ledger and guard update}
+\label{subsec:v490-r17-ledger-guard}
+
+\[
+R_{\rm info}^{v490\text{-}r17}=(0,0,1)
+\]
+for (eigenvalue identities established, photon as information singularity made precise, choice of conversion way left to the
+author).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r17,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r17}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
 \end{document}

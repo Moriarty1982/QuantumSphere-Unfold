@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v7.4
+# Kernkarte Quantum Sphaera — v7.5
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1610,6 +1610,23 @@ r09-Widersprüche zur k-Tabelle sind gelöst. Die C5-Rekursion als gekickte Dual
 Triole ∪ J_B(Triole) ist die ursprünglich gemeinte Lesart des Autors (Status: Autorlesart, keine Herleitung aus dem
 früheren Text); r10.2 gilt unter ihr. Offen (Autor): Wege A–C der Umrechnung; thm:dark-energy Weg (a) oder (c).
 
+### K61 — Companion-Runde v4.9.0-r17: Entropie zwischen den Frames, Photon als Informationssingularität, Skalen-Dimension (2026-10-22)
+
+`sec:v490-r17-entropy-scale`, Snippet `llm/v490_r17_round.tex`, Skript `llm/k56_entropie_skala.py`. Fragen des Autors:
+Fallen Strukturen zusammen, um den Photon-Frame zu erzeugen? Photon als Informationssingularität? Neuer Freiheitsgrad zum
+Parken der Umrechnungen?
+
+**K61.1 (M).** |b| = sech 2η; Eigenwerte p± = (1 ± 1/cosh 2η)/2 = 1/(1+β²), β²/(1+β²), Verhältnis β². γ_L = 1/|b|. Hopf: 3/4, 1/4
+(= C5-Faktor und Export); gemessen 0,768/0,232 (= Gitterwert r13).
+
+**K61.2 (M).** Entropie S von 0 (E ∥ B) über 0,781 Bit (η_sym), 0,811 Bit (Hopf) bis 1 Bit (Licht). Photon = maximal gemischt;
+Bures-Abstand Ruhe→η = ½ gd(2η), Licht bei π/4 (endlich), Rest ½ Π(2η). Informationssingularität = undefinierte Richtung
+(r² dθ² → 0), Metrik regulär; nur im Grenzwert erreichbar. Photon-Frame = Punkt, an dem p₊ = p₋ und Materie/Tachyon
+zusammenfallen (stützt die Autorvermutung); endliches γ_L entspricht |b| = 1/γ_L, nicht b = 0.
+
+**K61.3 (M).** Skalen-Dimension σ: komponierbar nur als Rapidität ⇒ Doppler-Gesetz (Weg C); Weg A nur am Tribonacci-Punkt;
+Gewicht-0-Kombinationen σ-invariant. Spannung zur r07-Beobachtung (Weg A), Entscheidung beim Autor. R_info = (0,0,1).
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1719,6 +1736,7 @@ früheren Text); r10.2 gilt unter ihr. Offen (Autor): Wege A–C der Umrechnung;
 - v7.2 (2026-10-22): K58 Companion-Runde v4.9.0-r14 (Kick-Richtungen Triole ∪ J_B(Triole)).
 - v7.3 (2026-10-22): K59 Companion-Runde v4.9.0-r15 (Sammelregister, r17-Weg (b) ausgeschlossen).
 - v7.4 (2026-10-22): K60 Companion-Runde v4.9.0-r16 (Autorentscheidungen).
+- v7.5 (2026-10-22): K61 Companion-Runde v4.9.0-r17 (Entropie, Informationssingularität, Skalen-Dimension).
 
 ---
 
