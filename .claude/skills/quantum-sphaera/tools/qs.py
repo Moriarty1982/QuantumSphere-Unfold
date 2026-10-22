@@ -568,8 +568,9 @@ def cmd_audit(args):
 # ------------------------------------------------------------------------ doi
 
 DOI_ROLES = [
-    ("Version DOI (v4.8.0)", "10.5281/zenodo.23365244"),
+    ("Version DOI (v4.9.0)", "10.5281/zenodo.23534954"),
     ("Concept DOI", "10.5281/zenodo.19210728"),
+    ("Previous DOI (v4.8.0)", "10.5281/zenodo.23365244"),
     ("Previous DOI (v4.7.0)", "10.5281/zenodo.20232911"),
     ("Previous/baseline DOI (v4.6.0)", "10.5281/zenodo.20117361"),
     ("ABGELAUFEN - darf nicht vorkommen", "10.5281/zenodo.20181842"),
@@ -600,10 +601,11 @@ def cmd_doi(args):
     version_doi = getattr(args, "version_doi", None)
     if version_doi:
         label = getattr(args, "version_label", None) or "neu"
-        # Die bisherige Version-DOI (v4.8.0) wird zur Vorgaenger-DOI.
+        # Die angegebene DOI wird zur Version-DOI; steht sie schon in der Liste, entfaellt ihr alter Eintrag.
+        # Die bisherige Version-DOI wird dann als Vorgaenger gefuehrt.
         roles = [("Version DOI (%s)" % label, version_doi)] + [
-            (("Previous DOI (v4.8.0)" if r.startswith("Version DOI (v4.8.0)") else r), d)
-            for r, d in DOI_ROLES]
+            (("Previous DOI" + r[len("Version DOI"):]) if r.startswith("Version DOI") else r, d)
+            for r, d in DOI_ROLES if d != version_doi]
 
     print("PDF: %s (%d Seiten)\n" % (os.path.basename(args.pdf), len(pages)))
     print("%-34s %-26s %8s %10s" % ("Rolle", "DOI", "gesamt", "Titelseite"))
@@ -701,8 +703,9 @@ def main():
     d = sub.add_parser("doi", help="DOI-Vorkommen und Titelseiten-Regel im PDF")
     d.add_argument("pdf")
     d.add_argument("--version-doi", default=None,
-                   help="aktuelle Version-DOI, wenn es nicht v4.8.0 ist (z. B. 10.5281/zenodo.23534954); "
-                        "die v4.8.0-DOI wird dann als Vorgaenger gefuehrt")
+                   help="aktuelle Version-DOI, wenn es nicht v4.9.0 ist (z. B. 10.5281/zenodo.23365244 "
+                        "fuer die lokale Arbeitsdatei mit v4.8.0-Titelseite); die v4.9.0-DOI wird dann "
+                        "als Vorgaenger gefuehrt")
     d.add_argument("--version-label", default=None, help="Bezeichnung der aktuellen Version, z. B. v4.9.0")
     d.set_defaults(func=cmd_doi)
 
