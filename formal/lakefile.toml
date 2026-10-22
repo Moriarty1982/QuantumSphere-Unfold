@@ -1,0 +1,5 @@
+name = "QSFormal"
+defaultTargets = ["QSFormal"]
+
+[[lean_lib]]
+name = "QSFormal"
