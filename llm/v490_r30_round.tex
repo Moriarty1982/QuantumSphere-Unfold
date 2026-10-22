@@ -1,0 +1,135 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r30 Source-Only: The Compensator Avoids the Classical One-Half, and Why the Exchange Is Coherent}
+\addcontentsline{toc}{section}{v4.9.0-r30 Source-Only: The Compensator Avoids the Classical One-Half, and Why the Exchange Is Coherent}
+\label{sec:v490-r30-compensator-coherence}
+% ============================================================================
+
+\paragraph{Purpose.}
+r29 left open why the exchange between matter and tachyon should be coherent rather than a classical replacement.  On 2026-10-22
+the author pointed out that the Heisenberg compensator was introduced precisely to avoid the classical probability one half of
+finding the object in one or the other sector.  This layer makes that precise, checks it against the document's own use of the
+compensator, and draws the consequence for r28 and r29.  The script is \texttt{llm/k67\_kompensator\_kohaerenz.py}.  No new
+prediction is made, and nothing is compared with data.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r30 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r30 classical one-half against the compensator}
+\label{subsec:v490-r30-one-half}
+
+\paragraph{Theoremlet v4.9.0-r30.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] A classical mixture of a state with its tachyon image, \(\tfrac12\rho+\tfrac12\sigma_y\rho\sigma_y\), puts weight \(1/2\) into the
+compensator port for every state.  This is the classical one half.
+\item[(b)] A coherent combination of the amplitudes \(f\) and \(e^{i\varphi}f_T\) puts a weight into the compensator port that depends on the
+relative phase.  It is \(1/2\) only at two phases, and it is \(0\) or \(1\), a definite outcome, at the two others.
+\item[(c)] The document's own use of the compensator is coherent.  The remark ``Light as the Heisenberg compensator of the universe''
+of the main body computes \(C(\bsym)=\tfrac12(\bsym-\bsym)=0\).  The cancellation exists only for amplitudes.  A mixture of
+probabilities gives \(\tfrac12\bsym^2+\tfrac12\bsym^2=\bsym^2=0.302\), never \(0\).
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a) \(\sigma_yC_{\HC}\sigma_y=A\), so the mixture has weight \(\tfrac12(\operatorname{tr}C_{\HC}\rho+\operatorname{tr}A\rho)=\tfrac12\); checked on \(1000\)
+random states.  (b) numerical at \(\varphi=0,\pi/2,\pi,3\pi/2\): \(1/2,0,1/2,1\).  (c) direct.  \(\square\)
+
+\paragraph{Reading.}
+This confirms the author's account.  The compensator acts on amplitudes.  Where a classical description can only say ``with
+probability one half here or there'', the compensator gives a definite port, decided by the relative phase.  The remark on light
+uses exactly this property.
+
+\subsection*{v4.9.0-r30 the compensator partner is the tachyon seen through time reversal}
+\label{subsec:v490-r30-partner}
+
+\paragraph{Theoremlet v4.9.0-r30.2.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \(C=\tfrac12(1+J)\) is a projection only for an involution, \(J^2=1\).  This holds for \(J_B=\sigma_x\).  It fails for the tachyon map
+\(z\mapsto iz\), whose square is \(-1\) on amplitudes; there \(C^2=J/2\).
+\item[(b)] \(J_B\) is the tachyon map followed by time reversal: \(J_B=R_{\pi/2}\circ T\), with \(T\colon z\mapsto\bar z\).  On the doublet,
+\(\left(\begin{smallmatrix}0&-1\\1&0\end{smallmatrix}\right)\operatorname{diag}(1,-1)=\sigma_x\).
+\item[(c)] So the compensator combines a state with its tachyon partner seen through time reversal.  r28.1(a) found that the tachyon
+measures ideally exactly when it couples through \(T\).  The two results are one statement: the coupling through \(T\) turns the
+tachyon into the compensator partner.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a) \((\tfrac12(1+J))^2=\tfrac14(1+2J+J^2)\).  (b) matrix product; \(z\mapsto i\bar z\) as in r02.  (c) combine (b) with r28.1(a).  \(\square\)
+
+\subsection*{v4.9.0-r30 consequence for the reservoir}
+\label{subsec:v490-r30-reservoir}
+
+\paragraph{Theoremlet v4.9.0-r30.3.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] If the exchange of r28 and r29 runs through the compensator, it is coherent by construction.  The Markov replacement of
+r29.1(e) is the classical mixture that the compensator was introduced to avoid.
+\item[(b)] With coherent exchange of strength \(\bsym^2\) the attractor is self-consistent exactly at the Hopf point (r28, r29).  The open
+point of r29, why the exchange is coherent, is answered under the author's account of the compensator.
+\item[(c)] At equal strength the coherent attractor is sharper.  At strength \(1/2\) after \(\pi/6\) rotations, coherent exchange gives
+\(|b|=2/3\), port weights \(1/6\) and \(5/6\), entropy \(0.32\) bit.  Markov replacement gives \(|b|=0.577\), port weights \(1/4\) and \(3/4\),
+entropy \(0.74\) bit.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a) definition of the compensator, r30.1.  (b) r28.2, r29.1(e).  (c) iteration to the fixed point.  \(\square\)
+
+\paragraph{On the wording of Theorem~\ref{thm:dark-energy}.}
+That theorem calls \(\Omega_M=\bsym^2\) and \(\Omega_\Lambda=1-\bsym^2\) Markov transition probabilities.  Under the reading of this layer,
+\(\bsym^2\) remains the weight of one step, \(\sin^2\theta\).  Successive steps are composed as amplitudes through the compensator, not as a
+classical Markov chain.  The theorem keeps its text.  A status note under the revision rule of r25 would record this reading.  It is
+not placed here, and the decision lies with the author.
+
+\subsection*{v4.9.0-r30 status in the three frames}
+\label{subsec:v490-r30-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r30.1 one half & the mixture of M with its T image gives \(1/2\); the coherent combination is definite at two phases; at P both give \(1/2\)\\
+r30.2 partner through \(T\) & relates M and T; \(J_B\) keeps the side, \(z\mapsto iz\) changes it (r28)\\
+r30.3 coherent reservoir & as r28.2(c) and r29; self-consistency at the Hopf point only\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r30 register entries}
+\label{subsec:v490-r30-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r30\\
+\midrule
+purpose of the compensator & to replace the classical one half by a definite port (author); confirmed by the main body's remark on light (r30.1)\\
+compensator partner & the tachyon seen through time reversal, \(J_B=R_{\pi/2}\circ T\) (r30.2)\\
+coherence of the exchange (r29) & answered: coherent by construction of the compensator (r30.3)\\
+Markov wording of Thm.~\ref{thm:dark-energy} & read as one-step weight; status note possible, decision with the author\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r30 ledger and guard update}
+\label{subsec:v490-r30-ledger-guard}
+
+\[
+R_{\rm coh}^{v490\text{-}r30}=(0,0,0)
+\]
+for (one-half avoidance made precise, partner identified, coherence of the exchange answered).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r30,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r30}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+

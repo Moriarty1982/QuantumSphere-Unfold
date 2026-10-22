@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v8.7
+# Kernkarte Quantum Sphaera — v8.8
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1836,6 +1836,23 @@ Trefferkette verteilt statt nachzuliefern, Paarereignis = K2 (K6).
 (41°), selbstkonsistent erst bei p = 0,3865 (kein benannter Punkt). Bilanz: gebrauchter Tachyon (−0,750, 0,144), ein frisches
 Vakuumpaar je Kick nötig. Offen: Paarerzeugungsrate, Kohärenz des Austauschs, Verbleib der gebrauchten Tachyonen. R_res = (0,0,1).
 
+### K74 — Companion-Runde v4.9.0-r30: Der Kompensator umgeht die klassische 1/2 (2026-10-22)
+
+`sec:v490-r30-compensator-coherence`, Snippet `llm/v490_r30_round.tex`, Skript `llm/k67_kompensator_kohaerenz.py`. Autorhinweis:
+Der Heisenberg-Kompensator wurde eingeführt, um die klassische Aufenthaltswahrscheinlichkeit 1/2 zu umgehen.
+
+**K74.1 (M).** Klassische Mischung von Zustand und Tachyonbild gibt im Kompensatorport immer 1/2; kohärente Kombination hängt von der
+relativen Phase ab, bei zwei Phasen 0 bzw. 1 (eindeutiger Port). Die Hauptkorpus-Bemerkung „Light as the Heisenberg compensator of
+the universe“ (C(β) = ½(β − β) = 0) ist nur amplitudenweise möglich; Wahrscheinlichkeiten gäben β² = 0,302.
+
+**K74.2 (M).** C = ½(1 + J) ist Projektor nur für eine Involution: J_B ja, z → iz nein (C² = J/2). J_B = R_{π/2} ∘ T: der
+Kompensator-Partner ist der Tachyon, durch die Zeitumkehr gesehen; gleiche Aussage wie r28.1(a) (ideale Messung über T).
+
+**K74.3 (M).** Austausch über den Kompensator ist kohärent per Konstruktion → offene Frage aus r29 beantwortet; Markov-Lesart ist die
+klassische Mischung, die der Kompensator vermeiden soll. Bei Stärke 1/2: kohärent |b| = 2/3, Gewichte 1/6 / 5/6, 0,32 Bit; Markov
+0,577, 1/4 / 3/4, 0,74 Bit. Wortlaut „Markov“ in thm:dark-energy: β² als Einschritt-Gewicht lesbar; Statusvermerk möglich, Autor
+entscheidet. R_coh = (0,0,0).
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1961,6 +1978,8 @@ Vakuumpaar je Kick nötig. Offen: Paarerzeugungsrate, Kohärenz des Austauschs, 
 - v8.6 (2026-10-22): K72 Companion-Runde v4.9.0-r28 (Tachyon als Messgerät, Selbststabilisierung, Tachyon-Abbildung z → iz).
 
 - v8.7 (2026-10-22): K73 Companion-Runde v4.9.0-r29 (Quelle des Tachyon-Reservoirs: Paarerzeugung aus dem Vakuum).
+
+- v8.8 (2026-10-22): K74 Companion-Runde v4.9.0-r30 (Kompensator umgeht die klassische 1/2; Partner = Tachyon durch T; Austausch kohärent).
 
 ---
 
