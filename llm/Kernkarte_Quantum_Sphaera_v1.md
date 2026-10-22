@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v7.9
+# Kernkarte Quantum Sphaera — v8.0
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1696,6 +1696,20 @@ in der Uhrenschicht. Frame-frei nur am Hopf-Punkt. Uhrsaat = J_B-Bild von V3. r2
 **K65.3 (D).** Regel für Frame-Unterscheidung: Tachyon = J_B-Bild (x → 1/x, p± getauscht, γ negativ), Photon = entarteter
 Fixpunkt p± = 1/2. Anwendung auf andere Schichten offen. R_frame = (0,0,1).
 
+### K66 — Companion-Runde v4.9.0-r22: Frame-Regel als stehende Konvention (2026-10-22)
+
+`sec:v490-r22-frame-rule`, Snippet `llm/v490_r22_round.tex`, Skript `llm/k61_frame_regel.py`.
+
+**K66.1 (D).** Konvention F: M = Dublettzustand bei x = β²; T = J_B-Bild (x → 1/x, p± getauscht, γ → −γ); P = Fixpunkt b = 0.
+F1 frame-frei ⇔ M = T; F2 P eigens, Entartung ist keine globale Aussage; F3 Tachyon-Umrechnung: Betrag nach Klasse (r19),
+Phase (−1)^k; F4 ab r22 Pflichtabschnitt `subsec:v490-rNN-frames`, vom Guard-Linter geprüft.
+
+**K66.2 (M).** Frame-frei (M = T): Sichtbarkeit, Entropie, sin²θ_W (H15), Kick-Lesart 3/4, P5, k = 0-Größen. Nur Materie:
+Eigenwert-Lesart 3/4, Ω_M (T: 3,31), Koide-Phase (T: undefiniert), Uhrschranke. P: portsensitive Größen entartet.
+
+**K66.3 (M).** Vorzeichenskala r82 ℓ_T² = −λ_T² folgt aus F3 ((−1)^{3/2} = ∓i, Quadrat −1), nicht aus dem Doppler-Faktor bei
+η + iπ/2 (e^{3iπ/4}, Quadrat −i). Klassentrennung und erlaubte Tachyon-Skala damit verträglich. R_F = (0,0,1).
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1810,6 +1824,7 @@ Fixpunkt p± = 1/2. Anwendung auf andere Schichten offen. R_frame = (0,0,1).
 - v7.7 (2026-10-22): K63 Companion-Runde v4.9.0-r19 (Klassentrennung angewandt: P5 = 1/2 automatisch, P3 verloren, P6 nur genähert).
 - v7.8 (2026-10-22): K64 Companion-Runde v4.9.0-r20 (Herkunftshypothese Δ_γ < 1/5: Photon-Frame-Uhrgewinn am Hopf-Punkt).
 - v7.9 (2026-10-22): K65 Companion-Runde v4.9.0-r21 (Uhrschranke je Frame, 1/5 aus Frame-Konsistenz hergeleitet).
+- v8.0 (2026-10-22): K66 Companion-Runde v4.9.0-r22 (Frame-Regel als Konvention F, Pflichtabschnitt, Linter-Prüfung).
 
 ---
 

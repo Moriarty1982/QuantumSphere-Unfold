@@ -70846,4 +70846,152 @@ R_{\rm glob}^{(v490\text{-}r21,+)}=(0,1,1,1,1),
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
 
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r22 Source-Only: The Frame Rule as a Standing Convention, Applied to the Main Statements}
+\addcontentsline{toc}{section}{v4.9.0-r22 Source-Only: The Frame Rule as a Standing Convention, Applied to the Main Statements}
+\label{sec:v490-r22-frame-rule}
+% ============================================================================
+
+\paragraph{Purpose.}
+r21 proposed a rule for distinguishing the three frames.  On 2026-10-22 the author asked to build it in.  The document grows
+append-only, so earlier statements are not edited.  This layer adopts the rule as a standing convention for every later layer,
+applies it to the main statements that the v4.9.0 line has touched, and records where each statement holds.  The script is
+\texttt{llm/k61\_frame\_regel.py}.  No new prediction is made and nothing is compared with data.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r22 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r22 the rule}
+\label{subsec:v490-r22-rule}
+
+\paragraph{Convention F (frame rule).}
+Let \(x=\bsym^2\).  The \emph{matter frame} M is the doublet state of r17 at \(x\): \(\gamma=(1+x)/(1-x)\),
+\(p_+=1/(1+x)\), \(p_-=x/(1+x)\), compensator port holding \(p_+\).  The \emph{tachyon frame} T is the \(J_B\) image of M:
+\(x\mapsto1/x\), \(p_\pm\) exchanged, \(\gamma\mapsto-\gamma\), which is the phase \(i\pi\) of \(\cosh2\eta\) under the superluminal
+rapidity \(\eta+i\pi/2\) of r20 (v4.8.0).  The \emph{photon frame} P is the fixed point \(b=0\), \(p_+=p_-=\tfrac12\).
+\begin{enumerate}[leftmargin=2em]
+\item[(F1)] A statement is \emph{frame-free} if M and T give the same value.  Otherwise it carries the frame in which it holds.
+\item[(F2)] At P a readout quantity is evaluated separately and may be degenerate.  A degenerate value is not a global statement.
+\item[(F3)] A conversion of weight \(k\) into T has the magnitude of its class (r19) and the phase \((-1)^k\), from \(\gamma\mapsto-\gamma\).
+\item[(F4)] From this layer on, every layer contains a subsection labelled \texttt{subsec:v490-rNN-frames} that states the M, T and P
+status of its results.  The guard linter (\texttt{llm/training/guard\_linter.py}) reports a layer from r22 on that lacks it.
+\end{enumerate}
+
+\subsection*{v4.9.0-r22 the main statements frame by frame}
+\label{subsec:v490-r22-statements}
+
+\begin{center}
+\footnotesize
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.28\textwidth}>{\raggedright\arraybackslash}p{0.15\textwidth}>{\raggedright\arraybackslash}p{0.16\textwidth}>{\raggedright\arraybackslash}p{0.11\textwidth}>{\raggedright\arraybackslash}p{0.17\textwidth}@{}}
+\toprule
+statement & M & T & P & status\\
+\midrule
+frame factor \(\gamma\) & \(1.864\) & \(-1.864\) & \(\infty\) & magnitude frame-free\\
+visibility \(|b|=1/|\gamma|\) (r03) & \(0.536\) & \(0.536\) & \(0\) & frame-free\\
+eigenvalues \((p_+,p_-)\) (r17) & \((0.768,0.232)\) & \((0.232,0.768)\) & \((\tfrac12,\tfrac12)\) & exchanged\\
+entropy (r17) & \(0.781\) bit & \(0.781\) bit & \(1\) bit & frame-free\\
+C5 factor, kick reading \(\cos^2\frac\pi6\) (r10) & \(3/4\) & \(3/4\) & --- & frame-free\\
+C5 factor as compensator eigenvalue (r17) & \(0.768\) & \(0.232\) & \(\tfrac12\) & matter only\\
+\(\Omega_M=p_-/p_+\), Thm.~\ref{thm:dark-energy} & \(0.302\) & \(3.31\) & \(1\) & matter only\\
+Koide phase, Thm.~\ref{thm:koide-triolic} & \(132.88^\circ\) & undefined & --- & matter only\\
+\(\cot\theta_W\approx\gamma\) (r07) & \(1.864\) & \(-1.864\) & \(\infty\) & \(\theta\mapsto\pi-\theta\)\\
+\(\sin^2\theta_W=1/(1+\gamma^2)\), H15 & \(0.2234\) & \(0.2234\) & \(0\) & frame-free\\
+P5 \(=k(\alpha)/k(G_N)\) (r19) & \(1/2\) & \(1/2\) & --- & frame-free\\
+\(k=0\) quantities (\(c\), \(\gBI\), \(m_ec^2/\hbar\)) & same & same & same & frame-free in all three\\
+clock bound \(\Delta_\gamma\) (r21) & \(0.1925\) & no window & degenerate & matter only\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Theoremlet v4.9.0-r22.1.}
+Under Convention F:
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Frame-free are the quantities that depend on the state only through \(|b|\) or through the unordered pair of
+eigenvalues (visibility, entropy, \(\sin^2\theta_W\)), the kick reading of the C5 factor, ratios of weights, and the \(k=0\)
+quantities.
+\item[(b)] Matter-only are the quantities that distinguish the compensator port from the partner port: the eigenvalue reading
+of \(3/4\), \(\Omega_M\), the Koide phase, and the clock bound.  Their tachyon values are the inverse ratio, an undefined
+\(\arcsin\), or an absent window.
+\item[(c)] At the photon every port-sensitive quantity is degenerate (\(p_+=p_-\)), in line with r17.2.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+\(J_B\) exchanges the ports and leaves \(|b|\) and the unordered spectrum fixed.  \(A R_\alpha A=\cos\alpha\,A\) as for \(C_{\HC}\).
+The rest is the table, computed in \texttt{llm/k61\_frame\_regel.py}.  \(\square\)
+
+\subsection*{v4.9.0-r22 the tachyon sign scale}
+\label{subsec:v490-r22-sign-scale}
+
+\paragraph{Theoremlet v4.9.0-r22.2.}
+By (F3), a length (\(k=3/2\)) acquires the phase \((-1)^{3/2}=\mp i\) and its square the phase \(-1\).  This reproduces the signed
+tachyon scale \(\ell_T^2=-\lambda_T^2\), \(\ell_T=i\lambda_T\), of \S\ref{sec:r82-tachyon-frame-signed-scale} (up to the choice of
+branch).  Taking the phase from the rapidity \(\eta+i\pi/2\) directly, one insertion at a time, gives \(e^{3i\pi/4}\) for the length
+and \(-i\) for its square.  That does not reproduce it.
+
+\paragraph{Proof sketch.}
+\((-1)^{3/2}=e^{3i\pi/2}\); \(e^{(3/2)\cdot i\pi/2}=e^{3i\pi/4}\), \(e^{3\cdot i\pi/2}=-i\).  \(\square\)
+
+\paragraph{Consequence.}
+The class split of r19 fixes the magnitude of a tachyon conversion.  Its phase comes from the sign of the invariant,
+\(s\mapsto-s\), that is \(\gamma\mapsto-\gamma\), and not from the Doppler factor at the complex rapidity.  With this, way C and the
+permitted statement \(\ell_T^2=-\lambda_T^2\) are compatible.  Without (F3), way C would contradict it.  The layer adds nothing to
+that permitted statement.  It records which reading of the tachyon conversion is consistent with it.
+
+\subsection*{v4.9.0-r22 status in the three frames}
+\label{subsec:v490-r22-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+result of this layer & M / T / P\\
+\midrule
+Convention F & defined on all three; T as \(J_B\) image, P as fixed point\\
+classification r22.1 & frame-free set holds in M and T, matter-only set holds in M, port-sensitive quantities degenerate in P\\
+sign scale r22.2 & a statement about T; reproduces the r82 scale; trivial in M; at P no conversion is defined\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r22 register entries}
+\label{subsec:v490-r22-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r22\\
+\midrule
+frame rule & adopted as Convention F for all later layers; required subsection, checked by the guard linter\\
+\(\Omega_M\), Koide phase, eigenvalue reading of \(3/4\), clock bound & matter-frame statements (r22.1)\\
+visibility, entropy, \(\sin^2\theta_W\), kick reading of \(3/4\), P5, \(k=0\) & frame-free between M and T (r22.1)\\
+tachyon conversions & magnitude by class (r19), phase \((-1)^k\); consistent with \(\ell_T^2=-\lambda_T^2\) (r22.2)\\
+earlier layers & not edited; their statements are read through the table above\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r22 ledger and guard update}
+\label{subsec:v490-r22-ledger-guard}
+
+\[
+R_{\rm F}^{v490\text{-}r22}=(0,0,1)
+\]
+for (convention adopted, main statements classified, application to the remaining layers of the main body open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r22,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r22}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
 \end{document}

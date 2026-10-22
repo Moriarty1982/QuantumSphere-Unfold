@@ -82,7 +82,24 @@ def main():
     for ln, name, s in hits:
         print(f"Zeile {ln}: {name}\n   {s}")
     print(f"{len(hits)} Treffer.")
-    return 1 if hits else 0
+    missing = frame_check(chunk, offset_line=start)
+    for ln, rnd in missing:
+        print(f"Zeile {ln}: Runde v4.9.0-r{rnd} ohne Frame-Abschnitt (Label subsec:v490-r{rnd}-frames, Regel ab r22)")
+    return 1 if hits or missing else 0
+
+FRAME_RULE_FROM = 22
+
+def frame_check(text, offset_line=1):
+    """Ab v4.9.0-r22 braucht jede Runde einen Abschnitt mit Label subsec:v490-rNN-frames (Materie/Tachyon/Photon)."""
+    heads = [(m.start(), int(m.group(1))) for m in re.finditer(r"\\section\*\{v4\.9\.0-r(\d+)\b", text)]
+    missing = []
+    for i, (pos, rnd) in enumerate(heads):
+        if rnd < FRAME_RULE_FROM:
+            continue
+        stop = heads[i + 1][0] if i + 1 < len(heads) else len(text)
+        if f"subsec:v490-r{rnd:02d}-frames" not in text[pos:stop]:
+            missing.append((text.count("\n", 0, pos) + offset_line, f"{rnd:02d}"))
+    return missing
 
 if __name__ == "__main__":
     sys.exit(main())
