@@ -115,9 +115,26 @@ Weitere Befunde:
 
 Gezählt als Versuch 7.
 
+### K8: Warum sechs Kicks pro Schwebung (Skript `llm/k55_kick_richtungen.py`; Runde v4.9.0-r14)
+
+Deutung: Der Kick ist ein Ereignis. Er tritt ein, wenn arg s eine Auslese-Richtung passiert. Die Richtungen sind
+Triole ∪ J_B(Triole) in der s-Ebene, also das Sechseck 0°, 60°, …, 300°. Es enthält Materie und Tachyon.
+
+Vergleich der Richtungsmengen:
+- Triole + J_B ⇒ 30° Dualität, q = 3/4;
+- Triole allein ⇒ q = 1/4;
+- Viertelraster ⇒ q = 1/2.
+
+Ein Umlauf von s ist z → −z (r02), also eine Schwebung (r13). Annahme: die Triole liegt auf arg s, was die Quelle
+nicht macht. Bemerkung: Sechseck = A₂-Wurzeln von SU(3), nicht übernommen.
+
+Gezählt als Versuch 8.
+
 ## Stand
 
-7 gezählte Versuche. K7 steht in r13.
+8 gezählte Versuche. K8 steht in r14.
+
+Vorige Zwischenbilanz: 7 gezählte Versuche. K7 steht in r13.
 
 Vorige Zwischenbilanz: 6 gezählte Versuche. K5 und K6 stehen in r11 und r12.
 

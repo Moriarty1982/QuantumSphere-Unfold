@@ -1,0 +1,97 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r14 Source-Only: Why Six Kicks per Beat --- Readout Directions from the Triole and the Umkehrwalze}
+\addcontentsline{toc}{section}{v4.9.0-r14 Source-Only: Why Six Kicks per Beat --- Readout Directions from the Triole and the Umkehrwalze}
+\label{sec:v490-r14-readout-directions}
+% ============================================================================
+
+\paragraph{Purpose.}
+r13 fixed the kick interval of the dynamics of r11 at one sixth of the clock beat.  It left open why the compensator acts
+six times per beat.  This layer offers a reason built from two objects of the source: the triole and the involutive
+Umkehrwalze \(J_B\) of r02.3.  The reason is an interpretation (admitted by the author, 2026-10-22), not a derivation.  The
+script is \texttt{llm/k55\_kick\_richtungen.py}.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r14 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r14 kicks as passages of readout directions}
+\label{subsec:v490-r14-passages}
+
+Replace the periodic kick of r11 by an event: the compensator acts whenever the phase of the invariant \(s\) passes one of a
+fixed set of readout directions.  Under a uniform duality rotation the events are periodic, and their spacing is set by the
+set of directions.
+
+\paragraph{Theoremlet v4.9.0-r14.1.}
+In the \(s\)-plane, \(\arg s=2\alpha\) with \(\alpha\) the duality angle.
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] The triole directions \(\arg s\in\{0^\circ,120^\circ,240^\circ\}\) and their images under \(J_B\), which acts as
+\(s\mapsto-\bar s\) (r02.3), are together the six directions \(0^\circ,60^\circ,\dots,300^\circ\).  The set contains matter
+(\(0^\circ\)) and tachyon (\(180^\circ\)).
+\item[(b)] Passing them under a uniform rotation gives kicks every \(30^\circ\) of duality angle, hence the stage factor
+\(\cos^2 30^\circ=3/4\).  The triole alone gives \(60^\circ\) and \(q=1/4\).  A quarter grid gives \(45^\circ\) and \(q=1/2\).
+Only triole and \(J_B\) together give the factor of the source.
+\item[(c)] One revolution of \(s\) around the photon (\(\arg s\) from \(0^\circ\) to \(360^\circ\)) passes the six directions once.
+It is the duality half turn \(z\mapsto-z\), the charge conjugation of r02.2, and by r13 it lasts exactly one beat.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+\(-\overline{e^{i\theta}}=e^{i(\pi-\theta)}\) maps \(\{0,120,240\}\) to \(\{180,60,300\}\).  The rest follows from
+\(\arg s=2\alpha\) and r10.1.  Checked numerically.  \(\square\)
+
+\paragraph{Reading.}
+The six kicks per beat are then not an external schedule but the six readout directions met by one revolution of \(s\)
+around the photon.  The factor \(3/4\), the detector stage \(20\), the beat, the quarter turn from matter to tachyon and the
+charge conjugation of the round trip become aspects of one construction: a uniform duality rotation read out at
+\(\text{triole}\cup J_B(\text{triole})\).
+
+\paragraph{What is assumed.}
+The triole of the source (Theoremlet r06.2) is a condition on the three components of a vector, \((1,\omega,\omega^2)\), not on
+the phase of \(s\).  Placing the triole on \(\arg s\) is the interpretive step of this layer.  Squaring maps the triole of
+phases onto a triole of phases, so the placement is consistent, but the source does not make it.  Why the readout should
+act at discrete directions at all is also assumed.
+
+\paragraph{Remark, offered and not adopted.}
+Six directions at \(60^\circ\) with the triole permutations as symmetry are the root system \(A_2\) of \(SU(3)\), whose Weyl
+group is \(S_3\).  r15 of v4.8.0 met \(SU(3)\) as the stabiliser of the symmetric point, there read as colour.  Whether the
+readout hexagon and the colour \(SU(3)\) are related would need a map from the duality plane to a Cartan plane, which the
+source does not supply.
+
+\subsection*{v4.9.0-r14 register entries}
+\label{subsec:v490-r14-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r14\\
+\midrule
+six kicks per beat (r13) & reading offered: readout at \(\text{triole}\cup J_B(\text{triole})\) in the \(s\)-plane (r14.1)\\
+factor \(3/4\) & needs both triole and \(J_B\); either alone, or a quarter grid, gives another factor\\
+beat & one revolution of \(s\) around the photon, equal to the charge conjugation of r02.2\\
+\(A_2\)/colour & remark only\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r14 ledger and guard update}
+\label{subsec:v490-r14-ledger-guard}
+
+\[
+R_{\rm kick}^{v490\text{-}r14}=(0,0,1)
+\]
+for (a reason for the kick schedule offered, its consequences consistent with r10--r13, the placement of the triole open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r14,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r14}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+

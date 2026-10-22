@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v7.1
+# Kernkarte Quantum Sphaera — v7.2
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1586,6 +1586,13 @@ nach A_4/U_6. Provenienz offen, Ableitung unter Prämissen geschlossen. Guards u
 **K57.2.** Fenster in Grad: V3 39,23°, V5 50,77° (R_A) fassen eine C5-Stufe, V8 28,13° (R_B) nicht ⇒ zweiter Grund für
 r12-P4. Stufenwinkel Hopf 30° (3/4) gegen Gitter 28,78° (0,7683). R_time = (0,0,1); Guards unverändert.
 
+### K58 — Companion-Runde v4.9.0-r14: Auslese-Richtungen aus Triole und Umkehrwalze (2026-10-22)
+
+**K58.1 (Deutung).** Kick = Durchgang von arg s durch Triole ∪ J_B(Triole) (s → −s̄) = Sechseck 0°…300° (enthält Materie
+und Tachyon) ⇒ 30° Dualität, q = 3/4; Triole allein 1/4, Viertelraster 1/2. Ein Umlauf von s um das Photon = sechs
+Kicks = z → −z (r02) = eine Schwebung (r13). Annahme: Triole auf arg s gelegt (Quelle: Komponentenbedingung). A₂/SU(3)
+nur Bemerkung. R_kick = (0,0,1); Guards unverändert.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1692,6 +1699,7 @@ r12-P4. Stufenwinkel Hopf 30° (3/4) gegen Gitter 28,78° (0,7683). R_time = (0,
 - v6.9 (2026-10-22): K55 Companion-Runde v4.9.0-r10 (C5-Faktor als Drehen/Kompensieren, Zeugenklasse Form (iii)).
 - v7.0 (2026-10-22): K56 Companion-Runden v4.9.0-r11 (gekickte Dualitätsdynamik) und r12 (Δ_γ < 1/5 rekonstruiert).
 - v7.1 (2026-10-22): K57 Companion-Runde v4.9.0-r13 (Zeitskala: τ_k = T_b/6).
+- v7.2 (2026-10-22): K58 Companion-Runde v4.9.0-r14 (Kick-Richtungen Triole ∪ J_B(Triole)).
 
 ---
 
