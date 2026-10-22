@@ -1,0 +1,238 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r02 Source-Only: The Round Trip about the Photon and the Umkehrwalze}
+\addcontentsline{toc}{section}{v4.9.0-r02 Source-Only: The Round Trip about the Photon and the Umkehrwalze}
+\label{sec:v490-r02-round-trip-umkehrwalze}
+% ============================================================================
+
+\paragraph{Purpose.}
+Theoremlet r19.2 records a \(\mathbb Z_2\) holonomy of the duality circle around the photon.  This layer follows a round
+trip matter \(\to\) photon \(\to\) tachyon \(\to\) photon \(\to\) matter in Reading~B, asks on which side of the photon each
+passage runs, and asks what the Umkehrwalze of the main body is in physical terms.  It uses the reflector and leakage
+language of the OP5 layer (Definition~\ref{def:working-shared-matrix-leakage}).  The computations are
+\texttt{llm/k38\_umkehrwalze.py}.  No value is compared with data.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r02 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\paragraph{Author's motivation (2026-10-21).}
+The Umkehrwalze was introduced for a path that does not end at the tachyon but returns, matter \(\to\) photon \(\to\)
+tachyon \(\to\) photon \(\to\) matter, read as a parallel transport over the sphere.
+
+\subsection*{v4.9.0-r02 the two sides of the photon}
+\label{subsec:v490-r02-sides}
+
+Throughout, \(z=E+iB\), \(s=z\cdot z=E^2-B^2+2i\,E\cdot B\), matter \(s>0\), tachyon \(s<0\), photon \(s=0\)
+(\S\ref{subsec:v480-r19-transition-group}).
+
+\paragraph{Theoremlet v4.9.0-r02.1.}
+A passage from matter to tachyon at fixed \(|s|\) runs through the upper or the lower half of the \(s\)-plane and carries
+\(z\mapsto iz\) or \(z\mapsto -iz\).  The side is the sign of \(\operatorname{Im}s=2\,E\cdot B\); it is Lorentz-invariant,
+odd under \(P\) and \(T\), and even under \(C\).  For the round trip:
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] out and back on the same side (the return retraces the outward path): \(z\mapsto z\);
+\item[(b)] out on one side and back on the other (the duality angle keeps its sense, \(\pi/2+\pi/2\)): \(z\mapsto -z\).
+\end{enumerate}
+On the spinor of Theoremlet r06.4 the round trip (b) is \(\psi\mapsto\pm i\psi\); two round trips give
+\(\psi\mapsto-\psi\) with \(z\) restored.
+
+\paragraph{Proof sketch.}
+\(s(e^{i\alpha}z)=e^{2i\alpha}s\), so \(\alpha\in[0,\pi/2]\) moves \(s\) through the upper half-plane and
+\(\alpha\in[-\pi/2,0]\) through the lower one.  \(SO(3,\mathbb C)\) preserves \(s\) and hence \(\operatorname{Im}s\).  By the
+parities of \(E\) and \(B\) (\(P\): \(E\) odd, \(B\) even; \(T\): \(E\) even, \(B\) odd; \(C\): both odd), \(E\cdot B\) is
+\(P\)- and \(T\)-odd and \(C\)-even.  Case (b) is a loop around \(s=0\), case (a) is not (Theoremlet r19.2).  The spinor
+statement is \(z(e^{i\varphi}\psi)=e^{2i\varphi}z(\psi)\).  Checked numerically.  \(\square\)
+
+\paragraph{Reading.}
+The ``double tunnel point'' of the round trip is one point with two sides: the photon, passed on the side
+\(E\cdot B>0\) or \(E\cdot B<0\).  The side is the sign of the density of the electromagnetic \(\theta\)-term
+\(F\tilde F\).  Only a round trip that changes side encloses the photon.
+
+\subsection*{v4.9.0-r02 the round-trip Umkehrwalze is charge conjugation}
+\label{subsec:v490-r02-charge-conjugation}
+
+\paragraph{Theoremlet v4.9.0-r02.2.}
+On the field strength the holonomy \(z\mapsto-z\) of the round trip (b) is charge conjugation \(C\), equals \(PT\)
+(with \(x\mapsto-x\)), and equals the duality rotation by \(\pi\).  It commutes with \(SO(3,\mathbb C)\) and with the duality
+circle, and fixes no non-zero field.
+
+\paragraph{Proof sketch.}
+\(C\): \(E\mapsto-E\), \(B\mapsto-B\).  \(T\): \(z\mapsto\bar z\); \(P\): \(z\mapsto-\bar z\); composed, \(z\mapsto-z\).
+\(e^{i\pi}=-1\) is central.  \(\square\)
+
+\paragraph{Consequence.}
+The Umkehrwalze of the round trip is not an added element.  It is forced by the two-to-one relation between \(z\) and
+\(s\), whose branch point is the photon, and in physical terms it is \(C\).  Being central, it cannot serve as the \(J\) of
+the readout projector \(C_{\HC}=\tfrac12(\mathrm{id}+J)\) of Definition~\ref{def:working-shared-matrix-leakage}: for
+\(J=-1\) that projector is zero.
+
+\subsection*{v4.9.0-r02 the involutive Umkehrwalze must contain time reversal}
+\label{subsec:v490-r02-antilinear}
+
+The main body uses \(J\) as an involution that exchanges matter and tachyon (Theorem~\ref{thm:core}, where the inside
+view runs with time reversed).  In Reading~B the quarter turn \(z\mapsto iz\) does this exchange, but its square is
+\(-1\), so it is not an involution.
+
+\paragraph{Theoremlet v4.9.0-r02.3.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] No \(\mathbb C\)-linear involution \(L\) of \(\mathbb C^3\) satisfies \(s(Lz)=-s(z)\).
+\item[(b)] The \(\mathbb C\)-antilinear involutions with \(s(Lz)=-\overline{s(z)}\) are exactly \(Lz=iR\bar z\) with
+\(R\in O(3,\mathbb C)\) and \(R\bar R=1\).  Instances are \(R=1\), real orthogonal involutions, and squares of boosts.
+\item[(c)] The instance \(R=1\),
+\[
+J_B z:=i\bar z,\qquad\text{that is}\quad E\mapsto B,\ B\mapsto E,
+\]
+is the duality rotation by \(\pi/2\) after time reversal.  It exchanges matter and tachyon, maps the null cone to
+itself, and preserves the side \(\operatorname{sign}\operatorname{Im}s\).
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a) \(M:=-iL\) preserves \(s\), so \(M\in O(3,\mathbb C)\); \(L^2=1\) gives \(M^2=-1\) and \(\det(M)^2=-1\), impossible.
+(b) \(Lz=A\bar z\) with \(A^{\mathsf T}A=-1\) gives \(A=iR\), \(R\in O(3,\mathbb C)\); \(L^2=A\bar A=R\bar R\).
+(c) \(i(E-iB)=B+iE\), and \(s\mapsto-\bar s\).  Checked numerically.  \(\square\)
+
+\paragraph{Consequence.}
+In three complex dimensions an involutive exchange of matter and tachyon cannot be linear.  It has to be antilinear,
+and antilinearity is time reversal.  This matches the inside view of Theorem~\ref{thm:core}, which runs with time
+reversed.  The physical reading of the involutive Umkehrwalze is therefore electric--magnetic exchange, a duality
+quarter turn composed with \(T\).  It is a symmetry of the source-free Maxwell equations.  Unlike \(C\) it is not
+Lorentz-invariant: \(J_B\Lambda=\bar\Lambda J_B\), so it commutes with real rotations only and singles out a frame.
+
+\paragraph{Theoremlet v4.9.0-r02.4.}
+The eigen-channels of \(J_B\) lie one on each side of the photon:
+\[
+J_Bz=z\iff E=B,\ s=2i|E|^2;\qquad J_Bz=-z\iff E=-B,\ s=-2i|E|^2.
+\]
+The projector \(C_{\HC}=\tfrac12(\mathrm{id}+J_B)\) maps every field to \(\operatorname{Re}s=0\),
+\(\operatorname{Im}s\ge0\).  Its image meets the null cone only in \(z=0\).
+
+\paragraph{Proof sketch.}
+Direct substitution; checked on 1000 random fields (\(\max|\operatorname{Re}s|=0\), \(\min\operatorname{Im}s>0\)).
+\(\square\)
+
+\paragraph{Consequence for Theorem~\ref{thm:core}.}
+The compensator \(\tfrac12(f+Jf)\) ``produces the Hawking photon at \(\beta=0\)''.  With \(J=J_B\) it produces the value
+\(0\) of the matter--tachyon coordinate \(\operatorname{Re}s=E^2-B^2\), not a null field.  The output keeps
+\(E\cdot B\neq0\) and lies on one side of the photon, which is the endpoint of its image.  The statement holds for the real
+part of \(s\) only.
+
+\paragraph{Theoremlet v4.9.0-r02.5.}
+\(J_B\) reverses the sense of the duality circle, \(J_BR_\alpha=R_{-\alpha}J_B\) with \(R_\alpha z=e^{i\alpha}z\).  Hence
+\[
+R_\alpha^{-1}J_BR_\alpha=R_{-2\alpha}J_B,
+\qquad
+R_{\pi/2}^{-1}J_BR_{\pi/2}=-J_B,
+\qquad
+R_{\pi/4}^{-1}J_BR_{\pi/4}=T .
+\]
+Passing from matter to the tachyon, reflecting there, and passing back gives the direct reflection followed by the
+round-trip Umkehrwalze \(C\).
+
+\paragraph{Proof sketch.}
+\(e^{-i\alpha}\,i\,\overline{e^{i\alpha}z}=ie^{-2i\alpha}\bar z\).  Checked numerically.  \(\square\)
+
+\paragraph{Reading.}
+This is the Enigma pattern of the computational interpretation surface: a reflector between a forward and a backward
+passage.  The two Umkehrwalzen of this layer are related by it.  The central one, \(C\), is the holonomy of a passage
+pair.  The involutive one, \(J_B\), is the reflector, and conjugating it by the matter--tachyon passage multiplies it by
+\(C\).
+
+\subsection*{v4.9.0-r02 what the OP5 layer contributes}
+\label{subsec:v490-r02-op5}
+
+Inserting \(J=J_B\) into the leakage diagnostics \(E_{\rm comm}=[\mathcal M,J]\) and
+\(E_{\rm leak}=(\mathrm{id}-C_{\HC})\mathcal MC_{\HC}\) of Definition~\ref{def:working-shared-matrix-leakage} gives the
+following, with the transports of Reading~B in place of \(\mathcal M\) (relative norms on a random field):
+\begin{center}
+\small
+\begin{tabular}{@{}lrr@{}}
+\toprule
+transport \(\mathcal M\) & \(|E_{\rm comm}z|/|z|\) & \(|E_{\rm leak}z|/|C_{\HC}z|\)\\
+\midrule
+real rotation & \(0\) & \(0\)\\
+boost, \(\eta=0.6174\) & \(0.985\) & \(0.526\)\\
+duality rotation, \(\alpha=0.4\) & \(0.779\) & \(0.389\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+By Proposition~\ref{prop:working-stable-channel-criterion} the admissible channel is stable under the compact part of
+the transport only.  Boosts leak because \(J_B\) singles out a frame.  Duality rotations leak because \(J_B\) reverses
+their sense (Theoremlet r02.5).  Boosts preserve the side of the field as a whole, so this leakage is into the
+\(J_B\)-odd component and does not change side.
+
+\paragraph{Correspondence, offered and not adopted.}
+The local OP5 closure theorem works under the identification of the OP5 near-kernel branch with the
+\emph{photon-frame HC-cone/reflector route}.  Its halo invariance off tunnel candidates asks for a turning-point
+readout before a through-collapse exit.  In the language of this layer a turning point is case (a) of Theoremlet r02.1,
+a return on the same side with trivial holonomy, and a through-exit is case (b), a change of side with holonomy \(C\).
+The reflector of that route would be antilinear by Theoremlet r02.3.  The radial and \(\HC\)-residual channels
+\(\rho_r,\rho_h\), the kernel \(K\) and the tunnel selector have no counterpart in Reading~B yet.  The correspondence is
+therefore recorded and not used.  It does not touch the guarded scope of the OP5 closure.
+
+\subsection*{v4.9.0-r02 physical summary in plain terms}
+\label{subsec:v490-r02-plain}
+
+The following restates Theoremlets r02.1--r02.5 without notation.  It relies on the working assignment of r07
+(matter electric-dominated, tachyon magnetic-dominated), which is a model decision, and on Reading~B, which is
+kinematics without dynamics (r10).
+\begin{enumerate}[leftmargin=2em]
+\item \emph{Two ways past the photon.}  A field changes from matter type to tachyon type only by passing the photon.  It
+can pass on one of two sides, according to whether its electric and magnetic parts lean towards each other or away from
+each other (the sign of \(E\cdot B\)).  Every observer agrees on the side.
+\item \emph{The round trip.}  Going out and coming back on the same side changes nothing.  Going out on one side and
+coming back on the other takes the field once around the photon, and it returns with both of its parts reversed.  That
+is the field of opposite charges: the round trip acts as charge conjugation.  Only a second round trip restores the
+underlying spinor, as with a M\"obius strip.
+\item \emph{The mirror between matter and tachyon.}  A map that exchanges matter and tachyon directly and gives the
+identity when applied twice exists only if it also reverses time.  The simplest such map exchanges the electric and the
+magnetic field.  For light in vacuum this is a known symmetry, electric--magnetic duality combined with time reversal.
+The time-reversed inside view of Theorem~\ref{thm:core} has this structure.
+\item \emph{What the compensator produces.}  Averaging a field with its mirror image makes the electric and the
+magnetic part equally strong, which is the line between matter and tachyon.  The two parts then point the same way.
+For light they are perpendicular.  The average is therefore balanced, but it is not a light field.
+\item \emph{The two mirror channels.}  The fields that the mirror leaves unchanged lie on one side of the photon, and
+the fields it reverses lie on the other.  The two sides of item~1 are the two channels of the mirror.
+\end{enumerate}
+No statement in this list is compared with data.
+
+\subsection*{v4.9.0-r02 register entries}
+\label{subsec:v490-r02-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r02\\
+\midrule
+Umkehrwalze of the round trip & holonomy of a side-changing passage pair, equal to \(C=PT\) on field strengths (r02.1, r02.2)\\
+involutive \(J\) exchanging matter and tachyon & must be antilinear (contains \(T\)); representative \(J_B\): \(E\leftrightarrow B\) (r02.3); frame-dependent\\
+Thm.~\ref{thm:core}, photon from \(\tfrac12(f+Jf)\) & with \(J_B\): \(\operatorname{Re}s=0\), not a null field; holds for the real part of \(s\) only (r02.4)\\
+Def.~\ref{def:working-shared-matrix-leakage} with \(J_B\) & \(E_{\rm comm}=E_{\rm leak}=0\) for real rotations only (r02)\\
+OP5 turning point / through-exit & correspondence to cases (a)/(b) of r02.1 recorded, not adopted\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r02 ledger and guard update}
+\label{subsec:v490-r02-ledger-guard}
+
+\[
+R_{\rm uw}^{v490\text{-}r02}=(0,0,1)
+\]
+for (round-trip Umkehrwalze identified with \(C\), involutive Umkehrwalze characterised as antilinear,
+identification with the OP5 halo/tunnel structure open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r02,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r02}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+

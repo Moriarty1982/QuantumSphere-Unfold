@@ -1,0 +1,2420 @@
+% v4.9.0 post-release layers
+% Appended layers v4.9.0-r01 to r16, carried verbatim from the full-monolith working source
+% Quantum_Sphaera_Companion_v4_8_0_source.tex (SHA256 613d9ecb107dccc79f5b686941a352635422e83f378b8f4234aaa537a85352de),
+% lines 67718-70131.  Not a preserved v4.7 fragment; earlier layers are not rewritten.
+% Content SHA256 of the carried block: ed05bb7ef631a4ae91b91b8789806d5c4ee43a053e5c7266af13d48e31abfb7b
+
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r01 Source-Only: The Photon Frame as Neutral Axis and the Conversion of Constants}
+\addcontentsline{toc}{section}{v4.9.0-r01 Source-Only: The Photon Frame as Neutral Axis and the Conversion of Constants}
+\label{sec:v490-r01-neutral-axis-conversion}
+% ============================================================================
+
+\paragraph{Purpose.}
+Finding~(a) of \S\ref{subsec:v480-r18-findings} records that the conversion of constants between the matter and the
+photon frame uses \(\gL=\cosh2\eta\), the matter--tachyon cross term, where the matter--photon pair is a neighbour pair
+with factor \(\cosh\eta\).  This layer records where the factor came from, the working assumption under which it was
+chosen, and what the assumption implies for a conversion law over three frames.  The computations are
+\texttt{llm/k37\_gl\_umrechnungen.py}.  No value is compared with data.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r01 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r01 provenance of the factor}
+\label{subsec:v490-r01-provenance}
+
+In the archived versions v2.28.0 to v2.29.0 the splitting factor reads
+``\(\gL=\gBI/\gstring\approx1.197\)'', while the same versions already carry \(1/\bsym\approx1.820\), that is
+\(\bsym\approx0.5495\).  The value \(1.197\) is \((1-\bsym^2)^{-1/2}\), the Lorentz factor of the matter-frame
+offset; the ratio \(\gBI/\gstring\) is \(1.864\).  In v2.29.1 the value was changed to \(1.864\) and the change recorded
+as an arithmetic correction (``previous version used incorrect \(\gL\approx1.197\)''); the note carried in
+Corollary~\ref{cor:gue-frame} calls the earlier value \(\gBI\), which it is not (\(\gBI\approx0.2375\)).  Since then
+every conversion uses \(1.864\).
+
+\paragraph{Author's statement (2026-10-21).}
+The photon frame was assumed to be neutral, and the work was meant to proceed on that neutral axis first.  The archive
+records the change of value only as an arithmetic correction and does not mention a neutral axis.
+
+\paragraph{Theoremlet v4.9.0-r01.1.}
+The two values the factor has carried are the two cross terms of Theoremlet r18.1:
+\[
+1.197=\cosh\eta=\sqrt{\tfrac{1+\gL}{2}}\quad\text{(matter--photon)},\qquad
+1.864=\cosh2\eta=\gL\quad\text{(matter--tachyon)},
+\]
+with \(\eta=\operatorname{artanh}\bsym\).  Both follow from the single input \(\gBI/\gstring\).
+
+\paragraph{Proof sketch.}
+\(\cosh2\eta=2\cosh^2\eta-1\) and \(\cosh\eta=(1-\tanh^2\eta)^{-1/2}\).  \(\square\)
+
+\subsection*{v4.9.0-r01 the neutral assumption in Reading~B}
+\label{subsec:v490-r01-neutral}
+
+The assumption has structural support in the complex-vector reading.  The photon is the sector fixed by the whole duality
+circle (\S\ref{subsec:v480-r07-duality-angle}), the branch point of the duality holonomy (Theoremlet r19.2), and the
+centre of the real \(s\)-axis on which matter and tachyon are mirror images (\S\ref{subsec:v480-r19-photon-centred}).
+On the rapidity axis of Theorem~\ref{thm:symmetric-frame} it sits at rapidity \(0\), between matter at \(+\eta\) and
+tachyon at \(-\eta\).  If the photon frame is neutral, a value on the neutral axis is reached from the matter frame by the
+neighbour step, and the factor carried before v2.29.1 is the factor of that step.
+
+\paragraph{Theoremlet v4.9.0-r01.2.}
+A conversion law \(X^{(b)}=\gamma_{ab}^{-k}X^{(a)}\) with \(\gamma_{ab}\) the Lorentz factor of the pair is not
+consistent over the three frames: from matter to tachyon through the photon it gives
+\((\cosh\eta)^{2k}=\bigl(\tfrac{1+\gL}{2}\bigr)^k\), directly it gives \(\gL^{\,k}\) (for \(k=1\): \(1.432\) against
+\(1.864\); for \(k=6\): \(8.63\) against \(42.0\)).  A law with the Doppler factor, \(X^{(b)}=e^{-k\eta_{ab}}X^{(a)}\),
+composes exactly.
+
+\paragraph{Proof sketch.}
+\(\cosh^2\eta\neq\cosh2\eta\) for \(\eta\neq0\), while \(e^{\eta}e^{\eta}=e^{2\eta}\).  \(\square\)
+
+\paragraph{Consequence.}
+With the Lorentz-factor law one pair at a time is consistent.  Working on one axis first, as the author describes, is the
+regime in which the law of \S\ref{sec:phase-constants} is free of contradiction; the obstruction of r01.2 appears only
+once both pairs are used.  Under the neutral assumption the primary pair is matter--photon, with factor \(\cosh\eta\);
+\(\gL\) is the factor across the neutral axis, from matter to tachyon.
+
+\subsection*{v4.9.0-r01 a frame-order finding in the Hawking proposition}
+\label{subsec:v490-r01-hawking}
+
+Items~(i) and~(ii) of Proposition~\ref{prop:hawking-gBI-tachyon} give \(T_H^{(\mathrm{photon})}=\gL\,T_H^{(\mathrm{matter})}\)
+and \(T_H^{(\mathrm{tachyon})}=\gL^{-1}T_H^{(\mathrm{matter})}\).  Reciprocal factors place photon and tachyon on opposite
+sides of matter.  On the axis of Theorem~\ref{thm:symmetric-frame} the photon lies between matter and tachyon.  A law along
+the axis moves the tachyon value beyond the photon value in the same direction; a mirror law about a neutral photon gives
+the tachyon the matter value.  Neither gives reciprocal factors, so item~(ii) carries a frame order that does not match the
+axis.  This is also the one statement of the main body in which the same factor serves both pairs.
+
+\subsection*{v4.9.0-r01 ways forward, recorded and not chosen}
+\label{subsec:v490-r01-ways}
+
+\begin{enumerate}[leftmargin=2em]
+\item[(A)] Keep \(\gL\) and the Lorentz-factor law, and read each conversion of \S\ref{sec:phase-constants} as one across
+the neutral axis (matter--tachyon).  Statements whose endpoint is the photon frame then need the neighbour factor.
+\item[(B)] Use the neighbour factor \(\cosh\eta=1.197\) for matter--photon, the value carried before v2.29.1, in line with
+the neutral assumption.  This changes the photon-frame numbers of the main body (table below).
+\item[(C)] Use a composable law with the Doppler factor, \(e^{\eta}=\sqrt{(1+\bsym)/(1-\bsym)}=1.854\) per neighbour step.
+It is consistent over three frames.  At \(\bsym\) its neighbour factor lies \(0.55\%\) below \(\gL\), so the numbers of the
+main body change little while their meaning changes.  By Theoremlet r01.3 below the closeness is structural: in the
+continuum limit of Theorem~\ref{thm:tribonacci} the two factors are equal.
+\end{enumerate}
+
+\paragraph{Theoremlet v4.9.0-r01.3.}
+The full-span Lorentz factor equals the neighbour-step Doppler factor, \(\cosh2\eta=e^{\eta}\), exactly when \(e^{\eta}=1\)
+or \(e^{\eta}=\mathbb T\), the tribonacci constant of Theorem~\ref{thm:tribonacci}.  At that point
+\(\cosh2\eta=e^{\eta}=\coth\eta=\mathbb T=1.83929\), \(\beta=0.54369\): the self-referential condition
+\(\gL=1/\bsym(\gL)\) of Theorem~\ref{thm:tribonacci} is the condition that the matter--tachyon Lorentz factor and the
+matter--photon Doppler factor coincide.
+
+\paragraph{Proof sketch.}
+With \(x=e^{\eta}\), \(\cosh2\eta=(x^2+x^{-2})/2\), so \(\cosh2\eta=x\) is \(x^4-2x^3+1=0\), which factors as
+\((x-1)(x^3-x^2-x-1)=0\).  Further \(\coth\eta=(x^2+1)/(x^2-1)\), and \(\coth\eta=x\) is again \(x^3-x^2-x-1=0\).
+Checked numerically to \(10^{-16}\).  \(\square\)
+
+\paragraph{Consequence for the neutral axis.}
+In the continuum limit the author's choice of \(\gL\) for the step from matter to the neutral photon frame is exactly the
+factor a composable law assigns to that step: reading (A) and reading (C) agree there.  With the measured
+\(\gL=\gBI/\gstring\), which lies \(1.37\%\) above \(\mathbb T\) (the lattice correction of
+Remark~\ref{rem:op1-tribonacci}), they differ by \(0.55\%\).  The Lorentz-factor law of reading (B) does not share this
+property.
+
+\begin{center}
+\small
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+quantity in the main body & \(\gL\) & neighbour, Lorentz & neighbour, Doppler\\
+\midrule
+\(\lP^{(\mathrm{matter})}/\lP^{(\mathrm{photon})}\) (Theorem~\ref{thm:planck-photon}), power \(3/2\) & \(2.546\) & \(1.309\) & \(2.525\)\\
+vacuum-energy ratio, power \(6\) & \(42.0\) & \(2.94\) & \(40.6\)\\
+\(m_\nu^{(\mathrm{matter})}/m_\nu^{(\mathrm{photon})}\) (Proposition~\ref{prop:k-neutrino}), power \(4\) & \(12.08\) & \(2.05\) & \(11.82\)\\
+matter error (Corollary~\ref{cor:matter-error}), power \(5\) & \(22.53\) & \(2.46\) & \(21.92\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+The table is arithmetic on the formulas of the main body; photon-frame values are not measured.  Statements that are
+compared with data, among them Corollary~\ref{cor:falsifiable} and Proposition~\ref{prop:muon-g2}, are not re-evaluated
+here; a re-evaluation under (A), (B) or (C) is a prediction and requires a pre-registration note.
+
+\subsection*{v4.9.0-r01 register entries}
+\label{subsec:v490-r01-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r01\\
+\midrule
+conversion law of \S\ref{sec:phase-constants} & factor \(\gL\) is the matter--tachyon term; consistent for one pair at a time (r01.2); under the neutral photon assumption the matter--photon factor is \(\cosh\eta\); choice among (A)--(C) open\\
+Cor.~\ref{cor:gue-frame}, v2.29.1 note & the earlier value \(1.197\) was \(\cosh\eta\), the matter--photon Lorentz factor, not \(\gBI\) (r01.1)\\
+Prop.~\ref{prop:hawking-gBI-tachyon} (ii) & reciprocal factors put the tachyon on the far side of matter; does not match the axis order (r01)\\
+Thm.~\ref{thm:tribonacci} & equivalent to \(\cosh2\eta=e^{\eta}\): matter--tachyon Lorentz factor equals matter--photon Doppler factor (r01.3)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r01 ledger and guard update}
+\label{subsec:v490-r01-ledger-guard}
+
+\[
+R_{\rm conv}^{v490\text{-}r01}=(0,0,1)
+\]
+for (provenance of the factor recorded, consistency of the conversion law over three frames decided and its relation to
+the tribonacci fixed point established, choice among (A)--(C) open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r01,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r01}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r02 Source-Only: The Round Trip about the Photon and the Umkehrwalze}
+\addcontentsline{toc}{section}{v4.9.0-r02 Source-Only: The Round Trip about the Photon and the Umkehrwalze}
+\label{sec:v490-r02-round-trip-umkehrwalze}
+% ============================================================================
+
+\paragraph{Purpose.}
+Theoremlet r19.2 records a \(\mathbb Z_2\) holonomy of the duality circle around the photon.  This layer follows a round
+trip matter \(\to\) photon \(\to\) tachyon \(\to\) photon \(\to\) matter in Reading~B, asks on which side of the photon each
+passage runs, and asks what the Umkehrwalze of the main body is in physical terms.  It uses the reflector and leakage
+language of the OP5 layer (Definition~\ref{def:working-shared-matrix-leakage}).  The computations are
+\texttt{llm/k38\_umkehrwalze.py}.  No value is compared with data.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r02 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\paragraph{Author's motivation (2026-10-21).}
+The Umkehrwalze was introduced for a path that does not end at the tachyon but returns, matter \(\to\) photon \(\to\)
+tachyon \(\to\) photon \(\to\) matter, read as a parallel transport over the sphere.
+
+\subsection*{v4.9.0-r02 the two sides of the photon}
+\label{subsec:v490-r02-sides}
+
+Throughout, \(z=E+iB\), \(s=z\cdot z=E^2-B^2+2i\,E\cdot B\), matter \(s>0\), tachyon \(s<0\), photon \(s=0\)
+(\S\ref{subsec:v480-r19-transition-group}).
+
+\paragraph{Theoremlet v4.9.0-r02.1.}
+A passage from matter to tachyon at fixed \(|s|\) runs through the upper or the lower half of the \(s\)-plane and carries
+\(z\mapsto iz\) or \(z\mapsto -iz\).  The side is the sign of \(\operatorname{Im}s=2\,E\cdot B\); it is Lorentz-invariant,
+odd under \(P\) and \(T\), and even under \(C\).  For the round trip:
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] out and back on the same side (the return retraces the outward path): \(z\mapsto z\);
+\item[(b)] out on one side and back on the other (the duality angle keeps its sense, \(\pi/2+\pi/2\)): \(z\mapsto -z\).
+\end{enumerate}
+On the spinor of Theoremlet r06.4 the round trip (b) is \(\psi\mapsto\pm i\psi\); two round trips give
+\(\psi\mapsto-\psi\) with \(z\) restored.
+
+\paragraph{Proof sketch.}
+\(s(e^{i\alpha}z)=e^{2i\alpha}s\), so \(\alpha\in[0,\pi/2]\) moves \(s\) through the upper half-plane and
+\(\alpha\in[-\pi/2,0]\) through the lower one.  \(SO(3,\mathbb C)\) preserves \(s\) and hence \(\operatorname{Im}s\).  By the
+parities of \(E\) and \(B\) (\(P\): \(E\) odd, \(B\) even; \(T\): \(E\) even, \(B\) odd; \(C\): both odd), \(E\cdot B\) is
+\(P\)- and \(T\)-odd and \(C\)-even.  Case (b) is a loop around \(s=0\), case (a) is not (Theoremlet r19.2).  The spinor
+statement is \(z(e^{i\varphi}\psi)=e^{2i\varphi}z(\psi)\).  Checked numerically.  \(\square\)
+
+\paragraph{Reading.}
+The ``double tunnel point'' of the round trip is one point with two sides: the photon, passed on the side
+\(E\cdot B>0\) or \(E\cdot B<0\).  The side is the sign of the density of the electromagnetic \(\theta\)-term
+\(F\tilde F\).  Only a round trip that changes side encloses the photon.
+
+\subsection*{v4.9.0-r02 the round-trip Umkehrwalze is charge conjugation}
+\label{subsec:v490-r02-charge-conjugation}
+
+\paragraph{Theoremlet v4.9.0-r02.2.}
+On the field strength the holonomy \(z\mapsto-z\) of the round trip (b) is charge conjugation \(C\), equals \(PT\)
+(with \(x\mapsto-x\)), and equals the duality rotation by \(\pi\).  It commutes with \(SO(3,\mathbb C)\) and with the duality
+circle, and fixes no non-zero field.
+
+\paragraph{Proof sketch.}
+\(C\): \(E\mapsto-E\), \(B\mapsto-B\).  \(T\): \(z\mapsto\bar z\); \(P\): \(z\mapsto-\bar z\); composed, \(z\mapsto-z\).
+\(e^{i\pi}=-1\) is central.  \(\square\)
+
+\paragraph{Consequence.}
+The Umkehrwalze of the round trip is not an added element.  It is forced by the two-to-one relation between \(z\) and
+\(s\), whose branch point is the photon, and in physical terms it is \(C\).  Being central, it cannot serve as the \(J\) of
+the readout projector \(C_{\HC}=\tfrac12(\mathrm{id}+J)\) of Definition~\ref{def:working-shared-matrix-leakage}: for
+\(J=-1\) that projector is zero.
+
+\subsection*{v4.9.0-r02 the involutive Umkehrwalze must contain time reversal}
+\label{subsec:v490-r02-antilinear}
+
+The main body uses \(J\) as an involution that exchanges matter and tachyon (Theorem~\ref{thm:core}, where the inside
+view runs with time reversed).  In Reading~B the quarter turn \(z\mapsto iz\) does this exchange, but its square is
+\(-1\), so it is not an involution.
+
+\paragraph{Theoremlet v4.9.0-r02.3.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] No \(\mathbb C\)-linear involution \(L\) of \(\mathbb C^3\) satisfies \(s(Lz)=-s(z)\).
+\item[(b)] The \(\mathbb C\)-antilinear involutions with \(s(Lz)=-\overline{s(z)}\) are exactly \(Lz=iR\bar z\) with
+\(R\in O(3,\mathbb C)\) and \(R\bar R=1\).  Instances are \(R=1\), real orthogonal involutions, and squares of boosts.
+\item[(c)] The instance \(R=1\),
+\[
+J_B z:=i\bar z,\qquad\text{that is}\quad E\mapsto B,\ B\mapsto E,
+\]
+is the duality rotation by \(\pi/2\) after time reversal.  It exchanges matter and tachyon, maps the null cone to
+itself, and preserves the side \(\operatorname{sign}\operatorname{Im}s\).
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a) \(M:=-iL\) preserves \(s\), so \(M\in O(3,\mathbb C)\); \(L^2=1\) gives \(M^2=-1\) and \(\det(M)^2=-1\), impossible.
+(b) \(Lz=A\bar z\) with \(A^{\mathsf T}A=-1\) gives \(A=iR\), \(R\in O(3,\mathbb C)\); \(L^2=A\bar A=R\bar R\).
+(c) \(i(E-iB)=B+iE\), and \(s\mapsto-\bar s\).  Checked numerically.  \(\square\)
+
+\paragraph{Consequence.}
+In three complex dimensions an involutive exchange of matter and tachyon cannot be linear.  It has to be antilinear,
+and antilinearity is time reversal.  This matches the inside view of Theorem~\ref{thm:core}, which runs with time
+reversed.  The physical reading of the involutive Umkehrwalze is therefore electric--magnetic exchange, a duality
+quarter turn composed with \(T\).  It is a symmetry of the source-free Maxwell equations.  Unlike \(C\) it is not
+Lorentz-invariant: \(J_B\Lambda=\bar\Lambda J_B\), so it commutes with real rotations only and singles out a frame.
+
+\paragraph{Theoremlet v4.9.0-r02.4.}
+The eigen-channels of \(J_B\) lie one on each side of the photon:
+\[
+J_Bz=z\iff E=B,\ s=2i|E|^2;\qquad J_Bz=-z\iff E=-B,\ s=-2i|E|^2.
+\]
+The projector \(C_{\HC}=\tfrac12(\mathrm{id}+J_B)\) maps every field to \(\operatorname{Re}s=0\),
+\(\operatorname{Im}s\ge0\).  Its image meets the null cone only in \(z=0\).
+
+\paragraph{Proof sketch.}
+Direct substitution; checked on 1000 random fields (\(\max|\operatorname{Re}s|=0\), \(\min\operatorname{Im}s>0\)).
+\(\square\)
+
+\paragraph{Consequence for Theorem~\ref{thm:core}.}
+The compensator \(\tfrac12(f+Jf)\) ``produces the Hawking photon at \(\beta=0\)''.  With \(J=J_B\) it produces the value
+\(0\) of the matter--tachyon coordinate \(\operatorname{Re}s=E^2-B^2\), not a null field.  The output keeps
+\(E\cdot B\neq0\) and lies on one side of the photon, which is the endpoint of its image.  The statement holds for the real
+part of \(s\) only.
+
+\paragraph{Theoremlet v4.9.0-r02.5.}
+\(J_B\) reverses the sense of the duality circle, \(J_BR_\alpha=R_{-\alpha}J_B\) with \(R_\alpha z=e^{i\alpha}z\).  Hence
+\[
+R_\alpha^{-1}J_BR_\alpha=R_{-2\alpha}J_B,
+\qquad
+R_{\pi/2}^{-1}J_BR_{\pi/2}=-J_B,
+\qquad
+R_{\pi/4}^{-1}J_BR_{\pi/4}=T .
+\]
+Passing from matter to the tachyon, reflecting there, and passing back gives the direct reflection followed by the
+round-trip Umkehrwalze \(C\).
+
+\paragraph{Proof sketch.}
+\(e^{-i\alpha}\,i\,\overline{e^{i\alpha}z}=ie^{-2i\alpha}\bar z\).  Checked numerically.  \(\square\)
+
+\paragraph{Reading.}
+This is the Enigma pattern of the computational interpretation surface: a reflector between a forward and a backward
+passage.  The two Umkehrwalzen of this layer are related by it.  The central one, \(C\), is the holonomy of a passage
+pair.  The involutive one, \(J_B\), is the reflector, and conjugating it by the matter--tachyon passage multiplies it by
+\(C\).
+
+\subsection*{v4.9.0-r02 what the OP5 layer contributes}
+\label{subsec:v490-r02-op5}
+
+Inserting \(J=J_B\) into the leakage diagnostics \(E_{\rm comm}=[\mathcal M,J]\) and
+\(E_{\rm leak}=(\mathrm{id}-C_{\HC})\mathcal MC_{\HC}\) of Definition~\ref{def:working-shared-matrix-leakage} gives the
+following, with the transports of Reading~B in place of \(\mathcal M\) (relative norms on a random field):
+\begin{center}
+\small
+\begin{tabular}{@{}lrr@{}}
+\toprule
+transport \(\mathcal M\) & \(|E_{\rm comm}z|/|z|\) & \(|E_{\rm leak}z|/|C_{\HC}z|\)\\
+\midrule
+real rotation & \(0\) & \(0\)\\
+boost, \(\eta=0.6174\) & \(0.985\) & \(0.526\)\\
+duality rotation, \(\alpha=0.4\) & \(0.779\) & \(0.389\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+By Proposition~\ref{prop:working-stable-channel-criterion} the admissible channel is stable under the compact part of
+the transport only.  Boosts leak because \(J_B\) singles out a frame.  Duality rotations leak because \(J_B\) reverses
+their sense (Theoremlet r02.5).  Boosts preserve the side of the field as a whole, so this leakage is into the
+\(J_B\)-odd component and does not change side.
+
+\paragraph{Correspondence, offered and not adopted.}
+The local OP5 closure theorem works under the identification of the OP5 near-kernel branch with the
+\emph{photon-frame HC-cone/reflector route}.  Its halo invariance off tunnel candidates asks for a turning-point
+readout before a through-collapse exit.  In the language of this layer a turning point is case (a) of Theoremlet r02.1,
+a return on the same side with trivial holonomy, and a through-exit is case (b), a change of side with holonomy \(C\).
+The reflector of that route would be antilinear by Theoremlet r02.3.  The radial and \(\HC\)-residual channels
+\(\rho_r,\rho_h\), the kernel \(K\) and the tunnel selector have no counterpart in Reading~B yet.  The correspondence is
+therefore recorded and not used.  It does not touch the guarded scope of the OP5 closure.
+
+\subsection*{v4.9.0-r02 physical summary in plain terms}
+\label{subsec:v490-r02-plain}
+
+The following restates Theoremlets r02.1--r02.5 without notation.  It relies on the working assignment of r07
+(matter electric-dominated, tachyon magnetic-dominated), which is a model decision, and on Reading~B, which is
+kinematics without dynamics (r10).
+\begin{enumerate}[leftmargin=2em]
+\item \emph{Two ways past the photon.}  A field changes from matter type to tachyon type only by passing the photon.  It
+can pass on one of two sides, according to whether its electric and magnetic parts lean towards each other or away from
+each other (the sign of \(E\cdot B\)).  Every observer agrees on the side.
+\item \emph{The round trip.}  Going out and coming back on the same side changes nothing.  Going out on one side and
+coming back on the other takes the field once around the photon, and it returns with both of its parts reversed.  That
+is the field of opposite charges: the round trip acts as charge conjugation.  Only a second round trip restores the
+underlying spinor, as with a M\"obius strip.
+\item \emph{The mirror between matter and tachyon.}  A map that exchanges matter and tachyon directly and gives the
+identity when applied twice exists only if it also reverses time.  The simplest such map exchanges the electric and the
+magnetic field.  For light in vacuum this is a known symmetry, electric--magnetic duality combined with time reversal.
+The time-reversed inside view of Theorem~\ref{thm:core} has this structure.
+\item \emph{What the compensator produces.}  Averaging a field with its mirror image makes the electric and the
+magnetic part equally strong, which is the line between matter and tachyon.  The two parts then point the same way.
+For light they are perpendicular.  The average is therefore balanced, but it is not a light field.
+\item \emph{The two mirror channels.}  The fields that the mirror leaves unchanged lie on one side of the photon, and
+the fields it reverses lie on the other.  The two sides of item~1 are the two channels of the mirror.
+\end{enumerate}
+No statement in this list is compared with data.
+
+\subsection*{v4.9.0-r02 register entries}
+\label{subsec:v490-r02-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r02\\
+\midrule
+Umkehrwalze of the round trip & holonomy of a side-changing passage pair, equal to \(C=PT\) on field strengths (r02.1, r02.2)\\
+involutive \(J\) exchanging matter and tachyon & must be antilinear (contains \(T\)); representative \(J_B\): \(E\leftrightarrow B\) (r02.3); frame-dependent\\
+Thm.~\ref{thm:core}, photon from \(\tfrac12(f+Jf)\) & with \(J_B\): \(\operatorname{Re}s=0\), not a null field; holds for the real part of \(s\) only (r02.4)\\
+Def.~\ref{def:working-shared-matrix-leakage} with \(J_B\) & \(E_{\rm comm}=E_{\rm leak}=0\) for real rotations only (r02)\\
+OP5 turning point / through-exit & correspondence to cases (a)/(b) of r02.1 recorded, not adopted\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r02 ledger and guard update}
+\label{subsec:v490-r02-ledger-guard}
+
+\[
+R_{\rm uw}^{v490\text{-}r02}=(0,0,1)
+\]
+for (round-trip Umkehrwalze identified with \(C\), involutive Umkehrwalze characterised as antilinear,
+identification with the OP5 halo/tunnel structure open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r02,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r02}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r03 Source-Only: The Compensator as a Two-Arm Interferometer}
+\addcontentsline{toc}{section}{v4.9.0-r03 Source-Only: The Compensator as a Two-Arm Interferometer}
+\label{sec:v490-r03-compensator-interferometer}
+% ============================================================================
+
+\paragraph{Purpose.}
+Theoremlet r02.4 found that the compensator \(C(f)=\tfrac12(f+Jf)\) with the involution \(J_Bz=i\bar z\) of r02.3 does
+not produce a null field.  This layer looks at the compensator itself in Reading~B: as the output of an interferometer,
+on a static charge, on a light wave, and in its product form.  The computations are \texttt{llm/k39\_kompensator.py}.
+No value is compared with data.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r03 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\paragraph{Author's motivation (2026-10-21).}
+The picture behind the compensator was the Michelson--Morley interferometer with its half-silvered mirror; a mirror
+for the tachyon would act as a periscope that lays both images over each other.
+
+\subsection*{v4.9.0-r03 the two output ports}
+\label{subsec:v490-r03-ports}
+
+\paragraph{Theoremlet v4.9.0-r03.1.}
+Split a field \(f\) at a beam splitter.  Send one half through the identity and one through \(J\), then recombine.  The
+two output ports carry \(C(f)=\tfrac12(f+Jf)\) and \(A(f)=\tfrac12(f-Jf)\), the compensator and its antisymmetric
+partner of Definition~r04.1.  The energy splits without loss, \(|Cf|^2+|Af|^2=|f|^2\).  For antilinear \(J\) (r02.3) both
+maps are real-linear only, and
+\[
+A(f)=-i\,C(if),\qquad \operatorname{ran}A=i\,\operatorname{ran}C .
+\]
+The two ports differ by a duality quarter turn.
+
+\paragraph{Proof sketch.}
+\(C+A=1\), \(C^2=C\), \(CA=0\) (Theoremlet r04.2), and \(\operatorname{Re}\langle Cf,Af\rangle=0\) for anti-unitary \(J\).
+\(C(if)=\tfrac12(if-iJf)=iA(f)\).  Checked numerically.  \(\square\)
+
+\paragraph{Consequence.}
+The bosonic/fermionic split \(C(f)\in\Hplusplus\), \(A(f)\in\Hplusminus\) of the Pauli item in
+\S\ref{sec:central} becomes, with an antilinear \(J\), a split into two real subspaces that are images of each other
+under multiplication by \(i\).  That is a split into real and imaginary parts, not two independent sectors.  Remark A2 of
+r04 already noted that \(\tfrac12(1\pm J)\) is only real-linear for antilinear \(J\).
+
+\subsection*{v4.9.0-r03 a charge and a light wave in the interferometer}
+\label{subsec:v490-r03-charge-light}
+
+\paragraph{Theoremlet v4.9.0-r03.2.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] For the Coulomb field of a charge \(q\) (matter type, \(s>0\)), \(J_Bf\) is the field of a magnetic charge
+\(q\) (tachyon type).  \(C(f)\) and \(A(f)\) are the fields of dyons with electric charge \(q/2\) and magnetic charge
+\(\pm q/2\), with \(s=\pm\tfrac i2|E_0|^2\).
+\item[(b)] For a plane light wave, \(J_B\) reverses the direction of propagation and rotates the polarisation by
+\(90^\circ\).  This is what a phase-conjugating mirror (time reversal, r02.3) followed by a polarisation rotator (duality
+quarter turn) does.  \(C\) of the wave has \(E\parallel B\) and is not a light wave.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+\(J_B\): \(E\mapsto B\), \(B\mapsto E\), and \(C\), \(A\) give \(E=\pm B=\tfrac12E_0\).  For \(E=\hat x\), \(B=\hat y\):
+\(J_B\) gives \(E=\hat y\), \(B=\hat x\), \(E\times B=-\hat z\).  Checked numerically.  \(\square\)
+
+\paragraph{Reading.}
+For light the mirror of r02.3 is an existing optical device, but on light it does not change the type: \(s=0\) stays
+\(0\).  A mirror that turns a matter-type field into a tachyon-type field of the same shape must turn electric charge into
+magnetic charge.  Under the assignment of r07 the missing tachyon mirror is therefore, in Reading~B, the missing magnetic
+charge.  The periscope image, that is the overlay of a field with its mirror image, is a dyon.  This is the content of the
+``photon at \(\beta=0\)'' of Theorem~\ref{thm:hawking-triolic} and Theorem~\ref{thm:core} when \(f\) is a static matter
+field.
+
+\subsection*{v4.9.0-r03 what the interferometer reads out}
+\label{subsec:v490-r03-readout}
+
+\paragraph{Theoremlet v4.9.0-r03.3.}
+Put a duality phase \(\varphi\) into the reference arm, \(f\mapsto e^{i\varphi}f\).  The difference of the two port
+energies is
+\[
+D(\varphi)=\bigl|\tfrac12(e^{i\varphi}f+J_Bf)\bigr|^2-\bigl|\tfrac12(e^{i\varphi}f-J_Bf)\bigr|^2
+=\operatorname{Im}\bigl(e^{i\varphi}s\bigr).
+\]
+The fringe has amplitude \(|s|\) and phase \(\arg s\).  At \(\varphi=0\) it reads \(2E\cdot B\), the side of the photon
+(r02.1).  Matter and tachyon give fringes half a period apart, and light gives no fringe.  The visibility is
+\[
+V=\frac{|s|}{|f|^2}=\sqrt{1-\Bigl(\frac{|E\times B|}{u}\Bigr)^2}=\frac1{\cosh2\eta_f},
+\qquad u=\tfrac12(E^2+B^2),
+\]
+where \(\eta_f\) is the rapidity of the frame in which \(E\parallel B\).  That frame exists for every non-null field.
+
+\paragraph{Proof sketch.}
+\(D(\varphi)=\operatorname{Re}\langle e^{i\varphi}f,J_Bf\rangle\) and \(\langle z,i\bar z\rangle=i\bar s\).  Further
+\(u^2-|E\times B|^2=\tfrac14|s|^2\).  The frame with \(E\parallel B\) moves along \(E\times B\) with speed \(v\),
+\(v/(1+v^2)=|E\times B|/(2u)\), so \(|E\times B|/u=\tanh2\eta_f\).  Checked numerically, including the boost to
+\(E\parallel B\).  \(\square\)
+
+\paragraph{Reading.}
+In this interferometer light gives a null result, and the visibility of any other field is the inverse Lorentz factor of
+its energy transport, \(|E\times B|/u=\tanh2\eta_f\).  The double rapidity \(2\eta_f\) appears unforced: the field's rest
+frame moves at \(\tanh\eta_f\), its energy at \(\tanh2\eta_f\).  If \(\eta_f\) were \(\eta_{\rm sym}\), the visibility would be
+\(1/\gL=0.536\) and the energy speed \(0.844\).  This is arithmetic.  No field is identified with \(\eta_{\rm sym}\), and an
+identification would be a prediction requiring a pre-registration note.
+
+\subsection*{v4.9.0-r03 sum and product}
+\label{subsec:v490-r03-product}
+
+Proposition~\ref{prop:compensator} calls \(C(f)\) the projection onto \(K_3=e_1e_2\) and states that it is orthogonal to
+both inputs.  A projection is not orthogonal to its input: \(\operatorname{Re}\langle f,Cf\rangle=|Cf|^2\).
+
+\paragraph{Theoremlet v4.9.0-r03.4.}
+The product of a field with its mirror image has the properties claimed for \(e_3=e_1e_2\):
+\[
+z\times J_Bz=2\,E\times B,\qquad z\cdot J_Bz=2iu .
+\]
+The vector part is twice the Poynting vector, real and orthogonal to \(E\) and to \(B\).  The scalar part is the energy
+density.  The pair \((u,E\times B)\) is null, \(|E\times B|=u\), exactly for light.
+
+\paragraph{Proof sketch.}
+\(z\times\bar z=-2iE\times B\) and \(z\cdot\bar z=E^2+B^2\).  Checked numerically.  \(\square\)
+
+\paragraph{Consequence.}
+The orthogonality in Proposition~\ref{prop:compensator} holds for the product of \(f\) with \(Jf\), not for their
+average.  In Reading~B the product yields the energy and momentum of the field, and it is light-like exactly on the
+photon sector.  The average yields a dyon.  Which of the two the main body means by the compensator is not decided here.
+Both readings are recorded.
+
+\subsection*{v4.9.0-r03 register entries}
+\label{subsec:v490-r03-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r03\\
+\midrule
+compensator \(C\), partner \(A\) & the two output ports of a two-arm interferometer with \(J\) in one arm; real-linear, \(A(f)=-iC(if)\) (r03.1)\\
+Pauli item, \(\Hplusplus\)/\(\Hplusminus\) split & with antilinear \(J\) a real/imaginary split, the sectors are \(i\)-images of each other (r03.1)\\
+Thm.~\ref{thm:hawking-triolic}, Thm.~\ref{thm:core}, photon at \(\beta=0\) & for a static matter field \(C(f)\) is a dyon field (r03.2)\\
+Prop.~\ref{prop:compensator}, orthogonal to both inputs & false for the average; true for the product \(z\times J_Bz=2E\times B\) (r03.4)\\
+tachyon mirror & on light: phase conjugation plus polarisation rotation; on matter-type fields it needs magnetic charge (r03.2)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r03 ledger and guard update}
+\label{subsec:v490-r03-ledger-guard}
+
+\[
+R_{\rm comp}^{v490\text{-}r03}=(0,0,1)
+\]
+for (interferometer form of the compensator established, readout \(D(\varphi)=\operatorname{Im}(e^{i\varphi}s)\) and
+visibility \(1/\cosh2\eta_f\) derived, choice between average and product reading open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r03,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r03}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r04 Source-Only: The Compensator as a Matrix on the Electric--Magnetic Doublet}
+\addcontentsline{toc}{section}{v4.9.0-r04 Source-Only: The Compensator as a Matrix on the Electric--Magnetic Doublet}
+\label{sec:v490-r04-doublet-matrix}
+% ============================================================================
+
+\paragraph{Purpose.}
+On \(\mathbb C^3\) the involution \(J_B\) of r02.3 is antilinear.  It has no complex matrix, and the compensator built from
+it is only real-linear (r03.1).  This layer writes the field as the real pair \((E,B)\) instead.  Then \(J_B\), the
+compensator and the readout of r03 become ordinary \(2\times2\) matrices, and the state of a field becomes a
+\(2\times2\) matrix of the kind used for polarisation in optics.  The computations are
+\texttt{llm/k40\_dublett\_matrix.py}.  No value is compared with data.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r04 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\paragraph{Author's question (2026-10-21).}
+Would it be better to put the compensator into a matrix?
+
+\subsection*{v4.9.0-r04 the doublet and its matrices}
+\label{subsec:v490-r04-doublet}
+
+Write \(F=[\,E\mid B\,]\in\mathbb R^{3\times2}\) for \(z=E+iB\), and let
+\(\sigma_x=\bigl(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\bigr)\),
+\(\sigma_z=\bigl(\begin{smallmatrix}1&0\\0&-1\end{smallmatrix}\bigr)\), \(R_\alpha\) the rotation of \(\mathbb R^2\) by
+\(\alpha\).
+
+\paragraph{Theoremlet v4.9.0-r04.1.}
+The operations of r02 act on \(F\) from the right by real \(2\times2\) matrices:
+\[
+e^{i\alpha}z\leftrightarrow FR_\alpha^{\mathsf T},\qquad
+J_Bz=i\bar z\leftrightarrow F\sigma_x,\qquad
+T:\ \bar z\leftrightarrow F\sigma_z,\qquad
+C:\ -z\leftrightarrow -F .
+\]
+They generate \(O(2)\): \(\sigma_x\) and \(\sigma_z\) are reflections and \(R_\alpha\) rotations.  The relation
+\(J_BR_\alpha=R_{-\alpha}J_B\) of r02.5 is the relation between a reflection and a rotation in \(O(2)\), and the Enigma
+composite of r02.5 is the matrix identity \(R_{\pi/2}\sigma_xR_{\pi/2}^{-1}=-\sigma_x\).  Spatial rotations act from the
+left, \(F\mapsto RF\), and commute with all of these.  Boosts mix \(E\) and \(B\) through cross products, are not of the
+form \(F\mapsto LFM\), and do not commute with \(\sigma_x\).  The compensator and its partner are ordinary orthogonal
+projections,
+\[
+C_{\HC}=\tfrac12(1+\sigma_x)=\tfrac12\begin{pmatrix}1&1\\1&1\end{pmatrix},\qquad
+A=\tfrac12(1-\sigma_x)=\tfrac12\begin{pmatrix}1&-1\\-1&1\end{pmatrix},
+\]
+and \(FC_{\HC}\) is the compensator of r02.4 and r03.
+
+\paragraph{Proof sketch.}
+\(e^{i\alpha}(E+iB)=(E\cos\alpha-B\sin\alpha)+i(E\sin\alpha+B\cos\alpha)\); \(i(E-iB)=B+iE\); \(E-iB\).  The boost
+formula \(E'=\gamma(E+v\times B)-\dots\) couples the columns through \(v\times\).  Checked numerically.  \(\square\)
+
+\paragraph{Consequence.}
+The antilinearity of r02.3 is not lost.  It is the statement that \(\sigma_x\) is a reflection, \(\det\sigma_x=-1\),
+while the duality circle consists of rotations.  Over \(\mathbb R\) the compensator is linear, and the obstruction of
+r03.1 disappears.
+
+\subsection*{v4.9.0-r04 the state matrix}
+\label{subsec:v490-r04-state}
+
+\paragraph{Theoremlet v4.9.0-r04.2.}
+The \(2\times2\) Gram matrix \(G=F^{\mathsf T}F\) of \(E\) and \(B\) decomposes as
+\[
+G=u\,\mathbf 1+\tfrac12\bigl(\operatorname{Re}s\;\sigma_z+\operatorname{Im}s\;\sigma_x\bigr),
+\qquad
+\det G=|E\times B|^2,\qquad
+u^2-\det G=\tfrac14|s|^2 .
+\]
+Put \(\rho=G/\operatorname{tr}G\) and \(b=(\operatorname{Re}s,\operatorname{Im}s)/(2u)\), so that
+\(\rho=\tfrac12(\mathbf 1+b_1\sigma_z+b_2\sigma_x)\).  Then:
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \(|b|=1/\cosh2\eta_f\le1\), with \(\eta_f\) as in r03.3.  \(|b|=1\) exactly when \(E\parallel B\), and \(b=0\)
+exactly for a null field.  Matter (\(b_1>0\)) and tachyon (\(b_1<0\)) lie on opposite sides of the unit disk, light at its
+centre, and the side of the photon of r02.1 is the sign of \(b_2\).
+\item[(b)] The duality rotation by \(\alpha\) rotates \(b\) by \(2\alpha\).  \(J_B\) reflects \(b_1\mapsto-b_1\), and
+\(T\) reflects \(b_2\mapsto-b_2\).
+\item[(c)] Under a boost the traceless part of \(G\), that is \(s\), is unchanged and \(u\) changes, so \(b\) moves along its
+own direction.  It reaches \(|b|=1\) in the frame with \(E\parallel B\) and tends to \(0\) as the boost grows.
+\end{enumerate}
+\(G\) is symmetric and has no \(\sigma_y\) part, so the states fill a disk, not a sphere.
+
+\paragraph{Proof sketch.}
+\(G_{11}=E^2\), \(G_{22}=B^2\), \(G_{12}=E\cdot B\); \(\det G=E^2B^2-(E\cdot B)^2\).  (a) follows from r03.3.  (b): \(G\mapsto
+R_\alpha GR_\alpha^{\mathsf T}\), and the traceless part of a symmetric matrix turns by twice the angle.  (c): \(s\) is
+Lorentz-invariant (r06.3).  Checked numerically, including a boost scan through the frame \(E\parallel B\).  \(\square\)
+
+\paragraph{Reading.}
+This is the formalism of Stokes parameters for the doublet \((E,B)\) in place of two polarisation components.  The doubled
+angle in (b) is the half-angle of the spinor of r06.4 seen from the other side: a duality rotation by \(\alpha\) moves the
+state by \(2\alpha\).  Light is the unpolarised centre, and matter and tachyon are the two fully polarised ends of one
+axis.  Boosting any field moves it towards light.
+
+\subsection*{v4.9.0-r04 the interferometer as a measurement}
+\label{subsec:v490-r04-measurement}
+
+\paragraph{Theoremlet v4.9.0-r04.3.}
+The energy in the compensator port of r03.1 is \(|FC_{\HC}|^2=\operatorname{tr}(GC_{\HC})=u+E\cdot B\).  With the duality phase
+\(\varphi\) in the reference arm, the port difference of r03.3 is
+\[
+D(\varphi)=\operatorname{Im}(e^{i\varphi}s)=2u\;b\cdot(\sin\varphi,\cos\varphi).
+\]
+The interferometer measures the component of \(b\) along a direction set by \(\varphi\).  The compensator is the
+measurement along \(\sigma_x\), and its partner is the opposite outcome.
+
+\paragraph{Proof sketch.}
+\(C_{\HC}\) is a symmetric projection, so \(|FC_{\HC}|^2=\operatorname{tr}(C_{\HC}GC_{\HC})=\operatorname{tr}(GC_{\HC})\).
+Expand \(\operatorname{Im}(e^{i\varphi}s)\).  Checked numerically.  \(\square\)
+
+\paragraph{Both readings of r03 in one matrix.}
+The average reading of r03.4 is the projection \(F\mapsto FC_{\HC}\), linear in \(F\).  The product reading is
+quadratic.  Its scalar part is \(\operatorname{tr}G=2u\), its magnitude is \(\sqrt{\det G}=|E\times B|\), and its direction is
+the cross product of the two columns of \(F\).  The trace, traceless part and determinant of \(G\) are energy, the
+invariant \(s\), and the magnitude of the energy flux.  The \(3\times2\) matrix \(F\) carries in addition the direction of
+the flux, which \(G\) does not see.
+
+\subsection*{v4.9.0-r04 relation to the compensator matrix of the main body}
+\label{subsec:v490-r04-hc-matrix}
+
+Section~\ref{app:hc-tools} defines a \emph{global Heisenberg-compensator matrix} only as the extension of
+\(C=\tfrac12(\mathrm{id}+J)\) to the multi-layer architecture, and a frame-balancing tool that splits \(X=X^++X^-\) by
+\(J\).  The doublet supplies concrete instances in Reading~B: \(X^+=FC_{\HC}\) and \(X^-=FA\).  In matrix form the leakage
+diagnostics of Definition~\ref{def:working-shared-matrix-leakage}, with \(J=\sigma_x\) acting from the right, read
+(relative norms on a random field):
+\begin{center}
+\small
+\begin{tabular}{@{}lrr@{}}
+\toprule
+transport \(\mathcal M\) & \(|E_{\rm comm}|/|F|\) & \(|E_{\rm leak}|/|FC_{\HC}|\)\\
+\midrule
+spatial rotation (left) & \(0\) & \(0\)\\
+boost, \(\eta=0.6174\) & \(1.113\) & \(0.505\)\\
+duality rotation, \(\alpha=0.4\) (right) & \(0.779\) & \(0.389\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+This repeats r02 in matrix form.  Left and right multiplication commute, so rotations cannot leak.  Duality rotations
+leak because \(R_\alpha\) does not commute with \(\sigma_x\), and boosts leak because they do not factorise.  The values
+for the boost differ from the r02 table because the random field differs; vanishing and non-vanishing agree.  Identifying
+the Millennium matrix of the main body with a matrix on the doublet is not done here.
+
+\paragraph{Open: the third axis.}
+\(G\) is real and symmetric, so the state space is a disk.  A \(\sigma_y\) part would need an antisymmetric component of
+the state matrix, for instance from complex amplitudes of time-harmonic fields.  Whether such a third axis, which would
+turn the disk into a sphere, has a meaning in the source is not decided here.
+
+\subsection*{v4.9.0-r04 register entries}
+\label{subsec:v490-r04-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r04\\
+\midrule
+compensator \(C=\tfrac12(1+J)\) & on the doublet \((E,B)\) the linear projection \(\tfrac12(1+\sigma_x)\); \(J_B\), \(T\), duality, \(C\) generate \(O(2)\) (r04.1)\\
+state of a field & Gram matrix \(G=u\mathbf 1+\tfrac12(\operatorname{Re}s\,\sigma_z+\operatorname{Im}s\,\sigma_x)\), \(\det G=|E\times B|^2\); point \(b\) in the unit disk, light at the centre, \(|b|=1/\cosh2\eta_f\) (r04.2)\\
+interferometer of r03 & measurement of \(b\) along a direction set by \(\varphi\) (r04.3)\\
+global HC matrix (\S\ref{app:hc-tools}) & doublet gives concrete \(X^\pm\); identification with the Millennium matrix not made\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r04 ledger and guard update}
+\label{subsec:v490-r04-ledger-guard}
+
+\[
+R_{\rm mat}^{v490\text{-}r04}=(0,0,1)
+\]
+for (doublet matrix form of the compensator established, state disk and readout as measurement established,
+identification with the global compensator matrix of the main body open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r04,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r04}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r05 Source-Only: The Millennium Matrix on the Doublet, a Third Axis near Rotating Black Holes, and a Photon from Matter and Tachyon}
+\addcontentsline{toc}{section}{v4.9.0-r05 Source-Only: The Millennium Matrix on the Doublet, a Third Axis near Rotating Black Holes, and a Photon from Matter and Tachyon}
+\label{sec:v490-r05-layer-transport-kerr-photon}
+% ============================================================================
+
+\paragraph{Purpose.}
+Three questions of the author follow r04.
+\begin{enumerate}[leftmargin=2em]
+\item Can the Millennium matrix of the main body be the doublet matrix of r04?  The author also asks for a more
+meaningful name.
+\item Can amplitudes, the missing third axis of r04, enter near a black hole?
+\item Can a photon arise when a tachyon meets a forming massive particle, and could such a photon run back and create
+the tachyon at its origin?
+\end{enumerate}
+The computations are \texttt{llm/k41\_schichttransport\_kerr\_photon.py}.  No value is compared with data.  Earlier
+layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r05 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r05 the Millennium matrix on the doublet}
+\label{subsec:v490-r05-millennium}
+
+The main body asks three things of the Millennium matrix \(\mathcal M\).  It transports one object through its layers
+(\S\ref{sec:millennium-hc}).  It commutes with the involution and with the compensator, condition (T4) of
+Definition~\ref{def:tensor-structural-kernel}.  And the compensator is its spectral projector
+(Theorem~\ref{thm:hc-spectral-projector}).
+
+\paragraph{Theoremlet v4.9.0-r05.1.}
+On the doublet of r04, with \(J=\sigma_x\) and \(C_{\HC}=\tfrac12(1+\sigma_x)\) acting from the right:
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] The real \(2\times2\) matrices satisfying (T4) are exactly \(M=\lambda_+C_{\HC}+\lambda_-A\).  Together with
+spatial rotations acting from the left, these are all transports of the doublet compatible with (T4).
+\item[(b)] For \(\lambda_+\neq\lambda_-\), \(C_{\HC}\) is the spectral projector of \(M\) onto the eigenvalue \(\lambda_+\),
+as Theorem~\ref{thm:hc-spectral-projector} requires.
+\item[(c)] Of the transports of Reading~B, (T4) holds for spatial rotations, for \(J_B\) itself and for the duality
+rotation by \(\pi\), that is \(C\).  It fails for every other duality rotation, for \(T\) and for boosts (r02, r04).
+\item[(d)] The invertible members with determinant \(1\) are \(e^{t\sigma_x}=e^{t}C_{\HC}+e^{-t}A\).  They preserve
+\(\operatorname{Re}s=E^2-B^2\), the matter--tachyon coordinate, and weight the two ports of r03 by \(e^{\pm t}\).
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+\(M\sigma_x=\sigma_xM\) is a linear condition with a two-dimensional solution space spanned by \(1\) and \(\sigma_x\).
+\(e^{t\sigma_x}{}^{\mathsf T}\sigma_ze^{t\sigma_x}=\sigma_z\) since \(\sigma_x\sigma_z=-\sigma_z\sigma_x\).  Checked
+numerically.  \(\square\)
+
+\paragraph{Consequence.}
+On the doublet the Millennium matrix can only be a \emph{port-weighting matrix}.  It leaves the compensator port and the
+partner port invariant and multiplies them by two factors.  It is not the Lorentz transport of Reading~B, since boosts
+violate (T4).  The doublet therefore realises the compensator part of \(\mathcal H_{16}\), not the full \(\mathcal M_{16}\).
+The four-term layer decomposition \(\mathcal M_{\rm tri}+\mathcal M_{\rm alg}+\mathcal M_{\rm cl}+\mathcal M_{\rm proj}\)
+and the index \(16\) have no counterpart on a two-dimensional doublet.  With \(t=\eta_{\rm sym}\) the port weights would be
+the Doppler factors \(e^{\pm\eta}\) of way~(C) in r01.  That is arithmetic, not an identification.
+
+\paragraph{Naming (author's request, 2026-10-21).}
+From this layer on, \(\mathcal M_{16}\) is called the \emph{layer-transport matrix}.  The name says what
+\S\ref{sec:millennium-hc} defines: one object carried through its layers.  Its restriction to the doublet is called the
+\emph{port-weighting matrix}.  Symbols, labels and the wording of earlier layers stay unchanged, so ``Millennium matrix''
+in earlier text means the same object.  A renaming of the earlier text and of the PDF keywords would rewrite released
+layers.  It is not done here.
+
+\subsection*{v4.9.0-r05 a third axis, and rotating black holes}
+\label{subsec:v490-r05-third-axis}
+
+\paragraph{Theoremlet v4.9.0-r05.2.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] At a point, \(E\) and \(B\) are real, so the state matrix of r04 has no \(\sigma_y\) part anywhere, near a black
+hole or not.
+\item[(b)] For time-harmonic fields with complex amplitudes \(\hat E,\hat B\), the matrix of time averages
+\(\hat G=\hat F^\dagger\hat F\) is Hermitian, and its \(\sigma_y\) part is \(-2\operatorname{Im}(\hat E^*\cdot\hat B)\).  For a plane
+wave this is \(\pm1\) (relative to \(\operatorname{tr}\hat G\)) for the two circular polarisations and \(0\) for linear
+polarisation.  The third axis is helicity, the quantity generated by the duality rotation.  With it the disk of r04
+becomes a sphere, with light on the helicity axis.
+\item[(c)] The gravitational field has the same structure.  Its Weyl curvature is a complex symmetric \(3\times3\) matrix,
+gravito-electric plus \(i\) gravito-magnetic.  For a Schwarzschild black hole the only component
+\(\Psi_2=-M/r^3\) is real.  For a Kerr black hole \(\Psi_2=-M/(r-ia\cos\theta)^3\) is complex.  \(\operatorname{Im}\Psi_2^2\), the
+Pontryagin part of the curvature, is positive in one hemisphere, zero on the equator and negative in the other.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(b): \(\operatorname{tr}(\hat G\sigma_y)=-2\operatorname{Im}\hat G_{12}\); for \(\hat B=\hat z\times\hat E\) with
+\(\hat E=(1,\pm i,0)/\sqrt2\) one gets \(\mp1\) up to orientation.  (c): standard form of \(\Psi_2\) in the Kinnersley tetrad;
+the sign of \(\operatorname{Im}\Psi_2^2\) follows the sign of \(\cos\theta\).  Checked numerically for \(M=1\), \(a=0.9\),
+\(r=3\).  \(\square\)
+
+\paragraph{Reading.}
+Amplitudes do not enter because a black hole is near.  They enter with waves and quantum states.  What a black hole adds
+depends on its rotation.  A static one is mirror-symmetric and singles out neither helicity.  A rotating one puts its own
+curvature off the real axis, on opposite sides in its two hemispheres, which is the gravitational counterpart of the two
+sides of the photon in r02.1.  Whether this couples to the helicity axis of (b), and whether Hawking radiation of a
+rotating black hole would then carry a helicity imbalance between the hemispheres, is open.  A quantitative statement is a
+prediction and requires a pre-registration note.  Theorem~\ref{thm:core} treats the static case only.
+
+\subsection*{v4.9.0-r05 a photon from matter and tachyon}
+\label{subsec:v490-r05-photon}
+
+\paragraph{Author's question (2026-10-21).}
+A tachyon meets a massive particle that is just forming.  Instead of reaching a massive state, the encounter yields a
+photon.  The tachyon develops a pull through the impact, so the photon is drawn along the tachyon's former path,
+collides again and again, reaches the tachyon's origin, vanishes there, and thereby creates the tachyon.
+
+\paragraph{Theoremlet v4.9.0-r05.3.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Let \(z_M\) be of matter type and \(z_T\) of tachyon type with \(s(z_T)=-s(z_M)\).  Then
+\(s(z_M+z_T)=2\,z_M\cdot z_T\).  The superposition is a null field exactly when \(z_M\cdot z_T=0\).  For a static electric
+field \(E\) and a static magnetic field \(B\) of equal strength, the superposition is null exactly when \(E\perp B\).  Its
+energy then flows at the speed of light along \(E\times B\), perpendicular to both.
+\item[(b)] At an angle \(\vartheta\) between \(E\) and \(B\), the superposition sits at \(b=(0,\cos\vartheta)\) in the disk of
+r04.  \(\vartheta=90^\circ\) is the photon at the centre, and \(\vartheta=0\) is the dyon of r03.2 at the edge.
+\item[(c)] Let a tachyon leave the origin \(O\) and meet the particle at \(K\), a distance \(d\) away, at speed \(v>1\).  A
+photon running back from \(K\) to \(O\) arrives \(d(1+1/v)\) after the departure, and this arrival lies in the future light
+cone of the departure in every frame.  The order of departure and meeting is frame-dependent (for observer speeds above
+\(1/v\) it reverses), but the photon leg is not.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a) Expand \(s\).  For \(z_M=E\), \(z_T=iB\): \(z_M\cdot z_T=iE\cdot B\).  Null fields have \(|E\times B|=u\) (r03.3).
+(b) \(s=2i|E|^2\cos\vartheta\) and \(u=|E|^2\).  (c) The separation of departure \((0,0)\) and photon arrival
+\((d/v+d,0)\) is timelike and future-directed; the tachyon leg is spacelike.  Checked numerically for \(v=1/\bsym\).
+\(\square\)
+
+\paragraph{Reading.}
+The first part of the picture has a precise form.  Matter and tachyon can combine to a photon, but only with crossed
+orientation.  With parallel orientation they give the dyon of r03.  The photon does not move along the tachyon's path.
+It moves perpendicular to both inputs.  The last part, a photon that arrives at the origin and thereby creates the
+tachyon, cannot hold for a photon running forward in time: it always arrives after the tachyon has left.  What does hold
+is the familiar reinterpretation of tachyon exchange.  Since the tachyon leg is spacelike, ``emitted at \(O\), absorbed at
+\(K\)'' and ``emitted at \(K\), absorbed at \(O\)'' are the same exchange seen by different observers.  A closed
+self-creation would need a photon leg running backward in time.  Without one, the repeated encounter of the picture is a
+cycle of period \(d(1+1/v)\), not a self-creation.  If such a cycle returns on the other side of the photon, the tachyon
+created in the next cycle is the charge conjugate of the first (r02.1).  Reading~B has no dynamics (r10), so the pull of
+the picture cannot be derived or excluded here.
+
+\subsection*{v4.9.0-r05 register entries}
+\label{subsec:v490-r05-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r05\\
+\midrule
+Millennium matrix, (T4), Thm.~\ref{thm:hc-spectral-projector} & on the doublet only \(\lambda_+C_{\HC}+\lambda_-A\) (port weighting); boosts and general duality rotations violate (T4); full \(\mathcal M_{16}\) not identified (r05.1)\\
+name & \(\mathcal M_{16}\): layer-transport matrix; doublet restriction: port-weighting matrix; earlier wording unchanged\\
+third axis of r04 & helicity, for complex amplitudes; Kerr curvature off the real axis with opposite sides in the two hemispheres; coupling open (r05.2)\\
+photon from matter \(+\) tachyon & null exactly for crossed orientation, flux perpendicular to both; return photon cannot create the tachyon (r05.3)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r05 ledger and guard update}
+\label{subsec:v490-r05-ledger-guard}
+
+\[
+R_{\rm lt}^{v490\text{-}r05}=(0,0,1)
+\]
+for (doublet form of the layer-transport matrix decided, third axis and photon question answered structurally,
+identification of the full \(\mathcal M_{16}\) and the Kerr coupling open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r05,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r05}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r06 Source-Only: The Tachyon Hit Chain, its Acceleration, and the Higgs Field}
+\addcontentsline{toc}{section}{v4.9.0-r06 Source-Only: The Tachyon Hit Chain, its Acceleration, and the Higgs Field}
+\label{sec:v490-r06-hit-chain-higgs}
+% ============================================================================
+
+\paragraph{Purpose.}
+Theoremlet r05.3(c) stated that a photon returning to the origin of a tachyon cannot create it.  The author objected that the
+tachyon already runs backward in time, and then refined the picture.  The Higgs field tries to create matter along a line.
+A tachyon that has been travelling along this line for a long time hits it again and again.  Each hit is a point of
+spacetime at which an essentially identical photon arises.  This layer makes r05.3(c) precise, works out the hit chain,
+asks what an accelerating or infinitely accelerated tachyon does to the hits, and checks the picture against the Higgs
+field.  Special relativity is used with \(c=1\).  The computations are \texttt{llm/k42\_tachyon\_trefferkette.py}.  No
+value is compared with data.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r06 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r06 closing the loop, made precise}
+\label{subsec:v490-r06-loop}
+
+\paragraph{Theoremlet v4.9.0-r06.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] A photon needs the time \(d\) for the distance \(d\).  A tachyon of speed \(v>1\) covers the same distance in the
+time \(d/v\), and even read backward it takes back only \(d/v<d\).  One photon leg and one tachyon leg therefore never close
+a loop.  The remaining gap is \(d(1-1/v)\), which is \(0.451\,d\) for \(v=1/\bsym\).
+\item[(b)] Two tachyon legs emitted in frames moving relative to each other can close or overshoot a loop.  A return leg
+that is instantaneous in a frame of speed \(u\) arrives at the origin at \(d/v-ud\), before the start for \(u>1/v\).
+\item[(c)] For \(v=1/\bsym\) and \(u=\bsym\) the return arrives exactly at the start.  It runs back along the same
+spacelike line, because the outgoing leg is itself instantaneous in that frame.  This is one exchange read in two
+directions, case (a) of Theoremlet r02.1, and carries no information around a loop.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+Arithmetic on the worldlines; the return leg is the line of simultaneity \(t-t_B=u(x-x_B)\) through
+\(B=(d/v,d)\).  Checked numerically.  \(\square\)
+
+\paragraph{Correction of wording in r05.}
+The phrase ``a photon leg running backward in time'' in the reading of r05.3 is made precise by (a) and (b).  What fails
+is one null leg plus one tachyon leg.  Two tachyon legs do not fail.  The statement r05.3(c) itself stands.
+
+\subsection*{v4.9.0-r06 the hit chain at constant speed}
+\label{subsec:v490-r06-chain}
+
+\paragraph{Theoremlet v4.9.0-r06.2.}
+Let hits occur along a line at speed \(v>1\), each emitting an identical light signal.  The energy of each signal comes
+from the field at the hit, so nothing is carried faster than light.
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] The signals superpose to a cone, the envelope of their Huygens wavelets, with \(\cos\vartheta=1/v\).  For
+\(v=1/\bsym\) this gives \(\cos\vartheta=\bsym\), \(\vartheta=56.68^\circ\).
+\item[(b)] The hits are spacelike separated.  Observers slower than \(1/v\) see them run in the direction of the
+tachyon, observers faster than \(1/v\) see them run the other way, and the observer of speed exactly \(u=1/v\) sees all hits
+at once.  For \(v=1/\bsym\) that observer moves at \(\bsym\), the matter-frame offset.
+\item[(c)] The superluminal rapidity of r20.2 is \(\operatorname{artanh}v=\eta+i\pi/2\).  The boost to the observer of (b)
+removes \(\eta\) and leaves \(i\pi/2\), the duality quarter turn of r07.2.  In that frame the tachyon is no longer a moving
+object but a phase.  The plane wave emitted there perpendicular to the line appears in the original frame at
+\(\cos\vartheta'=\bsym\), which is the cone of (a).
+\item[(d)] With imaginary mass \(i\mu\), the tachyon at \(v=1/\bsym\) has energy \(\mu\sinh\eta\) and momentum
+\(\mu\cosh\eta=1.197\,\mu\), the neighbour cross term of r18.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a) Minimal arrival time over emission points; checked by a discrete Huygens sum.  (b)
+\(\Delta t'=\gamma(\Delta t-u\Delta x)\) with \(\Delta t=\Delta x/v\).  (c) \(\tanh(x+i\pi/2)=\coth x\) and the aberration
+formula with \(\vartheta=90^\circ\).  (d) \(E=\mu/\sqrt{v^2-1}\), \(p=\mu v/\sqrt{v^2-1}\).  \(\square\)
+
+\paragraph{Reading.}
+``The tachyon was already on its way before the experiment started'' is the frame dependence of (b).  There is an
+observer for whom the whole path exists at one instant.  For \(v=1/\bsym\) this observer is the matter frame.  A
+superluminal chain of locally triggered emissions is the situation of a light spot sweeping faster than light across a
+screen.  It is permitted because each point emits by itself.
+
+\subsection*{v4.9.0-r06 acceleration and infinite speed}
+\label{subsec:v490-r06-acceleration}
+
+\paragraph{Theoremlet v4.9.0-r06.3.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \emph{Constant proper acceleration.}  The tachyonic counterpart of hyperbolic motion is
+\(t=R\cosh\sigma\), \(x=R\sinh\sigma\), with proper acceleration \(1/R\) everywhere.  Its speed \(v=\coth\sigma\) and its
+coordinate acceleration \(dv/dt\) diverge at \(\sigma=0\), that is \(t=R\), \(x=0\).  The hit rate per unit time diverges
+there as well, so the hits near that point arrive at once as a flash.  Beyond \(\sigma=0\) the parameter runs backward in
+time.  By reinterpretation that part is a partner moving forward, and the point \((R,0)\) is a pair event.  A signal emitted
+along the backward part is read as absorbed.
+\item[(b)] \emph{Energy given to the hits.}  Write \(E=\mu\sinh\chi\), \(p=\mu\cosh\chi\), \(v=\coth\chi\).  If each hit
+takes the energy \(\varepsilon\) from the tachyon, \(E\) falls and \(v\) rises.  After \(E_0/\varepsilon\) hits \(E=0\),
+\(v=\infty\), \(p=\mu\).  Along the way the cone of r06.2 opens from \(56.68^\circ\) to \(90^\circ\), and the observer
+seeing simultaneous hits slows from \(\bsym\) to rest.
+\end{enumerate}
+In both cases the infinite acceleration is a coordinate effect at a single point.  There the tachyon passes through infinite
+speed, rapidity \(i\pi/2\) in the frame at hand.  The proper acceleration stays finite.
+
+\paragraph{Proof sketch.}
+(a) \(dx/dt=\coth\sigma\); \(dv/dt=-1/(R\sinh^3\sigma)\); the second derivative with respect to proper length has Minkowski
+norm \(1/R\).  (b) \(p^2-E^2=\mu^2\) and \(v=p/E\).  Checked numerically, (b) with six hits from \(v=1/\bsym\).  \(\square\)
+
+\paragraph{Reading.}
+A tachyon that pays for the photons of its hits accelerates by itself and ends at infinite speed after finitely many
+hits.  At that point the lab frame has become the frame of simultaneous hits, the cone has become a plane wave, and the
+tachyon is the pure phase of r06.2(c).  Continuing past this point turns emission into absorption in the lab description.
+This is the nearest the hit chain comes to the author's first picture of photons returning to the origin: a chain of
+emissions meets a chain of absorptions at the point of infinite speed.
+
+\subsection*{v4.9.0-r06 the Higgs field}
+\label{subsec:v490-r06-higgs}
+
+The main body assigns the Higgs sector the role of mediating between the compensated photon fix-sector and the mass
+readout of localised branches (Definition~\ref{def:higgs-mediation}, Theorem~\ref{thm:higgs-role-refined}).
+
+\paragraph{Theoremlet v4.9.0-r06.4.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] In the electroweak theory the Higgs field gives the neutral pair \((W^3,B)\) the mass matrix
+\(\tfrac{v_H^2}{4}\bigl(\begin{smallmatrix}g^2&-gg'\\-gg'&g'^2\end{smallmatrix}\bigr)\).  It has rank one: the photon is its massless
+eigenvector \((\sin\theta_W,\cos\theta_W)\), the \(Z\) the massive one.  This is a port-weighting matrix in the sense of
+r05.1, with weight \(0\) on the photon port and \(m_Z^2\) on the other.  For \(g=g'\) (\(\theta_W=45^\circ\)) it is exactly
+\(0\cdot C_{\HC}+m_Z^2A\), and the photon is the compensator port.  The measured mixing angle differs from \(45^\circ\), so the
+electroweak photon port is a compensator rotated by \(\theta_W-45^\circ\).
+\item[(b)] At \(\phi=0\) the Higgs potential has negative mass squared.  The field there is tachyonic in the
+field-theoretic sense, and mass arises when it condenses away from \(\phi=0\).
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a) The kernel of the matrix is spanned by \((g',g)\); for \(g=g'\) the matrix is \(\tfrac{v_H^2g^2}{2}A\).  (b) The
+potential \(-\mu_H^2|\phi|^2+\lambda|\phi|^4\) has curvature \(-\mu_H^2\) at the origin.  \(\square\)
+
+\paragraph{Reading.}
+The Higgs part of the author's picture fits the main body in three respects.
+\begin{itemize}[leftmargin=2em]
+\item The photon is the direction the Higgs field does not weight, which is Theorem~\ref{thm:higgs-role-refined} in
+electroweak form.
+\item A field ``trying to create matter'' is a field leaving its tachyonic top.
+\item A hit that yields a photon instead of a massive state lands in the unweighted port.
+\end{itemize}
+Three points need care.
+\begin{itemize}[leftmargin=2em]
+\item The doublet of r04 is \((E,B)\), the electroweak doublet is \((W^3,B)\).  The correspondence is formal.
+\item A field with negative mass squared is an instability that grows; it is not a particle that carries signals faster
+than light.  A superluminal chain of hits therefore needs triggers correlated in advance, as for the sweeping light spot,
+and not a signal along the line.
+\item The condensed Higgs vacuum is the minimum of its potential and supplies no energy.  The energy of the photons comes
+either from the tachyon, case r06.3(b), or from the field while it is still rolling off its tachyonic top, that is during
+symmetry breaking.
+\end{itemize}
+Comparing \(\theta_W\) or any other measured quantity with the values of this layer is a prediction and requires a
+pre-registration note.
+
+\subsection*{v4.9.0-r06 register entries}
+\label{subsec:v490-r06-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r06\\
+\midrule
+r05.3(c), return photon & stands; one photon plus one tachyon leg leaves the gap \(d(1-1/v)\); two tachyon legs can close a loop (r06.1)\\
+hit chain at speed \(1/\bsym\) & cone \(56.68^\circ\); all hits simultaneous for the observer at \(\bsym\), where the tachyon is the phase \(i\pi/2\) (r06.2)\\
+accelerating tachyon & infinite speed at one point after finite time or finitely many hits; there a pair event, emission turns into absorption (r06.3)\\
+Higgs mediation (Def.~\ref{def:higgs-mediation}) & electroweak mass matrix is a port weighting with massless photon port; compensator port for \(\theta_W=45^\circ\); formal correspondence (r06.4)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r06 ledger and guard update}
+\label{subsec:v490-r06-ledger-guard}
+
+\[
+R_{\rm chain}^{v490\text{-}r06}=(0,0,1)
+\]
+for (loop condition decided, hit chain and acceleration worked out, physical status of the trigger and of the Higgs
+correspondence open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r06,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r06}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r07 Source-Only: The Cone Angle and the Weak Mixing Angle}
+\addcontentsline{toc}{section}{v4.9.0-r07 Source-Only: The Cone Angle and the Weak Mixing Angle}
+\label{sec:v490-r07-cone-weak-mixing}
+% ============================================================================
+
+\paragraph{Purpose.}
+This layer records three things.  First, the pre-registered test H14 of the relation between the cone angle of r06.2 and
+the weak mixing angle, with its result.  Second, an exploration that followed it, kept as a protocol in which every
+variant is counted.  Third, the structural reading that came out of the exploration, and the pre-registered hypothesis
+H15 it led to.  Files, all under \texttt{llm/}:
+\begin{itemize}[leftmargin=2em]
+\item \texttt{Vorab\_Notiz\_H14\_Kegelwinkel\_Weinberg.md};
+\item \texttt{Ergebnis\_H14\_Kegelwinkel\_Weinberg.md};
+\item \texttt{Erkundungsprotokoll\_Weinberg\_Kegel.md};
+\item \texttt{Vorab\_Notiz\_H15\_W\_Masse\_gamma\_L.md};
+\item \texttt{Ergebnis\_H15\_W\_Masse\_gamma\_L.md};
+\item scripts \texttt{k43\_test\_h14.py} to \texttt{k46\_test\_h15.py}.
+\end{itemize}
+Data: Particle Data Group, Review of Particle Physics
+2024 with the 2025 update (summary tables and the review of the electroweak model), retrieved 2026-10-21.  Earlier layers
+are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r07 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r07 test H14}
+\label{subsec:v490-r07-h14}
+
+H14 states \(\vartheta_c=2\theta_W\), equivalently \(\sin^2\theta_W=(1-\bsym)/2\).  It was formulated after the closeness
+\(56.7^\circ\) against \(2\theta_W\approx57.5^\circ\) had been noticed.  The note says so, fixes the on-shell definition
+\(\sin^2\theta_W=1-m_W^2/m_Z^2\) as decisive, and states the expected outcome in advance.
+
+\paragraph{Result.}
+The prediction is \(0.22533\).  The on-shell value from the masses is \(0.22321\pm0.00026\), so \(z=+8.2\).  As an exact
+relation H14 is \textbf{refuted}.  The prediction lies inside the band spanned by the on-shell and the
+\(\overline{\rm MS}\) value (\(0.23122\)), so as a tree-level relation it is \textbf{not decidable}.  A random simple
+relation would land in that band with probability of about \(0.02\), so no outcome counts as support.
+
+\subsection*{v4.9.0-r07 exploration, counted}
+\label{subsec:v490-r07-exploration}
+
+The exploration asked whether a physical effect can close the gap of \(+0.00212\) in \(\sin^2\theta_W\).  The gap is
+equivalent to removing a contribution \(\Delta\rho_X=+0.00275\) present in nature, or to an \(m_W\) smaller by
+\(110\) MeV.  The variants tried, each counted, were:
+\begin{itemize}[leftmargin=2em]
+\item the tribonacci value in place of \(\bsym\), which moves the prediction the wrong way;
+\item removal of the top-quark contribution, which overshoots to \(0.2304\);
+\item the tree-level angle from \((\alpha,G_F,m_Z)\), giving \(0.212\) or \(0.234\) depending on \(\alpha\);
+\item a fraction of the top contribution, with no meaning;
+\item neutrinos, eleven orders of magnitude too small;
+\item every combination of omitted contributions, of which only two are large (top \(0.00934\), remainder \(0.00108\))
+and none hits;
+\item mixing with a dark state.
+\end{itemize}
+The last variant gives a general bound.  Any real contribution of the required size would shift \(m_W\) by \(155\) MeV
+against the Standard-Model prediction.  The measured value differs from that prediction by \(+10\pm14\) MeV.  Real effects
+of particles, known or dark, can therefore account for at most about a quarter of the gap.
+
+\subsection*{v4.9.0-r07 the structural reading}
+\label{subsec:v490-r07-structure}
+
+\paragraph{Theoremlet v4.9.0-r07.1.}
+With \(\Pi(x)=2\arctan e^{-x}\), Lobachevsky's angle of parallelism, the following are equivalent:
+\[
+\cos2\theta=\tanh\eta,\qquad \tan\theta=e^{-\eta},\qquad \sin^2\theta=\frac1{1+e^{2\eta}},\qquad 2\theta=\Pi(\eta).
+\]
+The cone angle of r06.2 is \(\vartheta_c=\Pi(\eta)\).  For the port weighting \(e^{t\sigma_x}=e^tC_{\HC}+e^{-t}A\) of
+r05.1(d) at \(t=\eta\), the ratio of the weights is \(e^{2\eta}=\cot^2\theta\).
+
+\paragraph{Proof sketch.}
+\(\cos2\theta=(1-\tan^2\theta)/(1+\tan^2\theta)\) with \(\tan^2\theta=e^{-2\eta}\) gives \(\tanh\eta\);
+\(\cos\Pi(x)=\tanh x\).  Checked numerically.  \(\square\)
+
+\paragraph{Consequence.}
+H14 is a statement about a ratio of couplings, \(g/g'=e^{\eta}\), the Doppler factor of way (C) in r01.  It is not a
+statement about a ratio of masses.  Couplings run.  In the \(\overline{\rm MS}\) scheme \(\sin^2\theta_W\) has its minimum,
+about \(0.231\), at \(\mu=M_W\), and rises above and below.  No scale reaches \(0.22533\).  The structural reading thus
+points to the scheme in which the gap is larger, and it does not support the closeness to the on-shell value.
+
+\subsection*{v4.9.0-r07 an observation, and hypothesis H15}
+\label{subsec:v490-r07-h15}
+
+\paragraph{Observation (found during the exploration).}
+The on-shell coupling ratio is \(\cot\theta_W=m_W/\sqrt{m_Z^2-m_W^2}=1.86550\pm0.00140\).  The three constants of the
+source in this range sit at the following distances: \(\gL=\cosh2\eta=1.86444\) at \(z=-0.8\), \(e^{\eta}=1.85419\) at
+\(z=-8.1\), \(1/\bsym=1.82034\) at \(z=-32\).  By Theoremlet r01.3, \(\gL\) (way A) and \(e^\eta\) (way C) coincide at the
+tribonacci point and differ by \(0.55\%\) otherwise.  The data sit at way (A).  The cone relation used way (C).
+
+\paragraph{Why this is not evidence.}
+The relation was found after the fact.  The three constants \(1.820\), \(1.854\), \(1.864\) lie in the range that
+\(\cot\theta_W\) covers across schemes, \(1.823\) to \(1.866\), so some pairing is nearly expected.  The chance of a
+\(1\sigma\) hit of one of the three at the on-shell value is about \(0.17\).  Reading~B contains no
+\(SU(2)\times U(1)\), so the identification of the weight ratio with \((g/g')^2\) is formal.
+
+\paragraph{Hypothesis H15 (pre-registered).}
+\(\cot\theta_W=\gL\) in the on-shell definition, that is \(m_W=m_Z\gL/\sqrt{1+\gL^2}\).  Here \(\gBI\) is the root of the
+state-counting equation \(\sum_{j}2\exp(-2\pi\gamma\sqrt{j(j+1)})=1\) that r03 cites, and \(\gstring=\ln2/(\pi\sqrt3)\).
+Computed immediately after the note was committed and before any comparison:
+\[
+\gBI=0.237532957966,\qquad \gL=1.8646997646,\qquad m_W^{\rm pred}=80.3615\pm0.0018\ \text{GeV}.
+\]
+The comparison is with the first world average or combination of \(m_W\) published after 2026-10-21.  Known values do not
+count.  The prediction lies within a few MeV of the Standard-Model prediction (\(80.359\pm0.006\) GeV).  A comparison can
+therefore refute H15, but it can support H15 over the Standard Model only once the measurement excludes the
+Standard-Model value at \(3\sigma\), which needs a precision below about \(1\) MeV.  The result is pending.
+
+\subsection*{v4.9.0-r07 register entries}
+\label{subsec:v490-r07-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r07\\
+\midrule
+H14, \(\vartheta_c=2\theta_W\) & refuted as exact relation (\(z=+8.2\)); not decidable at tree level; no support\\
+cone angle & \(\vartheta_c=\Pi(\eta)\), the angle of parallelism (r07.1); not measured\\
+gap of H14 by real particle effects & bounded by \(m_W\) to at most about a quarter (exploration, 8 counted variants)\\
+H15, \(\cot\theta_W=\gL\) & pre-registered; prediction \(m_W=80.3615\pm0.0018\) GeV; comparison pending\\
+r01 ways (A)/(C) & the on-shell coupling ratio lies at way (A) (observation, not a test)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r07 ledger and guard update}
+\label{subsec:v490-r07-ledger-guard}
+
+\[
+R_{\rm ew}^{v490\text{-}r07}=(0,0,1)
+\]
+for (H14 decided, structural reading of the cone established, H15 pending).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r07,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r07}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r08 Source-Only: Frame Drift, Atomic Clocks and the Hubble Tension}
+\addcontentsline{toc}{section}{v4.9.0-r08 Source-Only: Frame Drift, Atomic Clocks and the Hubble Tension}
+\label{sec:v490-r08-drift-clocks-hubble}
+% ============================================================================
+
+\paragraph{Purpose.}
+Proposition~\ref{prop:H0-tension} explains the Hubble tension by a drift of the frame offset.  r17 and r18 tested that
+drift against the expansion history.  This layer tests it against the constancy of the fine-structure constant, using
+the source's own rule for which quantities stay fixed.  It also checks the other explanations of the tension available
+in the source, settles the sign of \(k\) for \(\alpha\) left open in r03, names a frame-invariant clock, and states what
+the drift means for H15 of r07.  Files: \texttt{llm/Erkundungsprotokoll\_Weinberg\_Kegel.md} (entries E10 to E13) and
+scripts \texttt{llm/k47\_drift\_weinberg.py}, \texttt{llm/k48\_feste\_groessen.py}.  No new prediction is made.  Earlier
+layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r08 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r08 what stays fixed under drift}
+\label{subsec:v490-r08-fixed}
+
+The source fixes this in four places.
+\begin{itemize}[leftmargin=2em]
+\item The definition in \S\ref{sec:phase-constants}: \(X^{(\mathrm{photon})}=\gL^{-k(X)}X^{(\mathrm{matter})}\).
+\item Theorem~\ref{thm:k-values}: \(k(c)=0\), \(k(\gBI)=0\) (``frame-invariant by construction'').
+\item The corollary ``\(\alpha\)-drift as a frame effect'' in the same section: ``the hardware value
+\(\alpha^{(\mathrm{photon})}\) is strictly constant'', with \(\alpha^{(\mathrm{matter})}(t)=\gL^{(\mathrm{local})}(t)\,
+\alpha^{(\mathrm{photon})}\).
+\item Item (1) of Proposition~\ref{prop:saturation}, which writes the neutrino mass in the same way.
+\end{itemize}
+Photon-frame values and quantities with \(k=0\) stay fixed.  Matter-frame values drift with a local factor
+\(\gL^{(\mathrm{local})}(t)^{k}\).  The structural factor \(\gL=\gBI/\gstring\) is fixed, since both inputs are fixed
+numbers.  The source thus separates a fixed structural factor from a local one that may drift.  This is the separation
+r18 offered.
+
+\subsection*{v4.9.0-r08 the sign of \texorpdfstring{$k$}{k} for \texorpdfstring{$\alpha$}{alpha}}
+\label{subsec:v490-r08-alpha-sign}
+
+r03 (F2) found that Theorem~\ref{thm:k-values}, whose row reads ``\(\alpha^{-1}\ldots k=1\)'', and the corollary above are
+inverse to each other, and left the choice open.  The main body uses \(k\) for \(\alpha\) in three places:
+\begin{itemize}[leftmargin=2em]
+\item prediction P5 among the predictions around Corollary~\ref{cor:falsifiable}, with
+\(\gL^{k(\alpha)-k(G_N)}=\gL^{-1}\);
+\item Proposition~\ref{prop:muon-g2}, ``\(k(\alpha_s)=1\) (like the electromagnetic coupling \(\alpha\))'' with
+\(\alpha_s^{(\mathrm{photon})}=\gL^{-1}\alpha_s^{(\mathrm{matter})}\);
+\item the corollary, \(\alpha^{(\mathrm{matter})}=\gL\,\alpha^{(\mathrm{photon})}\).
+\end{itemize}
+All three mean \(k(\alpha)=+1\) for \(\alpha\) itself.  No photon-frame value of \(\alpha^{-1}\) is used anywhere in the main
+body.
+
+\paragraph{Resolution (reading decision).}
+The table row shows the CODATA value of \(\alpha^{-1}\), and its entry \(k=1\) belongs to \(\alpha\).  With this reading all
+three uses agree and nothing else changes.  The resolution changes no number of the main body.
+
+\subsection*{v4.9.0-r08 the drift against atomic clocks}
+\label{subsec:v490-r08-clocks}
+
+\paragraph{Theoremlet v4.9.0-r08.1.}
+Suppose the drift of Proposition~\ref{prop:H0-tension}, \(1.6\times10^{-12}\) per year in \(\bsym\), acts through the local
+frame factor, as r18 reads it.  Then the corollary gives \(|{\rm d}\ln\alpha/{\rm d}t|\) for each choice of the factor:
+
+\begin{center}
+\small
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+factor & exponent needed for \(1.083\) & \(|{\rm d}\ln\alpha/{\rm d}t|\) per year & \(|\Delta\alpha/\alpha|\) since \(z=1100\)\\
+\midrule
+\(\gL=\cosh2\eta\) & \(1.52\) & \(3.9\times10^{-12}\) & \(5.4\%\)\\
+neighbour, \(\cosh\eta\) & \(4.72\) & \(1.3\times10^{-12}\) & \(1.7\%\)\\
+neighbour, \(e^{\eta}\) & \(2.54\) & \(2.3\times10^{-12}\) & \(3.2\%\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The comparison of two \({}^{171}\mathrm{Yb}^+\) clocks gives \((1/\alpha)\,{\rm d}\alpha/{\rm d}t=(1.0\pm1.1)\times10^{-18}\)
+per year (Lange et al., Phys.\ Rev.\ Lett.\ 126, 011102, 2021).  Every choice lies about six orders of magnitude above
+that bound.
+
+Independently of the reading: if a drifting factor with exponent \(k(H_0)\) produces the tension \(\ln1.083\), then
+\(\alpha\) changes by \(\ln1.083\cdot k(\alpha)/k(H_0)\).  For a drift linear in time, the clocks require
+\(k(\alpha)/k(H_0)<5.5\times10^{-7}\) at \(2\sigma\).
+
+\paragraph{Proof sketch.}
+\({\rm d}\ln\gL/{\rm d}t=4\bsym(1-\bsym^2)^{-2}\dot\bsym/\gL\), and correspondingly for the neighbour factors.  The
+exponents follow from the ratios of the factors at \(z=0\) and \(z=1100\).  Checked numerically.  \(\square\)
+
+\paragraph{Why measuring through photons does not help.}
+A clock comparison measures the ratio of two transition frequencies of atoms.  A common frame factor on both frequencies
+cancels.  The dependence on \(\alpha\) comes from inside the atom, which is matter.  If the atom's internal physics were
+photon-frame physics, there would be no drifting \(\alpha^{(\mathrm{matter})}\) at all.  The corollary's annual-drift
+prediction would then lapse too, and Proposition~\ref{prop:H0-tension} would lose its mechanism.
+
+\paragraph{Consequence.}
+In its frame-factor form, Proposition~\ref{prop:H0-tension} cannot explain the tension and keep \(\alpha\) constant at the
+same time.  Two ways out would remain, and the source contains neither.  One is \(k(\alpha)\approx0\), which contradicts the
+resolution above and the corollary.  The other is a separate factor for the expansion that does not touch the
+constants.  r03 already bounded the annual modulation of the local factor by \(10^{-17}\).  The present layer applies the
+same clocks to the secular drift.
+
+\subsection*{v4.9.0-r08 other explanations in the source}
+\label{subsec:v490-r08-other}
+
+\begin{enumerate}[leftmargin=2em]
+\item \emph{Static frame typing.}  The value inferred from the microwave background would be read in another frame than
+the local value.  A constant factor disturbs no clock.  By Corollary~\ref{cor:gue-frame} a clock frequency transforms with
+\(\gL\), so \(k(H_0)=1\), which gives a factor \(1.864\) (neighbour factors \(1.197\), \(1.854\)) against the observed
+\(1.083\pm0.017\).  Only fractional exponents near \(0.13\) or \(0.44\) would fit, and Theorem~\ref{thm:k-values} gives no
+basis for them.  The observed ratio is too loose to single out an exponent.
+\item \emph{A change confined to the early universe.}  A larger electron mass at recombination, by about one to two
+percent, is discussed in the literature as a relief of the tension.  With the drift of
+Proposition~\ref{prop:H0-tension}, \(\bsym\) was smaller earlier, so \(m_e^{(\mathrm{matter})}\) with \(k=1\) was smaller.
+That is the wrong direction, and the same holds for \(\alpha\) with \(k(\alpha)=+1\).  The opposite sign of the drift, the one
+r17 found Theorem~\ref{thm:dark-energy} to require, would point the right way.  The change would then have to stop before
+\(z\approx3\), because of quasar spectra and clocks, and at \(5\%\) it would be too large.
+\end{enumerate}
+No explanation of the tension within the source survives the clocks, the quasar spectra and the size of the effect
+together.  Proposition~\ref{prop:H0-tension} stays a hypothesis without a working mechanism.
+
+\subsection*{v4.9.0-r08 a frame-invariant clock}
+\label{subsec:v490-r08-compton}
+
+\paragraph{Theoremlet v4.9.0-r08.2.}
+By Theorem~\ref{thm:k-values} the Compton frequency \(m_ec^2/\hbar\) has \(k=k(m_ec^2)-k(\hbar)=1-1=0\).  A clock ticking
+at a Compton frequency is frame-invariant in the source's sense.  An atomic transition frequency scales as
+\(\alpha^2m_ec^2/\hbar\) and has \(k=2k(\alpha)=2\).  The ratio of the two clocks reads \(\gL^{(\mathrm{local})}(t)^{\pm2}\)
+directly, a local test of the frame factor that needs no cosmology.
+
+\paragraph{Proof sketch.}
+Additivity of \(k\) (Lemma v4.8.0-r03.1).  \(\square\)
+
+\paragraph{Remark.}
+Clocks tied to the Compton frequency of a mass have been built by atom interferometry (Lan et al., Science 339, 554, 2013).
+A comparison of such a clock with an atomic clock would read the drift of r08.1 at twice the rate.  Existing clock
+comparisons already exclude that drift.  The clock concerns local readout only.  It touches neither the local selector
+guard nor the forbidden global photon-clock statement.
+
+\subsection*{v4.9.0-r08 consequence for H15}
+\label{subsec:v490-r08-h15}
+
+H15 (r07) is stated with the structural factor \(\gL=\gBI/\gstring\), which is fixed.  It predicts a weak mixing angle that
+is constant in time.  In addition, \(m_W/m_Z\) is a ratio of masses, and if both carry the same \(k\) the frame factor
+cancels.  A drift of \(\theta_W\), with \(\sin^2\theta_W=0.242\) at \(z=1100\), would follow only if H15 were read with the
+local factor, which the source's rules do not suggest.  The pre-registered comparison of H15 is unaffected.
+
+\subsection*{v4.9.0-r08 register entries}
+\label{subsec:v490-r08-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r08\\
+\midrule
+Prop.~\ref{prop:H0-tension} & frame-factor drift incompatible with atomic clocks by about six orders of magnitude in every reading (r08.1); static typing and early-only change do not work; hypothesis without working mechanism\\
+Thm.~\ref{thm:k-values}, row \(\alpha^{-1}\) & resolved: \(k=1\) belongs to \(\alpha\); consistent with P5, Prop.~\ref{prop:muon-g2} and the corollary (closes r03 F2)\\
+fixed quantities under drift & photon-frame values and \(k=0\); structural \(\gL=\gBI/\gstring\) fixed; local factor may drift\\
+Compton clock & \(k=0\), frame-invariant; ratio to an atomic clock reads \(\gL^{(\mathrm{local})}{}^{\pm2}\) (r08.2)\\
+H15 & predicts a constant \(\theta_W\); comparison unaffected\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r08 ledger and guard update}
+\label{subsec:v490-r08-ledger-guard}
+
+\[
+R_{\rm drift}^{v490\text{-}r08}=(0,0,1)
+\]
+for (drift against clocks decided, sign of \(k(\alpha)\) resolved, a mechanism for the Hubble tension open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r08,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r08}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r09 Source-Only: What the Local Frame Factor Can Be}
+\addcontentsline{toc}{section}{v4.9.0-r09 Source-Only: What the Local Frame Factor Can Be}
+\label{sec:v490-r09-local-frame-factor}
+% ============================================================================
+
+\paragraph{Purpose.}
+r08 separated a fixed structural factor \(\gL=\gBI/\gstring\) from a local factor \(\gL^{(\mathrm{local})}\) that may vary.
+This layer collects what the source says the local factor depends on.  It records two contradictions found on the way,
+tests three readings of the local factor against clock data, and corrects the arithmetic of prediction P5.  Files:
+\texttt{llm/Erkundungsprotokoll\_Weinberg\_Kegel.md} (entries E14, E15) and the script
+\texttt{llm/k49\_lokaler\_faktor.py}.  No new prediction is made.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r09 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r09 what the source says}
+\label{subsec:v490-r09-source}
+
+The source names four influences on the local factor.  For none of them does it give a derived relation, and it gives
+no field law for \(\gL^{(\mathrm{local})}(x,t)\).
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.17\textwidth}>{\raggedright\arraybackslash}p{0.33\textwidth}>{\raggedright\arraybackslash}p{0.42\textwidth}@{}}
+\toprule
+influence & place & content\\
+\midrule
+observer & Theorem~\ref{thm:frame-offset} & every matter observer carries \(\zminus\neq0\); measured constants are frame-invariant values times a Lorentz factor of the observer\\
+cosmic time & Proposition~\ref{prop:H0-tension} & \(\bsym\) grows ``as matter structures in the universe grew''\\
+Earth's orbit & corollary ``\(\alpha\)-drift as a frame effect'' & the factor varies ``as Earth moves through the Sphaera-Cascade geometry over its orbit'', with a period of one year, absent for a clock that does not co-orbit\\
+potential & prediction P5 near Corollary~\ref{cor:falsifiable} & amplitude of the \(\alpha\) modulation \(\sim10^{-10}\,\delta\Phi/c^2\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Two contradictions.}
+\begin{enumerate}[leftmargin=2em]
+\item Theorem~\ref{thm:frame-offset} calls \(\gBI\) ``the Lorentz-transformed \(\gstring\), observed from a matter frame''.
+In that theorem \(\gBI\) depends on the observer.  Theorem~\ref{thm:k-values} sets \(k(\gBI)=0\), ``frame-invariant by
+construction''.
+\item Theorem~\ref{thm:frame-offset} projects all constants, including \(c\), with one Lorentz factor, which means
+\(k=1\) for all.  Theorem~\ref{thm:k-values} gives \(k(c)=0\) and \(k(G_N)=2\).
+\end{enumerate}
+Both are resolved if Theorem~\ref{thm:frame-offset} is read as a statement about the structural factor alone.  That is the
+separation of r18 and r08.  What the local factor consists of then remains open.
+
+\subsection*{v4.9.0-r09 three readings tested}
+\label{subsec:v490-r09-readings}
+
+With the rule \(\delta\ln X=k(X)\,\delta\ln\gL^{(\mathrm{local})}\), three readings were tested.
+
+\paragraph{Theoremlet v4.9.0-r09.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(V)] \emph{Velocity against a preferred frame.}  If the observer's rapidity adds to \(\eta\), Earth's orbital motion
+projected on the dipole of the microwave background gives \(\delta\eta\approx9.8\times10^{-5}\).  That yields
+\(\delta\ln\gL=2\tanh2\eta\,\delta\eta\approx1.6\times10^{-4}\), and with \(k(\alpha)=1\) an annual \(\alpha\) modulation of the
+same size.  The clock fit quoted in r03 (F2) allows about \(2\times10^{-17}\).  The reading is \textbf{excluded}, by a factor
+of about \(10^{13}\).  The static part, \(370\) km/s against the background, would make \(\alpha\) depend on direction at the
+level of \(2\times10^{-3}\).
+\item[(P)] \emph{Gravitational potential.}  \(\delta\ln\gL^{(\mathrm{local})}=\kappa\,\delta\Phi/c^2\).  The source's own
+coefficient \(\kappa\sim10^{-10}\) and the eccentricity of Earth's orbit (\(\delta\Phi/c^2\approx1.6\times10^{-10}\)) give an
+annual \(\delta\alpha/\alpha\approx1.6\times10^{-20}\), inside the bounds.  The reading \textbf{survives}.  It cannot drive the
+cosmological drift of Proposition~\ref{prop:H0-tension}: potentials of large-scale structure, \(\sim10^{-5}\), give
+\(\delta\ln\gL\sim10^{-15}\), against about \(5\times10^{-2}\) needed.
+\item[(D)] \emph{Matter density.}  The source gives no functional form.  Density differs between laboratory, space and
+astrophysical environments by many orders of magnitude, so any appreciable coupling would have to be screened.  The
+reading is \textbf{not testable} as stated.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(V) \({\rm d}\ln\cosh2\eta/{\rm d}\eta=2\tanh2\eta\), with \(29.8\cos11^\circ\) km/s against \(c\).  (P) \(GM_\odot/(c^2a)=9.87\times
+10^{-9}\) times the eccentricity \(0.0167\).  Checked numerically.  \(\square\)
+
+\paragraph{Consequence.}
+Of the three readings only the potential reading is compatible with the clocks.  It is also the one the source itself
+states in P5.  It describes a small violation of local position invariance and cannot explain the Hubble tension.
+Within it, every constant couples to the potential with \(\beta_X=k(X)\,\kappa\):
+\begin{itemize}[leftmargin=2em]
+\item the Compton clock of r08.2, with \(k=0\), does not couple;
+\item \(\alpha\) couples with \(\kappa\);
+\item an atomic clock and \(G_N\), with \(k=2\), couple with \(2\kappa\).
+\end{itemize}
+The ratio of the couplings, not their size, is the content of the source.  The size \(\kappa\) is not derived.
+
+\subsection*{v4.9.0-r09 the arithmetic of P5}
+\label{subsec:v490-r09-p5}
+
+P5 states
+\(\frac{\delta\alpha/\alpha}{\delta G_N/G_N}\big|_{\rm annual}=\gL^{k(\alpha)-k(G_N)}\cdot\frac{k(\alpha)}{k(G_N)}=\gL^{-1}\approx
+0.537\).
+
+\paragraph{Theoremlet v4.9.0-r09.2.}
+From \(X^{(\mathrm{matter})}=\gL^{k}X^{(\mathrm{photon})}\) with fixed photon-frame values follows
+\(\delta X/X=k(X)\,\delta\gL/\gL\).  Hence
+\[
+\frac{\delta\alpha/\alpha}{\delta G_N/G_N}=\frac{k(\alpha)}{k(G_N)}=\frac12 .
+\]
+The static factor \(\gL^{k(\alpha)-k(G_N)}\) does not belong in a ratio of relative changes.  The middle expression of P5
+equals \(\gL^{-1}/2=0.268\), not \(\gL^{-1}\).  The corrected value \(0.5\) is the same in every reading of the local factor.
+
+\paragraph{Proof sketch.}
+Logarithmic differentiation.  \(\square\)
+
+\subsection*{v4.9.0-r09 register entries}
+\label{subsec:v490-r09-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r09\\
+\midrule
+local factor \(\gL^{(\mathrm{local})}\) & four influences named (observer, time, orbit, potential), no field law; only the potential reading survives the clocks (r09.1)\\
+Thm.~\ref{thm:frame-offset} vs Thm.~\ref{thm:k-values} & two contradictions (\(\gBI\) observer-dependent vs \(k=0\); one factor for all vs \(k(c)=0\), \(k(G_N)=2\)); resolved by reading Thm.~\ref{thm:frame-offset} as structural\\
+P5, annual ratio & corrected to \(k(\alpha)/k(G_N)=1/2\); the stated \(\gL^{-1}=0.537\) is wrong twice (r09.2)\\
+potential coupling & \(\beta_X=k(X)\kappa\); Compton clock uncoupled; \(\kappa\sim10^{-10}\) not derived, below present bounds\\
+Prop.~\ref{prop:H0-tension} & the surviving reading gives \(10^{-15}\) instead of \(5\times10^{-2}\); unchanged: hypothesis without working mechanism\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r09 ledger and guard update}
+\label{subsec:v490-r09-ledger-guard}
+
+\[
+R_{\rm loc}^{v490\text{-}r09}=(0,0,1)
+\]
+for (influences and contradictions recorded, readings of the local factor decided against clocks, size of \(\kappa\) open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r09,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r09}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r10 Source-Only: A Reading of the C5 Factor 3/4 and a Class of Shape-(iii) Witnesses}
+\addcontentsline{toc}{section}{v4.9.0-r10 Source-Only: A Reading of the C5 Factor 3/4 and a Class of Shape-(iii) Witnesses}
+\label{sec:v490-r10-c5-factor-shape-three}
+% ============================================================================
+
+\paragraph{Purpose.}
+r94 found that the C5 contraction factor \(3/4\) is declared, not derived, and that a single projection explains at most
+one step.  r88 left shape (iii), a witness outside the collar iteration, as the only open route to a finite C5 discharge.
+This layer offers a reading of the factor built from objects the source already has, and uses the same reading to
+exclude a class of shape-(iii) witnesses.  The reading is an interpretation, admitted as such by the author
+(2026-10-22), and is not a derivation.  Files: \texttt{llm/Erkundungsprotokoll\_Kern.md} and the scripts
+\texttt{llm/k50\_c5\_faktor.py}, \texttt{llm/k51\_c5\_form\_iii.py}.  Earlier layers are not rewritten.
+This layer does not assert or approach an exact finite C5 zero closure.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r10 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r10 rotate, then compensate}
+\label{subsec:v490-r10-rotate-compensate}
+
+On the doublet of r04, with \(C_{\HC}=\tfrac12(1+\sigma_x)\), \(A=\tfrac12(1-\sigma_x)\) and the duality rotation
+\(R_\alpha\), write \(u\) for the unit vector spanning \(\operatorname{ran}C_{\HC}\).
+
+\paragraph{Theoremlet v4.9.0-r10.1.}
+\(C_{\HC}R_\alpha C_{\HC}=\cos\alpha\,C_{\HC}\).  One step ``rotate by \(\alpha\), then compensate'' keeps the fraction
+\(\cos^2\alpha\) of the energy in the compensator port and sends \(\sin^2\alpha\) to the partner port.  Because the rotation
+lies between the projections, the step is not idempotent: every repetition removes the same fraction again.  For
+\(\alpha=\pi/6\):
+\[
+\cos^2\tfrac\pi6=\tfrac34,\qquad
+\bigl(\tfrac34\bigr)^n:\ \tfrac34,\ \tfrac9{16},\ \tfrac{27}{64},\ \tfrac{81}{256},\ \ldots,
+\]
+which are the ledger values of r04, r05, r07 and r08.  The first stage with \((3/4)^n\le1/256\) is \(n=20\).
+
+\paragraph{Proof sketch.}
+\(\langle u,R_\alpha u\rangle=\cos\alpha\) in two dimensions.  The stage was checked in exact rational arithmetic.
+\(\square\)
+
+\paragraph{Reading.}
+The step meets the condition r94 set for any derivation: a refreshed one-quarter identity at every stage.  Two sources for
+\(\pi/6\) are available in the source.
+\begin{itemize}[leftmargin=2em]
+\item \emph{Triolic.}  The quarter turn from matter to tachyon (\(\pi/2\), Theoremlet r07.2) is divided into three equal
+steps.  Then \(27/64\), the r07 probe entry, is one complete passage from matter to tachyon.  This reading needs no value of
+\(\bsym\).
+\item \emph{Hopf.}  \(\tan\alpha=1/\sqrt3\), the Hopf value of \(\bsym\) in Theorem~\ref{thm:dark-energy}, so
+\(q=1/(1+\bsym^2)=3/4\).  With the measured \(\bsym=0.5493\) the same formula gives \(q=0.7682\) and stage \(22\), outside the
+interval of Theoremlet r94.2.  This reading holds only at the Hopf value.
+\end{itemize}
+
+\paragraph{A Zeno pattern.}
+A single quarter turn followed by compensation empties the compensator port, \(C_{\HC}R_{\pi/2}u=0\).  Three compensated
+steps of \(\pi/6\) leave \(27/64\), six leave \(0.66\), three hundred leave \(0.99\).  The more often the content is
+compensated, the less of it leaves.  This is the pattern of the quantum Zeno effect.
+
+\paragraph{Observations, not interpretations.}
+\begin{enumerate}[leftmargin=2em]
+\item The relay couplings of the r14 chart family take the values \(0,\tfrac14,\tfrac12,\tfrac34,1\).  These are
+\(\sin^2\) of \(0,\pi/6,\pi/4,\pi/3,\pi/2\).  A uniform grid of quarters has this property anyway, so it carries little
+weight.
+\item Chart \(V3\), whose relay coupling \(\kappa=1/4\) produces the five in \(\Delta_\gamma<1/5\) (r92), and the clock seed,
+\((N,\kappa,G)=(5,\tfrac34,1)\), have couplings that are the two port fractions of one \(\pi/6\) step.  In \(V3\),
+\(\kappa(N-1)=1\) doubles the overlap flux, \(S=2N=10\), and gives \(G^{\rm req}/G^{\rm avail}=4/5\).
+\item The tolerated collar row of r05 has ratio \(5/6=1/(1+\tfrac15)\), the form of the Hopf reading with \(1/5\) in place of
+\(1/3\).
+\end{enumerate}
+None of these is used below.
+
+\subsection*{v4.9.0-r10 a class of shape-(iii) witnesses}
+\label{subsec:v490-r10-shape-three}
+
+r88 requires of a shape-(iii) witness that it exhibit the vanishing of the obstruction itself, not of the score
+\((\alpha)\), and that it not import the all-readout slot \((\delta)\).  Under the reading above, the C5 content is the field
+content of the doublet, and the score is its energy in the compensator port.  The transports available in Reading~B are
+spatial rotations, duality rotations and boosts.
+
+\paragraph{Theoremlet v4.9.0-r10.2 (conditional on the reading).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \emph{Isometric witnesses} (spatial and duality rotations) conserve
+\(\|FC_{\HC}\|^2+\|FA\|^2=\|F\|^2\).  A witness of this kind that empties the compensator port puts the whole content into the
+partner port.  It satisfies \((\alpha)\) only by importing the partner readout, which is \((\delta)\).
+\item[(b)] \emph{Boosts} change the total \(E^2+B^2\), but \(E^2+B^2\ge|s|\) for every boost, with equality in the frame
+where \(E\parallel B\).  For a non-null field the content therefore has a positive floor that no boost removes.
+\item[(c)] For a null field the total falls like \(e^{-2\eta}\) under a boost along the propagation, and reaches zero only in
+the limit \(\eta\to\infty\), never at a finite stage.
+\end{enumerate}
+Hence no witness built from the transports of Reading~B meets \((\alpha)\) and \((\delta)\) at a finite stage.  The obstruction
+behaves like the invariant \(s\), which no group action of Reading~B changes (Theoremlet r19.1).
+
+\paragraph{Proof sketch.}
+(a) \(C_{\HC}+A=1\), \(C_{\HC}A=0\), both symmetric.  (b) \(u^2-|E\times B|^2=\tfrac14|s|^2\) (r03.3) gives \(2u\ge|s|\); checked
+over \(16200\) boosts.  (c) Doppler factor of a plane wave.  \(\square\)
+
+\paragraph{Consequence.}
+Under this reading, a shape-(iii) witness would have to lie outside the transport group of Reading~B.  It would have to
+change the invariant \(s\), that is, carry dynamics.  Reading~B has no dynamics (r10 of v4.8.0).  The route therefore stays
+open in the sense of r88, and the class of witnesses examined here is closed.  The layer does not assert, and does not
+approach, an exact finite C5 zero closure.  It records why the transports at hand cannot supply one.
+
+\subsection*{v4.9.0-r10 register entries}
+\label{subsec:v490-r10-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r10\\
+\midrule
+C5 factor \(3/4\) (r94) & reading offered: rotate by \(\pi/6\), then compensate; reproduces \(3/4,9/16,27/64,81/256\) and \(n=20\); interpretation, not derivation (r10.1)\\
+source of \(\pi/6\) & triolic division of the matter--tachyon quarter turn, or Hopf value \(1/\sqrt3\) (only at that value)\\
+shape (iii) (r88) & under the reading: isometric witnesses relocate, boosts meet the floor \(|s|\), null fields reach zero only as a limit; witnesses would need dynamics (r10.2)\\
+\(\Delta_\gamma<1/5\) (r92) & observation: \(V3\) coupling \(1/4\) and clock-seed coupling \(3/4\) are the two port fractions of one \(\pi/6\) step; not used\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r10 ledger and guard update}
+\label{subsec:v490-r10-ledger-guard}
+
+\[
+R_{\rm core}^{v490\text{-}r10}=(0,0,1)
+\]
+for (a reading of the factor offered, a class of shape-(iii) witnesses closed under it, a derivation of the reading open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r10,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r10}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r11 Source-Only: A Minimal Dynamics for Reading B --- Kicked Duality Rotation}
+\addcontentsline{toc}{section}{v4.9.0-r11 Source-Only: A Minimal Dynamics for Reading B --- Kicked Duality Rotation}
+\label{sec:v490-r11-kicked-duality-dynamics}
+% ============================================================================
+
+\paragraph{Purpose.}
+r10 found that the open threads of the core meet at one gap: Reading~B has no dynamics (r10 of v4.8.0).  The C5 factor
+\(3/4\) would be derived if a dynamics produced the alternation ``rotate, then compensate'' of r10.1.  A shape-(iii) witness
+would need a dynamics that changes the invariant \(s\) (r10.2).  This layer proposes the smallest dynamics with these
+properties and checks what it does.  It is a model proposal, not a derivation from the source.  The script is
+\texttt{llm/k52\_kick\_dynamik.py}.  No value is compared with data.  Earlier layers are not rewritten.
+This layer does not assert or approach an exact finite C5 zero closure.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r11 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r11 the proposal}
+\label{subsec:v490-r11-proposal}
+
+\paragraph{Definition (kicked duality dynamics, proposal).}
+Between kicks the field turns in the duality circle at a constant rate, \(z(t)=e^{i\omega t}z\), on the doublet
+\(F\mapsto FR_{\omega t}^{\mathsf T}\).  At the times \(t_n=n\tau\) the compensator \(C_{\HC}\) is applied, and the content of the
+partner port is handed to a reservoir:
+\[
+F_{n+1}=F_nR_{\omega\tau}^{\mathsf T}C_{\HC},\qquad
+\mathcal E_{\rm res}^{(n+1)}=\mathcal E_{\rm res}^{(n)}+\|F_nR_{\omega\tau}^{\mathsf T}A\|^2 .
+\]
+The rotation is the transport of Reading~B, the kick is the readout of the main body, and the reservoir is the partner
+sector \(\operatorname{ran}A\) of r03.1.
+
+\subsection*{v4.9.0-r11 what it does}
+\label{subsec:v490-r11-properties}
+
+\paragraph{Theoremlet v4.9.0-r11.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Each stage keeps \(\cos^2\omega\tau\) of the content and exports \(\sin^2\omega\tau\).  Retained plus exported
+content is conserved.
+\item[(b)] The stage factor equals \(3/4\) for exactly one \(\omega\tau\in(0,\pi/2)\), namely \(\omega\tau=\pi/6\).  Then the
+retained content runs through \(3/4,9/16,27/64,81/256,\ldots\) and first falls below \(1/256\) at stage \(20\).
+\item[(c)] In the state disk of r04 a stage is a rotation of the Bloch vector by \(2\omega\tau=60^\circ\) followed by a
+measurement along the \(J\)-axis, kept with probability \((1+\cos60^\circ)/2=3/4\).
+\item[(d)] The duality phase accumulates in steps of \(30^\circ\).  Three stages make the quarter turn from matter to
+tachyon, six the half turn \(z\mapsto-z\) (the charge conjugation of r02.2), twelve the full turn, twenty-four the return of
+the spinor of r06.4.
+\item[(e)] The rotation leaves \(|s|\) unchanged.  The kick changes it: it sets \(\operatorname{Re}s=0\) and lowers
+\(|s|\) (in the checked example from \(2.15\) to \(0.83\)).  The dynamics therefore leaves the transport group of
+Reading~B, as r10.2 requires of any witness that changes \(s\).
+\item[(f)] Dividing the same phase \(\pi/6\) into \(m\) kicks keeps \(\cos^{2m}(\pi/6m)\): \(0.75\), \(0.87\), \(0.95\), \(0.99\)
+for \(m=1,2,5,50\).  The stage factor is set by how often the readout acts per phase, which is the quantum Zeno pattern.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a)--(b) \(C_{\HC}R_\alpha C_{\HC}=\cos\alpha\,C_{\HC}\) (r10.1) and \(C_{\HC}+A=1\).  (c) \(G\mapsto RGR^{\mathsf T}\) turns the
+Bloch vector by twice the angle (r04.2).  (e) direct computation.  All items were checked numerically, (b) also in exact
+rational arithmetic.  \(\square\)
+
+\subsection*{v4.9.0-r11 what it does not do}
+\label{subsec:v490-r11-limits}
+
+\begin{enumerate}[leftmargin=2em]
+\item \emph{No finite closure.}  The retained content after \(n\) stages is \((3/4)^n>0\) for every \(n\).  It vanishes in
+one stage only for \(\omega\tau=\pi/2\), and then the whole content sits in the reservoir: it is exported, not annihilated.
+The dynamics reproduces \(C5_{\rm det/eff}\) at \(\theta=1/256\), \(n=20\), and keeps
+\(0_{\rm termdata}\not\Rightarrow0_{\rm all}\).  The all-readout slot includes the reservoir.
+\item \emph{No scale.}  Only the product \(\omega\tau\) is fixed.  The source supplies neither a rate \(\omega\) nor an interval
+\(\tau\).  The oscillator frequency of Theorem~\ref{thm:spring}, \(\gstring\sqrt{2/3}\), is a dimensionless candidate for
+\(\omega\) in the source's units.  Without a unit of time it fixes nothing.
+\item \emph{No mechanism for the kick.}  Why the readout acts at regular intervals, and three times per quarter turn, is
+not explained.  The triolic division of r10 is assumed, not derived.
+\item \emph{Not the field equations.}  The proposal acts on the doublet at a point.  It is not a field theory and makes no
+claim about the Maxwell or Einstein limits of the main body.
+\end{enumerate}
+
+\paragraph{Remark.}
+The structure, a fixed polarisation rotation followed by a polariser at every cycle, is the one used in quantum Zeno
+experiments with photons, among them the interaction-free measurements of Kwiat and co-workers (1995).  There a rotation of
+\(\pi/(2N)\) per cycle with \(N\) cycles per quarter turn leaves \(\cos^{2N}(\pi/2N)\).  The proposal of this layer is that
+structure with \(N=3\).  The correspondence concerns the algebra only.  On a light wave the compensator of r03 is not a
+polariser (r03.2).
+
+\subsection*{v4.9.0-r11 register entries}
+\label{subsec:v490-r11-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r11\\
+\midrule
+dynamics of Reading~B (r10 of v4.8.0) & proposal: kicked duality rotation with compensator kicks and partner reservoir; model decision, not derived\\
+C5 factor \(3/4\) & produced by the proposal at \(\omega\tau=\pi/6\), uniquely in \((0,\pi/2)\) (r11.1)\\
+shape (iii) & the kick changes \(s\), but the dynamics exports instead of annihilating; no finite closure (r11)\\
+scale of the dynamics & open: only \(\omega\tau\) fixed\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r11 ledger and guard update}
+\label{subsec:v490-r11-ledger-guard}
+
+\[
+R_{\rm dyn}^{v490\text{-}r11}=(0,0,1)
+\]
+for (a minimal dynamics proposed, its stage factor and cycles established, its scale and kick mechanism open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r11,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r11}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r12 Source-Only: A Reconstruction of the Bound \texorpdfstring{\(\Delta_\gamma<1/5\)}{Delta gamma < 1/5} in Place of the Missing r65}
+\addcontentsline{toc}{section}{v4.9.0-r12 Source-Only: A Reconstruction of the Bound Delta gamma < 1/5 in Place of the Missing r65}
+\label{sec:v490-r12-delta-gamma-reconstruction}
+% ============================================================================
+
+\paragraph{Purpose.}
+The bound \(\Delta_\gamma<1/5\) carried by \(W_{\rm clk}^{\rm loc}\) comes from r65, whose full text is not available.  The
+author confirmed on 2026-10-22 that it is lost and asked for a reconstruction.  r90 obtained a bound of the right size
+(\(2/9\)).  r92 obtained \(1/5\) exactly as a relative gain reserve, without stating why that reading and that chain apply.
+This layer states the premises explicitly, derives the strict bound from them, and draws the consequences under the
+dynamics of r11.  It replaces the missing derivation.  It does not recover the r65 text and does not claim that r65 argued
+this way.  The script is \texttt{llm/k53\_r65\_rekonstruktion.py}.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r12 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r12 premises}
+\label{subsec:v490-r12-premises}
+
+\begin{enumerate}[leftmargin=2em]
+\item[(P1)] \emph{Chart data} of r14 (\S\ref{prop:v470-r14-finite-flowrate-classification}): overlap flux
+\(S=N+\kappa N(N-1)\), relay score \(H=GS\), relay threshold \(16\).
+\item[(P2)] \emph{Survival} of a window is the strict relay condition of
+Definition~\ref{def:v470-r23-boundary-source-stability-window}, applied to the perturbed gain:
+\(G(1-\Delta_\gamma)\,S>16\).
+\item[(P3)] \emph{The perturbation is a multiplicative loss.}  \(\Delta_\gamma\) is the fraction of the clock content lost per
+readout.  Under the dynamics of r11 this is the fraction exported to the partner reservoir, \(\sin^2\alpha\) for a duality
+drift \(\alpha\) between readouts.
+\item[(P4)] \emph{Scope.}  The guard concerns the charts that carry clock windows (unassisted score below \(16\), assisted
+score at least \(16\)) on the primary relay chain \(\mathcal R_A\) of
+Section~\ref{sec:v470-r15-zero-clock-phase-window-relay-stitching}, that is \(V3\) and \(V5\).
+\end{enumerate}
+(P1) and (P2) are in the source.  (P3) chooses r92's reading over r90's, and gives it a mechanism.  (P4) is r92's
+restriction, consistent with the local index of \(W_{\rm clk}^{\rm loc}\).
+
+\subsection*{v4.9.0-r12 the bound}
+\label{subsec:v490-r12-bound}
+
+\paragraph{Theoremlet v4.9.0-r12.1.}
+Under (P1)--(P4), \(W_{\rm clk}^{\rm loc}\) is preserved if and only if
+\[
+\Delta_\gamma<\min_{V\in\{V3,V5\}}\Bigl(1-\frac{16}{G_VS_V}\Bigr)=\min\Bigl\{\frac15,\frac9{25}\Bigr\}=\frac15 .
+\]
+The inequality is strict.  At \(\Delta_\gamma=1/5\) chart \(V3\) has \(G(1-\Delta_\gamma)S=16\) exactly, which the strict window
+excludes.
+
+\paragraph{Proof sketch.}
+(P2) rearranges to \(\Delta_\gamma<1-16/(GS)\).  \(V3\): \(N=5\), \(\kappa=1/4\), \(G=2\), \(S=10\), \(H=20\), hence \(1/5\).
+\(V5\): \(N=4\), \(\kappa=1/2\), \(G=5/2\), \(S=10\), \(H=25\), hence \(9/25\).  Checked in exact rational arithmetic.  \(\square\)
+
+\paragraph{Where the five comes from.}
+\(V3\) is the only chart of the r14 family with \(\kappa(N-1)=1\): its pair-overlap flux \(\kappa N(N-1)\) equals its direct
+flux \(N\), so \(S=2N\).  With \(G=2\) the bound becomes \(1-16/(4N)=1-4/N\), which is \(1/5\) at \(N=5\).  The binding chart is the
+balanced chart of the primary chain.
+
+\subsection*{v4.9.0-r12 consequences under the dynamics of r11}
+\label{subsec:v490-r12-consequences}
+
+\paragraph{Theoremlet v4.9.0-r12.2 (conditional on (P3)).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] The clock selector survives a duality drift \(\alpha\) per readout exactly when \(\sin^2\alpha<1/5\), that is
+\(\tan\alpha<1/2\), \(\alpha<26.57^\circ\).
+\item[(b)] The C5 stage of r10 and r11 (\(\alpha=\pi/6\)) exports \(1/4>1/5\) and lies outside.  The tolerated collar row of
+r05 (ratio \(5/6\)) exports \(1/6<1/5\) and lies inside.
+\item[(c)] The rows of r05 that reach \(\Phi_5=0\) in one step, \(Z_5^{\rm mix\text{-}cancel}\) and
+\(Z_5^{\rm all\text{-}cancel}\), move the whole score \(-3/4\) into \(A_4\) or \(U_6\) and are blocked by \(C4\) and \(C6\).  This is
+the quarter turn of r10.2 in ledger form: the compensator port is emptied by relocating the content to another slot.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a) (P3) in Theoremlet r12.1.  (b) \(1-3/4\) and \(1-5/6\).  (c) read off
+Definition~\ref{def:v470-r05-finite-c5-iteration-ledger}.  \(\square\)
+
+\paragraph{Reading.}
+The strict C5 lowering and the clock selector are separated by the bound: a C5 stage drifts further per readout than the
+clock window tolerates.  This is consistent with the two being distinct guard items, \(C5_{\rm det/eff}\) and
+\(W_{\rm clk}^{\rm loc}\), established on different charts.  The r05 collar row, which r05 calls ``useful as a stability
+check'', is the one whose drift the clock tolerates.  That r05 classified it as tolerated for this reason is an
+interpretation.
+
+\subsection*{v4.9.0-r12 status of the bound}
+\label{subsec:v490-r12-status}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+layer & contribution\\
+\midrule
+r87 & no derivation present; not reconstructible from the window layer alone\\
+r90 & coherence reading, bound \(2/9\), \(1/5\) as rounding\\
+r92 & gain-reserve reading, \(1/5\) exactly on \(\mathcal R_A\), premises implicit\\
+v4.9.0-r12 & premises (P1)--(P4) stated, strictness from r23, multiplicative loss from r11, balanced chart \(V3\) identified\\
+\bottomrule
+\end{tabular}
+\end{center}
+The provenance component of \(R_{\rm cal}^{r87}\) stays open, since the r65 text itself is not recovered.  The derivation
+component is closed under (P1)--(P4).
+
+\subsection*{v4.9.0-r12 register entries}
+\label{subsec:v490-r12-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r12\\
+\midrule
+\(\Delta_\gamma<1/5\) in \(W_{\rm clk}^{\rm loc}\) & derived under (P1)--(P4), strict (r12.1); r65 text lost (author), provenance open\\
+binding chart & \(V3\), the balanced chart \(\kappa(N-1)=1\) of \(\mathcal R_A\)\\
+clock vs C5 stage & tolerated drift \(\tan\alpha<1/2\); C5 stage outside, r05 collar row inside (r12.2)\\
+r05 zero rows & relocation into \(A_4\), \(U_6\), blocked by \(C4\), \(C6\); same structure as r10.2\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r12 ledger and guard update}
+\label{subsec:v490-r12-ledger-guard}
+
+\[
+R_{\rm cal}^{v490\text{-}r12}=(0,0,1)
+\]
+for (derivation under stated premises closed, consequences under r11 recorded, r65 provenance open).
+
+The layer spends no guard.  \(W_{\rm clk}^{\rm loc}\) under \(\Delta_\gamma<1/5\) remains the local, permitted statement:
+\[
+R_{\rm glob}^{(v490\text{-}r12,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r12}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r13 Source-Only: The Time Scale of the Kicked Duality Dynamics}
+\addcontentsline{toc}{section}{v4.9.0-r13 Source-Only: The Time Scale of the Kicked Duality Dynamics}
+\label{sec:v490-r13-time-scale}
+% ============================================================================
+
+\paragraph{Purpose.}
+The dynamics proposed in r11 fixes only the product \(\omega\tau=\pi/6\).  This layer derives the time scale from the clock
+model the source already contains (Section~\ref{sec:v470-r15-zero-clock-phase-window-relay-stitching}).  It follows the
+source in reading the photon-clock probe as a diagnostic timing function, not as an identity between Riemann zeros and
+photons.  All statements are local, in the clock's own units, and make no global photon-clock statement.  The script is
+\texttt{llm/k54\_zeitskala.py}.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r13 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r13 the rate from the tick profile}
+\label{subsec:v490-r13-rate}
+
+r15 writes the local clock tick as \(G_V(\tau)=1+(G_V^{\rm avail}-1)\cos^2\bigl((\tau-\tau_V)/\sigma_V\bigr)\).  Between two kicks of
+r11 the energy in the compensator port is \(\cos^2(\omega t)\).  Both are \(\cos^2\) of an angle linear in time.
+
+\paragraph{Theoremlet v4.9.0-r13.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Identifying the two profiles gives \(\omega=1/\sigma_V\): the tick width of r15 is the time the duality rotation of r11
+needs for one radian.  The kick interval is \(\tau_{\rm k}=\tfrac\pi6\,\sigma_V\).
+\item[(b)] The smallest probe with a profile has two terms.  For
+\(\mathcal C_\gamma\propto|e^{i\gamma_a\tau}+e^{i\gamma_b\tau}|^2\) the coherent part is exactly
+\(\cos^2\bigl(\tfrac12(\gamma_b-\gamma_a)\tau\bigr)\), so \(\sigma=2/(\gamma_b-\gamma_a)\).  The beat period is
+\(T_{\rm b}=2\pi/(\gamma_b-\gamma_a)\).
+\item[(c)] Hence \(\tau_{\rm k}=T_{\rm b}/6\) for every pair of clock frequencies.  Three stages, the quarter turn from matter to
+tachyon, take half a beat.  Six stages, the half turn \(z\mapsto-z\), take one beat.  Twelve take two beats, and twenty-four,
+the return of the spinor, take four.  The detector stage \(n=20\) lies at \(10/3\) beats.
+\item[(d)] For the two lowest frequencies the source uses, \(\gamma_1=14.1347\ldots\) and \(\gamma_2=21.0220\ldots\):
+\(\sigma=0.29039\), \(T_{\rm b}=0.91228\), \(\tau_{\rm k}=0.15205\) in clock units.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(b) \(|e^{ia}+e^{ib}|^2=4\cos^2\tfrac{b-a}2\); checked numerically to \(10^{-15}\).  (c) \(\tau_{\rm k}=\tfrac\pi6\cdot\tfrac2{\Delta\gamma}=
+\tfrac16\cdot\tfrac{2\pi}{\Delta\gamma}\).  \(\square\)
+
+\paragraph{What is fixed and what is not.}
+The relative statement (c) holds for any pair of frequencies.  The absolute value (d) depends on which pair carries the
+tick, and the source names none.  The first two are the minimal choice.  The clock unit itself has no conversion to
+seconds in the source.  Supplying one would require identifying clock frequencies with physical frequencies.  The source
+expressly declines that identification, and as a global statement it would touch the forbidden global photon-clock
+statement.  The time scale is therefore derived up to the unit of the clock.
+
+\subsection*{v4.9.0-r13 the windows of the primary chain}
+\label{subsec:v490-r13-windows}
+
+\paragraph{Theoremlet v4.9.0-r13.2.}
+In the angle of r13.1(a), the half-widths \(\delta_V/\sigma_V\) of r15 are \(39.23^\circ\) for \(V3\), \(50.77^\circ\) for \(V5\)
+and \(28.13^\circ\) for \(V8\).  A timing offset of one C5 stage, \(30^\circ\), stays inside every window of the primary chain
+\(\mathcal R_A=\{V3,V5\}\) and leaves the window of \(V8\) on the chain \(\mathcal R_B\).
+
+\paragraph{Proof sketch.}
+Conversion of the r15 table.  \(\square\)
+
+\paragraph{Reading.}
+This is a second, independent reason for the restriction (P4) of r12 to \(\mathcal R_A\): only there does a single C5 stage
+fit into the clock window.  The tolerance \(26.57^\circ\) of r12 concerns the loss of clock content per readout, a different
+quantity from a timing offset within one window, so the two numbers do not contradict each other.  The window of \(V8\)
+lies between them.
+
+\subsection*{v4.9.0-r13 the stage angle between Hopf and lattice}
+\label{subsec:v490-r13-hopf-lattice}
+
+The main body relates the Hopf value and the measured value of the offset by
+\(\bsym=\tfrac1{\sqrt3}\exp\bigl(-\gamma_1/(4\pi\gL^5)\bigr)=0.5492\) (the table with ``Hopf (continuum \(S^3\))'' and
+``Physical (prime lattice)'' rows).  The stage angle \(\arctan\bsym\) of r10 is therefore \(30^\circ\) in the continuum limit
+\(\gamma_1\to0\) and \(28.78^\circ\) on the lattice, with \(q=0.7683\).  The C5 factor \(3/4\) is the continuum value.  On the
+lattice the Hopf reading would give stage \(22\) (r10), while the triolic reading keeps \(\pi/6\).  Which of the two describes
+the C5 recursion is open.  The detector stage \(n=20\) favours the continuum value or the triolic reading.
+
+\subsection*{v4.9.0-r13 register entries}
+\label{subsec:v490-r13-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r13\\
+\midrule
+time scale of r11 & \(\omega=1/\sigma_V\), \(\tau_{\rm k}=T_{\rm b}/6\) (one sixth of the clock beat) for every frequency pair (r13.1)\\
+absolute value & \(\tau_{\rm k}=0.15205\) clock units for the two lowest frequencies; no conversion to seconds, by the source's own restriction\\
+r12 premise (P4) & second reason: one C5 stage fits only into the windows of \(\mathcal R_A\) (r13.2)\\
+C5 factor \(3/4\) & continuum value of the Hopf reading; lattice value \(0.7683\); triolic reading unaffected\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r13 ledger and guard update}
+\label{subsec:v490-r13-ledger-guard}
+
+\[
+R_{\rm time}^{v490\text{-}r13}=(0,0,1)
+\]
+for (relative time scale derived, windows of the primary chain checked, unit of the clock open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r13,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r13}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r14 Source-Only: Why Six Kicks per Beat --- Readout Directions from the Triole and the Umkehrwalze}
+\addcontentsline{toc}{section}{v4.9.0-r14 Source-Only: Why Six Kicks per Beat --- Readout Directions from the Triole and the Umkehrwalze}
+\label{sec:v490-r14-readout-directions}
+% ============================================================================
+
+\paragraph{Purpose.}
+r13 fixed the kick interval of the dynamics of r11 at one sixth of the clock beat.  It left open why the compensator acts
+six times per beat.  This layer offers a reason built from two objects of the source: the triole and the involutive
+Umkehrwalze \(J_B\) of r02.3.  The reason is an interpretation (admitted by the author, 2026-10-22), not a derivation.  The
+script is \texttt{llm/k55\_kick\_richtungen.py}.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r14 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r14 kicks as passages of readout directions}
+\label{subsec:v490-r14-passages}
+
+Replace the periodic kick of r11 by an event: the compensator acts whenever the phase of the invariant \(s\) passes one of a
+fixed set of readout directions.  Under a uniform duality rotation the events are periodic, and their spacing is set by the
+set of directions.
+
+\paragraph{Theoremlet v4.9.0-r14.1.}
+In the \(s\)-plane, \(\arg s=2\alpha\) with \(\alpha\) the duality angle.
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] The triole directions \(\arg s\in\{0^\circ,120^\circ,240^\circ\}\) and their images under \(J_B\), which acts as
+\(s\mapsto-\bar s\) (r02.3), are together the six directions \(0^\circ,60^\circ,\dots,300^\circ\).  The set contains matter
+(\(0^\circ\)) and tachyon (\(180^\circ\)).
+\item[(b)] Passing them under a uniform rotation gives kicks every \(30^\circ\) of duality angle, hence the stage factor
+\(\cos^2 30^\circ=3/4\).  The triole alone gives \(60^\circ\) and \(q=1/4\).  A quarter grid gives \(45^\circ\) and \(q=1/2\).
+Only triole and \(J_B\) together give the factor of the source.
+\item[(c)] One revolution of \(s\) around the photon (\(\arg s\) from \(0^\circ\) to \(360^\circ\)) passes the six directions once.
+It is the duality half turn \(z\mapsto-z\), the charge conjugation of r02.2, and by r13 it lasts exactly one beat.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+\(-\overline{e^{i\theta}}=e^{i(\pi-\theta)}\) maps \(\{0,120,240\}\) to \(\{180,60,300\}\).  The rest follows from
+\(\arg s=2\alpha\) and r10.1.  Checked numerically.  \(\square\)
+
+\paragraph{Reading.}
+The six kicks per beat are then not an external schedule but the six readout directions met by one revolution of \(s\)
+around the photon.  The factor \(3/4\), the detector stage \(20\), the beat, the quarter turn from matter to tachyon and the
+charge conjugation of the round trip become aspects of one construction: a uniform duality rotation read out at
+\(\text{triole}\cup J_B(\text{triole})\).
+
+\paragraph{What is assumed.}
+The triole of the source (Theoremlet r06.2) is a condition on the three components of a vector, \((1,\omega,\omega^2)\), not on
+the phase of \(s\).  Placing the triole on \(\arg s\) is the interpretive step of this layer.  Squaring maps the triole of
+phases onto a triole of phases, so the placement is consistent, but the source does not make it.  Why the readout should
+act at discrete directions at all is also assumed.
+
+\paragraph{Remark, offered and not adopted.}
+Six directions at \(60^\circ\) with the triole permutations as symmetry are the root system \(A_2\) of \(SU(3)\), whose Weyl
+group is \(S_3\).  r15 of v4.8.0 met \(SU(3)\) as the stabiliser of the symmetric point, there read as colour.  Whether the
+readout hexagon and the colour \(SU(3)\) are related would need a map from the duality plane to a Cartan plane, which the
+source does not supply.
+
+\subsection*{v4.9.0-r14 register entries}
+\label{subsec:v490-r14-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r14\\
+\midrule
+six kicks per beat (r13) & reading offered: readout at \(\text{triole}\cup J_B(\text{triole})\) in the \(s\)-plane (r14.1)\\
+factor \(3/4\) & needs both triole and \(J_B\); either alone, or a quarter grid, gives another factor\\
+beat & one revolution of \(s\) around the photon, equal to the charge conjugation of r02.2\\
+\(A_2\)/colour & remark only\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r14 ledger and guard update}
+\label{subsec:v490-r14-ledger-guard}
+
+\[
+R_{\rm kick}^{v490\text{-}r14}=(0,0,1)
+\]
+for (a reason for the kick schedule offered, its consequences consistent with r10--r13, the placement of the triole open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r14,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r14}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r15 Source-Only: Consolidated Register of v4.9.0-r01 to r14 and the Ways Out of r17 after r08}
+\addcontentsline{toc}{section}{v4.9.0-r15 Source-Only: Consolidated Register of v4.9.0-r01 to r14 and the Ways Out of r17 after r08}
+\label{sec:v490-r15-consolidated-register}
+% ============================================================================
+
+\paragraph{Purpose.}
+Fourteen layers since the 4.9.0 release have changed the status of several statements of the main body and added
+readings of their own.  This layer collects the statuses in one register, in the manner of
+\S\ref{sec:v480-r09-p2-p3-reclassification}, and lists the assumptions that only the author can confirm.  It also draws one
+consequence that r08 makes available: r17 left three ways out for the cosmological fractions, and r08 decides between
+them.  No new computation and no new prediction enter.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r15 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r15 the ways out of r17 after r08}
+\label{subsec:v490-r15-r17-ways}
+
+r17 found that Theorem~\ref{thm:dark-energy}, held at all epochs, needs \(\bsym\) to decrease from about \(1\) at
+recombination to \(0.558\) today.  Propositions~\ref{prop:H0-tension} and~\ref{prop:saturation} assume the opposite.  It
+recorded three ways out: (a) the theorem holds only at the present epoch; (b) \(\bsym\) runs downward; (c) the cascade
+probabilities are some other function of the fractions at other epochs.
+
+\paragraph{Theoremlet v4.9.0-r15.1.}
+Under the rules of r08 (photon-frame values and \(k=0\) fixed, matter-frame values drifting with the local factor,
+\(k(\alpha)=1\)):
+\begin{enumerate}[leftmargin=2em]
+\item[(b)] is excluded.  A decrease of \(\bsym\) from about \(1\) to \(0.558\) changes the local factor by far more than the
+\(5\%\) that r08.1 already finds incompatible with atomic clocks.
+\item[(a)] and (c) remain.  Both treat \(\bsym\) as fixed and read Theorem~\ref{thm:dark-energy} at one epoch, (a) directly,
+(c) through a time-dependent bridge with fixed \(\bsym\) that the source does not supply.
+\item Item~(1) of Proposition~\ref{prop:saturation} lets the neutrino mass grow with \(\gL(t)^4\).  By the clock bound on the
+same local factor this growth is excluded too.  Together with item~(2), which r17 already rejected, the proposition loses
+its basis.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(b): a local factor diverging towards recombination; the clock bound of r08.1 applies a fortiori.  (a), (c): neither needs a
+drift.  Item~(1): \(k(m_\nu)=4\) drifts faster than \(\alpha\) with the same factor.  \(\square\)
+
+\paragraph{Consequence.}
+With r08, Theorem~\ref{thm:dark-energy} is a statement about the present epoch, \(1-\bsym^2=0.698\) against \(0.689\).
+Its cosmological reach beyond that epoch is not supported by any statement of the source that survives the clocks.
+
+\subsection*{v4.9.0-r15 register}
+\label{subsec:v490-r15-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.14\textwidth}>{\raggedright\arraybackslash}p{0.48\textwidth}@{}}
+\toprule
+statement & layer & status\\
+\midrule
+conversion law, \S\ref{sec:phase-constants} & r01 & factor \(\gL\) is matter--tachyon; ways (A)--(C) open; on-shell \(\cot\theta_W\) lies at (A) (r07, observation)\\
+Thm.~\ref{thm:tribonacci} & r01 & equivalent to \(\cosh2\eta=e^\eta\)\\
+Prop.~\ref{prop:hawking-gBI-tachyon} (ii) & r01 & frame order does not match the axis\\
+Umkehrwalze & r02 & round trip with side change \(=C=PT\); involutive form antilinear, \(J_B\colon E\leftrightarrow B\)\\
+Thm.~\ref{thm:core}, compensator & r02, r03 & output \(\operatorname{Re}s=0\), not null; for a charge a dyon\\
+Prop.~\ref{prop:compensator} & r03 & orthogonality holds for the product \(z\times J_Bz\), not the average\\
+compensator as matrix & r04 & \(\tfrac12(1+\sigma_x)\) on the doublet; state disk, light at the centre\\
+Millennium matrix & r05 & on the doublet only port weighting; reading name ``layer-transport matrix''\\
+photon from matter \(+\) tachyon & r05 & only for crossed orientation\\
+tachyon hit chain & r06 & cone \(56.68^\circ\), simultaneous hits in the matter frame\\
+electroweak mass matrix & r06 & port weighting with massless photon port (formal)\\
+H14 & r07 & refuted as exact relation, undecidable at tree level\\
+H15 & r07 & pre-registered, \(m_W=80.3615\pm0.0018\) GeV, comparison pending\\
+Prop.~\ref{prop:H0-tension} & r08, r09 & no working mechanism; drift excluded by clocks\\
+Thm.~\ref{thm:k-values}, \(\alpha\) row & r08 & \(k=1\) belongs to \(\alpha\) (closes r03 F2)\\
+P5 & r09 & corrected to \(k(\alpha)/k(G_N)=1/2\)\\
+local frame factor & r09 & only a weak potential coupling survives; no field law\\
+C5 factor \(3/4\) & r10, r11, r14 & produced by kicked duality rotation read out at triole \(\cup\,J_B\)(triole); interpretation\\
+C5 shape (iii) & r10 & witnesses from the transport group of Reading~B excluded under the reading\\
+\(\Delta_\gamma<1/5\) & r12 & derived under premises (P1)--(P4); r65 text lost, provenance open\\
+time scale & r13 & kick interval one sixth of the clock beat; unit of the clock open\\
+Thm.~\ref{thm:dark-energy} & r15 & present-epoch statement; r17 way (b) excluded (r15.1)\\
+Prop.~\ref{prop:saturation} & r15 & no basis left (items (1) and (2))\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r15 assumptions for the author}
+\label{subsec:v490-r15-author}
+
+The following steps are interpretations of these layers.  Only the author can say whether they match the original
+intention.
+\begin{enumerate}[leftmargin=2em]
+\item Theorem~\ref{thm:frame-offset} speaks about the fixed structural factor, not the local one (r09).  This resolves its two
+conflicts with Theorem~\ref{thm:k-values}.
+\item The C5 recursion is an alternation of duality rotation and compensation (r10, r11).
+\item The readout acts at discrete directions, and the triole lies on the phase of \(s\) (r14).
+\item The guard \(W_{\rm clk}^{\rm loc}\) refers to the windows of the primary chain \(\mathcal R_A\) (r12, r13).
+\item Which of the ways (A)--(C) of r01 the conversion of constants takes.
+\item Whether Theorem~\ref{thm:dark-energy} is meant for the present epoch only (way (a)) or through a bridge (way (c)).
+\end{enumerate}
+
+\subsection*{v4.9.0-r15 ledger and guard update}
+\label{subsec:v490-r15-ledger-guard}
+
+\[
+R_{\rm reg}^{v490\text{-}r15}=(0,0,1)
+\]
+for (register consolidated, r17 way (b) excluded, author decisions listed and open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r15,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r15}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r16 Source-Only: Author Decisions on the Open Readings of r15}
+\addcontentsline{toc}{section}{v4.9.0-r16 Source-Only: Author Decisions on the Open Readings of r15}
+\label{sec:v490-r16-author-decisions}
+% ============================================================================
+
+\paragraph{Purpose.}
+r15 listed six readings that only the author can confirm (\S\ref{subsec:v490-r15-author}).  The author answered four of them
+on 2026-10-22.  This layer records the answers and what changes in the register.  No computation enters.  Earlier layers are
+not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r16 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r16 the decisions}
+\label{subsec:v490-r16-decisions}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.06\textwidth}>{\raggedright\arraybackslash}p{0.40\textwidth}>{\raggedright\arraybackslash}p{0.46\textwidth}@{}}
+\toprule
+no. & question (r15) & author's answer (2026-10-22)\\
+\midrule
+1 & Does Theorem~\ref{thm:frame-offset} speak about the fixed structural factor? & \textbf{Yes, structural.}\\
+2, 3 & Is the C5 recursion an alternation of duality rotation and compensation, read out at the triole and its image under \(J_B\)? & \textbf{Yes, as originally intended.}\\
+5 & Which of the ways (A)--(C) does the conversion of constants take? & left open\\
+6 & Is Theorem~\ref{thm:dark-energy} meant for the present epoch only, or through a bridge? & left open\\
+4 & Does \(W_{\rm clk}^{\rm loc}\) refer to the windows of \(\mathcal R_A\)? & not asked; stays a premise of r12\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r16 consequences}
+\label{subsec:v490-r16-consequences}
+
+\begin{enumerate}[leftmargin=2em]
+\item \emph{Decision 1.}  The two conflicts between Theorem~\ref{thm:frame-offset} and Theorem~\ref{thm:k-values} recorded in
+r09 are resolved by the author.  The theorem concerns \(\gL=\gBI/\gstring\) as a fixed structural ratio.  It makes no
+statement about how a measured constant depends on the observer.  Any variation runs through the local factor of r08 and
+r09.  Theorem~\ref{thm:k-values} stands as written, with the \(\alpha\) row read as in r08.
+\item \emph{Decisions 2 and 3.}  The reading of r10, r11 and r14 is the author's intended reading of the C5 recursion: a
+uniform duality rotation, compensated whenever the phase of \(s\) passes the triole or its \(J_B\)-image.  Its status changes
+from ``interpretation offered'' to ``author's reading''.  It remains a reading, not a derivation from the earlier text.
+The source never states the recursion in this form, and the placement of the triole on \(\arg s\) is not in r06.
+Theoremlet r10.2 on shape-(iii) witnesses, which was conditional on the reading, now holds under the author's reading.
+\item \emph{Decisions 5 and 6} stay open as recorded in r01 and r15.
+\end{enumerate}
+
+\subsection*{v4.9.0-r16 register entries}
+\label{subsec:v490-r16-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r16\\
+\midrule
+Thm.~\ref{thm:frame-offset} & structural statement about \(\gL\) (author); conflicts of r09 resolved\\
+C5 recursion (r10, r11, r14) & author's reading: kicked duality rotation read out at triole \(\cup\,J_B\)(triole)\\
+C5 shape (iii) (r10.2) & witnesses from the transport group of Reading~B excluded under the author's reading\\
+conversion ways (A)--(C) & open (author)\\
+Thm.~\ref{thm:dark-energy}, epoch & open between r17 ways (a) and (c) (author)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r16 ledger and guard update}
+\label{subsec:v490-r16-ledger-guard}
+
+\[
+R_{\rm auth}^{v490\text{-}r16}=(0,0,1)
+\]
+for (decisions 1 to 3 recorded, their consequences entered, decisions 5 and 6 open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r16,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r16}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
