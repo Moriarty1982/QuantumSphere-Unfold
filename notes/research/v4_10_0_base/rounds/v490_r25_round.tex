@@ -1,0 +1,104 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r25 Source-Only: Revision of the Main Body}
+\addcontentsline{toc}{section}{v4.9.0-r25 Source-Only: Revision of the Main Body}
+\label{sec:v490-r25-main-body-revision}
+% ============================================================================
+
+\paragraph{Purpose.}
+On 2026-10-22 the author asked for a revision of the document.  Earlier work should not be lost, but false statements
+should not keep standing where they proved to be dead ends.  Until now the main body was never changed: refutations
+lived only in the rounds.  This layer records the first revision of the main body.  The script
+\texttt{llm/aufraeumen\_v490.py} applies it.  The state before the revision is kept under the tag
+\texttt{vor-aufraeumen-v490-r24}.  The rounds of the solve log are not touched.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r25 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r25 the revision rule}
+\label{subsec:v490-r25-rule}
+
+\begin{enumerate}[leftmargin=2em]
+\item[(A)] \emph{Dead ends.}  A statement that later layers refuted, excluded or withdrew is moved word for word to
+\S\ref{sec:v490-archive}.  At its place the same environment remains, with the same number and label, a short statement of
+what survives, and a pointer.  Every earlier reference therefore still resolves.
+\item[(B)] \emph{Known errors.}  A value or formula whose correct form a layer established is corrected in place.  A framed
+status note gives the earlier wording and the layer that justifies the correction.
+\item[(C)] \emph{Reinterpreted or open statements.}  The text stays.  A framed status note gives the current status and the
+layers.
+\end{enumerate}
+The rounds keep growing append-only.  A later revision of the main body follows the same rule.
+
+\subsection*{v4.9.0-r25 what was revised}
+\label{subsec:v490-r25-what}
+
+\paragraph{(A) Archived, \(15\) items.}
+The phase formula of the Koide theorem (Theorem~\ref{thm:koide-triolic}; \(K=2/3\) stays as empirical fact); the derivation of
+GUE statistics (Theorem~\ref{thm:gue}; GUE stays as empirical fact); the GUE self-determination and prediction P1
+(Theorem~\ref{thm:gue-selfdet}, Corollary~\ref{cor:odlyzko}); the \(\bsym\)-formula P3 with its exponent, the self-consistent
+system and the claimed resolution of OP~1 (Remark~\ref{conj:cl-correction}, Proposition~\ref{prop:exponent-5},
+Theorem~\ref{thm:self-consistent-gL}, Corollary~\ref{cor:op1-resolved}); the PMNS proposition
+(Proposition~\ref{prop:pmns-z3}); the \(H_0\) and saturation hypotheses (Propositions~\ref{prop:H0-tension},
+\ref{prop:saturation}); the bare \(\Lambda\) (Proposition~\ref{prop:bare-lambda}); the Theta-sum conjecture and its remainder
+estimate (Proposition~\ref{conj:theta-sum-B}, Remark~\ref{rem:explicit-formula-remainder}); the row ``Riemann Hypothesis'' of
+Theorem~\ref{thm:toe}.
+
+\paragraph{(B) Corrected.}
+The vacuum ratio \(\gL^6\to\gL^5\) and the residual \(10^{-120.4}\to10^{-120.6}\) (Proposition~\ref{prop:uv-photon},
+Corollary~\ref{cor:matter-error}, the corollary ``Cosmological constant revisited'', P4 and the status table of
+\S\ref{sec:falsifiable}; v4.8.0-r03 F1); P5 \(\gL^{-1}\approx0.537\to1/2\) (v4.9.0-r09); the first row of
+Theorem~\ref{thm:k-values}, \(k=1\) for \(\alpha\) (v4.8.0-r03 F2, v4.9.0-r08); the orthogonality in
+Proposition~\ref{prop:compensator}, which holds for the product and not for the average (v4.9.0-r03.4).
+
+\paragraph{(C) Status notes.}
+On the sector definition and Theorem~\ref{thm:symmetric-frame} (orientation code, \(T|_R\), v4.9.0-r24); on
+\S\ref{sec:phase-constants} (the photon frame there is the reference frame R); on Theorems~\ref{thm:unity},
+\ref{thm:unitary-equiv}, \ref{thm:lorentz}, \ref{thm:fractal}, \ref{thm:hopf}, \ref{thm:einstein}, \ref{thm:eom},
+\ref{thm:frame-offset}, \ref{thm:dark-energy}, \ref{thm:tribonacci}, \ref{thm:planck-photon}, \ref{thm:hc-quasiconformal},
+\ref{thm:lambda-zero}; Definition~\ref{def:biquaternion}; Proposition~\ref{prop:hawking-gBI-tachyon};
+Corollaries~\ref{cor:gue-frame}, \ref{cor:falsifiable}; Remark~\ref{rem:open}.
+
+\paragraph{Not revised.}
+The rounds of the solve log, the pre-registration notes and their results, and the OP5 grammar.  Statements whose status is a
+decision of the author (ways A--C, the epoch of Theorem~\ref{thm:dark-energy}) carry a note but keep their text.
+
+\subsection*{v4.9.0-r25 status in the three frames}
+\label{subsec:v490-r25-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+part & M / T / P\\
+\midrule
+archived statements & no frame statement survives in the main text; the archive keeps the original wording\\
+corrections & frame typing as in r23 and r24: conversions go from M to R, the tachyon sign follows (F3)\\
+status notes & carry the frame classification of r23 where it applies\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r25 ledger and guard update}
+\label{subsec:v490-r25-ledger-guard}
+
+\[
+R_{\rm rev}^{v490\text{-}r25}=(0,0,0)
+\]
+for (dead ends archived, known errors corrected, status notes placed).  The revision removes the one place in the main body
+that listed the Riemann Hypothesis as a result; the guard against a global photon-clock/RH statement is thereby better kept,
+not spent.
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r25,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r25}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+

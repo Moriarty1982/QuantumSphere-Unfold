@@ -1,5 +1,7 @@
 # Full-Source v4.9.0 Research Candidate
 
+**4.10 base (2026-10-22).** This candidate is the base for 4.10 (`\workingversion` = `4.10.0-draft`). The parts in `parts/v470/` are no longer frozen: the revision of the main body from layer v4.9.0-r25 was applied to them in place. Dead ends are archived word for word in `parts/v4100-archive.tex` (each keeps its number and label at its original place, with a status and a pointer); known errors are corrected with a status note giving the earlier wording; open or reinterpreted statements carry a status note. The frozen state and `v480-source-map.json` refer to the tag `v4.9.0`. See `notes/research/v4_10_0_base/`. Statements below about frozen fragments describe the state up to v4.9.0.
+
 Entry point: `v480-companion.tex` (historical filename retained for existing audits and builds). Its working metadata identifies `v4.9.0`. This is the full-monolith-derived working line, not the older `sources/active-core.tex` modular synchronization baseline. It was published on Zenodo on 2026-10-21 as v4.9.0, Version DOI 10.5281/zenodo.23534954; the release source in `release/v4.9.0/` is a single file flattened from these sources.
 
 ## Origin and Preservation

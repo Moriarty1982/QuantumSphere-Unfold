@@ -21,23 +21,9 @@ is still outstanding.
 
 \subsection{Hubble tension as cosmological evolution of $\bsym$}
 
-\begin{proposition}[H$_0$ tension as $\bsym(t)$ evolution, hypothesis-grade]
-\label{prop:H0-tension}
-\emph{(Hypothesis-grade; requires cosmological model.)}
-The Hubble tension ($H_0^{\mathrm{CMB}} \approx 67.4$ vs.
-$H_0^{\mathrm{local}} \approx 73.0$ km/s/Mpc, factor $\approx 1.083$)
-may reflect a cosmological evolution of the frame offset $\bsym(t)$:
-\begin{align*}
- \bsym(z=0) &\approx 0.5493 \quad \text{(today)}, \\
- \bsym(z=1100) &\approx 0.527 \quad \text{(CMB epoch)}.
-\end{align*}
-The required change $\Delta\bsym \approx +0.023$ over 13.8 Gyr
-corresponds to a rate of $\approx 1.6\times 10^{-12}$ per year.
-Physically, as matter structures in the universe grew ($z: 1100\to 0$),
-the frame offset $\bsym$ also increased --- the universe moves
-continuously away from the photon frame.
-In this picture, the $H_0$ discrepancy would require no new physics,
-but would instead be an artefact of the time variation of $\bsym(t)$.
+\begin{proposition}[\(H_0\) tension as \(\bsym(t)\) evolution; archived]\label{prop:H0-tension}
+The required drift of the local frame factor, about \(1.6\times10^{-12}\) per year, is excluded by atomic clocks by about six orders of magnitude (v4.9.0-r08).  No working mechanism remains (v4.9.0-r09).
+\emph{Archived in the v4.9.0 revision; original text in \S\ref{sec:v490-archive}.}
 \end{proposition}
 
 \begin{remark}[Evaluation of the hypotheses]
@@ -86,28 +72,9 @@ sector. The value $k=1.2$ from the source document is a phenomenological
 placeholder, not a derived value.
 \end{proposition}
 
-\begin{proposition}[Saturation model, hypothesis-grade]
-\label{prop:saturation}
-\emph{(Hypothesis-grade; cosmological end-state.)}
-
-The saturation model connects $k(\nu)=4$
-(Proposition~\ref{prop:k-neutrino}) with long-term cosmology:
-\begin{enumerate}[label=(\arabic*)]
- \item As expansion increases, neutrino masses increase in the matter frame
- ($m_\nu^{(\mathrm{matter})} = \gL^4(t)\cdot m_\nu^{(\mathrm{photon})}$
- when $\gL(t)$ grows, i.e. $\bsym(t)\nearrow 1$).
- \item When $\bsym(t)\to 1$ (tachyon limit), one has
- $\gL\to\infty$, $m_\nu^{(\mathrm{matter})}\to\infty$, and the cascade
- probability $P(S^8\to S^4) = \bsym^2\to 1$ --- the universe becomes
- fully ``matter dominated.''
- \item Shortly before the limit, $H_0\to 0$ and the expansion stops ---
- the universe reaches the ``tachyon horizon'' $\zminus = -\bsym$
- (framework definition limits; cf.
- Proposition~\ref{prop:horizon-cascade-singularity}).
-\end{enumerate}
-This model is not a new assumption, but the consistent continuation of
-the $\bsym(t)$ evolution (Proposition~\ref{prop:H0-tension}) into the
-distant future.
+\begin{proposition}[Saturation model; archived]\label{prop:saturation}
+Items (1) and (2) have no basis left (v4.9.0-r15).  The end state \(\bsym\to1\) is the photon fixed point of Convention F (v4.9.0-r23).
+\emph{Archived in the v4.9.0 revision; original text in \S\ref{sec:v490-archive}.}
 \end{proposition}
 
 \begin{remark}[$k$-value table for the open QCD questions]
@@ -215,20 +182,9 @@ The remaining gap requires the full lattice-to-continuum correction
 
 \subsubsection{The PMNS matrix and the triolic angle}
 
-\begin{proposition}[PMNS angles from $\mathbb{Z}/3\mathbb{Z}$ symmetry]
-\label{prop:pmns-z3}
-The large mixing angles of the PMNS matrix (neutrino mixing) differ
-from CKM precisely because the lepton sector sits at the
-\emph{triolic fixed points} of $\mathbb{Z}/3\mathbb{Z}$ on $S^3$
-(Theorem~11.4, Koide formula), while the quark sector sits at
-$G_2$-rotated points. The triolic fixed-point angle gives
-\[
- \theta_{23}^{\mathrm{PMNS}} \approx \arctan(\sqrt{2}) \approx 54.74^\circ
- \quad (\text{the maximal mixing angle}),
-\]
-from the same tetrahedral geometry as the Hopf final of OP 1.
-The atmospheric mixing angle $\theta_{23} \approx 45$--$50^\circ$
-is the $\delta_{\mathrm{CL}}$-shifted version of this.
+\begin{proposition}[PMNS from the triolic \(\mathbb Z/3\mathbb Z\); archived]\label{prop:pmns-z3}
+Refuted by the pre-registered neutrino and mixing tests of v4.8.0-r12.
+\emph{Archived in the v4.9.0 revision; original text in \S\ref{sec:v490-archive}.}
 \end{proposition}
 
 \subsubsection{Unified prediction table}
@@ -393,8 +349,8 @@ The vacuum energy densities in the two frames therefore satisfy
 \begin{equation}\label{eq:rho-ratio}
  \frac{\rho_{\mathrm{vac}}^{(\mathrm{photon})}}
  {\rho_{\mathrm{vac}}^{(\mathrm{matter})}}
- = \left(\frac{\lP^{(\mathrm{matter})}}{\lP^{(\mathrm{photon})}}\right)^4
- = \gL^{6} \approx 42.0.
+ = \frac{\hbar^{(\mathrm{photon})}}{\hbar^{(\mathrm{matter})}}\left(\frac{\lP^{(\mathrm{matter})}}{\lP^{(\mathrm{photon})}}\right)^4
+ = \gL^{5} \approx 22.5.
 \end{equation}
 \end{proposition}
 
@@ -402,54 +358,37 @@ The vacuum energy densities in the two frames therefore satisfy
 Immediate from $\rho_{\mathrm{vac}} \sim \ell_P^{-4}$ and
 Theorem~7.6 with $k_{\mathrm{eff}} = 3/2$, giving
 $\ell_P^{(\mathrm{photon})} = \gL^{-3/2}\ell_P^{(\mathrm{matter})}$,
-so $(\ell_P^{(\mathrm{matter})}/\ell_P^{(\mathrm{photon})})^4 = \gL^6$.
+so $(\ell_P^{(\mathrm{matter})}/\ell_P^{(\mathrm{photon})})^4 = \gL^6$; with $\rho_{\mathrm{vac}}\sim\hbar c\,\ell_P^{-4}$ and $k(\hbar)=1$ the ratio is $\gL^{6-1}=\gL^5$.
 \end{proof}
+\qsstatus{Corrected in the v4.9.0 revision: the ratio is \(\gL^5\approx22.5\), not \(\gL^6\approx42.0\).  As an energy density \(\rho_{\rm vac}\sim\hbar c\,\lP^{-4}\) has \(k=-5\) (v4.8.0-r03 F1).}
+
 
 \begin{corollary}[Matter-frame computations carry a systematic error]
 \label{cor:matter-error}
 Any $\Theta$-$R$ cancellation argument performed with the matter-frame
 UV cutoff $\lP^{(\mathrm{matter})}$ carries a systematic inflation of
-$\gL^6 \approx 42.0$ in the vacuum energy density. Such an argument
+$\gL^5 \approx 22.5$ in the vacuum energy density. Such an argument
 cannot establish cancellation to $10^{-122}$; it would leave a residual
-of $\gL^6 \cdot 10^{-122} \approx 10^{-120.4}$ even after perfect
+of $\gL^5 \cdot 10^{-122} \approx 10^{-120.6}$ even after perfect
 algebraic cancellation in the matter frame.
 \end{corollary}
 
 \begin{proof}
 Immediate from Proposition~\ref{prop:uv-photon}: a matter-frame
 calculation uses $\rho_{\mathrm{vac}}^{(\mathrm{matter})}
-= \gL^{-6}\rho_{\mathrm{vac}}^{(\mathrm{photon})}$, so any
+= \gL^{-5}\rho_{\mathrm{vac}}^{(\mathrm{photon})}$, so any
 cancellation ratio established in the matter frame corresponds to a
-ratio $\gL^6$-times larger in the photon frame.
+ratio $\gL^5$-times larger in the photon frame.
 \end{proof}
+\qsstatus{Corrected in the v4.9.0 revision: \(\gL^5\approx22.5\) and residual \(10^{-120.6}\), earlier \(\gL^6\approx42.0\) and \(10^{-120.4}\) (v4.8.0-r03 F1).}
+
 
 \subsection{The bare $\Lambda$ problem in this framework}
 
-\begin{proposition}[Bare $\Lambda$ from the constant term]
-\label{prop:bare-lambda}
-The constant term $1$ in $\Sigma(\tau) = 1 - \Theta(\tau) + R(\tau)$
-contributes a cosmological constant
-\[
- \Lambda_{\mathrm{bare}}^{(\mathrm{matter})}
- \;\sim\; \gamma_1^2 \approx (14.135)^2 \approx 200\,m_P^4,
-\]
-where $\gamma_1 = 14.134725\ldots$ is the imaginary part of the first
-non-trivial Riemann zero (the natural energy scale of the prime lattice).
-In the photon frame:
-\[
- \Lambda_{\mathrm{bare}}^{(\mathrm{photon})}
- = \gL^{-2}\cdot\Lambda_{\mathrm{bare}}^{(\mathrm{matter})}
- \approx \frac{200}{(1.864)^2} \approx 57.6\,m_{P,\mathrm{photon}}^4.
-\]
+\begin{proposition}[Bare \(\Lambda\); archived]\label{prop:bare-lambda}
+The value \(\Lambda_{\rm bare}\sim\gamma_1^2\) is unsupported, and the proposition is withdrawn as a derivation (v4.8.0-r05).
+\emph{Archived in the v4.9.0 revision; original text in \S\ref{sec:v490-archive}.}
 \end{proposition}
-
-\begin{proof}
-The pole of $\zeta(s)$ at $s=1$ contributes, via the Mellin transform
-$\int_0^\infty e^{-s\tau}\Theta(\tau)\,d\tau = \log\zeta(s)$, a residue
-at $s=1$ equal to $1$. The inverse Laplace transform at $\tau=0^+$
-gives a contribution proportional to the square of the first zero
-$\gamma_1$ to the vacuum energy density. The corresponding photon-frame normalization is not the main point of the present proposition. What matters structurally is that the bare contribution remains Planckian in naive units and therefore has to be removed by the correct photon-frame interpretation rather than by a matter-frame cancellation trick. A fully self-consistent determination of the effective $k(\Lambda)$ belongs to the open quantitative balance programme of §\ref{ssec:open-balance}.
-\end{proof}
 
 \subsection{Main theorem: $\Lambda_{\mathrm{fundamental}} = 0$
 in the photon frame}
@@ -504,6 +443,8 @@ cosmological constant is $\Lambda_{\mathrm{obs}} \approx 1.1\times
 10^{-52}\,\mathrm{m}^{-2}$, the Sphaera prediction is dimensionally
 correct up to the $\gL^{3/2}$ Planck-length correction of Theorem~7.6.
 \end{proof}
+\qsstatus{Status (v4.9.0 revision): (i) holds by the definition of the reference frame R, the pure state (v4.9.0-r24); at the photon proper the frame term is maximal; (iii) is off by \(10^{121}\) (v4.8.0-r03 F8, F9).}
+
 
 \subsection{The open quantitative balance}
 \label{ssec:open-balance}
@@ -551,6 +492,8 @@ $\Sigma = 1 - \Theta + R$ cancel the bare $\Lambda \approx 200$ down to
 $\bsym^2 \approx 0.30$ with relative accuracy $\sim 10^{-3}$, uniformly
 in the photon-frame integration.
 \end{remark}
+\qsstatus{Status (v4.9.0 revision): P4 as stated is contradicted (v4.8.0-r03 F4); the type of \(\Lambda\) is open (F3); the \(\Theta\)-sum route is false (v4.8.0-r05).}
+
 
 \begin{proposition}[Two open sub-steps]
 \label{prop:open-steps}
@@ -665,7 +608,7 @@ $\Lambda_{\mathrm{obs}} = \bsym^2 \cdot (\lP^{(\mathrm{photon})})^{-2}$
 is a frame artifact, not a vacuum energy (Theorem~\ref{thm:lambda-zero}).
 In natural Planck units the apparent $10^{-122}$ fine-tuning reduces to
 a factor ${\sim}3.1$ cancellation (Remark~\ref{rem:open}).
-Matter-frame computations carry a systematic error of $\gL^6 \approx 42$
+Matter-frame computations carry a systematic error of $\gL^5 \approx 22.5$
 (Corollary~\ref{cor:matter-error}).
 \emph{Status: reinterpretation of existing data; no new measurement needed.}
 
@@ -676,11 +619,10 @@ differently with annual orbital period. Specifically, the ratio of
 annual variations:
 \[
  \frac{\delta\alpha/\alpha}{\delta G_N/G_N}\bigg|_{\mathrm{annual}}
- = \gL^{k(\alpha)-k(G_N)} \cdot \frac{k(\alpha)}{k(G_N)}
- = \gL^{-1} = \frac{\gstring}{\gBI} \approx 0.537,
+ = \frac{k(\alpha)}{k(G_N)} = \frac12,
 \]
 whereas standard physics predicts this ratio $= 1$.
-The deviation is $\approx 46\%$ but requires $G_N$ measurements at
+The deviation is $50\%$ but requires $G_N$ measurements at
 ${\sim}10^{-18}$ annual precision --- beyond current capability.
 \emph{Status: prediction well-defined but not yet testable. The modulation
 of $\alpha$ alone (period exactly 1 year, in phase at all terrestrial labs,
@@ -696,6 +638,8 @@ to the tachyon-frame Hawking temperature
 \emph{Status: theoretical prediction; requires quantum-gravity experiment
 to test directly.}
 \end{corollary}
+\qsstatus{Corrected in the v4.9.0 revision (P4: \(\gL^5\approx22.5\), earlier \(\gL^6\approx42\); P5: \(1/2\), earlier \(\gL^{-1}\approx0.537\)).  Status of P1--P6: P1 not confirmed, archived (v4.8.0-r08); P2 phase formula excluded, archived (v4.8.0-r09); P3 coincidence, archived (v4.8.0-r09, v4.9.0-r19); P4 contradicted as stated (v4.8.0-r03 F4); P5 corrected to \(1/2\), untestable at present (v4.9.0-r09); P6 untested, assumption \(k(M)=0\) explicit (v4.8.0-r03 F6).}
+
 
 \begin{remark}[What the predictions share]
 All six predictions follow from the same structural core: the frame offset
@@ -724,7 +668,7 @@ $\Lambda_{\mathrm{fundamental}} = 0$ in photon frame
 $\Lambda_{\mathrm{obs}} = \bsym^2$ (frame artifact)
  & $\mathcal{L}_{\mathrm{frame}}$ variation
  & \checkmark (Prop.~18.4 of main paper) \\
-Matter-frame error = $\gL^6 \approx 42.0$
+Matter-frame error = $\gL^5 \approx 22.5$
  & $k(\lP) = 3/2$, Thm.~7.6
  & \checkmark (Cor.~\ref{cor:matter-error}) \\
 Guinand--Weil: $\Sigma = 1-\Theta+R$ distributionally
@@ -905,18 +849,9 @@ conditionally convergent series
 \]
 \end{definition}
 
-\begin{proposition}[Theta-sum balance conjecture, OP~5 Step~B]
-\label{conj:theta-sum-B}
-\emph{(Conjecture-grade; derivable from the Guinand--Weil explicit
-formula if the remainder estimate can be controlled.)}
-\[
- \mathcal{T}(T)
- \;=\;
- \frac{3T}{2} - \log T - \frac{T^2}{24} - \gamma_E - \bsym^2 T^2
- \;\approx\; 0.893,
-\]
-where $T = \gL^{-3/2}\approx 0.393$, $\gamma_E\approx 0.5772$ is
-the Euler--Mascheroni constant, and $\bsym^2\approx 0.302$.
+\begin{proposition}[Theta-sum balance conjecture; archived]\label{conj:theta-sum-B}
+The conjectured value \(\mathcal T(T)\approx0.893\) is false.  The sum is \(-0.1097\) (v4.8.0-r05), and OP~5 Step~(B) has no valid form on this route.
+\emph{Archived in the v4.9.0 revision; original text in \S\ref{sec:v490-archive}.}
 \end{proposition}
 
 \begin{remark}[Structure of the conjecture]
@@ -940,22 +875,9 @@ Conjecture~\ref{conj:theta-sum-B} would therefore close OP~5
 completely.
 \end{remark}
 
-\begin{remark}[Connection to the explicit formula remainder]
-\label{rem:explicit-formula-remainder}
-By the Guinand--Weil explicit formula
-(Theorem~3.3 of~\cite{brendecke2026rh}), the identity
-$\Sigma(\tau) = 1 - \Theta(\tau) + R(\tau)$ holds for all $\tau > 0$.
-Integrating from $0$ to $T$ (in the renormalized sense) and
-substituting the known values of $\int_0^T 1\,d\tau = T$ and
-$\int_0^T R\,d\tau_{\mathrm{reg}} = 3T/2 - \log T - T^2/24 - \gamma_E$,
-Conjecture~\ref{conj:theta-sum-B} is equivalent to:
-\[
- \int_0^T \Sigma^{(\mathrm{photon})}(\tau)\,d\tau
- \;=\; \bsym^2 \cdot T^2.
-\]
-This is precisely the balance condition $\eqref{eq:tr-balance}$.
-Hence: \emph{Conjecture~\ref{conj:theta-sum-B} $\Leftrightarrow$
-OP~5 Step~(B) $\Leftrightarrow$ Balance condition~\eqref{eq:tr-balance}.}
+\begin{remark}[Remainder estimate; archived]\label{rem:explicit-formula-remainder}
+The remainder estimate that was to support Proposition~\ref{conj:theta-sum-B} is withdrawn with it (v4.8.0-r05).
+\emph{Archived in the v4.9.0 revision; original text in \S\ref{sec:v490-archive}.}
 \end{remark}
 
 

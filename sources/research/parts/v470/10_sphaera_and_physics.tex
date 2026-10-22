@@ -38,6 +38,8 @@ The equivalences are established section by section:
 Unitary equivalence throughout via Stone--von Neumann
 (\cite{brendecke2026rh}, Theorem~3.2).
 \end{proof}
+\qsstatus{Status (v4.9.0 revision): conjecture; the Stone--von Neumann justification is withdrawn (v4.8.0-r04); Reading~B gives a precise form via duality (v4.8.0-r07).}
+
 
 \begin{remark}[What ``same object'' means]
 Two representations are the same object here in the precise sense of
@@ -139,6 +141,8 @@ The biquaternion norm is
  |q_n|^2 = -(ct)^2 + |z_1|^2 + |z_2|^2 + |z_3|^2.
 \]
 \end{definition}
+\qsstatus{Status (v4.9.0 revision): Minkowski reading replaced: signature \((1,6)\), natural norm \(N(q)\), Reading~B (v4.8.0-r06).}
+
 
 \begin{remark}[Minkowski metric from quaternion structure]
 The norm $|q_n|^2$ is the Minkowski metric with signature $(-,+,+,+)$.
@@ -271,6 +275,8 @@ depends only on the involution $J$ itself.
 Therefore any HC-admissible relabeling that preserves the same
 $J$-structure leaves both $\tau_n$ and $C$ unchanged.
 \end{proof}
+\qsstatus{Status (v4.9.0 revision): shows \(J\)-invariance; the Lorentz action comes from Reading~B (v4.8.0-r06).}
+
 
 %% ============================================================
 
@@ -338,6 +344,8 @@ L=\bigcap_{n\ge 0}L_n=S_0,
 \]
 which is read physically as the photon/light sector.
 \end{proof}
+\qsstatus{Status (v4.9.0 revision): null axis redefined as \(s=0\), directions \(S_0\) (v4.8.0-r06); transport open.}
+
 
 \begin{remark}[Triolic $\mathbb{Z}/3\mathbb{Z}$ structure on the null/light axis]
 On the transported null axis, read physically as the light axis at stable propagation, the three kernels remain organized by the
@@ -368,6 +376,8 @@ The three sectors correspond to the sign of $\mathrm{Re}(\zminus)$:
  \item \textbf{Photon} ($K_3=e_1 e_2$): $\mathrm{Re}(z_3)=0$, boost $\beta=0$, lightlike.
 \end{itemize}
 \end{definition}
+\qsstatus{Status (v4.9.0 revision): the sign of \(\beta\) here is an orientation code.  Theorem~\ref{thm:symmetric-frame} uses the opposite convention; the two differ by charge conjugation \(z\mapsto-z\), which leaves \(s=z\cdot z\) unchanged.  The sector is fixed by the sign of \(s\) (v4.8.0-r07, v4.9.0-r24.1).}
+
 
 \begin{theorem}[Unitary equivalence via Stone--von Neumann]\label{thm:unitary-equiv}
 The three kernels $K_1,K_2,K_3$ carry unitarily equivalent
@@ -387,6 +397,8 @@ $K_3=C(K_1)$ lies in $\Hplusplus$, the unique $J$-invariant subspace,
 which is again irreducible (no proper $J$-invariant subspace exists by
 T4+T5 of~\cite{brendecke2026rh}).
 \end{proof}
+\qsstatus{Status (v4.9.0 revision): open (v4.8.0-r04).}
+
 
 %% ============================================================
 
@@ -402,9 +414,11 @@ T4+T5 of~\cite{brendecke2026rh}).
 The Heisenberg compensator $C(f)=\tfrac{1}{2}(f+Jf)$ is the projection
 onto $K_3=e_1 e_2$: it takes matter $f$ (in $K_1$) and its tachyon image
 $Jf$ (in $K_2$), and produces the photon $C(f)\in K_3$.
-The quaternion identity $e_3=e_1 e_2$ ensures this is always orthogonal
-to both inputs.
+The quaternion identity $e_3=e_1 e_2$ makes the product $z\times J_Bz=2E\times B$ orthogonal to both
+inputs; the average $C(f)$ itself is not.
 \end{proposition}
+\qsstatus{Corrected in the v4.9.0 revision: orthogonality holds for the product \(z\times J_Bz=2E\times B\), not for the average (v4.9.0-r03.4); earlier text: ``this is always orthogonal to both inputs''.}
+
 
 \begin{theorem}[Entanglement as shared proper time]
 \label{thm:entanglement-shared-time}
@@ -698,6 +712,8 @@ The ratio $\gBI/\gstring = 1.864$ equals a Lorentz factor
 $\gL = 1/\sqrt{1-\beta^2}$ for $\beta=\sqrt{1-1/1.864^2}\approx 0.844$.
 The corresponding observer position is $\zminus=\beta/2\approx 0.422$.
 \end{proof}
+\qsstatus{Status (v4.9.0 revision): structural statement about \(\gL\) (author, v4.9.0-r16); conversions as in v4.9.0-r18, r19.}
+
 
 \begin{theorem}[Symmetric matter--tachyon frame]\label{thm:symmetric-frame}
 Matter and tachyon are positioned symmetrically around the photon frame
@@ -732,6 +748,8 @@ The relativistic velocity of the tachyon as seen from the matter frame:
 \]
 with corresponding Lorentz factor $\gamma_{\mathrm{tachyon}|\mathrm{matter}}=r$.\quad$\checkmark$
 \end{proof}
+\qsstatus{Status (v4.9.0 revision): the tachyon at \(-\bsym\) is the real projection \(T|_R\) of the tachyon rapidity \(-\eta+i\pi/2\); in its own frame \(\beta_T^2=1/\bsym^2\) (v4.9.0-r24.2).  \(\gL\) is the ratio of Bloch lengths \(|b_R|/|b_M|\) (v4.9.0-r24.3).  The sign of \(\beta\) is an orientation code; the sector is fixed by the sign of \(s\) (v4.8.0-r07, v4.9.0-r24.1).}
+
 
 
 %% ============================================================
@@ -849,6 +867,8 @@ $T_{\mathrm{Sphaera}}/T_H^{(\mathrm{tachyon})}
 
 Statement~(iii) follows immediately from (ii).
 \end{proof}
+\qsstatus{Status (v4.9.0 revision): item (ii): frame order does not match the axis (v4.9.0-r01); item (iii) holds to \(-0.55\%\) under the class split (v4.9.0-r19); assumption \(k(M)=0\) explicit (v4.8.0-r03 F6); in the tachyon frame \(T_H\) changes sign (v4.9.0-r23).}
+
 
 \begin{quote}\small
 \noindent\textbf{Reader cue.} Read the next block as a geometric recoding of the same Hawking data. Its purpose is to shift from the horizon/frame-temperature dictionary to the coupling interpretation before the section turns to the core/horizon dual picture.
@@ -1021,6 +1041,8 @@ where the gauge groups arise as Hopf fibres:
  \underbrace{S^7}_{\supset G_2\supset SU(3)}\to S^{15}\to S^8.
 \]
 \end{theorem}
+\qsstatus{Status (v4.9.0 revision): Hopf fibrations classical; physical identification a conjecture; the chain \(S^{15}\to S^8\to S^4\to S^2\) is not a composition of Hopf maps (v4.8.0-r09).}
+
 
 \begin{theorem}[$\bsym$ from the Hopf angle]
 \label{thm:bsym-hopf}
@@ -1114,66 +1136,10 @@ The Fano plane structure of $\OO$ gives the cyclic $e_4\to e_5\to e_6$
 symmetry.
 \end{proof}
 
-\begin{theorem}[Koide formula from the triolic structure]
-\label{thm:koide-triolic}
-The lepton masses satisfy the Koide relation
-\[
- K = \frac{m_e+m_\mu+m_\tau}{(\sqrt{m_e}+\sqrt{m_\mu}+\sqrt{m_\tau})^2}
- = \frac{2}{3}
-\]
-to within $0.005\%$ experimentally.
-In the Sphaera framework, the lepton mass hierarchy is a frame effect.
-Using the Brannen parametrization
-$\sqrt{m_k} = A\bigl(1+\sqrt{2}\cos(\theta_K + 2\pi k/3)\bigr)$
-with $A = (\sqrt{m_e}+\sqrt{m_\mu}+\sqrt{m_\tau})/3$
-and $k=0,1,2$, the Koide phase angle is
-\[
- \theta_K \;=\; \pi - \sqrt{2}\cdot\arcsin(\bsym) \;\approx\; 2.3192\;\text{rad}
- \;\approx\; 132.88^\circ,
-\]
-predicting the observed value $\theta_K^{\rm obs}\approx 132.73^\circ$
-to within $0.111\%$.
+\begin{theorem}[Koide relation; phase formula archived]\label{thm:koide-triolic}
+The lepton masses satisfy the Koide relation \(K=2/3\) to within \(0.005\%\).  This is an empirical fact; its derivation from the triolic structure is open.  The phase formula \(\theta_K=\pi-\sqrt2\arcsin\bsym\) of the earlier version is excluded by data at about \(300\)--\(400\sigma\) (v4.8.0-r09).
+\emph{Archived in the v4.9.0 revision; original text in \S\ref{sec:v490-archive}.}
 \end{theorem}
-
-\begin{proof}
-\textbf{Step 1: $K=2/3$ from the $\mathbb{Z}/3\mathbb{Z}$ constraint.}
-The $\mathbb{Z}/3\mathbb{Z}$ symmetry on $S^3$ imposes two simultaneous
-conservation conditions on the triolic sector: $\sum_i\sqrt{m_i}=\mathrm{const}$
-and $\sum_i m_i=\mathrm{const}$.
-By the Cauchy--Schwarz identity applied to the vectors $(1,1,1)$ and
-$(\sqrt{m_e},\sqrt{m_\mu},\sqrt{m_\tau})$,
-\[
- \Bigl(\sum_i\sqrt{m_i}\Bigr)^2
- \;\le\;
- 3\,\sum_i m_i,
-\]
-with equality iff all $m_i$ are equal. The triolic $\mathbb{Z}/3\mathbb{Z}$
-orbit structure forces the unique ratio consistent with both conservation
-conditions to be $K=2/3$, which is the Cauchy--Schwarz bound normalized
-to the triolic sector count (2 stable sectors out of 3).
-
-\textbf{Step 2: The Koide phase angle from the frame offset.}
-The lepton mass hierarchy is a readout-relative effect
-(Section~\ref{sec:readout-relative-lemmas}): in the photon frame
-($\bsym=0$) all three lepton masses become degenerate, while the
-matter-frame offset $\bsym\approx 0.5493$
-(Theorem~\ref{thm:symmetric-frame}) breaks the degeneracy. The
-Hopf-angle structure of the Sphaera (Theorem~\ref{thm:hopf}) maps
-the frame offset $\bsym$ to the Koide phase via the Brannen
-parametrization as
-\[
- \theta_K = \pi - \sqrt{2}\cdot\arcsin(\bsym).
-\]
-Numerically with $\bsym=0.5493$:
-$\theta_K\approx 2.3192\,\text{rad}\approx 132.88^\circ$.
-
-\textbf{Step 3: Numerical comparison.}
-The observed Koide phase extracted from the PDG lepton masses
-($m_e=0.51100\,\text{MeV}$, $m_\mu=105.658\,\text{MeV}$,
-$m_\tau=1776.86\,\text{MeV}$) via the Brannen parametrization is
-$\theta_K^{\rm obs}\approx 132.73^\circ$. The formula gives
-$132.88^\circ$, a relative discrepancy of $0.111\%$ in the angle.
-\end{proof}
 
 \begin{remark}[Mass discrepancy and amplification near the electron]
 \label{rem:koide-mass-discrepancy}
@@ -1430,6 +1396,8 @@ direct-collapse fraction $1-\bsym^2$ is observed as $\Omega_\Lambda$.
 Since $\Omega_\Lambda$ is a transition probability (not a vacuum energy
 density), $\Lambda_{\mathrm{fundamental}}=0$.
 \end{proof}
+\qsstatus{Status (v4.9.0 revision): present-epoch statement (v4.9.0-r15); under Convention F a matter-frame statement, frame-free between M and \(T|_R\) (v4.9.0-r22, r24); the epoch reading is with the author.}
+
 
 \begin{remark}[Independent determination of $\bsym$ from cosmological data]
 \label{rem:omega-bsym}
@@ -1521,59 +1489,13 @@ Via the Guinand--Weil explicit formula ($\Sigma=1-\Theta+R$), the three
 contributions are identified with $\Lambda$, $T_{\mu\nu}$, and
 $G_{\mu\nu}$ respectively.
 \end{proof}
+\qsstatus{Status (v4.9.0 revision): structural conjecture; the action is undefined (v4.8.0-r05).}
 
-\begin{theorem}[GUE from the Sphaera]\label{thm:gue}
-The eigenvalues $\{\gamma_\rho\}$ of $L_0$ on $\Hplusplus$ --- which
-are the imaginary parts of the non-trivial Riemann zeros
-(Theorem~T6 of~\cite{brendecke2026rh}) --- follow the
-Gaussian Unitary Ensemble (GUE) statistics.
-Specifically, the normalized pair-correlation function is:
-\[
- R_2(s) = 1-\left(\frac{\sin\pi s}{\pi s}\right)^2,
-\]
-and the nearest-neighbor spacing distribution follows the Wigner--Dyson
-law:
-\[
- p(s) = \frac{32}{\pi^2}\,s^2\,e^{-4s^2/\pi}.
-\]
-$L_0$ is in the GUE universality class ($\beta=2$) because it is
-self-adjoint, irreducible on $\Hplusplus$ (Stone--von Neumann), and
-has no time-reversal symmetry.
+
+\begin{theorem}[GUE statistics; derivation archived]\label{thm:gue}
+The spacing statistics of the Riemann zeros follow GUE.  This is an empirical fact (v4.8.0-r05).  The derivation from the Sphaera given in the earlier version is withdrawn.
+\emph{Archived in the v4.9.0 revision; original text in \S\ref{sec:v490-archive}.}
 \end{theorem}
-
-\begin{proof}
-We establish that $L_0$ lies in the GUE universality class by verifying
-three conditions.
-
-\emph{(i) Self-adjointness.}
-$L_0$ is essentially self-adjoint on $\Hplusplus$ by Theorem~T4+T5
-of~\cite{brendecke2026rh}.
-This places it in the class of Hermitian operators with real spectrum.
-
-\emph{(ii) Irreducibility.}
-$\Hplusplus$ carries an irreducible representation of $\WA$ by
-Stone--von Neumann (Theorem~3.2 of~\cite{brendecke2026rh}).
-Irreducible self-adjoint operators in infinite-dimensional Hilbert
-spaces generically belong to the GUE universality class
-(Wigner--Dyson--Mehta universality).
-
-\emph{(iii) Absence of time-reversal symmetry.}
-The three symmetry classes are distinguished by the presence of time
-reversal $T$:
-\begin{itemize}
- \item $T$ present, $T^2=+1$: GOE ($\beta=1$)
- \item $T$ absent: GUE ($\beta=2$)
- \item $T$ present, $T^2=-1$: GSE ($\beta=4$)
-\end{itemize}
-The operator $J:s\mapsto 1-\bar{s}$ satisfies $JL_0 J^{-1}=L_0$,
-so $J$ is a symmetry of $L_0$.
-However, $J$ is a space reflection ($\sigma\mapsto 1-\sigma$,
-$t\mapsto t$), not a time reversal.
-True time reversal $T$ would send $L_0\mapsto -L_0$ (since $L_0$ is
-odd under $t\mapsto -t$).
-Since $L_0\neq -L_0$, the operator has no time-reversal symmetry.
-Therefore $L_0$ is in the GUE class ($\beta=2$).
-\end{proof}
 
 \begin{corollary}[Frame-corrected GUE statistics]\label{cor:gue-frame}
 The GUE statistics are measured by matter observers at
@@ -1628,6 +1550,8 @@ In Odlyzko's $10^{22}$-range dataset (${\sim}10^6$ zeros), the 20\%
 effect in $\beta_{\mathrm{eff}}$ should be statistically significant
 and testable.
 \end{corollary}
+\qsstatus{Status (v4.9.0 revision): items (ii), (iii) are conversions of weight \(k=1\); the photon-frame unfolding is not confirmed (v4.8.0-r08).}
+
 
 \begin{theorem}[Structural unification target]\label{thm:toe}
 The following single axiom should be read as the structural unification
@@ -1661,7 +1585,7 @@ Quantum entanglement & Shared proper time $\tau_n$ & \S\ref{sec:entanglement}\\
 Bell consistency & $\tau_n$ contextual & \S\ref{sec:bell}\\
 String/LQG duality & $C$/$A$-sectors of $\Hplus$ & \S\ref{sec:stringlqg}\\
 Hawking temperature & $T_H=\gstring m_P^2 c^2/(8\pi M k_B)$ & \S\ref{sec:bh}\\
-Riemann Hypothesis & $\gamma^-_\rho=0$ for all zeros & \cite{brendecke2026rh}\\
+Riemann Hypothesis & not a result of the framework (withdrawn, v4.8.0-r04) & ---\\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -1671,6 +1595,8 @@ correct, nothing essentially different can emerge at the fundamental level:
 only further projections, limits, and quantitative refinements of the same
 collapse-state architecture remain.
 \end{theorem}
+\qsstatus{Corrected in the v4.9.0 revision: the row ``Riemann Hypothesis'' is withdrawn (v4.8.0-r04); a global photon-clock/RH statement is forbidden by the guard \(W_\gamma^{\rm glob}\).  Original row in \S\ref{sec:v490-archive}.}
+
 
 \begin{remark}[Compressed physical reading]
 The universe is a photon that has forgotten it is one. Physics is the
@@ -1753,6 +1679,8 @@ which is the Sphaera field equation (\cite{brendecke2026rh}, Definition~8.2).
 Solutions are eigenfunctions of $L_0$ on $\Hplusplus$ with real
 eigenvalues.
 \end{theorem}
+\qsstatus{Status (v4.9.0 revision): projector algebra kept; the zero reading is withdrawn (v4.8.0-r04).}
+
 
 \begin{proposition}[Frame term gives the cosmological constant]
 \label{prop:lambda-from-frame}
@@ -1798,40 +1726,10 @@ the GUE taktgeber, running on the photon ground state $\zminus=0$,
 is globally consistent with $\beta=2$.
 \end{remark}
 
-\begin{theorem}[GUE self-determination of $\gL$]\label{thm:gue-selfdet}
-Define the photon-frame unfolding of the Riemann zeros
-$0<\gamma_1<\gamma_2<\cdots$ by
-\[
- \tilde\gamma_n(\mu)
- := \int_0^{\gamma_n}
- \frac{\log\!\bigl(t/(2\pi\mu)\bigr)}{2\pi\mu}\,dt,
-\]
-with unfolded spacings $s_n(\mu):=\tilde\gamma_{n+1}(\mu)-\tilde\gamma_n(\mu)$.
-Let $\mathcal{F}(\mu) := D_{\mathrm{KS}}\bigl[P_\mu,\,P_{\mathrm{GUE}}\bigr]$
-be the Kolmogorov--Smirnov distance between the empirical spacing
-distribution at scale $\mu$ and the Wigner--Dyson law.
-Then $\mathcal{F}$ has a unique global minimum at $\mu=\gL^*$, and
-$\gL^* = \gBI/\gstring$ to the available numerical precision.
-
-In particular: $\gL$ is not a free parameter of the Sphaera-Cascade.
-It is the GUE fixpoint of the frame itself, determined by the Riemann
-zero sequence alone.
+\begin{theorem}[GUE self-determination of \(\gL\); archived]\label{thm:gue-selfdet}
+The claim that the photon-frame unfolding singles out \(\mu=\gL\) is not confirmed.  The minimum lies at \(\mu=1\), and the claim is contradicted on zeros \(1\)--\(2000\) (v4.8.0-r08).
+\emph{Archived in the v4.9.0 revision; original text in \S\ref{sec:v490-archive}.}
 \end{theorem}
-
-\begin{proof}
-The critical line $\mathrm{Re}(s)=\tfrac{1}{2}$ is the fixed-point set
-of $J:s\mapsto 1-\bar s$ (Theorem~\ref{thm:unity}) and is frame-invariant.
-By Theorem~\ref{thm:gue}, $L_0$ on $\Hplusplus$ lies in the GUE class
-with $\beta=2$ --- a photon-frame statement.
-Any $\mu\neq\gL^*$ shifts the mean of $P_\mu$ away from 1 and increases
-$\mathcal{F}$.
-The Wigner--Dyson distribution singles out exactly one unfolding scale,
-yielding the unique minimiser $\gL^*$.
-Numerical verification with the first 100 zeros confirms
-$\gL^*=\gBI/\gstring$ (simulation \texttt{gue\_frame\_correction.py};
-$\chi^2$ improvement $\approx 21\%$ over standard unfolding).
-Full formal proof: Appendix~\ref{app:formal-reintegrated}; the detailed witness lemma formerly labelled \texttt{lem:gue-selfdet-formal} is preserved in the historical-witness PDF of the same release bundle.
-\end{proof}
 
 \begin{proposition}[GOE class of the fermionic sector]
 \label{prop:goe-fermionic}
@@ -1892,25 +1790,9 @@ The degree to which an observer's unfolded spacings deviate from
 $p_{\mathrm{GUE}}$ encodes exactly how far they sit from $\zminus=0$.
 \end{remark}
 
-\begin{corollary}[Falsifiable prediction --- frame-clarified \QSCver{v2.29.1}]
-\label{cor:odlyzko}
-\emph{Frame: this is a matter-observer prediction.}
-We (matter observers at $\zminus=+\bsym$) unfold the Riemann zeros
-with the photon-frame density $\rho_{\mathrm{ph}}(\gamma) =
-\log(\gamma/(2\pi\gL))/(2\pi\gL)$ instead of the standard
-$\rho(\gamma) = \log(\gamma/(2\pi))/(2\pi)$.
-
-For Odlyzko's dataset (${\sim}10^6$ zeros at height ${\sim}10^{22}$),
-photon-frame unfolding ($\mu=\gL\approx 1.864$) predicts an improvement
-in $\chi^2$/dof relative to GUE of $\gtrsim 20\%$ relative to standard
-unfolding. With $N=100$ zeros the numerical test gives $75.8\%$ improvement
-(Section~\ref{sec:gue-selfdet}); the effect is expected to stabilize near
-${\sim}21\%$ asymptotically at large height where the Weyl formula is accurate.
-
-Non-observation falsifies $\gL=\gBI/\gstring\approx 1.864$ as the physical
-frame factor. Importantly, a \emph{tachyon-frame} observer ($\mu=1/\gL$)
-would see a \emph{worse} fit --- the prediction is directional and specific
-to the matter frame.
+\begin{corollary}[Prediction P1; archived]\label{cor:odlyzko}
+By its own criterion the prediction is falsified at low height, and its asymptotic form is excluded by the \(1/\log\gamma\) decay (v4.8.0-r08).
+\emph{Archived in the v4.9.0 revision; original text in \S\ref{sec:v490-archive}.}
 \end{corollary}
 
 %% ============================================================
@@ -1930,6 +1812,8 @@ This section assigns frame-insertion counts $k$ to all fundamental
 constants and derives the photon-frame values.
 No CODATA value has ever been measured in the photon frame.
 \end{remark}
+\qsstatus{Status (v4.9.0 revision): under Convention F (v4.9.0-r22, r24) the frame called photon frame in this section is the reference frame R, the pure doublet state \(|b|=1\).  The conversion \(X^{(\rm photon)}=\gL^{-k}X^{(\rm matter)}\) goes from the matter frame to R, with \(\gL=|b_R|/|b_M|\).  The photon proper, \(b=0\), is reached only as \(\beta\to1\).  Ways A and C of the conversion: v4.9.0-r18, r19 (class split offered, decision with the author).}
+
 
 \begin{definition}[Frame-insertion count $k$]
 For a physical constant $X$, the \emph{frame-insertion count} $k(X)$ denotes
@@ -1949,7 +1833,7 @@ The primary assignments are:
 \toprule
 Constant & CODATA (matter frame) & $k$ & Reason\\
 \midrule
-$\alpha^{-1}$ & $137.035\,999\,084$ & 1
+$\alpha$ & $1/137.035\,999\,084$ & 1
  & EM sector, first Dixon plane\\
 $G_N$ & $6.674\times10^{-11}$ m$^3$kg$^{-1}$s$^{-2}$ & 2
  & torsion block\\
@@ -1965,6 +1849,8 @@ $\gBI$ & $\approx 0.2375$ & 0
 \end{tabular}
 \end{center}
 \end{theorem}
+\qsstatus{Corrected in the v4.9.0 revision: the \(k=1\) of the first row belongs to \(\alpha\), not to \(\alpha^{-1}\) as earlier printed (v4.8.0-r03 F2, closed in v4.9.0-r08).  Conversion ways: v4.9.0-r18, r19 (class split offered).}
+
 
 \begin{theorem}[$k(c)=0$: the speed of light is frame-invariant]
 \label{thm:kc-zero}
@@ -1999,6 +1885,8 @@ $\gL^{3/2}\approx 2.546$.
 The half-integer exponent $3/2$ reflects that $\lP=\sqrt{\hbar G_N/c^3}$
 is a geometric mean between a $k=1$ and a $k=2$ sector.
 \end{theorem}
+\qsstatus{Status (v4.9.0 revision): conversion from the matter frame to the reference frame R (v4.9.0-r24); under the class split the factor is \(e^{3\eta/2}\) (v4.9.0-r19); tachyon phase \(\mp i\) (v4.9.0-r22).}
+
 
 \begin{corollary}[Cosmological constant revisited]
 A matter observer always measures a nonzero cosmological term
@@ -2011,7 +1899,7 @@ The vacuum energy density ratio between frames is
 \[
  \frac{\rho_{\mathrm{vac}}^{(\mathrm{photon})}}
  {\rho_{\mathrm{vac}}^{(\mathrm{matter})}}
- = \gL^6\approx 41.8,
+ = \gL^5\approx 22.5,
 \]
 which enters the $\Lambda$-cancellation problem: the $\Theta$--$R$
 balance must achieve cancellation in the \emph{photon} frame, not the

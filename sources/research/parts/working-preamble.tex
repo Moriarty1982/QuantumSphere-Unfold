@@ -3,7 +3,10 @@
 % (draft deposition 23534954) and becomes public with the release.
 % Compact title page: exactly one Version DOI line and one Concept DOI line;
 % previous-version DOIs are recorded in the reading route, not here.
-\newcommand{\workingversion}{4.9.0}
+% Since the 4.10 base (2026-10-22) the parts in parts/v470/ are no longer frozen; their frozen state is
+% tagged v4.9.0.  No 4.10 Version DOI is reserved yet; until then the title page shows the Version DOI of
+% the latest published version (v4.9.0).
+\newcommand{\workingversion}{4.10.0-draft}
 % A chapter-level contents list; all subsection records and body text remain.
 \setcounter{tocdepth}{1}
 \title{Quantum Sphaera Companion:\\A Structure-First Mathematical Unfolding}
@@ -12,9 +15,13 @@
   \small Version DOI: \href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954}\\
   \small Concept DOI: \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}\\
   \small Preprint; not peer reviewed.}
-\date{2026-10-21 --- v\workingversion}
+\date{2026-10-22 --- v\workingversion}
 \hypersetup{
-  pdftitle={Quantum Sphaera Companion: A Structure-First Mathematical Unfolding (v4.9.0)},
-  pdfsubject={v4.9.0; Version DOI 10.5281/zenodo.23534954; Concept DOI 10.5281/zenodo.19210728; full source retained with the v4.8.0 layers carried in; conditional results; guarded effective/local scope},
+  pdftitle={Quantum Sphaera Companion: A Structure-First Mathematical Unfolding (v4.10.0-draft)},
+  pdfsubject={v4.10.0-draft on the 4.10 base (revised main body, archive of dead ends); latest published Version DOI 10.5281/zenodo.23534954 (v4.9.0); Concept DOI 10.5281/zenodo.19210728; full source retained with the v4.8.0 layers carried in; conditional results; guarded effective/local scope},
   pdfkeywords={Quantum Sphaera, structure-first mathematics, Cartan comparison, Koide relation, pre-registered tests, conditional premises, no global closure}
 }
+
+% v4.9.0 revision (4.10 base): status notes and archived originals.
+\newcommand{\qsstatus}[1]{\par\smallskip\noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{\small #1}}\par\smallskip}
+\newenvironment{qsarchived}[1]{\par\medskip\noindent\textbf{Archived original of #1.}\par\begin{quote}\small}{\end{quote}\par}
