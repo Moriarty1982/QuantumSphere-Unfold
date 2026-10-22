@@ -7,3 +7,4 @@ import QSFormal.StateDisk
 import QSFormal.Boost
 import QSFormal.Entropy
 import QSFormal.ClockBound
+import QSFormal.Frames
