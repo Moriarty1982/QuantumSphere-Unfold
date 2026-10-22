@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v7.6
+# Kernkarte Quantum Sphaera — v7.7
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1646,6 +1646,22 @@ Rapiditäten addieren, für Zahlengleichheit zusätzlich Tribonacci-Punkt.
 (r07), γ_BI/γ_string. Spannung r07 ↔ r17 aufgelöst (verschiedene Klassen). Angebotene Lesart; Entscheidung 5 von r15 beim Autor.
 R_conv = (0,0,1).
 
+### K63 — Companion-Runde v4.9.0-r19: Klassentrennung auf den Hauptkorpus angewandt (2026-10-22)
+
+`sec:v490-r19-class-split-applied`, Snippet `llm/v490_r19_round.tex`, Skript `llm/k58_klassentrennung.py`.
+
+**K63.1 (M).** Regel: Monom in k-gewichteten Konstanten → Skala, e^{kη} (Weg C); Zustandsfunktion → Auslese, γ_L (Weg A).
+Klasse allein aus der Form, vor dem Ablesen der Vergleichswerte. α ist trotz Dimensionslosigkeit Skala (k = 1). Je
+z₋-Einfügung ein Doppler-Faktor; Gewichte additiv, auch k(ℓ_P) = 3/2.
+
+**K63.2 (D).** Skalenstellen ändern sich um 0,55–2,7 %, keine Aussage kippt: ℓ_P^ph 6,40·10⁻³⁶ m, Vakuum 21,92, Matter-Rest
+10^−120,7, Neutrino 11,82, hvp-Faktor 0,539, Λ_bare^ph 58,1, rem:open 2,37·10⁻⁴, γ₁^ph 7,623, β_eff 3,708.
+
+**K63.3 (M).** Wo es zählt: P5 = k(α)/k(G_N) = 1/2 exakt (r09-Korrektur folgt aus der Regel); P3 verliert den Treffer
+(0,54847, −0,15 %; selbstkonsistent −0,19 %), passt zur r09-Einstufung „Koinzidenz“; P6: γ_BI = T_Sphaera/T_H^tachyon nur noch
+auf −0,55 % (γ_string e^η = 0,23619), exakt nur am Tribonacci-Punkt. Unverändert (Auslese): P2, H15, Ω_M, thm:frame-offset.
+R_split = (0,0,1).
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1757,6 +1773,7 @@ R_conv = (0,0,1).
 - v7.4 (2026-10-22): K60 Companion-Runde v4.9.0-r16 (Autorentscheidungen).
 - v7.5 (2026-10-22): K61 Companion-Runde v4.9.0-r17 (Entropie, Informationssingularität, Skalen-Dimension).
 - v7.6 (2026-10-22): K62 Companion-Runde v4.9.0-r18 (Wege A und C zugleich: Klassentrennung Skala/Auslese).
+- v7.7 (2026-10-22): K63 Companion-Runde v4.9.0-r19 (Klassentrennung angewandt: P5 = 1/2 automatisch, P3 verloren, P6 nur genähert).
 
 ---
 
