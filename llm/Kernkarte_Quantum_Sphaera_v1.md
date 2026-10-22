@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v7.3
+# Kernkarte Quantum Sphaera — v7.4
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1603,6 +1603,13 @@ ebenfalls ausgeschlossen ⇒ Proposition ohne Grundlage.
 (thm:frame-offset strukturell? C5 = Drehen/Kompensieren? Triole auf arg s / diskrete Auslese? W_clk^loc auf R_A?
 Wege A–C? dark-energy (a) oder (c)?). Guards unverändert.
 
+### K60 — Companion-Runde v4.9.0-r16: Autorentscheidungen (2026-10-22)
+
+**K60.1 (Autor).** thm:frame-offset ist eine Aussage über den festen strukturellen Faktor γ_L = γ_BI/γ_string ⇒ die
+r09-Widersprüche zur k-Tabelle sind gelöst. Die C5-Rekursion als gekickte Dualitätsdrehung mit Auslese an
+Triole ∪ J_B(Triole) ist die ursprünglich gemeinte Lesart des Autors (Status: Autorlesart, keine Herleitung aus dem
+früheren Text); r10.2 gilt unter ihr. Offen (Autor): Wege A–C der Umrechnung; thm:dark-energy Weg (a) oder (c).
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1711,6 +1718,7 @@ Wege A–C? dark-energy (a) oder (c)?). Guards unverändert.
 - v7.1 (2026-10-22): K57 Companion-Runde v4.9.0-r13 (Zeitskala: τ_k = T_b/6).
 - v7.2 (2026-10-22): K58 Companion-Runde v4.9.0-r14 (Kick-Richtungen Triole ∪ J_B(Triole)).
 - v7.3 (2026-10-22): K59 Companion-Runde v4.9.0-r15 (Sammelregister, r17-Weg (b) ausgeschlossen).
+- v7.4 (2026-10-22): K60 Companion-Runde v4.9.0-r16 (Autorentscheidungen).
 
 ---
 
