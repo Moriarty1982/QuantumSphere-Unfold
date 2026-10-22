@@ -301,9 +301,24 @@ Folge: Lokaler Faktor = Potentialkopplung mit dem Muster β_X = k(X) κ. Die Com
 Atomuhr und G_N koppeln mit 2κ. Nebenbefund: P5 ist doppelt falsch gerechnet. Aus dem k-Gesetz folgt
 (δα/α)/(δG/G) = k(α)/k(G_N) = 1/2. P5 schreibt γ_L^{−1} = 0,537, und der Ausdruck dort ergäbe sogar 0,268.
 
+### Berichtigung zu E14 (2026-10-22): Schranke für die Potentialkopplung nachgeprüft
+
+E14 hatte die Potentialkopplung aus dem Gedächtnis abgeschätzt: Filzinger 2023, umgerechnet mit einer Empfindlichkeit
+von etwa −7, ergebe etwa 3 · 10⁻¹⁰ ± 4 · 10⁻¹⁰ für α, also eine Größenordnung über dem Wert der Quelle. Nachgeprüft:
+- **Verifiziert** (Abstract von Lange et al., arXiv:2010.06620):
+  (c²/α) dα/dΦ = 14(11) · 10⁻⁹ und (c²/μ) dμ/dΦ = 7(45) · 10⁻⁸, aus der jährlichen Änderung des Sonnenpotentials.
+- **Nicht verifiziert:** Der Wert von Filzinger et al. 2023, (−2,4 ± 3,0) · 10⁻⁹, ist nur aus einer Übersicht
+  (arXiv:2410.07281) bekannt. Welche Größe er beschreibt und ob die Umrechnung mit −7 nötig ist, ist offen.
+
+Folge: κ ≈ 10⁻¹⁰ aus P5 liegt mindestens zwei Größenordnungen unter der verifizierten Schranke (Lange 2021). Liegt
+der Filzinger-Wert direkt für α vor, sind es etwa eineinhalb Größenordnungen. Die Aussage „verträglich, heute nicht
+prüfbar“ bleibt. Die frühere Formulierung „etwa eine Größenordnung unter der heutigen Empfindlichkeit“ war zu
+optimistisch. Das Kopplungsmuster β_X = k(X) κ ließe sich nur mit einer Kombination aus Uhren prüfen, deren k-Werte
+die Quelle angibt. Für μ = m_p/m_e fehlt k(m_p).
+
 ## Stand
 
-15 Einträge, davon 8 gezählte Versuche. E15: nur die Potentiallesart überlebt, P5 korrigiert auf 1/2.
+15 Einträge, davon 8 gezählte Versuche. Nachtrag: E14-Schranke verifiziert und berichtigt. E15: nur die Potentiallesart überlebt, P5 korrigiert auf 1/2.
 
 Vorige Zwischenbilanz: 14 Einträge, davon 8 gezählte Versuche. E14: Der lokale Faktor hängt laut Dokument von Beobachter, Zeit, Erdbahn und
 Potential ab, ohne Feldgesetz. Zwei neue innere Widersprüche zwischen `thm:frame-offset` und `thm:k-values`.
