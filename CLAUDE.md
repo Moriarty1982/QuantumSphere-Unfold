@@ -90,7 +90,7 @@ Nicht in diesem Verzeichnis, aber referenziert: `RC14_uncompressed_reference_sou
 
 ## Der Runden-Workflow
 
-Die **Runden** wachsen append-only: eine neue Runde ist ein neuer Abschnitt unmittelbar vor `\end{document}`, bestehende Runden werden nicht umgeschrieben. Aktueller Stand: **r94**, **v4.8.0-r20**, **v4.9.0-r27**. Runden der v4.8.0-Linie heißen `v4.8.0-rNN` (Labels `sec:v480-rNN-...`), danach `v4.9.0-rNN` (`sec:v490-rNN-...`); `qs.py outline` und `ledger` erkennen alle Formen. Inhalt jeder Runde ausführlich in der Kernkarte (`llm/Kernkarte_Quantum_Sphaera_v1.md`, Abschnitt 7).
+Die **Runden** wachsen append-only: eine neue Runde ist ein neuer Abschnitt unmittelbar vor `\end{document}`, bestehende Runden werden nicht umgeschrieben. Aktueller Stand: **r94**, **v4.8.0-r20**, **v4.9.0-r28**. Runden der v4.8.0-Linie heißen `v4.8.0-rNN` (Labels `sec:v480-rNN-...`), danach `v4.9.0-rNN` (`sec:v490-rNN-...`); `qs.py outline` und `ledger` erkennen alle Formen. Inhalt jeder Runde ausführlich in der Kernkarte (`llm/Kernkarte_Quantum_Sphaera_v1.md`, Abschnitt 7).
 
 **Der Hauptkorpus wird seit v4.9.0-r25 überarbeitet** (Autorauftrag 2026-10-22: alte Arbeit nicht verlieren, falsche Aussagen nicht stehen lassen). Regel (`sec:v490-r25-main-body-revision`, Skript `llm/aufraeumen_v490.py`):
 - **(A) Sackgasse** (widerlegt, ausgeschlossen, zurückgezogen): Original wortgleich in den Archiv-Anhang `sec:v490-archive`; an der alten Stelle bleibt dieselbe Umgebung mit **gleicher Nummer und gleichem Label**, kurzer Aussage dessen, was bleibt, und Verweis. Alle `\ref` lösen weiter auf.
@@ -124,12 +124,13 @@ Guard-Linter für neue Runden: `python llm/training/guard_linter.py <tex> --star
 | r17 | Zustandsscheibe: γ_L = 1/abs(b), Eigenwerte 3/4, 1/4 am Hopf-Punkt; Photon = Informationssingularität; Skalen-Dimension σ |
 | r18–r19 | Klassentrennung: Skalengrößen Weg C (e^{kη}), Auslesegrößen Weg A (γ_L); auf den Hauptkorpus angewandt (angebotene Lesart) |
 | r20–r21 | Herkunft von Δ_γ < 1/5: Photon-Frame-Uhrgewinn am Hopf-Punkt; 1/5 als einzige frame-konsistente Schranke hergeleitet (D1–D5), gemessen Materie 0,1925 |
-| r22 | **Konvention F**: Materie M, Tachyon T = J_B-Bild (β² → 1/β², γ → −γ), Photon P = entarteter Fixpunkt; Pflichtabschnitt `subsec:v490-rNN-frames` |
+| r22 | **Konvention F**: Materie M, Tachyon T = Bild unter z → iz (β² → 1/β², γ → −γ, Ports getauscht; in r22 als „J_B-Bild“ bezeichnet, korrigiert in r28), Photon P = entarteter Fixpunkt; Pflichtabschnitt `subsec:v490-rNN-frames` |
 | r23 | F auf 113 Hauptkorpus-Aussagen angewandt (Liste `llm/k62_frame_regel_hauptkorpus.py`) |
 | r24 | Widersprüche als Ein-Frame-Artefakte: β-Vorzeichen = Orientierungscode, Hauptkorpus-Tachyon = Projektion T\|_R (−β), Hauptkorpus-„Photon-Frame“ = Bezugsframe R (reiner Zustand); F5–F7 |
 | r25 | **Überarbeitung des Hauptkorpus**: 15 Sackgassen archiviert, bekannte Fehler korrigiert, Statusvermerke |
 | r26 | Vorab-Test H16 (Grad-6-Potentiale auf dem Tripel-Raum) widerlegt; Theoremlet r26.1: bis Grad 6 ist jeder kritische Punkt mit drei verschiedenen Normen ein Sattel, Minima mit Hierarchie brauchen Grad ≥ 8 |
 | r27 | **Dynamik-Modell**: Dualitätsdrehung plus Kompensator-Messung; selektiv 3/4 je Schritt, n = 20; ein Kick aus R gibt den Hopf-Zustand, gemessener Abstand ⇔ Kickwinkel 28,78°; Photon Attraktor; ändert s (außerhalb Lesart-B-Transporte); kein endlicher Score-Nullpunkt |
+| r28 | Tachyon als Messgerät: ideal aus Bezugszustand mit T-Kopplung, nicht über J_B/C; Selbstmessung durch Tausch mit eigenem Tachyonbild; Feld allein nicht selbststabilisierend, mit nachgefülltem Tachyon-Reservoir eindeutiger Attraktor (am Hopf-Punkt selbstkonsistent, nachträglich); **Korrektur: Tachyon-Abbildung in r21/r22/r27 ist z → iz, nicht J_B** |
 
 Ältere Runden (r03–r94, v4.8.0-r01–r20): Kernkarte und die genannten Register. Kurzstand v4.8.0: Lesart B (ℂ³, SO(3,ℂ)) als Arbeitslesart, Sektoren nach Vorzeichen von s, vorab festgelegte Tests H2–H13 mit Ergebnissen, Riemann-Arbeit seit r04 keine Beweisquelle.
 
@@ -140,7 +141,7 @@ Eine Runde folgt einem festen Muster:
 3. Source-only-Klausel (kein PDF, keine neue DOI, kein Public Release, sofern nicht ausdrücklich anders beauftragt) mit der v4.9.0-Version-DOI
 4. Inhalt als Theoremlet mit `\paragraph{Theoremlet rNN.}` und `\paragraph{Proof sketch.}`, abgeschlossen mit `\(\square\)`
 5. Guard-Update am Ende: die Residual- und Guard-Vektoren der Runde
-6. **Ab v4.9.0-r22 (Konvention F):** ein Abschnitt `\subsection*{v4.9.0-rNN status in the three frames}` mit `\label{subsec:v490-rNN-frames}`, der für jedes Ergebnis den Stand in Materie-, Tachyon- und Photon-Frame angibt (Tachyon = J_B-Bild, Photon = entarteter Fixpunkt; frame-frei nur, wenn Materie und Tachyon übereinstimmen). Der Guard-Linter meldet Runden ab r22 ohne dieses Label.
+6. **Ab v4.9.0-r22 (Konvention F):** ein Abschnitt `\subsection*{v4.9.0-rNN status in the three frames}` mit `\label{subsec:v490-rNN-frames}`, der für jedes Ergebnis den Stand in Materie-, Tachyon- und Photon-Frame angibt (Tachyon = Bild unter der Dualitätsdrehung z → iz, nicht J_B; Photon = entarteter Fixpunkt; frame-frei nur, wenn Materie und Tachyon übereinstimmen). Der Guard-Linter meldet Runden ab r22 ohne dieses Label.
 
 ## Guard-Disziplin — die wichtigste Regel
 
@@ -262,6 +263,6 @@ Unter derselben Toolchain: RC19 1014 Seiten / 3290 Labels, RC20 1016 / 3296, RC2
 - **C5-Faktor 3/4** — r94 deklariert; Autorlesart seit v4.9.0-r16: gekickte Dualitätsdrehung (r10, r11, r14); als Eigenwert 3/4 = p₊ am Hopf-Punkt (r17).
 - **C5 Form (iii)** — offen; Zeugen aus der Transportgruppe von Lesart B ausgeschlossen (r10); bräuchte Dynamik.
 - **Autorentscheidungen offen:** Wege A–C der Konstantenumrechnung (Klassentrennung r18/r19 angeboten), Epoche von `thm:dark-energy`, Reservierung einer 4.10-Version-DOI, sobald 4.10 veröffentlicht werden soll.
-- **Dynamik**: v4.9.0-r27 schlägt ein Modell vor (Drehung plus Kompensator-Messung, ändert s); offen bleiben der messende Agent, die Einheit der Uhr, κ und ein Form-(iii)-Zeuge mit endlichem Nullpunkt (das Modell liefert keinen).
+- **Dynamik**: v4.9.0-r27 schlägt ein Modell vor (Drehung plus Kompensator-Messung, ändert s); r28: Messgerät kann der Tachyon sein (T-Kopplung), stabiler Zustand nur mit nachgefülltem Tachyon-Reservoir; offen bleiben die Quelle dieses Reservoirs, die Einheit der Uhr, κ und ein Form-(iii)-Zeuge mit endlichem Nullpunkt (das Modell liefert keinen).
 
 Zum C5-Stand: Die Frage „gibt es einen endlichen Abschluss?" zerfällt in (a) *innerhalb* der multiplikativen Kollar-Rekursion — beweisbar nein, allein wegen `q > 0` — und (b) *außerhalb* davon. r88 schließt zwei der drei Kandidatenformen für (b); offen bleibt nur Form (iii): ein Zeuge außerhalb der Kollar-Iteration, der die Obstruktion selbst erreicht statt den Score.

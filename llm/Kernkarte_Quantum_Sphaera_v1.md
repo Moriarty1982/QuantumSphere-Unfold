@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v8.5
+# Kernkarte Quantum Sphaera — v8.6
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1804,6 +1804,24 @@ verlangt). Dichte Kicks: Γ = 2ω²τ → 0 (Zeno), kontinuierlich Dephasierung 
 (Vierteldrehung, durch C4/C6 blockiert, r12.2(c)); α = π/4 erreicht b = 0 in einem Schritt, Score dort 1/2. Offen: Uhr-Einheit,
 κ, messender Agent. Form (iii) offen. R_dyn = (0,0,1).
 
+### K72 — Companion-Runde v4.9.0-r28: Wer misst? Tachyon als Messgerät, Selbststabilisierung, Korrektur der Tachyon-Abbildung (2026-10-22)
+
+`sec:v490-r28-who-measures`, Snippet `llm/v490_r28_round.tex`, Skript `llm/k65_messgeraet_tachyon_feld.py` (sechs Varianten vorab
+festgelegt, eine Prüfung nachträglich).
+
+**K72.1 (D).** Korrektur: C_HC = ½(1 + J_B), J_B lässt die Kompensator-Ports fest und kehrt nur b_z = Re s/2u um. Die in r21, r22
+(Konvention F) und r27 als „J_B-Bild“ bezeichnete Tachyon-Abbildung (b → −b, Ports getauscht, x → 1/x) ist die Dualitätsdrehung
+z → iz (v4.8.0-r07.2), ρ → σ_y ρ σ_y. Ergebnisse unverändert. Beide Abbildungen kehren Re s um; J_B behält die Seite sgn(E·B), z → iz wechselt sie.
+
+**K72.2 (M).** Tachyon als Messgerät: ideal (D = 0) aus seinem Bezugszustand mit Kopplung über T = σ_z; über J_B oder C keine Messung
+(D = 1); als Bild des Systems teilweise (0,50 / 0,87). Tausch mit dem eigenen Tachyonbild: b → cos 2θ b, radialer Schritt von r27,
+π/6 aus R gibt Hopf; Fluss zum Photon (Selbstmessung ohne äußeres Gerät).
+
+**K72.3 (M).** Feld allein: zwei Frequenzen |D|² = 3/4 nach einem Kickabstand (derselbe Winkel wie r13), volle Wiederkehr nach 6 →
+reversibel; 40 Frequenzen Kohärenz ≈ N^(−1/2) mit Teil-Wiederkehr → nur näherungsweise. Mit nachgefülltem Tachyon-Reservoir:
+eindeutiger Attraktor |b| = sin²θ/(1 − cos²θ cos 2α) auf der Partnerport-Achse (selbststabilisiert, offenes System). Nachträglich:
+sin²θ = β² selbstkonsistent genau bei β² = 1/3 (Hopf), gemessen 0,4825 gegen 0,5364. R_meas = (0,0,1).
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1925,6 +1943,8 @@ verlangt). Dichte Kicks: Γ = 2ω²τ → 0 (Zeno), kontinuierlich Dephasierung 
 - v8.4 (2026-10-22): K70 Vorab-Test H16 (Grad-6-Potentiale auf dem Tripel-Raum) widerlegt; Theoremlet r26.1 (bis Grad 6 nur Sattelpunkte); Companion-Runde v4.9.0-r26; K32.3 neu eingeordnet.
 
 - v8.5 (2026-10-22): K71 Companion-Runde v4.9.0-r27 (Dynamik: Drehung plus Kompensator-Messung).
+
+- v8.6 (2026-10-22): K72 Companion-Runde v4.9.0-r28 (Tachyon als Messgerät, Selbststabilisierung, Tachyon-Abbildung z → iz).
 
 ---
 

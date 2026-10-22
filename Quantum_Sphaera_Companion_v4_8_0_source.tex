@@ -71865,4 +71865,155 @@ R_{\rm glob}^{(v490\text{-}r27,+)}=(0,1,1,1,1),
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
 
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r28 Source-Only: Who Measures? The Tachyon as Measuring Device, Self-Stabilisation of the Field, and a Correction of the Tachyon Map}
+\addcontentsline{toc}{section}{v4.9.0-r28 Source-Only: Who Measures? The Tachyon as Measuring Device, Self-Stabilisation of the Field, and a Correction of the Tachyon Map}
+\label{sec:v490-r28-who-measures}
+% ============================================================================
+
+\paragraph{Purpose.}
+r27 left open what performs the compensator measurement.  On 2026-10-22 the author asked whether the tachyon can be the
+measuring device, and whether the generating field may stabilise itself.  This layer tests six variants fixed in advance in the
+script \texttt{llm/k65\_messgeraet\_tachyon\_feld.py}, and reports one further check that was added after the fact.  On the way it
+corrects the name of the tachyon map used since r21.  No new prediction is made, and nothing is compared with data.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r28 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r28 correction: the tachyon map is the duality rotation \texorpdfstring{\(z\mapsto iz\)}{z -> iz}}
+\label{subsec:v490-r28-correction}
+
+On the doublet, \(J_B=\sigma_x\) and \(C_{\HC}=\tfrac12(1+\sigma_x)=\tfrac12(1+J_B)\) (r04).  So \(J_B\) leaves the compensator ports
+fixed, with eigenvalue \(+1\) on \(C_{\HC}\) and \(-1\) on \(A\).  On the state disk it reverses only \(b_z=\operatorname{Re}s/2u\).  The map
+that r21, r22 (Convention F) and r27 attribute to the tachyon reverses the whole Bloch vector, \(b\mapsto-b\), and exchanges the
+ports.  That is the duality rotation \(z\mapsto iz\) of v4.8.0-r07.2, acting on states as \(\rho\mapsto\sigma_y\rho\sigma_y\).  Both maps
+send matter to tachyon, since both reverse \(\operatorname{Re}s\).  \(J_B\) keeps the side \(\operatorname{sgn}(E\cdot B)\) of r02, and
+\(z\mapsto iz\) changes it.
+
+\paragraph{Correction.}
+In r21 (premise D2, the clock seed as image of \(V3\)), in r22 (Convention F, definition of T) and in r27 (frame table), read
+``\(J_B\) image'' as ``image under the duality rotation \(z\mapsto iz\)''.  Every property those layers use holds for that map: \(b\mapsto-b\),
+exchange of \(p_\pm\) between the ports, \(x\mapsto1/x\), \(\gamma\mapsto-\gamma\), and \(AR_\alpha A=\cos\alpha\,A\).  No result of those
+layers changes.  The earlier layers are not rewritten.
+
+\subsection*{v4.9.0-r28 the tachyon as measuring device}
+\label{subsec:v490-r28-tachyon-meter}
+
+A device measures the compensator ports when the system port controls an operation \(W\) on it.  The coherence between the ports
+is then multiplied by \(D=\operatorname{tr}(\rho_{\rm dev}W)\).  The measurement is ideal when \(D=0\).
+
+\paragraph{Theoremlet v4.9.0-r28.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] A tachyon in its reference state, on its compensator axis (\(b=(-1,0)\), the partner port of matter), is an ideal measuring
+device when it couples through time reversal \(T=\sigma_z\): \(D=0\), and the port weights stay \(3/4\) and \(1/4\).  Through \(J_B\) or
+through \(C=-1\) it does not measure (\(D=1\)), because its reference state is an eigenstate of both.
+\item[(b)] A tachyon that is the image of the system itself measures only partly: \(D=0.50\) through \(J_B\) and \(D=0.87\) through \(T\),
+for the state after one \(\pi/6\) step from R.
+\item[(c)] An exchange (partial swap, angle \(\theta\)) of the system with its own tachyon image contracts the whole Bloch vector,
+\(b\mapsto\cos2\theta\,b\).  This is the radial part of the non-selective step of r27 with \(\theta=\alpha\).  At \(\theta=\pi/6\) one exchange
+takes R to the Hopf state.  Repeated with the \(\pi/6\) rotation, every state flows to the photon \(b=0\).
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a), (b) controlled-\(W\) coupling and partial trace; numerically \(D\) as stated.  (c) \(b\) and \(-b\) commute, so the partial swap of
+\(\rho\otimes\sigma_y\rho\sigma_y\) gives \(\cos^2\theta\,\rho+\sin^2\theta\,\sigma_y\rho\sigma_y\).  \(\square\)
+
+\paragraph{Reading.}
+The tachyon can be the measuring device.  Two conditions apply: it must start in its reference state, and it must couple through
+time reversal.  That matches r02, where the round trip through the tachyon runs through \(T\).  Matter that exchanges content with
+its own tachyon image measures itself, with no outside apparatus.  This self-measurement drives the state to the photon, as in r27.
+
+\subsection*{v4.9.0-r28 does the field stabilise itself?}
+\label{subsec:v490-r28-self-stabilisation}
+
+\paragraph{Theoremlet v4.9.0-r28.2.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \emph{Field alone, two frequencies} (clock model of r15, kick interval one sixth of the beat, r13).  The port coherence falls
+to \(|D|^2=3/4\) after one interval.  This is the same angle \(\pi/6\) as in r13, not an independent confirmation.  It returns to \(1\) after
+six intervals.  The process is reversible and does not measure.
+\item[(b)] \emph{Field alone, many frequencies} (\(40\) heights of zeros as clock frequencies, clock model only).  The coherence falls to
+about \(N^{-1/2}\) (mean \(0.14\) against \(0.16\)) with partial revivals up to \(0.41\).  The field dephases itself only approximately.  An
+exact self-measurement would need the limit \(N\to\infty\).
+\item[(c)] \emph{Field with a replenished tachyon reservoir.}  After each \(\pi/6\) rotation the system exchanges with a fresh tachyon in its
+reference state, at angle \(\theta\).  The state then has a unique attractor, reached from every start, on the partner-port axis:
+\[
+|b|_\infty=\frac{\sin^2\theta}{1-\cos^2\theta\,\cos2\alpha}.
+\]
+At \(\alpha=\pi/6\) this gives \(0.126\), \(0.400\), \(0.667\) and \(0.857\) for \(\theta=15^\circ\), \(30^\circ\), \(45^\circ\) and \(60^\circ\).  This is a self-stabilised state with \(0<|b|<1\).  It exists only while the reservoir is replenished.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a) \(|\tfrac12(1+e^{ik\pi/3})|^2\).  (b) \(K=|N^{-1}\sum e^{i\gamma_mk\tau}|\) over \(k=50,\dots,5000\).  (c) iteration from five starts, spread below
+\(10^{-10}\); the closed form checked symbolically at the four angles.  \(\square\)
+
+\paragraph{A check added after the fact.}
+If the exchange strength is set equal to the offset, \(\sin^2\theta=\bsym^2=x\), the attractor in (c) is self-consistent, in the sense that
+\(|b|_\infty=(1-x)/(1+x)=1/\gamma\), exactly when \(3x^2+2x-1=0\), that is \(x=1/3\), the Hopf point.  At the measured values it is not:
+\(|b|_\infty=0.4825\) against \(1/\gL=0.5364\).  This check was not fixed in advance.  It joins the other results that hold exactly at the
+Hopf point only, and it is recorded as an observation.
+
+\paragraph{Answer to the author's questions.}
+The tachyon can be the measuring device, if it couples through time reversal from its reference state.  The field alone does not
+stabilise itself: with two frequencies it oscillates back, and with many it dephases towards the photon.  A stable state between the
+pure state and the photon arises only in exchange with a tachyon reservoir that keeps being replenished, that is, in an open system.
+At the Hopf point that state is self-consistent.
+
+\subsection*{v4.9.0-r28 status in the three frames}
+\label{subsec:v490-r28-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+correction of the tachyon map & concerns the definition of T; M and P unchanged\\
+r28.1 tachyon as meter & a statement about the M--T pair; at P the ports carry equal weight, and there is nothing to measure\\
+r28.2(a), (b) self-dephasing & frame-free between M and T (only \(|b|\) enters); P is the limit\\
+r28.2(c) attractor & on the partner-port axis of M, the compensator axis of T; not at P for \(\theta>0\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r28 register entries}
+\label{subsec:v490-r28-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r28\\
+\midrule
+tachyon map in r21, r22, r27 & the duality rotation \(z\mapsto iz\), not \(J_B\); results unchanged (correction)\\
+tachyon as measuring device & ideal with \(T\)-coupling from its reference state; none with \(J_B\) or \(C\) (r28.1)\\
+self-measurement & exchange with the own tachyon image reproduces the radial step of r27 (r28.1(c))\\
+self-stabilisation & not for the closed field; yes with a replenished tachyon reservoir, unique attractor (r28.2)\\
+Hopf point & self-consistent attractor for \(\sin^2\theta=\bsym^2\) (post hoc)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r28 ledger and guard update}
+\label{subsec:v490-r28-ledger-guard}
+
+\[
+R_{\rm meas}^{v490\text{-}r28}=(0,0,1)
+\]
+for (meter identified under stated coupling, self-stabilisation classified, the physical source of the replenished reservoir open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r28,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r28}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
 \end{document}
