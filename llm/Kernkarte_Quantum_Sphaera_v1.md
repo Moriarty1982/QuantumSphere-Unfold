@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v7.5
+# Kernkarte Quantum Sphaera — v7.6
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1627,6 +1627,25 @@ zusammenfallen (stützt die Autorvermutung); endliches γ_L entspricht |b| = 1/�
 **K61.3 (M).** Skalen-Dimension σ: komponierbar nur als Rapidität ⇒ Doppler-Gesetz (Weg C); Weg A nur am Tribonacci-Punkt;
 Gewicht-0-Kombinationen σ-invariant. Spannung zur r07-Beobachtung (Weg A), Entscheidung beim Autor. R_info = (0,0,1).
 
+### K62 — Companion-Runde v4.9.0-r18: die alten Umrechnungen auf der Skalenlinie, Wege A und C zugleich (2026-10-22)
+
+`sec:v490-r18-scale-line-a-and-c`, Snippet `llm/v490_r18_round.tex`, Skript `llm/k57_a_und_c.py`. Frage 1 des Autors: Was
+ändert sich an den alten Umrechnungen mit den Frames einzeln, und was muss gelten, damit Weg A und Weg C zugleich gelten?
+
+**K62.1 (M).** Drei Lesarten desselben Abstands: coth η = 1/β = √(p₊/p₋) (1,820), e^η (Doppler, 1,854), cosh 2η = 1/|b| (γ_L,
+1,864). Gleich genau am Tribonacci-Punkt (alle 1,83929). Gemessener Abstand 1,37 % darüber in γ_L; für Zahlengleichheit müsste
+die Gitterkorrektur als eigene Verschiebung geführt werden.
+
+**K62.2 (M).** Klassentrennung auf der σ-Linie: Skalengrößen (Frequenz, Länge, Masse, Energie) X = e^{kσ}X₀ (Weg C);
+Auslesegrößen (Sichtbarkeit, Kontrast, Eigenwertverhältnisse, Mischungen) als Zustandsfunktion f(σ) mit Faktor cosh 2σ (Weg A),
+komponiert über Rapiditätsaddition (sech 2(σ₁+σ₂) = 0,311 statt Produkt 0,452). Bedingungen: Klassenzuordnung, Frames als
+Rapiditäten addieren, für Zahlengleichheit zusätzlich Tribonacci-Punkt.
+
+**K62.3 (D).** Hauptkorpus-Umrechnungen (§phase-constants) sind Skalengrößen; unter C ändern sie sich um −0,55 % (Takt, Hawking),
+−0,82 % (ℓ_P), −2,18 % (m_ν), −2,72 % (Matter-Fehler, Vakuum k = 5). γ_L bleibt bei Auslesegrößen: 1/γ_L, Ω_M = β², cot θ_W ≈ γ_L
+(r07), γ_BI/γ_string. Spannung r07 ↔ r17 aufgelöst (verschiedene Klassen). Angebotene Lesart; Entscheidung 5 von r15 beim Autor.
+R_conv = (0,0,1).
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1737,6 +1756,7 @@ Gewicht-0-Kombinationen σ-invariant. Spannung zur r07-Beobachtung (Weg A), Ents
 - v7.3 (2026-10-22): K59 Companion-Runde v4.9.0-r15 (Sammelregister, r17-Weg (b) ausgeschlossen).
 - v7.4 (2026-10-22): K60 Companion-Runde v4.9.0-r16 (Autorentscheidungen).
 - v7.5 (2026-10-22): K61 Companion-Runde v4.9.0-r17 (Entropie, Informationssingularität, Skalen-Dimension).
+- v7.6 (2026-10-22): K62 Companion-Runde v4.9.0-r18 (Wege A und C zugleich: Klassentrennung Skala/Auslese).
 
 ---
 
