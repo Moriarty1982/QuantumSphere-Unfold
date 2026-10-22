@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v8.8
+# Kernkarte Quantum Sphaera — v8.9
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1853,6 +1853,18 @@ klassische Mischung, die der Kompensator vermeiden soll. Bei Stärke 1/2: kohär
 0,577, 1/4 / 3/4, 0,74 Bit. Wortlaut „Markov“ in thm:dark-energy: β² als Einschritt-Gewicht lesbar; Statusvermerk möglich, Autor
 entscheidet. R_coh = (0,0,0).
 
+### K75 — Companion-Runde v4.9.0-r31: Markov-Kaskade als Selbststabilisierungstest, Statusvermerk zu thm:dark-energy (2026-10-22)
+
+`sec:v490-r31-markov-self-stabilisation`, Snippet `llm/v490_r31_round.tex`, Skript `llm/k68_markov_kaskade_stabil.py`; Vermerk über
+`llm/apply_patches.py` mit `llm/revision_spec_v490_r31.py` (auch für GitHub). Autorabsicht: Die Markov-Kette sollte die
+Wahrscheinlichkeiten besser vorhersagen und prüfen, ob sich die Kaskade selbst stabilisiert.
+
+**K75.1 (M).** Kette des Beweises: nach drei Schritten alles in S² (Photon), einziger stationärer Zustand (1, 0, 0) — keine
+Selbststabilisierung. Mit Rückweg S² → S⁸ (Rate r): eindeutig stationär (1, β²r, r)/(1 + r + β²r), gedämpft oszillierende Annäherung
+(Nebeneigenwerte 0,41 bei β² = 1/3, r = 1/2); Flussanteile aus S⁸ genau β², 1 − β² für jedes r. Gleiches Muster wie r27/r28 auf dem
+Dublett: geschlossen → Photon, nachgefüllt → stabil. Rückweg vorgeschlagen: Vakuumpaare (r29). Statusvermerk erweitert (Regel C).
+R_Mk = (0,0,1).
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -1980,6 +1992,8 @@ entscheidet. R_coh = (0,0,0).
 - v8.7 (2026-10-22): K73 Companion-Runde v4.9.0-r29 (Quelle des Tachyon-Reservoirs: Paarerzeugung aus dem Vakuum).
 
 - v8.8 (2026-10-22): K74 Companion-Runde v4.9.0-r30 (Kompensator umgeht die klassische 1/2; Partner = Tachyon durch T; Austausch kohärent).
+
+- v8.9 (2026-10-22): K75 Companion-Runde v4.9.0-r31 (Markov-Kaskade: geschlossen keine Stabilisierung, mit Rückweg stabile Flussanteile β²; Statusvermerk thm:dark-energy).
 
 ---
 

@@ -7138,7 +7138,7 @@ direct-collapse fraction $1-\bsym^2$ is observed as $\Omega_\Lambda$.
 Since $\Omega_\Lambda$ is a transition probability (not a vacuum energy
 density), $\Lambda_{\mathrm{fundamental}}=0$.
 \end{proof}
-\qsstatus{Status (v4.9.0 revision): present-epoch statement (v4.9.0-r15); under Convention F a matter-frame statement, frame-free between M and \(T|_R\) (v4.9.0-r22, r24); the epoch reading is with the author.}
+\qsstatus{Status (v4.9.0 revision): present-epoch statement (v4.9.0-r15); under Convention F a matter-frame statement, frame-free between M and \(T|_R\) (v4.9.0-r22, r24); the epoch reading is with the author.  The Markov chain is the author's tool to predict the probabilities and to test whether the cascade stabilises itself (author, 2026-10-22).  As given, \(S^2\) absorbs everything, and the only stationary state is the photon.  With a return path \(S^2\to S^8\), for instance pair creation from the vacuum (v4.9.0-r29), the chain has a unique stationary distribution, and the fractions of the flux out of \(S^8\) are \(\bsym^2\) and \(1-\bsym^2\) for every return rate (v4.9.0-r31).  Within one step \(\bsym^2\) is a weight; successive steps of amplitudes compose through the compensator (v4.9.0-r30).}
 
 
 \begin{remark}[Independent determination of $\bsym$ from cosmological data]
@@ -72267,6 +72267,115 @@ The layer spends no guard:
 R_{\rm glob}^{(v490\text{-}r30,+)}=(0,1,1,1,1),
 \qquad
 \Gamma_{\rm guard}^{v490\text{-}r30}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r31 Source-Only: The Markov Cascade as a Test of Self-Stabilisation, and a Status Note to Theorem~\texorpdfstring{\ref{thm:dark-energy}}{dark-energy}}
+\addcontentsline{toc}{section}{v4.9.0-r31 Source-Only: The Markov Cascade as a Test of Self-Stabilisation, and a Status Note to the Dark-Energy Theorem}
+\label{sec:v490-r31-markov-self-stabilisation}
+% ============================================================================
+
+\paragraph{Purpose.}
+r30 noted that Theorem~\ref{thm:dark-energy} calls \(\Omega_M\) and \(\Omega_\Lambda\) Markov transition probabilities, while the compensator
+composes amplitudes.  On 2026-10-22 the author asked for a status note.  He explained that the Markov chain was meant to predict the
+probabilities better and to test whether the cascade can stabilise itself.  This layer runs that test on the chain of the proof and
+places the note under the revision rule of r25.  The script is \texttt{llm/k68\_markov\_kaskade\_stabil.py}.  The note is applied by
+\texttt{llm/apply\_patches.py} from \texttt{llm/revision\_spec\_v490\_r31.py}, so that the GitHub candidate can receive the same text.
+No new prediction is made, and nothing is compared with data.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r31 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r31 the test}
+\label{subsec:v490-r31-test}
+
+The proof of Theorem~\ref{thm:dark-energy} uses the chain \(S^8\to S^4\) with probability \(\bsym^2\), \(S^8\to S^2\) with \(1-\bsym^2\),
+\(S^4\to S^2\) with \(1\), and \(S^2\) absorbing.
+
+\paragraph{Theoremlet v4.9.0-r31.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] As given, the chain does not stabilise.  After three steps every distribution has reached \(S^2\), and the only stationary
+distribution is \((p_2,p_4,p_8)=(1,0,0)\), the photon.
+\item[(b)] With a return path \(S^2\to S^8\) of rate \(r>0\) the chain is irreducible and has the unique stationary distribution
+\[
+(p_2,p_4,p_8)=\frac{(1,\ \bsym^2r,\ r)}{1+r+\bsym^2r}.
+\]
+Every start converges to it.  At \(\bsym^2=1/3\), \(r=1/2\) the other eigenvalues have modulus \(0.41\), so the approach is a damped
+oscillation.
+\item[(c)] In the stationary state the flux out of \(S^8\) splits into \(\bsym^2\) towards \(S^4\) and \(1-\bsym^2\) towards \(S^2\), for every return
+rate \(r\).  The fractions that the theorem names \(\Omega_M\) and \(\Omega_\Lambda\) are therefore stable flux fractions, independent of how
+fast the return is.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+Stationary equations \(\pi Q=\pi\), \(\sum\pi=1\), solved symbolically; convergence checked from \(S^8\) over \(200\) steps at
+\(r=1/10,1/2,1\); eigenvalues \(1\) and \(-\tfrac14\pm i\sqrt{15}/12\) at \(\bsym^2=1/3\), \(r=1/2\).  \(\square\)
+
+\paragraph{Reading.}
+The author's test gives a clear answer.  The closed cascade does not stabilise itself; it ends in the photon.  With a return path it
+does, and then the matter fraction \(\bsym^2\) is a stable property of the flow.  This is the same pattern on the level of the strata as on
+the doublet in r27 and r28.  Closed, everything flows to the photon.  Replenished, a stable state arises.  A natural return path is the
+pair creation from the vacuum of r29.  The rate \(r\) remains open, but the fractions do not depend on it.  The Markov chain is a
+tool for these probabilities between the strata.  Within one step, amplitudes compose through the compensator (r30).
+
+\subsection*{v4.9.0-r31 the status note}
+\label{subsec:v490-r31-note}
+
+The status note under Theorem~\ref{thm:dark-energy} is extended (rule C of r25).  It keeps the earlier content and adds the author's
+purpose for the Markov chain, the result r31.1, and the reading of r30.  The text of the theorem is unchanged.
+
+\subsection*{v4.9.0-r31 status in the three frames}
+\label{subsec:v490-r31-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r31.1(a) absorption & the absorbing stratum \(S^2\) is the photon ground state of the main body; the chain ends there in every frame description\\
+r31.1(b), (c) & \(\bsym^2\) is a matter-frame quantity (r22); the stationary fractions hold in M, and are frame-free between M and \(T|_R\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r31 register entries}
+\label{subsec:v490-r31-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r31\\
+\midrule
+Markov cascade of Thm.~\ref{thm:dark-energy} & author's tool for probabilities and self-stabilisation; closed: no stable state besides the photon; with return path: unique stationary state, flux fractions \(\bsym^2\), \(1-\bsym^2\) for every rate (r31.1)\\
+status note to Thm.~\ref{thm:dark-energy} & extended (rule C of r25)\\
+return path & proposed: pair creation from the vacuum (r29); rate open, fractions independent of it\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r31 ledger and guard update}
+\label{subsec:v490-r31-ledger-guard}
+
+\[
+R_{\rm Mk}^{v490\text{-}r31}=(0,0,1)
+\]
+for (self-stabilisation of the cascade tested, status note placed, rate of the return path open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r31,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r31}=(1,1,1,1,1),
 \qquad
 \beta_4=1/256\ \text{unspent}.
 \]
