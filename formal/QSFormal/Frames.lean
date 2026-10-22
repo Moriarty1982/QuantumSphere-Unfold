@@ -102,6 +102,37 @@ theorem spectrum_fixed (b₁ b₂ : ℝ) :
     (ρ (-b₁) b₂).det = (ρ b₁ b₂).det ∧ (ρ b₁ (-b₂)).det = (ρ b₁ b₂).det := by
   simp [det_ρ]
 
+/-! ### Portachse je Frame
+
+Ein Portpaar ist ein Paar komplementärer Projektionen `½(1 ± n₁σ_z ± n₂σ_x)` mit `|n| = 1`,
+also `ρ n₁ n₂` und `ρ (−n₁) (−n₂)`. `C_HC` und `A` sind das Paar zur Achse `n = (0, 1)`, die
+Kanäle `½(1 ± b₁)` das Paar zur Achse `(1, 0)`. Ob `J_B` ein Portpaar vertauscht oder festlässt,
+hängt allein an der Achse. -/
+
+/-- `J_B` vertauscht die Ports der Achse `n` genau dann, wenn `n₂ = 0` (Achse `σ_z`). -/
+theorem J_B_swaps_iff (n₁ n₂ : ℝ) : σx * ρ n₁ n₂ * σx = ρ (-n₁) (-n₂) ↔ n₂ = 0 := by
+  rw [J_B_ρ]
+  constructor
+  · intro h
+    have := congrArg (· 0 1) h
+    simp [ρ_eq] at this
+    linarith
+  · rintro rfl; simp
+
+/-- `J_B` lässt die Ports der Achse `n` genau dann fest, wenn `n₁ = 0` (Achse `σ_x`). -/
+theorem J_B_fixes_iff (n₁ n₂ : ℝ) : σx * ρ n₁ n₂ * σx = ρ n₁ n₂ ↔ n₁ = 0 := by
+  rw [J_B_ρ]
+  constructor
+  · intro h
+    have := congrArg (· 0 0) h
+    simp [ρ_eq] at this
+    linarith
+  · rintro rfl; simp
+
+/-- `C_HC` ist das Portpaar zur Achse `σ_x`. -/
+theorem C_axis : ρ 0 1 = C ∧ ρ 0 (-1) = A := by
+  constructor <;> rw [ρ_eq] <;> ext i j <;> fin_cases i <;> fin_cases j <;> simp [C, A]
+
 /-- `A R_α A = cos α · A`, wie `C_HC R_α C_HC = cos α · C_HC`. -/
 theorem A_R_A (α : ℝ) : A * R α * A = cos α • A := by
   ext i j; fin_cases i <;> fin_cases j <;> simp [A, R, mul_apply, Fin.sum_univ_two] <;> ring
