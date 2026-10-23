@@ -1,0 +1,14 @@
+Kontrollen: G2 14, Stab(e7) 8, J^2 = -1: 0e+00
+
+H20a: Stab J-linear 2e-15; span(1,e7) trivial 7e-16, e7^perp invariant 8e-16; reeller Kommutant auf e7^perp Dim 2 (2 = irreduzibel, komplexer Typ); e4,e5,e6,Je4,Je5,Je6 Rang 6 -> bestaetigt
+  J e4, J e5, J e6 = [(np.int64(3),), (np.int64(2),), (np.int64(1),)] [-1.0, -1.0, 1.0]
+
+H20b: span(e1,e2,e3) J-invariant? 1.000; Stab-invariant (reell wie komplex)? 0.409; Q-invariant? 0.167 -> widerlegt
+  J bildet span(e4,e5,e6) auf span(e1,e2,e3) ab: True
+
+H20c P+: aequivariant 5e-16; P J = +i P: 0e+00; reeller Rang 8; e7^perp -> Q = [0.3333333333333333]; span(1,e7) -> Q = [1]; e7 -> Q = [1]; komplexer Rang der Bilder von e4,e5,e6: 3
+
+H20c P-: aequivariant 5e-16; P J = -i P: 0e+00; reeller Rang 8; e7^perp -> Q = [0.6666666666666666]; span(1,e7) -> Q = [0]; e7 -> Q = [0]; komplexer Rang der Bilder von e4,e5,e6: 3
+  T vertauscht P+ und P-: 0e+00 -> H20c bestaetigt
+
+H20d: Q = 0.5000*1 + -0.1667*i L_e7 + -0.3333*i R_e7, Rest 2e-16; e^(i theta) skalar auf allen Sektoren: True -> bestaetigt

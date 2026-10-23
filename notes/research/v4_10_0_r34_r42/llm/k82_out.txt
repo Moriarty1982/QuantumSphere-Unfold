@@ -1,0 +1,19 @@
+H26a: schwache SU(2) (rechts) vertauscht mit Lorentz, Farbe, Q: 0e+00; Lorentz-Drehungen unter T fest: 0e+00; Boosts unter T umgekehrt: 0e+00; R vertauscht mit allen C-linearen Abbildungen -> bestaetigt
+
+H26b: su(2)-Relationen 0e+00, Leiter T+ hebt T3 um 1: 0e+00, Q_em hermitesch 0e+00
+   Q-Sektor 0.0000, Y/2 = -0.5000, T3 = +0.5: Dimension 2, Q_em = [np.float64(-0.0)]
+   Q-Sektor 0.0000, Y/2 = -0.5000, T3 = -0.5: Dimension 2, Q_em = [np.float64(-1.0)]
+   Q-Sektor 0.3333, Y/2 = -0.1667, T3 = +0.5: Dimension 6, Q_em = [np.float64(0.333333333)]
+   Q-Sektor 0.3333, Y/2 = -0.1667, T3 = -0.5: Dimension 6, Q_em = [np.float64(-0.666666667)]
+   Q-Sektor 0.6667, Y/2 = +0.1667, T3 = +0.5: Dimension 6, Q_em = [np.float64(0.666666667)]
+   Q-Sektor 0.6667, Y/2 = +0.1667, T3 = -0.5: Dimension 6, Q_em = [np.float64(-0.333333333)]
+   Q-Sektor 1.0000, Y/2 = +0.5000, T3 = +0.5: Dimension 2, Q_em = [np.float64(1.0)]
+   Q-Sektor 1.0000, Y/2 = +0.5000, T3 = -0.5: Dimension 2, Q_em = [np.float64(-0.0)]
+  -> H26b bestaetigt
+  Spektrum Q_em mit Vielfachheiten: {np.float64(-1.0): 2, np.float64(-0.666667): 6, np.float64(-0.333333): 6, np.float64(-0.0): 4, np.float64(0.333333): 6, np.float64(0.666667): 6, np.float64(1.0): 2}
+
+H26c: T Q_em T^-1 = -Q_em: 0e+00; T (Y/2) T^-1 = -Y/2: 0e+00 -> bestaetigt
+
+H26d: schwache Singuletts: 0; Casimir T^2 = 3/4 auf allem: 0e+00 -> bestaetigt (D liefert nur Dubletts)
+
+H26e: Generationen-Z3 auf den Plaetzen vertauscht mit L_q, R_q, Farbe und Q: 0e+00 -> bestaetigt

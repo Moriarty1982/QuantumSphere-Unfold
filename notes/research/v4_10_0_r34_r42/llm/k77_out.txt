@@ -1,0 +1,18 @@
+H21a: Kandidat sigma (J-linear fortgesetzt): Automorphismus-Abweichung 0e+00, sigma^3 = 1: 0e+00, sigma(e7) = e7: 0e+00
+  alle vorzeichenbehafteten Fortsetzungen auf e1, e2, e3 (48): 1 Automorphismen: [((3, 1, 2), (-1, -1, 1))]
+  -> H21a bestaetigt; sigma in Stab(e7) = SU(3)
+
+H21b: sigma J-linear 0e+00; komplexe Matrix auf e7^perp =
+[[0. 0. 1.]
+ [1. 0. 0.]
+ [0. 1. 0.]] (Imaginaerteil 0e+00); det (1+0j); Eigenwerte [-0.5-0.866j -0.5+0.866j  1. +0.j   ]; Abstand zum Zentrum 1.000; [sigma, Q] 0e+00; T, R, J_B: sigma reell und auf O, vertauscht mit z -> conj z und z -> iz
+  -> H21b bestaetigt
+
+H21c: z0 + z1 + z2 = 4e-16; sigma v = omega v: 2e+00; sigma v = omega_bar v: 6e-16; P_- v liegt in Q = [0.6666666666666666]
+  -> H21c bestaetigt
+
+H21d: Untergruppe von Stab(e7), die span(e4,e5,e6) erhaelt: Dimension 3; Bloecke antisymmetrisch 3e-16, Rang im so(3) 3
+  -> H21d bestaetigt
+  sigma erhaelt span(e4,e5,e6): True
+
+H21e: Generationen-Z3 auf Im H vertauscht mit sigma (x) 1 und Stab(e7): 0e+00 -> bestaetigt (Tensorstruktur)

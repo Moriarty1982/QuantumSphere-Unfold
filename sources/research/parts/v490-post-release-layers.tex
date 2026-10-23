@@ -4728,3 +4728,1115 @@ R_{\rm glob}^{(v490\text{-}r33,+)}=(0,1,1,1,1),
 \]
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r34 Source-Only: Charges of One Generation from the Dixon Storage}
+\addcontentsline{toc}{section}{v4.9.0-r34 Source-Only: Charges of One Generation from the Dixon Storage}
+\label{sec:v490-r34-charges-dixon}
+% ============================================================================
+
+\paragraph{Purpose.}
+An inventory of the standard-model features against the structure (\texttt{llm/Bestandsaufnahme\_Struktur\_Standardmodell.md})
+found that the Companion derives no charges.  This layer records the pre-registered test H19 (note
+\texttt{llm/Vorab\_Notiz\_H19\_Ladungen\_Dixon.md}, commit \texttt{1e60410}, fixed before computing): does the charge
+construction from a number operator on \(\mathbb C\otimes\OO\) (C.~Furey, Phys.\ Lett.\ B, 2015) work with the colour group
+of the Companion, and what do the frames do with the charges?  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r34 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r34 construction}
+\label{subsec:v490-r34-construction}
+
+Let \(L_a\) be left multiplication by \(e_a\) on \(\OO\) (Cayley--Dickson convention of v4.8.0-r12), and let \(i\) be the
+\(\mathbb C\) factor of the Dixon storage, read as the quantum-mechanical unit.  The colour group is
+\(SU(3)=\operatorname{Stab}_{G_2}(e_7)\) as in Theorem~\ref{thm:octonion-SU3}; in this convention \(e_7e_4=-e_3\),
+\(e_7e_5=-e_2\), \(e_7e_6=e_1\).  Put
+\[
+\alpha_a=\tfrac12\bigl(L_{e_a}+i\,L_{e_7e_a}\bigr)\quad(a=4,5,6),\qquad N=\sum_a\alpha_a^\dagger\alpha_a,\qquad Q=N/3 .
+\]
+The Clifford relations of the \(L_a\) give \(\alpha_a^2=0\) and \(\{\alpha_a,\alpha_b^\dagger\}=\delta_{ab}\), so \(N\) is a
+number operator with eigenvalues \(0,1,2,3\) of multiplicities \(1,3,3,1\).  These multiplicities are forced by the algebra
+and are not a prediction.
+
+\subsection*{v4.9.0-r34 results}
+\label{subsec:v490-r34-results}
+
+\paragraph{Theoremlet v4.9.0-r34.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Every element of \(\operatorname{Stab}_{G_2}(e_7)\) commutes with \(Q\).
+\item[(b)] The eigenspaces \(Q=0\) and \(Q=1\) are colour singlets in \(\operatorname{span}_{\mathbb C}(1,e_7)\), spanned by
+\(1\pm i\,e_7\).  The eigenspaces \(Q=\tfrac13\) and \(Q=\tfrac23\) are irreducible colour triplets in
+\(\operatorname{span}_{\mathbb C}(e_1,\dots,e_6)\), conjugate to each other and not self-conjugate.
+\item[(c)] Neither the real span of \(e_4,e_5,e_6\) nor \(e_7\) alone is an eigenspace of \(Q\); the eigenstates combine
+\(e_a\) with \(e_7e_a\), and \(1\) with \(e_7\).
+\item[(d)] On the \(\mathbb C\) factor, \(TQT^{-1}=1-Q\) and \(J_BQJ_B^{-1}=1-Q\) for \(J_B=R_{\pi/2}\circ T\), while
+\(R_{\pi/2}QR_{\pi/2}^{-1}=Q\).
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a)--(c) by explicit matrices on \(\mathbb C^8\): the derivations of \(\OO\) form a 14-dimensional space, those with
+\(D(e_7)=0\) an 8-dimensional one; commutators with \(Q\), invariance of the eigenspaces, commutants and characters were
+computed (script \texttt{llm/k75\_test\_h19.py}, deviations at most \(10^{-14}\)).  (d) \(T\) and \(J_B\) are antilinear, so they
+conjugate \(Q\) to \(\bar Q\); \(T\) sends \(\alpha_a\) to \(-\alpha_a^\dagger\), hence \(\bar N=3-N\).  \(\square\)
+
+\paragraph{Verdict and reading.}
+H19a (a), H19b (b) and H19d (d) are confirmed; H19c, the literal assignment of the Companion, is refuted; H19e (charges equal on
+the three slots of \((\operatorname{Im}\HH)\otimes\OO\)) holds by the tensor structure.  (a) and (b) reproduce Furey's result in
+the Companion's convention: the charge pattern of one generation, two colourless states with \(Q=0,1\) and two conjugate colour
+triplets with \(Q=\tfrac13,\tfrac23\) (in Furey's reading \(\nu,\bar d,u,e^+\)), follows from the storage.  This is a consistency
+check, not a prediction about nature.  (c) shows that Theorem~\ref{thm:octonion-SU3} and Theorem~\ref{thm:three-generations}
+place colour and \(\nu_R\) on the wrong, real, subspaces.  (d) bears on the author's remark that Theorem~\ref{thm:SM} was
+developed in one frame: the frame change exchanges the charge sectors, \(Q\leftrightarrow1-Q\).  The spectrum and the colour
+structure are frame-free; which state carries which charge is not.  The map is not charge conjugation \(Q\mapsto-Q\) but charge
+conjugation followed by a shift of one unit, and it comes from the time-reversal part \(T\) of \(J_B\).  A charge statement
+such as the \(U(1)\) line of Theorem~\ref{thm:SM} therefore has to name its frame.  Hypercharge and chirality are not
+addressed.
+
+\subsection*{v4.9.0-r34 status in the three frames}
+\label{subsec:v490-r34-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r34.1(a), (b), (c) & stated in M, with the \(\mathbb C\) factor read as the quantum-mechanical unit; the spectrum and the colour structure are the same in T\\
+r34.1(d) & relates M and T: sectors exchanged, \(Q\leftrightarrow1-Q\); P (equal weight on both halves) is not evaluated\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r34 register entries}
+\label{subsec:v490-r34-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r34\\
+\midrule
+charges of one generation & follow from the Dixon storage under the reading of the \(\mathbb C\) factor as quantum-mechanical unit (r34.1(a), (b)); frame-dependent assignment (r34.1(d))\\
+Theorem~\ref{thm:octonion-SU3}, Theorem~\ref{thm:three-generations} & colour on the real span of \(e_4,e_5,e_6\) and \(\nu_R\) on \(e_7\) refuted (r34.1(c)); candidate for a status note\\
+Theorem~\ref{thm:SM} & charge line must name its frame (r34.1(d)); hypercharge and chirality open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r34 ledger and guard update}
+\label{subsec:v490-r34-ledger-guard}
+
+\[
+R_{\rm ch}^{v490\text{-}r34}=(0,0,1)
+\]
+for (charge pattern of one generation consistent with the colour group; frame dependence of the charge assignment fixed;
+hypercharge and chirality open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r34,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r34}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r35 Source-Only: Inner and Outer Complex Unit in the Colour Assignment}
+\addcontentsline{toc}{section}{v4.9.0-r35 Source-Only: Inner and Outer Complex Unit in the Colour Assignment}
+\label{sec:v490-r35-inner-outer-unit}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.9.0-r34 refuted the literal colour and \(\nu_R\) assignment of Theorem~\ref{thm:octonion-SU3} and
+Theorem~\ref{thm:three-generations} (r34.1(c)).  At the author's suggestion that this may again be a fixed-frame effect, this layer
+records the pre-registered test H20 (note \texttt{llm/Vorab\_Notiz\_H20\_Frame\_Zuordnung.md}, commit \texttt{7d95feb}, fixed before
+computing).  It separates two complex units: the \emph{inner} unit \(J=L_{e_7}\) on \(\OO\) itself, and the \emph{outer} unit \(i\),
+the \(\mathbb C\) factor of the Dixon storage, on which the charge operator \(Q\) of r34 is built.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r35 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r35 results}
+\label{subsec:v490-r35-results}
+
+Conventions as in v4.9.0-r34.  Put \(P_\pm=\tfrac12(1\mp i\,J)\colon\OO\to\mathbb C\otimes\OO\), and let \(R_{e_7}\) be right
+multiplication by \(e_7\).
+
+\paragraph{Theoremlet v4.9.0-r35.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \emph{Inner frame.}  \(\operatorname{Stab}_{G_2}(e_7)\) is \(J\)-linear.  \((\OO,J)\cong\mathbb C^4\) splits into the trivial
+line \(\operatorname{span}_{\mathbb R}(1,e_7)\) and the irreducible complex triplet \(e_7^\perp\), with complex basis \(e_4,e_5,e_6\);
+\(Je_4=-e_3\), \(Je_5=-e_2\), \(Je_6=e_1\).
+\item[(b)] \(\operatorname{span}(e_1,e_2,e_3)=J\operatorname{span}(e_4,e_5,e_6)\) is neither \(J\)-invariant nor invariant under
+\(\operatorname{Stab}_{G_2}(e_7)\) nor under \(Q\).
+\item[(c)] \(P_\pm\) is \(\operatorname{Stab}_{G_2}(e_7)\)-equivariant and injective, and \(P_\pm J=\pm i\,P_\pm\).  \(P_-\) maps
+\(e_7^\perp\) onto the triplet \(Q=\tfrac23\) and \(\operatorname{span}(1,e_7)\), in particular \(e_7\), onto the singlet \(Q=0\);
+\(P_+\) maps them onto \(Q=\tfrac13\) and \(Q=1\).  \(T\) exchanges \(P_+\) and \(P_-\).
+\item[(d)] \(Q=\tfrac12-\tfrac{i}{6}\,L_{e_7}-\tfrac{i}{3}\,R_{e_7}\).
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a)--(c) by explicit matrices (script \texttt{llm/k76\_test\_h20.py}, deviations at most \(2\cdot10^{-15}\)); irreducibility of complex
+type from the real commutant on \(e_7^\perp\), which is two-dimensional.  In (c), \(P_\pm\) commutes with every \(J\)-linear map, and
+\(P_\pm J=\tfrac12(J\pm i)=\pm i\,P_\pm\); \(\bar P_\pm=P_\mp\) because \(J\) is real.  (d) by a least-squares fit with residual
+\(2\cdot10^{-16}\).  \(\square\)
+
+\paragraph{Verdict and reading.}
+H20a, H20c and H20d are confirmed; H20b is refuted.
+\begin{enumerate}[leftmargin=2em]
+\item The triplet basis \(e_4,e_5,e_6\) and \(\nu_R\leftrightarrow e_7\) are correct in the inner frame, and
+Theorem~\ref{thm:octonion-SU3} holds there.  H19c in r34 took the real vectors as states of \(\mathbb C\otimes\OO\), which mixes up
+the two frames.  The translation to the outer frame is \(P_\pm\), and the sign is a frame choice.  With \(P_-\) the Companion's
+assignment agrees with Furey's reading: \(e_7\) goes to the singlet \(Q=0\) (\(\nu\)) and \(e_4,e_5,e_6\) to the triplet
+\(Q=\tfrac23\) (\(u\)).  With \(P_+\) one obtains the conjugate picture.  This is r34.1(d) again: \(T\) exchanges \(P_\pm\), hence
+\(Q\mapsto1-Q\).
+\item The sentence in the proof of Theorem~\ref{thm:three-generations} that the anti-triplet \((e_1,e_2,e_3)\) carries the
+conjugate colour representation is a genuine error.  It arises from mixing the frames: in the inner frame there is one triplet,
+and \(e_1,e_2,e_3\) are its \(J\)-images; a conjugate triplet exists only with the outer unit, as the image of \(P_+\) against that
+of \(P_-\), and not on \(\operatorname{span}(e_1,e_2,e_3)\).
+\item The charge needs both units, and both left and right multiplication (r35.1(d)).  The complex scalar \(it\) of
+Theorem~\ref{thm:SM} alone generates a global phase that is the same on all four charge sectors; it is not electromagnetism.
+\item The double use of \(e_4,e_5,e_6\) for colour and generation (v4.8.0-r13) is not a frame effect and stays.
+\item The \emph{reading} of r34.1(c) is corrected: the statement stands, but the Companion does not put colour and \(\nu_R\) on
+wrong subspaces.  It states them in the inner frame without naming the translation \(P_\pm\).
+\end{enumerate}
+Proposed addition to Konvention~F: statements about colour and charge name their complex unit (inner \(J=L_{e_7}\), without
+charge; outer \(i\), with \(Q\)), and for the translation the sign \(P_+\) or \(P_-\).
+
+\subsection*{v4.9.0-r35 status in the three frames}
+\label{subsec:v490-r35-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r35.1(a), (b) & inner frame only; no use of the \(\mathbb C\) factor, hence the same in M, T and P\\
+r35.1(c), (d) & stated in M; \(T\) exchanges \(P_+\) and \(P_-\), so the sign of the translation is the M/T choice; P not evaluated\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r35 register entries}
+\label{subsec:v490-r35-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r35\\
+\midrule
+Theorem~\ref{thm:octonion-SU3} & holds in the inner frame (r35.1(a))\\
+Theorem~\ref{thm:three-generations}, triplet basis and \(\nu_R\leftrightarrow e_7\) & correct in the inner frame; with \(P_-\) consistent with Furey's charges (r35.1(c)); reading of r34.1(c) corrected\\
+Theorem~\ref{thm:three-generations}, anti-triplet \((e_1,e_2,e_3)\) & refuted, frame mixing (r35.1(b)); candidate for a status note\\
+Theorem~\ref{thm:SM}, \(U(1)\) line & the scalar \(it\) gives only a global phase; the charge needs both units (r35.1(d))\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r35 ledger and guard update}
+\label{subsec:v490-r35-ledger-guard}
+
+\[
+R_{\rm fr}^{v490\text{-}r35}=(1,0,1)
+\]
+for (colour assignment correct in the inner frame; anti-triplet sentence wrong; frame rule for colour and charge proposed).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r35,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r35}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r36 Source-Only: Frame Rule for Complex Units, and the Origin of the Colour--Generation Double Use}
+\addcontentsline{toc}{section}{v4.9.0-r36 Source-Only: Frame Rule for Complex Units, and the Origin of the Colour--Generation Double Use}
+\label{sec:v490-r36-unit-rule-double-use}
+% ============================================================================
+
+\paragraph{Purpose.}
+This layer does two things.  It records the author's adoption (2026-10-23) of the frame rule proposed in v4.9.0-r35, with the
+resulting status notes in the main body.  It then records the pre-registered test H21 (note
+\texttt{llm/Vorab\_Notiz\_H21\_Herkunft\_Doppelbelegung.md}, commit \texttt{516ab15}, fixed before computing) on where the double use
+of \(e_4,e_5,e_6\) for colour and generation in Theorem~\ref{thm:three-generations} (v4.8.0-r13) comes from.  Earlier layers are not
+rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r36 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r36 frame rule for complex units}
+\label{subsec:v490-r36-unit-rule}
+
+\noindent\textbf{Rule (Convention~F, addition; adopted by the author).}
+A statement about colour or charge names its complex unit: the inner unit \(J=L_{e_7}\) on \(\OO\), which carries colour but no
+charge, or the outer unit \(i\), the \(\mathbb C\) factor of the Dixon storage, with the charge operator \(Q\).  A translation
+between them names its sign \(P_+\) or \(P_-\) (v4.9.0-r35).
+
+Following this rule, status notes are added to Theorem~\ref{thm:three-generations} and Theorem~\ref{thm:SM} (revision rule~C of
+v4.9.0-r25; patch specification \texttt{llm/revision\_spec\_v490\_r36.py}).  Theorem~\ref{thm:octonion-SU3} holds in the inner
+frame and needs no note.
+
+\subsection*{v4.9.0-r36 the cyclic symmetry of the triole}
+\label{subsec:v490-r36-results}
+
+Conventions as in v4.9.0-r35; \(\omega=e^{2\pi i/3}\).  Let \(\sigma\) be the real linear map of \(\OO\) with \(\sigma(1)=1\),
+\(\sigma(e_7)=e_7\), \(e_4\mapsto e_5\mapsto e_6\mapsto e_4\), \(e_1\mapsto-e_3\), \(e_2\mapsto-e_1\), \(e_3\mapsto e_2\).
+
+\paragraph{Theoremlet v4.9.0-r36.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \(\sigma\) is an automorphism of \(\OO\) of order three fixing \(e_7\), hence \(\sigma\in\operatorname{Stab}_{G_2}(e_7)=SU(3)\).
+Among the \(48\) signed extensions of the cycle \(e_4\to e_5\to e_6\) to \(e_1,e_2,e_3\) with \(e_7\) fixed it is the only
+automorphism.
+\item[(b)] On \((e_7^\perp,J)\) with complex basis \(e_4,e_5,e_6\), \(\sigma\) is the cyclic permutation matrix: determinant one,
+eigenvalues \(1,\omega,\bar\omega\), not central.  It commutes with \(Q\) and with \(T\), \(R_{\pi/2}\), \(J_B\).
+\item[(c)] The \(120^\circ\) triole \(v=\sum_{k=0}^{2}\omega^k e_{k+4}\) (coefficients with respect to \(J\); \(\sum_k\omega^k=0\))
+satisfies \(\sigma v=\bar\omega v\), and \(P_-v\) lies in the colour triplet \(Q=\tfrac23\).
+\item[(d)] The subgroup of \(\operatorname{Stab}_{G_2}(e_7)\) preserving \(\operatorname{span}_{\mathbb R}(e_4,e_5,e_6)\) is
+three-dimensional and acts on it as \(SO(3)\); it contains \(\sigma\).
+\item[(e)] In the Dixon storage \((\operatorname{Im}\HH)\otimes\mathbb C\otimes\OO\) of v4.9.0-r33, the cyclic \(\mathbb Z_3\) on
+\(\operatorname{Im}\HH\) commutes with \(1\otimes\sigma\) and with all of \(\operatorname{Stab}_{G_2}(e_7)\).
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+By explicit matrices (script \texttt{llm/k77\_test\_h21.py}): the automorphism condition on all \(64\) basis products, an exhaustive
+check of the \(48\) signed extensions, the complex matrix of \(\sigma\) from \(Je_4=-e_3\), \(Je_5=-e_2\), \(Je_6=e_1\), and the
+linear condition for the subalgebra in (d).  \(\sigma\) is real and acts on \(\OO\) only, so it commutes with the maps of the
+\(\mathbb C\) factor; (e) follows from the tensor structure.  \(\square\)
+
+\paragraph{Verdict and reading.}
+H21a--e are confirmed.
+\begin{enumerate}[leftmargin=2em]
+\item The triolic ground structure of the Companion, three kernels phase-shifted by \(120^\circ\) with \(z_1+z_2+z_3=0\), and its
+cyclic symmetry are, inside \(\OO\), exactly the colour rotation \(\sigma\), an element of the Weyl group of \(SU(3)_c\).
+Theorem~\ref{thm:octonion-SU3} reads the kernels as colours, consistent with (c).  Theorem~\ref{thm:three-generations} reads the same
+cyclic symmetry as the generation symmetry.  Colour and generation are therefore one object, not only the same units.
+\item This is not a frame effect: \(\sigma\) commutes with all frame maps (b).  It is an identification of two roles.
+\item Every generation symmetry on the real span of \(e_4,e_5,e_6\), such as the flavour groups of v4.8.0-r12, lies in
+\(SO(3)\subset SU(3)_c\) (d), and breaking it would break colour.  This makes consequence (i) of v4.8.0-r13 structural.
+\item Inside \(\OO\) with \(e_7\) fixed there is no \(\mathbb Z_3\) that is not a colour transformation.  The three generations
+therefore need a second three-fold structure outside \(\OO\).  The Companion has two: the three triality slots of \(\OO^3\)
+(v4.8.0-r14) and \(\operatorname{Im}\HH\) in the Dixon storage (v4.9.0-r33).  Both commute with colour (e).
+\item Whether the triolic ground structure was meant as colour or as generations is open.  By (a)--(c) it can be only one of them
+inside \(\OO\).
+\end{enumerate}
+
+\subsection*{v4.9.0-r36 status in the three frames}
+\label{subsec:v490-r36-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r36.1(a), (b), (d) & inner frame; \(\sigma\) commutes with \(T\), \(R_{\pi/2}\), \(J_B\), hence frame-free between M and T; P not evaluated\\
+r36.1(c) & stated in M through \(P_-\); in T the image is \(P_+v\), in the conjugate triplet \(Q=\tfrac13\)\\
+r36.1(e) & tensor structure, frame-free\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r36 register entries}
+\label{subsec:v490-r36-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r36\\
+\midrule
+frame rule for complex units & adopted (Convention~F, addition)\\
+Theorem~\ref{thm:three-generations} & status note added; the generation symmetry \(e_4\to e_5\to e_6\) is a colour rotation (r36.1(a)--(c))\\
+Theorem~\ref{thm:SM} & status note added (scalar \(it\) a global phase; charge needs both units; \(U(2)\), hypercharge)\\
+generations & need a three-fold structure outside \(\OO\): triality slots or \(\operatorname{Im}\HH\) (r36.1(e))\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r36 ledger and guard update}
+\label{subsec:v490-r36-ledger-guard}
+
+\[
+R_{\rm gen}^{v490\text{-}r36}=(1,1,0)
+\]
+for (origin of the double use identified; separation shown to be necessary inside \(\OO\); carrier of the three generations open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r36,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r36}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r37 Source-Only: Triality as Self-Traversal, and the Periods of the Structure}
+\addcontentsline{toc}{section}{v4.9.0-r37 Source-Only: Triality as Self-Traversal, and the Periods of the Structure}
+\label{sec:v490-r37-triality-self-traversal}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.9.0-r36 showed that inside \(\OO\) with \(e_7\) fixed every \(\mathbb Z_3\) symmetry is a colour transformation, so the
+generations need a second three-fold structure.  The author states (2026-10-23) that the triole was meant as another
+representation of the Sphaera, and that the fractal self-traversal transforms between such representations; the number of steps
+is not to be fixed at three.  This layer records the pre-registered test H22 (note
+\texttt{llm/Vorab\_Notiz\_H22\_Triality\_Selbstdurchwanderung.md}, commit \texttt{ed74608}, fixed before computing) on the triality
+form of v4.8.0-r14 and on the periods available to the structure.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r37 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r37 results}
+\label{subsec:v490-r37-results}
+
+Let \(t(x,y,z)=\operatorname{Re}((xy)z)\) on \(\OO^3\),
+\(\mathfrak g=\{(A,B,C)\in\mathfrak{so}(8)^3: t(Ax,y,z)+t(x,By,z)+t(x,y,Cz)=0\}\), \(\tau(x,y,z)=(y,z,x)\) and
+\(\rho(x,y,z)=(\bar x,\bar z,\bar y)\); \(T\), \(R_{\pi/2}\) act on the \(\mathbb C\) factor as in v4.9.0-r30.
+
+\paragraph{Theoremlet v4.9.0-r37.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \(\dim\mathfrak g=28\); each projection \(\mathfrak g\to\mathfrak{so}(8)\) is an isomorphism, and the three representations
+of \(\mathfrak g\) on the three slots are irreducible and pairwise inequivalent.  Thus \(t\) is the \(\mathrm{Spin}(8)\) triality form.
+\item[(b)] \(\tau\) maps \(\mathfrak g\) to itself and permutes the three slot representations cyclically; it is an outer
+automorphism of order three.
+\item[(c)] The \(\tau\)-fixed elements \((A,A,A)\in\mathfrak g\) form the derivation algebra of \(\OO\), of dimension \(14\); those
+with \(Ae_7=0\) form \(\mathfrak{su}(3)\).
+\item[(d)] On \(\OO^4\) the five bracketings of \(\operatorname{Re}(xyzw)\) fall into two classes,
+\(\operatorname{Re}(((xy)z)w)=\operatorname{Re}((xy)(zw))=\operatorname{Re}(x(y(zw)))\) and
+\(\operatorname{Re}((x(yz))w)=\operatorname{Re}(x((yz)w))\).  The cyclic shift of the four slots exchanges the classes, so no single
+bracketing is invariant, while their sum is.
+\item[(e)] \(\tau,\rho,T,R_{\pi/2}\) generate on \(\mathbb C\otimes\OO^3\) a group of order \(48\), isomorphic to \(S_3\times D_4\), with
+element orders \(1,2,3,4,6,12\); \(\tau\) and \(\rho\) preserve \(t\).
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a)--(c) by solving the linear conditions on \(\mathfrak{so}(8)^3\) (\(512\) equations, \(84\) unknowns) and computing ranks,
+intertwiner spaces and commutants (script \texttt{llm/k78\_test\_h22.py}, deviations at most \(10^{-14}\)); \(\tau\) preserves \(t\)
+because \(\operatorname{Re}((xy)z)=\operatorname{Re}((yz)x)\) (v4.8.0-r14.2), and an automorphism permuting inequivalent
+representations is not inner.  (d) from \(\operatorname{Re}((ab)c)=\operatorname{Re}(a(bc))\) and \(\operatorname{Re}(ab)=\operatorname{Re}(ba)\),
+checked numerically; the exchange of the classes was found in a check after the evaluation.  (e) by enumerating the group.
+\(\square\)
+
+\paragraph{Verdict and reading.}
+H22a, b, c and e are confirmed.  H22d, the statement that no single bracketing is cyclically invariant, is confirmed, but by (d)
+it gives no prohibition of a fourth slot.
+\begin{enumerate}[leftmargin=2em]
+\item The second three-fold structure required by v4.9.0-r36 exists: it is triality.  The three slots of \(\OO^3\) carry the three
+inequivalent eight-dimensional representations of \(\mathrm{Spin}(8)\), the shift of the slots is the outer triality automorphism,
+and what it fixes is \(G_2\supset SU(3)_c\).  In this reading generation is what the traversal permutes and colour is what it
+fixes; they are orbit and fixed group of one motion, no longer one object.  It matches the author's reading of the triole as
+three representations of the same \(\OO\cong\mathbb R^8\).  That the slots \emph{are} the physical generations is not shown.
+\item That there are exactly three rests on the known classification: \(\mathrm{Spin}(8)\) has exactly three eight-dimensional
+irreducible representations and \(\operatorname{Out}(\mathrm{Spin}(8))=S_3\).  (a) is consistent with it.  It excludes a fourth slot
+with a new eight-dimensional representation, not a repetition of one of the three.  The structure therefore does not by itself
+forbid a fourth generation.
+\item The structure has no distinguished period.  Period two belongs to \(\rho\), \(T\), \(J_B\) and the alternating triolic shift of
+\S\ref{sec:alternating-triolic-orbit-scan}, period three to triality, period four to the duality rotation \(R_{\pi/2}\), and six and
+twelve to their combinations.  In the author's picture, the period seen by a readout is a choice of subgroup.
+\item The word triole names at least three structures in the corpus: the frame triole matter--photon--tachyon of the original
+paper (spring theorem; \(\mathbb Z_2\) with fixed point, amplitudes \(1:1:3\)), the kernel triole with \(120^\circ\) phases (a colour
+rotation inside \(\OO\), v4.9.0-r36), and the slot triole of \(\OO^3\) (triality).  The double uses found in v4.8.0-r13 and
+v4.9.0-r34 to r36 arise where these are identified.
+\end{enumerate}
+
+\subsection*{v4.9.0-r37 status in the three frames}
+\label{subsec:v490-r37-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r37.1(a)--(d) & real octonionic statements without the \(\mathbb C\) factor; the same in M, T and P\\
+r37.1(e) & contains the frame maps themselves; \(T\) and \(J_B\) exchange M and T, \(R_{\pi/2}\) is the duality rotation; P is the common fixed point\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r37 register entries}
+\label{subsec:v490-r37-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r37\\
+\midrule
+triality form \(t\) of v4.8.0-r14 & the \(\mathrm{Spin}(8)\) triality form (r37.1(a), (b))\\
+separation of colour and generation & colour in the fixed group \(G_2\supset SU(3)_c\) of triality, generation in its orbit (r37.1(c)); physical identification open\\
+exactly three generations & not forbidden by the structure alone; the classification excludes a fourth \emph{distinct} slot only (r37.1(d))\\
+periods of the self-traversal & \(1,2,3,4,6,12\) (r37.1(e)); no distinguished period\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r37 ledger and guard update}
+\label{subsec:v490-r37-ledger-guard}
+
+\[
+R_{\rm tr}^{v490\text{-}r37}=(1,0,1)
+\]
+for (triality carrier of the three slots found; prohibition of a fourth generation not obtained; physical identification of the
+slots open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r37,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r37}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r38 Source-Only: The Frame Triole as the Reflection Side of Triality}
+\addcontentsline{toc}{section}{v4.9.0-r38 Source-Only: The Frame Triole as the Reflection Side of Triality}
+\label{sec:v490-r38-frame-triole-triality}
+% ============================================================================
+
+\paragraph{Purpose.}
+In the original paper the triole of the spring theorem is the triple matter--photon--tachyon: the photon is the equilibrium node
+and matter and tachyon are mirror images.  Layer v4.9.0-r37 found that the cyclic shift \(\tau\) of the three slots of \(\OO^3\) is
+triality.  This layer records the pre-registered test H23 (note \texttt{llm/Vorab\_Notiz\_H23\_Frame\_Triole\_Triality.md}, commit
+\texttt{55043f8}, fixed before computing): whether the frame triole has the form of the second slot map
+\(\rho(x,y,z)=(\bar x,\bar z,\bar y)\), which fixes one slot and exchanges the other two.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r38 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r38 results}
+\label{subsec:v490-r38-results}
+
+Notation as in v4.9.0-r37; \(c\) is octonionic conjugation, and \(\rho\) acts on \(\mathfrak g\) by
+\((A,B,C)\mapsto(cAc,cCc,cBc)\).
+
+\paragraph{Theoremlet v4.9.0-r38.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \(\rho\) is an automorphism of \(\mathfrak g\) of order two.  It keeps the representation class of slot~1 and exchanges the
+classes of slots~2 and~3; it is outer.
+\item[(b)] The \(\rho\)-fixed subalgebra of \(\mathfrak g\) is \(21\)-dimensional, isomorphic to \(\mathfrak{so}(7)\).  On slot~1 it acts as
+\(1\oplus7\) with invariant line \(\mathbb R\cdot1\) and irreducible complement; on slots~2 and~3 it acts irreducibly, by equivalent
+eight-dimensional representations.
+\item[(c)] The sign triples preserving \(t\) are those with \(s_1s_2s_3=1\), a group \(\mathbb Z_2\times\mathbb Z_2\); the one trivial on
+slot~1 is \((1,-1,-1)\).
+\item[(d)] \(\tau\) and \(\rho\) generate \(S_3\) on the slots; its \(\mathbb Z_3\) has one orbit of length three, each transposition a
+fixed slot and an orbit of length two.
+\item[(e)] \(\mathfrak g_2=\{(A,A,A)\}\) is \(\rho\)-fixed and lies in the \(\mathfrak{so}(7)\) of (b).
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a), (b), (e) by linear algebra on \(\mathfrak{so}(8)^3\): closure under \(\rho\), intertwiner spaces between the slot representations
+of \(\mathfrak g\) and of its image, the fixed space of \(\rho\), and commutants (script \texttt{llm/k79\_test\_h23.py}, deviations at most
+\(10^{-15}\)).  (c) is immediate from trilinearity and was checked numerically; (d) by enumeration.  \(\square\)
+
+\paragraph{Verdict and reading.}
+H23a--e are confirmed; (c) and (d) are elementary.
+\begin{enumerate}[leftmargin=2em]
+\item The \(120^\circ\) triole is the \(\mathbb Z_3\)-orbit of triality; the frame triole of the original paper has the form of a
+transposition, one fixed slot and two exchanged.  Both are views of the same \(S_3\) on the three triality slots.  In the author's
+picture, the zoom chooses the subgroup.
+\item Reading: photon = the fixed slot, which under the fixed \(\mathrm{Spin}(7)\) has a distinguished direction, the real unit;
+matter and tachyon = the two exchanged slots, equal under \(\mathrm{Spin}(7)\) and mirrored by \(\rho\).  The parity \((1,-1,-1)\)
+separates the photon slot from the other two in the way \((-1)^F\) separates bosons from fermions; it is trivial, and notable only
+because it fits this reading.
+\item Which slot is the photon is a choice: \(S_3\) has three transpositions, each fixing a different slot.  This agrees with
+Convention~F, where the photon is the degenerate fixed point.
+\item Colour is fixed by the whole \(S_3\) (e).
+\item Open: on one level the three slots cannot carry both the frames (this layer) and the generations (reading of v4.9.0-r37).  In
+the author's picture these would be two zoom levels.  Which level carries which role is not shown; \(\operatorname{Im}\HH\) of the
+Dixon storage (v4.9.0-r33) is a second three-fold carrier.
+\item In eight dimensions the two spinor slots are a chirality pair.  If matter and tachyon are read as these, the frame change
+\(M\leftrightarrow T\) is a change of chirality.  This is a lead for the chirality test of the inventory, not computed here.
+\end{enumerate}
+
+\subsection*{v4.9.0-r38 status in the three frames}
+\label{subsec:v490-r38-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r38.1(a)--(e) & real octonionic statements on the slots, without the \(\mathbb C\) factor; the same in M, T and P\\
+reading (2), (3) & assigns M, P, T to slots; the assignment is a choice of transposition and is itself the frame choice\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r38 register entries}
+\label{subsec:v490-r38-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r38\\
+\midrule
+frame triole of the spring theorem & has the form of a transposition of the triality slots (r38.1(a), (b)); reading photon = vector slot, matter and tachyon = spinor slots\\
+\(120^\circ\) triole and frame triole & views of the same \(S_3\) (r38.1(d))\\
+frames versus generations on the slots & open; two levels needed\\
+chirality & lead: \(M\leftrightarrow T\) as exchange of the two spinor slots\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r38 ledger and guard update}
+\label{subsec:v490-r38-ledger-guard}
+
+\[
+R_{\rm ft}^{v490\text{-}r38}=(1,0,0)
+\]
+for (frame triole matched to the reflection side of triality; level of frames against generations open; chirality open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r38,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r38}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r39 Source-Only: Chains of Different Length under Hilbert-Shift Zoom and Mixed Readouts}
+\addcontentsline{toc}{section}{v4.9.0-r39 Source-Only: Chains of Different Length under Hilbert-Shift Zoom and Mixed Readouts}
+\label{sec:v490-r39-chains-zoom-mixed}
+% ============================================================================
+
+\paragraph{Purpose.}
+The author states (2026-10-23) that the mixed readouts were meant for the case in which the generations form a circle after
+repeated zoom, and that chains of different length might give different readings.  This layer records the pre-registered test H24
+(note \texttt{llm/Vorab\_Notiz\_H24\_Ketten\_Module\_Readouts.md}, commit \texttt{8c89481}, fixed before computing).  It uses the
+Hilbert shift of Definition~\ref{def:qam-hilbert-shift-plan} and the bit registry \(\beta_j=2^j\) of
+Definition~\ref{def:binary-mask-registry-mixed-readouts}.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r39 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r39 model}
+\label{subsec:v490-r39-model}
+
+A chain of length \(m\) is a cyclic group \(\langle g\rangle\) with \(\operatorname{ord}g=m\).  A readout of level \(j\) (bit \(2^j\)) sees
+\(\langle g^{2^j}\rangle\).  A mixed mask \(S\) with \(k=\sum_{j\in S}2^j\) is read in two ways: (\(\Sigma\)) as one step,
+\(\langle g^k\rangle\), or (\(\vee\)) as the joint readout \(\langle g^{2^j}:j\in S\rangle\).  The group is
+\(G=\langle\tau,\rho,T,R_{\pi/2}\rangle\cong S_3\times D_4\) of v4.9.0-r37.  The identification of zoom with the step \(2^j\) is a reading.
+
+\subsection*{v4.9.0-r39 results}
+\label{subsec:v490-r39-results}
+
+\paragraph{Theoremlet v4.9.0-r39.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] A chain of odd length keeps its length at every level.  For the triality, \(\tau^{2^j}=\tau\) for even \(j\) and
+\(\tau^{2^j}=\tau^{-1}=\rho\tau\rho\) for odd \(j\).
+\item[(b)] A chain of length \(2^a\) has length \(2^{a-j}\) at level \(j<a\) and \(1\) from level \(a\) on.  In \(G\) the visible orders are
+\(\{1,2,3,4,6,12\}\) at level \(0\), \(\{1,2,3,6\}\) at level \(1\), and \(\{1,3\}\) from level \(2\) on, where every \(g^{2^j}\) lies in
+\(\langle\tau\rangle\).
+\item[(c)] For \(m=3\) and masks over six bits: in reading (\(\Sigma\)) the \(21\) masks with \(3\mid k\), for instance \(S=\{0,1\}\), see one
+generation and the other \(42\) see three; in reading (\(\vee\)) every mask sees three.
+\item[(d)] For every \(m\): (\(\Sigma\)) the visible length is \(m/\gcd(m,k)\); (\(\vee\)) it is \(m/\gcd(m,2^{\min S})\), so the odd part of \(m\)
+is always preserved.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+Elementary: \(2^j\) is invertible modulo odd \(m\), and \(2^j\equiv(-1)^j\pmod 3\); the subgroup of \(\mathbb Z_m\) generated by a set of
+steps has order \(m/\gcd\).  All statements were checked by exact enumeration, on \(G\) as matrices, for \(m\le64\) and all \(63\) masks
+(script \texttt{llm/k80\_test\_h24.py}).  \(\square\)
+
+\paragraph{Verdict and reading.}
+H24a--e are confirmed; the content is the arithmetic of cyclic groups, and the physics lies only in the reading.
+\begin{enumerate}[leftmargin=2em]
+\item In the model, the generations do form a circle under repeated zoom, and it is the only thing left: from level \(2\) on, only the
+triality circle of length three remains visible, while the frame exchange (period \(2\)) and the duality rotation (period \(4\))
+disappear.  This separates the two levels left open in v4.9.0-r38: the frames at coarse zoom, the generations at deep zoom.
+\item On odd levels the circle runs backwards, and the reversed circle is the frame mirror \(\rho\); every second level reads the
+generations in the mirrored frame.
+\item What survives zoom is the odd part of a chain length.  Chains of length \(6\) (three generations times two frames) or \(12\) show
+three at deep zoom; chains of length \(2^a\) vanish.  No generation chain of length four or more arises in \(G\).
+\item Mixed readouts give different readings depending on the aggregation: as one step, a third of the masks see one generation; as
+a joint readout, all see three.  Definition~\ref{def:guarded-mixed-qam-readout} leaves the aggregation \(\mu\) open.
+\end{enumerate}
+
+\paragraph{Author remark and textual reading.}
+The author states (2026-10-23) that the contraction discipline of Definition~\ref{def:two-sided-admissible-contractions} was
+introduced so that classical tensor calculus keeps working while mixed channels can also be contracted, that it was hardly used, and
+that the paper was written from one frame.  Read against r39.1: in the selector contraction \(\chi_{mn}R^mS^n\) of
+Definition~\ref{def:guarded-two-sided-mixed-qam-readout}, compatible modes are composed; for shift readouts
+\(R^m=g^{2^m}\), \(S^n=g^{2^n}\) the composition is \(g^{2^m+2^n}\), which is reading (\(\Sigma\)).  The Boolean mask grammar
+(\(\chi_A\vee\chi_B\)) only selects the active kinds, which is reading (\(\vee\)).  Both readings are therefore present in the text, at
+different places.  Combining an even and an odd level by contraction gives \(\tau^{3}=1\): a readout composed with its frame mirror
+does not see the generation circle.  The front indices of Definition~\ref{def:two-sided-structural-tensor-interface} carry the frame;
+in the main body they are not varied, which is the one-frame restriction.  This is a reading, not part of the pre-registered test.
+
+\subsection*{v4.9.0-r39 status in the three frames}
+\label{subsec:v490-r39-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r39.1(a), (c), (d) & arithmetic of chains, frame-free\\
+r39.1(b) & contains the frame maps; from level \(2\) on they are invisible, so deep-zoom statements are the same in M, T and P\\
+reading (2) & odd levels read the generations in the \(\rho\)-mirrored frame\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r39 register entries}
+\label{subsec:v490-r39-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r39\\
+\midrule
+generation circle under zoom & the only cycle of \(G\) visible from level \(2\) on (r39.1(b)); orientation alternates with the level (r39.1(a))\\
+frames versus generations & separated by zoom level in the model\\
+mixed readouts & one or three generations, depending on the aggregation \(\mu\); selector contraction \(=(\Sigma)\), Boolean mask \(=(\vee)\) (reading)\\
+front indices of two-sided displays & carry the frame; not varied in the main body (one-frame restriction)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r39 ledger and guard update}
+\label{subsec:v490-r39-ledger-guard}
+
+\[
+R_{\rm zm}^{v490\text{-}r39}=(1,1,0)
+\]
+for (generation circle survives zoom; frames and generations separated by level; aggregation of mixed readouts open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r39,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r39}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r40 Source-Only: The Two-Sided Contraction across Frames, and the Weak SU(2)}
+\addcontentsline{toc}{section}{v4.9.0-r40 Source-Only: The Two-Sided Contraction across Frames, and the Weak SU(2)}
+\label{sec:v490-r40-two-sided-frames}
+% ============================================================================
+
+\paragraph{Purpose.}
+The two-sided notation of Definition~\ref{def:two-sided-structural-tensor-interface} puts the frame on the front indices.  The author
+states (2026-10-23) that its contraction discipline, Definition~\ref{def:two-sided-admissible-contractions}, has never been used or
+tested, and that it is not expected to work at once.  This layer uses the front side across frames for the first time and records
+the pre-registered test H25 (note \texttt{llm/Vorab\_Notiz\_H25\_Zweiseitige\_Kontraktion\_Frames.md}, commit \texttt{d1aba48}, fixed
+before computing).  It also asks whether a weak \(SU(2)\) commuting with colour exists in the triality algebra.  Earlier layers are not
+rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r40 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r40 model}
+\label{subsec:v490-r40-model}
+
+Front side: the \(\mathbb C\) factor of the Dixon storage, with the frame maps \(R_{\pi/2}\) (linear, \(X\mapsto iX\), contragredient
+\(\omega\mapsto-i\omega\)), \(T\) (antilinear, complex conjugation) and \(J_B=R_{\pi/2}\circ T\).  Back side: real structure, acting on
+the index \(\alpha\).  Rule~1 is the \(\mathbb C\)-bilinear contraction \(\omega_\alpha X^\alpha\); rule~2 is \(q(X)=G_{\alpha\beta}X^\alpha X^\beta\)
+with real symmetric \(G\), compared with the Hermitian form \(h(X)=G_{\alpha\beta}\bar X^\alpha X^\beta\).  On
+\(W=\mathbb C\otimes\HH\otimes\OO\) the front maps are \(D_4\) and left multiplication \(L_q\) by unit quaternions, the back maps right
+multiplication \(R_q\) and \(SU(3)_c=\operatorname{Stab}_{G_2}(e_7)\).
+
+\subsection*{v4.9.0-r40 results}
+\label{subsec:v490-r40-results}
+
+\paragraph{Theoremlet v4.9.0-r40.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] On \(W\) every front map commutes with every back map.
+\item[(b)] \(\omega_\alpha X^\alpha\) is invariant under \(R_{\pi/2}\) and is complex conjugated under \(T\) and \(J_B\).
+\item[(c)] \(q\mapsto-q\) under \(R_{\pi/2}\), \(q\mapsto\bar q\) under \(T\), \(q\mapsto-\bar q\) under \(J_B\); \(h\) is invariant under all eight
+elements of \(D_4\).
+\item[(d)] The centralizer of \(\mathfrak{su}(3)_c\) in the triality algebra \(\mathfrak g\cong\mathfrak{so}(8)\) of v4.9.0-r37 is two-dimensional
+and abelian.  On \(W\), \(L_q\) and \(R_q\) give two copies of \(\mathfrak{su}(2)\) that commute with each other, with
+\(\mathfrak{su}(3)_c\) and with \(D_4\).
+\item[(e)] No nonzero element of \(\mathfrak g\) acts trivially on one spinor slot and nontrivially on the other.
+\end{enumerate}
+In a check after the evaluation, the centralizer in (d) was found to be \(\operatorname{span}(L_{e_7},R_{e_7})\) on each slot.
+
+\paragraph{Proof sketch.}
+(b), (c) by direct substitution, checked on random vectors; \(D_4\) is generated by \(R_{\pi/2}\) and \(T\).  (a), (d), (e) by matrices
+and null spaces (script \texttt{llm/k81\_test\_h25.py}, deviations at most \(10^{-14}\)); (e) is the injectivity of the slot projections
+(v4.9.0-r37.1(a)).  \(\square\)
+
+\paragraph{Verdict and reading.}
+H25a--e are confirmed; (a) and (e) are controls.
+\begin{enumerate}[leftmargin=2em]
+\item Used across frames for the first time, the rules work, but not as stated.  Rule~1 says that the classical contraction remains
+unchanged; across frames this holds for \(R_{\pi/2}\) only, while the antilinear frame maps conjugate the value.  Only real readouts are
+frame-invariant.  Rule~2 depends on whether the comparison is bilinear or Hermitian, which the definition does not fix.  The notation
+is frame-covariant, not frame-invariant; this is a finding about the notation, which so far was used in one frame only.
+\item The bilinear comparison changes sign under the transition \(z\mapsto iz\) from M to T.  Read as a squared mass, this is
+\(m^2\mapsto-m^2\), the tachyon.  The Hermitian comparison does not distinguish M from T.  The choice is therefore one of content:
+bilinear comparisons separate the frames, Hermitian ones do not.
+\item No \(\mathfrak{su}(2)\) of the triality algebra commutes with colour; what commutes is \(\operatorname{span}(L_{e_7},R_{e_7})\), the
+generators of the charge \(Q=\tfrac12-\tfrac{i}{6}L_{e_7}-\tfrac{i}{3}R_{e_7}\) of v4.9.0-r35.  The triality level carries colour and
+charge, but no weak interaction.  An \(\mathfrak{su}(2)\) commuting with colour appears only in the \(\HH\) factor, twice: from the left
+(front side) and from the right (back side).
+\item Reading: the two \(\mathfrak{su}(2)\) of \(\HH\) sit on the two sides of the two-sided notation, and ``the weak \(SU(2)\) acts only
+on the left'' would read ``the weak \(SU(2)\) is one side''.  This is not shown.  The conflict of the inventory remains: the left side
+also carries the Lorentz rotation, and the right side the generation \(\mathbb Z_3\) of v4.9.0-r33.
+\item Proposed frame clause for rules~1 and~2 (author decision): readouts are real or are conjugated with the antilinear frame maps,
+and each comparison tensor is declared bilinear (frame-separating) or Hermitian (frame-blind).
+\end{enumerate}
+
+\subsection*{v4.9.0-r40 status in the three frames}
+\label{subsec:v490-r40-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r40.1(b), (c) & compare M with T directly: rule~1 invariant under \(R_{\pi/2}\), conjugated under \(T\), \(J_B\); bilinear rule~2 changes sign between M and T; P not evaluated\\
+r40.1(a), (d), (e) & real structural statements, the same in M, T and P\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r40 register entries}
+\label{subsec:v490-r40-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r40\\
+\midrule
+Definition~\ref{def:two-sided-admissible-contractions} across frames & frame-covariant, not invariant (r40.1(b), (c)); frame clause proposed\\
+weak \(SU(2)\) & not in the triality algebra (r40.1(d)); two candidates in \(\HH\), left and right; overload of \(\HH\) unresolved\\
+colour centralizer in triality & \(\operatorname{span}(L_{e_7},R_{e_7})\), the charge generators (check after evaluation)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r40 ledger and guard update}
+\label{subsec:v490-r40-ledger-guard}
+
+\[
+R_{\rm ts}^{v490\text{-}r40}=(1,0,0)
+\]
+for (frame behaviour of the two-sided contraction determined; frame clause undecided; weak \(SU(2)\) not located).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r40,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r40}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r41 Source-Only: Distributing the Roles of the Quaternion Factor; Hypercharge and Electric Charge}
+\addcontentsline{toc}{section}{v4.9.0-r41 Source-Only: Distributing the Roles of the Quaternion Factor; Hypercharge and Electric Charge}
+\label{sec:v490-r41-quaternion-roles}
+% ============================================================================
+
+\paragraph{Purpose.}
+The inventory of the standard-model features found the quaternion factor overloaded: it carries the Lorentz spinor
+(Theorem~\ref{thm:three-generations}), the weak \(SU(2)\) (Theorem~\ref{thm:SM}) and, in v4.9.0-r33, the generation index.  Layers
+v4.9.0-r37 to r40 found a carrier for the generations in triality, a separation of frames and generations by zoom level, and two
+\(\mathfrak{su}(2)\) commuting with colour, from the left and from the right of \(\HH\).  This layer records the pre-registered test H26
+(note \texttt{llm/Vorab\_Notiz\_H26\_Verteilung\_H\_Faktor.md}, commit \texttt{1876b55}, fixed before computing) of a distribution D of
+these roles.  The charge pattern of (b) and (c) below was seen analytically before the note and is disclosed there; the computation
+checks it and is not a prediction.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r41 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r41 distribution D}
+\label{subsec:v490-r41-distribution}
+
+Lorentz \(SL(2,\mathbb C)\) by left multiplication \(L_q\) (rotations) and \(iL_q\) (boosts) on \(\mathbb C\otimes\HH\); weak \(SU(2)\) by
+right multiplication \(R_q\) on \(\HH\), with \(T_3=-\tfrac{i}{2}R_k\); colour \(SU(3)_c\) on \(\OO\); frames \(D_4\) on \(\mathbb C\); generations on
+the triality slots of \(\OO^3\).  Hypercharge \(Y/2:=Q-\tfrac12\) with \(Q\) of v4.9.0-r34/r35; electric charge \(Q_{\rm em}:=T_3+Y/2\).  Here \(i\)
+is the outer unit.
+
+\subsection*{v4.9.0-r41 results}
+\label{subsec:v490-r41-results}
+
+\paragraph{Theoremlet v4.9.0-r41.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] On \(\mathbb C\otimes\HH\otimes\OO\) the weak \(SU(2)\) commutes with the Lorentz group, with colour and with \(Q\).  The Lorentz
+rotations are fixed by \(T\); the boosts are reversed by \(T\).
+\item[(b)] The joint eigenspaces of \(Q\) and \(T_3\) carry \(Q_{\rm em}\) as follows:
+\begin{center}
+\small
+\begin{tabular}{@{}llll@{}}
+\toprule
+\(Q\)-sector (colour) & \(Y/2\) & \(Q_{\rm em}\) at \(T_3=+\tfrac12,-\tfrac12\) & reading\\
+\midrule
+\(0\) (singlet) & \(-\tfrac12\) & \(0,\ -1\) & lepton doublet \((\nu,e)\)\\
+\(\tfrac23\) (triplet) & \(+\tfrac16\) & \(\tfrac23,\ -\tfrac13\) & quark doublet \((u,d)\)\\
+\(\tfrac13\) (conjugate triplet) & \(-\tfrac16\) & \(\tfrac13,\ -\tfrac23\) & antiquark doublet \((\bar d,\bar u)\)\\
+\(1\) (singlet) & \(+\tfrac12\) & \(1,\ 0\) & antilepton doublet \((e^+,\bar\nu)\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+\item[(c)] \(TQ_{\rm em}T^{-1}=-Q_{\rm em}\) and \(T(Y/2)T^{-1}=-Y/2\).
+\item[(d)] There is no weak singlet: \(T_1^2+T_2^2+T_3^2=\tfrac34\) on the whole space.
+\item[(e)] On \(\mathbb C\otimes\HH\otimes\OO^3\) the cyclic shift of the slots commutes with \(L_q\), \(R_q\), colour and \(Q\).
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+By explicit complex matrices on \(\HH\otimes\OO\cong\mathbb C^{32}\), with the \(\mathbb C\) factor as scalar and \(T\) as complex conjugation
+(script \texttt{llm/k82\_test\_h26.py}, deviations at most \(10^{-14}\)).  (c) follows from \(TQT^{-1}=1-Q\) (v4.9.0-r34.1(d)) and
+\(T(-\tfrac i2R_k)T^{-1}=\tfrac i2R_k\).  (d): \(R_q\) acts on \(\HH\cong\mathbb C^2\otimes\mathbb C^2\) as a doublet on the right index.  \(\square\)
+
+\paragraph{Verdict and reading.}
+H26a--e are confirmed; (d) is negative for D.
+\begin{enumerate}[leftmargin=2em]
+\item In D the quaternion factor is no longer overloaded: the Lorentz group sits on the left (front side), the weak \(SU(2)\) on the
+right (back side), the generations on the triality slots.  The zoom levels separate frames from generations; the sides separate the
+Lorentz group from the weak \(SU(2)\).
+\item Under the choice \(Y/2=Q-\tfrac12\), \(Q_{\rm em}=T_3+Y/2\) gives exactly the hypercharges and charges of the left-handed
+standard-model doublets and their conjugates, with the right colour: leptons singlets, quarks triplets, antiquarks conjugate
+triplets.  The choice is motivated by the pattern and not forced by the structure.  The sector assignment is Furey's; similar patterns
+are known in the literature on \(\mathbb C\otimes\HH\otimes\OO\).  New here is the placement on the sides and frames of the Companion.
+\item In D the frame change \(T\) is charge conjugation, \(Q_{\rm em}\mapsto-Q_{\rm em}\).  The shift in \(Q\mapsto1-Q\) of v4.9.0-r34.1(d) is
+the hypercharge offset \(\tfrac12\).  Matter frame and tachyon frame behave in D as particle and antiparticle.
+\item D is incomplete.  Every state is a weak doublet; the right-handed singlets \(u_R,d_R,e_R,\nu_R\), half of a generation, are absent,
+and all states carry the same left Lorentz index.  Chirality is not explained.  Weak singlets would need a structure on which the right
+action of \(\HH\) is trivial on part of the space, for instance a projector coupling left and right.
+\end{enumerate}
+
+\subsection*{v4.9.0-r41 status in the three frames}
+\label{subsec:v490-r41-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r41.1(a), (d), (e) & the same in M, T and P, except that \(T\) reverses the boosts\\
+r41.1(b) & stated in M; in T all charges and hypercharges change sign (r41.1(c)): the T frame reads the conjugate states\\
+r41.1(c) & relates M and T: \(T\) acts as charge conjugation; P not evaluated\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r41 register entries}
+\label{subsec:v490-r41-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r41\\
+\midrule
+overload of \(\HH\) & resolved in D by sides (Lorentz left, weak right) and by triality for the generations (r41.1(a), (e))\\
+hypercharge and \(Q=T_3+Y/2\) & doublet pattern reproduced under the choice \(Y/2=Q-\tfrac12\) (r41.1(b)); not derived\\
+frame \(T\) & charge conjugation in D (r41.1(c))\\
+weak singlets, chirality & absent in D (r41.1(d)); open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r41 ledger and guard update}
+\label{subsec:v490-r41-ledger-guard}
+
+\[
+R_{\rm qh}^{v490\text{-}r41}=(1,1,0)
+\]
+for (overload of \(\HH\) resolved in D; doublet charges reproduced under a choice; singlets and chirality absent).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r41,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r41}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r42 Source-Only: A Compensator of the Millennium Matrix as Chirality Projector}
+\addcontentsline{toc}{section}{v4.9.0-r42 Source-Only: A Compensator of the Millennium Matrix as Chirality Projector}
+\label{sec:v490-r42-mm-compensator-chirality}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.9.0-r41 placed the weak \(SU(2)\) on the right of \(\HH\) and obtained only weak doublets.  The author states (2026-10-23) that
+the Millennium matrix of \S\ref{sec:millennium-hc}, which was to carry several Heisenberg compensators, was meant for the missing half.
+This layer records the pre-registered test H27 (note \texttt{llm/Vorab\_Notiz\_H27\_MM\_Kompensator\_Chiralitaet.md}, commit
+\texttt{614ac3e}, fixed before computing).  The charge pattern was seen analytically before the note and is disclosed there; the
+computation checks it and is not a prediction.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r42 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r42 construction}
+\label{subsec:v490-r42-construction}
+
+On \(\mathbb C\otimes\HH\otimes\OO\cong\mathbb C^{32}\) with the distribution D of v4.9.0-r41, put
+\[
+C_{\rm ch}=\tfrac12(\mathrm{id}+J),\qquad J=i\,L_{e_7},\qquad T_a'=C_{\rm ch}T_a,
+\]
+\[
+\tfrac{Y}{2}=Q-\tfrac12+(1-C_{\rm ch})T_3,\qquad Q_{\rm em}=T_3+Q-\tfrac12 ,
+\]
+with \(i\) the outer unit and \(L_{e_7}\) the inner unit, so \(J^2=1\) and \(C_{\rm ch}\) has the form of the Heisenberg compensator.
+
+\subsection*{v4.9.0-r42 results}
+\label{subsec:v490-r42-results}
+
+\paragraph{Theoremlet v4.9.0-r42.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \(C_{\rm ch}\) is a Hermitian projector of rank \(16\); it commutes with colour, the Lorentz group, the right action of \(\HH\)
+and \(Q\), and its image is the sum of the \(Q\)-sectors \(0\) and \(\tfrac23\).
+\item[(b)] Under colour, the weak \(SU(2)'\) and \(Y/2\) the space splits into
+\begin{center}
+\small
+\begin{tabular}{@{}llll@{}}
+\toprule
+\((SU(3),SU(2)',Y/2)\) & \(Q_{\rm em}\) & state & complex dimension\\
+\midrule
+\((3,2,\tfrac16)\) & \(\tfrac23,-\tfrac13\) & \((u,d)_L\) & \(12\)\\
+\((1,2,-\tfrac12)\) & \(0,-1\) & \((\nu,e)_L\) & \(4\)\\
+\((\bar3,1,-\tfrac23)\) & \(-\tfrac23\) & \(u^c\) & \(6\)\\
+\((\bar3,1,\tfrac13)\) & \(\tfrac13\) & \(d^c\) & \(6\)\\
+\((1,1,1)\) & \(1\) & \(e^c\) & \(2\)\\
+\((1,1,0)\) & \(0\) & \(\nu^c\) & \(2\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+that is, sixteen Weyl states with two Lorentz components each; \(Y/2\) commutes with \(SU(2)'\), colour and the Lorentz group, and
+\(Q_{\rm em}=T_3'+Y/2\).
+\item[(c)] Over the sixteen states, \(\operatorname{Tr}Y\), \(\operatorname{Tr}Y^3\) and the \(SU(2)^2U(1)\) and \(SU(3)^2U(1)\) traces vanish.
+\item[(d)] \(SU(2)'\) acts only on the image of \(C_{\rm ch}\), and \(TC_{\rm ch}T^{-1}=1-C_{\rm ch}\).
+\item[(e)] \(\mathcal M=\lambda_0C_{\rm ch}+\lambda_1(1-C_{\rm ch})\), \(\lambda_0\neq\lambda_1\), has \(C_{\rm ch}\) as spectral projector, as in
+Theorem~\ref{thm:hc-spectral-projector}.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+By explicit complex matrices (script \texttt{llm/k83\_test\_h27.py}, deviations at most \(10^{-15}\)).  \(C_{\rm ch}\) equals \(P_-\) of
+v4.9.0-r35.1(c).  A first run reported (b) as refuted because the candidate values of \(Y/2\) were rounded to nine digits while the
+null-space test required \(10^{-10}\), which lost all non-dyadic values; only this rounding was corrected, and both outputs are kept.
+\(\square\)
+
+\paragraph{Verdict and reading.}
+H27a--e are confirmed, (b) after the correction of the script; (e) is a control.
+\begin{enumerate}[leftmargin=2em]
+\item A compensator of the Companion's form \(\tfrac12(\mathrm{id}+J)\), with \(J\) the product of the outer and the inner unit, completes
+the doublets of v4.9.0-r41 to the full left-handed content of one generation with right-handed neutrino.  The weak \(SU(2)\) acts only
+on its image: in the model, this is chirality.  A compensator of the Millennium matrix separates the chiralities.
+\item The frame change \(T\) exchanges image and kernel of the compensator.  With v4.9.0-r41.1(c), matter frame and tachyon frame are in
+the model particle and antiparticle with mirrored chirality.  This is a reading.
+\item The Millennium matrix of \S\ref{sec:millennium-hc} is \(16\times16\), and one generation with \(\nu_R\) has sixteen Weyl states.  This is
+recorded, not interpreted.
+\item This is a construction under choices, not a derivation: \(J\) and the formula for \(Y/2\) are chosen so that the known result
+appears, and the pattern was seen in advance.  It shows that the building blocks of the Companion (compensator, two units, two sides,
+triality) suffice.  Anomaly cancellation follows from the content.  Similar constructions exist in the literature on
+\(\mathbb C\otimes\HH\otimes\OO\).  Why this choice, symmetry breaking, masses and mixings are not addressed.
+\end{enumerate}
+
+\subsection*{v4.9.0-r42 status in the three frames}
+\label{subsec:v490-r42-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r42.1(a)--(c) & stated in M\\
+r42.1(d) & relates M and T: \(T\) exchanges the chiral halves; with r41.1(c) the T frame reads the conjugate states with mirrored chirality; P not evaluated\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r42 register entries}
+\label{subsec:v490-r42-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r42\\
+\midrule
+content of one generation & constructed under choices from compensator, two units, two sides (r42.1(b)); not derived\\
+chirality & in the model: the weak \(SU(2)\) acts on the image of one compensator (r42.1(d))\\
+Millennium matrix & a two-projector reading with \(C_{\rm ch}\) as spectral projector (r42.1(e)); the dimension \(16\) recorded\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r42 ledger and guard update}
+\label{subsec:v490-r42-ledger-guard}
+
+\[
+R_{\rm ch}^{v490\text{-}r42}=(1,0,0)
+\]
+for (content of one generation constructed; choice of \(J\) and \(Y\) not derived; breaking, masses and mixings open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r42,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r42}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
