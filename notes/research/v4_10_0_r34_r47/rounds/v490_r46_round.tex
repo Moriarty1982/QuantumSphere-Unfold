@@ -1,0 +1,109 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r46 Source-Only: Mixed Readouts and the Breaking of Triality}
+\addcontentsline{toc}{section}{v4.9.0-r46 Source-Only: Mixed Readouts and the Breaking of Triality}
+\label{sec:v490-r46-readouts-triality-breaking}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.9.0-r45 derived the breaking of the reflection \(\rho\) from chirality, while triality \(\tau\) survives, so that no mixing arises
+(v4.9.0-r44).  This layer records the pre-registered test H31 (note \texttt{llm/Vorab\_Notiz\_H31\_Tau\_Brechung\_Readouts.md}, commit
+\texttt{ea74447}, fixed before computing) of whether the mixed readouts of
+Definitions~\ref{def:binary-mask-registry-mixed-readouts} and~\ref{def:guarded-two-sided-mixed-qam-readout} can break \(\tau\).  The note
+discloses that (a) follows from commutativity and that (c) is general perturbation theory.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r46 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r46 setting}
+\label{subsec:v490-r46-setting}
+
+On the slot space \(\mathbb C^3\) let \(P=\tau\), and let \(M_u\), \(M_d\) be Hermitian \(\mathbb Z_3\)-circulants (\(\rho\)-broken, \(\tau\)-symmetric, as
+after v4.9.0-r45); the mixing is \(|V|=|U_u^\dagger U_d|\).  A \emph{shift readout} is built from the level readouts \(P^{2^j}\) of v4.9.0-r39:
+products (reading \(\Sigma\)), averages over generated subgroups (reading \(\vee\)), and selector contractions \(\sum\chi_{mn}P^{2^m}P^{2^n}\).  A
+\emph{kind mask}, with the readout kind taken to be the slot, is a diagonal projector \(D_S\), \(\emptyset\neq S\subsetneq\{1,2,3\}\), entering as
+\(M+\delta D_S\).
+
+\subsection*{v4.9.0-r46 results}
+\label{subsec:v490-r46-results}
+
+\paragraph{Theoremlet v4.9.0-r46.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Every shift readout commutes with \(\tau\); added to \(M_u\) and \(M_d\) it leaves \(|V|\) a permutation matrix.
+\item[(b)] Kind masks do not commute with \(\tau\); for \(\delta>0\) and generic \(M_u,M_d\), \(|V|\) is not a permutation matrix, even with the same
+mask and weight for up and down.
+\item[(c)] For small \(\delta\) the deviation of \(|V|\) from a permutation is linear in \(\delta\) and bounded by
+\(\tfrac{\delta}{3}\bigl(\mathrm{gap}_u^{-1}+\mathrm{gap}_d^{-1}\bigr)\), with the smallest spacings of the eigenvalues.
+\item[(d)] Kind masks are real and commute with the frame change \(T\).
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a): shift readouts lie in the group ring \(\mathbb C[\mathbb Z_3]\), which is commutative, so they are circulant; circulants are diagonalized by
+one Fourier matrix.  (b)--(d) checked on \(200\) random cases each (script \texttt{llm/k87\_test\_h31.py}); the factor \(\tfrac13\) in (c) is the
+size of the entries of a one-slot mask in the Fourier basis.  \(\square\)
+
+\paragraph{Verdict and reading.}
+H31a--d are confirmed; (a) and (c) are elementary.
+\begin{enumerate}[leftmargin=2em]
+\item The mixed readouts as they are formed from the Hilbert shift produce no mixing: every readout built only from the generation shifts
+commutes with \(\tau\).  This is a genuine prohibition.
+\item Only a readout that distinguishes generations as readout kinds breaks \(\tau\).  Then mixing arises, already with the same mask for up and
+down, and it is small when the mask is weak and the masses are far apart.  This agrees qualitatively with small quark mixing at a strong mass
+hierarchy and with larger mixing where masses lie close, as for neutrinos.  No numbers follow.
+\item Mixing is measurable and not an artefact of an observer.  A mixing from readout can therefore only mean that the generation-selective
+mask is part of the couplings, of the structure in which one reads out, not a dependence on who measures.  Where such a mask comes from in the
+structure is open.
+\end{enumerate}
+
+\subsection*{v4.9.0-r46 status in the three frames}
+\label{subsec:v490-r46-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r46.1(a)--(c) & statements on slot couplings, the same in M and T\\
+r46.1(d) & kind masks commute with \(T\): the breaking of \(\tau\) by masks is frame-free; P not evaluated\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r46 register entries}
+\label{subsec:v490-r46-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r46\\
+\midrule
+mixing from shift readouts & excluded (r46.1(a))\\
+mixing from kind masks & arises, linear in the mask weight, suppressed by mass spacings (r46.1(b), (c))\\
+origin of a generation-selective mask & open; must be part of the couplings, not of the observer\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r46 ledger and guard update}
+\label{subsec:v490-r46-ledger-guard}
+
+\[
+R_{\rm mx}^{v490\text{-}r46}=(1,1,0)
+\]
+for (shift readouts excluded as source of mixing; kind masks identified as a possible source; origin of the mask open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r46,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r46}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.

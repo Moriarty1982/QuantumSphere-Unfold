@@ -1,0 +1,7 @@
+H30a: c L_e7 c = -R_e7: 0e+00; c R_e7 c = -L_e7: 0e+00; reines Vertauschen (x,z,y) aendert t um bis zu 35.739 -> bestaetigt
+
+H30b: Symmetrien von t (Kontrolle 4e-15); Wirkung auf diag C(iL_e7): {'1': 'erhaelt C', 'tau': 'erhaelt C', 'tau2': 'erhaelt C', 'rho': '-> 1/2(1 - iR_e7)', 'tau.rho': '-> 1/2(1 - iR_e7)', 'tau2.rho': '-> 1/2(1 - iR_e7)'} -> bestaetigt
+
+H30c: (L_e7, L_e7, L_e7) in g? Rest 3.000 (nein, wenn > 0); Fortsetzung von A = L_e7 (8e-16): B = -0.0000 L_e7 +1.0000 R_e7 (Rest 1e-15), C = -1.0000 L_e7 -1.0000 R_e7 (Rest 1e-15); tau-invariant: False -> bestaetigt
+
+H30d: Platz 2: +R_e7 (iB Involution: 1e-15), Platz 3: Mischung (iC Involution: 3e+00) -> bestaetigt

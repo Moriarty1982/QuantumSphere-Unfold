@@ -5840,3 +5840,570 @@ R_{\rm glob}^{(v490\text{-}r42,+)}=(0,1,1,1,1),
 \]
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r43 Source-Only: The Choice of the Chirality Projector Is Fixed by Anomaly Cancellation}
+\addcontentsline{toc}{section}{v4.9.0-r43 Source-Only: The Choice of the Chirality Projector Is Fixed by Anomaly Cancellation}
+\label{sec:v490-r43-choice-anomalies}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.9.0-r42 built the content of one generation with the compensator \(C=\tfrac12(\mathrm{id}+J)\), \(J=iL_{e_7}\), and the hypercharge
+offset \(-\tfrac12\), both chosen.  The author asks why this choice.  This layer records the pre-registered test H28 (note
+\texttt{llm/Vorab\_Notiz\_H28\_Warum\_diese\_Wahl.md}, commit \texttt{9b8b360}, fixed before computing; one case and the sector
+assignment were computed by hand beforehand and are disclosed there).  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r43 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r43 setting}
+\label{subsec:v490-r43-setting}
+
+On \(\mathbb C\otimes\HH\otimes\OO\) as in v4.9.0-r42, a chirality projector is \(C=\tfrac12(1+J)\) with \(J\) Hermitian, \(J^2=1\), \(J\neq\pm1\),
+acting on \(\mathbb C\otimes\OO\), commuting with colour and \(Q\), of rank \(16\), with image one colour singlet and one colour triplet.  The weak
+\(SU(2)'\) is \(CT_a\), the charge \(Q_{\rm em}=T_3+Q+s\), the hypercharge \(Y/2=Q+s+(1-C)T_3\).
+
+\subsection*{v4.9.0-r43 results}
+\label{subsec:v490-r43-results}
+
+\paragraph{Theoremlet v4.9.0-r43.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] The commutant of colour and \(Q\) on \(\mathbb C\otimes\OO\) is spanned by the four sector projectors.  There are exactly four chirality
+projectors, with \(J=iL_{e_7}\) (image the sectors \(0,\tfrac23\)), \(-iL_{e_7}\) (\(\tfrac13,1\)), \(iR_{e_7}\) (\(0,\tfrac13\)) and \(-iR_{e_7}\)
+(\(\tfrac23,1\)).
+\item[(b)] For each of them \(\operatorname{Tr}Y=0\) holds exactly for \(s=-\tfrac12\).
+\item[(c)] At \(s=-\tfrac12\) all four anomaly traces (\(\operatorname{Tr}Y\), \(\operatorname{Tr}Y^3\), \(SU(2)^2U(1)\), \(SU(3)^2U(1)\)) vanish
+exactly for \(J=\pm iL_{e_7}\).  For \(J=\pm iR_{e_7}\) one finds \(\operatorname{Tr}Y^3=\pm\tfrac32\) and \(SU(2)^2U(1)=\mp2\), the latter
+summed over both states of each doublet.
+\item[(d)] \(T(iL_{e_7})T^{-1}=-iL_{e_7}\): the two admissible choices are frame images of each other.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+By explicit matrices and exact fractions (script \texttt{llm/k84\_test\_h28.py}).  The commutant consists of scalars on the four \(Q\)-sectors,
+because each sector is colour-irreducible with its own charge; a Hermitian involution there is a choice of sign per sector, and the rank and
+image conditions leave four.  \(\square\)
+
+\paragraph{Verdict and reading.}
+H28a--d are confirmed.
+\begin{enumerate}[leftmargin=2em]
+\item Under the assumptions of the setting the choice of v4.9.0-r42 is forced up to the frame.  Colour and charge conservation allow
+four chirality projectors, the gravitational anomaly fixes the hypercharge offset \(-\tfrac12\), and the remaining anomalies select left
+multiplication by \(e_7\).  What remains is the Standard Model and its frame mirror.  The selection is again one of left against right.
+\item The setting itself stays an assumption: the weak \(SU(2)\) on the right of \(\HH\), \(Q_{\rm em}=T_3+Q+s\), and the projector acting on
+\(\mathbb C\otimes\OO\).  Once these are made, nothing is left to choose.
+\item This is no prediction; that the Standard Model is anomaly-free is known.  New is only that, in this structure, anomaly cancellation
+alone decides between left and right.
+\end{enumerate}
+
+\subsection*{v4.9.0-r43 status in the three frames}
+\label{subsec:v490-r43-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r43.1(a)--(c) & stated in M; the anomaly traces are the same in T, where \(J\mapsto-J\) (d)\\
+r43.1(d) & relates M and T; P not evaluated\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r43 register entries}
+\label{subsec:v490-r43-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r43\\
+\midrule
+choice of \(J\) in r42 & forced up to the frame by colour, charge conservation and anomaly cancellation (r43.1)\\
+hypercharge offset \(-\tfrac12\) & forced by the gravitational anomaly (r43.1(b))\\
+weak \(SU(2)\) on the right, \(Q_{\rm em}=T_3+Q+s\) & assumptions, not derived\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r43 ledger and guard update}
+\label{subsec:v490-r43-ledger-guard}
+
+\[
+R_{\rm an}^{v490\text{-}r43}=(1,1,0)
+\]
+for (chirality projector fixed up to the frame; hypercharge offset fixed; placement of the weak \(SU(2)\) not derived).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r43,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r43}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r44 Source-Only: Mass Terms as Frame Couplings; Breaking Stages for Masses and Mixing}
+\addcontentsline{toc}{section}{v4.9.0-r44 Source-Only: Mass Terms as Frame Couplings; Breaking Stages for Masses and Mixing}
+\label{sec:v490-r44-mass-frame-couplings}
+% ============================================================================
+
+\paragraph{Purpose.}
+After v4.9.0-r42 and r43 the content of one generation stands, but symmetry breaking, masses and mixing are open.  This layer records the
+pre-registered test H29 (note \texttt{llm/Vorab\_Notiz\_H29\_Brechung\_Massen\_Mischung.md}, commit \texttt{85d065a}, fixed before
+computing).  It asks which maps between the two chiral halves are compatible with colour and the Lorentz group, which quantum numbers they
+carry, and what the three triality slots imply for masses and mixing.  The known parts are disclosed in the note.  Earlier layers are not
+rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r44 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r44 setting}
+\label{subsec:v490-r44-setting}
+
+On \(V=\mathbb C\otimes\HH\otimes\OO\) as in v4.9.0-r42, a \emph{connector} is a map \(V\to V\) commuting with colour and with the Lorentz
+rotations \(L_q\): linear (\(X\)) or antilinear (\(\Phi=X\circ T\)).  An antilinear connector anticommutes with the boosts \(iL_q\), so it maps
+left- to right-handed spinors: it is the operator form of a mass term.  A Hermitian generator \(G\) acts by \(X\mapsto GX-XG\) (linear) or
+\(X\mapsto GX+X\bar G\) (antilinear).  Blocks refer to \(C=C_{\rm ch}\).  On the triality slots a coupling is a Hermitian \(3\times3\) matrix
+\(M\); \(P\) is the cyclic shift \(\tau\), \(R\) the transposition \(\rho\).
+
+\subsection*{v4.9.0-r44 results}
+\label{subsec:v490-r44-results}
+
+\paragraph{Theoremlet v4.9.0-r44.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] The linear and the antilinear connectors each form a \(24\)-dimensional complex space.
+\item[(b)] The antilinear block from the kernel to the image of \(C\) is \(8\)-dimensional, with a lepton and a quark part of dimension \(4\) each,
+and consists of weak doublets with \(Y/2=+\tfrac12\) (\(Q_{\rm em}=1,0\)) and \(Y/2=-\tfrac12\) (\(Q_{\rm em}=0,-1\)).
+\item[(c)] The linear block from the kernel to the image is \(4\)-dimensional, lepton part only, with \(Y/2\in\{-\tfrac12,-\tfrac32\}\).
+\item[(d)] No antilinear connector from the kernel to the image is gauge invariant; in the block from the kernel to the kernel exactly one is,
+and it acts only on \(\nu^c\).
+\item[(e)] (i) A Hermitian \(M\) commuting with \(P\) and \(R\) has at most two distinct eigenvalues.  (ii) A Hermitian \(M\) commuting with \(P\)
+has the eigenvalues \(a+2|b|\cos(\theta+2\pi k/3)\), \(k=0,1,2\), with \(b=|b|e^{i\theta}\), generically distinct; \(K=\tfrac23\) holds for
+\(|b|=a/\sqrt2\).  (iii) If the couplings for up and down both commute with \(P\), the mixing matrix \(|U_u^\dagger U_d|\) is a permutation
+matrix.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a)--(d) by solving the commutation conditions on \(32\times32\) matrices and decomposing the blocks under \(SU(2)'\), \(Y\) and \(Q_{\rm em}\)
+(script \texttt{llm/k85\_test\_h29.py}).  Linear maps cannot intertwine the colour triplet with its conjugate, so the linear quark block
+vanishes.  (e) is elementary circulant algebra and was checked on \(200\) random matrices.  \(\square\)
+
+\paragraph{Verdict and reading.}
+H29a--e are confirmed.
+\begin{enumerate}[leftmargin=2em]
+\item In the operator language of the Millennium matrix, mass terms are antilinear: they contain the frame change \(T\).  Linear off-diagonal
+blocks of a colour-compatible Millennium matrix give no masses; they vanish for quarks and carry wrong charges for leptons.  In the model,
+mass is a coupling between matter frame and tachyon frame, as the matter--tachyon spring of the spring theorem of the original paper.  The
+couplings that do this carry exactly the quantum numbers of the Higgs doublet and its conjugate, for leptons and quarks.
+\item None of these mass terms is gauge invariant; only a doublet expectation value turns them into masses.  The structure says which
+breaking is needed, a doublet with \(Y/2=\tfrac12\), not why it occurs.  The only gauge-invariant connector is a Majorana term for \(\nu^c\),
+which allows a see-saw reading for small neutrino masses (not computed).
+\item With the full triole symmetry (\(\tau\) and \(\rho\)) on the slots there are at most two distinct masses; this is the reason for the
+refutations of the earlier pre-registered mass tests.  Breaking only the reflection \(\rho\), the frame triole of v4.9.0-r38, and keeping
+triality gives three distinct masses in exactly the Brannen form; the Koide value corresponds to \(|b|=a/\sqrt2\).  The Koide form of
+v4.8.0-r10 is thus the mass form of a \(\mathbb Z_3\)-symmetric, \(\rho\)-broken coupling.  The ratio \(|b|/a\) and the phase \(\theta\) are not
+explained.
+\item Couplings that are both triality-symmetric are diagonalized by the same Fourier matrix and give no mixing.  Mixing requires breaking
+triality itself, differently for up and down.
+\item In the model each observed property has its breaking stage: mass the frame coupling (Higgs), mass splitting the breaking of the frame
+reflection \(\rho\), mixing the breaking of triality \(\tau\).  Where these breakings come from is not said.
+\end{enumerate}
+
+\subsection*{v4.9.0-r44 status in the three frames}
+\label{subsec:v490-r44-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r44.1(b)--(d) & mass connectors couple M and T by construction (they contain \(T\)); P not evaluated\\
+r44.1(a), (e) & frame-free statements on connector spaces and on the slot couplings\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r44 register entries}
+\label{subsec:v490-r44-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r44\\
+\midrule
+mass terms & antilinear frame couplings with Higgs quantum numbers (r44.1(b)); linear MM blocks give none (r44.1(c))\\
+electroweak breaking & required type fixed (doublet, \(Y/2=\tfrac12\)); cause open\\
+neutrino Majorana term & the only gauge-invariant connector (r44.1(d))\\
+mass hierarchy & needs breaking of \(\rho\) on the slots; Brannen form then exact (r44.1(e)); \(|b|/a\), \(\theta\) open\\
+mixing & needs breaking of \(\tau\), different for up and down (r44.1(e))\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r44 ledger and guard update}
+\label{subsec:v490-r44-ledger-guard}
+
+\[
+R_{\rm mm}^{v490\text{-}r44}=(1,1,0)
+\]
+for (mass terms identified as frame couplings with Higgs quantum numbers; breaking stages for splitting and mixing identified; causes of
+the breakings open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r44,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r44}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r45 Source-Only: Chirality Breaks the Reflection of the Triality Form}
+\addcontentsline{toc}{section}{v4.9.0-r45 Source-Only: Chirality Breaks the Reflection of the Triality Form}
+\label{sec:v490-r45-chirality-breaks-reflection}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.9.0-r44 found that mass splitting on the triality slots requires the reflection \(\rho\) to be broken and mixing requires triality
+\(\tau\) to be broken.  The author asks whether these breakings follow from the structure.  This layer records the pre-registered test H30
+(note \texttt{llm/Vorab\_Notiz\_H30\_Brechung\_aus\_Chiralitaet.md}, commit \texttt{d755a08}, fixed before computing; the identity
+\(cL_{e_7}c=-R_{e_7}\) was seen analytically and is disclosed there).  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r45 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r45 two models}
+\label{subsec:v490-r45-models}
+
+Model~I: on \(\mathbb C\otimes\HH\otimes\OO^3\) the chirality projector \(C_{\rm ch}=\tfrac12(1+iL_{e_7})\) of v4.9.0-r42 acts in the same way on
+every slot.  Model~II: the chirality operator is \(i(A,B,C)\) with \((A,B,C)\) in the triality algebra \(\mathfrak g\) of v4.9.0-r37 and
+\(A=L_{e_7}\); \(B\) and \(C\) are then fixed.  Here \(c\) is octonionic conjugation, and \(\rho(x,y,z)=(\bar x,\bar z,\bar y)\).
+
+\subsection*{v4.9.0-r45 results}
+\label{subsec:v490-r45-results}
+
+\paragraph{Theoremlet v4.9.0-r45.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \(cL_{e_7}c=-R_{e_7}\) and \(cR_{e_7}c=-L_{e_7}\).  The plain exchange \((x,y,z)\mapsto(x,z,y)\) is not a symmetry of \(t\); the
+transposition symmetries of \(t\) contain \(c\).
+\item[(b)] Of the six symmetries \(\tau^k\rho^\varepsilon\) of \(t\), exactly \(1,\tau,\tau^2\) preserve the chirality projector of Model~I; \(\rho\),
+\(\tau\rho\), \(\tau^2\rho\) map it to \(\tfrac12(1-iR_{e_7})\), the anomalous choice of v4.9.0-r43.
+\item[(c)] \((L_{e_7},L_{e_7},L_{e_7})\notin\mathfrak g\).  The element of \(\mathfrak g\) with first component \(L_{e_7}\) is
+\((L_{e_7},R_{e_7},-L_{e_7}-R_{e_7})\); it is not \(\tau\)-invariant.
+\item[(d)] In Model~II the chirality operator is \(iR_{e_7}\) on slot~2 and \(-i(L_{e_7}+R_{e_7})\) on slot~3, which is not an involution.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a) from \(\overline{e_7\bar x}=x\bar e_7=-xe_7\); the rest by explicit matrices and the linear system for \(\mathfrak g\) (script
+\texttt{llm/k86\_test\_h30.py}, deviations at most \(10^{-15}\)).  (c): a diagonal element of \(\mathfrak g\) lies in \(\mathfrak g_2\)
+(v4.9.0-r37.1(c)), and \(L_{e_7}\) is not a derivation.  \(\square\)
+
+\paragraph{Verdict and reading.}
+H30a--d are confirmed.
+\begin{enumerate}[leftmargin=2em]
+\item The breaking of \(\rho\) follows from the structure.  The transposition symmetries of the triality form contain octonionic
+conjugation, conjugation exchanges left and right multiplication, and anomaly cancellation chose the left (v4.9.0-r43).  So \(\rho\) cannot be
+a symmetry of the chiral theory; combining it with the frame change \(T\) does not help, since \(T\) changes the sign, not the side.  The
+condition of v4.9.0-r44 for mass splitting is therefore met structurally: the slot couplings are generically \(\rho\)-asymmetric, with three
+distinct masses in Brannen form.  This also explains why the natural potentials of the earlier mass tests, which did not know chirality, gave
+at most two masses.  How strongly \(\rho\) is broken, the phase \(\theta\) and the ratio \(|b|/a\), is not fixed.
+\item Triality \(\tau\) survives, but only in Model~I, where the slots are equivalent copies with equal chirality.  The triality-covariant
+chirality of Model~II fails: slot~2 would be anomalous and slot~3 would carry no chirality.  The generations therefore cannot be the three
+inequivalent triality representations with their own chirality, as read in v4.9.0-r37; they must be equivalent copies, with \(\tau\) permuting
+them.  This agrees with the equal quantum numbers of all generations.
+\item Mixing stays open: in Model~I \(\tau\) is preserved and, by v4.9.0-r44, there is no mixing.  The breaking needed for mixing has to come
+from a different, weaker source, which the structure has not supplied so far.
+\end{enumerate}
+
+\subsection*{v4.9.0-r45 status in the three frames}
+\label{subsec:v490-r45-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r45.1(a)--(d) & stated in M; in T the chirality is \(-iL_{e_7}\) (v4.9.0-r43.1(d)), and \(\rho\) maps it to \(+iR_{e_7}\), again anomalous: the breaking of \(\rho\) holds in both frames; P not evaluated\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r45 register entries}
+\label{subsec:v490-r45-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r45\\
+\midrule
+breaking of \(\rho\) & follows from the anomaly-free chirality (r45.1(a), (b)); size not fixed\\
+triality \(\tau\) & preserved for equal chirality on all slots (Model~I); a triality-covariant chirality does not exist (r45.1(c), (d))\\
+generations as triality slots & only as equivalent copies; the inequivalent representations of v4.9.0-r37 are incompatible with chirality\\
+mixing & open; needs a breaking of \(\tau\) from another source\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r45 ledger and guard update}
+\label{subsec:v490-r45-ledger-guard}
+
+\[
+R_{\rm br}^{v490\text{-}r45}=(1,0,0)
+\]
+for (breaking of \(\rho\) derived from chirality; size of the breaking open; source of the breaking of \(\tau\) open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r45,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r45}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r46 Source-Only: Mixed Readouts and the Breaking of Triality}
+\addcontentsline{toc}{section}{v4.9.0-r46 Source-Only: Mixed Readouts and the Breaking of Triality}
+\label{sec:v490-r46-readouts-triality-breaking}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.9.0-r45 derived the breaking of the reflection \(\rho\) from chirality, while triality \(\tau\) survives, so that no mixing arises
+(v4.9.0-r44).  This layer records the pre-registered test H31 (note \texttt{llm/Vorab\_Notiz\_H31\_Tau\_Brechung\_Readouts.md}, commit
+\texttt{ea74447}, fixed before computing) of whether the mixed readouts of
+Definitions~\ref{def:binary-mask-registry-mixed-readouts} and~\ref{def:guarded-two-sided-mixed-qam-readout} can break \(\tau\).  The note
+discloses that (a) follows from commutativity and that (c) is general perturbation theory.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r46 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r46 setting}
+\label{subsec:v490-r46-setting}
+
+On the slot space \(\mathbb C^3\) let \(P=\tau\), and let \(M_u\), \(M_d\) be Hermitian \(\mathbb Z_3\)-circulants (\(\rho\)-broken, \(\tau\)-symmetric, as
+after v4.9.0-r45); the mixing is \(|V|=|U_u^\dagger U_d|\).  A \emph{shift readout} is built from the level readouts \(P^{2^j}\) of v4.9.0-r39:
+products (reading \(\Sigma\)), averages over generated subgroups (reading \(\vee\)), and selector contractions \(\sum\chi_{mn}P^{2^m}P^{2^n}\).  A
+\emph{kind mask}, with the readout kind taken to be the slot, is a diagonal projector \(D_S\), \(\emptyset\neq S\subsetneq\{1,2,3\}\), entering as
+\(M+\delta D_S\).
+
+\subsection*{v4.9.0-r46 results}
+\label{subsec:v490-r46-results}
+
+\paragraph{Theoremlet v4.9.0-r46.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Every shift readout commutes with \(\tau\); added to \(M_u\) and \(M_d\) it leaves \(|V|\) a permutation matrix.
+\item[(b)] Kind masks do not commute with \(\tau\); for \(\delta>0\) and generic \(M_u,M_d\), \(|V|\) is not a permutation matrix, even with the same
+mask and weight for up and down.
+\item[(c)] For small \(\delta\) the deviation of \(|V|\) from a permutation is linear in \(\delta\) and bounded by
+\(\tfrac{\delta}{3}\bigl(\mathrm{gap}_u^{-1}+\mathrm{gap}_d^{-1}\bigr)\), with the smallest spacings of the eigenvalues.
+\item[(d)] Kind masks are real and commute with the frame change \(T\).
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a): shift readouts lie in the group ring \(\mathbb C[\mathbb Z_3]\), which is commutative, so they are circulant; circulants are diagonalized by
+one Fourier matrix.  (b)--(d) checked on \(200\) random cases each (script \texttt{llm/k87\_test\_h31.py}); the factor \(\tfrac13\) in (c) is the
+size of the entries of a one-slot mask in the Fourier basis.  \(\square\)
+
+\paragraph{Verdict and reading.}
+H31a--d are confirmed; (a) and (c) are elementary.
+\begin{enumerate}[leftmargin=2em]
+\item The mixed readouts as they are formed from the Hilbert shift produce no mixing: every readout built only from the generation shifts
+commutes with \(\tau\).  This is a genuine prohibition.
+\item Only a readout that distinguishes generations as readout kinds breaks \(\tau\).  Then mixing arises, already with the same mask for up and
+down, and it is small when the mask is weak and the masses are far apart.  This agrees qualitatively with small quark mixing at a strong mass
+hierarchy and with larger mixing where masses lie close, as for neutrinos.  No numbers follow.
+\item Mixing is measurable and not an artefact of an observer.  A mixing from readout can therefore only mean that the generation-selective
+mask is part of the couplings, of the structure in which one reads out, not a dependence on who measures.  Where such a mask comes from in the
+structure is open.
+\end{enumerate}
+
+\subsection*{v4.9.0-r46 status in the three frames}
+\label{subsec:v490-r46-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r46.1(a)--(c) & statements on slot couplings, the same in M and T\\
+r46.1(d) & kind masks commute with \(T\): the breaking of \(\tau\) by masks is frame-free; P not evaluated\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r46 register entries}
+\label{subsec:v490-r46-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r46\\
+\midrule
+mixing from shift readouts & excluded (r46.1(a))\\
+mixing from kind masks & arises, linear in the mask weight, suppressed by mass spacings (r46.1(b), (c))\\
+origin of a generation-selective mask & open; must be part of the couplings, not of the observer\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r46 ledger and guard update}
+\label{subsec:v490-r46-ledger-guard}
+
+\[
+R_{\rm mx}^{v490\text{-}r46}=(1,1,0)
+\]
+for (shift readouts excluded as source of mixing; kind masks identified as a possible source; origin of the mask open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r46,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r46}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r47 Source-Only: A Generation Mask from the Triality-Covariant Chirality}
+\addcontentsline{toc}{section}{v4.9.0-r47 Source-Only: A Generation Mask from the Triality-Covariant Chirality}
+\label{sec:v490-r47-mask-from-triality}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.9.0-r46 found that mixing needs a mask that distinguishes generations.  Layer v4.9.0-r45 showed that a triality-covariant chirality
+(Model~II) is impossible as an exact symmetry.  This layer records the pre-registered test H32 (note
+\texttt{llm/Vorab\_Notiz\_H32\_Maske\_aus\_Triality.md}, commit \texttt{65c5b44}, fixed before computing) of whether the deviation of
+Model~II from Model~I supplies such a mask.  The slot weights were derived beforehand from the sector table of v4.9.0-r43 and are disclosed
+in the note.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r47 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r47 model assumption}
+\label{subsec:v490-r47-assumption}
+
+The exact chirality is that of Model~I.  The deviation \(\Delta=J_{\rm II}-J_{\rm I}\), on slot \(i\) given by \(\Delta_i=i(B_i-L_{e_7})\) with
+\(B=(L_{e_7},R_{e_7},-L_{e_7}-R_{e_7})\), acts as a weak perturbation of the couplings with small weight \(\varepsilon\): a slot coupling \(M\) becomes
+\(M+\varepsilon(WM+MW)\), with \(W\) the diagonal of slot weights of the sector, and the right-handed partner is read in the T frame
+(v4.9.0-r41.1(c)).  This assumption is not derived.
+
+\subsection*{v4.9.0-r47 results}
+\label{subsec:v490-r47-results}
+
+\paragraph{Theoremlet v4.9.0-r47.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \(\Delta_i\) is scalar on each \(Q\)-sector, with slot weights \((0,0,-3)\) on sector \(0\), \((0,2,1)\) on \(\tfrac13\), \((0,-2,-1)\) on
+\(\tfrac23\), \((0,0,3)\) on \(1\).
+\item[(b)] \(T\Delta T^{-1}=-\Delta\); the weights are antisymmetric under \(q\leftrightarrow1-q\), so the partner read in the T frame carries the same
+weights as the left-handed particle: \(W_q=\mathrm{diag}(0,-2,-1)\) for up and down quarks, \(W_l=\mathrm{diag}(0,0,-3)\) for leptons.
+\item[(c)] \(W_q\) and \(W_l\) do not commute with \(\tau\); with \(\mathbb Z_3\)-circulant Hermitian \(M_u\), \(M_d\) and the same mask \(W_q\) the mixing
+is non-zero for \(\varepsilon>0\) in all \(200\) random cases.  It is linear in \(\varepsilon\) in \(196\) of them at the pre-registered values
+\(\varepsilon=10^{-3},10^{-4}\).
+\item[(d)] In the Fourier basis of the generations all off-diagonal entries have equal size, \(1/\sqrt3\) for \(W_q\) and \(1\) for \(W_l\); the
+ratio is \(\sqrt3\).
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a), (b) from \(iL_{e_7},iR_{e_7}=\pm1\) on the sectors (v4.9.0-r43) and checked by matrices; (c), (d) numerically (script
+\texttt{llm/k88\_test\_h32.py}).  A check after the evaluation found the four non-linear cases nearly degenerate (relative gap at most
+\(3\cdot10^{-3}\), median \(7\cdot10^{-2}\)); at \(\varepsilon=10^{-6},10^{-7}\) all \(200\) are linear.  \(\square\)
+
+\paragraph{Verdict and reading.}
+H32a, b and d are confirmed.  H32c is refuted as stated, since linearity fails in four of \(200\) cases at the pre-registered \(\varepsilon\); the
+mixing is non-zero in all cases, and linearity holds in the perturbative range \(\varepsilon\ll\) gap.
+\begin{enumerate}[leftmargin=2em]
+\item Under the model assumption the generation mask comes from the structure.  The triality-covariant chirality is forbidden as an exact
+symmetry, but its deviation from equal chirality is a fixed number per slot on every sector.  The shape of the mask is fixed,
+\(\mathrm{diag}(0,-2,-1)\) for quarks and \(\mathrm{diag}(0,0,-3)\) for leptons; only \(\varepsilon\) is chosen.  Up and down share the mask, and
+mixing still arises because their couplings differ (v4.9.0-r46).
+\item In the generation basis the mask is democratic, with all pairs coupled equally, and \(\sqrt3\) stronger for leptons than for quarks.  At
+equal \(\varepsilon\) this means stronger lepton than quark mixing, enhanced further by the close neutrino masses.  Qualitatively this is the
+direction of observation; no numbers follow.
+\item On slot~1 the weight is always zero, since both chiralities agree there.  Which slot is the reference is a choice of the kind met in
+v4.9.0-r38.  In this picture the breaking of triality comes from the choice of a reference slot.
+\item The model assumption, \(\varepsilon\), the circulant parameters and hence all numbers remain open.
+\end{enumerate}
+
+\subsection*{v4.9.0-r47 status in the three frames}
+\label{subsec:v490-r47-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r47.1(a) & stated in M\\
+r47.1(b) & relates M and T: \(T\) reverses \(\Delta\), and the partner read in T has the same weights\\
+r47.1(c), (d) & statements on slot couplings, the same in M and T; P not evaluated\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r47 register entries}
+\label{subsec:v490-r47-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r47\\
+\midrule
+origin of a generation mask & the deviation of the triality-covariant chirality, under a model assumption (r47.1(a), (b))\\
+shape of the mask & fixed: quarks \(\mathrm{diag}(0,-2,-1)\), leptons \(\mathrm{diag}(0,0,-3)\); democratic in the generation basis, ratio \(\sqrt3\) (r47.1(d))\\
+linearity of the mixing in \(\varepsilon\) & pre-registered test refuted in \(4\) of \(200\) nearly degenerate cases; holds for \(\varepsilon\ll\) gap\\
+numbers for mixing angles & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r47 ledger and guard update}
+\label{subsec:v490-r47-ledger-guard}
+
+\[
+R_{\rm gm}^{v490\text{-}r47}=(1,0,0)
+\]
+for (shape of a generation mask derived under a model assumption; the assumption not derived; numbers open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r47,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r47}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.

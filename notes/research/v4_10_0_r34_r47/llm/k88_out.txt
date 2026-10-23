@@ -1,0 +1,9 @@
+H32a: Delta auf jedem Q-Sektor skalar: True; Platz-Gewichte: Q = 0: ('0', '0', '-3'), Q = 1/3: ('0', '2', '1'), Q = 2/3: ('0', '-2', '-1'), Q = 1: ('0', '0', '3') -> bestaetigt
+
+H32b: T Delta T^-1 = -Delta: 0e+00; Gewichte antisymmetrisch unter q <-> 1-q: True; W_q = diag(np.float64(0.0), np.float64(-2.0), np.float64(-1.0)), W_l = diag(np.float64(0.0), np.float64(0.0), np.float64(-3.0)), Partner im T-Frame gleich: True -> bestaetigt
+
+H32c: [W, tau] != 0 (min 2.00); Mischung bei gleicher Maske W_q fuer up und down von null verschieden: True; Linearitaet (Abstand(1e-3)/Abstand(1e-4)/10) in [0.2155, 1.0018] -> widerlegt
+
+H32d: Fourier-Nebendiagonale |W_q| = [0.57735 0.57735 0.57735 0.57735 0.57735 0.57735] (1/sqrt3 = 0.577350), |W_l| = [1. 1. 1. 1. 1. 1.]; Verhaeltnis 1.732051 (sqrt3 = 1.732051) -> bestaetigt
+
+Nachkontrolle H32c: 4 von 200 Faellen nichtlinear bei eps = 1e-3/1e-4; ihre relative Luecke Luecke/Skala: max 2.97e-03 (alle Faelle: Median 7.26e-02); bei eps = 1e-6/1e-7 Verhaeltnis in [1.0000, 1.0000]
