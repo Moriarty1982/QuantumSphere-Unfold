@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v10.3
+# Kernkarte Quantum Sphaera — v10.4
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -94,6 +94,8 @@ Triality, Fixgruppe G₂ ⊃ SU(3)_c: Generation = Bahn, Farbe = Fixgruppe. Kein
 Perioden der Struktur {1, 2, 3, 4, 6, 12}, keine ausgezeichnet. „Triole“ benennt drei Strukturen (Frames M/P/T, Kerne 120°, Plätze).
 **Frame-Triole (K84):** H23 — M/P/T hat die Form einer Transposition ρ der Triality-Plätze: Photon = fester (Vektor-)Platz, 1 ⊕ 7 unter
 Spin(7); Materie, Tachyon = Spinor-Plätze, gleich und vertauscht. 120°- und Frame-Triole = zwei Ansichten derselben S₃.
+**Zoom und gemischte Readouts (K85):** H24 — unter Hilbert-Shift-Zoom (Schritt 2^j) bleibt ab Stufe 2 nur der Generationenkreis sichtbar,
+Orientierung wechselt mit der Stufe (= ρ-Spiegel); Frames grob, Generationen tief. Gemischte Masken: Σ (Kontraktion) 1 oder 3, ∨ (Maske) 3.
 Regel: Jede neue Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 **Farbe und Generation (K25, K28):** Im Companion liegen beide auf demselben Triplett e₄, e₅, e₆. Vorschlag (V):
@@ -2090,6 +2092,23 @@ mit s₁s₂s₃ = 1 (ℤ₂ × ℤ₂), (1, −1, −1) trivial auf Platz 1 (H2
 drei Transpositionen (Konvention F: Photon = entarteter Fixpunkt). Offen: Frames und Generationen können nicht auf derselben Ebene auf den
 Plätzen liegen (zwei Zoomstufen nötig). Spur für Test 3: M ↔ T als Chiralitätswechsel. Kein Guard verbraucht.
 
+### K85 — Vorab festgelegter Test H24 und Companion-Runde v4.9.0-r39: Ketten verschiedener Länge unter Zoom und gemischten Readouts (2026-10-23)
+
+Autoridee (2026-10-23): Die gemischten Readouts waren gedacht, damit die Generationen bei oft genug wiederholtem Zoom einen Kreis bilden;
+verschiedene Moduln (Kettenlängen) sollten verschiedene Lesarten geben. Die neue Kontraktion (`def:two-sided-admissible-contractions`)
+wurde eingeführt, damit klassische Tensorrechnung weiter funktioniert und gemischte Kanäle kontrahiert werden können; kaum benutzt; das
+Paper ist aus Sicht eines Frames geschrieben. Vorab-Notiz `llm/Vorab_Notiz_H24_Ketten_Module_Readouts.md` (Commit 8c89481), Skript
+`llm/k80_test_h24.py`, Ausgabe `llm/k80_out.txt`, Ergebnis `llm/Ergebnis_H24_Ketten_Module_Readouts.md`, Runde `sec:v490-r39-chains-zoom-mixed`.
+
+**K85.1 (M).** Modell: Kette ⟨g⟩ der Länge m; Stufe j sieht ⟨g^{2^j}⟩ (Bit β_j = 2^j); Maske S, k = Σ 2^j, Lesart Σ ⟨g^k⟩ oder ∨ ⟨g^{2^j}: j ∈ S⟩.
+**K85.2 (M).** Ungerade Ketten behalten ihre Länge; τ^{2^j} = τ^{(−1)^j}, τ⁻¹ = ρτρ (H24a). Ketten 2^a verschwinden ab Stufe a; in G = S₃ × D₄
+sichtbar: Stufe 0 {1,2,3,4,6,12}, Stufe 1 {1,2,3,6}, ab Stufe 2 {1,3} ⊂ ⟨τ⟩ (H24b, H24e). Masken (m = 3, 6 Bits): Σ sieht bei 21 von 63 Masken eine
+Generation, ∨ immer drei (H24c); allgemein Σ: m/gcd(m,k), ∨: m/gcd(m, 2^{min S}), ungerader Anteil unter ∨ erhalten (H24d). Elementar.
+**K85.3 (S).** Lesart: Generationenkreis = einziges, was tiefen Zoom überlebt; Frames grob, Generationen tief (löst K84-Spannung im Modell);
+jede zweite Stufe im ρ-gespiegelten Frame. Textlesart: Selektor-Kontraktion χ_mn R^m S^n komponiert verträgliche Moden = Σ; Boolesche Maske = ∨;
+gerade mit ungerader Stufe kontrahiert gibt τ³ = 1 (blind für den Kreis). Vordere Indizes = Frame, im Hauptteil nie variiert (Ein-Frame-Problem).
+Kein Guard verbraucht.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -2233,6 +2252,7 @@ Plätzen liegen (zwei Zoomstufen nötig). Spur für Test 3: M ↔ T als Chiralit
 - v10.1 (2026-10-23): K82 Frame-Regel für Einheiten übernommen, Statusvermerke thm:three-generations/thm:SM, Vorab-Test H21 und Runde v4.9.0-r36 (Herkunft der Doppelbelegung), alle bestätigt.
 - v10.2 (2026-10-23): K83 Vorab-Test H22 und Runde v4.9.0-r37: Triality-Form = Spin(8)-Triality, Farbe in der Fixgruppe, Perioden {1,…,12}; H22d ohne Verbot.
 - v10.3 (2026-10-23): K84 Vorab-Test H23 und Runde v4.9.0-r38: Frame-Triole M/P/T als Transposition der Triality-Plätze, alle bestätigt.
+- v10.4 (2026-10-23): K85 Vorab-Test H24 und Runde v4.9.0-r39: Ketten unter Zoom und gemischten Readouts, alle bestätigt; Autorhinweis zur neuen Kontraktion.
 
 ---
 

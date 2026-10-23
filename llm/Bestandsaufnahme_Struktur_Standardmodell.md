@@ -1,6 +1,6 @@
 # Bestandsaufnahme: Was folgt aus der Struktur, was ist eingesetzt?
 
-Stand 2026-10-23, nach v4.9.0-r38. Lebendes Dokument: nach jeder Runde nachführen (Spalte „Stand“, Fundstelle, Datum).
+Stand 2026-10-23, nach v4.9.0-r39. Lebendes Dokument: nach jeder Runde nachführen (Spalte „Stand“, Fundstelle, Datum).
 Zweck (Autorabsicht): Eine vereinheitlichte Theorie muss keine neue Physik einführen, sondern erklären, **warum** das
 Standardmodell diese Struktur hat. Das wird hier Merkmal für Merkmal geprüft. Eine Erklärung zählt nur, wenn die Struktur
 eine Alternative **ausschließt**: Sie muss etwas verbieten.
@@ -58,7 +58,7 @@ eine Alternative **ausschließt**: Sie muss etwas verbieten.
 
 Das Wort „Triole“ benennt mindestens drei Strukturen: die **Frame-Triole** Materie–Photon–Tachyon (Originalarbeit `thm:spring`, ℤ₂ mit
 Fixpunkt P, Amplituden 1 : 1 : 3), die **Kern-Triole** K₁, K₂, K₃ mit 120° (ℤ₃, in 𝕆 eine Farbdrehung) und die **Platz-Triole** von 𝕆³
-(Triality). Seit v4.9.0-r38 (H23): 120°-Triole und Frame-Triole sind zwei Ansichten derselben S₃ auf den Plätzen (ℤ₃-Bahn bzw. Transposition; Photon = fester Vektor-Platz, Materie/Tachyon = Spinor-Plätze). Frames und Generationen können nicht auf derselben Ebene auf den Plätzen liegen. Autorabsicht: Die Triole ist eine Darstellung der Sphäre; die Selbstdurchwanderung wechselt zwischen den Gestalten, ohne
+(Triality). Seit v4.9.0-r38 (H23): 120°-Triole und Frame-Triole sind zwei Ansichten derselben S₃ auf den Plätzen (ℤ₃-Bahn bzw. Transposition; Photon = fester Vektor-Platz, Materie/Tachyon = Spinor-Plätze). Frames und Generationen können nicht auf derselben Ebene auf den Plätzen liegen; seit v4.9.0-r39 (H24) trennt sie im Modell die Zoomstufe des Hilbert-Shifts (ab Stufe 2 bleibt nur der Generationenkreis). Autorabsicht: Die Triole ist eine Darstellung der Sphäre; die Selbstdurchwanderung wechselt zwischen den Gestalten, ohne
 festgelegte Periode. Die Struktur hat die Perioden {1, 2, 3, 4, 6, 12}.
 
 ## Aussichtsreiche Abzähl-Tests (Vorschlag, jeweils mit Vorab-Notiz)
