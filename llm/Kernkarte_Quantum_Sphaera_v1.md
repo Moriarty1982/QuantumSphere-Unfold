@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v9.0
+# Kernkarte Quantum Sphaera — v9.1
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1890,6 +1890,31 @@ Grad ≥ 6 nötig, ohne Realteile Grad ≥ 8; jeweils Anpassung. Abseits der Ach
 H17: natürliche G₂ × S₃-Invarianten geben höchstens zwei verschiedene Massen. Nächster prüfbarer Weg: explizite S₃-Brechung.
 Frames: Urteil und r32.1 frame-frei, Massen-Lesart nur Materie. R_cg^{r32} = (0,0,1); Guards unverändert, β₄ unverbraucht.
 
+### K77 — Prüfung: Dixon-Ablage, Hilbert-Shift-Leiter, gemischte Readouts (2026-10-23)
+
+Dokument `llm/Pruefung_Dixon_Ablage.md`, Skript `llm/k71_dixon_ablage.py`. Konsistenzprüfung, keine Vorhersage.
+Autorhinweis: Die Dixon-Algebra war als Objekt gedacht, in dem alle Konfigurationen abgelegt werden; gemischte Readouts
+sind angelegt, aber nie benutzt.
+
+**K77.1 (D).** Leiter HS(n): Träger C_n = 2^n Kanäle, 2^{C_n} Masken; HS(3) = 8 (Fano/Oktonion), HS(6) = 64 = Dixon
+ℂ⊗ℍ⊗𝕆, Kanalindex (a, b, c) ∈ 2 × 4 × 8, Route → Maske χ_Dix ∈ {0,1}⁶⁴ oder blocked/leak/debt. Als Register stimmig.
+
+**K77.2 (S).** Gemischte Readouts (Z. 1811–2142, Masken-Registry 2^j, doppelter Hilbert-Shift 2^k, Normalform) werden nur im
+eigenen Block referenziert; später nur strukturell (Kanten-Zulässigkeit `sec:v410r18-…`, Kontraktionsregel χ_mn der
+Tensornotation, r93). **Nie** mit konkreten Komponenten und Aggregation ausgewertet. Masken sind konservativ: keine Größe.
+
+**K77.3 (M).** (Im ℍ)⊗𝕆 = i⊗𝕆 ⊕ j⊗𝕆 ⊕ k⊗𝕆 ≅ 𝕆³: Das Tripel aus r14/r15 liegt verlustfrei in der Ablage (24 von 64 Bits),
+die 3 × 3 farbigen Zustände als 9-Bit-Teilmaske; G₂ (auf 𝕆) und Aut(ℍ) = SO(3) vertauschen → Farbe und Generation getrennt.
+
+**K77.4 (M).** Von den 24 Vorzeichen-Permutationen in SO(3) lassen nur 12 die Triality-Form invariant (gerade Permutationen,
+gerade Zahl von Vorzeichen) ≅ A₄. Die Triality-Vertauschungen brauchen Oktonion-Konjugation (Anti-Automorphismus).
+Gemeinsame Symmetrie von Ablage und Triality-Form: A₄. Konflikt: `thm:three-generations` nutzt ℂ⊗ℍ als Lorentz-Spinor;
+Generationen in Im ℍ und Spinor in ℍ zugleich geht nicht.
+
+**K77.5 Einordnung.** A₄ ist struktureller Befund, keine Vorhersage (A₄ als Flavour-Gruppe bekannt; tribimaximal durch θ₁₃ ≠ 0
+ausgeschlossen). Gemischte Readouts mit festgelegter Aggregation μ über die Platz-Bits wären eine explizite S₃-/A₄-Brechung:
+der passende Ort für den nächsten Vorab-Test. `thm:three-generations` ohne `\qsstatus` (Kandidat Regel C, Autorentscheidung).
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -2020,6 +2045,7 @@ Frames: Urteil und r32.1 frame-frei, Massen-Lesart nur Materie. R_cg^{r32} = (0,
 
 - v8.9 (2026-10-22): K75 Companion-Runde v4.9.0-r31 (Markov-Kaskade: geschlossen keine Stabilisierung, mit Rückweg stabile Flussanteile β²; Statusvermerk thm:dark-energy).
 - v9.0 (2026-10-23): K76 Vorab-Test H17 (Realteil-Invarianten auf dem Tripel-Raum) widerlegt; Theoremlet r32.1 (auf der Achse linear in e₃, Sattelpunkte); Companion-Runde v4.9.0-r32.
+- v9.1 (2026-10-23): K77 Prüfung Dixon-Ablage (Tripel = (Im ℍ)⊗𝕆, gemeinsame Symmetrie A₄, Lorentz-Konflikt) und Bestandsaufnahme gemischte Readouts (angelegt, nie ausgewertet).
 
 ---
 
