@@ -90,7 +90,7 @@ Nicht in diesem Verzeichnis, aber referenziert: `RC14_uncompressed_reference_sou
 
 ## Der Runden-Workflow
 
-Die **Runden** wachsen append-only: eine neue Runde ist ein neuer Abschnitt unmittelbar vor `\end{document}`, bestehende Runden werden nicht umgeschrieben. Aktueller Stand: **r94**, **v4.8.0-r20**, **v4.9.0-r44**. Runden der v4.8.0-Linie heißen `v4.8.0-rNN` (Labels `sec:v480-rNN-...`), danach `v4.9.0-rNN` (`sec:v490-rNN-...`); `qs.py outline` und `ledger` erkennen alle Formen. Inhalt jeder Runde ausführlich in der Kernkarte (`llm/Kernkarte_Quantum_Sphaera_v1.md`, Abschnitt 7).
+Die **Runden** wachsen append-only: eine neue Runde ist ein neuer Abschnitt unmittelbar vor `\end{document}`, bestehende Runden werden nicht umgeschrieben. Aktueller Stand: **r94**, **v4.8.0-r20**, **v4.9.0-r45**. Runden der v4.8.0-Linie heißen `v4.8.0-rNN` (Labels `sec:v480-rNN-...`), danach `v4.9.0-rNN` (`sec:v490-rNN-...`); `qs.py outline` und `ledger` erkennen alle Formen. Inhalt jeder Runde ausführlich in der Kernkarte (`llm/Kernkarte_Quantum_Sphaera_v1.md`, Abschnitt 7).
 
 **Der Hauptkorpus wird seit v4.9.0-r25 überarbeitet** (Autorauftrag 2026-10-22: alte Arbeit nicht verlieren, falsche Aussagen nicht stehen lassen). Regel (`sec:v490-r25-main-body-revision`, Skript `llm/aufraeumen_v490.py`):
 - **(A) Sackgasse** (widerlegt, ausgeschlossen, zurückgezogen): Original wortgleich in den Archiv-Anhang `sec:v490-archive`; an der alten Stelle bleibt dieselbe Umgebung mit **gleicher Nummer und gleichem Label**, kurzer Aussage dessen, was bleibt, und Verweis. Alle `\ref` lösen weiter auf.
@@ -147,6 +147,7 @@ Guard-Linter für neue Runden: `python llm/training/guard_linter.py <tex> --star
 | r42 | Kompensator der MM-Matrix als Chiralitätsprojektor (Vorab-Test H27, Autorhinweis „MM-Matrix mit verschiedenen HC“): C_ch = ½(id + J), J = i·L_{e₇}; schwache SU(2) nur auf dem Bild, Y/2 = Q − ½ + (1 − C_ch)T₃ ⇒ voller linkshändiger Inhalt einer Generation mit ν_R, anomaliefrei; T vertauscht die chiralen Hälften; Konstruktion unter Wahlen, Muster vorab offengelegt; Erstlauf mit Rundungsfehler im Skript dokumentiert |
 | r43 | Wahl des Chiralitätsprojektors durch Anomaliefreiheit (Vorab-Test H28, Autorfrage „wieso genau diese Wahl“): unter den Annahmen genau vier Projektoren ±iL_{e₇}, ±iR_{e₇}; Tr Y = 0 ⇒ s = −½; anomaliefrei nur die Linksmultiplikation ⇒ SM und Frame-Spiegel; Annahmen nicht hergeleitet |
 | r44 | Massenterme als Frame-Kopplungen (Vorab-Test H29): farb-/Lorentz-verträgliche Massenterme sind antilinear (enthalten T), tragen H/H̃-Quantenzahlen; lineare MM-Blöcke geben keine; eichinvariant nur ν^c-Majorana; Plätze: S₃ ⇒ ≤ 2 Massen, ρ-Brechung ⇒ Brannen-Form (Koide bei \|b\| = a/√2), Mischung ⇐ τ-Brechung |
+| r45 | Chiralität bricht ρ (Vorab-Test H30): ρ enthält die Oktonion-Konjugation, c L_{e₇} c = −R_{e₇}, bildet die anomaliefreie Chiralität auf die anomale ab ⇒ ρ-Brechung strukturell (Massenaufspaltung); τ bleibt bei gleicher Chiralität; triality-kovariante Chiralität existiert nicht ⇒ Generationen äquivalente Kopien; Mischung offen |
 
 Ältere Runden (r03–r94, v4.8.0-r01–r20): Kernkarte und die genannten Register. Kurzstand v4.8.0: Lesart B (ℂ³, SO(3,ℂ)) als Arbeitslesart, Sektoren nach Vorzeichen von s, vorab festgelegte Tests H2–H13 mit Ergebnissen, Riemann-Arbeit seit r04 keine Beweisquelle.
 

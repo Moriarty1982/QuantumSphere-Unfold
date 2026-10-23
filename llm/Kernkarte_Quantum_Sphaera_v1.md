@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v10.9
+# Kernkarte Quantum Sphaera — v11.0
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -106,6 +106,9 @@ voller linkshändiger Inhalt einer Generation mit ν_R (16 Weyl × 2), richtige 
 Anomalien wählen die Linksmultiplikation: SM und Frame-Spiegel. Annahmen (schwach rechts, Q_em = T₃ + Q + s) nicht hergeleitet.
 **Massen als Frame-Kopplungen (K90):** H29 — Massenterme sind antilinear (enthalten T), tragen H/H̃-Quantenzahlen; lineare MM-Blöcke geben keine;
 eichinvariant nur ν^c-Majorana. Auf den Plätzen: S₃ ⇒ ≤ 2 Massen, ρ gebrochen (ℤ₃) ⇒ Brannen-Form, Koide bei |b| = a/√2; Mischung braucht τ-Brechung.
+**ρ-Brechung aus Chiralität (K91):** H30 — ρ enthält c, c L_{e₇} c = −R_{e₇}: ρ bildet die anomaliefreie Chiralität auf die anomale ab, also bricht die
+Chiralität ρ zwingend (Massenaufspaltung). τ bleibt bei gleicher Chiralität auf allen Plätzen; triality-kovariante Chiralität existiert nicht ⇒
+Generationen = äquivalente Kopien, nicht die inäquivalenten Triality-Darstellungen. Mischung offen.
 Regel: Jede neue Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 **Farbe und Generation (K25, K28):** Im Companion liegen beide auf demselben Triplett e₄, e₅, e₆. Vorschlag (V):
@@ -2082,7 +2085,8 @@ Vorab-Notiz `llm/Vorab_Notiz_H22_Triality_Selbstdurchwanderung.md` (Commit ed746
 **K83.1 (M).** Symmetrie-Algebra 𝔤 ⊂ so(8)³ von t: dim 28, alle Projektionen bijektiv, Platz-Darstellungen irreduzibel und paarweise
 inäquivalent (H22a): t ist die Spin(8)-Triality-Form. τ ist der äußere Triality-Automorphismus (H22b).
 **K83.2 (M).** τ-feste Elemente (A, A, A) = Der(𝕆) = 𝔤₂ (dim 14), mit A e₇ = 0: 𝔰𝔲(3) (H22c). Lesart: Generation = was die Durchwanderung
-vertauscht, Farbe = was sie festlässt; löst die Identifikation aus K82 auf. Physikalische Zuordnung der Plätze offen.
+vertauscht, Farbe = was sie festlässt; löst die Identifikation aus K82 auf. Physikalische Zuordnung der Plätze offen. *Umgestuft durch K91:* Mit Chiralität nur als äquivalente Kopien; die Inäquivalenz der Plätze ist mit einer
+anomaliefreien Chiralität nicht verträglich.
 **K83.3 (M).** Vier Plätze: zwei Klassen von Klammerungen ({((xy)z)w, (xy)(zw), x(y(zw))} und {(x(yz))w, x((yz)w)}), die zyklische
 Verschiebung tauscht sie, ihre Summe ist invariant (Nachkontrolle). H22d bestätigt, aber ohne Verbot. „Genau drei“ ruht auf der Klassifikation
 (drei 8-dim. Irreps von Spin(8), Out = S₃): verbietet einen vierten *neuen* Platz, keine Wiederholung.
@@ -2189,6 +2193,20 @@ einer Kern ← Kern, nur auf ν^c (H29d).
 **K90.3 (S).** Massenterme = antilineare Frame-Kopplungen (M ↔ T), wie die Feder Materie–Tachyon in `thm:spring`; benötigte Brechung = Dublett Y/2 = ½,
 Ursache offen; See-Saw-Lesart für ν (nicht gerechnet). Brechungsstufen: Masse ⇐ Frame-Kopplung, Aufspaltung ⇐ ρ-Brechung (erklärt die Widerlegungen
 H11, H16–H18), Mischung ⇐ τ-Brechung. Koide-Form (r10) = Massenform einer ℤ₃-symmetrischen, ρ-gebrochenen Kopplung; |b|/a, θ offen. Kein Guard verbraucht.
+
+### K91 — Vorab festgelegter Test H30 und Companion-Runde v4.9.0-r45: Chiralität bricht die Spiegelung der Triality-Form (2026-10-23)
+
+Autor (2026-10-23): „prüfe mal, ob es sich aus der Struktur begründen lässt“. Vorab-Notiz `llm/Vorab_Notiz_H30_Brechung_aus_Chiralitaet.md`
+(Commit d755a08; c L_{e₇} c = −R_{e₇} vorab offengelegt), Skript `llm/k86_test_h30.py`, Ausgabe `llm/k86_out.txt`, Ergebnis
+`llm/Ergebnis_H30_Brechung_aus_Chiralitaet.md`, Runde `sec:v490-r45-chirality-breaks-reflection`.
+
+**K91.1 (M).** c L_{e₇} c = −R_{e₇}, c R_{e₇} c = −L_{e₇}; reines Vertauschen (x, z, y) keine Symmetrie von t (H30a). Modell I (gleiche Chiralität): von den
+sechs Symmetrien erhalten 1, τ, τ² die Chiralität, ρ, τρ, τ²ρ bilden sie auf ½(1 − iR_{e₇}) (anomal) ab (H30b). Im T-Frame ebenso (−iL ↦ +iR).
+**K91.2 (M).** (L, L, L) ∉ 𝔤; Fortsetzung von A = L_{e₇}: (L_{e₇}, R_{e₇}, −L_{e₇} − R_{e₇}), nicht τ-invariant (H30c); Platz 2 iR_{e₇} (anomal), Platz 3 keine
+Involution (H30d).
+**K91.3 (S).** ρ-Brechung folgt aus der Struktur (Transposition enthält c, c tauscht links/rechts, Anomaliefreiheit wählte links) ⇒ Bedingung für
+Massenaufspaltung (r44) erfüllt; erklärt die Widerlegungen H11, H16–H18 (Potentiale ohne Chiralität). Stärke der Brechung (θ, |b|/a) offen. τ bleibt
+in Modell I; Generationen = äquivalente Kopien (Umstufung von K83). Mischung braucht eine andere Quelle der τ-Brechung. Kein Guard verbraucht.
 
 ---
 
@@ -2339,6 +2357,7 @@ H11, H16–H18), Mischung ⇐ τ-Brechung. Koide-Form (r10) = Massenform einer �
 - v10.7 (2026-10-23): K88 Vorab-Test H27 und Runde v4.9.0-r42: MM-Kompensator als Chiralitätsprojektor, Inhalt einer Generation konstruiert.
 - v10.8 (2026-10-23): K89 Vorab-Test H28 und Runde v4.9.0-r43: Chiralitätsprojektor und Versatz durch Anomaliefreiheit bis auf den Frame erzwungen.
 - v10.9 (2026-10-23): K90 Vorab-Test H29 und Runde v4.9.0-r44: Massenterme als Frame-Kopplungen mit Higgs-Quantenzahlen, Brechungsstufen für Aufspaltung und Mischung.
+- v11.0 (2026-10-23): K91 Vorab-Test H30 und Runde v4.9.0-r45: Chiralität bricht ρ zwingend; triality-kovariante Chiralität existiert nicht; K83 umgestuft.
 
 ---
 
