@@ -71,7 +71,8 @@ werden“.
   aber keine Frame-Größe (kein β, γ_L, z₋). Nach r24.3 ist „photon frame“ des Hauptkorpus der **Bezugsframe R**
   (reiner Zustand, |b| = 1), nicht der Photon P der Konvention F (maximal gemischt).
 - Die Befunde 3 und 4 sind algebraisch und enthalten keine Frame-Größe. Gezeigt sind sie in R, wie die Ablage geschrieben ist.
-- Für M und T fehlt eine Festlegung, wie J_B auf der Dixon-Ablage wirkt. Natürliche Wahl, weil J_B antilinear ist:
+- Für M und T fehlt eine Festlegung, wie J_B auf der Dixon-Ablage wirkt. [Korrigiert in Abschnitt 8: Die hier zuerst
+  genannte Konjugation auf dem ℂ-Faktor ist nach r30.2(b) die Zeitumkehr T, nicht J_B.] Erste Fassung:
   Konjugation auf dem ℂ-Faktor (Index a). Sie ändert nur Vorzeichen, nicht die Menge der aktiven Kanäle. Masken und das
   Tripel bei a = 0 wären dann frame-frei. Das ist eine Annahme, kein Befund.
 - Namensfalle: „gemischter Readout“ (QAM: Zusammenfassung mehrerer Readout-Arten) ist nicht „gemischter Zustand“
@@ -91,3 +92,20 @@ werden“.
 Die Befunde 3 und 4 sind in `formal/QSFormal/Dixon.lean` bewiesen (Lean 4.35.0, ohne Mathlib, nur Standard-Axiome), dazu die
 Polynom-Kerne von r26.1 und r32.1. Nicht formalisiert: der abstrakte Isomorphismus zu A₄ und der Schritt vom negativen
 Hauptminor zum Sattelpunkt.
+
+## 8. J_B auf der Ablage (Lean, `formal/QSFormal/Dixon.lean`)
+
+Nach v4.9.0-r30.2(b) gilt J_B = R_{π/2} ∘ T mit T: z ↦ z̄ und R: z ↦ iz. Annahme (A_ℂ): Der ℂ-Faktor der Ablage ist die
+Amplitudenebene z. Bewiesen sind dann die Folgerungen in der Tabelle.
+
+| | T (Zeitumkehr) | R (z ↦ iz) | J_B = R ∘ T |
+|---|---|---|---|
+| auf den a-Hälften | Vorzeichen bei a = 1 | (x, y) ↦ (−y, x), R² = −1 | Vertauschung (σ_x), Involution |
+| Tripel-Maske | fest | — | wandert nach a = 1 (disjunkt, 24 Bits) |
+| Platznormen (Massen-Lesart) | fest | fest | fest |
+| Triality-Form t | t̄ | −i t | −i t̄: (Re, Im) ↦ (−Im, −Re), Betrag fest |
+
+Lesart: Das a-Bit wird zum Bit für den Materie- oder Tachyon-Sektor, wie die σ_z-Kanäle des Dubletts. P hat gleiches
+Gewicht auf beiden Hälften. Unter (A_ℂ) ist die Massen-Lesart über Normen frame-frei. Frame-abhängig sind der
+Realteil-Readout der Triality-Form und jede port-gewichtete Aggregation. Die im ersten Entwurf genannte
+ℂ-Konjugation ist T, nicht J_B. (A_ℂ) selbst ist eine Autorentscheidung.

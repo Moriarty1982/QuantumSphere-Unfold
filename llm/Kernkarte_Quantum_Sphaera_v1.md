@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v9.3
+# Kernkarte Quantum Sphaera — v9.4
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1917,7 +1917,7 @@ der passende Ort für den nächsten Vorab-Test. `thm:three-generations` ohne `\q
 
 **K77.6 Frames (Autorhinweis).** Die Dixon-Grammatik ist mit Bezug auf den Photon-Frame geschrieben; r23 ordnet sie als N ein
 (Name ohne Frame-Größe), nach r24.3 ist das der Bezugsframe R, nicht P. K77.3/K77.4 sind algebraisch, gezeigt in R; für M/T fehlt
-die Wirkung von J_B auf der Ablage (natürliche Wahl ℂ-Konjugation → Masken und Tripel frame-frei, Annahme). Namensfalle:
+die Wirkung von J_B auf der Ablage [korrigiert in K77.8: ℂ-Konjugation ist T, nicht J_B]. Namensfalle:
 „gemischter Readout“ (QAM) ≠ „gemischter Zustand“ (P maximal gemischt). Port-gewichtete Aggregation wäre frame-abhängig
 (M (0,768; 0,232), T vertauscht, P ohne Brechung); eine Vorab-Notiz muss den Frame der Massen-Ablesung festlegen.
 
@@ -1927,6 +1927,14 @@ die 12 aus `a4` (gerade Permutation, gerade Vorzeichenzahl) Symmetrien (`inv_iff
 Farbmaske 9 Bits als Teilmaske; Polynom-Kerne von r26.1 (linear in e₂) und r32.1 (auf der Achse linear in e₃), Hauptminor −b² < 0;
 unter Annahme J_B = ℂ-Konjugation: Masken erhalten. Nicht formalisiert: abstrakter Isomorphismus zu A₄, Schritt Hauptminor ⇒ Sattel
 (Analysis). Nur Standard-Axiome (propext, Classical.choice, Quot.sound), kein sorry, kein native_decide.
+
+**K77.8 J_B auf der Ablage (Lean, `Dixon.lean`).** Nach v4.9.0-r30.2(b) ist J_B = R_{π/2} ∘ T (T: z ↦ z̄, R: z ↦ iz). Unter der
+Annahme (A_ℂ), dass der ℂ-Faktor der Ablage (Index a) die Amplitudenebene z ist: J_B vertauscht die beiden a-Hälften (σ_x, ohne
+Vorzeichen, Involution); R² = −1; T lässt jede Maske fest. Tripel-Maske (a = 0) → Kopie in a = 1, disjunkt, 24 Bits; Farbmaske ebenso.
+Platznormen (Massen-Lesart √m ∝ n_k) unter T, R, J_B fest → **frame-frei**. Triality-Form: T: t ↦ t̄; R: t ↦ −i t; J_B: t ↦ −i t̄,
+also (Re, Im) ↦ (−Im, −Re), Betrag fest; für ein reelles Tripel verschwindet der Realteil-Readout im Tachyon. Lesart: das a-Bit ist das
+M/T-Sektorbit (wie die σ_z-Kanäle des Dubletts, `Frames.J_B_channels`), P = gleiches Gewicht beider Hälften. **Korrektur K77.6:** die
+dort genannte „natürliche Wahl ℂ-Konjugation“ ist T (Zeitumkehr), nicht J_B. Python-Gegenprobe exakt. (A_ℂ) ist Autorentscheidung.
 
 ---
 
@@ -2061,6 +2069,7 @@ unter Annahme J_B = ℂ-Konjugation: Masken erhalten. Nicht formalisiert: abstra
 - v9.1 (2026-10-23): K77 Prüfung Dixon-Ablage (Tripel = (Im ℍ)⊗𝕆, gemeinsame Symmetrie A₄, Lorentz-Konflikt) und Bestandsaufnahme gemischte Readouts (angelegt, nie ausgewertet).
 - v9.2 (2026-10-23): K77.6 Frame-Einordnung der Dixon-Prüfung (Grammatik = Bezugsframe R; M/T offen bis J_B auf der Ablage festgelegt; Namensfalle gemischter Readout/Zustand; port-gewichtete Brechung frame-abhängig).
 - v9.3 (2026-10-23): K77.7 Lean-Modul `formal/QSFormal/Dixon.lean` (Triality-Symmetrien, A₄-Charakterisierung, Dixon-Masken, Kerne von r26.1/r32.1).
+- v9.4 (2026-10-23): K77.8 J_B = R ∘ T auf der Dixon-Ablage in Lean (σ_x der a-Hälften, Normen frame-frei, t ↦ −i t̄); K77.6 korrigiert (ℂ-Konjugation = T).
 
 ---
 
