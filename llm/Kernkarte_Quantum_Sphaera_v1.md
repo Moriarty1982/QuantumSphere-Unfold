@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v10.1
+# Kernkarte Quantum Sphaera — v10.2
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -89,6 +89,9 @@ der ℍ-Faktor ist dreifach belegt.
 deckungsgleich (e₇ → Q = 0, e₄..e₆ → Q = 2/3); falsch ist nur der Anti-Triplett-Satz (Frame-Vermischung). Q = ½ − (i/6)L_{e₇} − (i/3)R_{e₇}.
 **Doppelbelegung (K82):** H21 — die Triolen-Symmetrie e₄ → e₅ → e₆ ist eine Farbdrehung in SU(3)_c; Farbe und Generation sind im
 Companion dasselbe Objekt; Generationen brauchen eine Dreierstruktur außerhalb von 𝕆. Frame-Regel für Einheiten übernommen.
+**Triality (K83):** H22 — t = Re((xy)z) ist die Spin(8)-Triality-Form; Plätze = drei inäquivalente 8-dim. Darstellungen, Verschiebung = äußere
+Triality, Fixgruppe G₂ ⊃ SU(3)_c: Generation = Bahn, Farbe = Fixgruppe. Kein Verbot einer vierten Generation aus der Struktur allein.
+Perioden der Struktur {1, 2, 3, 4, 6, 12}, keine ausgezeichnet. „Triole“ benennt drei Strukturen (Frames M/P/T, Kerne 120°, Plätze).
 Regel: Jede neue Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 **Farbe und Generation (K25, K28):** Im Companion liegen beide auf demselben Triplett e₄, e₅, e₆. Vorschlag (V):
@@ -2052,6 +2055,27 @@ auf dem reellen Spann (r12: A₄, Δ(96)) sind Untergruppen der Farbe. Generatio
 Generationen in thm:three-generations). Innerhalb von 𝕆 mit festem e₇ ist jede ℤ₃-Symmetrie Farbe; die Trennung ist nötig, ihr Träger
 (Triality-Plätze r14 oder Im ℍ r33) offen. Offen (Autor): ob die Triole ursprünglich Farbe oder Generation meinte. Kein Guard verbraucht.
 
+### K83 — Vorab festgelegter Test H22 und Companion-Runde v4.9.0-r37: Triality als Selbstdurchwanderung (2026-10-23)
+
+Autorabsicht (2026-10-23): Die Triole sollte eine andere Darstellung der Sphäre sein; die fraktale Selbstdurchwanderung transformiert
+zwischen den Gestalten (Triole, Sphäre, Umgebung), die Selbstähnlichkeit wählt bei jedem Zoom eine Gestalt; nicht auf Periode 3
+festlegen; ein Zeitkristall-Ansatz „müsste im Paper stehen“. Textbefund: Der Begriff kommt in Companion, Original v3.1.4, Riemann-Paper,
+Archiven und Notizen nicht vor; strukturell verwandt sind der alternierende Orbit-Scan (Σ, Periode 2), die Kristall–Fraktal-Probe und
+die Bahntheorie des Riemann-Papers (beliebige Perioden). In der Originalarbeit (`thm:spring`) ist die Triole Materie–Photon–Tachyon.
+Vorab-Notiz `llm/Vorab_Notiz_H22_Triality_Selbstdurchwanderung.md` (Commit ed74608), Skript `llm/k78_test_h22.py`, Ausgabe
+`llm/k78_out.txt`, Ergebnis `llm/Ergebnis_H22_Triality_Selbstdurchwanderung.md`, Runde `sec:v490-r37-triality-self-traversal`.
+
+**K83.1 (M).** Symmetrie-Algebra 𝔤 ⊂ so(8)³ von t: dim 28, alle Projektionen bijektiv, Platz-Darstellungen irreduzibel und paarweise
+inäquivalent (H22a): t ist die Spin(8)-Triality-Form. τ ist der äußere Triality-Automorphismus (H22b).
+**K83.2 (M).** τ-feste Elemente (A, A, A) = Der(𝕆) = 𝔤₂ (dim 14), mit A e₇ = 0: 𝔰𝔲(3) (H22c). Lesart: Generation = was die Durchwanderung
+vertauscht, Farbe = was sie festlässt; löst die Identifikation aus K82 auf. Physikalische Zuordnung der Plätze offen.
+**K83.3 (M).** Vier Plätze: zwei Klassen von Klammerungen ({((xy)z)w, (xy)(zw), x(y(zw))} und {(x(yz))w, x((yz)w)}), die zyklische
+Verschiebung tauscht sie, ihre Summe ist invariant (Nachkontrolle). H22d bestätigt, aber ohne Verbot. „Genau drei“ ruht auf der Klassifikation
+(drei 8-dim. Irreps von Spin(8), Out = S₃): verbietet einen vierten *neuen* Platz, keine Wiederholung.
+**K83.4 (M).** τ, ρ, T, R erzeugen S₃ × D₄ (Ordnung 48), Perioden {1, 2, 3, 4, 6, 12} (H22e). Keine ausgezeichnete Periode.
+**K83.5 (S).** Drei Triolen im Korpus: Frame-Triole M/P/T (ℤ₂ mit Fixpunkt, 1 : 1 : 3), Kern-Triole (ℤ₃, 120°, in 𝕆 Farbe), Platz-Triole
+(Triality). Die Doppelbelegungen (r13, r34–r36) entstehen beim Gleichsetzen. Kein Guard verbraucht.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -2193,6 +2217,7 @@ Generationen in thm:three-generations). Innerhalb von 𝕆 mit festem e₇ ist j
 - v9.9 (2026-10-23): K80 Vorab-Test H19 (Ladungen aus der Dixon-Ablage) und Runde v4.9.0-r34: H19a/b/d/e bestätigt, H19c widerlegt.
 - v10.0 (2026-10-23): K81 Vorab-Test H20 und Runde v4.9.0-r35: innere gegen äußere Einheit; H20a/c/d bestätigt, H20b widerlegt; Lesart K80.3 korrigiert.
 - v10.1 (2026-10-23): K82 Frame-Regel für Einheiten übernommen, Statusvermerke thm:three-generations/thm:SM, Vorab-Test H21 und Runde v4.9.0-r36 (Herkunft der Doppelbelegung), alle bestätigt.
+- v10.2 (2026-10-23): K83 Vorab-Test H22 und Runde v4.9.0-r37: Triality-Form = Spin(8)-Triality, Farbe in der Fixgruppe, Perioden {1,…,12}; H22d ohne Verbot.
 
 ---
 

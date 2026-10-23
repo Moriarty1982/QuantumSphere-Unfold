@@ -1,0 +1,17 @@
+H22a: dim g = 28 (28); Rang der Projektionen [np.int64(28), np.int64(28), np.int64(28)]; Verflechtungsraeume zwischen den Plaetzen {(0, 1): np.int64(0), (0, 2): np.int64(0), (1, 2): np.int64(0)} (0 = nicht aequivalent); Selbst-Verflechtung 1 (1 = irreduzibel, reeller Typ) -> bestaetigt
+
+H22b: tau bildet g auf sich ab (Rest 1e-15), permutiert die Projektionen zyklisch; aeusserer Automorphismus, da die Plaetze nicht aequivalent sind -> bestaetigt
+
+H22c: tau-feste Elemente (A,A,A): Dimension 14; Derivationen von O: 14; gemeinsamer Rang 14 (14 = gleich, G2); davon mit A e7 = 0: 8 (SU(3)) -> bestaetigt
+
+H22d: Kontrolle t zyklisch auf O^3: Abweichung 4e-15; vier Plaetze, Abweichung unter zyklischer Verschiebung:
+   ((xy)z)w: 47.267
+   (x(yz))w: 47.267
+   (xy)(zw): 47.267
+   x((yz)w): 47.267
+   x(y(zw)): 47.267
+  -> H22d bestaetigt (schwach)
+
+H22e: Gruppenordnung 48 (48); Elementordnungen [1, 2, 3, 4, 6, 12] mit Anzahlen {1: 1, 2: 23, 3: 2, 4: 8, 6: 10, 12: 4}; [tau/rho, T/R] = 0e+00; t unter tau, rho invariant: 4e-15 -> bestaetigt
+
+Nachkontrolle H22d: Klasse A = ((xy)z)w = (xy)(zw) = x(y(zw)) (1e-14), Klasse B = (x(yz))w = x((yz)w) (1e-14); die Verschiebung tauscht A und B (2e-14); A + B ist zyklisch invariant (1e-14). H22d liefert also kein Verbot.
