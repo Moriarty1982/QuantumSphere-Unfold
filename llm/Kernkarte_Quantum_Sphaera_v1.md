@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v11.1
+# Kernkarte Quantum Sphaera — v11.2
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -111,6 +111,8 @@ Chiralität ρ zwingend (Massenaufspaltung). τ bleibt bei gleicher Chiralität 
 Generationen = äquivalente Kopien, nicht die inäquivalenten Triality-Darstellungen. Mischung offen.
 **τ-Brechung durch Readouts (K92):** H31 — Readouts aus den Verschiebungen (Σ, ∨, Selektor-Kontraktion) liegen in ℂ[ℤ₃], vertauschen mit τ: keine Mischung.
 Erst Art-Masken auf einzelne Generationen brechen τ; Mischung ∝ δ, unterdrückt durch Massenabstände. Herkunft der Maske offen (Teil der Kopplungen).
+**Maske aus Triality (K93):** H32 — unter Modellannahme liefert die Abweichung Δ = J_II − J_I eine Maske fester Form: Quarks diag(0, −2, −1), Leptonen
+diag(0, 0, −3), demokratisch in der Generationen-Basis, Lepton/Quark √3; nur ε gewählt. Linearität (H32c) in 4/200 fast entarteten Fällen widerlegt.
 Regel: Jede neue Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 **Farbe und Generation (K25, K28):** Im Companion liegen beide auf demselben Triplett e₄, e₅, e₆. Vorschlag (V):
@@ -2222,6 +2224,20 @@ Mischung linear in δ, ≤ δ(1/Lücke_u + 1/Lücke_d)/3 (H31c). Masken reell, f
 bei großer Hierarchie (CKM), größere bei dichten Massen (Neutrinos); keine Zahlen. Spannung: Mischung ist messbar, also muss die Maske Teil der Kopplungen
 sein, nicht des Beobachters; Herkunft offen. Kein Guard verbraucht.
 
+### K93 — Vorab festgelegter Test H32 und Companion-Runde v4.9.0-r47: Generationen-Maske aus der triality-kovarianten Chiralität (2026-10-23)
+
+Vorab-Notiz `llm/Vorab_Notiz_H32_Maske_aus_Triality.md` (Commit 65c5b44; Gewichte und T Δ T⁻¹ = −Δ vorab offengelegt), Skript `llm/k88_test_h32.py`,
+Ausgabe `llm/k88_out.txt` (mit Nachkontrolle), Ergebnis `llm/Ergebnis_H32_Maske_aus_Triality.md`, Runde `sec:v490-r47-mask-from-triality`.
+Modellannahme (nicht hergeleitet): Δ wirkt als schwache Störung, M ↦ M + ε(WM + MW); Partner im T-Frame gelesen.
+
+**K93.1 (M).** Δ skalar auf den Q-Sektoren: 0 (0, 0, −3), 1/3 (0, 2, 1), 2/3 (0, −2, −1), 1 (0, 0, 3) (H32a). T Δ T⁻¹ = −Δ, antisymmetrisch unter q ↔ 1 − q;
+W_q = diag(0, −2, −1) (up und down), W_l = diag(0, 0, −3) (H32b). Fourier-Basis: alle Nebendiagonalen gleich, |W_q| = 1/√3, |W_l| = 1, Verhältnis √3 (H32d).
+**K93.2 (M).** H32c widerlegt: Mischung in allen 200 Fällen ≠ 0, aber linear in ε nur in 196/200 bei ε = 10⁻³, 10⁻⁴; Nachkontrolle: die 4 Fälle fast entartet
+(relative Lücke ≤ 3·10⁻³, Median 7·10⁻²); bei ε = 10⁻⁶, 10⁻⁷ alle linear.
+**K93.3 (S).** Unter der Annahme kommt die Generationen-Maske aus der Struktur, Form fest, nur ε gewählt; up und down gleiche Maske, Mischung trotzdem (r46).
+Demokratisch in der Generationen-Basis, Leptonen √3 stärker: Richtung große PMNS-, kleine CKM-Winkel (qualitativ). τ-Brechung aus der Wahl eines
+Referenzplatzes (Platz 1: Gewicht 0). Annahme, ε, Zirkulanten-Parameter und Zahlen offen. Kein Guard verbraucht.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -2373,6 +2389,7 @@ sein, nicht des Beobachters; Herkunft offen. Kein Guard verbraucht.
 - v10.9 (2026-10-23): K90 Vorab-Test H29 und Runde v4.9.0-r44: Massenterme als Frame-Kopplungen mit Higgs-Quantenzahlen, Brechungsstufen für Aufspaltung und Mischung.
 - v11.0 (2026-10-23): K91 Vorab-Test H30 und Runde v4.9.0-r45: Chiralität bricht ρ zwingend; triality-kovariante Chiralität existiert nicht; K83 umgestuft.
 - v11.1 (2026-10-23): K92 Vorab-Test H31 und Runde v4.9.0-r46: Verschiebungs-Readouts erzeugen keine Mischung, Art-Masken schon.
+- v11.2 (2026-10-23): K93 Vorab-Test H32 und Runde v4.9.0-r47: Maske fester Form aus der Abweichung der triality-kovarianten Chiralität; H32c (Linearität) widerlegt.
 
 ---
 
