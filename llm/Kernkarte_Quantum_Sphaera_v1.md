@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v11.2
+# Kernkarte Quantum Sphaera — v11.3
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -2390,6 +2390,7 @@ Referenzplatzes (Platz 1: Gewicht 0). Annahme, ε, Zirkulanten-Parameter und Zah
 - v11.0 (2026-10-23): K91 Vorab-Test H30 und Runde v4.9.0-r45: Chiralität bricht ρ zwingend; triality-kovariante Chiralität existiert nicht; K83 umgestuft.
 - v11.1 (2026-10-23): K92 Vorab-Test H31 und Runde v4.9.0-r46: Verschiebungs-Readouts erzeugen keine Mischung, Art-Masken schon.
 - v11.2 (2026-10-23): K93 Vorab-Test H32 und Runde v4.9.0-r47: Maske fester Form aus der Abweichung der triality-kovarianten Chiralität; H32c (Linearität) widerlegt.
+- v11.3 (2026-10-23): Lean-Modul `formal/QSFormal/Ladungen.lean` (nur Lean-Kern): σ einziger Automorphismus unter 48 Fortsetzungen (r36), c L_{e₇} c = −R_{e₇} für alle x (r45), 6Q, Inhalt einer Generation, Anomalie-Spuren und Tr Y = 0 ⇔ s = −½ (r42, r43), Masken-Gewichte und Eisenstein-Normen (r47), 2^j mod 3 (r39); geprüft mit Lean 4.35.0, nur Standard-Axiome.
 
 ---
 
