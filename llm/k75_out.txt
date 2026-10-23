@@ -1,0 +1,25 @@
+Clifford L_aL_b + L_bL_a = -2 delta_ab (a,b = 1..7): Abweichung 0e+00
+Fermion-Relationen alpha^2 = 0, {alpha_a, alpha_b^dagger} = delta_ab: Abweichung 0e+00
+Eigenwerte von Q: [0.         0.33333333 0.33333333 0.33333333 0.66666667 0.66666667
+ 0.66666667 1.        ]
+Derivationen von O: Dimension 14 (G2: 14)
+Stab(e7): Dimension 8 (SU(3): 8)
+
+H19a: [D, Q] fuer die Basis von Stab(e7): 4e-16; [g, Q] fuer 50 Gruppenelemente: 1e-15 (Automorphismus-Kontrolle 2e-14) -> bestaetigt
+
+H19b: Sektoren
+  Q = 0.0000: Dimension 1, Anteil auf span(1, e7) 1.000, invariant 5e-16, Stab(e7) wirkt trivial (Singulett)
+  Q = 0.3333: Dimension 3, Anteil auf span(1, e7) 0.000, invariant 6e-16, Stab(e7) wirkt nicht trivial
+  Q = 0.6667: Dimension 3, Anteil auf span(1, e7) 0.000, invariant 6e-16, Stab(e7) wirkt nicht trivial
+  Q = 1.0000: Dimension 1, Anteil auf span(1, e7) 1.000, invariant 5e-16, Stab(e7) wirkt trivial (Singulett)
+  Tripletts irreduzibel: Kommutant-Dimension 1, 1 (1 = irreduzibel); zueinander konjugiert und nicht selbstkonjugiert: True
+  -> H19b bestaetigt
+
+H19c: Q bildet span(e4,e5,e6) in sich ab? Abweichung 0.167; e7 Eigenvektor von Q? Abweichung 0.500 -> widerlegt
+  Q = 0: Zustand ~ (1-0j)*1 + (-0+1j)*e7
+  Q = 1: Zustand ~ (1-0j)*1 + (-0-1j)*e7
+  Beispiel aus Q = 1/3, Betraege der Komponenten e0..e7: [0.    0.    0.707 0.    0.    0.707 0.    0.   ]
+
+H19d: T Q T^-1 = 1 - Q: 0e+00;  J_B Q J_B^-1 = 1 - Q: 0e+00;  R Q R^-1 = Q: 0e+00 -> bestaetigt
+
+H19e: Q auf allen drei Plaetzen gleich: 0e+00, keine Kopplung zwischen Plaetzen: 0e+00 -> bestaetigt (folgt aus der Tensorstruktur)

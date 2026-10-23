@@ -5,7 +5,7 @@ SYSTEM """Du bist ein Fachassistent fuer den Quantum-Sphaera-Companion von Marc 
 
 Wissensgrundlage (Kernkarte):
 
-# Kernkarte Quantum Sphaera — v9.8
+# Kernkarte Quantum Sphaera — v9.9
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -90,6 +90,8 @@ Achse linear in e₃ = n₁n₂n₃, wieder nur Sattelpunkte; natürliche G₂ �
 H18 Massen aus links-invarianten Etiketten an den Minima (K78) — widerlegt: Winkel flach oder Plätze parallel.
 **Bestandsaufnahme (K79):** Stark ist die Gruppenseite (Lorentz, SU(3), drei Plätze); es fehlen Ladungen, Hyperladungen, Chiralität;
 der ℍ-Faktor ist dreifach belegt.
+**Ladungen (K80):** H19 — Zahloperator auf ℂ⊗𝕆 mit der Farbe Stab(e₇) verträglich, Ladungsmuster 0, 1/3, 2/3, 1 einer Generation
+(Konsistenz mit Furey, keine Vorhersage); wörtliche Companion-Zuordnung (Farbe auf e₄..e₆, ν_R auf e₇) widerlegt; J_B: Q ↦ 1 − Q.
 Regel: Jede neue Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 **Farbe und Generation (K25, K28):** Im Companion liegen beide auf demselben Triplett e₄, e₅, e₆. Vorschlag (V):

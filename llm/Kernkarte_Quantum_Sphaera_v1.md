@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v9.8
+# Kernkarte Quantum Sphaera — v9.9
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -83,6 +83,8 @@ Achse linear in e₃ = n₁n₂n₃, wieder nur Sattelpunkte; natürliche G₂ �
 H18 Massen aus links-invarianten Etiketten an den Minima (K78) — widerlegt: Winkel flach oder Plätze parallel.
 **Bestandsaufnahme (K79):** Stark ist die Gruppenseite (Lorentz, SU(3), drei Plätze); es fehlen Ladungen, Hyperladungen, Chiralität;
 der ℍ-Faktor ist dreifach belegt.
+**Ladungen (K80):** H19 — Zahloperator auf ℂ⊗𝕆 mit der Farbe Stab(e₇) verträglich, Ladungsmuster 0, 1/3, 2/3, 1 einer Generation
+(Konsistenz mit Furey, keine Vorhersage); wörtliche Companion-Zuordnung (Farbe auf e₄..e₆, ν_R auf e₇) widerlegt; J_B: Q ↦ 1 − Q.
 Regel: Jede neue Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 **Farbe und Generation (K25, K28):** Im Companion liegen beide auf demselben Triplett e₄, e₅, e₆. Vorschlag (V):
@@ -1991,6 +1993,23 @@ das U(1) heißt dort „Elektromagnetismus“, im Standardmodell ist das ungebro
 (2) genau drei Generationen: Ist Re((xy)z) die Spin(8)-Triality (drei 8-dim. Darstellungen, Out = S₃), schließt sie eine vierte aus?
 (3) eine dritte, verträgliche, chirale SU(2) in der Ablage; (4) U(1) als Hyperladung mit Q = T₃ + Y/2.
 
+### K80 — Vorab festgelegter Test H19 und Companion-Runde v4.9.0-r34: Ladungen aus der Dixon-Ablage (2026-10-23)
+
+Vorab-Notiz `llm/Vorab_Notiz_H19_Ladungen_Dixon.md` (Commit 1e60410, vor der Rechnung), Skript `llm/k75_test_h19.py`, Ausgabe
+`llm/k75_out.txt`, Ergebnis `llm/Ergebnis_H19_Ladungen_Dixon.md`, Runde `sec:v490-r34-charges-dixon`. Test 1 aus K79.3.
+
+**K80.1 (M).** α_a = ½(L_{e_a} + i·L_{e₇e_a}), a = 4, 5, 6, i = ℂ-Faktor der Ablage; N = Σα_a†α_a, Q = N/3. Fermion-Relationen exakt;
+Eigenwerte 0, 1, 2, 3 mit Vielfachheiten 1, 3, 3, 1 algebraisch erzwungen (keine Vorhersage).
+**K80.2 (M).** H19a bestätigt: Stab(e₇) ⊂ G₂ (Dimension 8 von 14) vertauscht mit Q. H19b bestätigt: Q = 0, 1 Singuletts 1 ± i·e₇;
+Q = 1/3, 2/3 irreduzible, zueinander konjugierte, nicht selbstkonjugierte Tripletts in span_ℂ(e₁..e₆). In Fureys Lesart ν, d̄, u, e⁺.
+**K80.3 (M).** H19c widerlegt: Der reelle Spann von e₄, e₅, e₆ ist kein Q-Eigenraum, e₇ kein Eigenvektor; Eigenzustände e_a ± i·e₇e_a.
+`thm:octonion-SU3` und `thm:three-generations` (Gen_i ↔ e_{i+3}, e₇ ↔ ν_R) sind in der Zuordnung falsch. Kandidat für Statusvermerk.
+**K80.4 (M).** H19d bestätigt: T Q T⁻¹ = 1 − Q, J_B Q J_B⁻¹ = 1 − Q, R Q R⁻¹ = Q. Frame-frei sind Spektrum und Farbstruktur, nicht die
+Zuordnung Zustand ↔ Ladung; die Wirkung kommt vom Zeitumkehr-Anteil T. Stützt den Autorhinweis, `thm:SM` sei in einem Frame entwickelt:
+Die U(1)-Zeile muss ihren Frame nennen. H19e (gleiches Q auf allen drei Plätzen) folgt aus der Tensorstruktur.
+**K80.5 (S).** Bestandsaufnahme: Ladungen D → A unter Lesart (ℂ-Faktor als quantenmechanisches i); wörtliche Companion-Zuordnung C.
+Offen: Hyperladung, Chiralität (Tests 3, 4). Kein Guard verbraucht; R_ch = (0,0,1).
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -2129,6 +2148,7 @@ das U(1) heißt dort „Elektromagnetismus“, im Standardmodell ist das ungebro
 - v9.6 (2026-10-23): K77.10 Links-invariante Etiketten: Im-Komponenten der quaternionischen Gram-Größe, μ_i = Fläche der anderen beiden Plätze, Rechts-2T zyklisch, umgekehrte Reihenfolge.
 - v9.7 (2026-10-23): K78 Vorab-Test H18 (links-invariante Etiketten an den Minima) widerlegt; Companion-Runde v4.9.0-r33.
 - v9.8 (2026-10-23): K79 Bestandsaufnahme Struktur gegen Standardmodell (A/B/C/D), thm:SM-Befund, Abzähl-Tests vorgeschlagen.
+- v9.9 (2026-10-23): K80 Vorab-Test H19 (Ladungen aus der Dixon-Ablage) und Runde v4.9.0-r34: H19a/b/d/e bestätigt, H19c widerlegt.
 
 ---
 
