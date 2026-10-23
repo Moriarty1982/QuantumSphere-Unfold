@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v10.8
+# Kernkarte Quantum Sphaera — v10.9
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -104,6 +104,8 @@ Q_em = T₃ + Y/2 die Dubletts (ν,e), (u,d), (d̄,ū), (e⁺,ν̄); T = Ladungs
 voller linkshändiger Inhalt einer Generation mit ν_R (16 Weyl × 2), richtige Quantenzahlen, anomaliefrei; Konstruktion unter Wahlen, Muster vorab gesehen.
 **Warum diese Wahl (K89):** H28 — unter den Annahmen genau vier Chiralitätsprojektoren (±iL_{e₇}, ±iR_{e₇}); Tr Y = 0 erzwingt s = −½; die übrigen
 Anomalien wählen die Linksmultiplikation: SM und Frame-Spiegel. Annahmen (schwach rechts, Q_em = T₃ + Q + s) nicht hergeleitet.
+**Massen als Frame-Kopplungen (K90):** H29 — Massenterme sind antilinear (enthalten T), tragen H/H̃-Quantenzahlen; lineare MM-Blöcke geben keine;
+eichinvariant nur ν^c-Majorana. Auf den Plätzen: S₃ ⇒ ≤ 2 Massen, ρ gebrochen (ℤ₃) ⇒ Brannen-Form, Koide bei |b| = a/√2; Mischung braucht τ-Brechung.
 Regel: Jede neue Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 **Farbe und Generation (K25, K28):** Im Companion liegen beide auf demselben Triplett e₄, e₅, e₆. Vorschlag (V):
@@ -2174,6 +2176,20 @@ T(iL_{e₇})T⁻¹ = −iL_{e₇} (H28d).
 links gegen rechts. Annahmen bleiben: schwache SU(2) rechts auf ℍ, Q_em = T₃ + Q + s, Projektor auf ℂ⊗𝕆. Keine Vorhersage (SM ist bekannt
 anomaliefrei). Kein Guard verbraucht.
 
+### K90 — Vorab festgelegter Test H29 und Companion-Runde v4.9.0-r44: Massenterme als Frame-Kopplungen, Brechungsstufen (2026-10-23)
+
+Vorab-Notiz `llm/Vorab_Notiz_H29_Brechung_Massen_Mischung.md` (Commit 85d065a; bekannte Teile offengelegt), Skript `llm/k85_test_h29.py`, Ausgabe
+`llm/k85_out.txt`, Ergebnis `llm/Ergebnis_H29_Brechung_Massen_Mischung.md`, Runde `sec:v490-r44-mass-frame-couplings`.
+
+**K90.1 (M).** Verbinder (vertauschen mit Farbe und L_q): 24-dim. linear wie antilinear (H29a). Antilinear Bild ← Kern: 8-dim. (Lepton 4, Quark 4),
+genau Dubletts Y/2 = ±½ (H, H̃) (H29b). Linear Bild ← Kern: 4-dim., nur Lepton, Y/2 ∈ {−½, −3/2} (H29c). Eichinvariant: keiner Bild ← Kern, genau
+einer Kern ← Kern, nur auf ν^c (H29d).
+**K90.2 (M).** Plätze: S₃-symmetrisch ⇒ höchstens zwei Eigenwerte; ℤ₃ ⇒ a + 2|b|cos(θ + 2πk/3) (Brannen), K = 2/3 ⇔ |b| = a/√2; up und down beide
+ℤ₃ ⇒ |V| Permutation (H29e).
+**K90.3 (S).** Massenterme = antilineare Frame-Kopplungen (M ↔ T), wie die Feder Materie–Tachyon in `thm:spring`; benötigte Brechung = Dublett Y/2 = ½,
+Ursache offen; See-Saw-Lesart für ν (nicht gerechnet). Brechungsstufen: Masse ⇐ Frame-Kopplung, Aufspaltung ⇐ ρ-Brechung (erklärt die Widerlegungen
+H11, H16–H18), Mischung ⇐ τ-Brechung. Koide-Form (r10) = Massenform einer ℤ₃-symmetrischen, ρ-gebrochenen Kopplung; |b|/a, θ offen. Kein Guard verbraucht.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -2322,6 +2338,7 @@ anomaliefrei). Kein Guard verbraucht.
 - v10.6 (2026-10-23): K87 Vorab-Test H26 und Runde v4.9.0-r41: Aufteilung D der ℍ-Rollen, Q = T₃ + Y/2 mit Y/2 = Q − ½, T = C, Singuletts fehlen.
 - v10.7 (2026-10-23): K88 Vorab-Test H27 und Runde v4.9.0-r42: MM-Kompensator als Chiralitätsprojektor, Inhalt einer Generation konstruiert.
 - v10.8 (2026-10-23): K89 Vorab-Test H28 und Runde v4.9.0-r43: Chiralitätsprojektor und Versatz durch Anomaliefreiheit bis auf den Frame erzwungen.
+- v10.9 (2026-10-23): K90 Vorab-Test H29 und Runde v4.9.0-r44: Massenterme als Frame-Kopplungen mit Higgs-Quantenzahlen, Brechungsstufen für Aufspaltung und Mischung.
 
 ---
 

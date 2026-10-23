@@ -1,0 +1,124 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r44 Source-Only: Mass Terms as Frame Couplings; Breaking Stages for Masses and Mixing}
+\addcontentsline{toc}{section}{v4.9.0-r44 Source-Only: Mass Terms as Frame Couplings; Breaking Stages for Masses and Mixing}
+\label{sec:v490-r44-mass-frame-couplings}
+% ============================================================================
+
+\paragraph{Purpose.}
+After v4.9.0-r42 and r43 the content of one generation stands, but symmetry breaking, masses and mixing are open.  This layer records the
+pre-registered test H29 (note \texttt{llm/Vorab\_Notiz\_H29\_Brechung\_Massen\_Mischung.md}, commit \texttt{85d065a}, fixed before
+computing).  It asks which maps between the two chiral halves are compatible with colour and the Lorentz group, which quantum numbers they
+carry, and what the three triality slots imply for masses and mixing.  The known parts are disclosed in the note.  Earlier layers are not
+rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r44 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r44 setting}
+\label{subsec:v490-r44-setting}
+
+On \(V=\mathbb C\otimes\HH\otimes\OO\) as in v4.9.0-r42, a \emph{connector} is a map \(V\to V\) commuting with colour and with the Lorentz
+rotations \(L_q\): linear (\(X\)) or antilinear (\(\Phi=X\circ T\)).  An antilinear connector anticommutes with the boosts \(iL_q\), so it maps
+left- to right-handed spinors: it is the operator form of a mass term.  A Hermitian generator \(G\) acts by \(X\mapsto GX-XG\) (linear) or
+\(X\mapsto GX+X\bar G\) (antilinear).  Blocks refer to \(C=C_{\rm ch}\).  On the triality slots a coupling is a Hermitian \(3\times3\) matrix
+\(M\); \(P\) is the cyclic shift \(\tau\), \(R\) the transposition \(\rho\).
+
+\subsection*{v4.9.0-r44 results}
+\label{subsec:v490-r44-results}
+
+\paragraph{Theoremlet v4.9.0-r44.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] The linear and the antilinear connectors each form a \(24\)-dimensional complex space.
+\item[(b)] The antilinear block from the kernel to the image of \(C\) is \(8\)-dimensional, with a lepton and a quark part of dimension \(4\) each,
+and consists of weak doublets with \(Y/2=+\tfrac12\) (\(Q_{\rm em}=1,0\)) and \(Y/2=-\tfrac12\) (\(Q_{\rm em}=0,-1\)).
+\item[(c)] The linear block from the kernel to the image is \(4\)-dimensional, lepton part only, with \(Y/2\in\{-\tfrac12,-\tfrac32\}\).
+\item[(d)] No antilinear connector from the kernel to the image is gauge invariant; in the block from the kernel to the kernel exactly one is,
+and it acts only on \(\nu^c\).
+\item[(e)] (i) A Hermitian \(M\) commuting with \(P\) and \(R\) has at most two distinct eigenvalues.  (ii) A Hermitian \(M\) commuting with \(P\)
+has the eigenvalues \(a+2|b|\cos(\theta+2\pi k/3)\), \(k=0,1,2\), with \(b=|b|e^{i\theta}\), generically distinct; \(K=\tfrac23\) holds for
+\(|b|=a/\sqrt2\).  (iii) If the couplings for up and down both commute with \(P\), the mixing matrix \(|U_u^\dagger U_d|\) is a permutation
+matrix.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a)--(d) by solving the commutation conditions on \(32\times32\) matrices and decomposing the blocks under \(SU(2)'\), \(Y\) and \(Q_{\rm em}\)
+(script \texttt{llm/k85\_test\_h29.py}).  Linear maps cannot intertwine the colour triplet with its conjugate, so the linear quark block
+vanishes.  (e) is elementary circulant algebra and was checked on \(200\) random matrices.  \(\square\)
+
+\paragraph{Verdict and reading.}
+H29a--e are confirmed.
+\begin{enumerate}[leftmargin=2em]
+\item In the operator language of the Millennium matrix, mass terms are antilinear: they contain the frame change \(T\).  Linear off-diagonal
+blocks of a colour-compatible Millennium matrix give no masses; they vanish for quarks and carry wrong charges for leptons.  In the model,
+mass is a coupling between matter frame and tachyon frame, as the matter--tachyon spring of the spring theorem of the original paper.  The
+couplings that do this carry exactly the quantum numbers of the Higgs doublet and its conjugate, for leptons and quarks.
+\item None of these mass terms is gauge invariant; only a doublet expectation value turns them into masses.  The structure says which
+breaking is needed, a doublet with \(Y/2=\tfrac12\), not why it occurs.  The only gauge-invariant connector is a Majorana term for \(\nu^c\),
+which allows a see-saw reading for small neutrino masses (not computed).
+\item With the full triole symmetry (\(\tau\) and \(\rho\)) on the slots there are at most two distinct masses; this is the reason for the
+refutations of the earlier pre-registered mass tests.  Breaking only the reflection \(\rho\), the frame triole of v4.9.0-r38, and keeping
+triality gives three distinct masses in exactly the Brannen form; the Koide value corresponds to \(|b|=a/\sqrt2\).  The Koide form of
+v4.8.0-r10 is thus the mass form of a \(\mathbb Z_3\)-symmetric, \(\rho\)-broken coupling.  The ratio \(|b|/a\) and the phase \(\theta\) are not
+explained.
+\item Couplings that are both triality-symmetric are diagonalized by the same Fourier matrix and give no mixing.  Mixing requires breaking
+triality itself, differently for up and down.
+\item In the model each observed property has its breaking stage: mass the frame coupling (Higgs), mass splitting the breaking of the frame
+reflection \(\rho\), mixing the breaking of triality \(\tau\).  Where these breakings come from is not said.
+\end{enumerate}
+
+\subsection*{v4.9.0-r44 status in the three frames}
+\label{subsec:v490-r44-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r44.1(b)--(d) & mass connectors couple M and T by construction (they contain \(T\)); P not evaluated\\
+r44.1(a), (e) & frame-free statements on connector spaces and on the slot couplings\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r44 register entries}
+\label{subsec:v490-r44-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r44\\
+\midrule
+mass terms & antilinear frame couplings with Higgs quantum numbers (r44.1(b)); linear MM blocks give none (r44.1(c))\\
+electroweak breaking & required type fixed (doublet, \(Y/2=\tfrac12\)); cause open\\
+neutrino Majorana term & the only gauge-invariant connector (r44.1(d))\\
+mass hierarchy & needs breaking of \(\rho\) on the slots; Brannen form then exact (r44.1(e)); \(|b|/a\), \(\theta\) open\\
+mixing & needs breaking of \(\tau\), different for up and down (r44.1(e))\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r44 ledger and guard update}
+\label{subsec:v490-r44-ledger-guard}
+
+\[
+R_{\rm mm}^{v490\text{-}r44}=(1,1,0)
+\]
+for (mass terms identified as frame couplings with Higgs quantum numbers; breaking stages for splitting and mixing identified; causes of
+the breakings open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r44,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r44}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.

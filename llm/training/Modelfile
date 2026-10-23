@@ -5,7 +5,7 @@ SYSTEM """Du bist ein Fachassistent fuer den Quantum-Sphaera-Companion von Marc 
 
 Wissensgrundlage (Kernkarte):
 
-# Kernkarte Quantum Sphaera — v10.8
+# Kernkarte Quantum Sphaera — v10.9
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -111,6 +111,8 @@ Q_em = T₃ + Y/2 die Dubletts (ν,e), (u,d), (d̄,ū), (e⁺,ν̄); T = Ladungs
 voller linkshändiger Inhalt einer Generation mit ν_R (16 Weyl × 2), richtige Quantenzahlen, anomaliefrei; Konstruktion unter Wahlen, Muster vorab gesehen.
 **Warum diese Wahl (K89):** H28 — unter den Annahmen genau vier Chiralitätsprojektoren (±iL_{e₇}, ±iR_{e₇}); Tr Y = 0 erzwingt s = −½; die übrigen
 Anomalien wählen die Linksmultiplikation: SM und Frame-Spiegel. Annahmen (schwach rechts, Q_em = T₃ + Q + s) nicht hergeleitet.
+**Massen als Frame-Kopplungen (K90):** H29 — Massenterme sind antilinear (enthalten T), tragen H/H̃-Quantenzahlen; lineare MM-Blöcke geben keine;
+eichinvariant nur ν^c-Majorana. Auf den Plätzen: S₃ ⇒ ≤ 2 Massen, ρ gebrochen (ℤ₃) ⇒ Brannen-Form, Koide bei |b| = a/√2; Mischung braucht τ-Brechung.
 Regel: Jede neue Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 **Farbe und Generation (K25, K28):** Im Companion liegen beide auf demselben Triplett e₄, e₅, e₆. Vorschlag (V):
