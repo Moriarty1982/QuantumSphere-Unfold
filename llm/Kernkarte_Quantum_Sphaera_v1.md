@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v9.5
+# Kernkarte Quantum Sphaera — v9.6
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1945,6 +1945,13 @@ A₄ = Konjugation mit 2T (binäre Tetraedergruppe); Rechtswirkung von 2T irredu
 invariant ist conj(qx)(qy) = |q|²conj(x)y. Lage: Mit Lorentz von links ist √m ∝ Platznorm nicht Lorentz-invariant; Rettung = Massen aus
 links-invarianten Größen ablesen, Generationen-Etiketten auf der rechten Seite finden. Nicht widerlegt, nicht konstruiert.
 
+**K77.10 Links-invariante Etiketten (Modellbau; `k72_links_invariant.py`, Lean `Lesarten.lean`).** Tripel als 8 Quaternionen h_c;
+G_cd = conj(h_c)h_d links-invariant (Drehungen; komplex-bilinear auch Boosts). Re G = Σ x_b x_bᵀ (platzsymmetrisch); Im G = drei Komponenten
+A⁽ⁱ⁾, A⁽ʲ⁾, A⁽ᵏ⁾ = drei links-invariante Etiketten **auf der rechten Seite**; für reines Tripel A⁽ⁱ⁾ = −x_j ∧ x_k,
+μ_i = 2(|x_j|²|x_k|² − ⟨x_j,x_k⟩²). Rechts-2T vertauscht die μ nur zyklisch (ℤ₃ der Triole). Orthogonale Plätze: √(μ_i/2) = P/n_i,
+Reihenfolge umgekehrt (vgl. x ↦ 1/x der Konvention F; nur Beobachtung). Damit hat der Weg aus K77.9 eine konkrete Form; eine
+Massen-Lesart über μ ist neue Vermutung, braucht Vorab-Notiz; kein Massenvergleich gerechnet. μ sind G₂-invariant (Summen über Spalten).
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -2080,6 +2087,7 @@ links-invarianten Größen ablesen, Generationen-Etiketten auf der rechten Seite
 - v9.3 (2026-10-23): K77.7 Lean-Modul `formal/QSFormal/Dixon.lean` (Triality-Symmetrien, A₄-Charakterisierung, Dixon-Masken, Kerne von r26.1/r32.1).
 - v9.4 (2026-10-23): K77.8 J_B = R ∘ T auf der Dixon-Ablage in Lean (σ_x der a-Hälften, Normen frame-frei, t ↦ −i t̄); K77.6 korrigiert (ℂ-Konjugation = T).
 - v9.5 (2026-10-23): K77.9 Readout-abhängige Lesarten des ℂ-Faktors (Lean `Lesarten.lean`); Korrektur: nur D₄ erhält das a-Etikett; ℍ: A₄ = Konjugation mit 2T, Lage des Lorentz-Konflikts präzisiert.
+- v9.6 (2026-10-23): K77.10 Links-invariante Etiketten: Im-Komponenten der quaternionischen Gram-Größe, μ_i = Fläche der anderen beiden Plätze, Rechts-2T zyklisch, umgekehrte Reihenfolge.
 
 ---
 

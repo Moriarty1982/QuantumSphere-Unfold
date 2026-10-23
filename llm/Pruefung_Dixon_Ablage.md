@@ -138,3 +138,28 @@ Geprüft (Lean, numerisch gegengeprüft):
 - Präzise Lage: Mit Lorentz von links ist die Massen-Lesart √m ∝ Platznorm nicht Lorentz-invariant. Eine Rettung im Sinn der
   Readout-Abhängigkeit müsste die Massen aus links-invarianten Größen (Gram-Struktur, also der rechten Seite) ablesen und
   die Generationen-Etiketten dort finden. Das ist nicht widerlegt, aber noch nicht konstruiert.
+
+## 10. Links-invariante Größen, die drei Plätze unterscheiden (Skript `k72_links_invariant.py`, Lean `Lesarten.lean`)
+
+Modellbau, kein Massenvergleich. Das Tripel als 8 Quaternionen h_c (eine pro Oktonion-Komponente); Lorentz wirkt von
+links, h_c ↦ q h_c. Links-invariant ist die quaternionische Gram-Größe G_cd = conj(h_c) h_d.
+
+- Realteil von G: Σ_b x_b x_bᵀ, symmetrisch in den Plätzen, unterscheidet sie also nicht.
+- Imaginärteil von G: drei Komponenten A⁽ⁱ⁾, A⁽ʲ⁾, A⁽ᵏ⁾. Das sind **drei links-invariante Etiketten, und sie sitzen rechts.**
+  Für ein reines Tripel ist A⁽ⁱ⁾ = −x_j ∧ x_k, das Keilprodukt der beiden *anderen* Plätze. Damit ist
+  μ_i = Σ_cd (A⁽ⁱ⁾_cd)² = 2(|x_j|²|x_k|² − ⟨x_j,x_k⟩²), der doppelte Flächeninhalt der anderen beiden Plätze.
+- Invarianz: exakt unter Drehungen (Einheitsquaternionen). Mit der komplex-bilinearen Gram-Größe auch unter Boosts
+  (SL(2,ℂ), Biquaternionen mit conj(q) q = 1). Die Platznormen selbst verschieben sich dabei.
+- Rechtswirkung von 2T: Sie vertauscht μ_i, μ_j, μ_k nur **zyklisch**. Von A₄ bleibt auf den Etiketten die ℤ₃ der Triole.
+- Bei orthogonalen Plätzen gilt √(μ_i/2) = n_j n_k = P/n_i. Die links-invariante Lesart **kehrt die Reihenfolge um**:
+  Die kleinste Platznorm gibt die größte Größe. Strukturell erinnert das an x ↦ 1/x der Konvention F (Tachyon). Das ist
+  eine Beobachtung, mehr nicht.
+
+Einordnung:
+- Der Weg aus Abschnitt 9 hat damit eine konkrete Form. Lorentz wirkt von links, die drei Generationen-Etiketten sitzen
+  als Imaginärkomponenten der Gram-Größe rechts, und die Generationen-Symmetrie auf ihnen ist ℤ₃ ⊂ A₄ = 2T/ℤ₂.
+- Eine Massen-Lesart auf dieser Grundlage (etwa √m_k ∝ √μ_k oder ∝ μ_k) wäre eine neue Vermutung. Sie braucht eine
+  Vorab-Notiz, bevor Massen verglichen werden. Mit Leptonmassen wurde hier nichts gerechnet.
+- Offen: ob die Gram-Größe das Tripel bis auf die Linkswirkung vollständig bestimmt, und wie der ℂ-Faktor (Frames) und
+  die Farbe (SU(3) ⊂ G₂ auf den Oktonion-Spalten) mit den μ zusammenspielen. G₂ wirkt auf die Spalten; die μ sind als
+  Summen über alle Spalten G₂-invariant.
