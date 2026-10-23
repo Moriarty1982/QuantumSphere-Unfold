@@ -5,7 +5,7 @@ SYSTEM """Du bist ein Fachassistent fuer den Quantum-Sphaera-Companion von Marc 
 
 Wissensgrundlage (Kernkarte):
 
-# Kernkarte Quantum Sphaera — v10.6
+# Kernkarte Quantum Sphaera — v10.7
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -107,6 +107,8 @@ Orientierung wechselt mit der Stufe (= ρ-Spiegel); Frames grob, Generationen ti
 Vorzeichen (m² ↦ −m²), hermitesch frame-blind. Kein 𝔰𝔲(2) der Triality vertauscht mit Farbe; Zentralisator = span(L_{e₇}, R_{e₇}) (Ladung).
 **ℍ-Rollen (K87):** H26 — Aufteilung D (Lorentz links, schwach rechts, Generationen Triality) hebt die Überbelegung auf; mit Y/2 = Q − ½ gibt
 Q_em = T₃ + Y/2 die Dubletts (ν,e), (u,d), (d̄,ū), (e⁺,ν̄); T = Ladungskonjugation; schwache Singuletts fehlen (Chiralität offen).
+**MM-Kompensator (K88):** H27 — C_ch = ½(id + J), J = i·L_{e₇} (äußere × innere Einheit), schwache SU(2)′ = C_ch·T_a, Y/2 = Q − ½ + (1 − C_ch)T₃:
+voller linkshändiger Inhalt einer Generation mit ν_R (16 Weyl × 2), richtige Quantenzahlen, anomaliefrei; Konstruktion unter Wahlen, Muster vorab gesehen.
 Regel: Jede neue Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 **Farbe und Generation (K25, K28):** Im Companion liegen beide auf demselben Triplett e₄, e₅, e₆. Vorschlag (V):

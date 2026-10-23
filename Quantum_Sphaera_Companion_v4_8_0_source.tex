@@ -73623,4 +73623,139 @@ R_{\rm glob}^{(v490\text{-}r41,+)}=(0,1,1,1,1),
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
 
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r42 Source-Only: A Compensator of the Millennium Matrix as Chirality Projector}
+\addcontentsline{toc}{section}{v4.9.0-r42 Source-Only: A Compensator of the Millennium Matrix as Chirality Projector}
+\label{sec:v490-r42-mm-compensator-chirality}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.9.0-r41 placed the weak \(SU(2)\) on the right of \(\HH\) and obtained only weak doublets.  The author states (2026-10-23) that
+the Millennium matrix of \S\ref{sec:millennium-hc}, which was to carry several Heisenberg compensators, was meant for the missing half.
+This layer records the pre-registered test H27 (note \texttt{llm/Vorab\_Notiz\_H27\_MM\_Kompensator\_Chiralitaet.md}, commit
+\texttt{614ac3e}, fixed before computing).  The charge pattern was seen analytically before the note and is disclosed there; the
+computation checks it and is not a prediction.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r42 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r42 construction}
+\label{subsec:v490-r42-construction}
+
+On \(\mathbb C\otimes\HH\otimes\OO\cong\mathbb C^{32}\) with the distribution D of v4.9.0-r41, put
+\[
+C_{\rm ch}=\tfrac12(\mathrm{id}+J),\qquad J=i\,L_{e_7},\qquad T_a'=C_{\rm ch}T_a,
+\]
+\[
+\tfrac{Y}{2}=Q-\tfrac12+(1-C_{\rm ch})T_3,\qquad Q_{\rm em}=T_3+Q-\tfrac12 ,
+\]
+with \(i\) the outer unit and \(L_{e_7}\) the inner unit, so \(J^2=1\) and \(C_{\rm ch}\) has the form of the Heisenberg compensator.
+
+\subsection*{v4.9.0-r42 results}
+\label{subsec:v490-r42-results}
+
+\paragraph{Theoremlet v4.9.0-r42.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \(C_{\rm ch}\) is a Hermitian projector of rank \(16\); it commutes with colour, the Lorentz group, the right action of \(\HH\)
+and \(Q\), and its image is the sum of the \(Q\)-sectors \(0\) and \(\tfrac23\).
+\item[(b)] Under colour, the weak \(SU(2)'\) and \(Y/2\) the space splits into
+\begin{center}
+\small
+\begin{tabular}{@{}llll@{}}
+\toprule
+\((SU(3),SU(2)',Y/2)\) & \(Q_{\rm em}\) & state & complex dimension\\
+\midrule
+\((3,2,\tfrac16)\) & \(\tfrac23,-\tfrac13\) & \((u,d)_L\) & \(12\)\\
+\((1,2,-\tfrac12)\) & \(0,-1\) & \((\nu,e)_L\) & \(4\)\\
+\((\bar3,1,-\tfrac23)\) & \(-\tfrac23\) & \(u^c\) & \(6\)\\
+\((\bar3,1,\tfrac13)\) & \(\tfrac13\) & \(d^c\) & \(6\)\\
+\((1,1,1)\) & \(1\) & \(e^c\) & \(2\)\\
+\((1,1,0)\) & \(0\) & \(\nu^c\) & \(2\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+that is, sixteen Weyl states with two Lorentz components each; \(Y/2\) commutes with \(SU(2)'\), colour and the Lorentz group, and
+\(Q_{\rm em}=T_3'+Y/2\).
+\item[(c)] Over the sixteen states, \(\operatorname{Tr}Y\), \(\operatorname{Tr}Y^3\) and the \(SU(2)^2U(1)\) and \(SU(3)^2U(1)\) traces vanish.
+\item[(d)] \(SU(2)'\) acts only on the image of \(C_{\rm ch}\), and \(TC_{\rm ch}T^{-1}=1-C_{\rm ch}\).
+\item[(e)] \(\mathcal M=\lambda_0C_{\rm ch}+\lambda_1(1-C_{\rm ch})\), \(\lambda_0\neq\lambda_1\), has \(C_{\rm ch}\) as spectral projector, as in
+Theorem~\ref{thm:hc-spectral-projector}.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+By explicit complex matrices (script \texttt{llm/k83\_test\_h27.py}, deviations at most \(10^{-15}\)).  \(C_{\rm ch}\) equals \(P_-\) of
+v4.9.0-r35.1(c).  A first run reported (b) as refuted because the candidate values of \(Y/2\) were rounded to nine digits while the
+null-space test required \(10^{-10}\), which lost all non-dyadic values; only this rounding was corrected, and both outputs are kept.
+\(\square\)
+
+\paragraph{Verdict and reading.}
+H27a--e are confirmed, (b) after the correction of the script; (e) is a control.
+\begin{enumerate}[leftmargin=2em]
+\item A compensator of the Companion's form \(\tfrac12(\mathrm{id}+J)\), with \(J\) the product of the outer and the inner unit, completes
+the doublets of v4.9.0-r41 to the full left-handed content of one generation with right-handed neutrino.  The weak \(SU(2)\) acts only
+on its image: in the model, this is chirality.  A compensator of the Millennium matrix separates the chiralities.
+\item The frame change \(T\) exchanges image and kernel of the compensator.  With v4.9.0-r41.1(c), matter frame and tachyon frame are in
+the model particle and antiparticle with mirrored chirality.  This is a reading.
+\item The Millennium matrix of \S\ref{sec:millennium-hc} is \(16\times16\), and one generation with \(\nu_R\) has sixteen Weyl states.  This is
+recorded, not interpreted.
+\item This is a construction under choices, not a derivation: \(J\) and the formula for \(Y/2\) are chosen so that the known result
+appears, and the pattern was seen in advance.  It shows that the building blocks of the Companion (compensator, two units, two sides,
+triality) suffice.  Anomaly cancellation follows from the content.  Similar constructions exist in the literature on
+\(\mathbb C\otimes\HH\otimes\OO\).  Why this choice, symmetry breaking, masses and mixings are not addressed.
+\end{enumerate}
+
+\subsection*{v4.9.0-r42 status in the three frames}
+\label{subsec:v490-r42-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r42.1(a)--(c) & stated in M\\
+r42.1(d) & relates M and T: \(T\) exchanges the chiral halves; with r41.1(c) the T frame reads the conjugate states with mirrored chirality; P not evaluated\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r42 register entries}
+\label{subsec:v490-r42-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r42\\
+\midrule
+content of one generation & constructed under choices from compensator, two units, two sides (r42.1(b)); not derived\\
+chirality & in the model: the weak \(SU(2)\) acts on the image of one compensator (r42.1(d))\\
+Millennium matrix & a two-projector reading with \(C_{\rm ch}\) as spectral projector (r42.1(e)); the dimension \(16\) recorded\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r42 ledger and guard update}
+\label{subsec:v490-r42-ledger-guard}
+
+\[
+R_{\rm ch}^{v490\text{-}r42}=(1,0,0)
+\]
+for (content of one generation constructed; choice of \(J\) and \(Y\) not derived; breaking, masses and mixings open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r42,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r42}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
 \end{document}

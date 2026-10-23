@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v10.6
+# Kernkarte Quantum Sphaera — v10.7
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -100,6 +100,8 @@ Orientierung wechselt mit der Stufe (= ρ-Spiegel); Frames grob, Generationen ti
 Vorzeichen (m² ↦ −m²), hermitesch frame-blind. Kein 𝔰𝔲(2) der Triality vertauscht mit Farbe; Zentralisator = span(L_{e₇}, R_{e₇}) (Ladung).
 **ℍ-Rollen (K87):** H26 — Aufteilung D (Lorentz links, schwach rechts, Generationen Triality) hebt die Überbelegung auf; mit Y/2 = Q − ½ gibt
 Q_em = T₃ + Y/2 die Dubletts (ν,e), (u,d), (d̄,ū), (e⁺,ν̄); T = Ladungskonjugation; schwache Singuletts fehlen (Chiralität offen).
+**MM-Kompensator (K88):** H27 — C_ch = ½(id + J), J = i·L_{e₇} (äußere × innere Einheit), schwache SU(2)′ = C_ch·T_a, Y/2 = Q − ½ + (1 − C_ch)T₃:
+voller linkshändiger Inhalt einer Generation mit ν_R (16 Weyl × 2), richtige Quantenzahlen, anomaliefrei; Konstruktion unter Wahlen, Muster vorab gesehen.
 Regel: Jede neue Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 **Farbe und Generation (K25, K28):** Im Companion liegen beide auf demselben Triplett e₄, e₅, e₆. Vorschlag (V):
@@ -2141,6 +2143,21 @@ konj. Triplett/Singulett (H26b). T Q_em T⁻¹ = −Q_em, T (Y/2) T⁻¹ = −Y/
 und Konjugierten), Wahl nicht erzwungen; Sektor-Zuordnung nach Furey, ähnliche Muster in der Literatur. Frame T = Ladungskonjugation C
 (der Versatz in Q ↦ 1 − Q ist der Hyperladungs-Versatz ½). D unvollständig: rechtshändige Singuletts fehlen, Chiralität offen. Kein Guard verbraucht.
 
+### K88 — Vorab festgelegter Test H27 und Companion-Runde v4.9.0-r42: Kompensator der MM-Matrix als Chiralitätsprojektor (2026-10-23)
+
+Autorhinweis (2026-10-23): Für die fehlende Singulett-Hälfte war die MM-Matrix gedacht, die verschiedene HC in sich tragen sollte. Vorab-Notiz
+`llm/Vorab_Notiz_H27_MM_Kompensator_Chiralitaet.md` (Commit 614ac3e; Muster vorab analytisch offengelegt), Skript `llm/k83_test_h27.py`, Ausgaben
+`llm/k83_out.txt` und `llm/k83_out_erstlauf.txt`, Ergebnis `llm/Ergebnis_H27_MM_Kompensator_Chiralitaet.md`, Runde `sec:v490-r42-mm-compensator-chirality`.
+Erstlauf meldete H27b widerlegt wegen eines Rundungsfehlers im Skript (Y-Werte auf 9 Stellen, Nullraum-Toleranz 10⁻¹⁰); nur die Rundung korrigiert.
+
+**K88.1 (M).** C_ch = ½(id + J), J = i·L_{e₇}: hermitescher Projektor vom Rang 16, vertauscht mit Farbe, Lorentz, R_q, Q; Bild = Q-Sektoren 0 und 2/3 (= P₋ aus K81).
+**K88.2 (M).** Mit T_a′ = C_ch T_a, Y/2 = Q − ½ + (1 − C_ch)T₃, Q_em = T₃ + Q − ½: (3,2,1/6) 12, (1,2,−1/2) 4, (3̄,1,−2/3) 6, (3̄,1,1/3) 6, (1,1,1) 2,
+(1,1,0) 2 — eine Generation mit ν_R (16 Weyl × 2 Lorentz); Y vertauscht mit SU(2)′, Farbe, Lorentz (H27b). Anomalie-Spuren null (H27c).
+SU(2)′ nur auf dem Bild; T C_ch T⁻¹ = 1 − C_ch (H27d). 𝓜 = λ₀C_ch + λ₁(1 − C_ch) mit C_ch als Spektralprojektor (H27e, Kontrolle).
+**K88.3 (S).** Lesart: Ein Kompensator der MM-Matrix trennt die Chiralitäten; im Modell ist das die Chiralität. T vertauscht die chiralen Hälften: M- und
+T-Frame = Teilchen und Antiteilchen mit gespiegelter Chiralität (Lesart). 𝓜₁₆ ist 16 × 16, eine Generation mit ν_R hat 16 Weyl-Zustände (festgehalten,
+nicht gedeutet). Konstruktion unter Wahlen (J, Y-Formel), keine Herleitung; ähnliche Konstruktionen in der Literatur (ℂ⊗ℍ⊗𝕆). Kein Guard verbraucht.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -2287,6 +2304,7 @@ und Konjugierten), Wahl nicht erzwungen; Sektor-Zuordnung nach Furey, ähnliche 
 - v10.4 (2026-10-23): K85 Vorab-Test H24 und Runde v4.9.0-r39: Ketten unter Zoom und gemischten Readouts, alle bestätigt; Autorhinweis zur neuen Kontraktion.
 - v10.5 (2026-10-23): K86 Vorab-Test H25 und Runde v4.9.0-r40: zweiseitige Kontraktion über Frames kovariant, nicht invariant; keine schwache SU(2) in der Triality.
 - v10.6 (2026-10-23): K87 Vorab-Test H26 und Runde v4.9.0-r41: Aufteilung D der ℍ-Rollen, Q = T₃ + Y/2 mit Y/2 = Q − ½, T = C, Singuletts fehlen.
+- v10.7 (2026-10-23): K88 Vorab-Test H27 und Runde v4.9.0-r42: MM-Kompensator als Chiralitätsprojektor, Inhalt einer Generation konstruiert.
 
 ---
 
