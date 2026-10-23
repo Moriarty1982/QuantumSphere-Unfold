@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v11.0
+# Kernkarte Quantum Sphaera — v11.1
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -109,6 +109,8 @@ eichinvariant nur ν^c-Majorana. Auf den Plätzen: S₃ ⇒ ≤ 2 Massen, ρ geb
 **ρ-Brechung aus Chiralität (K91):** H30 — ρ enthält c, c L_{e₇} c = −R_{e₇}: ρ bildet die anomaliefreie Chiralität auf die anomale ab, also bricht die
 Chiralität ρ zwingend (Massenaufspaltung). τ bleibt bei gleicher Chiralität auf allen Plätzen; triality-kovariante Chiralität existiert nicht ⇒
 Generationen = äquivalente Kopien, nicht die inäquivalenten Triality-Darstellungen. Mischung offen.
+**τ-Brechung durch Readouts (K92):** H31 — Readouts aus den Verschiebungen (Σ, ∨, Selektor-Kontraktion) liegen in ℂ[ℤ₃], vertauschen mit τ: keine Mischung.
+Erst Art-Masken auf einzelne Generationen brechen τ; Mischung ∝ δ, unterdrückt durch Massenabstände. Herkunft der Maske offen (Teil der Kopplungen).
 Regel: Jede neue Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 **Farbe und Generation (K25, K28):** Im Companion liegen beide auf demselben Triplett e₄, e₅, e₆. Vorschlag (V):
@@ -2208,6 +2210,18 @@ Involution (H30d).
 Massenaufspaltung (r44) erfüllt; erklärt die Widerlegungen H11, H16–H18 (Potentiale ohne Chiralität). Stärke der Brechung (θ, |b|/a) offen. τ bleibt
 in Modell I; Generationen = äquivalente Kopien (Umstufung von K83). Mischung braucht eine andere Quelle der τ-Brechung. Kein Guard verbraucht.
 
+### K92 — Vorab festgelegter Test H31 und Companion-Runde v4.9.0-r46: gemischte Readouts und die Brechung der Triality (2026-10-23)
+
+Vorab-Notiz `llm/Vorab_Notiz_H31_Tau_Brechung_Readouts.md` (Commit ea74447; H31a aus Kommutativität, H31c Störungstheorie offengelegt), Skript
+`llm/k87_test_h31.py`, Ausgabe `llm/k87_out.txt`, Ergebnis `llm/Ergebnis_H31_Tau_Brechung_Readouts.md`, Runde `sec:v490-r46-readouts-triality-breaking`.
+
+**K92.1 (M).** Verschiebungs-Readouts (Produkte von P^{2^j}, Untergruppen-Mittel, Selektor-Kontraktionen) vertauschen mit τ; |V| bleibt Permutation (H31a, 200 Fälle).
+**K92.2 (M).** Art-Masken D_S (Generationen als Auslesearten) vertauschen nicht mit τ; δ > 0 ⇒ Mischung, auch bei gleicher Maske für up und down (H31b).
+Mischung linear in δ, ≤ δ(1/Lücke_u + 1/Lücke_d)/3 (H31c). Masken reell, frame-frei (H31d).
+**K92.3 (S).** Die gemischten Readouts aus dem Hilbert-Shift erzeugen keine Mischung (Verbot); erst generationen-selektive Masken. Qualitativ: kleine Mischung
+bei großer Hierarchie (CKM), größere bei dichten Massen (Neutrinos); keine Zahlen. Spannung: Mischung ist messbar, also muss die Maske Teil der Kopplungen
+sein, nicht des Beobachters; Herkunft offen. Kein Guard verbraucht.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -2358,6 +2372,7 @@ in Modell I; Generationen = äquivalente Kopien (Umstufung von K83). Mischung br
 - v10.8 (2026-10-23): K89 Vorab-Test H28 und Runde v4.9.0-r43: Chiralitätsprojektor und Versatz durch Anomaliefreiheit bis auf den Frame erzwungen.
 - v10.9 (2026-10-23): K90 Vorab-Test H29 und Runde v4.9.0-r44: Massenterme als Frame-Kopplungen mit Higgs-Quantenzahlen, Brechungsstufen für Aufspaltung und Mischung.
 - v11.0 (2026-10-23): K91 Vorab-Test H30 und Runde v4.9.0-r45: Chiralität bricht ρ zwingend; triality-kovariante Chiralität existiert nicht; K83 umgestuft.
+- v11.1 (2026-10-23): K92 Vorab-Test H31 und Runde v4.9.0-r46: Verschiebungs-Readouts erzeugen keine Mischung, Art-Masken schon.
 
 ---
 

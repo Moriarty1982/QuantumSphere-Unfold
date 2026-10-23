@@ -1,6 +1,6 @@
 # Bestandsaufnahme: Was folgt aus der Struktur, was ist eingesetzt?
 
-Stand 2026-10-23, nach v4.9.0-r45. Lebendes Dokument: nach jeder Runde nachführen (Spalte „Stand“, Fundstelle, Datum).
+Stand 2026-10-23, nach v4.9.0-r46. Lebendes Dokument: nach jeder Runde nachführen (Spalte „Stand“, Fundstelle, Datum).
 Zweck (Autorabsicht): Eine vereinheitlichte Theorie muss keine neue Physik einführen, sondern erklären, **warum** das
 Standardmodell diese Struktur hat. Das wird hier Merkmal für Merkmal geprüft. Eine Erklärung zählt nur, wenn die Struktur
 eine Alternative **ausschließt**: Sie muss etwas verbieten.
@@ -32,7 +32,7 @@ eine Alternative **ausschließt**: Sie muss etwas verbieten.
 | Quarks gegen Leptonen | **B** | Singulett und Triplett unter SU(3) wären die natürliche Trennung, sind im Companion aber nicht so zugeordnet. Quark-Werte aus der Struktur nicht ableitbar (K25). |
 | Koide-Relation K = 2/3 | **B** | Die Koide-Form ist exakt Skalar plus symmetrische Triole; K = 2/3 ⇔ \|c\| = t (v4.8.0-r10). Eine Umformulierung, keine Herleitung. Gleich-Norm-Bedingung auch in der v4.9-Linie unabhängig gefunden (K26). |
 | Massenhierarchie | **C** für natürliche Potentiale | Natürliche Invarianten auf dem Tripel-Raum geben höchstens zwei verschiedene Massen (H11, H16, H17, H18; Sattel-Sätze v4.9.0-r26.1, r32.1). Lesart: Die Struktur **erklärt**, dass Massen eine Brechung der Generationen-Symmetrie brauchen (wie die Yukawa-Kopplungen im Standardmodell), liefert die Brechung aber nicht. v4.9.0-r44: Genauer muss die Spiegelung ρ (Frame-Triole) gebrochen sein, τ darf bleiben; dann folgt genau die Brannen-Form, Koide bei \|b\| = a/√2 (Verhältnis offen). **v4.9.0-r45:** Die ρ-Brechung folgt aus der Struktur: ρ enthält die Oktonion-Konjugation, die links und rechts tauscht, und die Anomaliefreiheit hat links gewählt. Die Stärke der Brechung bleibt offen. |
-| Existenz von Mischung | **B** | Reine Generationen-Symmetrie mit Triole gibt θ₁₃ = 0 (K28.4); Mischung braucht weitere Brechung. v4.9.0-r44: Sind up und down beide τ-symmetrisch, gibt es gar keine Mischung; Mischung verlangt eine für up und down verschiedene Brechung der Triality. |
+| Existenz von Mischung | **B** | Reine Generationen-Symmetrie mit Triole gibt θ₁₃ = 0 (K28.4); Mischung braucht weitere Brechung. v4.9.0-r44: Sind up und down beide τ-symmetrisch, gibt es gar keine Mischung; Mischung verlangt eine für up und down verschiedene Brechung der Triality. v4.9.0-r46: Readouts aus den Verschiebungen (Hilbert-Shift) können τ nie brechen; erst Masken, die einzelne Generationen als Auslesearten unterscheiden, erzeugen Mischung (∝ Gewicht, unterdrückt durch Massenabstände). Herkunft einer solchen Maske offen. |
 | Mischungswinkel (PMNS, CKM) | **C** | `prop:pmns-z3` widerlegt (v4.8.0-r12), TM1 und H8 mit JUNO disfavorisiert (v4.8.0-r13), CKM-Zeile hängt an einer Koinzidenz (v4.8.0-r09). Offen: H9 (sin²θ₁₂ = 0,30862) für die nächste JUNO-Messung, nachträglich gefunden. |
 | Neutrino-Massenordnung | **B** | H2 verträglich, normale Ordnung, Σm_ν = 0,059 eV (v4.8.0-r12); trennt schwach. |
 | Feinstrukturkonstante, Weinberg-Winkel | **B**, offen | k-Tabelle (`thm:k-values`: α „first Dixon plane“); cot θ_W (on-shell) ≈ γ_L, Vorhersage H15 für m_W, noch nicht entschieden (v4.9.0-r07). γ_L selbst ist eingesetzt (OP1). |

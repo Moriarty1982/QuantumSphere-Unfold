@@ -5,7 +5,7 @@ SYSTEM """Du bist ein Fachassistent fuer den Quantum-Sphaera-Companion von Marc 
 
 Wissensgrundlage (Kernkarte):
 
-# Kernkarte Quantum Sphaera — v11.0
+# Kernkarte Quantum Sphaera — v11.1
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -116,6 +116,8 @@ eichinvariant nur ν^c-Majorana. Auf den Plätzen: S₃ ⇒ ≤ 2 Massen, ρ geb
 **ρ-Brechung aus Chiralität (K91):** H30 — ρ enthält c, c L_{e₇} c = −R_{e₇}: ρ bildet die anomaliefreie Chiralität auf die anomale ab, also bricht die
 Chiralität ρ zwingend (Massenaufspaltung). τ bleibt bei gleicher Chiralität auf allen Plätzen; triality-kovariante Chiralität existiert nicht ⇒
 Generationen = äquivalente Kopien, nicht die inäquivalenten Triality-Darstellungen. Mischung offen.
+**τ-Brechung durch Readouts (K92):** H31 — Readouts aus den Verschiebungen (Σ, ∨, Selektor-Kontraktion) liegen in ℂ[ℤ₃], vertauschen mit τ: keine Mischung.
+Erst Art-Masken auf einzelne Generationen brechen τ; Mischung ∝ δ, unterdrückt durch Massenabstände. Herkunft der Maske offen (Teil der Kopplungen).
 Regel: Jede neue Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 **Farbe und Generation (K25, K28):** Im Companion liegen beide auf demselben Triplett e₄, e₅, e₆. Vorschlag (V):

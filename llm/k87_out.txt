@@ -1,0 +1,7 @@
+H31a: 200 Verschiebungs-Readouts: [X, tau] max 0e+00; Abstand |V| zur Permutation max 8e-14 -> bestaetigt
+
+H31b: Art-Masken vertauschen nicht mit tau (min |[D, tau]| = 1.00); mit delta = 0.3 und gleicher Maske fuer up und down: kleinster Abstand |V| zur Permutation 2.82e-02 -> bestaetigt
+
+H31c: Abstand/delta bei delta = 1e-3 gegen 1e-4: Verhaeltnis in [0.9975, 1.0011] (linear); Abstand/delta <= (1/Luecke_u + 1/Luecke_d) * 0.333 -> bestaetigt
+
+H31d: Art-Masken reell, vertauschen mit T (komplexe Konjugation): True -> bestaetigt
