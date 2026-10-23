@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v9.9
+# Kernkarte Quantum Sphaera — v10.0
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -85,6 +85,8 @@ H18 Massen aus links-invarianten Etiketten an den Minima (K78) — widerlegt: Wi
 der ℍ-Faktor ist dreifach belegt.
 **Ladungen (K80):** H19 — Zahloperator auf ℂ⊗𝕆 mit der Farbe Stab(e₇) verträglich, Ladungsmuster 0, 1/3, 2/3, 1 einer Generation
 (Konsistenz mit Furey, keine Vorhersage); wörtliche Companion-Zuordnung (Farbe auf e₄..e₆, ν_R auf e₇) widerlegt; J_B: Q ↦ 1 − Q.
+**Innere/äußere Einheit (K81):** H20 — die Zuordnung ist im inneren Frame (J = L_{e₇}) richtig und über P₋ = ½(1 + iJ) mit Furey
+deckungsgleich (e₇ → Q = 0, e₄..e₆ → Q = 2/3); falsch ist nur der Anti-Triplett-Satz (Frame-Vermischung). Q = ½ − (i/6)L_{e₇} − (i/3)R_{e₇}.
 Regel: Jede neue Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 **Farbe und Generation (K25, K28):** Im Companion liegen beide auf demselben Triplett e₄, e₅, e₆. Vorschlag (V):
@@ -2004,11 +2006,30 @@ Eigenwerte 0, 1, 2, 3 mit Vielfachheiten 1, 3, 3, 1 algebraisch erzwungen (keine
 Q = 1/3, 2/3 irreduzible, zueinander konjugierte, nicht selbstkonjugierte Tripletts in span_ℂ(e₁..e₆). In Fureys Lesart ν, d̄, u, e⁺.
 **K80.3 (M).** H19c widerlegt: Der reelle Spann von e₄, e₅, e₆ ist kein Q-Eigenraum, e₇ kein Eigenvektor; Eigenzustände e_a ± i·e₇e_a.
 `thm:octonion-SU3` und `thm:three-generations` (Gen_i ↔ e_{i+3}, e₇ ↔ ν_R) sind in der Zuordnung falsch. Kandidat für Statusvermerk.
+*Umgestuft durch K81:* Im inneren Frame J = L_{e₇} ist die Zuordnung richtig; falsch bleibt nur der Anti-Triplett-Satz.
 **K80.4 (M).** H19d bestätigt: T Q T⁻¹ = 1 − Q, J_B Q J_B⁻¹ = 1 − Q, R Q R⁻¹ = Q. Frame-frei sind Spektrum und Farbstruktur, nicht die
 Zuordnung Zustand ↔ Ladung; die Wirkung kommt vom Zeitumkehr-Anteil T. Stützt den Autorhinweis, `thm:SM` sei in einem Frame entwickelt:
 Die U(1)-Zeile muss ihren Frame nennen. H19e (gleiches Q auf allen drei Plätzen) folgt aus der Tensorstruktur.
 **K80.5 (S).** Bestandsaufnahme: Ladungen D → A unter Lesart (ℂ-Faktor als quantenmechanisches i); wörtliche Companion-Zuordnung C.
 Offen: Hyperladung, Chiralität (Tests 3, 4). Kein Guard verbraucht; R_ch = (0,0,1).
+
+### K81 — Vorab festgelegter Test H20 und Companion-Runde v4.9.0-r35: innere und äußere komplexe Einheit (2026-10-23)
+
+Vorab-Notiz `llm/Vorab_Notiz_H20_Frame_Zuordnung.md` (Commit 7d95feb), Skript `llm/k76_test_h20.py`, Ausgabe `llm/k76_out.txt`,
+Ergebnis `llm/Ergebnis_H20_Frame_Zuordnung.md`, Runde `sec:v490-r35-inner-outer-unit`. Anlass: Autorhinweis „vielleicht wieder nur der
+feste Frame“ zu K80.3.
+
+**K81.1 (M).** Innerer Frame J = L_{e₇}: Stab(e₇) J-linear; (𝕆, J) = span(1, e₇) ⊕ e₇^⊥, e₇^⊥ irreduzibles komplexes Triplett mit
+komplexer Basis e₄, e₅, e₆ (J e₄ = −e₃, J e₅ = −e₂, J e₆ = e₁). `thm:octonion-SU3` gilt dort (H20a bestätigt).
+**K81.2 (M).** span(e₁, e₂, e₃) = J·span(e₄, e₅, e₆) ist weder J-, Stab- noch Q-invariant: der Anti-Triplett-Satz im Beweis von
+`thm:three-generations` ist falsch (H20b widerlegt), eine Vermischung beider Frames.
+**K81.3 (M).** P_± = ½(1 ∓ iJ): äquivariant, injektiv, P_±J = ±iP_±. P₋: e₇^⊥ → Q = 2/3, span(1, e₇) → Q = 0; P₊: 1/3 und 1; T vertauscht
+P₊ und P₋ (H20c bestätigt). Mit P₋ deckt sich die Companion-Zuordnung mit Fureys Lesart (ν auf e₇, u auf e₄..e₆).
+**K81.4 (M).** Q = ½ − (i/6)L_{e₇} − (i/3)R_{e₇} exakt (H20d): Die Ladung braucht beide Einheiten und Links- wie Rechtsmultiplikation;
+der Skalar it von `thm:SM` allein ist eine globale Phase, kein Elektromagnetismus.
+**K81.5 (S).** Lesart von K80.3 / r34.1(c) korrigiert: Aussage bleibt, aber die Zuordnung ist ein Frame-Unterschied, kein Fehler.
+Bleibt: Doppelbelegung Farbe/Generation (kein Frame-Effekt). Regelvorschlag zu Konvention F: Farb- und Ladungsaussagen nennen ihre
+Einheit (innen J, ohne Ladung; außen i, mit Q) und das Vorzeichen P_±. Kein Guard verbraucht.
 
 ---
 
@@ -2149,6 +2170,7 @@ Offen: Hyperladung, Chiralität (Tests 3, 4). Kein Guard verbraucht; R_ch = (0,0
 - v9.7 (2026-10-23): K78 Vorab-Test H18 (links-invariante Etiketten an den Minima) widerlegt; Companion-Runde v4.9.0-r33.
 - v9.8 (2026-10-23): K79 Bestandsaufnahme Struktur gegen Standardmodell (A/B/C/D), thm:SM-Befund, Abzähl-Tests vorgeschlagen.
 - v9.9 (2026-10-23): K80 Vorab-Test H19 (Ladungen aus der Dixon-Ablage) und Runde v4.9.0-r34: H19a/b/d/e bestätigt, H19c widerlegt.
+- v10.0 (2026-10-23): K81 Vorab-Test H20 und Runde v4.9.0-r35: innere gegen äußere Einheit; H20a/c/d bestätigt, H20b widerlegt; Lesart K80.3 korrigiert.
 
 ---
 
