@@ -8,13 +8,14 @@ writes a report; it does not rewrite paper content.
 from __future__ import annotations
 
 import argparse
+import bisect
 import re
 from dataclasses import dataclass
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_INCLUDE_SUFFIXES = {".tex", ".bib", ".md", ".txt", ".yml", ".yaml", ".json"}
-DEFAULT_EXCLUDED_DIRS = {".git", ".venv", "venv", "__pycache__", "node_modules", "audits"}
+DEFAULT_EXCLUDED_DIRS = {".git", ".venv", "venv", "__pycache__", "node_modules", "audits", "build"}
 
 DOI_RE = re.compile(r"10\.5281/zenodo\.\d+")
 INTERNAL_REVISION_RE = re.compile(r"\bv\d+\.\d+\.\d+-r\d+\b|\br\d{2,}\b")
@@ -41,8 +42,15 @@ def is_scannable(path: Path) -> bool:
     return path.is_file() and path.suffix.lower() in DEFAULT_INCLUDE_SUFFIXES
 
 
+_NL_CACHE: tuple[str, list[int]] | None = None
+
+
 def line_number(text: str, offset: int) -> int:
-    return text.count("\n", 0, offset) + 1
+    """1-based line of `offset`; newline offsets are computed once per text (was quadratic on large sources)."""
+    global _NL_CACHE
+    if _NL_CACHE is None or _NL_CACHE[0] is not text:
+        _NL_CACHE = (text, [m.start() for m in re.finditer("\n", text)])
+    return bisect.bisect_left(_NL_CACHE[1], offset) + 1
 
 
 def add_regex_findings(
