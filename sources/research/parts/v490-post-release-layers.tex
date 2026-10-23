@@ -4474,3 +4474,257 @@ R_{\rm glob}^{(v490\text{-}r31,+)}=(0,1,1,1,1),
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
 
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r32 Source-Only: Pre-Registered Test of Real-Part Invariants on the Triple Space}
+\addcontentsline{toc}{section}{v4.9.0-r32 Source-Only: Pre-Registered Test of Real-Part Invariants on the Triple Space}
+\label{sec:v490-r32-real-part-triple-space}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer r26 showed that no potential in the slot norms up to degree six has a minimum with three distinct norms.  The real
+parts \(r_k=\operatorname{Re}a_k\) of the three slots are invariant under \(G_2\) one by one and add invariants that
+the norms do not see, among them \(L=\sum r_k\), which equals \(\sum n_k\) on the real axis.  This layer records the
+pre-registered test H17 (note \texttt{llm/Vorab\_Notiz\_H17\_Realteile\_Tripelraum.md}, commit \texttt{2a7271a}, fixed
+before computing; the author's computer was not reachable, so the note was committed in the working container and
+sent to the author before the computation).  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r32 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r32 setting and hypotheses}
+\label{subsec:v490-r32-setting}
+
+With \(R_2=\sum r_k^2\) and the notation of r26, the fixed family adds all real-part invariants up to degree two to the
+potential of v4.8.0-r16:
+\[
+V_R=-S+\beta S^2+\gamma Q-\kappa t-\mu L-\nu R_2-\lambda L^2 ,
+\]
+bounded below if and only if \(\beta>0\) and \(\beta+\gamma>0\).  It is invariant under \(G_2\) (diagonal) and the
+generation \(S_3\).  H17a: for part of a fixed distribution (\(N=2000\)) the global minimum over all 24 real
+coordinates of \(\OO^3\) has three distinct non-zero norms.  H17b: for some parameters the charged-lepton triple is the
+global minimum.  H17c: \(K=2/3\) is singled out among such minima (at least half within \(0.01\)).
+
+\subsection*{v4.9.0-r32 results}
+\label{subsec:v490-r32-results}
+
+Script \texttt{llm/k69\_test\_h17.py}.  Global minima over the distribution: 1483 with equal norms, 517 with a degenerate
+pair, \textbf{none} with three distinct norms; 1629 of the 2000 lie on the real axis, where \(G_2\) is unbroken.  For the
+lepton triple, the family given by Vieta's relations on the real axis was scanned on a \(21\times4\times7\times3\) grid:
+696 points unbounded, 1061 with a negative Hessian eigenvalue, 7 local but not global, \textbf{none} global.
+
+\paragraph{Verdict.}
+H17a, H17b and H17c are refuted under the fixed criterion.
+
+\paragraph{Theoremlet v4.9.0-r32.1 (found after the verdict).}
+On the real axis \(a_k=n_k\) one has \(t=e_3=n_1n_2n_3\), \(R_2=S\), \(L=e_1\), and
+\[
+V_R=A(e_1,e_2)+e_3\,(4\gamma e_1-\kappa).
+\]
+At a critical point on the axis with three distinct norms the Hessian in the coordinates \((e_1,e_2,e_3)\) has a zero
+in position \((3,3)\) and the entry \(4\gamma\) in position \((1,3)\); for \(\gamma\neq0\) it is a saddle in
+\(\OO^3\).  More generally, every symmetric polynomial in \(n\) of degree at most five is linear in \(e_3\), so its
+critical points with three distinct values are saddles unless the coefficient of \(e_3\) is stationary there.
+
+\paragraph{Proof sketch.}
+\(Q=e_1^4-4e_1^2e_2+2e_2^2+4e_1e_3\) and \(S=e_1^2-2e_2\); \(e_3^2\) has degree six.  For distinct \(n_k\) the map
+\(n\mapsto(e_1,e_2,e_3)\) is a local diffeomorphism, and at a critical point the Hessian transforms by congruence.  The
+\(2\times2\) minor in \((e_1,e_3)\) is \(-16\gamma^2<0\).  A saddle of the restriction to the axis is a saddle of the
+full potential.  Checked symbolically, and with 50 digits at the seven grid points that passed the numerical test for a
+local minimum: each has a negative eigenvalue of about \(10^{-9}\) relative to the largest, below the fixed tolerance
+\(10^{-8}\) (script \texttt{llm/k70\_achse\_e3.py}).  \(\square\)
+
+\paragraph{Reading.}
+The real parts move the obstruction of r26.1 from \(e_2\) to \(e_3\); they do not remove it.  On the axis a minimum with
+three distinct norms generically needs degree at least six, without real parts degree at least eight, each with
+several free coefficients, so the lepton ratios could at best be fitted.  Most minima lie on the real axis and leave
+\(G_2\) unbroken; the colour group is not selected there.  Off the axis no corresponding statement is shown; numerically
+no minimum with three distinct norms occurred.  Within natural \(G_2\times S_3\) invariants the generation symmetry gives
+at most two distinct masses; the next testable route is an explicit breaking of \(S_3\).
+
+\subsection*{v4.9.0-r32 status in the three frames}
+\label{subsec:v490-r32-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+H17 verdict, r32.1 & frame-free: statements about octonions and polynomial invariants, no frame quantity enters\\
+mass reading \(\sqrt{m_k}\propto n_k\) & matter frame M (charged-lepton masses, as the Koide phase in v4.9.0-r22); not evaluated in T or P\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r32 register entries}
+\label{subsec:v490-r32-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r32\\
+\midrule
+mass hierarchy from natural invariants on the triple space (v4.8.0-r16, r26) & refuted also with real-part invariants up to degree two (H17); obstruction moved from \(e_2\) to \(e_3\) (r32.1)\\
+generations as triality slots, colour \(SU(3)\subset G_2\) (v4.8.0-r14, r15) & unchanged as a proposal; most minima here leave \(G_2\) unbroken, so the colour group is not selected by them\\
+mass mechanism & open; next testable route: explicit breaking of the generation \(S_3\) with a pre-registered parameter budget\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r32 ledger and guard update}
+\label{subsec:v490-r32-ledger-guard}
+
+\[
+R_{\rm cg}^{v490\text{-}r32}=(0,0,1)
+\]
+for (separation consistent with \(G_2\); carrier of the triality slots identified; mass mechanism open, with norm and
+real-part invariants of low degree excluded).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r32,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r32}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r33 Source-Only: Left-Invariant Labels on the Triple Space and a Pre-Registered Test}
+\addcontentsline{toc}{section}{v4.9.0-r33 Source-Only: Left-Invariant Labels on the Triple Space and a Pre-Registered Test}
+\label{sec:v490-r33-left-invariant-labels}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer r32 closed the route of natural potentials in the slot norms and real parts.  On the author's request the Dixon
+algebra \(\mathbb C\otimes\HH\otimes\OO\) was then read as the storage for all configurations that the Companion intended
+it to be (the HS(6) carrier of the Dixon-carrier coding layer), and the generation triple was placed in it.  This layer
+records what follows for the generation triple, a resolution of the conflict with the Lorentz spinor, and the
+pre-registered test H18 (note \texttt{llm/Vorab\_Notiz\_H18\_Links\_invariante\_Massen.md}, commit \texttt{6130814}, fixed
+before computing).  The algebraic statements are proved in Lean (\texttt{formal/QSFormal/Dixon.lean} and
+\texttt{Lesarten.lean}, Lean~4.35.0, no Mathlib import, standard axioms only).  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r33 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r33 the triple in the Dixon storage}
+\label{subsec:v490-r33-storage}
+
+\paragraph{Theoremlet v4.9.0-r33.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \(\HH\otimes\OO=\OO\oplus(\operatorname{Im}\HH)\otimes\OO\), and \((\operatorname{Im}\HH)\otimes\OO=i\otimes\OO\oplus
+j\otimes\OO\oplus k\otimes\OO\) carries the triple of v4.8.0-r14/r15: 24 of the 64 channels, with the coloured states as a
+9-channel submask.  \(G_2\) acts on \(\OO\), \(\operatorname{Aut}(\HH)=SO(3)\) on \(\HH\); they commute.
+\item[(b)] Of the 24 signed permutations of the slots in \(SO(3)\), exactly the 12 even permutations with an even number of
+sign changes leave \(\operatorname{Re}((xy)z)\) invariant; they are the conjugations by the binary tetrahedral group, so
+the joint symmetry is \(A_4\).  The transpositions of the triality \(S_3\) need octonion conjugation, an anti-automorphism.
+\item[(c)] If the \(\mathbb C\) factor is read as the amplitude plane of v4.8.0-r02, then \(J_B=R_{\pi/2}\circ T\) (v4.9.0-r30.2(b))
+exchanges its two halves; the slot norms are invariant under \(T\), \(R_{\pi/2}\) and \(J_B\), and the triality form goes to
+\(-i\,\bar t\).  Of the rotations of the \(\mathbb C\) plane only the quarter steps, together with the reflections (the
+group \(D_4\)), keep the label of the two halves.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+Finite checks and polynomial identities over \(\mathbb Z\), formalised in \texttt{Dixon.lean} (\texttt{inv\_iff},
+\texttt{tripleMask\_popcount}, \texttt{jB\_eq\_swap}, \texttt{tC\_JB}) and \texttt{Lesarten.lean} (\texttt{d4\_length},
+\texttt{conj\_cyc}, \texttt{conj\_i}).  \(\square\)
+
+\subsection*{v4.9.0-r33 left-invariant labels}
+\label{subsec:v490-r33-labels}
+
+\paragraph{Theoremlet v4.9.0-r33.2.}
+Write the triple as eight quaternions \(h_c\), one for each octonion component, and let the Lorentz spinor act from the
+left, \(h_c\mapsto qh_c\).  The quaternionic Gram matrix \(\overline{h_c}\,h_d\) is invariant (up to \(|q|^2\); with the complex
+bilinear form also under boosts).  Its real part is symmetric in the slots.  Its three imaginary components are three
+invariant labels on the right.  For the pure triple the \(i\) component is \(-x_j\wedge x_k\), so
+\[
+\mu_i=2\bigl(|x_j|^2|x_k|^2-\langle x_j,x_k\rangle^2\bigr),
+\]
+twice the area spanned by the other two slots.  The right action of \(1+i+j+k\) permutes the three labels cyclically.  For
+orthogonal slots \(\sqrt{\mu_i/2}=n_jn_k=P/n_i\).
+
+\paragraph{Proof sketch.}
+Associativity of \(\HH\) gives \(\overline{qx}\,qy=|q|^2\,\bar x y\) and \(\overline{xr}\,yr=\bar r(\bar xy)r\); for imaginary
+\(u,v\), \(\bar uv=(u\cdot v,-u\times v)\); the Lagrange identity in \(\mathbb R^8\) gives \(\mu_i\).  Lean: \texttt{gram\_left},
+\texttt{gram\_right}, \texttt{right\_cyc}, \texttt{gram\_pure}, \texttt{lagrange8}; numerical check
+\texttt{llm/k72\_links\_invariant.py}.  \(\square\)
+
+\noindent With Lorentz acting from the left the single slot norms are not invariant (a rotation redistributes them), so the
+conflict of the Dixon check with the spinor reading of Theorem~\ref{thm:three-generations} can be resolved for the labels by
+reading the generations on the right; it is not resolved for masses (see H18).
+
+\subsection*{v4.9.0-r33 pre-registered test H18}
+\label{subsec:v490-r33-h18}
+
+H18: masses \(m_k\propto\sqrt{\mu_k}\) at the global minima of the potentials already tested (family A: v4.8.0-r16;
+family B: r32), with a fixed parameter grid and distribution.  H18a: some point gives determined, distinct, non-zero
+\(\mu_k\); H18b: one of them meets both charged-lepton ratios within \(1\%\).  Script \texttt{llm/k73\_test\_h18.py}: family A,
+205 points, all undetermined; family B, 500 points, 428 undetermined, 51 with equal and 21 with two distinct values.
+\textbf{H18a and H18b are refuted.}  Check after the verdict (\texttt{llm/k74\_nachkontrolle\_h18.py}): in family A the angle
+between two slots is a flat direction of the minimum, because \(V\) sees the angles only through \(t\); in family B the
+undetermined cases have \(\mu\approx0\), the slots lying parallel on the real axis.  The labels resolve the Lorentz conflict
+but inherit the selection problem: a mass hierarchy would need a principle that fixes the angles between the slots.
+
+\subsection*{v4.9.0-r33 status in the three frames}
+\label{subsec:v490-r33-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r33.1(a), (b) & algebraic, shown in the reference frame R in which the Dixon grammar is written (class N of r23)\\
+r33.1(c) & under the reading of the \(\mathbb C\) factor as amplitude plane: J\(_B\) exchanges the halves (M \(\leftrightarrow\) T); slot norms frame-free; P has equal weight on both halves\\
+r33.2, H18 & frame-free in the slots; the \(\mathbb C\) factor does not enter\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r33 register entries}
+\label{subsec:v490-r33-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r33\\
+\midrule
+Dixon-carrier coding (HS(6)) & read as the storage for all configurations (author's intention); holds the generation triple; masks conservative\\
+mixed readouts (guarded, binary masks) & defined, never evaluated; r33 does not evaluate one either\\
+Theorem~\ref{thm:three-generations} & colour and generation on the same triplet (r13); spinor reading in conflict with generations in \(\operatorname{Im}\HH\) unless the generations are read on the right (r33.2)\\
+mass hierarchy on the triple space & refuted also through left-invariant labels (H18); needs a principle that fixes the angles between the slots\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r33 ledger and guard update}
+\label{subsec:v490-r33-ledger-guard}
+
+\[
+R_{\rm cg}^{v490\text{-}r33}=(0,0,1)
+\]
+for (separation consistent with \(G_2\); carrier and storage of the triality slots identified, Lorentz-compatible labels found;
+mass mechanism open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r33,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r33}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
