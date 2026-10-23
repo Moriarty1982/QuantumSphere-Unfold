@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v9.1
+# Kernkarte Quantum Sphaera — v9.2
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1915,6 +1915,12 @@ Generationen in Im ℍ und Spinor in ℍ zugleich geht nicht.
 ausgeschlossen). Gemischte Readouts mit festgelegter Aggregation μ über die Platz-Bits wären eine explizite S₃-/A₄-Brechung:
 der passende Ort für den nächsten Vorab-Test. `thm:three-generations` ohne `\qsstatus` (Kandidat Regel C, Autorentscheidung).
 
+**K77.6 Frames (Autorhinweis).** Die Dixon-Grammatik ist mit Bezug auf den Photon-Frame geschrieben; r23 ordnet sie als N ein
+(Name ohne Frame-Größe), nach r24.3 ist das der Bezugsframe R, nicht P. K77.3/K77.4 sind algebraisch, gezeigt in R; für M/T fehlt
+die Wirkung von J_B auf der Ablage (natürliche Wahl ℂ-Konjugation → Masken und Tripel frame-frei, Annahme). Namensfalle:
+„gemischter Readout“ (QAM) ≠ „gemischter Zustand“ (P maximal gemischt). Port-gewichtete Aggregation wäre frame-abhängig
+(M (0,768; 0,232), T vertauscht, P ohne Brechung); eine Vorab-Notiz muss den Frame der Massen-Ablesung festlegen.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -2046,6 +2052,7 @@ der passende Ort für den nächsten Vorab-Test. `thm:three-generations` ohne `\q
 - v8.9 (2026-10-22): K75 Companion-Runde v4.9.0-r31 (Markov-Kaskade: geschlossen keine Stabilisierung, mit Rückweg stabile Flussanteile β²; Statusvermerk thm:dark-energy).
 - v9.0 (2026-10-23): K76 Vorab-Test H17 (Realteil-Invarianten auf dem Tripel-Raum) widerlegt; Theoremlet r32.1 (auf der Achse linear in e₃, Sattelpunkte); Companion-Runde v4.9.0-r32.
 - v9.1 (2026-10-23): K77 Prüfung Dixon-Ablage (Tripel = (Im ℍ)⊗𝕆, gemeinsame Symmetrie A₄, Lorentz-Konflikt) und Bestandsaufnahme gemischte Readouts (angelegt, nie ausgewertet).
+- v9.2 (2026-10-23): K77.6 Frame-Einordnung der Dixon-Prüfung (Grammatik = Bezugsframe R; M/T offen bis J_B auf der Ablage festgelegt; Namensfalle gemischter Readout/Zustand; port-gewichtete Brechung frame-abhängig).
 
 ---
 

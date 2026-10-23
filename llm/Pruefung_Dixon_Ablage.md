@@ -64,3 +64,24 @@ werden“.
   Mit Masken allein entsteht keine Größe; μ und J_mix müssen als neue Vermutung angegeben werden.
 - Offene Autorentscheidung: `thm:three-generations` hat noch keinen `\qsstatus`-Vermerk, obwohl r13/r14 Farbe und
   Generation darin als Doppelbelegung festgestellt haben (Kandidat für Regel C).
+
+## 6. Frames (Autorhinweis: die Dixon-Grammatik wurde mit Bezug auf den Photon-Frame geschrieben)
+
+- v4.9.0-r23 ordnet die OP5-Halo-/Kollar-/Tunnel-/Dixon-Grammatik in Klasse **N** ein: Sie trägt den Namen „photon frame“,
+  aber keine Frame-Größe (kein β, γ_L, z₋). Nach r24.3 ist „photon frame“ des Hauptkorpus der **Bezugsframe R**
+  (reiner Zustand, |b| = 1), nicht der Photon P der Konvention F (maximal gemischt).
+- Die Befunde 3 und 4 sind algebraisch und enthalten keine Frame-Größe. Gezeigt sind sie in R, wie die Ablage geschrieben ist.
+- Für M und T fehlt eine Festlegung, wie J_B auf der Dixon-Ablage wirkt. Natürliche Wahl, weil J_B antilinear ist:
+  Konjugation auf dem ℂ-Faktor (Index a). Sie ändert nur Vorzeichen, nicht die Menge der aktiven Kanäle. Masken und das
+  Tripel bei a = 0 wären dann frame-frei. Das ist eine Annahme, kein Befund.
+- Namensfalle: „gemischter Readout“ (QAM: Zusammenfassung mehrerer Readout-Arten) ist nicht „gemischter Zustand“
+  (Dichtematrix; P ist der maximal gemischte Zustand). Beides nicht verwechseln.
+- Folge für einen Test mit gemischten Readouts: Gewichtet die Aggregation μ die Platz-Bits mit den Port-Gewichten p± des
+  Dubletts, ist die Brechung frame-abhängig: in M (0,768; 0,232), in T vertauscht, in P beide ½, also ohne Brechung (F2).
+  Eine Vorab-Notiz muss den Frame der Massen-Ablesung festlegen (wie bei der Koide-Phase: nur Materie).
+
+| Befund | M / T / P (und R) |
+|---|---|
+| Tripel = (Im ℍ)⊗𝕆, Farbe als Teilmaske, A₄ | algebraisch, in R gezeigt; M/T frame-frei unter der Annahme J_B = ℂ-Konjugation; P nicht ausgewertet |
+| gemischte Readouts nie ausgewertet | Bestandsaufnahme, frame-unabhängig |
+| port-gewichtete Aggregation (künftig) | M und T vertauscht, P ohne Brechung |
