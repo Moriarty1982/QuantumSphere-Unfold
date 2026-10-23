@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v10.2
+# Kernkarte Quantum Sphaera — v10.3
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -92,6 +92,8 @@ Companion dasselbe Objekt; Generationen brauchen eine Dreierstruktur außerhalb 
 **Triality (K83):** H22 — t = Re((xy)z) ist die Spin(8)-Triality-Form; Plätze = drei inäquivalente 8-dim. Darstellungen, Verschiebung = äußere
 Triality, Fixgruppe G₂ ⊃ SU(3)_c: Generation = Bahn, Farbe = Fixgruppe. Kein Verbot einer vierten Generation aus der Struktur allein.
 Perioden der Struktur {1, 2, 3, 4, 6, 12}, keine ausgezeichnet. „Triole“ benennt drei Strukturen (Frames M/P/T, Kerne 120°, Plätze).
+**Frame-Triole (K84):** H23 — M/P/T hat die Form einer Transposition ρ der Triality-Plätze: Photon = fester (Vektor-)Platz, 1 ⊕ 7 unter
+Spin(7); Materie, Tachyon = Spinor-Plätze, gleich und vertauscht. 120°- und Frame-Triole = zwei Ansichten derselben S₃.
 Regel: Jede neue Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 **Farbe und Generation (K25, K28):** Im Companion liegen beide auf demselben Triplett e₄, e₅, e₆. Vorschlag (V):
@@ -2076,6 +2078,18 @@ Verschiebung tauscht sie, ihre Summe ist invariant (Nachkontrolle). H22d bestät
 **K83.5 (S).** Drei Triolen im Korpus: Frame-Triole M/P/T (ℤ₂ mit Fixpunkt, 1 : 1 : 3), Kern-Triole (ℤ₃, 120°, in 𝕆 Farbe), Platz-Triole
 (Triality). Die Doppelbelegungen (r13, r34–r36) entstehen beim Gleichsetzen. Kein Guard verbraucht.
 
+### K84 — Vorab festgelegter Test H23 und Companion-Runde v4.9.0-r38: Frame-Triole als Spiegelseite der Triality (2026-10-23)
+
+Vorab-Notiz `llm/Vorab_Notiz_H23_Frame_Triole_Triality.md` (Commit 55043f8), Skript `llm/k79_test_h23.py`, Ausgabe `llm/k79_out.txt`,
+Ergebnis `llm/Ergebnis_H23_Frame_Triole_Triality.md`, Runde `sec:v490-r38-frame-triole-triality`.
+
+**K84.1 (M).** ρ(x, y, z) = (x̄, z̄, ȳ) ist ein äußerer Automorphismus von 𝔤 der Ordnung 2: Platz 1 behält seine Klasse, 2 und 3 tauschen (H23a).
+**K84.2 (M).** ρ-fest: 𝔰𝔬(7) (dim 21); Platz 1 = 1 ⊕ 7 (invariante Gerade ℝ·1), Platz 2, 3 je irreduzibel 8 und äquivalent (H23b). Vorzeichen
+mit s₁s₂s₃ = 1 (ℤ₂ × ℤ₂), (1, −1, −1) trivial auf Platz 1 (H23c, trivial). S₃ auf den Plätzen (H23d). 𝔤₂ ⊂ 𝔰𝔬(7), Farbe fest unter ganz S₃ (H23e).
+**K84.3 (S).** Lesart: Photon = Vektor-Platz, Materie/Tachyon = Spinor-Plätze (Chiralitätspaar); welcher Platz Photon ist, ist die Wahl einer der
+drei Transpositionen (Konvention F: Photon = entarteter Fixpunkt). Offen: Frames und Generationen können nicht auf derselben Ebene auf den
+Plätzen liegen (zwei Zoomstufen nötig). Spur für Test 3: M ↔ T als Chiralitätswechsel. Kein Guard verbraucht.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -2218,6 +2232,7 @@ Verschiebung tauscht sie, ihre Summe ist invariant (Nachkontrolle). H22d bestät
 - v10.0 (2026-10-23): K81 Vorab-Test H20 und Runde v4.9.0-r35: innere gegen äußere Einheit; H20a/c/d bestätigt, H20b widerlegt; Lesart K80.3 korrigiert.
 - v10.1 (2026-10-23): K82 Frame-Regel für Einheiten übernommen, Statusvermerke thm:three-generations/thm:SM, Vorab-Test H21 und Runde v4.9.0-r36 (Herkunft der Doppelbelegung), alle bestätigt.
 - v10.2 (2026-10-23): K83 Vorab-Test H22 und Runde v4.9.0-r37: Triality-Form = Spin(8)-Triality, Farbe in der Fixgruppe, Perioden {1,…,12}; H22d ohne Verbot.
+- v10.3 (2026-10-23): K84 Vorab-Test H23 und Runde v4.9.0-r38: Frame-Triole M/P/T als Transposition der Triality-Plätze, alle bestätigt.
 
 ---
 

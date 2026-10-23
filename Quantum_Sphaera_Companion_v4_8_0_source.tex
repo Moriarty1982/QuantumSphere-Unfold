@@ -73128,4 +73128,120 @@ R_{\rm glob}^{(v490\text{-}r37,+)}=(0,1,1,1,1),
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
 
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r38 Source-Only: The Frame Triole as the Reflection Side of Triality}
+\addcontentsline{toc}{section}{v4.9.0-r38 Source-Only: The Frame Triole as the Reflection Side of Triality}
+\label{sec:v490-r38-frame-triole-triality}
+% ============================================================================
+
+\paragraph{Purpose.}
+In the original paper the triole of the spring theorem is the triple matter--photon--tachyon: the photon is the equilibrium node
+and matter and tachyon are mirror images.  Layer v4.9.0-r37 found that the cyclic shift \(\tau\) of the three slots of \(\OO^3\) is
+triality.  This layer records the pre-registered test H23 (note \texttt{llm/Vorab\_Notiz\_H23\_Frame\_Triole\_Triality.md}, commit
+\texttt{55043f8}, fixed before computing): whether the frame triole has the form of the second slot map
+\(\rho(x,y,z)=(\bar x,\bar z,\bar y)\), which fixes one slot and exchanges the other two.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r38 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r38 results}
+\label{subsec:v490-r38-results}
+
+Notation as in v4.9.0-r37; \(c\) is octonionic conjugation, and \(\rho\) acts on \(\mathfrak g\) by
+\((A,B,C)\mapsto(cAc,cCc,cBc)\).
+
+\paragraph{Theoremlet v4.9.0-r38.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \(\rho\) is an automorphism of \(\mathfrak g\) of order two.  It keeps the representation class of slot~1 and exchanges the
+classes of slots~2 and~3; it is outer.
+\item[(b)] The \(\rho\)-fixed subalgebra of \(\mathfrak g\) is \(21\)-dimensional, isomorphic to \(\mathfrak{so}(7)\).  On slot~1 it acts as
+\(1\oplus7\) with invariant line \(\mathbb R\cdot1\) and irreducible complement; on slots~2 and~3 it acts irreducibly, by equivalent
+eight-dimensional representations.
+\item[(c)] The sign triples preserving \(t\) are those with \(s_1s_2s_3=1\), a group \(\mathbb Z_2\times\mathbb Z_2\); the one trivial on
+slot~1 is \((1,-1,-1)\).
+\item[(d)] \(\tau\) and \(\rho\) generate \(S_3\) on the slots; its \(\mathbb Z_3\) has one orbit of length three, each transposition a
+fixed slot and an orbit of length two.
+\item[(e)] \(\mathfrak g_2=\{(A,A,A)\}\) is \(\rho\)-fixed and lies in the \(\mathfrak{so}(7)\) of (b).
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a), (b), (e) by linear algebra on \(\mathfrak{so}(8)^3\): closure under \(\rho\), intertwiner spaces between the slot representations
+of \(\mathfrak g\) and of its image, the fixed space of \(\rho\), and commutants (script \texttt{llm/k79\_test\_h23.py}, deviations at most
+\(10^{-15}\)).  (c) is immediate from trilinearity and was checked numerically; (d) by enumeration.  \(\square\)
+
+\paragraph{Verdict and reading.}
+H23a--e are confirmed; (c) and (d) are elementary.
+\begin{enumerate}[leftmargin=2em]
+\item The \(120^\circ\) triole is the \(\mathbb Z_3\)-orbit of triality; the frame triole of the original paper has the form of a
+transposition, one fixed slot and two exchanged.  Both are views of the same \(S_3\) on the three triality slots.  In the author's
+picture, the zoom chooses the subgroup.
+\item Reading: photon = the fixed slot, which under the fixed \(\mathrm{Spin}(7)\) has a distinguished direction, the real unit;
+matter and tachyon = the two exchanged slots, equal under \(\mathrm{Spin}(7)\) and mirrored by \(\rho\).  The parity \((1,-1,-1)\)
+separates the photon slot from the other two in the way \((-1)^F\) separates bosons from fermions; it is trivial, and notable only
+because it fits this reading.
+\item Which slot is the photon is a choice: \(S_3\) has three transpositions, each fixing a different slot.  This agrees with
+Convention~F, where the photon is the degenerate fixed point.
+\item Colour is fixed by the whole \(S_3\) (e).
+\item Open: on one level the three slots cannot carry both the frames (this layer) and the generations (reading of v4.9.0-r37).  In
+the author's picture these would be two zoom levels.  Which level carries which role is not shown; \(\operatorname{Im}\HH\) of the
+Dixon storage (v4.9.0-r33) is a second three-fold carrier.
+\item In eight dimensions the two spinor slots are a chirality pair.  If matter and tachyon are read as these, the frame change
+\(M\leftrightarrow T\) is a change of chirality.  This is a lead for the chirality test of the inventory, not computed here.
+\end{enumerate}
+
+\subsection*{v4.9.0-r38 status in the three frames}
+\label{subsec:v490-r38-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r38.1(a)--(e) & real octonionic statements on the slots, without the \(\mathbb C\) factor; the same in M, T and P\\
+reading (2), (3) & assigns M, P, T to slots; the assignment is a choice of transposition and is itself the frame choice\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r38 register entries}
+\label{subsec:v490-r38-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r38\\
+\midrule
+frame triole of the spring theorem & has the form of a transposition of the triality slots (r38.1(a), (b)); reading photon = vector slot, matter and tachyon = spinor slots\\
+\(120^\circ\) triole and frame triole & views of the same \(S_3\) (r38.1(d))\\
+frames versus generations on the slots & open; two levels needed\\
+chirality & lead: \(M\leftrightarrow T\) as exchange of the two spinor slots\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r38 ledger and guard update}
+\label{subsec:v490-r38-ledger-guard}
+
+\[
+R_{\rm ft}^{v490\text{-}r38}=(1,0,0)
+\]
+for (frame triole matched to the reflection side of triality; level of frames against generations open; chirality open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r38,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r38}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
 \end{document}

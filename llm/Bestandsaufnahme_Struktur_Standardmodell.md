@@ -1,6 +1,6 @@
 # Bestandsaufnahme: Was folgt aus der Struktur, was ist eingesetzt?
 
-Stand 2026-10-23, nach v4.9.0-r37. Lebendes Dokument: nach jeder Runde nachführen (Spalte „Stand“, Fundstelle, Datum).
+Stand 2026-10-23, nach v4.9.0-r38. Lebendes Dokument: nach jeder Runde nachführen (Spalte „Stand“, Fundstelle, Datum).
 Zweck (Autorabsicht): Eine vereinheitlichte Theorie muss keine neue Physik einführen, sondern erklären, **warum** das
 Standardmodell diese Struktur hat. Das wird hier Merkmal für Merkmal geprüft. Eine Erklärung zählt nur, wenn die Struktur
 eine Alternative **ausschließt**: Sie muss etwas verbieten.
@@ -28,7 +28,7 @@ eine Alternative **ausschließt**: Sie muss etwas verbieten.
 | Globale Form der Eichgruppe | **D** | Das Standardmodell hat (SU(3)×SU(2)×U(1))/ℤ₆; dazu sagt der Companion nichts. |
 | Ladungen einer Generation | **A** (unter Lesart), Konsistenz | Zahloperator auf ℂ⊗𝕆 nach Furey ist mit der Farbe Stab(e₇) des Companion verträglich; Ladungen 0, 1/3, 2/3, 1 als Singulett, Triplett, konjugiertes Triplett, Singulett (v4.9.0-r34, H19a/b). Lesart: ℂ-Faktor = quantenmechanisches i. Keine Vorhersage, die Vielfachheiten sind algebraisch erzwungen. **Frame-abhängig:** J_B bildet Q auf 1 − Q ab (H19d); frame-frei sind nur Spektrum und Farbstruktur. |
 | Hyperladungen | **D** | Nirgends hergeleitet (kein Vorkommen von „hypercharge“). Test 4. |
-| Chiralität (SU(2) wirkt nur links) | **D** | Kein Vorkommen. Ohne Chiralität ist keine Aussage über die schwache Wechselwirkung möglich. |
+| Chiralität (SU(2) wirkt nur links) | **D**, Spur | Kein Vorkommen. Spur aus v4.9.0-r38: Liest man Materie und Tachyon als die beiden Spinor-Plätze der Triality, ist M ↔ T ein Chiralitätswechsel (nicht gerechnet). Ohne Chiralität ist keine Aussage über die schwache Wechselwirkung möglich. |
 | Quarks gegen Leptonen | **B** | Singulett und Triplett unter SU(3) wären die natürliche Trennung, sind im Companion aber nicht so zugeordnet. Quark-Werte aus der Struktur nicht ableitbar (K25). |
 | Koide-Relation K = 2/3 | **B** | Die Koide-Form ist exakt Skalar plus symmetrische Triole; K = 2/3 ⇔ \|c\| = t (v4.8.0-r10). Eine Umformulierung, keine Herleitung. Gleich-Norm-Bedingung auch in der v4.9-Linie unabhängig gefunden (K26). |
 | Massenhierarchie | **C** für natürliche Potentiale | Natürliche Invarianten auf dem Tripel-Raum geben höchstens zwei verschiedene Massen (H11, H16, H17, H18; Sattel-Sätze v4.9.0-r26.1, r32.1). Lesart: Die Struktur **erklärt**, dass Massen eine Brechung der Generationen-Symmetrie brauchen (wie die Yukawa-Kopplungen im Standardmodell), liefert die Brechung aber nicht. |
@@ -58,7 +58,7 @@ eine Alternative **ausschließt**: Sie muss etwas verbieten.
 
 Das Wort „Triole“ benennt mindestens drei Strukturen: die **Frame-Triole** Materie–Photon–Tachyon (Originalarbeit `thm:spring`, ℤ₂ mit
 Fixpunkt P, Amplituden 1 : 1 : 3), die **Kern-Triole** K₁, K₂, K₃ mit 120° (ℤ₃, in 𝕆 eine Farbdrehung) und die **Platz-Triole** von 𝕆³
-(Triality). Autorabsicht: Die Triole ist eine Darstellung der Sphäre; die Selbstdurchwanderung wechselt zwischen den Gestalten, ohne
+(Triality). Seit v4.9.0-r38 (H23): 120°-Triole und Frame-Triole sind zwei Ansichten derselben S₃ auf den Plätzen (ℤ₃-Bahn bzw. Transposition; Photon = fester Vektor-Platz, Materie/Tachyon = Spinor-Plätze). Frames und Generationen können nicht auf derselben Ebene auf den Plätzen liegen. Autorabsicht: Die Triole ist eine Darstellung der Sphäre; die Selbstdurchwanderung wechselt zwischen den Gestalten, ohne
 festgelegte Periode. Die Struktur hat die Perioden {1, 2, 3, 4, 6, 12}.
 
 ## Aussichtsreiche Abzähl-Tests (Vorschlag, jeweils mit Vorab-Notiz)
