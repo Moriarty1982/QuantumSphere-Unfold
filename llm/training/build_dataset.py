@@ -632,6 +632,12 @@ QA = [
  "[S] Nein. r42 ist eine Konstruktion unter Wahlen: J = i L_e7 und die Formel fuer Y/2 sind so gewaehlt, dass der bekannte Inhalt einer Generation herauskommt, und das Muster war vorab gesehen. Sie zeigt, dass die Bausteine des Companion dafuer ausreichen. Warum gerade diese Wahl, die Symmetriebrechung, Massen und Mischungen sind nicht erklaert; Massenhierarchie aus natuerlichen Potentialen und Mischungswinkel bleiben widerlegt."),
 ("status", "Hat die Millennium-Matrix etwas mit den 16 Fermionen einer Generation zu tun?",
  "[S] Festgehalten, nicht gedeutet (K88.3): Die MM-Matrix ist im Text 16 x 16, und eine Generation mit rechtshaendigem Neutrino hat 16 Weyl-Zustaende. In r42 ist ein Kompensator der MM-Matrix der Chiralitaetsprojektor (Spektralprojektor wie in thm:hc-spectral-projector). Ob M_16 so gemeint war, kann nur der Autor sagen."),
+("status", "Was steht in der Companion-Runde v4.9.0-r43?",
+ "[S] r43 haelt den vorab festgelegten Test H28 fest (Commit 9b8b360) zur Frage, warum die Wahl aus r42 so ausfaellt. [M] Unter den Annahmen gibt es genau vier Chiralitaetsprojektoren, J = +-i L_e7 und +-i R_e7; die gravitative Anomalie erzwingt den Hyperladungs-Versatz -1/2, und die uebrigen Anomalien lassen nur die Linksmultiplikation mit e7 zu. Uebrig bleiben das Standardmodell und sein Frame-Spiegelbild. Kein Guard wird verbraucht."),
+("status", "Warum gerade J = i L_e7 als Chiralitaetsprojektor?",
+ "[M] Weil es unter den Annahmen keine andere anomaliefreie Wahl gibt (H28): Farbe und Ladungserhaltung lassen vier Projektoren zu (+-i L_e7, +-i R_e7), Tr Y = 0 legt den Versatz s = -1/2 fest, und fuer +-i R_e7 sind Tr Y^3 und die SU(2)^2U(1)-Spur ungleich null. +-i L_e7 sind Frame-Bilder voneinander. [S] Die Annahmen selbst (schwache SU(2) rechts auf H, Q_em = T3 + Q + s) sind nicht hergeleitet."),
+("guard", "Ist damit bewiesen, dass die Natur das Standardmodell sein muss?",
+ "[S] Nein. r43 zeigt nur: Unter den Annahmen von r41 bis r43 laesst die Anomaliefreiheit keinen weiteren Spielraum. Die Annahmen sind gesetzt, nicht hergeleitet, und dass das Standardmodell anomaliefrei ist, ist bekannt. Symmetriebrechung, Massen und Mischungen sind nicht erklaert."),
 # ---------------------------------------------------------------- F: Pruefpunkte / offen
 ("offen", "Welche Modellentscheidungen sind in Lesart B noch offen?",
  "[P] Ob der Dualitaetswinkel physikalisch oder Eichfreiheit ist; die Rolle von t; die Transportaussage K(L_n) = L_{n-1}. Die Sektor-Zuordnung ist seit r07 als Arbeitszuordnung gesetzt und umkehrbar."),

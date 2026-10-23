@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v10.7
+# Kernkarte Quantum Sphaera — v10.8
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -102,6 +102,8 @@ Vorzeichen (m² ↦ −m²), hermitesch frame-blind. Kein 𝔰𝔲(2) der Triali
 Q_em = T₃ + Y/2 die Dubletts (ν,e), (u,d), (d̄,ū), (e⁺,ν̄); T = Ladungskonjugation; schwache Singuletts fehlen (Chiralität offen).
 **MM-Kompensator (K88):** H27 — C_ch = ½(id + J), J = i·L_{e₇} (äußere × innere Einheit), schwache SU(2)′ = C_ch·T_a, Y/2 = Q − ½ + (1 − C_ch)T₃:
 voller linkshändiger Inhalt einer Generation mit ν_R (16 Weyl × 2), richtige Quantenzahlen, anomaliefrei; Konstruktion unter Wahlen, Muster vorab gesehen.
+**Warum diese Wahl (K89):** H28 — unter den Annahmen genau vier Chiralitätsprojektoren (±iL_{e₇}, ±iR_{e₇}); Tr Y = 0 erzwingt s = −½; die übrigen
+Anomalien wählen die Linksmultiplikation: SM und Frame-Spiegel. Annahmen (schwach rechts, Q_em = T₃ + Q + s) nicht hergeleitet.
 Regel: Jede neue Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 **Farbe und Generation (K25, K28):** Im Companion liegen beide auf demselben Triplett e₄, e₅, e₆. Vorschlag (V):
@@ -2158,6 +2160,20 @@ SU(2)′ nur auf dem Bild; T C_ch T⁻¹ = 1 − C_ch (H27d). 𝓜 = λ₀C_ch +
 T-Frame = Teilchen und Antiteilchen mit gespiegelter Chiralität (Lesart). 𝓜₁₆ ist 16 × 16, eine Generation mit ν_R hat 16 Weyl-Zustände (festgehalten,
 nicht gedeutet). Konstruktion unter Wahlen (J, Y-Formel), keine Herleitung; ähnliche Konstruktionen in der Literatur (ℂ⊗ℍ⊗𝕆). Kein Guard verbraucht.
 
+### K89 — Vorab festgelegter Test H28 und Companion-Runde v4.9.0-r43: Wahl des Chiralitätsprojektors durch Anomaliefreiheit (2026-10-23)
+
+Autorfrage (2026-10-23): wieso genau diese Wahl. Vorab-Notiz `llm/Vorab_Notiz_H28_Warum_diese_Wahl.md` (Commit 9b8b360; Sektor-Zuordnung, Fall iR_{e₇}
+und Tr Q = 4 vorab von Hand, offengelegt), Skript `llm/k84_test_h28.py`, Ausgabe `llm/k84_out.txt`, Ergebnis `llm/Ergebnis_H28_Warum_diese_Wahl.md`,
+Runde `sec:v490-r43-choice-anomalies`.
+
+**K89.1 (M).** Kommutant von Farbe und Q auf ℂ⊗𝕆 = die vier Sektor-Projektoren; genau vier Chiralitätsprojektoren (Bild Singulett + Triplett):
+J = iL_{e₇} {0, 2/3}, −iL_{e₇} {1/3, 1}, iR_{e₇} {0, 1/3}, −iR_{e₇} {2/3, 1} (H28a). Tr Y = 0 genau für s = −½ (H28b).
+**K89.2 (M).** Bei s = −½ anomaliefrei nur J = ±iL_{e₇}; J = ±iR_{e₇}: Tr Y³ = ±3/2, SU(2)²U(1) = ∓2 (über beide Dublett-Zustände) (H28c).
+T(iL_{e₇})T⁻¹ = −iL_{e₇} (H28d).
+**K89.3 (S).** Die Wahl aus r42 ist unter den Annahmen bis auf den Frame erzwungen (Farbe, Ladungserhaltung, Anomalien); die Auswahl trifft wieder
+links gegen rechts. Annahmen bleiben: schwache SU(2) rechts auf ℍ, Q_em = T₃ + Q + s, Projektor auf ℂ⊗𝕆. Keine Vorhersage (SM ist bekannt
+anomaliefrei). Kein Guard verbraucht.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -2305,6 +2321,7 @@ nicht gedeutet). Konstruktion unter Wahlen (J, Y-Formel), keine Herleitung; ähn
 - v10.5 (2026-10-23): K86 Vorab-Test H25 und Runde v4.9.0-r40: zweiseitige Kontraktion über Frames kovariant, nicht invariant; keine schwache SU(2) in der Triality.
 - v10.6 (2026-10-23): K87 Vorab-Test H26 und Runde v4.9.0-r41: Aufteilung D der ℍ-Rollen, Q = T₃ + Y/2 mit Y/2 = Q − ½, T = C, Singuletts fehlen.
 - v10.7 (2026-10-23): K88 Vorab-Test H27 und Runde v4.9.0-r42: MM-Kompensator als Chiralitätsprojektor, Inhalt einer Generation konstruiert.
+- v10.8 (2026-10-23): K89 Vorab-Test H28 und Runde v4.9.0-r43: Chiralitätsprojektor und Versatz durch Anomaliefreiheit bis auf den Frame erzwungen.
 
 ---
 

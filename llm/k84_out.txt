@@ -1,0 +1,10 @@
+H28a: Kommutant von Farbe und Q: Dimension 4 (= Sektor-Projektoren: True); Projektoren mit Bild Singulett + Triplett: 4; Zuordnung Bild -> J: {('0', '1/3'): 'iR_e7', ('0', '2/3'): 'iL_e7', ('1/3', '1'): '-iL_e7', ('2/3', '1'): '-iR_e7'} -> bestaetigt
+   J = iL_e7  : Tr Y = 0 genau fuer s = -1/2; Anomalien bei diesem s: TrY = 0, TrY3 = 0, SU2^2Y = 0, SU3^2Y = 0
+   J = -iL_e7 : Tr Y = 0 genau fuer s = -1/2; Anomalien bei diesem s: TrY = 0, TrY3 = 0, SU2^2Y = 0, SU3^2Y = 0
+   J = iR_e7  : Tr Y = 0 genau fuer s = -1/2; Anomalien bei diesem s: TrY = 0, TrY3 = 3/2, SU2^2Y = -2, SU3^2Y = 0
+   J = -iR_e7 : Tr Y = 0 genau fuer s = -1/2; Anomalien bei diesem s: TrY = 0, TrY3 = -3/2, SU2^2Y = 2, SU3^2Y = 0
+
+H28b: s = -1/2 fuer alle vier: True -> bestaetigt
+H28c: anomaliefrei: ['-iL_e7', 'iL_e7'] -> bestaetigt
+
+H28d: T (iL_e7) T^-1 = -iL_e7: 0e+00 -> bestaetigt

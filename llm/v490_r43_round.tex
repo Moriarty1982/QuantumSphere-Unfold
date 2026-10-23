@@ -1,0 +1,107 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r43 Source-Only: The Choice of the Chirality Projector Is Fixed by Anomaly Cancellation}
+\addcontentsline{toc}{section}{v4.9.0-r43 Source-Only: The Choice of the Chirality Projector Is Fixed by Anomaly Cancellation}
+\label{sec:v490-r43-choice-anomalies}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.9.0-r42 built the content of one generation with the compensator \(C=\tfrac12(\mathrm{id}+J)\), \(J=iL_{e_7}\), and the hypercharge
+offset \(-\tfrac12\), both chosen.  The author asks why this choice.  This layer records the pre-registered test H28 (note
+\texttt{llm/Vorab\_Notiz\_H28\_Warum\_diese\_Wahl.md}, commit \texttt{9b8b360}, fixed before computing; one case and the sector
+assignment were computed by hand beforehand and are disclosed there).  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r43 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r43 setting}
+\label{subsec:v490-r43-setting}
+
+On \(\mathbb C\otimes\HH\otimes\OO\) as in v4.9.0-r42, a chirality projector is \(C=\tfrac12(1+J)\) with \(J\) Hermitian, \(J^2=1\), \(J\neq\pm1\),
+acting on \(\mathbb C\otimes\OO\), commuting with colour and \(Q\), of rank \(16\), with image one colour singlet and one colour triplet.  The weak
+\(SU(2)'\) is \(CT_a\), the charge \(Q_{\rm em}=T_3+Q+s\), the hypercharge \(Y/2=Q+s+(1-C)T_3\).
+
+\subsection*{v4.9.0-r43 results}
+\label{subsec:v490-r43-results}
+
+\paragraph{Theoremlet v4.9.0-r43.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] The commutant of colour and \(Q\) on \(\mathbb C\otimes\OO\) is spanned by the four sector projectors.  There are exactly four chirality
+projectors, with \(J=iL_{e_7}\) (image the sectors \(0,\tfrac23\)), \(-iL_{e_7}\) (\(\tfrac13,1\)), \(iR_{e_7}\) (\(0,\tfrac13\)) and \(-iR_{e_7}\)
+(\(\tfrac23,1\)).
+\item[(b)] For each of them \(\operatorname{Tr}Y=0\) holds exactly for \(s=-\tfrac12\).
+\item[(c)] At \(s=-\tfrac12\) all four anomaly traces (\(\operatorname{Tr}Y\), \(\operatorname{Tr}Y^3\), \(SU(2)^2U(1)\), \(SU(3)^2U(1)\)) vanish
+exactly for \(J=\pm iL_{e_7}\).  For \(J=\pm iR_{e_7}\) one finds \(\operatorname{Tr}Y^3=\pm\tfrac32\) and \(SU(2)^2U(1)=\mp2\), the latter
+summed over both states of each doublet.
+\item[(d)] \(T(iL_{e_7})T^{-1}=-iL_{e_7}\): the two admissible choices are frame images of each other.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+By explicit matrices and exact fractions (script \texttt{llm/k84\_test\_h28.py}).  The commutant consists of scalars on the four \(Q\)-sectors,
+because each sector is colour-irreducible with its own charge; a Hermitian involution there is a choice of sign per sector, and the rank and
+image conditions leave four.  \(\square\)
+
+\paragraph{Verdict and reading.}
+H28a--d are confirmed.
+\begin{enumerate}[leftmargin=2em]
+\item Under the assumptions of the setting the choice of v4.9.0-r42 is forced up to the frame.  Colour and charge conservation allow
+four chirality projectors, the gravitational anomaly fixes the hypercharge offset \(-\tfrac12\), and the remaining anomalies select left
+multiplication by \(e_7\).  What remains is the Standard Model and its frame mirror.  The selection is again one of left against right.
+\item The setting itself stays an assumption: the weak \(SU(2)\) on the right of \(\HH\), \(Q_{\rm em}=T_3+Q+s\), and the projector acting on
+\(\mathbb C\otimes\OO\).  Once these are made, nothing is left to choose.
+\item This is no prediction; that the Standard Model is anomaly-free is known.  New is only that, in this structure, anomaly cancellation
+alone decides between left and right.
+\end{enumerate}
+
+\subsection*{v4.9.0-r43 status in the three frames}
+\label{subsec:v490-r43-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r43.1(a)--(c) & stated in M; the anomaly traces are the same in T, where \(J\mapsto-J\) (d)\\
+r43.1(d) & relates M and T; P not evaluated\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r43 register entries}
+\label{subsec:v490-r43-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r43\\
+\midrule
+choice of \(J\) in r42 & forced up to the frame by colour, charge conservation and anomaly cancellation (r43.1)\\
+hypercharge offset \(-\tfrac12\) & forced by the gravitational anomaly (r43.1(b))\\
+weak \(SU(2)\) on the right, \(Q_{\rm em}=T_3+Q+s\) & assumptions, not derived\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r43 ledger and guard update}
+\label{subsec:v490-r43-ledger-guard}
+
+\[
+R_{\rm an}^{v490\text{-}r43}=(1,1,0)
+\]
+for (chirality projector fixed up to the frame; hypercharge offset fixed; placement of the weak \(SU(2)\) not derived).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r43,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r43}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
