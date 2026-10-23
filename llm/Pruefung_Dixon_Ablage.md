@@ -85,3 +85,9 @@ werden“.
 | Tripel = (Im ℍ)⊗𝕆, Farbe als Teilmaske, A₄ | algebraisch, in R gezeigt; M/T frame-frei unter der Annahme J_B = ℂ-Konjugation; P nicht ausgewertet |
 | gemischte Readouts nie ausgewertet | Bestandsaufnahme, frame-unabhängig |
 | port-gewichtete Aggregation (künftig) | M und T vertauscht, P ohne Brechung |
+
+## 7. Lean
+
+Die Befunde 3 und 4 sind in `formal/QSFormal/Dixon.lean` bewiesen (Lean 4.35.0, ohne Mathlib, nur Standard-Axiome), dazu die
+Polynom-Kerne von r26.1 und r32.1. Nicht formalisiert: der abstrakte Isomorphismus zu A₄ und der Schritt vom negativen
+Hauptminor zum Sattelpunkt.

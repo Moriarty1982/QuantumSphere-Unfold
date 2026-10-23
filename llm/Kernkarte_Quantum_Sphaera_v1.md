@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v9.2
+# Kernkarte Quantum Sphaera — v9.3
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1921,6 +1921,13 @@ die Wirkung von J_B auf der Ablage (natürliche Wahl ℂ-Konjugation → Masken 
 „gemischter Readout“ (QAM) ≠ „gemischter Zustand“ (P maximal gemischt). Port-gewichtete Aggregation wäre frame-abhängig
 (M (0,768; 0,232), T vertauscht, P ohne Brechung); eine Vorab-Notiz muss den Frame der Massen-Ablesung festlegen.
 
+**K77.7 Lean (`formal/QSFormal/Dixon.lean`, ohne Mathlib, Lean 4.35.0).** Bewiesen: Konjugation ist Anti-Automorphismus, kein
+Automorphismus; Triality-Form zyklisch und unter (x̄,z̄,ȳ) invariant; unter den 24 Vorzeichen-Permutationen in SO(3) sind genau
+die 12 aus `a4` (gerade Permutation, gerade Vorzeichenzahl) Symmetrien (`inv_iff`); 64 Dixon-Kanäle, Tripel-Maske 24 Bits,
+Farbmaske 9 Bits als Teilmaske; Polynom-Kerne von r26.1 (linear in e₂) und r32.1 (auf der Achse linear in e₃), Hauptminor −b² < 0;
+unter Annahme J_B = ℂ-Konjugation: Masken erhalten. Nicht formalisiert: abstrakter Isomorphismus zu A₄, Schritt Hauptminor ⇒ Sattel
+(Analysis). Nur Standard-Axiome (propext, Classical.choice, Quot.sound), kein sorry, kein native_decide.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -2053,6 +2060,7 @@ die Wirkung von J_B auf der Ablage (natürliche Wahl ℂ-Konjugation → Masken 
 - v9.0 (2026-10-23): K76 Vorab-Test H17 (Realteil-Invarianten auf dem Tripel-Raum) widerlegt; Theoremlet r32.1 (auf der Achse linear in e₃, Sattelpunkte); Companion-Runde v4.9.0-r32.
 - v9.1 (2026-10-23): K77 Prüfung Dixon-Ablage (Tripel = (Im ℍ)⊗𝕆, gemeinsame Symmetrie A₄, Lorentz-Konflikt) und Bestandsaufnahme gemischte Readouts (angelegt, nie ausgewertet).
 - v9.2 (2026-10-23): K77.6 Frame-Einordnung der Dixon-Prüfung (Grammatik = Bezugsframe R; M/T offen bis J_B auf der Ablage festgelegt; Namensfalle gemischter Readout/Zustand; port-gewichtete Brechung frame-abhängig).
+- v9.3 (2026-10-23): K77.7 Lean-Modul `formal/QSFormal/Dixon.lean` (Triality-Symmetrien, A₄-Charakterisierung, Dixon-Masken, Kerne von r26.1/r32.1).
 
 ---
 
