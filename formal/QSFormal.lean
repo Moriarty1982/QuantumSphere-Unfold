@@ -8,3 +8,5 @@ import QSFormal.Boost
 import QSFormal.Entropy
 import QSFormal.ClockBound
 import QSFormal.Frames
+import QSFormal.Dixon
+import QSFormal.Lesarten

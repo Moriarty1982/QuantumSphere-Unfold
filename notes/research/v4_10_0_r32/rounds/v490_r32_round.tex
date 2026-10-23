@@ -1,0 +1,121 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r32 Source-Only: Pre-Registered Test of Real-Part Invariants on the Triple Space}
+\addcontentsline{toc}{section}{v4.9.0-r32 Source-Only: Pre-Registered Test of Real-Part Invariants on the Triple Space}
+\label{sec:v490-r32-real-part-triple-space}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer r26 showed that no potential in the slot norms up to degree six has a minimum with three distinct norms.  The real
+parts \(r_k=\operatorname{Re}a_k\) of the three slots are invariant under \(G_2\) one by one and add invariants that
+the norms do not see, among them \(L=\sum r_k\), which equals \(\sum n_k\) on the real axis.  This layer records the
+pre-registered test H17 (note \texttt{llm/Vorab\_Notiz\_H17\_Realteile\_Tripelraum.md}, commit \texttt{2a7271a}, fixed
+before computing; the author's computer was not reachable, so the note was committed in the working container and
+sent to the author before the computation).  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r32 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r32 setting and hypotheses}
+\label{subsec:v490-r32-setting}
+
+With \(R_2=\sum r_k^2\) and the notation of r26, the fixed family adds all real-part invariants up to degree two to the
+potential of v4.8.0-r16:
+\[
+V_R=-S+\beta S^2+\gamma Q-\kappa t-\mu L-\nu R_2-\lambda L^2 ,
+\]
+bounded below if and only if \(\beta>0\) and \(\beta+\gamma>0\).  It is invariant under \(G_2\) (diagonal) and the
+generation \(S_3\).  H17a: for part of a fixed distribution (\(N=2000\)) the global minimum over all 24 real
+coordinates of \(\OO^3\) has three distinct non-zero norms.  H17b: for some parameters the charged-lepton triple is the
+global minimum.  H17c: \(K=2/3\) is singled out among such minima (at least half within \(0.01\)).
+
+\subsection*{v4.9.0-r32 results}
+\label{subsec:v490-r32-results}
+
+Script \texttt{llm/k69\_test\_h17.py}.  Global minima over the distribution: 1483 with equal norms, 517 with a degenerate
+pair, \textbf{none} with three distinct norms; 1629 of the 2000 lie on the real axis, where \(G_2\) is unbroken.  For the
+lepton triple, the family given by Vieta's relations on the real axis was scanned on a \(21\times4\times7\times3\) grid:
+696 points unbounded, 1061 with a negative Hessian eigenvalue, 7 local but not global, \textbf{none} global.
+
+\paragraph{Verdict.}
+H17a, H17b and H17c are refuted under the fixed criterion.
+
+\paragraph{Theoremlet v4.9.0-r32.1 (found after the verdict).}
+On the real axis \(a_k=n_k\) one has \(t=e_3=n_1n_2n_3\), \(R_2=S\), \(L=e_1\), and
+\[
+V_R=A(e_1,e_2)+e_3\,(4\gamma e_1-\kappa).
+\]
+At a critical point on the axis with three distinct norms the Hessian in the coordinates \((e_1,e_2,e_3)\) has a zero
+in position \((3,3)\) and the entry \(4\gamma\) in position \((1,3)\); for \(\gamma\neq0\) it is a saddle in
+\(\OO^3\).  More generally, every symmetric polynomial in \(n\) of degree at most five is linear in \(e_3\), so its
+critical points with three distinct values are saddles unless the coefficient of \(e_3\) is stationary there.
+
+\paragraph{Proof sketch.}
+\(Q=e_1^4-4e_1^2e_2+2e_2^2+4e_1e_3\) and \(S=e_1^2-2e_2\); \(e_3^2\) has degree six.  For distinct \(n_k\) the map
+\(n\mapsto(e_1,e_2,e_3)\) is a local diffeomorphism, and at a critical point the Hessian transforms by congruence.  The
+\(2\times2\) minor in \((e_1,e_3)\) is \(-16\gamma^2<0\).  A saddle of the restriction to the axis is a saddle of the
+full potential.  Checked symbolically, and with 50 digits at the seven grid points that passed the numerical test for a
+local minimum: each has a negative eigenvalue of about \(10^{-9}\) relative to the largest, below the fixed tolerance
+\(10^{-8}\) (script \texttt{llm/k70\_achse\_e3.py}).  \(\square\)
+
+\paragraph{Reading.}
+The real parts move the obstruction of r26.1 from \(e_2\) to \(e_3\); they do not remove it.  On the axis a minimum with
+three distinct norms generically needs degree at least six, without real parts degree at least eight, each with
+several free coefficients, so the lepton ratios could at best be fitted.  Most minima lie on the real axis and leave
+\(G_2\) unbroken; the colour group is not selected there.  Off the axis no corresponding statement is shown; numerically
+no minimum with three distinct norms occurred.  Within natural \(G_2\times S_3\) invariants the generation symmetry gives
+at most two distinct masses; the next testable route is an explicit breaking of \(S_3\).
+
+\subsection*{v4.9.0-r32 status in the three frames}
+\label{subsec:v490-r32-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+H17 verdict, r32.1 & frame-free: statements about octonions and polynomial invariants, no frame quantity enters\\
+mass reading \(\sqrt{m_k}\propto n_k\) & matter frame M (charged-lepton masses, as the Koide phase in v4.9.0-r22); not evaluated in T or P\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r32 register entries}
+\label{subsec:v490-r32-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r32\\
+\midrule
+mass hierarchy from natural invariants on the triple space (v4.8.0-r16, r26) & refuted also with real-part invariants up to degree two (H17); obstruction moved from \(e_2\) to \(e_3\) (r32.1)\\
+generations as triality slots, colour \(SU(3)\subset G_2\) (v4.8.0-r14, r15) & unchanged as a proposal; most minima here leave \(G_2\) unbroken, so the colour group is not selected by them\\
+mass mechanism & open; next testable route: explicit breaking of the generation \(S_3\) with a pre-registered parameter budget\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r32 ledger and guard update}
+\label{subsec:v490-r32-ledger-guard}
+
+\[
+R_{\rm cg}^{v490\text{-}r32}=(0,0,1)
+\]
+for (separation consistent with \(G_2\); carrier of the triality slots identified; mass mechanism open, with norm and
+real-part invariants of low degree excluded).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r32,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r32}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
