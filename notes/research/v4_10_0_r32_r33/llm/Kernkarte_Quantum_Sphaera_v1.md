@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v9.6
+# Kernkarte Quantum Sphaera — v9.7
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -80,6 +80,7 @@ für künftige JUNO-Daten festgeschrieben (nachträglich gefunden). H10 Assoziat
 Funktionen auf dem Tripel-Raum (K32) — widerlegt: bis Grad 4 höchstens zwei verschiedene Normen. H16 Grad 6 (K70) — widerlegt: bis Grad 6 ist jeder
 kritische Punkt mit drei verschiedenen Normen ein Sattel; Minima mit Hierarchie brauchen Grad ≥ 8. H17 Realteil-Invarianten (K76) — widerlegt: auf der reellen
 Achse linear in e₃ = n₁n₂n₃, wieder nur Sattelpunkte; natürliche G₂ × S₃-Invarianten geben höchstens zwei verschiedene Massen.
+H18 Massen aus links-invarianten Etiketten an den Minima (K78) — widerlegt: Winkel flach oder Plätze parallel.
 Regel: Jede neue Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 **Farbe und Generation (K25, K28):** Im Companion liegen beide auf demselben Triplett e₄, e₅, e₆. Vorschlag (V):
@@ -1952,6 +1953,24 @@ A⁽ⁱ⁾, A⁽ʲ⁾, A⁽ᵏ⁾ = drei links-invariante Etiketten **auf der re
 Reihenfolge umgekehrt (vgl. x ↦ 1/x der Konvention F; nur Beobachtung). Damit hat der Weg aus K77.9 eine konkrete Form; eine
 Massen-Lesart über μ ist neue Vermutung, braucht Vorab-Notiz; kein Massenvergleich gerechnet. μ sind G₂-invariant (Summen über Spalten).
 
+### K78 — Vorab festgelegter Test H18 und Companion-Runde v4.9.0-r33: links-invariante Etiketten (2026-10-23)
+
+`sec:v490-r33-left-invariant-labels`, Snippet `llm/v490_r33_round.tex`. Vorab-Notiz `llm/Vorab_Notiz_H18_Links_invariante_Massen.md`
+(Commit 6130814), Ergebnis `llm/Ergebnis_H18_Links_invariante_Massen.md`, Skripte `llm/k73_test_h18.py`, `llm/k74_nachkontrolle_h18.py`.
+
+**K78.1 (M).** Lesart m_k ∝ √μ_k an den globalen Minima der geprüften Potentiale. Familie A (H11, 205 Punkte): alle unbestimmt.
+Familie B (H17, 500 Punkte): 428 unbestimmt, 51 gleich, 21 zweierlei. Drei bestimmte, verschiedene μ: keine.
+
+**K78.2 Urteil (S).** H18a, H18b **widerlegt**.
+
+**K78.3 Nachkontrolle (M).** A: Der Winkel zwischen zwei Plätzen ist eine echte flache Richtung (μ_max/S² zwischen 0,15 und 0,22 bei
+gleicher Tiefe), weil V die Winkel nur über t sieht. B: Die unbestimmten Fälle haben μ ≈ 0 (parallele Plätze auf der reellen Achse).
+
+**K78.4 Einordnung.** Die Runde r33 hält K77 (Dixon-Ablage, A₄ = 2T-Konjugation, J_B auf der Ablage, D₄, links-invariante Etiketten)
+und H18 fest. Die Etiketten lösen den Lorentz-Konflikt für die Etiketten, nicht für Massen; sie erben das Auswahlproblem. Nötig wäre ein
+Prinzip, das die Winkel zwischen den Plätzen festlegt. Vierter widerlegter Test desselben Ansatzes (H11, H16, H17, H18). Build 1197 Seiten,
+Audit gegen r32 ohne harte Abweichung. R_cg^{r33} = (0,0,1); Guards unverändert, β₄ unverbraucht.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -2088,6 +2107,7 @@ Massen-Lesart über μ ist neue Vermutung, braucht Vorab-Notiz; kein Massenvergl
 - v9.4 (2026-10-23): K77.8 J_B = R ∘ T auf der Dixon-Ablage in Lean (σ_x der a-Hälften, Normen frame-frei, t ↦ −i t̄); K77.6 korrigiert (ℂ-Konjugation = T).
 - v9.5 (2026-10-23): K77.9 Readout-abhängige Lesarten des ℂ-Faktors (Lean `Lesarten.lean`); Korrektur: nur D₄ erhält das a-Etikett; ℍ: A₄ = Konjugation mit 2T, Lage des Lorentz-Konflikts präzisiert.
 - v9.6 (2026-10-23): K77.10 Links-invariante Etiketten: Im-Komponenten der quaternionischen Gram-Größe, μ_i = Fläche der anderen beiden Plätze, Rechts-2T zyklisch, umgekehrte Reihenfolge.
+- v9.7 (2026-10-23): K78 Vorab-Test H18 (links-invariante Etiketten an den Minima) widerlegt; Companion-Runde v4.9.0-r33.
 
 ---
 
