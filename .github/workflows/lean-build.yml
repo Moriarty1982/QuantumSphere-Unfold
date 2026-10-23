@@ -69,6 +69,14 @@ jobs:
           #print axioms QSFormal.Lesarten.d4_length
           #print axioms QSFormal.Lesarten.gram_left
           #print axioms QSFormal.Lesarten.lagrange8
+          #print axioms QSFormal.Ladungen.unique_extension
+          #print axioms QSFormal.Ladungen.conj_left_right
+          #print axioms QSFormal.Ladungen.trY_zero_iff
+          #print axioms QSFormal.Ladungen.anomalies_left
+          #print axioms QSFormal.Ladungen.anomalies_right
+          #print axioms QSFormal.Ladungen.generation_content
+          #print axioms QSFormal.Ladungen.mask_norms
+          #print axioms QSFormal.Ladungen.pow_two_mod_three
           EOF
           lake env lean AxiomCheck.lean | tee axioms.log
           if grep -qE "sorryAx|ofReduceBool" axioms.log; then

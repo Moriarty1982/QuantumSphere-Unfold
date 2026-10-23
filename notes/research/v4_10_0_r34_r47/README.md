@@ -43,6 +43,7 @@ decision 2026-10-23), applied to `sources/research/parts/v470/10_sphaera_and_phy
 | `llm/Ergebnis_H19` … `H32` | results (German) |
 | `llm/k75_test_h19.py` … `k88_test_h32.py`, `*_out.txt` | check scripts and their outputs |
 | `llm/revision_spec_v490_r36.py` | patch specification of the two status notes |
+| `../../../formal/QSFormal/Ladungen.lean` | Lean 4 (core only, no Mathlib): σ is the unique colour rotation among 48 extensions (r36); c L_e7 c = −R_e7 for all x (r45); 6Q from the sector signs, the quantum numbers of one generation, the anomaly traces for the four chirality choices and Tr Y = 0 ⇔ s = −½ (r42, r43); the mask weights, their antisymmetry and Eisenstein norms (r47); 2^j mod 3 and the mask count (r39) |
 
 Source of the carried blocks: `Quantum_Sphaera_Companion_v4_8_0_source.tex` after layer v4.9.0-r47, SHA256 prefix `96135ff466dc0cc6`,
 lines 72640–74332. Block SHA256 prefixes: r34 `1da79f62`, r35 `4053f9b1`, r36 `99a1bfc0`, r37 `4a0788de`, r38 `4a72d584`,
@@ -50,4 +51,5 @@ r39 `d8f5b9c0`, r40 `9e7c8c13`, r41 `5869daaf`, r42 `229adf2b`, r43 `9cad1a52`, 
 
 Build of the candidate with `.github/scripts/qsc_latex_build.py --source-dir sources/research` under TeX Live, against the same build
 of `main`: 1224 → 1259 pages, 3802 → 3883 labels, 0 undefined references or citations, 0 duplicate labels, no rerun warning,
-overfull boxes unchanged (45). Guard linter over the new layers: 0 hits.
+overfull boxes unchanged (45). Guard linter over the new layers: 0 hits. `Ladungen.lean` was checked with Lean 4.35.0
+without Mathlib (standard axioms only, no `sorry`); the full `lake build` with Mathlib runs in the Lean workflow.
