@@ -1,0 +1,12 @@
+H25b: klassische Kontraktion omega_a X^a unter den Frames: {'R': 'invariant', 'T': 'konjugiert', 'J_B': 'konjugiert'} -> bestaetigt
+
+H25c: bilineare Form q: Abweichung von (R: -q, T: conj q, J_B: -conj q) {'R': '0e+00', 'T': '0e+00', 'J_B': '0e+00'}; D4 hat 8 Elemente; hermitesche Form h unter allen invariant: 1e-14 -> bestaetigt
+
+H25d: Zentralisator von su(3)_c in g: Dimension 2, abelsch 8e-16; auf W: L_q und R_q je su(2) (0e+00, 0e+00), vertauschen untereinander (0e+00) und mit su(3)_c, D4 -> bestaetigt
+
+H25a: vordere (D4, L_q) und hintere (R_q, su(3)_c) Abbildungen vertauschen auf W: 0e+00 -> bestaetigt (Kontrolle)
+
+H25e: Projektionen von g auf die Plaetze injektiv (Rang [np.int64(28), np.int64(28), np.int64(28)]): kein Element wirkt nur auf einem Spinor-Platz -> bestaetigt (Kontrolle)
+Nachkontrolle Platz 1: Rang von Zentralisator + {L_e7, R_e7} = 2 (2 = gleicher Raum)
+Nachkontrolle Platz 2: Rang von Zentralisator + {L_e7, R_e7} = 2 (2 = gleicher Raum)
+Nachkontrolle Platz 3: Rang von Zentralisator + {L_e7, R_e7} = 2 (2 = gleicher Raum)

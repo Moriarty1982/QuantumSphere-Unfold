@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v10.4
+# Kernkarte Quantum Sphaera — v10.5
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -96,6 +96,8 @@ Perioden der Struktur {1, 2, 3, 4, 6, 12}, keine ausgezeichnet. „Triole“ ben
 Spin(7); Materie, Tachyon = Spinor-Plätze, gleich und vertauscht. 120°- und Frame-Triole = zwei Ansichten derselben S₃.
 **Zoom und gemischte Readouts (K85):** H24 — unter Hilbert-Shift-Zoom (Schritt 2^j) bleibt ab Stufe 2 nur der Generationenkreis sichtbar,
 Orientierung wechselt mit der Stufe (= ρ-Spiegel); Frames grob, Generationen tief. Gemischte Masken: Σ (Kontraktion) 1 oder 3, ∨ (Maske) 3.
+**Zweiseitige Kontraktion über Frames (K86):** H25 — Regel 1 nur bis auf Konjugation (T, J_B), bilinearer Vergleich wechselt unter z ↦ iz das
+Vorzeichen (m² ↦ −m²), hermitesch frame-blind. Kein 𝔰𝔲(2) der Triality vertauscht mit Farbe; Zentralisator = span(L_{e₇}, R_{e₇}) (Ladung).
 Regel: Jede neue Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 **Farbe und Generation (K25, K28):** Im Companion liegen beide auf demselben Triplett e₄, e₅, e₆. Vorschlag (V):
@@ -2109,6 +2111,21 @@ jede zweite Stufe im ρ-gespiegelten Frame. Textlesart: Selektor-Kontraktion χ_
 gerade mit ungerader Stufe kontrahiert gibt τ³ = 1 (blind für den Kreis). Vordere Indizes = Frame, im Hauptteil nie variiert (Ein-Frame-Problem).
 Kein Guard verbraucht.
 
+### K86 — Vorab festgelegter Test H25 und Companion-Runde v4.9.0-r40: zweiseitige Kontraktion über Frames, schwache SU(2) (2026-10-23)
+
+Autorhinweis (2026-10-23): Die neue Kontraktion ist noch nie benutzt oder getestet worden; es wird nicht erwartet, dass sie sofort
+funktioniert. Vorab-Notiz `llm/Vorab_Notiz_H25_Zweiseitige_Kontraktion_Frames.md` (Commit d1aba48), Skript `llm/k81_test_h25.py`,
+Ausgabe `llm/k81_out.txt`, Ergebnis `llm/Ergebnis_H25_Zweiseitige_Kontraktion_Frames.md`, Runde `sec:v490-r40-two-sided-frames`.
+
+**K86.1 (M).** Vorderseite = ℂ-Faktor mit R (linear), T, J_B (antilinear). Regel 1 ω_α X^α: R-invariant, unter T, J_B konjugiert (H25b).
+Regel 2 bilinear q: R ↦ −q, T ↦ q̄, J_B ↦ −q̄; hermitesch h D₄-invariant (H25c). Vorne/hinten vertauschen auf W (H25a, Kontrolle).
+**K86.2 (M).** Zentralisator von 𝔰𝔲(3)_c in der Triality-Algebra: dim 2, abelsch (H25d); *Nachkontrolle:* = span(L_{e₇}, R_{e₇}) auf jedem Platz,
+die Erzeuger von Q. Auf W: L_q, R_q zwei 𝔰𝔲(2), vertauschen mit Farbe und D₄. Kein Element wirkt nur auf einem Spinor-Platz (H25e).
+**K86.3 (S).** Notation ist frame-kovariant, nicht frame-invariant; bilinearer Vergleich trägt das tachyonische Vorzeichen, hermitescher ist
+frame-blind (inhaltliche Wahl). Triality-Ebene trägt Farbe und Ladung, keine schwache Wechselwirkung; schwache SU(2) nur im ℍ-Faktor
+(links oder rechts); Lesart „schwache SU(2) = eine Seite“, nicht gezeigt; ℍ-Überbelegung bleibt. Vorschlag Frame-Klausel für Regel 1/2
+(Autorentscheidung). Kein Guard verbraucht.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -2253,6 +2270,7 @@ Kein Guard verbraucht.
 - v10.2 (2026-10-23): K83 Vorab-Test H22 und Runde v4.9.0-r37: Triality-Form = Spin(8)-Triality, Farbe in der Fixgruppe, Perioden {1,…,12}; H22d ohne Verbot.
 - v10.3 (2026-10-23): K84 Vorab-Test H23 und Runde v4.9.0-r38: Frame-Triole M/P/T als Transposition der Triality-Plätze, alle bestätigt.
 - v10.4 (2026-10-23): K85 Vorab-Test H24 und Runde v4.9.0-r39: Ketten unter Zoom und gemischten Readouts, alle bestätigt; Autorhinweis zur neuen Kontraktion.
+- v10.5 (2026-10-23): K86 Vorab-Test H25 und Runde v4.9.0-r40: zweiseitige Kontraktion über Frames kovariant, nicht invariant; keine schwache SU(2) in der Triality.
 
 ---
 
