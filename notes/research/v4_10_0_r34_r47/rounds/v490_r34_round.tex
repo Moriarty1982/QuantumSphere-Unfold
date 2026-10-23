@@ -1,0 +1,118 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r34 Source-Only: Charges of One Generation from the Dixon Storage}
+\addcontentsline{toc}{section}{v4.9.0-r34 Source-Only: Charges of One Generation from the Dixon Storage}
+\label{sec:v490-r34-charges-dixon}
+% ============================================================================
+
+\paragraph{Purpose.}
+An inventory of the standard-model features against the structure (\texttt{llm/Bestandsaufnahme\_Struktur\_Standardmodell.md})
+found that the Companion derives no charges.  This layer records the pre-registered test H19 (note
+\texttt{llm/Vorab\_Notiz\_H19\_Ladungen\_Dixon.md}, commit \texttt{1e60410}, fixed before computing): does the charge
+construction from a number operator on \(\mathbb C\otimes\OO\) (C.~Furey, Phys.\ Lett.\ B, 2015) work with the colour group
+of the Companion, and what do the frames do with the charges?  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r34 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r34 construction}
+\label{subsec:v490-r34-construction}
+
+Let \(L_a\) be left multiplication by \(e_a\) on \(\OO\) (Cayley--Dickson convention of v4.8.0-r12), and let \(i\) be the
+\(\mathbb C\) factor of the Dixon storage, read as the quantum-mechanical unit.  The colour group is
+\(SU(3)=\operatorname{Stab}_{G_2}(e_7)\) as in Theorem~\ref{thm:octonion-SU3}; in this convention \(e_7e_4=-e_3\),
+\(e_7e_5=-e_2\), \(e_7e_6=e_1\).  Put
+\[
+\alpha_a=\tfrac12\bigl(L_{e_a}+i\,L_{e_7e_a}\bigr)\quad(a=4,5,6),\qquad N=\sum_a\alpha_a^\dagger\alpha_a,\qquad Q=N/3 .
+\]
+The Clifford relations of the \(L_a\) give \(\alpha_a^2=0\) and \(\{\alpha_a,\alpha_b^\dagger\}=\delta_{ab}\), so \(N\) is a
+number operator with eigenvalues \(0,1,2,3\) of multiplicities \(1,3,3,1\).  These multiplicities are forced by the algebra
+and are not a prediction.
+
+\subsection*{v4.9.0-r34 results}
+\label{subsec:v490-r34-results}
+
+\paragraph{Theoremlet v4.9.0-r34.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Every element of \(\operatorname{Stab}_{G_2}(e_7)\) commutes with \(Q\).
+\item[(b)] The eigenspaces \(Q=0\) and \(Q=1\) are colour singlets in \(\operatorname{span}_{\mathbb C}(1,e_7)\), spanned by
+\(1\pm i\,e_7\).  The eigenspaces \(Q=\tfrac13\) and \(Q=\tfrac23\) are irreducible colour triplets in
+\(\operatorname{span}_{\mathbb C}(e_1,\dots,e_6)\), conjugate to each other and not self-conjugate.
+\item[(c)] Neither the real span of \(e_4,e_5,e_6\) nor \(e_7\) alone is an eigenspace of \(Q\); the eigenstates combine
+\(e_a\) with \(e_7e_a\), and \(1\) with \(e_7\).
+\item[(d)] On the \(\mathbb C\) factor, \(TQT^{-1}=1-Q\) and \(J_BQJ_B^{-1}=1-Q\) for \(J_B=R_{\pi/2}\circ T\), while
+\(R_{\pi/2}QR_{\pi/2}^{-1}=Q\).
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a)--(c) by explicit matrices on \(\mathbb C^8\): the derivations of \(\OO\) form a 14-dimensional space, those with
+\(D(e_7)=0\) an 8-dimensional one; commutators with \(Q\), invariance of the eigenspaces, commutants and characters were
+computed (script \texttt{llm/k75\_test\_h19.py}, deviations at most \(10^{-14}\)).  (d) \(T\) and \(J_B\) are antilinear, so they
+conjugate \(Q\) to \(\bar Q\); \(T\) sends \(\alpha_a\) to \(-\alpha_a^\dagger\), hence \(\bar N=3-N\).  \(\square\)
+
+\paragraph{Verdict and reading.}
+H19a (a), H19b (b) and H19d (d) are confirmed; H19c, the literal assignment of the Companion, is refuted; H19e (charges equal on
+the three slots of \((\operatorname{Im}\HH)\otimes\OO\)) holds by the tensor structure.  (a) and (b) reproduce Furey's result in
+the Companion's convention: the charge pattern of one generation, two colourless states with \(Q=0,1\) and two conjugate colour
+triplets with \(Q=\tfrac13,\tfrac23\) (in Furey's reading \(\nu,\bar d,u,e^+\)), follows from the storage.  This is a consistency
+check, not a prediction about nature.  (c) shows that Theorem~\ref{thm:octonion-SU3} and Theorem~\ref{thm:three-generations}
+place colour and \(\nu_R\) on the wrong, real, subspaces.  (d) bears on the author's remark that Theorem~\ref{thm:SM} was
+developed in one frame: the frame change exchanges the charge sectors, \(Q\leftrightarrow1-Q\).  The spectrum and the colour
+structure are frame-free; which state carries which charge is not.  The map is not charge conjugation \(Q\mapsto-Q\) but charge
+conjugation followed by a shift of one unit, and it comes from the time-reversal part \(T\) of \(J_B\).  A charge statement
+such as the \(U(1)\) line of Theorem~\ref{thm:SM} therefore has to name its frame.  Hypercharge and chirality are not
+addressed.
+
+\subsection*{v4.9.0-r34 status in the three frames}
+\label{subsec:v490-r34-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r34.1(a), (b), (c) & stated in M, with the \(\mathbb C\) factor read as the quantum-mechanical unit; the spectrum and the colour structure are the same in T\\
+r34.1(d) & relates M and T: sectors exchanged, \(Q\leftrightarrow1-Q\); P (equal weight on both halves) is not evaluated\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r34 register entries}
+\label{subsec:v490-r34-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r34\\
+\midrule
+charges of one generation & follow from the Dixon storage under the reading of the \(\mathbb C\) factor as quantum-mechanical unit (r34.1(a), (b)); frame-dependent assignment (r34.1(d))\\
+Theorem~\ref{thm:octonion-SU3}, Theorem~\ref{thm:three-generations} & colour on the real span of \(e_4,e_5,e_6\) and \(\nu_R\) on \(e_7\) refuted (r34.1(c)); candidate for a status note\\
+Theorem~\ref{thm:SM} & charge line must name its frame (r34.1(d)); hypercharge and chirality open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r34 ledger and guard update}
+\label{subsec:v490-r34-ledger-guard}
+
+\[
+R_{\rm ch}^{v490\text{-}r34}=(0,0,1)
+\]
+for (charge pattern of one generation consistent with the colour group; frame dependence of the charge assignment fixed;
+hypercharge and chirality open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r34,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r34}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.

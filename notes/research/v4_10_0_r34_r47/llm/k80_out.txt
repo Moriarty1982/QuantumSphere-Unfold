@@ -1,0 +1,9 @@
+H24a: ungerade m <= 63: Laenge auf allen Stufen j <= 11 unveraendert: True; tau^(2^j) = {0: 'tau', 1: 'tau^-1', 2: 'tau', 3: 'tau^-1', 4: 'tau', 5: 'tau^-1', 6: 'tau', 7: 'tau^-1'}; tau^-1 = rho tau rho: True -> bestaetigt
+
+H24b: Zweierketten 2^a: Laenge 2^(a-j) bzw. 1: True; sichtbare Ordnungen in G je Stufe: {0: [1, 2, 3, 4, 6, 12], 1: [1, 2, 3, 6], 2: [1, 3], 3: [1, 3], 4: [1, 3], 5: [1, 3]}; fuer j >= 2 liegt jedes g^(2^j) in <tau>: True -> bestaetigt
+
+H24c: 63 Masken ueber 6 Bits; Lesart Sigma: Laengen [1, 3], eine Generation bei 21 Masken (z. B. S = {0,1}, k = 3); Lesart Vee: Laengen [3]; Kontrolle an tau: True -> bestaetigt
+
+H24d: Formeln fuer alle m <= 64 und 63 Masken, ungerader Anteil unter Lesart Vee erhalten: bestaetigt
+
+H24e: Stufe 0 sieht Frames (2, 4) und Generationen (3), ab Stufe 2 nur Generationen (3) -> bestaetigt
