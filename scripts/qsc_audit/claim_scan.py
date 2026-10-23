@@ -8,13 +8,14 @@ promote, weaken, or rewrite claims.
 from __future__ import annotations
 
 import argparse
+import bisect
 import re
 from dataclasses import dataclass
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 SCANNABLE_SUFFIXES = {".tex", ".md", ".txt"}
-EXCLUDED_DIRS = {".git", ".venv", "venv", "__pycache__", "node_modules"}
+EXCLUDED_DIRS = {".git", ".venv", "venv", "__pycache__", "node_modules", "audits", "build"}  # own reports and build output
 
 CLAIM_PATTERNS: list[tuple[str, str, re.Pattern[str]]] = [
     ("note", "info", re.compile(r"\bnote\b", re.IGNORECASE)),
@@ -44,8 +45,15 @@ def is_scannable(path: Path) -> bool:
     return path.is_file() and path.suffix.lower() in SCANNABLE_SUFFIXES
 
 
+_NL_CACHE: tuple[str, list[int]] | None = None
+
+
 def line_number(text: str, offset: int) -> int:
-    return text.count("\n", 0, offset) + 1
+    """1-based line of `offset`; newline offsets are computed once per text (was quadratic on large sources)."""
+    global _NL_CACHE
+    if _NL_CACHE is None or _NL_CACHE[0] is not text:
+        _NL_CACHE = (text, [m.start() for m in re.finditer("\n", text)])
+    return bisect.bisect_left(_NL_CACHE[1], offset) + 1
 
 
 def clean_excerpt(text: str, start: int, end: int, radius: int = 120) -> str:

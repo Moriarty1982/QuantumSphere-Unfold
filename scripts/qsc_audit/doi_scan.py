@@ -8,6 +8,7 @@ modify repository content.
 from __future__ import annotations
 
 import argparse
+import bisect
 import re
 from collections import defaultdict
 from dataclasses import dataclass
@@ -15,7 +16,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 SCANNABLE_SUFFIXES = {".tex", ".bib", ".md", ".txt", ".yml", ".yaml", ".json"}
-EXCLUDED_DIRS = {".git", ".venv", "venv", "__pycache__", "node_modules"}
+EXCLUDED_DIRS = {".git", ".venv", "venv", "__pycache__", "node_modules", "audits", "build"}  # own reports and build output
 DOI_RE = re.compile(r"10\.5281/zenodo\.\d+")
 
 
@@ -32,8 +33,15 @@ def is_scannable(path: Path) -> bool:
     return path.is_file() and path.suffix.lower() in SCANNABLE_SUFFIXES
 
 
+_NL_CACHE: tuple[str, list[int]] | None = None
+
+
 def line_number(text: str, offset: int) -> int:
-    return text.count("\n", 0, offset) + 1
+    """1-based line of `offset`; newline offsets are computed once per text (was quadratic on large sources)."""
+    global _NL_CACHE
+    if _NL_CACHE is None or _NL_CACHE[0] is not text:
+        _NL_CACHE = (text, [m.start() for m in re.finditer("\n", text)])
+    return bisect.bisect_left(_NL_CACHE[1], offset) + 1
 
 
 def scan() -> list[Occurrence]:
