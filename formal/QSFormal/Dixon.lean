@@ -15,8 +15,10 @@ Formalisiert aus `Quantum_Sphaera_Companion_v4_8_0_source.tex` (Stand v4.9.0-r32
 * r26.1/r32.1: Die Norm-Invarianten bis Grad 6 sind linear in `e₂`; auf der reellen Achse ist `V_R` linear in `e₃`.
   Formalisiert sind die Polynom-Identitäten und das Vorzeichen des 2×2-Hauptminors; der Schritt „Hauptminor < 0 ⇒
   Sattelpunkt“ (Koordinatenwechsel, Kongruenz der Hessematrix) ist Analysis und hier nicht formalisiert.
-* K77.6, nur unter Annahme: Wirkt `J_B` auf der Ablage als Konjugation des ℂ-Faktors, bleibt die Menge der aktiven
-  Kanäle (die Maske) erhalten. Ob `J_B` so wirkt, ist eine Lesart, keine Folgerung.
+* K77.8, unter der Annahme (A_ℂ), dass der ℂ-Faktor der Ablage die Amplitudenebene `z` ist: Mit `J_B = R ∘ T`
+  (v4.9.0-r30.2(b)) ist `J_B` auf der Ablage die Vertauschung der beiden `a`-Hälften. Die Tripel-Maske wandert in die
+  andere Hälfte, Platznormen (Massen-Lesart) sind unter `T`, `R`, `J_B` fest, die Triality-Form geht unter `J_B` in
+  `−i t̄` über (Betrag fest). `T` allein lässt Masken fest, `R² = −1`.
 
 Ohne Mathlib: nur Lean-Kern (`grind`, `decide`).
 -/
@@ -189,16 +191,124 @@ theorem colourMask_popcount : popcount colourMask = 9 := by decide
 theorem colour_sub_triple : colourMask &&& tripleMask = colourMask := by decide
 theorem tripleMask_lt : tripleMask < 2 ^ 64 := by decide
 
-/-! ### Nur unter Annahme (K77.6): `J_B` als Konjugation des ℂ-Faktors -/
+/-! ## Frames auf der Ablage (K77.6, K77.8)
 
-/-- Konjugation des ℂ-Faktors auf einem Trägervektor: Kanäle mit `a = 1` wechseln das Vorzeichen. -/
-def conjC (v : Nat → Int) : Nat → Int := fun i => if i / 32 = 1 then -v i else v i
+Annahme (A_ℂ): Der ℂ-Faktor der Ablage (Index `a`, Basis `1, i`) ist die Amplitudenebene `z` aus v4.8.0-r02/v4.9.0-r30.
+Dann sind nach v4.9.0-r30.2(b) festgelegt: Zeitumkehr `T : z ↦ z̄`, Tachyon-Abbildung `R : z ↦ iz` und
+`J_B = R ∘ T : z ↦ i z̄`. Bewiesen wird, was daraus folgt; die Annahme selbst ist eine Lesart. -/
+
+/-- Partnerkanal: gleicher `(b, c)`, anderes `a`. -/
+def partner (i : Nat) : Nat := if i < 32 then i + 32 else i - 32
+
+/-- `T`: Kanäle mit `a = 1` wechseln das Vorzeichen. -/
+def conjC (v : Nat → Int) : Nat → Int := fun i => if 32 ≤ i then -v i else v i
+/-- `R : z ↦ iz`: `(x, y) ↦ (−y, x)` auf den beiden `a`-Hälften. -/
+def rotC (v : Nat → Int) : Nat → Int := fun i => if i < 32 then -v (i + 32) else v (i - 32)
+/-- `J_B = R ∘ T`. -/
+def jB (v : Nat → Int) : Nat → Int := rotC (conjC v)
 
 theorem conjC_support (v : Nat → Int) (i : Nat) : conjC v i ≠ 0 ↔ v i ≠ 0 := by
   unfold conjC; split <;> omega
 
 theorem conjC_invol (v : Nat → Int) : conjC (conjC v) = v := by
   funext i; unfold conjC; split <;> simp
+
+/-- `R² = −1` (wie r30.2(a): keine Involution). -/
+theorem rotC_sq (v : Nat → Int) (i : Nat) (hi : i < 64) : rotC (rotC v) i = -v i := by
+  unfold rotC
+  by_cases h : i < 32
+  · simp only [h, ite_true]; have : ¬ (i + 32 < 32) := by omega
+    simp only [this, ite_false]; have : i + 32 - 32 = i := by omega
+    rw [this]
+  · simp only [h, ite_false]; have : i - 32 < 32 := by omega
+    simp only [this, ite_true]; have : i - 32 + 32 = i := by omega
+    rw [this]
+
+/-- `J_B = R ∘ T` ist auf der Ablage die reine Vertauschung der `a`-Hälften (σ_x), ohne Vorzeichen. -/
+theorem jB_eq_swap (v : Nat → Int) (i : Nat) (hi : i < 64) : jB v i = v (partner i) := by
+  unfold jB rotC conjC partner
+  by_cases h : i < 32
+  · simp only [h, ite_true]; have : 32 ≤ i + 32 := by omega
+    simp only [this, ite_true, Int.neg_neg]
+  · simp only [h, ite_false]; have : ¬ (32 ≤ i - 32) := by omega
+    simp only [this, ite_false]
+
+theorem jB_invol (v : Nat → Int) (i : Nat) (hi : i < 64) : jB (jB v) i = v i := by
+  rw [jB_eq_swap _ _ hi, jB_eq_swap _ _ (by unfold partner; split <;> omega)]
+  have hp : partner (partner i) = i := by unfold partner; split <;> split <;> omega
+  rw [hp]
+
+/-- Masken unter `J_B`: Hälften vertauscht. -/
+def maskJB (m : Nat) : Nat := ((m % 2 ^ 32) <<< 32) ||| (m >>> 32)
+
+-- Unter `T` ist jede Maske fest: `conjC_support`.
+theorem maskJB_triple : maskJB tripleMask = tripleMask <<< 32 := by decide
+theorem maskJB_disjoint : tripleMask &&& maskJB tripleMask = 0 := by decide
+theorem maskJB_colour : maskJB colourMask = colourMask <<< 32 := by decide
+theorem maskJB_popcount : popcount (maskJB tripleMask) = 24 := by decide
+
+/-! ### Komplexifiziertes Tripel: Normen und Triality-Form unter `T`, `R`, `J_B` -/
+
+namespace O
+def add (x y : O) : O := ⟨Q.add x.p y.p, Q.add x.q y.q⟩
+def sub (x y : O) : O := ⟨Q.sub x.p y.p, Q.sub x.q y.q⟩
+def nsq (x : O) : Int := x.p.a^2 + x.p.b^2 + x.p.c^2 + x.p.d^2 + x.q.a^2 + x.q.b^2 + x.q.c^2 + x.q.d^2
+end O
+
+/-- Element von ℂ ⊗ 𝕆: `u + i w`. -/
+structure CO where
+  (u w : O)
+
+namespace CO
+def mul (x y : CO) : CO := ⟨O.sub (O.mul x.u y.u) (O.mul x.w y.w), O.add (O.mul x.u y.w) (O.mul x.w y.u)⟩
+def T (x : CO) : CO := ⟨x.u, O.neg x.w⟩
+def R (x : CO) : CO := ⟨O.neg x.w, x.u⟩
+def JB (x : CO) : CO := R (T x)
+/-- Norm des Platzes: `|u|² + |w|²`. -/
+def nsq (x : CO) : Int := O.nsq x.u + O.nsq x.w
+end CO
+
+/-- Komplexe Triality-Form `t_ℂ = Re_𝕆((xy)z) ∈ ℤ[i]`, als Paar (Realteil, Imaginärteil). -/
+def tC (x y z : CO) : Int × Int := let r := CO.mul (CO.mul x y) z; (r.u.re, r.w.re)
+
+theorem JB_eq (x : CO) : CO.JB x = ⟨x.w, x.u⟩ := by
+  obtain ⟨⟨⟨a0,a1,a2,a3⟩,⟨a4,a5,a6,a7⟩⟩, ⟨⟨b0,b1,b2,b3⟩,⟨b4,b5,b6,b7⟩⟩⟩ := x
+  simp [CO.JB, CO.R, CO.T, O.neg, Q.neg]
+
+/-- Massen-Lesart `√m ∝ n_k`: Die Platznormen sind unter `T`, `R` und `J_B` fest. -/
+theorem nsq_T (x : CO) : (CO.T x).nsq = x.nsq := by
+  obtain ⟨⟨⟨a0,a1,a2,a3⟩,⟨a4,a5,a6,a7⟩⟩, ⟨⟨b0,b1,b2,b3⟩,⟨b4,b5,b6,b7⟩⟩⟩ := x
+  simp only [CO.T, CO.nsq, O.nsq, O.neg, Q.neg]; grind
+theorem nsq_R (x : CO) : (CO.R x).nsq = x.nsq := by
+  obtain ⟨⟨⟨a0,a1,a2,a3⟩,⟨a4,a5,a6,a7⟩⟩, ⟨⟨b0,b1,b2,b3⟩,⟨b4,b5,b6,b7⟩⟩⟩ := x
+  simp only [CO.R, CO.nsq, O.nsq, O.neg, Q.neg]; grind
+theorem nsq_JB (x : CO) : (CO.JB x).nsq = x.nsq := by
+  rw [CO.JB, nsq_R, nsq_T]
+
+/-- Unter `T`: `t ↦ t̄`. -/
+theorem tC_T (x y z : CO) : tC (CO.T x) (CO.T y) (CO.T z) = ((tC x y z).1, -(tC x y z).2) := by
+  obtain ⟨⟨⟨a0,a1,a2,a3⟩,⟨a4,a5,a6,a7⟩⟩, ⟨⟨b0,b1,b2,b3⟩,⟨b4,b5,b6,b7⟩⟩⟩ := x
+  obtain ⟨⟨⟨c0,c1,c2,c3⟩,⟨c4,c5,c6,c7⟩⟩, ⟨⟨d0,d1,d2,d3⟩,⟨d4,d5,d6,d7⟩⟩⟩ := y
+  obtain ⟨⟨⟨f0,f1,f2,f3⟩,⟨f4,f5,f6,f7⟩⟩, ⟨⟨g0,g1,g2,g3⟩,⟨g4,g5,g6,g7⟩⟩⟩ := z
+  simp only [tC, CO.T, CO.mul, O.mul, O.add, O.sub, O.neg, O.re, Q.mul, Q.sub, Q.add, Q.conj, Q.neg, Prod.mk.injEq]
+  constructor <;> grind
+
+/-- Unter `R : z ↦ iz`: `t ↦ i³ t = −i t`. -/
+theorem tC_R (x y z : CO) : tC (CO.R x) (CO.R y) (CO.R z) = ((tC x y z).2, -(tC x y z).1) := by
+  obtain ⟨⟨⟨a0,a1,a2,a3⟩,⟨a4,a5,a6,a7⟩⟩, ⟨⟨b0,b1,b2,b3⟩,⟨b4,b5,b6,b7⟩⟩⟩ := x
+  obtain ⟨⟨⟨c0,c1,c2,c3⟩,⟨c4,c5,c6,c7⟩⟩, ⟨⟨d0,d1,d2,d3⟩,⟨d4,d5,d6,d7⟩⟩⟩ := y
+  obtain ⟨⟨⟨f0,f1,f2,f3⟩,⟨f4,f5,f6,f7⟩⟩, ⟨⟨g0,g1,g2,g3⟩,⟨g4,g5,g6,g7⟩⟩⟩ := z
+  simp only [tC, CO.R, CO.mul, O.mul, O.add, O.sub, O.neg, O.re, Q.mul, Q.sub, Q.add, Q.conj, Q.neg, Prod.mk.injEq]
+  constructor <;> grind
+
+/-- Unter `J_B = R ∘ T`: `t ↦ −i t̄`, also (Re, Im) ↦ (−Im, −Re); der Betrag bleibt. -/
+theorem tC_JB (x y z : CO) : tC (CO.JB x) (CO.JB y) (CO.JB z) = (-(tC x y z).2, -(tC x y z).1) := by
+  simp only [CO.JB]; rw [tC_R, tC_T]
+
+theorem tC_JB_abs (x y z : CO) :
+    (tC (CO.JB x) (CO.JB y) (CO.JB z)).1 ^ 2 + (tC (CO.JB x) (CO.JB y) (CO.JB z)).2 ^ 2
+      = (tC x y z).1 ^ 2 + (tC x y z).2 ^ 2 := by
+  rw [tC_JB]; grind
 
 /-! ## Algebraischer Kern von Theoremlet v4.9.0-r26.1 und v4.9.0-r32.1 -/
 
