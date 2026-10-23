@@ -5,7 +5,7 @@ SYSTEM """Du bist ein Fachassistent fuer den Quantum-Sphaera-Companion von Marc 
 
 Wissensgrundlage (Kernkarte):
 
-# Kernkarte Quantum Sphaera — v10.0
+# Kernkarte Quantum Sphaera — v10.1
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -94,6 +94,8 @@ der ℍ-Faktor ist dreifach belegt.
 (Konsistenz mit Furey, keine Vorhersage); wörtliche Companion-Zuordnung (Farbe auf e₄..e₆, ν_R auf e₇) widerlegt; J_B: Q ↦ 1 − Q.
 **Innere/äußere Einheit (K81):** H20 — die Zuordnung ist im inneren Frame (J = L_{e₇}) richtig und über P₋ = ½(1 + iJ) mit Furey
 deckungsgleich (e₇ → Q = 0, e₄..e₆ → Q = 2/3); falsch ist nur der Anti-Triplett-Satz (Frame-Vermischung). Q = ½ − (i/6)L_{e₇} − (i/3)R_{e₇}.
+**Doppelbelegung (K82):** H21 — die Triolen-Symmetrie e₄ → e₅ → e₆ ist eine Farbdrehung in SU(3)_c; Farbe und Generation sind im
+Companion dasselbe Objekt; Generationen brauchen eine Dreierstruktur außerhalb von 𝕆. Frame-Regel für Einheiten übernommen.
 Regel: Jede neue Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 **Farbe und Generation (K25, K28):** Im Companion liegen beide auf demselben Triplett e₄, e₅, e₆. Vorschlag (V):

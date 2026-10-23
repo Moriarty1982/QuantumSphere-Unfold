@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v10.0
+# Kernkarte Quantum Sphaera — v10.1
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -87,6 +87,8 @@ der ℍ-Faktor ist dreifach belegt.
 (Konsistenz mit Furey, keine Vorhersage); wörtliche Companion-Zuordnung (Farbe auf e₄..e₆, ν_R auf e₇) widerlegt; J_B: Q ↦ 1 − Q.
 **Innere/äußere Einheit (K81):** H20 — die Zuordnung ist im inneren Frame (J = L_{e₇}) richtig und über P₋ = ½(1 + iJ) mit Furey
 deckungsgleich (e₇ → Q = 0, e₄..e₆ → Q = 2/3); falsch ist nur der Anti-Triplett-Satz (Frame-Vermischung). Q = ½ − (i/6)L_{e₇} − (i/3)R_{e₇}.
+**Doppelbelegung (K82):** H21 — die Triolen-Symmetrie e₄ → e₅ → e₆ ist eine Farbdrehung in SU(3)_c; Farbe und Generation sind im
+Companion dasselbe Objekt; Generationen brauchen eine Dreierstruktur außerhalb von 𝕆. Frame-Regel für Einheiten übernommen.
 Regel: Jede neue Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 **Farbe und Generation (K25, K28):** Im Companion liegen beide auf demselben Triplett e₄, e₅, e₆. Vorschlag (V):
@@ -2031,6 +2033,25 @@ der Skalar it von `thm:SM` allein ist eine globale Phase, kein Elektromagnetismu
 Bleibt: Doppelbelegung Farbe/Generation (kein Frame-Effekt). Regelvorschlag zu Konvention F: Farb- und Ladungsaussagen nennen ihre
 Einheit (innen J, ohne Ladung; außen i, mit Q) und das Vorzeichen P_±. Kein Guard verbraucht.
 
+### K82 — Frame-Regel für Einheiten, Statusvermerke, Vorab-Test H21 und Runde v4.9.0-r36: Herkunft der Doppelbelegung (2026-10-23)
+
+Autorentscheidung 2026-10-23: Die Frame-Regel aus K81.5 wird Teil von Konvention F (CLAUDE.md, Rundenformat Punkt 7). Statusvermerke
+zu `thm:three-generations` und `thm:SM` über `llm/revision_spec_v490_r36.py` (Regel C). Vorab-Notiz
+`llm/Vorab_Notiz_H21_Herkunft_Doppelbelegung.md` (Commit 516ab15), Skript `llm/k77_test_h21.py`, Ausgabe `llm/k77_out.txt`, Ergebnis
+`llm/Ergebnis_H21_Herkunft_Doppelbelegung.md`, Runde `sec:v490-r36-unit-rule-double-use`.
+
+**K82.1 (M).** σ: e₄ → e₅ → e₆ → e₄, e₇ fest, e₁ → −e₃, e₂ → −e₁, e₃ → e₂ ist ein Automorphismus der Ordnung 3, unter den 48
+Vorzeichen-Fortsetzungen der einzige; also σ ∈ Stab(e₇) = SU(3)_c (H21a).
+**K82.2 (M).** Auf ℂ³ = (e₇^⊥, J) ist σ die zyklische Permutationsmatrix (det 1, Eigenwerte 1, ω, ω̄, nicht zentral), vertauscht mit Q,
+T, R, J_B (H21b): frame-frei, kein Frame-Effekt.
+**K82.3 (M).** Die 120°-Triole Σ ω^k e_{k+4} (z₁ + z₂ + z₃ = 0) erfüllt σv = ω̄v; P₋v liegt im Triplett Q = 2/3 (H21c). Die triolische
+Grundstruktur (drei Kerne, 120°) ist in 𝕆 ein Farbzustand, ihre zyklische Symmetrie eine Farbdrehung.
+**K82.4 (M).** Die Untergruppe von Stab(e₇), die span_ℝ(e₄, e₅, e₆) erhält, ist SO(3) (Dimension 3), σ liegt darin (H21d). Flavour-Gruppen
+auf dem reellen Spann (r12: A₄, Δ(96)) sind Untergruppen der Farbe. Generationen-ℤ₃ auf Im ℍ vertauscht mit Stab(e₇) (H21e).
+**K82.5 (S).** Herkunft der Doppelbelegung: eine Dreierstruktur, zwei Rollen (Kerne = Farben in thm:octonion-SU3, dieselbe Zyklik =
+Generationen in thm:three-generations). Innerhalb von 𝕆 mit festem e₇ ist jede ℤ₃-Symmetrie Farbe; die Trennung ist nötig, ihr Träger
+(Triality-Plätze r14 oder Im ℍ r33) offen. Offen (Autor): ob die Triole ursprünglich Farbe oder Generation meinte. Kein Guard verbraucht.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -2171,6 +2192,7 @@ Einheit (innen J, ohne Ladung; außen i, mit Q) und das Vorzeichen P_±. Kein Gu
 - v9.8 (2026-10-23): K79 Bestandsaufnahme Struktur gegen Standardmodell (A/B/C/D), thm:SM-Befund, Abzähl-Tests vorgeschlagen.
 - v9.9 (2026-10-23): K80 Vorab-Test H19 (Ladungen aus der Dixon-Ablage) und Runde v4.9.0-r34: H19a/b/d/e bestätigt, H19c widerlegt.
 - v10.0 (2026-10-23): K81 Vorab-Test H20 und Runde v4.9.0-r35: innere gegen äußere Einheit; H20a/c/d bestätigt, H20b widerlegt; Lesart K80.3 korrigiert.
+- v10.1 (2026-10-23): K82 Frame-Regel für Einheiten übernommen, Statusvermerke thm:three-generations/thm:SM, Vorab-Test H21 und Runde v4.9.0-r36 (Herkunft der Doppelbelegung), alle bestätigt.
 
 ---
 

@@ -1,0 +1,127 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r36 Source-Only: Frame Rule for Complex Units, and the Origin of the Colour--Generation Double Use}
+\addcontentsline{toc}{section}{v4.9.0-r36 Source-Only: Frame Rule for Complex Units, and the Origin of the Colour--Generation Double Use}
+\label{sec:v490-r36-unit-rule-double-use}
+% ============================================================================
+
+\paragraph{Purpose.}
+This layer does two things.  It records the author's adoption (2026-10-23) of the frame rule proposed in v4.9.0-r35, with the
+resulting status notes in the main body.  It then records the pre-registered test H21 (note
+\texttt{llm/Vorab\_Notiz\_H21\_Herkunft\_Doppelbelegung.md}, commit \texttt{516ab15}, fixed before computing) on where the double use
+of \(e_4,e_5,e_6\) for colour and generation in Theorem~\ref{thm:three-generations} (v4.8.0-r13) comes from.  Earlier layers are not
+rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r36 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r36 frame rule for complex units}
+\label{subsec:v490-r36-unit-rule}
+
+\noindent\textbf{Rule (Convention~F, addition; adopted by the author).}
+A statement about colour or charge names its complex unit: the inner unit \(J=L_{e_7}\) on \(\OO\), which carries colour but no
+charge, or the outer unit \(i\), the \(\mathbb C\) factor of the Dixon storage, with the charge operator \(Q\).  A translation
+between them names its sign \(P_+\) or \(P_-\) (v4.9.0-r35).
+
+Following this rule, status notes are added to Theorem~\ref{thm:three-generations} and Theorem~\ref{thm:SM} (revision rule~C of
+v4.9.0-r25; patch specification \texttt{llm/revision\_spec\_v490\_r36.py}).  Theorem~\ref{thm:octonion-SU3} holds in the inner
+frame and needs no note.
+
+\subsection*{v4.9.0-r36 the cyclic symmetry of the triole}
+\label{subsec:v490-r36-results}
+
+Conventions as in v4.9.0-r35; \(\omega=e^{2\pi i/3}\).  Let \(\sigma\) be the real linear map of \(\OO\) with \(\sigma(1)=1\),
+\(\sigma(e_7)=e_7\), \(e_4\mapsto e_5\mapsto e_6\mapsto e_4\), \(e_1\mapsto-e_3\), \(e_2\mapsto-e_1\), \(e_3\mapsto e_2\).
+
+\paragraph{Theoremlet v4.9.0-r36.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \(\sigma\) is an automorphism of \(\OO\) of order three fixing \(e_7\), hence \(\sigma\in\operatorname{Stab}_{G_2}(e_7)=SU(3)\).
+Among the \(48\) signed extensions of the cycle \(e_4\to e_5\to e_6\) to \(e_1,e_2,e_3\) with \(e_7\) fixed it is the only
+automorphism.
+\item[(b)] On \((e_7^\perp,J)\) with complex basis \(e_4,e_5,e_6\), \(\sigma\) is the cyclic permutation matrix: determinant one,
+eigenvalues \(1,\omega,\bar\omega\), not central.  It commutes with \(Q\) and with \(T\), \(R_{\pi/2}\), \(J_B\).
+\item[(c)] The \(120^\circ\) triole \(v=\sum_{k=0}^{2}\omega^k e_{k+4}\) (coefficients with respect to \(J\); \(\sum_k\omega^k=0\))
+satisfies \(\sigma v=\bar\omega v\), and \(P_-v\) lies in the colour triplet \(Q=\tfrac23\).
+\item[(d)] The subgroup of \(\operatorname{Stab}_{G_2}(e_7)\) preserving \(\operatorname{span}_{\mathbb R}(e_4,e_5,e_6)\) is
+three-dimensional and acts on it as \(SO(3)\); it contains \(\sigma\).
+\item[(e)] In the Dixon storage \((\operatorname{Im}\HH)\otimes\mathbb C\otimes\OO\) of v4.9.0-r33, the cyclic \(\mathbb Z_3\) on
+\(\operatorname{Im}\HH\) commutes with \(1\otimes\sigma\) and with all of \(\operatorname{Stab}_{G_2}(e_7)\).
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+By explicit matrices (script \texttt{llm/k77\_test\_h21.py}): the automorphism condition on all \(64\) basis products, an exhaustive
+check of the \(48\) signed extensions, the complex matrix of \(\sigma\) from \(Je_4=-e_3\), \(Je_5=-e_2\), \(Je_6=e_1\), and the
+linear condition for the subalgebra in (d).  \(\sigma\) is real and acts on \(\OO\) only, so it commutes with the maps of the
+\(\mathbb C\) factor; (e) follows from the tensor structure.  \(\square\)
+
+\paragraph{Verdict and reading.}
+H21a--e are confirmed.
+\begin{enumerate}[leftmargin=2em]
+\item The triolic ground structure of the Companion, three kernels phase-shifted by \(120^\circ\) with \(z_1+z_2+z_3=0\), and its
+cyclic symmetry are, inside \(\OO\), exactly the colour rotation \(\sigma\), an element of the Weyl group of \(SU(3)_c\).
+Theorem~\ref{thm:octonion-SU3} reads the kernels as colours, consistent with (c).  Theorem~\ref{thm:three-generations} reads the same
+cyclic symmetry as the generation symmetry.  Colour and generation are therefore one object, not only the same units.
+\item This is not a frame effect: \(\sigma\) commutes with all frame maps (b).  It is an identification of two roles.
+\item Every generation symmetry on the real span of \(e_4,e_5,e_6\), such as the flavour groups of v4.8.0-r12, lies in
+\(SO(3)\subset SU(3)_c\) (d), and breaking it would break colour.  This makes consequence (i) of v4.8.0-r13 structural.
+\item Inside \(\OO\) with \(e_7\) fixed there is no \(\mathbb Z_3\) that is not a colour transformation.  The three generations
+therefore need a second three-fold structure outside \(\OO\).  The Companion has two: the three triality slots of \(\OO^3\)
+(v4.8.0-r14) and \(\operatorname{Im}\HH\) in the Dixon storage (v4.9.0-r33).  Both commute with colour (e).
+\item Whether the triolic ground structure was meant as colour or as generations is open.  By (a)--(c) it can be only one of them
+inside \(\OO\).
+\end{enumerate}
+
+\subsection*{v4.9.0-r36 status in the three frames}
+\label{subsec:v490-r36-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r36.1(a), (b), (d) & inner frame; \(\sigma\) commutes with \(T\), \(R_{\pi/2}\), \(J_B\), hence frame-free between M and T; P not evaluated\\
+r36.1(c) & stated in M through \(P_-\); in T the image is \(P_+v\), in the conjugate triplet \(Q=\tfrac13\)\\
+r36.1(e) & tensor structure, frame-free\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r36 register entries}
+\label{subsec:v490-r36-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r36\\
+\midrule
+frame rule for complex units & adopted (Convention~F, addition)\\
+Theorem~\ref{thm:three-generations} & status note added; the generation symmetry \(e_4\to e_5\to e_6\) is a colour rotation (r36.1(a)--(c))\\
+Theorem~\ref{thm:SM} & status note added (scalar \(it\) a global phase; charge needs both units; \(U(2)\), hypercharge)\\
+generations & need a three-fold structure outside \(\OO\): triality slots or \(\operatorname{Im}\HH\) (r36.1(e))\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r36 ledger and guard update}
+\label{subsec:v490-r36-ledger-guard}
+
+\[
+R_{\rm gen}^{v490\text{-}r36}=(1,1,0)
+\]
+for (origin of the double use identified; separation shown to be necessary inside \(\OO\); carrier of the three generations open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r36,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r36}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.

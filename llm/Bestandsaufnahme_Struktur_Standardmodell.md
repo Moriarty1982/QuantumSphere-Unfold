@@ -1,6 +1,6 @@
 # Bestandsaufnahme: Was folgt aus der Struktur, was ist eingesetzt?
 
-Stand 2026-10-23, nach v4.9.0-r35. Lebendes Dokument: nach jeder Runde nachführen (Spalte „Stand“, Fundstelle, Datum).
+Stand 2026-10-23, nach v4.9.0-r36. Lebendes Dokument: nach jeder Runde nachführen (Spalte „Stand“, Fundstelle, Datum).
 Zweck (Autorabsicht): Eine vereinheitlichte Theorie muss keine neue Physik einführen, sondern erklären, **warum** das
 Standardmodell diese Struktur hat. Das wird hier Merkmal für Merkmal geprüft. Eine Erklärung zählt nur, wenn die Struktur
 eine Alternative **ausschließt**: Sie muss etwas verbieten.
@@ -22,7 +22,7 @@ eine Alternative **ausschließt**: Sie muss etwas verbieten.
 | Farbgruppe SU(3) | **A** (unter Lesart) | SU(3) = Stabilisator von e₇ in G₂ = Aut(𝕆) (`thm:octonion-SU3`). Zusätzlich: Der symmetrische Punkt ω = exp(2πe₇/3) des Generationen-Tripels hat genau SU(3) als Stabilisator (v4.8.0-r15). Dass das die Farbe *ist*, ist Lesart. |
 | Farbe als Triplett, Singulett daneben | **A** (unter Lesart), Anti-Triplett-Satz **C** | 𝕆 = ℂ ⊕ ℂ³ unter SU(3) (`thm:octonion-SU3`) gilt im inneren Frame J = L_{e₇} mit komplexer Basis e₄, e₅, e₆ und Singulett span(1, e₇) (v4.9.0-r35, H20a). Mit dem äußeren ℂ-Faktor sind die Zustände 1 ± i·e₇ und e_a ± i·e₇e_a (r34, H19b); die Übersetzung ist P_± = ½(1 ∓ iJ), mit P₋ deckt sich die Companion-Zuordnung (ν_R auf e₇) mit Furey (H20c). Die Widerlegung H19c war ein Frame-Unterschied. Falsch bleibt der Satz „Anti-Triplett (e₁, e₂, e₃)“ (H20b, Frame-Vermischung). |
 | Genau drei Generationen | **A** (unter Lesart), zu prüfen | Triality-Form Re((xy)z) auf 𝕆³ mit S₃-Symmetrie, Träger Hopf-Faserung (v4.8.0-r14/r15), Ablage (Im ℍ)⊗𝕆 (v4.9.0-r33). Mathematischer Hintergrund: Spin(8) hat genau drei 8-dimensionale irreduzible Darstellungen, Out(Spin(8)) = S₃. **Das wäre ein echtes Verbot einer vierten Generation**, aber der Zusammenhang zwischen Spin(8)-Triality und der Triality-Form des Companion ist nicht ausgeschrieben. |
-| Trennung von Farbe und Generation | **B** | Im Companion liegen beide auf demselben Triplett e₄, e₅, e₆ (`thm:three-generations` gegen `thm:octonion-SU3`, festgestellt in v4.8.0-r13). Trennung vorgeschlagen (v4.8.0-r14) und in der Dixon-Ablage darstellbar (v4.9.0-r33). Eine Lesart, nicht erzwungen. |
+| Trennung von Farbe und Generation | **B** | Im Companion liegen beide auf demselben Triplett e₄, e₅, e₆ (`thm:three-generations` gegen `thm:octonion-SU3`, festgestellt in v4.8.0-r13). Trennung vorgeschlagen (v4.8.0-r14) und in der Dixon-Ablage darstellbar (v4.9.0-r33). **Herkunft (v4.9.0-r36, H21):** Die zyklische Symmetrie der Triole e₄ → e₅ → e₆ ist der einzige solche Automorphismus und liegt in SU(3)_c (Weyl-Element); die 120°-Triole der Kerne ist ein Farbzustand. Farbe und Generation sind im Companion also *dasselbe Objekt*. Innerhalb von 𝕆 mit festem e₇ gibt es keine Generationen-ℤ₃, die nicht Farbe wäre: Die Trennung ist **nötig**, ihr Träger (Triality-Plätze oder Im ℍ) bleibt eine Lesart. |
 | Generationen-Symmetrie | **A** (strukturell) | Gemeinsame Symmetrie von Ablage und Triality-Form: A₄ = Konjugation mit der binären Tetraedergruppe 2T; auf den links-invarianten Etiketten bleibt ℤ₃ (v4.9.0-r33, Lean `Dixon.lean`, `Lesarten.lean`). |
 | Schwache SU(2) und U(1) | **B**, in Teilen **C** | `prop:biquaternion-u1su2` und `thm:SM`: SU(2) aus den Einheitsquaternionen, U(1) aus dem komplexen Skalar. Probleme: (1) ℂ⊗ℍ enthält ebenso SL(2,ℂ), also die Lorentz-Gruppe; „erzeugt genau U(1)×SU(2)“ ist zu stark, die kompakte Untergruppe ist U(2) = (U(1)×SU(2))/ℤ₂. (2) Die Tabelle in `thm:SM` nennt das U(1) „Elektromagnetismus“; im Standardmodell ist das ungebrochene U(1) die Hyperladung, die elektromagnetische U(1) entsteht erst nach der Brechung als Kombination. (3) **Der ℍ-Faktor ist dreifach belegt:** als Lorentz-Spinor (`thm:three-generations`), als schwache SU(2) (`thm:SM`) und als Generationen-Index (v4.9.0-r33). Kein `\qsstatus`-Vermerk. (4) Die Ladungszuordnung hängt vom Frame ab (J_B: Q ↦ 1 − Q, v4.9.0-r34); die U(1)-Zeile muss ihren Frame nennen. (5) Der Skalar it allein ist nur eine globale Phase; die Ladung ist Q = ½ − (i/6)L_{e₇} − (i/3)R_{e₇}, braucht also innere und äußere Einheit (v4.9.0-r35). |
 | Globale Form der Eichgruppe | **D** | Das Standardmodell hat (SU(3)×SU(2)×U(1))/ℤ₆; dazu sagt der Companion nichts. |
@@ -51,8 +51,8 @@ eine Alternative **ausschließt**: Sie muss etwas verbieten.
 3. **Der ℍ-Faktor ist überbelegt.** Lorentz, schwache SU(2) und Generationen können nicht alle dieselbe Wirkung auf
    demselben ℍ sein. Die Links-/Rechts-Trennung aus v4.9.0-r33 (Lorentz von links, Generationen rechts) ist ein Ansatz.
    Dann bleibt zu klären, woher die schwache SU(2) kommt.
-4. `thm:SM` und `prop:biquaternion-u1su2` tragen keinen `\qsstatus`-Vermerk, obwohl Teile davon zu stark formuliert sind.
-   Kandidat für Regel C der Überarbeitung (Autorentscheidung).
+4. `thm:SM` und `thm:three-generations` tragen seit v4.9.0-r36 einen `\qsstatus`-Vermerk (Autorentscheidung 2026-10-23, nach der
+   Frame-Regel für komplexe Einheiten). `prop:biquaternion-u1su2` noch ohne Vermerk.
 
 ## Aussichtsreiche Abzähl-Tests (Vorschlag, jeweils mit Vorab-Notiz)
 

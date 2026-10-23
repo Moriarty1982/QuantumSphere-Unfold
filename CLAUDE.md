@@ -90,7 +90,7 @@ Nicht in diesem Verzeichnis, aber referenziert: `RC14_uncompressed_reference_sou
 
 ## Der Runden-Workflow
 
-Die **Runden** wachsen append-only: eine neue Runde ist ein neuer Abschnitt unmittelbar vor `\end{document}`, bestehende Runden werden nicht umgeschrieben. Aktueller Stand: **r94**, **v4.8.0-r20**, **v4.9.0-r35**. Runden der v4.8.0-Linie heißen `v4.8.0-rNN` (Labels `sec:v480-rNN-...`), danach `v4.9.0-rNN` (`sec:v490-rNN-...`); `qs.py outline` und `ledger` erkennen alle Formen. Inhalt jeder Runde ausführlich in der Kernkarte (`llm/Kernkarte_Quantum_Sphaera_v1.md`, Abschnitt 7).
+Die **Runden** wachsen append-only: eine neue Runde ist ein neuer Abschnitt unmittelbar vor `\end{document}`, bestehende Runden werden nicht umgeschrieben. Aktueller Stand: **r94**, **v4.8.0-r20**, **v4.9.0-r36**. Runden der v4.8.0-Linie heißen `v4.8.0-rNN` (Labels `sec:v480-rNN-...`), danach `v4.9.0-rNN` (`sec:v490-rNN-...`); `qs.py outline` und `ledger` erkennen alle Formen. Inhalt jeder Runde ausführlich in der Kernkarte (`llm/Kernkarte_Quantum_Sphaera_v1.md`, Abschnitt 7).
 
 **Der Hauptkorpus wird seit v4.9.0-r25 überarbeitet** (Autorauftrag 2026-10-22: alte Arbeit nicht verlieren, falsche Aussagen nicht stehen lassen). Regel (`sec:v490-r25-main-body-revision`, Skript `llm/aufraeumen_v490.py`):
 - **(A) Sackgasse** (widerlegt, ausgeschlossen, zurückgezogen): Original wortgleich in den Archiv-Anhang `sec:v490-archive`; an der alten Stelle bleibt dieselbe Umgebung mit **gleicher Nummer und gleichem Label**, kurzer Aussage dessen, was bleibt, und Verweis. Alle `\ref` lösen weiter auf.
@@ -138,6 +138,7 @@ Guard-Linter für neue Runden: `python llm/training/guard_linter.py <tex> --star
 | r33 | Dixon-Ablage als Register aller Konfigurationen (Autorabsicht): Tripel = (Im ℍ)⊗𝕆, gemeinsame Symmetrie A₄ = Konjugation mit 2T; J_B = R∘T vertauscht die ℂ-Hälften, nur D₄ erhält das M/T-Etikett; links-invariante Etiketten μ_i = Fläche der anderen beiden Plätze (Lorentz-Konflikt für Etiketten lösbar); Vorab-Test H18 (Massen aus μ an den Minima) widerlegt; Lean `formal/QSFormal/Dixon.lean`, `Lesarten.lean` |
 | r34 | Ladungen aus der Dixon-Ablage (Vorab-Test H19, Bestandsaufnahme Test 1): Zahloperator nach Furey mit der Farbe Stab(e₇) verträglich, Sektoren Q = 0, 1 (Singuletts 1 ± i·e₇) und 1/3, 2/3 (konjugierte Tripletts); wörtliche Companion-Zuordnung (Farbe auf e₄..e₆, ν_R auf e₇) widerlegt; J_B bildet Q auf 1 − Q ab, die U(1)-Zeile von thm:SM muss ihren Frame nennen |
 | r35 | Innere gegen äußere komplexe Einheit (Vorab-Test H20, Autorhinweis „fester Frame“): Farb- und ν_R-Zuordnung im inneren Frame J = L_{e₇} richtig, über P₋ = ½(1 + iJ) deckungsgleich mit Furey; Anti-Triplett-Satz in thm:three-generations falsch (Frame-Vermischung); Q = ½ − (i/6)L_{e₇} − (i/3)R_{e₇}, der Skalar it allein ist nur globale Phase; Lesart von r34.1(c) korrigiert |
+| r36 | Frame-Regel für komplexe Einheiten übernommen (Autor, Konvention F, Punkt 7 im Rundenformat); Statusvermerke an thm:three-generations und thm:SM (`llm/revision_spec_v490_r36.py`); Vorab-Test H21: die Triolen-Symmetrie e₄ → e₅ → e₆ ist der einzige solche Automorphismus und eine Farbdrehung in SU(3)_c, Farbe und Generation sind dasselbe Objekt; Generationen brauchen eine Dreierstruktur außerhalb von 𝕆 |
 
 Ältere Runden (r03–r94, v4.8.0-r01–r20): Kernkarte und die genannten Register. Kurzstand v4.8.0: Lesart B (ℂ³, SO(3,ℂ)) als Arbeitslesart, Sektoren nach Vorzeichen von s, vorab festgelegte Tests H2–H13 mit Ergebnissen, Riemann-Arbeit seit r04 keine Beweisquelle.
 
@@ -149,6 +150,7 @@ Eine Runde folgt einem festen Muster:
 4. Inhalt als Theoremlet mit `\paragraph{Theoremlet rNN.}` und `\paragraph{Proof sketch.}`, abgeschlossen mit `\(\square\)`
 5. Guard-Update am Ende: die Residual- und Guard-Vektoren der Runde
 6. **Ab v4.9.0-r22 (Konvention F):** ein Abschnitt `\subsection*{v4.9.0-rNN status in the three frames}` mit `\label{subsec:v490-rNN-frames}`, der für jedes Ergebnis den Stand in Materie-, Tachyon- und Photon-Frame angibt (Tachyon = Bild unter der Dualitätsdrehung z → iz, nicht J_B; Photon = entarteter Fixpunkt; frame-frei nur, wenn Materie und Tachyon übereinstimmen). Der Guard-Linter meldet Runden ab r22 ohne dieses Label.
+7. **Ab v4.9.0-r36 (Konvention F, komplexe Einheiten; Autorentscheidung 2026-10-23):** Aussagen über Farbe oder Ladung nennen ihre komplexe Einheit: innen J = L_{e₇} auf 𝕆 (Farbe, keine Ladung) oder außen i = ℂ-Faktor der Dixon-Ablage (mit Ladungsoperator Q); eine Übersetzung nennt ihr Vorzeichen P₊ oder P₋ = ½(1 ∓ iJ) (v4.9.0-r35).
 
 ## Guard-Disziplin — die wichtigste Regel
 
