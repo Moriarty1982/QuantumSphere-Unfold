@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v9.4
+# Kernkarte Quantum Sphaera — v9.5
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -1936,6 +1936,15 @@ also (Re, Im) ↦ (−Im, −Re), Betrag fest; für ein reelles Tripel verschwin
 M/T-Sektorbit (wie die σ_z-Kanäle des Dubletts, `Frames.J_B_channels`), P = gleiches Gewicht beider Hälften. **Korrektur K77.6:** die
 dort genannte „natürliche Wahl ℂ-Konjugation“ ist T (Zeitumkehr), nicht J_B. Python-Gegenprobe exakt. (A_ℂ) ist Autorentscheidung.
 
+**K77.9 Readout-abhängige Lesarten (Autoridee; Lean `Lesarten.lean`).** ℂ-Faktor zugleich Dualitätsebene (J_B = z ↦ i z̄),
+quantenmechanisches i (C = z̄), Lorentz-Komplexifizierung (R = z ↦ iz, Drehung → Boost) und Uhrphase (z ↦ wz). Bewiesen: C = T auf dem
+ℂ-Faktor; J_B R_w J_B = R_{w̄} (Uhr läuft im Tachyon rückwärts, vgl. r23 orientierungsumkehrend); C, J_B antikommutieren auf Amplituden,
+vertauschen auf quadratischen Readouts. **Korrektur:** Das a-Etikett erhalten nur die 8 Elemente von D₄, nicht ganz O(2); die Uhr ist mit
+M/T nur in Viertelschritten verträglich, Triolen-Phasen ω^k gehören nicht auf den ℂ-Faktor (Ort: span(1, e₇), r15). ℍ: L und R vertauschen;
+A₄ = Konjugation mit 2T (binäre Tetraedergruppe); Rechtswirkung von 2T irreduzibel; Linksmultiplikation verteilt Platznormen um,
+invariant ist conj(qx)(qy) = |q|²conj(x)y. Lage: Mit Lorentz von links ist √m ∝ Platznorm nicht Lorentz-invariant; Rettung = Massen aus
+links-invarianten Größen ablesen, Generationen-Etiketten auf der rechten Seite finden. Nicht widerlegt, nicht konstruiert.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -2070,6 +2079,7 @@ dort genannte „natürliche Wahl ℂ-Konjugation“ ist T (Zeitumkehr), nicht J
 - v9.2 (2026-10-23): K77.6 Frame-Einordnung der Dixon-Prüfung (Grammatik = Bezugsframe R; M/T offen bis J_B auf der Ablage festgelegt; Namensfalle gemischter Readout/Zustand; port-gewichtete Brechung frame-abhängig).
 - v9.3 (2026-10-23): K77.7 Lean-Modul `formal/QSFormal/Dixon.lean` (Triality-Symmetrien, A₄-Charakterisierung, Dixon-Masken, Kerne von r26.1/r32.1).
 - v9.4 (2026-10-23): K77.8 J_B = R ∘ T auf der Dixon-Ablage in Lean (σ_x der a-Hälften, Normen frame-frei, t ↦ −i t̄); K77.6 korrigiert (ℂ-Konjugation = T).
+- v9.5 (2026-10-23): K77.9 Readout-abhängige Lesarten des ℂ-Faktors (Lean `Lesarten.lean`); Korrektur: nur D₄ erhält das a-Etikett; ℍ: A₄ = Konjugation mit 2T, Lage des Lorentz-Konflikts präzisiert.
 
 ---
 

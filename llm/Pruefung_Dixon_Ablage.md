@@ -109,3 +109,32 @@ Lesart: Das a-Bit wird zum Bit für den Materie- oder Tachyon-Sektor, wie die σ
 Gewicht auf beiden Hälften. Unter (A_ℂ) ist die Massen-Lesart über Normen frame-frei. Frame-abhängig sind der
 Realteil-Readout der Triality-Form und jede port-gewichtete Aggregation. Die im ersten Entwurf genannte
 ℂ-Konjugation ist T, nicht J_B. (A_ℂ) selbst ist eine Autorentscheidung.
+
+## 9. Readout-abhängige Lesarten des ℂ-Faktors (Autoridee; Lean `formal/QSFormal/Lesarten.lean`)
+
+Idee: Der ℂ-Faktor ist je nach Readout Dualitätsebene (J_B), quantenmechanisches i (C), Lorentz-Komplexifizierung oder
+Uhrphase. Alle vier benutzen Operationen derselben Ebene: Drehungen z ↦ wz (Uhr), die Vierteldrehung R: z ↦ iz
+(Tachyon-Abbildung; Drehung → Boost), die Spiegelung z ↦ z̄ (C und T) und J_B = R ∘ T: z ↦ i z̄.
+
+Geprüft (Lean, numerisch gegengeprüft):
+1. C und T fallen auf dem ℂ-Faktor zusammen (beide z̄); unterscheidbar nur in ℍ, 𝕆 oder im Dublett. **Hält.**
+2. J_B R_w J_B = R_{w̄}: Im Tachyon-Frame läuft die Uhrphase rückwärts, passend zu r23 (Tachyon orientierungsumkehrend). **Hält.**
+3. C und J_B antikommutieren auf Amplituden und vertauschen auf quadratischen Readouts. **Hält.** Dass gemischte Readouts
+   deshalb quadratisch sein *müssen*, ist ein Vorschlag, kein Satz.
+4. „Auf ℂ verträglich, weil alles in O(2) liegt“: **so nicht richtig.** Das a-Etikett (Materie/Tachyon-Hälfte) erhalten nur
+   die 8 Elemente von D₄ (Viertelschritte und Spiegelungen); eine allgemeine Uhrdrehung mischt die Sektoren. Verträglich
+   mit dem a-Etikett ist die Uhr also nur in Viertelschritten. Folge: Die Triolen-Phasen ω^k (120°) können nicht auf dem
+   ℂ-Faktor liegen, ohne Materie und Tachyon zu mischen; ein natürlicher Ort ist span(1, e₇) ⊂ 𝕆, wo r15 den
+   symmetrischen Punkt ω gefunden hat.
+
+ℍ-Faktor (Lorentz gegen Generationen), genauer als in Abschnitt 4:
+- Links- und Rechtsmultiplikation vertauschen. Eine Lorentz-Wirkung von links und eine innere Wirkung von rechts können
+  nebeneinander bestehen.
+- Die A₄ aus K77.4 ist genau die Konjugation mit der binären Tetraedergruppe 2T (24 Einheitsquaternionen, zweifach auf A₄).
+  Die Erzeuger sind die Konjugation mit 1+i+j+k (zyklisch) und mit i (Vorzeichen).
+- Konjugation ist links *und* rechts. Die Rechtswirkung von 2T allein ist auf ℍ irreduzibel und liefert keine drei Plätze.
+- Linksmultiplikation verteilt die Platznormen um, die Gesamtnorm bleibt. Links-invariant ist die quaternionische
+  Gram-Größe conj(qx)(qy) = |q|² conj(x) y.
+- Präzise Lage: Mit Lorentz von links ist die Massen-Lesart √m ∝ Platznorm nicht Lorentz-invariant. Eine Rettung im Sinn der
+  Readout-Abhängigkeit müsste die Massen aus links-invarianten Größen (Gram-Struktur, also der rechten Seite) ablesen und
+  die Generationen-Etiketten dort finden. Das ist nicht widerlegt, aber noch nicht konstruiert.
