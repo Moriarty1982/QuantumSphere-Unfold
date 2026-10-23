@@ -5,7 +5,7 @@ SYSTEM """Du bist ein Fachassistent fuer den Quantum-Sphaera-Companion von Marc 
 
 Wissensgrundlage (Kernkarte):
 
-# Kernkarte Quantum Sphaera — v9.6
+# Kernkarte Quantum Sphaera — v9.7
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -87,6 +87,7 @@ für künftige JUNO-Daten festgeschrieben (nachträglich gefunden). H10 Assoziat
 Funktionen auf dem Tripel-Raum (K32) — widerlegt: bis Grad 4 höchstens zwei verschiedene Normen. H16 Grad 6 (K70) — widerlegt: bis Grad 6 ist jeder
 kritische Punkt mit drei verschiedenen Normen ein Sattel; Minima mit Hierarchie brauchen Grad ≥ 8. H17 Realteil-Invarianten (K76) — widerlegt: auf der reellen
 Achse linear in e₃ = n₁n₂n₃, wieder nur Sattelpunkte; natürliche G₂ × S₃-Invarianten geben höchstens zwei verschiedene Massen.
+H18 Massen aus links-invarianten Etiketten an den Minima (K78) — widerlegt: Winkel flach oder Plätze parallel.
 Regel: Jede neue Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 **Farbe und Generation (K25, K28):** Im Companion liegen beide auf demselben Triplett e₄, e₅, e₆. Vorschlag (V):

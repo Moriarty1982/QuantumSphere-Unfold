@@ -90,7 +90,7 @@ Nicht in diesem Verzeichnis, aber referenziert: `RC14_uncompressed_reference_sou
 
 ## Der Runden-Workflow
 
-Die **Runden** wachsen append-only: eine neue Runde ist ein neuer Abschnitt unmittelbar vor `\end{document}`, bestehende Runden werden nicht umgeschrieben. Aktueller Stand: **r94**, **v4.8.0-r20**, **v4.9.0-r32**. Runden der v4.8.0-Linie heißen `v4.8.0-rNN` (Labels `sec:v480-rNN-...`), danach `v4.9.0-rNN` (`sec:v490-rNN-...`); `qs.py outline` und `ledger` erkennen alle Formen. Inhalt jeder Runde ausführlich in der Kernkarte (`llm/Kernkarte_Quantum_Sphaera_v1.md`, Abschnitt 7).
+Die **Runden** wachsen append-only: eine neue Runde ist ein neuer Abschnitt unmittelbar vor `\end{document}`, bestehende Runden werden nicht umgeschrieben. Aktueller Stand: **r94**, **v4.8.0-r20**, **v4.9.0-r33**. Runden der v4.8.0-Linie heißen `v4.8.0-rNN` (Labels `sec:v480-rNN-...`), danach `v4.9.0-rNN` (`sec:v490-rNN-...`); `qs.py outline` und `ledger` erkennen alle Formen. Inhalt jeder Runde ausführlich in der Kernkarte (`llm/Kernkarte_Quantum_Sphaera_v1.md`, Abschnitt 7).
 
 **Der Hauptkorpus wird seit v4.9.0-r25 überarbeitet** (Autorauftrag 2026-10-22: alte Arbeit nicht verlieren, falsche Aussagen nicht stehen lassen). Regel (`sec:v490-r25-main-body-revision`, Skript `llm/aufraeumen_v490.py`):
 - **(A) Sackgasse** (widerlegt, ausgeschlossen, zurückgezogen): Original wortgleich in den Archiv-Anhang `sec:v490-archive`; an der alten Stelle bleibt dieselbe Umgebung mit **gleicher Nummer und gleichem Label**, kurzer Aussage dessen, was bleibt, und Verweis. Alle `\ref` lösen weiter auf.
@@ -135,6 +135,7 @@ Guard-Linter für neue Runden: `python llm/training/guard_linter.py <tex> --star
 | r30 | Kompensator umgeht die klassische 1/2 (Autorhinweis): Mischung gibt immer 1/2, kohärente Kombination einen eindeutigen Port; „Light as HC of the universe“ nur amplitudenweise; C = ½(1+J) Projektor nur für J_B, J_B = (z → iz) ∘ T → Partner = Tachyon durch T (wie r28); Austausch kohärent per Konstruktion, r29-Frage beantwortet |
 | r31 | Markov-Kaskade (Autorabsicht: Vorhersage und Selbststabilisierungstest): geschlossen nur Photon stationär; mit Rückweg S² → S⁸ eindeutig stationär, Flussanteile β², 1 − β² für jede Rate; Statusvermerk zu thm:dark-energy erweitert (`llm/revision_spec_v490_r31.py`, Anwendung mit `llm/apply_patches.py`) |
 | r32 | Vorab-Test H17 (Realteil-Invarianten L = ΣRe a_k, R₂, L² auf dem Tripel-Raum) widerlegt; Theoremlet r32.1: auf der reellen Achse linear in e₃, wieder Sattelpunkte; meiste Minima auf der Achse (G₂ ungebrochen); nächster Weg explizite S₃-Brechung |
+| r33 | Dixon-Ablage als Register aller Konfigurationen (Autorabsicht): Tripel = (Im ℍ)⊗𝕆, gemeinsame Symmetrie A₄ = Konjugation mit 2T; J_B = R∘T vertauscht die ℂ-Hälften, nur D₄ erhält das M/T-Etikett; links-invariante Etiketten μ_i = Fläche der anderen beiden Plätze (Lorentz-Konflikt für Etiketten lösbar); Vorab-Test H18 (Massen aus μ an den Minima) widerlegt; Lean `formal/QSFormal/Dixon.lean`, `Lesarten.lean` |
 
 Ältere Runden (r03–r94, v4.8.0-r01–r20): Kernkarte und die genannten Register. Kurzstand v4.8.0: Lesart B (ℂ³, SO(3,ℂ)) als Arbeitslesart, Sektoren nach Vorzeichen von s, vorab festgelegte Tests H2–H13 mit Ergebnissen, Riemann-Arbeit seit r04 keine Beweisquelle.
 
