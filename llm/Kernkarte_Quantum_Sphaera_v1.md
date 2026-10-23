@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v9.7
+# Kernkarte Quantum Sphaera — v9.8
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -81,6 +81,8 @@ Funktionen auf dem Tripel-Raum (K32) — widerlegt: bis Grad 4 höchstens zwei v
 kritische Punkt mit drei verschiedenen Normen ein Sattel; Minima mit Hierarchie brauchen Grad ≥ 8. H17 Realteil-Invarianten (K76) — widerlegt: auf der reellen
 Achse linear in e₃ = n₁n₂n₃, wieder nur Sattelpunkte; natürliche G₂ × S₃-Invarianten geben höchstens zwei verschiedene Massen.
 H18 Massen aus links-invarianten Etiketten an den Minima (K78) — widerlegt: Winkel flach oder Plätze parallel.
+**Bestandsaufnahme (K79):** Stark ist die Gruppenseite (Lorentz, SU(3), drei Plätze); es fehlen Ladungen, Hyperladungen, Chiralität;
+der ℍ-Faktor ist dreifach belegt.
 Regel: Jede neue Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 **Farbe und Generation (K25, K28):** Im Companion liegen beide auf demselben Triplett e₄, e₅, e₆. Vorschlag (V):
@@ -1971,6 +1973,24 @@ und H18 fest. Die Etiketten lösen den Lorentz-Konflikt für die Etiketten, nich
 Prinzip, das die Winkel zwischen den Plätzen festlegt. Vierter widerlegter Test desselben Ansatzes (H11, H16, H17, H18). Build 1197 Seiten,
 Audit gegen r32 ohne harte Abweichung. R_cg^{r33} = (0,0,1); Guards unverändert, β₄ unverbraucht.
 
+### K79 — Bestandsaufnahme: Was folgt aus der Struktur, was ist eingesetzt? (2026-10-23)
+
+Lebendes Dokument `llm/Bestandsaufnahme_Struktur_Standardmodell.md` (nach jeder Runde nachführen). Autorabsicht: Erklären, warum das
+Standardmodell diese Struktur hat; eine Erklärung zählt nur, wenn die Struktur Alternativen ausschließt. Stufen A (folgt, verbietet),
+B (darstellbar, eingesetzt/umformuliert), C (widerlegt), D (fehlt).
+
+**K79.1 (S).** A: Lorentz (Biquaternionen), SU(3) als Stabilisator von e₇ und von ω, drei Plätze mit S₃/A₄ (unter Lesart). B: Trennung
+Farbe/Generation, schwache SU(2) und U(1), Koide-Form, Quarks/Leptonen, Mischungsexistenz, α/θ_W, β_sym, Higgs. C: Mischungswinkel,
+Massenhierarchie aus natürlichen Potentialen. D: Ladungen und Hyperladungen, Chiralität, globale Form der Eichgruppe.
+
+**K79.2 (M).** `thm:SM` und `prop:biquaternion-u1su2` (ohne `\qsstatus`): ℂ⊗ℍ enthält auch SL(2,ℂ); kompakte Untergruppe U(2) = (U(1)×SU(2))/ℤ₂;
+das U(1) heißt dort „Elektromagnetismus“, im Standardmodell ist das ungebrochene U(1) die Hyperladung. Der ℍ-Faktor ist dreifach belegt
+(Lorentz-Spinor in thm:three-generations, schwache SU(2) in thm:SM, Generationen in r33). Kandidat für Regel C (Autorentscheidung).
+
+**K79.3 Vorschlag (P).** Abzähl-Tests mit Vorab-Notiz: (1) Ladungen einer Generation aus der Dixon-Ablage (Zahloperator auf ℂ⊗𝕆);
+(2) genau drei Generationen: Ist Re((xy)z) die Spin(8)-Triality (drei 8-dim. Darstellungen, Out = S₃), schließt sie eine vierte aus?
+(3) eine dritte, verträgliche, chirale SU(2) in der Ablage; (4) U(1) als Hyperladung mit Q = T₃ + Y/2.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -2108,6 +2128,7 @@ Audit gegen r32 ohne harte Abweichung. R_cg^{r33} = (0,0,1); Guards unverändert
 - v9.5 (2026-10-23): K77.9 Readout-abhängige Lesarten des ℂ-Faktors (Lean `Lesarten.lean`); Korrektur: nur D₄ erhält das a-Etikett; ℍ: A₄ = Konjugation mit 2T, Lage des Lorentz-Konflikts präzisiert.
 - v9.6 (2026-10-23): K77.10 Links-invariante Etiketten: Im-Komponenten der quaternionischen Gram-Größe, μ_i = Fläche der anderen beiden Plätze, Rechts-2T zyklisch, umgekehrte Reihenfolge.
 - v9.7 (2026-10-23): K78 Vorab-Test H18 (links-invariante Etiketten an den Minima) widerlegt; Companion-Runde v4.9.0-r33.
+- v9.8 (2026-10-23): K79 Bestandsaufnahme Struktur gegen Standardmodell (A/B/C/D), thm:SM-Befund, Abzähl-Tests vorgeschlagen.
 
 ---
 
