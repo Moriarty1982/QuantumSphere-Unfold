@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v10.5
+# Kernkarte Quantum Sphaera — v10.6
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -98,6 +98,8 @@ Spin(7); Materie, Tachyon = Spinor-Plätze, gleich und vertauscht. 120°- und Fr
 Orientierung wechselt mit der Stufe (= ρ-Spiegel); Frames grob, Generationen tief. Gemischte Masken: Σ (Kontraktion) 1 oder 3, ∨ (Maske) 3.
 **Zweiseitige Kontraktion über Frames (K86):** H25 — Regel 1 nur bis auf Konjugation (T, J_B), bilinearer Vergleich wechselt unter z ↦ iz das
 Vorzeichen (m² ↦ −m²), hermitesch frame-blind. Kein 𝔰𝔲(2) der Triality vertauscht mit Farbe; Zentralisator = span(L_{e₇}, R_{e₇}) (Ladung).
+**ℍ-Rollen (K87):** H26 — Aufteilung D (Lorentz links, schwach rechts, Generationen Triality) hebt die Überbelegung auf; mit Y/2 = Q − ½ gibt
+Q_em = T₃ + Y/2 die Dubletts (ν,e), (u,d), (d̄,ū), (e⁺,ν̄); T = Ladungskonjugation; schwache Singuletts fehlen (Chiralität offen).
 Regel: Jede neue Vorhersage zuerst als Vorab-Notiz committen, dann rechnen.
 
 **Farbe und Generation (K25, K28):** Im Companion liegen beide auf demselben Triplett e₄, e₅, e₆. Vorschlag (V):
@@ -2126,6 +2128,19 @@ frame-blind (inhaltliche Wahl). Triality-Ebene trägt Farbe und Ladung, keine sc
 (links oder rechts); Lesart „schwache SU(2) = eine Seite“, nicht gezeigt; ℍ-Überbelegung bleibt. Vorschlag Frame-Klausel für Regel 1/2
 (Autorentscheidung). Kein Guard verbraucht.
 
+### K87 — Vorab festgelegter Test H26 und Companion-Runde v4.9.0-r41: Verteilung der Rollen des ℍ-Faktors (2026-10-23)
+
+Vorab-Notiz `llm/Vorab_Notiz_H26_Verteilung_H_Faktor.md` (Commit 1876b55; Ladungsmuster vorab analytisch offengelegt), Skript
+`llm/k82_test_h26.py`, Ausgabe `llm/k82_out.txt`, Ergebnis `llm/Ergebnis_H26_Verteilung_H_Faktor.md`, Runde `sec:v490-r41-quaternion-roles`.
+
+**K87.1 (M).** Aufteilung D: Lorentz L_q, i·L_q (links), schwach R_q mit T₃ = −(i/2)R_k (rechts), Farbe auf 𝕆, Frames auf ℂ, Generationen auf den
+Triality-Plätzen. Schwach vertauscht mit Lorentz, Farbe, Q; T fixiert Drehungen, kehrt Boosts um (H26a); Generationen-ℤ₃ vertauscht mit allem (H26e).
+**K87.2 (M).** Y/2 := Q − ½, Q_em := T₃ + Y/2: Sektor 0 → (0, −1), 2/3 → (2/3, −1/3), 1/3 → (1/3, −2/3), 1 → (1, 0), Farbe Singulett/Triplett/
+konj. Triplett/Singulett (H26b). T Q_em T⁻¹ = −Q_em, T (Y/2) T⁻¹ = −Y/2 (H26c). Keine schwachen Singuletts, T² = 3/4 überall (H26d).
+**K87.3 (S).** Überbelegung von ℍ in D aufgehoben (Seiten + Triality); Test 4 unter der Wahl Y/2 = Q − ½ positiv (Muster der linkshändigen Dubletts
+und Konjugierten), Wahl nicht erzwungen; Sektor-Zuordnung nach Furey, ähnliche Muster in der Literatur. Frame T = Ladungskonjugation C
+(der Versatz in Q ↦ 1 − Q ist der Hyperladungs-Versatz ½). D unvollständig: rechtshändige Singuletts fehlen, Chiralität offen. Kein Guard verbraucht.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -2271,6 +2286,7 @@ frame-blind (inhaltliche Wahl). Triality-Ebene trägt Farbe und Ladung, keine sc
 - v10.3 (2026-10-23): K84 Vorab-Test H23 und Runde v4.9.0-r38: Frame-Triole M/P/T als Transposition der Triality-Plätze, alle bestätigt.
 - v10.4 (2026-10-23): K85 Vorab-Test H24 und Runde v4.9.0-r39: Ketten unter Zoom und gemischten Readouts, alle bestätigt; Autorhinweis zur neuen Kontraktion.
 - v10.5 (2026-10-23): K86 Vorab-Test H25 und Runde v4.9.0-r40: zweiseitige Kontraktion über Frames kovariant, nicht invariant; keine schwache SU(2) in der Triality.
+- v10.6 (2026-10-23): K87 Vorab-Test H26 und Runde v4.9.0-r41: Aufteilung D der ℍ-Rollen, Q = T₃ + Y/2 mit Y/2 = Q − ½, T = C, Singuletts fehlen.
 
 ---
 

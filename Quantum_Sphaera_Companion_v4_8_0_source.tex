@@ -73493,4 +73493,134 @@ R_{\rm glob}^{(v490\text{-}r40,+)}=(0,1,1,1,1),
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
 
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r41 Source-Only: Distributing the Roles of the Quaternion Factor; Hypercharge and Electric Charge}
+\addcontentsline{toc}{section}{v4.9.0-r41 Source-Only: Distributing the Roles of the Quaternion Factor; Hypercharge and Electric Charge}
+\label{sec:v490-r41-quaternion-roles}
+% ============================================================================
+
+\paragraph{Purpose.}
+The inventory of the standard-model features found the quaternion factor overloaded: it carries the Lorentz spinor
+(Theorem~\ref{thm:three-generations}), the weak \(SU(2)\) (Theorem~\ref{thm:SM}) and, in v4.9.0-r33, the generation index.  Layers
+v4.9.0-r37 to r40 found a carrier for the generations in triality, a separation of frames and generations by zoom level, and two
+\(\mathfrak{su}(2)\) commuting with colour, from the left and from the right of \(\HH\).  This layer records the pre-registered test H26
+(note \texttt{llm/Vorab\_Notiz\_H26\_Verteilung\_H\_Faktor.md}, commit \texttt{1876b55}, fixed before computing) of a distribution D of
+these roles.  The charge pattern of (b) and (c) below was seen analytically before the note and is disclosed there; the computation
+checks it and is not a prediction.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r41 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r41 distribution D}
+\label{subsec:v490-r41-distribution}
+
+Lorentz \(SL(2,\mathbb C)\) by left multiplication \(L_q\) (rotations) and \(iL_q\) (boosts) on \(\mathbb C\otimes\HH\); weak \(SU(2)\) by
+right multiplication \(R_q\) on \(\HH\), with \(T_3=-\tfrac{i}{2}R_k\); colour \(SU(3)_c\) on \(\OO\); frames \(D_4\) on \(\mathbb C\); generations on
+the triality slots of \(\OO^3\).  Hypercharge \(Y/2:=Q-\tfrac12\) with \(Q\) of v4.9.0-r34/r35; electric charge \(Q_{\rm em}:=T_3+Y/2\).  Here \(i\)
+is the outer unit.
+
+\subsection*{v4.9.0-r41 results}
+\label{subsec:v490-r41-results}
+
+\paragraph{Theoremlet v4.9.0-r41.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] On \(\mathbb C\otimes\HH\otimes\OO\) the weak \(SU(2)\) commutes with the Lorentz group, with colour and with \(Q\).  The Lorentz
+rotations are fixed by \(T\); the boosts are reversed by \(T\).
+\item[(b)] The joint eigenspaces of \(Q\) and \(T_3\) carry \(Q_{\rm em}\) as follows:
+\begin{center}
+\small
+\begin{tabular}{@{}llll@{}}
+\toprule
+\(Q\)-sector (colour) & \(Y/2\) & \(Q_{\rm em}\) at \(T_3=+\tfrac12,-\tfrac12\) & reading\\
+\midrule
+\(0\) (singlet) & \(-\tfrac12\) & \(0,\ -1\) & lepton doublet \((\nu,e)\)\\
+\(\tfrac23\) (triplet) & \(+\tfrac16\) & \(\tfrac23,\ -\tfrac13\) & quark doublet \((u,d)\)\\
+\(\tfrac13\) (conjugate triplet) & \(-\tfrac16\) & \(\tfrac13,\ -\tfrac23\) & antiquark doublet \((\bar d,\bar u)\)\\
+\(1\) (singlet) & \(+\tfrac12\) & \(1,\ 0\) & antilepton doublet \((e^+,\bar\nu)\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+\item[(c)] \(TQ_{\rm em}T^{-1}=-Q_{\rm em}\) and \(T(Y/2)T^{-1}=-Y/2\).
+\item[(d)] There is no weak singlet: \(T_1^2+T_2^2+T_3^2=\tfrac34\) on the whole space.
+\item[(e)] On \(\mathbb C\otimes\HH\otimes\OO^3\) the cyclic shift of the slots commutes with \(L_q\), \(R_q\), colour and \(Q\).
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+By explicit complex matrices on \(\HH\otimes\OO\cong\mathbb C^{32}\), with the \(\mathbb C\) factor as scalar and \(T\) as complex conjugation
+(script \texttt{llm/k82\_test\_h26.py}, deviations at most \(10^{-14}\)).  (c) follows from \(TQT^{-1}=1-Q\) (v4.9.0-r34.1(d)) and
+\(T(-\tfrac i2R_k)T^{-1}=\tfrac i2R_k\).  (d): \(R_q\) acts on \(\HH\cong\mathbb C^2\otimes\mathbb C^2\) as a doublet on the right index.  \(\square\)
+
+\paragraph{Verdict and reading.}
+H26a--e are confirmed; (d) is negative for D.
+\begin{enumerate}[leftmargin=2em]
+\item In D the quaternion factor is no longer overloaded: the Lorentz group sits on the left (front side), the weak \(SU(2)\) on the
+right (back side), the generations on the triality slots.  The zoom levels separate frames from generations; the sides separate the
+Lorentz group from the weak \(SU(2)\).
+\item Under the choice \(Y/2=Q-\tfrac12\), \(Q_{\rm em}=T_3+Y/2\) gives exactly the hypercharges and charges of the left-handed
+standard-model doublets and their conjugates, with the right colour: leptons singlets, quarks triplets, antiquarks conjugate
+triplets.  The choice is motivated by the pattern and not forced by the structure.  The sector assignment is Furey's; similar patterns
+are known in the literature on \(\mathbb C\otimes\HH\otimes\OO\).  New here is the placement on the sides and frames of the Companion.
+\item In D the frame change \(T\) is charge conjugation, \(Q_{\rm em}\mapsto-Q_{\rm em}\).  The shift in \(Q\mapsto1-Q\) of v4.9.0-r34.1(d) is
+the hypercharge offset \(\tfrac12\).  Matter frame and tachyon frame behave in D as particle and antiparticle.
+\item D is incomplete.  Every state is a weak doublet; the right-handed singlets \(u_R,d_R,e_R,\nu_R\), half of a generation, are absent,
+and all states carry the same left Lorentz index.  Chirality is not explained.  Weak singlets would need a structure on which the right
+action of \(\HH\) is trivial on part of the space, for instance a projector coupling left and right.
+\end{enumerate}
+
+\subsection*{v4.9.0-r41 status in the three frames}
+\label{subsec:v490-r41-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r41.1(a), (d), (e) & the same in M, T and P, except that \(T\) reverses the boosts\\
+r41.1(b) & stated in M; in T all charges and hypercharges change sign (r41.1(c)): the T frame reads the conjugate states\\
+r41.1(c) & relates M and T: \(T\) acts as charge conjugation; P not evaluated\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r41 register entries}
+\label{subsec:v490-r41-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r41\\
+\midrule
+overload of \(\HH\) & resolved in D by sides (Lorentz left, weak right) and by triality for the generations (r41.1(a), (e))\\
+hypercharge and \(Q=T_3+Y/2\) & doublet pattern reproduced under the choice \(Y/2=Q-\tfrac12\) (r41.1(b)); not derived\\
+frame \(T\) & charge conjugation in D (r41.1(c))\\
+weak singlets, chirality & absent in D (r41.1(d)); open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r41 ledger and guard update}
+\label{subsec:v490-r41-ledger-guard}
+
+\[
+R_{\rm qh}^{v490\text{-}r41}=(1,1,0)
+\]
+for (overload of \(\HH\) resolved in D; doublet charges reproduced under a choice; singlets and chirality absent).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r41,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r41}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
 \end{document}
