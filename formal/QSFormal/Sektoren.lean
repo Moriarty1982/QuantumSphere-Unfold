@@ -20,7 +20,11 @@ Farbdimension `1, 3, 3, 1` per Definition (`colourDim`). Dieses Modul leitet bei
   jedem Sektor. Die Fortsetzung von der Basis auf alle `x` ist Linearität und hier, wie bei `sigma_respects`, nicht formalisiert.
 
 Damit sind die Tabellen `sectors`, `colourDim`, `q6` und `weights` aus `QSFormal.Ladungen` keine Setzungen mehr, sondern
-Eigenschaften von `O.mul`. Ohne Mathlib: nur Lean-Kern (`decide`, `simp`, `omega`).
+Eigenschaften von `O.mul`.
+
+* r49 (H33): Mit der Teilchen-Zuordnung von r42.1(b) ist `2(Q − ½) = B − L`, `Y/2 = (B − L)/2 + T₃^R` und
+  `Q_em = T₃^L + T₃^R + (B − L)/2` (`b_minus_l`). `Q_em` ist keine Funktion des Sektors (`qem_not_sector_function`), kann also aus
+  `iL_{e₇}`, `iR_{e₇}` allein nicht gebaut werden: Die e₇-Achse trägt B − L, das Photon braucht den ℍ-Faktor. Ohne Mathlib: nur Lean-Kern (`decide`, `simp`, `omega`).
 -/
 
 namespace QSFormal.Sektoren
@@ -167,5 +171,22 @@ def sc (x : CO) : CO := ⟨applySP sigmaImg x.u, applySP sigmaImg x.w⟩
 theorem sigma_comm_basis : ∀ j < 8,
     sc (iL (b j)) = iL (sc (b j)) ∧ sc (iR (b j)) = iR (sc (b j)) ∧
     ∀ s ∈ sectors, sc (P4 s (b j)) = P4 s (sc (b j)) := by decide
+
+/-! ## r49 (H33): Die e₇-Achse trägt B − L, nicht die elektrische Ladung -/
+
+/-- `3(B − L)` der Zustände eines Sektors nach der Teilchen-Zuordnung von r42.1(b): (ν, e) −3, (d^c, u^c) −1, (u, d) 1, (e^c, ν^c) 3. -/
+def bl3 (s : Sector) : Int :=
+  if s = ⟨1, 1⟩ then -3 else if s = ⟨-1, 1⟩ then -1 else if s = ⟨1, -1⟩ then 1 else 3
+
+/-- H33b: `6(Q − ½) = 3(B − L)`; mit `J = iL_{e₇}`, `s = −½`: `Y/2 = (B − L)/2 + T₃^R` und `Q_em = T₃^L + T₃^R + (B − L)/2`
+(alles mal 6, `T₃^L = C T₃`, `T₃^R = (1 − C) T₃`). -/
+theorem b_minus_l : ∀ st ∈ states,
+    q6 st.1 - 3 = bl3 st.1 ∧
+    y6 ⟨1, true⟩ (-3) st = bl3 st.1 + (if inImage ⟨1, true⟩ st.1 then 0 else st.2) ∧
+    qem6 st = (if inImage ⟨1, true⟩ st.1 then st.2 else 0) + (if inImage ⟨1, true⟩ st.1 then 0 else st.2) + bl3 st.1 := by
+  decide
+
+/-- H33c: `Q_em` ist keine Funktion des Sektors; jeder Operator aus `1, iL, iR` ist es (`P4_eigen`), also kann keiner `Q_em` sein. -/
+theorem qem_not_sector_function : ∃ a ∈ states, ∃ b ∈ states, a.1 = b.1 ∧ qem6 a ≠ qem6 b := by decide
 
 end QSFormal.Sektoren

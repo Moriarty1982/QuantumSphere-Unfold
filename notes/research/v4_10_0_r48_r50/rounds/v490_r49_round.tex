@@ -1,0 +1,114 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r49 Source-Only: The Axis \texorpdfstring{\(e_7\)}{e7} Carries B--L, Not the Electric Charge}
+\addcontentsline{toc}{section}{v4.9.0-r49 Source-Only: The Axis e7 Carries B--L, Not the Electric Charge}
+\label{sec:v490-r49-e7-axis-b-minus-l}
+% ============================================================================
+
+\paragraph{Purpose.}
+After layer v4.9.0-r48 a physical reading was proposed: the charge is the coupling to the axis \(e_7\), colour is the rotations about it, and
+the axis is the photon axis of the Companion.  This layer records the pre-registered test H33 (note
+\texttt{llm/Vorab\_Notiz\_H33\_Photon\_Achse\_e7.md}, commit \texttt{ec06de3}, fixed before computing) of that reading.  The note discloses that the
+outcome was seen analytically beforehand, so the computation is a check, not a prediction.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r49 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r49 text finding}
+\label{subsec:v490-r49-text}
+
+The main body uses the plane \(\operatorname{span}(1,e_7)\) three times: as the photon kernel \(K_3\), the image of the compensator \(C\)
+(``the singlet \(\mathbb C\subset\mathbb O\), which is the photon kernel \(K_3\) sector''); as the carrier of \(\nu_R\) in the table of
+Theorem~\ref{thm:three-generations}; and as the plane of the symmetric generation point \(\omega\), ``the complex plane at the end of the
+cascade'' (v4.8.0-r15.2), whose final stratum \(S^2\) is the photon ground state.  Complex unit below: the outer unit \(i\) (rule~7 of the
+round format), as in v4.9.0-r48.
+
+\subsection*{v4.9.0-r49 results}
+\label{subsec:v490-r49-results}
+
+\paragraph{Theoremlet v4.9.0-r49.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \(\operatorname{span}_{\mathbb C}(1,e_7)\) is exactly the sum of the sectors \((\ell,r)=(1,1)\) and \((-1,-1)\), i.e.\ \(Q=0\) and
+\(Q=1\); on it \(L_{e_7}=R_{e_7}\).
+\item[(b)] On the sixteen states of one generation (content of v4.9.0-r42.1(b)) one has \(2(Q-\tfrac12)=B-L\), and with the chirality and
+offset of v4.9.0-r43
+\[
+\tfrac{Y}{2}=\tfrac{B-L}{2}+T_3^R,\qquad Q_{\rm em}=T_3^L+T_3^R+\tfrac{B-L}{2},\qquad T_3^L=C\,T_3,\quad T_3^R=(1-C)\,T_3 .
+\]
+\item[(c)] No element \(a+b\,iL_{e_7}+c\,iR_{e_7}+d\,iL_{e_7}iR_{e_7}\) acts as \(Q_{\rm em}\) on a generation; the best one misses by
+\(\tfrac12\), the \(T_3\) splitting inside a doublet.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a) numerically from the projectors of v4.9.0-r48 (script \texttt{llm/k89\_test\_h33.py}).  (b) is integer arithmetic on the table; (c)
+holds because every such element is constant on a sector (v4.9.0-r48.1(b)) while \(Q_{\rm em}\) is not.  (b) and (c) are also checked in
+Lean (\texttt{b\_minus\_l}, \texttt{qem\_not\_sector\_function} in \texttt{formal/QSFormal/Sektoren.lean}).  \(\square\)
+
+\paragraph{Verdict and reading.}
+H33a, b and c are confirmed, so by the pre-registered criterion the proposed reading is refuted as stated.
+\begin{enumerate}[leftmargin=2em]
+\item The axis \(e_7\) carries \(B-L\) (and, through \(iL_{e_7}\), the chirality), not the electric charge.  The photon needs the weak
+isospin \(T_3\) from the \(\mathbb H\) factor as well; it is the mixture of the \(e_7\) direction with the \(T_3\) direction.  Colour, the
+rotations fixing \(e_7\), commutes with \(B-L\).
+\item The charge formula is the left--right symmetric one, \(Q_{\rm em}=T_3^L+T_3^R+(B-L)/2\), with \(T_3^R\) carried by the right-handed
+partners read in the T frame.  Hypercharge is the combination \(Y/2=T_3^R+(B-L)/2\).
+\item The plane \(\operatorname{span}(1,e_7)\) is used in the main body both as the photon kernel and as the carrier of \(\nu_R\); in the
+outer frame it carries the lepton singlets \(Q=0\) and \(Q=1\).  A state plane and the photon as a generator are different objects.  This
+is a double use of the kind found in v4.9.0-r36 and a candidate for a status note.
+\item Not tested: whether \(e_7\) serves as the reference axis of the frames (photon frame as neutral axis, v4.9.0-r01).  On the singlet
+plane the \(U(1)\) fibre of \(S^3\to S^2\) (Theorem~\ref{thm:hopf}) is the phase \(e^{\theta e_7}\), i.e.\ in distribution D the
+\(U(1)_{B-L}\).
+\end{enumerate}
+
+\subsection*{v4.9.0-r49 status in the three frames}
+\label{subsec:v490-r49-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r49.1(a) & stated in M with the outer unit \(i\); T swaps the two singlet sectors\\
+r49.1(b), (c) & stated in M; under T all of \(B-L\), \(T_3^L\), \(T_3^R\), \(Q_{\rm em}\) change sign (charge conjugation); P not evaluated\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r49 register entries}
+\label{subsec:v490-r49-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r49\\
+\midrule
+``charge = coupling to \(e_7\), \(e_7\) = photon axis'' & refuted as stated (H33): \(e_7\) carries \(B-L\), the photon needs \(T_3\) from \(\mathbb H\)\\
+charge formula of one generation & \(Q_{\rm em}=T_3^L+T_3^R+(B-L)/2\), left--right symmetric (r49.1(b))\\
+photon kernel \(K_3\) = singlet \(\mathbb C\) & double use with \(\nu_R\) on \(\operatorname{span}(1,e_7)\); candidate for a status note\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r49 ledger and guard update}
+\label{subsec:v490-r49-ledger-guard}
+
+\[
+R_{\rm ax}^{v490\text{-}r49}=(1,1,0)
+\]
+for (role of the axis \(e_7\) settled as \(B-L\); charge formula checked; role of \(e_7\) as frame axis open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r49,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r49}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
