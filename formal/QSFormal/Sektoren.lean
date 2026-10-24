@@ -24,7 +24,9 @@ Eigenschaften von `O.mul`.
 
 * r49 (H33): Mit der Teilchen-Zuordnung von r42.1(b) ist `2(Q − ½) = B − L`, `Y/2 = (B − L)/2 + T₃^R` und
   `Q_em = T₃^L + T₃^R + (B − L)/2` (`b_minus_l`). `Q_em` ist keine Funktion des Sektors (`qem_not_sector_function`), kann also aus
-  `iL_{e₇}`, `iR_{e₇}` allein nicht gebaut werden: Die e₇-Achse trägt B − L, das Photon braucht den ℍ-Faktor. Ohne Mathlib: nur Lean-Kern (`decide`, `simp`, `omega`).
+  `iL_{e₇}`, `iR_{e₇}` allein nicht gebaut werden: Die e₇-Achse trägt B − L, das Photon braucht den ℍ-Faktor.
+* r51 (H35): Die Tachyon-Abbildung `z ↦ iz` (`CO.R`) vertauscht mit `iL`, `iR` und jedem `P_s` (`R_iL`, `R_iR`, `R_P4`): Ladungen sind
+  zwischen Materie und Tachyon frame-frei; die Ladungskonjugation ist der Zeitumkehr-Anteil `T` (`T_P4`). Ohne Mathlib: nur Lean-Kern (`decide`, `simp`, `omega`).
 -/
 
 namespace QSFormal.Sektoren
@@ -188,5 +190,25 @@ theorem b_minus_l : ∀ st ∈ states,
 
 /-- H33c: `Q_em` ist keine Funktion des Sektors; jeder Operator aus `1, iL, iR` ist es (`P4_eigen`), also kann keiner `Q_em` sein. -/
 theorem qem_not_sector_function : ∃ a ∈ states, ∃ b ∈ states, a.1 = b.1 ∧ qem6 a ≠ qem6 b := by decide
+
+/-! ## r51 (H35): Die Tachyon-Abbildung `z ↦ iz` lässt jeden Sektor fest -/
+
+/-- H35a: `R = CO.R` (Multiplikation mit der äußeren Einheit, die Tachyon-Abbildung von Konvention F unter A_ℂ) vertauscht mit `iL`, `iR`
+und jedem `P_s`; anders als die Zeitumkehr `T` (`T_P4`) bildet sie also jeden Sektor auf sich ab. -/
+theorem R_iL (x : CO) : CO.R (iL x) = iL (CO.R x) := by
+  obtain ⟨⟨⟨a0,a1,a2,a3⟩,⟨a4,a5,a6,a7⟩⟩, ⟨⟨b0,b1,b2,b3⟩,⟨b4,b5,b6,b7⟩⟩⟩ := x
+  simp [iL, L, CO.R, O.mul, O.e, O.neg, Q.mul, Q.sub, Q.add, Q.conj, Q.neg]
+
+theorem R_iR (x : CO) : CO.R (iR x) = iR (CO.R x) := by
+  obtain ⟨⟨⟨a0,a1,a2,a3⟩,⟨a4,a5,a6,a7⟩⟩, ⟨⟨b0,b1,b2,b3⟩,⟨b4,b5,b6,b7⟩⟩⟩ := x
+  simp [iR, R, CO.R, O.mul, O.e, O.neg, Q.mul, Q.sub, Q.add, Q.conj, Q.neg]
+
+theorem R_P4 : ∀ s ∈ sectors, ∀ x : CO, CO.R (P4 s x) = P4 s (CO.R x) := by
+  intro s hs x
+  obtain ⟨⟨⟨a0,a1,a2,a3⟩,⟨a4,a5,a6,a7⟩⟩, ⟨⟨b0,b1,b2,b3⟩,⟨b4,b5,b6,b7⟩⟩⟩ := x
+  simp only [sectors, List.mem_cons, List.not_mem_nil, or_false] at hs
+  rcases hs with rfl | rfl | rfl | rfl <;>
+    simp [P4, iL, iR, L, R, add, smul, osmul, CO.R, O.add, O.mul, O.e, O.neg,
+      Q.mul, Q.sub, Q.add, Q.conj, Q.neg] <;> omega
 
 end QSFormal.Sektoren

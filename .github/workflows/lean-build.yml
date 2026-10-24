@@ -91,6 +91,7 @@ jobs:
           #print axioms QSFormal.Sektoren.sigma_comm_basis
           #print axioms QSFormal.Sektoren.b_minus_l
           #print axioms QSFormal.Sektoren.qem_not_sector_function
+          #print axioms QSFormal.Sektoren.R_P4
           EOF
           lake env lean AxiomCheck.lean | tee axioms.log
           if grep -qE "sorryAx|ofReduceBool" axioms.log; then
