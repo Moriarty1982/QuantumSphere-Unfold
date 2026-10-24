@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v12.5
+# Kernkarte Quantum Sphaera — v12.6
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -2402,6 +2402,12 @@ H45a bestätigt (nur Verträglichkeit), H45b (θ₂₃ und δ scharf) widerlegt,
 **K107.2 (S).** Erstmals ε aus der Struktur und verträglich: gemessenes β_sym passt, Hopf-Wert nicht. Neu: bei ε = η ist sin²θ₂₃ ≈ 0.49–0.50 (knapp unterer Oktant), schärfer
 als H42; nach dem Kriterium noch keine Vorhersage, eine eigene Notiz nur für θ₂₃ wäre nötig. Grenzen: nicht blind, β_sym eingesetzt (OP1), ε = η Lesart. Kein Guard verbraucht.
 
+### K108 — Vorab festgelegte Vorhersage H46: sin²θ₂₃ ∈ [0.49, 0.50] unter ε = η (2026-10-24)
+
+Vorab-Notiz `llm/Vorab_Notiz_H46_theta23_bei_eps_eta.md` (Commit dec51e7). Aus K107: bei ε = artanh β_sym gilt sin²θ₂₃ ∈ [0.4913, 0.4975] (vorher unbekannt; ε = η selbst nicht blind
+gewählt). Schärfer als H42, H42 bleibt unabhängig. Prüfung wie H42; widerlegt, wenn das 2σ-Intervall [0.49, 0.50] nicht berührt; bestätigt, wenn das 1σ-Intervall es berührt
+und das 2σ-Intervall schmaler als 0.06 ist. Bestätigung prüft die Kette r55–r60, nicht ε = η allein. **Ausstehend.**
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -2567,6 +2573,7 @@ als H42; nach dem Kriterium noch keine Vorhersage, eine eigene Notiz nur für θ
 - v12.3 (2026-10-24): K105 Vorab-Test H43 und Runde v4.9.0-r58 (CP-Phase δ durch die korrigierte TM2-Lesart nicht festgelegt; keine H44).
 - v12.4 (2026-10-24): K106 Vorab-Test H44 und Runde v4.9.0-r59 (kein Strukturwert für ε; Trefferfenster ε ≈ 0.05 und ≈ 0.63; K103.1 korrigiert).
 - v12.5 (2026-10-24): K107 Test H45 und Runde v4.9.0-r60 (ε = Frame-Rapidität artanh β_sym verträglich, Hopf-Wert nicht; sin²θ₂₃ ≈ 0.49–0.50 scharf, δ frei).
+- v12.6 (2026-10-24): K108 Vorhersage H46 (sin²θ₂₃ ∈ [0.49, 0.50] unter ε = η) vorab festgelegt, ausstehend.
 
 ---
 
