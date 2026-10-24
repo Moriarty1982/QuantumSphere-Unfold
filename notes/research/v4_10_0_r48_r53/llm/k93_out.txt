@@ -1,0 +1,14 @@
+H37a: m3 - (m1 + m2) relativ zu m3: u 0.9963, d 0.9803, e 0.9408 (Null waere noetig)
+  Dirac-Neutrinos: m1* = 0.0282 eV, Massen [0.0282 0.0295 0.0577] eV, Summe 0.1154 eV (DESI DR2: < 0.0642 eV) -> widerlegt
+
+H37b Quarks: 0 von 8448 Paaren innerhalb +-20 % (0.000 %); naechster Fall 0.815 bei |V_us|, |V_cb|, |V_ub| = [0.15572 0.00773 0.00231]
+H37b Leptonen: 264 von 13651456 Paaren in den 3sigma-Bereichen; je m1: {0: 0, 0.001: 0, 0.003: 0, 0.01: 0, 0.02: 0, 0.05: 200, 0.1: 64}; naechster Fall 0.000 bei m1 = 0.05: sin^2 = [0.28038 0.58069 0.02194]
+H37b -> Teilbefund (nur Leptonen)
+
+H37c [u, nu in S; d, e in K]: CKM 0 von 98064 innerhalb +-20 %; naechster Fall 0.366 bei (eps, |V|) = (np.float64(1.26), array([0.14262, 0.02763, 0.00505])); PMNS-Treffer bei diesen eps: 0
+
+H37c [u, nu in K; d, e in S]: CKM 0 von 102528 innerhalb +-20 %; naechster Fall 0.404 bei (eps, |V|) = (np.float64(1.32), array([0.13403, 0.0382 , 0.00517])); PMNS-Treffer bei diesen eps: 0
+H37c -> widerlegt (zwei Zuordnungen gerechnet)
+
+Nachkontrolle H37b Quarks (dicht): 12800 u-Punkte, 12800 d-Punkte; 0 von 163840000 Paaren innerhalb +-20 %; naechster Fall 0.800 bei |V_us|, |V_cb|, |V_ub| = [0.04847 0.00836 0.00075]
+Nachkontrolle Leptonen: Treffer nur bei m1 = 0.05 und 0.1 eV, also Summe der Neutrinomassen {0.05: np.float64(0.1717), 0.1: np.float64(0.3123)} eV gegen DESI DR2 < 0.0642 eV
