@@ -74671,4 +74671,233 @@ R_{\rm glob}^{(v490\text{-}r50,+)}=(0,1,1,1,1),
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
 
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r51 Source-Only: The Axis \texorpdfstring{\(e_7\)}{e7} and the Frames}
+\addcontentsline{toc}{section}{v4.9.0-r51 Source-Only: The Axis e7 and the Frames}
+\label{sec:v490-r51-e7-frames}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.9.0-r49 left open whether \(e_7\) serves at least as the reference axis of the frames.  This layer records the pre-registered test
+H35 (note \texttt{llm/Vorab\_Notiz\_H35\_e7\_als\_Frame\_Achse.md}, commit \texttt{42e4fcc}, fixed before computing).  The note discloses that the
+outcome was seen analytically beforehand.  The layer also records a correction to the frame rows of earlier layers; those layers are not
+rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r51 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r51 setting}
+\label{subsec:v490-r51-setting}
+
+Under the assumption of layer v4.9.0-r33 that the \(\mathbb C\) factor of the Dixon store is the amplitude plane \(z\), the three
+involutions of the doublet act on \(\mathbb C\otimes\mathbb O\) through that factor: the tachyon map of Convention~F, \(z\mapsto iz\)
+(corrected in v4.9.0-r28; \(\sigma_y\) on the doublet), is multiplication \(R\) by the outer unit; the time reversal \(T\colon z\mapsto\bar z\)
+(\(\sigma_z\), exchanging compensator and partner port) is the conjugation of that factor; and \(J_B=R\circ T\) (\(\sigma_x\)).  The inner unit is
+\(J=L_{e_7}\) as in v4.9.0-r35.
+
+\subsection*{v4.9.0-r51 results}
+\label{subsec:v490-r51-results}
+
+\paragraph{Theoremlet v4.9.0-r51.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \(R\) commutes with \(iL_{e_7}\), \(iR_{e_7}\), \(Q\), \(B-L\), the colour algebra and every sector projector \(P_s\) of v4.9.0-r48;
+\(T\) and \(J_B\) map \(P_{(\ell,r)}\) to \(P_{(-\ell,-r)}\).
+\item[(b)] \(L_{e_7}\) commutes with \(\operatorname{Stab}_{G_2}(e_7)\), so the tachyon map has the colour-compatible inner counterpart
+\(z\mapsto e_7z\) on all of \(\mathbb O\).  The real-linear maps \(K\) of \(\mathbb O\) that commute with \(\operatorname{Stab}_{G_2}(e_7)\) and
+satisfy \(KL_{e_7}=-L_{e_7}K\) form a two-dimensional space, and each vanishes on \(e_7^\perp\): \(T\) and \(J_B\) have no colour-compatible
+inner counterpart on the triplet.
+\item[(c)] \(\varphi(x+iy)=x+y\,e_7\) maps the frame plane onto \(\operatorname{span}(1,e_7)\) and carries \(z\mapsto iz\), \(z\mapsto\bar z\) and
+\(z\mapsto i\bar z\) to \(L_{e_7}\), the octonion conjugation and their product.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a) by matrices (script \texttt{llm/k91\_test\_h35.py}); the statements on \(R\) and \(P_s\) are also checked in Lean (\texttt{R\_iL},
+\texttt{R\_iR}, \texttt{R\_P4} in \texttt{formal/QSFormal/Sektoren.lean}), those on \(T\) in v4.9.0-r48.  (b) by solving the linear conditions
+with the derivation algebra of \(\mathbb O\) (dimension \(14\), stabilizer of \(e_7\) dimension \(8\)); the triplet \(3\) is not equivalent to
+\(\bar 3\).  (c) since \(\operatorname{span}(1,e_7)\cong\mathbb C\).  \(\square\)
+
+\paragraph{Verdict and reading.}
+H35a, b and c are confirmed.
+\begin{enumerate}[leftmargin=2em]
+\item \(e_7\) is a reference axis of the frames only in part.  The tachyon map has an inner, colour-compatible counterpart \(L_{e_7}\) on all of
+\(\mathbb O\); on the singlet plane all three frame maps have one, so there the frame plane is the plane of the photon kernel.  Time reversal
+and \(J_B\) need the outer unit on the colour triplet.
+\item Charges are frame-free between matter and tachyon: the tachyon map leaves every sector fixed, so \(Q\), \(B-L\) and the chirality are the
+same in M and T.  Charge conjugation \(Q\mapsto1-Q\) is the time-reversal part \(T\), the exchange of compensator and partner port, not the
+tachyon map.
+\item \emph{Correction of frame rows.}  Where layers v4.9.0-r41, r43, r47, r48 and r49 call ``the frame \(T\)'' the charge conjugation, the time
+reversal \(T\) is meant, not the tachyon frame of the M/T/P column; in that column the results concerned are the same in M and T.  The Lean names
+\texttt{frameT} and \texttt{frameT\_swaps\_left} likewise denote the time reversal.  This agrees with v4.9.0-r34.1(d), where \(R\) fixes \(Q\)
+and the effect comes from the time-reversal part.
+\item The compensator \(\tfrac12(1+iL_{e_7})\) of v4.9.0-r42 is the compensator port and its complement the partner port; \(T\) exchanges the
+ports and hence the chiralities, while \(R\) fixes both.  Since \(iL_{e_7}\) is the outer \(z\mapsto iz\) composed with the inner
+\(z\mapsto e_7z\), the left-handed states are those on which the two tachyon maps agree up to sign.
+\end{enumerate}
+
+\subsection*{v4.9.0-r51 status in the three frames}
+\label{subsec:v490-r51-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r51.1(a) & the tachyon map relates M and T and fixes every sector: charges frame-free between M and T; P not evaluated\\
+r51.1(b), (c) & statements on the units, the same in M and T\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r51 register entries}
+\label{subsec:v490-r51-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r51\\
+\midrule
+\(e_7\) as reference axis of the frames & in part: for the tachyon map on all of \(\mathbb O\), for all three maps on \(\operatorname{span}(1,e_7)\) (r51.1)\\
+charges in matter and tachyon frame & frame-free; charge conjugation is the time-reversal part \(T\)\\
+``frame \(T\) = charge conjugation'' (r41, r43, r47--r49) & means time reversal \(T\) (port exchange), not the tachyon frame; corrected here\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r51 ledger and guard update}
+\label{subsec:v490-r51-ledger-guard}
+
+\[
+R_{\rm fa}^{v490\text{-}r51}=(1,1,0)
+\]
+for (action of the frame maps on the sectors settled; inner counterparts settled; role of the photon frame \(P\) not evaluated).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r51,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r51}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r52 Source-Only: Exact Coupling Forms of the Mask and the Mixing}
+\addcontentsline{toc}{section}{v4.9.0-r52 Source-Only: Exact Coupling Forms of the Mask and the Mixing}
+\label{sec:v490-r52-coupling-forms}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.9.0-r50 refuted the mask of v4.9.0-r47 as a linear perturbation, because the term \(\varepsilon^2WCW\) creates masses and the hierarchy
+keeps \(\varepsilon\) small.  This layer records the pre-registered test H36 (note \texttt{llm/Vorab\_Notiz\_H36\_Kopplungsform.md}, commit
+\texttt{66c12ab}, fixed before computing) of two exact coupling forms suggested by the structure.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r52 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r52 the two forms}
+\label{subsec:v490-r52-forms}
+
+With \(D_X=\exp(\varepsilon W_X)\), \(C_X\) Hermitian and \(\mathbb Z_3\)-circulant, \(W_u=W_d=W_q\), \(W_e=W_\nu=W_l\) and one common
+\(\varepsilon\):
+\begin{itemize}[leftmargin=2em]
+\item \emph{form K} (congruence; the partner read through the time reversal as in v4.9.0-r47): \(M_X=D_XC_XD_X\), whose first order is the form of
+r47 and which keeps the rank of \(C_X\);
+\item \emph{form S} (similarity; the partner read through the tachyon map, which keeps its sector by v4.9.0-r51.1(a) and so carries the weight
+\(-W\)): \(M_X=D_XC_XD_X^{-1}\).
+\end{itemize}
+Masses are singular values, mixing comes from the left singular vectors.  Data and procedure as in v4.9.0-r50, with step \(0.01\) up to
+\(\varepsilon=6\).  The note discloses that form K is a Froggatt--Nielsen texture with charges \(w=(0,2,1)\) and \(\lambda=e^{-\varepsilon}\), for
+which \(|V_{cb}|\sim|V_{us}|\) was expected.
+
+\subsection*{v4.9.0-r52 results}
+\label{subsec:v490-r52-results}
+
+\paragraph{Theoremlet v4.9.0-r52.1 (numerical).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Form K: solutions with the measured masses exist up to \(\varepsilon\approx3.5\) (up) and \(2.3\) (down); in none of \(98\,064\)
+combinations are \(|V_{us}|\), \(|V_{cb}|\), \(|V_{ub}|\) all within \(\pm20\%\).  The closest case is \(36\%\) off
+(\(\varepsilon=1.26\): \(0.144\), \(0.036\), \(0.0050\)).
+\item[(b)] Form S: likewise none of \(102\,528\); the closest case is \(40\%\) off (\(\varepsilon=1.32\): \(0.135\), \(0.035\), \(0.0051\)).
+\item[(c)] Hence no common \(\varepsilon\) for quarks and leptons in either form.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+Script \texttt{llm/k92\_test\_h36.py}, output \texttt{llm/k92\_out.txt}; a count in the check after the evaluation was added after the first run
+(\texttt{k92\_out\_erstlauf.txt}), the criterion values of both runs agree.  \(\square\)
+
+\paragraph{Verdict and reading.}
+H36a--d are refuted.
+\begin{enumerate}[leftmargin=2em]
+\item Neither exact form produces the measured mixing with one \(\varepsilon\) and circulant couplings.  Both are much closer than the linear
+perturbation of v4.9.0-r50 (\(36\%\) instead of \(96\%\) for the closest quark case), and the ordering
+\(|V_{us}|\gg|V_{cb}|\gg|V_{ub}|\) comes out; the hierarchy no longer bounds \(\varepsilon\) to \(\lesssim0.06\).
+\item A check after the evaluation, not part of the criterion: the leptons alone, with their own \(\varepsilon\), reach the \(3\sigma\) ranges in
+form K never and in form S in \(12\) of \(125\,922\) combinations (\(\varepsilon\approx0.5\), \(m_1=0.003\) eV, \(\sin^2\theta_{23}\) at the
+edge).  With this many branches that is a chance hit, not a finding.
+\item What is missing is, by the criterion, an open choice and not a result: couplings other than circulant, or a separate \(\varepsilon\) for each
+sector.  With one \(\varepsilon\) per sector the number of free parameters would match the number of mixing quantities, and that would no longer
+be an explanation.
+\end{enumerate}
+
+\subsection*{v4.9.0-r52 status in the three frames}
+\label{subsec:v490-r52-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r52.1(a)--(c) & statements on mass matrices in M; by v4.9.0-r51.1(a) the same in T for form S, and for form K with the partner read through the time reversal; P not evaluated\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r52 register entries}
+\label{subsec:v490-r52-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r52\\
+\midrule
+mixing from the mask, exact forms K and S & refuted with one \(\varepsilon\) and circulant couplings (H36)\\
+closest quark case & \(36\%\) off (form K), ordering of the CKM elements reproduced\\
+further ingredient for mixing & open choice: non-circulant couplings or one \(\varepsilon\) per sector\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r52 ledger and guard update}
+\label{subsec:v490-r52-ledger-guard}
+
+\[
+R_{\rm cf}^{v490\text{-}r52}=(0,1,0)
+\]
+for (mixing not explained; exact forms closer and the hierarchy bound removed; further ingredient open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r52,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r52}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
 \end{document}

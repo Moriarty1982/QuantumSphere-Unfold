@@ -1,0 +1,7 @@
+Vorpruefung: dim g2 = 14, dim Stab(e7) = 8
+
+H35a: R vertauscht mit iL, iR, Q, B-L, su(3), allen P_s: 0.0e+00; T und J_B: conj(P_(l,r)) = P_(-l,-r): 0.0e+00 -> bestaetigt
+
+H35b: [L_e7, su(3)] = 6.7e-16; Loesungsraum K (K D = D K, K L_e7 = -L_e7 K): Dimension 2, max |K auf e7^perp| = 2.2e-15 -> bestaetigt
+
+H35c: phi(iz) = L_e7 phi(z), phi(conj z) = c phi(z), phi(i conj z) = L_e7 c phi(z) auf 100 Zufallspunkten: 0.0e+00 -> bestaetigt

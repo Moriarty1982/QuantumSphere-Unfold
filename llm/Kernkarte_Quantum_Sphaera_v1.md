@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v11.5
+# Kernkarte Quantum Sphaera — v11.6
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -2277,6 +2277,30 @@ Massen ≈ (2/3) ε² m_t bzw. 2 ε² m_τ, die Hierarchie erzwingt kleine ε, d
 PMNS-, kleine CKM-Winkel) als quantitative Aussage zurückgezogen; K93.1 (Form, Frame, Fourier, √3) unberührt. Herkunft der Mischung offen.
 Kein Guard verbraucht.
 
+### K97 — Vorab festgelegter Test H35 und Companion-Runde v4.9.0-r51: e₇ und die Frames (2026-10-24)
+
+Vorab-Notiz `llm/Vorab_Notiz_H35_e7_als_Frame_Achse.md` (Commit 42e4fcc; Ergebnis vorab analytisch gesehen, offengelegt), Skript `llm/k91_test_h35.py`,
+Ausgabe `llm/k91_out.txt`, Ergebnis `llm/Ergebnis_H35_e7_als_Frame_Achse.md`, Runde `sec:v490-r51-e7-frames`, Lean `R_iL`, `R_iR`, `R_P4`.
+Unter A_ℂ (K77.8): Tachyon-Abbildung z ↦ iz = R (σ_y), Zeitumkehr T = z ↦ z̄ (σ_z, Porttausch), J_B = R ∘ T (σ_x).
+
+**K97.1 (M).** R vertauscht mit iL, iR, Q, B − L, su(3) und allen P_s; T und J_B: P_(ℓ,r) ↦ P_(−ℓ,−r) (H35a). L_{e₇} vertauscht mit Stab(e₇); farbverträgliche
+J-antilineare K bilden einen 2-dimensionalen Raum und verschwinden auf e₇^⊥ (H35b). φ(x + iy) = x + y e₇ übersetzt iz, z̄, i z̄ in L_{e₇}, Konjugation, Produkt (H35c).
+**K97.2 (S).** e₇ ist Bezugsachse der Frames nur teilweise: für die Tachyon-Abbildung auf ganz 𝕆, für alle drei auf span(1, e₇) (Frame-Ebene = Ebene des
+Photon-Kerns). Ladungen, B − L, Chiralität sind zwischen Materie und Tachyon frame-frei; Ladungskonjugation ist die Zeitumkehr T (Porttausch).
+**Umgestuft/korrigiert:** In K87.3, K89 (r43.1(d)), K93 (r47 „Partner im T-Frame“), K94.1 und K95 sowie in den Frame-Zeilen von r41, r43, r47–r49 ist mit „T“
+die Zeitumkehr gemeint, nicht der Tachyon-Frame; in der Spalte M/T sind diese Ergebnisse gleich. Lean `frameT` = Zeitumkehr. Kein Guard verbraucht.
+
+### K98 — Vorab festgelegter Test H36 und Companion-Runde v4.9.0-r52: exakte Kopplungsformen der Maske (2026-10-24)
+
+Vorab-Notiz `llm/Vorab_Notiz_H36_Kopplungsform.md` (Commit 66c12ab; Froggatt-Nielsen-Erwartung offengelegt), Skript `llm/k92_test_h36.py`, Ausgabe
+`llm/k92_out.txt` (Erstlauf ohne Zählung in der Nachkontrolle), Ergebnis `llm/Ergebnis_H36_Kopplungsform.md`, Runde `sec:v490-r52-coupling-forms`.
+Form K: M = D C D (Partner über T), Form S: M = D C D⁻¹ (Partner über die Tachyon-Abbildung, Gewicht −W), D = exp(εW), C zirkulant, ein ε.
+
+**K98.1 (M).** Zweige bis ε ≈ 3.5 (up), 2.3 (down). H36a widerlegt: 0 von 98 064 (K) innerhalb ±20 %, nächster Fall 36 % daneben (ε = 1.26: 0.144, 0.036, 0.0050).
+H36c widerlegt: 0 von 102 528 (S), nächster 40 %. H36b, d widerlegt. Nachkontrolle: Leptonen allein K 0 von 163 398, S 12 von 125 922 (Zufallstreffer bei ε ≈ 0.5).
+**K98.2 (S).** Beide exakten Formen näher als die lineare (36 % statt 96 %), Reihenfolge |V_us| ≫ |V_cb| ≫ |V_ub| reproduziert, Hierarchie begrenzt ε nicht mehr.
+Fehlende Zutat offene Wahl: nicht zirkulante C oder ein ε je Sektor (dann keine Erklärung mehr). Kein Guard verbraucht.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -2432,6 +2456,7 @@ Kein Guard verbraucht.
 - v11.3 (2026-10-23): Lean-Modul `formal/QSFormal/Ladungen.lean` (nur Lean-Kern): σ einziger Automorphismus unter 48 Fortsetzungen (r36), c L_{e₇} c = −R_{e₇} für alle x (r45), 6Q, Inhalt einer Generation, Anomalie-Spuren und Tr Y = 0 ⇔ s = −½ (r42, r43), Masken-Gewichte und Eisenstein-Normen (r47), 2^j mod 3 (r39); geprüft mit Lean 4.35.0, nur Standard-Axiome.
 - v11.4 (2026-10-24): K94 Companion-Runde v4.9.0-r48 und Lean-Modul `formal/QSFormal/Sektoren.lean`: Ladungs-Sektoren, Farbdimensionen 1, 3, 3, 1, Ladungen und Masken-Gewichte aus O.mul hergeleitet; T als Ladungskonjugation; σ bleibt im Sektor.
 - v11.5 (2026-10-24): K95 Vorab-Test H33 und Runde v4.9.0-r49 (e₇ trägt B − L, Photon braucht ℍ; Q_em = T₃^L + T₃^R + (B − L)/2), K96 Vorab-Test H34 und Runde v4.9.0-r50 (Maske aus r47 erklärt CKM und PMNS nicht; ε durch die Hierarchie begrenzt); K93.3 umgestuft.
+- v11.6 (2026-10-24): K97 Vorab-Test H35 und Runde v4.9.0-r51 (Tachyon-Abbildung lässt die Sektoren fest; e₇ Frame-Achse nur teilweise; „T“ in r41–r49 = Zeitumkehr, korrigiert), K98 Vorab-Test H36 und Runde v4.9.0-r52 (Kongruenz- und Ähnlichkeitsform der Maske widerlegt, nächster Fall 36 %).
 
 ---
 

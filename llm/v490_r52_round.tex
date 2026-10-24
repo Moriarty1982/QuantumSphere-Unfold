@@ -1,0 +1,111 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r52 Source-Only: Exact Coupling Forms of the Mask and the Mixing}
+\addcontentsline{toc}{section}{v4.9.0-r52 Source-Only: Exact Coupling Forms of the Mask and the Mixing}
+\label{sec:v490-r52-coupling-forms}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.9.0-r50 refuted the mask of v4.9.0-r47 as a linear perturbation, because the term \(\varepsilon^2WCW\) creates masses and the hierarchy
+keeps \(\varepsilon\) small.  This layer records the pre-registered test H36 (note \texttt{llm/Vorab\_Notiz\_H36\_Kopplungsform.md}, commit
+\texttt{66c12ab}, fixed before computing) of two exact coupling forms suggested by the structure.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r52 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r52 the two forms}
+\label{subsec:v490-r52-forms}
+
+With \(D_X=\exp(\varepsilon W_X)\), \(C_X\) Hermitian and \(\mathbb Z_3\)-circulant, \(W_u=W_d=W_q\), \(W_e=W_\nu=W_l\) and one common
+\(\varepsilon\):
+\begin{itemize}[leftmargin=2em]
+\item \emph{form K} (congruence; the partner read through the time reversal as in v4.9.0-r47): \(M_X=D_XC_XD_X\), whose first order is the form of
+r47 and which keeps the rank of \(C_X\);
+\item \emph{form S} (similarity; the partner read through the tachyon map, which keeps its sector by v4.9.0-r51.1(a) and so carries the weight
+\(-W\)): \(M_X=D_XC_XD_X^{-1}\).
+\end{itemize}
+Masses are singular values, mixing comes from the left singular vectors.  Data and procedure as in v4.9.0-r50, with step \(0.01\) up to
+\(\varepsilon=6\).  The note discloses that form K is a Froggatt--Nielsen texture with charges \(w=(0,2,1)\) and \(\lambda=e^{-\varepsilon}\), for
+which \(|V_{cb}|\sim|V_{us}|\) was expected.
+
+\subsection*{v4.9.0-r52 results}
+\label{subsec:v490-r52-results}
+
+\paragraph{Theoremlet v4.9.0-r52.1 (numerical).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Form K: solutions with the measured masses exist up to \(\varepsilon\approx3.5\) (up) and \(2.3\) (down); in none of \(98\,064\)
+combinations are \(|V_{us}|\), \(|V_{cb}|\), \(|V_{ub}|\) all within \(\pm20\%\).  The closest case is \(36\%\) off
+(\(\varepsilon=1.26\): \(0.144\), \(0.036\), \(0.0050\)).
+\item[(b)] Form S: likewise none of \(102\,528\); the closest case is \(40\%\) off (\(\varepsilon=1.32\): \(0.135\), \(0.035\), \(0.0051\)).
+\item[(c)] Hence no common \(\varepsilon\) for quarks and leptons in either form.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+Script \texttt{llm/k92\_test\_h36.py}, output \texttt{llm/k92\_out.txt}; a count in the check after the evaluation was added after the first run
+(\texttt{k92\_out\_erstlauf.txt}), the criterion values of both runs agree.  \(\square\)
+
+\paragraph{Verdict and reading.}
+H36a--d are refuted.
+\begin{enumerate}[leftmargin=2em]
+\item Neither exact form produces the measured mixing with one \(\varepsilon\) and circulant couplings.  Both are much closer than the linear
+perturbation of v4.9.0-r50 (\(36\%\) instead of \(96\%\) for the closest quark case), and the ordering
+\(|V_{us}|\gg|V_{cb}|\gg|V_{ub}|\) comes out; the hierarchy no longer bounds \(\varepsilon\) to \(\lesssim0.06\).
+\item A check after the evaluation, not part of the criterion: the leptons alone, with their own \(\varepsilon\), reach the \(3\sigma\) ranges in
+form K never and in form S in \(12\) of \(125\,922\) combinations (\(\varepsilon\approx0.5\), \(m_1=0.003\) eV, \(\sin^2\theta_{23}\) at the
+edge).  With this many branches that is a chance hit, not a finding.
+\item What is missing is, by the criterion, an open choice and not a result: couplings other than circulant, or a separate \(\varepsilon\) for each
+sector.  With one \(\varepsilon\) per sector the number of free parameters would match the number of mixing quantities, and that would no longer
+be an explanation.
+\end{enumerate}
+
+\subsection*{v4.9.0-r52 status in the three frames}
+\label{subsec:v490-r52-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r52.1(a)--(c) & statements on mass matrices in M; by v4.9.0-r51.1(a) the same in T for form S, and for form K with the partner read through the time reversal; P not evaluated\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r52 register entries}
+\label{subsec:v490-r52-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r52\\
+\midrule
+mixing from the mask, exact forms K and S & refuted with one \(\varepsilon\) and circulant couplings (H36)\\
+closest quark case & \(36\%\) off (form K), ordering of the CKM elements reproduced\\
+further ingredient for mixing & open choice: non-circulant couplings or one \(\varepsilon\) per sector\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r52 ledger and guard update}
+\label{subsec:v490-r52-ledger-guard}
+
+\[
+R_{\rm cf}^{v490\text{-}r52}=(0,1,0)
+\]
+for (mixing not explained; exact forms closer and the hierarchy bound removed; further ingredient open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r52,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r52}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.

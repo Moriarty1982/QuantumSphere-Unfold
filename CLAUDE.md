@@ -90,7 +90,7 @@ Nicht in diesem Verzeichnis, aber referenziert: `RC14_uncompressed_reference_sou
 
 ## Der Runden-Workflow
 
-Die **Runden** wachsen append-only: eine neue Runde ist ein neuer Abschnitt unmittelbar vor `\end{document}`, bestehende Runden werden nicht umgeschrieben. Aktueller Stand: **r94**, **v4.8.0-r20**, **v4.9.0-r50**. Runden der v4.8.0-Linie heißen `v4.8.0-rNN` (Labels `sec:v480-rNN-...`), danach `v4.9.0-rNN` (`sec:v490-rNN-...`); `qs.py outline` und `ledger` erkennen alle Formen. Inhalt jeder Runde ausführlich in der Kernkarte (`llm/Kernkarte_Quantum_Sphaera_v1.md`, Abschnitt 7).
+Die **Runden** wachsen append-only: eine neue Runde ist ein neuer Abschnitt unmittelbar vor `\end{document}`, bestehende Runden werden nicht umgeschrieben. Aktueller Stand: **r94**, **v4.8.0-r20**, **v4.9.0-r52**. Runden der v4.8.0-Linie heißen `v4.8.0-rNN` (Labels `sec:v480-rNN-...`), danach `v4.9.0-rNN` (`sec:v490-rNN-...`); `qs.py outline` und `ledger` erkennen alle Formen. Inhalt jeder Runde ausführlich in der Kernkarte (`llm/Kernkarte_Quantum_Sphaera_v1.md`, Abschnitt 7).
 
 **Der Hauptkorpus wird seit v4.9.0-r25 überarbeitet** (Autorauftrag 2026-10-22: alte Arbeit nicht verlieren, falsche Aussagen nicht stehen lassen). Regel (`sec:v490-r25-main-body-revision`, Skript `llm/aufraeumen_v490.py`):
 - **(A) Sackgasse** (widerlegt, ausgeschlossen, zurückgezogen): Original wortgleich in den Archiv-Anhang `sec:v490-archive`; an der alten Stelle bleibt dieselbe Umgebung mit **gleicher Nummer und gleichem Label**, kurzer Aussage dessen, was bleibt, und Verweis. Alle `\ref` lösen weiter auf.
@@ -153,6 +153,8 @@ Guard-Linter für neue Runden: `python llm/training/guard_linter.py <tex> --star
 | r48 | Ladungs-Sektoren aus der Oktonionen-Multiplikation in Lean (`formal/QSFormal/Sektoren.lean`, keine Vorhersage, keine Vorab-Notiz): (iL)² = (iR)² = 1, iL iR = iR iL; vier orthogonale Projektoren P_s mit Summe 1; Sp(LR) = 4, Ränge 1, 3, 3, 1; 6Q und die r47-Gewichte auf den Sektoren; T P_(ℓ,r) = P_(−ℓ,−r) T; σ bleibt im Sektor. Damit sind die Tabellen von `Ladungen.lean` hergeleitet statt gesetzt |
 | r49 | e₇-Achse trägt B − L, nicht die Ladung (Vorab-Test H33, Deutung nach r48): span_ℂ(1, e₇) = Sektoren Q = 0, 1; 2(Q − ½) = B − L, Q_em = T₃^L + T₃^R + (B − L)/2; Photon braucht T₃ aus ℍ; Photon-Kern K₃ und ν_R auf derselben Ebene (Doppelbelegung, Statusvermerk-Kandidat); Lean `b_minus_l` |
 | r50 | Mischung aus der Maske von r47 (Vorab-Test H34, Daten M_Z-Massen, NuFIT 6.0, PDG 2024): Hierarchie begrenzt ε (≲ 0.06 up), CKM in keiner Kombination auf ±20 %, PMNS auch allein nicht; Modellannahme für die Mischung widerlegt, Form der Maske bleibt |
+| r51 | e₇ und die Frames (Vorab-Test H35): Tachyon-Abbildung z ↦ iz (äußere Einheit) lässt alle Sektoren fest, T und J_B tauschen sie; L_{e₇} ist inneres Gegenstück von z ↦ iz, für T, J_B gibt es auf dem Triplett keins; Frame-Ebene = span(1, e₇). **Korrektur:** „T“ als Ladungskonjugation in r41–r49 = Zeitumkehr (Porttausch), nicht Tachyon-Frame; Lean `R_P4` |
+| r52 | Exakte Kopplungsformen der Maske (Vorab-Test H36): D C D (Partner über T) und D C D⁻¹ (über die Tachyon-Abbildung), D = exp(εW); CKM in keiner Kombination auf ±20 % (nächster Fall 36 %), Leptonen auch nicht; Reihenfolge der CKM-Elemente stimmt; fehlende Zutat offene Wahl |
 
 Ältere Runden (r03–r94, v4.8.0-r01–r20): Kernkarte und die genannten Register. Kurzstand v4.8.0: Lesart B (ℂ³, SO(3,ℂ)) als Arbeitslesart, Sektoren nach Vorzeichen von s, vorab festgelegte Tests H2–H13 mit Ergebnissen, Riemann-Arbeit seit r04 keine Beweisquelle.
 
