@@ -1,0 +1,109 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r64 Source-Only: A Frame Audit of the Gravity Statements under the Counting Reading}
+\addcontentsline{toc}{section}{v4.9.0-r64 Source-Only: A Frame Audit of the Gravity Statements under the Counting Reading}
+\label{sec:v490-r64-gravity-audit}
+% ============================================================================
+
+\paragraph{Purpose.}
+After v4.9.0-r63 the author asked what gravity is in this context.  Under the counting reading the two values of \(\gamma\) come from the same horizon, with the same area
+\(A\) and the same \(\lP\): each counting fixes its own \(\gamma\) by \(S=A/(4\lP^2)\).  This layer audits the main-body statements that use \(\gL\), \(\gBI\) or \(\gstring\) on the
+gravity side, as v4.9.0-r61 did for OP1 to OP5.  It makes no prediction and rewrites no earlier layer.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r64 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r64 results}
+\label{subsec:v490-r64-results}
+
+\paragraph{Theoremlet v4.9.0-r64.1 (where the frame difference sits).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Theorem~\ref{thm:k-values} lists \(\gBI\) with \(k=0\), ``frame-invariant by construction''; Theorem~\ref{thm:frame-offset} calls \(\gBI\) the Lorentz-transformed
+\(\gstring\).  The two statements contradict each other, independently of r63.
+\item[(b)] Under the counting reading the whole frame difference sits in \(\gamma\): \(\hbar\), \(G_N\) and \(\lP\) enter both countings identically.  The assignments
+\(k(\hbar)=1\), \(k(G_N)=2\) converted with \(\gL\) use the counting ratio a second time.  This concerns Theorem~\ref{thm:planck-photon} (\(\gL^{-3/2}\)), the corollary
+``Cosmological constant revisited'' (\(\gL^{5}\)) and item~(i) of Proposition~\ref{prop:hawking-gBI-tachyon} (\(\gL^{-1}\) for \(T_H\)).  They are not refuted, but they need a
+source for their \(k\) values other than \(\gL\).
+\item[(c)] Theorem~\ref{thm:frame-offset} assigns \(\gstring\) to the photon frame and reads \(\gL\) as an M--R Lorentz factor at \(\beta=0.844\).  The number is \(\tanh2\eta\), the
+M--T velocity; under r63 \(\gstring\) belongs to the tachyon floor.  The value is consistent, the frame label is R for T.
+\item[(d)] Theorem~\ref{thm:symmetric-frame} is frame-consistent and gains a kinematic reading from r63.4: the tachyon at \(-\bsym\) is the floor of the mirror frame.
+\item[(e)] Theorem~\ref{thm:hawking-triolic} gives the escaping photon in R the value \(\gstring\).  Under r63 that is the counting of the infalling tachyon; the statement
+reads T as R.
+\item[(f)] Theorem~\ref{thm:dual-origin} (\(\gL\approx1/\bsym\), gap \(2.4\%\)) compares \(\cosh2\eta\) with \(\coth\eta\), the class mixing of r61.1(a).  Under r63 \(\gL\) is a
+counting ratio; the gap is not geometric.
+\item[(g)] Theorem~\ref{thm:dark-energy} uses \(\bsym^2=\tanh^2\eta\), the M--R relation, which is consistent within the symmetric placement; its value \(\bsym=1/\sqrt3\) is the
+Hopf value of r61.1(b).  The drift problem of v4.9.0-r17 is untouched.
+\item[(h)] Theorem~\ref{thm:einstein} uses none of the three quantities.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a) by reading the two statements; (b) from the counting equations of r63.1, in which \(\lP\) and \(A\) are common to both countings; (c)--(g) by comparison with r63.4,
+v4.9.0-r18/r19 and r61; (h) by inspection.  \(\square\)
+
+\paragraph{Reading.}
+\begin{enumerate}[leftmargin=2em]
+\item The gravity statements split into two groups.  Those that put the frame difference into \(\gamma\) (Theorems~\ref{thm:frame-offset} after relabelling,
+\ref{thm:symmetric-frame}) are compatible with the counting reading.  Those that put it into \(\hbar\) and \(G_N\) (Theorems~\ref{thm:k-values}, \ref{thm:planck-photon}, the
+cosmological corollary, Proposition~\ref{prop:hawking-gBI-tachyon}(i)) are not supported by it.
+\item In the counting reading gravity itself is frame-independent: \(G_N\), \(\lP\) and the area are the same for all frames.  What changes between the frames is how many
+states a frame counts per area, and \(\gamma\) is the exchange rate.
+\item This is a reading, not a theorem: the \(k\)-value picture would survive with an independent derivation of its exponents.  Candidates for status notes are
+Theorems~\ref{thm:k-values} (r64.1(a)), \ref{thm:planck-photon} and \ref{thm:hawking-triolic}; the decision is left to the author.
+\item H15 (\(\cot\theta_W=\gL\)) is not affected.
+\end{enumerate}
+
+\subsection*{v4.9.0-r64 status in the three frames}
+\label{subsec:v490-r64-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r64.1(a), (b) & frame difference in the counting (M, T), not in \(\hbar\), \(G_N\)\\
+r64.1(c), (e) & T read as R\\
+r64.1(d) & M and T; frame-consistent\\
+r64.1(f), (g) & as r61.1(a), (b)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r64 register entries}
+\label{subsec:v490-r64-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r64\\
+\midrule
+\(k(\gBI)=0\) (Theorem~\ref{thm:k-values}) & contradicts Theorem~\ref{thm:frame-offset}; candidate for a status note\\
+photon-frame Planck length, \(\gL^5\) vacuum ratio, Hawking (i) & not supported by the counting reading; need independent \(k\) values\\
+Hawking temperature \(\gstring T_H\) & reads the tachyon counting as the photon value\\
+symmetric matter--tachyon frame & frame-consistent; T is the floor of the mirror frame\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r64 ledger and guard update}
+\label{subsec:v490-r64-ledger-guard}
+
+\[
+R_{\rm grav}^{v490\text{-}r64}=(1,1,0)
+\]
+for (contradiction in the \(k\) table found; frame difference located in the counting under r63; no gravity statement derived).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r64,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r64}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.

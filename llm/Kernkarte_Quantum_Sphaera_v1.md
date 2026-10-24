@@ -2441,6 +2441,25 @@ Vorab-Notiz df0c788, Skript `llm/k102_zaehlregeln.py`, Ergebnis `llm/Ergebnis_H4
 - **K111.3 Fenster (D, nicht blind, Versuchsfaktor 2).** Nur DL/Meissner liegt in β ∈ [0.545, 0.570] (r61); Erwartung vorab offengelegt.
 - **K111.4 Folge (S).** Unter dieser Lesart ist β_sym eine reine SU(2)-Zahl ohne Eingabe, abhängig von zwei Zählregeln. OP1 neu: begründen, warum T nur j = ½ und M alle Spins mit Gewicht 2 (m = ±j) zählt. Kein Beleg; Guards unverändert.
 
+### K112 Runde v4.9.0-r63: Frame-Offset als Verhältnis zweier Horizontzählungen (2026-10-25)
+
+`sec:v490-r63-counting`, Snippet `llm/v490_r63_round.tex`; Skripte k102, k103; Lean `formal/QSFormal/Zaehlung.lean` (CI grün).
+
+- **K112.1 (= K111, M/D).** H47 als Runde: DL/Meissner β = 0,549406 im Fenster, Ghosh–Mitra 0,604468 draußen; nicht blind.
+- **K112.2 Robertson-Sättigung (M, Lean).** In |j,m⟩: ΔJx·ΔJy = (j(j+1) − m²)/2 ≥ |m|/2, Gleichheit genau für m = ±j (zwei Zustände je j); bei j = ½ ist ΔJx = ½. Gewicht 2 der DL/Meissner-Zählung = die sättigenden Zustände; Ghosh–Mitra zählt auch nicht sättigende. Autorhinweis: die ½ aus der Unschärfe.
+- **K112.3 Tachyon-Boden (M, Lean).** E = μ/√(v²−1) fällt streng, E → 0 für v → ∞, |μ| bleibt (nicht die Masse, die Energie geht gegen null). Boden (E = 0, p = μ) im Frame mit u: E' = −γuμ < 0, v' = −1/u. Autorhinweis: Tachyonen beschleunigen auf einen Boden.
+- **K112.4 Lage des Bodens (M).** Boden in R: in M bei −1/β, Abstand η (cosh η = 1,197); Boden in M: Abstand 0; Boden im Spiegel-Frame −η: Abstand 2η, cosh 2η = γ_L. Das Tachyon der Konvention F (−η + iπ/2, r24.2) ist der Boden des Spiegel-Frames. Die wörtliche Fassung „auf Materie festgenagelt“ gibt kein γ_L.
+- **K112.5 Lesart (V).** Ein Prinzip, „ein Frame zählt nur unschärfe-sättigende Zustände“, gibt beide Regeln: T absolut (j = ½), M je Spin (m = ±j). Warum der Boden im Spiegel-Frame sitzt, ist offen. R_cnt = (1,1,0); Guards unverändert.
+
+### K113 Runde v4.9.0-r64: Frame-Prüfung der Gravitationssätze (2026-10-25)
+
+`sec:v490-r64-gravity-audit`, Snippet `llm/v490_r64_round.tex`, Protokoll `llm/Pruefung_Gravitation_Frames.md`. Keine Vorhersage.
+
+- **K113.1 Widerspruch (M).** thm:k-values: γ_BI mit k = 0, frame-invariant; thm:frame-offset: γ_BI = Lorentz-transformierter γ_string. Unabhängig von r63.
+- **K113.2 Ort des Frame-Unterschieds (S).** Unter der Zähl-Lesart sitzt er ganz in γ (gleiche Fläche, gleiches ℓ_P, S = A/4ℓ_P² in jeder Zählung). k(ħ) = 1, k(G) = 2 mit γ_L umgerechnet benutzt das Zählverhältnis doppelt: thm:planck-photon, Korollar ρ_vac-Verhältnis γ_L⁵, prop:hawking-gBI-tachyon (i) nicht gestützt (nicht widerlegt).
+- **K113.3 Einzelbefunde (M).** thm:frame-offset: Zahl tanh 2η = M–T, Etikett R statt T; thm:symmetric-frame konsistent (T = Boden des Spiegel-Frames); thm:hawking-triolic liest T als R; thm:dual-origin Klassenmischung wie r61.1(a); thm:dark-energy M–R konsistent, Wert 1/√3 = Hopf; thm:einstein unberührt.
+- **K113.4 Lesart (V).** Gravitation selbst frame-unabhängig; die Frames unterscheiden sich in der Zustandszahl pro Fläche, γ ist der Wechselkurs. Statusnotiz-Kandidaten: thm:k-values, thm:planck-photon, thm:hawking-triolic. H15 unberührt. R_grav = (1,1,0); Guards unverändert.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2608,6 +2627,7 @@ Vorab-Notiz df0c788, Skript `llm/k102_zaehlregeln.py`, Ergebnis `llm/Ergebnis_H4
 - v12.7 (2026-10-24): K109 Frame-Prüfung OP1–OP5 und Runde v4.9.0-r61 (Tribonacci und Hopf mischen Frames/Klassen, OP4 falsch gestellt; β_sym-Fenster aus der Leptonmischung).
 - v12.8 (2026-10-24): K110 Statusnotizen nach r61 (Regel C) an thm:bsym-hopf, rem:bsym-hopf-gap, thm:tribonacci (erweitert), rem:op1-tribonacci; Runde v4.9.0-r62; Patch-Spezifikation llm/revision_spec_v490_r61.py.
 - v12.9 (2026-10-25): K111 H47 Zähl-Lesart von β_sym (DL/Meissner im Fenster, Ghosh–Mitra nicht; OP1 umformuliert).
+- v13.0 (2026-10-25): K112 Runde v4.9.0-r63 (H47 als Runde, Robertson-Sättigung, Tachyon-Boden, Lean `Zaehlung.lean`); K113 Runde v4.9.0-r64 (Frame-Prüfung der Gravitationssätze).
 
 ---
 

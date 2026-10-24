@@ -1,6 +1,6 @@
 # Bestandsaufnahme: Was folgt aus der Struktur, was ist eingesetzt?
 
-Stand 2026-10-25, nach v4.9.0-r62 und H47. Lebendes Dokument: nach jeder Runde nachführen (Spalte „Stand“, Fundstelle, Datum).
+Stand 2026-10-25, nach v4.9.0-r64. Lebendes Dokument: nach jeder Runde nachführen (Spalte „Stand“, Fundstelle, Datum).
 Zweck (Autorabsicht): Eine vereinheitlichte Theorie muss keine neue Physik einführen, sondern erklären, **warum** das
 Standardmodell diese Struktur hat. Das wird hier Merkmal für Merkmal geprüft. Eine Erklärung zählt nur, wenn die Struktur
 eine Alternative **ausschließt**: Sie muss etwas verbieten.
@@ -38,7 +38,7 @@ eine Alternative **ausschließt**: Sie muss etwas verbieten.
 | Feinstrukturkonstante, Weinberg-Winkel | **B**, offen | k-Tabelle (`thm:k-values`: α „first Dixon plane“); cot θ_W (on-shell) ≈ γ_L, Vorhersage H15 für m_W, noch nicht entschieden (v4.9.0-r07). γ_L selbst ist eingesetzt (OP1). |
 | β_sym, γ_L | **B** | Aus γ_BI und γ_string eingesetzt (v4.8.0-r03); OP1 offen (Issue #10). v4.9.0-r61: Hopf- und Tribonacci-Wert mischen Frames bzw. Klassen, nur der gemessene Wert ist frame-konsistent; OP4 falsch gestellt; Statusnotizen dazu im Haupttext (v4.9.0-r62). Unter der Flavour-Lesart r55–r60 legt die Leptonmischung β_sym ∈ [0.545, 0.570] fest (gemessen drin, Hopf und Tribonacci draußen; nicht blind). H47: Als Verhältnis zweier Horizontzählungen (T: nur j = ½, M: alle Spins) ist β_sym eine reine SU(2)-Zahl; DL/Meissner liegt im Fenster, Ghosh–Mitra nicht. Offen bleibt, warum die Frames so zählen. |
 | Higgs-Mechanismus | **B**, Typ festgelegt | Nur formal als Portgewichtung (v4.9.0-r06). v4.9.0-r44 (H29): Die farb- und Lorentz-verträglichen Massenterme sind antilinear (Frame-Kopplung M ↔ T) und tragen genau die Quantenzahlen von H und H̃; eichinvariant ist nur ein ν^c-Majorana-Term. Die Art der nötigen Brechung ist damit festgelegt, ihre Ursache nicht. |
-| Gravitation, Λ | **B**/offen | Feldgleichungsschicht korrigiert (v4.8.0-r05), Wirkung nicht definiert; Cartan-Jets endlich, keine regionale Existenz (Issue #16). |
+| Gravitation, Λ | **B**/offen | Feldgleichungsschicht korrigiert (v4.8.0-r05), Wirkung nicht definiert; Cartan-Jets endlich, keine regionale Existenz (Issue #16). v4.9.0-r64: thm:k-values (k(γ_BI) = 0) widerspricht thm:frame-offset; unter der Zähl-Lesart (r63) ist Gravitation frame-unabhängig, der Frame-Unterschied sitzt in γ; Photon-Frame-Planck-Länge und γ_L⁵ dadurch nicht gestützt. |
 
 ## Was daraus folgt
 

@@ -90,7 +90,7 @@ Nicht in diesem Verzeichnis, aber referenziert: `RC14_uncompressed_reference_sou
 
 ## Der Runden-Workflow
 
-Die **Runden** wachsen append-only: eine neue Runde ist ein neuer Abschnitt unmittelbar vor `\end{document}`, bestehende Runden werden nicht umgeschrieben. Aktueller Stand: **r94**, **v4.8.0-r20**, **v4.9.0-r62**. Runden der v4.8.0-Linie heißen `v4.8.0-rNN` (Labels `sec:v480-rNN-...`), danach `v4.9.0-rNN` (`sec:v490-rNN-...`); `qs.py outline` und `ledger` erkennen alle Formen. Inhalt jeder Runde ausführlich in der Kernkarte (`llm/Kernkarte_Quantum_Sphaera_v1.md`, Abschnitt 7).
+Die **Runden** wachsen append-only: eine neue Runde ist ein neuer Abschnitt unmittelbar vor `\end{document}`, bestehende Runden werden nicht umgeschrieben. Aktueller Stand: **r94**, **v4.8.0-r20**, **v4.9.0-r64**. Runden der v4.8.0-Linie heißen `v4.8.0-rNN` (Labels `sec:v480-rNN-...`), danach `v4.9.0-rNN` (`sec:v490-rNN-...`); `qs.py outline` und `ledger` erkennen alle Formen. Inhalt jeder Runde ausführlich in der Kernkarte (`llm/Kernkarte_Quantum_Sphaera_v1.md`, Abschnitt 7).
 
 **Der Hauptkorpus wird seit v4.9.0-r25 überarbeitet** (Autorauftrag 2026-10-22: alte Arbeit nicht verlieren, falsche Aussagen nicht stehen lassen). Regel (`sec:v490-r25-main-body-revision`, Skript `llm/aufraeumen_v490.py`):
 - **(A) Sackgasse** (widerlegt, ausgeschlossen, zurückgezogen): Original wortgleich in den Archiv-Anhang `sec:v490-archive`; an der alten Stelle bleibt dieselbe Umgebung mit **gleicher Nummer und gleichem Label**, kurzer Aussage dessen, was bleibt, und Verweis. Alle `\ref` lösen weiter auf.
@@ -165,7 +165,9 @@ Guard-Linter für neue Runden: `python llm/training/guard_linter.py <tex> --star
 | r60 | ε als Rapidität des Materie-Frames (Test H45, nicht blind): ε = artanh β_sym = 0.617 trifft (A 120, B 1 104 Fälle), Hopf-Wert 0.658 nicht; dabei sin²θ₂₃ ∈ [0.491, 0.498] scharf, δ frei; θ₂₃-Vorhersage noch nicht festgelegt |
 | r61 | Frame-Prüfung OP1–OP5 (Autorhinweis): Tribonacci (γ_L = 1/β ⇔ cosh 2η = e^η) mischt M und T bzw. Weg A und C; Hopf liest reinen R-Zustand (2/3, 1/3) als gemischten M-Zustand (3/4, 1/4); nur γ_BI/γ_string frame-konsistent; OP4 falsch gestellt; OP2 (T4) gleiche Mischung; OP5 Mischung nicht ursächlich; Leptonmischung gibt β_sym ∈ [0.545, 0.570] (nicht blind) |
 | r62 | Statusnotizen nach r61 (Regel C, Spezifikation `llm/revision_spec_v490_r61.py`) an thm:bsym-hopf, rem:bsym-hopf-gap, thm:tribonacci, rem:op1-tribonacci; PR #39 (r61) gemergt als 843155e; PR #40 (r62) gemergt als 390eb3f |
-| H47 | (kein Rundenabschnitt) β_sym als Verhältnis zweier Horizontzählungen: T zählt j = ½ (ABCK), M alle Spins; DL/Meissner gibt β = 0,5494 (im Lepton-Fenster), Ghosh–Mitra 0,6045 (draußen); nicht blind; OP1 umformuliert zu „Zählregeln aus den Frames begründen“ (Notiz df0c788) |
+| H47 | (Runde r63) β_sym als Verhältnis zweier Horizontzählungen: T zählt j = ½ (ABCK), M alle Spins; DL/Meissner gibt β = 0,5494 (im Lepton-Fenster), Ghosh–Mitra 0,6045 (draußen); nicht blind; OP1 umformuliert zu „Zählregeln aus den Frames begründen“ (Notiz df0c788) |
+| r63 | Frame-Offset als Verhältnis zweier Horizontzählungen: H47 als Runde; Robertson-Sättigung (nur m = ±j minimal, bei j = ½ ΔJ = ½; Gewicht 2 = DL/Meissner); Tachyon-Boden (E → 0, Boden im bewegten Frame mit v = −1/u, E < 0); nur der Boden des Spiegel-Frames gibt γ_L; Lean `formal/QSFormal/Zaehlung.lean` |
+| r64 | Frame-Prüfung der Gravitationssätze: thm:k-values (k(γ_BI) = 0) widerspricht thm:frame-offset; unter der Zähl-Lesart sitzt der Frame-Unterschied in γ, nicht in ħ, G (thm:planck-photon, γ_L⁵-Korollar, Hawking (i) nicht gestützt); thm:hawking-triolic liest T als R; Gravitation selbst frame-unabhängig |
 
 Ältere Runden (r03–r94, v4.8.0-r01–r20): Kernkarte und die genannten Register. Kurzstand v4.8.0: Lesart B (ℂ³, SO(3,ℂ)) als Arbeitslesart, Sektoren nach Vorzeichen von s, vorab festgelegte Tests H2–H13 mit Ergebnissen, Riemann-Arbeit seit r04 keine Beweisquelle.
 
