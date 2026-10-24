@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v11.7
+# Kernkarte Quantum Sphaera — v11.8
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -2314,6 +2314,19 @@ H/H̃-Lesart (u, ν und d, e in verschiedenen Formen K/S): 0 Treffer, nächster 
 **K99.2 (S).** Verbot aus der Struktur: Massen brauchen eine Kopplung innerhalb eines Platzes; die Triality-Form allein kann keine Massen tragen. Keine aus der
 Struktur nahe liegende Kopplung erklärt die Mischung; am nächsten bleibt K98 (D C D, zirkulant, 36 %). Herkunft der Mischung offen. Kein Guard verbraucht.
 
+### K100 — Vorab festgelegter Test H38 und Companion-Runde v4.9.0-r54: ein ε je Sektor (2026-10-24)
+
+Vorab-Notiz `llm/Vorab_Notiz_H38_Ein_eps_je_Sektor.md` (Commit d3555bf), Skript `llm/k94_test_h38.py`, Ausgabe `llm/k94_out.txt` (Erstlauf ohne Nachkontrolle,
+gleiche Kriteriumswerte), Ergebnis `llm/Ergebnis_H38_Ein_eps_je_Sektor.md`, Runde `sec:v490-r54-eps-per-sector`. Formen K, S wie K98, ε_u, ε_d, ε_e, ε_ν
+unabhängig; m₁ ∈ {0, 0.001, 0.003} eV (DESI). **Korrektur K98.2:** je Familie zwei ε für drei Winkel, eine Vorhersage bleibt (nicht „so viele Parameter wie Größen“).
+
+**K100.1 (M).** Form K: Quarks 0 von 2.9·10⁷ (nächster 20.2 %), Leptonen 0.003 %. Form S: Quarks 294 von 3.2·10⁷ (0.0009 %), Region ε_u ∈ [1.36, 1.63],
+ε_d ∈ [1.42, 1.47], bester Fall 7 % (0.2225, 0.0448, 0.0040); Leptonen 0.009 %, ε_e ∈ [0.44, 0.82], ε_ν ∈ [0.27, 0.55], alle zulässigen m₁. Regionen je Zweigpaar
+zusammenhängend. Nachkontrolle: bei passendem |V_us|, |V_cb| liegt |V_ub| in [0.0034, 0.029], Median 0.018, nur 0.9 % passen; sin²θ₁₃ bei passendem θ₁₂, θ₂₃
+in [0, 0.99], 0.8 % passen.
+**K100.2 (S).** H38a widerlegt, H38b–d bestätigt: Form S mit vier ε nach Kriterium Kandidat. Inhaltlich schwach: die verbleibende Vorhersage ist nicht scharf,
+Treffer im Ausläufer; eher Anpassung als Erklärung. ε_u ≈ ε_d, aber kein Treffer auf der Diagonale (H36c). Herkunft der ε-Werte offen. Kein Guard verbraucht.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -2471,6 +2484,7 @@ Struktur nahe liegende Kopplung erklärt die Mischung; am nächsten bleibt K98 (
 - v11.5 (2026-10-24): K95 Vorab-Test H33 und Runde v4.9.0-r49 (e₇ trägt B − L, Photon braucht ℍ; Q_em = T₃^L + T₃^R + (B − L)/2), K96 Vorab-Test H34 und Runde v4.9.0-r50 (Maske aus r47 erklärt CKM und PMNS nicht; ε durch die Hierarchie begrenzt); K93.3 umgestuft.
 - v11.6 (2026-10-24): K97 Vorab-Test H35 und Runde v4.9.0-r51 (Tachyon-Abbildung lässt die Sektoren fest; e₇ Frame-Achse nur teilweise; „T“ in r41–r49 = Zeitumkehr, korrigiert), K98 Vorab-Test H36 und Runde v4.9.0-r52 (Kongruenz- und Ähnlichkeitsform der Maske widerlegt, nächster Fall 36 %).
 - v11.7 (2026-10-24): K99 Vorab-Test H37 und Runde v4.9.0-r53 (reine Triality-Kopplung verboten: m₃ = m₁ + m₂, für ν Σm = 0.115 eV ausgeschlossen; Norm + Triality und H/H̃-Lesart erklären die Mischung nicht).
+- v11.8 (2026-10-24): K100 Vorab-Test H38 und Runde v4.9.0-r54 (ein ε je Sektor: Form S trifft CKM und PMNS, aber im Ausläufer; Form K verfehlt die Quarks knapp); Zählung in K98.2 korrigiert.
 
 ---
 
