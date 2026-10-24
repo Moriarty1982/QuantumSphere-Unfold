@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v12.3
+# Kernkarte Quantum Sphaera — v12.4
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -2380,6 +2380,17 @@ Vorab-Notiz `llm/Vorab_Notiz_H43_CP_Phase_aus_TM2.md` (Commit 59d8d04), Skript `
 **K105.2 (S).** δ durch die Lesart nicht festgelegt, nur |sin δ| < 0.17 tritt nicht auf (schwach, gitterabhängig). Die korrigierte TM2-Lesart bleibt Anpassung mit zwei
 Einstellungen; schärfer nur, wenn die Korrektur selbst aus der Struktur folgt. Kein Guard verbraucht.
 
+### K106 — Vorab festgelegter Test H44 und Companion-Runde v4.9.0-r59: ε aus einem Strukturwert (2026-10-24)
+
+Vorab-Notiz `llm/Vorab_Notiz_H44_eps_aus_Strukturwert.md` (Commit 95566e5; nur die Kandidatenliste aus H40, vor r57 festgelegt), Skript `llm/k99_test_h44.py`, Ausgabe
+`llm/k99_out.txt`, Nachkontrolle `llm/k99_nachkontrolle.py`, Ergebnis `llm/Ergebnis_H44_eps_aus_Strukturwert.md`, Runde `sec:v490-r59-eps-structural`.
+
+**K106.1 (M).** Keiner der 14 Kandidaten (2/9, β_sym², 1/3, π/9, 1/2, π/6, β_sym, 1/√3, 2/3, 1/√2, 3/4, 1, √3, γ_L) gibt in Variante A oder B einen Treffer → H44a
+widerlegt. Nachkontrolle: Zweige existieren bei allen Kandidaten bis ε = 1; Treffer von A nur in zwei Fenstern ε_e = 0.03–0.06 (128) und 0.62–0.64 (648).
+**K106.2 (S).** Kein Strukturwert legt die Korrektur fest; die Daten legen ε unter der Lesart fast fest (≈ 0.05 oder ≈ 0.63). **Korrektur K103.1:** „ε_e 0.03–0.64“
+nannte nur Minimum und Maximum, dazwischen keine Treffer. Reihe r55–r59: Lesart ordnet CKM/PMNS richtig, JUNO-Spannung lösbar, θ₂₃ nach oben begrenzt (H42),
+δ frei, ε ohne Strukturwert. Kein Guard verbraucht.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -2543,6 +2554,7 @@ Einstellungen; schärfer nur, wenn die Korrektur selbst aus der Struktur folgt. 
 - v12.1 (2026-10-24): K103 Vorab-Test H41 und Runde v4.9.0-r57 (Maske als Korrektur löst die TM2-Spannung mit JUNO; θ₂₃ nicht festgelegt, nachträglich sin²θ₂₃ ≲ 0.54).
 - v12.2 (2026-10-24): K104 Vorhersage H42 (sin²θ₂₃ ≤ 0.54) vorab festgelegt, ausstehend.
 - v12.3 (2026-10-24): K105 Vorab-Test H43 und Runde v4.9.0-r58 (CP-Phase δ durch die korrigierte TM2-Lesart nicht festgelegt; keine H44).
+- v12.4 (2026-10-24): K106 Vorab-Test H44 und Runde v4.9.0-r59 (kein Strukturwert für ε; Trefferfenster ε ≈ 0.05 und ≈ 0.63; K103.1 korrigiert).
 
 ---
 
