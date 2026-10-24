@@ -16,3 +16,20 @@ Continuation of [`../v4_10_0_r56_r60/`](../v4_10_0_r56_r60/README.md). The layer
 Source after layer v4.9.0-r61: SHA256 prefix `df0398d672ed5cd0`; block r61 `7fd9811b`. Local build of the monolith: 1258 → 1260 pages, hard values 0, overfull unchanged (45);
 guard linter 0 hits.
 Candidate build with `.github/scripts/qsc_latex_build.py --source-dir sources/research`: 1285 → 1287 pages, 3958 → 3963 labels, same hard values.
+
+## Layer v4.9.0-r62: status notes (rule C)
+
+On 2026-10-24 the author decided to add the status notes named by r61. The main-body text stays; four `\qsstatus` notes are added by
+`llm/revision_spec_v490_r61.py` (applied with `llm/apply_patches.py`, locally to the monolith and here to `sources/research/parts/v470/10_sphaera_and_physics.tex`,
+`18_op1_op2_mathematics.tex`, `19_local_op_entry.tex`):
+
+| Place | Note |
+|---|---|
+| thm:bsym-hopf | reads a pure R-frame state as the matter offset |
+| rem:bsym-hopf-gap | OP1 open, target the matter value; window from lepton mixing (not blind) |
+| thm:tribonacci | existing note extended: not a frame-consistent fixed point |
+| rem:op1-tribonacci | claimed resolution withdrawn; OP4 ill-posed as stated |
+
+The layer `rounds/v490_r62_round.tex` is appended to `v490-post-release-layers.tex`; guard vectors unchanged.
+Local monolith: 1260 → 1261 pages, SHA256 prefix `cd1995203a3ee22e`, hard values 0, overfull 45, guard linter 0 hits.
+Candidate build: 1287 → 1289 pages, 3963 → 3967 labels, same hard values.
