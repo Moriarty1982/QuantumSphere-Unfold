@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v11.9
+# Kernkarte Quantum Sphaera — v12.0
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -2340,6 +2340,20 @@ Nach Wortlaut (Spannweiten über alle Zuordnungen) Anpassung mit einem Winkel. N
 **K101.2 (S).** Erste Lesart, die CKM klein und PMNS groß ordnet (H34–H38 nicht). Quantitativ die bekannte TM2-Mischung der A₄-Literatur; θ₁₂ unter Druck durch JUNO,
 θ₂₃ und CKM-Winkel offen (Korrekturen, etwa aus der Maske). Kein Guard verbraucht.
 
+### K102 — Vorab festgelegter Test H40 und Companion-Runde v4.9.0-r56: Kalibrierung der Ausleseschicht (2026-10-24)
+
+Vorab-Notiz `llm/Vorab_Notiz_H40_Kalibrierung_Ausleseschicht.md` (Commit fdb27ae), Skript `llm/k96_test_h40.py`, Ausgabe `llm/k96_out.txt`, Ergebnis
+`llm/Ergebnis_H40_Kalibrierung_Ausleseschicht.md`, Runde `sec:v490-r56-readout-calibration`. Autoridee: Kern + Ausleseschicht; Schicht so einstellen, dass sie
+reale Werte liefert, und aus den Einstellungen die Herkunft lernen. Schicht: je Sektor Brannen-C (a, |b|, θ), ε, Form S; 16 Einstellungen (+ m₁) für 17 Größen.
+
+**K102.1 (M).** Kalibriert (H38-Kombinationen): ε_u [1.36, 1.63], ε_d [1.42, 1.47], ε_e [0.44, 0.82], ε_ν [0.27, 0.55]; |b|/|a| u [0.95, 1.03], d [0.99, 1.08],
+e [1.2, 6.4], ν [0.45, 1.57]; θ fast der ganze Bereich. 14 Kandidaten (1/3, …, β_sym, γ_L) treffen 76-mal, Zufall im Mittel 65.3, p = 0.019 → H40a widerlegt
+(Schwelle 0.01); H40b (ε-Verhältnis mit 1) zählt nicht. |b|/|a| ≈ 1 der Quarks folgt aus der Hierarchie (λ ≈ (0, 0, 1) ⇒ C ≈ ⅓(1 + P + P²)).
+**K102.2 (S).** Keine Struktur in den Einstellungen über Zufall hinaus, weil die Daten sie kaum festlegen (Kompression fehlt). Der Weg braucht weniger Einstellungen
+(Regel für die Brannen-Größen, Lesarten aus Untergruppen wie K101) oder schärfere Daten. Lesarten ohne Kriterium: Master-Gleichung γ ↔ ε, β/m₀ ↔ |b|/a; Beltrami
+|μ| = (K − 1)/(K + 1) ≈ 0.88–0.93 (u), 0.89–0.90 (d), 0.58–0.84 (e), 0.38–0.68 (ν). Teichmüller steht im Korpus auf der RH-/Closure-Seite, nicht in den
+Feldgleichungen. Kein Guard verbraucht.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -2499,6 +2513,7 @@ Nach Wortlaut (Spannweiten über alle Zuordnungen) Anpassung mit einem Winkel. N
 - v11.7 (2026-10-24): K99 Vorab-Test H37 und Runde v4.9.0-r53 (reine Triality-Kopplung verboten: m₃ = m₁ + m₂, für ν Σm = 0.115 eV ausgeschlossen; Norm + Triality und H/H̃-Lesart erklären die Mischung nicht).
 - v11.8 (2026-10-24): K100 Vorab-Test H38 und Runde v4.9.0-r54 (ein ε je Sektor: Form S trifft CKM und PMNS, aber im Ausläufer; Form K verfehlt die Quarks knapp); Zählung in K98.2 korrigiert.
 - v11.9 (2026-10-24): K101 Vorab-Test H39 und Runde v4.9.0-r55 (Lesart je Teilchenart: Dirac ℤ₃, Majorana ℤ₂ aus A₄ ⇒ CKM = 1 in führender Ordnung, PMNS = TM2; sin²θ₁₂ ≈ 0.341, 3.6 σ über JUNO).
+- v12.0 (2026-10-24): K102 Vorab-Test H40 und Runde v4.9.0-r56 (Kalibrierung der Ausleseschicht: Einstellungen festgehalten, keine Struktur über Zufall, p = 0.019; Kompression fehlt).
 
 ---
 

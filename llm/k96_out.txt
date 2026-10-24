@@ -1,0 +1,30 @@
+Zulaessige Kombinationen: Quarks 294, Leptonen 1008 (wie H38: 294 und 1008)
+
+Kalibrierte Einstellungen (Bereich ueber alle zulaessigen Kombinationen):
+  eps_u          [1.3600, 1.6300]
+  eps_d          [1.4200, 1.4700]
+  eps_e          [0.4400, 0.8200]
+  eps_nu         [0.2700, 0.5500]
+  eps_u/eps_d    [0.9510, 1.1111]
+  eps_e/eps_nu   [0.8909, 2.9630]
+  eps_d/eps_e    [1.7317, 3.3409]
+  eps_u/eps_nu   [2.4727, 6.0370]
+  |b|/|a| u      [0.9532, 1.0320]
+  theta u        [0.0174, 1.0298]
+  |b|/|a| d      [0.9940, 1.0761]
+  theta d        [0.1161, 0.9311]
+  |b|/|a| e      [1.2168, 6.4147]
+  theta e        [0.1018, 0.9454]
+  |b|/|a| nu     [0.4471, 1.5728]
+  theta nu       [0.1831, 0.8523]
+
+Treffer der Kandidaten: 76: [('eps_e', '1/2'), ('eps_e', '2/3'), ('eps_e', '3/4'), ('eps_e', '1/sqrt3'), ('eps_e', '1/sqrt2'), ('eps_e', 'pi/6'), ('eps_e', 'beta_sym'), ('eps_nu', '1/3'), ('eps_nu', '1/2'), ('eps_nu', 'pi/6'), ('eps_nu', 'pi/9'), ('eps_nu', 'beta_sym^2'), ('eps_nu', 'beta_sym'), ('eps_u/eps_d', '1'), ('eps_e/eps_nu', '1'), ('eps_e/eps_nu', 'sqrt3'), ('eps_e/eps_nu', 'gamma_L'), ('eps_d/eps_e', 'sqrt3'), ('eps_d/eps_e', 'gamma_L'), ('|b|/|a| u', '1'), ('theta u', '1/3'), ('theta u', '1/2'), ('theta u', '2/3'), ('theta u', '3/4'), ('theta u', '1'), ('theta u', '1/sqrt3'), ('theta u', '1/sqrt2'), ('theta u', '2/9'), ('theta u', 'pi/6'), ('theta u', 'pi/9'), ('theta u', 'beta_sym^2'), ('theta u', 'beta_sym'), ('|b|/|a| d', '1'), ('theta d', '1/3'), ('theta d', '1/2'), ('theta d', '2/3'), ('theta d', '3/4'), ('theta d', '1/sqrt3'), ('theta d', '1/sqrt2'), ('theta d', '2/9'), ('theta d', 'pi/6'), ('theta d', 'pi/9'), ('theta d', 'beta_sym^2'), ('theta d', 'beta_sym'), ('|b|/|a| e', 'sqrt3'), ('|b|/|a| e', 'gamma_L'), ('theta e', '1/3'), ('theta e', '1/2'), ('theta e', '2/3'), ('theta e', '3/4'), ('theta e', '1/sqrt3'), ('theta e', '1/sqrt2'), ('theta e', '2/9'), ('theta e', 'pi/6'), ('theta e', 'pi/9'), ('theta e', 'beta_sym^2'), ('theta e', 'beta_sym'), ('|b|/|a| nu', '1/2'), ('|b|/|a| nu', '2/3'), ('|b|/|a| nu', '3/4'), ('|b|/|a| nu', '1'), ('|b|/|a| nu', '1/sqrt3'), ('|b|/|a| nu', '1/sqrt2'), ('|b|/|a| nu', 'pi/6'), ('|b|/|a| nu', 'beta_sym'), ('theta nu', '1/3'), ('theta nu', '1/2'), ('theta nu', '2/3'), ('theta nu', '3/4'), ('theta nu', '1/sqrt3'), ('theta nu', '1/sqrt2'), ('theta nu', '2/9'), ('theta nu', 'pi/6'), ('theta nu', 'pi/9'), ('theta nu', 'beta_sym^2'), ('theta nu', 'beta_sym')]
+Gegenprobe: Zufallssaetze im Mittel 65.29 Treffer (95 %-Quantil 73); p = 0.0189
+H40a -> widerlegt
+H40b: Verhaeltnisse mit 1 im Bereich: ['eps_u/eps_d', 'eps_e/eps_nu'] -> bestaetigt
+
+Lesart Beltrami (kein Kriterium): K = exp(eps * Spannweite W), |mu| = (K-1)/(K+1)
+  eps_u: K in [15.18, 26.05], |mu| in [0.8764, 0.9261]
+  eps_d: K in [17.12, 18.92], |mu| in [0.8896, 0.8996]
+  eps_e: K in [3.74, 11.70], |mu| in [0.5784, 0.8426]
+  eps_nu: K in [2.25, 5.21], |mu| in [0.3842, 0.6778]
