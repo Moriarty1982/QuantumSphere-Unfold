@@ -12,3 +12,4 @@ import QSFormal.Dixon
 import QSFormal.Lesarten
 import QSFormal.Ladungen
 import QSFormal.Sektoren
+import QSFormal.Zaehlung
