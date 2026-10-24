@@ -1,0 +1,105 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r50 Source-Only: The Mask of r47 Does Not Produce the Observed Mixing}
+\addcontentsline{toc}{section}{v4.9.0-r50 Source-Only: The Mask of r47 Does Not Produce the Observed Mixing}
+\label{sec:v490-r50-mixing-test}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.9.0-r47 derived the shape of a generation mask under a model assumption and read it qualitatively as stronger lepton than quark
+mixing.  This layer records the pre-registered quantitative test H34 (note \texttt{llm/Vorab\_Notiz\_H34\_Mischung\_aus\_Maske.md}, commit
+\texttt{8d8b761}, fixed before computing) against the measured CKM and PMNS mixing.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r50 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r50 model and data}
+\label{subsec:v490-r50-model}
+
+For \(X\in\{u,d,e,\nu\}\): \(M_X=C_X+\varepsilon(W_XC_X+C_XW_X)\) with \(C_X\) Hermitian and \(\mathbb Z_3\)-circulant, \(W_u=W_d=W_q\),
+\(W_e=W_\nu=W_l\) from v4.9.0-r47, one common \(\varepsilon\ge0\), Dirac neutrinos.  Masses are the moduli of the eigenvalues; mixing is
+\(U_u^\dagger U_d\) and \(U_e^\dagger U_\nu\).  Data fixed in the note: running masses at \(M_Z\) (Huang and Zhou 2021), neutrino
+mass splittings and \(3\sigma\) ranges of NuFIT~6.0 (normal ordering), CKM magnitudes of the PDG 2024.  All solution branches are followed
+from \(\varepsilon=0\) (24 assignments per sector) in steps of \(0.005\) up to \(\varepsilon=3\).
+
+\subsection*{v4.9.0-r50 results}
+\label{subsec:v490-r50-results}
+
+\paragraph{Theoremlet v4.9.0-r50.1 (numerical).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Solutions with the measured quark masses exist only up to \(\varepsilon\approx0.06\) (up) and \(0.125\) (down).  In none of the
+\(7488\) combinations of \(\varepsilon\) and branch pair are \(|V_{us}|\), \(|V_{cb}|\), \(|V_{ub}|\) all within \(\pm20\%\); the closest case is
+\(96\%\) off.
+\item[(b)] Hence no common \(\varepsilon\) exists for quarks and leptons in the sense of H34b.  The leptons alone, with their own
+\(\varepsilon\), reach the \(3\sigma\) ranges in no case either; the closest case is up to \(71\%\) outside.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+Script \texttt{llm/k90\_test\_h34.py} with output \texttt{llm/k90\_out.txt}.  The first run stopped after H34a in a diagnostic print; only that
+print and the treatment of \(m_1=0\) were corrected, and both outputs are kept.  The bound on \(\varepsilon\) was confirmed by random multistarts.
+The lepton statement in (b) is a check after the evaluation.  \(\square\)
+
+\paragraph{Verdict and reading.}
+H34a and H34b are refuted; H34c does not count.
+\begin{enumerate}[leftmargin=2em]
+\item The model assumption of v4.9.0-r47, the mask as a weak perturbation of circulant couplings, does not produce the measured mixing,
+neither for quarks nor for leptons.  The qualitative reading of r47 (stronger lepton mixing) is withdrawn as a quantitative statement.
+\item The reason is structural.  For a nearly rank-one coupling the term \(\varepsilon^2WCW\) creates a mass of order
+\(\tfrac23\varepsilon^2m_t\) (quarks) or \(2\varepsilon^2m_\tau\) (leptons), so the mass hierarchy forces small \(\varepsilon\); at small
+\(\varepsilon\) the democratic mask cannot produce \(|V_{us}|\gg|V_{cb}|\gg|V_{ub}|\) or the large PMNS angles.
+\item Unaffected are v4.9.0-r47.1(a), (b), (d): the shape of the mask, its frame behaviour and its Fourier form.  Mixing needs another
+form of coupling or a further breaking.
+\end{enumerate}
+
+\subsection*{v4.9.0-r50 status in the three frames}
+\label{subsec:v490-r50-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r50.1(a), (b) & statements on mass matrices and mixing in M; the right-handed partners are read in T as in v4.9.0-r47; P not evaluated\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r50 register entries}
+\label{subsec:v490-r50-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r50\\
+\midrule
+mixing from the mask of r47 as a weak perturbation & refuted for CKM and PMNS (H34)\\
+stronger lepton than quark mixing (r47 reading 2) & withdrawn as a quantitative statement\\
+shape of the mask (r47.1(a), (b), (d)) & unchanged\\
+origin of the observed mixing & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r50 ledger and guard update}
+\label{subsec:v490-r50-ledger-guard}
+
+\[
+R_{\rm mx}^{v490\text{-}r50}=(0,1,0)
+\]
+for (mixing not explained; bound on the perturbation from the mass hierarchy found; origin of mixing open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r50,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r50}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.

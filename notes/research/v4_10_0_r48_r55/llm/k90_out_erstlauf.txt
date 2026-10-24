@@ -1,0 +1,17 @@
+Zweige: u 24 (bis eps=3 durchgehend: 0), d 24 (0)
+
+H34a: 0 von 7488 (eps, Zweigpaar)-Kombinationen innerhalb +-20 % (0.000 %); eps-Werte: [] -> widerlegt
+  bester Fall: max. relative Abweichung 0.964 bei eps = 0.055: |V_us|, |V_cb|, |V_ub| = [0.43836 0.00151 0.00048] (Daten [0.225   0.0418  0.00373])
+  eps = 0.0: Spannweite ueber alle Zweigpaare |V_us| [2.57e-17, 1.00e+00], |V_cb| [1.60e-17, 1.00e+00], |V_ub| [1.59e-17, 1.00e+00]
+  eps = 0.01: Spannweite ueber alle Zweigpaare |V_us| [1.81e-03, 1.00e+00], |V_cb| [3.02e-05, 1.00e+00], |V_ub| [8.68e-06, 1.00e+00]
+Traceback (most recent call last):
+  File "/mnt/attach/outputs/h17r32/k90_test_h34.py", line 79, in <module>
+    print(f"  eps = {e0}: Spannweite ueber alle Zweigpaare |V_us| [{vals[:,0].min():.2e}, {vals[:,0].max():.2e}],"
+                                                                    ~~~~^^^^^
+IndexError: too many indices for array: array is 1-dimensional, but 2 were indexed
+
+real	0m2.798s
+user	0m2.815s
+sys	0m0.051s
+
+[exited with code 0]

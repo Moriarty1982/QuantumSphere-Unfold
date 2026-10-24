@@ -77,6 +77,21 @@ jobs:
           #print axioms QSFormal.Ladungen.generation_content
           #print axioms QSFormal.Ladungen.mask_norms
           #print axioms QSFormal.Ladungen.pow_two_mod_three
+          #print axioms QSFormal.Sektoren.iL_sq
+          #print axioms QSFormal.Sektoren.iL_iR_comm
+          #print axioms QSFormal.Sektoren.P4_eigen
+          #print axioms QSFormal.Sektoren.P4_idem
+          #print axioms QSFormal.Sektoren.P4_orth
+          #print axioms QSFormal.Sektoren.P4_sum
+          #print axioms QSFormal.Sektoren.traces
+          #print axioms QSFormal.Sektoren.colourDim_from_trace
+          #print axioms QSFormal.Sektoren.Q6_on_sector
+          #print axioms QSFormal.Sektoren.Delta_on_sector
+          #print axioms QSFormal.Sektoren.T_P4
+          #print axioms QSFormal.Sektoren.sigma_comm_basis
+          #print axioms QSFormal.Sektoren.b_minus_l
+          #print axioms QSFormal.Sektoren.qem_not_sector_function
+          #print axioms QSFormal.Sektoren.R_P4
           EOF
           lake env lean AxiomCheck.lean | tee axioms.log
           if grep -qE "sorryAx|ofReduceBool" axioms.log; then
