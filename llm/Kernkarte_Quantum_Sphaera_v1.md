@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v12.6
+# Kernkarte Quantum Sphaera — v12.7
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -2408,6 +2408,19 @@ Vorab-Notiz `llm/Vorab_Notiz_H46_theta23_bei_eps_eta.md` (Commit dec51e7). Aus K
 gewählt). Schärfer als H42, H42 bleibt unabhängig. Prüfung wie H42; widerlegt, wenn das 2σ-Intervall [0.49, 0.50] nicht berührt; bestätigt, wenn das 1σ-Intervall es berührt
 und das 2σ-Intervall schmaler als 0.06 ist. Bestätigung prüft die Kette r55–r60, nicht ε = η allein. **Ausstehend.**
 
+### K109 — Prüfung und Companion-Runde v4.9.0-r61: Frame-Prüfung der offenen Probleme OP1–OP5 (2026-10-24)
+
+Autorhinweis: Auch die OP könnten falsche Frame-Konfigurationen untersucht haben. Prüfung `llm/Pruefung_OP_Frames.md` (keine Vorhersage), Beobachtung `llm/k101_fenster_eta.py`,
+Ausgabe `llm/k101_out.txt`, Runde `sec:v490-r61-op-frame-audit`. Regeln: Konvention F (r22, r24), Klassen (r18/r19), Einheitenregel 7.
+
+**K109.1 (M/S).** OP1: Tribonacci γ_L = 1/β setzt M-Auslesegröße gleich β_T = 1/β (r24.2), äquivalent cosh 2η = e^η (Weg A = Weg C): Frame- und Klassenmischung. Hopf β = sin(θ_H/2)
+gilt für einen reinen R-Zustand (Besetzung 2/3, 1/3), der Materie-Zustand bei β² = 1/3 ist gemischt (3/4, 1/4, |b| = 1/2): R mit M verwechselt. Gemessen γ_L = γ_BI/γ_string ist
+frame-konsistent (M–T-Faktor, |b_R|/|b_M|), aber Eingabe. ⇒ OP4 (δ_CL schließt Hopf-/Tribonacci-Lücke) in dieser Form falsch gestellt. OP2 (T4) dieselbe Klassenmischung.
+OP5: Θ-Summe rechnet Skalengrößen mit γ_L statt e^{kη} um (Klassenmischung), Unterschied 0.5 %, erklärt die Abweichung 1.003 nicht. OP3 nicht geprüft.
+**K109.2 (M, Beobachtung, nicht blind).** Unter der Lesart r55/r57/r60 legt die Leptonmischung η ∈ [0.611, 0.647] fest: β_sym ∈ [0.545, 0.570], γ_L ∈ [1.844, 1.961]; gemessen drin,
+Hopf und Tribonacci knapp draußen; sin²θ₂₃ über das Fenster [0.491, 0.498] (H46 robust).
+**K109.3 (S).** Verdacht für OP1 bestätigt: Zielgröße ist der M-Wert selbst. Statusvermerk-Kandidaten: `thm:tribonacci`, `thm:bsym-hopf`, OP4. Kein Guard verbraucht.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -2574,6 +2587,7 @@ und das 2σ-Intervall schmaler als 0.06 ist. Bestätigung prüft die Kette r55�
 - v12.4 (2026-10-24): K106 Vorab-Test H44 und Runde v4.9.0-r59 (kein Strukturwert für ε; Trefferfenster ε ≈ 0.05 und ≈ 0.63; K103.1 korrigiert).
 - v12.5 (2026-10-24): K107 Test H45 und Runde v4.9.0-r60 (ε = Frame-Rapidität artanh β_sym verträglich, Hopf-Wert nicht; sin²θ₂₃ ≈ 0.49–0.50 scharf, δ frei).
 - v12.6 (2026-10-24): K108 Vorhersage H46 (sin²θ₂₃ ∈ [0.49, 0.50] unter ε = η) vorab festgelegt, ausstehend.
+- v12.7 (2026-10-24): K109 Frame-Prüfung OP1–OP5 und Runde v4.9.0-r61 (Tribonacci und Hopf mischen Frames/Klassen, OP4 falsch gestellt; β_sym-Fenster aus der Leptonmischung).
 
 ---
 
