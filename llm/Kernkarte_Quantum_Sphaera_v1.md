@@ -2367,7 +2367,7 @@ vorhergesagt. Nachträglich bemerkt: sin²θ₂₃ ≲ 0.54 in beiden Varianten 
 
 ### K104 — Vorab festgelegte Vorhersage H42: sin²θ₂₃ ≤ 0.54 (2026-10-24)
 
-Vorab-Notiz `llm/Vorab_Notiz_H42_Grenze_theta23.md` (Commit 53cd8f0). Aus K101/K103 (TM2-Lesart mit Maskenkorrektur): sin²θ₂₃ ≤ 0.54 in normaler Ordnung. Nachträglich
+Vorab-Notiz `llm/Vorab_Notiz_H42_Grenze_theta23.md` (Commit 1c7f3e1). Aus K101/K103 (TM2-Lesart mit Maskenkorrektur): sin²θ₂₃ ≤ 0.54 in normaler Ordnung. Nachträglich
 bemerkt, daher Vorhersage erst ab dieser Notiz; NuFIT 6.0 (0.561 ohne, 0.470 mit SK-atm) prüft nicht. Prüfung: erste globale Auswertung oder DUNE/Hyper-K nach dem
 2026-10-24; widerlegt bei 2σ-Intervall ganz über 0.54, bestätigt ganz darunter, sonst offen. Eine Bestätigung prüft nur die Grenze, nicht die Lesart. **Ausstehend.**
 

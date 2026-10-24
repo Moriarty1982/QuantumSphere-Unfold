@@ -100,7 +100,7 @@ Die **Runden** wachsen append-only: eine neue Runde ist ein neuer Abschnitt unmi
 
 **Wer einen älteren Satz zitiert**, prüft zuerst seinen `\qsstatus`-Vermerk bzw. den Archiv-Anhang, dann die Register `sec:v480-r09-p2-p3-reclassification` (Stand v4.8.0) und `sec:v490-r15-consolidated-register` (v4.9.0-r01–r14).
 
-**Neue Vorhersagen nur mit Vorab-Notiz:** Hypothese, Daten und Kriterium unter `llm/Vorab_Notiz_*.md` committen, erst dann rechnen. Ausstehend: **H15** (m_W = 80,3615 ± 0,0018 GeV, Vergleich mit der ersten m_W-Weltmittelung nach 2026-10-21); **H42** (sin²θ₂₃ ≤ 0,54 in normaler Ordnung, aus r55/r57; Prüfung mit der ersten globalen Auswertung oder DUNE/Hyper-K-Messung nach 2026-10-24, 2σ-Intervall; Notiz `llm/Vorab_Notiz_H42_Grenze_theta23.md`, Commit 53cd8f0).
+**Neue Vorhersagen nur mit Vorab-Notiz:** Hypothese, Daten und Kriterium unter `llm/Vorab_Notiz_*.md` committen, erst dann rechnen. Ausstehend: **H15** (m_W = 80,3615 ± 0,0018 GeV, Vergleich mit der ersten m_W-Weltmittelung nach 2026-10-21); **H42** (sin²θ₂₃ ≤ 0,54 in normaler Ordnung, aus r55/r57; Prüfung mit der ersten globalen Auswertung oder DUNE/Hyper-K-Messung nach 2026-10-24, 2σ-Intervall; Notiz `llm/Vorab_Notiz_H42_Grenze_theta23.md`, Commit 1c7f3e1).
 
 Guard-Linter für neue Runden: `python llm/training/guard_linter.py <tex> --start N` (prüft verbotene Aussagen und ab r22 den Frame-Abschnitt).
 
