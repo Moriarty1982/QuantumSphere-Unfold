@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v11.3
+# Kernkarte Quantum Sphaera — v11.4
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -2238,6 +2238,18 @@ W_q = diag(0, −2, −1) (up und down), W_l = diag(0, 0, −3) (H32b). Fourier-
 Demokratisch in der Generationen-Basis, Leptonen √3 stärker: Richtung große PMNS-, kleine CKM-Winkel (qualitativ). τ-Brechung aus der Wahl eines
 Referenzplatzes (Platz 1: Gewicht 0). Annahme, ε, Zirkulanten-Parameter und Zahlen offen. Kein Guard verbraucht.
 
+### K94 — Companion-Runde v4.9.0-r48: Ladungs-Sektoren aus der Oktonionen-Multiplikation in Lean (2026-10-24)
+
+Lean-Modul `formal/QSFormal/Sektoren.lean` (nur Lean-Kern, Standard-Axiome), Runde `sec:v490-r48-sectors-formal`. Keine neue Vorhersage, daher keine
+Vorab-Notiz; sichert r34, r35, r42, r43, r47. Komplexe Einheit überall die äußere i (ℂ-Faktor der Ablage), T = Konjugation dieses Faktors.
+
+**K94.1 (M).** (iL)² = (iR)² = 1, iL iR = iR iL für alle x ∈ ℂ⊗𝕆. P_s = ¼(1 + ℓ iL)(1 + r iR) sind Projektoren, paarweise orthogonal, Summe 1,
+auf dem Bild iL = ℓ, iR = r. Spuren: Sp L = Sp R = 0, Sp(LR) = 4, Sp P_s = 1, 3, 3, 1 (Farbdimension). Auf P_s: 6Q = 3 − ℓ − 2r, Δ₂ = r − ℓ, Δ₃ = −2ℓ − r
+(Gewichte von K93.1). T iL = −iL T, T P_(ℓ,r) = P_(−ℓ,−r) T (Ladungskonjugation). σ vertauscht auf der Basis mit iL, iR, P_s.
+**K94.2 (S).** Die Tabellen `sectors`, `colourDim`, `q6`, `weights` aus `Ladungen.lean` sind damit Eigenschaften von O.mul statt Setzungen; die
+Vorzeichenkonvention der Numerik (k75, k84) stimmt mit der formalen überein. Nicht formalisiert: Rang = Spur eines Projektors, Fortsetzung von σ
+von der Basis auf alle x (Linearität), die physikalischen Lesarten und alle Zahlen. Kein Guard verbraucht.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -2391,6 +2403,7 @@ Referenzplatzes (Platz 1: Gewicht 0). Annahme, ε, Zirkulanten-Parameter und Zah
 - v11.1 (2026-10-23): K92 Vorab-Test H31 und Runde v4.9.0-r46: Verschiebungs-Readouts erzeugen keine Mischung, Art-Masken schon.
 - v11.2 (2026-10-23): K93 Vorab-Test H32 und Runde v4.9.0-r47: Maske fester Form aus der Abweichung der triality-kovarianten Chiralität; H32c (Linearität) widerlegt.
 - v11.3 (2026-10-23): Lean-Modul `formal/QSFormal/Ladungen.lean` (nur Lean-Kern): σ einziger Automorphismus unter 48 Fortsetzungen (r36), c L_{e₇} c = −R_{e₇} für alle x (r45), 6Q, Inhalt einer Generation, Anomalie-Spuren und Tr Y = 0 ⇔ s = −½ (r42, r43), Masken-Gewichte und Eisenstein-Normen (r47), 2^j mod 3 (r39); geprüft mit Lean 4.35.0, nur Standard-Axiome.
+- v11.4 (2026-10-24): K94 Companion-Runde v4.9.0-r48 und Lean-Modul `formal/QSFormal/Sektoren.lean`: Ladungs-Sektoren, Farbdimensionen 1, 3, 3, 1, Ladungen und Masken-Gewichte aus O.mul hergeleitet; T als Ladungskonjugation; σ bleibt im Sektor.
 
 ---
 
