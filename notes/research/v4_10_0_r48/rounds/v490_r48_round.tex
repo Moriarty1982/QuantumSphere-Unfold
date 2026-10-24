@@ -1,0 +1,119 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r48 Source-Only: The Charge Sectors Derived from the Octonion Product in Lean}
+\addcontentsline{toc}{section}{v4.9.0-r48 Source-Only: The Charge Sectors Derived from the Octonion Product in Lean}
+\label{sec:v490-r48-sectors-formal}
+% ============================================================================
+
+\paragraph{Purpose.}
+The Lean module \texttt{formal/QSFormal/Ladungen.lean} (layers v4.9.0-r34 to r47) sets the four charge sectors as data: the sign pairs
+\((\ell,r)\) of \(iL_{e_7}\), \(iR_{e_7}\) and the colour dimensions \(1,3,3,1\) are definitions there, taken from the numerics of
+\texttt{llm/k75} and \texttt{llm/k84}.  This layer records the new module \texttt{formal/QSFormal/Sektoren.lean}, which derives these tables
+from the octonion product of \texttt{formal/QSFormal/Dixon.lean} (Cayley--Dickson, as in \texttt{llm/k22}).  It makes no new prediction,
+so no pre-registration note is needed; it secures results of v4.9.0-r34, r35, r42, r43 and r47.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r48 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r48 setting}
+\label{subsec:v490-r48-setting}
+
+On \(\mathbb C\otimes\mathbb O\) with the outer unit \(i\) (the \(\mathbb C\) factor of the Dixon store, layer v4.9.0-r35) and the
+conjugation \(T\) of that factor, \(L\) and \(R\) are left and right multiplication by \(e_7\), acting on both parts.  For a sector
+\(s=(\ell,r)\in\{(1,1),(-1,1),(1,-1),(-1,-1)\}\) put
+\[
+P_s=\tfrac14\,(1+\ell\, iL)(1+r\, iR),\qquad 6Q=3-iL-2\,iR,
+\]
+\[
+\Delta_1=0,\qquad \Delta_2=iR-iL,\qquad \Delta_3=-2\,iL-iR,
+\]
+the last three being the deviations \(\Delta_i=i(B_i-L_{e_7})\) of layer v4.9.0-r47.  The complex unit of every statement below is the outer
+unit \(i\); the inner unit \(J=L_{e_7}\) is not used (rule~7 of the round format).
+
+\subsection*{v4.9.0-r48 results}
+\label{subsec:v490-r48-results}
+
+\paragraph{Theoremlet v4.9.0-r48.1.}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \((iL)^2=(iR)^2=1\) and \(iL\,iR=iR\,iL\) for all \(x\in\mathbb C\otimes\mathbb O\).
+\item[(b)] Each \(P_s\) is a projector, the four are pairwise orthogonal and sum to \(1\), and on the image of \(P_s\) one has \(iL=\ell\),
+\(iR=r\).
+\item[(c)] Over the basis \(e_0,\dots,e_7\): \(\operatorname{tr}L=\operatorname{tr}R=0\), \(\operatorname{tr}(LR)=4\), and
+\(\operatorname{tr}P_s=1,3,3,1\) for \(s=(1,1),(-1,1),(1,-1),(-1,-1)\); this is the colour dimension of the sector.
+\item[(d)] On the image of \(P_s\), \(6Q\) acts as \(3-\ell-2r\), i.e.\ \(Q=0,\tfrac13,\tfrac23,1\), and \(\Delta_2\), \(\Delta_3\) act as
+\(r-\ell\), \(-2\ell-r\): the slot weights \((0,0,-3)\), \((0,2,1)\), \((0,-2,-1)\), \((0,0,3)\) of v4.9.0-r47.1(a).
+\item[(e)] \(T\,iL=-iL\,T\), \(T\,iR=-iR\,T\), and \(T P_{(\ell,r)}=P_{(-\ell,-r)}T\): the frame \(T\) is charge conjugation \(Q\mapsto1-Q\).
+\item[(f)] The colour rotation \(\sigma\) of v4.9.0-r36 commutes on the basis with \(iL\), \(iR\) and every \(P_s\).
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+All items are checked in Lean~4.35.0 with the Lean core only (no Mathlib): (a), (b), (d), (e) for all \(x\) by expanding the product and
+\texttt{omega}, (c) and (f) by \texttt{decide}.  Only the standard axioms are used.  Two steps are standard and not formalised: that the rank
+of a projector is its trace, and the extension of (f) from the basis to all \(x\) by linearity (as for \texttt{sigma\_respects} in
+v4.9.0-r36).  \(\square\)
+
+\paragraph{Reading.}
+\begin{enumerate}[leftmargin=2em]
+\item The tables \texttt{sectors}, \texttt{colourDim}, \texttt{q6} and \texttt{weights} of the module \texttt{Ladungen} are no longer
+settings but properties of the octonion product.  The integer arithmetic built on them in that module (hypercharge, anomaly traces, the
+content of a generation, the Eisenstein norms of the mask) therefore rests on the structure, under the reading of v4.9.0-r35 that the
+\(\mathbb C\) factor is the outer unit.
+\item The sign conventions of the numerics agree with the formal ones: the sector \((1,1)\) has charge \(0\) and rank \(1\).
+\item Not formalised remain the physical readings (which sector is which particle, the choice of chirality and offset in v4.9.0-r43, the
+model assumption of v4.9.0-r47) and all numbers for masses and mixing.
+\end{enumerate}
+
+\subsection*{v4.9.0-r48 status in the three frames}
+\label{subsec:v490-r48-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r48.1(a)--(d), (f) & stated in M with the outer unit \(i\)\\
+r48.1(e) & relates M and T: \(T\) maps the sector \((\ell,r)\) to \((-\ell,-r)\), \(Q\mapsto1-Q\)\\
+all items & P not evaluated\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r48 register entries}
+\label{subsec:v490-r48-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r48\\
+\midrule
+charge sectors and colour dimensions & derived from the octonion product, checked in Lean (r48.1(a)--(c)); rank = trace not formalised\\
+charges and mask weights on the sectors & checked in Lean (r48.1(d)); tables of \texttt{Ladungen} now derived\\
+charge conjugation as the frame \(T\) & checked in Lean (r48.1(e))\\
+colour rotation inside each sector & checked in Lean on the basis (r48.1(f))\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r48 ledger and guard update}
+\label{subsec:v490-r48-ledger-guard}
+
+\[
+R_{\rm fs}^{v490\text{-}r48}=(1,1,0)
+\]
+for (sector algebra checked for all \(x\); ranks checked as traces; rank = trace and the extension of (f) by linearity not formalised).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r48,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r48}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.

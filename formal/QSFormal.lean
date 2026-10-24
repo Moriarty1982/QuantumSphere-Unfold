@@ -11,3 +11,4 @@ import QSFormal.Frames
 import QSFormal.Dixon
 import QSFormal.Lesarten
 import QSFormal.Ladungen
+import QSFormal.Sektoren
