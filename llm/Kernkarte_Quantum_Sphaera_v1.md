@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v11.6
+# Kernkarte Quantum Sphaera — v11.7
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -2301,6 +2301,19 @@ H36c widerlegt: 0 von 102 528 (S), nächster 40 %. H36b, d widerlegt. Nachkontro
 **K98.2 (S).** Beide exakten Formen näher als die lineare (36 % statt 96 %), Reihenfolge |V_us| ≫ |V_cb| ≫ |V_ub| reproduziert, Hierarchie begrenzt ε nicht mehr.
 Fehlende Zutat offene Wahl: nicht zirkulante C oder ein ε je Sektor (dann keine Erklärung mehr). Kein Guard verbraucht.
 
+### K99 — Vorab festgelegter Test H37 und Companion-Runde v4.9.0-r53: Kopplungen aus der Triality-Form (2026-10-24)
+
+Vorab-Notiz `llm/Vorab_Notiz_H37_Kopplung_aus_Triality.md` (Commit e1ee9ec; Spurfreiheit und m₁* ≈ 0.035 eV vorab offengelegt), Skript `llm/k93_test_h37.py`,
+Ausgabe `llm/k93_out.txt` (Erstlauf ohne Nachkontrolle, gleiche Kriteriumswerte), Ergebnis `llm/Ergebnis_H37_Kopplung_aus_Triality.md`, Runde
+`sec:v490-r53-triality-couplings`. Kosmologie: Σm_ν < 0.0642 eV (DESI DR2 + CMB).
+
+**K99.1 (M).** Reine Triality-Kopplung T(v) (nur verschiedene Plätze) ist spurfrei, auch D T(v) D: m₃ = m₁ + m₂ nötig; u, d, e verfehlen um 99.6/98.0/94.1 %;
+Dirac-ν nur bei m₁* = 0.028 eV, Σm = 0.115 eV > 0.0642 eV → H37a widerlegt. Norm + Triality α·1 + T(v) ohne Maske: Quarks 0 Treffer (nächster 82 %, dicht
+80 %), Leptonen 264 von 1.37·10⁷ nur bei m₁ = 0.05/0.1 eV (Σm 0.17/0.31 eV, kosmologisch ausgeschlossen) → H37b formal Teilbefund, physikalisch keiner.
+H/H̃-Lesart (u, ν und d, e in verschiedenen Formen K/S): 0 Treffer, nächster 37 %/40 % → H37c widerlegt.
+**K99.2 (S).** Verbot aus der Struktur: Massen brauchen eine Kopplung innerhalb eines Platzes; die Triality-Form allein kann keine Massen tragen. Keine aus der
+Struktur nahe liegende Kopplung erklärt die Mischung; am nächsten bleibt K98 (D C D, zirkulant, 36 %). Herkunft der Mischung offen. Kein Guard verbraucht.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -2457,6 +2470,7 @@ Fehlende Zutat offene Wahl: nicht zirkulante C oder ein ε je Sektor (dann keine
 - v11.4 (2026-10-24): K94 Companion-Runde v4.9.0-r48 und Lean-Modul `formal/QSFormal/Sektoren.lean`: Ladungs-Sektoren, Farbdimensionen 1, 3, 3, 1, Ladungen und Masken-Gewichte aus O.mul hergeleitet; T als Ladungskonjugation; σ bleibt im Sektor.
 - v11.5 (2026-10-24): K95 Vorab-Test H33 und Runde v4.9.0-r49 (e₇ trägt B − L, Photon braucht ℍ; Q_em = T₃^L + T₃^R + (B − L)/2), K96 Vorab-Test H34 und Runde v4.9.0-r50 (Maske aus r47 erklärt CKM und PMNS nicht; ε durch die Hierarchie begrenzt); K93.3 umgestuft.
 - v11.6 (2026-10-24): K97 Vorab-Test H35 und Runde v4.9.0-r51 (Tachyon-Abbildung lässt die Sektoren fest; e₇ Frame-Achse nur teilweise; „T“ in r41–r49 = Zeitumkehr, korrigiert), K98 Vorab-Test H36 und Runde v4.9.0-r52 (Kongruenz- und Ähnlichkeitsform der Maske widerlegt, nächster Fall 36 %).
+- v11.7 (2026-10-24): K99 Vorab-Test H37 und Runde v4.9.0-r53 (reine Triality-Kopplung verboten: m₃ = m₁ + m₂, für ν Σm = 0.115 eV ausgeschlossen; Norm + Triality und H/H̃-Lesart erklären die Mischung nicht).
 
 ---
 
