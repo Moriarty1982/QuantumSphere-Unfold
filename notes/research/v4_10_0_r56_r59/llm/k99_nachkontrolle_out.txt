@@ -1,0 +1,2 @@
+eps_e mit Treffern (Variante A): {0.03: 32, 0.04: 32, 0.06: 64, 0.62: 224, 0.63: 256, 0.64: 168}
+Zweige vorhanden bei Kandidaten: {0.2222: True, 0.3017: True, 0.3333: True, 0.3491: True, 0.5: True, 0.5236: True, 0.5493: True, 0.5774: True, 0.6667: True, 0.7071: True, 0.75: True, 1.0: True}

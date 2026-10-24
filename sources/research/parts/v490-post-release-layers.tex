@@ -7501,3 +7501,184 @@ R_{\rm glob}^{(v490\text{-}r57,+)}=(0,1,1,1,1),
 \]
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r58 Source-Only: The CP Phase of the Corrected Trimaximal Reading}
+\addcontentsline{toc}{section}{v4.9.0-r58 Source-Only: The CP Phase of the Corrected Trimaximal Reading}
+\label{sec:v490-r58-cp-phase}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.9.0-r56 named the CP phases as sharper data, and layer v4.9.0-r57 left \(\theta_{23}\) unfixed.  This layer records the pre-registered test H43 (note
+\texttt{llm/Vorab\_Notiz\_H43\_CP\_Phase\_aus\_TM2.md}, commit \texttt{59d8d04}, fixed before computing) of whether the corrected trimaximal reading fixes the Dirac
+phase \(\delta\) of the PMNS matrix.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r58 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r58 results}
+\label{subsec:v490-r58-results}
+
+Models, grids and assignments as in v4.9.0-r57; \(\delta\) from the Jarlskog invariant and \(|U_{\mu1}|^2\) for every case that fits \(\theta_{12}\) (JUNO \(2\sigma\)), \(\theta_{13}\)
+and \(\theta_{23}\) (NuFIT \(3\sigma\)).  Pre-registered: a prediction if \(|\sin\delta|\) or \(\cos\delta\) lies in a range narrower than \(0.3\).
+
+\paragraph{Theoremlet v4.9.0-r58.1 (numerical).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Variant A (\(776\) cases): \(|\sin\delta|\in[0.174,0.999]\), \(\cos\delta\in[-0.980,0.985]\).
+\item[(b)] Variant B (\(3\,808\) cases): \(|\sin\delta|\in[0.172,0.999]\), \(\cos\delta\in[-0.981,0.985]\).
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+Script \texttt{llm/k98\_test\_h43.py}, output \texttt{llm/k98\_out.txt}; it reproduces the case counts of v4.9.0-r57.  \(\square\)
+
+\paragraph{Verdict and reading.}
+H43a and H43b are refuted; no prediction for \(\delta\) is registered.
+\begin{enumerate}[leftmargin=2em]
+\item The reading does not fix \(\delta\); only phases very close to \(0^\circ\) or \(180^\circ\) (\(|\sin\delta|<0.17\)) do not occur, a weak restriction that may depend on
+the grid.
+\item The corrected trimaximal reading remains a fit with two settings: \(\theta_{12}\) fits, \(\theta_{23}\) is bounded from above (pending prediction H42), \(\delta\) is free.  A
+sharper reading would need the correction itself fixed by the structure.
+\end{enumerate}
+
+\subsection*{v4.9.0-r58 status in the three frames}
+\label{subsec:v490-r58-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r58.1(a), (b) & statements on the lepton mixing matrix in M; under the time reversal \(T\) the phase changes sign, \(\delta\mapsto-\delta\), as for any complex conjugation; P not evaluated\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r58 register entries}
+\label{subsec:v490-r58-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r58\\
+\midrule
+Dirac phase \(\delta\) from the corrected trimaximal reading & not fixed (H43); only \(|\sin\delta|<0.17\) absent\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r58 ledger and guard update}
+\label{subsec:v490-r58-ledger-guard}
+
+\[
+R_{\rm cp}^{v490\text{-}r58}=(0,1,0)
+\]
+for (no prediction for \(\delta\); phase computed for all fitting cases; correction still free).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r58,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r58}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r59 Source-Only: The Correction Strength from a Structural Value}
+\addcontentsline{toc}{section}{v4.9.0-r59 Source-Only: The Correction Strength from a Structural Value}
+\label{sec:v490-r59-eps-structural}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layers v4.9.0-r57 and r58 left the corrected trimaximal reading as a fit with two settings.  This layer records the pre-registered test H44 (note
+\texttt{llm/Vorab\_Notiz\_H44\_eps\_aus\_Strukturwert.md}, commit \texttt{95566e5}, fixed before computing) of whether a structural value fixes the correction strength
+\(\varepsilon\).  To avoid choosing values after the hits of r57 were known, only the candidate list of v4.9.0-r56, fixed before r57, was used.  Earlier layers are
+not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r59 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r59 results}
+\label{subsec:v490-r59-results}
+
+\paragraph{Theoremlet v4.9.0-r59.1 (numerical).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] For none of the fourteen candidates (\(2/9\), \(\beta_{\rm sym}^2\), \(1/3\), \(\pi/9\), \(1/2\), \(\pi/6\), \(\beta_{\rm sym}\), \(1/\sqrt3\), \(2/3\), \(1/\sqrt2\), \(3/4\), \(1\),
+\(\sqrt3\), \(\gamma_L\)) does variant A or B of v4.9.0-r57 give a case with \(\theta_{12}\) in the JUNO \(2\sigma\) range and \(\theta_{13}\), \(\theta_{23}\) in the NuFIT
+\(3\sigma\) ranges.
+\item[(b)] A check after the evaluation: the charged-lepton branches exist at all candidates up to \(\varepsilon=1\); variant A has hits only in two windows,
+\(\varepsilon_e=0.03\)--\(0.06\) and \(\varepsilon_e=0.62\)--\(0.64\).
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+Script \texttt{llm/k99\_test\_h44.py}, output \texttt{llm/k99\_out.txt}; the check in \texttt{llm/k99\_nachkontrolle.py}.  \(\square\)
+
+\paragraph{Verdict and reading.}
+H44a is refuted.
+\begin{enumerate}[leftmargin=2em]
+\item No structural value from the pre-registered list fixes the correction; the reading does not become predictive this way.
+\item The data nearly fix \(\varepsilon\) under the reading (\(\approx0.05\) or \(\approx0.63\), each within about \(\pm0.02\)); this is a property of the data, not a structural
+value, and searching for a number in these windows now would be numerology.
+\item \emph{Correction to v4.9.0-r57.1(a):} the statement ``for \(\varepsilon_e\) from \(0.03\) to \(0.64\)'' gave only the minimum and maximum; the hits lie in the two windows
+of (b), with none in between.
+\end{enumerate}
+
+\subsection*{v4.9.0-r59 status in the three frames}
+\label{subsec:v490-r59-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r59.1(a), (b) & statements on lepton mass matrices in M, the same in T as in v4.9.0-r57; P not evaluated\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r59 register entries}
+\label{subsec:v490-r59-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r59\\
+\midrule
+\(\varepsilon\) from a structural value & refuted for the pre-registered list (H44)\\
+hit windows of v4.9.0-r57 & \(\varepsilon_e\approx0.03\)--\(0.06\) and \(0.62\)--\(0.64\); r57.1(a) corrected\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r59 ledger and guard update}
+\label{subsec:v490-r59-ledger-guard}
+
+\[
+R_{\rm es}^{v490\text{-}r59}=(0,1,0)
+\]
+for (no structural value for \(\varepsilon\); hit windows located; origin of the correction open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r59,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r59}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
