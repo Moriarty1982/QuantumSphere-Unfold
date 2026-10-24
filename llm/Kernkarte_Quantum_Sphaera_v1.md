@@ -2432,6 +2432,15 @@ Hopf und Tribonacci knapp draußen; sin²θ₂₃ über das Fenster [0.491, 0.49
 - rem:op1-tribonacci / OP4: behauptete Auflösung zurückgezogen, OP4 in jetziger Form falsch gestellt; nur OP1 bleibt.
 - Angewendet lokal (Monolith) und auf sources/research (GitHub) mit llm/apply_patches.py.
 
+### K111 H47: β_sym als Verhältnis zweier Horizontzählungen (2026-10-25)
+
+Vorab-Notiz df0c788, Skript `llm/k102_zaehlregeln.py`, Ergebnis `llm/Ergebnis_H47_Zaehlregel_beta_sym.md`.
+
+- **K111.1 Lesart (V).** Tachyon-Frame zählt nur j = ½ (ABCK, γ = ln2/(π√3)), Materie-Frame alle Spins; γ_L = γ_voll/γ_min = cosh 2η ist der Boost der Gegenüberliegenden M–T. Damit sind Zähl- und Lorentz-Lesart (r03 F11) vereinbar. Die Zähl-Lesart selbst stammt aus r03 F11 (angeboten, nicht übernommen).
+- **K111.2 Rechnung (M).** Flächenspektrum √(j(j+1)). DL/Meissner (Gewicht 2): γ = 0.2375330, γ_L = 1.864700, β = 0.549406. Ghosh–Mitra (Gewicht 2j+1): γ = 0.2740669, γ_L = 2.151501, β = 0.604468. Der Haupttext rechnet mit gerundetem 0.2375 (γ_L = 1.86444, β = 0.549348).
+- **K111.3 Fenster (D, nicht blind, Versuchsfaktor 2).** Nur DL/Meissner liegt in β ∈ [0.545, 0.570] (r61); Erwartung vorab offengelegt.
+- **K111.4 Folge (S).** Unter dieser Lesart ist β_sym eine reine SU(2)-Zahl ohne Eingabe, abhängig von zwei Zählregeln. OP1 neu: begründen, warum T nur j = ½ und M alle Spins mit Gewicht 2 (m = ±j) zählt. Kein Beleg; Guards unverändert.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2598,6 +2607,7 @@ Hopf und Tribonacci knapp draußen; sin²θ₂₃ über das Fenster [0.491, 0.49
 - v12.6 (2026-10-24): K108 Vorhersage H46 (sin²θ₂₃ ∈ [0.49, 0.50] unter ε = η) vorab festgelegt, ausstehend.
 - v12.7 (2026-10-24): K109 Frame-Prüfung OP1–OP5 und Runde v4.9.0-r61 (Tribonacci und Hopf mischen Frames/Klassen, OP4 falsch gestellt; β_sym-Fenster aus der Leptonmischung).
 - v12.8 (2026-10-24): K110 Statusnotizen nach r61 (Regel C) an thm:bsym-hopf, rem:bsym-hopf-gap, thm:tribonacci (erweitert), rem:op1-tribonacci; Runde v4.9.0-r62; Patch-Spezifikation llm/revision_spec_v490_r61.py.
+- v12.9 (2026-10-25): K111 H47 Zähl-Lesart von β_sym (DL/Meissner im Fenster, Ghosh–Mitra nicht; OP1 umformuliert).
 
 ---
 

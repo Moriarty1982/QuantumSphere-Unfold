@@ -1,0 +1,4 @@
+gamma_min (ABCK) = 0.127384023140948032867604166507
+DL/M: gamma = 0.237532957966  Rest 9.51e-2594  gamma_L = 1.8646998  beta = 0.54940564  eta = 0.61753  im Fenster: True
+GM: gamma = 0.274066858233  Rest 5.16e-2989  gamma_L = 2.151501  beta = 0.60446817  eta = 0.700158  im Fenster: False
+A: |g_dlm - 0.237532957966| = 7.93e-14  gamma_L Ziel 1.86444
