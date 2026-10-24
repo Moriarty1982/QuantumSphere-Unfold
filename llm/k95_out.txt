@@ -1,0 +1,18 @@
+Untergruppen von A4 (Ordnung: Anzahl): {1: 1, 2: 3, 3: 4, 4: 1, 12: 1}
+G_M = trivial (keine Vorhersage): Treffer in allen drei 3sigma-Bereichen: 0
+G_M = Klein (fest): Treffer in allen drei 3sigma-Bereichen: 0
+G_M = Z2 (ein Winkel): Treffer in allen drei 3sigma-Bereichen: 1176; bei sin^2 13 im Bereich (5520 Faelle): sin^2 12 in [0.3402, 0.6598], sin^2 23 in [0.3993, 0.6007]; Treffer: sin^2 12 in [0.3402, 0.3413], sin^2 23 in [0.4512, 0.5742]
+G_M = Z2 (ein Winkel): Treffer in allen drei 3sigma-Bereichen: 1176; bei sin^2 13 im Bereich (5520 Faelle): sin^2 12 in [0.3402, 0.6598], sin^2 23 in [0.3993, 0.6007]; Treffer: sin^2 12 in [0.3402, 0.3413], sin^2 23 in [0.4512, 0.5742]
+G_M = Z2 (ein Winkel): Treffer in allen drei 3sigma-Bereichen: 1176; bei sin^2 13 im Bereich (5520 Faelle): sin^2 12 in [0.3402, 0.6598], sin^2 23 in [0.3993, 0.6007]; Treffer: sin^2 12 in [0.3402, 0.3413], sin^2 23 in [0.4512, 0.5742]
+G_M = Z3 (fest): Treffer in allen drei 3sigma-Bereichen: 0
+G_M = Z3 (fest): Treffer in allen drei 3sigma-Bereichen: 0
+G_M = Z3 (fest): Treffer in allen drei 3sigma-Bereichen: 0
+
+H39a (Klein: kein Treffer) -> bestaetigt
+H39b (Z2: Treffer) -> bestaetigt
+  Treffer insgesamt 3528: sin^2 12 in [0.3402, 0.3413], sin^2 23 in [0.4512, 0.5742]
+H39c (andere Z3: kein Treffer) -> bestaetigt
+H39d: u und d mit derselben Lesart <tau>: V = U_u^dagger U_d ist eine Permutationsmatrix; bei gleicher Zuordnung die Einheitsmatrix (qualitativ, kein Kriterium).
+Nachkontrolle Z2, feste Spalte als nu1: 2760 Faelle mit sin^2 13 im Bereich; sin^2 12 in [0.6586, 0.6598], sin^2 23 in [0.3993, 0.6007]; Treffer 0
+Nachkontrolle Z2, feste Spalte als nu2: 2760 Faelle mit sin^2 13 im Bereich; sin^2 12 in [0.3402, 0.3414], sin^2 23 in [0.3993, 0.6007]; Treffer 1176
+Vergleich: NuFIT 6.0 Bestwert sin^2 12 = 0.307 (3sigma bis 0.345); TM2-Wert 1/(3 cos^2 theta13) bei sin^2 13 = 0.02195: 0.3408

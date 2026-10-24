@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v11.8
+# Kernkarte Quantum Sphaera — v11.9
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -2327,6 +2327,19 @@ in [0, 0.99], 0.8 % passen.
 **K100.2 (S).** H38a widerlegt, H38b–d bestätigt: Form S mit vier ε nach Kriterium Kandidat. Inhaltlich schwach: die verbleibende Vorhersage ist nicht scharf,
 Treffer im Ausläufer; eher Anpassung als Erklärung. ε_u ≈ ε_d, aber kein Treffer auf der Diagonale (H36c). Herkunft der ε-Werte offen. Kein Guard verbraucht.
 
+### K101 — Vorab festgelegter Test H39 und Companion-Runde v4.9.0-r55: Lesart je Teilchenart als Untergruppe der A₄ (2026-10-24)
+
+Vorab-Notiz `llm/Vorab_Notiz_H39_Restsymmetrie_Lesarten.md` (Commit 5c916b8; Klein- und TM2-Erwartung offengelegt; Ankündigung „tribimaximal“ korrigiert, braucht S₄),
+Skript `llm/k95_test_h39.py`, Ausgabe `llm/k95_out.txt` (Erstlauf ohne Nachkontrolle, gleiche Kriteriumswerte), Ergebnis `llm/Ergebnis_H39_Restsymmetrie_Lesarten.md`,
+Runde `sec:v490-r55-residual-readouts`. Autorfrage: jede Teilchenart eine eigene Lesart. Regel: Dirac (u, d, e) lesen mit ⟨τ⟩ ≅ ℤ₃ (zirkulant, r44), Neutrinos
+(Majorana möglich, r44) mit G_M ⊂ A₄ (K77.4).
+
+**K101.1 (M).** Untergruppen von A₄: Ordnungen 1, 2, 3, 4, 12 (1, 3, 4, 1, 1). Klein: alle |U_ij|² = 1/3, kein Treffer; andere ℤ₃: kein Treffer. ℤ₂: Treffer genau
+bei fester Spalte ν₂ (TM2): sin²θ₁₂ = 1/(3 cos²θ₁₃) ∈ [0.3402, 0.3414] scharf, sin²θ₂₃ ∈ [0.399, 0.601] frei. Gleiche Lesart für u, d ⇒ V_CKM = 1 in führender Ordnung.
+Nach Wortlaut (Spannweiten über alle Zuordnungen) Anpassung mit einem Winkel. Nachkontrolle: JUNO 2025 sin²θ₁₂ = 0.3092 ± 0.0087 ⇒ TM2 3.6 σ darüber.
+**K101.2 (S).** Erste Lesart, die CKM klein und PMNS groß ordnet (H34–H38 nicht). Quantitativ die bekannte TM2-Mischung der A₄-Literatur; θ₁₂ unter Druck durch JUNO,
+θ₂₃ und CKM-Winkel offen (Korrekturen, etwa aus der Maske). Kein Guard verbraucht.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -2485,6 +2498,7 @@ Treffer im Ausläufer; eher Anpassung als Erklärung. ε_u ≈ ε_d, aber kein T
 - v11.6 (2026-10-24): K97 Vorab-Test H35 und Runde v4.9.0-r51 (Tachyon-Abbildung lässt die Sektoren fest; e₇ Frame-Achse nur teilweise; „T“ in r41–r49 = Zeitumkehr, korrigiert), K98 Vorab-Test H36 und Runde v4.9.0-r52 (Kongruenz- und Ähnlichkeitsform der Maske widerlegt, nächster Fall 36 %).
 - v11.7 (2026-10-24): K99 Vorab-Test H37 und Runde v4.9.0-r53 (reine Triality-Kopplung verboten: m₃ = m₁ + m₂, für ν Σm = 0.115 eV ausgeschlossen; Norm + Triality und H/H̃-Lesart erklären die Mischung nicht).
 - v11.8 (2026-10-24): K100 Vorab-Test H38 und Runde v4.9.0-r54 (ein ε je Sektor: Form S trifft CKM und PMNS, aber im Ausläufer; Form K verfehlt die Quarks knapp); Zählung in K98.2 korrigiert.
+- v11.9 (2026-10-24): K101 Vorab-Test H39 und Runde v4.9.0-r55 (Lesart je Teilchenart: Dirac ℤ₃, Majorana ℤ₂ aus A₄ ⇒ CKM = 1 in führender Ordnung, PMNS = TM2; sin²θ₁₂ ≈ 0.341, 3.6 σ über JUNO).
 
 ---
 
