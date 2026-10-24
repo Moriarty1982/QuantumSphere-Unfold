@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v12.2
+# Kernkarte Quantum Sphaera — v12.3
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -2371,6 +2371,15 @@ Vorab-Notiz `llm/Vorab_Notiz_H42_Grenze_theta23.md` (Commit 1c7f3e1). Aus K101/K
 bemerkt, daher Vorhersage erst ab dieser Notiz; NuFIT 6.0 (0.561 ohne, 0.470 mit SK-atm) prüft nicht. Prüfung: erste globale Auswertung oder DUNE/Hyper-K nach dem
 2026-10-24; widerlegt bei 2σ-Intervall ganz über 0.54, bestätigt ganz darunter, sonst offen. Eine Bestätigung prüft nur die Grenze, nicht die Lesart. **Ausstehend.**
 
+### K105 — Vorab festgelegter Test H43 und Companion-Runde v4.9.0-r58: CP-Phase der korrigierten TM2-Lesart (2026-10-24)
+
+Vorab-Notiz `llm/Vorab_Notiz_H43_CP_Phase_aus_TM2.md` (Commit 59d8d04), Skript `llm/k98_test_h43.py`, Ausgabe `llm/k98_out.txt`, Ergebnis
+`llm/Ergebnis_H43_CP_Phase_aus_TM2.md`, Runde `sec:v490-r58-cp-phase`. δ aus Jarlskog-Invariante und |U_μ1|² für alle Treffer von K103.
+
+**K105.1 (M).** A: |sin δ| ∈ [0.174, 0.999], cos δ ∈ [−0.980, 0.985]; B: [0.172, 0.999], [−0.981, 0.985]. Breite > 0.3 → H43a, b widerlegt; keine Vorhersage H44.
+**K105.2 (S).** δ durch die Lesart nicht festgelegt, nur |sin δ| < 0.17 tritt nicht auf (schwach, gitterabhängig). Die korrigierte TM2-Lesart bleibt Anpassung mit zwei
+Einstellungen; schärfer nur, wenn die Korrektur selbst aus der Struktur folgt. Kein Guard verbraucht.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -2533,6 +2542,7 @@ bemerkt, daher Vorhersage erst ab dieser Notiz; NuFIT 6.0 (0.561 ohne, 0.470 mit
 - v12.0 (2026-10-24): K102 Vorab-Test H40 und Runde v4.9.0-r56 (Kalibrierung der Ausleseschicht: Einstellungen festgehalten, keine Struktur über Zufall, p = 0.019; Kompression fehlt).
 - v12.1 (2026-10-24): K103 Vorab-Test H41 und Runde v4.9.0-r57 (Maske als Korrektur löst die TM2-Spannung mit JUNO; θ₂₃ nicht festgelegt, nachträglich sin²θ₂₃ ≲ 0.54).
 - v12.2 (2026-10-24): K104 Vorhersage H42 (sin²θ₂₃ ≤ 0.54) vorab festgelegt, ausstehend.
+- v12.3 (2026-10-24): K105 Vorab-Test H43 und Runde v4.9.0-r58 (CP-Phase δ durch die korrigierte TM2-Lesart nicht festgelegt; keine H44).
 
 ---
 
