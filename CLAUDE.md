@@ -90,7 +90,7 @@ Nicht in diesem Verzeichnis, aber referenziert: `RC14_uncompressed_reference_sou
 
 ## Der Runden-Workflow
 
-Die **Runden** wachsen append-only: eine neue Runde ist ein neuer Abschnitt unmittelbar vor `\end{document}`, bestehende Runden werden nicht umgeschrieben. Aktueller Stand: **r94**, **v4.8.0-r20**, **v4.9.0-r56**. Runden der v4.8.0-Linie heißen `v4.8.0-rNN` (Labels `sec:v480-rNN-...`), danach `v4.9.0-rNN` (`sec:v490-rNN-...`); `qs.py outline` und `ledger` erkennen alle Formen. Inhalt jeder Runde ausführlich in der Kernkarte (`llm/Kernkarte_Quantum_Sphaera_v1.md`, Abschnitt 7).
+Die **Runden** wachsen append-only: eine neue Runde ist ein neuer Abschnitt unmittelbar vor `\end{document}`, bestehende Runden werden nicht umgeschrieben. Aktueller Stand: **r94**, **v4.8.0-r20**, **v4.9.0-r57**. Runden der v4.8.0-Linie heißen `v4.8.0-rNN` (Labels `sec:v480-rNN-...`), danach `v4.9.0-rNN` (`sec:v490-rNN-...`); `qs.py outline` und `ledger` erkennen alle Formen. Inhalt jeder Runde ausführlich in der Kernkarte (`llm/Kernkarte_Quantum_Sphaera_v1.md`, Abschnitt 7).
 
 **Der Hauptkorpus wird seit v4.9.0-r25 überarbeitet** (Autorauftrag 2026-10-22: alte Arbeit nicht verlieren, falsche Aussagen nicht stehen lassen). Regel (`sec:v490-r25-main-body-revision`, Skript `llm/aufraeumen_v490.py`):
 - **(A) Sackgasse** (widerlegt, ausgeschlossen, zurückgezogen): Original wortgleich in den Archiv-Anhang `sec:v490-archive`; an der alten Stelle bleibt dieselbe Umgebung mit **gleicher Nummer und gleichem Label**, kurzer Aussage dessen, was bleibt, und Verweis. Alle `\ref` lösen weiter auf.
@@ -159,6 +159,7 @@ Guard-Linter für neue Runden: `python llm/training/guard_linter.py <tex> --star
 | r54 | Ein ε je Sektor (Vorab-Test H38): Form S trifft CKM (0.0009 %, ε_u ∈ [1.36, 1.63], ε_d ∈ [1.42, 1.47]) und PMNS (ε_e ∈ [0.44, 0.82], ε_ν ∈ [0.27, 0.55], kosmologisch zulässige m₁); Form K verfehlt die Quarks knapp (20.2 %); dritte Größe nicht scharf (|V_ub| typisch ×5) ⇒ Anpassung, keine Erklärung; Zählung von r52 korrigiert |
 | r55 | Lesart je Teilchenart (Vorab-Test H39, Autorfrage): Untergruppen der A₄ der Ablage; Dirac (u, d, e) ℤ₃ = ⟨τ⟩, Majorana-ν ℤ₂ ⇒ CKM = 1 in führender Ordnung, PMNS = TM2, sin²θ₁₂ = 1/(3 cos²θ₁₃) ≈ 0.341 scharf (3.6 σ über JUNO 2025), θ₂₃ frei; Klein und andere ℤ₃ widerlegt; nach Wortlaut Anpassung mit einem Winkel |
 | r56 | Kalibrierung der Ausleseschicht (Vorab-Test H40, Autoridee): Form S mit Brannen-C und ε je Sektor, 16 Einstellungen für 17 Größen; Einstellungen festgehalten (ε_u ≈ 1.5, ε_d ≈ 1.45, ε_e ≈ 0.6, ε_ν ≈ 0.4); 14 Korpus-Kandidaten treffen nicht mehr als Zufall (p = 0.019); |b|/|a| ≈ 1 der Quarks aus der Hierarchie; Kompression fehlt |
+| r57 | TM2 mit Maskenkorrektur (Vorab-Test H41): geladene Leptonen Form S (ε_e), Neutrinos Majorana ℤ₂ mit Winkel φ, Form K; A (ε_ν = 0) und B (gemeinsames ε) treffen θ₁₂ (JUNO 2σ), θ₁₃, θ₂₃; θ₂₃ nicht festgelegt (0.31–0.54); nachträglich sin²θ₂₃ ≲ 0.54 |
 
 Ältere Runden (r03–r94, v4.8.0-r01–r20): Kernkarte und die genannten Register. Kurzstand v4.8.0: Lesart B (ℂ³, SO(3,ℂ)) als Arbeitslesart, Sektoren nach Vorzeichen von s, vorab festgelegte Tests H2–H13 mit Ergebnissen, Riemann-Arbeit seit r04 keine Beweisquelle.
 

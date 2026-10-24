@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v12.0
+# Kernkarte Quantum Sphaera — v12.1
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -2354,6 +2354,17 @@ e [1.2, 6.4], ν [0.45, 1.57]; θ fast der ganze Bereich. 14 Kandidaten (1/3, �
 |μ| = (K − 1)/(K + 1) ≈ 0.88–0.93 (u), 0.89–0.90 (d), 0.58–0.84 (e), 0.38–0.68 (ν). Teichmüller steht im Korpus auf der RH-/Closure-Seite, nicht in den
 Feldgleichungen. Kein Guard verbraucht.
 
+### K103 — Vorab festgelegter Test H41 und Companion-Runde v4.9.0-r57: TM2 mit der Maske als Korrektur (2026-10-24)
+
+Vorab-Notiz `llm/Vorab_Notiz_H41_TM2_mit_Maskenkorrektur.md` (Commit 74bd018), Skript `llm/k97_test_h41.py`, Ausgabe `llm/k97_out.txt`, Ergebnis
+`llm/Ergebnis_H41_TM2_mit_Maskenkorrektur.md`, Runde `sec:v490-r57-tm2-correction`. Leptonen: geladene zirkulant (ℤ₃) mit Form-S-Korrektur ε_e; Neutrinos Majorana,
+ℤ₂-invariant (alle drei ℤ₂), Winkel φ, Form-K-Korrektur; A: ε_ν = 0, B: ε_ν = ε_e; je zwei Einstellungen für drei Winkel. JUNO 2025 als 2σ-Bereich für θ₁₂.
+
+**K103.1 (M).** A: 776 von 4.0·10⁶ Fällen mit θ₁₂ (JUNO 2σ), θ₁₃, θ₂₃ (NuFIT 3σ), ε_e 0.03–0.64. B: 3 808 von 2.1·10⁷, ε ≈ 0.04–0.06 und 0.62–0.64. H41a, b bestätigt.
+Bei passendem θ₁₂, θ₁₃: sin²θ₂₃ ∈ [0.309, 0.537] (A), [0.314, 0.515] (B) → H41c (Breite < 0.05) widerlegt.
+**K103.2 (S).** Die TM2-Spannung mit JUNO (K101) ist durch die Maske als Korrektur auflösbar; die Lesart aus r55 bleibt. Anpassung mit zwei Einstellungen, θ₂₃ nicht
+vorhergesagt. Nachträglich bemerkt: sin²θ₂₃ ≲ 0.54 in beiden Varianten (oberer Oktant spräche dagegen), müsste vorab festgelegt werden. Kein Guard verbraucht.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -2514,6 +2525,7 @@ Feldgleichungen. Kein Guard verbraucht.
 - v11.8 (2026-10-24): K100 Vorab-Test H38 und Runde v4.9.0-r54 (ein ε je Sektor: Form S trifft CKM und PMNS, aber im Ausläufer; Form K verfehlt die Quarks knapp); Zählung in K98.2 korrigiert.
 - v11.9 (2026-10-24): K101 Vorab-Test H39 und Runde v4.9.0-r55 (Lesart je Teilchenart: Dirac ℤ₃, Majorana ℤ₂ aus A₄ ⇒ CKM = 1 in führender Ordnung, PMNS = TM2; sin²θ₁₂ ≈ 0.341, 3.6 σ über JUNO).
 - v12.0 (2026-10-24): K102 Vorab-Test H40 und Runde v4.9.0-r56 (Kalibrierung der Ausleseschicht: Einstellungen festgehalten, keine Struktur über Zufall, p = 0.019; Kompression fehlt).
+- v12.1 (2026-10-24): K103 Vorab-Test H41 und Runde v4.9.0-r57 (Maske als Korrektur löst die TM2-Spannung mit JUNO; θ₂₃ nicht festgelegt, nachträglich sin²θ₂₃ ≲ 0.54).
 
 ---
 

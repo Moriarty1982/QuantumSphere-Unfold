@@ -1,0 +1,7 @@
+H41a (Variante A): 776 von 3965760 Faellen treffen (theta13, theta23 NuFIT 3sigma, theta12 JUNO 2sigma); eps_e mit Treffer: (np.float64(0.03), np.float64(0.64)) -> bestaetigt
+  sin^2 23 bei theta12 (JUNO 2sigma) und theta13 (3sigma): [0.3088, 0.5370], Breite 0.2282
+
+H41b (Variante B): 3808 von 20998368 Faellen treffen; (eps, m1) mit Treffer: [(np.float64(0.04), 0.001), (np.float64(0.04), 0.003), (np.float64(0.06), 0), (np.float64(0.06), 0.001), (np.float64(0.06), 0.003), (np.float64(0.62), 0), (np.float64(0.62), 0.001), (np.float64(0.62), 0.003), (np.float64(0.64), 0), (np.float64(0.64), 0.001)] ... -> bestaetigt
+  sin^2 23 bei theta12 (JUNO 2sigma) und theta13 (3sigma): [0.3137, 0.5149], Breite 0.2012
+
+H41c (Schaerfe von theta23 < 0.05 fuer eine treffende Variante): A False, B False -> widerlegt

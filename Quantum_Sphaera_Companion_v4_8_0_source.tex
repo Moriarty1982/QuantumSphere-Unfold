@@ -75326,4 +75326,102 @@ R_{\rm glob}^{(v490\text{-}r56,+)}=(0,1,1,1,1),
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
 
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r57 Source-Only: Trimaximal Mixing with the Mask as a Correction}
+\addcontentsline{toc}{section}{v4.9.0-r57 Source-Only: Trimaximal Mixing with the Mask as a Correction}
+\label{sec:v490-r57-tm2-correction}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.9.0-r55 gave trimaximal lepton mixing (TM2) at leading order, with \(\sin^2\theta_{12}\approx0.341\), \(3.6\sigma\) above the JUNO value.  This layer records
+the pre-registered test H41 (note \texttt{llm/Vorab\_Notiz\_H41\_TM2\_mit\_Maskenkorrektur.md}, commit \texttt{74bd018}, fixed before computing) of whether the mask of
+v4.9.0-r47, as a correction with few settings, brings \(\theta_{12}\) to the JUNO value.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r57 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r57 model}
+\label{subsec:v490-r57-model}
+
+Charged leptons: circulant coupling (leading readout \(\mathbb Z_3\)) corrected in form S, \(M_e=D_eC_eD_e^{-1}\), \(D_e=\exp(\varepsilon_eW_l)\).  Neutrinos: Majorana
+matrix invariant under one of the three \(\mathbb Z_2\subset A_4\) (not equivalent once the mask is present), with one rotation angle \(\varphi\), corrected in form K,
+\(M_\nu=D_\nu M_0D_\nu\).  Variant A: \(\varepsilon_\nu=0\); variant B: \(\varepsilon_\nu=\varepsilon_e\).  Each variant has two settings for three angles.  Data: NuFIT~6.0
+(normal ordering, \(3\sigma\)) and JUNO 2025, \(\sin^2\theta_{12}=0.3092\pm0.0087\), used as a \(2\sigma\) range; \(m_1\in\{0,0.001,0.003\}\) eV.
+
+\subsection*{v4.9.0-r57 results}
+\label{subsec:v490-r57-results}
+
+\paragraph{Theoremlet v4.9.0-r57.1 (numerical).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Variant A: \(776\) of \(3\,965\,760\) cases have \(\theta_{12}\) in the JUNO \(2\sigma\) range and \(\theta_{13}\), \(\theta_{23}\) in the NuFIT \(3\sigma\) ranges,
+for \(\varepsilon_e\) from \(0.03\) to \(0.64\).
+\item[(b)] Variant B: \(3\,808\) of \(20\,998\,368\) cases, for \(\varepsilon\) near \(0.04\)--\(0.06\) and near \(0.62\)--\(0.64\).
+\item[(c)] Given \(\theta_{12}\) and \(\theta_{13}\) in their ranges, \(\sin^2\theta_{23}\) spans \([0.309,0.537]\) (A) and \([0.314,0.515]\) (B).
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+Script \texttt{llm/k97\_test\_h41.py}, output \texttt{llm/k97\_out.txt}.  \(\square\)
+
+\paragraph{Verdict and reading.}
+H41a and H41b are confirmed, H41c (width of \(\sin^2\theta_{23}\) below \(0.05\)) is refuted.
+\begin{enumerate}[leftmargin=2em]
+\item The tension of the TM2 reading with JUNO can be resolved: a small correction by the mask, of the shape fixed in v4.9.0-r47, lowers \(\sin^2\theta_{12}\) from
+\(0.341\) into the JUNO range while \(\theta_{13}\) and \(\theta_{23}\) stay within the measured ranges.  The readout of v4.9.0-r55 is therefore not refuted.
+\item It is a fit with two settings, not a prediction: \(\theta_{23}\) is not fixed.
+\item An observation after the evaluation, not part of the criterion: in both variants \(\sin^2\theta_{23}\le0.54\) once \(\theta_{12}\) and \(\theta_{13}\) fit.  A value
+clearly in the upper octant would speak against the reading.  This bound was noticed afterwards and would have to be pre-registered to count.
+\end{enumerate}
+
+\subsection*{v4.9.0-r57 status in the three frames}
+\label{subsec:v490-r57-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r57.1(a)--(c) & statements on lepton mass matrices in M, the same in T as in v4.9.0-r52 and r55; P not evaluated\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r57 register entries}
+\label{subsec:v490-r57-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r57\\
+\midrule
+TM2 reading of v4.9.0-r55 against JUNO & tension resolvable by the mask as a correction (H41a, b)\\
+\(\theta_{23}\) from the corrected reading & not fixed (H41c); one-sided bound \(\sin^2\theta_{23}\lesssim0.54\) noticed afterwards\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r57 ledger and guard update}
+\label{subsec:v490-r57-ledger-guard}
+
+\[
+R_{\rm tm}^{v490\text{-}r57}=(0,1,0)
+\]
+for (no sharp prediction; tension with JUNO resolvable; bound on \(\theta_{23}\) to be pre-registered).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r57,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r57}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
 \end{document}
