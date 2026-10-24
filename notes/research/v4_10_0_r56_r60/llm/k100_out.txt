@@ -1,0 +1,8 @@
+Variante A, eps = artanh(beta_sym) (0.6174): 120 Treffer; sin^2 23 in [0.4913, 0.4975] (Breite 0.0063), |sin delta| in [0.169, 0.998] (Breite 0.828)
+Variante A, eps = artanh(1/sqrt3) (0.6585): 0 Treffer
+Variante B, eps = artanh(beta_sym) (0.6174): 1104 Treffer; sin^2 23 in [0.4913, 0.4975] (Breite 0.0063), |sin delta| in [0.167, 0.998] (Breite 0.831)
+Variante B, eps = artanh(1/sqrt3) (0.6585): 0 Treffer
+
+H45a (Treffer bei eps = artanh(beta_sym)): bestaetigt
+H45b (scharf): widerlegt
+H45c (Treffer beim Hopf-Wert): nein
