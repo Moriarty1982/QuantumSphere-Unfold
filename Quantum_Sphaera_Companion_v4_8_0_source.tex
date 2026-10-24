@@ -6524,7 +6524,7 @@ to be bounded.
 \end{proof}
 \end{proposition}
 
-\begin{theorem}[Hawking radiation from the triolic structure]
+\qsstatus{Status (v4.9.0 revision): under the counting reading of v4.9.0-r63, \(\gstring\) is the minimal-spin counting of the tachyon floor, i.e.\ of the infalling partner; the theorem assigns it to the escaping photon in the reference frame R and reads T as R (v4.9.0-r64).}\begin{theorem}[Hawking radiation from the triolic structure]
 \label{thm:hawking-triolic}
 At the horizon, a virtual matter--tachyon pair from the triolic structure
 (Theorem~3.2) is promoted to a real pair:
@@ -7591,7 +7591,7 @@ $\gBI$ & $\approx 0.2375$ & 0
 \end{tabular}
 \end{center}
 \end{theorem}
-\qsstatus{Corrected in the v4.9.0 revision: the \(k=1\) of the first row belongs to \(\alpha\), not to \(\alpha^{-1}\) as earlier printed (v4.8.0-r03 F2, closed in v4.9.0-r08).  Conversion ways: v4.9.0-r18, r19 (class split offered).}
+\qsstatus{Corrected in the v4.9.0 revision: the \(k=1\) of the first row belongs to \(\alpha\), not to \(\alpha^{-1}\) as earlier printed (v4.8.0-r03 F2, closed in v4.9.0-r08).  Conversion ways: v4.9.0-r18, r19 (class split offered).  The entry \(k(\gBI)=0\) contradicts Theorem~\ref{thm:frame-offset}, which calls \(\gBI\) the Lorentz-transformed \(\gstring\).  Under the counting reading of v4.9.0-r63 the frame difference sits in \(\gamma\) itself, and \(\hbar\), \(G_N\) enter both countings identically; the entries \(k(\hbar)=1\), \(k(G_N)=2\) then need a source other than \(\gL\) (v4.9.0-r64).}
 
 
 \begin{theorem}[$k(c)=0$: the speed of light is frame-invariant]
@@ -7627,7 +7627,7 @@ $\gL^{3/2}\approx 2.546$.
 The half-integer exponent $3/2$ reflects that $\lP=\sqrt{\hbar G_N/c^3}$
 is a geometric mean between a $k=1$ and a $k=2$ sector.
 \end{theorem}
-\qsstatus{Status (v4.9.0 revision): conversion from the matter frame to the reference frame R (v4.9.0-r24); under the class split the factor is \(e^{3\eta/2}\) (v4.9.0-r19); tachyon phase \(\mp i\) (v4.9.0-r22).}
+\qsstatus{Status (v4.9.0 revision): conversion from the matter frame to the reference frame R (v4.9.0-r24); under the class split the factor is \(e^{3\eta/2}\) (v4.9.0-r19); tachyon phase \(\mp i\) (v4.9.0-r22).  Under the counting reading of v4.9.0-r63 both countings use the same \(\lP\); the factor \(\gL^{-3/2}\) converts \(\hbar\) and \(G_N\) with the counting ratio and is not supported by that reading (v4.9.0-r64).}
 
 
 \begin{corollary}[Cosmological constant revisited]
@@ -76113,6 +76113,64 @@ The layer spends no guard:
 R_{\rm glob}^{(v490\text{-}r64,+)}=(0,1,1,1,1),
 \qquad
 \Gamma_{\rm guard}^{v490\text{-}r64}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r65 Source-Only: Status Notes after the Frame Audit of the Gravity Statements}
+\addcontentsline{toc}{section}{v4.9.0-r65 Source-Only: Status Notes after the Frame Audit of the Gravity Statements}
+\label{sec:v490-r65-gravity-status-notes}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.9.0-r64 named Theorems~\ref{thm:k-values}, \ref{thm:planck-photon} and \ref{thm:hawking-triolic} as candidates for status notes.  On 2026-10-25 the author
+decided to add them.  Following rule~C of v4.9.0-r25, the text stays and a status note records the state; nothing is archived.  The notes are applied by the patch
+specification \texttt{llm/revision\_spec\_v490\_r64.py} (also for the GitHub fragments).
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r65 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r65 notes added}
+\label{subsec:v490-r65-notes}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+place & note\\
+\midrule
+Theorem~\ref{thm:k-values} & existing note extended: \(k(\gBI)=0\) contradicts Theorem~\ref{thm:frame-offset}; \(k(\hbar)\), \(k(G_N)\) need a source other than \(\gL\) (r64.1(a), (b))\\
+Theorem~\ref{thm:planck-photon} & existing note extended: \(\gL^{-3/2}\) not supported by the counting reading (r64.1(b))\\
+Theorem~\ref{thm:hawking-triolic} & new note: the tachyon counting is assigned to the escaping photon, T read as R (r64.1(e))\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r65 status in the three frames}
+\label{subsec:v490-r65-frames}
+
+The notes restate v4.9.0-r64; the frame status is that of r64.
+
+\subsection*{v4.9.0-r65 ledger and guard update}
+\label{subsec:v490-r65-ledger-guard}
+
+\[
+R_{\rm sn}^{v490\text{-}r65}=(1,0,0)
+\]
+for (status notes applied; no new statement; the \(k\) values open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r65,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r65}=(1,1,1,1,1),
 \qquad
 \beta_4=1/256\ \text{unspent}.
 \]

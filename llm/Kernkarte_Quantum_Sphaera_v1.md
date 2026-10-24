@@ -2460,6 +2460,14 @@ Vorab-Notiz df0c788, Skript `llm/k102_zaehlregeln.py`, Ergebnis `llm/Ergebnis_H4
 - **K113.3 Einzelbefunde (M).** thm:frame-offset: Zahl tanh 2η = M–T, Etikett R statt T; thm:symmetric-frame konsistent (T = Boden des Spiegel-Frames); thm:hawking-triolic liest T als R; thm:dual-origin Klassenmischung wie r61.1(a); thm:dark-energy M–R konsistent, Wert 1/√3 = Hopf; thm:einstein unberührt.
 - **K113.4 Lesart (V).** Gravitation selbst frame-unabhängig; die Frames unterscheiden sich in der Zustandszahl pro Fläche, γ ist der Wechselkurs. Statusnotiz-Kandidaten: thm:k-values, thm:planck-photon, thm:hawking-triolic. H15 unberührt. R_grav = (1,1,0); Guards unverändert.
 
+### K114 Statusnotizen nach der Frame-Prüfung der Gravitationssätze (v4.9.0-r65)
+
+- Regel C, Autorentscheid 2026-10-25 („mach das bitte“).
+- thm:k-values: bestehende Notiz erweitert: k(γ_BI) = 0 widerspricht thm:frame-offset; unter der Zähl-Lesart brauchen k(ħ) = 1, k(G) = 2 eine andere Quelle als γ_L.
+- thm:planck-photon: bestehende Notiz erweitert: γ_L^{−3/2} von der Zähl-Lesart nicht gestützt (gleiches ℓ_P in beiden Zählungen).
+- thm:hawking-triolic: neue Notiz: γ_string ist die Zählung des einfallenden Tachyon-Bodens, das Theorem gibt sie dem entweichenden Photon (T als R).
+- Angewendet lokal und auf sources/research mit llm/apply_patches.py.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2628,6 +2636,7 @@ Vorab-Notiz df0c788, Skript `llm/k102_zaehlregeln.py`, Ergebnis `llm/Ergebnis_H4
 - v12.8 (2026-10-24): K110 Statusnotizen nach r61 (Regel C) an thm:bsym-hopf, rem:bsym-hopf-gap, thm:tribonacci (erweitert), rem:op1-tribonacci; Runde v4.9.0-r62; Patch-Spezifikation llm/revision_spec_v490_r61.py.
 - v12.9 (2026-10-25): K111 H47 Zähl-Lesart von β_sym (DL/Meissner im Fenster, Ghosh–Mitra nicht; OP1 umformuliert).
 - v13.0 (2026-10-25): K112 Runde v4.9.0-r63 (H47 als Runde, Robertson-Sättigung, Tachyon-Boden, Lean `Zaehlung.lean`); K113 Runde v4.9.0-r64 (Frame-Prüfung der Gravitationssätze).
+- v13.1 (2026-10-25): K114 Statusnotizen nach r64 (Regel C) an thm:k-values, thm:planck-photon (erweitert), thm:hawking-triolic; Runde v4.9.0-r65; Spezifikation llm/revision_spec_v490_r64.py; PR #41 (r63/r64) gemergt als 67f0539.
 
 ---
 
