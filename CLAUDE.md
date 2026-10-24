@@ -90,7 +90,7 @@ Nicht in diesem Verzeichnis, aber referenziert: `RC14_uncompressed_reference_sou
 
 ## Der Runden-Workflow
 
-Die **Runden** wachsen append-only: eine neue Runde ist ein neuer Abschnitt unmittelbar vor `\end{document}`, bestehende Runden werden nicht umgeschrieben. Aktueller Stand: **r94**, **v4.8.0-r20**, **v4.9.0-r61**. Runden der v4.8.0-Linie heißen `v4.8.0-rNN` (Labels `sec:v480-rNN-...`), danach `v4.9.0-rNN` (`sec:v490-rNN-...`); `qs.py outline` und `ledger` erkennen alle Formen. Inhalt jeder Runde ausführlich in der Kernkarte (`llm/Kernkarte_Quantum_Sphaera_v1.md`, Abschnitt 7).
+Die **Runden** wachsen append-only: eine neue Runde ist ein neuer Abschnitt unmittelbar vor `\end{document}`, bestehende Runden werden nicht umgeschrieben. Aktueller Stand: **r94**, **v4.8.0-r20**, **v4.9.0-r62**. Runden der v4.8.0-Linie heißen `v4.8.0-rNN` (Labels `sec:v480-rNN-...`), danach `v4.9.0-rNN` (`sec:v490-rNN-...`); `qs.py outline` und `ledger` erkennen alle Formen. Inhalt jeder Runde ausführlich in der Kernkarte (`llm/Kernkarte_Quantum_Sphaera_v1.md`, Abschnitt 7).
 
 **Der Hauptkorpus wird seit v4.9.0-r25 überarbeitet** (Autorauftrag 2026-10-22: alte Arbeit nicht verlieren, falsche Aussagen nicht stehen lassen). Regel (`sec:v490-r25-main-body-revision`, Skript `llm/aufraeumen_v490.py`):
 - **(A) Sackgasse** (widerlegt, ausgeschlossen, zurückgezogen): Original wortgleich in den Archiv-Anhang `sec:v490-archive`; an der alten Stelle bleibt dieselbe Umgebung mit **gleicher Nummer und gleichem Label**, kurzer Aussage dessen, was bleibt, und Verweis. Alle `\ref` lösen weiter auf.
@@ -164,6 +164,7 @@ Guard-Linter für neue Runden: `python llm/training/guard_linter.py <tex> --star
 | r59 | ε aus einem Strukturwert (Vorab-Test H44, nur Kandidaten aus H40): kein Treffer; Treffer von r57 nur in zwei Fenstern ε_e ≈ 0.03–0.06 und 0.62–0.64 (r57.1(a) korrigiert) |
 | r60 | ε als Rapidität des Materie-Frames (Test H45, nicht blind): ε = artanh β_sym = 0.617 trifft (A 120, B 1 104 Fälle), Hopf-Wert 0.658 nicht; dabei sin²θ₂₃ ∈ [0.491, 0.498] scharf, δ frei; θ₂₃-Vorhersage noch nicht festgelegt |
 | r61 | Frame-Prüfung OP1–OP5 (Autorhinweis): Tribonacci (γ_L = 1/β ⇔ cosh 2η = e^η) mischt M und T bzw. Weg A und C; Hopf liest reinen R-Zustand (2/3, 1/3) als gemischten M-Zustand (3/4, 1/4); nur γ_BI/γ_string frame-konsistent; OP4 falsch gestellt; OP2 (T4) gleiche Mischung; OP5 Mischung nicht ursächlich; Leptonmischung gibt β_sym ∈ [0.545, 0.570] (nicht blind) |
+| r62 | Statusnotizen nach r61 (Regel C, Spezifikation `llm/revision_spec_v490_r61.py`) an thm:bsym-hopf, rem:bsym-hopf-gap, thm:tribonacci, rem:op1-tribonacci; PR #39 (r61) gemergt als 843155e |
 
 Ältere Runden (r03–r94, v4.8.0-r01–r20): Kernkarte und die genannten Register. Kurzstand v4.8.0: Lesart B (ℂ³, SO(3,ℂ)) als Arbeitslesart, Sektoren nach Vorzeichen von s, vorab festgelegte Tests H2–H13 mit Ergebnissen, Riemann-Arbeit seit r04 keine Beweisquelle.
 

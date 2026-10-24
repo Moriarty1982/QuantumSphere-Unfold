@@ -6815,7 +6815,7 @@ $\bsym=\sqrt{(\gBI-\gstring)/(\gBI+\gstring)}\approx 0.5493$, hence
 $\theta_H=2\arcsin(0.5493)\approx 66.64^\circ$.
 \end{proof}
 
-\begin{remark}[The Hopf gap and OP~1]
+\qsstatus{Status (v4.9.0 revision): \(\bsym=\sin(\theta_H/2)\) is the half-angle relation of a pure state measured from the photon pole, i.e.\ in the reference frame R (v4.9.0-r24).  The matter frame of Convention~F at the same \(\bsym\) is a mixed state: at \(\bsym^2=\tfrac13\) the pure Hopf state has populations \((\tfrac23,\tfrac13)\), the matter state \((\tfrac34,\tfrac14)\) with \(|b|=\tfrac12\) (v4.9.0-r17).  The theorem therefore reads an R-frame state as the matter offset (v4.9.0-r61).}\begin{remark}[The Hopf gap and OP~1]
 \label{rem:bsym-hopf-gap}
 The continuum-limit value $\bsym^{(\rm Hopf)}=1/\sqrt{3}$ arises from
 the maximally symmetric $\mathbb{Z}/3\mathbb{Z}$ orbit on a round $S^3$:
@@ -6837,7 +6837,7 @@ of the cascade, not postulated from the ratio. This requires the
 Dirac operator on $H^+_-$ (OP~2) as a prerequisite.
 \end{remark}
 
-\begin{theorem}[Three fermion generations from $\OO$]
+\qsstatus{Status (v4.9.0 revision): OP~1 stays open, but its target is the matter-frame value itself.  The Hopf value compares an R-frame pure state with the mixed matter state, and the gap to it is not a like-for-like difference (v4.9.0-r61); the prime-lattice reading of the gap is not needed for that.  Under the flavour reading of v4.9.0-r55 to r60 the lepton data give \(\bsym\in[0.545,0.570]\), containing the measured value and excluding the Hopf and Tribonacci values (v4.9.0-r61, not a blind test).}\begin{theorem}[Three fermion generations from $\OO$]
 \label{thm:three-generations}
 In the Dixon algebra $D=\mathbb{C}\otimes\HH\otimes\OO$, the three
 fermion generations are identified as:
@@ -19589,7 +19589,7 @@ layer. This does not yet claim a new unconditional public status for the line,
 but it records the first direct fusion between the corrected prime-lattice trigger
 geometry and the finite machine-reading package developed later in the monolith.
 \end{proof}
-\qsstatus{Status (v4.9.0 revision): equivalent to \(\cosh2\eta=e^\eta\), the point where the three readings of the offset coincide (v4.9.0-r01, r18).}
+\qsstatus{Status (v4.9.0 revision): equivalent to \(\cosh2\eta=e^\eta\), the point where the three readings of the offset coincide (v4.9.0-r01, r18).  The condition \(\gL=1/\bsym\) equates a readout quantity of the matter frame with \(1/\bsym=\beta_T\), the tachyon offset in its own measure (v4.9.0-r24.2), and way~A with way~C (v4.9.0-r19); it is not a frame-consistent fixed point (v4.9.0-r61).}
 
 
 \begin{corollary}[Continuum-limit cosmological parameters]
@@ -19626,7 +19626,7 @@ Theorem~\ref{thm:tribonacci} resolves OP~1 and OP~2~(T4)
 \end{enumerate}
 \end{remark}
 
-\begin{theorem}[First machine-fused coupled OP-entry theorem]
+\qsstatus{Status (v4.9.0 revision): the resolution claimed here is withdrawn (Corollary~\ref{cor:op1-resolved}).  The continuum-limit correction line (OP~4) measures the distance between the matter value and the Tribonacci and Hopf values, which come from other frames or classes; in this form OP~4 is ill-posed, and only OP~1 remains (v4.9.0-r61).}\begin{theorem}[First machine-fused coupled OP-entry theorem]
 \label{thm:first-machine-fused-coupled-op-entry}
 Assume:
 \begin{enumerate}
@@ -75810,6 +75810,65 @@ The layer spends no guard:
 R_{\rm glob}^{(v490\text{-}r61,+)}=(0,1,1,1,1),
 \qquad
 \Gamma_{\rm guard}^{v490\text{-}r61}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r62 Source-Only: Status Notes after the Frame Audit of the Open Problems}
+\addcontentsline{toc}{section}{v4.9.0-r62 Source-Only: Status Notes after the Frame Audit of the Open Problems}
+\label{sec:v490-r62-op-status-notes}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.9.0-r61 named Theorem~\ref{thm:tribonacci}, Theorem~\ref{thm:bsym-hopf} and the OP~4 line as candidates for status notes.  On 2026-10-24 the author decided to add
+them.  Following rule~C of v4.9.0-r25, the text stays and a status note records the state; nothing is archived.  The notes are applied by the patch specification
+\texttt{llm/revision\_spec\_v490\_r61.py} (also for the GitHub fragments).
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r62 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r62 notes added}
+\label{subsec:v490-r62-notes}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+place & note\\
+\midrule
+Theorem~\ref{thm:bsym-hopf} & reads a pure R-frame state as the matter offset (r61.1(b))\\
+Remark~\ref{rem:bsym-hopf-gap} & OP~1 open, target the matter value; the Hopf gap is not like-for-like; window from lepton mixing (r61.1(e), not blind)\\
+Theorem~\ref{thm:tribonacci} & existing note extended: frame and class mixing (r61.1(a))\\
+Remark~\ref{rem:op1-tribonacci} & claimed resolution withdrawn; OP~4 ill-posed in its present form (r61.1(d))\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r62 status in the three frames}
+\label{subsec:v490-r62-frames}
+
+The notes restate v4.9.0-r61; the frame status is that of r61.
+
+\subsection*{v4.9.0-r62 ledger and guard update}
+\label{subsec:v490-r62-ledger-guard}
+
+\[
+R_{\rm sn}^{v490\text{-}r62}=(1,0,0)
+\]
+for (status notes applied; no new statement; OP~1 open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r62,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r62}=(1,1,1,1,1),
 \qquad
 \beta_4=1/256\ \text{unspent}.
 \]

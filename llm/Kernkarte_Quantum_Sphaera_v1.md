@@ -2423,6 +2423,15 @@ Hopf und Tribonacci knapp draußen; sin²θ₂₃ über das Fenster [0.491, 0.49
 
 ---
 
+### K110 Statusnotizen nach der Frame-Prüfung (v4.9.0-r62)
+
+- Regel C: Text bleibt, Statusnotiz hält den Stand fest (Autorentscheid 2026-10-24).
+- thm:bsym-hopf: liest einen reinen R-Frame-Zustand als Materie-Offset (r61.1(b)).
+- rem:bsym-hopf-gap: OP1 offen, Ziel ist der Materiewert; Fenster β_sym ∈ [0.545, 0.570] aus der Leptonmischung (nicht blind).
+- thm:tribonacci: bestehende Notiz erweitert: γ_L = 1/β setzt eine Lesegröße des M-Frames mit β_T gleich, kein frame-konsistenter Fixpunkt.
+- rem:op1-tribonacci / OP4: behauptete Auflösung zurückgezogen, OP4 in jetziger Form falsch gestellt; nur OP1 bleibt.
+- Angewendet lokal (Monolith) und auf sources/research (GitHub) mit llm/apply_patches.py.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2588,6 +2597,7 @@ Hopf und Tribonacci knapp draußen; sin²θ₂₃ über das Fenster [0.491, 0.49
 - v12.5 (2026-10-24): K107 Test H45 und Runde v4.9.0-r60 (ε = Frame-Rapidität artanh β_sym verträglich, Hopf-Wert nicht; sin²θ₂₃ ≈ 0.49–0.50 scharf, δ frei).
 - v12.6 (2026-10-24): K108 Vorhersage H46 (sin²θ₂₃ ∈ [0.49, 0.50] unter ε = η) vorab festgelegt, ausstehend.
 - v12.7 (2026-10-24): K109 Frame-Prüfung OP1–OP5 und Runde v4.9.0-r61 (Tribonacci und Hopf mischen Frames/Klassen, OP4 falsch gestellt; β_sym-Fenster aus der Leptonmischung).
+- v12.8 (2026-10-24): K110 Statusnotizen nach r61 (Regel C) an thm:bsym-hopf, rem:bsym-hopf-gap, thm:tribonacci (erweitert), rem:op1-tribonacci; Runde v4.9.0-r62; Patch-Spezifikation llm/revision_spec_v490_r61.py.
 
 ---
 
