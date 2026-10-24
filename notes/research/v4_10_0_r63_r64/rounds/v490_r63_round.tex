@@ -1,0 +1,133 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r63 Source-Only: The Frame Offset as a Ratio of Two Horizon Countings}
+\addcontentsline{toc}{section}{v4.9.0-r63 Source-Only: The Frame Offset as a Ratio of Two Horizon Countings}
+\label{sec:v490-r63-counting}
+% ============================================================================
+
+\paragraph{Purpose.}
+Asked what \(\bsym\) measures, the author agreed to test a reading already offered in v4.8.0-r03 (F11): \(\gstring=\ln2/(\pi\sqrt3)\) is the value of the
+Barbero--Immirzi parameter from a horizon counting with spin \(j=\tfrac12\) only (Ashtekar, Baez, Corichi, Krasnov), \(\gBI\) the value from the corrected counting with
+all spins (Domagała--Lewandowski, Meissner).  r03 saw a conflict with the Lorentz reading.  This layer records the pre-registered check H47 (note
+\texttt{llm/Vorab\_Notiz\_H47\_Zaehlregel\_beta\_sym.md}, commit \texttt{df0c788}), and, following the author's suggestions that the \(\tfrac12\) comes from the uncertainty
+relation and that tachyons relax to a floor, two exact lemmas.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r63 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r63 results}
+\label{subsec:v490-r63-results}
+
+\paragraph{Theoremlet v4.9.0-r63.1 (H47).}
+With the area spectrum \(a(j)=\sqrt{j(j+1)}\), let \(\gamma\) solve \(\sum_j g(j)\,e^{-2\pi\gamma a(j)}=1\).  Spin \(\tfrac12\) only, \(g=2\), gives \(\gamma_{\min}=\ln2/(\pi\sqrt3)\).
+\begin{center}
+\small
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+full counting & \(\gamma\) & \(\gamma/\gamma_{\min}\) & \(\beta\) & in \([0.545,0.570]\)\\
+\midrule
+\(g=2\) (Domagała--Lewandowski, Meissner) & \(0.2375330\) & \(1.864700\) & \(0.549406\) & yes\\
+\(g=2j+1\) (Ghosh--Mitra) & \(0.2740669\) & \(2.151501\) & \(0.604468\) & no\\
+\bottomrule
+\end{tabular}
+\end{center}
+The main body uses the rounded input \(0.2375\) (\(\gL=1.86444\), \(\bsym=0.549348\)).  The window is the one of v4.9.0-r61.1(e).
+
+\paragraph{Theoremlet v4.9.0-r63.2 (uncertainty saturation).}
+In \(|j,m\rangle\) (\(\hbar=1\)) one has \(\Delta J_x\,\Delta J_y=\tfrac12\bigl(j(j+1)-m^2\bigr)\) and the Robertson bound \(\Delta J_x\,\Delta J_y\ge\tfrac12|m|\).  Equality holds
+exactly for \(m=\pm j\), two states at every \(j\); at \(j=\tfrac12\) every state saturates and \(\Delta J_x=\tfrac12\).
+
+\paragraph{Theoremlet v4.9.0-r63.3 (tachyon floor).}
+A tachyon of invariant \(\mu\) has \(E=\mu/\sqrt{v^2-1}\), strictly decreasing for \(v>1\) with \(E\to0\) as \(v\to\infty\); the momentum tends to \(\mu\), the invariant does not
+change.  The floor \(E=0\), \(p=\mu\) seen from a frame of velocity \(u\) has \(E'=-\gamma u\mu<0\), \(p'=\gamma\mu\), velocity \(-1/u\), and \(E'^2-p'^2=-\mu^2\).  In rapidities the
+floor of a frame at \(\eta_X\) is \(\eta_X+i\pi/2\), with velocity \(\coth(\eta_X-\eta_Y)\) in a frame at \(\eta_Y\).
+
+\paragraph{Theoremlet v4.9.0-r63.4 (where the floor sits).}
+With M at \(+\eta\) and R at \(0\):
+\begin{center}
+\small
+\begin{tabular}{@{}lccc@{}}
+\toprule
+floor of & velocity in R & velocity in M & \(\cosh\) of the real distance to M\\
+\midrule
+R & \(\infty\) & \(-1/\bsym\) & \(\cosh\eta=1.197\)\\
+M & \(1/\bsym\) & \(\infty\) & \(1\)\\
+mirror frame \(-\eta\) & \(-1/\bsym\) & \(-\coth2\eta\) & \(\cosh2\eta=\gL\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+The tachyon of Convention~F, rapidity \(-\eta+i\pi/2\) (v4.9.0-r24.2), is the floor of the mirror frame.
+
+\paragraph{Proof sketch.}
+r63.1 by \texttt{llm/k102\_zaehlregeln.py} (output \texttt{llm/k102\_out.txt}).  r63.2: \(\langle J_x\rangle=\langle J_y\rangle=0\), \(\langle J_x^2\rangle=\langle J_y^2\rangle\), and
+\(j(j+1)-m^2-|m|=(j-|m|)(j+|m|+1)\).  r63.3 by the boost formulas and \(\tanh(x+i\pi/2)=\coth x\).  r63.4 by r63.3.  The arithmetic of r63.2 and the boost statements of r63.3
+are in \texttt{formal/QSFormal/Zaehlung.lean}; the operator values for \(j\le6\), the energy monotonicity and the table of r63.4 are in \texttt{llm/k103\_robertson\_tachyon.py}
+(output \texttt{llm/k103\_out.txt}).  \(\square\)
+
+\paragraph{Reading.}
+\begin{enumerate}[leftmargin=2em]
+\item Under this reading \(\bsym\) is not a measured quantity but an \(SU(2)\) number fixed by two counting rules.  The counting reading and the Lorentz reading of r03 agree
+when the tachyon frame counts minimally and the matter frame fully: \(\gL=\cosh2\eta\) is the boost between these two opposite frames.
+\item One principle gives both rules: a frame counts only states that saturate the uncertainty bound.  The tachyon frame takes the absolute minimum (\(j=\tfrac12\),
+\(\Delta J_x=\tfrac12\)), the matter frame the minimum at each spin (\(m=\pm j\), weight \(2\)).  The Ghosh--Mitra counting also counts non-saturating states.
+\item r63.3 gives a dynamical reason for the minimal counting: a tachyon that loses energy accelerates towards a single floor.
+\item Only the floor of the mirror frame reproduces \(\gL\) as the real M--T distance.  A floor pinned to the matter frame gives distance \(0\), a floor in R gives
+\(\cosh\eta\).  Why the floor sits in the mirror frame is open; the symmetric placement of Theorem~\ref{thm:symmetric-frame} is assumed, not derived.
+\item r63.1 is not blind: the window was known, and the Ghosh--Mitra value had been estimated before the note.  OP1 now reads: derive from the frames why T counts only
+\(j=\tfrac12\) and M all spins with weight \(2\).
+\end{enumerate}
+
+\subsection*{v4.9.0-r63 status in the three frames}
+\label{subsec:v490-r63-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r63.1 & M counts all spins (weight \(2\)), T counts \(j=\tfrac12\); P carries no counting\\
+r63.2 & frame-free (representation theory)\\
+r63.3, r63.4 & kinematics; the T of Convention~F is the floor of the mirror frame\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r63 register entries}
+\label{subsec:v490-r63-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r63\\
+\midrule
+H47 (counting reading of \(\bsym\)) & DL/Meissner inside the lepton window, Ghosh--Mitra outside; not blind\\
+uncertainty saturation & exact; weight \(2\) = states \(m=\pm j\)\\
+tachyon floor & exact kinematics; floor of the mirror frame reproduces \(\gL\)\\
+OP1 & open; reformulated as a question about two counting rules\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r63 ledger and guard update}
+\label{subsec:v490-r63-ledger-guard}
+
+\[
+R_{\rm cnt}^{v490\text{-}r63}=(1,1,0)
+\]
+for (counting reading consistent with the lepton window; both rules from uncertainty saturation; the assignment of the rules to the frames not derived).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r63,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r63}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
