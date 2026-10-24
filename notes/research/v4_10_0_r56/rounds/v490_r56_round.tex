@@ -1,0 +1,103 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r56 Source-Only: Calibrating the Readout Layer}
+\addcontentsline{toc}{section}{v4.9.0-r56 Source-Only: Calibrating the Readout Layer}
+\label{sec:v490-r56-readout-calibration}
+% ============================================================================
+
+\paragraph{Purpose.}
+The author proposed to read the structure as a core with a readout layer on top, to tune that layer until it reproduces measured values, and to learn from
+the settings where they come from.  This layer records the pre-registered test H40 (note \texttt{llm/Vorab\_Notiz\_H40\_Kalibrierung\_Ausleseschicht.md},
+commit \texttt{fdb27ae}, fixed before computing).  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r56 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r56 the readout layer}
+\label{subsec:v490-r56-layer}
+
+For each sector \(X\in\{u,d,e,\nu\}\) a circulant coupling \(C_X=a_X+b_XP+\bar b_XP^2\) (Brannen form), a mask strength \(\varepsilon_X\) and form S of
+v4.9.0-r52, \(M_X=DC_XD^{-1}\) with \(D=\exp(\varepsilon_XW_X)\).  This gives \(16\) settings (and \(m_1\)) for \(17\) measured quantities.  The admissible
+settings are those of v4.9.0-r54 (CKM within \(\pm20\%\), PMNS within \(3\sigma\)).  Sixteen quantities (the four \(\varepsilon\), four ratios, and
+\(|b|/|a|\), \(\theta\) per sector) were compared with fourteen candidate values from the corpus (\(1/3\), \(1/2\), \(2/3\), \(3/4\), \(1\), \(1/\sqrt3\), \(1/\sqrt2\),
+\(\sqrt3\), \(2/9\), \(\pi/6\), \(\pi/9\), \(\beta_{\rm sym}^2\), \(\beta_{\rm sym}\), \(\gamma_L\)), with a control of \(10\,000\) random sets.
+
+\subsection*{v4.9.0-r56 results}
+\label{subsec:v490-r56-results}
+
+\paragraph{Theoremlet v4.9.0-r56.1 (numerical).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Calibrated ranges: \(\varepsilon_u\in[1.36,1.63]\), \(\varepsilon_d\in[1.42,1.47]\), \(\varepsilon_e\in[0.44,0.82]\), \(\varepsilon_\nu\in[0.27,0.55]\);
+\(|b|/|a|\) in \([0.953,1.032]\) (\(u\)), \([0.994,1.076]\) (\(d\)), \([1.22,6.41]\) (\(e\)), \([0.45,1.57]\) (\(\nu\)); the phases \(\theta\) fill almost all of
+\([0,\pi/3]\).
+\item[(b)] The candidates fall into these ranges \(76\) times; random sets do so \(65.3\) times on average, and \(1.9\%\) of them at least \(76\) times.
+\item[(c)] \(|b|/|a|\approx1\) for \(u\) and \(d\) follows from the hierarchy: for eigenvalues near \((0,0,1)\) the circulant is near \(\tfrac13(1+P+P^2)\).
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+Script \texttt{llm/k96\_test\_h40.py}, output \texttt{llm/k96\_out.txt}; (c) by direct computation.  \(\square\)
+
+\paragraph{Verdict and reading.}
+H40a is refuted (\(p=0.019\), the pre-registered threshold is \(0.01\)); H40b (a ratio of \(\varepsilon\) containing \(1\)) holds but counts only with H40a.
+\begin{enumerate}[leftmargin=2em]
+\item As far as the data fix them, the settings show no structure beyond chance.  With \(16\) settings for \(17\) quantities the data hardly fix the
+settings, so no structure can show in them.  The narrow quark value \(|b|/|a|\approx1\) is a property of hierarchical spectra, not of the structure.
+\item For the calibration to teach something, the layer needs fewer settings (a rule fixing the Brannen quantities, or readouts by subgroups as in
+v4.9.0-r55) or sharper data (CP phases, more precise masses).
+\item Readings after the computation, not part of the criterion: with \(m_0\leftrightarrow a\), \(\beta\leftrightarrow|b|\), \(\gamma\leftrightarrow\varepsilon\) in
+\(\Omega\) of Theorem~\ref{thm:master-field-equation}, the quarks give \(\beta/m_0\approx1\) and \(\gamma\approx1.4\)--\(1.6\), the leptons \(\gamma\approx0.3\)--\(0.8\).
+Read as a deformation of the complex structure with dilatation \(K=\exp(\varepsilon\,\operatorname{span}W)\), the Beltrami modulus is
+\(|\mu|\approx0.88\)--\(0.93\) (\(u\)), \(0.89\)--\(0.90\) (\(d\)), \(0.58\)--\(0.84\) (\(e\)), \(0.38\)--\(0.68\) (\(\nu\)).
+\end{enumerate}
+
+\subsection*{v4.9.0-r56 status in the three frames}
+\label{subsec:v490-r56-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r56.1(a)--(c) & settings of mass matrices in M, the same in T as in v4.9.0-r52; P not evaluated\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r56 register entries}
+\label{subsec:v490-r56-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r56\\
+\midrule
+calibrated readout layer (form S, four \(\varepsilon\)) & settings recorded; no structure beyond chance (H40, \(p=0.019\))\\
+\(|b|/|a|\approx1\) for quarks & consequence of the hierarchy, not of the structure\\
+path ``tune the layer, then explain the settings'' & needs fewer settings or sharper data\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r56 ledger and guard update}
+\label{subsec:v490-r56-ledger-guard}
+
+\[
+R_{\rm cal}^{v490\text{-}r56}=(0,1,0)
+\]
+for (no structure in the settings; calibration recorded; compression missing).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r56,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r56}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
