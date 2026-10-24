@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v12.4
+# Kernkarte Quantum Sphaera — v12.5
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -2391,6 +2391,17 @@ widerlegt. Nachkontrolle: Zweige existieren bei allen Kandidaten bis ε = 1; Tre
 nannte nur Minimum und Maximum, dazwischen keine Treffer. Reihe r55–r59: Lesart ordnet CKM/PMNS richtig, JUNO-Spannung lösbar, θ₂₃ nach oben begrenzt (H42),
 δ frei, ε ohne Strukturwert. Kein Guard verbraucht.
 
+### K107 — Test H45 und Companion-Runde v4.9.0-r60: ε als Rapidität des Materie-Frames (2026-10-24)
+
+Vorab-Notiz `llm/Vorab_Notiz_H45_eps_als_Frame_Rapiditaet.md` (Commit bfde03d; **nicht blind**, Fenster aus r59 bekannt), Skript `llm/k100_test_h45.py`, Ausgabe
+`llm/k100_out.txt`, Ergebnis `llm/Ergebnis_H45_eps_als_Frame_Rapiditaet.md`, Runde `sec:v490-r60-eps-rapidity`. Idee: D = exp(εW) ist hyperbolisch (boost-artig), ihr
+Parameter eine Rapidität; die einzige der Theorie ist η mit β_sym = tanh η, γ_L = cosh 2η ⇒ ε = η.
+
+**K107.1 (M).** ε = artanh(0.5493) = 0.6174: A 120, B 1 104 Treffer; sin²θ₂₃ ∈ [0.4913, 0.4975] (beide), |sin δ| ∈ [0.17, 1.00]. Hopf-Wert artanh(1/√3) = 0.6585: 0 Treffer.
+H45a bestätigt (nur Verträglichkeit), H45b (θ₂₃ und δ scharf) widerlegt, weil δ frei.
+**K107.2 (S).** Erstmals ε aus der Struktur und verträglich: gemessenes β_sym passt, Hopf-Wert nicht. Neu: bei ε = η ist sin²θ₂₃ ≈ 0.49–0.50 (knapp unterer Oktant), schärfer
+als H42; nach dem Kriterium noch keine Vorhersage, eine eigene Notiz nur für θ₂₃ wäre nötig. Grenzen: nicht blind, β_sym eingesetzt (OP1), ε = η Lesart. Kein Guard verbraucht.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -2555,6 +2566,7 @@ nannte nur Minimum und Maximum, dazwischen keine Treffer. Reihe r55–r59: Lesar
 - v12.2 (2026-10-24): K104 Vorhersage H42 (sin²θ₂₃ ≤ 0.54) vorab festgelegt, ausstehend.
 - v12.3 (2026-10-24): K105 Vorab-Test H43 und Runde v4.9.0-r58 (CP-Phase δ durch die korrigierte TM2-Lesart nicht festgelegt; keine H44).
 - v12.4 (2026-10-24): K106 Vorab-Test H44 und Runde v4.9.0-r59 (kein Strukturwert für ε; Trefferfenster ε ≈ 0.05 und ≈ 0.63; K103.1 korrigiert).
+- v12.5 (2026-10-24): K107 Test H45 und Runde v4.9.0-r60 (ε = Frame-Rapidität artanh β_sym verträglich, Hopf-Wert nicht; sin²θ₂₃ ≈ 0.49–0.50 scharf, δ frei).
 
 ---
 

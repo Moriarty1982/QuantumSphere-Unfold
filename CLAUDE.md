@@ -90,7 +90,7 @@ Nicht in diesem Verzeichnis, aber referenziert: `RC14_uncompressed_reference_sou
 
 ## Der Runden-Workflow
 
-Die **Runden** wachsen append-only: eine neue Runde ist ein neuer Abschnitt unmittelbar vor `\end{document}`, bestehende Runden werden nicht umgeschrieben. Aktueller Stand: **r94**, **v4.8.0-r20**, **v4.9.0-r59**. Runden der v4.8.0-Linie heißen `v4.8.0-rNN` (Labels `sec:v480-rNN-...`), danach `v4.9.0-rNN` (`sec:v490-rNN-...`); `qs.py outline` und `ledger` erkennen alle Formen. Inhalt jeder Runde ausführlich in der Kernkarte (`llm/Kernkarte_Quantum_Sphaera_v1.md`, Abschnitt 7).
+Die **Runden** wachsen append-only: eine neue Runde ist ein neuer Abschnitt unmittelbar vor `\end{document}`, bestehende Runden werden nicht umgeschrieben. Aktueller Stand: **r94**, **v4.8.0-r20**, **v4.9.0-r60**. Runden der v4.8.0-Linie heißen `v4.8.0-rNN` (Labels `sec:v480-rNN-...`), danach `v4.9.0-rNN` (`sec:v490-rNN-...`); `qs.py outline` und `ledger` erkennen alle Formen. Inhalt jeder Runde ausführlich in der Kernkarte (`llm/Kernkarte_Quantum_Sphaera_v1.md`, Abschnitt 7).
 
 **Der Hauptkorpus wird seit v4.9.0-r25 überarbeitet** (Autorauftrag 2026-10-22: alte Arbeit nicht verlieren, falsche Aussagen nicht stehen lassen). Regel (`sec:v490-r25-main-body-revision`, Skript `llm/aufraeumen_v490.py`):
 - **(A) Sackgasse** (widerlegt, ausgeschlossen, zurückgezogen): Original wortgleich in den Archiv-Anhang `sec:v490-archive`; an der alten Stelle bleibt dieselbe Umgebung mit **gleicher Nummer und gleichem Label**, kurzer Aussage dessen, was bleibt, und Verweis. Alle `\ref` lösen weiter auf.
@@ -162,6 +162,7 @@ Guard-Linter für neue Runden: `python llm/training/guard_linter.py <tex> --star
 | r57 | TM2 mit Maskenkorrektur (Vorab-Test H41): geladene Leptonen Form S (ε_e), Neutrinos Majorana ℤ₂ mit Winkel φ, Form K; A (ε_ν = 0) und B (gemeinsames ε) treffen θ₁₂ (JUNO 2σ), θ₁₃, θ₂₃; θ₂₃ nicht festgelegt (0.31–0.54); nachträglich sin²θ₂₃ ≲ 0.54 |
 | r58 | CP-Phase der korrigierten TM2-Lesart (Vorab-Test H43): δ nicht festgelegt (|sin δ| 0.17–1, cos δ −0.98–0.99); keine Vorhersage H44 |
 | r59 | ε aus einem Strukturwert (Vorab-Test H44, nur Kandidaten aus H40): kein Treffer; Treffer von r57 nur in zwei Fenstern ε_e ≈ 0.03–0.06 und 0.62–0.64 (r57.1(a) korrigiert) |
+| r60 | ε als Rapidität des Materie-Frames (Test H45, nicht blind): ε = artanh β_sym = 0.617 trifft (A 120, B 1 104 Fälle), Hopf-Wert 0.658 nicht; dabei sin²θ₂₃ ∈ [0.491, 0.498] scharf, δ frei; θ₂₃-Vorhersage noch nicht festgelegt |
 
 Ältere Runden (r03–r94, v4.8.0-r01–r20): Kernkarte und die genannten Register. Kurzstand v4.8.0: Lesart B (ℂ³, SO(3,ℂ)) als Arbeitslesart, Sektoren nach Vorzeichen von s, vorab festgelegte Tests H2–H13 mit Ergebnissen, Riemann-Arbeit seit r04 keine Beweisquelle.
 
