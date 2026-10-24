@@ -1,4 +1,4 @@
-# Layers v4.9.0-r48 to r54 on the 4.10 base (source-only)
+# Layers v4.9.0-r48 to r55 on the 4.10 base (source-only)
 
 Continuation of [`../v4_10_0_r34_r47/`](../v4_10_0_r34_r47/README.md). The layers are appended verbatim to
 [`sources/research/parts/v490-post-release-layers.tex`](../../../sources/research/parts/v490-post-release-layers.tex). This is **not** a release.
@@ -7,8 +7,8 @@ Continuation of [`../v4_10_0_r34_r47/`](../v4_10_0_r34_r47/README.md). The layer
   `4.10.0-draft`, no 4.10 DOI reserved.
 - Guard and residual vectors unchanged: `R_glob = (0,1,1,1,1)`, `Gamma_guard = (1,1,1,1,1)`, `beta_4 = 1/256` unspent.
 - r48 makes no new prediction and therefore has no pre-registration note. It formalises results of r34, r35, r42, r43 and r47.
-- r49 to r54 record the tests H33 to H38, whose notes (`llm/Vorab_Notiz_H33` … `H38`) were committed before the computation (local commits
-  `ec06de3`, `8d8b761`, `42e4fcc`, `66c12ab`, `e1ee9ec`, `d3555bf`, reachable from this branch). The outcomes of H33 and H35 were seen analytically before the notes, as disclosed there.
+- r49 to r55 record the tests H33 to H39, whose notes (`llm/Vorab_Notiz_H33` … `H39`) were committed before the computation (local commits
+  `ec06de3`, `8d8b761`, `42e4fcc`, `66c12ab`, `e1ee9ec`, `d3555bf`, `5c916b8`, reachable from this branch). The outcomes of H33 and H35 were seen analytically before the notes, as disclosed there.
 - r51 corrects the frame rows of r41, r43, r47–r49: where they call "the frame T" the charge conjugation, the time reversal T (port exchange) is meant, not the tachyon frame.
 - The scripts import `omul` from `k69_test_h17.py` in [`../v4_10_0_r32_r33/llm/`](../v4_10_0_r32_r33/llm/); copy it next to them to run.
 
@@ -23,19 +23,20 @@ Continuation of [`../v4_10_0_r34_r47/`](../v4_10_0_r34_r47/README.md). The layer
 | r52 | H36: exact coupling forms D C D and D C D⁻¹, D = exp(εW) | refuted with one ε and circulant couplings; closest quark case 36 % off, but the ordering \|V_us\| ≫ \|V_cb\| ≫ \|V_ub\| comes out; the leptons alone do not fit either |
 | r53 | H37: couplings from the triality form | a coupling from the triality form alone is traceless and requires m3 = m1 + m2: violated by u, d, e, and for Dirac neutrinos it needs Σm ≈ 0.115 eV, above the DESI DR2 bound (a prohibition from the structure); norm plus triality gives no quark mixing and lepton mixing only for excluded neutrino masses; the H/H̃ reading of forms K and S is refuted |
 | r54 | H38: one ε per sector | form S (D C D⁻¹) fits CKM (ε_u ≈ 1.36–1.63, ε_d ≈ 1.42–1.47) and PMNS (ε_e ≈ 0.44–0.82, ε_ν ≈ 0.27–0.55, cosmologically allowed m1); form K misses the quarks narrowly (20.2 %). The remaining quantity is not sharp (\|V_ub\| typically five times too large), so this is a fit, not an explanation. Corrects the parameter count of r52 |
+| r55 | H39: a readout per particle kind from the subgroups of A4 | Dirac sectors (u, d, e) read with ⟨τ⟩ ≅ ℤ3, neutrinos (Majorana) with ℤ2: CKM is the identity at leading order and PMNS is trimaximal (TM2), sin²θ12 = 1/(3 cos²θ13) ≈ 0.341, θ23 free; the Klein group and the other ℤ3 fail. First rule that orders quark mixing small and lepton mixing large; θ12 lies 3.6σ above JUNO 2025 |
 
 ## Contents
 
 | Path | Content |
 |---|---|
-| `rounds/v490_r48_round.tex` … `v490_r54_round.tex` | each layer as a separate append-only block |
-| `llm/Vorab_Notiz_H33` … `H38`, `llm/Ergebnis_H33` … `H38` | pre-registration notes and results (German) |
-| `llm/k89_test_h33.py` … `llm/k94_test_h38.py`, `*_out.txt` | check scripts and outputs; `k90_out_erstlauf.txt` is the first run of k90, which stopped in a diagnostic print after H34a; `k92_out_erstlauf.txt`, `k93_out_erstlauf.txt` and `k94_out_erstlauf.txt` lack parts of the after-evaluation checks |
+| `rounds/v490_r48_round.tex` … `v490_r55_round.tex` | each layer as a separate append-only block |
+| `llm/Vorab_Notiz_H33` … `H39`, `llm/Ergebnis_H33` … `H39` | pre-registration notes and results (German) |
+| `llm/k89_test_h33.py` … `llm/k95_test_h39.py`, `*_out.txt` | check scripts and outputs; `k90_out_erstlauf.txt` is the first run of k90, which stopped in a diagnostic print after H34a; `k92_out_erstlauf.txt`, `k93_out_erstlauf.txt`, `k94_out_erstlauf.txt` and `k95_out_erstlauf.txt` lack parts of the after-evaluation checks |
 | `../../../formal/QSFormal/Sektoren.lean` | Lean 4 (core only, no Mathlib, standard axioms): the statements above. The tables `sectors`, `colourDim`, `q6` and `weights` of `Ladungen.lean` become properties of `O.mul`. Not formalised: rank = trace of a projector; extension of the σ statement from the basis to all x by linearity. For r49: `b_minus_l`, `qem_not_sector_function`; for r51: `R_iL`, `R_iR`, `R_P4` |
 
-Source of the carried blocks: `Quantum_Sphaera_Companion_v4_8_0_source.tex` after layer v4.9.0-r54, SHA256 prefix `c7c556c220fac578`.
-Block SHA256 prefixes: r48 `277ba621`, r49 `07537e94`, r50 `4ca26ad4`, r51 `885df35b`, r52 `12f6b2f0`, r53 `640eba2e`, r54 `359f9c57`. Local build of the monolith (three pdfLaTeX passes): 1231 → 1246
+Source of the carried blocks: `Quantum_Sphaera_Companion_v4_8_0_source.tex` after layer v4.9.0-r55, SHA256 prefix `8e1807658d36a8b1`.
+Block SHA256 prefixes: r48 `277ba621`, r49 `07537e94`, r50 `4ca26ad4`, r51 `885df35b`, r52 `12f6b2f0`, r53 `640eba2e`, r54 `359f9c57`, r55 `a0518a53`. Local build of the monolith (three pdfLaTeX passes): 1231 → 1248
 pages, 0 undefined references or citations, 0 duplicate labels, no rerun warning, overfull boxes unchanged (45). Build of the candidate with
-`.github/scripts/qsc_latex_build.py --source-dir sources/research` under TeX Live: 1259 → 1273 pages, 3883 → 3924 labels, same hard values,
+`.github/scripts/qsc_latex_build.py --source-dir sources/research` under TeX Live: 1259 → 1275 pages, 3883 → 3930 labels, same hard values,
 overfull unchanged (45). Guard linter over the new layers: 0 hits. `Sektoren.lean` was checked with Lean 4.35.0 without Mathlib (standard
 axioms only, no `sorry`); the full `lake build` with Mathlib runs in the Lean workflow.
