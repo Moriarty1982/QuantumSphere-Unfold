@@ -1,4 +1,4 @@
-# Kernkarte Quantum Sphaera — v11.4
+# Kernkarte Quantum Sphaera — v11.5
 
 Grundlage: Quantum Sphaera Companion v4.8.0 (DOI 10.5281/zenodo.23365244), Quelltext
 `Quantum_Sphaera_Companion_v4_8_0_source.tex`. Zeilenangaben beziehen sich auf diese Datei.
@@ -2250,6 +2250,33 @@ auf dem Bild iL = ℓ, iR = r. Spuren: Sp L = Sp R = 0, Sp(LR) = 4, Sp P_s = 1, 
 Vorzeichenkonvention der Numerik (k75, k84) stimmt mit der formalen überein. Nicht formalisiert: Rang = Spur eines Projektors, Fortsetzung von σ
 von der Basis auf alle x (Linearität), die physikalischen Lesarten und alle Zahlen. Kein Guard verbraucht.
 
+### K95 — Vorab festgelegter Test H33 und Companion-Runde v4.9.0-r49: Die Achse e₇ trägt B − L, nicht die elektrische Ladung (2026-10-24)
+
+Vorab-Notiz `llm/Vorab_Notiz_H33_Photon_Achse_e7.md` (Commit ec06de3; Ergebnis vorab analytisch gesehen, offengelegt), Skript `llm/k89_test_h33.py`,
+Ausgabe `llm/k89_out.txt`, Ergebnis `llm/Ergebnis_H33_Photon_Achse_e7.md`, Runde `sec:v490-r49-e7-axis-b-minus-l`, Lean `b_minus_l`,
+`qem_not_sector_function` in `formal/QSFormal/Sektoren.lean`. Geprüft: Deutung „Ladung = Kopplung an e₇, e₇ = Photon-Achse“ (Besprechung nach r48).
+
+**K95.1 (M).** span_ℂ(1, e₇) = Sektoren Q = 0 ⊕ Q = 1, dort L_{e₇} = R_{e₇} (H33a). Auf einer Generation 2(Q − ½) = B − L, Y/2 = (B − L)/2 + T₃^R,
+Q_em = T₃^L + T₃^R + (B − L)/2 (H33b). Kein a + b iL + c iR + d iL iR ist Q_em, beste Abweichung ½ (H33c). Alle bestätigt.
+**K95.2 (S).** Deutung in der gestellten Form widerlegt: e₇ ist die Achse von B − L (und mit iL der Chiralität); das Photon ist die Mischung
+der e₇-Achse mit T₃ aus ℍ. Ladungsformel links-rechts-symmetrisch (Pati-Salam-Form). Textbefund: span(1, e₇) ist im Companion Photon-Kern K₃
+(Kompensator-Bild), Träger von ν_R und Ebene von ω: Doppelbelegung wie r36, Kandidat für einen Statusvermerk. Offen: e₇ als Bezugsachse
+der Frames. Kein Guard verbraucht.
+
+### K96 — Vorab festgelegter Test H34 und Companion-Runde v4.9.0-r50: Die Maske aus r47 erklärt die Mischung nicht (2026-10-24)
+
+Vorab-Notiz `llm/Vorab_Notiz_H34_Mischung_aus_Maske.md` (Commit 8d8b761), Skript `llm/k90_test_h34.py`, Ausgabe `llm/k90_out.txt` (Erstlauf
+`k90_out_erstlauf.txt`: Abbruch in einer Diagnose-Ausgabe nach H34a; korrigiert nur diese und m₁ = 0), Ergebnis `llm/Ergebnis_H34_Mischung_aus_Maske.md`,
+Runde `sec:v490-r50-mixing-test`. Daten: Massen bei M_Z (Huang, Zhou 2021), NuFIT 6.0 (NO), PDG 2024.
+
+**K96.1 (M).** Lösungen mit den gemessenen Massen nur bis ε ≈ 0.06 (up), 0.125 (down), 0.13 (e), 0.025–0.23 (ν). H34a widerlegt: 0 von 7488
+(ε, Zweigpaar) treffen |V_us|, |V_cb|, |V_ub| zugleich auf ±20 %, nächster Fall 96 % daneben. H34b widerlegt (kein ε aus H34a), H34c zählt nicht.
+Nachkontrolle: Leptonen allein mit eigenem ε erreichen die 3σ-Bereiche nie (nächster Fall bis 71 % daneben).
+**K96.2 (S).** Modellannahme von r47 (Maske als schwache Störung zirkulanter Kopplungen) für die Mischung widerlegt. Grund: ε² W C W erzeugt
+Massen ≈ (2/3) ε² m_t bzw. 2 ε² m_τ, die Hierarchie erzwingt kleine ε, dort ist die Maske zu demokratisch. **Umgestuft:** K93.3 (Richtung große
+PMNS-, kleine CKM-Winkel) als quantitative Aussage zurückgezogen; K93.1 (Form, Frame, Fourier, √3) unberührt. Herkunft der Mischung offen.
+Kein Guard verbraucht.
+
 ---
 
 ## 8. Änderungsprotokoll
@@ -2404,6 +2431,7 @@ von der Basis auf alle x (Linearität), die physikalischen Lesarten und alle Zah
 - v11.2 (2026-10-23): K93 Vorab-Test H32 und Runde v4.9.0-r47: Maske fester Form aus der Abweichung der triality-kovarianten Chiralität; H32c (Linearität) widerlegt.
 - v11.3 (2026-10-23): Lean-Modul `formal/QSFormal/Ladungen.lean` (nur Lean-Kern): σ einziger Automorphismus unter 48 Fortsetzungen (r36), c L_{e₇} c = −R_{e₇} für alle x (r45), 6Q, Inhalt einer Generation, Anomalie-Spuren und Tr Y = 0 ⇔ s = −½ (r42, r43), Masken-Gewichte und Eisenstein-Normen (r47), 2^j mod 3 (r39); geprüft mit Lean 4.35.0, nur Standard-Axiome.
 - v11.4 (2026-10-24): K94 Companion-Runde v4.9.0-r48 und Lean-Modul `formal/QSFormal/Sektoren.lean`: Ladungs-Sektoren, Farbdimensionen 1, 3, 3, 1, Ladungen und Masken-Gewichte aus O.mul hergeleitet; T als Ladungskonjugation; σ bleibt im Sektor.
+- v11.5 (2026-10-24): K95 Vorab-Test H33 und Runde v4.9.0-r49 (e₇ trägt B − L, Photon braucht ℍ; Q_em = T₃^L + T₃^R + (B − L)/2), K96 Vorab-Test H34 und Runde v4.9.0-r50 (Maske aus r47 erklärt CKM und PMNS nicht; ε durch die Hierarchie begrenzt); K93.3 umgestuft.
 
 ---
 
