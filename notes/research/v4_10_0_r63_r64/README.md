@@ -55,3 +55,14 @@ Planck 2018. Reading (not adopted): Λ itself is frame-independent like G; only 
 Candidates for status notes: rem:einstein-blunder and the field equation in rem:omega-bsym. Layer: `rounds/v490_r67_round.tex`.
 Local monolith: 1269 → 1271 pages, SHA256 prefix `dd57342cbfa5c861`, hard values 0, overfull 45, guard linter 0 hits.
 Candidate build: 1298 → 1300 pages, 3986 → 3991 labels, same hard values.
+
+## Layer v4.9.0-r68: independent recheck of H47 and r63–r67
+
+At the author's request all numbers were recomputed with newly written code (`llm/k104_nachrechnung.py`, `llm/k105_h46_exakt.py`) and the literature values
+were looked up (protocol in German: `llm/Nachrechnung_r63_r67.md`). Confirmed: the three counting solutions (also against Meissner gr-qc/0407052 and
+Ghosh–Mitra gr-qc/0411035), the ±m reading of Meissner's weight 2, the saturation statement up to j = 10, the boost statements, the counting form and side
+swap of r67, the data values, and H46 with the unrounded β (sin²θ₂₃ ∈ [0.4908, 0.4975]; the registered [0.49, 0.50] holds). Corrected: γ_M + γ_T = |γ₃| holds
+by definition (r68.2); the SU(2)-invariant horizon treatment, regarded as better founded, gives γ ≈ 0.274 and β = 0.604, so the lepton window selects the
+U(1) counting, not the counting the later literature prefers (r68.3). Layer: `rounds/v490_r68_round.tex`.
+Local monolith: 1271 → 1273 pages, SHA256 prefix `1aab88378885c01e`, hard values 0, overfull 45, guard linter 0 hits.
+Candidate build: 1300 → 1302 pages, 3991 → 3996 labels, same hard values.
