@@ -1,0 +1,112 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r67 Source-Only: Einstein's ``Greatest Blunder'' under the Counting Reading}
+\addcontentsline{toc}{section}{v4.9.0-r67 Source-Only: Einstein's ``Greatest Blunder'' under the Counting Reading}
+\label{sec:v490-r67-einstein-blunder}
+% ============================================================================
+
+\paragraph{Purpose.}
+The author asked to look again at Remark~\ref{rem:einstein-blunder} and its reinterpretation of the cosmological constant.  This layer reads it together with
+Theorem~\ref{thm:dark-energy} and Remark~\ref{rem:omega-bsym} under the counting reading of v4.9.0-r63 and the audit of v4.9.0-r64.  It makes no prediction; the
+data comparison is after the fact.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r67 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r67 results}
+\label{subsec:v490-r67-results}
+
+\paragraph{Theoremlet v4.9.0-r67.1 (which side \texorpdfstring{$\bsym^2$}{beta squared} is on).}
+Theorem~\ref{thm:dark-energy} puts \(\bsym^2\) on matter: \(\Omega_M=\bsym^2\approx0.30\), \(\Omega_\Lambda=1-\bsym^2\approx0.70\).  The field equation
+\(G_{\mu\nu}+\bsym^2g_{\mu\nu}=8\pi G\,T_{\mu\nu}\) of Remark~\ref{rem:omega-bsym} and the statement \(\Lambda_{\mathrm{obs}}=\bsym^2\) of
+Remark~\ref{rem:einstein-blunder} put the same \(\bsym^2\) on \(\Lambda\).  Both cannot hold: the remarks give \(\Lambda\) the matter share.  This is separate
+from the dimensional problem of v4.8.0-r03 (F3, F4), which concerns the same expressions.
+
+\paragraph{Theoremlet v4.9.0-r67.2 (counting form of the fractions).}
+With the two countings of r63.1, \(\gamma_T=\ln2/(\pi\sqrt3)\) (spin \(\tfrac12\) only) and \(\gamma_M=0.2375330\) (all spins, weight \(2\)), and
+\(\gL=\gamma_M/\gamma_T\),
+\[
+\Omega_M=\bsym^2=\frac{\gamma_M-\gamma_T}{\gamma_M+\gamma_T}=0.301847,
+\qquad
+\Omega_\Lambda=1-\bsym^2=\frac{2\gamma_T}{\gamma_M+\gamma_T}=0.698153 .
+\]
+The denominator \(\gamma_M+\gamma_T=0.364917\) is \(|\gamma_3|\) of Theorem~\ref{thm:triolic-gBI}.
+
+\paragraph{Theoremlet v4.9.0-r67.3 (epoch).}
+\(\bsym\) is fixed under the counting reading (v4.9.0-r66.2), while \(\Omega_M\) and \(\Omega_\Lambda\) change with cosmic time.  The identification of
+Theorem~\ref{thm:dark-energy} can hold at one epoch only; at every epoch it would give \(\Omega_\Lambda=0.698\) also at recombination, which is excluded.
+This agrees with the present-epoch reading of v4.9.0-r15 and leaves the coincidence problem (why now) open.
+
+\paragraph{Observation v4.9.0-r67.4 (after the fact).}
+\(\Omega_M=0.3018\) against DESI DR2 BAO alone, \(0.2975\pm0.0086\): \(+0.5\sigma\); against Planck 2018 (TT,TE,EE+lowE+lensing), \(0.3153\pm0.0073\):
+\(-1.8\sigma\).  Remark~\ref{rem:omega-bsym} quotes \(0.3111\), a Planck+BAO value.  No test: the identification predates neither data set as a registered
+prediction.
+
+\paragraph{Proof sketch.}
+r67.1 by reading the three statements; r67.2 from \(\bsym^2=(\gL-1)/(\gL+1)\); r67.3 from r66.2 and the expansion history used in v4.9.0-r17; r67.4 from the
+quoted values.  \(\square\)
+
+\paragraph{Reading.}
+\begin{enumerate}[leftmargin=2em]
+\item Under v4.9.0-r64 the frames differ in their counting, not in \(G_N\) or the geometry.  \(\Lambda\) as a curvature is then frame-independent like \(G_N\):
+the cosmological constant is real, and the remark's claim that matter observers ``necessarily measure'' it because of their frame is not supported.
+\item What the framework could explain is the share \(\Omega_\Lambda\), not \(\Lambda\).  In counting form it is the share of horizon states on the minimal-spin
+floor, counted twice; the matter share is what matter counts beyond the floor.  This reading is offered, not adopted.
+\item The open step is the one named in v4.8.0-r03 (F11): why a share of a horizon counting should equal a share of the energy budget, and why only today.
+\item Candidates for status notes: Remark~\ref{rem:einstein-blunder} and the field equation in Remark~\ref{rem:omega-bsym} (r67.1).  The decision is left to
+the author.
+\end{enumerate}
+
+\subsection*{v4.9.0-r67 status in the three frames}
+\label{subsec:v490-r67-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+result & M / T / P\\
+\midrule
+r67.1 & M; the two statements put the same M quantity on different sides\\
+r67.2 & M and T (the two countings); P carries no counting\\
+r67.3, r67.4 & M, present epoch\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r67 register entries}
+\label{subsec:v490-r67-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r67\\
+\midrule
+\(\Lambda_{\mathrm{obs}}=\bsym^2\) (Remark~\ref{rem:einstein-blunder}), field equation of Remark~\ref{rem:omega-bsym} & give \(\Lambda\) the matter share of Theorem~\ref{thm:dark-energy}; candidates for status notes\\
+fractions in counting form & \(\Omega_M=(\gamma_M-\gamma_T)/(\gamma_M+\gamma_T)\), \(\Omega_\Lambda=2\gamma_T/(\gamma_M+\gamma_T)\); offered\\
+epoch & present epoch only; coincidence problem open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r67 ledger and guard update}
+\label{subsec:v490-r67-ledger-guard}
+
+\[
+R_{\rm cc}^{v490\text{-}r67}=(1,1,0)
+\]
+for (side swap found; counting form of the fractions; the step from counting share to energy share not derived).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r67,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r67}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
