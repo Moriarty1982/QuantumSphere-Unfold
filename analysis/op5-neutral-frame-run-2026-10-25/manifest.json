@@ -1,0 +1,174 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_LAMBDA_RELATIONAL_NEUTRAL_2026_10_25",
+  "repository": {
+    "commit": "f2de387d66d6ab2da00ef28a14305729910d7ef1",
+    "dirty": true
+  },
+  "command": [
+    "python",
+    "-B",
+    "analysis/OP5_Neutral_Frame_Check.py",
+    "--output",
+    "analysis/op5-neutral-frame-run-2026-10-25/result.json"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "runner-python",
+        "version": "3.12.10"
+      },
+      {
+        "name": "Python",
+        "version": "3.12.10"
+      },
+      {
+        "name": "sympy",
+        "version": "1.14.0"
+      },
+      {
+        "name": "mpmath",
+        "version": "1.3.0"
+      }
+    ],
+    "hardware": "Windows-11-10.0.26300-SP0"
+  },
+  "mathematics": {
+    "assertion_tested": "Symbolic midpoint/common-shift and variance identities; derivative of tanh^2(chi/2) potential; vacuum Lorentz covariance and two-beam trace; partial/full internal density-matrix averaging; four common-rapidity shifts; dimensional Lambda/Omega checks.",
+    "coefficient_domain": "Exact symbolic real/complex algebra and 45-digit mpmath arithmetic",
+    "conventions": "Spacetime metric (-,+,+,+), c=hbar=1 in stress/action comparisons. Real rapidity scale is an explicitly declared comparison, not identified with native complex tachyon rapidity. Internal density matrices use sigma_z,sigma_x Bloch plane.",
+    "inputs": [
+      "gBI=0.2375",
+      "gstring=log(2)/(pi sqrt(3))",
+      "q=(gL-1)/(gL+1)",
+      "eta=atanh(sqrt(q))",
+      "H0=67.4 km/s/Mpc INPUT",
+      "ellP=1.616255e-35m INPUT",
+      "Lambda=1.1e-52m^-2 comparison INPUT"
+    ],
+    "bounds": {
+      "common_rapidity_shifts": [
+        -3,
+        0,
+        0.7,
+        4
+      ],
+      "precision_decimal_digits": 45,
+      "absolute_tolerance": "1e-40",
+      "scalar_kinetic_cases": [
+        0,
+        0.1,
+        1
+      ]
+    },
+    "non_claims": [
+      "No native spacetime or action derived",
+      "No Lambda prediction without input cosmological scale",
+      "No equivalence of neutral state and neutral frame",
+      "No identification of projected T with native T",
+      "No OP5 closure"
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-10-25T21:16:01.809617+00:00",
+    "runtime_seconds": 2.172,
+    "exit_status": 0,
+    "status": "completed",
+    "timeout_seconds": 60.0,
+    "max_output_bytes": 524288,
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": 1
+    },
+    "missing_results": [],
+    "invalid_results": []
+  },
+  "execution_artifacts": [
+    "analysis/OP5_Neutral_Frame_Check.py",
+    "sources/research/parts/v470/10_sphaera_and_physics.tex",
+    "sources/research/parts/v470/23_physical_readouts.tex",
+    "sources/research/parts/v480-post-release-layers.tex",
+    "sources/research/parts/v490-post-release-layers.tex",
+    "formal/QSFormal/Frames.lean"
+  ],
+  "input_artifacts": [
+    {
+      "path": "analysis/OP5_Neutral_Frame_Check.py",
+      "sha256": "0996db35354828c4bb7c0e36be4d362868d44fe1584ba9bec9fb85b21420a8b1",
+      "sha256_after": "0996db35354828c4bb7c0e36be4d362868d44fe1584ba9bec9fb85b21420a8b1"
+    },
+    {
+      "path": "sources/research/parts/v470/10_sphaera_and_physics.tex",
+      "sha256": "7d72c58b1159f5462c6be395961fcd8882028fc3e8c8495e7f2a3b10055c1a32",
+      "sha256_after": "7d72c58b1159f5462c6be395961fcd8882028fc3e8c8495e7f2a3b10055c1a32"
+    },
+    {
+      "path": "sources/research/parts/v470/23_physical_readouts.tex",
+      "sha256": "55f6fbd55eb4290d523be9c214190c6f91f62838e5718099b1ec20082e726242",
+      "sha256_after": "55f6fbd55eb4290d523be9c214190c6f91f62838e5718099b1ec20082e726242"
+    },
+    {
+      "path": "sources/research/parts/v480-post-release-layers.tex",
+      "sha256": "b2eb049956e3761440cd7dc3a7562a5be32571013c3e14726169781040a072bb",
+      "sha256_after": "b2eb049956e3761440cd7dc3a7562a5be32571013c3e14726169781040a072bb"
+    },
+    {
+      "path": "sources/research/parts/v490-post-release-layers.tex",
+      "sha256": "232bdd631bac34259be48b6d326fbf6eaf38f084ee4bec1a621658b3c964424e",
+      "sha256_after": "232bdd631bac34259be48b6d326fbf6eaf38f084ee4bec1a621658b3c964424e"
+    },
+    {
+      "path": "formal/QSFormal/Frames.lean",
+      "sha256": "d05c812136899bc82fe1acfe0d5fa39967477a9e5eb0becd66f314a42b7bc03d",
+      "sha256_after": "d05c812136899bc82fe1acfe0d5fa39967477a9e5eb0becd66f314a42b7bc03d"
+    }
+  ],
+  "output_directory": "analysis/op5-neutral-frame-run-2026-10-25",
+  "declared_results": [
+    "analysis/op5-neutral-frame-run-2026-10-25/result.json"
+  ],
+  "outputs": [
+    {
+      "path": "analysis/op5-neutral-frame-run-2026-10-25/stdout.txt",
+      "sha256": "9667baed6e641a7c1ffd7837d84c639414182669abd5d16c583a61927716669a",
+      "kind": "log"
+    },
+    {
+      "path": "analysis/op5-neutral-frame-run-2026-10-25/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "log"
+    },
+    {
+      "path": "analysis/op5-neutral-frame-run-2026-10-25/result.json",
+      "sha256": "4017b87eaf0bcbc632e8789e875a94407d2a044507b3057293ca211b03f828c9",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    {
+      "check": "input hashes unchanged",
+      "passed": true
+    },
+    {
+      "check": "process exited successfully within enforced limits",
+      "passed": true
+    },
+    {
+      "check": "declared result files are present and regular",
+      "passed": true
+    }
+  ],
+  "result": "Run completed; mathematical assertion requires interpretation and review.",
+  "residual_risks": [
+    "Command success does not establish the mathematical interpretation.",
+    "Only listed input artifacts are pinned; external dependencies need recorded versions.",
+    "The thread cap uses conventional environment variables; a child program may ignore them."
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "claim_id": "OP5_LAMBDA_RELATIONAL_NEUTRAL_2026_10_25",
+  "mathematics": {
+    "assertion_tested": "Symbolic midpoint/common-shift and variance identities; derivative of tanh^2(chi/2) potential; vacuum Lorentz covariance and two-beam trace; partial/full internal density-matrix averaging; four common-rapidity shifts; dimensional Lambda/Omega checks.",
+    "coefficient_domain": "Exact symbolic real/complex algebra and 45-digit mpmath arithmetic",
+    "conventions": "Spacetime metric (-,+,+,+), c=hbar=1 in stress/action comparisons. Real rapidity scale is an explicitly declared comparison, not identified with native complex tachyon rapidity. Internal density matrices use sigma_z,sigma_x Bloch plane.",
+    "inputs": ["gBI=0.2375", "gstring=log(2)/(pi sqrt(3))", "q=(gL-1)/(gL+1)", "eta=atanh(sqrt(q))", "H0=67.4 km/s/Mpc INPUT", "ellP=1.616255e-35m INPUT", "Lambda=1.1e-52m^-2 comparison INPUT"],
+    "bounds": {"common_rapidity_shifts":[-3,0,0.7,4],"precision_decimal_digits":45,"absolute_tolerance":"1e-40","scalar_kinetic_cases":[0,0.1,1]},
+    "non_claims": ["No native spacetime or action derived", "No Lambda prediction without input cosmological scale", "No equivalence of neutral state and neutral frame", "No identification of projected T with native T", "No OP5 closure"]
+  },
+  "execution_artifacts": ["analysis/OP5_Neutral_Frame_Check.py", "sources/research/parts/v470/10_sphaera_and_physics.tex", "sources/research/parts/v470/23_physical_readouts.tex", "sources/research/parts/v480-post-release-layers.tex", "sources/research/parts/v490-post-release-layers.tex", "formal/QSFormal/Frames.lean"],
+  "software": [{"name":"Python","version":"3.12.10"},{"name":"sympy","version":"1.14.0"},{"name":"mpmath","version":"1.3.0"}],
+  "randomness":{"used":false,"generator":"","seed":null}
+}
