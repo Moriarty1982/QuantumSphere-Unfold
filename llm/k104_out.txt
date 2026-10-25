@@ -1,0 +1,14 @@
+== 1. Zaehlgleichungen (scipy brentq, Summe bis j = 2000) ==
+gamma_T = 0.127384023141  (ln2/(pi sqrt3) = 0.127384023141)
+gamma_M = 0.237532957966  gamma_GM = 0.274066858233
+  DL/M: gamma_L = 1.864700  beta = 0.549406  eta = 0.617530  beta^2 = 0.301847
+  GM: gamma_L = 2.151501  beta = 0.604468  eta = 0.700158  beta^2 = 0.365382
+== 2. Robertson: exakte Bruchrechnung fuer alle |j,m>, j <= 10 ==
+  Abweichungen: 0
+== 3. Identitaeten ==
+  cosh 2eta = 1.864699765 vs gamma_L 1.864699765;  tanh 2eta = 0.844041 vs sqrt(1-1/gL^2) = 0.844041
+  Omega_M = (gM-gT)/(gM+gT) = 0.301847;  2gT/(gM+gT) = 0.698153;  gM+gT = 0.364917;  -(0.12738+0.2375) = -0.36488
+== 4. Tachyon-Boden: numerischer Boost (Matrix), u = beta ==
+  E' = -0.657533, p' = 1.196808, v' = -1.820149 (−1/beta = -1.820149), E'^2-p'^2 = -1.000000
+  Boden des Spiegel-Frames (Relativgeschw. tanh 2eta) in M: v = -1.184777 (−coth 2eta = -1.184777)
+  E(v) streng fallend: True  E(1e6) = 1.0000000000005e-06

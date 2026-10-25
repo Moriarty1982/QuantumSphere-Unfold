@@ -2481,10 +2481,22 @@ Vorab-Notiz df0c788, Skript `llm/k102_zaehlregeln.py`, Ergebnis `llm/Ergebnis_H4
 `sec:v490-r67-einstein-blunder`, Snippet `llm/v490_r67_round.tex`. Autorhinweis: Abschnitt zu Einsteins größtem Fehler und seiner Umdeutung neu ansehen. Keine Vorhersage.
 
 - **K116.1 Seitenvertauschung (M).** thm:dark-energy: Ω_M = β², Ω_Λ = 1 − β². rem:omega-bsym (Feldgleichung G + β² g = 8πG T) und rem:einstein-blunder (Λ_obs = β²) setzen dasselbe β² auf Λ, geben Λ also den Materieanteil. Getrennt vom Einheitenproblem r03 F3/F4.
-- **K116.2 Zählform (M).** Ω_M = (γ_M − γ_T)/(γ_M + γ_T) = 0,301847, Ω_Λ = 2γ_T/(γ_M + γ_T) = 0,698153; γ_M + γ_T = 0,364917 = |γ₃| aus thm:triolic-gBI.
+- **K116.2 Zählform (M).** Ω_M = (γ_M − γ_T)/(γ_M + γ_T) = 0,301847, Ω_Λ = 2γ_T/(γ_M + γ_T) = 0,698153; γ_M + γ_T = 0,364917 = |γ₃| aus thm:triolic-gBI **[K117.1: tautologisch, γ₃ ist so definiert]**.
 - **K116.3 Epoche (M).** β fest (r66), Ω ändern sich: Zuordnung nur in einer Epoche möglich (wie r15); Zufallsproblem „warum jetzt“ offen.
 - **K116.4 Daten (D, nachträglich).** DESI DR2 BAO 0,2975 ± 0,0086: +0,5σ; Planck 2018 0,3153 ± 0,0073: −1,8σ. Kein Test.
 - **K116.5 Lesart (V, nicht übernommen).** Λ als Krümmung ist frame-unabhängig wie G (r64); erklärbar wäre nur der Anteil Ω_Λ, als Anteil der Horizontzustände auf dem Spin-½-Boden. Offen: warum Zählanteil = Energieanteil und warum nur heute (r03 F11). Statusnotiz-Kandidaten: rem:einstein-blunder, Feldgleichung in rem:omega-bsym. R_cc = (1,1,0); Guards unverändert.
+
+### K117 Nachrechnung und Prüfung der Vermutungen (2026-10-25)
+
+Autor: „rechne das nach und prüfe deine Vermutungen“. `llm/Nachrechnung_r63_r67.md`, Skripte k104 (eigener Code), k105 (H46 mit exaktem β).
+
+- **Bestätigt (M):** γ-Werte aller drei Zählungen (auch gegen Meissner gr-qc/0407052 und Ghosh–Mitra gr-qc/0411035), Robertson exakt bis j = 10, Gewicht 2 = ±m bei Meissner (Fläche nur über |m|), cosh 2η = γ_L, Tachyon-Boden per Matrix-Boost, r24.2-Rapidität, Ω-Zählform, Seitenvertauschung, Planck 0,315 ± 0,007, DESI 0,2975 ± 0,0086.
+- **K117.1 (Korrektur):** γ_M + γ_T = |γ₃| ist die Definition von γ₃ in thm:triolic-gBI, kein Befund.
+- **K117.2 (Einschränkung, D):** Die SU(2)-invariante Behandlung (Engle–Noui–Perez) gilt als besser begründet (U(1) zählt zu viel, log-Korrektur −1/2 statt −3/2) und gibt γ ≈ 0,274 = Ghosh–Mitra. Das Leptonfenster wählt die U(1)-Zählung. „Die Daten wählen die richtige Zählung“ ist nicht gedeckt; r03 F11 („korrigiert“/„überholt“) gibt den Stand von 2004 wieder.
+- **K117.3:** ABCK und DL/M sind beide U(1), das Paar ist konsistent; ein SU(2)-Paar gäbe β = 0,604 (draußen).
+- **K117.4:** Unschärfe-Lesart ist Umdeutung (U(1) zählt nur m; j = |m| ist die Flächenzuordnung), mathematisch korrekt.
+- **K117.5:** „Eigener Frame“ des Tachyons meint in r24.2 und r63.4 Verschiedenes (1/β relativ zu R gegen E = 0 im Spiegel-Frame); Zahlen konsistent.
+- **K117.6 H46 (M):** mit β = 0,549406 sin²θ₂₃ ∈ [0,4908; 0,4975] (vorher [0,4913; 0,4975]); Vorhersage [0,49; 0,50] gültig; Kontrolllauf reproduziert k100. Trefferzahl 120 → 168, η nahe am unteren Fensterrand.
 
 ## 8. Änderungsprotokoll
 
@@ -2657,6 +2669,7 @@ Vorab-Notiz df0c788, Skript `llm/k102_zaehlregeln.py`, Ergebnis `llm/Ergebnis_H4
 - v13.1 (2026-10-25): K114 Statusnotizen nach r64 (Regel C) an thm:k-values, thm:planck-photon (erweitert), thm:hawking-triolic; Runde v4.9.0-r65; Spezifikation llm/revision_spec_v490_r64.py; PR #41 (r63/r64) gemergt als 67f0539.
 - v13.2 (2026-10-25): K115 Runde v4.9.0-r66: Korrektur zu K113.1 (Widerspruch stand schon in r09, dort aufgelöst), lokaler Frame-Faktor unter der Zähl-Lesart; PR #42 (r65) gemergt als 64973ef.
 - v13.3 (2026-10-25): K116 Runde v4.9.0-r67 (Einsteins „größter Fehler“ unter der Zähl-Lesart); PR #43 (r66) gemergt als ce264ba.
+- v13.4 (2026-10-25): K117 Nachrechnung H47/r63–r67 (bestätigt; Korrekturen: |γ₃| tautologisch, Literatur bevorzugt SU(2)-Zählung 0,274; H46 mit exaktem β gültig).
 
 ---
 

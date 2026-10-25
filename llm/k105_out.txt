@@ -1,0 +1,8 @@
+57:K = {"artanh(beta exakt)": float(np.arctanh(0.549406)), "artanh(0.5493)": float(np.arctanh(0.5493))}
+Variante A, eps = artanh(0.5493) (0.6174): 120 Treffer; sin^2 23 in [0.4913, 0.4975] (Breite 0.0063), |sin delta| in [0.169, 0.998] (Breite 0.828)
+Variante A, eps = artanh(beta exakt) (0.6175): 168 Treffer; sin^2 23 in [0.4908, 0.4975] (Breite 0.0067), |sin delta| in [0.169, 0.998] (Breite 0.829)
+Variante B, eps = artanh(0.5493) (0.6174): 1104 Treffer; sin^2 23 in [0.4913, 0.4975] (Breite 0.0063), |sin delta| in [0.167, 0.998] (Breite 0.831)
+Variante B, eps = artanh(beta exakt) (0.6175): 1552 Treffer; sin^2 23 in [0.4908, 0.4975] (Breite 0.0067), |sin delta| in [0.168, 0.999] (Breite 0.831)
+
+
+[exited with code 0]
