@@ -2455,7 +2455,7 @@ Vorab-Notiz df0c788, Skript `llm/k102_zaehlregeln.py`, Ergebnis `llm/Ergebnis_H4
 
 `sec:v490-r64-gravity-audit`, Snippet `llm/v490_r64_round.tex`, Protokoll `llm/Pruefung_Gravitation_Frames.md`. Keine Vorhersage.
 
-- **K113.1 Widerspruch (M).** thm:k-values: γ_BI mit k = 0, frame-invariant; thm:frame-offset: γ_BI = Lorentz-transformierter γ_string. Unabhängig von r63.
+- **K113.1 Widerspruch (M).** thm:k-values: γ_BI mit k = 0, frame-invariant; thm:frame-offset: γ_BI = Lorentz-transformierter γ_string. Unabhängig von r63. **[korrigiert durch K115.1: nicht neu, schon r09 Punkt 1, dort aufgelöst]**
 - **K113.2 Ort des Frame-Unterschieds (S).** Unter der Zähl-Lesart sitzt er ganz in γ (gleiche Fläche, gleiches ℓ_P, S = A/4ℓ_P² in jeder Zählung). k(ħ) = 1, k(G) = 2 mit γ_L umgerechnet benutzt das Zählverhältnis doppelt: thm:planck-photon, Korollar ρ_vac-Verhältnis γ_L⁵, prop:hawking-gBI-tachyon (i) nicht gestützt (nicht widerlegt).
 - **K113.3 Einzelbefunde (M).** thm:frame-offset: Zahl tanh 2η = M–T, Etikett R statt T; thm:symmetric-frame konsistent (T = Boden des Spiegel-Frames); thm:hawking-triolic liest T als R; thm:dual-origin Klassenmischung wie r61.1(a); thm:dark-energy M–R konsistent, Wert 1/√3 = Hopf; thm:einstein unberührt.
 - **K113.4 Lesart (V).** Gravitation selbst frame-unabhängig; die Frames unterscheiden sich in der Zustandszahl pro Fläche, γ ist der Wechselkurs. Statusnotiz-Kandidaten: thm:k-values, thm:planck-photon, thm:hawking-triolic. H15 unberührt. R_grav = (1,1,0); Guards unverändert.
@@ -2467,6 +2467,14 @@ Vorab-Notiz df0c788, Skript `llm/k102_zaehlregeln.py`, Ergebnis `llm/Ergebnis_H4
 - thm:planck-photon: bestehende Notiz erweitert: γ_L^{−3/2} von der Zähl-Lesart nicht gestützt (gleiches ℓ_P in beiden Zählungen).
 - thm:hawking-triolic: neue Notiz: γ_string ist die Zählung des einfallenden Tachyon-Bodens, das Theorem gibt sie dem entweichenden Photon (T als R).
 - Angewendet lokal und auf sources/research mit llm/apply_patches.py.
+
+### K115 Runde v4.9.0-r66: Korrektur zu r64 und lokaler Frame-Faktor (2026-10-25)
+
+`sec:v490-r66-correction-local-factor`, Snippet `llm/v490_r66_round.tex`, Spezifikation `llm/revision_spec_v490_r66.py`. Keine Vorhersage.
+
+- **K115.1 Korrektur (M).** r64.1(a) ist Punkt 1 der „zwei Widersprüche“ aus v4.9.0-r09; r09 löst beide, indem thm:frame-offset nur vom strukturellen Faktor γ_L spricht und der lokale Faktor γ_L^(local) getrennt bleibt (r08, r18). r64 hat das nicht zitiert; die r65-Notiz an thm:k-values ist um den Verweis erweitert. r64.1(b)–(h) unberührt.
+- **K115.2 Lokaler Faktor (S).** Unter der Zähl-Lesart ist der strukturelle Faktor eine feste Zahl (wie r08). Die beiden Zählregeln sind diskret, also gibt die Lesart keinen Mechanismus für einen stetig driftenden lokalen Faktor; eine stetige Interpolation der Gewichte wäre eine neue Annahme. Die Drift-Lesarten von r08/r09 sind durch Atomuhren ausgeschlossen.
+- **K115.3 Kandidat.** Korollar „α-drift as a frame effect“ hat noch keine Statusnotiz. R_corr = (1,1,0); Guards unverändert.
 
 ## 8. Änderungsprotokoll
 
@@ -2637,6 +2645,7 @@ Vorab-Notiz df0c788, Skript `llm/k102_zaehlregeln.py`, Ergebnis `llm/Ergebnis_H4
 - v12.9 (2026-10-25): K111 H47 Zähl-Lesart von β_sym (DL/Meissner im Fenster, Ghosh–Mitra nicht; OP1 umformuliert).
 - v13.0 (2026-10-25): K112 Runde v4.9.0-r63 (H47 als Runde, Robertson-Sättigung, Tachyon-Boden, Lean `Zaehlung.lean`); K113 Runde v4.9.0-r64 (Frame-Prüfung der Gravitationssätze).
 - v13.1 (2026-10-25): K114 Statusnotizen nach r64 (Regel C) an thm:k-values, thm:planck-photon (erweitert), thm:hawking-triolic; Runde v4.9.0-r65; Spezifikation llm/revision_spec_v490_r64.py; PR #41 (r63/r64) gemergt als 67f0539.
+- v13.2 (2026-10-25): K115 Runde v4.9.0-r66: Korrektur zu K113.1 (Widerspruch stand schon in r09, dort aufgelöst), lokaler Frame-Faktor unter der Zähl-Lesart; PR #42 (r65) gemergt als 64973ef.
 
 ---
 

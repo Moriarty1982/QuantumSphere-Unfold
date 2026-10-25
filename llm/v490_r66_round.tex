@@ -1,0 +1,79 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r66 Source-Only: A Correction to r64 and the Local Frame Factor under the Counting Reading}
+\addcontentsline{toc}{section}{v4.9.0-r66 Source-Only: A Correction to r64 and the Local Frame Factor under the Counting Reading}
+\label{sec:v490-r66-correction-local-factor}
+% ============================================================================
+
+\paragraph{Purpose.}
+Rereading v4.9.0-r08 and r09 after v4.9.0-r65 showed that r64.1(a) repeats an earlier finding without citing it.  This layer corrects that, extends the status
+note of r65 on Theorem~\ref{thm:k-values} accordingly (rule~C; specification \texttt{llm/revision\_spec\_v490\_r66.py}), and states what the counting reading of
+v4.9.0-r63 implies for the drifting local frame factor of r08 and r09.  It makes no prediction.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r66 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r66 results}
+\label{subsec:v490-r66-results}
+
+\paragraph{Correction v4.9.0-r66.1.}
+The contradiction of r64.1(a), \(k(\gBI)=0\) in Theorem~\ref{thm:k-values} against Theorem~\ref{thm:frame-offset}, is item~1 of the two contradictions of
+v4.9.0-r09 (\S\ref{sec:v490-r09-local-frame-factor}).  r09 resolved both by reading Theorem~\ref{thm:frame-offset} as a statement about the structural factor
+\(\gL\) alone, with the drifting local factor \(\gL^{(\mathrm{local})}\) of r08 and r18 kept separate.  r64.1(a) is therefore not new, and its phrase ``independently of
+r63'' should have cited r09.  The status note of r65 is extended with the reference.  r64.1(b) to (h) are unaffected: they concern the structural factor.
+
+\paragraph{Theoremlet v4.9.0-r66.2 (local factor).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Under the counting reading the structural factor is the ratio of two counting solutions (r63.1), a fixed number.  This agrees with r08, which already
+called it fixed because both inputs are fixed numbers.
+\item[(b)] The two rules of r63 are discrete: spin \(\tfrac12\) only, or all spins with weight \(2\).  They admit no continuous family, so the counting reading gives no
+mechanism for a continuously drifting local factor \(\gL^{(\mathrm{local})}(t)\).  A continuous interpolation of the weights would be a new assumption.
+\item[(c)] The drift readings tested in r08 and r09 are excluded by atomic clocks; r66.2(b) adds that the counting reading does not supply them either.  The
+corollary ``\(\alpha\)-drift as a frame effect'' of \S\ref{sec:phase-constants} still carries no status note; it is a candidate.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+r66.1 by reading r09; r66.2 from the counting equations of r63.1.  \(\square\)
+
+\subsection*{v4.9.0-r66 status in the three frames}
+\label{subsec:v490-r66-frames}
+
+The correction concerns citation only.  r66.2 concerns the structural factor between M and T; P carries no counting.
+
+\subsection*{v4.9.0-r66 register entries}
+\label{subsec:v490-r66-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r66\\
+\midrule
+r64.1(a) & not new; item~1 of v4.9.0-r09, resolved there by reading\\
+local frame factor under the counting reading & no continuous mechanism\\
+corollary ``\(\alpha\)-drift as a frame effect'' & candidate for a status note\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r66 ledger and guard update}
+\label{subsec:v490-r66-ledger-guard}
+
+\[
+R_{\rm corr}^{v490\text{-}r66}=(1,1,0)
+\]
+for (citation corrected; no continuous local factor under the counting reading; the local factor itself still has no field law).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r66,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r66}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
