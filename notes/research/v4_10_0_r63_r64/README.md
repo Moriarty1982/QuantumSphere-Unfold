@@ -34,3 +34,13 @@ On 2026-10-25 the author decided to add the status notes named by r64. The main-
 The layer `rounds/v490_r65_round.tex` is appended to `v490-post-release-layers.tex`; guard vectors unchanged.
 Local monolith: 1266 → 1267 pages, SHA256 prefix `0e6d2568c89c8807`, hard values 0, overfull 45, guard linter 0 hits.
 Candidate build: 1294 → 1295 pages, 3977 → 3981 labels, same hard values.
+
+## Layer v4.9.0-r66: correction to r64 and the local frame factor
+
+r64.1(a) (k(γ_BI) = 0 in thm:k-values against thm:frame-offset) is **not new**: it is item 1 of the two contradictions of v4.9.0-r09, which resolved them by
+reading thm:frame-offset as a statement about the structural factor γ_L alone. r64 did not cite this. The r65 note on thm:k-values is extended with the
+reference by `llm/revision_spec_v490_r66.py`. r64.1(b)–(h) are unaffected. Under the counting reading the structural factor is a fixed number, and the two
+counting rules are discrete, so the reading gives no mechanism for a continuously drifting local factor (the drift readings of r08/r09 are excluded by atomic
+clocks anyway). The corollary "α-drift as a frame effect" is a candidate for a status note.
+Local monolith: 1267 → 1269 pages, SHA256 prefix `8efc9603eafe0404`, hard values 0, overfull 45, guard linter 0 hits.
+Candidate build: 1295 → 1298 pages, 3981 → 3986 labels, same hard values.
