@@ -2476,6 +2476,16 @@ Vorab-Notiz df0c788, Skript `llm/k102_zaehlregeln.py`, Ergebnis `llm/Ergebnis_H4
 - **K115.2 Lokaler Faktor (S).** Unter der Zähl-Lesart ist der strukturelle Faktor eine feste Zahl (wie r08). Die beiden Zählregeln sind diskret, also gibt die Lesart keinen Mechanismus für einen stetig driftenden lokalen Faktor; eine stetige Interpolation der Gewichte wäre eine neue Annahme. Die Drift-Lesarten von r08/r09 sind durch Atomuhren ausgeschlossen.
 - **K115.3 Kandidat.** Korollar „α-drift as a frame effect“ hat noch keine Statusnotiz. R_corr = (1,1,0); Guards unverändert.
 
+### K116 Runde v4.9.0-r67: Einsteins „größter Fehler“ unter der Zähl-Lesart (2026-10-25)
+
+`sec:v490-r67-einstein-blunder`, Snippet `llm/v490_r67_round.tex`. Autorhinweis: Abschnitt zu Einsteins größtem Fehler und seiner Umdeutung neu ansehen. Keine Vorhersage.
+
+- **K116.1 Seitenvertauschung (M).** thm:dark-energy: Ω_M = β², Ω_Λ = 1 − β². rem:omega-bsym (Feldgleichung G + β² g = 8πG T) und rem:einstein-blunder (Λ_obs = β²) setzen dasselbe β² auf Λ, geben Λ also den Materieanteil. Getrennt vom Einheitenproblem r03 F3/F4.
+- **K116.2 Zählform (M).** Ω_M = (γ_M − γ_T)/(γ_M + γ_T) = 0,301847, Ω_Λ = 2γ_T/(γ_M + γ_T) = 0,698153; γ_M + γ_T = 0,364917 = |γ₃| aus thm:triolic-gBI.
+- **K116.3 Epoche (M).** β fest (r66), Ω ändern sich: Zuordnung nur in einer Epoche möglich (wie r15); Zufallsproblem „warum jetzt“ offen.
+- **K116.4 Daten (D, nachträglich).** DESI DR2 BAO 0,2975 ± 0,0086: +0,5σ; Planck 2018 0,3153 ± 0,0073: −1,8σ. Kein Test.
+- **K116.5 Lesart (V, nicht übernommen).** Λ als Krümmung ist frame-unabhängig wie G (r64); erklärbar wäre nur der Anteil Ω_Λ, als Anteil der Horizontzustände auf dem Spin-½-Boden. Offen: warum Zählanteil = Energieanteil und warum nur heute (r03 F11). Statusnotiz-Kandidaten: rem:einstein-blunder, Feldgleichung in rem:omega-bsym. R_cc = (1,1,0); Guards unverändert.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2646,6 +2656,7 @@ Vorab-Notiz df0c788, Skript `llm/k102_zaehlregeln.py`, Ergebnis `llm/Ergebnis_H4
 - v13.0 (2026-10-25): K112 Runde v4.9.0-r63 (H47 als Runde, Robertson-Sättigung, Tachyon-Boden, Lean `Zaehlung.lean`); K113 Runde v4.9.0-r64 (Frame-Prüfung der Gravitationssätze).
 - v13.1 (2026-10-25): K114 Statusnotizen nach r64 (Regel C) an thm:k-values, thm:planck-photon (erweitert), thm:hawking-triolic; Runde v4.9.0-r65; Spezifikation llm/revision_spec_v490_r64.py; PR #41 (r63/r64) gemergt als 67f0539.
 - v13.2 (2026-10-25): K115 Runde v4.9.0-r66: Korrektur zu K113.1 (Widerspruch stand schon in r09, dort aufgelöst), lokaler Frame-Faktor unter der Zähl-Lesart; PR #42 (r65) gemergt als 64973ef.
+- v13.3 (2026-10-25): K116 Runde v4.9.0-r67 (Einsteins „größter Fehler“ unter der Zähl-Lesart); PR #43 (r66) gemergt als ce264ba.
 
 ---
 
