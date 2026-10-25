@@ -51,6 +51,10 @@ Aufgenommen sind die 58 Hauptversionen `x.y.0` aus v0–v3 plus alle v4-Stände.
 
 Das Repository liegt in einem OneDrive-Ordner. Bisher unauffällig; falls je Sync-Konflikte im `.git`-Verzeichnis auftreten, ist ein Umzug außerhalb der Cloud die Abhilfe.
 
+## Wiki
+
+Zum Repository gehört das GitHub-Wiki `https://github.com/Moriarty1982/QuantumSphere-Unfold.wiki.git`, lokal neben diesem Ordner unter `..\Quantum Sphera.wiki` (nicht hineinklonen). **Bei jeder Änderung am Repository das Wiki mit aktualisieren** (Autorentscheidung, 2026-10-25), besonders `Versionen-und-Quellen.md`, `Forschungsstand.md`, `Home.md` und die englischen Seiten (`English.md`, `Document-guide.md`). Pflegeregeln stehen in `Wiki-Pflege.md`.
+
 ## Dateien
 
 | Datei | Rolle |
