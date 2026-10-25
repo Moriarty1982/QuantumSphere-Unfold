@@ -44,3 +44,14 @@ counting rules are discrete, so the reading gives no mechanism for a continuousl
 clocks anyway). The corollary "α-drift as a frame effect" is a candidate for a status note.
 Local monolith: 1267 → 1269 pages, SHA256 prefix `8efc9603eafe0404`, hard values 0, overfull 45, guard linter 0 hits.
 Candidate build: 1295 → 1298 pages, 3981 → 3986 labels, same hard values.
+
+## Layer v4.9.0-r67: Einstein's "greatest blunder" under the counting reading
+
+At the author's request, rem:einstein-blunder was read again together with thm:dark-energy and rem:omega-bsym. Findings: thm:dark-energy puts β² on
+matter (Ω_M = β²), while the field equation G + β² g = 8πG T of rem:omega-bsym and Λ_obs = β² of rem:einstein-blunder put the same β² on Λ, i.e. they give Λ
+the matter share (separate from the dimensional problem of r03 F3/F4). In counting form Ω_M = (γ_M − γ_T)/(γ_M + γ_T) = 0.301847 and
+Ω_Λ = 2γ_T/(γ_M + γ_T) = 0.698153. With β fixed, the identification holds at one epoch only. After the fact: +0.5σ against DESI DR2 BAO alone, −1.8σ against
+Planck 2018. Reading (not adopted): Λ itself is frame-independent like G; only the share Ω_Λ could be explained, as the floor share of a horizon counting.
+Candidates for status notes: rem:einstein-blunder and the field equation in rem:omega-bsym. Layer: `rounds/v490_r67_round.tex`.
+Local monolith: 1269 → 1271 pages, SHA256 prefix `dd57342cbfa5c861`, hard values 0, overfull 45, guard linter 0 hits.
+Candidate build: 1298 → 1300 pages, 3986 → 3991 labels, same hard values.
