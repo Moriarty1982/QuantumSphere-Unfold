@@ -1,0 +1,205 @@
+From 1b641c088db78d9d1b40704b24767a585b20e15e Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Sun, 25 Oct 2026 14:39:19 +0100
+Subject: [PATCH 2/2] docs: Forschungsstand um r68 (Nachrechnung, U(1) gegen
+ SU(2)), Stand f2de387
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01A7oT2duA9tqcHeey8SJs8x
+---
+ Document-guide.md        |  4 ++--
+ Dokumentfuehrer.md       |  4 ++--
+ English.md               |  2 +-
+ Forschungsstand.md       |  5 +++--
+ Hinweise-fuer-LLMs.md    |  4 ++--
+ Home.md                  |  2 +-
+ Leseweg.md               |  2 +-
+ Versionen-und-Quellen.md | 14 +++++++-------
+ Wiki-Pflege.md           |  4 +++-
+ 9 files changed, 22 insertions(+), 19 deletions(-)
+
+diff --git a/Document-guide.md b/Document-guide.md
+index 5093046..5d02a8b 100644
+--- a/Document-guide.md
++++ b/Document-guide.md
+@@ -126,13 +126,13 @@ The master equation groups geometric, triolic, HC, closure and observer contribu
+ 
+ Optionally read [Closure-Liquid Crystal and Holographic Julia Boundary](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/64973efe8409cfd2ae985fbbd17b4ebc95845780/sources/research/parts/v470/14_local_crystal.tex). Its carrier, shell, route, phase and defect language organizes a local compatibility picture; it does not claim a literal condensed-matter crystal.
+ 
+-Read frame, Planck and Hawking passages alongside the [r63–r67 corrections](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/c4df9980bc0689711bc536cfec56d2af04d39444/notes/research/v4_10_0_r63_r64/README.md). Some source orientation text retains historical release metadata; consult the [version map](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Versionen-und-Quellen) for current status.
++Read frame, Planck and Hawking passages alongside the [r63–r68 corrections](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2de387d66d6ab2da00ef28a14305729910d7ef1/notes/research/v4_10_0_r63_r64/README.md). Some source orientation text retains historical release metadata; consult the [version map](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Versionen-und-Quellen) for current status.
+ 
+ **Checkpoint:** What do the large equation blocks initially provide? — An organization of required contributions, not their complete physical realization.
+ 
+ **Next:** Take stock in step 8.
+ 
+-> **Note for LLMs and source checking:** Correction baseline: r64–r67 (r66 corrects the citation in r64; r67 concerns `rem:einstein-blunder`). Historical wording in `working-orientation.tex` does not override the source map. Preserve frame assignments and status notes.
++> **Note for LLMs and source checking:** Correction baseline: r64–r68 (r66 corrects the citation in r64; r67 concerns `rem:einstein-blunder`). Historical wording in `working-orientation.tex` does not override the source map. Preserve frame assignments and status notes.
+ 
+ ## 8. Take stock and choose a technical branch
+ 
+diff --git a/Dokumentfuehrer.md b/Dokumentfuehrer.md
+index 3cb7fc6..15c5e4d 100644
+--- a/Dokumentfuehrer.md
++++ b/Dokumentfuehrer.md
+@@ -130,13 +130,13 @@ Die Mastergleichung gruppiert geometrische, triolische, HC-, Closure- und Beobac
+ 
+ Optional folgt [Closure-Liquid Crystal and Holographic Julia Boundary](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/64973efe8409cfd2ae985fbbd17b4ebc95845780/sources/research/parts/v470/14_local_crystal.tex): eine organisierende lokale Lesart mit Träger, Shell, Route, Phase und Defekt. Der Text behauptet dabei keinen buchstäblichen Festkörperkristall.
+ 
+-Bei Frame-, Planck- oder Hawking-Aussagen die [Korrekturen r63–r67](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/c4df9980bc0689711bc536cfec56d2af04d39444/notes/research/v4_10_0_r63_r64/README.md) danebenlegen. Auch die Einleitungsdatei enthält noch historische Release-Angaben; für aktuelle Metadaten gilt die [Quellenkarte](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Versionen-und-Quellen).
++Bei Frame-, Planck- oder Hawking-Aussagen die [Korrekturen r63–r68](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2de387d66d6ab2da00ef28a14305729910d7ef1/notes/research/v4_10_0_r63_r64/README.md) danebenlegen. Auch die Einleitungsdatei enthält noch historische Release-Angaben; für aktuelle Metadaten gilt die [Quellenkarte](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Versionen-und-Quellen).
+ 
+ **Kontrollfrage:** Was leisten die großen Gleichungsblöcke zunächst? — Sie organisieren die geforderten Beiträge; ihre vollständige physikalische Realisierung folgt daraus nicht allein.
+ 
+ **Weiter:** Station 8 fasst zusammen und führt in die technischen Anhänge.
+ 
+-> **Anmerkung für LLMs und Quellenprüfung:** Korrekturstand: r64–r67 (r66 korrigiert die Zitierung in r64; r67 betrifft `rem:einstein-blunder`). Historische Versionsangaben in `working-orientation.tex` überschreiben nicht die Quellenkarte; Frame-Zuordnungen und Statusnotizen beibehalten.
++> **Anmerkung für LLMs und Quellenprüfung:** Korrekturstand: r64–r68 (r66 korrigiert die Zitierung in r64; r67 betrifft `rem:einstein-blunder`). Historische Versionsangaben in `working-orientation.tex` überschreiben nicht die Quellenkarte; Frame-Zuordnungen und Statusnotizen beibehalten.
+ 
+ ## 8. Bilanz ziehen und gezielt vertiefen
+ 
+diff --git a/English.md b/English.md
+index 3567331..2679163 100644
+--- a/English.md
++++ b/English.md
+@@ -9,7 +9,7 @@
+ - [Research status, German](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungsstand).
+ - [LLM source-reading advice, German](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Hinweise-fuer-LLMs).
+ 
+-**Snapshot:** 25 October 2026, [main repository commit c4df998](https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/c4df9980bc0689711bc536cfec56d2af04d39444). Published baseline: **v4.9.0**, 21 October 2026, [Version DOI 10.5281/zenodo.23534954](https://doi.org/10.5281/zenodo.23534954). Research working version: **4.10.0-draft**, documented layers through **v4.9.0-r67**.
++**Snapshot:** 25 October 2026, [main repository commit f2de387](https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/f2de387d66d6ab2da00ef28a14305729910d7ef1). Published baseline: **v4.9.0**, 21 October 2026, [Version DOI 10.5281/zenodo.23534954](https://doi.org/10.5281/zenodo.23534954). Research working version: **4.10.0-draft**, documented layers through **v4.9.0-r68**.
+ 
+ The Companion investigates a structure-first framework with conditional, local and readout-dependent results. The repository does not present a peer-reviewed proof of global physical closure, global all-readout terminality, the Riemann Hypothesis or global QFT/GR unification. Each result must be read with its assumptions, corrections and remaining obligations.
+ 
+diff --git a/Forschungsstand.md b/Forschungsstand.md
+index 1a1bba9..4637da6 100644
+--- a/Forschungsstand.md
++++ b/Forschungsstand.md
+@@ -1,6 +1,6 @@
+ # Forschungsstand
+ 
+-**Quellenstand: 25.10.2026, Commit c4df998.** Diese Seite fasst dokumentierte Statusaussagen zusammen; sie ist kein neuer Beweisaudit. [Quellenkarte](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Versionen-und-Quellen).
++**Quellenstand: 25.10.2026, Commit f2de387.** Diese Seite fasst dokumentierte Statusaussagen zusammen; sie ist kein neuer Beweisaudit. [Quellenkarte](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Versionen-und-Quellen).
+ 
+ ## Bedingte Ergebnisse
+ 
+@@ -10,7 +10,7 @@ Die v4.9.0-Linie enthält unter anderem bedingte Cartan-Vergleiche, endliche Nor
+ 
+ Die [Basisrevision](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/v4_10_0_base/README.md) archiviert zurückgezogene Aussagen, korrigiert bekannte Fehler und kennzeichnet offene bzw. umgedeutete Aussagen. Historischer Text ist zusammen mit seinem aktuellen Status zu interpretieren.
+ 
+-Die [Layer r63–r67](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/v4_10_0_r63_r64/README.md) unterscheiden Zählregeln und prüfen deren Frame-Deutung. Dokumentiert wird insbesondere:
++Die [Layer r63–r68](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/v4_10_0_r63_r64/README.md) unterscheiden Zählregeln und prüfen deren Frame-Deutung. Dokumentiert wird insbesondere:
+ 
+ - `thm:k-values` mit $k(\gamma_{\mathrm{BI}})=0$ widerspricht `thm:frame-offset`. Dieser Widerspruch ist nicht neu: v4.9.0-r09 hat ihn bereits festgestellt und aufgelöst, indem `thm:frame-offset` nur vom strukturellen Faktor $\gamma_L$ spricht. r66 korrigiert die fehlende Zitierung in r64 und erweitert die Statusnotiz.
+ - In der Zähllesart liegt der Frame-Unterschied in $\gamma$; die Zuordnungen für $\hbar$ und $G$ benötigen eine andere Begründung.
+@@ -18,6 +18,7 @@ Die [Layer r63–r67](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/
+ - Im Hawking-Abschnitt wird eine Tachyonzählung dem austretenden Photon zugeordnet. r65 ergänzt hierzu Statusnotizen im Haupttext.
+ - In der Zähllesart ist der strukturelle Faktor eine feste Zahl; die beiden Zählregeln sind diskret und liefern keinen stetig driftenden lokalen Frame-Faktor (r66). Die Drift-Lesarten aus r08/r09 sind ohnehin durch Atomuhren ausgeschlossen.
+ - Zu Einsteins „größtem Fehler“ (`rem:einstein-blunder`, r67): Die Bemerkung und die Feldgleichung in `rem:omega-bsym` setzen $\beta_{\mathrm{sym}}^2$ auf $\Lambda$, `thm:dark-energy` setzt denselben Wert auf die Materie ($\Omega_M=\beta_{\mathrm{sym}}^2$). In der Zähllesart ist $\Lambda$ als Krümmung frame-unabhängig; erklärbar wäre höchstens der Anteil $\Omega_\Lambda=2\gamma_T/(\gamma_M+\gamma_T)\approx0{,}698$, und nur für die heutige Epoche. Offen bleibt, warum ein Zählanteil einem Energieanteil entsprechen soll.
++- Unabhängige Nachrechnung (r68): Die Zahlen von H47 und r63–r67 bestätigen sich. Einschränkung: Die Zähllesart funktioniert nur mit der U(1)-Behandlung der Horizontzustände ($\gamma\approx0{,}2375$). Die als besser begründet geltende SU(2)-Behandlung ergibt $\gamma\approx0{,}274$ und $\beta_{\mathrm{sym}}\approx0{,}604$, außerhalb des Leptonfensters. Die registrierte Vorhersage H46 bleibt mit dem ungerundeten Wert gültig.
+ 
+ Das sind Einschränkungen bestimmter Argumente, keine allgemeine Widerlegung jeder möglichen Gravitationstheorie.
+ 
+diff --git a/Hinweise-fuer-LLMs.md b/Hinweise-fuer-LLMs.md
+index 4a88929..fba8c55 100644
+--- a/Hinweise-fuer-LLMs.md
++++ b/Hinweise-fuer-LLMs.md
+@@ -6,14 +6,14 @@ Der gemeinsame [Dokumentführer](https://github.com/Moriarty1982/QuantumSphere-U
+ 
+ ## Kontext für Antworten
+ 
+-Am geprüften Stand **25.10.2026 / c4df998** ist **v4.9.0** die öffentliche Baseline (Version DOI **10.5281/zenodo.23534954**). Die Forschungsquellen bilden **4.10.0-draft** mit dokumentierten Layern bis **v4.9.0-r67**. Vor einer aktuellen Aussage den neuesten Stand erneut prüfen. [Quellenkarte](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Versionen-und-Quellen).
++Am geprüften Stand **25.10.2026 / f2de387** ist **v4.9.0** die öffentliche Baseline (Version DOI **10.5281/zenodo.23534954**). Die Forschungsquellen bilden **4.10.0-draft** mit dokumentierten Layern bis **v4.9.0-r68**. Vor einer aktuellen Aussage den neuesten Stand erneut prüfen. [Quellenkarte](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Versionen-und-Quellen).
+ 
+ ## Vorgehen bei Fachfragen
+ 
+ 1. Klären, ob die Frage Veröffentlichung, aktuelle Forschung oder einen historischen Zustand betrifft.
+ 2. Commit/Tag, Dateipfad und möglichst Satzlabel oder Abschnitt nennen.
+ 3. Definitionen, Voraussetzungen, Guards und Frame-Konventionen derselben Fassung lesen.
+-4. Spätere Korrekturen, Statusnotizen und archivierte Argumente berücksichtigen. Für Frame-/Gravitationsaussagen insbesondere r64–r67 prüfen (r66 korrigiert die Zitierung in r64).
++4. Spätere Korrekturen, Statusnotizen und archivierte Argumente berücksichtigen. Für Frame-/Gravitationsaussagen insbesondere r64–r68 prüfen (r66 korrigiert die Zitierung in r64).
+ 5. Nach Evidenz formulieren: bewiesen unter genannten Voraussetzungen; numerisch geprüft im angegebenen Bereich; zusätzlich angenommen; zurückgezogen; oder offen.
+ 6. Fehlende Belege als fehlend kennzeichnen. Aus einer Analogie keine native Ableitung machen.
+ 
+diff --git a/Home.md b/Home.md
+index a912a50..97275c3 100644
+--- a/Home.md
++++ b/Home.md
+@@ -2,7 +2,7 @@
+ 
+ Dieses Wiki erschließt den **Quantum Sphaera Companion**: ein strukturorientiertes mathematisches Forschungsprojekt mit lokalen, bedingten und readout-abhängigen Aussagen. Es bietet Menschen und LLMs einen Einstieg, eine Quellenkarte und benannte Aussagegrenzen.
+ 
+-**Stand: 25. Oktober 2026.** Öffentliche Baseline: **v4.9.0 vom 21. Oktober 2026**. Aktuelle Forschung: **4.10.0-draft**, zuletzt dokumentierte Layer **v4.9.0-r67**. Layerbezeichnung und Arbeitsversion sind unterschiedliche Kennzeichnungen.
++**Stand: 25. Oktober 2026.** Öffentliche Baseline: **v4.9.0 vom 21. Oktober 2026**. Aktuelle Forschung: **4.10.0-draft**, zuletzt dokumentierte Layer **v4.9.0-r68**. Layerbezeichnung und Arbeitsversion sind unterschiedliche Kennzeichnungen.
+ 
+ ## Einstieg
+ 
+diff --git a/Leseweg.md b/Leseweg.md
+index 798c62b..7149995 100644
+--- a/Leseweg.md
++++ b/Leseweg.md
+@@ -11,7 +11,7 @@ Die nachfolgende Übersicht bleibt als kurze Quellennavigation erhalten.
+ 1. [Startseite](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Home) und [Forschungsstand](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungsstand) lesen: Veröffentlichung und Aussagegrenzen zuerst klären.
+ 2. Das [Repository-README](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/README.md) für öffentliche Baseline, DOI und Projektstruktur verwenden.
+ 3. Für die veröffentlichte Fassung das [v4.9.0-Release-Verzeichnis](https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/v4.9.0/release/v4.9.0) oder den [Zenodo-Datensatz](https://zenodo.org/records/23534954) öffnen.
+-4. Für laufende Forschung mit der [4.10-Basis](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/v4_10_0_base/README.md) beginnen. Die [Notizen zu r63–r67](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/v4_10_0_r63_r64/README.md) dokumentieren jüngste Frame-Korrekturen.
++4. Für laufende Forschung mit der [4.10-Basis](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/v4_10_0_base/README.md) beginnen. Die [Notizen zu r63–r68](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/v4_10_0_r63_r64/README.md) dokumentieren jüngste Frame-Korrekturen.
+ 
+ ## Für konkrete mathematische Fragen
+ 
+diff --git a/Versionen-und-Quellen.md b/Versionen-und-Quellen.md
+index 6cf1944..e0313ff 100644
+--- a/Versionen-und-Quellen.md
++++ b/Versionen-und-Quellen.md
+@@ -1,24 +1,24 @@
+ # Versionen und Quellen
+ 
+-Stand: **25.10.2026**, geprüft gegen Commit [`c4df9980bc0689711bc536cfec56d2af04d39444`](https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/c4df9980bc0689711bc536cfec56d2af04d39444). Links auf `main` zeigen die weiterentwickelte Fassung; für reproduzierbare Aussagen einen Commit-Link verwenden.
++Stand: **25.10.2026**, geprüft gegen Commit [`f2de387d66d6ab2da00ef28a14305729910d7ef1`](https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/f2de387d66d6ab2da00ef28a14305729910d7ef1). Links auf `main` zeigen die weiterentwickelte Fassung; für reproduzierbare Aussagen einen Commit-Link verwenden.
+ 
+ | Ebene | Stand | Verwendung |
+ |---|---|---|
+ | Öffentliche Baseline | v4.9.0, 21.10.2026 | Publizierte Aussagen und Zitation |
+-| Forschung | 4.10.0-draft; Layer bis v4.9.0-r67 | Nachträgliche Forschung und Korrekturen; keine 4.10-Veröffentlichung |
++| Forschung | 4.10.0-draft; Layer bis v4.9.0-r68 | Nachträgliche Forschung und Korrekturen; keine 4.10-Veröffentlichung |
+ | Vorherige Veröffentlichung | v4.8.0, DOI 10.5281/zenodo.23365244 | Historischer Vergleich |
+ | Ältere Veröffentlichung | v4.7.0, DOI 10.5281/zenodo.20232911 | Herkunft und ältere Argumente |
+ | Analysen, Savepoints, Prüfberichte | jeweils eigener Stand | Keine automatische Release-Zugehörigkeit |
+ 
+ ## Primäre Quellen
+ 
+-- [README am geprüften Commit](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/c4df9980bc0689711bc536cfec56d2af04d39444/README.md): öffentliche Baseline und Scope Guard.
+-- [CITATION.cff am geprüften Commit](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/c4df9980bc0689711bc536cfec56d2af04d39444/CITATION.cff): Zitiermetadaten.
++- [README am geprüften Commit](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2de387d66d6ab2da00ef28a14305729910d7ef1/README.md): öffentliche Baseline und Scope Guard.
++- [CITATION.cff am geprüften Commit](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2de387d66d6ab2da00ef28a14305729910d7ef1/CITATION.cff): Zitiermetadaten.
+ - [Zenodo v4.9.0](https://zenodo.org/records/23534954): veröffentlichter Datensatz; [Version DOI](https://doi.org/10.5281/zenodo.23534954).
+ - [Concept DOI](https://doi.org/10.5281/zenodo.19210728): versionsübergreifender Projektverweis. Für eine bestimmte Fassung den Version DOI angeben.
+-- [Forschungs-README](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/c4df9980bc0689711bc536cfec56d2af04d39444/sources/research/README.md): Arbeitslinie und historische Einordnungen.
+-- [4.10-Basisnotizen](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/c4df9980bc0689711bc536cfec56d2af04d39444/notes/research/v4_10_0_base/README.md): Arbeitsversion, Revisionen, Archivierung und Guards.
+-- [r63–r67](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/c4df9980bc0689711bc536cfec56d2af04d39444/notes/research/v4_10_0_r63_r64/README.md): jüngste Frame-Prüfungen und Statuskorrekturen.
++- [Forschungs-README](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2de387d66d6ab2da00ef28a14305729910d7ef1/sources/research/README.md): Arbeitslinie und historische Einordnungen.
++- [4.10-Basisnotizen](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2de387d66d6ab2da00ef28a14305729910d7ef1/notes/research/v4_10_0_base/README.md): Arbeitsversion, Revisionen, Archivierung und Guards.
++- [r63–r68](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2de387d66d6ab2da00ef28a14305729910d7ef1/notes/research/v4_10_0_r63_r64/README.md): jüngste Frame-Prüfungen und Statuskorrekturen.
+ 
+ ## Versionsfallen
+ 
+diff --git a/Wiki-Pflege.md b/Wiki-Pflege.md
+index a931e68..b2057da 100644
+--- a/Wiki-Pflege.md
++++ b/Wiki-Pflege.md
+@@ -34,9 +34,11 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
+ 
+ ## Änderungsnachweis
+ 
++**25.10.2026, Layer r68:** Forschungsstand um die unabhängige Nachrechnung ergänzt (U(1)- gegen SU(2)-Zählung); Stand- und Layerangaben auf Commit f2de387 und r68 gesetzt.
++
+ **25.10.2026, Layer r66:** Forschungsstand korrigiert: Der Widerspruch `thm:k-values` gegen `thm:frame-offset` stammt aus v4.9.0-r09 und ist dort aufgelöst; r66 holt die Zitierung nach. Hinweis zum lokalen Frame-Faktor ergänzt. Quellenstand: Merge von PR #43 (ce264ba).
+ 
+-**25.10.2026, Layer r67:** Forschungsstand um die Prüfung von `rem:einstein-blunder` ergänzt; Stand- und Layerangaben auf Commit c4df998 und r67 gesetzt. Fundstellen geprüft; keine mathematischen Manuskriptänderungen durch das Wiki.
++**25.10.2026, Layer r67:** Forschungsstand um die Prüfung von `rem:einstein-blunder` ergänzt; Stand- und Layerangaben auf Commit f2de387 und r67 gesetzt. Fundstellen geprüft; keine mathematischen Manuskriptänderungen durch das Wiki.
+ 
+ **25.10.2026, Formelsatz und Lesefluss:** Deutscher und englischer Dokumentführer als gemeinsamer Weg für Menschen und LLMs überarbeitet; technische Hinweise als Anmerkungen markiert. Formeln in beiden Lesewegen, beiden Koide-Beispielen und im Forschungsstand auf LaTeX-Satz umgestellt. Mathematische Aussagen und Quellenstand beibehalten.
+ 
+-- 
+2.43.0
+
