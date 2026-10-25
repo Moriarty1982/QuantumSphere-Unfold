@@ -76370,4 +76370,104 @@ R_{\rm glob}^{(v490\text{-}r67,+)}=(0,1,1,1,1),
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
 
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r68 Source-Only: An Independent Recheck of H47 and r63 to r67}
+\addcontentsline{toc}{section}{v4.9.0-r68 Source-Only: An Independent Recheck of H47 and r63 to r67}
+\label{sec:v490-r68-recheck}
+% ============================================================================
+
+\paragraph{Purpose.}
+The author asked to recompute the results of v4.9.0-r63 to r67 and to check the conjectures behind them.  The numbers were recomputed with newly written code
+(\texttt{llm/k104\_nachrechnung.py}, \texttt{llm/k105\_h46\_exakt.py}) and the literature values were looked up.  This layer records what holds and corrects two
+statements.  It makes no prediction.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r68 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r68 results}
+\label{subsec:v490-r68-results}
+
+\paragraph{Theoremlet v4.9.0-r68.1 (confirmed).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] The three counting solutions of r63.1 (\(0.127384\), \(0.237533\), \(0.274067\)) agree to \(10^{-12}\); Meissner (\texttt{gr-qc/0407052}) gives
+\(0.23753295796592\), Ghosh and Mitra (\texttt{gr-qc/0411035}) \(\gamma\approx0.274\).
+\item[(b)] Meissner counts sequences of labels \(m\), with the area depending on \(|m|\) only; the factor \(2\) counts \(\pm m\).  The counted states are the
+states \(|j=|m|,m\rangle\), so the reading of r63.2 matches the counting.
+\item[(c)] The saturation statement of r63.2 holds exactly for all states up to \(j=10\); the boost statements of r63.3 and r63.4 hold numerically; the
+tachyon of Convention~F has rapidity \(-\eta+i\pi/2\) relative to R (r24.2).
+\item[(d)] The counting form of r67.2 and the side swap of r67.1 hold; the corollary ``Cosmological constant revisited'' also writes
+\(\Lambda_{\mathrm{obs}}\sim\bsym^2\).  Planck 2018 gives \(\Omega_m=0.315\pm0.007\), DESI DR2 BAO \(0.2975\pm0.0086\).
+\item[(e)] H46 with the unrounded \(\bsym=0.549406\) instead of \(0.5493\): \(\sin^2\theta_{23}\in[0.4908,0.4975]\) instead of \([0.4913,0.4975]\).  The registered
+interval \([0.49,0.50]\) still holds; a control run with \(0.5493\) reproduces \texttt{llm/k100\_out.txt}.
+\end{enumerate}
+
+\paragraph{Correction v4.9.0-r68.2.}
+The statement of r67.2 that \(\gamma_M+\gamma_T\) is \(|\gamma_3|\) of Theorem~\ref{thm:triolic-gBI} is not a finding: that theorem defines
+\(\gamma_3:=-(\gstring+\gamma_{\mathrm{LQG}})\).  It holds by definition, up to the rounding of the input \(0.2375\).
+
+\paragraph{Correction v4.9.0-r68.3 (which counting the literature prefers).}
+The SU(2)-invariant treatment of the horizon (Engle, Noui, Perez, \texttt{arXiv:0905.3168}) is regarded as better founded than the U(1) treatment, which counts
+too many microstates (logarithmic correction \(-\tfrac12\) instead of \(-\tfrac32\)); it gives \(\gamma\approx0.274\), the Ghosh--Mitra value.  The lepton window of
+r61.1(e) selects the U(1) counting (\(0.2375\)).  Reading~5 of r63, that the data select the corrected counting, is therefore not supported: they select the counting
+that the later literature considers the less well founded.  The wording ``corrected''/``superseded'' of v4.8.0-r03 (F11) reflects the state of 2004.
+
+\paragraph{Remarks v4.9.0-r68.4.}
+\begin{enumerate}[leftmargin=2em]
+\item The ABCK value and the Meissner value are both U(1) countings, so the pair of r63 is consistent within one treatment.  An SU(2) pair has the same floor
+(\(2j+1=2\) at \(j=\tfrac12\)) and gives \(\bsym=0.604\), outside the window.
+\item The uncertainty reading of r63.2 is a reinterpretation of the U(1) counting, not part of its derivation; mathematically it is exact.
+\item ``Own frame'' of the tachyon means \(1/\bsym\) relative to R in r24.2 and the mirror frame with \(E=0\) in r63.4; the numbers agree, the words do not.
+\item With the unrounded value \(\eta=0.6175\) lies near the lower edge \(0.611\) of the window of r61.1(e), so the number of H46 hits is sensitive
+(\(120\to168\) in variant~A).
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+By the scripts named above (outputs \texttt{llm/k104\_out.txt}, \texttt{llm/k105\_out.txt}) and the cited papers; protocol \texttt{llm/Nachrechnung\_r63\_r67.md}.
+\(\square\)
+
+\subsection*{v4.9.0-r68 status in the three frames}
+\label{subsec:v490-r68-frames}
+
+Unchanged from r63 to r67; r68.3 concerns the choice of counting for M and T, not the frames.
+
+\subsection*{v4.9.0-r68 register entries}
+\label{subsec:v490-r68-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r68\\
+\midrule
+numbers of H47, r63 to r67 & confirmed\\
+H46 & holds with the unrounded \(\bsym\)\\
+\(\gamma_M+\gamma_T=|\gamma_3|\) (r67.2) & by definition, not a finding\\
+counting reading of \(\bsym\) & requires the U(1) treatment; the SU(2) treatment preferred in the literature gives \(0.604\), outside the window\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r68 ledger and guard update}
+\label{subsec:v490-r68-ledger-guard}
+
+\[
+R_{\rm chk}^{v490\text{-}r68}=(1,1,0)
+\]
+for (numbers confirmed; two statements corrected; the counting reading depends on a disputed treatment).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r68,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r68}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
 \end{document}

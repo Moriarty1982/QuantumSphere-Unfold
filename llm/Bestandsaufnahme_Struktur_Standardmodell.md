@@ -1,6 +1,6 @@
 # Bestandsaufnahme: Was folgt aus der Struktur, was ist eingesetzt?
 
-Stand 2026-10-25, nach v4.9.0-r67. Lebendes Dokument: nach jeder Runde nachführen (Spalte „Stand“, Fundstelle, Datum).
+Stand 2026-10-25, nach v4.9.0-r68. Lebendes Dokument: nach jeder Runde nachführen (Spalte „Stand“, Fundstelle, Datum).
 Zweck (Autorabsicht): Eine vereinheitlichte Theorie muss keine neue Physik einführen, sondern erklären, **warum** das
 Standardmodell diese Struktur hat. Das wird hier Merkmal für Merkmal geprüft. Eine Erklärung zählt nur, wenn die Struktur
 eine Alternative **ausschließt**: Sie muss etwas verbieten.

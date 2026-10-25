@@ -94,7 +94,7 @@ Nicht in diesem Verzeichnis, aber referenziert: `RC14_uncompressed_reference_sou
 
 ## Der Runden-Workflow
 
-Die **Runden** wachsen append-only: eine neue Runde ist ein neuer Abschnitt unmittelbar vor `\end{document}`, bestehende Runden werden nicht umgeschrieben. Aktueller Stand: **r94**, **v4.8.0-r20**, **v4.9.0-r67**. Runden der v4.8.0-Linie heißen `v4.8.0-rNN` (Labels `sec:v480-rNN-...`), danach `v4.9.0-rNN` (`sec:v490-rNN-...`); `qs.py outline` und `ledger` erkennen alle Formen. Inhalt jeder Runde ausführlich in der Kernkarte (`llm/Kernkarte_Quantum_Sphaera_v1.md`, Abschnitt 7).
+Die **Runden** wachsen append-only: eine neue Runde ist ein neuer Abschnitt unmittelbar vor `\end{document}`, bestehende Runden werden nicht umgeschrieben. Aktueller Stand: **r94**, **v4.8.0-r20**, **v4.9.0-r68**. Runden der v4.8.0-Linie heißen `v4.8.0-rNN` (Labels `sec:v480-rNN-...`), danach `v4.9.0-rNN` (`sec:v490-rNN-...`); `qs.py outline` und `ledger` erkennen alle Formen. Inhalt jeder Runde ausführlich in der Kernkarte (`llm/Kernkarte_Quantum_Sphaera_v1.md`, Abschnitt 7).
 
 **Der Hauptkorpus wird seit v4.9.0-r25 überarbeitet** (Autorauftrag 2026-10-22: alte Arbeit nicht verlieren, falsche Aussagen nicht stehen lassen). Regel (`sec:v490-r25-main-body-revision`, Skript `llm/aufraeumen_v490.py`):
 - **(A) Sackgasse** (widerlegt, ausgeschlossen, zurückgezogen): Original wortgleich in den Archiv-Anhang `sec:v490-archive`; an der alten Stelle bleibt dieselbe Umgebung mit **gleicher Nummer und gleichem Label**, kurzer Aussage dessen, was bleibt, und Verweis. Alle `\ref` lösen weiter auf.
@@ -175,7 +175,7 @@ Guard-Linter für neue Runden: `python llm/training/guard_linter.py <tex> --star
 | r65 | Statusnotizen nach r64 (Regel C, Spezifikation `llm/revision_spec_v490_r64.py`) an thm:k-values, thm:planck-photon, thm:hawking-triolic; PR #40 (r62) gemergt als 390eb3f, PR #41 (r63/r64) als 67f0539; PR #42 (r65) als 64973ef |
 | r66 | Korrektur zu r64.1(a): Widerspruch k(γ_BI) = 0 gegen thm:frame-offset stand schon in r09 und ist dort aufgelöst; r65-Notiz an thm:k-values um den Verweis erweitert (`llm/revision_spec_v490_r66.py`); unter der Zähl-Lesart kein stetiger lokaler Frame-Faktor (Regeln diskret); Korollar α-Drift Notiz-Kandidat |
 | r67 | Einsteins „größter Fehler“ (Autorhinweis): rem:einstein-blunder und Feldgleichung in rem:omega-bsym setzen β² auf Λ, thm:dark-energy auf Ω_M (Vertauschung); Zählform Ω_M = (γ_M − γ_T)/(γ_M + γ_T), Ω_Λ = 2γ_T/(γ_M + γ_T); nur heute gültig; Λ selbst frame-unabhängig; Statusnotiz-Kandidaten; PR #43 (r66) gemergt als ce264ba; PR #44 (r67) als c4df998; Wiki-Update als Patch `llm/wiki/wiki_r66_r67.patch` (Push aus dieser Sitzung gesperrt) |
-| Nachrechnung | (keine Runde) H47/r63–r67 mit eigenem Code und Literatur nachgeprüft (`llm/Nachrechnung_r63_r67.md`): Zahlen bestätigt; Korrekturen: γ_M + γ_T = |γ₃| tautologisch; Literatur bevorzugt SU(2)-Zählung (γ ≈ 0,274), das Leptonfenster wählt U(1); H46 mit exaktem β weiter [0,49; 0,50] |
+| r68 | (Runde r68, aus der Nachrechnung) H47/r63–r67 mit eigenem Code und Literatur nachgeprüft (`llm/Nachrechnung_r63_r67.md`): Zahlen bestätigt; Korrekturen: γ_M + γ_T = |γ₃| tautologisch; Literatur bevorzugt SU(2)-Zählung (γ ≈ 0,274), das Leptonfenster wählt U(1); H46 mit exaktem β weiter [0,49; 0,50] |
 
 Ältere Runden (r03–r94, v4.8.0-r01–r20): Kernkarte und die genannten Register. Kurzstand v4.8.0: Lesart B (ℂ³, SO(3,ℂ)) als Arbeitslesart, Sektoren nach Vorzeichen von s, vorab festgelegte Tests H2–H13 mit Ergebnissen, Riemann-Arbeit seit r04 keine Beweisquelle.
 

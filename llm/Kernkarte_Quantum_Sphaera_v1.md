@@ -2498,6 +2498,10 @@ Autor: „rechne das nach und prüfe deine Vermutungen“. `llm/Nachrechnung_r63
 - **K117.5:** „Eigener Frame“ des Tachyons meint in r24.2 und r63.4 Verschiedenes (1/β relativ zu R gegen E = 0 im Spiegel-Frame); Zahlen konsistent.
 - **K117.6 H46 (M):** mit β = 0,549406 sin²θ₂₃ ∈ [0,4908; 0,4975] (vorher [0,4913; 0,4975]); Vorhersage [0,49; 0,50] gültig; Kontrolllauf reproduziert k100. Trefferzahl 120 → 168, η nahe am unteren Fensterrand.
 
+### K118 Runde v4.9.0-r68: unabhängige Nachrechnung (2026-10-25)
+
+`sec:v490-r68-recheck`, Snippet `llm/v490_r68_round.tex`; Inhalt = K117. r68.1 bestätigt (Zahlen, Meissner-Zählung über ±m, Robertson bis j = 10, Boost, Ω-Form, Daten, H46 mit exaktem β). Korrektur r68.2: γ_M + γ_T = |γ₃| per Definition. Korrektur r68.3: Literatur bevorzugt SU(2)-Zählung (0,274), Fenster wählt U(1); Lesart 5 von r63 nicht gedeckt. r68.4: U(1)-Paar konsistent, SU(2)-Paar β = 0,604; Unschärfe-Lesart Umdeutung; „eigener Frame“ zweideutig; η nahe unterem Fensterrand. R_chk = (1,1,0); Guards unverändert.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2670,6 +2674,7 @@ Autor: „rechne das nach und prüfe deine Vermutungen“. `llm/Nachrechnung_r63
 - v13.2 (2026-10-25): K115 Runde v4.9.0-r66: Korrektur zu K113.1 (Widerspruch stand schon in r09, dort aufgelöst), lokaler Frame-Faktor unter der Zähl-Lesart; PR #42 (r65) gemergt als 64973ef.
 - v13.3 (2026-10-25): K116 Runde v4.9.0-r67 (Einsteins „größter Fehler“ unter der Zähl-Lesart); PR #43 (r66) gemergt als ce264ba.
 - v13.4 (2026-10-25): K117 Nachrechnung H47/r63–r67 (bestätigt; Korrekturen: |γ₃| tautologisch, Literatur bevorzugt SU(2)-Zählung 0,274; H46 mit exaktem β gültig).
+- v13.5 (2026-10-25): K118 Runde v4.9.0-r68 trägt die Nachrechnung K117 als Runde ein (bestätigt; Korrekturen r68.2, r68.3).
 
 ---
 
