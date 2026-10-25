@@ -19,3 +19,18 @@ Continuation of [`../v4_10_0_r61/`](../v4_10_0_r61/README.md). Both layers are a
 Source after layer v4.9.0-r64: SHA256 prefix `86bb4b2ee3d4fd1c`. Local build of the monolith: 1261 → 1266 pages, hard values 0, overfull unchanged (45);
 guard linter 0 hits. Candidate build with `.github/scripts/qsc_latex_build.py --source-dir sources/research`: 1289 → 1294 pages, 3967 → 3977 labels, same hard values.
 Lean workflow green on the module.
+
+## Layer v4.9.0-r65: status notes (rule C)
+
+On 2026-10-25 the author decided to add the status notes named by r64. The main-body text stays; three `\qsstatus` notes are added or extended by
+`llm/revision_spec_v490_r64.py` (applied with `llm/apply_patches.py`, locally to the monolith and here to `sources/research/parts/v470/10_sphaera_and_physics.tex`):
+
+| Place | Note |
+|---|---|
+| thm:k-values | existing note extended: k(γ_BI) = 0 contradicts thm:frame-offset; k(ħ), k(G) need a source other than γ_L |
+| thm:planck-photon | existing note extended: γ_L^{−3/2} not supported by the counting reading |
+| thm:hawking-triolic | new note: the tachyon counting is assigned to the escaping photon (T read as R) |
+
+The layer `rounds/v490_r65_round.tex` is appended to `v490-post-release-layers.tex`; guard vectors unchanged.
+Local monolith: 1266 → 1267 pages, SHA256 prefix `0e6d2568c89c8807`, hard values 0, overfull 45, guard linter 0 hits.
+Candidate build: 1294 → 1295 pages, 3977 → 3981 labels, same hard values.
