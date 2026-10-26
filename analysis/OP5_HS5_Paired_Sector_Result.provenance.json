@@ -1,0 +1,29 @@
+{
+  "checkpoint": "OP5-HS5-PAIRED-SECTOR-2026-10-26",
+  "git_base": "3fa5ba9440d0985fbb2b3786eaebe56a887cfe6a",
+  "retrieved_at_utc": "2026-10-26T04:59:31.6519783Z",
+  "method": "Exact block algebra with independent source and rank review; no numerical experiment",
+  "independent_source_hash_verified": true,
+  "inputs": [
+    {
+      "path": "analysis/OP5_HS5_Paired_Sector_Result.md",
+      "sha256": "b97537b35afbfe66bbd8bc33f2ab0376c0baa9c2f2131cf57474c3eef01c053a"
+    },
+    {
+      "path": "analysis/OP5_HS5_Partner_Lift_Independent.md",
+      "sha256": "eaf8d7054b327ecb20ea3382db1fe73068f045df14bfe069ce1a840044a165eb"
+    },
+    {
+      "path": "analysis/OP5_Dynamics_And_Symmetry_Selection.md",
+      "sha256": "1353abdd1d90a4779d48d01ef2e009c017a233360a620ee7640b77435aacc939"
+    },
+    {
+      "path": "sources/research/parts/v470/32_atlas_and_op_promotion.tex",
+      "sha256": "6e9fb2e657886c4edcf3298f7b697686cbc573557465281e2ab8842359aa2d02"
+    },
+    {
+      "path": "sources/research/parts/v490-post-release-layers.tex",
+      "sha256": "232bdd631bac34259be48b6d326fbf6eaf38f084ee4bec1a621658b3c964424e"
+    }
+  ]
+}

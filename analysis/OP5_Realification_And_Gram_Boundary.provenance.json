@@ -1,0 +1,26 @@
+{
+  "checkpoint": "OP5-REALIFICATION-GRAM-BOUNDARY-2026-10-26",
+  "git_base": "3fa5ba9440d0985fbb2b3786eaebe56a887cfe6a",
+  "retrieved_at_utc": "2026-10-26T05:28:20.3706116Z",
+  "method": "Exact realification, rational boost and ensemble counterexamples; independent analytic review",
+  "correction": "r04.1 already supplies local realification dictionary; previous comparison note amended",
+  "independent_source_hash_verified": true,
+  "inputs": [
+    {
+      "path": "analysis/OP5_Realification_And_Gram_Boundary.md",
+      "sha256": "151be290c254b60f72dc0d0335e4b625e143f3fa8d439f9eefe4a019252e07c2"
+    },
+    {
+      "path": "analysis/OP5_Realification_Gram_Independent.md",
+      "sha256": "432ac21dd20018472f2bce659efbcc29e5c0e5affc7e32e751dbd3d16a46a922"
+    },
+    {
+      "path": "analysis/OP5_Comparison_Map_And_Frame_Type.md",
+      "sha256": "3273349d832ed3da05f8b92ee2016c24481903e640c65652cd46a59047a688ef"
+    },
+    {
+      "path": "sources/research/parts/v490-post-release-layers.tex",
+      "sha256": "232bdd631bac34259be48b6d326fbf6eaf38f084ee4bec1a621658b3c964424e"
+    }
+  ]
+}

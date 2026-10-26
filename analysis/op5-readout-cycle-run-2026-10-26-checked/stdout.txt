@@ -1,0 +1,279 @@
+{
+  "assertion_tested": "eight exact stationary readout/delay/thermal-collision cycles, full bare-energy first law and unique contraction bound",
+  "software": {
+    "python": "3.12.10",
+    "sympy": "1.14.0"
+  },
+  "inputs": {
+    "system_H": "sigma_z/2, gap=hbar=1",
+    "bath": "diag(1/4,3/4), beta*gap=log3",
+    "axis_A": [
+      "3/5",
+      "0",
+      "4/5"
+    ],
+    "axis_B": [
+      "0",
+      "4/5",
+      "3/5"
+    ],
+    "swap_cos": "4/5",
+    "swap_sin": "3/5",
+    "meter_free_H": "0 in ideal readout dilation; switching work retained"
+  },
+  "reservoir_affine_offset": "Matrix([[0], [0], [-9/50]])",
+  "reservoir_linear_map": "Matrix([[16/25, 6/25, 0], [-6/25, 16/25, 0], [0, 0, 16/25]])",
+  "contraction_bound_exact": "2*sqrt(73)/25",
+  "contraction_bound_numeric": 0.6835202996254025,
+  "cases": [
+    {
+      "order": "AB",
+      "phase": "0",
+      "stationary_bloch_exact": [
+        "-5184/311425",
+        "-13824/311425",
+        "-132849/622850"
+      ],
+      "stationary_bloch_numeric": [
+        -0.016646062454844665,
+        -0.04438949987958578,
+        -0.21329212490968932
+      ],
+      "energy_stages_exact": [
+        "-132849/1245700",
+        "-900/12457",
+        "-900/12457",
+        "-324/12457",
+        "-132849/1245700"
+      ],
+      "start_energy": -0.10664606245484466,
+      "work_first_readout": 0.03439752749458136,
+      "work_second_readout": 0.04623906237456851,
+      "work_free": 0.0,
+      "total_readout_work": 0.08063658986914987,
+      "reservoir_heat_to_system": -0.08063658986914987,
+      "bath_energy_gain": 0.08063658986914987,
+      "first_law_residual_exact": "0",
+      "purity_start": 0.5238705248216504
+    },
+    {
+      "order": "BA",
+      "phase": "0",
+      "stationary_bloch_exact": [
+        "-7776/354625",
+        "2916/354625",
+        "-148401/709250"
+      ],
+      "stationary_bloch_numeric": [
+        -0.021927388086006343,
+        0.00822277053225238,
+        -0.20923651744800845
+      ],
+      "energy_stages_exact": [
+        "-148401/1418500",
+        "-405/11348",
+        "-405/11348",
+        "-324/14185",
+        "-148401/1418500"
+      ],
+      "start_energy": -0.10461825872400422,
+      "work_first_readout": 0.06892915051110328,
+      "work_second_readout": 0.012848078956644342,
+      "work_free": 0.0,
+      "total_readout_work": 0.08177722946774763,
+      "reservoir_heat_to_system": -0.08177722946774763,
+      "bath_energy_gain": 0.08177722946774763,
+      "first_law_residual_exact": "0",
+      "purity_start": 0.5221641722686355
+    },
+    {
+      "order": "AB",
+      "phase": "pi/2",
+      "stationary_bloch_exact": [
+        "-10368/232225",
+        "-27648/232225",
+        "-125073/464450"
+      ],
+      "stationary_bloch_numeric": [
+        -0.04464635590483367,
+        -0.11905694907955647,
+        -0.26929271180966735
+      ],
+      "energy_stages_exact": [
+        "-125073/928900",
+        "-900/9289",
+        "-900/9289",
+        "-648/9289",
+        "-125073/928900"
+      ],
+      "start_energy": -0.13464635590483368,
+      "work_first_readout": 0.03775756270858004,
+      "work_second_readout": 0.027128862094951016,
+      "work_free": 0.0,
+      "total_readout_work": 0.06488642480353106,
+      "reservoir_heat_to_system": -0.06488642480353106,
+      "bath_energy_gain": 0.06488642480353106,
+      "first_law_residual_exact": "0",
+      "purity_start": 0.5443432094267588
+    },
+    {
+      "order": "BA",
+      "phase": "pi/2",
+      "stationary_bloch_exact": [
+        "0",
+        "0",
+        "-9/50"
+      ],
+      "stationary_bloch_numeric": [
+        0.0,
+        0.0,
+        -0.18
+      ],
+      "energy_stages_exact": [
+        "-9/100",
+        "-81/2500",
+        "-81/2500",
+        "0",
+        "-9/100"
+      ],
+      "start_energy": -0.09,
+      "work_first_readout": 0.0576,
+      "work_second_readout": 0.0324,
+      "work_free": 0.0,
+      "total_readout_work": 0.09,
+      "reservoir_heat_to_system": -0.09,
+      "bath_energy_gain": 0.09,
+      "first_law_residual_exact": "0",
+      "purity_start": 0.5162
+    },
+    {
+      "order": "AB",
+      "phase": "pi",
+      "stationary_bloch_exact": [
+        "-5184/311425",
+        "-13824/311425",
+        "-132849/622850"
+      ],
+      "stationary_bloch_numeric": [
+        -0.016646062454844665,
+        -0.04438949987958578,
+        -0.21329212490968932
+      ],
+      "energy_stages_exact": [
+        "-132849/1245700",
+        "-900/12457",
+        "-900/12457",
+        "-324/12457",
+        "-132849/1245700"
+      ],
+      "start_energy": -0.10664606245484466,
+      "work_first_readout": 0.03439752749458136,
+      "work_second_readout": 0.04623906237456851,
+      "work_free": 0.0,
+      "total_readout_work": 0.08063658986914987,
+      "reservoir_heat_to_system": -0.08063658986914987,
+      "bath_energy_gain": 0.08063658986914987,
+      "first_law_residual_exact": "0",
+      "purity_start": 0.5238705248216504
+    },
+    {
+      "order": "BA",
+      "phase": "pi",
+      "stationary_bloch_exact": [
+        "-7776/354625",
+        "2916/354625",
+        "-148401/709250"
+      ],
+      "stationary_bloch_numeric": [
+        -0.021927388086006343,
+        0.00822277053225238,
+        -0.20923651744800845
+      ],
+      "energy_stages_exact": [
+        "-148401/1418500",
+        "-405/11348",
+        "-405/11348",
+        "-324/14185",
+        "-148401/1418500"
+      ],
+      "start_energy": -0.10461825872400422,
+      "work_first_readout": 0.06892915051110328,
+      "work_second_readout": 0.012848078956644342,
+      "work_free": 0.0,
+      "total_readout_work": 0.08177722946774763,
+      "reservoir_heat_to_system": -0.08177722946774763,
+      "bath_energy_gain": 0.08177722946774763,
+      "first_law_residual_exact": "0",
+      "purity_start": 0.5221641722686355
+    },
+    {
+      "order": "AB",
+      "phase": "3*pi/2",
+      "stationary_bloch_exact": [
+        "0",
+        "0",
+        "-9/50"
+      ],
+      "stationary_bloch_numeric": [
+        0.0,
+        0.0,
+        -0.18
+      ],
+      "energy_stages_exact": [
+        "-9/100",
+        "-36/625",
+        "-36/625",
+        "0",
+        "-9/100"
+      ],
+      "start_energy": -0.09,
+      "work_first_readout": 0.0324,
+      "work_second_readout": 0.0576,
+      "work_free": 0.0,
+      "total_readout_work": 0.09,
+      "reservoir_heat_to_system": -0.09,
+      "bath_energy_gain": 0.09,
+      "first_law_residual_exact": "0",
+      "purity_start": 0.5162
+    },
+    {
+      "order": "BA",
+      "phase": "3*pi/2",
+      "stationary_bloch_exact": [
+        "-15552/318625",
+        "5832/318625",
+        "-156177/637250"
+      ],
+      "stationary_bloch_numeric": [
+        -0.04880972930561004,
+        0.018303648489603766,
+        -0.24507963907414673
+      ],
+      "energy_stages_exact": [
+        "-156177/1274500",
+        "-405/10196",
+        "-405/10196",
+        "-648/12745",
+        "-156177/1274500"
+      ],
+      "start_energy": -0.12253981953707337,
+      "work_first_readout": 0.08281836014123185,
+      "work_second_readout": -0.011122008630835623,
+      "work_free": 0.0,
+      "total_readout_work": 0.07169635151039623,
+      "reservoir_heat_to_system": -0.07169635151039623,
+      "bath_energy_gain": 0.07169635151039623,
+      "first_law_residual_exact": "0",
+      "purity_start": 0.531390721355816
+    }
+  ],
+  "non_claims": [
+    "Full Bloch-ball comparison, not a native real-disk frame assignment",
+    "Fixed reservoir state, axes, gap and timing are explicit inputs",
+    "Readout energy changes are supplied/absorbed as apparatus pulse work",
+    "Reservoir refresh and meter reset resources are not computed or declared free",
+    "Repeated protocol steady state is not a spacetime vacuum with pressure=-density",
+    "No physical time, mode density, stress tensor or Lambda predicted",
+    "An additive Hamiltonian constant shifts absolute energy but not probabilities, work or heat"
+  ]
+}

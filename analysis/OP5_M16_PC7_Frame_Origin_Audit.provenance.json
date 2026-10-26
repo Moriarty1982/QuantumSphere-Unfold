@@ -1,0 +1,52 @@
+{
+  "checkpoint": "OP5-M16-PC7-FRAME-ORIGIN-2026-10-26",
+  "retrieved_at_utc": "2026-10-26T04:07:53.9338415Z",
+  "git_base": "3fa5ba9440d0985fbb2b3786eaebe56a887cfe6a",
+  "method": "Internal source genealogy and exact analytical tests A-D; no native numerical reconstruction",
+  "inputs": [
+    {
+      "path": "analysis/OP5_M16_PC7_Frame_Origin_Audit.md",
+      "sha256": "0cf369e4dfaff8eacf3e4b45a85028e19237f32f76b4c8bca1fb1b755ece7e2b"
+    },
+    {
+      "path": "analysis/OP5_Common_Operator_Representation.md",
+      "sha256": "a9215c02dc37bb9ce77b0c84d0b79a541bc30070d6826b4e7cd72e1ad2417043"
+    },
+    {
+      "path": "analysis/Native_Operator_Link_Audit.md",
+      "sha256": "debcecb7dd3e49ab7fff3e4a5ee676746aa9041a6bfeaa8ae479d756ba382838"
+    },
+    {
+      "path": "analysis/HC_Two_Frame_Action_Bridge.md",
+      "sha256": "bd5649a5d5bc219b7f2878085a059b5d5344f5705bedb3ea63c59f874355725d"
+    },
+    {
+      "path": "sources/research/v480-companion.tex",
+      "sha256": "2539821bc89877ec37360b5be3aff7ab4f769c261d7020fc717a789cc8adc49f"
+    },
+    {
+      "path": "sources/research/parts/native-operator-link.tex",
+      "sha256": "3843a019e6ba8b1c6e642ba2c53ad11f33134e1745d8b68e15c69ac2b5617b0f"
+    },
+    {
+      "path": "sources/research/parts/v470/10_sphaera_and_physics.tex",
+      "sha256": "7d72c58b1159f5462c6be395961fcd8882028fc3e8c8495e7f2a3b10055c1a32"
+    },
+    {
+      "path": "sources/research/parts/v470/12_structural_core.tex",
+      "sha256": "4d663bedef288c803b1538b417e8a846006d77fe2c540adc066a86851e952b15"
+    },
+    {
+      "path": "sources/research/parts/v470/13_hc_hypotheses.tex",
+      "sha256": "fa97bc7dc07be0263a95d2cd4083b3ee0e4572073fb386464b24ceaa75ee2b47"
+    },
+    {
+      "path": "sources/research/parts/v470/16_master_model.tex",
+      "sha256": "3cde6869502ff4b3cbe4f3fc0534cc5d331d1815014904299eb935ea026493b3"
+    },
+    {
+      "path": "sources/research/parts/v490-post-release-layers.tex",
+      "sha256": "232bdd631bac34259be48b6d326fbf6eaf38f084ee4bec1a621658b3c964424e"
+    }
+  ]
+}

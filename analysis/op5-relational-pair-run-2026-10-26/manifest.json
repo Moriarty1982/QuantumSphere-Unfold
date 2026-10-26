@@ -1,0 +1,163 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_RELATIONAL_PAIR_GRAVITY_2026_10_26",
+  "repository": {
+    "commit": "3fa5ba9440d0985fbb2b3786eaebe56a887cfe6a",
+    "dirty": true
+  },
+  "command": [
+    "python",
+    "-B",
+    "analysis/OP5_Relational_Pair_Gravity_Check.py",
+    "--output",
+    "analysis/op5-relational-pair-run-2026-10-26/result.json"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "runner-python",
+        "version": "3.12.10"
+      },
+      {
+        "name": "Python",
+        "version": "3.12.10"
+      },
+      {
+        "name": "sympy",
+        "version": "1.14.0"
+      },
+      {
+        "name": "mpmath",
+        "version": "1.3.0"
+      }
+    ],
+    "hardware": "Windows-11-10.0.26300-SP0"
+  },
+  "mathematics": {
+    "assertion_tested": "Exact exchange/common-shift invariance, nonzero relative minima and pair Hessian of a declared scalar matching potential; nine constant-field Einstein backgrounds differing only by vacuum level; same-sign heat-factor and reference-subtraction controls.",
+    "coefficient_domain": "Exact symbolic real algebra and 45-digit mpmath arithmetic",
+    "conventions": "Metric signature (-,+,+,+), c=hbar=1; A,f,lambda>0,G>1. Pair scalars eta_i are dimensionless, kinetic coefficient f². Comparison numerical A=1/2,f=lambda=1 in unspecified mass units.",
+    "inputs": [
+      "Potential C+lambda f^4(cosh(eta1-eta2)-G)^2 is constructed, NOT native",
+      "G=0.2375/(log(2)/(pi sqrt(3))) historical input",
+      "No H0, observed Lambda or scalar vacuum value fitted"
+    ],
+    "bounds": {
+      "precision_decimal_digits": 45,
+      "absolute_tolerance": "1e-40",
+      "neutral_centers": [
+        -2,
+        0,
+        0.8
+      ],
+      "vacuum_offsets": [
+        -1,
+        0,
+        1
+      ]
+    },
+    "non_claims": [
+      "No native action derivation",
+      "No absolute vacuum scale selected",
+      "No physical Lambda prediction",
+      "No radiative/global stability theorem",
+      "No OP5 closure"
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-10-25T23:03:19.471512+00:00",
+    "runtime_seconds": 2.235,
+    "exit_status": 0,
+    "status": "completed",
+    "timeout_seconds": 60.0,
+    "max_output_bytes": 524288,
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": 1
+    },
+    "missing_results": [],
+    "invalid_results": []
+  },
+  "execution_artifacts": [
+    "analysis/OP5_Relational_Pair_Gravity_Check.py",
+    "sources/research/parts/v490-post-release-layers.tex",
+    "sources/research/parts/v470/10_sphaera_and_physics.tex",
+    "analysis/HC_Two_Frame_Action_Bridge.md",
+    "analysis/HC_Induced_Gravity_Heat_Kernel.md"
+  ],
+  "input_artifacts": [
+    {
+      "path": "analysis/OP5_Relational_Pair_Gravity_Check.py",
+      "sha256": "c2653a4a64da83f22b063b7297acabaabd63be488559ae89799b364e902a0574",
+      "sha256_after": "c2653a4a64da83f22b063b7297acabaabd63be488559ae89799b364e902a0574"
+    },
+    {
+      "path": "sources/research/parts/v490-post-release-layers.tex",
+      "sha256": "232bdd631bac34259be48b6d326fbf6eaf38f084ee4bec1a621658b3c964424e",
+      "sha256_after": "232bdd631bac34259be48b6d326fbf6eaf38f084ee4bec1a621658b3c964424e"
+    },
+    {
+      "path": "sources/research/parts/v470/10_sphaera_and_physics.tex",
+      "sha256": "7d72c58b1159f5462c6be395961fcd8882028fc3e8c8495e7f2a3b10055c1a32",
+      "sha256_after": "7d72c58b1159f5462c6be395961fcd8882028fc3e8c8495e7f2a3b10055c1a32"
+    },
+    {
+      "path": "analysis/HC_Two_Frame_Action_Bridge.md",
+      "sha256": "bd5649a5d5bc219b7f2878085a059b5d5344f5705bedb3ea63c59f874355725d",
+      "sha256_after": "bd5649a5d5bc219b7f2878085a059b5d5344f5705bedb3ea63c59f874355725d"
+    },
+    {
+      "path": "analysis/HC_Induced_Gravity_Heat_Kernel.md",
+      "sha256": "3910a1fee31ad4b27fac0445fdc2bb53ed5ff6c8442d52556c76651426c1a340",
+      "sha256_after": "3910a1fee31ad4b27fac0445fdc2bb53ed5ff6c8442d52556c76651426c1a340"
+    }
+  ],
+  "output_directory": "analysis/op5-relational-pair-run-2026-10-26",
+  "declared_results": [
+    "analysis/op5-relational-pair-run-2026-10-26/result.json"
+  ],
+  "outputs": [
+    {
+      "path": "analysis/op5-relational-pair-run-2026-10-26/stdout.txt",
+      "sha256": "b9a96ae28b56e996dbe22db6188ebcff31edbd4cf24859be053bc14562820dac",
+      "kind": "log"
+    },
+    {
+      "path": "analysis/op5-relational-pair-run-2026-10-26/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "log"
+    },
+    {
+      "path": "analysis/op5-relational-pair-run-2026-10-26/result.json",
+      "sha256": "796626729b2459e9beee0c6876604ba84b5a08b8e7f9025dadc5dfbc75b64a19",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    {
+      "check": "input hashes unchanged",
+      "passed": true
+    },
+    {
+      "check": "process exited successfully within enforced limits",
+      "passed": true
+    },
+    {
+      "check": "declared result files are present and regular",
+      "passed": true
+    }
+  ],
+  "result": "Run completed; mathematical assertion requires interpretation and review.",
+  "residual_risks": [
+    "Command success does not establish the mathematical interpretation.",
+    "Only listed input artifacts are pinned; external dependencies need recorded versions.",
+    "The thread cap uses conventional environment variables; a child program may ignore them."
+  ]
+}

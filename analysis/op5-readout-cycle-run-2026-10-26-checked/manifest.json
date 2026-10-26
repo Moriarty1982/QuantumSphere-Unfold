@@ -1,0 +1,152 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_READOUT_CYCLE_ENERGY_2026_10_26",
+  "repository": {
+    "commit": "3fa5ba9440d0985fbb2b3786eaebe56a887cfe6a",
+    "dirty": true
+  },
+  "command": [
+    "python",
+    "-B",
+    "analysis/OP5_Readout_Cycle_Energy_Check.py",
+    "--output",
+    "analysis/op5-readout-cycle-run-2026-10-26-checked/result.json"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "runner-python",
+        "version": "3.12.10"
+      },
+      {
+        "name": "Python",
+        "version": "3.12.10"
+      },
+      {
+        "name": "sympy",
+        "version": "1.14.0"
+      }
+    ],
+    "hardware": "Windows-11-10.0.26300-SP0"
+  },
+  "mathematics": {
+    "assertion_tested": "Exact eight-protocol stationary states for two ordered nonselective qubit readouts, one free-delay phase and a positive-temperature energy-conserving fresh-bath partial swap; exact readout work, heat, bath energy and first-law closure.",
+    "coefficient_domain": "Exact rational/complex matrix arithmetic and symbolic trigonometric values, with decimal display only",
+    "conventions": "gap=hbar=1; Hs=sigma_z/2. Bath has identical Hamiltonian and state diag(1/4,3/4). Axes A=(3/5,0,4/5), B=(0,4/5,3/5). Full Bloch-ball comparison explicitly extends original real disk. Apparatus has degenerate free Hamiltonian in ideal controlled readout; pulse switching work is retained.",
+    "inputs": [
+      "All axes, reservoir population, partial-swap angle, energy gap and delay phases are model inputs, not calibrated from native QSC",
+      "cos(theta)=4/5, sin(theta)=3/5",
+      "Fresh bath for each cycle"
+    ],
+    "bounds": {
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "phases": [
+        "0",
+        "pi/2",
+        "pi",
+        "3pi/2"
+      ],
+      "stationary_cases": 8,
+      "arithmetic": "exact symbolic"
+    },
+    "non_claims": [
+      "No native frame/Hamiltonian assignment",
+      "No physical time or energy density",
+      "No free measurement or free reservoir reset",
+      "No vacuum equation of state or Lambda prediction"
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-10-25T23:27:35.700927+00:00",
+    "runtime_seconds": 3.437,
+    "exit_status": 0,
+    "status": "completed",
+    "timeout_seconds": 90.0,
+    "max_output_bytes": 524288,
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": 1
+    },
+    "missing_results": [],
+    "invalid_results": []
+  },
+  "execution_artifacts": [
+    "analysis/OP5_Readout_Cycle_Energy_Check.py",
+    "sources/research/parts/v490-post-release-layers.tex",
+    "formal/QSFormal/Frames.lean",
+    "analysis/OP5_Neutral_Pair_Dynamics.md"
+  ],
+  "input_artifacts": [
+    {
+      "path": "analysis/OP5_Readout_Cycle_Energy_Check.py",
+      "sha256": "da3fd3f8a83867941ee4f46d417649fb38f3d05e48c2c62b21be9499bffd4ca4",
+      "sha256_after": "da3fd3f8a83867941ee4f46d417649fb38f3d05e48c2c62b21be9499bffd4ca4"
+    },
+    {
+      "path": "sources/research/parts/v490-post-release-layers.tex",
+      "sha256": "232bdd631bac34259be48b6d326fbf6eaf38f084ee4bec1a621658b3c964424e",
+      "sha256_after": "232bdd631bac34259be48b6d326fbf6eaf38f084ee4bec1a621658b3c964424e"
+    },
+    {
+      "path": "formal/QSFormal/Frames.lean",
+      "sha256": "d05c812136899bc82fe1acfe0d5fa39967477a9e5eb0becd66f314a42b7bc03d",
+      "sha256_after": "d05c812136899bc82fe1acfe0d5fa39967477a9e5eb0becd66f314a42b7bc03d"
+    },
+    {
+      "path": "analysis/OP5_Neutral_Pair_Dynamics.md",
+      "sha256": "499826695e62c8649d0310e4a8a818440451627817729303a576deff54314cca",
+      "sha256_after": "499826695e62c8649d0310e4a8a818440451627817729303a576deff54314cca"
+    }
+  ],
+  "output_directory": "analysis/op5-readout-cycle-run-2026-10-26-checked",
+  "declared_results": [
+    "analysis/op5-readout-cycle-run-2026-10-26-checked/result.json"
+  ],
+  "outputs": [
+    {
+      "path": "analysis/op5-readout-cycle-run-2026-10-26-checked/stdout.txt",
+      "sha256": "0bd83d6faf44e525d40db98ae9d53fd1ccc9a414d81bf234d4684e2e158f2224",
+      "kind": "log"
+    },
+    {
+      "path": "analysis/op5-readout-cycle-run-2026-10-26-checked/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "log"
+    },
+    {
+      "path": "analysis/op5-readout-cycle-run-2026-10-26-checked/result.json",
+      "sha256": "4d850ad7976a04145b7fea81b45216fbbac95278b292a1f585b42a86783e7388",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    {
+      "check": "input hashes unchanged",
+      "passed": true
+    },
+    {
+      "check": "process exited successfully within enforced limits",
+      "passed": true
+    },
+    {
+      "check": "declared result files are present and regular",
+      "passed": true
+    }
+  ],
+  "result": "Run completed; mathematical assertion requires interpretation and review.",
+  "residual_risks": [
+    "Command success does not establish the mathematical interpretation.",
+    "Only listed input artifacts are pinned; external dependencies need recorded versions.",
+    "The thread cap uses conventional environment variables; a child program may ignore them."
+  ]
+}

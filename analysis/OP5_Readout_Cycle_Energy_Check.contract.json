@@ -1,0 +1,55 @@
+{
+  "claim_id": "OP5_READOUT_CYCLE_ENERGY_2026_10_26",
+  "mathematics": {
+    "assertion_tested": "Exact eight-protocol stationary states for two ordered nonselective qubit readouts, one free-delay phase and a positive-temperature energy-conserving fresh-bath partial swap; exact readout work, heat, bath energy and first-law closure. Conditional two-fluid continuum control: constant radiation maintained by positive dust, exact continuity/source exhaustion and distinction between subsystem effective pressure and total acceleration.",
+    "coefficient_domain": "Exact rational/complex matrix arithmetic and symbolic trigonometric values, with decimal display only",
+    "conventions": "gap=hbar=1; Hs=sigma_z/2. Bath has identical Hamiltonian and state diag(1/4,3/4). Axes A=(3/5,0,4/5), B=(0,4/5,3/5). Full Bloch-ball comparison explicitly extends original real disk. Apparatus has degenerate free Hamiltonian in ideal controlled readout; pulse switching work is retained. Q is operational thermal-prepared-ancilla energy transfer, without claiming a unique heat/ergotropy decomposition; outgoing ancillas may carry coherence. Continuum control includes no additional bare Lambda or gravitating component.",
+    "inputs": [
+      "All axes, reservoir population, partial-swap angle, energy gap and delay phases are model inputs, not calibrated from native QSC",
+      "cos(theta)=4/5, sin(theta)=3/5",
+      "Fresh bath for each cycle"
+    ],
+    "bounds": {
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "phases": [
+        "0",
+        "pi/2",
+        "pi",
+        "3pi/2"
+      ],
+      "stationary_cases": 8,
+      "arithmetic": "exact symbolic"
+    },
+    "non_claims": [
+      "No native frame/Hamiltonian assignment",
+      "No physical time or energy density",
+      "No free measurement or free reservoir reset",
+      "No vacuum equation of state or Lambda prediction",
+      "Continuum radiation/dust pressures are independent hypotheses, not qubit outputs"
+    ]
+  },
+  "execution_artifacts": [
+    "analysis/OP5_Readout_Cycle_Energy_Check.py",
+    "sources/research/parts/v490-post-release-layers.tex",
+    "formal/QSFormal/Frames.lean",
+    "analysis/OP5_Neutral_Pair_Dynamics.md"
+  ],
+  "software": [
+    {
+      "name": "Python",
+      "version": "3.12.10"
+    },
+    {
+      "name": "sympy",
+      "version": "1.14.0"
+    }
+  ],
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  }
+}

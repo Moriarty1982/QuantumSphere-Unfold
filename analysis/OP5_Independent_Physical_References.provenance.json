@@ -1,0 +1,41 @@
+{
+  "checkpoint": "OP5-INDEPENDENT-PHYSICAL-REFERENCES-2026-10-26",
+  "git_base": "3fa5ba9440d0985fbb2b3786eaebe56a887cfe6a",
+  "retrieved_at_utc": "2026-10-26T07:55:12.8323058Z",
+  "method": "Source classification plus exact noncollinear positive-null-stream reference; independent proof reconciliation",
+  "independent_source_hashes_verified": true,
+  "inputs": [
+    {
+      "path": "analysis/OP5_Independent_Physical_References.md",
+      "sha256": "3b9672aeeb1fcd84245f287d7fdcef69a8fa6563e98352625ecf2247fa9b5dc8"
+    },
+    {
+      "path": "analysis/OP5_Independent_Contributions_Independent.md",
+      "sha256": "467be49cadf471e201532f7abb89681d053101c2692ee4ef6e04777595211894"
+    },
+    {
+      "path": "analysis/OP5_Covariant_Readout_Completion.md",
+      "sha256": "f942aaf4c98171803f20fad04f877939b821dd31104369404ea71665a952e7d2"
+    },
+    {
+      "path": "analysis/OP5_Neutral_Frame_Candidates.md",
+      "sha256": "ad3aec67b198ffcebb45a15b4ddc09d32e7da2bd0d756e0cbf0e80b851305dd3"
+    },
+    {
+      "path": "sources/research/parts/v470/10_sphaera_and_physics.tex",
+      "sha256": "7d72c58b1159f5462c6be395961fcd8882028fc3e8c8495e7f2a3b10055c1a32"
+    },
+    {
+      "path": "sources/research/parts/v470/13_hc_hypotheses.tex",
+      "sha256": "fa97bc7dc07be0263a95d2cd4083b3ee0e4572073fb386464b24ceaa75ee2b47"
+    },
+    {
+      "path": "sources/research/parts/v470/32_atlas_and_op_promotion.tex",
+      "sha256": "6e9fb2e657886c4edcf3298f7b697686cbc573557465281e2ab8842359aa2d02"
+    },
+    {
+      "path": "sources/research/parts/v490-post-release-layers.tex",
+      "sha256": "232bdd631bac34259be48b6d326fbf6eaf38f084ee4bec1a621658b3c964424e"
+    }
+  ]
+}

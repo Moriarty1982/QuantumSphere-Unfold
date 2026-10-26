@@ -1,0 +1,60 @@
+{
+  "checkpoint": "OP5-COMMON-OPERATORS-2026-10-26",
+  "retrieved_at_utc": "2026-10-26T03:59:46.5492897Z",
+  "git_base": "3fa5ba9440d0985fbb2b3786eaebe56a887cfe6a",
+  "scope": "Analytical synthesis; constructed probe sector; no numerical experiment or full field solution",
+  "inputs": [
+    {
+      "path": "analysis/OP5_Common_Operator_Representation.md",
+      "sha256": "a9215c02dc37bb9ce77b0c84d0b79a541bc30070d6826b4e7cd72e1ad2417043"
+    },
+    {
+      "path": "analysis/OP5_Native_Closure_Block_Reduction.md",
+      "sha256": "6ddbae247f66aab042bd811ba1b9f681bd861c19e1780c38e5f83055b8ea4161"
+    },
+    {
+      "path": "analysis/OP5_Triadic_Invariant_Plane.md",
+      "sha256": "0f0f0a4764ecd34fb509f22be83d04d4cd7a61d80d60c4541397a23d7d5ea749"
+    },
+    {
+      "path": "analysis/OP5_Triadic_Closure_Compatibility.md",
+      "sha256": "486c20ca0e16d28226d50b8ac890642e1dabc1144fe0564530ee328a242b2675"
+    },
+    {
+      "path": "analysis/OP5_Native_Projector_Transport_Test.md",
+      "sha256": "ff9518b8dc4a3afdb0c8cedab8b5c8f8ca01f8e0f40bda0509d82da7c046b9f3"
+    },
+    {
+      "path": "analysis/OP5_Spinor_Separation_And_Dirac_Limit.md",
+      "sha256": "e95c8cd3332a249d06d28abe623493da0b30973e431617620e21abcc5bbeaf28"
+    },
+    {
+      "path": "analysis/OP5_Readout_Protocol_Energy_Result.md",
+      "sha256": "09fda9021d38a56221dcd6da5e5acc08d7030c60bc0ee252cf32634a4bac0877"
+    },
+    {
+      "path": "analysis/OP5_Lambda_Neutral_Reassessment.md",
+      "sha256": "bcfdf7a8f7fa09b2ae8f1bf1db6e6573a4fd5b0d3a6e2fd310bef582ec06eec8"
+    },
+    {
+      "path": "sources/research/parts/v470/12_structural_core.tex",
+      "sha256": "4d663bedef288c803b1538b417e8a846006d77fe2c540adc066a86851e952b15"
+    },
+    {
+      "path": "sources/research/parts/v470/16_master_model.tex",
+      "sha256": "3cde6869502ff4b3cbe4f3fc0534cc5d331d1815014904299eb935ea026493b3"
+    },
+    {
+      "path": "sources/research/parts/v470/10_sphaera_and_physics.tex",
+      "sha256": "7d72c58b1159f5462c6be395961fcd8882028fc3e8c8495e7f2a3b10055c1a32"
+    },
+    {
+      "path": "sources/research/parts/v490-post-release-layers.tex",
+      "sha256": "232bdd631bac34259be48b6d326fbf6eaf38f084ee4bec1a621658b3c964424e"
+    },
+    {
+      "path": "sources/research/parts/hc-dynamics-and-geometry.tex",
+      "sha256": "472297781d9eb837bc4e5f6ecac59d9e4abe792a03bc8df7eacd4247fda3546f"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "C:\Users\marcb\OneDrive\Dokumente\GitHub\QuantumSphere-Unfold\analysis\OP5_Readout_Cycle_Energy_Check.py", line 139, in <module>
+    main()
+  File "C:\Users\marcb\OneDrive\Dokumente\GitHub\QuantumSphere-Unfold\analysis\OP5_Readout_Cycle_Energy_Check.py", line 29, in main
+    assert U.H*U==s.eye(4)
+           ^^^^^^^^^^^^^^^
+AssertionError

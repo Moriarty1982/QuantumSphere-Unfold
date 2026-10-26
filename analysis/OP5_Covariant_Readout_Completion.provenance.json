@@ -1,0 +1,29 @@
+{
+  "checkpoint": "OP5-COVARIANT-READOUT-COMPLETION-2026-10-26",
+  "git_base": "3fa5ba9440d0985fbb2b3786eaebe56a887cfe6a",
+  "retrieved_at_utc": "2026-10-26T05:49:59.9272751Z",
+  "method": "Exact covariant readout reconstruction, duality/mixture and observer counterexamples; independent review",
+  "independent_source_hash_verified": true,
+  "inputs": [
+    {
+      "path": "analysis/OP5_Covariant_Readout_Completion.md",
+      "sha256": "f942aaf4c98171803f20fad04f877939b821dd31104369404ea71665a952e7d2"
+    },
+    {
+      "path": "analysis/OP5_Duality_Stress_Independent.md",
+      "sha256": "ceae0f0bae715e4670752e03de97373fa0a5347cc935f083e738de29873c30f6"
+    },
+    {
+      "path": "analysis/OP5_Realification_And_Gram_Boundary.md",
+      "sha256": "151be290c254b60f72dc0d0335e4b625e143f3fa8d439f9eefe4a019252e07c2"
+    },
+    {
+      "path": "analysis/OP5_Neutral_Frame_Candidates.md",
+      "sha256": "ad3aec67b198ffcebb45a15b4ddc09d32e7da2bd0d756e0cbf0e80b851305dd3"
+    },
+    {
+      "path": "sources/research/parts/v490-post-release-layers.tex",
+      "sha256": "232bdd631bac34259be48b6d326fbf6eaf38f084ee4bec1a621658b3c964424e"
+    }
+  ]
+}
