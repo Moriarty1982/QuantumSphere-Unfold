@@ -1,0 +1,834 @@
+{
+  "date": "2026-10-27",
+  "scope": "Primary-paper searches; metadata only, no body passages; supplementary web queries not exhaustively exported",
+  "searches": [
+    {
+      "query": "Dirac spinor polar decomposition Yvon Takabayasi angle hydrodynamic equations bilinear reconstruction",
+      "results": [
+        {
+          "paperId": "3755538276434993616",
+          "primaryId": "arxiv:1707.03270",
+          "ids": {
+            "arxiv": [
+              "1707.03270"
+            ]
+          },
+          "title": "General Dynamics of Spinors",
+          "abstract": "In this paper, we consider a general twisted-curved space-time hosting Dirac spinors and we take into account the Lorentz covariant polar decomposition of the Dirac spinor field: the corresponding decomposition of the Dirac spinor field equation leads to a set of field equations that are real and where spinorial components have disappeared while still maintaining Lorentz covariance. We will see that the Dirac spinor will contain two real scalar degrees of freedom, the module and the so-called Yvon-Takabayashi angle, and we will display their field equations. This will permit us to study the coupling of curvature and torsion respectively to the module and the YT angle.",
+          "score": 0.8455347349164652
+        },
+        {
+          "paperId": "1430269280138398437",
+          "primaryId": "arxiv:2309.00617",
+          "ids": {
+            "arxiv": [
+              "2309.00617"
+            ]
+          },
+          "title": "Dirac hydrodynamics in 19 forms",
+          "abstract": "We consider the relativistic spinor field theory re-formulated in polar variables so to allow for the interpretation given in terms of fluid variables. After that the dynamics of spinor fields is converted as dynamics of a special type of spin fluid, we demonstrate that such conversion into dynamical spin fluid is not unique but it can be obtained through 19 different rearrangements, by explicitly showing the 19 minimal systems of hydrodynamic equations that are equivalent to the Dirac equations.",
+          "score": 0.7837237376544267
+        },
+        {
+          "paperId": "8381951903003257133",
+          "primaryId": "arxiv:1712.08656",
+          "ids": {
+            "arxiv": [
+              "1712.08656"
+            ]
+          },
+          "title": "Torsion Axial Vector and Yvon-Takabayashi Angle: Zitterbewegung, Chirality and all that",
+          "abstract": "We consider propagating torsion as a completion of gravitation in order to describe the dynamics of curved-twisted space-times filled with Dirac spinorial fields; we discuss interesting relationships of the torsion axial vector and the curvature tensor with the Yvon-Takabayashi angle and the module of the spinor field, that is the two degrees of freedom of the spinor field itself: in particular, we shall discuss in what way the torsion axial vector could be seen as the potential of a specific interaction of the Yvon-Takabayashi angle, and therefore as a force between the two chiral projections of the spinor field itself. Chiral interactions of the components of a spinor may render effects of zitterbewegung, as well as effective mass terms and other related features: we shall briefly sketch some of the analogies and differences with the similar but not identical situation given by the Yukawa interaction occurring in the Higgs sector of the standard model. We will provide some overall considerations about general consequences for contemporary physics, consequences that have never been discussed before, so far as we are aware, in the present physics literature.",
+          "score": 0.7031827112198086
+        },
+        {
+          "paperId": "6261420442192379537",
+          "primaryId": "arxiv:hep-th/0207262",
+          "ids": {
+            "arxiv": [
+              "hep-th/0207262"
+            ]
+          },
+          "title": "Polar decomposition of a Dirac spinor",
+          "abstract": "Local decompositions of a Dirac spinor into `charged' and `real' pieces psi(x) = M(x) chi(x) are considered. chi(x) is a Majorana spinor, and M(x) a suitable Dirac-algebra valued field. Specific examples of the decomposition in 2+1 dimensions are developed, along with kinematical implications, and constraints on the component fields within M(x) sufficient to encompass the correct degree of freedom count. Overall local reparametrisation and electromagnetic phase invariances are identified, and a dynamical framework of nonabelian gauge theories of noncompact groups is proposed. Connections with supersymmetric composite models are noted (including, for 2+1 dimensions, infrared effective theories of spin-charge separation in models of high-Tc superconductivity).",
+          "score": 0.6979384260080908
+        }
+      ],
+      "retrieval_available": true
+    },
+    {
+      "query": "Einstein Dirac Cauchy problem local existence constraint propagation hyperbolic",
+      "results": [
+        {
+          "paperId": "5428301167176126321",
+          "primaryId": "arxiv:2509.04167",
+          "ids": {
+            "arxiv": [
+              "2509.04167"
+            ]
+          },
+          "title": "On the local existence for the characteristic initial value problem for the Einstein-Dirac system",
+          "abstract": "In this paper, we investigate the characteristic initial value problem for the Einstein-Dirac system, a model governing the interaction between gravity and spin-1/2 fields. We apply Luk's strategy Luk12 and prove a semi-global existence result for this coupled Einstein-Dirac system without imposing symmetry conditions. More precisely, we construct smooth solutions in a rectangular region to the future of two intersecting null hypersurfaces, on which characteristic initial data are specified. The key novelty is to promote the symmetric spinorial derivatives of the Dirac field to independent variables and to derive a commuted \"Weyl-curvature-free\" evolution system for them. This eliminates the coupling to the curvature in the energy estimates and closes the bootstrap at the optimal derivative levels. The analysis relies on a double null foliation and incorporates spinor-specific techniques essential to handling the structure of the Dirac field.",
+          "score": 0.9067852769181763
+        },
+        {
+          "paperId": "6840314359070735574",
+          "primaryId": "arxiv:2507.05004",
+          "ids": {
+            "arxiv": [
+              "2507.05004"
+            ]
+          },
+          "title": "The Cauchy Problem for Symmetric Hyperbolic Systems with Nonlocal Potentials",
+          "abstract": "In this paper, we investigate the initial value problem for symmetric hyperbolic systems on globally hyperbolic Lorentzian manifolds with potentials that are both nonlocal in time and space. When the potential is retarded and uniformly bounded in time, we establish well-posedness of the Cauchy problem on a time strip, proving existence, uniqueness, and regularity of solutions. If the potential is not retarded but has only short time range, we show that strong solutions still exist, under the additional assumptions that the uniform bound in time is sufficiently small compared to the range in time and that its kernel decays sufficiently fast in time with respect to the zero-order terms of the system. Furthermore, we present a counterexample demonstrating that when the uniform bound is too large compared to the time range, solutions may fail to exist. As an application, we discuss Maxwell's equations in linear dispersive media on ultrastatic spacetimes, as well as the Dirac equation with nonlocal potential naturally arising in the theory of causal fermion systems. Our paper aims to represent the starting point for a rigorous study for the Cauchy problem for the semiclassical Einstein equations.",
+          "score": 0.9067852769181763
+        },
+        {
+          "paperId": "8307164546956081642",
+          "primaryId": "arxiv:0903.0515",
+          "ids": {
+            "arxiv": [
+              "0903.0515"
+            ]
+          },
+          "title": "The characteristic Cauchy problem for Dirac fields on curved backgrounds",
+          "abstract": "On arbitrary spacetimes, we study the characteristic Cauchy problem for Dirac fields on a light-cone. We prove the existence and uniqueness of solutions in the future of the light-cone inside a geodesically convex neighbourhood of the vertex. This is done for data in L² and we give an explicit definition of the space of data on the light-cone producing a solution in H¹. The method is based on energy estimates following L. H\"ormander (J.F.A. 1990). The data for the characteristic Cauchy problem are only a half of the field, the other half is recovered from the characteristic data by integration of the constraints, consisting of the restriction of the Dirac equation to the cone. A precise analysis of the dynamics of light rays near the vertex of the cone is done in order to understand the integrability of the constraints; for this, the Geroch-Held-Penrose formalism is used.",
+          "score": 0.8872045937171068
+        },
+        {
+          "paperId": "5888462244549478585",
+          "primaryId": "arxiv:1806.06544",
+          "ids": {
+            "arxiv": [
+              "1806.06544"
+            ]
+          },
+          "title": "The well-posedness of the Cauchy problem for the Dirac operator on globally hyperbolic manifolds with timelike boundary",
+          "abstract": "We consider the Dirac operator on globally hyperbolic manifolds with timelike boundary and show well-posedness of the Cauchy initial-boundary value problem coupled to MIT-boundary conditions. This is achieved by transforming the problem locally into a symmetric positive hyperbolic system, proving existence and uniqueness of weak solutions and then using local methods developed by Lax, Phillips and Rauch, Massey to show smoothness of the solutions. Our proof actually works for a slightly more general class of local boundary conditions.",
+          "score": 0.8859476187202091
+        }
+      ],
+      "retrieval_available": true
+    },
+    {
+      "query": "presymplectic constraint algorithm Gotay Nester Hinds field theory constraint propagation",
+      "results": [
+        {
+          "paperId": "3943482241321931210",
+          "primaryId": "arxiv:2511.20538",
+          "ids": {
+            "arxiv": [
+              "2511.20538"
+            ]
+          },
+          "title": "A Presymplectic and Symmetry Reduced Formulation of the Maxwell Vlasov System",
+          "abstract": "We develop a unified geometric formulation of the Maxwell-Vlasov system using the infinite-dimensional Skinner-Rusk (SR) formalism. In this framework, particles and fields are treated simultaneously within a single presymplectic manifold, and the Gotay-Nester-Hinds algorithm recovers the full Maxwell-Vlasov equations as the compatibility conditions of a single variational system. The hierarchy of constraints -- including Vlasov advection, Gauss and Faraday laws, and the electromagnetic gauge structure -- arises naturally from the presymplectic geometry of the SR formalism. Reduction by the diffeomorphism group of phase space produces a reduced presymplectic manifold whose dynamics reproduces both the Euler-Poincare formulation for the Vlasov sector and the Marsden-Weinstein/Morrison-Greene Lie-Poisson Hamiltonian structure. We further extend the construction to equilibria that partially break the relabeling symmetry, obtaining a translated SR system that yields an effective symplectic linearization, clarifies the appearance of Goldstone-type neutral modes, and provides a geometric foundation for the energy-Casimir method. Finally, we incorporate external antenna fields into this setting by introducing affine Hamiltonian controls and establishing a theory of controlled symmetry breaking within the reduced SR framework. This leads to controlled Lie-Poisson equations for plasma-antenna coupling and a geometric mechanism for stabilization through Casimir shaping and symmetry-selective forcing. The resulting picture provides a single presymplectic structure that unifies Lagrangian, Hamiltonian, gauge, reduction, and control-theoretic aspects of the Maxwell-Vlasov system.",
+          "score": 0.958908721799535
+        },
+        {
+          "paperId": "3213846260181907319",
+          "primaryId": "arxiv:1306.5854",
+          "ids": {
+            "arxiv": [
+              "1306.5854"
+            ]
+          },
+          "title": "Hamiltonian treatment of linear field theories in the presence of boundaries: a geometric approach",
+          "abstract": "The purpose of this paper is to study in detail the constraint structure of the Hamiltonian and symplectic-Lagrangian descriptions for the scalar and electromagnetic fields in the presence of spatial boundaries. We carefully discuss the implementation of the geometric constraint algorithm of Gotay, Nester and Hinds with special emphasis on the relevant functional analytic aspects of the problem. This is an important step towards the rigorous understanding of general field theories in the presence of boundaries, very especially when these fail to be regular. The geometric approach developed in the paper is also useful with regard to the interpretation of the physical degrees of freedom and the nature of the constraints when both gauge symmetries and boundaries are present.",
+          "score": 0.9433475746920261
+        },
+        {
+          "paperId": "3844001882087198922",
+          "primaryId": "arxiv:1210.6773",
+          "ids": {
+            "arxiv": [
+              "1210.6773"
+            ]
+          },
+          "title": "Presymplectic high order maximum principle",
+          "abstract": "Pontryagin's Maximum Principle is an outstanding result for solving optimal control problems by means of optimizing a specific function on some particular variables, the so called controls. However, this is not always enough for solving all these problems. A high order maximum principle (Krener, 1977) must be used in order to obtain more necessary conditions for optimality. These new conditions determine candidates to be optimal controls for a wider range of optimal control problems. Here, we focus on control-affine systems. Krener's high order perturbations are redefined following the notions introduced in Aguilar-Lewis (2008). A weaker version of Krener's high order maximum principle is stated in the framework of presymplectic geometry. As a result, the presymplectic constraint algorithm in the sense of Gotay-Nester-Hinds (1979) can be used. We establish the connections between the presymplectic constraint algorithm and the candidates to be optimal curves obtained from the necessary conditions in Krener's high order maximum principle. In this paper we obtain weaker geometric necessary conditions for optimality of abnormal solutions than the ones in Krener (1977) and the ones in the weak high order maximum principle. These new necessary conditions are more useful, computationally speaking, for finding curves candidate to be optimal. The theory is supported by describing specifically some of the above-mentioned conditions for some mechanical control systems.",
+          "score": 0.9316617385063182
+        },
+        {
+          "paperId": "221318615109488993",
+          "primaryId": "arxiv:0903.1791",
+          "ids": {
+            "arxiv": [
+              "0903.1791"
+            ]
+          },
+          "title": "Constraint algorithm for k-presymplectic Hamiltonian systems. Application to singular field theories",
+          "abstract": "The k-symplectic formulation of field theories is especially simple, since only tangent and cotangent bundles are needed in its description. Its defining elements show a close relationship with those in the symplectic formulation of mechanics. It will be shown that this relationship also stands in the presymplectic case. In a natural way, one can mimick the presymplectic constraint algorithm to obtain a constraint algorithm that can be applied to k-presymplectic field theory, and more particularly to the Lagrangian and Hamiltonian formulations of field theories defined by a singular Lagrangian, as well as to the unified Lagrangian-Hamiltonian formalism (Skinner--Rusk formalism) for k-presymplectic field theory. Two examples of application of the algorithm are also analyzed.",
+          "score": 0.9292351881438593
+        }
+      ],
+      "retrieval_available": true
+    },
+    {
+      "query": "Cartan Kuranishi involution differential equations formal integrability exterior differential systems",
+      "results": [
+        {
+          "paperId": "5959548612491431781",
+          "primaryId": "arxiv:1410.7593",
+          "ids": {
+            "arxiv": [
+              "1410.7593"
+            ]
+          },
+          "title": "Constructing Involutive Tableaux with Guillemin Normal Form",
+          "abstract": "Involutivity is the algebraic property that guarantees solutions to an analytic and torsion-free exterior differential system or partial differential equation via the Cartan-K\"ahler theorem. Guillemin normal form establishes that the prolonged symbol of an involutive system admits a commutativity property on certain subspaces of the prolonged tableau. This article examines Guillemin normal form in detail, aiming at a more systematic approach to classifying involutive systems. The main result is an explicit quadratic condition for involutivity of the type suggested but not completed in Chapter IV, 5 of the book Exterior Differential Systems by Bryant, Chern, Gardner, Goldschmidt, and Griffiths. This condition enhances Guillemin normal form and characterizes involutive tableaux.",
+          "score": 0.84224131298103
+        },
+        {
+          "paperId": "1406252372210863332",
+          "primaryId": "arxiv:1203.1716",
+          "ids": {
+            "arxiv": [
+              "1203.1716"
+            ]
+          },
+          "title": "Formal Integrability for the Nonautonomous Case of the Inverse Problem of the Calculus of Variations",
+          "abstract": "We address the integrability conditions of the inverse problem of the calculus of variations for time-dependent SODE using the Spencer version of the Cartan-K\"ahler theorem. We consider a linear partial differential operator P given by the two Helmholtz conditions expressed in terms of semi-basic 1-forms and study its formal integrability. We prove that P is involutive and there is only one obstruction for the formal integrability of this operator. The obstruction is expressed in terms of the curvature tensor R of the induced nonlinear connection. We recover some of the classes of Lagrangian semisprays: flat semisprays, isotropic semisprays and arbitrary semisprays on 2-dimensional manifolds.",
+          "score": 0.8128673178375735
+        },
+        {
+          "paperId": "2037235398426352285",
+          "primaryId": "arxiv:1810.10344",
+          "ids": {
+            "arxiv": [
+              "1810.10344"
+            ]
+          },
+          "title": "Termination of Cartan's equivalence method",
+          "abstract": "We apply the language of the groupoid approach to Lie pseudo-groups, and the classical Cartan-Kuranishi theorem, to prove that Cartan's equivalence method terminates at involution (or at complete reduction) for constant type problems.",
+          "score": 0.7931059511841119
+        },
+        {
+          "paperId": "6729424098738857039",
+          "primaryId": "arxiv:dg-ga/9708005",
+          "ids": {
+            "arxiv": [
+              "dg-ga/9708005"
+            ]
+          },
+          "title": "Exterior differential systems: a geometric approach to PDE. Lecture notes from the 1997 Daewoo workshop",
+          "abstract": "This is an elementary introduction to exterior differential systems motivated by two examples: minimal submanifolds and the isometric embedding problem. The two main goals of the lectures are: 1. To explain how to find an appropriate geometric setting for studying a given system of pde. 2. To explain the Cartan algorithm to determine the moduli space of local solutions to any given exterior differential system and an appropriate initial value problem for the system.",
+          "score": 0.709663434293815
+        }
+      ],
+      "retrieval_available": true
+    },
+    {
+      "query": "Young measures nonlinear weak limits averaging Einstein equations backreaction Green Wald",
+      "results": [
+        {
+          "paperId": "4653297009729002015",
+          "primaryId": "arxiv:1605.06121",
+          "ids": {
+            "arxiv": [
+              "1605.06121"
+            ]
+          },
+          "title": "Cosmological backreaction in higher-derivative gravity expansions",
+          "abstract": "We calculate a general effective stress-energy tensor induced by cosmological inhomogeneity in effective theories of gravity where the action is Taylor-expandable in the Riemann tensor and covariant derivatives of the Riemann tensor. This is of interest as an effective fluid that might provide an alternative to the cosmological constant, but it also applies to gravitational waves. We use an adaptation of Green and Wald's weak-averaging framework, which averages over perturbations in the field equation where the perturbation length scales are small compared to the averaging scale. In this adaptation, the length scale of the effective theory, 1/M, is also taken to be small compared with the averaging scale. This ensures that the perturbation length scales remain in fixed proportion to the length scale of the effective theory as the cosmological averaging scale is taken to be large. We find that backreaction from higher-derivative terms in the effective action can continue to be important in the late universe, given a source of sufficiently high-frequency metric perturbations. This backreaction might also provide a window on exotic particle physics in the far ultraviolet.",
+          "score": 0.8684702192881005
+        },
+        {
+          "paperId": "850091542480836116",
+          "primaryId": "arxiv:1904.02557",
+          "ids": {
+            "arxiv": [
+              "1904.02557"
+            ]
+          },
+          "title": "Cosmological Backreaction in Spherical and Plane Symmetric Dust-Filled Space-Times",
+          "abstract": "We examine the implementation of Buchert's and Green & Wald's averaging formalisms in exact spherically symmetric and plane symmetric dust-filled cosmological models. We find that, given a cosmological space-time, Buchert's averaging scheme gives a faithful way of interpreting the large-scale expansion of space, and explicit terms that precisely quantify deviations from the behaviour expected from the Friedmann equations of homogeneous and isotropic cosmological models. The Green & Wald formalism, on the other hand, does not appear to yield any information about the large-scale properties of a given inhomogeneous space-time. Instead, this formalism is designed to calculate the back-reaction effects of short-wavelength fluctuations around a given \"background\" geometry. We find that the inferred expansion of space in this approach is entirely dependent on the choice of this background, which is not uniquely specified for any given inhomogeneous space-time, and that the \"back-reaction\" from small-scale structures vanishes in every case we study. This would appear to limit the applicability of Green & Wald's formalism to the study of large-scale expansion in the real Universe, which also has no pre-defined background. Further study is required to enhance the evaluation and comparison of these averaging formalisms, and determine whether the same difficulties exist, in less idealized space-time geometries.",
+          "score": 0.8503692405366762
+        },
+        {
+          "paperId": "6818206711205025285",
+          "primaryId": "arxiv:1406.5398",
+          "ids": {
+            "arxiv": [
+              "1406.5398"
+            ]
+          },
+          "title": "Cosmological back-reaction in modified gravity and its implications for dark energy",
+          "abstract": "We study the effective stress-energy tensor induced by cosmological inhomogeneity in f(R)=R+cR² and equivalent scalar-tensor theories, motivated both by models of early universe inflation and by phenomenological alternative cosmologies to the standard Λ-CDM. We use Green and Wald's framework for averaging over classical fluctuations of short-wavelength λ. By ensuring that the leading non-linear terms from the fluctuations of the Einstein terms and the corrections both contribute in the formal limit as λ→0, we derive a diffeomorphism invariant effective stress-energy tensor whose trace is non-vanishing and of the right sign to potentially account for the current acceleration of the universe. However a more phenomenologically acceptable dark energy model would be required if this effect were to fully account for the current acceleration.",
+          "score": 0.84224131298103
+        },
+        {
+          "paperId": "7586780521043312309",
+          "primaryId": "arxiv:1509.00346",
+          "ids": {
+            "arxiv": [
+              "1509.00346"
+            ]
+          },
+          "title": "Backreaction for Einstein-Rosen waves coupled to a massless scalar field",
+          "abstract": "We present a one-parameter family of exact solutions to Einstein equations that may be used to study the nature of the Green-Wald backreaction framework. Our explicit example is a family of Einstein-Rosen waves coupled to a massless scalar field. This solution may be reinterpreted as a generalized three-torus polarized Gowdy cosmology with scalar and gravitational waves. We use it to illustrate essential properties of the Green-Wald approach. Among other things we show that within our model the Green-Wald framework uniquely determines backreaction for finite size inhomogeneities on a predefined background. The results agree with those calculated in the Charach-Malin approach. In the vacuum limit, the Green-Wald, the Charach-Malin and the Isaacson method imply identical backreaction as expected.",
+          "score": 0.8388910504234147
+        }
+      ],
+      "retrieval_available": true
+    },
+    {
+      "query": "Dirac Fierz identities inverse reconstruction spinor bilinear tetrad",
+      "results": [
+        {
+          "paperId": "4258472034703439830",
+          "primaryId": "arxiv:0706.1258",
+          "ids": {
+            "arxiv": [
+              "0706.1258"
+            ]
+          },
+          "title": "Hestenes' Tetrad and Spin Connections",
+          "abstract": "Defining a spin connection is necessary for formulating Dirac's bispinor equation in a curved space-time. Hestenes has shown that a bispinor field is equivalent to an orthonormal tetrad of vector fields together with a complex scalar field. In this paper, we show that using Hestenes' tetrad for the spin connection in a Riemannian space-time leads to a Yang-Mills formulation of the Dirac Lagrangian in which the bispinor field is mapped to a set of Yang-Mills gauge potentials and a complex scalar field. This result was previously proved for a Minkowski space-time using Fierz identities. As an application we derive several different non-Riemannian spin connections found in the literature directly from an arbitrary linear connection acting on Hestenes' tetrad and scalar fields. We also derive spin connections for which Dirac's bispinor equation is form invariant. Previous work has not considered form invariance of the Dirac equation as a criterion for defining a general spin connection.",
+          "score": 0.8090346888067328
+        },
+        {
+          "paperId": "5960249761604171365",
+          "primaryId": "arxiv:2304.12945",
+          "ids": {
+            "arxiv": [
+              "2304.12945"
+            ]
+          },
+          "title": "Revisiting Takahashi's inversion theorem in discrete symmetry-based dual frameworks",
+          "abstract": "The so-called Takahashi's Inversion Theorem, the reconstruction of a given spinor based on its bilinear covariants, are re-examined, considering alternative dual structures. In contrast to the classical results, where the Dirac dual structure plays the central role, new duals are built using the discrete symmetries C, P, T. Their combinations are also taken into account. Furthermore, the imposition of a new adjoint structure led us also to re-examine the representation of the Clifford algebra basis elements, uncovering new bilinear structures and a new Fierz aggregate. Those results might help construct theories for new beyond standard model fields.",
+          "score": 0.8041599598359659
+        },
+        {
+          "paperId": "7526036220270921172",
+          "primaryId": "arxiv:1405.6762",
+          "ids": {
+            "arxiv": [
+              "1405.6762"
+            ]
+          },
+          "title": "Fierz bilinear formulation of the Maxwell-Dirac equations and symmetry reductions",
+          "abstract": "We study the Maxwell-Dirac equations in a manifestly gauge invariant presentation using only the spinor bilinear scalar and pseudoscalar densities, and the vector and pseudovector currents, together with their quadratic Fierz relations. The internally produced vector potential is expressed via algebraic manipulation of the Dirac equation, as a rational function of the Fierz bilinears and first derivatives (valid on the support of the scalar density), which allows a gauge invariant vector potential to be defined. This leads to a Fierz bilinear formulation of the Maxwell tensor and of the Maxwell-Dirac equations, without any reference to gauge dependent quantities. We show how demanding invariance of tensor fields under the action of a fixed (but arbitrary) Lie subgroup of the Poincar'e group leads to symmetry reduced equations. The procedure is illustrated, and the reduced equations worked out explicitly for standard spherical and cylindrical cases, which are coupled third order nonlinear PDEs. Spherical symmetry necessitates the existence of magnetic monopoles, which do not affect the coupled Maxwell-Dirac system due to magnetic terms canceling. In this paper we do not take up numerical computations. As a demonstration of the power of our approach, we also work out the symmetry reduced equations for two distinct classes of dimension 4 one-parameter families of Poincar'e subgroups, one splitting and one non-splitting. The splitting class yields no solutions, whereas for the non-splitting class we find a family of formal exact solutions in closed form.",
+          "score": 0.7248702761768248
+        },
+        {
+          "paperId": "5304566871820828100",
+          "primaryId": "arxiv:1303.1575",
+          "ids": {
+            "arxiv": [
+              "1303.1575"
+            ]
+          },
+          "title": "A unified approach to Fierz identities",
+          "abstract": "We summarize a unified and computationally efficient treatment of Fierz identities for form-valued pinor bilinears in various dimensions and signatures, using concepts and techniques borrowed from a certain approach to spinors known as geometric algebra. Our formulation displays the real, complex and quaternionic structures in a conceptually clear manner, which is moreover amenable to implementation in various symbolic computation systems.",
+          "score": 0.7160597938157098
+        }
+      ],
+      "retrieval_available": true
+    },
+    {
+      "query": "Einstein Dirac constraint equations conformal method spinor initial data",
+      "results": [
+        {
+          "paperId": "438985410031681083",
+          "primaryId": "arxiv:gr-qc/0110106",
+          "ids": {
+            "arxiv": [
+              "gr-qc/0110106"
+            ]
+          },
+          "title": "On the role of conformal three-geometries in the dynamics of General Relativity",
+          "abstract": "It is shown that the Chern-Simons functional, built in the spinor representation from the initial data on spacelike hypersurfaces, is invariant with respect to infinitesimal conformal rescalings if and only if the vacuum Einstein equations are satisfied. As a consequence, we show that in the phase space the Hamiltonian constraint of vacuum general relativity is the Poisson bracket of the imaginary part of this Chern-Simons functional and Misner's time (essentially the 3-volume). Hence the vacuum Hamiltonian constraint is the condition on the canonical variables that the imaginary part of the Chern- Simons functional be constant along the volume flow. The vacuum momentum constraint can also be reformulated in a similar way as a (more complicated) condition on the change of the imaginary part of the Chern-Simons functional along the flow of York's time.",
+          "score": 0.871299749416051
+        },
+        {
+          "paperId": "5503457060362822133",
+          "primaryId": "arxiv:2106.15027",
+          "ids": {
+            "arxiv": [
+              "2106.15027"
+            ]
+          },
+          "title": "A Phase Space Approach to the Conformal Construction of Non-Vacuum Initial Data Sets in General Relativity",
+          "abstract": "We present a uniform (and unambiguous) procedure for scaling the matter fields in implementing the conformal method to parameterize and construct solutions of Einstein constraint equations with coupled matter sources. The approach is based on a phase space representation of the space-time matter fields after a careful n+1 decomposition into spatial fields B and conjugate momenta ΠB, which are specified directly and are conformally invariant quantities. We show that if the Einstein-matter field theory is specified by a Lagrangian which is diffeomorphism invariant and involves no dependence on derivatives of the space-time metric in the matter portion of the Lagrangian, then fixing B and ΠB results in conformal constraint equations that, for constant-mean curvature initial data, semi-decouple just as they do for the vacuum Einstein conformal constraint equations. We prove this result by establishing a structural property of the Einstein momentum constraint that is independent of the conformal method: For an Einstein-matter field theory which satisfies the conditions just stated, if B and ΠB satisfy the matter Euler-Lagrange equations, then (in suitable form) the right-hand side of the momentum constraint on each spatial slice depends only on B and ΠB and is independent of the space-time metric. We discuss the details of our construction in the special cases of the following models: Einstein-Maxwell-charged scalar field, Einstein-Proca, Einstein-perfect fluid, and Einstein-Maxwell-charged dust. In these examples we find that our technique gives a theoretical basis for scaling rules, such as those for electromagnetism, that have worked pragmatically in the past, but also generates new equations with advantageous features for perfect fluids that allow direct specification of total rest mass and total charge in any spatial region.",
+          "score": 0.84224131298103
+        },
+        {
+          "paperId": "1068956291537548844",
+          "primaryId": "arxiv:gr-qc/9712050",
+          "ids": {
+            "arxiv": [
+              "gr-qc/9712050"
+            ]
+          },
+          "title": "Numerical treatment of the hyperboloidal initial value problem for the vacuum Einstein equations. I. The conformal field equations",
+          "abstract": "This is the first in a series of articles on the numerical solution of Friedrich's conformal field equations for Einstein's theory of gravity. We will discuss in this paper why one should be interested in applying the conformal method to physical problems and why there is good hope that this might even be a good idea from the numerical point of view. We describe in detail the derivation of the conformal field equations in the spinor formalism which we use for the implementation of the equations, and present all the equations as a reference for future work. Finally, we discuss the implications of the assumptions of a continuous symmetry.",
+          "score": 0.8354835371034369
+        }
+      ],
+      "retrieval_available": true
+    },
+    {
+      "query": "Yvon Takabayasi Dirac Wigner kinetic spin transport semiclassical",
+      "results": [
+        {
+          "paperId": "421126239474384140",
+          "primaryId": "arxiv:2004.07510",
+          "ids": {
+            "arxiv": [
+              "2004.07510"
+            ]
+          },
+          "title": "Semiclassical transport equations of Dirac particles in rotating frames",
+          "abstract": "We establish covariant semiclassical transport equations of massive spin-1/2 particles which are generated by the quantum kinetic equation modified by enthalpy current dependent terms. The purpose of modification is to take into account the noninertial properties due to the angular velocity of rotating frame which is equivalent to the fluid vorticity in hydrodynamical approach. We present the equations satisfied by the Wigner function components and by studying their solution in the semiclassical approximation we accomplish the transport equations. To acquire a three-dimensional kinetic theory, the relativistic kinetic equations in the comoving frame are integrated over the zeroth component of four-momentum. The resulting vector and axial-vector currents are calculated at zero temperature. There exists another three-dimensional formulation of Dirac particles which correctly addresses the noninertial features of rotating coordinates. We review it briefly and obtain the mass corrections to the chiral vector and axial-vector currents produced by this formulation.",
+          "score": 0.8872045937171068
+        },
+        {
+          "paperId": "3477915929985602577",
+          "primaryId": "arxiv:1912.01169",
+          "ids": {
+            "arxiv": [
+              "1912.01169"
+            ]
+          },
+          "title": "Wigner Function for Spin-1/2 Fermions in Electromagnetic Fields",
+          "abstract": "We study the Wigner function for massive spin-1/2 fermions in electromagnetic fields. Dirac form kinetic equation and Klein-Gordon form kinetic equation are obtained for the Wigner function, which are derived from the Dirac equation. The Wigner function and its kinetic equations are expanded in terms of the generators of Clifford algebra and a complicated system of partial differential equations is obtained. We prove that some component equations are automattically satisfied if the rest ones are fulfilled. In this thesis two methods are proposed for calculating the Wigner function, which are proved to be equivalent. The Wigner function is analytically calculated following the standard second-quantization procedure in the following cases: free fermions with or without spin imbalance, in constant magnetic field, in constant electric field, and in constant parallel electromagnetic field. Strong-field effects, such as the Landau levels and Schwinger pair-production are reproduced using the Wigner function approach. For an arbitrary space-time dependent field configuration, a semi-classical expansion with respect to the reduced Planck's constant ℏ is performed. We derive general expressions for the Wigner function components at linear order in ℏ, in which order the spin corrections start playing a role. A generalized Bargmann-Michel-Telegdi (BMT) equation and a generalized Boltzmann equation are obtained for the undetermined polarization density and net fermion number density, which can be used to construct spin-hydrodynamics in the future. We also make a comparison between analytical results and the ones from semi-classical expansion, which shows coincidence for weak electromagnetic fields and small spin imbalance.",
+          "score": 0.8519528019683106
+        },
+        {
+          "paperId": "2528666272063039669",
+          "primaryId": "arxiv:0911.4760",
+          "ids": {
+            "arxiv": [
+              "0911.4760"
+            ]
+          },
+          "title": "Semiclassical dynamics and transport of the Dirac spin",
+          "abstract": "A semiclassical theory of spin dynamics and transport is formulated using the Dirac electron model. This is done by constructing a wavepacket from the positive-energy electron band, and studying its structure and center of mass motion. The wavepacket has a minimal size equal to the Compton wavelength, and has self-rotation about the average spin angular momentum, which gives rise to the spin magnetic moment. Geometric gauge structure in the center of mass motion provides a natural explanation of the spin-orbit coupling and various Yafet terms. Applications of the spin-Hall and spin-Nernst effects are discussed.",
+          "score": 0.8455347349164652
+        }
+      ],
+      "retrieval_available": true
+    },
+    {
+      "query": "Green Wald new framework analyzing effects small scale inhomogeneities cosmology traceless",
+      "results": [
+        {
+          "paperId": "939093430227177005",
+          "primaryId": "arxiv:1011.4920",
+          "ids": {
+            "arxiv": [
+              "1011.4920"
+            ]
+          },
+          "title": "A new framework for analyzing the effects of small scale inhomogeneities in cosmology",
+          "abstract": "We develop a new, mathematically precise framework for treating the effects of nonlinear phenomena occurring on small scales in general relativity. Our approach is an adaptation of Burnett's formulation of the \"shortwave approximation\", which we generalize to analyze the effects of matter inhomogeneities as well as gravitational radiation. Our framework requires the metric to be close to a \"background metric\", but allows arbitrarily large stress-energy fluctuations on small scales. We prove that, within our framework, if the matter stress-energy tensor satisfies the weak energy condition (i.e., positivity of energy density in all frames), then the only effect that small scale inhomogeneities can have on the dynamics of the background metric is to provide an \"effective stress-energy tensor\" that is traceless and has positive energy density---corresponding to the presence of gravitational radiation. In particular, nonlinear effects produced by small scale inhomogeneities cannot mimic the effects of dark energy. We also develop \"perturbation theory\" off of the background metric. We derive an equation for the \"long-wavelength part\" of the leading order deviation of the metric from the background metric, which contains the usual terms occurring in linearized perturbation theory plus additional contributions from the small-scale inhomogeneities. Under various assumptions concerning the absence of gravitational radiation and the non-relativistic behavior of the matter, we argue that the \"short wavelength\" deviations of the metric from the background metric near a point x should be accurately described by Newtonian gravity, taking into account only the matter lying within a \"homogeneity lengthscale\" of x. Finally, we argue that our framework should provide an accurate description of the actual universe.",
+          "score": 0.9684767772459986
+        },
+        {
+          "paperId": "9017738271535403751",
+          "primaryId": "arxiv:1304.2318",
+          "ids": {
+            "arxiv": [
+              "1304.2318"
+            ]
+          },
+          "title": "Examples of backreaction of small scale inhomogeneities in cosmology",
+          "abstract": "In previous work, we introduced a new framework to treat large scale backreaction effects due to small scale inhomogeneities in general relativity. We considered one-parameter families of spacetimes for which such backreaction effects can occur, and we proved that, provided the weak energy condition on matter is satisfied, the leading effect of small scale inhomogeneities on large scale dynamics is to produce a traceless effective stress-energy tensor that itself satisfies the weak energy condition. In this work, we illustrate the nature of our framework by providing two explicit examples of one-parameter families with backreaction. The first, based on previous work of Berger, is a family of polarized vacuum Gowdy spacetimes on a torus, which satisfies all of the assumptions of our framework. As the parameter approaches its limiting value, the metric uniformly approaches a smooth background metric, but spacetime derivatives of the deviation of the metric from the background metric do not converge uniformly to zero. The limiting metric has nontrivial backreaction from the small scale inhomogeneities, with an effective stress-energy that is traceless and satisfies the weak energy condition, in accord with our theorems. Our second one-parameter family consists of metrics which have a uniform Friedmann-Lemaitre-Robertson-Walker limit. This family satisfies all of our assumptions with the exception of the weak energy condition for matter. In this case, the limiting metric has an effective stress-energy tensor which is not traceless. We emphasize the importance of imposing energy conditions on matter in studies of backreaction.",
+          "score": 0.9677045353015494
+        },
+        {
+          "paperId": "3914418682772661225",
+          "primaryId": "arxiv:1505.07800",
+          "ids": {
+            "arxiv": [
+              "1505.07800"
+            ]
+          },
+          "title": "Is there proof that backreaction of inhomogeneities is irrelevant in cosmology?",
+          "abstract": "No. In a number of papers Green and Wald argue that the standard FLRW model approximates our Universe extremely well on all scales, except close to strong field astrophysical objects. In particular, they argue that the effect of inhomogeneities on average properties of the Universe (backreaction) is irrelevant. We show that this latter claim is not valid. Specifically, we demonstrate, referring to their recent review paper, that (i) their two-dimensional example used to illustrate the fitting problem differs from the actual problem in important respects, and it assumes what is to be proven; (ii) the proof of the trace-free property of backreaction is unphysical and the theorem about it fails to be a mathematically general statement; (iii) the scheme that underlies the trace-free theorem does not involve averaging and therefore does not capture crucial non-local effects; (iv) their arguments are to a large extent coordinate-dependent, and (v) many of their criticisms of backreaction frameworks do not apply to the published definitions of these frameworks. It is therefore incorrect to infer that Green and Wald have proven a general result that addresses the essential physical questions of backreaction in cosmology.",
+          "score": 0.9392035026199311
+        }
+      ],
+      "retrieval_available": true
+    },
+    {
+      "query": "vacuum energy sequestering local theory cosmological constant Kaloper Padilla",
+      "results": [
+        {
+          "paperId": "1411461295817139530",
+          "primaryId": "arxiv:1507.04158",
+          "ids": {
+            "arxiv": [
+              "1507.04158"
+            ]
+          },
+          "title": "Vacuum energy sequestering and conformal symmetry",
+          "abstract": "In a series of recent papers Kaloper and Padilla proposed a mechanism to sequester standard model vacuum contributions to the cosmological constant. We study the consequences of embedding their proposal into a fully local quantum theory. In the original work, the bare cosmological constant Λ and a scaling parameter λ are introduced as global fields. We find that in the local case the resulting Lagrangian is that of a spontaneously broken conformal field theory where λ plays the role of the dilaton. A vanishing or a small cosmological constant is thus a consequence of the underlying conformal field theory structure.",
+          "score": 0.9811090380629609
+        },
+        {
+          "paperId": "940615260396043678",
+          "primaryId": "arxiv:2007.07058",
+          "ids": {
+            "arxiv": [
+              "2007.07058"
+            ]
+          },
+          "title": "Ultraviolet sensitivity of the cosmological sequester",
+          "abstract": "We revisit the \"sequester\" proposal of Kaloper, Padilla and collaborators, in which the amplitude of the cosmological constant is decoupled from large contributions due to loops containing Standard Model particles. We review the different formulations of the model that have appeared in the literature, and estimate the importance of a particular class of quantum corrections-those that dress the interaction between the \"rigid\" scalars and infrared properties of the spacetime such as its 4-volume and integrated curvature. In formulations that do not adequately sequester graviton loops we argue that dressing of these interactions causes further failures of complete sequestration. We estimate the size of the effect and find that it is typically smaller than the cosmological term directly induced by loops containing a single virtual graviton. Meanwhile, in the most developed formulation of the scenario (where a rigid scalar couples to the Gauss-Bonnet density), this dressing can be absorbed into a rescaling of the rigid fields and is therefore harmless.",
+          "score": 0.9508509592212774
+        },
+        {
+          "paperId": "9177750512741895030",
+          "primaryId": "arxiv:1805.05918",
+          "ids": {
+            "arxiv": [
+              "1805.05918"
+            ]
+          },
+          "title": "Late-time acceleration by a residual cosmological constant from sequestering vacuum energy in ultimate collapsed structures",
+          "abstract": "The sequestering mechanism has been proposed as a remedy to the old cosmological constant problem of the non-gravitating vacuum energy in the matter sector. Here it is shown that an extension of this global constraint mechanism arises naturally from an averaging condition for residual cosmological constants produced in different patches of the Universe. The new mechanism naturally yields the small observed value that gives rise to cosmic acceleration at late times, hence, addressing the new cosmological constant problem. Hereby the halo model picture is adopted with all matter content ultimately residing in the last collapsed structures formed. Sequestering in these collapsing patches produces the desired average residual, where a uniform prior on our present location in the collapse predicts ΩΛ=0.697. Finally, a fluctuation of the local residual from the cosmological average can naturally give rise to a locally enhanced Hubble constant.",
+          "score": 0.9399133498259924
+        }
+      ],
+      "retrieval_available": true
+    },
+    {
+      "query": "variational bicomplex Helmholtz conditions inverse problem partial differential equations",
+      "results": [
+        {
+          "paperId": "4774808766779926161",
+          "primaryId": "arxiv:1210.0802",
+          "ids": {
+            "arxiv": [
+              "1210.0802"
+            ]
+          },
+          "title": "Presymplectic current and the inverse problem of the calculus of variations",
+          "abstract": "The inverse problem of the calculus of variations asks whether a given system of partial differential equations (PDEs) admits a variational formulation. We show that the existence of a presymplectic form in the variational bicomplex, when horizontally closed on solutions, allows us to construct a variational formulation for a subsystem of the given PDE. No constraints on the differential order or number of dependent or independent variables are assumed. The proof follows a recent observation of Bridges, Hydon and Lawson and generalizes an older result of Henneaux from ordinary differential equations (ODEs) to PDEs. Uniqueness of the variational formulation is also discussed.",
+          "score": 0.9484609086700875
+        },
+        {
+          "paperId": "1341637151650101080",
+          "primaryId": "arxiv:2110.04346",
+          "ids": {
+            "arxiv": [
+              "2110.04346"
+            ]
+          },
+          "title": "Inverse problem in the calculus of variations -- functional and antiexact forms",
+          "abstract": "We connect the well-known theory of functional forms of variational bicomplex with the theory of antiexact differential forms. We identify antiexact functional forms as an obstruction to the variationality of differential equations. The most prominent result of this observation is the formulation of the variational problem for some differential equations that are not variational and neither have a variational multiplier. Heat, Navier-Stokes, and KdV equations illustrate this new variational principle.",
+          "score": 0.9267292522085272
+        },
+        {
+          "paperId": "8239395264959420348",
+          "primaryId": "arxiv:hep-th/0612182",
+          "ids": {
+            "arxiv": [
+              "hep-th/0612182"
+            ]
+          },
+          "title": "Axiomatic classical (prequantum) field theory. Jet formalism",
+          "abstract": "In contrast with QFT, classical field theory can be formulated in a strict mathematical way if one defines even classical fields as sections of smooth fiber bundles. Formalism of jet manifolds provides the conventional language of dynamic systems (nonlinear differential equations and operators) on fiber bundles. Lagrangian theory on fiber bundles is algebraically formulated in terms of the variational bicomplex of exterior forms on jet manifolds where the Euler--Lagrange operator is present as a coboundary operator. This formulation is generalized to Lagrangian theory of even and odd fields on graded manifolds. Cohomology of the variational bicomplex provides a solution of the global inverse problem of the calculus of variations, states the first variational formula and Noether's first theorem in a very general setting of supersymmetries depending on higher-order derivatives of fields. A theorem on the Koszul--Tate complex of reducible Noether identities and Noether's inverse second theorem extend an original field theory to prequantum field-antifield BRST theory. Particular field models, jet techniques and some quantum outcomes are discussed.",
+          "score": 0.9158691361149104
+        }
+      ],
+      "retrieval_available": true
+    },
+    {
+      "query": "Nash Moser implicit function theorem nonlinear partial differential equations loss derivatives",
+      "results": [
+        {
+          "paperId": "8209257716373723441",
+          "primaryId": "arxiv:1609.00213",
+          "ids": {
+            "arxiv": [
+              "1609.00213"
+            ]
+          },
+          "title": "A Nash-Moser-H\"ormander implicit function theorem with applications to control and Cauchy problems for PDEs",
+          "abstract": "We prove an abstract Nash-Moser implicit function theorem which, when applied to control and Cauchy problems for PDEs in Sobolev class, is sharp in terms of the loss of regularity of the solution of the problem with respect to the data. The proof is a combination of: (i) the iteration scheme by H\"ormander (ARMA 1976), based on telescoping series, and very close to the original one by Nash; (ii) a suitable way of splitting series in scales of Banach spaces, inspired by a simple, clever trick used in paradifferential calculus (for example, by M'etivier). As an example of application, we apply our theorem to a control and a Cauchy problem for quasi-linear perturbations of KdV equations, improving the regularity of a previous result. With respect to other approaches to control and Cauchy problems, the application of our theorem requires lighter assumptions to be verified.",
+          "score": 0.9746672967731284
+        },
+        {
+          "paperId": "774152554303479219",
+          "primaryId": "arxiv:math/0701681",
+          "ids": {
+            "arxiv": [
+              "math/0701681"
+            ]
+          },
+          "title": "A Nash-Moser theorem for singular evolution equations. Application to the Serre and Green-Naghdi equations",
+          "abstract": "We study the well-posedness of the initial value problem for a wide class of singular evolution equations. We prove a general well-posedness theorem under three assumptions easy to check: the first controls the singular part of the equation, the second the behavior of the nonlinearities, and the third one assumes that an energy estimate can be found for the linearized system. We allow losses of derivatives in this energy estimate and therefore construct a solution by a Nash-Moser iterative scheme. As an application to this general theorem, we prove the well-posedness of the Serre and Green-Naghdi equation and discuss the problem of their validity as asymptotic models for the water-waves equations.",
+          "score": 0.9453186827840592
+        },
+        {
+          "paperId": "4983097009628679053",
+          "primaryId": "arxiv:1906.12290",
+          "ids": {
+            "arxiv": [
+              "1906.12290"
+            ]
+          },
+          "title": "Size of data in implicit function problems and singular perturbations for nonlinear Schr\"odinger systems",
+          "abstract": "We investigate a general question about the size and regularity of the data and the solutions in implicit function problems with loss of regularity. First, we give a heuristic explanation of the fact that the optimal data size found by Ekeland and S'er'e with their recent non-quadratic version of the Nash-Moser theorem can also be recovered, for a large class of nonlinear problems, with quadratic schemes. Then we prove that this heuristic observation applies to the singular perturbation Cauchy problem for the nonlinear Schr\"odinger system studied by M'etivier, Rauch, Texier, Zumbrun, Ekeland, S'er'e. Using a \"free flow component\" decomposition and applying an abstract Nash-Moser-H\"ormander theorem, we improve the existing results regarding both the size of the data and the regularity of the solutions.",
+          "score": 0.9433475746920261
+        }
+      ],
+      "retrieval_available": true
+    },
+    {
+      "query": "Young measures fundamental theorem nonlinear differential constraints compensated compactness",
+      "results": [
+        {
+          "paperId": "1680805059826587431",
+          "primaryId": "arxiv:1212.1430",
+          "ids": {
+            "arxiv": [
+              "1212.1430"
+            ]
+          },
+          "title": "Directional oscillations, concentrations, and compensated compactness via microlocal compactness forms",
+          "abstract": "This work introduces microlocal compactness forms (MCFs) as a new tool to study oscillations and concentrations in Lp-bounded sequences of functions. Decisively, MCFs retain information about the location, value distribution, and direction of oscillations and concentrations, thus extending at the same time the theories of (generalized) Young measures and H-measures. In Lp-spaces oscillations and concentrations precisely discriminate between weak and strong compactness, and thus MCFs allow to quantify the difference in compactness. The definition of MCFs involves a Fourier variable, whereby also differential constraints on the functions in the sequence can be investigated easily - a distinct advantage over Young measure theory. Furthermore, pointwise restrictions are reflected in the MCF as well, paving the way for applications to Tartar's framework of compensated compactness; consequently, we establish a new weak-to-strong compactness theorem in a \"geometric\" way. After developing several aspects of the abstract theory, we consider three applications: For lamination microstructures, the hierarchy of oscillations is reflected in the MCF. The directional information retained in an MCF is harnessed in the relaxation theory for anisotropic integral functionals. Finally, we indicate how the theory pertains to the study of propagation of singularities in certain systems of PDEs. The proofs combine measure theory, Young measures, and harmonic analysis.",
+          "score": 0.9440119209381783
+        },
+        {
+          "paperId": "7346852551886954519",
+          "primaryId": "arxiv:1908.03186",
+          "ids": {
+            "arxiv": [
+              "1908.03186"
+            ]
+          },
+          "title": "Characterization of generalized Young measures generated by A-free measures",
+          "abstract": "We give two characterizations, one for the class of generalized Young measures generated by A-free measures, and one for the class generated by B-gradient measures Bu. Here, A and B are linear homogeneous operators of arbitrary order, which we assume satisfy the constant rank property. The characterization places the class of generalized A-free Young measures in duality with the class of A-quasiconvex integrands by means of a well-known Hahn--Banach separation property. A similar statement holds for generalized B-gradient Young measures. Concerning applications, we discuss several examples that showcase the rigidity or the failure of L¹-compensated compactness when concentration of mass is allowed. These include the failure of L¹-estimates for elliptic systems and the failure of L¹-rigidity for the two-state problem. As a byproduct of our techniques we also show that, for any bounded open set Ω, the inclusions L¹(Ω) ∩ A M(Ω) ∩ A, B u∈ C∞(Ω) B u∈ M(Ω), are dense with respect to area-functional convergence of measures",
+          "score": 0.9250134837227268
+        },
+        {
+          "paperId": "824385724192989507",
+          "primaryId": "arxiv:2608.20899",
+          "ids": {
+            "arxiv": [
+              "2608.20899"
+            ]
+          },
+          "title": "Concentration phenomena and the Vanishing Mass Conjecture",
+          "abstract": "Concentrating (that is, non-equi-integrable) sequences of functions satisfying linear PDE constraints arise in a wide variety of problems in PDE, the calculus of variations, and geometric measure theory. In 2001, Bouchitté conjectured that such concentrations can always be represented as superpositions of ``simple'' concentrations, a claim he termed the Vanishing Mass Conjecture. We fully resolve this conjecture for all first-order constant-coefficient linear differential operators, proving that the value-distribution (Young) measure of any such sequence admits a Choquet-type decomposition into probability measures whose barycenters lie in the associated Tartar wave cone. In fact, we prove a significantly stronger statement than originally conjectured, namely that the constituent measures are themselves generated by concentrating sequences satisfying the same PDE constraint. This provides a complete structural description of concentrating sequences and yields several applications, including a new proof of a theorem of De Philippis and the second author on the singular polar of PDE-constrained measures, two types of compensated compactness results, and a surprising result on the support cardinality of extremal concentration Young measures. We also place our results in the context of Morrey's Conjecture, showing that its analogue for pure concentrations is false. Our proofs introduce several new techniques, most notably convexity arguments involving ``barrier functions'' and a careful smoothing procedure via the heat flow that replaces classical Fourier methods.",
+          "score": 0.9168273035060777
+        }
+      ],
+      "retrieval_available": true
+    },
+    {
+      "query": "constraint preserving geometric integration differential algebraic equations SHAKE RATTLE",
+      "results": [
+        {
+          "paperId": "2956708720207082878",
+          "primaryId": "arxiv:1207.3367",
+          "ids": {
+            "arxiv": [
+              "1207.3367"
+            ]
+          },
+          "title": "Geometric Generalisations of SHAKE and RATTLE",
+          "abstract": "A geometric analysis of the Shake and Rattle methods for constrained Hamiltonian problems is carried out. The study reveals the underlying differential geometric foundation of the two methods, and the exact relation between them. In addition, the geometric insight naturally generalises Shake and Rattle to allow for a strictly larger class of constrained Hamiltonian systems than in the classical setting. In order for Shake and Rattle to be well defined, two basic assumptions are needed. First, a nondegeneracy assumption, which is a condition on the Hamiltonian, i.e., on the dynamics of the system. Second, a coisotropy assumption, which is a condition on the geometry of the constrained phase space. Non-trivial examples of systems fulfilling, and failing to fulfill, these assumptions are given.",
+          "score": 0.954239787561503
+        },
+        {
+          "paperId": "6077971833719486175",
+          "primaryId": "doi:10.1101/2022.09.28.509839",
+          "ids": {
+            "doi": [
+              "10.1101/2022.09.28.509839"
+            ]
+          },
+          "title": "Accurate and efficient constrained molecular dynamics of polymers through Newton's method and special purpose code",
+          "abstract": "ILVES-PC solves the same system of differential algebraic equations as the celebrated SHAKE algorithm, but uses Newtons method for solving the nonlinear constraint equations.",
+          "score": 0.9250134837227268
+        },
+        {
+          "paperId": "5717676124730879881",
+          "primaryId": "arxiv:0903.0907",
+          "ids": {
+            "arxiv": [
+              "0903.0907"
+            ]
+          },
+          "title": "On converting any one-step method to a variational integrator of the same order",
+          "abstract": "In the formalism of constrained mechanics, such as that which underlies the SHAKE and RATTLE methods of molecular dynamics, we present an algorithm to convert any one-step integration method to a variational integrator of the same order. The one-step method is arbitrary, and the conversion can be automated, resulting in a powerful and flexible approach to the generation of novel variational integrators with arbitrary order.",
+          "score": 0.9057233191548978
+        }
+      ],
+      "retrieval_available": true
+    },
+    {
+      "query": "occupation measures polynomial dynamical systems invariant sets semidefinite programming Lasserre",
+      "results": [
+        {
+          "paperId": "4678026859271552211",
+          "primaryId": "arxiv:1807.00754",
+          "ids": {
+            "arxiv": [
+              "1807.00754"
+            ]
+          },
+          "title": "Semidefinite Approximations of Invariant Measures for Polynomial Systems",
+          "abstract": "We consider the problem of approximating numerically the moments and the supports of measures which are invariant with respect to the dynamics of continuous- and discrete-time polynomial systems, under semialgebraic set constraints. First, we address the problem of approximating the density and hence the support of an invariant measure which is absolutely continuous with respect to the Lebesgue measure. Then, we focus on the approximation of the support of an invariant measure which is singular with respect to the Lebesgue measure. Each problem is handled through an appropriate reformulation into a linear optimization problem over measures, solved in practice with two hierarchies of finite-dimensional semidefinite moment-sum-of-square relaxations, also called Lasserre hierarchies. Under specific assumptions, the first Lasserre hierarchy allows to approximate the moments of an absolutely continuous invariant measure as close as desired and to extract a sequence of polynomials converging weakly to the density of this measure. The second Lasserre hierarchy allows to approximate as close as desired in the Hausdorff metric the support of a singular invariant measure with the level sets of the Christoffel polynomials associated to the moment matrices of this measure. We also present some application examples together with numerical results for several dynamical systems admitting either absolutely continuous or singular invariant measures.",
+          "score": 0.9652765704666424
+        },
+        {
+          "paperId": "3710874389083508802",
+          "primaryId": "arxiv:1903.05311",
+          "ids": {
+            "arxiv": [
+              "1903.05311"
+            ]
+          },
+          "title": "Safety Verification of Nonlinear Autonomous System via Occupation Measures",
+          "abstract": "In this paper, we introduce a flexible notion of safety verification for nonlinear autonomous systems by measuring how much time the system spends in given unsafe regions. We consider this problem in the particular case of nonlinear systems with a polynomial dynamics and unsafe regions described by a collection of polynomial inequalities. In this context, we can quantify the amount of time spent in the unsafe regions as the solution to an infinite-dimensional linear program (LP). This LP measures the volume of the unsafe region with respect to the occupation measure of the system trajectories. Using Lasserre hierarchy, we approximate the solution to the infinite-dimensional LP using a sequence of finite-dimensional semidefinite programs (SDPs). The solutions to the SDPs in this hierarchy provide monotonically converging upper bounds on the optimal solution to the infinite-dimensional LP. Finally, we validate the performance of our framework using numerical simulations.",
+          "score": 0.9644288107273639
+        },
+        {
+          "paperId": "7046839186048041682",
+          "primaryId": "arxiv:1803.09022",
+          "ids": {
+            "arxiv": [
+              "1803.09022"
+            ]
+          },
+          "title": "Controller Synthesis for Discrete-Time Polynomial Systems via Occupation Measures",
+          "abstract": "In this paper, we design nonlinear state feedback controllers for discrete-time polynomial dynamical systems via the occupation measure approach. We propose the discrete-time controlled Liouville equation, and use it to formulate the controller synthesis problem as an infinite-dimensional linear programming problem on measures, which is then relaxed as finite-dimensional semidefinite programming problems on moments of measures and their duals on sums-of-squares polynomials. Nonlinear controllers can be extracted from the solutions to the relaxed problems. The advantage of the occupation measure approach is that we solve convex problems instead of generally non-convex problems, and the computational complexity is polynomial in the state and input dimensions, and hence the approach is more scalable. In addition, we show that the approach can be applied to over-approximating the backward reachable set of discrete-time autonomous polynomial systems and the controllable set of discrete-time polynomial systems under known state feedback control laws. We illustrate our approach on several dynamical systems.",
+          "score": 0.9558496594416355
+        }
+      ],
+      "retrieval_available": true
+    },
+    {
+      "query": "h principle convex integration formal solutions differential relations analytic compatibility",
+      "results": [
+        {
+          "paperId": "2225084045574778965",
+          "primaryId": "arxiv:2112.14632",
+          "ids": {
+            "arxiv": [
+              "2112.14632"
+            ]
+          },
+          "title": "Convex integration with avoidance and hyperbolic (4,6) distributions",
+          "abstract": "This paper tackles the classification, up to homotopy, of tangent distributions satisfying various non-involutivity conditions. All of our results build on Gromov's convex integration. For completeness, we first prove that that the full h-principle holds for step-2 bracket-generating distributions. This follows from classic convex integration, no refinements of the theory are needed. The classification of (3,5) and (3,6) distributions follows as a particular case. We then move on to our main example: A complete h-principle for hyperbolic (4,6) distributions. Even though the associated differential relation fails to be ample along some principal subspaces, we implement an \"avoidance trick\" to ensure that these are avoided during convex integration. Using this trick we provide the first example of a differential relation that is ample in coordinate directions but not in all directions, answering a question of Eliashberg and Mishachev. This so-called \"avoidance trick\" is part of a general avoidance framework, which is the main contribution of this article. Given any differential relation, the framework attempts to produce an associated object called an \"avoidance template\". If this process is successful, we say that the relation is \"ample up to avoidance\" and we prove that convex integration applies. The example of hyperbolic (4,6) distributions shows that our framework is capable of addressing differential relations beyond the applicability of classic convex integration.",
+          "score": 0.954239787561503
+        },
+        {
+          "paperId": "7797206005837072546",
+          "primaryId": "arxiv:2210.07746",
+          "ids": {
+            "arxiv": [
+              "2210.07746"
+            ]
+          },
+          "title": "Formalising the h-principle and sphere eversion",
+          "abstract": "In differential topology and geometry, the h-principle is a property enjoyed by certain construction problems. Roughly speaking, it states that the only obstructions to the existence of a solution come from algebraic topology. We describe a formalisation in Lean of the local h-principle for first-order, open, ample partial differential relations. This is a significant result in differential topology, originally proven by Gromov in 1973 as part of his sweeping effort which greatly generalised many previous flexibility results in topology and geometry. In particular it reproves Smale's celebrated sphere eversion theorem, a visually striking and counter-intuitive construction. Our formalisation uses Theilli`ere's implementation of convex integration from 2018. This paper is the first part of the sphere eversion project, aiming to formalise the global version of the h-principle for open and ample first order differential relations, for maps between smooth manifolds. Our current local version for vector spaces is the main ingredient of this proof, and is sufficient to prove the titular corollary of the project. From a broader perspective, the goal of this project is to show that one can formalise advanced mathematics with a strongly geometric flavour and not only algebraically-flavoured",
+          "score": 0.9508509592212774
+        },
+        {
+          "paperId": "7132407240150836514",
+          "primaryId": "arxiv:1002.1650",
+          "ids": {
+            "arxiv": [
+              "1002.1650"
+            ]
+          },
+          "title": "The bordism version of the h-principle",
+          "abstract": "In view of the Segal construction each category with a coherent operation gives rise to a cohomology theory. Similarly each open stable differential relation R imposed on smooth maps of manifolds determines cohomology theories k* and h*; the cohomology theory k* describes invariants of solutions of R, while h* describes invariants of so-called stable formal solutions of R. We prove the bordism version of the h-principle: The cohomology theories k* and h* are equivalent for a fairly arbitrary open stable differential relation R. Furthermore, we determine the homotopy type of h*. Thus, we show that for a fairly arbitrary open stable differential relation R, the machinery of stable homotopy theory can be applied to perform explicit computations and determine invariants of solutions. In the case of the differential relation whose solutions are all maps, our construction amounts to the Pontrjagin-Thom construction. In the case of the covering differential relation our result is equivalent to the Barratt-Priddy-Quillen theorem asserting that the direct limit of classifying spaces BΣn of permutation groups Σn of finite sets of n elements is homology equivalent to each path component of the infinite loop space Ω∞S∞. In the case of the submersion differential relation imposed on maps of dimension d=2 the cohomology theories k* and h* are not equivalent. Nevertheless, our methods still apply and can be used to recover the Madsen-Weiss theorem (the Mumford Conjecture).",
+          "score": 0.9013664124589823
+        }
+      ],
+      "retrieval_available": true
+    },
+    {
+      "query": "Buchert averaging inhomogeneous cosmologies scalar Einstein equations dust 1999",
+      "results": [
+        {
+          "paperId": "1524508608046300228",
+          "primaryId": "arxiv:gr-qc/0609078",
+          "ids": {
+            "arxiv": [
+              "gr-qc/0609078"
+            ]
+          },
+          "title": "Averaging anisotropic cosmologies",
+          "abstract": "We examine the effects of spatial inhomogeneities on irrotational anisotropic cosmologies by looking at the average properties of anisotropic pressure-free models. Adopting the Buchert scheme, we recast the averaged scalar equations in Bianchi-type form and close the standard system by introducing a propagation formula for the average shear magnitude. We then investigate the evolution of anisotropic average vacuum models and those filled with pressureless matter. In the latter case we show that the backreaction effects can modify the familiar Kasner-like singularity and potentially remove Mixmaster-type oscillations. The presence of nonzero average shear in our equations also allows us to examine the constraints that a phase of backreaction-driven accelerated expansion might put on the anisotropy of the averaged domain. We close by assessing the status of these and other attempts to define and calculate `average' spacetime behaviour in general relativity.",
+          "score": 0.8933094060543487
+        },
+        {
+          "paperId": "850091542480836116",
+          "primaryId": "arxiv:1904.02557",
+          "ids": {
+            "arxiv": [
+              "1904.02557"
+            ]
+          },
+          "title": "Cosmological Backreaction in Spherical and Plane Symmetric Dust-Filled Space-Times",
+          "abstract": "We examine the implementation of Buchert's and Green & Wald's averaging formalisms in exact spherically symmetric and plane symmetric dust-filled cosmological models. We find that, given a cosmological space-time, Buchert's averaging scheme gives a faithful way of interpreting the large-scale expansion of space, and explicit terms that precisely quantify deviations from the behaviour expected from the Friedmann equations of homogeneous and isotropic cosmological models. The Green & Wald formalism, on the other hand, does not appear to yield any information about the large-scale properties of a given inhomogeneous space-time. Instead, this formalism is designed to calculate the back-reaction effects of short-wavelength fluctuations around a given \"background\" geometry. We find that the inferred expansion of space in this approach is entirely dependent on the choice of this background, which is not uniquely specified for any given inhomogeneous space-time, and that the \"back-reaction\" from small-scale structures vanishes in every case we study. This would appear to limit the applicability of Green & Wald's formalism to the study of large-scale expansion in the real Universe, which also has no pre-defined background. Further study is required to enhance the evaluation and comparison of these averaging formalisms, and determine whether the same difficulties exist, in less idealized space-time geometries.",
+          "score": 0.8846784569260049
+        },
+        {
+          "paperId": "3345399080930356694",
+          "primaryId": "arxiv:0912.4074",
+          "ids": {
+            "arxiv": [
+              "0912.4074"
+            ]
+          },
+          "title": "Quasi-local variables and scalar averaging in LTB dust models",
+          "abstract": "We introduce quasi--local (QL) scalar variables in spherically symmetric LTB models. If the QL scalars are defined as functionals, they become weighed averages that generalize the standard proper volume averages on space slices orthogonal to the 4-velocity. We examine the connection between QL functions and functionals and the \"back-reaction\" term Q in the context of Buchert's scalar averaging formalism. With the help of the QL scalars we provide rigorous proof that back--reaction is positive for (i) all LTB models with negative and asymptotically negative spatial curvature, and (ii) models with positive curvature decaying to zero asymptotically in the radial direction. We show by means of qualitative, but robust, arguments that generic LTB models exist, either with clump or void profiles, for which an \"effective\" acceleration associated with Buchert's formalism can mimic the effects of dark energy.",
+          "score": 0.8754466418125836
+        }
+      ],
+      "retrieval_available": true
+    },
+    {
+      "query": "Heat kernel expansion user manual Vassilevich spectral action",
+      "results": [
+        {
+          "paperId": "2600481281915391575",
+          "primaryId": "arxiv:hep-th/0306138",
+          "ids": {
+            "arxiv": [
+              "hep-th/0306138"
+            ]
+          },
+          "title": "Heat kernel expansion: user's manual",
+          "abstract": "The heat kernel expansion is a very convenient tool for studying one-loop divergences, anomalies and various asymptotics of the effective action. The aim of this report is to collect useful information on the heat kernel coefficients scattered in mathematical and physical literature. We present explicit expressions for these coefficients on manifolds with and without boundaries, subject to local and non-local boundary conditions, in the presence of various types of singularities (e.g., domain walls). In each case the heat kernel coefficients are given in terms of several geometric invariants. These invariants are derived for scalar and spinor theories with various interactions, Yang-Mills fields, gravity, and open bosonic strings. We discuss the relations between the heat kernel coefficients and quantum anomalies, corresponding anomalous actions, and covariant perturbation expansions of the effective action (both \"low-\" and \"high-energy\" ones).",
+          "score": 0.9024721629592075
+        },
+        {
+          "paperId": "8788187812313445278",
+          "primaryId": "arxiv:2112.03062",
+          "ids": {
+            "arxiv": [
+              "2112.03062"
+            ]
+          },
+          "title": "Heat kernel expansion for higher order minimal and nonminimal operators",
+          "abstract": "We build a systematic calculational method for the covariant expansion of the two-point heat kernel K(τ|x,x') for generic minimal and non-minimal differential operators of any order. This is the expansion in powers of dimensional background field objects -- the coefficients of the operator and the corresponding spacetime and vector bundle curvatures, suitable in renormalization and effective field theory applications. For minimal operators whose principal symbol is given by an arbitrary power of the covariant Laplacian (-□)M, M>1, this result generalizes the well-known Schwinger--DeWitt (or Seeley--Gilkey) expansion to the infinite series of positive and negative fractional powers of the proper time τ1/M, weighted by the generalized exponential functions of the dimensionless argument -σ(x,x')/2τ1/M depending on the Synge world function σ(x,x'). The coefficients of this series are determined by the chain of auxiliary differential operators acting on the two-point parallel transport tensor, which in their turn follow from the solution of special recursive equations. The derivation of these operators and their recursive equations are based on the covariant Fourier transform in curved spacetime. The series of negative fractional powers of τ vanishes in the coincidence limit x'=x, which makes the proposed method consistent with the heat kernel theory of Seeley--Gilkey and generalizes it beyond the heat kernel diagonal in the form of the asymptotic expansion in the domain σ(x,x')≪τ1/M, τ→ 0.∇aσ(x,x')≪τ1/2M, τ→ 0.",
+          "score": 0.7772998611746911
+        },
+        {
+          "paperId": "7820410453395359271",
+          "primaryId": "arxiv:1201.6637",
+          "ids": {
+            "arxiv": [
+              "1201.6637"
+            ]
+          },
+          "title": "Global and local aspects of spectral actions",
+          "abstract": "The principal object in noncommutatve geometry is the spectral triple consisting of an algebra A, a Hilbert space H, and a Dirac operator D. Field theories are incorporated in this approach by the spectral action principle, that sets the field theory action to Tr f(D²/Λ²), where f is a real function such that the trace exists, and Λ is a cutoff scale. In the low-energy (weak-field) limit the spectral action reproduces reasonably well the known physics including the standard model. However, not much is known about the spectral action beyond the low-energy approximation. In this paper, after an extensive introduction to spectral triples and spectral actions, we study various expansions of the spectral actions (exemplified by the heat kernel). We derive the convergence criteria. For a commutative spectral triple, we compute the heat kernel on the torus up the second order in gauge connection and consider limiting cases.",
+          "score": 0.75722034035404
+        }
+      ],
+      "retrieval_available": true
+    }
+  ]
+}
