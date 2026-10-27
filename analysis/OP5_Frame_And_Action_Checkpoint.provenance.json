@@ -1,0 +1,124 @@
+{
+  "independent_review": false,
+  "scope": "Conditional frame, cone and common-action research; OP5 remains open",
+  "files": [
+    {
+      "path": "analysis/OP5_Common_Cone_Kinetic_Criterion.md",
+      "sha256": "2e6f947507cf1fe3bc689bfd15d56be1fe98d5e200ffc3a77c9aa93cb4b53351"
+    },
+    {
+      "path": "analysis/OP5_Cone_Comparison.json",
+      "sha256": "78679aeb60c8ba49c032cc863781aa1c33f0829483fee8052eaf26891af374aa"
+    },
+    {
+      "path": "analysis/OP5_Cone_Comparison.md",
+      "sha256": "d993e65fab4a22053b67a44e089e9708606edbe40cff230b0f31ae2500920936"
+    },
+    {
+      "path": "analysis/OP5_Cone_Comparison.py",
+      "sha256": "b625e8fd8382f5fdfaaf171f3a46b43673dab46b4cf50666f52c487aaf941f7d"
+    },
+    {
+      "path": "analysis/OP5_Cone_Comparison.svg",
+      "sha256": "e03862d1d6e909ec289e279b0e05562cef7735d900f54dd154c73d15399969d0"
+    },
+    {
+      "path": "analysis/OP5_Cross_Connection_Integrability.md",
+      "sha256": "1ba9736fa997882b91b0ee1483f485b363eb9aaf1c36bb83c7ac563da8131f29"
+    },
+    {
+      "path": "analysis/OP5_Cross_Readout_Common_Action.md",
+      "sha256": "6db2b609cd33a7ece138bb9c70ea5fa0450fa25cc1b853baaf9b7c9fe999079c"
+    },
+    {
+      "path": "analysis/OP5_Exact_Closure_And_Geometric_Connection.md",
+      "sha256": "0b8954a3793810f317af4fba71110ebb3a56142eb8b01bf362c4b81d474e8745"
+    },
+    {
+      "path": "analysis/OP5_Flat_Reference_Check.py",
+      "sha256": "7dc779928e9536b8b6699094a7f1af573c0878f5b2219a66d4b2ad7296823607"
+    },
+    {
+      "path": "analysis/OP5_Flat_Reference_Clock_And_Signals.md",
+      "sha256": "a501b5a10c51947554ec18e886f4b5e5a1a9de4f33a2226140d3e187be6421fc"
+    },
+    {
+      "path": "analysis/OP5_Frame_Exchange_And_Visible_Cone.md",
+      "sha256": "36c52c842588a0297ee3a8011d437dc9e811fdf676958971ed870364e48a753a"
+    },
+    {
+      "path": "analysis/OP5_Interacting_Closure_Pair_Test.md",
+      "sha256": "1f793301da0187175d9d39124990930d1fe61d53f792da399b463e1784718f12"
+    },
+    {
+      "path": "analysis/OP5_Native_Action_Closure_Penalty_Audit.md",
+      "sha256": "0668f7e4ead36e79125da9de25efff8e4bae65ee9cba708ed724898906178614"
+    },
+    {
+      "path": "analysis/OP5_Null_Transport_And_Signal_Locality.md",
+      "sha256": "8eb3db52b07c8caa75783648a010e837783feb32fa9a233020e88c4eca165dbb"
+    },
+    {
+      "path": "analysis/OP5_Operational_Two_Cone_Coupling.md",
+      "sha256": "45cb11748200a684c47de77c3927bbacc0cfe86ea2408ce815a87ec882404019"
+    },
+    {
+      "path": "analysis/OP5_Protected_Clock_And_Detector.md",
+      "sha256": "5ad2429c8f7bd3765700c557fc295e8a917c59e9570dc37af48f125fe46dca9e"
+    },
+    {
+      "path": "analysis/OP5_Relative_Connection_And_Free_Paths.md",
+      "sha256": "effc429685cbe0a3f6293bcaae92eb5602c995109d5522c5346ec0099e7330da"
+    },
+    {
+      "path": "analysis/OP5_Relative_Connection_Check.json",
+      "sha256": "a83975da08d3eb15eb4814da36af1b047149f2caf0c862581532b7e957a2617c"
+    },
+    {
+      "path": "analysis/OP5_Relative_Connection_Check.py",
+      "sha256": "2fa4099fe735b252a291c96fe53907474f4fe51c7533f278b31740f43e290ec1"
+    },
+    {
+      "path": "analysis/OP5_Spin_Connection_Compatibility.md",
+      "sha256": "32674e1b77ba26de448eec6f90e3c2a82e028840ad5dd669c4d5b2b9062e3407"
+    },
+    {
+      "path": "analysis/OP5_Two_Complex_Probes_Check.py",
+      "sha256": "196a96338c591c4ecc37df18d95f7af263350c2c79be128bbb4a457ba54d4275"
+    },
+    {
+      "path": "analysis/OP5_Two_Complex_Probes.md",
+      "sha256": "84908af5990df9746311ea849432662dc4b8e702c60a56e52e6d21be5ab486a5"
+    },
+    {
+      "path": "analysis/OP5_Two_Cone_Coupling_Check.py",
+      "sha256": "6cd73e74d042b56cfcec922ef4418b0dc8460893e8fb00ef81e9077516222422"
+    },
+    {
+      "path": "analysis/OP5_Two_Probe_Exchange_Check.py",
+      "sha256": "0d5cc9d70ddea16067108bebe9381108a4f2eafcd8ec5cc1fc21b9ba2e72f00a"
+    },
+    {
+      "path": "analysis/OP5_Two_Probe_Exchange_Evolution_Check.py",
+      "sha256": "0b59de6923ed7a1aaa3a386dac3705a25425df5a5a9d6dcd9324572504526a6e"
+    },
+    {
+      "path": "analysis/OP5_Two_Probe_Exchange_Evolution.md",
+      "sha256": "f6886bfb6cbf6112c80c7f1a718552570c9ea827fb9cddea4f7c1121dd7bbefd"
+    },
+    {
+      "path": "analysis/OP5_Two_Probe_Exchange_First_Jet.md",
+      "sha256": "d162afdc36ad622bbeb6eb4dfddefc46b7fe053e681f22cd7f8720c4d18d4b37"
+    },
+    {
+      "path": "analysis/OP5_Visible_Sector_And_Return_Paths.md",
+      "sha256": "1ceca8d512fe4b4eb95a92b1116a9d882e5e970b0e731c51132908fea36da480"
+    },
+    {
+      "path": "analysis/OP5_Frame_And_Action_Checkpoint.md",
+      "sha256": "a25a97cf011fe6233653a8a76d1560384d014da6586fdb1c0efdba13874c1c3a"
+    }
+  ],
+  "date": "2026-10-27",
+  "base": "bb975d2df218b8091f116faea7950651987e095b"
+}

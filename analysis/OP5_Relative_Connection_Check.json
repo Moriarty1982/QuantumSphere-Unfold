@@ -1,0 +1,9 @@
+{
+  "slice": "y=z=0; exact t=0 identities for all x",
+  "J0": "Matrix([[16*x**2 + 1, 0], [0, 1]])",
+  "Gamma_t": "Matrix([[0, 32*x/(16*x**2 + 1)], [-96*x, 0]])",
+  "Gamma_x": "Matrix([[32*x/(16*x**2 + 1), 0], [0, 0]])",
+  "R_tx": "Matrix([[0, 0], [0, 0]])",
+  "relative_acceleration_magnitude_signed": "96*x/(16*x**2 + 1)**2",
+  "example_x_1_10": "6000/841"
+}
