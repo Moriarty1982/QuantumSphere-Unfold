@@ -1,0 +1,43 @@
+{
+  "convention": "R=i dt psi+i alpha grad psi-V psi; N=16; 30 digit evaluation of analytic derivatives",
+  "results": [
+    {
+      "point": {
+        "t": "1",
+        "x": "3/5",
+        "y": "0",
+        "z": "0"
+      },
+      "residual_norms_ABC": [
+        7.958970005201478,
+        3.921354189374559,
+        4.853406592853679
+      ],
+      "imaginary_species_projections": [
+        0.0,
+        0.0,
+        7.888609052210118e-31
+      ],
+      "imaginary_cross_projection": 3.944304526105059e-31
+    },
+    {
+      "point": {
+        "t": "1",
+        "x": "2/5",
+        "y": "1/5",
+        "z": "1/5"
+      },
+      "residual_norms_ABC": [
+        9.487076187795367,
+        4.495770256060848,
+        6.866236129888599
+      ],
+      "imaginary_species_projections": [
+        -2.9011937575535723e-30,
+        2.274451916409412e-31,
+        2.1405345103750677e-31
+      ],
+      "imaginary_cross_projection": -8.696856325111537e-32
+    }
+  ]
+}

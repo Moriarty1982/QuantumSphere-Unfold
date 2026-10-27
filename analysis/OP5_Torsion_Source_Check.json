@@ -1,0 +1,7 @@
+{
+  "torsion_trace": "[-3/t, 0, 0, 0]",
+  "normalized_source_lambda": "Matrix([[0, 0, 0, 0], [0, t**(-2), 0, 0], [0, 0, t**(-2), 0], [0, 0, 0, t**(-2)]])",
+  "Ricci_independent_connection": "Matrix([[3/t**2, 0, 0, 0], [0, t**(-2), 0, 0], [0, 0, t**(-2), 0], [0, 0, 0, t**(-2)]])",
+  "scalar_independent_connection": "0",
+  "scope": "source shape normalized; not the action-fixed physical multiplier"
+}
