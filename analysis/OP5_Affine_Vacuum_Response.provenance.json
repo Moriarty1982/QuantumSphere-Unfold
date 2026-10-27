@@ -1,0 +1,32 @@
+{
+  "checkpoint": "OP5-AFFINE-VACUUM-RESPONSE-2026-10-26",
+  "git_base": "a97e32d25b4b66ec2d534bdbc142df7b51883057",
+  "captured_at_utc": "2026-10-26T09:01:57.7564244Z",
+  "method": "Exact full first variation plus normalized finite perturbation; independent analytic audit reviewed; QAM denominator check self-reviewed",
+  "inputs": [
+    {
+      "path": "analysis/OP5_Affine_Vacuum_Response.md",
+      "sha256": "57d5592ff6ff78acb5ab592611a0e92a7ab14e89cc2c9fbaf11f9b2ec43c9f75"
+    },
+    {
+      "path": "analysis/OP5_Affine_Vacuum_Response_Independent.md",
+      "sha256": "3880abf4fd76f6d1256389722e311ec9da791eeb8aa58865baf4aaf83ffd898a"
+    },
+    {
+      "path": "analysis/HC_Two_Frame_Action_Bridge.md",
+      "sha256": "bd5649a5d5bc219b7f2878085a059b5d5344f5705bedb3ea63c59f874355725d"
+    },
+    {
+      "path": "analysis/HC_Background_Coframe_Origin.md",
+      "sha256": "105bd7eb123e95c8e537bea26f229ca086991df5e23ef6d43f9275c5e41f81fb"
+    },
+    {
+      "path": "analysis/OP5_Absolute_Energy_Selection_Search.md",
+      "sha256": "99740ae30203cd85ab0ca920a87d0df4aa7b8f35569cf8869a73b2e1481462a5"
+    },
+    {
+      "path": "sources/research/parts/v490-post-release-layers.tex",
+      "sha256": "232bdd631bac34259be48b6d326fbf6eaf38f084ee4bec1a621658b3c964424e"
+    }
+  ]
+}
