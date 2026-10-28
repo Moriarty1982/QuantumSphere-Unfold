@@ -1,0 +1,41 @@
+{
+  "checkpoint": "OP5-ABSOLUTE-SELECTION-2026-10-26",
+  "git_base": "a97e32d25b4b66ec2d534bdbc142df7b51883057",
+  "captured_at_utc": "2026-10-26T08:54:43.3747672Z",
+  "method": "Analytic three-route search with independent derivation; additional denominator and composite-volume tests self-reviewed",
+  "external_source": "https://arxiv.org/html/0905.0661v3",
+  "inputs": [
+    {
+      "path": "analysis/OP5_Absolute_Energy_Selection_Search.md",
+      "sha256": "99740ae30203cd85ab0ca920a87d0df4aa7b8f35569cf8869a73b2e1481462a5"
+    },
+    {
+      "path": "analysis/OP5_Absolute_Selection_Independent.md",
+      "sha256": "0f3565d288a7fd8634a0df9a067aa2c99dfa0026f0d7efbef35762098e8eb6c7"
+    },
+    {
+      "path": "analysis/OP5_Native_Pair_Potential_Audit.md",
+      "sha256": "6d3598b9445ce4cd0aac3c2ff947d69fe08bca16d96afb91cb39517e5299a450"
+    },
+    {
+      "path": "analysis/HC_Induced_Gravity_Heat_Kernel.md",
+      "sha256": "3910a1fee31ad4b27fac0445fdc2bb53ed5ff6c8442d52556c76651426c1a340"
+    },
+    {
+      "path": "analysis/HC_Global_Flux_Selection.md",
+      "sha256": "71af802ad780b250b734083ca834a2d9befec6bd7c91a1e0cb19a2e07f89990a"
+    },
+    {
+      "path": "analysis/HC_Two_Frame_Action_Bridge.md",
+      "sha256": "bd5649a5d5bc219b7f2878085a059b5d5344f5705bedb3ea63c59f874355725d"
+    },
+    {
+      "path": "sources/research/parts/v470/10_sphaera_and_physics.tex",
+      "sha256": "7d72c58b1159f5462c6be395961fcd8882028fc3e8c8495e7f2a3b10055c1a32"
+    },
+    {
+      "path": "sources/research/parts/v490-post-release-layers.tex",
+      "sha256": "232bdd631bac34259be48b6d326fbf6eaf38f084ee4bec1a621658b3c964424e"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "checkpoint": "OP5-TRIADIC-STRESS-OBSERVER-2026-10-26",
+  "git_base": "a97e32d25b4b66ec2d534bdbc142df7b51883057",
+  "captured_at_utc": "2026-10-26T08:40:42.9741320Z",
+  "method": "Exact Dirac substitution and observer classification; independent analytic verification. Curvature variation checked against Figueroa et al. Appendix B.",
+  "external_source": "https://inspirehep.net/files/2fc7740683cadf924893c51786d4dcdb",
+  "inputs": [
+    {
+      "path": "analysis/OP5_Triadic_Stress_And_Neutral_Observer.md",
+      "sha256": "fbf0980121861c0832096c9e1b588ed2a453d6871140774f771c7a7b91bf2d82"
+    },
+    {
+      "path": "analysis/OP5_Stress_Observer_Independent.md",
+      "sha256": "99cc1f91cdef7cc9a747deaed2035c7691436f379686061d2e1c566b5e64dc20"
+    },
+    {
+      "path": "analysis/OP5_Triadic_Joint_Energy.md",
+      "sha256": "ef586d4b9542f378a7555b284dbc37812d836b89757accb8e698c8e81ce92e7f"
+    },
+    {
+      "path": "analysis/HC_Dirac_State_Gravity.md",
+      "sha256": "2f73c9e3278b39a2c70ae4a710d1b04b1b03414462fb7bcf5160102a127ad16d"
+    },
+    {
+      "path": "sources/research/parts/v470/10_sphaera_and_physics.tex",
+      "sha256": "7d72c58b1159f5462c6be395961fcd8882028fc3e8c8495e7f2a3b10055c1a32"
+    }
+  ]
+}

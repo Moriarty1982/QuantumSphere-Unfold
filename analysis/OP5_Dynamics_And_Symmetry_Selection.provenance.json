@@ -1,0 +1,37 @@
+{
+  "checkpoint": "OP5-DYNAMICS-SYMMETRY-SELECTION-2026-10-26",
+  "git_base": "3fa5ba9440d0985fbb2b3786eaebe56a887cfe6a",
+  "retrieved_at_utc": "2026-10-26T04:14:19.0873000Z",
+  "method": "Analytical two-route attempt and independently reviewed doublet classification",
+  "independent_source_hashes_verified": true,
+  "inputs": [
+    {
+      "path": "analysis/OP5_Dynamics_And_Symmetry_Selection.md",
+      "sha256": "1353abdd1d90a4779d48d01ef2e009c017a233360a620ee7640b77435aacc939"
+    },
+    {
+      "path": "analysis/OP5_Symmetry_Sector_Selection_Independent.md",
+      "sha256": "ce3ba990d2edb2855bacc04aca8c76bdb9cdd3e197d9a66d3e7c595190549189"
+    },
+    {
+      "path": "analysis/OP5_M16_PC7_Frame_Origin_Audit.md",
+      "sha256": "0cf369e4dfaff8eacf3e4b45a85028e19237f32f76b4c8bca1fb1b755ece7e2b"
+    },
+    {
+      "path": "analysis/OP5_Spinor_Separation_And_Dirac_Limit.md",
+      "sha256": "e95c8cd3332a249d06d28abe623493da0b30973e431617620e21abcc5bbeaf28"
+    },
+    {
+      "path": "sources/research/parts/native-operator-link.tex",
+      "sha256": "3843a019e6ba8b1c6e642ba2c53ad11f33134e1745d8b68e15c69ac2b5617b0f"
+    },
+    {
+      "path": "sources/research/parts/v470/12_structural_core.tex",
+      "sha256": "4d663bedef288c803b1538b417e8a846006d77fe2c540adc066a86851e952b15"
+    },
+    {
+      "path": "sources/research/parts/v490-post-release-layers.tex",
+      "sha256": "232bdd631bac34259be48b6d326fbf6eaf38f084ee4bec1a621658b3c964424e"
+    }
+  ]
+}

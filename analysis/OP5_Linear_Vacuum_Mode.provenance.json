@@ -1,0 +1,37 @@
+{
+  "checkpoint": "OP5-LINEAR-VACUUM-MODE-2026-10-26",
+  "captured_at_utc": "2026-10-26T16:26:19.7496698Z",
+  "last_confirmed_git_base": "a97e32d25b4b66ec2d534bdbc142df7b51883057",
+  "git_base_reverified": false,
+  "method": "Exact full linear-equation checks in invariant one- and two-component subspaces; independent analytic derivation reviewed; standard Dirac projector compatibility; no general stability claim",
+  "inputs": [
+    {
+      "path": "C:/Users/marcb/OneDrive/Dokumente/GitHub/QuantumSphere-Unfold/analysis/HC_Two_Frame_Action_Bridge.md",
+      "sha256": "bd5649a5d5bc219b7f2878085a059b5d5344f5705bedb3ea63c59f874355725d"
+    },
+    {
+      "path": "C:/Users/marcb/OneDrive/Dokumente/GitHub/QuantumSphere-Unfold/analysis/OP5_Affine_Vacuum_Response.md",
+      "sha256": "57d5592ff6ff78acb5ab592611a0e92a7ab14e89cc2c9fbaf11f9b2ec43c9f75"
+    },
+    {
+      "path": "C:/Users/marcb/OneDrive/Dokumente/GitHub/QuantumSphere-Unfold/analysis/HC_Dirac_State_Gravity.md",
+      "sha256": "2f73c9e3278b39a2c70ae4a710d1b04b1b03414462fb7bcf5160102a127ad16d"
+    },
+    {
+      "path": "C:/Users/marcb/OneDrive/Dokumente/GitHub/QuantumSphere-Unfold/analysis/OP5_Common_Operator_Representation.md",
+      "sha256": "94acb458bf26128ae0720ad7f4ed1a172919a2f4106400195eb9c41f6afcc9cc"
+    },
+    {
+      "path": "C:/Users/marcb/OneDrive/Dokumente/GitHub/QuantumSphere-Unfold/analysis/OP5_Spinor_Separation_And_Dirac_Limit.md",
+      "sha256": "010074faaf218e202cbf610f40da9e189bda89b7b424cc993e6558e40498fe3e"
+    },
+    {
+      "path": "C:/Users/marcb/.codex/visualizations/2026/10/16/01a1449d-b4ac-7d50-b255-5e920e627df0/OP5_Linear_Vacuum_Mode.md",
+      "sha256": "87cdc18baecf843836b3899316dfeeee6086b500f7b65a19d02d4444e2c8e32d"
+    },
+    {
+      "path": "C:/Users/marcb/.codex/visualizations/2026/10/16/01a1449d-b4ac-7d50-b255-5e920e627df0/OP5_Linear_Vacuum_Mode_Independent.md",
+      "sha256": "a3b070895ac507f9ce937c5b1a810aa2609f25beb66f371db6e50312b619a7be"
+    }
+  ]
+}

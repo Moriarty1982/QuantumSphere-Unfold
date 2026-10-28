@@ -1,0 +1,36 @@
+{
+  "checkpoint": "OP5-TRIADIC-JOINT-ENERGY-2026-10-26",
+  "git_base": "a97e32d25b4b66ec2d534bdbc142df7b51883057",
+  "retrieved_at_utc": "2026-10-26T08:06:08.1807396Z",
+  "method": "Exact conditional modal derivation, independent analytic derivation and parent review; no numerical experiment",
+  "inputs": [
+    {
+      "path": "analysis/OP5_Triadic_Joint_Energy.md",
+      "sha256": "ef586d4b9542f378a7555b284dbc37812d836b89757accb8e698c8e81ce92e7f"
+    },
+    {
+      "path": "analysis/OP5_Triadic_Energy_Independent.md",
+      "sha256": "4332d00d759c7dda53e731ca13eee96efb419580e4cfe324b659f43120c7fa27"
+    },
+    {
+      "path": "analysis/HC_Real_Probe_Current_Closure.md",
+      "sha256": "cd787b6664b9ad8d03bad97831b707e17033e3ab6e8463ae035080745c07edc6"
+    },
+    {
+      "path": "analysis/HC_Collective_Action_Reduction.md",
+      "sha256": "0055f72e6587e3e2be0b0fbd0ba6291fcf3e3a0b49a2fd032021d5624ddd8a72"
+    },
+    {
+      "path": "analysis/OP5_Readout_Order_Timing.md",
+      "sha256": "ea13b0f4e738c3fe25217bb4f1a05261a3d149cc05ac81efa1033f4269e6084d"
+    },
+    {
+      "path": "analysis/OP5_Independent_Physical_References.md",
+      "sha256": "0513f23b708a6e6d7d2a4464cad63b1a21f08756049c2743a303efe06cfe77ef"
+    },
+    {
+      "path": "sources/research/parts/v470/10_sphaera_and_physics.tex",
+      "sha256": "7d72c58b1159f5462c6be395961fcd8882028fc3e8c8495e7f2a3b10055c1a32"
+    }
+  ]
+}

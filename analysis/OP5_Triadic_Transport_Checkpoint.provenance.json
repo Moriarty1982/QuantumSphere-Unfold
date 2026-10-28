@@ -1,0 +1,140 @@
+{
+  "created_utc": "2026-10-27T19:57:42.665015+00:00",
+  "scope": "Conditional research continuation; no OP5 closure",
+  "source_base_commit": "cf9e16718beb420afc5b93ce38ef905fd9fa8347",
+  "independent_review": false,
+  "files": [
+    {
+      "name": "op5-bloch-kugeln.html",
+      "sha256": "17ba403ff5da16bb895b3daef85a7d3b539cf739dd87c853622b265f755e4675"
+    },
+    {
+      "name": "OP5_Bloch_Residual_Decomposition.json",
+      "sha256": "85e653d917f9e61cc3141f66f8652e9125c83bf84cbab6af7e1fd56d341e8db3"
+    },
+    {
+      "name": "OP5_Bloch_Residual_Decomposition.py",
+      "sha256": "5e3cf61d3d302f3fd7360e5459a70576775535d719dde6550899bc758d71bb1c"
+    },
+    {
+      "name": "OP5_Bloch_Residual_Interpretation.md",
+      "sha256": "f5b7af0a9a9ec51112b2ce9c6eb51b9b04fd31f587343254e3e44b5674bba0c1"
+    },
+    {
+      "name": "OP5_Boost_Tangent_Check.json",
+      "sha256": "1a7a7bb0461b61fd5da805c6b3945bd9c8d52e5449b17c8a8ec8a17c65a9e46d"
+    },
+    {
+      "name": "OP5_Boost_Tangent_Check.py",
+      "sha256": "f9c09799d7a4f7c071b464383521c9b040a8d2bdb9d839a99c9fdb4a1e12d05c"
+    },
+    {
+      "name": "OP5_Boost_Tangent_Result.md",
+      "sha256": "f8d600f00559e19d083d0b8ef0fc7b4a0d71e478101841e48fa720d18c457cd1"
+    },
+    {
+      "name": "OP5_Boosted_Triad_And_Coframe_Feedback.md",
+      "sha256": "c8a3053d420348be97f2e482078cfff3c49651ad994d58df0b4e362bf7dd674d"
+    },
+    {
+      "name": "OP5_Chiral_Tangent_Check.json",
+      "sha256": "626d5f8226394903fd2a5c13e988bcdda1eb1df6288e11b56325c9fed5e2ec16"
+    },
+    {
+      "name": "OP5_Chiral_Tangent_Check.py",
+      "sha256": "a1296aba10325ee6dfeddcb2638d931c97e95dee56bd02a6763bd0c1d2d747da"
+    },
+    {
+      "name": "OP5_Chiral_Tangent_Result.md",
+      "sha256": "5ff9ea3fef86e023c274e5cde2fa1c2142533587971677f65ff4b2aeef7e322e"
+    },
+    {
+      "name": "OP5_Connection_Reaction_Followthrough.md",
+      "sha256": "d16d3b4abffb8d739bcf7ff3fa86bb5bc6a082984260ffaf404e3efb99d8233c"
+    },
+    {
+      "name": "OP5_Counterflow_Full_Residual_Check.json",
+      "sha256": "4ec454c315c241e740f88ef702f4b853fa0c5cfa242856306f296617a9c5951c"
+    },
+    {
+      "name": "OP5_Counterflow_Full_Residual_Check.py",
+      "sha256": "e0803c2fdf85da1f6318685ab661e77cb39bd60a14b732fb0481c8ce5f2bc4b4"
+    },
+    {
+      "name": "OP5_Counterflow_Full_Residual_Result.md",
+      "sha256": "3a27a0030ab8f74fff6104c1392da1e6ca722f8c54bb62030b9d1d2ff538300a"
+    },
+    {
+      "name": "OP5_Counterflow_Intersector_Source_Obstruction.md",
+      "sha256": "dd0cb3a646557761969fdfa63e59fa1bb19735ad51c3b5edec3139b4cb9a9133"
+    },
+    {
+      "name": "OP5_Counterflow_Source_Coframe_Gate.md",
+      "sha256": "5bf66f2fc551662cb508ec2c0fe02652bd1da1c0e2f81ea01339100de1a4341a"
+    },
+    {
+      "name": "OP5_Cross_Clock_Finite_Density_Bound.md",
+      "sha256": "4c361329ecb780f27562e2c8a9fe615736aead256d57438ccf9cb84bf837c47c"
+    },
+    {
+      "name": "OP5_Dirac_Spin_Connection_Symmetry_Test.md",
+      "sha256": "927eb5256bb1baa578a5fc72034fd3f20011bb2fb2bf3844377e2d461740d143"
+    },
+    {
+      "name": "OP5_Isotropic_Connection_Ward_NoGo.md",
+      "sha256": "6edd4722ccb91487eb4805fca5f1014d292f80507626b50aea485f15166a09fe"
+    },
+    {
+      "name": "OP5_Native_Exchange_And_Selector_Feedback.md",
+      "sha256": "b863081ed2cd143edfa99ea4fdd9dfb203fb377e49497ad452814697f837080b"
+    },
+    {
+      "name": "OP5_Resonance_Exchange_Current_Gate_Closure.md",
+      "sha256": "8029e17f2b40598797e55d91d33999ecdd55ae51c9add262bd2b38540e62b268"
+    },
+    {
+      "name": "OP5_Resting_Probes_Spin_Cross_Obstruction.md",
+      "sha256": "d74e3541aa9bdea29e485ddfbaf0a0055d4c5d4c8bfaf562049737539090440d"
+    },
+    {
+      "name": "OP5_Spatial_Influx_And_Causal_Patch.md",
+      "sha256": "2635cb3a70960167626b1852136b23cb97ec42bad454b8781f11a5600ee9e18b"
+    },
+    {
+      "name": "OP5_Torsion_Source_And_Coframe_Response.md",
+      "sha256": "24b7bc3b4c34a75d3a6d31891410f247b1c772b301fdfeed7c6a71e516107562"
+    },
+    {
+      "name": "OP5_Torsion_Source_Check.json",
+      "sha256": "20a1e2c3908d7d2e5173532f18d0fdf3956e6fc2cc1ee9c8e4b4ea0655823e0e"
+    },
+    {
+      "name": "OP5_Torsion_Source_Check.py",
+      "sha256": "d1e261285695fb49b17a40a40fbde619e1e3325af9e27dc90b2beb305d6d6ce1"
+    },
+    {
+      "name": "OP5_Torsionful_Geometric_Witness.md",
+      "sha256": "96bce64877163063bc8d632c9abbcd7a2f624b29d35149b1ad5557d0033b2fdd"
+    },
+    {
+      "name": "OP5_Torsionful_Geometric_Witness_Check.py",
+      "sha256": "976421a3cb1cc055a0e9b5dbdfc9aaab11e3040911a765b9ce72c7efc8642d67"
+    },
+    {
+      "name": "OP5_Transverse_Triadic_Counterflow.md",
+      "sha256": "800965f163195e67182041d3d36897f3cba593e743474c0bce3550daf55dae07"
+    },
+    {
+      "name": "OP5_Triadic_Conserved_Density_Test.md",
+      "sha256": "eaf94b96ef6ba2959563653bba976a63665c3767cd14a8323647d79fbc6042f5"
+    },
+    {
+      "name": "OP5_Triadic_Transport_Checkpoint.md",
+      "sha256": "db6092ef4ce36d168d8b08d4e2386a3ebe90abcb5417f41e496b1d23069faa4b"
+    },
+    {
+      "name": "OP5_Variable_Amplitude_Counterflow_Witness.md",
+      "sha256": "1f660dafca1d1248018b587311fe3ee023d7615e78ebc07943038b83458cff85"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "claim_id": "OP5_FRAME_RECHECK_2026_10_25",
+  "mathematics": {
+    "assertion_tested": "Finite spectral covariance for 128 zeta ordinates at four positive scales; diagnostic A/C substitutions at the existing parameter; endpoint residues; smooth prime-free pairing covariance. Symbolically checked primitive, conditional spectral closed form, 35/55-digit precision control, and deliberately free-scale root as a nonphysical fit control.",
+    "coefficient_domain": "Symbolic real expressions and mpmath 35-decimal-digit floating arithmetic",
+    "conventions": "gamma'=a gamma, tau'=tau/a; scalar trace convention, corresponding measure Jacobian. Critical-line interpretation of infinite accelerated formula is conditional. Symmetric zero ordering.",
+    "inputs": [
+      "First 128 mpmath zetazero ordinates",
+      "gBI=0.2375",
+      "gstring=log(2)/(pi sqrt(3))",
+      "beta^2=(gL-1)/(gL+1)",
+      "eta=atanh(beta)",
+      "Historical OP5 and r05/r18/r61 definitions at repository HEAD"
+    ],
+    "bounds": {
+      "zeros": 128,
+      "precision_decimal_digits": 35,
+      "covariance_absolute_tolerance": "1e-30",
+      "factor_substitution_cases": 4,
+      "accelerated_remainder_sizes": [
+        64,
+        128
+      ],
+      "compact_support": [
+        0.08,
+        0.2
+      ],
+      "precision_control_decimal_digits": 55
+    },
+    "non_claims": [
+      "No rigorous infinite tail bound",
+      "No RH proof or unconditional ordinate-only trace formula",
+      "No derived physical Lambda action or target",
+      "No full OP5 closure",
+      "No fitted counterterm"
+    ]
+  },
+  "execution_artifacts": [
+    "analysis/OP5_Frame_Recheck.py",
+    "sources/research/parts/v470/23_physical_readouts.tex",
+    "sources/research/parts/v480-post-release-layers.tex",
+    "sources/research/parts/v490-post-release-layers.tex",
+    "analysis/op5-frame-run-2026-10-25-closed-form/result.json"
+  ],
+  "software": [
+    {
+      "name": "Python",
+      "version": "3.12.10"
+    },
+    {
+      "name": "mpmath",
+      "version": "1.3.0"
+    },
+    {
+      "name": "sympy",
+      "version": "1.14.0"
+    }
+  ],
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  }
+}

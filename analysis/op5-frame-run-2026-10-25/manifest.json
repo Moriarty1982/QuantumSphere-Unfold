@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_FRAME_RECHECK_2026_10_25",
+  "repository": {
+    "commit": "f2de387d66d6ab2da00ef28a14305729910d7ef1",
+    "dirty": true
+  },
+  "command": [
+    "python",
+    "-B",
+    "analysis/OP5_Frame_Recheck.py",
+    "--output",
+    "analysis/op5-frame-run-2026-10-25/result.json"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "runner-python",
+        "version": "3.12.10"
+      },
+      {
+        "name": "Python",
+        "version": "3.12.10"
+      },
+      {
+        "name": "mpmath",
+        "version": "1.3.0"
+      },
+      {
+        "name": "sympy",
+        "version": "1.14.0"
+      }
+    ],
+    "hardware": "Windows-11-10.0.26300-SP0"
+  },
+  "mathematics": {
+    "assertion_tested": "Finite spectral covariance for 128 zeta ordinates at four positive scales; diagnostic A/C substitutions at the existing parameter; endpoint residues; smooth prime-free pairing covariance.",
+    "coefficient_domain": "Symbolic real expressions and mpmath 35-decimal-digit floating arithmetic",
+    "conventions": "gamma'=a gamma, tau'=tau/a; scalar trace convention, corresponding measure Jacobian. Critical-line interpretation of infinite accelerated formula is conditional. Symmetric zero ordering.",
+    "inputs": [
+      "First 128 mpmath zetazero ordinates",
+      "gBI=0.2375",
+      "gstring=log(2)/(pi sqrt(3))",
+      "beta^2=(gL-1)/(gL+1)",
+      "eta=atanh(beta)",
+      "Historical OP5 and r05/r18/r61 definitions at repository HEAD"
+    ],
+    "bounds": {
+      "zeros": 128,
+      "precision_decimal_digits": 35,
+      "covariance_absolute_tolerance": "1e-30",
+      "factor_substitution_cases": 4,
+      "accelerated_remainder_sizes": [
+        64,
+        128
+      ],
+      "compact_support": [
+        0.08,
+        0.2
+      ]
+    },
+    "non_claims": [
+      "No rigorous infinite tail bound",
+      "No RH proof or unconditional ordinate-only trace formula",
+      "No derived physical Lambda action or target",
+      "No full OP5 closure",
+      "No fitted counterterm"
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-10-25T21:04:18.619655+00:00",
+    "runtime_seconds": 18.813,
+    "exit_status": 0,
+    "status": "completed",
+    "timeout_seconds": 120.0,
+    "max_output_bytes": 524288,
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": 1
+    },
+    "missing_results": [],
+    "invalid_results": []
+  },
+  "execution_artifacts": [
+    "analysis/OP5_Frame_Recheck.py",
+    "sources/research/parts/v470/23_physical_readouts.tex",
+    "sources/research/parts/v480-post-release-layers.tex",
+    "sources/research/parts/v490-post-release-layers.tex"
+  ],
+  "input_artifacts": [
+    {
+      "path": "analysis/OP5_Frame_Recheck.py",
+      "sha256": "c520f0976ad309a0ff63305ef08aa7e035d32b56007688332451d63295e81d72",
+      "sha256_after": "c520f0976ad309a0ff63305ef08aa7e035d32b56007688332451d63295e81d72"
+    },
+    {
+      "path": "sources/research/parts/v470/23_physical_readouts.tex",
+      "sha256": "55f6fbd55eb4290d523be9c214190c6f91f62838e5718099b1ec20082e726242",
+      "sha256_after": "55f6fbd55eb4290d523be9c214190c6f91f62838e5718099b1ec20082e726242"
+    },
+    {
+      "path": "sources/research/parts/v480-post-release-layers.tex",
+      "sha256": "b2eb049956e3761440cd7dc3a7562a5be32571013c3e14726169781040a072bb",
+      "sha256_after": "b2eb049956e3761440cd7dc3a7562a5be32571013c3e14726169781040a072bb"
+    },
+    {
+      "path": "sources/research/parts/v490-post-release-layers.tex",
+      "sha256": "232bdd631bac34259be48b6d326fbf6eaf38f084ee4bec1a621658b3c964424e",
+      "sha256_after": "232bdd631bac34259be48b6d326fbf6eaf38f084ee4bec1a621658b3c964424e"
+    }
+  ],
+  "output_directory": "analysis/op5-frame-run-2026-10-25",
+  "declared_results": [
+    "analysis/op5-frame-run-2026-10-25/result.json"
+  ],
+  "outputs": [
+    {
+      "path": "analysis/op5-frame-run-2026-10-25/stdout.txt",
+      "sha256": "d1940e00643c61b89dac6d7154e0fab812145f51af7050fdc0d6255a0d259462",
+      "kind": "log"
+    },
+    {
+      "path": "analysis/op5-frame-run-2026-10-25/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "log"
+    },
+    {
+      "path": "analysis/op5-frame-run-2026-10-25/result.json",
+      "sha256": "cfc66794f2b6a1d4c65313a3e620ba260fe015c187cb06c672a06aef9b2ee9df",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    {
+      "check": "input hashes unchanged",
+      "passed": true
+    },
+    {
+      "check": "process exited successfully within enforced limits",
+      "passed": true
+    },
+    {
+      "check": "declared result files are present and regular",
+      "passed": true
+    }
+  ],
+  "result": "Run completed; mathematical assertion requires interpretation and review.",
+  "residual_risks": [
+    "Command success does not establish the mathematical interpretation.",
+    "Only listed input artifacts are pinned; external dependencies need recorded versions.",
+    "The thread cap uses conventional environment variables; a child program may ignore them."
+  ]
+}

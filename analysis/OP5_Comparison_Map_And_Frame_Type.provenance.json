@@ -1,0 +1,33 @@
+{
+  "checkpoint": "OP5-COMPARISON-MAP-TYPE-2026-10-26",
+  "git_base": "3fa5ba9440d0985fbb2b3786eaebe56a887cfe6a",
+  "retrieved_at_utc": "2026-10-26T05:15:06.9585095Z",
+  "method": "Exact linearity, polar, connection and forward/reversed-time audit; independent derivations reconciled",
+  "independent_source_hashes_verified": true,
+  "inputs": [
+    {
+      "path": "analysis/OP5_Comparison_Map_And_Frame_Type.md",
+      "sha256": "81ba6f757f4402904a9b4e0f7ed334a6be2ec176404e69023c8706f24e5d8ba0"
+    },
+    {
+      "path": "analysis/OP5_Antilinear_Comparison_Independent.md",
+      "sha256": "7ed7dbc55c46030c5ee0d1cf1a0c13397d4d11fdc6b85b2bb48dad0de378f6a1"
+    },
+    {
+      "path": "analysis/OP5_HS5_Paired_Sector_Result.md",
+      "sha256": "b97537b35afbfe66bbd8bc33f2ab0376c0baa9c2f2131cf57474c3eef01c053a"
+    },
+    {
+      "path": "sources/research/parts/v470/07_qam_infrastructure.tex",
+      "sha256": "380455cda15546021d2caea8e8676e64af7d1327f9a78a0af0e118b7a37371f2"
+    },
+    {
+      "path": "sources/research/parts/v470/32_atlas_and_op_promotion.tex",
+      "sha256": "6e9fb2e657886c4edcf3298f7b697686cbc573557465281e2ab8842359aa2d02"
+    },
+    {
+      "path": "sources/research/parts/v490-post-release-layers.tex",
+      "sha256": "232bdd631bac34259be48b6d326fbf6eaf38f084ee4bec1a621658b3c964424e"
+    }
+  ]
+}

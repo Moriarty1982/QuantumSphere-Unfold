@@ -1,0 +1,26 @@
+{
+  "method": "Exact analytic derivation and standard-library rational witness residuals; fixed-momentum cubic and monotonicity proof",
+  "files": [
+    {
+      "sha256": "bd5649a5d5bc219b7f2878085a059b5d5344f5705bedb3ea63c59f874355725d",
+      "path": "analysis/HC_Two_Frame_Action_Bridge.md"
+    },
+    {
+      "sha256": "87cdc18baecf843836b3899316dfeeee6086b500f7b65a19d02d4444e2c8e32d",
+      "path": "analysis/OP5_Linear_Vacuum_Mode.md"
+    },
+    {
+      "sha256": "ea5d8ea9c1501ebfebe30f7e5771da42ff84d63c63a2bdb9c93f75e744280248",
+      "path": "analysis/OP5_Massive_Affine_Branch.md"
+    },
+    {
+      "sha256": "a8fcdfdd248c3c98a262444ef8335e89f4ed6272a453d5c66ff2d8e8937c82bb",
+      "path": "analysis/OP5_Massive_Affine_Branch.py"
+    }
+  ],
+  "scope": "Alternative neutral fixed-reference scalar parent; not native OP5 closure",
+  "checkpoint": "OP5-MASSIVE-AFFINE-2026-10-27",
+  "git_base": "a97e32d25b4b66ec2d534bdbc142df7b51883057",
+  "captured_at_utc": "2026-10-27T00:12:45.4361716Z",
+  "independent_review": "Unavailable: agent usage limit; no independent review claimed"
+}

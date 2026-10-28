@@ -2502,6 +2502,15 @@ Autor: „rechne das nach und prüfe deine Vermutungen“. `llm/Nachrechnung_r63
 
 `sec:v490-r68-recheck`, Snippet `llm/v490_r68_round.tex`; Inhalt = K117. r68.1 bestätigt (Zahlen, Meissner-Zählung über ±m, Robertson bis j = 10, Boost, Ω-Form, Daten, H46 mit exaktem β). Korrektur r68.2: γ_M + γ_T = |γ₃| per Definition. Korrektur r68.3: Literatur bevorzugt SU(2)-Zählung (0,274), Fenster wählt U(1); Lesart 5 von r63 nicht gedeckt. r68.4: U(1)-Paar konsistent, SU(2)-Paar β = 0,604; Unschärfe-Lesart Umdeutung; „eigener Frame“ zweideutig; η nahe unterem Fensterrand. R_chk = (1,1,0); Guards unverändert.
 
+### K119 Runde v4.9.0-r69: OP5-Serie vom 25. bis 27. Oktober eingebunden (2026-10-28)
+
+Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analysis/`, Commits 3fa5ba9 bis 337d9cb, 173 Dateien) und die Einbindung beauftragt. `sec:v490-r69-op5-series`, Snippet `llm/v490_r69_round.tex`, Protokoll `llm/Integration_OP5_Serie.md`, Nachrechnung `llm/k106_nachrechnung_op5.py`. Alle 23 Prüfskripte reproduzierbar; neun Aussagen mit eigenem Code bestätigt.
+
+- **r69.1 (M, bedingt):** Ein passiver Frame-Wechsel skaliert einen Bilanzdefekt nur (Δ → (b/a)Δ); γ_L → e^η lässt den historischen Defekt bei −1,00. Drei neutrale Objekte, nicht gleichzusetzen: Mittelpunkt zweier Skalenframes; gleichgewichtige Mischung ρ + σ_yρσ_y = I/2 (Etikett P; mit J_B = σ_x bleibt b_x); flussfreier Beobachter zweier Nullströme (Stress diag(ρ,ρ,0,0), kein Vakuum). β_sym² als relative Trennung q_rel = tanh²(χ/2) angeboten, nicht übernommen; tanh²-Potential ohne statisches Vakuum (V′/M⁴ ≈ 0,384). Der absolute Vakuumterm wird von keiner Route gewählt (H + C·I unbeobachtbar bei festem Hintergrund; affiner Zweig für jedes C). Auf dem Dublett von r05 kein nichttrivialer Projektor, der Involution und M/T-Tausch respektiert.
+- **r69.2 (M, bedingt):** Sondenkegel kommt aus der Clifford-Struktur; Masse, M16, triadische und HC-Terme ändern ihn nicht; Kegeldaten legen weder Skala noch Vakuumgewicht fest (konforme Mehrdeutigkeit). Zwei komplexe Sonden: Rang 4, aber Kegel verschieden, Spurhindernis 4 ≠ 0; Austauschzeuge Residuum 544 t². Verbundene Querauslese E = ½Dj ⇒ T = ½Rj; torsionsfrei + Einstein-Vakuum ⇒ Λ_geom = 0 wo j ≠ 0 (Ausschluss, keine Aufhebung). Ward-Ausschluss für isotrope Boost-Verbindung h(t). Gegenstrom trifft alle Stromprojektionen, volles Residuum 3,9–9,5; chirale Tangente: Zwei-Punkt-Fit, keine Lösung.
+- **r69.3 (Fehler im Hauptkorpus, Statusnotiz-Kandidaten):** (a) rem:regularization-B: Reihe −1/τ + 1 − 11τ/24 (nicht +1/2 − τ/12), Gegenterm −log(ε/μ) statt +log ε, Wert 1,689 statt 0,940 (bei μ = 1, T = 0,393); 0,893 in prop:theta-required-B nicht getragen. (b) thm:dirac-probe und prop:three-compatible-readings stützen β_sym und Uhrskala auf das archivierte thm:gue-selfdet. (c) Korollar „Cosmological constant revisited“: null und γ_L⁵ für dieselbe Größe.
+- R_chk = (1,1,0); Guards unverändert; OP5_exact offen, OP5_eff unberührt.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2675,6 +2684,7 @@ Autor: „rechne das nach und prüfe deine Vermutungen“. `llm/Nachrechnung_r63
 - v13.3 (2026-10-25): K116 Runde v4.9.0-r67 (Einsteins „größter Fehler“ unter der Zähl-Lesart); PR #43 (r66) gemergt als ce264ba.
 - v13.4 (2026-10-25): K117 Nachrechnung H47/r63–r67 (bestätigt; Korrekturen: |γ₃| tautologisch, Literatur bevorzugt SU(2)-Zählung 0,274; H46 mit exaktem β gültig).
 - v13.5 (2026-10-25): K118 Runde v4.9.0-r68 trägt die Nachrechnung K117 als Runde ein (bestätigt; Korrekturen r68.2, r68.3).
+- v13.6 (2026-10-28): K119 Runde v4.9.0-r69 bindet die OP5-Serie des Autors mit einem anderen Sprachmodell ein (analysis/, 3fa5ba9..337d9cb); drei Fehler im Hauptkorpus als Statusnotiz-Kandidaten.
 
 ---
 
