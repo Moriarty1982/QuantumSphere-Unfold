@@ -8547,3 +8547,177 @@ R_{\rm glob}^{(v490\text{-}r68,+)}=(0,1,1,1,1),
 \]
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r69 Source-Only: The OP5 Research Series of 25 to 27 October}
+\addcontentsline{toc}{section}{v4.9.0-r69 Source-Only: The OP5 Research Series of 25 to 27 October}
+\label{sec:v490-r69-op5-series}
+% ============================================================================
+
+\paragraph{Purpose.}
+Between 25 and 27 October 2026 the author worked on OP5 with another language model.  The results were committed to the repository folder
+\texttt{analysis/} (six commits, \texttt{3fa5ba9} to \texttt{337d9cb}, 173 files: notes, check scripts, their outputs and a literature catalogue).
+The author asked for this work to be integrated.  This layer records what the series establishes, what it leaves open, and three errors it found in
+the main body.  The notes themselves stay in \texttt{analysis/}; the layer names the note for each item.  It makes no prediction, writes no status
+note and rewrites no earlier layer.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r69 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\paragraph{How the series was checked.}
+All 23 new check scripts were rerun with SymPy and NumPy; all finish without error, and the regenerated outputs differ from the committed ones only in the
+last floating-point digit.  Nine statements were recomputed with newly written code (\texttt{llm/k106\_nachrechnung\_op5.py}, output
+\texttt{llm/k106\_out.txt}); all nine hold.  The notes marked ``Independent'' in the series were written by sub-agents of the same model; there is no
+external review.
+
+\subsection*{v4.9.0-r69 results}
+\label{subsec:v490-r69-results}
+
+\paragraph{Theoremlet v4.9.0-r69.1 (frames, neutrality and the absolute term).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \emph{A frame change cannot remove a balance defect.}  Under a passive change of frame with frequency factor \(a>0\) and declared amplitude
+factor \(b\neq0\), the defect \(\Delta=I-B\) of a balance of the type of Definition~\ref{def:tr-balance} becomes \((b/a)\Delta\); the statement
+\(\Delta=0\) is invariant.  Replacing \(\gL\) by \(e^{\eta}\) in frequency, cutoff or both leaves the historical defect between \(-1.0008\) and \(-1.0038\)
+(\texttt{OP5\_Frame\_Recheck.md}).
+\item[(b)] \emph{Three different neutral objects.}  (i) The midpoint \(\eta_N=(\eta_1+\eta_2)/2\) of two scale frames with offsets \(\pm\delta\); no input frame
+need be photon-like.  (ii) On the real state disk the equal mixture of \(\rho\) and its native counterpart \(\sigma_y\rho\,\sigma_y\) (the tachyon map
+\(z\mapsto iz\) of v4.9.0-r28) is \(I/2\); with \(J_B=\sigma_x\) the component \(b_x\) survives.  \(I/2\) is a mixture, not a frame change, and carries the label P,
+while the old ``photon frame'' is the pure reference state R (v4.9.0-r24).  (iii) Two positive non-parallel null streams select a unique flux-free timelike
+observer; there the stress is \(\mathrm{diag}(\rho,\rho,0,0)\), not the vacuum form \(\mathrm{diag}(\rho,-\rho,-\rho,-\rho)\).  The three must not be identified
+(\texttt{OP5\_Lambda\_Neutral\_Reassessment.md}, \texttt{OP5\_Neutral\_Frame\_Candidates.md}).
+\item[(c)] \emph{\(\bsym^2\) as a relative separation (offered, not adopted).}  With \(\chi=\eta_1-\eta_2\), \(q_{\rm rel}=\tanh^2(\chi/2)\) is invariant under a
+common shift and exchange; at \(\pm\eta\) it equals \(\tanh^2\eta=(\cosh2\eta-1)/(\cosh2\eta+1)\), the form of \(\bsym^2\) when \(\gL=\cosh2\eta\).  A potential
+\(V=M^4\tanh^2(\chi/2)\) has \(V'/M^4\approx0.384\) at the historical separation, so it gives no static vacuum there.
+\item[(d)] \emph{The absolute vacuum term is not selected.}  A shift \(H\mapsto H+C\,I\) of the whole generator changes no probability, gap or beat period
+in fixed-background unitary dynamics; stationarity at fixed metric is blind to a constant volume density; in the alternative affine parent action of
+\texttt{HC\_Two\_Frame\_Action\_Bridge.md} one local branch solves all field equations for every constant \(C\) (branch-local screening, not selection);
+one neutral pair configuration is compatible with different constant vacuum energies (\texttt{OP5\_Absolute\_\allowbreak Selection\_\allowbreak Independent.md},
+\texttt{OP5\_Affine\_\allowbreak Vacuum\_\allowbreak Response\_\allowbreak Independent.md}, \texttt{OP5\_Neutral\_\allowbreak Pair\_\allowbreak Dynamics\_\allowbreak Result.md}).
+\item[(e)] \emph{Readout protocol and energy.}  A passive change of representation changes no prediction; a different active readout (coupling, order,
+time, retained branch) can change states and exchanged energy.  Energy then moves between system, apparatus and bath; none is produced by naming a
+frame (\texttt{OP5\_Readout\_Protocol\_Energy\_Result.md}).
+\item[(f)] \emph{Doublet selection.}  No nontrivial orthogonal projector on the doublet of v4.9.0-r05 respects both the structural involution and the
+corrected M/T exchange; only \(0\) and \(I\) do.  The two ports survive as an exchanged pair (\texttt{OP5\_Symmetry\_Sector\_Selection\_Independent.md}).
+\end{enumerate}
+
+\paragraph{Theoremlet v4.9.0-r69.2 (cones, coframes and the cross readout).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \emph{The probe cone comes from the Clifford structure.}  If the coefficients of the probe equation of \S\ref{sec:field-eq} are local
+multiplications, the principal symbol is \(\Gamma^\mu\xi_\mu\) with square \(g^{\mu\nu}\xi_\mu\xi_\nu\,I\); mass, \(M_{16}\), triadic and HC terms do not
+change the cone.  A conformal rescaling \(E\mapsto aE\) keeps every cone and changes the volume weight by \(a^4\), so cone data fix neither an absolute
+scale nor the weight of a vacuum term (\texttt{OP5\_Null\_Transport\_And\_Signal\_Locality.md}).
+\item[(b)] \emph{Two complex probes.}  Two free massless spinor fields give the rank-four coframe \(E=\mathrm{diag}(3,-1,-1,-1)\), \(g=\mathrm{diag}(-9,1,1,1)\);
+the readout cone differs from the reference cone, and the induced equation leaves a residual \(8i\,e_1\).  For a constant frame and equal induced
+massless (or equal-mass) equations the trace \(e_a^{\ \mu}E^a_{\ \mu}\) would have to be \(0\) and is \(4\) (\texttt{OP5\_Two\_Complex\_Probes.md}).  An exact coupled
+exchange solution with \(M=8\sigma_y\) matches only at one point: on the time axis the induced residual is \(544\,i\,t^2u+O(t^4)\) and the readout speed
+\(1-80t^2+O(t^4)\) (\texttt{OP5\_Two\_Probe\_Exchange\_Evolution.md}).
+\item[(c)] \emph{Two flat metrics.}  Between the reference metric and the readout metric the relative connection is nonzero, both curvatures vanish
+(\texttt{OP5\_Relative\_Connection\_And\_Free\_Paths.md}).
+\item[(d)] \emph{Connected cross readout.}  If \(E^a=\tfrac12D_\omega j_S^a\) with a parallel selector, then \(T^a=\tfrac12R^a{}_b\,j_S^b\) exactly.  Torsion-free
+connection plus an ordinary Einstein vacuum equation \(\mathrm{Ric}=\Lambda_{\rm geom}g\) forces \(\Lambda_{\rm geom}j=0\), so \(\Lambda_{\rm geom}=0\) wherever
+\(j\neq0\).  This is an exclusion under these premises, not a cancellation of vacuum energy; with \(a=\tau\) the comoving fluid needs
+\(\rho+3p=2\Lambda_{\rm geom}/\kappa\).  A torsionful witness with \(E\) Minkowski exists
+(\texttt{OP5\_Cross\_Connection\_Integrability.md}, \texttt{OP5\_Torsionful\_Geometric\_Witness.md}).
+\item[(e)] \emph{Ward exclusion.}  For the common-boost triad current and an isotropic time-only boost connection \(h(t)\), current conservation in the
+reconstructed geometry requires \(b+3tb'=1\) and \((hb^2)'=0\); the second gives \(b=(1\pm\sqrt{10})/9\), the first \(b=1\).  No differentiable profile exists
+(\texttt{OP5\_Isotropic\_Connection\_Ward\_NoGo.md}).
+\item[(f)] \emph{Counterflow and chiral tangent.}  A counterflow configuration that meets every current projection still leaves full spinor residuals with norms
+between \(3.9\) and \(9.5\) at two sample points.  Adding independent boosts and one chiral tangent \(e^{i\chi\gamma_5/2}\) with signs \((+,+,-)\) fits the
+instantaneous derivative at both points (rank \(22\) of \(24\), residual below \(4\cdot10^{-28}\)); this is a two-point fit, not a solution.  The prescribed
+state set is not invariant under the comparison dynamics; a rotated probe pair cancels the axial drift but not the radial drift, and
+\(\overline{E^T\eta E}\neq\bar E^T\eta\bar E\) in general (\texttt{OP5\_Counterflow\_Full\_Residual\_Result.md}, \texttt{OP5\_Chiral\_Tangent\_Result.md},
+\texttt{OP5\_Constraint\_Set\_And\_Ensemble\_Result.md}).
+\end{enumerate}
+
+\paragraph{Finding v4.9.0-r69.3 (errors in the main body).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Remark~\ref{rem:regularization-B}: the expansion is \(R(\tau)=-1/\tau+1-\tfrac{11}{24}\tau+\tfrac18\tau^2+O(\tau^3)\), not
+\(-1/\tau+\tfrac12-\tau/12\).  Since \(\int_\varepsilon^T(1+R)\,d\tau\) already contains \(+\log\varepsilon\), the printed counterterm \(+\log\varepsilon\) doubles the
+divergence; the counterterm is \(-\log(\varepsilon/\mu)\) with a declared scale \(\mu\).  With \(\mu=1\) and \(T=0.393\) the value is \(1.689\), not \(0.940\), so
+the \(0.893\) of Proposition~\ref{prop:theta-required-B} is not supported.  The route was already marked false (v4.8.0-r05); the numbers are new.
+\item[(b)] Theorem~\ref{thm:dirac-probe} and Proposition~\ref{prop:three-compatible-readings} still fix \(\bsym\) and the clock scale by \(\gL^*\) of
+Theorem~\ref{thm:gue-selfdet}, which is archived.  The citation no longer derives a clock scale.
+\item[(c)] The corollary ``Cosmological constant revisited'' of \S\ref{sec:phase-constants} calls the photon-frame term zero and gives the finite ratio
+\(\rho_{\rm vac}^{(\rm photon)}/\rho_{\rm vac}^{(\rm matter)}=\gL^5\).  For one and the same quantity both cannot hold; a distinction between net and bare
+density would have to be defined.  This adds to the status-note candidates of v4.9.0-r64 and r67.
+\end{enumerate}
+(a) to (c) are candidates for status notes (rules B and C of v4.9.0-r25); they are not written in this layer.
+
+\paragraph{Remarks v4.9.0-r69.4.}
+\begin{enumerate}[leftmargin=2em]
+\item The series corrects itself once: \texttt{OP5\_Comparison\_Map\_And\_Frame\_Type.md} called the realification of \(J_B\) missing; it is
+Theoremlet v4.9.0-r04.1 (\texttt{OP5\_Realification\_And\_Gram\_Boundary.md}).
+\item Every positive result of the series is conditional: a declared comparison model, a chosen witness, or two sample points.  None is derived from
+the native \(M_{16}\), \(P_{C_7}\) or a common action.  Every note states that OP5 stays open.
+\item The literature routes (\texttt{OP5\_Mathematical\_Literature\_Routes\_2026-10-27.md}) suggest, in this order: polar spinor variables
+(Fabbri, \texttt{arXiv:1707.03270}) and Fierz reconstruction (Inglis--Jarvis, \texttt{arXiv:1405.6762}); the constraint algorithm for
+\(k\)-presymplectic systems (Gracia, Mart\'in, Rom\'an-Roy, \texttt{arXiv:0903.1791}); formal integrability (Landsberg, \texttt{dg-ga/9708005}); then a
+coupled coframe dynamics.  Green and Wald (\texttt{arXiv:1011.4920}) and Kaloper et al.\ (\texttt{arXiv:1505.01492}) bound what averaging and sequestering
+can do for \(\Lambda\).
+\item The clock window \(E_{\rm clk}^{\rm win}\) of the C5 chain is unchanged by a joint relabelling \(\tau\mapsto a\tau\); it selects a relay window, not a
+clock period.  This does not touch \(W_{\rm clk}^{\rm loc}\) under \(\Delta_\gamma<1/5\).
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+r69.1 and r69.2 by the notes named in each item and their check scripts in \texttt{analysis/}.  Recomputed with new code
+(\texttt{llm/k106\_nachrechnung\_op5.py}): r69.1(b)(ii) and (c) including \(V'\), r69.2(b), (d) and (e), and the series and value of r69.3(a).  r69.3 also by reading the
+cited passages.
+\(\square\)
+
+\subsection*{v4.9.0-r69 status in the three frames}
+\label{subsec:v490-r69-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item r69.1(a) holds in every frame: the defect transforms by \(b/a\) between M, T and R alike.  It concerns finite invertible frame changes; the
+photon P is a degenerate limit and needs its own normalized observable.
+\item r69.1(b): (i) needs two real scale frames, so it compares M with R or with \(T|_R\), not with the native T (complex rapidity, v4.9.0-r24); (ii) is built
+from M and its T-image and gives the P state; (iii) is a spacetime observer and has no frame label.  Frame-free only in the sense that (ii) is symmetric
+in M and T.
+\item r69.1(d), (e), (f) and r69.2 are statements in the reference description R or in a declared classical comparison sector; they do not separate M
+from T.
+\item r69.3 concerns R and P: the old ``photon frame'' of the cited passages is R (v4.9.0-r24).
+\end{itemize}
+No statement of this layer concerns colour or charge.  The chiral phase \(e^{i\chi\gamma_5/2}\) acts in the Dirac comparison sector; it is neither the inner
+unit \(J=L_{e_7}\) nor the \(\mathbb C\)-factor of the Dixon register.
+
+\subsection*{v4.9.0-r69 register entries}
+\label{subsec:v490-r69-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r69\\
+\midrule
+OP5 research series (\texttt{analysis/}, 25--27 Oct.) & reproducible; conditional results; OP5\(_{\rm exact}\) open\\
+frame change as a repair of the \(\Theta\) balance & excluded for finite invertible changes\\
+neutral reference & three distinct objects; none fixes the absolute vacuum term\\
+Remark~\ref{rem:regularization-B} & expansion and counterterm wrong; status-note candidate\\
+\(\gL^*\) clock scale in Thm.~\ref{thm:dirac-probe}, Prop.~\ref{prop:three-compatible-readings} & rests on an archived theorem; status-note candidate\\
+corollary ``Cosmological constant revisited'' & zero and \(\gL^5\) for one quantity; status-note candidate\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r69 ledger and guard update}
+\label{subsec:v490-r69-ledger-guard}
+
+\[
+R_{\rm chk}^{v490\text{-}r69}=(1,1,0)
+\]
+for (series reproduced and nine statements confirmed; three errors in the main body found; OP5 not closed).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r69,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r69}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
