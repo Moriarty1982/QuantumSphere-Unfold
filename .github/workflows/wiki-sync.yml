@@ -1,0 +1,60 @@
+name: Wiki Sync
+
+# Spiegelt den Ordner wiki/ in das GitHub-Wiki (QuantumSphere-Unfold.wiki.git).
+# Quelle der Wahrheit ist wiki/ im Hauptrepository; direkte Wiki-Bearbeitungen
+# werden beim naechsten Lauf ueberschrieben.
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "wiki/**"
+      - ".github/workflows/wiki-sync.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: wiki-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    name: Mirror wiki/ to the GitHub wiki
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          path: repo
+
+      - name: Checkout wiki
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository }}.wiki
+          path: wiki-remote
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Copy pages
+        run: |
+          rsync -a --delete --exclude '.git' repo/wiki/ wiki-remote/
+          cd wiki-remote
+          git status --short
+
+      - name: Commit and push
+        working-directory: wiki-remote
+        env:
+          SRC_SHA: ${{ github.sha }}
+          SRC_REPO: ${{ github.repository }}
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "Wiki already matches wiki/ at ${SRC_SHA}."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Sync from ${SRC_REPO}@${SRC_SHA::7} (wiki/)"
+          git push origin HEAD

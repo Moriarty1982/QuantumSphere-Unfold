@@ -1,0 +1,1 @@
+Quellenhilfe · geprüft am 25.10.2026 gegen [64973ef](https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/64973efe8409cfd2ae985fbbd17b4ebc95845780) · Veröffentlichung und Forschung unterscheiden · [Quellen](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Versionen-und-Quellen)
