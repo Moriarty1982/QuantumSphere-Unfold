@@ -53,7 +53,7 @@ Das Repository liegt in einem OneDrive-Ordner. Bisher unauffällig; falls je Syn
 
 ## Wiki
 
-Zum Repository gehört das GitHub-Wiki `https://github.com/Moriarty1982/QuantumSphere-Unfold.wiki.git`, lokal neben diesem Ordner unter `..\Quantum Sphera.wiki` (nicht hineinklonen). **Bei jeder Änderung am Repository das Wiki mit aktualisieren** (Autorentscheidung, 2026-10-25), besonders `Versionen-und-Quellen.md`, `Forschungsstand.md`, `Home.md` und die englischen Seiten (`English.md`, `Document-guide.md`). Pflegeregeln stehen in `Wiki-Pflege.md`.
+Zum Repository gehört das GitHub-Wiki `https://github.com/Moriarty1982/QuantumSphere-Unfold.wiki.git`, lokal neben diesem Ordner unter `..\Quantum Sphera.wiki` (nicht hineinklonen). **Bei jeder Änderung am Repository das Wiki mit aktualisieren** (Autorentscheidung, 2026-10-25). **Seit 2026-10-28 (PR #47, a692031) liegt die Quelle der Wiki-Seiten im Ordner `wiki/` von `github/main`**; der Workflow `.github/workflows/wiki-sync.yml` spiegelt ihn bei jedem Push auf `main` ins Wiki. Wiki-Änderungen also im selben PR wie die Repo-Änderung unter `wiki/`, nicht mehr im Wiki-Repository oder als Patch; der lokale Ordner `..\Quantum Sphera.wiki` ist nur noch Lesekopie (`git pull`), besonders `Versionen-und-Quellen.md`, `Forschungsstand.md`, `Home.md` und die englischen Seiten (`English.md`, `Document-guide.md`). Pflegeregeln stehen in `Wiki-Pflege.md`.
 
 ## Dateien
 
