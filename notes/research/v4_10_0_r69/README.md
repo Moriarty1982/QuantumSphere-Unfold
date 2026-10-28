@@ -23,4 +23,6 @@ names the note behind each item.
 | `llm/k106_nachrechnung_op5.py`, `llm/k106_out.txt` | recheck |
 
 Local monolith: 1273 → 1277 pages, SHA256 prefix `598bec721a246fa0`, hard values 0, overfull 45, guard linter 0 hits.
+Candidate build with `.github/scripts/qsc_latex_build.py --source-dir sources/research` (TeX Live 2022): 1302 → 1306 pages, 4000 → 4005 labels,
+undefined references 0, duplicate labels 0, rerun 0, overfull 45 (unchanged). GitHub workflow "QSC LaTeX PDF Build" on the branch: green.
 The series was also copied into the local repository under `analysis/` (local commit `6a2705e`).
