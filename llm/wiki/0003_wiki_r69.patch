@@ -1,0 +1,197 @@
+From 011112109a65e55a3526de873815c1cac3e139b2 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Wed, 28 Oct 2026 19:08:04 +0100
+Subject: [PATCH 3/3] docs: Forschungsstand um r69 (OP5-Serie 25.-27.10.),
+ Stand b12adf5
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01VJ94G66afHjwaA7cBiRx8z
+---
+ Document-guide.md        |  2 +-
+ Dokumentfuehrer.md       |  2 +-
+ English.md               |  2 +-
+ Forschungsstand.md       | 15 ++++++++++++++-
+ Hinweise-fuer-LLMs.md    |  4 ++--
+ Home.md                  |  2 +-
+ Leseweg.md               |  2 +-
+ Versionen-und-Quellen.md | 15 ++++++++-------
+ Wiki-Pflege.md           |  4 +++-
+ 9 files changed, 32 insertions(+), 16 deletions(-)
+
+diff --git a/Document-guide.md b/Document-guide.md
+index 5d02a8b..8f76a83 100644
+--- a/Document-guide.md
++++ b/Document-guide.md
+@@ -132,7 +132,7 @@ Read frame, Planck and Hawking passages alongside the [r63–r68 corrections](ht
+ 
+ **Next:** Take stock in step 8.
+ 
+-> **Note for LLMs and source checking:** Correction baseline: r64–r68 (r66 corrects the citation in r64; r67 concerns `rem:einstein-blunder`). Historical wording in `working-orientation.tex` does not override the source map. Preserve frame assignments and status notes.
++> **Note for LLMs and source checking:** Correction baseline: r64–r69 (r66 corrects the citation in r64; r67 concerns `rem:einstein-blunder`; r69 flags `rem:regularization-B`, the $\gamma_L^*$ clock scale of `thm:dirac-probe` and the corollary "Cosmological constant revisited"). Historical wording in `working-orientation.tex` does not override the source map. Preserve frame assignments and status notes.
+ 
+ ## 8. Take stock and choose a technical branch
+ 
+diff --git a/Dokumentfuehrer.md b/Dokumentfuehrer.md
+index 15c5e4d..0ae40a9 100644
+--- a/Dokumentfuehrer.md
++++ b/Dokumentfuehrer.md
+@@ -136,7 +136,7 @@ Bei Frame-, Planck- oder Hawking-Aussagen die [Korrekturen r63–r68](https://gi
+ 
+ **Weiter:** Station 8 fasst zusammen und führt in die technischen Anhänge.
+ 
+-> **Anmerkung für LLMs und Quellenprüfung:** Korrekturstand: r64–r68 (r66 korrigiert die Zitierung in r64; r67 betrifft `rem:einstein-blunder`). Historische Versionsangaben in `working-orientation.tex` überschreiben nicht die Quellenkarte; Frame-Zuordnungen und Statusnotizen beibehalten.
++> **Anmerkung für LLMs und Quellenprüfung:** Korrekturstand: r64–r69 (r66 korrigiert die Zitierung in r64; r67 betrifft `rem:einstein-blunder`; r69 vermerkt `rem:regularization-B`, die $\gamma_L^*$-Uhrskala in `thm:dirac-probe` und das Korollar „Cosmological constant revisited“). Historische Versionsangaben in `working-orientation.tex` überschreiben nicht die Quellenkarte; Frame-Zuordnungen und Statusnotizen beibehalten.
+ 
+ ## 8. Bilanz ziehen und gezielt vertiefen
+ 
+diff --git a/English.md b/English.md
+index 2679163..7214930 100644
+--- a/English.md
++++ b/English.md
+@@ -9,7 +9,7 @@
+ - [Research status, German](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungsstand).
+ - [LLM source-reading advice, German](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Hinweise-fuer-LLMs).
+ 
+-**Snapshot:** 25 October 2026, [main repository commit f2de387](https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/f2de387d66d6ab2da00ef28a14305729910d7ef1). Published baseline: **v4.9.0**, 21 October 2026, [Version DOI 10.5281/zenodo.23534954](https://doi.org/10.5281/zenodo.23534954). Research working version: **4.10.0-draft**, documented layers through **v4.9.0-r68**.
++**Snapshot:** 28 October 2026, [main repository commit b12adf5](https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/b12adf5fc0a69d32e0405b78dfb505c3b9bbea44). Published baseline: **v4.9.0**, 21 October 2026, [Version DOI 10.5281/zenodo.23534954](https://doi.org/10.5281/zenodo.23534954). Research working version: **4.10.0-draft**, documented layers through **v4.9.0-r69**.
+ 
+ The Companion investigates a structure-first framework with conditional, local and readout-dependent results. The repository does not present a peer-reviewed proof of global physical closure, global all-readout terminality, the Riemann Hypothesis or global QFT/GR unification. Each result must be read with its assumptions, corrections and remaining obligations.
+ 
+diff --git a/Forschungsstand.md b/Forschungsstand.md
+index 4637da6..8d87eee 100644
+--- a/Forschungsstand.md
++++ b/Forschungsstand.md
+@@ -1,6 +1,6 @@
+ # Forschungsstand
+ 
+-**Quellenstand: 25.10.2026, Commit f2de387.** Diese Seite fasst dokumentierte Statusaussagen zusammen; sie ist kein neuer Beweisaudit. [Quellenkarte](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Versionen-und-Quellen).
++**Quellenstand: 28.10.2026, Commit b12adf5.** Diese Seite fasst dokumentierte Statusaussagen zusammen; sie ist kein neuer Beweisaudit. [Quellenkarte](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Versionen-und-Quellen).
+ 
+ ## Bedingte Ergebnisse
+ 
+@@ -22,6 +22,19 @@ Die [Layer r63–r68](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/
+ 
+ Das sind Einschränkungen bestimmter Argumente, keine allgemeine Widerlegung jeder möglichen Gravitationstheorie.
+ 
++## OP5: Vakuumterm, Frames und Neutralität (r69)
++
++Der Autor hat vom 25. bis 27. Oktober mit einem weiteren Sprachmodell an OP5 gearbeitet; die Notizen liegen unter `analysis/` (Prefix `OP5_`). [Layer r69](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/b12adf5fc0a69d32e0405b78dfb505c3b9bbea44/notes/research/v4_10_0_r69/README.md) bindet sie ein. Alle Prüfskripte ließen sich reproduzieren, neun Aussagen wurden mit eigenem Code nachgerechnet. Jede positive Aussage der Serie ist bedingt (Vergleichsmodell, gewählter Zeuge oder zwei Stichpunkte). Festgehalten wird:
++
++- Ein passiver, invertierbarer Frame-Wechsel skaliert einen Bilanzdefekt nur; er kann ihn nicht beseitigen. Die Ersetzung von $\gamma_L$ durch $e^\eta$ schließt die historische Bilanz nicht.
++- „Neutral“ hat drei verschiedene Bedeutungen: Mittelpunkt zweier Skalenframes; gleichgewichtige Mischung eines Zustands mit seinem Tachyonbild ($I/2$, Etikett P); flussfreier Beobachter zweier Nullströme (Stress $\mathrm{diag}(\rho,\rho,0,0)$, kein Vakuumtensor). Sie dürfen nicht gleichgesetzt werden.
++- Keine der geprüften Routen legt den absoluten Vakuumterm fest. Ein gemeinsamer Energieversatz ist bei festem Hintergrund unbeobachtbar; im alternativen affinen Vergleichsmodell löst ein Zweig die Feldgleichungen für jede Konstante.
++- Der Lichtkegel der Sondengleichung kommt aus der Clifford-Struktur, nicht aus Masse-, $M_{16}$-, triadischen oder HC-Termen. Kegeldaten legen weder eine absolute Skala noch das Gewicht eines Vakuumterms fest.
++- Mit der verbundenen Querauslese $E=\tfrac12 Dj$ gilt $T=\tfrac12 Rj$. Torsionsfrei und mit gewöhnlicher Einstein-Vakuumgleichung folgt $\Lambda_{\mathrm{geom}}=0$, wo $j\neq0$: ein Ausschluss unter diesen Voraussetzungen, keine Aufhebung von Vakuumenergie.
++- Drei Fehler im Hauptkorpus sind als Kandidaten für Statusnotizen vermerkt: `rem:regularization-B` (Reihenentwicklung und Vorzeichen des Gegenterms; Wert 1,689 statt 0,940), `thm:dirac-probe` und `prop:three-compatible-readings` stützen die Uhrskala noch auf das archivierte `thm:gue-selfdet`, und das Korollar „Cosmological constant revisited“ gibt für dieselbe Größe null und $\gamma_L^5$ an.
++
++OP5 bleibt in der exakten Form offen; die lokale Detektorschließung $\mathrm{OP5}_{\mathrm{eff}}$ ist davon nicht berührt.
++
+ ## Offene Pflichten und Aussagegrenzen
+ 
+ Die bedingten Cartan- und Kopplungsanalysen liefern keine pauschalen Nachweise regionaler gekoppelter Existenz, vollständiger Gauge-Klassifikation, nativer Massenkoeffizienten oder globaler physikalischer Closure. Für ein bestimmtes Problem die konkrete Quelle und spätere Layer prüfen; dieses Wiki schließt keine OPs.
+diff --git a/Hinweise-fuer-LLMs.md b/Hinweise-fuer-LLMs.md
+index fba8c55..0009125 100644
+--- a/Hinweise-fuer-LLMs.md
++++ b/Hinweise-fuer-LLMs.md
+@@ -6,14 +6,14 @@ Der gemeinsame [Dokumentführer](https://github.com/Moriarty1982/QuantumSphere-U
+ 
+ ## Kontext für Antworten
+ 
+-Am geprüften Stand **25.10.2026 / f2de387** ist **v4.9.0** die öffentliche Baseline (Version DOI **10.5281/zenodo.23534954**). Die Forschungsquellen bilden **4.10.0-draft** mit dokumentierten Layern bis **v4.9.0-r68**. Vor einer aktuellen Aussage den neuesten Stand erneut prüfen. [Quellenkarte](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Versionen-und-Quellen).
++Am geprüften Stand **28.10.2026 / b12adf5** ist **v4.9.0** die öffentliche Baseline (Version DOI **10.5281/zenodo.23534954**). Die Forschungsquellen bilden **4.10.0-draft** mit dokumentierten Layern bis **v4.9.0-r69**. Vor einer aktuellen Aussage den neuesten Stand erneut prüfen. [Quellenkarte](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Versionen-und-Quellen).
+ 
+ ## Vorgehen bei Fachfragen
+ 
+ 1. Klären, ob die Frage Veröffentlichung, aktuelle Forschung oder einen historischen Zustand betrifft.
+ 2. Commit/Tag, Dateipfad und möglichst Satzlabel oder Abschnitt nennen.
+ 3. Definitionen, Voraussetzungen, Guards und Frame-Konventionen derselben Fassung lesen.
+-4. Spätere Korrekturen, Statusnotizen und archivierte Argumente berücksichtigen. Für Frame-/Gravitationsaussagen insbesondere r64–r68 prüfen (r66 korrigiert die Zitierung in r64).
++4. Spätere Korrekturen, Statusnotizen und archivierte Argumente berücksichtigen. Für Frame-/Gravitationsaussagen insbesondere r64–r68 prüfen (r66 korrigiert die Zitierung in r64); für OP5, Vakuumterm und Frame-Neutralität r69. Die Arbeitsnotizen unter `analysis/` sind Forschungsstände mit bedingten Ergebnissen, keine Manuskriptaussagen.
+ 5. Nach Evidenz formulieren: bewiesen unter genannten Voraussetzungen; numerisch geprüft im angegebenen Bereich; zusätzlich angenommen; zurückgezogen; oder offen.
+ 6. Fehlende Belege als fehlend kennzeichnen. Aus einer Analogie keine native Ableitung machen.
+ 
+diff --git a/Home.md b/Home.md
+index 97275c3..66694af 100644
+--- a/Home.md
++++ b/Home.md
+@@ -2,7 +2,7 @@
+ 
+ Dieses Wiki erschließt den **Quantum Sphaera Companion**: ein strukturorientiertes mathematisches Forschungsprojekt mit lokalen, bedingten und readout-abhängigen Aussagen. Es bietet Menschen und LLMs einen Einstieg, eine Quellenkarte und benannte Aussagegrenzen.
+ 
+-**Stand: 25. Oktober 2026.** Öffentliche Baseline: **v4.9.0 vom 21. Oktober 2026**. Aktuelle Forschung: **4.10.0-draft**, zuletzt dokumentierte Layer **v4.9.0-r68**. Layerbezeichnung und Arbeitsversion sind unterschiedliche Kennzeichnungen.
++**Stand: 28. Oktober 2026.** Öffentliche Baseline: **v4.9.0 vom 21. Oktober 2026**. Aktuelle Forschung: **4.10.0-draft**, zuletzt dokumentierte Layer **v4.9.0-r69**. Layerbezeichnung und Arbeitsversion sind unterschiedliche Kennzeichnungen.
+ 
+ ## Einstieg
+ 
+diff --git a/Leseweg.md b/Leseweg.md
+index 7149995..b3021c9 100644
+--- a/Leseweg.md
++++ b/Leseweg.md
+@@ -11,7 +11,7 @@ Die nachfolgende Übersicht bleibt als kurze Quellennavigation erhalten.
+ 1. [Startseite](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Home) und [Forschungsstand](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungsstand) lesen: Veröffentlichung und Aussagegrenzen zuerst klären.
+ 2. Das [Repository-README](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/README.md) für öffentliche Baseline, DOI und Projektstruktur verwenden.
+ 3. Für die veröffentlichte Fassung das [v4.9.0-Release-Verzeichnis](https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/v4.9.0/release/v4.9.0) oder den [Zenodo-Datensatz](https://zenodo.org/records/23534954) öffnen.
+-4. Für laufende Forschung mit der [4.10-Basis](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/v4_10_0_base/README.md) beginnen. Die [Notizen zu r63–r68](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/v4_10_0_r63_r64/README.md) dokumentieren jüngste Frame-Korrekturen.
++4. Für laufende Forschung mit der [4.10-Basis](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/v4_10_0_base/README.md) beginnen. Die [Notizen zu r63–r68](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/v4_10_0_r63_r64/README.md) dokumentieren jüngste Frame-Korrekturen; [r69](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/b12adf5fc0a69d32e0405b78dfb505c3b9bbea44/notes/research/v4_10_0_r69/README.md) bindet die OP5-Arbeitsnotizen unter `analysis/` ein.
+ 
+ ## Für konkrete mathematische Fragen
+ 
+diff --git a/Versionen-und-Quellen.md b/Versionen-und-Quellen.md
+index e0313ff..6648e01 100644
+--- a/Versionen-und-Quellen.md
++++ b/Versionen-und-Quellen.md
+@@ -1,24 +1,25 @@
+ # Versionen und Quellen
+ 
+-Stand: **25.10.2026**, geprüft gegen Commit [`f2de387d66d6ab2da00ef28a14305729910d7ef1`](https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/f2de387d66d6ab2da00ef28a14305729910d7ef1). Links auf `main` zeigen die weiterentwickelte Fassung; für reproduzierbare Aussagen einen Commit-Link verwenden.
++Stand: **28.10.2026**, geprüft gegen Commit [`b12adf5fc0a69d32e0405b78dfb505c3b9bbea44`](https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/b12adf5fc0a69d32e0405b78dfb505c3b9bbea44). Links auf `main` zeigen die weiterentwickelte Fassung; für reproduzierbare Aussagen einen Commit-Link verwenden.
+ 
+ | Ebene | Stand | Verwendung |
+ |---|---|---|
+ | Öffentliche Baseline | v4.9.0, 21.10.2026 | Publizierte Aussagen und Zitation |
+-| Forschung | 4.10.0-draft; Layer bis v4.9.0-r68 | Nachträgliche Forschung und Korrekturen; keine 4.10-Veröffentlichung |
++| Forschung | 4.10.0-draft; Layer bis v4.9.0-r69 | Nachträgliche Forschung und Korrekturen; keine 4.10-Veröffentlichung |
+ | Vorherige Veröffentlichung | v4.8.0, DOI 10.5281/zenodo.23365244 | Historischer Vergleich |
+ | Ältere Veröffentlichung | v4.7.0, DOI 10.5281/zenodo.20232911 | Herkunft und ältere Argumente |
+ | Analysen, Savepoints, Prüfberichte | jeweils eigener Stand | Keine automatische Release-Zugehörigkeit |
+ 
+ ## Primäre Quellen
+ 
+-- [README am geprüften Commit](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2de387d66d6ab2da00ef28a14305729910d7ef1/README.md): öffentliche Baseline und Scope Guard.
+-- [CITATION.cff am geprüften Commit](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2de387d66d6ab2da00ef28a14305729910d7ef1/CITATION.cff): Zitiermetadaten.
++- [README am geprüften Commit](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/b12adf5fc0a69d32e0405b78dfb505c3b9bbea44/README.md): öffentliche Baseline und Scope Guard.
++- [CITATION.cff am geprüften Commit](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/b12adf5fc0a69d32e0405b78dfb505c3b9bbea44/CITATION.cff): Zitiermetadaten.
+ - [Zenodo v4.9.0](https://zenodo.org/records/23534954): veröffentlichter Datensatz; [Version DOI](https://doi.org/10.5281/zenodo.23534954).
+ - [Concept DOI](https://doi.org/10.5281/zenodo.19210728): versionsübergreifender Projektverweis. Für eine bestimmte Fassung den Version DOI angeben.
+-- [Forschungs-README](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2de387d66d6ab2da00ef28a14305729910d7ef1/sources/research/README.md): Arbeitslinie und historische Einordnungen.
+-- [4.10-Basisnotizen](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2de387d66d6ab2da00ef28a14305729910d7ef1/notes/research/v4_10_0_base/README.md): Arbeitsversion, Revisionen, Archivierung und Guards.
+-- [r63–r68](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2de387d66d6ab2da00ef28a14305729910d7ef1/notes/research/v4_10_0_r63_r64/README.md): jüngste Frame-Prüfungen und Statuskorrekturen.
++- [Forschungs-README](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/b12adf5fc0a69d32e0405b78dfb505c3b9bbea44/sources/research/README.md): Arbeitslinie und historische Einordnungen.
++- [4.10-Basisnotizen](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/b12adf5fc0a69d32e0405b78dfb505c3b9bbea44/notes/research/v4_10_0_base/README.md): Arbeitsversion, Revisionen, Archivierung und Guards.
++- [r63–r68](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/b12adf5fc0a69d32e0405b78dfb505c3b9bbea44/notes/research/v4_10_0_r63_r64/README.md): Frame-Prüfungen und Statuskorrekturen.
++- [r69](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/b12adf5fc0a69d32e0405b78dfb505c3b9bbea44/notes/research/v4_10_0_r69/README.md): Einbindung der OP5-Arbeitsserie vom 25.–27.10. (Notizen unter [`analysis/`](https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/b12adf5fc0a69d32e0405b78dfb505c3b9bbea44/analysis), Prefix `OP5_`).
+ 
+ ## Versionsfallen
+ 
+diff --git a/Wiki-Pflege.md b/Wiki-Pflege.md
+index b2057da..41933e0 100644
+--- a/Wiki-Pflege.md
++++ b/Wiki-Pflege.md
+@@ -34,11 +34,13 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
+ 
+ ## Änderungsnachweis
+ 
++**28.10.2026, Layer r69:** Patches für r66–r68 eingespielt (lagen seit dem 25.10. lokal). Forschungsstand um einen OP5-Abschnitt zur Einbindung der Arbeitsserie vom 25.–27.10. ergänzt; Stand- und Layerangaben auf Commit b12adf5 und r69 gesetzt. Im r67-Eintrag den versehentlich ersetzten Commit wieder auf c4df998 gestellt.
++
+ **25.10.2026, Layer r68:** Forschungsstand um die unabhängige Nachrechnung ergänzt (U(1)- gegen SU(2)-Zählung); Stand- und Layerangaben auf Commit f2de387 und r68 gesetzt.
+ 
+ **25.10.2026, Layer r66:** Forschungsstand korrigiert: Der Widerspruch `thm:k-values` gegen `thm:frame-offset` stammt aus v4.9.0-r09 und ist dort aufgelöst; r66 holt die Zitierung nach. Hinweis zum lokalen Frame-Faktor ergänzt. Quellenstand: Merge von PR #43 (ce264ba).
+ 
+-**25.10.2026, Layer r67:** Forschungsstand um die Prüfung von `rem:einstein-blunder` ergänzt; Stand- und Layerangaben auf Commit f2de387 und r67 gesetzt. Fundstellen geprüft; keine mathematischen Manuskriptänderungen durch das Wiki.
++**25.10.2026, Layer r67:** Forschungsstand um die Prüfung von `rem:einstein-blunder` ergänzt; Stand- und Layerangaben auf Commit c4df998 und r67 gesetzt. Fundstellen geprüft; keine mathematischen Manuskriptänderungen durch das Wiki.
+ 
+ **25.10.2026, Formelsatz und Lesefluss:** Deutscher und englischer Dokumentführer als gemeinsamer Weg für Menschen und LLMs überarbeitet; technische Hinweise als Anmerkungen markiert. Formeln in beiden Lesewegen, beiden Koide-Beispielen und im Forschungsstand auf LaTeX-Satz umgestellt. Mathematische Aussagen und Quellenstand beibehalten.
+ 
+-- 
+2.43.0
+
