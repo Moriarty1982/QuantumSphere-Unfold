@@ -1,0 +1,27 @@
+{
+  "actual_initial_data": [
+    {
+      "point": {
+        "t": "1",
+        "x": "3/5",
+        "y": "0",
+        "z": "0"
+      },
+      "complex_proportional_residual_squared": 32.66666666666666,
+      "normalized_transverse_speed_squared": 4.083333333333333
+    },
+    {
+      "point": {
+        "t": "1",
+        "x": "2/5",
+        "y": "1/5",
+        "z": "1/5"
+      },
+      "complex_proportional_residual_squared": 42.16842105263159,
+      "normalized_transverse_speed_squared": 5.271052631578948
+    }
+  ],
+  "toy_exact_minor": "epsilon",
+  "toy_normalized_reduced_purity": "(epsilon**4 + 1)/(epsilon**2 + 1)**2",
+  "scope": "Classical component-rank test. Tensor-product quantum interpretation not established; no regional solution."
+}

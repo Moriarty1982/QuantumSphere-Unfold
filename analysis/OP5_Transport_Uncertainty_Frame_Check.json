@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "bracket_V_W": true,
+    "commuting_rescaled_pair": true,
+    "div_V": true,
+    "div_W": true,
+    "div_W_over_t": true
+  },
+  "domain": "t != 0, x^2+y^2 > 0",
+  "method": "exact SymPy symbolic simplification",
+  "non_claims": [
+    "No physical Hilbert space or native dynamics established"
+  ]
+}
