@@ -1,0 +1,15 @@
+R_series: -127*t**3/5760 + t**2/8 - 11*t/24 + 1 - 1/t
+ward_factor: -2*(9*b(t)**2 - 2*b(t) - 1)*b(t)/(9*t**2)
+ward_roots: ['1/9 - sqrt(10)/9', '1/9 + sqrt(10)/9']
+E_eq_half_Dj: True
+T_eq_half_Rj: True
+T1_tx: -1/t
+RB_series: 52736*t**4/3 + 544*t**2
+v_series: 1 - 80*t**2
+g_two_probes: Matrix([[-9, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]])
+mix_sigma_y: Matrix([[1/2, 0], [0, 1/2]])
+mix_sigma_x: Matrix([[1/2, bx/2], [bx/2, 1/2]])
+qrel_identity: True
+Vprime_over_M4: 0.38356401
+pv_korrekt_T0393: 1.68888226
+pv_gedruckt_T0393: 0.9397946272
