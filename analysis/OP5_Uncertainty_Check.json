@@ -1,0 +1,48 @@
+{
+  "assertion_tested": "Exact identities for R,S,Y and proportional AB states; scalar differential countercontrol.",
+  "domain": "real theta; 0<=q<=1; ordinary positive Hilbert inner product",
+  "checks": {
+    "R_involution": true,
+    "R_S_commutator": true,
+    "S_Y_commutator": true,
+    "transport_trace": true,
+    "n_exact_R_eigenvector": true,
+    "R_eigenstate_zero_variance": true,
+    "R_S_zero_bound": true,
+    "S_variance": true,
+    "S_Y_nonzero_bound": true,
+    "S_Y_saturation": true,
+    "actual_family_R_S_zero_Robertson_bound": true,
+    "actual_S_variance": true,
+    "full_J_S_AB_contraction": true,
+    "central_shift_no_R_effect": true,
+    "central_shift_no_S_effect": true,
+    "central_differential_curvature": true
+  },
+  "R_S_eigenstate": {
+    "varA": "0",
+    "varB": "cos(4*theta)/8 + 1/8",
+    "comm_half_i": "0",
+    "cov": "0",
+    "schrodinger_slack": "0"
+  },
+  "S_Y_eigenstate": {
+    "varA": "cos(4*theta)/8 + 1/8",
+    "varB": "1",
+    "comm_half_i": "cos(2*theta)/2",
+    "cov": "0",
+    "schrodinger_slack": "0"
+  },
+  "actual_family_R_S": {
+    "varA": "16*q*(-4*q*sin(theta)**6 + 8*q*sin(theta)**4 - 4*q*sin(theta)**2 - sin(theta)**2 + 1)*sin(theta)**2",
+    "varB": "-q**2*(1 - cos(4*theta))/8 + q/4",
+    "comm_half_i": "0",
+    "cov": "2*q*(4*q*sin(theta)**4 - 4*q*sin(theta)**2 + 1)*sin(theta)*cos(theta)",
+    "schrodinger_slack": "0"
+  },
+  "non_claims": [
+    "No native physical quantization",
+    "No derivation of OP5 curvature source",
+    "No regional solution"
+  ]
+}

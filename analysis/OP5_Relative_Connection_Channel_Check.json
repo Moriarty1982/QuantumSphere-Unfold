@@ -1,0 +1,14 @@
+{
+  "frozen_sector_involution": "R=I-2G^2/(p^2+q^2); R^2=I, [R,G]=0, {R,Y}=0; J=R tensor gamma5",
+  "relative_connection_generator": "Matrix([[-d/c, 0, 0], [0, c/d, 0], [0, 0, 0]])",
+  "decomposition": "B=((c/d-d/c)/2)P_AB-((c/d+d/c)/2)Z_AB",
+  "Z_from_commutator": "Z=-i[S,Y]",
+  "P_from_product": "P=4 S^2; associative closure only",
+  "trace_B": "c/d - d/c",
+  "original_curvature_diagonal": [
+    "0",
+    "0",
+    "0"
+  ],
+  "interpretation": "Algebraic expressibility does not authorize a new gauge connection. Nonzero trace requires central U(1) extension if assumed algebra is su(3)."
+}

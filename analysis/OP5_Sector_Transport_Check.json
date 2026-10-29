@@ -1,0 +1,9 @@
+{
+  "R": "Matrix([[-cos(2*theta), sin(2*theta), 0], [sin(2*theta), cos(2*theta), 0], [0, 0, -1]])",
+  "R_theta": "Matrix([[2*sin(2*theta), 2*cos(2*theta), 0], [2*cos(2*theta), -2*sin(2*theta), 0], [0, 0, 0]])",
+  "transport_completion": "A_add=-Y dtheta; dR+i[A_add,R]=0",
+  "original_connection": "A=s G, [G,R]=0, so D R=dR nonzero for varying theta",
+  "canonical_completion": "Matrix([[0, I, 0], [-I, 0, 0], [0, 0, 0]])",
+  "fixed_S_simultaneous_solution_at_theta_pi_12": "EmptySet",
+  "scope": "Internal covariant transport only; not full Dirac symmetry or action-derived connection"
+}

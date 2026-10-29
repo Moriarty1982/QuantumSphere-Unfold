@@ -1,0 +1,37 @@
+{
+  "claim_id": "OP5_UNCERTAINTY_20261029",
+  "mathematics": {
+    "assertion_tested": "Exact identities for sector R, readout S, mixing Y, proportional AB states and scalar differential curvature control",
+    "coefficient_domain": "Symbolic complex matrices, real theta and q",
+    "conventions": "Positive Hermitian inner product; D=partial+iA",
+    "inputs": [
+      "R,S,Y defined in script",
+      "theta real; 0<=q<=1"
+    ],
+    "bounds": {
+      "matrix_dimension": 3
+    },
+    "non_claims": [
+      "No physical quantization or OP5 solution",
+      "No identification of central curvature with Berry curvature"
+    ]
+  },
+  "execution_artifacts": [
+    "OP5_Uncertainty_Check.py"
+  ],
+  "software": [
+    {
+      "name": "Python",
+      "version": "3.12.10"
+    },
+    {
+      "name": "SymPy",
+      "version": "1.14.0"
+    }
+  ],
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  }
+}

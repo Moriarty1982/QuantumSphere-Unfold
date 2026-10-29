@@ -1,0 +1,68 @@
+[
+  {
+    "point": {
+      "t": "1",
+      "x": "3/5",
+      "y": "0",
+      "z": "0"
+    },
+    "rank": 4,
+    "singular_values": [
+      3.5777087639996634,
+      2.8284271247461903,
+      2.8284271247461903,
+      1.7888543819998317
+    ],
+    "relaxed_phase_covector": [
+      5.525473792691677e-17,
+      -9.209122987819462e-17,
+      -7.497105859294484e-17,
+      -2.02072594216369
+    ],
+    "residual_norm2": 4.3785212106735585e-31,
+    "original_norm2": 32.66666666666666,
+    "phase_covector_minkowski_norm": 4.083333333333332,
+    "a_dot_connection_covector": 0.0,
+    "full_residual_norm2_before": 102.27777777777777,
+    "full_residual_norm2_after_spatial_phase": 69.61111111111111,
+    "remaining_species_residual_norms": [
+      6.555182554745223,
+      1.7564558717825647,
+      4.853406592853679
+    ],
+    "transverse_residual_norm2_after": 1.6434842662537653e-30
+  },
+  {
+    "point": {
+      "t": "1",
+      "x": "2/5",
+      "y": "1/5",
+      "z": "1/5"
+    },
+    "rank": 4,
+    "singular_values": [
+      3.4524170646741226,
+      2.8284271247461903,
+      2.82842712474619,
+      2.0201030695355415
+    ],
+    "relaxed_phase_covector": [
+      1.4322943416880936e-17,
+      0.15417376060687193,
+      0.07708688030343563,
+      -2.321926074620888
+    ],
+    "residual_norm2": 9.806835276819805e-31,
+    "original_norm2": 43.368421052631575,
+    "phase_covector_minkowski_norm": 5.421052631578947,
+    "a_dot_connection_covector": 9.92077852590999e-17,
+    "full_residual_norm2_before": 157.36176337970284,
+    "full_residual_norm2_after_spatial_phase": 113.99334232707129,
+    "remaining_species_residual_norms": [
+      7.897478534526682,
+      2.1161229955685497,
+      6.866236129888599
+    ],
+    "transverse_residual_norm2_after": 1.4947142298389337e-30
+  }
+]

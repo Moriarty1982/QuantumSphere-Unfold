@@ -1,0 +1,17 @@
+{
+  "status": "PASS: exact SymPy identities",
+  "convention": "D=partial+i A; U=exp(i chi T tensor gamma5/2)",
+  "derivative_chi_contribution_to_real_cross_coframe": "identically zero",
+  "fixed_connection_coframe_invariance": "false in general",
+  "proportional_AB_seed": "exact invariance for all angles if psi=(c u,d u,w), p=k c, q=-k d, real c,d,k",
+  "counterexample": {
+    "p": 1,
+    "q": 0,
+    "chi": "pi/2",
+    "psi": "e4+i e8 (zero-based)",
+    "coframe_delta": "1/2"
+  },
+  "conjugation": "Udag A U = A cos(chi) + i A H sin(chi)",
+  "mass_conjugation": "Udag M U = M cos(chi) + i M H sin(chi)",
+  "scope": "matrix algebra only; no native coupling derivation or field evolution"
+}
