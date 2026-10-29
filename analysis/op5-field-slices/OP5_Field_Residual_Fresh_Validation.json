@@ -1,0 +1,25 @@
+{
+  "seed": 291029,
+  "new_independent_points": 4096,
+  "diagnostics": {
+    "metrics": {
+      "max_residual": 0.002217335821947381,
+      "rms_residual": 0.0008271006277475741,
+      "min_abs_detE": 13.057259466212896,
+      "max_inverse_g00": -0.33608407040688903,
+      "min_q": 5.444924071688853
+    },
+    "species_squared_residual_shares": [
+      0.1273187154881041,
+      0.8294621459346324,
+      0.043219138577263484
+    ],
+    "relative_residual_rms": 0.00010129709394459299,
+    "relative_residual_max": 0.00027321016725304244,
+    "max_imaginary_S_projection": 3.9268718485252485e-15,
+    "max_real_S_projection": 0.0022451760389151252,
+    "min_coframe_singular_value": 0.3900540777586861,
+    "max_coframe_condition_number": 16.669653822959475,
+    "max_field_norm": 4.0142202448242
+  }
+}
