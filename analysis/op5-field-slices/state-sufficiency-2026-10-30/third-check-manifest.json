@@ -1,0 +1,137 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5-frozen-twojet-third-completion",
+  "repository": {
+    "commit": "f98b29ba8eeb87c053a39285ca348c4d2ef76081",
+    "dirty": true
+  },
+  "command": [
+    "C:\\Users\\marcb\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\third_check.py"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "python",
+        "version": "3.12.10"
+      },
+      {
+        "name": "numpy",
+        "version": "2.5.2"
+      },
+      {
+        "name": "torch",
+        "version": "2.14.0+cpu"
+      },
+      {
+        "name": "sympy",
+        "version": "1.14.0"
+      }
+    ],
+    "hardware": "AMD64"
+  },
+  "mathematics": {
+    "assertion_tested": "For3 fixed successful lower2jets solve240 ddF equations with480 fully symmetric real thirdjets; examine frozen-data residual and independent cubic Taylor controls",
+    "coefficient_domain": "float64 AD and symbolic background derivatives order2",
+    "conventions": "symmetric pair10, triple20; each complex spinor packed12real+12imag; full background and inverse coframe derivatives",
+    "inputs": [
+      "third-inputs/third_check.py",
+      "third-inputs/joint_fit.py",
+      "third-inputs/joint-fit-result.json",
+      "third-inputs/OP5_Counterflow_Full_Residual_Check.py",
+      "third-inputs/OP5_Joint_Compatibility_Lower_Data.json",
+      "third-inputs/OP5_Joint_Compatibility_Second_Jet_Check.json"
+    ],
+    "bounds": {
+      "points": 3,
+      "rcond": [
+        1e-08,
+        1e-09,
+        1e-11
+      ],
+      "finite_difference_steps": [
+        0.001,
+        0.0003,
+        0.0001
+      ]
+    },
+    "non_claims": [
+      "general no-go",
+      "regional nonexistence",
+      "OP5 closure",
+      "certified exact rank"
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-10-30T03:12:35.541672+00:00",
+    "runtime_seconds": 13.907567977905273,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": 2
+    }
+  },
+  "outputs": [
+    {
+      "path": "third-check-result.json",
+      "sha256": "e27af41f98507f6bd019f20d4d8e2ba0f907eecd138932a11ce3975471437ec6",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "input hashes unchanged",
+    "full F and dF remain near rounding",
+    "symmetric thirdjet rank and residual stable across3cutoffs",
+    "unrestricted thirdjet control",
+    "independent cubic Taylor ddF at3steps"
+  ],
+  "result": "Frozen successful2jets do not admit numerical third completion; residual approx29-30; not general no-go",
+  "residual_risks": [
+    "float64 noncertified ranks",
+    "only3fixed germs tested",
+    "secondjets may change to repair gate"
+  ],
+  "input_artifacts": [
+    {
+      "path": "third-inputs/third_check.py",
+      "sha256": "77e24a209d3a5dbee1e74f1ca11bb3ef7d90c99937e0341f11f3edfd2240fe84",
+      "sha256_after": "77e24a209d3a5dbee1e74f1ca11bb3ef7d90c99937e0341f11f3edfd2240fe84"
+    },
+    {
+      "path": "third-inputs/joint_fit.py",
+      "sha256": "c44bdf3a03420ac6ddda039a9252e6b551bcc1730c540663891b3d8015ce59c7",
+      "sha256_after": "c44bdf3a03420ac6ddda039a9252e6b551bcc1730c540663891b3d8015ce59c7"
+    },
+    {
+      "path": "third-inputs/joint-fit-result.json",
+      "sha256": "e85d8f463de0218804eeb68c451f07eaa0ecef91a13e11f9313feb1113d08d76",
+      "sha256_after": "e85d8f463de0218804eeb68c451f07eaa0ecef91a13e11f9313feb1113d08d76"
+    },
+    {
+      "path": "third-inputs/OP5_Counterflow_Full_Residual_Check.py",
+      "sha256": "e0803c2fdf85da1f6318685ab661e77cb39bd60a14b732fb0481c8ce5f2bc4b4",
+      "sha256_after": "e0803c2fdf85da1f6318685ab661e77cb39bd60a14b732fb0481c8ce5f2bc4b4"
+    },
+    {
+      "path": "third-inputs/OP5_Joint_Compatibility_Lower_Data.json",
+      "sha256": "f7090bbafec07ec191acba48b0f4e596d0e0d7c608fd8f2ecaeb6f4c3d4b13aa",
+      "sha256_after": "f7090bbafec07ec191acba48b0f4e596d0e0d7c608fd8f2ecaeb6f4c3d4b13aa"
+    },
+    {
+      "path": "third-inputs/OP5_Joint_Compatibility_Second_Jet_Check.json",
+      "sha256": "485c05d7797f2b8981600b70a909987899d34469686769337f2b103d9f5bc12f",
+      "sha256_after": "485c05d7797f2b8981600b70a909987899d34469686769337f2b103d9f5bc12f"
+    }
+  ],
+  "declared_results": [
+    "third-check-result.json"
+  ]
+}

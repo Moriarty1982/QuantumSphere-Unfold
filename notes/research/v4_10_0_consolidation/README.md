@@ -15,3 +15,7 @@ Status: unpublished `4.10.0-draft`; no 4.10 Version DOI assigned. Published base
 Research scripts, numerical inputs, coefficient snapshots and correction history are in `analysis/op5-field-slices/`. Exact algebraic identities, finite floating-point compatibility tests and open physical identifications remain distinct. A pointwise residual at machine precision is not a regional solution. The higher-precision control confirms this numerical scale distinction. No native common action, global clock, full octonionic structural identification or OP5 closure is claimed.
 
 Guard/residual records are unchanged. This consolidation records the source status and build checks; it is not a release certificate. See `VALIDATION.md` for the executed checks and any remaining limitations.
+
+## Recursive finite-jet follow-up
+
+The 30 October follow-up is integrated in the main synthesis: see `analysis/op5-field-slices/state-sufficiency-2026-10-30/RECURSIVE_CALIBRATION_RESULT.md`. The numerical comparison now reaches full field-jet order4 at three points after lower-jet recalibration. Earlier frozen-data failures remain controls; no all-order convergence, regional existence or OP5 closure is claimed.

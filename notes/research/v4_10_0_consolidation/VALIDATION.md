@@ -10,3 +10,9 @@ This is an unpublished research draft, not a release or an OP5 closure certifica
 - Focused mathematical and notation self-review keeps conditional reconstruction, numerical compatibility, and unproved physical identifications distinct. No whole-manuscript referee certification is asserted.
 
 Build logs, machine-readable counts, summary, metadata audit, rendered inspection pages and PDF hash are retained under the task workspace in v410-consolidation-build/ (metadata audit at its workspace root). The user PDF is Quantum_Sphaera_Companion_v4_10_0_draft.pdf in that workspace. No Zenodo upload or DOI assignment is part of this consolidation. The source consolidation is committed and merged separately at the user's request.
+
+## Recursive calibration follow-up
+
+Full updated manuscript rebuilt with two direct pdflatex passes:1,313 pages. Zero fatal errors, undefined references/citations, duplicate labels or pending rerun warnings;58 older overfull horizontal boxes remain, zero vertical boxes. New pages163–164 visually inspected, including the algorithm and fourth-order residual table. Independent NumPy formal-series checks, scalar gates, frozen failure controls and computation manifests are archived in the dated state-sufficiency directory. The new fourth-order source/outputs pass the evidence-manifest validator. No general recursive convergence or physical validity certificate follows.
+
+Archive integration checks:21 Python files parsed,28 JSON files parsed; all five execution manifests validate with their retained input/output hashes. The portable recursive model re-evaluates all three saved fourth-order results below2.2e-12 in normalized coefficient norm. Independent review scripts were rerun after repository discovery was made portable. These are finite reproducibility/implementation checks, not a proof audit of the entire paper.

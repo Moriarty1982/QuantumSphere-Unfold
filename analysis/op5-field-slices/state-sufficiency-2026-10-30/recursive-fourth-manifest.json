@@ -1,0 +1,154 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5-recursive-fourth-order-calibration",
+  "repository": {
+    "commit": "f98b29ba8eeb87c053a39285ca348c4d2ef76081",
+    "dirty": true
+  },
+  "command": [
+    "C:\\Users\\marcb\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\recursive_calibrator.py",
+    "--order",
+    "4",
+    "--points",
+    "0",
+    "1",
+    "2"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "python",
+        "version": "3.12.10"
+      },
+      {
+        "name": "torch",
+        "version": "2.14.0+cpu"
+      },
+      {
+        "name": "numpy",
+        "version": "2.5.2"
+      },
+      {
+        "name": "sympy",
+        "version": "1.14.0"
+      }
+    ],
+    "hardware": "AMD64"
+  },
+  "mathematics": {
+    "assertion_tested": "At3 fixed psi/firstjet points, vary second/third jets and recover fourth jets; simultaneously fit all residual coefficients throughdegree3 and verify full blocks. Finite directional independent implementation checks.",
+    "coefficient_domain": "float64 AD and symbolic background derivatives order2",
+    "conventions": "multiindex-factorial normalized Taylor coefficients; all symmetric multiindices; full raw derivative norms separately reported; complex spinor packed per coefficient real12 then imag12",
+    "inputs": [
+      "recursive-inputs/recursive_calibrator.py",
+      "recursive-inputs/joint-fit-result.json",
+      "recursive-inputs/third-joint-fit-result.json",
+      "recursive-inputs/OP5_Counterflow_Full_Residual_Check.py",
+      "recursive-inputs/OP5_Joint_Compatibility_Lower_Data.json"
+    ],
+    "bounds": {
+      "points": 3,
+      "maxsteps": 15,
+      "trials_per_step": 10,
+      "stopping_norm": 1e-09,
+      "SVD_cutoffs": [
+        1e-08,
+        1e-09,
+        1e-11
+      ],
+      "tested_fieldjet_order": 4,
+      "independent_directions_per_point": 6
+    },
+    "non_claims": [
+      "general no-go",
+      "regional nonexistence",
+      "OP5 closure",
+      "certified exact rank"
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-10-30T03:43:48.448857+00:00",
+    "runtime_seconds": 10.316444873809814,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": 2
+    }
+  },
+  "outputs": [
+    {
+      "path": "recursive-order-4-result.json",
+      "sha256": "583fa173e3e56ebe07f5c93fa02060cd3fbce32a9882dea250c24a42f4c092dc",
+      "kind": "result"
+    },
+    {
+      "path": "recursive-review-coefficients-result.json",
+      "sha256": "2df256f9e5e38b32a75e9c220d952ec7f6ad47f9f30ef83932f77a24f07c7683",
+      "kind": "result"
+    },
+    {
+      "path": "recursive-review-fourth-gate-result.json",
+      "sha256": "a613495fe70d59f65f17e27cd1a3bd84697a6f95b15db4a2ac757c55db290f6a",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "frozen lower-data fourth failure preserved",
+    "firstjets and field values unchanged",
+    "full highest elimination left kernel",
+    "full raw residual blocks below7e-12",
+    "independent NumPy directional recurrence inverse checks",
+    "background factorial conversion",
+    "sampled highestoperator columns",
+    "all original source inputs unchanged"
+  ],
+  "result": "Numerical fourthjet compatibility at all3 tested germs after calibrated lower-data changes; not all-order or regional theorem.",
+  "residual_risks": [
+    "Float64 roots not certified",
+    "six directions finite check not exhaustive",
+    "raw fourthjet norm approx900 in unscaled coordinates",
+    "no convergence/stabilization bound",
+    "three germs not one regional solution"
+  ],
+  "input_artifacts": [
+    {
+      "path": "recursive-inputs/recursive_calibrator.py",
+      "sha256": "5601977f0b78ce1439fcdc74b101c20d111e1435e11ddeb1b29ae93ec742e439",
+      "sha256_after": "5601977f0b78ce1439fcdc74b101c20d111e1435e11ddeb1b29ae93ec742e439"
+    },
+    {
+      "path": "recursive-inputs/joint-fit-result.json",
+      "sha256": "e85d8f463de0218804eeb68c451f07eaa0ecef91a13e11f9313feb1113d08d76",
+      "sha256_after": "e85d8f463de0218804eeb68c451f07eaa0ecef91a13e11f9313feb1113d08d76"
+    },
+    {
+      "path": "recursive-inputs/third-joint-fit-result.json",
+      "sha256": "9a59241f01cacc74f9afca245cd1c547620974fbe67fcb1ad0a4b242fd46a8a4",
+      "sha256_after": "9a59241f01cacc74f9afca245cd1c547620974fbe67fcb1ad0a4b242fd46a8a4"
+    },
+    {
+      "path": "recursive-inputs/OP5_Counterflow_Full_Residual_Check.py",
+      "sha256": "e0803c2fdf85da1f6318685ab661e77cb39bd60a14b732fb0481c8ce5f2bc4b4",
+      "sha256_after": "e0803c2fdf85da1f6318685ab661e77cb39bd60a14b732fb0481c8ce5f2bc4b4"
+    },
+    {
+      "path": "recursive-inputs/OP5_Joint_Compatibility_Lower_Data.json",
+      "sha256": "f7090bbafec07ec191acba48b0f4e596d0e0d7c608fd8f2ecaeb6f4c3d4b13aa",
+      "sha256_after": "f7090bbafec07ec191acba48b0f4e596d0e0d7c608fd8f2ecaeb6f4c3d4b13aa"
+    }
+  ],
+  "declared_results": [
+    "recursive-order-4-result.json",
+    "recursive-review-coefficients-result.json",
+    "recursive-review-fourth-gate-result.json"
+  ]
+}

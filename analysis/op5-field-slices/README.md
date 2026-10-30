@@ -44,3 +44,7 @@ all states onto a pure Bloch sphere.
 Portable-copy verification: 54 Python and 54 JSON files parsed; clock
 synchronization and native Gram observer counterchecks rerun successfully.
 This is not a rerun of all historical optimization experiments.
+
+## Recursive finite-jet checkpoint (30 October 2026)
+
+See [construction and fourth-order result](state-sufficiency-2026-10-30/RECURSIVE_CALIBRATION_RESULT.md). Joint lower-jet recalibration now supplies numerical finite jets through field order4 at three points; frozen lower-data failures remain archived. This supersedes earlier fixed-jet failure as a current obstruction, without establishing regional existence or OP5 closure. The reusable calibrator, saved coefficients, independent checks and execution manifests are in the same dated directory.

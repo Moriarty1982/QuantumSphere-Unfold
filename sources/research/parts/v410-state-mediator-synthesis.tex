@@ -180,7 +180,9 @@ points. The resulting first-jet family has a numerically regular
 seven-direction constraint Jacobian and 65 free spatial tangent
 directions, before further constraints and identifications. This is
 neither a count of physical degrees of freedom nor a regional existence
-theorem. Symmetric second-jet completion still has nonzero residuals.
+theorem. For these frozen first jets, symmetric second-jet completion
+retains nonzero residuals; the joint recalibration below releases those
+data and supersedes this as a current obstruction.
 
 Two-mode fields with variable amplitudes provide single smooth
 approximations and hence consistent mixed derivatives, but retain
@@ -207,6 +209,67 @@ These are numerical checks, not certified exact solutions or physical
 scales. Renormalization changes the rounded input by a tiny amount;
 extra arithmetic precision alone cannot remove a frozen input defect.
 The larger continuation residuals are not removed by this point test.
+
+
+\subsection{Recursive finite-jet recalibration}
+\label{subsec:v410-recursive-calibration}
+
+The preceding frozen-data failures do not persist under all joint
+changes of lower jets. A subsequent comparison holds the same field
+values, original backgrounds and couplings fixed and first solves for
+compatible first and symmetric second jets. Releasing second jets then
+allows a symmetric third-jet completion while retaining those first
+jets. The scalar condition
+\(g=4-h\Psi^\dagger(Z\otimes\beta)\Psi/2=0\) explains a necessary
+part of the hierarchy: the first fit enforces \(g,dg\), but its second
+jets need not satisfy \(d^2g=0\). Free third jets cannot repair that
+lower-data defect. The joint second/third fit does repair it numerically.
+
+A reusable construction stores Taylor coefficients
+\(c_\alpha=\partial^\alpha\Psi/\alpha!\), with multiindex factorial.
+At each tested level the highest jets \(z_p\) enter linearly:
+\[
+ A_p z_p+b_p(J_{<p})=0,\qquad L_p A_p=0.
+\]
+A complete left kernel eliminates \(z_p\). The numerical search adjusts
+allowed lower jets to satisfy \(L_p b_p=0\) together with every retained
+lower-order residual, then recovers \(z_p\) and checks the full equations.
+This is a construction algorithm with a possible failure outcome, not
+an all-order existence assertion. Small updates and coefficient guards
+do not prove convergence or uniqueness.
+
+For the fourth-order test, field values and all first jets remain fixed;
+second and third jets vary and fully symmetric fourth jets are recovered.
+The highest matrix has size \(480\times840\), numerical rank \(424\),
+and \(56\) left compatibility directions in the declared coefficient
+packing. Five accepted steps at each of three points produce the raw
+symmetric derivative norms below:
+\begin{center}
+\begin{tabular}{@{}lrrrr@{}}\toprule
+point & \(\|F\|\) & \(\|dF\|\) & \(\|d^2F\|\) & \(\|d^3F\|\)\\
+\midrule
+centre & \(3.1\,10^{-14}\) & \(3.9\,10^{-14}\) & \(2.4\,10^{-13}\) & \(6.4\,10^{-12}\)\\
+edge & \(2.0\,10^{-15}\) & \(2.9\,10^{-14}\) & \(2.5\,10^{-13}\) & \(5.4\,10^{-12}\)\\
+inner & \(2.6\,10^{-15}\) & \(3.8\,10^{-14}\) & \(2.3\,10^{-13}\) & \(6.5\,10^{-12}\)\\
+\bottomrule\end{tabular}
+\end{center}
+Normalized coefficient norms and raw derivative norms are stored
+separately. A separate NumPy directional-series evaluator with a
+recurrence inverse checks coefficients through degree three in six
+directions per point, with discrepancies below \(4\,10^{-13}\).
+Selected highest-operator columns and scalar constraint coefficients
+are also checked. This is bounded implementation evidence, not a
+certified exact root or an exhaustive theorem check.
+
+Raw second-, third- and fourth-jet norms are approximately \(26,89,900\)
+in the retained unscaled coordinates. They establish no physical scale
+and no uniform growth estimate. The three germs are not shown to belong
+to one regional solution; stabilization of lower coefficients across
+levels, convergence, regional existence and native physical identification
+remain open. The tested reusable construction and earlier failed controls
+are archived under \texttt{analysis/op5-field-slices/}, in the dated
+state-sufficiency directory. Neither these finite completions nor the
+algorithm closes OP5.
 
 \paragraph{Status of the 4.10 consolidation.}
 Exact reconstruction and local operation identities are separated from

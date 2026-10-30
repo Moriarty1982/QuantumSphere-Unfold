@@ -1,0 +1,152 @@
+{
+  "contract": "Independent scalar gate and finite-difference left/source attribution; no optimization or full thirdjet SVD rerun.",
+  "inputs_sha256": {
+    "C:\\Users\\marcb\\OneDrive\\Dokumente\\GitHub\\QuantumSphere-Unfold\\analysis\\OP5_Counterflow_Full_Residual_Check.py": "e0803c2fdf85da1f6318685ab661e77cb39bd60a14b732fb0481c8ce5f2bc4b4",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\joint-fit-result.json": "e85d8f463de0218804eeb68c451f07eaa0ecef91a13e11f9313feb1113d08d76",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\third-joint-fit-result.json": "9a59241f01cacc74f9afca245cd1c547620974fbe67fcb1ad0a4b242fd46a8a4",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\third_joint_gate_review.py": "fb8cd2fa0d29a0ed92ffea57257f72849597a18e3b8678479411b27b52e363e1"
+  },
+  "results": [
+    {
+      "point_index": 0,
+      "ddg": [
+        [
+          -9.952927371159603e-12,
+          9.622524999031157e-12,
+          -4.075422289347102e-12,
+          -1.1145638623262124e-12
+        ],
+        [
+          9.622524999031157e-12,
+          1.1727507853720454e-11,
+          -9.738704309160343e-13,
+          -3.86397317881329e-12
+        ],
+        [
+          -4.075422289347102e-12,
+          -9.738704309160343e-13,
+          -7.319478356748732e-12,
+          -3.869000925003731e-12
+        ],
+        [
+          -1.1145638623262124e-12,
+          -3.86397317881329e-12,
+          -3.869000925003731e-12,
+          -1.6424195337094716e-11
+        ]
+      ],
+      "ddg_packed_norm": 2.6480489929338184e-11,
+      "g": 1.3322676295501878e-15,
+      "dg_norm": 3.2927129277031015e-14,
+      "ell_norm": 1.4134518271933953,
+      "raw_scalar_scaled_norm_not_a_bound_off_shell": 1.8734624993848478e-11,
+      "finite_difference_ell_J_norm": 3.238423721874443e-10,
+      "source_contraction_controls": [
+        {
+          "step": 0.0003,
+          "norm_ell_b_minus_ddg": 2.4994312105608917e-05
+        },
+        {
+          "step": 0.0001,
+          "norm_ell_b_minus_ddg": 2.765464825246077e-06
+        }
+      ],
+      "observed_unrestricted_residual": 2.536977120309472e-12,
+      "observed_symmetric_residual": 8.417571752195797e-12
+    },
+    {
+      "point_index": 1,
+      "ddg": [
+        [
+          -1.0743406164692715e-11,
+          1.3219647598816664e-11,
+          -5.375172529298311e-12,
+          -2.0974333381218457e-12
+        ],
+        [
+          1.3219647598816664e-11,
+          1.2887468869848817e-11,
+          -1.7851206624008853e-12,
+          -4.872401093702905e-12
+        ],
+        [
+          -5.375172529298311e-12,
+          -1.7851137235069814e-12,
+          -8.110845328701544e-12,
+          -4.306969277750872e-12
+        ],
+        [
+          -2.0974333381218457e-12,
+          -4.872414971490713e-12,
+          -4.306969494591306e-12,
+          -1.8550494473856816e-11
+        ]
+      ],
+      "ddg_packed_norm": 3.073990905293665e-11,
+      "g": -8.881784197001252e-16,
+      "dg_norm": 2.6235259547508014e-15,
+      "ell_norm": 1.4117577137357542,
+      "raw_scalar_scaled_norm_not_a_bound_off_shell": 2.177421008849568e-11,
+      "finite_difference_ell_J_norm": 3.0416048369292844e-10,
+      "source_contraction_controls": [
+        {
+          "step": 0.0003,
+          "norm_ell_b_minus_ddg": 2.6516184642359357e-05
+        },
+        {
+          "step": 0.0001,
+          "norm_ell_b_minus_ddg": 2.9493297903904146e-06
+        }
+      ],
+      "observed_unrestricted_residual": 2.957296455702089e-12,
+      "observed_symmetric_residual": 8.635889608621013e-12
+    },
+    {
+      "point_index": 2,
+      "ddg": [
+        [
+          -9.462652883485134e-12,
+          8.135714324453147e-12,
+          -3.514716295782705e-12,
+          -8.64558424851225e-13
+        ],
+        [
+          8.135714324453147e-12,
+          1.1073808536821161e-11,
+          -6.33215702094958e-13,
+          -3.48188838872332e-12
+        ],
+        [
+          -3.514716295782705e-12,
+          -6.33215702094958e-13,
+          -6.888711823194171e-12,
+          -3.5764002436627917e-12
+        ],
+        [
+          -8.64558424851225e-13,
+          -3.481884919276368e-12,
+          -3.5764002436627917e-12,
+          -1.5477397141694382e-11
+        ]
+      ],
+      "ddg_packed_norm": 2.4571953423099237e-11,
+      "g": 4.440892098500626e-16,
+      "dg_norm": 3.468201196844668e-15,
+      "ell_norm": 1.4140711898237965,
+      "raw_scalar_scaled_norm_not_a_bound_off_shell": 1.737674425441132e-11,
+      "finite_difference_ell_J_norm": 3.508028161864153e-10,
+      "source_contraction_controls": [
+        {
+          "step": 0.0003,
+          "norm_ell_b_minus_ddg": 2.421714416725494e-05
+        },
+        {
+          "step": 0.0001,
+          "norm_ell_b_minus_ddg": 3.020446886069783e-06
+        }
+      ],
+      "observed_unrestricted_residual": 2.2499405573843547e-12,
+      "observed_symmetric_residual": 8.397532165915395e-12
+    }
+  ]
+}
