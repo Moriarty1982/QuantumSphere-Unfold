@@ -1,0 +1,86 @@
+{
+  "contract": "Reconstruction from decimal-recorded lower data, exact symbolic background at recorded coordinates. Fixed comparison; first F symbol only. No completed JR or Omega reconstruction yet. Scalar repair changes psi only; derivatives held fixed, so full F is rechecked.",
+  "results": [
+    {
+      "newton_F_residuals": [
+        "2.6537155296711374811e-28",
+        "4.7720576938177986446e-41",
+        "9.1946003613956966307e-41",
+        "1.4287358369229061981e-40"
+      ],
+      "first_derivative_change_max": "2.112838762232292073e-14",
+      "repaired_first_jet": {
+        "F": "1.4287358369229061981e-40",
+        "g": "0.0",
+        "AP": "3.8483325681568803299e-41",
+        "P2minusP": "4.591774807899560578e-41",
+        "ellJ": "3.3787166506270592244e-41",
+        "ellFminusg": "1.8530217839610217889e-40",
+        "detE": "13.634560679141847813"
+      },
+      "digits": 40,
+      "original": {
+        "F": "1.5234481182039384821e-14",
+        "g": "1.0044455947969133026e-15",
+        "AP": "2.8748447602525708246e-41",
+        "P2minusP": "4.591774807899560578e-41",
+        "ellJ": "2.0621356190345295968e-41",
+        "ellFminusg": "2.4581181961887893758e-41",
+        "detE": "13.634560679141915276"
+      },
+      "scalar_repaired": {
+        "F": "1.5324218207857360643e-14",
+        "g": "0.0",
+        "AP": "2.2876313685626836014e-41",
+        "P2minusP": "6.887662211849340867e-41",
+        "ellJ": "5.6493256495541518373e-41",
+        "ellFminusg": "1.0726009728649715875e-40",
+        "detE": "13.634560679141922123"
+      },
+      "pivot_change": "3.7982295397951322851e-16"
+    },
+    {
+      "newton_F_residuals": [
+        "2.6537155296709383848e-28",
+        "2.6134389132549170229e-57",
+        "9.0870802498845590023e-71",
+        "7.3395422648041654291e-71"
+      ],
+      "first_derivative_change_max": "2.112838762232292073e-14",
+      "repaired_first_jet": {
+        "F": "7.3395422648041654291e-71",
+        "g": "7.244543263061369894e-71",
+        "AP": "2.9711462887191897521e-71",
+        "P2minusP": "5.4334074472960274205e-71",
+        "ellJ": "4.7064569383059098387e-71",
+        "ellFminusg": "1.2442743785827848703e-70",
+        "detE": "13.634560679141847813"
+      },
+      "digits": 70,
+      "original": {
+        "F": "1.5234481182039384821e-14",
+        "g": "1.0044455947969133026e-15",
+        "AP": "2.0633271218756953292e-71",
+        "P2minusP": "3.622271631530684947e-71",
+        "ellJ": "2.0808160232404899967e-71",
+        "ellFminusg": "4.6679823319966943884e-71",
+        "detE": "13.634560679141915276"
+      },
+      "scalar_repaired": {
+        "F": "1.5324218207857360643e-14",
+        "g": "7.244543263061369894e-71",
+        "AP": "2.2088788220556228837e-71",
+        "P2minusP": "5.4334074472960274205e-71",
+        "ellJ": "4.3152451251346365675e-71",
+        "ellFminusg": "7.2032150962481995916e-71",
+        "detE": "13.634560679141922123"
+      },
+      "pivot_change": "3.7982295397951322851e-16"
+    }
+  ],
+  "inputs_sha256": {
+    "C:\\Users\\marcb\\OneDrive\\Dokumente\\GitHub\\QuantumSphere-Unfold\\analysis\\OP5_Counterflow_Full_Residual_Check.py": "e0803c2fdf85da1f6318685ab661e77cb39bd60a14b732fb0481c8ce5f2bc4b4",
+    "C:\\Users\\marcb\\OneDrive\\Dokumente\\GitHub\\QuantumSphere-Unfold\\analysis\\op5-field-slices\\state-sufficiency-2026-10-30\\fifth-window-result.json": "9b163be13168390cf969c5a259c513393b5517ff0013612cb3f4f1e577976dff",
+    "C:\\Users\\marcb\\OneDrive\\Dokumente\\GitHub\\QuantumSphere-Unfold\\analysis\\op5-field-slices\\state-sufficiency-2026-10-30\\precision_primitive_rebuild.py": "1b95aad16f4dad5a711b6c778313bd39486faeb8ffbb96a01ee7c7afc9c6436d"
+  }
+}
