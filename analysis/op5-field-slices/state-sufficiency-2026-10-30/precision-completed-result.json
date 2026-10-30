@@ -1,0 +1,36 @@
+{
+  "contract": "High precision analytic R=(F,G,dg) first-jet reconstruction; no higher jet or Omega computed. Fixed psi from scalar repair; no second derivatives used in b_mu, annihilated by principal syzygy.",
+  "initial_F_max": "6.520088936755232904607e-70",
+  "initial_G_max": "9.651132552726815585416e-14",
+  "initial_dg_max": "5.456798258432206993241e-14",
+  "derivative_controls": [
+    {
+      "column": 0,
+      "controls": [
+        {
+          "step": "1e-8",
+          "error": "2.3428374532705518064e-17"
+        },
+        {
+          "step": "1e-12",
+          "error": "2.3428374532705517896e-25"
+        }
+      ]
+    },
+    {
+      "column": 37,
+      "controls": [
+        {
+          "step": "1e-8",
+          "error": "9.2911883850644819397e-18"
+        },
+        {
+          "step": "1e-12",
+          "error": "9.291188385064481896e-26"
+        }
+      ]
+    }
+  ],
+  "seconds": 1.7194290161132812,
+  "seed_sha256": "fb576dbd9183842357ff02bfa87df9abd103e44e4ca8e3749ef1836e06c76a0a"
+}

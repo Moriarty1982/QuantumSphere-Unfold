@@ -1,0 +1,22 @@
+{
+  "contract": "Direct differentiation along four coordinate jet paths, without assembling the prolonged symbol or applying row selection. Same analytic R evaluator; not a wholly independent evaluator.",
+  "checks": [
+    {
+      "direction": 0,
+      "full_R_derivative_max": "2.97500617969152852378025e-69"
+    },
+    {
+      "direction": 1,
+      "full_R_derivative_max": "3.27618938863664926238333e-69"
+    },
+    {
+      "direction": 2,
+      "full_R_derivative_max": "1.08805647733373275854337e-67"
+    },
+    {
+      "direction": 3,
+      "full_R_derivative_max": "1.06685347021543979166217e-66"
+    }
+  ],
+  "second_jet_sha256": "79827409c53f034218d38254a691ec79e2701c93ac47e36d6706a808e6143ac3"
+}

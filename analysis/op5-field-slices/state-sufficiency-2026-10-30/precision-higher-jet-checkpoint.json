@@ -1,0 +1,22 @@
+{
+  "finite_checks": "passed",
+  "scope": "one repaired germ; full first and second derivatives of completed R",
+  "non_claims": [
+    "Omega reconstructed",
+    "All-order formal integrability",
+    "Exact or interval root certificate",
+    "Physical identification"
+  ],
+  "sha256": {
+    "precision_second_jet.py": "a7e33a9f5560624dfffe060dfcc3c36f4bf158c697d6a2ccc412654e6e5dcc4b",
+    "precision-second-jet-result.json": "79827409c53f034218d38254a691ec79e2701c93ac47e36d6706a808e6143ac3",
+    "precision_second_jet_check.py": "ec5323bd96c78d10c07e3904ab4d342c83253819dd5258aa3f81035297f31c1b",
+    "precision-second-jet-direct-check.json": "af0c98f171422d4ed0149e0395d219f2cd31e8480f554142450fb1e4e859fa50",
+    "precision_third_source.py": "9fcf1e905873f6fb5def8b9a5e225362a9c9562094fe02e7a8a247c770d576bb",
+    "precision-third-source-result.json": "adf247397d0e1f6a4894993dd7528a21ed6f7a984fbcc1851aae2bf09f7d0d7e",
+    "precision_third_jet.py": "37ac69c3cc80a5de196eeb28c6d5a79b571c161da954e676be436bcc38228b54",
+    "precision-third-jet-result.json": "c53c2d7451556a64d3fa1270e853d3ce78dab9e71330695f7771cdea5af14eff",
+    "precision_third_jet_check.py": "7fa8ac5191da381f0c3e2c463a1492e163c1395f4428fed0eaa02d2ce52ec72c",
+    "precision-third-jet-direct-check.json": "d0725a88dfef9d240b70f3b858b566432ab02bc48b6925a3c7ed65bc98443893"
+  }
+}
