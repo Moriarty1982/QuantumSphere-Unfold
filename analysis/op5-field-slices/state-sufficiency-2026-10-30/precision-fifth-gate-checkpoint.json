@@ -1,0 +1,22 @@
+{
+  "finite_checks": "passed one corrected numerical fifth-order jet",
+  "non_claims": [
+    "All-order/regional existence",
+    "Complete Omega gradient",
+    "Full source gate rank",
+    "Exact or interval certificate"
+  ],
+  "sha256": {
+    "precision_fifth_gate.py": "7a250268f02357a3817846ca768bc82d9c822d23d2087cca0f77927cc6966165",
+    "precision-fifth-gate-partial.json": "98e44c7085838eac0449ee35c668f70db0c7480f9f2ec0fa0ef3b61944de3e7d",
+    "precision-fifth-gate-result.json": "c60cec49ed30aecf9c3629eb3609fe5dc767a3b46dacb14069f9ea58ed32495e",
+    "precision_fifth_gate_repair.py": "06b85f6ed3769c917c99013597edec05aa742319ad193a864445443d622eedac",
+    "precision-fifth-gate-repair-result.json": "f39258212eeac8867ec5b426aaed5aa4eaeba54041f3f926cb5502243e26f83e",
+    "precision_fifth_gate_check.py": "39addc56a9d38a7bca452e19f87e167a28a1c56ca137938fda98460c33992b57",
+    "precision-fifth-gate-direct-check.json": "6f1784d89d53d4805c8bf2a0b3a7b6decae67c0b3aae0c691f99f3716d364167",
+    "precision_fifth_gate_review.md": "1f9bde77fbf642d2369895dfbef1b0fea1a10776539b5b133a32cd5dd4225d83",
+    "precision-omega-repair-result.json": "8a259bf9a6261a2e193ec7f49467ca99b0999f9984009e8cfd2a54608a8da5b8",
+    "precision-fifth-source-result.json": "6e117a2e73142eb317acdb267513bd1b05444558e1658d7a44df14eede8e5228",
+    "precision-completed-symbol-result.json": "1e483bc24a0c8c273632ec742bfdd03b344248e512d4e7d5577839f98420f03c"
+  }
+}
