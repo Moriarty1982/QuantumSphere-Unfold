@@ -1,0 +1,128 @@
+[
+  {
+    "projector_idempotence_error": 2.212193742470287e-15,
+    "projector_rank": 20,
+    "point": [
+      1.0,
+      0.6,
+      0.0,
+      0.0
+    ],
+    "coframe_gauge_rank": 4,
+    "pointwise_gauge_dimension": 4,
+    "AB_minus_E_norm": 5.281314270102485e-16,
+    "tests": [
+      {
+        "step": 0.0001,
+        "full_rank": 20,
+        "fixed_coframe_reduced_rank": 20,
+        "augmented_rank": 24,
+        "reduced_min_sv": 0.1685004422475299,
+        "reduced_condition": 16.48741963147241,
+        "gauge_null_relative_error": 4.912698232588378e-10
+      },
+      {
+        "step": 1e-05,
+        "full_rank": 20,
+        "fixed_coframe_reduced_rank": 20,
+        "augmented_rank": 24,
+        "reduced_min_sv": 0.16850044236924458,
+        "reduced_condition": 16.487419500887516,
+        "gauge_null_relative_error": 1.0659890482650363e-11
+      },
+      {
+        "step": 1e-06,
+        "full_rank": 20,
+        "fixed_coframe_reduced_rank": 20,
+        "augmented_rank": 24,
+        "reduced_min_sv": 0.16850044167701242,
+        "reduced_condition": 16.487419570173596,
+        "gauge_null_relative_error": 8.079457316400493e-11
+      }
+    ]
+  },
+  {
+    "projector_idempotence_error": 5.057787038342318e-15,
+    "projector_rank": 20,
+    "point": [
+      0.99,
+      0.59,
+      0.01,
+      -0.01
+    ],
+    "coframe_gauge_rank": 4,
+    "pointwise_gauge_dimension": 4,
+    "AB_minus_E_norm": 1.1621766948268962e-15,
+    "tests": [
+      {
+        "step": 0.0001,
+        "full_rank": 20,
+        "fixed_coframe_reduced_rank": 20,
+        "augmented_rank": 24,
+        "reduced_min_sv": 0.1873217022217477,
+        "reduced_condition": 15.19567549862093,
+        "gauge_null_relative_error": 5.415020369001838e-10
+      },
+      {
+        "step": 1e-05,
+        "full_rank": 20,
+        "fixed_coframe_reduced_rank": 20,
+        "augmented_rank": 24,
+        "reduced_min_sv": 0.18732170242002316,
+        "reduced_condition": 15.195675366693962,
+        "gauge_null_relative_error": 9.334040735125814e-12
+      },
+      {
+        "step": 1e-06,
+        "full_rank": 20,
+        "fixed_coframe_reduced_rank": 20,
+        "augmented_rank": 24,
+        "reduced_min_sv": 0.18732170191400777,
+        "reduced_condition": 15.195675410854355,
+        "gauge_null_relative_error": 6.492286621686369e-11
+      }
+    ]
+  },
+  {
+    "projector_idempotence_error": 2.849199740337281e-15,
+    "projector_rank": 20,
+    "point": [
+      1.005,
+      0.605,
+      -0.005,
+      0.005
+    ],
+    "coframe_gauge_rank": 4,
+    "pointwise_gauge_dimension": 4,
+    "AB_minus_E_norm": 1.9813671034512868e-15,
+    "tests": [
+      {
+        "step": 0.0001,
+        "full_rank": 20,
+        "fixed_coframe_reduced_rank": 20,
+        "augmented_rank": 24,
+        "reduced_min_sv": 0.1586740051047156,
+        "reduced_condition": 17.277961066610988,
+        "gauge_null_relative_error": 4.676975781480627e-10
+      },
+      {
+        "step": 1e-05,
+        "full_rank": 20,
+        "fixed_coframe_reduced_rank": 20,
+        "augmented_rank": 24,
+        "reduced_min_sv": 0.1586740052303619,
+        "reduced_condition": 17.27796093182923,
+        "gauge_null_relative_error": 7.441390406990302e-12
+      },
+      {
+        "step": 1e-06,
+        "full_rank": 20,
+        "fixed_coframe_reduced_rank": 20,
+        "augmented_rank": 24,
+        "reduced_min_sv": 0.15867400481789,
+        "reduced_condition": 17.2779609786508,
+        "gauge_null_relative_error": 8.450849970397049e-11
+      }
+    ]
+  }
+]

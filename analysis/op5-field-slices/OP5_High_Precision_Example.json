@@ -1,0 +1,50 @@
+[
+  {
+    "decimal_digits": 30,
+    "renormalized_state": false,
+    "constraint_norm": "6.81758244973e-16",
+    "full_residual_norm": "2.88760698288e-15",
+    "scalar_input_defect": "1.0044455948e-15",
+    "seconds": 0.22285866737365723
+  },
+  {
+    "decimal_digits": 30,
+    "renormalized_state": true,
+    "constraint_norm": "1.7312587813e-30",
+    "full_residual_norm": "2.30434438938e-30",
+    "scalar_input_defect": "-7.88860905221e-31",
+    "seconds": 0.20691299438476562
+  },
+  {
+    "decimal_digits": 50,
+    "renormalized_state": false,
+    "constraint_norm": "6.81758244973e-16",
+    "full_residual_norm": "2.88760698288e-15",
+    "scalar_input_defect": "1.0044455948e-15",
+    "seconds": 0.3714427947998047
+  },
+  {
+    "decimal_digits": 50,
+    "renormalized_state": true,
+    "constraint_norm": "4.21556618943e-50",
+    "full_residual_norm": "6.01399881244e-50",
+    "scalar_input_defect": "-1.06910588404e-50",
+    "seconds": 0.32373499870300293
+  },
+  {
+    "decimal_digits": 80,
+    "renormalized_state": false,
+    "constraint_norm": "6.81758244973e-16",
+    "full_residual_norm": "2.88760698288e-15",
+    "scalar_input_defect": "1.0044455948e-15",
+    "seconds": 0.42870545387268066
+  },
+  {
+    "decimal_digits": 80,
+    "renormalized_state": true,
+    "constraint_norm": "1.92377059908e-80",
+    "full_residual_norm": "4.54005676473e-80",
+    "scalar_input_defect": "-8.43375835458e-81",
+    "seconds": 0.45732760429382324
+  }
+]

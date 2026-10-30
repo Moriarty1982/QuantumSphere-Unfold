@@ -1,0 +1,29 @@
+[
+  {
+    "field": "OP5_Boundary_Fair_Balanced_Check.json",
+    "min_E_singular_value": 0.4019307621535683,
+    "max_E_condition": 16.10668946252725,
+    "min_temporal_principal_abs_eigenvalue": 0.14818697569126393,
+    "max_temporal_principal_condition": 18.68279003540405,
+    "all_metric_signatures_minus_plus_plus_plus": true,
+    "max_g_inverse00": -0.4017701363815878
+  },
+  {
+    "field": "OP5_Peak_Mean_Control.json",
+    "min_E_singular_value": 0.4013990135812501,
+    "max_E_condition": 16.124804048510253,
+    "min_temporal_principal_abs_eigenvalue": 0.14931174401620906,
+    "max_temporal_principal_condition": 18.576041780905065,
+    "all_metric_signatures_minus_plus_plus_plus": true,
+    "max_g_inverse00": -0.405937914064335
+  },
+  {
+    "field": "OP5_Peak_Weighted_Check.json",
+    "min_E_singular_value": 0.40068655127100355,
+    "max_E_condition": 16.158538830000253,
+    "min_temporal_principal_abs_eigenvalue": 0.15041703739310863,
+    "max_temporal_principal_condition": 18.504370912989323,
+    "all_metric_signatures_minus_plus_plus_plus": true,
+    "max_g_inverse00": -0.40957821841150976
+  }
+]

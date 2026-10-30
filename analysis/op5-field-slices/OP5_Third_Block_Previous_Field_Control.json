@@ -1,0 +1,86 @@
+{
+  "grid625": {
+    "metrics": {
+      "max_residual": 0.0007653961191718631,
+      "rms_residual": 0.00024814483470140413,
+      "min_abs_detE": 13.018924757097624,
+      "max_inverse_g00": -0.376476723666484,
+      "min_q": 5.440117938006062
+    },
+    "species_squared_residual_shares": [
+      0.4216673347502192,
+      0.3621795610573836,
+      0.2161531041923972
+    ],
+    "relative_residual_rms": 3.0392345465771847e-05,
+    "relative_residual_max": 9.455898201356702e-05,
+    "max_imaginary_S_projection": 3.696033347541823e-15,
+    "max_real_S_projection": 0.0004263714680254744,
+    "points": 625,
+    "worst_point": [
+      0.99,
+      0.59,
+      0.01,
+      -0.01
+    ],
+    "min_coframe_singular_value": 0.39999214626704166,
+    "max_coframe_condition_number": 16.195382996641506,
+    "max_field_norm": 4.014622774767531
+  },
+  "boundary544": {
+    "metrics": {
+      "max_residual": 0.0007653961191718631,
+      "rms_residual": 0.0002610665218071419,
+      "min_abs_detE": 13.018924757097624,
+      "max_inverse_g00": -0.376476723666484,
+      "min_q": 5.440117938006062
+    },
+    "species_squared_residual_shares": [
+      0.42022083525936216,
+      0.3615083187265573,
+      0.2182708460140805
+    ],
+    "relative_residual_rms": 3.197642338885295e-05,
+    "relative_residual_max": 9.455898201356702e-05,
+    "max_imaginary_S_projection": 3.696033347541823e-15,
+    "max_real_S_projection": 0.0004263714680254744,
+    "points": 544,
+    "worst_point": [
+      0.99,
+      0.59,
+      0.01,
+      -0.01
+    ],
+    "min_coframe_singular_value": 0.39999214626704166,
+    "max_coframe_condition_number": 16.195382996641506,
+    "max_field_norm": 4.014622774767531
+  },
+  "fresh4096": {
+    "metrics": {
+      "max_residual": 0.000571620379570895,
+      "rms_residual": 0.00017325483033435576,
+      "min_abs_detE": 13.141090612342754,
+      "max_inverse_g00": -0.3800543685644955,
+      "min_q": 5.451753624435028
+    },
+    "species_squared_residual_shares": [
+      0.41476083613374937,
+      0.3867742907703599,
+      0.19846487309589075
+    ],
+    "relative_residual_rms": 2.1203451549963728e-05,
+    "relative_residual_max": 7.062637373894642e-05,
+    "max_imaginary_S_projection": 4.8485080696419186e-15,
+    "max_real_S_projection": 0.0003518970118115748,
+    "points": 4096,
+    "worst_point": [
+      0.9902577316662806,
+      0.590108618731093,
+      0.008770889033039566,
+      -0.006913934363157422
+    ],
+    "min_coframe_singular_value": 0.4028975262492527,
+    "max_coframe_condition_number": 16.079213969056006,
+    "max_field_norm": 4.013076055134145
+  }
+}

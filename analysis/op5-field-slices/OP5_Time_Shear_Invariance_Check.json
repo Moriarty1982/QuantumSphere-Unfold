@@ -1,0 +1,21 @@
+{
+  "checks": [
+    {
+      "direction": 0,
+      "finite_change_residual_difference": 8.28028417508636e-16
+    },
+    {
+      "direction": 1,
+      "finite_change_residual_difference": 1.2028127760477487e-15
+    },
+    {
+      "direction": 2,
+      "finite_change_residual_difference": 1.6504651808933464e-15
+    },
+    {
+      "direction": 3,
+      "finite_change_residual_difference": 1.6593099314160668e-15
+    }
+  ],
+  "scope": "Pointwise coframe/derivative shear invariance; no regional gauge invariance claimed"
+}

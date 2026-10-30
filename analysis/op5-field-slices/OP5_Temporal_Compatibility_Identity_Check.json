@@ -1,0 +1,86 @@
+[
+  {
+    "point": [
+      1.0,
+      0.6,
+      0.0,
+      0.0
+    ],
+    "J_minus_HP_relative": 5.248784579110979e-11,
+    "LJ_norm": 8.526800734694859e-10,
+    "rankL": 4,
+    "left_projector_difference": 6.279722034282529e-10,
+    "scalar_row_reconstruction_error": 6.763920865904796e-15,
+    "scalar_combination_coefficients": [
+      1.4733189607995685,
+      -1.2947608739175285,
+      0.1597620265688039,
+      -0.024934717260551346
+    ],
+    "constraint_vector": [
+      -9.300283157211863e-05,
+      -0.0001041901940681562,
+      1.0159393156840272e-05,
+      -1.9986719474411053e-05
+    ],
+    "known_scalar_constraint": 5.782133027107749e-16,
+    "best_unrepairable_time_residual": 2.9772831103188036e-05,
+    "full_residual": 5.501857652139206e-05
+  },
+  {
+    "point": [
+      0.99,
+      0.59,
+      0.01,
+      -0.01
+    ],
+    "J_minus_HP_relative": 5.124954861342109e-11,
+    "LJ_norm": 6.657494828464714e-10,
+    "rankL": 4,
+    "left_projector_difference": 5.535998240879234e-10,
+    "scalar_row_reconstruction_error": 5.1014988682098734e-15,
+    "scalar_combination_coefficients": [
+      1.5169007406651116,
+      -1.3219191768046608,
+      0.1417087083430243,
+      0.01512451123127222
+    ],
+    "constraint_vector": [
+      0.00020691982286648688,
+      0.0001964251370380945,
+      -0.00042588564512556525,
+      0.00040550252973209876
+    ],
+    "known_scalar_constraint": -1.0258283615166082e-17,
+    "best_unrepairable_time_residual": 0.0001841143762373591,
+    "full_residual": 0.0004589150884312041
+  },
+  {
+    "point": [
+      1.005,
+      0.605,
+      -0.005,
+      0.005
+    ],
+    "J_minus_HP_relative": 5.067454195170901e-11,
+    "LJ_norm": 8.84287400178742e-10,
+    "rankL": 4,
+    "left_projector_difference": 6.592756128287303e-10,
+    "scalar_row_reconstruction_error": 3.5505577824211848e-15,
+    "scalar_combination_coefficients": [
+      1.4501186341733934,
+      -1.2797084757030182,
+      0.16850958127735918,
+      -0.04218966410343892
+    ],
+    "constraint_vector": [
+      2.5957238074769753e-06,
+      -1.757612252701069e-05,
+      -0.00013778543733730504,
+      7.20141802814717e-05
+    ],
+    "known_scalar_constraint": 1.613304018999777e-15,
+    "best_unrepairable_time_residual": 3.898507192052115e-05,
+    "full_residual": 9.422263951144856e-05
+  }
+]

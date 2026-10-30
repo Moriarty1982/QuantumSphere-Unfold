@@ -1,0 +1,277 @@
+[
+  {
+    "field": "OP5_Boundary_Fair_Balanced_Check.json",
+    "groups": {
+      "fresh_boundary1024": {
+        "metrics": {
+          "max_residual": 0.00042662945803368464,
+          "rms_residual": 0.00016274908251614543,
+          "min_abs_detE": 12.984174845583153,
+          "max_inverse_g00": -0.4041338496779592,
+          "min_q": 5.447991552798806
+        },
+        "species_squared_residual_shares": [
+          0.4227225626363789,
+          0.3204842612279226,
+          0.25679317613569846
+        ],
+        "relative_residual_rms": 1.9954914357194267e-05,
+        "relative_residual_max": 5.26862639339956e-05,
+        "max_imaginary_S_projection": 3.4546357338379255e-15,
+        "max_real_S_projection": 0.00018843013053729016,
+        "smallest_E_singular_value": 0.4015311947277608
+      },
+      "fresh_inside4096": {
+        "metrics": {
+          "max_residual": 0.00034574392182921303,
+          "rms_residual": 0.00011393680561320305,
+          "min_abs_detE": 13.000882708341026,
+          "max_inverse_g00": -0.40439209348979077,
+          "min_q": 5.451266725053351
+        },
+        "species_squared_residual_shares": [
+          0.4285075291658313,
+          0.3298224918327083,
+          0.2416699790014604
+        ],
+        "relative_residual_rms": 1.3956752665263387e-05,
+        "relative_residual_max": 4.2643552142919505e-05,
+        "max_imaginary_S_projection": 3.815420100358475e-15,
+        "max_real_S_projection": 0.00018628300381586598,
+        "smallest_E_singular_value": 0.4012902565018376
+      },
+      "faces": [
+        {
+          "metrics": {
+            "max_residual": 0.0003793543979900254,
+            "rms_residual": 0.00017015690342946744,
+            "min_abs_detE": 13.055831947436133,
+            "max_inverse_g00": -0.4178977091349309,
+            "min_q": 5.4504591680593295
+          },
+          "species_squared_residual_shares": [
+            0.3780599963591699,
+            0.39862862942923705,
+            0.22331137421159314
+          ],
+          "relative_residual_rms": 2.0799811091292066e-05,
+          "relative_residual_max": 4.686383927894053e-05,
+          "max_imaginary_S_projection": 3.3972221466071345e-15,
+          "max_real_S_projection": 0.00015468165870125263
+        },
+        {
+          "metrics": {
+            "max_residual": 0.000396188768477484,
+            "rms_residual": 0.00017699243409559164,
+            "min_abs_detE": 13.806733438590168,
+            "max_inverse_g00": -0.4771251445542608,
+            "min_q": 5.5004657757645035
+          },
+          "species_squared_residual_shares": [
+            0.4832373296505055,
+            0.3032137493017842,
+            0.21354892104771026
+          ],
+          "relative_residual_rms": 2.1934843955423108e-05,
+          "relative_residual_max": 4.907130661308443e-05,
+          "max_imaginary_S_projection": 2.731666008302068e-15,
+          "max_real_S_projection": 0.0001487889181650762
+        },
+        {
+          "metrics": {
+            "max_residual": 0.0003586055837665974,
+            "rms_residual": 0.00015929409866608185,
+            "min_abs_detE": 13.402537445484883,
+            "max_inverse_g00": -0.4041338496779592,
+            "min_q": 5.469614813969569
+          },
+          "species_squared_residual_shares": [
+            0.4438219034649502,
+            0.2593464638514709,
+            0.29683163268357887
+          ],
+          "relative_residual_rms": 1.953076153607123e-05,
+          "relative_residual_max": 4.445674816526447e-05,
+          "max_imaginary_S_projection": 3.4546357338379255e-15,
+          "max_real_S_projection": 0.0001708829542555275
+        },
+        {
+          "metrics": {
+            "max_residual": 0.00042662945803368464,
+            "rms_residual": 0.0001648926415869231,
+            "min_abs_detE": 13.369053845772264,
+            "max_inverse_g00": -0.4252124536813328,
+            "min_q": 5.447991552798806
+          },
+          "species_squared_residual_shares": [
+            0.4566417743164483,
+            0.34971725251999186,
+            0.19364097316355985
+          ],
+          "relative_residual_rms": 2.023294772089433e-05,
+          "relative_residual_max": 5.26862639339956e-05,
+          "max_imaginary_S_projection": 2.7816273996629157e-15,
+          "max_real_S_projection": 0.00016621227212179463
+        },
+        {
+          "metrics": {
+            "max_residual": 0.00030244668784013337,
+            "rms_residual": 0.0001558790598740475,
+            "min_abs_detE": 13.205403186345622,
+            "max_inverse_g00": -0.4148344210197865,
+            "min_q": 5.57381573814861
+          },
+          "species_squared_residual_shares": [
+            0.35821303454344733,
+            0.3427608214125927,
+            0.29902614404395994
+          ],
+          "relative_residual_rms": 1.9206271838499304e-05,
+          "relative_residual_max": 3.747867125310759e-05,
+          "max_imaginary_S_projection": 3.0434130964072242e-15,
+          "max_real_S_projection": 0.00012125125429874345
+        },
+        {
+          "metrics": {
+            "max_residual": 0.00030564752385236864,
+            "rms_residual": 0.00017529093905715136,
+            "min_abs_detE": 13.024953400650345,
+            "max_inverse_g00": -0.40513985489893856,
+            "min_q": 5.448859775410407
+          },
+          "species_squared_residual_shares": [
+            0.4198315754983959,
+            0.29753998166672685,
+            0.2826284428348772
+          ],
+          "relative_residual_rms": 2.121629071898219e-05,
+          "relative_residual_max": 3.720265037188152e-05,
+          "max_imaginary_S_projection": 2.7290825578129424e-15,
+          "max_real_S_projection": 0.00018843013053729016
+        },
+        {
+          "metrics": {
+            "max_residual": 0.000343901208018326,
+            "rms_residual": 0.00015233883612292393,
+            "min_abs_detE": 12.984174845583153,
+            "max_inverse_g00": -0.43690311564365697,
+            "min_q": 5.483923528031368
+          },
+          "species_squared_residual_shares": [
+            0.42323181967887497,
+            0.24844166974131215,
+            0.3283265105798129
+          ],
+          "relative_residual_rms": 1.8709064969017393e-05,
+          "relative_residual_max": 4.2778525251493534e-05,
+          "max_imaginary_S_projection": 2.4431572691048335e-15,
+          "max_real_S_projection": 0.0001137337435135628
+        },
+        {
+          "metrics": {
+            "max_residual": 0.00030827546015158806,
+            "rms_residual": 0.0001442979855493299,
+            "min_abs_detE": 13.084501819656648,
+            "max_inverse_g00": -0.4093944454172431,
+            "min_q": 5.503578037546255
+          },
+          "species_squared_residual_shares": [
+            0.4027567385832984,
+            0.36229692545832065,
+            0.23494633595838088
+          ],
+          "relative_residual_rms": 1.7662262985374432e-05,
+          "relative_residual_max": 3.724041496099202e-05,
+          "max_imaginary_S_projection": 2.9300720412516e-15,
+          "max_real_S_projection": 0.00015392291455723303
+        }
+      ]
+    }
+  },
+  {
+    "field": "OP5_Peak_Mean_Control.json",
+    "groups": {
+      "fresh_boundary1024": {
+        "metrics": {
+          "max_residual": 0.00041170631053985877,
+          "rms_residual": 0.0001568812861853766,
+          "min_abs_detE": 12.961448707826507,
+          "max_inverse_g00": -0.4081590473287477,
+          "min_q": 5.447858754074891
+        },
+        "species_squared_residual_shares": [
+          0.4257383774996956,
+          0.31648454267879395,
+          0.25777707982151044
+        ],
+        "relative_residual_rms": 1.923557248494641e-05,
+        "relative_residual_max": 5.0842949995958e-05,
+        "max_imaginary_S_projection": 3.3143611485419826e-15,
+        "max_real_S_projection": 0.00017161887181730735,
+        "smallest_E_singular_value": 0.4009941083903374
+      },
+      "fresh_inside4096": {
+        "metrics": {
+          "max_residual": 0.0003329188844955979,
+          "rms_residual": 0.00010976388878551196,
+          "min_abs_detE": 12.976279470801277,
+          "max_inverse_g00": -0.4085998529193344,
+          "min_q": 5.451148274152766
+        },
+        "species_squared_residual_shares": [
+          0.4306027559201447,
+          0.3245183174750444,
+          0.24487892660481084
+        ],
+        "relative_residual_rms": 1.3446014897330368e-05,
+        "relative_residual_max": 4.093850423797579e-05,
+        "max_imaginary_S_projection": 4.4861922675527334e-15,
+        "max_real_S_projection": 0.00016880075969532546,
+        "smallest_E_singular_value": 0.40086396678800323
+      }
+    }
+  },
+  {
+    "field": "OP5_Peak_Weighted_Check.json",
+    "groups": {
+      "fresh_boundary1024": {
+        "metrics": {
+          "max_residual": 0.0003211923921867765,
+          "rms_residual": 0.00017429097517943152,
+          "min_abs_detE": 12.944179416612423,
+          "max_inverse_g00": -0.41181476198359274,
+          "min_q": 5.447775787088642
+        },
+        "species_squared_residual_shares": [
+          0.4530678231396202,
+          0.2862013563567917,
+          0.2607308205035882
+        ],
+        "relative_residual_rms": 2.1367037037738223e-05,
+        "relative_residual_max": 3.984178132316289e-05,
+        "max_imaginary_S_projection": 3.0378887475252317e-15,
+        "max_real_S_projection": 0.00017160086514152526,
+        "smallest_E_singular_value": 0.4002167176615284
+      },
+      "fresh_inside4096": {
+        "metrics": {
+          "max_residual": 0.0003088072464742801,
+          "rms_residual": 0.00014289258270124347,
+          "min_abs_detE": 12.957366807175783,
+          "max_inverse_g00": -0.41209094281669456,
+          "min_q": 5.451082933527715
+        },
+        "species_squared_residual_shares": [
+          0.48690003022304684,
+          0.2636611645524302,
+          0.24943880522452289
+        ],
+        "relative_residual_rms": 1.750105875602832e-05,
+        "relative_residual_max": 3.8229863114541775e-05,
+        "max_imaginary_S_projection": 3.913597995208826e-15,
+        "max_real_S_projection": 0.00016318177226921693,
+        "smallest_E_singular_value": 0.40015812318336524
+      }
+    }
+  }
+]
