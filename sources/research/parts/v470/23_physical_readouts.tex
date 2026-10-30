@@ -638,6 +638,8 @@ to the tachyon-frame Hawking temperature
 \emph{Status: theoretical prediction; requires quantum-gravity experiment
 to test directly.}
 \end{corollary}
+\qsstatus{4.10 consolidation: The list is a historical prediction register, not a set of independently validated 4.10 predictions. In particular, the GUE scale argument cites an archived result; apparent agreement and blind prediction must be distinguished. The new comparison results do not promote these empirical claims.}
+
 \qsstatus{Corrected in the v4.9.0 revision (P4: \(\gL^5\approx22.5\), earlier \(\gL^6\approx42\); P5: \(1/2\), earlier \(\gL^{-1}\approx0.537\)).  Status of P1--P6: P1 not confirmed, archived (v4.8.0-r08); P2 phase formula excluded, archived (v4.8.0-r09); P3 coincidence, archived (v4.8.0-r09, v4.9.0-r19); P4 contradicted as stated (v4.8.0-r03 F4); P5 corrected to \(1/2\), untestable at present (v4.9.0-r09); P6 untested, assumption \(k(M)=0\) explicit (v4.8.0-r03 F6).}
 
 
@@ -763,70 +765,60 @@ reduces to:
  \;=\; \bsym^2\cdot(\lP^{(\mathrm{photon})})^2.
 \end{equation}
 
-\begin{remark}[Regularization required]
+\begin{remark}[Regularization required; corrected in 4.10]
 \label{rem:regularization-B}
-The integrand $1 + R(\tau)$ has a pole at $\tau=0$: since
-$R(\tau) = -e^{-\tau/2}/(e^\tau-1) \sim -1/\tau + 1/2 - \tau/12 +
-\cdots$ as $\tau\to 0^+$, the combination $1 + R(\tau) \sim
-3/2 - 1/\tau + \cdots$ is still singular.
-Equation~\eqref{eq:balance-reduced} must therefore be read as a
-\emph{renormalized} integral:
+For dimensionless $\tau>0$,
 \[
- \mathrm{p.v.}\int_0^T (1 + R(\tau))\,d\tau
- \;:=\;
- \lim_{\varepsilon\to 0}
- \Bigl[
- \int_\varepsilon^T (1+R(\tau))\,d\tau + \log\varepsilon
- \Bigr],
+ R(\tau)=-\frac{e^{-\tau/2}}{e^\tau-1}
+ =-\frac1\tau+1-\frac{11\tau}{24}+O(\tau^2).
 \]
-where the $\log\varepsilon$ counterterm removes the leading pole.
-Numerically with $T = \lP^{(\mathrm{photon})} \approx 0.393$
-(matter-Planck units):
+The one-sided endpoint singularity requires a specified finite-part
+prescription, not an ordinary convergent integral. For a positive
+dimensionless reference scale $\mu$, define
 \[
- \mathrm{p.v.}\int_0^T (1+R)\,d\tau
- \;=\; \frac{3T}{2} - \log T - \frac{T^2}{24} - \gamma_E
- \;\approx\; 0.940,
+ \operatorname{FP}_{\mu}\int_0^T(1+R(\tau))\,d\tau
+ =\lim_{\varepsilon\downarrow0}
+ \left[\int_\varepsilon^T(1+R(\tau))\,d\tau
+                   -\log(\varepsilon/\mu)\right].
 \]
-where $\gamma_E \approx 0.5772$ is the Euler--Mascheroni constant.
+A direct antiderivative gives
+\[
+ T-2e^{-T/2}+\log\!\frac{1+e^{-T/2}}{1-e^{-T/2}}
+       +2-\log4+\log\mu.
+\]
+For $T=0.393$ and $\mu=1$ this is approximately $1.686953464$.
+Changing $\mu$ changes the finite part. Selecting this scale or
+interpreting the result as physical vacuum energy needs a separate
+action, units and matching prescription.
 \end{remark}
+\qsstatus{4.10 correction: the earlier expansion
+$-1/\tau+1/2-\tau/12$, the added $+\log\varepsilon$ counterterm,
+and the value $0.940$ were incorrect. The added counterterm reinforced
+the endpoint divergence. The withdrawn Theta-balance route is not
+reinstated by this correction.}
 
-\begin{proposition}[Step~(B) open: required Theta contribution]
+\begin{proposition}[Step~(B): historical target withdrawn]
 \label{prop:theta-required-B}
-\emph{(Open sub-step; not yet proven.)}
-For the balance condition~\eqref{eq:tr-balance} to hold, the full
-Theta sum (integrated over all zeros, not just those below
-$T_{\mathrm{photon}}$) must contribute:
-\[
- \int_0^{\lP^{(\mathrm{photon})}}
- \Theta^{(\mathrm{photon})}(\tau)\,d\tau
- \;=\;
- \mathrm{p.v.}\int_0^T (1+R)\,d\tau - \bsym^2\cdot T^2
- \;\approx\; 0.940 - 0.302\cdot 0.154
- \;\approx\; 0.893.
-\]
-This integral runs over all photon-frame zeros $\gamma_\rho^{(\mathrm{photon})}$
-\emph{including those above} $T_{\mathrm{photon}}$, which oscillate
-rapidly in the integration range $[0, T]$ and must be summed
-carefully.
-Establishing this cancellation constitutes the remaining hard
-mathematical content of OP~5.
+The former numerical target $0.893=0.940-0.302\cdot0.154$ depended
+on the incorrect finite-part evaluation in
+Remark~\ref{rem:regularization-B}. It is not an established requirement
+on a physical Theta contribution. The subsequent balance conjecture is
+already withdrawn in Proposition~\ref{conj:theta-sum-B}.
+A corrected finite-part convention alone neither restores that balance
+nor closes OP5.
 \end{proposition}
+\qsstatus{4.10 correction: the preceding target is retained here only
+as a historical dependency. No new cancellation target is inferred.}
 
-\begin{remark}[Structural summary of OP~5]
+\begin{remark}[Current status of the historical OP5 route]
 \label{rem:op5-structural-summary}
-The analysis of \QSCver{v2.29.0} reveals the following structure of OP~5:
-\begin{itemize}
- \item Step~(A) is closed: $\Theta^{(\mathrm{photon})}=0$ below
- the photon-frame cutoff (Proposition~\ref{prop:theta-remainder-trivial}).
- \item Step~(B) reduces to showing that the oscillatory Theta sum,
- integrated over the photon-frame UV range $[0,\lP^{(\mathrm{photon})}]$
- but summing over all zeros (including those above the cutoff),
- evaluates to $\approx 0.893$ in renormalized Planck units.
- \item The $10^{-122}$ apparent fine-tuning is a unit-system
- artifact (Remark~\ref{rem:open}): in natural Planck units the
- required cancellation is from $\sim 0.940$ (R-sector baseline)
- to $0.302$ (frame residual), a factor of $\sim 3.1$, not $10^{122}$.
-\end{itemize}
+The former numerical summary using $0.940$ and $0.893$ is superseded
+by the finite-part correction above and the already withdrawn
+Theta-sum conjecture. A dimensionless discrepancy is not removed by a
+change of units. The newer state, clock and field comparisons in
+Section~\ref{sec:v410-state-mediator} identify conditional structures
+and remaining compatibility conditions; they do not prove cancellation
+of a cosmological term. OP5 remains open.
 \end{remark}
 
 \subsubsection*{Step (B) reduced: the exact Theta-sum conjecture}
@@ -874,6 +866,8 @@ $\eqref{eq:tr-balance}$ once step~(A) is established
 Conjecture~\ref{conj:theta-sum-B} would therefore close OP~5
 completely.
 \end{remark}
+\qsstatus{4.10 consolidation: This paragraph records the dependency of the withdrawn historical conjecture, not a live OP5 route. Its old target is superseded by Remark~\ref{rem:regularization-B}; the conjecture remains archived.}
+
 
 \begin{remark}[Remainder estimate; archived]\label{rem:explicit-formula-remainder}
 The remainder estimate that was to support Proposition~\ref{conj:theta-sum-B} is withdrawn with it (v4.8.0-r05).

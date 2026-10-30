@@ -15,6 +15,10 @@ Structure-first mathematical companion material for the Quantum Sphaera / Sphere
 
 The current public baseline is the Zenodo-published `v4.9.0` release. It is built from the full-source research line in [`sources/research/`](sources/research/README.md), which retains the complete v4.7.0 monolith in preserved fragments, adds the v4.9.0 main sections (premise audit, conditional Cartan comparison and finite normal-source compatibility, Koide equal-norm condition and local kernel, HC mass identification, generation coupling and related conditional results), and carries the published v4.8.0 layers (v4.7.0-r85 to r94, v4.8.0-r01, r02) together with the layers recorded after v4.8.0 (v4.8.0-r03 to r20). The release source in `release/v4.9.0/` is a single file flattened from the modular sources. Guard and residual vectors are unchanged. Repository changes after this release should be treated as post-release maintenance, research notes, or explicitly versioned follow-up work.
 
+## 4.10 research draft
+
+The current research sources identify `4.10.0-draft`. The 30 October consolidation adds explicit state/mediator and clock comparisons, separates local identities from numerical field evidence, and corrects the historical OP5 endpoint regularization. This is an unpublished research candidate, not a new Zenodo release or an OP5 closure. See [the consolidation record](notes/research/v4_10_0_consolidation/README.md).
+
 ## Scope guard
 
 This repository records a structure-first mathematical companion with guarded local/effective readout claims. It is not a peer-reviewed proof of global physical closure, global all-readout terminality, the Riemann Hypothesis, or a global QFT/GR unification theorem.

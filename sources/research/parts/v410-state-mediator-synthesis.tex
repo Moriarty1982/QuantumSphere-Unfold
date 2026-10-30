@@ -1,0 +1,217 @@
+\section{States, Mediators and Clock Comparisons in the 4.10 Research Line}
+\label{sec:v410-state-mediator}
+
+This section consolidates the investigations of 28--30 October 2026.
+It distinguishes exact local identities, finite numerical evidence and
+open physical identifications. The common carrier is a research programme;
+the comparisons below neither close OP5 nor derive a unified quantum/gravity
+action. The QAM records the types, hypotheses and remaining obligations of
+an argument. An open entry is not a refutation, and a successful residual
+test is not a substitute for the missing implication.
+
+\subsection{A common carrier and distinct readouts}
+\label{subsec:v410-readout-types}
+
+Let \(\mathcal C\) be a declared common state carrier and let
+\(\pi_Q:\mathcal C\to\mathcal Q\) and
+\(\pi_R:\mathcal C\to\mathcal R\) be quantum and relativistic readouts
+on specified admissible domains. A mediator \(\mathcal M\) requires
+explicit maps \(m_Q,m_R\) with
+\[
+ m_Q\pi_Q(c)=m_R\pi_R(c).
+\]
+If dynamics are also claimed, the additional conditions are
+\(\pi_Q U_{\mathcal C}=V_Q\pi_Q\) and
+\(\pi_R U_{\mathcal C}=V_R\pi_R\), with compatible clock parameters.
+These are proof obligations, not definitions that establish a physical
+identification by themselves. A physical state space, a local null-direction
+sphere, and a normalized two-port register retain different information.
+
+In particular, the ordinary positive AB Gram register of two Dirac spinors
+is not the same readout as the real electromagnetic doublet of r04.
+Writing \(N=\|A\|^2+\|B\|^2>0\), the former gives
+\[
+ \rho_{AB}=\frac1N
+ \begin{pmatrix}A^\dagger A&B^\dagger A\\A^\dagger B&B^\dagger B\end{pmatrix},
+ \qquad
+ r=\frac{(2\operatorname{Re}A^\dagger B,
+                  2\operatorname{Im}A^\dagger B,
+                  \|A\|^2-\|B\|^2)}N.
+\]
+It obeys \(1-|r|^2=4\det\rho_{AB}\ge0\). Proportional AB fields lie
+on the boundary; independent fields can lie in the interior. Two fields
+with the same \(r\) can have opposite
+\(A^\dagger\beta A-B^\dagger\beta B\): take
+\((A,B)=(\cos\theta\,e_1,\sin\theta\,e_1)\) or
+\((\cos\theta\,e_3,\sin\theta\,e_3)\) with
+\(\beta=\operatorname{diag}(1,1,-1,-1)\).
+Thus the Bloch coordinates alone do not close the Dirac readout.
+
+\subsection{An orientation-complete local mediator}
+\label{subsec:v410-oriented-mediator}
+
+For the native real doublet \(F=[E\mid B]\), put
+\(G=F^{\mathsf T}F=\left(\begin{smallmatrix}a&c\\c&b\end{smallmatrix}\right)\).
+On the chart \(a>0\), \(\Delta=\sqrt{ab-c^2}>0\), define
+\[
+ F_0(G)=\begin{pmatrix}\sqrt a&c/\sqrt a\\0&\Delta/\sqrt a\\0&0\end{pmatrix},
+ \quad e=E/\sqrt a,\quad
+ q=\frac{B-(c/a)E}{\Delta/\sqrt a},\quad O=[e\mid q\mid e\times q].
+\]
+Then \(O\in SO(3)\) and \(F=OF_0(G)\), by direct multiplication.
+The three Gram entries and three orientation parameters therefore recover
+the six real field components locally. Keeping only \(\rho=G/\operatorname{tr}G\)
+also discards the scale \(\operatorname{tr}G=2u\). Rank-deficient fields
+need other charts and stabilizer data. A nonzero null electromagnetic
+field with \(G=uI\) is regular in this rank-two chart; it is not a
+rank-one Gram state.
+
+For any declared right-doublet operation \(M\),
+\[
+ F'=FM,\qquad G'=M^{\mathsf T}GM.
+\]
+Reconstructing \(F_0(G)M=K F_0(G')\) gives \(O'=OK\) whenever the
+rank-two charts exist. This proves that changing the field and then
+reading it agrees with the corresponding mediator operation. Exact checks
+cover phase rotation, \(J_B=i\) times conjugation, conjugation and the
+compensator \(C_+=(I+\sigma_x)/2\).
+
+The compensator is a separate rank-changing case:
+\(E'=B'=(E+B)/2\). If nonzero, its normalized Gram state is
+\(\rho'=C_+\), and a rank-one direction chart replaces the orientation
+triad. If the selected port vanishes, normalization is undefined.
+The pure selected register state is not the same readout as an
+electromagnetic null field, whose r04 state is \(I/2\).
+
+Orientation is needed for general observer changes. For example,
+\(E=(2,0,0)\), \(B_\pm=(0,\pm1,0)\) give the same
+\(\rho=\operatorname{diag}(4/5,1/5)\), but opposite fluxes. Under a
+common infinitesimal boost of speed \(v\) along \(z\),
+\[
+ \left.\frac{d\rho_+}{dv}\right|_0
+ =\operatorname{diag}(12/25,-12/25)
+ =-\left.\frac{d\rho_-}{dv}\right|_0.
+\]
+Even the flux alone does not repair every ambiguity: two orthogonal pure
+electric fields have the same Gram matrix and zero flux but respond
+differently to a boost along one of their axes. These facts establish
+non-autonomy of the reduced register under unrestricted directed observer
+changes, not a failure of the full field's covariance.
+
+\subsection{Clock calibration and the octonionic scope}
+\label{subsec:v410-clock-scope}
+
+Coordinate time, eigen-time along a timelike observer, an internal clock
+reading, and a structural invariant require separate definitions. In the
+controlled constant-rate example
+\(\psi_a(t_a)=\exp(-i\omega a t_a)\psi_0\),
+\(\psi_b(t_b)=\exp(-i\omega b t_b)\psi_0\), \(a,b>0\), the calibration
+\(\tau=a t_a=b t_b\) makes the trajectories agree exactly. Matching
+their initial zeros alone does not. The rates are inputs of this example,
+not derived native clocks. The orientation counterexample above persists
+under a common calibrated clock whenever the observer's boost rate is
+nonzero. Neither result requires a second fundamental quantum time.
+
+A shared clock does not alone prove entanglement: local evolution
+\(U_1(\tau)\otimes U_2(\tau)\) preserves product states. Likewise, an
+invariant \(\tau_n\) is not by itself an operational clock or an
+entanglement criterion. Quantum systems can also be massive; the two
+descriptions are not disjoint massless/massive classes.
+
+After choosing a complex direction, a six-real-dimensional octonionic
+complement can encode \(E+iB\). This is a data embedding, not yet an
+identification of Lorentz boosts with real octonion automorphisms.
+Those preserve the positive octonion norm, whereas a transverse boost of
+\(E=(0,1,0),B=0\) gives
+\(E'^2-B'^2=1\) but
+\(E'^2+B'^2=(1+v^2)/(1-v^2)\).
+The native complex/quaternionic/octonionic dictionary and its allowed
+actions must therefore be specified. Extra registers or complexification
+are possible research routes, not consequences of dimension counting.
+
+\begin{samepage}
+\subsection{Field compatibility and finite evidence}
+\label{subsec:v410-field-compatibility}
+
+The declared classical comparison retains
+\[
+ \begin{aligned}
+ F_\Psi&=i\sum_{\mu,a}(E^{-1})^\mu{}_a(I\otimes K_a)D_\mu\Psi
+             -h(Y\otimes\beta)\Psi=0,\\
+ E^a{}_{\mu}&=\operatorname{Re}(\Psi^\dagger Q_aD_\mu\Psi),\qquad\det E\ne0.
+ \end{aligned}
+\]
+\end{samepage}
+where \(Q_a=S\otimes K_a\), \(K_a=(I,\alpha_i)\), and the Lorentz
+spin connection is set to zero as a comparison choice, not identified
+with the induced Levi--Civita connection. The source couplings are held
+fixed. The earlier proportional AB ansatz need not be preserved by this
+dynamics. Releasing the first jets removes several pointwise residuals,
+but does not establish their regional continuation.
+
+For constant Hermitian \(Q_a\) and Hermitian internal connection,
+\[
+ E^a=\tfrac12dj_a+\tfrac i2\Psi^\dagger[Q_a,A]\Psi,
+ \qquad j_a=\Psi^\dagger Q_a\Psi.
+\]
+For the retained \(A=G\rho\,d\varphi\) on \(\rho>0\), this implies
+\(E^a=dj_a/2+B_a d\varphi\) and
+\(dE^a=dB_a\wedge d\varphi\). Here the radial coordinate \(\rho\)
+is unrelated to a density matrix. This coordinate curl is not itself
+Riemann curvature. Eliminating all free ordered second jets shows
+numerically that imposing even the full current-curl identity does not
+reproduce the obstruction from fully symmetric spinor second jets.
+Coframe integrability and spinor integrability are different tests.
+
+At fixed field values let \(A_0\) be the real map from time-jet changes
+to changes of \(E_0\), and \(B_0\) have the four covariant jets as real
+columns. Then \(A_0B_0=E\). Pointwise shear invariance gives, for
+invertible frozen time operator \(H_0\),
+\[
+ P=I-B_0E^{-1}A_0,\quad J_0=H_0P,\quad
+ L=A_0H_0^{-1},\quad LJ_0=0.
+\]
+Thus \(LF_\Psi=0\) supplies four temporal compatibility conditions.
+One combination is
+\(4-h\Psi^\dagger(Z\otimes\beta)\Psi/2=0\),
+\(Z=\operatorname{diag}(1,-1,0)\). Its derivatives and the other
+compatibility combinations can be solved jointly at the three tested
+points. The resulting first-jet family has a numerically regular
+seven-direction constraint Jacobian and 65 free spatial tangent
+directions, before further constraints and identifications. This is
+neither a count of physical degrees of freedom nor a regional existence
+theorem. Symmetric second-jet completion still has nonzero residuals.
+
+Two-mode fields with variable amplitudes provide single smooth
+approximations and hence consistent mixed derivatives, but retain
+nonzero equation residuals. Their optimization is underdetermined and
+does not supply a common action. Figure~\ref{fig:op5-multimode-slices}
+deliberately records the original affine baseline, not the latest fit.
+Later quadratic fits and weighted comparisons are archived separately.
+The early edge-weighting interpretation was corrected when a reused
+residual function was found to retain the old points; only the subsequent
+corrected comparisons support statements about edge weighting.
+
+As a precision control, the direct centre-point problem was recomputed
+with necessary state normalization restored in each precision:
+\begin{center}
+\begin{tabular}{@{}rrr@{}}\toprule
+decimal digits & normalized-input full residual & rounded-input full residual\\
+\midrule
+30 & \(2.3\times10^{-30}\) & \(2.9\times10^{-15}\)\\
+50 & \(6.0\times10^{-50}\) & \(2.9\times10^{-15}\)\\
+80 & \(4.5\times10^{-80}\) & \(2.9\times10^{-15}\)\\
+\bottomrule\end{tabular}
+\end{center}
+These are numerical checks, not certified exact solutions or physical
+scales. Renormalization changes the rounded input by a tiny amount;
+extra arithmetic precision alone cannot remove a frozen input defect.
+The larger continuation residuals are not removed by this point test.
+
+\paragraph{Status of the 4.10 consolidation.}
+Exact reconstruction and local operation identities are separated from
+finite numerical evidence. Native action, clock identification, complete
+octonionic structural embedding, regional spinor existence and OP5 closure
+remain open. Scripts, inputs, coefficients, corrections and individual
+scope statements are in \texttt{analysis/op5-field-slices/}.
+The guard and global residual records are not promoted by these tests.
