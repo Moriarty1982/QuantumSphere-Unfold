@@ -1,0 +1,185 @@
+{
+  "contract": "Frozen completedfirstsymbol only, not nonlinear formalintegrability. Genericflag numerical Cartan tests atone germ.",
+  "results": [
+    {
+      "symbol_order": 1,
+      "shape": [
+        32,
+        96
+      ],
+      "rank": 31,
+      "dimension": 65,
+      "flags": [
+        {
+          "characters": [
+            23,
+            22,
+            19,
+            1
+          ],
+          "bound_next_dimension": 128
+        },
+        {
+          "characters": [
+            23,
+            22,
+            19,
+            1
+          ],
+          "bound_next_dimension": 128
+        }
+      ],
+      "gap_against_previous": null
+    },
+    {
+      "symbol_order": 2,
+      "shape": [
+        128,
+        240
+      ],
+      "rank": 113,
+      "dimension": 127,
+      "flags": [
+        {
+          "characters": [
+            65,
+            42,
+            19,
+            1
+          ],
+          "bound_next_dimension": 210
+        },
+        {
+          "characters": [
+            65,
+            42,
+            19,
+            1
+          ],
+          "bound_next_dimension": 210
+        }
+      ],
+      "gap_against_previous": 1
+    },
+    {
+      "symbol_order": 3,
+      "shape": [
+        320,
+        480
+      ],
+      "rank": 271,
+      "dimension": 209,
+      "flags": [
+        {
+          "characters": [
+            127,
+            61,
+            20,
+            1
+          ],
+          "bound_next_dimension": 313
+        },
+        {
+          "characters": [
+            127,
+            62,
+            19,
+            1
+          ],
+          "bound_next_dimension": 312
+        }
+      ],
+      "gap_against_previous": 1
+    },
+    {
+      "symbol_order": 4,
+      "shape": [
+        640,
+        840
+      ],
+      "rank": 528,
+      "dimension": 312,
+      "flags": [
+        {
+          "characters": [
+            209,
+            81,
+            21,
+            1
+          ],
+          "bound_next_dimension": 438
+        },
+        {
+          "characters": [
+            209,
+            82,
+            20,
+            1
+          ],
+          "bound_next_dimension": 437
+        }
+      ],
+      "gap_against_previous": 0
+    },
+    {
+      "symbol_order": 5,
+      "shape": [
+        1120,
+        1344
+      ],
+      "rank": 907,
+      "dimension": 437,
+      "flags": [
+        {
+          "characters": [
+            312,
+            102,
+            22,
+            1
+          ],
+          "bound_next_dimension": 586
+        },
+        {
+          "characters": [
+            312,
+            103,
+            21,
+            1
+          ],
+          "bound_next_dimension": 585
+        }
+      ],
+      "gap_against_previous": 0
+    },
+    {
+      "symbol_order": 6,
+      "shape": [
+        1792,
+        2016
+      ],
+      "rank": 1431,
+      "dimension": 585,
+      "flags": [
+        {
+          "characters": [
+            437,
+            124,
+            23,
+            1
+          ],
+          "bound_next_dimension": 758
+        },
+        {
+          "characters": [
+            437,
+            125,
+            22,
+            1
+          ],
+          "bound_next_dimension": 757
+        }
+      ],
+      "gap_against_previous": 0
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "point": 2,
+  "history": [
+    {
+      "iteration": 0,
+      "accepted": true,
+      "norm": 0.00014947178632718057,
+      "damping": 3.3333333333333334e-08,
+      "step_norm": 0.023446002724414865
+    },
+    {
+      "iteration": 1,
+      "accepted": true,
+      "norm": 1.1351829111102577e-09,
+      "damping": 1.1111111111111112e-08,
+      "step_norm": 6.489292021009152e-05
+    },
+    {
+      "iteration": 2,
+      "accepted": true,
+      "norm": 1.470958967300922e-14,
+      "damping": 3.703703703703704e-09,
+      "step_norm": 4.103941530752244e-10
+    }
+  ]
+}

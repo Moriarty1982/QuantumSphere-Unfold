@@ -1,0 +1,410 @@
+{
+  "contract": "Exact rational certificate for decimal-recorded field values and simple generic example; realified Clifford symbol. Numerical Cartan flag checks only, canonical projector onto kerA is symbol-equivalent to any projector with that image. No nonlinear integrability or regional existence claimed.",
+  "inputs_sha256": {
+    "C:\\Users\\marcb\\OneDrive\\Dokumente\\GitHub\\QuantumSphere-Unfold\\analysis\\OP5_Counterflow_Full_Residual_Check.py": "e0803c2fdf85da1f6318685ab661e77cb39bd60a14b732fb0481c8ce5f2bc4b4",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\fifth-window-result.json": "9b163be13168390cf969c5a259c513393b5517ff0013612cb3f4f1e577976dff",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\all_order_criteria_symbol.py": "116174b28e95c6f8d3e5ec902e1cc3f116c7ef80a26fc6cb2b8f4408d1a40e06"
+  },
+  "seconds": 0.08874106407165527,
+  "Clifford_coefficients_exact": true,
+  "states": [
+    {
+      "A_minor_columns": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "A_minor_exact": "-1295146846504084908463088995035414586780882493031228580378105919172049905441/400000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "null_covector": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "K_minor_rows": [
+        0,
+        2,
+        3
+      ],
+      "K_minor_columns": [
+        0,
+        1,
+        4
+      ],
+      "K_minor_exact": "4554351719749724526544665349777005254831620201541947/500000000000000000000000000000000000000000000000000000000",
+      "A_rank_exact": 4,
+      "K_null_rank_exact": 3,
+      "ell_H_equals_A_exact": true,
+      "symbol_rank_numerical": 23,
+      "symbol_kernel_dimension": 73,
+      "flags": [
+        {
+          "seed": null,
+          "restriction_dims": [
+            24,
+            47,
+            69,
+            73
+          ],
+          "characters": [
+            24,
+            23,
+            22,
+            4
+          ]
+        },
+        {
+          "seed": 11,
+          "restriction_dims": [
+            24,
+            47,
+            69,
+            73
+          ],
+          "characters": [
+            24,
+            23,
+            22,
+            4
+          ]
+        },
+        {
+          "seed": 23,
+          "restriction_dims": [
+            24,
+            47,
+            69,
+            73
+          ],
+          "characters": [
+            24,
+            23,
+            22,
+            4
+          ]
+        },
+        {
+          "seed": 47,
+          "restriction_dims": [
+            24,
+            47,
+            69,
+            73
+          ],
+          "characters": [
+            24,
+            23,
+            22,
+            4
+          ]
+        }
+      ],
+      "first_prolongation_rank": 88,
+      "first_prolongation_kernel_dimension": 152,
+      "Cartan_bound_from_coordinate_flag": 152,
+      "point_index": 0
+    },
+    {
+      "A_minor_columns": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "A_minor_exact": "-431157894318309290984759790266956638901495523811556185308820620667/4000000000000000000000000000000000000000000000000000000000000000000000",
+      "null_covector": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "K_minor_rows": [
+        0,
+        2,
+        3
+      ],
+      "K_minor_columns": [
+        0,
+        1,
+        4
+      ],
+      "K_minor_exact": "60146952968092667805883884797078590293873280969811/40000000000000000000000000000000000000000000000000000",
+      "A_rank_exact": 4,
+      "K_null_rank_exact": 3,
+      "ell_H_equals_A_exact": true,
+      "symbol_rank_numerical": 23,
+      "symbol_kernel_dimension": 73,
+      "flags": [
+        {
+          "seed": null,
+          "restriction_dims": [
+            24,
+            47,
+            69,
+            73
+          ],
+          "characters": [
+            24,
+            23,
+            22,
+            4
+          ]
+        },
+        {
+          "seed": 11,
+          "restriction_dims": [
+            24,
+            47,
+            69,
+            73
+          ],
+          "characters": [
+            24,
+            23,
+            22,
+            4
+          ]
+        },
+        {
+          "seed": 23,
+          "restriction_dims": [
+            24,
+            47,
+            69,
+            73
+          ],
+          "characters": [
+            24,
+            23,
+            22,
+            4
+          ]
+        },
+        {
+          "seed": 47,
+          "restriction_dims": [
+            24,
+            47,
+            69,
+            73
+          ],
+          "characters": [
+            24,
+            23,
+            22,
+            4
+          ]
+        }
+      ],
+      "first_prolongation_rank": 88,
+      "first_prolongation_kernel_dimension": 152,
+      "Cartan_bound_from_coordinate_flag": 152,
+      "point_index": 1
+    },
+    {
+      "A_minor_columns": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "A_minor_exact": "6866252221635011973250641286425631588457222356123728968149668157960497/125000000000000000000000000000000000000000000000000000000000000000000000000",
+      "null_covector": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "K_minor_rows": [
+        0,
+        2,
+        3
+      ],
+      "K_minor_columns": [
+        0,
+        1,
+        4
+      ],
+      "K_minor_exact": "-2752294136494142374588306887926961102948443578246419/4000000000000000000000000000000000000000000000000000000",
+      "A_rank_exact": 4,
+      "K_null_rank_exact": 3,
+      "ell_H_equals_A_exact": true,
+      "symbol_rank_numerical": 23,
+      "symbol_kernel_dimension": 73,
+      "flags": [
+        {
+          "seed": null,
+          "restriction_dims": [
+            24,
+            47,
+            69,
+            73
+          ],
+          "characters": [
+            24,
+            23,
+            22,
+            4
+          ]
+        },
+        {
+          "seed": 11,
+          "restriction_dims": [
+            24,
+            47,
+            69,
+            73
+          ],
+          "characters": [
+            24,
+            23,
+            22,
+            4
+          ]
+        },
+        {
+          "seed": 23,
+          "restriction_dims": [
+            24,
+            47,
+            69,
+            73
+          ],
+          "characters": [
+            24,
+            23,
+            22,
+            4
+          ]
+        },
+        {
+          "seed": 47,
+          "restriction_dims": [
+            24,
+            47,
+            69,
+            73
+          ],
+          "characters": [
+            24,
+            23,
+            22,
+            4
+          ]
+        }
+      ],
+      "first_prolongation_rank": 88,
+      "first_prolongation_kernel_dimension": 152,
+      "Cartan_bound_from_coordinate_flag": 152,
+      "point_index": 2
+    }
+  ],
+  "generic_example": {
+    "A_minor_columns": [
+      4,
+      6,
+      7,
+      19
+    ],
+    "A_minor_exact": "1/16",
+    "null_covector": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "K_minor_rows": [
+      0,
+      2,
+      3
+    ],
+    "K_minor_columns": [
+      4,
+      16,
+      17
+    ],
+    "K_minor_exact": "1/8",
+    "A_rank_exact": 4,
+    "K_null_rank_exact": 3,
+    "ell_H_equals_A_exact": true,
+    "symbol_rank_numerical": 23,
+    "symbol_kernel_dimension": 73,
+    "flags": [
+      {
+        "seed": null,
+        "restriction_dims": [
+          24,
+          47,
+          69,
+          73
+        ],
+        "characters": [
+          24,
+          23,
+          22,
+          4
+        ]
+      },
+      {
+        "seed": 11,
+        "restriction_dims": [
+          24,
+          47,
+          69,
+          73
+        ],
+        "characters": [
+          24,
+          23,
+          22,
+          4
+        ]
+      },
+      {
+        "seed": 23,
+        "restriction_dims": [
+          24,
+          47,
+          69,
+          73
+        ],
+        "characters": [
+          24,
+          23,
+          22,
+          4
+        ]
+      },
+      {
+        "seed": 47,
+        "restriction_dims": [
+          24,
+          47,
+          69,
+          73
+        ],
+        "characters": [
+          24,
+          23,
+          22,
+          4
+        ]
+      }
+    ],
+    "first_prolongation_rank": 88,
+    "first_prolongation_kernel_dimension": 152,
+    "Cartan_bound_from_coordinate_flag": 152
+  },
+  "conditional_rank_formula": "d_p=C(p+2,3)+4C(p+1,3)-C(p,3); rankA_p=24C(p+2,3)-d_p",
+  "predicted_deficits": {
+    "1": 1,
+    "2": 8,
+    "3": 25,
+    "4": 56,
+    "5": 105,
+    "6": 176,
+    "7": 273,
+    "8": 400
+  }
+}

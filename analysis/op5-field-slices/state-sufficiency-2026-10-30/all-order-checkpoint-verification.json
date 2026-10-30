@@ -1,0 +1,43 @@
+{
+  "contract": "Static and numerical verification of retained artifacts only; no fit rerun, no exact nonlinear root/rank/existence certification. Original run hashes preserved where available; this record timestamps checkpoint verification rather than missing originalrunstart metadata.",
+  "started_at": "2026-10-30T07:12:47.271150+00:00",
+  "seconds": 0.02366489999985788,
+  "software": {
+    "python": "3.12.10",
+    "numpy": "2.5.2"
+  },
+  "inputs_sha256": {
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\sixth-frozen-third-result.json": "34fde3c113c4f0c5746492449d335c4a1bf996c4f1da81d4a5f19c08d0b82f57",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\sixth-series-review-result.json": "10b145104962215853ac6690f65bf159924cf6886ac7d7afc412b13cf6080b53",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\fifth-window-result.json": "9b163be13168390cf969c5a259c513393b5517ff0013612cb3f4f1e577976dff",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\scalar_parametrization_order7_result.json": "5fb6f4859100a3e3e44852044b4e6eed0c7a047617cc46bde89d7062e76c7299",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\scalar_chart_fit_order4_point0.json": "db21a2a59eb91d755b646440ea13139629f77f963a6935b98b943c351609974e",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\scalar_chart_fit_order5_point0.json": "dbb614f485ac8126bf301b0a1f2073d06d67b3fdc564e592e0b2036ff5248be8",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\all-order-source-constraints-result.json": "c12d5cca4b5881414aa83facff1a17cde8d562b13118b9d3018aadb59a2ff178",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\all_order_criteria_symbol-result.json": "5812c07b2ce453c0bc7ce2fcd975cc64bde84b6de083a4f0f827356ea312a085",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\completed-tableau-result.json": "124f22ef09f83bbfdc73dedd9fa5e50ca6e9fb4ed826a780fce1d8361bcc43d7",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\completed-symbol-tower-result.json": "fa15bb9c95536e3cd79a302f374e03a2975be2742aaa62876ff2baf163d375d2",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\completion-identity-result.json": "67afc5c8e94bdeecf75941109ea45458ddba4651b02c756354aa6b8ede3f67a8",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\completed_review_full_gate_result.json": "754634cb62c1a41b20dac144bacc215730af9b0931586b398488fd73938a94f7",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\completed_review_full_nearby_result.json": "dfe718df96bc6ae95db4c6f8204d374eabd0f461a37c4f08130f698ae8af7116",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\completion-omega-probe-result.json": "3fde1bcfb62ac8432912565849328d792a91ac064c7f1fe8f2b0469e8f2114b8",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\omega-augmented-symbol-result.json": "16a23ad8735573205c46e05bfdd83e46e2b45d30c0858c343761f90d7f022efd",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\omega-spencer-result.json": "2e66a89f3ba70b27b25376e5333d63549b173998ae5d8296820943c3fd0d7091",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\all_order_criteria_completion_review-result.json": "d6ec0a62c1a455bafeb6333f60f657b8aee7d6888cd170db35fa6009b72c6099",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\verify_all_order_checkpoint.py": "16ed4fae2aaf7634353e1fb0c71da5a6b40447fa260d0b89092ee655939096e9"
+  },
+  "inputs_unchanged": true,
+  "checks": [
+    "sixth finite jets: all3 retain complete thirdjet and raw residual blocks below5e-9",
+    "sixth independent directional coefficient discrepancy below1e-10",
+    "scalar formal chart throughorder7 at70digits satisfies recorded exact algebra truncation and positive centralguard",
+    "integrated scalar chart p4/p5point0 simultaneously passes recorded F/g tolerances",
+    "original eight source identities span recorded complete first leftspace",
+    "completed15 source identities span first completedleftspace and annihilate source atall3germs",
+    "completed numerical symbol tower through6 retained, genericflag equality fromthird symbol only",
+    "full92direction tangent projection gate recorded below1e-10",
+    "nontrivialOmega rank1 signal and lower-preserving incompatible perturbations retained with successful scalar repair",
+    "augmentedsymbol finite dimensions retained; higherSpencer numerical rank explicitly inconclusive, no acyclicity/no-go certified"
+  ],
+  "outcome": "recorded finite checks passed; full all-order nonlinear existence remains open"
+}

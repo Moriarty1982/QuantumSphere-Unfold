@@ -1,0 +1,17 @@
+[
+  {
+    "Algorithm": "SHA256",
+    "Hash": "A56005A7A3753B41FE931D1EB682C3C2CC0CC11D4002E8D0AB418E3281A8C35D",
+    "Path": "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\recursive_spencer_basis.py"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "97414321C9EE66C4E684E2F740FD81E986D76962B60A80131D680545F69CFFEF",
+    "Path": "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\recursive-spencer-result.json"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "21E172A09C2FDA0E4E25DA7A45A716B4BC19EC694C26ECF608B22BABAB5B4996",
+    "Path": "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\completion-omega-witness.npz"
+  }
+]

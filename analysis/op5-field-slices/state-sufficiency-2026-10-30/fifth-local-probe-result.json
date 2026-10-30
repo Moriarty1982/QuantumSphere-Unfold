@@ -1,0 +1,177 @@
+{
+  "contract": "Actual original field residual on degree5 Taylor polynomial at12 displacements per radius, exact background, no fitting; finite neighbourhood samples and analytic polynomial-difference bound on coordinate cube only, not uniform PDE bounds.",
+  "inputs_sha256": {
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\recursive-order-5-result.json": "b74e60133c08e006f25005a71f01bd30118df32dd2d4a728f9cb7d4e396923a8",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\recursive-order-4-result.json": "583fa173e3e56ebe07f5c93fa02060cd3fbce32a9882dea250c24a42f4c092dc",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\fifth_local_probe.py": "618c1d4a7fee34dc8d0998a401acce1725a3ff16577129a35c92310b1ebd6756",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\recursive_calibrator.py": "5601977f0b78ce1439fcdc74b101c20d111e1435e11ddeb1b29ae93ec742e439",
+    "C:\\Users\\marcb\\OneDrive\\Dokumente\\GitHub\\QuantumSphere-Unfold\\analysis\\OP5_Counterflow_Full_Residual_Check.py": "e0803c2fdf85da1f6318685ab661e77cb39bd60a14b732fb0481c8ce5f2bc4b4"
+  },
+  "results": [
+    {
+      "point_index": 0,
+      "degree_changes": {
+        "2": {
+          "raw_change": 13.888251336136632,
+          "relative_raw_change": 0.5353782178363925,
+          "coefficient_change": 9.705866033167586
+        },
+        "3": {
+          "raw_change": 84.10206465674256,
+          "relative_raw_change": 0.9458660975530322,
+          "coefficient_change": 31.743277636696906
+        },
+        "4": {
+          "raw_change": 580.7218228565082,
+          "relative_raw_change": 0.6427872406714479,
+          "coefficient_change": 60.12320115531024
+        }
+      },
+      "probes": [
+        {
+          "radius": 0.02,
+          "max_full_F_norm": 5.827609269109035e-06,
+          "min_abs_detE": 13.154800708988061,
+          "max_g00": -0.4347578747369905,
+          "sampled_displacements": 12,
+          "polynomial_difference_cube_bound": 0.012856320885177321
+        },
+        {
+          "radius": 0.01,
+          "max_full_F_norm": 1.8134912755365737e-07,
+          "min_abs_detE": 13.400195186984009,
+          "max_g00": -0.4506209484403921,
+          "sampled_displacements": 12,
+          "polynomial_difference_cube_bound": 0.0030646969487104526
+        },
+        {
+          "radius": 0.005,
+          "max_full_F_norm": 5.655614398141372e-09,
+          "min_abs_detE": 13.518741400048738,
+          "max_g00": -0.459125664659881,
+          "sampled_displacements": 12,
+          "polynomial_difference_cube_bound": 0.0007484164990724072
+        },
+        {
+          "radius": 0.0025,
+          "max_full_F_norm": 1.7656004381776457e-10,
+          "min_abs_detE": 13.576990332768245,
+          "max_g00": -0.46351789989008446,
+          "sampled_displacements": 12,
+          "polynomial_difference_cube_bound": 0.00018493243245675987
+        }
+      ],
+      "zero_and_first_coefficients_unchanged": true
+    },
+    {
+      "point_index": 1,
+      "degree_changes": {
+        "2": {
+          "raw_change": 12.321306054694764,
+          "relative_raw_change": 0.46597686632474833,
+          "coefficient_change": 8.835462981486772
+        },
+        "3": {
+          "raw_change": 82.87998878218761,
+          "relative_raw_change": 0.9240966741024584,
+          "coefficient_change": 30.628388693785595
+        },
+        "4": {
+          "raw_change": 521.4675078716836,
+          "relative_raw_change": 0.5873925745483141,
+          "coefficient_change": 58.02508930951987
+        }
+      },
+      "probes": [
+        {
+          "radius": 0.02,
+          "max_full_F_norm": 7.159995343589698e-06,
+          "min_abs_detE": 13.37943757037811,
+          "max_g00": -0.5037889275853301,
+          "sampled_displacements": 12,
+          "polynomial_difference_cube_bound": 0.011747138710361434
+        },
+        {
+          "radius": 0.01,
+          "max_full_F_norm": 2.230491754952762e-07,
+          "min_abs_detE": 13.619227086217341,
+          "max_g00": -0.5201196811557596,
+          "sampled_displacements": 12,
+          "polynomial_difference_cube_bound": 0.002793115093231471
+        },
+        {
+          "radius": 0.005,
+          "max_full_F_norm": 6.9598881695155505e-09,
+          "min_abs_detE": 13.738963615735877,
+          "max_g00": -0.5288023563621411,
+          "sampled_displacements": 12,
+          "polynomial_difference_cube_bound": 0.0006812219544718149
+        },
+        {
+          "radius": 0.0025,
+          "max_full_F_norm": 2.1733945731687378e-10,
+          "min_abs_detE": 13.79888555775276,
+          "max_g00": -0.5332691865594048,
+          "sampled_displacements": 12,
+          "polynomial_difference_cube_bound": 0.00016822045022609673
+        }
+      ],
+      "zero_and_first_coefficients_unchanged": true
+    },
+    {
+      "point_index": 2,
+      "degree_changes": {
+        "2": {
+          "raw_change": 14.309771763361438,
+          "relative_raw_change": 0.5591276427931688,
+          "coefficient_change": 9.923368069801882
+        },
+        "3": {
+          "raw_change": 84.14943808787247,
+          "relative_raw_change": 0.9532365762463392,
+          "coefficient_change": 32.07002208980914
+        },
+        "4": {
+          "raw_change": 602.4106632373355,
+          "relative_raw_change": 0.6595745464984508,
+          "coefficient_change": 60.691128031590885
+        }
+      },
+      "probes": [
+        {
+          "radius": 0.02,
+          "max_full_F_norm": 5.650215404368667e-06,
+          "min_abs_detE": 13.048331544119996,
+          "max_g00": -0.4002007076044763,
+          "sampled_displacements": 12,
+          "polynomial_difference_cube_bound": 0.013109177411482547
+        },
+        {
+          "radius": 0.01,
+          "max_full_F_norm": 1.7561395469018925e-07,
+          "min_abs_detE": 13.287660127533353,
+          "max_g00": -0.4159578312952508,
+          "sampled_displacements": 12,
+          "polynomial_difference_cube_bound": 0.003125961548703854
+        },
+        {
+          "radius": 0.005,
+          "max_full_F_norm": 5.473260369702122e-09,
+          "min_abs_detE": 13.403238984447412,
+          "max_g00": -0.42443342297974745,
+          "sampled_displacements": 12,
+          "polynomial_difference_cube_bound": 0.0007634920346781535
+        },
+        {
+          "radius": 0.0025,
+          "max_full_F_norm": 1.7081307636217679e-10,
+          "min_abs_detE": 13.460014739589225,
+          "max_g00": -0.4288175480302128,
+          "sampled_displacements": 12,
+          "polynomial_difference_cube_bound": 0.00018867148462799164
+        }
+      ],
+      "zero_and_first_coefficients_unchanged": true
+    }
+  ]
+}

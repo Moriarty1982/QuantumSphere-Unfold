@@ -1,0 +1,420 @@
+{
+  "contract": "Finite numerical tableau of R=(F24,G4,dg4) at fixedpsi satisfyingg0; symmetric2jet completion and4flagcharacterchecks. No constant-rank analyticneighborhood or existencecertification.",
+  "seconds": 1.673945665359497,
+  "results": [
+    {
+      "point_index": 0,
+      "R_norm": 7.821688896816521e-14,
+      "first_symbol_rank": 31,
+      "first_symbol_singular_values": [
+        13.503848173630665,
+        8.09742247922262,
+        6.4794412463521605,
+        6.001667659080126,
+        5.564819578880466,
+        4.2391052508344975,
+        4.153307678279135,
+        4.094778433327575,
+        4.015243584276199,
+        3.7829252635621495,
+        3.711302877981126,
+        3.5930729890577053,
+        3.492930362237017,
+        2.79465352157729,
+        2.408783256434937,
+        2.1175713286502433,
+        1.8696100698241946,
+        1.7884593043830217,
+        1.578250113920088,
+        1.3956677109523932,
+        1.2888399151032284,
+        1.25136667596911,
+        1.132447499886649,
+        1.0495210276924403,
+        1.0084017995410914,
+        0.9167025128397518,
+        0.9008563119415957,
+        0.7945862889669015,
+        0.5291612806921533,
+        0.3460439988715437,
+        0.3170614591113977,
+        9.069780080047893e-16
+      ],
+      "g1_dimension": 65,
+      "second_symbol_rank": 113,
+      "g2_dimension": 127,
+      "flags": [
+        {
+          "characters": [
+            23,
+            22,
+            19,
+            1
+          ],
+          "Cartan_bound": 128,
+          "g2_dimension": 127,
+          "equality": false
+        },
+        {
+          "characters": [
+            23,
+            22,
+            19,
+            1
+          ],
+          "Cartan_bound": 128,
+          "g2_dimension": 127,
+          "equality": false
+        },
+        {
+          "characters": [
+            23,
+            22,
+            19,
+            1
+          ],
+          "Cartan_bound": 128,
+          "g2_dimension": 127,
+          "equality": false
+        },
+        {
+          "characters": [
+            23,
+            22,
+            19,
+            1
+          ],
+          "Cartan_bound": 128,
+          "g2_dimension": 127,
+          "equality": false
+        }
+      ],
+      "third_symbol_rank": 271,
+      "g3_dimension": 209,
+      "prolonged_flags": [
+        {
+          "characters": [
+            65,
+            42,
+            19,
+            1
+          ],
+          "Cartan_bound": 210,
+          "g3_dimension": 209,
+          "equality": false
+        },
+        {
+          "characters": [
+            65,
+            42,
+            19,
+            1
+          ],
+          "Cartan_bound": 210,
+          "g3_dimension": 209,
+          "equality": false
+        },
+        {
+          "characters": [
+            65,
+            42,
+            19,
+            1
+          ],
+          "Cartan_bound": 210,
+          "g3_dimension": 209,
+          "equality": false
+        },
+        {
+          "characters": [
+            65,
+            42,
+            19,
+            1
+          ],
+          "Cartan_bound": 210,
+          "g3_dimension": 209,
+          "equality": false
+        }
+      ],
+      "completed_prolongation_residual": 1.1471864006202704e-13,
+      "source_norm": 54.77855808492751
+    },
+    {
+      "point_index": 1,
+      "R_norm": 3.88930612883359e-15,
+      "first_symbol_rank": 31,
+      "first_symbol_singular_values": [
+        13.427462291090132,
+        7.932579658173011,
+        6.4632873572315654,
+        5.902085392267057,
+        5.546219747949304,
+        4.238741036987567,
+        4.121657489530545,
+        4.062940836607582,
+        4.016140617538167,
+        3.7494371204668973,
+        3.674824514621263,
+        3.558780068579246,
+        3.44773546223185,
+        2.785515360048468,
+        2.406906390295901,
+        2.121240599028439,
+        1.84317835581834,
+        1.7702793035911755,
+        1.5925439410993842,
+        1.4104074121937349,
+        1.2984803392061133,
+        1.2613578603514284,
+        1.1369846282870633,
+        1.0575930034748682,
+        1.018127350715173,
+        0.9172770469712885,
+        0.8906109804347113,
+        0.8035736770766871,
+        0.537909127953123,
+        0.34517708211050074,
+        0.31909536764732316,
+        9.041187907367146e-16
+      ],
+      "g1_dimension": 65,
+      "second_symbol_rank": 113,
+      "g2_dimension": 127,
+      "flags": [
+        {
+          "characters": [
+            23,
+            22,
+            19,
+            1
+          ],
+          "Cartan_bound": 128,
+          "g2_dimension": 127,
+          "equality": false
+        },
+        {
+          "characters": [
+            23,
+            22,
+            19,
+            1
+          ],
+          "Cartan_bound": 128,
+          "g2_dimension": 127,
+          "equality": false
+        },
+        {
+          "characters": [
+            23,
+            22,
+            19,
+            1
+          ],
+          "Cartan_bound": 128,
+          "g2_dimension": 127,
+          "equality": false
+        },
+        {
+          "characters": [
+            23,
+            22,
+            19,
+            1
+          ],
+          "Cartan_bound": 128,
+          "g2_dimension": 127,
+          "equality": false
+        }
+      ],
+      "third_symbol_rank": 271,
+      "g3_dimension": 209,
+      "prolonged_flags": [
+        {
+          "characters": [
+            65,
+            42,
+            19,
+            1
+          ],
+          "Cartan_bound": 210,
+          "g3_dimension": 209,
+          "equality": false
+        },
+        {
+          "characters": [
+            65,
+            42,
+            19,
+            1
+          ],
+          "Cartan_bound": 210,
+          "g3_dimension": 209,
+          "equality": false
+        },
+        {
+          "characters": [
+            65,
+            42,
+            19,
+            1
+          ],
+          "Cartan_bound": 210,
+          "g3_dimension": 209,
+          "equality": false
+        },
+        {
+          "characters": [
+            65,
+            42,
+            19,
+            1
+          ],
+          "Cartan_bound": 210,
+          "g3_dimension": 209,
+          "equality": false
+        }
+      ],
+      "completed_prolongation_residual": 1.3685652112785408e-13,
+      "source_norm": 56.320997951370074
+    },
+    {
+      "point_index": 2,
+      "R_norm": 6.327653856971061e-15,
+      "first_symbol_rank": 31,
+      "first_symbol_singular_values": [
+        13.547601800043024,
+        8.189216864193565,
+        6.49465557046837,
+        6.065026000021492,
+        5.570681865074323,
+        4.245373256017683,
+        4.169946324261387,
+        4.111200753306464,
+        4.015002585821609,
+        3.8013785164708347,
+        3.732260242486738,
+        3.612238284576357,
+        3.5180752697436617,
+        2.801371403285014,
+        2.4123355986232515,
+        2.114396404164878,
+        1.886321941264641,
+        1.7980806264013038,
+        1.5721949754209128,
+        1.3879263352554962,
+        1.2867986969297367,
+        1.2453714885063432,
+        1.1306693944798596,
+        1.0460045330421928,
+        1.0041109228339617,
+        0.9175169384721088,
+        0.9066547137000436,
+        0.7903816501285661,
+        0.5252771801336596,
+        0.3469627831481756,
+        0.3159577830801206,
+        9.142428721389643e-16
+      ],
+      "g1_dimension": 65,
+      "second_symbol_rank": 113,
+      "g2_dimension": 127,
+      "flags": [
+        {
+          "characters": [
+            23,
+            22,
+            19,
+            1
+          ],
+          "Cartan_bound": 128,
+          "g2_dimension": 127,
+          "equality": false
+        },
+        {
+          "characters": [
+            23,
+            22,
+            19,
+            1
+          ],
+          "Cartan_bound": 128,
+          "g2_dimension": 127,
+          "equality": false
+        },
+        {
+          "characters": [
+            23,
+            22,
+            19,
+            1
+          ],
+          "Cartan_bound": 128,
+          "g2_dimension": 127,
+          "equality": false
+        },
+        {
+          "characters": [
+            23,
+            22,
+            19,
+            1
+          ],
+          "Cartan_bound": 128,
+          "g2_dimension": 127,
+          "equality": false
+        }
+      ],
+      "third_symbol_rank": 271,
+      "g3_dimension": 209,
+      "prolonged_flags": [
+        {
+          "characters": [
+            65,
+            42,
+            19,
+            1
+          ],
+          "Cartan_bound": 210,
+          "g3_dimension": 209,
+          "equality": false
+        },
+        {
+          "characters": [
+            65,
+            42,
+            19,
+            1
+          ],
+          "Cartan_bound": 210,
+          "g3_dimension": 209,
+          "equality": false
+        },
+        {
+          "characters": [
+            65,
+            42,
+            19,
+            1
+          ],
+          "Cartan_bound": 210,
+          "g3_dimension": 209,
+          "equality": false
+        },
+        {
+          "characters": [
+            65,
+            42,
+            19,
+            1
+          ],
+          "Cartan_bound": 210,
+          "g3_dimension": 209,
+          "equality": false
+        }
+      ],
+      "completed_prolongation_residual": 1.2389360599225903e-13,
+      "source_norm": 54.09383139265656
+    }
+  ]
+}

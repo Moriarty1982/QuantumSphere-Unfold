@@ -1,0 +1,113 @@
+{
+  "contract": "Numerical mixed-order symbol afteraddingone\u03a9thirdordercondition; prolongedtheta withnormalizedcoeffweights. No nonlinearexistencecertificate.",
+  "results": [
+    {
+      "order": 3,
+      "rank": 272,
+      "dimension": 208,
+      "old_rank": 271,
+      "omega_rows": 1,
+      "flags": [
+        {
+          "characters": [
+            127,
+            62,
+            18,
+            1
+          ],
+          "bound_next_dimension": 309
+        },
+        {
+          "characters": [
+            127,
+            62,
+            18,
+            1
+          ],
+          "bound_next_dimension": 309
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "rank": 532,
+      "dimension": 308,
+      "old_rank": 528,
+      "omega_rows": 4,
+      "flags": [
+        {
+          "characters": [
+            208,
+            81,
+            18,
+            1
+          ],
+          "bound_next_dimension": 428
+        },
+        {
+          "characters": [
+            208,
+            81,
+            18,
+            1
+          ],
+          "bound_next_dimension": 428
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "rank": 917,
+      "dimension": 427,
+      "old_rank": 907,
+      "omega_rows": 10,
+      "flags": [
+        {
+          "characters": [
+            308,
+            99,
+            19,
+            1
+          ],
+          "bound_next_dimension": 567
+        },
+        {
+          "characters": [
+            308,
+            99,
+            19,
+            1
+          ],
+          "bound_next_dimension": 567
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "rank": 1451,
+      "dimension": 565,
+      "old_rank": 1431,
+      "omega_rows": 20,
+      "flags": [
+        {
+          "characters": [
+            426,
+            119,
+            19,
+            1
+          ],
+          "bound_next_dimension": 725
+        },
+        {
+          "characters": [
+            427,
+            118,
+            19,
+            1
+          ],
+          "bound_next_dimension": 724
+        }
+      ]
+    }
+  ]
+}

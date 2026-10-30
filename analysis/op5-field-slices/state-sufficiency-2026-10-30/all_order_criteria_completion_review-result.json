@@ -1,0 +1,36 @@
+{
+  "contract": "Separate NumPy multivariate convolution and recurrence inverse for completedR, derivative source witness on point0. Uses original background coefficient values but no target AD or completedseries implementation. Fixed lower0..2; finite directional derivative checks and highest cancellation.",
+  "inputs_sha256": {
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\recursive_calibrator.py": "5601977f0b78ce1439fcdc74b101c20d111e1435e11ddeb1b29ae93ec742e439",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\fifth-window-result.json": "9b163be13168390cf969c5a259c513393b5517ff0013612cb3f4f1e577976dff",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\completion-omega-witness.npz": "21e172a09c2fda0e4e25da7a45a716b4bc19ec694c26ecf608b22babab5b4996",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\all_order_criteria_completion_review.py": "67b6d79ce0cbf07d12fc49ebbdafa319dc6e27e9ace8d850fd2bda0411441d3e"
+  },
+  "base_R_norm": 6.98129675016357e-14,
+  "base_left_source": -8.497949011143646e-10,
+  "tests": [
+    {
+      "step": 0.001,
+      "left_slope": 0.5494780050632491,
+      "lower_R_change": 1.1484261169087377e-12,
+      "affine_central_error": 2.1418619327875066e-11
+    },
+    {
+      "step": 0.0001,
+      "left_slope": 0.5494780058467421,
+      "lower_R_change": 1.1927655701496502e-12,
+      "affine_central_error": 1.4917112644021614e-11
+    },
+    {
+      "step": 1e-05,
+      "left_slope": 0.5494780085067055,
+      "lower_R_change": 1.1718945193330979e-12,
+      "affine_central_error": 1.864298430569884e-11
+    }
+  ],
+  "fifth_jet_cancellation_errors": [
+    1.6564067954182167e-12,
+    7.30166935833559e-13,
+    4.079282716249771e-13
+  ]
+}
