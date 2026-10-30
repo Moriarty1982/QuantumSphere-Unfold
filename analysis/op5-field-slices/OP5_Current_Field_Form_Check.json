@@ -1,0 +1,68 @@
+[
+  {
+    "point": [
+      1.0,
+      0.6,
+      0.0,
+      0.0
+    ],
+    "step": 0.0001,
+    "coframe_current_identity_max_error": 1.1940411148714247e-07,
+    "dphi_wedge_dE_max_error": 1.9188100182828313e-07
+  },
+  {
+    "point": [
+      1.0,
+      0.6,
+      0.0,
+      0.0
+    ],
+    "step": 1e-05,
+    "coframe_current_identity_max_error": 1.1940404220922574e-09,
+    "dphi_wedge_dE_max_error": 2.016905161402368e-09
+  },
+  {
+    "point": [
+      1.0,
+      0.6,
+      0.0,
+      0.0
+    ],
+    "step": 1e-06,
+    "coframe_current_identity_max_error": 1.6331428917548685e-10,
+    "dphi_wedge_dE_max_error": 2.220446049250313e-09
+  },
+  {
+    "point": [
+      0.99,
+      0.59,
+      0.01,
+      -0.01
+    ],
+    "step": 0.0001,
+    "coframe_current_identity_max_error": 1.29797308012769e-07,
+    "dphi_wedge_dE_max_error": 1.8634944806347753e-07
+  },
+  {
+    "point": [
+      0.99,
+      0.59,
+      0.01,
+      -0.01
+    ],
+    "step": 1e-05,
+    "coframe_current_identity_max_error": 1.2988463637952918e-09,
+    "dphi_wedge_dE_max_error": 1.8918150917340837e-09
+  },
+  {
+    "point": [
+      0.99,
+      0.59,
+      0.01,
+      -0.01
+    ],
+    "step": 1e-06,
+    "coframe_current_identity_max_error": 4.465472436265827e-10,
+    "dphi_wedge_dE_max_error": 2.1840975694686904e-09
+  }
+]

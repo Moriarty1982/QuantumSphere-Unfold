@@ -1,0 +1,6 @@
+{
+  "same_initial_clock_reading_only_velocity_difference": "Matrix([[0, I*omega*(-a + b)/2], [I*omega*(a - b)/2, 0]])",
+  "after_positive_rate_calibration": "Matrix([[0, 0], [0, 0]])",
+  "common_tau_orientation_velocity_difference_per_dv_dtau": "Matrix([[24/25, 0], [0, -24/25]])",
+  "scope": "Exact constant positive clock rates and common initial phase. No native QSC clock or global GR synchronization derived."
+}

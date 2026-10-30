@@ -1,0 +1,17 @@
+{
+  "clock_controlled_example": {
+    "same_reduced_initial_state": "Matrix([[1/2, 1/2], [1/2, 1/2]])",
+    "same_full_Hamiltonian": "Matrix([[a*omega/2, 0, 0, 0], [0, -a*omega/2, 0, 0], [0, 0, b*omega/2, 0], [0, 0, 0, -b*omega/2]])",
+    "first_velocity": "Matrix([[0, -I*a*omega/2], [I*a*omega/2, 0]])",
+    "second_velocity": "Matrix([[0, -I*b*omega/2], [I*b*omega/2, 0]])",
+    "difference": "Matrix([[0, I*omega*(-a + b)/2], [I*omega*(a - b)/2, 0]])"
+  },
+  "native_Gram_observer_example": {
+    "full_fields": "E=(2,0,0), B_plus=(0,1,0), B_minus=(0,-1,0)",
+    "common_initial_Gram_state": "Matrix([[4/5, 0], [0, 1/5]])",
+    "derivative_wrt_common_boost_speed_plus": "Matrix([[12/25, 0], [0, -12/25]])",
+    "derivative_minus": "Matrix([[-12/25, 0], [0, 12/25]])",
+    "invariants": "E^2-B^2=3, E dot B=0 in both cases"
+  },
+  "scope": "Exact finite controlled examples. Clock Hamiltonian is a comparison choice, not the derived native QSC dynamics. Observer change is not physical time evolution of a closed qubit."
+}

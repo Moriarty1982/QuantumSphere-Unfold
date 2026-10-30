@@ -23,3 +23,24 @@ Portable-copy check at this checkpoint: 43 Python files parsed, 42 JSON files pa
 3. Only after propagation is understood, formulate a reduced regional initial-value problem with justified coordinate/readout data and monitored independent errors. Lower numerical norms alone are insufficient.
 
 Historical notes saying locally saved/not committed describe their original stage. This checkpoint archives the sequence together; it does not retroactively modify a Zenodo release or establish a new physical constant.
+
+## Mediator and clock follow-up (30 October 2026)
+
+The new QSC notes distinguish the shared carrier, quantum/relativistic readouts,
+observer changes and physical evolution. Start with
+`QSC_Native_Dynamics_And_Mediator.md` and
+`QSC_Clock_Synchronization_Result.md`. In the explicit constant-rate model,
+calibrating clock origins and rates removes the clock-parametrization mismatch;
+the native Gram observer example retains its orientation dependence under a
+common clock. No second fundamental quantum time, universal octonion embedding,
+or common physical action is inferred.
+
+The joint first-jet and angular-gate notes distinguish state-condition
+propagation, coframe integrability and full spinor integrability. The
+symmetrically prolonged equations remain unresolved. The parametrized/Bloch
+notes keep the missing Dirac orientation data explicitly rather than projecting
+all states onto a pure Bloch sphere.
+
+Portable-copy verification: 54 Python and 54 JSON files parsed; clock
+synchronization and native Gram observer counterchecks rerun successfully.
+This is not a rerun of all historical optimization experiments.
