@@ -1,0 +1,18 @@
+{
+  "finite_checks": "passed compatible numerical fourth jet after third-jet correction",
+  "non_claims": [
+    "All-order or regional existence",
+    "Exact/interval proof",
+    "Full Omega gradient rebuilt"
+  ],
+  "sha256": {
+    "precision_omega_repair.py": "281875a7bf10c44baafc75a44f3132d22281ae705603d99276fa1f263368c8bb",
+    "precision-omega-repair-result.json": "8a259bf9a6261a2e193ec7f49467ca99b0999f9984009e8cfd2a54608a8da5b8",
+    "precision_omega_repair_check.py": "d157f75c3fb14695f53b702c73b66949407540f0232bc7002677e508b3081552",
+    "precision-omega-repair-direct-check.json": "656f8991439ea6e54cc3338c4c6b3e00b6707df5b03783aa61d17316812770d4",
+    "precision-fourth-left-witness-result.json": "3e144d987a35cdc8b4691fd25ba26d4d9828ff5ea9b2f0243e4a5bfb96d1b2f5",
+    "precision-completed-symbol-result.json": "1e483bc24a0c8c273632ec742bfdd03b344248e512d4e7d5577839f98420f03c",
+    "precision-third-jet-result.json": "c53c2d7451556a64d3fa1270e853d3ce78dab9e71330695f7771cdea5af14eff",
+    "precision-second-jet-result.json": "79827409c53f034218d38254a691ec79e2701c93ac47e36d6706a808e6143ac3"
+  }
+}
