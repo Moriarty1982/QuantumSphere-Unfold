@@ -1,0 +1,113 @@
+{
+  "status": "conditional chamber dynamics; no native domain preparation, damping, phase or mass prediction",
+  "source_boundary": {
+    "main_TeX_changed": false,
+    "historical_masses_or_target_phase_used": false,
+    "eta_one_norm_transfer_still_assumed": true,
+    "independent_positive_compensator_completion_still_not_native_H_equals_Lambda": true,
+    "phase_kinetic_and_mobility_not_derived_from_native_action": true,
+    "radius_and_scale_are_held_fixed_and_have_prior_descent_obstructions": true
+  },
+  "exact_phase_dictionary_on_the_candidate": {
+    "mode": "chi=i b(cos(theta/2),sin(theta/2)); b>0",
+    "phase": "Phi=3 theta-2pi j, j=0,1,2, with |Phi|<=pi/4",
+    "root": "L/(sqrt(2) b^2)=[I+(exp(i theta)U+adjoint)/sqrt(2)]/sqrt(6)=B_j(Phi)",
+    "earlier_matrix_is_j_one": "other j permute Fourier roots and leave this symmetric spectral energy unchanged",
+    "gram": "Q=L^2/Tr(L^2)=B_j^2",
+    "does_not_derive_the_native_beta_phase_law": true
+  },
+  "added_overdamped_phase_law": {
+    "equation": "Phi_dot=-m F'(Phi), m>0; F=E/(lambda_H t^2)",
+    "energy_rate": "F_dot=-m [F']^2<=0",
+    "edge_energy": "F(+/-pi/4)=2k-2k^2",
+    "edge_first_derivative": "F'(+/-pi/4)=0, not a strictly inward boundary force",
+    "edge_second_derivative_for_strict_interior_threshold": "F''(+/-pi/4)=-2k/27<0",
+    "local_Lipschitz_flow_preserves_closed_chamber": true,
+    "interior_nonzero_phase_converges_to_same_sign_minimum": true,
+    "center_and_edges_are_stationary_unstable_points": true,
+    "odd_mode_lift": "chi_dot=(Phi_dot/6) [[0,-1],[1,0]] chi preserves norm and fixed-J oddness",
+    "native_dissipation_or_preparation_is_not_proved": true,
+    "arbitrary_extra_phase_force_is_not_automatically_admissible": true
+  },
+  "added_inertial_phase_law": {
+    "equation": "I Phi_ddot+Gamma Phi_dot+F'=0; I>0,Gamma>=0",
+    "energy_rate": "d(I Phi_dot^2/2+F)/dtau=-Gamma Phi_dot^2",
+    "sufficient_no_escape_condition": "initial phase inside and total energy strictly below 2k-2k^2",
+    "zero_edge_force_does_not_stop_nonzero_velocity": true,
+    "dimensionless_example": {
+      "input_threshold_not_a_prediction": 0.05,
+      "input_dimensionless_inertia": 1.0,
+      "positive_minimum_phase": 0.4870586715393922,
+      "minimum_energy": 0.09489123525741765,
+      "edge_energy": 0.095,
+      "barrier_above_minimum": 0.00010876474258235402,
+      "energy_gap_is_in_units_lambda_H_t_squared": true,
+      "critical_speed_at_minimum": 0.014748880810580444,
+      "subbarrier_trapping_is_sufficient_not_necessary_with_damping": true,
+      "undamped_escape_witness": {
+        "initial_outward_speed": 0.015468756694743726,
+        "total_energy": 0.09501087647425824,
+        "speed_at_edge": 0.004664005629978761,
+        "time_to_edge_upper_bound": 63.966366151109185,
+        "finite_time_crossing_follows_from_monotone_outward_energy_path": true
+      }
+    },
+    "inertia_and_time_unit_not_native_predictions": true
+  },
+  "different_canonical_two_mode_law": {
+    "auxiliary_energy_extension": "F(Q(rho)); Q=L_eta=1(rho)^2/Tr L^2",
+    "equation": "rho_dot=-i[H,rho], H=gradient_rho F=h0 I+hz sigma_z+hx sigma_x",
+    "on_the_pure_real_plane": "X3_dot=2(hz X2-hx X1)=-2 dF/dtheta=-6 F'(Phi)",
+    "energy_and_purity_are_conserved_not_dissipated": true,
+    "nonstationary_odd_plane_is_not_invariant_under_this_canonical_law": true,
+    "a_common_phase_cannot_remove_X3": true,
+    "leading_ratio_deficit_on_unit_pure_positive_branch": "2/3-K=12 [F'(Phi_initial)]^2 dtau^2+O(dtau^3)",
+    "initial_phase": 0.3,
+    "initial_energy": 0.09495195321734234,
+    "initial_F_prime": -0.0004959873922693444,
+    "initial_X3_rate": 0.0029759243536162964,
+    "expected_initial_X3_rate": 0.0029759243536160666,
+    "initial_energy_rate": 0.0,
+    "stationary_minimum_density_rhs_norm": 1.2671629936258197e-17,
+    "not_the_native_probe_equation_or_a_universal_Hamiltonian_no_go": true
+  },
+  "canonical_transverse_stability": {
+    "input_threshold_not_a_prediction": 0.05,
+    "stationary_phase": 0.4870586715393922,
+    "coordinates": "Phi and y=X3; unit pure modes have X1^2+X2^2=1-y^2",
+    "root_radius": "s(y)=sqrt(1-y^2)/sqrt(2), with the readout eta kept at one",
+    "phase_curvature": 0.00529273379816086,
+    "old_radial_derivative": 0.007425933377237764,
+    "transverse_curvature": -0.005250927847684343,
+    "curvature_identity": "F_yy=-(1/sqrt(2)) F_s<0 at y=0",
+    "canonical_coordinate_law": "Phi_dot=6 F_y; y_dot=-6 F_Phi",
+    "linearization": [
+      [
+        0.0,
+        -0.03150556708610606
+      ],
+      [
+        -0.03175640278896516,
+        0.0
+      ]
+    ],
+    "linearized_growth_and_decay_rates": [
+      -0.03163073629369299,
+      0.03163073629369299
+    ],
+    "stationary_point_is_hyperbolic_saddle_for_this_canonical_extension": true,
+    "positive_phase_curvature_is_not_full_two_mode_stability": true,
+    "conditional_repair_target": "an independently derived even-y correction, stationary at the same phase, needs added F_yy > -current F_yy and positive total phase curvature",
+    "minimum_extra_transverse_curvature_if_other_hessian_entries_unchanged": 0.005250927847684343,
+    "no_repair_potential_or_fitted_stiffness_was_added": true,
+    "rate_is_dimensionless_not_a_physical_lifetime": true,
+    "does_not_apply_if_native_constraints_exclude_this_transverse_mode": true
+  },
+  "remaining_native_obligations": [
+    "derive extraction, eta=1 and native Gram/root equality independently of masses",
+    "identify whether chi is a constrained background or a freely superposable canonical probe",
+    "derive the relevant kinetic/constraint or dissipative law, not just a static minimum",
+    "derive state preparation or an independently justified subbarrier bound",
+    "include other phase forces, changing sources, radius, scale and gauge/current matching"
+  ]
+}

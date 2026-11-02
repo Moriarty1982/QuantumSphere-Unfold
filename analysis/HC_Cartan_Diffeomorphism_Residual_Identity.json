@@ -1,0 +1,194 @@
+{
+  "scope": "Off-shell coordinate Ward identity after exact algebraic Cartan elimination",
+  "input_sha256": {
+    "HC_Cartan_Regular_Gravity.py": "89cf5597fc935d463eed604f9c9eb247cda17b576ae294dbfad6e45dacbc063f",
+    "HC_Cartan_Regular_Gravity.json": "9719ef580419e7a1d4c49a7aec2f41987832d806215defacd74d8db8c09f4cdc",
+    "HC_Cartan_Regular_Gravity.md": "a2197dd64fb5ef2732021d819e3dfb5e3ebedb3b14654f2bad59cd74e2bf92f4",
+    "HC_Cartan_Spatial_Propagation.py": "1eaa40763d84f28dfb0846032a96da28dd18ab8080cdc2a400c82827eb21feaf",
+    "HC_Cartan_Spatial_Propagation.json": "1ca98d6b4658d279867469948cfdafe68442fa04456320ab4267d0df5befb75b",
+    "HC_Cartan_Spatial_Propagation.md": "6322e87811753bcb255aba65e5ec14d96d4d3ba1df9f0b50fa48e5216cc0098b",
+    "HC_Cartan_Third_Constraint_Reprepare.py": "8e91386218bf8372c4f7329f7825b1443eab018fe9dc65a1513c10c56a87d9c0",
+    "HC_Cartan_Second_Probe_Affine.py": "2d2f8abd51f13f2f0b56ca04add9ecfb4aa3ff749fe6f4372203a31cec5787f9",
+    "HC_Cartan_Second_Gravity_Affine.py": "663ad2ff16c8bc687f8cd366f649bd83a9cd31baafff532e6fa481b34394b46c",
+    "HC_Cartan_Third_Constraint_Diagnostic.py": "b780bfa91bad83b5d0c9454a49e9b44ac3170f94846facadf972117dfa79eab0",
+    "HC_Cartan_Next_Scalar_Compatibility.py": "916e412e18312e7ac72583029a3a2435b6cb4197b19bd5f49e4713b4cc5dcfbc",
+    "HC_Cartan_Next_Scalar_Compatibility.json": "9d3a8191eabf668fbbce0bd81d3ba01bdfd6bf926c293c15bb62b2d574867c0f",
+    "HC_Cartan_Diffeomorphism_Residual_Identity.py": "659f15908fe1f79a5db111ea9d934ee33342e8b2f4a44914b5422a30f433d3f4",
+    "HC_Cross_Cartan_Parent.py": "0ffa49d95232daf76ea8a49b6e5f4d87b6e496ce6ebfd1c05dc0a7128708866f",
+    "HC_Probe_Law_Revision_Audit.py": "dac01938ba5a92dbc55c7547e49beaaa9c70734c81a9986e04eed7bd66c65123"
+  },
+  "random_genuine_jet_controls": [
+    {
+      "seed": 72410,
+      "identity": [
+        7.105427357601002e-15,
+        -1.0658141036401503e-14,
+        -1.4210854715202004e-14,
+        -1.9539925233402755e-14
+      ],
+      "identity_norm": 2.7346665942112928e-14,
+      "coframe_first_norm": 1.5190898271720796,
+      "probe_residual_norm": 29.646025118986497,
+      "constraint_residual_norm": 16.753315325393284,
+      "Euler_residual_norm": 74.95147293412597,
+      "term_norms": {
+        "coframe_Euler_divergence": 93.37894217451569,
+        "coframe_curl": 14.45341293416472,
+        "multiplier_constraint_curl": 11.188490897800982,
+        "constraint_multiplier_divergence": 9.396895686451797,
+        "probe_source": 77.70560834058347
+      },
+      "omission_control_norms": {
+        "coframe_Euler_divergence": 93.37894217451571,
+        "coframe_curl": 14.453412934164719,
+        "multiplier_constraint_curl": 11.188490897800968,
+        "constraint_multiplier_divergence": 9.396895686451783,
+        "probe_source": 77.70560834058345
+      }
+    },
+    {
+      "seed": 72411,
+      "identity": [
+        1.4210854715202004e-14,
+        1.4210854715202004e-14,
+        -2.842170943040401e-14,
+        2.1316282072803006e-14
+      ],
+      "identity_norm": 4.081757258616412e-14,
+      "coframe_first_norm": 1.6532568565093075,
+      "probe_residual_norm": 33.144371668344384,
+      "constraint_residual_norm": 7.714450070355567,
+      "Euler_residual_norm": 124.04597309616653,
+      "term_norms": {
+        "coframe_Euler_divergence": 147.52656546469552,
+        "coframe_curl": 16.58342931125983,
+        "multiplier_constraint_curl": 14.763106924270337,
+        "constraint_multiplier_divergence": 2.0344146870722972,
+        "probe_source": 141.48975990845818
+      },
+      "omission_control_norms": {
+        "coframe_Euler_divergence": 147.52656546469555,
+        "coframe_curl": 16.583429311259817,
+        "multiplier_constraint_curl": 14.76310692427033,
+        "constraint_multiplier_divergence": 2.0344146870722857,
+        "probe_source": 141.48975990845815
+      }
+    },
+    {
+      "seed": 72412,
+      "identity": [
+        1.0658141036401503e-14,
+        7.105427357601002e-15,
+        7.105427357601002e-15,
+        -2.842170943040401e-14
+      ],
+      "identity_norm": 3.197442310920451e-14,
+      "coframe_first_norm": 1.5025048356618234,
+      "probe_residual_norm": 16.607634855999382,
+      "constraint_residual_norm": 9.75377456948122,
+      "Euler_residual_norm": 47.17736773965163,
+      "term_norms": {
+        "coframe_Euler_divergence": 62.65636491903876,
+        "coframe_curl": 9.961248933298794,
+        "multiplier_constraint_curl": 3.712585772751029,
+        "constraint_multiplier_divergence": 2.092764524820847,
+        "probe_source": 56.10452376176743
+      },
+      "omission_control_norms": {
+        "coframe_Euler_divergence": 62.65636491903877,
+        "coframe_curl": 9.961248933298785,
+        "multiplier_constraint_curl": 3.712585772751032,
+        "constraint_multiplier_divergence": 2.0927645248208293,
+        "probe_source": 56.10452376176742
+      }
+    },
+    {
+      "seed": 72413,
+      "identity": [
+        -4.263256414560601e-14,
+        0.0,
+        -8.526512829121202e-14,
+        -7.105427357601002e-15
+      ],
+      "identity_norm": 9.559374836295625e-14,
+      "coframe_first_norm": 1.5171335004912818,
+      "probe_residual_norm": 41.78727927829702,
+      "constraint_residual_norm": 31.20899350313161,
+      "Euler_residual_norm": 74.27902050192812,
+      "term_norms": {
+        "coframe_Euler_divergence": 230.114874730049,
+        "coframe_curl": 16.76748324450492,
+        "multiplier_constraint_curl": 21.18487269252972,
+        "constraint_multiplier_divergence": 13.77090369648093,
+        "probe_source": 229.62466657572716
+      },
+      "omission_control_norms": {
+        "coframe_Euler_divergence": 230.11487473004902,
+        "coframe_curl": 16.76748324450487,
+        "multiplier_constraint_curl": 21.1848726925298,
+        "constraint_multiplier_divergence": 13.770903696480875,
+        "probe_source": 229.62466657572713
+      }
+    },
+    {
+      "seed": 72414,
+      "identity": [
+        -9.769962616701378e-15,
+        8.881784197001252e-15,
+        1.0658141036401503e-14,
+        -7.105427357601002e-15
+      ],
+      "identity_norm": 1.8396231362423503e-14,
+      "coframe_first_norm": 1.6320231342588565,
+      "probe_residual_norm": 19.663237551013427,
+      "constraint_residual_norm": 6.3774437584478925,
+      "Euler_residual_norm": 18.5641019633371,
+      "term_norms": {
+        "coframe_Euler_divergence": 15.614880154042412,
+        "coframe_curl": 2.942344051901573,
+        "multiplier_constraint_curl": 7.491735771358782,
+        "constraint_multiplier_divergence": 4.156220605888637,
+        "probe_source": 22.68021836089987
+      },
+      "omission_control_norms": {
+        "coframe_Euler_divergence": 15.614880154042421,
+        "coframe_curl": 2.9423440519015807,
+        "multiplier_constraint_curl": 7.491735771358773,
+        "constraint_multiplier_divergence": 4.156220605888639,
+        "probe_source": 22.680218360899865
+      }
+    },
+    {
+      "seed": 72415,
+      "identity": [
+        -5.684341886080802e-14,
+        2.1316282072803006e-14,
+        -5.684341886080802e-14,
+        -2.842170943040401e-14
+      ],
+      "identity_norm": 8.788928253162695e-14,
+      "coframe_first_norm": 1.8022201923483052,
+      "probe_residual_norm": 50.92147780428815,
+      "constraint_residual_norm": 19.608321412873178,
+      "Euler_residual_norm": 181.63494614842884,
+      "term_norms": {
+        "coframe_Euler_divergence": 214.88712483457797,
+        "coframe_curl": 33.540472940251114,
+        "multiplier_constraint_curl": 7.333444758388985,
+        "constraint_multiplier_divergence": 17.759286356899242,
+        "probe_source": 230.6517920623431
+      },
+      "omission_control_norms": {
+        "coframe_Euler_divergence": 214.88712483457797,
+        "coframe_curl": 33.540472940251036,
+        "multiplier_constraint_curl": 7.333444758389035,
+        "constraint_multiplier_divergence": 17.75928635689917,
+        "probe_source": 230.65179206234316
+      }
+    }
+  ],
+  "generic_coframe_jets_from_coordinate_and_Lorentz_transformations": true,
+  "probe_and_constitutive_sources_not_dropped": true,
+  "not_full_constraint_propagation": true,
+  "main_TeX_PDF_changed": false
+}

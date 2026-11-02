@@ -1,0 +1,90 @@
+{
+  "status": "exact local solution of an explicitly declared neutral derived-readout parent, with native fixed-axis HC identification obstruction; NOT full native closure",
+  "common_parent": {
+    "fields": "independent complex triadic Psi, real nonsingular E, real h,u, real multiplier density lambda_a^mu and real scalar density zeta",
+    "coordinates": "Y^a[Psi]=Re(Psi_ART^dagger K^a Psi_QFT)/2; Theta^a_mu=partial_mu Y^a; U[Psi]=n_a Y^a",
+    "action": "S_D,reference[Psi]+integral sqrt|g(E)|[R/(2 kappa_eff)-F^2/4]+integral lambda.(E-Theta-kappa h l du)+integral zeta(u-U[Psi])",
+    "curvature": "F=kappa dh wedge du; no independent charged gauge connection or native HC matrix field",
+    "probe_reference_metric_is_not_varied_as_the_effective_metric": true,
+    "constitutive_null_coframe_update_is_an_explicit_added_readout_choice": true,
+    "native_Yukawa_projector_Gauss_and_matching_terms_not_included": true
+  },
+  "full_parent_equations_before_ansatz": {
+    "metric": "pi_E+lambda=0, pi_E contains independent Einstein/scalar stress equation",
+    "coframe_constraint": "E-Theta-kappa h l du=0",
+    "potential_constraint": "u-U[Psi]=0",
+    "h": "EL_h,F-kappa lambda_a^mu l^a partial_mu u=0",
+    "u": "EL_u,F+kappa partial_mu(h lambda_a^mu l^a)+zeta=0",
+    "probe": "EL_D+(DY)^*[partial_mu lambda_a^mu-zeta n_a]=0, with the variational adjoint on real/complex components",
+    "scalar_h_EL": "kappa div_g(F^{mu nu}partial_nu u)",
+    "scalar_u_EL": "kappa div_g(F^{mu nu}partial_mu h), divergence on nu"
+  },
+  "exact_local_joint_branch": {
+    "construction": "use the exact coupled reference-Dirac Psi; invertible Theta=dY; u=n.Y; h=log(2+0.1Y^1)/(kappa_eff kappa); E=(I+kappa h l n^T)Theta; lambda=zeta=0",
+    "nonzero_axis_reaction_is_a_divergence_not_an_omitted_free_axis_equation": true,
+    "reason_u_EL_vanishes": "q=du is parallel null and h is transverse, so div(|dh|^2 q)=0; axis variations are du, not arbitrary independent covectors",
+    "probe_backreaction_vanishes_on_this_branch_but_not_identically_off_shell": true,
+    "common_phase_current_stays_the_reference_current": "Y,U and Theta are locally common-phase invariant; the conserved total reference current is not replaced by an induced Dirac current",
+    "sample_Y": [
+      0.0034662841214407156,
+      0.0001430386112553481,
+      -0.00020902420873375842,
+      7.024229605476653e-05
+    ],
+    "sample_h": 1.7328858311623325,
+    "sample_reference_Dirac_residual_norm": 1.3771587721039253e-15,
+    "sample_coframe_constraint_norm": 0.0,
+    "sample_h_EL": -2.975427882464101e-16,
+    "sample_u_EL": 0.0,
+    "sample_independent_axis_reaction_component_norm": 0.34970098783011605,
+    "sample_direct_Einstein_residual_component_norm": 1.0517479005820692e-11,
+    "sample_independent_Levi_Civita_vs_pullback_Einstein_error": 1.0517478734442048e-11,
+    "sample_direct_stress_vs_pullback_error": 8.853067392615262e-22,
+    "sample_Riemann_component_norm_not_invariant": 2.7763171732582974e-08,
+    "ART_readout_direct_Einstein_residual_norm": 9.157576418230573e-13,
+    "coordinate_conditioning_warning": "cross coframe is close to its degenerate initial-time slice; direct metric-jet arithmetic has amplified cancellation error, not a native physical residual measurement"
+  },
+  "native_HC_direction_test": {
+    "native_form_to_identify": "v_H^a=Psi^dagger K^a H_C Psi, H_C positive semidefinite; the null update requires v_H=h l",
+    "tested_axis": [
+      1.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "active_probe_row_rank": 2,
+    "gap": 0.7327387580875757,
+    "inequality": "v_H^0-v_H^3 >= gap v_H^0 for every positive H_C on this probe; target h l has v_H^0-v_H^3=0 and h>0",
+    "positive_gap_excludes_the_unchanged_native_fixed_axis_identification_on_this_patch": true,
+    "Hermitian_current_span_rank": 3,
+    "target_residual_even_without_positivity": 0.9636241116594315,
+    "a_different_radial_axis_has_gap": -1.1102230246251565e-16,
+    "changing_the_axis_requires_rechecking_integrability_and_the_curved_profile": true,
+    "not_a_no_go_for_other_probes_axes_or_readout_dictionaries": true,
+    "the_model_was_not_silently_identified_with_the_native_HC_bilinear": true
+  },
+  "native_transport_axis_compatibility": {
+    "effective_axis_square": -5.442417750093808e-16,
+    "reference_axis_square": -0.1124202677974469,
+    "reference_slash_min_singular_value": 0.3284057928190147,
+    "result": "the derived axis is null for the effective metric but not the fixed microscopic reference metric; Gamma_ref.n is invertible at the sample",
+    "consequence": "unchanged ordered HC transport cannot be dark unless H_C Psi=0, which also nullifies the original HC current; geometry-null alignment alone is insufficient",
+    "not_a_native_global_no_go": "a common gamma/metric dictionary or changed probe and axis may alter this; it is not yet derived in the native model",
+    "background_null_axis_uniform_bound": {
+      "time_component_lower_bound": 0.3160611602764769,
+      "spatial_component_upper_bound": 0.007291408119375868,
+      "reference_square_upper_bound": -0.09984149240294952,
+      "strict_separation": true
+    },
+    "axis_rotation_alone_does_not_fix_this_cross_background": "all axes null for the selected background are reference-timelike at this sample; rotating the null-update axis alone cannot make its reference slash singular",
+    "bound_scope": "background-null axes of the rank-one update, not an assertion about every null covector of the already deformed effective metric"
+  },
+  "remaining_scope": {
+    "no_native_Gauss_projector_or_minimal_exact_HC_closure_solution": true,
+    "no_derived_Einstein_coupling_equivalence_principle_global_stability_or_quantum_vacuum": true,
+    "reference_probe_mass_energy_is_not_an_effective_metric_stress_in_this_declared_two_frame_action": true,
+    "an_independently_variable_axis_would_add_an_equation_that_this_branch_does_not_solve": true,
+    "next_native_step": "change or derive the probe/axis/HC dictionary consistently, then restore the native real action, transport, Yukawa, gauge and closure equations together"
+  },
+  "main_TeX_changed": false
+}

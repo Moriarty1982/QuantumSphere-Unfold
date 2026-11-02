@@ -1,0 +1,256 @@
+# Phase, Amplitude and Hidden Partners in the Same Action
+
+Date: 2026-10-16. Status: a full-action pullback contract and an exact conditional conservative probe-mode calculation. Native spatial/background profiles and their normal field equations remain unevaluated. No main TeX, empirical mass, target phase, fitted potential or new damping coefficient is introduced.
+
+## Result
+
+The discarded component of a complex two-mode probe contains the canonical partners of the residual amplitude and phase. Keeping it in a conservative positive-modal realization gives a complete first-order action. Eliminating its regular quadratic block **in that action**, rather than setting it to zero or statically minimizing the energy, yields an exact second-order residual dynamics with derived inertia.
+
+In a simple isotropic example the effective phase inertia is `I_theta=b^2/(2m)`, not an extra free constant. The phase equation also has a term `2 b_dot/b`, which can look like damping during expansion but reverses during contraction. It is reversible amplitude/phase exchange, not viscosity. All equations agree with exact finite unitary evolution, including the information previously retained by the memory equation.
+
+This does not yet supply the native coefficients, a selected mass phase or root-chamber preservation. A separate three-mode test explicitly satisfies the equations obtained by restricting the action while failing an omitted normal equation. That is why the full native connection, projector and compensator equations must still be checked after any collective substitution.
+
+The method is inspired by Einstein's [1950 discussion of equation compatibility](https://www.scientificamerican.com/article/on-the-generalized-theory-of-gravit/) and the [Einstein--Infeld--Hoffmann field-to-motion calculation](https://edition-open-sources.org/media/sources/10/17/sources10chap15.pdf). The equations below are this paper's conditional modal analysis, not an application of the EIH gravitational equations or a claim of equivalent physical status.
+
+## 1. What Must Be Substituted in the Native Action
+
+The retained `v470/10_sphaera_and_physics.tex`, `thm:variational-form`, gives
+
+```text
+S_native=integral [bar(Psi)i Gamma^mu D_mu Psi-bar(Psi)Omega Psi
+                  -Tr(F_mu_nu F^mu_nu)/4-U_C7-U_HC],
+U_C7=lambda_C ||(I-P_C7)Psi||^2,
+U_HC=lambda_H ||H_C-Lambda[M16,P_C7]||^2.
+```
+
+Let `Phi^I` denote **all the named fields and their allowed variations**: the probe and adjoint, connection, closure projector and compensator. A collective ansatz must provide profiles for these fields, not only an angle in a mass-root matrix:
+
+```text
+Phi^I(x)=Phi^I(x;q,h),
+q=(b,theta),
+S_coll[q,h]=S_native[Phi^I(x;q,h)].
+```
+
+The variables `h` here stand for the retained complementary/modal/background data, not a new name for `H_C`. This is a definition of the required substitution. The source does not yet supply its native spatial profiles, common field/carrier identification or two-mode extraction; the full numerical native substitution has therefore **not** been performed. Native `M16` or the triadic tensor must not be promoted to new independent fields without a specified variational rule.
+
+For an ordinary configuration ansatz the exact chain rule reads schematically
+
+```text
+EL_coll=(D Phi)^* EL_full,
+```
+
+where the adjoint includes the spacetime integration and any necessary integrations by parts. It says that restricted stationarity tests tangent variations. It does not make every normal field equation vanish. If derivatives of collective coordinates appear in the ansatz, the appropriate differential/variational adjoint must be used, not a simple component transpose.
+
+Projector variations must remain tangent to `P_C7^2=P_C7`, reality/adjoint conditions must be respected, and boundary conditions must be specified. The earlier source/backreaction audit also shows that independently varying `H_C` produces probe/curvature sources in addition to the matching penalty. Substituting `H_C=Lambda` before variation makes that penalty zero along the ansatz, but does not by itself solve an independently varied compensator equation. A constrained functional definition and an independent-field completion remain distinct choices.
+
+## 2. A Complete Conservative Two-Mode Calculation
+
+There is nevertheless a calculable part. Assume a licensed positive finite modal realization of the probe kinetic term, with fixed kinetic comparison normalized to identity and Hermitian modal Hamiltonian `H`. For commuting effective amplitudes, the real action is
+
+```text
+L=(i/2)(f* f_dot-f_dot* f)-E(f),
+E(f)=f* H f.
+```
+
+For fixed Hermitian kinetic data, the symmetrized kinetic term differs from `i f* f_dot` by a total derivative. The native Dirac/spacetime adjoint, spatial mode integrals and realness conditions needed to reach this positive form have not been extracted. Non-Hermitian effective attenuation cannot simply be called evolution generated by this closed real action. No quantum Grassmann integration, fermion condensate or identification of the two internal modes with physical spin components is asserted.
+
+Choose fixed conjugation for the real structure and write the residual `P_- f=i r`. Define
+
+```text
+e=(cos(theta/2),sin(theta/2)),
+n=A e,       A=[[0,-1],[1,0]],
+r=b e,       x=a e+c n,
+f=x+i r=(a+i b)e+c n,       b>0.
+```
+
+This chart has four real coordinates `(b,theta,a,c)` and covers all two-mode vectors with nonzero residual. `theta` is a continuous lift: the residual vector uses its `4pi` period, while the quadratic root readout identifies signs and uses `theta` modulo `2pi`. At `b=0` this polar chart fails even if the full field is finite; zero residual is not proof of a spacetime singularity.
+
+The coordinates `a,c` resolve the mathematical `J`-even complement in this declared aligned realization. Their canonical role below does not identify them with physical photon/tachyon frames, two extra particles or a material fluid momentum; those physical dictionaries still require native matching.
+
+Direct differentiation gives
+
+```text
+L_kin=r.x_dot-x.r_dot
+     =b a_dot-a b_dot-b c theta_dot.                  (1)
+```
+
+Up to the endpoint term `d(ab)/dt`, the action is
+
+```text
+L=-2a b_dot-b c theta_dot-E(b,theta,a,c),
+p_b=-2a,       p_theta=-b c.                          (2)
+```
+
+Thus the complementary components are canonical information, not generically removable bookkeeping. The first-order action coefficients and their antisymmetric derivative are
+
+```text
+one_form=(-a,-bc,b,0),
+Omega=[[ 0,-c, 2,0],
+       [ c, 0, 0,b],
+       [-2, 0, 0,0],
+       [ 0,-b, 0,0]],
+det Omega=4b^2.
+```
+
+The collective equations `Omega_AB q_dot^B=partial_A E` are therefore
+
+```text
+b_dot=-E_a/2,
+theta_dot=-E_c/b,
+a_dot=(E_b+c theta_dot)/2,
+c_dot=(E_theta-c b_dot)/b.                            (3)
+```
+
+These equations reproduce **every** component of `i f_dot=H f` on this complete modal chart, not just its projected angular expectation. In particular, for a fixed `H`, `partial_A E=2Re[(partial_A f)*H f]`. A field-dependent `H` requires its additional `f* (partial_A H) f` term and the background variations; the script does not silently freeze those in a native claim.
+
+## 3. Why Restricting to a Pure Odd Field Too Soon Loses Dynamics
+
+If one first sets `a=c=0`, equation (1) vanishes identically on the remaining `(b,theta)` coordinates. The restricted action has no inherited nondegenerate kinetic form for them. It gives static stationarity conditions, not the previously postulated gradient flow.
+
+Keeping the original equations shows what such a **physical state restriction** would require. At `a=c=0`, remaining in that submanifold also needs
+
+```text
+a_dot=E_b/2=0,
+c_dot=E_theta/b=0,
+```
+
+in addition to the retained amplitude and phase equations. A scalar positive `H=mI` immediately generates `a_dot=mb`, even though the projected amplitude and angle initially have zero derivative. Conversely `H=omega sigma_y` has zero restricted energy on the odd plane but a nonzero actual phase velocity `theta_dot=2omega`, determined by the transverse derivative `E_c`. A zero restricted action cannot determine that velocity.
+
+There is no contradiction with using `chi=P_- f` as an **observable output**: the output stays odd while `x` can be nonzero. The consistent calculation keeps `x`, derives its influence and only then eliminates it under stated conditions. A genuinely constrained background with its own kinetic sector could behave differently, but must provide those constraints and that action.
+
+## 4. Eliminating Hidden Partners in the Action Gives Inertia
+
+Suppose the energy has the regular form
+
+```text
+E=V(b,theta)+j(b,theta)^T h+h^T W(b,theta)h/2,
+h=(a,c),       W=W^T>0,
+D=diag(2,b).
+```
+
+After the boundary term in (2) is removed, the hidden variables have no remaining time derivative. Their action equations are
+
+```text
+W h=-(D q_dot+j),       q=(b,theta),
+h=-W^(-1)(D q_dot+j).                                (4)
+```
+
+This is **not** static energy minimization `h=-W^(-1)j`: the velocities matter. Substitution gives the exact local effective Lagrangian
+
+```text
+L_eff=(D q_dot+j)^T W^(-1)(D q_dot+j)/2-V
+     =q_dot^T M q_dot/2+A_eff.q_dot-V_eff,
+M=D W^(-1)D,
+A_eff=D W^(-1)j,
+V_eff=V-j^T W^(-1)j/2.                               (5)
+```
+
+The positive kinetic metric is derived **conditional on the regular positive hidden block**. It is not supplied by tensor notation. Derivatives of `D,W,j,V` must all be retained when deriving the effective equations; a nonconstant velocity one-form can also produce gyroscopic forces. If the hidden block is singular, retains additional kinetic terms, or cannot be licensed as positive, this particular local positive-inertia reduction is not established. Other dynamic fields can instead leave a memory kernel.
+
+For a general constant Hermitian two-mode `H=S+iB`, with real symmetric `S>0` and real skew `B`, the same result can be written without polar coordinates. From the full action after its boundary term,
+
+```text
+L=-x^T S x-2x^T(r_dot-B r)-r^T S r,
+x=S^(-1)(B r-r_dot),
+L_eff=(r_dot-B r)^T S^(-1)(r_dot-B r)-r^T S r,
+r_ddot=(B+S B S^(-1))r_dot-(S B S^(-1)B+S^2)r.         (6)
+```
+
+This is exactly equivalent to the full first-order system and to its earlier memory equation: the missing initial state is now encoded by `x(0)=S^(-1)(B r(0)-r_dot(0))`. It has not been erased or replaced by a Markov/friction approximation. A second-order residual law needs an initial velocity in addition to the residual itself, as expected from the prior non-autonomy test.
+
+## 5. An Explicit Phase and Amplitude Equation
+
+For the illustrative, unfitted modal Hamiltonian
+
+```text
+H=mI+omega sigma_y,       m>0,
+```
+
+the energy is
+
+```text
+E=m(a^2+b^2+c^2)-2omega b c.
+```
+
+Thus `W=2mI`, `j=(0,-2omega b)`, and `V=mb^2`. Equations (4)--(5) give
+
+```text
+a=-b_dot/m,
+c=-b(theta_dot-2omega)/(2m),
+L_eff=b_dot^2/m+b^2(theta_dot-2omega)^2/(4m)-mb^2.      (7)
+```
+
+The phase inertia and the inertia of `Phi=3theta-2pi j` are
+
+```text
+I_theta=b^2/(2m),       I_Phi=b^2/(18m).
+```
+
+Here `j` labels the chamber, not the hidden source vector. The input `m` is a coefficient of this declared finite Hamiltonian, not an extracted native bare mass, a lepton mass or a known inverse physical lifetime. The native positive mode reduction and the value of its real quadratic block remain to be calculated.
+
+Varying both `b` and `theta` yields
+
+```text
+b_ddot=b(theta_dot-2omega)^2/4-m^2b,
+theta_ddot=-2(b_dot/b)(theta_dot-2omega).              (8)
+```
+
+The conserved phase momentum and energy are
+
+```text
+p_theta=b^2(theta_dot-2omega)/(2m)=-bc,
+E_eff=b_dot^2/m+b^2 theta_dot^2/(4m)+(m-omega^2/m)b^2.
+```
+
+The apparent damping coefficient `2b_dot/b` is positive during amplitude growth and negative during contraction. It exchanges angular motion with amplitude while conserving energy. It is **not** shear viscosity, frictional heating or a mechanism for irreversible approach to a selected phase. For constant `b` it vanishes. Radiation, open boundaries, retained background modes or a justified coarse-graining could alter that conclusion; none has been computed here.
+
+If a native calculation supplied an additional scalar energy `U(b,theta)` independent of `(a,c)`, the same algebra would add
+
+```text
+b_ddot=...-(m/2)U_b,
+theta_ddot=...-(2m/b^2)U_theta.
+```
+
+This is an evaluation target, **not** an added or fitted potential. The previous clipped-compensator phase energy belongs to a separately qualified completion and cannot simply be inserted as `U` without that matching. A phase-only `U` also supplies no radial support for a zero-velocity nonzero amplitude when `m>|omega|`; such a static point would need `U_b=2b(omega^2/m-m)`. Constraints, normalization, gauge/global-phase issues and additional background dynamics must be evaluated rather than turning this static observation into a prediction of physical amplitude decay.
+
+## 6. Checks Against Exact Motion and the Omitted Equations
+
+Choose dimensionless inputs `m=2`, `omega=0.3`, `b(0)=1`, `theta(0)=2pi/3`, and `a(0)=c(0)=0`. The Hamiltonian is positive with eigenvalues `1.7,2.3`. Exact unitary evolution gives, before the first zero of `b`,
+
+```text
+b(t)=cos(mt),       a(t)=sin(mt),       c(t)=0,
+theta(t)=theta(0)+2omega t.
+```
+
+At the illustrative time `t=0.5`, `(b,theta,a,c)` is approximately `(0.540302306,2.394395102,0.841470985,0)`. Both the complete and effective energies are `2`, the full norm remains `1`, and reconstruction of the hidden partners agrees to floating-point precision. Nevertheless the projected quadratic root has left its positive chamber: its minimum signed eigenvalue is approximately `-0.006313952`. Correctly deriving inertia does not prove the required root-boundary preservation.
+
+There is a separate consistency trap. Embed these two modes into three complex modes with Hamiltonian
+
+```text
+H_full=[[H_11,H_12,epsilon],
+        [H_21,H_22,0],
+        [epsilon,0,Delta]],
+epsilon=0.1,       Delta=5.
+```
+
+This full matrix is positive. On the ansatz `f_3=0`, all mixed energy terms vanish identically, so the restricted action and its two-mode equations are unchanged. Yet the omitted full equation is
+
+```text
+(i f_dot-H_full f)_3=-epsilon f_1.
+```
+
+At the initial state above its magnitude is `0.05`, while the retained tangent residual is exactly zero. The reduced solution is therefore not a solution of the complete three-mode equation. With `epsilon=0`, both tangent and normal residuals vanish. This tests the necessity of the normal check directly; it does not evaluate all normal equations in the native spacetime field theory.
+
+## 7. What Has and Has Not Been Derived
+
+The derived kinetic term, canonical partners, action elimination, induced inertia and reversible amplitude/phase coupling are exact in the declared positive Hermitian modal realization. They supply a concrete alternative to either guessing a first-order phase relaxation law or discarding the complementary component. The full modal equations and energy conservation have been independently checked.
+
+The native field-action substitution still needs actual spatial profiles and matching kinetic/adjoint data for **all** fields. It must determine the real hidden quadratic block and source, not fit them. Its connection, closure-projector and compensator normal equations must vanish; constraint propagation and root-boundary signs must then be verified on that same solution. Independent metric transfer `eta=1`, the equality with the physical transition Gram, gauge/current matching, phase selection, root-radius protection and mass-scale support remain open.
+
+No main-text result, native variational closure or parameter-free spectrum is certified by this finite calculation. The new work is kept in the analysis layer until the native profiles and normal equations justify integration into the main paper.
+
+The next [null-axis curvature/action check](HC_Null_Axis_Action_Check.md) explicitly extracts the compensator kinetic term from the printed connection. It finds a rank-one null principal tensor, a conditional relative-sign issue in the literal curvature action, and a distinct real paired-action candidate with its own field equations. The existing matching penalty supplies a conditional homogeneous oscillator, not a new potential or a mass prediction. This field contribution cannot be added to the modal inertia without a common carrier/profile map.
+
+## Reproduction
+
+`python -B analysis/HC_Collective_Action_Reduction.py --output analysis/HC_Collective_Action_Reduction.json` reproduces the report. The 37 tests in `scripts/qsc_audit/tests/test_hc_collective_action_reduction.py` check the complete chart, kinetic and symplectic pullback, full first-order equivalence, conservation, lost odd-only dynamics, hidden-variable elimination, induced kinetic coefficients, Cartesian/second-order equivalence, exact motion, root-cone exit and omitted normal equations. The examples are independent of historical masses and use already installed NumPy. No package, main-TeX edit, compiler invocation or Git operation is required for this follow-up.

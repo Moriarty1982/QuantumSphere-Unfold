@@ -1,0 +1,61 @@
+{
+  "status": "conditional weak stress-to-metric pullback with correct action, causal completion and free-data obstruction; NOT a native HC/coframe derivation",
+  "reconstruction": {
+    "map": "h[Psi;B]=kappa R_B T_flat[Psi]+h_free[B], R_B=-2 P Box_B^(-1)",
+    "P": "four-dimensional trace reversal, not a native closure projector",
+    "boundary_gauge_and_free_radiation_data_are_required": true,
+    "not_an_algebraic_pointwise_probe_bilinear": true,
+    "assumes_Einstein_Hilbert_response_and_does_not_derive_it_from_native_quantum_properties": true
+  },
+  "self_adjoint_variational_sector": {
+    "action": "S_reduced=S_D0+kappa <T,R_B T>/4, for a declared self-adjoint gauge-fixed inverse and compatible boundary terms",
+    "variation": "delta S_ind=<h,delta T>/2, not the doubled reaction from substituting into the matter term alone",
+    "periodic_test_scope": "nonzero static spatial Fourier modes only; zero-mean gauge-fixed variational check, not the full positive source or retarded evolution",
+    "induced_action": 2.6986927021510858e-06,
+    "eliminated_parent_action": 2.698692702151086e-06,
+    "action_value_error": 4.235164736271502e-22,
+    "directional_variation_error": 3.7513395167998453e-17,
+    "full_spinor_variation_vs_common_Dirac_reaction_error": 1.7285570761207958e-16,
+    "omitted_constant_source_norm": 0.019796337989986635
+  },
+  "free_wave_counterexample": {
+    "same_zeroth_order_probe_and_source_different_curvature": true,
+    "free_Einstein_residual_norm": 0.0,
+    "free_tidal_component_R_0x0x": 0.018145607877153243,
+    "additional_probe_reaction_norm": 7.070928695995957e-05,
+    "additional_linear_Dirac_residual_norm": 1.1229369146259108e-19,
+    "strengths": [
+      0.04,
+      0.02,
+      0.01
+    ],
+    "full_Einstein_residual_norms_with_wave": [
+      2.1449705152934885e-06,
+      5.364729635106855e-07,
+      1.341470652598624e-07
+    ],
+    "full_Dirac_residual_norms_with_wave": [
+      2.7083893587958042e-08,
+      6.772491717099065e-09,
+      1.6933128806670745e-09
+    ],
+    "not_just_a_coordinate_gauge_wave": true
+  },
+  "causal_variation_test": {
+    "single_history_variation_symmetrizes_retarded_response": true,
+    "future_source_retarded_past_response_norm": 0.0,
+    "future_source_single_history_advanced_gradient_norm": 0.05389941508198838,
+    "response_norms_omit_the_overall_strength_over_two": true,
+    "doubled_action": "S_ind,CTP=kappa <T_difference,R_ret T_average>/2; vary before setting both histories equal",
+    "physical_left_variation": "kappa (DT)^* R_ret T/2, with no advanced contribution",
+    "oscillator_kernel_test_is_not_a_gravitational_data_or_noise_kernel_measurement": true,
+    "no_native_tensor_or_two_frame_identification_is_assumed": true
+  },
+  "remaining_native_obligations": [
+    "derive or justify the nonlocal/coarse-grained stress readout instead of silently replacing E=Re(barPsi Gamma D Psi)",
+    "specify gauge, physical initial/boundary radiation data, zero modes and a causal variational prescription",
+    "derive Einstein coefficients and native C7/M16/HC/gauge/projector operator matching without double counting",
+    "higher orders, quantum-state renormalization, fluctuations, physical scale and stability"
+  ],
+  "main_TeX_changed": false
+}

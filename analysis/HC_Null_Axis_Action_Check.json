@@ -1,0 +1,124 @@
+{
+  "status": "conditional curvature pullback, rank and real-form audit; no full native solution",
+  "native_anchor": {
+    "source": "v470/10_sphaera_and_physics.tex, thm:variational-form and thm:resonance-field-eq",
+    "connection": "D_mu=partial_mu+i A_mu+kappa H_C n_mu+eta (I-P_C7)n_mu",
+    "literal_curvature_action": "-Tr(F_mu_nu F^mu_nu)/4; no dagger printed",
+    "signature_used": "(-,+,+,+)",
+    "native_internal_adjoint_real_form_and_current_representation_not_fixed_here": true
+  },
+  "commuting_compensator_branch": {
+    "assumptions": "flat fixed metric, constant n and Hermitian T, H_C=h T, A=0, constant commuting closure background",
+    "curvature": "F_mu_nu=kappa T (n_nu partial_mu h-n_mu partial_nu h)",
+    "L": "-kappa^2 Tr(T^2) [n^2 (partial h)^2-(n.partial h)^2]/2",
+    "null_limit": "L=kappa^2 Tr(T^2) (n.partial h)^2/2",
+    "principal_tensor": "K^{mu nu}=kappa^2 Tr(T^2)(n^mu n^nu-n^2 g^{mu nu})",
+    "example_coupling_not_a_native_value": 0.4,
+    "example_ordinary_trace_T_squared": 5.0,
+    "kinetic_tensor": [
+      [
+        0.8000000000000002,
+        0.0,
+        0.0,
+        0.8000000000000002
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.8000000000000002,
+        0.0,
+        0.0,
+        0.8000000000000002
+      ]
+    ],
+    "null_tensor_rank": 1,
+    "null_tensor_eigenvalues": [
+      0.0,
+      0.0,
+      0.0,
+      1.6000000000000003
+    ],
+    "homogeneous_time_inertia": 0.8000000000000002,
+    "homogeneous_inertia_does_not_prove_full_wave_stability": true,
+    "no_irreversible_viscosity_derived": true
+  },
+  "mixed_reality_diagnostic": {
+    "assumptions": "ordinary trace, real couplings, Hermitian A_mu and H_C, real part of the literal action",
+    "decomposition": "F=i F_A+kappa X; F_A and X Hermitian in internal indices",
+    "real_action": "Re L=Tr(F_A_mu_nu F_A^mu_nu)/4-kappa^2 Tr(X_mu_nu X^mu_nu)/4",
+    "same_electric_profile_Re_L_gauge": -0.4000000000000001,
+    "same_electric_profile_Re_L_compensator": 0.4000000000000001,
+    "simultaneous_literal_L_real": 0.0,
+    "simultaneous_literal_L_imaginary": 0.8000000000000002,
+    "dagger_comparison_gauge_L": 0.4000000000000001,
+    "dagger_comparison_compensator_L": 0.4000000000000001,
+    "opposite_electric_signs_are_conditional_not_a_native_ghost_theorem": true,
+    "dagger_pairing_is_a_different_action_not_a_silent_fix": true,
+    "mixed_real_action_does_not_automatically_vary_to_the_printed_complex_resonance_equation": true
+  },
+  "explicit_alternative_real_completion": {
+    "status": "comparison only, not adopted in the native paper",
+    "action": "L_dagger=-Tr(F_mu_nu^dagger F^mu_nu)/4=-Tr(F_A^2)/4-kappa^2 Tr(X^2)/4",
+    "scope": "constant real n, Hermitian A,H, unitary gauge transformations, closure background omitted or fixed commuting",
+    "gauge_EL": "D_mu^A F_A^{mu nu}+i kappa^2 n_mu [H,X^{mu nu}]=0",
+    "hc_EL": "kappa^2 n_nu D_mu^A X^{mu nu}=0",
+    "sources_penalties_and_other_background_variations_must_be_added": true,
+    "printed_complex_resonance_equation_not_automatically_equivalent": true,
+    "commuting_wave_witness_solves_these_curvature_only_equations": true,
+    "no_claim_that_it_solves_the_native_penalty_or_probe_equations": true,
+    "null_rank_deficiency_not_removed": true
+  },
+  "conditional_existing_penalty_oscillator": {
+    "assumptions": "independent H=h T, fixed matching target Lambda=h_Lambda T, positive lambda_H, homogeneous profile, no other sources",
+    "potential_already_printed": "U_HC=lambda_H Tr(T^2)(h-h_Lambda)^2",
+    "equation": "h_ddot+2 lambda_H [h-h_Lambda]/[kappa^2 (n^0)^2]=0",
+    "frequency_squared": "2 lambda_H/[kappa^2 (n^0)^2], not a native numerical prediction or particle mass",
+    "independent_example_lambda_H": 0.3,
+    "example_frequency_squared": 3.749999999999999,
+    "not_simultaneous_with_exact_H_equals_Lambda_constraint_for_nonzero_oscillations": true,
+    "other_field_equations_and_background_reaction_still_required": true,
+    "no_additional_potential_or_irreversible_damping": true
+  },
+  "full_equation_vs_null_projection": {
+    "full_source_free_comparison": "E_nu=partial^mu F_mu_nu=0 for an independent real Abelian connection",
+    "pullback_EL": "EL_h=kappa Tr(T n^nu E_nu), not every E_nu=0",
+    "null_restricted_equation": "(partial_t+partial_z)^2 h=0",
+    "witness": "h=2+t cos(1.3(z-t)), evaluated at t=0.7,z=0.4",
+    "h_at_sample": 2.6474363419001192,
+    "restricted_EL": -0.0,
+    "full_residual_components_in_units_of_T": [
+      -0.19769797586404386,
+      0.0,
+      0.0,
+      0.19769797586404395
+    ],
+    "full_residual_norm": 0.6251758925353735,
+    "pullback_projection": 1.7763568394002506e-16,
+    "differential_identity_norm": 2.482534153247273e-16,
+    "identity_does_not_imply_normal_equations": true,
+    "scope": "valid parent-field counterexample and test of a separately imposed adjoint resonance equation; not an automatic native Hermitian A variation",
+    "native_source_free_branch_and_all_other_field_equations_not_established": true,
+    "homogeneous_commuting_h_has_E_0_zero": true,
+    "nonzero_homogeneous_temporal_source_needs_other_fields_or_flux": true
+  },
+  "remaining_native_obligations": [
+    "fix the internal adjoint, real action, trace pairing and allowed connection variations",
+    "derive the generator-resolved native currents from that same real action",
+    "decide independent H_C versus functional H_C=Lambda[M,P] and apply the correct variational chain rule",
+    "evaluate all normal, Gauss, projector and compensator equations with spatial profiles and boundaries",
+    "match any positive kinetic coefficient to the actual residual/readout carrier before adding it to modal inertia"
+  ],
+  "closure_boundary": "If H_C=Lambda=0 identically on an exact commuting closure branch, its derivatives and this HC kinetic contribution vanish; H_C=0 at one point alone does not suffice.",
+  "main_TeX_changed": false,
+  "empirical_masses_target_phase_or_new_damping_coefficient_used": false
+}

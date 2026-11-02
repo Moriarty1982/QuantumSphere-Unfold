@@ -1,0 +1,88 @@
+{
+  "status": "common-metric massive triadic Dirac comparison through first gravitational order; NOT native HC/closure/composite-coframe completion",
+  "common_action": {
+    "action": "integral sqrt|g(E)| [R/(2 epsilon)+i/2 (barPsi Gamma(E).D(E)Psi-D(E)barPsi Gamma(E)Psi)-barPsi M Psi]",
+    "signature_and_Clifford": "eta=(-,+,+,+), {Gamma^a,Gamma^b}=-2 eta^ab, barPsi=Psi^dagger beta",
+    "spin_lift": "omega_mu=eta (E GammaChristoffel_mu-partial_mu E) E^(-1); S_mu=-omega_mu,ab Gamma^a Gamma^b/4",
+    "stress_on_shell": "T_mn=-i/4 [barPsi Gamma_m <->D_n Psi+barPsi Gamma_n <->D_m Psi]",
+    "trace_on_shell": "Tr_g T=-barPsi M Psi; a pure-null Einstein geometry requires this bilinear to vanish",
+    "no_added_scalar_field": true,
+    "independent_metric_not_native_bilinear_constraint": true,
+    "torsion_free_metric_not_independent_Einstein_Cartan_connection": true
+  },
+  "prepared_triadic_carrier": {
+    "matrix": [
+      [
+        0.6,
+        0.0,
+        4.0
+      ],
+      [
+        0.0,
+        0.6,
+        0.7
+      ],
+      [
+        4.0,
+        0.7,
+        0.6
+      ]
+    ],
+    "chosen_mass_eigenvalue": 4.660788100849389,
+    "internal_eigenvector": [
+      0.6965217230011511,
+      0.12189130152520133,
+      0.7071067811865476
+    ],
+    "positive_energy": 4.766859104380919,
+    "mass_bilinear_lower_bound_for_all_relative_phases": 0.003506136125259117,
+    "not_the_original_polynomial_background_or_an_evaluated_native_C7_representation": true
+  },
+  "old_polynomial_background": {
+    "reference_Dirac_residual_norm": 1.3771587721039253e-15,
+    "common_effective_metric_Dirac_residual_norm": 487.54861557217737,
+    "reference_stress_trace": -1.1936411754334137,
+    "reference_mass_bilinear": 1.1936411754334166,
+    "common_gamma_compatibility_error": 1.3708437828270812e-11,
+    "switching_the_gamma_and_spin_connection_does_not_leave_the_old_probe_on_shell": true
+  },
+  "local_weak_gravity_construction": {
+    "complete_source": "constant diagonal stress plus phase-dependent conserved Fourier interference",
+    "homogeneous_particular_solution": "bar_h=-T x^2/4+eta (x.T.x)/4+tau x_lower x_lower/36-5 tau eta x^2/72, tau=Tr_eta T",
+    "oscillatory_solution": "bar_h_osc=2 T_osc/Q^2, Q=q-p, Q^2=2",
+    "probe_correction": "D0 Psi1=-D1[h] Psi0 with zero correction data at t=0; finite Fourier/polynomial forced system solved by mpmath.expm",
+    "sample_linear_Einstein_residual_norm": 2.3062116885428692e-17,
+    "sample_linear_Dirac_residual_norm": 4.856389854071977e-19,
+    "sample_nonzero_probe_correction_norm": 0.00011737049675479539,
+    "strengths": [
+      0.04,
+      0.02,
+      0.01
+    ],
+    "nonlinear_Einstein_residual_norms": [
+      6.376518747042313e-07,
+      1.5944712783233335e-07,
+      3.9866053075807544e-08
+    ],
+    "nonlinear_Dirac_residual_norms": [
+      5.169794199516401e-09,
+      1.292451992267211e-09,
+      3.2311343610686654e-10
+    ],
+    "local_polynomial_metric_not_periodic_or_asymptotically_flat": true,
+    "only_first_order_not_an_exact_nonlinear_solution": true
+  },
+  "native_readout_negative_control": {
+    "flat_probe_bilinear_coframe_rank": 1,
+    "flat_probe_bilinear_coframe_time_column_norm": 8.741763527149856e-19,
+    "this_coframe_is_not_the_required_nondegenerate_zeroth_order_metric_coframe": true,
+    "prior_same_frame_trace_exclusion_is_not_evaded": true
+  },
+  "remaining_obligations": [
+    "native C7/M16/HC/Yukawa/gauge/projector and composite-metric dictionary",
+    "do not double-count probes already integrated out in the native effective action",
+    "derive physical masses and coupling, quantum state, renormalized vacuum and stress fluctuation control",
+    "higher gravitational orders, global initial/boundary conditions, normalization and stability"
+  ],
+  "main_TeX_changed": false
+}

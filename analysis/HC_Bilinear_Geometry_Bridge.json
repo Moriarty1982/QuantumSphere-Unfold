@@ -1,0 +1,103 @@
+{
+  "status": "conditional coframe geometry/stress match, now strengthened by current and same-frame exclusion; NOT a full native solution",
+  "native_anchor": "v470/10_sphaera_and_physics.tex, prop:bilinear-einstein-reconstruction: E^a_mu=Re(bar(Psi) Gamma^a D_mu Psi), g=E^T eta E",
+  "standard_factorized_branch": {
+    "assumptions": "fixed Hermitian K^a=eta_D Gamma^a, Hermitian internal A,H commuting with spin, constant n, no closure load in this isolated calculation",
+    "identity": "E^a_mu=partial_mu j^a/2+kappa n_mu v_H^a; j^a=bar(Psi)Gamma^a Psi, v_H^a=bar(Psi)Gamma^a H Psi",
+    "internal_unitary_gauge_A_drops_from_this_real_coframe": true,
+    "HC_survives_here_although_its_i_weighted_probe_transport_drops_from_real_action": true,
+    "HC_free_nonzero_rank_case": "E=d(j/2) is an exact coframe; if rank four, g is locally flat in coordinates Y=j/2",
+    "not_a_flatness_theorem_for_varying_spin_frames_spin_connections_or_nonfactorized_native_carriers": true
+  },
+  "rank_one_geometry": {
+    "coframe": "E=E0+kappa v n^T",
+    "metric": "g=g0+kappa(n w^T+w n^T)+kappa^2(v^T eta v)n n^T, w=E0^T eta v",
+    "determinant": "det E=det E0 [1+kappa n^T E0^(-1)v]",
+    "null_axis_preservation": "n^T g^(-1)n=[n^T g0^(-1)n]/[1+kappa n^T E0^(-1)v]^2",
+    "rank_one_HC_alone_does_not_supply_a_rank_four_coframe": true,
+    "anholonomy_dE_nonzero_does_not_alone_prove_Riemann_curvature": true
+  },
+  "same_probe_constructive_local_witness": {
+    "representation": "three internal four-spinor amplitudes, a valid declared 3+1 Clifford test; NOT matched to native C7/M16",
+    "frame_current": [
+      6.0,
+      0.4000000000000001,
+      0.6000000000000001,
+      -2.220446049250313e-16
+    ],
+    "baseline_E_minus_identity_norm": 2.375565886147475e-17,
+    "HC_direction_minus_h_l_norm": 6.280369834735101e-16,
+    "coframe_metric_match_error": 4.1928812117433473e-16,
+    "positive_HC_at_sample": true,
+    "same_null_covector_in_induced_frame_error": 1.3960550252992727e-17,
+    "raw_HC_probe_transport_image_norm": 2.4539070352092237e-17,
+    "geometrically_active_but_direct_probe_transport_dark_on_this_ansatz": true,
+    "mass_like_and_other_evolution_can_break_that_alignment": true,
+    "unsatisfied_zero_gauge_Gauss_source_norm": 5.474814362973806,
+    "probe_gauge_projector_and_matching_equations_not_solved": true
+  },
+  "local_null_geometry_and_stress": {
+    "null_profile": "E=I+kappa h l n^T, l=eta^(-1)n, n=(-1,0,0,1), h=h(x,y)",
+    "metric": "g=eta+2kappa h n n^T; det g=-1 and n remains null",
+    "curvature": "Ricci_mu_nu=-kappa Delta_perp h n_mu n_nu, R=0; full Riemann need not vanish",
+    "stress_assumptions": "paired curvature action, independent unconstrained metric variation at fixed n and F, then evaluate on the null branch",
+    "HC_stress": "T_mu_nu=kappa^2 Tr(T^2)|grad_perp h|^2 n_mu n_nu",
+    "adding_a_metric_null_constraint_or_other_metric_dependencies_changes_variation": true,
+    "n_is_parallel_in_this_specific_metric": true,
+    "conditional_Einstein_match": "Delta_perp h+a|grad_perp h|^2=0, a=kappa_eff kappa Tr(T^2)",
+    "linearization": "Delta_perp exp(a h)=0 for a!=0",
+    "profile": "h=log(F0+b.x)/a on a patch with F0+b.x>0, and h>=0 if desired",
+    "dimensionless_kappa": 0.4,
+    "unevaluated_independent_Einstein_coupling_example": 1.0,
+    "sample_h": 1.7577437785327834,
+    "sample_Ricci_coefficient": 0.0024507401235173026,
+    "sample_HC_stress_coefficient": 0.0024507401235173026,
+    "Einstein_minus_kappa_eff_HC_stress_norm": 2.921460108547471e-18,
+    "sample_scalar_curvature": 3.0357660829594124e-18,
+    "sample_Riemann_component_norm_not_a_scalar_invariant": 0.009802960494069222,
+    "cosmological_probe_penalty_and_other_stresses_omitted_in_this_matching_exercise": true
+  },
+  "variation_boundary": {
+    "metric_convention": "delta S_metric=integral sqrt|g| E^{mu nu} delta g_mu_nu/2",
+    "HC_metric_source": "delta_H S_metric=kappa integral sqrt|g| n_mu E^{mu nu} eta_ab E^a_nu Tr(j^b delta H)",
+    "same_null_ansatz_warning": "R and Tr(F^dagger F) both vanish on this profile family; restricting the action first loses the remaining Einstein equation",
+    "nonmatching_example_full_residual_norm": 0.0004160000000000001,
+    "same_example_restricted_metric_variation": 5.421010862427522e-20,
+    "independent_Einstein_matching_is_stronger_than_the_HC_tangent_equation": true
+  },
+  "follow_through_current_and_same_frame_obstruction": {
+    "strengthening_of_previous_gap": "A=0 is not the only issue: this unchanged probe/current ansatz is not repaired by an internal unitary gauge field alone",
+    "induced_current": "J^mu=(E^(-1))^mu_a j^a; divergence uses |det E|, not only flat-frame component derivatives",
+    "example_induced_current": [
+      10.21858506847868,
+      0.4,
+      0.6,
+      4.21858506847868
+    ],
+    "example_covariant_divergence": 8.0,
+    "gradient_coframe_branch": "If E=d(j/2) is invertible and J=e j, then in Y=j/2 coordinates div J=8, not 0",
+    "aligned_transverse_branch": "j=2(x+c), E=I+kappa h l n^T, h transverse and n.l=0 also gives div J=8",
+    "gauge_commutator_trace_cannot_cancel_this": true,
+    "same_frame_extra_assumption": "Gamma^mu=(E^(-1))^mu_a Gamma^a in the SAME ordered master equation and coframe, with SAME Psi, adjoint and D_mu",
+    "pointwise_identity": "Im[bar(Psi) R]=4/s-Im[bar(Psi)Omega Psi], R=(i Gamma^mu D_mu-Omega)Psi, E=s Re(bar(Psi)Gamma^a D_mu Psi)",
+    "on_shell_requirement": "Im[bar(Psi)Omega Psi]=4/s for finite nonzero real s",
+    "real_mass_bilinear_obstruction": "If bar(Psi)Omega Psi is real, no full-rank same-frame solution exists under these assumptions, independently of the detailed connection",
+    "sample_scalar_mass_imaginary": 0.0,
+    "sample_Im_barPsi_R": 4.000000000000001,
+    "sample_probe_residual_norm": 2.4559213537600737,
+    "sample_residual_norm_lower_bound": 1.6329931618554523,
+    "not_a_global_no_go_for_the_paper": "The source does not yet fix the microscopic Gamma^mu to the induced inverse coframe. Separate effective/microscopic geometries, a different coframe or altered equations must be stated and checked, not silently identified.",
+    "connection_spin_frame_changes_alone_do_not_evade_the_trace_identity_when_all_same_frame_assumptions_remain": true,
+    "nonreal_mass_or_different_coframe_is_a_real_model_change_not_an_automatic_fix": true
+  },
+  "native_scope_boundary": {
+    "exact_minimal_closure": "R_C=0 with the minimal functional implies H_C=0; a nonzero HC geometric profile is NOT that exact native Einstein-limit branch",
+    "other_possible_curvature_sources": "kinematically: geometric spin connection, varying Clifford/adjoint data, nonfactorized transport, or a justified independent/deeper HC completion; none automatically evades the on-shell same-frame trace identity",
+    "full_variation": "if g is defined by the probes, pull back the metric action to ALL fields, or impose its definition with multipliers; do not also vary it freely without justification",
+    "coordinate_gamma_and_geometric_spin_connection_require_the_same_induced_frame": true,
+    "previous_same_frame_requirement_scope": "This is the tested direct induced-geometric Dirac interpretation, not an identification already derived for all native microscopic/effective gammas",
+    "same_induced_gamma_identification_is_now_explicitly_tested_and_obstructed_for_real_mass_bilinear": true,
+    "no_native_G_Newton_mass_phase_gravitational_bath_or_full_solution_derived": true
+  },
+  "main_TeX_changed": false
+}

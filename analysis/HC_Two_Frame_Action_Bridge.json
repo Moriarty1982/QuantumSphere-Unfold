@@ -1,0 +1,60 @@
+{
+  "status": "conditional two-frame obstruction and a local solution of an explicitly MODIFIED neutral parent; NOT native closure",
+  "two_frames_without_changing_the_coframe": {
+    "definition": "E=s Re(bar(Psi)Gamma^a D_mu Psi), reference inverse f=theta^(-1), Gamma_ref^mu=f_a^mu Gamma^a",
+    "identity": "Im(bar(Psi) R_ref)=Tr(E theta^(-1))/s-Im w",
+    "real_mass_on_shell_requirement": "Tr(E theta^(-1))=0",
+    "distance_from_identity": "||E theta^(-1)-I||_F >= 2 and ||.||_op >= 1 for real mass on shell; declared common spin frame",
+    "not_a_Lorentz_invariant_metric_distance": true,
+    "point_jet_trace": 1.5543122344752192e-15,
+    "point_jet_residual_norm": 6.707437923744493e-16,
+    "point_jet_coframe_rank": 4,
+    "does_not_exclude_every_separate_frame_geometry": true,
+    "pure_Lorentz_trace_zero_negative_control": "diag(1,1,-1,-1) has trace zero and the same metric as I; spin-frame identification matters"
+  },
+  "common_parent_action": {
+    "form": "S_parent=S_micro[Psi;theta]+S_geom[E,H]+integral lambda_a^mu(E^a_mu-Ebg^a_mu-C^a_mu[Psi,H])",
+    "equations": "E-Ebg-C=0; pi_E+lambda=0; EL_micro-(DC)^*lambda=0; EL_H,geom-(D_H C)^*lambda=0",
+    "elimination": "lambda=-pi_E reproduces EL_micro+(DC)^*pi_E=0 of the composite action",
+    "independent_Einstein_equation_does_not_follow_from_this_constraint_alone": true,
+    "phase_blind_fixed_Hermitian_dictionary": "C=s partial_mu j^a/2+s kappa h n_mu j^a",
+    "real_probe_multiplier_weight": "V_lambda=s[(partial_mu lambda_a^mu)/2-kappa h lambda_a^mu n_mu]K^a",
+    "Hermitian_multiplier_weight_does_not_automatically_supply_Im_w": true,
+    "no_extra_central_phase_current_from_this_phase_blind_C": true
+  },
+  "affine_model_change": {
+    "definition": "E=theta+C, not the unchanged native E=C",
+    "identity": "Im(bar(Psi) R_ref)=[Tr(E theta^(-1))-4]/s-Im w",
+    "same_induced_frame_variant": "Im(bar(Psi) R_induced)=[4-Tr(E^(-1)theta)]/s-Im w",
+    "new_background_is_not_a_QAM_tag_shift_or_derived_native_term": true
+  },
+  "explicit_modified_neutral_parent": {
+    "field_space": "independent real nonsingular E, real h, complex commuting Psi and real multiplier density; fixed theta=I,n=(-1,0,0,1)",
+    "action": "S_free_real_massless[Psi;theta]+integral sqrt|g(E)|[R/(2 kappa_eff)-F_mu_nu F^mu_nu/4]+integral lambda.(E-theta-C)",
+    "curvature": "F=kappa dh wedge n, scalar real curvature; not a charged probe gauge connection",
+    "dictionary": "C=Re(Psi^dagger K^a partial_mu Psi)+kappa h n_mu Psi^dagger K^a Psi",
+    "profile": "Psi=(1,0,1,0)/sqrt(2) constant, lambda=0, h=log(2+0.1x)/(kappa_eff kappa)",
+    "coframe": "E=I+kappa h l n^T, g=eta+2 kappa h n n^T",
+    "sample_h": 1.7577437785327834,
+    "sample_reference_trace": 4.0,
+    "reference_probe_residual_norm": 0.0,
+    "coframe_constraint_residual_norm": 2.220446049250313e-16,
+    "full_independent_metric_residual_norm": 2.921460108547471e-18,
+    "coframe_EL_at_zero_multiplier_norm": 4.898434094800387e-18,
+    "scalar_HC_EL": -1.0408340855860844e-18,
+    "reference_phase_current_divergence": 0.0,
+    "induced_current_divergence": 0.0,
+    "Riemann_component_norm_not_invariant": 0.009802960494069222,
+    "no_new_charged_Gauss_equation_exists_in_this_declared_neutral_field_space": true,
+    "local_all_declared_EL_equations_satisfied_not_a_global_or_native_solution": true
+  },
+  "restoring_native_terms_is_not_free": {
+    "central_mass_0p6_and_Yukawa_0p2_residual_norm": 0.9515487557065566,
+    "charged_probe_at_zero_gauge_Gauss_source_norm": 0.9999999999999998,
+    "penalty_lambda_0p5_target_zero_scalar_EL": -1.7577437785327834,
+    "nonzero_h_is_not_exact_minimal_HC_zero_closure": true,
+    "background_adjoint_gauge_mass_projector_and_collective_scales_not_derived": true,
+    "no_well_posedness_global_boundary_stability_or_empirical_claim": true
+  },
+  "main_TeX_changed": false
+}

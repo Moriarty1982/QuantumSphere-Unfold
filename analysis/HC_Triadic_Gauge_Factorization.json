@@ -1,0 +1,156 @@
+{
+  "status": "conditional coherent triadic probe channels with separate gauge factor; NOT native C7, gauge representation or mass/geometry identification",
+  "native_source_audit": {
+    "closed_triad": "10_sphaera_and_physics.tex, concrete route to the Einstein limit: entire Psi_triangle is called closed",
+    "same_carrier": "12_structural_core.tex, thm:theorem-level-shadow-bidirectional-probe-lensing: ART/QFT/orthogonal channel share a closure-stable carrier",
+    "color_is_distinct": "10_sphaera_and_physics.tex, sec:gauge: SU(3) acts on color indices",
+    "channel_is_not_generation": "parts/native-operator-link.tex: triadic entries label probe channels, not generation coordinates",
+    "limits": "these are architectural statements in the text, not evaluated embeddings or field-existence proofs"
+  },
+  "representation_gate": {
+    "general": "T_i^a Omega_ij = Omega_ij T_j^a for fixed equivariant off-diagonal couplings",
+    "projected_Ward": "D_mu j_a^mu=-i Tr([T_a,Omega] S); if all generators commute with Omega it vanishes for arbitrary coherent probe states",
+    "same_charge_intertwiner_norm": 0.0,
+    "different_third_charge_intertwiner_norm": 5.742821606144491,
+    "same_representations_are_assumed_not_derived": true
+  },
+  "trace_normalization": {
+    "channel_multiplicity": 3,
+    "full_carrier_coupling": 0.8,
+    "effective_gauge_squared": 0.21333333333333337,
+    "action": "Tr_6(F^dagger F)=3 Tr_2(F_g^dagger F_g); keep the full trace and vary only B_g tensor I3",
+    "gauge_equation": "D G_g=i(g_full^2/3) Tr_channel(j); not the unprojected U(6) equation"
+  },
+  "local_solution": {
+    "carrier": "C2 auxiliary gauge/Hopf factor tensor C3 probe-channel factor; P=P_Hopf tensor I3, H=0 eliminated before variation",
+    "mass": "I2 tensor prepared finite triad; it is not native M16",
+    "equations": "U'=[(omega-a)I+Omega]V; V'=[Omega-(omega-a)I]U; a''=-(g_full^2/3)(|U|^2+|V|^2)",
+    "initial": [
+      0.5,
+      0,
+      0,
+      0.1,
+      0,
+      0,
+      0,
+      0.03
+    ],
+    "existence_box": {
+      "lower": [
+        0.4,
+        -0.1,
+        -0.1,
+        0.0,
+        -0.1,
+        -0.1,
+        -0.1,
+        -0.07
+      ],
+      "upper": [
+        0.6,
+        0.1,
+        0.1,
+        0.2,
+        0.1,
+        0.1,
+        0.1,
+        0.13
+      ],
+      "rhs_abs_bounds": [
+        0.72,
+        0.23,
+        1.03,
+        0.64,
+        0.11,
+        2.51,
+        0.13,
+        0.0938666666666667
+      ],
+      "Jacobian_infinity_norm_bound": 6.4,
+      "interval": 0.03,
+      "available_box_radius": 0.1,
+      "max_displacement_bound": 0.0753,
+      "Picard_contraction_bound": 0.192
+    },
+    "samples": [
+      {
+        "z": -0.03,
+        "state": [
+          0.49898267518574696,
+          0.0006273988614345036,
+          -0.010949260777811337,
+          0.10517475765517542,
+          0.00012048443230786077,
+          -0.05992475230747779,
+          -0.0009249628174477573,
+          0.03166819824144345
+        ],
+        "ODE_defect": 1.8568826530399928e-50,
+        "spatial_first_integral": -0.08789062499999994
+      },
+      {
+        "z": 0,
+        "state": [
+          0.5,
+          0.0,
+          0.0,
+          0.1,
+          0.0,
+          0.0,
+          0.0,
+          0.03
+        ],
+        "ODE_defect": 0.0,
+        "spatial_first_integral": -0.08789062500000003
+      },
+      {
+        "z": 0.03,
+        "state": [
+          0.5080213233939296,
+          0.0006342102443527075,
+          0.013114477630541533,
+          0.09624011171442319,
+          0.0001318432896835692,
+          0.0603578137941319,
+          0.0008748048044193265,
+          0.02830843175961653
+        ],
+        "ODE_defect": 1.9295646421239368e-50,
+        "spatial_first_integral": -0.08789062499999999
+      }
+    ],
+    "point": [
+      0.4,
+      0.9,
+      0.4,
+      0.02
+    ],
+    "channel_densities": [
+      0.2640537667010335,
+      8.238594401026234e-08,
+      0.0016831342152760999
+    ],
+    "mass_eigenmode_densities": [
+      0.12090202953247557,
+      0.00779634681874166,
+      0.13703860695103645
+    ],
+    "full_matrix_torque_norm": 1.3953935564741369,
+    "gauge_projected_torque_norm": 3.755156141413463e-19,
+    "residual_norms": {
+      "Dirac": 3.891384029636678e-16,
+      "projected_gauge": 1.1404320221792144e-10,
+      "projected_current_divergence": 1.1028764278558806e-12,
+      "full_Ward": 1.4911203324053268e-09,
+      "unprojected_equation_not_imposed": 0.13886293650709655,
+      "full_current_divergence": 1.3953935579524501
+    }
+  },
+  "scope": [
+    "the matrix Ward identity is unchanged; only the actually varied gauge algebra determines the source equation",
+    "no claim that all three native channels carry identical charges; unequal charges need intertwiners or additional charged fields",
+    "no identification of auxiliary U(2) with the full electroweak representation or of channels with colors/generations",
+    "hard/soft action choice, common C7 embedding, physical scales, bilinear metric, global energy and stability remain open"
+  ],
+  "main_TeX_changed": false
+}

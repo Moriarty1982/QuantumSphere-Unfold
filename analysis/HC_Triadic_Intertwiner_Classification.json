@@ -1,0 +1,73 @@
+{
+  "status": "conditional fixed-link/readout classification and simultaneous local basis change; NOT native gauge charges, C7 embedding or a new physical frame effect",
+  "native_audit": {
+    "actual_T_i_and_T_i_perp_entries_not_supplied_in_probe_block": true,
+    "source": "10_sphaera_and_physics.tex prop:triadic-two-probe; 12_structural_core.tex sec:theorem7; 16_master_model.tex prop:structural-matter-gauge-mass",
+    "readouts_in_source_are_general_maps_not_fixed_orthogonal_channel_projectors": true,
+    "fixed_readout_locks_are_an_additional_hypothesis": true
+  },
+  "relative_representation_theorem": "A nonzero fixed equivariant link between irreducible complex unitary representations is a positive scale times a unitary intertwiner; connected channels are equivalent, not necessarily written in the same basis",
+  "invertible_link_reduction": "At root T0=T0^dagger, require [T0,K1^dagger K1]=[T0,K2^dagger K2]=0 and, if present, [T0,K1^{-1}K12 K2]=0; Ti=Ki T0 Ki^{-1}",
+  "finite_reference_dimensions": {
+    "scalar_tree_locked": {
+      "real_Hermitian_dimension": 4,
+      "max_basis_commutator_residual": 5.376684397873035e-14
+    },
+    "same_resonance_without_channel_locks": {
+      "real_Hermitian_dimension": 12,
+      "max_basis_commutator_residual": 9.079824382767467e-15
+    },
+    "one_anisotropic_link": {
+      "real_Hermitian_dimension": 2,
+      "max_basis_commutator_residual": 2.8963479153214255e-15
+    },
+    "two_noncommuting_link_grams": {
+      "real_Hermitian_dimension": 1,
+      "max_basis_commutator_residual": 2.188309016967016e-15
+    },
+    "scalar_cycle_phase": {
+      "real_Hermitian_dimension": 4,
+      "max_basis_commutator_residual": 3.316269096370251e-15
+    },
+    "matrix_cycle_phase": {
+      "real_Hermitian_dimension": 2,
+      "max_basis_commutator_residual": 4.832135871931061e-15
+    },
+    "rank_deficient_first_link": {
+      "real_Hermitian_dimension": 3,
+      "max_basis_commutator_residual": 3.4931392932857176e-15
+    },
+    "disconnected_first_channel": {
+      "real_Hermitian_dimension": 8,
+      "max_basis_commutator_residual": 5.52380662553368e-16
+    }
+  },
+  "scalar_cycle_spectral_control": {
+    "same_common_algebra_dimension": 4,
+    "spectrum_difference_norm": 0.1173918130927518,
+    "trace_cube_difference": 6.719999999999997,
+    "not_a_simultaneous_basis_change_or_a_physical_mass_identification": true
+  },
+  "local_basis_checks": {
+    "frame": "S=sum_i Ui(x) tensor |i><i|, U_ART=exp(.4 i t sigma1), U_QFT=exp(.7 i z sigma3), U_perp=I",
+    "connection": "B'=S B S^dagger-(partial S)S^dagger; Omega', P', Psi' and the gauge embedding all transformed",
+    "correct_residual_norms": {
+      "Dirac": 2.991470226959312e-16,
+      "projected_gauge": 1.1453303070869797e-10,
+      "curvature_covariance": 4.980627001665808e-16,
+      "projector_transport": 2.6731087819906224e-16
+    },
+    "missing_connection_shift_Dirac_residual": 0.2055447470534771,
+    "untransformed_mass_Dirac_residual": 0.32956636799384076,
+    "not_independent_physical_gauge_transformations_of_the_original_fixed_embedding": true
+  },
+  "limits": [
+    "same absolute charge and the actual gauge group are not determined by this commutant calculation",
+    "kernel/disconnected sectors need not inherit the connected representation",
+    "scalar phase/gain changes do not reduce the locked common algebra; noncentral loop maps or anisotropic link grams can",
+    "a scalar cycle phase can nevertheless change the resonance spectrum; algebra invariance is not spectral invariance",
+    "position-dependent basis changes require connection and gauge-embedding transport; they do not derive the paper's physical frame shifts",
+    "all cases are finite comparisons, not evaluated native intertwiners, physical masses or gravitational closure"
+  ],
+  "main_TeX_changed": false
+}

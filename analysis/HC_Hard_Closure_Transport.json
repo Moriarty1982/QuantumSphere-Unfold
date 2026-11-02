@@ -1,0 +1,101 @@
+{
+  "status": "hard-closure transport identities and local finite connection family; NOT a native metric/Einstein solution or vacuum cancellation",
+  "normal_equation": {
+    "formula": "N=sum_mu i (Q D_mu P P) tensor Gamma^mu-(Q Omega P) tensor I",
+    "norm_identity": "||N||_F^2=4 sum_mu ||Q D_mu P P||_F^2+4||Q Omega P||_F^2 in the declared normalized factorization",
+    "M_closure_alone_is_not_full_master_invariance": true,
+    "canonical_connection_normal_norm": 2.1416584463581302e-16,
+    "moving_P_with_zero_connection_normal_norm": 0.8427732088800496,
+    "not_a_no_go_for_a_selected_single_probe_or_spin_dependent_resonance": true
+  },
+  "compatible_connection": {
+    "general_unitary_solution": "B_mu=[P,partial_mu P]+C_mu, [C_mu,P]=0, C_mu^dagger=-C_mu",
+    "curvature_at_C_zero": "F_mu_nu=[partial_mu P,partial_nu P]",
+    "compression": "F^(P D)=P F P+P[D_mu P,D_nu P]P",
+    "internal_bundle_curvature_is_not_Riemann_curvature": true
+  },
+  "local_source_free_family": {
+    "assumptions": "fixed flat reference metric, empty probe, M=m I (degenerate), hard H=Lambda=0, constant null n; two-channel local patch only",
+    "P": "P=U diag(1,0) U^dagger, u=0.25-0.3 x, phi=0.8 y, |u|<1",
+    "B_t": "(1-t)[P,dP]-t dU U^dagger+eta Q n",
+    "curvature": "F_xy=(1-t) i (0.3)(0.8)(2P-I)/2; all other independent components zero",
+    "same_P_and_H_allow_different_non_gauge_equivalent_curvatures": true,
+    "canonical_curvature_norm": 0.24000000000000002,
+    "flat_choice_curvature_norm": 1.1059590422906556e-16,
+    "curvature_formula_error": 1.6529705387510398e-16,
+    "finite_difference_D_F_norm": 8.051954013467217e-12,
+    "closure_and_HC_printed_currents_zero_for_M_mI_empty_probe": true,
+    "not_a_full_gravitational_or_global_finite_energy_solution": true
+  },
+  "reduced_probe": {
+    "connection_formula": "b=V^dagger partial V+V^dagger B V",
+    "Berry_connection_y_imaginary": 0.324,
+    "Berry_curvature_xy_imaginary": 0.12000000000000002,
+    "arbitrary_probe_residual_lift_error": 1.0780102636075679e-15,
+    "this_is_an_operator_lift_identity_not_an_on_shell_backreacting_probe_solution": true
+  },
+  "spatial_holonomy": [
+    {
+      "steps_per_edge": 32,
+      "computed_phase": [
+        0.9982718143228537,
+        -0.05876550628082448
+      ],
+      "expected_phase": [
+        0.9982717780214073,
+        -0.058766122944924594
+      ],
+      "error": 6.177316629283704e-07
+    },
+    {
+      "steps_per_edge": 64,
+      "computed_phase": [
+        0.9982717870968102,
+        -0.05876596877878582
+      ],
+      "expected_phase": [
+        0.9982717780214073,
+        -0.058766122944924594
+      ],
+      "error": 1.544330317032866e-07
+    },
+    {
+      "steps_per_edge": 128,
+      "computed_phase": [
+        0.998271780290238,
+        -0.05876608440338146
+      ],
+      "expected_phase": [
+        0.9982717780214073,
+        -0.058766122944924594
+      ],
+      "error": 3.8608265171298324e-08
+    }
+  ],
+  "canonical_projector_energy_near_constant_P": {
+    "epsilon": [
+      0.04,
+      0.02,
+      0.01
+    ],
+    "energy": [
+      2.559863469579344e-06,
+      1.5999786667804436e-07,
+      9.999966666711102e-09
+    ],
+    "leading_order": "epsilon^4, not a free quadratic scalar kinetic term",
+    "positive_dagger_energy_is_a_comparison_not_a_silent_native_action_fix": true
+  },
+  "remaining_obligations": [
+    "actual C7 representation, spin factorization, full Omega/triadic/gauge data",
+    "native background selection and allowed projector/operator motion",
+    "derive or prescribe block connection C with actual boundary/topological data",
+    "full constrained real action, measure and gauge reduction before a determinant",
+    "metric reconstruction, common backreaction, physical scales and vacuum matching"
+  ],
+  "main_TeX_changed": false,
+  "sources": [
+    "sources/research/parts/v470/10_sphaera_and_physics.tex: thm:closed-master-system, prop:yang-mills-limit",
+    "https://authors.library.caltech.edu/records/2pepc-k9f58"
+  ]
+}

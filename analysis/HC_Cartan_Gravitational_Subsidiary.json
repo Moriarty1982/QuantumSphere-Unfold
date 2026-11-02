@@ -1,0 +1,160 @@
+{
+  "scope": "Conditional homogeneous gravitational subsystem with exact probe and constitutive equations",
+  "assumptions": [
+    "Cartan Euler equation eliminated exactly",
+    "R=0 and F=C-E=0 throughout an open set",
+    "spatial projection of trace-reversed coframe Euler tensor vanishes",
+    "sufficiently smooth regular metric, no incoming constraint boundary flux"
+  ],
+  "input_sha256": {
+    "HC_Cartan_Regular_Gravity.py": "89cf5597fc935d463eed604f9c9eb247cda17b576ae294dbfad6e45dacbc063f",
+    "HC_Cartan_Regular_Gravity.json": "9719ef580419e7a1d4c49a7aec2f41987832d806215defacd74d8db8c09f4cdc",
+    "HC_Cartan_Regular_Gravity.md": "a2197dd64fb5ef2732021d819e3dfb5e3ebedb3b14654f2bad59cd74e2bf92f4",
+    "HC_Cartan_Spatial_Propagation.py": "1eaa40763d84f28dfb0846032a96da28dd18ab8080cdc2a400c82827eb21feaf",
+    "HC_Cartan_Spatial_Propagation.json": "1ca98d6b4658d279867469948cfdafe68442fa04456320ab4267d0df5befb75b",
+    "HC_Cartan_Spatial_Propagation.md": "6322e87811753bcb255aba65e5ec14d96d4d3ba1df9f0b50fa48e5216cc0098b",
+    "HC_Cartan_Third_Constraint_Reprepare.py": "8e91386218bf8372c4f7329f7825b1443eab018fe9dc65a1513c10c56a87d9c0",
+    "HC_Cartan_Second_Probe_Affine.py": "2d2f8abd51f13f2f0b56ca04add9ecfb4aa3ff749fe6f4372203a31cec5787f9",
+    "HC_Cartan_Second_Gravity_Affine.py": "663ad2ff16c8bc687f8cd366f649bd83a9cd31baafff532e6fa481b34394b46c",
+    "HC_Cartan_Third_Constraint_Diagnostic.py": "b780bfa91bad83b5d0c9454a49e9b44ac3170f94846facadf972117dfa79eab0",
+    "HC_Cartan_Next_Scalar_Compatibility.py": "916e412e18312e7ac72583029a3a2435b6cb4197b19bd5f49e4713b4cc5dcfbc",
+    "HC_Cartan_Next_Scalar_Compatibility.json": "9d3a8191eabf668fbbce0bd81d3ba01bdfd6bf926c293c15bb62b2d574867c0f",
+    "HC_Cartan_Next_Joint_Completion.py": "f78a2a3fb072bc66d81ae3763d40b48abf3dc786fd09fc99a164b3c6b4d92b78",
+    "HC_Cartan_Next_Joint_Completion.json": "259e7358b88fbaae09c54499aace8ec00066c29f34994c1b7e0f71dce1225d78",
+    "HC_Cartan_Regular_Neighborhood.py": "2a79d22186df80113f6b0e39b2d668d6af826be3d6330c42126bcdb8cb855eea",
+    "HC_Cartan_Joint_Neighborhood.py": "a942bb82e2a3bbf3722e2c95b5a624c8c87326fd98d08162c953368a31885d80",
+    "HC_Cartan_Gravitational_Subsidiary.py": "c0c1158a47da4713bd1a1b4c6870e4d562b346b1f1c318483e8d4922f94a99e1"
+  },
+  "coordinate_radius": 6.103515625e-05,
+  "uniform_symmetrizer_lower_bound": 0.9999999940211888,
+  "uniform_symmetrizer_upper_bound": 1.0000000059788112,
+  "sample_checks_not_the_proof": [
+    {
+      "symmetrizer_minimum_eigenvalue": 1.0,
+      "symmetrizer_maximum_eigenvalue": 1.0,
+      "principal_symmetry_error": 0.0,
+      "projected_divergence_error": 4.440892098500626e-16,
+      "characteristic_eigenvalue_error": 2.220446049250313e-16,
+      "lower_order_matrix_norm": 0.0
+    },
+    {
+      "symmetrizer_minimum_eigenvalue": 0.9999999992289006,
+      "symmetrizer_maximum_eigenvalue": 1.0000000008704826,
+      "principal_symmetry_error": 0.0,
+      "projected_divergence_error": 3.3306690738754696e-16,
+      "characteristic_eigenvalue_error": 2.220446049250313e-16,
+      "lower_order_matrix_norm": 4.387426340483227e-05
+    },
+    {
+      "symmetrizer_minimum_eigenvalue": 0.9999999998913178,
+      "symmetrizer_maximum_eigenvalue": 1.0000000007194274,
+      "principal_symmetry_error": 0.0,
+      "projected_divergence_error": 6.849500233248632e-16,
+      "characteristic_eigenvalue_error": 4.965068306494546e-16,
+      "lower_order_matrix_norm": 7.266177246737383e-05
+    },
+    {
+      "symmetrizer_minimum_eigenvalue": 0.999999999720125,
+      "symmetrizer_maximum_eigenvalue": 1.0000000003256693,
+      "principal_symmetry_error": 8.077935669463161e-28,
+      "projected_divergence_error": 5.438959822042073e-16,
+      "characteristic_eigenvalue_error": 2.220446049250313e-16,
+      "lower_order_matrix_norm": 4.388029492605127e-05
+    },
+    {
+      "symmetrizer_minimum_eigenvalue": 0.9999999999930571,
+      "symmetrizer_maximum_eigenvalue": 1.0000000007642107,
+      "principal_symmetry_error": 0.0,
+      "projected_divergence_error": 6.286030661489407e-16,
+      "characteristic_eigenvalue_error": 6.280369834735101e-16,
+      "lower_order_matrix_norm": 9.716741475179904e-05
+    },
+    {
+      "symmetrizer_minimum_eigenvalue": 0.9999999992520315,
+      "symmetrizer_maximum_eigenvalue": 1.000000000893936,
+      "principal_symmetry_error": 0.0,
+      "projected_divergence_error": 1.5586468711392622e-16,
+      "characteristic_eigenvalue_error": 6.280369834735101e-16,
+      "lower_order_matrix_norm": 5.025789794684653e-05
+    },
+    {
+      "symmetrizer_minimum_eigenvalue": 0.9999999998682925,
+      "symmetrizer_maximum_eigenvalue": 1.0000000006640855,
+      "principal_symmetry_error": 0.0,
+      "projected_divergence_error": 6.377745716588144e-16,
+      "characteristic_eigenvalue_error": 4.440892098500626e-16,
+      "lower_order_matrix_norm": 8.950445115668741e-05
+    },
+    {
+      "symmetrizer_minimum_eigenvalue": 0.9999999997539462,
+      "symmetrizer_maximum_eigenvalue": 1.0000000002279403,
+      "principal_symmetry_error": 0.0,
+      "projected_divergence_error": 4.996003610813204e-16,
+      "characteristic_eigenvalue_error": 2.220446049250313e-16,
+      "lower_order_matrix_norm": 5.303813237969445e-05
+    },
+    {
+      "symmetrizer_minimum_eigenvalue": 0.9999999999829992,
+      "symmetrizer_maximum_eigenvalue": 1.00000000065227,
+      "principal_symmetry_error": 0.0,
+      "projected_divergence_error": 2.220446049250313e-16,
+      "characteristic_eigenvalue_error": 2.220446049250313e-16,
+      "lower_order_matrix_norm": 8.969297552938689e-05
+    },
+    {
+      "symmetrizer_minimum_eigenvalue": 0.9999999998093253,
+      "symmetrizer_maximum_eigenvalue": 1.0000000006969496,
+      "principal_symmetry_error": 0.0,
+      "projected_divergence_error": 7.195067539997724e-16,
+      "characteristic_eigenvalue_error": 5.169878828456423e-26,
+      "lower_order_matrix_norm": 6.651287450178855e-05
+    },
+    {
+      "symmetrizer_minimum_eigenvalue": 0.999999999393064,
+      "symmetrizer_maximum_eigenvalue": 1.00000000036435,
+      "principal_symmetry_error": 6.462348535570529e-27,
+      "projected_divergence_error": 7.032629733738598e-16,
+      "characteristic_eigenvalue_error": 4.440892098500626e-16,
+      "lower_order_matrix_norm": 8.052864639905052e-05
+    },
+    {
+      "symmetrizer_minimum_eigenvalue": 0.9999999996735317,
+      "symmetrizer_maximum_eigenvalue": 1.00000000027026,
+      "principal_symmetry_error": 0.0,
+      "projected_divergence_error": 6.377745716588144e-16,
+      "characteristic_eigenvalue_error": 4.440892098500626e-16,
+      "lower_order_matrix_norm": 3.84439934101249e-05
+    },
+    {
+      "symmetrizer_minimum_eigenvalue": 0.9999999994639761,
+      "symmetrizer_maximum_eigenvalue": 1.0000000007089027,
+      "principal_symmetry_error": 6.462348535570529e-27,
+      "projected_divergence_error": 5.087681048627601e-16,
+      "characteristic_eigenvalue_error": 3.1401849173675503e-16,
+      "lower_order_matrix_norm": 7.004587443064612e-05
+    },
+    {
+      "symmetrizer_minimum_eigenvalue": 0.999999999754355,
+      "symmetrizer_maximum_eigenvalue": 1.0000000010018852,
+      "principal_symmetry_error": 0.0,
+      "projected_divergence_error": 4.996003610813204e-16,
+      "characteristic_eigenvalue_error": 3.510833468576701e-16,
+      "lower_order_matrix_norm": 7.975686483896454e-05
+    },
+    {
+      "symmetrizer_minimum_eigenvalue": 0.9999999996814921,
+      "symmetrizer_maximum_eigenvalue": 1.0000000012929076,
+      "principal_symmetry_error": 0.0,
+      "projected_divergence_error": 3.3766115072321297e-16,
+      "characteristic_eigenvalue_error": 9.930136612989092e-16,
+      "lower_order_matrix_norm": 0.00010916970361467755
+    }
+  ],
+  "naive_flat_symbol_rank": 1,
+  "naive_flat_symbol_square_norm": 0.0,
+  "R_F_propagation_not_established": true,
+  "full_coupled_hyperbolicity_not_established": true,
+  "not_interval_certified": true,
+  "finite_Taylor_fields_not_on_shell_on_the_ball": true,
+  "main_TeX_PDF_changed": false
+}

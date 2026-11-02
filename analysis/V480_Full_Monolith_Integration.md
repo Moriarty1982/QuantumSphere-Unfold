@@ -1,0 +1,445 @@
+# Full-Monolith Reading Route and v4.8.0 Integration
+
+Date: 2026-10-16. Status: unreleased v4.8.0-r01 research working copy; no new version DOI and no public upload.
+
+## Correct Baseline
+
+The origin is the complete `release/v4.7.0/Quantum_Sphaera_Companion_v4_7_0_source (2).tex`, not the older modular `sources/active-core.tex`. The corresponding published PDF has 1,014 pages. A separate, unchanged-source rebuild also produces exactly 1,014 pages after the contents, references and long tables settle.
+
+The new entry is `sources/research/v480-companion.tex`. The published TeX/PDF, prior releases, older modular pilot and separate Historical Witness remain distinct artifacts. No numerical difference between those unrelated version scopes is treated as a missing portion of the full paper.
+
+## Full Length Comparison
+
+| Portion | Full v4.7 baseline | v4.8 working route | Change |
+| --- | ---: | ---: | ---: |
+| Main text, title/frontmatter and contents | 523 pages | 153 pages | -370 (-70.75%) |
+| Complete support, appendices and bibliography | 491 pages | 884 pages | +393 |
+| Entire document | 1,014 pages | 1,037 pages | +23 (+2.27%) |
+
+The baseline split is before `app:mm-tools` on page 524. The working split is before `v480:appendix-start` on page 154. Both totals include the whole respective document, not only the conceptual reading route. The earlier 655-to-656 comparison is a different modular scope and is not reused here.
+
+The earlier editorial milestone had 1,008 pages (124 main/frontmatter plus 884 support/bibliography). Its net six-page saving was principally a navigation change: the printed contents shows section-level entries instead of the full subsection hierarchy. The Koide/local-kernel proof section added four net pages, giving 1,012. The HC-to-lepton identification test added three, giving 1,015; the generation/closure-coupling construction added four, giving 1,019; the native-operator-link analysis added four, giving 1,023; the evaluated coupling/scale attempt added three, giving 1,026; its matrix/Planck diagnosis added two, giving 1,028; the tensor-shift/metric extension added three, giving 1,031. The new HC dynamics/geometry section and its reading-route/synthesis crosslinks add six net main-text pages, giving 1,037. All subsection records and inherited body text remain. This is not a claim that the inherited mathematical prose itself was shortened; new qualifications and proofs now outweigh the navigation saving by twenty-three pages. Paper size, font sizes and page margins remain those of the full v4.7 baseline.
+
+## Complete Coverage, Not a Short Substitute
+
+`sources/research/v480-source-map.json` partitions the origin into 38 disjoint fragments and records their byte offsets, first source lines and SHA-256 values. All 3,403,614 original bytes are retained. Concatenating the fragments in origin order reproduces the frozen source byte for byte. The reading order includes every fragment exactly once, including the later shift, OP selector/atlas work, C4/C5 development, post-r54 solve-chain summary and frame-typed endpoint through r84.
+
+The captured local source has Windows CRLF line endings. The map additionally records canonical LF offsets and hashes for Git/Linux checkouts (3,340,412 canonical bytes). The portable audit permits only this explicit line-ending conversion; all mathematical and prose content must still match. A regression test simulates an LF checkout. The local measurement confirms a byte-identical reconstruction without normalization as well.
+
+All 3,290 original label occurrences survive, with no newly duplicated labels. The new reader/premise/integration modules are separate from the inherited fragments. The later macro-defining chains preserve their mutual order, and the bibliography follows the complete retained development.
+
+Preserving text is not certifying its mathematics. Some inherited claims are overstrong or unresolved. Their source remains auditable; the main premise audit states known limitations rather than treating a successful build or a stored assertion as a proof.
+
+## What Is Integrated Now
+
+| Component | Present working integration | Remaining condition |
+| --- | --- | --- |
+| Full v4.7 source | Complete mapped baseline, main/support split and current scope summary | Not a scientific validation of every inherited argument |
+| QAM/MML/MMA | Complete infrastructure retained; later shifted normal form/backtranslation governs new objects | No rollback to the older pre-v4 pilot; coding/typing remains proof-neutral |
+| MM/HC premises | Visible conditional eigenprojection criterion and counterexamples | Native operator, domains, scalar support and complement exclusion must be supplied; dependent inherited uses need audit |
+| Koide | Proved equal-norm criterion, radius/phase decomposition and conditional HC-shaped projection formula; counterexamples to cyclic sufficiency and the fixed-radius degeneracy claim | Native mass-root representation, positivity, HC orthogonality condition and phase/scale law are not derived |
+| HC-to-lepton identification | Proved norm-controlled descent and direct-route obstructions; sector/generation triples distinguished; residual-coupling ansatz has explicit positivity, dual and isotropic-limit tests | No native root map or evaluated generation coupling is supplied; the physical interaction and its Koide law remain unestablished |
+| Generation/closure coupling | Conditional closed odd seeds and a positive transition Gram matrix; slot/eigenmass distinction; cyclic harmonic spectrum, positivity chambers and small-root law; global/relative phase tests | Native common-carrier projector/pacer/seed action, physical mass law, radius/phase selection and absolute scale remain unestablished; no parameter-free spectrum |
+| Native operator link | Exact minimal-penalty Gram compression; conditional closure-transfer obstruction; fixed-spectrum/frame and channel-rank tests; gapped-block elimination and leading mass-magnitude law | Native joint matrix elements, relation between clock and field blocks, positive gap and mass scales are unevaluated; positive induced masses in the zero-direct-block example require states outside the original strict closure sector |
+| Evaluated coupling and scales | Normalized cyclic matrix; two-harmonic Koide bound and flat-gap ratio obstruction; phase/radius sensitivity diagnosis; SI/reference checks; non-flat fit freedom and a direct-block correction bound | Radius and phase hypotheses are not derived; historical mass inversions and non-flat gap fits are post-hoc; the rejected zero-direct-block Planck-gap test does not exclude a general Planck-scale sector or determine native operators |
+| Tensor-shift coupling extension | Generalized positive-metric spectrum; nonunitary chart covariance; comparison-metric fit freedom; absolute scale bound and identity tensor-extension invariance | QAM tag migration preserves numerical payloads; physical input/output tensors are not supplied on the required spaces; fitted shape weights do not derive their law or repair the Planck scale |
+| HC dynamics and geometry | Five proved conditional propositions: root-domain bound, exact projected autonomy, hidden-block inertia, null-preserving coframe and same-frame trace exclusion; real-action/current diagnostics and an off-shell null stress match | Native adjoint/action, allowed variations, target reactions and microscopic/effective geometry identification remain open; the direct same-induced-frame ordered equation is excluded when its mass bilinear is real, not every effective geometry |
+| Zero-kernel | Choice-free set quotient, finite least-code normal forms, precise partial-readout factorization and routed descent criterion; explicit positive finite model | Native admissibility/aspects/recursive filters, all actual readouts/aggregators and full-surface normal forms remain open; no global activation |
+| OP1 exponent | Inverse-identity warning and proved uniqueness for the independently fixed exponent-five ansatz | Exponent, prefactor and lattice origin are not derived |
+| OP5/C5 | Full-sum/regularization obligations separated from detector evidence and the fit dictionary | Native boundary/exterior/mixed residual functions, fixed norms and evaluated guards are still needed |
+| Planck readout | Typed candidate scale `ell_eff(R) = ell_P * lambda_R`, units and orientation/signature separation | No automatic identification between a dimensionless detector threshold and a length scale |
+| Metric/field equations | A positive conformal metric is labelled as an additional ansatz; zero-factor degeneracy and the separate null construction are explicit | Actual readout-to-geometry map, dynamics, conservation and approximation/stability proofs remain open |
+| Induced Einstein/vacuum comparison | Positive regulated Dirac Einstein coefficient; an explicitly added mass-matched scalar comparison selectively cancels the flat vacuum density; dimensional hierarchy and split-mass sensitivity audited | Native real gauge-fixed Hessian, measure/ghosts, physical scales and protection of matching are unevaluated; no twelve-scalar native extension or repaired trace-formula theorem |
+| Closure fluctuation operator | Minimal HC first variation vanishes at exact closure; hard projector tangent restrictions and a full finite constant-background comparison Hessian with gauge/FP checks are evaluated | Hard constraints and soft independent integration must be distinguished; the dagger/real-Euclidean comparison has anisotropic degeneracies, not a native quantized spectrum or physical partner count |
+| Hard-closure transport | Full-master normal norm identity; compatible moving-projector connection, compression curvature and reduced Dirac lift; local source-free finite curvature family | Native resonance blocks and projector motion remain unevaluated; block connection and boundary selection are not fixed by M closure; internal curvature is not a reconstructed spacetime metric |
+
+The working title and PDF metadata identify v4.8.0-r01 as unreleased. The inherited `docversion` remains 4.7.0 so old release statements are not relabelled as new v4.8 results. The v4.7 version DOI is provenance only; no v4.8 DOI is invented.
+
+The new main section `parts/koide-and-kernel.tex` contains eight propositions with proofs, beginning on page 12 and ending with the activation boundary and positive instance on page 16. See [the proof audit](Koide_Zero_Kernel_Proof_Audit.md) for the exact results, counterexamples, fixed historical-input diagnostic and the five native activation obligations. No reviewer-supplied warning or predicted institutional score is declared resolved.
+
+The following `parts/hc-mass-identification.tex` spans pages 16--19 and contains five further proved propositions. It shows why pure compensation of an odd input, symmetric readout of a fixed input and a common-norm closed-triole mass law do not establish the claimed hierarchy. It states the actual linear descent conditions and a separately labelled residual-coupling ansatz. The [identification audit](HC_Lepton_Readout_Identification.md) maps these results to the inherited definitions and isolates the missing generation states/coupling. Historical OP3-closed/P2-confirmed wording does not discharge that obligation.
+
+The subsequent `parts/generation-coupling.tex` spans pages 19--23 and contains eight further propositions. It constructs `S = P T (T* P T)^(-1/2)` and `D_beta = (I-P) R_tilde_beta P` under explicitly stated realization assumptions. It derives a cyclic Brannen-type eigenvalue spectrum and a phase-boundary mechanism for one quadratically small candidate mass, but not the native radius/phase or physical mass law. The written overall pacer phase cancels from this norm readout and the absolute commutator expectation. The [generation-coupling audit](Generation_Closure_Coupling.md) also records the zero expectation on exactly closed inputs, the slot/eigenbasis distinction, the OP2 grading qualification and the unitary-dilation underdetermination example.
+
+The following `parts/native-operator-link.tex` spans pages 23--27 and contains seven propositions. It traces the original projector, pacer and triadic field definitions, compresses the minimal defect penalty into a Millennium-transition Gram matrix, and shows why identifying the clock with an exactly closed Millennium operator algebra would nullify that route. Fixed simple clock spectra do not determine relative eigenvector orientation, while simultaneous unitary transport of projector, clock and seeds preserves mass ratios. A conditional Schur reduction supplies a leading `mu^2 Q / Delta` mass-magnitude law and its exact finite-gap correction, but requires independently supplied Hermitian blocks, canonical kinetics, a positive gap and controlled truncation. Positive induced masses in its zero-direct-block case have nonzero complementary weight, so a dressed light projector differs from strict original closure. The [native-link audit](Native_Operator_Link_Audit.md) gives the source map, proofs' scope and remaining input; no physical mass spectrum has been recovered.
+
+The subsequent `parts/coupling-scale-candidate.tex` spans pages 27--32 and contains six propositions with proofs plus an evaluated three-channel matrix. At the inherited rounded beta and assumed Koide radius, its ascending normalized Gram eigenvalues are approximately `(0.0002366350, 0.0567819436, 0.9429814214)`. No historical lepton mass enters the matrix construction, but the radius and phase law are not derived. Positive flat-gap corrections can only increase the middle/largest ratio, which is already too high relative to the paper's quoted benchmark; no scale-only fit of this fixed shape exists in that model. The follow-up phase/radius inversion and sensitivity analysis locate the discrepancy mainly in the assumed relative-phase law, not matrix arithmetic or decimal rounding. The SI check confirms the Planck energy conversion. A fitted non-flat Planck-gap witness and a direct-block bound separate the failed zero-direct-block test from a general exclusion of Planck-order sectors. The [coupling/scale audit](Coupling_Scale_Determination.md), executable `analysis/Coupling_Scale_Candidate.py` and generated JSON keep all post-hoc inversions, external references and fits distinct from predictions. They do not identify the native operators or determine their physical scales.
+
+The following `parts/tensor-shift-coupling.tex` spans pages 32--35 and contains five propositions. It makes the identity-metric scope of the earlier obstruction explicit. Generalized eigenvalues of `B* H B v=q K v` are covariant even for nonunitary charts; a separate physical comparison can change them. Historical leading ratios can be fitted by output weights `(1.14601907,0.98751126,1)`, but this is a target-derived witness, not a native tensor law. Absolute metric bounds show that the earlier Planck/electroweak test needs a normalization enhancement of at least `7.59e14`, far beyond those modest shape weights. Neither a tag migration nor normalized identity tensor enlargement supplies a physical correction. The same coupling/scale audit and JSON record these distinctions and preserve the current shifted normal form.
+
+The subsequent `parts/hc-dynamics-and-geometry.tex` spans pages 35--41 as Section 8 and integrates the central recent HC results with five propositions and proofs. The full-input root positivity bound is distinct from the Koide ratio. Moving projections retain hidden lifts and memory. A regular collective action can induce inertia but not irreversible viscosity. The null HC kinetic tensor is rank one; ordinary-Hermitian interpretations of the literal and dagger-paired actions are kept distinct, with matrix currents and target reactions stated. A common local probe realizes a curved null coframe and a logarithmic isolated Einstein/HC stress match. Its induced-current divergence is nevertheless 8; the general trace identity `Im(bar(Psi) R)=4/s0-Im w` excludes the additional direct same-induced-frame ordered equation when `w` is real. The result qualifies, rather than silently rewrites, the retained variational/Einstein claims. Eight new integration regressions check inclusion, proofs and all key scope boundaries. No native common solution, physical constant or new mass law is claimed.
+
+## Path to a Release
+
+1. **Source gate:** keep the full-source identity check and current shifted normal form; do not merge the older v3.35-based tree over the later full monolith.
+2. **Correction gate:** replace known incorrect theorem formulations deliberately and audit all dependent uses. The new premise section qualifies them but is not a completed correction of every inherited proof.
+3. **Scale gate:** declare readout, reference length, units, calibration and sign/orientation data. Distinguish the new dimensionless scale coefficient from the native dimensionful tachyon-scale symbol.
+4. **Operator/residual gate:** supply actual domains, represented MM/HC operators and the native C5 residual dictionary. The OP5 working note and relay helper can contribute conditional criteria/regression examples, not substitute synthetic vectors for native data.
+5. **Dynamical gate:** fix the common adjoint, real action, allowed variations and currents; specify the microscopic/effective geometry map and test all tangent and normal equations. The new conditional trace exclusion must not be bypassed by identifying the same induced inverse frame without checking its hypotheses. Fluid or gravitational interpretations are not derived native dynamics until that map exists. A null trajectory is not a zero metric tensor.
+6. **Release gate:** reconcile the resulting statements with the effective/local/global ledger, audit the complete source and render, then make a deliberate version/DOI/publication decision. No upload workflow was activated.
+
+The existing manual QSC LaTeX workflow can target `sources/research` with historical building disabled. The current default modular entry points and frozen release remain unchanged; promoting this working entry to a release/default build is a separate reviewed step.
+
+## Verification and Artifacts
+
+- `scripts/qsc_audit/full_monolith_reading.py check` verifies exact origin coverage, unchanged inherited fragments, unique inclusion and label preservation. The `measure` command rejects stale or unsettled page data and a baseline that fails to reproduce 1,014 pages.
+- The complete audit suite has 1929 passing tests, including 35 Koide/local-kernel checks, 18 HC/mass identification checks, 49 numerical generation/closure/native-link checks, 42 evaluated coupling/scale/diagnosis checks, 18 tensor-shift checks, 20 physical-mechanism checks, 34 triadic-propagator checks, 48 phase-selection/native-HC checks, 58 source/backreaction checks, 60 explicit HC/root-readout checks, 37 root-phase dynamics checks, 40 projected-residual dynamics checks, 37 collective-action checks, 42 null-axis action checks, 42 real-probe/current checks, 59 bilinear-geometry checks, seven prior proof/diagnosis integration regressions, eight new main-text integration regressions, 32 two-frame/common-action checks, 44 background-origin/readout checks, 46 derived-background/curved-parent checks, 32 quantum-state source/gravity checks, 35 common-metric Dirac checks, 35 stress/metric pullback checks, 34 induced-gravity heat-kernel checks, 30 selective-vacuum-balance checks, 38 closure-fluctuation Hessian checks, 35 hard-closure transport checks, 38 global-flux selection checks, 35 existing-load stability checks, 44 dynamical null-closure checks, 44 sourced closure/current checks, 44 massive HC-domain checks, 30 triadic Gauss-compatibility checks, 28 triadic gauge-factorization checks, 30 triadic intertwiner-classification checks, 29 spectral gauge/readout checks, 27 full-triad geometry/readout checks, 36 sourced Cauchy/coframe checks, 51 probe-law revision/curved-current checks, 38 exchange-odd cross-geometry checks, 40 Cartan/coframe parent checks, 38 compatible local-jet checks, 40 joint prolongation/curvature checks, 38 temporal Cauchy-rank checks, 38 spatial-integrability checks, 42 regular-branch gravity/identity checks, 38 remaining-multiplier checks, 34 next-scalar compatibility checks, eight independent covariance checks, 22 regular-neighborhood checks and eight parallel-integration checks; the separate OP5 relay suite has 34 passing tests (1963 total). Expanded follow-ups remain separate analysis notes; their central recent HC results are now condensed in the new main section, not promoted to a determination of the native cause. Explicit native substitution shows that the matching penalty vanishes on `H_C=Lambda`; the earlier affine-cosine selection formula is conditional. A later positive-cone phase minimum belongs to a different constrained-field completion, has a rank-one compensator and does not determine the native source/penalty ratio or masses. Its radius/scale follow-through proves energy descent when those unsupported directions are released; the fixed-radius phase theorem is not full stationarity. The quadratic root candidate requires independent antiunitary/readout alignment and metric transfer; a sharp full-input positivity bound excludes its isometric `eta=1` choice without a restricted physical domain. The phase follow-through proves conditional gradient-flow preservation and subbarrier inertial trapping, but a freely complex canonical extension has a transverse saddle at the angular minimum. The exact formal projected equation includes moving extraction and hidden-lift forces; a fixed linear autonomous real two-mode generator cannot preserve all three chambers with nonzero phase velocity. The joint conservative mode action retains hidden canonical partners and can induce second-order inertia; its apparent angular damping is reversible exchange, not viscosity. Normal-equation tests show that reduced stationarity is insufficient for full-field closure. Native nonlinear feedback or a selected branch is not excluded. The actual native field profiles, projected operator action, normal equations, domain preparation and physical time/energy coefficients remain unproved. Fixed-clock countermodels show HC channel balance is not root norm balance. Probe/curvature forces and independent native shape/scale support require their own evaluation. The calculations use the already installed NumPy, mpmath and SymPy routines; no package was installed for this work. These are structural, algebraic and finite-model checks, not proofs of native physical closure or a formal proof-assistant certificate.
+- The [null-axis action follow-up](HC_Null_Axis_Action_Check.md) derives a rank-one compensator kinetic tensor from the printed connection and diagnoses a conditional relative electric-sign problem for an ordinary Hermitian reading of the literal trace action. An explicitly different real paired-action candidate has derived gauge and HC equations, with noncommuting constant-field variations checked independently. Its existing-penalty homogeneous oscillator has an unevaluated coupling-ratio frequency, not a native particle mass or viscosity. Which normal equations apply depends on the actual field space and real action; a parent-connection counterexample must not be mistaken for an automatic failure of native Hermitian variations. No native action correction is silently made.
+- The [real-probe/current continuation](HC_Real_Probe_Current_Closure.md) derives the candidate's probe sources and Ward identity with external-target reactions retained. A real symmetric probe action, a raw norm-changing transport law and a moving kinetic comparison are distinct interpretations. A positive return model supplies one nonunique open completion, not a native reservoir. Strong positive bundle compatibility excludes nonzero pure Hermitian HC curvature, not arbitrary full noncommuting/indefinite native geometry. The actual physical adjoint, projector/background reactions and common solution remain unresolved; no native action change is adopted.
+- The [bilinear-geometry continuation](HC_Bilinear_Geometry_Bridge.md) derives the real HC contribution to the existing coframe, an exact null-preserving metric update and a common-probe curved local realization. A logarithmic profile solves an isolated Einstein/paired-HC stress matching equation. The follow-through strengthens the remaining gap: the unchanged probe has induced-current divergence 8, so an internal gauge field alone cannot complete it. A pointwise trace identity excludes the real full-rank coframe plus the same-induced-frame ordered master equation when the mass bilinear is real. Reference/induced-gamma negative controls prevent overgeneralizing this conditional exclusion to every native coarse-grained geometry. Direct probe-dark null alignment and the isolated stress match remain off-shell, not native gravitational closure.
+- Machine-readable measurements are in `analysis/V480_Full_Monolith_Metrics.json`. Baseline/research build files are under `build/full-v470-baseline/` and `build/v480-reading-audit/`.
+- The subsequent [two-frame/common-action analysis](HC_Two_Frame_Action_Bridge.md) remains outside the main TeX. It proves a mixed-frame trace condition and multiplier backreaction, then solves a local family of an explicitly changed affine-coframe neutral massless parent. Its 32 tests include the full declared probe/scalar/coframe/metric equations and mass, charge and penalty restoration failures. The added background and omitted native sectors are not adopted corrections. The main source hash and 1,037-page measurement remain unchanged by this continuation.
+- The following [background-origin/readout analysis](HC_Background_Coframe_Origin.md), also outside the main TeX, finds the prepared ART/QFT cross-bilinears and constructs local nondegenerate backgrounds from an exact Hermitian three-channel reference-Dirac solution with its intrinsic mediator. Channel exchange balances globally; the full original coframe remains degenerate in the sample. The exact background expansion retains linear and connection cross terms. Its 44 tests do not establish a native background-state/readout selection, C7 embedding or gravitational solution. The main source and page measurements are still unchanged.
+- The subsequent [derived-background curved parent](HC_Derived_Background_Curved_Parent.md) varies the probe-derived frame and axis potential and solves all equations of one declared neutral local comparison. The nonzero independent-axis reaction has a vanishing divergence, so its allowed scalar-potential equation is satisfied. Independent metric jets, curvature and action variations are checked. The native HC current misses the fixed null target even with arbitrary Hermitian internal weights, and the effective null axis is not reference-null. A uniform bound excludes repairing the reference-dark mechanism by rotating only the background-null update axis on the selected cross-readout patch. These are conditional identification obstructions, not a universal native no-go. Its 46 checks do not establish gauge/closure completion or universal gravitational coupling; the reference probe mass energy does not source the effective metric in this comparison. The main source/PDF are unchanged by this follow-up.
+- The following [quantum-state source comparison](HC_Quantum_State_Gravity.md) derives scalar stress from its metric-dependent action and computes a massive one-particle coherence/mixture comparison at fixed mass and total energy. Only the conserved zero-mean interference source has an explicit first-order metric response; the diagonal positive source is not solved. A separately added massless scalar sources the neutral parent through a Helmholtz profile and yields an exact local enlarged-parent branch. Its 32 tests include Fock operators, action variations, the full linear Einstein tensor, sourced curvature and mass-restoration failures. No native carrier, full renormalized quantum stress, universal coupling or original massive-probe completion is claimed. The main source/PDF are unchanged by this analysis.
+- The subsequent [common-metric Dirac analysis](HC_Dirac_State_Gravity.md) adds no scalar carrier, retaining the existing finite Hermitian triadic coupling while changing to an independent effective metric coupled to the same real Dirac action. Its mass trace rules out the unchanged pure-null geometry for the selected positive-energy source. A local weak metric solves both diagonal and interference stresses; a matrix-exponential forced-mode construction computes the spinor reaction. Its 35 tests check all first-order equations and quadratic full-equation remainders, plus a fermionic Fock source, the old-background failure and the unsatisfied native bilinear coframe. This is a local first-order comparison, not an exact nonlinear/native/renormalized quantum solution. The main TeX/PDF remain unchanged.
+- The following [stress-to-metric pullback](HC_Stress_Metric_Pullback.md) derives a weak nonlocal probe functional conditional on the assumed Einstein response and specified gauge/Green/boundary data. Its 35 tests check complete reduced-action normalization and the common Dirac reaction, the factor-of-two error of matter-only substitution, a source-preserving free tidal wave with its computed reaction, and retarded-action symmetrization versus a doubled-history prescription. The periodic variational example omits and records the constant source; it is not a full-source or retarded solution. The native local coframe, tensor/frame meaning and microscopic origin of the Einstein kernel remain unresolved. No main-TeX/PDF change is made.
+- The subsequent [induced-gravity heat-kernel calculation](HC_Induced_Gravity_Heat_Kernel.md) derives a positive regulated Einstein coefficient from a parity-even triadic Dirac determinant on an assumed Euclidean spin metric. An independent exact S4 spectrum checks its sign and normalization. The same calculation yields an unsuppressed vacuum density and a conditional lower bound on the Einstein-truncated cosmological coefficient for pure Dirac matter; the implied large curvature is outside that truncation, not a solved vacuum. Its 34 initial checks include proper-time quadrature, window/scaling identities, phase invariance, vacuum bounds and counterterm freedom. Thirty more checks cover an explicitly added scalar comparison that cancels the flat vacuum density while retaining an Einstein term, its required mass multiplicities, curvature-coupling boundary, split-mass sensitivity and a finite-moment counterexample. The native J split does not identify these partners, and the tested HC principal tensor is not an ordinary four-dimensional scalar operator. The inherited unit-artifact argument fails its dimensionless `Lambda ell_P^2` check. The native trace-formula claim still lacks its metric-dependent elliptic operator and continuation; the bilinear Einstein proposition assumes the leading geometric term and needs a density/curvature normalization distinction. No native metric, physical scale, protected vacuum cancellation or main-TeX/PDF correction is claimed.
+- The following [closure-fluctuation Hessian analysis](HC_Closure_Fluctuation_Hessian.md) supplies native minimal-closure Taylor identities and a complete finite bosonic Hessian for an explicitly different Euclidean dagger comparison. Hard `H=Lambda` gives no independent first-order HC fluctuation on the closed background; fixed-M hard closure removes cross-block projector tangents unless the spectra overlap. Independent soft fields retain coupled background/gauge terms and an exact quadratic FP identity, but their central HC heat spectrum lacks a parallel ultraviolet derivative. Its 38 checks include exact projector paths, the independently evaluated nonlinear action, principal/full ranks and a massless Maxwell+ghost negative control. The real action, integration domain, constraints and causal/elliptic operator still require a native choice; no scalar-partner identification or main-TeX/PDF change is claimed.
+- The subsequent [hard-closure transport analysis](HC_Hard_Closure_Transport.md) supplies a full-master normal norm identity and shows why the connection and triadic resonance need preservation conditions beyond `[M,P]=0`. An explicit compatible connection yields compression and reduced-probe identities. A degenerate finite two-channel source-free family preserves the same P with H=0 while allowing both zero and nonzero internal curvature, so the block connection remains independent data. Its 35 checks include exact jets, normal leakage, actual resonance residuals, operator lifts, loop holonomy and fourth-order canonical projector energy. The empty probe does not induce a nondegenerate metric; the actual C7 realization, global/boundary selection, constrained quantization and vacuum matching remain open. No main-TeX/PDF correction is claimed.
+- The following [global flux selection](HC_Global_Flux_Selection.md) proves a conditional fixed-projector selection on an assumed round S2: nonzero line-bundle flux forbids a flat compatible connection, and the positive curvature functional selects uniform flux and a block connection modulo gauge. A nonuniform degree-one projector gives an explicit compensating block term. Its 38 checks include patching, integrated matrix curvature, exact energy scaling, a positive constrained Hodge Hessian and an off-constraint negative mode. The image-bundle charge remains fixed even when the ambient connection becomes flat and incompatible. The actual native projector/class, admissibility, hard integration domain, full real action and physical metric/scales are still missing. This is not an unconstrained stable vacuum or a main-TeX/PDF correction.
+- The subsequent [existing closure-load audit](HC_Closure_Load_Stability.md) keeps the printed `eta Qn` coupling on an assumed R1,1 x S2 geometry. Fixed closed matching data make the two potential penalties vanish without forcing covariant projector preservation. The load supplies nonzero null mixed curvature and a conditional dagger stress, but its scalar contraction vanishes and its static printed-equation correction starts quadratically in leakage. Its 35 checks include full connection derivatives, independent metric variation, curved-coordinate resonance residuals, and the pairing-dependent real-Euclidean path threshold. The latter is neither a derived Wick rotation nor a full-field/native stability or mass result. The action/adjoint, actual constraints, C7 admissibility and source/metric reactions remain unresolved; no extra interaction or main-TeX/PDF correction is adopted.
+- The following [null-axis dynamical closure](HC_Null_Axis_Dynamical_Closure.md) proves a conditional pointwise hard-transport constraint from the printed complex normal equation, not from the potential penalties. A two-polarization calculation retains all connection components and the projector variation in two explicitly real comparison actions. Its 44 checks include nonsymmetric unitary angular jets, complete matrix residuals, independent real/imaginary Euler variations, linear growth and an exact conservative pulse admitted by the real comparisons but excluded by the printed complex equation. The zero-current/fixed-normal sector, actual adjoint/action choice, sourced constraint propagation, C7 carrier and metric/scales remain unestablished natively. This is neither a general superselection theorem nor a main-TeX/PDF correction.
+- The subsequent [sourced closure/current calculation](HC_Sourced_Closure_Current.md) proves fixed-M hard-closure trace-gradient identities and a conditional trace/support obstruction to direct Hermitian source insertion. A compatible unitary action-derived source instead admits a local charged massless branch in which the same probe solves its spin-covariant Dirac equation and sources the internal connection, including the central Gauss flux. Its 44 checks retain matrix currents, independent variations, spin transport, current conservation, a trace-matched wrong-block axis control and mass-restoration failure. The U(2)/massless carrier and separation of internal and spin curvature are declared comparison choices, not a native massive C7 or gravity identification. Global spin/finite-energy data, native source/adjoint/action and metric reactions remain open; the main TeX/PDF are unchanged.
+- The following [massive HC continuation](HC_Massive_Soft_Closure.md) constructs local massive charged real-comparison branches instead of freezing the massless fields. The independent soft system has a nonzero scalar HC source, an explicit positive-H Picard box, full gauge/probe/HC equations and a conserved spatial first integral. A distinct hard-dependent reduction keeps gamma nonzero but eliminates the independent H equation; its formal matching multiplier supplies the excluded-direction reaction. Its 44 checks include separate mpmath agreement, analytic bounds, full matrix/spin variations, cone-boundary controls and the nonzero ordered/complex residuals on the soft branch. The native domain/action, physical mass and carrier, temporal stability and metric/global boundary completion remain open. No main-TeX/PDF correction is adopted.
+- The next [triadic Gauss-compatibility calculation](HC_Triadic_Gauss_Compatibility.md) derives a matrix Ward constraint and its propagation through the remaining spatial connection equation. A prepared positive triadic eigenmode lifts the hard massive comparison onto the same prescribed curved product background with its own Picard bounds. Thirty checks include nonzero-torque initial data, trace/basis negative controls, stabilizer projections, full matrix/spin residuals and the separate sector gate: a third component excluded by the closure projector invalidates that eigenmode. Neither the larger carrier nor the fixed finite resonance is identified with native C7/M16, and dynamical torque sources, the action domain, physical scales and metric/global completion remain unresolved. Main TeX/PDF are unchanged.
+- The following [triadic gauge-factorization analysis](HC_Triadic_Gauge_Factorization.md) locates the source's closed-whole-triad and distinct probe/channel/color roles. It derives an intertwiner criterion and the gauge-projected Ward equation. An identical-representation coherent multi-eigenmode comparison solves the sourced curved product equations with the full-trace multiplicity three retained; the unprojected matrix equation deliberately stays unsolved. Its 28 checks include independent matter/curvature variations, local Picard/Taylor bounds, separate ODE agreement, nonzero internal torque and conserved projected current. Native channel charges, C7 embeddings, the actual resonance algebra, action domain and physical geometry/scales remain unevaluated. No main-TeX/PDF correction is adopted.
+- The subsequent [triadic intertwiner classification](HC_Triadic_Intertwiner_Classification.md) proves conditional relative representation equivalence and reduces invertible fixed links to root Gram/cycle commutants. Its 30 checks distinguish the extra fixed-label assumption from resonance invariance alone, anisotropic/singular links, scalar-cycle spectral changes and noncentral loop restrictions. A simultaneous local channel-basis change preserves the coherent sourced curved comparison only with the connection, mass operator and gauge embedding transported consistently. This is not a physical frame shift or native gauge/charge/C7 identification; the source's general readout maps are not silently replaced by fixed projectors. Main TeX/PDF are unchanged.
+- The following [cross-readout/spectral gauge calculation](HC_Spectral_Gauge_Completion.md) derives a conditional common-factor criterion from the source's existing ART/QFT cross-bilinear without separately fixing channel-label projectors. A covariantly transformed readout instead admits a larger declared fixed-resonance algebra; unequal sources make the common connection an inconsistent generic truncation, and a local spectral-field completion supplies their distinct responses. Its 29 checks include the fixed/covariant observable distinction, independent action normalization, identical initial full fields, signed-mode existence/ODE checks and all projected curved equations. Neither readout contract nor comparison algebra is identified with the native gauge law, C7, physical masses or metric backreaction. Main TeX/PDF are unchanged.
+- The subsequent [full-triad geometry/readout audit](HC_Gauge_Invariant_Geometry_Readouts.md) distinguishes the complete native coframe from the additional bare ART/QFT selector. In the factorized comparison the full metric is internally invariant without selecting the smaller gauge group, but the stationary sourced branch has a proved rank-at-most-one real coframe and does not induce its prescribed product metric. Its 27 checks include a nondegenerate cross-metric covariance control, selector commutants and internally invariant quartic/sextic current diagnostics, with spacetime/scaling/rank and quantum-interpretation limitations retained. The prior same-induced-frame trace obstruction remains relevant; no native coframe replacement, gauge selection or geometric completion is adopted. Main TeX/PDF are unchanged.
+- The next [sourced Cauchy/coframe construction](HC_Sourced_Cauchy_Coframe.md) uses spatial spin/current structure to prove local full rank in an explicitly changed flat-reference common-U(1) Maxwell--Dirac comparison. Analytic normal-form existence, exact Gauss/evolution/continuity jets and gauge backreaction are retained. Its 36 checks also establish the exact `E=d(j/2)` flatness limitation and reproduce the nonzero same-induced-frame Dirac/current obstruction. This is not a continuation of the Hopf flux sector, native C7 identification, Einstein solution or main-TeX/PDF change.
+- The next [probe-law revision and curved-coframe audit](HC_Probe_Law_Revision_Audit.md) verifies the relevant active source versions and distinguishes the surviving structural HC projector from its vanishing visible defect. Its 51 checks derive and independently vary the general real probe action, construct a curved same-coframe triple kept off shell, compare a conserved background Dirac solution, and test half-density transport and projector compression. Under the stated compatible HC-free same-coframe hypotheses, the current is homothetic with divergence eight, which locally phase-blind composite reactions do not cancel. A represented orthogonal/unitary core can retain internal curvature without supplying the missing real contribution. No superseding evaluated native law is found in the audited source blocks; no native equation, main TeX or PDF is replaced.
+- The subsequent [exchange-odd cross-geometry analysis](HC_Antisymmetric_Cross_Geometry.md) tests a new constitutive candidate built from both existing cross-readout directions. Its 38 checks establish curved rank-four reference readout data, distinguish the still-degenerate sourced branch and failed own-spin substitution, and derive the additional parent phase current and a nonempty positive temporal kinetic domain. The quadrature-locked kinetic limit has a volume/pure-trace-stress restriction and is not preserved by the prepared mediator. The readout choice, normalization, gauge-reference reaction and full coframe/multiplier/probe/gauge/metric solution remain obligations; no native coframe or main TeX/PDF is replaced.
+- The next [Cartan/coframe parent analysis](HC_Cross_Cartan_Parent.md) derives all four independent Euler equations in an explicitly added neutral first-order Einstein-Cartan comparison. Its 40 checks cover direct Palatini/probe/multiplier/coframe variations, the nonzero LC chain reaction, an exact spacelike rank-nine Schur criterion and a compatible algebraic control. The unchanged curved reference jet violates the transverse connection/constraint compatibility condition; allowing torsion or rescaling the Einstein coefficient cannot repair those fixed data. This does not exclude a new branch or the correctly varied LC-restricted action, neither of which is solved here. Native action/adjoint, gauge/HC/C7 identification, differential completion, positivity, scales and global data remain open. No main TeX/PDF change is adopted.
+- The subsequent [compatible local Taylor-data construction](HC_Cartan_Compatible_Jets.md) retains that neutral parent, M and Q while changing the state and its derivatives. Its 38 checks establish the weighted-mass compatibility identity, numerically complete all four point Euler equations and the first constraint derivative, and retain multiplier gradients, symmetric mixed derivatives and independently checked sourced curvature. A positive temporal ball is bounded analytically for the Taylor fields, while explicit off-shell remainders rule out mistaking those fields for a solution. Full Cauchy-surface data, higher-order coframe/curvature matching, propagation and local evolution, native adjoint/gauge/HC/C7 identification and physical scales remain open. No main TeX/PDF change is adopted.
+- The following [joint Cartan prolongation](HC_Cartan_Prolongation.md) derives the exact weighted scalar identity and its frozen-lower-jet obstruction. Re-solving the free higher data with the same parent, M, Q and first Psi jet gives a numerical full 404-equation completion through second coframe-constraint and first probe/coframe-Euler derivatives. Its 40 checks retain independent Hessian/source reactions, symmetric mixed derivatives, pointwise cross/E metric curvature matching and positive temporal weights. Explicit cubic constraint and quadratic probe/geometric remainders show that the Taylor fields are not evolved solutions. Formal compatibility at all orders, Cauchy-surface data/propagation, interval certification, convergence and native action/gauge/HC/C7/scale identification remain open. No main TeX/PDF result is adopted.
+- The next [temporal Cauchy-rank audit](HC_Cartan_Cauchy_Rank.md) derives the antisymmetric temporal constraint block and exact Pfaffian criterion, showing that positive probe weights do not remove the lambda=0 rank degeneration. Its 38 checks retain the full normal equations, a failed next scalar gate on the frozen prior jet, independent differences and a re-prepared regular point with the same M/Q/action. The regular probe block does not close spatial constitutive/gravitational constraints or the remaining multiplier/gauge evolution; the new point is not surface data or a higher-order extension of the old jet. No physical instability, native identification, full Cauchy existence or main-TeX/PDF result is claimed.
+- The subsequent [spatial-integrability audit](HC_Cartan_Spatial_Propagation.md) derives the 24 curl conditions and a constructive rank-four principal-map criterion for first coframe-constraint completion. Its 38 checks retain failed frozen-first-jet controls, six added normal restrictions plus six lower-data compatibility projections, and a re-prepared regular point completing all original point equations and first constraint/probe derivatives with unchanged couplings. The appended normal block still has a sixteen-dimensional kernel and a rank-six projection onto spatial-multiplier velocities. First gravitational derivatives, second constraints, a closed gauge/multiplier evolution, full surface data/propagation, native identification and scales remain open. Main TeX/PDF are unchanged.
+- The next [regular gravitational prolongation](HC_Cartan_Regular_Gravity.md) retains the nonzero multiplier-value term in the second Cartan derivative. Its 42 checks support a joint 384-equation completion through first gravitational/probe/coframe derivatives and second coframe constraints on the same regular lower point, with independent pointwise cross/E curvature matching. Explicit 24 curl, 24 Lorentz and four coordinate row identities account for rank 332; ten leading normal gauge directions are exhibited, but a six-dimensional normal quotient and rank-six spatial-multiplier velocity projection remain unresolved. A frozen prior second-jet control fails, and cubic/quadratic off-shell remainders prevent an evolution claim. Higher consistency, complete gauge/multiplier closure, Cauchy data/existence, native identification and physical scales remain open. Main TeX/PDF are unchanged.
+- The [parallel regular-Cartan follow-up](HC_Cartan_Parallel_Research.md) adds 110 tests across the six-direction multiplier quotient (38), next scalar gate (34), independent covariance/complete gauge-jet review (8), temporal-neighborhood estimates (22) and cross-result integration (8). The quotient splits into three axial source nulls and three coframe/contorsion compensations, not six established gauge symmetries or physical modes. The new scalar identity supplies ten additional independent Hessian conditions; re-solving the free higher data retains all 394 equations with unchanged lower data/couplings. Analytic temporal-block estimates are recomputed on that completion, not inherited or promoted to full PDE rank control. The independent review preserves the distinction between matched metric LC curvature and nonidentical sourced Cartan curvature. All results remain pointwise/finite-jet comparison results, not full Cauchy propagation/existence or native identification. Main TeX/PDF are unchanged.
+- The local preview is `build/v480-reading-audit/v480-companion.pdf`, now 1,037 pages. The built-in single-file compiler was attempted but cannot resolve this project's included chapter files; the complete project was rebuilt locally with the existing MiKTeX installation, package installation disabled and shell escape off. The final layout run has no unresolved references, undefined citations, duplicate destinations or outstanding rerun request. Both the baseline and the working route report 58 overfull boxes and one inherited, tolerated `Infinite glue shrinkage` split-box diagnostic. The research compiler run exits successfully despite that ignored diagnostic. No new overfull box remains in the HC integration. This is not a warning-free typesetting claim or a visual audit of all 1,037 pages.
+- Newly authored frontmatter, premise/integration pages and representative main/support/late-v4 transitions were rendered for visual checks. The Koide/local-kernel section was inspected on pages 12--16; the HC/mass identification section and its transition on pages 16--20; the generation-coupling section/transition on pages 19--24; the native-link section/transition on pages 23--27; the coupling/scale section/transition on pages 27--31; its matrix/Planck diagnosis and transition on pages 30--33; and the tensor-shift/metric extension and transition on pages 32--35. The new HC section and its transition were inspected on pages 35--41 after correcting its kinetic-formula overflow. Sample images are under `build/v480-reading-audit/visual-check/`; these build artifacts are intentionally not committed as source.
+
+Frozen source SHA-256: `0b74890e4f5d8ebbfd4820a4ff7bb44a621c61655720a9021e3c42d6d115e803`.
+
+Canonical LF source SHA-256: `019e7a35adb3e299b1eed7e5310397d922d18575fe8a5122c3b448cf1a383329`.
+
+## Next Frozen-Jet Gate (2026-10-18)
+
+The follow-up [third-constraint diagnostic](HC_Cartan_Third_Constraint_Diagnostic.md)
+retains the saved 394-completion and fits only the new psi4/E4/lambda3 variables.
+The spinor-image rank 140 and 180 compatibility conditions are derived from
+symmetry. The added connection-response quotient has numerical rank 135 and
+leaves full C3 residual about 26799.511. Independent displaced-field checks
+validate the highest-jet map. The separate
+[second-probe diagnostic](HC_Cartan_Second_Probe_Diagnostic.md) finds frozen R2
+norm about 10453.163 despite the solved scalar Hessian. These results do not
+replace the earlier completion with a successful higher solution: the chosen
+earlier higher jets need joint re-preparation. Full FE2 and native identification
+remain open. Main TeX/PDF are unchanged. The earlier recorded suite totals refer
+to the previous committed research state, not this added diagnostic stage.
+
+Verification of this working checkout: 1,960 audit tests plus 34 separate OP5
+checks passed (1,994 total), including 18 new third-constraint tests and seven
+second-probe tests. Six audit tests belong to the pre-existing, unrelated
+uncommitted metadata-hygiene work; excluding them, the research scope is 1,954
+audit tests plus 34 OP5 checks (1,988). The full-monolith preservation check and
+`git diff --check` also passed. No new commit, push or PDF build was performed.
+
+## Joint Next-Derivative Completion (2026-10-18)
+
+The next [analytic C3 re-preparation](HC_Cartan_Third_Constraint_Reprepare.md)
+repairs that frozen obstruction by changing lambda2/E3/psi3 while keeping psi2
+and the lower point/couplings fixed. The separate
+[joint completion](HC_Cartan_Next_Joint_Completion.md) then includes the full
+second probe and independent-coframe Euler equations, not only the scalar gate.
+Its 974-by-1840 affine system has numerical rank 681. Every one of the 1114
+packed real components is re-evaluated without the solver projection, giving
+total norm 5.38e-10; the old 394 norm remains 4.78e-11. The old frozen diagnostic
+remains a valid negative control for its fixed data, not a general obstruction.
+Independent R2/FE2 derivations and actual-field remainder checks are retained.
+There is no full constraint propagation, neighborhood/existence or native
+identification claim. In particular the previous neighborhood bound must be
+recomputed for the changed higher coefficients. Main TeX/PDF are unchanged.
+
+Verification of this subsequent stage: all 1,992 audit tests plus 34 separate
+OP5 checks passed (2,026 checkout checks). This adds 11 C3 re-preparation,
+five analytic R2, six analytic FE2 and ten joint-integration tests. Six of the
+audit tests still belong to the pre-existing unrelated uncommitted metadata
+work; the research-scope total excluding those is 1,986 plus 34 = 2,020.
+The full-monolith preservation and whitespace checks passed. No commit, push
+or PDF build was performed.
+
+## Joint Coefficient Domain and Normal Cone (2026-10-18)
+
+The [updated quartic neighborhood](HC_Cartan_Joint_Neighborhood.md) recomputes
+the changed finite Taylor fields rather than inheriting the previous ball.
+The conservative dyadic radius is 1/16384, with temporal probe lower margin
+0.96800847 and derived constraint singular margin 0.025576865. Geometric norm
+bounds retain timelike coordinate dt and spacelike t=constant slices.
+The independent [Cartan regularity](HC_Cartan_Joint_Cartan_Regularity.md)
+derives the exact Hessian congruence and gives singular lower margin about
+0.9999999821 on that same ball. The [tilted-normal estimate](HC_Cartan_Joint_Normal_Cone.md)
+controls the normalized 28-real-dimensional partial probe/constitutive block
+for spatial normal slopes up to about 0.0002377643. The required n_mu factors
+and spatial multiplier columns are retained. All 1114 origin residuals remain
+unchanged. These are coefficient estimates with floating inputs, not uniform
+field-equation solutions, interval certificates, full-symbol hyperbolicity or
+constraint propagation. Main TeX/PDF and release artifacts are unchanged.
+
+Verification of the coefficient-domain stage: 2,026 audit tests plus 34 separate
+OP5 checks passed, for 2,060 total. The 34 new tests comprise 16 quartic
+neighborhood, ten tilted-normal and eight independent Cartan-regularity checks.
+The metadata tests are now part of the committed baseline, so no uncommitted
+metadata-test subtraction applies to this count. Full-monolith preservation
+and whitespace checks passed. No new commit, push or PDF build was performed.
+
+## Conditional Gravitational Constraint Propagation (2026-10-18)
+
+The [coordinate residual identity](HC_Cartan_Diffeomorphism_Residual_Identity.md)
+and [independent Lorentz audit](HC_Cartan_Lorentz_Residual_Identity.md) supply the
+off-shell source terms of the added neutral Cartan comparison. Neither drops
+the nonzero probe or constitutive residuals. Only assuming R=F=0 on an OPEN
+region yields a symmetric, LC-divergence-free gravitational Euler density.
+The [subsidiary construction](HC_Cartan_Gravitational_Subsidiary.md) and its
+[independent analytic derivation](HC_Cartan_Constraint_Propagation_Derivation.md)
+then show conditional zero propagation for four gravitational constraints,
+given spatial trace-reversed evolution, regular coefficients and no incoming
+constraint flux. The positive symmetrizer is diag(1,h^-1); the naive spatial
+Euler choice has a non-diagonalizable nilpotent control symbol. Tests cover
+general-shift projection, the full lower terms and the exact local energy law.
+R/F propagation, full parent reduction/existence and native identification
+remain open; the saved Taylor fields do not satisfy the open-set hypotheses.
+The LC derivative in this residual argument does not equate sourced Cartan
+curvature to metric LC curvature. Main TeX/PDF and release files are unchanged.
+
+Verification of the conditional propagation stage: 2,056 audit tests and 34
+separate OP5 checks pass, for 2,090 total. Thirty new tests cover nine coordinate
+Ward, eight Lorentz residual and thirteen subsidiary/energy checks. The
+full-monolith preservation and whitespace checks pass. No commit, push or PDF
+build was performed.
+
+## Constitutive Transport Closure Audit (2026-10-18)
+
+The [transport audit](HC_Cartan_Constitutive_Transport.md) and its
+[independent derivation](HC_Cartan_Constitutive_Transport_Derivation.md)
+derive the exact coordinate identity partial_t F_i=partial_i F_0+J_0i,
+where J=dC-dE. The symmetric spinor Hessian cancels from J. Twelve mixed
+curls add six effective conditions to the normal block (rank 34 to 40).
+A new witness based on the latest joint point keeps the 56 original point
+equations below 2e-14 and all first spatial F derivatives below 2e-13,
+but has nonzero temporal spatial-column drift. Its deliberately nonzero
+frozen-higher first probe derivative is retained as a negative control.
+This is a point-jet non-implication, not a full PDE counterexample. Closure
+of the mixed-curl/probe/multiplier system remains necessary before removing
+the open-set hypotheses of conditional gravitational propagation. No native
+action, physical scale, main TeX/PDF or release artifact was changed.
+
+Verification of the transport stage: all 2,068 audit tests plus 34 separate
+OP5 checks passed, for 2,102 total, including twelve new transport tests.
+Full-monolith preservation and whitespace checks passed. No commit, push
+or PDF build was performed.
+
+## First Constitutive Closure (2026-10-18)
+
+The [first closure calculation](HC_Cartan_Constitutive_First_Closure.md)
+adds full R1 and FE1 to the spatial/temporal-column constitutive first jets.
+The [independent Ward derivation](HC_Cartan_Constitutive_Ward_Gates.md)
+identifies three necessary contractions ell_a X_ai=0; differentiated Lorentz
+identities add no rows here. The 212-by-742 affine system has numerical rank
+175. Its mixed-defect image has rank three, down from the original six.
+A new finite witness satisfies all original point equations and every
+imposed first derivative equation while retaining defect norm 0.0484821.
+Its nonzero unimposed second constitutive derivative is explicitly retained.
+This is not an open-set solution, complete propagation disproof or physical
+mode count. Action coefficients and spinor value/first jet are fixed; main
+TeX/PDF and release files are unchanged.
+
+Verification of this first-closure stage: all 2,083 audit tests and 34
+separate OP5 checks passed (2,117 total), including fifteen new closure
+checks. Full-monolith preservation and whitespace checks passed. No commit,
+push or PDF build was performed.
+
+## Second Constitutive Compatibility and Coordinate Gate (2026-10-18)
+
+The [second closure audit](HC_Cartan_Constitutive_Second_Closure.md) adds full
+F2 with psi3 free to vary. Its 372-by-1222 affine system has numerical rank
+335 and retains a rank-three mixed first-curl image. The independent
+[principal symmetry audit](HC_Cartan_Second_Constitutive_Symmetry.md) shows
+that psi3 has rank 80 on the 160 F2 components, with 80 compatibility rows.
+The [next coordinate Ward derivative](HC_Cartan_Second_Coordinate_Ward_Gates.md)
+then supplies a conditional exclusion: nine spatial derivatives of full
+gravitational Euler divergences, together with the earlier hypotheses and
+an invertible multiplier/spatial-gradient matrix, force the remaining
+mixed defect to zero. The smallest stored matrix singular value is about
+0.00866071. Actual FE2 and independent E4/lambda3 changes retain the forced
+nonzero divergence of a nonzero-defect witness. The proof needs R1 but not
+R2. This is a necessary finite-jet compatibility result, not a closed
+regional evolution or full constraint propagation theorem. Main TeX/PDF,
+action coefficients, spinor value/first jet and release files are unchanged.
+
+Verification of the second-compatibility stage: 2,108 audit tests plus 34
+separate OP5 checks passed (2,142 total), including seventeen enlarged
+closure/Ward tests and eight independent symmetry tests. Full-monolith
+preservation and whitespace checks passed. No commit, push or PDF build
+was performed.
+
+## Regional Ward Scope and Second Lorentz Gate (2026-10-18)
+
+The [regional scope audit](HC_Cartan_Ward_Regional_Nonclosure.md) keeps the
+F2 source terms. A smooth necessary-Ward-system control has zero initial
+residual jets but nonzero later F with a uniformly invertible temporal
+multiplier gate. F is prescribed rather than reconstructed; its multiplier
+background differs from the saved parent spatial jets. It is therefore no
+parent solution or parent nonuniqueness counterexample. The independent
+[second Lorentz gate](HC_Cartan_Second_Lorentz_Transport_Gates.md) instead
+uses the actual point and has rank 12 on twelve mixed components, conditional
+on regional F_0=0, mixed R2/FE2 and other stated lower hypotheses. It avoids
+full F2=0 there, but its spatial F2 source returns away from the special
+zero-spatial-multiplier locus. The parent still needs an Euler-based reduced
+evolution and a closed sourced subsidiary estimate. No main TeX/PDF, native
+action, physical scale or release artifact was changed.
+
+Verification of the regional-scope stage: all 2,124 audit tests plus 34
+separate OP5 checks passed (2,158 total), including sixteen new smooth
+residual/gate tests. Full-monolith preservation and whitespace checks
+passed. No commit, push or PDF build was performed.
+
+## Actual Normal Source Reduction (2026-10-18)
+
+After commit afcbfed was pushed, the [normal reduction](HC_Cartan_Normal_Source_Reduction.md)
+returns to the actual parent normal equations plus their twelve mixed-curl
+consequences. The 68-by-56 map has rank 40, 28 left compatibility rows and
+an explicit 10-leading-gauge plus 6-unresolved-source kernel split. Its
+[independent derivation](HC_Cartan_Normal_Source_Reduction_Derivation.md)
+gives the compatible pseudoinverse formula with all source coordinates
+exposed. Thirteen tests cover exact reconstruction identities, actual
+equation recomputation and rejection of incompatible targets to declared
+numerical tolerance. Every remaining source direction is detected by the
+CURRENT frozen-higher 384-equation response. This is not a full gauge or
+physical-mode classification, a proved zero-source closure or a regional
+PDE evolution. Main TeX/PDF and native/physical identifications are unchanged.
+
+Verification of this post-push normal-source stage: all 2,137 audit tests
+plus 34 separate OP5 checks passed (2,171 total), including thirteen new
+checks. Full-monolith preservation and whitespace checks passed. Commit
+afcbfed was already pushed before this stage; these subsequent additions
+remain uncommitted, with no later push or PDF build.
+
+## Normal Sources and Tangential Jet Data (2026-10-18)
+
+The [higher-source compatibility calculation](HC_Cartan_Normal_Source_Compatibility.md)
+eliminates 1200 higher increments: their rank-332 response absorbs all six
+sources at the current 384-row order. Preserving the finite tangential E,
+E_t, psi and lambda germ leaves 464 free coordinates, a rank-200 response
+and an injective rank-six source gate. A conditional law recovers q from
+736 prescribed coordinates and rejects incompatible inputs. Independent
+[affine](HC_Cartan_Normal_Source_Compatibility_Derivation.md) and
+[mask](HC_Cartan_Source_Cauchy_Jet_Mask.md) derivations delimit the result.
+Nonzero-source recovery errors are below 2.5e-15 with all 68 normal and
+384 higher equations small. Frozen highest jets fail the later 1114 rows;
+surface compatibility, re-preparation and regional evolution remain open.
+Main TeX/PDF and native physical identifications are unchanged.
+
+Verification of the higher-source compatibility stage: all 2,153 audit
+tests plus 34 separate OP5 checks passed (2,187 total), including sixteen
+new tests. Full-monolith preservation and whitespace checks passed. These
+post-afcbfed additions remain uncommitted; no later push or PDF build was
+performed.
+
+## v4.9.0 Main-Text Research Candidate (2026-10-18)
+
+The subsequent [candidate change record](V490_Research_Candidate.md) now
+documents deliberate adoption of the bounded Cartan synthesis into the
+main reading route, rather than treating all later notes as adopted.
+`parts/cartan-normal-source.tex` states the comparison action, sourced Ward
+identities, conditional subsidiary result and finite normal/source-law
+proofs with their numerical evidence and remaining obligations. Working
+metadata are 4.9.0-draft; the historical entry filename and all inherited
+source records remain unchanged. Earlier statements in this log that the
+main TeX/PDF were unchanged refer to their respective research stages.
+
+The rebuilt candidate has 1044 pages: 160 main/frontmatter and 884 support,
+versus 1037 = 153 + 884 previously. The current measurement is separately
+saved in `V490_Full_Monolith_Metrics.json`. The title and new pages 43--47
+were visually checked; the final local pdfLaTeX run exits successfully,
+with settled references and no new overfull box beyond the 58 inherited
+ones. The built-in XeTeX backend cannot compile the inherited pdfTeX
+compression primitive, so the existing local toolchain was used with
+installation and shell escape disabled. Public releases, CITATION.cff,
+physical scales and native identification remain unchanged. No release,
+DOI, commit or push is performed by this integration.
+
+The new integration has eight focused tests. Two full 2161-test runs
+exposed only stale provenance records in sequence, first the changed
+entrypoint and then its dependent report fingerprint. After both metadata
+repairs, all 101 affected integration/provenance/regularity/preservation
+tests pass; there was no third full run after the final hash-only change.
+The separate OP5 check also completed successfully. Full build and test
+details are recorded in `V490_Research_Candidate.md`.
+
+Final verification after both provenance repairs: a fresh complete run
+passes all 2161 audit tests in 278.176 seconds; all 34 separate OP5 checks
+also pass (2195 total). This supersedes the preceding targeted-only status.
+The repeated settled-length check confirms the same 1044-page PDF and
+source hash. Public release payloads, CITATION.cff and .zenodo.json are
+unchanged. No commit, push, publication or new mathematical closure claim
+was made during this verification.
+
+## Post-Integration Next Cauchy-Jet Gate (2026-10-18)
+
+The [next finite completion audit](HC_Cartan_Cauchy_Next_Completion.md)
+and [independent highest-mask derivation](HC_Cartan_Highest_Cauchy_Mask.md)
+remain outside the main TeX. The chosen 384-row shifted source witness
+does not pass a highest-only repair, even with unrestricted highest jets.
+Allowing 368 earlier trace-preserving mixed entries with psi2 fixed gives
+an affine 1114-by-1168 response of numerical rank 568. Enforcing all old
+394 rows first succeeds to about 3e-11, but its reduced new-order gate
+still has minimum residual about 33.16. This excludes that restricted
+finite continuation numerically, not every same-source completion or
+regional solution. The 96 normal-containing psi2 entries remain frozen;
+their larger generally nonlinear re-preparation is the next finite task.
+The reviewed 1044-page v4.9.0 draft is unchanged by this follow-up.
+
+Verification: 2175 audit tests plus 34 separate OP5 checks passed (2209
+total), including fourteen new highest-mask/completion tests. The full
+origin-preservation check and whitespace checks pass, and the main expanded
+TeX hash is unchanged. No further PDF build, commit, push, issue update
+or publication was performed.
+
+## Persistent Matrix/SVD Cache (2026-10-18)
+
+The [numerical cache](Numerical_Matrix_Cache.md) is integrated into the
+current next-Cauchy analysis only. SHA-256 selects collision buckets;
+actual typed canonical input bytes select a matching entry. Numeric NPZ
+files use no pickle, atomic unique-entry writes and integrity checks.
+Copies and a bounded memory layer prevent accidental mutation of stored
+results. Source/data/NumPy changes invalidate relevant entries; rank
+cutoffs, RHS solves and actual field residuals are still evaluated anew.
+
+The complete script takes 70.227 seconds cold and 3.985 seconds in a new
+warm process, with seven disk hits and a byte-identical scientific JSON
+report (about 17.6x for this repeat). Seventy-two targeted tests pass;
+the fourteen numerical ones also pass cache-free. No new full-suite run
+was used for this narrow performance change. Main TeX/PDF and scientific
+conclusions are unchanged; the current report fingerprints are refreshed.
+
+The follow-up clean-code refactor separates cache lookup/compute/publish
+and introduces explicit affine-system and SVD-reduction data containers.
+Coordinate ownership/dimensions and complete wide-matrix kernels are
+checked. All pre-refactor numerical report values are unchanged; only
+input provenance fingerprints are refreshed. Eighty-five targeted tests
+pass, with no additional full-suite run. The measured warm process takes
+4.270 seconds, retaining the cache benefit; no extra performance gain is
+claimed for the structural refactor itself. No Docker/dependency, main
+TeX/PDF, release, commit or push change is introduced.
+
+The following [DI composition root](Numerical_Dependency_Injection.md)
+now explicitly supplies scoped cache and SVD-backend instances to the
+current numerical pipeline. Providers resolve once per container, custom
+backend identities isolate cache entries, and disabling a scope does not
+mutate global environment variables. The old helper API has a separate
+compatibility adapter. All 103 targeted checks pass, including eighteen
+new DI checks; the complete numerical report values match the pre-DI
+baseline except refreshed source fingerprints. The latest warm process
+takes 4.350 seconds. No main-TeX/PDF or scientific-claim change is made.

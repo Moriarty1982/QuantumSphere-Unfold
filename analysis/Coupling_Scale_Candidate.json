@@ -1,0 +1,736 @@
+{
+  "status": "conditional effective candidate; not native identification",
+  "assumptions": [
+    "orthogonal common carrier with three normalized closed seeds",
+    "cyclic Hermitian root coupling with r/a=1/sqrt(2), not derived",
+    "inherited theta=pi-sqrt(2)*asin(beta), not derived",
+    "rounded inherited beta=0.5493; not a first-principles extraction",
+    "Tr(B*B)=1 is a normalization convention, not a physical scale",
+    "flat positive complementary gap and zero direct mass block",
+    "V=mu*B is an added field/pacer identification"
+  ],
+  "beta": 0.5493,
+  "theta_radians": 2.3191902578571373,
+  "B_real": [
+    [
+      0.4082482904638631,
+      -0.19643267266228367,
+      -0.19643267266228367
+    ],
+    [
+      -0.19643267266228367,
+      0.4082482904638631,
+      -0.19643267266228367
+    ],
+    [
+      -0.19643267266228367,
+      -0.19643267266228367,
+      0.4082482904638631
+    ]
+  ],
+  "B_imag": [
+    [
+      0.0,
+      -0.21153613980614627,
+      0.21153613980614627
+    ],
+    [
+      0.21153613980614627,
+      0.0,
+      -0.21153613980614627
+    ],
+    [
+      -0.21153613980614627,
+      0.21153613980614627,
+      0.0
+    ]
+  ],
+  "Q_real": [
+    [
+      0.3333333333333334,
+      -0.16654834916608743,
+      -0.1665483491660874
+    ],
+    [
+      -0.16654834916608743,
+      0.3333333333333334,
+      -0.1665483491660874
+    ],
+    [
+      -0.1665483491660874,
+      -0.1665483491660874,
+      0.33333333333333337
+    ]
+  ],
+  "Q_imag": [
+    [
+      -4.4874407591702656e-18,
+      -0.2558237535079355,
+      0.2558237535079355
+    ],
+    [
+      0.2558237535079355,
+      4.4874407591702656e-18,
+      -0.2558237535079355
+    ],
+    [
+      -0.2558237535079355,
+      0.2558237535079355,
+      -4.4874407591702656e-18
+    ]
+  ],
+  "q_eigenvalues_ascending": [
+    0.00023663500115859634,
+    0.05678194364069972,
+    0.942981421358142
+  ],
+  "leading_ratios_to_largest": [
+    0.0002509434393922412,
+    0.06021533654281199,
+    1.0
+  ],
+  "leading_koide_diagnostic": 0.6666666666666663,
+  "historical_comparison_only": {
+    "quoted_masses_MeV": [
+      0.511,
+      105.658,
+      1776.86
+    ],
+    "ratios_to_largest": [
+      0.0002875859662550792,
+      0.05946332294046802,
+      1.0
+    ],
+    "relative_ratio_errors": [
+      -0.12741416884834111,
+      0.012646679754120926,
+      0.0
+    ],
+    "no_positive_flat_gap_scale_fit_for_fixed_shape": true,
+    "reason": "Exact positive-gap corrections increase every smaller/largest ratio"
+  },
+  "external_references": {
+    "planck_GeV": 1.22089e+19,
+    "fermi_GeV_minus_2": 1.1663787e-05,
+    "defined_v_F_GeV": 246.21965079413738,
+    "defined_electroweak_mixing_reference_GeV": 174.10358473791823,
+    "sources": {
+      "planck_energy": "https://physics.nist.gov/cgi-bin/cuu/Value?plkmc2gev",
+      "fermi_constant": "https://physics.nist.gov/cgi-bin/cuu/Value?gf",
+      "newton_constant": "https://physics.nist.gov/cgi-bin/cuu/Value?bg",
+      "historical_mass_comparison": "sources/research/parts/v470/10_sphaera_and_physics.tex:thm:koide-triolic"
+    }
+  },
+  "illustrative_not_derived_scale_choices": {
+    "planck_gap_planck_mixing": {
+      "mu_GeV": 1.22089e+19,
+      "gap_GeV": 1.22089e+19,
+      "kappa_leading_GeV": 1.22089e+19,
+      "mass_magnitudes_GeV": [
+        2888369737929915.0,
+        6.578032900328804e+17,
+        7.23056095224396e+18
+      ],
+      "ratios_to_largest": [
+        0.0003994668957231496,
+        0.09097541592934573,
+        1.0
+      ],
+      "complementary_weights": [
+        0.00023646714518405315,
+        0.04863787718528966,
+        0.2711119240223508
+      ],
+      "koide_diagnostic": 0.6248397499913765
+    },
+    "planck_gap_electroweak_mixing": {
+      "mu_GeV": 174.10358473791823,
+      "gap_GeV": 1.22089e+19,
+      "kappa_leading_GeV": 2.482783724872304e-15,
+      "mass_magnitudes_GeV": [
+        5.875135296117018e-19,
+        1.4097728553774564e-16,
+        2.3412189258049474e-15
+      ],
+      "ratios_to_largest": [
+        0.0002509434393922412,
+        0.06021533654281198,
+        1.0
+      ],
+      "complementary_weights": [
+        4.812174148463021e-38,
+        1.1547091510107024e-35,
+        1.9176329774221654e-34
+      ],
+      "koide_diagnostic": 0.6666666666666663
+    }
+  },
+  "one_mass_calibrations_not_predictions": {
+    "planck_gap_tau_calibrated_mixing": {
+      "mu_GeV": 4796376931.065447,
+      "gap_GeV": 1.22089e+19,
+      "kappa_leading_GeV": 1.8843001142491782,
+      "mass_magnitudes_GeV": [
+        0.00044589135971849763,
+        0.1069942228894609,
+        1.7768599999999999
+      ],
+      "ratios_to_largest": [
+        0.0002509434393922412,
+        0.060215336542811984,
+        1.0
+      ],
+      "complementary_weights": [
+        3.6521829134360806e-23,
+        8.763625133260236e-21,
+        1.4553809106471507e-19
+      ],
+      "koide_diagnostic": 0.6666666666666663
+    },
+    "electroweak_mixing_tau_calibrated_gap": {
+      "mu_GeV": 174.10358473791823,
+      "gap_GeV": 16084.863473656014,
+      "kappa_leading_GeV": 1.8845082687981114,
+      "mass_magnitudes_GeV": [
+        0.00044594060400706146,
+        0.10700533045120243,
+        1.7768599999999997
+      ],
+      "ratios_to_largest": [
+        0.0002509711536120243,
+        0.060221587773489446,
+        1.0
+      ],
+      "complementary_weights": [
+        2.7724237759972396e-08,
+        6.652459744476426e-06,
+        0.00011044343135884438
+      ],
+      "koide_diagnostic": 0.66665622408517
+    }
+  },
+  "posthoc_matrix_diagnosis_not_prediction": {
+    "status": "post-hoc historical benchmark inversion, not a derived phase law",
+    "benchmark_root_a": 0.4082500810371583,
+    "benchmark_root_z_real": -0.19588836513789912,
+    "benchmark_root_z_imag": 0.2120385595518999,
+    "benchmark_radius": 0.7071005784723056,
+    "imposed_radius": 0.7071067811865475,
+    "relative_radius_difference": -8.771962604403605e-06,
+    "benchmark_phase_radians": 2.3166242553943306,
+    "phase_difference_radians": -0.0025660024628066935,
+    "phase_difference_degrees": -0.14702111133899853,
+    "effective_beta_from_benchmark_phase": 0.5508152849090695,
+    "beta_difference": 0.001515284909069492,
+    "decimal_rounding_halfstep": 5e-05,
+    "required_shift_in_rounding_halfsteps": 30.30569818138984,
+    "log_ratio_derivative_theta": [
+      -54.740310084089465,
+      4.896124204801248,
+      0.0
+    ],
+    "log_ratio_derivative_radius": [
+      -73.87458593978036,
+      -3.6566876998973026,
+      0.0
+    ],
+    "log_ratio_derivative_beta": [
+      92.64259500831537,
+      -8.286209031681212,
+      -0.0
+    ],
+    "phase_only_corrected_ratios": [
+      0.00028746306228891394,
+      0.0594619634191592,
+      1.0
+    ],
+    "radius_only_corrected_ratios": [
+      0.00025105844119161966,
+      0.060216702324964615,
+      1.0
+    ],
+    "both_benchmark_reconstructed_ratios": [
+      0.00028758596625506335,
+      0.05946332294046811,
+      1.0
+    ],
+    "six_decimal_matrix_relative_ratio_errors": [
+      -0.000122454940911787,
+      2.764687431655588e-06,
+      0.0
+    ],
+    "rounding_interval_ratios": {
+      "0.54925": [
+        0.00024978243954259437,
+        0.060240287316812594,
+        1.0
+      ],
+      "0.54935": [
+        0.0002521072449553747,
+        0.060190391630053124,
+        1.0
+      ]
+    },
+    "source_ratio_recomputed_not_exact_native_input": {
+      "gamma_string": 0.12738402314094804,
+      "quoted_gamma_BI": 0.2375,
+      "beta": 0.54934824835987,
+      "ratios": [
+        0.00025206642615158896,
+        0.060191265421193636,
+        1.0
+      ],
+      "gamma_BI_needed_for_benchmark_phase": 0.23834541117570524
+    }
+  },
+  "planck_assumption_diagnosis": {
+    "scope": "Delta=Planck and A=0 were additional test assumptions, not paper-derived identities",
+    "si_inputs": {
+      "hbar_Js": 1.0545718176461565e-34,
+      "c_m_per_s": 299792458,
+      "G_m3_per_kg_s2": 6.6743e-11,
+      "J_per_GeV": 1.602176634e-10
+    },
+    "si_planck_mass_kg": 2.1764343427178984e-08,
+    "si_planck_length_m": 1.6162550244237053e-35,
+    "si_planck_energy_GeV": 1.2208901285838954e+19,
+    "relative_si_vs_rounded_codata_energy_difference": 1.0531980398909013e-07,
+    "reference_mass_shortfall_factor_vs_quoted_tau": 758946538666428.9,
+    "reduced_planck_gap_mass_magnitudes_eV": [
+      2.9453560501058996e-09,
+      7.067553000192826e-07,
+      1.1737131113047802e-05
+    ],
+    "conditional_paper_frame_factors": {
+      "gamma_L": 1.864223586105027,
+      "planck_length_photon_over_matter": 0.39287374115926404,
+      "consistent_planck_mass_photon_over_matter": 1.365365733459364,
+      "mixed_hbar_wrong_planck_mass_photon_over_matter": 2.545347003974536,
+      "not_a_standard_Lorentz_transformation_of_constants": true
+    },
+    "tau_calibrations_not_predictions": {
+      "planck_gap_required_mu_GeV": 4796376931.065447,
+      "relative_to_electroweak_mixing_reference": 27548984.349090416,
+      "electroweak_mixing_required_gap_GeV": 16084.86347365602,
+      "gap_inverse_energy_length_m": 1.2267867910877014e-20,
+      "gap_length_over_fundamental_planck_length": 759030457786280.8
+    },
+    "nonflat_planck_gap_full_mass_fit_not_prediction": {
+      "assumption": "Gap diagonal in the output singular basis of B",
+      "mu_GeV": 4796376931.065447,
+      "gaps_GeV": [
+        1.0653313153947484e+19,
+        1.2363302048450083e+19,
+        1.2208899999999996e+19
+      ],
+      "gaps_over_tau_gap": [
+        0.8725858311516586,
+        1.0126466797541205,
+        0.9999999999999997
+      ],
+      "fitted_mass_magnitudes_GeV": [
+        0.0005110000000000002,
+        0.10565800000000003,
+        1.7768600000000003
+      ],
+      "complementary_weights": [
+        4.796629861675041e-23,
+        8.546098735268364e-21,
+        1.4553809106471517e-19
+      ]
+    },
+    "direct_mass_block_scenario": {
+      "assumptions": "Hermitian A retained; H_perp >= Planck*I; abs(lambda)<=2 GeV; ||V||^2=mu_EW^2*q_max",
+      "light_eigenvalue_distance_to_spectrum_A_bound_eV": 2.3412189258049486e-06,
+      "native_A_not_evaluated": true
+    }
+  },
+  "tensor_shift_diagnosis": {
+    "scope": "positive finite metric extension; no native tensor metric extracted",
+    "source_shift_is_tag_only": {
+      "tag_support_before": [
+        0,
+        2,
+        5
+      ],
+      "tag_support_after": [
+        1,
+        3,
+        6
+      ],
+      "packed_mask_before": 37,
+      "packed_mask_after": 74,
+      "numeric_payload_changed": false,
+      "source": "def:v400-r01-shifted-tensor-payload-migration"
+    },
+    "canonical_euclidean_eigenvalues": [
+      0.0002366350011585611,
+      0.05678194364069968,
+      0.9429814213581418
+    ],
+    "nonunitary_chart_test_not_native_frame": {
+      "covariant_eigenvalues": [
+        0.00023663500115844887,
+        0.056781943640699634,
+        0.9429814213581418
+      ],
+      "max_absolute_eigenvalue_difference": 1.1224202990656185e-16,
+      "incorrect_identity_metric_ratios": [
+        0.00018135101516371664,
+        0.04163271270186064,
+        1.0
+      ],
+      "correct_covariant_ratios": [
+        0.00025094343939208484,
+        0.060215336542811915,
+        1.0
+      ]
+    },
+    "posthoc_output_metric_fit_not_prediction": {
+      "input_metric": "identity; output metric aligned with B singular vectors",
+      "output_eigenweights_ascending_B_modes": [
+        1.146019066892624,
+        0.9875112613244422,
+        1.0
+      ],
+      "output_metric_real": [
+        [
+          1.044510109405689,
+          0.05075447874346772,
+          0.050754478743467606
+        ],
+        [
+          0.05075447874346772,
+          1.0445101094056886,
+          0.05075447874346743
+        ],
+        [
+          0.05075447874346766,
+          0.05075447874346743,
+          1.0445101094056886
+        ]
+      ],
+      "output_metric_imag": [
+        [
+          0.0,
+          -0.0036051883180857848,
+          0.003605188318085808
+        ],
+        [
+          0.0036051883180857848,
+          1.1730886562432555e-17,
+          -0.0036051883180859513
+        ],
+        [
+          -0.003605188318085808,
+          0.0036051883180859673,
+          4.2938024907638106e-18
+        ]
+      ],
+      "fitted_leading_ratios": [
+        0.0002875859662549356,
+        0.059463322940468126,
+        1.0
+      ],
+      "exact_flat_gap_correction_still_applies": true
+    },
+    "planck_metric_bound": {
+      "assumptions": "A=0; canonical flat gap=Planck; fixed numerical B and mu=mu_EW",
+      "required_h_max_over_k_min_at_least": 758946538666428.9,
+      "equivalent_canonical_coupling_norm_enhancement": 27548984.34909042,
+      "fitted_shape_metric_max_weight": 1.146019066892624,
+      "not_a_coordinate_shift_or_a_predicted_scale": true
+    },
+    "identity_tensor_extension": {
+      "ancilla_dimension": 2,
+      "max_absolute_compressed_gram_difference": 7.850462293418876e-17,
+      "requires_new_interaction_for_new_effect": true
+    }
+  },
+  "physical_origin_diagnosis": {
+    "status": "conditional mechanism discrimination, not a physical-cause determination",
+    "native_source_candidate": {
+      "operator": "Omega = m0 I + alpha P M P + c_T T + gamma H_C",
+      "cross_block_under_minimal_commuting_penalty": "(I-P) Omega P = c_T (I-P) T P",
+      "c_T_not_identified_with_frame_beta": true,
+      "source_labels": [
+        "thm:master-field-equation",
+        "prop:triadic-two-probe",
+        "thm:variational-form"
+      ],
+      "triadic_probe_slots_not_automatically_lepton_generations": true
+    },
+    "induced_kinetic_dressing": {
+      "assumptions": "positive Hermitian complement; energy below gap; canonical full carrier",
+      "mass_response": "N(E)=V* (D-E I)^(-1) V; self-energy=-N(E)",
+      "norm_response": "N'(E)=V* (D-E I)^(-2) V; K_eff=I+N'(0) to first energy order",
+      "planck_gap_electroweak_mu_max_delta_K": 1.9176329774221656e-34,
+      "planck_gap_tau_calibrated_mu_max_delta_K": 1.4553809106471512e-19,
+      "minimum_delta_K_norm_for_aligned_kinetic_only_ratio_fit": 0.16051240302373104,
+      "kinetic_only_bound_scope": "fixed numerator and aligned modes; K=I+positive dressing",
+      "does_not_cover_gapless_strong_or_nonpositive_sectors": true
+    },
+    "response_tensor_from_inverse_gaps": {
+      "formula": "H_resp(E)=Delta_ref (D-E I)^(-1)",
+      "leading_mass_response": "N(E)=(mu^2/Delta_ref) B* H_resp(E) B",
+      "not_a_kinetic_metric_redefinition": true,
+      "historical_leading_fit_gap_weights": [
+        0.8725858311515291,
+        1.0126466797541205,
+        1.0
+      ],
+      "relative_gram_identity_error": 2.800093284751061e-15,
+      "fit_uses_target_masses": true,
+      "exact_energy_dependence_not_equal_to_flat_gap_metric_model": true
+    },
+    "coherent_phase_test": {
+      "phase_change_is_historical_calibration_not_prediction": true,
+      "delta_phase_radians": -0.0025660024628066935,
+      "relative_Frobenius_coupling_change": 0.0018144372442034113,
+      "relative_operator_norm_coupling_change": 0.001457435961736624,
+      "corrected_leading_ratios": [
+        0.00028746306228891394,
+        0.0594619634191592,
+        1.0
+      ],
+      "remaining_relative_ratio_errors": [
+        -0.0004273642687286916,
+        -2.286319098221412e-05,
+        0.0
+      ],
+      "orthogonal_channel_phase_samples": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "disconnected_complement_mass_response": [
+        0.05,
+        0.05,
+        0.05
+      ],
+      "coupled_complement_mass_response": [
+        0.05136986301369863,
+        0.05958904109589041,
+        0.05136986301369863
+      ],
+      "hidden_mediator_vertex": "delta V(E) = -Y* (D_med-E I)^(-1) X",
+      "mediator_also_changes_direct_gap_and_kinetic_blocks": true,
+      "not_a_prediction_of_tachyons_or_wormholes": true
+    },
+    "ordinary_one_loop_qed_matching_check": {
+      "source": "https://arxiv.org/html/0812.2090v2#S0.E2",
+      "alpha_illustrative_not_precision_input": 0.0072973525205055605,
+      "assumption": "candidate masses are common-scale MSbar running masses; benchmark treated as pole masses",
+      "relative_ratio_changes_first_order": [
+        0.028885245849410504,
+        0.009790085389652627,
+        0.0
+      ],
+      "needed_relative_ratio_changes": [
+        0.146019066892624,
+        -0.012488738675557776,
+        0.0
+      ],
+      "same_sign_qed_cannot_supply_opposite_sign_required_changes": true,
+      "native_scheme_and_matching_scale_not_assigned": true
+    },
+    "external_method_reference": "https://arxiv.org/abs/1105.0675",
+    "remaining_identification": [
+      "represented triadic matrix elements and generation embedding",
+      "complementary propagator/gap with index-space and units fixed",
+      "coherent mixed-sector matrix elements if a relative frame phase is invoked",
+      "consistent mass, kinetic and vertex matching in one scheme",
+      "independent phase/gap selection law, not historical-mass fitting"
+    ]
+  },
+  "triadic_propagator_diagnosis": {
+    "status": "exact conditional triadic elimination; native coefficients and phase not identified",
+    "native_source_labels": [
+      "prop:triadic-two-probe",
+      "thm:master-field-equation",
+      "thm:variational-form"
+    ],
+    "source_block_dictionary": {
+      "C12": "g_Y T_12, with the reverse block its adjoint",
+      "Wi": "chi T_perp_i, on a declared common positive carrier",
+      "D": "Omega_perp, assumed Hermitian and gapped for this calculation",
+      "effective_link": "C12_eff(E)=C12-W1* (D-E I)^(-1) W2",
+      "joint_positive_response": "N_ij(E)=Wi* (D-E I)^(-1) Wj",
+      "joint_norm_response": "K_eff(E)=I+[Wi* (D-E I)^(-2) Wj]_ij",
+      "probe_slots_not_automatically_generations_or_physical_frames": true
+    },
+    "exact_pole_test_arbitrary_energy_units": {
+      "full_eigenvalues": [
+        0.41377232669141994,
+        0.9690076580920278,
+        3.017220015216552
+      ],
+      "low_pole_schur_residuals": [
+        2.7755575615628914e-17,
+        1.1102230246251565e-16
+      ],
+      "not_a_charged_lepton_prediction": true
+    },
+    "independent_frame_rephasing_test": {
+      "illustrative_frame_phases": [
+        1.7256768446168733,
+        -1.7256768446168733,
+        0.0
+      ],
+      "not_a_source_derived_three_link_phase_law": true,
+      "maximum_eigenvalue_difference": 1.1102230246251565e-15,
+      "oriented_loop_phase_after_rephasing": -6.432490598706546e-16,
+      "pure_endpoint_differences_have_zero_cycle_sum": true
+    },
+    "fixed_moduli_nontrivial_loop_examples": [
+      {
+        "loop_phase_radians": 0.0,
+        "eigenvalues_in_declared_arbitrary_energy_units": [
+          0.41377232669141994,
+          0.9690076580920276,
+          3.0172200152165516
+        ],
+        "determinant_real": 1.2097500000000003
+      },
+      {
+        "loop_phase_radians": 0.4,
+        "eigenvalues_in_declared_arbitrary_energy_units": [
+          0.413379477827251,
+          0.9695071029043908,
+          3.0171134192683584
+        ],
+        "determinant_real": 1.2091816391568209
+      },
+      {
+        "loop_phase_radians": 0.9,
+        "eigenvalues_in_declared_arbitrary_energy_units": [
+          0.4118953125546986,
+          0.9713958147541318,
+          3.0167088726911677
+        ],
+        "determinant_real": 1.207025591771549
+      }
+    ],
+    "cyclic_root_loop_requirement": {
+      "scope": "only if a generation embedding identifies the native cycle with the declared cyclic B",
+      "orientation": "Phi_B=arg(B_10 B_21 B_02)=3 theta modulo 2pi",
+      "baseline_loop_phase_radians": 0.6743854663918254,
+      "benchmark_calibrated_loop_phase_radians": 0.6666874590034053,
+      "benchmark_calibrated_loop_phase_change_radians": -0.007698007388420081,
+      "benchmark_calibrated_loop_phase_change_degrees": -0.4410633340169956,
+      "not_a_native_phase_prediction": true
+    },
+    "phase_rotated_link_existence_witness": {
+      "scope": "arbitrary energy units, at E=0, fitted link rotation only; not a three-generation fit",
+      "effective_link_real": 0.19999934156349738,
+      "effective_link_imag": -0.0005131999293779859,
+      "target_link_real": 0.19999934156349738,
+      "target_link_imag": -0.000513199929377986,
+      "mandatory_diagonal_response": [
+        0.0005132003517654658,
+        0.0005132003517654656
+      ],
+      "mandatory_norm_response_eigenvalues": [
+        -1.3552527156068805e-20,
+        0.00034213356784364385
+      ],
+      "response_determinant_real": -5.564131754977882e-23,
+      "zero_mode_roundoff_tolerance": 1e-15,
+      "cauchy_schwarz_saturated": true,
+      "diagonal_terms_cannot_be_discarded": true
+    },
+    "conditional_planck_mediator_phase_bound": {
+      "assumptions": "scalar links |W1|,|W2|<=mu_EW, D=Planck, E=0, |C12|=mu_EW/sqrt(12)",
+      "largest_mediated_link_GeV": 2.482783724872305e-15,
+      "max_phase_change_radians_bound": 4.9399414287273675e-17,
+      "benchmark_calibrated_fixed_modulus_link_change_GeV": 0.12896564659171394,
+      "link_change_shortfall_factor": 51943971317254.766,
+      "does_not_exclude_other_gaps_or_couplings": true
+    },
+    "source_connection_route": {
+      "connection": "Gamma_mu=i A_mu+kappa H_C n_mu+eta (I-P) n_mu",
+      "curvature_named_in_source": "F_mu_nu=[D_mu,D_nu]",
+      "unitary_holonomy_requires_metric_compatibility_not_established": true,
+      "conditional_abelian_loop": "U_loop=exp(-i integral_Sigma f), only for a norm-preserving Abelian connection on a declared contractible loop",
+      "not_identified_with_gravitational_riemann_curvature": true,
+      "reference": "https://www.damtp.cam.ac.uk/user/tong/gaugetheory/2ym.pdf"
+    },
+    "prepared_op5_interface": {
+      "source": "analysis/OP5_QAM_Residual_Lift.tex",
+      "sections": [
+        "sec:native-triadic-phase-metric-test",
+        "sec:native-normalized-readout",
+        "sec:hc-even-slow-supply"
+      ],
+      "relay_and_loop_phase_already_prepared": true,
+      "scalar_fixed_exchange_requires": "A1=A2, C12 real, W1=W2; scalar loop phase then 0 or pi",
+      "native_global_involution_not_identified_with_probe_exchange": true
+    },
+    "internal_generation_tensor_witness": {
+      "scope": "conditional 3 probe slots tensor 3 internal generations; not a native embedding",
+      "common_source_legs": "W1=W2=mu B(theta)/sqrt(2); A1=A2=-c I; C12=c I; D=Delta I",
+      "canonical_equal_leg_scale_identity": "mu=sqrt(2)*abs(chi)*||T_perp1||_F when W1=W2=chi*T_perp1",
+      "common_scalar_chi_phase_cancels_from_normalized_gram": true,
+      "arbitrary_energy_units": {
+        "c": 0.2,
+        "mu": 0.4,
+        "Delta": 3.0
+      },
+      "phase_samples": [
+        {
+          "theta_radians": 2.3191902578571373,
+          "fixed_exchange_commutator_frobenius": 0.0,
+          "odd_even_coupling_frobenius": 1.0406915524941061e-17,
+          "visible_projector_commutator_frobenius": 0.5656854249492379,
+          "compressed_gap_model_error_frobenius": 9.614813431917819e-17,
+          "light_magnitudes_arbitrary_energy_units": [
+            1.2620480302987835e-05,
+            0.003025319474862405,
+            0.049476372010009984
+          ],
+          "maximum_exact_mass_formula_error": 8.066464163292153e-17
+        },
+        {
+          "theta_radians": 2.3166242553943306,
+          "fixed_exchange_commutator_frobenius": 0.0,
+          "odd_even_coupling_frobenius": 1.003038016937831e-17,
+          "visible_projector_commutator_frobenius": 0.565685424949238,
+          "compressed_gap_model_error_frobenius": 9.614813431917819e-17,
+          "light_magnitudes_arbitrary_energy_units": [
+            1.4466900388399916e-05,
+            0.002989525213018901,
+            0.04950930497028173
+          ],
+          "maximum_exact_mass_formula_error": 4.2327252813834093e-16
+        }
+      ],
+      "preserves_declared_fixed_exchange_not_all_native_guards": true,
+      "visible_three_generation_projector_not_invariant": true,
+      "phase_and_zero_direct_block_are_chosen_not_derived": true
+    },
+    "gap_to_phase_derivative_example": {
+      "scope": "fixed scalar probe vertices, two hidden modes, arbitrary energy units, at E=0",
+      "direct_link_real": 0.2,
+      "indirect_link_real": 0.006666666666666667,
+      "indirect_link_imag": 0.0036,
+      "d_loop_phase_per_parameter": 0.019789408485599253,
+      "d_effective_link_phase_per_parameter": -0.00023920362452210385,
+      "one_scalar_positive_gap_cannot_rotate_indirect_phase_by_itself": true,
+      "two_modes_can_rotate_indirect_phase_by_changing_relative_real_gaps": true,
+      "native_curvature_or_parameter_not_evaluated": true
+    },
+    "pole_response_example": {
+      "scope": "simple low pole in the declared toy triad; not a physical lepton shift",
+      "formula": "delta E = x*(delta A-delta N_fixed_E)x / x*(I+N'(E))x",
+      "schur_pole_derivative": 0.010152915392020729,
+      "full_hamiltonian_derivative": 0.010152915392020732,
+      "absolute_derivative_difference": 3.469446951953614e-18
+    },
+    "remaining_free_native_data": [
+      "represented generation/sector embedding and adjoint conventions",
+      "g_Y T_12, chi T_perp_1, chi T_perp_2 and Omega_perp",
+      "phase-sensitive action or evaluated connection/transport paths",
+      "canonical chiral mass and kinetic matching, including diagonal terms"
+    ]
+  }
+}

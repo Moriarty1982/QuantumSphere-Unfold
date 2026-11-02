@@ -1,0 +1,100 @@
+{
+  "status": "first-order neutral odd-cross parent and pointwise Cartan/constraint block; not a native or full field solution",
+  "parent": "S=integral[v(c R(E,omega)/2-u)+L_D(E,Psi,omega)+lambda:(E-C_minus(Psi,omega))]",
+  "independent_fields": [
+    "invertible E",
+    "real lower Lorentz omega",
+    "three complex commuting spinors",
+    "real multiplier density"
+  ],
+  "fixed_comparison_data": [
+    "prepared Hermitian three-channel M",
+    "Hermitian Q=i(E12-E21)/2",
+    "neutral sector; no solved internal gauge equation"
+  ],
+  "torsion_free_reference_test": {
+    "best_multiplier": [
+      [
+        0.0015265542702837891,
+        0.0015101751280962882,
+        -0.0021157311657917957,
+        0.000305985182599948
+      ],
+      [
+        -1.3607265631188606e-08,
+        -0.03931705847733247,
+        0.003285777068315874,
+        1.8482902305107594e-05
+      ],
+      [
+        2.0410898447526665e-08,
+        -0.003285738017396894,
+        -0.039317073304594295,
+        -2.7724353457635984e-05
+      ],
+      [
+        -2.9143391353499224e-05,
+        -2.8830697753216845e-05,
+        4.0391345767223637e-05,
+        -5.841551852083471e-06
+      ]
+    ],
+    "map_rank": 12,
+    "spin_residual_norm": 6.343168189482335e-07,
+    "source_norm": 2.154587952666582e-05,
+    "axial": [
+      0.017855619772051898,
+      0.0007999999999999998,
+      -0.0011999999999999997,
+      1.7134017747597745
+    ],
+    "weighted_axial": [
+      1.4713212733551748e-05,
+      4.2881042954748955e-20,
+      1.8211208365967457e-20,
+      -0.0007706899123564225
+    ],
+    "axial_euclidean_Gram_determinant_not_Lorentz_invariant": 1.5199584324553556e-09,
+    "axial_pair_rank": 2
+  },
+  "failed_reference_connection_constraint_attempt": {
+    "Einstein_coefficient_arbitrary_not_calibrated": 1.0,
+    "matrix_size": 40,
+    "matrix_rank": 33,
+    "response_rank": 12,
+    "nullity": 7,
+    "residual_norm": 0.0013482476886245236,
+    "connection_residual_norm": 0.000249269799287504,
+    "constraint_residual_norm": 0.001325004300764543,
+    "least_squares_vector_is_not_a_solution_or_a_stability_test": true,
+    "coframe_probe_normal_equations_not_solved": true
+  },
+  "scale_independent_reference_compatibility": {
+    "Schur_rank": 9,
+    "Schur_nullity": 7,
+    "null_projected_target_norm": 0.0013719031535007777,
+    "null_projected_Dirac_drive_norm": 3.7451855661760136e-21,
+    "analytic_Dirac_drive_identity_error": 6.884861438958727e-21,
+    "weighted_axial_Lorentz_square": 5.937464623790073e-07,
+    "transverse_antisymmetric_component_norm_not_invariant": 0.1552466876067654,
+    "equation": "N^T(c b+d)=0, S lambda=c b+d",
+    "no_nonzero_Einstein_coefficient_repairs_this_fixed_reference_jet": true
+  },
+  "independent_action_variations": {
+    "points": 33,
+    "connection_variation_error": 5.15681899742812e-10,
+    "probe_variation_error": 9.250923915793408e-10,
+    "multiplier_variation_error": 8.724215000595337e-10,
+    "independent_coframe_variation_error": 1.47936649042002e-10,
+    "LC_coframe_chain_rule_error": 2.626676353636656e-09,
+    "omitted_LC_spin_reaction": 0.0004968134851082667,
+    "phase_Ward_error": 7.66053886991358e-15,
+    "off_shell_test_not_field_solution": true
+  },
+  "remaining": [
+    "coframe curvature and probe differential equations with all multiplier derivatives",
+    "local constraint propagation, temporal positivity and global boundary data",
+    "actual native field/adjoint/gauge/readout identification and physical scales"
+  ],
+  "main_TeX_changed": false
+}

@@ -1,0 +1,65 @@
+{
+  "status": "conditional current/closure typing identities plus a local CHARGED MASSLESS real-comparison probe/gauge branch; NOT a native massive C7, global spinor or gravity solution",
+  "native_audit": {
+    "source_path": "sources/research/parts/v470/10_sphaera_and_physics.tex",
+    "source_labels": [
+      "thm:variational-form",
+      "thm:resonance-field-eq",
+      "thm:closed-master-system"
+    ],
+    "printed_bilinear_is_scalar_without_specified_gauge_generator_or_phase": true,
+    "fixed_M_exact_closure_current": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "fixed_M_identity": "[M,P]=0 and P^2=P imply Tr(M dP)=0; for variable M retain Tr((dM)P)",
+    "hard_trace": "Re Tr(F)=d[(kappa Tr(H_C)+eta rank(Q))n]; H_C=0 and dn=0 give Re Tr(D.F)=0",
+    "consequence": "a positive-time Hermitian probe current cannot be the sole literal scalar/matrix source under this ordinary real-form reading",
+    "not_a_no_go_for_an_unspecified_native_adjoint_or_current_embedding": true
+  },
+  "supported_source": {
+    "identity": "Q Psi=0 gives j=P j P; for compatible transport and H_C=0, Herm(D.F)=eta Q div(dn)",
+    "consequence": "even a variable null axis supplies its Hermitian response in Q, not the closed probe's P block",
+    "trace_matched_axis_control": {
+      "axis_shape": 0.5714285714285715,
+      "real_trace_E_t": -0.40000000000110736,
+      "trace_probe_j_t": -0.39999999999999997,
+      "matrix_mismatch_norm": 0.5656854249477136
+    },
+    "anti_Hermitian_source_is_distinct_from_direct_Hermitian_insertion": true
+  },
+  "charged_comparison": {
+    "assumptions": [
+      "fixed R1,1 x round S2, local polar patch; no native bilinear metric or global spinor extension asserted",
+      "degree-one P, compatible B^u=[P,dP]+i a P, n=-dt+dz, H_C=0, M scalar",
+      "F is internal gauge/closure curvature; the additional Levi-Civita spin curvature is not identified with native full [D,D]",
+      "ordinary spin adjoint and real symmetric massless probe action; Omega=0 is an additional comparison assumption",
+      "dagger bosonic action coefficient 1/g^2 gives D_u G=i g^2 j; the real-literal action has the opposite source sign",
+      "projector/HC first variations vanish in this comparison; metric/axis backreaction and native resonance identification not solved"
+    ],
+    "normal_potential": "a_t=0, a_z=s g^2 rho(t z-t^2/2), s=+1 dagger or -1 real-literal",
+    "phase": "S=s g^2 rho(t^2 z/2-t^3/3)",
+    "local_probe": "Psi_N=V_N sqrt(rho) exp[-i S-i phi/2](0,1,0,-1)/sqrt(2)",
+    "south_patch_probe": "V_S=exp(-i phi)V_N, spin phase exp(+i phi/2); same local coordinate field on overlap",
+    "source": "j^t=rho P, j^z=rho P, j^theta=j^phi=0, S_scalar=0",
+    "full_Dirac_residual_norm": 4.6799856812113807e-17,
+    "full_matrix_gauge_residual_norm": 2.5933195912339022e-11,
+    "direct_Hermitian_source_residual_norm": 0.7999999999978453,
+    "restored_mass_0p6_residual_norm": 0.3794733192202055,
+    "comparison_density": 0.4,
+    "comparison_radius": 1.0,
+    "current_time_trace": 0.39999999999999997,
+    "current_scalar_source_norm": 1.1720561577942702e-17,
+    "normal_electric_field": "f_tz=s g^2 rho(z-t); nonzero central trace supplies Gauss flux",
+    "infinite_homogeneous_normal_direction_not_a_global_finite_energy_configuration": true
+  },
+  "remaining_obligations": [
+    "native gauge algebra/current generator, phase and real action fixed together",
+    "massive/nonzero triadic resonance, actual M/C7 carrier and physical scales",
+    "global spinor patching, boundary/finite-energy charge data and full sourced constraints",
+    "metric/axis dynamics, stress backreaction and quantum current interpretation"
+  ],
+  "main_TeX_changed": false
+}

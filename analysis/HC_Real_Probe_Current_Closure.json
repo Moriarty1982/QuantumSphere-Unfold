@@ -1,0 +1,89 @@
+{
+  "status": "conditional real probe/gauge/HC sector, exact current identities; no native full closure or adopted action change",
+  "assumptions": {
+    "carrier": "generation tensor spin, internal fields commute with spin matrices",
+    "adjoint": "bar(Psi)=Psi^dagger eta_D, eta_D Hermitian, K^mu=eta_D Gamma^mu Hermitian and constant",
+    "mass_term": "eta_D Omega Hermitian; tested central mass plus gamma H_C",
+    "positive_time_comparison_required_for_norm_claims": true,
+    "native_carrier_adjoint_gamma_and_background_identification_not_derived": true
+  },
+  "real_probe_action": {
+    "L": "i(Psi^dagger K^mu partial_mu Psi-partial_mu Psi^dagger K^mu Psi)/2-Tr(A_mu j^mu)-m Tr(S)-gamma Tr(H S)",
+    "matrix_currents": "j^mu=Tr_spin(K^mu |Psi><Psi|), S=Tr_spin(eta_D |Psi><Psi|)",
+    "commuting_real_HC_transport": "Re[i kappa bar(Psi) Gamma.n H Psi]=0; the same holds for Hermitian closure load",
+    "general_noncommuting_rule": "Herm(i K.n H)=i[K.n,H]/2, not the original ordered transport",
+    "raw_equation_and_real_action_not_generally_equivalent": true,
+    "same_HC_bosonic_kinetic_term_and_gamma_Yukawa_source_can_remain": true
+  },
+  "paired_bosonic_sector_plus_sources": {
+    "curvature_choice": "alternative -Tr(F^dagger F)/4 from HC_Null_Axis_Action_Check, not a native correction",
+    "gauge_equation": "D_mu^A F_A^{mu nu}+i kappa^2 n_mu[H,X^{mu nu}]-j^nu=0",
+    "hc_equation": "kappa^2 n_nu D_mu^A X^{mu nu}-2lambda_H(H-Lambda)-gamma S=0",
+    "target_reaction": "E_Lambda=2lambda_H(H-Lambda) for an external covariant matching target",
+    "projector_and_noncentral_native_mass_background_terms_not_evaluated": true,
+    "algebraic_matching_penalty_has_no_direct_A_variation_at_fixed_H_Lambda": true,
+    "printed_gradient_trace_currents_not_automatically_recovered": true
+  },
+  "ward_identity": {
+    "off_shell": "D_mu E_A^mu+i[H,E_H]+i[Lambda,E_Lambda]+i Tr_spin(Psi R^dagger-R Psi^dagger)=0",
+    "R": "real-action probe Euler derivative",
+    "matter_on_shell": "D_mu j^mu=-i gamma[H,S]; its ordinary trace is conserved",
+    "fixed_target_consistency": "If A,H,Psi solve these equations and Lambda is not varied, lambda_H>0 requires [H,Lambda]=0 unless extra background reactions are retained",
+    "functional_Lambda_requires_chain_rule_to_M_P_equations_not_an_extra_free_field": true,
+    "constant_noncommuting_example_identity_norm": 2.023017827855918e-17,
+    "same_example_external_target_torque_norm": 0.04242640687119285
+  },
+  "norm_balance_example": {
+    "n_covector": [
+      1.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "orientation": "chosen null covector with K.n=I+sigma_x positive; reversing n reverses the raw HC norm source",
+    "dimensionless_kappa": 0.4,
+    "dimensionless_gamma": 0.2,
+    "norm": 0.9999999999999998,
+    "real_action_norm_rate": 0.0,
+    "raw_equation_norm_rate": -1.1199999999999997,
+    "raw_continuity_rhs": -1.1199999999999999,
+    "literal_probe_L_real": -0.29999999999999993,
+    "literal_probe_L_imaginary": 0.5599999999999998,
+    "physical_probe_probability_interpretation_not_native_input": true
+  },
+  "open_model_comparison": {
+    "assumption": "positive damping D in an already positive modal metric; not automatic for native gamma-ordered HC",
+    "conditional_rate": "rho_dot_cond=-i[H_modal,rho]-{D,rho}",
+    "one_recycling_choice": "L_jump=sqrt(2D); add L_jump rho L_jump^dagger",
+    "example_conditional_trace_rate": -1.1199999999999997,
+    "example_recycling_trace_rate": 1.119999999999999,
+    "example_completed_trace_rate": -6.661338147750939e-16,
+    "recycling_or_charged_environment_not_supplied_by_native_action": true,
+    "same_no_jump_D_does_not_determine_unique_recycling_or_environment": true,
+    "not_a_derivation_of_gravity_as_a_bath_or_viscosity": true
+  },
+  "moving_comparison_route": {
+    "time_chart_condition": "Q_dot+G^dagger Q+Q G=0 makes f^dagger Q f conserved for f_dot=G f",
+    "formal_solution": "Q(t)=U(t)^(-dagger) Q0 U(t)^(-1); this is not a native metric derivation",
+    "constant_commuting_decay_example": "G=-D, Q(t)=exp(2Dt), f(t)=exp(-Dt) f0",
+    "stronger_bundle_condition": "partial_mu Q=B_mu^dagger Q+Q B_mu",
+    "integrability": "F_mu_nu^dagger Q+Q F_mu_nu=0",
+    "pure_HC_branch_obstruction": "Nonzero ordinary Hermitian F_mu_nu cannot be skew for any strictly positive Q. The pure commuting HC wedge must vanish for this strong bundle route.",
+    "flat_HC_example": "constant H, B_mu=kappa n_mu H, Q(x)=exp(2kappa H n.x) has F=0 and compatible positive Q",
+    "not_a_general_no_go_for_noncommuting_full_connection_or_contracted_Dirac_current": true,
+    "QAM_comparison_not_identified_with_this_spacetime_kinetic_metric": true
+  },
+  "native_comparison_anchors_checked": {
+    "QAM": "07_qam_infrastructure.tex, def:two-sided-admissible-contractions and ex:two-sided-residual-comparison: typed residual comparison, not an evaluated Dirac kinetic metric",
+    "Einstein_route": "10_sphaera_and_physics.tex, prop:bilinear-einstein-reconstruction: assumed spacetime metric compatibility after geometric/internal splitting, not positive internal compatibility",
+    "quaternionic_inner_product": "10_sphaera_and_physics.tex, prop:orthogonality-third-kernel: basis inner product, not an evaluated probe-adjoint/carrier map"
+  },
+  "remaining_choices": [
+    "use a closed real probe action with HC bosonic kinetics and gamma coupling, explicitly changing the raw transport law",
+    "or retain raw norm-changing transport as an open/conditional law and derive its missing environment, metric and currents",
+    "an independent adjoint needs a specified real/doubled field space; a moving comparison needs its background law, adjoint and derivative terms",
+    "do not interpret a Hermitian-to-anti-Hermitian HC shift as harmless: with free A its vector shift can be absorbed into the total connection"
+  ],
+  "main_TeX_changed": false,
+  "native_masses_phase_viscosity_or_microscopic_environment_derived": false
+}

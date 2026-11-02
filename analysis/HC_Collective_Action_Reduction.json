@@ -1,0 +1,85 @@
+{
+  "status": "exact collective pullback and conditional conservative modal reduction; native field profiles not evaluated",
+  "full_native_action_contract": {
+    "source": "v470/10_sphaera_and_physics.tex, thm:variational-form",
+    "fields": "Psi, bar(Psi), A_mu, P_C7, H_C, with allowed projector and reality variations",
+    "substitution": "S_coll[q,h]=S_native[Phi^I(x;q,h)] retaining every named field contribution",
+    "restricted_EL": "EL_coll=(D Phi)^* EL_full; tangent stationarity does not imply normal stationarity",
+    "required_extra_check": "EL_full normal to the admitted field ansatz must also vanish, including connection, projector and compensator equations",
+    "native_field_profiles_and_real_positive_kinetic_reduction_missing": true,
+    "no_inferred_general_relativity_or_EIH_equations_for_this_model": true
+  },
+  "exact_complete_two_mode_chart": {
+    "state": "f=(a+i b)e(theta/2)+c n(theta/2), b>0, n=[[0,-1],[1,0]]e",
+    "coordinates": "(b,theta,a,c), with theta a lifted residual angle",
+    "kinetic_term": "L_kin=b a_dot-a b_dot-b c theta_dot",
+    "canonical_pairs_up_to_boundary_term": "p_b=-2a, p_theta=-b c; L=p_b b_dot+p_theta theta_dot-E",
+    "symplectic_determinant": "det Omega=4b^2, nonzero for b>0",
+    "equations": "b_dot=-E_a/2; theta_dot=-E_c/b; a_dot=(E_b+c theta_dot)/2; c_dot=(E_theta-c b_dot)/b",
+    "pure_odd_submanifold": "a=c=0 makes the pulled-back kinetic form zero, not a phase gradient law",
+    "odd_state_consistency_requires_normal_equations": "E_b=0 and E_theta=0 there, in addition to the retained coordinate equations",
+    "hidden_input_is_canonical_information_not_generically_discardable": true
+  },
+  "conditional_hidden_elimination": {
+    "assumption": "E=V(b,theta)+j^T h+h^T W h/2, h=(a,c), W positive definite and no extra hidden kinetic term",
+    "D": "diag(2,b)",
+    "hidden_solution": "h=-W^(-1)(D q_dot+j), q=(b,theta)",
+    "effective_action": "L_eff=(D q_dot+j)^T W^(-1)(D q_dot+j)/2-V",
+    "derived_coefficients": "M=D W^(-1)D; A=D W^(-1)j; V_eff=V-j^T W^(-1)j/2",
+    "coordinate_derivatives_of_W_D_j_V_must_be_kept_in_EL": true,
+    "positive_metric_is_conditional_not_a_native_value": true,
+    "no_irreversible_friction_from_this_closed_local_elimination": true,
+    "other_dynamic_fields_can_produce_memory_or_flux_and_are_not_excluded": true,
+    "constant_H_cartesian_specialization": "H=S+iB, S>0: L_eff=(r_dot-B r)^T S^(-1)(r_dot-B r)-r^T S r",
+    "exact_second_order_equation": "r_ddot=(B+S B S^(-1))r_dot-(S B S^(-1)B+S^2)r",
+    "initial_velocity_preserves_the_missing_state_information": "x0=S^(-1)(B r0-r_dot0); no loss of memory data and no Markov friction approximation"
+  },
+  "isotropic_probe_example": {
+    "input_H": "H=m I+omega sigma_y; m>0, witness m>|omega|",
+    "effective_L": "b_dot^2/m+b^2(theta_dot-2omega)^2/(4m)-m b^2",
+    "derived_phase_inertia": "I_theta=b^2/(2m), I_Phi=b^2/(18m)",
+    "equations": "b_ddot=b(theta_dot-2omega)^2/4-m^2 b; theta_ddot=-2(b_dot/b)(theta_dot-2omega)",
+    "conserved_phase_momentum": "p_theta=b^2(theta_dot-2omega)/(2m)=-b c",
+    "conserved_energy": "E=b_dot^2/m+b^2 theta_dot^2/(4m)+(m-omega^2/m)b^2",
+    "apparent_damping": "2 b_dot/b changes sign under contraction; reversible amplitude/phase exchange, not viscosity",
+    "dimensionless_m_not_identified_with_native_bare_or_lepton_mass": 2.0,
+    "dimensionless_rotation_input": 0.3,
+    "dimensionless_time": 0.5,
+    "exact_odd_initial_solution": "b=cos(m t), a=sin(m t), c=0, theta=theta0+2omega t until the b=0 chart node",
+    "coordinates_at_example_time": [
+      0.5403023058681397,
+      2.394395102393195,
+      0.8414709848078963,
+      -7.810634436174504e-17
+    ],
+    "coordinate_rates": [
+      -1.6829419696157926,
+      0.6000000000000004,
+      1.0806046117362795,
+      -1.919163925043877e-16
+    ],
+    "hidden_reconstruction_error": 1.8120738338457788e-17,
+    "full_state_norm_squared": 0.9999999999999996,
+    "probe_energy": 1.9999999999999991,
+    "effective_energy": 1.9999999999999991,
+    "minimum_principal_root_before": 0.16910197872576252,
+    "minimum_signed_root_after": -0.006313952003448692,
+    "deriving_inertia_does_not_prove_root_chamber_preservation": true
+  },
+  "normal_equation_countercheck": {
+    "scope": "two-mode ansatz inside a positive three-mode Hermitian example, not the complete native field space",
+    "hidden_coupling_input": 0.1,
+    "tangent_residual_norm": 0.0,
+    "normal_residual_norm": 0.05000000000000002,
+    "normal_equation_would_be_missed_by_restricting_the_action_first": true
+  },
+  "remaining_native_obligations": [
+    "construct spatial mode profiles and the native field/carrier/readout map with a real positive kinetic form",
+    "substitute the connection, closure projector and compensator backgrounds along with the probe",
+    "derive the native hidden Hessian/source and phase/scale dependence rather than fit m, W, j or a potential",
+    "check full normal field equations, constraint propagation and positive-root boundary signs",
+    "derive any irreversible reduction from retained fields/fluxes rather than call the inertial exchange viscosity"
+  ],
+  "main_TeX_changed": false,
+  "historical_masses_or_target_phase_used": false
+}

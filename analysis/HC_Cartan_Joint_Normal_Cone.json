@@ -1,0 +1,1205 @@
+{
+  "scope": "Normalized tilted probe/constitutive subblock, with geometric derivatives frozen",
+  "input_sha256": {
+    "HC_Cartan_Regular_Gravity.py": "89cf5597fc935d463eed604f9c9eb247cda17b576ae294dbfad6e45dacbc063f",
+    "HC_Cartan_Regular_Gravity.json": "9719ef580419e7a1d4c49a7aec2f41987832d806215defacd74d8db8c09f4cdc",
+    "HC_Cartan_Regular_Gravity.md": "a2197dd64fb5ef2732021d819e3dfb5e3ebedb3b14654f2bad59cd74e2bf92f4",
+    "HC_Cartan_Spatial_Propagation.py": "1eaa40763d84f28dfb0846032a96da28dd18ab8080cdc2a400c82827eb21feaf",
+    "HC_Cartan_Spatial_Propagation.json": "1ca98d6b4658d279867469948cfdafe68442fa04456320ab4267d0df5befb75b",
+    "HC_Cartan_Spatial_Propagation.md": "6322e87811753bcb255aba65e5ec14d96d4d3ba1df9f0b50fa48e5216cc0098b",
+    "HC_Cartan_Third_Constraint_Reprepare.py": "8e91386218bf8372c4f7329f7825b1443eab018fe9dc65a1513c10c56a87d9c0",
+    "HC_Cartan_Second_Probe_Affine.py": "2d2f8abd51f13f2f0b56ca04add9ecfb4aa3ff749fe6f4372203a31cec5787f9",
+    "HC_Cartan_Second_Gravity_Affine.py": "663ad2ff16c8bc687f8cd366f649bd83a9cd31baafff532e6fa481b34394b46c",
+    "HC_Cartan_Third_Constraint_Diagnostic.py": "b780bfa91bad83b5d0c9454a49e9b44ac3170f94846facadf972117dfa79eab0",
+    "HC_Cartan_Next_Scalar_Compatibility.py": "916e412e18312e7ac72583029a3a2435b6cb4197b19bd5f49e4713b4cc5dcfbc",
+    "HC_Cartan_Next_Scalar_Compatibility.json": "9d3a8191eabf668fbbce0bd81d3ba01bdfd6bf926c293c15bb62b2d574867c0f",
+    "HC_Cartan_Next_Joint_Completion.py": "f78a2a3fb072bc66d81ae3763d40b48abf3dc786fd09fc99a164b3c6b4d92b78",
+    "HC_Cartan_Next_Joint_Completion.json": "259e7358b88fbaae09c54499aace8ec00066c29f34994c1b7e0f71dce1225d78",
+    "HC_Cartan_Regular_Neighborhood.py": "2a79d22186df80113f6b0e39b2d668d6af826be3d6330c42126bcdb8cb855eea",
+    "HC_Cartan_Joint_Neighborhood.py": "a942bb82e2a3bbf3722e2c95b5a624c8c87326fd98d08162c953368a31885d80",
+    "HC_Cartan_Joint_Normal_Cone.py": "1c5ccd83f84300eb1da2c3412496bddae2189abf73f430309cb4847d6d89d2f7"
+  },
+  "uniform_cone_estimate": {
+    "coordinate_radius": 6.103515625e-05,
+    "normal_convention": "n=(1,q), |q|_Euclidean<=rho",
+    "spatial_multiplier_norm_upper_bound": 0.00019421661082563788,
+    "spatial_weight_operator_bound": 1.4143509153939189,
+    "spinor_norm_upper_bound": 5.967398132888459,
+    "tilt_radius": 0.0002377642641781954,
+    "extra_weight_change_bound": 0.0003362821046883922,
+    "probe_eigenvalue_lower_bound": 0.9676721905545593,
+    "constraint_change_from_temporal_bound": 0.006391994174938223,
+    "constraint_singular_value_lower_bound": 0.019184870908820796,
+    "normal_metric_quadratic_upper_bound": -0.9999999374893431,
+    "partial_28_inverse_norm_upper_bound": 1056.5185388647792,
+    "inverse_majorant": [
+      [
+        992.1497353146767,
+        160.71924251949457
+      ],
+      [
+        321.43848503898914,
+        52.12440598389543
+      ]
+    ]
+  },
+  "sample_checks_not_the_proof": [
+    {
+      "probe_minimum_eigenvalue": 0.9681571718152365,
+      "constraint_minimum_singular_value": 0.03394025992798716,
+      "normal_metric_quadratic": -0.9999999434681586,
+      "partial_28_inverse_norm": 131.7270371382724
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679365972035189,
+      "constraint_minimum_singular_value": 0.033937293523177835,
+      "normal_metric_quadratic": -0.9999999434681494,
+      "partial_28_inverse_norm": 131.71023649933372
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682460067921088,
+      "constraint_minimum_singular_value": 0.03392923028559355,
+      "normal_metric_quadratic": -0.99999994346816,
+      "partial_28_inverse_norm": 131.74597519127218
+    },
+    {
+      "probe_minimum_eigenvalue": 0.967980823994507,
+      "constraint_minimum_singular_value": 0.03392384369237804,
+      "normal_metric_quadratic": -0.9999999434681509,
+      "partial_28_inverse_norm": 131.7637438261182
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682017626830857,
+      "constraint_minimum_singular_value": 0.0339268093060826,
+      "normal_metric_quadratic": -0.9999999434681599,
+      "partial_28_inverse_norm": 131.7805564525019
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9678928584144275,
+      "constraint_minimum_singular_value": 0.03393487573709339,
+      "normal_metric_quadratic": -0.9999999434681495,
+      "partial_28_inverse_norm": 131.74479804848838
+    },
+    {
+      "probe_minimum_eigenvalue": 0.968135063751358,
+      "constraint_minimum_singular_value": 0.033935827423675395,
+      "normal_metric_quadratic": -0.9999999434681563,
+      "partial_28_inverse_norm": 131.7178713881375
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679551698221522,
+      "constraint_minimum_singular_value": 0.033941395420360815,
+      "normal_metric_quadratic": -0.9999999434681514,
+      "partial_28_inverse_norm": 131.71763803978928
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682851858323155,
+      "constraint_minimum_singular_value": 0.03392873604455199,
+      "normal_metric_quadratic": -0.9999999434681616,
+      "partial_28_inverse_norm": 131.754063131539
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9678402487422811,
+      "constraint_minimum_singular_value": 0.033932490465417874,
+      "normal_metric_quadratic": -0.9999999434681468,
+      "partial_28_inverse_norm": 131.7416229474031
+    },
+    {
+      "probe_minimum_eigenvalue": 0.967988226259801,
+      "constraint_minimum_singular_value": 0.03393684956996559,
+      "normal_metric_quadratic": -0.9999999434681509,
+      "partial_28_inverse_norm": 131.7105727433314
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681808581630531,
+      "constraint_minimum_singular_value": 0.03393411719835113,
+      "normal_metric_quadratic": -0.9999999434681578,
+      "partial_28_inverse_norm": 131.72513927948103
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681594870171653,
+      "constraint_minimum_singular_value": 0.03395943252524125,
+      "normal_metric_quadratic": -0.9999999436443854,
+      "partial_28_inverse_norm": 131.6581241298172
+    },
+    {
+      "probe_minimum_eigenvalue": 0.967938875978462,
+      "constraint_minimum_singular_value": 0.03395646304313615,
+      "normal_metric_quadratic": -0.9999999436444355,
+      "partial_28_inverse_norm": 131.6413342362567
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682482286138986,
+      "constraint_minimum_singular_value": 0.03394841087207247,
+      "normal_metric_quadratic": -0.9999999436442707,
+      "partial_28_inverse_norm": 131.67699164924727
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679829833627128,
+      "constraint_minimum_singular_value": 0.03394301367686127,
+      "normal_metric_quadratic": -0.9999999436443132,
+      "partial_28_inverse_norm": 131.69477023790884
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682039574223679,
+      "constraint_minimum_singular_value": 0.03394598236216568,
+      "normal_metric_quadratic": -0.9999999436442631,
+      "partial_28_inverse_norm": 131.71157212691787
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9678951099622853,
+      "constraint_minimum_singular_value": 0.03395403773430243,
+      "normal_metric_quadratic": -0.9999999436444278,
+      "partial_28_inverse_norm": 131.67589500087112
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681373402099414,
+      "constraint_minimum_singular_value": 0.03395500455322164,
+      "normal_metric_quadratic": -0.9999999436443595,
+      "partial_28_inverse_norm": 131.6489347872655
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679574842104028,
+      "constraint_minimum_singular_value": 0.033960560915023544,
+      "normal_metric_quadratic": -0.9999999436444602,
+      "partial_28_inverse_norm": 131.6487576242146
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682874044434713,
+      "constraint_minimum_singular_value": 0.033947916831678415,
+      "normal_metric_quadratic": -0.9999999436442538,
+      "partial_28_inverse_norm": 131.68507298087061
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9678424770973589,
+      "constraint_minimum_singular_value": 0.033951652826168015,
+      "normal_metric_quadratic": -0.9999999436444269,
+      "partial_28_inverse_norm": 131.67271326143992
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679905041519817,
+      "constraint_minimum_singular_value": 0.03395602148579213,
+      "normal_metric_quadratic": -0.9999999436444155,
+      "partial_28_inverse_norm": 131.64166085871992
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681831214333853,
+      "constraint_minimum_singular_value": 0.033953295925959505,
+      "normal_metric_quadratic": -0.9999999436443309,
+      "partial_28_inverse_norm": 131.6561881464793
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681406621140884,
+      "constraint_minimum_singular_value": 0.03390365884694313,
+      "normal_metric_quadratic": -0.9999999427374983,
+      "partial_28_inverse_norm": 131.85666944873307
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679199841445162,
+      "constraint_minimum_singular_value": 0.03390070667185377,
+      "normal_metric_quadratic": -0.9999999427373513,
+      "partial_28_inverse_norm": 131.8398064777352
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682291773266227,
+      "constraint_minimum_singular_value": 0.03389261778525731,
+      "normal_metric_quadratic": -0.9999999427372134,
+      "partial_28_inverse_norm": 131.8757104858283
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679636980536581,
+      "constraint_minimum_singular_value": 0.03388724289299094,
+      "normal_metric_quadratic": -0.9999999427372194,
+      "partial_28_inverse_norm": 131.89347007765804
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681847359741724,
+      "constraint_minimum_singular_value": 0.03389019426656028,
+      "normal_metric_quadratic": -0.9999999427373664,
+      "partial_28_inverse_norm": 131.91034513147196
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9678760497930196,
+      "constraint_minimum_singular_value": 0.03389828635298943,
+      "normal_metric_quadratic": -0.9999999427375043,
+      "partial_28_inverse_norm": 131.8744212989717
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681184613782504,
+      "constraint_minimum_singular_value": 0.03389922728152392,
+      "normal_metric_quadratic": -0.9999999427372918,
+      "partial_28_inverse_norm": 131.8475064638425
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679386448904046,
+      "constraint_minimum_singular_value": 0.033904807938948754,
+      "normal_metric_quadratic": -0.9999999427375358,
+      "partial_28_inverse_norm": 131.84720343668766
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682683300620257,
+      "constraint_minimum_singular_value": 0.03389212004546677,
+      "normal_metric_quadratic": -0.9999999427372374,
+      "partial_28_inverse_norm": 131.8838220776824
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9678233698408376,
+      "constraint_minimum_singular_value": 0.03389590381821979,
+      "normal_metric_quadratic": -0.9999999427374168,
+      "partial_28_inverse_norm": 131.87124068357517
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679716200338169,
+      "constraint_minimum_singular_value": 0.03390025943784927,
+      "normal_metric_quadratic": -0.999999942737323,
+      "partial_28_inverse_norm": 131.8401575220802
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681642035297601,
+      "constraint_minimum_singular_value": 0.03389751284177668,
+      "normal_metric_quadratic": -0.9999999427372664,
+      "partial_28_inverse_norm": 131.85480428468935
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681662953907156,
+      "constraint_minimum_singular_value": 0.03392418477300116,
+      "normal_metric_quadratic": -0.9999999440914004,
+      "partial_28_inverse_norm": 131.79139845106894
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679457631637053,
+      "constraint_minimum_singular_value": 0.033921225948461455,
+      "normal_metric_quadratic": -0.9999999440913041,
+      "partial_28_inverse_norm": 131.77456588573102
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682550794247291,
+      "constraint_minimum_singular_value": 0.03391315523353209,
+      "normal_metric_quadratic": -0.999999944091378,
+      "partial_28_inverse_norm": 131.81036131737636
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679897210312631,
+      "constraint_minimum_singular_value": 0.03390777261924421,
+      "normal_metric_quadratic": -0.9999999440913647,
+      "partial_28_inverse_norm": 131.8281296546982
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682106150015455,
+      "constraint_minimum_singular_value": 0.03391073065031812,
+      "normal_metric_quadratic": -0.9999999440914611,
+      "partial_28_inverse_norm": 131.84497424269048
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679018064060398,
+      "constraint_minimum_singular_value": 0.03391880456015969,
+      "normal_metric_quadratic": -0.9999999440913871,
+      "partial_28_inverse_norm": 131.80915905595842
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681442521418759,
+      "constraint_minimum_singular_value": 0.033919755885678214,
+      "normal_metric_quadratic": -0.9999999440913344,
+      "partial_28_inverse_norm": 131.78222192617736
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679642823234401,
+      "constraint_minimum_singular_value": 0.03392532469634693,
+      "normal_metric_quadratic": -0.999999944091362,
+      "partial_28_inverse_norm": 131.78197619082155
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682942224120683,
+      "constraint_minimum_singular_value": 0.03391265928223434,
+      "normal_metric_quadratic": -0.9999999440914026,
+      "partial_28_inverse_norm": 131.81846001176643
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9678492076065353,
+      "constraint_minimum_singular_value": 0.0339164216639387,
+      "normal_metric_quadratic": -0.9999999440913533,
+      "partial_28_inverse_norm": 131.8059771178877
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679974084498377,
+      "constraint_minimum_singular_value": 0.033920781242737584,
+      "normal_metric_quadratic": -0.9999999440913063,
+      "partial_28_inverse_norm": 131.7749059861065
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681900222765034,
+      "constraint_minimum_singular_value": 0.03391804446207837,
+      "normal_metric_quadratic": -0.9999999440913471,
+      "partial_28_inverse_norm": 131.7895001822124
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681635254161023,
+      "constraint_minimum_singular_value": 0.03392499092987601,
+      "normal_metric_quadratic": -0.9999999434681509,
+      "partial_28_inverse_norm": 131.79287720872108
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679429389010471,
+      "constraint_minimum_singular_value": 0.03392202703548499,
+      "normal_metric_quadratic": -0.9999999434681599,
+      "partial_28_inverse_norm": 131.77605817052572
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682521584070932,
+      "constraint_minimum_singular_value": 0.033913967911393214,
+      "normal_metric_quadratic": -0.9999999434681495,
+      "partial_28_inverse_norm": 131.8118088601085
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679866915981212,
+      "constraint_minimum_singular_value": 0.03390857983143457,
+      "normal_metric_quadratic": -0.9999999434681586,
+      "partial_28_inverse_norm": 131.8295867663817
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682076383270884,
+      "constraint_minimum_singular_value": 0.03391154292856145,
+      "normal_metric_quadratic": -0.9999999434681494,
+      "partial_28_inverse_norm": 131.8464178287164
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9678989265198519,
+      "constraint_minimum_singular_value": 0.033919605252779844,
+      "normal_metric_quadratic": -0.99999994346816,
+      "partial_28_inverse_norm": 131.81064737933195
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681414246908943,
+      "constraint_minimum_singular_value": 0.03392056307493672,
+      "normal_metric_quadratic": -0.9999999434681532,
+      "partial_28_inverse_norm": 131.78369420581046
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679615111965446,
+      "constraint_minimum_singular_value": 0.03392612478276905,
+      "normal_metric_quadratic": -0.9999999434681579,
+      "partial_28_inverse_norm": 131.78347468729635
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682912941963548,
+      "constraint_minimum_singular_value": 0.03391347321976447,
+      "normal_metric_quadratic": -0.9999999434681476,
+      "partial_28_inverse_norm": 131.8199027056674
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9678462920016759,
+      "constraint_minimum_singular_value": 0.03391722175521042,
+      "normal_metric_quadratic": -0.9999999434681627,
+      "partial_28_inverse_norm": 131.80746522465785
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679945834598525,
+      "constraint_minimum_singular_value": 0.03392158394664458,
+      "normal_metric_quadratic": -0.9999999434681582,
+      "partial_28_inverse_norm": 131.77639305684468
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681871723967367,
+      "constraint_minimum_singular_value": 0.033918853551477106,
+      "normal_metric_quadratic": -0.9999999434681517,
+      "partial_28_inverse_norm": 131.7909646445608
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681624756670629,
+      "constraint_minimum_singular_value": 0.033901753097528416,
+      "normal_metric_quadratic": -0.9999999436648772,
+      "partial_28_inverse_norm": 131.87844051000738
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679419509956328,
+      "constraint_minimum_singular_value": 0.033898794055816195,
+      "normal_metric_quadratic": -0.9999999436649261,
+      "partial_28_inverse_norm": 131.8616030183014
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682512049492421,
+      "constraint_minimum_singular_value": 0.033890720778731766,
+      "normal_metric_quadratic": -0.9999999436648532,
+      "partial_28_inverse_norm": 131.89745548363905
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679857530759105,
+      "constraint_minimum_singular_value": 0.03388534423116007,
+      "normal_metric_quadratic": -0.9999999436649494,
+      "partial_28_inverse_norm": 131.9152239110653
+    },
+    {
+      "probe_minimum_eigenvalue": 0.968206638348965,
+      "constraint_minimum_singular_value": 0.03388830248065456,
+      "normal_metric_quadratic": -0.9999999436649005,
+      "partial_28_inverse_norm": 131.93207342795523
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9678978930445366,
+      "constraint_minimum_singular_value": 0.03389637895035974,
+      "normal_metric_quadratic": -0.9999999436649732,
+      "partial_28_inverse_norm": 131.8962011920384
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681404466329291,
+      "constraint_minimum_singular_value": 0.0338973210416806,
+      "normal_metric_quadratic": -0.9999999436648681,
+      "partial_28_inverse_norm": 131.86928095040264
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679604596492237,
+      "constraint_minimum_singular_value": 0.03390289556542602,
+      "normal_metric_quadratic": -0.9999999436649337,
+      "partial_28_inverse_norm": 131.8689975344806
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682903312783523,
+      "constraint_minimum_singular_value": 0.033890225397341406,
+      "normal_metric_quadratic": -0.9999999436648486,
+      "partial_28_inverse_norm": 131.9055590467137
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9678452914473779,
+      "constraint_minimum_singular_value": 0.03389399545841455,
+      "normal_metric_quadratic": -0.9999999436649835,
+      "partial_28_inverse_norm": 131.89302496600789
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679936022735358,
+      "constraint_minimum_singular_value": 0.033898348244209016,
+      "normal_metric_quadratic": -0.9999999436649093,
+      "partial_28_inverse_norm": 131.86194915334886
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681862014904177,
+      "constraint_minimum_singular_value": 0.03389560939363006,
+      "normal_metric_quadratic": -0.9999999436648589,
+      "partial_28_inverse_norm": 131.8765696972733
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681833473153216,
+      "constraint_minimum_singular_value": 0.03395877363935589,
+      "normal_metric_quadratic": -0.9999999427910434,
+      "partial_28_inverse_norm": 131.67508336256856
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679628983620927,
+      "constraint_minimum_singular_value": 0.033955796613033024,
+      "normal_metric_quadratic": -0.9999999427909191,
+      "partial_28_inverse_norm": 131.65832190395784
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682723205191289,
+      "constraint_minimum_singular_value": 0.03394776153200889,
+      "normal_metric_quadratic": -0.9999999427907723,
+      "partial_28_inverse_norm": 131.69391968965866
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9680071132960326,
+      "constraint_minimum_singular_value": 0.03394236271836066,
+      "normal_metric_quadratic": -0.9999999427907796,
+      "partial_28_inverse_norm": 131.71170565471596
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682279260894621,
+      "constraint_minimum_singular_value": 0.03394533895759957,
+      "normal_metric_quadratic": -0.999999942790904,
+      "partial_28_inverse_norm": 131.72847904731367
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679190107427182,
+      "constraint_minimum_singular_value": 0.033953377232399135,
+      "normal_metric_quadratic": -0.9999999427910508,
+      "partial_28_inverse_norm": 131.69286160758918
+    },
+    {
+      "probe_minimum_eigenvalue": 0.968161381127992,
+      "constraint_minimum_singular_value": 0.03395434504112716,
+      "normal_metric_quadratic": -0.9999999427908566,
+      "partial_28_inverse_norm": 131.66589782662945
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679813464071032,
+      "constraint_minimum_singular_value": 0.033959894826960116,
+      "normal_metric_quadratic": -0.9999999427910866,
+      "partial_28_inverse_norm": 131.66574264018763
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9683114698357475,
+      "constraint_minimum_singular_value": 0.03394727010138319,
+      "normal_metric_quadratic": -0.9999999427907906,
+      "partial_28_inverse_norm": 131.70199164003958
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9678664612269332,
+      "constraint_minimum_singular_value": 0.03395099125977367,
+      "normal_metric_quadratic": -0.9999999427909724,
+      "partial_28_inverse_norm": 131.6896845268257
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9680145421970651,
+      "constraint_minimum_singular_value": 0.03395535658543733,
+      "normal_metric_quadratic": -0.9999999427908915,
+      "partial_28_inverse_norm": 131.65864313573695
+    },
+    {
+      "probe_minimum_eigenvalue": 0.968207177125913,
+      "constraint_minimum_singular_value": 0.03395263947822086,
+      "normal_metric_quadratic": -0.9999999427908296,
+      "partial_28_inverse_norm": 131.67314057046153
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681540148806781,
+      "constraint_minimum_singular_value": 0.03394262173273889,
+      "normal_metric_quadratic": -0.999999944174961,
+      "partial_28_inverse_norm": 131.72287550783906
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679334052294002,
+      "constraint_minimum_singular_value": 0.033939649857436964,
+      "normal_metric_quadratic": -0.9999999441748246,
+      "partial_28_inverse_norm": 131.7060899569618
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682427149264365,
+      "constraint_minimum_singular_value": 0.033931597943064745,
+      "normal_metric_quadratic": -0.999999944174895,
+      "partial_28_inverse_norm": 131.74178242566038
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679774117937849,
+      "constraint_minimum_singular_value": 0.03392620465183663,
+      "normal_metric_quadratic": -0.9999999441748199,
+      "partial_28_inverse_norm": 131.75956332883754
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681983837885483,
+      "constraint_minimum_singular_value": 0.033929175731825884,
+      "normal_metric_quadratic": -0.9999999441749562,
+      "partial_28_inverse_norm": 131.77636086888552
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9678895797860531,
+      "constraint_minimum_singular_value": 0.033937230845046344,
+      "normal_metric_quadratic": -0.9999999441748859,
+      "partial_28_inverse_norm": 131.74064868277188
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681318718232824,
+      "constraint_minimum_singular_value": 0.033938190142584576,
+      "normal_metric_quadratic": -0.9999999441748723,
+      "partial_28_inverse_norm": 131.71370344186496
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679520114403493,
+      "constraint_minimum_singular_value": 0.03394375087794117,
+      "normal_metric_quadratic": -0.999999944174903,
+      "partial_28_inverse_norm": 131.71349755146375
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682818808914767,
+      "constraint_minimum_singular_value": 0.03393110489173418,
+      "normal_metric_quadratic": -0.9999999441749211,
+      "partial_28_inverse_norm": 131.74986538295644
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9678369430877604,
+      "constraint_minimum_singular_value": 0.033934844776561966,
+      "normal_metric_quadratic": -0.9999999441748342,
+      "partial_28_inverse_norm": 131.73747382015566
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679850363582856,
+      "constraint_minimum_singular_value": 0.03393920762050149,
+      "normal_metric_quadratic": -0.9999999441748314,
+      "partial_28_inverse_norm": 131.70642059127624
+    },
+    {
+      "probe_minimum_eigenvalue": 0.968177642775912,
+      "constraint_minimum_singular_value": 0.033936481716980195,
+      "normal_metric_quadratic": -0.999999944174882,
+      "partial_28_inverse_norm": 131.720963356648
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681475394529283,
+      "constraint_minimum_singular_value": 0.033915359741543666,
+      "normal_metric_quadratic": -0.9999999431755316,
+      "partial_28_inverse_norm": 131.81363577589664
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679269063439615,
+      "constraint_minimum_singular_value": 0.03391240517373963,
+      "normal_metric_quadratic": -0.9999999431749814,
+      "partial_28_inverse_norm": 131.79678651830577
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682361974486803,
+      "constraint_minimum_singular_value": 0.033904320525591856,
+      "normal_metric_quadratic": -0.999999943175289,
+      "partial_28_inverse_norm": 131.8326518086988
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679708446627344,
+      "constraint_minimum_singular_value": 0.03389894371645058,
+      "normal_metric_quadratic": -0.9999999431748757,
+      "partial_28_inverse_norm": 131.85041044697306
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681918394961373,
+      "constraint_minimum_singular_value": 0.033901897486876144,
+      "normal_metric_quadratic": -0.999999943175426,
+      "partial_28_inverse_norm": 131.8672717591638
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9678830548128329,
+      "constraint_minimum_singular_value": 0.033909985331545434,
+      "normal_metric_quadratic": -0.9999999431751184,
+      "partial_28_inverse_norm": 131.83138667971943
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681253811449311,
+      "constraint_minimum_singular_value": 0.03391092797289623,
+      "normal_metric_quadratic": -0.9999999431752183,
+      "partial_28_inverse_norm": 131.80447222272252
+    },
+    {
+      "probe_minimum_eigenvalue": 0.967945526893531,
+      "constraint_minimum_singular_value": 0.033916506586868324,
+      "normal_metric_quadratic": -0.99999994317526,
+      "partial_28_inverse_norm": 131.80418452132477
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682753616271714,
+      "constraint_minimum_singular_value": 0.03390382337539636,
+      "normal_metric_quadratic": -0.9999999431753834,
+      "partial_28_inverse_norm": 131.84075770511538
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9678304059671801,
+      "constraint_minimum_singular_value": 0.03390760232469466,
+      "normal_metric_quadratic": -0.9999999431749159,
+      "partial_28_inverse_norm": 131.82820701430404
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679785399799348,
+      "constraint_minimum_singular_value": 0.033911958476275136,
+      "normal_metric_quadratic": -0.9999999431750258,
+      "partial_28_inverse_norm": 131.79713442821242
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681711466373867,
+      "constraint_minimum_singular_value": 0.03390921423014693,
+      "normal_metric_quadratic": -0.9999999431752568,
+      "partial_28_inverse_norm": 131.81176290701524
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681472217838575,
+      "constraint_minimum_singular_value": 0.033893975207593754,
+      "normal_metric_quadratic": -0.9999999425702232,
+      "partial_28_inverse_norm": 131.89884963727383
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679265831535372,
+      "constraint_minimum_singular_value": 0.033891022353720775,
+      "normal_metric_quadratic": -0.999999942570497,
+      "partial_28_inverse_norm": 131.88198608723275
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682357395240901,
+      "constraint_minimum_singular_value": 0.033882936880241604,
+      "normal_metric_quadratic": -0.9999999425702061,
+      "partial_28_inverse_norm": 131.9178972539945
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679701874537321,
+      "constraint_minimum_singular_value": 0.033877563379069865,
+      "normal_metric_quadratic": -0.9999999425701912,
+      "partial_28_inverse_norm": 131.93565970408
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681911851547842,
+      "constraint_minimum_singular_value": 0.03388051543302056,
+      "normal_metric_quadratic": -0.9999999425699174,
+      "partial_28_inverse_norm": 131.95253533159095
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9678825369535632,
+      "constraint_minimum_singular_value": 0.03388860410507855,
+      "normal_metric_quadratic": -0.9999999425702083,
+      "partial_28_inverse_norm": 131.91660433967527
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681250709700179,
+      "constraint_minimum_singular_value": 0.03388954381548339,
+      "normal_metric_quadratic": -0.9999999425703968,
+      "partial_28_inverse_norm": 131.8896879100481
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679452014238376,
+      "constraint_minimum_singular_value": 0.033895123403545814,
+      "normal_metric_quadratic": -0.9999999425703473,
+      "partial_28_inverse_norm": 131.88938179803466
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682748726835063,
+      "constraint_minimum_singular_value": 0.03388243967482444,
+      "normal_metric_quadratic": -0.9999999425701249,
+      "partial_28_inverse_norm": 131.926009769903
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9678298718212878,
+      "constraint_minimum_singular_value": 0.03388622170305417,
+      "normal_metric_quadratic": -0.9999999425702947,
+      "partial_28_inverse_norm": 131.9134243967776
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679782277113543,
+      "constraint_minimum_singular_value": 0.03389057526675694,
+      "normal_metric_quadratic": -0.9999999425704883,
+      "partial_28_inverse_norm": 131.88233751980908
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681708034579932,
+      "constraint_minimum_singular_value": 0.03388783005945383,
+      "normal_metric_quadratic": -0.9999999425703433,
+      "partial_28_inverse_norm": 131.89698716360795
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681587126458663,
+      "constraint_minimum_singular_value": 0.03389620489033709,
+      "normal_metric_quadratic": -0.9999999427784235,
+      "partial_28_inverse_norm": 131.89415820402945
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679381554611537,
+      "constraint_minimum_singular_value": 0.03389325250233968,
+      "normal_metric_quadratic": -0.9999999427787328,
+      "partial_28_inverse_norm": 131.87729557366052
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682473662471257,
+      "constraint_minimum_singular_value": 0.03388516786221304,
+      "normal_metric_quadratic": -0.9999999427784326,
+      "partial_28_inverse_norm": 131.91319927789456
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679818519675881,
+      "constraint_minimum_singular_value": 0.03387979471104666,
+      "normal_metric_quadratic": -0.999999942778518,
+      "partial_28_inverse_norm": 131.9309615829199
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682027688197063,
+      "constraint_minimum_singular_value": 0.03388274630323848,
+      "normal_metric_quadratic": -0.9999999427782088,
+      "partial_28_inverse_norm": 131.94783627353016
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9678940669940742,
+      "constraint_minimum_singular_value": 0.03389083413807547,
+      "normal_metric_quadratic": -0.999999942778509,
+      "partial_28_inverse_norm": 131.91191276311577
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681366539866203,
+      "constraint_minimum_singular_value": 0.03389177418553284,
+      "normal_metric_quadratic": -0.9999999427785977,
+      "partial_28_inverse_norm": 131.8849945872946
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679566915605825,
+      "constraint_minimum_singular_value": 0.033897352927666234,
+      "normal_metric_quadratic": -0.9999999427785816,
+      "partial_28_inverse_norm": 131.88469306212656
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682864895339744,
+      "constraint_minimum_singular_value": 0.03388467065030314,
+      "normal_metric_quadratic": -0.9999999427783544,
+      "partial_28_inverse_norm": 131.92131107615552
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9678414459465308,
+      "constraint_minimum_singular_value": 0.03388845206053044,
+      "normal_metric_quadratic": -0.9999999427786082,
+      "partial_28_inverse_norm": 131.90873220419982
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679898075916986,
+      "constraint_minimum_singular_value": 0.033892805501015526,
+      "normal_metric_quadratic": -0.9999999427787127,
+      "partial_28_inverse_norm": 131.87764625833998
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681823982562254,
+      "constraint_minimum_singular_value": 0.03389006059815015,
+      "normal_metric_quadratic": -0.9999999427785469,
+      "partial_28_inverse_norm": 131.89229246334972
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681663645620748,
+      "constraint_minimum_singular_value": 0.033930253473600305,
+      "normal_metric_quadratic": -0.9999999438109546,
+      "partial_28_inverse_norm": 131.76904537444906
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679458550002626,
+      "constraint_minimum_singular_value": 0.03392729119176723,
+      "normal_metric_quadratic": -0.999999943810763,
+      "partial_28_inverse_norm": 131.7522282040857
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682552430286172,
+      "constraint_minimum_singular_value": 0.03391922400438926,
+      "normal_metric_quadratic": -0.9999999438111772,
+      "partial_28_inverse_norm": 131.7880004333169
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679899887159549,
+      "constraint_minimum_singular_value": 0.03391384074831481,
+      "normal_metric_quadratic": -0.9999999438108864,
+      "partial_28_inverse_norm": 131.8057678754481
+    },
+    {
+      "probe_minimum_eigenvalue": 0.968210861483931,
+      "constraint_minimum_singular_value": 0.033916802240094385,
+      "normal_metric_quadratic": -0.999999943811078,
+      "partial_28_inverse_norm": 131.82259704305352
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679019804095746,
+      "constraint_minimum_singular_value": 0.03392487261943285,
+      "normal_metric_quadratic": -0.9999999438106638,
+      "partial_28_inverse_norm": 131.78680508751606
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681443382229602,
+      "constraint_minimum_singular_value": 0.03392582260355465,
+      "normal_metric_quadratic": -0.9999999438110118,
+      "partial_28_inverse_norm": 131.75987598967757
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679643570044247,
+      "constraint_minimum_singular_value": 0.033931391654082314,
+      "normal_metric_quadratic": -0.9999999438107108,
+      "partial_28_inverse_norm": 131.75963251982571
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682943979927421,
+      "constraint_minimum_singular_value": 0.03391872897508249,
+      "normal_metric_quadratic": -0.9999999438112139,
+      "partial_28_inverse_norm": 131.79609409650368
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9678493994499506,
+      "constraint_minimum_singular_value": 0.03392248862965648,
+      "normal_metric_quadratic": -0.9999999438106395,
+      "partial_28_inverse_norm": 131.78362705310937
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679974963058351,
+      "constraint_minimum_singular_value": 0.03392684668792626,
+      "normal_metric_quadratic": -0.9999999438108327,
+      "partial_28_inverse_norm": 131.75256705232763
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681901259050235,
+      "constraint_minimum_singular_value": 0.03392411179592239,
+      "normal_metric_quadratic": -0.9999999438110754,
+      "partial_28_inverse_norm": 131.76714997076866
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681561798912134,
+      "constraint_minimum_singular_value": 0.03393069242379513,
+      "normal_metric_quadratic": -0.999999943934259,
+      "partial_28_inverse_norm": 131.76983946178402
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679355699921018,
+      "constraint_minimum_singular_value": 0.03392772441163194,
+      "normal_metric_quadratic": -0.999999943934049,
+      "partial_28_inverse_norm": 131.7530361857046
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682448122819228,
+      "constraint_minimum_singular_value": 0.033919668684598364,
+      "normal_metric_quadratic": -0.9999999439344495,
+      "partial_28_inverse_norm": 131.78876499237182
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679794015090892,
+      "constraint_minimum_singular_value": 0.033914278478249585,
+      "normal_metric_quadratic": -0.999999943933996,
+      "partial_28_inverse_norm": 131.8065445559737
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682003723397852,
+      "constraint_minimum_singular_value": 0.03391724569315156,
+      "normal_metric_quadratic": -0.999999943934206,
+      "partial_28_inverse_norm": 131.82335984359273
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9678916368069677,
+      "constraint_minimum_singular_value": 0.03392530462049731,
+      "normal_metric_quadratic": -0.9999999439338055,
+      "partial_28_inverse_norm": 131.7876112915936
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681340457094678,
+      "constraint_minimum_singular_value": 0.03392626233582143,
+      "normal_metric_quadratic": -0.9999999439343442,
+      "partial_28_inverse_norm": 131.76066366181485
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679541706612707,
+      "constraint_minimum_singular_value": 0.033931824115881304,
+      "normal_metric_quadratic": -0.999999943933974,
+      "partial_28_inverse_norm": 131.76044660515313
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682839612649705,
+      "constraint_minimum_singular_value": 0.03391917488179378,
+      "normal_metric_quadratic": -0.9999999439344704,
+      "partial_28_inverse_norm": 131.79685410734552
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9678389933133158,
+      "constraint_minimum_singular_value": 0.03392291973868495,
+      "normal_metric_quadratic": -0.9999999439337748,
+      "partial_28_inverse_norm": 131.78443333783147
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679872078178987,
+      "constraint_minimum_singular_value": 0.03392728165186796,
+      "normal_metric_quadratic": -0.9999999439341369,
+      "partial_28_inverse_norm": 131.75336966204694
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681797998409174,
+      "constraint_minimum_singular_value": 0.03392455334233614,
+      "normal_metric_quadratic": -0.999999943934399,
+      "partial_28_inverse_norm": 131.76793017328674
+    },
+    {
+      "probe_minimum_eigenvalue": 0.96815582739713,
+      "constraint_minimum_singular_value": 0.0339421380337281,
+      "normal_metric_quadratic": -0.9999999439383115,
+      "partial_28_inverse_norm": 131.7265345796119
+    },
+    {
+      "probe_minimum_eigenvalue": 0.967935215335034,
+      "constraint_minimum_singular_value": 0.03393916684471969,
+      "normal_metric_quadratic": -0.9999999439381552,
+      "partial_28_inverse_norm": 131.7097451764482
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682444922849538,
+      "constraint_minimum_singular_value": 0.033931115980859475,
+      "normal_metric_quadratic": -0.9999999439384465,
+      "partial_28_inverse_norm": 131.74543380322936
+    },
+    {
+      "probe_minimum_eigenvalue": 0.967979139909059,
+      "constraint_minimum_singular_value": 0.03392572176577461,
+      "normal_metric_quadratic": -0.9999999439380991,
+      "partial_28_inverse_norm": 131.76321599656353
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682001136330057,
+      "constraint_minimum_singular_value": 0.03392869215788961,
+      "normal_metric_quadratic": -0.9999999439382556,
+      "partial_28_inverse_norm": 131.78001739718786
+    },
+    {
+      "probe_minimum_eigenvalue": 0.967891342776601,
+      "constraint_minimum_singular_value": 0.03393674622241714,
+      "normal_metric_quadratic": -0.9999999439379642,
+      "partial_28_inverse_norm": 131.74430904422204
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681336853448614,
+      "constraint_minimum_singular_value": 0.03393770785271816,
+      "normal_metric_quadratic": -0.9999999439383751,
+      "partial_28_inverse_norm": 131.71735665358656
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679538217230705,
+      "constraint_minimum_singular_value": 0.03394326661609159,
+      "normal_metric_quadratic": -0.999999943938099,
+      "partial_28_inverse_norm": 131.7171579899278
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682836508327852,
+      "constraint_minimum_singular_value": 0.033930622742458734,
+      "normal_metric_quadratic": -0.9999999439384605,
+      "partial_28_inverse_norm": 131.75351750254558
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9678387016340819,
+      "constraint_minimum_singular_value": 0.03393436064005684,
+      "normal_metric_quadratic": -0.9999999439379403,
+      "partial_28_inverse_norm": 131.74113182851164
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679868491537711,
+      "constraint_minimum_singular_value": 0.03393872490386472,
+      "normal_metric_quadratic": -0.999999943938221,
+      "partial_28_inverse_norm": 131.71007489385423
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681794482351347,
+      "constraint_minimum_singular_value": 0.033935999584227015,
+      "normal_metric_quadratic": -0.9999999439384145,
+      "partial_28_inverse_norm": 131.72461590572914
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681610442085482,
+      "constraint_minimum_singular_value": 0.033907305981809036,
+      "normal_metric_quadratic": -0.9999999432776961,
+      "partial_28_inverse_norm": 131.85234932460435
+    },
+    {
+      "probe_minimum_eigenvalue": 0.967940501510311,
+      "constraint_minimum_singular_value": 0.033904351619510484,
+      "normal_metric_quadratic": -0.9999999432776935,
+      "partial_28_inverse_norm": 131.83549731546154
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682497710210118,
+      "constraint_minimum_singular_value": 0.03389627050434447,
+      "normal_metric_quadratic": -0.9999999432777705,
+      "partial_28_inverse_norm": 131.87136570103212
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679843404272299,
+      "constraint_minimum_singular_value": 0.033890894489014375,
+      "normal_metric_quadratic": -0.9999999432776849,
+      "partial_28_inverse_norm": 131.88912872907645
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682052439183831,
+      "constraint_minimum_singular_value": 0.03389384805698567,
+      "normal_metric_quadratic": -0.9999999432776877,
+      "partial_28_inverse_norm": 131.90599278290034
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9678964827485741,
+      "constraint_minimum_singular_value": 0.0339019323660903,
+      "normal_metric_quadratic": -0.9999999432776107,
+      "partial_28_inverse_norm": 131.8701046126348
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681389957256258,
+      "constraint_minimum_singular_value": 0.03390287553346651,
+      "normal_metric_quadratic": -0.9999999432777508,
+      "partial_28_inverse_norm": 131.8431827342124
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679590268222947,
+      "constraint_minimum_singular_value": 0.03390845180617021,
+      "normal_metric_quadratic": -0.9999999432776452,
+      "partial_28_inverse_norm": 131.84289790712202
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682889047960812,
+      "constraint_minimum_singular_value": 0.03389577363421529,
+      "normal_metric_quadratic": -0.9999999432777665,
+      "partial_28_inverse_norm": 131.87947290336558
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9678438744398133,
+      "constraint_minimum_singular_value": 0.03389954993182353,
+      "normal_metric_quadratic": -0.999999943277622,
+      "partial_28_inverse_norm": 131.86692400891656
+    },
+    {
+      "probe_minimum_eigenvalue": 0.967992150274687,
+      "constraint_minimum_singular_value": 0.03390390523293603,
+      "normal_metric_quadratic": -0.9999999432777132,
+      "partial_28_inverse_norm": 131.83584477720137
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681847542766854,
+      "constraint_minimum_singular_value": 0.03390116247394876,
+      "normal_metric_quadratic": -0.9999999432777614,
+      "partial_28_inverse_norm": 131.85047416122146
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681429929150802,
+      "constraint_minimum_singular_value": 0.03390426046061736,
+      "normal_metric_quadratic": -0.9999999427544578,
+      "partial_28_inverse_norm": 131.85444176438287
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679223259169163,
+      "constraint_minimum_singular_value": 0.033901309071343665,
+      "normal_metric_quadratic": -0.9999999427542897,
+      "partial_28_inverse_norm": 131.8375766395085
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9682315298983386,
+      "constraint_minimum_singular_value": 0.033893219353297185,
+      "normal_metric_quadratic": -0.9999999427541485,
+      "partial_28_inverse_norm": 131.87348220051
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679660587000233,
+      "constraint_minimum_singular_value": 0.033887844832834,
+      "normal_metric_quadratic": -0.9999999427540603,
+      "partial_28_inverse_norm": 131.89124068255413
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681870857700867,
+      "constraint_minimum_singular_value": 0.033890795421137106,
+      "normal_metric_quadratic": -0.9999999427542284,
+      "partial_28_inverse_norm": 131.90811788973105
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9678783888920984,
+      "constraint_minimum_singular_value": 0.033898888338429634,
+      "normal_metric_quadratic": -0.9999999427543697,
+      "partial_28_inverse_norm": 131.87219250574913
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681208049469366,
+      "constraint_minimum_singular_value": 0.033899829261421176,
+      "normal_metric_quadratic": -0.9999999427542586,
+      "partial_28_inverse_norm": 131.84527752384872
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679409752033254,
+      "constraint_minimum_singular_value": 0.03390541002080773,
+      "normal_metric_quadratic": -0.9999999427544688,
+      "partial_28_inverse_norm": 131.84497470322964
+    },
+    {
+      "probe_minimum_eigenvalue": 0.968270681883793,
+      "constraint_minimum_singular_value": 0.03389272142798515,
+      "normal_metric_quadratic": -0.9999999427541661,
+      "partial_28_inverse_norm": 131.88159424262452
+    },
+    {
+      "probe_minimum_eigenvalue": 0.967825715281437,
+      "constraint_minimum_singular_value": 0.03389650604283238,
+      "normal_metric_quadratic": -0.9999999427542741,
+      "partial_28_inverse_norm": 131.86901113454573
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9679739628153139,
+      "constraint_minimum_singular_value": 0.03390086175831668,
+      "normal_metric_quadratic": -0.9999999427542715,
+      "partial_28_inverse_norm": 131.83792783023094
+    },
+    {
+      "probe_minimum_eigenvalue": 0.9681665494487295,
+      "constraint_minimum_singular_value": 0.0338981146854209,
+      "normal_metric_quadratic": -0.9999999427542287,
+      "partial_28_inverse_norm": 131.85257558081676
+    }
+  ],
+  "not_full_gravitational_normal_symbol": true,
+  "not_hyperbolicity_or_Cauchy_existence": true,
+  "not_interval_certified": true,
+  "no_physical_angle_or_length_calibration": true,
+  "main_TeX_PDF_changed": false
+}

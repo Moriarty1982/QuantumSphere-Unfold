@@ -1,0 +1,187 @@
+{
+  "status": "conditional background provenance and exact coupled reference-Dirac example; NOT native full-coframe closure or adopted geometry",
+  "source_anchors": [
+    {
+      "path": "sources/research/parts/v470/10_sphaera_and_physics.tex",
+      "label": "def:biquaternion",
+      "role": "kinematic quadratic form, not an evaluated four-dimensional coframe map"
+    },
+    {
+      "path": "sources/research/parts/v470/10_sphaera_and_physics.tex",
+      "label": "prop:bilinear-einstein-reconstruction",
+      "role": "full closed triadic bilinear with maximal rank assumed, not a background-plus-fluctuation prescription"
+    },
+    {
+      "path": "sources/research/parts/v470/12_structural_core.tex",
+      "label": "hyp:bidirectional-probe-lensing",
+      "role": "ART/QFT probes, intrinsic orthogonal mediator, phase and cross-bilinear readouts; hypothesis-grade geometry"
+    },
+    {
+      "path": "sources/research/parts/v470/16_master_model.tex",
+      "label": "eq:toe_master_semiconcrete",
+      "role": "declared inter-sector coupling slots, not their numerical values"
+    },
+    {
+      "path": "sources/research/parts/v470/36_frame_typed_endpoint.tex",
+      "label": "subsec:r81-photon-frame-null-note",
+      "role": "photon/clock candidate does not establish exact global zero or a rank-four background"
+    }
+  ],
+  "exact_background_expansion": {
+    "definition": "theta=C[Psi0,D0], E=C[Psi0+phi,D0+delta B]",
+    "identity": "E=theta+cross(Psi0,phi;D0)+C[phi,D0]+C[Psi0+phi,delta B]",
+    "linear_and_connection_cross_terms_are_mandatory": true,
+    "sample_exact_expansion_residual_norm": 2.5579131521338073e-16,
+    "sample_error_if_only_theta_plus_quadratic_fluctuation_is_used": 0.1400395999942628,
+    "fixed_connection_zero_mean_sign_pair_can_cancel_linear_cross_terms": true,
+    "correlated_connection_fluctuations_need_not_cancel": true,
+    "a_change_of_origin_does_not_evade_the_full_same_field_same_frame_trace_obstruction": true
+  },
+  "channel_background_exchange_identity": {
+    "definition": "theta_P=s Re(bar(Psi)P Gamma^a D_mu Psi), P an internal Hermitian subprojector",
+    "on_shell_reference_trace": "Tr(theta_P theta_ref^(-1))/s=Im(bar(Psi)P Omega Psi)",
+    "Hermitian_total_mass_can_have_complex_channel_bilinear": "Im w_P=bar(Psi)[P,Omega]Psi/(2i), with the declared weighted adjoint and spin commutation",
+    "channel_continuity": "partial_mu j_P^mu=2 Im w_P; summed exchange vanishes",
+    "commuting_channel_projector_has_zero_exchange": true,
+    "selected_ART_subprojector_not_identified_with_native_C7_projector": true
+  },
+  "exact_reference_Dirac_example": {
+    "representation": "declared three internal four-spinor amplitudes, fixed reference gamma; not a native C7 embedding",
+    "mass_operator": [
+      [
+        0.6,
+        0.0,
+        4.0
+      ],
+      [
+        0.0,
+        0.6,
+        0.7
+      ],
+      [
+        4.0,
+        0.7,
+        0.6
+      ]
+    ],
+    "direct_ART_QFT_entry": 0.0,
+    "initial_mediator_relative_phase": "pi/2",
+    "solution_type": "affine in spatial coordinates with exact matrix-function time evolution; local use, not a normalizable ground state",
+    "origin_reference_residual_norm": 9.780942154376732e-16,
+    "origin_ART_coframe": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.9999999999999997
+      ]
+    ],
+    "origin_ART_rank": 4,
+    "origin_QFT_coframe_norm": 7.333421579298244e-17,
+    "origin_mediator_coframe": [
+      [
+        -1.0000000000000007,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -0.9999999999999998,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -0.9999999999999998,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        -0.9999999999999997
+      ]
+    ],
+    "origin_total_coframe_norm": 8.3820000221454525e-16,
+    "origin_channel_mass_imaginary_parts": [
+      3.9999999999999996,
+      -7.333421579298239e-17,
+      -3.9999999999999996
+    ],
+    "origin_channel_current_divergences": [
+      7.999999999999999,
+      -1.4666843158596485e-16,
+      -7.999999999999999
+    ],
+    "origin_total_current_divergence": 0.0,
+    "reference_residual_norms_nearby": [
+      6.040855384750525e-16,
+      9.786190301325208e-16,
+      1.3771587721039253e-15
+    ],
+    "ART_determinants_nearby": [
+      0.9782772016956243,
+      0.9985999999999996,
+      0.9755919577788387
+    ],
+    "derived_selected_background_is_locally_flat": "K^a fixed, H_C=0: theta_ART=d(j_ART/2), rank four gives local Minkowski coordinates",
+    "does_not_solve_the_original_full_bilinear_coframe": "the sum is degenerate at the origin, and gamma is the reference gamma, not the reconstructed one away from the origin"
+  },
+  "prepared_ART_QFT_cross_readout": {
+    "source_definition": "E_AQ=Re(bar(Psi_ART)Gamma^a partial_mu Psi_QFT), and E_QA with probes exchanged",
+    "sample_point": [
+      0.01,
+      0.02,
+      -0.03,
+      0.01
+    ],
+    "ordered_cross_rank": 4,
+    "ordered_cross_determinant": 2.2444615514533138e-07,
+    "symmetric_cross_rank": 4,
+    "symmetric_cross_determinant": 1.1833827329851391e-07,
+    "symmetric_cross_gradient_identity": "(E_AQ+E_QA)/2 = partial_mu Re(Psi_ART^dagger K^a Psi_QFT)/2, so invertible symmetric cross coframe is locally flat here",
+    "cross_coframe_at_origin_is_degenerate": true,
+    "interpretation": "nondegenerate local candidate from the prepared two-probe dictionary, not a unique native reference state or a new curved Einstein solution"
+  },
+  "other_source_candidates": {
+    "kernel_displayed_modulus_signature_without_a_real_slice": [
+      1,
+      6
+    ],
+    "a_chosen_real_spatial_slice_has_signature": [
+      1,
+      3
+    ],
+    "does_not_validate_the_sources_quaternion_conjugation_or_Lorentz_derivation": true,
+    "Hopf_internal_S3_plus_clock": "needs an explicit internal-to-spacetime map, three independent spatial forms, a time form and physical scale; not supplied by the Hopf label",
+    "a_single_clock_form_is_rank_at_most_one": true
+  },
+  "remaining_native_burdens": {
+    "background_state_and_numerical_couplings_not_selected_by_the_native_theory": true,
+    "background_plus_fluctuation_parent_needs_background_field_variations": true,
+    "no_native_gauge_Gauss_projector_or_Einstein_solution_claim": true,
+    "no_derived_Newton_scale_vacuum_stability_or_photon_rest_frame": true,
+    "native_C7_closure_not_implied_by_channel_selection": true
+  },
+  "main_TeX_changed": false
+}

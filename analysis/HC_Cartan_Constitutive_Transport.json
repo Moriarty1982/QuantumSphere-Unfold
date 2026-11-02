@@ -1,0 +1,238 @@
+{
+  "scope": "Neutral odd-cross Cartan comparison: exact coordinate curl and point-jet control",
+  "input_sha256": {
+    "HC_Cartan_Regular_Gravity.py": "89cf5597fc935d463eed604f9c9eb247cda17b576ae294dbfad6e45dacbc063f",
+    "HC_Cartan_Regular_Gravity.json": "9719ef580419e7a1d4c49a7aec2f41987832d806215defacd74d8db8c09f4cdc",
+    "HC_Cartan_Regular_Gravity.md": "a2197dd64fb5ef2732021d819e3dfb5e3ebedb3b14654f2bad59cd74e2bf92f4",
+    "HC_Cartan_Spatial_Propagation.py": "1eaa40763d84f28dfb0846032a96da28dd18ab8080cdc2a400c82827eb21feaf",
+    "HC_Cartan_Spatial_Propagation.json": "1ca98d6b4658d279867469948cfdafe68442fa04456320ab4267d0df5befb75b",
+    "HC_Cartan_Spatial_Propagation.md": "6322e87811753bcb255aba65e5ec14d96d4d3ba1df9f0b50fa48e5216cc0098b",
+    "HC_Cartan_Third_Constraint_Reprepare.py": "8e91386218bf8372c4f7329f7825b1443eab018fe9dc65a1513c10c56a87d9c0",
+    "HC_Cartan_Second_Probe_Affine.py": "2d2f8abd51f13f2f0b56ca04add9ecfb4aa3ff749fe6f4372203a31cec5787f9",
+    "HC_Cartan_Second_Gravity_Affine.py": "663ad2ff16c8bc687f8cd366f649bd83a9cd31baafff532e6fa481b34394b46c",
+    "HC_Cartan_Third_Constraint_Diagnostic.py": "b780bfa91bad83b5d0c9454a49e9b44ac3170f94846facadf972117dfa79eab0",
+    "HC_Cartan_Next_Scalar_Compatibility.py": "916e412e18312e7ac72583029a3a2435b6cb4197b19bd5f49e4713b4cc5dcfbc",
+    "HC_Cartan_Next_Scalar_Compatibility.json": "9d3a8191eabf668fbbce0bd81d3ba01bdfd6bf926c293c15bb62b2d574867c0f",
+    "HC_Cartan_Next_Joint_Completion.py": "f78a2a3fb072bc66d81ae3763d40b48abf3dc786fd09fc99a164b3c6b4d92b78",
+    "HC_Cartan_Next_Joint_Completion.json": "259e7358b88fbaae09c54499aace8ec00066c29f34994c1b7e0f71dce1225d78",
+    "HC_Cartan_Regular_Neighborhood.py": "2a79d22186df80113f6b0e39b2d668d6af826be3d6330c42126bcdb8cb855eea",
+    "HC_Cartan_Joint_Neighborhood.py": "a942bb82e2a3bbf3722e2c95b5a624c8c87326fd98d08162c953368a31885d80",
+    "HC_Cartan_Constitutive_Transport.py": "72d3bf0b903700a2213a2b9546578ab55c5c68b9696eeae06dc26b9f577b9c21",
+    "HC_Cartan_Cauchy_Rank.py": "9159a761c6195efcc8cf52923092ad2b485522a1806b6bd23187760a0c8653c7"
+  },
+  "normal_equations_rank": 34,
+  "normal_plus_mixed_curl_rank": 40,
+  "mixed_curl_rank_on_normal_kernel": 6,
+  "induced_singular_values": [
+    38.20506011266952,
+    29.521668728987482,
+    29.521668728987457,
+    14.455195826976972,
+    4.627893576800733,
+    4.627893576800708,
+    5.853350947913744e-13,
+    3.445043960630699e-13,
+    1.597992591032071e-14,
+    6.7785212516325036e-15,
+    6.397358694422269e-15,
+    3.746973011528005e-15
+  ],
+  "normal_direction": [
+    -3.7462403784573745e-15,
+    -3.483172106533644e-17,
+    1.855826878844803e-15,
+    -1.177755820491635e-15,
+    2.254674026224432e-17,
+    7.623906291170769e-17,
+    1.5574095820052445e-15,
+    1.3808252635975931e-15,
+    8.017119242285104e-16,
+    8.390804794977174e-16,
+    9.131141709751382e-16,
+    -3.229797313016935e-16,
+    3.6514765098230583e-16,
+    -9.493129955659224e-17,
+    -5.693833289008832e-16,
+    1.0133554420498539e-15,
+    4.759789570428955e-16,
+    1.1942209319428478e-15,
+    5.510178372081221e-16,
+    -3.991589249390117e-16,
+    3.4620069127131204e-17,
+    2.1894207022520212e-16,
+    1.248274836447883e-16,
+    -9.821747721707297e-16,
+    5.256271692570351e-18,
+    -9.676593159912542e-17,
+    -7.157543747148357e-17,
+    -2.9167829904827294e-18,
+    -3.022927888656784e-17,
+    -1.4276915199005071e-15,
+    -1.388455163718495e-15,
+    8.556944606206514e-16,
+    -9.078343463709247e-16,
+    -5.117112271229879e-16,
+    -5.188827410145603e-16,
+    -1.032795039484809e-15,
+    1.2017694302186472e-16,
+    -7.608793994870693e-19,
+    1.0418978476157743e-16,
+    1.2419595581534086e-16,
+    -2.777562718740901e-15,
+    0.36964234757375175,
+    0.16501949489867768,
+    0.4543882091706797,
+    -1.1081817028450308e-16,
+    -0.013907478895946667,
+    0.1591812040607999,
+    0.4383122266325568,
+    3.1615693428055965e-16,
+    0.15918120406080055,
+    -0.29940881024227406,
+    0.19567580046382044,
+    5.842595102716599e-16,
+    0.43831222663255776,
+    0.1956758004638209,
+    0.16832955079929546
+  ],
+  "normal_kernel_error": 1.0655471172470325e-15,
+  "witnesses": [
+    {
+      "amplitude": 0.0,
+      "point_equations_norm": 1.052011892593397e-14,
+      "spatial_constraint_gradient_norm": 1.6080737379253605e-13,
+      "temporal_column_gradient_norm": 1.390302465538484e-13,
+      "spatial_constraint_time_gradient": [
+        [
+          3.907985046680551e-14,
+          2.7755575615628914e-15,
+          -2.1538326677728037e-14
+        ],
+        [
+          5.329070518200751e-15,
+          4.440892098500626e-15,
+          -5.306866057708248e-14
+        ],
+        [
+          7.926992395823618e-14,
+          3.5083047578154947e-14,
+          -3.175237850427948e-14
+        ],
+        [
+          4.196643033083092e-14,
+          3.552713678800501e-15,
+          1.1546319456101628e-14
+        ]
+      ],
+      "spatial_constraint_time_gradient_norm": 1.236653401467002e-13,
+      "mixed_curl_norm": 2.088045884443965e-14,
+      "frozen_higher_first_probe_norm": 7.04633225326336e-12,
+      "independent_gradient_error": 1.5326846997545244e-13,
+      "transport_identity_error": 1.1304235009234596e-13
+    },
+    {
+      "amplitude": 0.01,
+      "point_equations_norm": 1.0788519072544038e-14,
+      "spatial_constraint_gradient_norm": 1.6080737379253605e-13,
+      "temporal_column_gradient_norm": 1.3113477635282817e-13,
+      "spatial_constraint_time_gradient": [
+        [
+          0.1412220810924616,
+          0.06304579722368253,
+          0.17359928845861083
+        ],
+        [
+          -0.005313360672362322,
+          0.06081527469951897,
+          0.1674574496661061
+        ],
+        [
+          0.06081527469957959,
+          -0.11438931593567547,
+          0.07475805719307638
+        ],
+        [
+          0.16745744966618692,
+          0.07475805719315431,
+          0.06431040607025995
+        ]
+      ],
+      "spatial_constraint_time_gradient_norm": 0.382050601126737,
+      "mixed_curl_norm": 0.3820506011266983,
+      "frozen_higher_first_probe_norm": 0.08292228971497653,
+      "independent_gradient_error": 1.4756240225360673e-13,
+      "transport_identity_error": 1.2714748909550623e-13
+    },
+    {
+      "amplitude": -0.01,
+      "point_equations_norm": 1.023265076214664e-14,
+      "spatial_constraint_gradient_norm": 1.6080737379253605e-13,
+      "temporal_column_gradient_norm": 1.358620882272162e-13,
+      "spatial_constraint_time_gradient": [
+        [
+          -0.14122208109242607,
+          -0.06304579722367698,
+          -0.17359928845854022
+        ],
+        [
+          0.0053133606723516635,
+          -0.060815274699502986,
+          -0.1674574496661554
+        ],
+        [
+          -0.06081527469943526,
+          0.114389315935703,
+          -0.07475805719315409
+        ],
+        [
+          -0.167457449666103,
+          -0.07475805719314721,
+          -0.06431040607022265
+        ]
+      ],
+      "spatial_constraint_time_gradient_norm": 0.3820506011266657,
+      "mixed_curl_norm": 0.3820506011266968,
+      "frozen_higher_first_probe_norm": 0.08292228971538493,
+      "independent_gradient_error": 1.4545169510583906e-13,
+      "transport_identity_error": 8.893523985655822e-14
+    },
+    {
+      "amplitude": 0.02,
+      "point_equations_norm": 1.063895654428507e-14,
+      "spatial_constraint_gradient_norm": 1.6091709974878696e-13,
+      "temporal_column_gradient_norm": 1.652386369239252e-13,
+      "spatial_constraint_time_gradient": [
+        [
+          0.2824441621848841,
+          0.12609159444730544,
+          0.3471985769171295
+        ],
+        [
+          -0.010626721344722867,
+          0.1216305493990193,
+          0.3349148993323363
+        ],
+        [
+          0.12163054939903728,
+          -0.2287786318713576,
+          0.14951611438621293
+        ],
+        [
+          0.3349148993323887,
+          0.14951611438630508,
+          0.12862081214052257
+        ]
+      ],
+      "spatial_constraint_time_gradient_norm": 0.7641012022534598,
+      "mixed_curl_norm": 0.7641012022533906,
+      "frozen_higher_first_probe_norm": 0.16584457943012826,
+      "independent_gradient_error": 1.4340207634408086e-13,
+      "transport_identity_error": 9.041176711836198e-14
+    }
+  ],
+  "couplings_and_state_value_fixed": true,
+  "not_a_solution_of_prolonged_or_open_set_equations": true,
+  "not_a_disproof_of_full_parent_propagation": true,
+  "native_identification_or_full_existence_proved": false,
+  "main_TeX_PDF_changed": false
+}

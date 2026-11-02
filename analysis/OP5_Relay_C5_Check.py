@@ -3,6 +3,10 @@
 Run without arguments for analytic-model tests. --data accepts JSON with
 real, norm-whitened `residual`, `response` and optional `guard_response`.
 The response columns are evaluated control derivatives, not sector labels.
+--readout-data accepts a fixed affine three-block dictionary and an
+evaluated two-mode transfer, with complex entries encoded as real numbers
+or objects with `real` and `imag` components. This is a dictionary test,
+not permission to redefine the native residuals.
 No physical control bounds or nonlinear guard invariance are assumed.
 Requires NumPy and mpmath.
 """
@@ -483,6 +487,140 @@ def invariant_supply_certificate(gamma=1, coupling=0.1, detuning=2,
         }
 
 
+def complex_entries(value):
+    """Parse explicit numeric JSON complex entries without coercing strings."""
+    if isinstance(value, list):
+        return [complex_entries(item) for item in value]
+    if isinstance(value, dict) and set(value) == {"real", "imag"}:
+        components = (value["real"], value["imag"])
+        if any(isinstance(item, bool) or not isinstance(item, (int, float)) for item in components):
+            raise ValueError("Complex components must be numeric.")
+        result = complex(*components)
+    elif not isinstance(value, bool) and isinstance(value, (int, float, complex)):
+        result = complex(value)
+    else:
+        raise ValueError("Use numeric entries or explicit real/imag objects.")
+    if not np.isfinite(result):
+        raise ValueError("Complex entries must be finite.")
+    return result
+
+
+def fixed_readout_audit(data):
+    """Keep the input dictionary fixed; certify only a conditional linear cone bound."""
+    transfer = np.asarray(complex_entries(data["transfer"]), dtype=complex)
+    graph = complex_entries(data["graph"])
+    epsilon = data["tolerance"]
+    if transfer.shape != (2, 2) or not np.isscalar(graph):
+        raise ValueError("Expected a two-mode transfer and scalar graph coefficient.")
+    if isinstance(epsilon, bool) or not isinstance(epsilon, (int, float)) or not np.isfinite(epsilon) or epsilon < 0:
+        raise ValueError("Cone tolerance must be finite and nonnegative.")
+    blocks = data["blocks"]
+    if set(blocks) != {"bd", "ext", "mix"}:
+        raise ValueError("Supply exactly the fixed bd, ext and mix blocks.")
+    vectors = {}
+    for name in ("bd", "ext", "mix"):
+        if set(blocks[name]) != {"offset", "probe", "hidden"}:
+            raise ValueError("Each block needs offset, probe and hidden vectors.")
+        items = [np.asarray(complex_entries(blocks[name][key]), dtype=complex)
+                 for key in ("offset", "probe", "hidden")]
+        if any(item.ndim != 1 or item.size == 0 or item.shape != items[0].shape for item in items):
+            raise ValueError("Each block must contain matching nonempty one-dimensional vectors.")
+        vectors[name] = items
+    offset = np.concatenate([vectors[name][0] for name in vectors])
+    probe = np.concatenate([vectors[name][1] for name in vectors])
+    hidden = np.concatenate([vectors[name][2] for name in vectors])
+    h = probe+graph*hidden
+    hnorm, bnorm = float(np.linalg.norm(h)), float(np.linalg.norm(hidden))
+    u = transfer[0, 0]+graph*transfer[0, 1]
+    feed = transfer[0, 1]
+    defect = transfer[1, 0]+graph*transfer[1, 1]-graph*u
+    v = transfer[1, 1]-graph*feed
+    lower, upper = abs(u)-abs(feed)*epsilon, abs(u)+abs(feed)*epsilon
+    cone_margin = epsilon*lower-abs(defect)-abs(v)*epsilon
+    cone_ok = lower > 0 and cone_margin >= 0
+    offset_zero = bool(np.all(offset == 0))
+    denominator = hnorm-bnorm*epsilon
+    q_upper = upper**2*((hnorm+bnorm*epsilon)/denominator)**2 if denominator > 0 else None
+    q_lower = lower**2*(denominator/(hnorm+bnorm*epsilon))**2 if lower > 0 and denominator > 0 else None
+    applicable = bool(cone_ok and offset_zero and denominator > 0)
+    offset_norm = float(np.linalg.norm(offset))
+    finite_error = ((bnorm*epsilon+offset_norm/(min(1.0, lower)**20))/hnorm
+                    if cone_ok and hnorm > 0 else None)
+    finite_upper = (upper**2*((1+finite_error)/(1-finite_error))**2
+                    if finite_error is not None and finite_error < 1 else None)
+
+    # The example trajectory starts on the supplied graph, not with hidden resets.
+    state = np.array([1, graph], dtype=complex)
+    scores, block_scores = [], {name: [] for name in vectors}
+    for step in range(21):
+        for name, (c, p, b) in vectors.items():
+            residual = c+p*state[0]+b*state[1]
+            block_scores[name].append(float(np.vdot(residual, residual).real))
+        scores.append(sum(block_scores[name][-1] for name in vectors))
+        state = transfer@state
+    ratios = [scores[n+1]/scores[n] if scores[n] > 0 else None for n in range(20)]
+    return {
+        "status": "fixed_affine_readout_audit_not_native_identification",
+        "native_identification_certified": False,
+        "native_guard_functions_verified": False,
+        "fixed_normalized_residual_coordinates_required": True,
+        "dictionary_offset_squared_norm": float(np.vdot(offset, offset).real),
+        "dictionary_offset_exactly_zero": offset_zero,
+        "graph_residual_response_norm": hnorm,
+        "hidden_response_norm": bnorm,
+        "graph_transfer_defect": float(abs(defect)),
+        "cone_invariance_margin": float(cone_margin),
+        "cone_invariant": bool(cone_ok),
+        "conditional_uniform_score_bound_applicable": applicable,
+        "conditional_three_quarter_score_bound_certified": bool(applicable and q_upper <= 0.75),
+        "conditional_score_ratio_upper_bound": float(q_upper) if applicable else None,
+        "conditional_score_ratio_lower_bound": float(q_lower) if applicable else None,
+        "finite_twenty_step_dictionary_error_bound_for_unit_initial_probe": finite_error,
+        "finite_twenty_step_score_upper_bound_for_unit_initial_probe": finite_upper,
+        "conditional_twenty_step_bound_for_unit_initial_probe": bool(finite_upper is not None and finite_upper <= 0.75),
+        "block_dimensions": {name: len(vectors[name][0]) for name in vectors},
+        "graph_prepared_block_scores": block_scores,
+        "graph_prepared_total_scores": scores,
+        "graph_prepared_step_ratios": ratios,
+        "finite_graph_trajectory_three_quarter_test_passed": bool(all(score > 0 for score in scores) and all(ratio <= 0.75 for ratio in ratios)),
+        "physical_clock_and_native_block_provenance": "must be supplied independently",
+    }
+
+
+def readout_example_data(offset=False, invisible=False):
+    """Declared synthetic dictionary, never attributed to the source."""
+    with mp.workdps(45):
+        k, d = mp.mpf("0.1"), mp.mpf("0.5")+2j
+        slow = -d/2+mp.sqrt(d**2/4-k**2)
+        z = complex(1j*slow/k)
+        time = mp.log(mp.mpf("0.5"))/(2*mp.re(slow))
+        matrix = mp.expm(mp.matrix([[0, -1j*k], [-1j*k, -d]])*time)
+    transfer = np.array(matrix.tolist(), dtype=complex).tolist()
+    blocks = {
+        "bd": {"offset": [0], "probe": [1], "hidden": [0.2]},
+        "ext": {"offset": [0, 0], "probe": [2, 0.5], "hidden": [0.1, 0.3]},
+        "mix": {"offset": [1 if offset else 0], "probe": [3], "hidden": [-0.5]},
+    }
+    if invisible:
+        for block in blocks.values():
+            block["hidden"] = [1]*len(block["probe"])
+            block["probe"] = [-z]*len(block["probe"])
+    return {"transfer": transfer, "graph": z, "tolerance": 0.1, "blocks": blocks}
+
+
+def fixed_readout_diagnostic():
+    results = {"homogeneous": fixed_readout_audit(readout_example_data()),
+               "fixed_offset": fixed_readout_audit(readout_example_data(offset=True))}
+    return {
+        "status": "synthetic_readout_examples_not_source_residuals",
+        "homogeneous_dictionary_score_upper_bound": results["homogeneous"]["conditional_score_ratio_upper_bound"],
+        "homogeneous_dictionary_step_ratio": results["homogeneous"]["graph_prepared_step_ratios"][0],
+        "fixed_offset_disallows_uniform_certificate": not results["fixed_offset"]["conditional_uniform_score_bound_applicable"],
+        "fixed_offset_last_step_ratio": results["fixed_offset"]["graph_prepared_step_ratios"][-1],
+        "fixed_offset_asymptotic_score_if_state_decays": results["fixed_offset"]["dictionary_offset_squared_norm"],
+    }
+
+
 class ReachabilityTests(unittest.TestCase):
     def test_unreachable_direction(self):
         j = [[-2, 0], [-2, 1], [-2, 0.8]]
@@ -661,15 +799,76 @@ class ReachabilityTests(unittest.TestCase):
             self.assertLessEqual(abs(state[0])**2, 0.75)
             self.assertLessEqual(abs(state[1]-z*state[0]), abs(state[0]))
 
+    def test_fixed_linear_readout_contracts_all_three_blocks_on_graph(self):
+        result = fixed_readout_audit(readout_example_data())
+        self.assertTrue(result["conditional_three_quarter_score_bound_certified"])
+        self.assertEqual(result["block_dimensions"], {"bd": 1, "ext": 2, "mix": 1})
+        for scores in result["graph_prepared_block_scores"].values():
+            for index in range(20):
+                self.assertAlmostEqual(scores[index+1]/scores[index], 0.5)
+
+    def test_fixed_offset_prevents_uniform_multiplicative_lowering(self):
+        result = fixed_readout_audit(readout_example_data(offset=True))
+        self.assertFalse(result["conditional_uniform_score_bound_applicable"])
+        self.assertEqual(result["dictionary_offset_squared_norm"], 1)
+        self.assertGreater(result["graph_prepared_step_ratios"][-1], 0.99)
+
+    def test_small_fixed_offset_allows_finite_lowering_without_zero_endpoint(self):
+        data = readout_example_data(offset=True)
+        data["blocks"]["mix"]["offset"] = [1e-6]
+        result = fixed_readout_audit(data)
+        self.assertFalse(result["conditional_uniform_score_bound_applicable"])
+        self.assertTrue(result["conditional_twenty_step_bound_for_unit_initial_probe"])
+        self.assertTrue(result["finite_graph_trajectory_three_quarter_test_passed"])
+        self.assertGreater(result["dictionary_offset_squared_norm"], 0)
+
+    def test_invisible_graph_is_not_a_strict_lowering_certificate(self):
+        result = fixed_readout_audit(readout_example_data(invisible=True))
+        self.assertEqual(result["graph_residual_response_norm"], 0)
+        self.assertEqual(result["graph_prepared_total_scores"][0], 0)
+        self.assertFalse(result["conditional_three_quarter_score_bound_certified"])
+
+    def test_fixed_dictionary_does_not_imply_native_guards(self):
+        result = fixed_readout_audit(readout_example_data())
+        self.assertFalse(result["native_identification_certified"])
+        self.assertFalse(result["native_guard_functions_verified"])
+        data = readout_example_data()
+        data["transfer"] = [[0.7, 0.2], [1, 0.7]]
+        self.assertFalse(fixed_readout_audit(data)["cone_invariant"])
+
+    def test_invalid_fixed_dictionary_rejected(self):
+        for error in ("missing_block", "nonfinite", "mismatched_vectors", "extra_field"):
+            data = readout_example_data()
+            if error == "missing_block":
+                del data["blocks"]["mix"]
+            elif error == "nonfinite":
+                data["transfer"][0][0] = np.inf
+            elif error == "mismatched_vectors":
+                data["blocks"]["ext"]["probe"] = [1]
+            else:
+                data["blocks"]["bd"]["leak"] = [0]
+            with self.assertRaises(ValueError):
+                fixed_readout_audit(data)
+
+    def test_explicit_json_complex_parser(self):
+        self.assertEqual(complex_entries({"real": 1, "imag": -2}), 1-2j)
+        for value in ("1+2j", True, {"real": 1}, {"real": "1", "imag": 2}, np.nan):
+            with self.assertRaises(ValueError):
+                complex_entries(value)
+
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--data", type=Path)
     parser.add_argument("--cone-data", type=Path)
+    parser.add_argument("--readout-data", type=Path)
     args = parser.parse_args()
-    if args.data and args.cone_data:
+    if sum(path is not None for path in (args.data, args.cone_data, args.readout_data)) > 1:
         parser.error("Choose one diagnostic input mode.")
-    if args.cone_data:
+    if args.readout_data:
+        data = json.loads(args.readout_data.read_text(encoding="utf-8"))
+        print(json.dumps(fixed_readout_audit(data), indent=2))
+    elif args.cone_data:
         data = json.loads(args.cone_data.read_text(encoding="utf-8"))
         print(json.dumps(invariant_supply_certificate(**data), indent=2))
     elif args.data:
@@ -687,7 +886,8 @@ def main():
                           "outgoing_port_diagnostic": outgoing_port_diagnostic(),
                           "shared_channel_diagnostic": shared_channel_diagnostic(),
                           "hc_even_supply_diagnostic": hc_even_supply_diagnostic(),
-                          "invariant_supply_certificate": invariant_supply_certificate()}, indent=2))
+                          "invariant_supply_certificate": invariant_supply_certificate(),
+                          "fixed_readout_diagnostic": fixed_readout_diagnostic()}, indent=2))
 
 
 if __name__ == "__main__":

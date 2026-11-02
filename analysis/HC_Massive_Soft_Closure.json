@@ -1,0 +1,217 @@
+{
+  "status": "local massive charged Dirac/gauge/INDEPENDENT SOFT HC comparison with a certified reference existence box; NOT native hard H=Lambda, physical mass selection, metric or global finite-energy solution",
+  "assumptions": [
+    "same prescribed R1,1 x round S2 and unit-flux projector, ordinary spin adjoint, U(2) carrier",
+    "real symmetric probe plus dagger bosonic action, internal/spin curvature kept distinct",
+    "H_C is an independent Hermitian field with finite lambda ||H_C-Lambda||^2; Lambda=0 for scalar M",
+    "bare comparison mass m=0.6 and Yukawa coefficient gamma=0.4 are declared inputs, not native eigenvalues/scales",
+    "stationary zero longitudinal current, local polar patch, fixed metric and axis; no global energy or stability claim"
+  ],
+  "reduced_equations": {
+    "ansatz": "Psi=V_N exp(-i omega t-i phi/2)(0,u,0,i v), A_t=a(z)P, H=h(z)P",
+    "spinor": "u'=(omega-a+m+gamma h)v; v'=(m+gamma h-omega+a)u",
+    "gauge": "a''=-g^2(u^2+v^2)",
+    "HC": "h''=-(g^2/kappa^2)[2 lambda h+gamma(u^2-v^2)]",
+    "scalar_source": "S=(u^2-v^2)P, j^t=(u^2+v^2)P, j^z=0",
+    "density": "L=(omega-a)rho+u v'-v u'-(m+gamma h)sigma+(a'^2+kappa^2 h'^2)/(2g^2)-lambda h^2, up to sphere constant/factor",
+    "spatial_first_integral": "I=-(omega-a)rho+(m+gamma h)sigma+(a'^2+kappa^2 h'^2)/(2g^2)+lambda h^2; not a temporal energy"
+  },
+  "reference_parameters": {
+    "m": 0.6,
+    "omega": 0.9,
+    "g": 0.8,
+    "kappa": 0.7,
+    "gamma": 0.4,
+    "lambda": 0.3
+  },
+  "reference_initial": {
+    "u": 0.5,
+    "v": 0.1,
+    "a": 0.0,
+    "a_first": 0.03,
+    "h": 0.2,
+    "h_first": 0.0
+  },
+  "existence_certificate": {
+    "lower": [
+      0.4,
+      0.0,
+      -0.1,
+      -0.07,
+      0.1,
+      -0.1
+    ],
+    "upper": [
+      0.6,
+      0.2,
+      0.1,
+      0.13,
+      0.30000000000000004,
+      0.1
+    ],
+    "rhs_abs_bounds": [
+      0.3440000000000001,
+      0.216,
+      0.13,
+      0.25600000000000006,
+      0.1,
+      0.4440816326530615
+    ],
+    "interval": 0.2,
+    "max_displacement_bound": 0.0888163265306123,
+    "available_box_radius": 0.1,
+    "Jacobian_infinity_norm_bound": 2.01,
+    "Picard_contraction_bound": 0.40199999999999997,
+    "h_lower_bound": 0.1,
+    "scalar_source_lower_bound": 0.12000000000000002
+  },
+  "sample_profiles": [
+    {
+      "z": -0.2,
+      "state": {
+        "u": 0.46488028884993776,
+        "v": 0.12171184261006049,
+        "a": -0.009207728324741952,
+        "a_first": 0.061456505244687924,
+        "h": 0.1945023327868583,
+        "h_first": 0.05415824543011173
+      },
+      "rho": 0.2309274555927377,
+      "scalar": 0.20129991032966543,
+      "spatial_first_integral": -0.058096875,
+      "series_ODE_defect": 3.6390370789683804e-40
+    },
+    {
+      "z": -0.1,
+      "state": {
+        "u": 0.4833185934324811,
+        "v": 0.11091552043059628,
+        "a": -0.0038172192933118468,
+        "a_first": 0.04619394179428909,
+        "h": 0.19860628834490685,
+        "h_first": 0.027693102695152388
+      },
+      "rho": 0.245899115429942,
+      "scalar": 0.22129461008516196,
+      "spatial_first_integral": -0.05809687499999998,
+      "series_ODE_defect": 8.485742094989974e-50
+    },
+    {
+      "z": 0,
+      "state": {
+        "u": 0.5,
+        "v": 0.1,
+        "a": 0.0,
+        "a_first": 0.03,
+        "h": 0.2,
+        "h_first": 0.0
+      },
+      "rho": 0.26,
+      "scalar": 0.24,
+      "spatial_first_integral": -0.058096875000000034,
+      "series_ODE_defect": 1.9446922743316068e-62
+    },
+    {
+      "z": 0.1,
+      "state": {
+        "u": 0.5149121152053272,
+        "v": 0.08888516143522956,
+        "a": 0.0021537878665513132,
+        "a_first": 0.012936682958058781,
+        "h": 0.19857496951967327,
+        "h_first": -0.0286321049356327
+      },
+      "rho": 0.2730350583085909,
+      "scalar": 0.25723391446185734,
+      "spatial_first_integral": -0.058096874999999965,
+      "series_ODE_defect": 8.528785970164714e-50
+    },
+    {
+      "z": 0.2,
+      "state": {
+        "u": 0.5280271134487444,
+        "v": 0.07747034326186081,
+        "a": 0.0025608212303617683,
+        "a_first": -0.004921693902294504,
+        "h": 0.19425245808542604,
+        "h_first": -0.057897342243274814
+      },
+      "rho": 0.28481428662212377,
+      "scalar": 0.27281097845190266,
+      "spatial_first_integral": -0.05809687500000005,
+      "series_ODE_defect": 3.676249176513816e-40
+    }
+  ],
+  "full_matrix_checks": {
+    "point": [
+      0.4,
+      0.9,
+      0.4,
+      0.15
+    ],
+    "real_massive_Dirac_residual_norm": 8.034551242630832e-17,
+    "gauge_residual_norm": 1.8679974543320488e-11,
+    "independent_HC_residual_norm": 5.659125996584836e-12,
+    "projector_tangent_residual_norm": 3.874745691370815e-12,
+    "projector_normal_reaction_norm": 0.22416436318189153,
+    "ordered_probe_residual_norm": 0.10291244632259534,
+    "complex_connection_extra_residual_norm": 0.2049502749076237,
+    "HC_source_norm": 0.1060965954746713,
+    "hard_H_equals_Lambda_mismatch_norm": 0.1967796128507275,
+    "rho": 0.2790933730759868,
+    "scalar": 0.2652414886866783,
+    "HC_eigenvalues": [
+      3.122502256758253e-17,
+      0.1967796128507275
+    ]
+  },
+  "hard_branch_boundary": {
+    "at_H_0_independent_HC_equation_requires_gamma_S_0": true,
+    "restricted_stationary_no_go": "IF the independent soft-HC equation is retained AND H=0 is additionally imposed with gamma nonzero, u^2=v^2; Dirac then gives a=omega and Gauss forces u=v=0",
+    "not_a_no_go_for_all_massive_native_probes_or_nonstationary_currents": true,
+    "gamma_0_is_a_changed_coupling_control_not_an_adopted_native_repair": true
+  },
+  "hard_dependent_comparison": {
+    "domain": "H=Lambda=0 substituted before variation; no independent H equation",
+    "existence_certificate": {
+      "lower": [
+        0.4,
+        0.0,
+        -0.1,
+        -0.07
+      ],
+      "upper": [
+        0.6,
+        0.2,
+        0.1,
+        0.13
+      ],
+      "rhs_abs_bounds": [
+        0.32,
+        0.24,
+        0.13,
+        0.256
+      ],
+      "interval": 0.2,
+      "max_displacement_bound": 0.064,
+      "available_box_radius": 0.1,
+      "Jacobian_infinity_norm_bound": 1.81,
+      "Picard_contraction_bound": 0.362
+    },
+    "gamma_is_not_set_to_zero": 0.4,
+    "massive_Dirac_residual_norm": 7.07465606654855e-17,
+    "gauge_residual_norm": 1.870802378386649e-11,
+    "independent_soft_HC_residual_if_inappropriately_imposed": 0.10574645723935856,
+    "formal_equality_multiplier": "Z=gamma S for +Tr[Z(H-Lambda)]; reacts to the excluded independent-H direction",
+    "HC_residual_plus_multiplier_norm": 9.636624421971282e-12,
+    "minimal_Lambda_first_variation_at_scalar_M_is_zero": true,
+    "not_a_derivation_of_the_native_HC_domain_or_gauge_current_dictionary": true
+  },
+  "remaining_obligations": [
+    "choose native hard/soft HC domain and its consistent real action/adjoint",
+    "derive actual mass/triadic/gauge carrier and all coefficients instead of these inputs",
+    "global spin/charge boundary data, causal/dynamical stability and metric/axis backreaction",
+    "if retaining ordered HC transport or printed complex connection equation, solve their additional nonzero residuals"
+  ],
+  "main_TeX_changed": false
+}

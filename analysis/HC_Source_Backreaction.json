@@ -1,0 +1,144 @@
+{
+  "status": "conditional source and positive-cone derivation; NOT a native phase or mass prediction",
+  "source_dictionary": {
+    "inherited_file": "sources/research/parts/v470/10_sphaera_and_physics.tex",
+    "source_action_labels": [
+      "thm:variational-form",
+      "thm:master-field-equation"
+    ],
+    "probe_source": "Herm Tr_spin[(I_gen tensor C) |Psi><Psi|], C=eta_D(i kappa Gamma.n-gamma)",
+    "spin_internal_factorization_and_adjoint_must_be_supplied": true,
+    "curvature_source": "Herm(kappa n_nu D_mu^ad F^{mu nu}) in the declared real variation",
+    "scalar_current_traces_do_not_determine_generation_matrix": true,
+    "native_generation_resolved_state_not_evaluated": true
+  },
+  "same_scalar_current_different_coherence_witness": {
+    "scope": "factorized finite amplitudes, not complete native field solutions",
+    "scalar_bilinears": [
+      1.0,
+      1.0000000000000002
+    ],
+    "cycle_source_coherences": [
+      0.0,
+      1.0000000000000002
+    ]
+  },
+  "circulant_dynamics_obstruction": {
+    "hypotheses": "canonical unitary modal dynamics; scalar spin coupling; Lambda=t Q; no other torques",
+    "unconstrained_H_star": "Lambda-g rho/(2 lambda_H)",
+    "density_equation": "i rho_dot=[g Lambda-g^2 rho/(2 lambda_H),rho]=g[Lambda,rho]",
+    "cycle_coherence": "j=Tr(rho U); j_dot=i g Tr(rho[Lambda,U])=0",
+    "arbitrary_local_coherence_is_not_the_needed_cycle_coherence": true,
+    "does_not_exclude_noncirculant_native_interactions": true
+  },
+  "positive_cone_model": {
+    "energy": "lambda_H||H-t Q||_F^2+g Tr(H), H>=0, g>0",
+    "requires_independent_positive_H_instead_of_exact_H_equals_Lambda": true,
+    "three_equal_mode_occupations_not_the_empty_vacuum": true,
+    "solution": "H_star=t (Q-k I)_+, k=g/(2 lambda_H t)",
+    "KKT": "2 lambda_H(H-t Q)+g I-S=0; H>=0; S>=0; H S=0",
+    "energy_per_lambda_t_squared": "sum f_k(q_i), f_k(q)=q^2 if q<=k else 2kq-k^2",
+    "reaction_force_for_isotropic_source": "E_eff'=-Tr(S Lambda') because Tr(Lambda')=0",
+    "spectral_clipping_is_not_a_low_degree_polynomial": true,
+    "strict_interior_threshold_interval": [
+      0.039424005451567844,
+      0.0669872981077807
+    ],
+    "lower_endpoint_exact": "(33-23 sqrt(2))/12",
+    "upper_endpoint_exact": "(2-sqrt(3))/4",
+    "implicit_phase_law": "k=(1+sqrt(2)x)^2/6-3(4x^2-1)/(4(1+sqrt(2)x)), x=cos(Phi/3)",
+    "proved_local_and_chamber_global_phase_minimum": true,
+    "does_not_prove_radial_or_full_field_stability": true,
+    "releasing_radius_or_scale_without_extra_forces_invalidates_full_stationarity": true,
+    "illustrative_unfitted_threshold": {
+      "input_threshold_not_native_prediction": 0.05,
+      "phase_radians": 0.4870586715393922,
+      "conjugate_phase_radians": -0.4870586715393922,
+      "theta_local_branch_radians": 2.2567479929063263,
+      "gram_eigenvalues": [
+        0.0018104192730497037,
+        0.04169340221400163,
+        0.9564961785129488
+      ],
+      "positive_compensator_eigenvalues_per_t": [
+        -8.608632424003902e-17,
+        3.0575173008781156e-17,
+        0.9064961785129486
+      ],
+      "constraint_reaction_eigenvalues_per_lambda_t": [
+        6.067443908459343e-17,
+        0.016613195571996663,
+        0.09637916145390053
+      ],
+      "numerical_eigenvalue_tolerance": 1e-12,
+      "energy_per_lambda_t_squared": 0.09489123525741765,
+      "phase_force_per_lambda_t_squared": 1.3444106938820255e-17,
+      "phase_curvature_per_lambda_t_squared": 0.00529273379816086,
+      "compensator_rank": 1,
+      "matching_residual_norm_per_t": 0.06512770075876122
+    }
+  },
+  "radius_and_closure_audit": {
+    "source_boundary": {
+      "deep_compensator_hypothesis": "hyp:frame-dependent-defect-readout in v470/13_hc_hypotheses.tex",
+      "deeper_generator_and_defect_field_are_not_identified": true,
+      "native_readout_map_is_not_evaluated": true,
+      "positive_compression_zero": "S* H_core S=0 and H_core>=0 imply H_core S=0",
+      "zero_mismatch_is_different": "[H_core,P]=0 allows a nonzero internal block P H_core P",
+      "renaming_H_does_not_derive_a_new_action_or_source_ratio": true,
+      "effective_coefficients_not_numerically_fixed_in_displayed_field_definitions": true
+    },
+    "radius_relaxation": {
+      "hypotheses": "same static cone energy, fixed t and Tr Q=1; no independent fixed root trace or radius law",
+      "exact_energy_identity": "F=2k-3k^2+sum_i (k-q_i)_+^2",
+      "global_minimum_for_0_lt_k_lt_one_third": "F_min=2k-3k^2, attained by every Tr Q=1 with Q>=k I",
+      "global_minimum_for_k_ge_one_third": "F_min=1/3, attained only by Q=I/3",
+      "cyclic_descent_path": "Q_e=(1-e)Q+e I/3; B_e=sqrt(Q_e) stays positive, cyclic and unit Frobenius norm",
+      "descent_slope": "F_e'(0)=-2 sum_(q_i<k) (k-q_i)(1/3-q_i)<0 in the interior-selection interval",
+      "illustrative_threshold": 0.05,
+      "old_fixed_radius_energy": 0.09489123525741765,
+      "unrestricted_fixed_trace_minimum": 0.0925,
+      "old_energy_excess": 0.002391235257417648,
+      "mixing_descent_derivative": -0.0367969716721728,
+      "pure_radius_derivative_at_fixed_phase": 0.007425933377237764,
+      "minimum_mixing_fraction_for_global_plateau": 0.14535822015062158,
+      "example_mixing_fraction": 0.2,
+      "mixed_energy": 0.09250000000000003,
+      "mixed_root_radius_ratio_r_over_a": 0.4198407995688287,
+      "mixed_root_Koide_ratio": 0.45084419798839515,
+      "old_phase_minimum_is_not_a_full_shape_stationary_point": true
+    },
+    "scale_relaxation": {
+      "hypotheses": "same static cone energy; t variable at fixed g, lambda_H and Q; no other scale force",
+      "derivative": "E_t'=2 lambda_H sum_i q_i min(t q_i,g/(2 lambda_H))>0 for t>0",
+      "global_minimum": "t=0, H=0, E=0; normalized shape and phase are then not selected by this energy",
+      "M_was_not_listed_as_an_independent_native_field_variable": true,
+      "therefore_not_a_proved_native_time_evolution": true,
+      "illustrative_derivative_at_t_one_g_point_one": 0.09913285266354033
+    },
+    "exact_matching_and_units": {
+      "relative_residual_scope": "analyzed three-mode block; matched spectator blocks change the full Frobenius denominator",
+      "relative_residual_norm_at_example": 0.06802515318891444,
+      "relative_residual_lower_bound_in_phase_window": 0.039424005451567844,
+      "bound_argument": "largest active mode has residual t k; ||Lambda||_F=t||Q||_F<=t",
+      "hard_matching_limit_at_fixed_g_t": "lambda_H->infinity gives k->0 and removes this interior-selection mechanism",
+      "field_unit_covariance": "H'=cH,t'=ct,lambda_H'=lambda_H/c^2,g'=g/c leaves energy and k unchanged"
+    },
+    "required_native_shape_condition": {
+      "at_trace_B_squared_one": "Tr B=sqrt(3/2) iff a=1/sqrt(6), r=1/sqrt(12) iff Koide=2/3",
+      "existing_equal_norm_condition": "v480:koide-equal-norm and v480:koide-hc-mixing are conditional on the native root map and its orthogonality",
+      "imposing_the_constraint_is_not_deriving_it": true
+    }
+  },
+  "remaining_obligations": [
+    "derive the generation carrier and cyclic Millennium bridge instead of assuming them",
+    "decide whether native H is defined as Lambda or is an independently constrained field",
+    "derive a static positive energy and the occupied probe/background state",
+    "compute g/(2 lambda_H t) independently; do not infer it from a target angle or masses",
+    "derive the fixed root trace/radius and scale support; releasing them gives shape descent and scale collapse in this reduced energy",
+    "evaluate exact closure, other direct phase terms, gauge dynamics, kinetics and chiral mass matching",
+    "do not read the rank-one compensator as three positive lepton masses"
+  ],
+  "main_TeX_changed": false,
+  "historical_masses_or_target_phase_used": false
+}
