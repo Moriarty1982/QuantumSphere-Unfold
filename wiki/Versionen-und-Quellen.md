@@ -5,7 +5,7 @@ Stand: **2.11.2026**, geprüft gegen Commit [`cf48496c95b6c9ec3f6a3c196df2c8c2c8
 | Ebene | Stand | Verwendung |
 |---|---|---|
 | Öffentliche Baseline | v4.9.0, 21.10.2026 | Publizierte Aussagen und Zitation |
-| Forschung | 4.10.0-draft; Layer bis v4.9.0-r70 | Nachträgliche Forschung und Korrekturen; keine 4.10-Veröffentlichung |
+| Forschung | 4.10.0-draft; Layer bis v4.9.0-r71 | Nachträgliche Forschung und Korrekturen; keine 4.10-Veröffentlichung |
 | Vorherige Veröffentlichung | v4.8.0, DOI 10.5281/zenodo.23365244 | Historischer Vergleich |
 | Ältere Veröffentlichung | v4.7.0, DOI 10.5281/zenodo.20232911 | Herkunft und ältere Argumente |
 | Analysen, Savepoints, Prüfberichte | jeweils eigener Stand | Keine automatische Release-Zugehörigkeit |
@@ -21,6 +21,7 @@ Stand: **2.11.2026**, geprüft gegen Commit [`cf48496c95b6c9ec3f6a3c196df2c8c2c8
 - [r63–r68](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/cf48496c95b6c9ec3f6a3c196df2c8c2c84e3d0b/notes/research/v4_10_0_r63_r64/README.md): Frame-Prüfungen und Statuskorrekturen.
 - [r69](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/cf48496c95b6c9ec3f6a3c196df2c8c2c84e3d0b/notes/research/v4_10_0_r69/README.md): Einbindung der OP5-Arbeitsserie vom 25.–27.10.
 - [r70](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/v4_10_0_r70/README.md): 4.10-Konsolidierung, Korrektur zu r69, H48 und Λ-Kreuzungen. Die 4.10-Konsolidierung selbst ist in [notes/research/v4_10_0_consolidation](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/cf48496c95b6c9ec3f6a3c196df2c8c2c84e3d0b/notes/research/v4_10_0_consolidation/README.md) beschrieben. (Notizen unter [`analysis/`](https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/cf48496c95b6c9ec3f6a3c196df2c8c2c84e3d0b/analysis), Prefix `OP5_`).
+- [r71](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/v4_10_0_r71/README.md): Struktur des OP5-Vergleichssystems: unabhängige Bestätigung des 70-stelligen Keims, die −1 als Artefakt, Lichtkegel und zwei Ebenen, exakte Polarwinkel-Eichsymmetrie; Vorab-Tests H49 und H50 widerlegt.
 
 ## Versionsfallen
 

@@ -45,6 +45,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+**2.11.2026, Layer r71:** Forschungsstand, Forschungslinie, Offene Probleme (OP5), Vorhersagen und Tests (H49, H50), Inhalt und Content overview um die Struktur des OP5-Vergleichssystems und die Polarwinkel-Eichsymmetrie ergänzt; Stand-Zeilen auf r71.
+
 **2.11.2026, Layer r70 und Inhaltsseiten:** Neue Seiten [Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) (mit englischer Fassung [Content overview](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Content-overview)), [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie), [Vorhersagen und Tests](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Vorhersagen-und-Tests) und [Offene Probleme](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Offene-Probleme). Dokumentführer (DE/EN) in den Stationen 5–8 um Inhaltsangaben ergänzt. Forschungsstand um r70 ergänzt; der in r69 genannte Wert 1,689 korrigiert (richtig 1,686953). Regel „Inhalt wiedergeben, nicht nur verweisen“ aufgenommen.
 
 **28.10.2026, Quelle ins Hauptrepository verlegt:** Seiten liegen jetzt unter `wiki/` und werden per Workflow ins Wiki gespiegelt, damit Wiki-Änderungen mit den Repository-Änderungen über Pull Requests laufen.

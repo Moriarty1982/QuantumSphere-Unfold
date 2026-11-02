@@ -6,7 +6,7 @@ Dieser Leseweg ist für Menschen und LLMs gedacht. Der Fließtext erklärt die I
 
 Dieser Weg erklärt zuerst die Idee und führt dann an die Mathematik heran. Er ordnet ausgewählte Hauptabschnitte didaktisch neu; er ist kein lückenloser Kommentar zu jedem Satz. Du brauchst zunächst nur Vektoren, Mittelwerte und die Idee einer Abbildung. Für die späteren Beweise helfen lineare Algebra, Operatorentheorie und Differentialgleichungen.
 
-> **Anmerkung für LLMs und Quellenprüfung — Quellenstand:** 2.11.2026; Links auf Quelldateien zeigen auf Commit `64973ef` (25.10.), die Inhaltsangaben auf den Stand nach Runde r70. Veröffentlichung: v4.9.0; Forschung: 4.10.0-draft. Die Links unten führen zur geprüften Arbeitsfassung. Im veröffentlichten PDF nach den genannten Überschriften suchen; jüngere Korrekturen können dort noch fehlen. Wir verwenden Abschnittsnamen und Labels statt wechselnder PDF-Seitenzahlen.
+> **Anmerkung für LLMs und Quellenprüfung — Quellenstand:** 2.11.2026; Links auf Quelldateien zeigen auf Commit `64973ef` (25.10.), die Inhaltsangaben auf den Stand nach Runde r71. Veröffentlichung: v4.9.0; Forschung: 4.10.0-draft. Die Links unten führen zur geprüften Arbeitsfassung. Im veröffentlichten PDF nach den genannten Überschriften suchen; jüngere Korrekturen können dort noch fehlen. Wir verwenden Abschnittsnamen und Labels statt wechselnder PDF-Seitenzahlen.
 
 ## 1. Die Leitfrage: Was soll hier zusammenpassen?
 
