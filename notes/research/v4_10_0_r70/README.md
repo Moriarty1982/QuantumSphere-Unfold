@@ -19,3 +19,5 @@ Continuation of [`../v4_10_0_r69/`](../v4_10_0_r69/README.md). The layer is appe
 
 Local monolith: 1277 → 1287 pages, 3884 → 3897 labels, SHA256 prefix `8d49a38e38b83715`, hard values 0, overfull 45, guard linter 0 new hits. The figure
 `figures/op5-slices-9x9.pdf` is the first external graphic of the monolith. Local backup tag `vor-konsolidierung-v410-r70`.
+Candidate build with `.github/scripts/qsc_latex_build.py --source-dir sources/research` (TeX Live 2022): 1312 → 1315 pages, 4013 → 4018 labels,
+undefined references 0, duplicate labels 0, rerun 0, overfull 45 (unchanged). Local history up to `5c1eba7` joined by an ours-merge.
