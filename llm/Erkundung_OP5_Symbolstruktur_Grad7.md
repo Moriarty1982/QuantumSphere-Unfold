@@ -54,3 +54,23 @@ die Identität der freien Funktion sind offen.
 
 Erst die freie Funktion festlegen (Eichung), dann die Involutivität neu prüfen. Die Grad-5-Frage „0 oder 1“ war in
 dieser Form falsch gestellt.
+
+## Nachtrag (2. November 2026, abends): Woher die freie Funktion und die Ebenen kommen (k125–k132)
+
+8. **Die freie Richtung ist ein Diffeomorphismus.** Der F-Teil von J vernichtet die vier Richtungen δΨ = c^μ D_μΨ
+   (|F auf B| = 3e-13). Die freie Funktion ist eine davon: G- und dg-Zeilen verschwinden auf c = e_z am Keim exakt (k125).
+9. **Sie liegt entlang des Polarwinkels.** Eigener Aufbau des vervollständigten Symbols (k127, Abgleich mit dem
+   gespeicherten J auf 4e-9) und Fortsetzung der Erstjet-Lösung R = 0 zu anderen Punkten (k130–k132). An jedem
+   Punkt bleibt genau eine freie Richtung, und sie ist der Vektor ρ∂_z − z∂_ρ, also ∂_ϑ in Kugelkoordinaten:
+   - (1; 0,6; 0; 0,1) ergibt c_x/c_z = −0,1667;
+   - (1,03; 0,58; 0,05; 0,1) ergibt c_x/c_z = −0,1711 und c_y/c_z = −0,0148.
+
+   Beides stimmt mit −zx/ρ² und −zy/ρ² überein. Am Keim (z = 0) ist das gerade ∂_z.
+   Gestörte, nicht lösende Erstjets haben diese Freiheit nicht (k127). Auf der Lösungsmenge gilt sie (k128).
+10. **Die Ebenen.** Auf Π_k wird zusätzlich eine feste Diffeo-Richtung c_k unsichtbar, mit w·c_k = 0, wobei w der
+    dg-Kovektor ist. Am Keim ist c₀ ∝ (0,971; 0,238; 0; 0) und c₁ ∝ (0,921; 0,225; −0,319; 0) (k126).
+    Π_k ist der Kern von ξ ↦ G(ξ)c_k.
+
+Stand: Die freie Funktion ist auf Symbolebene eine Polarwinkel-Umparametrisierung. Ob sie eine echte nichtlineare
+Eichsymmetrie ist, ist nicht geprüft. Nächster Schritt: diese Freiheit festlegen (Eichbedingung), dann die
+Involutivität neu prüfen.
