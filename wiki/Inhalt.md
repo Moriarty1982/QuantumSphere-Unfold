@@ -110,7 +110,7 @@ mit Beiträgen für Geometrie, Triolen-Dynamik, Kompensator, Schließung und Fra
 | OP | Frage | Stand |
 |---|---|---|
 | OP1 | Warum $\beta_{\mathrm{sym}} \approx 0{,}549$ und nicht der symmetrische Wert $1/\sqrt3$? $\beta_{\mathrm{sym}}$ aus der Struktur herleiten statt einsetzen | offen; seit r63 umformuliert zu „die beiden Zählregeln aus den Frames begründen“ |
-| OP2 | Dirac-Operator $D_- = L_0|_{H^+_-}$ auf dem antisymmetrischen Sektor | in der alten Fassung als existent und selbstadjungiert markiert, gestützt auf die Riemann-Arbeit (seit v4.8.0-r04 keine Beweisquelle); der letzte Schritt ist dasselbe Problem wie OP1 |
+| OP2 | Dirac-Operator $D_- = L_0\vert_{H^+_-}$ auf dem antisymmetrischen Sektor | in der alten Fassung als existent und selbstadjungiert markiert, gestützt auf die Riemann-Arbeit (seit v4.8.0-r04 keine Beweisquelle); der letzte Schritt ist dasselbe Problem wie OP1 |
 | OP3 | zulässiger Hüllen-Übergang („shell passage“) mit Schließungszertifikat in der QAM | als lokales Zertifikat formuliert (`thm:qam-op3-shell-closure`), im Kristallbild als Zellverträglichkeit gelesen |
 | OP4 | Herkunft der Mischungswinkel (CKM/PMNS, Cabibbo-Winkel) | offen; r61: in der alten Form falsch gestellt |
 | OP5 | kosmologische Konstante und Vakuumbilanz | nur lokal (Detektorschwelle) geschlossen, exakt offen |
