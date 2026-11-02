@@ -1,0 +1,53 @@
+{
+  "contract": "Independent 1D automatic derivatives of declared pointwise R versus completed coefficient series throughdegree3. Backgroundthrough4, spinor polynomialthrough3, highest4/5zero. Two directions, no fitting orOmegaSVD rerun.",
+  "seconds": 138.42228507995605,
+  "inputs_sha256": {
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\omega_review_direct.py": "15c9fc24b52db27574d05e97ade6e1672e05242588ab233ecaa447bef445b848",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\completion_omega_probe.py": "5fbb2fe9716b1bb2a8a5bd4077a6f944c665d6ecf3b9b8367361ff2eb44596f6",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\recursive_calibrator.py": "5601977f0b78ce1439fcdc74b101c20d111e1435e11ddeb1b29ae93ec742e439",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\fifth-window-result.json": "9b163be13168390cf969c5a259c513393b5517ff0013612cb3f4f1e577976dff",
+    "C:\\Users\\marcb\\OneDrive\\Dokumente\\GitHub\\QuantumSphere-Unfold\\analysis\\OP5_Counterflow_Full_Residual_Check.py": "e0803c2fdf85da1f6318685ab661e77cb39bd60a14b732fb0481c8ce5f2bc4b4"
+  },
+  "results": [
+    {
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "coefficient_difference_degrees0to3": [
+        2.7204710470551533e-14,
+        1.2426597650543457e-13,
+        7.205542500342365e-14,
+        3.063500722312505e-12
+      ],
+      "target_coefficient_norms": [
+        6.605560338575563e-14,
+        2.1521577667259166e-13,
+        2.4010377163505604e-10,
+        272.573944377674
+      ]
+    },
+    {
+      "direction": [
+        1.0,
+        0.2,
+        -0.3,
+        0.4
+      ],
+      "coefficient_difference_degrees0to3": [
+        2.7204710470551533e-14,
+        1.4033805504053547e-13,
+        1.990022389244796e-13,
+        2.4630575482173495e-12
+      ],
+      "target_coefficient_norms": [
+        6.605560338575563e-14,
+        2.3069991141193904e-13,
+        3.5785332984566144e-10,
+        191.65913626593473
+      ]
+    }
+  ]
+}

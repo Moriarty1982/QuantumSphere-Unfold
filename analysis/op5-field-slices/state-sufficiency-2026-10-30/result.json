@@ -1,0 +1,19 @@
+{
+  "assertion_tested": "Exact vacuum Maxwell comparison c=1: a=+/-1 have identical entire initial Gram/rho fields but distinct time derivatives for k nonzero.",
+  "E": "Matrix([[2], [-a*sin(k*t)*cos(k*x)], [0]])",
+  "B": "Matrix([[0], [1], [a*sin(k*x)*cos(k*t)]])",
+  "initial_G": "Matrix([[4, 0], [0, a**2*sin(k*x)**2 + 1]])",
+  "point_Gdot": "Matrix([[0, -a*k], [-a*k, 0]])",
+  "point_rhodot": "Matrix([[0, -a*k/5], [-a*k/5, 0]])",
+  "point_B_x": "Matrix([[0], [0], [a*k]])",
+  "checks": [
+    "both curl evolution equations identically zero",
+    "both divergence constraints identically zero",
+    "same initial G and rho for all spatial points",
+    "same full E and B at origin",
+    "different nonzero next Gram/rho derivative",
+    "oriented spatial first jets recover Gdot exactly"
+  ],
+  "scope": "smooth local fields or periodic comparison; no finite-total-energy claim; no native QSC equations or GR constraints tested",
+  "outcome": "counterexample to autonomous Gram-field evolution on this comparison family; no counterexample to full-field Cauchy determinism"
+}

@@ -1,0 +1,60 @@
+{
+  "contract": "Direct second directional derivatives of original completed R along cubic field paths, no prolonged matrix or row selection. Six directions, same analytic evaluator; not independent evaluator or all directional certification.",
+  "checks": [
+    {
+      "direction": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "full_R_second_directional_derivative_max": "1.9842824423503277921673e-68"
+    },
+    {
+      "direction": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "full_R_second_directional_derivative_max": "4.09327199045632090997298e-68"
+    },
+    {
+      "direction": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "full_R_second_directional_derivative_max": "2.28254599697321790278544e-63"
+    },
+    {
+      "direction": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "full_R_second_directional_derivative_max": "2.40979224220383153935357e-63"
+    },
+    {
+      "direction": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "full_R_second_directional_derivative_max": "1.56999123872844928768233e-63"
+    },
+    {
+      "direction": [
+        1,
+        -2,
+        3,
+        -1
+      ],
+      "full_R_second_directional_derivative_max": "2.36700073647612187770295e-62"
+    }
+  ],
+  "third_jet_sha256": "c53c2d7451556a64d3fa1270e853d3ce78dab9e71330695f7771cdea5af14eff"
+}

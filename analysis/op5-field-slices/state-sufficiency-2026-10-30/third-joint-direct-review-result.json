@@ -1,0 +1,32 @@
+{
+  "contract": "Independent direct product-rule/inverse-matrix derivative check, original exact background derivatives; no Torch and no optimizer/evaluator import.",
+  "results": [
+    {
+      "point_index": 0,
+      "F_norm": 3.061295641450166e-14,
+      "dF_norm": 1.2322329964855461e-11,
+      "ddF_symmetric_packed_norm": 8.458100747287597e-12,
+      "scalar_second_identity_error": 7.668095700998356e-14,
+      "H_norm": 20.880037321181607,
+      "T_norm": 80.06652111005346
+    },
+    {
+      "point_index": 1,
+      "F_norm": 2.2902646862876287e-15,
+      "dF_norm": 1.408595295739958e-11,
+      "ddF_symmetric_packed_norm": 8.617900294103746e-12,
+      "scalar_second_identity_error": 6.619652046600742e-14,
+      "H_norm": 21.45926395664309,
+      "T_norm": 79.68927331598024
+    },
+    {
+      "point_index": 2,
+      "F_norm": 2.8837133843998337e-15,
+      "dF_norm": 1.1523355333466581e-11,
+      "ddF_symmetric_packed_norm": 8.444131512680142e-12,
+      "scalar_second_identity_error": 5.4916031741881376e-14,
+      "H_norm": 20.571435956944878,
+      "T_norm": 79.71158352767596
+    }
+  ]
+}

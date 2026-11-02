@@ -1,0 +1,174 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5-fifth-order-frozen-second-jet-window",
+  "repository": {
+    "commit": "f0f2b9e539ea3fb6823e93fdae1df43bbaf082f4",
+    "dirty": true
+  },
+  "command": [
+    "C:\\Users\\marcb\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\fifth_window_fit.py"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "python",
+        "version": "3.12.10"
+      },
+      {
+        "name": "torch",
+        "version": "2.14.0+cpu"
+      },
+      {
+        "name": "numpy",
+        "version": "2.5.2"
+      },
+      {
+        "name": "sympy",
+        "version": "1.14.0"
+      }
+    ],
+    "hardware": "AMD64"
+  },
+  "mathematics": {
+    "assertion_tested": "At3 order4 seed germs freeze coefficients0..2 exactly, vary3and4 and recover5; verify full retained residuals and independent scalar/directional checks.",
+    "coefficient_domain": "float64 AD and symbolic background derivatives order2",
+    "conventions": "multiindex-factorial normalized Taylor coefficients; all symmetric multiindices; full raw derivative norms separately reported; complex spinor packed per coefficient real12 then imag12",
+    "inputs": [
+      "fifth-window-inputs/recursive_calibrator.py",
+      "fifth-window-inputs/recursive-order-4-result.json",
+      "fifth-window-inputs/joint-fit-result.json",
+      "fifth-window-inputs/third-joint-fit-result.json",
+      "fifth-window-inputs/OP5_Counterflow_Full_Residual_Check.py",
+      "fifth-window-inputs/OP5_Joint_Compatibility_Lower_Data.json",
+      "fifth-window-inputs/fifth_window_fit.py",
+      "fifth-window-inputs/fifth-window-result.json",
+      "fifth-window-inputs/window_review_coefficients.py"
+    ],
+    "bounds": {
+      "points": 3,
+      "maxsteps": 18,
+      "trials_per_step": 10,
+      "stopping_coefficient_objective": 1e-09,
+      "SVD_cutoffs": [
+        1e-08,
+        1e-09,
+        1e-11
+      ],
+      "frozen_degrees": [
+        0,
+        1,
+        2
+      ],
+      "variable_degrees": [
+        3,
+        4
+      ],
+      "recovered_degree": 5,
+      "independent_directions": 6
+    },
+    "non_claims": [
+      "general no-go",
+      "regional nonexistence",
+      "OP5 closure",
+      "certified exact rank"
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-10-30T05:18:28.046478+00:00",
+    "runtime_seconds": 72.33658957481384,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "fifth-window-result.json",
+      "sha256": "9b163be13168390cf969c5a259c513393b5517ff0013612cb3f4f1e577976dff",
+      "kind": "result"
+    },
+    {
+      "path": "window_review_coefficients-result.json",
+      "sha256": "1fc11605666288db75e4bd31e81f5fa91887594ff19b76ed936e6c7fee3d6732",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "full secondjet unchanged bitforbit",
+    "complete highest leftkernel elimination",
+    "full raw residual blocks below4.4e-10",
+    "independent directional series and scalar checks",
+    "higherjet movement and growth reported",
+    "all input hashes unchanged"
+  ],
+  "result": "All3 germs admit numerical fifth completion with full secondjet frozen. Degrees3and4 still move substantially; one narrower update window shown.",
+  "residual_risks": [
+    "float64 not certified exact",
+    "derived fourth scalar residual up to2e-9",
+    "higher coefficient shifts up to82percent",
+    "fifth raw norm up to21333",
+    "no infinite stabilization or regional theorem",
+    "Torch configured2; BLAS cap not measured"
+  ],
+  "input_artifacts": [
+    {
+      "path": "fifth-window-inputs/recursive_calibrator.py",
+      "sha256": "5601977f0b78ce1439fcdc74b101c20d111e1435e11ddeb1b29ae93ec742e439",
+      "sha256_after": "5601977f0b78ce1439fcdc74b101c20d111e1435e11ddeb1b29ae93ec742e439"
+    },
+    {
+      "path": "fifth-window-inputs/recursive-order-4-result.json",
+      "sha256": "583fa173e3e56ebe07f5c93fa02060cd3fbce32a9882dea250c24a42f4c092dc",
+      "sha256_after": "583fa173e3e56ebe07f5c93fa02060cd3fbce32a9882dea250c24a42f4c092dc"
+    },
+    {
+      "path": "fifth-window-inputs/joint-fit-result.json",
+      "sha256": "e85d8f463de0218804eeb68c451f07eaa0ecef91a13e11f9313feb1113d08d76",
+      "sha256_after": "e85d8f463de0218804eeb68c451f07eaa0ecef91a13e11f9313feb1113d08d76"
+    },
+    {
+      "path": "fifth-window-inputs/third-joint-fit-result.json",
+      "sha256": "9a59241f01cacc74f9afca245cd1c547620974fbe67fcb1ad0a4b242fd46a8a4",
+      "sha256_after": "9a59241f01cacc74f9afca245cd1c547620974fbe67fcb1ad0a4b242fd46a8a4"
+    },
+    {
+      "path": "fifth-window-inputs/OP5_Counterflow_Full_Residual_Check.py",
+      "sha256": "e0803c2fdf85da1f6318685ab661e77cb39bd60a14b732fb0481c8ce5f2bc4b4",
+      "sha256_after": "e0803c2fdf85da1f6318685ab661e77cb39bd60a14b732fb0481c8ce5f2bc4b4"
+    },
+    {
+      "path": "fifth-window-inputs/OP5_Joint_Compatibility_Lower_Data.json",
+      "sha256": "f7090bbafec07ec191acba48b0f4e596d0e0d7c608fd8f2ecaeb6f4c3d4b13aa",
+      "sha256_after": "f7090bbafec07ec191acba48b0f4e596d0e0d7c608fd8f2ecaeb6f4c3d4b13aa"
+    },
+    {
+      "path": "fifth-window-inputs/fifth_window_fit.py",
+      "sha256": "2ab14181bd9290c6182bb2d20753188a8a85a4b4a60607e02284f1922ef64053",
+      "sha256_after": "2ab14181bd9290c6182bb2d20753188a8a85a4b4a60607e02284f1922ef64053"
+    },
+    {
+      "path": "fifth-window-inputs/fifth-window-result.json",
+      "sha256": "9b163be13168390cf969c5a259c513393b5517ff0013612cb3f4f1e577976dff",
+      "sha256_after": "9b163be13168390cf969c5a259c513393b5517ff0013612cb3f4f1e577976dff"
+    },
+    {
+      "path": "fifth-window-inputs/window_review_coefficients.py",
+      "sha256": "c29a271c17e52fcda93e8e476e905f656f194998a00f10c5ac23d1a9cfb44486",
+      "sha256_after": "c29a271c17e52fcda93e8e476e905f656f194998a00f10c5ac23d1a9cfb44486"
+    }
+  ],
+  "declared_results": [
+    "fifth-window-result.json",
+    "window_review_coefficients-result.json"
+  ]
+}

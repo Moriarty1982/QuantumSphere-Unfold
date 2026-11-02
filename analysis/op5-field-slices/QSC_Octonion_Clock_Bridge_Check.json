@@ -1,0 +1,8 @@
+{
+  "field_embedding": "Chosen complex unit gives real decomposition O = C plus C^3; z=E+iB can be placed in the six-dimensional complement, with frame/orientation data still external or in additional registers.",
+  "Lorentz_bilinear_invariant": 1,
+  "positive_norm_change": "-2*v**2/(v**2 - 1)",
+  "clock_chain_rule": "d psi/dt = -i omega (d tau/dt) psi",
+  "shared_clock_product_state_determinant": "0",
+  "scope": "Conditional bridge checks; not construction of a native octonionic Lorentz action or a common quantum-gravity clock."
+}

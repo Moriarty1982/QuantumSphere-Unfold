@@ -1,0 +1,13 @@
+# Fifth extension with the repaired fourth jet fixed
+
+The repaired fourth field jet from precision-omega-repair-result.json is held fixed. The fifth field jet is zero for source reconstruction and fully free for elimination. This differs from the earlier original fourth-order seed and must not silently replace its evidence.
+
+Wolfram exactly checked the35x35 homogeneous quartic interpolation matrix on integer directions alpha with |alpha|=4: rank35, determinant43115616168696989527091804682766516224, and inverse-times-matrix identity True. The initial exploratory call encountered0^0; the saved clean call explicitly defines the zero-exponent factor as1. SymPy independently checks the same determinant and rational inverse. Normalization is fourth directional derivative divided by24.
+
+All1120 degree4 R source coefficients are reconstructed at70digits. Two extra interpolation directions are checked in precision-fifth-source-result.json. The source norm in normalized coefficient coordinates is11778.94. The1120x1344 free fifth-jet symbol has rank907 at relative cutoffs1e-8,1e-10,1e-12, with retained/discarded singular values about1.05e-3 and1.85e-13. Its complete orthogonal left quotient has norm33.555566 at all three cutoffs.
+
+A separating left witness initialized from that quotient is then refined against the NEW70-digit principal coefficients. It annihilates all1344 columns to4.23e-70 while its unit-normalized source pairing remains33.555566037795. This strongly separates the frozen fourth jet from fifth-order compatibility in the stated numerical model. The magnitude is coordinate/order dependent and cannot be compared directly with the earlier1e-7 fourth-extension residual or interpreted as a physical scale.
+
+This does not show that every compatible fourth jet fails. The fourth jet used here was selected to solve the preceding equations; the next equations can constrain its remaining freedom. A meaningful next route is to release fourth coefficients only along the kernel of the preceding640x840 completed symbol, keeping field0..3 fixed, and reconstruct the next source gate on these directions. The degree4 source is affine in fourth coefficients at fixed lower data. Whether this gate is onto the actual remaining source quotient still requires calculation; it is not implied by dimensions.
+
+No all-order proof, regional solution, exact rank/interval certificate, complete Omega-gradient reconstruction or resolution of fifth-degree Spencer cohomology is supplied. The successful fourth-order completion remains valid. No repository files were changed or published in this continuation.

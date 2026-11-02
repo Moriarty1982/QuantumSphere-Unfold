@@ -1,0 +1,25 @@
+{
+  "same_input_Gram": "Matrix([[1, 0], [0, 0]])",
+  "same_observer_boost": "along x with speed v, |v|<1",
+  "results": [
+    {
+      "case": "parallel",
+      "rho_after": "Matrix([[1, 0], [0, 0]])",
+      "rho_beta_3_5": "Matrix([[1, 0], [0, 0]])",
+      "invariant_E2_minus_B2": "1",
+      "invariant_EdotB": "0"
+    },
+    {
+      "case": "transverse",
+      "rho_after": "Matrix([[1/(v**2 + 1), 0], [0, v**2/(v**2 + 1)]])",
+      "rho_beta_3_5": "Matrix([[25/34, 0], [0, 9/34]])",
+      "invariant_E2_minus_B2": "1",
+      "invariant_EdotB": "0"
+    }
+  ],
+  "implication": "No single-valued observer boost map of the native Gram state alone for all allowed field orientations. Full field plus observer restores defined readout.",
+  "non_claims": [
+    "No prediction of native QSC temporal generator",
+    "No proof of octonion carrier embedding or unified action"
+  ]
+}

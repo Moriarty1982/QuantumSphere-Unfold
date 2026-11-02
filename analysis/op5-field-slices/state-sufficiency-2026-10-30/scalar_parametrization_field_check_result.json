@@ -1,0 +1,48 @@
+{
+  "contract": "Scalar normalized field fed into previously reviewed full comparator; floating evaluation of scalar construction, no solve. Scalar normalization alone need not preserve full PDE.",
+  "inputs_sha256": {
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\recursive_calibrator.py": "5601977f0b78ce1439fcdc74b101c20d111e1435e11ddeb1b29ae93ec742e439",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\scalar_parametrization_order7_result.json": "5fb6f4859100a3e3e44852044b4e6eed0c7a047617cc46bde89d7062e76c7299",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\fifth-window-result.json": "9b163be13168390cf969c5a259c513393b5517ff0013612cb3f4f1e577976dff",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\scalar_parametrization_field_check.py": "dfcb7a22ddbecb6c26cc6a4a8d12b6361937d1ff47cc3c8ad3b8456cca5c7298"
+  },
+  "inputs_unchanged": true,
+  "results": [
+    {
+      "point_index": 0,
+      "normalized_full_F_actual_derivative_blocks": {
+        "0": 3.629132183170655e-14,
+        "1": 9.550144810527262e-14,
+        "2": 2.8248670975609716e-10,
+        "3": 1.7501346919657344e-09,
+        "4": 18920.389341185422
+      },
+      "coframe_value_change": 3.3539935220168176e-15,
+      "coframe_determinant": 13.634560679141947
+    },
+    {
+      "point_index": 1,
+      "normalized_full_F_actual_derivative_blocks": {
+        "0": 2.074659655091028e-15,
+        "1": 3.413308197120801e-14,
+        "2": 3.173788780347184e-11,
+        "3": 1.879304290510506e-10,
+        "4": 19235.351425337016
+      },
+      "coframe_value_change": 1.0994151322850842e-15,
+      "coframe_determinant": 13.85887953839468
+    },
+    {
+      "point_index": 2,
+      "normalized_full_F_actual_derivative_blocks": {
+        "0": 3.6834774920861365e-15,
+        "1": 6.701204733632172e-14,
+        "2": 1.0190405406113503e-11,
+        "3": 6.528471349394341e-11,
+        "4": 12822.99024700256
+      },
+      "coframe_value_change": 1.2867486052798761e-15,
+      "coframe_determinant": 13.516116637412267
+    }
+  ]
+}

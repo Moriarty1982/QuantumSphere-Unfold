@@ -1,0 +1,19 @@
+{
+  "checks": "passed finite numerical incompatibility at fixed repaired lower germ",
+  "non_claims": [
+    "Exact rank or interval certificate",
+    "Full nonlinear Omega derivative reconstructed",
+    "OP5 nonexistence"
+  ],
+  "sha256": {
+    "precision_fourth_source.py": "7327a27f0acef1953297d3e44c6b64cf3163177a9cedd1f5a39d3f027e4ec649",
+    "precision-fourth-source-result.json": "54c1a48d87ef9bc55e3dbf1e8739839d230d44fe0c4bd2aefc2a401e6d2cc93f",
+    "precision_fourth_elimination.py": "9a57c7409632fef2c9523b92ebf6d7b6424b78b3f2a1392c1d38df3fd440cdcd",
+    "precision-fourth-elimination-result.json": "9953872bec21969d078d3772c4b4080ffc570f223633c0f50ae0da33da3fde3c",
+    "precision-fourth-elimination.npz": "ffc2346b743022e708a19a30bc639e5f6f08b699aa10a5b825672eacf2302e51",
+    "precision_fourth_left_witness.py": "02f73cf619ee74e606e0e144d508b33c2513c982ddcb443a49f287d3e418481c",
+    "precision-fourth-left-witness-result.json": "3e144d987a35cdc8b4691fd25ba26d4d9828ff5ea9b2f0243e4a5bfb96d1b2f5",
+    "precision_fourth_direct_check.py": "e568fb0788fd7e538387a7fffd5b19682ad5b0c10929a8204d6f366773a76db9",
+    "precision-fourth-direct-check.json": "38d1f9560061c5422b5acb05d384f6c4f6a35914da14e773f897d426e3bdec32"
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "contract": "Frozen-symbol finite Spencer H^(p,2) checks only, \u03a9augmented. No formalintegrability/existence theorem fromfinitecohomologytests.",
+  "seconds": 3.069302558898926,
+  "results": [
+    {
+      "symbol_degree": 3,
+      "dimension": 208,
+      "delta_complex_error": 3.062354038100432e-11,
+      "tests": [
+        {
+          "rcond": 1e-08,
+          "incoming_rank": 805,
+          "outgoing_rank": 443,
+          "H2_dimension": 0
+        },
+        {
+          "rcond": 1e-09,
+          "incoming_rank": 805,
+          "outgoing_rank": 443,
+          "H2_dimension": 0
+        },
+        {
+          "rcond": 1e-10,
+          "incoming_rank": 805,
+          "outgoing_rank": 443,
+          "H2_dimension": 0
+        },
+        {
+          "rcond": 1e-11,
+          "incoming_rank": 805,
+          "outgoing_rank": 443,
+          "H2_dimension": 0
+        }
+      ],
+      "incoming_rank_boundary_singular_values": [
+        1.572796565004554,
+        1.4903167025869009,
+        1.187412693488189,
+        0.5027087843054584,
+        5.476830404347855e-12,
+        3.889763509066837e-12,
+        3.1149289443152902e-12,
+        1.921898660390373e-12
+      ],
+      "outgoing_rank_boundary_singular_values": [
+        1.1392046727495455,
+        1.0187984002622543,
+        0.8962606535794742,
+        2.238248579968587e-14,
+        1.6038155066426223e-14,
+        1.316976337199871e-14
+      ],
+      "incoming_largest": 4.123105625617667,
+      "outgoing_largest": 3.3166247903554025
+    },
+    {
+      "symbol_degree": 4,
+      "dimension": 308,
+      "delta_complex_error": 8.981313204115655e-11,
+      "tests": [
+        {
+          "rcond": 1e-08,
+          "incoming_rank": 1143,
+          "outgoing_rank": 705,
+          "H2_dimension": 0
+        },
+        {
+          "rcond": 1e-09,
+          "incoming_rank": 1143,
+          "outgoing_rank": 705,
+          "H2_dimension": 0
+        },
+        {
+          "rcond": 1e-10,
+          "incoming_rank": 1143,
+          "outgoing_rank": 705,
+          "H2_dimension": 0
+        },
+        {
+          "rcond": 1e-11,
+          "incoming_rank": 1143,
+          "outgoing_rank": 705,
+          "H2_dimension": 0
+        }
+      ],
+      "incoming_rank_boundary_singular_values": [
+        1.8971827688590797,
+        1.1707692426569511,
+        0.021450055065069123,
+        3.3779602959507033e-05,
+        7.657962114813193e-12,
+        7.287403185621296e-12,
+        5.120324821884544e-12,
+        4.412828223621777e-12
+      ],
+      "outgoing_rank_boundary_singular_values": [
+        1.3684687423638726,
+        1.263075300432728,
+        1.1312398835345012,
+        5.239925115929832e-12,
+        2.212834958817505e-12,
+        8.990846459703769e-13
+      ],
+      "incoming_largest": 5.099019513592796,
+      "outgoing_largest": 4.242640687119291
+    },
+    {
+      "symbol_degree": 5,
+      "dimension": 427,
+      "delta_complex_error": 1.7704189034693026e-10,
+      "tests": [
+        {
+          "rcond": 1e-08,
+          "incoming_rank": 1535,
+          "outgoing_rank": 1024,
+          "H2_dimension": 3
+        },
+        {
+          "rcond": 1e-09,
+          "incoming_rank": 1537,
+          "outgoing_rank": 1024,
+          "H2_dimension": 1
+        },
+        {
+          "rcond": 1e-10,
+          "incoming_rank": 1537,
+          "outgoing_rank": 1024,
+          "H2_dimension": 1
+        },
+        {
+          "rcond": 1e-11,
+          "incoming_rank": 1539,
+          "outgoing_rank": 1024,
+          "H2_dimension": -1
+        }
+      ],
+      "incoming_rank_boundary_singular_values": [
+        2.0098610906144327,
+        1.269663713944306e-07,
+        5.094744152948321e-08,
+        2.280991702356603e-08,
+        5.86238912564864e-10,
+        3.649217103813586e-10,
+        1.011936604880011e-11,
+        8.64811227725548e-12
+      ],
+      "outgoing_rank_boundary_singular_values": [
+        1.0607544005859824,
+        1.0564056546661886,
+        0.021478709603476906,
+        7.931250837754375e-12,
+        5.331511237518377e-12,
+        4.721996511192238e-12
+      ],
+      "incoming_largest": 6.082762530298236,
+      "outgoing_largest": 5.196152422706638
+    }
+  ]
+}

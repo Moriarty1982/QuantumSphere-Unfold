@@ -1,0 +1,38 @@
+{
+  "contract": "Explicit15 leftidentities for first completedprojection, including reference-secondjet lifted scalar/linear symbolrelation. Numerical check of conditional algebraic proof, not allhigher projections.",
+  "results": [
+    {
+      "point_index": 0,
+      "Rnorm": 7.821688896816521e-14,
+      "reference_dF_norm": 5.651940314516698e-14,
+      "completed_symbol_rank": 113,
+      "identity_rank": 15,
+      "annihilation_norm": 3.640814891432739e-14,
+      "projector_difference": 1.6994321591138606e-14,
+      "source_identity_norm": 6.542110204693993e-14,
+      "fifteenth_row_norm": 5.328722459114606
+    },
+    {
+      "point_index": 1,
+      "Rnorm": 3.88930612883359e-15,
+      "reference_dF_norm": 5.3478681976125927e-14,
+      "completed_symbol_rank": 113,
+      "identity_rank": 15,
+      "annihilation_norm": 1.8131099502472664e-14,
+      "projector_difference": 1.1909946114675008e-14,
+      "source_identity_norm": 1.237901784064755e-14,
+      "fifteenth_row_norm": 5.217718580553672
+    },
+    {
+      "point_index": 2,
+      "Rnorm": 6.327653856971061e-15,
+      "reference_dF_norm": 7.273657009161909e-14,
+      "completed_symbol_rank": 113,
+      "identity_rank": 15,
+      "annihilation_norm": 2.7129720027532906e-14,
+      "projector_difference": 1.4296360053829185e-14,
+      "source_identity_norm": 5.6177449604540616e-15,
+      "fifteenth_row_norm": 5.392547874536678
+    }
+  ]
+}

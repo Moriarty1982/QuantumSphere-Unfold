@@ -1,0 +1,35 @@
+{
+  "second_independent_sample": {
+    "max_residual": 0.005069280353009802,
+    "rms_residual": 0.003053982226769111,
+    "min_abs_detE": 11.32601803403518,
+    "max_inverse_g00": -0.39364815387766433,
+    "min_q": 5.462118081525174
+  },
+  "derivative_checks": [
+    {
+      "step": 1e-05,
+      "difference": 8.149254718954622e-10
+    },
+    {
+      "step": 1e-06,
+      "difference": 7.825961237077741e-10
+    },
+    {
+      "step": 1e-05,
+      "difference": 8.418937586528961e-10
+    },
+    {
+      "step": 1e-06,
+      "difference": 1.0907138631990748e-09
+    },
+    {
+      "step": 1e-05,
+      "difference": 7.830617310297903e-10
+    },
+    {
+      "step": 1e-06,
+      "difference": 8.585696892101551e-10
+    }
+  ]
+}

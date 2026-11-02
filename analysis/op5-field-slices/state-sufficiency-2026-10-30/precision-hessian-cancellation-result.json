@@ -1,0 +1,17 @@
+{
+  "contract": "All ten symmetric second-jet coefficients in sum K^mu d_mu F cancel at the high precision first-jet seed. Does not certify other higher identities.",
+  "digits": 70,
+  "max_symmetric_hessian_coefficient": "3.20140971471060107351173e-71",
+  "all_ten_errors": [
+    "2.73957300023988502068544e-71",
+    "2.59731732954238810775139e-71",
+    "4.52783953941335618375456e-72",
+    "2.49031174667734590106501e-71",
+    "1.25455375184537851896687e-71",
+    "4.52783953941335618375456e-72",
+    "2.03752779273601028268955e-71",
+    "1.04597783433187821181168e-72",
+    "2.26391976970667809187728e-72",
+    "3.20140971471060107351173e-71"
+  ]
+}

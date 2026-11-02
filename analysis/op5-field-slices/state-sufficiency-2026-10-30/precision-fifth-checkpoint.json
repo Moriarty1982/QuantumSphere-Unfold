@@ -1,0 +1,13 @@
+{
+  "status": "finite frozen-fourth incompatibility observed and witness checked",
+  "sha256": {
+    "precision_fifth_source.py": "fba7a21453f26593562f181fd686a7351b2ef26ba40131759ada6cb181d0db0c",
+    "precision-fifth-source-result.json": "6e117a2e73142eb317acdb267513bd1b05444558e1658d7a44df14eede8e5228",
+    "precision-fifth-quotient-result.json": "7bf989c021062664af1e5f0e720579234c091ff58bdb80b3aa2a8440a19698de",
+    "precision-fifth-quotient.npz": "2328b72a49b8cf609ac85e39254c5c4437f54e76697baf949f4e419ebeb7d7a4",
+    "precision_fifth_left_witness.py": "a424d0650327b1f93a2f79488c5465fe8c5a9d33848098b8f9f9892e7ffd92a5",
+    "precision-fifth-left-witness-result.json": "2e89f7ba4d8fcd83e40c7ae9c88c636b06643a599ec2961a9e96c458f8a1cefd",
+    "wolfram-quartic-interpolation-check.json": "69ac4109ae8f412552f315c8b1d29ff493cbda2f2feb310de0141a8025a348df",
+    "precision-omega-repair-result.json": "8a259bf9a6261a2e193ec7f49467ca99b0999f9984009e8cfd2a54608a8da5b8"
+  }
+}

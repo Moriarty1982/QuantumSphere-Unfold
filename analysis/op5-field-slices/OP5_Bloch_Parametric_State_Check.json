@@ -1,0 +1,69 @@
+{
+  "actual_states": [
+    {
+      "point": [
+        1.0,
+        0.6,
+        0.0,
+        0.0
+      ],
+      "bloch_vector": [
+        0.4985060326481102,
+        7.246983008044314e-05,
+        0.8668859260924411
+      ],
+      "bloch_radius": 0.9999997393477582,
+      "purity": 0.9999997393477923,
+      "identity_error": 1.5302158411917288e-16,
+      "rho_eigenvalues": [
+        1.3032612093677454e-07,
+        0.9999998696738792
+      ]
+    },
+    {
+      "point": [
+        0.99,
+        0.59,
+        0.01,
+        -0.01
+      ],
+      "bloch_vector": [
+        0.48736948342023284,
+        0.01134169017334252,
+        0.8729698580586357
+      ],
+      "bloch_radius": 0.9998670013477828,
+      "purity": 0.9998670101921036,
+      "identity_error": 6.765421556309548e-17,
+      "rho_eigenvalues": [
+        6.649932610856141e-05,
+        0.9999335006738914
+      ]
+    },
+    {
+      "point": [
+        1.005,
+        0.605,
+        -0.005,
+        0.005
+      ],
+      "bloch_vector": [
+        0.5037735257188155,
+        -0.005787124696321128,
+        0.8637810650498298
+      ],
+      "bloch_radius": 0.9999694917176399,
+      "purity": 0.9999694921830173,
+      "identity_error": 1.9153786629672043e-16,
+      "rho_eigenvalues": [
+        1.5254141180087721e-05,
+        0.99998474585882
+      ]
+    }
+  ],
+  "same_bloch_different_beta_counterexample": {
+    "first": "Matrix([[cos(2*theta)]])",
+    "second": "Matrix([[-cos(2*theta)]])"
+  },
+  "scope": "Internal Gram/Bloch representation. No fundamental tensor-product quantum interpretation or PDE closure proved."
+}

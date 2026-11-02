@@ -1,0 +1,974 @@
+{
+  "contract": "Frozen pinned \u03a9-augmented symbol only, tensor-balanced basis y_alpha=sqrt(alpha!) c_alpha. Invertible coefficient/row changes, identical polynomial constraints. Numerical cohomology diagnostics are not analyticrank/cohomology certificates.",
+  "seconds": 14.214852571487427,
+  "witness_sha256": "21e172a09c2fda0e4e25da7a45a716b4bc19ec694c26ecf608b22babab5b4996",
+  "witness_unchanged": true,
+  "script_sha256": "f387af03b1b1b4e3a4e50528b9e9508a6a621d9c3aae9e4acf15283c18aed344",
+  "software": {
+    "python": "3.12.10",
+    "numpy": "2.5.2"
+  },
+  "theta_polynomial_coordinate_change_error": 8.881784197001252e-16,
+  "variants": [
+    {
+      "name": "raw",
+      "symbols": [
+        {
+          "degree": 2,
+          "shape": [
+            128,
+            240
+          ],
+          "rank_relative1e-9": 113,
+          "kernel_dimension": 127,
+          "largest": 22.536562603415394,
+          "smallest_retained": 0.22173091298632783,
+          "largest_discarded": 1.645658686852664e-14,
+          "relative_null_residual": 2.0726840892286897e-15,
+          "balanced_direct_assembly_error": 4.598582846597101e-15
+        },
+        {
+          "degree": 3,
+          "shape": [
+            321,
+            480
+          ],
+          "rank_relative1e-9": 272,
+          "kernel_dimension": 208,
+          "largest": 32.19913201276748,
+          "smallest_retained": 0.001535959794253323,
+          "largest_discarded": 1.1439429674726213e-13,
+          "relative_null_residual": 6.753360415446493e-16,
+          "balanced_direct_assembly_error": 1.2349860160218394e-14
+        },
+        {
+          "degree": 4,
+          "shape": [
+            644,
+            840
+          ],
+          "rank_relative1e-9": 532,
+          "kernel_dimension": 308,
+          "largest": 42.101230353076616,
+          "smallest_retained": 0.0011281409817752658,
+          "largest_discarded": 1.4957361696970614e-13,
+          "relative_null_residual": 6.226237714459897e-16,
+          "balanced_direct_assembly_error": 1.8332686089310573e-14
+        },
+        {
+          "degree": 5,
+          "shape": [
+            1130,
+            1344
+          ],
+          "rank_relative1e-9": 917,
+          "kernel_dimension": 427,
+          "largest": 56.449982472804265,
+          "smallest_retained": 0.0010262517796207464,
+          "largest_discarded": 2.0055062489918024e-13,
+          "relative_null_residual": 6.565971983982085e-16,
+          "balanced_direct_assembly_error": 2.3628989700863047e-14
+        },
+        {
+          "degree": 6,
+          "shape": [
+            1812,
+            2016
+          ],
+          "rank_relative1e-9": 1451,
+          "kernel_dimension": 565,
+          "largest": 101.70907922726343,
+          "smallest_retained": 4.255392682446663e-07,
+          "largest_discarded": 3.6134323702890267e-13,
+          "relative_null_residual": 6.851977524153944e-16,
+          "balanced_direct_assembly_error": 3.110232192887115e-14
+        }
+      ],
+      "spencer": [
+        {
+          "degree": 3,
+          "g_dimension": 208,
+          "incoming_shape": [
+            1248,
+            1232
+          ],
+          "outgoing_shape": [
+            508,
+            1248
+          ],
+          "complex_product_norm": 2.9024847848035258e-11,
+          "complex_product_relative": 5.866662147095022e-15,
+          "incoming_largest": 4.123105625617668,
+          "outgoing_largest": 3.316624790355406,
+          "incoming_boundary": [
+            1.9389742087289497,
+            1.9268517838200045,
+            1.693290364429528,
+            1.5727965650044267,
+            1.49031670258703,
+            1.1874126934881155,
+            0.5027087843055567,
+            5.115278903401227e-12,
+            4.197538832918287e-12,
+            2.8770337533410985e-12,
+            1.9135711024642196e-12,
+            1.6931275871429753e-12,
+            6.355204503487661e-13,
+            8.33159974175337e-14,
+            6.696337279200369e-14,
+            4.8327374557542534e-14
+          ],
+          "outgoing_boundary": [
+            1.5123546298158828,
+            1.2645289866877611,
+            1.13920467274953,
+            1.0187984002622505,
+            0.8962606535794285,
+            2.1577430647151475e-14,
+            1.537092581695841e-14,
+            1.3655104283412374e-14,
+            1.1207651227421441e-14,
+            8.212985504124068e-15,
+            7.6742512420369e-15
+          ],
+          "tests": [
+            {
+              "relative_cutoff": 1e-08,
+              "incoming_rank": 805,
+              "outgoing_rank": 443,
+              "putative_H2_dimension": 0
+            },
+            {
+              "relative_cutoff": 1e-09,
+              "incoming_rank": 805,
+              "outgoing_rank": 443,
+              "putative_H2_dimension": 0
+            },
+            {
+              "relative_cutoff": 1e-10,
+              "incoming_rank": 805,
+              "outgoing_rank": 443,
+              "putative_H2_dimension": 0
+            },
+            {
+              "relative_cutoff": 1e-11,
+              "incoming_rank": 805,
+              "outgoing_rank": 443,
+              "putative_H2_dimension": 0
+            },
+            {
+              "relative_cutoff": 1e-12,
+              "incoming_rank": 807,
+              "outgoing_rank": 443,
+              "putative_H2_dimension": -2
+            }
+          ],
+          "contraction_leak_incoming": 5.1232656708729065e-12,
+          "contraction_leak_outgoing": 2.3446698667314163e-13
+        },
+        {
+          "degree": 4,
+          "g_dimension": 308,
+          "incoming_shape": [
+            1848,
+            1708
+          ],
+          "outgoing_shape": [
+            832,
+            1848
+          ],
+          "complex_product_norm": 8.639651163621467e-11,
+          "complex_product_relative": 7.920646659674066e-15,
+          "incoming_largest": 5.099019513592797,
+          "outgoing_largest": 4.242640687119288,
+          "incoming_boundary": [
+            2.342603091885201,
+            2.226537277001069,
+            2.1625321705120117,
+            1.8971827688592247,
+            1.1707692426569485,
+            0.02145005506502259,
+            3.377960292818493e-05,
+            8.272419499643527e-12,
+            7.42328535675252e-12,
+            5.7389167744089884e-12,
+            4.76706777463597e-12,
+            3.788536366097932e-12,
+            3.493090880473546e-12,
+            2.833042615023663e-12,
+            2.629319233274285e-12,
+            2.3684190923344894e-12
+          ],
+          "outgoing_boundary": [
+            1.9521675042436046,
+            1.8701808096345949,
+            1.3684687423639441,
+            1.263075300432482,
+            1.1312398835345008,
+            5.0494491333500344e-12,
+            2.2053376844436176e-12,
+            8.562819189926428e-13,
+            2.1030371783164908e-13,
+            7.502587786961989e-14,
+            5.423286744938098e-14
+          ],
+          "tests": [
+            {
+              "relative_cutoff": 1e-08,
+              "incoming_rank": 1143,
+              "outgoing_rank": 705,
+              "putative_H2_dimension": 0
+            },
+            {
+              "relative_cutoff": 1e-09,
+              "incoming_rank": 1143,
+              "outgoing_rank": 705,
+              "putative_H2_dimension": 0
+            },
+            {
+              "relative_cutoff": 1e-10,
+              "incoming_rank": 1143,
+              "outgoing_rank": 705,
+              "putative_H2_dimension": 0
+            },
+            {
+              "relative_cutoff": 1e-11,
+              "incoming_rank": 1143,
+              "outgoing_rank": 705,
+              "putative_H2_dimension": 0
+            },
+            {
+              "relative_cutoff": 1e-12,
+              "incoming_rank": 1146,
+              "outgoing_rank": 706,
+              "putative_H2_dimension": -4
+            }
+          ],
+          "contraction_leak_incoming": 1.6130272635980685e-11,
+          "contraction_leak_outgoing": 5.1232656708729065e-12
+        },
+        {
+          "degree": 5,
+          "g_dimension": 427,
+          "incoming_shape": [
+            2562,
+            2260
+          ],
+          "outgoing_shape": [
+            1232,
+            2562
+          ],
+          "complex_product_norm": 1.845900956073323e-10,
+          "complex_product_relative": 8.772985763793115e-15,
+          "incoming_largest": 6.082762530298244,
+          "outgoing_largest": 5.196152422706638,
+          "incoming_boundary": [
+            2.7968458163214467,
+            2.6600178006113864,
+            2.1664389985246797,
+            2.0098610907288275,
+            1.1812510772756439e-07,
+            4.953482821216693e-08,
+            2.2846086841020568e-08,
+            5.133579082711484e-10,
+            3.466060416358106e-10,
+            1.0408519001526157e-11,
+            8.795755893166364e-12,
+            8.308917571168282e-12,
+            7.67451230317489e-12,
+            6.942095678108831e-12,
+            5.7952843338297245e-12,
+            5.36888822956499e-12
+          ],
+          "outgoing_boundary": [
+            2.1518840700836614,
+            1.6708120709239993,
+            1.0607544005860003,
+            1.0564056546661857,
+            0.021478709603598056,
+            8.725997898282117e-12,
+            5.729530766146172e-12,
+            4.672878986762675e-12,
+            3.2383596320029508e-12,
+            2.3974654466040234e-12,
+            2.234189351905633e-12
+          ],
+          "tests": [
+            {
+              "relative_cutoff": 1e-08,
+              "incoming_rank": 1535,
+              "outgoing_rank": 1024,
+              "putative_H2_dimension": 3
+            },
+            {
+              "relative_cutoff": 1e-09,
+              "incoming_rank": 1537,
+              "outgoing_rank": 1024,
+              "putative_H2_dimension": 1
+            },
+            {
+              "relative_cutoff": 1e-10,
+              "incoming_rank": 1537,
+              "outgoing_rank": 1024,
+              "putative_H2_dimension": 1
+            },
+            {
+              "relative_cutoff": 1e-11,
+              "incoming_rank": 1539,
+              "outgoing_rank": 1024,
+              "putative_H2_dimension": -1
+            },
+            {
+              "relative_cutoff": 1e-12,
+              "incoming_rank": 1544,
+              "outgoing_rank": 1026,
+              "putative_H2_dimension": -8
+            }
+          ],
+          "contraction_leak_incoming": 3.3841188600339794e-11,
+          "contraction_leak_outgoing": 1.6130272635980685e-11
+        }
+      ]
+    },
+    {
+      "name": "balanced",
+      "symbols": [
+        {
+          "degree": 2,
+          "shape": [
+            128,
+            240
+          ],
+          "rank_relative1e-9": 113,
+          "kernel_dimension": 127,
+          "largest": 18.34356806371205,
+          "smallest_retained": 0.19719526355778497,
+          "largest_discarded": 1.4262648909858884e-14,
+          "relative_null_residual": 1.5740604287761291e-15,
+          "balanced_direct_assembly_error": 4.598582846597101e-15
+        },
+        {
+          "degree": 3,
+          "shape": [
+            321,
+            480
+          ],
+          "rank_relative1e-9": 272,
+          "kernel_dimension": 208,
+          "largest": 22.14629078224539,
+          "smallest_retained": 0.001042697088284534,
+          "largest_discarded": 7.19363567684103e-15,
+          "relative_null_residual": 7.671771241182495e-16,
+          "balanced_direct_assembly_error": 1.2349860160218394e-14
+        },
+        {
+          "degree": 4,
+          "shape": [
+            644,
+            840
+          ],
+          "rank_relative1e-9": 532,
+          "kernel_dimension": 308,
+          "largest": 25.387095098471,
+          "smallest_retained": 0.0009317530803964527,
+          "largest_discarded": 9.019308002134707e-14,
+          "relative_null_residual": 6.581785537075855e-16,
+          "balanced_direct_assembly_error": 1.8332686089310573e-14
+        },
+        {
+          "degree": 5,
+          "shape": [
+            1130,
+            1344
+          ],
+          "rank_relative1e-9": 917,
+          "kernel_dimension": 427,
+          "largest": 28.26218363894654,
+          "smallest_retained": 0.0009104565933875267,
+          "largest_discarded": 1.0040744640685709e-13,
+          "relative_null_residual": 7.107688726129629e-16,
+          "balanced_direct_assembly_error": 2.3628989700863047e-14
+        },
+        {
+          "degree": 6,
+          "shape": [
+            1812,
+            2016
+          ],
+          "rank_relative1e-9": 1451,
+          "kernel_dimension": 565,
+          "largest": 30.87812508686764,
+          "smallest_retained": 3.0583362552847e-07,
+          "largest_discarded": 1.0970113737182757e-13,
+          "relative_null_residual": 7.587952160038086e-16,
+          "balanced_direct_assembly_error": 3.110232192887115e-14
+        }
+      ],
+      "spencer": [
+        {
+          "degree": 3,
+          "g_dimension": 208,
+          "incoming_shape": [
+            1248,
+            1232
+          ],
+          "outgoing_shape": [
+            508,
+            1248
+          ],
+          "complex_product_norm": 1.963384731965791e-11,
+          "complex_product_relative": 7.464255657229466e-15,
+          "incoming_largest": 2.2360679774997925,
+          "outgoing_largest": 2.2360679774997916,
+          "incoming_boundary": [
+            1.430675524866469,
+            1.426732044226477,
+            1.4003216903215252,
+            1.353483722720233,
+            1.1657844642111628,
+            1.0757388408545823,
+            0.2602152560854612,
+            3.4408279768173385e-12,
+            2.7249258139630755e-12,
+            2.186857325639149e-12,
+            1.4844933709920654e-12,
+            1.3150928442000527e-12,
+            5.537076545432215e-13,
+            5.3263215569416683e-14,
+            3.862370985678181e-14,
+            3.309549151021293e-14
+          ],
+          "outgoing_boundary": [
+            1.3448214804854077,
+            1.1614059555298206,
+            1.0761156216210424,
+            0.9946056351176157,
+            0.7238781314819354,
+            2.0572156676590557e-14,
+            1.8467850141383938e-14,
+            1.3198468483052386e-14,
+            1.1478086390278598e-14,
+            8.790283267630719e-15,
+            7.937190072206518e-15
+          ],
+          "tests": [
+            {
+              "relative_cutoff": 1e-08,
+              "incoming_rank": 805,
+              "outgoing_rank": 443,
+              "putative_H2_dimension": 0
+            },
+            {
+              "relative_cutoff": 1e-09,
+              "incoming_rank": 805,
+              "outgoing_rank": 443,
+              "putative_H2_dimension": 0
+            },
+            {
+              "relative_cutoff": 1e-10,
+              "incoming_rank": 805,
+              "outgoing_rank": 443,
+              "putative_H2_dimension": 0
+            },
+            {
+              "relative_cutoff": 1e-11,
+              "incoming_rank": 805,
+              "outgoing_rank": 443,
+              "putative_H2_dimension": 0
+            },
+            {
+              "relative_cutoff": 1e-12,
+              "incoming_rank": 807,
+              "outgoing_rank": 443,
+              "putative_H2_dimension": -2
+            }
+          ],
+          "contraction_leak_incoming": 5.194806503002585e-12,
+          "contraction_leak_outgoing": 1.257663087244228e-13
+        },
+        {
+          "degree": 4,
+          "g_dimension": 308,
+          "incoming_shape": [
+            1848,
+            1708
+          ],
+          "outgoing_shape": [
+            832,
+            1848
+          ],
+          "complex_product_norm": 3.367039026015836e-11,
+          "complex_product_relative": 6.920263031780019e-15,
+          "incoming_largest": 2.449489742783181,
+          "outgoing_largest": 2.449489742783183,
+          "incoming_boundary": [
+            1.720687628345385,
+            1.6842780676824884,
+            1.5686470702777136,
+            1.4826934822541442,
+            1.0487900297412038,
+            0.011225485252333828,
+            3.0479505451439354e-05,
+            3.673085134343375e-12,
+            3.2972056429206904e-12,
+            3.1950710548234063e-12,
+            2.404262740181572e-12,
+            2.02920979083642e-12,
+            1.7670114813784834e-12,
+            1.6420948830715572e-12,
+            1.5999266948702406e-12,
+            1.3709524445380163e-12
+          ],
+          "outgoing_boundary": [
+            1.4727361545058346,
+            1.4091228853731375,
+            1.2417372508382805,
+            1.0607009288453066,
+            0.8757863953613716,
+            3.2091060310446635e-12,
+            1.7924615603384853e-12,
+            7.571651304695361e-13,
+            2.5539285895580494e-13,
+            4.38146324110729e-14,
+            3.2162691517063355e-14
+          ],
+          "tests": [
+            {
+              "relative_cutoff": 1e-08,
+              "incoming_rank": 1143,
+              "outgoing_rank": 705,
+              "putative_H2_dimension": 0
+            },
+            {
+              "relative_cutoff": 1e-09,
+              "incoming_rank": 1143,
+              "outgoing_rank": 705,
+              "putative_H2_dimension": 0
+            },
+            {
+              "relative_cutoff": 1e-10,
+              "incoming_rank": 1143,
+              "outgoing_rank": 705,
+              "putative_H2_dimension": 0
+            },
+            {
+              "relative_cutoff": 1e-11,
+              "incoming_rank": 1143,
+              "outgoing_rank": 705,
+              "putative_H2_dimension": 0
+            },
+            {
+              "relative_cutoff": 1e-12,
+              "incoming_rank": 1146,
+              "outgoing_rank": 706,
+              "putative_H2_dimension": -4
+            }
+          ],
+          "contraction_leak_incoming": 8.76791433699112e-12,
+          "contraction_leak_outgoing": 5.194806503002585e-12
+        },
+        {
+          "degree": 5,
+          "g_dimension": 427,
+          "incoming_shape": [
+            2562,
+            2260
+          ],
+          "outgoing_shape": [
+            1232,
+            2562
+          ],
+          "complex_product_norm": 5.229260358554656e-11,
+          "complex_product_relative": 6.479182633007137e-15,
+          "incoming_largest": 2.6457513110645947,
+          "outgoing_largest": 2.645751311064595,
+          "incoming_boundary": [
+            1.8799301502550874,
+            1.8001965332216472,
+            1.4652366381290631,
+            1.4167083985173812,
+            4.3522662433276626e-08,
+            2.802243540011944e-08,
+            1.2358384516710038e-08,
+            2.991581888947712e-10,
+            2.0341942193578922e-10,
+            3.839974888117346e-12,
+            3.833264040946003e-12,
+            3.3867500735942214e-12,
+            3.13356706421753e-12,
+            2.8775255092500534e-12,
+            2.7116341362342196e-12,
+            2.585782403527355e-12
+          ],
+          "outgoing_boundary": [
+            1.473811550499492,
+            1.3581842693739021,
+            1.0198079232758495,
+            1.0180044825990098,
+            0.010950469470451394,
+            3.749307196792679e-12,
+            3.1749038998520764e-12,
+            1.9750459300167194e-12,
+            1.9538084139366843e-12,
+            1.890652513123383e-12,
+            1.2256641969318591e-12
+          ],
+          "tests": [
+            {
+              "relative_cutoff": 1e-08,
+              "incoming_rank": 1536,
+              "outgoing_rank": 1024,
+              "putative_H2_dimension": 2
+            },
+            {
+              "relative_cutoff": 1e-09,
+              "incoming_rank": 1537,
+              "outgoing_rank": 1024,
+              "putative_H2_dimension": 1
+            },
+            {
+              "relative_cutoff": 1e-10,
+              "incoming_rank": 1538,
+              "outgoing_rank": 1024,
+              "putative_H2_dimension": 0
+            },
+            {
+              "relative_cutoff": 1e-11,
+              "incoming_rank": 1539,
+              "outgoing_rank": 1024,
+              "putative_H2_dimension": -1
+            },
+            {
+              "relative_cutoff": 1e-12,
+              "incoming_rank": 1545,
+              "outgoing_rank": 1026,
+              "putative_H2_dimension": -9
+            }
+          ],
+          "contraction_leak_incoming": 1.401560914890328e-11,
+          "contraction_leak_outgoing": 8.76791433699112e-12
+        }
+      ]
+    },
+    {
+      "name": "balanced_row_equilibrated",
+      "symbols": [
+        {
+          "degree": 2,
+          "shape": [
+            128,
+            240
+          ],
+          "rank_relative1e-9": 113,
+          "kernel_dimension": 127,
+          "largest": 2.897918201770121,
+          "smallest_retained": 0.03802589202069756,
+          "largest_discarded": 4.288320162523257e-15,
+          "relative_null_residual": 7.566656527155249e-16,
+          "balanced_direct_assembly_error": 4.598582846597101e-15
+        },
+        {
+          "degree": 3,
+          "shape": [
+            321,
+            480
+          ],
+          "rank_relative1e-9": 272,
+          "kernel_dimension": 208,
+          "largest": 3.168346779783056,
+          "smallest_retained": 0.00023306453268029284,
+          "largest_discarded": 1.1256228943718782e-14,
+          "relative_null_residual": 7.089791041850312e-16,
+          "balanced_direct_assembly_error": 1.2349860160218394e-14
+        },
+        {
+          "degree": 4,
+          "shape": [
+            644,
+            840
+          ],
+          "rank_relative1e-9": 532,
+          "kernel_dimension": 308,
+          "largest": 3.3420881755492173,
+          "smallest_retained": 0.00018326313530628438,
+          "largest_discarded": 1.1873482377031114e-14,
+          "relative_null_residual": 6.974414762820381e-16,
+          "balanced_direct_assembly_error": 1.8332686089310573e-14
+        },
+        {
+          "degree": 5,
+          "shape": [
+            1130,
+            1344
+          ],
+          "rank_relative1e-9": 917,
+          "kernel_dimension": 427,
+          "largest": 3.464602536800984,
+          "smallest_retained": 0.00016018718904003374,
+          "largest_discarded": 1.2308740824099771e-14,
+          "relative_null_residual": 7.52677140817396e-16,
+          "balanced_direct_assembly_error": 2.3628989700863047e-14
+        },
+        {
+          "degree": 6,
+          "shape": [
+            1812,
+            2016
+          ],
+          "rank_relative1e-9": 1451,
+          "kernel_dimension": 565,
+          "largest": 3.5563632278789474,
+          "smallest_retained": 5.1733915598072204e-08,
+          "largest_discarded": 1.263474028646864e-14,
+          "relative_null_residual": 8.01655379939267e-16,
+          "balanced_direct_assembly_error": 3.110232192887115e-14
+        }
+      ],
+      "spencer": [
+        {
+          "degree": 3,
+          "g_dimension": 208,
+          "incoming_shape": [
+            1248,
+            1232
+          ],
+          "outgoing_shape": [
+            508,
+            1248
+          ],
+          "complex_product_norm": 1.610804635784749e-11,
+          "complex_product_relative": 6.123841863285535e-15,
+          "incoming_largest": 2.2360679774997925,
+          "outgoing_largest": 2.236067977499791,
+          "incoming_boundary": [
+            1.4306755248664202,
+            1.426732044226476,
+            1.4003216903215354,
+            1.3534837227202514,
+            1.1657844642110786,
+            1.0757388408544033,
+            0.2602152560854375,
+            2.8042344221686284e-12,
+            2.335053348325708e-12,
+            2.013550912784207e-12,
+            1.3032093158702905e-12,
+            1.2850696587746155e-12,
+            5.07947823575271e-13,
+            5.6101580378765153e-14,
+            3.5843554550871926e-14,
+            3.3733160140292416e-14
+          ],
+          "outgoing_boundary": [
+            1.3448214804851937,
+            1.1614059555298197,
+            1.0761156216209975,
+            0.994605635117604,
+            0.723878131481854,
+            1.6799730953007432e-14,
+            1.1876797741857781e-14,
+            9.876356920632287e-15,
+            8.068688058050053e-15,
+            6.299597599373911e-15,
+            5.8540936039379816e-15
+          ],
+          "tests": [
+            {
+              "relative_cutoff": 1e-08,
+              "incoming_rank": 805,
+              "outgoing_rank": 443,
+              "putative_H2_dimension": 0
+            },
+            {
+              "relative_cutoff": 1e-09,
+              "incoming_rank": 805,
+              "outgoing_rank": 443,
+              "putative_H2_dimension": 0
+            },
+            {
+              "relative_cutoff": 1e-10,
+              "incoming_rank": 805,
+              "outgoing_rank": 443,
+              "putative_H2_dimension": 0
+            },
+            {
+              "relative_cutoff": 1e-11,
+              "incoming_rank": 805,
+              "outgoing_rank": 443,
+              "putative_H2_dimension": 0
+            },
+            {
+              "relative_cutoff": 1e-12,
+              "incoming_rank": 807,
+              "outgoing_rank": 443,
+              "putative_H2_dimension": -2
+            }
+          ],
+          "contraction_leak_incoming": 4.008465420797685e-12,
+          "contraction_leak_outgoing": 7.812127479070788e-14
+        },
+        {
+          "degree": 4,
+          "g_dimension": 308,
+          "incoming_shape": [
+            1848,
+            1708
+          ],
+          "outgoing_shape": [
+            832,
+            1848
+          ],
+          "complex_product_norm": 3.167540978820973e-11,
+          "complex_product_relative": 6.510235422878635e-15,
+          "incoming_largest": 2.449489742783181,
+          "outgoing_largest": 2.4494897427831805,
+          "incoming_boundary": [
+            1.7206876283453594,
+            1.68427806768251,
+            1.5686470702777,
+            1.4826934822541638,
+            1.0487900297412058,
+            0.011225485252108574,
+            3.047950533827719e-05,
+            3.833892664777521e-12,
+            3.3551416887220547e-12,
+            2.859329139754513e-12,
+            2.7899949316279688e-12,
+            1.928247244446765e-12,
+            1.697260750825824e-12,
+            1.5797770786452003e-12,
+            1.568493477659314e-12,
+            1.361239500658811e-12
+          ],
+          "outgoing_boundary": [
+            1.4727361545058293,
+            1.4091228853731217,
+            1.241737250838247,
+            1.0607009288453184,
+            0.8757863953610934,
+            2.7750787257524755e-12,
+            1.6248022716130955e-12,
+            7.1380121363963e-13,
+            2.2861389658357055e-13,
+            4.320384924798259e-14,
+            3.400688639740469e-14
+          ],
+          "tests": [
+            {
+              "relative_cutoff": 1e-08,
+              "incoming_rank": 1143,
+              "outgoing_rank": 705,
+              "putative_H2_dimension": 0
+            },
+            {
+              "relative_cutoff": 1e-09,
+              "incoming_rank": 1143,
+              "outgoing_rank": 705,
+              "putative_H2_dimension": 0
+            },
+            {
+              "relative_cutoff": 1e-10,
+              "incoming_rank": 1143,
+              "outgoing_rank": 705,
+              "putative_H2_dimension": 0
+            },
+            {
+              "relative_cutoff": 1e-11,
+              "incoming_rank": 1143,
+              "outgoing_rank": 705,
+              "putative_H2_dimension": 0
+            },
+            {
+              "relative_cutoff": 1e-12,
+              "incoming_rank": 1147,
+              "outgoing_rank": 706,
+              "putative_H2_dimension": -5
+            }
+          ],
+          "contraction_leak_incoming": 8.469886440596055e-12,
+          "contraction_leak_outgoing": 4.008465420797685e-12
+        },
+        {
+          "degree": 5,
+          "g_dimension": 427,
+          "incoming_shape": [
+            2562,
+            2260
+          ],
+          "outgoing_shape": [
+            1232,
+            2562
+          ],
+          "complex_product_norm": 5.5145302714206566e-11,
+          "complex_product_relative": 6.832639094997438e-15,
+          "incoming_largest": 2.6457513110645947,
+          "outgoing_largest": 2.6457513110645934,
+          "incoming_boundary": [
+            1.8799301502585317,
+            1.8001965332260594,
+            1.4652366381296413,
+            1.4167083985377553,
+            4.306843647049106e-08,
+            2.9505044634584878e-08,
+            1.3122472037056128e-08,
+            3.351972375296721e-10,
+            2.2272216707333328e-10,
+            4.34485911479947e-12,
+            3.849757700553486e-12,
+            3.812615797480205e-12,
+            3.308847392132001e-12,
+            3.040711840961817e-12,
+            2.9439847400368826e-12,
+            2.7688139957115472e-12
+          ],
+          "outgoing_boundary": [
+            1.4738115504995133,
+            1.3581842693739554,
+            1.01980792327583,
+            1.0180044825989993,
+            0.010950469470278367,
+            4.127232119977271e-12,
+            2.940050327855777e-12,
+            1.905077969097744e-12,
+            1.7979060598425994e-12,
+            1.7103690941619646e-12,
+            1.33869258021316e-12
+          ],
+          "tests": [
+            {
+              "relative_cutoff": 1e-08,
+              "incoming_rank": 1536,
+              "outgoing_rank": 1024,
+              "putative_H2_dimension": 2
+            },
+            {
+              "relative_cutoff": 1e-09,
+              "incoming_rank": 1537,
+              "outgoing_rank": 1024,
+              "putative_H2_dimension": 1
+            },
+            {
+              "relative_cutoff": 1e-10,
+              "incoming_rank": 1538,
+              "outgoing_rank": 1024,
+              "putative_H2_dimension": 0
+            },
+            {
+              "relative_cutoff": 1e-11,
+              "incoming_rank": 1539,
+              "outgoing_rank": 1024,
+              "putative_H2_dimension": -1
+            },
+            {
+              "relative_cutoff": 1e-12,
+              "incoming_rank": 1547,
+              "outgoing_rank": 1026,
+              "putative_H2_dimension": -11
+            }
+          ],
+          "contraction_leak_incoming": 1.52267530195676e-11,
+          "contraction_leak_outgoing": 8.469886440596055e-12
+        }
+      ]
+    }
+  ]
+}

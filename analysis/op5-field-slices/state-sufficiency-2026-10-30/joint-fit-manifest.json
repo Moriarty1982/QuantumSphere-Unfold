@@ -1,0 +1,127 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5-joint-first-second-jet-fit",
+  "repository": {
+    "commit": "f98b29ba8eeb87c053a39285ca348c4d2ef76081",
+    "dirty": true
+  },
+  "command": [
+    "C:\\Users\\marcb\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\joint_fit.py"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "python",
+        "version": "3.12.10"
+      },
+      {
+        "name": "torch",
+        "version": "2.14.0+cpu"
+      },
+      {
+        "name": "numpy",
+        "version": "2.5.2"
+      },
+      {
+        "name": "sympy",
+        "version": "1.14.0"
+      }
+    ],
+    "hardware": "AMD64"
+  },
+  "mathematics": {
+    "assertion_tested": "At3 specified points jointly fit24 field equations,96 total first prolongation equations and4 time-coframe fixing values using96 first jets and240 symmetric second jets. Float64 numerical evidence.",
+    "coefficient_domain": "complex fields, real packed float64 numerical derivatives via AD",
+    "conventions": "coordinate order t,x,y,z; first jets real48 then imag48; symmetric pairs i<=j each real12 then imag12; no factor2",
+    "inputs": [
+      "joint-inputs/OP5_Counterflow_Full_Residual_Check.py",
+      "joint-inputs/OP5_Joint_Compatibility_Lower_Data.json",
+      "joint-inputs/OP5_Joint_Compatibility_Second_Jet_Check.json",
+      "joint-inputs/joint_fit.py"
+    ],
+    "bounds": {
+      "points": 3,
+      "outer_iterations_cap": 16,
+      "damping_trials_per_iteration": 9,
+      "stop_norm": 1e-09
+    },
+    "non_claims": [
+      "exact root",
+      "regional existence",
+      "higher prolongation",
+      "native QSC action",
+      "OP5 closure"
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-10-30T02:40:00.368608+00:00",
+    "runtime_seconds": 1.7545907497406006,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": 2
+    }
+  },
+  "outputs": [
+    {
+      "path": "joint-fit-result.json",
+      "sha256": "e85d8f463de0218804eeb68c451f07eaa0ecef91a13e11f9313feb1113d08d76",
+      "kind": "result"
+    },
+    {
+      "path": "joint-fit-scalar-controls.json",
+      "sha256": "619149773a818a61a87aacfa3a820d0ed048768c64ab2d14424ed46898ea9fb1",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "all inputs unchanged during fit",
+    "all three full field norms below1e-10",
+    "all three AD prolongation norms below1e-10",
+    "time coframe fixed below1e-10",
+    "regular determinant and negative inverse g00 at3points",
+    "NumPy finite differences at3step sizes",
+    "independent scalar state and derivative controls"
+  ],
+  "result": "numerically compatible finite2jets found at all3 tested points; comparison coefficients unchanged",
+  "residual_risks": [
+    "float64 non-certified roots",
+    "three germs not one common regional solution",
+    "no higher order test"
+  ],
+  "input_artifacts": [
+    {
+      "path": "joint-inputs/OP5_Counterflow_Full_Residual_Check.py",
+      "sha256": "e0803c2fdf85da1f6318685ab661e77cb39bd60a14b732fb0481c8ce5f2bc4b4",
+      "sha256_after": "e0803c2fdf85da1f6318685ab661e77cb39bd60a14b732fb0481c8ce5f2bc4b4"
+    },
+    {
+      "path": "joint-inputs/OP5_Joint_Compatibility_Lower_Data.json",
+      "sha256": "f7090bbafec07ec191acba48b0f4e596d0e0d7c608fd8f2ecaeb6f4c3d4b13aa",
+      "sha256_after": "f7090bbafec07ec191acba48b0f4e596d0e0d7c608fd8f2ecaeb6f4c3d4b13aa"
+    },
+    {
+      "path": "joint-inputs/OP5_Joint_Compatibility_Second_Jet_Check.json",
+      "sha256": "485c05d7797f2b8981600b70a909987899d34469686769337f2b103d9f5bc12f",
+      "sha256_after": "485c05d7797f2b8981600b70a909987899d34469686769337f2b103d9f5bc12f"
+    },
+    {
+      "path": "joint-inputs/joint_fit.py",
+      "sha256": "c44bdf3a03420ac6ddda039a9252e6b551bcc1730c540663891b3d8015ce59c7",
+      "sha256_after": "c44bdf3a03420ac6ddda039a9252e6b551bcc1730c540663891b3d8015ce59c7"
+    }
+  ],
+  "declared_results": [
+    "joint-fit-result.json",
+    "joint-fit-scalar-controls.json"
+  ]
+}

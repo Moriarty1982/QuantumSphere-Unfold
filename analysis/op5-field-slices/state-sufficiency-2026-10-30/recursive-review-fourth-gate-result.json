@@ -1,0 +1,123 @@
+{
+  "contract": "Independent necessary scalar gate for frozen successful3jet fourth completion, no full fourth-jet solve. Actual derivatives, unweighted symmetric packing.",
+  "inputs_sha256": {
+    "C:\\Users\\marcb\\OneDrive\\Dokumente\\GitHub\\QuantumSphere-Unfold\\analysis\\OP5_Counterflow_Full_Residual_Check.py": "e0803c2fdf85da1f6318685ab661e77cb39bd60a14b732fb0481c8ce5f2bc4b4",
+    "C:\\Users\\marcb\\OneDrive\\Dokumente\\GitHub\\QuantumSphere-Unfold\\analysis\\op5-field-slices\\OP5_Joint_Compatibility_Lower_Data.json": "f7090bbafec07ec191acba48b0f4e596d0e0d7c608fd8f2ecaeb6f4c3d4b13aa",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\joint-fit-result.json": "e85d8f463de0218804eeb68c451f07eaa0ecef91a13e11f9313feb1113d08d76",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\third-joint-fit-result.json": "9a59241f01cacc74f9afca245cd1c547620974fbe67fcb1ad0a4b242fd46a8a4",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\recursive_review_fourth_gate.py": "0adcdb9a73495d6a1037fa137a1af5d31273ff079f8b2f9aa3ff9ad49483e7ce"
+  },
+  "results": [
+    {
+      "point_index": 0,
+      "point": [
+        1.0,
+        0.6,
+        0.0,
+        0.0
+      ],
+      "d3g_packed": [
+        45.2403871723229,
+        -77.24676390137557,
+        8.550012474139475,
+        8.154607346157018,
+        -55.24250995200871,
+        -4.108248919607164,
+        13.59288529760917,
+        22.86027268663094,
+        8.378056869336547,
+        19.204026495709897,
+        -59.90521904261398,
+        5.09206893958003,
+        34.021689351806074,
+        1.2262505221500408,
+        2.348562396764906,
+        28.09119485560076,
+        -11.774532162243418,
+        15.706418979325306,
+        9.150449621884938,
+        -24.93649108856872
+      ],
+      "d3g_norm": 137.9397627536346,
+      "d2g_packed_norm": 2.6480489929338184e-11,
+      "ell_norm": 1.4134518271933953,
+      "raw_d3g_scaled_norm": 97.59070673638247,
+      "dddq_leibniz_check_error": 1.499417746953758e-14,
+      "warning": "raw scaled gate approximates a lower bound only when F,dF,ddF negligible; retain lower-product terms at numerical floor."
+    },
+    {
+      "point_index": 1,
+      "point": [
+        0.99,
+        0.59,
+        0.01,
+        -0.01
+      ],
+      "d3g_packed": [
+        47.89078224535307,
+        -78.8463759817768,
+        6.153260749582984,
+        9.442589217454092,
+        -47.03782629942725,
+        -5.485665518560467,
+        19.40639425013984,
+        20.86269507578207,
+        9.89668594610244,
+        16.21138351905494,
+        -51.13861119493589,
+        3.4854265472576547,
+        38.55707780005303,
+        0.7727968860808536,
+        3.05660021422296,
+        21.074716874198543,
+        -12.878443435545433,
+        15.309758861229286,
+        8.586703705210553,
+        -27.961888257039583
+      ],
+      "d3g_norm": 133.70282610926108,
+      "d2g_packed_norm": 3.073990905293665e-11,
+      "ell_norm": 1.4117577137357542,
+      "raw_d3g_scaled_norm": 94.70663755430127,
+      "dddq_leibniz_check_error": 1.5937791926147293e-14,
+      "warning": "raw scaled gate approximates a lower bound only when F,dF,ddF negligible; retain lower-product terms at numerical floor."
+    },
+    {
+      "point_index": 2,
+      "point": [
+        1.005,
+        0.605,
+        -0.005,
+        0.005
+      ],
+      "d3g_packed": [
+        44.401769025160334,
+        -74.80716783458611,
+        9.2627104777879,
+        7.21444474819082,
+        -57.355262137941594,
+        -3.1428927014546777,
+        9.733651524798853,
+        23.582979495877872,
+        7.358985019017095,
+        20.309428009490514,
+        -64.04050962798729,
+        6.314287624995757,
+        30.52236450691645,
+        1.42565925296583,
+        1.955185051695186,
+        31.757940218560908,
+        -11.434884841127827,
+        15.964940864138278,
+        8.871547822073342,
+        -22.823728799945734
+      ],
+      "d3g_norm": 138.54553223436983,
+      "d2g_packed_norm": 2.4571953423099237e-11,
+      "ell_norm": 1.4140711898237965,
+      "raw_d3g_scaled_norm": 97.97634887931888,
+      "dddq_leibniz_check_error": 3.3706926865921225e-14,
+      "warning": "raw scaled gate approximates a lower bound only when F,dF,ddF negligible; retain lower-product terms at numerical floor."
+    }
+  ]
+}

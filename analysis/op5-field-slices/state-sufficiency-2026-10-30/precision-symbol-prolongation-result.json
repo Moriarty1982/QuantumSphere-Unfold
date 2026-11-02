@@ -1,0 +1,101 @@
+{
+  "contract": "Float64 prolongations from newly reconstructed 70-digit completed symbol at new root. Omega deliberately excluded: old Omega cannot be identified at changed root. Not high-precision SVD or exact rank proof.",
+  "input_sha256": "1e483bc24a0c8c273632ec742bfdd03b344248e512d4e7d5577839f98420f03c",
+  "results": [
+    {
+      "degree": 1,
+      "dimension": 65,
+      "tests": [
+        {
+          "cutoff": 1e-08,
+          "rank": 31
+        },
+        {
+          "cutoff": 1e-10,
+          "rank": 31
+        },
+        {
+          "cutoff": 1e-12,
+          "rank": 31
+        }
+      ],
+      "singular_boundary": [
+        0.34604399887154413,
+        0.31706145911139766,
+        5.14298691619276e-16
+      ]
+    },
+    {
+      "degree": 2,
+      "dimension": 127,
+      "tests": [
+        {
+          "cutoff": 1e-08,
+          "rank": 113
+        },
+        {
+          "cutoff": 1e-10,
+          "rank": 113
+        },
+        {
+          "cutoff": 1e-12,
+          "rank": 113
+        }
+      ],
+      "singular_boundary": [
+        0.2937414101030003,
+        0.22173091298633305,
+        1.998670714940223e-15,
+        1.2224390908954496e-15
+      ]
+    },
+    {
+      "degree": 3,
+      "dimension": 209,
+      "tests": [
+        {
+          "cutoff": 1e-08,
+          "rank": 271
+        },
+        {
+          "cutoff": 1e-10,
+          "rank": 271
+        },
+        {
+          "cutoff": 1e-12,
+          "rank": 271
+        }
+      ],
+      "singular_boundary": [
+        0.0704004965227906,
+        0.001754887361747656,
+        7.096560849725625e-15,
+        6.265386074613805e-15
+      ]
+    },
+    {
+      "degree": 4,
+      "dimension": 312,
+      "tests": [
+        {
+          "cutoff": 1e-08,
+          "rank": 528
+        },
+        {
+          "cutoff": 1e-10,
+          "rank": 528
+        },
+        {
+          "cutoff": 1e-12,
+          "rank": 528
+        }
+      ],
+      "singular_boundary": [
+        0.0017443204017756537,
+        0.001146904085766627,
+        1.705742693233842e-14,
+        1.059510949296687e-14
+      ]
+    }
+  ]
+}

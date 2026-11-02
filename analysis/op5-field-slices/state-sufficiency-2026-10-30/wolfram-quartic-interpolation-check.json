@@ -1,0 +1,13 @@
+{
+  "code": "Module[{tri,ex,mat},tri=Select[Tuples[Range[4],4],OrderedQ];ex=Table[Count[t,i],{t,tri},{i,4}];mat=Table[Times@@MapThread[If[#2==0,1,#1^#2]&,{d,a}],{d,ex},{a,ex}];{Dimensions[mat],MatrixRank[mat],Det[mat],Inverse[mat].mat===IdentityMatrix[35]}]",
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Out[1]= {{35, 35}, 35, 43115616168696989527091804682766516224, True}"
+      }
+    ],
+    "structuredContent": null,
+    "isError": false
+  }
+}

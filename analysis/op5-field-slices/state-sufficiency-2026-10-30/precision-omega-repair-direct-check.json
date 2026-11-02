@@ -1,0 +1,35 @@
+{
+  "contract": "Direct corrected quartic field paths re-evaluate orders0..3 of full completed R along two directions. Degree3 is divided by6. No prolonged matrix used; same underlying R evaluator.",
+  "checks": [
+    {
+      "lower_orders_0_1_2_max": [
+        "1.00518037774976507279351e-69",
+        "2.98275772440365039318935e-69",
+        "1.34480168351305249881444e-68"
+      ],
+      "direction": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "residual_reconstruction_error_max": "1.57531074123652434111708e-64",
+      "actual_residual_max": "1.57531074123652434111708e-64"
+    },
+    {
+      "lower_orders_0_1_2_max": [
+        "1.00518037774976507279351e-69",
+        "1.06841058044849360583411e-66",
+        "2.36700120397160198395455e-62"
+      ],
+      "direction": [
+        1,
+        -2,
+        3,
+        -1
+      ],
+      "residual_reconstruction_error_max": "5.02963902528867423210779e-62",
+      "actual_residual_max": "5.02963902528867423210779e-62"
+    }
+  ]
+}

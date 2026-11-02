@@ -1,0 +1,21 @@
+{
+  "status": "finite_numerical_checks_passed",
+  "final_full_residual": "1.03234741498624520989604e-69",
+  "max_real_first_derivative_change": "1.692196872222105953552552e-14",
+  "non_claims": [
+    "Exact rank",
+    "Exact root certificate",
+    "Omega reconstruction",
+    "Regional existence"
+  ],
+  "sha256": {
+    "precision_completed_rebuild.py": "186f70a28067bb16814a35af23a4bf49918e25b1f27571d952a9e3931f9d4682",
+    "precision_completed_root.py": "a2a66d2cbf235e4e82f8605cff348d6be793706eb84e556fd5714b2619345bc9",
+    "precision_hessian_cancellation.py": "dcc531bc62c5c5404894cd6e7510f69600dc4293d4c54eb0fec85c430f4f592f",
+    "precision-completed-result.json": "4416f3a4a4db32c162aea86c585a771068896478c416c323e3363d86ea29b244",
+    "precision-completed-root-result.json": "996ee669c78165b64ce958c007003a9a0649cd59901b9c26dbea27b6bc63c138",
+    "precision-hessian-cancellation-result.json": "beb3a52b3b0e9391f895275d519066a007611224f7526b22f5b3b37b04545863",
+    "precision-first-jet-70.json": "fb576dbd9183842357ff02bfa87df9abd103e44e4ca8e3749ef1836e06c76a0a",
+    "precision_primitive_rebuild.py": "1b95aad16f4dad5a711b6c778313bd39486faeb8ffbb96a01ee7c7afc9c6436d"
+  }
+}

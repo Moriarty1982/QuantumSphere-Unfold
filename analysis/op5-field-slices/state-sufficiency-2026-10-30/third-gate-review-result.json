@@ -1,0 +1,152 @@
+{
+  "contract": "Independent scalar gate and finite-difference left/source attribution; no optimization or full thirdjet SVD rerun.",
+  "inputs_sha256": {
+    "C:\\Users\\marcb\\OneDrive\\Dokumente\\GitHub\\QuantumSphere-Unfold\\analysis\\OP5_Counterflow_Full_Residual_Check.py": "e0803c2fdf85da1f6318685ab661e77cb39bd60a14b732fb0481c8ce5f2bc4b4",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\joint-fit-result.json": "e85d8f463de0218804eeb68c451f07eaa0ecef91a13e11f9313feb1113d08d76",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\third-check-result.json": "e27af41f98507f6bd019f20d4d8e2ba0f907eecd138932a11ce3975471437ec6",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\third_gate_review.py": "73ab0133944a57edddd955908eccf1c6d78605356ac308a0e763b8cfed7bb824"
+  },
+  "results": [
+    {
+      "point_index": 0,
+      "ddg": [
+        [
+          -13.899141931411219,
+          19.018485067699388,
+          -0.30887531673113666,
+          -1.0171100645901876
+        ],
+        [
+          19.018485067699388,
+          -7.844301577565414,
+          -3.2512434498201004,
+          -0.6281035512729533
+        ],
+        [
+          -0.30887531673113666,
+          -3.2512434498201004,
+          -29.411096128892687,
+          -0.8170620204561919
+        ],
+        [
+          -1.0171100645901876,
+          -0.6281035512729533,
+          -0.8170620204561919,
+          -13.360609265846833
+        ]
+      ],
+      "ddg_packed_norm": 40.89869250512026,
+      "ell_norm": 1.4134518271933953,
+      "necessary_ddF_lower_bound": 28.935328193200814,
+      "finite_difference_ell_J_norm": 3.238423721874443e-10,
+      "source_contraction_controls": [
+        {
+          "step": 0.0003,
+          "norm_ell_b_minus_ddg": 2.1904455680339313e-05
+        },
+        {
+          "step": 0.0001,
+          "norm_ell_b_minus_ddg": 2.365930171943789e-06
+        }
+      ],
+      "observed_unrestricted_residual": 28.935328193200768,
+      "unrestricted_minus_scalar_bound": -4.618527782440651e-14,
+      "observed_symmetric_residual": 29.37655364160867,
+      "scalar_bound_squared_fraction_of_symmetric": 0.9701862969605282
+    },
+    {
+      "point_index": 1,
+      "ddg": [
+        [
+          -13.360467418622077,
+          19.22010668361522,
+          -0.38903202167703055,
+          -1.485638862546237
+        ],
+        [
+          19.22010668361522,
+          -8.586912384239668,
+          -3.098460898198541,
+          -1.1143457026490846
+        ],
+        [
+          -0.38903202167703055,
+          -3.098460898198541,
+          -30.71044206422864,
+          -0.5028491587569404
+        ],
+        [
+          -1.485638862546237,
+          -1.1143457026490846,
+          -0.5028491587569404,
+          -13.098262742986503
+        ]
+      ],
+      "ddg_packed_norm": 41.830598200788515,
+      "ell_norm": 1.4117577137357542,
+      "necessary_ddF_lower_bound": 29.630153810243787,
+      "finite_difference_ell_J_norm": 3.0416048369292844e-10,
+      "source_contraction_controls": [
+        {
+          "step": 0.0003,
+          "norm_ell_b_minus_ddg": 2.180511687562268e-05
+        },
+        {
+          "step": 0.0001,
+          "norm_ell_b_minus_ddg": 2.5164251256262243e-06
+        }
+      ],
+      "observed_unrestricted_residual": 29.63015381024379,
+      "unrestricted_minus_scalar_bound": 3.552713678800501e-15,
+      "observed_symmetric_residual": 30.06650032678061,
+      "scalar_bound_squared_fraction_of_symmetric": 0.9711851911093199
+    },
+    {
+      "point_index": 2,
+      "ddg": [
+        [
+          -14.171339425949366,
+          18.87782850297456,
+          -0.2795117361239069,
+          -0.7873246492509037
+        ],
+        [
+          18.87782850297456,
+          -7.499390426480279,
+          -3.324088742774762,
+          -0.35579441679566903
+        ],
+        [
+          -0.2795117361239069,
+          -3.324088742774762,
+          -28.771466810458282,
+          -0.9549496542648904
+        ],
+        [
+          -0.7873246492509037,
+          -0.35579441679566903,
+          -0.9549496542648904,
+          -13.484223160476137
+        ]
+      ],
+      "ddg_packed_norm": 40.445615274610276,
+      "ell_norm": 1.4140711898237965,
+      "necessary_ddF_lower_bound": 28.602248292499397,
+      "finite_difference_ell_J_norm": 3.508028161864153e-10,
+      "source_contraction_controls": [
+        {
+          "step": 0.0003,
+          "norm_ell_b_minus_ddg": 2.1978296754890787e-05
+        },
+        {
+          "step": 0.0001,
+          "norm_ell_b_minus_ddg": 2.4904557023831453e-06
+        }
+      ],
+      "observed_unrestricted_residual": 28.60224829249941,
+      "unrestricted_minus_scalar_bound": 1.4210854715202004e-14,
+      "observed_symmetric_residual": 29.046888553520745,
+      "scalar_bound_squared_fraction_of_symmetric": 0.9696189795729427
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "flux_alone_insufficient": {
+    "same_G": "Matrix([[1, 0], [0, 0]])",
+    "same_flux": "zero",
+    "boosted_G_first": "Matrix([[1, 0], [0, 0]])",
+    "boosted_G_second": "Matrix([[1/(1 - v**2), 0], [0, v**2/(1 - v**2)]])"
+  },
+  "reconstruction_tests": [
+    {
+      "E": [
+        "2",
+        "1",
+        "0"
+      ],
+      "B": [
+        "0",
+        "1",
+        "2"
+      ],
+      "G": "Matrix([[5, 1], [1, 5]])",
+      "orientation_reconstructs_exactly": true,
+      "energy_boost_formula_verified": true
+    },
+    {
+      "E": [
+        "1",
+        "2",
+        "3"
+      ],
+      "B": [
+        "2",
+        "-1",
+        "1"
+      ],
+      "G": "Matrix([[14, 3], [3, 6]])",
+      "orientation_reconstructs_exactly": true,
+      "energy_boost_formula_verified": true
+    }
+  ],
+  "chart": "a=|E|\u00b2>0 and det G>0; rank-deficient cases require separate charts/stabilizers; nonzero null electromagnetic fields can have positive-definite Gram matrices",
+  "mediator": "G plus O in SO(3), observer relation and calibrated clock. Algebraic local field reconstruction only; not complete GR or quantum evolution."
+}

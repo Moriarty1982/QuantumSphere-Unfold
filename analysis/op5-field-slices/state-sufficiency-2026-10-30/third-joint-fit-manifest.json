@@ -1,0 +1,143 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5-joint-second-third-jet-fit",
+  "repository": {
+    "commit": "f98b29ba8eeb87c053a39285ca348c4d2ef76081",
+    "dirty": true
+  },
+  "command": [
+    "C:\\Users\\marcb\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\third_joint_fit.py"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "python",
+        "version": "3.12.10"
+      },
+      {
+        "name": "numpy",
+        "version": "2.5.2"
+      },
+      {
+        "name": "torch",
+        "version": "2.14.0+cpu"
+      },
+      {
+        "name": "sympy",
+        "version": "1.14.0"
+      }
+    ],
+    "hardware": "AMD64"
+  },
+  "mathematics": {
+    "assertion_tested": "At3 fixed psi/firstjet points optimize240 secondjets using96 dF constraints and25 left source gates, then recover480 symmetric thirdjets and verify all240 ddF equations.",
+    "coefficient_domain": "float64 AD and symbolic background derivatives order2",
+    "conventions": "symmetric pair10, triple20; each complex spinor packed12real+12imag; full background and inverse coframe derivatives",
+    "inputs": [
+      "third-joint-inputs/third_joint_fit.py",
+      "third-joint-inputs/joint_fit.py",
+      "third-joint-inputs/joint-fit-result.json",
+      "third-joint-inputs/OP5_Counterflow_Full_Residual_Check.py",
+      "third-joint-inputs/OP5_Joint_Compatibility_Lower_Data.json",
+      "third-joint-inputs/OP5_Joint_Compatibility_Second_Jet_Check.json"
+    ],
+    "bounds": {
+      "points": 3,
+      "outer_iteration_cap": 20,
+      "trial_cap": 10,
+      "stopping_norm": 1e-10,
+      "SVD_cutoffs": [
+        1e-08,
+        1e-09,
+        1e-11
+      ],
+      "finite_difference_steps": [
+        0.001,
+        0.0003,
+        0.0001
+      ]
+    },
+    "non_claims": [
+      "general no-go",
+      "regional nonexistence",
+      "OP5 closure",
+      "certified exact rank"
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-10-30T03:33:41.563139+00:00",
+    "runtime_seconds": 12.135476112365723,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": 2
+    }
+  },
+  "outputs": [
+    {
+      "path": "third-joint-fit-result.json",
+      "sha256": "9a59241f01cacc74f9afca245cd1c547620974fbe67fcb1ad0a4b242fd46a8a4",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "original frozen third completion preserved as control",
+    "unchanged field values/firstjets/backgrounds",
+    "complete left kernel eliminates thirdjet unknowns",
+    "dF and full ddF below2e-11",
+    "full rank/residual checks at3SVDcutoffs",
+    "independent cubic Taylor finite differences at3steps",
+    "all input hashes unchanged"
+  ],
+  "result": "All3 tested germs numerically admit finite thirdjet completion after secondjets released; no regional existence proof.",
+  "residual_risks": [
+    "float64 numerical roots not exact certification",
+    "secondjet norms increase from7to21 and thirdjet norms approx80 in unscaled coordinate packing",
+    "higher-order growth untested",
+    "three independently fitted germs not common regional field"
+  ],
+  "input_artifacts": [
+    {
+      "path": "third-joint-inputs/third_joint_fit.py",
+      "sha256": "227080886d165910e73fde5b224cb791fa96a22223e8c5cddcbb85434ce1118b",
+      "sha256_after": "227080886d165910e73fde5b224cb791fa96a22223e8c5cddcbb85434ce1118b"
+    },
+    {
+      "path": "third-joint-inputs/joint_fit.py",
+      "sha256": "c44bdf3a03420ac6ddda039a9252e6b551bcc1730c540663891b3d8015ce59c7",
+      "sha256_after": "c44bdf3a03420ac6ddda039a9252e6b551bcc1730c540663891b3d8015ce59c7"
+    },
+    {
+      "path": "third-joint-inputs/joint-fit-result.json",
+      "sha256": "e85d8f463de0218804eeb68c451f07eaa0ecef91a13e11f9313feb1113d08d76",
+      "sha256_after": "e85d8f463de0218804eeb68c451f07eaa0ecef91a13e11f9313feb1113d08d76"
+    },
+    {
+      "path": "third-joint-inputs/OP5_Counterflow_Full_Residual_Check.py",
+      "sha256": "e0803c2fdf85da1f6318685ab661e77cb39bd60a14b732fb0481c8ce5f2bc4b4",
+      "sha256_after": "e0803c2fdf85da1f6318685ab661e77cb39bd60a14b732fb0481c8ce5f2bc4b4"
+    },
+    {
+      "path": "third-joint-inputs/OP5_Joint_Compatibility_Lower_Data.json",
+      "sha256": "f7090bbafec07ec191acba48b0f4e596d0e0d7c608fd8f2ecaeb6f4c3d4b13aa",
+      "sha256_after": "f7090bbafec07ec191acba48b0f4e596d0e0d7c608fd8f2ecaeb6f4c3d4b13aa"
+    },
+    {
+      "path": "third-joint-inputs/OP5_Joint_Compatibility_Second_Jet_Check.json",
+      "sha256": "485c05d7797f2b8981600b70a909987899d34469686769337f2b103d9f5bc12f",
+      "sha256_after": "485c05d7797f2b8981600b70a909987899d34469686769337f2b103d9f5bc12f"
+    }
+  ],
+  "declared_results": [
+    "third-joint-fit-result.json"
+  ]
+}

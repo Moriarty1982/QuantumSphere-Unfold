@@ -1,0 +1,880 @@
+{
+  "contract": "Independent NumPy directional formal power series with recurrence inverse, original symbolic normalized backgrounds. Six directions per point, both inverse multiplication orders, scalar directional derivatives, and sampled generic topoperator columns. No optimization.",
+  "inputs_sha256": {
+    "C:\\Users\\marcb\\OneDrive\\Dokumente\\GitHub\\QuantumSphere-Unfold\\analysis\\OP5_Counterflow_Full_Residual_Check.py": "e0803c2fdf85da1f6318685ab661e77cb39bd60a14b732fb0481c8ce5f2bc4b4",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\sixth-frozen-third-result.json": "34fde3c113c4f0c5746492449d335c4a1bf996c4f1da81d4a5f19c08d0b82f57",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\fifth-window-result.json": "9b163be13168390cf969c5a259c513393b5517ff0013612cb3f4f1e577976dff",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\recursive_calibrator.py": "5601977f0b78ce1439fcdc74b101c20d111e1435e11ddeb1b29ae93ec742e439",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\sixth_series_review.py": "494a56d81c87d7f5eb34e5500c92781fe1910d58c92c78ac93ff8dbd453312bd"
+  },
+  "inputs_unchanged": true,
+  "results": [
+    {
+      "point_index": 0,
+      "direction_checks": [
+        {
+          "direction": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "F_coefficient_difference_by_degree": [
+            1.286603600283701e-15,
+            1.7540321518632114e-14,
+            2.4642699926120232e-14,
+            1.8580110760156466e-13,
+            9.553081476376009e-13,
+            6.119308112438317e-12
+          ],
+          "inverse_both_orders_errors": [
+            2.2398774397443074e-15,
+            9.083264572643732e-15,
+            3.6103080318808656e-14,
+            7.134727142455892e-14,
+            1.0989412600172397e-12,
+            6.6339069334014115e-12
+          ],
+          "g_direction_actual_derivatives": [
+            8.881784197001252e-16,
+            2.1538326677728037e-14,
+            1.7763568394002505e-15,
+            2.284039624100842e-11,
+            4.9112713895738125e-11,
+            1.7905676941154525e-11
+          ]
+        },
+        {
+          "direction": [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "F_coefficient_difference_by_degree": [
+            1.286603600283701e-15,
+            2.473789541284922e-14,
+            4.591240369507238e-14,
+            1.256863181122574e-13,
+            9.295168279643625e-13,
+            6.940463102214283e-12
+          ],
+          "inverse_both_orders_errors": [
+            2.2398774397443074e-15,
+            1.926277538970966e-14,
+            7.09183160102723e-14,
+            4.1659327144883963e-13,
+            1.5620095580753221e-12,
+            4.2285871412352385e-12
+          ],
+          "g_direction_actual_derivatives": [
+            8.881784197001252e-16,
+            7.549516567451064e-15,
+            3.552713678800501e-14,
+            -3.075939503105474e-11,
+            -2.0258994481991976e-10,
+            2.0173729353700764e-09
+          ]
+        },
+        {
+          "direction": [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "F_coefficient_difference_by_degree": [
+            1.286603600283701e-15,
+            1.128697639681875e-14,
+            2.694188281538599e-14,
+            1.2176763276501786e-13,
+            5.920536987653977e-13,
+            2.1305738822970765e-12
+          ],
+          "inverse_both_orders_errors": [
+            2.2398774397443074e-15,
+            7.158853847728615e-15,
+            1.6839195870706578e-14,
+            1.155253209795875e-13,
+            4.692560629089507e-13,
+            1.2156771580081485e-12
+          ],
+          "g_direction_actual_derivatives": [
+            8.881784197001252e-16,
+            1.618493594372833e-14,
+            4.529709940470639e-14,
+            -9.188967335759785e-12,
+            -2.4364510409213835e-11,
+            4.3513459746964106e-10
+          ]
+        },
+        {
+          "direction": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "F_coefficient_difference_by_degree": [
+            1.286603600283701e-15,
+            1.3504189745656023e-14,
+            7.24214125212544e-14,
+            1.7746521760704661e-13,
+            5.153478359395561e-13,
+            1.9217677322234578e-12
+          ],
+          "inverse_both_orders_errors": [
+            2.2398774397443074e-15,
+            6.3302795488727305e-15,
+            9.397376395169082e-14,
+            3.491969020629381e-13,
+            1.382946635667416e-12,
+            3.0645544529599306e-12
+          ],
+          "g_direction_actual_derivatives": [
+            8.881784197001252e-16,
+            1.698617039638815e-14,
+            4.263256414560601e-14,
+            -8.896893340731702e-11,
+            -1.7512498118321673e-09,
+            -9.831823695873095e-09
+          ]
+        },
+        {
+          "direction": [
+            1.0,
+            0.2,
+            -0.3,
+            0.4
+          ],
+          "F_coefficient_difference_by_degree": [
+            1.286603600283701e-15,
+            1.589905136758796e-14,
+            6.193169255209663e-14,
+            3.579629471532041e-13,
+            2.19653814777918e-12,
+            8.977631591176531e-12
+          ],
+          "inverse_both_orders_errors": [
+            2.2398774397443074e-15,
+            1.0213033568537775e-14,
+            9.616763438832445e-14,
+            3.4646956744093366e-13,
+            1.2080000373887912e-12,
+            6.254321175459164e-12
+          ],
+          "g_direction_actual_derivatives": [
+            8.881784197001252e-16,
+            2.5202062658991053e-14,
+            3.907985046680551e-14,
+            7.9397821650673e-11,
+            9.334826245321892e-10,
+            -9.097789188672323e-10
+          ]
+        },
+        {
+          "direction": [
+            -0.3,
+            0.7,
+            0.2,
+            -0.4
+          ],
+          "F_coefficient_difference_by_degree": [
+            1.286603600283701e-15,
+            1.0623395261546458e-14,
+            2.9207298246248015e-14,
+            9.21673971893155e-14,
+            3.7880514249081195e-13,
+            1.4166835941348452e-12
+          ],
+          "inverse_both_orders_errors": [
+            2.2398774397443074e-15,
+            1.180673544921468e-14,
+            6.35899075975081e-14,
+            1.0023500261092054e-13,
+            5.488427469680971e-13,
+            1.6056715862383513e-12
+          ],
+          "g_direction_actual_derivatives": [
+            8.881784197001252e-16,
+            -3.552713678800501e-15,
+            3.730349362740526e-14,
+            -8.746070534471073e-11,
+            -2.752358341240324e-10,
+            4.553157850750722e-10
+          ]
+        }
+      ],
+      "top_operator_checks": [
+        {
+          "column": 0,
+          "norm_error": 1.2630397861478577e-12
+        },
+        {
+          "column": 1,
+          "norm_error": 1.3100214260184689e-12
+        },
+        {
+          "column": 13,
+          "norm_error": 1.2782601198958177e-12
+        },
+        {
+          "column": 24,
+          "norm_error": 1.5858212520862726e-12
+        },
+        {
+          "column": 983,
+          "norm_error": 3.4486695742645105e-13
+        }
+      ],
+      "scalar_actual_derivative_norms": {
+        "0": 8.881784197001252e-16,
+        "1": 3.273189350948814e-14,
+        "2": 8.660850603059295e-14,
+        "3": 2.1037806129341987e-10,
+        "4": 1.9308452228080077e-09,
+        "5": 1.425663909103643e-08
+      },
+      "movement_from_window5": {
+        "0": {
+          "normalized_change": 0.0,
+          "actual_derivative_change": 0.0,
+          "relative_normalized_change": 0.0
+        },
+        "1": {
+          "normalized_change": 0.0,
+          "actual_derivative_change": 0.0,
+          "relative_normalized_change": 0.0
+        },
+        "2": {
+          "normalized_change": 0.0,
+          "actual_derivative_change": 0.0,
+          "relative_normalized_change": 0.0
+        },
+        "3": {
+          "normalized_change": 0.0,
+          "actual_derivative_change": 0.0,
+          "relative_normalized_change": 0.0
+        },
+        "4": {
+          "normalized_change": 264.5187394309584,
+          "actual_derivative_change": 1959.3749653633677,
+          "relative_normalized_change": 1.440059061201514
+        },
+        "5": {
+          "normalized_change": 649.0281926880884,
+          "actual_derivative_change": 21433.812084156343,
+          "relative_normalized_change": 0.7708294254989746
+        }
+      },
+      "jet_growth": {
+        "0": {
+          "normalized_coefficient_norm": 3.996651773876917,
+          "actual_derivative_norm": 3.996651773876917
+        },
+        "1": {
+          "normalized_coefficient_norm": 8.797585081070698,
+          "actual_derivative_norm": 8.797585081070698
+        },
+        "2": {
+          "normalized_coefficient_norm": 19.26557461045797,
+          "actual_derivative_norm": 25.94100931536362
+        },
+        "3": {
+          "normalized_coefficient_norm": 59.79935830302204,
+          "actual_derivative_norm": 141.13941525639567
+        },
+        "4": {
+          "normalized_coefficient_norm": 322.0414927366049,
+          "actual_derivative_norm": 2095.469808674144
+        },
+        "5": {
+          "normalized_coefficient_norm": 1019.0742344917331,
+          "actual_derivative_norm": 25899.255053786834
+        },
+        "6": {
+          "normalized_coefficient_norm": 5307.5568881032805,
+          "actual_derivative_norm": 538116.9940743302
+        }
+      }
+    },
+    {
+      "point_index": 1,
+      "direction_checks": [
+        {
+          "direction": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "F_coefficient_difference_by_degree": [
+            1.0131275206639663e-15,
+            4.4482237234972835e-15,
+            2.5795548773572265e-14,
+            1.2163471797965592e-13,
+            7.372338669092447e-13,
+            2.079041283314412e-12
+          ],
+          "inverse_both_orders_errors": [
+            1.5248002460275357e-15,
+            7.499374710601357e-15,
+            4.1609433553066215e-14,
+            1.0282679238267671e-13,
+            1.8237499907595312e-12,
+            5.873471211147616e-12
+          ],
+          "g_direction_actual_derivatives": [
+            -8.881784197001252e-16,
+            -1.4432899320127035e-15,
+            -2.3092638912203256e-14,
+            1.4814816040598089e-12,
+            1.2960299500264227e-11,
+            1.0973622011078987e-09
+          ]
+        },
+        {
+          "direction": [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "F_coefficient_difference_by_degree": [
+            1.0131275206639663e-15,
+            1.4152105043020815e-14,
+            2.7837272745331876e-14,
+            1.1773830116322727e-13,
+            1.1012682677070056e-12,
+            7.678081700451646e-12
+          ],
+          "inverse_both_orders_errors": [
+            1.5248002460275357e-15,
+            1.711834126662263e-14,
+            1.0478238872175889e-13,
+            3.003118599767319e-13,
+            1.0968991122506919e-12,
+            5.6401086398551015e-12
+          ],
+          "g_direction_actual_derivatives": [
+            -8.881784197001252e-16,
+            2.6645352591003757e-15,
+            2.1316282072803006e-14,
+            -2.7498003873915877e-12,
+            -1.5688783605583012e-11,
+            6.991740519879386e-10
+          ]
+        },
+        {
+          "direction": [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "F_coefficient_difference_by_degree": [
+            1.0131275206639663e-15,
+            7.211157647077067e-15,
+            3.228649960109251e-14,
+            1.0827414116898205e-13,
+            3.4616307038380295e-13,
+            1.8547564483717992e-12
+          ],
+          "inverse_both_orders_errors": [
+            1.5248002460275357e-15,
+            5.147443423963185e-15,
+            1.875455560964905e-14,
+            4.153836798605186e-14,
+            2.2153242344092565e-13,
+            9.916972442273764e-13
+          ],
+          "g_direction_actual_derivatives": [
+            -8.881784197001252e-16,
+            -8.881784197001252e-16,
+            -2.042810365310288e-14,
+            -7.765454945740657e-13,
+            2.2595258997171186e-12,
+            9.906075959520422e-11
+          ]
+        },
+        {
+          "direction": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "F_coefficient_difference_by_degree": [
+            1.0131275206639663e-15,
+            6.107949288261922e-15,
+            7.014035641658527e-14,
+            1.1383581790527212e-13,
+            2.928891226877049e-13,
+            1.0737680281402378e-12
+          ],
+          "inverse_both_orders_errors": [
+            1.5248002460275357e-15,
+            6.60968890731436e-15,
+            4.915470909858706e-14,
+            1.8571784739207327e-13,
+            5.615774523317737e-13,
+            1.58140585402639e-12
+          ],
+          "g_direction_actual_derivatives": [
+            -8.881784197001252e-16,
+            -3.885780586188048e-16,
+            -7.105427357601002e-15,
+            -9.491074592915538e-12,
+            -1.9613111135186045e-10,
+            -8.374367865826571e-10
+          ]
+        },
+        {
+          "direction": [
+            1.0,
+            0.2,
+            -0.3,
+            0.4
+          ],
+          "F_coefficient_difference_by_degree": [
+            1.0131275206639663e-15,
+            1.3768319332939801e-14,
+            6.101334831413745e-14,
+            2.5857544753004696e-13,
+            1.092298568744156e-12,
+            4.914576438402176e-12
+          ],
+          "inverse_both_orders_errors": [
+            1.5248002460275357e-15,
+            7.2660259000019e-15,
+            7.652401460329625e-14,
+            3.2771323954190153e-13,
+            5.302604736959051e-13,
+            4.691718580434392e-12
+          ],
+          "g_direction_actual_derivatives": [
+            -8.881784197001252e-16,
+            -9.71445146547012e-16,
+            -3.019806626980426e-14,
+            7.322142892007832e-12,
+            9.669065548223443e-11,
+            1.3595524706033757e-09
+          ]
+        },
+        {
+          "direction": [
+            -0.3,
+            0.7,
+            0.2,
+            -0.4
+          ],
+          "F_coefficient_difference_by_degree": [
+            1.0131275206639663e-15,
+            1.4994192867900064e-14,
+            5.858966789715788e-14,
+            1.4083195048932606e-13,
+            5.188074887791252e-13,
+            1.8687485798845452e-12
+          ],
+          "inverse_both_orders_errors": [
+            1.5248002460275357e-15,
+            1.91572295609167e-14,
+            1.0894558068227056e-13,
+            3.478406562516392e-13,
+            1.0695573144840628e-12,
+            1.870358879570157e-12
+          ],
+          "g_direction_actual_derivatives": [
+            -8.881784197001252e-16,
+            2.6645352591003757e-15,
+            3.552713678800501e-15,
+            -9.038103598868474e-12,
+            -3.257127900724299e-11,
+            6.991740519879386e-11
+          ]
+        }
+      ],
+      "top_operator_checks": [
+        {
+          "column": 0,
+          "norm_error": 1.053662508078788e-12
+        },
+        {
+          "column": 1,
+          "norm_error": 5.639697816463655e-13
+        },
+        {
+          "column": 13,
+          "norm_error": 8.176624736301966e-13
+        },
+        {
+          "column": 24,
+          "norm_error": 1.1760404254953632e-12
+        },
+        {
+          "column": 983,
+          "norm_error": 2.765854614016102e-13
+        }
+      ],
+      "scalar_actual_derivative_norms": {
+        "0": 8.881784197001252e-16,
+        "1": 3.1816171654835078e-15,
+        "2": 4.3907622483850636e-14,
+        "3": 2.2871693236689857e-11,
+        "4": 2.160223947823334e-10,
+        "5": 1.9536979396664555e-09
+      },
+      "movement_from_window5": {
+        "0": {
+          "normalized_change": 0.0,
+          "actual_derivative_change": 0.0,
+          "relative_normalized_change": 0.0
+        },
+        "1": {
+          "normalized_change": 0.0,
+          "actual_derivative_change": 0.0,
+          "relative_normalized_change": 0.0
+        },
+        "2": {
+          "normalized_change": 0.0,
+          "actual_derivative_change": 0.0,
+          "relative_normalized_change": 0.0
+        },
+        "3": {
+          "normalized_change": 0.0,
+          "actual_derivative_change": 0.0,
+          "relative_normalized_change": 0.0
+        },
+        "4": {
+          "normalized_change": 244.9834858607423,
+          "actual_derivative_change": 1955.618927802686,
+          "relative_normalized_change": 1.3718770572650407
+        },
+        "5": {
+          "normalized_change": 601.3231629396886,
+          "actual_derivative_change": 26371.095479566804,
+          "relative_normalized_change": 0.7578699451771461
+        }
+      },
+      "jet_growth": {
+        "0": {
+          "normalized_coefficient_norm": 3.9886525006896725,
+          "actual_derivative_norm": 3.9886525006896725
+        },
+        "1": {
+          "normalized_coefficient_norm": 8.887315323503207,
+          "actual_derivative_norm": 8.887315323503207
+        },
+        "2": {
+          "normalized_coefficient_norm": 19.884957652920775,
+          "actual_derivative_norm": 26.441883589362153
+        },
+        "3": {
+          "normalized_coefficient_norm": 59.73209070248211,
+          "actual_derivative_norm": 135.33195619924004
+        },
+        "4": {
+          "normalized_coefficient_norm": 303.16015510799207,
+          "actual_derivative_norm": 2041.4350480386986
+        },
+        "5": {
+          "normalized_coefficient_norm": 925.9841706453317,
+          "actual_derivative_norm": 29997.69981583307
+        },
+        "6": {
+          "normalized_coefficient_norm": 5206.543731231637,
+          "actual_derivative_norm": 684154.7549773518
+        }
+      }
+    },
+    {
+      "point_index": 2,
+      "direction_checks": [
+        {
+          "direction": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "F_coefficient_difference_by_degree": [
+            9.544006518543958e-16,
+            7.512848450648825e-15,
+            2.1352319402699593e-14,
+            1.3770097170251882e-13,
+            1.0425142466381744e-12,
+            6.0805659393548175e-12
+          ],
+          "inverse_both_orders_errors": [
+            1.0510651463864434e-15,
+            5.809746385599925e-15,
+            1.3824732684252632e-14,
+            1.3037365570527538e-13,
+            1.5566172515643683e-12,
+            1.2543757405396743e-11
+          ],
+          "g_direction_actual_derivatives": [
+            4.440892098500626e-16,
+            -2.55351295663786e-15,
+            4.618527782440651e-14,
+            1.2043699371133698e-12,
+            5.277911441226024e-11,
+            -2.438582669128664e-10
+          ]
+        },
+        {
+          "direction": [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "F_coefficient_difference_by_degree": [
+            9.544006518543958e-16,
+            8.594822217295528e-15,
+            2.728542844162657e-14,
+            1.0597373914279081e-13,
+            9.022773709830499e-13,
+            3.6164281167469314e-12
+          ],
+          "inverse_both_orders_errors": [
+            1.0510651463864434e-15,
+            9.642855805568882e-15,
+            6.50686306115492e-14,
+            3.126724171230096e-13,
+            2.318203397788501e-12,
+            8.34466475855031e-12
+          ],
+          "g_direction_actual_derivatives": [
+            4.440892098500626e-16,
+            2.220446049250313e-15,
+            -4.973799150320701e-14,
+            -4.689582056016661e-13,
+            -2.2168933355715126e-11,
+            -2.9331204132176936e-10
+          ]
+        },
+        {
+          "direction": [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "F_coefficient_difference_by_degree": [
+            9.544006518543958e-16,
+            4.813977355895158e-15,
+            3.346924890803276e-14,
+            1.3754198762908175e-13,
+            5.700232726417678e-13,
+            1.6947638946555113e-12
+          ],
+          "inverse_both_orders_errors": [
+            1.0510651463864434e-15,
+            5.478282005372839e-15,
+            3.027048068262294e-14,
+            1.7201694832103617e-13,
+            3.9977501667082215e-13,
+            1.2285816077644683e-12
+          ],
+          "g_direction_actual_derivatives": [
+            4.440892098500626e-16,
+            -1.1934897514720433e-15,
+            -8.881784197001252e-15,
+            -3.134992265785286e-13,
+            9.389822253069724e-12,
+            1.871836019518014e-11
+          ]
+        },
+        {
+          "direction": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "F_coefficient_difference_by_degree": [
+            9.544006518543958e-16,
+            5.363998373640853e-15,
+            2.6982086922693978e-14,
+            5.955128418123665e-14,
+            2.480654659930502e-13,
+            7.707231888192316e-13
+          ],
+          "inverse_both_orders_errors": [
+            1.0510651463864434e-15,
+            3.746077408007362e-15,
+            3.3990643313917245e-14,
+            1.3767132590328904e-13,
+            5.352637016760347e-13,
+            1.2752711206110422e-12
+          ],
+          "g_direction_actual_derivatives": [
+            4.440892098500626e-16,
+            -4.926614671774132e-16,
+            -8.881784197001252e-16,
+            -3.3146818623208674e-12,
+            -8.2238216236874e-11,
+            1.9582668819850824e-10
+          ]
+        },
+        {
+          "direction": [
+            1.0,
+            0.2,
+            -0.3,
+            0.4
+          ],
+          "F_coefficient_difference_by_degree": [
+            9.544006518543958e-16,
+            1.4765409034907868e-14,
+            7.550996821816494e-14,
+            3.3267265565465413e-13,
+            9.594286547359956e-13,
+            5.0259738859665134e-12
+          ],
+          "inverse_both_orders_errors": [
+            1.0510651463864434e-15,
+            1.8079994792011134e-14,
+            1.3499992421335345e-13,
+            3.254237732886071e-13,
+            1.0802473452694803e-12,
+            4.293767555064862e-12
+          ],
+          "g_direction_actual_derivatives": [
+            4.440892098500626e-16,
+            -2.4702462297909733e-15,
+            2.3092638912203256e-14,
+            3.4798830483850907e-12,
+            5.589129159488948e-11,
+            -5.060485364083434e-10
+          ]
+        },
+        {
+          "direction": [
+            -0.3,
+            0.7,
+            0.2,
+            -0.4
+          ],
+          "F_coefficient_difference_by_degree": [
+            9.544006518543958e-16,
+            6.23666811340287e-15,
+            2.173318898770024e-14,
+            7.257892988674524e-14,
+            3.0540237932866745e-13,
+            7.828925707707352e-13
+          ],
+          "inverse_both_orders_errors": [
+            1.0510651463864434e-15,
+            8.884326964737352e-15,
+            4.624346491221562e-14,
+            9.590116511874252e-14,
+            2.558151467065382e-13,
+            7.261033854968621e-13
+          ],
+          "g_direction_actual_derivatives": [
+            4.440892098500626e-16,
+            3.9968028886505635e-15,
+            -3.552713678800501e-15,
+            -3.154809746774845e-12,
+            -1.7053025658242404e-11,
+            -3.581135388230905e-11
+          ]
+        }
+      ],
+      "top_operator_checks": [
+        {
+          "column": 0,
+          "norm_error": 1.5805805978788983e-12
+        },
+        {
+          "column": 1,
+          "norm_error": 1.414552343666184e-12
+        },
+        {
+          "column": 13,
+          "norm_error": 1.6862672733188177e-12
+        },
+        {
+          "column": 24,
+          "norm_error": 1.8107973731033425e-12
+        },
+        {
+          "column": 983,
+          "norm_error": 4.673451147280717e-13
+        }
+      ],
+      "scalar_actual_derivative_norms": {
+        "0": 4.440892098500626e-16,
+        "1": 3.6218699846155374e-15,
+        "2": 7.728394025682557e-14,
+        "3": 7.69363387470574e-12,
+        "4": 1.1144098900275419e-10,
+        "5": 6.291742102148202e-10
+      },
+      "movement_from_window5": {
+        "0": {
+          "normalized_change": 0.0,
+          "actual_derivative_change": 0.0,
+          "relative_normalized_change": 0.0
+        },
+        "1": {
+          "normalized_change": 0.0,
+          "actual_derivative_change": 0.0,
+          "relative_normalized_change": 0.0
+        },
+        "2": {
+          "normalized_change": 0.0,
+          "actual_derivative_change": 0.0,
+          "relative_normalized_change": 0.0
+        },
+        "3": {
+          "normalized_change": 0.0,
+          "actual_derivative_change": 0.0,
+          "relative_normalized_change": 0.0
+        },
+        "4": {
+          "normalized_change": 249.05889215020525,
+          "actual_derivative_change": 1740.8232533702649,
+          "relative_normalized_change": 1.4080748459217765
+        },
+        "5": {
+          "normalized_change": 586.9026355060118,
+          "actual_derivative_change": 16466.77952028464,
+          "relative_normalized_change": 0.7496284072057471
+        }
+      },
+      "jet_growth": {
+        "0": {
+          "normalized_coefficient_norm": 4.000253600147971,
+          "actual_derivative_norm": 4.000253600147971
+        },
+        "1": {
+          "normalized_coefficient_norm": 8.757288272163313,
+          "actual_derivative_norm": 8.757288272163313
+        },
+        "2": {
+          "normalized_coefficient_norm": 18.89763429258405,
+          "actual_derivative_norm": 25.593032195431757
+        },
+        "3": {
+          "normalized_coefficient_norm": 58.57443750344511,
+          "actual_derivative_norm": 137.37512837924086
+        },
+        "4": {
+          "normalized_coefficient_norm": 305.47752420795126,
+          "actual_derivative_norm": 1926.7593901361895
+        },
+        "5": {
+          "normalized_coefficient_norm": 938.6804540099278,
+          "actual_derivative_norm": 20319.056687370157
+        },
+        "6": {
+          "normalized_coefficient_norm": 5004.576583700208,
+          "actual_derivative_norm": 453716.5251554726
+        }
+      }
+    }
+  ]
+}

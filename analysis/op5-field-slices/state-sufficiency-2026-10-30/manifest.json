@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "claim_id": "state-sufficiency-maxwell-comparison",
+  "repository": {
+    "commit": "f98b29ba8eeb87c053a39285ca348c4d2ef76081",
+    "dirty": true
+  },
+  "command": [
+    "C:\\Users\\marcb\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\check.py"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Python",
+        "version": "3.12.10"
+      },
+      {
+        "name": "SymPy",
+        "version": "1.14.0"
+      }
+    ],
+    "hardware": "AMD64"
+  },
+  "mathematics": {
+    "assertion_tested": "Exact vacuum Maxwell comparison c=1: a=+/-1 have identical entire initial Gram/rho fields but distinct time derivatives for k nonzero.",
+    "coefficient_domain": "exact symbolic real variables and trigonometric functions",
+    "conventions": "c=1; dt E=curl B; dt B=-curl E; G=F^T F; rho=G/trG",
+    "inputs": [
+      "explicit E,B in check.py"
+    ],
+    "bounds": {
+      "family": "a=+1,-1; real k nonzero; local smooth chart"
+    },
+    "non_claims": [
+      "native OP5 solution",
+      "unified dynamics",
+      "finite total energy",
+      "regional QSC existence"
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-10-30T02:34:05.452476+00:00",
+    "runtime_seconds": 0.5110713000030955,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "result.json",
+      "sha256": "407bfa912b42dac596df263f745263c44a8ac8b92ac1e2a1d425d27e99da5eef",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "both curl evolution equations identically zero",
+    "both divergence constraints identically zero",
+    "same initial G and rho for all spatial points",
+    "same full E and B at origin",
+    "different nonzero next Gram/rho derivative",
+    "oriented spatial first jets recover Gdot exactly"
+  ],
+  "result": "counterexample to autonomous Gram-field evolution on this comparison family; no counterexample to full-field Cauchy determinism",
+  "residual_risks": [
+    "comparison family is not native OP5; self-review, not independent proof audit"
+  ],
+  "input_artifacts": [
+    {
+      "path": "check.py",
+      "sha256": "645d696d8cfb4138d13bed31fb7cb117e66fb5fc3a4a3a9680f4e6b92065dd96",
+      "sha256_after": "645d696d8cfb4138d13bed31fb7cb117e66fb5fc3a4a3a9680f4e6b92065dd96"
+    }
+  ],
+  "declared_results": [
+    "result.json"
+  ]
+}

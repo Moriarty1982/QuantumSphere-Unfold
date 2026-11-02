@@ -1,0 +1,57 @@
+{
+  "checks": [
+    {
+      "operation": "duality",
+      "matrix_diagram_commutes": true,
+      "chart": "rank2 orientation updated",
+      "rho_output": "Matrix([[101/250, -7/250], [-7/250, 149/250]])"
+    },
+    {
+      "operation": "J_B",
+      "matrix_diagram_commutes": true,
+      "chart": "rank2 orientation updated",
+      "rho_output": "Matrix([[1/2, 1/10], [1/10, 1/2]])"
+    },
+    {
+      "operation": "T",
+      "matrix_diagram_commutes": true,
+      "chart": "rank2 orientation updated",
+      "rho_output": "Matrix([[1/2, -1/10], [-1/10, 1/2]])"
+    },
+    {
+      "operation": "HC",
+      "matrix_diagram_commutes": true,
+      "chart": "rank1 direction chart",
+      "rho_output": "Matrix([[1/2, 1/2], [1/2, 1/2]])"
+    },
+    {
+      "operation": "duality",
+      "matrix_diagram_commutes": true,
+      "chart": "rank2 orientation updated",
+      "rho_output": "Matrix([[3/10, 3/20], [3/20, 7/10]])"
+    },
+    {
+      "operation": "J_B",
+      "matrix_diagram_commutes": true,
+      "chart": "rank2 orientation updated",
+      "rho_output": "Matrix([[3/10, 3/20], [3/20, 7/10]])"
+    },
+    {
+      "operation": "T",
+      "matrix_diagram_commutes": true,
+      "chart": "rank2 orientation updated",
+      "rho_output": "Matrix([[7/10, -3/20], [-3/20, 3/10]])"
+    },
+    {
+      "operation": "HC",
+      "matrix_diagram_commutes": true,
+      "chart": "rank1 direction chart",
+      "rho_output": "Matrix([[1/2, 1/2], [1/2, 1/2]])"
+    }
+  ],
+  "zero_port_normalization_defined": false,
+  "non_claims": [
+    "Structural operations are not a derived common physical time generator",
+    "No full octonionic product compatibility established"
+  ]
+}

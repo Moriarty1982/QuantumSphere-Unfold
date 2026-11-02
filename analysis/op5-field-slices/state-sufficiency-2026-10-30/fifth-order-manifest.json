@@ -1,0 +1,198 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5-fifth-order-calibration-and-stability",
+  "repository": {
+    "commit": "f0f2b9e539ea3fb6823e93fdae1df43bbaf082f4",
+    "dirty": true
+  },
+  "command": [
+    "C:\\Users\\marcb\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "C:\\Users\\marcb\\.codex\\visualizations\\2026\\10\\16\\01a1449d-b4ac-7d50-b255-5e920e627df0\\state-sufficiency-2026-10-30\\recursive_calibrator.py",
+    "--order",
+    "5",
+    "--points",
+    "0",
+    "1",
+    "2",
+    "--maxsteps",
+    "15"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "python",
+        "version": "3.12.10"
+      },
+      {
+        "name": "torch",
+        "version": "2.14.0+cpu"
+      },
+      {
+        "name": "numpy",
+        "version": "2.5.2"
+      },
+      {
+        "name": "sympy",
+        "version": "1.14.0"
+      }
+    ],
+    "hardware": "AMD64"
+  },
+  "mathematics": {
+    "assertion_tested": "At3 fixed psi/firstjet germs find fifth-order finite compatibility by recalibrating degrees2..4; independently verify coefficients and scalar conditions, and test frozen degree0..3 control and sampled polynomial neighbourhood.",
+    "coefficient_domain": "float64 AD and symbolic background derivatives order2",
+    "conventions": "multiindex-factorial normalized Taylor coefficients; all symmetric multiindices; full raw derivative norms separately reported; complex spinor packed per coefficient real12 then imag12",
+    "inputs": [
+      "fifth-inputs/recursive_calibrator.py",
+      "fifth-inputs/joint-fit-result.json",
+      "fifth-inputs/third-joint-fit-result.json",
+      "fifth-inputs/OP5_Counterflow_Full_Residual_Check.py",
+      "fifth-inputs/OP5_Joint_Compatibility_Lower_Data.json",
+      "fifth-inputs/recursive-order-4-result.json",
+      "fifth-inputs/recursive-order-5-result.json",
+      "fifth-inputs/fifth_review_coefficients.py",
+      "fifth-inputs/fifth_frozen_lower.py",
+      "fifth-inputs/fifth_local_probe.py"
+    ],
+    "bounds": {
+      "points": 3,
+      "maxsteps": 15,
+      "trials_per_step": 10,
+      "stopping_coefficient_objective": 1e-09,
+      "SVD_cutoffs": [
+        1e-08,
+        1e-09,
+        1e-11
+      ],
+      "tested_fieldjet_order": 5,
+      "independent_directions": 6,
+      "neighbourhood_signed_offsets_per_radius": 12,
+      "neighbourhood_radii": [
+        0.02,
+        0.01,
+        0.005,
+        0.0025
+      ]
+    },
+    "non_claims": [
+      "general no-go",
+      "regional nonexistence",
+      "OP5 closure",
+      "certified exact rank"
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-10-30T04:21:51.596667+00:00",
+    "runtime_seconds": 67.04671168327332,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": 2
+    }
+  },
+  "outputs": [
+    {
+      "path": "recursive-order-5-result.json",
+      "sha256": "b74e60133c08e006f25005a71f01bd30118df32dd2d4a728f9cb7d4e396923a8",
+      "kind": "result"
+    },
+    {
+      "path": "fifth-review-coefficients-result.json",
+      "sha256": "c85872fcd551daf0039ab6881b2e35fa1847919850bb0441e10a49a457185a8b",
+      "kind": "result"
+    },
+    {
+      "path": "fifth-frozen-lower-result.json",
+      "sha256": "4d4ee2251b73254abd0afe823f9814afb901e62f3402f6aeaa855f68c225fb4f",
+      "kind": "result"
+    },
+    {
+      "path": "fifth-local-probe-result.json",
+      "sha256": "28b6b9b20dfd25f37b5a354a46665aa11c30b32c6e944c960a16fd50175c7879",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "all source inputs unchanged during primary calibration",
+    "full unprojected residual blocks reported including looser edge stop",
+    "independent coefficient and scalar checks",
+    "psi/firstjets exactly fixed",
+    "lower coefficient movement quantified",
+    "frozen0..3 control fails with stable rank",
+    "direct original residual sampled on polynomial neighbourhood"
+  ],
+  "result": "Fifth-order finite compatibility at3 germs, but lower coefficients not stabilized by this construction; frozen degree0..3 window fails.",
+  "residual_risks": [
+    "float64 approximate roots not certified",
+    "lower data changed by35\u201369% in normalized vectors",
+    "finite directional and neighbourhood sampling only",
+    "no all-order limit or regional theorem",
+    "coefficient and raw derivative norms differ"
+  ],
+  "input_artifacts": [
+    {
+      "path": "fifth-inputs/recursive_calibrator.py",
+      "sha256": "5601977f0b78ce1439fcdc74b101c20d111e1435e11ddeb1b29ae93ec742e439",
+      "sha256_after": "5601977f0b78ce1439fcdc74b101c20d111e1435e11ddeb1b29ae93ec742e439"
+    },
+    {
+      "path": "fifth-inputs/joint-fit-result.json",
+      "sha256": "e85d8f463de0218804eeb68c451f07eaa0ecef91a13e11f9313feb1113d08d76",
+      "sha256_after": "e85d8f463de0218804eeb68c451f07eaa0ecef91a13e11f9313feb1113d08d76"
+    },
+    {
+      "path": "fifth-inputs/third-joint-fit-result.json",
+      "sha256": "9a59241f01cacc74f9afca245cd1c547620974fbe67fcb1ad0a4b242fd46a8a4",
+      "sha256_after": "9a59241f01cacc74f9afca245cd1c547620974fbe67fcb1ad0a4b242fd46a8a4"
+    },
+    {
+      "path": "fifth-inputs/OP5_Counterflow_Full_Residual_Check.py",
+      "sha256": "e0803c2fdf85da1f6318685ab661e77cb39bd60a14b732fb0481c8ce5f2bc4b4",
+      "sha256_after": "e0803c2fdf85da1f6318685ab661e77cb39bd60a14b732fb0481c8ce5f2bc4b4"
+    },
+    {
+      "path": "fifth-inputs/OP5_Joint_Compatibility_Lower_Data.json",
+      "sha256": "f7090bbafec07ec191acba48b0f4e596d0e0d7c608fd8f2ecaeb6f4c3d4b13aa",
+      "sha256_after": "f7090bbafec07ec191acba48b0f4e596d0e0d7c608fd8f2ecaeb6f4c3d4b13aa"
+    },
+    {
+      "path": "fifth-inputs/recursive-order-4-result.json",
+      "sha256": "583fa173e3e56ebe07f5c93fa02060cd3fbce32a9882dea250c24a42f4c092dc",
+      "sha256_after": "583fa173e3e56ebe07f5c93fa02060cd3fbce32a9882dea250c24a42f4c092dc"
+    },
+    {
+      "path": "fifth-inputs/recursive-order-5-result.json",
+      "sha256": "b74e60133c08e006f25005a71f01bd30118df32dd2d4a728f9cb7d4e396923a8",
+      "sha256_after": "b74e60133c08e006f25005a71f01bd30118df32dd2d4a728f9cb7d4e396923a8"
+    },
+    {
+      "path": "fifth-inputs/fifth_review_coefficients.py",
+      "sha256": "51223da3efee3d16777d5011403d21133ae3cf7fe1ebb48526c1cc861cf2d7e5",
+      "sha256_after": "51223da3efee3d16777d5011403d21133ae3cf7fe1ebb48526c1cc861cf2d7e5"
+    },
+    {
+      "path": "fifth-inputs/fifth_frozen_lower.py",
+      "sha256": "32c6a6a0ff59122a59a27c54007d09f58b4244a6d07a97ad267b408db617c27d",
+      "sha256_after": "32c6a6a0ff59122a59a27c54007d09f58b4244a6d07a97ad267b408db617c27d"
+    },
+    {
+      "path": "fifth-inputs/fifth_local_probe.py",
+      "sha256": "618c1d4a7fee34dc8d0998a401acce1725a3ff16577129a35c92310b1ebd6756",
+      "sha256_after": "618c1d4a7fee34dc8d0998a401acce1725a3ff16577129a35c92310b1ebd6756"
+    }
+  ],
+  "declared_results": [
+    "recursive-order-5-result.json",
+    "fifth-review-coefficients-result.json",
+    "fifth-frozen-lower-result.json",
+    "fifth-local-probe-result.json"
+  ]
+}

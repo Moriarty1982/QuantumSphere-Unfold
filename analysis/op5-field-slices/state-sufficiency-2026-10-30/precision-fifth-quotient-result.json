@@ -1,0 +1,31 @@
+{
+  "contract": "Float64 complete left-quotient test of free fifth-jet symbol using new70-digit source. No exact or highprecision left witness yet; fixed fourth jet only, not general impossibility.",
+  "tests": [
+    {
+      "cutoff": 1e-08,
+      "rank": 907,
+      "left_quotient_norm": 33.55556603779259
+    },
+    {
+      "cutoff": 1e-10,
+      "rank": 907,
+      "left_quotient_norm": 33.55556603779259
+    },
+    {
+      "cutoff": 1e-12,
+      "rank": 907,
+      "left_quotient_norm": 33.55556603779259
+    }
+  ],
+  "singular_boundary": [
+    0.0017108571710253266,
+    0.0011463374469022501,
+    0.001046405329794282,
+    1.8496399836727726e-13,
+    1.6771868406237898e-14,
+    1.373382747295099e-14
+  ],
+  "source_norm": 11778.943005871273,
+  "seconds": 40.324562311172485,
+  "source_sha256": "6e117a2e73142eb317acdb267513bd1b05444558e1658d7a44df14eede8e5228"
+}

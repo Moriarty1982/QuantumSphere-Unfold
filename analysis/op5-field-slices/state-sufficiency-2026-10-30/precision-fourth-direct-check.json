@@ -1,0 +1,25 @@
+{
+  "contract": "Direct quartic field paths re-evaluate degree3 of full completed R. No prolonged matrix used in direct derivative; same underlying R evaluator.",
+  "checks": [
+    {
+      "direction": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "residual_reconstruction_error_max": "5.63965915954100676954397e-68",
+      "actual_residual_max": "0.0000002791022528830586083324"
+    },
+    {
+      "direction": [
+        1,
+        -2,
+        3,
+        -1
+      ],
+      "residual_reconstruction_error_max": "3.15505707533669940971739e-66",
+      "actual_residual_max": "0.0000002791022528830586083324"
+    }
+  ]
+}
