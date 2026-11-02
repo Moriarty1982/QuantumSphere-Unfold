@@ -46,6 +46,8 @@ Zu H46: Eine Bestätigung würde die Kette r55–r60 prüfen, nicht die Lesart a
 | H45 | $\varepsilon$ als Rapidität des Materie-Frames (nicht blind) | trifft; daraus H46 |
 | H47 | $\beta_{\mathrm{sym}}$ als Verhältnis zweier Horizontzählungen (nicht blind) | Domagała–Lewandowski/Meissner im Fenster, Ghosh–Mitra nicht; bestätigt in r68, aber nur mit U(1)-Zählung |
 | H48 | $\beta_{\mathrm{sym}}$ als eingefrorene Länge des Materie/Tachyon-Zustands | widerlegt: hängt an der Expansionsgeschichte; Einstein–Cartan-Term wirkungslos |
+| H49 | OP5-Vergleichssystem: abseits des Äquators tritt schon bei den zweiten Ableitungen eine versteckte Bedingung auf | widerlegt: Verträglichkeit überall auf Rauschniveau ($10^{-10}$); die Prämisse eines Symmetriebruchs war falsch (r71) |
+| H50 | $\Omega$ wirkt über die $\vartheta$-Richtung auf $\Psi$ zurück (Frage des Autors) | widerlegt: $\Omega$ ist eichinvariant, Änderung höchstens $1{,}5 \cdot 10^{-10}$ gegen 0,04 bis 0,11 in Kontrollrichtungen (r71) |
 
 ## Erkundungen ohne Vorab-Notiz
 

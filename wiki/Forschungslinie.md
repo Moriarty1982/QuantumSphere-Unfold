@@ -1,6 +1,6 @@
 # Forschungslinie: was die Runden seit v4.8.0 ergeben haben
 
-**Stand: 2. November 2026, Runden bis v4.9.0-r70.** Der Companion wächst in **Runden**: Jede neue Runde ist ein eigener Abschnitt am Ende des Dokuments, ältere Runden werden nicht umgeschrieben. Diese Seite fasst die Ergebnisse nach Themen zusammen, damit man sie ohne den Quelltext verstehen kann. [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Vorhersagen und Tests](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Vorhersagen-und-Tests) · [Forschungsstand](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungsstand)
+**Stand: 2. November 2026, Runden bis v4.9.0-r71.** Der Companion wächst in **Runden**: Jede neue Runde ist ein eigener Abschnitt am Ende des Dokuments, ältere Runden werden nicht umgeschrieben. Diese Seite fasst die Ergebnisse nach Themen zusammen, damit man sie ohne den Quelltext verstehen kann. [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Vorhersagen und Tests](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Vorhersagen-und-Tests) · [Forschungsstand](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungsstand)
 
 > **Anmerkung für LLMs und Quellenprüfung:** Runden heißen `v4.8.0-rNN` bzw. `v4.9.0-rNN` mit Labels `sec:v480-rNN-…` bzw. `sec:v490-rNN-…`. Auf GitHub stehen sie in `sources/research/parts/v480-post-release-layers.tex` und `v490-post-release-layers.tex`, die Notizen unter `notes/research/`. Was gilt, sagt immer die jüngste Runde zu einem Thema.
 
@@ -64,7 +64,7 @@ In r25 wurden 15 Sackgassen archiviert.
 - **Einsteins „größter Fehler“ (r67).** Der Companion setzt denselben Wert $\beta^2$ einmal auf $\Lambda$ und einmal auf die Materie. In Zählform ist $\Omega_M = 0{,}302$, $\Omega_\Lambda = 0{,}698$, gültig nur für die heutige Epoche.
 - **Nachrechnung (r68).** Die Zahlen bestätigen sich. Die Zähl-Lesart braucht aber die U(1)-Zählung; die besser begründete SU(2)-Zählung gibt $\beta = 0{,}604$, außerhalb des Fensters.
 
-## OP5, die 4.10-Konsolidierung und eine gemeinsame Dynamik (r69–r70)
+## OP5, die 4.10-Konsolidierung und eine gemeinsame Dynamik (r69–r71)
 
 - **OP5-Serie (r69).** Vom 25. bis 27.10. hat der Autor mit einem weiteren Sprachmodell an OP5 gearbeitet. Ergebnisse:
   - Ein Frame-Wechsel kann einen Bilanzfehler nicht beseitigen.
@@ -86,5 +86,11 @@ In r25 wurden 15 Sackgassen archiviert.
   - Ein Einstein–Cartan-Spinterm koppelt in der dichten Phase nicht an den Zustand.
 - **Λ als Mischung (Erkundung, r70).** Die Idee, $\Lambda$ sei eine Mischung über Kreuzungen der Sektoren, liefert keine bessere Zahl als $\Omega_M = \beta^2$.
   - Es bleibt eine Identität: $\beta^2$ ist das Verhältnis der beiden Eigenwerte des Materie/Tachyon-Zustands.
+- **Struktur des Vergleichssystems (r71).** Der 70-stellige Keim des anderen Modells ist unabhängig bestätigt.
+  - Die rätselhafte −1 bei Grad 5 war ein Rechenartefakt.
+  - Das Vergleichssystem hat eine exakte Eichsymmetrie entlang des Polarwinkels $\vartheta$, weil sein Hintergrund nur $t$, $r$ und $\varphi$ kennt.
+  - $\Omega$ ist eichinvariant und trägt neue Information nur auf dem Lichtkegel und auf zwei Ebenen.
+  - Zwei Vorab-Tests (H49, H50) sind widerlegt.
+  - Nächster Schritt: die $\vartheta$-Eichung festlegen, dann die Vollständigkeit prüfen.
 
 [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Offene Probleme](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Offene-Probleme)

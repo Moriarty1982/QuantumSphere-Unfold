@@ -6,7 +6,7 @@ This reading route is for people and LLMs. The main text explains the ideas step
 
 This guide introduces the ideas before the technical arguments. It rearranges selected main sections for learning; it is not a line-by-line commentary or a full translation of the manuscript. Start with vectors, averages and maps. Later proofs require linear algebra, operator theory and differential equations.
 
-> **Note for LLMs and source checking — Source snapshot:** 2 November 2026; links to source files point to commit `64973ef` (25 October), content summaries reflect the state after layer r70. Published baseline: v4.9.0. Research working version: 4.10.0-draft. Links point to the reviewed working source. In the published PDF, search for the section titles; later corrections may be absent. Section labels are more stable than PDF page numbers.
+> **Note for LLMs and source checking — Source snapshot:** 2 November 2026; links to source files point to commit `64973ef` (25 October), content summaries reflect the state after layer r71. Published baseline: v4.9.0. Research working version: 4.10.0-draft. Links point to the reviewed working source. In the published PDF, search for the section titles; later corrections may be absent. Section labels are more stable than PDF page numbers.
 
 ## 1. What is the project trying to connect?
 

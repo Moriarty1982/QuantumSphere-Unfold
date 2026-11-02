@@ -1,0 +1,12 @@
+Jacobi (5-Punkt) 738 s
+M4 Spektrum um die Grenze: [3.57e-03 1.74e-03 1.15e-03 4.15e-10 3.93e-10 3.80e-10]
+Grad-4-Symbol: Rang 528 Linkskern 112 Luecke 1.1e-03|4.2e-10
+A_low: Rang 416 Kern 424 Luecke 8.1e-02|4.8e-11
+projizierte Gradienten, Singulaerwerte: [2.71e+00 2.97e-07 1.83e-07 7.86e-08]
+Grad-3-Anteil von dOmega: Rest mit theta 2.2e-09, ohne theta 2.7e-01
+theta  max_f r = 1.50e-10   je Grad von f: ['1.5e-10', '4.2e-11', '9.9e-11', '8.4e-11']
+d_t    max_f r = 4.39e-02   je Grad von f: ['1.8e-03', '4.4e-02', '4.3e-02', '3.5e-02']
+d_x    max_f r = 1.11e-01   je Grad von f: ['2.8e-03', '3.6e-02', '4.2e-02', '1.1e-01']
+d_y    max_f r = 1.07e-01   je Grad von f: ['3.0e-03', '1.1e-01', '9.8e-02', '9.3e-02']
+Gueltigkeit: Rang1 True | theta-Abgleich True | Kontrollen True
+Kriterium: WIDERLEGT (erste Klasse bis Ordnung 3)
