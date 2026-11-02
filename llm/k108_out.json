@@ -1,0 +1,210 @@
+[
+ {
+  "Quelle": "W1 Eigenwerte",
+  "Form": "linear p1",
+  "Omega_L": 0.7681394482059174,
+  "z_Planck": -11.87706402941677,
+  "z_DESI": -7.6324939774322536,
+  "Treffer": false
+ },
+ {
+  "Quelle": "W1 Eigenwerte",
+  "Form": "linear p2",
+  "Omega_L": 0.2318605517940826,
+  "z_Planck": 64.73420688655963,
+  "z_DESI": 54.72551723324621,
+  "Treffer": false
+ },
+ {
+  "Quelle": "W1 Eigenwerte",
+  "Form": "Kreuzungen 11",
+  "Omega_L": 0.5900382118900912,
+  "z_Planck": 13.565969729986971,
+  "z_DESI": 13.07695210580335,
+  "Treffer": false
+ },
+ {
+  "Quelle": "W1 Eigenwerte",
+  "Form": "Kreuzungen 12",
+  "Omega_L": 0.3562024726316523,
+  "z_Planck": 46.97107533833539,
+  "z_DESI": 40.26715434515671,
+  "Treffer": false
+ },
+ {
+  "Quelle": "W1 Eigenwerte",
+  "Form": "Kreuzungen 22",
+  "Omega_L": 0.053759315478256464,
+  "z_Planck": 90.17724064596337,
+  "z_DESI": 75.4349633164818,
+  "Treffer": false
+ },
+ {
+  "Quelle": "W1 Eigenwerte",
+  "Form": "Kreuzungen 11+12",
+  "Omega_L": 0.9462406845217435,
+  "z_Planck": -37.3200977888205,
+  "z_DESI": -28.341940060667845,
+  "Treffer": false
+ },
+ {
+  "Quelle": "W1 Eigenwerte",
+  "Form": "Kreuzungen 11+22",
+  "Omega_L": 0.6437975273683477,
+  "z_Planck": 5.886067518807468,
+  "z_DESI": 6.825868910657243,
+  "Treffer": false
+ },
+ {
+  "Quelle": "W1 Eigenwerte",
+  "Form": "Kreuzungen 12+22",
+  "Omega_L": 0.40996178810990874,
+  "z_Planck": 39.2911731271559,
+  "z_DESI": 34.01607115001062,
+  "Treffer": false
+ },
+ {
+  "Quelle": "W2 Zaehlgewichte",
+  "Form": "linear p1",
+  "Omega_L": 0.650923476418,
+  "z_Planck": 4.868074797428576,
+  "z_DESI": 5.997270183953494,
+  "Treffer": false
+ },
+ {
+  "Quelle": "W2 Zaehlgewichte",
+  "Form": "linear p2",
+  "Omega_L": 0.349076523582,
+  "z_Planck": 47.9890680597143,
+  "z_DESI": 41.09575307186048,
+  "Treffer": false
+ },
+ {
+  "Quelle": "W2 Zaehlgewichte",
+  "Form": "Kreuzungen 11",
+  "Omega_L": 0.4237013721520946,
+  "z_Planck": 37.328375406843634,
+  "z_DESI": 32.41844509859366,
+  "Treffer": false
+ },
+ {
+  "Quelle": "W2 Zaehlgewichte",
+  "Form": "Kreuzungen 12",
+  "Omega_L": 0.4544442085318108,
+  "z_Planck": 32.93654163831275,
+  "z_DESI": 28.843696682347584,
+  "Treffer": false
+ },
+ {
+  "Quelle": "W2 Zaehlgewichte",
+  "Form": "Kreuzungen 22",
+  "Omega_L": 0.1218544193160946,
+  "z_Planck": 80.44936866912934,
+  "z_DESI": 67.51692798650062,
+  "Treffer": false
+ },
+ {
+  "Quelle": "W2 Zaehlgewichte",
+  "Form": "Kreuzungen 11+12",
+  "Omega_L": 0.8781455806839054,
+  "z_Planck": -27.59222581198648,
+  "z_DESI": -20.42390473068667,
+  "Treffer": false
+ },
+ {
+  "Quelle": "W2 Zaehlgewichte",
+  "Form": "Kreuzungen 11+22",
+  "Omega_L": 0.5455557914681892,
+  "z_Planck": 19.92060121883011,
+  "z_DESI": 18.24932657346637,
+  "Treffer": false
+ },
+ {
+  "Quelle": "W2 Zaehlgewichte",
+  "Form": "Kreuzungen 12+22",
+  "Omega_L": 0.5762986278479054,
+  "z_Planck": 15.528767450299226,
+  "z_DESI": 14.674578157220301,
+  "Treffer": false
+ },
+ {
+  "Quelle": "W3 rein+P",
+  "Form": "linear p1",
+  "Omega_L": 0.5362788964118348,
+  "z_Planck": 21.245871941166456,
+  "z_DESI": 19.328035300949445,
+  "Treffer": false
+ },
+ {
+  "Quelle": "W3 rein+P",
+  "Form": "linear p2",
+  "Omega_L": 0.4637211035881652,
+  "z_Planck": 31.611270915976398,
+  "z_DESI": 27.764987954864512,
+  "Treffer": false
+ },
+ {
+  "Quelle": "W3 rein+P",
+  "Form": "Kreuzungen 11",
+  "Omega_L": 0.28759505473669544,
+  "z_Planck": 56.77213503761494,
+  "z_DESI": 48.24476107712844,
+  "Treffer": false
+ },
+ {
+  "Quelle": "W3 rein+P",
+  "Form": "Kreuzungen 12",
+  "Omega_L": 0.4973676833502787,
+  "z_Planck": 26.8046166642459,
+  "z_DESI": 23.85259495926992,
+  "Treffer": false
+ },
+ {
+  "Quelle": "W3 rein+P",
+  "Form": "Kreuzungen 22",
+  "Omega_L": 0.21503726191302586,
+  "z_Planck": 67.13753401242488,
+  "z_DESI": 56.68171373104351,
+  "Treffer": false
+ },
+ {
+  "Quelle": "W3 rein+P",
+  "Form": "Kreuzungen 11+12",
+  "Omega_L": 0.7849627380869741,
+  "z_Planck": -14.28039115528202,
+  "z_DESI": -9.58869047522955,
+  "Treffer": false
+ },
+ {
+  "Quelle": "W3 rein+P",
+  "Form": "Kreuzungen 11+22",
+  "Omega_L": 0.5026323166497213,
+  "z_Planck": 26.052526192896956,
+  "z_DESI": 23.240428296544035,
+  "Treffer": false
+ },
+ {
+  "Quelle": "W3 rein+P",
+  "Form": "Kreuzungen 12+22",
+  "Omega_L": 0.7124049452633046,
+  "z_Planck": -3.9149921804720798,
+  "z_DESI": -1.1517378213144818,
+  "Treffer": true
+ },
+ {
+  "Quelle": "Operator SU(2)",
+  "Form": "Singulett",
+  "Omega_L": 0.17810123631582614,
+  "z_Planck": 72.41410909773914,
+  "z_DESI": 60.97660042839232,
+  "Treffer": false
+ },
+ {
+  "Quelle": "Operator SU(2)",
+  "Form": "Triplett",
+  "Omega_L": 0.8218987636841738,
+  "z_Planck": -19.556966240596257,
+  "z_DESI": -13.883577172578349,
+  "Treffer": false
+ }
+]
