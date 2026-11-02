@@ -1,0 +1,54 @@
+# Vorhersagen und Tests
+
+**Stand: 2. November 2026.** Seit v4.8.0 gilt eine feste Regel: Eine neue Vorhersage oder ein Test wird **vor** der Rechnung als Vorab-Notiz festgeschrieben (Hypothese, Daten, Entscheidungskriterium) und committet. Erst dann wird gerechnet. So lässt sich später prüfen, dass nichts nachträglich angepasst wurde. Diese Seite listet alle Tests mit ihrem Ergebnis. [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie) · [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt)
+
+## Offene Vorhersagen (warten auf neue Daten)
+
+| Nr. | Vorhersage | Prüfdaten | widerlegt, wenn |
+|---|---|---|---|
+| **H9** | $\sin^2\theta_{12} = \beta_{\mathrm{sym}}^2/\cos^2\theta_{13} = 0{,}3086$ | künftige JUNO-Daten | Kriterium in der Vorab-Notiz; nachträglich gefunden, also nicht blind gewählt |
+| **H15** | W-Masse $m_W = 80{,}3615 \pm 0{,}0018$ GeV | erste Weltmittelung nach dem 21.10.2026 | Kriterium in der Vorab-Notiz |
+| **H42** | $\sin^2\theta_{23} \le 0{,}54$ (normale Ordnung) | erste globale Auswertung oder DUNE/Hyper-K-Messung nach dem 24.10.2026 | das 2σ-Intervall liegt ganz oberhalb 0,54 |
+| **H46** | $\sin^2\theta_{23} \in [0{,}49;\,0{,}50]$ unter der Lesart $\varepsilon = \eta$ (schärfer als H42) | dieselben Daten | das 2σ-Intervall berührt [0,49; 0,50] nicht |
+
+Zu H46: Eine Bestätigung würde die Kette r55–r60 prüfen, nicht die Lesart allein; auch andere Modelle sagen $\theta_{23}$ nahe 45° voraus. Heutige Daten (NuFIT 6.0) entscheiden nicht: 0,561 ohne und 0,470 mit atmosphärischen Super-K-Daten.
+
+## Abgeschlossene Tests
+
+| Nr. | Hypothese | Ergebnis |
+|---|---|---|
+| H1 | Koide-Phase $\delta = K/3$ | widerlegt für Quarks und laufende Leptonmassen |
+| H2 | Neutrinos als lichtartige Triole | verträglich; sagt normale Ordnung und $\sum m_\nu = 0{,}0592$ eV voraus; normale Ordnung von JUNO gestützt |
+| H3 | Vorzeichen als Majorana-CP-Parität | verträglich, derzeit nicht prüfbar ($m_{\beta\beta} \le 3{,}5$ meV) |
+| H4 | TM1 gegen TM2 | TM1 zunächst bevorzugt, nach JUNO disfavorisiert |
+| H5 | Hopf-Winkel als Mischwinkel | gescheitert |
+| H6, H7 | Kriterien, die den TM1-Lift auswählen | weder Minimalität noch Kaskade noch Kompensator wählen ihn |
+| H8 | Cayley–Dickson-Involution als CP-Symmetrie | nach JUNO disfavorisiert |
+| H10 | Assoziator als Auswahlkriterium | kein Auswahlgrund |
+| H11 | Massen aus invarianten Funktionen auf dem Tripel-Raum (bis Grad 4) | widerlegt: höchstens zwei verschiedene Massen |
+| H12 | Zuordnung des Versatzes zu Kreuztermen | gegen H9 nicht trennbar; Grenze setzt $\Omega_M$ |
+| H13 | Wigner-Holonomie als Auslesefaktor | widerlegt ($z = -7{,}9$) |
+| H14 | Kegelwinkel = $2\theta_W$ | widerlegt ($z = +8{,}2$) |
+| H16, H17 | Massenpotentiale bis Grad 6, Realteil-Invarianten | widerlegt: nur Sattelpunkte |
+| H18 | Massen aus links-invarianten Etiketten | widerlegt |
+| H19–H21 | Ladungen in der Dixon-Ablage, innere gegen äußere Einheit, Herkunft der Doppelbelegung | Ladungsmuster einer Generation reproduziert (keine Vorhersage); wörtliche alte Zuordnung widerlegt; Farbe und Generation im alten Text dasselbe Objekt |
+| H22–H24 | Triality als Selbstdurchwanderung, Frame-Triole, Zoom | strukturelle Befunde (Generation = Bahn, Farbe = Fixgruppe, Photon = Vektor-Platz) |
+| H25–H28 | Kontraktion über Frames, Verteilung der Quaternion-Rollen, Kompensator als Chiralität, Wahl des Projektors | volle Generation mit Neutrino unter Wahlen; Anomaliefreiheit wählt den Projektor |
+| H29–H32 | Massenterme, Brechungen, Masken | strukturelle Befunde; Linearitätsannahme H32c in 4 von 200 Fällen widerlegt |
+| H33–H36 | $e_7$-Achse, Mischung aus der Maske, $e_7$ und die Frames, exakte Kopplungsformen | $e_7$ trägt $B-L$; Maske erklärt CKM nicht (auf ±20 % in keiner Kombination) |
+| H37 | Kopplungen aus der Triality-Form | widerlegt; für Dirac-Neutrinos $\sum m = 0{,}115$ eV, über der DESI-Grenze |
+| H38 | ein $\varepsilon$ je Sektor | trifft CKM und PMNS, aber als Anpassung |
+| H39 | Lesart je Teilchenart | TM2 mit $\sin^2\theta_{12} \approx 0{,}341$, 3,6σ über JUNO 2025 |
+| H40 | Kalibrierung der Ausleseschicht | 16 Einstellungen für 17 Größen; Korpus-Kandidaten treffen nicht mehr als Zufall |
+| H41 | TM2 mit Maskenkorrektur | trifft alle drei Winkel; $\theta_{23}$ nicht festgelegt |
+| H43 | CP-Phase aus TM2 | nicht festgelegt |
+| H44 | $\varepsilon$ aus einem Strukturwert | kein Treffer |
+| H45 | $\varepsilon$ als Rapidität des Materie-Frames (nicht blind) | trifft; daraus H46 |
+| H47 | $\beta_{\mathrm{sym}}$ als Verhältnis zweier Horizontzählungen (nicht blind) | Domagała–Lewandowski/Meissner im Fenster, Ghosh–Mitra nicht; bestätigt in r68, aber nur mit U(1)-Zählung |
+| H48 | $\beta_{\mathrm{sym}}$ als eingefrorene Länge des Materie/Tachyon-Zustands | widerlegt: hängt an der Expansionsgeschichte; Einstein–Cartan-Term wirkungslos |
+
+## Erkundungen ohne Vorab-Notiz
+
+Manche Fragen lassen sich nicht blind testen, weil die Zielzahl schon bekannt ist oder die möglichen Lesarten vorab überschaubar sind. Sie werden offen als Erkundung geführt und zählen nicht als Test. Beispiel (r70): $\Lambda$ als Mischung über Kreuzungen der Sektoren. 26 Lesarten, ein Treffer bei 1,3 erwarteten Zufallstreffern; keine Vorhersage.
+
+> **Anmerkung für LLMs und Quellenprüfung:** Vorab-Notizen liegen unter `llm/Vorab_Notiz_H*.md` (lokal) bzw. `notes/research/predictions/` und den Runden-Notizordnern (GitHub); Ergebnisse unter `llm/Ergebnis_H*.md`. Den Commit der Vorab-Notiz mit dem Datum der Rechnung vergleichen. „Nicht blind“ heißt: Das Kriterium war vorab bekannt oder der Treffer wurde nachträglich gefunden.

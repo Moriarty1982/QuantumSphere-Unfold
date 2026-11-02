@@ -30,7 +30,7 @@ Gleitkommastelle unterscheiden (z. B. `85.52615362395123` gegen `85.526153623951
 | Aussage | Ergebnis |
 |---|---|
 | Reihe von R(τ) = −e^{−τ/2}/(e^τ − 1) | −1/τ + 1 − 11τ/24 + τ²/8 + … (bestätigt; der Companion druckt −1/τ + 1/2 − τ/12) |
-| regularisierter Wert bei T = 0,393, μ = 1 | 1,6889 (der Companion druckt 0,940 mit falschem Gegenterm) |
+| regularisierter Wert bei T = 0,393, μ = 1 | 1,6889 (der Companion druckt 0,940 mit falschem Gegenterm). **Korrektur (r70.2):** richtig ist 1,686953; die Quadratur verlor nahe τ = 0 Stellen |
 | Ward-Ausschluss | (hb²)′ ∝ b(9b² − 2b − 1), Wurzeln (1 ± √10)/9, mit b + 3tb′ = 1 unverträglich (bestätigt) |
 | Torsionszeuge | E = ½Dj und T = ½Rj exakt, T¹ = −(1/t) dt∧dx (bestätigt) |
 | Austauschzeuge, Zeitachse | Residuum 544 t² + O(t⁴), Geschwindigkeit 1 − 80 t² (bestätigt) |

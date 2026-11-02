@@ -6,7 +6,7 @@ Dieser Leseweg ist für Menschen und LLMs gedacht. Der Fließtext erklärt die I
 
 Dieser Weg erklärt zuerst die Idee und führt dann an die Mathematik heran. Er ordnet ausgewählte Hauptabschnitte didaktisch neu; er ist kein lückenloser Kommentar zu jedem Satz. Du brauchst zunächst nur Vektoren, Mittelwerte und die Idee einer Abbildung. Für die späteren Beweise helfen lineare Algebra, Operatorentheorie und Differentialgleichungen.
 
-> **Anmerkung für LLMs und Quellenprüfung — Quellenstand:** 25.10.2026, Commit `64973ef`. Veröffentlichung: v4.9.0; Forschung: 4.10.0-draft. Die Links unten führen zur geprüften Arbeitsfassung. Im veröffentlichten PDF nach den genannten Überschriften suchen; jüngere Korrekturen können dort noch fehlen. Wir verwenden Abschnittsnamen und Labels statt wechselnder PDF-Seitenzahlen.
+> **Anmerkung für LLMs und Quellenprüfung — Quellenstand:** 2.11.2026; Links auf Quelldateien zeigen auf Commit `64973ef` (25.10.), die Inhaltsangaben auf den Stand nach Runde r70. Veröffentlichung: v4.9.0; Forschung: 4.10.0-draft. Die Links unten führen zur geprüften Arbeitsfassung. Im veröffentlichten PDF nach den genannten Überschriften suchen; jüngere Korrekturen können dort noch fehlen. Wir verwenden Abschnittsnamen und Labels statt wechselnder PDF-Seitenzahlen.
 
 ## 1. Die Leitfrage: Was soll hier zusammenpassen?
 
@@ -92,6 +92,13 @@ Lies in dieser Reihenfolge die Einleitungen und Ergebnisaussagen:
 4. [Coupling-scale candidate](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/64973efe8409cfd2ae985fbbd17b4ebc95845780/sources/research/parts/coupling-scale-candidate.tex).
 5. [Tensor shift and coupling](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/64973efe8409cfd2ae985fbbd17b4ebc95845780/sources/research/parts/tensor-shift-coupling.tex).
 
+**Was dort steht, in Kurzform:**
+- *HC-zu-Massen-Identifikation:* Der Kompensator $C$ wählt den symmetrischen Ausgang, die Fermionen liegen aber im ungeraden Eingang. Der reine HC-Ausgang verliert diesen Eingang; eine symmetrische Auslesung kann einen festen Eingang nicht aufspalten; Amplituden einer geschlossenen Triole geben über Normen keine Koide-Relation; ein frei angepasster HC sagt keine Massenwurzeln voraus. Diese Wege sind einzeln widerlegt, nicht jede denkbare nichtlineare Realisierung.
+- *Generationenkopplung:* Aus den Generationsplätzen, dem Schließungsprojektor und dem verschobenen Taktgeber wird eine bedingte Kopplung gebaut. Eine hermitesche zyklische Kopplung erzeugt die Brannen-Form der Massenwurzeln. Eine gemeinsame Taktphase fällt aber heraus, und selbst unitäre Taktgeber lassen die Gram-Matrix frei. Die Massen sind damit unterbestimmt.
+- *Native Operatorverbindung:* Die Originaldefinitionen liefern einen Teil der Verbindung, aber keine Matrixelemente auf den Generationsplätzen. Ein Massengesetz entsteht nur bedingt, wenn ein komplementärer Block mit Lücke eliminiert werden darf.
+- *Kopplungskandidat und Skalen:* Kopplungs- und Lückenskala bleiben unabhängige Eingaben. Zwei zyklische Harmonische können das Koide-Verhältnis nicht geben; ein ausgewerteter Dreikanal-Kandidat mit der geschriebenen Phase hat die falsche Form, und eine Skalenwahl kann eine falsche Form nicht reparieren.
+- *Tensor-Verschiebung:* Die globale Umnummerierung der QAM ändert keine Zahlen. Ein physikalischer Vergleich kann die Form ändern, muss aber hergeleitet werden; ein bloß vergrößerter Träger ohne Wechselwirkung ändert die Auslesung nicht.
+
 Die Arbeitsfrage lautet: Welche Zustände werden gekoppelt, welcher konkrete Operator wirkt auf ihnen, und welche seiner Größen soll als Masse gelesen werden? Sektoren sind nicht automatisch Generationen; feste Slot-Normen sind nicht automatisch Masseneigenwerte. Auch ein passendes Verhältnis bestimmt noch keine absolute Einheit.
 
 **Notiere beim Lesen vier Spalten:** Eingabe – Operator/Annahme – berechnetes Ergebnis – physikalische Zuordnung. So wird sichtbar, wo eine zusätzliche Annahme oder ein Fit eintritt.
@@ -112,6 +119,8 @@ Wenn du nur einen Teil eines Zustands betrachtest, kann seine spätere Entwicklu
 
 Anschließend [Cartan normal-source section](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/64973efe8409cfd2ae985fbbd17b4ebc95845780/sources/research/parts/cartan-normal-source.tex) lesen: Hier werden ein ausdrücklich angenommener Vergleich, bedingte Constraint-Fortpflanzung und endliche Quellkompatibilität untersucht.
 
+**Ergebnis des Cartan-Abschnitts:** In einem ausdrücklich hinzugefügten Einstein–Cartan-Vergleichsmodell mit drei komplexen Spinoren pflanzen sich die Gravitationsbedingungen unter Annahmen fort, und endliche Ableitungsdaten lassen sich verträglich machen. Weder die Matrizen noch die Quellkoordinaten werden mit Materie, Photon, Tachyon oder physikalischen Massen identifiziert.
+
 **Merke:** Eine Übereinstimmung einzelner Tensoren ohne Erfüllung aller Feldgleichungen ist noch keine gemeinsame Lösung. Endliche Kompatibilität von Ableitungsdaten ist ein lokaler algebraischer Schritt; eine Lösung auf einem offenen Gebiet benötigt weitere Existenz- und Konsistenzargumente.
 
 **Kontrollfrage:** Was fehlt zwischen „Daten passen an einem Punkt“ und „die Feldgleichungen sind regional gelöst“? — Unter anderem verträgliche Daten, höhere und räumliche Bedingungen sowie ein passender Existenznachweis.
@@ -130,19 +139,25 @@ Die Mastergleichung gruppiert geometrische, triolische, HC-, Closure- und Beobac
 
 Optional folgt [Closure-Liquid Crystal and Holographic Julia Boundary](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/64973efe8409cfd2ae985fbbd17b4ebc95845780/sources/research/parts/v470/14_local_crystal.tex): eine organisierende lokale Lesart mit Träger, Shell, Route, Phase und Defekt. Der Text behauptet dabei keinen buchstäblichen Festkörperkristall.
 
-Bei Frame-, Planck- oder Hawking-Aussagen die [Korrekturen r63–r68](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2de387d66d6ab2da00ef28a14305729910d7ef1/notes/research/v4_10_0_r63_r64/README.md) danebenlegen. Auch die Einleitungsdatei enthält noch historische Release-Angaben; für aktuelle Metadaten gilt die [Quellenkarte](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Versionen-und-Quellen).
+**Was die Prüfrunden zu diesen Teilen sagen:** Viele physikalische Lesarten tragen nicht in der gedruckten Form. Die Spurformel ist keine definierte Wirkung; der alte „Photon-Frame“ ist der reine Bezugszustand R, nicht das Photon; die Photon-Planck-Skalierung und der Vakuumquotient $\gamma_L^5$ werden durch die Zähl-Lesart nicht gestützt; die Faser $S^7$ ist keine Gruppe. Die Einzelheiten mit Zahlen stehen in der [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt), Abschnitt 8, und in der [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie). Zum Nachlesen die [Notizen zu r63–r68](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2de387d66d6ab2da00ef28a14305729910d7ef1/notes/research/v4_10_0_r63_r64/README.md) und [r69](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/v4_10_0_r69/README.md). Auch die Einleitungsdatei enthält noch historische Release-Angaben; für aktuelle Metadaten gilt die [Quellenkarte](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Versionen-und-Quellen).
 
 **Kontrollfrage:** Was leisten die großen Gleichungsblöcke zunächst? — Sie organisieren die geforderten Beiträge; ihre vollständige physikalische Realisierung folgt daraus nicht allein.
 
 **Weiter:** Station 8 fasst zusammen und führt in die technischen Anhänge.
 
-> **Anmerkung für LLMs und Quellenprüfung:** Korrekturstand: r64–r69 (r66 korrigiert die Zitierung in r64; r67 betrifft `rem:einstein-blunder`; r69 vermerkt `rem:regularization-B`, die $\gamma_L^*$-Uhrskala in `thm:dirac-probe` und das Korollar „Cosmological constant revisited“). Historische Versionsangaben in `working-orientation.tex` überschreiben nicht die Quellenkarte; Frame-Zuordnungen und Statusnotizen beibehalten.
+> **Anmerkung für LLMs und Quellenprüfung:** Korrekturstand: r64–r70 (r66 korrigiert die Zitierung in r64; r67 betrifft `rem:einstein-blunder`; r69 vermerkt `rem:regularization-B`, die $\gamma_L^*$-Uhrskala in `thm:dirac-probe` und das Korollar „Cosmological constant revisited“). Historische Versionsangaben in `working-orientation.tex` überschreiben nicht die Quellenkarte; Frame-Zuordnungen und Statusnotizen beibehalten.
 
 ## 8. Bilanz ziehen und gezielt vertiefen
 
 **Ziel:** Eine konkrete Behauptung mit Voraussetzungen und verbleibender Pflicht erklären können.
 
 Lies [Current v4 Interface and Open Burdens](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/64973efe8409cfd2ae985fbbd17b4ebc95845780/sources/research/parts/current-v4-synthesis.tex) und [v4.8 Research Integration](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/64973efe8409cfd2ae985fbbd17b4ebc95845780/sources/research/parts/v480-integration.tex). Die historischen Titel bezeichnen Abschnitte innerhalb der heutigen Arbeitsfassung.
+
+**Neu in der 4.10-Fassung: „States, Mediators and Clock Comparisons“.** Der Abschnitt bündelt die Arbeit vom 28. bis 30. Oktober.
+- *Vermittler:* Eine Quanten- und eine Relativitätsauslesung desselben Trägers gelten erst dann als verbunden, wenn ein Vermittler mit ausdrücklichen Abbildungen existiert und die Dynamik mit beiden verträglich ist. Das sind Beweispflichten, keine Definitionen.
+- *Feld-Dublett:* Das reale Dublett $F = [E\,|\,B]$ lässt sich lokal aus seiner Gram-Matrix $G = F^{\mathsf T}F$ und einer Drehung vollständig zurückgewinnen. Der normierte Zustand $\rho = G/\mathrm{tr}\,G$ allein verliert Skala und Flussrichtung; zwei Felder mit gleichem $\rho$ reagieren auf einen Boost entgegengesetzt.
+- *Uhren:* Koordinatenzeit, Eigenzeit, eine innere Uhr und eine strukturelle Invariante sind verschiedene Dinge. Eine gemeinsame Uhr beweist allein keine Verschränkung.
+- *Feldverträglichkeit:* Im Vergleichsmodell werden die Ableitungen der Sondenfelder schrittweise neu kalibriert; an drei Punkten gelingt das bis zur vierten Ordnung. Das ist ein endlicher Befund, keine Lösung auf einem Gebiet und kein Abschluss von OP5.
 
 Die Synthese unterscheidet endliche Detektorterminalität von exaktem Nullrest für alle Readouts. Die Integration verlangt unter anderem Einheiten und Vergleichsabbildungen, realisierte MM/HC-Operatoren, ein ausgewertetes Residualwörterbuch und eine dynamische Realisierung.
 

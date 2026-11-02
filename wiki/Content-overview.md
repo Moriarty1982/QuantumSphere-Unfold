@@ -1,0 +1,51 @@
+# What the Companion contains
+
+**State: 2 November 2026, research draft 4.10.0-draft with layers through v4.9.0-r70.** English companion of the German [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt), which is the master. This page states what the *Quantum Sphaera Companion* assumes, defines and shows, and how far each part currently holds. Source labels at the end of each part are for checking; the page itself should be enough to understand the content. [Home](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/English)
+
+## How to read each statement
+
+The Companion separates **conjecture** (the starting hypothesis), **mathematics** (a definition, theorem or construction built in the text) and **status** (proved, local or conditional, numerically checked, refuted, or open). Building mathematics from a conjecture does not prove the conjecture. Whether a unified theory follows is open.
+
+## The starting conjecture
+
+Spacetime and particles are projections of an underlying information layer. Matter, light (the photon) and a tachyon sector are meant to be *one* object seen from three frames. Spacetime points were to come from a "clock", originally the zeros of the Riemann zeta function. **Status:** conjecture. Since v4.8.0-r04 the Riemann paper is no longer a proof source; its proof chain for the Riemann Hypothesis does not hold.
+
+## 1. The language: QAM over ZF
+
+States, layers, operators, readouts and branches are written in a coded language, the **QAM**, defined on top of Zermelo–Fraenkel set theory by eight tagged tuple predicates. A finite instruction language (MML) and its execution semantics (MMA) sit above it. **Status:** clean definitions, recognition clauses rather than a new axiom system; translation back to set theory is shown for the admissible fragment.
+
+## 2. The building block: three complex kernels
+
+Each level has a biquaternion kernel $q = it + z_1e_1 + z_2e_2 + z_3e_3$, $e_3 = e_1e_2$. An involution $J$ splits every state into a symmetric part $C(f) = \tfrac12(f+Jf)$ (the **Heisenberg compensator**, $C^2 = C$) and an antisymmetric part. Since v4.8.0-r07 the sector is given by the sign of $s = \sum z_k^2$: matter $s > 0$, tachyon $s < 0$, light $s = 0$; the original norm had the wrong signature (1,6) and was replaced ("reading B"). **Status:** decomposition and sector rule are sound; that the sectors *are* matter, tachyon and light is conjecture.
+
+## 3. Hopf structure and the frame constants
+
+The three levels are linked to the classical Hopf fibrations over $S^2$, $S^4$, $S^8$. The central number is the **frame offset** $\beta_{\mathrm{sym}} = \sqrt{(\gamma_L-1)/(\gamma_L+1)} \approx 0.5494$ with $\gamma_L = \gamma_{\mathrm{BI}}/\gamma_{\mathrm{string}} \approx 1.8644$, the ratio of two published Barbero–Immirzi values (0.2375 and $\ln2/(\pi\sqrt3) \approx 0.1274$). **Status:** the fibrations are classical; their particle assignment is conjecture. $\beta_{\mathrm{sym}}$ is inserted, not derived. Since r63 it is read as a ratio of two horizon state countings, which works only with the U(1) counting; the literature prefers SU(2), which gives 0.604 (r68). The old label of the fibre $S^7$ as a group containing $G_2 \supset SU(3)$ was wrong and has been corrected.
+
+## 4. Trioles and 5. Fractal light axis
+
+The basic structure is threefold: three equal complex numbers 120° apart sum to zero. The triolic orbit scan is a well-defined local readout model, proved within its frame. "Triole" names three different structures (the frames M/P/T, the 120° kernels, and the three places of the octonionic triality form). The null axis ($s = 0$) is claimed to be transported from level to level and to be the light axis; that transport is explicitly open, and the diagnostic dimension $D_{\mathrm{res}} \approx 2.435$ is not a proof.
+
+## 6. The master equation
+
+$\mathfrak G + \mathfrak T_{\mathrm{tri}} + \mathfrak H_{\mathrm{HC}} + \mathfrak Q_{\mathrm{cl}} + \mathfrak B_\beta = 0$ organizes geometry, triole dynamics, compensator, closure and frame phase, with the 16-dimensional Millennium matrix in the chain. **Status:** an outline of what should work together; couplings undetermined, no defined action. Research sections test what follows: commuting operators do not give a single eigenspace; direct compensator-to-mass routes are refuted one by one; a cyclic coupling gives the Brannen form but leaves masses underdetermined; scales stay free inputs; a geometry rebuilt from spinors is conditional and not a field solution.
+
+## 7. Open problems OP1–OP5
+
+OP1: derive $\beta_{\mathrm{sym}}$ (open; now "justify the two counting rules"). OP2: Dirac operator on the antisymmetric sector (old proofs rest on the Riemann paper). OP3: admissible shell passages (local QAM certificate). OP4: origin of the mixing angles (open; mis-posed in its old form, r61). OP5: cosmological constant (closed only locally by a detector threshold; exact form open). Details: [Offene Probleme](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Offene-Probleme) (German).
+
+## 8. Physical readouts
+
+The old chain sets $\Lambda$ to zero in the photon frame and explains the observed value as a matter-frame effect. Several links fail: the trace formula is not a defined action (v4.8.0-r05), $\beta^2/\ell_P^2$ is $10^{121}$ too large, and one corollary gives zero and a finite ratio $\gamma_L^5$ for the same quantity. What survives is the share reading $\Omega_M = \beta_{\mathrm{sym}}^2 \approx 0.302$ (Planck 2018: 0.315 ± 0.007; DESI DR2: 0.2975 ± 0.0086), valid for today only (r67). The printed regularization was wrong; the corrected finite part at $T = 0.393$, $\mu = 1$ is 1.686953 (r69, corrected in r70). None of the old predictions P1–P6 is confirmed.
+
+## 9. Standard-model structure from the octonions
+
+Layers r32–r60 build, from the Dixon algebra $\mathbb C\otimes\mathbb H\otimes\mathbb O$, the charges of one generation, a full left-handed generation with right-handed neutrino and anomaly-free quantum numbers (with the compensator read as chirality projector), and generations as orbits of triality. Masses and mixing remain the hard part: masks and couplings fit the data but do not explain them. Open predictions: $\sin^2\theta_{23} \le 0.54$ (H42) and $\in [0.49, 0.50]$ (H46), awaiting the next global fit or DUNE/Hyper-K; the W mass (H15). Full list: [Vorhersagen und Tests](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Vorhersagen-und-Tests) (German).
+
+## 10. The 4.10 consolidation and the latest tests (r69–r70)
+
+A second language model worked on OP5 with the author (25–30 October). Results: a frame change cannot remove a balance defect; "neutral" has three distinct meanings; no route fixes the absolute vacuum term; the probe light cone comes from the Clifford structure; a new section separates quantum and relativistic readouts through a mediator with explicit proof obligations, recovers the field doublet from its Gram matrix plus orientation, and pushes a numerical compatibility check to fourth derivative order at three points (not a regional solution). Test H48 — $\beta_{\mathrm{sym}}$ as the frozen length of the matter/tachyon state — is refuted: the frozen value carries the expansion history.
+
+## Never claimed
+
+Exact finite C5 zero closure, exact all-readout terminality, T2 closure, a global photon-clock/RH theorem and global all-readout closure. All five guards have stood unchanged since layer r60: *guarded effective/local and frame-typed closures, not exact global closure.*

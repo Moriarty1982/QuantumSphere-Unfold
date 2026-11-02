@@ -1,0 +1,14 @@
+Laeufe: 288, eingefroren: 288, Bounce: 0, kein Einfrieren: 0
+r=0.5: Ziel r/(1+r) = 0.3333; |b_inf| von 6.112e-13 bis 0.8732; innerhalb 1 %: 6/72
+r=1.0: Ziel r/(1+r) = 0.5000; |b_inf| von 1.222e-12 bis 0.8129; innerhalb 1 %: 6/72
+r=1.157: Ziel r/(1+r) = 0.5364; |b_inf| von 1.414e-12 bis 0.7943; innerhalb 1 %: 6/72
+r=2.0: Ziel r/(1+r) = 0.6667; |b_inf| von 2.373e-12 bis 0.6980; innerhalb 1 %: 3/72
+A erfuellt: False
+|b_inf| fuer r = 1, ohne EC, Lambda = 0 (Zeilen g n0, Spalten H0 = 1e-3, 1e-1, 10, 1e3):
+  g n0 = 100: 4.3316e-10  2.0433e-06  3.1596e-01  8.1275e-01
+  g n0 = 1000: 5.7516e-11  1.8093e-07  4.5256e-02  1.0441e-01
+  g n0 = 10000: 6.0814e-12  7.6089e-08  3.2174e-05  4.9659e-01
+B: Einstein-Cartan aendert |b_inf| um > 1 % in 0/192 Faellen; max 1.016e-04
+B: Bounce in 0 Laeufen
+C: Lambda aendert |b_inf| um hoechstens 2.500e+03
+Kontrolle Schrittweite: [{'r': 1.0, 'gn0': 100.0, 'H0': 0.001, 'eps1e-3': 4.3315893438066226e-10, 'eps2.5e-4': 2.1791278570068528e-10}, {'r': 1.0, 'gn0': 1000.0, 'H0': 0.1, 'eps1e-3': 1.8092872567650383e-07, 'eps2.5e-4': 2.729386123206152e-07}, {'r': 2.0, 'gn0': 10000.0, 'H0': 10.0, 'eps1e-3': 1.4729040608888838e-06, 'eps2.5e-4': 1.5121727535455985e-06}, {'r': 0.5, 'gn0': 100.0, 'H0': 1000.0, 'eps1e-3': 0.8731215701445922, 'eps2.5e-4': 0.8731894554160277}]
