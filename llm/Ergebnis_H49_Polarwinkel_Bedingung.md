@@ -35,3 +35,10 @@ Der Test hätte eine Bedingung also erkannt.
   Übergang R₃ → R₂ abseits des Äquators.
 - Die Symbolbefunde (freie ϑ-Richtung, Kegel, Ebenen; siehe `Erkundung_OP5_Symbolstruktur_Grad7.md`) sind davon
   unberührt.
+
+## Korrektur (2. November 2026, nach H50)
+
+Die Prämisse der Vorab-Notiz, dass die ϑ-Freiheit durch einen Term c·∇G ∝ z/ρ² gebrochen wird, war falsch. Die
+Verbindung ist A = M(t) dφ, und L_{f∂ϑ}A = 0 sowie L_{f∂ϑ}h = 0 gelten für beliebiges f. Die ϑ-Freiheit ist eine exakte
+Eichsymmetrie (siehe `Ergebnis_H50_Omega_Psi_Kopplung.md`). Die Widerlegung von H49 ist damit erwartet. Das
+Messergebnis bleibt gültig.
