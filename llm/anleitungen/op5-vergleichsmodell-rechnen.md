@@ -4,7 +4,7 @@ Werkzeugunabhängig. Das Modell ist das feste Vergleichsmodell der Sondenfelder 
 
 ## Regeln zuerst
 - Jeder Test mit Entscheidungskriterium wird vorher als `llm/Vorab_Notiz_HNN_*.md` festgeschrieben und committet; der
-  Zeitstempel zählt. Zuletzt vergeben ist H50.
+  Zeitstempel zählt. Zuletzt vergeben ist H51.
 - Erkundungen ohne Vorab-Notiz werden offen als „Erkundung“ geführt.
 - Alles betrifft nur das Vergleichsmodell, nicht das QSC-Modell selbst. OP5 bleibt offen.
 - Schwere Rechnungen (Jacobi-Matrizen, SVDs großer Symbole) im Hintergrund oder als eigenständigen Auftrag laufen lassen
@@ -51,7 +51,16 @@ Auf GitHub unter `notes/research/v4_10_0_r71/llm/`, lokal unter `llm/`.
 - Die freie Richtung ist eine exakte ϑ-Eichsymmetrie: δΨ = f·(ρ∂_z − z∂_ρ)·DΨ. Ω ist eichinvariant.
 - Das Symbol hat einen Lichtkegel q und zwei windschiefe Ebenen.
 - H49 und H50 sind widerlegt.
-- Nächster Schritt: ϑ-Eichung, dann ein Involutions- bzw. Cartan-Test.
+- Nächster Schritt war: ϑ-Eichung, dann ein Involutions- bzw. Cartan-Test (erledigt, siehe unten).
+
+## Eichung und Cartan-Test (nach r71, 3. November 2026)
+- **Eichung (k136):** algebraisch, s(Ψ) = Ψ†K₂Ψ = S(x); Eichvektor v = ∂_ϑΨ ist gemeinsamer Kern aller J-Blöcke,
+  Ω steht senkrecht auf v. Auf Symbolebene ist jede transversale algebraische Eichung gleichwertig:
+  g'_p = g_p − C(p+3, 3) = 117, 188, 273, 371, 481, 606, 745 für p = 2…8.
+- **H51 bestätigt (k137):** Das geeichte Symbol ist erstmals bei p = 6 involutiv; dim g'^{(k)}_6 = 481, 111, 14, 0.
+  Keine freie Funktion von vier Variablen mehr; formal 14 Funktionen von drei Variablen.
+- Nächster Schritt: formale Integrabilität des geeichten Systems bei Ordnung 6 (Projektion R'_7 → R'_6 surjektiv?),
+  danach Wiederholung mit hochgenauem θ.
 
 ## Fallstricke
 - Für Rangentscheidungen aus Differenzenquotienten den Fünfpunkt-Stencil mit Schritt 1e-3 nehmen. Den Rang an der

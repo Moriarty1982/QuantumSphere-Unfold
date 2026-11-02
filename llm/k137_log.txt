@@ -1,0 +1,17 @@
+dim g'_4 = 273  (Luecke 5.5e-05|3.7e-16, Verhaeltnis 1e+11)
+dim g'_5 = 371  (Luecke 4.6e-05|4.4e-16, Verhaeltnis 1e+11)
+dim g'_6 = 481  (Luecke 1.5e-08|5.9e-16, Verhaeltnis 2e+07)
+dim g'_7 = 606  (Luecke 2.0e-08|5.7e-16, Verhaeltnis 4e+07)
+dim g'_8 = 745  (Luecke 2.4e-08|5.9e-16, Verhaeltnis 4e+07)
+seed 1 p=4: dim g'^(k) k=0..3 = [273, 85, 14, 0], Summe 372, dim g'_5 = 371 -> kleiner (nicht involutiv); min. Lueckenverhaeltnis 1e+11
+seed 1 p=5: dim g'^(k) k=0..3 = [371, 98, 14, 0], Summe 483, dim g'_6 = 481 -> kleiner (nicht involutiv); min. Lueckenverhaeltnis 7e+09
+seed 1 p=6: dim g'^(k) k=0..3 = [481, 111, 14, 0], Summe 606, dim g'_7 = 606 -> GLEICH (involutiv); min. Lueckenverhaeltnis 1e+07
+seed 1 p=7: dim g'^(k) k=0..3 = [606, 125, 14, 0], Summe 745, dim g'_8 = 745 -> GLEICH (involutiv); min. Lueckenverhaeltnis 2e+07
+seed 2 p=4: dim g'^(k) k=0..3 = [273, 85, 14, 0], Summe 372, dim g'_5 = 371 -> kleiner (nicht involutiv); min. Lueckenverhaeltnis 7e+10
+seed 2 p=5: dim g'^(k) k=0..3 = [371, 98, 14, 0], Summe 483, dim g'_6 = 481 -> kleiner (nicht involutiv); min. Lueckenverhaeltnis 5e+09
+seed 2 p=6: dim g'^(k) k=0..3 = [481, 111, 14, 0], Summe 606, dim g'_7 = 606 -> GLEICH (involutiv); min. Lueckenverhaeltnis 1e+07
+seed 2 p=7: dim g'^(k) k=0..3 = [606, 125, 14, 0], Summe 745, dim g'_8 = 745 -> GLEICH (involutiv); min. Lueckenverhaeltnis 2e+07
+seed 3 p=4: dim g'^(k) k=0..3 = [273, 85, 14, 0], Summe 372, dim g'_5 = 371 -> kleiner (nicht involutiv); min. Lueckenverhaeltnis 2e+11
+seed 3 p=5: dim g'^(k) k=0..3 = [371, 98, 14, 0], Summe 483, dim g'_6 = 481 -> kleiner (nicht involutiv); min. Lueckenverhaeltnis 2e+11
+seed 3 p=6: dim g'^(k) k=0..3 = [481, 111, 14, 0], Summe 606, dim g'_7 = 606 -> GLEICH (involutiv); min. Lueckenverhaeltnis 2e+08
+seed 3 p=7: dim g'^(k) k=0..3 = [606, 125, 14, 0], Summe 745, dim g'_8 = 745 -> GLEICH (involutiv); min. Lueckenverhaeltnis 3e+08
