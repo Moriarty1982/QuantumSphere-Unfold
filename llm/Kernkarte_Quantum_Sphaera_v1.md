@@ -2508,8 +2508,17 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 
 - **r69.1 (M, bedingt):** Ein passiver Frame-Wechsel skaliert einen Bilanzdefekt nur (Δ → (b/a)Δ); γ_L → e^η lässt den historischen Defekt bei −1,00. Drei neutrale Objekte, nicht gleichzusetzen: Mittelpunkt zweier Skalenframes; gleichgewichtige Mischung ρ + σ_yρσ_y = I/2 (Etikett P; mit J_B = σ_x bleibt b_x); flussfreier Beobachter zweier Nullströme (Stress diag(ρ,ρ,0,0), kein Vakuum). β_sym² als relative Trennung q_rel = tanh²(χ/2) angeboten, nicht übernommen; tanh²-Potential ohne statisches Vakuum (V′/M⁴ ≈ 0,384). Der absolute Vakuumterm wird von keiner Route gewählt (H + C·I unbeobachtbar bei festem Hintergrund; affiner Zweig für jedes C). Auf dem Dublett von r05 kein nichttrivialer Projektor, der Involution und M/T-Tausch respektiert.
 - **r69.2 (M, bedingt):** Sondenkegel kommt aus der Clifford-Struktur; Masse, M16, triadische und HC-Terme ändern ihn nicht; Kegeldaten legen weder Skala noch Vakuumgewicht fest (konforme Mehrdeutigkeit). Zwei komplexe Sonden: Rang 4, aber Kegel verschieden, Spurhindernis 4 ≠ 0; Austauschzeuge Residuum 544 t². Verbundene Querauslese E = ½Dj ⇒ T = ½Rj; torsionsfrei + Einstein-Vakuum ⇒ Λ_geom = 0 wo j ≠ 0 (Ausschluss, keine Aufhebung). Ward-Ausschluss für isotrope Boost-Verbindung h(t). Gegenstrom trifft alle Stromprojektionen, volles Residuum 3,9–9,5; chirale Tangente: Zwei-Punkt-Fit, keine Lösung.
-- **r69.3 (Fehler im Hauptkorpus, Statusnotiz-Kandidaten):** (a) rem:regularization-B: Reihe −1/τ + 1 − 11τ/24 (nicht +1/2 − τ/12), Gegenterm −log(ε/μ) statt +log ε, Wert 1,689 statt 0,940 (bei μ = 1, T = 0,393); 0,893 in prop:theta-required-B nicht getragen. (b) thm:dirac-probe und prop:three-compatible-readings stützen β_sym und Uhrskala auf das archivierte thm:gue-selfdet. (c) Korollar „Cosmological constant revisited“: null und γ_L⁵ für dieselbe Größe.
+- **r69.3 (Fehler im Hauptkorpus, Statusnotiz-Kandidaten):** (a) rem:regularization-B: Reihe −1/τ + 1 − 11τ/24 (nicht +1/2 − τ/12), Gegenterm −log(ε/μ) statt +log ε, Wert 1,687 statt 0,940 (in r69 irrtümlich 1,689; korrigiert r70.2) (bei μ = 1, T = 0,393); 0,893 in prop:theta-required-B nicht getragen. (b) thm:dirac-probe und prop:three-compatible-readings stützen β_sym und Uhrskala auf das archivierte thm:gue-selfdet. (c) Korollar „Cosmological constant revisited“: null und γ_L⁵ für dieselbe Größe.
 - R_chk = (1,1,0); Guards unverändert; OP5_exact offen, OP5_eff unberührt.
+
+### K120 Runde v4.9.0-r70: 4.10-Konsolidierung übernommen, Korrektur zu r69, H48 und Λ-Kreuzungen (2026-11-02)
+
+`sec:v490-r70-consolidation`, Snippet `llm/v490_r70_round.tex`.
+- **r70.1:** Das andere Sprachmodell hat am 29./30.10. den GitHub-Kandidaten direkt geändert (f98b29b–cf48496). Übernommen mit `llm/revision_spec_v410_konsolidierung.py` (8 Patches, lokal und GitHub jetzt wortgleich im Hauptkorpus) und `llm/einbau_v410_abschnitte_lokal.py` (neue Abschnitte sec:v410-state-mediator und subsec:op5-multimode-slices vor dem Archiv-Anhang; erste externe Abbildung `figures/op5-slices-9x9.pdf`). Damit sind die drei Statusnotiz-Kandidaten aus r69.3 geschrieben; dazu Vermerke an thm:entanglement-shared-time, cor:falsifiable, Abhängigkeitsvermerk zur Θ-Vermutung; thm:hopf: S⁷ ist keine Gruppe ⊃ G₂ (G₂ = Aut(𝕆), SU(3) Stabilisator einer imaginären Einheit).
+- **r70.2 (Korrektur):** Endlicher Teil bei T = 0,393, μ = 1 ist 1,686953464, nicht 1,689 (Quadratur in k106 verlor nahe τ = 0 Stellen).
+- **r70.3 (H48, Vorab-Test, widerlegt):** eingefrorene Länge |b_∞| hängt an Expansion und Dichte, nicht nur am Ratenverhältnis r; r/(1+r) nur bei Einfrieren mit H ≫ ω. Einstein–Cartan-Term wirkungslos (Zustand auf R/T-Achse, axiale Dichte null). Λ wirkt bis 18 %, wenn das Einfrieren in die Λ-Phase fällt.
+- **r70.4 (Erkundung, kein Test):** Λ als Mischung über Sektor-Kreuzungen: linear mittelt sich heraus, bilinear konstant nach Einfrieren (Epochenfrage bleibt); 26 Lesarten, 1 Treffer (Ω_M = 1/γ_L² = 0,288; DESI −1,2σ, Planck −3,9σ) bei 1,3 Zufallserwartung. Identität β² = λ₋/λ₊ (Eigenwerte des M/T-Zustands bei |b| = 1/γ_L).
+- R_chk = (1,1,0); Guards unverändert.
 
 ## 8. Änderungsprotokoll
 
@@ -2685,6 +2694,7 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - v13.4 (2026-10-25): K117 Nachrechnung H47/r63–r67 (bestätigt; Korrekturen: |γ₃| tautologisch, Literatur bevorzugt SU(2)-Zählung 0,274; H46 mit exaktem β gültig).
 - v13.5 (2026-10-25): K118 Runde v4.9.0-r68 trägt die Nachrechnung K117 als Runde ein (bestätigt; Korrekturen r68.2, r68.3).
 - v13.6 (2026-10-28): K119 Runde v4.9.0-r69 bindet die OP5-Serie des Autors mit einem anderen Sprachmodell ein (analysis/, 3fa5ba9..337d9cb); drei Fehler im Hauptkorpus als Statusnotiz-Kandidaten.
+- v13.7 (2026-11-02): K120 Runde v4.9.0-r70 (4.10-Konsolidierung lokal übernommen, Korrektur r69.3(a) auf 1,687, H48 widerlegt, Λ-Kreuzungen als Erkundung); K119 korrigiert.
 
 ---
 

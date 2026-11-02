@@ -1,0 +1,123 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r70 Source-Only: The 4.10 Consolidation in the Monolith, a Correction to r69, and Two Tests of a Common Dynamics}
+\addcontentsline{toc}{section}{v4.9.0-r70 Source-Only: The 4.10 Consolidation in the Monolith, a Correction to r69, and Two Tests of a Common Dynamics}
+\label{sec:v490-r70-consolidation}
+% ============================================================================
+
+\paragraph{Purpose.}
+On 29 and 30 October 2026 the author continued OP5 with another language model.  Besides new working notes in \texttt{analysis/}, that work
+changed the research candidate on GitHub directly (commits \texttt{f98b29b} to \texttt{cf48496}): it corrected the three main-body errors found in
+v4.9.0-r69, added further status notes and a corrected Hopf annotation, and added the section ``States, Mediators and Clock Comparisons''
+(\S\ref{sec:v410-state-mediator}) with a figure.  This layer carries those changes into the monolith, records them, corrects one number of
+v4.9.0-r69, and records two checks of the common-dynamics sketch of 28 October: the pre-registered test H48 and an exploration of the idea that
+\(\Lambda\) is a mixture over sector crossings.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r70 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r70 results}
+\label{subsec:v490-r70-results}
+
+\paragraph{Record v4.9.0-r70.1 (the 4.10 consolidation).}
+The following changes were made on GitHub without a layer and are applied here verbatim (patch specification
+\texttt{llm/revision\_spec\_v410\_konsolidierung.py}, eight patches; local insertion \texttt{llm/einbau\_v410\_abschnitte\_lokal.py}).
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Remark~\ref{rem:regularization-B}: series \(R(\tau)=-1/\tau+1-\tfrac{11}{24}\tau+O(\tau^2)\), counterterm \(-\log(\varepsilon/\mu)\), closed
+finite part, value \(1.686953464\) at \(T=0.393\), \(\mu=1\); the old target of Proposition~\ref{prop:theta-required-B} is withdrawn and
+Remark~\ref{rem:op5-structural-summary} is rewritten.  This writes candidate (a) of v4.9.0-r69.3.
+\item[(b)] Status notes at Theorem~\ref{thm:dirac-probe} and Proposition~\ref{prop:three-compatible-readings} (archived GUE clock scale) and at the
+corollary ``Cosmological constant revisited'' of \S\ref{sec:phase-constants}.  This writes candidates (b) and (c) of v4.9.0-r69.3.
+\item[(c)] Further status notes at Theorem~\ref{thm:entanglement-shared-time} (a shared clock does not by itself prove entanglement) and
+Corollary~\ref{cor:falsifiable} (historical prediction register), and a dependency note after the Theta-sum conjecture.
+\item[(d)] Theorem~\ref{thm:hopf}: the fibre \(S^7\) was annotated as a group containing \(G_2\supset SU(3)\).  \(S^7\) is not that group; \(G_2\) is the
+automorphism group of the octonions and \(SU(3)\) the stabiliser of an imaginary unit.  The annotation is removed and the reason given in a note.
+\item[(e)] Section~\ref{sec:v410-state-mediator} and Subsection~\ref{subsec:op5-multimode-slices} with Figure~\ref{fig:op5-multimode-slices}.  On GitHub they
+are separate parts of the candidate; in the monolith they stand before the archive appendix.  The figure file \texttt{figures/op5-slices-9x9.pdf} is the
+first external graphic of the monolith.
+\end{enumerate}
+The section records conditional results: typed readouts and the obligations of a mediator, an orientation-complete local reconstruction of the
+real doublet, calibrated clock comparisons, and finite field-compatibility tests up to fourth jet order at three points.  None is a regional
+solution, a native common action or an OP5 closure; the section says so itself.
+
+\paragraph{Correction v4.9.0-r70.2.}
+The value \(1.689\) in v4.9.0-r69.3(a) is wrong; the finite part is \(1.686953464\).  The quadrature in \texttt{llm/k106\_nachrechnung\_op5.py}
+integrated \(1+R+1/\tau\) near \(\tau=0\), where two large terms cancel, and lost accuracy.  The direct limit and the closed antiderivative agree
+to twelve digits.  The finding of r69.3(a), that the printed expansion, counterterm and value \(0.940\) were wrong, stands.
+
+\paragraph{Theoremlet v4.9.0-r70.3 (H48: \(\bsym\) as a frozen length).}
+Pre-registered in \texttt{llm/Vorab\_Notiz\_H48\_Einfrieren\_beta.md} before computing.  Model: the M/T doublet of a homogeneous spinor condensate
+is moved by the duality rotation, the compensator measurement and exchange with the tachyon reference state, with rates proportional to the density;
+flat unimodular FLRW with the Einstein--Cartan contact term.
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Refuted.  Over 288 runs the frozen length \(|b_\infty|\) ranges from \(10^{-12}\) to \(0.87\) and depends on the initial expansion rate and density,
+not only on the rate ratio \(r\).  The dense-phase value \(r/(1+r)\) is reached only if freezing happens while the expansion is still faster than the
+rotation (21 runs).
+\item[(b)] The Einstein--Cartan contact term changes \(|b_\infty|\) by at most \(10^{-4}\): in the dense phase the state lies on the R/T axis, and the
+axial density along the compensator (chirality) axis vanishes.
+\item[(c)] \(\Lambda\) changes \(|b_\infty|\) by up to 18\,\% when freezing falls into the \(\Lambda\) phase; it does not decouple from the frozen state.
+\end{enumerate}
+
+\paragraph{Remark v4.9.0-r70.4 (\(\Lambda\) over sector crossings; exploration, not a test).}
+The author asked whether each crossing of sectors carries its own \(\Lambda\), so that ours is a mixture.  A linear dependence \(\mathrm{Tr}(\rho\hat\Lambda)\)
+averages out under the rotation; a bilinear one depends on \(|b|\) only and is constant once \(|b|\) is frozen, so the epoch question of v4.9.0-r67 stays.
+Of 26 readings with structural weights (\texttt{llm/k108\_kreuzungen.py}) one lands within \(2\sigma\) of DESI DR2 BAO
+(\(\Omega_M=1/\gL^2=0.288\), \(3.9\sigma\) from Planck 2018), about as many as chance gives (\(1.3\)).  No prediction is made.  An identity remains:
+with \(|b|=1/\gL\) the eigenvalues of the M/T state satisfy \(\lambda_-/\lambda_+=(\gL-1)/(\gL+1)=\bsym^2\), so \(\bsym^2\) is the weight ratio of the
+mixture.  This is a rewording, not a new result.
+
+\paragraph{Proof sketch.}
+r70.1 by the patch specifications (reproducing the GitHub fragments exactly); r70.2 by direct evaluation of the finite part; r70.3 by
+\texttt{llm/k107\_test\_h48.py} (output \texttt{llm/k107\_out.txt}, result \texttt{llm/Ergebnis\_H48\_Einfrieren\_beta.md}); r70.4 by
+\texttt{llm/k108\_kreuzungen.py}.  \(\square\)
+
+\subsection*{v4.9.0-r70 status in the three frames}
+\label{subsec:v490-r70-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item r70.1 and r70.2 concern R and the main body; the old ``photon frame'' of the corrected passages is R (v4.9.0-r24).
+\item r70.3: the doublet carries M (state \(b\)) and T (\(b\mapsto-b\)); the frozen length \(|b|\) is the same in M and T, so (a) is frame-free.  The
+photon P is the attractor \(b=0\).
+\item r70.4: \(\lambda_\pm\) are the weights of M and T; the identity is symmetric in M and T.
+\end{itemize}
+No statement of this layer concerns colour or charge.
+
+\subsection*{v4.9.0-r70 register entries}
+\label{subsec:v490-r70-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r70\\
+\midrule
+status-note candidates of v4.9.0-r69.3 & written (4.10 consolidation)\\
+value in v4.9.0-r69.3(a) & corrected to \(1.686953464\)\\
+H48 (\(\bsym\) as frozen length) & refuted; depends on expansion history\\
+\(\Lambda\) over sector crossings & no reading better than \(\Omega_M=\bsym^2\); epoch question open\\
+monolith and GitHub candidate & main-body text identical again\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r70 ledger and guard update}
+\label{subsec:v490-r70-ledger-guard}
+
+\[
+R_{\rm chk}^{v490\text{-}r70}=(1,1,0)
+\]
+for (consolidation carried over and r69 corrected; H48 refuted and the crossing reading without a hit beyond chance; OP5 not closed).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r70,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r70}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
