@@ -14,7 +14,7 @@ names the note behind each item.
 | Recheck | Nine statements recomputed with new code, `llm/k106_nachrechnung_op5.py` → `llm/k106_out.txt`; all hold |
 | r69.1 | A passive frame change only rescales a balance defect; three distinct neutral objects (midpoint of two scale frames, equal mixture ρ + σ_yρσ_y = I/2 with label P, flux-free observer of two null streams); β_sym² offered as relative separation tanh²(χ/2); no route selects the absolute vacuum term; no nontrivial doublet projector respects both involution and M/T exchange |
 | r69.2 | Probe cone comes from the Clifford structure; two complex probes give rank four but different cones; E = ½Dj ⇒ T = ½Rj, torsion-free + Einstein vacuum ⇒ Λ_geom = 0 where j ≠ 0 (exclusion, not cancellation); Ward exclusion for an isotropic boost connection; two-point fits are not solutions |
-| r69.3 | Errors in the main body, candidates for status notes: rem:regularization-B (series −1/τ + 1 − 11τ/24, counterterm −log(ε/μ), value 1.689 instead of 0.940); thm:dirac-probe and prop:three-compatible-readings rest on the archived thm:gue-selfdet; the corollary "Cosmological constant revisited" gives zero and γ_L⁵ for one quantity |
+| r69.3 | Errors in the main body, candidates for status notes: rem:regularization-B (series −1/τ + 1 − 11τ/24, counterterm −log(ε/μ), value 1.689 instead of 0.940; **corrected in r70.2: the correct value is 1.686953**); thm:dirac-probe and prop:three-compatible-readings rest on the archived thm:gue-selfdet; the corollary "Cosmological constant revisited" gives zero and γ_L⁵ for one quantity |
 
 | Path | Content |
 |---|---|

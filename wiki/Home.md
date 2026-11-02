@@ -2,10 +2,14 @@
 
 Dieses Wiki erschließt den **Quantum Sphaera Companion**: ein strukturorientiertes mathematisches Forschungsprojekt mit lokalen, bedingten und readout-abhängigen Aussagen. Es bietet Menschen und LLMs einen Einstieg, eine Quellenkarte und benannte Aussagegrenzen.
 
-**Stand: 28. Oktober 2026.** Öffentliche Baseline: **v4.9.0 vom 21. Oktober 2026**. Aktuelle Forschung: **4.10.0-draft**, zuletzt dokumentierte Layer **v4.9.0-r69**. Layerbezeichnung und Arbeitsversion sind unterschiedliche Kennzeichnungen.
+**Stand: 2. November 2026.** Öffentliche Baseline: **v4.9.0 vom 21. Oktober 2026**. Aktuelle Forschung: **4.10.0-draft**, zuletzt dokumentierte Layer **v4.9.0-r70**. Layerbezeichnung und Arbeitsversion sind unterschiedliche Kennzeichnungen.
 
 ## Einstieg
 
+- **[Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt):** der Inhalt selbst, Teil für Teil: Annahmen, Definitionen, Ergebnisse und wie weit sie heute tragen.
+- **[Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie):** was die Runden seit v4.8.0 ergeben haben, nach Themen.
+- **[Vorhersagen und Tests](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Vorhersagen-und-Tests):** alle vorab festgelegten Tests mit Ergebnis und die offenen Vorhersagen.
+- **[Offene Probleme](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Offene-Probleme):** OP1–OP5, C4–C6 und woran die Arbeit derzeit hängt.
 - **[Schritt für Schritt durch das Dokument](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Dokumentfuehrer):** ein gemeinsamer Leseweg für Menschen und LLMs: acht verständliche Lernstationen mit gesetzten Formeln, Rechenbeispiel und gesonderten Anmerkungen zur Quellenprüfung.
 - **[English reader entry](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/English):** English guide and worked example; Deutsch bleibt die redaktionelle Hauptfassung.
 - [Leseweg](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Leseweg): Wo anfangen und welche Quellen anschließend lesen?

@@ -6,7 +6,7 @@ This reading route is for people and LLMs. The main text explains the ideas step
 
 This guide introduces the ideas before the technical arguments. It rearranges selected main sections for learning; it is not a line-by-line commentary or a full translation of the manuscript. Start with vectors, averages and maps. Later proofs require linear algebra, operator theory and differential equations.
 
-> **Note for LLMs and source checking — Source snapshot:** 25 October 2026, commit `64973ef`. Published baseline: v4.9.0. Research working version: 4.10.0-draft. Links point to the reviewed working source. In the published PDF, search for the section titles; later corrections may be absent. Section labels are more stable than PDF page numbers.
+> **Note for LLMs and source checking — Source snapshot:** 2 November 2026; links to source files point to commit `64973ef` (25 October), content summaries reflect the state after layer r70. Published baseline: v4.9.0. Research working version: 4.10.0-draft. Links point to the reviewed working source. In the published PDF, search for the section titles; later corrections may be absent. Section labels are more stable than PDF page numbers.
 
 ## 1. What is the project trying to connect?
 
@@ -88,6 +88,13 @@ Read introductions and result statements in this order:
 4. [Coupling-scale candidate](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/64973efe8409cfd2ae985fbbd17b4ebc95845780/sources/research/parts/coupling-scale-candidate.tex).
 5. [Tensor shift and coupling](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/64973efe8409cfd2ae985fbbd17b4ebc95845780/sources/research/parts/tensor-shift-coupling.tex).
 
+**What these sections say, in short:**
+- *HC-to-mass identification:* The compensator $C$ selects the symmetric output while fermions sit in the odd input. The pure HC output loses that input; an equivariant readout cannot split a fixed input; closed-triole amplitudes do not give Koide by norms; an unrestricted fitted HC predicts no roots. These routes are refuted individually, not every conceivable nonlinear realization.
+- *Generation coupling:* A conditional coupling is built from generation slots, the closure projector and the shifted pacer. A Hermitian cyclic coupling produces the Brannen form of the mass roots, but a common pacer phase cancels and even unitary pacers leave the Gram matrix free, so the masses are underdetermined.
+- *Native operator link:* The original definitions give part of the link but no matrix elements on the generation slots. A mass law follows only conditionally, when a gapped complementary block may be eliminated.
+- *Coupling candidate and scales:* Coupling and gap scales remain independent inputs. Two cyclic harmonics cannot give the Koide ratio; an evaluated three-channel candidate with the written phase has the wrong shape, and choosing a scale cannot repair a wrong shape.
+- *Tensor shift:* The global QAM renumbering changes no numbers. A physical comparison can change the shape but must be derived; enlarging the carrier without an interaction does not change the readout.
+
 Ask which states are coupled, which operator acts, and which output is interpreted as mass. Sectors are not automatically generations; fixed-slot norms are not automatically mass eigenvalues. A ratio does not determine an absolute physical scale.
 
 Keep four columns: input – operator/assumption – computed output – physical identification.
@@ -108,6 +115,8 @@ The evolution of a projected state can depend on omitted components and their hi
 
 Continue with the [Cartan normal-source section](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/64973efe8409cfd2ae985fbbd17b4ebc95845780/sources/research/parts/cartan-normal-source.tex): an explicitly assumed comparison, conditional constraint propagation and finite source compatibility.
 
+**Result of the Cartan section:** In an explicitly added Einstein–Cartan comparison model with three complex spinors, the gravitational constraints propagate under stated assumptions, and finite derivative data can be made compatible. Neither the matrices nor the source coordinates are identified with matter, photon, tachyon or physical masses.
+
 Matching individual tensors without satisfying all field equations is not yet a common solution. Compatibility of finitely many derivatives is a pointwise algebraic step; a solution on an open region needs further consistency and existence arguments.
 
 **Checkpoint:** What separates compatible pointwise data from a regional solution? — Compatible initial data, higher and spatial conditions, and an appropriate existence result, among other duties.
@@ -126,19 +135,25 @@ The master equation groups geometric, triolic, HC, closure and observer contribu
 
 Optionally read [Closure-Liquid Crystal and Holographic Julia Boundary](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/64973efe8409cfd2ae985fbbd17b4ebc95845780/sources/research/parts/v470/14_local_crystal.tex). Its carrier, shell, route, phase and defect language organizes a local compatibility picture; it does not claim a literal condensed-matter crystal.
 
-Read frame, Planck and Hawking passages alongside the [r63–r68 corrections](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2de387d66d6ab2da00ef28a14305729910d7ef1/notes/research/v4_10_0_r63_r64/README.md). Some source orientation text retains historical release metadata; consult the [version map](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Versionen-und-Quellen) for current status.
+**What the review layers say about these parts:** Many physical readings do not hold in their printed form. The trace formula is not a defined action; the old "photon frame" is the pure reference state R, not the photon; the photon Planck scaling and the vacuum ratio $\gamma_L^5$ are not supported by the counting reading; the fibre $S^7$ is not a group. Details with numbers are on the [content overview](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Content-overview). Sources: [notes on r63–r68](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2de387d66d6ab2da00ef28a14305729910d7ef1/notes/research/v4_10_0_r63_r64/README.md) and [r69](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/v4_10_0_r69/README.md). Some source orientation text retains historical release metadata; consult the [version map](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Versionen-und-Quellen) for current status.
 
 **Checkpoint:** What do the large equation blocks initially provide? — An organization of required contributions, not their complete physical realization.
 
 **Next:** Take stock in step 8.
 
-> **Note for LLMs and source checking:** Correction baseline: r64–r69 (r66 corrects the citation in r64; r67 concerns `rem:einstein-blunder`; r69 flags `rem:regularization-B`, the $\gamma_L^*$ clock scale of `thm:dirac-probe` and the corollary "Cosmological constant revisited"). Historical wording in `working-orientation.tex` does not override the source map. Preserve frame assignments and status notes.
+> **Note for LLMs and source checking:** Correction baseline: r64–r70 (r66 corrects the citation in r64; r67 concerns `rem:einstein-blunder`; r69 flags `rem:regularization-B`, the $\gamma_L^*$ clock scale of `thm:dirac-probe` and the corollary "Cosmological constant revisited"). Historical wording in `working-orientation.tex` does not override the source map. Preserve frame assignments and status notes.
 
 ## 8. Take stock and choose a technical branch
 
 **Goal:** Explain one result with its assumptions and outstanding duty.
 
 Read [Current v4 Interface and Open Burdens](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/64973efe8409cfd2ae985fbbd17b4ebc95845780/sources/research/parts/current-v4-synthesis.tex) and [v4.8 Research Integration](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/64973efe8409cfd2ae985fbbd17b4ebc95845780/sources/research/parts/v480-integration.tex). These historical section titles occur within the current working source.
+
+**New in the 4.10 draft: "States, Mediators and Clock Comparisons".** The section collects the work of 28–30 October.
+- *Mediator:* A quantum readout and a relativistic readout of the same carrier count as connected only if a mediator with explicit maps exists and the dynamics is compatible with both. These are proof obligations, not definitions.
+- *Field doublet:* The real doublet $F = [E\,|\,B]$ can be recovered locally from its Gram matrix $G = F^{\mathsf T}F$ and a rotation. The normalized state $\rho = G/\mathrm{tr}\,G$ alone loses scale and flux direction; two fields with the same $\rho$ respond oppositely to a boost.
+- *Clocks:* Coordinate time, proper time, an internal clock and a structural invariant are different things. A shared clock alone does not prove entanglement.
+- *Field compatibility:* In the comparison model the derivatives of the probe fields are recalibrated step by step; at three points this works up to fourth order. That is finite evidence, not a solution on a region and not an OP5 closure.
 
 Finite detector terminality is distinguished from exact zero residual for every readout. The integration program requires units, comparison maps, realized MM/HC operators, an evaluated residual dictionary and a dynamical realization.
 

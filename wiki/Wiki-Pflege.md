@@ -10,6 +10,15 @@ Das Wiki erschließt Quellen und Forschungsergebnisse. Neue mathematische Behaup
 4. Startseite, Quellenkarte und Fachübersicht zusammen aktualisieren, wenn sich Version oder Aussagegrenzen ändern. Für reproduzierbare Angaben einen vollständigen Commit verlinken.
 5. Dateipfade, Wiki-Navigation, DOI-Verweise und Versionen prüfen; Änderungen im Ordner `wiki/` des Hauptrepositorys per Pull Request einbringen.
 
+## Inhalt wiedergeben, nicht nur verweisen
+
+Das Wiki soll den Inhalt des Companion selbst wiedergeben, nicht nur auf Quelldateien zeigen (Autorentscheidung, 2. November 2026). Wer eine Wiki-Seite liest, soll verstehen, **was** eine Quelle sagt, **unter welchen Voraussetzungen**, **wie weit** es trägt und **was offen** ist, ohne die TeX-Datei zu öffnen. Links auf Quelldateien und Labels dienen dem Nachprüfen und stehen hinter der inhaltlichen Aussage.
+
+Konkret heißt das:
+- Jeder Abschnitt, der auf einen Teil des Companion verweist, fasst dessen Kernaussagen in eigenen Worten zusammen, mit den wichtigsten Formeln und Zahlen.
+- Ergebnisse neuer Runden kommen inhaltlich in [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie) und [Forschungsstand](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungsstand), neue Tests in [Vorhersagen und Tests](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Vorhersagen-und-Tests), Änderungen am Kern in [Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) und dessen englische Fassung.
+- Eine Liste von Links ohne Inhaltsangabe ist kein vollständiger Wiki-Eintrag.
+
 ## Formelsatz und gemeinsamer Leseweg
 
 Mathematik mit GitHubs LaTeX-Darstellung setzen: kurze Ausdrücke zwischen `$…$`, eigenständige Gleichungen zwischen `$$` auf eigenen Zeilen. Dateinamen, Labels und Befehle bleiben Code. Formeln nicht als Bilder einfügen; ihr Markdown-Quelltext bleibt so auch für LLMs lesbar.
@@ -35,6 +44,8 @@ Quelle der Seiten ist der Ordner [`wiki/`](https://github.com/Moriarty1982/Quant
 Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte Hintergrundpflege ist durch diese Erstbefüllung nicht eingerichtet.
 
 ## Änderungsnachweis
+
+**2.11.2026, Layer r70 und Inhaltsseiten:** Neue Seiten [Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) (mit englischer Fassung [Content overview](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Content-overview)), [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie), [Vorhersagen und Tests](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Vorhersagen-und-Tests) und [Offene Probleme](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Offene-Probleme). Dokumentführer (DE/EN) in den Stationen 5–8 um Inhaltsangaben ergänzt. Forschungsstand um r70 ergänzt; der in r69 genannte Wert 1,689 korrigiert (richtig 1,686953). Regel „Inhalt wiedergeben, nicht nur verweisen“ aufgenommen.
 
 **28.10.2026, Quelle ins Hauptrepository verlegt:** Seiten liegen jetzt unter `wiki/` und werden per Workflow ins Wiki gespiegelt, damit Wiki-Änderungen mit den Repository-Änderungen über Pull Requests laufen.
 
