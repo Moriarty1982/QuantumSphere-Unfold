@@ -2520,6 +2520,17 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **r70.4 (Erkundung, kein Test):** Λ als Mischung über Sektor-Kreuzungen: linear mittelt sich heraus, bilinear konstant nach Einfrieren (Epochenfrage bleibt); 26 Lesarten, 1 Treffer (Ω_M = 1/γ_L² = 0,288; DESI −1,2σ, Planck −3,9σ) bei 1,3 Zufallserwartung. Identität β² = λ₋/λ₊ (Eigenwerte des M/T-Zustands bei |b| = 1/γ_L).
 - R_chk = (1,1,0); Guards unverändert.
 
+### K121 Runde v4.9.0-r71: Struktur des OP5-Vergleichssymbols, exakte Polarwinkel-Eichsymmetrie, H49 und H50 (2026-11-02)
+
+`sec:v490-r71-op5-symbol`, Snippet `llm/v490_r71_round.tex`; Notizen `llm/Erkundung_OP5_Symbolstruktur_Grad7.md`, `llm/Ergebnis_H49_*`, `llm/Ergebnis_H50_*`.
+- **r71.1:** 70-stelliger Keim (cf48496, Punkt (1, 3/5, 0, 0)) unabhängig bestätigt: k109 (F bis Ordnung 4, g bis 5, Reihen entlang 7 Geraden) und k135_tps (alle R-Koeffizienten bis Grad 3 inkl. G ≤ 2,4e-12); Grad-4-Symbol Rang 528, Linkskern 112.
+- **r71.2:** Die Spencer-Zählung 1/0/−1 bei Grad 5: −1 ist Artefakt (Richtung zu 98 % außerhalb des Kerns, δ² = 0 verletzt). Exakt dim H^{5,2} = dim g₇ − 722; direkt g_p = 127, 208, 308, 427, 565, 726, 910, 1118, 1351 (p = 2…10), also H^{5,2} = 4 für das gespeicherte θ.
+- **r71.3:** Zufälliges θ: quadratisches Wachstum; echtes θ: ab Grad 7 kubisch. θ liegt exakt auf Sonderort, ist blind für die freie Richtung (θ·k ≈ 1e-15). Die vier Grad-7-Beziehungen sind q·d_k·Ω ∈ ⟨J⟩: q = Lichtkegel des Coframes (Minkowski auf 8e-13, J verliert 5 Ränge), d_k = Ideal zweier windschiefer reeller Ebenen (Signaturen (0,2), (1,1)), auf denen J einen weiteren Rang verliert.
+- **r71.4:** Freie Richtung δΨ = f c^μ D_μΨ mit c = ρ∂_z − z∂_ρ ∝ ∂_ϑ; exakte Eichsymmetrie, da h = h(t, r) und A = M(t) dφ (ρ·G unabhängig von ρ): L_{fc}A = 0, L_{fc}h = 0 für jedes f. Ebenen-Richtungen: h-erhaltend in (t, r), nur teilweise frei.
+- **r71.5 (H49, Vorab e2d3394, widerlegt):** keine versteckte Bedingung bei zweiten Ableitungen abseits z = 0 (κ ≈ 1e-10 überall); Prämisse (Bruch ∝ z/ρ²) war falsch.
+- **r71.6 (H50, Vorab ea36f39, widerlegt):** Ω reagiert auf ϑ-Verschiebungen mit f bis Grad 3 nicht (≤ 1,5e-10; Kontrollen 0,04–0,11); Ω eichinvariant, erste Klasse.
+- Folgerung: ϑ-Eichung vor Involutionstest nötig. R_chk = (1,1,0); Guards unverändert; OP5 offen.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2695,6 +2706,7 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - v13.5 (2026-10-25): K118 Runde v4.9.0-r68 trägt die Nachrechnung K117 als Runde ein (bestätigt; Korrekturen r68.2, r68.3).
 - v13.6 (2026-10-28): K119 Runde v4.9.0-r69 bindet die OP5-Serie des Autors mit einem anderen Sprachmodell ein (analysis/, 3fa5ba9..337d9cb); drei Fehler im Hauptkorpus als Statusnotiz-Kandidaten.
 - v13.7 (2026-11-02): K120 Runde v4.9.0-r70 (4.10-Konsolidierung lokal übernommen, Korrektur r69.3(a) auf 1,687, H48 widerlegt, Λ-Kreuzungen als Erkundung); K119 korrigiert.
+- v13.8 (2026-11-02): K121 Runde v4.9.0-r71 (OP5-Vergleichssymbol: Keim bestätigt, −1 als Artefakt, Lichtkegel und zwei Ebenen, exakte ϑ-Eichsymmetrie; H49 und H50 widerlegt).
 
 ---
 

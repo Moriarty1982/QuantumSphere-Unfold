@@ -77108,4 +77108,166 @@ R_{\rm glob}^{(v490\text{-}r70,+)}=(0,1,1,1,1),
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
 
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r71 Source-Only: The Structure of the OP5 Comparison Symbol, an Exact Polar Gauge Symmetry, and Two Tests}
+\addcontentsline{toc}{section}{v4.9.0-r71 Source-Only: The Structure of the OP5 Comparison Symbol, an Exact Polar Gauge Symmetry, and Two Tests}
+\label{sec:v490-r71-op5-symbol}
+% ============================================================================
+
+\paragraph{Purpose.}
+On 2 November 2026 the author asked to continue OP5 where the second language model had stopped (commit \texttt{cf48496}): a
+70-digit fifth-order germ of the fixed comparison model of \S\ref{sec:v410-state-mediator} at \((t,x,y,z)=(1,\tfrac35,0,0)\),
+the third-jet condition \(\Omega\), and an unresolved Spencer count at degree~5 that gave \(1\), \(0\) or \(-1\) depending on the
+cutoff.  This layer records an independent check of that state, the resolution of the count, the structure of the
+\(\Omega\)-augmented symbol, an exact gauge symmetry of the comparison model, and two pre-registered tests (H49, H50).
+Everything concerns the comparison model only.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r71 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r71 results}
+\label{subsec:v490-r71-results}
+
+Notation: \(R=(F,G,dg)\) is the completed first-order system, \(J(\xi)\) its principal symbol (\(32\times24\)), \(\theta\) the
+stored symbol of \(\Omega\), \(g_p\) the degree-\(p\) symbol of the \(\Omega\)-augmented system, and
+\(c=\rho\partial_z-z\partial_\rho\), which is \(-\partial_\vartheta\) in spherical coordinates.
+
+\paragraph{Record v4.9.0-r71.1 (independent check of the germ).}
+Two own implementations, sharing no code with the second model, confirm the germ.
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Exact power series along seven lines (80 digits) give \(F\) through order~4 at most \(1.2\times10^{-60}\) and \(g\)
+through order~5 at most \(1.6\times10^{-63}\).  Shifting one degree-5 or degree-3 coefficient is detected at the expected order.
+\item[(b)] A truncated multivariate Taylor evaluator of the whole system, including \(G\), gives all coefficients of \(R\)
+through degree~3 below \(2.4\times10^{-12}\) in double precision.  The degree-4 prolonged symbol has rank \(528\) with a left
+kernel of dimension \(112\), as recorded by the second model.
+\end{enumerate}
+
+\paragraph{Theoremlet v4.9.0-r71.2 (the negative count).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] The value \(-1\) comes from counting a singular direction (\(\sigma\approx1.4\times10^{-10}\)) of the incoming Spencer map
+that lies \(98\,\%\) outside the kernel of the outgoing map.  It violates \(\delta^2=0\) and is not an image direction.
+Projecting the image onto that kernel first makes the count non-negative.
+\item[(b)] Since \(H^{6,1}=0\) for prolongations and the outgoing rank \(1024\) is stable,
+\(\dim H^{5,2}=\dim g_7-722\) exactly.
+\item[(c)] A direct construction of \(g_p\) (gaps of at least \(5\times10^{-8}\) against at most \(3\times10^{-15}\)) gives
+\(\dim g_p=127,208,308,427,565,726,910,1118,1351\) for \(p=2,\dots,10\).  Hence \(\dim H^{5,2}=4\) for the stored \(\theta\).
+The earlier recursive count was spoilt by an ill-conditioned basis of \(g_6\).
+\end{enumerate}
+
+\paragraph{Theoremlet v4.9.0-r71.3 (structure of the \(\Omega\)-augmented symbol).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] With a random \(\theta\) of the same shape the dimensions are \(722, 898, 1093\) at \(p=7,8,9\), which is quadratic.
+Without \(\Omega\) they are \(757, 954\) at \(p=7,8\), which is cubic.  The stored \(\theta\) gives cubic growth again from \(p=7\).
+\item[(b)] The stored \(\theta\) lies on a special locus: a random perturbation of size \(\varepsilon\) makes the four extra null
+values at \(p=7\) grow linearly in \(\varepsilon\).
+\item[(c)] At every \(\xi\), \(J(\xi)\) has a one-dimensional kernel \(k(\xi)\), and \(\theta(\xi)\cdot k(\xi)\approx10^{-15}\)
+(random \(\theta\): \(10^{-2}\)).  So \(\Omega\) does not see the free direction.
+\item[(d)] The four degree-7 relations have the form \(q(\partial)\,d_k(\partial)\,\Omega\in\langle J\rangle\).
+\begin{itemize}
+\item \(q\) is the light cone of the reconstructed coframe: in frame components it equals \(\mathrm{diag}(1,-1,-1,-1)\) to
+\(8\times10^{-13}\), and \(J(\xi)\) loses five ranks on \(q=0\).
+\item The quadrics \(d_k\) generate the ideal of two real skew 2-planes \(\Pi_0\) (signature \((0,2)\)) and \(\Pi_1\)
+(signature \((1,1)\)) in covector space; the Hilbert function of the ideal is \(12,25,44\).  \(J(\xi)\) loses one further
+rank on \(\Pi_0\cup\Pi_1\).
+\end{itemize}
+Thus \(\theta\) is a rational combination of the rows of \(J\) with denominators on the cone and the two planes, and \(\Omega\)
+carries new information only there.
+\end{enumerate}
+
+\paragraph{Theoremlet v4.9.0-r71.4 (an exact polar gauge symmetry).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] The \(F\)-part of \(J\) annihilates the four directions \(\delta\Psi=c^\mu D_\mu\Psi\).  At every solution of \(R=0\),
+the free direction \(k\) is \(\delta\Psi=f\,c^\mu D_\mu\Psi\) for the polar field \(c\).  This was checked at the germ and at four
+continued solutions off the equator, matching \(-zx/\rho^2\) and \(-zy/\rho^2\) to three or four digits.
+\item[(b)] The comparison model is covariant under diffeomorphisms except through the background \(h(t,r)\) and the connection.
+The connection is \(A=M(t)\,d\varphi\), because \(\rho\,G(t,\rho)\) does not depend on \(\rho\).  Since \(c\lrcorner A=0\) and
+\(dA=M'(t)\,dt\wedge d\varphi\), one has \(\mathcal L_{fc}A=0\) and \(\mathcal L_{fc}h=0\) for every function \(f\).  So
+\(\vartheta\)-reparametrisations are an exact gauge symmetry: the background knows \(t\), \(r\) and \(\varphi\), not \(\vartheta\).
+\item[(c)] The directions that are invisible on \(\Pi_k\) are the directions in \((t,r)\) that preserve \(h\), with a small
+\(\varphi\)-tilt for \(\Pi_1\).  For example \((0.9714,0.2375,0,0)\) at the germ, computed and measured alike.  They are only
+partially free, because \(\mathcal L_{fc_0}A=f\,c_0^t M'(t)\,d\varphi\neq0\).
+\end{enumerate}
+
+\paragraph{Theoremlet v4.9.0-r71.5 (H49: an earlier condition off the equator).}
+Pre-registered (\texttt{Vorab\_Notiz\_H49\_Polarwinkel\_Bedingung.md}) before computing.  Refuted.  The compatibility defect of the
+second jets is between \(1.3\) and \(2.9\times10^{-10}\) at four controls on \(z=0\) and at five points with
+\(z\in[0.02,0.2]\).  Negative controls react with \(9\times10^{-2}\) and \(8\times10^{-5}\).  The premise of H49, that a term
+\(\propto z/\rho^2\) breaks the \(\vartheta\)-freedom, was wrong; it used a Cartesian coefficient instead of the Lie derivative.
+r71.4(b) makes the outcome expected.
+
+\paragraph{Theoremlet v4.9.0-r71.6 (H50: does \(\Omega\) couple back to \(\Psi\) through \(\vartheta\)?).}
+Pre-registered (\texttt{Vorab\_Notiz\_H50\_Omega\_Psi\_Kopplung.md}) before computing, after the author asked whether \(\Omega\) and
+\(\Psi\) influence each other.  Refuted (first class through order~3).  For the shifts \(f\,c^\mu\partial_\mu\Psi\) with all 35
+monomials \(f\) of degree at most~3, the change of \(\Omega\) is at most \(1.5\times10^{-10}\), against \(0.04\) to \(0.11\) for
+shifts along \(\partial_t,\partial_x,\partial_y\).  The \(\vartheta\)-shifts also leave the lower equations unchanged (at most
+\(3.4\times10^{-13}\)).  \(\Omega\) is gauge invariant.
+
+\paragraph{Proof sketch.}
+r71.1 by \texttt{k109\_unabhaengig\_F.py} and \texttt{k135\_check.py}.  r71.2 by \texttt{k110}, \texttt{k111}.  r71.3 by
+\texttt{k112}--\texttt{k124}.  r71.4(a), (c) by \texttt{k125}--\texttt{k132} and (b) by direct computation of the Lie derivative.
+r71.5 by \texttt{k133\_test\_h49.py} with controls \texttt{k134}.  r71.6 by \texttt{k135\_test\_h50.py} with the series evaluator
+\texttt{k135\_tps.py}.  The notes \texttt{Erkundung\_OP5\_Symbolstruktur\_Grad7.md}, \texttt{Ergebnis\_H49\_\allowbreak
+Polarwinkel\_\allowbreak Bedingung.md} and \texttt{Ergebnis\_H50\_\allowbreak Omega\_\allowbreak Psi\_\allowbreak Kopplung.md}
+give the numbers.  \(\square\)
+
+\paragraph{Consequence.}
+The \(\Omega\)-augmented comparison system is not involutive as it stands, because it carries a gauge freedom of one function of
+four variables.  A Cartan--Kuranishi argument needs a gauge condition for \(\vartheta\) first; only then does the question of
+further hidden conditions become well posed.  The symmetry belongs to the chosen background.  A background that depends on
+\(\vartheta\) would break it.  OP5 is not closed.
+
+\subsection*{v4.9.0-r71 status in the three frames}
+\label{subsec:v490-r71-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item All statements concern the fixed OP5 comparison model of \S\ref{sec:v410-state-mediator}, stated in one coordinate chart
+with one coframe reconstructed from \(\Psi\).  No frame map M, T or P acts on them, so r71.1 to r71.6 are frame-free within the
+model.  Whether the polar symmetry survives in a frame-resolved version of the model is open.
+\item The light cone \(q\) of r71.3(d) is the cone of the reconstructed geometry, not a statement about P.
+\end{itemize}
+No statement of this layer concerns colour or charge.
+
+\subsection*{v4.9.0-r71 register entries}
+\label{subsec:v490-r71-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r71\\
+\midrule
+70-digit germ of \texttt{cf48496} & independently confirmed, including \(G\)\\
+degree-5 Spencer count \(1/0/-1\) & resolved: \(-1\) is an artifact; \(\dim H^{5,2}=4\) for the stored \(\theta\)\\
+free function of the symbol & exact \(\vartheta\)-gauge symmetry of the comparison model\\
+\(\Omega\) & gauge invariant; new information only on the cone and two planes\\
+H49 & refuted (premise corrected)\\
+H50 & refuted (first class through order 3)\\
+next step & gauge condition for \(\vartheta\), then the involution test\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r71 ledger and guard update}
+\label{subsec:v490-r71-ledger-guard}
+
+\[
+R_{\rm chk}^{v490\text{-}r71}=(1,1,0)
+\]
+for (germ confirmed and symbol structure established; H49 and H50 refuted as pre-registered; OP5 not closed).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r71,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r71}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
 \end{document}
