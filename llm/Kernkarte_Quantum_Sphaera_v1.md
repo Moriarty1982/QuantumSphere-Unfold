@@ -2571,7 +2571,7 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 `sec:v490-r76-name-correction`, Snippet `llm/v490_r76_round.tex`.
 - **r76.1:** r75 hatte übersehen, dass r05 (21.10.) 𝓜₁₆ bereits „layer-transport matrix“ genannt hatte (nur erklärt, Hauptkorpus nie geändert). Autor bestätigt nach Hinweis: Kompensatormatrix gilt und ersetzt layer-transport matrix (Grund: Erweiterung von C = ½(id + J), C als Spektralprojektor).
 - **r76.2:** port-weighting matrix (Einschränkung aufs (E, B)-Dublett, r05) bleibt; grenzt gegen die 2×2-Matrix des einzelnen Kompensators (r03) ab.
-- R_chk = (1,0,0); Guards unverändert.
+- R_chk = (1,0,0); Guards unverändert. PR #58 gemergt als f9f1194.
 
 ## 8. Änderungsprotokoll
 
