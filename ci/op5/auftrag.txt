@@ -1,0 +1,1 @@
+2-12   # Ordnungen p fuer den naechsten Lauf (Push auf rechnen/**); bekannt bis 12 (Lauf 3.11.2026)
