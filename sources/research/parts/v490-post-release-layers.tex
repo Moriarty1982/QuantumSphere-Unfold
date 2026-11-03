@@ -9292,3 +9292,117 @@ R_{\rm glob}^{(v490\text{-}r73,+)}=(0,1,1,1,1),
 \]
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r74 Source-Only: Consistent Data, Spencer Bounds and the Precision Limit of the Extended OP5 Symbol}
+\addcontentsline{toc}{section}{v4.9.0-r74 Source-Only: Consistent Data, Spencer Bounds and the Precision Limit of the Extended OP5 Symbol}
+\label{sec:v490-r74-precision-limit}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.9.0-r73 left open whether the symbol \(g''\) extended by the four hidden sixth-order conditions becomes involutive at
+order 7 or 8, and whether the extended system has further hidden conditions (\S\ref{sec:v490-r73-hidden-conditions}).  On
+3 November 2026 the author asked to rebuild the data consistently, to bound further conditions, and to try a staged
+elimination and a plane-wave reformulation.  This layer records one pre-registered test (H58, invalid by its criterion), two
+explorations and one method check.  Everything concerns the comparison model of \S\ref{sec:v410-state-mediator} only.
+Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r74 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r74 results}
+\label{subsec:v490-r74-results}
+
+\paragraph{Record v4.9.0-r74.1 (H58 invalid: consistent data).}
+Pre-registered, not blind.  All parts of the symbol now come from the exact linearization at the repaired germ: \(J=A(0)\)
+(deviation from the stored \(J\) \(1.2\times10^{-13}\)), \(\theta\) rebuilt as the linear form on the admissible 3-jets that
+vanishes once the degree-3 equations are added (\(189\to188\), inclusion to \(2.8\times10^{-11}\)), the four conditions of
+r73.2, and the gauge.  Without the four conditions the known dimensions \(117,\dots,898\) (\(p=2,\dots,9\)) are reproduced
+with gaps \(\ge5\times10^6\).  With them, in all three frames: \(\dim g''_p=477,594,723,865\) (\(p=6,\dots,9\)), not
+involutive at \(p=6,7\), involutive at \(p=8\), characters \(723,130,12,0\).  The ambiguous singular value of H57 is gone
+(noise \(1.7\times10^{-12}\), smallest genuine value \(8.1\times10^{-9}\)), so \(\dim g''_8=724\) was an artifact.  Five ranks
+have gap ratios \(3\times10^3\) to \(8\times10^3\) instead of the required \(10^4\); the test is invalid.
+
+\paragraph{Theoremlet v4.9.0-r74.2 (exploration: Spencer cohomology of the extended symbol).}
+With consistent data, all \(\delta\)-rank gaps \(\ge3\times10^4\): for the gauged symbol \(g'\)
+\(H^{5,2}=4\), \(H^{6,2}=H^{7,2}=0\) (check against r72.5); for the extended symbol \(g''\) \(H^{5,2}=8\), \(H^{6,2}=4\),
+\(H^{7,2}=3\).  The four conditions were the only possible obstructions of the gauged system through \(k=7\); the new
+sixth-order equations themselves leave room for at most four hidden conditions on 7-jets and three on 8-jets.  Whether they
+occur is decided by lower-order terms, not by the symbol.
+
+\paragraph{Record v4.9.0-r74.3 (method check: staged elimination and conditioning).}
+A staged elimination of the linearized tower (top degree first, through left kernels of symbol-sized blocks) needs little
+memory and reproduces \(371\), \(852\) and \(481\), but gives \(476\) instead of \(477\) with a gap of \(4\times10^2\).  The cause
+is structural: the prolonged symbol of \(J\) alone is well conditioned (smallest genuine value \(4\times10^{-5}\), noise
+\(10^{-15}\), unchanged by Ruiz equilibration), while \(\Omega\) and the four conditions are nearly dependent on the \(J\) rows
+(independent weight about \(10^{-8}\)), because they carry new information only on the cone and the planes.  Double
+precision separates one or two such levels, not three.
+
+\paragraph{Record v4.9.0-r74.4 (exploration: plane waves on the cone).}
+If the symbol module were reduced, plane waves \(\xi^p\otimes u\) on the characteristic set would span every \(g_p\) with
+well-conditioned data.  Without the four conditions, 300 null directions with seven polarizations each span
+\(115,184,267,364,475\) for \(p=2,\dots,6\) (gaps \(\ge2\times10^{11}\)) instead of \(117,188,273,371,481\).  The deficit grows
+irregularly, which points to a non-reduced module; the simple reformulation does not carry.
+
+\paragraph{Proof and measurement sources.}
+r74.1 by \texttt{k148\_konsistent.py}; r74.2 by \texttt{k149\_spencer\_erweitert.py}; r74.3 by \texttt{k150\_stufen.py} and
+\texttt{k151\_kondition.py}; r74.4 by \texttt{k152\_wellen.py}.  The notes \texttt{Ergebnis\_H58\_\allowbreak
+konsistente\_\allowbreak Daten.md}, \texttt{Erkundung\_\allowbreak Spencer\_\allowbreak erweitertes\_\allowbreak Symbol.md},
+\texttt{Methodenpruefung\_\allowbreak Elimination\_\allowbreak Kondition.md} and \texttt{Erkundung\_\allowbreak
+ebene\_\allowbreak Wellen.md} give the numbers.  \(\square\)
+
+\paragraph{Consequence.}
+By all evidence the extended symbol is involutive first at order 8, with 12 functions of three variables.  Further hidden
+conditions (up to four on 7-jets, three on 8-jets) are not excluded.  Deciding them needs either the whole chain (germ,
+linearization, elimination) in higher precision or a reformulation that handles the multiplicities of the symbol module on the
+characteristic set.  OP5 is not closed.
+
+\subsection*{v4.9.0-r74 status in the three frames}
+\label{subsec:v490-r74-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item All statements concern the fixed OP5 comparison model in one chart with one coframe reconstructed from \(\Psi\).  No frame
+map M, T or P acts on them; r74.1 to r74.4 are frame-free within the model.
+\end{itemize}
+No statement of this layer concerns colour or charge.
+
+\subsection*{v4.9.0-r74 register entries}
+\label{subsec:v490-r74-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r74\\
+\midrule
+\(\theta\) at the repaired germ & rebuilt consistently (replaces the stored \(\theta\))\\
+extended symbol & involutive first at \(p=8\) by all evidence (H56, H58); formally unconfirmed\\
+further hidden conditions & room for 4 on 7-jets, 3 on 8-jets (Spencer); undecided\\
+precision limit & structural (\(\Omega\) nearly dependent on \(J\)); staged elimination and plane waves do not lift it\\
+next step & higher precision of the whole chain, or multiplicity-aware reformulation\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r74 ledger and guard update}
+\label{subsec:v490-r74-ledger-guard}
+
+\[
+R_{\rm chk}^{v490\text{-}r74}=(1,0,0)
+\]
+for (consistent data and Spencer bounds established; H58 invalid; OP5 not closed).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r74,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r74}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.

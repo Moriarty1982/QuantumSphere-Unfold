@@ -1,6 +1,6 @@
 # Was im Companion steht
 
-**Stand: 3. November 2026, Forschungsfassung 4.10.0-draft mit Runden bis v4.9.0-r73.** Diese Seite gibt den Inhalt des *Quantum Sphaera Companion* wieder: Was wird angenommen, was wird definiert und gezeigt, und wie weit trägt es heute? Die Quellenangaben am Ende jedes Abschnitts dienen zum Nachprüfen; zum Verstehen sollte diese Seite allein reichen. [English version](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Content-overview) · [Startseite](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Home)
+**Stand: 3. November 2026, Forschungsfassung 4.10.0-draft mit Runden bis v4.9.0-r74.** Diese Seite gibt den Inhalt des *Quantum Sphaera Companion* wieder: Was wird angenommen, was wird definiert und gezeigt, und wie weit trägt es heute? Die Quellenangaben am Ende jedes Abschnitts dienen zum Nachprüfen; zum Verstehen sollte diese Seite allein reichen. [English version](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Content-overview) · [Startseite](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Home)
 
 ## So ist jede Aussage zu lesen
 

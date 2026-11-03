@@ -1,6 +1,6 @@
 # What the Companion contains
 
-**State: 3 November 2026, research draft 4.10.0-draft with layers through v4.9.0-r73.** English companion of the German [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt), which is the master. This page states what the *Quantum Sphaera Companion* assumes, defines and shows, and how far each part currently holds. Source labels at the end of each part are for checking; the page itself should be enough to understand the content. [Home](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/English)
+**State: 3 November 2026, research draft 4.10.0-draft with layers through v4.9.0-r74.** English companion of the German [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt), which is the master. This page states what the *Quantum Sphaera Companion* assumes, defines and shows, and how far each part currently holds. Source labels at the end of each part are for checking; the page itself should be enough to understand the content. [Home](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/English)
 
 ## How to read each statement
 
@@ -42,7 +42,7 @@ The old chain sets $\Lambda$ to zero in the photon frame and explains the observ
 
 Layers r32–r60 build, from the Dixon algebra $\mathbb C\otimes\mathbb H\otimes\mathbb O$, the charges of one generation, a full left-handed generation with right-handed neutrino and anomaly-free quantum numbers (with the compensator read as chirality projector), and generations as orbits of triality. Masses and mixing remain the hard part: masks and couplings fit the data but do not explain them. Open predictions: $\sin^2\theta_{23} \le 0.54$ (H42) and $\in [0.49, 0.50]$ (H46), awaiting the next global fit or DUNE/Hyper-K; the W mass (H15). Full list: [Vorhersagen und Tests](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Vorhersagen-und-Tests) (German).
 
-## 10. The 4.10 consolidation and the latest tests (r69–r73)
+## 10. The 4.10 consolidation and the latest tests (r69–r74)
 
 A second language model worked on OP5 with the author (25–30 October). Results: a frame change cannot remove a balance defect; "neutral" has three distinct meanings; no route fixes the absolute vacuum term; the probe light cone comes from the Clifford structure; a new section separates quantum and relativistic readouts through a mediator with explicit proof obligations, recovers the field doublet from its Gram matrix plus orientation, and pushes a numerical compatibility check to fourth derivative order at three points (not a regional solution). Test H48 — $\beta_{\mathrm{sym}}$ as the frozen length of the matter/tachyon state — is refuted: the frozen value carries the expansion history.
 
@@ -51,6 +51,8 @@ Layer r71 independently confirms the second model's 70-digit fifth-order germ of
 Layer r72 fixes the $\vartheta$ gauge by prescribing one current component, $\Psi^\dagger K_2\Psi$; this removes exactly the free function. The pre-registered Cartan test H51 is confirmed: the gauged symbol is involutive from order 6 on and not before, leaving formally 14 functions of three variables. Three pre-registered tests of formal integrability (H52 to H54) are invalid by their own criteria, each because of a test-design error. They still show that the stored fifth-order coefficients cannot be extended, that everything is clean through the degree-6 equations, and that the degree-7 equations add four conditions on the sixth derivatives. The Spencer cohomology of the gauged symbol leaves room for exactly four, and an error bound rules out a numerical artifact. So the gauged system is, by all evidence, not formally integrable at order 6, but this is not formally confirmed. Next: a second base point (H55), then the explicit conditions and a new Cartan test.
 
 Layer r73 confirms the four conditions at a second base point (H55): the gauged system is not formally integrable at order 6. An exploration determines them: they are sixth-order equations that act only on light-like waves, fix one of seven polarizations per null direction, and depend on the direction through the four quadrics of the two special planes of r71; they are the remainders of the four relations $q\,d_k\,\Omega$. The Cartan test of the extended symbol (H56, H57) is invalid: not involutive at order 6, and from order 8 the available precision cannot decide. Next: consistent high-precision data at the repaired germ.
+
+Layer r74 rebuilds Ω consistently at the repaired germ. With consistent data the extended symbol is, by all evidence, involutive first at order 8 (H58, invalid only by its gap threshold); the value 724 of H57 was an artifact. The Spencer cohomology of the extended symbol leaves room for up to four further hidden conditions on 7-jets and three on 8-jets. A method check shows a structural precision limit: Ω and the four conditions are nearly consequences of the basic equations (weight about 1e-8); staged elimination and a plane-wave reformulation do not lift it.
 
 ## Never claimed
 

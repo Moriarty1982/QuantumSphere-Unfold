@@ -1,6 +1,6 @@
 # Offene Probleme und wo die Arbeit festsitzt
 
-**Stand: 3. November 2026, nach v4.9.0-r73.** Diese Seite beschreibt, was offen ist, warum, und was der nächste sinnvolle Schritt wäre. [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie) · [GitHub Issues](https://github.com/Moriarty1982/QuantumSphere-Unfold/issues)
+**Stand: 3. November 2026, nach v4.9.0-r74.** Diese Seite beschreibt, was offen ist, warum, und was der nächste sinnvolle Schritt wäre. [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie) · [GitHub Issues](https://github.com/Moriarty1982/QuantumSphere-Unfold/issues)
 
 ## Der gemeinsame Kern: Es fehlt eine Dynamik
 
@@ -36,7 +36,7 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
-Lokal ist OP5 über eine Detektorschwelle geschlossen ($\mathrm{OP5}_{\mathrm{eff}}$). Exakt ist es offen. Der Stand nach r69 bis r73:
+Lokal ist OP5 über eine Detektorschwelle geschlossen ($\mathrm{OP5}_{\mathrm{eff}}$). Exakt ist es offen. Der Stand nach r69 bis r74:
 - **Frame-Wechsel:** Ein passiver Frame-Wechsel beseitigt keinen Bilanzfehler.
 - **Neutralität:** „Neutral“ hat drei verschiedene Bedeutungen, und keine davon legt den Vakuumterm fest.
 - **Lichtkegel:** Der Kegel kommt aus der Clifford-Struktur. Kegeldaten legen weder eine absolute Skala noch das Gewicht eines Vakuumterms fest.
@@ -48,7 +48,9 @@ Lokal ist OP5 über eine Detektorschwelle geschlossen ($\mathrm{OP5}_{\mathrm{ef
 
 - **Vier zusätzliche Bedingungen (r73):** an einem zweiten Punkt bestätigt (H55) und bestimmt: Gleichungen sechster Ordnung, die nur lichtartige Wellen betreffen, die Reste der Beziehungen $q\,d_k\,\Omega$. Mit ihnen ist das Symbol bei Ordnung 6 nicht involutiv; ob es bei 7 oder 8 involutiv wird, ist mit der vorhandenen Genauigkeit nicht entscheidbar (H56, H57 ungültig).
 
-**Nächster Schritt** im Vergleichssystem (r73): $\Omega$ und die vier Bedingungen am reparierten Keim konsistent und mit höherer Genauigkeit bestimmen, dann den Cartan-Test des erweiterten Symbols wiederholen und die formale Integrabilität des erweiterten Systems prüfen. Danach, nach der Literaturnotiz der OP5-Serie:
+- **Genauigkeitsgrenze (r74):** Mit konsistenten Daten wird das erweiterte Symbol nach allem Anschein erst bei Ordnung 8 involutiv. Weitere versteckte Bedingungen (bis zu vier an siebten, drei an achten Ableitungen) sind nicht ausgeschlossen. Die Entscheidung scheitert an einer strukturellen Genauigkeitsgrenze: $\Omega$ und die vier Bedingungen sind fast Folgen der Grundgleichungen.
+
+**Nächster Schritt** im Vergleichssystem (r74): die ganze Rechenkette (Keim, Linearisierung, Elimination) mit höherer Genauigkeit wiederholen oder eine Umformulierung finden, die die Vielfachheiten des Symbolmoduls auf der charakteristischen Menge berücksichtigt; damit die möglichen weiteren Bedingungen an siebten und achten Ableitungen entscheiden.
 1. polare Spinorvariablen (Fabbri) und Fierz-Rekonstruktion,
 2. Nebenbedingungsalgorithmus und formale Integrabilität,
 3. eine gekoppelte Coframe-Dynamik,

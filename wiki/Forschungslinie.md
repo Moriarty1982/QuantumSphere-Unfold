@@ -1,6 +1,6 @@
 # Forschungslinie: was die Runden seit v4.8.0 ergeben haben
 
-**Stand: 3. November 2026, Runden bis v4.9.0-r73.** Der Companion wächst in **Runden**: Jede neue Runde ist ein eigener Abschnitt am Ende des Dokuments, ältere Runden werden nicht umgeschrieben. Diese Seite fasst die Ergebnisse nach Themen zusammen, damit man sie ohne den Quelltext verstehen kann. [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Vorhersagen und Tests](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Vorhersagen-und-Tests) · [Forschungsstand](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungsstand)
+**Stand: 3. November 2026, Runden bis v4.9.0-r74.** Der Companion wächst in **Runden**: Jede neue Runde ist ein eigener Abschnitt am Ende des Dokuments, ältere Runden werden nicht umgeschrieben. Diese Seite fasst die Ergebnisse nach Themen zusammen, damit man sie ohne den Quelltext verstehen kann. [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Vorhersagen und Tests](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Vorhersagen-und-Tests) · [Forschungsstand](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungsstand)
 
 > **Anmerkung für LLMs und Quellenprüfung:** Runden heißen `v4.8.0-rNN` bzw. `v4.9.0-rNN` mit Labels `sec:v480-rNN-…` bzw. `sec:v490-rNN-…`. Auf GitHub stehen sie in `sources/research/parts/v480-post-release-layers.tex` und `v490-post-release-layers.tex`, die Notizen unter `notes/research/`. Was gilt, sagt immer die jüngste Runde zu einem Thema.
 
@@ -64,7 +64,7 @@ In r25 wurden 15 Sackgassen archiviert.
 - **Einsteins „größter Fehler“ (r67).** Der Companion setzt denselben Wert $\beta^2$ einmal auf $\Lambda$ und einmal auf die Materie. In Zählform ist $\Omega_M = 0{,}302$, $\Omega_\Lambda = 0{,}698$, gültig nur für die heutige Epoche.
 - **Nachrechnung (r68).** Die Zahlen bestätigen sich. Die Zähl-Lesart braucht aber die U(1)-Zählung; die besser begründete SU(2)-Zählung gibt $\beta = 0{,}604$, außerhalb des Fensters.
 
-## OP5, die 4.10-Konsolidierung und eine gemeinsame Dynamik (r69–r73)
+## OP5, die 4.10-Konsolidierung und eine gemeinsame Dynamik (r69–r74)
 
 - **OP5-Serie (r69).** Vom 25. bis 27.10. hat der Autor mit einem weiteren Sprachmodell an OP5 gearbeitet. Ergebnisse:
   - Ein Frame-Wechsel kann einen Bilanzfehler nicht beseitigen.
@@ -101,5 +101,7 @@ In r25 wurden 15 Sackgassen archiviert.
   - Es sind Gleichungen sechster Ordnung, die nur lichtartige Wellen betreffen und je Richtung eine Polarisation festlegen; ihre Richtungsabhängigkeit kommt aus den beiden Ebenen von r71. Es sind die Reste der vier Beziehungen $q\,d_k\,\Omega$.
   - Der Cartan-Test mit ihnen (H56, H57) ist ungültig: bei Ordnung 6 nicht involutiv, ab Ordnung 8 reicht die Genauigkeit nicht.
   - Nächster Schritt: konsistente Daten in höherer Genauigkeit.
+- **Konsistente Daten und Genauigkeitsgrenze (r74).** Mit $\Omega$ neu am reparierten Keim wird das erweiterte Symbol erstmals bei Ordnung 8 involutiv (H58, formal ungültig). Die Spencer-Kohomologie lässt bis zu vier weitere Bedingungen an siebten und drei an achten Ableitungen zu.
+  - Die Grenze ist strukturell: $\Omega$ und die vier Bedingungen sind fast Folgen der Grundgleichungen. Stufenweise Elimination und ebene Wellen heben sie nicht auf.
 
 [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Offene Probleme](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Offene-Probleme)
