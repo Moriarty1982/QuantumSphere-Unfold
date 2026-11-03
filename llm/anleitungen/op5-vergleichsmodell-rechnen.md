@@ -88,7 +88,11 @@ Auf GitHub unter `notes/research/v4_10_0_r71/llm/`, lokal unter `llm/`.
   `completion-omega-witness.npz` genommen werden.
 - **Spencer des erweiterten Symbols (k149, Erkundung):** H^{5,2} = 8, H^{6,2} = 4, H^{7,2} = 3 (geeicht ohne σ: 4, 0, 0).
   Weitere versteckte Bedingungen sind nicht ausgeschlossen: bis zu 4 an 7-Jets, 3 an 8-Jets.
-- Nächster Schritt: Fortsetzung über einem Jet, der die vier Bedingungen erfüllt, mit Gleichungen bis Grad 9/10;
+- **Methodenprüfung (k150, k151):** stufenweise Elimination funktioniert speichersparend, behebt die Genauigkeit aber nicht.
+  Ursache strukturell: J allein ist gut konditioniert (Lücke 3e10); Ω und die vier Bedingungen sind als Zeilen fast von J
+  abhängig (Gewicht ~1e-8), weil sie nur auf Lichtkegel/Ebenen wirken. Weiter nur mit Mehrgenauigkeit der ganzen Kette
+  oder Umformulierung auf der charakteristischen Menge.
+- (Früherer Plan:) Fortsetzung über einem Jet, der die vier Bedingungen erfüllt, mit Gleichungen bis Grad 9/10;
   braucht stufenweise Elimination (12 000–16 000 Spalten sprengen 8 GB). Kriterien künftig an Weyl-Abständen
   (≥ 100-fach) statt an fester Lückenschwelle 1e4 festmachen.
 - Fallstrick: Der Cloud-Container wird bei Untätigkeit zurückgesetzt; lange Läufe in Schritte unter 10 Minuten teilen
