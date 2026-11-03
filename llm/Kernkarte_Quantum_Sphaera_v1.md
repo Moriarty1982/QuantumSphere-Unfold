@@ -2550,6 +2550,15 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **r73.3 (H56 Vorab 4ed4c3e, H57 Vorab 11a64a4 nicht blind; beide ungültig):** erweitertes Symbol 477, 594, nicht involutiv bei 6; ab p = 8 in double precision nicht entscheidbar (θ vom älteren Keim).
 - Nächster Schritt: Ω und die vier Bedingungen konsistent am reparierten Keim in höherer Genauigkeit. R_chk = (1,1,0); Guards unverändert; OP5 offen. PR #53 gemergt als 116f674.
 
+### K124 Runde v4.9.0-r74: konsistente Daten, Spencer-Schranken, Genauigkeitsgrenze (2026-11-03)
+
+`sec:v490-r74-precision-limit`, Snippet `llm/v490_r74_round.tex`; Notizen `llm/Ergebnis_H58_*`, `llm/Erkundung_Spencer_erweitertes_Symbol.md`, `llm/Methodenpruefung_Elimination_Kondition.md`, `llm/Erkundung_ebene_Wellen.md`.
+- **r74.1 (H58, Vorab 99675a5, nicht blind, ungültig):** θ neu am reparierten Keim (k148); erweitertes Symbol 477, 594, 723, 865, erstmals bei p = 8 involutiv, Charaktere 723, 130, 12, 0; 724 aus H57 Artefakt; Lücken 3e3–8e3.
+- **r74.2 (Erkundung):** Spencer g': 4, 0, 0; g'': H^{5,2} = 8, H^{6,2} = 4, H^{7,2} = 3 (Raum für weitere Bedingungen an 7- und 8-Jets).
+- **r74.3 (Methodenprüfung):** stufenweise Elimination (k150) speichersparend, Genauigkeit strukturell begrenzt: J allein gut konditioniert, Ω und σ fast von J abhängig (~1e-8).
+- **r74.4 (Erkundung):** ebene Wellen auf dem Kegel spannen g'_p nicht auf (Modul nicht reduziert).
+- R_chk = (1,0,0); Guards unverändert; OP5 offen. PR #54 gemergt als ef20775.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2728,6 +2737,7 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - v13.8 (2026-11-02): K121 Runde v4.9.0-r71 (OP5-Vergleichssymbol: Keim bestätigt, −1 als Artefakt, Lichtkegel und zwei Ebenen, exakte ϑ-Eichsymmetrie; H49 und H50 widerlegt).
 - v13.9 (2026-11-03): K122 Runde v4.9.0-r72 (ϑ-Eichung, H51 bestätigt, H52–H54 ungültig, H^{5,2}(g') = 4, vier versteckte Bedingungen an 6-Jets nach allem Anschein).
 - v14.0 (2026-11-03): K123 Runde v4.9.0-r73 (H55 bestätigt, die vier Bedingungen bestimmt, H56/H57 ungültig).
+- v14.1 (2026-11-03): K124 Runde v4.9.0-r74 (H58 ungültig, Spencer-Schranken, Genauigkeitsgrenze, ebene Wellen).
 
 ---
 
