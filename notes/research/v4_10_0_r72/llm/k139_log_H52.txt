@@ -1,0 +1,17 @@
+Referenz (Grad 4 fest, N=5, reparierter Jet): Groesse (1176, 1344), Rang 963 (Luecke 5.8e-05|7.9e-13, Verh. 7e+07), kappa = 5.23e-12, |rhs| = 2.2e+04
+   Projektion auf Grade [5]: 381 (Luecke 1.0e+00|1.0e-17, Verh. 1e+17)
+   [4 s]
+Positivkontrolle (alter Grad-4-Jet, N=5): Groesse (1176, 1344), Rang 963 (Luecke 5.8e-05|7.9e-13, Verh. 7e+07), kappa = 3.49e-03, |rhs| = 1.1e+04
+   Projektion auf Grade [5]: 381 (Luecke 1.0e+00|1.0e-17, Verh. 1e+17)
+   [4 s]
+E6 (Grad 5 fest): Groesse (1876, 2016), Rang 1515 (Luecke 4.6e-05|8.4e-13, Verh. 6e+07), kappa = 4.00e-03, |rhs| = 3.3e+06
+   Projektion auf Grade [6]: 501 (Luecke 1.0e+00|1.0e-17, Verh. 1e+17)
+   [7 s]
+E7 (Grad 5 fest): Groesse (4684, 4896), Rang 3778 (Luecke 4.7e-10|1.1e-12, Verh. 4e+02), kappa = 3.48e-03, |rhs| = 2.6e+07
+   Projektion auf Grade [6]: 481 (Luecke 7.5e-03|2.1e-06, Verh. 4e+03)
+   Projektion auf Grade [6, 7]: 1118 (Luecke 1.0e+00|1.0e-17, Verh. 1e+17)
+   [55 s]
+E8 (Grad 5 fest): Groesse (8689, 8856), Rang 6984 (Luecke 1.9e-10|9.7e-13, Verh. 2e+02), kappa = 2.39e-03, |rhs| = 2.2e+08
+   Projektion auf Grade [6]: 478 (Luecke 9.5e-07|1.4e-08, Verh. 7e+01)
+   Projektion auf Grade [6, 7]: 1083 (Luecke 5.4e-03|9.3e-06, Verh. 6e+02)
+   [367 s]
