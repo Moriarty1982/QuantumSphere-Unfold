@@ -1,0 +1,20 @@
+   Rang Symbol p=6: Luecke 1.5e-08|3.6e-15 (Verh. 4e+06)
+Hauptwinkel G6 (echt) gegen g'_6 (gespeichert): max sin = 4.4e-07  (dim 481 / 481)
+   Rang Symbol p=6: Luecke 1.5e-08|3.6e-15 (Verh. 4e+06)
+dim g''_6 = 477   (dim g'_6 = 481)
+   Rang Symbol p=7: Luecke 2.1e-08|3.7e-12 (Verh. 6e+03)
+dim g''_7 = 594   (dim g'_7 = 606)
+   Rang Symbol p=8: Luecke 6.3e-09|7.8e-12 (Verh. 8e+02)
+dim g''_8 = 723   (dim g'_8 = 745)
+   Rang Symbol p=9: Luecke 1.3e-08|1.3e-11 (Verh. 1e+03)
+dim g''_9 = 865   (dim g'_9 = 898)
+seed 1 p=6: dim g''^(k) = [477, 107, 12, 0], Summe 596, dim g''_7 = 594 -> kleiner (nicht involutiv); Luecken ['1e+07', '1e+07', '7e+14']
+seed 1 p=7: dim g''^(k) = [594, 118, 12, 0], Summe 724, dim g''_8 = 723 -> kleiner (nicht involutiv); Luecken ['2e+03', '5e+05', '8e+14']
+seed 1 p=8: dim g''^(k) = [723, 130, 12, 0], Summe 865, dim g''_9 = 865 -> GLEICH (involutiv); Luecken ['1e+03', '2e+05', '9e+14']
+seed 2 p=6: dim g''^(k) = [477, 107, 12, 0], Summe 596, dim g''_7 = 594 -> kleiner (nicht involutiv); Luecken ['1e+07', '9e+06', '6e+15']
+seed 2 p=7: dim g''^(k) = [594, 118, 12, 0], Summe 724, dim g''_8 = 723 -> kleiner (nicht involutiv); Luecken ['7e+04', '4e+05', '6e+15']
+seed 2 p=8: dim g''^(k) = [723, 130, 12, 0], Summe 865, dim g''_9 = 865 -> GLEICH (involutiv); Luecken ['8e+03', '2e+04', '6e+15']
+seed 3 p=6: dim g''^(k) = [477, 107, 12, 0], Summe 596, dim g''_7 = 594 -> kleiner (nicht involutiv); Luecken ['5e+07', '2e+08', '4e+15']
+seed 3 p=7: dim g''^(k) = [594, 118, 12, 0], Summe 724, dim g''_8 = 723 -> kleiner (nicht involutiv); Luecken ['3e+04', '4e+06', '4e+15']
+seed 3 p=8: dim g''^(k) = [723, 130, 12, 0], Summe 865, dim g''_9 = 865 -> GLEICH (involutiv); Luecken ['4e+03', '1e+05', '4e+15']
+kleinstes Lueckenverhaeltnis: 8e+02
