@@ -4,7 +4,7 @@ Werkzeugunabhängig. Das Modell ist das feste Vergleichsmodell der Sondenfelder 
 
 ## Regeln zuerst
 - Jeder Test mit Entscheidungskriterium wird vorher als `llm/Vorab_Notiz_HNN_*.md` festgeschrieben und committet; der
-  Zeitstempel zählt. Zuletzt vergeben ist H53.
+  Zeitstempel zählt. Zuletzt vergeben ist H54.
 - Erkundungen ohne Vorab-Notiz werden offen als „Erkundung“ geführt.
 - Alles betrifft nur das Vergleichsmodell, nicht das QSC-Modell selbst. OP5 bleibt offen.
 - Schwere Rechnungen (Jacobi-Matrizen, SVDs großer Symbole) im Hintergrund oder als eigenständigen Auftrag laufen lassen
@@ -67,7 +67,13 @@ Auf GitHub unter `notes/research/v4_10_0_r71/llm/`, lokal unter `llm/`.
   - Über dem 4-Jet bis Grad 7 (F₇) stimmen die Fasern sauber mit g' überein (371, 481).
   - Mit Grad 8 (F₈) fällt P₅₆ von 852 auf 848: möglicherweise 4 versteckte Bedingungen an 6-Jets (passt zu
     H^{5,2} = 4). Das liegt aber auf der Fehlerhöhe der Grad-3-Linearisierung (1e-9).
-- Nächster Schritt: Grad-3-Linearisierung genauer machen, dann H54 (4 Bedingungen an 6-Jets ja/nein) mit Vorab-Notiz.
+- **Spencer (k141, Erkundung):** H^{4,2}(g') = 0, H^{5,2}(g') = 4 (wie ungeeicht). Höchstens 4 versteckte Bedingungen
+  an 6-Jets möglich.
+- **H54 (ungültig, Kriterium in sich unvereinbar):** Weyl-Argument mit gemessenen Fehlernormen (reduziert 7e-13, voll
+  5e-9) gibt P₅₆ ≤ 848, mit Spencer P₅₆ = 848. Inhaltlich also genau 4 versteckte Bedingungen, formal unbestätigt.
+  B vom Grad 3 geht nicht in F₈ ein, nur A vom Grad 3.
+- Nächster Schritt: H55 an einem anderen Grundpunkt (neue Daten), dann die 4 Bedingungen explizit bestimmen und den
+  Cartan-Test wiederholen.
 - Fallstrick: Der Cloud-Container wird bei Untätigkeit zurückgesetzt; lange Läufe in Schritte unter 10 Minuten teilen
   und Zwischenergebnisse speichern. Volle SVD von 10⁴ × 10⁴ sprengt 8 GB, nur Singulärwerte rechnen.
 
