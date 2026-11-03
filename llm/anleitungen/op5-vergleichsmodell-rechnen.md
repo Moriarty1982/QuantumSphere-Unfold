@@ -92,6 +92,8 @@ Auf GitHub unter `notes/research/v4_10_0_r71/llm/`, lokal unter `llm/`.
   Ursache strukturell: J allein ist gut konditioniert (Lücke 3e10); Ω und die vier Bedingungen sind als Zeilen fast von J
   abhängig (Gewicht ~1e-8), weil sie nur auf Lichtkegel/Ebenen wirken. Weiter nur mit Mehrgenauigkeit der ganzen Kette
   oder Umformulierung auf der charakteristischen Menge.
+- **Ebene Wellen (k152, Erkundung):** Kegelwellen spannen g'_p nicht auf (115, 184, 267, 364, 475 statt 117 … 481);
+  Modul nicht reduziert, einfacher Wellenansatz trägt nicht.
 - (Früherer Plan:) Fortsetzung über einem Jet, der die vier Bedingungen erfüllt, mit Gleichungen bis Grad 9/10;
   braucht stufenweise Elimination (12 000–16 000 Spalten sprengen 8 GB). Kriterien künftig an Weyl-Abständen
   (≥ 100-fach) statt an fester Lückenschwelle 1e4 festmachen.
