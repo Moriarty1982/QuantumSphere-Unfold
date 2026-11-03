@@ -6,7 +6,14 @@
 \usepackage{lmodern}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}[proposition]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[proposition]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[proposition]{Remark}
 \newcommand{\HH}{\mathbb H}
 \newcommand{\OO}{\mathbb O}
 
@@ -28,13 +35,8 @@
 % ~2 pp. Conjecture: matter, light and a tachyon sector are one object in three frames. Marked as conjecture.
 % State up front: no derivation of physics from it is claimed; Sec. 8 lists what does not follow.
 
-\section{The biquaternion kernel, the involution and the compensator}\label{sec:kernel}
-% ~5 pp. def:biquaternion, prop:compensator; norm q\bar q and sector rule (v4.8.0-r06/r07);
-% tachyon map z -> iz (v4.9.0-r28); proofs in full. QAM rows 1-4 (App. A).
-
-\section{Triples, the Hopf cascade, octonions and the compensator matrix}\label{sec:octonions}
-% ~5 pp. thm:hopf (S^7 label corrected, r70), three meanings of "triple" (r37), sec:millennium-hc,
-% thm:hc-spectral-projector; names: compensator matrix (r75/r76). QAM row 5.
+\input{sec2_kernel}
+\input{sec3_structures}
 
 \section{One generation from \texorpdfstring{$\mathbb C\otimes\HH\otimes\OO$}{C x H x O}}\label{sec:generation}
 % ~6 pp. r34, r35, r41-r43; conditional on named choices; comparison with Dixon, Furey, Gresnigt. QAM row 6.
@@ -65,6 +67,10 @@
 \begin{thebibliography}{9}
 \bibitem{companion} M.~Brendecke, \emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding},
 Zenodo, concept DOI \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}.
+\bibitem{bialynicki} I.~Bialynicki-Birula, Photon wave function, \emph{Prog.\ Opt.} \textbf{36} (1996) 245--294.
+\bibitem{baez} J.~C.~Baez, The octonions, \emph{Bull.\ Amer.\ Math.\ Soc.} \textbf{39} (2002) 145--205.
+\bibitem{hopf1931} H.~Hopf, \"Uber die Abbildungen der dreidimensionalen Sph\"are auf die Kugelfl\"ache, \emph{Math.\ Ann.} \textbf{104} (1931) 637--665.
+\bibitem{hopf1935} H.~Hopf, \"Uber die Abbildungen von Sph\"aren auf Sph\"aren niedrigerer Dimension, \emph{Fund.\ Math.} \textbf{25} (1935) 427--440.
 % TODO: Dixon; Furey; Gresnigt; Koide; Brannen; Ashtekar--Baez--Corichi--Krasnov; Domagala--Lewandowski; Meissner; Cartan--Kaehler.
 \end{thebibliography}
 \end{document}

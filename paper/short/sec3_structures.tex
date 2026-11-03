@@ -1,0 +1,126 @@
+\section{Triples, the Hopf cascade, octonions and the compensator matrix}\label{sec:octonions}
+
+The kernel of Section~\ref{sec:kernel} is the first of several layers.  This section states the structures that the Companion
+builds on top of it, and separates what is classical mathematics from what is identification.
+
+\subsection{Three meanings of ``triple''}
+
+The word \emph{triple} (German \emph{Triole}) names three different structures in the Companion (layer v4.9.0-r37).  Several
+errors found in earlier versions came from identifying them.
+\begin{enumerate}[label=(\roman*)]
+\item The \emph{frame triple}: matter, light and tachyon as three readings of one object, with light as the fix-sector of the
+exchange of the other two (Proposition~\ref{prop:duality}).
+\item The \emph{kernel triple}: three kernels of equal modulus at \(120^\circ\), \(z=c(1,\omega,\omega^2)\), which is the centred
+null configuration of Lemma~\ref{lem:triple}.  Inside the octonions with one imaginary unit fixed, such a \(\mathbb Z_3\) is a colour
+rotation (layer v4.9.0-r36).
+\item The \emph{slot triple}: the three arguments of the triality form \(t(x,y,z)=\operatorname{Re}((xy)z)\) on \(\OO^3\).
+\end{enumerate}
+
+\begin{proposition}[Triality]\label{prop:triality}
+Let \(\mathfrak g=\{(A,B,C)\in\mathfrak{so}(8)^3:\ t(Ax,y,z)+t(x,By,z)+t(x,y,Cz)=0\}\) and \(\tau(x,y,z)=(y,z,x)\).  Then
+\(\dim\mathfrak g=28\), each projection \(\mathfrak g\to\mathfrak{so}(8)\) is an isomorphism, and the three slot representations are
+the three inequivalent eight-dimensional representations of \(\mathrm{Spin}(8)\).  The shift \(\tau\) preserves \(t\) and induces an
+outer automorphism of order three; its fixed elements \((A,A,A)\) form \(\operatorname{Der}(\OO)=\mathfrak g_2\), and those that
+also annihilate \(e_7\) form \(\mathfrak{su}(3)\).
+\end{proposition}
+
+\begin{proof}
+This is the classical triality of \(\mathrm{Spin}(8)\)~\cite{baez}.  The invariance \(t(x,y,z)=t(y,z,x)\) follows from
+\(\operatorname{Re}((xy)z)=\operatorname{Re}(x(yz))\) and \(\operatorname{Re}(ab)=\operatorname{Re}(ba)\).  The dimensions were also checked by
+solving the linear conditions numerically (layer v4.9.0-r37).
+\end{proof}
+
+In this picture a generation index is what the slot shift permutes and colour is what it fixes: orbit and fixed group of one
+motion.  That the three slots \emph{are} the three physical generations is not shown.  Nor does the structure forbid a fourth
+generation; it only excludes a fourth inequivalent eight-dimensional representation (\(\operatorname{Out}(\mathrm{Spin}(8))=S_3\)).
+
+\subsection{The Hopf cascade}
+
+The three classical Hopf fibrations~\cite{hopf1931,hopf1935}
+\[
+S^1\to S^3\to S^2=\mathbb CP^1,\qquad
+S^3\to S^7\to S^4=\HH P^1,\qquad
+S^7\to S^{15}\to S^8=\OO P^1
+\]
+organize the layers of the Companion.  The conjectural identification is: the base \(S^2\) is the light layer (Weyl spinors), \(S^4\)
+the matter layer (Dirac spinors), and \(S^8\) the layer of the three generations (octonionic spinors), with the fibres
+\(S^1\cong U(1)\) and \(S^3\cong SU(2)\) as gauge groups.
+
+Two points of this reading are now fixed by proof, and two corrections are recorded.
+\begin{itemize}
+\item In Reading~B the directions of light-like kernels form exactly \(\mathbb CP^1\) (Proposition~\ref{prop:nullcone}).  So the
+first base is not an analogy: it is the projectivized null cone of the kernel.
+\item A normalized spinor \(\psi\) is a qubit; its Bloch vector is the Hopf image \(S^3\to S^2\), and
+\(k(\psi)=(|\psi|^2,\psi^\dagger\sigma\psi)\) is a light-like four-vector.  Every future time-like vector is a sum
+\(k(\psi_a)+k(\psi_b)\) (layer v4.8.0-r06).  This matches single spinors as light-like and pairs as massive readouts; it does not
+derive space-time points.
+\item The fibre \(S^7\) is not a group.  \(G_2\) is the automorphism group of \(\OO\), and \(SU(3)\) the stabilizer of an imaginary
+unit; an earlier annotation of \(S^7\) as a group containing \(G_2\) was wrong (4.10 consolidation).
+\item The chain \(S^{15}\to S^8\to S^4\to S^2\) is not a composition of Hopf maps (layer v4.8.0-r09).  The three fibrations stand
+side by side; a cascade operator that runs through all three is a separate assumption.
+\end{itemize}
+
+\subsection{The compensator matrix}
+
+The Companion asks for one operator that carries an object through all layers and contains the compensator.  It was called
+the Millennium matrix; since layers v4.9.0-r75/r76 it is called the \emph{compensator matrix} \(\mathcal M_{16}\).  What the
+Companion actually requires of it are the following identities on a common carrier.
+
+\begin{definition}[Compensator-matrix conditions]\label{def:cm}
+Operators \(\mathcal J,\mathcal C,\mathcal M\) on a real or complex vector space satisfy the \emph{compensator-matrix conditions} if
+\[
+\mathcal J^2=1,\qquad \mathcal C^2=\mathcal C,\qquad
+\mathcal M\mathcal J=\mathcal J\mathcal M,\qquad \mathcal M\mathcal C=\mathcal C\mathcal M .
+\]
+\end{definition}
+
+The Companion states that under these conditions \(\mathcal C\) is the spectral projector of \(\mathcal M\) onto its closure-stable
+eigenspace.  Commutation alone does not give this: \(M=\operatorname{diag}(1,2,3)\) commutes with \(C=\operatorname{diag}(1,1,0)\)
+without being scalar on \(\operatorname{im}C\), and \(M=\operatorname{diag}(2,2,3)\), \(C=\operatorname{diag}(1,0,0)\) shows that even
+scalar action misses part of the eigenspace.  A correct statement needs two further hypotheses:
+
+\begin{proposition}[Conditional spectral identification]\label{prop:spectral}
+Let \(M\) be a bounded self-adjoint operator on a complex Hilbert space and \(C\neq0\) an orthogonal projector with
+\[
+MC=CM=\lambda_0C\quad\text{and}\quad\ker(M-\lambda_0)\cap\ker C=\{0\}
+\]
+for some real \(\lambda_0\).  Then \(\operatorname{im}C=\ker(M-\lambda_0)\), and \(C\) is the orthogonal eigenprojection of \(M\) for
+\(\lambda_0\).
+\end{proposition}
+
+\begin{proof}
+\(MC=\lambda_0C\) gives \(\operatorname{im}C\subset\ker(M-\lambda_0)\).  If \(Mx=\lambda_0x\), then \((1-C)x\) lies in
+\(\ker(M-\lambda_0)\) by commutation and in \(\ker C\), hence vanishes, so \(x=Cx\).
+\end{proof}
+
+The hypotheses are assumptions, not consequences of the kernel.  The only place where the conditions have been solved
+completely is the doublet of Proposition~\ref{prop:doublet}:
+
+\begin{proposition}[Compensator matrix on the doublet]\label{prop:cm-doublet}
+With \(\mathcal J=\sigma_x\) and \(\mathcal C=C_{\rm HC}\) acting on \(F=[\,E\mid B\,]\) from the right, the real \(2\times2\) matrices
+satisfying Definition~\ref{def:cm} are exactly
+\[
+M=\lambda_+C_{\rm HC}+\lambda_-A,\qquad \lambda_\pm\in\mathbb R .
+\]
+For \(\lambda_+\neq\lambda_-\), \(C_{\rm HC}\) is the spectral projector of \(M\) for \(\lambda_+\).  The members of determinant one are
+\(e^{\theta\sigma_x}=e^{\theta}C_{\rm HC}+e^{-\theta}A\); they preserve \(\operatorname{Re}s=E^2-B^2\).  Spatial rotations (acting from the
+left) commute with all of them.  Boosts and duality rotations other than by \(0\) and \(\pi\) violate the conditions.
+\end{proposition}
+
+\begin{proof}
+\(M\sigma_x=\sigma_xM\) is a linear condition whose solutions are spanned by \(1\) and \(\sigma_x\), equivalently by
+\(C_{\rm HC}\) and \(A\).  \(R_\alpha\) commutes with \(\sigma_x\) only for \(\alpha\in\{0,\pi\}\), and a boost couples \(E\) and \(B\)
+through cross products and is not of the form \(F\mapsto LFM\) (layers v4.9.0-r04, r05).
+\end{proof}
+
+On the doublet the compensator matrix can therefore only weight the two ports of the compensator; it is not the Lorentz transport
+of the kernel.  This restriction is called the \emph{port-weighting matrix}.  The full \(\mathcal M_{16}\) of the Companion, with
+its index \(16\) and its decomposition into four layer terms, has no realization so far.  One partial realization exists on
+\(\mathbb C\otimes\HH\otimes\OO\): there a compensator of the same form, \(C_{\rm ch}=\tfrac12(1+J)\) with \(J=iL_{e_7}\), acts as the
+chirality projector of one generation (Section~\ref{sec:generation}).  That one generation with a right-handed neutrino has \(16\)
+Weyl states is recorded, not interpreted.
+
+\medskip\noindent\emph{Status.}  Propositions~\ref{prop:triality}, \ref{prop:spectral} and \ref{prop:cm-doublet} are proved; the
+first is classical.  The identification of the Hopf bases with light, matter and generations is a conjecture, proved only for the
+first base in the sense of Proposition~\ref{prop:nullcone}.  The compensator matrix is defined by conditions; a realization beyond
+the doublet and the chirality projector is open.

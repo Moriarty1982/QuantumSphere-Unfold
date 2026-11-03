@@ -1,0 +1,192 @@
+\section{The biquaternion kernel, the involution and the compensator}\label{sec:kernel}
+
+This section collects what is proved about the basic object.  The results are elementary; they are stated with proofs
+because the rest of the paper rests on them, and because an earlier version of the Companion read the kernel wrongly
+(Remark~\ref{rem:signature}).  Layer numbers refer to the research rounds of the Companion~\cite{companion}.
+
+\subsection{The kernel and its natural norm}
+
+\begin{definition}[Biquaternion kernel]\label{def:kernel}
+A \emph{kernel} is an element
+\[
+q = it\,\mathbf 1 + z_1e_1+z_2e_2+z_3e_3 \;\in\; \mathbb C\otimes_{\mathbb R}\HH,
+\qquad t\in\mathbb R,\quad z=(z_1,z_2,z_3)\in\mathbb C^3,
+\]
+where \(e_1,e_2,e_3=e_1e_2\) are the imaginary quaternion units and \(i\) is the complex unit, which commutes with them.
+The three coordinates \(z_k\) are called the \emph{kernels} \(K_1,K_2,K_3\).
+\end{definition}
+
+Let \(\bar q\) denote quaternion conjugation (\(e_k\mapsto-e_k\)) \emph{without} complex conjugation.
+
+\begin{proposition}[Natural norm]\label{prop:norm}
+The map \(N(q):=q\bar q\) takes values in \(\mathbb C\), is multiplicative, \(N(pq)=N(p)N(q)\), and
+\[
+N(q)=-t^2+s(z),\qquad s(z):=z_1^2+z_2^2+z_3^2 .
+\]
+\end{proposition}
+
+\begin{proof}
+The coefficients commute with the units, so the vector part of \(q\bar q\) cancels and \(e_k\bar e_k=1\) leaves
+\((it)^2+\sum_kz_k^2\).  Multiplicativity is inherited from \(\HH\), since \(\overline{pq}=\bar q\,\bar p\) holds for the
+complexified conjugation as well.
+\end{proof}
+
+\begin{remark}[The Hermitian norm has the wrong signature]\label{rem:signature}
+The Companion originally used \(|q|^2=-t^2+\sum_k|z_k|^2\) and read it as a Minkowski metric.  As a real quadratic form in
+\((t,\operatorname{Re}z,\operatorname{Im}z)\) it has signature \((1,6)\), and conjugation \(q\mapsto uqu^{-1}\) by real
+quaternions acts by \(SO(3)\) on \(\operatorname{Re}z\) and \(\operatorname{Im}z\) separately, without boosts (layer
+v4.8.0-r06).  The reading below replaces it.
+\end{remark}
+
+\subsection{The Lorentz group on the kernels}
+
+\begin{proposition}[Reading B]\label{prop:readingB}
+For \(u\in\mathbb C\otimes\HH\) with \(N(u)=1\), the map \(q\mapsto uqu^{-1}\) fixes \(t\) and acts on \(z\) by an element of
+\(SO(3,\mathbb C)\); every element of \(SO(3,\mathbb C)\) arises.  Since \(SO(3,\mathbb C)\cong PSL(2,\mathbb C)\cong
+SO^+(1,3)\), the kernels carry the proper orthochronous Lorentz group, with invariant \(s(z)\).
+\end{proposition}
+
+\begin{proof}
+The unit group \(\{N(u)=1\}\) of \(\mathbb C\otimes\HH\cong M_2(\mathbb C)\) is \(SL(2,\mathbb C)\).  Conjugation fixes the scalar
+part and preserves the complex three-dimensional space of pure biquaternions together with the restriction of \(N\), which is
+\(s\).  This gives the double cover \(SL(2,\mathbb C)\to SO(3,\mathbb C)\).
+\end{proof}
+
+Writing \(z=E+iB\) with \(E,B\in\mathbb R^3\) identifies \(z\) with the Riemann--Silberstein vector of an electromagnetic
+field~\cite{bialynicki}, and
+\[
+s=E^2-B^2+2i\,E\!\cdot\!B
+\]
+collects the two field invariants.  This is the \emph{working reading} of the kernel (``Reading~B''), adopted by the author
+in layer v4.8.0-r06.  In it the scalar \(t\) is an invariant parameter, not a time coordinate; its role is open.
+
+\begin{proposition}[Orbits]\label{prop:orbits}
+The \(SO(3,\mathbb C)\)-orbits in \(\mathbb C^3\) are the level sets \(\{s=c\}\) for \(c\neq0\), the punctured null cone
+\(\{s=0\}\setminus\{0\}\), and \(\{0\}\).
+\end{proposition}
+
+\begin{proof}
+For \(s(z)=c\neq0\), the vector \(z/\sqrt c\) can be completed to a complex-orthonormal basis of determinant one, and the
+rotation taking it to \(e_1\) maps \(z\) to \((\sqrt c,0,0)\).  For null vectors use Proposition~\ref{prop:nullcone}: the
+spinor map is equivariant and \(SL(2,\mathbb C)\) acts transitively on \(\mathbb C^2\setminus\{0\}\).
+\end{proof}
+
+\subsection{The triple as a null configuration}
+
+The starting point of the project was a triple of equal kernels at \(120^\circ\).  In Reading~B it has an invariant meaning.
+
+\begin{lemma}[Triple lemma]\label{lem:triple}
+For \(z\in\mathbb C^3\), with \(\omega=e^{2\pi i/3}\),
+\[
+z_1+z_2+z_3=0\ \text{ and }\ s(z)=0
+\quad\Longleftrightarrow\quad
+z=c\,(1,\omega,\omega^2)\ \text{up to order},\ c\in\mathbb C .
+\]
+\end{lemma}
+
+\begin{proof}
+With the elementary symmetric functions \(\varepsilon_1,\varepsilon_2,\varepsilon_3\) of the \(z_k\) one has
+\(s=\varepsilon_1^2-2\varepsilon_2\).  So \(\varepsilon_1=s=0\) gives \(\varepsilon_2=0\), and the \(z_k\) are the roots of
+\(\lambda^3-\varepsilon_3\), the three cube roots of \(\varepsilon_3\).  Conversely \(1+\omega+\omega^2=0=1+\omega^2+\omega^4\).
+\end{proof}
+
+The symmetric triple is therefore not only a phase condition: it is the Lorentz-invariant null condition together with
+centring.  The null cone itself is classical:
+
+\begin{proposition}[Null cone and spinors]\label{prop:nullcone}
+For \(\psi\in\mathbb C^2\) put \(z(\psi)=(\psi_1^2-\psi_2^2,\;i(\psi_1^2+\psi_2^2),\;-2\psi_1\psi_2)\).  Then \(s(z(\psi))=0\),
+every non-zero null vector has exactly the two preimages \(\pm\psi\), the map intertwines \(SL(2,\mathbb C)\) on \(\psi\) with
+\(SO(3,\mathbb C)\) on \(z\), and the projectivized null cone is a smooth conic in \(\mathbb CP^2\), isomorphic to
+\(\mathbb CP^1\cong S^2\).
+\end{proposition}
+
+\begin{proof}
+With \(a=\psi_1^2\), \(b=\psi_2^2\): \(s=(a-b)^2-(a+b)^2+4ab=0\).  For null \(z\), \(\psi_1^2=\tfrac12(z_1-iz_2)\) and
+\(\psi_2^2=-\tfrac12(z_1+iz_2)\), and \(z_3^2=4\psi_1^2\psi_2^2\) fixes the relative sign.  The conic is the Veronese image of
+\(\mathbb CP^1\).
+\end{proof}
+
+\subsection{Sectors and the duality rotation}
+
+\begin{definition}[Sectors; working assignment]\label{def:sectors}
+A kernel with \(s(z)>0\) is called of \emph{matter type}, with \(s(z)<0\) of \emph{tachyon type}, and with \(s(z)=0\)
+\emph{light-like}.
+\end{definition}
+
+This assignment is the author's working choice (layer v4.8.0-r07).  The results below are stated for the sign of \(s\) and do
+not depend on it.  That the sectors \emph{are} matter, tachyon and light is the starting conjecture, not a result.
+
+The \emph{duality rotation} \(z\mapsto e^{i\alpha}z\) rotates \(E\) into \(B\) and multiplies \(s\) by \(e^{2i\alpha}\).  The
+quarter turn \(z\mapsto iz\) maps \(s\mapsto-s\); it exchanges the two massive types, fixes the null cone, and is the map that
+takes a matter kernel to its tachyon image (layer v4.9.0-r28).
+
+\begin{proposition}[Duality angle]\label{prop:duality}
+Every \(z\) with \(s(z)\neq0\) can be written as \(z=e^{i\alpha}z_m\) with \(s(z_m)=|s(z)|>0\); here
+\(\alpha=\tfrac12\arg s(z)\) is unique modulo \(\pi\) and \(z_m\) is unique up to sign.  Under
+\(SO(3,\mathbb C)\times U(1)_{\rm dual}\), acting by \(z\mapsto e^{i\alpha}Rz\), the orbits in \(\mathbb C^3\setminus\{0\}\) are
+the shells \(\{|s|=r\}\), \(r>0\), and the punctured null cone.
+\end{proposition}
+
+\begin{proof}
+\(s(e^{i\alpha}z_m)=e^{2i\alpha}s(z_m)\), so \(s(z_m)\) is real positive exactly when \(2\alpha\equiv\arg s\pmod{2\pi}\).  The
+orbit statement follows from Proposition~\ref{prop:orbits}, since the duality circle runs through all values of \(s\) of fixed
+modulus and fixes \(s=0\).
+\end{proof}
+
+Matter-type and tachyon-type kernels of equal \(|s|\) thus lie in one orbit, related by a quarter turn, and the light-like
+kernels form the only orbit fixed by the whole duality circle.  This is the precise form that the starting conjecture --- one
+object in three frames --- takes on the kernel: two massive types exchanged by duality, and a duality-invariant fix-sector.
+Whether the duality angle is physical or a gauge freedom is not decided.
+
+\subsection{The involution and the compensator}
+
+\begin{definition}[Involution and compensator]\label{def:compensator}
+Let \(J_B z:=i\bar z\), with complex conjugation of the components.  Then \(J_B\) is antilinear and \(J_B^2=1\).  The
+\emph{Heisenberg compensator} and its partner are
+\[
+C:=\tfrac12(1+J_B),\qquad A:=\tfrac12(1-J_B).
+\]
+\end{definition}
+
+\begin{proposition}[Two ports]\label{prop:ports}
+\(C\) and \(A\) are real-linear, \(C+A=1\), \(C^2=C\), \(A^2=A\), \(CA=AC=0\), and for the real inner product
+\(\operatorname{Re}\langle Cf,Af\rangle=0\), so \(|Cf|^2+|Af|^2=|f|^2\).  Moreover \(A(f)=-i\,C(if)\): the two ranges differ by
+a duality quarter turn.
+\end{proposition}
+
+\begin{proof}
+The algebraic identities follow from \(J_B^2=1\).  Since \(|J_Bf|=|f|\),
+\(\operatorname{Re}\langle Cf,Af\rangle=\tfrac14\operatorname{Re}\bigl(\langle J_Bf,f\rangle-\langle f,J_Bf\rangle\bigr)=0\), and the
+cross terms \(\pm\tfrac12\operatorname{Re}\langle f,J_Bf\rangle\) cancel in \(|Cf|^2+|Af|^2=\tfrac12(|f|^2+|J_Bf|^2)\).
+Finally \(C(if)=\tfrac12(if+J_B(if))=\tfrac12(if-iJ_Bf)=iA(f)\).
+\end{proof}
+
+The author's picture was a two-arm interferometer: one arm carries \(f\), the other \(J_Bf\), and the two output ports carry
+\(Cf\) and \(Af\) (layer v4.9.0-r03).  Since \(J_B\) is antilinear, \(C\) has no complex matrix.  It becomes an ordinary
+matrix on the real \emph{doublet} \(F=[\,E\mid B\,]\in\mathbb R^{3\times2}\):
+
+\begin{proposition}[Doublet form]\label{prop:doublet}
+On \(F\), acting from the right, \(J_B\) is \(\sigma_x\), the duality rotation by \(\alpha\) is the rotation \(R_\alpha^{\mathsf T}\),
+and complex conjugation is \(\sigma_z\); they generate \(O(2)\).  The compensator is the orthogonal projection
+\(C_{\rm HC}=\tfrac12(1+\sigma_x)\).  The Gram matrix \(G=F^{\mathsf T}F\) is
+\[
+G=u\,\mathbf 1+\tfrac12\bigl(\operatorname{Re}s\;\sigma_z+\operatorname{Im}s\;\sigma_x\bigr),\qquad
+u=\tfrac12(E^2+B^2),
+\]
+and with \(b=(\operatorname{Re}s,\operatorname{Im}s)/(2u)\) the normalized state \(\rho=G/\operatorname{tr}G\) lies in the unit disk.
+Matter-type fields have \(b_1>0\), tachyon-type \(b_1<0\), null fields \(b=0\).  \(J_B\) reflects \(b_1\), while the quarter
+turn \(z\mapsto iz\) reverses the whole vector \(b\).
+\end{proposition}
+
+\begin{proof}
+\(i(E-iB)=B+iE\) exchanges the columns; \(e^{i\alpha}(E+iB)\) rotates them.  \(G_{11}=E^2\), \(G_{22}=B^2\),
+\(G_{12}=E\cdot B\).  A duality rotation conjugates \(G\) by \(R_\alpha\), which turns the traceless part by \(2\alpha\).
+\end{proof}
+
+Both \(J_B\) and the quarter turn send matter-type to tachyon-type kernels; they differ on the second invariant
+\(\operatorname{Im}s=2E\cdot B\).  Three facts are worth stating plainly.  The compensator is a projection, not a dynamical
+law.  Its two ports are real and imaginary parts of the same field, not two independent sectors (Proposition~\ref{prop:ports}).
+And nothing in this section assigns a field equation to \(z\); it is kinematics on one point.
+
+\medskip\noindent\emph{Status.}  Propositions~\ref{prop:norm}--\ref{prop:doublet} and Lemma~\ref{lem:triple} are proved.
+Definition~\ref{def:sectors} is a working choice; its physical reading is the starting conjecture.  The role of \(t\) is open.
