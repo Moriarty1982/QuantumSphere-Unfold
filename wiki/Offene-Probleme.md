@@ -50,7 +50,7 @@ Lokal ist OP5 über eine Detektorschwelle geschlossen ($\mathrm{OP5}_{\mathrm{ef
 
 - **Genauigkeitsgrenze (r74):** Mit konsistenten Daten wird das erweiterte Symbol nach allem Anschein erst bei Ordnung 8 involutiv. Weitere versteckte Bedingungen (bis zu vier an siebten, drei an achten Ableitungen) sind nicht ausgeschlossen. Die Entscheidung scheitert an einer strukturellen Genauigkeitsgrenze: $\Omega$ und die vier Bedingungen sind fast Folgen der Grundgleichungen.
 
-**Nächster Schritt** im Vergleichssystem (r74): die ganze Rechenkette (Keim, Linearisierung, Elimination) mit höherer Genauigkeit wiederholen oder eine Umformulierung finden, die die Vielfachheiten des Symbolmoduls auf der charakteristischen Menge berücksichtigt; damit die möglichen weiteren Bedingungen an siebten und achten Ableitungen entscheiden.
+**Nächster Schritt** im Vergleichssystem (r74): die ganze Rechenkette (Keim, Linearisierung, Elimination) mit höherer Genauigkeit wiederholen oder eine Umformulierung finden, die die Vielfachheiten des Symbolmoduls auf der charakteristischen Menge berücksichtigt; damit die möglichen weiteren Bedingungen an siebten und achten Ableitungen entscheiden. Danach, nach der Literaturnotiz der OP5-Serie:
 1. polare Spinorvariablen (Fabbri) und Fierz-Rekonstruktion,
 2. Nebenbedingungsalgorithmus und formale Integrabilität,
 3. eine gekoppelte Coframe-Dynamik,
