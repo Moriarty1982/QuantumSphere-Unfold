@@ -4,7 +4,7 @@ Werkzeugunabhängig. Das Modell ist das feste Vergleichsmodell der Sondenfelder 
 
 ## Regeln zuerst
 - Jeder Test mit Entscheidungskriterium wird vorher als `llm/Vorab_Notiz_HNN_*.md` festgeschrieben und committet; der
-  Zeitstempel zählt. Zuletzt vergeben ist H54.
+  Zeitstempel zählt. Zuletzt vergeben ist H55.
 - Erkundungen ohne Vorab-Notiz werden offen als „Erkundung“ geführt.
 - Alles betrifft nur das Vergleichsmodell, nicht das QSC-Modell selbst. OP5 bleibt offen.
 - Schwere Rechnungen (Jacobi-Matrizen, SVDs großer Symbole) im Hintergrund oder als eigenständigen Auftrag laufen lassen
@@ -72,8 +72,11 @@ Auf GitHub unter `notes/research/v4_10_0_r71/llm/`, lokal unter `llm/`.
 - **H54 (ungültig, Kriterium in sich unvereinbar):** Weyl-Argument mit gemessenen Fehlernormen (reduziert 7e-13, voll
   5e-9) gibt P₅₆ ≤ 848, mit Spencer P₅₆ = 848. Inhaltlich also genau 4 versteckte Bedingungen, formal unbestätigt.
   B vom Grad 3 geht nicht in F₈ ein, nur A vom Grad 3.
-- Nächster Schritt: H55 an einem anderen Grundpunkt (neue Daten), dann die 4 Bedingungen explizit bestimmen und den
-  Cartan-Test wiederholen.
+- **H55 bestätigt (k143):** an einem zweiten 4-Jet (50 % entfernt) wieder P₅₆ = 852 (F₇) und 848 (F₈), Fehlerschranken
+  710- bzw. 1390-fach. Die reduzierte Matrix hängt nur vom Jet bis Grad 2 ab und ist an beiden Punkten gleich; neu ist
+  nur der Rang des vollen F₈. Das geeichte System ist bei Ordnung 6 nicht formal integrabel.
+- Nächster Schritt: die 4 Bedingungen ausdrücklich bestimmen (Linkskern-Kombinationen der Grad-7-Zeilen, die c₇ und c₈
+  eliminieren), ins System aufnehmen, Cartan-Test wiederholen; optional ein Punkt mit geändertem Jet bis Grad 3.
 - Fallstrick: Der Cloud-Container wird bei Untätigkeit zurückgesetzt; lange Läufe in Schritte unter 10 Minuten teilen
   und Zwischenergebnisse speichern. Volle SVD von 10⁴ × 10⁴ sprengt 8 GB, nur Singulärwerte rechnen.
 
