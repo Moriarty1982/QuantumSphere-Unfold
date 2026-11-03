@@ -104,8 +104,8 @@ In r25 wurden 15 Sackgassen archiviert.
 - **Konsistente Daten und Genauigkeitsgrenze (r74).** Mit $\Omega$ neu am reparierten Keim wird das erweiterte Symbol erstmals bei Ordnung 8 involutiv (H58, formal ungültig). Die Spencer-Kohomologie lässt bis zu vier weitere Bedingungen an siebten und drei an achten Ableitungen zu.
   - Die Grenze ist strukturell: $\Omega$ und die vier Bedingungen sind fast Folgen der Grundgleichungen. Stufenweise Elimination und ebene Wellen heben sie nicht auf.
 
-[Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Offene Probleme](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Offene-Probleme)
-
 ## Namen (r75)
 
 - **Kompensatormatrix statt Millennium-Matrix.** Die Matrix $\mathcal M_{16}$ heißt seit r75 Kompensatormatrix (Autorentscheidung). Nur der Name ändert sich; Symbol, Labels, das Kürzel MM und alle Aussagen bleiben.
+
+[Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Offene Probleme](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Offene-Probleme)
