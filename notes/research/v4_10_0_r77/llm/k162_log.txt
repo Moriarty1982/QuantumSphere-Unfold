@@ -1,0 +1,16 @@
+N6 2016 501  C 1368 501
+Singulaerwerte von C (relativ), kleinste 6 echte: [3.78e-17 3.61e-17 3.61e-17 3.13e-17 2.24e-17 1.04e-17]
+ker C: dim 477, Residuum 6e-45
+g''_6: dim 477
+g''_7: dim 594 (Luecke 6.0e-02|7.2e-15, Verh. 8e+12)
+g''_8: dim 723 (Luecke 9.7e-06|1.1e-14, Verh. 9e+08)
+so(Q): kleinste Singulaerwerte [3.7e-02 9.8e-17 6.6e-17 3.2e-17 1.7e-17 9.3e-18 2.9e-18]
+[  29 s] p=6: dim s_p 50 (Luecke 2.2e-16|1.7e-07, Verh. 7e+08); dim pi_A 1; innere (A=0) 49; Schnitt mit so(Q) 0
+     Gram-Werte um die Luecke: [1.2e-17 1.4e-17 1.5e-17 2.2e-16 1.7e-07 3.4e-07 9.3e-07 1.2e-06 1.8e-06
+ 3.3e-06]
+[  84 s] p=7: dim s_p 50 (Luecke 1.1e-16|2.0e-07, Verh. 2e+09); dim pi_A 1; innere (A=0) 49; Schnitt mit so(Q) 0
+     Gram-Werte um die Luecke: [1.5e-17 1.6e-17 1.8e-17 1.1e-16 2.0e-07 4.3e-07 1.2e-06 1.5e-06 2.1e-06
+ 3.7e-06]
+[ 195 s] p=8: dim s_p 50 (Luecke 1.5e-17|2.2e-07, Verh. 1e+10); dim pi_A 1; innere (A=0) 49; Schnitt mit so(Q) 0
+     Gram-Werte um die Luecke: [1.2e-17 1.2e-17 1.2e-17 1.5e-17 2.2e-07 5.0e-07 1.4e-06 1.6e-06 2.3e-06
+ 3.8e-06]

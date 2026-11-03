@@ -56,6 +56,12 @@ Zu H46: Eine Bestätigung würde die Kette r55–r60 prüfen, nicht die Lesart a
 | H56 | Das um die vier Bedingungen erweiterte Symbol wird bis Ordnung 8 involutiv | ungültig: ab Ordnung 8 Ränge ohne saubere Lücke; bei 6 nicht involutiv (r73) |
 | H57 | Wie H56 mit projizierten Bedingungen (nicht blind) | ungültig: bei Ordnung 8 nicht entscheidbar (723 oder 724); Genauigkeit reicht nicht (r73) |
 | H58 | Wie H56 mit konsistenten Daten am reparierten Keim (nicht blind) | ungültig: fünf Ränge knapp unter der Schwelle; Zahlen wie vorhergesagt, erstmals bei Ordnung 8 involutiv (r74) |
+| H59 | Keine weiteren versteckten Bedingungen auf 7- und 8-Jets (Fasern 594 und 723) | bestätigt: 594 und 723, Gegenprobe 477, Lücken ≥ 4·10⁵⁶, parallel auf GitHub-Runnern (r77) |
+| H60 | 6 reelle Polarisationen je Lichtrichtung im involutiven Symbol | bestätigt: 6 in allen 200 Richtungen bei Ordnung 6 bis 9, außerhalb des Kegels 0 (r77) |
+| H61 | Die 6 Moden sind Weyl-Moden gleicher Chiralität (naive Spin-Zuordnung) | widerlegt: weder unter i noch unter γ₅ noch unter der Helizität invariant (r77) |
+| H62 | Die Symmetrie-Algebra des Symbols enthält eine Lorentz-Algebra | widerlegt: nur Skalierung; bei festem Hintergrund strukturell erwartet (r77) |
+| H63 | Der dynamische Teil F ist lorentzsymmetrisch, die Brechung sitzt in G | widerlegt: schon F nicht (7 Raumzeit-Symmetrien, keine Lorentz-Algebra); mit G bleibt nur die Skalierung (r77) |
+| H64 | Die Konstruktion R ist koordinaten- und intern lorentzkovariant | bestätigt (zweiter Lauf, nicht blind): Residuen ≤ 4·10⁻¹⁰, Gegenprobe ohne Hintergrund-Transformation 0,26 (r77) |
 
 ## Erkundungen ohne Vorab-Notiz
 
