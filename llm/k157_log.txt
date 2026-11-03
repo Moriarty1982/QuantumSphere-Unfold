@@ -1,0 +1,13 @@
+[    1 s] Bloecke c8 gebaut 3840 3960
+[  473 s] c8: Rang 3171 (Luecke 3.6e-05|3.6e-15), Linkskern 834, Residuen ['2e-16', '4e-29', '1e-41', '3e-54', '1e-66']
+[  619 s] abgeleitete Zeilen D7 834
+[  631 s] D7 gespeichert
+[ 1591 s] c7: Rang 2274 (Luecke 7.7e-09|3.6e-15), Linkskern 1368, Residuen ['2e-16', '9e-26', '6e-35', '3e-44', '9e-52', '9e-52', '9e-52', '9e-52']
+[ 1693 s] abgeleitete Zeilen D6 1368
+[ 1777 s] Kern von [R5; G6]: dim 501 (Residuum 6e-67)
+[ 2129 s] Gram der abgeleiteten Bedingungen auf dem Kern, groesste 30 (relativ):
+[1.0e+00 8.6e-01 5.5e-01 5.5e-01 4.3e-01 3.6e-01 3.4e-01 2.6e-01 2.0e-01
+ 1.6e-01 1.5e-01 1.0e-01 9.8e-02 9.1e-02 7.2e-02 6.5e-02 5.7e-02 4.1e-02
+ 3.2e-02 2.9e-03 2.1e-03 1.7e-04 1.8e-07 5.1e-13 1.9e-71 2.9e-72 1.7e-72
+ 1.7e-72 1.7e-72 1.7e-72]
+[ 2137 s] gespeichert

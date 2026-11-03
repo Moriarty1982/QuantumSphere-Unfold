@@ -1,13 +1,15 @@
 """k154: Werkzeuge fuer die hochgenaue Rechnung (python-flint, 60 Stellen) auf Basis der Linearisierung aus k153.
 Blockaufbau der Fortsetzungssysteme aus den 32x24-Koeffizientenmatrizen von A, B (Taylor bis Grad 2) und der Eichreihe."""
-import math,pickle,itertools,numpy as np,flint
+import math,pickle,itertools,numpy as np,flint,mpmath as _mp
+_mp.mp.dps=160   # wichtig: sonst schreibt str(mpf) nur 15 Stellen (Fehler bis 3.11.2026, 18 Uhr)
 from pathlib import Path
-flint.ctx.dps=60
-here=Path(__file__).parent;W=here/'hp_work'
+import os
+flint.ctx.dps=int(os.environ.get('QS_DPS','60'))
+here=Path(__file__).parent;W=here/os.environ.get('QS_HPWORK','hp_work')
 arb,arb_mat=flint.arb,flint.arb_mat
 def mon(d): return [a for a in sorted({tuple(c.count(m) for m in range(4)) for c in itertools.combinations_with_replacement(range(4),d)},reverse=True)]
 fac=lambda a:math.prod(math.factorial(k) for k in a)
-def to_arb_mat(M): return arb_mat([[arb(str(v)) for v in row] for row in M])
+def to_arb_mat(M): return arb_mat([[arb(_mp.nstr(v,120) if isinstance(v,(_mp.mpf,_mp.mpc)) else str(v)) for v in row] for row in M])
 def load():
     mons,Ac,Bc=pickle.load(open(W/'AB_taylor2.pkl','rb'));Ix={a:i for i,a in enumerate(mons)}
     A={(mu,a):to_arb_mat(Ac[mu,Ix[a]]) for mu in range(4) for a in mons};B={a:to_arb_mat(Bc[Ix[a]]) for a in mons}
