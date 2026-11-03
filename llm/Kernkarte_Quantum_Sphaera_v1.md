@@ -2559,6 +2559,20 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **r74.4 (Erkundung):** ebene Wellen auf dem Kegel spannen g'_p nicht auf (Modul nicht reduziert).
 - R_chk = (1,0,0); Guards unverändert; OP5 offen. PR #54 gemergt als ef20775.
 
+### K125 Runde v4.9.0-r75: Millennium-Matrix heißt Kompensatormatrix (2026-11-03)
+
+`sec:v490-r75-compensator-matrix`, Snippet `llm/v490_r75_round.tex`, Patchliste `llm/revision_spec_v490_r75.py`.
+- **r75.1:** 𝓜₁₆ heißt compensator matrix (Kompensatormatrix); Symbol, Labels (`sec:millennium-hc`), Kürzel MM (MM/HC) bleiben; ältere Runden und Anhänge wörtlich.
+- **r75.2:** Hauptkorpus 27 Stellen (Nomenklatur, Sonden-Schließung, Strukturkern, HC-Hypothesen, Mastermodell inkl. Titel und Definition „formerly called the Millennium matrix“), GitHub zusätzlich native-operator-link, coupling-scale-candidate, PDF-Keywords; Literaturtitel „Third Millennium Edition“ unberührt.
+- R_chk = (1,0,0); Guards unverändert. PR #57 gemergt als f2eb14b.
+
+### K126 Runde v4.9.0-r76: Korrektur zu r75, früherer Name aus r05 (2026-11-03)
+
+`sec:v490-r76-name-correction`, Snippet `llm/v490_r76_round.tex`.
+- **r76.1:** r75 hatte übersehen, dass r05 (21.10.) 𝓜₁₆ bereits „layer-transport matrix“ genannt hatte (nur erklärt, Hauptkorpus nie geändert). Autor bestätigt nach Hinweis: Kompensatormatrix gilt und ersetzt layer-transport matrix (Grund: Erweiterung von C = ½(id + J), C als Spektralprojektor).
+- **r76.2:** port-weighting matrix (Einschränkung aufs (E, B)-Dublett, r05) bleibt; grenzt gegen die 2×2-Matrix des einzelnen Kompensators (r03) ab.
+- R_chk = (1,0,0); Guards unverändert.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2738,6 +2752,7 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - v13.9 (2026-11-03): K122 Runde v4.9.0-r72 (ϑ-Eichung, H51 bestätigt, H52–H54 ungültig, H^{5,2}(g') = 4, vier versteckte Bedingungen an 6-Jets nach allem Anschein).
 - v14.0 (2026-11-03): K123 Runde v4.9.0-r73 (H55 bestätigt, die vier Bedingungen bestimmt, H56/H57 ungültig).
 - v14.1 (2026-11-03): K124 Runde v4.9.0-r74 (H58 ungültig, Spencer-Schranken, Genauigkeitsgrenze, ebene Wellen).
+- v14.2 (2026-11-03): K125 Runde v4.9.0-r75 (Kompensatormatrix), K126 Runde v4.9.0-r76 (Korrektur: Name aus r05).
 
 ---
 
