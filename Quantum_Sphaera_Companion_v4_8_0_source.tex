@@ -46,7 +46,7 @@
  pdftitle={Quantum Sphaera Companion: A Structure-First Mathematical Unfolding},
  pdfauthor={Marc Brendecke},
  pdfsubject={v4.8.0 full-monolith release; Version DOI 10.5281/zenodo.23365244; Concept DOI 10.5281/zenodo.19210728; guarded effective/local scope},
- pdfkeywords={Quantum Sphaera, structure-first mathematics, QAM, MML, MMA, Heisenberg compensator, Millennium Matrix, exterior-mixed term extraction, finite classification, selector/leakage bounds, finite witness-fit lowering, C5 lowering iteration, C5 convergence collar decision, C4 leakage-source inventory, C4 split test, C5 third-step contraction, C4 bounded-seam absorption, C5 operator-admissibility, mixed seam resolver, C5 asymptotic-collar packaging, route-stable mixed-kernel normal form, ridge-front reentry normal form, valley overlap relay equation, photon-frame zero-clock probe, bounded readout, T2 scope boundary, two-sided structural tensor notation, guarded effective closure, no all-readout closure},
+ pdfkeywords={Quantum Sphaera, structure-first mathematics, QAM, MML, MMA, Heisenberg compensator, compensator matrix, exterior-mixed term extraction, finite classification, selector/leakage bounds, finite witness-fit lowering, C5 lowering iteration, C5 convergence collar decision, C4 leakage-source inventory, C4 split test, C5 third-step contraction, C4 bounded-seam absorption, C5 operator-admissibility, mixed seam resolver, C5 asymptotic-collar packaging, route-stable mixed-kernel normal form, ridge-front reentry normal form, valley overlap relay equation, photon-frame zero-clock probe, bounded readout, T2 scope boundary, two-sided structural tensor notation, guarded effective closure, no all-readout closure},
  pdfcreator={pdfLaTeX},
  pdfproducer={pdfLaTeX}
 }
@@ -4681,7 +4681,7 @@ The present theorem should be read as a conservative first step. It does not yet
  \item[$\mathcal{L}_{\mathrm{kin}}$] Kinetic term $\langle f,L_0 f\rangle$
  \item[$\mathcal{L}_{\mathrm{HC}}$] HC confinement term
  \item[$\mathcal{L}_{\mathrm{frame}}$] Frame term $\bsym^2\langle f,f\rangle$; source of $\Lambda_{\mathrm{obs}}$
- \item[$\mathcal{M}_{16}$] $16\times16$ Millennium matrix
+ \item[$\mathcal{M}_{16}$] $16\times16$ compensator matrix (formerly Millennium matrix)
  \item[$\hat P_{C_7}$] Meta-Septum closure projector
  \item[$\hat{\mathcal{R}}_\beta$] Shifted GUE pacer $\hat R_{\mathrm{GUE}}\,e^{i\pi\bsym}$
 \end{description}
@@ -4716,7 +4716,7 @@ The present theorem should be read as a conservative first step. It does not yet
 \mathsf{BRead}_{\mathrm{bounded}} & bounded readout surface & conservative declared-grammar readout obtained in the v4.6.0 release-final line\\
 \Theta^{\mathrm{all}} & all-readout demand & unrestricted family of readouts required for T2; not discharged by the bounded surface\\
 \mathfrak O_{\mathrm{all}}^{4.6.0} & all-readout obstruction & frozen scope-boundary register for the missing universal exterior selector, naturality family, and unrestricted collar slot\\
-\mathcal M_{\mathrm{bd}},\mathcal M_{\mathrm{ext}},\mathcal M_{\mathrm{mix}} & MM split & bounded, exterior, and mixed Millennium-matrix portions\\
+\mathcal M_{\mathrm{bd}},\mathcal M_{\mathrm{ext}},\mathcal M_{\mathrm{mix}} & MM split & bounded, exterior, and mixed compensator-matrix portions\\
 \mathcal H_{\mathrm{bd}},\mathcal H_{\mathrm{ext}},\mathcal H_{\mathrm{mix}} & HC split & bounded, exterior, and mixed Heisenberg-compensator portions\\
 \mathfrak E_{\mathrm{decl}} & declared field-equation template & structure-first reset template linking structural, HC, MM, QAM, and readout terms\\
 \bottomrule
@@ -7840,7 +7840,7 @@ character of the transport law.
 The Meta-Septum constraint requires the dynamics to be projected through
 $\hat P_{C_7}$, while the closure mismatch is stabilized by the
 compensator field $\mathcal H_C$.
-The Millennium matrix $\mathcal M_{16}$ contributes the internal
+The compensator matrix $\mathcal M_{16}$ contributes the internal
 septonic resonance structure, and the Yokamono sector contributes the
 triadic coupling term $g_Y\mathcal T$.
 Hence the displayed equation is the minimal local first-order extension
@@ -7971,7 +7971,7 @@ This section does not yet claim a derivation of Einstein's equations or
 of the Standard Model Lagrangian.
 It provides instead the first internally closed field architecture of
 the Sphaera probe sector: the Dirac probe, the Meta-Septum closure, the
-Millennium matrix, the Yokamono coupling, and the Heisenberg
+compensator matrix, the Yokamono coupling, and the Heisenberg
 compensator are now written as one coupled variational system.
 The next task is the explicit closing of the system, namely the concrete
 realization of $\Lambda[\mathcal M_{16},\hat P_{C_7}]$ and the direct
@@ -7997,7 +7997,7 @@ The local closure residue of the probe--closure system is defined by
  (\mathbf 1-\hat P_{C_7})\mathcal M_{16}\hat P_{C_7}
  + \hat P_{C_7}\mathcal M_{16}(\mathbf 1-\hat P_{C_7}).
 \]
-It measures the off-sector leakage of the Millennium matrix across the
+It measures the off-sector leakage of the compensator matrix across the
 Meta-Septum splitting.
 The field system is called \emph{closed} if and only if
 \[
@@ -8037,7 +8037,7 @@ The following statements are equivalent in the effective probe sector:
  \item $[\mathcal M_{16},\hat P_{C_7}]=0$.
  \item $\mathcal M_{16}$ preserves the $C_7$-sector and its complement.
 \end{enumerate}
-In particular, exact closure means that the Millennium matrix becomes
+In particular, exact closure means that the compensator matrix becomes
 block-diagonal with respect to the decomposition
 \[
  \mathcal H_{\mathrm{sept}}
@@ -8090,7 +8090,7 @@ where it measures and suppresses leakage out of the stable sector.
 \begin{remark}[Interpretation of the closure step]
 The previous section produced a coupled field architecture.
 The present section closes it in the minimal algebraic sense:
-physical states stay in the $C_7$-sector, the Millennium matrix may not
+physical states stay in the $C_7$-sector, the compensator matrix may not
 mix stable and unstable blocks, and the compensator becomes an explicit
 positive residue functional rather than a symbolic placeholder.
 This does not yet derive gravitation or the Standard Model, but it does
@@ -8726,7 +8726,7 @@ subject to the following identities:
  \item \textbf{Cascade composition:}
  $\hat K^\mu{}_{\nu}=(\Pi_0\Pi_1\cdots\Pi_{N-1})^\mu{}_{\nu}$.
  \item \textbf{$\mathcal M$-admissibility (intertwining):}
- The Millennium matrix $\mathcal M^\mu{}_{\nu}$ is required to be
+ The compensator matrix $\mathcal M^\mu{}_{\nu}$ is required to be
  \emph{admissible} in the sense that it preserves the algebraic
  structure of the kernel:
  \[
@@ -8746,7 +8746,7 @@ subject to the following identities:
 The tensor $\mathcal J$ represents the involutive dual/frame symmetry,
 $\mathcal C$ represents the compensator projection, the $\Pi_n$ represent
 cascade projections between adjacent strata, and $\mathcal M$ is the
-Millennium matrix as an admissible structure-preserving converter between
+compensator matrix as an admissible structure-preserving converter between
 admissible layers. Condition~(T4) is the defining admissibility condition
 on $\mathcal M$; it is not derivable from (T1)--(T3) alone, but is imposed
 as the minimal requirement for $\mathcal M$ to qualify as a
@@ -8821,7 +8821,7 @@ established closure at higher algebraic level:
 $\mathrm{SeptinionReadable}(x)$.
 \end{proof}
 
-\begin{proposition}[Tensorial intertwining conditions for the Millennium matrix]
+\begin{proposition}[Tensorial intertwining conditions for the compensator matrix]
 \label{prop:tensorial-intertwining-m}
 Every admissible tensor realization in the sense of
 Definition~\ref{def:tensor-structural-kernel} satisfies:
@@ -9119,7 +9119,7 @@ structural body under compensator projection. Hence admissibility is preserved.
 
 \begin{definition}[Spectral decomposition of the state space]
 \label{def:spectral-decomposition-M}
-Let $\mathcal{M}$ denote the Millennium matrix acting on the admissible state
+Let $\mathcal{M}$ denote the compensator matrix acting on the admissible state
 space $\mathcal{S}$. A \emph{spectral decomposition of $\mathcal{S}$ under
 $\mathcal{M}$} is an orthogonal direct sum
 \[
@@ -9149,7 +9149,7 @@ Assume the Sphaera self-traversal condition of Theorem~\ref{thm:fractal}:
 the cascade operator $\hat{K}$ transports the null axis $L_n$ of each
 stratum $S_n$ to the null axis $L_{n-1}$ of the preceding stratum,
 carrying the same structural content without generating new independent
-directions. Then the Millennium matrix $\mathcal{M}$, when restricted to
+directions. Then the compensator matrix $\mathcal{M}$, when restricted to
 the image of the compensator $\mathrm{im}(\mathcal{C})$, acts as a scalar
 multiple of the identity:
 \[
@@ -9185,7 +9185,7 @@ $\mathcal{M}$, a diagonalizable action on an irreducible invariant subspace
 is scalar. Denoting this scalar $\lambda_0$ completes the proof.
 \end{proof}
 
-\begin{theorem}[HC as spectral projector of the Millennium matrix]
+\begin{theorem}[HC as spectral projector of the compensator matrix]
 \label{thm:hc-spectral-projector}
 Assume the admissible state space $\mathcal{S}$ carries a spectral
 decomposition under $\mathcal{M}$ as in
@@ -10625,7 +10625,7 @@ compensator is simultaneously generated by closure, inserted into
 transport, and read back through regime-specific probe geometry.
 The kernel-level anchor of the loop is
 Corollary~\ref{cor:M-HC-fixpoint}: $\mathcal{M}\,C = \lambda_0\,C$,
-which fixes the compensator as a fixpoint of the Millennium-matrix
+which fixes the compensator as a fixpoint of the compensator-matrix
 action and prevents the loop from drifting.
 
 \subsection*{Probe-tensor readout}
@@ -17875,9 +17875,9 @@ readout of the same closure, compensator, and frame-shift mechanism.
 
 \begin{remark}[Version note]
 Version \docversion\ introduces a structural normalization layer for the
-Companion. The Millennium matrix is read primarily as the global matrix
+Companion. The compensator matrix is read primarily as the global matrix
 realization of the Heisenberg compensator; the tool apparatus is split into
-general Millennium-matrix tools and special Heisenberg-compensator tools; the
+general compensator-matrix tools and special Heisenberg-compensator tools; the
 carrier/group/physical-readout distinction is made explicit; and the global
 reader orientation is organized through a master chain from triolic source to
 field-equation readout.
@@ -17891,11 +17891,11 @@ the \emph{light axis}. Thus ``light axis'' is not a second object, but the
 physical readout of the structurally prior null axis.
 \end{remark}
 
-\section{The Millennium Matrix as Global Heisenberg-Compensator}
+\section{The Compensator Matrix as Global Heisenberg-Compensator}
 \label{sec:millennium-hc}
 
-\begin{definition}[Millennium matrix]
-The Millennium matrix $\mathcal M_{16}$ is the global structural matrix that
+\begin{definition}[Compensator matrix, formerly called the Millennium matrix]
+The compensator matrix $\mathcal M_{16}$ is the global structural matrix that
 transports one and the same Sphaera-object through its admissible algebraic,
 closure, and projection layers. It preserves identity through viewpoint
 change.
@@ -17921,22 +17921,22 @@ $\mathcal M_{\mathrm{proj}}$ admissible final readout.
 \end{definition}
 
 \begin{definition}[Global Heisenberg-compensator reading]
-The Millennium matrix is said to be read as a global Heisenberg-compensator
+The compensator matrix is said to be read as a global Heisenberg-compensator
 matrix if its action extends the local rule
 \[
 C=\tfrac12(\mathrm{id}+J)
 \]
 to the full multi-layer architecture of the Companion. Under this reading, the
-Millennium matrix is denoted by
+compensator matrix is denoted by
 \[
 \mathcal H_{16},
 \]
 or identified with $\mathcal M_{16}$ when no ambiguity arises.
 \end{definition}
 
-\begin{theorem}[Structural role of the Millennium matrix]
+\begin{theorem}[Structural role of the compensator matrix]
 \label{thm:mm-role}
-The Millennium matrix is the global structural intermediary of the Companion in
+The compensator matrix is the global structural intermediary of the Companion in
 the following sense:
 \begin{enumerate}
  \item it preserves the identity of the triolic core under admissible
@@ -17953,7 +17953,7 @@ the following sense:
 The triolic layer supplies the primitive object. The admissible algebraic
 layers supply realizations of that object. Closure selects the admissible
 sector, while projection only reads out what closure has stabilized. The
-Millennium matrix is the unique global carrier of this ordered transport.
+compensator matrix is the unique global carrier of this ordered transport.
 Under the Heisenberg-compensator reading, the same transport becomes the
 global balancing mechanism across all admissible layers.
 \end{proof}
@@ -17965,7 +17965,7 @@ global balancing mechanism across all admissible layers.
 The carrier layer is the total admissible structural support on which the
 Sphaera architecture is realized. It contains the triolic source structure,
 the admissible algebraic realizations, the closure discipline, and the
-transport induced by the Millennium matrix.
+transport induced by the compensator matrix.
 \end{definition}
 
 \begin{definition}[Group layer]
@@ -18031,7 +18031,7 @@ following ordered logic:
 
 \begin{proof}
 The triolic source supplies the primitive structural object. The carrier layer
-provides its admissible support, while the Millennium matrix transports this
+provides its admissible support, while the compensator matrix transports this
 same object through admissible realization changes. Under the
 Heisenberg-compensator reading, the same matrix becomes the global balancing
 mechanism that stabilizes the closure-compatible sector. The group layer then
@@ -77663,6 +77663,94 @@ The layer spends no guard:
 R_{\rm glob}^{(v490\text{-}r74,+)}=(0,1,1,1,1),
 \qquad
 \Gamma_{\rm guard}^{v490\text{-}r74}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r75 Source-Only: Renaming the Millennium Matrix to Compensator Matrix}
+\addcontentsline{toc}{section}{v4.9.0-r75 Source-Only: Renaming the Millennium Matrix to Compensator Matrix}
+\label{sec:v490-r75-compensator-matrix}
+% ============================================================================
+
+\paragraph{Purpose.}
+The \(16\times16\) matrix \(\mathcal M_{16}\) of \S\ref{sec:millennium-hc} was called the Millennium matrix.  The name suggested
+a link to the Millennium Prize Problems that the Companion does not claim, and the author had asked several times for a name
+that says what the object does.  On 3 November 2026 the author decided: \(\mathcal M_{16}\) is called the \emph{compensator
+matrix}, because it carries several Heisenberg compensators and extends the local rule \(C=\tfrac12(\mathrm{id}+J)\) to all
+layers (\S\ref{sec:millennium-hc}; in v4.9.0-r42 one of its compensators acts as chirality projector).  This layer records the
+renaming.  No mathematical statement changes.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r75 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r75 results}
+\label{subsec:v490-r75-results}
+
+\paragraph{Record v4.9.0-r75.1 (naming rule).}
+From this layer on, \(\mathcal M_{16}\) is the \emph{compensator matrix}.  Unchanged are the symbol \(\mathcal M_{16}\) (and
+\(\mathcal M\), \(\mathcal M^\mu{}_\nu\) where used), every label (for example \texttt{sec:millennium-hc}), and the
+abbreviation MM in MM/HC, MM split and similar compounds, which is kept as a historical abbreviation for the matrix
+\(\mathcal M_{16}\).  Wherever an earlier layer, an inherited appendix or a note says ``Millennium matrix'', read
+``compensator matrix''.
+
+\paragraph{Record v4.9.0-r75.2 (where the name was changed).}
+The main body uses the new name in the nomenclature, in the sections on the probe--closure field system, the structural core,
+the HC hypotheses and the master model, including the section title of \S\ref{sec:millennium-hc} and the definition, which
+names the former term once.  On the research line the 4.8 sections on the native operator link and the coupling candidate are
+changed likewise, and the PDF keywords.  In the local monolith the 27 main-body occurrences are changed by the patch list
+\texttt{llm/revision\_spec\_\allowbreak v490\_\allowbreak r75.py}; the main body is again word-identical with the research
+line.  Inherited appendices (repair, transport and OP protocols, technical tools, release records), the archive and all earlier
+layers keep the old wording verbatim.  The bibliography entry ``Set Theory: The Third Millennium Edition'' is a title and not
+affected.
+
+\paragraph{Consequence.}
+A name change only.  No definition, theorem, proof, number, register entry or guard is changed.
+
+\subsection*{v4.9.0-r75 status in the three frames}
+\label{subsec:v490-r75-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item The renaming concerns notation only.  No frame map M, T or P acts on it; the frame statements of
+\S\ref{sec:millennium-hc} and of v4.9.0-r42 are unchanged.
+\end{itemize}
+No statement of this layer concerns colour or charge.
+
+\subsection*{v4.9.0-r75 register entries}
+\label{subsec:v490-r75-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r75\\
+\midrule
+name of \(\mathcal M_{16}\) & compensator matrix (formerly Millennium matrix)\\
+symbol, labels, abbreviation MM & unchanged\\
+earlier layers and inherited appendices & old wording kept; read with the new name\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r75 ledger and guard update}
+\label{subsec:v490-r75-ledger-guard}
+
+\[
+R_{\rm chk}^{v490\text{-}r75}=(1,0,0)
+\]
+for (renaming recorded; no statement changed).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r75,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r75}=(1,1,1,1,1),
 \qquad
 \beta_4=1/256\ \text{unspent}.
 \]
