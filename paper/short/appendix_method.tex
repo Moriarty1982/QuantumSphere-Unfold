@@ -1,0 +1,27 @@
+\section{Method}\label{app:method}
+
+\paragraph{Pre-registration.}  Since October 2026 every test with a decision criterion has been written down before the computation
+as a note giving the hypothesis, the data, and the criterion, and committed to the public repository; the commit time stamps it.
+Fifty-eight tests (H1--H58) have been registered so far.  Notes that were not blind --- because the target window or a nearby value
+was known --- say so, and such results are not counted as confirmations.  Explorations without a note are labelled as explorations.
+Tests whose criterion could not be met by the method are recorded as invalid, not as passed.
+
+\paragraph{Append-only record.}  Results are added as numbered rounds; earlier rounds are never rewritten.  A correction is a new round
+that names what it corrects.  Old statements of the Companion therefore stay in place, marked with status notes.
+
+\paragraph{Guards.}  A fixed list of statements that are not claimed (Section~\ref{sec:not}) is checked against every round, also
+mechanically by a linter over the source.
+
+\paragraph{Formalization.}  Parts of the algebra are formalized in Lean~4 with Mathlib and built in continuous integration without
+\texttt{sorry}: among them the compensator and the doublet matrices (Proposition~\ref{prop:doublet}), the Gram decomposition of the state
+disk, the cyclic invariance of the triality form, the sector involutions on \(\mathbb C\otimes\OO\), and the uncertainty saturation of
+Proposition~\ref{prop:robertson}.
+
+\paragraph{Recomputation.}  Results that carry weight are recomputed with independently written code, at higher precision where
+needed, and in one series cross-checked between different language models.  Two readings were corrected this
+way (Section~\ref{sec:not}); in another case a reported high-precision finding was traced to a conversion error and withdrawn before it
+entered a round.  Large rank computations can be distributed over parallel runners, one order per job.
+
+\paragraph{Use of language models.}  Most computations, the formalization and much of the writing were done with the assistance of large
+language models, under the author's direction and with the checks described above.  The conjecture, the decisions and the
+responsibility for the text are the author's.

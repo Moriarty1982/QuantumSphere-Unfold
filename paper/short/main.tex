@@ -20,20 +20,27 @@
 \title{The Sphaera Kernel: a Biquaternion--Octonion Framework with Three Frames.\\
 \large What holds, what is conditional, and what does not follow}
 \author{Marc Brendecke}
-\date{Working draft, \today}
+\date{Draft, \today}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-% TODO (last): what is proved, what is conditional, what is withdrawn; the open problem of a common dynamics.
+We report what holds in a research programme that starts from the conjecture that matter, light and a tachyon sector are one object seen
+from three frames.  The central object is a biquaternion kernel \(q=it+z_1e_1+z_2e_2+z_3e_3\) with a projector, the Heisenberg compensator.
+We prove that its natural norm carries the Lorentz group as \(SO(3,\mathbb C)\) on the kernels, that the symmetric triple of kernels is
+exactly the centred null configuration, and that matter- and tachyon-type kernels form one orbit of the duality rotation with light as its
+fix-sector.  On \(\mathbb C\otimes\HH\otimes\OO\), a projector of the same form as the compensator yields the chirality of one Standard Model
+generation, and within the stated setting anomaly cancellation fixes it uniquely up to a frame change; we separate this from the known constructions of Dixon and
+Furey.  The single numerical input, a frame offset \(\beta_{\rm sym}\approx0.549\), is put in; its reading as a ratio of horizon countings
+selects the less favoured counting.  Four predictions for \(\theta_{12}\), \(\theta_{23}\) and the \(W\) mass were registered before the
+relevant data and are pending.  A comparison model of the probe field equations has an exact gauge symmetry, an involutive gauged symbol at
+order six and four hidden sixth-order conditions; its formal integrability is open.  We list what was withdrawn, including all steps that
+relied on a claimed proof of the Riemann hypothesis, and state what a missing common dynamics would have to do.
 \end{abstract}
 
-% Each section: content plan as comment; sources are labels in sources/research/ of the Companion.
 
-\section{Introduction and the starting conjecture}\label{sec:intro}
-% ~2 pp. Conjecture: matter, light and a tachyon sector are one object in three frames. Marked as conjecture.
-% State up front: no derivation of physics from it is claimed; Sec. 8 lists what does not follow.
+\input{sec1_intro}
 
 \input{sec2_kernel}
 \input{sec3_structures}
@@ -51,8 +58,7 @@
 \input{sec9_open}
 
 \appendix
-\section{Method}\label{app:method}
-% ~1 p. Pre-registration, guards, Lean formalisation, independent recomputation.
+\input{appendix_method}
 
 \input{appendix_qam}
 
@@ -83,6 +89,6 @@ Zenodo, concept DOI \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenod
 \bibitem{seiler} W.~M.~Seiler, \emph{Involution: The Formal Theory of Differential Equations and its Applications in Computer Algebra}, Springer, Berlin 2010.
 \bibitem{henneaux} M.~Henneaux and C.~Teitelboim, The cosmological constant and general covariance, \emph{Phys.\ Lett.\ B} \textbf{222} (1989) 195--199.
 \bibitem{kaloper} N.~Kaloper and A.~Padilla, Sequestering the standard model vacuum energy, \emph{Phys.\ Rev.\ Lett.} \textbf{112} (2014) 091304, arXiv:1309.6562.
-% TODO: Koide; Furey; Gresnigt; Koide; Brannen; Ashtekar--Baez--Corichi--Krasnov; Domagala--Lewandowski; Meissner; Cartan--Kaehler.
 \end{thebibliography}
 \end{document}
+
