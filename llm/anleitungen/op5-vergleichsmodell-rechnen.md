@@ -111,3 +111,15 @@ Auf GitHub unter `notes/research/v4_10_0_r71/llm/`, lokal unter `llm/`.
 - Lie-Ableitungen von 1-Formen vollständig rechnen, nicht nur die kartesischen Koeffizienten ableiten.
 - Ältere Skripte enthalten den festen Pfad `C:/Users/marcb/OneDrive/Dokumente/GitHub/QuantumSphere-Unfold`. Diesen nur in
   einer Arbeitskopie anpassen; neue Skripte bekommen den Datenordner als Argument.
+
+## Parallel rechnen auf GitHub (ab 3. November 2026, PR #55)
+- Workflow `.github/workflows/op5-parallel.yml` im GitHub-Repo: ein Job je Ordnung p auf eigenen Runnern (4 Kerne, 16 GB,
+  bis 6 h je Job), danach Zusammenfassung. Start: *Run workflow* mit Liste (z. B. `2-12`) oder Push auf `rechnen/**`
+  mit Liste in `ci/op5/auftrag.txt`. Anleitung zum Einhängen neuer Skripte: `ci/op5/README.md`.
+- Nutzlast-Regel: ein Skript nimmt genau einen Parameter und schreibt ein JSON; alle Eingaben müssen im Repo liegen
+  (lokale `llm/`-Dateien wie `k142_lin2.npz` oder `k144_p1/` erreichen die Runner nicht).
+- Erster Lauf (Erkundung, eingefrorenes Symbol): g_p bis p = 12 = …, 1351, 1610, 1896; g'_p = …, 898, 1065, 1246, 1441
+  (zweite Differenzen ab p = 7 konstant 14). p = 12 (12 323 × 10 920) in 8,5 min, 3,2 GB.
+- Modulo-Primzahl-Rechnung nur bei exakten Eingaben; gerundete Keimdaten geben den generischen Rang, nicht den am Keim.
+- Artefakte lassen sich aus der Claude-Cloud nicht herunterladen (Speicherdienst gesperrt); Ergebnisse aus dem Job-Log
+  lesen (`gh run view --job <id> --log`) oder das Skript die Werte ins Log schreiben lassen.
