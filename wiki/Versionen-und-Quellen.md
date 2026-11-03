@@ -25,6 +25,8 @@ Stand: **2.11.2026**, geprüft gegen Commit [`cf48496c95b6c9ec3f6a3c196df2c8c2c8
 - [r72](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/v4_10_0_r72/README.md): $\vartheta$-Eichung des OP5-Vergleichssymbols; Cartan-Test H51 bestätigt (involutiv ab Ordnung 6); H52 bis H54 zur formalen Integrabilität ungültig; Spencer-Kohomologie und Fehlerschranke sprechen für genau vier versteckte Bedingungen an 6-Jets.
 - [r73](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/v4_10_0_r73/README.md): die vier Bedingungen an einem zweiten Punkt bestätigt (H55) und bestimmt (sechste Ordnung, nur lichtartige Wellen, Reste von $q\,d_k\,\Omega$); Cartan-Test des erweiterten Symbols H56, H57 ungültig (Genauigkeit).
 - [r74](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/v4_10_0_r74/README.md): konsistente Daten (H58 ungültig, erweitertes Symbol erstmals bei Ordnung 8 involutiv), Spencer-Schranken für weitere Bedingungen, strukturelle Genauigkeitsgrenze, ebene Wellen.
+- [r75](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/v4_10_0_r75/README.md) und [r76](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/v4_10_0_r76/README.md): Umbenennung der Millennium-Matrix in Kompensatormatrix; r76 korrigiert r75 (Name „layer-transport matrix“ aus r05).
+- [Kurzpapier, Entwurf](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/paper/short/README.md): geplantes eigenständiges Paper von etwa 40 Seiten über das, was trägt. Bisher Gliederung mit Inhaltsplan je Abschnitt und der fertige Anhang, der die acht Kernaussagen in üblicher und in QAM-Schreibweise nebeneinanderstellt.
 
 ## Versionsfallen
 

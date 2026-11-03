@@ -1,0 +1,88 @@
+% Appendix: the key statements in standard notation and in QAM notation (variant 1, author decision 2026-11-03)
+\section{The key statements in QAM notation}
+\label{app:qam}
+
+The Companion~\cite{companion} records its objects in a coded language, QAM, which sits on ordinary Zermelo--Fraenkel set
+theory.  It adds no axioms.  Eight tagged tuples recognise the kinds of object, and the first entry of each tuple is a type tag,
+so no object belongs to two kinds:
+\[
+\begin{array}{llll}
+\text{state} & \langle 0,a\rangle, &
+\text{layer} & \langle 1,\ell,D\rangle,\\
+\text{operator} & \langle 2,\ell_1,\ell_2,G\rangle, &
+\text{readout} & \langle 3,\ell,W,R\rangle,\\
+\text{branch} & \langle 4,b,B\rangle, &
+\text{shell} & \langle 5,r,s,T\rangle,\\
+\text{witness} & \langle 6,u\rangle, &
+\text{tensor} & \langle 7,p,q\rangle .
+\end{array}
+\]
+Here \(D\) is the carrier of a layer, \(G\) the graph of an operator from layer \(\ell_1\) to layer \(\ell_2\), \(W\) the set of
+readout values and \(R\) the readout rule.  Three relations are used below: \(\mathrm{QAdmTransport}(o,s,t)\) (the operator
+\(o\) carries the state \(s\) admissibly to \(t\)), \(\mathrm{QRead}(r,s,w)\) (the readout \(r\) reads \(s\) as the value
+\(w\)) and \(\mathrm{QTensorAdm}(x,y)\) (the composite \(x\otimes y\) is admitted).  In the two-sided display
+\({}^{A}{}_{B}\mathcal T^{i}{}_{j}\) the front indices carry the frame or readout side and the back indices the structure
+side.  Only upper--lower pairs contract; two upper or two lower indices may be compared only through a declared comparison
+tensor.  Full definitions are in the QAM appendix of the Companion.
+
+The table gives each key statement of this paper in both notations.  The QAM column is not shorter.  It records what the
+standard formula leaves to the surrounding text: on which layer an object lives, in which frame a quantity is read, whether a
+value is derived or put in, and which choices were made.  The encodings were written for this paper from the QAM primitives;
+the Companion does not contain them in this form.
+
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.35}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.27\textwidth}>{\raggedright\arraybackslash}p{0.37\textwidth}>{\raggedright\arraybackslash}p{0.28\textwidth}@{}}
+\toprule
+standard notation & QAM notation & what the QAM form adds\\
+\midrule
+\endfirsthead
+\toprule
+standard notation & QAM notation & what the QAM form adds\\
+\midrule
+\endhead
+\multicolumn{3}{@{}l}{\textbf{1. Biquaternion kernel} (\S\ref{sec:kernel})}\\
+\(q=it\,\mathbf 1+z_1e_1+z_2e_2+z_3e_3\), \(z_k\in\mathbb C\), \(e_3=e_1e_2\)
+& \(\ell_n=\langle 1,n,\HH\otimes\mathbb C\rangle\), \(s_q=\langle 0,q\rangle\) with \(q\in D(\ell_n)\)
+& the stratum \(n\) on which the state lives\\[0.3em]
+\multicolumn{3}{@{}l}{\textbf{2. Heisenberg compensator} (\S\ref{sec:kernel})}\\
+\(C(f)=\tfrac12(f+Jf)\), \(J^2=1\), \(C^2=C\)
+& \(o_C=\langle 2,\ell,\ell,G_C\rangle\), \(G_C=\{(\langle0,f\rangle,\langle0,\tfrac12(f+Jf)\rangle)\}\);
+\(\mathrm{QAdmTransport}(o_C,s,o_C(s))\), \(G_C\circ G_C=G_C\)
+& \(C\) is an operator within one layer, not a readout; idempotence is a statement about its graph\\[0.3em]
+\multicolumn{3}{@{}l}{\textbf{3. Sector rule} (\S\ref{sec:kernel})}\\
+\(\sigma(q)=z_1^2+z_2^2+z_3^2\) (\(s\) in the Companion): matter \(\sigma>0\), tachyon \(\sigma<0\), light \(\sigma=0\)
+& \(r_\sigma=\langle 3,\ell,\{+,0,-\},R_\sigma\rangle\), \(R_\sigma(\langle0,q\rangle)=\operatorname{sgn}\sigma(q)\);
+\(\mathrm{QRead}(r_\sigma,s_q,+)\;\Leftrightarrow\;\)matter
+& the sector is a readout of the state, not a second kind of object\\[0.3em]
+\multicolumn{3}{@{}l}{\textbf{4. Frame change matter \(\to\) tachyon} (\S\ref{sec:kernel})}\\
+\(z\mapsto iz\), hence \(\sigma\mapsto-\sigma\)
+& \({}^{T}{}_{M}\mathcal J^{i}{}_{j}\,z^{j}=(iz)^{i}\); a matter quantity \({}^{M}X\) and a tachyon quantity \({}^{T}Y\) are
+compared only as \(G_{MT}\,{}^{M}X\,{}^{T}Y\) with a declared \(G_{MT}\)
+& source and target frame in the indices; raw comparison across frames is not well-formed\\[0.3em]
+\multicolumn{3}{@{}l}{\textbf{5. Compensator matrix} (\S\ref{sec:octonions})}\\
+\([\mathcal M_{16},J]=[\mathcal M_{16},C]=0\); \(C\) is a spectral projector of \(\mathcal M_{16}\)
+& \(o_{\mathcal M}=\langle 2,\ell,\ell,G_{\mathcal M}\rangle\) with \(G_{\mathcal M}\circ G_J=G_J\circ G_{\mathcal M}\) and
+\(G_{\mathcal M}\circ G_C=G_C\circ G_{\mathcal M}\)
+& nothing beyond the standard form; listed for completeness\\[0.3em]
+\multicolumn{3}{@{}l}{\textbf{6. One generation from \(\mathbb C\otimes\HH\otimes\OO\)} (\S\ref{sec:generation})}\\
+\(C_{\rm ch}=\tfrac12(1+J)\), \(J=iL_{e_7}\); \(Y/2=Q-\tfrac12+(1-C_{\rm ch})T_3\) gives the 16 left-handed Weyl states with \(\nu_R\)
+& \(x=\langle 7,\mathbb C\otimes\HH,\OO\rangle\), \(\mathrm{QTensorAdm}(\mathbb C\otimes\HH,\OO)\); the choice
+\(J=iL_{e_7}\) is a branch \(\langle 4,b_J,B\rangle\); charges are readouts \(\langle 3,\ell,\{0,\tfrac13,\tfrac23,1\},R_Q\rangle\)
+& the choice of \(J\) is an explicit branch, so the construction is visibly conditional\\[0.3em]
+\multicolumn{3}{@{}l}{\textbf{7. Frame offset} (\S\ref{sec:beta})}\\
+\(\beta_{\rm sym}=\sqrt{(\gamma_L-1)/(\gamma_L+1)}\approx0.549\), \(\gamma_L=\gamma_{\rm BI}/\gamma_{\rm string}\)
+& \({}^{M}\beta=R_\beta(u)\) with the witness \(u=\langle 6,(\gamma_{\rm BI},\gamma_{\rm string})\rangle\)
+& the value rests on an input witness (two horizon countings), not on a derivation, and is read in the matter frame\\[0.3em]
+\multicolumn{3}{@{}l}{\textbf{8. Matter fraction} (\S\ref{sec:readouts})}\\
+\(\Omega_M=\beta_{\rm sym}^2\approx0.302\)
+& \(\mathrm{QRead}(r_\Omega,s_{\rm now},\beta_{\rm sym}^2)\) with \(r_\Omega=\langle 3,\ell_{\rm now},[0,1],R_\Omega\rangle\)
+& validity restricted to the present epoch, carried by the layer \(\ell_{\rm now}\)\\
+\bottomrule
+\end{longtable}
+\end{center}
+
+Rows~4 and~7 show where the QAM form has paid off in the project.  Several errors found in the Companion were comparisons of
+quantities from different frames, or values read as derived when they were put in.  In the QAM form such a step is not
+well-formed.

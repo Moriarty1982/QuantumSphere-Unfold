@@ -1,0 +1,70 @@
+% Short paper on the Sphaera kernel -- working draft (structure and appendix only)
+% Plan: about 40 pages; the Companion (concept DOI 10.5281/zenodo.19210728) stays the full record.
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,longtable,array}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\HH}{\mathbb H}
+\newcommand{\OO}{\mathbb O}
+
+\title{The Sphaera Kernel: a Biquaternion--Octonion Framework with Three Frames.\\
+\large What holds, what is conditional, and what does not follow}
+\author{Marc Brendecke}
+\date{Working draft, \today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+% TODO (last): what is proved, what is conditional, what is withdrawn; the open problem of a common dynamics.
+\end{abstract}
+
+% Each section: content plan as comment; sources are labels in sources/research/ of the Companion.
+
+\section{Introduction and the starting conjecture}\label{sec:intro}
+% ~2 pp. Conjecture: matter, light and a tachyon sector are one object in three frames. Marked as conjecture.
+% State up front: no derivation of physics from it is claimed; Sec. 8 lists what does not follow.
+
+\section{The biquaternion kernel, the involution and the compensator}\label{sec:kernel}
+% ~5 pp. def:biquaternion, prop:compensator; norm q\bar q and sector rule (v4.8.0-r06/r07);
+% tachyon map z -> iz (v4.9.0-r28); proofs in full. QAM rows 1-4 (App. A).
+
+\section{Triples, the Hopf cascade, octonions and the compensator matrix}\label{sec:octonions}
+% ~5 pp. thm:hopf (S^7 label corrected, r70), three meanings of "triple" (r37), sec:millennium-hc,
+% thm:hc-spectral-projector; names: compensator matrix (r75/r76). QAM row 5.
+
+\section{One generation from \texorpdfstring{$\mathbb C\otimes\HH\otimes\OO$}{C x H x O}}\label{sec:generation}
+% ~6 pp. r34, r35, r41-r43; conditional on named choices; comparison with Dixon, Furey, Gresnigt. QAM row 6.
+
+\section{The frame offset \texorpdfstring{$\beta_{\rm sym}$}{beta\_sym}}\label{sec:beta}
+% ~3 pp. thm:symmetric-frame; counting reading (r63) and its limit (r68, SU(2) vs U(1)). QAM row 7.
+
+\section{Readouts and pre-registered predictions}\label{sec:readouts}
+% ~5 pp. Omega_M (r67, present epoch only); Brannen/Koide form (r10, r46); H9, H15, H42, H46 with criteria. QAM row 8.
+
+\section{The OP5 comparison model}\label{sec:op5}
+% ~5 pp. r69-r74: theta gauge symmetry, Cartan test, four hidden sixth-order conditions, precision limit;
+% parallel runs (p <= 12). Comparison model only; OP5 not closed. Candidate for a separate paper.
+
+\section{What does not follow}\label{sec:not}
+% ~3 pp. Withdrawn: Riemann-based steps (r04), GUE derivation (r05, r08), old Lambda chain, frame-shifted constants (r64),
+% P1-P6; dependency map subsec:v480-r04-dependency-map. Status tags [M]/[T]/[P] and theorem/conditional/reading/open.
+
+\section{Open problems: what a common dynamics would have to do}\label{sec:open}
+% ~3 pp. OP1-OP5 short; the seven requirements from wiki "Offene Probleme"; H48.
+
+\appendix
+\section{Method}\label{app:method}
+% ~1 p. Pre-registration, guards, Lean formalisation, independent recomputation.
+
+\input{appendix_qam}
+
+\begin{thebibliography}{9}
+\bibitem{companion} M.~Brendecke, \emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding},
+Zenodo, concept DOI \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}.
+% TODO: Dixon; Furey; Gresnigt; Koide; Brannen; Ashtekar--Baez--Corichi--Krasnov; Domagala--Lewandowski; Meissner; Cartan--Kaehler.
+\end{thebibliography}
+\end{document}
