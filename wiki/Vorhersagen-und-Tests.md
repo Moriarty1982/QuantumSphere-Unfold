@@ -52,6 +52,9 @@ Zu H46: Eine Bestätigung würde die Kette r55–r60 prüfen, nicht die Lesart a
 | H52 | Das geeichte System ist ab Ordnung 6 formal integrabel (fester Keim bis Ordnung 5) | ungültig: Ränge ohne saubere Lücke; die gespeicherte fünfte Ordnung ist nicht fortsetzbar (Planungsfehler) (r72) |
 | H53 | Wie H52, aber nur Ordnung 4 fest und exakte Linearisierung | ungültig: ein Rang ohne saubere Lücke; bis Grad 6 alles wie vorhergesagt, mit Grad 7 vier zusätzliche Bedingungen an 6-Jets (r72) |
 | H54 | Es gibt genau vier versteckte Bedingungen an 6-Jets | ungültig: Lückenforderung an absichtlich gestörten Varianten war unerfüllbar; die Fehlerschranke spricht inhaltlich für genau vier (r72) |
+| H55 | Die vier versteckten Bedingungen treten auch an einem zweiten Ausgangspunkt auf | bestätigt: wieder 852 und 848 Freiheitsgrade, Fehlerschranken 710- und 1390-fach (r73) |
+| H56 | Das um die vier Bedingungen erweiterte Symbol wird bis Ordnung 8 involutiv | ungültig: ab Ordnung 8 Ränge ohne saubere Lücke; bei 6 nicht involutiv (r73) |
+| H57 | Wie H56 mit projizierten Bedingungen (nicht blind) | ungültig: bei Ordnung 8 nicht entscheidbar (723 oder 724); Genauigkeit reicht nicht (r73) |
 
 ## Erkundungen ohne Vorab-Notiz
 
