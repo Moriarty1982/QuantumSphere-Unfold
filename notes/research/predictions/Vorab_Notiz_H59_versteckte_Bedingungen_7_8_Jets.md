@@ -41,3 +41,16 @@ Sonst ist der Test ungültig.
 
 ## Lesart
 Bei Bestätigung folgt mit der Involutivität von g''_8 (r74, Erkundung) nach Goldschmidt die formale Integrabilität des vervollständigten Systems am Keim. Voraussetzung ist, dass zwei Eliminationsstufen alle Hindernisse erfassen; das ist so wie bei den sechsten Ordnungen. Das schließt OP5 nicht: Es bleibt eine Aussage über das Vergleichsmodell.
+
+## Nachtrag vom 3. November 2026, noch vor der Rechnung für q = 6, 7, 8
+Vor dem eigentlichen Test lief ein Funktionstest mit q = 4. Er gehört nicht zum Test und hat keinen Einfluss auf dessen Ausgang.
+
+Ergebnis des Funktionstests:
+- F_4 = 277 − 4 = 273; das stimmt mit g'_4 überein.
+- Die Gram-Lücke beträgt 1e64.
+- In der Stufe c5 bleibt das Newton-Residuum bei 1e-37 stehen. Die wahrscheinliche Ursache ist die begrenzte Genauigkeit der höheren Keim-Jets aus den Reparaturdateien. Ein Linkskern lässt sich dann nur bis zu dieser Genauigkeit schärfen.
+
+Die Schranke 1e-40 hätte den Test also schon aus diesem Grund ungültig gemacht, ohne Bezug zur Frage. Deshalb gilt ab jetzt:
+- Gültig sind Newton-Residuen ≤ 1e-30 in allen Stufen.
+- Das Residuum jeder Stufe muss mindestens 1e10-mal kleiner sein als der kleinste echte Gram-Eigenwert.
+- Alle übrigen Kriterien bleiben unverändert.
