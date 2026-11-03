@@ -1,0 +1,189 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r77 Source-Only: High Precision, Formal Integrability at the Germ and the Covariance of the OP5 Comparison System}
+\addcontentsline{toc}{section}{v4.9.0-r77 Source-Only: High Precision, Formal Integrability at the Germ and the Covariance of the OP5 Comparison System}
+\label{sec:v490-r77-high-precision-covariance}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.9.0-r74 left two questions open (\S\ref{sec:v490-r74-precision-limit}).  The first is whether the extended symbol
+\(g''\) is involutive first at order 8.  The second is whether the system has further hidden conditions on 7- and 8-jets;
+Spencer allows up to four and three.  Both were blocked by double precision.  On 3 and 4 November 2026 the author asked
+for three things:
+\begin{itemize}[leftmargin=2em]
+\item to repeat the whole chain in high precision;
+\item to run the decisive eliminations on parallel GitHub runners;
+\item to look for links of the result to physics.
+\end{itemize}
+This layer records one high-precision exploration and six pre-registered tests (H59 to H64).  Three tests are confirmed
+and three refuted.  Everything concerns the comparison model of \S\ref{sec:v410-state-mediator} only.  Earlier layers are
+not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r77 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r77 results}
+\label{subsec:v490-r77-results}
+
+\paragraph{Record v4.9.0-r77.1 (exploration: the four conditions and the Cartan test in high precision).}
+Not pre-registered and not blind: the values of r74.1 were known.
+\begin{itemize}[leftmargin=2em]
+\item \emph{Linearization.}  The linearization was rebuilt pointwise in 160 digits.  The deviation from the earlier
+high-precision data is \(2\times10^{-21}\) in degree 1 and \(2\times10^{-19}\) in degree 2; these earlier data set the old
+precision limit.
+\item \emph{Eliminations.}  \(c_8\) and \(c_7\) were eliminated in ball arithmetic with 70 digits.  The Newton residuals are
+\(10^{-66}\) and \(9\times10^{-52}\).
+\item \emph{Fibre of 6-jets.}  The Gram matrix of the derived conditions on the 501-dimensional fibre has 24 genuine
+eigenvalues, the smallest \(5.1\times10^{-13}\), then \(1.9\times10^{-71}\): a gap of \(10^{58}\).  The fibre therefore has
+dimension exactly \(477\).  It consists of 20 \(\Omega\)-prolongations and exactly four new conditions.
+\item \emph{Cartan test.}  On this basis \(\dim g''_p=477,594,723,865\) for \(p=6,\dots,9\).  The characters at \(p=8\) are
+\(723,130,12,0\) in all three frames.  The symbol is not involutive at \(p=6,7\) and is involutive at \(p=8\), with rank
+gaps \(\ge10^{8}\).
+\item \emph{A withdrawn local finding.}  An intermediate local finding (only 48 instead of 112 identities at order 4) came
+from a conversion with 15 digits and was withdrawn before this layer.
+\end{itemize}
+
+\paragraph{Theoremlet v4.9.0-r77.2 (H59 confirmed: no further hidden conditions on 7- and 8-jets).}
+Pre-registered, not blind (the symbol dimensions were known).  Before the decisive runs, a dated addendum relaxed the
+residual bound from \(10^{-40}\) to \(10^{-30}\), after a function test at \(q=4\).
+\begin{itemize}[leftmargin=2em]
+\item \emph{Setup.}  The jet through degree \(q-1\) is fixed and the equations go through degree \(q+1\).  \(c_{q+2}\) and
+\(c_{q+1}\) are eliminated in 70 digits on parallel runners (16 GB each).
+\item \emph{Result.}  The fibres are \(F_6=477\) (positive control), \(F_7=637-43=594\) and \(F_8=789-66=723\).  The Gram gaps
+are \(1.6\times10^{58}\), \(2.8\times10^{58}\) and \(3.9\times10^{56}\); all residuals are \(\le1.1\times10^{-51}\).
+\item \emph{Reading.}  The Spencer bounds of r74.2 are not attained.  Together with the involutivity of \(g''_8\), the
+completed system is formally integrable at the germ by Goldschmidt's criterion, provided two elimination levels catch all
+obstructions as at order 6.  The general formal solution depends on 12 functions of three variables.
+\end{itemize}
+
+\paragraph{Theoremlet v4.9.0-r77.3 (H60 confirmed: six polarizations per null direction).}
+Pre-registered.  With \(s_3=12\) and a cone of degree 2, the multiplicity on the cone is 6.  If the symbol module is reduced
+there, this gives six plane waves per null direction.  Over 200 null directions at each of \(p=6,\dots,9\), the polarization
+space \(\{u:\xi^p\otimes u\in g''_p\}\) has dimension 6 every time, with gaps \(\ge3\times10^7\).  Off the cone the dimension
+is 0.  The twelve Cauchy data are therefore six real massless modes.  The deficit of plane waves seen in r74.4 comes from the
+planes \(\Pi_0,\Pi_1\) and from isolated directions, not from the generic cone.
+
+\paragraph{Theoremlet v4.9.0-r77.4 (H61 refuted: no Weyl type in the naive spin assignment).}
+Pre-registered.  The test reads \(\Psi\) as three Dirac spinors in the Dirac basis, with spin \(I_3\otimes\Sigma\), chirality
+\(I_3\otimes\gamma_5\) and complex structure \(J\).
+\begin{itemize}[leftmargin=2em]
+\item The six-dimensional polarization space is invariant under none of \(J\), \(\gamma_5\) or the helicity: the median
+residuals are \(1.0\), \(0.99\) and \(0.5\).
+\item Post hoc (exploration): \(P+JP\) has dimension 12 but is not the kernel of the massless Dirac symbol, so a Majorana
+reading also fails.  The modes spread over all three blocks of \(\Psi\), most of them over the third block, which does not
+enter the coframe.
+\end{itemize}
+
+\paragraph{Theoremlet v4.9.0-r77.5 (H62 refuted: the symbol is invariant only under scaling).}
+Pre-registered.  The stabilizer
+\(\{(A,B)\in\mathfrak{gl}(4)\times\mathfrak{gl}(24):X_{A,B}g''_p\subset g''_p\}\) has dimension 50 at \(p=6,7,8\), with gaps
+\(\ge7\times10^8\).  Its spacetime part is only \(A\propto1\), and its intersection with \(\mathfrak{so}(Q)\) is 0, not 6.  The
+internal part (dimension 49) is closed under commutators.  Its Killing form has signature \((3,1,45)\), so the internal part
+is mostly nilpotent; no compact semisimple part is visible (exploration).  A first run that formed the Gram matrix as a
+difference cancelled digits and is not counted.  An addendum places the result: invariance at a fixed background is expected
+to fail, because every symmetry must preserve the characteristic set, and \(J(\xi)\) loses rank on \(\Pi_0\cup\Pi_1\).  These
+planes are not \(q\)-orthogonal, are not spanned by bilinears of \(\Psi\) (r71, \texttt{k122}) and arise in the \(G\) part
+(\texttt{k126}).
+
+\paragraph{Theoremlet v4.9.0-r77.6 (H63 refuted: already \(F\) is not Lorentz symmetric at a fixed background).}
+Pre-registered.  For the blocks of \(J\) the stabilizer
+\(\{(A,B,C):\sum_\mu A_{\mu\nu}X_\mu+X_\nu B-CX_\nu=0\}\) has spacetime parts of dimension 7 for \(F\) and 1 for \(F+G\) and
+\(F+G+dg\).  In all three cases the intersection with \(\mathfrak{so}(Q)\) is 0.  Part (a), predicting 6 for \(F\), fails;
+part (b), predicting \(\le1\) when \(G\) is included, holds.  The six non-scaling directions of \(F\) lie near
+\(\mathfrak{so}(Q)\) (cosines 0.74 to 0.9998) but form no \(\mathfrak{so}(Q')\) for any form \(Q'\) (exploration).  The germ
+\(\Psi\) enters the principal symbol beyond a tetrad, through the coframe built from \(\Psi\).  The symbol is then invariant
+only under the stabilizer of \(\Psi\), which is trivial for a generic spinor.
+
+\paragraph{Theoremlet v4.9.0-r77.7 (H64 confirmed: \(R\) is covariant).}
+Pre-registered.  Run 1 was invalid: its positive control was \(2.1\times10^{-7}\), above the bound \(10^{-9}\), because of an
+unregularized pseudoinverse of the rank-31 symbol.  A dated addendum preceded run 2, which is not blind.  The construction
+\(R(\Psi,\partial\Psi;A,\partial A,h,\partial h)\) was rebuilt after three transformations: a random linear change of
+coordinates in \(GL(4)\), a random internal Lorentz transformation of \(\Psi\), and both together.  In each case the jets and
+the background transform tensorially.
+\begin{itemize}[leftmargin=2em]
+\item With a free row transformation \(C\), the relative residual \(\min_C\|J'L-CJ\|/\|J'L\|\) is
+\(\le4.1\times10^{-10}\) for \(F\), \(G\) and \(dg\).
+\item The positive control gives \(\le1.1\times10^{-11}\).
+\item The negative control, with the background held fixed, gives \(0.26\) for \(F\) and \(G\).
+\end{itemize}
+At symbol level, \(R\) is therefore coordinate covariant and internally Lorentz covariant.  The breaking found in H62 and H63
+comes entirely from the background \((\Psi\text{ at the germ},A,h)\).
+
+\paragraph{Proof and measurement sources.}
+\begin{itemize}[leftmargin=2em]
+\item r77.1: \texttt{k153b\_hp\_linear.py}, \texttt{k154\_hp\_tools.py}, \texttt{k157\_hp\_bedingungen.py},
+\texttt{k158\_cartan\_hp.py}.
+\item r77.2: \texttt{k159\_hp\_faser.py}, with the workflow \texttt{hp-faser.yml} and the data under \texttt{ci/hp/}.
+\item r77.3: \texttt{k160\_polarisationen.py}.
+\item r77.4: \texttt{k161\_spin.py}, \texttt{k161b\_majorana.py}, \texttt{k161c\_bloecke.py}.
+\item r77.5: \texttt{k162\_symmetrien.py}, \texttt{k162b\_innere.py}.
+\item r77.6: \texttt{k163\_lorentz\_F.py}, \texttt{k163b\_eigene\_metrik.py}.
+\item r77.7: \texttt{k164\_kovarianz.py}.
+\end{itemize}
+The pre-registration notes \texttt{Vorab\_\allowbreak Notiz\_\allowbreak H59} to \texttt{H64} and the result notes lie in
+\texttt{notes/\allowbreak research/\allowbreak predictions/}.  \(\square\)
+
+\paragraph{Consequence.}
+The extended comparison system is formally integrable at the germ, with six real massless modes.  Its construction is
+covariant; Lorentz symmetry is broken only by the background.  The physical questions therefore move to the background:
+\begin{itemize}[leftmargin=2em]
+\item what the fields \(A\) and \(h\) are;
+\item whether the background solves covariant equations;
+\item whether \(\Omega\), \(\theta\), the gauge \(\Psi^\dagger K_2\Psi=S\) and the four conditions are covariant;
+\item which Lorentz action, if any, acts on the six modes.
+\end{itemize}
+OP5 is not closed.
+
+\subsection*{v4.9.0-r77 status in the three frames}
+\label{subsec:v490-r77-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item All statements concern the fixed OP5 comparison model in one chart, with one coframe reconstructed from \(\Psi\).  No
+frame map M, T or P acts on them.  The Lorentz transformations of r77.5 to r77.7 act inside the model and are not the photon
+frame P.
+\end{itemize}
+No statement of this layer concerns colour or charge.  The internal \(3\otimes\) structure of \(\Psi\) is not read as
+generations.
+
+\subsection*{v4.9.0-r77 register entries}
+\label{subsec:v490-r77-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r77\\
+\midrule
+four hidden conditions & exactly four (gap \(10^{58}\), high precision, exploration)\\
+extended symbol & involutive first at \(p=8\), characters \(723,130,12,0\) (exploration)\\
+further hidden conditions & none on 7- and 8-jets (H59 confirmed); formally integrable at the germ\\
+massless modes & six real polarizations per null direction (H60 confirmed)\\
+spin of the modes & not Weyl or Majorana in the naive assignment (H61 refuted); undetermined\\
+symmetry at fixed background & only scaling (H62, H63 refuted); structurally expected\\
+covariance of \(R\) & coordinate and internal Lorentz covariant at symbol level (H64 confirmed, run 2 not blind)\\
+next step & covariance of \(\Omega\), \(\theta\), the gauge and the four conditions; origin of the background \(A,h\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r77 ledger and guard update}
+\label{subsec:v490-r77-ledger-guard}
+
+\[
+R_{\rm chk}^{v490\text{-}r77}=(1,1,0)
+\]
+for (formal integrability at the germ and covariance of \(R\) established; H61 to H63 recorded as refuted; OP5 not closed).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r77,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r77}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.

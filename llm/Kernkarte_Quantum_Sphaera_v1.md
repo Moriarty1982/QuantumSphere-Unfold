@@ -2573,6 +2573,17 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **r76.2:** port-weighting matrix (Einschränkung aufs (E, B)-Dublett, r05) bleibt; grenzt gegen die 2×2-Matrix des einzelnen Kompensators (r03) ab.
 - R_chk = (1,0,0); Guards unverändert. PR #58 gemergt als f9f1194.
 
+### K127 Runde v4.9.0-r77: Hohe Genauigkeit, formale Integrabilität am Keim, Kovarianz (2026-11-04)
+
+`sec:v490-r77-high-precision-covariance`, Snippet `llm/v490_r77_round.tex`.
+- **r77.1 (Erkundung):** genau vier Bedingungen auf 6-Jets (Gram-Lücke 1e58); g''_p = 477, 594, 723, 865, erstmals bei p = 8 involutiv (Charaktere 723, 130, 12, 0).
+- **r77.2 H59 bestätigt:** F₇ = 594, F₈ = 723 (Gegenprobe 477); keine weiteren versteckten Bedingungen, am Keim formal integrabel, 12 Funktionen dreier Variablen.
+- **r77.3 H60 bestätigt:** 6 reelle Polarisationen je Nullrichtung (sechs masselose Moden).
+- **r77.4 H61 widerlegt:** keine Weyl-/Majorana-Moden in der Zuordnung I₃⊗Spin½.
+- **r77.5/6 H62, H63 widerlegt:** bei festem Hintergrund nur Skalierung; schon F nicht lorentzsymmetrisch (Ψ im Hauptsymbol).
+- **r77.7 H64 bestätigt (Lauf 2, nicht blind):** R GL(4)-koordinaten- und intern lorentzkovariant; Brechung vom Hintergrund (Ψ am Keim, A, h).
+- R_chk = (1,1,0); Guards unverändert. PR #60 gemergt als 1be5dc1.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2761,3 +2772,4 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **Torus:** Im Corpus nicht ausgeschrieben; nach Auskunft des Autors bewusst weggelassen, weil er aus der
   Hopf-Faserung selbst entsteht. Inzwischen in K3.6 als Hopf-Urbild ergänzt.
 - Solve-Log r03–r94 und v4.8.0-r01–r03 (Guard-Ledger-Details), C4/C5-Kollar-Rekursion, OP-Routen.
+- v14.3 (2026-11-04): K127 Runde v4.9.0-r77 (hohe Genauigkeit, H59–H64).
