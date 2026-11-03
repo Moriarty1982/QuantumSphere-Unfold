@@ -1,6 +1,7 @@
 **Quantum Sphaera Companion**
 
 - [Startseite](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Home)
+- **[Gesamtbild auf einer Seite](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Gesamtbild)**
 - **[Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt)**
 - [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie)
 - [Vorhersagen und Tests](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Vorhersagen-und-Tests)

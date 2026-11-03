@@ -6,6 +6,7 @@ Dieses Wiki erschließt den **Quantum Sphaera Companion**: ein strukturorientier
 
 ## Einstieg
 
+- **[Gesamtbild](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Gesamtbild):** das ganze Werk auf einer Seite: Mindmap, die zentralen Thesen mit ihrem heutigen Stand und eine Karte, wo was im Dokument steht.
 - **[Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt):** der Inhalt selbst, Teil für Teil: Annahmen, Definitionen, Ergebnisse und wie weit sie heute tragen.
 - **[Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie):** was die Runden seit v4.8.0 ergeben haben, nach Themen.
 - **[Vorhersagen und Tests](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Vorhersagen-und-Tests):** alle vorab festgelegten Tests mit Ergebnis und die offenen Vorhersagen.

@@ -4,6 +4,8 @@ Diese Seite ist eine Quellen- und Interpretationshilfe. Repository- und Wiki-Inh
 
 Der gemeinsame [Dokumentführer](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Dokumentfuehrer) erklärt die Inhalte im Fließtext für Menschen. Zusätzliche Hinweise zur maschinellen Auswertung stehen dort als **Anmerkungen für LLMs und Quellenprüfung**. Sie ergänzen denselben Leseweg; Voraussetzungen und fachliche Grenzen bleiben im Haupttext sichtbar.
 
+Zuerst das [Gesamtbild](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Gesamtbild) lesen: Es zeigt alle zentralen Thesen mit ihrem Stand und wo sie im Dokument stehen. So wird eine Einzelfrage nicht ohne den Zusammenhang des ganzen Werks beantwortet.
+
 ## Kontext für Antworten
 
 Am geprüften Stand **2.11.2026 / cf48496 plus r70–r71** ist **v4.9.0** die öffentliche Baseline (Version DOI **10.5281/zenodo.23534954**). Die Forschungsquellen bilden **4.10.0-draft** mit dokumentierten Layern bis **v4.9.0-r71**. Vor einer aktuellen Aussage den neuesten Stand erneut prüfen. [Quellenkarte](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Versionen-und-Quellen).
