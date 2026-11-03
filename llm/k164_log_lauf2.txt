@@ -1,0 +1,9 @@
+Abgleich mit gespeichertem J: 1.6e-10
+Singulaerwerte J0 (relativ), kleinste 3: [2.6e-02 2.3e-02 1.3e-11]  rcond 1e-06
+Kontrolle positiv (M=1,S=1): F 1.1e-11  G 1.1e-15  dg 1.2e-15
+Kontrolle negativ (a ohne Hintergrund): F 2.6e-01  G 2.6e-01  dg 8.5e-12
+(a) Koordinaten M: F 8.3e-11  G 3.3e-10  dg 8.5e-12
+(b) innere Lorentz S: F 5.6e-11  G 2.1e-10  dg 1.1e-11
+(c) beides: F 8.8e-11  G 4.1e-10  dg 1.2e-11
+Zusatz: S nur Drehung: F 5.3e-11  G 1.7e-10  dg 1.2e-11  | S nur Boost: F 7.4e-11  G 3.3e-10  dg 1.3e-11
+Zusatz: Rang J0 = 31
