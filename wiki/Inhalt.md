@@ -93,7 +93,7 @@ $$
 \mathfrak G[\Psi,g] + \mathfrak T_{\mathrm{tri}}[\Psi] + \mathfrak H_{\mathrm{HC}}[\Psi] + \mathfrak Q_{\mathrm{cl}}[\Psi] + \mathfrak B_\beta[\Psi] = 0
 $$
 
-mit Beiträgen für Geometrie, Triolen-Dynamik, Kompensator, Schließung und Frame-Phase. Eine Kette von der Triolenquelle über die 16-dimensionale **Millennium-Matrix** $\mathcal M_{16}$ bis zu Materie, Tachyon, Photon und Feldgleichungen ordnet die Bestandteile.
+mit Beiträgen für Geometrie, Triolen-Dynamik, Kompensator, Schließung und Frame-Phase. Eine Kette von der Triolenquelle über die 16-dimensionale **Kompensatormatrix** (bis r75 „Millennium-Matrix“) $\mathcal M_{16}$ bis zu Materie, Tachyon, Photon und Feldgleichungen ordnet die Bestandteile.
 
 **Stand:** Die Gleichung ist eine Gliederung dessen, was zusammenwirken soll. Ihre Kopplungen sind nicht bestimmt, eine definierte Wirkung fehlt. Auf GitHub prüfen eigene Abschnitte, was daraus folgt und was nicht:
 - **Spektrale Identifikation:** Dass zwei Operatoren vertauschen, macht ein Bild noch nicht zu einem einzigen Eigenraum. Ausreichende Zusatzbedingungen werden angegeben (`v480:conditional-mm`).

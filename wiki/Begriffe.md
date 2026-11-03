@@ -1,6 +1,6 @@
 # Begriffe
 
-Diese Kurzbeschreibungen dienen der Orientierung. Mathematische Definitionen, insbesondere von MM, HC und den einzelnen Operatoren, sind in der jeweils verwendeten Quellfassung nachzulesen.
+Diese Kurzbeschreibungen dienen der Orientierung. Mathematische Definitionen, insbesondere von MM (Kompensatormatrix $\mathcal M_{16}$, bis r75 „Millennium-Matrix“), HC und den einzelnen Operatoren, sind in der jeweils verwendeten Quellfassung nachzulesen.
 
 | Begriff | Orientierung und Grenze |
 |---|---|

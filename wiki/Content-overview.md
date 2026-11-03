@@ -28,7 +28,7 @@ The basic structure is threefold: three equal complex numbers 120° apart sum to
 
 ## 6. The master equation
 
-$\mathfrak G + \mathfrak T_{\mathrm{tri}} + \mathfrak H_{\mathrm{HC}} + \mathfrak Q_{\mathrm{cl}} + \mathfrak B_\beta = 0$ organizes geometry, triole dynamics, compensator, closure and frame phase, with the 16-dimensional Millennium matrix in the chain. **Status:** an outline of what should work together; couplings undetermined, no defined action. Research sections test what follows: commuting operators do not give a single eigenspace; direct compensator-to-mass routes are refuted one by one; a cyclic coupling gives the Brannen form but leaves masses underdetermined; scales stay free inputs; a geometry rebuilt from spinors is conditional and not a field solution.
+$\mathfrak G + \mathfrak T_{\mathrm{tri}} + \mathfrak H_{\mathrm{HC}} + \mathfrak Q_{\mathrm{cl}} + \mathfrak B_\beta = 0$ organizes geometry, triole dynamics, compensator, closure and frame phase, with the 16-dimensional compensator matrix (called the Millennium matrix until r75) in the chain. **Status:** an outline of what should work together; couplings undetermined, no defined action. Research sections test what follows: commuting operators do not give a single eigenspace; direct compensator-to-mass routes are refuted one by one; a cyclic coupling gives the Brannen form but leaves masses underdetermined; scales stay free inputs; a geometry rebuilt from spinors is conditional and not a field solution.
 
 ## 7. Open problems OP1–OP5
 
