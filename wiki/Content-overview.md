@@ -1,6 +1,6 @@
 # What the Companion contains
 
-**State: 3 November 2026, research draft 4.10.0-draft with layers through v4.9.0-r74.** English companion of the German [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt), which is the master. This page states what the *Quantum Sphaera Companion* assumes, defines and shows, and how far each part currently holds. Source labels at the end of each part are for checking; the page itself should be enough to understand the content. [Home](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/English)
+**State: 4 November 2026, research draft 4.10.0-draft with layers through v4.9.0-r77.** English companion of the German [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt), which is the master. This page states what the *Quantum Sphaera Companion* assumes, defines and shows, and how far each part currently holds. Source labels at the end of each part are for checking; the page itself should be enough to understand the content. [Home](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/English)
 
 ## How to read each statement
 
@@ -53,6 +53,13 @@ Layer r72 fixes the $\vartheta$ gauge by prescribing one current component, $\Ps
 Layer r73 confirms the four conditions at a second base point (H55): the gauged system is not formally integrable at order 6. An exploration determines them: they are sixth-order equations that act only on light-like waves, fix one of seven polarizations per null direction, and depend on the direction through the four quadrics of the two special planes of r71; they are the remainders of the four relations $q\,d_k\,\Omega$. The Cartan test of the extended symbol (H56, H57) is invalid: not involutive at order 6, and from order 8 the available precision cannot decide. Next: consistent high-precision data at the repaired germ.
 
 Layer r74 rebuilds Ω consistently at the repaired germ. With consistent data the extended symbol is, by all evidence, involutive first at order 8 (H58, invalid only by its gap threshold); the value 724 of H57 was an artifact. The Spencer cohomology of the extended symbol leaves room for up to four further hidden conditions on 7-jets and three on 8-jets. A method check shows a structural precision limit: Ω and the four conditions are nearly consequences of the basic equations (weight about 1e-8); staged elimination and a plane-wave reformulation do not lift it.
+
+Layer r77 repeats the chain in high precision (70 digits) and runs the decisive eliminations on parallel GitHub runners. The results:
+- There are exactly four hidden conditions, and the extended symbol is involutive first at order 8 (characters 723, 130, 12, 0).
+- There are no further hidden conditions on 7- and 8-jets (H59 confirmed), so the system is formally integrable at the germ.
+- It carries six real massless modes per null direction (H60 confirmed). These are not Weyl or Majorana modes in the naive spin assignment (H61 refuted).
+- At a fixed background the symbol is invariant only under scaling (H62 and H63 refuted).
+- The construction R itself is coordinate covariant and internally Lorentz covariant (H64 confirmed, run 2 not blind), so the Lorentz breaking comes from the background.
 
 ## Never claimed
 

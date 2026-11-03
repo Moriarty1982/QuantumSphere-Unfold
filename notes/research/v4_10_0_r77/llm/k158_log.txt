@@ -1,0 +1,16 @@
+N6 2016 501  C 1368 501
+Singulaerwerte von C (relativ), kleinste 6 echte: [3.78e-17 3.61e-17 3.61e-17 3.13e-17 2.24e-17 1.04e-17]
+ker C: dim 477, Residuum 6e-45
+g''_6: dim 477
+g''_7: dim 594 (Luecke 6.0e-02|7.2e-15, Verh. 8e+12)
+g''_8: dim 723 (Luecke 9.7e-06|1.1e-14, Verh. 9e+08)
+g''_9: dim 865 (Luecke 5.4e-01|2.2e-10, Verh. 2e+09)
+seed 1 p=6: dim g''^(k) = [477, 107, 12, 0], Summe 596, dim g''_7 = 594 -> kleiner (nicht involutiv); Luecken ['2e+13', '7e+12', '7e+15']
+seed 1 p=7: dim g''^(k) = [594, 118, 12, 0], Summe 724, dim g''_8 = 723 -> kleiner (nicht involutiv); Luecken ['4e+11', '8e+12', '8e+15']
+seed 1 p=8: dim g''^(k) = [723, 130, 12, 0], Summe 865, dim g''_9 = 865 -> GLEICH (involutiv); Luecken ['1e+08', '6e+09', '9e+15']
+seed 2 p=6: dim g''^(k) = [477, 107, 12, 0], Summe 596, dim g''_7 = 594 -> kleiner (nicht involutiv); Luecken ['1e+13', '3e+13', '6e+16']
+seed 2 p=7: dim g''^(k) = [594, 118, 12, 0], Summe 724, dim g''_8 = 723 -> kleiner (nicht involutiv); Luecken ['7e+11', '1e+13', '6e+16']
+seed 2 p=8: dim g''^(k) = [723, 130, 12, 0], Summe 865, dim g''_9 = 865 -> GLEICH (involutiv); Luecken ['2e+08', '9e+08', '6e+16']
+seed 3 p=6: dim g''^(k) = [477, 107, 12, 0], Summe 596, dim g''_7 = 594 -> kleiner (nicht involutiv); Luecken ['4e+13', '1e+14', '4e+16']
+seed 3 p=7: dim g''^(k) = [594, 118, 12, 0], Summe 724, dim g''_8 = 723 -> kleiner (nicht involutiv); Luecken ['1e+13', '5e+13', '4e+16']
+seed 3 p=8: dim g''^(k) = [723, 130, 12, 0], Summe 865, dim g''_9 = 865 -> GLEICH (involutiv); Luecken ['2e+09', '3e+09', '4e+16']
