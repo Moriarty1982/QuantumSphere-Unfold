@@ -40,3 +40,20 @@ In (a), (b) und (c) gilt res ≤ 1e-7 für F, für G und für dg. R ist dann koo
 | ungültig | eine Kontrolle verfehlt, oder ein res liegt zwischen 1e-7 und 1e-4 |
 
 Finite Differenzen mit Schritt 1e-5 erlauben etwa 1e-10.
+
+## Nachtrag vom 4. November 2026, nach Lauf 1 und vor Lauf 2
+**Lauf 1 ist ungültig.** Die positive Kontrolle ergab res = 2.1e-7 und verfehlte damit die Schranke 1e-9.
+
+Werte von Lauf 1:
+| Fall | res |
+|---|---|
+| Kontrolle negativ | F 0.26, G 0.26, dg 2e-7 |
+| (a) | ≤ 2.1e-7 |
+| (b) | ≤ 2.1e-7 |
+| (c) | ≤ 2.1e-7 |
+
+Ursache: J₀ hat Rang 31 mit einem Singulärwert von 1.3e-11 relativ. Die Pseudoinverse ohne Abschneiden verstärkt das Rauschen der finiten Differenzen.
+
+Lauf 2 nutzt die Pseudoinverse mit rcond = 1e-6; alle Kriterien bleiben unverändert. **Lauf 2 ist nicht blind**, weil die Werte von Lauf 1 bekannt sind.
+
+Zur negativen Kontrolle: Der dg-Block hängt im Symbol nur von h ab, nicht von ∂h, A oder ∂A. Er kann die Kontrolle deshalb nicht verfehlen. Für F und G gilt die Kontrolle (≥ 1e-3).
