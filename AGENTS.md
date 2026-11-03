@@ -9,6 +9,10 @@ verweist). Wer etwas an den Regeln ändert, ändert es **hier**.
 - **Abläufe:** Schritt-für-Schritt-Anleitungen stehen in `llm/anleitungen/`:
   - `qsc-runde-einbauen.md`: neue Runde schreiben und in Monolith, GitHub-Fragment, Notizen, Wiki und PR bringen.
   - `op5-vergleichsmodell-rechnen.md`: Rechnungen am OP5-Vergleichsmodell (Daten, Konventionen, Werkzeuge, bekannte Ergebnisse).
+- **Gesamtbild zuerst:** vor jeder inhaltlichen Arbeit `wiki/Gesamtbild.md` (GitHub, PR #56) lesen: Mindmap, zentrale
+  Thesen T1–T15 mit Stand und Dokumentkarte. Jede Einzelfrage dort einordnen, bevor Teile des Monolithen gelesen werden.
+- **Parallel rechnen:** große Rangrechnungen über `.github/workflows/op5-parallel.yml` (PR #55) auf GitHub-Runnern,
+  ein Job je Parameter; Einzelheiten in `llm/anleitungen/op5-vergleichsmodell-rechnen.md`.
 - **Vorab-Notizen:** Jeder Test mit Entscheidungskriterium wird vor der Rechnung als `llm/Vorab_Notiz_HNN_*.md`
   festgeschrieben und committet. Erkundungen ohne Vorab-Notiz heißen „Erkundung“, nie „Test“.
 - **Append-only:** bestehende Runden werden nie umgeschrieben; Korrekturen kommen in eine neue Runde.
