@@ -106,6 +106,6 @@ In r25 wurden 15 Sackgassen archiviert.
 
 ## Namen (r75)
 
-- **Kompensatormatrix statt Millennium-Matrix.** Die Matrix $\mathcal M_{16}$ heißt seit r75 Kompensatormatrix (Autorentscheidung). Nur der Name ändert sich; Symbol, Labels, das Kürzel MM und alle Aussagen bleiben.
+- **Kompensatormatrix statt Millennium-Matrix.** Die Matrix $\mathcal M_{16}$ heißt seit r75 Kompensatormatrix (Autorentscheidung). Nur der Name ändert sich; Symbol, Labels, das Kürzel MM und alle Aussagen bleiben. Runde r76 korrigiert r75: Der Name „layer-transport matrix“ aus r05 wird durch Kompensatormatrix ersetzt; „port-weighting matrix“ für die Dublett-Einschränkung bleibt.
 
 [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Offene Probleme](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Offene-Probleme)
