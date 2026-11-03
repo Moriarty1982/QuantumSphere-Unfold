@@ -1,0 +1,139 @@
+\section{One generation from \texorpdfstring{$\mathbb C\otimes\HH\otimes\OO$}{C x H x O}}\label{sec:generation}
+
+The algebra \(\mathbb C\otimes\HH\otimes\OO\), often called the Dixon algebra, has a long history as a candidate carrier of the
+Standard Model: octonionic quark structure~\cite{gunaydin}, Dixon's programme~\cite{dixon}, charge quantization from a number
+operator on \(\mathbb C\otimes\OO\)~\cite{furey2015}, the Standard Model gauge group as a symmetry of ladder operators on
+\(\mathbb C\otimes\HH\otimes\OO\)~\cite{furey2018}, braided realizations~\cite{gresnigt}, and triality as the origin of three
+generations~\cite{boyle}.  This section shows that the building blocks of Sections~\ref{sec:kernel} and~\ref{sec:octonions} reproduce
+the content of one generation.  Most of the pattern is known; what is specific to this framework is listed in
+\S\ref{subsec:gen-new}.  All statements were checked by explicit matrices on \(\mathbb C^{32}\), the anomaly traces in exact fractions
+(Companion layers v4.9.0-r34, r35, r41--r43, pre-registered tests H19, H20, H26--H28).
+
+\subsection{Conventions}
+
+\(L_a\) and \(R_a\) denote left and right multiplication by \(e_a\) on \(\OO\) (Cayley--Dickson convention of the Companion), with
+\(e_7e_4=-e_3\), \(e_7e_5=-e_2\), \(e_7e_6=e_1\).  Colour is \(SU(3)_c=\operatorname{Stab}_{G_2}(e_7)\).  Two complex units occur and must be
+kept apart: the \emph{outer} unit \(i\), the \(\mathbb C\) factor, and the \emph{inner} unit \(L_{e_7}\) on \(\OO\).  Time reversal \(T\) is complex
+conjugation of the \(\mathbb C\) factor.
+
+\subsection{Charges from a number operator}
+
+Following~\cite{furey2015}, put
+\[
+\alpha_a=\tfrac12\bigl(L_{e_a}+i\,L_{e_7e_a}\bigr)\quad(a=4,5,6),\qquad N=\sum_a\alpha_a^\dagger\alpha_a,\qquad Q=N/3 .
+\]
+
+\begin{proposition}[Charge sectors]\label{prop:charges}
+The \(\alpha_a\) satisfy \(\alpha_a^2=0\) and \(\{\alpha_a,\alpha_b^\dagger\}=\delta_{ab}\), so \(N\) has eigenvalues \(0,1,2,3\) with
+multiplicities \(1,3,3,1\) on \(\mathbb C\otimes\OO\cong\mathbb C^8\).  Colour commutes with \(Q\).  The sectors \(Q=0\) and \(Q=1\) are colour
+singlets spanned by \(1\pm i\,e_7\); the sectors \(Q=\tfrac13\) and \(Q=\tfrac23\) are mutually conjugate colour triplets.  Moreover
+\[
+Q=\tfrac12-\tfrac{i}{6}\,L_{e_7}-\tfrac{i}{3}\,R_{e_7},\qquad TQT^{-1}=1-Q .
+\]
+\end{proposition}
+
+\begin{proof}
+The anticommutators follow from the Clifford relations \(L_aL_b+L_bL_a=-2\delta_{ab}\) on \(\OO\); a fermionic number operator on three
+modes has the stated spectrum.  Colour invariance, the sector bases and the formula for \(Q\) were verified by explicit matrices.
+\(T\) sends \(\alpha_a\) to \(-\alpha_a^\dagger\), hence \(N\) to \(3-N\).
+\end{proof}
+
+The pattern \(0,\tfrac13,\tfrac23,1\) with singlet, triplet, conjugate triplet, singlet is Furey's; in her reading the sectors are
+\(\nu,\bar d,u,e^+\).  The multiplicities are forced by the algebra and are not a prediction.  Two remarks belong to this framework.
+First, charge needs both units and both left and right multiplication; the scalar \(it\) of the kernel alone generates only a global
+phase.  Second, the inner frame and the outer frame are related by \(P_\pm=\tfrac12(1\mp iL_{e_7})\), and an earlier statement of the
+Companion that \(\operatorname{span}(e_1,e_2,e_3)\) carries the conjugate colour triplet confused the two (layer v4.9.0-r35).
+
+\subsection{Weak doublets}
+
+Let the Lorentz group act on \(\mathbb C\otimes\HH\) from the left (rotations \(L_q\), boosts \(iL_q\)), the weak \(SU(2)\) from the right
+(\(T_3=-\tfrac i2R_k\)), colour on \(\OO\), and put \(Y/2=Q-\tfrac12\), \(Q_{\rm em}=T_3+Y/2\).
+
+\begin{proposition}[Doublets]\label{prop:doublets}
+The weak \(SU(2)\) commutes with the Lorentz group, colour and \(Q\).  The joint eigenspaces of \(Q\) and \(T_3\) carry
+\[
+\begin{array}{llll}
+\toprule
+Q\text{-sector} & Y/2 & Q_{\rm em}\ (T_3=\pm\tfrac12) & \text{reading}\\
+\midrule
+0\ (\text{singlet}) & -\tfrac12 & 0,\,-1 & (\nu,e)\\
+\tfrac23\ (\text{triplet}) & +\tfrac16 & \tfrac23,\,-\tfrac13 & (u,d)\\
+\tfrac13\ (\text{conj.\ triplet}) & -\tfrac16 & \tfrac13,\,-\tfrac23 & (\bar d,\bar u)\\
+1\ (\text{singlet}) & +\tfrac12 & 1,\,0 & (e^+,\bar\nu)\\
+\bottomrule
+\end{array}
+\]
+and \(TQ_{\rm em}T^{-1}=-Q_{\rm em}\).  There is no weak singlet: \(T_1^2+T_2^2+T_3^2=\tfrac34\) everywhere.
+\end{proposition}
+
+The offset \(-\tfrac12\) is chosen here; it is fixed below.  Without a further structure every state is a weak doublet, so half of a
+generation is missing.
+
+\subsection{Chirality from a compensator}
+
+The missing half is supplied by a projector of the form of the Heisenberg compensator (Definition~\ref{def:compensator}), now with
+\(J\) the product of the two units:
+\[
+C_{\rm ch}=\tfrac12(1+J),\qquad J=i\,L_{e_7},\qquad T_a'=C_{\rm ch}T_a,\qquad
+\tfrac Y2=Q-\tfrac12+(1-C_{\rm ch})T_3 .
+\]
+
+\begin{proposition}[One generation]\label{prop:generation}
+\(J^2=1\), and \(C_{\rm ch}\) is a Hermitian projector of rank \(16\) commuting with colour, the Lorentz group, the right action of \(\HH\) and
+\(Q\); its image is the sum of the sectors \(Q=0\) and \(Q=\tfrac23\).  Under \(SU(3)_c\times SU(2)'\times U(1)_Y\) the space decomposes into
+\[
+(3,2)_{1/6}\oplus(1,2)_{-1/2}\oplus(\bar3,1)_{-2/3}\oplus(\bar3,1)_{1/3}\oplus(1,1)_{1}\oplus(1,1)_{0},
+\]
+that is \((u,d)_L\), \((\nu,e)_L\), \(u^c\), \(d^c\), \(e^c\), \(\nu^c\): sixteen Weyl states with two Lorentz components each, and
+\(Q_{\rm em}=T_3'+Y/2\).  The traces \(\operatorname{Tr}Y\), \(\operatorname{Tr}Y^3\), \(SU(2)^2U(1)\) and \(SU(3)^2U(1)\) vanish.  Finally
+\(TC_{\rm ch}T^{-1}=1-C_{\rm ch}\).
+\end{proposition}
+
+The weak \(SU(2)'\) acts only on the image of \(C_{\rm ch}\); in the model this is chirality.  The frame change \(T\) exchanges image
+and kernel, so matter frame and tachyon frame are, in the model, particle and antiparticle with mirrored chirality.  This is a reading.
+
+\subsection{The choice is fixed by anomaly cancellation}
+
+\begin{proposition}[Uniqueness up to the frame]\label{prop:anomaly}
+Consider chirality projectors \(C=\tfrac12(1+J)\) on \(\mathbb C\otimes\OO\) with \(J\) Hermitian, \(J^2=1\), commuting with colour and \(Q\), of
+rank \(16\), whose image is one colour singlet and one colour triplet; set \(T_a'=CT_a\), \(Q_{\rm em}=T_3+Q+\sigma\) and
+\(Y/2=Q+\sigma+(1-C)T_3\).  Then:
+\begin{enumerate}[label=(\alph*)]
+\item There are exactly four such projectors, \(J\in\{\pm iL_{e_7},\pm iR_{e_7}\}\).
+\item For each, \(\operatorname{Tr}Y=0\) holds exactly for \(\sigma=-\tfrac12\).
+\item At \(\sigma=-\tfrac12\) all four anomaly traces vanish exactly for \(J=\pm iL_{e_7}\); for \(J=\pm iR_{e_7}\) one finds
+\(\operatorname{Tr}Y^3=\pm\tfrac32\).
+\item \(T(iL_{e_7})T^{-1}=-iL_{e_7}\).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Each \(Q\)-sector is colour-irreducible with its own charge, so the commutant of colour and \(Q\) consists of scalars on the four
+sectors; a Hermitian involution there is a choice of sign per sector, and the rank and image conditions leave four.  The traces
+were computed in exact fractions.  (d) holds because \(T\) conjugates \(i\) and fixes \(L_{e_7}\).
+\end{proof}
+
+Under the assumptions of the setting nothing is left to choose: the gravitational anomaly fixes the offset, the remaining anomalies
+select left against right multiplication, and what remains is the Standard Model content and its frame mirror.  The setting itself
+--- weak \(SU(2)\) from the right, the form of \(Q_{\rm em}\), a projector on \(\mathbb C\otimes\OO\) --- stays an assumption.  That the
+Standard Model is anomaly-free is of course known; the statement is only that, in this structure, anomaly cancellation alone decides
+the choice.
+
+\subsection{What is new, and what is not}\label{subsec:gen-new}
+
+\emph{Known.}  The charge pattern from a number operator~\cite{furey2015}; the Standard Model gauge group and one generation in
+\(\mathbb C\otimes\HH\otimes\OO\)~\cite{dixon,furey2018,gresnigt}; triality as a carrier of three generations~\cite{boyle}.
+
+\emph{Specific to this framework.}  (i) The roles are placed on the two sides of \(\HH\) (Lorentz left, weak right) and on the frames.
+(ii) Chirality comes from a projector of the same form \(\tfrac12(1+J)\) as the kernel's compensator, with \(J\) the product of the outer and
+the inner unit.  (iii) Among the four admissible chirality projectors, anomaly cancellation alone selects the left one, up to the frame
+change.  (iv) The frame change acts as charge conjugation with mirrored chirality.  We have not found (ii) and (iii) in this form in the
+literature, but a systematic comparison is still to be done.
+
+\emph{Not addressed.}  Why the weak \(SU(2)\) acts from the right; symmetry breaking; masses and mixing angles; why three generations and
+not four (Section~\ref{sec:octonions}).  The construction was made under choices that were partly seen in advance, and this is disclosed in
+the pre-registration notes.
+
+\medskip\noindent\emph{Status.}  Propositions~\ref{prop:charges}--\ref{prop:anomaly} are established by proof or by explicit exact
+computation under the stated setting.  The identification of the states with physical particles is the standard one; its derivation
+from the kernel is not claimed.
