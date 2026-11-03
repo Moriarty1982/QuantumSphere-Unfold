@@ -4,14 +4,14 @@ The algebra \(\mathbb C\otimes\HH\otimes\OO\), often called the Dixon algebra, h
 Standard Model: octonionic quark structure~\cite{gunaydin}, Dixon's programme~\cite{dixon}, charge quantization from a number
 operator on \(\mathbb C\otimes\OO\)~\cite{furey2015}, the Standard Model gauge group as a symmetry of ladder operators on
 \(\mathbb C\otimes\HH\otimes\OO\)~\cite{furey2018}, braided realizations~\cite{gresnigt}, and triality as the origin of three
-generations~\cite{boyle}.  This section shows that the building blocks of Sections~\ref{sec:kernel} and~\ref{sec:octonions} reproduce
-the content of one generation.  Most of the pattern is known; what is specific to this framework is listed in
-\S\ref{subsec:gen-new}.  All statements were checked by explicit matrices on \(\mathbb C^{32}\), the anomaly traces in exact fractions
-(Companion layers v4.9.0-r34, r35, r41--r43, pre-registered tests H19, H20, H26--H28).
+generations~\cite{boyle}.  This section shows that the building blocks of Sections~\ref{sec:frames} and~\ref{sec:cm} reproduce the
+content of one generation, and that one choice usually made by hand is fixed by anomaly cancellation.  Most of the charge pattern is known;
+\S\ref{subsec:gen-new} states what is specific here.  All statements were checked with explicit matrices on \(\mathbb C^{32}\), the
+anomaly traces in exact fractions.
 
 \subsection{Conventions}
 
-\(L_a\) and \(R_a\) denote left and right multiplication by \(e_a\) on \(\OO\) (Cayley--Dickson convention of the Companion), with
+\(L_a\) and \(R_a\) denote left and right multiplication by \(e_a\) on \(\OO\) (Cayley--Dickson convention), with
 \(e_7e_4=-e_3\), \(e_7e_5=-e_2\), \(e_7e_6=e_1\).  Colour is \(SU(3)_c=\operatorname{Stab}_{G_2}(e_7)\).  Two complex units occur and must be
 kept apart: the \emph{outer} unit \(i\), the \(\mathbb C\) factor, and the \emph{inner} unit \(L_{e_7}\) on \(\OO\).  Time reversal \(T\) is complex
 conjugation of the \(\mathbb C\) factor.
@@ -41,8 +41,9 @@ modes has the stated spectrum.  Colour invariance, the sector bases and the form
 The pattern \(0,\tfrac13,\tfrac23,1\) with singlet, triplet, conjugate triplet, singlet is Furey's; in her reading the sectors are
 \(\nu,\bar d,u,e^+\).  The multiplicities are forced by the algebra and are not a prediction.  Two remarks belong to this framework.
 First, charge needs both units and both left and right multiplication; the scalar \(it\) of the kernel alone generates only a global
-phase.  Second, the inner frame and the outer frame are related by \(P_\pm=\tfrac12(1\mp iL_{e_7})\), and an earlier statement of the
-Companion that \(\operatorname{span}(e_1,e_2,e_3)\) carries the conjugate colour triplet confused the two (layer v4.9.0-r35).
+phase.  Second, the two units must not be confused: the maps \(P_\pm=\tfrac12(1\mp iL_{e_7})\) translate between \(\OO\) with the inner unit,
+where \(e_4,e_5,e_6\) span one colour triplet and \(e_7\) is a singlet, and \(\mathbb C\otimes\OO\) with the outer unit, where the two
+conjugate triplets live.  The real span of \(e_1,e_2,e_3\) carries no conjugate triplet.
 
 \subsection{Weak doublets}
 
@@ -71,7 +72,7 @@ generation is missing.
 
 \subsection{Chirality from a compensator}
 
-The missing half is supplied by a projector of the form of the Heisenberg compensator (Definition~\ref{def:compensator}), now with
+The missing half is supplied by a projector of the form of the compensator (Definition~\ref{def:compensator}), now with
 \(J\) the product of the two units:
 \[
 C_{\rm ch}=\tfrac12(1+J),\qquad J=i\,L_{e_7},\qquad T_a'=C_{\rm ch}T_a,\qquad
@@ -119,7 +120,30 @@ select left against right multiplication, and what remains is the Standard Model
 Standard Model is anomaly-free is of course known; the statement is only that, in this structure, anomaly cancellation alone decides
 the choice.
 
-\subsection{What is new, and what is not}\label{subsec:gen-new}
+\subsection{Three generations?}
+
+The generation index needs a second threefold structure besides colour.  The triality form \(t(x,y,z)=\operatorname{Re}((xy)z)\) on \(\OO^3\)
+provides one.
+
+\begin{proposition}[Triality]\label{prop:triality}
+Let \(\mathfrak g=\{(A,B,C)\in\mathfrak{so}(8)^3:\ t(Ax,y,z)+t(x,By,z)+t(x,y,Cz)=0\}\) and \(\tau(x,y,z)=(y,z,x)\).  Then \(\dim\mathfrak g=28\), each
+projection \(\mathfrak g\to\mathfrak{so}(8)\) is an isomorphism, and the three slot representations are the three inequivalent
+eight-dimensional representations of \(\mathrm{Spin}(8)\).  The shift \(\tau\) preserves \(t\) and induces an outer automorphism of order three;
+its fixed elements \((A,A,A)\) form \(\operatorname{Der}(\OO)=\mathfrak g_2\), and those that also annihilate \(e_7\) form \(\mathfrak{su}(3)\).
+\end{proposition}
+
+\begin{proof}
+This is classical triality~\cite{baez}; \(t(x,y,z)=t(y,z,x)\) follows from \(\operatorname{Re}((xy)z)=\operatorname{Re}(x(yz))\) and
+\(\operatorname{Re}(ab)=\operatorname{Re}(ba)\).
+\end{proof}
+
+On \(\mathbb C\otimes\HH\otimes\OO^3\) the slot shift commutes with the Lorentz group, the weak \(SU(2)\), colour and \(Q\).  In this reading a
+generation index is what the shift permutes and colour is what it fixes: orbit and fixed group of one motion.  It is a carrier for three
+generations, not a derivation that there are three; it excludes a fourth inequivalent eight-dimensional representation
+(\(\operatorname{Out}(\mathrm{Spin}(8))=S_3\)), not a fourth generation.  The word ``triple'' thus has three distinct meanings in this work ---
+the three frames, the three kernels at \(120^\circ\), and the three slots of triality --- and they must not be identified.
+
+\subsection{Relation to previous work}\label{subsec:gen-new}
 
 \emph{Known.}  The charge pattern from a number operator~\cite{furey2015}; the Standard Model gauge group and one generation in
 \(\mathbb C\otimes\HH\otimes\OO\)~\cite{dixon,furey2018,gresnigt}; triality as a carrier of three generations~\cite{boyle}.
@@ -128,12 +152,8 @@ the choice.
 (ii) Chirality comes from a projector of the same form \(\tfrac12(1+J)\) as the kernel's compensator, with \(J\) the product of the outer and
 the inner unit.  (iii) Among the four admissible chirality projectors, anomaly cancellation alone selects the left one, up to the frame
 change.  (iv) The frame change acts as charge conjugation with mirrored chirality.  We have not found (ii) and (iii) in this form in the
-literature, but a systematic comparison is still to be done.
+literature; a systematic comparison remains to be done.
 
 \emph{Not addressed.}  Why the weak \(SU(2)\) acts from the right; symmetry breaking; masses and mixing angles; why three generations and
-not four (Section~\ref{sec:octonions}).  The construction was made under choices that were partly seen in advance, and this is disclosed in
-the pre-registration notes.
-
-\medskip\noindent\emph{Status.}  Propositions~\ref{prop:charges}--\ref{prop:anomaly} are established by proof or by explicit exact
-computation under the stated setting.  The identification of the states with physical particles is the standard one; its derivation
-from the kernel is not claimed.
+not four.  The charge pattern of Propositions~\ref{prop:doublets} and~\ref{prop:generation} was seen analytically before the computation
+that checked it, and the identification of the states with particles is the standard one, not derived from the kernel.

@@ -1,0 +1,53 @@
+\section{Introduction}\label{sec:intro}
+
+The idea that the Standard Model might be read off from the normed division algebras is old.  G\"unaydin and G\"ursey related the
+octonions to the colour structure of quarks~\cite{gunaydin}; Dixon proposed \(\mathbb C\otimes\HH\otimes\OO\) as the algebra behind one
+generation~\cite{dixon}; Furey derived the charge pattern of a generation from a number operator on \(\mathbb C\otimes\OO\)~\cite{furey2015}
+and the gauge group \(SU(3)_C\times SU(2)_L\times U(1)_Y\) as a symmetry of ladder operators on \(\mathbb C\otimes\HH\otimes\OO\)~\cite{furey2018};
+Gresnigt gave braided realizations~\cite{gresnigt}; and Boyle proposed triality as the origin of three generations~\cite{boyle}.  What these
+constructions take as given is the role of the complex unit and the choice of chirality.  Both are usually fixed by hand.
+
+A second, independent line starts from electromagnetic duality.  Writing the electromagnetic field as the Riemann--Silberstein vector
+\(z=E+iB\)~\cite{bialynicki}, the proper Lorentz group acts on \(z\in\mathbb C^3\) as \(SO(3,\mathbb C)\), and the two field invariants
+combine into one complex number \(s=z\cdot z=E^2-B^2+2iE\cdot B\).  The duality rotation \(z\mapsto e^{i\alpha}z\) turns electric into
+magnetic fields and rotates \(s\); the quarter turn \(z\mapsto iz\) changes the sign of \(E^2-B^2\).  Electric- and magnetic-dominated
+configurations are thereby exchanged, while null fields, \(s=0\), are fixed.
+
+This paper connects the two lines through a single object, which we call the \emph{kernel}: a complex quaternion
+\(q=it\,\mathbf 1+z_1e_1+z_2e_2+z_3e_3\in\mathbb C\otimes\HH\).  Its natural norm \(q\bar q=-t^2+s(z)\) contains exactly the Lorentz invariant
+\(s\), and its unit group acts on the three complex coordinates by \(SO(3,\mathbb C)\).  We take seriously a reading in which the sign of \(s\)
+separates a matter-type sector (\(s>0\)), a tachyon-type sector (\(s<0\)) and a light-like sector (\(s=0\)), and in which matter and tachyon
+are the same configuration seen in two duality frames.  The working hypothesis behind the paper is that these three sectors are three
+views of one object.  We do not derive physics from this hypothesis.  We ask what structure it carries, and how far that structure
+reaches into the Standard Model.
+
+\paragraph{Main results.}
+\begin{enumerate}
+\item In the kernel, the symmetric triple of coordinates of equal modulus at \(120^\circ\) is exactly the centred null configuration, and the
+projectivized null cone is \(\mathbb CP^1\), the first base of the Hopf cascade (Section~\ref{sec:kernel}).
+\item Matter-type and tachyon-type kernels of equal \(|s|\) form one orbit of \(SO(3,\mathbb C)\times U(1)_{\rm dual}\), with the light-like
+kernels as the unique orbit fixed by duality.  A projector \(C=\tfrac12(1+J_B)\), with the antilinear involution \(J_Bz=i\bar z\), splits every
+field into two ports; on the real doublet \((E,B)\) it becomes an orthogonal projection, and the field state becomes a point of a disk with
+matter and tachyon on opposite sides and light at the centre (Section~\ref{sec:frames}).
+\item The operators that commute with this involution and with \(C\) on the doublet are exactly the weightings of the two ports.  We state the
+additional hypotheses under which \(C\) is the spectral projector of such an operator in general (Section~\ref{sec:cm}).
+\item On \(\mathbb C\otimes\HH\otimes\OO\), a projector of the same form, \(C_{\rm ch}=\tfrac12(1+iL_{e_7})\), completes the weak doublets to the
+full left-handed content of one generation with right-handed neutrino.  Among the four projectors compatible with colour and charge,
+anomaly cancellation alone selects this one, up to the frame change that maps it to its mirror (Section~\ref{sec:generation}).
+\item The only numerical input of the framework, a frame rapidity \(\eta\) with \(\tanh\eta=\beta_{\rm sym}\approx0.549\), can be read as the ratio
+of two horizon-state countings of loop quantum gravity, selected by saturation of the uncertainty bound.  With it we state four predictions
+that were registered before the relevant data: \(\sin^2\theta_{12}=0.3086\), \(m_W=80.3615\pm0.0018\) GeV, \(\sin^2\theta_{23}\le0.54\), and
+\(\sin^2\theta_{23}\in[0.49,0.50]\) (Section~\ref{sec:pheno}).
+\end{enumerate}
+
+\paragraph{Limitations.}  The framework has no dynamics.  There is no action, varied in all fields, from which the kernel, the projectors or
+\(\beta_{\rm sym}\) follow; the generation of item~4 is obtained under a stated setting, and the number in item~5 is an input whose counting
+reading favours the less established of two treatments.  Section~\ref{sec:discussion} discusses these points and states what a dynamics would
+have to provide.  An earlier, much longer version of this work contained claims that do not hold, among them steps that relied on a claimed
+proof of the Riemann hypothesis; Appendix~\ref{app:earlier} lists them.
+
+\paragraph{Outline.}  Section~\ref{sec:kernel} introduces the kernel and its Lorentz structure, Section~\ref{sec:frames} the duality frames and
+the compensator, Section~\ref{sec:cm} the compensator matrix, Section~\ref{sec:generation} the generation, and Section~\ref{sec:pheno} the frame
+offset and the predictions.  Section~\ref{sec:discussion} discusses limitations and open problems, and Section~\ref{sec:conclusions} concludes.
+Appendix~\ref{app:method} describes how the results were checked, and Appendix~\ref{app:qam} gives the key statements in the coded notation
+used in the longer version~\cite{companion}.

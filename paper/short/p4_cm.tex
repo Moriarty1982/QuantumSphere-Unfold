@@ -1,0 +1,54 @@
+\section{The compensator matrix}\label{sec:cm}
+
+The compensator acts on one layer.  A framework built on the Hopf cascade needs an operator that carries one object through all layers
+and contains the compensator; we call it the \emph{compensator matrix} \(\mathcal M\).  What can be required of it without further input are
+the following identities.
+
+\begin{definition}[Compensator-matrix conditions]\label{def:cm}
+Operators \(\mathcal J,\mathcal C,\mathcal M\) on a real or complex vector space satisfy the \emph{compensator-matrix conditions} if
+\begin{equation}\label{eq:cm}
+\mathcal J^2=1,\qquad \mathcal C^2=\mathcal C,\qquad
+\mathcal M\mathcal J=\mathcal J\mathcal M,\qquad \mathcal M\mathcal C=\mathcal C\mathcal M .
+\end{equation}
+\end{definition}
+
+One would like \(\mathcal C\) to be the spectral projector of \(\mathcal M\) onto a distinguished eigenspace.  Commutation alone does not give
+this: \(M=\operatorname{diag}(1,2,3)\) commutes with \(C=\operatorname{diag}(1,1,0)\) without being scalar on \(\operatorname{im}C\), and
+\(M=\operatorname{diag}(2,2,3)\), \(C=\operatorname{diag}(1,0,0)\) shows that even scalar action can miss part of the eigenspace.  Two further
+hypotheses suffice.
+
+\begin{proposition}[Spectral identification]\label{prop:spectral}
+Let \(M\) be a bounded self-adjoint operator on a complex Hilbert space and \(C\neq0\) an orthogonal projector with
+\(MC=CM=\lambda_0C\) and \(\ker(M-\lambda_0)\cap\ker C=\{0\}\) for some real \(\lambda_0\).  Then \(\operatorname{im}C=\ker(M-\lambda_0)\), and \(C\)
+is the orthogonal eigenprojection of \(M\) for \(\lambda_0\).
+\end{proposition}
+
+\begin{proof}
+\(MC=\lambda_0C\) gives \(\operatorname{im}C\subset\ker(M-\lambda_0)\).  If \(Mx=\lambda_0x\), then \((1-C)x\) lies in \(\ker(M-\lambda_0)\) by commutation
+and in \(\ker C\), hence vanishes.
+\end{proof}
+
+On the doublet of Proposition~\ref{prop:doublet} the conditions can be solved completely.
+
+\begin{proposition}[Doublet solution]\label{prop:cm-doublet}
+With \(\mathcal J=\sigma_x\) and \(\mathcal C=C_{\rm HC}\) acting on \(F\) from the right, the real \(2\times2\) matrices satisfying \eqref{eq:cm} are exactly
+\[
+M=\lambda_+C_{\rm HC}+\lambda_-A,\qquad \lambda_\pm\in\mathbb R .
+\]
+For \(\lambda_+\neq\lambda_-\), \(C_{\rm HC}\) is the spectral projector of \(M\) for \(\lambda_+\).  The members of determinant one are
+\(e^{\theta\sigma_x}=e^{\theta}C_{\rm HC}+e^{-\theta}A\); they preserve \(\operatorname{Re}s=E^2-B^2\).  Spatial rotations commute with all of them, while boosts
+and duality rotations other than by \(0\) and \(\pi\) violate \eqref{eq:cm}.
+\end{proposition}
+
+\begin{proof}
+\(M\sigma_x=\sigma_xM\) is linear with solutions spanned by \(1\) and \(\sigma_x\), equivalently by \(C_{\rm HC}\) and \(A\).  \(R_\alpha\) commutes with
+\(\sigma_x\) only for \(\alpha\in\{0,\pi\}\).  A boost couples \(E\) and \(B\) through cross products and is not of the form \(F\mapsto LFM\).
+\end{proof}
+
+On the doublet the compensator matrix can therefore only weight the two ports, by \(e^{\pm\theta}\); it is not the Lorentz transport of the
+kernel.  With \(\theta\) equal to the frame rapidity of Section~\ref{sec:pheno} the weights would be Doppler factors, but this is arithmetic,
+not an identification.  A realization on a larger carrier is not known in general.  One partial realization is the subject of the next
+section: on \(\mathbb C\otimes\HH\otimes\OO\) a projector of the same form as \(C\) separates the chiralities of one generation, and an operator
+\(\lambda_0C_{\rm ch}+\lambda_1(1-C_{\rm ch})\) with \(\lambda_0\neq\lambda_1\) satisfies \eqref{eq:cm} with \(C_{\rm ch}\) as its spectral projector.
+That one generation with right-handed neutrino has \(16\) Weyl states, and that the longer version of this work posits a \(16\times16\)
+compensator matrix, is noted here without interpretation.

@@ -17,54 +17,48 @@
 \newcommand{\HH}{\mathbb H}
 \newcommand{\OO}{\mathbb O}
 
-\title{The Sphaera Kernel: a Biquaternion--Octonion Framework with Three Frames.\\
-\large What holds, what is conditional, and what does not follow}
-\author{Marc Brendecke}
+\title{Three frames on one kernel:\\ duality sectors of a complex quaternion and chirality from a compensator in \(\mathbb C\otimes\mathbb H\otimes\mathbb O\)}
+\author{Marc Brendecke\\ \small Independent researcher, Bochum, Germany}
 \date{Draft, \today}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-We report what holds in a research programme that starts from the conjecture that matter, light and a tachyon sector are one object seen
-from three frames.  The central object is a biquaternion kernel \(q=it+z_1e_1+z_2e_2+z_3e_3\) with a projector, the Heisenberg compensator.
-We prove that its natural norm carries the Lorentz group as \(SO(3,\mathbb C)\) on the kernels, that the symmetric triple of kernels is
-exactly the centred null configuration, and that matter- and tachyon-type kernels form one orbit of the duality rotation with light as its
-fix-sector.  On \(\mathbb C\otimes\HH\otimes\OO\), a projector of the same form as the compensator yields the chirality of one Standard Model
-generation, and within the stated setting anomaly cancellation fixes it uniquely up to a frame change; we separate this from the known constructions of Dixon and
-Furey.  The single numerical input, a frame offset \(\beta_{\rm sym}\approx0.549\), is put in; its reading as a ratio of horizon countings
-selects the less favoured counting.  Four predictions for \(\theta_{12}\), \(\theta_{23}\) and the \(W\) mass were registered before the
-relevant data and are pending.  A comparison model of the probe field equations has an exact gauge symmetry, an involutive gauged symbol at
-order six and four hidden sixth-order conditions; its formal integrability is open.  We list what was withdrawn, including all steps that
-relied on a claimed proof of the Riemann hypothesis, and state what a missing common dynamics would have to do.
+We study a complex quaternion kernel \(q=it+z_1e_1+z_2e_2+z_3e_3\) whose natural norm \(q\bar q=-t^2+z\cdot z\) contains the Lorentz invariant
+of an electromagnetic field \(z=E+iB\).  The sign of \(z\cdot z\) separates matter-type, tachyon-type and light-like configurations.  We show
+that matter- and tachyon-type kernels form one orbit of \(SO(3,\mathbb C)\times U(1)_{\rm dual}\) with the light-like kernels as the unique
+duality-invariant orbit, that the symmetric triple of kernels at \(120^\circ\) is exactly the centred null configuration, and that a projector
+built from the duality involution places matter and tachyon on opposite sides of a state disk with light at its centre.  On
+\(\mathbb C\otimes\HH\otimes\OO\) a projector of the same form completes the weak doublets to one Standard Model generation with right-handed
+neutrino, and among the four projectors compatible with colour and charge, anomaly cancellation alone selects it up to a frame change.  The
+single numerical input, a frame offset \(\beta_{\rm sym}\approx0.549\), can be read as the ratio of two horizon-state countings of loop quantum
+gravity selected by saturation of the uncertainty bound; we discuss why this reading favours the less established counting.  We give four
+predictions, registered before the relevant data, for \(\theta_{12}\), \(\theta_{23}\) and the \(W\) mass, and state what a missing common dynamics
+would have to provide.
 \end{abstract}
 
+\input{p1_intro}
+\input{p2_kernel}
+\input{p3_frames}
+\input{p4_cm}
+\input{p5_generation}
+\input{p6_pheno}
+\input{p7_discussion}
+\input{p8_conclusions}
 
-\input{sec1_intro}
-
-\input{sec2_kernel}
-\input{sec3_structures}
-
-\input{sec4_generation}
-
-\input{sec5_beta}
-
-\input{sec6_readouts}
-
-\input{sec7_op5}
-
-\input{sec8_not}
-
-\input{sec9_open}
+\section*{Data availability}
+Scripts, numerical outputs, the Lean formalization and the registration notes are in the public repository~\cite{repo}.
 
 \appendix
+\input{appA_earlier}
 \input{appendix_method}
-
 \input{appendix_qam}
 
 \begin{thebibliography}{99}
 \bibitem{companion} M.~Brendecke, \emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding},
 Zenodo, concept DOI \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}.
+\bibitem{repo} M.~Brendecke, QuantumSphere-Unfold, \url{https://github.com/Moriarty1982/QuantumSphere-Unfold}.
 \bibitem{bialynicki} I.~Bialynicki-Birula, Photon wave function, \emph{Prog.\ Opt.} \textbf{36} (1996) 245--294.
 \bibitem{baez} J.~C.~Baez, The octonions, \emph{Bull.\ Amer.\ Math.\ Soc.} \textbf{39} (2002) 145--205.
 \bibitem{hopf1931} H.~Hopf, \"Uber die Abbildungen der dreidimensionalen Sph\"are auf die Kugelfl\"ache, \emph{Math.\ Ann.} \textbf{104} (1931) 637--665.

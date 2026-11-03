@@ -1,0 +1,96 @@
+\section{Duality frames and the compensator}\label{sec:frames}
+
+\subsection{Three sectors}
+
+\begin{definition}[Sectors]\label{def:sectors}
+A kernel with \(s(z)>0\) is of \emph{matter type}, with \(s(z)<0\) of \emph{tachyon type}, and with \(s(z)=0\) \emph{light-like}.
+\end{definition}
+
+In the electromagnetic reading \eqref{eq:invariants}, matter-type kernels with real \(s\) are electric-dominated and tachyon-type kernels
+magnetic-dominated.  The assignment of the names is a choice; the statements below depend only on the sign of \(s\).  The duality rotation
+\(z\mapsto e^{i\alpha}z\) multiplies \(s\) by \(e^{2i\alpha}\).  In particular the quarter turn
+\begin{equation}\label{eq:quarterturn}
+z\mapsto iz,\qquad s\mapsto-s,
+\end{equation}
+exchanges the two massive sectors and fixes the null cone.  We use it as the frame change from matter to tachyon.
+
+\begin{proposition}[Duality angle]\label{prop:duality}
+Every \(z\) with \(s(z)\neq0\) can be written as \(z=e^{i\alpha}z_m\) with \(s(z_m)=|s(z)|>0\); \(\alpha=\tfrac12\arg s(z)\) is unique modulo \(\pi\) and
+\(z_m\) unique up to sign.  Under \(SO(3,\mathbb C)\times U(1)_{\rm dual}\), acting by \(z\mapsto e^{i\alpha}Rz\), the orbits in
+\(\mathbb C^3\setminus\{0\}\) are the shells \(\{|s|=r\}\), \(r>0\), and the punctured null cone.
+\end{proposition}
+
+\begin{proof}
+\(s(e^{i\alpha}z_m)=e^{2i\alpha}s(z_m)\) is real positive exactly when \(2\alpha\equiv\arg s\pmod{2\pi}\).  The orbit statement follows from
+Proposition~\ref{prop:orbits}, since the duality circle runs through all values of \(s\) of fixed modulus and fixes \(s=0\).
+\end{proof}
+
+So matter-type and tachyon-type kernels of equal \(|s|\) lie in one orbit, related by a quarter turn, a non-real \(s\) is a matter
+configuration in a rotated duality frame rather than a further sector, and the light-like kernels form the only orbit fixed by the whole
+duality circle.  This is the precise sense in which, on the kernel, matter and tachyon are one object in two frames and light is the
+frame-invariant fix-sector.  Whether the duality angle is physical or a gauge freedom is not decided at this level.
+
+\subsection{The compensator}
+
+\begin{definition}[Involution and compensator]\label{def:compensator}
+Let \(J_Bz:=i\bar z\), with complex conjugation of the components.  \(J_B\) is antilinear and \(J_B^2=1\).  The \emph{compensator} and its partner
+are \(C:=\tfrac12(1+J_B)\) and \(A:=\tfrac12(1-J_B)\).
+\end{definition}
+
+In terms of fields, \(J_B(E+iB)=B+iE\) exchanges the electric and the magnetic field.  The compensator is the output of a two-arm
+interferometer whose arms carry \(f\) and \(J_Bf\); its two ports carry \(Cf\) and \(Af\).
+
+\begin{proposition}[Two ports]\label{prop:ports}
+\(C\) and \(A\) are real-linear projections with \(C+A=1\) and \(CA=AC=0\).  With respect to the real inner product
+\(\operatorname{Re}\langle Cf,Af\rangle=0\), so \(|Cf|^2+|Af|^2=|f|^2\).  Moreover \(A(f)=-i\,C(if)\).
+\end{proposition}
+
+\begin{proof}
+The identities follow from \(J_B^2=1\).  Since \(|J_Bf|=|f|\),
+\(\operatorname{Re}\langle Cf,Af\rangle=\tfrac14\operatorname{Re}\bigl(\langle J_Bf,f\rangle-\langle f,J_Bf\rangle\bigr)=0\).  Finally
+\(C(if)=\tfrac12(if-iJ_Bf)=iA(f)\).
+\end{proof}
+
+The two ports are therefore real and imaginary parts of one field, not independent sectors.  Two examples show what the compensator does.
+For the Coulomb field of a charge \(q\) (matter type), \(J_Bf\) is the field of a magnetic charge \(q\) (tachyon type), and \(Cf\), \(Af\) are the
+fields of dyons with electric charge \(q/2\) and magnetic charge \(\pm q/2\).  For a plane light wave, \(J_B\) reverses the direction of
+propagation and rotates the polarization by \(90^\circ\), as a phase-conjugating mirror followed by a polarization rotator would; \(Cf\) has
+\(E\parallel B\) and is not a light wave.
+
+\subsection{The doublet and the state disk}
+
+Since \(J_B\) is antilinear, \(C\) has no complex matrix.  It becomes an ordinary matrix on the real doublet \(F=[\,E\mid B\,]\in\mathbb R^{3\times2}\).
+
+\begin{proposition}[Doublet form]\label{prop:doublet}
+Acting on \(F\) from the right, \(J_B\) is \(\sigma_x\), complex conjugation is \(\sigma_z\), and the duality rotation by \(\alpha\) is \(R_\alpha^{\mathsf T}\);
+they generate \(O(2)\), and spatial rotations act from the left and commute with all of them.  The compensator is the orthogonal projection
+\(C_{\rm HC}=\tfrac12(1+\sigma_x)\).  The Gram matrix \(G=F^{\mathsf T}F\) decomposes as
+\begin{equation}\label{eq:gram}
+G=u\,\mathbf 1+\tfrac12\bigl(\operatorname{Re}s\;\sigma_z+\operatorname{Im}s\;\sigma_x\bigr),\qquad u=\tfrac12(E^2+B^2),\qquad
+\det G=|E\times B|^2 .
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+\(i(E-iB)=B+iE\) exchanges the columns, \(E-iB\) changes the sign of the second, and \(e^{i\alpha}(E+iB)\) rotates them.  The entries of \(G\) are
+\(E^2\), \(B^2\) and \(E\cdot B\).
+\end{proof}
+
+Put \(\rho=G/\operatorname{tr}G=\tfrac12(\mathbf 1+b_1\sigma_z+b_2\sigma_x)\) with \(b=(\operatorname{Re}s,\operatorname{Im}s)/(2u)\).  This is the Stokes formalism
+for the doublet \((E,B)\) in place of two polarization components, and it gives a simple picture of the three sectors:
+
+\begin{proposition}[State disk]\label{prop:disk}
+\(|b|\le1\), with \(|b|=1\) exactly when \(E\parallel B\) and \(b=0\) exactly for a null field.  Matter-type fields have \(b_1>0\), tachyon-type
+fields \(b_1<0\), light-like fields lie at the centre.  A duality rotation by \(\alpha\) rotates \(b\) by \(2\alpha\); \(J_B\) reflects \(b_1\); the quarter
+turn \eqref{eq:quarterturn} reverses \(b\).  Under a boost \(s\) is invariant and \(u\) changes, so \(b\) moves along its own direction; it reaches
+\(|b|=1\) in the frame with \(E\parallel B\) and tends to \(0\) as the boost grows.
+\end{proposition}
+
+\begin{proof}
+\(u^2-\det G=\tfrac14|s|^2\) gives \(|b|^2=1-\det G/u^2\le1\).  A duality rotation conjugates \(G\) by \(R_\alpha\), which turns its traceless part by
+\(2\alpha\).  The boost statement follows from the invariance of \(s\) and the growth of \(u\).
+\end{proof}
+
+Light is the unpolarized centre of the disk, matter and tachyon are its two fully polarized ends along one axis, and boosting any field
+moves it towards light.  Both \(J_B\) and the quarter turn take matter-type to tachyon-type states; they differ in the second invariant
+\(\operatorname{Im}s=2E\cdot B\), which \(J_B\) keeps and the quarter turn reverses.
