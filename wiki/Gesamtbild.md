@@ -4,7 +4,7 @@
 
 ## In drei Sätzen
 
-Der Companion geht von einer Vermutung aus: Materie, Licht und ein Tachyon-Sektor sind *ein* Objekt, gesehen aus drei Bezugsrahmen (Frames). Mathematisch ist dieses Objekt ein Biquaternion-Kern aus drei komplexen Kernen, den ein Projektor (der Heisenberg-Kompensator) in einen symmetrischen und einen antisymmetrischen Teil zerlegt. Darauf baut eine Architektur aus Hopf-Kaskade, Oktonionen, Mastergleichung und Millennium-Matrix auf. Aus ihr sollen Standardmodell, Gravitation und Kosmologie als *Auslesungen* folgen. Das tragende Ergebnis von rund 90 Prüfrunden seit v4.8.0 lautet: Die algebraische Struktur ist sauber, viele physikalische Auslesungen sind dagegen widerlegt, archiviert oder nur bedingt gültig. Vor allem fehlt eine gemeinsame Dynamik, also eine Wirkung, aus der die Größen folgen, statt gesetzt zu werden.
+Der Companion geht von einer Vermutung aus: Materie, Licht und ein Tachyon-Sektor sind *ein* Objekt, gesehen aus drei Bezugsrahmen (Frames). Mathematisch ist dieses Objekt ein Biquaternion-Kern aus drei komplexen Kernen, den ein Projektor (der Heisenberg-Kompensator) in einen symmetrischen und einen antisymmetrischen Teil zerlegt. Darauf baut eine Architektur aus Hopf-Kaskade, Oktonionen, Mastergleichung und Kompensatormatrix auf. Aus ihr sollen Standardmodell, Gravitation und Kosmologie als *Auslesungen* folgen. Das tragende Ergebnis von rund 90 Prüfrunden seit v4.8.0 lautet: Die algebraische Struktur ist sauber, viele physikalische Auslesungen sind dagegen widerlegt, archiviert oder nur bedingt gültig. Vor allem fehlt eine gemeinsame Dynamik, also eine Wirkung, aus der die Größen folgen, statt gesetzt zu werden.
 
 ## Mindmap
 
@@ -38,7 +38,7 @@ mindmap
       Stand: großteils bedingt, widerlegt oder offen
     Architektur
       Mastergleichung
-      Millennium-Matrix M16 als globaler Kompensator
+      Kompensatormatrix M16, früher Millennium-Matrix
       Sonden-Schließungssystem mit Dirac-, Yang-Mills- und Einstein-Grenzfall
       Sprache QAM, MML, MMA über ZF
       Guards: nur lokale, frame-typisierte Schließungen
@@ -59,7 +59,7 @@ mindmap
 
 ## Wie die Teile zusammenhängen
 
-Das Werk ist selbst als Kette gebaut (`thm:master-structural`, `def:master-diagram`): Aus einer Quelle wird ein Träger, die Millennium-Matrix transportiert ihn durch die Schichten, und am Ende stehen Auslesungen. Hier ist diese Kette zusammen mit dem heutigen Stand jedes Glieds.
+Das Werk ist selbst als Kette gebaut (`thm:master-structural`, `def:master-diagram`): Aus einer Quelle wird ein Träger, die Kompensatormatrix transportiert ihn durch die Schichten, und am Ende stehen Auslesungen. Hier ist diese Kette zusammen mit dem heutigen Stand jedes Glieds.
 
 ```mermaid
 flowchart LR
@@ -70,7 +70,7 @@ flowchart LR
   S --> B["Frame-Versatz β_sym ≈ 0,549<br/>(eingesetzt, OP1)"]:::offen
   B --> P["Auslesungen: Λ, Konstanten,<br/>Hawking, Massen, Mischung"]:::wid
   O --> P
-  K --> M["Mastergleichung und<br/>Millennium-Matrix M16"]:::bed
+  K --> M["Mastergleichung und<br/>Kompensatormatrix M16"]:::bed
   M --> F["Sonden-Schließungssystem<br/>Dirac / YM / Einstein-Grenzfälle"]:::bed
   F --> D["fehlende gemeinsame Dynamik<br/>(eine Wirkung für alle Felder)"]:::offen
   D -.-> P
@@ -100,7 +100,7 @@ Die Farben bedeuten: grün = gesicherte Mathematik, blau = Vermutung, gelb = bed
 | T10 | Naturkonstanten sind frame-verschoben ($\hbar$, $G$, $\alpha$-Drift, Planck-Länge im Photon-Frame). | Einschubzahlen $k(X)$ | **Nicht gestützt** (r64). In der Zähl-Lesart steckt der Frame-Unterschied in $\gamma$, nicht in $\hbar$ oder $G$. Welcher Umrechnungsweg gilt, muss der Autor entscheiden. | `thm:k-values`, `thm:planck-photon` |
 | T11 | Hawking-Strahlung ist ein Tachyon, das aus dem Kern tunnelt; Strings und LQG sind die zwei Sektoren des Kompensators. | Wick-Rotation als Teilungsmechanismus | **Lesarten.** Die Äquivalenz ist offen (r04). Der Hawking-Abschnitt vertauscht die Frame-Zuordnung (r64, Statusvermerk r65). | `thm:hawking-triolic`, `thm:string-lqg-duality` |
 | T12 | Verschränkung ist eine gemeinsame Eigenzeit; das ist mit der Verletzung der Bellschen Ungleichungen verträglich. | $\tau_n$ ist keine lokale verborgene Variable. | **Äquivalenzschritt offen** (r04, Stone–von Neumann). | `thm:entanglement-shared-time`, `thm:bell-consistency` |
-| T13 | Eine Mastergleichung und die Millennium-Matrix $\mathcal M_{16}$ ordnen alles; das Sonden-Schließungssystem enthält Dirac-, Yang-Mills- und Einstein-Grenzfälle. | $(i\Gamma^\mu\mathcal D_\mu-\Omega)\Psi=0$, $\mathcal D^\mu\mathcal F_{\mu\nu}=J$, Schließung $[\mathcal M_{16},\hat P_{C_7}]=0$ | **Eine Gliederung, keine Theorie.** Die Kopplungen sind unbestimmt und eine gemeinsame Wirkung fehlt. Eine aus Spinoren rekonstruierte Geometrie ist nur bedingt gültig (r69: allein aus Sonden wird sie flach). | `thm:master-structural`, `thm:closed-master-system` |
+| T13 | Eine Mastergleichung und die Kompensatormatrix $\mathcal M_{16}$ (bis r75 „Millennium-Matrix“) ordnen alles; das Sonden-Schließungssystem enthält Dirac-, Yang-Mills- und Einstein-Grenzfälle. | $(i\Gamma^\mu\mathcal D_\mu-\Omega)\Psi=0$, $\mathcal D^\mu\mathcal F_{\mu\nu}=J$, Schließung $[\mathcal M_{16},\hat P_{C_7}]=0$ | **Eine Gliederung, keine Theorie.** Die Kopplungen sind unbestimmt und eine gemeinsame Wirkung fehlt. Eine aus Spinoren rekonstruierte Geometrie ist nur bedingt gültig (r69: allein aus Sonden wird sie flach). | `thm:master-structural`, `thm:closed-master-system` |
 | T14 | Eine eigene Sprache (QAM, MML, MMA) macht alles prüfbar. | acht markierte Tupel in ZF | **Sauber**, als Erkennungsregeln. Die Rückübersetzung ist für den zulässigen Teil gezeigt. | Anhang QAM, `def:qam-kernel-bridge-datum` |
 | T15 | Es werden nur lokale, frame-typisierte Schließungen behauptet. | fünf Guards, $\beta_4=1/256$ nicht ausgebbar | **Eingehalten.** Die Guards sind seit r60 unverändert. C4 ist nicht ausgebbar, für C5 ist nur noch Form (iii) offen, C6/T2 wird nicht behauptet. | Guard-Register, r91 |
 
@@ -114,10 +114,10 @@ Der Haupttext ist kurz. Rund 85 % des Quelltexts sind Anhänge, Protokolle und P
 | **B. Forschungsabschnitte 4.8** | Prämissen-Prüfung, Koide und Kern, Massen-Identifikation, Generationen-Kopplung, Operator-Verbindung, Kopplungs- und Skalenkandidat, Tensor-Kopplung, Kompensator-Dynamik und Geometrie, Cartan-Vergleich | ≈ 3 % | `premise-audit` … `cartan-normal-source` |
 | **C. Kern: Sphaera und Physik** | Zentralsatz (Unity, Ursprung), Lorentz, Lichtachse, drei Objekte als eines, Photon-Erzeugung und Verschränkung, Riemann-Verbindung, Eichgruppe, Bell, Strings/LQG, Schwarze Löcher, **Hopf-Faserung** (der längste Kernabschnitt: β aus dem Hopf-Winkel, Generationen, Koide, Expansion, Dunkle Energie, Einstein-Gleichung), QFT-Lagrangedichte, GUE, Konstanten, Dirac-Sonde, Sonden-Schließungssystem | ≈ 4 % | `v470/05`, `v470/10` |
 | **D. Strukturkern** | Schließungsprinzipien, Kompensator-Hypothesen, Kristall- und Julia-Rand-Bild (eine Lesart lokaler Verträglichkeit, kein buchstäblicher Kristall) | ≈ 3 % | `v470/12`–`14` |
-| **E. Mastermodell** | Mastergleichung, Materie/Eichung/Masse/Higgs, Millennium-Matrix, Schichten Träger → Gruppe → Auslesung, Master-Strukturtheorem, Feldgleichungen | ≈ 1 % | `v470/16` |
+| **E. Mastermodell** | Mastergleichung, Materie/Eichung/Masse/Higgs, Kompensatormatrix, Schichten Träger → Gruppe → Auslesung, Master-Strukturtheorem, Feldgleichungen | ≈ 1 % | `v470/16` |
 | **F. Offene Probleme im Haupttext** | OP1/OP2-Mathematik, Frames und Teichmüller, Zufluss und Transport, physikalische Auslesungen (Λ, OP4) | ≈ 2 % | `v470/18`–`23` |
 | **G. Synthese 4.10** | v4-Schnittstelle, Zustände/Vermittler/Uhren, OP5-Feldschnitte, Einbindung 4.8 | < 1 % | `current-v4-synthesis` … `v480-integration` |
-| **H. Anhänge** | QAM-Infrastruktur, Reparatur- und Transportprotokolle, OP-Einstieg, Rechenspezifikation (Enigma-/Bomba-Analogie), Werkzeuge der Millennium-Matrix, verschobene QAM, Leser-Hygiene, OP-Selektoren und Routen, **Atlas und OP-Beförderung** (Halo, Tunnel, Dixon-64-Bit-Code), T2-Grenze, **MM/HC-Feldschnittstelle und C4/C5** (r01–r54), Lösungskette r55–r80, Frame-Endpunkt r81–r84 | ≈ 67 % | `support-route` → `v470/07`–`36` |
+| **H. Anhänge** | QAM-Infrastruktur, Reparatur- und Transportprotokolle, OP-Einstieg, Rechenspezifikation (Enigma-/Bomba-Analogie), Werkzeuge der Kompensatormatrix, verschobene QAM, Leser-Hygiene, OP-Selektoren und Routen, **Atlas und OP-Beförderung** (Halo, Tunnel, Dixon-64-Bit-Code), T2-Grenze, **MM/HC-Feldschnittstelle und C4/C5** (r01–r54), Lösungskette r55–r80, Frame-Endpunkt r81–r84 | ≈ 67 % | `support-route` → `v470/07`–`36` |
 | **I. Archiv und Runden** | archivierte Sätze des Hauptkorpus, Release-Runden 4.8, Runden nach 4.8 (r03–r20), **Runden 4.9 (r01–r74)** | ≈ 18 % | `v4100-archive`, `v480-*`, `v490-post-release-layers` |
 | **J. Literatur, Schluss** | | < 1 % | `v470/28`, `37` |
 
