@@ -94,6 +94,10 @@ Auf GitHub unter `notes/research/v4_10_0_r71/llm/`, lokal unter `llm/`.
   oder Umformulierung auf der charakteristischen Menge.
 - **Ebene Wellen (k152, Erkundung):** Kegelwellen spannen g'_p nicht auf (115, 184, 267, 364, 475 statt 117 … 481);
   Modul nicht reduziert, einfacher Wellenansatz trägt nicht.
+- **Hochgenau (k153–k155, Befund):** A, B mit 100 Stellen (auf 5e-50 geprüft). In exakter Rechnung hat das Symbol der
+  Ordnung 4 nur 48 statt 112 Identitäten; 64 sind Fast-Identitäten (1e-16 bis 1e-19). Vermutung: Der Keim liegt nahe an
+  einer symmetrischen Konfiguration (kleine Ψ-Komponenten 1e-5 bis 3e-4). Double-Zählungen beschreiben die führende
+  Ordnung in diesen kleinen Komponenten. Siehe `llm/Befund_Hochgenau_Fast_Identitaeten.md`.
 - (Früherer Plan:) Fortsetzung über einem Jet, der die vier Bedingungen erfüllt, mit Gleichungen bis Grad 9/10;
   braucht stufenweise Elimination (12 000–16 000 Spalten sprengen 8 GB). Kriterien künftig an Weyl-Abständen
   (≥ 100-fach) statt an fester Lückenschwelle 1e4 festmachen.
