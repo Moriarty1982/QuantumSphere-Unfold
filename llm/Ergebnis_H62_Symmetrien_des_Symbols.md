@@ -32,3 +32,13 @@ Der Test ist gültig. Der Schnitt ist 0 und nicht 6, **H62 ist widerlegt.**
 - Der Lichtkegel ist zwar die charakteristische Menge, aber die Polarisationsstruktur auf ihm hängt anisotrop von der Richtung ab.
 - Den 6 masselosen Moden lässt sich deshalb im Modell kein Spin zuordnen. Teil (b) von H62 entfällt.
 - Ob die Brechung vom Hintergrund kommt (Ψ am Keim, Koframe aus den Blöcken 1 und 2) oder von einem der Zusatzbausteine (Ω, θ, Eichung, die vier Bedingungen), ist offen. Das lässt sich klären, indem man denselben Test für das Symbol von J allein und dann schrittweise erweitert wiederholt.
+
+## Nachtrag vom 4. November 2026: Einordnung
+H62 hat Invarianz bei festem Hintergrund geprüft. Für eine kovariante Theorie, die um einen nicht-invarianten Hintergrund linearisiert wird, ist das Scheitern strukturell zu erwarten. Das folgt schon aus den vorliegenden Daten:
+- Jede Symmetrie des Symbols erhält dessen charakteristische Menge.
+- J(ξ) verliert auf Π₀ ∪ Π₁ einen weiteren Rang (r71.3(d)).
+- Die beiden Ebenen sind nicht q-orthogonal und nicht aus den Strom- und Spin-Bilinearen von Ψ aufgespannt (k122, ≥ 11,7°).
+- Sie entstehen im G-Teil: Π_k = ker(ξ ↦ G(ξ)c_k) mit den festen Diffeo-Richtungen c_k (k126).
+- Der F-Teil vernichtet alle Diffeo-Richtungen c^μD_μΨ (k125).
+
+Die Lorentz-Symmetrie geht damit spätestens im G-Teil von J verloren, nicht erst durch Ω, θ, die Eichung oder die vier Bedingungen. Physikalisch entscheidend ist die Kovarianz des dynamischen Teils, nicht die Invarianz des vollen Symbols. Das prüft H63.
