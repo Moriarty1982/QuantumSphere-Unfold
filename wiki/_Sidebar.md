@@ -1,6 +1,7 @@
 **Quantum Sphaera Companion**
 
 - [Startseite](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Home)
+- **[Gesamtbild auf einer Seite](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Gesamtbild)**
 - **[Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt)**
 - [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie)
 - [Vorhersagen und Tests](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Vorhersagen-und-Tests)
@@ -14,6 +15,7 @@
 - [Leseweg](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Leseweg)
 - [Versionen und Quellen](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Versionen-und-Quellen)
 - [Forschungsstand](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungsstand)
+- [Parallele Rechnungen](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Parallele-Rechnungen)
 - [Begriffe](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Begriffe)
 - [Hinweise für LLMs](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Hinweise-fuer-LLMs)
 - [Wiki-Pflege](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Wiki-Pflege)
