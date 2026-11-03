@@ -4,7 +4,7 @@ Werkzeugunabhängig. Das Modell ist das feste Vergleichsmodell der Sondenfelder 
 
 ## Regeln zuerst
 - Jeder Test mit Entscheidungskriterium wird vorher als `llm/Vorab_Notiz_HNN_*.md` festgeschrieben und committet; der
-  Zeitstempel zählt. Zuletzt vergeben ist H51.
+  Zeitstempel zählt. Zuletzt vergeben ist H53.
 - Erkundungen ohne Vorab-Notiz werden offen als „Erkundung“ geführt.
 - Alles betrifft nur das Vergleichsmodell, nicht das QSC-Modell selbst. OP5 bleibt offen.
 - Schwere Rechnungen (Jacobi-Matrizen, SVDs großer Symbole) im Hintergrund oder als eigenständigen Auftrag laufen lassen
@@ -59,8 +59,17 @@ Auf GitHub unter `notes/research/v4_10_0_r71/llm/`, lokal unter `llm/`.
   g'_p = g_p − C(p+3, 3) = 117, 188, 273, 371, 481, 606, 745 für p = 2…8.
 - **H51 bestätigt (k137):** Das geeichte Symbol ist erstmals bei p = 6 involutiv; dim g'^{(k)}_6 = 481, 111, 14, 0.
   Keine freie Funktion von vier Variablen mehr; formal 14 Funktionen von drei Variablen.
-- Nächster Schritt: formale Integrabilität des geeichten Systems bei Ordnung 6 (Projektion R'_7 → R'_6 surjektiv?),
-  danach Wiederholung mit hochgenauem θ.
+- **Formale Integrabilität (H52, H53, beide ungültig):** Werkzeuge `k138_tps_d.py` (Reihen beliebigen Grades),
+  `k140_fortsetzung_exakt.py` (Fortsetzungssystem mit exakter Linearisierung über symmetrische Sonden),
+  `k140_f8_schritte.py` (große Systeme speichersparend in Einzelschritten).
+  - Der gespeicherte 5-Jet ist nicht fortsetzbar (erfüllt die abgeleitete Ω-Bedingung der Ordnung 5 nicht); Grad 5
+    frei lassen, nur den reparierten 4-Jet festhalten.
+  - Über dem 4-Jet bis Grad 7 (F₇) stimmen die Fasern sauber mit g' überein (371, 481).
+  - Mit Grad 8 (F₈) fällt P₅₆ von 852 auf 848: möglicherweise 4 versteckte Bedingungen an 6-Jets (passt zu
+    H^{5,2} = 4). Das liegt aber auf der Fehlerhöhe der Grad-3-Linearisierung (1e-9).
+- Nächster Schritt: Grad-3-Linearisierung genauer machen, dann H54 (4 Bedingungen an 6-Jets ja/nein) mit Vorab-Notiz.
+- Fallstrick: Der Cloud-Container wird bei Untätigkeit zurückgesetzt; lange Läufe in Schritte unter 10 Minuten teilen
+  und Zwischenergebnisse speichern. Volle SVD von 10⁴ × 10⁴ sprengt 8 GB, nur Singulärwerte rechnen.
 
 ## Fallstricke
 - Für Rangentscheidungen aus Differenzenquotienten den Fünfpunkt-Stencil mit Schritt 1e-3 nehmen. Den Rang an der
