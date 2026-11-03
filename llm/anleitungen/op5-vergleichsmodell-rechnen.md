@@ -4,8 +4,17 @@ Werkzeugunabhängig. Das Modell ist das feste Vergleichsmodell der Sondenfelder 
 
 ## Regeln zuerst
 - Jeder Test mit Entscheidungskriterium wird vorher als `llm/Vorab_Notiz_HNN_*.md` festgeschrieben und committet; der
-  Zeitstempel zählt. Zuletzt vergeben ist H58.
+  Zeitstempel zählt. Zuletzt vergeben ist H64.
 - Erkundungen ohne Vorab-Notiz werden offen als „Erkundung“ geführt.
+- **Vorwissen-Pflicht:** Vor jeder neuen Hypothese und vor jedem Vorschlag an den Autor:
+  - den Abschnitt „Bereits beantwortet“ unten lesen;
+  - das Repo nach den Schlüsselbegriffen durchsuchen: `llm/Ergebnis_*`, `Erkundung_*`, `Vorab_Notiz_*`, die Docstrings der
+    k-Skripte, `notes/research/predictions/` und `analysis/OP5_*`.
+
+  Jede Vorab-Notiz bekommt einen Abschnitt „Vorwissen geprüft“ mit Suchbegriffen und Treffern. Anlass (4.11.2026): Eine
+  vorgeschlagene Hypothese war durch k122 aus r71 schon beantwortet.
+- Nach einer Kontextverdichtung oder in einer neuen Sitzung diese Anleitung zuerst lesen, nicht aus einer Zusammenfassung
+  arbeiten.
 - Alles betrifft nur das Vergleichsmodell, nicht das QSC-Modell selbst. OP5 bleibt offen.
 - Schwere Rechnungen (Jacobi-Matrizen, SVDs großer Symbole) im Hintergrund oder als eigenständigen Auftrag laufen lassen
   und nur Zahlen zurückmelden.
@@ -52,6 +61,29 @@ Auf GitHub unter `notes/research/v4_10_0_r71/llm/`, lokal unter `llm/`.
 - Das Symbol hat einen Lichtkegel q und zwei windschiefe Ebenen.
 - H49 und H50 sind widerlegt.
 - Nächster Schritt war: ϑ-Eichung, dann ein Involutions- bzw. Cartan-Test (erledigt, siehe unten).
+
+## Bereits beantwortet (vor neuen Hypothesen prüfen)
+- **Ebenen Π₀ (raumartig) und Π₁ (zeitartig):**
+  - nicht q-orthogonal;
+  - nicht von Strom- oder Spin-Bilinearen von Ψ aufgespannt (k122, ≥ 11,7°);
+  - keine invarianten Ebenen von E⁻¹·Im(Ψ†QDΨ) (k124, ≥ 32°);
+  - sie entstehen im G-Teil: Π_k = ker(ξ ↦ G(ξ)c_k) mit festen Diffeo-Richtungen c_k (k126).
+- **F vernichtet die Diffeo-Richtungen** c^μD_μΨ (k125). Die freie Richtung ist ∂_ϑ (k127–k132).
+- **Die vier Bedingungen** wirken nur auf dem Kegel, als d_k(ξ)·s(ξ,u) (r73.2).
+- **H59 (bestätigt):** Es gibt keine weiteren versteckten Bedingungen auf 7- und 8-Jets: F₇ = 594, F₈ = 723. g''₈ ist
+  involutiv mit den Charakteren 723, 130, 12, 0 (Erkundung, hochgenau). Das System ist am Keim formal integrabel.
+- **H60 (bestätigt):** 6 reelle Polarisationen je Nullrichtung, keine außerhalb des Kegels.
+- **H61 (widerlegt):** In der naiven Zuordnung I₃ ⊗ Spin½ sind die 6 Moden keine Weyl- oder Majorana-Moden.
+- **H62 und H63 (widerlegt):** Invarianz bei festem Hintergrund.
+  - Das volle Symbol hat nur die Skalierung.
+  - F allein hat 7 Raumzeit-Symmetrien, aber nicht so(Q).
+  - Das Scheitern ist strukturell erwartet.
+- **H64 (bestätigt):** R ist auf Symbolebene koordinatenkovariant (GL(4)) und intern lorentzkovariant. Die Brechung kommt
+  vom Hintergrund (Ψ am Keim, A, h).
+- **Offen:**
+  - Kovarianz von Ω, θ, der Eichung und den vier Bedingungen;
+  - die Herkunft des Hintergrunds A, h;
+  - die Lorentz-Wirkung auf die 6 Moden.
 
 ## Eichung und Cartan-Test (nach r71, 3. November 2026)
 - **Eichung (k136):** algebraisch, s(Ψ) = Ψ†K₂Ψ = S(x); Eichvektor v = ∂_ϑΨ ist gemeinsamer Kern aller J-Blöcke,
@@ -111,6 +143,11 @@ Auf GitHub unter `notes/research/v4_10_0_r71/llm/`, lokal unter `llm/`.
 - Lie-Ableitungen von 1-Formen vollständig rechnen, nicht nur die kartesischen Koeffizienten ableiten.
 - Ältere Skripte enthalten den festen Pfad `C:/Users/marcb/OneDrive/Dokumente/GitHub/QuantumSphere-Unfold`. Diesen nur in
   einer Arbeitskopie anpassen; neue Skripte bekommen den Datenordner als Argument.
+
+- Die Pseudoinverse eines rangdefekten J immer mit rcond abschneiden. Ohne Abschneiden war die positive Kontrolle von H64
+  (Lauf 1) ungültig.
+- Gram-Matrizen nicht als Differenz großer Terme bilden; M = (1 − Π)XQ direkt aufbauen (H62, Lauf 1).
+- `arb(str(mpf))` liefert nur 15 Stellen; `nstr(v, 120)` nehmen (k154).
 
 ## Parallel rechnen auf GitHub (ab 3. November 2026, PR #55)
 - Workflow `.github/workflows/op5-parallel.yml` im GitHub-Repo: ein Job je Ordnung p auf eigenen Runnern (4 Kerne, 16 GB,

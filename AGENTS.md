@@ -15,6 +15,10 @@ verweist). Wer etwas an den Regeln ändert, ändert es **hier**.
   ein Job je Parameter; Einzelheiten in `llm/anleitungen/op5-vergleichsmodell-rechnen.md`.
 - **Vorab-Notizen:** Jeder Test mit Entscheidungskriterium wird vor der Rechnung als `llm/Vorab_Notiz_HNN_*.md`
   festgeschrieben und committet. Erkundungen ohne Vorab-Notiz heißen „Erkundung“, nie „Test“.
+- **Vorwissen-Pflicht:** Vor jeder neuen Hypothese das Repo nach Vorbefunden durchsuchen (Ergebnis-, Erkundungs- und
+  Vorab-Notizen, Skript-Docstrings, `analysis/`, `notes/research/predictions/`). Die Fundstellen kommen in den Abschnitt
+  „Vorwissen geprüft“ der Vorab-Notiz. Für OP5 gilt der Abschnitt „Bereits beantwortet“ in
+  `llm/anleitungen/op5-vergleichsmodell-rechnen.md`. Nach einer Kontextverdichtung zuerst die einschlägige Anleitung lesen.
 - **Append-only:** bestehende Runden werden nie umgeschrieben; Korrekturen kommen in eine neue Runde.
 - **Merges** auf GitHub nur nach ausdrücklicher Freigabe des Autors („PR NN mergen“).
 - **Wiki:** jede Repo-Änderung zieht den Ordner `wiki/` im selben PR mit; das Wiki gibt den Inhalt wieder, nicht nur Links.
