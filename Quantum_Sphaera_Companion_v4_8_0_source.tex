@@ -77270,4 +77270,162 @@ R_{\rm glob}^{(v490\text{-}r71,+)}=(0,1,1,1,1),
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
 
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r72 Source-Only: The \texorpdfstring{\(\vartheta\)}{theta} Gauge of the OP5 Comparison Symbol, a Cartan Test, and Four Hidden Conditions}
+\addcontentsline{toc}{section}{v4.9.0-r72 Source-Only: The theta Gauge of the OP5 Comparison Symbol, a Cartan Test, and Four Hidden Conditions}
+\label{sec:v490-r72-theta-gauge}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.9.0-r71 found that the free function of the \(\Omega\)-augmented OP5 comparison symbol is an exact gauge symmetry
+\(\delta\Psi=f\,\partial_\vartheta\Psi\) and named the next step: fix the \(\vartheta\) gauge, then test involution.  On
+3 November 2026 the author asked for exactly this.  This layer records the gauge, one confirmed pre-registered Cartan test
+(H51), three further pre-registered tests that turned out invalid by their own criteria (H52, H53, H54), and one exploration of
+the Spencer cohomology of the gauged symbol.  Everything concerns the comparison model of \S\ref{sec:v410-state-mediator}
+only.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r72 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r72 results}
+\label{subsec:v490-r72-results}
+
+Notation as in \S\ref{sec:v490-r71-op5-symbol}: \(R=(F,G,dg)\), \(J\) the completed first-order symbol, \(\theta\) the
+symbol of \(\Omega\), \(g_p\) the degree-\(p\) symbol of the \(\Omega\)-augmented system.  \(g'_p\) is the symbol after the
+gauge condition of r72.1, \(c_k\) denotes the Taylor coefficients of degree \(k\) of \(\Psi\), and \(P_{5}\), \(P_{56}\),
+\(P_{567}\) are the dimensions of the projections of a solution space of the linearized jet tower onto \(c_5\),
+\((c_5,c_6)\), \((c_5,c_6,c_7)\).
+
+\paragraph{Theoremlet v4.9.0-r72.1 (the \(\vartheta\) gauge).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] The gauge vector \(v=\partial_\vartheta\Psi\) at the germ is a common kernel vector of all four blocks of \(J\)
+(smallest singular value \(5.5\times10^{-15}\) against \(0.13\)), and all blocks of \(\theta\) annihilate it
+(\(1.6\times10^{-14}\)).
+\item[(b)] The algebraic condition \(s(\Psi)=S(x)\) with \(s=\Psi^\dagger K_2\Psi\), one component of the current, is
+transversal: \(|ds\cdot v|/|ds|=0.45\), the largest value among \(\Psi^\dagger\Psi\), \(\Psi^\dagger K_a\Psi\),
+\(\Psi^\dagger Q_a\Psi\), \(\Psi^\dagger(I\otimes\beta)\Psi\).  \(\Psi^\dagger(Z\otimes\beta)\Psi\) is fixed by \(g\) and blind
+(\(3.7\times10^{-16}\)).  Because \(ds\cdot v\neq0\), the condition fixes \(f\) locally.
+\item[(c)] At symbol level every transversal algebraic gauge gives \(g'_p\cong g_p/(S^p\otimes v)\).  Measured with clean
+gaps: \(g'_p=g_p-\binom{p+3}{3}=117,188,273,371,481,606,745\) for \(p=2,\dots,8\).
+\end{enumerate}
+
+\paragraph{Theoremlet v4.9.0-r72.2 (H51 confirmed: the gauged symbol is involutive at order 6).}
+Pre-registered before the computation.  Cartan's test \(\dim g'_{p+1}\le\sum_{k=0}^{3}\dim g'^{(k)}_p\) in three random
+orthonormal frames, all ranks with gap ratio at least \(10^7\):
+\begin{center}
+\small
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+\(p\) & \(\dim g'^{(k)}_p\), \(k=0..3\) & sum & \(\dim g'_{p+1}\) & verdict\\
+\midrule
+4 & 273, 85, 14, 0 & 372 & 371 & not involutive\\
+5 & 371, 98, 14, 0 & 483 & 481 & not involutive\\
+6 & 481, 111, 14, 0 & 606 & 606 & involutive\\
+7 & 606, 125, 14, 0 & 745 & 745 & involutive\\
+\bottomrule
+\end{tabular}
+\end{center}
+After the gauge no free function of four variables remains; formally the symbol leaves 14 real functions of three variables.
+
+\paragraph{Record v4.9.0-r72.3 (H52 invalid; the stored fifth jet does not extend).}
+Pre-registered test of formal integrability from order 6 with the stored jet through degree 5 held fixed.  The ranks in the
+large systems had no clean gap (ratio \(70\) to \(600\)); the test is invalid by its criterion.  A clean subsystem (gap
+\(6\times10^7\)) shows that the stored degree-5 coefficients cannot be extended at all: the compatibility residual is
+\(4.0\times10^{-3}\), at the level of the positive control.  They were solved on 30 October only against the degree-4
+equations and violate the once prolonged \(\Omega\) condition.  The counts agree: without the prolonged \(\Omega\) rows the
+fibres have \(381=371+10\) and \(501=481+20\) dimensions.  This was an error of the test design, not a property of the system.
+
+\paragraph{Record v4.9.0-r72.4 (H53 invalid; the tower over the repaired fourth jet).}
+Corrected design: only the repaired jet through degree~4 is fixed, \(c_5,\dots,c_N\) are free, and the linearization
+\(L=A^\mu(x)\partial_\mu+B(x)\) is exact (symmetric probes \(x^{m e_\nu}e_i\); even terms cancel, cubic terms start above the
+degrees used).  Reference residual \(4.6\times10^{-14}\), positive control \(3.5\times10^{-3}\).
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] With equations through degree 6 (\(F_7\)) everything is clean: residual \(4.0\times10^{-12}\), \(P_5=371\),
+\(P_{56}-P_5=481\).  Up to these equations there are no conditions beyond \((F,G,dg)\), \(\Omega\) and the gauge.
+\item[(b)] With equations through degree 7 (\(F_8\), \(9865\times10200\)) \(P_{56}\) drops from \(852\) to \(848\), while
+\(P_{567}-P_{56}=606=\dim g'_7\).  One rank had gap ratio \(4\times10^3\); the test is invalid by its criterion.
+\end{enumerate}
+
+\paragraph{Theoremlet v4.9.0-r72.5 (exploration: Spencer cohomology of the gauged symbol).}
+Not pre-registered.  With \(H^{k,2}=\dim\ker(\delta:g_k\otimes\Lambda^2\to S^{k-1}\otimes\Lambda^3)-\operatorname{rank}(\delta:g_{k+1}\otimes\Lambda^1\to S^k\otimes\Lambda^2)\),
+all gaps at least \(4\times10^6\): \(H^{4,2}=0\) and \(H^{5,2}=4\) for the ungauged symbol (check against r71.2) and
+\(H^{4,2}(g')=0\), \(H^{5,2}(g')=4\) for the gauged one.  At most four hidden conditions on 6-jets are possible, none on 5-jets.
+The gauge does not change this, so the four do not come from the \(\vartheta\) freedom.
+
+\paragraph{Record v4.9.0-r72.6 (H54 invalid; an error bound says exactly four).}
+Pre-registered.  By Weyl's inequality an error \(\Delta E\) moves every singular value by at most \(\|\Delta E\|_2\).  Measured
+from independent estimates: the reduced matrix behind \(P_{56}\) contains no degree-3 coefficients of \(A,B\) and has error
+\(\le7\times10^{-13}\) against its smallest counted value \(1.0\times10^{-9}\); the full \(F_8\) has error about
+\(5\times10^{-9}\) against its smallest nonzero value \(2.7\times10^{-6}\), and two perturbed variants keep rank \(7957\).
+Hence \(P_{56}\le848\), and with r72.5 \(P_{56}\ge848\).  The criterion also demanded a gap ratio of \(10^4\) in the perturbed
+variants, which the perturbation itself makes impossible (ratios \(3\times10^3\), \(7\times10^3\)); the test is invalid.  The
+pre-registered variant (degree-3 part of \(B\)) does not enter \(F_8\) at all; a stricter substitute was used and recorded.
+
+\paragraph{Proof and measurement sources.}
+r72.1 by \texttt{k136\_eichung.py}.  r72.2 by \texttt{k137\_cartan\_test.py}.  r72.3 by \texttt{k138\_tps\_d.py} and
+\texttt{k139\_fortsetzung.py}.  r72.4 by \texttt{k140\_fortsetzung\_exakt.py} and \texttt{k140\_f8\_schritte.py}.  r72.5 by
+\texttt{k141\_spencer\_geeicht.py}.  r72.6 by \texttt{k142\_h54.py}.  The notes \texttt{Ergebnis\_H51\_\allowbreak
+Cartan\_\allowbreak Test\_\allowbreak geeichtes\_\allowbreak Symbol.md} to \texttt{Ergebnis\_H54\_\allowbreak vier\_\allowbreak
+Bedingungen\_\allowbreak 6Jets.md} and \texttt{Erkundung\_\allowbreak Spencer\_\allowbreak geeichtes\_\allowbreak Symbol.md}
+give the numbers.  \(\square\)
+
+\paragraph{Consequence.}
+The gauged symbol is involutive from order 6 (H51).  The gauged system itself is, by all evidence, not formally integrable at
+order 6: four further conditions on 6-jets appear once the degree-7 equations are used (r72.4(b), r72.5, r72.6), but no test
+has confirmed this formally.  A confirming test needs new data, for example a second base point.  If confirmed, the four
+conditions must be determined, added to the system, and the Cartan test repeated.  OP5 is not closed.
+
+\subsection*{v4.9.0-r72 status in the three frames}
+\label{subsec:v490-r72-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item All statements concern the fixed OP5 comparison model of \S\ref{sec:v410-state-mediator} in one chart with one coframe
+reconstructed from \(\Psi\).  No frame map M, T or P acts on them; r72.1 to r72.6 are frame-free within the model.
+\item The gauge function \(\Psi^\dagger K_2\Psi\) is a current component in the model coframe, not a frame-resolved quantity.
+\end{itemize}
+No statement of this layer concerns colour or charge.
+
+\subsection*{v4.9.0-r72 register entries}
+\label{subsec:v490-r72-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r72\\
+\midrule
+\(\vartheta\) gauge & algebraic, \(\Psi^\dagger K_2\Psi=S(x)\); removes exactly the free function\\
+H51 & confirmed: gauged symbol involutive first at \(p=6\)\\
+H52, H53, H54 & invalid by their criteria (test design); findings recorded\\
+stored degree-5 coefficients & not extendable; degree 5 must stay free\\
+\(H^{5,2}(g')\) & \(4\) (exploration)\\
+hidden conditions on 6-jets & by all evidence exactly four; not formally confirmed\\
+next step & second base point (H55), then the explicit conditions and a new Cartan test\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r72 ledger and guard update}
+\label{subsec:v490-r72-ledger-guard}
+
+\[
+R_{\rm chk}^{v490\text{-}r72}=(1,1,0)
+\]
+for (gauge fixed and H51 confirmed; H52 to H54 recorded as invalid; OP5 not closed).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r72,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r72}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
 \end{document}
