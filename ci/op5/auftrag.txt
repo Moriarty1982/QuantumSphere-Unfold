@@ -1,1 +1,1 @@
-2-12   # Ordnungen p fuer den naechsten Lauf (Push auf rechnen/**); 2-10 sind bekannt (r71/k137), 11 und 12 neu
+2-12   # Ordnungen p fuer den naechsten Lauf (Push auf rechnen/**); bekannt bis 12 (Lauf 3.11.2026)

@@ -59,8 +59,9 @@ t0 = time.time()
 B = symbol(p)
 ungeeicht = kern_dim(B.copy())
 geeicht = kern_dim(np.vstack([B, np.kron(np.eye(len(idx(p))), wg[None, :])]))
-bekannt_g = dict(zip(range(2, 11), [127, 208, 308, 427, 565, 726, 910, 1118, 1351]))
-bekannt_gg = dict(zip(range(2, 10), [117, 188, 273, 371, 481, 606, 745, 898]))
+# 2-10 bzw. 2-9 aus r71/k137/k148; 11-12 bzw. 10-12 aus dem ersten Parallel-Lauf (3.11.2026, Lauf 41706982329)
+bekannt_g = dict(zip(range(2, 13), [127, 208, 308, 427, 565, 726, 910, 1118, 1351, 1610, 1896]))
+bekannt_gg = dict(zip(range(2, 13), [117, 188, 273, 371, 481, 606, 745, 898, 1065, 1246, 1441]))
 res = {'p': p, 'ungeeicht': ungeeicht, 'geeicht': geeicht,
        'erwartet_g': bekannt_g.get(p), 'erwartet_g_geeicht': bekannt_gg.get(p),
        'kontrolle_geeicht': ungeeicht['dim'] - math.comb(p + 3, 3),

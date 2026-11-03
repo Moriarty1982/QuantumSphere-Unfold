@@ -12,7 +12,8 @@ zusammen (Lauf-Zusammenfassung und Artefakt `op5-ergebnisse`).
 ## Erste Nutzlast: `symbol_rang.py`
 dim g_p (ungeeicht) und dim g'_p (ϑ-geeicht) des eingefrorenen Ω-Symbols aus `completion-omega-witness.npz`, aufgebaut
 wie `balanced_spencer_check.py` und k137. Bekannt sind g_p für p = 2…10 (r71) und g'_p für p = 2…9 (k137, k148);
-p = 11 und 12 sind neu. Das ist eine **Erkundung** auf dem älteren Keim (θ vom alten Keim), kein Test mit Vorab-Notiz.
+p = 11 und 12 kamen im ersten Lauf (3.11.2026) dazu: g_11, g_12 = 1610, 1896; g'_10…12 = 1065, 1246, 1441
+(9 Minuten für p = 2…12, größte Matrix 12 323 × 10 920, 3,2 GB). Das ist eine **Erkundung** auf dem älteren Keim (θ vom alten Keim), kein Test mit Vorab-Notiz.
 Lokal: `python ci/op5/symbol_rang.py --p 7`.
 
 ## Neue Nutzlasten
