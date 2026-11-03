@@ -4,7 +4,7 @@ Werkzeugunabhängig. Das Modell ist das feste Vergleichsmodell der Sondenfelder 
 
 ## Regeln zuerst
 - Jeder Test mit Entscheidungskriterium wird vorher als `llm/Vorab_Notiz_HNN_*.md` festgeschrieben und committet; der
-  Zeitstempel zählt. Zuletzt vergeben ist H55.
+  Zeitstempel zählt. Zuletzt vergeben ist H57.
 - Erkundungen ohne Vorab-Notiz werden offen als „Erkundung“ geführt.
 - Alles betrifft nur das Vergleichsmodell, nicht das QSC-Modell selbst. OP5 bleibt offen.
 - Schwere Rechnungen (Jacobi-Matrizen, SVDs großer Symbole) im Hintergrund oder als eigenständigen Auftrag laufen lassen
@@ -79,8 +79,11 @@ Auf GitHub unter `notes/research/v4_10_0_r71/llm/`, lokal unter `llm/`.
   477 statt 481 Dimensionen). Sie wirken nur auf lichtartige ebene Wellen, je Nullrichtung auf genau eine Polarisation,
   in der Form d_k(ξ)·s(ξ, u) mit den vier Quadriken d_k der Ebenen Π₀, Π₁: die Krümmung der r71-Beziehungen q·d_k·Ω.
   Linearformen am Keim: `k144_bedingungen_p1.npy`.
-- Nächster Schritt: die 4 Bedingungen fortgesetzt ins Symbol aufnehmen und den Cartan-Test wiederholen (vorher als
-  Test festschreiben).
+- **H56, H57 (ungültig):** erweitertes Symbol g'' (mit den 4 Bedingungen) bis p = 7 sauber: 477, 594, nicht involutiv
+  bei 6. Ab p = 8 in double precision nicht entscheidbar (723 oder 724, involutiv bei 7 oder 8), weil θ vom älteren
+  Keim stammt (1e-7) und die Bedingungen vom echten.
+- Nächster Schritt: konsistenter Datensatz am reparierten Keim (θ und Bedingungen) in höherer Genauigkeit (mpmath),
+  dann den Cartan-Test bis p = 9 wiederholen.
 - Fallstrick: Der Cloud-Container wird bei Untätigkeit zurückgesetzt; lange Läufe in Schritte unter 10 Minuten teilen
   und Zwischenergebnisse speichern. Volle SVD von 10⁴ × 10⁴ sprengt 8 GB, nur Singulärwerte rechnen.
 
