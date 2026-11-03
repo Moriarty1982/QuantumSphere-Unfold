@@ -5,4 +5,4 @@ from pathlib import Path
 here=Path(__file__).resolve().parent;sys.path.insert(0,str(here));sys.argv=[str(here/'k152_wellen.py'),sys.argv[1],'pruef']
 os.chdir(here);__file__=str(here/'k152_wellen.py')
 exec(open(here/'k152_wellen.py').read().split('def wavevec')[0])
-Q=V@np.diag([1,-1,-1,-1.])@V.T;np.save(here/'k160_qmat.npy',Q);print('Q',np.array2string(Q,precision=4))
+Q=V@np.diag([1,-1,-1,-1.])@V.T;np.save(here/'k160_qmat.npy',Q);np.save(here/'k161_V.npy',V);print('Q',np.array2string(Q,precision=4))
