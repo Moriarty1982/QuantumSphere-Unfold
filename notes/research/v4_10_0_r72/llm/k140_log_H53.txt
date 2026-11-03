@@ -1,0 +1,15 @@
+# Protokoll H53 (k140_fortsetzung_exakt.py, k140_f8_schritte.py)
+Referenz (Grad 4 fest, N=5, reparierter Jet): Groesse (1176, 1344), Rang 963 (Luecke 5.8e-05|3.6e-15, Verh. 2e+10), kappa = 4.55e-14, |rhs| = 2.2e+04
+Positivkontrolle (alter Grad-4-Jet, N=5): Groesse (1176, 1344), Rang 963 (Luecke 5.8e-05|3.6e-15, Verh. 2e+10), kappa = 3.49e-03, |rhs| = 1.1e+04
+F7 (Grad 4 fest), erster Lauf (volle SVD): Groesse (5860, 6240), Rang 4751 (Luecke 3.1e-06|5.0e-14, Verh. 6e+07), kappa = 3.99e-12, |rhs| = 1.4e+06
+   Projektion auf Grade [5]: 371 (Luecke 4.1e-07|1.1e-11, Verh. 4e+04)
+   Projektion auf Grade [5, 6]: 852 (Luecke 5.5e-03|2.0e-11, Verh. 3e+08)
+F7, Wiederholung (Rangvergleiche, lstsq): Rang 4751 (Verh. 6e+07), kappa = 4.01e-12, dim ker = 1489
+   Projektion auf Grade [5]: 371 (Rang ohne diese Spalten 3778, Luecke 5.1e-10|3.0e-14, Verh. 2e+04)
+   Projektion auf Grade [5, 6]: 852 (Rang ohne diese Spalten 2243, Luecke 3.6e-05|2.4e-15, Verh. 1e+10)
+Linearisierung Grad 3 (m = 5, 6): Streuung der vier B-Schaetzungen 2.6e-06 bei |B| 786; Abgleich Grad <= 2 mit m = 4, 5: A 6.2e-09, B 9.8e-08
+F8 (Grad 4 fest; Grad <= 2 aus m = 4, 5, Grad 3 aus m = 5, 6): Groesse (9865, 10200), Rang 7957 (Luecke 2.7e-06|4.0e-12, Verh. 7e+05), dim ker = 2243
+   kappa = 3.93e-10, |rhs| = 1.6e+07
+   Projektion auf Grade [5]: 371 (Rang ohne diese Spalten 6984, Luecke 2.0e-10|4.7e-14, Verh. 4e+03)
+   Projektion auf Grade [5, 6]: 848 (Rang ohne diese Spalten 5445, Luecke 1.0e-09|2.9e-14, Verh. 3e+04)
+   Projektion auf Grade [5, 6, 7]: 1454 (Rang ohne diese Spalten 3171, Luecke 3.0e-05|2.5e-15, Verh. 1e+10)

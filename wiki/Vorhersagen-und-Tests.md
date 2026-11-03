@@ -48,6 +48,10 @@ Zu H46: Eine Bestätigung würde die Kette r55–r60 prüfen, nicht die Lesart a
 | H48 | $\beta_{\mathrm{sym}}$ als eingefrorene Länge des Materie/Tachyon-Zustands | widerlegt: hängt an der Expansionsgeschichte; Einstein–Cartan-Term wirkungslos |
 | H49 | OP5-Vergleichssystem: abseits des Äquators tritt schon bei den zweiten Ableitungen eine versteckte Bedingung auf | widerlegt: Verträglichkeit überall auf Rauschniveau ($10^{-10}$); die Prämisse eines Symmetriebruchs war falsch (r71) |
 | H50 | $\Omega$ wirkt über die $\vartheta$-Richtung auf $\Psi$ zurück (Frage des Autors) | widerlegt: $\Omega$ ist eichinvariant, Änderung höchstens $1{,}5 \cdot 10^{-10}$ gegen 0,04 bis 0,11 in Kontrollrichtungen (r71) |
+| H51 | Das $\vartheta$-geeichte OP5-Symbol besteht den Cartan-Test erstmals bei Ordnung 6 | bestätigt: nicht involutiv bei 4 und 5, involutiv bei 6 und 7, in drei Koordinatensystemen (r72) |
+| H52 | Das geeichte System ist ab Ordnung 6 formal integrabel (fester Keim bis Ordnung 5) | ungültig: Ränge ohne saubere Lücke; die gespeicherte fünfte Ordnung ist nicht fortsetzbar (Planungsfehler) (r72) |
+| H53 | Wie H52, aber nur Ordnung 4 fest und exakte Linearisierung | ungültig: ein Rang ohne saubere Lücke; bis Grad 6 alles wie vorhergesagt, mit Grad 7 vier zusätzliche Bedingungen an 6-Jets (r72) |
+| H54 | Es gibt genau vier versteckte Bedingungen an 6-Jets | ungültig: Lückenforderung an absichtlich gestörten Varianten war unerfüllbar; die Fehlerschranke spricht inhaltlich für genau vier (r72) |
 
 ## Erkundungen ohne Vorab-Notiz
 

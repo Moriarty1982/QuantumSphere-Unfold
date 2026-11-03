@@ -1,6 +1,6 @@
 # Offene Probleme und wo die Arbeit festsitzt
 
-**Stand: 2. November 2026, nach v4.9.0-r71.** Diese Seite beschreibt, was offen ist, warum, und was der nächste sinnvolle Schritt wäre. [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie) · [GitHub Issues](https://github.com/Moriarty1982/QuantumSphere-Unfold/issues)
+**Stand: 3. November 2026, nach v4.9.0-r72.** Diese Seite beschreibt, was offen ist, warum, und was der nächste sinnvolle Schritt wäre. [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie) · [GitHub Issues](https://github.com/Moriarty1982/QuantumSphere-Unfold/issues)
 
 ## Der gemeinsame Kern: Es fehlt eine Dynamik
 
@@ -36,7 +36,7 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
-Lokal ist OP5 über eine Detektorschwelle geschlossen ($\mathrm{OP5}_{\mathrm{eff}}$). Exakt ist es offen. Der Stand nach r69 bis r71:
+Lokal ist OP5 über eine Detektorschwelle geschlossen ($\mathrm{OP5}_{\mathrm{eff}}$). Exakt ist es offen. Der Stand nach r69 bis r72:
 - **Frame-Wechsel:** Ein passiver Frame-Wechsel beseitigt keinen Bilanzfehler.
 - **Neutralität:** „Neutral“ hat drei verschiedene Bedeutungen, und keine davon legt den Vakuumterm fest.
 - **Lichtkegel:** Der Kegel kommt aus der Clifford-Struktur. Kegeldaten legen weder eine absolute Skala noch das Gewicht eines Vakuumterms fest.
@@ -44,7 +44,9 @@ Lokal ist OP5 über eine Detektorschwelle geschlossen ($\mathrm{OP5}_{\mathrm{ef
 - **Numerik:** Die numerische Verträglichkeit reicht bis zur vierten Ableitungsordnung an drei Punkten. Das ist keine Lösung auf einem Gebiet. Am Punkt (1, 3/5, 0, 0) gibt es einen 70-stelligen Keim bis zur fünften Ordnung, unabhängig bestätigt (r71).
 - **Eichfreiheit im Vergleichssystem (r71):** Das System lässt eine Funktion von vier Variablen frei, nämlich Verschiebungen entlang des Polarwinkels $\vartheta$. Das ist eine exakte Symmetrie des gewählten Hintergrunds. Die Zusatzbedingung $\Omega$ ist eichinvariant und legt sie nicht fest (H50). Solange diese Freiheit nicht geeicht ist, ist die Frage nach weiteren versteckten Bedingungen nicht sauber gestellt.
 
-**Nächster Schritt** im Vergleichssystem (r71): eine Eichbedingung für $\vartheta$ wählen und dann den Involutionstest wiederholen. Danach, nach der Literaturnotiz der OP5-Serie:
+- **Eichung und Vollständigkeit (r72):** Die $\vartheta$-Freiheit ist durch eine Bedingung an eine Stromkomponente geeicht. Das geeichte Symbol ist ab Ordnung 6 involutiv (H51 bestätigt). Beim Fortsetzen der Taylorreihe treten aber nach allem Anschein vier weitere Bedingungen an die sechsten Ableitungen auf; die Spencer-Kohomologie lässt genau vier zu. Formal bestätigt ist das nicht (H52 bis H54 ungültig). Solange diese vier nicht bestimmt sind, ist das System nicht vollständig und kein Existenzsatz nach Cartan–Kähler möglich.
+
+**Nächster Schritt** im Vergleichssystem (r72): die vier Bedingungen an einem zweiten Grundpunkt vorab prüfen (H55), sie ausdrücklich bestimmen, ins System aufnehmen und den Cartan-Test wiederholen. Danach, nach der Literaturnotiz der OP5-Serie:
 1. polare Spinorvariablen (Fabbri) und Fierz-Rekonstruktion,
 2. Nebenbedingungsalgorithmus und formale Integrabilität,
 3. eine gekoppelte Coframe-Dynamik,

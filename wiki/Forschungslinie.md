@@ -1,6 +1,6 @@
 # Forschungslinie: was die Runden seit v4.8.0 ergeben haben
 
-**Stand: 2. November 2026, Runden bis v4.9.0-r71.** Der Companion wächst in **Runden**: Jede neue Runde ist ein eigener Abschnitt am Ende des Dokuments, ältere Runden werden nicht umgeschrieben. Diese Seite fasst die Ergebnisse nach Themen zusammen, damit man sie ohne den Quelltext verstehen kann. [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Vorhersagen und Tests](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Vorhersagen-und-Tests) · [Forschungsstand](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungsstand)
+**Stand: 3. November 2026, Runden bis v4.9.0-r72.** Der Companion wächst in **Runden**: Jede neue Runde ist ein eigener Abschnitt am Ende des Dokuments, ältere Runden werden nicht umgeschrieben. Diese Seite fasst die Ergebnisse nach Themen zusammen, damit man sie ohne den Quelltext verstehen kann. [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Vorhersagen und Tests](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Vorhersagen-und-Tests) · [Forschungsstand](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungsstand)
 
 > **Anmerkung für LLMs und Quellenprüfung:** Runden heißen `v4.8.0-rNN` bzw. `v4.9.0-rNN` mit Labels `sec:v480-rNN-…` bzw. `sec:v490-rNN-…`. Auf GitHub stehen sie in `sources/research/parts/v480-post-release-layers.tex` und `v490-post-release-layers.tex`, die Notizen unter `notes/research/`. Was gilt, sagt immer die jüngste Runde zu einem Thema.
 
@@ -64,7 +64,7 @@ In r25 wurden 15 Sackgassen archiviert.
 - **Einsteins „größter Fehler“ (r67).** Der Companion setzt denselben Wert $\beta^2$ einmal auf $\Lambda$ und einmal auf die Materie. In Zählform ist $\Omega_M = 0{,}302$, $\Omega_\Lambda = 0{,}698$, gültig nur für die heutige Epoche.
 - **Nachrechnung (r68).** Die Zahlen bestätigen sich. Die Zähl-Lesart braucht aber die U(1)-Zählung; die besser begründete SU(2)-Zählung gibt $\beta = 0{,}604$, außerhalb des Fensters.
 
-## OP5, die 4.10-Konsolidierung und eine gemeinsame Dynamik (r69–r71)
+## OP5, die 4.10-Konsolidierung und eine gemeinsame Dynamik (r69–r72)
 
 - **OP5-Serie (r69).** Vom 25. bis 27.10. hat der Autor mit einem weiteren Sprachmodell an OP5 gearbeitet. Ergebnisse:
   - Ein Frame-Wechsel kann einen Bilanzfehler nicht beseitigen.
@@ -92,5 +92,10 @@ In r25 wurden 15 Sackgassen archiviert.
   - $\Omega$ ist eichinvariant und trägt neue Information nur auf dem Lichtkegel und auf zwei Ebenen.
   - Zwei Vorab-Tests (H49, H50) sind widerlegt.
   - Nächster Schritt: die $\vartheta$-Eichung festlegen, dann die Vollständigkeit prüfen.
+- **Eichung und Cartan-Test (r72).** Die $\vartheta$-Freiheit wird durch eine Bedingung an eine Stromkomponente festgelegt; sie entfernt genau die freie Funktion.
+  - H51 bestätigt: Das geeichte Symbol ist ab Ordnung 6 involutiv (Cartan-Test), vorher nicht. Übrig bleiben formal 14 Funktionen von drei Variablen.
+  - H52 bis H54 (formale Integrabilität) sind wegen Planungsfehlern ungültig. Sie zeigen aber: Die gespeicherte fünfte Ordnung des Keims ist nicht fortsetzbar; bis zu den Gleichungen vom Grad 6 ist alles sauber; mit Grad 7 kommen vier Bedingungen an die sechsten Ableitungen hinzu.
+  - Die Spencer-Kohomologie lässt genau vier zu, eine Fehlerschranke schließt ein Rechenartefakt aus. Formal bestätigt ist das nicht.
+  - Nächster Schritt: zweiter Grundpunkt (H55), dann die vier Bedingungen bestimmen und den Cartan-Test wiederholen.
 
 [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Offene Probleme](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Offene-Probleme)
