@@ -86,8 +86,11 @@ Auf GitHub unter `notes/research/v4_10_0_r71/llm/`, lokal unter `llm/`.
   über K₃/K₄, σ aus k144). g'' = 477, 594, 723, 865; involutiv erstmals bei p = 8; Charaktere 723, 130, 12, 0. Lücken
   3e3–8e3 statt 1e4. Die 724 aus H57 war ein Artefakt. θ am reparierten Keim kann künftig mit `k148` statt aus
   `completion-omega-witness.npz` genommen werden.
-- Nächster Schritt: die vier Bedingungen in höherer Genauigkeit (sie begrenzen jetzt die Lücken), oder die formale
-  Integrabilität des erweiterten Systems prüfen.
+- **Spencer des erweiterten Symbols (k149, Erkundung):** H^{5,2} = 8, H^{6,2} = 4, H^{7,2} = 3 (geeicht ohne σ: 4, 0, 0).
+  Weitere versteckte Bedingungen sind nicht ausgeschlossen: bis zu 4 an 7-Jets, 3 an 8-Jets.
+- Nächster Schritt: Fortsetzung über einem Jet, der die vier Bedingungen erfüllt, mit Gleichungen bis Grad 9/10;
+  braucht stufenweise Elimination (12 000–16 000 Spalten sprengen 8 GB). Kriterien künftig an Weyl-Abständen
+  (≥ 100-fach) statt an fester Lückenschwelle 1e4 festmachen.
 - Fallstrick: Der Cloud-Container wird bei Untätigkeit zurückgesetzt; lange Läufe in Schritte unter 10 Minuten teilen
   und Zwischenergebnisse speichern. Volle SVD von 10⁴ × 10⁴ sprengt 8 GB, nur Singulärwerte rechnen.
 
