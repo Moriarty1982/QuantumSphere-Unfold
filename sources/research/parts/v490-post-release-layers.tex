@@ -9165,3 +9165,130 @@ R_{\rm glob}^{(v490\text{-}r72,+)}=(0,1,1,1,1),
 \]
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r73 Source-Only: Four Hidden Sixth-Order Conditions of the Gauged OP5 Comparison System}
+\addcontentsline{toc}{section}{v4.9.0-r73 Source-Only: Four Hidden Sixth-Order Conditions of the Gauged OP5 Comparison System}
+\label{sec:v490-r73-hidden-conditions}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.9.0-r72 found, by all evidence but without formal confirmation, four hidden conditions on 6-jets of the
+\(\vartheta\)-gauged OP5 comparison system (\S\ref{sec:v490-r72-theta-gauge}).  On 3 November 2026 the author asked to confirm
+them, to determine them explicitly, and then to repeat the Cartan test.  This layer records one confirmed pre-registered test
+(H55), the explicit determination and structure of the four conditions (exploration), and two pre-registered Cartan tests of
+the extended symbol that are invalid by their criteria (H56, H57).  Everything concerns the comparison model of
+\S\ref{sec:v410-state-mediator} only.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r73 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r73 results}
+\label{subsec:v490-r73-results}
+
+Notation as in \S\ref{sec:v490-r72-theta-gauge}.  \(K_N\) is the projection onto \((c_5,c_6)\) of the solution space of the
+linearized tower with the 4-jet fixed and equations through degree \(N-1\); \(q\) is the light cone of the reconstructed
+coframe; \(\Pi_0,\Pi_1\) are the two skew characteristic planes of r71.3.
+
+\paragraph{Theoremlet v4.9.0-r73.1 (H55 confirmed: the four conditions at a second base point).}
+Pre-registered.  A second 4-jet \(c_4'=c_4^{\rm rep}+\alpha z_4\) from the kernel of the degree-3/4 tower (seed 55, distance
+\(50\,\%\)) is extendable (residual \(5.0\times10^{-14}\); positive control \(5.3\times10^{-4}\)).  There
+\(P_{56}=852\) with equations through degree 6 and \(P_{56}=848\) with equations through degree 7; all gaps at least
+\(4\times10^4\); error bounds \(710\) and \(1390\) times below the deciding singular values.  The reduced matrix behind
+\(P_{56}\) depends only on the jet through degree 2 and is the same at both points; the new information is the rank of the full
+system at a changed 4-jet.
+
+\paragraph{Record v4.9.0-r73.2 (exploration: the four conditions determined).}
+At the first base point \(K_7\) has dimension 852, \(K_8\subset K_7\) dimension 848; the four conditions are the linear forms on
+\(K_7\) that vanish on \(K_8\).
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] They are genuine sixth-order equations: \(99\,\%\) of their weight lies on \(c_6\), and on the gauged symbol fibre
+\(g'_6\) they have rank 4.  The complete symbol at order 6 has dimension \(477\), not \(481\).
+\item[(b)] They act only on light-like plane waves.  Plane waves \(\xi^6\otimes u\) in the symbol exist only on the cone
+\(q(\xi)=0\) (seven polarizations per direction) and on isolated characteristic directions; the conditions are nonzero on the
+cone and vanish (\(9\times10^{-15}\)) off it.
+\item[(c)] On every null direction they have rank 1 on the seven polarizations (next singular value \(\le3\times10^{-9}\)
+relative): they fix one scalar combination \(s(\xi,u)\).
+\item[(d)] The direction in the space of conditions is quadratic in \(\xi\): \(n(\xi)\propto M(\xi\otimes\xi)\) to
+\(1.6\times10^{-9}\) on held-out null directions, while no linear law fits.  The four quadrics vanishing on
+\(\Pi_0\cup\Pi_1\), determined independently, lie in \(\operatorname{span}(M,q)\): rank \(5\) with and without them (gap
+\(0.2\) against \(1.5\times10^{-13}\)).
+\end{enumerate}
+Reading: on the cone the conditions are \(\sigma_k(\xi,u)=d_k(\xi)\,s(\xi,u)\) up to a fixed recombination, with \(d_k\) the
+four plane quadrics.  These are the factors of the four degree-7 relations \(q\,d_k\,\Omega\in\langle J\rangle\) of r71.3:
+identities at symbol level that leave one sixth-order condition each once lower-order terms are kept, in line with
+\(H^{5,2}(g')=4\) (r72.5).
+
+\paragraph{Record v4.9.0-r73.3 (H56 and H57 invalid: the Cartan test of the extended symbol).}
+Pre-registered (H57 explicitly not blind).  The extended symbol \(g''\) adds the four conditions and their prolongations to
+\(g'\).  In both tests and all three frames: \(\dim g''_6=477\), \(\dim g''_7=594\), not involutive at \(p=6\).  From \(p=8\)
+the symbol ranks have gap ratios of only \(8\times10^2\) to \(10^3\); one singular value (\(5.6\times10^{-9}\)) decides whether
+\(\dim g''_8\) is 723 (H56: involutive first at \(p=8\)) or 724 (H57: at \(p=7\)).  Both tests are invalid.  The cause is
+precision: \(\theta\) stems from the older germ (deviation about \(10^{-7}\)), the four conditions from the repaired germ, and
+genuine singular values near \(10^{-8}\) at \(p=8\) cannot be separated from that deviation in double precision.
+
+\paragraph{Proof and measurement sources.}
+r73.1 by \texttt{k143\_h55.py}.  r73.2 by \texttt{k144\_vier\_bedingungen.py} and \texttt{k145\_charakteristik.py}; the
+conditions are stored in \texttt{k144\_bedingungen\_p1.npy}.  r73.3 by \texttt{k146\_cartan\_erweitert.py} and
+\texttt{k147\_cartan\_projiziert.py}.  The notes \texttt{Ergebnis\_H55\_\allowbreak zweiter\_\allowbreak Grundpunkt.md},
+\texttt{Erkundung\_\allowbreak vier\_\allowbreak Bedingungen\_\allowbreak 6Jets.md}, \texttt{Ergebnis\_H56\_\allowbreak
+Cartan\_\allowbreak Test\_\allowbreak erweitertes\_\allowbreak Symbol.md} and \texttt{Ergebnis\_H57\_\allowbreak
+Cartan\_\allowbreak Test\_\allowbreak projizierte\_\allowbreak Bedingungen.md} give the numbers.  \(\square\)
+
+\paragraph{Consequence.}
+The gauged comparison system is not formally integrable at order 6: it has four further sixth-order conditions, now
+determined and understood as the curvature of the four relations \(q\,d_k\,\Omega\).  Whether the extended symbol becomes
+involutive at order 7 or 8 cannot be decided in double precision with the stored \(\theta\).  The next step is a consistent
+data set at the repaired germ (\(\Omega\) and the four conditions) in higher precision.  OP5 is not closed.
+
+\subsection*{v4.9.0-r73 status in the three frames}
+\label{subsec:v490-r73-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item All statements concern the fixed OP5 comparison model in one chart with one coframe reconstructed from \(\Psi\).  No frame
+map M, T or P acts on them; r73.1 to r73.3 are frame-free within the model.
+\item The light cone \(q\) and the planes \(\Pi_0,\Pi_1\) belong to the reconstructed geometry of the model, not to the photon
+frame P.
+\end{itemize}
+No statement of this layer concerns colour or charge.
+
+\subsection*{v4.9.0-r73 register entries}
+\label{subsec:v490-r73-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r73\\
+\midrule
+four hidden conditions on 6-jets & confirmed at a second base point (H55)\\
+their form & order 6; only on the light cone; \(d_k(\xi)\,s(\xi,u)\) with the plane quadrics (exploration)\\
+complete symbol at order 6 & dimension 477\\
+Cartan test of the extended symbol & H56, H57 invalid; not involutive at 6; 7 or 8 undecided in double precision\\
+next step & consistent high-precision data at the repaired germ\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r73 ledger and guard update}
+\label{subsec:v490-r73-ledger-guard}
+
+\[
+R_{\rm chk}^{v490\text{-}r73}=(1,1,0)
+\]
+for (four conditions confirmed and determined; H56 and H57 recorded as invalid; OP5 not closed).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r73,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r73}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
