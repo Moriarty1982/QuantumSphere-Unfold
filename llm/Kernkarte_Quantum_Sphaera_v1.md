@@ -2542,6 +2542,14 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **r72.6 (H54, Vorab ec705ec, ungültig):** Weyl-Schranke (Fehler 7e-13 bzw. 5e-9) gibt P₅₆ ≤ 848, mit r72.5 = 848; Lückenkriterium an gestörten Varianten unerfüllbar.
 - Folgerung: Symbol involutiv ab 6, System nach allem Anschein nicht formal integrabel (4 Bedingungen an 6-Jets), formal unbestätigt. Nächster Schritt H55 (zweiter Grundpunkt). R_chk = (1,1,0); Guards unverändert; OP5 offen. PR #52 gemergt als b8c8c7d.
 
+### K123 Runde v4.9.0-r73: vier versteckte Bedingungen sechster Ordnung (2026-11-03)
+
+`sec:v490-r73-hidden-conditions`, Snippet `llm/v490_r73_round.tex`; Notizen `llm/Ergebnis_H55_*`, `llm/Erkundung_vier_Bedingungen_6Jets.md`, `llm/Ergebnis_H56_*`, `llm/Ergebnis_H57_*`.
+- **r73.1 (H55, Vorab 04a3950, bestätigt):** zweiter 4-Jet (50 % entfernt): P₅₆ = 852 → 848; geeichtes System bei Ordnung 6 nicht formal integrabel.
+- **r73.2 (Erkundung):** die vier Bedingungen: Ordnung 6, Rang 4 auf g'_6 (vollständiges Symbol 477); nur auf lichtartigen Wellen, je Nullrichtung eine Polarisation; Richtung quadratisch über die Quadriken von Π₀, Π₁: σ_k = d_k(ξ)·s(ξ, u), Reste von q·d_k·Ω. Linearformen `llm/k144_bedingungen_p1.npy`.
+- **r73.3 (H56 Vorab 4ed4c3e, H57 Vorab 11a64a4 nicht blind; beide ungültig):** erweitertes Symbol 477, 594, nicht involutiv bei 6; ab p = 8 in double precision nicht entscheidbar (θ vom älteren Keim).
+- Nächster Schritt: Ω und die vier Bedingungen konsistent am reparierten Keim in höherer Genauigkeit. R_chk = (1,1,0); Guards unverändert; OP5 offen. PR #53 gemergt als 116f674.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2719,6 +2727,7 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - v13.7 (2026-11-02): K120 Runde v4.9.0-r70 (4.10-Konsolidierung lokal übernommen, Korrektur r69.3(a) auf 1,687, H48 widerlegt, Λ-Kreuzungen als Erkundung); K119 korrigiert.
 - v13.8 (2026-11-02): K121 Runde v4.9.0-r71 (OP5-Vergleichssymbol: Keim bestätigt, −1 als Artefakt, Lichtkegel und zwei Ebenen, exakte ϑ-Eichsymmetrie; H49 und H50 widerlegt).
 - v13.9 (2026-11-03): K122 Runde v4.9.0-r72 (ϑ-Eichung, H51 bestätigt, H52–H54 ungültig, H^{5,2}(g') = 4, vier versteckte Bedingungen an 6-Jets nach allem Anschein).
+- v14.0 (2026-11-03): K123 Runde v4.9.0-r73 (H55 bestätigt, die vier Bedingungen bestimmt, H56/H57 ungültig).
 
 ---
 
