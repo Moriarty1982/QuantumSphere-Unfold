@@ -1,0 +1,27 @@
+max|J(neu) - J(gespeichert)| = 1.2e-13
+  F^2_3: Rang 291 (Verh. 6e+10); Projektion auf Grad 3: dim 189 (Verh. 5e+15)
+  F^2_4: Rang 855 (Verh. 1e+09); Projektion auf Grad 3: dim 188 (Verh. 7e+09)
+  dim K3 - dim K4 = 1 ; K4 in K3, Rest 2.8e-11
+Gueltigkeit: g'_p ohne sigma (soll 117, 188, 273, 371, 481, 606, 745, 898)
+   p=2 ohne sigma: dim 117 (Luecke 1.3e-02|3.6e-15, Verh. 4e+12)
+   p=3 ohne sigma: dim 188 (Luecke 8.1e-05|1.3e-15, Verh. 6e+10)
+   p=4 ohne sigma: dim 273 (Luecke 4.6e-05|3.6e-15, Verh. 1e+10)
+   p=5 ohne sigma: dim 371 (Luecke 2.5e-05|3.6e-15, Verh. 7e+09)
+   p=6 ohne sigma: dim 481 (Luecke 1.7e-08|3.6e-15, Verh. 5e+06)
+   p=7 ohne sigma: dim 606 (Luecke 2.4e-08|3.6e-15, Verh. 7e+06)
+   p=8 ohne sigma: dim 745 (Luecke 2.9e-08|3.6e-15, Verh. 8e+06)
+   p=9 ohne sigma: dim 898 (Luecke 3.2e-08|3.6e-15, Verh. 9e+06)
+   p=6 mit sigma: dim 477 (Luecke 1.7e-08|3.6e-15, Verh. 5e+06)
+   p=7 mit sigma: dim 594 (Luecke 2.4e-08|2.3e-13, Verh. 1e+05)
+   p=8 mit sigma: dim 723 (Luecke 8.1e-09|1.7e-12, Verh. 5e+03)
+   p=9 mit sigma: dim 865 (Luecke 1.8e-08|6.6e-12, Verh. 3e+03)
+seed 1 p=6: dim g''^(k) = [477, 107, 12, 0], Summe 596, dim g''_7 = 594 -> kleiner (nicht involutiv); Luecken ['1e+07', '5e+06', '7e+15']
+seed 1 p=7: dim g''^(k) = [594, 118, 12, 0], Summe 724, dim g''_8 = 723 -> kleiner (nicht involutiv); Luecken ['2e+04', '2e+06', '8e+15']
+seed 1 p=8: dim g''^(k) = [723, 130, 12, 0], Summe 865, dim g''_9 = 865 -> GLEICH (involutiv); Luecken ['7e+03', '5e+05', '9e+15']
+seed 2 p=6: dim g''^(k) = [477, 107, 12, 0], Summe 596, dim g''_7 = 594 -> kleiner (nicht involutiv); Luecken ['2e+07', '1e+07', '6e+16']
+seed 2 p=7: dim g''^(k) = [594, 118, 12, 0], Summe 724, dim g''_8 = 723 -> kleiner (nicht involutiv); Luecken ['2e+05', '1e+06', '6e+16']
+seed 2 p=8: dim g''^(k) = [723, 130, 12, 0], Summe 865, dim g''_9 = 865 -> GLEICH (involutiv); Luecken ['8e+03', '2e+04', '6e+16']
+seed 3 p=6: dim g''^(k) = [477, 107, 12, 0], Summe 596, dim g''_7 = 594 -> kleiner (nicht involutiv); Luecken ['2e+07', '7e+07', '4e+16']
+seed 3 p=7: dim g''^(k) = [594, 118, 12, 0], Summe 724, dim g''_8 = 723 -> kleiner (nicht involutiv); Luecken ['2e+05', '7e+06', '4e+16']
+seed 3 p=8: dim g''^(k) = [723, 130, 12, 0], Summe 865, dim g''_9 = 865 -> GLEICH (involutiv); Luecken ['2e+04', '2e+05', '4e+16']
+kleinstes Lueckenverhaeltnis: 3e+03

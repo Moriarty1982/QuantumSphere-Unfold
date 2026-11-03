@@ -55,6 +55,7 @@ Zu H46: Eine Bestätigung würde die Kette r55–r60 prüfen, nicht die Lesart a
 | H55 | Die vier versteckten Bedingungen treten auch an einem zweiten Ausgangspunkt auf | bestätigt: wieder 852 und 848 Freiheitsgrade, Fehlerschranken 710- und 1390-fach (r73) |
 | H56 | Das um die vier Bedingungen erweiterte Symbol wird bis Ordnung 8 involutiv | ungültig: ab Ordnung 8 Ränge ohne saubere Lücke; bei 6 nicht involutiv (r73) |
 | H57 | Wie H56 mit projizierten Bedingungen (nicht blind) | ungültig: bei Ordnung 8 nicht entscheidbar (723 oder 724); Genauigkeit reicht nicht (r73) |
+| H58 | Wie H56 mit konsistenten Daten am reparierten Keim (nicht blind) | ungültig: fünf Ränge knapp unter der Schwelle; Zahlen wie vorhergesagt, erstmals bei Ordnung 8 involutiv (r74) |
 
 ## Erkundungen ohne Vorab-Notiz
 
