@@ -10,6 +10,8 @@ triality; `p6_pheno.tex` frame offset, counting reading, matter fraction, masses
 `p8_conclusions.tex`; appendices `appA_earlier.tex` (claims of the longer version that do not hold), `appendix_method.tex`,
 `appendix_qam.tex` (key statements in standard and QAM notation). Build: `pdflatex main.tex` twice.
 
-Before submission: check journal volume and page numbers of all references against the publishers (arXiv numbers are verified for
-Furey, Gresnigt, Boyle, Domagała–Lewandowski, Meissner, Ghosh–Mitra, Engle–Noui–Perez, Kaloper–Padilla, DESI DR2, NuFIT 6.0, JUNO 2025);
-have the text read by someone without prior knowledge.
+References: journal data checked against INSPIRE on 4 Nov 2026 for all entries with an arXiv number (corrected: page ranges of
+Domagała–Lewandowski and Meissner; added the journal versions of Boyle, DESI DR2 and JUNO). Not in INSPIRE and taken as standard:
+Günaydin–Gürsey, Henneaux–Teitelboim, Koide (confirmed), Hopf 1931/1935, Dixon, Bryant et al., Seiler.
+
+Before submission: have the text read by someone without prior knowledge.
