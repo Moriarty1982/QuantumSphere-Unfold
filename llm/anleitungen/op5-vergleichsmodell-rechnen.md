@@ -75,8 +75,12 @@ Auf GitHub unter `notes/research/v4_10_0_r71/llm/`, lokal unter `llm/`.
 - **H55 bestätigt (k143):** an einem zweiten 4-Jet (50 % entfernt) wieder P₅₆ = 852 (F₇) und 848 (F₈), Fehlerschranken
   710- bzw. 1390-fach. Die reduzierte Matrix hängt nur vom Jet bis Grad 2 ab und ist an beiden Punkten gleich; neu ist
   nur der Rang des vollen F₈. Das geeichte System ist bei Ordnung 6 nicht formal integrabel.
-- Nächster Schritt: die 4 Bedingungen ausdrücklich bestimmen (Linkskern-Kombinationen der Grad-7-Zeilen, die c₇ und c₈
-  eliminieren), ins System aufnehmen, Cartan-Test wiederholen; optional ein Punkt mit geändertem Jet bis Grad 3.
+- **Die 4 Bedingungen (k144, k145, Erkundung):** echte Gleichungen sechster Ordnung (vollständiges Symbol bei p = 6 hat
+  477 statt 481 Dimensionen). Sie wirken nur auf lichtartige ebene Wellen, je Nullrichtung auf genau eine Polarisation,
+  in der Form d_k(ξ)·s(ξ, u) mit den vier Quadriken d_k der Ebenen Π₀, Π₁: die Krümmung der r71-Beziehungen q·d_k·Ω.
+  Linearformen am Keim: `k144_bedingungen_p1.npy`.
+- Nächster Schritt: die 4 Bedingungen fortgesetzt ins Symbol aufnehmen und den Cartan-Test wiederholen (vorher als
+  Test festschreiben).
 - Fallstrick: Der Cloud-Container wird bei Untätigkeit zurückgesetzt; lange Läufe in Schritte unter 10 Minuten teilen
   und Zwischenergebnisse speichern. Volle SVD von 10⁴ × 10⁴ sprengt 8 GB, nur Singulärwerte rechnen.
 
