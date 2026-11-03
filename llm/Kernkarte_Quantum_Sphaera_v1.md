@@ -2531,6 +2531,17 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **r71.6 (H50, Vorab ea36f39, widerlegt):** Ω reagiert auf ϑ-Verschiebungen mit f bis Grad 3 nicht (≤ 1,5e-10; Kontrollen 0,04–0,11); Ω eichinvariant, erste Klasse.
 - Folgerung: ϑ-Eichung vor Involutionstest nötig. R_chk = (1,1,0); Guards unverändert; OP5 offen.
 
+### K122 Runde v4.9.0-r72: ϑ-Eichung, Cartan-Test H51, vier versteckte Bedingungen an 6-Jets (2026-11-03)
+
+`sec:v490-r72-theta-gauge`, Snippet `llm/v490_r72_round.tex`; Notizen `llm/Ergebnis_H51_*` bis `llm/Ergebnis_H54_*`, `llm/Erkundung_Spencer_geeichtes_Symbol.md`.
+- **r72.1:** Eichung Ψ†K₂Ψ = S(x) (algebraisch, |ds·v|/|ds| = 0,45); v gemeinsamer Kern aller J-Blöcke, θ·v = 0. g'_p = g_p − C(p+3,3) = 117, 188, 273, 371, 481, 606, 745 (p = 2…8); auf Symbolebene eichunabhängig.
+- **r72.2 (H51, Vorab 10693a0, bestätigt):** Cartan-Test, geeichtes Symbol erstmals bei p = 6 involutiv (nicht bei 4, 5); dim g'^{(k)}_6 = 481, 111, 14, 0; formal 14 Funktionen von drei Variablen.
+- **r72.3 (H52, Vorab 03527c6, ungültig):** gespeicherte Grad-5-Koeffizienten nicht fortsetzbar (verletzen abgeleitete Ω-Bedingung); Planungsfehler.
+- **r72.4 (H53, Vorab 64fd43b, ungültig):** über dem reparierten 4-Jet bis Grad-6-Gleichungen sauber (P₅ = 371, P₅₆ − P₅ = 481); mit Grad 7: P₅₆ = 848 statt 852, P₅₆₇ − P₅₆ = 606.
+- **r72.5 (Erkundung):** H^{4,2}(g') = 0, H^{5,2}(g') = 4 (wie ungeeicht).
+- **r72.6 (H54, Vorab ec705ec, ungültig):** Weyl-Schranke (Fehler 7e-13 bzw. 5e-9) gibt P₅₆ ≤ 848, mit r72.5 = 848; Lückenkriterium an gestörten Varianten unerfüllbar.
+- Folgerung: Symbol involutiv ab 6, System nach allem Anschein nicht formal integrabel (4 Bedingungen an 6-Jets), formal unbestätigt. Nächster Schritt H55 (zweiter Grundpunkt). R_chk = (1,1,0); Guards unverändert; OP5 offen. PR #52 gemergt als b8c8c7d.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2707,6 +2718,7 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - v13.6 (2026-10-28): K119 Runde v4.9.0-r69 bindet die OP5-Serie des Autors mit einem anderen Sprachmodell ein (analysis/, 3fa5ba9..337d9cb); drei Fehler im Hauptkorpus als Statusnotiz-Kandidaten.
 - v13.7 (2026-11-02): K120 Runde v4.9.0-r70 (4.10-Konsolidierung lokal übernommen, Korrektur r69.3(a) auf 1,687, H48 widerlegt, Λ-Kreuzungen als Erkundung); K119 korrigiert.
 - v13.8 (2026-11-02): K121 Runde v4.9.0-r71 (OP5-Vergleichssymbol: Keim bestätigt, −1 als Artefakt, Lichtkegel und zwei Ebenen, exakte ϑ-Eichsymmetrie; H49 und H50 widerlegt).
+- v13.9 (2026-11-03): K122 Runde v4.9.0-r72 (ϑ-Eichung, H51 bestätigt, H52–H54 ungültig, H^{5,2}(g') = 4, vier versteckte Bedingungen an 6-Jets nach allem Anschein).
 
 ---
 
