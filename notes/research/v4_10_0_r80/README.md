@@ -9,6 +9,7 @@
 Folders:
 - `rounds/v490_r80_round.tex`: the layer;
 - `llm/`: k168 with the exploration note, k169 with its output (k169 imports `k138_tps_d.py` from `../v4_10_0_r72/llm/` or the local `llm/`);
-- pre-registration and result note: H68 in `../predictions/`.
+- pre-registration and result note: H68 in `../predictions/`;
+- `Bestandsaufnahme_Wirkungsansaetze.md` (German): survey of all action/dynamics ansätze so far, why each failed, eight minimum requirements (W1)–(W8) for a joint action and five open author decisions.
 
 OP5 is not closed, and the guards are unchanged.
