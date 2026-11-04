@@ -1,0 +1,62 @@
+name: QAM Lean (standalone, no Mathlib)
+
+# Builds the project-independent Lean package qam/lean (Lean core only) and runs the verified
+# record checker qamcheck on the example records: example/thesis must pass, bad_* must be rejected.
+on:
+  workflow_dispatch:
+  pull_request:
+    paths: ["qam/lean/**", "qam/examples/**", ".github/workflows/qam-lean.yml"]
+  push:
+    branches: [main]
+    paths: ["qam/lean/**", "qam/examples/**", ".github/workflows/qam-lean.yml"]
+
+permissions:
+  contents: read
+
+jobs:
+  lean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: qam
+      - name: No sorry, admit or native_decide
+        run: |
+          if grep -rnE '\b(sorry|admit|native_decide)\b' qam/lean/QAM qam/lean/QamCheck.lean; then
+            echo "::error::forbidden proof escape found"; exit 1
+          fi
+      - uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: qam/lean
+          build: false
+          test: false
+          lint: false
+      - name: lake build
+        working-directory: qam/lean
+        run: lake build 2>&1 | tee build.log && ! grep -q "declaration uses 'sorry'" build.log
+      - name: Axioms of the record-level theorems
+        working-directory: qam/lean
+        run: |
+          cat > Ax.lean <<'X'
+          import QAM
+          #print axioms QAM.Provenance.no_promotion
+          #print axioms QAM.Provenance.independent_iff
+          #print axioms QAM.Provenance.frames_declared
+          #print axioms QAM.QamFile.checked_good
+          #print axioms QAM.QamFile.checked_no_promotion_record
+          #print axioms QAM.QamFile.checked_proved_record
+          #print axioms QAM.QamFile.checked_independent_record
+          #print axioms QAM.QamFile.checked_inputs_sourced
+          #print axioms QAM.QamFile.link_derive_sound
+          X
+          lake env lean Ax.lean | tee ax.txt
+          if grep -q sorryAx ax.txt; then exit 1; fi
+      - name: qamcheck on the example records
+        working-directory: qam/lean
+        run: |
+          lake exe qamcheck ../examples/example.qam
+          lake exe qamcheck ../examples/thesis.qam
+          lake exe qamcheck ../examples/frames.qam
+          for f in ../examples/bad_*.qam; do
+            if lake exe qamcheck "$f"; then echo "::error::$f was accepted"; exit 1; fi
+          done

@@ -24,7 +24,7 @@ jobs:
       - name: Exported records are up to date
         run: |
           cd qam/examples
-          for f in example thesis bad_promotion bad_frame bad_independent bad_map_source; do
+          for f in example thesis frames bad_promotion bad_frame bad_independent bad_map_source; do
             cp $f.qam /tmp/$f.qam
             TEXINPUTS=../tex: pdflatex -interaction=nonstopmode -halt-on-error $f.tex >/dev/null
             diff -u /tmp/$f.qam $f.qam
@@ -32,7 +32,7 @@ jobs:
       - name: Hash chain recomputed independently
         run: |
           cd qam/examples
-          python3 ../tools/qamhash.py verify example.qam thesis.qam bad_promotion.qam bad_frame.qam bad_independent.qam bad_map_source.qam
+          python3 ../tools/qamhash.py verify example.qam thesis.qam frames.qam bad_promotion.qam bad_frame.qam bad_independent.qam bad_map_source.qam
           for f in bad_inputs.qam bad_hashlink.qam tampered_statement.qam; do
             if python3 ../tools/qamhash.py verify $f; then echo "::error::$f was accepted"; exit 1; fi
           done

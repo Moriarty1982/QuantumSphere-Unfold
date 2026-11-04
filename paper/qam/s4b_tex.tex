@@ -1,14 +1,16 @@
 \section{Checks at compile time}\label{sec:tex}
 
 A proof assistant checks rules about an abstract record.  The record that people actually read is a \LaTeX{} document.  The package
-\texttt{qam.sty}~\cite{repo} brings the rules of \texttt{QSFormal.Provenance} into that document: claims are declared where they are made,
+\texttt{qam.sty}~\cite{repo} brings the rules of \texttt{QAM.Provenance} into that document: claims are declared where they are made,
 and the compiler stops with an error as soon as a declaration breaks a rule.
 
 {\sloppy\paragraph{Commands.}  \verb|\qamframe{M}| declares a frame and \verb|\qammap{G}{M}{T}| a comparison map from \(M\) to \(T\).
 \verb|\qaminput{k}{M}{s}| declares a value put in by hand, with frame \(M\) and status \(s\); its only input is itself.
 \verb|\qamclaim{k}{M}{s}| declares a premise without inputs, for instance a theorem.  \verb|\qamderive{k}{s}{p1,p2,...}| derives a claim
 from premises, \verb|\qamconvert{k}{s}{G}{p}| moves a premise into another frame, \verb|\qamcompare{a}{b}| records a comparison, and
-\verb|\qamindependent{k}| asserts that a claim rests on no input.  \verb|\qamshow{k}| prints status, frame and inputs.\par}
+\verb|\qamindependent{k}| asserts that a claim rests on no input.  \verb|\qamshow{k}| prints status, frame and inputs.  The frame
+\verb|*| is convention-free: a claim in it, such as a number or a theorem valid in every convention, may be combined and compared with
+claims of any frame.  \verb|\qamcompose{K}{G}{H}| declares the composite of two maps whose frames match.\par}
 
 \paragraph{Checks.}  \verb|\qamderive| and \verb|\qamconvert| stop when the declared status is higher than that of the weakest premise
 (promotion); \verb|\qamderive| and \verb|\qamcompare| stop when premises of different frames meet, and \verb|\qamconvert| when the map does
@@ -58,12 +60,17 @@ beta := derive(gamma,counting); frame M; status computed; inputs {gamma}
 \end{lstlisting}
 together with lines for the maps, comparisons and independence assertions.
 
-\paragraph{Checking the exported record in Lean.}  The module \texttt{QSFormal.QamFile} reads such a file and checks it line by line
+\paragraph{Checking the exported record in Lean.}  The module \texttt{QAM.QamFile} reads such a file and checks it line by line
 against the record before it; the executable \texttt{qamcheck} runs this checker on a file.  The checker is a Lean function, and Lean
-proves what its success means: every derived claim is fresh, has premises, has at most the status of each of them and shares their frame
-(\texttt{derive\_sound}, \texttt{checked\_no\_promotion}); its listed inputs are exactly those of its premises; a conversion uses a
+proves what its success means.  Line by line: every derived claim is fresh, has premises, has at most the status of each of them and
+shares their frame or is convention-free (\texttt{derive\_sound}); its listed inputs are exactly those of its premises; a conversion uses a
 declared map that starts in the premise's frame and ends in the new one (\texttt{convert\_sound}); an independence assertion holds for a
-claim without inputs and a comparison only within one frame (\texttt{indep\_sound}, \texttt{compare\_sound}).  The check is independent of
+claim without inputs and a comparison only within one frame (\texttt{indep\_sound}, \texttt{compare\_sound}).  For the whole record:
+every record the checker accepts, starting from the empty one, satisfies an invariant (\texttt{checked\_good}) from which the statements
+about all ancestors of a claim follow, at any distance along its premises --- no claim has a higher status than any ancestor, so a
+proved claim rests only on proved claims (\texttt{checked\_no\_promotion\_record}, \texttt{checked\_proved\_record}); every input of
+an ancestor is an input of the claim, so a claim without inputs has no ancestor with inputs (\texttt{checked\_inputs\_record},
+\texttt{checked\_independent\_record}); and no listed input is invented (\texttt{checked\_inputs\_sourced}).  The check is independent of
 the \TeX{} package: a record edited by hand, for instance with an input deleted from a derived claim, compiles nowhere but is still
 caught by \texttt{qamcheck}, and a document compiled with \verb|mode=warning| that contains a promotion produces a record that
 \texttt{qamcheck} rejects.  Both cases are part of the continuous integration.  The parser that turns text lines into Lean values is
@@ -93,5 +100,9 @@ forgery, for which the manifest's SHA-256 sums are the relevant check.  Equal ha
 
 \paragraph{What the package does not do.}  It checks only what is declared.  A document that states a result without declaring it is
 not checked, and a declaration can be wrong: whether \texttt{gamma} really is an input is the author's statement, not the package's.
+In particular a claim declared with \verb|\qamclaim| as proved is accepted without any justification; the package only ensures that
+nothing derived from it claims more.  A fitted value that is later declared again under a new name as a claim without inputs is not
+recognised as the same value.  Frames are names; products of several conventions (signature and normalisation, say) have to be
+spelled out as frames of their own with declared maps between them.
 The package guards against slips in a long record; it does not prove its content.  It is tested by documents that must compile and
 documents that must stop with a given error, and the tests run in continuous integration.

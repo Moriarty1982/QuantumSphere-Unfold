@@ -1,4 +1,4 @@
-import QSFormal.Provenance
+import QAM.Provenance
 
 /-!
 # Checking an exported QAM record
@@ -25,9 +25,9 @@ assertions.  The executable `qamcheck` (file `QamCheck.lean`) runs the checker o
 Generic: no reference to any physics.  Lean core only.
 -/
 
-namespace QSFormal.QamFile
+namespace QAM.QamFile
 
-open QSFormal.Provenance (Status)
+open QAM.Provenance (Status)
 
 def statusName : Status → String
   | .«open» => "open"
@@ -49,6 +49,8 @@ structure Info where
   frame  : String
   status : Status
   inputs : List String
+  /-- the premises the claim was derived from (empty for inputs, claims and theses) -/
+  prem   : List String
 
 /-- One line of a `.qam` file. -/
 inductive Line where
@@ -74,10 +76,13 @@ def State.findMap (st : State) (g : String) : Option (String × String) :=
 def State.add (st : State) (k : String) (i : Info) : State :=
   { st with claims := (k, i) :: st.claims }
 
-/-- A premise is declared, lives in frame `f`, and has at least status `s`. -/
+/-- The convention-free frame: a claim in it fits every frame. -/
+def anyFrame : String := "*"
+
+/-- A premise is declared, lives in frame `f` (or is convention-free), and has at least status `s`. -/
 def premOk (st : State) (f : String) (s : Status) (p : String) : Bool :=
   match st.find p with
-  | some i => decide (s.rank ≤ i.status.rank) && decide (i.frame = f)
+  | some i => decide (s.rank ≤ i.status.rank) && decide (i.frame = f ∨ i.frame = anyFrame)
   | none => false
 
 def premInputs (st : State) (p : String) : List String :=
@@ -103,7 +108,7 @@ def indepOk (st : State) (k : String) : Bool :=
 
 def compareOk (st : State) (a b : String) : Bool :=
   match st.find a, st.find b with
-  | some i, some j => decide (i.frame = j.frame)
+  | some i, some j => decide (i.frame = j.frame ∨ i.frame = anyFrame ∨ j.frame = anyFrame)
   | _, _ => false
 
 /-- Check one line against the record before it. -/
@@ -111,21 +116,21 @@ def step (st : State) : Line → Option State
   | .map g a b =>
       if (st.findMap g).isNone = true then some { st with maps := (g, a, b) :: st.maps } else none
   | .input k f s =>
-      if (st.find k).isNone = true then some (st.add k ⟨f, s, [k]⟩) else none
+      if (st.find k).isNone = true then some (st.add k ⟨f, s, [k], []⟩) else none
   | .claim k f s =>
-      if (st.find k).isNone = true then some (st.add k ⟨f, s, []⟩) else none
+      if (st.find k).isNone = true then some (st.add k ⟨f, s, [], []⟩) else none
   | .derive k f s ps ins =>
       if (st.find k).isNone = true then
         if ps ≠ [] then
           if ps.all (premOk st f s) = true then
-            if inputsOk st ps ins = true then some (st.add k ⟨f, s, ins⟩) else none
+            if inputsOk st ps ins = true then some (st.add k ⟨f, s, ins, ps⟩) else none
           else none
         else none
       else none
   | .convert k f s g p ins =>
       if (st.find k).isNone = true then
         if convertOk st f s g p = true then
-          if inputsOk st [p] ins = true then some (st.add k ⟨f, s, ins⟩) else none
+          if inputsOk st [p] ins = true then some (st.add k ⟨f, s, ins, [p]⟩) else none
         else none
       else none
   | .indep k => if indepOk st k = true then some st else none
@@ -143,7 +148,7 @@ def run : State → List Line → Option State
 
 theorem premOk_sound {st : State} {f : String} {s : Status} {p : String}
     (h : premOk st f s p = true) :
-    ∃ i, st.find p = some i ∧ s.rank ≤ i.status.rank ∧ i.frame = f := by
+    ∃ i, st.find p = some i ∧ s.rank ≤ i.status.rank ∧ (i.frame = f ∨ i.frame = anyFrame) := by
   unfold premOk at h
   cases hp : st.find p with
   | none => simp [hp] at h
@@ -177,10 +182,10 @@ and inputs exactly those of the premises. -/
 theorem derive_sound {st st' : State} {k f : String} {s : Status} {ps ins : List String}
     (h : step st (.derive k f s ps ins) = some st') :
     st.find k = none ∧ ps ≠ [] ∧
-    (∀ p ∈ ps, ∃ i, st.find p = some i ∧ s.rank ≤ i.status.rank ∧ i.frame = f) ∧
+    (∀ p ∈ ps, ∃ i, st.find p = some i ∧ s.rank ≤ i.status.rank ∧ (i.frame = f ∨ i.frame = anyFrame)) ∧
     (∀ x ∈ ins, ∃ p ∈ ps, x ∈ premInputs st p) ∧
     (∀ p ∈ ps, ∀ x ∈ premInputs st p, x ∈ ins) ∧
-    st' = st.add k ⟨f, s, ins⟩ := by
+    st' = st.add k ⟨f, s, ins, ps⟩ := by
   simp only [step] at h
   split at h
   next h1 =>
@@ -208,7 +213,7 @@ theorem convert_sound {st st' : State} {k f : String} {s : Status} {g p : String
     (∃ a b i, st.findMap g = some (a, b) ∧ st.find p = some i ∧ a = i.frame ∧ b = f ∧
       s.rank ≤ i.status.rank) ∧
     (∀ x ∈ ins, x ∈ premInputs st p) ∧ (∀ x ∈ premInputs st p, x ∈ ins) ∧
-    st' = st.add k ⟨f, s, ins⟩ := by
+    st' = st.add k ⟨f, s, ins, [p]⟩ := by
   simp only [step] at h
   split at h
   next h1 =>
@@ -245,7 +250,8 @@ theorem indep_sound {st st' : State} {k : String} (h : step st (.indep k) = some
 
 /-- A comparison is accepted only between declared claims of one frame. -/
 theorem compare_sound {st st' : State} {a b : String} (h : step st (.compare a b) = some st') :
-    ∃ i j, st.find a = some i ∧ st.find b = some j ∧ i.frame = j.frame := by
+    ∃ i j, st.find a = some i ∧ st.find b = some j ∧
+      (i.frame = j.frame ∨ i.frame = anyFrame ∨ j.frame = anyFrame) := by
   simp only [step] at h
   split at h
   next hc =>
@@ -284,7 +290,7 @@ theorem run_line : ∀ {st st'' : State} {ls : List Line}, run st ls = some st''
 and all premises live in its frame. -/
 theorem checked_no_promotion {st st'' : State} {ls : List Line} (h : run st ls = some st'')
     {k f : String} {s : Status} {ps ins : List String} (hl : Line.derive k f s ps ins ∈ ls) :
-    ∃ st0 : State, ∀ p ∈ ps, ∃ i, st0.find p = some i ∧ s.rank ≤ i.status.rank ∧ i.frame = f := by
+    ∃ st0 : State, ∀ p ∈ ps, ∃ i, st0.find p = some i ∧ s.rank ≤ i.status.rank ∧ (i.frame = f ∨ i.frame = anyFrame) := by
   obtain ⟨st0, _, h0⟩ := run_line h _ hl
   exact ⟨st0, (derive_sound h0).2.2.1⟩
 
@@ -294,6 +300,232 @@ theorem checked_indep {st st'' : State} {ls : List Line} (h : run st ls = some s
     ∃ st0 : State, ∃ i, st0.find k = some i ∧ i.inputs = [] := by
   obtain ⟨st0, _, h0⟩ := run_line h _ hl
   exact ⟨st0, indep_sound h0⟩
+
+/-! ## Guarantees about the whole checked record
+
+The theorems above speak about one line at a time.  The following ones speak about the final
+record that `run` returns: an invariant `Good` holds for every record reachable from the empty one,
+and from it follow statements about all ancestors of a claim, at any distance. -/
+
+theorem find_add (st : State) (k : String) (i : Info) (p : String) :
+    (st.add k i).find p = if k = p then some i else st.find p := by
+  unfold State.find State.add
+  by_cases h : k = p <;> simp [h]
+
+theorem premInputs_of {st : State} {p : String} {j : Info} (h : st.find p = some j) :
+    premInputs st p = j.inputs := by
+  simp [premInputs, h]
+
+/-- Every premise of a stored claim is stored, has at least its status, and passes on its inputs;
+every input of a stored claim is its own key (for a leaf) or comes from a premise. -/
+def Good (st : State) : Prop :=
+  ∀ k i, st.find k = some i →
+    (∀ p ∈ i.prem, ∃ j, st.find p = some j ∧ i.status.rank ≤ j.status.rank ∧
+      ∀ x ∈ j.inputs, x ∈ i.inputs) ∧
+    (∀ x ∈ i.inputs, (i.prem = [] ∧ x = k) ∨ ∃ p ∈ i.prem, ∃ j, st.find p = some j ∧ x ∈ j.inputs)
+
+theorem good_empty : Good {} := by
+  intro k i h
+  simp [State.find] at h
+
+theorem good_add {st : State} {k : String} {i : Info} (hg : Good st)
+    (hfresh : (st.find k).isNone = true)
+    (h1 : ∀ p ∈ i.prem, ∃ j, st.find p = some j ∧ i.status.rank ≤ j.status.rank ∧
+      ∀ x ∈ j.inputs, x ∈ i.inputs)
+    (h2 : ∀ x ∈ i.inputs, (i.prem = [] ∧ x = k) ∨
+      ∃ p ∈ i.prem, ∃ j, st.find p = some j ∧ x ∈ j.inputs) :
+    Good (st.add k i) := by
+  have lift : ∀ p j, st.find p = some j → (st.add k i).find p = some j := by
+    intro p j hp
+    have hkp : k ≠ p := by
+      intro e
+      subst e
+      rw [hp] at hfresh
+      cases hfresh
+    rw [find_add]
+    simp [hkp, hp]
+  intro q iq hq
+  rw [find_add] at hq
+  by_cases hkq : k = q
+  · simp only [hkq, ite_true, Option.some.injEq] at hq
+    subst hq
+    subst hkq
+    constructor
+    · intro p hp
+      obtain ⟨j, hj, hr, hin⟩ := h1 p hp
+      exact ⟨j, lift p j hj, hr, hin⟩
+    · intro x hx
+      rcases h2 x hx with hl | ⟨p, hp, j, hj, hxj⟩
+      · exact Or.inl hl
+      · exact Or.inr ⟨p, hp, j, lift p j hj, hxj⟩
+  · simp only [hkq, ite_false] at hq
+    obtain ⟨g1, g2⟩ := hg q iq hq
+    constructor
+    · intro p hp
+      obtain ⟨j, hj, hr, hin⟩ := g1 p hp
+      exact ⟨j, lift p j hj, hr, hin⟩
+    · intro x hx
+      rcases g2 x hx with hl | ⟨p, hp, j, hj, hxj⟩
+      · exact Or.inl hl
+      · exact Or.inr ⟨p, hp, j, lift p j hj, hxj⟩
+
+/-- Every accepted line keeps the record good. -/
+theorem good_step {st st' : State} {l : Line} (hg : Good st) (h : step st l = some st') :
+    Good st' := by
+  cases l with
+  | map g a b =>
+    simp only [step] at h
+    split at h
+    · cases h; exact hg
+    · cases h
+  | input k f s =>
+    simp only [step] at h
+    split at h
+    next hf =>
+      cases h
+      refine good_add hg hf ?_ ?_
+      · intro p hp; simp at hp
+      · intro x hx
+        simp only [List.mem_singleton] at hx
+        exact Or.inl ⟨rfl, hx⟩
+    · cases h
+  | claim k f s =>
+    simp only [step] at h
+    split at h
+    next hf =>
+      cases h
+      refine good_add hg hf ?_ ?_
+      · intro p hp; simp at hp
+      · intro x hx; simp at hx
+    · cases h
+  | derive k f s ps ins =>
+    have hd := derive_sound h
+    obtain ⟨hk, _, hprem, hsrc, htr, rfl⟩ := hd
+    refine good_add hg (by simp [hk]) ?_ ?_
+    · intro p hp
+      obtain ⟨j, hj, hr, _⟩ := hprem p hp
+      refine ⟨j, hj, hr, ?_⟩
+      intro x hx
+      exact htr p hp x (by rw [premInputs_of hj]; exact hx)
+    · intro x hx
+      obtain ⟨p, hp, hxp⟩ := hsrc x hx
+      obtain ⟨j, hj, _, _⟩ := hprem p hp
+      exact Or.inr ⟨p, hp, j, hj, by rw [← premInputs_of hj]; exact hxp⟩
+  | convert k f s g p ins =>
+    have hc := convert_sound h
+    obtain ⟨hk, ⟨a, b, j, _, hp, _, _, hr⟩, hin, hout, rfl⟩ := hc
+    refine good_add hg (by simp [hk]) ?_ ?_
+    · intro q hq
+      simp only [List.mem_singleton] at hq
+      subst hq
+      refine ⟨j, hp, hr, ?_⟩
+      intro x hx
+      exact hout x (by rw [premInputs_of hp]; exact hx)
+    · intro x hx
+      exact Or.inr ⟨p, List.mem_singleton.mpr rfl, j, hp, by rw [← premInputs_of hp]; exact hin x hx⟩
+  | indep k =>
+    simp only [step] at h
+    split at h
+    · cases h; exact hg
+    · cases h
+  | compare a b =>
+    simp only [step] at h
+    split at h
+    · cases h; exact hg
+    · cases h
+
+theorem good_run : ∀ {st st' : State} {ls : List Line}, Good st → run st ls = some st' → Good st'
+  | _, _, [], hg, h => by simp only [run, Option.some.injEq] at h; subst h; exact hg
+  | _, _, _ :: _, hg, h => by
+      obtain ⟨st1, hs, hr⟩ := run_cons h
+      exact good_run (good_step hg hs) hr
+
+/-- Every record accepted by the checker is good. -/
+theorem checked_good {ls : List Line} {st : State} (h : run {} ls = some st) : Good st :=
+  good_run good_empty h
+
+/-- `a` is an ancestor of `k`: reachable through premises. -/
+inductive Ancestor (st : State) : String → String → Prop where
+  | prem {k p : String} {i : Info} : st.find k = some i → p ∈ i.prem → Ancestor st k p
+  | trans {k p q : String} : Ancestor st k p → Ancestor st p q → Ancestor st k q
+
+theorem ancestor_found {st : State} (hg : Good st) {k a : String} (h : Ancestor st k a) :
+    ∃ j, st.find a = some j := by
+  induction h with
+  | prem hk hp =>
+    obtain ⟨j, hj, _⟩ := (hg _ _ hk).1 _ hp
+    exact ⟨j, hj⟩
+  | trans _ _ _ ih2 => exact ih2
+
+theorem ancestor_bound {st : State} (hg : Good st) {k a : String} (h : Ancestor st k a) :
+    ∀ i j, st.find k = some i → st.find a = some j →
+      i.status.rank ≤ j.status.rank ∧ ∀ x ∈ j.inputs, x ∈ i.inputs := by
+  induction h with
+  | prem hk hp =>
+    intro i' j hi hj
+    rw [hk] at hi
+    cases hi
+    obtain ⟨j', hj', hr, hin⟩ := (hg _ _ hk).1 _ hp
+    rw [hj'] at hj
+    cases hj
+    exact ⟨hr, hin⟩
+  | trans h1 _ ih1 ih2 =>
+    intro i j hi hj
+    obtain ⟨m, hm⟩ := ancestor_found hg h1
+    obtain ⟨r1, in1⟩ := ih1 i m hi hm
+    obtain ⟨r2, in2⟩ := ih2 m j hm hj
+    exact ⟨Nat.le_trans r1 r2, fun x hx => in1 x (in2 x hx)⟩
+
+/-- No promotion, for the whole record: in a checked record no claim has a higher status than
+anything it rests on, at any distance. -/
+theorem checked_no_promotion_record {ls : List Line} {st : State} (h : run {} ls = some st)
+    {k a : String} {i j : Info} (ha : Ancestor st k a) (hi : st.find k = some i)
+    (hj : st.find a = some j) : i.status.rank ≤ j.status.rank :=
+  (ancestor_bound (checked_good h) ha i j hi hj).1
+
+/-- In particular a claim marked proved rests, at any distance, only on proved claims. -/
+theorem checked_proved_record {ls : List Line} {st : State} (h : run {} ls = some st)
+    {k a : String} {i j : Info} (ha : Ancestor st k a) (hi : st.find k = some i)
+    (hj : st.find a = some j) (hp : i.status = .proved) : j.status = .proved := by
+  have := checked_no_promotion_record h ha hi hj
+  rw [hp] at this
+  exact QAM.Provenance.Status.eq_proved_of_rank this
+
+/-- Inputs are never lost along the record: every input of an ancestor is an input of the claim.
+So a claim without inputs rests on no claim with inputs, and in particular on no input line,
+whose inputs consist of its own key (`input_stored`). -/
+theorem checked_inputs_record {ls : List Line} {st : State} (h : run {} ls = some st)
+    {k a : String} {i j : Info} (ha : Ancestor st k a) (hi : st.find k = some i)
+    (hj : st.find a = some j) : ∀ x ∈ j.inputs, x ∈ i.inputs :=
+  (ancestor_bound (checked_good h) ha i j hi hj).2
+
+theorem checked_independent_record {ls : List Line} {st : State} (h : run {} ls = some st)
+    {k a : String} {i j : Info} (ha : Ancestor st k a) (hi : st.find k = some i)
+    (hj : st.find a = some j) (hind : i.inputs = []) : j.inputs = [] := by
+  have hin := checked_inputs_record h ha hi hj
+  cases hji : j.inputs with
+  | nil => rfl
+  | cons x xs =>
+    have := hin x (by rw [hji]; exact List.mem_cons_self ..)
+    rw [hind] at this
+    cases this
+
+/-- An input line stores the input as its own (only) input. -/
+theorem input_stored {st st' : State} {k f : String} {s : Status}
+    (h : step st (.input k f s) = some st') : st'.find k = some ⟨f, s, [k], []⟩ := by
+  simp only [step] at h
+  split at h
+  · cases h
+    rw [find_add]
+    simp
+  · cases h
+
+/-- Every input listed for a claim is either its own key (if it is an input line) or the input of
+one of its premises: inputs are never invented, anywhere in the record. -/
+theorem checked_inputs_sourced {ls : List Line} {st : State} (h : run {} ls = some st)
+    {k : String} {i : Info} (hi : st.find k = some i) :
+    ∀ x ∈ i.inputs, (i.prem = [] ∧ x = k) ∨ ∃ p ∈ i.prem, ∃ j, st.find p = some j ∧ x ∈ j.inputs :=
+  ((checked_good h) k i hi).2
 
 /-! ## The hash chain
 
@@ -457,7 +689,7 @@ def reason (st : State) : Line → String
           match st.find p with
           | none => s!"premise {p} is not declared"
           | some i =>
-            if i.frame ≠ f then s!"frame mixing: premise {p} is in frame {i.frame}, {k} in frame {f}"
+            if i.frame ≠ f ∧ i.frame ≠ anyFrame then s!"frame mixing: premise {p} is in frame {i.frame}, {k} in frame {f}"
             else s!"promotion: {k} is declared {statusName s}, but premise {p} is only {statusName i.status}"
         | none => s!"the inputs listed for {k} are not those of its premises"
   | .convert k f s g p _ =>
@@ -477,4 +709,4 @@ def reason (st : State) : Line → String
       | some i => s!"{k} is asserted independent, but rests on {i.inputs}"
   | .compare a b => s!"frame mixing: {a} and {b} are compared across frames (or not declared)"
 
-end QSFormal.QamFile
+end QAM.QamFile

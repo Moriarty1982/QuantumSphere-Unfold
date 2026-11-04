@@ -11,4 +11,7 @@ for f in fail*.tex; do
   else echo "FAIL  $f (stopped, but not with a qam error)"; grep -m3 '^!' "$tmp/out.txt"; bad=$((bad+1)); fi
 done
 if [ -f "$tmp/pass_notation.qam" ] && [ "$(grep -c ':=' "$tmp/pass_notation.qam")" -eq 6 ]; then echo "ok    export: pass_notation.qam has 6 records"; ok=$((ok+1)); else echo "FAIL  export file"; bad=$((bad+1)); fi
+for q in "$tmp"/pass*.qam; do
+  if python3 ../../tools/qamhash.py verify "$q" >/dev/null; then echo "ok    hash chain of $(basename "$q") recomputed"; ok=$((ok+1)); else echo "FAIL  hash chain of $(basename "$q")"; python3 ../../tools/qamhash.py verify "$q"; bad=$((bad+1)); fi
+done
 echo "$ok passed, $bad failed"; [ "$bad" -eq 0 ]

@@ -5,13 +5,21 @@ It is independent of the Quantum Sphaera project, which only serves as its first
 
 It catches three kinds of error:
 
-| error | rule | TeX (`qam.sty`) | Lean (`QSFormal.Provenance`) |
+| error | rule | TeX (`qam.sty`) | Lean (`QAM.Provenance`, `QAM.QamFile`) |
 |---|---|---|---|
-| **promotion**: a conditional or computed statement treated as proved | a conclusion has at most the status of its weakest premise | error on `\qamderive` / `\qamconvert` | `no_promotion`, `proved_only_from_proved` |
-| **input read as result**: a value put in by hand later cited as derived | every claim carries the inputs it rests on; none is lost or invented | error on `\qamindependent` | `inputs_tracked`, `inputs_sourced`, `independent_iff` |
+| **promotion**: a conditional or computed statement treated as proved | a conclusion has at most the status of its weakest premise | error on `\qamderive` / `\qamconvert` | `no_promotion`, `checked_no_promotion_record`, `checked_proved_record` |
+| **input read as result**: a value put in by hand later cited as derived | every claim carries the inputs it rests on; none is lost or invented | error on `\qamindependent` | `independent_iff`, `checked_inputs_record`, `checked_independent_record`, `checked_inputs_sourced` |
 | **frame mixing**: quantities of different frames compared or combined | combine and compare only within a frame; change frame only through a declared map | error on `\qamderive` / `\qamcompare` / `\qamconvert` | `frames_declared`, `no_maps_same_frame` |
 
-In addition the TeX package refuses keys that are used before they are declared or declared twice (the record is append-only).
+In addition the TeX package refuses keys, frames and maps that are used before they are declared or declared twice (the record is
+append-only). The frame `*` is convention-free (a number or theorem valid in every convention fits every frame), and
+`\qamcompose{K}{G}{H}` declares the composite of two maps. Spaces in premise lists are ignored (`{a, b}` = `{a,b}`).
+
+**Division of labour.** `qam.sty` applies the rules while compiling; `qamcheck` (Lean, verified checker, unverified parser) applies the
+same rules again to the exported file and checks the hash links; `qamhash.py` recomputes the hashes. Lean does not compute MD5.
+
+**Limits.** Only what is declared is checked. A claim declared `proved` without premises is accepted as such. A fitted value declared
+again under a new name is not recognised. Frames are names; several convention axes need frames of their own with maps between them.
 
 Status order: `open < reading < conditional < computed < proved`.
 
@@ -62,12 +70,12 @@ With `\usepackage[export]{qam}` every claim is also written to `\jobname.qam`, o
 
 ## Checking the exported record in Lean
 
-`formal/QSFormal/QamFile.lean` reads a `.qam` file and checks every line against the record before it; Lean proves what a
+`qam/lean/QAM/QamFile.lean` reads a `.qam` file and checks every line against the record before it; Lean proves what a
 successful check means (`derive_sound`, `convert_sound`, `indep_sound`, `compare_sound`, `checked_no_promotion`, `checked_indep`).
 Run it with
 
 ```
-cd formal && lake exe qamcheck ../qam/examples/example.qam
+cd qam/lean && lake build && lake exe qamcheck ../examples/example.qam
 ```
 
 Examples in `qam/examples/`: `example.tex`/`.qam` must pass; `bad_*.qam` must be rejected. Four of them come from documents compiled
@@ -94,7 +102,11 @@ The checks run in a single pass because every claim must be declared before it i
 
 ## Lean
 
-`formal/QSFormal/Provenance.lean` (Lean core only) states the same rules for derivation trees and proves the theorems in the table.
+`qam/lean/` is a standalone Lake package that uses the Lean core only (no Mathlib, builds in seconds):
+`QAM/Provenance.lean` states the rules for derivation trees; `QAM/QamFile.lean` is the checker for exported records. Its record-level
+theorems hold for every record the checker accepts, at any distance along the premises: `checked_good` (an invariant of the whole
+record), `checked_no_promotion_record`, `checked_proved_record`, `checked_inputs_record`, `checked_independent_record`,
+`checked_inputs_sourced`. Workflow: `qam-lean.yml`.
 The older modules `QSFormal.QAM`, `Store`, `StoreProgress`, `Route` and `Models` formalize the object kinds and the store machine;
 see the methods paper in `paper/qam/`.
 

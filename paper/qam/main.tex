@@ -30,12 +30,16 @@ When a research project is carried out over months with the help of language mod
 check it.  Three kinds of error then become common and are hard to see in prose: two quantities are compared although they belong to
 different frames of description, a value that was put in by hand is later cited as a result, and a conditional or local statement is
 treated as a theorem.  We propose QAM, a small typed notation on top of ordinary set theory in which these three steps cannot be written
-down, together with a simple machine that stores the objects of a record and logs every change.  The notation and the machine are
-formalized in Lean~4.  The proofs show that the machine never leaves a well-formed state, refuses invalid steps without side effects,
-logs every step, and cannot certify a false statement; they also show that the notation itself does not fix what counts as a valid step.  The rules against the three errors are proved for
-derivation trees, and a \LaTeX{} package applies them while a document is compiled, so that the compiler stops at a promotion, a frame
-mixing or an input cited as a result; every claim is linked to the thesis it
-starts from by a chain of hashes, and the exported record is checked again by a verified Lean checker.
+down, together with a simple machine that stores the objects of a record and logs every change.  A \LaTeX{} package applies the rules against
+the three errors while a document is compiled: the author declares each claim with a status, a frame and its premises, and the compiler
+stops at a promotion, a frame mixing or an input cited as a result.  Every claim is linked to the thesis it starts from by a chain of
+hashes, and the declarations are exported to a file that a checker written in Lean reads.  Lean proves that every record this checker
+accepts has two properties at any distance along its chains of premises: no claim has a higher status than anything it rests on, and
+no input is lost; a claim declared independent of inputs rests on no claim
+that carries an input.  The notation and the machine are formalized in Lean as well
+(the machine never leaves a well-formed state, refuses invalid steps without side effects and logs every step).  The checks cover only
+what is declared: a claim declared as proved without premises is accepted as such, the parser of the exported file is not verified,
+and the hashes are recomputed by a separate script rather than in Lean.
 We apply QAM to a project in mathematical physics, about a hundred revision rounds and more than sixty pre-registered tests long, and
 report which errors it caught and which it missed.  QAM makes a record checkable in its form; it does not make the content true.
 \end{abstract}

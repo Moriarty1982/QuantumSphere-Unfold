@@ -7,7 +7,7 @@
 %   * a claim that rests on a put-in value is cited as independent of inputs (input read as result),
 %   * a key is used before it is declared, or declared twice (append-only record).
 %
-% Independent of any particular project.  Rules match the Lean module QSFormal.Provenance.
+% Independent of any particular project.  Rules match the Lean package qam/lean (QAM.Provenance, QAM.QamFile).
 %
 % Generated notation: \qam{key} typesets a claim in QAM notation, \qamledger a table of all claims;
 % with the option export every claim is also written as a QAM line to \jobname.qam.
@@ -19,7 +19,7 @@
 %
 % License: CC BY 4.0
 \NeedsTeXFormat{LaTeX2e}[2022-06-01]
-\ProvidesExplPackage{qam}{2026-11-04}{0.3}{QAM bookkeeping checks}
+\ProvidesExplPackage{qam}{2026-11-04}{0.4}{QAM bookkeeping checks}
 
 % ---------------------------------------------------------------- options
 \tl_new:N \g__qam_mode_tl
@@ -58,6 +58,7 @@
 \tl_new:N   \l__qam_prem_tl
 \iow_new:N  \g__qam_iow
 
+\tl_const:Nn \c__qam_any_tl { * }   % the convention-free frame: fits every frame
 \int_new:N  \l__qam_min_int
 \int_new:N  \l__qam_rank_int
 \tl_new:N   \l__qam_weak_tl
@@ -93,6 +94,9 @@
 \msg_new:nnn { qam } { duplicate }   { Claim~`#1'~is~declared~twice~(the~record~is~append-only). }
 \msg_new:nnn { qam } { bad-status }  { Unknown~status~`#1'~(use~open,~reading,~conditional,~computed,~proved). }
 \msg_new:nnn { qam } { map-source }  { Map~#1~goes~from~frame~#2,~but~`#3'~lives~in~frame~#4. }
+\msg_new:nnn { qam } { duplicate-frame } { Frame~`#1'~is~declared~twice. }
+\msg_new:nnn { qam } { duplicate-map }   { Map~`#1'~is~declared~twice~(the~record~is~append-only). }
+\msg_new:nnn { qam } { compose } { Map~#1~cannot~be~composed:~#2~ends~in~frame~#3,~but~the~next~map~starts~in~#4. }
 \msg_new:nnn { qam } { semicolon }   { The~statement~of~thesis~`#1'~must~not~contain~a~semicolon. }
 \msg_new:nnn { qam } { no-premises } { Claim~`#1'~is~derived~from~no~premises;~use~\token_to_str:N \qamclaim. }
 
@@ -166,7 +170,37 @@
 
 % ---------------------------------------------------------------- user commands
 % \qamframe{M}            declare a frame
-\NewDocumentCommand \qamframe { m } { \prop_gput:Nnn \g__qam_frames_prop {#1} { } }
+\prop_gput:Nnn \g__qam_frames_prop { * } { }
+% \qamcompose{H}{G1}{G2}   declare H = G2 after G1 (G1: M -> T, G2: T -> U gives H: M -> U)
+\NewDocumentCommand \qamcompose { o m m m }
+  {
+    \bool_lazy_and:nnTF { \prop_if_in_p:Nn \g__qam_src_prop {#3} } { \prop_if_in_p:Nn \g__qam_src_prop {#4} }
+      {
+        \str_if_eq:eeTF { \prop_item:Nn \g__qam_tgt_prop {#3} } { \prop_item:Nn \g__qam_src_prop {#4} }
+          {
+            \prop_if_in:NnTF \g__qam_src_prop {#2}
+              { \__qam_problem:nnn { duplicate-map } {#2} { } }
+              {
+                \IfNoValueTF {#1} { \prop_gput:Nnn \g__qam_msym_prop {#2} { \mathrm {#2} } }
+                  { \prop_gput:Nnn \g__qam_msym_prop {#2} {#1} }
+                \tl_set:Nx \l__qam_tmp_tl { \prop_item:Nn \g__qam_src_prop {#3} }
+                \tl_set:Nx \l__qam_first_tl { \prop_item:Nn \g__qam_tgt_prop {#4} }
+                \__qam_cmd_map:nVV {#2} \l__qam_tmp_tl \l__qam_first_tl
+              }
+          }
+          {
+            \__qam_problem:nnnnn { compose } {#2} {#3} { \prop_item:Nn \g__qam_tgt_prop {#3} }
+              { \prop_item:Nn \g__qam_src_prop {#4} }
+          }
+      }
+      { \__qam_problem:nnn { undeclared } { #3~or~#4 } { Map } }
+  }
+\NewDocumentCommand \qamframe { m }
+  {
+    \prop_if_in:NnTF \g__qam_frames_prop {#1}
+      { \__qam_problem:nnn { duplicate-frame } {#1} { } }
+      { \prop_gput:Nnn \g__qam_frames_prop {#1} { } }
+  }
 
 % \qammap{G}{M}{T}        declare a comparison map G from frame M to frame T
 \cs_new_protected:Npn \__qam_cmd_map:nnn #1#2#3
@@ -175,7 +209,8 @@
     \prop_gput:Nnn \g__qam_src_prop {#1} {#2}
     \prop_gput:Nnn \g__qam_tgt_prop {#1} {#3}
     \bool_if:NT \g__qam_export_bool { \__qam_write:x { map ~ #1 ~ : ~ #2 ~ -> ~ #3 } }
-  }
+  }\cs_generate_variant:Nn \__qam_cmd_map:nnn { nVV }
+
 
 % \qaminput{key}{frame}{status}   a value put in by hand; it is its own input
 \cs_new_protected:Npn \__qam_cmd_input:nnn #1#2#3
@@ -209,6 +244,8 @@
             \prop_get:NnN \g__qam_inputs_prop {##1} \l__qam_tmp_clist
             \clist_concat:NNN \l__qam_inputs_clist \l__qam_inputs_clist \l__qam_tmp_clist
             \prop_get:NnN \g__qam_frame_prop {##1} \l__qam_tmp_tl
+            \tl_if_eq:NNF \l__qam_tmp_tl \c__qam_any_tl  % a convention-free premise fits every frame
+            {
             \tl_if_empty:NTF \l__qam_frame_tl
               { \tl_set_eq:NN \l__qam_frame_tl \l__qam_tmp_tl \tl_set:Nn \l__qam_first_tl {##1} }
               {
@@ -218,6 +255,7 @@
                       { \tl_use:N \l__qam_first_tl } { \tl_use:N \l__qam_frame_tl }
                   }
               }
+            }
           }
       }
     \clist_remove_duplicates:N \l__qam_inputs_clist
@@ -229,6 +267,7 @@
             \__qam_problem:nnnnn { promotion } {#1} {#2} { \tl_use:N \l__qam_weak_tl }
               { \__qam_name:n { \l__qam_min_int } }
           }
+        \tl_if_empty:NT \l__qam_frame_tl { \tl_set_eq:NN \l__qam_frame_tl \c__qam_any_tl }
         \__qam_new:nVnV {#1} \l__qam_frame_tl { \__qam_rank:n {#2} } \l__qam_inputs_clist
       }
   }
@@ -238,7 +277,8 @@
   {
     \__qam_check_status:n {#2}
     \prop_if_in:NnF \g__qam_src_prop {#3} { \__qam_problem:nnn { undeclared } {#3} { Map } }
-    \__qam_if_claim:nT {#4}
+    \prop_if_in:NnF \g__qam_status_prop {#4} { \__qam_problem:nnn { undeclared } {#4} { Claim } }
+    \bool_lazy_and:nnT { \prop_if_in_p:Nn \g__qam_src_prop {#3} } { \prop_if_in_p:Nn \g__qam_status_prop {#4} }
       {
         \prop_get:NnN \g__qam_frame_prop {#4} \l__qam_tmp_tl
         \prop_get:NnNF \g__qam_src_prop {#3} \l__qam_first_tl { \tl_clear:N \l__qam_first_tl }
@@ -262,7 +302,12 @@
       {
         \__qam_if_claim:nT {#2}
           {
-            \str_if_eq:eeF { \prop_item:Nn \g__qam_frame_prop {#1} } { \prop_item:Nn \g__qam_frame_prop {#2} }
+            \bool_lazy_any:nF
+              {
+                { \str_if_eq_p:ee { \prop_item:Nn \g__qam_frame_prop {#1} } { \prop_item:Nn \g__qam_frame_prop {#2} } }
+                { \str_if_eq_p:ee { \prop_item:Nn \g__qam_frame_prop {#1} } { * } }
+                { \str_if_eq_p:ee { \prop_item:Nn \g__qam_frame_prop {#2} } { * } }
+              }
               {
                 \__qam_problem:nnnnn { frame-mix-compared } {#1} { \prop_item:Nn \g__qam_frame_prop {#1} }
                   {#2} { \prop_item:Nn \g__qam_frame_prop {#2} }
@@ -293,9 +338,9 @@
       {
         \prop_get:NnN \g__qam_inputs_prop {#1} \l__qam_tmp_clist
         \textsf { \footnotesize
-          [ \__qam_name:n { \prop_item:Nn \g__qam_status_prop {#1} } \,\textbar\,
+          [ \__qam_name:n { \prop_item:Nn \g__qam_status_prop {#1} } \,\ensuremath{|}\,
             frame~\prop_item:Nn \g__qam_frame_prop {#1}
-            \clist_if_empty:NF \l__qam_tmp_clist { \,\textbar\, inputs:~\clist_use:Nn \l__qam_tmp_clist { ,~ } } ] }
+            \clist_if_empty:NF \l__qam_tmp_clist { \,\ensuremath{|}\, inputs:~\clist_use:Nn \l__qam_tmp_clist { ,~ } } ] }
       }
   }
 
@@ -306,14 +351,19 @@
   {
     \tl_set:Nn \l__qam_kind_tl {#1}
     \tl_if_novalue:nTF {#2} { \tl_set:Nn \l__qam_sym_tl { \mathrm {#3} } } { \tl_set:Nn \l__qam_sym_tl {#2} }
-    \tl_set:Nn \l__qam_prem_tl {#4}
+    \clist_set:Nn \l__qam_prem_clist {#4}   % trims spaces: {a, b} = {a,b}
+    \tl_set:Nx \l__qam_prem_tl { \clist_use:Nn \l__qam_prem_clist { , } }
     \tl_clear:N \l__qam_stmt_tl
   }
 \NewDocumentCommand \qammap { o m m m }
   {
+    \prop_if_in:NnTF \g__qam_src_prop {#2}
+      { \__qam_problem:nnn { duplicate-map } {#2} { } }
+      {
     \tl_if_novalue:nTF {#1} { \prop_gput:Nnn \g__qam_msym_prop {#2} { \mathrm {#2} } }
       { \prop_gput:Nnn \g__qam_msym_prop {#2} {#1} }
     \__qam_cmd_map:nnn {#2} {#3} {#4}
+      }
   }
 \NewDocumentCommand \qaminput   { o m m m }   { \__qam_meta:nnnn { input }   {#1} {#2} { }  \__qam_cmd_input:nnn {#2} {#3} {#4} }
 \NewDocumentCommand \qamclaim   { o m m m }   { \__qam_meta:nnnn { claim }   {#1} {#2} { }  \__qam_cmd_claim:nnn {#2} {#3} {#4} }
@@ -397,7 +447,7 @@
     \seq_map_inline:Nn \g__qam_order_seq
       {
         \tl_put_right:Nn \l__qam_tmp_tl
-          { \texttt {##1} & $ \__qam_form:n {##1} $ & \textsf { \__qam_name:n { \prop_item:Nn \g__qam_status_prop {##1} } }
+          { \texttt { \tl_to_str:n {##1} } & $ \__qam_form:n {##1} $ & \textsf { \__qam_name:n { \prop_item:Nn \g__qam_status_prop {##1} } }
             & \texttt { \footnotesize \__qam_short:n { \prop_item:Nn \g__qam_hash_prop {##1} } } \\ }
       }
     \par\noindent

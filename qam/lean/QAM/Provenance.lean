@@ -22,7 +22,7 @@ of one frame, and every change of frame uses a declared map.  The theorems say:
 Lean core only.
 -/
 
-namespace QSFormal.Provenance
+namespace QAM.Provenance
 
 /-- Status of a claim, from weakest to strongest. -/
 inductive Status where
@@ -214,4 +214,4 @@ theorem no_maps_same_frame (t : Tree) (hw : WF (fun _ _ _ => False) t) :
     ∀ c ∈ leaves t, c.frame = frame t :=
   fun c hc => reach_none (frames_declared t hw c hc)
 
-end QSFormal.Provenance
+end QAM.Provenance

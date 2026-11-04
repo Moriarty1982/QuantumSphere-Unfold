@@ -52,9 +52,9 @@ def parse(path):
             elif body in ("claim", "thesis"):
                 kind, prem = body, []
             elif body.startswith("derive(") and body.endswith(")"):
-                kind, prem = "derive", [x for x in body[7:-1].split(",") if x]
+                kind, prem = "derive", [x.strip() for x in body[7:-1].split(",") if x.strip()]
             elif body.startswith("convert(") and body.endswith(")"):
-                g, p = body[8:-1].split(",")
+                g, p = [x.strip() for x in body[8:-1].split(",")]
                 kind, prem = f"convert({g})", [p]
             else:
                 raise ValueError(f"{path}:{n}: unknown declaration '{body}'")

@@ -1,10 +1,10 @@
-import QSFormal.QamFile
+import QAM.QamFile
 
 /-! `qamcheck FILE.qam` — check a QAM record exported by `qam.sty` with the verified checker
-`QSFormal.QamFile.step` and the hash-link check `QSFormal.QamFile.linkStep`.
+`QAM.QamFile.step` and the hash-link check `QAM.QamFile.linkStep`.
 Exit code 0: all lines accepted; 1: a line was rejected or unreadable. -/
 
-open QSFormal.QamFile
+open QAM.QamFile
 
 def main (args : List String) : IO UInt32 := do
   match args with
