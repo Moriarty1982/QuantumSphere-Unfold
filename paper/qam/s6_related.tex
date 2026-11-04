@@ -1,0 +1,20 @@
+\section{Related work}\label{sec:related}
+
+\paragraph{Proof assistants.}  Lean~\cite{lean4} and its library Mathlib~\cite{mathlib} make it possible to verify mathematics, and language
+models are increasingly used to produce such proofs.  QAM is complementary: it does not verify the mathematics of a record, only its
+bookkeeping, and only a small part of the project's mathematics is formalized.
+
+\paragraph{Type soundness and proof-carrying code.}  The properties proved for the store machine are the familiar ones of syntactic type
+soundness~\cite{wright,pierce}.  The rule that a certificate carries its proof echoes proof-carrying code~\cite{necula}.
+
+\paragraph{Provenance.}  The ledger of the store machine is a provenance record in the sense of the W3C PROV model~\cite{prov}, reduced to
+instructions and outcomes.  QAM adds typing of the recorded objects, which provenance models leave open.
+
+\paragraph{Pre-registration.}  Writing down hypotheses, data and criteria before the analysis is established practice in parts of the
+empirical sciences, as a response to problems of reproducibility~\cite{nosek,baker}.  The case study applies it to computational and
+theoretical work, where a commit time stamp is enough to fix a test in advance.
+
+\paragraph{Language models in research.}  Systems such as FunSearch~\cite{funsearch} search for mathematical constructions with language models
+under automatic evaluation, and proposals for automated research pipelines exist~\cite{aiscientist}.  The present setting is different: a
+single human directs a long, open-ended project, and the problem is not search but keeping an honest record over months.  We are not aware of a
+documented case of comparable length in which the record itself is typed and partly verified; a systematic survey remains to be done.

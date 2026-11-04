@@ -1,0 +1,9 @@
+name = "QamLean"
+defaultTargets = ["QAM", "qamcheck"]
+
+[[lean_lib]]
+name = "QAM"
+
+[[lean_exe]]
+name = "qamcheck"
+root = "QamCheck"

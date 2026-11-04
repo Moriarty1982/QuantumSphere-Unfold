@@ -1,0 +1,15 @@
+% A small QAM record: compiles without error and exports example.qam.
+\documentclass{article}
+\usepackage[export]{qam}
+\begin{document}
+\qamframe{M}\qamframe{T}
+\qammap[G]{G}{M}{T}
+\qaminput[\gamma]{gamma}{M}{computed}
+\qamclaim[\kappa]{counting}{M}{proved}
+\qamderive[\beta]{beta}{computed}{gamma,counting}
+\qamconvert[\beta']{betaT}{conditional}{G}{beta}
+\qamclaim[o]{obs}{T}{computed}
+\qamcompare{betaT}{obs}
+\qamindependent{counting}
+\qamledger
+\end{document}

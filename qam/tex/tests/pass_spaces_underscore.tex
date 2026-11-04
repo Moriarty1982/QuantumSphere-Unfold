@@ -1,0 +1,11 @@
+% Regression: spaces in premise lists and underscores in keys (third-party review, bugs 1 and 2).
+\documentclass{article}
+\usepackage[export]{qam}
+\begin{document}
+\qamframe{M}
+\qaminput{a_3}{M}{computed}
+\qamclaim{g_3}{M}{proved}
+\qamderive{c_3}{computed}{a_3, g_3}
+\qamderive{d}{computed}{ c_3 }
+\qamledger
+\end{document}

@@ -1,0 +1,108 @@
+\section{Checks at compile time}\label{sec:tex}
+
+A proof assistant checks rules about an abstract record.  The record that people actually read is a \LaTeX{} document.  The package
+\texttt{qam.sty}~\cite{repo} brings the rules of \texttt{QAM.Provenance} into that document: claims are declared where they are made,
+and the compiler stops with an error as soon as a declaration breaks a rule.
+
+{\sloppy\paragraph{Commands.}  \verb|\qamframe{M}| declares a frame and \verb|\qammap{G}{M}{T}| a comparison map from \(M\) to \(T\).
+\verb|\qaminput{k}{M}{s}| declares a value put in by hand, with frame \(M\) and status \(s\); its only input is itself.
+\verb|\qamclaim{k}{M}{s}| declares a premise without inputs, for instance a theorem.  \verb|\qamderive{k}{s}{p1,p2,...}| derives a claim
+from premises, \verb|\qamconvert{k}{s}{G}{p}| moves a premise into another frame, \verb|\qamcompare{a}{b}| records a comparison, and
+\verb|\qamindependent{k}| asserts that a claim rests on no input.  \verb|\qamshow{k}| prints status, frame and inputs.  The frame
+\verb|*| is convention-free: a claim in it, such as a number or a theorem valid in every convention, may be combined and compared with
+claims of any frame.  \verb|\qamcompose{K}{G}{H}| declares the composite of two maps whose frames match.\par}
+
+\paragraph{Checks.}  \verb|\qamderive| and \verb|\qamconvert| stop when the declared status is higher than that of the weakest premise
+(promotion); \verb|\qamderive| and \verb|\qamcompare| stop when premises of different frames meet, and \verb|\qamconvert| when the map does
+not start in the premise's frame (frame mixing); \verb|\qamindependent| stops when the claim rests on an input (input read as result).  The
+package also refuses a key that is used before it is declared or declared twice, so a document must be written in the append-only order
+of Section~\ref{sec:case}; because of that order a single compiler pass is enough.  An option \verb|mode=warning| turns the errors into
+warnings.
+
+\paragraph{Example.}  The frame offset of the case study is computed from two literature values.  Declared honestly,
+\begin{lstlisting}
+\qamframe{M} \qamframe{T} \qammap[G]{G}{M}{T}
+\qaminput[\gamma]{gamma}{M}{computed}          % two literature values
+\qamclaim[\kappa]{counting}{M}{proved}         % the counting formula
+\qamderive[\beta]{beta}{computed}{gamma,counting}
+\qamconvert[\beta']{betaT}{conditional}{G}{beta}
+\end{lstlisting}
+\qamframe{M}\qamframe{T}\qammap[G]{G}{M}{T}%
+\qaminput[\gamma]{gamma}{M}{computed}\qamclaim[\kappa]{counting}{M}{proved}%
+\qamderive[\beta]{beta}{computed}{gamma,counting}\qamconvert[\beta']{betaT}{conditional}{G}{beta}%
+it compiles, and \verb|\qamshow{beta}| prints \qamshow{beta}; the conversion gives \qamshow{betaT}.  Both are typeset by the package
+while this paper is compiled.  The two errors of the case study now stop the compiler:
+\begin{lstlisting}
+\qamderive{beta}{proved}{gamma,counting}
+! Package qam Error: Promotion: `beta' is declared `proved', but its weakest
+(qam)                premise `gamma' is only `computed'.
+
+\qamindependent{beta}
+! Package qam Error: `beta' is cited as independent of inputs, but it rests
+(qam)                on: gamma.
+\end{lstlisting}
+A comparison of \texttt{betaT} with a claim of frame \(M\) stops with ``Frame mixing: \dots\ are compared without a declared map''.
+
+\paragraph{Generated notation.}  The declarations contain everything the QAM notation of Section~\ref{sec:language} needs, so the package
+writes it.  The optional first argument of a declaration is the symbol; \verb|\qam{k}| typesets the claim in QAM notation with its status,
+\verb|\qam*{k}| without, and \verb|\qamledger| a table of all claims in the order of declaration.  For the example, \verb|\qam{gamma}|,
+\verb|\qam{beta}| and \verb|\qam{betaT}| give
+\begin{gather*}
+\qam{gamma}\\
+\qam{beta}\\
+\qam{betaT}
+\end{gather*}
+--- the input as the readout of a witness \(w_\gamma\), the derived value with its premises and the witness set \(W\) it rests on, and the
+conversion with source and target frame of the map.  Nothing here is typed by hand, so the notation cannot drift from the declarations.
+With the option \verb|export| every claim is also written, one line per claim, to a file \verb|\jobname.qam|, for instance
+\begin{lstlisting}
+beta := derive(gamma,counting); frame M; status computed; inputs {gamma}
+\end{lstlisting}
+together with lines for the maps, comparisons and independence assertions.
+
+\paragraph{Checking the exported record in Lean.}  The module \texttt{QAM.QamFile} reads such a file and checks it line by line
+against the record before it; the executable \texttt{qamcheck} runs this checker on a file.  The checker is a Lean function, and Lean
+proves what its success means.  Line by line: every derived claim is fresh, has premises, has at most the status of each of them and
+shares their frame or is convention-free (\texttt{derive\_sound}); its listed inputs are exactly those of its premises; a conversion uses a
+declared map that starts in the premise's frame and ends in the new one (\texttt{convert\_sound}); an independence assertion holds for a
+claim without inputs and a comparison only within one frame (\texttt{indep\_sound}, \texttt{compare\_sound}).  For the whole record:
+every record the checker accepts, starting from the empty one, satisfies an invariant (\texttt{checked\_good}) from which the statements
+about all ancestors of a claim follow, at any distance along its premises --- no claim has a higher status than any ancestor, so a
+proved claim rests only on proved claims (\texttt{checked\_no\_promotion\_record}, \texttt{checked\_proved\_record}); every input of
+an ancestor is an input of the claim, so a claim without inputs has no ancestor with inputs (\texttt{checked\_inputs\_record},
+\texttt{checked\_independent\_record}); and no listed input is invented (\texttt{checked\_inputs\_sourced}).  The check is independent of
+the \TeX{} package: a record edited by hand, for instance with an input deleted from a derived claim, compiles nowhere but is still
+caught by \texttt{qamcheck}, and a document compiled with \verb|mode=warning| that contains a promotion produces a record that
+\texttt{qamcheck} rejects.  Both cases are part of the continuous integration.  The parser that turns text lines into Lean values is
+not verified; only the checker is.
+
+\paragraph{A hash chain from the starting thesis.}  A paper usually starts from a thesis, and every later claim is obtained from it by
+further steps, each of which again has a QAM form.  The package records this as a chain of hashes.  \verb|\qamthesis{k}{M}{s}{statement}|
+declares a thesis whose statement is part of the record.  Every claim gets a hash, the MD5 sum of its canonical form
+\[
+  \textit{kind};\ \textit{key};\ \textit{frame};\ \textit{status};\ \textit{inputs};\ \textit{sources};\ \textit{statement},
+\]
+where the sources are the hashes of its premises.  A derived claim therefore names the exact versions of the claims it was derived from,
+and a change anywhere upstream --- one word of the thesis, a status, an input --- changes the hash of every claim below it, while claims
+that do not depend on the change keep their hashes.  \verb|\qamhash{k}| prints a short hash, \verb|\qamledger| adds a hash column and the
+hash of the whole record, and the export carries hashes, sources and the statement, together with the MD5 sum of the source file.  In the
+example above, computed while this paper is compiled, \texttt{gamma} has the hash \texttt{\qamhash{gamma}}, \texttt{counting}
+\texttt{\qamhash{counting}}, \texttt{beta} \texttt{\qamhash{beta}} with these two as sources, and \texttt{betaT}
+\texttt{\qamhash{betaT}} with \texttt{beta} as source.
+
+The chain is checked twice and independently of \TeX{}: a short script recomputes every hash from the exported fields and the record hash,
+and the Lean checker verifies the links --- a derived claim names exactly the recorded hashes of its premises, in order, and no hash occurs
+twice (\texttt{link\_derive\_sound}, \texttt{link\_convert\_sound}, \texttt{link\_leaf\_sound}).  Lean does not recompute MD5; a statement
+edited by hand without new hashes is caught by the script, a reworded and rehashed thesis whose dependants still name the old hash is caught
+by both.  For a release the script writes a manifest with SHA-256 sums of source, PDF and record and the record hash, so that a reader of
+the published files can tell which record was checked.  MD5 suffices against accidental change; it does not protect against a deliberate
+forgery, for which the manifest's SHA-256 sums are the relevant check.  Equal hashes mean equal records, not true ones.
+
+\paragraph{What the package does not do.}  It checks only what is declared.  A document that states a result without declaring it is
+not checked, and a declaration can be wrong: whether \texttt{gamma} really is an input is the author's statement, not the package's.
+In particular a claim declared with \verb|\qamclaim| as proved is accepted without any justification; the package only ensures that
+nothing derived from it claims more.  A fitted value that is later declared again under a new name as a claim without inputs is not
+recognised as the same value.  Frames are names; products of several conventions (signature and normalisation, say) have to be
+spelled out as frames of their own with declared maps between them.
+The package guards against slips in a long record; it does not prove its content.  It is tested by documents that must compile and
+documents that must stop with a given error, and the tests run in continuous integration.

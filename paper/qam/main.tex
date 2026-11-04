@@ -1,0 +1,86 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage[hidelinks]{hyperref}
+\usepackage{qam}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\lstset{basicstyle=\ttfamily\small,columns=fullflexible,keepspaces=true,breaklines=true,
+  literate={₁}{{$_1$}}1 {₂}{{$_2$}}1 {ℓ}{{$\ell$}}1 {→}{{$\to$}}1 {∀}{{$\forall$}}1 {∃}{{$\exists$}}1 {≠}{{$\neq$}}1 {¬}{{$\neg$}}1 {↔}{{$\leftrightarrow$}}1 {∧}{{$\wedge$}}1}
+
+\title{A typed bookkeeping language for verifiable research with language models:\\
+\large design, Lean verification, and a case study}
+\author{Marc Brendecke\\ \small Independent researcher, Bochum, Germany}
+\date{Draft, \today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+When a research project is carried out over months with the help of language models, its written record grows faster than anyone can
+check it.  Three kinds of error then become common and are hard to see in prose: two quantities are compared although they belong to
+different frames of description, a value that was put in by hand is later cited as a result, and a conditional or local statement is
+treated as a theorem.  We propose QAM, a small typed notation on top of ordinary set theory in which these three steps cannot be written
+down, together with a simple machine that stores the objects of a record and logs every change.  A \LaTeX{} package applies the rules against
+the three errors while a document is compiled: the author declares each claim with a status, a frame and its premises, and the compiler
+stops at a promotion, a frame mixing or an input cited as a result.  Every claim is linked to the thesis it starts from by a chain of
+hashes, and the declarations are exported to a file that a checker written in Lean reads.  Lean proves that every record this checker
+accepts has two properties at any distance along its chains of premises: no claim has a higher status than anything it rests on, and
+no input is lost; a claim declared independent of inputs rests on no claim
+that carries an input.  The notation and the machine are formalized in Lean as well
+(the machine never leaves a well-formed state, refuses invalid steps without side effects and logs every step).  The checks cover only
+what is declared: a claim declared as proved without premises is accepted as such, the parser of the exported file is not verified,
+and the hashes are recomputed by a separate script rather than in Lean.
+We apply QAM to a project in mathematical physics, about a hundred revision rounds and more than sixty pre-registered tests long, and
+report which errors it caught and which it missed.  QAM makes a record checkable in its form; it does not make the content true.
+\end{abstract}
+
+\input{s1_intro}
+\input{s2_language}
+\input{s3_machine}
+\input{s4_lean}
+\input{s4b_tex}
+\input{s5_case}
+\input{s6_related}
+\input{s7_limits}
+
+\section*{Data availability}
+The Lean sources, the research text, the audit rounds and the registration notes are in the public repository~\cite{repo}.
+
+\appendix
+\input{a1_build}
+
+\begin{thebibliography}{99}
+\bibitem{repo} M.~Brendecke, QuantumSphere-Unfold, \url{https://github.com/Moriarty1982/QuantumSphere-Unfold}.
+\bibitem{companion} M.~Brendecke, \emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding}, Zenodo, concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}.
+\bibitem{lean4} L.~de Moura and S.~Ullrich, The Lean~4 theorem prover and programming language, in \emph{Automated Deduction --- CADE 28},
+Lecture Notes in Computer Science \textbf{12699}, Springer 2021, 625--635.
+\bibitem{mathlib} The mathlib Community, The Lean mathematical library, in \emph{Proceedings of the 9th ACM SIGPLAN International Conference
+on Certified Programs and Proofs (CPP 2020)}, ACM 2020, 367--381.
+\bibitem{wright} A.~K.~Wright and M.~Felleisen, A syntactic approach to type soundness, \emph{Information and Computation} \textbf{115}
+(1994) 38--94.
+\bibitem{pierce} B.~C.~Pierce, \emph{Types and Programming Languages}, MIT Press 2002.
+\bibitem{necula} G.~C.~Necula, Proof-carrying code, in \emph{Proceedings of the 24th ACM Symposium on Principles of Programming
+Languages (POPL 1997)}, ACM 1997, 106--119.
+\bibitem{prov} W3C, PROV-DM: The PROV Data Model, W3C Recommendation, 30 April 2013.
+\bibitem{nosek} B.~A.~Nosek, C.~R.~Ebersole, A.~C.~DeHaven and D.~T.~Mellor, The preregistration revolution, \emph{Proc.\ Natl.\ Acad.\ Sci.\ USA}
+\textbf{115} (2018) 2600--2606.
+\bibitem{baker} M.~Baker, 1,500 scientists lift the lid on reproducibility, \emph{Nature} \textbf{533} (2016) 452--454.
+\bibitem{funsearch} B.~Romera-Paredes et al., Mathematical discoveries from program search with large language models, \emph{Nature}
+\textbf{625} (2024) 468--475.
+\bibitem{aiscientist} C.~Lu, C.~Lu, R.~T.~Lange, J.~Foerster, J.~Clune and D.~Ha, The AI Scientist: towards fully automated open-ended
+scientific discovery, arXiv:2408.06292 (2024).
+\bibitem{physics} M.~Brendecke, Three readouts of one kernel: duality sectors, time reversal and a compensator-form projector in
+\(\mathbb C\otimes\mathbb H\otimes\mathbb O\), draft (2026), in~\cite{repo}.
+\end{thebibliography}
+\end{document}
