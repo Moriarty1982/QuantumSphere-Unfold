@@ -2603,7 +2603,7 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **r80.1 Erkundung (k168):** drei Blöcke regulär (β ≈ 0), Hubble-artige Gegenströmung v = ±x/t, Spins entlang φ̂ = e_y.
 - **r80.2 H68 widerlegt (k169):** A = M(t) dφ, h erfüllen weder Yang–Mills auf span(λ₂, λ₄, λ₆) noch Klein–Gordon (masselos/massiv) mit den Spinorquellen; r = 0,955 / 0,995 / 0,826 in der Koframe-Metrik, Grad 0 allein scheitert; Quellen ≈ 1e3 zu klein, Ströme fast nur außerhalb von 𝔨.
 - **r80.3 Abschluss (Autorentscheidung 4.11.):** Zweig r71–r80 geschlossen; Ergebnisse bleiben lokale Aussagen über das Vergleichsmodell; nächster Schritt eine Ebene höher: Bestandsaufnahme der Wirkungsansätze, gemeinsame Dynamik.
-- R_chk = (1,0,0); Guards unverändert. Lokal 1315 Seiten, 3947 Labels, Overfull 45, harte Werte 0.
+- R_chk = (1,0,0); Guards unverändert. Lokal 1315 Seiten, 3947 Labels, Overfull 45, harte Werte 0. PR #64 gemergt als 42d8397.
 
 ## 8. Änderungsprotokoll
 
