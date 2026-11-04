@@ -20,7 +20,8 @@ Stand 4.11., ca. 23:55: W1 korrigiert. Ψ ist der ganze Raum C⊗ℍ⊗𝕆 mit 
 Als Nächstes:
 1. die Feldgleichungen symbolisch mit sympy aus der Wirkung ableiten und die Bianchi- und Ward-Identität explizit prüfen;
 2. den Skalar- bzw. Higgs-Sektor nach r44 dazunehmen; erst dort kann ein Vakuumterm entstehen;
-3. Fragen an den Autor: die Definition von „mod HC“ für Tr(M₁₆ P_C7); die M–T-Lücke (Komponenten mit negativer Dichte).
+3. P_C7 ist wieder offen (C_ch ist der HC, nicht P_C7; siehe `llm/Notiz_mod_HC_und_P_C7.md`); die Entscheidung liegt beim Autor.
+4. Die M–T-Lücke soll verfolgt werden (Autor, 5.11.): K-Lesart mit Materie- und Tachyon-Komponenten nach Konvention F; zuerst klären, wie T (z → iz) auf Weyl-Strom und Dichte wirkt.
 
 Die neuen lokalen Commits ab c741b00 sind noch nicht auf GitHub. Sie kommen mit der nächsten Runde (r81) per ours-Merge nach.
 
