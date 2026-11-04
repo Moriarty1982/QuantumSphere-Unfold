@@ -2,6 +2,7 @@ import QSFormal.QAM
 import QSFormal.Store
 import QSFormal.StoreProgress
 import QSFormal.Provenance
+import QSFormal.QamFile
 import QSFormal.Models
 import QSFormal.Route
 import QSFormal.Doublet

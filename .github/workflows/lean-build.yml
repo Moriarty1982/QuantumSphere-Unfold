@@ -8,12 +8,14 @@ on:
   pull_request:
     paths:
       - "formal/**"
+      - "qam/examples/**"
       - ".github/workflows/lean-build.yml"
   push:
     branches:
       - main
     paths:
       - "formal/**"
+      - "qam/examples/**"
       - ".github/workflows/lean-build.yml"
 
 permissions:
@@ -55,6 +57,15 @@ jobs:
           if grep -q "declaration uses 'sorry'" build.log; then
             echo "::error::a declaration uses sorry"; exit 1
           fi
+
+      - name: qamcheck on the example records
+        working-directory: formal
+        run: |
+          lake build qamcheck
+          lake exe qamcheck ../qam/examples/example.qam
+          for f in ../qam/examples/bad_*.qam; do
+            if lake exe qamcheck "$f"; then echo "::error::$f was accepted"; exit 1; fi
+          done
 
       - name: Axioms of the main statements
         working-directory: formal

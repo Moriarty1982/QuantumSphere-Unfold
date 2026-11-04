@@ -135,6 +135,7 @@
     \__qam_check_frame:n {#2} \__qam_check_frame:n {#3}
     \prop_gput:Nnn \g__qam_src_prop {#1} {#2}
     \prop_gput:Nnn \g__qam_tgt_prop {#1} {#3}
+    \bool_if:NT \g__qam_export_bool { \__qam_write:x { map ~ #1 ~ : ~ #2 ~ -> ~ #3 } }
   }
 
 % \qaminput{key}{frame}{status}   a value put in by hand; it is its own input
@@ -217,6 +218,7 @@
 % \qamcompare{a}{b}        a comparison of two claims; requires one frame
 \NewDocumentCommand \qamcompare { m m }
   {
+    \bool_if:NT \g__qam_export_bool { \__qam_write:x { compare ~ #1 ~ #2 } }
     \__qam_if_claim:nT {#1}
       {
         \__qam_if_claim:nT {#2}
@@ -233,6 +235,7 @@
 % \qamindependent{key}     assert that a claim rests on no put-in value
 \NewDocumentCommand \qamindependent { m }
   {
+    \bool_if:NT \g__qam_export_bool { \__qam_write:x { independent ~ #1 } }
     \__qam_if_claim:nT {#1}
       {
         \prop_get:NnN \g__qam_inputs_prop {#1} \l__qam_tmp_clist
@@ -348,11 +351,20 @@
   }
 
 % ---------------------------------------------------------------- export
+\bool_new:N \g__qam_open_bool
+\seq_new:N  \g__qam_queue_seq
+\cs_new_protected:Npn \__qam_write:n #1
+  {
+    \bool_if:NTF \g__qam_open_bool
+      { \iow_now:Nn \g__qam_iow {#1} }
+      { \seq_gput_right:Nn \g__qam_queue_seq {#1} }
+  }
+\cs_generate_variant:Nn \__qam_write:n { x }
 % With the option export, every claim is also written as a QAM tuple line to \jobname.qam.
 \cs_new_protected:Npn \__qam_export:n #1
   {
     \prop_get:NnN \g__qam_inputs_prop {#1} \l__qam_tmp_clist
-    \iow_now:Nx \g__qam_iow
+    \__qam_write:x
       {
         #1 ~ := ~
         \str_case_e:nn { \tl_use:N \l__qam_kind_tl }
@@ -373,5 +385,7 @@
       {
         \iow_open:Nn \g__qam_iow { \c_sys_jobname_str .qam }
         \iow_now:Nx \g__qam_iow { \c_percent_str \c_space_tl QAM~record~exported~by~qam.sty }
+        \seq_map_inline:Nn \g__qam_queue_seq { \iow_now:Nn \g__qam_iow {##1} }
+        \bool_gset_true:N \g__qam_open_bool
       }
   }

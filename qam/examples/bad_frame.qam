@@ -1,0 +1,7 @@
+% QAM record exported by qam.sty
+map G : M -> T
+gamma := <6,gamma>; frame M; status computed; inputs {gamma}
+counting := claim; frame M; status proved; inputs {}
+beta := derive(gamma,counting); frame M; status computed; inputs {gamma}
+betaT := convert(G,beta); frame T; status conditional; inputs {gamma}
+compare betaT beta

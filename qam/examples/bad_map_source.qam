@@ -1,0 +1,6 @@
+% QAM record exported by qam.sty
+map G : M -> T
+gamma := <6,gamma>; frame M; status computed; inputs {gamma}
+counting := claim; frame M; status proved; inputs {}
+obs := claim; frame T; status computed; inputs {}
+obsM := convert(G,obs); frame T; status computed; inputs {}

@@ -1,0 +1,5 @@
+% Hand-edited record: the input gamma was dropped from beta. TeX cannot produce this; qamcheck must reject it.
+map G : M -> T
+gamma := <6,gamma>; frame M; status computed; inputs {gamma}
+counting := claim; frame M; status proved; inputs {}
+beta := derive(gamma,counting); frame M; status computed; inputs {}

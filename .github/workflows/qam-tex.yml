@@ -21,3 +21,11 @@ jobs:
           sparse-checkout: qam
       - run: sudo apt-get update -qq && sudo apt-get install -y -qq texlive-latex-base texlive-latex-recommended texlive-fonts-recommended >/dev/null
       - run: sh qam/tex/tests/run_tests.sh
+      - name: Exported records are up to date
+        run: |
+          cd qam/examples
+          for f in example bad_promotion bad_frame bad_independent bad_map_source; do
+            cp $f.qam /tmp/$f.qam
+            TEXINPUTS=../tex: pdflatex -interaction=nonstopmode -halt-on-error $f.tex >/dev/null
+            diff -u /tmp/$f.qam $f.qam
+          done

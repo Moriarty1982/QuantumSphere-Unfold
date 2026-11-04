@@ -8,3 +8,7 @@ rev = "v4.35.0"
 
 [[lean_lib]]
 name = "QSFormal"
+
+[[lean_exe]]
+name = "qamcheck"
+root = "QamCheck"
