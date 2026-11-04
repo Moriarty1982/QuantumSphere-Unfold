@@ -2584,6 +2584,13 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **r77.7 H64 bestätigt (Lauf 2, nicht blind):** R GL(4)-koordinaten- und intern lorentzkovariant; Brechung vom Hintergrund (Ψ am Keim, A, h).
 - R_chk = (1,1,0); Guards unverändert. PR #60 gemergt als 1be5dc1.
 
+### K128 Runde v4.9.0-r78: Kovarianz auf Werteebene und Stabilisator der Eichung (2026-11-04)
+
+`sec:v490-r78-value-covariance`, Snippet `llm/v490_r78_round.tex`.
+- **r78.1 H65 ungültig (Kriterium):** Eichung Ψ†K₂Ψ genau unter so(1,2) (Drehung y, Boosts x, z) erhalten, wie vorhergesagt; Werteebene (a) wegen zu strenger Kontrollschranke ungültig.
+- **r78.2 H66 bestätigt (nicht blind):** R samt Termen niederer Ordnung kovariant (≤ 2,2e-11; Negativkontrolle 57 / 1,2e3); Ω kovariant; vier Bedingungen höchstens so(1,2)-kovariant.
+- R_chk = (1,1,0); Guards unverändert.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2773,3 +2780,4 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
   Hopf-Faserung selbst entsteht. Inzwischen in K3.6 als Hopf-Urbild ergänzt.
 - Solve-Log r03–r94 und v4.8.0-r01–r03 (Guard-Ledger-Details), C4/C5-Kollar-Rekursion, OP-Routen.
 - v14.3 (2026-11-04): K127 Runde v4.9.0-r77 (hohe Genauigkeit, H59–H64).
+- v14.4 (2026-11-04): K128 Runde v4.9.0-r78 (H65, H66).
