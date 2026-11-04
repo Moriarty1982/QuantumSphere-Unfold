@@ -46,6 +46,13 @@
 \prop_new:N \g__qam_prem_prop     % key -> premises (derive) or map,premise (convert)
 \prop_new:N \g__qam_msym_prop     % map -> math symbol
 \seq_new:N  \g__qam_order_seq     % keys in declaration order
+\prop_new:N \g__qam_hash_prop     % key -> MD5 hash of the canonical form (content + source hashes)
+\prop_new:N \g__qam_srcs_prop     % key -> comma list of source hashes
+\prop_new:N \g__qam_stmt_prop     % key -> statement (thesis only), as string
+\tl_new:N   \l__qam_stmt_tl
+\tl_new:N   \l__qam_canon_tl
+\clist_new:N \l__qam_srcs_clist
+\clist_new:N \l__qam_prem_clist
 \tl_new:N   \l__qam_kind_tl
 \tl_new:N   \l__qam_sym_tl
 \tl_new:N   \l__qam_prem_tl
@@ -86,6 +93,7 @@
 \msg_new:nnn { qam } { duplicate }   { Claim~`#1'~is~declared~twice~(the~record~is~append-only). }
 \msg_new:nnn { qam } { bad-status }  { Unknown~status~`#1'~(use~open,~reading,~conditional,~computed,~proved). }
 \msg_new:nnn { qam } { map-source }  { Map~#1~goes~from~frame~#2,~but~`#3'~lives~in~frame~#4. }
+\msg_new:nnn { qam } { semicolon }   { The~statement~of~thesis~`#1'~must~not~contain~a~semicolon. }
 \msg_new:nnn { qam } { no-premises } { Claim~`#1'~is~derived~from~no~premises;~use~\token_to_str:N \qamclaim. }
 
 \cs_new_protected:Npn \__qam_problem:nnnnn #1#2#3#4#5
@@ -119,11 +127,42 @@
         \prop_gput:NnV \g__qam_sym_prop  {#1} \l__qam_sym_tl
         \prop_gput:NnV \g__qam_kind_prop {#1} \l__qam_kind_tl
         \prop_gput:NnV \g__qam_prem_prop {#1} \l__qam_prem_tl
+        \__qam_hash:nnnn {#1} {#2} {#3} {#4}
         \seq_gput_right:Nn \g__qam_order_seq {#1}
         \bool_if:NT \g__qam_export_bool { \__qam_export:n {#1} }
       }
   }
 \cs_generate_variant:Nn \__qam_new:nnnn { nVnV , nnnV }
+
+% Hash of a claim: MD5 of the canonical line
+%   kind;key;frame;status;inputs;sources;statement
+% where sources are the hashes of the premises.  A change anywhere upstream changes every hash below it.
+\cs_new_protected:Npn \__qam_hash:nnnn #1#2#3#4
+  {
+    \clist_set:NV \l__qam_prem_clist \l__qam_prem_tl
+    \clist_clear:N \l__qam_srcs_clist
+    \str_case:VnF \l__qam_kind_tl
+      {
+        { derive }
+          { \clist_map_inline:Nn \l__qam_prem_clist
+              { \clist_put_right:Nx \l__qam_srcs_clist { \prop_item:Nn \g__qam_hash_prop {##1} } } }
+        { convert }
+          { \clist_put_right:Nx \l__qam_srcs_clist
+              { \exp_args:NNe \prop_item:Nn \g__qam_hash_prop { \clist_item:Nn \l__qam_prem_clist { 2 } } } }
+      }
+      { }
+    \tl_set:Nx \l__qam_canon_tl
+      {
+        \str_if_eq:VnTF \l__qam_kind_tl { convert }
+          { convert( \clist_item:Nn \l__qam_prem_clist { 1 } ) } { \tl_use:N \l__qam_kind_tl }
+        ; #1 ; #2 ; \__qam_name:n {#3} ; \clist_use:nn {#4} { , } ;
+        \clist_use:Nn \l__qam_srcs_clist { , } ; \tl_use:N \l__qam_stmt_tl
+      }
+    \prop_gput:Nnx \g__qam_hash_prop {#1} { \exp_args:NV \str_mdfive_hash:n \l__qam_canon_tl }
+    \prop_gput:NnV \g__qam_srcs_prop {#1} \l__qam_srcs_clist
+    \prop_gput:NnV \g__qam_stmt_prop {#1} \l__qam_stmt_tl
+  }
+\cs_generate_variant:Nn \str_case:nnF { V }
 
 % ---------------------------------------------------------------- user commands
 % \qamframe{M}            declare a frame
@@ -268,6 +307,7 @@
     \tl_set:Nn \l__qam_kind_tl {#1}
     \tl_if_novalue:nTF {#2} { \tl_set:Nn \l__qam_sym_tl { \mathrm {#3} } } { \tl_set:Nn \l__qam_sym_tl {#2} }
     \tl_set:Nn \l__qam_prem_tl {#4}
+    \tl_clear:N \l__qam_stmt_tl
   }
 \NewDocumentCommand \qammap { o m m m }
   {
@@ -277,6 +317,14 @@
   }
 \NewDocumentCommand \qaminput   { o m m m }   { \__qam_meta:nnnn { input }   {#1} {#2} { }  \__qam_cmd_input:nnn {#2} {#3} {#4} }
 \NewDocumentCommand \qamclaim   { o m m m }   { \__qam_meta:nnnn { claim }   {#1} {#2} { }  \__qam_cmd_claim:nnn {#2} {#3} {#4} }
+% \qamthesis[sym]{key}{frame}{status}{statement}   a starting thesis; its statement is part of its hash
+\NewDocumentCommand \qamthesis  { o m m m m }
+  {
+    \__qam_meta:nnnn { thesis } {#1} {#2} { }
+    \tl_if_in:nnT {#5} { ; } { \__qam_problem:nnn { semicolon } {#2} { } }
+    \tl_set:Nx \l__qam_stmt_tl { \tl_to_str:n {#5} }
+    \__qam_cmd_claim:nnn {#2} {#3} {#4}
+  }
 \NewDocumentCommand \qamderive  { o m m m }   { \__qam_meta:nnnn { derive }  {#1} {#2} {#4} \__qam_cmd_derive:nnn {#2} {#3} {#4} }
 \NewDocumentCommand \qamconvert { o m m m m } { \__qam_meta:nnnn { convert } {#1} {#2} { #4 , #5 } \__qam_cmd_convert:nnnn {#2} {#3} {#4} {#5} }
 
@@ -304,6 +352,7 @@
           { \__qam_fsym:n {#1} \mathrel{:=} R ( w \sb { \__qam_sym:n {#1} } ) ,\;
             w \sb { \__qam_sym:n {#1} } = \langle 6 , \__qam_sym:n {#1} \rangle }
         { claim }   { \__qam_fsym:n {#1} }
+        { thesis }  { \__qam_fsym:n {#1} }
         { derive }
           {
             \__qam_fsym:n {#1} \Leftarrow
@@ -333,21 +382,31 @@
     \__qam_if_claim:nT {#2}
       { \ensuremath { \__qam_form:n {#2} \IfBooleanF {#1} { \__qam_tag:n {#2} } } }
   }
+% \qamhash{key}  short hash (8 hex digits);  \qamhash*{key}  full hash;  \qamrecordhash  hash of the whole record
+\cs_new:Npn \__qam_short:n #1 { \str_range:nnn {#1} { 1 } { 8 } }
+\NewExpandableDocumentCommand \qamhash { s m }
+  { \IfBooleanTF {#1} { \prop_item:Nn \g__qam_hash_prop {#2} } { \__qam_short:n { \prop_item:Nn \g__qam_hash_prop {#2} } } }
+\cs_new:Npn \__qam_record_hash:
+  { \str_mdfive_hash:e { \seq_map_function:NN \g__qam_order_seq \__qam_item_hash:n } }
+\cs_new:Npn \__qam_item_hash:n #1 { \prop_item:Nn \g__qam_hash_prop {#1} , }
+\NewExpandableDocumentCommand \qamrecordhash { } { \__qam_record_hash: }
 \NewDocumentCommand \qamledger { }
   {
     \tl_clear:N \l__qam_tmp_tl
     \seq_map_inline:Nn \g__qam_order_seq
       {
         \tl_put_right:Nn \l__qam_tmp_tl
-          { \texttt {##1} & $ \__qam_form:n {##1} $ & \textsf { \__qam_name:n { \prop_item:Nn \g__qam_status_prop {##1} } } \\ }
+          { \texttt {##1} & $ \__qam_form:n {##1} $ & \textsf { \__qam_name:n { \prop_item:Nn \g__qam_status_prop {##1} } }
+            & \texttt { \footnotesize \__qam_short:n { \prop_item:Nn \g__qam_hash_prop {##1} } } \\ }
       }
     \par\noindent
-    \begin{tabular} { @{} l l l @{} }
-      \hline key & QAM~notation & status \\ \hline
+    \begin{tabular} { @{} l l l l @{} }
+      \hline key & QAM~notation & status & hash \\ \hline
       \tl_use:N \l__qam_tmp_tl
       \hline
     \end{tabular}
-    \par
+    \par\noindent
+    { \footnotesize record~hash~\texttt { \__qam_record_hash: } \par }
   }
 
 % ---------------------------------------------------------------- export
@@ -371,12 +430,16 @@
           {
             { input }   { < 6 , #1 > }
             { claim }   { claim }
+            { thesis }  { thesis }
             { derive }  { derive ( \tl_use:N \l__qam_prem_tl ) }
             { convert } { convert ( \tl_use:N \l__qam_prem_tl ) }
           }
         ~ ; ~ frame ~ \prop_item:Nn \g__qam_frame_prop {#1}
         ; ~ status ~ \__qam_name:n { \prop_item:Nn \g__qam_status_prop {#1} }
         ; ~ inputs ~ \iow_char:N \{ \clist_use:Nn \l__qam_tmp_clist { , } \iow_char:N \}
+        ; ~ hash ~ \prop_item:Nn \g__qam_hash_prop {#1}
+        ; ~ sources ~ \iow_char:N \{ \prop_item:Nn \g__qam_srcs_prop {#1} \iow_char:N \}
+        \tl_if_empty:NF \l__qam_stmt_tl { ; ~ statement ~ \tl_use:N \l__qam_stmt_tl }
       }
   }
 \AtBeginDocument
@@ -387,5 +450,13 @@
         \iow_now:Nx \g__qam_iow { \c_percent_str \c_space_tl QAM~record~exported~by~qam.sty }
         \seq_map_inline:Nn \g__qam_queue_seq { \iow_now:Nn \g__qam_iow {##1} }
         \bool_gset_true:N \g__qam_open_bool
+        \file_get_mdfive_hash:nN { \c_sys_jobname_str .tex } \l__qam_tmp_tl
+        \iow_now:Nx \g__qam_iow { \c_percent_str \c_space_tl source ~ \c_sys_jobname_str .tex ~ md5 ~ \l__qam_tmp_tl }
       }
+  }
+
+\AtEndDocument
+  {
+    \bool_if:NT \g__qam_export_bool
+      { \iow_now:Nx \g__qam_iow { \c_percent_str \c_space_tl record ~ \__qam_record_hash: } }
   }

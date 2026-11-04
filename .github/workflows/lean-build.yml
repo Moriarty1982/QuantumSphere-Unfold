@@ -63,6 +63,7 @@ jobs:
         run: |
           lake build qamcheck
           lake exe qamcheck ../qam/examples/example.qam
+          lake exe qamcheck ../qam/examples/thesis.qam
           for f in ../qam/examples/bad_*.qam; do
             if lake exe qamcheck "$f"; then echo "::error::$f was accepted"; exit 1; fi
           done

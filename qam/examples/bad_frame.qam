@@ -1,7 +1,9 @@
 % QAM record exported by qam.sty
+% source bad_frame.tex md5 39A210EFC15EB93F27C8E3C33CB742C7
 map G : M -> T
-gamma := <6,gamma>; frame M; status computed; inputs {gamma}
-counting := claim; frame M; status proved; inputs {}
-beta := derive(gamma,counting); frame M; status computed; inputs {gamma}
-betaT := convert(G,beta); frame T; status conditional; inputs {gamma}
+gamma := <6,gamma>; frame M; status computed; inputs {gamma}; hash C4A2B3DBF5F60C513F55E9AF6C3414C8; sources {}
+counting := claim; frame M; status proved; inputs {}; hash 8097F8AB76EF31ABDFC173093EB4395A; sources {}
+beta := derive(gamma,counting); frame M; status computed; inputs {gamma}; hash B0541AFD02FC9CF507374D27B0398BEF; sources {C4A2B3DBF5F60C513F55E9AF6C3414C8,8097F8AB76EF31ABDFC173093EB4395A}
+betaT := convert(G,beta); frame T; status conditional; inputs {gamma}; hash 8D193463A8E439813972E526A3B1FB0A; sources {B0541AFD02FC9CF507374D27B0398BEF}
 compare betaT beta
+% record BC200D507C9429E4EE285B0B08241372

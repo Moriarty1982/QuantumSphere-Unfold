@@ -1,0 +1,8 @@
+% QAM record exported by qam.sty
+% source thesis.tex md5 99E8649BEFF562542E8E39C85B958E96
+thesis := thesis; frame M; status conditional; inputs {}; hash 729E3AE61D73DD26920D911A2F16ED64; sources {}; statement Die Größe $x$ ist durch $y$ und die Zählung $\kappa $ bestimmt
+y := <6,y>; frame M; status computed; inputs {y}; hash BC2CFF21313208D143A2A676FF44B346; sources {}
+counting := claim; frame M; status proved; inputs {}; hash 8097F8AB76EF31ABDFC173093EB4395A; sources {}
+x := derive(thesis,y,counting); frame M; status conditional; inputs {y}; hash 099B4FC855D752E96E47FEDC9B8F8EAF; sources {729E3AE61D73DD26920D911A2F16ED64,BC2CFF21313208D143A2A676FF44B346,8097F8AB76EF31ABDFC173093EB4395A}
+z := derive(x); frame M; status conditional; inputs {y}; hash 81AB352BF33C0C6B5C325607DEED3E01; sources {099B4FC855D752E96E47FEDC9B8F8EAF}
+% record DFF73E731134B57709B5579664D89D7B

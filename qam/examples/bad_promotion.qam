@@ -1,5 +1,7 @@
 % QAM record exported by qam.sty
+% source bad_promotion.tex md5 E9F459558A5048D90A83FF30FEA62997
 map G : M -> T
-gamma := <6,gamma>; frame M; status computed; inputs {gamma}
-counting := claim; frame M; status proved; inputs {}
-beta := derive(gamma,counting); frame M; status proved; inputs {gamma}
+gamma := <6,gamma>; frame M; status computed; inputs {gamma}; hash C4A2B3DBF5F60C513F55E9AF6C3414C8; sources {}
+counting := claim; frame M; status proved; inputs {}; hash 8097F8AB76EF31ABDFC173093EB4395A; sources {}
+beta := derive(gamma,counting); frame M; status proved; inputs {gamma}; hash F5D950452DDA1EE202712BE02E132B58; sources {C4A2B3DBF5F60C513F55E9AF6C3414C8,8097F8AB76EF31ABDFC173093EB4395A}
+% record 2B068E1DB824821E070F9CCE70A407E5

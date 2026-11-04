@@ -295,6 +295,86 @@ theorem checked_indep {st st'' : State} {ls : List Line} (h : run st ls = some s
   obtain ⟨st0, _, h0⟩ := run_line h _ hl
   exact ⟨st0, indep_sound h0⟩
 
+/-! ## The hash chain
+
+Every claim line carries a hash and the list of its sources, the hashes of its premises.  `qam.sty`
+computes the hash as MD5 of the claim's canonical form together with its sources, so a change
+anywhere upstream changes every hash below it.  Lean does not recompute MD5 (the script
+`qam/tools/qamhash.py` does that independently); it checks the links: a derived claim names exactly
+the hashes of its premises, in order, and no hash occurs twice. -/
+
+structure Meta where
+  hash    : String := ""
+  sources : List String := []
+
+def lookupH (hs : List (String × String)) (k : String) : Option String :=
+  (hs.find? (fun e => decide (e.1 = k))).map (·.2)
+
+def freshH (hs : List (String × String)) (h : String) : Bool :=
+  hs.all (fun e => decide (e.2 ≠ h))
+
+def linkLeaf (hs : List (String × String)) (k : String) (m : Meta) : Option (List (String × String)) :=
+  if m.sources = [] ∧ freshH hs m.hash = true then some ((k, m.hash) :: hs) else none
+
+/-- Check the hash links of one line against the hashes recorded so far. -/
+def linkStep (hs : List (String × String)) : Line → Meta → Option (List (String × String))
+  | .input k _ _, m => linkLeaf hs k m
+  | .claim k _ _, m => linkLeaf hs k m
+  | .derive k _ _ ps _, m =>
+      if ps.map (lookupH hs) = m.sources.map some ∧ freshH hs m.hash = true then
+        some ((k, m.hash) :: hs) else none
+  | .convert k _ _ _ p _, m =>
+      if [lookupH hs p] = m.sources.map some ∧ freshH hs m.hash = true then
+        some ((k, m.hash) :: hs) else none
+  | .map .., _ => some hs
+  | .indep _, _ => some hs
+  | .compare .., _ => some hs
+
+/-- A derived claim names exactly the hashes of its premises, in order, and has a new hash. -/
+theorem link_derive_sound {hs hs' : List (String × String)} {k f : String} {s : Status}
+    {ps ins : List String} {m : Meta} (h : linkStep hs (.derive k f s ps ins) m = some hs') :
+    ps.map (lookupH hs) = m.sources.map some ∧ (∀ e ∈ hs, e.2 ≠ m.hash) ∧
+    hs' = (k, m.hash) :: hs := by
+  simp only [linkStep] at h
+  split at h
+  next hc =>
+    cases h
+    refine ⟨hc.1, ?_, rfl⟩
+    have h2 := hc.2
+    simp only [freshH, List.all_eq_true, decide_eq_true_eq] at h2
+    exact h2
+  next => cases h
+
+/-- A conversion names exactly the hash of its premise and has a new hash. -/
+theorem link_convert_sound {hs hs' : List (String × String)} {k f : String} {s : Status}
+    {g p : String} {ins : List String} {m : Meta}
+    (h : linkStep hs (.convert k f s g p ins) m = some hs') :
+    m.sources.map some = [lookupH hs p] ∧ (∀ e ∈ hs, e.2 ≠ m.hash) ∧
+    hs' = (k, m.hash) :: hs := by
+  simp only [linkStep] at h
+  split at h
+  next hc =>
+    cases h
+    refine ⟨hc.1.symm, ?_, rfl⟩
+    have h2 := hc.2
+    simp only [freshH, List.all_eq_true, decide_eq_true_eq] at h2
+    exact h2
+  next => cases h
+
+/-- A thesis, claim or input has no sources and a new hash. -/
+theorem link_leaf_sound {hs hs' : List (String × String)} {k : String} {m : Meta}
+    (h : linkLeaf hs k m = some hs') :
+    m.sources = [] ∧ (∀ e ∈ hs, e.2 ≠ m.hash) ∧ hs' = (k, m.hash) :: hs := by
+  unfold linkLeaf at h
+  split at h
+  next hc =>
+    cases h
+    refine ⟨hc.1, ?_, rfl⟩
+    have h2 := hc.2
+    simp only [freshH, List.all_eq_true, decide_eq_true_eq] at h2
+    exact h2
+  next => cases h
+
 /-! ## Reading a `.qam` file (not verified; only the checker above is) -/
 
 def toS (l : List Char) : String := l.foldl String.push ""
@@ -323,22 +403,27 @@ def splitChar (d : Char) (l : List Char) : List (List Char) :=
 def items (l : List Char) : List String :=
   ((splitChar ',' l).map trimC).filter (fun x => !x.isEmpty) |>.map toS
 
-def parseLine (raw : List Char) : Except String (Option Line) := do
+def parseLine (raw : List Char) : Except String (Option (Line × Meta)) := do
   let l := trimC raw
   if l.isEmpty || l.head? == some '%' then return none
   if let some r := stripPrefix "map ".toList l then
     let some (g, rest) := splitOnce " : ".toList r | throw "map line without ' : '"
     let some (a, b) := splitOnce " -> ".toList rest | throw "map line without ' -> '"
-    return some (.map (toS (trimC g)) (toS (trimC a)) (toS (trimC b)))
+    return some (.map (toS (trimC g)) (toS (trimC a)) (toS (trimC b)), {})
   if let some r := stripPrefix "independent ".toList l then
-    return some (.indep (toS (trimC r)))
+    return some (.indep (toS (trimC r)), {})
   if let some r := stripPrefix "compare ".toList l then
     let some (a, b) := splitOnce " ".toList (trimC r) | throw "compare needs two keys"
-    return some (.compare (toS (trimC a)) (toS (trimC b)))
+    return some (.compare (toS (trimC a)) (toS (trimC b)), {})
   let some (k, rhs) := splitOnce " := ".toList l | throw "expected 'key := ...'"
   let k := toS (trimC k)
   match (splitChar ';' rhs).map trimC with
-  | [body, fr, sta, inp] =>
+  | body :: fr :: sta :: inp :: rest =>
+    let hsh := ((rest.findSome? (stripPrefix "hash ".toList)).map (fun x => toS (trimC x))).getD ""
+    let srcs := match rest.findSome? (stripPrefix "sources {".toList) with
+      | some r => items ((stripSuffix "}".toList r).getD r)
+      | none => []
+    let m : Meta := { hash := hsh, sources := srcs }
     let some f := stripPrefix "frame ".toList fr | throw "expected 'frame ...'"
     let some sn := stripPrefix "status ".toList sta | throw "expected 'status ...'"
     let some s := parseStatus (toS (trimC sn)) | throw s!"unknown status '{toS sn}'"
@@ -346,18 +431,18 @@ def parseLine (raw : List Char) : Except String (Option Line) := do
     let some inp'' := stripSuffix "}".toList inp' | throw "expected '}'"
     let f := toS (trimC f)
     let ins := items inp''
-    if body = "claim".toList then return some (.claim k f s)
-    if (stripPrefix "<6,".toList body).isSome then return some (.input k f s)
+    if body = "claim".toList ∨ body = "thesis".toList then return some (.claim k f s, m)
+    if (stripPrefix "<6,".toList body).isSome then return some (.input k f s, m)
     if let some r := stripPrefix "derive(".toList body then
       let some r' := stripSuffix ")".toList r | throw "expected ')'"
-      return some (.derive k f s (items r') ins)
+      return some (.derive k f s (items r') ins, m)
     if let some r := stripPrefix "convert(".toList body then
       let some r' := stripSuffix ")".toList r | throw "expected ')'"
       match items r' with
-      | [g, p] => return some (.convert k f s g p ins)
+      | [g, p] => return some (.convert k f s g p ins, m)
       | _ => throw "convert needs a map and one premise"
     throw s!"unknown declaration '{toS body}'"
-  | _ => throw "expected four fields separated by ';'"
+  | _ => throw "expected at least four fields separated by ';'"
 
 /-- A human-readable reason for a rejected line (diagnostics only). -/
 def reason (st : State) : Line → String

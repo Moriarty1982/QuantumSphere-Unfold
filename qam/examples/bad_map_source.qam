@@ -1,6 +1,8 @@
 % QAM record exported by qam.sty
+% source bad_map_source.tex md5 C3118549F97B35B06009A549760FBD80
 map G : M -> T
-gamma := <6,gamma>; frame M; status computed; inputs {gamma}
-counting := claim; frame M; status proved; inputs {}
-obs := claim; frame T; status computed; inputs {}
-obsM := convert(G,obs); frame T; status computed; inputs {}
+gamma := <6,gamma>; frame M; status computed; inputs {gamma}; hash C4A2B3DBF5F60C513F55E9AF6C3414C8; sources {}
+counting := claim; frame M; status proved; inputs {}; hash 8097F8AB76EF31ABDFC173093EB4395A; sources {}
+obs := claim; frame T; status computed; inputs {}; hash 80C6DF96B8944C820CB1C56E4D9C7931; sources {}
+obsM := convert(G,obs); frame T; status computed; inputs {}; hash 837031E6B3FB3B898C93F9F901B8B77E; sources {80C6DF96B8944C820CB1C56E4D9C7931}
+% record 33639FB28EB5D4B849D1C01FAFF783B1

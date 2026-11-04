@@ -1,6 +1,8 @@
 % QAM record exported by qam.sty
+% source bad_independent.tex md5 A093B70B91ED0CFEECB8698FC5618218
 map G : M -> T
-gamma := <6,gamma>; frame M; status computed; inputs {gamma}
-counting := claim; frame M; status proved; inputs {}
-beta := derive(gamma,counting); frame M; status computed; inputs {gamma}
+gamma := <6,gamma>; frame M; status computed; inputs {gamma}; hash C4A2B3DBF5F60C513F55E9AF6C3414C8; sources {}
+counting := claim; frame M; status proved; inputs {}; hash 8097F8AB76EF31ABDFC173093EB4395A; sources {}
+beta := derive(gamma,counting); frame M; status computed; inputs {gamma}; hash B0541AFD02FC9CF507374D27B0398BEF; sources {C4A2B3DBF5F60C513F55E9AF6C3414C8,8097F8AB76EF31ABDFC173093EB4395A}
 independent beta
+% record 66E2469955645F90C282A9CBFE64080C
