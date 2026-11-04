@@ -1,0 +1,3 @@
+Kontrolle positiv: F 2.0e-12  G 5.6e-11  dg 2.6e-12 | Mischung zwischen Bloecken 3.2e-11
+(M,S) Paar 0: F 1.3e-13  G 4.2e-11  dg 1.7e-14 | Mischung zwischen Bloecken 4.9e-11
+(M,S) Paar 1: F 6.6e-12  G 1.0e-11  dg 1.1e-10 | Mischung zwischen Bloecken 3.3e-11
