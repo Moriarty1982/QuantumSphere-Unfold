@@ -31,7 +31,8 @@ non-modifying instructions, atomicity, ledger completeness and the absence of fa
 states the three error classes as rules on derivation trees and proves that well-formed trees never promote, never lose or invent an
 input, and never change frame except through declared maps (Section~\ref{sec:lean}).
 \item A \LaTeX{} package, \texttt{qam.sty}, that applies the same rules while a document is compiled and stops the compiler at the first
-violation, and that generates the QAM notation of each claim from its declaration (Section~\ref{sec:tex}).
+violation, that generates the QAM notation of each claim from its declaration, and that exports the record to a file which a verified Lean
+checker reads (Section~\ref{sec:tex}).
 \item A case study of a research project in mathematical physics, carried out by one author with language models from the beginning,
 with about a hundred append-only audit rounds and more than sixty pre-registered tests (Section~\ref{sec:case}).
 \item An account of what the discipline caught and what it did not, and of what the formal guarantees mean (Section~\ref{sec:limits}).

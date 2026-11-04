@@ -60,6 +60,20 @@ The declarations contain everything the QAM notation needs, so the package write
 With `\usepackage[export]{qam}` every claim is also written to `\jobname.qam`, one line per claim, e.g.
 `beta := derive(gamma,counting); frame M; status computed; inputs {gamma}`.
 
+## Checking the exported record in Lean
+
+`formal/QSFormal/QamFile.lean` reads a `.qam` file and checks every line against the record before it; Lean proves what a
+successful check means (`derive_sound`, `convert_sound`, `indep_sound`, `compare_sound`, `checked_no_promotion`, `checked_indep`).
+Run it with
+
+```
+cd formal && lake exe qamcheck ../qam/examples/example.qam
+```
+
+Examples in `qam/examples/`: `example.tex`/`.qam` must pass; `bad_*.qam` must be rejected. Four of them come from documents compiled
+with `mode=warning`, one (`bad_inputs.qam`, an input deleted by hand) cannot be produced by TeX at all. Only the checker is verified,
+not the parser that reads the text lines.
+
 The checks run in a single pass because every claim must be declared before it is used. Tests: `sh qam/tex/tests/run_tests.sh`
 (workflow `qam-tex.yml`). Requires LaTeX 2022-06 or later.
 

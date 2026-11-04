@@ -56,8 +56,18 @@ With the option \verb|export| every claim is also written, one line per claim, t
 \begin{lstlisting}
 beta := derive(gamma,counting); frame M; status computed; inputs {gamma}
 \end{lstlisting}
-which can be read by other tools; a translation of these lines into the derivation trees of \texttt{QSFormal.Provenance} would let Lean
-check the same record.
+together with lines for the maps, comparisons and independence assertions.
+
+\paragraph{Checking the exported record in Lean.}  The module \texttt{QSFormal.QamFile} reads such a file and checks it line by line
+against the record before it; the executable \texttt{qamcheck} runs this checker on a file.  The checker is a Lean function, and Lean
+proves what its success means: every derived claim is fresh, has premises, has at most the status of each of them and shares their frame
+(\texttt{derive\_sound}, \texttt{checked\_no\_promotion}); its listed inputs are exactly those of its premises; a conversion uses a
+declared map that starts in the premise's frame and ends in the new one (\texttt{convert\_sound}); an independence assertion holds for a
+claim without inputs and a comparison only within one frame (\texttt{indep\_sound}, \texttt{compare\_sound}).  The check is independent of
+the \TeX{} package: a record edited by hand, for instance with an input deleted from a derived claim, compiles nowhere but is still
+caught by \texttt{qamcheck}, and a document compiled with \verb|mode=warning| that contains a promotion produces a record that
+\texttt{qamcheck} rejects.  Both cases are part of the continuous integration.  The parser that turns text lines into Lean values is
+not verified; only the checker is.
 
 \paragraph{What the package does not do.}  It checks only what is declared.  A document that states a result without declaring it is
 not checked, and a declaration can be wrong: whether \texttt{gamma} really is an input is the author's statement, not the package's.

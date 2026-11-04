@@ -34,7 +34,7 @@ down, together with a simple machine that stores the objects of a record and log
 formalized in Lean~4.  The proofs show that the machine never leaves a well-formed state, refuses invalid steps without side effects,
 logs every step, and cannot certify a false statement; they also show that the notation itself does not fix what counts as a valid step.  The rules against the three errors are proved for
 derivation trees, and a \LaTeX{} package applies them while a document is compiled, so that the compiler stops at a promotion, a frame
-mixing or an input cited as a result.
+mixing or an input cited as a result; the record it exports is checked again by a verified Lean checker.
 We apply QAM to a project in mathematical physics, about a hundred revision rounds and more than sixty pre-registered tests long, and
 report which errors it caught and which it missed.  QAM makes a record checkable in its form; it does not make the content true.
 \end{abstract}
