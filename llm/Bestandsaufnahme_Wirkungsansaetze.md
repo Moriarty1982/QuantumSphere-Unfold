@@ -50,5 +50,8 @@
 4. Welche Eichgruppe: volle su(3) (dann braucht der Hintergrund diagonale Anteile) oder eine Untergruppe, deren Ströme die Spinoren tatsächlich tragen?
 5. Wird P_C7 als exakte Nebenbedingung gesetzt oder dynamisch ausgewählt?
 
+## Entscheidungen des Autors
+- **4.11.2026, Entscheidung 1: Variante B.** Der Koframe ist ein eigenes, unabhängig variiertes Feld (Einstein–Cartan–Dirac-Art). Ob auf den Lösungen E ≈ C[Ψ] gilt, die Geometrie also wie aus den Spinoren gebaut aussieht, wird später als eigener Test mit Vorab-Notiz geprüft. Ziel laut Autor: „versuchen und schauen, was man daraus lernen kann“.
+
 ## Nächster Schritt (Vorschlag)
 Nach diesen Entscheidungen die kleinste Wirkung aufschreiben, die (W1)–(W8) erfüllt, und zuerst nur ihre Euler–Lagrange-Gleichungen und Identitäten (Bianchi, Ward) symbolisch prüfen, noch ohne Lösung. Ein Test mit Kriterium erst danach, mit Vorab-Notiz.
