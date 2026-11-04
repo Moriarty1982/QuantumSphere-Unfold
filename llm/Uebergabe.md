@@ -15,10 +15,12 @@ Der OP5-Vergleichsmodell-Zweig ist geschlossen. Keine weiteren Feinheiten daran 
 ## Nächster Schritt
 Alle fünf Entscheidungen sind getroffen (Bestandsaufnahme, Abschnitt „Entscheidungen des Autors“). Die Wirkung W1 steht in `llm/Wirkung_W1_Dixon_U1.md`. Erster Befund (k170, Erkundung): Die K-Lesart ist bei symmetrischer Kinetik leer. Nicht symmetrisiert erzwingt sie mit unabhängiger Verbindung j^a = 0, also Ψ = 0 in einem Frame. Die Schließung kommt damit nicht dynamisch, die Chiralität bleibt Eingabe.
 
+Stand 4.11., ca. 23:55: W1 korrigiert. Ψ ist der ganze Raum C⊗ℍ⊗𝕆 mit 16 Weyl-Zuständen, C_ch steckt in den Kopplungen, U(1)_J ist anomaliefrei (k171). Die Weyl-Form des K-Befunds gilt (k172). Die Torsion gibt −(3/16)κ j² mit dem Gesamtstrom (k173, Kontrolle Hehl–Datta). Die Feldgleichungen 1–3 stehen in der W1-Notiz. W1 erzeugt keinen Vakuumterm (W7 braucht den Skalarsektor).
+
 Als Nächstes:
-1. die Euler–Lagrange-Gleichungen der reellen W1 symbolisch aufstellen (Einstein–Cartan mit algebraischer Torsion, Maxwell mit Quelle, Weyl je Sektor), dazu Bianchi- und Ward-Identität prüfen;
-2. der kleine Test: Erfüllt C_ch die Bedingung Tr(M₁₆ P_C7) ≡ 0 mod HC?
-3. Autorfrage offen: die M–T-Lücke in k170 (Komponenten mit negativer Dichte), nur nach Konvention F.
+1. die Feldgleichungen symbolisch mit sympy aus der Wirkung ableiten und die Bianchi- und Ward-Identität explizit prüfen;
+2. den Skalar- bzw. Higgs-Sektor nach r44 dazunehmen; erst dort kann ein Vakuumterm entstehen;
+3. Fragen an den Autor: die Definition von „mod HC“ für Tr(M₁₆ P_C7); die M–T-Lücke (Komponenten mit negativer Dichte).
 
 Die neuen lokalen Commits ab c741b00 sind noch nicht auf GitHub. Sie kommen mit der nächsten Runde (r81) per ours-Merge nach.
 
