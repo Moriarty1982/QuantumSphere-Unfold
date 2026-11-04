@@ -10,4 +10,5 @@ for f in fail*.tex; do
   elif grep -q "Package qam Error" "$tmp/out.txt"; then echo "ok    $f: $(grep -A1 'Package qam Error' "$tmp/out.txt" | head -2 | tr '\n' ' ' | sed 's/  */ /g' | cut -c1-150)"; ok=$((ok+1));
   else echo "FAIL  $f (stopped, but not with a qam error)"; grep -m3 '^!' "$tmp/out.txt"; bad=$((bad+1)); fi
 done
+if [ -f "$tmp/pass_notation.qam" ] && [ "$(grep -c ':=' "$tmp/pass_notation.qam")" -eq 6 ]; then echo "ok    export: pass_notation.qam has 6 records"; ok=$((ok+1)); else echo "FAIL  export file"; bad=$((bad+1)); fi
 echo "$ok passed, $bad failed"; [ "$bad" -eq 0 ]

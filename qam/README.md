@@ -39,6 +39,27 @@ Example error:
 (qam)                premise `gamma' is only `conditional'.
 ```
 
+## Generated QAM notation
+
+The declarations contain everything the QAM notation needs, so the package writes it. The optional first argument is the symbol:
+
+```latex
+\qammap[G]{G}{M}{T}
+\qaminput[\gamma]{gamma}{M}{computed}
+\qamclaim[\kappa]{counting}{M}{proved}
+\qamderive[\beta]{beta}{computed}{gamma,counting}
+\qamconvert[\beta']{betaT}{conditional}{G}{beta}
+
+\qam{gamma}   % ^M γ := R(w_γ), w_γ = ⟨6, γ⟩ [computed]
+\qam{beta}    % ^M β ⇐ ^M γ, ^M κ, W = {w_γ} [computed]
+\qam{betaT}   % ^T β' = ^T_M G ^M β, W = {w_γ} [conditional]
+\qam*{beta}   % without status tag
+\qamledger    % table of all claims in declaration order
+```
+
+With `\usepackage[export]{qam}` every claim is also written to `\jobname.qam`, one line per claim, e.g.
+`beta := derive(gamma,counting); frame M; status computed; inputs {gamma}`.
+
 The checks run in a single pass because every claim must be declared before it is used. Tests: `sh qam/tex/tests/run_tests.sh`
 (workflow `qam-tex.yml`). Requires LaTeX 2022-06 or later.
 

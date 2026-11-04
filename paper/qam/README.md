@@ -16,7 +16,7 @@ Build: `TEXINPUTS=../../qam/tex: pdflatex main.tex` twice (the paper uses its ow
 | `s2_language.tex` | object kinds, relations, two-sided display, witnesses/branches/status, reindexing |
 | `s3_machine.tex` | store, instructions (MML), transition semantics (MMA), certificates |
 | `s4_lean.tex` | theorems of `QSFormal.QAM`, `Models`, `Route`, `Store`, `StoreProgress`, `Provenance` |
-| `s4b_tex.tex` | the LaTeX package `qam.sty`: compile-time checks |
+| `s4b_tex.tex` | the LaTeX package `qam.sty`: compile-time checks and generated QAM notation |
 | `s5_case.tex` | case study: process, register, error classes, translation table |
 | `s6_related.tex` | related work |
 | `s7_limits.tex` | limits, cost, next steps, conclusion |

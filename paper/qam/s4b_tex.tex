@@ -19,15 +19,15 @@ warnings.
 
 \paragraph{Example.}  The frame offset of the case study is computed from two literature values.  Declared honestly,
 \begin{lstlisting}
-\qamframe{M} \qamframe{T} \qammap{G}{M}{T}
-\qaminput{gamma}{M}{computed}               % two literature values
-\qamclaim{counting}{M}{proved}              % the counting formula
-\qamderive{beta}{computed}{gamma,counting}
-\qamconvert{betaT}{conditional}{G}{beta}
+\qamframe{M} \qamframe{T} \qammap[G]{G}{M}{T}
+\qaminput[\gamma]{gamma}{M}{computed}          % two literature values
+\qamclaim[\kappa]{counting}{M}{proved}         % the counting formula
+\qamderive[\beta]{beta}{computed}{gamma,counting}
+\qamconvert[\beta']{betaT}{conditional}{G}{beta}
 \end{lstlisting}
-\qamframe{M}\qamframe{T}\qammap{G}{M}{T}%
-\qaminput{gamma}{M}{computed}\qamclaim{counting}{M}{proved}%
-\qamderive{beta}{computed}{gamma,counting}\qamconvert{betaT}{conditional}{G}{beta}%
+\qamframe{M}\qamframe{T}\qammap[G]{G}{M}{T}%
+\qaminput[\gamma]{gamma}{M}{computed}\qamclaim[\kappa]{counting}{M}{proved}%
+\qamderive[\beta]{beta}{computed}{gamma,counting}\qamconvert[\beta']{betaT}{conditional}{G}{beta}%
 it compiles, and \verb|\qamshow{beta}| prints \qamshow{beta}; the conversion gives \qamshow{betaT}.  Both are typeset by the package
 while this paper is compiled.  The two errors of the case study now stop the compiler:
 \begin{lstlisting}
@@ -40,6 +40,24 @@ while this paper is compiled.  The two errors of the case study now stop the com
 (qam)                on: gamma.
 \end{lstlisting}
 A comparison of \texttt{betaT} with a claim of frame \(M\) stops with ``Frame mixing: \dots\ are compared without a declared map''.
+
+\paragraph{Generated notation.}  The declarations contain everything the QAM notation of Section~\ref{sec:language} needs, so the package
+writes it.  The optional first argument of a declaration is the symbol; \verb|\qam{k}| typesets the claim in QAM notation with its status,
+\verb|\qam*{k}| without, and \verb|\qamledger| a table of all claims in the order of declaration.  For the example, \verb|\qam{gamma}|,
+\verb|\qam{beta}| and \verb|\qam{betaT}| give
+\begin{gather*}
+\qam{gamma}\\
+\qam{beta}\\
+\qam{betaT}
+\end{gather*}
+--- the input as the readout of a witness \(w_\gamma\), the derived value with its premises and the witness set \(W\) it rests on, and the
+conversion with source and target frame of the map.  Nothing here is typed by hand, so the notation cannot drift from the declarations.
+With the option \verb|export| every claim is also written, one line per claim, to a file \verb|\jobname.qam|, for instance
+\begin{lstlisting}
+beta := derive(gamma,counting); frame M; status computed; inputs {gamma}
+\end{lstlisting}
+which can be read by other tools; a translation of these lines into the derivation trees of \texttt{QSFormal.Provenance} would let Lean
+check the same record.
 
 \paragraph{What the package does not do.}  It checks only what is declared.  A document that states a result without declaring it is
 not checked, and a declaration can be wrong: whether \texttt{gamma} really is an input is the author's statement, not the package's.
