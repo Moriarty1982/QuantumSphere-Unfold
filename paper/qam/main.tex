@@ -25,17 +25,15 @@
 \maketitle
 
 \begin{abstract}
-Language models can carry out long research projects --- computing, formalizing, searching the literature and writing --- but over
-hundreds of pages they produce characteristic errors that are hard to see in prose: quantities from different reference frames are
-compared as if they were the same, values that were put in are later read as derived, and statements are promoted beyond what was
-shown.  We describe QAM, a small typed language on top of Zermelo--Fraenkel set theory that makes these steps ill-formed, together with
-an instruction layer (MML) and a store machine (MMA) whose ledger records every step.  The core is formalized in Lean~4 without
-\texttt{sorry}: the eight object kinds are disjoint, a reindexing of the tag namespace is exactly invertible, admissible transport chains
-preserve closure classes and compatible readouts, and the store machine satisfies preservation, progress for its non-modifying
-instructions, atomicity, ledger completeness and the impossibility of a certificate for a false statement.  We report a case study: a
-months-long project in mathematical physics, carried out by one author with language models from the start, with about a hundred
-append-only audit rounds and more than sixty pre-registered tests.  We describe which classes of error the discipline exposed, which it
-did not, and what the formal guarantees do and do not mean: the language secures the form of a record, not the truth of its content.
+When a research project is carried out over months with the help of language models, its written record grows faster than anyone can
+check it.  Three kinds of error then become common and are hard to see in prose: two quantities are compared although they belong to
+different frames of description, a value that was put in by hand is later cited as a result, and a conditional or local statement is
+treated as a theorem.  We propose QAM, a small typed notation on top of ordinary set theory in which these three steps cannot be written
+down, together with a simple machine that stores the objects of a record and logs every change.  The notation and the machine are
+formalized in Lean~4.  The proofs show that the machine never leaves a well-formed state, refuses invalid steps without side effects,
+logs every step, and cannot certify a false statement; they also show that the notation itself does not fix what counts as a valid step.
+We apply QAM to a project in mathematical physics, about a hundred revision rounds and more than sixty pre-registered tests long, and
+report which errors it caught and which it missed.  QAM makes a record checkable in its form; it does not make the content true.
 \end{abstract}
 
 \input{s1_intro}
