@@ -2591,6 +2591,12 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **r78.2 H66 bestätigt (nicht blind):** R samt Termen niederer Ordnung kovariant (≤ 2,2e-11; Negativkontrolle 57 / 1,2e3); Ω kovariant; vier Bedingungen höchstens so(1,2)-kovariant.
 - R_chk = (1,1,0); Guards unverändert. PR #61 gemergt als 9e7c3d6.
 
+### K129 Runde v4.9.0-r79: Eichunabhängigkeit der vier Bedingungen (2026-11-04)
+
+`sec:v490-r79-gauge-independence`, Snippet `llm/v490_r79_round.tex`.
+- **r79.1 H67 bestätigt:** K₂ (Kontrolle), K₀, K₃, Q₃ und Ψ̄Ψ ergeben je F₆ = 477 und 6 Polarisationen auf dem Kegel; Zahl und Lage der vier Bedingungen eichunabhängig, mit H66 kovarianter Inhalt. Lorentz-Brechung nur vom Hintergrund (Ψ, A, h).
+- R_chk = (1,0,0); Guards unverändert.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2781,3 +2787,4 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - Solve-Log r03–r94 und v4.8.0-r01–r03 (Guard-Ledger-Details), C4/C5-Kollar-Rekursion, OP-Routen.
 - v14.3 (2026-11-04): K127 Runde v4.9.0-r77 (hohe Genauigkeit, H59–H64).
 - v14.4 (2026-11-04): K128 Runde v4.9.0-r78 (H65, H66).
+- v14.5 (2026-11-04): K129 Runde v4.9.0-r79 (H67).
