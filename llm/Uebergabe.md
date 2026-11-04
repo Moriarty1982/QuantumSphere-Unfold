@@ -2,28 +2,30 @@
 
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.** Sie ist der Einstiegspunkt für die nächste Sitzung, egal mit welchem Modell. Die Geschichte steht in `AGENTS.md` (Rundentabelle), in der Kernkarte und in den Runden.
 
-## Stand vom 4. November 2026, 22:30 (Claude, Sitzung zu OP5)
+## Stand vom 4. November 2026, 23:00 (Claude, Sitzung zu OP5)
 - **Gemergt:**
   - r77: PR #60, 1be5dc1;
   - r78: PR #61, 9e7c3d6;
-  - r79: PR #63, 1d8c9b1.
-- **Zuletzt vergebene Hypothese:** H67. Die nächste freie Nummer ist H68.
+  - r79: PR #63, 1d8c9b1 (= `github/main`, alle Läufe grün).
+- **Neu, nur lokal committet (noch nicht auf GitHub):**
+  - `llm/Vorab_Notiz_H68_Feldgleichungen_Hintergrund.md` (4d10b0f, vor der Rechnung);
+  - `llm/k169_feldgleichungen.py`, `llm/k169_out.json`, `llm/Ergebnis_H68_Feldgleichungen_Hintergrund.md`;
+  - Anleitung OP5 nachgezogen (zuletzt vergeben H68, Abschnitt „Bereits beantwortet“).
+- **Ergebnis H68: widerlegt.** Der Hintergrund A = M(t) dφ, h erfüllt weder Yang–Mills auf span(λ₂, λ₄, λ₆) noch Klein–Gordon (masselos/massiv) mit den Spinorblöcken als Quelle; Residuen 0,83–1,0 in Koframe- und flacher Metrik; Quellen am Keim ≈ 1e3-mal zu klein. Kontrollen gültig (Bianchi 1e-14, □h exakt, Keimresiduum 3e-13).
+- **Zuletzt vergebene Hypothese:** H68. Die nächste freie Nummer ist H69.
 - **Laufende Branches auf GitHub:**
-  - `rechnen/hintergrund` (29b69ad): Erkundung Fierz/polare Größen des Hintergrunds (`k168_fierz.py`, `Erkundung_Fierz_Hintergrund.md`); noch in keiner Runde;
-  - `rechnen/h59`, `rechnen/h65`, `rechnen/h67`: erledigt und in r77–r79 eingegangen. Sie können weg; das Löschen über den Proxy ist gesperrt.
-- **Offene PRs:** keine.
+  - `rechnen/hintergrund` (29b69ad): Fierz-Erkundung (k168); geht in r80 ein;
+  - `rechnen/h59`, `rechnen/h65`, `rechnen/h67`: erledigt, können weg (Löschen über den Proxy gesperrt).
+- **Offene PRs auf GitHub (nicht OP5, nicht angefasst):** #62 (Lean MMA/QAM-Gliederung), #59 (Short paper draft), #51 (AGENTS.md). Die vorige Übergabe nannte „keine“; das war falsch.
 
 ## Nächster Schritt
-**H68 vorab festlegen**, mit dem Abschnitt „Vorwissen geprüft“, **und rechnen.** Gefragt ist, ob der vorgegebene Hintergrund kovariante Feldgleichungen erfüllt, deren Quellen die drei Spinorblöcke sind:
-- Yang–Mills für A = M(t) dφ, Farbtyp λ₄, λ₆, mit dem Farbstrom Ψ̄γ^μ(T⊗1)Ψ als Quelle;
-- Yukawa bzw. Klein–Gordon für h(t, r) mit der Quelle Ψ̄(Y⊗β)Ψ;
-- jeweils mit einer einzigen Kopplungskonstanten.
-
-Grundlage ist die Fierz-Erkundung: β ≈ 0, Hubble-Strömung v = ±x/t, Spins entlang φ̂ = e_y. Werkzeuge: k127 (R punktweise), k130 (Fortsetzung zu anderen Punkten), k164 (Rb mit Hintergrund als Eingabe).
+**Runde r80 bauen** mit der Fierz-Erkundung (k168) und H68 (k169), nach `llm/anleitungen/qsc-runde-einbauen.md`:
+- Runde lokal in den Monolithen und auf GitHub in `sources/research/parts/v490-post-release-layers.tex`; Notizordner `notes/research/v4_10_0_r80/` mit Vorab-Notiz, Ergebnis, k168, k169;
+- AGENTS-Rundentabelle, Kernkarte, Wiki (`wiki/`, Inhaltsseiten mitpflegen) im selben PR;
+- lokale Historie per ours-Merge nachführen; PR öffnen. Merge nur nach „PR NN mergen“.
 
 ## Danach
-- Runde r80 mit H68 und der Fierz-Erkundung, dazu Wiki und PR. Merge nur nach Freigabe.
-- Offen bleiben die Lorentz-Wirkung auf die 6 Moden und ein zweiter Grundpunkt.
+- Offen: Herkunft des Hintergrunds (H68 schließt YM/KG mit diesen Quellen aus; die Blöcke tragen fast nur diagonale Farbströme λ₀, λ₃, λ₈ – eine mögliche nächste Frage, nur mit neuer Vorab-Notiz), Lorentz-Wirkung auf die 6 Moden, zweiter Grundpunkt.
 
 ## Pflichten in jeder Sitzung
 - Zuerst `AGENTS.md` lesen, dann die einschlägige Anleitung mit dem Abschnitt „Bereits beantwortet“, dann diese Datei.
