@@ -12,7 +12,7 @@ and look-elsewhere caveat, and the appendix on withdrawn claims replaced by a sh
 (`../op5/`).
 
 Files: `p1_intro`, `p2_kernel`, `p3_frames`, `p5_generation`, `p6_readout`, `p7_numbers`, `p8_discussion`, `p9_conclusions`,
-`appendix_method`, `appendix_qam`. Build: `pdflatex main.tex` twice.
+`appendix_method`. The QAM translation table (`extras/appendix_qam.tex`) is no longer part of the paper (author decision 2026-11-04: it brings no advantage for a journal; kept as material, e.g. for a methods paper on QAM). Build: `pdflatex main.tex` twice.
 
 References: journal data checked against INSPIRE (4 Nov 2026) for all entries with an arXiv number. Not checked there and taken as
 standard: Günaydin–Gürsey, Henneaux–Teitelboim, Geng–Marshak, Minahan–Ramond–Warner, Stueckelberg 1942, Feynman 1949, Hopf, Dixon,
