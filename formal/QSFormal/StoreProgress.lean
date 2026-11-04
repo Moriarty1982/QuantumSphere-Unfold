@@ -29,7 +29,7 @@ theorem raw_ledger {s s' : Store} {i : Instr} (h : raw s i = some s') : s'.ledge
     | none => simp [hk] at h
     | some c => simp only [hk, Option.map_some, Option.some.injEq] at h; subst h; rfl
   | scrub => simp only [raw, Option.some.injEq] at h; subst h; rfl
-  | export a =>
+  | «export» a =>
     simp only [raw] at h
     split at h
     · simp only [Option.some.injEq] at h; subst h; rfl
@@ -88,7 +88,8 @@ theorem scrub_progress {s : Store} (hs : admissible s = true) :
 /-- Fortschritt: der Export einer gespeicherten Adresse gelingt in jedem admissiblen Store. -/
 theorem export_progress {s : Store} (hs : admissible s = true) {a : Addr}
     (ha : s.content.addrs.contains a = true) : (exec s (.export a)).2 = .cont :=
-  (exec_cont_iff s (.export a)).2 ⟨s, by simp [raw, ha], hs⟩
+  (exec_cont_iff s (.export a)).2
+    ⟨s, by rw [show raw s (.export a) = if s.content.addrs.contains a then some s else none from rfl, if_pos ha], hs⟩
 
 /-- Jeder Schritt verlängert das Ledger um genau einen Eintrag. -/
 theorem exec_ledger_length (s : Store) (i : Instr) :
