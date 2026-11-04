@@ -19,7 +19,7 @@
 %
 % License: CC BY 4.0
 \NeedsTeXFormat{LaTeX2e}[2022-06-01]
-\ProvidesExplPackage{qam}{2026-11-04}{0.2}{QAM bookkeeping checks}
+\ProvidesExplPackage{qam}{2026-11-04}{0.3}{QAM bookkeeping checks}
 
 % ---------------------------------------------------------------- options
 \tl_new:N \g__qam_mode_tl
@@ -383,7 +383,8 @@
       { \ensuremath { \__qam_form:n {#2} \IfBooleanF {#1} { \__qam_tag:n {#2} } } }
   }
 % \qamhash{key}  short hash (8 hex digits);  \qamhash*{key}  full hash;  \qamrecordhash  hash of the whole record
-\cs_new:Npn \__qam_short:n #1 { \str_range:nnn {#1} { 1 } { 8 } }
+\cs_generate_variant:Nn \str_range:nnn { e }
+\cs_new:Npn \__qam_short:n #1 { \str_range:enn {#1} { 1 } { 8 } }
 \NewExpandableDocumentCommand \qamhash { s m }
   { \IfBooleanTF {#1} { \prop_item:Nn \g__qam_hash_prop {#2} } { \__qam_short:n { \prop_item:Nn \g__qam_hash_prop {#2} } } }
 \cs_new:Npn \__qam_record_hash:

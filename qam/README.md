@@ -74,6 +74,21 @@ Examples in `qam/examples/`: `example.tex`/`.qam` must pass; `bad_*.qam` must be
 with `mode=warning`, one (`bad_inputs.qam`, an input deleted by hand) cannot be produced by TeX at all. Only the checker is verified,
 not the parser that reads the text lines.
 
+## Hash chain from the starting thesis
+
+`\qamthesis[\tau]{thesis}{M}{conditional}{statement}` declares the thesis a paper starts from. Every claim gets a hash: MD5 of
+`kind;key;frame;status;inputs;sources;statement`, where *sources* are the hashes of its premises. A derived claim therefore names the exact
+versions of what it was derived from; change one word of the thesis and every hash below it changes, while independent claims keep theirs
+(example: `qam/examples/thesis.tex`). `\qamhash{k}` prints a short hash, `\qamledger` shows a hash column and the record hash.
+
+Checked independently of TeX:
+- `python3 qam/tools/qamhash.py verify FILE.qam` recomputes every hash and the record hash (and the MD5 of the source, if present);
+- `qamcheck` (Lean) verifies the links: sources are exactly the recorded hashes of the premises, no hash twice
+  (`link_derive_sound`, `link_convert_sound`, `link_leaf_sound`);
+- `qamhash.py manifest FILE.qam OUT.json FILES...` writes SHA-256 sums of source, PDF and record for a release.
+
+Equal hashes mean equal records, not true ones. MD5 guards against accidental change; the SHA-256 manifest is the check for a release.
+
 The checks run in a single pass because every claim must be declared before it is used. Tests: `sh qam/tex/tests/run_tests.sh`
 (workflow `qam-tex.yml`). Requires LaTeX 2022-06 or later.
 

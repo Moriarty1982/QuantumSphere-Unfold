@@ -2,7 +2,7 @@
 
 *A typed bookkeeping language for verifiable research with language models: design, Lean verification, and a case study*
 
-Draft, 4 Nov 2026, 11 pages. Publication on Zenodo only (no arXiv). Keywords: logic in computer science, formal verification, Lean 4,
+Draft, 4 Nov 2026, 12 pages. Publication on Zenodo only (no arXiv). Keywords: logic in computer science, formal verification, Lean 4,
 programming-language semantics, AI-assisted research, reproducibility, research integrity.
 
 PDF: [`qam_paper_draft.pdf`](qam_paper_draft.pdf).

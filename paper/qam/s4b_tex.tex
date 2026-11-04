@@ -69,6 +69,28 @@ caught by \texttt{qamcheck}, and a document compiled with \verb|mode=warning| th
 \texttt{qamcheck} rejects.  Both cases are part of the continuous integration.  The parser that turns text lines into Lean values is
 not verified; only the checker is.
 
+\paragraph{A hash chain from the starting thesis.}  A paper usually starts from a thesis, and every later claim is obtained from it by
+further steps, each of which again has a QAM form.  The package records this as a chain of hashes.  \verb|\qamthesis{k}{M}{s}{statement}|
+declares a thesis whose statement is part of the record.  Every claim gets a hash, the MD5 sum of its canonical form
+\[
+  \textit{kind};\ \textit{key};\ \textit{frame};\ \textit{status};\ \textit{inputs};\ \textit{sources};\ \textit{statement},
+\]
+where the sources are the hashes of its premises.  A derived claim therefore names the exact versions of the claims it was derived from,
+and a change anywhere upstream --- one word of the thesis, a status, an input --- changes the hash of every claim below it, while claims
+that do not depend on the change keep their hashes.  \verb|\qamhash{k}| prints a short hash, \verb|\qamledger| adds a hash column and the
+hash of the whole record, and the export carries hashes, sources and the statement, together with the MD5 sum of the source file.  In the
+example above, computed while this paper is compiled, \texttt{gamma} has the hash \texttt{\qamhash{gamma}}, \texttt{counting}
+\texttt{\qamhash{counting}}, \texttt{beta} \texttt{\qamhash{beta}} with these two as sources, and \texttt{betaT}
+\texttt{\qamhash{betaT}} with \texttt{beta} as source.
+
+The chain is checked twice and independently of \TeX{}: a short script recomputes every hash from the exported fields and the record hash,
+and the Lean checker verifies the links --- a derived claim names exactly the recorded hashes of its premises, in order, and no hash occurs
+twice (\texttt{link\_derive\_sound}, \texttt{link\_convert\_sound}, \texttt{link\_leaf\_sound}).  Lean does not recompute MD5; a statement
+edited by hand without new hashes is caught by the script, a reworded and rehashed thesis whose dependants still name the old hash is caught
+by both.  For a release the script writes a manifest with SHA-256 sums of source, PDF and record and the record hash, so that a reader of
+the published files can tell which record was checked.  MD5 suffices against accidental change; it does not protect against a deliberate
+forgery, for which the manifest's SHA-256 sums are the relevant check.  Equal hashes mean equal records, not true ones.
+
 \paragraph{What the package does not do.}  It checks only what is declared.  A document that states a result without declaring it is
 not checked, and a declaration can be wrong: whether \texttt{gamma} really is an input is the author's statement, not the package's.
 The package guards against slips in a long record; it does not prove its content.  It is tested by documents that must compile and
