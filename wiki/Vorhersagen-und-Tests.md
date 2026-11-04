@@ -64,6 +64,7 @@ Zu H46: Eine Bestätigung würde die Kette r55–r60 prüfen, nicht die Lesart a
 | H64 | Die Konstruktion R ist koordinaten- und intern lorentzkovariant | bestätigt (zweiter Lauf, nicht blind): Residuen ≤ 4·10⁻¹⁰, Gegenprobe ohne Hintergrund-Transformation 0,26 (r77) |
 | H65 | R ist auf Werteebene kovariant; die Eichung wird genau von so(1,2) erhalten | ungültig: (b) wie vorhergesagt, (a) Kontrollschranke 10⁻¹² zu streng gewählt (r78) |
 | H66 | R ist auf Werteebene kovariant (Kontrollschranke 10⁻⁹, nicht blind) | bestätigt: Residuen ≤ 2·10⁻¹¹, Gegenprobe ohne Hintergrund-Transformation 57 bzw. 1200 (r78) |
+| H67 | Zahl und Lage der vier versteckten Bedingungen sind eichunabhängig | bestätigt: in fünf Eichungen (darunter Ψ̄Ψ) jeweils 477 und 6 Polarisationen (r79) |
 
 ## Erkundungen ohne Vorab-Notiz
 
