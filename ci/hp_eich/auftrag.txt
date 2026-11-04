@@ -1,0 +1,1 @@
+K2,K0,K3,Q3,Ibeta   # Eichungen (H67)
