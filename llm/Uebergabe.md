@@ -13,9 +13,14 @@
 Der OP5-Vergleichsmodell-Zweig ist geschlossen. Keine weiteren Feinheiten daran (Lorentz-Wirkung auf die 6 Moden, zweiter Grundpunkt) ohne eigene Dynamik. Es geht eine Ebene höher: zur gemeinsamen Wirkung, die OP1–OP5 gleichermaßen fehlt.
 
 ## Nächster Schritt
-**Stand der Entscheidungen:** 1 entschieden (Variante B: Koframe eigenes Feld, E ≈ C[Ψ] später als Test); 2 entschieden (R im Frame M als Hauptlinie, K = R + Gleichungen aus Im S parallel mitrechnen, Prüfung auf exakte Schließung); 3 entschieden (Einstein–Cartan ohne Λ, vorerst ein System; Idee I1 zurückgestellt); 4 entschieden (Dixon-Ablage mit U(1) aus L_{e₇}, sektorweise nach r48, Buchführung in QAM); 5 entschieden (P_C7 := C_ch exakt, als Eingabe; K-Lesart prüft dynamische Begründung). Alle fünf Entscheidungen getroffen, werden einzeln mit dem Autor durchgegangen.
+Alle fünf Entscheidungen sind getroffen (Bestandsaufnahme, Abschnitt „Entscheidungen des Autors“). Die Wirkung W1 steht in `llm/Wirkung_W1_Dixon_U1.md`. Erster Befund (k170, Erkundung): Die K-Lesart ist bei symmetrischer Kinetik leer. Nicht symmetrisiert erzwingt sie mit unabhängiger Verbindung j^a = 0, also Ψ = 0 in einem Frame. Die Schließung kommt damit nicht dynamisch, die Chiralität bleibt Eingabe.
 
-`llm/Bestandsaufnahme_Wirkungsansaetze.md` mit dem Autor durchgehen und die fünf offenen Entscheidungen in Abschnitt 5 klären (Koframe eigenes Feld oder Funktion von Ψ; komplexe/reelle Wirkung; Gravitationsterm; Eichgruppe; P_C7 exakt oder dynamisch). Erst danach die kleinste Wirkung nach (W1)–(W8) aufschreiben und ihre Euler–Lagrange-Gleichungen sowie Bianchi- und Ward-Identitäten symbolisch prüfen. Tests mit Kriterium nur mit Vorab-Notiz.
+Als Nächstes:
+1. die Euler–Lagrange-Gleichungen der reellen W1 symbolisch aufstellen (Einstein–Cartan mit algebraischer Torsion, Maxwell mit Quelle, Weyl je Sektor), dazu Bianchi- und Ward-Identität prüfen;
+2. der kleine Test: Erfüllt C_ch die Bedingung Tr(M₁₆ P_C7) ≡ 0 mod HC?
+3. Autorfrage offen: die M–T-Lücke in k170 (Komponenten mit negativer Dichte), nur nach Konvention F.
+
+Die neuen lokalen Commits ab c741b00 sind noch nicht auf GitHub. Sie kommen mit der nächsten Runde (r81) per ours-Merge nach.
 
 ## Danach
 - Wirkung auf einen einfachen symmetrischen Ansatz (homogen, isotrop) reduzieren und prüfen, ob der Vakuumterm frei bleibt (W7).
