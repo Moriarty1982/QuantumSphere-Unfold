@@ -2595,7 +2595,7 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 
 `sec:v490-r79-gauge-independence`, Snippet `llm/v490_r79_round.tex`.
 - **r79.1 H67 bestätigt:** K₂ (Kontrolle), K₀, K₃, Q₃ und Ψ̄Ψ ergeben je F₆ = 477 und 6 Polarisationen auf dem Kegel; Zahl und Lage der vier Bedingungen eichunabhängig, mit H66 kovarianter Inhalt. Lorentz-Brechung nur vom Hintergrund (Ψ, A, h).
-- R_chk = (1,0,0); Guards unverändert.
+- R_chk = (1,0,0); Guards unverändert. PR #63 gemergt als 1d8c9b1.
 
 ## 8. Änderungsprotokoll
 
