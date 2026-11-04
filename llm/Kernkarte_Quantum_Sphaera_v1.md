@@ -2597,6 +2597,14 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **r79.1 H67 bestätigt:** K₂ (Kontrolle), K₀, K₃, Q₃ und Ψ̄Ψ ergeben je F₆ = 477 und 6 Polarisationen auf dem Kegel; Zahl und Lage der vier Bedingungen eichunabhängig, mit H66 kovarianter Inhalt. Lorentz-Brechung nur vom Hintergrund (Ψ, A, h).
 - R_chk = (1,0,0); Guards unverändert. PR #63 gemergt als 1d8c9b1.
 
+### K130 Runde v4.9.0-r80: Hintergrund nicht aus den Spinoren; Abschluss des Vergleichsmodell-Zweigs (2026-11-04)
+
+`sec:v490-r80-background-not-sourced`, Snippet `llm/v490_r80_round.tex`.
+- **r80.1 Erkundung (k168):** drei Blöcke regulär (β ≈ 0), Hubble-artige Gegenströmung v = ±x/t, Spins entlang φ̂ = e_y.
+- **r80.2 H68 widerlegt (k169):** A = M(t) dφ, h erfüllen weder Yang–Mills auf span(λ₂, λ₄, λ₆) noch Klein–Gordon (masselos/massiv) mit den Spinorquellen; r = 0,955 / 0,995 / 0,826 in der Koframe-Metrik, Grad 0 allein scheitert; Quellen ≈ 1e3 zu klein, Ströme fast nur außerhalb von 𝔨.
+- **r80.3 Abschluss (Autorentscheidung 4.11.):** Zweig r71–r80 geschlossen; Ergebnisse bleiben lokale Aussagen über das Vergleichsmodell; nächster Schritt eine Ebene höher: Bestandsaufnahme der Wirkungsansätze, gemeinsame Dynamik.
+- R_chk = (1,0,0); Guards unverändert. Lokal 1315 Seiten, 3947 Labels, Overfull 45, harte Werte 0.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2788,3 +2796,4 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - v14.3 (2026-11-04): K127 Runde v4.9.0-r77 (hohe Genauigkeit, H59–H64).
 - v14.4 (2026-11-04): K128 Runde v4.9.0-r78 (H65, H66).
 - v14.5 (2026-11-04): K129 Runde v4.9.0-r79 (H67).
+- v14.6 (2026-11-04): K130 Runde v4.9.0-r80 (Erkundung Fierz, H68, Abschluss Vergleichsmodell).
