@@ -1,0 +1,100 @@
+ * [new ref]         44ba7384d7b4752ad7a42fac499b7afdf426f3a7 -> origin/rechnen/h67
+(node:2352) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+[notice] A new release of pip is available: 26.2.2 -> 26.3
+[notice] To update, run: pip install --upgrade pip
+[     1 s] Bloecke c8 gebaut 3840 3960
+[   320 s] c8: Rang 3171 (Luecke 3.6e-05|3.6e-15), Linkskern 834, Residuen ['2e-16', '3e-29', '1e-41', '4e-54', '1e-66']
+[   406 s] abgeleitete Zeilen 834
+[  1141 s] c7: Rang 2274 (Luecke 7.6e-09|3.6e-15), Linkskern 1368, Residuen ['2e-16', '1e-25', '4e-35', '2e-44', '1e-51', '1e-51', '1e-51', '1e-51', '1e-51', '1e-51']
+[  1194 s] abgeleitete Zeilen auf c6 1368
+[  1250 s] Kern N_6: dim 501 (Residuen ['1e-16', '5e-29', '8e-42', '5e-54', '1e-66'])
+[  1449 s] Gram: Rang 24, Luecke 5.0e-13|1.0e-71; F_6 = 501 - 24 = 477
+[  1449 s] geschrieben out/eK2.json
+[  1451 s] Eichung K2: Polarisationen auf dem Kegel [6] (Median 6, kleinste Luecke 3e+07); ausserhalb kleinster Singulaerwert 5.5e-02
+[  1451 s] geschrieben out/eK2.json
+	Maximum resident set size (kbytes): 4089316
+ERGEBNIS {"eichung": "K2", "dim_N": 501, "rang_C": 24, "F": 477, "verhaeltnis_gram": 4.951801307483652e+58, "polarisationen_kegel": [6], "pol_luecke_min": 32157989.313360266, "ausserhalb_kleinster_sw": 0.054807640475612276, "sekunden": 1448.8603048324585} [1.3112295995455043e-66, 9.500156154428721e-52] 1.0832727386157868e-66
+(node:2793) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(node:2793) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(node:2806) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+
+ * [new ref]         44ba7384d7b4752ad7a42fac499b7afdf426f3a7 -> origin/rechnen/h67
+(node:2146) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+[notice] A new release of pip is available: 26.2.2 -> 26.3
+[notice] To update, run: pip install --upgrade pip
+[     1 s] Bloecke c8 gebaut 3840 3960
+[   205 s] c8: Rang 3171 (Luecke 3.6e-05|3.6e-15), Linkskern 834, Residuen ['2e-16', '3e-29', '2e-41', '7e-54', '3e-66']
+[   258 s] abgeleitete Zeilen 834
+[   713 s] c7: Rang 2274 (Luecke 7.6e-09|3.6e-15), Linkskern 1368, Residuen ['4e-16', '1e-25', '3e-35', '7e-45', '8e-52', '8e-52', '8e-52', '8e-52', '8e-52', '8e-52']
+[   744 s] abgeleitete Zeilen auf c6 1368
+[   781 s] Kern N_6: dim 501 (Residuen ['1e-16', '3e-29', '1e-41', '6e-54', '3e-66'])
+[   895 s] Gram: Rang 24, Luecke 5.4e-13|1.3e-71; F_6 = 501 - 24 = 477
+[   895 s] geschrieben out/eK0.json
+[   896 s] Eichung K0: Polarisationen auf dem Kegel [6] (Median 6, kleinste Luecke 2e+07); ausserhalb kleinster Singulaerwert 5.5e-02
+[   896 s] geschrieben out/eK0.json
+	Maximum resident set size (kbytes): 4090916
+ERGEBNIS {"eichung": "K0", "dim_N": 501, "rang_C": 24, "F": 477, "verhaeltnis_gram": 4.347721083057123e+58, "polarisationen_kegel": [6], "pol_luecke_min": 18029290.164053146, "ausserhalb_kleinster_sw": 0.05480984445498991, "sekunden": 894.8424723148346} [3.31199456907889e-66, 7.833830855822612e-52] 2.8237541233734056e-66
+(node:2481) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(node:2481) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(node:2493) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+
+ * [new ref]         44ba7384d7b4752ad7a42fac499b7afdf426f3a7 -> origin/rechnen/h67
+(node:2689) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+[notice] A new release of pip is available: 26.2.2 -> 26.3
+[notice] To update, run: pip install --upgrade pip
+[     1 s] Bloecke c8 gebaut 3840 3960
+[   319 s] c8: Rang 3171 (Luecke 2.3e-05|3.6e-15), Linkskern 834, Residuen ['2e-16', '5e-29', '3e-41', '1e-53', '1e-65']
+[   405 s] abgeleitete Zeilen 834
+[  1137 s] c7: Rang 2274 (Luecke 4.9e-09|3.6e-15), Linkskern 1368, Residuen ['2e-16', '2e-25', '5e-34', '2e-42', '4e-51', '8e-52', '8e-52', '8e-52', '8e-52', '8e-52']
+[  1190 s] abgeleitete Zeilen auf c6 1368
+[  1246 s] Kern N_6: dim 501 (Residuen ['1e-16', '5e-29', '3e-41', '2e-53', '1e-65'])
+[  1432 s] Gram: Rang 24, Luecke 2.3e-13|2.1e-71; F_6 = 501 - 24 = 477
+[  1432 s] geschrieben out/eK3.json
+[  1434 s] Eichung K3: Polarisationen auf dem Kegel [6] (Median 6, kleinste Luecke 2e+07); ausserhalb kleinster Singulaerwert 5.5e-02
+[  1434 s] geschrieben out/eK3.json
+	Maximum resident set size (kbytes): 4010428
+ERGEBNIS {"eichung": "K3", "dim_N": 501, "rang_C": 24, "F": 477, "verhaeltnis_gram": 1.095713064079383e+58, "polarisationen_kegel": [6], "pol_luecke_min": 19121139.8492486, "ausserhalb_kleinster_sw": 0.054788845378199405, "sekunden": 1431.9056775569916} [1.002057956016732e-65, 8.440484082132366e-52] 1.2798519224235801e-65
+(node:3082) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(node:3082) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(node:3096) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+
+ * [new ref]         44ba7384d7b4752ad7a42fac499b7afdf426f3a7 -> origin/rechnen/h67
+(node:2298) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+[notice] A new release of pip is available: 26.2.2 -> 26.3
+[notice] To update, run: pip install --upgrade pip
+[     1 s] Bloecke c8 gebaut 3840 3960
+[   258 s] c8: Rang 3171 (Luecke 3.5e-05|3.6e-15), Linkskern 834, Residuen ['2e-16', '3e-29', '2e-41', '6e-54', '3e-66']
+[   318 s] abgeleitete Zeilen 834
+[   897 s] c7: Rang 2274 (Luecke 7.3e-09|3.6e-15), Linkskern 1368, Residuen ['2e-16', '9e-26', '8e-35', '7e-44', '8e-52', '8e-52', '8e-52', '8e-52', '8e-52', '8e-52']
+[   933 s] abgeleitete Zeilen auf c6 1368
+[   979 s] Kern N_6: dim 501 (Residuen ['9e-17', '5e-29', '1e-41', '3e-54', '9e-67'])
+[  1112 s] Gram: Rang 24, Luecke 4.7e-13|1.2e-71; F_6 = 501 - 24 = 477
+[  1112 s] geschrieben out/eQ3.json
+[  1113 s] Eichung Q3: Polarisationen auf dem Kegel [6] (Median 6, kleinste Luecke 2e+07); ausserhalb kleinster Singulaerwert 5.5e-02
+[  1113 s] geschrieben out/eQ3.json
+	Maximum resident set size (kbytes): 4103772
+ERGEBNIS {"eichung": "Q3", "dim_N": 501, "rang_C": 24, "F": 477, "verhaeltnis_gram": 3.898367581328755e+58, "polarisationen_kegel": [6], "pol_luecke_min": 21061964.909356046, "ausserhalb_kleinster_sw": 0.05480969779186279, "sekunden": 1112.053885936737} [2.630375625128208e-66, 7.687026945876664e-52] 8.866560684276319e-67
+(node:2563) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(node:2563) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(node:2575) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+
+ * [new ref]         44ba7384d7b4752ad7a42fac499b7afdf426f3a7 -> origin/rechnen/h67
+(node:2455) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+[notice] A new release of pip is available: 26.2.2 -> 26.3
+[notice] To update, run: pip install --upgrade pip
+[     1 s] Bloecke c8 gebaut 3840 3960
+[   309 s] c8: Rang 3171 (Luecke 2.0e-06|3.6e-15), Linkskern 834, Residuen ['3e-16', '6e-28', '4e-39', '3e-50', '2e-61', '1e-72']
+[   384 s] abgeleitete Zeilen 834
+[   981 s] c7: Rang 2274 (Luecke 4.4e-10|3.6e-15), Linkskern 1368, Residuen ['2e-16', '1e-24', '8e-34', '2e-42', '1e-51', '1e-51', '1e-51', '1e-51', '1e-51', '1e-51']
+[  1027 s] abgeleitete Zeilen auf c6 1368
+[  1084 s] Kern N_6: dim 501 (Residuen ['2e-16', '7e-28', '3e-39', '9e-51', '3e-62', '4e-73'])
+[  1262 s] Gram: Rang 24, Luecke 1.8e-15|4.3e-72; F_6 = 501 - 24 = 477
+[  1262 s] geschrieben out/eIbeta.json
+[  1264 s] Eichung Ibeta: Polarisationen auf dem Kegel [6] (Median 6, kleinste Luecke 9e+05); ausserhalb kleinster Singulaerwert 5.5e-02
+[  1264 s] geschrieben out/eIbeta.json
+	Maximum resident set size (kbytes): 4137900
+ERGEBNIS {"eichung": "Ibeta", "dim_N": 501, "rang_C": 24, "F": 477, "verhaeltnis_gram": 4.181890432344681e+56, "polarisationen_kegel": [6], "pol_luecke_min": 946219.8766580871, "ausserhalb_kleinster_sw": 0.05472664234116555, "sekunden": 1262.2926650047302} [1.4415090298247255e-72, 1.0396455529093662e-51] 3.7371481712381354e-73
+(node:2832) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(node:2832) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(node:2845) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+
