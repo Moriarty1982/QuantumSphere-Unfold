@@ -12,3 +12,5 @@ The bound of H42 was noticed after the evaluation of r57; the reading ε = η of
 Resolved pre-registered tests whose notes also lie in this folder: H48 (layer v4.9.0-r70, refuted), H49 and H50 (layer v4.9.0-r71, both refuted; local commits `e2d3394` and `ea36f39`, results in [`../v4_10_0_r71/`](../v4_10_0_r71/README.md)).
 
 Layer v4.9.0-r77 (4 Nov 2026) resolves H59 (confirmed), H60 (confirmed), H61, H62 and H63 (refuted) and H64 (confirmed, run 2 not blind). The pre-registration and result notes lie in this folder (`Vorab_Notiz_H59…H64`, `Ergebnis_H59…H64`); scripts are in [`../v4_10_0_r77/`](../v4_10_0_r77/README.md).
+
+Layer v4.9.0-r78 (4 Nov 2026) resolves H65 (invalid by criterion; part (b), the gauge stabilizer so(1,2), as predicted) and H66 (confirmed, not blind). Scripts are in [`../v4_10_0_r78/`](../v4_10_0_r78/README.md).

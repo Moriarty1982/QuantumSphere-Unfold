@@ -1,6 +1,6 @@
 # What the Companion contains
 
-**State: 4 November 2026, research draft 4.10.0-draft with layers through v4.9.0-r77.** English companion of the German [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt), which is the master. This page states what the *Quantum Sphaera Companion* assumes, defines and shows, and how far each part currently holds. Source labels at the end of each part are for checking; the page itself should be enough to understand the content. [Home](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/English)
+**State: 4 November 2026, research draft 4.10.0-draft with layers through v4.9.0-r78.** English companion of the German [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt), which is the master. This page states what the *Quantum Sphaera Companion* assumes, defines and shows, and how far each part currently holds. Source labels at the end of each part are for checking; the page itself should be enough to understand the content. [Home](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/English)
 
 ## How to read each statement
 
@@ -60,6 +60,8 @@ Layer r77 repeats the chain in high precision (70 digits) and runs the decisive 
 - It carries six real massless modes per null direction (H60 confirmed). These are not Weyl or Majorana modes in the naive spin assignment (H61 refuted).
 - At a fixed background the symbol is invariant only under scaling (H62 and H63 refuted).
 - The construction R itself is coordinate covariant and internally Lorentz covariant (H64 confirmed, run 2 not blind), so the Lorentz breaking comes from the background.
+
+Layer r78 confirms that R is covariant at value level, with all lower-order terms (H66, not blind); hence Ω is covariant too. The gauge Ψ†K₂Ψ = S is preserved only by so(1,2), the stabilizer of e_y (H65(b); H65 as a whole is invalid by its control bound). The four hidden conditions are therefore covariant at most under so(1,2).
 
 ## Never claimed
 

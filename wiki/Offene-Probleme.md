@@ -1,6 +1,6 @@
 # Offene Probleme und wo die Arbeit festsitzt
 
-**Stand: 4. November 2026, nach v4.9.0-r77.** Diese Seite beschreibt, was offen ist, warum, und was der nächste sinnvolle Schritt wäre. [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie) · [GitHub Issues](https://github.com/Moriarty1982/QuantumSphere-Unfold/issues)
+**Stand: 4. November 2026, nach v4.9.0-r78.** Diese Seite beschreibt, was offen ist, warum, und was der nächste sinnvolle Schritt wäre. [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie) · [GitHub Issues](https://github.com/Moriarty1982/QuantumSphere-Unfold/issues)
 
 ## Der gemeinsame Kern: Es fehlt eine Dynamik
 
@@ -36,7 +36,7 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
-Lokal ist OP5 über eine Detektorschwelle geschlossen ($\mathrm{OP5}_{\mathrm{eff}}$). Exakt ist es offen. Der Stand nach r69 bis r77:
+Lokal ist OP5 über eine Detektorschwelle geschlossen ($\mathrm{OP5}_{\mathrm{eff}}$). Exakt ist es offen. Der Stand nach r69 bis r78:
 - **Frame-Wechsel:** Ein passiver Frame-Wechsel beseitigt keinen Bilanzfehler.
 - **Neutralität:** „Neutral“ hat drei verschiedene Bedeutungen, und keine davon legt den Vakuumterm fest.
 - **Lichtkegel:** Der Kegel kommt aus der Clifford-Struktur. Kegeldaten legen weder eine absolute Skala noch das Gewicht eines Vakuumterms fest.
@@ -54,7 +54,9 @@ Lokal ist OP5 über eine Detektorschwelle geschlossen ($\mathrm{OP5}_{\mathrm{ef
   - Keine weiteren versteckten Bedingungen (H59): Das erweiterte System ist am Keim formal integrabel und trägt 6 masselose Moden (H60).
   - Die Konstruktion R ist kovariant (H64). Lorentz-Symmetrie fehlt nur, weil der Hintergrund fest ist (H62, H63). Welchen Spin die Moden tragen, ist offen (H61 widerlegt).
 
-**Nächster Schritt** im Vergleichssystem (r77): die Kovarianz von Ω, θ, der Eichung Ψ†K₂Ψ = S und den vier Bedingungen prüfen, die Herkunft des Hintergrunds A, h klären und dann die Lorentz-Wirkung auf die 6 Moden bestimmen. Danach, nach der Literaturnotiz der OP5-Serie:
+- **Kovarianz (r78):** R und Ω sind kovariant (H66). Die Eichung zeichnet die y-Richtung aus, nur so(1,2) bleibt erhalten (H65(b)).
+
+**Nächster Schritt** im Vergleichssystem (r78): prüfen, ob Zahl und Lage der vier Bedingungen von der Eichung abhängen, eine eigene Dynamik für den Hintergrund A, h aufstellen (bisher eine vorgegebene Zeugenfamilie) und dann die Lorentz-Wirkung auf die 6 Moden bestimmen. Danach, nach der Literaturnotiz der OP5-Serie:
 1. polare Spinorvariablen (Fabbri) und Fierz-Rekonstruktion,
 2. Nebenbedingungsalgorithmus und formale Integrabilität,
 3. eine gekoppelte Coframe-Dynamik,
