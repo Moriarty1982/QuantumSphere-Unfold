@@ -2589,7 +2589,7 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 `sec:v490-r78-value-covariance`, Snippet `llm/v490_r78_round.tex`.
 - **r78.1 H65 ungültig (Kriterium):** Eichung Ψ†K₂Ψ genau unter so(1,2) (Drehung y, Boosts x, z) erhalten, wie vorhergesagt; Werteebene (a) wegen zu strenger Kontrollschranke ungültig.
 - **r78.2 H66 bestätigt (nicht blind):** R samt Termen niederer Ordnung kovariant (≤ 2,2e-11; Negativkontrolle 57 / 1,2e3); Ω kovariant; vier Bedingungen höchstens so(1,2)-kovariant.
-- R_chk = (1,1,0); Guards unverändert.
+- R_chk = (1,1,0); Guards unverändert. PR #61 gemergt als 9e7c3d6.
 
 ## 8. Änderungsprotokoll
 
