@@ -13,7 +13,7 @@
 Der OP5-Vergleichsmodell-Zweig ist geschlossen. Keine weiteren Feinheiten daran (Lorentz-Wirkung auf die 6 Moden, zweiter Grundpunkt) ohne eigene Dynamik. Es geht eine Ebene höher: zur gemeinsamen Wirkung, die OP1–OP5 gleichermaßen fehlt.
 
 ## Nächster Schritt
-**Stand der Entscheidungen:** 1 entschieden (Variante B: Koframe eigenes Feld, E ≈ C[Ψ] später als Test); 2 entschieden (R im Frame M als Hauptlinie, K = R + Gleichungen aus Im S parallel mitrechnen, Prüfung auf exakte Schließung); 3–5 offen, werden einzeln mit dem Autor durchgegangen.
+**Stand der Entscheidungen:** 1 entschieden (Variante B: Koframe eigenes Feld, E ≈ C[Ψ] später als Test); 2 entschieden (R im Frame M als Hauptlinie, K = R + Gleichungen aus Im S parallel mitrechnen, Prüfung auf exakte Schließung); 3 entschieden (Einstein–Cartan ohne Λ, vorerst ein System; Idee I1 zurückgestellt); 4–5 offen, werden einzeln mit dem Autor durchgegangen.
 
 `llm/Bestandsaufnahme_Wirkungsansaetze.md` mit dem Autor durchgehen und die fünf offenen Entscheidungen in Abschnitt 5 klären (Koframe eigenes Feld oder Funktion von Ψ; komplexe/reelle Wirkung; Gravitationsterm; Eichgruppe; P_C7 exakt oder dynamisch). Erst danach die kleinste Wirkung nach (W1)–(W8) aufschreiben und ihre Euler–Lagrange-Gleichungen sowie Bianchi- und Ward-Identitäten symbolisch prüfen. Tests mit Kriterium nur mit Vorab-Notiz.
 
@@ -22,6 +22,7 @@ Der OP5-Vergleichsmodell-Zweig ist geschlossen. Keine weiteren Feinheiten daran 
 - Offene Vorhersagen H15, H42, H46 warten auf Daten.
 
 ## Pflichten in jeder Sitzung
+- Auslöser in `llm/Zurueckgestellte_Ideen.md` prüfen (beim Start und wenn ein Ansatz scheitert).
 - Zuerst `AGENTS.md` lesen, dann die einschlägige Anleitung mit dem Abschnitt „Bereits beantwortet“, dann diese Datei.
 - Vorwissen-Pflicht und Vorab-Notizen beachten. Merges nur nach „PR NN mergen“.
 - Wiki im selben PR mitziehen.
