@@ -1,0 +1,82 @@
+\section{What is proved in Lean}\label{sec:lean}
+
+The language and the machine are formalized in Lean~4 (version 4.35.0) in four modules of the library \texttt{QSFormal}~\cite{repo}.  They
+use the Lean core only; other modules of the same library, on the physics, use Mathlib~\cite{mathlib}.  Continuous integration builds the
+library and rejects \texttt{sorry}, \texttt{admit} and \texttt{native\_decide}.  Theorem names below are the Lean names.
+
+\subsection{Object kinds and reindexing}
+
+The eight kinds are the constructors of an inductive type \texttt{Obj}; the ZF tag is a function \texttt{Obj.tag}.
+
+\begin{theorem}[\texttt{qState\_iff\_tag}, \texttt{not\_state\_and\_op}, \texttt{tag\_lt\_eight}]
+An object is a state exactly when its tag is \(0\); no object is both a state and an operator; every tag is less than eight.
+\end{theorem}
+
+\begin{theorem}[\texttt{back\_shift}, \texttt{shift\_back}, \texttt{back\_toShifted}, \texttt{toShifted\_back}]
+The shift \(k\mapsto k+1\) and the back-translation \(a\mapsto a-1\) on inhabited tags \(a\ge1\) are mutually inverse, and the shifted namespace
+with reserved \(0\) is in bijection with ``no kind or a kind''.
+\end{theorem}
+
+\subsection{Transport and readout}
+
+A \emph{model} of the transport layer is a structure with relations \texttt{admTransport}, \texttt{clEq}, \texttt{read} and the two schemata as
+fields.  Every theorem holds for every model.
+
+\begin{theorem}[\texttt{first\_transport\_principle}, \texttt{chain\_clEq}, \texttt{chain\_readout}]
+An admissible transport keeps a state in its closure class, and a closure-compatible readout gives the same value, up to \(J\), before and
+after.  The same holds for every finite chain of admissible transports.
+\end{theorem}
+
+\begin{theorem}[\texttt{totalModel}, \texttt{emptyModel}, \texttt{empty\_chain}]
+The schemata have two trivial models: in one every transport is admissible and there is one closure class, in the other no transport is
+admissible and the classes are singletons.  In the second, a chain of admissible transports is trivial.
+\end{theorem}
+
+The last theorem is a warning as much as a result.  The schemata are consistent, but they do not determine what admissible means; all
+content enters through the choice of the model.
+
+\paragraph{Routes.}  For frame-typed records there is one model per route \(a\to b\), with a composition law as an explicit assumption: an
+admissible transport from \(a\) to \(b\) followed by one from \(b\) to \(c\) is admissible from \(a\) to \(c\).
+
+\begin{theorem}[\texttt{path\_admissible}, \texttt{path\_clEq}, \texttt{loop\_clEq}]
+A path through any number of frames is admissible on the direct route and stays in a closure class of it; in particular a loop
+\(a\to\dots\to a\) never changes the class of the route \(a\to a\).
+\end{theorem}
+
+\subsection{The store machine}
+
+\begin{theorem}[Preservation: \texttt{exec\_preserves}, \texttt{run\_preserves}, \texttt{exec\_cont\_admissible}]
+From an admissible store no instruction, and no program, leads to an inadmissible one; a step with status \textsc{cont} ends in an admissible
+store.
+\end{theorem}
+
+\begin{theorem}[No stuck states and exact status: \texttt{exec\_ne\_halt}, \texttt{exec\_cont\_iff}, \texttt{exec\_reject\_iff}]
+No step ends with status \textsc{halt}.  A step has status \textsc{cont} exactly when its raw effect is defined and admissible, and status
+\textsc{reject} exactly when its raw effect is undefined.
+\end{theorem}
+
+\begin{theorem}[Atomicity: \texttt{exec\_atomic}]
+A step that does not end with \textsc{cont} leaves content, snapshots and guards unchanged.
+\end{theorem}
+
+\begin{theorem}[Progress: \texttt{snapshot\_progress}, \texttt{scrub\_progress}, \texttt{export\_progress}]
+In an admissible store, \textsc{snapshot} and \textsc{scrub} always succeed, and \textsc{export}\((a)\) succeeds for every stored address \(a\).
+\end{theorem}
+
+\begin{theorem}[Lineage: \texttt{exec\_logs}, \texttt{exec\_ledger\_length}, \texttt{run\_ledger\_length}]
+Every step puts an entry with its instruction and status at the head of the ledger, and a program adds exactly as many entries as it has
+instructions.
+\end{theorem}
+
+\begin{theorem}[Rollback and certificates: \texttt{rollback\_restores}, \texttt{no\_false\_certificate}]
+A rollback to an existing snapshot whose content is admissible restores it exactly.  There is no certificate for \texttt{False}, whatever
+instructions were run.
+\end{theorem}
+
+The statements follow the standard shape of type soundness~\cite{wright,pierce} --- preservation and progress --- adapted to a machine whose
+steps may be refused.  Progress is proved for the three instructions that do not change an admissible content; for \textsc{store},
+\textsc{link} and \textsc{rollback} it depends on the guards by design, and the exact status characterization says what happens instead.
+The certificate rule is a small instance of the idea behind proof-carrying code~\cite{necula}: what is certified carries its proof.
+
+\paragraph{Simplifications.}  Addresses are natural numbers, relations carry no pointer conditions, and the instructions that clone or merge
+stores are not formalized.

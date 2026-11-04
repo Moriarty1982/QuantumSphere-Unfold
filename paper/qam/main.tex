@@ -1,0 +1,79 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\lstset{basicstyle=\ttfamily\small,columns=fullflexible,keepspaces=true,breaklines=true,
+  literate={₁}{{$_1$}}1 {₂}{{$_2$}}1 {ℓ}{{$\ell$}}1 {→}{{$\to$}}1 {∀}{{$\forall$}}1 {∃}{{$\exists$}}1 {≠}{{$\neq$}}1 {¬}{{$\neg$}}1 {↔}{{$\leftrightarrow$}}1 {∧}{{$\wedge$}}1}
+
+\title{A typed bookkeeping language for verifiable research with language models:\\
+\large design, Lean verification, and a case study}
+\author{Marc Brendecke\\ \small Independent researcher, Bochum, Germany}
+\date{Draft, \today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Language models can carry out long research projects --- computing, formalizing, searching the literature and writing --- but over
+hundreds of pages they produce characteristic errors that are hard to see in prose: quantities from different reference frames are
+compared as if they were the same, values that were put in are later read as derived, and statements are promoted beyond what was
+shown.  We describe QAM, a small typed language on top of Zermelo--Fraenkel set theory that makes these steps ill-formed, together with
+an instruction layer (MML) and a store machine (MMA) whose ledger records every step.  The core is formalized in Lean~4 without
+\texttt{sorry}: the eight object kinds are disjoint, a reindexing of the tag namespace is exactly invertible, admissible transport chains
+preserve closure classes and compatible readouts, and the store machine satisfies preservation, progress for its non-modifying
+instructions, atomicity, ledger completeness and the impossibility of a certificate for a false statement.  We report a case study: a
+months-long project in mathematical physics, carried out by one author with language models from the start, with about a hundred
+append-only audit rounds and more than sixty pre-registered tests.  We describe which classes of error the discipline exposed, which it
+did not, and what the formal guarantees do and do not mean: the language secures the form of a record, not the truth of its content.
+\end{abstract}
+
+\input{s1_intro}
+\input{s2_language}
+\input{s3_machine}
+\input{s4_lean}
+\input{s5_case}
+\input{s6_related}
+\input{s7_limits}
+
+\section*{Data availability}
+The Lean sources, the research text, the audit rounds and the registration notes are in the public repository~\cite{repo}.
+
+\appendix
+\input{a1_build}
+
+\begin{thebibliography}{99}
+\bibitem{repo} M.~Brendecke, QuantumSphere-Unfold, \url{https://github.com/Moriarty1982/QuantumSphere-Unfold}.
+\bibitem{companion} M.~Brendecke, \emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding}, Zenodo, concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}.
+\bibitem{lean4} L.~de Moura and S.~Ullrich, The Lean~4 theorem prover and programming language, in \emph{Automated Deduction --- CADE 28},
+Lecture Notes in Computer Science \textbf{12699}, Springer 2021, 625--635.
+\bibitem{mathlib} The mathlib Community, The Lean mathematical library, in \emph{Proceedings of the 9th ACM SIGPLAN International Conference
+on Certified Programs and Proofs (CPP 2020)}, ACM 2020, 367--381.
+\bibitem{wright} A.~K.~Wright and M.~Felleisen, A syntactic approach to type soundness, \emph{Information and Computation} \textbf{115}
+(1994) 38--94.
+\bibitem{pierce} B.~C.~Pierce, \emph{Types and Programming Languages}, MIT Press 2002.
+\bibitem{necula} G.~C.~Necula, Proof-carrying code, in \emph{Proceedings of the 24th ACM Symposium on Principles of Programming
+Languages (POPL 1997)}, ACM 1997, 106--119.
+\bibitem{prov} W3C, PROV-DM: The PROV Data Model, W3C Recommendation, 30 April 2013.
+\bibitem{nosek} B.~A.~Nosek, C.~R.~Ebersole, A.~C.~DeHaven and D.~T.~Mellor, The preregistration revolution, \emph{Proc.\ Natl.\ Acad.\ Sci.\ USA}
+\textbf{115} (2018) 2600--2606.
+\bibitem{baker} M.~Baker, 1,500 scientists lift the lid on reproducibility, \emph{Nature} \textbf{533} (2016) 452--454.
+\bibitem{funsearch} B.~Romera-Paredes et al., Mathematical discoveries from program search with large language models, \emph{Nature}
+\textbf{625} (2024) 468--475.
+\bibitem{aiscientist} C.~Lu, C.~Lu, R.~T.~Lange, J.~Foerster, J.~Clune and D.~Ha, The AI Scientist: towards fully automated open-ended
+scientific discovery, arXiv:2408.06292 (2024).
+\bibitem{physics} M.~Brendecke, Three readouts of one kernel: duality sectors, time reversal and a compensator-form projector in
+\(\mathbb C\otimes\mathbb H\otimes\mathbb O\), draft (2026), in~\cite{repo}.
+\end{thebibliography}
+\end{document}

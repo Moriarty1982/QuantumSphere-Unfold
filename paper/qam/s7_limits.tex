@@ -1,0 +1,26 @@
+\section{Limits and discussion}\label{sec:limits}
+
+\paragraph{What the language does not prevent.}  QAM secures form, not truth.  It did not prevent the dependence on a false external proof; an
+audit round found it.  It does not check whether a literature value is read correctly, whether a premise holds, or whether a physical reading is
+sensible.  Its schemata admit trivial models, so a record can be well-typed and empty.  And a well-typed record can still be wrong in every
+statement that is not about bookkeeping.
+
+\paragraph{Cost.}  The discipline is expensive.  The research text is dominated by protocols, and a reader who wants the results needs a separate,
+short account.  Status tags and witness typing slow down writing.  In the case study the cost was worth paying, because the alternative was a long
+record that nobody, including the author, could trust; whether it is worth paying in other settings is open.
+
+\paragraph{What helped most.}  In order of effect: pre-registration with time stamps, append-only rounds, recomputation with independent code,
+the review of manuscripts by a model instance without access to the record, and the typing rules.  The typing rules were most useful for the class
+of error they were designed for, frame mixing, and least useful for errors of premise.
+
+\paragraph{Next steps.}  Progress for \textsc{store}, \textsc{link} and \textsc{rollback} under explicit guard conditions; the clone and merge
+instructions; a checker that reads the research text and flags untyped comparisons; and a comparison with electronic lab-notebook and
+provenance systems.
+
+\section{Conclusion}\label{sec:conclusion}
+
+A small typed language over ordinary set theory, a store machine with a complete ledger, and a handful of Lean theorems about them are enough to
+make three frequent errors of long, model-assisted research ill-formed, and to make every step of a record traceable.  They are not enough to
+make the record true.  The case study suggests that the combination with pre-registration, append-only correction and independent review is what
+makes such a record trustworthy, and that the typing earns its place in that combination as a guard against one specific, common and otherwise
+hard to see kind of error.

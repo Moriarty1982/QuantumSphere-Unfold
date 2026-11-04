@@ -1,0 +1,51 @@
+\section{The language}\label{sec:language}
+
+\subsection{Object kinds}
+
+QAM adds no axioms to Zermelo--Fraenkel set theory.  It fixes eight kinds of record objects as tagged tuples, the first entry being a
+type tag:
+\[
+\begin{array}{llll}
+\text{state} & \langle 0,a\rangle, &
+\text{layer} & \langle 1,\ell,D\rangle,\\
+\text{operator} & \langle 2,\ell_1,\ell_2,G\rangle, &
+\text{readout} & \langle 3,\ell,W,R\rangle,\\
+\text{branch} & \langle 4,b,B\rangle, &
+\text{shell} & \langle 5,r,s,T\rangle,\\
+\text{witness} & \langle 6,u\rangle, &
+\text{tensor} & \langle 7,p,q\rangle .
+\end{array}
+\]
+Here \(D\) is the carrier of a layer, \(G\) the graph of an operator from layer \(\ell_1\) to layer \(\ell_2\), \(W\) the set of readout values and \(R\)
+the readout rule; a branch records a choice, a shell a refinement step, a witness an external input, and a tensor an admitted composite.
+Recognition predicates such as \(\mathrm{QState}(x):\Leftrightarrow\exists a\,(x=\langle0,a\rangle)\) identify the kinds.  They are recognition
+clauses, not an independent axiom system: anything that can be said in QAM can be said in ZF.
+
+\subsection{Relations}
+
+Three relations carry the content of a record: \(\mathrm{QAdmTransport}(o,s,t)\), the operator \(o\) carries the state \(s\) admissibly to
+\(t\); \(\mathrm{QClEq}(s,t)\), \(s\) and \(t\) lie in the same closure class; and \(\mathrm{QRead}(r,s,w)\), the readout \(r\) reads \(s\) as the value \(w\).
+Two schemata relate them: closure equivalence is an equivalence relation, and admissible transport preserves the closure class.  A readout
+\(r\) is \emph{closure-compatible} for a map \(J\) on values if states in one closure class are read to values with the same image under \(J\).
+What ``admissible'' and ``closure class'' mean is left to the application.  The schemata constrain them but do not fix them; both extremes ---
+every transport admissible, or none --- satisfy them (Section~\ref{sec:lean}).
+
+\subsection{Frames and the two-sided display}
+
+Quantities that live in a frame carry it as an index.  In the two-sided display \({}^{A}{}_{B}\mathcal T^{i}{}_{j}\) the front indices record the
+frame or readout side and the back indices the structure side.  Only an upper index may be contracted with a lower one, which is the ordinary
+action or readout; two upper or two lower indices may be compared only through an explicitly declared comparison tensor, for example
+\(G_{MT}\,{}^{M}X\,{}^{T}Y\) for a quantity \(X\) of frame \(M\) and \(Y\) of frame \(T\).  A comparison across frames without such an object is not
+a well-formed expression.  This is the rule that addresses frame mixing.
+
+\subsection{Witnesses, branches and status}
+
+A value that rests on an input is written as a readout of a witness, \(w=R(u)\) with \(u=\langle6,\dots\rangle\), and a choice made during a
+construction is a branch.  A derivation is therefore visibly different from a fit: the former has no witness in its premises.  This is the
+rule that addresses input read as output.  Every statement of a record carries one of the status tags \emph{proved}, \emph{computed},
+\emph{conditional}, \emph{reading}, \emph{open} or \emph{withdrawn}, and a statement can only be cited with its tag.
+
+\subsection{Reindexing}
+
+When the tag namespace is extended, existing tags are shifted by one and the tag \(0\) is reserved for ``no active kind''.  The shift and its
+back-translation must be exact on inhabited tags, so that old records remain readable.
