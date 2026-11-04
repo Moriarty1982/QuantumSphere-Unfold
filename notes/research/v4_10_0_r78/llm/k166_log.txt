@@ -1,0 +1,7 @@
+Kontrolle positiv            F 1.6e-14  G 3.2e-13  dg 3.3e-14 | Mischung 5.4e-13
+Kontrolle negativ            F 5.7e+01  G 1.2e+03  dg 6.3e+00 | Mischung 1.5e+03
+reine Drehung                F 1.2e-13  G 1.2e-12  dg 5.9e-14 | Mischung 2.7e-12
+reiner Boost                 F 6.6e-14  G 3.4e-13  dg 8.8e-15 | Mischung 6.6e-13
+reine Koordinatenaenderung   F 6.3e-12  G 1.9e-11  dg 2.2e-11 | Mischung 4.7e-11
+gemischt 1                   F 3.2e-13  G 1.4e-11  dg 1.2e-12 | Mischung 2.5e-11
+gemischt 2                   F 1.0e-13  G 2.4e-12  dg 2.1e-14 | Mischung 1.9e-11

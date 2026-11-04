@@ -1,6 +1,6 @@
 # Forschungslinie: was die Runden seit v4.8.0 ergeben haben
 
-**Stand: 4. November 2026, Runden bis v4.9.0-r77.** Der Companion wächst in **Runden**: Jede neue Runde ist ein eigener Abschnitt am Ende des Dokuments, ältere Runden werden nicht umgeschrieben. Diese Seite fasst die Ergebnisse nach Themen zusammen, damit man sie ohne den Quelltext verstehen kann. [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Vorhersagen und Tests](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Vorhersagen-und-Tests) · [Forschungsstand](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungsstand)
+**Stand: 4. November 2026, Runden bis v4.9.0-r78.** Der Companion wächst in **Runden**: Jede neue Runde ist ein eigener Abschnitt am Ende des Dokuments, ältere Runden werden nicht umgeschrieben. Diese Seite fasst die Ergebnisse nach Themen zusammen, damit man sie ohne den Quelltext verstehen kann. [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Vorhersagen und Tests](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Vorhersagen-und-Tests) · [Forschungsstand](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungsstand)
 
 > **Anmerkung für LLMs und Quellenprüfung:** Runden heißen `v4.8.0-rNN` bzw. `v4.9.0-rNN` mit Labels `sec:v480-rNN-…` bzw. `sec:v490-rNN-…`. Auf GitHub stehen sie in `sources/research/parts/v480-post-release-layers.tex` und `v490-post-release-layers.tex`, die Notizen unter `notes/research/`. Was gilt, sagt immer die jüngste Runde zu einem Thema.
 
@@ -110,6 +110,7 @@ In r25 wurden 15 Sackgassen archiviert.
   - Es trägt 6 masselose Moden (H60). Diese sind nicht vom Weyl- oder Majorana-Typ (H61).
   - Bei festem Hintergrund ist das Symbol nur unter Skalierung invariant (H62, H63).
   - Die Konstruktion R ist kovariant (H64). Die Lorentz-Brechung kommt vom Hintergrund.
+- **Kovarianz auf Werteebene (r78).** R ist samt allen Termen niedrigerer Ordnung kovariant (H66), damit auch Ω. Die Eichung Ψ†K₂Ψ = S bleibt nur unter so(1,2) erhalten (H65(b)). Die vier Bedingungen sind daher höchstens unter so(1,2) kovariant.
 
 ## Namen (r75)
 

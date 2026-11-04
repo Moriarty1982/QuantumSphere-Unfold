@@ -62,6 +62,8 @@ Zu H46: Eine Bestätigung würde die Kette r55–r60 prüfen, nicht die Lesart a
 | H62 | Die Symmetrie-Algebra des Symbols enthält eine Lorentz-Algebra | widerlegt: nur Skalierung; bei festem Hintergrund strukturell erwartet (r77) |
 | H63 | Der dynamische Teil F ist lorentzsymmetrisch, die Brechung sitzt in G | widerlegt: schon F nicht (7 Raumzeit-Symmetrien, keine Lorentz-Algebra); mit G bleibt nur die Skalierung (r77) |
 | H64 | Die Konstruktion R ist koordinaten- und intern lorentzkovariant | bestätigt (zweiter Lauf, nicht blind): Residuen ≤ 4·10⁻¹⁰, Gegenprobe ohne Hintergrund-Transformation 0,26 (r77) |
+| H65 | R ist auf Werteebene kovariant; die Eichung wird genau von so(1,2) erhalten | ungültig: (b) wie vorhergesagt, (a) Kontrollschranke 10⁻¹² zu streng gewählt (r78) |
+| H66 | R ist auf Werteebene kovariant (Kontrollschranke 10⁻⁹, nicht blind) | bestätigt: Residuen ≤ 2·10⁻¹¹, Gegenprobe ohne Hintergrund-Transformation 57 bzw. 1200 (r78) |
 
 ## Erkundungen ohne Vorab-Notiz
 
