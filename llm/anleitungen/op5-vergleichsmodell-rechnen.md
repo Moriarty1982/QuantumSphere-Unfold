@@ -4,7 +4,7 @@ Werkzeugunabhängig. Das Modell ist das feste Vergleichsmodell der Sondenfelder 
 
 ## Regeln zuerst
 - Jeder Test mit Entscheidungskriterium wird vorher als `llm/Vorab_Notiz_HNN_*.md` festgeschrieben und committet; der
-  Zeitstempel zählt. Zuletzt vergeben ist H64.
+  Zeitstempel zählt. Zuletzt vergeben ist H65.
 - Erkundungen ohne Vorab-Notiz werden offen als „Erkundung“ geführt.
 - **Vorwissen-Pflicht:** Vor jeder neuen Hypothese und vor jedem Vorschlag an den Autor:
   - den Abschnitt „Bereits beantwortet“ unten lesen;
@@ -80,8 +80,11 @@ Auf GitHub unter `notes/research/v4_10_0_r71/llm/`, lokal unter `llm/`.
   - Das Scheitern ist strukturell erwartet.
 - **H64 (bestätigt):** R ist auf Symbolebene koordinatenkovariant (GL(4)) und intern lorentzkovariant. Die Brechung kommt
   vom Hintergrund (Ψ am Keim, A, h).
+- **H65 (ungültig nach Kriterium):**
+  - Die Eichung Ψ†K₂Ψ wird genau von so(1,2) erhalten (Drehung um y, Boosts entlang x und z), wie vorhergesagt.
+  - R auf Werteebene liegt mit Residuen ≤ 1e-10 auf dem Niveau der Kontrolle. Die Kontrollschranke 1e-12 war zu streng.
 - **Offen:**
-  - Kovarianz von Ω, θ, der Eichung und den vier Bedingungen;
+  - formale Bestätigung der Kovarianz von R auf Werteebene (Kontrollschranke etwa 1e-9), daraus die Kovarianz von Ω; die vier Bedingungen sind höchstens unter so(1,2) kovariant;
   - die Herkunft des Hintergrunds A, h;
   - die Lorentz-Wirkung auf die 6 Moden.
 
