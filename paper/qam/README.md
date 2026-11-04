@@ -5,6 +5,8 @@
 Draft, 4 Nov 2026, 9 pages. Publication on Zenodo only (no arXiv). Keywords: logic in computer science, formal verification, Lean 4,
 programming-language semantics, AI-assisted research, reproducibility, research integrity.
 
+PDF: [`qam_paper_draft.pdf`](qam_paper_draft.pdf).
+
 Build: `pdflatex main.tex` twice (standard TeX Live; no bibtex, bibliography is inline).
 
 | file | content |
