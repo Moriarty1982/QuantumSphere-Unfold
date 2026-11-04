@@ -27,7 +27,11 @@ is formalized in Lean~4~\cite{lean4}.
 layer MML with its transition semantics MMA (Sections~\ref{sec:language} and~\ref{sec:machine}).
 \item Lean proofs of the properties that make the language usable as a record: disjointness of object kinds, an exactly invertible
 reindexing, preservation of closure classes along admissible transport, and for the machine preservation, progress for the
-non-modifying instructions, atomicity, ledger completeness and the absence of false certificates (Section~\ref{sec:lean}).
+non-modifying instructions, atomicity, ledger completeness and the absence of false certificates; and a project-independent module that
+states the three error classes as rules on derivation trees and proves that well-formed trees never promote, never lose or invent an
+input, and never change frame except through declared maps (Section~\ref{sec:lean}).
+\item A \LaTeX{} package, \texttt{qam.sty}, that applies the same rules while a document is compiled and stops the compiler at the first
+violation (Section~\ref{sec:tex}).
 \item A case study of a research project in mathematical physics, carried out by one author with language models from the beginning,
 with about a hundred append-only audit rounds and more than sixty pre-registered tests (Section~\ref{sec:case}).
 \item An account of what the discipline caught and what it did not, and of what the formal guarantees mean (Section~\ref{sec:limits}).

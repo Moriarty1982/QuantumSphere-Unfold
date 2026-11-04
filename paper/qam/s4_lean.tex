@@ -78,5 +78,33 @@ steps may be refused.  Progress is proved for the three instructions that do not
 \textsc{link} and \textsc{rollback} it depends on the guards by design, and the exact status characterization says what happens instead.
 The certificate rule is a small instance of the idea behind proof-carrying code~\cite{necula}: what is certified carries its proof.
 
+\subsection{Status, inputs and frames}
+
+The three error classes of Section~\ref{sec:intro} are stated directly in a module \texttt{QSFormal.Provenance} that does not depend on the
+rest of the library, or on any physics.  A \emph{claim} has a status, a frame and a list of inputs, the identifiers of the values it rests
+on.  Statuses are ordered, \(\textsf{open}<\textsf{reading}<\textsf{conditional}<\textsf{computed}<\textsf{proved}\).  Claims are combined by
+derivation trees with three kinds of node: a \emph{step} derives a statement from one premise, a \emph{join} from two premises, and a
+\emph{conversion} moves a statement into another frame through a map \(g\).  A tree is well formed relative to a set \(D\) of declared maps
+when no node has a higher status than its premises, a join combines premises of one frame only, and every conversion uses a map in \(D\)
+with the right source frame.
+
+\begin{theorem}[No promotion: \texttt{no\_promotion}, \texttt{proved\_only\_from\_proved}]
+In a well-formed tree the conclusion has at most the status of every premise.  In particular a conclusion with status \textsf{proved}
+rests only on proved claims.
+\end{theorem}
+
+\begin{theorem}[Inputs: \texttt{inputs\_tracked}, \texttt{inputs\_sourced}, \texttt{independent\_iff}]
+The inputs of a conclusion are exactly the inputs of its premises: none is lost and none is invented.  A conclusion is independent of an
+input exactly when no premise uses it.
+\end{theorem}
+
+\begin{theorem}[Frames: \texttt{frames\_declared}, \texttt{no\_maps\_same\_frame}]
+In a well-formed tree every premise reaches the frame of the conclusion through a chain of declared maps.  Without declared maps, all
+premises live in the frame of the conclusion.
+\end{theorem}
+
+These theorems are elementary, and they are meant to be: the point is that the rules are precise enough to be checked, by a proof
+assistant and, as the next section shows, by the \TeX{} compiler.
+
 \paragraph{Simplifications.}  Addresses are natural numbers, relations carry no pointer conditions, and the instructions that clone or merge
 stores are not formalized.

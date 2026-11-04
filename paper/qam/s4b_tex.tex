@@ -1,0 +1,47 @@
+\section{Checks at compile time}\label{sec:tex}
+
+A proof assistant checks rules about an abstract record.  The record that people actually read is a \LaTeX{} document.  The package
+\texttt{qam.sty}~\cite{repo} brings the rules of \texttt{QSFormal.Provenance} into that document: claims are declared where they are made,
+and the compiler stops with an error as soon as a declaration breaks a rule.
+
+{\sloppy\paragraph{Commands.}  \verb|\qamframe{M}| declares a frame and \verb|\qammap{G}{M}{T}| a comparison map from \(M\) to \(T\).
+\verb|\qaminput{k}{M}{s}| declares a value put in by hand, with frame \(M\) and status \(s\); its only input is itself.
+\verb|\qamclaim{k}{M}{s}| declares a premise without inputs, for instance a theorem.  \verb|\qamderive{k}{s}{p1,p2,...}| derives a claim
+from premises, \verb|\qamconvert{k}{s}{G}{p}| moves a premise into another frame, \verb|\qamcompare{a}{b}| records a comparison, and
+\verb|\qamindependent{k}| asserts that a claim rests on no input.  \verb|\qamshow{k}| prints status, frame and inputs.\par}
+
+\paragraph{Checks.}  \verb|\qamderive| and \verb|\qamconvert| stop when the declared status is higher than that of the weakest premise
+(promotion); \verb|\qamderive| and \verb|\qamcompare| stop when premises of different frames meet, and \verb|\qamconvert| when the map does
+not start in the premise's frame (frame mixing); \verb|\qamindependent| stops when the claim rests on an input (input read as result).  The
+package also refuses a key that is used before it is declared or declared twice, so a document must be written in the append-only order
+of Section~\ref{sec:case}; because of that order a single compiler pass is enough.  An option \verb|mode=warning| turns the errors into
+warnings.
+
+\paragraph{Example.}  The frame offset of the case study is computed from two literature values.  Declared honestly,
+\begin{lstlisting}
+\qamframe{M} \qamframe{T} \qammap{G}{M}{T}
+\qaminput{gamma}{M}{computed}               % two literature values
+\qamclaim{counting}{M}{proved}              % the counting formula
+\qamderive{beta}{computed}{gamma,counting}
+\qamconvert{betaT}{conditional}{G}{beta}
+\end{lstlisting}
+\qamframe{M}\qamframe{T}\qammap{G}{M}{T}%
+\qaminput{gamma}{M}{computed}\qamclaim{counting}{M}{proved}%
+\qamderive{beta}{computed}{gamma,counting}\qamconvert{betaT}{conditional}{G}{beta}%
+it compiles, and \verb|\qamshow{beta}| prints \qamshow{beta}; the conversion gives \qamshow{betaT}.  Both are typeset by the package
+while this paper is compiled.  The two errors of the case study now stop the compiler:
+\begin{lstlisting}
+\qamderive{beta}{proved}{gamma,counting}
+! Package qam Error: Promotion: `beta' is declared `proved', but its weakest
+(qam)                premise `gamma' is only `computed'.
+
+\qamindependent{beta}
+! Package qam Error: `beta' is cited as independent of inputs, but it rests
+(qam)                on: gamma.
+\end{lstlisting}
+A comparison of \texttt{betaT} with a claim of frame \(M\) stops with ``Frame mixing: \dots\ are compared without a declared map''.
+
+\paragraph{What the package does not do.}  It checks only what is declared.  A document that states a result without declaring it is
+not checked, and a declaration can be wrong: whether \texttt{gamma} really is an input is the author's statement, not the package's.
+The package guards against slips in a long record; it does not prove its content.  It is tested by documents that must compile and
+documents that must stop with a given error, and the tests run in continuous integration.

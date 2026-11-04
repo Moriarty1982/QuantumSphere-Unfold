@@ -7,6 +7,7 @@
 \usepackage{enumitem}
 \usepackage{listings}
 \usepackage[hidelinks]{hyperref}
+\usepackage{qam}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{proposition}[theorem]{Proposition}
 \theoremstyle{definition}
@@ -31,7 +32,9 @@ different frames of description, a value that was put in by hand is later cited 
 treated as a theorem.  We propose QAM, a small typed notation on top of ordinary set theory in which these three steps cannot be written
 down, together with a simple machine that stores the objects of a record and logs every change.  The notation and the machine are
 formalized in Lean~4.  The proofs show that the machine never leaves a well-formed state, refuses invalid steps without side effects,
-logs every step, and cannot certify a false statement; they also show that the notation itself does not fix what counts as a valid step.
+logs every step, and cannot certify a false statement; they also show that the notation itself does not fix what counts as a valid step.  The rules against the three errors are proved for
+derivation trees, and a \LaTeX{} package applies them while a document is compiled, so that the compiler stops at a promotion, a frame
+mixing or an input cited as a result.
 We apply QAM to a project in mathematical physics, about a hundred revision rounds and more than sixty pre-registered tests long, and
 report which errors it caught and which it missed.  QAM makes a record checkable in its form; it does not make the content true.
 \end{abstract}
@@ -40,6 +43,7 @@ report which errors it caught and which it missed.  QAM makes a record checkable
 \input{s2_language}
 \input{s3_machine}
 \input{s4_lean}
+\input{s4b_tex}
 \input{s5_case}
 \input{s6_related}
 \input{s7_limits}
