@@ -16,3 +16,5 @@ Layer v4.9.0-r77 (4 Nov 2026) resolves H59 (confirmed), H60 (confirmed), H61, H6
 Layer v4.9.0-r78 (4 Nov 2026) resolves H65 (invalid by criterion; part (b), the gauge stabilizer so(1,2), as predicted) and H66 (confirmed, not blind). Scripts are in [`../v4_10_0_r78/`](../v4_10_0_r78/README.md).
 
 H67 (4 Nov 2026, confirmed): the four hidden conditions and their support on the cone are independent of the gauge (K₂, K₀, K₃, Q₃ and the Lorentz scalar Ψ̄Ψ all give F₆ = 477 and 6 polarizations). Scripts and logs are in `../v4_10_0_r79/llm/`.
+
+Layer v4.9.0-r79 records H67.
