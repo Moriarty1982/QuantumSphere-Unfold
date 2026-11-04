@@ -2,30 +2,22 @@
 
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.** Sie ist der Einstiegspunkt für die nächste Sitzung, egal mit welchem Modell. Die Geschichte steht in `AGENTS.md` (Rundentabelle), in der Kernkarte und in den Runden.
 
-## Stand vom 4. November 2026, 23:00 (Claude, Sitzung zu OP5)
-- **Gemergt:**
-  - r77: PR #60, 1be5dc1;
-  - r78: PR #61, 9e7c3d6;
-  - r79: PR #63, 1d8c9b1 (= `github/main`, alle Läufe grün).
-- **Neu, nur lokal committet (noch nicht auf GitHub):**
-  - `llm/Vorab_Notiz_H68_Feldgleichungen_Hintergrund.md` (4d10b0f, vor der Rechnung);
-  - `llm/k169_feldgleichungen.py`, `llm/k169_out.json`, `llm/Ergebnis_H68_Feldgleichungen_Hintergrund.md`;
-  - Anleitung OP5 nachgezogen (zuletzt vergeben H68, Abschnitt „Bereits beantwortet“).
-- **Ergebnis H68: widerlegt.** Der Hintergrund A = M(t) dφ, h erfüllt weder Yang–Mills auf span(λ₂, λ₄, λ₆) noch Klein–Gordon (masselos/massiv) mit den Spinorblöcken als Quelle; Residuen 0,83–1,0 in Koframe- und flacher Metrik; Quellen am Keim ≈ 1e3-mal zu klein. Kontrollen gültig (Bianchi 1e-14, □h exakt, Keimresiduum 3e-13).
-- **Zuletzt vergebene Hypothese:** H68. Die nächste freie Nummer ist H69.
-- **Laufende Branches auf GitHub:**
-  - `rechnen/hintergrund` (29b69ad): Fierz-Erkundung (k168); geht in r80 ein;
-  - `rechnen/h59`, `rechnen/h65`, `rechnen/h67`: erledigt, können weg (Löschen über den Proxy gesperrt).
-- **Offene PRs auf GitHub (nicht OP5, nicht angefasst):** #62 (Lean MMA/QAM-Gliederung), #59 (Short paper draft), #51 (AGENTS.md). Die vorige Übergabe nannte „keine“; das war falsch.
+## Stand vom 4. November 2026, 23:20 (Claude, Sitzung zu OP5)
+- **Gemergt:** r77 (PR #60, 1be5dc1), r78 (PR #61, 9e7c3d6), r79 (PR #63, 1d8c9b1). Inzwischen auch PR #62 (Lean MMA/QAM, c3e2652, vom Autor).
+- **Offener PR #64** (`research/v4.10-r80-hintergrund`): Runde r80 = Fierz-Erkundung (k168), **H68 widerlegt** (k169: Hintergrund A, h nicht aus Yang–Mills/Klein–Gordon mit Spinorquellen), **Abschluss des Vergleichsmodell-Zweigs r71–r80** (Autorentscheidung 4.11.); dazu die Bestandsaufnahme der Wirkungsansätze. Wiki im PR. Lokal eingebaut (3d72d40): 1315 Seiten, 3947 Labels, Overfull 45, harte Werte 0, Guard-Linter 0. Merge nur nach „PR 64 mergen“; danach AGENTS-Zeile r80 und Kernkarte K130 um „PR #64 gemergt als …“ ergänzen.
+- **Weitere offene PRs (nicht OP5, nicht angefasst):** #59 (Short paper draft), #51 (AGENTS.md).
+- **Zuletzt vergebene Hypothese:** H68. Nächste freie Nummer H69.
+- **Branches, die weg können** (Löschen über den Proxy gesperrt): `rechnen/h59`, `rechnen/h65`, `rechnen/h67`, `rechnen/hintergrund` (in r80 aufgegangen).
+
+## Richtungswechsel (Autorentscheidung 4.11.)
+Der OP5-Vergleichsmodell-Zweig ist geschlossen. Keine weiteren Feinheiten daran (Lorentz-Wirkung auf die 6 Moden, zweiter Grundpunkt) ohne eigene Dynamik. Es geht eine Ebene höher: zur gemeinsamen Wirkung, die OP1–OP5 gleichermaßen fehlt.
 
 ## Nächster Schritt
-**Runde r80 bauen** mit der Fierz-Erkundung (k168) und H68 (k169), nach `llm/anleitungen/qsc-runde-einbauen.md`:
-- Runde lokal in den Monolithen und auf GitHub in `sources/research/parts/v490-post-release-layers.tex`; Notizordner `notes/research/v4_10_0_r80/` mit Vorab-Notiz, Ergebnis, k168, k169;
-- AGENTS-Rundentabelle, Kernkarte, Wiki (`wiki/`, Inhaltsseiten mitpflegen) im selben PR;
-- lokale Historie per ours-Merge nachführen; PR öffnen. Merge nur nach „PR NN mergen“.
+`llm/Bestandsaufnahme_Wirkungsansaetze.md` mit dem Autor durchgehen und die fünf offenen Entscheidungen in Abschnitt 5 klären (Koframe eigenes Feld oder Funktion von Ψ; komplexe/reelle Wirkung; Gravitationsterm; Eichgruppe; P_C7 exakt oder dynamisch). Erst danach die kleinste Wirkung nach (W1)–(W8) aufschreiben und ihre Euler–Lagrange-Gleichungen sowie Bianchi- und Ward-Identitäten symbolisch prüfen. Tests mit Kriterium nur mit Vorab-Notiz.
 
 ## Danach
-- Offen: Herkunft des Hintergrunds (H68 schließt YM/KG mit diesen Quellen aus; die Blöcke tragen fast nur diagonale Farbströme λ₀, λ₃, λ₈ – eine mögliche nächste Frage, nur mit neuer Vorab-Notiz), Lorentz-Wirkung auf die 6 Moden, zweiter Grundpunkt.
+- Wirkung auf einen einfachen symmetrischen Ansatz (homogen, isotrop) reduzieren und prüfen, ob der Vakuumterm frei bleibt (W7).
+- Offene Vorhersagen H15, H42, H46 warten auf Daten.
 
 ## Pflichten in jeder Sitzung
 - Zuerst `AGENTS.md` lesen, dann die einschlägige Anleitung mit dem Abschnitt „Bereits beantwortet“, dann diese Datei.
