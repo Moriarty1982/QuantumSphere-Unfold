@@ -17,7 +17,7 @@
 \newcommand{\HH}{\mathbb H}
 \newcommand{\OO}{\mathbb O}
 
-\title{Three frames on one kernel:\\ duality sectors of a complex quaternion and chirality from a compensator in \(\mathbb C\otimes\mathbb H\otimes\mathbb O\)}
+\title{Three readouts of one kernel:\\ duality sectors, time reversal and a compensator-form projector in \(\mathbb C\otimes\mathbb H\otimes\mathbb O\)}
 \author{Marc Brendecke\\ \small Independent researcher, Bochum, Germany}
 \date{Draft, \today}
 
@@ -25,33 +25,33 @@
 \maketitle
 
 \begin{abstract}
-We study a complex quaternion kernel \(q=it+z_1e_1+z_2e_2+z_3e_3\) whose natural norm \(q\bar q=-t^2+z\cdot z\) contains the Lorentz invariant
-of an electromagnetic field \(z=E+iB\).  The sign of \(z\cdot z\) separates matter-type, tachyon-type and light-like configurations.  We show
-that matter- and tachyon-type kernels form one orbit of \(SO(3,\mathbb C)\times U(1)_{\rm dual}\) with the light-like kernels as the unique
-duality-invariant orbit, that the symmetric triple of kernels at \(120^\circ\) is exactly the centred null configuration, and that on the real
-doublet \((E,B)\) the two massive types lie on opposite sides of a state disk with light at its centre.  On
-\(\mathbb C\otimes\HH\otimes\OO\) a projector of the same form completes the weak doublets to one Standard Model generation with right-handed
-neutrino, and among the four projectors compatible with colour and charge, anomaly cancellation alone selects it up to a frame change.  The
-single numerical input, a frame offset \(\beta_{\rm sym}\approx0.549\), can be read as the ratio of two horizon-state countings of loop quantum
-gravity selected by saturation of the uncertainty bound; we discuss why this reading favours the less established counting.  We give four
-predictions, registered before the relevant data, for \(\theta_{12}\), \(\theta_{23}\) and the \(W\) mass, and state what a missing common dynamics
-would have to provide.
+We study the hypothesis that matter, light and a tachyon sector are one object read out in three frames, differing only in the direction
+of time.  Its carrier is a complex quaternion kernel \(q=it+z_1e_1+z_2e_2+z_3e_3\) whose natural norm \(q\bar q=-t^2+z\cdot z\) contains the Lorentz
+invariant of an electromagnetic field \(z=E+iB\).  The kernels with positive and negative \(z\cdot z\) form one orbit of \(SO(3,\mathbb C)\times
+U(1)_{\rm dual}\), the null kernels are the only non-trivial orbit fixed by duality, and the symmetric triple of components at \(120^\circ\) is
+exactly the centred null configuration.  An antilinear involution that combines the duality quarter turn with time reversal exchanges the two
+sectors and defines a projector, the compensator, which splits each field into its self-dual and anti-self-dual parts.  On
+\(\mathbb C\otimes\mathbb H\otimes\mathbb O\) a projector of the same form restricts the weak \(SU(2)\) to the Pati--Salam \(\mathbf 4\) and
+completes one Standard Model generation with right-handed neutrino; among the four projectors compatible with colour and charge, anomaly
+cancellation selects it up to time reversal.  Time reversal thus appears at three points of the structure, which gives the hypothesis a
+checkable form; we show that it does not yet go beyond the Feynman--St\"uckelberg reading and that a space-like momentum, and hence a
+dynamics, is missing.  Numerical readouts of a single frame parameter, and four relations registered before new data, are recorded as
+speculative.
 \end{abstract}
 
 \input{p1_intro}
 \input{p2_kernel}
 \input{p3_frames}
-\input{p4_cm}
 \input{p5_generation}
-\input{p6_pheno}
-\input{p7_discussion}
-\input{p8_conclusions}
+\input{p6_readout}
+\input{p7_numbers}
+\input{p8_discussion}
+\input{p9_conclusions}
 
 \section*{Data availability}
 Scripts, numerical outputs, the Lean formalization and the registration notes are in the public repository~\cite{repo}.
 
 \appendix
-\input{appA_earlier}
 \input{appendix_method}
 \input{appendix_qam}
 
@@ -83,6 +83,18 @@ Zenodo, concept DOI \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenod
 \bibitem{seiler} W.~M.~Seiler, \emph{Involution: The Formal Theory of Differential Equations and its Applications in Computer Algebra}, Springer, Berlin 2010.
 \bibitem{henneaux} M.~Henneaux and C.~Teitelboim, The cosmological constant and general covariance, \emph{Phys.\ Lett.\ B} \textbf{222} (1989) 195--199.
 \bibitem{kaloper} N.~Kaloper and A.~Padilla, Sequestering the standard model vacuum energy, \emph{Phys.\ Rev.\ Lett.} \textbf{112} (2014) 091304, arXiv:1309.6562.
+\bibitem{baezhuerta} J.~Baez and J.~Huerta, The algebra of grand unified theories, \emph{Bull.\ Amer.\ Math.\ Soc.} \textbf{47} (2010) 483--552, arXiv:0904.1556.
+\bibitem{krasnov} K.~Krasnov, SO(9) characterization of the standard model gauge group, \emph{J.\ Math.\ Phys.} \textbf{62} (2021) 021703, arXiv:1912.11282.
+\bibitem{fureyhughes} C.~Furey and M.~J.~Hughes, One generation of standard model Weyl representations as a single copy of \(\mathbb R\otimes\mathbb C\otimes\mathbb H\otimes\mathbb O\), \emph{Phys.\ Lett.\ B} \textbf{827} (2022) 136959, arXiv:2209.13016.
+\bibitem{fureygen} C.~Furey, Three generations, two unbroken gauge symmetries, and one eight-dimensional algebra, \emph{Phys.\ Lett.\ B} \textbf{785} (2018) 84--89, arXiv:1910.08395.
+\bibitem{gillard} A.~B.~Gillard and N.~G.~Gresnigt, Three fermion generations with two unbroken gauge symmetries from the complex sedenions, \emph{Eur.\ Phys.\ J.\ C} \textbf{79} (2019) 446, arXiv:1904.03186.
+\bibitem{gengmarshak} C.~Q.~Geng and R.~E.~Marshak, Uniqueness of quark and lepton representations in the standard model from the anomalies viewpoint, \emph{Phys.\ Rev.\ D} \textbf{39} (1989) 693.
+\bibitem{minahan} J.~A.~Minahan, P.~Ramond and R.~C.~Warner, Comment on anomaly cancellation in the standard model, \emph{Phys.\ Rev.\ D} \textbf{41} (1990) 715.
+\bibitem{stueckelberg} E.~C.~G.~St\"uckelberg, La m\'ecanique du point mat\'eriel en th\'eorie de relativit\'e et en th\'eorie des quanta, \emph{Helv.\ Phys.\ Acta} \textbf{15} (1942) 23--37.
+\bibitem{feynman} R.~P.~Feynman, The theory of positrons, \emph{Phys.\ Rev.} \textbf{76} (1949) 749--759.
+\bibitem{foot} R.~Foot, A note on Koide's lepton mass relation, arXiv:hep-ph/9402242 (1994).
+\bibitem{brannen} C.~A.~Brannen, The lepton masses, unpublished note (2006).
+\bibitem{pdg} Particle Data Group, Review of Particle Physics, W-boson mass review, 2026 edition.
 \end{thebibliography}
 \end{document}
 

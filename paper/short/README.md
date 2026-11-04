@@ -1,17 +1,19 @@
 # Short paper (draft)
 
-**Three frames on one kernel: duality sectors of a complex quaternion and chirality from a compensator in C⊗H⊗O** — a standalone
-physics paper (about 17 pages) on what holds in the Quantum Sphaera Companion; the Companion stays the full record.
+**Three readouts of one kernel: duality sectors, time reversal and a compensator-form projector in C⊗H⊗O** — a standalone paper
+(16 pages) on what holds in the Quantum Sphaera Companion; the Companion stays the full record.
 
-Structure (author decision 2026-11-04: written as a physics paper, OP5 as a separate mathematics paper, see `../op5/`):
-`p1_intro.tex` introduction with literature and main results; `p2_kernel.tex` kernel and Lorentz structure; `p3_frames.tex` duality frames,
-compensator, doublet and state disk; `p4_cm.tex` compensator matrix; `p5_generation.tex` one generation from C⊗H⊗O, anomaly selection,
-triality; `p6_pheno.tex` frame offset, counting reading, matter fraction, masses, mixing, registered predictions; `p7_discussion.tex`;
-`p8_conclusions.tex`; appendices `appA_earlier.tex` (claims of the longer version that do not hold), `appendix_method.tex`,
-`appendix_qam.tex` (key statements in standard and QAM notation). Build: `pdflatex main.tex` twice.
+History: physics-article version of 4 Nov 2026; then revised after an internal referee report (`review/referee_report_2026-11-04.md`,
+independent agent with the PDF only): neutral sector names in the mathematics, a separate section on the readout hypothesis (matter and
+tachyon readings differing in the direction of time; three appearances of time reversal; limits against Feynman–Stückelberg), the
+C⊗H⊗O section reframed as selection of the weak SU(2) (Pati–Salam) with comparison to Baez–Huerta, Krasnov and Furey–Hughes, the
+compensator-matrix material folded into Section 3, numerical readouts marked as speculative with data at registration, scheme dependence
+and look-elsewhere caveat, and the appendix on withdrawn claims replaced by a short paragraph. OP5 is material for a separate paper
+(`../op5/`).
 
-References: journal data checked against INSPIRE on 4 Nov 2026 for all entries with an arXiv number (corrected: page ranges of
-Domagała–Lewandowski and Meissner; added the journal versions of Boyle, DESI DR2 and JUNO). Not in INSPIRE and taken as standard:
-Günaydin–Gürsey, Henneaux–Teitelboim, Koide (confirmed), Hopf 1931/1935, Dixon, Bryant et al., Seiler.
+Files: `p1_intro`, `p2_kernel`, `p3_frames`, `p5_generation`, `p6_readout`, `p7_numbers`, `p8_discussion`, `p9_conclusions`,
+`appendix_method`, `appendix_qam`. Build: `pdflatex main.tex` twice.
 
-Before submission: have the text read by someone without prior knowledge.
+References: journal data checked against INSPIRE (4 Nov 2026) for all entries with an arXiv number. Not checked there and taken as
+standard: Günaydin–Gürsey, Henneaux–Teitelboim, Geng–Marshak, Minahan–Ramond–Warner, Stueckelberg 1942, Feynman 1949, Hopf, Dixon,
+Bryant et al., Seiler, Brannen (unpublished note), PDG 2026 W-mass value (taken from the referee report).
