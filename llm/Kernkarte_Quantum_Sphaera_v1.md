@@ -2644,7 +2644,7 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **r84.2 H78 (nicht blind):** k174-Form (nur Spinor gedreht): Skalar (a−b)X/2 − (a+b)V, stabil, m_eff² = γm²; Weyl anisotrop, quer zu n γ-fach → ausgeschlossen (Elektron 10⁻¹³…10⁻¹⁵). δ fällt mit reeller Wirkung heraus. δ-Probe Lauf 1 offengelegt.
 - **r84.3 H79 (nicht blind):** vollständiger komplexer Boost (S = −iσ_z, Λ(iπ) auf das Argument), holomorphe Adjungierte: Bild −L_M, Wirkung (a−b)S_M, isotrop, stabil, K3 erfüllt. **Autorentscheidung:** holomorph.
 - **r84.4 H80/H81 (nicht blind, k196):** δ = 0: keine neue Dynamik (Bild = Universum vor dem Urknall, Nähe Boyle–Finn–Turok). δ ≠ 0: τ* = β_sym δ/(1+β_sym) (Strahlung), regulär singulär, Modenauswahl; H81c quantitativ widerlegt.
-- R_chk = (1,1,0); Guards unverändert. OP5 offen. Lokal 1328 Seiten, 3972 Labels, Overfull 45, harte Werte 0.
+- R_chk = (1,1,0); Guards unverändert. OP5 offen. Lokal 1328 Seiten, 3972 Labels, Overfull 45, harte Werte 0. PR #69 gemergt als 99babde.
 
 ## 8. Änderungsprotokoll
 
