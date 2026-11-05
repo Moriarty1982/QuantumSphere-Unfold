@@ -34,7 +34,7 @@ Anlass: I4 (Kondensation tachyonischer Moden als Quelle von Masse und Vakuumener
 1. Skalar- bzw. Higgs-Sektor in W1 aufnehmen (Dublett nach r44, Potential, Kopplungen über die Konnektoren r44.1(b)).
 2. Prüfen, ob die Kopplungsformen der Ablage (r47 Maske, r52–r54 Formen K und S, r55 Lesart je Teilchenart) eine Yukawa-Kopplung zu einem T-Partner des Neutrinos enthalten oder ausschließen.
 3. Erst dann I4 rechnen (Kondensation auf FRW), mit vorab festgelegter Masse und Kopplung.
-**PR #65 gemergt als 8b32400** (5.11., 17:16; alle W1-Notizen unter `notes/research/v4_10_0_w1/`, Vorab-Notizen H69–H73 unter `notes/research/predictions/`, Wiki). Als Nächstes Runde r81 bauen, mit den Korrekturen zu r44 (Zeitumkehr statt Tachyon-Abbildung, k178) und k182 (H73-Wert).
+**PR #65 gemergt als 8b32400** (5.11., 17:16; alle W1-Notizen unter `notes/research/v4_10_0_w1/`, Vorab-Notizen H69–H73 unter `notes/research/predictions/`, Wiki). **Runde r81 gebaut** (lokal 2a5dfd4: 1319 Seiten, 3956 Labels, Overfull 45, harte Werte 0, Guard-Linter 0); **PR #66** offen (`research/v4.10-r81-wirkung`), CI grün. Merge nur nach „PR 66 mergen“; danach AGENTS-Zeile r81 und Kernkarte K131 um „PR #66 gemergt als …“ ergänzen. Ursprünglich geplant: Runde r81, mit den Korrekturen zu r44 (Zeitumkehr statt Tachyon-Abbildung, k178) und k182 (H73-Wert).
 
 ## Danach
 - Wirkung auf einen einfachen symmetrischen Ansatz (homogen, isotrop) reduzieren und prüfen, ob der Vakuumterm frei bleibt (W7).
