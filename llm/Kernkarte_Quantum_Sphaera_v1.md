@@ -2665,7 +2665,7 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **r86.2 H88 (nicht blind):** Erzeuger kovariant, Torsion −(3/16)κ j·j aus 24 Kontorsionskomponenten, Weyl-Gleichung exakt, Ward (M hermitesch).
 - **r86.3 H89 (nicht blind):** T^(4f) = (3κ/16) j² g (Λ-Form, Höhe nicht konstant); homogen ρ = p = (3κ/16) n² > 0 (steife Materie); erste Ordnung = −Belinfante, symmetrisch. Zwei Fehler im Prüfcode offengelegt.
 - **r86.4 Korrektur zur W1-Notiz:** Vorzeichen von ρ zustandsabhängig; „nicht wie Λ“ nur für den ganzen Tensor; r81.1(c) bleibt.
-- Offen: volle nichtlineare Einstein-Gleichung, Bianchi. R_chk = (1,1,0); Guards unverändert. OP5 offen. Lokal 1335 Seiten, 3982 Labels, Overfull 58 (MiKTeX 25.12; keine in r86), harte Werte 0. PR #72 offen.
+- Offen: volle nichtlineare Einstein-Gleichung, Bianchi. R_chk = (1,1,0); Guards unverändert. OP5 offen. Lokal 1335 Seiten, 3982 Labels, Overfull 58 (MiKTeX 25.12; keine in r86), harte Werte 0. PR #72 gemergt als e6e55cc.
 
 ## 8. Änderungsprotokoll
 
