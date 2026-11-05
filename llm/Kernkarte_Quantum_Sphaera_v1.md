@@ -2634,7 +2634,7 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **r83.3 H77 (nicht blind):** Tachyonbild einer Wirkung nach Lesart B (Kinematik fortgesetzt, X ↦ −X, Konstanten und Potentiale bleiben); A (L_T = −L_M) gibt Geist-Kopie ohne Tachyon, B′ verletzt r81/F3.
 - **r83.4 Geist-Kondensation unter B:** X/2 + cX² ↦ −X/2 + cX², stabiles Kondensat X₀ = 1/4c, w = −1, eigener Rahmen, kein Zerfall; cX² Eingabe, Höhe frei.
 - **Korrektur zu r82.1(b), (c):** zurückgezogen; Higgs-Bild unter B um 0 stabil (k192b), Vakuumenergie a·V_min. r82.1(a), r82.2–4 bleiben.
-- R_chk = (1,1,0); Guards unverändert. OP5 offen. Lokal 1325 Seiten, 3967 Labels, Overfull 45, harte Werte 0.
+- R_chk = (1,1,0); Guards unverändert. OP5 offen. Lokal 1325 Seiten, 3967 Labels, Overfull 45, harte Werte 0. PR #68 gemergt als e253208.
 
 ## 8. Änderungsprotokoll
 
