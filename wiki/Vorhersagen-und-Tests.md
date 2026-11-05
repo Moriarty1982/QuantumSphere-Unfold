@@ -84,6 +84,9 @@ Zu H46: Eine Bestätigung würde die Kette r55–r60 prüfen, nicht die Lesart a
 | H84 | Quantenmoden sind an der Epoche τ* singulär, Energiedichte ∝ 1/|τ − τ*| mit Vorzeichenwechsel (nicht blind) | bestätigt (E·|τ − τ*| → −0,150 / +0,149) (r85) |
 | H85 | Weicher komplexer Übergang am Urknall: Grenzfall langer Wellen (a), Mischung verschwindet bei kurzen Wellen (b) (teilweise nicht blind) | a, b verfehlt (Rollen von C und D vertauscht, Konvergenz linear); nachträglich CPT-Zuordnung bemerkt (r85) |
 | H86 | CPT-Zuordnung, exponentieller Abfall der Beimischung, Grenzfall langer Wellen, Asymmetrie der Drehsinne, an neuen Einstellungen (nicht blind, nachträglich motiviert) | bestätigt; Abfall-Steigung 2,67 statt π, knapp im Kriterium (r85) |
+| H87 | Wolfram-Gegenprobe zu H86: Werte auf 10⁻⁵ (a), Steigung des Abfalls bei kΔ = 20–30 innerhalb 3 % von π (b), Formeln des scharfen Übergangs symbolisch (c) (nicht blind) | a, c bestätigt; b widerlegt wie formuliert (2,956, 5,9 % unter π); nachträglich Fit mit Potenzvorfaktor s ≈ π (r86) |
+| H88 | Unabhängige Herleitung der W1-Feldgleichungen: Erzeuger, Torsion −(3/16)κ j², Weyl-Gleichung, Ward-Identität (nicht blind) | bestätigt, keine Abweichung (r86) |
+| H89 | Energie-Impuls-Tensor von W1: Vier-Fermionen-Anteil, homogener Zustand, Belinfante aus der Vierbein-Variation (nicht blind) | bestätigt: T^(4f) in Λ-Form, homogen ρ = p > 0, erste Ordnung = −Belinfante; zwei Fehler im Prüfcode offengelegt (r86) |
 
 ## Erkundungen ohne Vorab-Notiz
 

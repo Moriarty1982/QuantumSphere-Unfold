@@ -47,3 +47,9 @@ Mit j^a = Σ_s ψ_s†σ̄^aψ_s (alle 16 Zustände) und j^a_J = Σ_s J_s ψ_s�
 - Feldgleichungen 1–3 symbolisch mit sympy aus der Wirkung ableiten (bisher punktweise numerisch für den Torsionsteil, Rest aus der Standardtheorie übernommen) und die Bianchi- und Ward-Identität explizit prüfen.
 - Skalar- bzw. Higgs-Sektor nach r44 dazunehmen (Massenterme antilinear, H-Quantenzahlen); erst dort kann ein Vakuumterm entstehen (W7).
 - Test Tr(M₁₆ P_C7) ≡ 0 mod HC: braucht zuerst eine konkrete Definition von „mod HC“; mit 𝓜 = λ₀C_ch + λ₁(1 − C_ch) (r42.1(e)) ist Tr(𝓜 C_ch) = 16λ₀. Frage an den Autor.
+
+## Nachtrag (5.11., H88, Wolfram)
+Unabhängige Herleitung mit Wolfram (`llm/k203_w1_feldgleichungen.wl`): Erzeuger kovariant (D_μ j^c = ∂_μ j^c + ω_μ{}^c{}_b j^b); Torsion aus den Definitionen mit allen 24 Kontorsionskomponenten → L_eff = −(3/16)κ j·j (Gesamtstrom), wie k173; Weyl-Gleichung 1 per Variationsableitung exakt; Ward-Identität (M hermitesch). Nicht geprüft: Einstein-Gleichung 3 und Bianchi-Identität. Siehe `llm/Ergebnis_H88_W1_Feldgleichungen_Wolfram.md`.
+
+## Nachtrag (6.11., H89, Wolfram)
+Energie-Impuls-Tensor hergeleitet (`llm/k204_w1_einstein.wl`): Vierbein-Variation erster Ordnung mit torsionsfreiem Spinzusammenhang = −Belinfante, symmetrisch. Der Vier-Fermionen-Anteil allein gibt T^(4f) = (3κ/16) j² g_μν (Λ-Form, Höhe ∝ j², nicht konstant). Für einen homogenen Zustand (zwei entgegengesetzte Spins, Moden positiver Frequenz) ist der ganze Tensor ρ = p = (3κ/16) n² > 0. **Korrektur zur Lesart oben:** „p = ρ“ stimmt für den ganzen Tensor; „ρ ∝ −κn², Vorzeichen konventionsabhängig“ trifft nicht zu, das Vorzeichen hängt am Zustand (hier positiv); „nicht wie Λ“ gilt für den ganzen Tensor, nicht für den Vier-Fermionen-Term allein. „W1 erzeugt keinen Vakuumterm“ bleibt. Siehe `llm/Ergebnis_H89_W1_Einstein_Gleichung.md`.

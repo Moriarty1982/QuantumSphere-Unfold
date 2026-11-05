@@ -10881,3 +10881,145 @@ R_{\rm glob}^{(v490\text{-}r85,+)}=(0,1,1,1,1),
 \]
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r86 Source-Only: Independent Checks with a Second System: the Big-Bang Admixture and the Field Equations of W1}
+\addcontentsline{toc}{section}{v4.9.0-r86 Source-Only: Independent Checks with a Second System: the Big-Bang Admixture and the Field Equations of W1}
+\label{sec:v490-r86-wolfram-checks}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layers v4.9.0-r81 to r85 rest on Python and sympy scripts written in the same sessions (\S\ref{sec:v490-r81-joint-action-w1},
+\S\ref{sec:v490-r85-masses-cpt}).  On 5 and 6 November 2026 a second, independent system (Wolfram Language through a connector) was used to
+recompute the big-bang transition of r85.6 and to derive the field equations of the joint action W1 from their definitions.  This layer records
+three pre-registered tests (H87--H89, all not blind, since the expected values were known), the errors found in the checking code, and a
+correction to the reading of the energy--momentum tensor in the W1 notes.  The notes are
+\texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r86/}.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r86 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r86 results}
+\label{subsec:v490-r86-results}
+
+\paragraph{Theoremlet v4.9.0-r86.1 (H87: the admixture at the big bang, second system).}
+Pre-registered (commit \texttt{61b7132}, not blind).
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Confirmed.  Direct integration in Wolfram (working precision 30) reproduces the values of H86 (r85.6(c)) with relative deviations
+\(2.6\times10^{-13}\), \(7\times10^{-11}\), \(5\times10^{-9}\), \(5\times10^{-7}\) at \(k\Delta=2,4,6,8\); the least accurate value is the scipy value at \(k\Delta=8\).
+\item[(b)] Refuted as formulated.  For large \(k\Delta\) the mode equation was integrated along \(\tau=x+ih\) below the singularity of
+\(\operatorname{sech}^2\) at \(i\pi\Delta/2\) (\(h=0.9\) and \(0.95\) times \(\pi\Delta/2\)); the boundary values at \(\operatorname{Re}\tau\to\pm\infty\) are unchanged and the
+problem is well conditioned (checks at \(k\Delta=4,8\) against the real axis to \(3\times10^{-10}\); both lines agree to \(1.5\times10^{-8}\)).  From
+\(|C|=4.23\times10^{-12}\) at \(k\Delta=10\) to \(1.30\times10^{-37}\) at \(30\) the local slopes are \(2.925\), \(2.912\), \(2.936\), \(2.975\); between \(20\) and \(30\) the
+slope is \(2.956\), \(5.9\%\) below \(\pi\), outside the \(3\%\) criterion.
+\item[(c)] Confirmed.  The sharp transition of r85.5 symbolically: \(C_0=(a+b)/(2a)\), \(D_0=(a-b)/(2a)\), \(\alpha=(1+x)/(2\sqrt x)\),
+\(\beta=(1-x)/(2\sqrt x)\), \(|\alpha|^2-|\beta|^2=1\); numerically \(\beta/\alpha=0.53634\), \(n=0.40382\).
+\end{enumerate}
+\emph{Noticed afterwards (not pre-registered).}  The local slope rises slowly on \(k\Delta\in[15,30]\).  A fit
+\(\ln|C|=c_0+p\ln(k\Delta)-s\,k\Delta\) gives \(s=3.150\), \(p\approx4.8\) (exact through \(20,25,30\)) or \(s=3.077\), \(p\approx3.0\) (least squares on
+\(15\)--\(30\)): compatible with \(e^{-\pi k\Delta}\) times a large power prefactor.  The position of the singularity fixes the exponent; the prefactor
+depends on the strength \(\ln(a/b)-i\pi\) and is not perturbative (the first Born approximation is off by a factor \(2.2\) at \(k\Delta=8\)).  A
+confirmation needs a new pre-registered test with a fixed fit model.
+
+\paragraph{Theoremlet v4.9.0-r86.2 (H88: the field equations of W1 from their definitions).}
+Pre-registered (commit \texttt{06a8380}, not blind).  All four parts confirmed, no deviation.
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Generator: with \(\Sigma^{ab}=\tfrac14(\sigma^a\bar\sigma^b-\sigma^b\bar\sigma^a)\), \(\Sigma^{ab\dagger}\bar\sigma^c+\bar\sigma^c\Sigma^{ab}=-(\eta^{bc}\bar\sigma^a-\eta^{ac}\bar\sigma^b)\)
+in all \(64\) components, hence \(D_\mu j^c=\partial_\mu j^c+\omega_\mu{}^c{}_b\,j^b\).  The alternative ordering \(\tfrac14(\bar\sigma^a\sigma^b-\bar\sigma^b\sigma^a)\) is not
+covariant.
+\item[(b)] Torsion: from \(R^{ab}{}_{\mu\nu}=\partial\omega-\partial\omega+\omega\omega-\omega\omega\) and the symmetric spinor coupling, eliminating all \(24\)
+contorsion components for two Weyl spinors gives exactly \(\mathcal L_{\rm eff}=-\tfrac3{16}\kappa\,j\cdot j\) with the total current (r81.1(b)).  For a
+single Weyl spinor \(\mathcal L_{\rm eff}\) vanishes, since its current is null.
+\item[(c)] Weyl equation: the variation with respect to \(\psi^\dagger\) is exactly
+\(i\bar\sigma^\mu\partial_\mu\psi-qJA_\mu\bar\sigma^\mu\psi-\tfrac{3\kappa}{8}j_a\bar\sigma^a\psi=0\).
+\item[(d)] Ward identity: \(M=qJA_\mu\bar\sigma^\mu+\tfrac{3\kappa}{8}j_a\bar\sigma^a\) is hermitian, hence \(\partial_\mu j^\mu=0\) on solutions.
+\end{enumerate}
+
+\paragraph{Theoremlet v4.9.0-r86.3 (H89: the energy--momentum tensor of W1).}
+Pre-registered (commit \texttt{6355d15}, not blind).  All three parts confirmed.
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] The vierbein variation of \(e\,\mathcal L_{4f}\) at fixed spinors gives \(T^{(4f)}_{\mu\nu}=-g_{\mu\nu}\mathcal L_{4f}=\tfrac{3\kappa}{16}\,j^2\,g_{\mu\nu}\): on
+its own the four-fermion part has the form of a \(\Lambda\) term (\(p=-\rho\)), with a height \(\propto j^2\) that is not constant.
+\item[(b)] Two Weyl fields of opposite spin, \(\psi_s=e^{-i(3\kappa n/8)t}\chi_s\), solve the equation of r86.2(c) exactly with total current
+\((n,0,0,0)\).  On this solution \(\mathcal L_{\rm kin}=3\kappa n^2/8\), \(\mathcal L=3\kappa n^2/16\), and the whole tensor
+\(T_{\mu\nu}=T^{\rm Bel}_{\mu\nu}-g_{\mu\nu}\mathcal L\) is \(\rho=p=\tfrac{3\kappa}{16}n^2>0\): stiff matter.
+\item[(c)] The vierbein variation to first order around flat space, with the spin connection solved from \(de+\omega\wedge e=0\) rather than
+inserted, is on a solution (two plane waves) exactly minus the Belinfante tensor (deviations \(7\times10^{-15}\) and \(5\times10^{-15}\) at values of size
+\(30\)--\(90\)) and exactly symmetric.  This justifies the form used in (b).
+\end{enumerate}
+\emph{Disclosure.}  The first run of (c) exceeded the time limit of the connector and was reduced (spinors inserted as a solution, \(h\),
+\(\partial h\) kept as symbols; no change of content).  The second run had an error in the checking code (the conjugate transpose also
+conjugated the real symbols \(dh\)).  The third run disagreed (non-zero antisymmetric part); following the pre-registered order the
+conventions were checked first, and the contraction \(\omega_{\mu ab}\Sigma^{ab}\) had carried extra \(\eta\) factors.  After the correction everything
+agrees.  The disagreement lay in the checking code, not in W1.
+
+\paragraph{Correction v4.9.0-r86.4 (reading of the W1 notes).}
+The W1 notes of r81 (\texttt{llm/\allowbreak Wirkung\_W1\_Dixon\_U1.md}) read the four-fermion influence as ``\(p=\rho\), \(\rho\propto-\kappa n^2\), sign
+convention-dependent, not like \(\Lambda\)''.  After r86.3: \(p=\rho\) is right for the whole tensor; the sign of \(\rho\) depends on the state, not on a
+convention, and is positive for modes of positive frequency; ``not like \(\Lambda\)'' holds for the whole tensor, not for the four-fermion term on
+its own, which cannot be separated physically from the kinetic part.  r81.1(c) (W1 produces no vacuum term) is not affected: the homogeneous
+state is stiff matter, not \(\Lambda\).
+
+\paragraph{Proof and measurement sources.}
+Wolfram code \texttt{k202\_\allowbreak wolfram\_\allowbreak gegenprobe.wl}, \texttt{k203\_\allowbreak w1\_\allowbreak feldgleichungen.wl},
+\texttt{k204\_\allowbreak w1\_\allowbreak einstein.wl} and the notes in \texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r86/}; pre-registrations and
+results H87--H89 in \texttt{notes/\allowbreak research/\allowbreak predictions/}.  \(\square\)
+
+\paragraph{Consequence.}
+The numbers of r85.6 are confirmed by a second system; the admixture at the big bang falls off with a rate close to \(\pi\) per unit
+\(k\Delta\), with a power prefactor, so the cut-off scale is about \(1/(\pi\Delta)\) and \(\Delta\) stays free.  The field equations of W1 are derived
+independently up to the full non-linear Einstein equation and the Bianchi identity: generator, torsion, Weyl equation, Ward identity, and
+the energy--momentum tensor as the source to first order.  The foundation of r81--r85, as far as it rests on these equations, is firmer.
+OP5 is not closed.
+
+\subsection*{v4.9.0-r86 status in the three frames}
+\label{subsec:v490-r86-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item r86.1 checks the transition of r85.6 under G2 (frame T before, frame M after the big bang) with the weights of frame M; the photon frame P
+gives no admixture (\(n=0\)), unchanged.
+\item r86.2 and r86.3 concern the matter part of W1 in frame M.  The tachyon image under the second reading (r84) multiplies the action by the
+weights \(a\), \(b\) and does not change the form of the equations; no frame-free statement is made beyond that.
+\end{itemize}
+
+\subsection*{v4.9.0-r86 register entries}
+\label{subsec:v490-r86-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r86\\
+\midrule
+H86 values (r85.6(c)) & confirmed by a second system (H87a)\\
+decay of the admixture & rate near \(\pi\) with power prefactor (afterwards); \(3\%\) criterion missed (H87b)\\
+W1 generator, torsion, Weyl, Ward & derived from the definitions (H88)\\
+energy--momentum tensor of W1 & minus Belinfante to first order; homogeneous state \(\rho=p>0\) (H89)\\
+four-fermion term alone & \(\Lambda\) form with non-constant height; W1 vacuum term still absent\\
+full Einstein equation, Bianchi & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r86 ledger and guard update}
+\label{subsec:v490-r86-ledger-guard}
+
+\[
+R_{\rm chk}^{v490\text{-}r86}=(1,1,0)
+\]
+for (r85.6 confirmed independently; W1 field equations derived to first order; full Einstein equation open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r86,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r86}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
