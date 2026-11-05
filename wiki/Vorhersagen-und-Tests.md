@@ -71,6 +71,8 @@ Zu H46: Eine Bestätigung würde die Kette r55–r60 prüfen, nicht die Lesart a
 | H71 | Massiver Partner: Antiteilchen/Spiegelpartner normal massiv, Tachyonbild tachyonisch (a, b); das Tachyonbild erfüllt die Strombilanz der komplexen Lesart (c) | a, b bestätigt (ω² = k² − m² mit negativer Norm); c widerlegt: raumartiger Strom, keine Variante mit Masse erfüllt die Bilanz |
 | H72 | Ein Gas tachyonischer Moden kann einen Λ-artigen Term erzeugen (a); seine Höhe ist frei (b); die Frame-Gewichte legen ihn bei einem Impuls fest (c) | a, b bestätigt (p = −ρ isotrop aus Moden beider Normvorzeichen auf zwei Impulsschalen); c widerlegt |
 | H73 | Bezugszustände der Frames (Materie in Ruhe, Tachyon an der Schwelle) mit den Gewichten des Materie-Frames geben w ≈ −1 | widerlegt: w = −β_sym²/3 = −0,10, ohne freie Parameter; nachträglich im Tachyon-Frame −1,105 (nicht vorregistriert) |
+| H74 | Direkte Kopplung εφχ zwischen Materie- und Tachyonsektor: gleiche Spektren instabil für jedes ε > 0, verstimmte beschränkt unterhalb einer Schwelle (nicht blind) | bestätigt: Rate ε/2ω (gemessen 5,011·10⁻⁴, 4,985·10⁻³, 0,0498); verstimmt Schwelle |ω₁²−ω₂²|/2; Lauf 1 zu kurz geplant, Lauf 2 offengelegt (r82) |
+| H75 | Gravitation als einzige Kopplung: bei Photon-Gewichten keine exponentielle Instabilität (a), Jeans-Rate bei Materie-Gewichten (b), Bondi-Durchgehen (c) (nicht blind) | b, c bestätigt; a ohne exponentielles Wachstum, aber der Gleichtakt wächst wie t², die Schranke „höchstens linear“ war im Grad falsch (r82) |
 
 ## Erkundungen ohne Vorab-Notiz
 

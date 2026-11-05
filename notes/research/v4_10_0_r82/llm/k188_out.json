@@ -1,0 +1,55 @@
+{
+ "a gleich eps=0.001": {
+  "wachstum": 1.019786395709753,
+  "rate": NaN,
+  "dE_rel": 1.291725244562808e-14,
+  "erwartet": 0.0005
+ },
+ "a gleich eps=0.01": {
+  "wachstum": 3.742983158005273,
+  "rate": NaN,
+  "dE_rel": 2.8502658675107206e-13,
+  "erwartet": 0.005
+ },
+ "a gleich eps=0.1": {
+  "wachstum": 960146.1042681336,
+  "rate": 0.04977152555868108,
+  "dE_rel": NaN,
+  "erwartet": 0.05
+ },
+ "b verstimmt eps=0.02": {
+  "wachstum": 1.0906468491617802,
+  "rate": NaN,
+  "dE_rel": 2.202285662861181e-14
+ },
+ "b verstimmt eps=0.04": {
+  "wachstum": 1.666404397474968,
+  "rate": NaN,
+  "dE_rel": 1.6135977645194421e-13
+ },
+ "b verstimmt eps=0.06": {
+  "wachstum": 578.0115744278576,
+  "rate": 0.0162907849735462,
+  "dE_rel": 6.244004379364035e-09
+ },
+ "b verstimmt eps=0.1": {
+  "wachstum": 998118.6576063385,
+  "rate": 0.042224599272321896,
+  "dE_rel": NaN
+ },
+ "c normal eps=0.001": {
+  "wachstum": 0.9999995000000417,
+  "rate": NaN,
+  "dE_rel": 8.004461351553138e-14
+ },
+ "c normal eps=0.1": {
+  "wachstum": 0.9999995000000421,
+  "rate": NaN,
+  "dE_rel": 1.0206747014414319e-13
+ },
+ "c normal eps=0.4": {
+  "wachstum": 0.9999995000000484,
+  "rate": NaN,
+  "dE_rel": 8.893845946170154e-14
+ }
+}
