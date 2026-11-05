@@ -46,4 +46,11 @@ Ideen des Autors oder aus Sitzungen, die nicht jetzt verfolgt werden, aber wiede
   1. Arbeit am Higgs- bzw. Skalarsektor von W1;
   2. jede Rechnung mit Tachyon-Moden auf FRW über die Schwelle hinaus;
   3. die Frage nach dem Gewicht des Tachyon-Anteils in der Wirkung (Vakuumenergie eines Kondensats statt Gewichtungsregel).
-- **Stand:** zurückgestellt; nicht gerechnet.
+- **Abschätzung (5.11., Autorfrage „kann man 2 nicht abschätzen?“; Zahlen aus Vorwissen, nicht nachgeschlagen):** Ein Kondensat braucht eine Selbstwechselwirkung, etwa V = −½m²φ² + ¼λφ⁴; Vakuumänderung ΔV ≈ m⁴/(4λ).
+  - Higgs als Kondensat: ΔV^{1/4} ≈ 100 GeV gegen ρ_Λ^{1/4} ≈ 2,2 meV, also rund 10⁵⁵ zu viel (bekanntes Λ-Problem).
+  - Eigener tachyonischer Sektor mit λ ~ 1: m ≈ 2–3 meV. Das ist die Skala der Neutrinomassen (√Δm²_sol ≈ 9 meV), ein bekannter Zufall (Modelle mit massenvariablen Neutrinos); in der Ablage hat ν^c als einziges einen eichinvarianten Massenterm (r44).
+  - Vorzeichen: Ein Kondensat senkt die Energie; mit dem F3-Vorzeichen des T-Anteils wäre ΔV in der M-Lesart positiv, passend zu Λ > 0 (Lesart).
+  - Zeitpunkt: Moden überqueren die Schwelle bei k ≈ m, für meV-Massen spät (grob z ~ 10), Ansatz für „warum jetzt“ (grob).
+  - Grenzen: m und λ frei; der Nullpunkt der Vakuumenergie (Konstante C) bleibt frei.
+  - Test-Kandidat: Legen die Neutrino-Massenterme der Ablage (r44) die Masse des Tachyon-Partners fest?
+- **Stand:** zurückgestellt; abgeschätzt, nicht gerechnet.
