@@ -1,0 +1,148 @@
+
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r83 Source-Only: Quantum Decay of the Matter--Tachyon Vacuum, the Tachyon Image of an Action, and a Correction to r82}
+\addcontentsline{toc}{section}{v4.9.0-r83 Source-Only: Quantum Decay of the Matter--Tachyon Vacuum, the Tachyon Image of an Action, and a Correction to r82}
+\label{sec:v490-r83-vacuum-decay-image}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.9.0-r82 left the quantum decay of the vacuum of the matter--tachyon pairing open
+(\S\ref{sec:v490-r82-higgs-stability}).  On 5 November 2026 the author chose to check it first.  The check (H76) needed a preferred
+frame, and the search for one exposed that the tachyon image of an \emph{action} had not been fixed.  The author asked to settle this
+before choosing.  This layer records both pre-registered tests (H76, H77, both not blind), an exploration of ghost condensation as the
+frame-defining mechanism, and a correction to r82.1(b), (c).  The notes are \texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r83/}.
+Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r83 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r83 results}
+\label{subsec:v490-r83-results}
+
+\paragraph{Theoremlet v4.9.0-r83.1 (H76: gravitational decay of the vacuum).}
+Pre-registered (commit \texttt{2b47e7f}, not blind; the scaling is known from Cline, Jeon and Moore, hep-ph/0311312).  One massless
+scalar in M (positive energy) and one in T (negative energy), coupled only by a graviton, \(\kappa^2=32\pi/M_P^2\); the process is
+\(0\to\varphi\varphi\,\chi\chi\).
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] With only a Lorentz-invariant cutoff \(P^2<\Lambda^2\) the decay is allowed and its rate is unbounded: with an additional frame
+cutoff \(L\Lambda\) the ratios \(\Gamma(L)/\Gamma(L/2)\) are \(7.06,4.77,4.23,4.07,4.02,4.006,4.002\) for \(L=2,\dots,128\).  The rate grows as
+\(L^2\), the volume of boosts on the hyperboloid.
+\item[(b)] With a cutoff \(|k|<\Lambda\) in a preferred frame, \(\Gamma/V=c\,\Lambda^8/M_P^4\) with exponent \(8.000\) and \(7.997\) and
+\(c=2.25\times10^{-5}\) (relative error \(0.12\%\)).
+\item[(c)] Transferred to the gamma-ray bound of Cline et al.\ (their \(c\sim1\), \(\Lambda\lesssim3\) MeV) the bound moves by
+\(c^{-1/7}=4.6\) to \(\Lambda\lesssim14\) MeV (rough).  A T sector that is a Lorentz-invariant copy up to the Higgs scale and couples only
+gravitationally contradicts the gamma-ray background.
+\end{enumerate}
+Run~1 (direct Monte Carlo) was precise for (b) but not for (a) at large \(L\); run~2 with ten times more samples did not converge
+(heavy-tailed weights).  Run~3 computes the same quantity by Lorentz invariance (configuration in the rest frame of the matter pair,
+exact boost volume) and agrees with run~1 at \(L=1,2,4\) to better than \(1\%\).  The criterion was not changed; the method was changed
+after seeing the data.
+
+\paragraph{Theoremlet v4.9.0-r83.2 (the condensate of I4 defines no frame).}
+Exploration.  A condensate \(\langle\chi\rangle=\text{const}\) of tachyonic modes is Lorentz invariant.  It selects no frame, and the
+decay of r83.1 persists.  It can supply a scale, not the frame.
+
+\paragraph{Theoremlet v4.9.0-r83.3 (H77: the tachyon image of an action).}
+Pre-registered (commit \texttt{d087d67}, not blind).  Three readings for a scalar with \(L_M=\tfrac12(\chi_t^2-\chi_x^2)-\tfrac12m^2\chi^2\):
+A, \(L_T=-L_M\) (energy parity, used in r82.1(b)); B, the kinematics continued (\(X\mapsto-X\), constants and potentials kept), as the
+rapidity \(\eta+i\pi/2\) of r20.2 (v4.8.0) gives \(p\mapsto ip\); B\('\), \(m^2\mapsto-m^2\) with real kinematics.  Criteria: K1 tachyonic
+dispersion (r07.2, r20.2, H71); K2 massless \(L_T=-L_M\) (r81); K3 a running mode carries energy of the opposite sign (F3 on readouts).
+\begin{center}
+\small
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+reading & dispersion & K1 & K2 & K3\\
+\midrule
+A & \(\omega^2=k^2+m^2\) & no & yes & yes\\
+B & \(\omega^2=k^2-m^2\) & yes & yes & yes\\
+B\('\) & \(\omega^2=k^2-m^2\) & yes & no & no\\
+\bottomrule
+\end{tabular}
+\end{center}
+Only reading B is compatible.  Reading A gives a ghost copy with normal dispersion, not a tachyon in the sense of r20.  Applying F3 by
+dimension to every quantity is a complex change of units and changes nothing; a reading has to state what is continued, and B continues
+the kinematics.
+
+\paragraph{Theoremlet v4.9.0-r83.4 (ghost condensation under reading B).}
+Exploration (sympy).  A healthy matter side \(P_M(X)=X/2+cX^2\), \(c>0\), becomes under B \(P_T(X)=-X/2+cX^2\), the form of ghost
+condensation (Arkani-Hamed, Cheng, Luty, Mukohyama, hep-th/0312099): minimum at \(X_0=1/(4c)>0\), \(P_{XX}=2c>0\), \(\rho=1/(16c)\),
+\(w=-1\).  The condensate \(\langle\dot\chi\rangle\neq0\) selects a frame (candidate: the comoving frame of r81.5, where the M--T offset is
+fixed in conformal time), and its fluctuations carry positive energy, so the decay of r83.1 does not occur.  By the literature
+(Furukawa et al., 1001.4634) the fluctuations behave like dark matter, with \(10\,\mathrm{eV}\lesssim M\lesssim100\) GeV.  Under A the only
+extremum lies at \(X<0\) with \(P_{XX}<0\).  The term \(cX^2\) is not in W1 or W2 and is an input; the height of the \(\Lambda\)-like term
+is not fixed.
+
+\paragraph{Proof and measurement sources.}
+Scripts \texttt{k191}, \texttt{k191b}, \texttt{k191c}, \texttt{k192}, \texttt{k192b} and the notes in
+\texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r83/}; pre-registrations and results H76, H77 in
+\texttt{notes/\allowbreak research/\allowbreak predictions/}.  \(\square\)
+
+\subsection*{v4.9.0-r83 correction to r82}
+\label{subsec:v490-r83-correction}
+
+\paragraph{Correction to v4.9.0-r82.1(b), (c).}
+r82.1(b) took the tachyon image of the Higgs sector in reading A: the whole energy--momentum tensor of the image changes sign, including
+its vacuum energy, so that the vacuum energy is \((a-b)V_{\min}\) and vanishes at photon weights.  By r83.3 the image is to be formed in
+reading B.  Then a potential without derivatives keeps its sign, and the homogeneous Higgs image obeys \(\ddot\phi=+V'(\phi)\): around
+\(\phi=0\) it has \(\ddot\phi=-2\mu^2\phi\) and is stable (script \texttt{k192b}).  The tachyonic mass of the Higgs in M is a normal mass in
+the image, the image does not condense, and the vacuum energy is \(a\,V_{\min}\), not \((a-b)V_{\min}\).  \textbf{The exact cancellation of
+r82.1(b) and the transient residual of r82.1(c) are withdrawn.}  r82.1(a), r82.2 (H74), r82.3 (H75) and r82.4 stand: under B a running T
+mode is per mode the negative-energy oscillator of H74, and moving T matter has the negative inertial and gravitational mass of H75.
+The register line ``Higgs vacuum energy in the M--T pairing: cancels exactly at photon weights'' of r82 is superseded by the register
+below.
+
+\paragraph{Consequence.}
+The structure now offers a frame and stability (ghost condensation under B), but the mechanism against the excess of about
+\(10^{55}\) is gone.  A scale other than the Planck scale appears only as an upper bound from stability (\(\lesssim14\) MeV from data,
+\(\lesssim2\) meV by the naturalness argument of Kaplan and Sundrum, hep-th/0505265).  OP5 is not closed.
+
+\subsection*{v4.9.0-r83 status in the three frames}
+\label{subsec:v490-r83-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item r83.3 fixes how frame T enters an action: by the rapidity map of r20 on the kinematics, with constants and potentials kept.  The
+photon frame remains the equal-weight mixture; nothing in this layer is evaluated there.
+\item r83.1 and r83.4 work in frame M with the T sector entering through reading B; the preferred frame of r83.1(b) and r83.4 is a
+frame of the cosmological background, not one of the frames M, T, P.  The bound of v4.9.0-r09 (Reading V) on a direct coupling of the
+observer's rapidity to such a frame applies.
+\end{itemize}
+
+\subsection*{v4.9.0-r83 register entries}
+\label{subsec:v490-r83-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r83\\
+\midrule
+quantum decay of the M--T vacuum & unbounded without a preferred frame; with one, \(c\,\Lambda^8/M_P^4\), \(\Lambda\lesssim14\) MeV (H76)\\
+tachyon image of an action & reading B (kinematics continued); A excluded (H77)\\
+Higgs vacuum energy in the M--T pairing & no cancellation; \(a\,V_{\min}\) (correction to r82.1)\\
+ghost condensation under B & stable, frame-defining, \(w=-1\); \(cX^2\) input, height free\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r83 ledger and guard update}
+\label{subsec:v490-r83-ledger-guard}
+
+\[
+R_{\rm chk}^{v490\text{-}r83}=(1,1,0)
+\]
+for (quantum decay decided for the gravitational channel; reading of the tachyon image decided; scale not fixed).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r83,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r83}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
