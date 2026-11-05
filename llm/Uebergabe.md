@@ -14,6 +14,8 @@
 
 - **Erkundung `llm/Erkundung_Spinorphase_zweite_Lesart.md` (22:10):** Unter R2 ist Im S = −b·S_Weyl. Reelle Lesart: T-Bild der Fermionen unsichtbar; komplexe Lesart K: Energie-Impuls und Spindichte der Fermionen müssen verschwinden (k170 in neuer Form). Quantenmechanisch teilweise Wick-Drehung um arctan(b/a) (16,8° Materie, 45° Photon). g ↦ −g ist für Spinoren nicht eindeutig (Cl(1,3) ≇ Cl(3,1)). F3 gibt für Gewicht ½ die Phase ∓i. F3-Gewicht der Weyl-Kinetik: Autor 22:18 „mach weiter“ → **Arbeitsannahme Gewicht 1** (Vorschlag), keine ausdrückliche Festlegung.
 
+- **H84 bestätigt (Vorab d2a19f2, nicht blind, k199):** Quantenmoden (Wronski i) sind bei τ* singulär: χ′ ∝ 1/|τ − τ*|, Energiedichte E·|τ − τ*| → −0,1496 / +0,1494 (Vorzeichenwechsel, log-divergentes Zeitintegral). Modenauswahl aus H81 nur klassisch; für ein Quantenfeld spricht das für δ = 0. `llm/Ergebnis_H84_Quantenmoden_tau_stern.md`. Noch nicht auf GitHub: H82–H84, Erkundung Spinorphase → Runde r85.
+
 ## Davor (21:15)
 - **PR #68 gemergt als e253208** (5.11., 21:01; `research/v4.10-r83-vakuumzerfall`), Runde **v4.9.0-r83**: H76 (Vakuumzerfall), H77 (Tachyonbild einer Wirkung nach Lesart B), Geist-Kondensation (Erkundung), Korrektur zu r82.1(b), (c). Wiki im PR (r82-Aussagen als zurückgezogen markiert). ours-Merge der lokalen Historie bis 5a23a7b (enthält Vorab-Commits 2b47e7f, d087d67). CI-Lauf 42099084932.
 - **Lokal eingebaut (5a23a7b):** 1325 Seiten, 3967 Labels, Overfull 45, harte Werte 0, Guard-Linter 0. AGENTS-Zeile r83, Kernkarte K133 (v14.9). **Nächste Bundle-Basis: 5a23a7b.**
@@ -33,7 +35,7 @@
 - **PR #67 gemergt als ebf5048** (5.11., 19:31; `research/v4.10-r82-higgs-stabilitaet`), Runde **v4.9.0-r82**: Higgs-Sektor W2, Stabilität der M–T-Aufhebung (H74, H75), Torsions-Paarkanal (k190). Inhalt: Runde in `parts/v490-post-release-layers.tex`, Notizen und Skripte k188–k190 unter `notes/research/v4_10_0_r82/`, H74/H75 unter `predictions/`, Wiki (6 Seiten), ours-Merge der lokalen Historie bis 2d5c6c2 (enthält die Vorab-Commits b24bb08, 6aa8477). CI-Lauf 42084679668.
 - **Lokal eingebaut (2d5c6c2):** 1322 Seiten, 3961 Labels, Overfull 45, harte Werte 0, Guard-Linter 0. AGENTS-Zeile r82 und Kernkarte K132 (v14.8) nachgezogen. Nächste Bundle-Basis: 2d5c6c2.
 - **Gemergt zuvor:** PR #64 (r80), #65 (W1-Notizen), #66 (r81, b3cf9f7), #59, #51.
-- **Zuletzt vergebene Hypothese:** H83. Nächste freie Nummer H84.
+- **Zuletzt vergebene Hypothese:** H84. Nächste freie Nummer H85.
 - **Branches, die weg können** (Löschen über den Proxy gesperrt): `rechnen/h59`, `rechnen/h65`, `rechnen/h67`, `rechnen/hintergrund`, `research/v4.10-w1-wirkung-test`, nach dem Merge auch `research/v4.10-r81-…` und `research/v4.10-r82-higgs-stabilitaet`.
 
 ## Inhaltlicher Stand
