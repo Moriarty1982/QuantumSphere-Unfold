@@ -26,3 +26,14 @@ Ideen des Autors oder aus Sitzungen, die nicht jetzt verfolgt werden, aber wiede
   2. M₁₆ bekommt konkrete, ganzzahlige oder rationale Einträge;
   3. eine Schließungsbedingung scheitert und es ist unklar, welcher Platz ausbricht.
 - **Stand:** zurückgestellt; der Autor will es versuchen („mal sehen, ob es funktioniert“).
+
+## I3: OP5 umgedeutet – Λ als Folge der Dunkle-Materie-Rechnung, nicht als eigener Gegenstand
+- **Herkunft:** Autor, 5. November 2026, nach k182: „Mal angenommen, OP5 untersucht die ganze Zeit nicht die kosmologische Konstante selbst, sondern die ist nur etwas, was aus dieser Rechnung mit dunkler Materie entsteht?“
+- **Stützende Befunde:**
+  - k182: Dieselbe Materie–Tachyon-Mischung ist im Materie-Frame druckloser Staub (dunkle-Materie-artig) und im Tachyon-Frame reine Spannung (ρ = 0, p < 0); die Summe hat ρ + 3p = 0 exakt.
+  - r67: Der Companion vertauschte β² zwischen Λ und Ω_M; Zählform Ω_M = (γ_M − γ_T)/(γ_M + γ_T), Ω_Λ = 2γ_T/(γ_M + γ_T): Der Λ-Anteil hängt am Tachyon-γ.
+  - H70: Die Kopplung δ = 1/H wäre genau bei ä = 0 konsistent, und ρ + 3p = 0 ist genau ä = 0.
+- **Spannung zur Beobachtung (Vorwissen):** Das Universum beschleunigt heute (q₀ ≈ −0,55); ein rein „ausrollendes“ Universum mit ρ + 3p = 0 gilt als ausgeschlossen bzw. stark umstritten.
+- **Prüfbare Form (Vorschlag H74):** Was schließt ein Beobachter im Materie-Frame auf Ω_M, Ω_Λ und w_eff, wenn die Gravitation beide Lesarten der Mischung sieht, und wie verhält sich das zur Zählform aus r67 und zu den Daten? Vor der Rechnung festlegen, welche Lesarten die Gravitation sieht und mit welchen Gewichten.
+- **Auslöser:** jede weitere OP5- oder Λ-Rechnung; jede Rechnung zu Ω_M oder dunkler Materie.
+- **Stand:** aktiv, als nächster Kandidat.
