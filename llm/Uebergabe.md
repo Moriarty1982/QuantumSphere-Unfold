@@ -2,7 +2,12 @@
 
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.** Sie ist der Einstiegspunkt für die nächste Sitzung, egal mit welchem Modell. Die Geschichte steht in `AGENTS.md` (Rundentabelle), in der Kernkarte und in den Runden.
 
-## Stand vom 5. November 2026, ca. 21:15 (Claude)
+## Stand vom 5. November 2026, ca. 21:45 (Claude)
+- **Offen: PR #69** (`research/v4.10-r84-zweite-lesart`), Runde **v4.9.0-r84**: Geist-Kondensat auf FRW, Autorentscheidungen (zweite Lesart, holomorphe Adjungierte), H78–H81. Wiki im PR; Bestandsaufnahme und Zurückgestellte Ideen auf GitHub aktualisiert. ours-Merge der lokalen Historie bis 815da20 (Vorab-Commits ef3e1e0, 701f1ca, a5799ef). CI-Lauf 42105091376. **Merge nur nach „PR 69 mergen“.**
+- **Lokal eingebaut (815da20):** 1328 Seiten, 3972 Labels, Overfull 45, harte Werte 0, Guard-Linter 0 (ein `\bsym` außerhalb des Mathemodus vor dem Build korrigiert). AGENTS-Zeile r84, Kernkarte K134 (v15.0). **Nächste Bundle-Basis: 815da20.**
+- Nächste Schritte zur Wahl: Epoche τ* und Modenauswahl weiter (beobachtbare Folgen?), Zustand bei τ = 0 für δ = 0 (Boyle–Finn–Turok), Massenterme (Dirac, Majorana) unter der zweiten Lesart, I1, Skala.
+
+## Davor (21:15)
 - **PR #68 gemergt als e253208** (5.11., 21:01; `research/v4.10-r83-vakuumzerfall`), Runde **v4.9.0-r83**: H76 (Vakuumzerfall), H77 (Tachyonbild einer Wirkung nach Lesart B), Geist-Kondensation (Erkundung), Korrektur zu r82.1(b), (c). Wiki im PR (r82-Aussagen als zurückgezogen markiert). ours-Merge der lokalen Historie bis 5a23a7b (enthält Vorab-Commits 2b47e7f, d087d67). CI-Lauf 42099084932.
 - **Lokal eingebaut (5a23a7b):** 1325 Seiten, 3967 Labels, Overfull 45, harte Werte 0, Guard-Linter 0. AGENTS-Zeile r83, Kernkarte K133 (v14.9). **Nächste Bundle-Basis: 5a23a7b.**
 - Löschrecht für den lokalen Ordner in dieser Sitzung erteilt (git-Sperrdateien); alte `.git/stale-*lock*` aus früheren Sitzungen liegen noch dort und können weg.
