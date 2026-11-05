@@ -27,6 +27,14 @@ Auf GitHub: PR #65 (`research/v4.10-w1-wirkung`) mit allen Notizen bis b1a9f3c, 
 
 Die neuen lokalen Commits ab c741b00 sind noch nicht auf GitHub. Sie kommen mit der nächsten Runde (r81) per ours-Merge nach.
 
+
+## Nächster Block (Stand 5.11., 17 Uhr): Higgs-Sektor und Neutrinos
+Anlass: I4 (Kondensation tachyonischer Moden als Quelle von Masse und Vakuumenergie). Abschätzung: meV-Skala = Neutrinoskala. k184 (`llm/Erkundung_Neutrino_Tachyonpartner.md`): Der einzige eichinvariante Massenterm (ν^c Majorana, r44) ist nie tachyonisch; ein Tachyon-Partner bräuchte einen Dirac-artigen Konnektor mit Higgs-Quantenzahlen, die Masse wäre eine freie Yukawa-Konstante.
+1. Skalar- bzw. Higgs-Sektor in W1 aufnehmen (Dublett nach r44, Potential, Kopplungen über die Konnektoren r44.1(b)).
+2. Prüfen, ob die Kopplungsformen der Ablage (r47 Maske, r52–r54 Formen K und S, r55 Lesart je Teilchenart) eine Yukawa-Kopplung zu einem T-Partner des Neutrinos enthalten oder ausschließen.
+3. Erst dann I4 rechnen (Kondensation auf FRW), mit vorab festgelegter Masse und Kopplung.
+Parallel offen: PR #65 (alle W1-Notizen) wartet auf Freigabe; danach Runde r81 bauen, mit den Korrekturen zu r44 (Zeitumkehr statt Tachyon-Abbildung, k178) und k182 (H73-Wert).
+
 ## Danach
 - Wirkung auf einen einfachen symmetrischen Ansatz (homogen, isotrop) reduzieren und prüfen, ob der Vakuumterm frei bleibt (W7).
 - Offene Vorhersagen H15, H42, H46 warten auf Daten.
