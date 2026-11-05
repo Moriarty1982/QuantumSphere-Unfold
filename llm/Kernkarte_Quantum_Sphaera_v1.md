@@ -2605,6 +2605,18 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **r80.3 Abschluss (Autorentscheidung 4.11.):** Zweig r71–r80 geschlossen; Ergebnisse bleiben lokale Aussagen über das Vergleichsmodell; nächster Schritt eine Ebene höher: Bestandsaufnahme der Wirkungsansätze, gemeinsame Dynamik.
 - R_chk = (1,0,0); Guards unverändert. Lokal 1315 Seiten, 3947 Labels, Overfull 45, harte Werte 0. PR #64 gemergt als 42d8397.
 
+### K131 Runde v4.9.0-r81: Gemeinsame Wirkung W1, M–T-Paarung, Vakuumterm (2026-11-05)
+
+`sec:v490-r81-joint-action-w1`, Snippet `llm/v490_r81_round.tex`, Notizen `notes/research/v4_10_0_w1/`.
+- **r81.1 W1:** Einstein–Cartan + 16 linkshändige Weyl-Zustände der Ablage + U(1)_J; anomaliefrei; Torsion −3/16 κ j² (Gesamtstrom); kein Vakuumterm.
+- **r81.2–3 K-Lesart:** symmetrisch leer; sonst j = 0; mit Tachyon-Anteil (F3) nur j_M + j_T = 0, Querstrom antiperiodisch bei Versatz.
+- **r81.4–5 H69, H70:** versetztes M–T-Paar neutral; Versatz in konformer Zeit fest (δ ∝ a).
+- **r81.6 Gewichte, Frame-Prüfung:** neutrale Paarung = Photon-Mischung; auf der Kompensatorachse R = T.
+- **r81.7–8 H71–H73:** Tachyonbild mit Masse tachyonisch; Λ-artiger Term aus Tachyonmoden beider Normen möglich, Höhe frei; H73 (w = −β²/3) widerlegt; gemeinsame Rapidität: M Staub, T Spannung; keine begründete Gewichtung trifft Ω_Λ.
+- **r81.9 Konnektoren:** Majorana-ν^c nie tachyonisch; Higgs als Tachyonfeld (r06, r44); p_M ⟂ p_T; Übergang gegenläufig tachyonisch (−2m² sinh 2η); Mischungen η-frei {0, 4, 8, 16}m².
+- **Korrekturen:** r44 Lesart 1 (Zeitumkehr), r51-Liste um r44 erweitert; k182-Aussage; W1-Entwurf (ganzer Raum, C_ch = HC ≠ P_C7).
+- R_chk = (1,0,0); Guards unverändert. Lokal 1319 Seiten, 3956 Labels, Overfull 45, harte Werte 0.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2797,3 +2809,4 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - v14.4 (2026-11-04): K128 Runde v4.9.0-r78 (H65, H66).
 - v14.5 (2026-11-04): K129 Runde v4.9.0-r79 (H67).
 - v14.6 (2026-11-04): K130 Runde v4.9.0-r80 (Erkundung Fierz, H68, Abschluss Vergleichsmodell).
+- v14.7 (2026-11-05): K131 Runde v4.9.0-r81 (W1, H69–H73, Konnektoren).
