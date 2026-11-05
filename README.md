@@ -1,23 +1,19 @@
 # Quantum Sphaera Companion
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23534954.svg)](https://doi.org/10.5281/zenodo.23534954)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23991357.svg)](https://doi.org/10.5281/zenodo.23991357)
 
 Structure-first mathematical companion material for the Quantum Sphaera / Sphere Framework project.
 
 ## Current public baseline
 
-- Public version: `v4.9.0` (2026-10-21)
-- Version DOI: [`10.5281/zenodo.23534954`](https://doi.org/10.5281/zenodo.23534954) ([Zenodo record](https://zenodo.org/records/23534954))
+- Public version: `v4.10.0` (2026-11-06)
+- Version DOI: [`10.5281/zenodo.23991357`](https://doi.org/10.5281/zenodo.23991357) ([Zenodo record](https://zenodo.org/records/23991357))
 - Concept DOI: [`10.5281/zenodo.19210728`](https://doi.org/10.5281/zenodo.19210728)
-- Previous version: `v4.8.0`, DOI `10.5281/zenodo.23365244`; earlier `v4.7.0`, DOI `10.5281/zenodo.20232911`
-- Release files: [`release/v4.9.0/`](release/v4.9.0/) (PDF, single-file TeX source, SHA256 manifest)
+- Previous version: `v4.9.0`, DOI `10.5281/zenodo.23534954`; earlier `v4.8.0`, DOI `10.5281/zenodo.23365244`, and `v4.7.0`, DOI `10.5281/zenodo.20232911`
+- Release files: [`release/v4.10.0/`](release/v4.10.0/) (PDF, single-file TeX source, SHA256 manifest)
 - Repository and source history: [Moriarty1982/QuantumSphere-Unfold](https://github.com/Moriarty1982/QuantumSphere-Unfold)
 
-The current public baseline is the Zenodo-published `v4.9.0` release. It is built from the full-source research line in [`sources/research/`](sources/research/README.md), which retains the complete v4.7.0 monolith in preserved fragments, adds the v4.9.0 main sections (premise audit, conditional Cartan comparison and finite normal-source compatibility, Koide equal-norm condition and local kernel, HC mass identification, generation coupling and related conditional results), and carries the published v4.8.0 layers (v4.7.0-r85 to r94, v4.8.0-r01, r02) together with the layers recorded after v4.8.0 (v4.8.0-r03 to r20). The release source in `release/v4.9.0/` is a single file flattened from the modular sources. Guard and residual vectors are unchanged. Repository changes after this release should be treated as post-release maintenance, research notes, or explicitly versioned follow-up work.
-
-## 4.10 research draft
-
-The current research sources identify `4.10.0-draft`. The 30 October consolidation adds explicit state/mediator and clock comparisons, separates local identities from numerical field evidence, and corrects the historical OP5 endpoint regularization. This is an unpublished research candidate, not a new Zenodo release or an OP5 closure. See [the consolidation record](notes/research/v4_10_0_consolidation/README.md).
+The current public baseline is the Zenodo-published `v4.10.0` release, built from the full-source research line in [`sources/research/`](sources/research/README.md). It continues `v4.9.0` on the 4.10 base: the inherited main body is revised under the rule of layer v4.9.0-r25 (dead ends archived word for word in `parts/v4100-archive.tex` with number and label kept in place, known errors corrected with status notes, open statements marked), the 30 October consolidation adds state/mediator and clock comparisons and OP5 field slices, and the layers v4.9.0-r01 to r86 are appended verbatim in `parts/v490-post-release-layers.tex`. The layers record frame typing, a construction of one generation from the Dixon algebra under named choices, tests of masses and mixing, the OP5 comparison model (closed in r80), and a joint action W1/W2 with the tachyon part as a second reading of the same field; pre-registered tests H14 to H89 are listed in [`notes/research/predictions/`](notes/research/predictions/README.md). The release source in `release/v4.10.0/` is a single file flattened from the modular sources. Guard and residual vectors are unchanged; OP5 is not closed. Repository changes after this release are post-release research; new layers are named `v4.10.0-rNN`.
 
 ## Scope guard
 
@@ -27,7 +23,7 @@ Allowed public-facing language should remain local, bounded, effective, or reado
 
 ## Release-line discipline
 
-### `v4.9.x` stabilization line
+### `v4.10.x` stabilization line
 
 Use this line only for public-facing hygiene:
 
@@ -37,7 +33,7 @@ Use this line only for public-facing hygiene:
 - broken links or obvious public-facing wording defects;
 - release-note cleanup.
 
-Do not silently mutate the published `v4.9.0`, `v4.8.0` or `v4.7.0` TeX/PDF payloads.
+Do not silently mutate the published `v4.10.0`, `v4.9.0`, `v4.8.0` or `v4.7.0` TeX/PDF payloads.
 
 ### `v4.8.0` research line: Planck-Readout Metric Layer
 
