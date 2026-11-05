@@ -69,6 +69,7 @@ Zu H46: Eine Bestätigung würde die Kette r55–r60 prüfen, nicht die Lesart a
 | H69 | Ein um δ versetztes Paar aus Materie und Tachyonbild (Konvention F) hat keinen Nettostrom (genau bei Δω·δ = π mod 2π) und keinen Nettoenergie-Impuls | bestätigt: Residuen 5e-15 und 1e-15, Kreuzterme eingeschlossen; klassisch, Vorzeichen des Tachyon-Anteils als Eingabe (Notizen zu W1) |
 | H70 | Nur ein mitbewegt fester Versatz erhält das Paar auf FRW (a); falsche Kopplungen erzeugen keinen homogenen Rest (b) | a bestätigt (δ = 1/H und die Form aus thm:expansion scheitern); b widerlegt: homogener Rest, aber nicht Λ-artig, Folge verletzter Feldgleichungen |
 | H71 | Massiver Partner: Antiteilchen/Spiegelpartner normal massiv, Tachyonbild tachyonisch (a, b); das Tachyonbild erfüllt die Strombilanz der komplexen Lesart (c) | a, b bestätigt (ω² = k² − m² mit negativer Norm); c widerlegt: raumartiger Strom, keine Variante mit Masse erfüllt die Bilanz |
+| H72 | Ein Gas tachyonischer Moden kann einen Λ-artigen Term erzeugen (a); seine Höhe ist frei (b); die Frame-Gewichte legen ihn bei einem Impuls fest (c) | a, b bestätigt (p = −ρ isotrop aus Moden beider Normvorzeichen auf zwei Impulsschalen); c widerlegt |
 
 ## Erkundungen ohne Vorab-Notiz
 
