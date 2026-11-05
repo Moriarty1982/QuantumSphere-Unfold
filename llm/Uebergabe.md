@@ -5,6 +5,7 @@
 ## Stand vom 5. November 2026, ca. 23:20 (Claude)
 - **PR #70 gemergt als a5bf106** (5.11., 23:13; `research/v4.10-r85-urknall-cpt`), Runde **v4.9.0-r85**: H82–H86, Erkundungen Spinorphase und Urknall, Autorentscheidung G2, Arbeitsannahme F3-Gewicht 1. Wiki im PR; Bestandsaufnahme auf GitHub aktualisiert. ours-Merge der lokalen Historie bis 13d4432 (Vorab-Commits c3f956c, 36ec8e7, d2a19f2, 4ac77a0, 851297a). CI-Lauf 42119464656.
 - **Lokal eingebaut (13d4432):** 1331 Seiten, 3977 Labels, Overfull 45, harte Werte 0, Guard-Linter 0. AGENTS-Zeile r85, Kernkarte K135 (v15.1). **Nächste Bundle-Basis: 13d4432.**
+- **Offen: PR #71** (`docs/wiki-stand-r85`): nur Wiki, zieht Home, Gesamtbild (Thesen T1, T9, T10, T11, Mindmap, Entwicklung r75–r85), Hinweise für LLMs, Versionen und Quellen, Begriffe, Dokumentführer und Vorhersagen-Kopf auf den Stand nach r85. **Merge nur nach „PR 71 mergen“.**
 - **Nächste Schritte zur Wahl:** Übergangsbedingung für Fermionen am Urknall (G2); Bedeutung der Asymmetrie der Drehsinne (Teilchen/Antiteilchen?); Dauer Δ des Übergangs (Skala); Vergleich mit Boyle–Finn–Turok (dunkle Materie als ν^c, r82.4); Gravitation und r19 (G γ¹ statt γ²); I1; Skala von Λ.
 
 ## Davor (21:45)
