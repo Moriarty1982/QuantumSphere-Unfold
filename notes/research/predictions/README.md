@@ -18,3 +18,5 @@ Layer v4.9.0-r78 (4 Nov 2026) resolves H65 (invalid by criterion; part (b), the 
 H67 (4 Nov 2026, confirmed): the four hidden conditions and their support on the cone are independent of the gauge (K₂, K₀, K₃, Q₃ and the Lorentz scalar Ψ̄Ψ all give F₆ = 477 and 6 polarizations). Scripts and logs are in `../v4_10_0_r79/llm/`.
 
 Layer v4.9.0-r79 records H67.
+
+Layer v4.9.0-r86 (5/6 Nov 2026) resolves H87 (a, c confirmed; b refuted as formulated), H88 (confirmed) and H89 (confirmed), all not blind and computed with Wolfram Language as a second, independent system. Code is in [`../v4_10_0_r86/`](../v4_10_0_r86/README.md).
