@@ -119,7 +119,7 @@ Erst `dry_run=true`, dann nach Freigabe:
 -f dry_run=false -f metadata=release/zenodo/metadata_vX_Y_Z.json -f files_glob='release/vX.Y.Z/*'
 ```
 
-Den Entwurf auf Zenodo vom Nutzer prüfen lassen. Veröffentlichen nur auf ausdrückliches Wort, mit `publish=true` und
+Den Entwurf auf Zenodo vom Nutzer prüfen lassen. **Dabei ausdrücklich die Vorschau prüfen:** Zenodo muss das Haupt-PDF als Vorschau zeigen, nicht ein Neben-PDF (bei v4.10.0 war es die Abbildung `op5-slices-9x9.pdf`, weil `tools/zenodo_publish.py` keine Vorschau setzt und die Abbildung zuerst hochlud; vom Autor von Hand korrigiert). Abhilfe: Vorschau im Entwurf setzen (InvenioRDM-Feld `files.default_preview`) oder das Haupt-PDF zuerst hochladen. Veröffentlichen nur auf ausdrückliches Wort, mit `publish=true` und
 `confirm_publish=true`.
 
 ### 7. Danach

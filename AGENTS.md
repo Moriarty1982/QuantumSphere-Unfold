@@ -25,6 +25,7 @@ verweist). Wer etwas an den Regeln ändert, ändert es **hier**.
 - **Append-only:** bestehende Runden werden nie umgeschrieben; Korrekturen kommen in eine neue Runde.
 - **Merges** auf GitHub nur nach ausdrücklicher Freigabe des Autors („PR NN mergen“).
 - **Zenodo-Veröffentlichungen:** Nach jeder Veröffentlichung auf Zenodo auf GitHub den Tag `vX.Y.Z` und ein GitHub-Release auf dem Release-Commit setzen, mit Version-DOI und Record-Link in der Release-Notiz (Autorentscheidung 2026-11-06).
+- **Zenodo-Vorschau:** Vor dem Veröffentlichen im Entwurf prüfen, dass das Haupt-PDF (`Quantum_Sphaera_Companion_vX_Y_Z.pdf`) als Vorschau ausgewählt ist, nicht ein Neben-PDF wie eine Abbildung (bei v4.10.0 falsch, vom Autor von Hand korrigiert, 2026-11-06).
 - **Wiki:** jede Repo-Änderung zieht den Ordner `wiki/` im selben PR mit; das Wiki gibt den Inhalt wieder, nicht nur Links.
 - **Keine festen absoluten Pfade** in Skripten (z. B. `C:/Users/...`); Datenordner als Argument übergeben oder relativ zum Repo auflösen.
 - **Sparsam arbeiten:** Skripte als Dateien ablegen, nur kurze Zusammenfassungen ausgeben; lange Rechnungen im Hintergrund
