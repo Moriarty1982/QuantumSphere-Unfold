@@ -6,7 +6,7 @@
 - **PR #67 gemergt als ebf5048** (5.11., 19:31; `research/v4.10-r82-higgs-stabilitaet`), Runde **v4.9.0-r82**: Higgs-Sektor W2, Stabilität der M–T-Aufhebung (H74, H75), Torsions-Paarkanal (k190). Inhalt: Runde in `parts/v490-post-release-layers.tex`, Notizen und Skripte k188–k190 unter `notes/research/v4_10_0_r82/`, H74/H75 unter `predictions/`, Wiki (6 Seiten), ours-Merge der lokalen Historie bis 2d5c6c2 (enthält die Vorab-Commits b24bb08, 6aa8477). CI-Lauf 42084679668.
 - **Lokal eingebaut (2d5c6c2):** 1322 Seiten, 3961 Labels, Overfull 45, harte Werte 0, Guard-Linter 0. AGENTS-Zeile r82 und Kernkarte K132 (v14.8) nachgezogen. Nächste Bundle-Basis: 2d5c6c2.
 - **Gemergt zuvor:** PR #64 (r80), #65 (W1-Notizen), #66 (r81, b3cf9f7), #59, #51.
-- **Zuletzt vergebene Hypothese:** H76. Nächste freie Nummer H77.
+- **Zuletzt vergebene Hypothese:** H77. Nächste freie Nummer H78.
 - **Branches, die weg können** (Löschen über den Proxy gesperrt): `rechnen/h59`, `rechnen/h65`, `rechnen/h67`, `rechnen/hintergrund`, `research/v4.10-w1-wirkung-test`, nach dem Merge auch `research/v4.10-r81-…` und `research/v4.10-r82-higgs-stabilitaet`.
 
 ## Inhaltlicher Stand
@@ -17,7 +17,7 @@
 ## Nach r82 erledigt (5.11., noch nicht als Runde gesichert)
 - **H76 (Vorab 2b47e7f, nicht blind):** Quanten-Zerfall 0 → φφ + χχ über das Graviton. a, b, c bestätigt: Lorentz-invariant divergiert die Rate ∝ L² (Boost-Volumen); mit Rahmen-Cutoff Γ/V = 2,25·10⁻⁵ Λ⁸/M_P⁴; Schranke Λ ≲ 14 MeV (grob). Lauf 2 nicht verwertbar, Lauf 3 halbanalytisch (k191c) offengelegt. Stabilität verlangt einen ausgezeichneten Rahmen (Kandidat: mitbewegter Rahmen aus H70) und einen Cutoff ≤ ~10 MeV; Kaplan–Sundrum ≲ 2 meV passt zu I4 (nachträglich). `llm/Ergebnis_H76_Vakuumzerfall.md`, Skripte k191, k191b, k191c.
 
-- **Erkundung `llm/Erkundung_Lesarten_Tachyonbild.md`:** I4-Kondensat ⟨χ⟩ ist Lorentz-invariant, liefert keinen Rahmen, heilt H76 nicht. Zwei Lesarten des Tachyonbilds einer Wirkung: A (L_T = −L_M, Energieparität, r82.1) und B (p ↦ ip, X ↦ −X, Potential bleibt). B macht aus gesunder P_M = X/2 + cX² eine Geist-Kondensation (X₀ = 1/4c, stabil, w = −1, eigener Rahmen, Anregungen DM-artig), hebt aber V_min nicht auf. **Offene Autorentscheidung: A oder B (oder zuerst Verträglichkeit mit r20/r22/H71 prüfen).**
+- **Erkundung `llm/Erkundung_Lesarten_Tachyonbild.md`:** I4-Kondensat ⟨χ⟩ ist Lorentz-invariant, liefert keinen Rahmen, heilt H76 nicht. Zwei Lesarten des Tachyonbilds einer Wirkung: A (L_T = −L_M, Energieparität, r82.1) und B (p ↦ ip, X ↦ −X, Potential bleibt). B macht aus gesunder P_M = X/2 + cX² eine Geist-Kondensation (X₀ = 1/4c, stabil, w = −1, eigener Rahmen, Anregungen DM-artig), hebt aber V_min nicht auf. Autor (5.11.): erst prüfen. **H77 bestätigt (Vorab d087d67, nicht blind, k192, k192b):** Nur Lesart B ist mit r07.2, r20.2, H71, r81 und F3 verträglich; A gibt eine Geist-Kopie ohne Tachyon. Folge: **r82.1(b), (c) nicht gedeckt** (Higgs-Bild unter B um 0 stabil, kondensiert nicht, Summe a·V_min) → Korrektur in der nächsten Runde; H74, H75, H76, r82.4 bleiben gültig. Geist-Kondensation unter B ist die zur Struktur passende Erkundung (cX² Eingabe). `llm/Ergebnis_H77_Lesart_Tachyonbild.md`.
 
 ## Nächster Schritt (Optionen, Autor wählt)
 1. Erledigt mit H76 (siehe oben). Folgefrage: Erzeugt die Struktur einen Cutoff im mitbewegten Rahmen?
