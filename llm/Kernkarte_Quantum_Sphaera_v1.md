@@ -2646,6 +2646,18 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **r84.4 H80/H81 (nicht blind, k196):** δ = 0: keine neue Dynamik (Bild = Universum vor dem Urknall, Nähe Boyle–Finn–Turok). δ ≠ 0: τ* = β_sym δ/(1+β_sym) (Strahlung), regulär singulär, Modenauswahl; H81c quantitativ widerlegt.
 - R_chk = (1,1,0); Guards unverändert. OP5 offen. Lokal 1328 Seiten, 3972 Labels, Overfull 45, harte Werte 0. PR #69 gemergt als 99babde.
 
+### K135 Runde v4.9.0-r85: Massen, Epoche τ*, Urknall als CPT-Übergang (2026-11-05)
+
+`sec:v490-r85-masses-cpt`, Snippet `llm/v490_r85_round.tex`, Notizen `notes/research/v4_10_0_r85/`.
+- **r85.1 H82 (nicht blind):** Massenterme invariant (Sᵀ ε S = ε), Gewicht a + b; Faktoren α, m_f, Majorana, G γ; m_H, ℓ_P √γ; m_W, θ_W 1. Vergleich r19: α, α_s, θ_W ja; G, ℓ_P nein.
+- **r85.2 H83 (nicht blind):** drei Regeln (R1; R2 aus g ↦ −g; R3 Metrik c·g) – keine trifft r19; G immer γ¹. R2: YM +1, Weyl −i.
+- **r85.3 Erkundung Spinorphase:** (a − ib)S_Weyl; reell unsichtbar, K verbietet Fermionen; Wick-Drehung arctan(b/a); Cl(1,3) ≇ Cl(3,1). Arbeitsannahme F3-Gewicht 1.
+- **r85.4 H84 (nicht blind):** Quantenmoden bei τ* singulär (E ∝ 1/|τ − τ*|, Vorzeichenwechsel) → für Quantenfeld δ = 0.
+- **Autorentscheidung G2:** T-Lesart vor dem Urknall, M danach (Zwei-Blatt, Boyle–Finn–Turok); H80 gilt für G1.
+- **r85.5 Erkundung scharfer Übergang:** α = (1+x)/(2√x), β = (1−x)/(2√x), x = β_sym², n = 0,404 je Mode, β/α = 1/γ.
+- **r85.6 H85 (Kriterien verfehlt), H86 (bestätigt, Δ = 2, tanh/erf):** komplexer Übergang (Wick); CPT-Zuordnung, Beimischung C exponentiell (Steigung 2,67, knapp), Asymmetrie der Drehsinne mit festem Produkt.
+- R_chk = (1,1,0); Guards unverändert. OP5 offen. Lokal 1331 Seiten, 3977 Labels, Overfull 45, harte Werte 0.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2842,3 +2854,4 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - v14.8 (2026-11-05): K132 Runde v4.9.0-r82 (W2, H74, H75, Torsions-Paarkanal).
 - v14.9 (2026-11-05): K133 Runde v4.9.0-r83 (H76, H77, Geist-Kondensation, Korrektur zu r82.1).
 - v15.0 (2026-11-05): K134 Runde v4.9.0-r84 (zweite Lesart, H78–H81, Autorentscheidungen).
+- v15.1 (2026-11-05): K135 Runde v4.9.0-r85 (H82–H86, G2, Urknall als CPT-Übergang).
