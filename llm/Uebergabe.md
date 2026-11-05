@@ -7,6 +7,7 @@
 - **Lokal eingebaut (13d4432):** 1331 Seiten, 3977 Labels, Overfull 45, harte Werte 0, Guard-Linter 0. AGENTS-Zeile r85, Kernkarte K135 (v15.1). **Nächste Bundle-Basis: 13d4432.**
 - **PR #71 gemergt als 9adebdc** (5.11., 23:19; `docs/wiki-stand-r85`): nur Wiki, zieht Home, Gesamtbild (Thesen T1, T9, T10, T11, Mindmap, Entwicklung r75–r85), Hinweise für LLMs, Versionen und Quellen, Begriffe, Dokumentführer und Vorhersagen-Kopf auf den Stand nach r85.
 - **Wolfram-Connector verbunden (5.11., 23:21).** **H87 (Vorab 61b7132, nicht blind, Code `llm/k202_wolfram_gegenprobe.wl`):** c bestätigt (Formeln scharfer Übergang symbolisch), a bestätigt (H86-Werte unabhängig auf ≤ 5·10⁻⁷), b widerlegt wie formuliert (Steigung 20–30 = 2,956, 5,9 % unter π; lokale Steigungen steigen langsam). Methode: Integration entlang τ = x + ih unterhalb der Singularität iπΔ/2 (gut konditioniert, |C| bis 10⁻³⁷). Nachträglich: Fit mit (kΔ)^p e^{−s kΔ} gibt s ≈ π (3,15 bzw. 3,08), p ≈ 3–5. `llm/Ergebnis_H87_Wolfram_Gegenprobe_Abfall.md`. Hinweis: Wolfram-Cloud bricht Rechnungen > ca. 100 s ab (Bad Gateway).
+- **H88 bestätigt (Vorab 06a8380, nicht blind, Wolfram, `llm/k203_w1_feldgleichungen.wl`):** W1-Feldgleichungen unabhängig hergeleitet: Erzeuger kovariant, Torsion −(3/16)κ j·j aus den Definitionen (24 Kontorsionskomponenten, zwei Weyl-Spinoren), Weyl-Gleichung exakt, Ward-Identität. Keine Abweichung. Offen: Einstein-Gleichung von W1 und Bianchi-Identität (Laufzeitgrenze). Nachtrag in `llm/Wirkung_W1_Dixon_U1.md`. Noch nicht auf GitHub: H87, H88 → Runde r86.
 - **Nächste Schritte zur Wahl:** Übergangsbedingung für Fermionen am Urknall (G2); Bedeutung der Asymmetrie der Drehsinne (Teilchen/Antiteilchen?); Dauer Δ des Übergangs (Skala); Vergleich mit Boyle–Finn–Turok (dunkle Materie als ν^c, r82.4); Gravitation und r19 (G γ¹ statt γ²); I1; Skala von Λ.
 
 ## Davor (21:45)
@@ -48,7 +49,7 @@
 - **PR #67 gemergt als ebf5048** (5.11., 19:31; `research/v4.10-r82-higgs-stabilitaet`), Runde **v4.9.0-r82**: Higgs-Sektor W2, Stabilität der M–T-Aufhebung (H74, H75), Torsions-Paarkanal (k190). Inhalt: Runde in `parts/v490-post-release-layers.tex`, Notizen und Skripte k188–k190 unter `notes/research/v4_10_0_r82/`, H74/H75 unter `predictions/`, Wiki (6 Seiten), ours-Merge der lokalen Historie bis 2d5c6c2 (enthält die Vorab-Commits b24bb08, 6aa8477). CI-Lauf 42084679668.
 - **Lokal eingebaut (2d5c6c2):** 1322 Seiten, 3961 Labels, Overfull 45, harte Werte 0, Guard-Linter 0. AGENTS-Zeile r82 und Kernkarte K132 (v14.8) nachgezogen. Nächste Bundle-Basis: 2d5c6c2.
 - **Gemergt zuvor:** PR #64 (r80), #65 (W1-Notizen), #66 (r81, b3cf9f7), #59, #51.
-- **Zuletzt vergebene Hypothese:** H87. Nächste freie Nummer H88.
+- **Zuletzt vergebene Hypothese:** H88. Nächste freie Nummer H89.
 - **Branches, die weg können** (Löschen über den Proxy gesperrt): `rechnen/h59`, `rechnen/h65`, `rechnen/h67`, `rechnen/hintergrund`, `research/v4.10-w1-wirkung-test`, nach dem Merge auch `research/v4.10-r81-…` und `research/v4.10-r82-higgs-stabilitaet`.
 
 ## Inhaltlicher Stand
