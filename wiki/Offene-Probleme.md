@@ -1,6 +1,6 @@
 # Offene Probleme und wo die Arbeit festsitzt
 
-**Stand: 4. November 2026, nach v4.9.0-r81.** Diese Seite beschreibt, was offen ist, warum, und was der nächste sinnvolle Schritt wäre. [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie) · [GitHub Issues](https://github.com/Moriarty1982/QuantumSphere-Unfold/issues)
+**Stand: 5. November 2026, nach v4.9.0-r82.** Diese Seite beschreibt, was offen ist, warum, und was der nächste sinnvolle Schritt wäre. [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie) · [GitHub Issues](https://github.com/Moriarty1982/QuantumSphere-Unfold/issues)
 
 ## Der gemeinsame Kern: Es fehlt eine Dynamik
 
@@ -36,7 +36,7 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
-Lokal ist OP5 über eine Detektorschwelle geschlossen ($\mathrm{OP5}_{\mathrm{eff}}$). Exakt ist es offen. Der Stand nach r69 bis r81:
+Lokal ist OP5 über eine Detektorschwelle geschlossen ($\mathrm{OP5}_{\mathrm{eff}}$). Exakt ist es offen. Der Stand nach r69 bis r82:
 - **Frame-Wechsel:** Ein passiver Frame-Wechsel beseitigt keinen Bilanzfehler.
 - **Neutralität:** „Neutral“ hat drei verschiedene Bedeutungen, und keine davon legt den Vakuumterm fest.
 - **Lichtkegel:** Der Kegel kommt aus der Clifford-Struktur. Kegeldaten legen weder eine absolute Skala noch das Gewicht eines Vakuumterms fest.
@@ -58,6 +58,7 @@ Lokal ist OP5 über eine Detektorschwelle geschlossen ($\mathrm{OP5}_{\mathrm{ef
 
 - **Eichunabhängigkeit (r79):** Die vier Bedingungen sind in fünf Eichungen gleich, auch in der kovarianten Ψ̄Ψ (H67).
 
+- **Higgs-Sektor und Stabilität (r82):** Mit dem Tachyonbild hebt sich die Higgs-Vakuumenergie bei Photon-Gewichten exakt auf. Bei direkter Kopplung der Sektoren ist das instabil (H74); bei reiner Gravitation gibt es keine exponentielle Instabilität, aber gemeinsames Durchgehen (H75). Der Torsions-Paarkanal kondensiert nur an der Planck-Skala. Offen: der Quanten-Zerfall des Vakuums in Paare, die Skala, ein zusammengesetztes Higgs.
 - **Gemeinsame Wirkung (r81):** W1 erzeugt allein keinen Vakuumterm. Ein Λ-artiger Term entsteht aus tachyonischen Moden beider Normvorzeichen, die Struktur legt seine Größe aber nicht fest. Offen: Higgs-Sektor in W1, die Skala (Masse des Tachyon-Partners, Stringspannung), Rückwirkung auf die Expansion.
 - **Hintergrund (r80):** A, h werden nicht von den Spinorblöcken erzeugt, weder über Yang–Mills noch über Klein–Gordon (H68 widerlegt). Der Vergleichsmodell-Zweig ist damit abgeschlossen (Autorentscheidung); Feinheiten wie die Lorentz-Wirkung auf die 6 Moden werden ohne eigene Dynamik nicht weiter verfolgt.
 
