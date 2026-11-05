@@ -21,7 +21,9 @@ Als Nächstes:
 1. die Feldgleichungen symbolisch mit sympy aus der Wirkung ableiten und die Bianchi- und Ward-Identität explizit prüfen;
 2. den Skalar- bzw. Higgs-Sektor nach r44 dazunehmen; erst dort kann ein Vakuumterm entstehen;
 3. P_C7 bleibt vorerst offen (Autor, 5.11.). C_ch ist der HC (`llm/Notiz_mod_HC_und_P_C7.md`). Die Lesart „mod HC = chinesischer Restsatz über Primzahl-Plätze“ steht als I2 in `llm/Zurueckgestellte_Ideen.md`; sie wird geprüft, sobald P_C7 gebraucht wird.
-4. Die M–T-Lücke soll verfolgt werden (Autor, 5.11.): K-Lesart mit Materie- und Tachyon-Komponenten nach Konvention F; zuerst klären, wie T (z → iz) auf Weyl-Strom und Dichte wirkt.
+4. M–T-Lücke (k174, `llm/Erkundung_MT_Luecke.md`): Mit Tachyon-Anteil nach Konvention F verlangt K nur j_M + j_T = 0, also keinen Querstrom zur M–T-Achse, und die Torsion verschwindet. Offen: Ist T ein eigenes Feld? Was bedeutet das umgekehrte Kinetikvorzeichen (Energie)? Folgt eine Vorhersage?
+
+Auf GitHub: PR #65 (`research/v4.10-w1-wirkung`) mit allen Notizen bis b1a9f3c, offen, Merge nur nach Freigabe.
 
 Die neuen lokalen Commits ab c741b00 sind noch nicht auf GitHub. Sie kommen mit der nächsten Runde (r81) per ours-Merge nach.
 
