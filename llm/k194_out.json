@@ -1,0 +1,60 @@
+{
+ "H78a_koeffizienten": {
+  "X": "(a - b)/2",
+  "V": "-a - b"
+ },
+ "H78a_meff2_durch_m2": "(a + b)/(a - b)",
+ "Materiegewichte": {
+  "p+": 0.7681692746537527,
+  "p-": 0.23183072534624724,
+  "a-b": 0.5363385493075055,
+  "1/gamma": 0.5363385493075055,
+  "(a+b)/(a-b)": 1.864493986664117,
+  "gamma": 1.8644939866641173
+ },
+ "H78a_delta_probe": {
+  "S_T(0)": -111.16153007491413,
+  "S_T(delta)": -111.16153007491408,
+  "rel_diff": 3.835190476136395e-16
+ },
+ "H78b_R": [
+  [
+   "1",
+   "0",
+   "0",
+   "0"
+  ],
+  [
+   "0",
+   "-1",
+   "0",
+   "0"
+  ],
+  [
+   "0",
+   "0",
+   "-1",
+   "0"
+  ],
+  [
+   "0",
+   "0",
+   "0",
+   "1"
+  ]
+ ],
+ "H78b_operator": "Matrix([[a*k_z + a*omega - b*k_z - b*omega, a*k_x - I*a*k_y + b*k_x - I*b*k_y], [a*k_x + I*a*k_y + b*k_x + I*b*k_y, -a*k_z + a*omega + b*k_z - b*omega]])",
+ "H78b_det": "-a**2*k_x**2 - a**2*k_y**2 - a**2*k_z**2 + a**2*omega**2 - 2*a*b*k_x**2 - 2*a*b*k_y**2 + 2*a*b*k_z**2 - 2*a*b*omega**2 - b**2*k_x**2 - b**2*k_y**2 - b**2*k_z**2 + b**2*omega**2",
+ "H78b_omega": [
+  "-sqrt(a**2*k_x**2 + a**2*k_y**2 + a**2*k_z**2 + 2*a*b*k_x**2 + 2*a*b*k_y**2 - 2*a*b*k_z**2 + b**2*k_x**2 + b**2*k_y**2 + b**2*k_z**2)/(a - b)",
+  "sqrt(a**2*k_x**2 + a**2*k_y**2 + a**2*k_z**2 + 2*a*b*k_x**2 + 2*a*b*k_y**2 - 2*a*b*k_z**2 + b**2*k_x**2 + b**2*k_y**2 + b**2*k_z**2)/(a - b)"
+ ],
+ "H78b_dispersion_check_(sollte 0)": "0",
+ "H78b_delta_frei": "delta tritt in der Wirkung nicht auf (Verschiebung des Arguments; Integral translationsinvariant, numerisch fuer den Skalar gezeigt)",
+ "H78b_H_hermitesch": true,
+ "H78b_eigenwerte": [
+  "-sqrt(a**2*k_x**2 + a**2*k_y**2 + a**2*k_z**2 + 2*a*b*k_x**2 + 2*a*b*k_y**2 - 2*a*b*k_z**2 + b**2*k_x**2 + b**2*k_y**2 + b**2*k_z**2)/(a - b)",
+  "sqrt(a**2*k_x**2 + a**2*k_y**2 + a**2*k_z**2 + 2*a*b*k_x**2 + 2*a*b*k_y**2 - 2*a*b*k_z**2 + b**2*k_x**2 + b**2*k_y**2 + b**2*k_z**2)/(a - b)"
+ ],
+ "H78b_q_Materiegewichte": 1.864493986664117
+}

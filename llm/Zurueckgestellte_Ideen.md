@@ -14,6 +14,7 @@ Ideen des Autors oder aus Sitzungen, die nicht jetzt verfolgt werden, aber wiede
   3. Eine Rechnung berührt β_sym als Verhältnis γ_BI/γ_string oder die String-LQG-Lesart (T11).
   4. Informationsaustausch zwischen getrennten Sektoren braucht einen Träger: Verschränkung (T12), Hawking (T11), Tachyon-Reservoir (r28–r30).
 - **Stand:** zurückgestellt; zuerst der Ein-System-Baustein.
+- **5.11., H78, Auslöser 1 getroffen:** T als zweite Lesart desselben Feldes (k174-Form) gibt für Fermionen einen eigenen, anisotropen Lichtkegel (quer zur Achse n das γ-fache), für Skalare den normalen. Zwei Lichtkegel, die sich nicht zusammenführen lassen. Dem Autor als möglicher Ausweg vorgelegt.
 - **5.11., Auslöser 3 und 4 getroffen:** Bei der Suche nach der Masse m des Higgs-artigen Übergangs-Konnektors (k185, μ² = 2m² sinh 2η) bringt der Autor eine „Masse aus Information“ ins Spiel und verweist selbst auf I1. η_sym hängt im Companion an γ_BI/γ_string (Auslöser 3); eine Masse aus Information ist ein Informationsträger zwischen Sektoren (Auslöser 4). Dazu k182: Die Summe der M- und T-Lesart hat w = −⅓, die Zustandsgleichung eines String-Gases.
   - Mögliche Rollen in I1: Die Stringspannung (Dimension Masse²) setzt die Skala μ² des Konnektors, der über die Brücke läuft; die LQG-Zustandszählung an der Naht (Durchstoßpunkte, H47/r63) oder die Entropie des Dublettzustands (r17: 0,781 bit) setzt die Informationsmenge.
   - Grenzen: γ_string ist im Companion dimensionslos, eine absolute Skala fehlt; die Landauer-Energie kT ln 2 pro Bit bräuchte eine Temperatur.
@@ -46,6 +47,7 @@ Ideen des Autors oder aus Sitzungen, die nicht jetzt verfolgt werden, aber wiede
 - **Prüfbare Form (Vorschlag H74):** Was schließt ein Beobachter im Materie-Frame auf Ω_M, Ω_Λ und w_eff, wenn die Gravitation beide Lesarten der Mischung sieht, und wie verhält sich das zur Zählform aus r67 und zu den Daten? Vor der Rechnung festlegen, welche Lesarten die Gravitation sieht und mit welchen Gewichten.
 - **Auslöser:** jede weitere OP5- oder Λ-Rechnung; jede Rechnung zu Ω_M oder dunkler Materie.
 - **Stand:** aktiv, als nächster Kandidat.
+- **5.11., r83.4 / k193:** Geist-Kondensation unter Lesart B gibt Λ-artige Konstante plus Staub (dunkle-Materie-artig) aus einem Feld; Verhältnis frei (Anfangswert C).
 
 ## I4: Expansion treibt Tachyon-Moden über die Schwelle – Kondensation als Quelle von Masse (und Vakuumenergie)?
 - **Herkunft:** Autorfrage, 5. November 2026: „Müsste sich die Expansion bei Tachyonen anders auswirken? Wäre das für die nicht eher eine Kompression?“
