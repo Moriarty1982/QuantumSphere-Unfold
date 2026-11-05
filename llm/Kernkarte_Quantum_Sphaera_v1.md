@@ -2658,6 +2658,15 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **r85.6 H85 (Kriterien verfehlt), H86 (bestätigt, Δ = 2, tanh/erf):** komplexer Übergang (Wick); CPT-Zuordnung, Beimischung C exponentiell (Steigung 2,67, knapp), Asymmetrie der Drehsinne mit festem Produkt.
 - R_chk = (1,1,0); Guards unverändert. OP5 offen. Lokal 1331 Seiten, 3977 Labels, Overfull 45, harte Werte 0. PR #70 gemergt als a5bf106.
 
+### K136 Runde v4.9.0-r86: unabhängige Prüfung mit Wolfram (2026-11-06)
+
+`sec:v490-r86-wolfram-checks`, Snippet `llm/v490_r86_round.tex`, Notizen `notes/research/v4_10_0_r86/`.
+- **r86.1 H87 (nicht blind):** a bestätigt (H86-Werte auf ≤ 5·10⁻⁷), c bestätigt (scharfer Übergang symbolisch), b widerlegt wie formuliert (Steigung 20–30 = 2,956, 5,9 % unter π). Integration entlang τ = x + ih unter iπΔ/2. Nachträglich: Fit (kΔ)^p e^{−s kΔ}, s ≈ π.
+- **r86.2 H88 (nicht blind):** Erzeuger kovariant, Torsion −(3/16)κ j·j aus 24 Kontorsionskomponenten, Weyl-Gleichung exakt, Ward (M hermitesch).
+- **r86.3 H89 (nicht blind):** T^(4f) = (3κ/16) j² g (Λ-Form, Höhe nicht konstant); homogen ρ = p = (3κ/16) n² > 0 (steife Materie); erste Ordnung = −Belinfante, symmetrisch. Zwei Fehler im Prüfcode offengelegt.
+- **r86.4 Korrektur zur W1-Notiz:** Vorzeichen von ρ zustandsabhängig; „nicht wie Λ“ nur für den ganzen Tensor; r81.1(c) bleibt.
+- Offen: volle nichtlineare Einstein-Gleichung, Bianchi. R_chk = (1,1,0); Guards unverändert. OP5 offen. Lokal 1335 Seiten, 3982 Labels, Overfull 58 (MiKTeX 25.12; keine in r86), harte Werte 0. PR #72 offen.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2855,3 +2864,4 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - v14.9 (2026-11-05): K133 Runde v4.9.0-r83 (H76, H77, Geist-Kondensation, Korrektur zu r82.1).
 - v15.0 (2026-11-05): K134 Runde v4.9.0-r84 (zweite Lesart, H78–H81, Autorentscheidungen).
 - v15.1 (2026-11-05): K135 Runde v4.9.0-r85 (H82–H86, G2, Urknall als CPT-Übergang).
+- v15.2 (2026-11-06): K136 Runde v4.9.0-r86 (H87–H89, Wolfram-Prüfung, Korrektur zur W1-Notiz).
