@@ -59,3 +59,18 @@ H69/H70 nutzten gleiche Gewichte für M und T. Mit den Frame-Gewichten von Konve
 - r44 liest die antilinearen Massenterme als „Kopplung zwischen Materie- und Tachyon-Frame“, weil sie T enthalten. In r41–r49 ist T aber die komplexe Konjugation, also die **Zeitumkehr** (z ↦ z̄, σ_z, Porttausch), nicht die Tachyon-Abbildung (z ↦ iz, σ_y). Das hat r51.1, Lesart 3, festgestellt: Korrektur der Frame-Zeilen von r41, r43, r47, r48, r49. **r44 fehlt in dieser Liste**, obwohl seine Lesart 1 („mass is a coupling between matter frame and tachyon frame“) dieselbe Verwechslung enthält. Kandidat für eine Korrektur in der nächsten Runde.
 - Damit ist „Masse koppelt M und T“ nicht belegt. Belegt ist: Massenterme sind antilinear und enthalten die Zeitumkehr.
 - In Nachtrag 3 und im Vorschlag für H71 wurde die r44-Lesart übernommen. Vor H71 ist deshalb eine kleine Frame-Prüfung nötig, auf dem Dublett von r17 mit den drei Involutionen R = σ_y (Tachyon-Abbildung), T = σ_z (Zeitumkehr, Porttausch) und J_B = σ_x. Zu klären ist, welche von ihnen (a) γ → −γ macht (das in H69 benutzte Vorzeichen), (b) die Gewichte p₊ ↔ p₋ tauscht (Materie- gegen Tachyon-Gewichte, r22) und (c) die Massen-Konnektoren enthält.
+
+## Nachtrag 5 (5.11., Frame-Prüfung k178; präzisiert Nachtrag 4)
+Auf dem Dublett ρ = ½(1 + b_xσ_x + b_zσ_z) mit Kompensator C = ½(1 + σ_x), Portgewichte ½(1 ± b_x):
+| Involution | Zustand auf der Kompensatorachse (M, b_z = 0) | Zustand abseits (b_z ≠ 0) |
+|---|---|---|
+| R = σ_y (Tachyon-Abbildung) | b → −b, Gewichte getauscht (0,768 ↔ 0,232) | b → −b, Gewichte getauscht |
+| T = σ_z (Zeitumkehr) | **dasselbe Bild wie R** | b_x → −b_x, b_z bleibt; Gewichte getauscht |
+| J_B = σ_x | nichts ändert sich | nur b_z → −b_z |
+
+- **Auf der Kompensatorachse sind Tachyon-Abbildung und Zeitumkehr ununterscheidbar.** Beide tauschen die Gewichte von M gegen die von T. Der Materie-Frame von Konvention F liegt genau dort. Deshalb ist die Verwechslung in r41–r49 und r44 so leicht passiert.
+- Sie unterscheiden sich (i) abseits der Achse, in b_z (der Kohärenz), und (ii) in der Dixon-Ablage: R lässt alle Ladungssektoren fest, T vertauscht sie und konjugiert die Ladung (r51.1(a)).
+- **Präzisierung von Nachtrag 4:** Die r44-Lesart ist halb richtig. Massenterme (antilinear, mit T) koppeln einen Zustand an einen Partner mit den **Gewichten des Tachyon-Frames**, aber dieser Partner ist zusätzlich ladungskonjugiert. Es ist nicht das Bild unter der Tachyon-Abbildung R. Für r81 ist das als Präzisierung zu r44 und r51 vorzumerken.
+- **Offen vor H71:**
+  1. Ist der Massenpartner das R-Bild, das T-Bild oder beides (auf der Achse gleich)?
+  2. Trägt das T-Bild das Vorzeichen aus F3 (γ → −γ), das in H69 dem R-Bild gegeben wurde? Auf der Scheibe ist γ = 1/|b| bei beiden gleich, das Vorzeichen ist dort unsichtbar.
