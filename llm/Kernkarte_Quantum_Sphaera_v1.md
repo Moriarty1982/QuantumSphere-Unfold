@@ -2626,6 +2626,16 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **r82.4 Torsions-Paarkanal:** Fierz j₁·j₂ = 2|Φ|², anziehend; kritisch erst bei Cutoff ≳ 1,5 M_P; einziger eichinvarianter Kanal ν^cν^c → Majorana ~M_P, See-saw m_ν ~ 10⁻⁶ eV; elektroschwaches Higgs so nicht.
 - R_chk = (1,0,0); Guards unverändert. Mechanismen ja, Skala nein (nur Planck). OP5 offen. Lokal 1322 Seiten, 3961 Labels, Overfull 45, harte Werte 0. PR #67 gemergt als ebf5048.
 
+### K133 Runde v4.9.0-r83: Vakuumzerfall, Tachyonbild einer Wirkung, Korrektur zu r82 (2026-11-05)
+
+`sec:v490-r83-vacuum-decay-image`, Snippet `llm/v490_r83_round.tex`, Notizen `notes/research/v4_10_0_r83/`.
+- **r83.1 H76 (nicht blind):** Zerfall 0 → φφχχ über das Graviton; Lorentz-invariant unbeschränkt (Γ ∝ L², Boost-Volumen); mit Rahmen-Cutoff Γ/V = 2,25·10⁻⁵ Λ⁸/M_P⁴; Schranke Λ ≲ 14 MeV (grob, nach Cline–Jeon–Moore). Lauf 2 nicht verwertbar, Lauf 3 halbanalytisch (offengelegt).
+- **r83.2:** I4-Kondensat ⟨χ⟩ Lorentz-invariant, liefert keinen Rahmen.
+- **r83.3 H77 (nicht blind):** Tachyonbild einer Wirkung nach Lesart B (Kinematik fortgesetzt, X ↦ −X, Konstanten und Potentiale bleiben); A (L_T = −L_M) gibt Geist-Kopie ohne Tachyon, B′ verletzt r81/F3.
+- **r83.4 Geist-Kondensation unter B:** X/2 + cX² ↦ −X/2 + cX², stabiles Kondensat X₀ = 1/4c, w = −1, eigener Rahmen, kein Zerfall; cX² Eingabe, Höhe frei.
+- **Korrektur zu r82.1(b), (c):** zurückgezogen; Higgs-Bild unter B um 0 stabil (k192b), Vakuumenergie a·V_min. r82.1(a), r82.2–4 bleiben.
+- R_chk = (1,1,0); Guards unverändert. OP5 offen. Lokal 1325 Seiten, 3967 Labels, Overfull 45, harte Werte 0.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2820,3 +2830,4 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - v14.6 (2026-11-04): K130 Runde v4.9.0-r80 (Erkundung Fierz, H68, Abschluss Vergleichsmodell).
 - v14.7 (2026-11-05): K131 Runde v4.9.0-r81 (W1, H69–H73, Konnektoren).
 - v14.8 (2026-11-05): K132 Runde v4.9.0-r82 (W2, H74, H75, Torsions-Paarkanal).
+- v14.9 (2026-11-05): K133 Runde v4.9.0-r83 (H76, H77, Geist-Kondensation, Korrektur zu r82.1).
