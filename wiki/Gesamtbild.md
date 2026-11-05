@@ -1,6 +1,6 @@
 # Gesamtbild: der ganze Companion auf einer Seite
 
-**Stand: 5. November 2026, Forschungsfassung 4.10.0-draft mit Runden bis v4.9.0-r85 (lokal 1331 Seiten).** Diese Seite zeigt das ganze Werk auf einmal: welche Thesen es aufstellt, wie sie zusammenhängen, wo sie im Dokument stehen und was davon heute trägt. Die einzelnen Themen werden in [Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) genauer erklärt. Wer den Companion zum ersten Mal liest, sollte mit dieser Seite anfangen, Menschen ebenso wie Sprachmodelle.
+**Stand: 6. November 2026, Forschungsfassung 4.10.0-draft mit Runden bis v4.9.0-r86 (lokal 1335 Seiten, Kandidat 1361 Seiten); Release v4.10.0 in Vorbereitung.** Diese Seite zeigt das ganze Werk auf einmal: welche Thesen es aufstellt, wie sie zusammenhängen, wo sie im Dokument stehen und was davon heute trägt. Die einzelnen Themen werden in [Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) genauer erklärt. Wer den Companion zum ersten Mal liest, sollte mit dieser Seite anfangen, Menschen ebenso wie Sprachmodelle.
 
 ## In drei Sätzen
 
@@ -51,7 +51,7 @@ mindmap
       C4, C5, C6/T2 Schließungsfragen
       Gemeinsame Wirkung W1/W2 seit r81, Skala offen
     Prüfarbeit
-      Runden r01 bis r85 seit v4.8.0
+      Runden r01 bis r86 seit v4.8.0
       Vorab-Tests H1 bis H86
       Lean-Formalisierung
       Offene Vorhersagen H9, H15, H42, H46
@@ -72,7 +72,7 @@ flowchart LR
   O --> P
   K --> M["Mastergleichung und<br/>Kompensatormatrix M16"]:::bed
   M --> F["Sonden-Schließungssystem<br/>Dirac / YM / Einstein-Grenzfälle"]:::bed
-  F --> D["gemeinsame Wirkung W1/W2<br/>(r81–r85, Skala offen)"]:::offen
+  F --> D["gemeinsame Wirkung W1/W2<br/>(r81–r86, Skala offen)"]:::offen
   D --> W["Tachyon-Anteil als zweite Lesart,<br/>Urknall als CPT-Übergang (r84–r85)"]:::bed
   D -.-> P
   F --> OP5["OP5-Vergleichsmodell<br/>Cartan-Test, vier Bedingungen,<br/>Zweig abgeschlossen (r80)"]:::bed
@@ -119,7 +119,7 @@ Der Haupttext ist kurz. Rund 85 % des Quelltexts sind Anhänge, Protokolle und P
 | **F. Offene Probleme im Haupttext** | OP1/OP2-Mathematik, Frames und Teichmüller, Zufluss und Transport, physikalische Auslesungen (Λ, OP4) | ≈ 2 % | `v470/18`–`23` |
 | **G. Synthese 4.10** | v4-Schnittstelle, Zustände/Vermittler/Uhren, OP5-Feldschnitte, Einbindung 4.8 | < 1 % | `current-v4-synthesis` … `v480-integration` |
 | **H. Anhänge** | QAM-Infrastruktur, Reparatur- und Transportprotokolle, OP-Einstieg, Rechenspezifikation (Enigma-/Bomba-Analogie), Werkzeuge der Kompensatormatrix, verschobene QAM, Leser-Hygiene, OP-Selektoren und Routen, **Atlas und OP-Beförderung** (Halo, Tunnel, Dixon-64-Bit-Code), T2-Grenze, **MM/HC-Feldschnittstelle und C4/C5** (r01–r54), Lösungskette r55–r80, Frame-Endpunkt r81–r84 | ≈ 67 % | `support-route` → `v470/07`–`36` |
-| **I. Archiv und Runden** | archivierte Sätze des Hauptkorpus, Release-Runden 4.8, Runden nach 4.8 (r03–r20), **Runden 4.9 (r01–r74)** | ≈ 18 % | `v4100-archive`, `v480-*`, `v490-post-release-layers` |
+| **I. Archiv und Runden** | archivierte Sätze des Hauptkorpus, Release-Runden 4.8, Runden nach 4.8 (r03–r20), **Runden 4.9 (r01–r86)** | ≈ 18 % | `v4100-archive`, `v480-*`, `v490-post-release-layers` |
 | **J. Literatur, Schluss** | | < 1 % | `v470/28`, `37` |
 
 Wer wenig Zeit hat, liest C, E und F und danach die Runden in I. Die Anhänge in H sind überwiegend Protokolle. Was an Aussagen neu hinzukam, ist in den Runden zusammengefasst. Ein Lesepfad mit Begründung steht im [Dokumentführer](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Dokumentfuehrer).
@@ -127,7 +127,7 @@ Wer wenig Zeit hat, liest C, E und F und danach die Runden in I. Die Anhänge in
 ## Was heute trägt, was nicht
 
 - **Trägt:** Biquaternion-Kern, Kompensator und Sektorregel; die Algebra bis zu den Oktonionen; die Konstruktion einer Generation unter benannten Wahlen; die QAM-Sprache; der Orbit-Scan als lokales Modell; die Guard-Disziplin.
-- **Bedingt:** die gemeinsame Wirkung W1/W2 mit dem Tachyon-Anteil als zweiter Lesart desselben Feldes (r81–r85, unter Autorentscheidungen); Mastergleichung und Sonden-Schließungssystem (nur Gliederung); Cartan-Vergleiche und Jet-Verträglichkeit (endlich, lokal); $\Omega_M=\beta^2$ (nur heutige Epoche); Strukturergebnisse im OP5-Vergleichsmodell (Eichsymmetrie, Involutivität ab Ordnung 6, vier versteckte Bedingungen).
+- **Bedingt:** die gemeinsame Wirkung W1/W2 mit dem Tachyon-Anteil als zweiter Lesart desselben Feldes (r81–r86, Feldgleichungen unabhängig nachgerechnet, unter Autorentscheidungen); Mastergleichung und Sonden-Schließungssystem (nur Gliederung); Cartan-Vergleiche und Jet-Verträglichkeit (endlich, lokal); $\Omega_M=\beta^2$ (nur heutige Epoche); Strukturergebnisse im OP5-Vergleichsmodell (Eichsymmetrie, Involutivität ab Ordnung 6, vier versteckte Bedingungen).
 - **Widerlegt oder archiviert:** die Herleitungen aus der Riemann-Arbeit (GUE, Einstein-Gleichung aus der Spurformel); die alte Λ-Rechnung; die frame-verschobenen Konstanten; die alten Vorhersagen P1–P6; direkte Wege vom Kompensator zu den Massen.
 - **Offen:** OP1–OP5, die Herkunft von $\beta_{\mathrm{sym}}$, eine Skala aus der gemeinsamen Wirkung (für Λ und den Übergang am Urknall), die globale Schließung C6/T2.
 
@@ -139,7 +139,8 @@ Wer wenig Zeit hat, liest C, E und F und danach die Runden in I. Die Anhänge in
 4. **r69–r74:** OP5 im numerischen Vergleichsmodell. Ergebnisse: eine Eichsymmetrie, der Cartan-Test, vier versteckte Bedingungen sechster Ordnung und eine Genauigkeitsgrenze. Die Arbeit läuft weiter, siehe [Forschungsstand](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungsstand) und [Parallele Rechnungen](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Parallele-Rechnungen).
 5. **r75–r80:** Das OP5-Vergleichsmodell wird präzisiert (Integrabilität, Kovarianz, Eichunabhängigkeit). Sein Hintergrund wird nicht von den Spinoren erzeugt; auf Entscheidung des Autors ist der Zweig damit abgeschlossen (r80).
 6. **r81–r85:** Eine gemeinsame Wirkung W1/W2 (Einstein–Cartan, Dixon-Ablage, Higgs). Das Tachyonbild einer Wirkung wird festgelegt (Kinematik fortgesetzt) und der Tachyon-Anteil als zweite Lesart desselben Feldes gebildet; damit ist er isotrop und stabil. Die Aufhebung der Higgs-Vakuumenergie aus r82 ist zurückgezogen. Mit dem Tachyon-Anteil vor dem Urknall (G2) wird der Urknall ein CPT-artiger Übergang mit einer durch β_sym festgelegten Beimischung. Eine Skala liefert die Struktur bisher nicht. Siehe [Forschungsstand](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungsstand).
+7. **r86:** Ein zweites Rechensystem (Wolfram) bestätigt die Urknall-Zahlen von r85 und leitet die Feldgleichungen von W1 aus den Definitionen her (Torsion, Weyl-Gleichung, Stromerhaltung, Energie-Impuls-Tensor in erster Ordnung). Ein homogener Fermionzustand ist steife Materie, kein Vakuumterm. Offen bleibt die volle nichtlineare Einstein-Gleichung.
 
-> **Anmerkung für LLMs und Quellenprüfung.** Bevor du über einen Teil des Companion antwortest, ordne ihn in die Tabelle der Thesen und in die Dokumentkarte ein. Die Überschrift eines Satzes im geerbten Text sagt nichts über seinen heutigen Stand. Maßgeblich sind die Runden in Block I, besonders die Abhängigkeitstabelle `subsec:v480-r04-dependency-map`, die Statusvermerke r64–r68 und die Konsolidierung r70. Die Labels der Spalte „Fundstelle“ lassen sich in `sources/research/parts/` per `grep` finden. Die Seitenzahl 1298 bezieht sich auf den lokalen Build der Forschungsfassung; die öffentliche Baseline ist v4.9.0 (DOI 10.5281/zenodo.23534954).
+> **Anmerkung für LLMs und Quellenprüfung.** Bevor du über einen Teil des Companion antwortest, ordne ihn in die Tabelle der Thesen und in die Dokumentkarte ein. Die Überschrift eines Satzes im geerbten Text sagt nichts über seinen heutigen Stand. Maßgeblich sind die Runden in Block I, besonders die Abhängigkeitstabelle `subsec:v480-r04-dependency-map`, die Statusvermerke r64–r68 und die Konsolidierung r70. Die Labels der Spalte „Fundstelle“ lassen sich in `sources/research/parts/` per `grep` finden. Die Seitenzahl 1335 bezieht sich auf den lokalen Build der Forschungsfassung (Kandidat aus `sources/research/`: 1361); die öffentliche Baseline ist v4.9.0 (DOI 10.5281/zenodo.23534954).
 
 [Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Offene Probleme](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Offene-Probleme) · [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie) · [Vorhersagen und Tests](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Vorhersagen-und-Tests) · [Begriffe](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Begriffe)
