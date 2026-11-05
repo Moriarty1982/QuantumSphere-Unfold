@@ -4,7 +4,7 @@ Werkzeugunabhängig. Das Modell ist das feste Vergleichsmodell der Sondenfelder 
 
 ## Regeln zuerst
 - Jeder Test mit Entscheidungskriterium wird vorher als `llm/Vorab_Notiz_HNN_*.md` festgeschrieben und committet; der
-  Zeitstempel zählt. Zuletzt vergeben ist H86 (H69–H86 betreffen die Wirkung W1, nicht das Vergleichsmodell; siehe Runde r81 und `notes/research/v4_10_0_w1/`).
+  Zeitstempel zählt. Zuletzt vergeben ist H87 (H69–H87 betreffen die Wirkung W1, nicht das Vergleichsmodell; siehe Runde r81 und `notes/research/v4_10_0_w1/`).
 - Erkundungen ohne Vorab-Notiz werden offen als „Erkundung“ geführt.
 - **Vorwissen-Pflicht:** Vor jeder neuen Hypothese und vor jedem Vorschlag an den Autor:
   - den Abschnitt „Bereits beantwortet“ unten lesen;
