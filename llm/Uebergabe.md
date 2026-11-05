@@ -10,10 +10,10 @@
 - **Zurückgestellte Idee I3** (Λ als Folge der Dunkle-Materie-Rechnung): Auslöser „weitere Λ-Rechnung“ durch H89 berührt (Vier-Fermionen-Term in Λ-Form), dem Autor genannt.
 - **Branches, die weg können** (Löschen über den Proxy gesperrt): `rechnen/h59`, `rechnen/h65`, `rechnen/h67`, `rechnen/hintergrund`, `research/v4.10-w1-wirkung-test`, die gemergten `research/v4.10-r69…r85-*`.
 
-## Release v4.10.0 veröffentlicht (6.11.2026, ca. 01:00)
+## Release v4.10.0 abgeschlossen (6.11.2026, ca. 01:10)
 - **v4.10.0 ist auf Zenodo öffentlich:** https://zenodo.org/records/23991357, Version-DOI **`10.5281/zenodo.23991357`**, Datum 2026-11-06, neue Version von 23534954 (v4.9.0). Veröffentlicht über den Workflow (Lauf 42132440141) auf „Ja, veröffentlichen“ des Autors. Record geprüft: vier Dateien (PDF 1360 Seiten, Einzeldatei-Quelle, Abbildung `op5-slices-9x9.pdf`, Manifest), MD5 wie lokal, Verknüpfungen isVersionOf Concept-DOI, isNewVersionOf v4.9.0, isSupplementTo GitHub.
-- **PR #73 offen** (`release/v4.10.0-prep`, e9c07e9, Worktree `$HOME/rel410`): Metadaten, Titelseite, Payload, CITATION.cff, README, GitHub-AGENTS.md, Wiki (Home, Versionen-und-Quellen, English, Gesamtbild). **Merge nur nach „PR 73 mergen“.**
-- **Nach dem Merge sofort (Regel in AGENTS.md):** Tag **`v4.10.0`** und GitHub-Release auf dem Merge-Commit setzen, Release-Notiz mit DOI und Record-Link, ohne angehängte Dateien (Muster v4.9.0: https://github.com/Moriarty1982/QuantumSphere-Unfold/releases/tag/v4.9.0). Danach Worktree `$HOME/rel410` entfernen.
+- **PR #73 gemergt als `80bdd52`** (6.11.): Metadaten, Titelseite, Payload, CITATION.cff, README, GitHub-AGENTS.md, Wiki (Home, Versionen-und-Quellen, English, Gesamtbild). Wiki-Sync läuft nach dem Merge.
+- **Tag und GitHub-Release `v4.10.0` gesetzt** auf `80bdd52` (https://github.com/Moriarty1982/QuantumSphere-Unfold/releases/tag/v4.10.0), Notiz mit DOI und Record, ohne angehängte Dateien. Worktree `$HOME/rel410` entfernt; Zweig `release/v4.10.0-prep` kann weg.
 - **Lokal schon umgestellt (81dea35):** DOI-Disziplin in AGENTS.md (v4.10.0 aktuell, v4.9.0 Vorgänger), `DOI_ROLES` in `qs.py`, Runden-Anleitung (`v4.10.0-rNN`, Labels `sec:v4100-rNN-…`, neue Schichtdatei `parts/v4100-post-release-layers.tex`), Stand im Zenodo-Skill.
 - **Noch nicht umgestellt:** der Skill `qsc-runde-einbauen` im Plugin-Ordner (nennt noch `v4.9.0-rNN` und die alte DOI; maßgeblich ist die Anleitung in `llm/anleitungen/`); die lokale Arbeitsdatei (Titelseite weiter v4.8.0, siehe Hinweis in AGENTS.md).
 - Overfull: 58 unter MiKTeX, 45 unter TeX Live (toolchain-abhängig); kein Befund.

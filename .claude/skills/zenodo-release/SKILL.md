@@ -169,4 +169,4 @@ Vorgänger, nur Provenienz), `DOI_ROLES` in `qs.py` aktualisieren.
 | Payload | Einzeldatei aus 58 `\input`-Zeilen (einzige Änderung: Abbildungspfad `figures/op5-slices-9x9.pdf` → `op5-slices-9x9.pdf`), PDF aus dem TeX-Live-Container (Lauf `42131442171`, 1360 Seiten, Overfull 45, Text per `pdftotext` identisch mit dem modularen Build), Abbildung, Manifest |
 | Upload | Lauf `42132220658` (Trockenlauf `42132152400`), drei geerbte Dateien entfernt |
 | Veröffentlicht | Lauf `42132440141` (`publish=true`, `confirm_publish=true`, `replace_files=false`) auf Freigabe des Autors im Chat; der Lauf lädt die Dateien noch einmal hoch (überschreibt gleichnamige), im Record stehen genau vier Dateien mit den lokalen MD5 |
-| Danach | Tag und GitHub-Release `v4.10.0` auf dem Merge-Commit von PR #73 (Regel in AGENTS.md: bei jeder Zenodo-Veröffentlichung) |
+| GitHub-Abschluss | PR #73 gemergt als `80bdd52`, Tag und GitHub-Release `v4.10.0` darauf (https://github.com/Moriarty1982/QuantumSphere-Unfold/releases/tag/v4.10.0), Release-Notiz mit DOI und Record, ohne angehängte Dateien (Regel in AGENTS.md: bei jeder Zenodo-Veröffentlichung) |
