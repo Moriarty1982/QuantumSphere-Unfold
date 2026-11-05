@@ -1,0 +1,89 @@
+{
+ "S^T eps S = eps": true,
+ "S eps S^T = eps (h.c.-Teil, holomorph)": true,
+ "H82a": {
+  "alpha": {
+   "Faktor (allgemein)": "1/K",
+   "Faktor (Materie-Gewichte)": "gamma",
+   "Exponent von gamma": "1"
+  },
+  "v": {
+   "Faktor (allgemein)": "sqrt(K)",
+   "Faktor (Materie-Gewichte)": "1/sqrt(gamma)",
+   "Exponent von gamma": "-1/2"
+  },
+  "m_f = y v": {
+   "Faktor (allgemein)": "P/K",
+   "Faktor (Materie-Gewichte)": "gamma",
+   "Exponent von gamma": "1"
+  },
+  "m_H^2 = 2 mu^2": {
+   "Faktor (allgemein)": "P/K",
+   "Faktor (Materie-Gewichte)": "gamma",
+   "Exponent von gamma": "1"
+  },
+  "m_H": {
+   "Faktor (allgemein)": "sqrt(P)/sqrt(K)",
+   "Faktor (Materie-Gewichte)": "sqrt(gamma)",
+   "Exponent von gamma": "1/2"
+  },
+  "m_W = g v / 2": {
+   "Faktor (allgemein)": "1",
+   "Faktor (Materie-Gewichte)": "1",
+   "Exponent von gamma": "0"
+  },
+  "m_Majorana": {
+   "Faktor (allgemein)": "P/K",
+   "Faktor (Materie-Gewichte)": "gamma",
+   "Exponent von gamma": "1"
+  },
+  "G_N": {
+   "Faktor (allgemein)": "1/K",
+   "Faktor (Materie-Gewichte)": "gamma",
+   "Exponent von gamma": "1"
+  },
+  "l_P = sqrt(G)": {
+   "Faktor (allgemein)": "1/sqrt(K)",
+   "Faktor (Materie-Gewichte)": "sqrt(gamma)",
+   "Exponent von gamma": "1/2"
+  },
+  "m_P = 1/sqrt(G)": {
+   "Faktor (allgemein)": "sqrt(K)",
+   "Faktor (Materie-Gewichte)": "1/sqrt(gamma)",
+   "Exponent von gamma": "-1/2"
+  },
+  "theta_W (g, g' gleich skaliert)": {
+   "Faktor (allgemein)": "1",
+   "Faktor (Materie-Gewichte)": "1",
+   "Exponent von gamma": "0"
+  }
+ },
+ "H82b": {
+  "alpha": {
+   "k(r19)": "1",
+   "Exponent": "1",
+   "passt (|e| = |k|)": true
+  },
+  "alpha_s (wie alpha)": {
+   "k(r19)": "1",
+   "Exponent": "1",
+   "passt (|e| = |k|)": true
+  },
+  "G_N": {
+   "k(r19)": "2",
+   "Exponent": "1",
+   "passt (|e| = |k|)": false
+  },
+  "l_P = sqrt(G)": {
+   "k(r19)": "3/2",
+   "Exponent": "1/2",
+   "passt (|e| = |k|)": false
+  },
+  "theta_W (g, g' gleich skaliert)": {
+   "k(r19)": "0",
+   "Exponent": "0",
+   "passt (|e| = |k|)": true
+  }
+ },
+ "H82b_gesamt": false
+}
