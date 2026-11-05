@@ -2636,6 +2636,16 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **Korrektur zu r82.1(b), (c):** zurückgezogen; Higgs-Bild unter B um 0 stabil (k192b), Vakuumenergie a·V_min. r82.1(a), r82.2–4 bleiben.
 - R_chk = (1,1,0); Guards unverändert. OP5 offen. Lokal 1325 Seiten, 3967 Labels, Overfull 45, harte Werte 0. PR #68 gemergt als e253208.
 
+### K134 Runde v4.9.0-r84: T-Anteil als zweite Lesart, vollständiger komplexer Boost, FRW (2026-11-05)
+
+`sec:v490-r84-second-reading`, Snippet `llm/v490_r84_round.tex`, Notizen `notes/research/v4_10_0_r84/`.
+- **r84.1 (k193):** Geist-Kondensat auf FRW: Λ plus Staub, beides frei; heilt nur das kondensierende Feld.
+- **Autorentscheidung:** T-Anteil = dasselbe Feld in zweiter Lesart (Variante 1 und I1 Alternativen).
+- **r84.2 H78 (nicht blind):** k174-Form (nur Spinor gedreht): Skalar (a−b)X/2 − (a+b)V, stabil, m_eff² = γm²; Weyl anisotrop, quer zu n γ-fach → ausgeschlossen (Elektron 10⁻¹³…10⁻¹⁵). δ fällt mit reeller Wirkung heraus. δ-Probe Lauf 1 offengelegt.
+- **r84.3 H79 (nicht blind):** vollständiger komplexer Boost (S = −iσ_z, Λ(iπ) auf das Argument), holomorphe Adjungierte: Bild −L_M, Wirkung (a−b)S_M, isotrop, stabil, K3 erfüllt. **Autorentscheidung:** holomorph.
+- **r84.4 H80/H81 (nicht blind, k196):** δ = 0: keine neue Dynamik (Bild = Universum vor dem Urknall, Nähe Boyle–Finn–Turok). δ ≠ 0: τ* = β_sym δ/(1+β_sym) (Strahlung), regulär singulär, Modenauswahl; H81c quantitativ widerlegt.
+- R_chk = (1,1,0); Guards unverändert. OP5 offen. Lokal 1328 Seiten, 3972 Labels, Overfull 45, harte Werte 0.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2831,3 +2841,4 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - v14.7 (2026-11-05): K131 Runde v4.9.0-r81 (W1, H69–H73, Konnektoren).
 - v14.8 (2026-11-05): K132 Runde v4.9.0-r82 (W2, H74, H75, Torsions-Paarkanal).
 - v14.9 (2026-11-05): K133 Runde v4.9.0-r83 (H76, H77, Geist-Kondensation, Korrektur zu r82.1).
+- v15.0 (2026-11-05): K134 Runde v4.9.0-r84 (zweite Lesart, H78–H81, Autorentscheidungen).

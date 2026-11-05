@@ -1,0 +1,143 @@
+
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r84 Source-Only: The Tachyon Part as a Second Reading of the Same Field, the Complete Complex Boost, and the Expanding Background}
+\addcontentsline{toc}{section}{v4.9.0-r84 Source-Only: The Tachyon Part as a Second Reading of the Same Field, the Complete Complex Boost, and the Expanding Background}
+\label{sec:v490-r84-second-reading}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.9.0-r83 showed that the vacuum of the matter--tachyon pairing decays through gravity unless a frame is preferred, and that
+ghost condensation under reading B supplies a frame (\S\ref{sec:v490-r83-vacuum-decay-image}).  On 5 November 2026 the author was
+asked whether the tachyon part T is an independent field or a second reading of the same field, a question open since k174.  He chose
+the second reading.  This layer records the consequences: an exploration of ghost condensation on an expanding background, four
+pre-registered tests (H78--H81, all not blind), and two author decisions.  The notes are
+\texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r84/}.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r84 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r84 results}
+\label{subsec:v490-r84-results}
+
+\paragraph{Theoremlet v4.9.0-r84.1 (ghost condensation on FRW).}
+Exploration (\texttt{k193}).  For \(P(X)=-X/2+cX^2\) the quantity \(a^3P_X\sqrt X=C\) is conserved, and near \(X_0=1/(4c)\)
+\(\rho=1/(16c)+C/(a^3\sqrt c)\), \(p=-1/(16c)\): a \(\Lambda\)-like constant plus dust.  Both the height and the dust share \(C\) are free;
+\(C=0\) gives pure \(\Lambda\).  The condensate cures only the condensing field: under reading B the images of massless fields keep negative
+energy, and r83.1 applies to them if T is an independent field.
+
+\paragraph{Author decision (5 November 2026).}
+The tachyon part is the same field in a second reading, not an independent field.  Variant~1 (independent field with a frame cutoff)
+and the deferred idea I1 remain alternatives.
+
+\paragraph{Theoremlet v4.9.0-r84.2 (H78: the second reading in the form of k174).}
+Pre-registered (commit \texttt{ef3e1e0}, not blind).  With \(\phi_T(x)=\phi(x+\delta)\) and \(\psi_T(x)=-i\sigma_z\psi(x+\delta)\) (spinor
+rotated, argument only shifted) and weights \(a,b\) in flat space:
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] scalar: \(aL_M+bL_T=(a-b)\tfrac12X-(a+b)V\), independent of \(\delta\) (probe \(4\times10^{-16}\)); stable for \(a>b\),
+\(m_{\rm eff}^2=\gamma m^2\) at matter weights, no kinetic term at photon weights;
+\item[(b)] Weyl: operator \((a-b)(\bar\sigma^t\partial_t+\bar\sigma^z\partial_z)+(a+b)(\bar\sigma^x\partial_x+\bar\sigma^y\partial_y)\), dispersion
+\(\omega^2=k_z^2+q^2k_\perp^2\), \(q=(a+b)/(a-b)=\gamma=1.8645\) at matter weights;
+\item[(c)] no independent T quanta, hence no decay channel as in r83.1.
+\end{enumerate}
+By (b) this form predicts a Lorentz violation of order one for fermions, excluded by laboratory bounds of \(10^{-13}\)--\(10^{-15}\) on
+the electron (Altschul, arXiv:1005.2994).  The first run of the \(\delta\) probe used a test field that was not periodic on the grid
+(\(26\%\)); the second run gives \(4\times10^{-16}\).  With the real action the offset \(\delta\) drops out in flat space; the
+\(\delta\)-dependence of H69 and H70 comes from the complex reading K.
+
+\paragraph{Theoremlet v4.9.0-r84.3 (H79: the complete complex boost).}
+Pre-registered (commit \texttt{701f1ca}, not blind).  The map of k174 is the complex boost with rapidity \(i\pi\): \(S(\theta)=e^{-\theta\sigma_z/2}\)
+satisfies \(S\bar\sigma^\mu S=\Lambda(\theta)^\mu{}_\nu\bar\sigma^\nu\), and \(S(i\pi)=-i\sigma_z\), \(\Lambda(i\pi)=\mathrm{diag}(-1,1,1,-1)\).  A
+boost acts on the spinor index and on the argument; k174 used only the first.  With \(\psi_T(x)=S\psi(\Lambda x+\delta)\):
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] holomorphic image of the adjoint (\(\psi^\dagger\mapsto\psi^\dagger S\)): the image term is \(-L_M\) in all four directions, the action
+\((a-b)S_M\), isotropic, stable for \(a>b\), the image carries opposite energy (criterion K3 of r83.3);
+\item[(b)] Hermitian image (\(\psi^\dagger\mapsto\psi^\dagger S^\dagger\)): \(+L_M\), action \((a+b)S_M\), isotropic, K3 violated;
+\item[(c)] scalar: \(\Lambda(i\pi)\) preserves the metric, as r84.2(a); probe with reflected and shifted argument \(3\times10^{-16}\).
+\end{enumerate}
+The reflection of time in the argument drops out of the action in flat space; the warning of r51 and r81 concerns the doublet, not this.
+
+\paragraph{Author decision (5 November 2026).}
+The image is formed by the complete complex boost, with the adjoint mapped holomorphically; in the matter reading the Dirac adjoint
+stays.  In the author's words: ``fix it like this; if it does not fit, we have to look for something else.''
+
+\paragraph{Theoremlet v4.9.0-r84.4 (the second reading on FRW).}
+Exploration and pre-registered tests H80, H81 (commit \texttt{a5799ef}, not blind; script \texttt{k196}).  In conformal time the image sees
+the scale factor \(a(|\delta-\tau|)\).  Scalars carry only even powers of \(a\), so the continuation \(a(-\tau)=\pm a(\tau)\) is irrelevant;
+conformal fields (massless fermions, gauge fields) see nothing.  The reduced action of a scalar has kinetic weight
+\(K=a\,a(\tau)^2-b\,a_T^2\) and potential weight \(P=a\,a(\tau)^4+b\,a_T^4\).
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] H80, \(\delta=0\) (reflection about the big bang): the mode equation is exactly \((a-b)\) times that of the matter scalar with
+\(m^2\mapsto\gamma m^2\), for radiation and matter and both continuations.  No new dynamics; the image is the universe before the big bang,
+contracting as \(\tau\) grows.  Predictions could come only from the state at \(\tau=0\), as in the CPT-symmetric universe of Boyle, Finn and
+Turok (arXiv:1803.08928); the structural resemblance was noticed afterwards.
+\item[(b)] H81a, \(\delta\neq0\): \(K\) vanishes where \(a(\tau)/a(\delta-\tau)=\bsym\), at \(\tau^*=\bsym\delta/(1+\bsym)=0.3546\,\delta\) (radiation) and
+\(\sqrt\bsym\,\delta/(1+\sqrt\bsym)=0.4257\,\delta\) (matter), because \(b/a=\bsym^2\).
+\item[(c)] H81b: \(\tau^*\) is a regular singular point with exponents \((0,0)\); generic solutions grow as \(\ln|\tau-\tau^*|\) (slope \(-0.120\),
+\(R^2=1-4\times10^{-15}\)), a single solution per \(k\) stays bounded (\(\max|\chi|/|\chi_0|=1.0007\)).  The passage through \(\tau^*\) selects a
+mode.  The choice \(k=m=1\) was not fixed in the pre-registration.
+\item[(d)] H81c refuted quantitatively: before \(\tau^*\), \(P/K<0\) (tachyonic sign), but the growth of the mode \(k=0\), \(m=3\) is a factor
+\(1.57\), not above \(10\); the window is short for \(m\delta=3\).
+\end{enumerate}
+
+\paragraph{Proof and measurement sources.}
+Scripts \texttt{k193}--\texttt{k196} and the notes in \texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r84/}; pre-registrations and results
+H78--H81 in \texttt{notes/\allowbreak research/\allowbreak predictions/}.  \(\square\)
+
+\paragraph{Consequence.}
+As a second reading of the same field, with the complete complex boost and the holomorphic adjoint, the tachyon part is isotropic, stable
+for \(a>b\) and free of the decay of r83.1.  In flat space it only renormalises the kinetic term (\(a-b\)) against the potential (\(a+b\)).  On
+an expanding background the reflection about the big bang adds nothing, while an offset produces an early epoch \(\tau^*\) fixed by \bsym\
+at which a mode is selected.  The vacuum energy is not cancelled in any variant.  OP5 is not closed.  The deferred idea I1 (several
+systems joined by a string) had its first trigger hit by r84.2(b) (two light cones that cannot be merged); it was offered to the author.
+
+\subsection*{v4.9.0-r84 status in the three frames}
+\label{subsec:v490-r84-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item Frame T enters as the image of frame M under the complete complex boost; the photon frame is the equal-weight mixture, where the
+kinetic weight \(a-b\) vanishes and the reduced theory has no dynamics.  This degeneracy is a statement at P in the sense of F2, not a
+global one.
+\item The weights \(a=p_+\), \(b=p_-\) are those of frame M; \(\tau^*\) and \(m_{\rm eff}^2=\gamma m^2\) are matter-frame statements.
+\end{itemize}
+
+\subsection*{v4.9.0-r84 register entries}
+\label{subsec:v490-r84-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r84\\
+\midrule
+T part & second reading of the same field (author decision)\\
+image with spinor rotated only (k174 form) & anisotropic for fermions, excluded (H78)\\
+complete complex boost, holomorphic adjoint & isotropic, stable, \((a-b)S_M\) (H79; author decision)\\
+reflection about the big bang (\(\delta=0\)) & no new dynamics (H80)\\
+offset \(\delta\neq0\) & epoch \(\tau^*=\bsym\delta/(1+\bsym)\) (radiation), mode selection (H81)\\
+ghost condensation on FRW & \(\Lambda\) plus dust, both free\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r84 ledger and guard update}
+\label{subsec:v490-r84-ledger-guard}
+
+\[
+R_{\rm chk}^{v490\text{-}r84}=(1,1,0)
+\]
+for (form of the T part decided by the author and checked; behaviour on FRW decided for both centres; scale not fixed).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r84,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r84}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
