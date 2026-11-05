@@ -7,7 +7,7 @@
 - **PR #64 gemergt als 42d8397** (vormals offen, (`research/v4.10-r80-hintergrund`): Runde r80 = Fierz-Erkundung (k168), **H68 widerlegt** (k169: Hintergrund A, h nicht aus Yang–Mills/Klein–Gordon mit Spinorquellen), **Abschluss des Vergleichsmodell-Zweigs r71–r80** (Autorentscheidung 4.11.); dazu die Bestandsaufnahme der Wirkungsansätze. Wiki im PR. Lokal eingebaut (3d72d40): 1315 Seiten, 3947 Labels, Overfull 45, harte Werte 0, Guard-Linter 0. AGENTS-Zeile und Kernkarte nachgezogen.)
 - **Weitere offene PRs (nicht OP5, nicht angefasst):** #59 (Short paper draft), #51 (AGENTS.md).
 - **Zuletzt vergebene Hypothese:** H68. Nächste freie Nummer H69.
-- **Branches, die weg können** (Löschen über den Proxy gesperrt): `rechnen/h59`, `rechnen/h65`, `rechnen/h67`, `rechnen/hintergrund` (in r80 aufgegangen).
+- **Branches, die weg können** (Löschen über den Proxy gesperrt): `rechnen/h59`, `rechnen/h65`, `rechnen/h67`, `rechnen/hintergrund` (in r80 aufgegangen), `research/v4.10-w1-wirkung-test` (Diagnose eines GitHub-Fehlers 500 am 5.11., Inhalt identisch mit dem PR-Branch).
 
 ## Richtungswechsel (Autorentscheidung 4.11.)
 Der OP5-Vergleichsmodell-Zweig ist geschlossen. Keine weiteren Feinheiten daran (Lorentz-Wirkung auf die 6 Moden, zweiter Grundpunkt) ohne eigene Dynamik. Es geht eine Ebene höher: zur gemeinsamen Wirkung, die OP1–OP5 gleichermaßen fehlt.
