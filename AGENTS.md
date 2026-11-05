@@ -281,6 +281,7 @@ Wenn eine neue Runde diese Vektoren nicht verändert, ist das der Normalfall und
 DOIs, die nie vermischt werden dürfen:
 
 - **Version-DOI** `10.5281/zenodo.23534954` — **v4.9.0, veröffentlicht 2026-10-21** (Zenodo-Record `23534954`, vom Nutzer veröffentlicht), aktuelle Version; gehört als einzige sichtbare DOI-Zeile auf die Titelseite eines 4.9.x-Stands
+- **Reservierte Version-DOI v4.10.0** `10.5281/zenodo.23991357` — Entwurf 23991357, am 2026-11-06 reserviert, **unveröffentlicht**; steht auf der Titelseite des Release-Zweigs `release/v4.10.0-prep`; wird nach der Veröffentlichung die aktuelle Version-DOI, v4.9.0 dann Vorgänger
 - **Vorgänger-DOI** `10.5281/zenodo.23365244` — v4.8.0, seit v4.9.0 nur Provenienz
 - **Frühere Version-DOI** `10.5281/zenodo.20232911` — v4.7.0, nur Provenienz
 - **Concept-DOI** `10.5281/zenodo.19210728` — stabil über alle Versionen
