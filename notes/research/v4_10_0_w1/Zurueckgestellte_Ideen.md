@@ -14,6 +14,10 @@ Ideen des Autors oder aus Sitzungen, die nicht jetzt verfolgt werden, aber wiede
   3. Eine Rechnung berührt β_sym als Verhältnis γ_BI/γ_string oder die String-LQG-Lesart (T11).
   4. Informationsaustausch zwischen getrennten Sektoren braucht einen Träger: Verschränkung (T12), Hawking (T11), Tachyon-Reservoir (r28–r30).
 - **Stand:** zurückgestellt; zuerst der Ein-System-Baustein.
+- **5.11., Auslöser 3 und 4 getroffen:** Bei der Suche nach der Masse m des Higgs-artigen Übergangs-Konnektors (k185, μ² = 2m² sinh 2η) bringt der Autor eine „Masse aus Information“ ins Spiel und verweist selbst auf I1. η_sym hängt im Companion an γ_BI/γ_string (Auslöser 3); eine Masse aus Information ist ein Informationsträger zwischen Sektoren (Auslöser 4). Dazu k182: Die Summe der M- und T-Lesart hat w = −⅓, die Zustandsgleichung eines String-Gases.
+  - Mögliche Rollen in I1: Die Stringspannung (Dimension Masse²) setzt die Skala μ² des Konnektors, der über die Brücke läuft; die LQG-Zustandszählung an der Naht (Durchstoßpunkte, H47/r63) oder die Entropie des Dublettzustands (r17: 0,781 bit) setzt die Informationsmenge.
+  - Grenzen: γ_string ist im Companion dimensionslos, eine absolute Skala fehlt; die Landauer-Energie kT ln 2 pro Bit bräuchte eine Temperatur.
+  - **Stand jetzt:** aktiv als Kandidat für die Festlegung von m in H75; vor jeder Rechnung muss die Regel festliegen, welche Größe m bestimmt.
 
 ## I2: „mod HC“ als chinesischer Restsatz über Primzahl-Plätze
 - **Herkunft:** Autor, 5. November 2026: Er wollte Indizes auf Primzahlen abbilden, um sie mit dem chinesischen Restsatz zu bestimmen, und vermutet, dass daher das „mod HC“ in der Meta-Septum-Bedingung Tr(M₁₆ P_C7) ≡ 0 (mod HC) kommt. Frühere Chats: 2.11. (Ableitungstupel als 2ᵃ·3ᵇ·5ᶜ·7ᵈ), 4.11. (Primzahlen und Restsatz, „was bricht aus“).
