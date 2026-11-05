@@ -1,0 +1,51 @@
+{
+ "R2_EC": {
+  "R[-g]/R[g]": "-1",
+  "sqrt|g| Verhaeltnis": "1"
+ },
+ "R2_Skalar_Kinetik_Phase": "-1",
+ "R2_YM_Phase": "1",
+ "R2_Potential_Phase": "1",
+ "R2_Weyl_Phase": "-I",
+ "R2_EC_Phase_Vierbein": "-1",
+ "Regeln": {
+  "R1": {
+   "Gewichte": {
+    "EC": "0.536339",
+    "YM": "0.536339",
+    "Skalar": "0.536339",
+    "Weyl": "0.536339",
+    "Potential": "1.00000"
+   },
+   "alpha_Exponent": 1.0,
+   "G_Exponent": 1.0,
+   "Wirkung reell": true
+  },
+  "R2": {
+   "Gewichte": {
+    "EC": "0.536339",
+    "YM": "1.00000",
+    "Skalar": "0.536339",
+    "Weyl": "0.768169 - 0.231831*I",
+    "Potential": "1.00000"
+   },
+   "alpha_Exponent": 0.0,
+   "G_Exponent": 1.0,
+   "Wirkung reell": false
+  },
+  "R3": {
+   "EC Faktor": "c (sqrt|cg| R[cg] = c sqrt|g| R)",
+   "YM Faktor": "1",
+   "Skalar Faktor": "c",
+   "Potential Faktor": "c^2",
+   "alpha_Exponent": 0.0,
+   "G_Exponent": 1.0,
+   "Wirkung reell": true
+  }
+ },
+ "r19": {
+  "alpha": 1,
+  "G_N": 2
+ },
+ "H83": false
+}
