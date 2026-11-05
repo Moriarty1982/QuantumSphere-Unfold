@@ -65,5 +65,8 @@
 - **5.11., Autor (21:05): Der T-Anteil ist dasselbe Feld in zweiter Lesart** (Variante 2), nicht ein eigenes Feld; Variante 1 und I1 bleiben Alternativen.
 - **5.11., Autor (21:23), Entscheidung zur Adjungierten (Ergänzung zu Entscheidung 2):** Das Bild entsteht durch den vollständigen komplexen Boost (Spinor S = −iσ_n und Argument Λ(iπ)x + δ), die Adjungierte wird **holomorph** abgebildet (ψ† ↦ ψ†S, Fortsetzung der Boost-Identität). Damit ist der Bildterm −L_M (H79). In der Materie-Lesart bleibt die Dirac-Adjungierte. Wortlaut des Autors: „Lege das mal so fest; wenn es nicht passt, müssen wir halt nach was anderem suchen.“
 
+- **5.11., Autor (22:18):** „mach weiter“ auf den Vorschlag F3-Gewicht 1 für die Weyl-Kinetik → als Arbeitsannahme geführt, keine ausdrückliche Festlegung.
+- **5.11., Autor (22:46), Gebiet G2:** Die Materie-Lesart lebt nach dem Urknall (τ > 0), die Tachyon-Lesart auf ihrem Bild vor dem Urknall (τ < 0); beide hängen nur am Urknall zusammen (Spiegelung um den Urknall, δ = 0). Wortlaut: „mach das so“.
+
 ## Nächster Schritt (Vorschlag)
 Nach diesen Entscheidungen die kleinste Wirkung aufschreiben, die (W1)–(W8) erfüllt, und zuerst nur ihre Euler–Lagrange-Gleichungen und Identitäten (Bianchi, Ward) symbolisch prüfen, noch ohne Lösung. Ein Test mit Kriterium erst danach, mit Vorab-Notiz.
