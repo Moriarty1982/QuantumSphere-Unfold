@@ -7,6 +7,9 @@
 - **Lokal eingebaut (815da20):** 1328 Seiten, 3972 Labels, Overfull 45, harte Werte 0, Guard-Linter 0 (ein `\bsym` außerhalb des Mathemodus vor dem Build korrigiert). AGENTS-Zeile r84, Kernkarte K134 (v15.0). **Nächste Bundle-Basis: 815da20.**
 - Nächste Schritte zur Wahl: Epoche τ* und Modenauswahl weiter (beobachtbare Folgen?), Zustand bei τ = 0 für δ = 0 (Boyle–Finn–Turok), Massenterme (Dirac, Majorana) unter der zweiten Lesart, I1, Skala.
 
+## Nach r84 (21:50)
+- **H82 (Vorab c3f956c, nicht blind, k197):** Massen und Kopplungen unter der zweiten Lesart. a bestätigt: α, m_f, Majorana γ¹; m_H √γ; v γ^−½; m_W, θ_W unverändert; G γ¹, ℓ_P γ^½ (Muster nach Zahl der Ableitungsterme; Autor: unterschiedliches Wachstum „gleichzeitig richtig“). b widerlegt: α, α_s, θ_W passen zu r19, G_N (1 statt 2) und ℓ_P (½ statt 3/2) nicht. Nächste Frage: Einstein–Cartan-Term mit K oder K² (Koframe zweimal)? `llm/Ergebnis_H82_Massen_zweite_Lesart.md`.
+
 ## Davor (21:15)
 - **PR #68 gemergt als e253208** (5.11., 21:01; `research/v4.10-r83-vakuumzerfall`), Runde **v4.9.0-r83**: H76 (Vakuumzerfall), H77 (Tachyonbild einer Wirkung nach Lesart B), Geist-Kondensation (Erkundung), Korrektur zu r82.1(b), (c). Wiki im PR (r82-Aussagen als zurückgezogen markiert). ours-Merge der lokalen Historie bis 5a23a7b (enthält Vorab-Commits 2b47e7f, d087d67). CI-Lauf 42099084932.
 - **Lokal eingebaut (5a23a7b):** 1325 Seiten, 3967 Labels, Overfull 45, harte Werte 0, Guard-Linter 0. AGENTS-Zeile r83, Kernkarte K133 (v14.9). **Nächste Bundle-Basis: 5a23a7b.**
@@ -26,7 +29,7 @@
 - **PR #67 gemergt als ebf5048** (5.11., 19:31; `research/v4.10-r82-higgs-stabilitaet`), Runde **v4.9.0-r82**: Higgs-Sektor W2, Stabilität der M–T-Aufhebung (H74, H75), Torsions-Paarkanal (k190). Inhalt: Runde in `parts/v490-post-release-layers.tex`, Notizen und Skripte k188–k190 unter `notes/research/v4_10_0_r82/`, H74/H75 unter `predictions/`, Wiki (6 Seiten), ours-Merge der lokalen Historie bis 2d5c6c2 (enthält die Vorab-Commits b24bb08, 6aa8477). CI-Lauf 42084679668.
 - **Lokal eingebaut (2d5c6c2):** 1322 Seiten, 3961 Labels, Overfull 45, harte Werte 0, Guard-Linter 0. AGENTS-Zeile r82 und Kernkarte K132 (v14.8) nachgezogen. Nächste Bundle-Basis: 2d5c6c2.
 - **Gemergt zuvor:** PR #64 (r80), #65 (W1-Notizen), #66 (r81, b3cf9f7), #59, #51.
-- **Zuletzt vergebene Hypothese:** H81. Nächste freie Nummer H82.
+- **Zuletzt vergebene Hypothese:** H82. Nächste freie Nummer H83.
 - **Branches, die weg können** (Löschen über den Proxy gesperrt): `rechnen/h59`, `rechnen/h65`, `rechnen/h67`, `rechnen/hintergrund`, `research/v4.10-w1-wirkung-test`, nach dem Merge auch `research/v4.10-r81-…` und `research/v4.10-r82-higgs-stabilitaet`.
 
 ## Inhaltlicher Stand
