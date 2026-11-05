@@ -2656,7 +2656,7 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **Autorentscheidung G2:** T-Lesart vor dem Urknall, M danach (Zwei-Blatt, Boyle–Finn–Turok); H80 gilt für G1.
 - **r85.5 Erkundung scharfer Übergang:** α = (1+x)/(2√x), β = (1−x)/(2√x), x = β_sym², n = 0,404 je Mode, β/α = 1/γ.
 - **r85.6 H85 (Kriterien verfehlt), H86 (bestätigt, Δ = 2, tanh/erf):** komplexer Übergang (Wick); CPT-Zuordnung, Beimischung C exponentiell (Steigung 2,67, knapp), Asymmetrie der Drehsinne mit festem Produkt.
-- R_chk = (1,1,0); Guards unverändert. OP5 offen. Lokal 1331 Seiten, 3977 Labels, Overfull 45, harte Werte 0.
+- R_chk = (1,1,0); Guards unverändert. OP5 offen. Lokal 1331 Seiten, 3977 Labels, Overfull 45, harte Werte 0. PR #70 gemergt als a5bf106.
 
 ## 8. Änderungsprotokoll
 
