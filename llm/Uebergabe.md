@@ -7,6 +7,8 @@
 - **Lokal eingebaut (5a23a7b):** 1325 Seiten, 3967 Labels, Overfull 45, harte Werte 0, Guard-Linter 0. AGENTS-Zeile r83, Kernkarte K133 (v14.9). **Nächste Bundle-Basis: 5a23a7b.**
 - Löschrecht für den lokalen Ordner in dieser Sitzung erteilt (git-Sperrdateien); alte `.git/stale-*lock*` aus früheren Sitzungen liegen noch dort und können weg.
 
+- **Nach r83 (21:10), Erkundung `llm/Erkundung_Geistkondensat_Skala.md` (k193):** Geist-Kondensat auf FRW gibt ρ = 1/(16c) + C/(a³√c), also Λ plus Staub; Höhe und Staubanteil C frei, kein Zusammenhang mit H70 oder I4 ableitbar. Das Kondensat heilt nur das kondensierende Feld; masselose T-Bilder (Photonen, Fermionen) behalten negative Energie, H76 greift für sie. **Offene Autorentscheidung:** T-Anteil als eigenes Feld (dann Rahmen-Cutoff ≲ 14 MeV für den ganzen T-Sektor nötig) oder als zweite Lesart desselben Feldes (ψ_T = −iσ_n ψ_M(x + δ), passend zu T1; dann nächster Test: Dynamik der reduzierten Theorie, Hamilton-Funktion beschränkt?).
+
 ## Davor (19:45)
 - **PR #67 gemergt als ebf5048** (5.11., 19:31; `research/v4.10-r82-higgs-stabilitaet`), Runde **v4.9.0-r82**: Higgs-Sektor W2, Stabilität der M–T-Aufhebung (H74, H75), Torsions-Paarkanal (k190). Inhalt: Runde in `parts/v490-post-release-layers.tex`, Notizen und Skripte k188–k190 unter `notes/research/v4_10_0_r82/`, H74/H75 unter `predictions/`, Wiki (6 Seiten), ours-Merge der lokalen Historie bis 2d5c6c2 (enthält die Vorab-Commits b24bb08, 6aa8477). CI-Lauf 42084679668.
 - **Lokal eingebaut (2d5c6c2):** 1322 Seiten, 3961 Labels, Overfull 45, harte Werte 0, Guard-Linter 0. AGENTS-Zeile r82 und Kernkarte K132 (v14.8) nachgezogen. Nächste Bundle-Basis: 2d5c6c2.
