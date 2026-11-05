@@ -1,0 +1,60 @@
+{
+ "konforme_Invarianz_res": 2.0434093865319924e-16,
+ "vorzeichen_omega": "+",
+ "Kontrolle_flach_H69": {
+  "weyl_T": 0,
+  "strom": 2.6899817076170442e-14,
+  "energie": 1.3221564769523415e-14,
+  "mittel_rel": 0.034651614832535885,
+  "undefiniert": 0,
+  "dw": 31.41592653589793
+ },
+ "Materie_C1": {
+  "weyl_T": 0.0455187829847399,
+  "strom": 1.678957172081695,
+  "energie": 0.6167399687583731,
+  "mittel_rel": 0.9999999999999927,
+  "undefiniert": 0,
+  "dw": 32.937954380515656
+ },
+ "Materie_C2": {
+  "weyl_T": 0,
+  "strom": 2.6899817076170442e-14,
+  "energie": 1.3221564769523415e-14,
+  "mittel_rel": 0.034651614832535885,
+  "undefiniert": 0,
+  "dw": 31.41592653589793
+ },
+ "Materie_C3": {
+  "weyl_T": 1.7979436895985617,
+  "strom": 2.409777927440281,
+  "energie": 3.332813835799086,
+  "mittel_rel": 1.0000000000000009,
+  "undefiniert": 40,
+  "dw": 12.32007074981386
+ },
+ "Strahlung_C1": {
+  "weyl_T": 0.08712907112173263,
+  "strom": 2.4017641594345838,
+  "energie": 1.0421180893612432,
+  "mittel_rel": 0.9999999999999956,
+  "undefiniert": 0,
+  "dw": 32.91517489658534
+ },
+ "Strahlung_C2": {
+  "weyl_T": 0,
+  "strom": 1.919314817354123e-14,
+  "energie": 9.158352181816217e-15,
+  "mittel_rel": 0,
+  "undefiniert": 0,
+  "dw": 31.41592653589793
+ },
+ "Strahlung_C3": {
+  "weyl_T": 0,
+  "strom": 0,
+  "energie": 0,
+  "mittel_rel": 0,
+  "undefiniert": 44,
+  "dw": NaN
+ }
+}
