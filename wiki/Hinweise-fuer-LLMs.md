@@ -10,6 +10,22 @@ Zuerst das [Gesamtbild](https://github.com/Moriarty1982/QuantumSphere-Unfold/wik
 
 Am geprüften Stand **2.11.2026 / cf48496 plus r70–r71** ist **v4.9.0** die öffentliche Baseline (Version DOI **10.5281/zenodo.23534954**). Die Forschungsquellen bilden **4.10.0-draft** mit dokumentierten Layern bis **v4.9.0-r71**. Vor einer aktuellen Aussage den neuesten Stand erneut prüfen. [Quellenkarte](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Versionen-und-Quellen).
 
+## Arbeitsanleitung für KI-Assistenten
+
+Wer mit einem KI-Werkzeug im Repository arbeitet (Codex, Claude, ChatGPT und andere), findet die verbindlichen Regeln in
+[`AGENTS.md`](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/AGENTS.md):
+
+- Vorab-Notizen vor jedem Test;
+- Runden nur anhängen, nie umschreiben;
+- Merges erst nach Freigabe des Autors;
+- das Wiki im selben PR mitziehen;
+- keine festen absoluten Pfade in Skripten.
+
+Die Abläufe stehen Schritt für Schritt in
+[`notes/anleitungen/`](https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/main/notes/anleitungen): eine Runde
+einbauen, und Rechnungen am OP5-Vergleichsmodell (Daten, Konventionen, bekannte Ergebnisse, Fallstricke). `AGENTS.md`
+ist ein offener, werkzeugübergreifender Standard. `CLAUDE.md` verweist nur darauf.
+
 ## Vorgehen bei Fachfragen
 
 1. Klären, ob die Frage Veröffentlichung, aktuelle Forschung oder einen historischen Zustand betrifft.

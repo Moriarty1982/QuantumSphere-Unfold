@@ -1,0 +1,42 @@
+# AGENTS.md
+
+Gemeinsame Arbeitsanleitung für alle KI-Assistenten in diesem Repository (Codex, Claude, ChatGPT und andere). Sie gilt
+unabhängig vom Werkzeug. `CLAUDE.md` verweist nur hierauf. Regeln werden **hier** geändert.
+
+## Was dieses Repository ist
+Quellen, Notizen und Werkzeuge zum *Quantum Sphaera Companion*, dem mathematischen Unfold der Paper-Reihe „Quantum
+Sphaera“. Die öffentliche Baseline ist **v4.9.0** (Version-DOI 10.5281/zenodo.23534954, Concept-DOI
+10.5281/zenodo.19210728). Alles danach liegt als Forschungsschicht vor und ist kein Release.
+
+- `sources/research/`: der modulare Kandidat (`v480-companion.tex` mit Teilen unter `parts/`). Neue Runden werden an
+  `parts/v490-post-release-layers.tex` angehängt.
+- `notes/research/v4_10_0_rNN/`: Notizen, Skripte und Rundentext je Runde. Vorab-Notizen liegen in
+  `notes/research/predictions/`.
+- `analysis/`: Arbeitsstände, u. a. das OP5-Vergleichsmodell unter `analysis/op5-field-slices/`.
+- `wiki/`: Quelle des GitHub-Wikis. Sie wird beim Push auf `main` automatisch gespiegelt.
+- `notes/anleitungen/`: Schritt-für-Schritt-Abläufe.
+
+## Für alle Modelle verbindlich
+- **Abläufe:** `notes/anleitungen/qsc-runde-einbauen.md` (neue Runde) und
+  `notes/anleitungen/op5-vergleichsmodell-rechnen.md` (OP5-Vergleichsmodell).
+- **Vorab-Notizen:** Jeder Test mit Entscheidungskriterium wird vor der Rechnung festgeschrieben und committet.
+  Erkundungen ohne Vorab-Notiz heißen „Erkundung“.
+- **Append-only:** Bestehende Runden werden nie umgeschrieben. Korrekturen kommen in eine neue Runde.
+- **Merges** auf `main` nur nach ausdrücklicher Freigabe des Autors.
+- **Wiki:** Jede inhaltliche Änderung zieht `wiki/` im selben PR mit. Das Wiki gibt den Inhalt wieder, nicht nur Links.
+- **Keine festen absoluten Pfade** in Skripten. Datenordner als Argument übergeben oder relativ zum Repo auflösen.
+- **Sparsam arbeiten:** Skripte als Dateien ablegen und nur kurze Zusammenfassungen ausgeben.
+- **Ehrlicher Status:** offene Probleme (OP1–OP5, C5, C6/T2) nicht als geschlossen darstellen. Die Guards stehen im
+  jeweiligen Ledger der Runde.
+- **Gesamtbild zuerst:** vor inhaltlicher Arbeit `wiki/Gesamtbild.md` lesen (Mindmap, Thesen T1–T15, Dokumentkarte) und jede Einzelfrage dort einordnen.
+- **Vorwissen-Pflicht:** vor jeder neuen Hypothese das Repo nach Vorbefunden durchsuchen: `notes/research/predictions/`, die Notizen und Skripte unter `notes/research/v4_10_0_*/`, `analysis/OP5_*`. Die Fundstellen kommen in einen Abschnitt „Vorwissen geprüft“ der Vorab-Notiz. Für OP5 gilt der Abschnitt „Bereits beantwortet“ in `notes/anleitungen/op5-vergleichsmodell-rechnen.md`.
+- **Nicht blind = offen sagen:** Steht das Ergebnis vor der Rechnung analytisch fest, wird es als Erkundung oder ausdrücklich „nicht blind“ geführt, nicht als blinder Test. Nachträglich Gefundenes wird als nachträglich markiert.
+- **Zurückgestellte Ideen:** `notes/research/v4_10_0_w1/Zurueckgestellte_Ideen.md` führt Ideen des Autors mit Auslösern (I1–I4). Beim Start und immer, wenn ein Ansatz scheitert, die Auslöser prüfen; trifft einer zu, die Idee dem Autor als möglichen Ausweg vorschlagen.
+- **Stand der letzten Sitzung:** Im lokalen Ordner des Autors ist `llm/Uebergabe.md` der Einstiegspunkt (Stand, offene PRs, zuletzt vergebene H-Nummer, nächster Schritt). Auf GitHub: jüngste Runde unter `notes/research/`, offene PRs, Actions-Läufe.
+- **Parallel rechnen:** große Rangrechnungen über `.github/workflows/op5-parallel.yml`, ein Job je Parameter (Einzelheiten in der OP5-Anleitung).
+- **Frames:** Konvention F (M, T, P) einhalten; Größen verschiedener Frames erst nach einer erklärten Abbildung vergleichen. Tachyon-Abbildung (z ↦ iz) und Zeitumkehr (z ↦ z̄) nicht verwechseln (r51, r81).
+
+## Lokale Arbeitskopie des Autors
+Die Monolith-Fassung und die vollständige Rundentabelle liegen im lokalen Ordner des Autors. Dessen `AGENTS.md` ist die
+ausführliche Fassung dieser Datei. Der aktuelle Forschungsstand für Leser steht im Wiki unter „Forschungsstand“ und
+„Hinweise für LLMs“.
