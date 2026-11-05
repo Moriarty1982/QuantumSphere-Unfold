@@ -1,6 +1,6 @@
 # Joint action W1 (after layer r80): decisions, setup and first identities
 
-Research notes, not yet a layer of the candidate; they will enter layer r81. German notes, English summary here.
+Research notes, not yet a layer of the candidate; they will enter layer r81. Items from k183 on were written on GitHub while the author's computer was not linked and still have to be copied to the local folder. German notes, English summary here.
 
 | Item | Content |
 |---|---|
@@ -16,6 +16,7 @@ Research notes, not yet a layer of the candidate; they will enter layer r81. Ger
 | H72 (k180, pre-registered bc85519) | A Λ-like term (p = −ρ, isotropic, residual 3e-16) arises classically from an incoherent isotropic gas of tachyonic modes, but only with both norm signs and at least two momentum shells (a). Its height and sign are free, set by the weight ratio (b); a single shell with frame weights gives none (c refuted: matter weights w ≥ 1/3, photon weights T = 0). Candidate H73: shells fixed by the frame offset Δω = π/δ. |
 | H73 refuted (k181, pre-registered 623a080) | Reference states of the frames (matter at rest, tachyon at threshold ω = 0) with matter-frame weights give the parameter-free, normalization-independent equation of state w = −β_sym²/3 = −0.10, not −1. Post hoc, not pre-registered: read in the tachyon frame (weights swapped) w = −1/(3x) = −1.105; exactly −1 for β = 1/√3. Only a prompt for a new pre-registration with a justified frame choice. |
 | Common rapidity (k182, exploration) | Author's hint "limit instead of extremes": with modes and weights at the same rapidity η (matter k = m sinh η, tachyon continuation k = m cosh η, weights tanh²η), the mixture is exactly pressureless dust in the matter frame (w = 0, ρ = m/cosh η) for every η, and pure tension with ρ = 0 in the tachyon frame; the sum has w = −1/3. No Λ; the H73 value was an artefact of mixing rapidities. |
+| Which reading gravity sees (k183, exploration, I3) | Gravity sees a·T_M + b·T_T of the two readings; then w = −b/(3a). Matter frame only: pure dark matter, no Λ. Both readings equal: coasting (q₀ = 0) with Ω_m = 2/3, Ω_Λ = 1/3, the swap of the observed 1/3 : 2/3. Frame weights: w = −β²/3 again (so the H73 value is not an artefact, correction to k182). The data would need b/a ≈ 2; a 2 : 1 weight would have to be justified from the structure first (proposal H75). |
 | Torsion (k173) | Coupling totally antisymmetric ∝ ε j; after elimination L_eff = −(3/16) κ j² with j the total current of all 16 states; control: Hehl–Datta value for Dirac. Torsion is blind to the U(1) charge. W1 produces no vacuum term (W7 needs the scalar sector). |
 | Source check | „mod HC“ is not defined anywhere; operational closure is [M₁₆, P_C7] = 0 and (1 − P_C7)Ψ = 0; HC and P_C7 are distinct projectors. |
 | Deferred ideas | I1: several LQG systems joined by a string as an information bridge. I2: „mod HC“ as Chinese remainder theorem over prime-labelled slots (e₁…e₇ ↦ 2…17). I3 (active): OP5 reread – Λ not as an object of its own but as a consequence of the dark-matter computation (matter-frame dust, tachyon-frame tension, ρ + 3p = 0 for the sum; cf. r67). Each with triggers. |
