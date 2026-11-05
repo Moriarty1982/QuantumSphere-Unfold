@@ -25,3 +25,7 @@ dazu Yukawa-Kopplungen über die antilinearen Konnektoren aus r44.1(b) (Kern →
 1. **H74 (vorab):** Ist die exakte Aufhebung der Higgs-Vakuumenergie bei Photon-Gewichten stabil gegen die Kopplung beider Sektoren über die Gravitation und über den Konnektor? Kaplan–Sundrum zeigen, wo das typisch scheitert; das wäre die Prüfung.
 2. Rest-Λ aus dem Versatz: Ergibt ein mitbewegter Versatz δ ∝ a zwischen M- und T-Kondensat einen kleinen, zeitabhängigen Rest?
 3. Zusammengesetzte Lesart von Φ (Konnektor-Bilinear) gegen elementares Φ.
+
+
+## Nachtrag (5.11., H74)
+Die exakte Aufhebung ist gegen jede direkte Kopplung der Sektoren instabil (Resonanz gleicher Spektren, Rate ε/2ω). Stabil nur bei Verstimmung |Δω²| > 2ε, dann bleibt ein Rest ≳ 2ε|V_min|/ω². Kleiner Rest-Λ verlangt extrem schwache Kopplung; Kopplung nur über die Gravitation bleibt offen. Siehe `Ergebnis_H74_Stabilitaet_MT.md`.
