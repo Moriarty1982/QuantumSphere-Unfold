@@ -15,6 +15,7 @@
 - [Leseweg](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Leseweg)
 - [Versionen und Quellen](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Versionen-und-Quellen)
 - [Forschungsstand](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungsstand)
+- [QAM: Buchführungsprüfung](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/QAM)
 - [Parallele Rechnungen](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Parallele-Rechnungen)
 - [Begriffe](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Begriffe)
 - [Hinweise für LLMs](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Hinweise-fuer-LLMs)

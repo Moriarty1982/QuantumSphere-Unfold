@@ -10,3 +10,11 @@ Each note was committed locally before any comparison with data published after 
 The bound of H42 was noticed after the evaluation of r57; the reading ε = η of H46 was not chosen blind (the hit windows of r59 were known), but the value of θ23 was not known before and counts as a prediction only from the date of its note. H15 (m_W = 80.3615 ± 0.0018 GeV) is recorded in layer v4.9.0-r07.
 
 Resolved pre-registered tests whose notes also lie in this folder: H48 (layer v4.9.0-r70, refuted), H49 and H50 (layer v4.9.0-r71, both refuted; local commits `e2d3394` and `ea36f39`, results in [`../v4_10_0_r71/`](../v4_10_0_r71/README.md)).
+
+Layer v4.9.0-r77 (4 Nov 2026) resolves H59 (confirmed), H60 (confirmed), H61, H62 and H63 (refuted) and H64 (confirmed, run 2 not blind). The pre-registration and result notes lie in this folder (`Vorab_Notiz_H59…H64`, `Ergebnis_H59…H64`); scripts are in [`../v4_10_0_r77/`](../v4_10_0_r77/README.md).
+
+Layer v4.9.0-r78 (4 Nov 2026) resolves H65 (invalid by criterion; part (b), the gauge stabilizer so(1,2), as predicted) and H66 (confirmed, not blind). Scripts are in [`../v4_10_0_r78/`](../v4_10_0_r78/README.md).
+
+H67 (4 Nov 2026, confirmed): the four hidden conditions and their support on the cone are independent of the gauge (K₂, K₀, K₃, Q₃ and the Lorentz scalar Ψ̄Ψ all give F₆ = 477 and 6 polarizations). Scripts and logs are in `../v4_10_0_r79/llm/`.
+
+Layer v4.9.0-r79 records H67.

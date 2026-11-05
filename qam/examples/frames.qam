@@ -1,0 +1,14 @@
+% QAM record exported by qam.sty
+% source frames.tex md5 9957078E493C84D6576A186F98F333F9
+map G : A -> B
+map H : B -> C
+map K : A -> C
+pi := claim; frame *; status proved; inputs {}; hash F7E2CE117C5DA217BAAC0C81EED7BC60; sources {}
+x := <6,x>; frame A; status computed; inputs {x}; hash D0A5277F1F9D6252E8C6C06151076288; sources {}
+y := derive(x,pi); frame A; status computed; inputs {x}; hash E4A8262F0A8B5F6204C4692940D96413; sources {D0A5277F1F9D6252E8C6C06151076288,F7E2CE117C5DA217BAAC0C81EED7BC60}
+yC := convert(K,y); frame C; status computed; inputs {x}; hash 8315CD28E863A12D0BBB76700913F3B7; sources {E4A8262F0A8B5F6204C4692940D96413}
+obs := claim; frame C; status computed; inputs {}; hash 267E68814E1340F412F27F05422AD2D7; sources {}
+compare yC obs
+compare pi obs
+two := derive(pi); frame *; status proved; inputs {}; hash 8F5EF3D91D3CA071B6ADEC53F4DB86C6; sources {F7E2CE117C5DA217BAAC0C81EED7BC60}
+% record 66938A9A410D0685DC6155B4B9A7C2F1

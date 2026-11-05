@@ -1,0 +1,55 @@
+name: OP5 hochgenau (Eichungen, H67)
+# Ein Job je Jet-Ordnung q: k159_hp_faser.py in arb (70 Stellen), 4 Threads. Ergebnisse im Log (ERGEBNIS) und als Artefakt.
+on:
+  push:
+    branches: ["rechnen/**"]
+    paths: ["ci/hp_eich/**", ".github/workflows/hp-eichung.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: hp-eichung-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.m.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+        with: {sparse-checkout: ci/hp_eich}
+      - id: m
+        run: |
+          python3 -c "
+          import json,pathlib
+          s=pathlib.Path('ci/hp_eich/auftrag.txt').read_text().split('#')[0]
+          qs=[x.strip() for x in s.split(',') if x.strip()]
+          print('Eichungen:',qs); open(__import__('os').environ['GITHUB_OUTPUT'],'a').write('matrix='+json.dumps({'e':qs})+'\n')"
+  faser:
+    name: Eichung ${{ matrix.e }}
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 345
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            ci/hp
+            ci/hp_eich
+            analysis/op5-field-slices/state-sufficiency-2026-10-30
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install --quiet numpy mpmath==1.3.0 python-flint==0.9.0
+      - name: Rechnen
+        env: {QS_DPS: "70", QS_HPWORK: "hp_work2", QS_THREADS: "4", QS_EICHUNG: "${{ matrix.e }}"}
+        run: |
+          nproc; free -g | head -2; mkdir -p out
+          /usr/bin/time -v python -u ci/hp_eich/k167_hp_eichung.py analysis/op5-field-slices/state-sufficiency-2026-10-30 6 out/e${{ matrix.e }}.json 2> out/zeit.txt | grep -v Warn
+          grep -E "Maximum resident|Elapsed" out/zeit.txt || true
+          echo "ERGEBNIS $(python3 -c "import json;r=json.load(open('out/e${{ matrix.e }}.json'));print(json.dumps({k:r[k] for k in ('eichung','dim_N','rang_C','F','verhaeltnis_gram','polarisationen_kegel','pol_luecke_min','ausserhalb_kleinster_sw','sekunden')}),[max(s['residuen'][-1:]) for s in r['stufen']],r['residuen_N'][-1])")"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: {name: "hp-e${{ matrix.e }}", path: out/}

@@ -1,0 +1,17 @@
+% Convention-free claims (frame *) and composed maps.
+\documentclass{article}
+\usepackage[export]{qam}
+\begin{document}
+\qamframe{A}\qamframe{B}\qamframe{C}
+\qammap{G}{A}{B}\qammap{H}{B}{C}
+\qamcompose{K}{G}{H}                       % K = H after G : A -> C
+\qamclaim{pi}{*}{proved}                   % a convention-free constant
+\qaminput{x}{A}{computed}
+\qamderive{y}{computed}{x,pi}              % * fits frame A
+\qamconvert{yC}{computed}{K}{y}
+\qamclaim{obs}{C}{computed}
+\qamcompare{yC}{obs}
+\qamcompare{pi}{obs}                        % * compares with anything
+\qamderive{two}{proved}{pi}                 % only convention-free premises: frame *
+\qamledger
+\end{document}

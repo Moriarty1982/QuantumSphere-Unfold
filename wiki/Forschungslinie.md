@@ -1,6 +1,6 @@
 # Forschungslinie: was die Runden seit v4.8.0 ergeben haben
 
-**Stand: 3. November 2026, Runden bis v4.9.0-r74.** Der Companion wächst in **Runden**: Jede neue Runde ist ein eigener Abschnitt am Ende des Dokuments, ältere Runden werden nicht umgeschrieben. Diese Seite fasst die Ergebnisse nach Themen zusammen, damit man sie ohne den Quelltext verstehen kann. [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Vorhersagen und Tests](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Vorhersagen-und-Tests) · [Forschungsstand](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungsstand)
+**Stand: 4. November 2026, Runden bis v4.9.0-r81.** Der Companion wächst in **Runden**: Jede neue Runde ist ein eigener Abschnitt am Ende des Dokuments, ältere Runden werden nicht umgeschrieben. Diese Seite fasst die Ergebnisse nach Themen zusammen, damit man sie ohne den Quelltext verstehen kann. [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Vorhersagen und Tests](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Vorhersagen-und-Tests) · [Forschungsstand](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungsstand)
 
 > **Anmerkung für LLMs und Quellenprüfung:** Runden heißen `v4.8.0-rNN` bzw. `v4.9.0-rNN` mit Labels `sec:v480-rNN-…` bzw. `sec:v490-rNN-…`. Auf GitHub stehen sie in `sources/research/parts/v480-post-release-layers.tex` und `v490-post-release-layers.tex`, die Notizen unter `notes/research/`. Was gilt, sagt immer die jüngste Runde zu einem Thema.
 
@@ -103,6 +103,17 @@ In r25 wurden 15 Sackgassen archiviert.
   - Nächster Schritt: konsistente Daten in höherer Genauigkeit.
 - **Konsistente Daten und Genauigkeitsgrenze (r74).** Mit $\Omega$ neu am reparierten Keim wird das erweiterte Symbol erstmals bei Ordnung 8 involutiv (H58, formal ungültig). Die Spencer-Kohomologie lässt bis zu vier weitere Bedingungen an siebten und drei an achten Ableitungen zu.
   - Die Grenze ist strukturell: $\Omega$ und die vier Bedingungen sind fast Folgen der Grundgleichungen. Stufenweise Elimination und ebene Wellen heben sie nicht auf.
+- **Hohe Genauigkeit und Kovarianz (r77).** In 70 Stellen zeigt sich:
+  - Es gibt genau vier versteckte Bedingungen.
+  - Das Symbol ist erstmals bei Ordnung 8 involutiv.
+  - Auf 7- und 8-Jets gibt es keine weiteren Bedingungen (H59), das System ist also am Keim formal integrabel.
+  - Es trägt 6 masselose Moden (H60). Diese sind nicht vom Weyl- oder Majorana-Typ (H61).
+  - Bei festem Hintergrund ist das Symbol nur unter Skalierung invariant (H62, H63).
+  - Die Konstruktion R ist kovariant (H64). Die Lorentz-Brechung kommt vom Hintergrund.
+- **Kovarianz auf Werteebene (r78).** R ist samt allen Termen niedrigerer Ordnung kovariant (H66), damit auch Ω. Die Eichung Ψ†K₂Ψ = S bleibt nur unter so(1,2) erhalten (H65(b)). Die vier Bedingungen sind daher höchstens unter so(1,2) kovariant.
+- **Eichunabhängigkeit (r79).** In fünf Eichungen, darunter der Lorentz-Skalar Ψ̄Ψ, gibt es jeweils genau die vier Bedingungen und 6 Polarisationen (H67). Die Bedingungen sind damit kovarianter Inhalt des Systems; die Lorentz-Brechung kommt nur vom Hintergrund.
+- **Hintergrund nicht aus den Spinoren, Abschluss (r80).** Die drei Spinorblöcke sind reguläre Dirac-Flüssigkeiten in einer Hubble-artigen Gegenströmung mit Spins entlang der Azimutachse (Erkundung). Der Hintergrund A, h erfüllt aber weder Yang–Mills noch Klein–Gordon mit diesen Blöcken als Quelle (H68 widerlegt, Residuen 0,83–1,0); die Quellen sind rund tausendmal zu klein und zeigen in andere Farbrichtungen. Auf Entscheidung des Autors ist der Zweig r71–r80 damit abgeschlossen. Die Ergebnisse bleiben lokale Aussagen über ein Vergleichsmodell mit vorgegebenem Hintergrund; weiter geht es eine Ebene höher mit der gemeinsamen Dynamik.
+- **Gemeinsame Wirkung W1 (r81).** Nach dem Abschluss des Vergleichsmodells eine eigene Wirkung: Koframe als eigenes Feld, Einstein–Cartan ohne Λ, die 16 Weyl-Zustände einer Generation auf der Dixon-Ablage. Die komplexe Lesart verlangt eine Strombilanz zwischen Materie und Tachyonbild; ein mitbewegt versetztes Paar erfüllt sie exakt und ist energetisch neutral (H69, H70). Mit Masse wird das Tachyonbild tachyonisch (H71). Ein Vakuumterm ist aus tachyonischen Moden möglich, seine Größe aber frei (H72, H73 widerlegt). Das Higgs-Feld lässt sich als Übergang zwischen Materie und gegenläufigem Tachyonbild lesen. Korrigiert wird unter anderem die Frame-Lesart von r44.
 
 ## Namen (r75)
 

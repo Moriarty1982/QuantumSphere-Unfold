@@ -1,6 +1,6 @@
 # Offene Probleme und wo die Arbeit festsitzt
 
-**Stand: 3. November 2026, nach v4.9.0-r74.** Diese Seite beschreibt, was offen ist, warum, und was der nächste sinnvolle Schritt wäre. [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie) · [GitHub Issues](https://github.com/Moriarty1982/QuantumSphere-Unfold/issues)
+**Stand: 4. November 2026, nach v4.9.0-r81.** Diese Seite beschreibt, was offen ist, warum, und was der nächste sinnvolle Schritt wäre. [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie) · [GitHub Issues](https://github.com/Moriarty1982/QuantumSphere-Unfold/issues)
 
 ## Der gemeinsame Kern: Es fehlt eine Dynamik
 
@@ -36,7 +36,7 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
-Lokal ist OP5 über eine Detektorschwelle geschlossen ($\mathrm{OP5}_{\mathrm{eff}}$). Exakt ist es offen. Der Stand nach r69 bis r74:
+Lokal ist OP5 über eine Detektorschwelle geschlossen ($\mathrm{OP5}_{\mathrm{eff}}$). Exakt ist es offen. Der Stand nach r69 bis r81:
 - **Frame-Wechsel:** Ein passiver Frame-Wechsel beseitigt keinen Bilanzfehler.
 - **Neutralität:** „Neutral“ hat drei verschiedene Bedeutungen, und keine davon legt den Vakuumterm fest.
 - **Lichtkegel:** Der Kegel kommt aus der Clifford-Struktur. Kegeldaten legen weder eine absolute Skala noch das Gewicht eines Vakuumterms fest.
@@ -50,7 +50,18 @@ Lokal ist OP5 über eine Detektorschwelle geschlossen ($\mathrm{OP5}_{\mathrm{ef
 
 - **Genauigkeitsgrenze (r74):** Mit konsistenten Daten wird das erweiterte Symbol nach allem Anschein erst bei Ordnung 8 involutiv. Weitere versteckte Bedingungen (bis zu vier an siebten, drei an achten Ableitungen) sind nicht ausgeschlossen. Die Entscheidung scheitert an einer strukturellen Genauigkeitsgrenze: $\Omega$ und die vier Bedingungen sind fast Folgen der Grundgleichungen.
 
-**Nächster Schritt** im Vergleichssystem (r74): die ganze Rechenkette (Keim, Linearisierung, Elimination) mit höherer Genauigkeit wiederholen oder eine Umformulierung finden, die die Vielfachheiten des Symbolmoduls auf der charakteristischen Menge berücksichtigt; damit die möglichen weiteren Bedingungen an siebten und achten Ableitungen entscheiden. Danach, nach der Literaturnotiz der OP5-Serie:
+- **Hohe Genauigkeit (r77):**
+  - Keine weiteren versteckten Bedingungen (H59): Das erweiterte System ist am Keim formal integrabel und trägt 6 masselose Moden (H60).
+  - Die Konstruktion R ist kovariant (H64). Lorentz-Symmetrie fehlt nur, weil der Hintergrund fest ist (H62, H63). Welchen Spin die Moden tragen, ist offen (H61 widerlegt).
+
+- **Kovarianz (r78):** R und Ω sind kovariant (H66). Die Eichung zeichnet die y-Richtung aus, nur so(1,2) bleibt erhalten (H65(b)).
+
+- **Eichunabhängigkeit (r79):** Die vier Bedingungen sind in fünf Eichungen gleich, auch in der kovarianten Ψ̄Ψ (H67).
+
+- **Gemeinsame Wirkung (r81):** W1 erzeugt allein keinen Vakuumterm. Ein Λ-artiger Term entsteht aus tachyonischen Moden beider Normvorzeichen, die Struktur legt seine Größe aber nicht fest. Offen: Higgs-Sektor in W1, die Skala (Masse des Tachyon-Partners, Stringspannung), Rückwirkung auf die Expansion.
+- **Hintergrund (r80):** A, h werden nicht von den Spinorblöcken erzeugt, weder über Yang–Mills noch über Klein–Gordon (H68 widerlegt). Der Vergleichsmodell-Zweig ist damit abgeschlossen (Autorentscheidung); Feinheiten wie die Lorentz-Wirkung auf die 6 Moden werden ohne eigene Dynamik nicht weiter verfolgt.
+
+**Nächster Schritt** (r80): eine Ebene höher. Zuerst eine Bestandsaufnahme der bisherigen Wirkungsansätze (woran jeder gescheitert ist) und der Mindestanforderungen an eine gemeinsame Wirkung für Spinoren, Verbindung, Skalar und Koframe; diese gemeinsame Dynamik fehlt OP1 bis OP5 gleichermaßen. Die [Bestandsaufnahme](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/v4_10_0_w1/Bestandsaufnahme_Wirkungsansaetze.md) sammelt rund ein Dutzend bisherige Ansätze. Fast alle scheitern an einer von fünf Stellen: Ein Teil der Felder wird festgehalten statt variiert; das Wörterbuch von den Spinoren zum Koframe (Spurhindernis, Rangschranke, Flachheit, Bruch der Stromerhaltung); endliche Strafen statt exakter Bedingungen; ungeklärte Stationarität (reell oder komplex, welche Adjungierte); Quellen, die nicht in der Eichalgebra liegen. Daraus folgen acht Mindestanforderungen an eine Wirkung, unter anderem alle Felder unabhängig variiert, Schließung als exakte Bedingung, ein gemeinsamer Lichtkegel und ein nicht freier Vakuumterm. Vor jeder Rechnung muss der Autor fünf Fragen entscheiden: Koframe als eigenes Feld oder als Funktion der Spinoren, reelle oder komplexe Wirkung, Gravitationsterm, Eichgruppe, und ob P_C7 exakt gesetzt oder dynamisch ausgewählt wird. Die Literaturnotiz der OP5-Serie gibt dafür die Reihenfolge vor:
 1. polare Spinorvariablen (Fabbri) und Fierz-Rekonstruktion,
 2. Nebenbedingungsalgorithmus und formale Integrabilität,
 3. eine gekoppelte Coframe-Dynamik,

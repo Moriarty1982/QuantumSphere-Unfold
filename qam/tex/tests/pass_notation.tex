@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage[export]{qam}
+\begin{document}
+\qamframe{M}\qamframe{T}
+\qammap[\mathcal G]{G}{M}{T}
+\qaminput[\gamma]{gamma}{M}{computed}
+\qamclaim[\kappa]{counting}{M}{proved}
+\qamderive[\beta]{beta}{computed}{gamma,counting}
+\qamconvert[\beta']{betaT}{conditional}{G}{beta}
+\qamclaim[\lambda]{lem}{M}{proved}
+\qamderive[\mu]{mu}{proved}{lem,counting}
+
+Input: \qam{gamma}\par
+Derived: \qam{beta}\par
+Converted: \qam{betaT}\par
+Proved: \qam{mu}\par
+Without tag: \qam*{beta}\par
+\qamledger
+\end{document}
