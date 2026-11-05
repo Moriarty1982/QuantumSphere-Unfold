@@ -17,6 +17,8 @@
 ## Nach r82 erledigt (5.11., noch nicht als Runde gesichert)
 - **H76 (Vorab 2b47e7f, nicht blind):** Quanten-Zerfall 0 → φφ + χχ über das Graviton. a, b, c bestätigt: Lorentz-invariant divergiert die Rate ∝ L² (Boost-Volumen); mit Rahmen-Cutoff Γ/V = 2,25·10⁻⁵ Λ⁸/M_P⁴; Schranke Λ ≲ 14 MeV (grob). Lauf 2 nicht verwertbar, Lauf 3 halbanalytisch (k191c) offengelegt. Stabilität verlangt einen ausgezeichneten Rahmen (Kandidat: mitbewegter Rahmen aus H70) und einen Cutoff ≤ ~10 MeV; Kaplan–Sundrum ≲ 2 meV passt zu I4 (nachträglich). `llm/Ergebnis_H76_Vakuumzerfall.md`, Skripte k191, k191b, k191c.
 
+- **Erkundung `llm/Erkundung_Lesarten_Tachyonbild.md`:** I4-Kondensat ⟨χ⟩ ist Lorentz-invariant, liefert keinen Rahmen, heilt H76 nicht. Zwei Lesarten des Tachyonbilds einer Wirkung: A (L_T = −L_M, Energieparität, r82.1) und B (p ↦ ip, X ↦ −X, Potential bleibt). B macht aus gesunder P_M = X/2 + cX² eine Geist-Kondensation (X₀ = 1/4c, stabil, w = −1, eigener Rahmen, Anregungen DM-artig), hebt aber V_min nicht auf. **Offene Autorentscheidung: A oder B (oder zuerst Verträglichkeit mit r20/r22/H71 prüfen).**
+
 ## Nächster Schritt (Optionen, Autor wählt)
 1. Erledigt mit H76 (siehe oben). Folgefrage: Erzeugt die Struktur einen Cutoff im mitbewegten Rahmen?
 2. Skalenfrage: Woher kommt eine Skala außer der Planck-Skala? Kandidaten: I1 (Stringspannung, Informationsmenge), I4 (Kondensation auf FRW).
