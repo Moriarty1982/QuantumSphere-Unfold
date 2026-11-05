@@ -41,3 +41,16 @@ Nächste Frage: Erlaubt die Weyl-Gleichung (mit A, ohne Torsion wegen j_gesamt =
 ## Nachtrag 2 (5.11., Autor: „Der Versatz könnte durch eine kosmische Expansionsvariable festgelegt werden; deswegen wurde OP5 eröffnet.“)
 - Fundstelle: `thm:expansion` (Monolith ~Z. 6925): a(t) ∼ τ_n = √(t_n² − β_sym²), β_sym als Frame-Versatz des Beobachters. Expansion und Frame-Versatz sind dort verknüpft. Grenze: Die Herleitung über Riemann-Nullstellen ist seit v4.8.0-r04 zurückgezogen (T4); der Zusammenhang ist neu zu begründen.
 - Plan für H69 (Vorab-Notiz vor jeder Rechnung): (a) Kopplung δ = δ(a) bzw. δ ∝ 1/H vorab festlegen; (b) prüfen, ob die Weyl-Gleichung Lösungen mit antiperiodischem Querstrom (Periode 2δ) zulässt; (c) OP5-Frage: Erzeugt die versetzte M–T-Paarung (T-Anteil mit umgekehrtem Kinetikvorzeichen) einen effektiven Vakuumterm, den W1 allein nicht hat? Kandidaten für δ(a) nur aus vorab genannten Formen, nicht nachträglich anpassen.
+
+## Nachtrag 3 (5.11., Autorfrage „gilt das für alle Frames, oder wirkt die Idee erst bei einer anderen Mischung?“; k177, Erkundung)
+H69/H70 nutzten gleiche Gewichte für M und T. Mit den Frame-Gewichten von Konvention F (p₊ für M, p₋ für T) und Δω·δ = π:
+| Gewichte | p₊ − p₋ | max|j_gesamt| | Energierest / |T^M| | Mittel des Rests | Spur |
+|---|---|---|---|---|---|
+| P (½, ½) | 0 | 6e-15 | 3e-16 | 0 | 0 |
+| M (1/(1+x), x/(1+x)), x = β_sym² | +0,5364 | 4,7 | 0,536 | T_tt = T_zz = +7,9, sonst 0 | 0 |
+| T (vertauscht) | −0,5364 | 4,7 | 0,536 | T_tt = T_zz = −7,9 | 0 |
+
+- Die bisher gerechnete Paarung mit gleichen Gewichten ist genau die **Photon-Frame-Mischung P**. Dort ist alles neutral, verträglich mit der Lesart „Λ = 0 im Photon-Frame“ (T9).
+- Mit den Gewichten des Materie-Frames verletzt das Paar die K-Bedingung (j ≠ 0). Es bleibt ein homogener Rest proportional zu p₊ − p₋ = |b| = 1/γ = 0,536, und zwar exakt (k177). Der Rest ist strahlungsartig entlang der Achse (T_tt = T_zz) und **spurfrei**, also nicht Λ-artig. Im T-Frame hat er das umgekehrte Vorzeichen.
+- **Strukturgrund:** Masselose Weyl-Felder haben einen spurfreien Energie-Impuls-Tensor. Ein Λ-artiger Term T_μν = −ρ_Λ g_μν hat die Spur −4ρ_Λ ≠ 0. Mit masselosen Feldern gibt keine Mischung von M, T und P einen Vakuumterm.
+- **Wo die Idee greifen könnte:** Spur braucht Masse. Nach r44 sind die Massenterme der Ablage antilinear, sie enthalten T und koppeln damit die Frames. Ein massives M–T-Paar mit den Gewichten des Materie-Frames, gekoppelt über den Massenterm, ist die nächste Stelle, an der ein Rest mit Spur, also ein Vakuumbeitrag, entstehen kann. Das wäre H71 mit eigener Vorab-Notiz.
