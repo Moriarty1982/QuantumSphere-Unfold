@@ -28,3 +28,12 @@ T ist die Fortsetzung der Rapidität η → η + iπ/2 entlang einer Achse n (r2
 - Ist der T-Anteil ein eigenes Feld (16 weitere Zustände) oder dasselbe Feld in zweiter Lesart?
 - Was sagt die reelle Wirkung zum T-Anteil mit umgekehrtem Kinetikvorzeichen (Energie, Hamilton-Funktion)?
 - Liefert die Bedingung „kein Querstrom“ eine Vorhersage, oder ist sie nur eine Einschränkung?
+
+## Nachtrag (5.11., Autorfrage „wer sagt, dass Frames im Normalzustand synchron sind?“)
+Lesart: Der T-Anteil ist dasselbe Feld, mit Versatz δ gelesen, ψ_T(x) = −iσ_n ψ_M(x + δ). Eine reine Phase fällt aus allen Strömen heraus; es zählt nur ein Raum- bzw. Zeitversatz. Die K-Bedingung wird zu j_M(x) + Λ(iπ) j_M(x + δ) = 0:
+- t- und n-Komponente: j(x) = j(x + δ), also periodisch mit Periode δ;
+- Querkomponente: j_⊥(x) = −j_⊥(x + δ), also antiperiodisch, eine Schwingung mit Periode 2δ (ω = π/δ).
+
+Synchrone Frames (δ = 0) verbieten jeden Querstrom. Versetzte Frames erlauben ihn als Schwingung mit einer durch δ festgelegten Frequenz; gemittelt verschwindet er. „Eigenes Feld“ und „dieselbe Generation“ sind damit Grenzfälle einer Familie (δ = 0 starre Spiegelung, freies δ fast unabhängig). Mögliche Verwandte im Companion, nur als Lesart: β_sym als „Frame-Versatz“, Kick = Schwebung/6 (r13). Analytisch hergeleitet, noch nicht mit der Weyl-Gleichung zusammen gelöst.
+
+Nächste Frage: Erlaubt die Weyl-Gleichung (mit A, ohne Torsion wegen j_gesamt = 0) Lösungen, deren Querstrom antiperiodisch mit Periode δ ist, und was legt δ fest?
