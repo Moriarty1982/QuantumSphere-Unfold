@@ -1,0 +1,127 @@
+name: OP5 parallel (Symbolränge)
+
+# Verteilt eine OP5-Rangrechnung auf mehrere GitHub-Runner: ein Job je Ordnung p, am Ende eine Zusammenfassung.
+# Jeder Runner hat 4 Kerne und 16 GB; die Jobs laufen gleichzeitig (öffentliches Repo: bis zu 20 parallel).
+#
+# Start:  Push auf einen Branch rechnen/** (Liste aus ci/op5/auftrag.txt)
+#         oder, sobald der Workflow auf main liegt, über "Run workflow" mit eigener Liste.
+# Ergebnis: Tabelle in der Zusammenfassung des Laufs, alle Einzel-JSONs als Artefakt "op5-ergebnisse".
+
+on:
+  workflow_dispatch:
+    inputs:
+      ordnungen:
+        description: "Ordnungen p, z. B. 2-12 oder 7,9,11"
+        required: false
+        default: ""
+  push:
+    branches:
+      - "rechnen/**"
+    paths:
+      - "ci/op5/**"
+      - ".github/workflows/op5-parallel.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: op5-parallel-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  plan:
+    name: Job-Matrix bauen
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.m.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: ci/op5
+      - id: m
+        env:
+          EINGABE: ${{ github.event.inputs.ordnungen }}
+        run: |
+          python3 - <<'EOF'
+          import json, os, pathlib
+          s = os.environ.get('EINGABE', '').strip() or pathlib.Path('ci/op5/auftrag.txt').read_text().split('#')[0].strip()
+          ps = []
+          for part in s.replace(' ', '').split(','):
+              if '-' in part:
+                  a, b = map(int, part.split('-')); ps += range(a, b + 1)
+              elif part:
+                  ps.append(int(part))
+          ps = sorted(set(ps), reverse=True)  # grosse zuerst, sie dauern am laengsten
+          print('Ordnungen:', ps)
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+              f.write('matrix=' + json.dumps({'p': ps}) + '\n')
+          EOF
+
+  rang:
+    name: p = ${{ matrix.p }}
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            ci/op5
+            analysis/op5-field-slices/state-sufficiency-2026-10-30/completion-omega-witness.npz
+            notes/research/v4_10_0_r72/llm/k136_eichdaten.npy
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet numpy scipy
+      - name: Rechnen
+        run: |
+          nproc; free -g | head -2
+          mkdir -p out
+          /usr/bin/time -v python ci/op5/symbol_rang.py --p ${{ matrix.p }} --out out/p${{ matrix.p }}.json 2> out/zeit.txt
+          grep -E "Maximum resident|Elapsed" out/zeit.txt; mv out/zeit.txt out/p${{ matrix.p }}_zeit.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: op5-p${{ matrix.p }}
+          path: out/
+
+  zusammenfassung:
+    name: Zusammenfassung
+    needs: rang
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: op5-p*
+          merge-multiple: true
+          path: alle
+      - run: |
+          python3 - <<'EOF'
+          import json, os, pathlib, re
+          rs = sorted((json.loads(f.read_text()) for f in pathlib.Path('alle').glob('p*.json')), key=lambda r: r['p'])
+          L = ['## OP5: dim g_p und dim g\'_p (eingefrorenes Omega-Symbol)', '',
+               '| p | Matrix (geeicht) | dim g_p | erwartet | dim g\'_p | erwartet | Lücke g\'_p | RAM | Zeit |',
+               '|---|---|---|---|---|---|---|---|---|']
+          for r in rs:
+              z = pathlib.Path(f"alle/p{r['p']}_zeit.txt").read_text() if pathlib.Path(f"alle/p{r['p']}_zeit.txt").exists() else ''
+              ram = re.search(r'Maximum resident set size \(kbytes\): (\d+)', z)
+              ok = lambda x, e: f'{x}' if e is None else (f'{x} ✓' if x == e else f'**{x} ≠ {e}**')
+              g, gg = r['ungeeicht'], r['geeicht']
+              L.append(f"| {r['p']} | {gg['zeilen']}×{gg['spalten']} | {ok(g['dim'], r['erwartet_g'])} | {r['erwartet_g'] or '–'} | "
+                       f"{ok(gg['dim'], r['erwartet_g_geeicht'])} | {r['erwartet_g_geeicht'] or '–'} | {gg['verhaeltnis']:.0e} | "
+                       f"{int(ram.group(1))/1e6:.1f} GB | {r['sekunden_gesamt']:.0f} s |" if ram else
+                       f"| {r['p']} | {gg['zeilen']}×{gg['spalten']} | {g['dim']} | {r['erwartet_g'] or '–'} | {gg['dim']} | {r['erwartet_g_geeicht'] or '–'} | {gg['verhaeltnis']:.0e} | – | {r['sekunden_gesamt']:.0f} s |")
+          L += ['', f'Kontrolle: dim g\'_p = dim g_p − C(p+3,3) gilt für alle p: {all(r["geeicht"]["dim"] == r["kontrolle_geeicht"] for r in rs)}']
+          text = '\n'.join(L); print(text)
+          open(os.environ['GITHUB_STEP_SUMMARY'], 'a').write(text + '\n')
+          pathlib.Path('alle/zusammenfassung.json').write_text(json.dumps(rs, indent=1))
+          pathlib.Path('alle/zusammenfassung.md').write_text(text + '\n')
+          EOF
+      - uses: actions/upload-artifact@v4
+        with:
+          name: op5-ergebnisse
+          path: alle/

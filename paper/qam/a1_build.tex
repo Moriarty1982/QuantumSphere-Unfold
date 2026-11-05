@@ -1,0 +1,14 @@
+\section{Lean modules and use of language models}\label{app:build}
+
+\paragraph{Modules.}  \texttt{QSFormal/QAM.lean} (object kinds, reindexing, transport models, chains), \texttt{QSFormal/Models.lean} (the two
+trivial models), \texttt{QSFormal/Route.lean} (routed models and paths), \texttt{QSFormal/Store.lean} (store, instructions, transition
+semantics, preservation, rollback, certificates) and \texttt{QSFormal/StoreProgress.lean} (no stuck states, status characterization, atomicity,
+progress, ledger completeness), built with Mathlib in the directory \texttt{formal/}.  The project-independent part is a separate
+package in \texttt{qam/lean/} that uses the Lean core only: \texttt{QAM/Provenance.lean} (derivation trees: no promotion, inputs, frames)
+and \texttt{QAM/QamFile.lean} (the checker for exported records, its line-by-line and record-level soundness, the hash links), with the
+executable \texttt{qamcheck}.  Both are built with \texttt{lake build}; the toolchain is fixed in \texttt{lean-toolchain}.
+
+\paragraph{Use of language models.}  The starting conjecture of the case study is the author's.  The language, the machine, the Lean
+formalization and much of this text were developed in a dialogue with large language models (Claude, Anthropic; ChatGPT and Codex, OpenAI).
+Some ideas came from the models, others from the author; the author chose the questions and decided what to keep.  Their output was accepted
+only through the checks described in Section~\ref{sec:case}.  The author takes full responsibility for the content.

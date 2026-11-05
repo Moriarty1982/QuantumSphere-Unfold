@@ -1,0 +1,109 @@
+\section{The kernel and its Lorentz structure}\label{sec:kernel}
+
+\subsection{Definition and natural norm}
+
+Let \(e_1,e_2,e_3=e_1e_2\) be the imaginary quaternion units and \(i\) the complex unit, which commutes with them.
+
+\begin{definition}[Kernel]\label{def:kernel}
+A \emph{kernel} is an element
+\begin{equation}\label{eq:kernel}
+q = it\,\mathbf 1 + z_1e_1+z_2e_2+z_3e_3 \in \mathbb C\otimes_{\mathbb R}\HH,
+\qquad t\in\mathbb R,\quad z=(z_1,z_2,z_3)\in\mathbb C^3 .
+\end{equation}
+\end{definition}
+
+Let \(\bar q\) be quaternion conjugation, \(e_k\mapsto-e_k\), \emph{without} complex conjugation of the coefficients.
+
+\begin{proposition}[Natural norm]\label{prop:norm}
+\(N(q):=q\bar q\) is complex-valued and multiplicative, \(N(pq)=N(p)N(q)\), and
+\begin{equation}\label{eq:norm}
+N(q)=-t^2+s(z),\qquad s(z):=z_1^2+z_2^2+z_3^2 .
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The coefficients commute with the units, so the vector part of \(q\bar q\) cancels and \(e_k\bar e_k=1\) leaves \((it)^2+\sum_kz_k^2\).
+Multiplicativity follows from \(\overline{pq}=\bar q\,\bar p\).
+\end{proof}
+
+The Hermitian alternative \(-t^2+\sum_k|z_k|^2\) is not a Lorentz form: as a real quadratic form in \((t,\operatorname{Re}z,\operatorname{Im}z)\)
+it has signature \((1,6)\), and conjugation by real quaternions acts on \(\operatorname{Re}z\) and \(\operatorname{Im}z\) separately by
+\(SO(3)\), without boosts.  The complex-bilinear norm \eqref{eq:norm} is the one that carries the Lorentz group.
+
+\subsection{The Lorentz group on the kernels}
+
+\begin{proposition}\label{prop:readingB}
+For \(u\in\mathbb C\otimes\HH\) with \(N(u)=1\), the map \(q\mapsto uqu^{-1}\) fixes \(t\) and acts on \(z\) by an element of \(SO(3,\mathbb C)\);
+every element of \(SO(3,\mathbb C)\) arises.  Since \(SO(3,\mathbb C)\cong PSL(2,\mathbb C)\cong SO^+(1,3)\), the coordinates \(z\) carry the
+proper orthochronous Lorentz group, with invariant \(s(z)\).
+\end{proposition}
+
+\begin{proof}
+\(\mathbb C\otimes\HH\cong M_2(\mathbb C)\) with \(N=\det\), so \(\{N(u)=1\}=SL(2,\mathbb C)\).  Conjugation fixes the scalar part and preserves
+the complex three-dimensional space of pure elements together with the restriction of \(N\), which is \(s\).  This is the double cover
+\(SL(2,\mathbb C)\to SO(3,\mathbb C)\).
+\end{proof}
+
+Writing \(z=E+iB\) identifies the coordinates with the Riemann--Silberstein vector of an electromagnetic field, and
+\begin{equation}\label{eq:invariants}
+s=E^2-B^2+2i\,E\cdot B
+\end{equation}
+collects its two invariants.  In this reading the scalar \(t\) is a Lorentz-invariant parameter, not a time coordinate; on the null set
+\(N(q)=0\) it is tied to the invariant magnitude, \(t^2=s\).  We leave its role open.
+
+\begin{proposition}[Orbits]\label{prop:orbits}
+The \(SO(3,\mathbb C)\)-orbits in \(\mathbb C^3\) are the level sets \(\{s=c\}\), \(c\neq0\), the punctured null cone
+\(\{s=0\}\setminus\{0\}\), and \(\{0\}\).
+\end{proposition}
+
+\begin{proof}
+For \(s(z)=c\neq0\) complete \(z/\sqrt c\) to a complex-orthonormal basis of determinant one and rotate it to \(e_1\).  For null vectors use
+Proposition~\ref{prop:nullcone} below: the spinor map is equivariant and \(SL(2,\mathbb C)\) is transitive on \(\mathbb C^2\setminus\{0\}\).
+\end{proof}
+
+\subsection{The symmetric triple}
+
+The motivating configuration of this work is a triple of equal kernels at \(120^\circ\), \(z=c(1,\omega,\omega^2)\) with
+\(\omega=e^{2\pi i/3}\).  In the Lorentz structure above it has an invariant meaning.
+
+\begin{lemma}[Triple lemma]\label{lem:triple}
+For \(z\in\mathbb C^3\),
+\[
+z_1+z_2+z_3=0\ \text{ and }\ s(z)=0
+\quad\Longleftrightarrow\quad
+z=c\,(1,\omega,\omega^2)\ \text{up to order},\ c\in\mathbb C .
+\]
+\end{lemma}
+
+\begin{proof}
+With the elementary symmetric functions \(\varepsilon_k\) of the \(z_k\), \(s=\varepsilon_1^2-2\varepsilon_2\).  Hence \(\varepsilon_1=s=0\) gives
+\(\varepsilon_2=0\), and the \(z_k\) are the three cube roots of \(\varepsilon_3\).  Conversely \(1+\omega+\omega^2=0=1+\omega^2+\omega^4\).
+\end{proof}
+
+The symmetric triple is thus not a phase condition but the Lorentz-invariant null condition together with centring.  The null cone
+itself is the image of spinors:
+
+\begin{proposition}[Null cone]\label{prop:nullcone}
+For \(\psi\in\mathbb C^2\) let \(z(\psi)=(\psi_1^2-\psi_2^2,\;i(\psi_1^2+\psi_2^2),\;-2\psi_1\psi_2)\).  Then \(s(z(\psi))=0\); every non-zero null
+vector has exactly the preimages \(\pm\psi\); the map intertwines \(SL(2,\mathbb C)\) on \(\psi\) with \(SO(3,\mathbb C)\) on \(z\); and the
+projectivized null cone is a smooth conic in \(\mathbb CP^2\), isomorphic to \(\mathbb CP^1\cong S^2\).
+\end{proposition}
+
+\begin{proof}
+With \(a=\psi_1^2\), \(b=\psi_2^2\): \(s=(a-b)^2-(a+b)^2+4ab=0\).  For null \(z\), \(\psi_1^2=\tfrac12(z_1-iz_2)\), \(\psi_2^2=-\tfrac12(z_1+iz_2)\),
+and \(z_3^2=4\psi_1^2\psi_2^2\) fixes the relative sign.  The conic is the Veronese image of \(\mathbb CP^1\).
+\end{proof}
+
+\subsection{The Hopf cascade}
+
+The three classical Hopf fibrations~\cite{hopf1931,hopf1935}
+\[
+S^1\to S^3\to S^2=\mathbb CP^1,\qquad S^3\to S^7\to S^4=\HH P^1,\qquad S^7\to S^{15}\to S^8=\OO P^1
+\]
+suggest a layered reading: light on \(\mathbb CP^1\) (Weyl spinors), matter on \(\HH P^1\) (Dirac spinors), and three generations on
+\(\OO P^1\).  Proposition~\ref{prop:nullcone} turns the first step into a theorem: the directions of light-like kernels form exactly
+\(\mathbb CP^1\).  A normalized spinor \(\psi\) is a qubit whose Bloch vector is its Hopf image, and \(k(\psi)=(|\psi|^2,\psi^\dagger\sigma\psi)\)
+is a light-like four-vector; every future time-like vector is a sum \(k(\psi_a)+k(\psi_b)\).  Single spinors are therefore light-like and
+pairs massive.  The other two steps are identifications.  Two cautions apply: the fibre \(S^7\) is not a group (\(G_2\) is the automorphism group
+of \(\OO\), and \(SU(3)\) the stabilizer of an imaginary unit), and the chain \(S^{15}\to S^8\to S^4\to S^2\) is not a composition of Hopf maps,
+so a cascade through all three layers is an additional assumption.

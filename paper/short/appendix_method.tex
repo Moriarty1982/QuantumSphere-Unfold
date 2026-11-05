@@ -1,0 +1,31 @@
+\section{Method}\label{app:method}
+
+\paragraph{Pre-registration.}  Since October 2026 every test with a decision criterion has been written down before the computation
+as a note giving the hypothesis, the data, and the criterion, and committed to the public repository~\cite{repo}; the commit time stamps
+it.  Fifty-eight such tests have been registered so far.  Notes that were not blind --- because the target window or a nearby value
+was known --- say so, and such results are not counted as confirmations.  Explorations without a note are labelled as explorations.
+Tests whose criterion could not be met by the method are recorded as invalid, not as passed.
+
+\paragraph{Append-only record.}  Results are added as numbered rounds to the longer version~\cite{companion}; earlier rounds are never
+rewritten, and a correction is a new round that names what it corrects.
+
+\paragraph{Scope list.}  A fixed list of statements that are not claimed --- among them any exact global closure and any statement about the
+Riemann hypothesis --- is checked against every round, also mechanically by a linter over the source.
+
+\paragraph{Formalization.}  Parts of the algebra are formalized in Lean~4 with Mathlib and built in continuous integration without
+\texttt{sorry}: among them the compensator and the doublet matrices (Proposition~\ref{prop:doublet}), the Gram decomposition of the state
+disk, the cyclic invariance of the triality form, the sector involutions on \(\mathbb C\otimes\OO\), and the uncertainty saturation of
+Section~\ref{sec:pheno}.
+
+\paragraph{Recomputation.}  Results that carry weight are recomputed with independently written code, at higher precision where
+needed, and in one series cross-checked between different language models.  Two readings were corrected this
+way (in the longer version~\cite{companion}); in another case a reported high-precision finding was traced to a conversion error and withdrawn before it
+entered a round.  Large rank computations can be distributed over parallel runners, one order per job.
+
+\paragraph{Use of language models.}  The starting conjecture --- that matter, light and a tachyon sector are one object in three
+frames --- is the author's.  Everything else grew out of it in a continuous dialogue with large language models (Claude, Anthropic;
+ChatGPT and Codex, OpenAI), used from the beginning.  Some of the mathematical tools were proposed by the models, others came from ideas
+the author contributed; the author chose the questions, decided which readings to test and which results to keep.  The models wrote and
+ran the numerical code, produced the Lean formalization, searched the literature and drafted much of the text, including this paper.
+Their output was accepted only through the checks described above, different models were used to cross-check each other, and several of
+their results were withdrawn by these checks.  The author takes full responsibility for the content.

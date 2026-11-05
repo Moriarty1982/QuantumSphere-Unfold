@@ -1,0 +1,6 @@
+g geeicht   H^(5,2) = 4  (ker 1322, Bild 1318; Luecken delta 9e+08, 5e+07)
+g geeicht   H^(6,2) = 0  (ker 1679, Bild 1679; Luecken delta 4e+07, 8e+07)
+g geeicht   H^(7,2) = 0  (ker 2082, Bild 2082; Luecken delta 7e+07, 1e+08)
+g erweitert H^(5,2) = 8  (ker 1322, Bild 1314; Luecken delta 9e+08, 6e+06)
+g erweitert H^(6,2) = 4  (ker 1656, Bild 1652; Luecken delta 2e+07, 4e+04)
+g erweitert H^(7,2) = 3  (ker 2030, Bild 2027; Luecken delta 3e+04, 3e+04)

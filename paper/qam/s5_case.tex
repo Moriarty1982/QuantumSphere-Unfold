@@ -1,0 +1,85 @@
+\section{Case study}\label{sec:case}
+
+\subsection{Setting}
+
+The project is a programme in mathematical physics that starts from one conjecture, by the author: that matter, light and a tachyon
+sector are one object read out in three frames~\cite{companion,physics}.  Everything else grew out of it in a dialogue with language models
+(Claude; ChatGPT and Codex) used from the beginning.  By November 2026 the research text had grown to about \(1300\) pages, of which roughly
+\(85\%\) are protocols, registers and audit rounds.  The author is not a physicist; the models wrote most code, the Lean formalization and much
+of the text.
+
+\subsection{Process}
+
+\begin{itemize}
+\item \emph{Append-only rounds.}  Results are added as numbered rounds; earlier rounds are never rewritten, and a correction is a new round
+that names what it corrects.  Since the first audited release there have been about a hundred such rounds.
+\item \emph{Pre-registration.}  Every test with a decision criterion is written down before the computation --- hypothesis, data, criterion ---
+and committed; the commit time stamps it~\cite{nosek}.  More than sixty tests have been registered.  Notes that were not blind say so.
+\item \emph{Scope list and linter.}  A fixed list of statements that are not claimed is checked against every round, also mechanically.
+\item \emph{Recomputation.}  Results that carry weight are recomputed with independently written code, at higher precision where needed,
+and in one series cross-checked between different models.  Large rank computations run in parallel on continuous-integration runners.
+\item \emph{Review.}  Before a paper is released, a separate model instance without access to the record reads only the manuscript and writes
+a referee report.
+\end{itemize}
+
+\subsection{What the register shows}
+
+Of the registered tests, the register lists more than a dozen as refuted, six as confirmed, and six as invalid by their own criterion ---
+for instance because a required numerical gap was not reached, even though the numbers came out as predicted.  Invalid tests are recorded as
+invalid, not as passed.  Four predictions wait for new data.  Among the statements of the research text that were withdrawn or corrected are
+all steps that relied on an external claimed proof of the Riemann hypothesis, an argument for the cosmological constant that is off by a factor
+of about \(10^{121}\), and six early predictions, none of which held.
+
+\subsection{Error classes and how they were caught}
+
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.20\textwidth}>{\raggedright\arraybackslash}p{0.43\textwidth}>{\raggedright\arraybackslash}p{0.29\textwidth}@{}}
+\toprule
+class & example & caught by\\
+\midrule
+\endhead
+frame mixing & A ``structural value'' of the central parameter equated a readout of one frame with an offset measured in another; a
+second one labelled two different states with the same symbol & two-sided display: the comparison has no declared comparison tensor\\
+input read as output & The central parameter, put in from two literature values, was cited as derived; a formula reproducing it to
+\(0.018\%\) had an exponent chosen after the fact & witness typing: the value is a readout of a witness\\
+promotion & Local or conditional statements stated as theorems and built upon, e.g.\ a cosmological-constant chain & status tags and the scope
+list; audit rounds\\
+external dependence & Proofs that cited a separate paper claiming the Riemann hypothesis & \emph{not} by the language: an audit round traced
+the citations\\
+numerical artefact & A high-precision result that came from passing 100-digit numbers through a 15-digit text conversion & recomputation at a
+generic point; withdrawn before it entered a round\\
+literature reading & A counting value read as ``corrected'' that later literature considers less well founded & independent literature check\\
+\bottomrule
+\end{longtable}
+\end{center}
+
+\subsection{A translation table}
+
+For eight key statements of the project the following table gives the standard notation and the QAM form.  The QAM form is not shorter;
+it records what the standard form leaves to the surrounding text.
+
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.27\textwidth}>{\raggedright\arraybackslash}p{0.37\textwidth}>{\raggedright\arraybackslash}p{0.28\textwidth}@{}}
+\toprule
+standard notation & QAM notation & what the QAM form adds\\
+\midrule
+\endhead
+kernel \(q=it\,\mathbf 1+z_ke_k\in\mathbb C\otimes\mathbb H\) & \(\ell_n=\langle1,n,\mathbb H\otimes\mathbb C\rangle\), \(s_q=\langle0,q\rangle\), \(q\in D(\ell_n)\) & the layer on which the
+state lives\\
+compensator \(C=\tfrac12(1+J)\), \(C^2=C\) & \(o_C=\langle2,\ell,\ell,G_C\rangle\), \(G_C\circ G_C=G_C\) & an operator within one layer, not a readout\\
+sector by the sign of \(\sigma=z\cdot z\) & \(r_\sigma=\langle3,\ell,\{+,0,-\},R_\sigma\rangle\) & the sector is a readout of the state\\
+exchange of sectors \(z\mapsto i\bar z\) & \({}^{T}{}_{M}\mathcal J^{i}{}_{j}z^j=(i\bar z)^i\); comparison only via \(G_{MT}\) & source and target frame; raw
+comparison ill-formed\\
+compensator matrix, \([\mathcal M,J]=[\mathcal M,C]=0\) & \(G_{\mathcal M}\circ G_J=G_J\circ G_{\mathcal M}\), \(G_{\mathcal M}\circ G_C=G_C\circ G_{\mathcal M}\) & nothing beyond
+the standard form\\
+one generation from \(\mathbb C\otimes\mathbb H\otimes\mathbb O\) & \(\langle7,\mathbb C\otimes\mathbb H,\mathbb O\rangle\); the choice of \(J\) is a branch \(\langle4,b_J,B\rangle\) & the construction is
+visibly conditional\\
+frame offset \(\beta\approx0.549\) & \({}^{M}\beta=R_\beta(u)\), witness \(u=\langle6,(\gamma_1,\gamma_2)\rangle\) & the value rests on an input\\
+matter fraction \(\Omega_M=\beta^2\) & \(\mathrm{QRead}(r_\Omega,s_{\rm now},\beta^2)\), layer \(\ell_{\rm now}\) & validity restricted to one epoch\\
+\bottomrule
+\end{longtable}
+\end{center}

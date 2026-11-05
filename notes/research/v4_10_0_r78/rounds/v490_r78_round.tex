@@ -1,0 +1,116 @@
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r78 Source-Only: Covariance of the OP5 Comparison System at Value Level and the Stabilizer of the Gauge}
+\addcontentsline{toc}{section}{v4.9.0-r78 Source-Only: Covariance of the OP5 Comparison System at Value Level and the Stabilizer of the Gauge}
+\label{sec:v490-r78-value-covariance}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.9.0-r77 showed that the construction \(R\) of the OP5 comparison system is covariant at the level of its first-order
+symbol (H64, \S\ref{sec:v490-r77-high-precision-covariance}).  On 4 November 2026 the author asked to check the remaining
+building blocks: \(\Omega\) and \(\theta\), the four hidden conditions and the gauge \(\Psi^\dagger K_2\Psi=S\).  \(\Omega\) is
+derived from \(R\) alone, the four conditions from \(R\) together with the gauge.  Hence it suffices to establish two things:
+\begin{itemize}[leftmargin=2em]
+\item the covariance of \(R\) at value level, with all lower-order terms;
+\item the stabilizer of the gauge.
+\end{itemize}
+This layer records one pre-registered test that is invalid by its criterion (H65) and one confirmed test (H66).  Everything
+concerns the comparison model of \S\ref{sec:v410-state-mediator} only.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r78 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r78 results}
+\label{subsec:v490-r78-results}
+
+\paragraph{Record v4.9.0-r78.1 (H65 invalid: stabilizer of the gauge as predicted, value level below the control bound).}
+Pre-registered.
+\begin{itemize}[leftmargin=2em]
+\item \emph{Part (b), the stabilizer of the gauge.}  The generators \(X\in\mathfrak{so}(1,3)\), in the spin representation, that
+preserve \(\Psi^\dagger K_2\Psi\) are those with \(K_2X+X^\dagger K_2=0\).  They span a three-dimensional subalgebra: the
+rotation about \(y\) and the boosts along \(x\) and \(z\).  This is \(\mathfrak{so}(1,2)\), the stabilizer of \(e_y\), as
+predicted.  The gauge is a non-covariant gauge fixing that singles out one spatial direction.
+\item \emph{Part (a), value level.}  Run 1 was invalid because the row transformation was taken from the symbol, which does not
+determine it off the solution set (positive control \(0.24\)).  A dated addendum preceded run 2, which is not blind and fits
+the row transformation from values.  Run 2 gave residuals \(\le1.1\times10^{-10}\), but its positive control
+(\(5.6\times10^{-11}\)) missed the pre-registered bound \(10^{-12}\), which lay below the numerical floor.  Part (a) is
+therefore invalid in both runs, and so is H65 as a whole.  The bound was not relaxed after the fact.
+\end{itemize}
+
+\paragraph{Theoremlet v4.9.0-r78.2 (H66 confirmed: \(R\) is covariant at value level).}
+Pre-registered, not blind (the values of H65 were known); the control bound is \(10^{-9}\).
+\begin{itemize}[leftmargin=2em]
+\item \emph{Setup.}  For each fixed pair \((M,S)\), with \(M\in GL(4)\) and \(S\in\mathrm{Spin}(1,3)\), the row
+transformation \(C\) is fitted from 80 random data sets off the solution set: \(\Psi\), its jets, and the background
+\(A,\partial A,h,\partial h\).  It is tested on 20 further data sets.  Five pairs were used: a pure rotation, a pure boost, a
+pure change of coordinates, and two mixed pairs.
+\item \emph{Result.}  All relative residuals are \(\le2.2\times10^{-11}\), and \(C\) is block diagonal on \(F,G,dg\) to
+\(5\times10^{-11}\).  The positive control gives \(\le3.2\times10^{-13}\).  The negative control, with the background held
+fixed, gives \(57\) for \(F\) and \(1.2\times10^3\) for \(G\).
+\item \emph{Reading.}  \(R\) is covariant with all lower-order terms.  Hence \(\Omega\), which is derived from \(R\) alone, is
+covariant.  The four hidden conditions are derived from \(R\) together with the gauge, so they are covariant at most under
+\(\mathfrak{so}(1,2)\).
+\end{itemize}
+
+\paragraph{Proof and measurement sources.}
+r78.1 by \texttt{k165\_kovarianz\_rest.py} (run 1) and \texttt{k165b\_werte.py} (run 2); r78.2 by
+\texttt{k166\_kovarianz\_werte.py}.  The notes \texttt{Vorab\_\allowbreak Notiz\_\allowbreak H65}, \texttt{H66} and the
+result notes lie in \texttt{notes/\allowbreak research/\allowbreak predictions/}.  \(\square\)
+
+\paragraph{Consequence.}
+The comparison system \(R\) and its integrability condition \(\Omega\) are covariant.  Covariance is broken in two places:
+\begin{itemize}[leftmargin=2em]
+\item by the prescribed background \((\Psi\text{ at the germ},A,h)\);
+\item by the gauge, which fixes the \(y\)-component of a current and leaves \(\mathfrak{so}(1,2)\).
+\end{itemize}
+Whether the number of the four hidden conditions and their support on the cone survive a change of gauge is open.  So is a
+native dynamics for the background.  OP5 is not closed.
+
+\subsection*{v4.9.0-r78 status in the three frames}
+\label{subsec:v490-r78-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item All statements concern the fixed OP5 comparison model in one chart, with one coframe reconstructed from \(\Psi\).  No
+frame map M, T or P acts on them.  The Lorentz transformations here act inside the model and are not the photon frame P.
+\end{itemize}
+No statement of this layer concerns colour or charge.
+
+\subsection*{v4.9.0-r78 register entries}
+\label{subsec:v490-r78-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r78\\
+\midrule
+covariance of \(R\) at value level & confirmed (H66, not blind); H65(a) invalid by its control bound\\
+covariance of \(\Omega\) & follows, since \(\Omega\) is derived from \(R\) alone\\
+gauge \(\Psi^\dagger K_2\Psi=S\) & preserved exactly by \(\mathfrak{so}(1,2)\), the stabilizer of \(e_y\) (H65(b))\\
+four hidden conditions & covariant at most under \(\mathfrak{so}(1,2)\); gauge independence open\\
+next step & gauge independence of the four conditions; native dynamics of the background\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r78 ledger and guard update}
+\label{subsec:v490-r78-ledger-guard}
+
+\[
+R_{\rm chk}^{v490\text{-}r78}=(1,1,0)
+\]
+for (covariance of \(R\) and \(\Omega\) established; H65 recorded as invalid; OP5 not closed).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r78,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r78}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.

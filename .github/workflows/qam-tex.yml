@@ -1,0 +1,48 @@
+name: QAM TeX checks
+
+# Runs the tests of qam/tex/qam.sty: pass*.tex must compile, fail*.tex must stop with a qam error.
+on:
+  workflow_dispatch:
+  pull_request:
+    paths: ["qam/**", ".github/workflows/qam-tex.yml"]
+  push:
+    branches: [main]
+    paths: ["qam/**", ".github/workflows/qam-tex.yml"]
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: qam
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq texlive-latex-base texlive-latex-recommended texlive-fonts-recommended >/dev/null
+      - run: sh qam/tex/tests/run_tests.sh
+      - name: Exported records are up to date
+        run: |
+          cd qam/examples
+          for f in example thesis frames bad_promotion bad_frame bad_independent bad_map_source; do
+            cp $f.qam /tmp/$f.qam
+            TEXINPUTS=../tex: pdflatex -interaction=nonstopmode -halt-on-error $f.tex >/dev/null
+            diff -u /tmp/$f.qam $f.qam
+          done
+      - name: Hash chain recomputed independently
+        run: |
+          cd qam/examples
+          python3 ../tools/qamhash.py verify example.qam thesis.qam frames.qam bad_promotion.qam bad_frame.qam bad_independent.qam bad_map_source.qam
+          for f in bad_inputs.qam bad_hashlink.qam tampered_statement.qam; do
+            if python3 ../tools/qamhash.py verify $f; then echo "::error::$f was accepted"; exit 1; fi
+          done
+      - name: Release manifest for the thesis example
+        run: |
+          cd qam/examples
+          TEXINPUTS=../tex: pdflatex -interaction=nonstopmode -halt-on-error thesis.tex >/dev/null
+          python3 ../tools/qamhash.py manifest thesis.qam /tmp/thesis-manifest.json thesis.tex thesis.pdf --note "qam.sty checks passed; hash chain recomputed"
+          cat /tmp/thesis-manifest.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: qam-thesis-manifest
+          path: /tmp/thesis-manifest.json

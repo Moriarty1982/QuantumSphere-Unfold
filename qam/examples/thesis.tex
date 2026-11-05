@@ -1,0 +1,14 @@
+% A record that starts from a thesis.  The thesis's statement is part of its hash, and every claim
+% derived from it carries the thesis hash among its sources: change one word of the thesis and every
+% hash below it changes.
+\documentclass{article}
+\usepackage[export]{qam}
+\begin{document}
+\qamframe{M}
+\qamthesis[\tau]{thesis}{M}{conditional}{Die Größe $x$ ist durch $y$ und die Zählung $\kappa$ bestimmt}
+\qaminput[y]{y}{M}{computed}
+\qamclaim[\kappa]{counting}{M}{proved}
+\qamderive[x]{x}{conditional}{thesis,y,counting}
+\qamderive[z]{z}{conditional}{x}
+\qamledger
+\end{document}

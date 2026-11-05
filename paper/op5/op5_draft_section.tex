@@ -1,0 +1,100 @@
+\section{The OP5 comparison model}\label{sec:op5}
+
+OP5 is the question of the cosmological constant and the vacuum balance.  In its exact form it is open; only a local detector
+version is closed in the Companion.  Since late October 2026 the work on it has turned into a precise mathematical question that
+can be answered independently of the physical reading: does a fixed system of field equations, built from the probe--closure
+system of Section~\ref{sec:octonions}, have solutions on an open region?  This section reports the answer so far.  Everything here
+concerns one declared \emph{comparison model}, not the framework as a whole, and none of it closes OP5.
+
+\subsection{Three exclusions}
+
+Before the model was fixed, three general statements were established (layer v4.9.0-r69).  A change of frame cannot remove a defect
+in the vacuum balance.  None of the routes considered fixes the absolute vacuum term: state, frame and normalization leave it free, so
+\(\Lambda\) can at best appear as an integration constant.  And under torsion-freeness and the ordinary Einstein vacuum equation the
+geometric cosmological constant must vanish wherever the cross current of the probes is non-zero --- an exclusion under stated
+assumptions.
+
+\subsection{The model}
+
+The unknown is a spinor field \(\Psi\colon\mathbb R^4\to\mathbb C^{12}\).  With
+\(D_\mu=\partial_\mu+iA_\mu\), the coframe \(E^a{}_\mu=\operatorname{Re}(\Psi^\dagger Q_aD_\mu\Psi)\) and its inverse \(V=E^{-1}\), the equations are
+\[
+F:=i\,V^\mu{}_a K_a D_\mu\Psi-h\,(Y\otimes\beta)\Psi=0,\qquad
+g:=4-\tfrac h2\,\Psi^\dagger(Z\otimes\beta)\Psi=0,
+\]
+completed to \(R=(F,G,dg)\) with \(24+4+4\) real components, where \(K_a=I_3\otimes(I,\alpha_i)\), \(Q_a=S\otimes(I,\alpha_i)\), the connection is
+\(A_0=0\), \(A_k=G(x)\,\mathrm{spin}_k(x)\otimes I_4\), and the background is \(h=h(t,r)\), \(A=M(t)\,d\varphi\).  The geometry is thus
+reconstructed from the field itself.  The model is a declared classical comparison sector: its couplings and background are chosen,
+not derived from the kernel.  A germ at \((t,x,y,z)=(1,\tfrac35,0,0)\) is known to \(70\) digits up to fifth order and satisfies \(R\) to
+third order.
+
+The method is the formal theory of partial differential equations~\cite{bryant,seiler}.  One computes the \emph{symbol} \(g_p\) of the
+system at order \(p\), tests whether it is \emph{involutive} (Cartan's test), and checks \emph{formal integrability}, i.e.\ whether
+prolongation produces new conditions of lower order.  An involutive, formally integrable analytic system has local analytic solutions,
+and its Cartan characters say how many free functions of how many variables they depend on.
+
+\subsection{An exact gauge symmetry}
+
+The degree-4 symbol has rank \(528\) and a left kernel of dimension \(112\), and the additional third-order condition \(\Omega\) on the
+germ is unique.  Its characteristic set consists of a light cone \(q\) and two skew planes.  One direction of the solution space is
+free, and it is not an accident (layer v4.9.0-r71):
+
+\begin{proposition}[Gauge symmetry]\label{prop:gauge}
+For the background \(h=h(t,r)\), \(A=M(t)\,d\varphi\), the variation \(\delta\Psi=f\,(\rho\partial_z-z\partial_\rho)\cdot D\Psi\) with an
+arbitrary function \(f\) is an exact symmetry of the system, and \(\Omega\) is invariant under it.
+\end{proposition}
+
+Two pre-registered hypotheses about this direction were refuted: a hidden condition at second order off the equator (H49), and a
+back-reaction of \(\Omega\) on \(\Psi\) through it (H50).  The symmetry has to be fixed before an existence theorem can apply.
+
+\subsection{Cartan test of the gauged system}
+
+Fixing the gauge algebraically, every transversal choice gives the same symbol (layer v4.9.0-r72):
+\[
+\dim g'_p=117,\ 188,\ 273,\ 371,\ 481,\ 606,\ 745\qquad(p=2,\dots,8).
+\]
+The pre-registered test H51 predicted from the growth of these numbers that \(g'\) becomes involutive first at \(p=6\); this was
+confirmed in three coordinate systems, with Cartan characters \(481,111,14,0\).  No free function of four variables is left; formally the
+solutions depend on \(14\) functions of three variables, i.e.\ on data on a hypersurface.
+
+\subsection{Four hidden conditions}
+
+The gauged system is involutive but not formally integrable at order six.  Prolonging to degree eight reduces the dimension of the
+sixth-order fibre from \(852\) to \(848\): there are four additional conditions on 6-jets (layers v4.9.0-r72, r73).  Their status:
+\begin{itemize}
+\item The Spencer cohomology of \(g'\) allows at most four such conditions (\(H^{4,2}=0\), \(H^{5,2}=4\)), and a Weyl bound on the measured
+error norms excludes that the drop is numerical noise.
+\item They were found again at a second germ, \(50\%\) away, with error bounds \(710\)- and \(1390\)-fold (pre-registered test H55,
+confirmed).
+\item They are genuine sixth-order equations.  They act only on light-like plane waves, one polarization per null direction, in the
+form \(d_k(\xi)\,s(\xi,u)\) with the four quadrics \(d_k\) that vanish on the two special planes: they are the curvature remainders of the
+four relations \(q\,d_k\,\Omega\) found at the level of the symbol.
+\end{itemize}
+
+\subsection{The extended system and a precision limit}
+
+Adding the four conditions gives an extended symbol \(g''\) with
+\(\dim g''_p=477,594,723,865\) (\(p=6,\dots,9\)); by all evidence it is involutive first at \(p=8\), with characters \(723,130,12,0\), i.e.\
+\(12\) functions of three variables (layer v4.9.0-r74).  The corresponding pre-registered test was formally invalid, because five rank
+decisions fell just short of the required singular-value gap.  The Spencer cohomology of \(g''\) leaves room for up to four further
+hidden conditions on 7-jets and three on 8-jets.
+
+Deciding them meets a structural precision limit.  The symbol of the field equation alone is well conditioned, but \(\Omega\) and the
+four conditions act only on the cone and the planes and are, as rows, nearly dependent on it (independent weight about \(10^{-8}\)).
+Double precision separates one or two such levels, not three.  A staged elimination saves memory but does not lift the limit, and a
+reformulation by plane waves on the cone does not span the symbol spaces.  A recomputation of the whole chain at \(100\) digits has
+started.
+
+\subsection{Larger orders on parallel runners}
+
+As a test of distributed computation, the symbol dimensions of the frozen \(\Omega\)-symbol were computed on parallel runners, one order
+per job, up to \(p=12\) (matrices up to \(12\,323\times10\,920\)).  All known values were reproduced, and the new ones,
+\(\dim g_{11},\dim g_{12}=1610,1896\) and \(\dim g'_{10},\dim g'_{11},\dim g'_{12}=1065,1246,1441\), have constant second differences
+\(14\) for the gauged symbol from \(p=7\) on, as the \(14\) functions of three variables require.  This is an exploration on the older
+germ, not a registered test.
+
+\medskip\noindent\emph{Status.}  For the comparison model: an exact gauge symmetry; an involutive gauged symbol at order six (confirmed);
+four hidden sixth-order conditions (confirmed at two points); an extended symbol involutive at order eight by all evidence but not
+formally confirmed; further conditions not excluded.  If the extended system turns out involutive and formally integrable, the
+Cartan--K\"ahler theorem would give local analytic solutions depending on \(12\) functions of three variables --- for this model only.
+That would be a local existence statement, not a closure of OP5 and not a property of the framework.

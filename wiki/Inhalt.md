@@ -1,6 +1,6 @@
 # Was im Companion steht
 
-**Stand: 2. November 2026, Forschungsfassung 4.10.0-draft mit Runden bis v4.9.0-r71.** Diese Seite gibt den Inhalt des *Quantum Sphaera Companion* wieder: Was wird angenommen, was wird definiert und gezeigt, und wie weit trägt es heute? Die Quellenangaben am Ende jedes Abschnitts dienen zum Nachprüfen; zum Verstehen sollte diese Seite allein reichen. [English version](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Content-overview) · [Startseite](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Home)
+**Stand: 4. November 2026, Forschungsfassung 4.10.0-draft mit Runden bis v4.9.0-r81.** Diese Seite gibt den Inhalt des *Quantum Sphaera Companion* wieder: Was wird angenommen, was wird definiert und gezeigt, und wie weit trägt es heute? Die Quellenangaben am Ende jedes Abschnitts dienen zum Nachprüfen; zum Verstehen sollte diese Seite allein reichen. [English version](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Content-overview) · [Startseite](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Home)
 
 ## So ist jede Aussage zu lesen
 
@@ -93,7 +93,7 @@ $$
 \mathfrak G[\Psi,g] + \mathfrak T_{\mathrm{tri}}[\Psi] + \mathfrak H_{\mathrm{HC}}[\Psi] + \mathfrak Q_{\mathrm{cl}}[\Psi] + \mathfrak B_\beta[\Psi] = 0
 $$
 
-mit Beiträgen für Geometrie, Triolen-Dynamik, Kompensator, Schließung und Frame-Phase. Eine Kette von der Triolenquelle über die 16-dimensionale **Millennium-Matrix** $\mathcal M_{16}$ bis zu Materie, Tachyon, Photon und Feldgleichungen ordnet die Bestandteile.
+mit Beiträgen für Geometrie, Triolen-Dynamik, Kompensator, Schließung und Frame-Phase. Eine Kette von der Triolenquelle über die 16-dimensionale **Kompensatormatrix** (bis r75 „Millennium-Matrix“) $\mathcal M_{16}$ bis zu Materie, Tachyon, Photon und Feldgleichungen ordnet die Bestandteile.
 
 **Stand:** Die Gleichung ist eine Gliederung dessen, was zusammenwirken soll. Ihre Kopplungen sind nicht bestimmt, eine definierte Wirkung fehlt. Auf GitHub prüfen eigene Abschnitte, was daraus folgt und was nicht:
 - **Spektrale Identifikation:** Dass zwei Operatoren vertauschen, macht ein Bild noch nicht zu einem einzigen Eigenraum. Ausreichende Zusatzbedingungen werden angegeben (`v480:conditional-mm`).
@@ -113,7 +113,7 @@ mit Beiträgen für Geometrie, Triolen-Dynamik, Kompensator, Schließung und Fra
 | OP2 | Dirac-Operator $`D_- = L_0\vert_{H^+_-}`$ auf dem antisymmetrischen Sektor | in der alten Fassung als existent und selbstadjungiert markiert, gestützt auf die Riemann-Arbeit (seit v4.8.0-r04 keine Beweisquelle); der letzte Schritt ist dasselbe Problem wie OP1 |
 | OP3 | zulässiger Hüllen-Übergang („shell passage“) mit Schließungszertifikat in der QAM | als lokales Zertifikat formuliert (`thm:qam-op3-shell-closure`), im Kristallbild als Zellverträglichkeit gelesen |
 | OP4 | Herkunft der Mischungswinkel (CKM/PMNS, Cabibbo-Winkel) | offen; r61: in der alten Form falsch gestellt |
-| OP5 | kosmologische Konstante und Vakuumbilanz | nur lokal (Detektorschwelle) geschlossen, exakt offen; im numerischen Vergleichssystem eine exakte Polarwinkel-Eichsymmetrie gefunden (r71) |
+| OP5 | kosmologische Konstante und Vakuumbilanz | nur lokal (Detektorschwelle) geschlossen, exakt offen; im numerischen Vergleichssystem eine exakte Polarwinkel-Eichsymmetrie gefunden (r71); geeicht ist das Symbol ab Ordnung 6 involutiv, aber dem System fehlten vier Bedingungen sechster Ordnung, inzwischen bestätigt und bestimmt (r72, r73); mit ihnen ist das System am Keim formal integrabel, trägt 6 masselose Moden und ist als Konstruktion kovariant; die Lorentz-Brechung kommt vom Hintergrund (r77); R und Ω sind auch auf Werteebene kovariant, die Eichung erhält nur so(1,2) (r78); die vier Bedingungen sind eichunabhängig (r79); der Hintergrund wird nicht von den Spinoren erzeugt (kein Yang–Mills, kein Klein–Gordon mit ihnen als Quelle), der Vergleichsmodell-Zweig ist damit abgeschlossen (r80); eine gemeinsame Wirkung W1 ist aufgestellt, ein Vakuumterm aus tachyonischen Moden ist möglich, seine Größe aber nicht festgelegt (r81) |
 
 Ausführlich: [Offene Probleme](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Offene-Probleme).
 

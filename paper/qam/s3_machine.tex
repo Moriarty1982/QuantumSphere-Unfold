@@ -1,0 +1,25 @@
+\section{The store machine}\label{sec:machine}
+
+A record is kept in a \emph{store}: a content (objects at addresses and relations between addresses), a guard register (predicates the
+content must satisfy), a list of snapshots, and a ledger.  A store is \emph{admissible} if every relation uses stored addresses and every
+guard holds.
+
+\paragraph{Instructions (MML).}  \textsc{store}\((a,x)\) puts an object at an address, \textsc{link}\((a,b)\) adds a relation,
+\textsc{snapshot} saves the content, \textsc{rollback}\((k)\) restores the \(k\)-th snapshot, \textsc{scrub} is a no-op used for cleaning
+passes, and \textsc{export}\((a)\) releases a stored object.
+
+\paragraph{Transition semantics (MMA).}  Each instruction has a raw effect, which may be undefined (a rollback to a missing snapshot, an
+export of a missing address).  A step executes the raw effect and checks the guards on the result:
+\[
+\mathrm{exec}(s,i)=\begin{cases}
+(s\ \text{with entry } (i,\textsc{reject}),\ \textsc{reject}) & \text{if the raw effect is undefined},\\
+(s'\ \text{with entry } (i,\textsc{cont}),\ \textsc{cont}) & \text{if it gives } s' \text{ and } s' \text{ is admissible},\\
+(s\ \text{with entry } (i,\textsc{guard}),\ \textsc{guard}) & \text{otherwise.}
+\end{cases}
+\]
+A result that violates a guard is never committed; the old content stays and the ledger records the defect.  A program is a list of
+instructions executed in order.
+
+\paragraph{Certificates.}  The record distinguishes a \emph{candidate}, which the machine can produce for any statement, from a
+\emph{certificate}, which contains a proof.  A candidate becomes a certificate only through a proof supplied from outside the machine.  No
+instruction produces a certificate.

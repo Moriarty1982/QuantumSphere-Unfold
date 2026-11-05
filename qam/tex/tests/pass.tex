@@ -1,0 +1,15 @@
+\documentclass{article}
+\usepackage{qam}
+\begin{document}
+\qamframe{M}\qamframe{T}
+\qammap{G}{M}{T}
+\qaminput{gamma}{M}{computed}      % a literature value, put in by hand
+\qamclaim{thm}{M}{proved}          % a theorem
+\qamderive{beta}{computed}{gamma,thm}
+\qamderive{lemma}{proved}{thm}
+\qamindependent{lemma}
+\qamconvert{betaT}{conditional}{G}{beta}
+\qamclaim{obs}{T}{computed}
+\qamcompare{betaT}{obs}
+beta: \qamshow{beta}\par betaT: \qamshow{betaT}\par lemma: \qamshow{lemma}
+\end{document}
