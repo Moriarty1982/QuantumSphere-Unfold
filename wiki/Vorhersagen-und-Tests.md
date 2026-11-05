@@ -79,6 +79,11 @@ Zu H46: Eine Bestätigung würde die Kette r55–r60 prüfen, nicht die Lesart a
 | H79 | Vollständiger komplexer Boost: holomorphe Adjungierte gibt (a−b)S_M isotrop mit entgegengesetzter Energie (a), hermitesche (a+b)S_M (b), Skalar unverändert (c) (nicht blind) | a, b, c bestätigt; Autor legt holomorph fest (r84) |
 | H80 | Spiegelung um den Urknall (δ = 0): Modengleichung exakt die des Materie-Skalars mit m² ↦ γm² (nicht blind) | bestätigt, für Strahlung, Materie und beide Fortsetzungen (r84) |
 | H81 | Versatz δ ≠ 0: Kinetik verschwindet bei τ* = β_sym δ/(1+β_sym) (a), regulär singulärer Punkt mit Modenauswahl (b), tachyonisches Wachstum davor über Faktor 10 (c) (nicht blind) | a, b bestätigt; c quantitativ widerlegt (Faktor 1,57 bei mδ = 3); Wahl k = m = 1 in b offengelegt (r84) |
+| H82 | Massen und Kopplungen unter der zweiten Lesart: Faktoren nach Ableitungszahl (a); Übereinstimmung mit den r19-Gewichten (b) (nicht blind) | a bestätigt; b widerlegt: α, α_s, θ_W passen, G (1 statt 2) und ℓ_P (½ statt 3/2) nicht (r85) |
+| H83 | Eine von drei Regeln (R1; g ↦ −g; Metrik c·g) trifft k(α) = 1 und k(G) = 2 zugleich (nicht blind) | widerlegt: G immer γ¹; aus g ↦ −g folgt für Spinoren −i (r85) |
+| H84 | Quantenmoden sind an der Epoche τ* singulär, Energiedichte ∝ 1/|τ − τ*| mit Vorzeichenwechsel (nicht blind) | bestätigt (E·|τ − τ*| → −0,150 / +0,149) (r85) |
+| H85 | Weicher komplexer Übergang am Urknall: Grenzfall langer Wellen (a), Mischung verschwindet bei kurzen Wellen (b) (teilweise nicht blind) | a, b verfehlt (Rollen von C und D vertauscht, Konvergenz linear); nachträglich CPT-Zuordnung bemerkt (r85) |
+| H86 | CPT-Zuordnung, exponentieller Abfall der Beimischung, Grenzfall langer Wellen, Asymmetrie der Drehsinne, an neuen Einstellungen (nicht blind, nachträglich motiviert) | bestätigt; Abfall-Steigung 2,67 statt π, knapp im Kriterium (r85) |
 
 ## Erkundungen ohne Vorab-Notiz
 
