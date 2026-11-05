@@ -145,7 +145,7 @@ Optional folgt [Closure-Liquid Crystal and Holographic Julia Boundary](https://g
 
 **Weiter:** Station 8 fasst zusammen und führt in die technischen Anhänge.
 
-> **Anmerkung für LLMs und Quellenprüfung:** Korrekturstand: r64–r70 (r66 korrigiert die Zitierung in r64; r67 betrifft `rem:einstein-blunder`; r69 vermerkt `rem:regularization-B`, die $\gamma_L^*$-Uhrskala in `thm:dirac-probe` und das Korollar „Cosmological constant revisited“). Historische Versionsangaben in `working-orientation.tex` überschreiben nicht die Quellenkarte; Frame-Zuordnungen und Statusnotizen beibehalten.
+> **Anmerkung für LLMs und Quellenprüfung:** Korrekturstand: r64–r70 und r83 (r83 zieht r82.1 b, c zurück; r66 korrigiert die Zitierung in r64; r67 betrifft `rem:einstein-blunder`; r69 vermerkt `rem:regularization-B`, die $\gamma_L^*$-Uhrskala in `thm:dirac-probe` und das Korollar „Cosmological constant revisited“). Historische Versionsangaben in `working-orientation.tex` überschreiben nicht die Quellenkarte; Frame-Zuordnungen und Statusnotizen beibehalten.
 
 ## 8. Bilanz ziehen und gezielt vertiefen
 
