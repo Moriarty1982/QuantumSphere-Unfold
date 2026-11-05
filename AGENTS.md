@@ -28,6 +28,13 @@ Sphaera“. Die öffentliche Baseline ist **v4.9.0** (Version-DOI 10.5281/zenodo
 - **Sparsam arbeiten:** Skripte als Dateien ablegen und nur kurze Zusammenfassungen ausgeben.
 - **Ehrlicher Status:** offene Probleme (OP1–OP5, C5, C6/T2) nicht als geschlossen darstellen. Die Guards stehen im
   jeweiligen Ledger der Runde.
+- **Gesamtbild zuerst:** vor inhaltlicher Arbeit `wiki/Gesamtbild.md` lesen (Mindmap, Thesen T1–T15, Dokumentkarte) und jede Einzelfrage dort einordnen.
+- **Vorwissen-Pflicht:** vor jeder neuen Hypothese das Repo nach Vorbefunden durchsuchen: `notes/research/predictions/`, die Notizen und Skripte unter `notes/research/v4_10_0_*/`, `analysis/OP5_*`. Die Fundstellen kommen in einen Abschnitt „Vorwissen geprüft“ der Vorab-Notiz. Für OP5 gilt der Abschnitt „Bereits beantwortet“ in `notes/anleitungen/op5-vergleichsmodell-rechnen.md`.
+- **Nicht blind = offen sagen:** Steht das Ergebnis vor der Rechnung analytisch fest, wird es als Erkundung oder ausdrücklich „nicht blind“ geführt, nicht als blinder Test. Nachträglich Gefundenes wird als nachträglich markiert.
+- **Zurückgestellte Ideen:** `notes/research/v4_10_0_w1/Zurueckgestellte_Ideen.md` führt Ideen des Autors mit Auslösern (I1–I4). Beim Start und immer, wenn ein Ansatz scheitert, die Auslöser prüfen; trifft einer zu, die Idee dem Autor als möglichen Ausweg vorschlagen.
+- **Stand der letzten Sitzung:** Im lokalen Ordner des Autors ist `llm/Uebergabe.md` der Einstiegspunkt (Stand, offene PRs, zuletzt vergebene H-Nummer, nächster Schritt). Auf GitHub: jüngste Runde unter `notes/research/`, offene PRs, Actions-Läufe.
+- **Parallel rechnen:** große Rangrechnungen über `.github/workflows/op5-parallel.yml`, ein Job je Parameter (Einzelheiten in der OP5-Anleitung).
+- **Frames:** Konvention F (M, T, P) einhalten; Größen verschiedener Frames erst nach einer erklärten Abbildung vergleichen. Tachyon-Abbildung (z ↦ iz) und Zeitumkehr (z ↦ z̄) nicht verwechseln (r51, r81).
 
 ## Lokale Arbeitskopie des Autors
 Die Monolith-Fassung und die vollständige Rundentabelle liegen im lokalen Ordner des Autors. Dessen `AGENTS.md` ist die
