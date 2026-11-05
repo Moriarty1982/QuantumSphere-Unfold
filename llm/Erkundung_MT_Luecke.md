@@ -1,0 +1,30 @@
+# Erkundung: Die M–T-Lücke der komplexen Lesart (k174)
+
+**5. November 2026. Status: Erkundung ohne Kriterium.** Ausgangspunkt (k170, k172): Mit unabhängiger Verbindung erzwingt die komplexe Lesart K bei nicht symmetrisierter Kinetik j^a = 0. In einem Frame folgt daraus Ψ = 0, weil j⁰ = |ψ|² ≥ 0. Der Autor will prüfen, ob Anteile im Tachyon-Frame das umgehen.
+
+## Tachyon-Frame nach Konvention F
+T ist die Fortsetzung der Rapidität η → η + iπ/2 entlang einer Achse n (r20, r22). Daraus folgt γ = cosh 2η → −γ, und eine Größe vom Gewicht k in γ bekommt die Phase (−1)^k (F3).
+- **Vektorebene:** Λ(iπ) = diag(−1, 1, 1, −1) für n = z, also die Spiegelung der (t, n)-Ebene.
+- **Spinorebene:** exp(−(iπ/2)σ_n) = −iσ_n ist unitär. Damit gilt j(ψ_T) = R_n(π) j_M, und die Dichte bleibt positiv.
+- **Beides passt zusammen:** Λ(iπ) = −R_n(π) (k174, exakt). Der Strom eines T-Anteils ist mit dem Vorzeichen aus F3 also j_T = −j(ψ_T) = Λ(iπ) j_M. Er trägt negative Dichte gegenüber M.
+
+## Befund
+1. **Summe:** j_M + j_T = 2 j_⊥, der Anteil quer zur M–T-Achse (k174, exakt).
+2. **K-Bedingung im System M + T:** j_gesamt = 0 genau dann, wenn der Gesamtstrom von M in der (t, n)-Ebene liegt, also Materie nur entlang der M–T-Achse strömt. Geprüft mit 16 Zuständen, Spin entlang n: J_M + J_T = 0 exakt. Für allgemeine Zustände gilt |J_M + J_T| = 2|J_⊥|.
+3. **Die übrigen Gleichungen aus Im S:**
+   - Die Variation nach dem Koframe ist ∝ j_gesamt und verschwindet damit.
+   - Die Variation nach Ψ enthält nur die Spur der Torsion. Die reelle Wirkung liefert aber nur total antisymmetrische Torsion (k173), deren Spur null ist.
+   - Die K-Lesart ist also mit der reellen Wirkung verträglich.
+4. **Folge:** Mit j_gesamt = 0 verschwindet auch die Vier-Fermionen-Kopplung −(3/16)κ j², und damit die Torsion ganz.
+
+## Lesart und Preis
+- Die Lücke existiert. In einem System aus Materie- und Tachyon-Anteilen nach Konvention F tilgt die komplexe Lesart die Spinoren nicht. Sie verlangt stattdessen eine **exakte Strombilanz zwischen M und T**: Materie- und Tachyonstrom heben sich auf, quer zur Achse fließt nichts, und die Torsion verschwindet. Das erinnert an die Paarerzeugung aus dem Vakuum R (r29), ist aber nur eine Lesart.
+- **Preis 1:** Der T-Anteil hat gegenüber M eine Kinetik mit umgekehrtem Vorzeichen (Gewicht 1, Phase −1). In der Buchführung von M ist er ein Feld negativer Norm. Ob das physikalisch zulässig ist (Energievorzeichen, Stabilität), ist offen.
+- **Preis 2:** Die Achse n ist ausgezeichnet, die Isotropie also gebrochen. Die Wahl der Achse ist eine Eingabe.
+- **Beobachtung ohne Schluss:** Im Vergleichsmodell (k168) strömten die drei Blöcke entlang einer Achse (x), mit Gegenströmung. Das ist ein anderes Modell; der Anklang wird nur festgehalten.
+- **Konvention F:** Beide Frames sind ausdrücklich getrennt geführt (ψ_M, ψ_T, Abbildung über Λ(iπ)). Verglichen wird erst nach der erklärten Abbildung.
+
+## Nächste Fragen
+- Ist der T-Anteil ein eigenes Feld (16 weitere Zustände) oder dasselbe Feld in zweiter Lesart?
+- Was sagt die reelle Wirkung zum T-Anteil mit umgekehrtem Kinetikvorzeichen (Energie, Hamilton-Funktion)?
+- Liefert die Bedingung „kein Querstrom“ eine Vorhersage, oder ist sie nur eine Einschränkung?
