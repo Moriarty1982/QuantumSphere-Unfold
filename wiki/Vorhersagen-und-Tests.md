@@ -73,6 +73,8 @@ Zu H46: Eine Bestätigung würde die Kette r55–r60 prüfen, nicht die Lesart a
 | H73 | Bezugszustände der Frames (Materie in Ruhe, Tachyon an der Schwelle) mit den Gewichten des Materie-Frames geben w ≈ −1 | widerlegt: w = −β_sym²/3 = −0,10, ohne freie Parameter; nachträglich im Tachyon-Frame −1,105 (nicht vorregistriert) |
 | H74 | Direkte Kopplung εφχ zwischen Materie- und Tachyonsektor: gleiche Spektren instabil für jedes ε > 0, verstimmte beschränkt unterhalb einer Schwelle (nicht blind) | bestätigt: Rate ε/2ω (gemessen 5,011·10⁻⁴, 4,985·10⁻³, 0,0498); verstimmt Schwelle |ω₁²−ω₂²|/2; Lauf 1 zu kurz geplant, Lauf 2 offengelegt (r82) |
 | H75 | Gravitation als einzige Kopplung: bei Photon-Gewichten keine exponentielle Instabilität (a), Jeans-Rate bei Materie-Gewichten (b), Bondi-Durchgehen (c) (nicht blind) | b, c bestätigt; a ohne exponentielles Wachstum, aber der Gleichtakt wächst wie t², die Schranke „höchstens linear“ war im Grad falsch (r82) |
+| H76 | Vakuumzerfall 0 → φφχχ über das Graviton: Lorentz-invariant unbeschränkt (a); mit Rahmen-Cutoff Γ/V = c·Λ⁸/M_P⁴ (b); Schranke weit unter der Higgs-Skala (c) (nicht blind) | a, b, c bestätigt: Verhältnisse gegen 4 (Γ ∝ L²); c = 2,25·10⁻⁵, Exponent 8,000; Λ ≲ 14 MeV (grob); Lauf 2 nicht konvergiert, Lauf 3 halbanalytisch (r83) |
+| H77 | Nur die Lesart „Kinematik fortgesetzt“ (B) des Tachyonbilds einer Wirkung ist mit r07, r20, H71, r81 und F3 verträglich (nicht blind) | bestätigt: A gibt normale Dispersion (Geist), B′ verletzt r81 und F3; Folge: r82.1(b), (c) zurückgezogen (r83) |
 
 ## Erkundungen ohne Vorab-Notiz
 
