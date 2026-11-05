@@ -1,6 +1,6 @@
 # Gesamtbild: der ganze Companion auf einer Seite
 
-**Stand: 3. November 2026, Forschungsfassung 4.10.0-draft mit Runden bis v4.9.0-r74 (lokal 1298 Seiten).** Diese Seite zeigt das ganze Werk auf einmal: welche Thesen es aufstellt, wie sie zusammenhängen, wo sie im Dokument stehen und was davon heute trägt. Die einzelnen Themen werden in [Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) genauer erklärt. Wer den Companion zum ersten Mal liest, sollte mit dieser Seite anfangen, Menschen ebenso wie Sprachmodelle.
+**Stand: 5. November 2026, Forschungsfassung 4.10.0-draft mit Runden bis v4.9.0-r85 (lokal 1331 Seiten).** Diese Seite zeigt das ganze Werk auf einmal: welche Thesen es aufstellt, wie sie zusammenhängen, wo sie im Dokument stehen und was davon heute trägt. Die einzelnen Themen werden in [Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) genauer erklärt. Wer den Companion zum ersten Mal liest, sollte mit dieser Seite anfangen, Menschen ebenso wie Sprachmodelle.
 
 ## In drei Sätzen
 
@@ -49,10 +49,10 @@ mindmap
       OP4 Mischungswinkel
       OP5 Vakuumterm, aktuelle Hauptarbeit
       C4, C5, C6/T2 Schließungsfragen
-      Gemeinsamer Kern: es fehlt eine Dynamik
+      Gemeinsame Wirkung W1/W2 seit r81, Skala offen
     Prüfarbeit
-      Runden r01 bis r74 seit v4.8.0
-      Vorab-Tests H1 bis H58
+      Runden r01 bis r85 seit v4.8.0
+      Vorab-Tests H1 bis H86
       Lean-Formalisierung
       Offene Vorhersagen H9, H15, H42, H46
 ```
@@ -72,9 +72,10 @@ flowchart LR
   O --> P
   K --> M["Mastergleichung und<br/>Kompensatormatrix M16"]:::bed
   M --> F["Sonden-Schließungssystem<br/>Dirac / YM / Einstein-Grenzfälle"]:::bed
-  F --> D["fehlende gemeinsame Dynamik<br/>(eine Wirkung für alle Felder)"]:::offen
+  F --> D["gemeinsame Wirkung W1/W2<br/>(r81–r85, Skala offen)"]:::offen
+  D --> W["Tachyon-Anteil als zweite Lesart,<br/>Urknall als CPT-Übergang (r84–r85)"]:::bed
   D -.-> P
-  F --> OP5["OP5-Vergleichsmodell<br/>Cartan-Test, vier Bedingungen"]:::offen
+  F --> OP5["OP5-Vergleichsmodell<br/>Cartan-Test, vier Bedingungen,<br/>Zweig abgeschlossen (r80)"]:::bed
   classDef ok fill:#d8f0d8,stroke:#3a7a3a,color:#000
   classDef verm fill:#e6e6f5,stroke:#55559a,color:#000
   classDef bed fill:#fff3cc,stroke:#a08000,color:#000
@@ -82,13 +83,13 @@ flowchart LR
   classDef wid fill:#f6d0d0,stroke:#9a3030,color:#000
 ```
 
-Die Farben bedeuten: grün = gesicherte Mathematik, blau = Vermutung, gelb = bedingt (unter benannten Wahlen oder nur lokal), orange = offen, rot = großteils widerlegt oder archiviert. Die gestrichelte Linie ist die Verbindung, die erst eine Dynamik liefern würde.
+Die Farben bedeuten: grün = gesicherte Mathematik, blau = Vermutung, gelb = bedingt (unter benannten Wahlen oder nur lokal), orange = offen, rot = großteils widerlegt oder archiviert. Die gestrichelte Linie ist die Verbindung, die erst eine Dynamik mit eigener Skala liefern würde; die gemeinsame Wirkung W1/W2 (seit r81) liefert Mechanismen, aber noch keine Skala.
 
 ## Die zentralen Thesen und ihr Stand
 
 | # | These | Was mathematisch dahintersteht | Stand heute | Fundstelle |
 |---|---|---|---|---|
-| T1 | Materie, Licht und Tachyon sind ein einziges Objekt („Unity“). | Drei Kerne $K_1,K_2,K_3$; die Involution $J$ verbindet Materie und Tachyon. | **Vermutung.** Die unitäre Äquivalenz stützte sich auf Stone–von Neumann aus der Riemann-Arbeit und ist seit r04 offen. | `thm:unity`, `thm:unitary-equiv` |
+| T1 | Materie, Licht und Tachyon sind ein einziges Objekt („Unity“). | Drei Kerne $K_1,K_2,K_3$; die Involution $J$ verbindet Materie und Tachyon. | **Vermutung.** Die unitäre Äquivalenz stützte sich auf Stone–von Neumann aus der Riemann-Arbeit und ist seit r04 offen. Seit r84: Der Tachyon-Anteil lässt sich als zweite Lesart desselben Feldes widerspruchsfrei bilden (vollständiger komplexer Boost, holomorphe Adjungierte; isotrop, stabil, ohne Vakuumzerfall). Das stützt die Konstruktion, nicht die physikalische Gleichheit. | `thm:unity`, `thm:unitary-equiv` |
 | T2 | Jeder Zustand zerfällt in einen symmetrischen und einen antisymmetrischen Teil. | $C(f)=\tfrac12(f+Jf)$, $C^2=C$. | **Gesichert.** Seit r04 ohne die Riemann-Arbeit begründet. | `def:biquaternion`, `prop:compensator` |
 | T3 | Welcher Sektor welcher ist, entscheidet ein Vorzeichen. | $s=z_1^2+z_2^2+z_3^2$: Materie $s>0$, Tachyon $s<0$, Licht $s=0$; Norm $q\bar q$. | **Gesichert** (r06/r07). Ob die Sektoren physikalisch Materie usw. *sind*, ist Vermutung. | Runden v4.8.0-r06, r07 |
 | T4 | Raumzeit und Uhr kommen von den Riemann-Nullstellen; daraus folgen GUE-Statistik und der Frame-Faktor. | Spurformel $\Sigma = 1-\Theta+R$. | **Zurückgezogen bzw. archiviert.** Die Riemann-Arbeit ist keine Beweisquelle mehr (r04). Die GUE-Herleitung ist archiviert (r05), die Vorhersage P1 widerlegt (r08). | `thm:origin`, `thm:gue`, `thm:gue-selfdet` |
@@ -96,9 +97,9 @@ Die Farben bedeuten: grün = gesicherte Mathematik, blau = Vermutung, gelb = bed
 | T6 | Der Frame-Versatz $\beta_{\mathrm{sym}}\approx0{,}549$ ist eine Strukturgröße. | $\beta=\sqrt{(\gamma_L-1)/(\gamma_L+1)}$ mit $\gamma_L=\gamma_{\mathrm{BI}}/\gamma_{\mathrm{string}}$ | **Eingesetzt, nicht hergeleitet (OP1).** Seit r63 als Verhältnis zweier Zählungen von Horizontzuständen gelesen; das funktioniert nur mit der U(1)-Zählung, die Literatur bevorzugt SU(2) (r68). | `thm:symmetric-frame`, `thm:triolic-gBI` |
 | T7 | Die Eichgruppe des Standardmodells und eine Teilchengeneration folgen aus $\mathbb C\otimes\mathbb H\otimes\mathbb O$. | Ladungen aus einem Zahloperator; Kompensator als Chiralitätsprojektor | **Konstruiert unter benannten Wahlen** (r32–r49). Die Wahlen selbst sind nur teilweise hergeleitet. Ein Verbot einer vierten Generation fehlt. | `thm:SM`, `thm:octonion-SU3` |
 | T8 | Massen und Mischungswinkel folgen aus der Triolen-Struktur. | Koide $K=2/3$, Kompensator-Wege, zyklische Kopplungen | **Offen (OP4).** Koide ist empirisch, die Herleitung offen. Direkte Wege zu den Massen sind widerlegt, Masken passen die Daten nur an (r50–r60). Offene Vorhersagen: H9, H42, H46. | `thm:koide-triolic`, `v480:hc-mass-identification` |
-| T9 | Im Photon-Frame ist $\Lambda=0$; Dunkle Energie ist der Frame-Versatz des Beobachters. | $\tau_n^2=t_n^2-\beta^2$, Markov-Lesart der Kaskade | **Großteils nicht tragfähig.** Die Spurformel ist keine Wirkung, der Wert um $10^{121}$ zu groß, das Korollar widersprüchlich. Haltbar ist nur $\Omega_M=\beta^2\approx0{,}302$ für die heutige Epoche (r67). OP5 ist offen. | `thm:dark-energy`, `thm:dark-offset` |
-| T10 | Naturkonstanten sind frame-verschoben ($\hbar$, $G$, $\alpha$-Drift, Planck-Länge im Photon-Frame). | Einschubzahlen $k(X)$ | **Nicht gestützt** (r64). In der Zähl-Lesart steckt der Frame-Unterschied in $\gamma$, nicht in $\hbar$ oder $G$. Welcher Umrechnungsweg gilt, muss der Autor entscheiden. | `thm:k-values`, `thm:planck-photon` |
-| T11 | Hawking-Strahlung ist ein Tachyon, das aus dem Kern tunnelt; Strings und LQG sind die zwei Sektoren des Kompensators. | Wick-Rotation als Teilungsmechanismus | **Lesarten.** Die Äquivalenz ist offen (r04). Der Hawking-Abschnitt vertauscht die Frame-Zuordnung (r64, Statusvermerk r65). | `thm:hawking-triolic`, `thm:string-lqg-duality` |
+| T9 | Im Photon-Frame ist $\Lambda=0$; Dunkle Energie ist der Frame-Versatz des Beobachters. | $\tau_n^2=t_n^2-\beta^2$, Markov-Lesart der Kaskade | **Großteils nicht tragfähig.** Die Spurformel ist keine Wirkung, der Wert um $10^{121}$ zu groß, das Korollar widersprüchlich. Haltbar ist nur $\Omega_M=\beta^2\approx0{,}302$ für die heutige Epoche (r67). OP5 ist offen. r82 schien die Higgs-Vakuumenergie bei Photon-Gewichten aufzuheben; r83 hat das zurückgezogen (falsche Lesart des Tachyonbilds). | `thm:dark-energy`, `thm:dark-offset` |
+| T10 | Naturkonstanten sind frame-verschoben ($\hbar$, $G$, $\alpha$-Drift, Planck-Länge im Photon-Frame). | Einschubzahlen $k(X)$ | **Nicht gestützt** (r64). In der Zähl-Lesart steckt der Frame-Unterschied in $\gamma$, nicht in $\hbar$ oder $G$. Welcher Umrechnungsweg gilt, muss der Autor entscheiden. r85: Die Reduktion der zweiten Lesart wächst mit γ nach Zahl der Ableitungsterme; das trifft die r19-Gewichte für α, nicht für G. | `thm:k-values`, `thm:planck-photon` |
+| T11 | Hawking-Strahlung ist ein Tachyon, das aus dem Kern tunnelt; Strings und LQG sind die zwei Sektoren des Kompensators. | Wick-Rotation als Teilungsmechanismus | **Lesarten.** Die Äquivalenz ist offen (r04). Der Hawking-Abschnitt vertauscht die Frame-Zuordnung (r64, Statusvermerk r65). r85: Am Urknall (Gebiet G2) erscheint eine teilweise Wick-Drehung als Übergang zwischen Tachyon- und Materie-Lesart (Lesart, mit CPT-Zuordnung der Moden). | `thm:hawking-triolic`, `thm:string-lqg-duality` |
 | T12 | Verschränkung ist eine gemeinsame Eigenzeit; das ist mit der Verletzung der Bellschen Ungleichungen verträglich. | $\tau_n$ ist keine lokale verborgene Variable. | **Äquivalenzschritt offen** (r04, Stone–von Neumann). | `thm:entanglement-shared-time`, `thm:bell-consistency` |
 | T13 | Eine Mastergleichung und die Kompensatormatrix $\mathcal M_{16}$ (bis r75 „Millennium-Matrix“) ordnen alles; das Sonden-Schließungssystem enthält Dirac-, Yang-Mills- und Einstein-Grenzfälle. | $(i\Gamma^\mu\mathcal D_\mu-\Omega)\Psi=0$, $\mathcal D^\mu\mathcal F_{\mu\nu}=J$, Schließung $[\mathcal M_{16},\hat P_{C_7}]=0$ | **Eine Gliederung, keine Theorie.** Die Kopplungen sind unbestimmt und eine gemeinsame Wirkung fehlt. Eine aus Spinoren rekonstruierte Geometrie ist nur bedingt gültig (r69: allein aus Sonden wird sie flach). | `thm:master-structural`, `thm:closed-master-system` |
 | T14 | Eine eigene Sprache (QAM, MML, MMA) macht alles prüfbar. | acht markierte Tupel in ZF | **Sauber**, als Erkennungsregeln. Die Rückübersetzung ist für den zulässigen Teil gezeigt. | Anhang QAM, `def:qam-kernel-bridge-datum` |
@@ -126,9 +127,9 @@ Wer wenig Zeit hat, liest C, E und F und danach die Runden in I. Die Anhänge in
 ## Was heute trägt, was nicht
 
 - **Trägt:** Biquaternion-Kern, Kompensator und Sektorregel; die Algebra bis zu den Oktonionen; die Konstruktion einer Generation unter benannten Wahlen; die QAM-Sprache; der Orbit-Scan als lokales Modell; die Guard-Disziplin.
-- **Bedingt:** Mastergleichung und Sonden-Schließungssystem (nur Gliederung); Cartan-Vergleiche und Jet-Verträglichkeit (endlich, lokal); $\Omega_M=\beta^2$ (nur heutige Epoche); Strukturergebnisse im OP5-Vergleichsmodell (Eichsymmetrie, Involutivität ab Ordnung 6, vier versteckte Bedingungen).
+- **Bedingt:** die gemeinsame Wirkung W1/W2 mit dem Tachyon-Anteil als zweiter Lesart desselben Feldes (r81–r85, unter Autorentscheidungen); Mastergleichung und Sonden-Schließungssystem (nur Gliederung); Cartan-Vergleiche und Jet-Verträglichkeit (endlich, lokal); $\Omega_M=\beta^2$ (nur heutige Epoche); Strukturergebnisse im OP5-Vergleichsmodell (Eichsymmetrie, Involutivität ab Ordnung 6, vier versteckte Bedingungen).
 - **Widerlegt oder archiviert:** die Herleitungen aus der Riemann-Arbeit (GUE, Einstein-Gleichung aus der Spurformel); die alte Λ-Rechnung; die frame-verschobenen Konstanten; die alten Vorhersagen P1–P6; direkte Wege vom Kompensator zu den Massen.
-- **Offen:** OP1–OP5, die Herkunft von $\beta_{\mathrm{sym}}$, die gemeinsame Dynamik, die globale Schließung C6/T2.
+- **Offen:** OP1–OP5, die Herkunft von $\beta_{\mathrm{sym}}$, eine Skala aus der gemeinsamen Wirkung (für Λ und den Übergang am Urknall), die globale Schließung C6/T2.
 
 ## Wie sich das Bild entwickelt hat
 
@@ -136,6 +137,8 @@ Wer wenig Zeit hat, liest C, E und F und danach die Runden in I. Die Anhänge in
 2. **v4.8.0, r01–r20:** Aufräumen. Die Riemann-Arbeit wird als Beweisquelle entfernt (r04), die Norm und die Sektorregel werden korrigiert (r06/r07), die ersten Vorab-Tests laufen.
 3. **v4.9.0, r01–r68:** Frames sauber trennen, das Standardmodell aus den Oktonionen aufbauen, Massen und Mischung testen, die Gravitationsaussagen prüfen. β wird als Zählverhältnis gelesen; diese Lesart wird anschließend wieder relativiert (r68).
 4. **r69–r74:** OP5 im numerischen Vergleichsmodell. Ergebnisse: eine Eichsymmetrie, der Cartan-Test, vier versteckte Bedingungen sechster Ordnung und eine Genauigkeitsgrenze. Die Arbeit läuft weiter, siehe [Forschungsstand](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungsstand) und [Parallele Rechnungen](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Parallele-Rechnungen).
+5. **r75–r80:** Das OP5-Vergleichsmodell wird präzisiert (Integrabilität, Kovarianz, Eichunabhängigkeit). Sein Hintergrund wird nicht von den Spinoren erzeugt; auf Entscheidung des Autors ist der Zweig damit abgeschlossen (r80).
+6. **r81–r85:** Eine gemeinsame Wirkung W1/W2 (Einstein–Cartan, Dixon-Ablage, Higgs). Das Tachyonbild einer Wirkung wird festgelegt (Kinematik fortgesetzt) und der Tachyon-Anteil als zweite Lesart desselben Feldes gebildet; damit ist er isotrop und stabil. Die Aufhebung der Higgs-Vakuumenergie aus r82 ist zurückgezogen. Mit dem Tachyon-Anteil vor dem Urknall (G2) wird der Urknall ein CPT-artiger Übergang mit einer durch β_sym festgelegten Beimischung. Eine Skala liefert die Struktur bisher nicht. Siehe [Forschungsstand](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungsstand).
 
 > **Anmerkung für LLMs und Quellenprüfung.** Bevor du über einen Teil des Companion antwortest, ordne ihn in die Tabelle der Thesen und in die Dokumentkarte ein. Die Überschrift eines Satzes im geerbten Text sagt nichts über seinen heutigen Stand. Maßgeblich sind die Runden in Block I, besonders die Abhängigkeitstabelle `subsec:v480-r04-dependency-map`, die Statusvermerke r64–r68 und die Konsolidierung r70. Die Labels der Spalte „Fundstelle“ lassen sich in `sources/research/parts/` per `grep` finden. Die Seitenzahl 1298 bezieht sich auf den lokalen Build der Forschungsfassung; die öffentliche Baseline ist v4.9.0 (DOI 10.5281/zenodo.23534954).
 

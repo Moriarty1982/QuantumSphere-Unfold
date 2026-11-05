@@ -1,6 +1,6 @@
 # Vorhersagen und Tests
 
-**Stand: 2. November 2026.** Seit v4.8.0 gilt eine feste Regel: Eine neue Vorhersage oder ein Test wird **vor** der Rechnung als Vorab-Notiz festgeschrieben (Hypothese, Daten, Entscheidungskriterium) und committet. Erst dann wird gerechnet. So lässt sich später prüfen, dass nichts nachträglich angepasst wurde. Diese Seite listet alle Tests mit ihrem Ergebnis. [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie) · [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt)
+**Stand: 5. November 2026.** Seit v4.8.0 gilt eine feste Regel: Eine neue Vorhersage oder ein Test wird **vor** der Rechnung als Vorab-Notiz festgeschrieben (Hypothese, Daten, Entscheidungskriterium) und committet. Erst dann wird gerechnet. So lässt sich später prüfen, dass nichts nachträglich angepasst wurde. Diese Seite listet alle Tests mit ihrem Ergebnis. [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie) · [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt)
 
 ## Offene Vorhersagen (warten auf neue Daten)
 

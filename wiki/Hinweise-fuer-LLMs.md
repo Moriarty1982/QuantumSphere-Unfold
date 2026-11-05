@@ -8,7 +8,7 @@ Zuerst das [Gesamtbild](https://github.com/Moriarty1982/QuantumSphere-Unfold/wik
 
 ## Kontext für Antworten
 
-Am geprüften Stand **2.11.2026 / cf48496 plus r70–r71** ist **v4.9.0** die öffentliche Baseline (Version DOI **10.5281/zenodo.23534954**). Die Forschungsquellen bilden **4.10.0-draft** mit dokumentierten Layern bis **v4.9.0-r71**. Vor einer aktuellen Aussage den neuesten Stand erneut prüfen. [Quellenkarte](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Versionen-und-Quellen).
+Am geprüften Stand **5.11.2026 / main a5bf106** ist **v4.9.0** die öffentliche Baseline (Version DOI **10.5281/zenodo.23534954**). Die Forschungsquellen bilden **4.10.0-draft** mit dokumentierten Layern bis **v4.9.0-r85**. Vor einer aktuellen Aussage den neuesten Stand erneut prüfen. [Quellenkarte](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Versionen-und-Quellen).
 
 ## Arbeitsanleitung für KI-Assistenten
 
@@ -31,7 +31,7 @@ ist ein offener, werkzeugübergreifender Standard. `CLAUDE.md` verweist nur dara
 1. Klären, ob die Frage Veröffentlichung, aktuelle Forschung oder einen historischen Zustand betrifft.
 2. Commit/Tag, Dateipfad und möglichst Satzlabel oder Abschnitt nennen.
 3. Definitionen, Voraussetzungen, Guards und Frame-Konventionen derselben Fassung lesen.
-4. Spätere Korrekturen, Statusnotizen und archivierte Argumente berücksichtigen. Für Frame-/Gravitationsaussagen insbesondere r64–r68 prüfen (r66 korrigiert die Zitierung in r64); für OP5, Vakuumterm und Frame-Neutralität r69 bis r71. Der Inhalt des Companion ist auf der Seite [Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) zusammengefasst; sie ersetzt nicht die Quellstelle, gibt aber den Stand jeder Aussage an. Die Arbeitsnotizen unter `analysis/` sind Forschungsstände mit bedingten Ergebnissen, keine Manuskriptaussagen.
+4. Spätere Korrekturen, Statusnotizen und archivierte Argumente berücksichtigen. Für Frame-/Gravitationsaussagen insbesondere r64–r68 prüfen (r66 korrigiert die Zitierung in r64); für OP5, Vakuumterm und Frame-Neutralität r69 bis r80; für die gemeinsame Wirkung, das Tachyonbild einer Wirkung und den Urknall r81 bis r85 (r83 zieht r82.1 b, c zurück; die Autorentscheidungen stehen in `notes/research/v4_10_0_w1/Bestandsaufnahme_Wirkungsansaetze.md`). Der Inhalt des Companion ist auf der Seite [Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) zusammengefasst; sie ersetzt nicht die Quellstelle, gibt aber den Stand jeder Aussage an. Die Arbeitsnotizen unter `analysis/` sind Forschungsstände mit bedingten Ergebnissen, keine Manuskriptaussagen.
 5. Nach Evidenz formulieren: bewiesen unter genannten Voraussetzungen; numerisch geprüft im angegebenen Bereich; zusätzlich angenommen; zurückgezogen; oder offen.
 6. Fehlende Belege als fehlend kennzeichnen. Aus einer Analogie keine native Ableitung machen.
 
