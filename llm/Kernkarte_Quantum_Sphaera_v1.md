@@ -2624,7 +2624,7 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **r82.2 H74 (nicht blind):** direkte Kopplung εφχ macht gleiche Spektren für jedes ε > 0 instabil (Rate ε/2ω); verstimmt stabil bis ε < |ω₁²−ω₂²|/2; Lauf 2 mit angepasster Zeit (Planungsfehler offengelegt).
 - **r82.3 H75 (nicht blind):** nur Gravitation: N² = 0, keine exponentielle Instabilität, Gleichtakt wächst t² (Vorab-Schranke „höchstens linear“ falsch); Materie-Gewichte Jeans-Rate √(4πGρ(1−β²)); Bondi-Durchgehen bestätigt. Quanten-Vakuumzerfall nicht abgedeckt.
 - **r82.4 Torsions-Paarkanal:** Fierz j₁·j₂ = 2|Φ|², anziehend; kritisch erst bei Cutoff ≳ 1,5 M_P; einziger eichinvarianter Kanal ν^cν^c → Majorana ~M_P, See-saw m_ν ~ 10⁻⁶ eV; elektroschwaches Higgs so nicht.
-- R_chk = (1,0,0); Guards unverändert. Mechanismen ja, Skala nein (nur Planck). OP5 offen. Lokal 1322 Seiten, 3961 Labels, Overfull 45, harte Werte 0.
+- R_chk = (1,0,0); Guards unverändert. Mechanismen ja, Skala nein (nur Planck). OP5 offen. Lokal 1322 Seiten, 3961 Labels, Overfull 45, harte Werte 0. PR #67 gemergt als ebf5048.
 
 ## 8. Änderungsprotokoll
 

@@ -3,7 +3,7 @@
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.** Sie ist der Einstiegspunkt für die nächste Sitzung, egal mit welchem Modell. Die Geschichte steht in `AGENTS.md` (Rundentabelle), in der Kernkarte und in den Runden.
 
 ## Stand vom 5. November 2026, ca. 19:45 (Claude)
-- **Offen: PR #67** (`research/v4.10-r82-higgs-stabilitaet`), Runde **v4.9.0-r82**: Higgs-Sektor W2, Stabilität der M–T-Aufhebung (H74, H75), Torsions-Paarkanal (k190). Inhalt: Runde in `parts/v490-post-release-layers.tex`, Notizen und Skripte k188–k190 unter `notes/research/v4_10_0_r82/`, H74/H75 unter `predictions/`, Wiki (6 Seiten), ours-Merge der lokalen Historie bis 2d5c6c2 (enthält die Vorab-Commits b24bb08, 6aa8477). CI-Lauf 42084679668. **Merge nur nach „PR 67 mergen“.**
+- **PR #67 gemergt als ebf5048** (5.11., 19:31; `research/v4.10-r82-higgs-stabilitaet`), Runde **v4.9.0-r82**: Higgs-Sektor W2, Stabilität der M–T-Aufhebung (H74, H75), Torsions-Paarkanal (k190). Inhalt: Runde in `parts/v490-post-release-layers.tex`, Notizen und Skripte k188–k190 unter `notes/research/v4_10_0_r82/`, H74/H75 unter `predictions/`, Wiki (6 Seiten), ours-Merge der lokalen Historie bis 2d5c6c2 (enthält die Vorab-Commits b24bb08, 6aa8477). CI-Lauf 42084679668.
 - **Lokal eingebaut (2d5c6c2):** 1322 Seiten, 3961 Labels, Overfull 45, harte Werte 0, Guard-Linter 0. AGENTS-Zeile r82 und Kernkarte K132 (v14.8) nachgezogen. Nächste Bundle-Basis: 2d5c6c2.
 - **Gemergt zuvor:** PR #64 (r80), #65 (W1-Notizen), #66 (r81, b3cf9f7), #59, #51.
 - **Zuletzt vergebene Hypothese:** H75. Nächste freie Nummer H76.
