@@ -20,6 +20,8 @@
 
 - **H85 (Vorab 4ac77a0, teilweise nicht blind, k200):** a quantitativ widerlegt (D konvergiert linear in kΔ, 3,5 % bei 0,01), b widerlegt wie formuliert (Rollen von C und D vertauscht), c: Drehrichtungen asymmetrisch. Nachträglich: adiabatisch wird die T-Mode positiver Norm vollständig zur M-Mode negativer Frequenz (CPT-Zuordnung wie Boyle–Finn–Turok), Beimischung C fällt für kΔ ≳ 1 exponentiell ab (endliches Spektrum, Skala 1/Δ frei). Bestätigung braucht neuen Vorab-Test (H86: Kriterien für C, Abfall-Exponent, Asymmetrie). `llm/Ergebnis_H85_weicher_Urknall_Uebergang.md`. Noch nicht auf GitHub: H82–H85, Erkundungen Spinorphase und Urknall, Entscheidung G2 → Runde r85.
 
+- **H86 bestätigt (Vorab 851297a, nicht blind, nachträglich motiviert, k201; Δ = 2, Profile tanh und erf):** a CPT-Zuordnung (|C| < 10⁻² ab kΔ = 6, √(|D₊||D₋|) = √(b/a) auf 10⁻¹³); b exponentieller Abfall von C knapp (Steigung −2,67 je kΔ, 14,9 % unter π, lokale Steigungen 2,58–2,81, kein Lauf gegen π erkennbar); c Grenzfall langer Wellen; d Asymmetrie der Drehsinne (1,13 / 1,10 bei kΔ = 0,02), Produkt fest. `llm/Ergebnis_H86_CPT_Zuordnung_Urknall.md`. Noch nicht auf GitHub: H82–H86, Erkundungen Spinorphase und Urknall, Entscheidung G2, Arbeitsannahme Gewicht 1 → Runde r85.
+
 ## Davor (21:15)
 - **PR #68 gemergt als e253208** (5.11., 21:01; `research/v4.10-r83-vakuumzerfall`), Runde **v4.9.0-r83**: H76 (Vakuumzerfall), H77 (Tachyonbild einer Wirkung nach Lesart B), Geist-Kondensation (Erkundung), Korrektur zu r82.1(b), (c). Wiki im PR (r82-Aussagen als zurückgezogen markiert). ours-Merge der lokalen Historie bis 5a23a7b (enthält Vorab-Commits 2b47e7f, d087d67). CI-Lauf 42099084932.
 - **Lokal eingebaut (5a23a7b):** 1325 Seiten, 3967 Labels, Overfull 45, harte Werte 0, Guard-Linter 0. AGENTS-Zeile r83, Kernkarte K133 (v14.9). **Nächste Bundle-Basis: 5a23a7b.**
@@ -39,7 +41,7 @@
 - **PR #67 gemergt als ebf5048** (5.11., 19:31; `research/v4.10-r82-higgs-stabilitaet`), Runde **v4.9.0-r82**: Higgs-Sektor W2, Stabilität der M–T-Aufhebung (H74, H75), Torsions-Paarkanal (k190). Inhalt: Runde in `parts/v490-post-release-layers.tex`, Notizen und Skripte k188–k190 unter `notes/research/v4_10_0_r82/`, H74/H75 unter `predictions/`, Wiki (6 Seiten), ours-Merge der lokalen Historie bis 2d5c6c2 (enthält die Vorab-Commits b24bb08, 6aa8477). CI-Lauf 42084679668.
 - **Lokal eingebaut (2d5c6c2):** 1322 Seiten, 3961 Labels, Overfull 45, harte Werte 0, Guard-Linter 0. AGENTS-Zeile r82 und Kernkarte K132 (v14.8) nachgezogen. Nächste Bundle-Basis: 2d5c6c2.
 - **Gemergt zuvor:** PR #64 (r80), #65 (W1-Notizen), #66 (r81, b3cf9f7), #59, #51.
-- **Zuletzt vergebene Hypothese:** H85. Nächste freie Nummer H86.
+- **Zuletzt vergebene Hypothese:** H86. Nächste freie Nummer H87.
 - **Branches, die weg können** (Löschen über den Proxy gesperrt): `rechnen/h59`, `rechnen/h65`, `rechnen/h67`, `rechnen/hintergrund`, `research/v4.10-w1-wirkung-test`, nach dem Merge auch `research/v4.10-r81-…` und `research/v4.10-r82-higgs-stabilitaet`.
 
 ## Inhaltlicher Stand
