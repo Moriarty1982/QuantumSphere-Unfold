@@ -37,3 +37,13 @@ Ideen des Autors oder aus Sitzungen, die nicht jetzt verfolgt werden, aber wiede
 - **Prüfbare Form (Vorschlag H74):** Was schließt ein Beobachter im Materie-Frame auf Ω_M, Ω_Λ und w_eff, wenn die Gravitation beide Lesarten der Mischung sieht, und wie verhält sich das zur Zählform aus r67 und zu den Daten? Vor der Rechnung festlegen, welche Lesarten die Gravitation sieht und mit welchen Gewichten.
 - **Auslöser:** jede weitere OP5- oder Λ-Rechnung; jede Rechnung zu Ω_M oder dunkler Materie.
 - **Stand:** aktiv, als nächster Kandidat.
+
+## I4: Expansion treibt Tachyon-Moden über die Schwelle – Kondensation als Quelle von Masse (und Vakuumenergie)?
+- **Herkunft:** Autorfrage, 5. November 2026: „Müsste sich die Expansion bei Tachyonen anders auswirken? Wäre das für die nicht eher eine Kompression?“
+- **Befund (Standardkinematik):** Die Expansion senkt jeden physikalischen Impuls, k ∝ 1/a. Materie (ω² = k² + m²) wird dabei langsamer, ihre Energie fällt auf m. Tachyonen (ω² = k² − m²) werden schneller, ihre Energie fällt gegen 0. Bei k = m erreichen sie die Schwelle (unendlich schnell, nur Druck, Bezugszustand von T). Im Materie-Frame ist das eine gespiegelte Bewegung. Im Tachyon-Frame ist es dieselbe Bewegung zum eigenen Bezugszustand (η → η + iπ/2 vertauscht cosh und sinh). Eine Kompression des Raums folgt nicht.
+- **Idee:** Unterhalb von k = m wird ω imaginär. Das ist eine tachyonische Instabilität, die Mode wächst exponentiell, und das Feld kondensiert in einen neuen Grundzustand wie beim Higgs-Mechanismus (m² < 0 im Ursprung). r44 stellt fest, dass Massen in der Ablage den Erwartungswert eines Dubletts brauchen, sagt aber nicht, warum er entsteht. Lesart: Die Expansion schiebt Tachyon-Moden über die Schwelle, sie kondensieren, das Kondensat liefert die Massen (Higgs-artig) und eine Vakuumenergie.
+- **Auslöser:**
+  1. Arbeit am Higgs- bzw. Skalarsektor von W1;
+  2. jede Rechnung mit Tachyon-Moden auf FRW über die Schwelle hinaus;
+  3. die Frage nach dem Gewicht des Tachyon-Anteils in der Wirkung (Vakuumenergie eines Kondensats statt Gewichtungsregel).
+- **Stand:** zurückgestellt; nicht gerechnet.
