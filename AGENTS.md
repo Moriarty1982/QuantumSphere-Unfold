@@ -5,11 +5,12 @@ unabhängig vom Werkzeug. `CLAUDE.md` verweist nur hierauf. Regeln werden **hier
 
 ## Was dieses Repository ist
 Quellen, Notizen und Werkzeuge zum *Quantum Sphaera Companion*, dem mathematischen Unfold der Paper-Reihe „Quantum
-Sphaera“. Die öffentliche Baseline ist **v4.9.0** (Version-DOI 10.5281/zenodo.23534954, Concept-DOI
-10.5281/zenodo.19210728). Alles danach liegt als Forschungsschicht vor und ist kein Release.
+Sphaera“. Die öffentliche Baseline ist **v4.10.0** vom 2026-11-06 (Version-DOI 10.5281/zenodo.23991357, Concept-DOI
+10.5281/zenodo.19210728; Vorgänger v4.9.0, 10.5281/zenodo.23534954). Alles danach liegt als Forschungsschicht vor und ist kein Release.
 
-- `sources/research/`: der modulare Kandidat (`v480-companion.tex` mit Teilen unter `parts/`). Neue Runden werden an
-  `parts/v490-post-release-layers.tex` angehängt.
+- `sources/research/`: der modulare Kandidat (`v480-companion.tex` mit Teilen unter `parts/`). Die Runden v4.9.0-r01–r86 stehen in
+  `parts/v490-post-release-layers.tex` (so in v4.10.0 veröffentlicht); neue Runden heißen `v4.10.0-rNN` und kommen in eine neue Schichtdatei
+  (z. B. `parts/v4100-post-release-layers.tex`).
 - `notes/research/v4_10_0_rNN/`: Notizen, Skripte und Rundentext je Runde. Vorab-Notizen liegen in
   `notes/research/predictions/`.
 - `analysis/`: Arbeitsstände, u. a. das OP5-Vergleichsmodell unter `analysis/op5-field-slices/`.
