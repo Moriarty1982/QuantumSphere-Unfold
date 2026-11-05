@@ -10,7 +10,7 @@
 - [Research status, German](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungsstand).
 - [LLM source-reading advice, German](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Hinweise-fuer-LLMs).
 
-**Snapshot:** 3 November 2026, [main repository commit cf48496](https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/cf48496c95b6c9ec3f6a3c196df2c8c2c84e3d0b) plus layers r70–r74. Published baseline: **v4.9.0**, 21 October 2026, [Version DOI 10.5281/zenodo.23534954](https://doi.org/10.5281/zenodo.23534954). Research working version: **4.10.0-draft**, documented layers through **v4.9.0-r74**.
+**Snapshot:** 6 November 2026. Published baseline: **v4.10.0**, 6 November 2026, [Version DOI 10.5281/zenodo.23991357](https://doi.org/10.5281/zenodo.23991357), with layers through **v4.9.0-r86**; previous version v4.9.0, 21 October 2026, [Version DOI 10.5281/zenodo.23534954](https://doi.org/10.5281/zenodo.23534954). New layers are named `v4.10.0-rNN`.
 
 The Companion investigates a structure-first framework with conditional, local and readout-dependent results. The repository does not present a peer-reviewed proof of global physical closure, global all-readout terminality, the Riemann Hypothesis or global QFT/GR unification. Each result must be read with its assumptions, corrections and remaining obligations.
 
