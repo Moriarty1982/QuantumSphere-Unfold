@@ -2,7 +2,7 @@
 
 Dieses Wiki erschließt den **Quantum Sphaera Companion**: ein strukturorientiertes mathematisches Forschungsprojekt mit lokalen, bedingten und readout-abhängigen Aussagen. Es bietet Menschen und LLMs einen Einstieg, eine Quellenkarte und benannte Aussagegrenzen.
 
-**Stand: 5. November 2026.** Öffentliche Baseline: **v4.9.0 vom 21. Oktober 2026**. Aktuelle Forschung: **4.10.0-draft**, zuletzt dokumentierte Layer **v4.9.0-r85**. Layerbezeichnung und Arbeitsversion sind unterschiedliche Kennzeichnungen.
+**Stand: 6. November 2026.** Öffentliche Baseline: **v4.10.0 vom 6. November 2026**, [Version-DOI 10.5281/zenodo.23991357](https://doi.org/10.5281/zenodo.23991357), mit den Layern bis **v4.9.0-r86**; Vorgänger v4.9.0 vom 21. Oktober 2026. Neue Layer heißen ab jetzt `v4.10.0-rNN`. Layerbezeichnung und Arbeitsversion sind unterschiedliche Kennzeichnungen.
 
 ## Einstieg
 

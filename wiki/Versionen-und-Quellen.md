@@ -4,9 +4,10 @@ Stand: **2.11.2026**, geprüft gegen Commit [`cf48496c95b6c9ec3f6a3c196df2c8c2c8
 
 | Ebene | Stand | Verwendung |
 |---|---|---|
-| Öffentliche Baseline | v4.9.0, 21.10.2026 | Publizierte Aussagen und Zitation |
-| Forschung | 4.10.0-draft; Layer bis v4.9.0-r85 | Nachträgliche Forschung und Korrekturen; keine 4.10-Veröffentlichung |
-| Vorherige Veröffentlichung | v4.8.0, DOI 10.5281/zenodo.23365244 | Historischer Vergleich |
+| Öffentliche Baseline | v4.10.0, 6.11.2026, DOI 10.5281/zenodo.23991357; Layer bis v4.9.0-r86 | Publizierte Aussagen und Zitation |
+| Forschung | nach v4.10.0; neue Layer `v4.10.0-rNN` | Nachträgliche Forschung und Korrekturen |
+| Vorherige Veröffentlichung | v4.9.0, DOI 10.5281/zenodo.23534954 | Historischer Vergleich |
+| Ältere Veröffentlichung | v4.8.0, DOI 10.5281/zenodo.23365244 | Historischer Vergleich |
 | Ältere Veröffentlichung | v4.7.0, DOI 10.5281/zenodo.20232911 | Herkunft und ältere Argumente |
 | Analysen, Savepoints, Prüfberichte | jeweils eigener Stand | Keine automatische Release-Zugehörigkeit |
 
