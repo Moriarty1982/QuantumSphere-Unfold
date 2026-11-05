@@ -12,13 +12,13 @@ Werkzeugunabhängig. Gilt für das Projekt Quantum Sphaera: lokaler Ordner `Quan
    prüfen, ob die H-Nummer frei ist.
 
 ## Format der Runde
-- **Kopf:** `\clearpage`, `\section*{v4.9.0-rNN Source-Only: …}`, `\addcontentsline{toc}{section}{…}` und
-  `\label{sec:v490-rNN-…}`.
-- **Einleitung:** ein Absatz „Purpose“, dann der Source-only-Absatz mit der Version-DOI 10.5281/zenodo.23534954 und der
+- **Kopf:** `\clearpage`, `\section*{v4.10.0-rNN Source-Only: …}`, `\addcontentsline{toc}{section}{…}` und
+  `\label{sec:v4100-rNN-…}` (seit dem v4.10.0-Release am 2026-11-06; die Runden v4.9.0-r01–r86 behalten ihre Namen).
+- **Einleitung:** ein Absatz „Purpose“, dann der Source-only-Absatz mit der Version-DOI 10.5281/zenodo.23991357 (v4.10.0) und der
   Concept-DOI 10.5281/zenodo.19210728 (beide unverändert).
-- **Ergebnisse:** jeweils als `Theoremlet v4.9.0-rNN.k` mit Beweisskizze oder Messung. Widerlegte Tests als solche
+- **Ergebnisse:** jeweils als `Theoremlet v4.10.0-rNN.k` mit Beweisskizze oder Messung. Widerlegte Tests als solche
   benennen, Korrekturen früherer Aussagen ausdrücklich machen.
-- **Frames:** eigener Unterabschnitt `subsec:v490-rNN-frames` (Tabelle M/T/P).
+- **Frames:** eigener Unterabschnitt `subsec:v4100-rNN-frames` (Tabelle M/T/P).
 - **Register und Ledger:** Guards Γ_guard = (1,1,1,1,1), R_glob = (0,1,1,1,1) und β₄ = 1/256 bleiben unverändert,
   sofern der Autor nichts anderes beschließt.
 - **Append-only:** bestehende Runden nie umschreiben. Lange `\texttt`-Dateinamen mit `\allowbreak` umbrechen.
@@ -32,7 +32,7 @@ Werkzeugunabhängig. Gilt für das Projekt Quantum Sphaera: lokaler Ordner `Quan
    `python3 .claude/skills/quantum-sphaera/tools/qs.py audit`: harte Werte müssen 0 sein; Overfull-Zahl, Seiten und
    Labels notieren.
 4. **GitHub-Branch:** `research/v4.10-rNN-<thema>` anlegen. Darin:
-   - die Runde wörtlich an `sources/research/parts/v490-post-release-layers.tex` anhängen;
+   - die Runde wörtlich an die neue Schichtdatei `sources/research/parts/v4100-post-release-layers.tex` anhängen (bei der ersten v4.10.0-Runde anlegen und in `v480-companion.tex` bzw. `support-route.tex` nach `v490-post-release-layers` einbinden);
    - die Notizen unter `notes/research/v4_10_0_rNN/` ablegen: `README.md` mit einer Tabelle der Theoremlets,
      `rounds/v490_rNN_round.tex` und `llm/`;
    - die Vorab-Notizen nach `notes/research/predictions/` legen.

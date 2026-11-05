@@ -280,16 +280,16 @@ Wenn eine neue Runde diese Vektoren nicht verändert, ist das der Normalfall und
 
 DOIs, die nie vermischt werden dürfen:
 
-- **Version-DOI** `10.5281/zenodo.23534954` — **v4.9.0, veröffentlicht 2026-10-21** (Zenodo-Record `23534954`, vom Nutzer veröffentlicht), aktuelle Version; gehört als einzige sichtbare DOI-Zeile auf die Titelseite eines 4.9.x-Stands
-- **Reservierte Version-DOI v4.10.0** `10.5281/zenodo.23991357` — Entwurf 23991357, am 2026-11-06 reserviert, **unveröffentlicht**; steht auf der Titelseite des Release-Zweigs `release/v4.10.0-prep`; wird nach der Veröffentlichung die aktuelle Version-DOI, v4.9.0 dann Vorgänger
-- **Vorgänger-DOI** `10.5281/zenodo.23365244` — v4.8.0, seit v4.9.0 nur Provenienz
+- **Version-DOI** `10.5281/zenodo.23991357` — **v4.10.0, veröffentlicht 2026-11-06** (Zenodo-Record `23991357`, Freigabe des Autors im Chat, über den Workflow, Lauf 42132440141), aktuelle Version; gehört als einzige sichtbare DOI-Zeile auf die Titelseite eines 4.10.x-Stands
+- **Vorgänger-DOI** `10.5281/zenodo.23534954` — v4.9.0, veröffentlicht 2026-10-21, seit v4.10.0 nur Provenienz
+- **Frühere Version-DOI** `10.5281/zenodo.23365244` — v4.8.0, nur Provenienz
 - **Frühere Version-DOI** `10.5281/zenodo.20232911` — v4.7.0, nur Provenienz
 - **Concept-DOI** `10.5281/zenodo.19210728` — stabil über alle Versionen
 - **Previous/Baseline-DOI** `10.5281/zenodo.20117361` — v4.6.0, nur Provenienz, nie als aktuelle DOI
 
 Abgelaufen und nicht mehr zu verwenden: `10.5281/zenodo.20181842`.
 
-**Achtung, lokale Arbeitsdatei:** `Quantum_Sphaera_Companion_v4_8_0_source.tex` trägt auf ihrer Titelseite weiterhin die v4.8.0-DOI und in den Source-only-Klauseln der Runden „v4.8.0 Version DOI … unchanged". Das ist für die Runden bis v4.8.0-r20 richtig (sie sind so in v4.9.0 veröffentlicht). Neue Runden nach dem 4.9.0-Release heißen **`v4.9.0-rNN`** (Labels `sec:v490-rNN-...`) und nennen in ihrer Source-only-Klausel die v4.9.0-Version-DOI. `qs.py doi` kennt ohne Parameter v4.9.0 als aktuell (seit 2026-10-22).
+**Achtung, lokale Arbeitsdatei:** `Quantum_Sphaera_Companion_v4_8_0_source.tex` trägt auf ihrer Titelseite weiterhin die v4.8.0-DOI und in den Source-only-Klauseln der Runden „v4.8.0 Version DOI … unchanged". Das ist für die Runden bis v4.8.0-r20 richtig (sie sind so in v4.9.0 veröffentlicht). Runden zwischen dem 4.9.0- und dem 4.10.0-Release heißen `v4.9.0-rNN` (r01–r86, mit v4.9.0-DOI in der Source-only-Klausel; so in v4.10.0 veröffentlicht). **Neue Runden nach dem 4.10.0-Release heißen `v4.10.0-rNN`** (Labels `sec:v4100-rNN-...`) und nennen in ihrer Source-only-Klausel die v4.10.0-Version-DOI `10.5281/zenodo.23991357`; auf GitHub gehören sie in eine neue Schichtdatei (z. B. `parts/v4100-post-release-layers.tex`). `qs.py doi` kennt ohne Parameter v4.10.0 als aktuell (seit 2026-11-06).
 
 **4.9.0-Release auf GitHub abgeschlossen (2026-10-22):** PR #21 in `main` gemergt (Merge-Commit `a412bd7`), Tag und GitHub-Release `v4.9.0` angelegt (https://github.com/Moriarty1982/QuantumSphere-Unfold/releases/tag/v4.9.0). `DOI_ROLES` in `qs.py` steht auf v4.9.0; für PDFs der lokalen Arbeitsdatei (Titelseite noch v4.8.0) `qs.py doi <pdf> --version-doi 10.5281/zenodo.23365244 --version-label v4.8.0` verwenden. Projektlokale Freigaberegel in `.claude/settings.local.json` (global gitignored): `gh pr ready`/`gh pr merge` für dieses GitHub-Repository.
 
@@ -358,7 +358,7 @@ Unter derselben Toolchain: RC19 1014 Seiten / 3290 Labels, RC20 1016 / 3296, RC2
 - **Q₃ Restteil `Δ_γ < 1/5`** — r90/r92 rekonstruiert, v4.9.0-r12 unter (P1)–(P4) hergeleitet, r20 Herkunft (Photon-Frame-Uhrgewinn am Hopf-Punkt), r21 als einzige frame-konsistente Schranke hergeleitet; gemessen im Materie-Frame 0,1925. Der r65-Volltext ist laut Autor verloren (nicht im Projektordner, nicht in `C:\Users\marcb\Downloads\Quantum Sphere`).
 - **C5-Faktor 3/4** — r94 deklariert; Autorlesart seit v4.9.0-r16: gekickte Dualitätsdrehung (r10, r11, r14); als Eigenwert 3/4 = p₊ am Hopf-Punkt (r17).
 - **C5 Form (iii)** — offen; Zeugen aus der Transportgruppe von Lesart B ausgeschlossen (r10); bräuchte Dynamik.
-- **Autorentscheidungen offen:** Wege A–C der Konstantenumrechnung (Klassentrennung r18/r19 angeboten), Epoche von `thm:dark-energy`, Reservierung einer 4.10-Version-DOI, sobald 4.10 veröffentlicht werden soll.
+- **Autorentscheidungen offen:** Wege A–C der Konstantenumrechnung (Klassentrennung r18/r19 angeboten), Epoche von `thm:dark-energy`; die 4.10-Version-DOI ist seit 2026-11-06 veröffentlicht (`10.5281/zenodo.23991357`).
 - **Dynamik**: v4.9.0-r27 schlägt ein Modell vor (Drehung plus Kompensator-Messung, ändert s); r28: Messgerät kann der Tachyon sein (T-Kopplung), stabiler Zustand nur mit nachgefülltem Tachyon-Reservoir; r29: Quelle vorgeschlagen = Vakuumpaare; r30: Kohärenz folgt aus dem Kompensator; offen bleibt die Paarerzeugungsrate, die Einheit der Uhr, κ und ein Form-(iii)-Zeuge mit endlichem Nullpunkt (das Modell liefert keinen).
 
 Zum C5-Stand: Die Frage „gibt es einen endlichen Abschluss?" zerfällt in (a) *innerhalb* der multiplikativen Kollar-Rekursion — beweisbar nein, allein wegen `q > 0` — und (b) *außerhalb* davon. r88 schließt zwei der drei Kandidatenformen für (b); offen bleibt nur Form (iii): ein Zeuge außerhalb der Kollar-Iteration, der die Obstruktion selbst erreicht statt den Score.

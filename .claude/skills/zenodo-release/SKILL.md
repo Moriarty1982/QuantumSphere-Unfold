@@ -158,3 +158,15 @@ Vorgänger, nur Provenienz), `DOI_ROLES` in `qs.py` aktualisieren.
 | GitHub-Abschluss | erledigt 2026-10-22: Tag und GitHub-Release `v4.9.0` auf `a412bd7` (https://github.com/Moriarty1982/QuantumSphere-Unfold/releases/tag/v4.9.0), Release-Notiz mit DOI/Record, ohne angehängte Dateien; `DOI_ROLES` in `qs.py` auf v4.9.0 |
 | Danach | PR #23 (Runden v4.9.0-r01–r16, `parts/v490-post-release-layers.tex`, Notizordner `notes/research/v4_9_0_r01_r16/`) am 2026-10-22 gemergt (`67f965f`), Grundlage der nächsten Version |
 | Freigabe | Merges in diesem Repository laufen über die projektlokale Regel in `.claude/settings.local.json` (`gh pr ready`/`gh pr merge … --repo Moriarty1982/QuantumSphere-Unfold`); ohne sie blockiert der Auto-Modus-Filter einen Merge ohne Review. Befehle einzeln absetzen, nicht mit `cd … &&` verketten, sonst greift die Regel nicht |
+
+## Stand v4.10.0
+
+| Feld | Wert |
+|---|---|
+| Vorgänger | v4.9.0, Record `23534954` |
+| Version-DOI | `10.5281/zenodo.23991357`, reserviert und veröffentlicht am 2026-11-06 (Reservierung Lauf `42130862373`, Trockenlauf `42130551910`) |
+| Zweig, PR | `release/v4.10.0-prep`, PR #73 |
+| Payload | Einzeldatei aus 58 `\input`-Zeilen (einzige Änderung: Abbildungspfad `figures/op5-slices-9x9.pdf` → `op5-slices-9x9.pdf`), PDF aus dem TeX-Live-Container (Lauf `42131442171`, 1360 Seiten, Overfull 45, Text per `pdftotext` identisch mit dem modularen Build), Abbildung, Manifest |
+| Upload | Lauf `42132220658` (Trockenlauf `42132152400`), drei geerbte Dateien entfernt |
+| Veröffentlicht | Lauf `42132440141` (`publish=true`, `confirm_publish=true`, `replace_files=false`) auf Freigabe des Autors im Chat; der Lauf lädt die Dateien noch einmal hoch (überschreibt gleichnamige), im Record stehen genau vier Dateien mit den lokalen MD5 |
+| Danach | Tag und GitHub-Release `v4.10.0` auf dem Merge-Commit von PR #73 (Regel in AGENTS.md: bei jeder Zenodo-Veröffentlichung) |
