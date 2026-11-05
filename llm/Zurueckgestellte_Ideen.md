@@ -63,3 +63,4 @@ Ideen des Autors oder aus Sitzungen, die nicht jetzt verfolgt werden, aber wiede
   - Grenzen: m und λ frei; der Nullpunkt der Vakuumenergie (Konstante C) bleibt frei.
   - Test-Kandidat: Legen die Neutrino-Massenterme der Ablage (r44) die Masse des Tachyon-Partners fest?
 - **Stand:** zurückgestellt; abgeschätzt, nicht gerechnet.
+- **5.11., H76:** Die Stabilität des Vakuums der M–T-Paarung (Quanten-Zerfall über die Gravitation) verlangt einen Cutoff in einem ausgezeichneten Rahmen, Daten ≲ 14 MeV, Natürlichkeit nach Kaplan–Sundrum ≲ 2 meV. Die meV-Zahl passt größenordnungsmäßig zu dieser Abschätzung (nachträglich bemerkt, nicht geprüft). Dem Autor als möglicher nächster Schritt vorgelegt.
