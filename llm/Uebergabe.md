@@ -12,6 +12,8 @@
 
 - **H83 (Vorab 36ec8e7, nicht blind, k198) widerlegt:** Drei Regeln (R1 wie H82; R2 aus g ↦ −g berechnet; R3 Metrik c·g): keine trifft r19 (α 1, G 2). G wächst in allen mit γ¹. R2: Yang–Mills behält Vorzeichen (α unverändert), Weyl-Phase −i statt F3-Minus → Fermionwirkung komplex (Re a, Im −b), Verbindung zur komplexen Lesart K; Spannung zu H79. Autor-Lesart „gemessen wird immer beides“: in der reduzierten Theorie richtig (alle Konstanten Mischwerte), Vereinheitlichung folgt daraus nicht von selbst. `llm/Ergebnis_H83_Gravitation_zweite_Lesart.md`.
 
+- **Erkundung `llm/Erkundung_Spinorphase_zweite_Lesart.md` (22:10):** Unter R2 ist Im S = −b·S_Weyl. Reelle Lesart: T-Bild der Fermionen unsichtbar; komplexe Lesart K: Energie-Impuls und Spindichte der Fermionen müssen verschwinden (k170 in neuer Form). Quantenmechanisch teilweise Wick-Drehung um arctan(b/a) (16,8° Materie, 45° Photon). g ↦ −g ist für Spinoren nicht eindeutig (Cl(1,3) ≇ Cl(3,1)). F3 gibt für Gewicht ½ die Phase ∓i. **Offene Autorentscheidung: F3-Gewicht der Weyl-Kinetik 1 (H79) oder ½ (R2)?** Vorschlag 1.
+
 ## Davor (21:15)
 - **PR #68 gemergt als e253208** (5.11., 21:01; `research/v4.10-r83-vakuumzerfall`), Runde **v4.9.0-r83**: H76 (Vakuumzerfall), H77 (Tachyonbild einer Wirkung nach Lesart B), Geist-Kondensation (Erkundung), Korrektur zu r82.1(b), (c). Wiki im PR (r82-Aussagen als zurückgezogen markiert). ours-Merge der lokalen Historie bis 5a23a7b (enthält Vorab-Commits 2b47e7f, d087d67). CI-Lauf 42099084932.
 - **Lokal eingebaut (5a23a7b):** 1325 Seiten, 3967 Labels, Overfull 45, harte Werte 0, Guard-Linter 0. AGENTS-Zeile r83, Kernkarte K133 (v14.9). **Nächste Bundle-Basis: 5a23a7b.**
