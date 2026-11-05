@@ -75,6 +75,10 @@ Zu H46: Eine Bestätigung würde die Kette r55–r60 prüfen, nicht die Lesart a
 | H75 | Gravitation als einzige Kopplung: bei Photon-Gewichten keine exponentielle Instabilität (a), Jeans-Rate bei Materie-Gewichten (b), Bondi-Durchgehen (c) (nicht blind) | b, c bestätigt; a ohne exponentielles Wachstum, aber der Gleichtakt wächst wie t², die Schranke „höchstens linear“ war im Grad falsch (r82) |
 | H76 | Vakuumzerfall 0 → φφχχ über das Graviton: Lorentz-invariant unbeschränkt (a); mit Rahmen-Cutoff Γ/V = c·Λ⁸/M_P⁴ (b); Schranke weit unter der Higgs-Skala (c) (nicht blind) | a, b, c bestätigt: Verhältnisse gegen 4 (Γ ∝ L²); c = 2,25·10⁻⁵, Exponent 8,000; Λ ≲ 14 MeV (grob); Lauf 2 nicht konvergiert, Lauf 3 halbanalytisch (r83) |
 | H77 | Nur die Lesart „Kinematik fortgesetzt“ (B) des Tachyonbilds einer Wirkung ist mit r07, r20, H71, r81 und F3 verträglich (nicht blind) | bestätigt: A gibt normale Dispersion (Geist), B′ verletzt r81 und F3; Folge: r82.1(b), (c) zurückgezogen (r83) |
+| H78 | T als zweite Lesart in der Form von k174 (Spinor gedreht, Argument verschoben): Skalar stabil (a), Weyl anisotrop mit Faktor (a+b)/(a−b) quer zu n (b), keine eigenen T-Quanten (c) (nicht blind) | a, b, c bestätigt; Faktor γ = 1,86 für Fermionen → durch Laborgrenzen ausgeschlossen; δ-Probe Lauf 1 mit nicht periodischem Testfeld offengelegt (r84) |
+| H79 | Vollständiger komplexer Boost: holomorphe Adjungierte gibt (a−b)S_M isotrop mit entgegengesetzter Energie (a), hermitesche (a+b)S_M (b), Skalar unverändert (c) (nicht blind) | a, b, c bestätigt; Autor legt holomorph fest (r84) |
+| H80 | Spiegelung um den Urknall (δ = 0): Modengleichung exakt die des Materie-Skalars mit m² ↦ γm² (nicht blind) | bestätigt, für Strahlung, Materie und beide Fortsetzungen (r84) |
+| H81 | Versatz δ ≠ 0: Kinetik verschwindet bei τ* = β_sym δ/(1+β_sym) (a), regulär singulärer Punkt mit Modenauswahl (b), tachyonisches Wachstum davor über Faktor 10 (c) (nicht blind) | a, b bestätigt; c quantitativ widerlegt (Faktor 1,57 bei mδ = 3); Wahl k = m = 1 in b offengelegt (r84) |
 
 ## Erkundungen ohne Vorab-Notiz
 

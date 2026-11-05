@@ -1,6 +1,6 @@
 # Offene Probleme und wo die Arbeit festsitzt
 
-**Stand: 5. November 2026, nach v4.9.0-r83.** Diese Seite beschreibt, was offen ist, warum, und was der nächste sinnvolle Schritt wäre. [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie) · [GitHub Issues](https://github.com/Moriarty1982/QuantumSphere-Unfold/issues)
+**Stand: 5. November 2026, nach v4.9.0-r84.** Diese Seite beschreibt, was offen ist, warum, und was der nächste sinnvolle Schritt wäre. [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie) · [GitHub Issues](https://github.com/Moriarty1982/QuantumSphere-Unfold/issues)
 
 ## Der gemeinsame Kern: Es fehlt eine Dynamik
 
@@ -36,7 +36,7 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
-Lokal ist OP5 über eine Detektorschwelle geschlossen ($\mathrm{OP5}_{\mathrm{eff}}$). Exakt ist es offen. Der Stand nach r69 bis r83:
+Lokal ist OP5 über eine Detektorschwelle geschlossen ($\mathrm{OP5}_{\mathrm{eff}}$). Exakt ist es offen. Der Stand nach r69 bis r84:
 - **Frame-Wechsel:** Ein passiver Frame-Wechsel beseitigt keinen Bilanzfehler.
 - **Neutralität:** „Neutral“ hat drei verschiedene Bedeutungen, und keine davon legt den Vakuumterm fest.
 - **Lichtkegel:** Der Kegel kommt aus der Clifford-Struktur. Kegeldaten legen weder eine absolute Skala noch das Gewicht eines Vakuumterms fest.
@@ -58,6 +58,7 @@ Lokal ist OP5 über eine Detektorschwelle geschlossen ($\mathrm{OP5}_{\mathrm{ef
 
 - **Eichunabhängigkeit (r79):** Die vier Bedingungen sind in fünf Eichungen gleich, auch in der kovarianten Ψ̄Ψ (H67).
 
+- **T-Anteil als zweite Lesart (r84):** Als dasselbe Feld in zweiter Lesart, mit vollständigem komplexem Boost und holomorpher Adjungierter, ist der Tachyon-Anteil isotrop und stabil, ohne Zerfall (H79). Im flachen Raum normiert er nur die Kinetik um; Λ wird nicht aufgehoben. Offen: ob der Versatz δ ≠ 0 mit seiner Epoche τ* physikalisch gewollt ist, ob die Modenauswahl beobachtbare Folgen hat, und die Skala.
 - **Vakuumzerfall und Lesart des Tachyonbilds (r83):** Ohne ausgezeichneten Rahmen zerfällt das Vakuum über die Gravitation unbeschränkt (H76); die Daten verlangen eine Grenze ≲ 14 MeV in einem solchen Rahmen. Das Tachyonbild einer Wirkung ist mit fortgesetzter Kinematik zu bilden (H77); damit ist die Aufhebung der Higgs-Vakuumenergie aus r82 zurückgezogen. Eine Geist-Kondensation könnte Rahmen und Stabilität liefern. Offen: ob die Struktur den Term cX² und eine Skala festlegt, und das Λ-Problem von 10⁵⁵.
 - **Higgs-Sektor und Stabilität (r82):** Mit dem Tachyonbild schien sich die Higgs-Vakuumenergie bei Photon-Gewichten exakt aufzuheben (in r83 zurückgezogen). Bei direkter Kopplung der Sektoren ist das instabil (H74); bei reiner Gravitation gibt es keine exponentielle Instabilität, aber gemeinsames Durchgehen (H75). Der Torsions-Paarkanal kondensiert nur an der Planck-Skala. Offen damals: der Quanten-Zerfall (in r83 behandelt), die Skala, ein zusammengesetztes Higgs.
 - **Gemeinsame Wirkung (r81):** W1 erzeugt allein keinen Vakuumterm. Ein Λ-artiger Term entsteht aus tachyonischen Moden beider Normvorzeichen, die Struktur legt seine Größe aber nicht fest. Offen: Higgs-Sektor in W1, die Skala (Masse des Tachyon-Partners, Stringspannung), Rückwirkung auf die Expansion.
