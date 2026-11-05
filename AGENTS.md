@@ -17,6 +17,7 @@ verweist). Wer etwas an den Regeln ändert, ändert es **hier**.
   festgeschrieben und committet. Erkundungen ohne Vorab-Notiz heißen „Erkundung“, nie „Test“.
 - **Übergabe zwischen Sitzungen:** `llm/Uebergabe.md` ist der Einstiegspunkt. Am Anfang jeder Sitzung nach dieser Datei lesen; am Ende jedes Arbeitsblocks überschreiben mit Stand, offenen Branches und PRs, zuletzt vergebener H-Nummer und dem nächsten Schritt. Das gilt für alle Modelle.
 - **Zurückgestellte Ideen:** `llm/Zurueckgestellte_Ideen.md` führt Ideen mit Auslösern. Beim Sitzungsstart und immer, wenn ein Ansatz scheitert, die Auslöser prüfen; trifft einer zu, die Idee dem Autor als möglichen Ausweg vorschlagen.
+- **Nicht blind = offen sagen:** Steht das Ergebnis vor der Rechnung analytisch fest, wird es als Erkundung oder ausdrücklich „nicht blind“ geführt, nicht als blinder Test. Nachträglich Gefundenes wird als nachträglich markiert.
 - **Vorwissen-Pflicht:** Vor jeder neuen Hypothese das Repo nach Vorbefunden durchsuchen (Ergebnis-, Erkundungs- und
   Vorab-Notizen, Skript-Docstrings, `analysis/`, `notes/research/predictions/`). Die Fundstellen kommen in den Abschnitt
   „Vorwissen geprüft“ der Vorab-Notiz. Für OP5 gilt der Abschnitt „Bereits beantwortet“ in

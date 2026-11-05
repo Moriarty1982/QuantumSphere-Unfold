@@ -4,7 +4,7 @@ Werkzeugunabhängig. Das Modell ist das feste Vergleichsmodell der Sondenfelder 
 
 ## Regeln zuerst
 - Jeder Test mit Entscheidungskriterium wird vorher als `llm/Vorab_Notiz_HNN_*.md` festgeschrieben und committet; der
-  Zeitstempel zählt. Zuletzt vergeben ist H70 (H69, H70 betreffen die Wirkung W1, nicht das Vergleichsmodell).
+  Zeitstempel zählt. Zuletzt vergeben ist H73 (H69–H73 betreffen die Wirkung W1, nicht das Vergleichsmodell; siehe Runde r81 und `notes/research/v4_10_0_w1/`).
 - Erkundungen ohne Vorab-Notiz werden offen als „Erkundung“ geführt.
 - **Vorwissen-Pflicht:** Vor jeder neuen Hypothese und vor jedem Vorschlag an den Autor:
   - den Abschnitt „Bereits beantwortet“ unten lesen;
@@ -87,6 +87,7 @@ Auf GitHub unter `notes/research/v4_10_0_r71/llm/`, lokal unter `llm/`.
 - **H67 (bestätigt):** Die vier Bedingungen sind eichunabhängig: K₂, K₀, K₃, Q₃ und Ψ̄Ψ ergeben alle F₆ = 477 und 6 Polarisationen (`ci/hp_eich/`, Workflow hp-eichung).
 - **Fierz-Erkundung (k168):** Alle drei Blöcke regulär (β ≈ 0), Strömung v = ±x/t, Spins entlang φ̂ = e_y.
 - **H68 (widerlegt, k169):** Der Hintergrund erfüllt weder Yang–Mills auf span(λ₂, λ₄, λ₆) noch Klein–Gordon (masselos oder massiv) mit den Spinorblöcken als Quelle, in Koframe- und flacher Metrik (r ≥ 0,83). Die Quellen in 𝔨 und s = Ψ̄(Y⊗1)Ψ sind am Keim rund 1e3-mal zu klein; die Ströme liegen fast ganz in den diagonalen Generatoren λ₀, λ₃, λ₈ und in λ₁, λ₅, λ₇. Nicht als Anpassung wiederholen.
+- **Vergleichsmodell-Zweig geschlossen (r80, Autorentscheidung):** keine weiteren Feinheiten (Lorentz-Wirkung auf die 6 Moden, zweiter Grundpunkt) ohne eigene Dynamik. Die Arbeit geht mit der gemeinsamen Wirkung W1 weiter (r81, `notes/research/v4_10_0_w1/`, Tests H69–H73).
 - **Offen:**
   - die Herkunft des Hintergrunds A, h (nicht aus Yang–Mills/Klein–Gordon mit diesen Quellen, H68);
   - die Lorentz-Wirkung auf die 6 Moden.
