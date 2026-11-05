@@ -14,3 +14,15 @@ Ideen des Autors oder aus Sitzungen, die nicht jetzt verfolgt werden, aber wiede
   3. Eine Rechnung berührt β_sym als Verhältnis γ_BI/γ_string oder die String-LQG-Lesart (T11).
   4. Informationsaustausch zwischen getrennten Sektoren braucht einen Träger: Verschränkung (T12), Hawking (T11), Tachyon-Reservoir (r28–r30).
 - **Stand:** zurückgestellt; zuerst der Ein-System-Baustein.
+
+## I2: „mod HC“ als chinesischer Restsatz über Primzahl-Plätze
+- **Herkunft:** Autor, 5. November 2026: Er wollte Indizes auf Primzahlen abbilden, um sie mit dem chinesischen Restsatz zu bestimmen, und vermutet, dass daher das „mod HC“ in der Meta-Septum-Bedingung Tr(M₁₆ P_C7) ≡ 0 (mod HC) kommt. Frühere Chats: 2.11. (Ableitungstupel als 2ᵃ·3ᵇ·5ᶜ·7ᵈ), 4.11. (Primzahlen und Restsatz, „was bricht aus“).
+- **Schriftliche Spur:** keine zum Restsatz (Monolith, Hauptpapier, Riemann-Arbeit, `analysis/`, `llm/`, Download-Ordner geprüft). Verwandt: Monolith Z. 6916 (`Mass spectrum beyond Koide`): sieben imaginäre Oktonion-Einheiten als sieben Plätze, m_p ∼ p (dort für Massen verworfen).
+- **Lesart (Vorschlag, nicht aus den Quellen):** Plätze e₁ … e₇ ↦ Primzahlen 2, 3, 5, 7, 11, 13, 17 (Vorgabe, solange der Autor keine andere Siebenerstruktur nennt). N_HC = Produkt der Primzahlen der vom Kompensator erfassten Plätze. Nach dem Restsatz zerfällt Tr(M₁₆P) ≡ 0 (mod N_HC) in je eine Bedingung je Primzahl, also je Platz; eine verletzte Primzahl zeigt den ausbrechenden Platz. Verträglich mit dem operativen Kriterium [M₁₆, P] = 0 (eine Bedingung je Block).
+- **Voraussetzungen:** M₁₆ ganzzahlig oder rational; festgelegt, welche Plätze der Kompensator erfasst.
+- **Hinweis für die Prüfung:** In der Dixon-Ablage ist e₇ ausgezeichnet (Farbe = Stab(e₇), C_ch aus L_{e₇}); die sieben Plätze zerfallen dort in 1 + 6.
+- **Auslöser:**
+  1. P_C7 wird gebraucht, spätestens beim Skalar- bzw. Higgs-Sektor von W1;
+  2. M₁₆ bekommt konkrete, ganzzahlige oder rationale Einträge;
+  3. eine Schließungsbedingung scheitert und es ist unklar, welcher Platz ausbricht.
+- **Stand:** zurückgestellt; der Autor will es versuchen („mal sehen, ob es funktioniert“).

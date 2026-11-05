@@ -59,6 +59,7 @@
 - **Korrektur zu Entscheidung 5 (Umsetzung, 4.11.):** C_ch ist nach r42 keine Beschränkung des Feldraums, sondern der Projektor in den Kopplungen (Bild = Dubletts, Kern = Singuletts, schwache SU(2) nur auf dem Bild). Ψ bleibt der ganze Raum C⊗ℍ⊗𝕆 mit 16 Weyl-Zuständen. Das U(1) aus J ist dort anomaliefrei (k171).
 - **Zweite Korrektur zu Entscheidung 5 (5.11., Quellenprüfung `Notiz_mod_HC_und_P_C7.md`):** Im Companion sind HC und P_C7 verschiedene Projektoren (`native-operator-link.tex`). C_ch ist der **HC** (Chiralität), nicht P_C7. P_C7 ist wieder offen; der Companion verlangt [M₁₆, P_C7] = 0 und (1 − P_C7)Ψ = 0, „mod HC“ ist nirgends als Rechenregel definiert. Entscheidung beim Autor.
 - **5.11., Autor:** Die M–T-Lücke aus k170 (j = 0 ohne Ψ = 0 durch Komponenten negativer Dichte, Tachyon-Frame) soll verfolgt werden.
+- **5.11., Autor zu P_C7:** vorerst offen (in W1 nicht gebraucht). Lesart „mod HC = chinesischer Restsatz über Primzahl-Plätze“ als I2 in `Zurueckgestellte_Ideen.md`; Prüfung, sobald P_C7 gebraucht wird.
 
 ## Nächster Schritt (Vorschlag)
 Nach diesen Entscheidungen die kleinste Wirkung aufschreiben, die (W1)–(W8) erfüllt, und zuerst nur ihre Euler–Lagrange-Gleichungen und Identitäten (Bianchi, Ward) symbolisch prüfen, noch ohne Lösung. Ein Test mit Kriterium erst danach, mit Vorab-Notiz.
