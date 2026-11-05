@@ -78587,4 +78587,131 @@ R_{\rm glob}^{(v490\text{-}r81,+)}=(0,1,1,1,1),
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
 
+% ============================================================================
+\clearpage
+\section*{v4.9.0-r82 Source-Only: The Higgs Sector of W2, the Stability of the Matter--Tachyon Cancellation, and a Torsion Pairing Channel}
+\addcontentsline{toc}{section}{v4.9.0-r82 Source-Only: The Higgs Sector of W2, the Stability of the Matter--Tachyon Cancellation, and a Torsion Pairing Channel}
+\label{sec:v490-r82-higgs-stability}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.9.0-r81 set up the joint action W1 and found that a vacuum term needs tachyonic modes and that its size is not fixed
+(\S\ref{sec:v490-r81-joint-action-w1}).  On 5 November 2026 the author asked to continue with the Higgs sector.  This layer adds it
+(action W2), records the bookkeeping of the vacuum energy in the matter--tachyon pairing, two pre-registered stability tests (H74,
+H75, both not blind), and an exploration of the pairing channel of the torsion interaction of W1.  The notes are
+\texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r82/}.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.9.0-r82 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.9.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.9.0-r82 results}
+\label{subsec:v490-r82-results}
+
+\paragraph{Theoremlet v4.9.0-r82.1 (W2 and its vacuum energy).}
+Exploration, analytic.  W2 is W1 plus a Higgs doublet with \(V=-\mu^2|\Phi|^2+\lambda|\Phi|^4\) and Yukawa couplings through the
+connectors of r44.1(b); the sign of \(-\mu^2\) is read as the tachyonic transition connector of r81.9(c), not derived.
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Alone, W2 has the vacuum energy \(V_{\min}=-\mu^4/(4\lambda)\), about \((100\,\mathrm{GeV})^4\), the known excess of about \(10^{55}\).
+\item[(b)] With the tachyon image of every field and the sign F3, the whole energy--momentum tensor of the image changes sign,
+including its vacuum energy.  With weights \(a\) (M) and \(b\) (T) the vacuum energy is \((a-b)V_{\min}\): exactly zero at photon
+weights for every \(\mu,\lambda\); \(V_{\min}/\gamma\) at matter weights.  This is the structure of the energy parity of Kaplan and
+Sundrum (2005) and the reading ``\(\Lambda=0\) in the photon frame'' of Theorem~\ref{thm:dark-energy}'s status note.
+\item[(c)] A time offset between the condensates of M and T leaves the cancellation of a formed condensate exact; a residual
+arises only transiently during the transitions.
+\end{enumerate}
+
+\paragraph{Theoremlet v4.9.0-r82.2 (H74: direct coupling destroys the exact cancellation).}
+Pre-registered (commit \texttt{b24bb08}, not blind).  A normal oscillator coupled linearly (\(\varepsilon\phi\chi\)) to one with the sign
+F3 has \(\Omega^2=\tfrac12(\omega_1^2+\omega_2^2)\pm\sqrt{(\omega_1^2-\omega_2^2)^2/4-\varepsilon^2}\).
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Equal spectra, as required for exact cancellation, grow for every \(\varepsilon>0\) with rate \(\varepsilon/(2\omega)\) (measured
+\(5.011\times10^{-4}\), \(4.985\times10^{-3}\), \(0.0498\) against \(5\times10^{-4}\), \(5\times10^{-3}\), \(0.05\)).
+\item[(b)] Detuned spectra are bounded for \(\varepsilon<|\omega_1^2-\omega_2^2|/2\) and grow above (rate \(0.01594\) against \(0.01618\)).
+\item[(c)] Two normal oscillators stay bounded (control).
+\end{enumerate}
+Run 1 with the pre-registered time \(T=400\) left three small-coupling cases undecided (planning error: growth by \(10^3\) needs
+\(T\sim14/\varepsilon\)); run 2 with adapted time confirms them.  \emph{Reading.}  Exact cancellation and stability exclude each other
+under direct coupling; stability needs detuning, which leaves a residual \(\gtrsim2\varepsilon|V_{\min}|/\omega^2\).
+
+\paragraph{Theoremlet v4.9.0-r82.3 (H75: gravity as the only coupling).}
+Pre-registered (commit \texttt{6aa8477}, not blind).  Newtonian two-fluid perturbations, matter with density \(\rho_A\) and the tachyon
+sector with negative inertial and gravitational mass \(-\rho_B\); both fall alike, \(\ddot x=4\pi G N x\),
+\(N=\bigl(\begin{smallmatrix}\rho_A&-\rho_B\\\rho_A&-\rho_B\end{smallmatrix}\bigr)\).
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] At photon weights \(N^2=0\): no exponential growth; the difference of the sectors stays constant and the common mode grows
+as \(t^2\) (exactly \(\delta_0(1+t^2)\)).  The pre-registered bound ``at most linear'' was wrong for the common mode.
+\item[(b)] At matter weights one Jeans mode with rate \(\sqrt{4\pi G\rho_A(1-\bsym^2)}\) (exact); two normal fluids give
+\(\sqrt{4\pi G\rho_A(1+\bsym^2)}\).
+\item[(c)] A pair \(\pm m\) accelerates jointly at constant distance and constant acceleration with conserved energy and momentum
+(Bondi's runaway), confirmed exactly.
+\end{enumerate}
+\emph{Reading.}  Gravity as the only coupling has no resonance; the price is a joint runaway.  The quantum decay of the vacuum into
+pairs of positive and negative energy is not covered.
+
+\paragraph{Theoremlet v4.9.0-r82.4 (a pairing channel of the torsion interaction).}
+Exploration.  The Fierz identity \(\bar\sigma^\mu_{ab}\bar\sigma_{\mu\,cd}=2\varepsilon_{ac}\varepsilon_{bd}\) gives
+\(j_1\cdot j_2=2|\Phi|^2\) with the Lorentz-scalar pair \(\Phi=\psi_2^{\mathsf T}\varepsilon\psi_1\).  For anticommuting fields the
+torsion interaction \(-\tfrac3{16}\kappa\,j\cdot j\) of r81.1(b) is attractive in this channel.  Its strength \(\tfrac34\kappa=6\pi/M_P^2\)
+reaches the critical value of a condensate only for a cutoff \(\gtrsim1.5\,M_P\).  The only gauge-invariant channel is \(\nu^c\nu^c\)
+(r44.1(d)); a condensate there would give a Majorana mass near \(M_P\) and, through the seesaw, \(m_\nu\sim10^{-6}\,\mathrm{eV}\).  The
+electroweak Higgs is not obtained this way.
+
+\paragraph{Proof and measurement sources.}
+Scripts \texttt{k188}, \texttt{k188b}, \texttt{k189}, \texttt{k190} and the notes in \texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r82/};
+pre-registrations and results H74, H75 in \texttt{notes/\allowbreak research/\allowbreak predictions/}.  \(\square\)
+
+\paragraph{Consequence.}
+The structure supplies mechanisms (exact cancellation of the vacuum energy at photon weights, stability only for weak, gravitational
+coupling, an attractive pairing channel), but no scale: the only scale W1 and W2 bring with them is the Planck scale.  OP5 is not
+closed.
+
+\subsection*{v4.9.0-r82 status in the three frames}
+\label{subsec:v490-r82-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item W2 is written in frame M; the tachyon sector enters through the declared continuation and the sign F3, the photon frame as the
+equal-weight mixture.  Vacuum energies of M and T are compared only after this map.
+\item r82.3 treats the tachyon sector as negative inertial and gravitational mass in frame M's Newtonian limit; this is the F3 reading,
+not a frame-free statement.
+\end{itemize}
+
+\subsection*{v4.9.0-r82 register entries}
+\label{subsec:v490-r82-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.9.0-r82\\
+\midrule
+Higgs vacuum energy in the M--T pairing & cancels exactly at photon weights; \(V_{\min}/\gamma\) at matter weights\\
+exact cancellation under direct coupling & unstable (H74)\\
+exact cancellation, gravity only & no exponential instability, joint runaway (H75)\\
+torsion pairing channel & attractive, Planck scale; \(\nu^c\) Majorana channel only gauge-invariant one\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.9.0-r82 ledger and guard update}
+\label{subsec:v490-r82-ledger-guard}
+
+\[
+R_{\rm chk}^{v490\text{-}r82}=(1,0,0)
+\]
+for (stability of the cancellation decided in the classical linear and Newtonian cases; scale not fixed; OP5 not closed).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v490\text{-}r82,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v490\text{-}r82}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
 \end{document}

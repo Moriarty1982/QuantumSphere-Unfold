@@ -2617,6 +2617,15 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **Korrekturen:** r44 Lesart 1 (Zeitumkehr), r51-Liste um r44 erweitert; k182-Aussage; W1-Entwurf (ganzer Raum, C_ch = HC ≠ P_C7).
 - R_chk = (1,0,0); Guards unverändert. Lokal 1319 Seiten, 3956 Labels, Overfull 45, harte Werte 0. PR #66 gemergt als b3cf9f7.
 
+### K132 Runde v4.9.0-r82: Higgs-Sektor W2, Stabilität der M–T-Aufhebung, Torsions-Paarkanal (2026-11-05)
+
+`sec:v490-r82-higgs-stability`, Snippet `llm/v490_r82_round.tex`, Notizen `notes/research/v4_10_0_r82/`.
+- **r82.1 W2:** W1 + Higgs-Dublett, Vorzeichen −μ² als tachyonischer Übergangskonnektor gelesen (nicht hergeleitet); allein V_min = −μ⁴/4λ (Überschuss ~10⁵⁵); mit Tachyonbild und F3 Vakuumenergie (a−b)V_min: exakt 0 bei Photon-Gewichten, V_min/γ bei Materie-Gewichten (Kaplan–Sundrum); Versatz gibt nur vorübergehenden Rest.
+- **r82.2 H74 (nicht blind):** direkte Kopplung εφχ macht gleiche Spektren für jedes ε > 0 instabil (Rate ε/2ω); verstimmt stabil bis ε < |ω₁²−ω₂²|/2; Lauf 2 mit angepasster Zeit (Planungsfehler offengelegt).
+- **r82.3 H75 (nicht blind):** nur Gravitation: N² = 0, keine exponentielle Instabilität, Gleichtakt wächst t² (Vorab-Schranke „höchstens linear“ falsch); Materie-Gewichte Jeans-Rate √(4πGρ(1−β²)); Bondi-Durchgehen bestätigt. Quanten-Vakuumzerfall nicht abgedeckt.
+- **r82.4 Torsions-Paarkanal:** Fierz j₁·j₂ = 2|Φ|², anziehend; kritisch erst bei Cutoff ≳ 1,5 M_P; einziger eichinvarianter Kanal ν^cν^c → Majorana ~M_P, See-saw m_ν ~ 10⁻⁶ eV; elektroschwaches Higgs so nicht.
+- R_chk = (1,0,0); Guards unverändert. Mechanismen ja, Skala nein (nur Planck). OP5 offen. Lokal 1322 Seiten, 3961 Labels, Overfull 45, harte Werte 0.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2810,3 +2819,4 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - v14.5 (2026-11-04): K129 Runde v4.9.0-r79 (H67).
 - v14.6 (2026-11-04): K130 Runde v4.9.0-r80 (Erkundung Fierz, H68, Abschluss Vergleichsmodell).
 - v14.7 (2026-11-05): K131 Runde v4.9.0-r81 (W1, H69–H73, Konnektoren).
+- v14.8 (2026-11-05): K132 Runde v4.9.0-r82 (W2, H74, H75, Torsions-Paarkanal).
