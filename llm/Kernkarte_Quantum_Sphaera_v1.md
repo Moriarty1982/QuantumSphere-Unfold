@@ -2615,7 +2615,7 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **r81.7–8 H71–H73:** Tachyonbild mit Masse tachyonisch; Λ-artiger Term aus Tachyonmoden beider Normen möglich, Höhe frei; H73 (w = −β²/3) widerlegt; gemeinsame Rapidität: M Staub, T Spannung; keine begründete Gewichtung trifft Ω_Λ.
 - **r81.9 Konnektoren:** Majorana-ν^c nie tachyonisch; Higgs als Tachyonfeld (r06, r44); p_M ⟂ p_T; Übergang gegenläufig tachyonisch (−2m² sinh 2η); Mischungen η-frei {0, 4, 8, 16}m².
 - **Korrekturen:** r44 Lesart 1 (Zeitumkehr), r51-Liste um r44 erweitert; k182-Aussage; W1-Entwurf (ganzer Raum, C_ch = HC ≠ P_C7).
-- R_chk = (1,0,0); Guards unverändert. Lokal 1319 Seiten, 3956 Labels, Overfull 45, harte Werte 0.
+- R_chk = (1,0,0); Guards unverändert. Lokal 1319 Seiten, 3956 Labels, Overfull 45, harte Werte 0. PR #66 gemergt als b3cf9f7.
 
 ## 8. Änderungsprotokoll
 
