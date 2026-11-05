@@ -1,0 +1,120 @@
+\section{Duality sectors and the compensator}\label{sec:frames}
+
+\subsection{Three sectors and two orbits}
+
+\begin{definition}[Sectors]\label{def:sectors}
+A kernel with real \(s(z)>0\) is called \emph{positive}, with real \(s(z)<0\) \emph{negative}, and with \(s(z)=0\) \emph{null}.
+\end{definition}
+
+In the electromagnetic reading \eqref{eq:invariants}, positive kernels are electric-dominated fields with \(E\cdot B=0\), negative kernels
+magnetic-dominated ones, and null kernels null fields.  The duality rotation \(z\mapsto e^{i\alpha}z\) multiplies \(s\) by \(e^{2i\alpha}\).  In
+particular the quarter turn
+\begin{equation}\label{eq:quarterturn}
+z\mapsto iz,\qquad s\mapsto-s,
+\end{equation}
+exchanges the positive and the negative sector and fixes the null cone.
+
+\begin{proposition}[Duality angle]\label{prop:duality}
+Every \(z\) with \(s(z)\neq0\) can be written as \(z=e^{i\alpha}z_+\) with \(s(z_+)=|s(z)|>0\); \(\alpha=\tfrac12\arg s(z)\) is unique modulo \(\pi\) and
+\(z_+\) unique up to sign.  Under \(SO(3,\mathbb C)\times U(1)_{\rm dual}\), acting by \(z\mapsto e^{i\alpha}Rz\), the orbits in \(\mathbb C^3\) are
+the shells \(\{|s|=r\}\), \(r>0\), the punctured null cone, and \(\{0\}\).
+\end{proposition}
+
+\begin{proof}
+\(s(e^{i\alpha}z_+)=e^{2i\alpha}s(z_+)\) is real positive exactly when \(2\alpha\equiv\arg s\pmod{2\pi}\).  The orbit statement follows from
+Proposition~\ref{prop:orbits}, since the duality circle runs through all values of \(s\) of fixed modulus and fixes \(s=0\).
+\end{proof}
+
+Under the full group there are therefore only two non-trivial orbits, \(s\neq0\) and \(s=0\).  The positive and the negative sector are one
+orbit, distinguished only once a duality frame is fixed, and a non-real \(s\) is a positive configuration in a rotated duality frame rather
+than a further sector.  The null cone is the only non-trivial orbit fixed by the whole duality circle.  Whether the duality angle is
+physical or a gauge freedom is not decided at this level; with charged matter, only the frame without magnetic charges is realized in
+nature.
+
+\subsection{The involution and the compensator}
+
+\begin{definition}[Involution and compensator]\label{def:compensator}
+Let \(T\) denote complex conjugation of the components, \(Tz=\bar z\), and let
+\begin{equation}\label{eq:JB}
+J_B:=R_{\pi/2}\circ T,\qquad J_Bz=i\bar z,
+\end{equation}
+the composition with the duality quarter turn.  \(J_B\) is antilinear and \(J_B^2=1\).  The \emph{compensator} and its partner are
+\(C:=\tfrac12(1+J_B)\) and \(A:=\tfrac12(1-J_B)\).
+\end{definition}
+
+On fields, \(T\) is \(E+iB\mapsto E-iB\), the action of time reversal, and \(J_B(E+iB)=B+iE\) exchanges the electric and the magnetic field
+without a sign.  \(J_B\) maps the positive to the negative sector, \(s(J_Bz)=-\overline{s(z)}\).
+
+\begin{proposition}[Two ports]\label{prop:ports}
+\(C\) and \(A\) are real-linear projections with \(C+A=1\) and \(CA=AC=0\); they are orthogonal with respect to the real inner product
+\(\operatorname{Re}\langle\cdot,\cdot\rangle\), so \(|Cf|^2+|Af|^2=|f|^2\).  Their images are the self-dual and the anti-self-dual configurations,
+\[
+Cf=\tfrac12(E+B)(1+i),\qquad Af=\tfrac12(E-B)(1-i),
+\]
+and \(A(f)=-i\,C(if)\).
+\end{proposition}
+
+\begin{proof}
+The identities follow from \(J_B^2=1\).  Since \(|J_Bf|=|f|\),
+\(\operatorname{Re}\langle Cf,Af\rangle=\tfrac14\operatorname{Re}\bigl(\langle J_Bf,f\rangle-\langle f,J_Bf\rangle\bigr)=0\).  The images follow from
+\(f\pm J_Bf=(E\pm B)\pm i(\pm E+B)\), and \(C(if)=\tfrac12(if-iJ_Bf)=iA(f)\).
+\end{proof}
+
+The two ports are therefore real and imaginary parts of one field, not independent sectors.  For the Coulomb field of a charge \(q\),
+\(J_Bf\) is the field of a magnetic charge \(q\), and \(Cf\), \(Af\) are the fields of dyons with electric charge \(q/2\) and magnetic charge
+\(\pm q/2\).  Since \(J_B\) contains \(T\), it maps solutions of Maxwell's equations to solutions of the time-reversed equations; \(Cf\) is in
+general not a solution.
+
+\subsection{The doublet and the state disk}
+
+Since \(J_B\) is antilinear, \(C\) has no complex matrix.  It becomes an ordinary matrix on the real doublet \(F=[\,E\mid B\,]\in\mathbb R^{3\times2}\).
+
+\begin{proposition}[Doublet form]\label{prop:doublet}
+Acting on \(F\) from the right, \(J_B\) is \(\sigma_x\), \(T\) is \(\sigma_z\), and the duality rotation by \(\alpha\) is \(R_\alpha^{\mathsf T}\); they generate
+\(O(2)\), and spatial rotations act from the left and commute with all of them.  The compensator is the orthogonal projection
+\(C_{\rm HC}=\tfrac12(1+\sigma_x)\).  The Gram matrix \(G=F^{\mathsf T}F\) decomposes as
+\begin{equation}\label{eq:gram}
+G=u\,\mathbf 1+\tfrac12\bigl(\operatorname{Re}s\;\sigma_z+\operatorname{Im}s\;\sigma_x\bigr),\qquad u=\tfrac12(E^2+B^2),\qquad
+\det G=|E\times B|^2 .
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+\(i(E-iB)=B+iE\) exchanges the columns, \(E-iB\) changes the sign of the second, and \(e^{i\alpha}(E+iB)\) rotates them.  The entries of \(G\) are
+\(E^2\), \(B^2\) and \(E\cdot B\).
+\end{proof}
+
+With \(\rho=G/\operatorname{tr}G=\tfrac12(\mathbf 1+b_1\sigma_z+b_2\sigma_x)\) and \(b=(\operatorname{Re}s,\operatorname{Im}s)/(2u)\), this is the Stokes
+formalism for the doublet \((E,B)\) in place of two polarization components.
+
+\begin{proposition}[State disk]\label{prop:disk}
+\(|b|\le1\), with \(|b|=1\) exactly when \(E\parallel B\) and \(b=0\) exactly for a null field.  Positive fields have \(b_1>0\), negative fields
+\(b_1<0\), null fields lie at the centre.  A duality rotation by \(\alpha\) rotates \(b\) by \(2\alpha\); \(J_B\) reflects \(b_1\) and \(T\) reflects \(b_2\).
+Under a boost \(b\) keeps its direction and only its length \(|s|/(2u)\) changes; for \(s\neq0\) it reaches \(|b|=1\) in a frame with \(E\parallel B\),
+and it tends to \(0\) for large boosts.
+\end{proposition}
+
+\begin{proof}
+\(u^2-\det G=\tfrac14|s|^2\) gives \(|b|^2=1-\det G/u^2\le1\).  A duality rotation conjugates \(G\) by \(R_\alpha\), which turns its traceless part by
+\(2\alpha\).  Under a boost \(s\) is invariant, so \(|b|\) is maximal where \(u\) is minimal, in the frame with \(E\parallel B\), and \(u\) grows without
+bound for large boosts.  Along a boost \(|b|\) need not be monotone.
+\end{proof}
+
+The disk is defined by the Gram matrix alone.  The two sectors of non-zero real \(s\) are its two sides along the \(b_1\)-axis, null fields are its
+centre, and large boosts move every field towards the centre.  The compensator acts transversally: the self-dual and anti-self-dual ports are
+the boundary points \(b=(0,\pm1)\).
+
+\subsection{Operators compatible with the compensator}
+
+An operator meant to carry the compensator through further layers should at least commute with \(J_B\) and \(C\).  We call operators
+\(\mathcal J,\mathcal C,\mathcal M\) with
+\begin{equation}\label{eq:cm}
+\mathcal J^2=1,\qquad \mathcal C^2=\mathcal C,\qquad \mathcal M\mathcal J=\mathcal J\mathcal M,\qquad \mathcal M\mathcal C=\mathcal C\mathcal M
+\end{equation}
+a \emph{compensator matrix} for \((\mathcal J,\mathcal C)\).  On the doublet, with \(\mathcal J=\sigma_x\) and \(\mathcal C=C_{\rm HC}\), the solutions are
+exactly \(M=\lambda_+C_{\rm HC}+\lambda_-A\): weightings of the two ports.  Those of determinant one are \(\pm e^{\theta\sigma_x}\); they preserve
+\(\operatorname{Re}s\).  Spatial rotations commute with them, while boosts and duality rotations other than by \(0\) and \(\pi\) violate
+\eqref{eq:cm}.  For \(\mathcal C\) to be the spectral projector of \(\mathcal M\) in general, commutation is not enough
+(\(M=\operatorname{diag}(1,2,3)\), \(C=\operatorname{diag}(1,1,0)\)); it suffices that \(\mathcal M\mathcal C=\lambda_0\mathcal C\) and
+\(\ker(\mathcal M-\lambda_0)\cap\ker\mathcal C=\{0\}\).  A non-trivial realization on a larger carrier is not known; Section~\ref{sec:generation}
+gives one on \(\mathbb C\otimes\HH\otimes\OO\).

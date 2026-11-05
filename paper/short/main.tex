@@ -1,0 +1,99 @@
+% Short paper on the Sphaera kernel -- working draft (structure and appendix only)
+% Plan: about 40 pages; the Companion (concept DOI 10.5281/zenodo.19210728) stays the full record.
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}[proposition]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[proposition]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[proposition]{Remark}
+\newcommand{\HH}{\mathbb H}
+\newcommand{\OO}{\mathbb O}
+
+\title{Three readouts of one kernel:\\ duality sectors, time reversal and a compensator-form projector in \(\mathbb C\otimes\mathbb H\otimes\mathbb O\)}
+\author{Marc Brendecke\\ \small Independent researcher, Bochum, Germany}
+\date{Draft, \today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We study the hypothesis that matter, light and a tachyon sector are one object read out in three frames, differing only in the direction
+of time.  Its carrier is a complex quaternion kernel \(q=it+z_1e_1+z_2e_2+z_3e_3\) whose natural norm \(q\bar q=-t^2+z\cdot z\) contains the Lorentz
+invariant of an electromagnetic field \(z=E+iB\).  The kernels with positive and negative \(z\cdot z\) form one orbit of \(SO(3,\mathbb C)\times
+U(1)_{\rm dual}\), the null kernels are the only non-trivial orbit fixed by duality, and the symmetric triple of components at \(120^\circ\) is
+exactly the centred null configuration.  An antilinear involution that combines the duality quarter turn with time reversal exchanges the two
+sectors and defines a projector, the compensator, which splits each field into its self-dual and anti-self-dual parts.  On
+\(\mathbb C\otimes\mathbb H\otimes\mathbb O\) a projector of the same form restricts the weak \(SU(2)\) to the Pati--Salam \(\mathbf 4\) and
+completes one Standard Model generation with right-handed neutrino; among the four projectors compatible with colour and charge, anomaly
+cancellation selects it up to time reversal.  Time reversal thus appears at three points of the structure, which gives the hypothesis a
+checkable form; we show that it does not yet go beyond the Feynman--St\"uckelberg reading and that a space-like momentum, and hence a
+dynamics, is missing.  Numerical readouts of a single frame parameter, and four relations registered before new data, are recorded as
+speculative.
+\end{abstract}
+
+\input{p1_intro}
+\input{p2_kernel}
+\input{p3_frames}
+\input{p5_generation}
+\input{p6_readout}
+\input{p7_numbers}
+\input{p8_discussion}
+\input{p9_conclusions}
+
+\section*{Data availability}
+Scripts, numerical outputs, the Lean formalization and the registration notes are in the public repository~\cite{repo}.
+
+\appendix
+\input{appendix_method}
+
+\begin{thebibliography}{99}
+\bibitem{companion} M.~Brendecke, \emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding},
+Zenodo, concept DOI \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}.
+\bibitem{repo} M.~Brendecke, QuantumSphere-Unfold, \url{https://github.com/Moriarty1982/QuantumSphere-Unfold}.
+\bibitem{bialynicki} I.~Bialynicki-Birula, Photon wave function, \emph{Prog.\ Opt.} \textbf{36} (1996) 245--294, arXiv:quant-ph/0508202.
+\bibitem{baez} J.~C.~Baez, The octonions, \emph{Bull.\ Amer.\ Math.\ Soc.} \textbf{39} (2002) 145--205, arXiv:math/0105155.
+\bibitem{hopf1931} H.~Hopf, \"Uber die Abbildungen der dreidimensionalen Sph\"are auf die Kugelfl\"ache, \emph{Math.\ Ann.} \textbf{104} (1931) 637--665.
+\bibitem{hopf1935} H.~Hopf, \"Uber die Abbildungen von Sph\"aren auf Sph\"aren niedrigerer Dimension, \emph{Fund.\ Math.} \textbf{25} (1935) 427--440.
+\bibitem{gunaydin} M.~G\"unaydin and F.~G\"ursey, Quark structure and octonions, \emph{J.\ Math.\ Phys.} \textbf{14} (1973) 1651--1667.
+\bibitem{dixon} G.~M.~Dixon, \emph{Division Algebras: Octonions, Quaternions, Complex Numbers and the Algebraic Design of Physics}, Kluwer, Dordrecht 1994.
+\bibitem{furey2015} C.~Furey, Charge quantization from a number operator, \emph{Phys.\ Lett.\ B} \textbf{742} (2015) 195--199, arXiv:1603.04078.
+\bibitem{furey2018} C.~Furey, \(SU(3)_C\times SU(2)_L\times U(1)_Y(\times U(1)_X)\) as a symmetry of division algebraic ladder operators, \emph{Eur.\ Phys.\ J.\ C} \textbf{78} (2018) 375, arXiv:1806.00612.
+\bibitem{gresnigt} N.~G.~Gresnigt, Braids, normed division algebras, and Standard Model symmetries, \emph{Phys.\ Lett.\ B} \textbf{783} (2018) 212--221, arXiv:1803.02202.
+\bibitem{boyle} L.~Boyle, The Standard Model, the exceptional Jordan algebra, and triality, \emph{J.\ Math.\ Phys.} \textbf{67} (2026) 071701, arXiv:2006.16265.
+\bibitem{abck} A.~Ashtekar, J.~Baez, A.~Corichi and K.~Krasnov, Quantum geometry and black hole entropy, \emph{Phys.\ Rev.\ Lett.} \textbf{80} (1998) 904--907, arXiv:gr-qc/9710007.
+\bibitem{domagala} M.~Domaga\l{}a and J.~Lewandowski, Black-hole entropy from quantum geometry, \emph{Class.\ Quantum Grav.} \textbf{21} (2004) 5233--5244, arXiv:gr-qc/0407051.
+\bibitem{meissner} K.~A.~Meissner, Black-hole entropy in loop quantum gravity, \emph{Class.\ Quantum Grav.} \textbf{21} (2004) 5245--5252, arXiv:gr-qc/0407052.
+\bibitem{ghosh} A.~Ghosh and P.~Mitra, An improved estimate of black hole entropy in the quantum geometry approach, \emph{Phys.\ Lett.\ B} \textbf{616} (2005) 114--117, arXiv:gr-qc/0411035.
+\bibitem{enp} J.~Engle, K.~Noui and A.~Perez, Black hole entropy and SU(2) Chern--Simons theory, \emph{Phys.\ Rev.\ Lett.} \textbf{105} (2010) 031302, arXiv:0905.3168.
+\bibitem{koide} Y.~Koide, A fermion--boson composite model of quarks and leptons, \emph{Phys.\ Lett.\ B} \textbf{120} (1983) 161--165.
+\bibitem{desi} DESI Collaboration, DESI DR2 results II: measurements of baryon acoustic oscillations and cosmological constraints, \emph{Phys.\ Rev.\ D} \textbf{112} (2025) 083515, arXiv:2503.14738.
+\bibitem{planck} Planck Collaboration, Planck 2018 results VI: cosmological parameters, \emph{Astron.\ Astrophys.} \textbf{641} (2020) A6, arXiv:1807.06209.
+\bibitem{juno} JUNO Collaboration, First measurement of reactor neutrino oscillations at JUNO, \emph{Nature} \textbf{654} (2026) 343--348, arXiv:2511.14593.
+\bibitem{nufit} I.~Esteban, M.~C.~Gonzalez-Garcia, M.~Maltoni, T.~Schwetz and A.~Zhou, NuFIT~6.0: updated global analysis of three-flavor neutrino oscillations, \emph{JHEP} \textbf{12} (2024) 216, arXiv:2410.05380.
+\bibitem{bryant} R.~L.~Bryant, S.-S.~Chern, R.~B.~Gardner, H.~L.~Goldschmidt and P.~A.~Griffiths, \emph{Exterior Differential Systems}, MSRI Publications~18, Springer, New York 1991.
+\bibitem{seiler} W.~M.~Seiler, \emph{Involution: The Formal Theory of Differential Equations and its Applications in Computer Algebra}, Springer, Berlin 2010.
+\bibitem{henneaux} M.~Henneaux and C.~Teitelboim, The cosmological constant and general covariance, \emph{Phys.\ Lett.\ B} \textbf{222} (1989) 195--199.
+\bibitem{kaloper} N.~Kaloper and A.~Padilla, Sequestering the standard model vacuum energy, \emph{Phys.\ Rev.\ Lett.} \textbf{112} (2014) 091304, arXiv:1309.6562.
+\bibitem{baezhuerta} J.~Baez and J.~Huerta, The algebra of grand unified theories, \emph{Bull.\ Amer.\ Math.\ Soc.} \textbf{47} (2010) 483--552, arXiv:0904.1556.
+\bibitem{krasnov} K.~Krasnov, SO(9) characterization of the standard model gauge group, \emph{J.\ Math.\ Phys.} \textbf{62} (2021) 021703, arXiv:1912.11282.
+\bibitem{fureyhughes} C.~Furey and M.~J.~Hughes, One generation of standard model Weyl representations as a single copy of \(\mathbb R\otimes\mathbb C\otimes\mathbb H\otimes\mathbb O\), \emph{Phys.\ Lett.\ B} \textbf{827} (2022) 136959, arXiv:2209.13016.
+\bibitem{fureygen} C.~Furey, Three generations, two unbroken gauge symmetries, and one eight-dimensional algebra, \emph{Phys.\ Lett.\ B} \textbf{785} (2018) 84--89, arXiv:1910.08395.
+\bibitem{gillard} A.~B.~Gillard and N.~G.~Gresnigt, Three fermion generations with two unbroken gauge symmetries from the complex sedenions, \emph{Eur.\ Phys.\ J.\ C} \textbf{79} (2019) 446, arXiv:1904.03186.
+\bibitem{gengmarshak} C.~Q.~Geng and R.~E.~Marshak, Uniqueness of quark and lepton representations in the standard model from the anomalies viewpoint, \emph{Phys.\ Rev.\ D} \textbf{39} (1989) 693.
+\bibitem{minahan} J.~A.~Minahan, P.~Ramond and R.~C.~Warner, Comment on anomaly cancellation in the standard model, \emph{Phys.\ Rev.\ D} \textbf{41} (1990) 715.
+\bibitem{stueckelberg} E.~C.~G.~St\"uckelberg, La m\'ecanique du point mat\'eriel en th\'eorie de relativit\'e et en th\'eorie des quanta, \emph{Helv.\ Phys.\ Acta} \textbf{15} (1942) 23--37.
+\bibitem{feynman} R.~P.~Feynman, The theory of positrons, \emph{Phys.\ Rev.} \textbf{76} (1949) 749--759.
+\bibitem{foot} R.~Foot, A note on Koide's lepton mass relation, arXiv:hep-ph/9402242 (1994).
+\bibitem{brannen} C.~A.~Brannen, The lepton masses, unpublished note (2006).
+\bibitem{pdg} Particle Data Group, Review of Particle Physics, W-boson mass review, 2026 edition.
+\end{thebibliography}
+\end{document}
+
