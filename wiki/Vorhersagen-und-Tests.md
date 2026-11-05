@@ -66,6 +66,7 @@ Zu H46: Eine Bestätigung würde die Kette r55–r60 prüfen, nicht die Lesart a
 | H66 | R ist auf Werteebene kovariant (Kontrollschranke 10⁻⁹, nicht blind) | bestätigt: Residuen ≤ 2·10⁻¹¹, Gegenprobe ohne Hintergrund-Transformation 57 bzw. 1200 (r78) |
 | H67 | Zahl und Lage der vier versteckten Bedingungen sind eichunabhängig | bestätigt: in fünf Eichungen (darunter Ψ̄Ψ) jeweils 477 und 6 Polarisationen (r79) |
 | H68 | Der Hintergrund A, h erfüllt Yang–Mills (auf span(λ₂, λ₄, λ₆)) und Klein–Gordon mit den Spinorblöcken als Quelle, je mit einer Kopplung | widerlegt: Residuen 0,955 / 0,995 / 0,826 in der Koframe-Metrik, Quellen rund 10³ zu klein (r80) |
+| H69 | Ein um δ versetztes Paar aus Materie und Tachyonbild (Konvention F) hat keinen Nettostrom (genau bei Δω·δ = π mod 2π) und keinen Nettoenergie-Impuls | bestätigt: Residuen 5e-15 und 1e-15, Kreuzterme eingeschlossen; klassisch, Vorzeichen des Tachyon-Anteils als Eingabe (Notizen zu W1) |
 
 ## Erkundungen ohne Vorab-Notiz
 
