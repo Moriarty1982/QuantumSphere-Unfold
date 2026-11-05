@@ -29,3 +29,6 @@ dazu Yukawa-Kopplungen über die antilinearen Konnektoren aus r44.1(b) (Kern →
 
 ## Nachtrag (5.11., H74)
 Die exakte Aufhebung ist gegen jede direkte Kopplung der Sektoren instabil (Resonanz gleicher Spektren, Rate ε/2ω). Stabil nur bei Verstimmung |Δω²| > 2ε, dann bleibt ein Rest ≳ 2ε|V_min|/ω². Kleiner Rest-Λ verlangt extrem schwache Kopplung; Kopplung nur über die Gravitation bleibt offen. Siehe `Ergebnis_H74_Stabilitaet_MT.md`.
+
+## Nachtrag (5.11., H75)
+Nur über die Gravitation gekoppelt: keine Resonanz, kein exponentielles Wachstum bei exakter Paarung; gemeinsames Durchgehen (∝ t², Bondi) als Preis. Siehe `Ergebnis_H75_Gravitationskopplung.md`.
