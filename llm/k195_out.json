@@ -1,0 +1,40 @@
+{
+ "Konvention_s": -1,
+ "S(i pi)": "Matrix([[-I, 0], [0, I]])",
+ "Lambda(i pi)": "Matrix([[-1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, -1]])",
+ "S(i pi) = +-(-i sigma_z)": true,
+ "Bildterm": {
+  "holomorph": {
+   "L_T / L_M je Richtung (t,x,y,z)": [
+    "-1",
+    "-1",
+    "-1",
+    "-1"
+   ],
+   "proportional_zu_sbar": true,
+   "Gewicht": "a - b",
+   "det": "-(a - b)**2*(k_x**2 + k_y**2 + k_z**2 - omega**2)",
+   "isotrop": true,
+   "K3_Bild_entgegengesetzt": true
+  },
+  "hermitesch": {
+   "L_T / L_M je Richtung (t,x,y,z)": [
+    "1",
+    "1",
+    "1",
+    "1"
+   ],
+   "proportional_zu_sbar": true,
+   "Gewicht": "a + b",
+   "det": "-(a + b)**2*(k_x**2 + k_y**2 + k_z**2 - omega**2)",
+   "isotrop": true,
+   "K3_Bild_entgegengesetzt": false
+  }
+ },
+ "Lambda_erhaelt_eta": true,
+ "Probe_Spiegelung_Verschiebung": {
+  "S_T": -111.16153007491413,
+  "S_T(Lambda x + delta)": -111.1615300749141,
+  "rel_diff": 2.556793650757597e-16
+ }
+}
