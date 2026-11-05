@@ -4,11 +4,18 @@
 
 ## Stand vom 6. November 2026 (Claude)
 - **PR #72 gemergt als e6e55cc** (6.11.; `research/v4.10-r86-wolfram-pruefung`, https://github.com/Moriarty1982/QuantumSphere-Unfold/pull/72), Runde **v4.9.0-r86**: unabhängige Prüfung mit Wolfram, H87 (a, c bestätigt, b widerlegt wie formuliert), H88 bestätigt (W1-Feldgleichungen), H89 bestätigt (Energie-Impuls-Tensor; T^(4f) Λ-Form, homogen ρ = p > 0), Korrektur r86.4 zur Lesart der W1-Notiz. Inhalt: Runde in `parts/v490-post-release-layers.tex`, Notizen `notes/research/v4_10_0_r86/` (k202–k204), H87–H89 unter `predictions/`, W1-Notiz mit Nachträgen, Wiki (6 Seiten), ours-Merge der lokalen Historie bis f4b1ebc. CI-Build auf dem Zweig per workflow_dispatch angestoßen. CI-Lauf 42129615268 grün; AGENTS-Zeile und Kernkarte nachgezogen. Wiki-Sync läuft nach dem Merge automatisch.
-- **Lokal eingebaut (f4b1ebc):** 1335 Seiten, 3982 Labels, harte Werte 0, Guard-Linter 0. Overfull **58** unter MiKTeX 25.12 (keine in r86); die in früheren Übergaben genannten 45 stammen offenbar aus einer anderen Toolchain, bei Gelegenheit mit `qs.py audit --compare` gegen einen r85-Build klären. Kandidat lokal gebaut: 1361 Seiten, harte Werte 0. AGENTS-Zeile r86, Kernkarte K136 (v15.2). **Nächste Bundle-/ours-Basis: der Commit dieser Übergabe** (Repo-Worktree teilt Objekte mit dem lokalen Repo, kein Bundle nötig).
+- **Lokal eingebaut (f4b1ebc):** 1335 Seiten, 3982 Labels, harte Werte 0, Guard-Linter 0. Overfull 58 unter MiKTeX 25.12 (keine in r86; TeX Live liefert 45). Kandidat lokal gebaut: 1361 Seiten, harte Werte 0. AGENTS-Zeile r86, Kernkarte K136 (v15.2). **Nächste Bundle-/ours-Basis: der Commit dieser Übergabe** (Repo-Worktree teilt Objekte mit dem lokalen Repo, kein Bundle nötig).
 - GitHub-Worktree `$HOME/gh_r86` nach dem Merge entfernt; Zweig `research/v4.10-r86-wolfram-pruefung` kann weg.
 - **Zuletzt vergebene Hypothese:** H89. Nächste freie Nummer **H90**.
 - **Zurückgestellte Idee I3** (Λ als Folge der Dunkle-Materie-Rechnung): Auslöser „weitere Λ-Rechnung“ durch H89 berührt (Vier-Fermionen-Term in Λ-Form), dem Autor genannt.
 - **Branches, die weg können** (Löschen über den Proxy gesperrt): `rechnen/h59`, `rechnen/h65`, `rechnen/h67`, `rechnen/hintergrund`, `research/v4.10-w1-wirkung-test`, die gemergten `research/v4.10-r69…r85-*`.
+
+## Release v4.10.0 in Vorbereitung (Autor 6.11.: „Ja, vorbereiten“)
+- Zweig **`release/v4.10.0-prep`** auf GitHub (9708427), Worktree lokal unter `$HOME/rel410`. Enthält `release/zenodo/metadata_v4_10_0.json` (Beschreibung aus belegtem Inhalt, Guard-Linter 0, Version-DOI als Platzhalter „[to be filled after reservation]“, `publication_date` vorläufig 2026-11-06) und das Gesamtbild auf Stand nach r86.
+- Trockenlauf der Reservierung grün (Lauf 42130551910, `new_version_of=23534954`, alle Eingaben gesetzt).
+- **Nächster Schritt, braucht Freigabe:** Reservierung mit `dry_run=false` (legt einen unveröffentlichten, verwerfbaren Entwurf an). Danach: DOI in Metadaten, CLAUDE.md/AGENTS.md (DOI-Disziplin, reserviert), `CITATION.cff`, Titelseite (`sources/research/parts/working-preamble.tex`: `\workingversion` 4.10.0, Version-DOI-Zeile, `pdftitle`/`pdfsubject`), `qs.py doi --version-doi`, Payload unter `release/v4.10.0/` (Vorschlag: Einzeldatei wie v4.9.0; PDF aus dem TeX-Live-Container), Manifest, README; PR; Upload mit `deposition_id` und `replace_files=true`; Autor prüft den Entwurf; Veröffentlichen nur auf ausdrückliches Wort.
+- **Nach der Veröffentlichung nicht vergessen (Autor 6.11.):** Tag `v4.10.0` und GitHub-Release auf dem Merge-Commit setzen, `DOI_ROLES` in `qs.py`, DOI-Disziplin umstellen; künftige Runden heißen `v4.10.0-rNN`.
+- Overfull: 58 unter MiKTeX, 45 unter TeX Live (toolchain-abhängig, laut Release-Anleitung); kein Befund.
 
 ## Nächster Schritt (Autor wählt)
 1. Volle nichtlineare Einstein-Gleichung und Bianchi-Identität von W1 (Wolfram, in Teile zerlegt wegen ca. 100 s Laufzeitgrenze; `llm/k204_w1_einstein.wl` als Ausgang).
