@@ -61,5 +61,9 @@
 - **5.11., Autor:** Die M–T-Lücke aus k170 (j = 0 ohne Ψ = 0 durch Komponenten negativer Dichte, Tachyon-Frame) soll verfolgt werden.
 - **5.11., Autor zu P_C7:** vorerst offen (in W1 nicht gebraucht). Lesart „mod HC = chinesischer Restsatz über Primzahl-Plätze“ als I2 in `Zurueckgestellte_Ideen.md`; Prüfung, sobald P_C7 gebraucht wird.
 
+- **5.11., Autor zum Tachyonbild einer Wirkung (H77):** Lesart B (Kinematik fortgesetzt, Konstanten und Potentiale bleiben); Lesart A (Energieparität) ist ausgeschlossen.
+- **5.11., Autor (21:05): Der T-Anteil ist dasselbe Feld in zweiter Lesart** (Variante 2), nicht ein eigenes Feld; Variante 1 und I1 bleiben Alternativen.
+- **5.11., Autor (21:23), Entscheidung zur Adjungierten (Ergänzung zu Entscheidung 2):** Das Bild entsteht durch den vollständigen komplexen Boost (Spinor S = −iσ_n und Argument Λ(iπ)x + δ), die Adjungierte wird **holomorph** abgebildet (ψ† ↦ ψ†S, Fortsetzung der Boost-Identität). Damit ist der Bildterm −L_M (H79). In der Materie-Lesart bleibt die Dirac-Adjungierte. Wortlaut des Autors: „Lege das mal so fest; wenn es nicht passt, müssen wir halt nach was anderem suchen.“
+
 ## Nächster Schritt (Vorschlag)
 Nach diesen Entscheidungen die kleinste Wirkung aufschreiben, die (W1)–(W8) erfüllt, und zuerst nur ihre Euler–Lagrange-Gleichungen und Identitäten (Bianchi, Ward) symbolisch prüfen, noch ohne Lösung. Ein Test mit Kriterium erst danach, mit Vorab-Notiz.
