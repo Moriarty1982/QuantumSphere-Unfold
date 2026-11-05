@@ -2,7 +2,12 @@
 
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.** Sie ist der Einstiegspunkt für die nächste Sitzung, egal mit welchem Modell. Die Geschichte steht in `AGENTS.md` (Rundentabelle), in der Kernkarte und in den Runden.
 
-## Stand vom 5. November 2026, ca. 21:45 (Claude)
+## Stand vom 5. November 2026, ca. 23:20 (Claude)
+- **Offen: PR #70** (`research/v4.10-r85-urknall-cpt`), Runde **v4.9.0-r85**: H82–H86, Erkundungen Spinorphase und Urknall, Autorentscheidung G2, Arbeitsannahme F3-Gewicht 1. Wiki im PR; Bestandsaufnahme auf GitHub aktualisiert. ours-Merge der lokalen Historie bis 13d4432 (Vorab-Commits c3f956c, 36ec8e7, d2a19f2, 4ac77a0, 851297a). CI-Lauf 42119464656. **Merge nur nach „PR 70 mergen“.**
+- **Lokal eingebaut (13d4432):** 1331 Seiten, 3977 Labels, Overfull 45, harte Werte 0, Guard-Linter 0. AGENTS-Zeile r85, Kernkarte K135 (v15.1). **Nächste Bundle-Basis: 13d4432.**
+- **Nächste Schritte zur Wahl:** Übergangsbedingung für Fermionen am Urknall (G2); Bedeutung der Asymmetrie der Drehsinne (Teilchen/Antiteilchen?); Dauer Δ des Übergangs (Skala); Vergleich mit Boyle–Finn–Turok (dunkle Materie als ν^c, r82.4); Gravitation und r19 (G γ¹ statt γ²); I1; Skala von Λ.
+
+## Davor (21:45)
 - **PR #69 gemergt als 99babde** (5.11., 21:39; `research/v4.10-r84-zweite-lesart`), Runde **v4.9.0-r84**: Geist-Kondensat auf FRW, Autorentscheidungen (zweite Lesart, holomorphe Adjungierte), H78–H81. Wiki im PR; Bestandsaufnahme und Zurückgestellte Ideen auf GitHub aktualisiert. ours-Merge der lokalen Historie bis 815da20 (Vorab-Commits ef3e1e0, 701f1ca, a5799ef). CI-Lauf 42105091376.
 - **Lokal eingebaut (815da20):** 1328 Seiten, 3972 Labels, Overfull 45, harte Werte 0, Guard-Linter 0 (ein `\bsym` außerhalb des Mathemodus vor dem Build korrigiert). AGENTS-Zeile r84, Kernkarte K134 (v15.0). **Nächste Bundle-Basis: 815da20.**
 - Nächste Schritte zur Wahl: Epoche τ* und Modenauswahl weiter (beobachtbare Folgen?), Zustand bei τ = 0 für δ = 0 (Boyle–Finn–Turok), Massenterme (Dirac, Majorana) unter der zweiten Lesart, I1, Skala.
