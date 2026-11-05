@@ -26,3 +26,7 @@ Herleitung des Materie-Falls: p ∝ p₊·sinh²η/(3cosh η) − p₋·cosh η/
 - Ein Λ-artiger Term (w = −1) entsteht in keiner der drei Lesarten. Das H73-Ergebnis w = −β²/3 war ein Artefakt der Mischung inkonsistenter Rapiditäten.
 - Möglicher Bezug, nur als Lesart: Druckloser Staub aus einer Materie–Tachyon-Mischung hätte die Zustandsgleichung kalter dunkler Materie. Das passt zum Spiegelteilchen-Gedanken des Autors (H71, Lesart 3) und zu Ω_M = β² (r67), ist aber nicht geprüft.
 - Die Summe beider Lesarten hat w = −⅓, die Zustandsgleichung von Strings bzw. Krümmung. Ob eine solche Summe physikalisch Sinn hat, ist offen. Auslöser 3 von I1 (String/LQG) liegt nahe; als Hinweis vermerkt.
+
+
+## Korrektur (5.11., k183)
+Die Aussage „Das H73-Ergebnis w = −β²/3 war ein Artefakt der Mischung inkonsistenter Rapiditäten“ ist zu stark. Derselbe Wert entsteht exakt, wenn die M- und die T-Lesart dieser konsistenten Mischung mit den Frame-Gewichten p₊, p₋ gewichtet werden (`Erkundung_Lesarten_Gravitation.md`, Fall G3). Inkonsistent war in H73 nur die Herleitung, nicht der Wert.
