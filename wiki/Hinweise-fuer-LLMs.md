@@ -22,9 +22,24 @@ Wer mit einem KI-Werkzeug im Repository arbeitet (Codex, Claude, ChatGPT und and
 - keine festen absoluten Pfade in Skripten.
 
 Die Abläufe stehen Schritt für Schritt in
-[`notes/anleitungen/`](https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/main/notes/anleitungen): eine Runde
-einbauen, und Rechnungen am OP5-Vergleichsmodell (Daten, Konventionen, bekannte Ergebnisse, Fallstricke). `AGENTS.md`
-ist ein offener, werkzeugübergreifender Standard. `CLAUDE.md` verweist nur darauf.
+[`notes/anleitungen/`](https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/main/notes/anleitungen). Sie sind
+modellunabhängig geschrieben und die einzige Quelle; Claude-Skills verweisen nur darauf, ChatGPT und Codex lesen dieselben
+Dateien. Die Übersicht `README.md` dort sagt, welche Anleitung wann gilt:
+
+- **Sitzung beginnen und übergeben** (`weitermachen.md`, `sitzung-uebergeben.md`): Stand aus der Übergabedatei und dem
+  Repo rekonstruieren, Widersprüche nennen (das Repo geht vor); am Ende die Übergabe kurz neu schreiben, mit dem Modell,
+  das zuletzt gearbeitet hat.
+- **Hypothese testen** (`hypothese-testen.md`): freie H-Nummer, Vorwissen suchen, Vorab-Notiz committen, rechnen,
+  Ergebnis-Notiz; „nicht blind“ offen sagen, Kriterien nie nachträglich lockern.
+- **Runde einbauen** (`qsc-runde-einbauen.md`) und **Rechnungen am OP5-Vergleichsmodell**
+  (`op5-vergleichsmodell-rechnen.md`, mit Daten, Konventionen, bereits beantworteten Fragen und Fallstricken).
+- **Wiki nachziehen** (`wiki-nachziehen.md`): welche Seiten bei welcher Änderung, Inhalt statt Links, Formelsatz, DE/EN.
+- **Werkzeug `tools/qs.py`** (`qs-werkzeug.md`): Theoremnummern und Querverweise nachbilden statt zählen, Guards, Ledger,
+  Compile-Audit, SHA256-Manifest.
+- **Zenodo-Release** (`zenodo-release.md`): Freigaben, Reservierung, Titelseite, Payload, Veröffentlichung.
+
+Ohne Shell oder GitHub-Zugang nennt ein Modell die Befehle, und der Autor führt sie aus. `AGENTS.md` ist ein offener,
+werkzeugübergreifender Standard. `CLAUDE.md` verweist nur darauf.
 
 ## Vorgehen bei Fachfragen
 
