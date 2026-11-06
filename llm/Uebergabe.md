@@ -3,7 +3,7 @@
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.** Sie ist der Einstiegspunkt für die nächste Sitzung, egal mit welchem Modell. Die Geschichte steht in `AGENTS.md` (Rundentabelle), in der Kernkarte und in den Runden.
 
 ## Stand vom 6. November 2026, abends (Claude)
-- **PR #80 offen** (https://github.com/Moriarty1982/QuantumSphere-Unfold/pull/80, Zweig `research/v4.10-r05-kern-rueckschau`, Worktree `$HOME/gh_r05`): Runde **v4.10.0-r05** (Gravitonen, Rückschau vom Kern, OP5-Trennung, H96 offen, H97 widerlegt). CI-Lauf 42279247616. **Merge nur nach „PR 80 mergen“**; danach AGENTS-Zeile ergänzen, Worktree entfernen.
+- **PR #80 gemergt als c054467** (auf „PR 80 mergen“, CI-Lauf 42279247616 grün; H96 damit öffentlich datiert) (https://github.com/Moriarty1982/QuantumSphere-Unfold/pull/80, Zweig `research/v4.10-r05-kern-rueckschau`, Worktree `$HOME/gh_r05`): Runde **v4.10.0-r05** (Gravitonen, Rückschau vom Kern, OP5-Trennung, H96 offen, H97 widerlegt). CI-Lauf 42279247616. AGENTS-Zeile ergänzt, Worktree entfernt; Zweig kann weg.
 - Lokal eingebaut (3735b8b): 1350 Seiten, 4007 Labels, Overfull 58, harte Werte 0; Kandidat 1376 Seiten. AGENTS-Zeile v4.10.0-r05 (H96 bei „Ausstehend“), Kernkarte K141 (v15.7).
 - **Zuletzt vergebene Hypothese: H97.** Nächste freie Nummer **H98**. Nächste Runde v4.10.0-r06.
 - **Arbeitsweise ab jetzt (Rückschau r05.2, OP5-Trennung):** Dynamik-Programm W1/W2 eingefroren, keine Reparatur-Entscheidungen; neue Vorhersagen nur aus dem eingefrorenen Stand, möglichst als Funktion statt Zahl. Offene Vorhersagen: H15, H42, H46, H96.
