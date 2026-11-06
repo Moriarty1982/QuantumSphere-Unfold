@@ -116,8 +116,11 @@ Erst `dry_run=true`, dann nach Freigabe:
 
 ```bash
 -f deposition_id=<id> -f reserve_only=false -f replace_files=true -f publish=false -f confirm_publish=false \
--f dry_run=false -f metadata=release/zenodo/metadata_vX_Y_Z.json -f files_glob='release/vX.Y.Z/*'
+-f dry_run=false -f metadata=release/zenodo/metadata_vX_Y_Z.json -f files_glob='release/vX.Y.Z/*' \
+-f default_preview=Quantum_Sphaera_Companion_vX_Y_Z.pdf
 ```
+
+`default_preview` (seit PR #74) lädt das Haupt-PDF zuerst hoch und bricht vor dem Veröffentlichen ab, wenn der Entwurf eine andere Vorschau gesetzt hat. Bei Upload **und** Veröffentlichen setzen; beim Veröffentlichen lädt der Lauf die Dateien noch einmal hoch.
 
 Den Entwurf auf Zenodo vom Nutzer prüfen lassen. **Dabei ausdrücklich die Vorschau prüfen:** Zenodo muss das Haupt-PDF als Vorschau zeigen, nicht ein Neben-PDF (bei v4.10.0 war es die Abbildung `op5-slices-9x9.pdf`, weil `tools/zenodo_publish.py` keine Vorschau setzt und die Abbildung zuerst hochlud; vom Autor von Hand korrigiert). Abhilfe: Vorschau im Entwurf setzen (InvenioRDM-Feld `files.default_preview`) oder das Haupt-PDF zuerst hochladen. Veröffentlichen nur auf ausdrückliches Wort, mit `publish=true` und
 `confirm_publish=true`.
