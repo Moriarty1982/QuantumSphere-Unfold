@@ -26,3 +26,6 @@ Wenn die T-Lesart vor dem Urknall das Bild der M-Lesart danach ist, liegt das Fe
 - Unter G2 liefert die Selbstkonsistenz der zweiten Lesart eine Randbedingung am Urknall, als Zustandsbedingung zu lesen: **φ̇ = 0, ⟨ψ⟩ = 0**. Sie macht aus jedem leichten Skalar eingefrorene Vakuumenergie bis zum Auftauen, legt die Höhe aber nicht fest.
 - Damit gibt es unter G2 für Λ keinen Mechanismus, der eine Zahl liefert. Alle drei T-Spuren (I3, I4, Geist) und die Randbedingung führen auf eine freie Größe (V_min, φ_*). OP5 bleibt offen.
 - Der offene Punkt 3 (Ursprung der Raumspiegelung, Homogenität) ist neu und betrifft die Konstruktion selbst. Er wäre vor jeder Rechnung mit Moden unter G2 zu klären.
+
+## Nachtrag (6.11., Raumspiegelung)
+Die Bedingungen φ'(0) = 0 und ψ(0) = 0 folgen nur aus der punktweisen Identifikation der Felder. Diese ist für a ≠ b mit keinem normierbaren Quantenzustand vereinbar (antiunitäre Zeitumkehr plus Anschluss erzwingt u'(0) = 0, dann verschwindet die Wronski-Normierung) und bräuchte eine Richtung n und einen räumlichen Ursprung, die nichts festlegt. Sie entfallen als Folge der Struktur; ein eingefrorener Skalar ist nur eine mögliche Zustandswahl. Siehe `Erkundung_Raumspiegelung_G2.md`.
