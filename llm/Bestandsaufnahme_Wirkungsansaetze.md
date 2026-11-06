@@ -68,5 +68,7 @@
 - **5.11., Autor (22:18):** „mach weiter“ auf den Vorschlag F3-Gewicht 1 für die Weyl-Kinetik → als Arbeitsannahme geführt, keine ausdrückliche Festlegung.
 - **5.11., Autor (22:46), Gebiet G2:** Die Materie-Lesart lebt nach dem Urknall (τ > 0), die Tachyon-Lesart auf ihrem Bild vor dem Urknall (τ < 0); beide hängen nur am Urknall zusammen (Spiegelung um den Urknall, δ = 0). Wortlaut: „mach das so“.
 
+- **6.11.2026, Autor: Korrektur zu Entscheidung 3 (Vorzeichen der Gravitationswirkung).** Nach H90 (`Ergebnis_H90_W1_Einstein_nichtlinear.md`) gibt +(1/2κ)∫e R in der Signatur (+, −, −, −) mit der Krümmung R^ab = dω^ab + ω^a_c∧ω^cb abstoßende Gravitation (G̃ = −κT). W1 wird auf **S_grav = −(1/2κ)∫e R(ω)** korrigiert (Wortlaut des Autors: „Ja, korrigieren“). Damit gilt G̃ = +κT^eff, L_4f = +(3/16)κ j·j, T^(4f) = −(3κ/16) j² g. Frühere Runden werden nicht umgeschrieben; die Korrektur kommt in die nächste Runde.
+
 ## Nächster Schritt (Vorschlag)
 Nach diesen Entscheidungen die kleinste Wirkung aufschreiben, die (W1)–(W8) erfüllt, und zuerst nur ihre Euler–Lagrange-Gleichungen und Identitäten (Bianchi, Ward) symbolisch prüfen, noch ohne Lösung. Ein Test mit Kriterium erst danach, mit Vorab-Notiz.

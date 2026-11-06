@@ -2658,6 +2658,31 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **r85.6 H85 (Kriterien verfehlt), H86 (bestätigt, Δ = 2, tanh/erf):** komplexer Übergang (Wick); CPT-Zuordnung, Beimischung C exponentiell (Steigung 2,67, knapp), Asymmetrie der Drehsinne mit festem Produkt.
 - R_chk = (1,1,0); Guards unverändert. OP5 offen. Lokal 1331 Seiten, 3977 Labels, Overfull 45, harte Werte 0. PR #70 gemergt als a5bf106.
 
+### K136 Runde v4.9.0-r86: unabhängige Prüfung mit Wolfram (2026-11-06)
+
+`sec:v490-r86-wolfram-checks`, Snippet `llm/v490_r86_round.tex`, Notizen `notes/research/v4_10_0_r86/`.
+- **r86.1 H87 (nicht blind):** a bestätigt (H86-Werte auf ≤ 5·10⁻⁷), c bestätigt (scharfer Übergang symbolisch), b widerlegt wie formuliert (Steigung 20–30 = 2,956, 5,9 % unter π). Integration entlang τ = x + ih unter iπΔ/2. Nachträglich: Fit (kΔ)^p e^{−s kΔ}, s ≈ π.
+- **r86.2 H88 (nicht blind):** Erzeuger kovariant, Torsion −(3/16)κ j·j aus 24 Kontorsionskomponenten, Weyl-Gleichung exakt, Ward (M hermitesch).
+- **r86.3 H89 (nicht blind):** T^(4f) = (3κ/16) j² g (Λ-Form, Höhe nicht konstant); homogen ρ = p = (3κ/16) n² > 0 (steife Materie); erste Ordnung = −Belinfante, symmetrisch. Zwei Fehler im Prüfcode offengelegt.
+- **r86.4 Korrektur zur W1-Notiz:** Vorzeichen von ρ zustandsabhängig; „nicht wie Λ“ nur für den ganzen Tensor; r81.1(c) bleibt.
+- Offen: volle nichtlineare Einstein-Gleichung, Bianchi. R_chk = (1,1,0); Guards unverändert. OP5 offen. Lokal 1335 Seiten, 3982 Labels, Overfull 58 (MiKTeX 25.12; keine in r86), harte Werte 0. PR #72 gemergt als e6e55cc.
+
+### K137 Runde v4.10.0-r01: volle Einstein-Gleichung von W1, Vorzeichen der Gravitation (2026-11-06)
+
+`sec:v4100-r01-einstein-sign`, Snippet `llm/v4100_r01_round.tex`, Notizen `notes/research/v4_10_0_r01/`, GitHub-Schichtdatei `parts/v4100-post-release-layers.tex`.
+- **r01.1 H90 (nicht blind):** an allgemeinen Punkten gekrümmter Hintergründe (Jets bis Ordnung 3): Cartan gelöst durch ω̃ + K, K_cab = −(σ_g/4)κ ε_cabd j^d; Vierbein-Variation = G̃ + σ_g κ T^eff, T^eff = T^Bel − g L_W + T^Max − g λ j², λ = −σ_g 3κ/16; ∇̃T^eff = 0. Für W1 wie notiert (σ_g = +1) G̃ = −κT: abstoßend.
+- **r01.2 Autorentscheidung:** S_grav = −(1/2κ)∫e R. Dann L_4f = +(3/16)κ j², T^(4f) = −(3κ/16) j² g.
+- **r01.3 Korrekturen:** r81.1(b)/r86.2 Vorzeichen des Torsionsterms; r86.3 ρ = p = −(3κ/16)n² < 0; r86.4 im Vorzeichenteil zurückgenommen; r82.4 Paarkanal abstoßend, ν^c-Kondensat entfällt. Übrige H69–H86 nicht betroffen.
+- R_chk = (1,1,1); Guards unverändert. OP5 offen. Lokal 1338 Seiten, 3987 Labels.
+
+### K138 Runde v4.10.0-r02: Asymptotik der Urknall-Beimischung (2026-11-06)
+
+`sec:v4100-r02-admixture-asymptotics`, Snippet `llm/v4100_r02_round.tex`, Notizen `notes/research/v4_10_0_r02/`.
+- **r02.1 H91:** ungültig nach Kriterium a (Planungsfehler); C bis kΔ = 60 gesichert; Steigung wellig; |C₊| = |C₋| (nachträglich).
+- **r02.2 H92:** Am Pol t₀ = iπΔ/2 hat w = e^{Ls} eine wesentliche Singularität; lokale Gleichung y'' − (λ/σ²)y' + y = 0, λ = L kΔ/2, C ≈ r(λ)e^{−πkΔ}. b, c, d bestätigt, a verfehlt (Faktor ≈ 0,54).
+- **r02.3 H93:** C = e^{−L/2}C_u (adiabatische Amplitude); WKB am Umkehrpunkt η = −i: ln|r| = c√(kΔ), c = 2√π Γ(3/4)/Γ(1/4)·Re√L = 1,809205; Korrektur −λ/σ³ nur Phase −π/4. Zahlen auf 0,013 %; formal ungültig (Kontrolle 1,4·10⁻⁵ bei Drehsinn +, kΔ = 600), Drehsinn − bestätigt.
+- R_chk = (1,1,0); Guards unverändert. Lokal 1341 Seiten, 3992 Labels.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2855,3 +2880,6 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - v14.9 (2026-11-05): K133 Runde v4.9.0-r83 (H76, H77, Geist-Kondensation, Korrektur zu r82.1).
 - v15.0 (2026-11-05): K134 Runde v4.9.0-r84 (zweite Lesart, H78–H81, Autorentscheidungen).
 - v15.1 (2026-11-05): K135 Runde v4.9.0-r85 (H82–H86, G2, Urknall als CPT-Übergang).
+- v15.2 (2026-11-06): K136 Runde v4.9.0-r86 (H87–H89, Wolfram-Prüfung, Korrektur zur W1-Notiz).
+- v15.3 (2026-11-06): K137 Runde v4.10.0-r01 (H90, Vorzeichen der Gravitationswirkung korrigiert).
+- v15.4 (2026-11-06): K138 Runde v4.10.0-r02 (H91–H93, Asymptotik der Urknall-Beimischung).
