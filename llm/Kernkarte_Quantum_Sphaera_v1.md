@@ -2705,6 +2705,16 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **r04.6:** H15, H42, H46 offen; PDG 2026 m_W vor H15 offengelegt (kein Test).
 - R_chk = (1,1,0); Guards unverändert. Lokal 1347 Seiten, 4002 Labels.
 
+### K141 Runde v4.10.0-r05: Rückschau vom Kern, OP5 getrennt, Λ als Auslesung (2026-11-06)
+
+`sec:v4100-r05-core-review`, Snippet `llm/v4100_r05_round.tex`, Notizen `notes/research/v4_10_0_r05/`.
+- **r05.1:** Gravitonen am Urknall: Materie-Gewichte ΔN_eff ≈ 3,6; Autorentscheidung Photon-Gewichte; Korrektur ΔN_eff ≈ 2,6 (Energie bei kΔ ≈ 0,76); offen.
+- **r05.2:** Rückschau: keine bestätigte blinde Vorhersage an Messdaten; bekannte Physik aufgenommen; Frame-Lesart = Gleichsetzungen einzelner Zahlen; ~12 Reparatur-Entscheidungen.
+- **r05.3:** OP5 getrennt: Kern I(OP1) = I(OP5_sym) lokal / Λ-Auslesung Ω_Λ:Ω_M = (1−β²):β² (Epoche heute) / Dynamik W1/W2 eingefroren.
+- **r05.4 H96:** Ω_M = β² = 0,30185, parameterfrei, offen (DESI DR3 BAO oder Euclid, 2σ).
+- **r05.5 H97:** Brücke Kaskade→Friedmann (Vakuum → Materie mit β²H) an DESI DR2 χ² = 105, widerlegt; ε ≲ 0,4 erlaubt.
+- R_chk = (1,1,0); Guards unverändert. Lokal 1350 Seiten, 4007 Labels.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2907,3 +2917,4 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - v15.4 (2026-11-06): K138 Runde v4.10.0-r02 (H91–H93, Asymptotik der Urknall-Beimischung).
 - v15.5 (2026-11-06): K139 Runde v4.10.0-r03.
 - v15.6 (2026-11-06): K140 Runde v4.10.0-r04.
+- v15.7 (2026-11-06): K141 Runde v4.10.0-r05.

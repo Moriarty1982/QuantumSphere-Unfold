@@ -2,7 +2,14 @@
 
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.** Sie ist der Einstiegspunkt für die nächste Sitzung, egal mit welchem Modell. Die Geschichte steht in `AGENTS.md` (Rundentabelle), in der Kernkarte und in den Runden.
 
-## Stand vom 6. November 2026, ca. 09:00 (Claude)
+## Stand vom 6. November 2026, abends (Claude)
+- **PR #80 offen** (https://github.com/Moriarty1982/QuantumSphere-Unfold/pull/80, Zweig `research/v4.10-r05-kern-rueckschau`, Worktree `$HOME/gh_r05`): Runde **v4.10.0-r05** (Gravitonen, Rückschau vom Kern, OP5-Trennung, H96 offen, H97 widerlegt). CI-Lauf 42279247616. **Merge nur nach „PR 80 mergen“**; danach AGENTS-Zeile ergänzen, Worktree entfernen.
+- Lokal eingebaut (3735b8b): 1350 Seiten, 4007 Labels, Overfull 58, harte Werte 0; Kandidat 1376 Seiten. AGENTS-Zeile v4.10.0-r05 (H96 bei „Ausstehend“), Kernkarte K141 (v15.7).
+- **Zuletzt vergebene Hypothese: H97.** Nächste freie Nummer **H98**. Nächste Runde v4.10.0-r06.
+- **Arbeitsweise ab jetzt (Rückschau r05.2, OP5-Trennung):** Dynamik-Programm W1/W2 eingefroren, keine Reparatur-Entscheidungen; neue Vorhersagen nur aus dem eingefrorenen Stand, möglichst als Funktion statt Zahl. Offene Vorhersagen: H15, H42, H46, H96.
+- **Nächste Schritte zur Wahl (Autor):** weitere parameterfreie Vorhersagen aus der Frame-Lesart suchen, die eine Funktion liefern; Bilanz „Wahlen gegen Bestätigungen“ als Tabelle; Programm-Kriterium über H15/H42/H46/H96 festlegen; ΔN_eff am Urknall offen.
+
+## Davor (6.11., ca. 09:00)
 - **PR #79 gemergt als 2217e88** (auf „PR 79 mergen“, CI-Lauf 42172122737 grün) (https://github.com/Moriarty1982/QuantumSphere-Unfold/pull/79, Zweig `research/v4.10-r04-tachyonzweig`, Worktree `$HOME/gh_r04`): Runde **v4.10.0-r04** (Λ mit Tachyon-Zweig: G1, Zulassung und Rücknahme, I3 fest und dynamisch/H95; Bosonen am Urknall; Prüfdatenstand). CI-Lauf 42172122737. AGENTS-Zeile ergänzt, Worktree entfernt; Zweig kann weg.
 - Lokal eingebaut (938455f): 1347 Seiten, 4002 Labels, Overfull 58, harte Werte 0, Guard-Linter 0; Kandidat 1373 Seiten. AGENTS-Zeile v4.10.0-r04, Kernkarte K140 (v15.6).
 - **Erkundung `llm/Erkundung_Gravitonen_Urknall.md` (k213, nach PR #79):** Gravitonen mit Materie-Gewichten und n₀ bis zur Planck-Skala geben ΔN_eff ≈ 3,6 mit den SM-Bosonen (Grenze ≈ 0,3 verlangt ≳ 300 bosonische Freiheitsgrade). Ausweg: Gravitonen mit Photon-Gewichten (keine Erzeugung). **Autorentscheidung (6.11.): Photon-Gewichte für die Gravitation am Übergang** (keine Gravitonen-Erzeugung am Urknall).
