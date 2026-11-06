@@ -3,7 +3,7 @@
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.** Sie ist der Einstiegspunkt für die nächste Sitzung, egal mit welchem Modell. Die Geschichte steht in `AGENTS.md` (Rundentabelle), in der Kernkarte und in den Runden.
 
 ## Stand vom 6. November 2026, ca. 09:00 (Claude)
-- **PR #79 offen** (https://github.com/Moriarty1982/QuantumSphere-Unfold/pull/79, Zweig `research/v4.10-r04-tachyonzweig`, Worktree `$HOME/gh_r04`): Runde **v4.10.0-r04** (Λ mit Tachyon-Zweig: G1, Zulassung und Rücknahme, I3 fest und dynamisch/H95; Bosonen am Urknall; Prüfdatenstand). CI-Lauf 42172122737. **Merge nur nach „PR 79 mergen“**; danach AGENTS-Zeile ergänzen, Worktree entfernen.
+- **PR #79 gemergt als 2217e88** (auf „PR 79 mergen“, CI-Lauf 42172122737 grün) (https://github.com/Moriarty1982/QuantumSphere-Unfold/pull/79, Zweig `research/v4.10-r04-tachyonzweig`, Worktree `$HOME/gh_r04`): Runde **v4.10.0-r04** (Λ mit Tachyon-Zweig: G1, Zulassung und Rücknahme, I3 fest und dynamisch/H95; Bosonen am Urknall; Prüfdatenstand). CI-Lauf 42172122737. AGENTS-Zeile ergänzt, Worktree entfernt; Zweig kann weg.
 - Lokal eingebaut (938455f): 1347 Seiten, 4002 Labels, Overfull 58, harte Werte 0, Guard-Linter 0; Kandidat 1373 Seiten. AGENTS-Zeile v4.10.0-r04, Kernkarte K140 (v15.6).
 - **Zuletzt vergebene Hypothese: H95.** Nächste freie Nummer **H96**. Nächste Runde v4.10.0-r05.
 - **Inhaltlicher Stand:** Λ ist unter der zweiten Lesart eine Eingabe (alle Strukturspuren I3, I4, Geist, Randbedingung, G1, T-Zweig geprüft und gescheitert). Urknall unter G2 geklärt (Bosonen/Fermionen, Asymptotik, Symmetrie, Δ ≲ ℓ_P, erzeugte Bosonen Planck-heiß).
