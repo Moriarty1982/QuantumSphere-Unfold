@@ -7,7 +7,7 @@
 | Nr. | Vorhersage | Prüfdaten | widerlegt, wenn |
 |---|---|---|---|
 | **H9** | $\sin^2\theta_{12} = \beta_{\mathrm{sym}}^2/\cos^2\theta_{13} = 0{,}3086$ | künftige JUNO-Daten | Kriterium in der Vorab-Notiz; nachträglich gefunden, also nicht blind gewählt |
-| **H15** | W-Masse $m_W = 80{,}3615 \pm 0{,}0018$ GeV | erste Weltmittelung nach dem 21.10.2026 | Kriterium in der Vorab-Notiz |
+| **H15** | W-Masse $m_W = 80{,}3615 \pm 0{,}0018$ GeV | erste Weltmittelung nach dem 21.10.2026 | Kriterium in der Vorab-Notiz; noch offen. PDG 2026 (Mai 2026, vor H15) 80,3625 ± 0,0077 GeV, kein Test (v4.10.0-r04) |
 | **H42** | $\sin^2\theta_{23} \le 0{,}54$ (normale Ordnung) | erste globale Auswertung oder DUNE/Hyper-K-Messung nach dem 24.10.2026 | das 2σ-Intervall liegt ganz oberhalb 0,54 |
 | **H46** | $\sin^2\theta_{23} \in [0{,}49;\,0{,}50]$ unter der Lesart $\varepsilon = \eta$ (schärfer als H42) | dieselben Daten | das 2σ-Intervall berührt [0,49; 0,50] nicht |
 
@@ -92,6 +92,7 @@ Zu H46: Eine Bestätigung würde die Kette r55–r60 prüfen, nicht die Lesart a
 | H92 | Vorfaktor = Stokes-Funktion r(λ) des lokalen Problems, λ = L kΔ/2: Universalität, Wellen, Drehsinne, Born-Grenzfall (teilweise nicht blind) | b, c, d bestätigt; a verfehlt (fester Faktor ≈ 0,54) (v4.10.0-r02) |
 | H93 | Hergeleitete Asymptotik `ln\|C\| = −πkΔ + c√(kΔ) − ½ln(a/b)`, c = 2√π Γ(3/4)/Γ(1/4)·Re√L = 1,809205 (teilweise nicht blind) | Zahlen getroffen (c auf 0,013 %, Konstante ≤ 0,006, volles Problem ≤ 0,009); formal ungültig (Genauigkeitskontrolle Drehsinn +, kΔ = 600); Drehsinn − bestätigt (v4.10.0-r02) |
 | H94 | Gewichtete Norm am Urknall-Übergang: Bosonen +1 → −1 mit genau einer Nullstelle, dazwischen nicht normerhaltend; Fermionen exakt −1 (teilweise nicht blind) | bestätigt; Nullstellen k*Δ = 0,736 / 0,257; nachträglich auch Verstärkung (v4.10.0-r03) |
+| H95 | I3 mit dynamischem Zweig-Gas auf FRW: Fenster mit dunkler Materie zur Rekombination und w ≈ −0,7 heute (nicht blind) | widerlegt (0 von 144 000 Punkten); nachträglich: große Spannung nur bei Schwelle heute, dann zu viel dunkle Materie (v4.10.0-r04) |
 
 ## Erkundungen ohne Vorab-Notiz
 

@@ -427,3 +427,122 @@ R_{\rm glob}^{(v4100\text{-}r03,+)}=(0,1,1,1,1),
 \]
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r04 Source-Only: The Vacuum Term with a Tachyon Branch, and the Bosons Created at the Big Bang}
+\addcontentsline{toc}{section}{v4.10.0-r04 Source-Only: The Vacuum Term with a Tachyon Branch, and the Bosons Created at the Big Bang}
+\label{sec:v4100-r04-tachyon-branch}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.10.0-r03 found that under the second reading no tachyon-sector mechanism gives a vacuum term after the big bang
+(\S\ref{sec:v4100-r03-bang-g2}).  This layer records the check under the domain G1, a temporary author decision to admit the tachyon branch
+as degrees of freedom of its own, two analyses of the deferred idea I3 under that decision (fixed weights and a dynamic branch gas, H95),
+the withdrawal of the decision, an estimate of the bosons created at the bang, and the state of the comparison data of the open predictions.
+The notes are \texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r04/}.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r04 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.10.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23991357}{10.5281/zenodo.23991357} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r04 results}
+\label{subsec:v4100-r04-results}
+
+\paragraph{Theoremlet v4.10.0-r04.1 (domain G1 gives no tension either).}
+Exploration (analytic).  The mixture of I3 (k182, k183) consists of a normal branch (\(\omega=m\cosh\eta\), \(k=m\sinh\eta\)) and a tachyonic
+branch (\(\omega=m\sinh\eta\), \(k=m\cosh\eta\)); the tension comes from the tachyonic one.  The reduced theory of the second reading,
+\((a-b)\tfrac12X-(a+b)V\), has \(\omega^2=k^2+\gamma m^2\) for every mode and no tachyonic branch.  For a massive scalar the averaged pressure
+vanishes (dust).  Under G1, as under G2, the only vacuum term is a free multiple of \(V_{\min}\).  I3 needs the tachyonic branch as degrees of freedom
+of its own, that is, a reversal of the decision of r84.
+
+\paragraph{Decision v4.10.0-r04.2 (author, 6 November 2026: tachyon branch admitted, later withdrawn).}
+First the tachyonic branch was admitted as degrees of freedom of its own, so that I3 becomes possible.  The known cost: quanta of negative energy, and
+vacuum decay through the graviton with a frame cut-off \(\lesssim14\) MeV (r83, H76).  After r04.3 and r04.4 the author withdrew the decision: the
+tachyon part is again only the second reading of the same field (r84).
+
+\paragraph{Theoremlet v4.10.0-r04.3 (I3 with fixed weights is excluded).}
+Exploration (analytic, with an estimate).  The M and T readings of the mixture have the same density and dilute alike.  With fixed weights the sum is
+one fluid with constant \(w=-b/(3a)\), not dust plus \(\Lambda\).  To explain \(\Omega_\Lambda\approx0.69\) today one needs \(b/a\approx2\), and then the dark
+component at recombination is about \(10^{-5}\) of the baryons instead of \(5.4\) (cosmological values from prior knowledge, not looked up).  In
+addition, the mixture at common rapidity is not preserved under redshift: \(k_1/k_2=\tanh\eta\) would stay fixed while each \(k\) is fixed by \(\eta\).
+
+\paragraph{Theoremlet v4.10.0-r04.4 (H95: a dynamic branch gas cannot do it either).}
+Pre-registered (commit \texttt{9eb4e40}, not blind; the refutation was expected analytically).  Model: flat FRW with radiation and baryons, and a
+freely streaming gas with equal numbers in both branches.  The normal branch has weight \(1\); the tachyonic branch has weight \(r\), negative
+energy, and threshold at \(a_{\rm th}=k_0/m\).  Grid \(60\times60\times40\) in \((r,a_{\rm th},\kappa_1/a_{\rm th})\): of \(144\,000\) points, \(12\,780\) keep
+the total density positive for \(a\in[10^{-8},1]\).  None has both a dark-to-baryon ratio in \([4.32,6.48]\) at \(z=1090\) and \(w_{\rm eff}\in[-0.8,-0.6]\)
+today.  \textbf{Refuted.}
+\emph{Noticed afterwards.}  \(w_0\) can be made arbitrarily negative (down to \(-151\)), but only with the threshold practically today
+(\(a_{\rm th}=1.000001\)), and then the ratio at recombination is \(266\).
+
+\paragraph{Theoremlet v4.10.0-r04.5 (bosons created at the bang; estimate).}
+Exploration.  With \(\Delta\lesssim\ell_P\) (r03.3), bosons with matter weights receive \(n_0=0.404\) per mode up to \(k_{\max}\sim1/\Delta\gtrsim M_P\).  This
+gives \(\rho\approx g\,n_0\,k_{\max}^4/(8\pi^2)=g\cdot0.0051\,k_{\max}^4\), equivalent to a temperature of \(\approx0.35\,k_{\max}\).  The radiation after the bang is
+Planck-hot, non-thermal, and initially without fermions.  The number depends on the non-unitary range \(k\sim1/\Delta\) of r03.2 and is an order of
+magnitude only.
+
+\paragraph{Remark v4.10.0-r04.6 (state of the comparison data).}
+For H15 (\(m_W\)) no world average published after 2026-10-21 was found, and for H42/H46 (\(\theta_{23}\)) no global analysis after 2026-10-24; all three
+remain open.  \emph{Disclosure:} The PDG 2026 edition (May 2026) already gave \(m_W=80.3625\pm0.0077\) GeV before the pre-registration of H15, which
+listed only PDG 2025 as known.  The value is \(0.13\sigma\) from the prediction and is not a test.
+
+\paragraph{Proof and measurement sources.}
+Script \texttt{k212\_\allowbreak zweiggas\_\allowbreak frw.py} with output, and the explorations and the proposal in
+\texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r04/}; pre-registration and result H95 in \texttt{notes/\allowbreak research/\allowbreak predictions/}.  \(\square\)
+
+\paragraph{Consequence.}
+The deferred idea I3 (\(\Lambda\) from the dark-matter calculation) has failed in both forms examined, with fixed weights and with a dynamic branch gas,
+even with the tachyon branch admitted.  The author returned to the second reading alone, so \(\Lambda\) is an input.  The bosons created at the bang
+form a Planck-hot, non-thermal start without fermions.  An observable trace would have to survive thermalization, for example a gravitational-wave
+background, which first needs a rule for how tensor modes see the transition.  OP5 is not closed.
+
+\subsection*{v4.10.0-r04 status in the three frames}
+\label{subsec:v4100-r04-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item r04.1--r04.4 concern how the gravity of frame M sees frame T.  Under the second reading T is a re-weighting of the same field (no own branch).
+With an own branch, T would have quanta of negative energy; that was examined and withdrawn.
+\item r04.5 holds in frame M after the bang.  With photon weights (frame P, \(a=b\)) no bosons are created.
+\item No frame-free statement is made.
+\end{itemize}
+
+\subsection*{v4.10.0-r04 register entries}
+\label{subsec:v4100-r04-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r04\\
+\midrule
+\(\Lambda\) under G1 (second reading) & no tension; free multiple of \(V_{\min}\)\\
+tachyon branch as own degrees of freedom & admitted, then withdrawn (author)\\
+I3 with fixed weights & excluded (constant \(w\), CMB)\\
+I3 with dynamic branch gas & refuted (H95)\\
+bosons created at the bang & \(\rho\approx g\cdot0.0051\,k_{\max}^4\), non-thermal, no fermions (estimate)\\
+H15, H42, H46 & open; PDG 2026 \(m_W\) disclosed as known before H15\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r04 ledger and guard update}
+\label{subsec:v4100-r04-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r04}=(1,1,0)
+\]
+for (I3 excluded in both forms; decision withdrawn; \(\Lambda\) remains an input).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r04,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r04}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
