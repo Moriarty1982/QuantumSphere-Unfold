@@ -111,15 +111,18 @@ Erst `dry_run=true`, dann nach Freigabe:
 
 ```bash
 -f deposition_id=<id> -f reserve_only=false -f replace_files=true -f publish=false -f confirm_publish=false \
--f dry_run=false -f metadata=release/zenodo/metadata_vX_Y_Z.json -f files_glob='release/vX.Y.Z/*'
+-f dry_run=false -f metadata=release/zenodo/metadata_vX_Y_Z.json -f files_glob='release/vX.Y.Z/*' -f default_preview=Quantum_Sphaera_Companion_vX_Y_Z.pdf
 ```
 
-Den Entwurf auf Zenodo vom Nutzer prüfen lassen. Veröffentlichen nur auf ausdrückliches Wort, mit `publish=true` und
+`default_preview` (seit PR #74, gemergt als `9df5241`) lädt das Haupt-PDF zuerst hoch und bricht vor dem Veröffentlichen ab, wenn der Entwurf eine andere Vorschau gesetzt hat. Bei Upload **und** Veröffentlichen setzen; beim Veröffentlichen lädt der Lauf die Dateien noch einmal hoch.
+
+Den Entwurf auf Zenodo vom Nutzer prüfen lassen. **Dabei ausdrücklich die Vorschau prüfen:** Zenodo muss das Haupt-PDF als Vorschau zeigen, nicht ein Neben-PDF (bei v4.10.0 war es die Abbildung `op5-slices-9x9.pdf`, weil `tools/zenodo_publish.py` keine Vorschau setzte und die Abbildung zuerst hochlud; vom Autor von Hand korrigiert). Abhilfe: Vorschau im Entwurf setzen (InvenioRDM-Feld `files.default_preview`) oder das Haupt-PDF zuerst hochladen. Veröffentlichen nur auf ausdrückliches Wort, mit `publish=true` und
 `confirm_publish=true`.
 
 ### 7. Danach
 
-Tag `vX.Y.Z` auf GitHub, in `AGENTS.md` die DOI-Disziplin umstellen (neue Version-DOI aktuell, bisherige als
+Tag `vX.Y.Z` und GitHub-Release auf dem Release-Commit, mit Version-DOI und Record-Link in der Release-Notiz (Regel in
+`AGENTS.md`), in `AGENTS.md` die DOI-Disziplin umstellen (neue Version-DOI aktuell, bisherige als
 Vorgänger, nur Provenienz), `DOI_ROLES` in `qs.py` aktualisieren.
 
 ## Fallstricke
@@ -153,3 +156,15 @@ Vorgänger, nur Provenienz), `DOI_ROLES` in `qs.py` aktualisieren.
 | GitHub-Abschluss | erledigt 2026-10-22: Tag und GitHub-Release `v4.9.0` auf `a412bd7` (https://github.com/Moriarty1982/QuantumSphere-Unfold/releases/tag/v4.9.0), Release-Notiz mit DOI/Record, ohne angehängte Dateien; `DOI_ROLES` in `qs.py` auf v4.9.0 |
 | Danach | PR #23 (Runden v4.9.0-r01–r16, `parts/v490-post-release-layers.tex`, Notizordner `notes/research/v4_9_0_r01_r16/`) am 2026-10-22 gemergt (`67f965f`), Grundlage der nächsten Version |
 | Freigabe (nur Claude Code) | Merges in diesem Repository laufen über die projektlokale Regel in `.claude/settings.local.json` (`gh pr ready`/`gh pr merge … --repo Moriarty1982/QuantumSphere-Unfold`); ohne sie blockiert der Auto-Modus-Filter einen Merge ohne Review. Befehle einzeln absetzen, nicht mit `cd … &&` verketten, sonst greift die Regel nicht |
+
+## Stand v4.10.0
+
+| Feld | Wert |
+|---|---|
+| Vorgänger | v4.9.0, Record `23534954` |
+| Version-DOI | `10.5281/zenodo.23991357`, reserviert und veröffentlicht am 2026-11-06 (Reservierung Lauf `42130862373`, Trockenlauf `42130551910`) |
+| Zweig, PR | `release/v4.10.0-prep`, PR #73 |
+| Payload | Einzeldatei aus 58 `\input`-Zeilen (einzige Änderung: Abbildungspfad `figures/op5-slices-9x9.pdf` → `op5-slices-9x9.pdf`), PDF aus dem TeX-Live-Container (Lauf `42131442171`, 1360 Seiten, Overfull 45, Text per `pdftotext` identisch mit dem modularen Build), Abbildung, Manifest |
+| Upload | Lauf `42132220658` (Trockenlauf `42132152400`), drei geerbte Dateien entfernt |
+| Veröffentlicht | Lauf `42132440141` (`publish=true`, `confirm_publish=true`, `replace_files=false`) auf Freigabe des Autors im Chat; der Lauf lädt die Dateien noch einmal hoch (überschreibt gleichnamige), im Record stehen genau vier Dateien mit den lokalen MD5 |
+| GitHub-Abschluss | PR #73 gemergt als `80bdd52`, Tag und GitHub-Release `v4.10.0` darauf (https://github.com/Moriarty1982/QuantumSphere-Unfold/releases/tag/v4.10.0), Release-Notiz mit DOI und Record, ohne angehängte Dateien |
