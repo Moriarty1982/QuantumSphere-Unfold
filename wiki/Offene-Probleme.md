@@ -1,6 +1,6 @@
 # Offene Probleme und wo die Arbeit festsitzt
 
-**Stand: 6. November 2026, nach v4.10.0-r05.** Diese Seite beschreibt, was offen ist, warum, und was der nächste sinnvolle Schritt wäre. [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie) · [GitHub Issues](https://github.com/Moriarty1982/QuantumSphere-Unfold/issues)
+**Stand: 7. November 2026, nach v4.10.0-r06.** Diese Seite beschreibt, was offen ist, warum, und was der nächste sinnvolle Schritt wäre. [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie) · [GitHub Issues](https://github.com/Moriarty1982/QuantumSphere-Unfold/issues)
 
 ## Der gemeinsame Kern: Es fehlt eine Dynamik
 
@@ -40,6 +40,8 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 1. *OP5-Kern:* Umkehr-Schließung I(OP1) = I(OP5_sym), lokal geschlossen.
 2. *Λ-Auslesung:* Ω_Λ : Ω_M = (1 − β²) : β² als Verzweigung der Kaskade, Epoche heute. Daraus die Vorhersage H96 (Ω_M = 0,30185, offen); die einfachste Dynamik dafür ist widerlegt (H97).
 3. *Dynamik-Programm W1/W2:* eingefroren.
+
+**Literaturbezug (v4.10.0-r06):** Auch die strenge Herleitung der semiklassischen Einstein-Gleichungen aus relativer Entropie (Dorau–Much, PRL 2026) legt Λ nicht fest; Λ ist dort Integrationskonstante. Offen ist dabei eine neue, präzise Frage: Trägt der Tachyon-Frame dieselbe KMS-Struktur, also gibt es einen Zustand, dessen Modulargruppe das Bild des Boosts unter $z \mapsto iz$ ist, und fällt $z \mapsto iz$ mit der Wick-Rotation aus thm:artqft zusammen?
 
 Der folgende Text beschreibt den Stand des Dynamik-Zweigs bis v4.10.0-r04.
 
