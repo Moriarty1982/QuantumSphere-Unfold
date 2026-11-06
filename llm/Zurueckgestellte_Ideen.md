@@ -49,6 +49,8 @@ Ideen des Autors oder aus Sitzungen, die nicht jetzt verfolgt werden, aber wiede
 - **Stand:** aktiv, als nächster Kandidat.
 - **5.11., r83.4 / k193:** Geist-Kondensation unter Lesart B gibt Λ-artige Konstante plus Staub (dunkle-Materie-artig) aus einem Feld; Verhältnis frei (Anfangswert C).
 
+- **6.11., H90 und Autorentscheidung (Vorzeichen der Gravitationswirkung), Auslöser berührt:** Mit der korrigierten W1 hat der Vier-Fermionen-Anteil die Form eines negativen Vakuumterms, T^(4f) = −(3κ/16) j² g, mit nicht konstanter Höhe; der ganze Tensor eines homogenen Zustands ist steif mit ρ = p < 0, kein Λ. Dem Autor genannt.
+
 ## I4: Expansion treibt Tachyon-Moden über die Schwelle – Kondensation als Quelle von Masse (und Vakuumenergie)?
 - **Herkunft:** Autorfrage, 5. November 2026: „Müsste sich die Expansion bei Tachyonen anders auswirken? Wäre das für die nicht eher eine Kompression?“
 - **Befund (Standardkinematik):** Die Expansion senkt jeden physikalischen Impuls, k ∝ 1/a. Materie (ω² = k² + m²) wird dabei langsamer, ihre Energie fällt auf m. Tachyonen (ω² = k² − m²) werden schneller, ihre Energie fällt gegen 0. Bei k = m erreichen sie die Schwelle (unendlich schnell, nur Druck, Bezugszustand von T). Im Materie-Frame ist das eine gespiegelte Bewegung. Im Tachyon-Frame ist es dieselbe Bewegung zum eigenen Bezugszustand (η → η + iπ/2 vertauscht cosh und sinh). Eine Kompression des Raums folgt nicht.
