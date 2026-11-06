@@ -2,7 +2,14 @@
 
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.** Sie ist der Einstiegspunkt für die nächste Sitzung, egal mit welchem Modell. Die Geschichte steht in `AGENTS.md` (Rundentabelle), in der Kernkarte und in den Runden.
 
-## Stand vom 6. November 2026, ca. 07:30 (Claude)
+## Stand vom 6. November 2026, ca. 09:00 (Claude)
+- **PR #79 offen** (https://github.com/Moriarty1982/QuantumSphere-Unfold/pull/79, Zweig `research/v4.10-r04-tachyonzweig`, Worktree `$HOME/gh_r04`): Runde **v4.10.0-r04** (Λ mit Tachyon-Zweig: G1, Zulassung und Rücknahme, I3 fest und dynamisch/H95; Bosonen am Urknall; Prüfdatenstand). CI-Lauf 42172122737. **Merge nur nach „PR 79 mergen“**; danach AGENTS-Zeile ergänzen, Worktree entfernen.
+- Lokal eingebaut (938455f): 1347 Seiten, 4002 Labels, Overfull 58, harte Werte 0, Guard-Linter 0; Kandidat 1373 Seiten. AGENTS-Zeile v4.10.0-r04, Kernkarte K140 (v15.6).
+- **Zuletzt vergebene Hypothese: H95.** Nächste freie Nummer **H96**. Nächste Runde v4.10.0-r05.
+- **Inhaltlicher Stand:** Λ ist unter der zweiten Lesart eine Eingabe (alle Strukturspuren I3, I4, Geist, Randbedingung, G1, T-Zweig geprüft und gescheitert). Urknall unter G2 geklärt (Bosonen/Fermionen, Asymptotik, Symmetrie, Δ ≲ ℓ_P, erzeugte Bosonen Planck-heiß).
+- **Nächste Schritte zur Wahl (Autor):** Gewicht der Tensormoden am Urknall festlegen (dann Gravitationswellen-Hintergrund als möglicher Test); I1 (String-Brücke, Konnektor-Stufen, Vorsicht Numerologie); Wege A–C der Konstantenumrechnung; Epoche von thm:dark-energy; H15, H42, H46 warten auf Daten.
+
+## Davor (6.11., ca. 07:30)
 - **PR #78 gemergt als fd9f29d** (auf „PR 78 mergen“, CI-Lauf 42166294405 grün) (https://github.com/Moriarty1982/QuantumSphere-Unfold/pull/78, Zweig `research/v4.10-r03-urknall-g2`, Worktree `$HOME/gh_r03`): Runde **v4.10.0-r03** (Fermionen und Bosonen am Urknall, H94, Δ ≲ ℓ_P, Symmetrie der Drehsinne, Λ unter G2, Korrektur punktweise Identifikation). CI-Lauf 42166294405. AGENTS-Zeile ergänzt, Worktree entfernt; Zweig kann weg.
 - Lokal eingebaut (ad3044e): 1344 Seiten, 3997 Labels, Overfull 58, harte Werte 0, Guard-Linter 0; Kandidat 1370 Seiten. AGENTS-Zeile v4.10.0-r03, Kernkarte K139 (v15.5).
 - **Prüfdatenstand (6.11., `llm/Pruefdatenstand_H15_H42_H46.md`):** H15, H42, H46 weiter offen (keine qualifizierende Kombination nach dem Stichtag gefunden). Nachträglich offengelegt: PDG 2026 (Mai 2026, vor H15) gibt m_W = 80,3625 ± 0,0077 GeV, in der H15-Notiz nicht als bekannt genannt; 0,13σ zur Vorhersage, kein Test. NuFIT 6.1: sin²θ₂₃ = 0,470 (+0,017/−0,014), vor H42/H46, kein Test.

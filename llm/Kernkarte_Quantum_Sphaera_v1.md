@@ -2694,6 +2694,17 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **r03.6:** punktweise Identifikation T/M für a ≠ b unvereinbar (Wronski), Randbedingungen φ'(0) = 0, ψ(0) = 0 zurückgezogen.
 - R_chk = (1,1,0); Guards unverändert. Lokal 1344 Seiten, 3997 Labels.
 
+### K140 Runde v4.10.0-r04: Vakuumterm mit Tachyon-Zweig, Bosonen am Urknall (2026-11-06)
+
+`sec:v4100-r04-tachyon-branch`, Snippet `llm/v4100_r04_round.tex`, Notizen `notes/research/v4_10_0_r04/`.
+- **r04.1:** G1 unter zweiter Lesart: kein tachyonischer Zweig, Staub, Λ frei.
+- **r04.2:** T-Zweig als eigene Freiheitsgrade zugelassen, nach r04.3/r04.4 zurückgenommen.
+- **r04.3:** I3 mit festen Gewichten: ein Fluid w = −b/(3a), CMB-ausgeschlossen; Mischung unter Rotverschiebung nicht erhalten.
+- **r04.4 H95:** dynamisches Zweig-Gas widerlegt (0 von 144 000 Punkten).
+- **r04.5:** Bosonen am Urknall ρ ≈ g·0,0051·k_max⁴, nichtthermisch, ohne Fermionen.
+- **r04.6:** H15, H42, H46 offen; PDG 2026 m_W vor H15 offengelegt (kein Test).
+- R_chk = (1,1,0); Guards unverändert. Lokal 1347 Seiten, 4002 Labels.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2895,3 +2906,4 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - v15.3 (2026-11-06): K137 Runde v4.10.0-r01 (H90, Vorzeichen der Gravitationswirkung korrigiert).
 - v15.4 (2026-11-06): K138 Runde v4.10.0-r02 (H91–H93, Asymptotik der Urknall-Beimischung).
 - v15.5 (2026-11-06): K139 Runde v4.10.0-r03.
+- v15.6 (2026-11-06): K140 Runde v4.10.0-r04.
