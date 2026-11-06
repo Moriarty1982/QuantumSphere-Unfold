@@ -2683,6 +2683,17 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **r02.3 H93:** C = e^{−L/2}C_u (adiabatische Amplitude); WKB am Umkehrpunkt η = −i: ln|r| = c√(kΔ), c = 2√π Γ(3/4)/Γ(1/4)·Re√L = 1,809205; Korrektur −λ/σ³ nur Phase −π/4. Zahlen auf 0,013 %; formal ungültig (Kontrolle 1,4·10⁻⁵ bei Drehsinn +, kΔ = 600), Drehsinn − bestätigt.
 - R_chk = (1,1,0); Guards unverändert. Lokal 1341 Seiten, 3992 Labels.
 
+### K139 Runde v4.10.0-r03: Fermionen und Bosonen am Urknall, Vakuumterm unter G2 (2026-11-06)
+
+`sec:v4100-r03-bang-g2`, Snippet `llm/v4100_r03_round.tex`, Notizen `notes/research/v4_10_0_r03/`.
+- **r03.1:** Fermionen ohne Beimischung (ψ = c^{−1/2}χ), CPT exakt, Faktor ±iβ_sym; Masse behält im Bild ihr Vorzeichen, am Urknall wegen a → 0 unerheblich.
+- **r03.2 H94:** Bosonen-Norm +1 → −1, Nullstelle k*Δ = 0,736 / 0,257, dazwischen nicht normerhaltend; Fermionen −1.
+- **r03.3:** Autorentscheidung Δ ≲ ℓ_P.
+- **r03.4:** M(L̄) = [[d̄, b̄], [c̄, ā]], det M = e^{−L}; |C₊| = |C₋|; lokal M = [[1, 0], [r, 1]].
+- **r03.5:** unter G2 kein Λ aus I3, I4, Geist-Kondensat; Λ = a·V_min frei.
+- **r03.6:** punktweise Identifikation T/M für a ≠ b unvereinbar (Wronski), Randbedingungen φ'(0) = 0, ψ(0) = 0 zurückgezogen.
+- R_chk = (1,1,0); Guards unverändert. Lokal 1344 Seiten, 3997 Labels.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2883,3 +2894,4 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - v15.2 (2026-11-06): K136 Runde v4.9.0-r86 (H87–H89, Wolfram-Prüfung, Korrektur zur W1-Notiz).
 - v15.3 (2026-11-06): K137 Runde v4.10.0-r01 (H90, Vorzeichen der Gravitationswirkung korrigiert).
 - v15.4 (2026-11-06): K138 Runde v4.10.0-r02 (H91–H93, Asymptotik der Urknall-Beimischung).
+- v15.5 (2026-11-06): K139 Runde v4.10.0-r03.

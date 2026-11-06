@@ -2,7 +2,14 @@
 
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.** Sie ist der Einstiegspunkt für die nächste Sitzung, egal mit welchem Modell. Die Geschichte steht in `AGENTS.md` (Rundentabelle), in der Kernkarte und in den Runden.
 
-## Stand vom 6. November 2026, ca. 05:30 (Claude)
+## Stand vom 6. November 2026, ca. 07:30 (Claude)
+- **PR #78 offen** (https://github.com/Moriarty1982/QuantumSphere-Unfold/pull/78, Zweig `research/v4.10-r03-urknall-g2`, Worktree `$HOME/gh_r03`): Runde **v4.10.0-r03** (Fermionen und Bosonen am Urknall, H94, Δ ≲ ℓ_P, Symmetrie der Drehsinne, Λ unter G2, Korrektur punktweise Identifikation). CI-Lauf 42166294405. **Merge nur nach „PR 78 mergen“**; danach AGENTS-Zeile ergänzen, Worktree entfernen.
+- Lokal eingebaut (ad3044e): 1344 Seiten, 3997 Labels, Overfull 58, harte Werte 0, Guard-Linter 0; Kandidat 1370 Seiten. AGENTS-Zeile v4.10.0-r03, Kernkarte K139 (v15.5).
+- **Zuletzt vergebene Hypothese: H94.** Nächste freie Nummer **H95**. Nächste Runde v4.10.0-r04.
+- **Inhaltlicher Stand:** Urknall-Übergang unter G2 geklärt (Bosonen, Fermionen, Asymptotik, Symmetrie). Λ: unter G2 kein Mechanismus aus der Struktur, Λ = a·V_min frei; alle T-Spuren (I3, I4, Geist) und die Randbedingung durchgesehen.
+- **Nächste Schritte zur Wahl (Autor):** G1 für bestimmte Größen statt G2 (würde I3 wieder öffnen); I1 (String-Brücke, Skala); die gesamte erzeugte Bosonen-Energie am Planck-Bereich; offene Vorhersagen H15, H42, H46 warten auf Daten.
+
+## Davor (6.11., ca. 05:30)
 - **PR #76 gemergt als 99f20f8** (auf „PR 76 mergen“, CI-Lauf 42161112502 grün) (https://github.com/Moriarty1982/QuantumSphere-Unfold/pull/76, Zweig `research/v4.10-r02-urknall-asymptotik`, Worktree `$HOME/gh_r02`): Runde **v4.10.0-r02**, Asymptotik der Urknall-Beimischung (H91–H93), angehängt an `parts/v4100-post-release-layers.tex`; Notizen `notes/research/v4_10_0_r02/`, H91–H93 unter `predictions/`, Wiki (8 Seiten); ours-Merge der lokalen Historie bis 6683535. CI-Lauf 42161112502. AGENTS-Zeile ergänzt, Worktree entfernt; Zweig kann weg.
 - Lokal eingebaut (6683535): 1341 Seiten, 3992 Labels, Overfull 58, harte Werte 0, Guard-Linter 0; Kandidat 1367 Seiten. AGENTS-Zeile v4.10.0-r02, Kernkarte K138 (v15.4).
 - **H94 bestätigt (Vorab 99f1cce, k210):** gewichtete Norm am Urknall-Übergang: Bosonen N von +1 (kΔ → 0) nach −1 (kΔ ≫ 1), genau eine Nullstelle (k*Δ = 0,736 bzw. 0,257 je Drehsinn), dazwischen nicht normerhaltend (nachträglich auch Verstärkung bis 1,18 bzw. −1,63); Fermionen N_F = −1 exakt. Korrektur-Nachtrag in `llm/Erkundung_Fermionen_Urknall.md` (Bosonen-Erzeugung nur im scharfen Bild). **Autorentscheidung (6.11.): Δ ≲ Planck-Länge** (eingetragen in `llm/Bestandsaufnahme_Wirkungsansaetze.md`): beobachtbare Moden normerhaltend, n = 0,404 je Mode für Bosonen mit Materie-Gewichten, Fermionen CPT; die gesamte erzeugte Bosonen-Energie hängt am Planck-Bereich und ist offen. Runde v4.10.0-r03 sammelt Fermionen-Erkundung, H94 und diese Entscheidung.
