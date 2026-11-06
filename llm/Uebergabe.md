@@ -2,7 +2,19 @@
 
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.** Sie ist der Einstiegspunkt für die nächste Sitzung, egal mit welchem Modell. Die Geschichte steht in `AGENTS.md` (Rundentabelle), in der Kernkarte und in den Runden.
 
-## Stand vom 6. November 2026, Vormittag (Claude)
+## Stand vom 6. November 2026, ca. 04:15 (Claude)
+- **Runde v4.10.0-r01 gebaut, PR #75 offen** (https://github.com/Moriarty1982/QuantumSphere-Unfold/pull/75, Zweig `research/v4.10-r01-einstein-vorzeichen`, Worktree `$HOME/gh_r01`): H90, Autorentscheidung (W1 auf −(1/2κ)∫e R korrigiert), Korrekturen zu r81.1(b), r86.2–r86.4, r82.4. Erste Runde in der neuen Schichtdatei `sources/research/parts/v4100-post-release-layers.tex` (eingebunden in `support-route.tex`). Notizen `notes/research/v4_10_0_r01/`, H90 unter `predictions/`, W1-Notizen und Bestandsaufnahme in `v4_10_0_w1/`, Wiki (8 Seiten). ours-Merge der lokalen Historie bis 357d3e5. CI-Lauf 42154473646 angestoßen (`build_historical=false`). **Merge nur nach „PR 75 mergen“.**
+- **Lokal eingebaut (357d3e5):** 1338 Seiten, 3987 Labels, Overfull 58 (MiKTeX), harte Werte 0, Guard-Linter 0. Kandidat lokal 1364 Seiten, 0 undefiniert. AGENTS-Zeile v4.10.0-r01 und Kernkarte K137 (v15.3) nachgezogen. Snippet `llm/v4100_r01_round.tex`.
+- **H90** (Vorab e5d03d8, Ergebnis 6d5261d): Einstein-Gleichung von W1 voll nichtlinear, Bianchi-verträglich; W1 wie notiert stieß ab. **Autorentscheidung 6.11.: korrigiert** (76bca98). Durchsicht `llm/Durchsicht_Vorzeichen_kappa_r81_r86.md`: nur r81.1(b)/H88, H89, r86.4, r82.4 betroffen.
+- **Zuletzt vergebene Hypothese: H90.** Nächste freie Nummer **H91**. Nächste Runde **v4.10.0-r02**.
+- Local `main` steht noch auf da64ec4; die Arbeit liegt auf dem Worktree-Zweig `claude/anthropic-skills-weitermachen-446e5f`.
+
+## Nächster Schritt
+1. Nach „PR 75 mergen“: mergen (Merge-Commit), in AGENTS.md „PR #75 gemergt als <sha>“ ergänzen, Worktree `$HOME/gh_r01` entfernen.
+2. Danach zur Wahl: vorab festgelegter Test des Abfalls e^{−πkΔ} mit Potenzvorfaktor bis kΔ ≈ 60 (`llm/k202_wolfram_gegenprobe.wl`); Übergangsbedingung für Fermionen am Urknall (G2); Dauer Δ; I3 (Auslöser berührt: negativer Λ-förmiger Vier-Fermionen-Term); Skala von Λ; I1.
+- Offene Vorhersagen H15, H42, H46 warten auf Daten.
+
+## Davor (6.11., Vormittag): H90 und Autorentscheidung
 - **H90 vorab festgelegt** (`llm/Vorab_Notiz_H90_W1_Einstein_nichtlinear.md`, Commit e5d03d8, nicht blind) und **bestätigt** (Commit 6d5261d; `llm/k205_w1_einstein_nichtlinear.py` lokal mit Python/Jets, `llm/k205b_schwachfeld.wl` Wolfram). Ergebnis `llm/Ergebnis_H90_W1_Einstein_nichtlinear.md`:
   - Einstein-Gleichung von W1 voll nichtlinear hergeleitet: Cartan durch ω = ω̃ + K, K = −(σ_g/4)κ ε j; EC-Gleichung = G̃ + σ_g κ T^eff, T^eff = T^Bel − g L_W + T^Max − g λ j², λ = −σ_g 3κ/16; ∇̃^μ T^eff = 0 auf der Schale (Reste ≤ 2·10⁻¹⁴, Negativkontrollen O(0,1–1)).
   - **Vorzeichenbefund:** W1 wie notiert (+R/2κ, Signatur +−−−) gibt G̃ = −κT, also abstoßende Gravitation. Physikalisch richtig: −R/2κ. Dann L_4f = +(3/16)κ j², T^(4f) = −(3κ/16) j² g, homogen ρ = p = −(3κ/16)n² < 0. Betroffen (Korrektur in nächster Runde, nicht umschreiben): Vorzeichen in H88/r81, H89a/b, Korrektur r86.4, Paarkanal r82.4 (würde abstoßend). Noch durchzusehen: r82–r85 (H74–H76, H78–H86) auf Abhängigkeit vom Vorzeichen.

@@ -2667,6 +2667,14 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **r86.4 Korrektur zur W1-Notiz:** Vorzeichen von ρ zustandsabhängig; „nicht wie Λ“ nur für den ganzen Tensor; r81.1(c) bleibt.
 - Offen: volle nichtlineare Einstein-Gleichung, Bianchi. R_chk = (1,1,0); Guards unverändert. OP5 offen. Lokal 1335 Seiten, 3982 Labels, Overfull 58 (MiKTeX 25.12; keine in r86), harte Werte 0. PR #72 gemergt als e6e55cc.
 
+### K137 Runde v4.10.0-r01: volle Einstein-Gleichung von W1, Vorzeichen der Gravitation (2026-11-06)
+
+`sec:v4100-r01-einstein-sign`, Snippet `llm/v4100_r01_round.tex`, Notizen `notes/research/v4_10_0_r01/`, GitHub-Schichtdatei `parts/v4100-post-release-layers.tex`.
+- **r01.1 H90 (nicht blind):** an allgemeinen Punkten gekrümmter Hintergründe (Jets bis Ordnung 3): Cartan gelöst durch ω̃ + K, K_cab = −(σ_g/4)κ ε_cabd j^d; Vierbein-Variation = G̃ + σ_g κ T^eff, T^eff = T^Bel − g L_W + T^Max − g λ j², λ = −σ_g 3κ/16; ∇̃T^eff = 0. Für W1 wie notiert (σ_g = +1) G̃ = −κT: abstoßend.
+- **r01.2 Autorentscheidung:** S_grav = −(1/2κ)∫e R. Dann L_4f = +(3/16)κ j², T^(4f) = −(3κ/16) j² g.
+- **r01.3 Korrekturen:** r81.1(b)/r86.2 Vorzeichen des Torsionsterms; r86.3 ρ = p = −(3κ/16)n² < 0; r86.4 im Vorzeichenteil zurückgenommen; r82.4 Paarkanal abstoßend, ν^c-Kondensat entfällt. Übrige H69–H86 nicht betroffen.
+- R_chk = (1,1,1); Guards unverändert. OP5 offen. Lokal 1338 Seiten, 3987 Labels.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2865,3 +2873,4 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - v15.0 (2026-11-05): K134 Runde v4.9.0-r84 (zweite Lesart, H78–H81, Autorentscheidungen).
 - v15.1 (2026-11-05): K135 Runde v4.9.0-r85 (H82–H86, G2, Urknall als CPT-Übergang).
 - v15.2 (2026-11-06): K136 Runde v4.9.0-r86 (H87–H89, Wolfram-Prüfung, Korrektur zur W1-Notiz).
+- v15.3 (2026-11-06): K137 Runde v4.10.0-r01 (H90, Vorzeichen der Gravitationswirkung korrigiert).
