@@ -30,3 +30,9 @@ Nicht gezählt werden Kombinationen mit dem CMB, Reanalysen älterer Daten und E
 - Die Vorhersage liegt im Bereich der DESI-Werte und etwa 1,8σ unter Planck. Die Datensätze streuen untereinander um etwa 2,5σ. Das Kriterium ist daher auf eine Quelle festgelegt, damit nicht nachträglich die passende gewählt wird.
 - Der Wert von β_sym stammt aus dem Kern (T6, OP1: eingesetzt, nicht hergeleitet). Die Gleichsetzung Ω_M = β² stand schon in `thm:dark-energy`. Die Epoche „heute“ ist eine Autorentscheidung vom 6.11.; sie ist kein Ergebnis.
 - Die Hopf-Variante β² = 1/3 aus `thm:dark-energy` ist hier **nicht** die Vorhersage. Sie wäre verträglich nur mit Werten nahe 0,333.
+
+## Nachtrag (6.11.2026, vor jeder Datenprüfung; Vorwissen ergänzt)
+Beim Weitersuchen gefunden; das hätte in „Offenlegung“ gehört. Hypothese und Kriterium bleiben unverändert.
+- **v4.8.0-r17** hat die Epochenfrage schon behandelt und drei Auswege notiert: (a) `thm:dark-energy` gilt nur heute, (b) β läuft rückwärts, (c) eine andere Funktion der Kaskadenwahrscheinlichkeiten. Die Autorentscheidung „heute“ ist Ausweg (a). Dort steht auch: Dann verlieren `prop:H0-tension` und `prop:saturation` ihre Grundlage (beide inzwischen archiviert), und die Übereinstimmung wird „eine Aussage über eine Epoche“.
+- **v4.8.0-r03 F11:** γ_L = γ_BI/γ_string ist das Verhältnis zweier Bestimmungen **desselben** LQG-Parameters: der korrigierten Zählung (Domagała–Lewandowski/Meissner, 0,2375) zur überholten (Ashtekar–Baez–Corichi–Krasnov, 0,12738). Der Companion liest dieses Verhältnis als Lorentzfaktor. Eine Herleitung beider Werte aus der Struktur gibt es nicht. H96 prüft also auch diese Lesart.
+- **r68:** Die Literatur bevorzugt die SU(2)-Behandlung der Horizontzustände (γ ≈ 0,274). Damit wäre γ_L ≈ 2,15 und Ω_M ≈ 0,365, weit weg von allen Daten. H96 setzt die U(1)-Zählung voraus.
