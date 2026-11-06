@@ -45,6 +45,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- **6.11.2026, Rückgang bis zur Grundidee (Arbeitsnotiz):** Gesamtbild und Offene-Probleme priorisieren die gemeinsame-Träger-/physikalische-Identifikationsfrage vor weiteren Spinmasken. Zehnstufige Rückwärtskette trennt Nullbegriffe, Projektor, Sektoren und ursprüngliche Einheitshypothese; kein neuer Gesamtabschluss.
+
 - **6.11.2026, Projektor-/Spinbrücke (Erkundung):** Offene-Probleme trennt elektromagnetischen Reflektor, Dixon-Chiralität, P_C7 und Horizontmaske. Die vorhandene r51-Erhaltung ist kein neues Spin-Auswahlgesetz; „mod HC“ bleibt ohne konkrete Träger-/Zähldaten offen.
 
 - **6.11.2026, gemeinsamer Zustand und Spinzugriff (Erkundung):** Offene-Probleme unterscheidet vollständige Frameumrechnung, eingeschränkten Zugriff und selektierten Zustand. Restbeiträge bleiben bilanziell relevant; keine physikalische Horizontabbildung wird durch das Vergleichsmodell behauptet.
