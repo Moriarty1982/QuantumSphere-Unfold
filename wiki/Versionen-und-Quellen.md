@@ -15,7 +15,9 @@ Stand: **2.11.2026**, geprüft gegen Commit [`cf48496c95b6c9ec3f6a3c196df2c8c2c8
 
 - [README am geprüften Commit](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/cf48496c95b6c9ec3f6a3c196df2c8c2c84e3d0b/README.md): öffentliche Baseline und Scope Guard.
 - [CITATION.cff am geprüften Commit](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/cf48496c95b6c9ec3f6a3c196df2c8c2c84e3d0b/CITATION.cff): Zitiermetadaten.
-- [Zenodo v4.9.0](https://zenodo.org/records/23534954): veröffentlichter Datensatz; [Version DOI](https://doi.org/10.5281/zenodo.23534954).
+- [Zenodo v4.10.0](https://zenodo.org/records/23991357): aktueller veröffentlichter Datensatz (PDF, Quelltext als Einzeldatei, Abbildung, Manifest); [Version DOI](https://doi.org/10.5281/zenodo.23991357). GitHub-Release [v4.10.0](https://github.com/Moriarty1982/QuantumSphere-Unfold/releases/tag/v4.10.0).
+- [Zenodo v4.9.0](https://zenodo.org/records/23534954): Vorgänger; [Version DOI](https://doi.org/10.5281/zenodo.23534954).
+- **Ablauf eines Zenodo-Releases** (`release/zenodo/README.md`): Entwurf als neue Version reservieren, DOI auf die Titelseite, Payload bauen, hochladen mit `default_preview` = Haupt-PDF (es wird zuerst hochgeladen und vor dem Veröffentlichen geprüft; bei v4.10.0 zeigte Zenodo zunächst die Abbildung als Vorschau), Entwurf prüfen, veröffentlichen, danach Tag und GitHub-Release `vX.Y.Z`.
 - [Concept DOI](https://doi.org/10.5281/zenodo.19210728): versionsübergreifender Projektverweis. Für eine bestimmte Fassung den Version DOI angeben.
 - [Forschungs-README](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/cf48496c95b6c9ec3f6a3c196df2c8c2c84e3d0b/sources/research/README.md): Arbeitslinie und historische Einordnungen.
 - [4.10-Basisnotizen](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/cf48496c95b6c9ec3f6a3c196df2c8c2c84e3d0b/notes/research/v4_10_0_base/README.md): Arbeitsversion, Revisionen, Archivierung und Guards.

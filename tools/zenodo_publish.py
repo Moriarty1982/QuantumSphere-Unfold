@@ -222,6 +222,48 @@ def set_metadata(api_base: str, token: str, deposition_id: str, payload: Dict[st
     return request_json("PUT", f"{api_base}/deposit/depositions/{deposition_id}", token, payload=payload)
 
 
+PREVIEWABLE_SUFFIXES = (".pdf", ".png", ".jpg", ".jpeg", ".gif", ".tif", ".tiff", ".csv", ".txt", ".md", ".json")
+
+
+def upload_order(files: List[Path], default_preview: Optional[str]) -> List[Path]:
+    """Smallest files first, but the default-preview file before all others.
+
+    Zenodo picks the first previewable file it receives as the record preview unless one is set.
+    Sorting by size alone put a small figure PDF ahead of the main PDF in v4.10.0.
+    """
+    ordered = sorted(files, key=lambda p: p.stat().st_size)
+    if default_preview:
+        ordered.sort(key=lambda p: 0 if p.name == default_preview else 1)
+    return ordered
+
+
+def check_default_preview(files: List[Path], default_preview: Optional[str]) -> None:
+    """Fail on a preview name that is not uploaded; warn when several PDFs leave the preview to chance."""
+    names = [p.name for p in files]
+    if default_preview and files and default_preview not in names:
+        raise ZenodoError(f"--default-preview {default_preview} is not among the upload files: {', '.join(names)}")
+    pdfs = [n for n in names if n.lower().endswith(".pdf")]
+    if not default_preview and len(pdfs) > 1:
+        print("WARNING: several PDFs are uploaded (" + ", ".join(pdfs) + ") and no --default-preview is given; "
+              "Zenodo will preview whichever previewable file arrives first.")
+        if os.environ.get("GITHUB_ACTIONS") == "true":
+            print("::warning::Several PDFs and no default_preview; Zenodo may preview the wrong file.")
+
+
+def read_default_preview(api_base: str, token: str, deposition_id: str) -> Optional[str]:
+    """Read files.default_preview of the draft through the records API (read only).
+
+    Returns None when the field is unset or the endpoint is not available.
+    """
+    try:
+        draft = request_json("GET", f"{api_base}/records/{deposition_id}/draft", token)
+    except ZenodoError as exc:
+        print(f"Could not read the draft's default preview: {exc}")
+        return None
+    files = draft.get("files") if isinstance(draft, dict) else None
+    return files.get("default_preview") if isinstance(files, dict) else None
+
+
 def publish_deposition(api_base: str, token: str, deposition_id: str) -> Dict[str, Any]:
     return request_json("POST", f"{api_base}/deposit/depositions/{deposition_id}/actions/publish", token, payload={})
 
@@ -243,6 +285,9 @@ def main() -> int:
     parser.add_argument("--publish", action="store_true", help="Publish after upload")
     parser.add_argument("--confirm-publish", action="store_true", help="Required together with --publish")
     parser.add_argument("--sleep-after-upload", type=float, default=0.0, help="Optional pause before publish")
+    parser.add_argument("--default-preview", default=None,
+                        help="File name to show as the record preview (uploaded first and checked before publishing), "
+                             "e.g. Quantum_Sphaera_Companion_v4_10_0.pdf")
     args = parser.parse_args()
 
     api_base = SANDBOX_API if args.environment == "sandbox" else ZENODO_API
@@ -256,6 +301,9 @@ def main() -> int:
     print(f"API base: {api_base}")
     print(f"Metadata: {args.metadata}")
     print_manifest(files)
+    check_default_preview(files, args.default_preview)
+    if args.default_preview:
+        print(f"Default preview: {args.default_preview}")
 
     if args.publish and not args.confirm_publish:
         raise ZenodoError("--publish requires --confirm-publish")
@@ -310,11 +358,18 @@ def main() -> int:
         removed = remove_draft_files(api_base, token, deposition_id)
         note(f"Removed {len(removed)} inherited file(s): {', '.join(removed) or '-'}")
 
-    for path in sorted(files, key=lambda p: p.stat().st_size):
+    for path in upload_order(files, args.default_preview):
         print(f"Uploading {path.name} ...")
         put_file(bucket_url, token, path)
         note(f"Uploaded {path.name} ({path.stat().st_size} bytes)")
     note("Files uploaded.")
+
+    if args.default_preview:
+        current = read_default_preview(api_base, token, deposition_id)
+        if current and current != args.default_preview:
+            raise ZenodoError(f"Draft preview is {current}, not {args.default_preview}; set it in the Zenodo draft "
+                              "before publishing")
+        note(f"Draft preview: {current or 'not set explicitly; ' + args.default_preview + ' was uploaded first'}")
 
     if args.sleep_after_upload > 0:
         time.sleep(args.sleep_after_upload)

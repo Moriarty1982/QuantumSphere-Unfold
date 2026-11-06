@@ -67,6 +67,10 @@ on:
         description: "Quoted file globs to upload"
         required: true
         default: "release/v4.8.0/*"
+      default_preview:
+        description: "File name to use as the Zenodo preview, e.g. Quantum_Sphaera_Companion_v4_10_0.pdf (uploaded first, checked before publish)"
+        required: false
+        default: ""
 
 permissions:
   contents: read
@@ -134,6 +138,10 @@ jobs:
 
           if [[ -n "${{ inputs.new_version_of }}" ]]; then
             args+=(--new-version-of "${{ inputs.new_version_of }}")
+          fi
+
+          if [[ -n "${{ inputs.default_preview }}" ]]; then
+            args+=(--default-preview "${{ inputs.default_preview }}")
           fi
 
           if [[ "${{ inputs.reserve_only }}" == "true" ]]; then
