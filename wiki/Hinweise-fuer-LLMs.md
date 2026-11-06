@@ -45,6 +45,8 @@ werkzeugübergreifender Standard. `CLAUDE.md` verweist nur darauf.
 
 ## Vorgehen bei Fachfragen
 
+Der [Zwischenabschluss der OP5-Rückverfolgung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_reconstruction_verdict_2026_11_06.md) bündelt die sechs Prüfnotizen. Die historische Auslöschungspflicht ist als Grundlage ausgesetzt. Lokale Ausleseidentitäten, bedingte Erhaltung und die empirische Identifikation q = Ω_M(heute) sind getrennte Aussagen. Die Kaskade setzt q bereits ein; ihre Flussstabilität ist keine unabhängige Herleitung seines Werts. Die Quellenrekonstruktion nicht ohne neue Evidenz als neuen Beweis oder neue physikalische Theorie ausgeben.
+
 Für die neue OP5-Arbeitsfrage liegt ein [erstes Route-Datenblatt](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_route_inventory_2026_11_06.md) vor: Der abstrakte Erhaltungssatz und die Realisierung seiner Voraussetzungen sind getrennt zu behandeln. Insbesondere bezeichnet sein Λ einen Zielraum, nicht schon die kosmologische Konstante; die Klassenabbildung J ist nicht ohne Nachweis die Kern-Involution. Das Datenblatt ist ein begrenzter Rekonstruktionsbefund, kein vollständiger Audit späterer Atlas- oder Abschlusslayer.
 
 1. Klären, ob die Frage Veröffentlichung, aktuelle Forschung oder einen historischen Zustand betrifft.
