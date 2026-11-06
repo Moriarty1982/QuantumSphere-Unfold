@@ -2,7 +2,21 @@
 
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.** Sie ist der Einstiegspunkt für die nächste Sitzung, egal mit welchem Modell. Die Geschichte steht in `AGENTS.md` (Rundentabelle), in der Kernkarte und in den Runden.
 
-## Stand vom 6. November 2026, ca. 01:00 (Claude)
+## Stand vom 6. November 2026, Vormittag (Claude)
+- **H90 vorab festgelegt** (`llm/Vorab_Notiz_H90_W1_Einstein_nichtlinear.md`, Commit e5d03d8, nicht blind) und **bestätigt** (Commit 6d5261d; `llm/k205_w1_einstein_nichtlinear.py` lokal mit Python/Jets, `llm/k205b_schwachfeld.wl` Wolfram). Ergebnis `llm/Ergebnis_H90_W1_Einstein_nichtlinear.md`:
+  - Einstein-Gleichung von W1 voll nichtlinear hergeleitet: Cartan durch ω = ω̃ + K, K = −(σ_g/4)κ ε j; EC-Gleichung = G̃ + σ_g κ T^eff, T^eff = T^Bel − g L_W + T^Max − g λ j², λ = −σ_g 3κ/16; ∇̃^μ T^eff = 0 auf der Schale (Reste ≤ 2·10⁻¹⁴, Negativkontrollen O(0,1–1)).
+  - **Vorzeichenbefund:** W1 wie notiert (+R/2κ, Signatur +−−−) gibt G̃ = −κT, also abstoßende Gravitation. Physikalisch richtig: −R/2κ. Dann L_4f = +(3/16)κ j², T^(4f) = −(3κ/16) j² g, homogen ρ = p = −(3κ/16)n² < 0. Betroffen (Korrektur in nächster Runde, nicht umschreiben): Vorzeichen in H88/r81, H89a/b, Korrektur r86.4, Paarkanal r82.4 (würde abstoßend). Noch durchzusehen: r82–r85 (H74–H76, H78–H86) auf Abhängigkeit vom Vorzeichen.
+  - Nachtrag in `llm/Wirkung_W1_Dixon_U1.md`. I3-Auslöser berührt (4f-Term in Λ-Form, physikalisch negativ).
+- **Noch nicht auf GitHub.** Lokaler Zweig `claude/anthropic-skills-weitermachen-446e5f` (Worktree), vorgespult auf 718030e der Parallelsitzung; local `main` steht noch auf da64ec4.
+- **Zuletzt vergebene Hypothese: H90.** Nächste freie Nummer **H91**. Erste Runde nach dem Release: **v4.10.0-r01** (neue Schichtdatei `parts/v4100-post-release-layers.tex`, Labels `sec:v4100-rNN-…`).
+
+## Nächster Schritt
+1. **Autorentscheidung:** W1 auf S_grav = −(1/2κ)∫e R korrigieren (empfohlen) oder κ < 0 als gemeinte Lesart.
+2. Danach Durchsicht r82–r85 auf das Vorzeichen (H74, H75, H76 hängen am Graviton; r82.4 Paarkanal), ggf. als Vorab-Test H91.
+3. Runde v4.10.0-r01 mit H90 und den Korrekturen, PR mit Wiki (Ablauf `llm/anleitungen/qsc-runde-einbauen.md`).
+- Danach weiter aus der Liste unten (Abfall e^{−πkΔ}, Urknall-Übergang der Fermionen, I1, I3, Skala von Λ).
+
+## Davor (6.11., ca. 01:00)
 - **PR #72 gemergt als e6e55cc** (6.11.; `research/v4.10-r86-wolfram-pruefung`, https://github.com/Moriarty1982/QuantumSphere-Unfold/pull/72), Runde **v4.9.0-r86**: unabhängige Prüfung mit Wolfram, H87 (a, c bestätigt, b widerlegt wie formuliert), H88 bestätigt (W1-Feldgleichungen), H89 bestätigt (Energie-Impuls-Tensor; T^(4f) Λ-Form, homogen ρ = p > 0), Korrektur r86.4 zur Lesart der W1-Notiz. Inhalt: Runde in `parts/v490-post-release-layers.tex`, Notizen `notes/research/v4_10_0_r86/` (k202–k204), H87–H89 unter `predictions/`, W1-Notiz mit Nachträgen, Wiki (6 Seiten), ours-Merge der lokalen Historie bis f4b1ebc. CI-Build auf dem Zweig per workflow_dispatch angestoßen. CI-Lauf 42129615268 grün; AGENTS-Zeile und Kernkarte nachgezogen. Wiki-Sync läuft nach dem Merge automatisch.
 - **Lokal eingebaut (f4b1ebc):** 1335 Seiten, 3982 Labels, harte Werte 0, Guard-Linter 0. Overfull 58 unter MiKTeX 25.12 (keine in r86; TeX Live liefert 45). Kandidat lokal gebaut: 1361 Seiten, harte Werte 0. AGENTS-Zeile r86, Kernkarte K136 (v15.2). **Nächste Bundle-/ours-Basis: der Commit dieser Übergabe** (Repo-Worktree teilt Objekte mit dem lokalen Repo, kein Bundle nötig).
 - GitHub-Worktree `$HOME/gh_r86` nach dem Merge entfernt; Zweig `research/v4.10-r86-wolfram-pruefung` kann weg.
@@ -19,8 +33,8 @@
 - Overfull: 58 unter MiKTeX, 45 unter TeX Live (toolchain-abhängig); kein Befund.
 - **Vorschau auf Zenodo:** Bei v4.10.0 zeigte Zenodo die Abbildung als Vorschau (Autor hat es von Hand korrigiert). Regel in AGENTS.md und Zenodo-Skill. **PR #74 gemergt als 9df5241** (`tools/zenodo-default-preview`, Zweig kann weg): `tools/zenodo_publish.py` bekommt `--default-preview` (Haupt-PDF zuerst, Prüfung vor dem Veröffentlichen, Warnung bei mehreren PDFs), Workflow-Eingabe `default_preview`, README, Wiki (Versionen-und-Quellen mit v4.10.0-Record); Workflow-Trockenlauf grün (Lauf 42134792093). Worktree entfernt.
 
-## Nächster Schritt (Autor wählt)
-1. Volle nichtlineare Einstein-Gleichung und Bianchi-Identität von W1 (Wolfram, in Teile zerlegt wegen ca. 100 s Laufzeitgrenze; `llm/k204_w1_einstein.wl` als Ausgang).
+## Weitere Optionen (aus der Sitzung davor)
+1. Erledigt mit H90.
 2. Vorab festgelegter Test des Abfalls e^{−πkΔ} mit Potenzvorfaktor bis kΔ ≈ 60 (Fit-Modell vorab festlegen; `llm/k202_wolfram_gegenprobe.wl`).
 3. Übergangsbedingung für Fermionen am Urknall (G2); Bedeutung der Asymmetrie der Drehsinne; Dauer Δ; Vergleich mit Boyle–Finn–Turok; G mit γ¹ statt γ² gegen r19; I1; Skala von Λ; I3 (Auslöser berührt).
 - Offene Vorhersagen H15, H42, H46 warten auf Daten.
