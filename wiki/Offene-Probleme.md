@@ -1,6 +1,6 @@
 # Offene Probleme und wo die Arbeit festsitzt
 
-**Stand: 6. November 2026, nach v4.10.0-r01.** Diese Seite beschreibt, was offen ist, warum, und was der nächste sinnvolle Schritt wäre. [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie) · [GitHub Issues](https://github.com/Moriarty1982/QuantumSphere-Unfold/issues)
+**Stand: 6. November 2026, nach v4.10.0-r02.** Diese Seite beschreibt, was offen ist, warum, und was der nächste sinnvolle Schritt wäre. [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie) · [GitHub Issues](https://github.com/Moriarty1982/QuantumSphere-Unfold/issues)
 
 ## Der gemeinsame Kern: Es fehlt eine Dynamik
 
@@ -58,7 +58,8 @@ Lokal ist OP5 über eine Detektorschwelle geschlossen ($\mathrm{OP5}_{\mathrm{ef
 
 - **Eichunabhängigkeit (r79):** Die vier Bedingungen sind in fünf Eichungen gleich, auch in der kovarianten Ψ̄Ψ (H67).
 
-- **Einstein-Gleichung von W1 (v4.10.0-r01):** voll nichtlinear hergeleitet und verträglich (H90); das Vorzeichen der Gravitationswirkung ist korrigiert (−R/2κ, Autorentscheidung). Damit ist der homogene Fermionzustand steif mit ρ = p < 0 und der Torsions-Paarkanal abstoßend. Offen: Abfall e^{−πkΔ} mit Potenzvorfaktor als Vorab-Test, die Dauer Δ, die Skala von Λ.
+- **Urknall-Beimischung (v4.10.0-r02):** Asymptotik hergeleitet (H93): ln|C| = −πkΔ + c√(kΔ) − ½ln(a/b). Offen: die Dauer Δ des Übergangs (setzt die Skala), die Übergangsbedingung für Fermionen, eine exakte Herleitung der Symmetrie |C₊| = |C₋|.
+- **Einstein-Gleichung von W1 (v4.10.0-r01):** voll nichtlinear hergeleitet und verträglich (H90); das Vorzeichen der Gravitationswirkung ist korrigiert (−R/2κ, Autorentscheidung). Damit ist der homogene Fermionzustand steif mit ρ = p < 0 und der Torsions-Paarkanal abstoßend. Offen: die Skala von Λ.
 - **Prüfung mit Wolfram (r86):** Die Urknall-Zahlen von r85 und die Feldgleichungen von W1 sind von einem zweiten System bestätigt bzw. aus den Definitionen hergeleitet (H87–H89). Der homogene Zustand der Fermionen ist steife Materie (ρ = p > 0), kein Vakuumterm. Offen: die volle nichtlineare Einstein-Gleichung und die Bianchi-Identität von W1, ein vorab festgelegter Test des Abfalls e^{−πkΔ} mit Potenzvorfaktor, weiter die Dauer Δ und die Skala von Λ.
 - **Massen und Urknall (r85):** Massen tragen unter der zweiten Lesart; die Gewichte aus r19 werden für die Eichkopplungen getroffen, für die Gravitation nicht. Mit dem Tachyon-Anteil vor dem Urknall (G2) ist der Urknall ein CPT-artiger Übergang mit einer durch β_sym festgelegten Beimischung. Offen: die Dauer Δ des Übergangs, die Bedeutung der Asymmetrie der Drehsinne, die Übergangsbedingung für Fermionen, das F3-Gewicht der Fermion-Kinetik (Arbeitsannahme 1) und weiter die Skala von Λ.
 - **T-Anteil als zweite Lesart (r84):** Als dasselbe Feld in zweiter Lesart, mit vollständigem komplexem Boost und holomorpher Adjungierter, ist der Tachyon-Anteil isotrop und stabil, ohne Zerfall (H79). Im flachen Raum normiert er nur die Kinetik um; Λ wird nicht aufgehoben. Offen: ob der Versatz δ ≠ 0 mit seiner Epoche τ* physikalisch gewollt ist, ob die Modenauswahl beobachtbare Folgen hat, und die Skala.
