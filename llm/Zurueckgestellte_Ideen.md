@@ -70,3 +70,5 @@ Ideen des Autors oder aus Sitzungen, die nicht jetzt verfolgt werden, aber wiede
   - Test-Kandidat: Legen die Neutrino-Massenterme der Ablage (r44) die Masse des Tachyon-Partners fest?
 - **Stand:** zurückgestellt; abgeschätzt, nicht gerechnet.
 - **5.11., H76:** Die Stabilität des Vakuums der M–T-Paarung (Quanten-Zerfall über die Gravitation) verlangt einen Cutoff in einem ausgezeichneten Rahmen, Daten ≲ 14 MeV, Natürlichkeit nach Kaplan–Sundrum ≲ 2 meV. Die meV-Zahl passt größenordnungsmäßig zu dieser Abschätzung (nachträglich bemerkt, nicht geprüft). Dem Autor als möglicher nächster Schritt vorgelegt.
+
+- **6.11., Autor wählt I4; Einordnung `Erkundung_I4_Kondensat.md` (analytisch):** Unter den geltenden Lesarten nicht verwirklichbar. Nach dem Urknall (Gebiet G2) gibt es keine Tachyon-Moden. Das T-Bild vor ihm sieht −V (L_T = −½X − V, H78/H79): Ein in M stabiles Potential (λ > 0) geht dort durch (φ̈ = m²φ + λφ³), statt zu kondensieren. In G1 ist m_eff² = γm² > 0. Stabile Kondensation unter B nur in X (Geist-Kondensat k193). **Stand: unter den geltenden Lesarten gescheitert**; bräuchte eine andere Bildregel für Potentiale oder λ < 0.

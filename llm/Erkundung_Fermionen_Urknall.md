@@ -29,3 +29,6 @@ Mit **ψ = c^{−1/2}χ** wird daraus exakt c^{1/2}(iγ∂ − m)χ = 0 (sympy, 
 
 ## Nachtrag (6.11., H94)
 Die Aussage zu den Bosonen (Befund 1 und Folge: „Bosonen mit Materie-Gewichten werden erzeugt, n = 0,404 je Mode“) gilt nur im Bild des reellen scharfen Sprungs. Beim glatten komplexen Übergang ist die gewichtete Norm der Bosonen nur für kΔ → 0 (+1) und kΔ ≫ 1 (−1, CPT) erhalten; dazwischen wird sie kleiner, verstärkt oder 0 (Nullstelle bei k*Δ = 0,74 bzw. 0,26 je Drehsinn). Die Fermion-Aussagen bleiben (N_F = −1 exakt). Siehe `Ergebnis_H94_Norm_Bosonen_Fermionen.md`.
+
+## Nachtrag (6.11., Masse)
+Befund 5 („Masse ändert nichts“) ist zu korrigieren: Nach H82 behalten Massenterme im Bild ihr Vorzeichen, nur die Kinetik kehrt es um. Vor dem Urknall steht relativ zur Kinetik −m. Auf FRW ist der Massenterm m·a(τ) mit a → 0 am Urknall; am Übergang sind die Fermionen praktisch masselos, und die Befunde 1–4 gelten für k ≫ m·a. Siehe `Erkundung_I4_Kondensat.md`.
