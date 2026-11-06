@@ -74,5 +74,7 @@
 
 - **6.11.2026, Autor: T-Zweig als eigene Freiheitsgrade zugelassen** (Wortlaut: „T-Zweig zulassen“), nach `Erkundung_G1_Lambda.md`. Teilweise Rücknahme der r84-Entscheidung „T nur als zweite Lesart desselben Feldes“: Der tachyonische Dispersionszweig (ω = m sinh η, k = m cosh η; H71, k182) wird als eigene Freiheitsgrade neben der zweiten Lesart geführt, damit I3 (Spannung aus der T-Lesart) möglich wird. Bekannter Preis: Quanten negativer Energie, Vakuumzerfall über das Graviton (H76), Rahmen-Cutoff ≲ 14 MeV nötig. Vor jeder Rechnung zu Λ ist das Gewicht b/a, mit dem die Gravitation den T-Zweig sieht, aus der Struktur zu begründen.
 
+- **6.11.2026, Autor: Rücknahme der Entscheidung „T-Zweig zulassen“** (Wortlaut: „Ja, zurücknehmen“), nach H95 (`Ergebnis_H95_Zweiggas_FRW.md`): Der T-Anteil ist wieder nur die zweite Lesart desselben Feldes (r84). Kein eigener tachyonischer Zweig, keine Quanten negativer Energie, H76 greift nicht. Λ ist damit eine Eingabe (a·V_min bzw. (a + b)·V_min); I3 ist in beiden geprüften Formen gescheitert.
+
 ## Nächster Schritt (Vorschlag)
 Nach diesen Entscheidungen die kleinste Wirkung aufschreiben, die (W1)–(W8) erfüllt, und zuerst nur ihre Euler–Lagrange-Gleichungen und Identitäten (Bianchi, Ward) symbolisch prüfen, noch ohne Lösung. Ein Test mit Kriterium erst danach, mit Vorab-Notiz.
