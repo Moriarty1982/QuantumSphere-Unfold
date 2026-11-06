@@ -690,3 +690,142 @@ R_{\rm glob}^{(v4100\text{-}r05,+)}=(0,1,1,1,1),
 \]
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r06 Source-Only: Semiclassical Einstein Equations from Relative Entropy (Dorau--Much) and the Readouts of the Companion}
+\addcontentsline{toc}{section}{v4.10.0-r06 Source-Only: Semiclassical Einstein Equations from Relative Entropy (Dorau--Much) and the Readouts of the Companion}
+\label{sec:v4100-r06-relative-entropy}
+% ============================================================================
+
+\paragraph{Purpose.}
+This layer takes up a recent result from the literature, pointed out by the author: P.~Dorau and A.~Much (Leipzig), \emph{From Quantum
+Relative Entropy to the Semiclassical Einstein Equations}, Phys.\ Rev.\ Lett.\ \textbf{136}, 091602 (2026), DOI
+\href{https://doi.org/10.1103/lmq8-nsty}{10.1103/lmq8-nsty}, arXiv:2510.24491.  It records what the paper shows and assumes, and where it meets the
+readouts of the companion: the entropy factor of \S\ref{sec:bh} (v4.8.0-r03 F11a), the free \(\Lambda\) (v4.10.0-r03, r05), the sign of gravity
+(v4.10.0-r01) and the frames.  The layer is an exploration of the literature; it contains no pre-registered test and no new prediction.
+The note is \texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r06/}.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r06 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.10.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23991357}{10.5281/zenodo.23991357} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r06 results}
+\label{subsec:v4100-r06-results}
+
+\paragraph{Theoremlet v4.10.0-r06.1 (the result of Dorau and Much, as stated by them).}
+Literature, read in arXiv version v3; the formulas were not recomputed here.
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \emph{Setting.} Near a point the metric is approximated by \(\eta_{ab}\) (leading order).  The boost field \(\xi\) is null on two null
+hypersurfaces meeting in a spacelike surface \(\mathcal S\): a local Rindler horizon, as in Jacobson's thermodynamic derivation (1995).  A real
+Klein--Gordon field of mass \(m\) is quantized as a CCR algebra.  The reference state \(\omega_0\) is quasifree, boost invariant and Hadamard (in the
+Rindler case the Minkowski vacuum); only coherent excitations \(\omega_\phi\) are treated.
+\item[(b)] \emph{Relative entropy equals energy flux.} The modular group of the wedge acts as the boost, \(\Delta^{it}=\) boost by \(2\pi t\)
+(Bisognano--Wichmann, Summers--Verch), and \(\omega_0\) is KMS at \(\beta=2\pi/\kappa\).  The Araki relative entropy then becomes
+\[
+S_{\rm rel}(\omega_0\Vert\omega_\phi)=-2\pi\int U\,\langle{:}T_{ab}{:}\rangle_{\omega_\phi}\xi^a\xi^b\,dU\,d\mathrm{vol}_{\mathcal S}.
+\]
+\item[(c)] \emph{Geometry.} With vanishing expansion, shear and twist at the horizon, the Raychaudhuri equation gives
+\(\delta A=-\int U\,R_{ab}\xi^a\xi^b\,dU\,d\mathrm{vol}_{\mathcal S}\).
+\item[(d)] \emph{Assumed, not derived:} \(S_{\rm rel}=\delta A/4\) (Bekenstein--Hawking, units \(G=\hbar=1\)).  This fixes the coupling \(\alpha=8\pi\).
+\item[(e)] \emph{Result.} Holding for all null directions, \(\alpha\langle T_{ab}\rangle=R_{ab}+Ng_{ab}\); conservation and the contracted Bianchi identity
+give \(N=-R/2+\Lambda\), hence \(G_{ab}+\Lambda g_{ab}=8\pi\langle{:}T_{ab}{:}\rangle\) with \(\Lambda\) an arbitrary integration constant.
+\end{enumerate}
+The authors call this ``arguments indicating'' the result: leading order, coherent states, scalar field.  The press reading ``gravity from vacuum
+energy'' is not what is shown: the vacuum enters as the reference state of a relative entropy, not as a source of energy.
+
+\paragraph{Theoremlet v4.10.0-r06.2 (the entropy factor becomes the gravitational coupling).}
+Analytic, not blind (follows from r06.1 by one line).  Let a horizon counting give \(S=c\,A/4\) with \(c>0\).  Replacing (d) by
+\(S_{\rm rel}=c\,\delta A/4\) and keeping the rest of r06.1 gives
+\[
+\alpha=\frac{8\pi}{c},\qquad G_{\rm eff}=\frac{G}{c}.
+\]
+For the two countings of \S\ref{sec:bh} (F11a in \S\ref{subsec:v480-r03-frame-parameter-provenance}) one has \(c=\gamma_*/\gamma\), where \(\gamma_*\) is the value
+at which the counting reproduces \(S_{\rm BH}\): \(\gamma_{\rm string}=\ln2/(\pi\sqrt3)\) for the counting with \(j=\tfrac12\) only, \(\gamma_{\rm BI}=0.237533\) for
+the counting of Domagala--Lewandowski and Meissner.  At one common value of \(\gamma\) the two countings differ by the factor
+\(\gamma_{\rm BI}/\gamma_{\rm string}=\gamma_L=1.864700\) (F11a).  Under the chain of r06.1 this factor would appear as a ratio of gravitational couplings:
+\[
+\frac{G_{\rm eff}^{(j=1/2)}}{G_{\rm eff}^{(\rm DL/M)}}=\frac{c_{\rm DL/M}}{c_{j=1/2}}=\frac{\gamma_{\rm BI}}{\gamma_{\rm string}}=\gamma_L .
+\]
+\emph{Consequence.} If the T frame counts with \(j=\tfrac12\) and the M frame with all spins (r63, H47) at one common \(\gamma\), the two frames see different
+Newton constants.  A single measured \(G\) is consistent only if each frame uses the \(\gamma\) at which its own counting reproduces \(S_{\rm BH}\); then
+\(c=1\) in both, \(G\) is frame independent, and the frame difference sits in \(\gamma\).  This is the reading of r64 (the frame difference in \(\gamma\), not in
+\(\hbar\) or \(G\)); Dorau--Much make it a statement about the coupling, not about the entropy alone.
+
+\paragraph{Theoremlet v4.10.0-r06.3 (\(\Lambda\) as integration constant).}
+Literature and comparison.  In r06.1(e) \(\Lambda\) is not fixed by the derivation; it enters through \(\nabla^a(\Lambda g_{ab})=0\).  This is the same situation
+as in v4.10.0-r03 and r05: under G2 the action gives no \(\Lambda\) after the bang, \(\Lambda=a\,V_{\min}\) is free, and \(\Lambda\) is a readout
+(Theorem~\ref{thm:dark-energy}).  The agreement supports the classification ``\(\Lambda\) is not part of the dynamics''.  It is not a success of the companion:
+the standard derivation does not fix \(\Lambda\) either.  The readout \(\Omega_M=\beta_{\rm sym}^2\) (H96) is neither supported nor contradicted.
+
+\paragraph{Remark v4.10.0-r06.4 (the sign of gravity from positivity; afterwards).}
+In r06.1 the sign of \(\alpha\) is not free: \(S_{\rm rel}\ge0\) and \(c>0\) give \(\alpha>0\), i.e.\ attractive gravity.  In v4.10.0-r01 the sign of W1 was
+corrected by an author decision after H90 had shown repulsion.  The corrected sign coincides with the one fixed by positivity.  This is noted afterwards
+and is not a derivation of W1: Dorau--Much use a scalar field and Riemannian geometry, W1 is Einstein--Cartan with spinors and torsion
+\(+(3/16)\kappa j^2\).  A transfer would need the relative entropy for Dirac fields, which the paper does not treat.
+
+\paragraph{Remark v4.10.0-r06.5 (frames, Wick rotation and the modular group; open).}
+The derivation uses that the modular group of the reference state is a real one-parameter group of boosts with KMS period \(2\pi\).  In the Euclidean
+picture that period is the full rotation angle \(2\pi\) (the Unruh temperature via Wick rotation).  The companion has this bridge itself
+(Theorem~\ref{thm:artqft}, \(t\mapsto i\tau_E\) on the biquaternion).  Under the tachyon map \(z\mapsto iz\) of Convention~F the rapidity becomes
+imaginary and the boost a rotation.  Whether \(z\mapsto iz\) coincides with the Wick rotation of Theorem~\ref{thm:artqft} is open.  If it does, frame T is
+the Euclidean side of the same KMS structure, not its loss.  The precise question is operator algebraic: is there a state on the wedge algebra whose
+modular group is the tachyon image of the boost?  No answer is given here.
+
+\paragraph{Proof and measurement sources.}
+Exploration note \texttt{Erkundung\_\allowbreak Dorau\_\allowbreak Much\_\allowbreak relative\_\allowbreak Entropie.md} in
+\texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r06/}; the paper (arXiv:2510.24491v3).  r06.2 is one line of algebra on r06.1(d)--(e).  \(\square\)
+
+\paragraph{Consequence.}
+Dorau and Much give a rigorous quantum field theoretic form of Jacobson's argument.  They assume the area law and leave \(\Lambda\) free.  For the
+companion this has three uses: the entropy factor of \S\ref{sec:bh} is the gravitational coupling (r06.2), so the frame reading of the horizon
+countings must keep \(G\) frame independent; \(\Lambda\) as a readout is consistent with the standard derivation (r06.3); and the frames get a precise
+operator algebraic question (r06.5).  Neither \(G\) nor \(\Lambda\) follows from it.
+
+\subsection*{v4.10.0-r06 status in the three frames}
+\label{subsec:v4100-r06-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item M: the derivation of r06.1 holds as stated (real boosts, KMS at \(2\pi/\kappa\)).
+\item T: open (r06.5); under \(z\mapsto iz\) the boost becomes a rotation, and whether the KMS structure survives as its Euclidean side is not decided.
+\item P: degenerate fixed point; no separate statement.
+\end{itemize}
+r06.2 is frame dependent by construction (one counting per frame); r06.3 holds in every frame that has the derivation.  No frame-free statement is made.
+
+\subsection*{v4.10.0-r06 register entries}
+\label{subsec:v4100-r06-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r06\\
+\midrule
+Einstein equations from relative entropy & literature (Dorau--Much 2026); area law assumed, \(\Lambda\) free\\
+entropy factor of \S\ref{sec:bh} & equals the gravitational coupling (r06.2); \(G\) frame independent only with matched \(\gamma\) per frame\\
+\(\Lambda\) & integration constant in the standard derivation; readout in the companion (consistent)\\
+sign of W1 (v4.10.0-r01) & coincides with the positivity sign (afterwards, scalar case only)\\
+frame T and the modular group & open question (r06.5)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r06 ledger and guard update}
+\label{subsec:v4100-r06-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r06}=(1,1,0)
+\]
+for (literature recorded; entropy factor tied to the coupling; frame T under the modular group open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r06,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r06}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
