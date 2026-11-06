@@ -2715,6 +2715,16 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **r05.5 H97:** Brücke Kaskade→Friedmann (Vakuum → Materie mit β²H) an DESI DR2 χ² = 105, widerlegt; ε ≲ 0,4 erlaubt.
 - R_chk = (1,1,0); Guards unverändert. Lokal 1350 Seiten, 4007 Labels.
 
+### K142 Runde v4.10.0-r06: Einstein-Gleichungen aus relativer Entropie (Dorau–Much), Literaturbezug (2026-11-07)
+
+`sec:v4100-r06-relative-entropy`, Snippet `llm/v4100_r06_round.tex`, Notizen `notes/research/v4_10_0_r06/`, Erkundung `llm/Erkundung_Dorau_Much_relative_Entropie.md`.
+- **r06.1 (Literatur):** Dorau–Much, PRL 136, 091602 (2026), arXiv:2510.24491: relative Entropie Vakuum ‖ kohärente Anregung am Rindler-Horizont = Energiefluss (Modulargruppe = Boost, KMS); mit gesetztem S_rel = δA/4 und Raychaudhuri folgen die semiklassischen Einstein-Gleichungen; Λ Integrationskonstante.
+- **r06.2:** Zählung S = c·A/4 ⇒ G_eff = G/c; die beiden Zählungen unterscheiden sich bei gleichem γ um γ_L ⇒ G frame-unabhängig nur mit passendem γ je Frame (wie r64).
+- **r06.3:** Λ frei wie v4.10.0-r03/r05; kein Erfolg des Companion; H96 unberührt.
+- **r06.4:** Vorzeichen aus S_rel ≥ 0 deckt sich nachträglich mit der W1-Korrektur (v4.10.0-r01); keine Herleitung von W1.
+- **r06.5 (offen):** z → iz macht den Boost zur Drehung; KMS-Periode 2π = euklidischer Vollwinkel (thm:artqft); Frage: Modulargruppe des Tachyon-Bezugszustands.
+- R_chk = (1,1,0); Guards unverändert. Lokal 1353 Seiten, 4012 Labels.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2918,3 +2928,4 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - v15.5 (2026-11-06): K139 Runde v4.10.0-r03.
 - v15.6 (2026-11-06): K140 Runde v4.10.0-r04.
 - v15.7 (2026-11-06): K141 Runde v4.10.0-r05.
+- v15.8 (2026-11-07): K142 Runde v4.10.0-r06 (Literaturbezug Dorau–Much).
