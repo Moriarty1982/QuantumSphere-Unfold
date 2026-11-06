@@ -1,0 +1,150 @@
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r03 Source-Only: Fermions and Bosons at the Big Bang, and the Vacuum Term under G2}
+\addcontentsline{toc}{section}{v4.10.0-r03 Source-Only: Fermions and Bosons at the Big Bang, and the Vacuum Term under G2}
+\label{sec:v4100-r03-bang-g2}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.10.0-r02 closed the asymptotics of the bosonic admixture at the big bang (\S\ref{sec:v4100-r02-admixture-asymptotics}).
+This layer records what follows for the other fields and for the vacuum term under the domain choice G2 (tachyon reading before,
+matter reading after the bang; r85).  It contains one pre-registered test (H94), an author decision on the duration \(\Delta\) of the
+transition, an exact symmetry of the two senses of rotation, and analytic explorations of four routes to \(\Lambda\) under G2.  Two of my own
+intermediate claims are corrected here.  The notes are
+\texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r03/}.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r03 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.10.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23991357}{10.5281/zenodo.23991357} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r03 results}
+\label{subsec:v4100-r03-results}
+
+\paragraph{Theoremlet v4.10.0-r03.1 (fermions pass the bang without admixture).}
+Exploration (analytic, no criterion).  Under G2 and the second reading the symmetric Dirac or Weyl action is weighted by \(c(\tau)\), going from
+\(-b\) to \(a\).  The field equation \(c(i\gamma^\mu\partial_\mu-m)\psi+\tfrac i2c'\gamma^0\psi=0\) is solved exactly by \(\psi=c^{-1/2}\chi\), with \(\chi\) free, for
+every profile (sympy, residual \(0\)).
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Positive and negative frequencies do not mix: no fermions are created at the bang, for any \(k\) and any profile.  A first-order equation lets
+the weight be scaled away; the second-order equations of scalars and gauge fields do not.
+\item[(b)] Transfer factor \(\psi_{\rm after}/\psi_{\rm before}=\pm i\sqrt{b/a}=\pm i\beta_{\rm sym}\) (continuous branch along the path; the two senses differ in phase
+only).  The map is unitary in the weighted norm, and the frequency is kept: a particle of the T reading becomes an antiparticle-like state of the M
+reading, exactly and for all \(k\).
+\item[(c)] Correction (made in the notes the same day): mass terms keep their sign under the image (r85, H82), so before the bang the mass is \(-m\)
+relative to the kinetic term.  On FRW the mass term is \(m\,a(\tau)\) with \(a\to0\) at the bang, so (a) and (b) hold for \(k\gg m\,a\) at the transition.
+\end{enumerate}
+
+\paragraph{Theoremlet v4.10.0-r03.2 (H94: the weighted norm at the bang).}
+Pre-registered (commit \texttt{99f1cce}, partly not blind).  \(N=a(|C|^2-|D|^2)/b\) for the mode of positive norm before the bang (tanh profile,
+\(\Delta=2\)).  All four parts confirmed (one run, Wronskian constant to \(10^{-11}\)).
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Bosons: \(N\to+1\) for long waves (\(1.024\), \(0.974\) at \(k\Delta=0.01\)) and \(N\to-1\) for short waves (\(-0.969\), \(-1.032\) at \(20\)).
+\item[(b)] Exactly one sign change per sense of rotation, at \(k^*\Delta=0.7361\) and \(0.2569\).
+\item[(c)] In between the norm is not conserved (\(0.1<|N|<0.9\) at \(10\) and \(5\) grid points).
+\item[(d)] Fermions: \(N_F=-1\) on all points, to \(6\times10^{-12}\).
+\end{enumerate}
+\emph{Noticed afterwards.}  The bosonic norm is also amplified (up to \(1.18\) and \(-1.63\)).  The mean of the two senses does not restore it.  The
+statement ``bosons with matter weights are created, \(n=0.404\) per mode'' holds only in the picture of the sharp real jump.
+
+\paragraph{Decision v4.10.0-r03.3 (author, 6 November 2026: \(\Delta\lesssim\ell_P\)).}
+The duration of the transition is taken at or below the Planck length.  All modes below the Planck scale then have \(k\Delta\ll1\): bosons with matter
+weights pass norm-preserving as a Bogoliubov transformation with \(n=(1-\beta_{\rm sym}^2)^2/(4\beta_{\rm sym}^2)=0.404\) per mode, and fermions are mirrored
+by CPT without creation.  The non-unitary range \(k\sim1/\Delta\) lies at or beyond the Planck scale.  The total energy of the created bosons is set by
+that range and stays open.
+
+\paragraph{Theoremlet v4.10.0-r03.4 (the two senses of rotation are exactly conjugate).}
+Exploration (derived analytically, checked numerically).  For the transfer matrix \(M(L)=\begin{pmatrix}a&b\\c&d\end{pmatrix}\) in the basis
+\((e^{ikt},e^{-ikt})\) one has \(\det M=e^{-L}\) (weighted Wronskian).  The duality \(v=wy'\) gives \(M(-L)=e^L JMJ\) with \(J=\operatorname{diag}(1,-1)\).  Reflection
+with conjugation, using \(s(-t)=1-s(t)\), gives \(M(-\bar L)=\overline{M(L)}^{-1}\).  Together
+\[
+M(\bar L)=\begin{pmatrix}\bar d&\bar b\\ \bar c&\bar a\end{pmatrix}.
+\]
+Hence \(C(\bar L)=\overline{C(L)}\), so \(|C_+|=|C_-|\) exactly, and \(D_+\overline{D_-}-b_+C_+=e^{-L}\), the product rule of r85.6 with its correction term.  For
+the local problem of r02.2, \(M=\begin{pmatrix}1&0\\r&1\end{pmatrix}\) exactly, so \(r(\bar\lambda)=\overline{r(\lambda)}\).  Numerically all identities hold to
+\(\le3\times10^{-10}\) at \(k\Delta=0.01\)--\(5\).
+
+\paragraph{Theoremlet v4.10.0-r03.5 (no \(\Lambda\) from the tachyon sector after the bang under G2).}
+Exploration (analytic, no criterion).  Four routes were examined.
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Mixture (deferred idea I3): its \(\Lambda\) side came from the tension of the T reading.  Under G2 only the M reading exists after the bang, so
+only the dust part remains.
+\item[(b)] Tachyonic condensation (I4): after the bang there are no tachyon modes.  Before it the image of a scalar sees \(-V\) (\(\mathcal L_T=-\tfrac12X-V\),
+r84); a potential stable in M runs away there (\(\ddot\phi=m^2\phi+\lambda\phi^3\)) instead of condensing.  Under G1 one has \(m_{\rm eff}^2=\gamma m^2>0\).
+\item[(c)] Ghost condensate (r83.4): under G1, \(aP_M+bP_T=(a-b)X/2+(a+b)cX^2\) is healthy and does not condense.  Under G2 the condensate exists only
+before the bang; after it \(P_M\) has \(w\in[\tfrac13,1]\), never \(-1\); at the bang the condensate has \(\pi=0\), so the M field is at rest.
+\item[(d)] Conclusion: under G2 a vacuum term after the bang can only be \(aV_{\min}\) of the M reading, with a free value.  The structure does not fix
+\(\Lambda\) under G2.
+\end{enumerate}
+
+\paragraph{Theoremlet v4.10.0-r03.6 (boundary condition and spatial reflection; correction).}
+Exploration (analytic).  If the T field before the bang is identified pointwise with the image of the M field after it,
+\(\phi_T(x)=\phi_M(\Lambda(i\pi)x)\), the junction yields \(\phi'(0)=0\) for scalars and \(\psi(0)=0\) for fermions (\(\beta_{\rm sym}\neq1\)).  The same identification
+needs a direction \(n\) and a spatial origin (from \(x\mapsto\Lambda x+2x_0\)) that nothing fixes; classically it would correlate the modes \(k\) and \(P_nk\).
+Quantum mechanically it is inconsistent for \(a\neq b\): with antiunitary time reversal the junction forces \(u'(0)=0\), and the Wronskian
+normalization \(uu'^*-u^*u'=i\) then fails at \(\tau=0\).  \emph{Correction:} the conditions \(\phi'(0)=0\), \(\psi(0)=0\) stated the same day in the notes do
+not follow from the structure; a frozen scalar at the bang is a possible choice of state, not a consequence.  Under G2 the second reading is a
+statement about the action, \(-b\mathcal L_M\) before and \(a\mathcal L_M\) after, with independent data before the bang, as in H85--H94; at that level
+neither a direction nor an origin appears (r84, H79).
+
+\paragraph{Proof and measurement sources.}
+Scripts \texttt{k209\_\allowbreak fermionen\_\allowbreak urknall.py}, \texttt{k210\_\allowbreak norm\_\allowbreak uebergang.py},
+\texttt{k211\_\allowbreak symmetrie\_\allowbreak drehsinne.py} with their outputs, and the explorations in \texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r03/};
+pre-registration and result H94 in \texttt{notes/\allowbreak research/\allowbreak predictions/}.  \(\square\)
+
+\paragraph{Consequence.}
+Under G2 the big bang separates bosons from fermions.  Fermions are mirrored by CPT exactly and unitarily.  Bosons with matter weights are
+Bogoliubov-transformed for \(k\Delta\ll1\) and CPT-mirrored for \(k\Delta\gg1\), and the transition is non-unitary in between, which the decision
+\(\Delta\lesssim\ell_P\) moves to the Planck scale.  The two senses of rotation are exactly conjugate.  None of the tachyon-sector mechanisms yields a
+vacuum term after the bang; \(\Lambda\) remains a free \(aV_{\min}\).  OP5 is not closed.
+
+\subsection*{v4.10.0-r03 status in the three frames}
+\label{subsec:v4100-r03-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item r03.1--r03.4 concern the M--T transition under G2, with the weights \(a\), \(b\) of frame M: frame T before and frame M after the bang.  No frame-free
+statement is made.
+\item Photon frame P: with \(a=b\) there is no admixture, the fermion factor has modulus \(1\), and the pointwise identification of r03.6 is not obstructed.
+The norm then stays \(+1\) for bosons, as in r85.5.
+\item r03.5 states that frame T contributes no vacuum term in frame M after the bang under G2.  Under G1 both readings coexist, and the reduced theory is
+the M theory with renormalized weights (r84).
+\end{itemize}
+
+\subsection*{v4.10.0-r03 register entries}
+\label{subsec:v4100-r03-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r03\\
+\midrule
+fermions at the bang (G2) & no admixture, CPT exact, factor \(\pm i\beta_{\rm sym}\) (exploration)\\
+bosonic norm at the bang & \(+1\to-1\) with one zero; non-unitary near \(k\sim1/\Delta\) (H94)\\
+duration \(\Delta\) & \(\lesssim\ell_P\) (author decision)\\
+senses of rotation & exactly conjugate, \(|C_+|=|C_-|\) (exploration)\\
+\(\Lambda\) from I3, I4, ghost condensate under G2 & none after the bang; \(\Lambda=aV_{\min}\) free\\
+pointwise identification of T and M & inconsistent for \(a\neq b\); boundary conditions withdrawn\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r03 ledger and guard update}
+\label{subsec:v4100-r03-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r03}=(1,1,0)
+\]
+for (fermions and the bosonic norm at the bang settled; symmetry exact; \(\Lambda\) under G2 without a mechanism).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r03,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r03}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.

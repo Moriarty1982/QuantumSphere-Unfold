@@ -1,0 +1,4 @@
+Rest c(iγ∂-m)ψ + (i/2)c'γ⁰ψ - c^{1/2}(iγ∂-m)χ = [0, 0, 0, 0]
+Drehsinn 1 : psi_nach/psi_vor = (w_vor/w_nach)^{1/2} = I*sqrt(b)/sqrt(a)  (Hauptzweig-Ausdruck: I*sqrt(b)/sqrt(a) )
+Drehsinn -1 : psi_nach/psi_vor = (w_vor/w_nach)^{1/2} = -I*sqrt(b)/sqrt(a)  (Hauptzweig-Ausdruck: I*sqrt(b)/sqrt(a) )
+Betrag sqrt(b/a) = beta_sym = 0.549360

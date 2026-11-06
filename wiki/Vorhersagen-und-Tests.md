@@ -91,6 +91,7 @@ Zu H46: Eine Bestätigung würde die Kette r55–r60 prüfen, nicht die Lesart a
 | H91 | Abfall der Beimischung bis kΔ = 60: Exponent π (Fit mit √x), Wurzelterm nötig, Steigung 50–60 innerhalb 3 % von π (teilweise nicht blind) | ungültig nach Kriterium a (Planungsfehler: H87 nur vierstellig); b–d wie formuliert verfehlt (v4.10.0-r02) |
 | H92 | Vorfaktor = Stokes-Funktion r(λ) des lokalen Problems, λ = L kΔ/2: Universalität, Wellen, Drehsinne, Born-Grenzfall (teilweise nicht blind) | b, c, d bestätigt; a verfehlt (fester Faktor ≈ 0,54) (v4.10.0-r02) |
 | H93 | Hergeleitete Asymptotik `ln\|C\| = −πkΔ + c√(kΔ) − ½ln(a/b)`, c = 2√π Γ(3/4)/Γ(1/4)·Re√L = 1,809205 (teilweise nicht blind) | Zahlen getroffen (c auf 0,013 %, Konstante ≤ 0,006, volles Problem ≤ 0,009); formal ungültig (Genauigkeitskontrolle Drehsinn +, kΔ = 600); Drehsinn − bestätigt (v4.10.0-r02) |
+| H94 | Gewichtete Norm am Urknall-Übergang: Bosonen +1 → −1 mit genau einer Nullstelle, dazwischen nicht normerhaltend; Fermionen exakt −1 (teilweise nicht blind) | bestätigt; Nullstellen k*Δ = 0,736 / 0,257; nachträglich auch Verstärkung (v4.10.0-r03) |
 
 ## Erkundungen ohne Vorab-Notiz
 
