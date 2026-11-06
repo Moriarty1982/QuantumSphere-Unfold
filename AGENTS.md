@@ -6,9 +6,18 @@ verweist). Wer etwas an den Regeln ändert, ändert es **hier**.
 
 ## Für alle Modelle verbindlich
 
-- **Abläufe:** Schritt-für-Schritt-Anleitungen stehen in `llm/anleitungen/`:
+- **Abläufe:** Schritt-für-Schritt-Anleitungen stehen in `llm/anleitungen/` (Übersicht und Nutzung je Modell in
+  `llm/anleitungen/README.md`). Sie sind die einzige Quelle; Claude-Skills unter `.claude/skills/` verweisen nur darauf.
+  - `weitermachen.md`: Sitzungsstart, Stand aus `llm/Uebergabe.md` und Repo rekonstruieren.
+  - `sitzung-uebergeben.md`: am Ende eines Arbeitsblocks `llm/Uebergabe.md` neu schreiben.
+  - `hypothese-testen.md`: Test HNN von der Vorab-Notiz bis zur Ergebnis-Notiz.
   - `qsc-runde-einbauen.md`: neue Runde schreiben und in Monolith, GitHub-Fragment, Notizen, Wiki und PR bringen.
   - `op5-vergleichsmodell-rechnen.md`: Rechnungen am OP5-Vergleichsmodell (Daten, Konventionen, Werkzeuge, bekannte Ergebnisse).
+  - `wiki-nachziehen.md`: Ordner `wiki/` im selben PR nachziehen.
+  - `qs-werkzeug.md`: `qs.py` (Querverweise, Guards, Ledger, Audit, Manifest) und Release-Kandidaten.
+  - `zenodo-release.md`: neue Version auf Zenodo.
+- **Modellunabhängig arbeiten:** Ohne Shell oder GitHub-Zugang nennt das Modell die Befehle, und der Autor führt sie aus.
+  Wer zuletzt gearbeitet hat (Modell), steht in der Kopfzeile von `llm/Uebergabe.md`.
 - **Gesamtbild zuerst:** vor jeder inhaltlichen Arbeit `wiki/Gesamtbild.md` (GitHub, PR #56 gemergt) lesen: Mindmap, zentrale
   Thesen T1–T15 mit Stand und Dokumentkarte. Jede Einzelfrage dort einordnen, bevor Teile des Monolithen gelesen werden.
 - **Parallel rechnen:** große Rangrechnungen über `.github/workflows/op5-parallel.yml` (PR #55 gemergt) auf GitHub-Runnern,

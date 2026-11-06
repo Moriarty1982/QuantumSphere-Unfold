@@ -43,6 +43,9 @@ Werkzeugunabhängig. Gilt für das Projekt Quantum Sphaera: lokaler Ordner `Quan
    Vorhersagen-und-Tests, Inhalt und Content-overview. Das Wiki gibt den Inhalt wieder, nicht nur Links. Mathe mit `|` oder
    `_` in Tabellen als Backtick-Mathe schreiben. Der Workflow „Wiki Sync“ spiegelt nach dem Merge automatisch.
 8. **CI:** den Workflow „QSC LaTeX PDF Build“ (`qsc-latex-build.yml`) auf dem Branch starten, mit `build_historical=false`.
+   Ist GraphQL gesperrt, über REST:
+   `gh api -X POST repos/Moriarty1982/QuantumSphere-Unfold/actions/workflows/266457854/dispatches -f ref=<branch> -f 'inputs[build_historical]=false'`.
+   Ohne GitHub-Zugang des Modells startet der Autor den Lauf in der Actions-Oberfläche.
 9. **PR:** englischer Titel; im Text Inhalt, Dateien und Prüfzahlen.
 10. **Merge nur nach ausdrücklicher Freigabe.** Danach in `AGENTS.md` die Zeile der Runde um „PR #NN gemergt als <sha>“
     ergänzen und die Kernkarte (`llm/Kernkarte_Quantum_Sphaera_v1.md`, Abschnitt 7) nachziehen.
