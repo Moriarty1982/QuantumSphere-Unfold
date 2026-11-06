@@ -45,6 +45,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- **6.11.2026, erstes OP5-Route-Datenblatt (Arbeitsnotiz):** Offene-Probleme und Hinweise-fuer-LLMs trennen das abstrakte Quelle–Rückweg-Schema von einer konkreten nativen Instanz und kennzeichnen Suchumfang sowie offene physikalische Brücke.
+
 - **6.11.2026, Arbeitsnotiz nach r05 (keine neue Schicht):** Offene-Probleme, Gesamtbild und Hinweise-fuer-LLMs geben die beauftragte Aussetzung der historischen OP5-Auslöschungsgrundlage und die neue Messgrößen-/Auslesefrage wieder. Frühere Kriterien, Guards und Status von H96/H97 bleiben bestehen.
 
 **6.11.2026, Anleitungen modellunabhängig:** Hinweise für LLMs um die Liste der Anleitungen in `notes/anleitungen/` ergänzt (Sitzungsstart und -übergabe, Hypothesentest, Runde, OP5, Wiki, `tools/qs.py`, Zenodo); sie gelten für Claude, ChatGPT und Codex gleich.

@@ -45,6 +45,8 @@ werkzeugübergreifender Standard. `CLAUDE.md` verweist nur darauf.
 
 ## Vorgehen bei Fachfragen
 
+Für die neue OP5-Arbeitsfrage liegt ein [erstes Route-Datenblatt](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_route_inventory_2026_11_06.md) vor: Der abstrakte Erhaltungssatz und die Realisierung seiner Voraussetzungen sind getrennt zu behandeln. Insbesondere bezeichnet sein Λ einen Zielraum, nicht schon die kosmologische Konstante; die Klassenabbildung J ist nicht ohne Nachweis die Kern-Involution. Das Datenblatt ist ein begrenzter Rekonstruktionsbefund, kein vollständiger Audit späterer Atlas- oder Abschlusslayer.
+
 1. Klären, ob die Frage Veröffentlichung, aktuelle Forschung oder einen historischen Zustand betrifft.
 2. Commit/Tag, Dateipfad und möglichst Satzlabel oder Abschnitt nennen.
 3. Definitionen, Voraussetzungen, Guards und Frame-Konventionen derselben Fassung lesen.

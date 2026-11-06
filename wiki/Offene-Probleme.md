@@ -42,6 +42,8 @@ Die neue Arbeitsfrage lautet: **Welche unabhängig definierte physikalische Mess
 
 Die folgende r05-Trennung bleibt als dokumentierter Stand erhalten: H96 ist offen, H97 widerlegt und W1/W2 eingefroren. Diese neue Arbeitsnotiz ist noch keine nummerierte Forschungsschicht; OP5 wird nicht als insgesamt geschlossen dargestellt.
 
+**Erster Rekonstruktionsbefund (Arbeitsnotiz, 6.11.):** Das Quelle–Rückweg-Paket in den Teilen 21/22 ist ein bedingtes Schema. Klassenerhaltung und Readout-Faktorisierung werden vorausgesetzt; eine konkrete native Route ist in der untersuchten Verweiskette noch nicht instanziiert. Die zwei gerichteten Auslesungen starten formal am selben Quellzustand, nicht an den beiden Enden eines berechneten Hin-und-zurück-Durchlaufs. QAM-Brücken bleiben an ihre ausdrücklich genannten Voraussetzungen gebunden. Das widerlegt den bedingten Satz nicht, lokalisiert aber die fehlende Realisierung. Nächster Ansatzpunkt ist das bereits explizite Feld-/Gram-Wörterbuch einschließlich Orientierung und Skala, ohne ihm vorab kosmologische Bedeutung zuzuschreiben. [Datenblatt und Prüfgrenzen](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_route_inventory_2026_11_06.md).
+
 **Neuordnung (v4.10.0-r05, Autorentscheidung):** OP5 hat drei Teile.
 1. *OP5-Kern:* Umkehr-Schließung I(OP1) = I(OP5_sym), lokal geschlossen.
 2. *Λ-Auslesung:* Ω_Λ : Ω_M = (1 − β²) : β² als Verzweigung der Kaskade, Epoche heute. Daraus die Vorhersage H96 (Ω_M = 0,30185, offen); die einfachste Dynamik dafür ist widerlegt (H97).
