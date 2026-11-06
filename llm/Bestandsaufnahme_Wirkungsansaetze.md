@@ -85,5 +85,7 @@
   - **Λ-Auslesung:** Ist Ω_Λ : Ω_M = (1 − β²) : β² die Verzweigung der Kaskade (`thm:dark-energy`), und zu welcher Epoche? Vor jeder weiteren Λ-Rechnung ist die Epoche zu entscheiden (offen seit r16). Eine Identifikation muss eine Funktion vorhersagen (Epoche, Skala, mehrere Messgrößen), nicht nur eine Zahl.
   - **Dynamik-Programm W1/W2:** eigener Zweig („lässt sich die Frame-Algebra dynamisieren?“) mit den Negativresultaten r81–v4.10.0-r04; **eingefroren**, keine weiteren Reparatur-Entscheidungen. W7 („Vakuumterm nicht frei“) gehört zu diesem Zweig, nicht zum Kern.
 
+- **6.11.2026, Autor: Epoche der Λ-Auslesung „Heute“.** Die Kaskaden-Verzweigung Ω_Λ : Ω_M = (1 − β²) : β² gilt für die heutige Epoche. Daraus folgt die parameterfreie Vorhersage H96 (Ω_M = 0,30185, Vorab-Notiz `Vorab_Notiz_H96_Omega_M_beta2.md`). Offen bleibt das „warum jetzt“.
+
 ## Nächster Schritt (Vorschlag)
 Nach diesen Entscheidungen die kleinste Wirkung aufschreiben, die (W1)–(W8) erfüllt, und zuerst nur ihre Euler–Lagrange-Gleichungen und Identitäten (Bianchi, Ward) symbolisch prüfen, noch ohne Lösung. Ein Test mit Kriterium erst danach, mit Vorab-Notiz.
