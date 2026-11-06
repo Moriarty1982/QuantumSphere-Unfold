@@ -1,6 +1,16 @@
 # QAM – Buchführungsprüfung für Forschungstexte
 
-Die QAM ist eine kleine typisierte Buchführungssprache für lange Forschungstexte, mit oder ohne Sprachmodelle. Sie hängt **nicht** am Projekt Quantum Sphaera; das Projekt ist nur ihre erste Fallstudie. Ausführlich: Methodenpapier `paper/qam/` (Entwurf, 12 Seiten, nur Zenodo).
+## Frame-Schnittstellensprache und Physikmapping
+
+**Autorpräzisierung vom 6.11.2026:** QAM ist als Schnittstellensprache für Frames zu lesen. Ein ausdrücklich zugeordnetes Physikmapping legt fest, welche gewöhnlichen physikalischen Objekte und Gleichungen in einem Frame gemeint sind. Die ART ist beispielsweise ein solches Mapping im dafür deklarierten Frame; QAM muss die ART nicht neu herleiten und setzt ihre Gültigkeit nicht für jeden anderen Frame voraus.
+
+Die zweiseitige Darstellung trennt links Frame-/Ausleserollen und rechts die gewöhnlichen Struktur-/Tensorrollen. Beim Wechsel zu einem anderen Frame wird eine eigene, deklarierte Schnittstelle verwendet. Sie muss weder automatisch invertierbar sein noch die Physikinterpretation des ersten Frames unverändert fortsetzen. Die Gleichungen werden innerhalb des jeweiligen Mappings mit ihrem bisherigen mathematischen beziehungsweise physikalischen Status verwendet.
+
+Der [quellenbasierte Schnittstellenentwurf](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/qam_frame_physics_interface_design_2026_11_06.md) entwickelt dies am ART-Beispiel. Die anschließend beschriebenen TeX-/Lean-Buchführungsprüfungen sind eine vorhandene Werkzeugschicht, nicht die gesamte mögliche Semantik der QAM-Sprache. Sie führen bislang kein vollständiges ART-Physikmapping aus.
+
+## Vorhandene Buchführungswerkzeuge
+
+Die vorhandene Werkzeugschicht realisiert typisierte Buchführungsprüfungen für lange Forschungstexte, mit oder ohne Sprachmodelle. Sie hängt **nicht** am Projekt Quantum Sphaera; das Projekt ist nur ihre erste Fallstudie. Ausführlich: Methodenpapier `paper/qam/` (Entwurf, 12 Seiten, nur Zenodo). Diese Werkzeugbeschreibung ersetzt nicht die oben erklärte Frame-Schnittstellenrolle.
 
 ## Drei Fehler, drei Regeln
 
