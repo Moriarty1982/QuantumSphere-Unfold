@@ -18,8 +18,17 @@ Sphaera“. Die öffentliche Baseline ist **v4.10.0** vom 2026-11-06 (Version-DO
 - `notes/anleitungen/`: Schritt-für-Schritt-Abläufe.
 
 ## Für alle Modelle verbindlich
-- **Abläufe:** `notes/anleitungen/qsc-runde-einbauen.md` (neue Runde) und
-  `notes/anleitungen/op5-vergleichsmodell-rechnen.md` (OP5-Vergleichsmodell).
+- **Abläufe:** Schritt-für-Schritt-Anleitungen in `notes/anleitungen/` (Übersicht und Nutzung je Modell in
+  `notes/anleitungen/README.md`). Sie sind die einzige Quelle; Claude-Skills im lokalen Ordner verweisen nur darauf.
+  - `weitermachen.md`: Sitzungsstart, Stand aus Übergabe und Repo rekonstruieren.
+  - `sitzung-uebergeben.md`: am Ende eines Arbeitsblocks die Übergabe neu schreiben.
+  - `hypothese-testen.md`: Test HNN von der Vorab-Notiz bis zur Ergebnis-Notiz.
+  - `qsc-runde-einbauen.md`: neue Runde schreiben und einbauen.
+  - `op5-vergleichsmodell-rechnen.md`: Rechnungen am OP5-Vergleichsmodell.
+  - `wiki-nachziehen.md`: Ordner `wiki/` im selben PR nachziehen.
+  - `qs-werkzeug.md`: `tools/qs.py` (Querverweise, Guards, Ledger, Audit, Manifest).
+  - `zenodo-release.md`: neue Version auf Zenodo.
+- **Modellunabhängig arbeiten:** Ohne Shell oder GitHub-Zugang nennt das Modell die Befehle, und der Autor führt sie aus.
 - **Vorab-Notizen:** Jeder Test mit Entscheidungskriterium wird vor der Rechnung festgeschrieben und committet.
   Erkundungen ohne Vorab-Notiz heißen „Erkundung“.
 - **Append-only:** Bestehende Runden werden nie umgeschrieben. Korrekturen kommen in eine neue Runde.
