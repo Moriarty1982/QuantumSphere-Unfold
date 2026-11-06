@@ -5,17 +5,17 @@
 ## Stand vom 6. November 2026 (Codex)
 
 - **Ausgangsstand:** main 11674501ff915b46e3a8bfb0d2802c31e4a1309d; zuletzt #82 (qsc-audit-Schichterkennung), Forschung bis v4.10.0-r05.
-- **Lokal:** Branch codex/op5-question-rebuild; Gesamturteil 674487c, erste Auswahlerkundung e5d9b55; jetzt notes/research/op5_spin_selection_audit_2026_11_06.md und Wiki-Nachzug. Direkte analytische Selbstprüfung (nicht blind), keine numerische/empirische Rechnung, keine Änderung von TeX/PDF oder nummerierter Runde.
+- **Lokal:** Branch codex/op5-question-rebuild; Gesamturteil 674487c, Zustandsauswahl e5d9b55, Spinauswahl 21ff987; jetzt notes/research/op5_common_state_access_2026_11_06.md und Wiki-Nachzug. Direkte analytische Erkundung (nicht blind), keine numerische/empirische Rechnung, keine Änderung von TeX/PDF oder nummerierter Runde.
 - **Autorentscheidung:** Historische OP5-Herleitung als Grundlage aussetzen; Frage vom unabhängig begründeten Kern neu aufbauen (Chat 6.11., „dann mach das mal“, genaue Uhrzeit nicht protokolliert).
-- **Noch nicht auf GitHub:** Rekonstruktionsnotizen, Gesamturteil, Zustands-/Energie- und Spinauswahlerkundung; kein Push, kein PR und kein Merge in diesem Arbeitsblock.
+- **Noch nicht auf GitHub:** Rekonstruktionsnotizen, Gesamturteil und drei Auswahlerkundungen; kein Push, kein PR und kein Merge in diesem Arbeitsblock.
 - **Hypothesen:** im geprüften predictions-Ordner zuletzt H97; keine neue H- oder k-Nummer vergeben. Vor späterer Vergabe gegen vollständigen aktuellen Stand prüfen.
 - **Build:** nicht ausgeführt, ausschließlich Markdown geändert; Prüfung von Änderungsumfang, Verweisen und Whitespace.
 - **GitHub:** offene PRs/Actions in diesem Arbeitsblock nicht erneut abgefragt; keine neue Live-Aussage hierzu.
 - **Nächste Bundle-Basis:** unverändert 11674501ff915b46e3a8bfb0d2802c31e4a1309d; kein Monolith-Bundle erzeugt.
-- **Zurückgestellte Ideen:** I1-Auslöser 3 durch γ_BI/γ_string berührt: String-/LQG-Verbindung bleibt separat möglicher Ausweg, hier nicht aktiviert. I3 berührt, geprüfte Varianten gescheitert; I4 unter geltenden Lesarten gescheitert. Keine Wiederaufnahme beauftragt.
+- **Zurückgestellte Ideen:** I1 durch γ-Verhältnis berührt. I2 durch nächsten Projektor-Prüfpunkt berührt: CRT/mod-HC-Idee erst bei konkreten gemeinsamen ganzzahligen Daten sinnvoll, hier nicht geliefert. I3/I4 in geprüften Formen gescheitert. Keine Idee als Lösung aktiviert.
 - **Autorauftrag fortgesetzt:** Der Autor hat der Untersuchung von Zustandsauswahl und Messabbildung zugestimmt („ja“).
-- **Erledigter Schritt:** r63-Spinauswahl geprüft. |1,1⟩ widerlegt Sättigung ⇒ j=1/2. Absolute Minimierung über nichttriviale j und vollständige Gewicht-2-Zählung sind unterschiedliche Zusatzregeln. Feste-μ-Floor enthält j nicht. Endliche saturierende Spinmengen ergeben verschiedene γ-Wurzeln. Vorhandene Lean-Datei gelesen, nicht neu kompiliert.
-- **Nächster Schritt:** Unterschiedliche M/T-Spinmengen gegen „ein Objekt, verschiedene Auslesungen“ prüfen: physischer Zustandswechsel oder eingeschränkter Zugriff auf denselben Zustand? Explizite Ausleseabbildung/verworfene Beiträge untersuchen; keine automatische Gleichsetzung mit fehlender Energie.
+- **Erledigter Schritt:** r64 setzt denselben Horizont, liefert aber keine Spinzugriffsabbildung. Endlicher Zweispin-Vergleich trennt passive Vollbeschreibung, Zugriff mit Gewicht w und Selektion. Fehlender Readout ist nicht fehlende Energie; kein natives Horizontmodell behauptet.
+- **Nächster Schritt:** innere Einheit J / C7-/Chiralitätsprojektor auf tatsächlich definierte Wirkung auf Horizont-Spinlabels prüfen. Ohne Intertwiner zwischen Trägern nicht mit Π_min gleichsetzen; zuerst Quellen-/Typenprüfung, keine neue CRT- oder Wirkungsannahme.
 
 ## Inhaltlicher Stand
 

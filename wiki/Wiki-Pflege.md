@@ -45,6 +45,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- **6.11.2026, gemeinsamer Zustand und Spinzugriff (Erkundung):** Offene-Probleme unterscheidet vollständige Frameumrechnung, eingeschränkten Zugriff und selektierten Zustand. Restbeiträge bleiben bilanziell relevant; keine physikalische Horizontabbildung wird durch das Vergleichsmodell behauptet.
+
 - **6.11.2026, begrenzte Spinauswahlprüfung (nicht blind):** Offene-Probleme trennt Sättigung bei festem j, zusätzliche absolute Minimierung und vollständige Spinsektorzählung. Die feste-μ-Floorkinematik liefert keine j-Auswahl; bestehende Zählannahmen von H96 bleiben bestehen.
 
 - **6.11.2026, analytische OP5-Auswahlerkundung (nicht blind):** Offene-Probleme beschreibt die explizite freie q-Familie bei festen lokalen Zusatzdaten und die getrennte Energiegewichtsabhängigkeit. Keine empirische Prüfung oder neue H-Nummer; zusätzliche native Auswahlgesetze bleiben außerhalb des begrenzten Gegenbeispiels.
