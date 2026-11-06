@@ -76,5 +76,7 @@
 
 - **6.11.2026, Autor: Rücknahme der Entscheidung „T-Zweig zulassen“** (Wortlaut: „Ja, zurücknehmen“), nach H95 (`Ergebnis_H95_Zweiggas_FRW.md`): Der T-Anteil ist wieder nur die zweite Lesart desselben Feldes (r84). Kein eigener tachyonischer Zweig, keine Quanten negativer Energie, H76 greift nicht. Λ ist damit eine Eingabe (a·V_min bzw. (a + b)·V_min); I3 ist in beiden geprüften Formen gescheitert.
 
+- **6.11.2026, Autor: Die Gravitation trägt am Urknall-Übergang Photon-Gewichte (a = b)** (Wortlaut: „Photon-Gewichte“), nach `Erkundung_Gravitonen_Urknall.md`: Mit Materie-Gewichten ergäben die am Urknall erzeugten Gravitonen ΔN_eff ≈ 3,6 (SM-Bosonen). Mit Photon-Gewichten erzeugt der Übergang keine Gravitonen (r85.5), passend zu r64 (Gravitation frame-unabhängig). Folge: keine Gravitationswellen-Spur aus dem Übergang selbst; die übliche Erzeugung durch die Expansion bleibt.
+
 ## Nächster Schritt (Vorschlag)
 Nach diesen Entscheidungen die kleinste Wirkung aufschreiben, die (W1)–(W8) erfüllt, und zuerst nur ihre Euler–Lagrange-Gleichungen und Identitäten (Bianchi, Ward) symbolisch prüfen, noch ohne Lösung. Ein Test mit Kriterium erst danach, mit Vorab-Notiz.
