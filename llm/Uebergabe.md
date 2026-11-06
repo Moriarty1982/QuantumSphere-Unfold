@@ -9,11 +9,12 @@
 - Local `main` steht noch auf da64ec4; die Arbeit liegt auf dem Worktree-Zweig `claude/anthropic-skills-weitermachen-446e5f`.
 
 - **H91 (Vorab a49ed7e, nach PR #75):** Abfall der Beimischung bis kΔ = 60 (`llm/k206_abfall_wurzelterm.py`, Python/scipy lokal; scipy im lokalen Python nachinstalliert). **Ungültig nach Kriterium a** (Planungsfehler: H87-Werte nur vierstellig, Kriterium 10⁻⁵ zu scharf; Konturen stimmen auf 10⁻¹⁰). b–d wie formuliert ohnehin verfehlt: s = 3,049 (Fit mit √x), Wurzelterm verbessert nur ×6,5, Steigung 50–60 = 3,021. Lokale Steigung wellig, steigt bis 60 auf 3,026; Exponent π offen. Nachträglich: |C| für beide Drehsinne gleich (≤ 10⁻¹⁰). `llm/Ergebnis_H91_Abfall_Beimischung_Wurzelterm.md`. Noch nicht auf GitHub → nächste Runde v4.10.0-r02.
-- **Zuletzt vergebene Hypothese: H91.** Nächste freie Nummer **H92**.
+- **H92 (Vorab c347a92):** Vorfaktor als Stokes-Funktion r(λ) des lokalen Problems an t₀ = iπΔ/2, λ = L kΔ/2 (`llm/k207_lokales_problem.py`). Lauf 1 ungültig (Kontrolle 4–6·10⁻⁶, großer Kontrollweg verlor Stellen), Lauf 2 gültig (6·10⁻¹⁰), Werte identisch. **b, c, d bestätigt** (Wellen erklärt, rms 4·10⁻³; |r(λ̄)| = |r(λ)|; Born-Grenzfall 2·10⁻⁸), **a verfehlt** (ln R → ≈ −0,62 statt 0). Nachträglich: fehlender Faktor e^{−L/2} (adiabatische Amplitude w^{−1/2}) gibt −0,599; Erkundung bis kΔ = 200: ln|r| ≈ 1,81√(kΔ) (Kandidat |√L| = 1,834 nicht entschieden). Exponent π damit strukturell erklärt. `llm/Ergebnis_H92_Vorfaktor_lokales_Problem.md`. Noch nicht auf GitHub → Runde v4.10.0-r02 mit H91, H92.
+- **Zuletzt vergebene Hypothese: H92.** Nächste freie Nummer **H93**.
 
 ## Nächster Schritt
-1. Zur Wahl: (a) Vorfaktor analytisch (lokales Problem am Pol vierter Ordnung, Stokes-Konstante) statt Fit, dann neuer Vorab-Test; (b) Herleitung von |C₊| = |C₋|; (c) Übergangsbedingung für Fermionen am Urknall (G2); (d) I3 (negativer Λ-förmiger Vier-Fermionen-Term); (e) Skala von Λ; I1.
-2. Runde v4.10.0-r02 sammelt H91 und Folgendes.
+1. Zur Wahl: (a) H93: Grenzwert ln R → −Re L/2 und Koeffizient c des Wurzelgesetzes (WKB am Pol vierter Ordnung) vorab herleiten, dann testen; (b) Symmetrie |r(λ̄)| = |r(λ)| herleiten; (c) Übergangsbedingung für Fermionen am Urknall (G2); (d) I3 (negativer Λ-förmiger Vier-Fermionen-Term); (e) Skala von Λ; I1.
+2. Runde v4.10.0-r02 sammelt H91, H92 und Folgendes.
 - Offene Vorhersagen H15, H42, H46 warten auf Daten.
 
 ## Davor (6.11., Vormittag): H90 und Autorentscheidung
