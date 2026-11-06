@@ -4,6 +4,8 @@
 
 ## In drei Sätzen
 
+**Arbeitsentscheidung nach r05 (6.11.2026):** Die ursprüngliche Herleitung des OP5-Auslöschungsproblems wird als Grundlage ausgesetzt. Der Übergang von spektralen Termen zu einem physikalischen nackten Λ-Beitrag ist nicht hergeleitet; Teile der alten Grundlage wurden bereits zurückgezogen. Neu aufgebaut wird zuerst die Verbindung vom unabhängig definierten Kern zu einer unabhängig definierten Messgröße. Eine neue Λ-Rechnung ist damit nicht beauftragt; H96, H97, die eingefrorene Dynamik und die Guards behalten ihren Status. [Quellenordnung und neue Arbeitsfrage](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_neuaufbau_2026_11_06.md). Die historischen Zusammenfassungen unten bleiben als Entwicklungsgeschichte lesbar.
+
 Der Companion geht von einer Vermutung aus: Materie, Licht und ein Tachyon-Sektor sind *ein* Objekt, gesehen aus drei Bezugsrahmen (Frames). Mathematisch ist dieses Objekt ein Biquaternion-Kern aus drei komplexen Kernen, den ein Projektor (der Heisenberg-Kompensator) in einen symmetrischen und einen antisymmetrischen Teil zerlegt. Darauf baut eine Architektur aus Hopf-Kaskade, Oktonionen, Mastergleichung und Kompensatormatrix auf. Aus ihr sollen Standardmodell, Gravitation und Kosmologie als *Auslesungen* folgen. Das tragende Ergebnis von rund 90 Prüfrunden seit v4.8.0 lautet: Die algebraische Struktur ist sauber, viele physikalische Auslesungen sind dagegen widerlegt, archiviert oder nur bedingt gültig. Vor allem fehlt eine gemeinsame Dynamik, also eine Wirkung, aus der die Größen folgen, statt gesetzt zu werden.
 
 ## Mindmap

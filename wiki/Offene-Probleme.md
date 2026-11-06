@@ -36,6 +36,12 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
+**Arbeitsentscheidung vom 6.11.2026 nach r05: die ursprüngliche Begründung aussetzen.** Die historische Auslöschungsfrage setzte voraus, dass spektrale Terme einen physikalischen, riesigen Λ-Beitrag erzeugen. Die dafür verwendete metrische Wirkung ist nicht definiert; auch die Skala des nackten Terms ist nicht hergeleitet (v4.8.0-r04/r05). Einzelne Annahmen sind widerlegt oder zurückgezogen, andere unbegründet. Das ist keine pauschale Widerlegung jeder möglichen physikalischen Auslesung.
+
+Die neue Arbeitsfrage lautet: **Welche unabhängig definierte physikalische Messgröße lässt sich durch eine explizite, begründete Auslesung aus dem algebraischen Kern gewinnen, und welche überprüfbare Einschränkung folgt daraus?** Weder ein auszulöschender Vakuumterm noch dessen Restwert werden vorausgesetzt. Zuerst wird für eine vorhandene Quelle–Rückweg-Route das Wörterbuch aus Träger, Transport, Auslesung und Invariante rekonstruiert. Der bedingte Schließungssatz ersetzt dabei nicht den Nachweis seiner Voraussetzungen oder einer physikalischen Brücke. [Begründung, Quellen und Arbeitsauftrag](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_neuaufbau_2026_11_06.md).
+
+Die folgende r05-Trennung bleibt als dokumentierter Stand erhalten: H96 ist offen, H97 widerlegt und W1/W2 eingefroren. Diese neue Arbeitsnotiz ist noch keine nummerierte Forschungsschicht; OP5 wird nicht als insgesamt geschlossen dargestellt.
+
 **Neuordnung (v4.10.0-r05, Autorentscheidung):** OP5 hat drei Teile.
 1. *OP5-Kern:* Umkehr-Schließung I(OP1) = I(OP5_sym), lokal geschlossen.
 2. *Λ-Auslesung:* Ω_Λ : Ω_M = (1 − β²) : β² als Verzweigung der Kaskade, Epoche heute. Daraus die Vorhersage H96 (Ω_M = 0,30185, offen); die einfachste Dynamik dafür ist widerlegt (H97).

@@ -8,6 +8,8 @@ Zuerst das [Gesamtbild](https://github.com/Moriarty1982/QuantumSphere-Unfold/wik
 
 ## Kontext für Antworten
 
+**Neuere Arbeitsentscheidung, 6.11.2026 nach r05:** Die ursprüngliche OP5-Auslöschungsherleitung ist als aktive Grundlage ausgesetzt, nicht die gesamte Kernstruktur widerlegt. Vor einer Fortsetzung die [neue Arbeitsfrage samt Quellen](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_neuaufbau_2026_11_06.md) lesen. Zuerst sind Träger, konkrete Route, Auslesung, Invariante und mögliche Messgröße zu bestimmen; ein physikalischer Vakuumterm mit vorgegebener Skala oder Restwert wird nicht vorausgesetzt. H96 bleibt offen, H97 widerlegt, W1/W2 eingefroren; Guards und frühere Tests bleiben unverändert. Die folgende ältere Standangabe ist historisch und wird durch README/AGENTS.md für die aktuelle Baseline v4.10.0 sowie durch die jüngsten Quellen ergänzt. Die neue Notiz ist keine nummerierte Forschungsschicht.
+
 Am geprüften Stand **5.11.2026 / main a5bf106** ist **v4.9.0** die öffentliche Baseline (Version DOI **10.5281/zenodo.23534954**). Die Forschungsquellen bilden **4.10.0-draft** mit dokumentierten Layern bis **v4.9.0-r85**. Vor einer aktuellen Aussage den neuesten Stand erneut prüfen. [Quellenkarte](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Versionen-und-Quellen).
 
 ## Arbeitsanleitung für KI-Assistenten
