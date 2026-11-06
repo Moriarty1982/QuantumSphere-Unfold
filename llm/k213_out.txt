@@ -1,0 +1,8 @@
+g_B (erzeugte Bosonen ohne Gravitonen) | Anteil GW anfangs | rho_GW/rho_gamma (BBN) | Delta N_eff
+    0 | 1.000 | inf | inf
+    4 | 0.333 | 5.777 | 25.44
+   28 | 0.067 | 0.825 | 3.63
+  100 | 0.020 | 0.231 | 1.02
+  300 | 0.007 | 0.077 | 0.34
+ 1000 | 0.002 | 0.023 | 0.10
+Grenze (Vorwissen, nicht nachgeschlagen): Delta N_eff <~ 0.3
