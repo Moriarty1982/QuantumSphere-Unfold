@@ -6,12 +6,14 @@
 - **PR #75 gemergt als ad3ab06** (6.11., auf „PR 75 mergen“ des Autors; CI-Lauf 42154473646 grün; Wiki-Sync läuft nach dem Merge). **Runde v4.10.0-r01** (https://github.com/Moriarty1982/QuantumSphere-Unfold/pull/75, Zweig `research/v4.10-r01-einstein-vorzeichen`, Worktree `$HOME/gh_r01`): H90, Autorentscheidung (W1 auf −(1/2κ)∫e R korrigiert), Korrekturen zu r81.1(b), r86.2–r86.4, r82.4. Erste Runde in der neuen Schichtdatei `sources/research/parts/v4100-post-release-layers.tex` (eingebunden in `support-route.tex`). Notizen `notes/research/v4_10_0_r01/`, H90 unter `predictions/`, W1-Notizen und Bestandsaufnahme in `v4_10_0_w1/`, Wiki (8 Seiten). ours-Merge der lokalen Historie bis 357d3e5. CI-Lauf 42154473646 angestoßen (`build_historical=false`).
 - **Lokal eingebaut (357d3e5):** 1338 Seiten, 3987 Labels, Overfull 58 (MiKTeX), harte Werte 0, Guard-Linter 0. Kandidat lokal 1364 Seiten, 0 undefiniert. AGENTS-Zeile v4.10.0-r01 und Kernkarte K137 (v15.3) nachgezogen. Snippet `llm/v4100_r01_round.tex`.
 - **H90** (Vorab e5d03d8, Ergebnis 6d5261d): Einstein-Gleichung von W1 voll nichtlinear, Bianchi-verträglich; W1 wie notiert stieß ab. **Autorentscheidung 6.11.: korrigiert** (76bca98). Durchsicht `llm/Durchsicht_Vorzeichen_kappa_r81_r86.md`: nur r81.1(b)/H88, H89, r86.4, r82.4 betroffen.
-- **Zuletzt vergebene Hypothese: H90.** Nächste freie Nummer **H91**. Nächste Runde **v4.10.0-r02**.
 - Local `main` steht noch auf da64ec4; die Arbeit liegt auf dem Worktree-Zweig `claude/anthropic-skills-weitermachen-446e5f`.
 
+- **H91 (Vorab a49ed7e, nach PR #75):** Abfall der Beimischung bis kΔ = 60 (`llm/k206_abfall_wurzelterm.py`, Python/scipy lokal; scipy im lokalen Python nachinstalliert). **Ungültig nach Kriterium a** (Planungsfehler: H87-Werte nur vierstellig, Kriterium 10⁻⁵ zu scharf; Konturen stimmen auf 10⁻¹⁰). b–d wie formuliert ohnehin verfehlt: s = 3,049 (Fit mit √x), Wurzelterm verbessert nur ×6,5, Steigung 50–60 = 3,021. Lokale Steigung wellig, steigt bis 60 auf 3,026; Exponent π offen. Nachträglich: |C| für beide Drehsinne gleich (≤ 10⁻¹⁰). `llm/Ergebnis_H91_Abfall_Beimischung_Wurzelterm.md`. Noch nicht auf GitHub → nächste Runde v4.10.0-r02.
+- **Zuletzt vergebene Hypothese: H91.** Nächste freie Nummer **H92**.
+
 ## Nächster Schritt
-1. Erledigt: PR #75 gemergt. Zweig `research/v4.10-r01-einstein-vorzeichen` kann weg (Worktree `$HOME/gh_r01` entfernt).
-2. Danach zur Wahl: vorab festgelegter Test des Abfalls e^{−πkΔ} mit Potenzvorfaktor bis kΔ ≈ 60 (`llm/k202_wolfram_gegenprobe.wl`); Übergangsbedingung für Fermionen am Urknall (G2); Dauer Δ; I3 (Auslöser berührt: negativer Λ-förmiger Vier-Fermionen-Term); Skala von Λ; I1.
+1. Zur Wahl: (a) Vorfaktor analytisch (lokales Problem am Pol vierter Ordnung, Stokes-Konstante) statt Fit, dann neuer Vorab-Test; (b) Herleitung von |C₊| = |C₋|; (c) Übergangsbedingung für Fermionen am Urknall (G2); (d) I3 (negativer Λ-förmiger Vier-Fermionen-Term); (e) Skala von Λ; I1.
+2. Runde v4.10.0-r02 sammelt H91 und Folgendes.
 - Offene Vorhersagen H15, H42, H46 warten auf Daten.
 
 ## Davor (6.11., Vormittag): H90 und Autorentscheidung
