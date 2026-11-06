@@ -10,10 +10,10 @@
 - **Noch nicht auf GitHub.** Lokaler Zweig `claude/anthropic-skills-weitermachen-446e5f` (Worktree), vorgespult auf 718030e der Parallelsitzung; local `main` steht noch auf da64ec4.
 - **Zuletzt vergebene Hypothese: H90.** Nächste freie Nummer **H91**. Erste Runde nach dem Release: **v4.10.0-r01** (neue Schichtdatei `parts/v4100-post-release-layers.tex`, Labels `sec:v4100-rNN-…`).
 
+- **Autorentscheidung (6.11.): W1 korrigiert auf S_grav = −(1/2κ)∫e R** („Ja, korrigieren“), eingetragen in `llm/Bestandsaufnahme_Wirkungsansaetze.md` und `llm/Wirkung_W1_Dixon_U1.md`. Durchsicht `llm/Durchsicht_Vorzeichen_kappa_r81_r86.md`: betroffen nur r81.1(b)/H88 (Vorzeichen L_eff), H89a/b, r86.4 und r82.4 (Paarkanal wird abstoßend, ν^c-Majorana-Lesart fällt); H69–H86 sonst nicht.
+
 ## Nächster Schritt
-1. **Autorentscheidung:** W1 auf S_grav = −(1/2κ)∫e R korrigieren (empfohlen) oder κ < 0 als gemeinte Lesart.
-2. Danach Durchsicht r82–r85 auf das Vorzeichen (H74, H75, H76 hängen am Graviton; r82.4 Paarkanal), ggf. als Vorab-Test H91.
-3. Runde v4.10.0-r01 mit H90 und den Korrekturen, PR mit Wiki (Ablauf `llm/anleitungen/qsc-runde-einbauen.md`).
+1. Runde **v4.10.0-r01** schreiben: H90, Autorentscheidung, Korrekturen laut Durchsicht (append-only). Ablauf `llm/anleitungen/qsc-runde-einbauen.md` (neue Schichtdatei `parts/v4100-post-release-layers.tex`, Labels `sec:v4100-r01-…`, Version-DOI v4.10.0 = 10.5281/zenodo.23991357 in der Source-only-Klausel), lokaler Monolith, GitHub-Fragment, Notizen `notes/research/v4_10_0_r01/` (wie r86-Muster), H90 unter `predictions/`, Wiki, PR, ours-Merge der lokalen Historie.
 - Danach weiter aus der Liste unten (Abfall e^{−πkΔ}, Urknall-Übergang der Fermionen, I1, I3, Skala von Λ).
 
 ## Davor (6.11., ca. 01:00)
