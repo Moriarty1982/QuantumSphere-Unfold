@@ -1,0 +1,143 @@
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r05 Source-Only: Gravitons at the Big Bang, a Review from the Core, and the Readout of \texorpdfstring{\(\Lambda\)}{Lambda}}
+\addcontentsline{toc}{section}{v4.10.0-r05 Source-Only: Gravitons at the Big Bang, a Review from the Core, and the Readout of Lambda}
+\label{sec:v4100-r05-core-review}
+% ============================================================================
+
+\paragraph{Purpose.}
+This layer has three parts.  First, an estimate of gravitons created at the big bang and the author decision taken on it, with a correction to its
+rationale.  Second, a review of the work since r81 from the core of the companion, prompted by the author's observation that the results keep
+landing ``a little off'' while much structure appears.  The review leads to a separation of OP5 into three parts.  Third, the readout of \(\Lambda\)
+at the present epoch, with one prediction without free parameter (H96) and one refuted dynamic bridge (H97).
+The notes are \texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r05/}.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r05 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.10.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23991357}{10.5281/zenodo.23991357} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r05 results}
+\label{subsec:v4100-r05-results}
+
+\paragraph{Theoremlet v4.10.0-r05.1 (gravitons at the big bang; estimate and correction).}
+Exploration, not blind (the bound on \(N_{\rm eff}\) is known; cosmological values from prior knowledge).
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] With matter weights, gravitons receive \(n_0=0.404\) per mode up to \(k_{\max}\sim1/\Delta\) (r03.3).  With the bosons of the Standard Model
+thermalizing and the gravitons decoupled, this gives \(\Delta N_{\rm eff}\approx3.6\); the bound \(\approx0.3\) would need \(\gtrsim300\) bosonic degrees of freedom.
+\item[(b)] Author decision (6 November 2026): gravity carries photon weights (\(a=b\)) at the transition.
+\item[(c)] Correction to the rationale of (b): photon weights suppress creation only for \(k\Delta\ll1\).  At the smooth transition the produced energy
+is of the same order (\(\int x^3n_{\rm mix}\,dx=0.066\) against \(0.091\,\Delta^{-4}\), maximum at \(k\Delta\approx0.76\)), so \(\Delta N_{\rm eff}\approx2.6\).
+\item[(d)] Counting only modes below \(x_c=k_c\Delta\) keeps \(\Delta N_{\rm eff}\lesssim0.3\) for \(x_c\lesssim0.13\) (or \(\lesssim0.05\) if only the Higgs carries matter
+weights).  This would be another chosen quantity.  \(\Delta N_{\rm eff}\) at the bang is therefore recorded as an open problem, not closed by a cut-off.
+\end{enumerate}
+
+\paragraph{Remark v4.10.0-r05.2 (review: why ``a little off'').}
+A count of the tests since v4.8.0 (wiki table, after r04) gives about \(20\) confirmed, \(19\) refuted, \(9\) invalid, \(4\) open and \(28\) mixed results,
+\(29\) marked not blind.  The confirmed tests without that mark all check inner mathematics (the OP5 comparison model, one construction).  Against
+external measurements there is no confirmed blind prediction yet.
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Much of the structure that ``works'' is known, consistent physics taken up by the companion.  Examples: Dixon and Furey for one generation,
+triality, Einstein--Cartan with the torsion \(3/16\), Boyle, Finn and Turok for the big bang, ghost condensation, WKB.
+\item[(b)] What is new is the frame reading (M, T, P, \(\beta_{\rm sym}\), weights \(a\), \(b\), G2).  Its physical claims are identifications of single
+dimensionless numbers at one point.  With many constants and combinations, agreement within a few percent is expected; r56 and r70.4 found
+chance level.
+\item[(c)] Since r81 about twelve author decisions were taken, most of them after a consequence did not fit.  Each kept a consequence in range; none
+produced a confirmed new prediction.  The aim W7 (``vacuum term not free'') of the action programme is not met.
+\end{enumerate}
+
+\paragraph{Decision v4.10.0-r05.3 (author: OP5 separated into three parts).}
+Reading the core shows two meanings of OP5.  In the architecture, OP5 is the reversal-stable return readout of the route whose source readout is
+OP1; closed means \(\mathcal I(\mathrm{OP1})=\mathcal I(\mathrm{OP5}_{\rm sym})\) (Theorem~\ref{thm:op15-closure}), locally under the guards.  In physics,
+\(\Lambda\) is a readout quantity, \(\Omega_\Lambda=1-\beta_{\rm sym}^2\) and \(\Omega_M=\beta_{\rm sym}^2\) as branching of the cascade
+(Theorem~\ref{thm:dark-energy}), not a dynamical vacuum energy.  From late October the question became ``which dynamics produces \(\Lambda\)'' (OP5
+series, then r81--v4.10.0-r04).  The negative results of that line answer a question the core does not ask.  Decision of 6 November 2026:
+\begin{enumerate}[leftmargin=2em]
+\item[(i)] \emph{OP5 (core):} the reversal closure of the source--return pair, locally closed, not claimed globally;
+\item[(ii)] \emph{\(\Lambda\) readout:} whether \(\Omega_\Lambda:\Omega_M=(1-\beta^2):\beta^2\) is the cascade branching, and at which epoch;
+\item[(iii)] \emph{action programme W1/W2:} a separate branch with the negative results of r81--v4.10.0-r04, frozen, without further repair decisions.
+\end{enumerate}
+A second decision fixes the epoch of (ii) as the present (way (a) of v4.8.0-r17).
+
+\paragraph{Theoremlet v4.10.0-r05.4 (H96: \(\Omega_M\) today without free parameter; pre-registered, open).}
+Pre-registered (commit \texttt{aeaba3d}, supplement on prior knowledge \texttt{e338b9b} before any comparison).  Prediction:
+\[
+\Omega_M=\beta_{\rm sym}^2=\frac{\gamma_L-1}{\gamma_L+1}=0.30185,\qquad \gamma_L=\gamma_{\rm BI}/\gamma_{\rm string}=1.864700.
+\]
+Comparison: the first flat-\(\Lambda\)CDM value of \(\Omega_m\) published after 2026-11-06 from DESI DR3 (BAO alone) or from Euclid; confirmed within
+\(2\sigma\).  Known values (DESI DR2 \(0.2975\pm0.0086\), Planck \(0.3153\pm0.0073\) and others) are disclosed and do not count.  The prediction rests on the
+U(1) counting of horizon states (r68) and on reading \(\gamma_L\), the ratio of a corrected to a superseded value of the same LQG parameter
+(v4.8.0-r03 F11), as a Lorentz factor.
+
+\paragraph{Theoremlet v4.10.0-r05.5 (the only dynamics for the ratio, and a bridge refuted).}
+Search and one pre-registered test.
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] The only place where the ratio follows from a dynamics is r31: the Markov cascade with return path has stationary flux fractions
+\(\beta^2\), \(1-\beta^2\) for every rate.  A bridge to cosmic time is missing.  The earlier link of the core (scale factor as proper time, \(H\) as
+activation rate of Riemann zeros) was withdrawn with the Riemann paper (v4.8.0-r04).
+\item[(b)] Proposed bridge: the content of \(S^2\) is vacuum energy that returns to \(S^8\) at rate \(\Gamma=\varepsilon H\) and splits there.  Net, the vacuum
+decays into matter at rate \(\beta^2\varepsilon H\); with \(\varepsilon=1\) this has no free parameter.
+\item[(c)] H97 (commit \texttt{de36fcc}, not blind): this bridge with \(\varepsilon=1\) and \(\Omega_M=\beta^2\) against DESI DR2 BAO (13 values) gives
+\(\chi^2_{\min}=105.0\) for \(12\) degrees of freedom, \(p=6\times10^{-17}\).  \textbf{Refuted.}  The control (flat \(\Lambda\)CDM, free \(\Omega_m\)) reproduces DESI
+(\(\Omega_m=0.2970\), \(hr_d=101.56\) Mpc).  For comparison, flat \(\Lambda\)CDM at \(\Omega_M=\beta^2\) has \(\chi^2=10.9\), \(p=0.54\).
+\emph{Exploration afterwards:} DR2 allows \(\varepsilon\lesssim0.4\) without preferring \(\varepsilon>0\).
+\end{enumerate}
+
+\paragraph{Proof and measurement sources.}
+Scripts \texttt{k213\_\allowbreak gravitonen\_\allowbreak neff.py}, \texttt{k214\_\allowbreak erzeugung\_\allowbreak photongewichte.py},
+\texttt{k215\_\allowbreak neff\_\allowbreak grenze.py}, \texttt{k216\_\allowbreak bruecke\_\allowbreak desi\_\allowbreak dr2.py} with outputs; the reviews and proposals in
+\texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r05/}; pre-registrations and results H96, H97 in \texttt{notes/\allowbreak research/\allowbreak predictions/}.  \(\square\)
+
+\paragraph{Consequence.}
+The companion is, at its core, a kinematic readout structure with sound algebra.  Its new physical claims are identifications.  They become
+testable when they predict a function or several observables with one parameter, not one number at one point.  OP5 is separated accordingly.
+The readout of \(\Lambda\) today gives a prediction without free parameter (H96, open).  The simplest dynamics for it is refuted (H97).
+\(\Delta N_{\rm eff}\) at the bang is open.  OP5 (core) stays locally closed under the guards; no global closure is claimed.
+
+\subsection*{v4.10.0-r05 status in the three frames}
+\label{subsec:v4100-r05-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item r05.1 concerns the M--T transition under G2; the photon-weight decision assigns gravity the weights of frame P.
+\item r05.4 and r05.5: \(\beta_{\rm sym}^2\) is a matter-frame quantity (r22); the readout \(\Omega_M=\beta^2\) is made by a matter-frame observer.  In frame P it
+vanishes (\(\Lambda_{\rm fundamental}=0\) of Theorem~\ref{thm:dark-energy}).  No frame-free statement is made.
+\end{itemize}
+
+\subsection*{v4.10.0-r05 register entries}
+\label{subsec:v4100-r05-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r05\\
+\midrule
+gravitons at the bang & photon weights (author); \(\Delta N_{\rm eff}\) open (creation at \(k\sim1/\Delta\))\\
+OP5 & separated: core closure (local) / \(\Lambda\) readout / action programme (frozen)\\
+epoch of the \(\Lambda\) readout & present (author)\\
+\(\Omega_M=\beta_{\rm sym}^2=0.30185\) & pre-registered prediction H96, open\\
+cascade--Friedmann bridge, \(\varepsilon=1\) & refuted (H97)\\
+blind predictions confirmed against data & none yet; open: H15, H42, H46, H96\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r05 ledger and guard update}
+\label{subsec:v4100-r05-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r05}=(1,1,0)
+\]
+for (review done and OP5 separated; prediction H96 fixed; the dynamics for the readout absent).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r05,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r05}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.

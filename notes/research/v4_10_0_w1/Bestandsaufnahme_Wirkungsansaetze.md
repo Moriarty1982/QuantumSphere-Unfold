@@ -76,5 +76,16 @@
 
 - **6.11.2026, Autor: Rücknahme der Entscheidung „T-Zweig zulassen“** (Wortlaut: „Ja, zurücknehmen“), nach H95 (`Ergebnis_H95_Zweiggas_FRW.md`): Der T-Anteil ist wieder nur die zweite Lesart desselben Feldes (r84). Kein eigener tachyonischer Zweig, keine Quanten negativer Energie, H76 greift nicht. Λ ist damit eine Eingabe (a·V_min bzw. (a + b)·V_min); I3 ist in beiden geprüften Formen gescheitert.
 
+- **6.11.2026, Autor: Die Gravitation trägt am Urknall-Übergang Photon-Gewichte (a = b)** (Wortlaut: „Photon-Gewichte“), nach `Erkundung_Gravitonen_Urknall.md`: Mit Materie-Gewichten ergäben die am Urknall erzeugten Gravitonen ΔN_eff ≈ 3,6 (SM-Bosonen). Mit Photon-Gewichten erzeugt der Übergang keine Gravitonen (r85.5), passend zu r64 (Gravitation frame-unabhängig). Folge: keine Gravitationswellen-Spur aus dem Übergang selbst; die übliche Erzeugung durch die Expansion bleibt.
+
+- **Nachtrag zur Entscheidung „Photon-Gewichte für die Gravitation“ (6.11., `Erkundung_Erzeugung_Photongewichte.md`):** Die Begründung („keine Gravitonen-Erzeugung“) gilt nur für kΔ ≪ 1. Am glatten Übergang ist die Erzeugungsenergie bei Photon-Gewichten nur ~27 % kleiner (I = 0,066 statt 0,091 Δ⁻⁴, Maximum bei kΔ ≈ 0,76); ΔN_eff ≈ 2,6 statt 3,6. Die Entscheidung steht, ihre Wirkung auf N_eff ist gering; Auswege: kein Gewichtswechsel der Gravitation am Urknall, oder Erzeugung oberhalb der Planck-Skala unphysikalisch. Dem Autor vorgelegt.
+
+- **6.11.2026, Autor: OP5 wird in drei Teile getrennt** (Wortlaut: „Ja, so trennen“), nach `Rueckschau_Kern_und_OP5.md`:
+  - **OP5-Kern:** Umkehr-Schließung des Quelle–Rückweg-Paares, I(OP1) = I(OP5_sym) (`thm:op15-closure`); lokal geschlossen unter den Guards, global nicht behauptet.
+  - **Λ-Auslesung:** Ist Ω_Λ : Ω_M = (1 − β²) : β² die Verzweigung der Kaskade (`thm:dark-energy`), und zu welcher Epoche? Vor jeder weiteren Λ-Rechnung ist die Epoche zu entscheiden (offen seit r16). Eine Identifikation muss eine Funktion vorhersagen (Epoche, Skala, mehrere Messgrößen), nicht nur eine Zahl.
+  - **Dynamik-Programm W1/W2:** eigener Zweig („lässt sich die Frame-Algebra dynamisieren?“) mit den Negativresultaten r81–v4.10.0-r04; **eingefroren**, keine weiteren Reparatur-Entscheidungen. W7 („Vakuumterm nicht frei“) gehört zu diesem Zweig, nicht zum Kern.
+
+- **6.11.2026, Autor: Epoche der Λ-Auslesung „Heute“.** Die Kaskaden-Verzweigung Ω_Λ : Ω_M = (1 − β²) : β² gilt für die heutige Epoche. Daraus folgt die parameterfreie Vorhersage H96 (Ω_M = 0,30185, Vorab-Notiz `Vorab_Notiz_H96_Omega_M_beta2.md`). Offen bleibt das „warum jetzt“.
+
 ## Nächster Schritt (Vorschlag)
 Nach diesen Entscheidungen die kleinste Wirkung aufschreiben, die (W1)–(W8) erfüllt, und zuerst nur ihre Euler–Lagrange-Gleichungen und Identitäten (Bianchi, Ward) symbolisch prüfen, noch ohne Lösung. Ein Test mit Kriterium erst danach, mit Vorab-Notiz.
