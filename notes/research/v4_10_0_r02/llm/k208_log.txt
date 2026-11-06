@@ -1,0 +1,12 @@
+sgn +1 lokal x=300: ln|r| = 31.342063, Abw. = +0.00572, Kontrolle 2.7e-09
+sgn +1 lokal x=600: ln|r| = 44.320280, Abw. = +0.00399, Kontrolle 1.4e-05
+sgn +1 voll x=80: Abw. = -0.00282, Konturen 1.2e-11
+sgn +1 voll x=100: Abw. = -0.00846, Konturen 2.0e-09
+sgn +1 voll x=120: Abw. = -0.00452, Konturen 3.4e-07
+sgn +1: c_pred = 1.809205, Steigung = 1.808965 (-0.0133%)
+sgn -1 lokal x=300: ln|r| = 31.342063, Abw. = +0.00572, Kontrolle 5.4e-11
+sgn -1 lokal x=600: ln|r| = 44.320292, Abw. = +0.00400, Kontrolle 1.0e-09
+sgn -1 voll x=80: Abw. = -0.00282, Konturen 3.9e-11
+sgn -1 voll x=100: Abw. = -0.00846, Konturen 5.9e-09
+sgn -1 voll x=120: Abw. = -0.00452, Konturen 5.1e-07
+sgn -1: c_pred = 1.809205, Steigung = 1.808966 (-0.0132%)

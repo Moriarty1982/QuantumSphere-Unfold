@@ -88,6 +88,9 @@ Zu H46: Eine Bestätigung würde die Kette r55–r60 prüfen, nicht die Lesart a
 | H88 | Unabhängige Herleitung der W1-Feldgleichungen: Erzeuger, Torsion −(3/16)κ j², Weyl-Gleichung, Ward-Identität (nicht blind) | bestätigt, keine Abweichung (r86) |
 | H89 | Energie-Impuls-Tensor von W1: Vier-Fermionen-Anteil, homogener Zustand, Belinfante aus der Vierbein-Variation (nicht blind) | bestätigt: T^(4f) in Λ-Form, homogen ρ = p > 0, erste Ordnung = −Belinfante; zwei Fehler im Prüfcode offengelegt (r86) |
 | H90 | Volle Einstein–Cartan-Gleichung von W1: Cartan-Lösung, Einstein-Gleichung mit T^eff, Bianchi-Verträglichkeit, Vorzeichen der Gravitationswirkung (nicht blind) | bestätigt; W1 wie notiert stößt ab (G̃ = −κT), korrigiert auf −R/2κ (Autorentscheidung); Vorzeichen aus H88, H89 und r82.4 umgekehrt (v4.10.0-r01) |
+| H91 | Abfall der Beimischung bis kΔ = 60: Exponent π (Fit mit √x), Wurzelterm nötig, Steigung 50–60 innerhalb 3 % von π (teilweise nicht blind) | ungültig nach Kriterium a (Planungsfehler: H87 nur vierstellig); b–d wie formuliert verfehlt (v4.10.0-r02) |
+| H92 | Vorfaktor = Stokes-Funktion r(λ) des lokalen Problems, λ = L kΔ/2: Universalität, Wellen, Drehsinne, Born-Grenzfall (teilweise nicht blind) | b, c, d bestätigt; a verfehlt (fester Faktor ≈ 0,54) (v4.10.0-r02) |
+| H93 | Hergeleitete Asymptotik `ln\|C\| = −πkΔ + c√(kΔ) − ½ln(a/b)`, c = 2√π Γ(3/4)/Γ(1/4)·Re√L = 1,809205 (teilweise nicht blind) | Zahlen getroffen (c auf 0,013 %, Konstante ≤ 0,006, volles Problem ≤ 0,009); formal ungültig (Genauigkeitskontrolle Drehsinn +, kΔ = 600); Drehsinn − bestätigt (v4.10.0-r02) |
 
 ## Erkundungen ohne Vorab-Notiz
 
