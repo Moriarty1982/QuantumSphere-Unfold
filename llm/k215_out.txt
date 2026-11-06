@@ -1,0 +1,11 @@
+Materie: I = 0.091 Delta^-4; n_mix(0.02) = 0.4050, max n_mix = 0.562 bei kDelta = 0.27; Integrand max bei kDelta = 0.76
+Photon: I = 0.066 Delta^-4; n_mix(0.02) = 0.0014, max n_mix = 0.492 bei kDelta = 0.47; Integrand max bei kDelta = 0.76
+x_c | n_P(x_c) | E_grav/E_boson je Freiheitsgrad | Delta N_eff (g_B = 28) | (g_B = 4)
+0.05 | 0.0087 | 0.0114 | 0.042 | 0.291
+0.10 | 0.0337 | 0.0478 | 0.174 | 1.215
+0.20 | 0.1268 | 0.1728 | 0.628 | 4.395
+0.30 | 0.2595 | 0.3297 | 1.198 | 8.385
+0.50 | 0.4498 | 0.9098 | 3.306 | 23.140
+0.70 | 0.2275 | 0.9723 | 3.533 | 24.730
+1.00 | 0.0641 | 0.7977 | 2.899 | 20.290
+Kleine x: n_P/x^2 = 3.423  n_M = 0.4039
