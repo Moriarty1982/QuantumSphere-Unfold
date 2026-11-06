@@ -1,0 +1,11 @@
+Kontrolle LCDM: Om = 0.2970 (+0.0085/-0.0080), h r_d = 101.56 Mpc, chi2 = 10.55
+Gueltigkeit erfuellt: True
+LCDM bei Om = beta^2: chi2 = 10.87, p = 0.540, h r_d = 101.18
+H97 Kaskade eps=1: chi2 = 105.03, p = 5.73e-17, h r_d = 105.40  -> widerlegt
+  eps = 0.00: chi2 = 10.87, p = 0.540
+  eps = 0.05: chi2 = 10.44, p = 0.578
+  eps = 0.10: chi2 = 10.36, p = 0.584
+  eps = 0.20: chi2 = 11.39, p = 0.496
+  eps = 0.30: chi2 = 14.14, p = 0.292
+  eps = 0.50: chi2 = 25.74, p = 0.012
+  eps = 1.00: chi2 = 105.03, p = 0.000

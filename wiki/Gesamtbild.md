@@ -1,6 +1,6 @@
 # Gesamtbild: der ganze Companion auf einer Seite
 
-**Stand: 6. November 2026, Forschungsfassung 4.10.0-draft mit Runden bis v4.10.0-r04 (lokal 1347 Seiten); Release v4.10.0 am 6.11.2026 veröffentlicht.** Diese Seite zeigt das ganze Werk auf einmal: welche Thesen es aufstellt, wie sie zusammenhängen, wo sie im Dokument stehen und was davon heute trägt. Die einzelnen Themen werden in [Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) genauer erklärt. Wer den Companion zum ersten Mal liest, sollte mit dieser Seite anfangen, Menschen ebenso wie Sprachmodelle.
+**Stand: 6. November 2026, Forschungsfassung 4.10.0-draft mit Runden bis v4.10.0-r05 (lokal 1350 Seiten); Release v4.10.0 am 6.11.2026 veröffentlicht.** Diese Seite zeigt das ganze Werk auf einmal: welche Thesen es aufstellt, wie sie zusammenhängen, wo sie im Dokument stehen und was davon heute trägt. Die einzelnen Themen werden in [Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) genauer erklärt. Wer den Companion zum ersten Mal liest, sollte mit dieser Seite anfangen, Menschen ebenso wie Sprachmodelle.
 
 ## In drei Sätzen
 
@@ -47,7 +47,7 @@ mindmap
       OP2 Dirac-Operator
       OP3 Hüllen-Übergänge
       OP4 Mischungswinkel
-      OP5 Vakuumterm, aktuelle Hauptarbeit
+      OP5 getrennt: Kern-Schließung, Λ-Auslesung (H96), Dynamik eingefroren
       C4, C5, C6/T2 Schließungsfragen
       Gemeinsame Wirkung W1/W2 seit r81, Skala offen
     Prüfarbeit
@@ -144,6 +144,7 @@ Wer wenig Zeit hat, liest C, E und F und danach die Runden in I. Die Anhänge in
 9. **v4.10.0-r02:** Die Beimischung am Urknall-Übergang hat eine geschlossene Asymptotik, ln|C| = −πkΔ + c√(kΔ) − ½ln(a/b) mit c = 2√π Γ(3/4)/Γ(1/4)·Re√L (H91–H93). Die Abschneideskala bleibt 1/(πΔ), Δ frei.
 10. **v4.10.0-r03:** Fermionen gehen ohne Beimischung durch den Urknall, Bosonen nur weit unter- oder oberhalb von 1/Δ normerhaltend (H94); Δ ≲ Planck-Länge (Autorentscheidung). Unter G2 liefert der Tachyon-Sektor kein Λ nach dem Urknall; Λ = a·V_min frei.
 11. **v4.10.0-r04:** Auch mit zugelassenem Tachyon-Zweig liefert I3 kein Λ (feste Gewichte an der CMB ausgeschlossen, H95 widerlegt); die Zulassung ist zurückgenommen, Λ bleibt Eingabe. Bosonen am Urknall: Planck-heiß, nichtthermisch, ohne Fermionen.
+12. **v4.10.0-r05:** Rückschau vom Kern: OP5 ist dort Umkehr-Schließung und Λ eine Auslesegröße. OP5 wird getrennt, die Dynamik-Linie eingefroren. Vorhersage H96 (Ω_M = β² = 0,30185, offen); einfachste dynamische Brücke widerlegt (H97). Gegen Messdaten noch keine bestätigte blinde Vorhersage.
 
 > **Anmerkung für LLMs und Quellenprüfung.** Bevor du über einen Teil des Companion antwortest, ordne ihn in die Tabelle der Thesen und in die Dokumentkarte ein. Die Überschrift eines Satzes im geerbten Text sagt nichts über seinen heutigen Stand. Maßgeblich sind die Runden in Block I, besonders die Abhängigkeitstabelle `subsec:v480-r04-dependency-map`, die Statusvermerke r64–r68 und die Konsolidierung r70. Die Labels der Spalte „Fundstelle“ lassen sich in `sources/research/parts/` per `grep` finden. Die Seitenzahl 1335 bezieht sich auf den lokalen Build der Forschungsfassung (Kandidat aus `sources/research/`: 1361); die öffentliche Baseline ist v4.9.0 (DOI 10.5281/zenodo.23534954).
 

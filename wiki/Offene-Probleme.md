@@ -1,6 +1,6 @@
 # Offene Probleme und wo die Arbeit festsitzt
 
-**Stand: 6. November 2026, nach v4.10.0-r04.** Diese Seite beschreibt, was offen ist, warum, und was der nächste sinnvolle Schritt wäre. [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie) · [GitHub Issues](https://github.com/Moriarty1982/QuantumSphere-Unfold/issues)
+**Stand: 6. November 2026, nach v4.10.0-r05.** Diese Seite beschreibt, was offen ist, warum, und was der nächste sinnvolle Schritt wäre. [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie) · [GitHub Issues](https://github.com/Moriarty1982/QuantumSphere-Unfold/issues)
 
 ## Der gemeinsame Kern: Es fehlt eine Dynamik
 
@@ -35,6 +35,13 @@ In der QAM als lokales Schließungszertifikat formuliert und im Kristallbild als
 Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56). Die Lesart je Teilchenart (r55) mit Maskenkorrektur (r57) passt und liefert die offenen Vorhersagen H42 und H46. Nach r61 war OP4 in der alten Form falsch gestellt, weil es Frames vermischt.
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
+
+**Neuordnung (v4.10.0-r05, Autorentscheidung):** OP5 hat drei Teile.
+1. *OP5-Kern:* Umkehr-Schließung I(OP1) = I(OP5_sym), lokal geschlossen.
+2. *Λ-Auslesung:* Ω_Λ : Ω_M = (1 − β²) : β² als Verzweigung der Kaskade, Epoche heute. Daraus die Vorhersage H96 (Ω_M = 0,30185, offen); die einfachste Dynamik dafür ist widerlegt (H97).
+3. *Dynamik-Programm W1/W2:* eingefroren.
+
+Der folgende Text beschreibt den Stand des Dynamik-Zweigs bis v4.10.0-r04.
 
 Lokal ist OP5 über eine Detektorschwelle geschlossen ($\mathrm{OP5}_{\mathrm{eff}}$). Exakt ist es offen. Der Stand nach r69 bis r86:
 - **Frame-Wechsel:** Ein passiver Frame-Wechsel beseitigt keinen Bilanzfehler.
