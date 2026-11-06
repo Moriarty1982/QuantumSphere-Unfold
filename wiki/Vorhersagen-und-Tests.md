@@ -87,6 +87,7 @@ Zu H46: Eine Bestätigung würde die Kette r55–r60 prüfen, nicht die Lesart a
 | H87 | Wolfram-Gegenprobe zu H86: Werte auf 10⁻⁵ (a), Steigung des Abfalls bei kΔ = 20–30 innerhalb 3 % von π (b), Formeln des scharfen Übergangs symbolisch (c) (nicht blind) | a, c bestätigt; b widerlegt wie formuliert (2,956, 5,9 % unter π); nachträglich Fit mit Potenzvorfaktor s ≈ π (r86) |
 | H88 | Unabhängige Herleitung der W1-Feldgleichungen: Erzeuger, Torsion −(3/16)κ j², Weyl-Gleichung, Ward-Identität (nicht blind) | bestätigt, keine Abweichung (r86) |
 | H89 | Energie-Impuls-Tensor von W1: Vier-Fermionen-Anteil, homogener Zustand, Belinfante aus der Vierbein-Variation (nicht blind) | bestätigt: T^(4f) in Λ-Form, homogen ρ = p > 0, erste Ordnung = −Belinfante; zwei Fehler im Prüfcode offengelegt (r86) |
+| H90 | Volle Einstein–Cartan-Gleichung von W1: Cartan-Lösung, Einstein-Gleichung mit T^eff, Bianchi-Verträglichkeit, Vorzeichen der Gravitationswirkung (nicht blind) | bestätigt; W1 wie notiert stößt ab (G̃ = −κT), korrigiert auf −R/2κ (Autorentscheidung); Vorzeichen aus H88, H89 und r82.4 umgekehrt (v4.10.0-r01) |
 
 ## Erkundungen ohne Vorab-Notiz
 
