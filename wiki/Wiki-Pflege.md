@@ -45,6 +45,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- **6.11.2026, OP5-Nennerprüfung (Arbeitsnotiz):** Offene-Probleme trennt Eigenwertverhältnis, Übergangsfluss, Zählparameterkontrast und kosmologischen Dichteanteil. r31 als Stabilität einer eingesetzten Verzweigung präzisiert, nicht als Herleitung ihres Zahlenwerts.
+
 - **6.11.2026, Frame-/Parameterprüfung (Arbeitsnotiz):** Offene-Probleme erläutert die bestehende R/P-Korrektur aus r24 und trennt Eigenwertverhältnis, Eigenanteil, Messport und kosmologischen Dichteanteil. H96 und Guards unverändert.
 
 - **6.11.2026, OP5-Operations-Datenblatt (Arbeitsnotiz):** Offene-Probleme trennt Projektion, Referenz-/Basiswechsel, Dualität, Zeitumkehr und Beobachterboost. Feldrapidität und symmetrischer Frame-Versatz werden nicht gleichgesetzt; keine neue Evidenz oder Schicht.

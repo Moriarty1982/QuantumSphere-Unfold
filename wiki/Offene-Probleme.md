@@ -50,6 +50,8 @@ Die folgende r05-Trennung bleibt als dokumentierter Stand erhalten: H96 ist offe
 
 **Frame-/Parameterprüfung (Arbeitsnotiz, 6.11.):** r24 löst die zunächst anhand von r17 offene Referenzbenennung auf: Der alte „Photon-Frame“ ist R (reines Register), während P das lichtartige Register I/2 bezeichnet. Ein endlicher γ_L vergleicht in dieser Lesart M mit R. r17 liefert β² als Eigenwertverhältnis λ₋/λ₊; der kleinere normierte Eigenanteil ist dagegen β²/(1+β²), und ein fester Messport liest diese Eigenwerte nur bei passender Ausrichtung. Die Auswahl eines konkreten Feldzustands mit η_f = η_sym und die Gleichsetzung des Verhältnisses mit Ω_M bleiben zusätzliche Verpflichtungen. [Quellen und genaue Typentrennung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_frame_identification_2026_11_06.md).
 
+**Nennerprüfung (Arbeitsnotiz, 6.11.):** Register-Eigenwertverhältnis, bedingter Ausflussanteil aus S8, Kontrast zweier γ-Parameter und Materiedichte relativ zur kritischen Dichte haben verschiedene Bezugsgrößen. r31 setzt β² als Verzweigung ein und zeigt im Modell dessen stationäre Flussstabilität; es leitet β² nicht unabhängig her. r63/r67 verwenden Lösungen verschiedener Zählgleichungen, keine bereits gemeinsam gezählten Materie-/Vakuumzustände. Die verbleibende Gleichsetzung mit Ω_M(heute) ist deshalb eine zusätzliche physikalische Hypothese, wie in H96 registriert. [Nennerprüfung und präzisierte Abhängigkeiten](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_denominator_audit_2026_11_06.md).
+
 **Neuordnung (v4.10.0-r05, Autorentscheidung):** OP5 hat drei Teile.
 
 1. *OP5-Kern:* Umkehr-Schließung I(OP1) = I(OP5_sym), lokal geschlossen.
