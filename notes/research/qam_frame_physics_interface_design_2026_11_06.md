@@ -141,6 +141,38 @@ Auch Bytegleichheit von Kodierungen oder Hashes ist weder physikalische Äquival
 
 ## 7. Inter-Frame-Schnittstellen bleiben gesonderte Objekte
 
+### Vereinbarter Standardkontext: linke Rollen im Druck weglassen
+
+**Ergänzung auf Autorwunsch, 6.11.2026.** Für einen ausdrücklich abgegrenzten Geltungsbereich, etwa einen Abschnitt oder ein Dokument, darf genau ein Standardkontext (F₀,L₀) deklariert werden. Ein linker Rollenblock, der diesem Standard entspricht, kann in der Anzeige entfallen. Die fehlenden linken Rollen werden beim Lesen beziehungsweise Expandieren automatisch aus dem Standardkontext ergänzt.
+
+Für das lokale ART-Profil lautet die Vereinbarung beispielsweise:
+
+\[
+\text{Standardkontext}=(F_{\mathrm{ART}},L_{\mathrm{ART}}),\qquad
+{}^{F_{\mathrm{ART}}}{}_{L_{\mathrm{ART}}}\mathcal X_{\mu\nu}
+\;\widehat{=}\;X_{\mu\nu}.
+\]
+
+Das Zeichen der Vereinbarung bezeichnet hier eine Kurzschreibweise, keine neue physikalische Gleichheit oder Tensor-Kontraktion. Die Wahl gewöhnlicher Symbole rechts gehört zum Wörterbuch des Profils. Auch die dort verwendeten Skalare erben diesen Kontext. Die Einstein-Gleichung darf deshalb innerhalb dieses Bereichs unmittelbar in ihrer gewöhnlichen Form stehen:
+
+\[
+G_{\mu\nu}+\Lambda g_{\mu\nu}
+=\frac{8\pi G_N}{c^4}T_{\mu\nu}.
+\]
+
+Die Anzeige ist damit die gewöhnliche ART-Gleichung; ihre vollständige QAM-Expansion bleibt die im Standardprofil deklarierte zweiseitige Darstellung. Es ist kein zusätzlicher physikalischer Mapping-Schritt nötig, nur um die unterdrückten Rollen wieder sichtbar zu machen.
+
+Die Vereinbarung gilt unter folgenden einfachen Bedingungen:
+
+- Ohne eindeutig deklarierten Standardkontext werden fehlende linke Rollen nicht erraten.
+- Nur die Rollen des aktuellen Standards dürfen schweigend entfallen. Abweichende Frames/Profile sowie tatsächliche Frameübergänge werden ausdrücklich markiert.
+- Eine Kontextänderung wird an ihrer Geltungsgrenze erklärt; beim Mischen oder Weitergeben von Ausdrücken bleibt der ursprüngliche Kontext erhalten. Ein alleinstehender Export muss den Kontext entweder mitliefern oder die Rollen ausschreiben.
+- Die gewöhnlichen rechten Tensorindizes, Voraussetzungen, Provenienz und der Aussagezustand bleiben unverändert. Die Druckkonvention beweist keine frameübergreifende Äquivalenz.
+
+Die logische Expansion ist daher stets eindeutig. Die Umkehrung muss den ursprünglichen Druckstil nicht bytegleich rekonstruieren, wohl aber denselben interpretierten Ausdruck. Dies ist eine Entwurfsregel für impliziten Kontext, keine Behauptung, dass die heutigen Parser sie bereits automatisch implementieren. Sie ist auch nicht die r03-Rollenerasure: Diese expandiert in explizite Rollendaten und erhält den Kontext weiterhin.
+
+### Ausdrückliche Übergänge zwischen Frames
+
 Ein Übergang von einem Frame B nach A wird etwa durch einen deklarierten Operator-/Readoutcode `K_{A←B}` mit seinem Definitionsbereich und Zieltyp beschrieben. Die passende Anzeige kann wirklich zwei physische Frontslots tragen:
 
 \[

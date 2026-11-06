@@ -8,6 +8,8 @@ Die zweiseitige Darstellung trennt links Frame-/Ausleserollen und rechts die gew
 
 Der [quellenbasierte Schnittstellenentwurf](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/qam_frame_physics_interface_design_2026_11_06.md) entwickelt dies am ART-Beispiel. Die anschließend beschriebenen TeX-/Lean-Buchführungsprüfungen sind eine vorhandene Werkzeugschicht, nicht die gesamte mögliche Semantik der QAM-Sprache. Sie führen bislang kein vollständiges ART-Physikmapping aus.
 
+**Standardkontext als Kurzschreibweise (Entwurfsregel auf Autorwunsch, 6.11.):** Wird für einen Abschnitt ein eindeutiger Frame samt Physikprofil deklariert, dürfen dessen linke QAM-Rollen im Druck entfallen. Im ART-Standardkontext steht dann unmittelbar die gewöhnliche Einstein-Gleichung; beim Expandieren werden die linken Rollen wieder ergänzt. Abweichende Frames und Übergänge bleiben ausdrücklich markiert. Exporte müssen den Kontext erhalten oder ausschreiben. Das ist eine Notationsvereinbarung, keine neue physikalische Annahme und noch keine automatisch implementierte Parserfunktion.
+
 ## Vorhandene Buchführungswerkzeuge
 
 Die vorhandene Werkzeugschicht realisiert typisierte Buchführungsprüfungen für lange Forschungstexte, mit oder ohne Sprachmodelle. Sie hängt **nicht** am Projekt Quantum Sphaera; das Projekt ist nur ihre erste Fallstudie. Ausführlich: Methodenpapier `paper/qam/` (Entwurf, 12 Seiten, nur Zenodo). Diese Werkzeugbeschreibung ersetzt nicht die oben erklärte Frame-Schnittstellenrolle.
