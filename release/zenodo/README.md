@@ -53,6 +53,22 @@ publish: true
 confirm_publish: true
 ```
 
+## Preview file
+
+Zenodo shows the first previewable file it receives as the record preview. The helper uploads the smallest files first,
+so a release with a figure PDF next to the main PDF needs the preview named explicitly:
+
+```text
+default_preview: Quantum_Sphaera_Companion_vX_Y_Z.pdf
+```
+
+That file is then uploaded first, and after the upload the helper reads `files.default_preview` of the draft and stops
+before publishing if another file is set. Without `default_preview` and with more than one PDF, the dry run prints a
+warning. Check the preview in the Zenodo draft before publishing in any case (in v4.10.0 the figure was shown first and
+was corrected by hand).
+
+After publishing, set the tag `vX.Y.Z` and a GitHub release with the Version DOI and the record link.
+
 ## File layout
 
 Place final upload files in:
