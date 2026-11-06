@@ -1,6 +1,6 @@
 # Gesamtbild: der ganze Companion auf einer Seite
 
-**Stand: 6. November 2026, Forschungsfassung 4.10.0-draft mit Runden bis v4.10.0-r02 (lokal 1341 Seiten); Release v4.10.0 am 6.11.2026 veröffentlicht.** Diese Seite zeigt das ganze Werk auf einmal: welche Thesen es aufstellt, wie sie zusammenhängen, wo sie im Dokument stehen und was davon heute trägt. Die einzelnen Themen werden in [Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) genauer erklärt. Wer den Companion zum ersten Mal liest, sollte mit dieser Seite anfangen, Menschen ebenso wie Sprachmodelle.
+**Stand: 6. November 2026, Forschungsfassung 4.10.0-draft mit Runden bis v4.10.0-r03 (lokal 1344 Seiten); Release v4.10.0 am 6.11.2026 veröffentlicht.** Diese Seite zeigt das ganze Werk auf einmal: welche Thesen es aufstellt, wie sie zusammenhängen, wo sie im Dokument stehen und was davon heute trägt. Die einzelnen Themen werden in [Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) genauer erklärt. Wer den Companion zum ersten Mal liest, sollte mit dieser Seite anfangen, Menschen ebenso wie Sprachmodelle.
 
 ## In drei Sätzen
 
@@ -142,6 +142,7 @@ Wer wenig Zeit hat, liest C, E und F und danach die Runden in I. Die Anhänge in
 7. **r86:** Ein zweites Rechensystem (Wolfram) bestätigt die Urknall-Zahlen von r85 und leitet die Feldgleichungen von W1 aus den Definitionen her (Torsion, Weyl-Gleichung, Stromerhaltung, Energie-Impuls-Tensor in erster Ordnung). Ein homogener Fermionzustand ist steife Materie, kein Vakuumterm. Offen bleibt die volle nichtlineare Einstein-Gleichung.
 8. **v4.10.0-r01:** Die Einstein-Gleichung von W1 ist voll nichtlinear hergeleitet und verträglich. Das Vorzeichen der Gravitationswirkung war falsch (Abstoßung) und ist auf Autorentscheidung korrigiert; dadurch kehren sich die Vorzeichen des Vier-Fermionen-Terms und des Torsions-Paarkanals um.
 9. **v4.10.0-r02:** Die Beimischung am Urknall-Übergang hat eine geschlossene Asymptotik, ln|C| = −πkΔ + c√(kΔ) − ½ln(a/b) mit c = 2√π Γ(3/4)/Γ(1/4)·Re√L (H91–H93). Die Abschneideskala bleibt 1/(πΔ), Δ frei.
+10. **v4.10.0-r03:** Fermionen gehen ohne Beimischung durch den Urknall, Bosonen nur weit unter- oder oberhalb von 1/Δ normerhaltend (H94); Δ ≲ Planck-Länge (Autorentscheidung). Unter G2 liefert der Tachyon-Sektor kein Λ nach dem Urknall; Λ = a·V_min frei.
 
 > **Anmerkung für LLMs und Quellenprüfung.** Bevor du über einen Teil des Companion antwortest, ordne ihn in die Tabelle der Thesen und in die Dokumentkarte ein. Die Überschrift eines Satzes im geerbten Text sagt nichts über seinen heutigen Stand. Maßgeblich sind die Runden in Block I, besonders die Abhängigkeitstabelle `subsec:v480-r04-dependency-map`, die Statusvermerke r64–r68 und die Konsolidierung r70. Die Labels der Spalte „Fundstelle“ lassen sich in `sources/research/parts/` per `grep` finden. Die Seitenzahl 1335 bezieht sich auf den lokalen Build der Forschungsfassung (Kandidat aus `sources/research/`: 1361); die öffentliche Baseline ist v4.9.0 (DOI 10.5281/zenodo.23534954).
 

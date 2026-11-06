@@ -70,5 +70,7 @@
 
 - **6.11.2026, Autor: Korrektur zu Entscheidung 3 (Vorzeichen der Gravitationswirkung).** Nach H90 (`Ergebnis_H90_W1_Einstein_nichtlinear.md`) gibt +(1/2κ)∫e R in der Signatur (+, −, −, −) mit der Krümmung R^ab = dω^ab + ω^a_c∧ω^cb abstoßende Gravitation (G̃ = −κT). W1 wird auf **S_grav = −(1/2κ)∫e R(ω)** korrigiert (Wortlaut des Autors: „Ja, korrigieren“). Damit gilt G̃ = +κT^eff, L_4f = +(3/16)κ j·j, T^(4f) = −(3κ/16) j² g. Frühere Runden werden nicht umgeschrieben; die Korrektur kommt in die nächste Runde.
 
+- **6.11.2026, Autor: Dauer des Urknall-Übergangs Δ ≲ Planck-Länge** (Wortlaut: „Δ ≲ Planck-Länge“). Anlass H94: Unter G2 mit komplexem Übergang ist die Norm der Bosonen nur für kΔ ≪ 1 und kΔ ≫ 1 erhalten; Fermionen exakt (CPT). Mit Δ ≲ ℓ_P gehen alle Moden unterhalb der Planck-Skala normerhaltend hindurch (Bogoliubov, n = (1 − β_sym²)²/(4β_sym²) = 0,404 je Mode bei Materie-Gewichten), Fermionen werden CPT-gespiegelt ohne Erzeugung. Der nicht unitäre Bereich k ~ 1/Δ liegt an oder jenseits der Planck-Skala. Offen bleibt damit, was dort geschieht: Die gesamte erzeugte Energie der Bosonen wird von diesem Bereich bestimmt (∫k³n(k)dk), ist also nicht festgelegt.
+
 ## Nächster Schritt (Vorschlag)
 Nach diesen Entscheidungen die kleinste Wirkung aufschreiben, die (W1)–(W8) erfüllt, und zuerst nur ihre Euler–Lagrange-Gleichungen und Identitäten (Bianchi, Ward) symbolisch prüfen, noch ohne Lösung. Ein Test mit Kriterium erst danach, mit Vorab-Notiz.
