@@ -2675,6 +2675,14 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **r01.3 Korrekturen:** r81.1(b)/r86.2 Vorzeichen des Torsionsterms; r86.3 ρ = p = −(3κ/16)n² < 0; r86.4 im Vorzeichenteil zurückgenommen; r82.4 Paarkanal abstoßend, ν^c-Kondensat entfällt. Übrige H69–H86 nicht betroffen.
 - R_chk = (1,1,1); Guards unverändert. OP5 offen. Lokal 1338 Seiten, 3987 Labels.
 
+### K138 Runde v4.10.0-r02: Asymptotik der Urknall-Beimischung (2026-11-06)
+
+`sec:v4100-r02-admixture-asymptotics`, Snippet `llm/v4100_r02_round.tex`, Notizen `notes/research/v4_10_0_r02/`.
+- **r02.1 H91:** ungültig nach Kriterium a (Planungsfehler); C bis kΔ = 60 gesichert; Steigung wellig; |C₊| = |C₋| (nachträglich).
+- **r02.2 H92:** Am Pol t₀ = iπΔ/2 hat w = e^{Ls} eine wesentliche Singularität; lokale Gleichung y'' − (λ/σ²)y' + y = 0, λ = L kΔ/2, C ≈ r(λ)e^{−πkΔ}. b, c, d bestätigt, a verfehlt (Faktor ≈ 0,54).
+- **r02.3 H93:** C = e^{−L/2}C_u (adiabatische Amplitude); WKB am Umkehrpunkt η = −i: ln|r| = c√(kΔ), c = 2√π Γ(3/4)/Γ(1/4)·Re√L = 1,809205; Korrektur −λ/σ³ nur Phase −π/4. Zahlen auf 0,013 %; formal ungültig (Kontrolle 1,4·10⁻⁵ bei Drehsinn +, kΔ = 600), Drehsinn − bestätigt.
+- R_chk = (1,1,0); Guards unverändert. Lokal 1341 Seiten, 3992 Labels.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2874,3 +2882,4 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - v15.1 (2026-11-05): K135 Runde v4.9.0-r85 (H82–H86, G2, Urknall als CPT-Übergang).
 - v15.2 (2026-11-06): K136 Runde v4.9.0-r86 (H87–H89, Wolfram-Prüfung, Korrektur zur W1-Notiz).
 - v15.3 (2026-11-06): K137 Runde v4.10.0-r01 (H90, Vorzeichen der Gravitationswirkung korrigiert).
+- v15.4 (2026-11-06): K138 Runde v4.10.0-r02 (H91–H93, Asymptotik der Urknall-Beimischung).
