@@ -33,3 +33,6 @@ Mit den Bosonen des Standardmodells (g_B = 28) wäre ΔN_eff ≈ 3,6. Die Grenze
 
 ## Folge
 Eine Entscheidung des Autors ist nötig: mit welchem Gewicht die Gravitation den Übergang sieht. Mit Photon-Gewichten ist das N_eff-Problem weg, und der Urknall erzeugt keine Gravitonen. Mit Materie-Gewichten ist das Modell an ΔN_eff gescheitert, außer mit sehr vielen zusätzlichen Bosonen.
+
+## Nachtrag (6.11., k214)
+„Mit Photon-Gewichten keine Erzeugung“ gilt nur für kΔ ≪ 1. Am glatten Übergang ist die Erzeugungsenergie auch bei a = b von gleicher Ordnung (I = 0,066 statt 0,091 Δ⁻⁴), ΔN_eff ≈ 2,6. Siehe `Erkundung_Erzeugung_Photongewichte.md`.

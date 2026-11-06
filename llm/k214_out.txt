@@ -1,0 +1,2 @@
+Materie: I = 0.091 Delta^-4; n_mix(0.02) = 0.4050, max n_mix = 0.562 bei kDelta = 0.27; Integrand max bei kDelta = 0.76
+Photon: I = 0.066 Delta^-4; n_mix(0.02) = 0.0014, max n_mix = 0.492 bei kDelta = 0.47; Integrand max bei kDelta = 0.76

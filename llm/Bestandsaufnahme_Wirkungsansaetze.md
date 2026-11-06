@@ -78,5 +78,7 @@
 
 - **6.11.2026, Autor: Die Gravitation trägt am Urknall-Übergang Photon-Gewichte (a = b)** (Wortlaut: „Photon-Gewichte“), nach `Erkundung_Gravitonen_Urknall.md`: Mit Materie-Gewichten ergäben die am Urknall erzeugten Gravitonen ΔN_eff ≈ 3,6 (SM-Bosonen). Mit Photon-Gewichten erzeugt der Übergang keine Gravitonen (r85.5), passend zu r64 (Gravitation frame-unabhängig). Folge: keine Gravitationswellen-Spur aus dem Übergang selbst; die übliche Erzeugung durch die Expansion bleibt.
 
+- **Nachtrag zur Entscheidung „Photon-Gewichte für die Gravitation“ (6.11., `Erkundung_Erzeugung_Photongewichte.md`):** Die Begründung („keine Gravitonen-Erzeugung“) gilt nur für kΔ ≪ 1. Am glatten Übergang ist die Erzeugungsenergie bei Photon-Gewichten nur ~27 % kleiner (I = 0,066 statt 0,091 Δ⁻⁴, Maximum bei kΔ ≈ 0,76); ΔN_eff ≈ 2,6 statt 3,6. Die Entscheidung steht, ihre Wirkung auf N_eff ist gering; Auswege: kein Gewichtswechsel der Gravitation am Urknall, oder Erzeugung oberhalb der Planck-Skala unphysikalisch. Dem Autor vorgelegt.
+
 ## Nächster Schritt (Vorschlag)
 Nach diesen Entscheidungen die kleinste Wirkung aufschreiben, die (W1)–(W8) erfüllt, und zuerst nur ihre Euler–Lagrange-Gleichungen und Identitäten (Bianchi, Ward) symbolisch prüfen, noch ohne Lösung. Ein Test mit Kriterium erst danach, mit Vorab-Notiz.
