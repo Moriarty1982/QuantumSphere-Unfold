@@ -14,8 +14,8 @@ fixed script with validated arguments and a time limit, and reports; nothing in 
 | `run_claim_scan(version)` | `scripts/qsc_audit/claim_scan.py` (claim-strength language) | `audits/<version>/` |
 | `run_freeze_audit(version)` | `scripts/qsc_audit/freeze_audit.py` (the four scans above, with an index) | `audits/<version>/` |
 | `list_audit_reports(version)` | lists `audits/<version>/` | — |
-| `run_guard_lint(path, start_line, end_line)` | `scripts/qsc_audit/guard_linter.py` on a `.tex` file under `sources/`: the five forbidden claims and RH stated as proved | — |
-| `list_layers()` | lists the append-only layers (label, title, file, line) in `sources/research/parts/*-layers.tex` | — |
+| `run_guard_lint(path, start_line, end_line)` | `scripts/qsc_audit/guard_linter.py` on a `.tex` file under `sources/`: the five forbidden claims and RH stated as proved; without `path`, the newest layer file | — |
+| `list_layers()` | lists the append-only layers (label, title, file, line) in `sources/research/parts/v*-release-layers.tex` and `v*-post-release-layers.tex`, found by name and ordered by release line, so a new layer file needs no code change | — |
 | `build_research_candidate()` | `.github/scripts/qsc_latex_build.py` on `sources/research` and the CI research gate | `build/mcp-research/` |
 
 `version` defaults to `v4.9.0`, the current public release; use for example `v4.10.0-draft` for the candidate. Paths for

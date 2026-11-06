@@ -137,8 +137,20 @@ def list_audit_reports(version: str = DEFAULT_VERSION) -> dict[str, Any]:
 # ---------------------------------------------------------------------------- research-line tools (2026-10-23)
 
 SOURCES_DIR = PROJECT_ROOT / "sources"
-LAYER_FILES = ("v480-release-layers.tex", "v480-post-release-layers.tex", "v490-post-release-layers.tex")
-LAYER_RE = re.compile(r"\\label\{(sec:(?:v4\d0-)?r\d+[a-z]?-[^}]*)\}")
+PARTS_DIR = SOURCES_DIR / "research" / "parts"
+# Layer files are found by name, so a new release line (e.g. v4110-post-release-layers.tex) is picked up without edits.
+LAYER_FILE_RE = re.compile(r"^v(\d)(\d+)(\d)-(release|post-release)-layers\.tex$")
+LAYER_RE = re.compile(r"\\label\{(sec:(?:v\d{3,5}-)?r\d+[a-z]?-[^}]*)\}")
+
+
+def _layer_files() -> list[Path]:
+    """Layer files under sources/research/parts/, oldest release line first; release layers before post-release."""
+    found = []
+    for f in PARTS_DIR.glob("*-layers.tex"):
+        m = LAYER_FILE_RE.match(f.name)
+        if m:
+            found.append(((int(m.group(1)), int(m.group(2)), int(m.group(3)), m.group(4) == "post-release"), f))
+    return [f for _, f in sorted(found)]
 TITLE_RE = re.compile(r"\\section\*?\{([^}]*)\}")
 
 
@@ -153,11 +165,15 @@ def _source_path(path: str) -> Path:
 
 
 @mcp.tool()
-def run_guard_lint(path: str = "sources/research/parts/v490-post-release-layers.tex",
-                   start_line: int | None = None, end_line: int | None = None) -> dict[str, Any]:
+def run_guard_lint(path: str = "", start_line: int | None = None, end_line: int | None = None) -> dict[str, Any]:
     """Check a .tex file under sources/ for the five forbidden claims (C5 = 0, 0_termdata => 0_all, C6/T2 closure,
     W_gamma^glob, W_all) and for RH stated as proved. Report only; a hit is suppressed if the same sentence negates it.
-    Optional 1-based line range, e.g. the newest layer."""
+    Without a path, the newest layer file is checked. Optional 1-based line range, e.g. the newest layer."""
+    if not path.strip():
+        files = _layer_files()
+        if not files:
+            raise AuditError("No layer file found under sources/research/parts/.")
+        path = files[-1].relative_to(PROJECT_ROOT).as_posix()
     target = _source_path(path)
     command = [sys.executable, str(PROJECT_ROOT / "scripts/qsc_audit/guard_linter.py"), str(target)]
     if start_line is not None:
@@ -175,10 +191,8 @@ def run_guard_lint(path: str = "sources/research/parts/v490-post-release-layers.
 def list_layers() -> dict[str, Any]:
     """List the append-only layers (label, title, file, line) in the research candidate's layer files."""
     layers = []
-    for name in LAYER_FILES:
-        f = SOURCES_DIR / "research" / "parts" / name
-        if not f.is_file():
-            continue
+    for f in _layer_files():
+        name = f.name
         lines = f.read_text(encoding="utf-8", errors="replace").splitlines()
         for i, line in enumerate(lines):
             m = LAYER_RE.search(line)
