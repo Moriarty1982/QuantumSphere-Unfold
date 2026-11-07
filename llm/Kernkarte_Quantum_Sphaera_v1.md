@@ -2734,6 +2734,14 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **r07.4:** Vorfaktor nicht herleitbar: γ* = Nκ, N fällt in γ_L = κ_DL/M/κ_ABCK, β_sym, Ω_M heraus; nötig wäre ein absoluter γ-Wert aus der Struktur; 1/4 des Hopf-Punkts nicht gleichgesetzt.
 - R_chk = (1,1,0); Guards unverändert. Lokal 1357 Seiten, 4017 Labels.
 
+### K144 Runde v4.10.0-r08: Annahmen des Companion und Abhängigkeit der offenen Vorhersagen (2026-11-07)
+
+`sec:v4100-r08-assumptions`, Snippet `llm/v4100_r08_round.tex`, Notizen `notes/research/v4_10_0_r08/`, Liste `llm/Annahmenliste_Companion.md`.
+- **r08.1:** zweite Lesart und Photon-Gewichte: kein Widerspruch ((a − b) nur in G1; G2: a·S_M nach dem Urknall, G_eff = (a/a_g)G); Annahme U (gleiches Gewicht aller Felder) ausgesprochen.
+- **r08.2:** Annahmenliste mit Kategorien V/R/K/A/L/S; W1/W2: sieben R/A-Einträge, keiner in den offenen Vorhersagen.
+- **r08.3:** QAM: H15, H42, H46, H96 alle Status reading; H15, H46, H96 am selben γ_L-Kern (Zählregel je Frame); SU(2) gäbe m_W = 82,68 GeV, Ω_M = 0,365; nur H42 unabhängig.
+- R_chk = (1,1,0); Guards unverändert. Lokal 1360 Seiten, 4022 Labels.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2939,3 +2947,4 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - v15.7 (2026-11-06): K141 Runde v4.10.0-r05.
 - v15.8 (2026-11-07): K142 Runde v4.10.0-r06 (Literaturbezug Dorau–Much).
 - v15.9 (2026-11-07): K143 Runde v4.10.0-r07 (Kette im Tachyon-Frame, Korrektur r06.5).
+- v16.0 (2026-11-07): K144 Runde v4.10.0-r08 (Annahmenliste, Abhängigkeit der Vorhersagen).
