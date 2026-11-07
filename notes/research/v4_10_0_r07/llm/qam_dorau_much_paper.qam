@@ -1,0 +1,19 @@
+% QAM record exported by qam.sty
+% source dorau_much.tex md5 07D6BA144D92F094A9764D9EB6D43A6E
+loclin := <6,loclin>; frame M; status conditional; inputs {loclin}; hash 1BCD7610D063AC03FBBCBF008A22FD35; sources {}
+bw := claim; frame M; status proved; inputs {}; hash 37C1E702FD9BC0CA2E24788B7BDCEDC7; sources {}
+araki := claim; frame M; status proved; inputs {}; hash D1266CDD29F1F2908469CED9EE9DA45C; sources {}
+flux := derive(bw,araki); frame M; status proved; inputs {}; hash DFA440E13753DADAD8EE5ED14CBC1E02; sources {37C1E702FD9BC0CA2E24788B7BDCEDC7,D1266CDD29F1F2908469CED9EE9DA45C}
+fluxc := derive(flux,loclin); frame M; status conditional; inputs {loclin}; hash BE715FD37D8EBBD4D2765AE2FF523B55; sources {DFA440E13753DADAD8EE5ED14CBC1E02,1BCD7610D063AC03FBBCBF008A22FD35}
+arealaw := <6,arealaw>; frame M; status conditional; inputs {arealaw}; hash 452EE1796E496D2A82EA439676AFA1A2; sources {}
+raych := claim; frame M; status proved; inputs {}; hash 4D341DE919893632D38BD42A94AB3098; sources {}
+geom := derive(raych,loclin); frame M; status conditional; inputs {loclin}; hash CE3C69AC4392D9A928A1C5085FDECBF2; sources {4D341DE919893632D38BD42A94AB3098,1BCD7610D063AC03FBBCBF008A22FD35}
+einstein := derive(fluxc,arealaw,geom); frame M; status proved; inputs {loclin,arealaw}; hash E43437417341B83EE204275C476A96EC; sources {BE715FD37D8EBBD4D2765AE2FF523B55,452EE1796E496D2A82EA439676AFA1A2,CE3C69AC4392D9A928A1C5085FDECBF2}
+einsteinc := derive(fluxc,arealaw,geom); frame M; status conditional; inputs {loclin,arealaw}; hash CB52DD02E6A1AD754083F52D482E3A6E; sources {BE715FD37D8EBBD4D2765AE2FF523B55,452EE1796E496D2A82EA439676AFA1A2,CE3C69AC4392D9A928A1C5085FDECBF2}
+independent einsteinc
+arealawP := <6,arealawP>; frame P; status conditional; inputs {arealawP}; hash 2E705A0F6692E08E46AB5FF794F4811D; sources {}
+einsteinP := derive(fluxc,arealawP,geom); frame M; status conditional; inputs {loclin,arealawP}; hash 0B5721194820C1D99A5B9621C2950DE8; sources {BE715FD37D8EBBD4D2765AE2FF523B55,2E705A0F6692E08E46AB5FF794F4811D,CE3C69AC4392D9A928A1C5085FDECBF2}
+map Z : P -> M
+arealawM := convert(Z,arealawP); frame M; status conditional; inputs {arealawP}; hash 0B13B009D0D4C4A63D10549F5BCC9102; sources {2E705A0F6692E08E46AB5FF794F4811D}
+einsteinPM := derive(fluxc,arealawM,geom); frame M; status conditional; inputs {loclin,arealawP}; hash 927801C352EC686A45DC6A967AE1C33E; sources {BE715FD37D8EBBD4D2765AE2FF523B55,0B13B009D0D4C4A63D10549F5BCC9102,CE3C69AC4392D9A928A1C5085FDECBF2}
+% record 271A9324DF2666204BC81B6A741838D5

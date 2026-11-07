@@ -53,6 +53,9 @@ Vermutung: Die Herleitung gilt im M-Frame (und in R), nicht ohne Weiteres im T-F
 Drehwinkel 2π (Unruh über Wick-Rotation). Der Companion hat diese Brücke selbst: thm:artqft (Wick-Rotation t ↦ iτ_E am Biquaternion).
 Ob z → iz mit dieser Wick-Rotation zusammenfällt, ist offen; wenn ja, ist der T-Frame die euklidische Seite derselben KMS-Struktur, nicht
 ihr Verlust.
+**Korrektur (7.11., später):** Beides oben ist falsch. z → iz ist die Dualitätsdrehung im Feldraum (z = E + iB) und vertauscht nach
+v4.8.0-r20.1 mit allen Lorentz-Transformationen; die Rapidität bleibt reell, der Boost ein Boost. Die Kette gilt im T-Frame unverändert
+(für das Maxwell-Feld), siehe `llm/Erkundung_Gravitation_Tachyonframe_Dualitaet.md`.
 
 (e) **Torsion.** Die Herleitung gibt Riemann-Geometrie (Levi-Civita, Skalarfeld ohne Spin). W1 ist Einstein–Cartan mit Torsion
 +(3/16)κ j² aus dem Spinorstrom (v4.10.0-r01). Für einen Vergleich bräuchte es die Erweiterung auf Dirac-Felder; die Autoren behandeln sie

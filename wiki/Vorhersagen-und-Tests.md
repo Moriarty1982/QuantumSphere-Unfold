@@ -1,6 +1,6 @@
 # Vorhersagen und Tests
 
-**Stand: 7. November 2026.** Runde v4.10.0-r06 (Literaturbezug Dorau–Much) enthält keinen Test und keine neue Vorhersage. Seit v4.8.0 gilt eine feste Regel: Eine neue Vorhersage oder ein Test wird **vor** der Rechnung als Vorab-Notiz festgeschrieben (Hypothese, Daten, Entscheidungskriterium) und committet. Erst dann wird gerechnet. So lässt sich später prüfen, dass nichts nachträglich angepasst wurde. Diese Seite listet alle Tests mit ihrem Ergebnis. [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie) · [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt)
+**Stand: 7. November 2026.** Die Runden v4.10.0-r06 (Literaturbezug Dorau–Much) und r07 (die Kette im Tachyon-Frame) enthalten keinen Test und keine neue Vorhersage; ein geplanter Test zu r07 wurde nicht vergeben, weil das Ergebnis analytisch feststand. Seit v4.8.0 gilt eine feste Regel: Eine neue Vorhersage oder ein Test wird **vor** der Rechnung als Vorab-Notiz festgeschrieben (Hypothese, Daten, Entscheidungskriterium) und committet. Erst dann wird gerechnet. So lässt sich später prüfen, dass nichts nachträglich angepasst wurde. Diese Seite listet alle Tests mit ihrem Ergebnis. [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie) · [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt)
 
 ## Offene Vorhersagen (warten auf neue Daten)
 
