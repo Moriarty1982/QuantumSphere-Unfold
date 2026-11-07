@@ -1,0 +1,25 @@
+% QAM record exported by qam.sty
+% source qam_annahmen_vorhersagen.tex md5 51B848372139B230FDC960FD592493F9
+gBI := <6,gBI>; frame M; status computed; inputs {gBI}; hash C6408815223D24C878C86FDF4BF80773; sources {}
+gstr := <6,gstr>; frame T; status computed; inputs {gstr}; hash 1FF0A17D034165B9BE5CBB985FF5791C; sources {}
+countrule := <6,countrule>; frame *; status reading; inputs {countrule}; hash 17A320DEC3E5257505F1B02C6480E307; sources {}
+map Fo : T -> M
+gstrM := convert(Fo,gstr); frame M; status reading; inputs {gstr}; hash B9A0EB0249C6E02908C07130CAEF3A53; sources {1FF0A17D034165B9BE5CBB985FF5791C}
+lorentzreading := claim; frame M; status reading; inputs {}; hash 86626291F66278CAB4E2AEC66CC08EF4; sources {}
+gammaL := derive(gBI,gstrM,countrule,lorentzreading); frame M; status reading; inputs {gBI,gstr,countrule}; hash AF4290DA47446088512C176480B850B1; sources {C6408815223D24C878C86FDF4BF80773,B9A0EB0249C6E02908C07130CAEF3A53,17A320DEC3E5257505F1B02C6480E307,86626291F66278CAB4E2AEC66CC08EF4}
+halfrapidity := claim; frame M; status reading; inputs {}; hash 12E0C0318FA50C1E7F66072D0454C46F; sources {}
+beta := derive(gammaL,halfrapidity); frame M; status reading; inputs {gBI,gstr,countrule}; hash 7DBF7D94F8E147AF111A146AE6759535; sources {AF4290DA47446088512C176480B850B1,12E0C0318FA50C1E7F66072D0454C46F}
+cascade := claim; frame M; status reading; inputs {}; hash 21D1E9EFD9B6451BA6A4044C9847BA4C; sources {}
+epoch := <6,epoch>; frame *; status reading; inputs {epoch}; hash 2AD7DE761D5188843B1AEBB283E33F62; sources {}
+H96 := derive(beta,cascade,epoch); frame M; status reading; inputs {gBI,gstr,countrule,epoch}; hash 1B909102AB26788E8307743E42B67576; sources {7DBF7D94F8E147AF111A146AE6759535,21D1E9EFD9B6451BA6A4044C9847BA4C,2AD7DE761D5188843B1AEBB283E33F62}
+mZ := <6,mZ>; frame M; status computed; inputs {mZ}; hash 511078467F6646F00A2E057103D76498; sources {}
+weinbergreading := <6,weinbergreading>; frame M; status reading; inputs {weinbergreading}; hash 032DA812916FFC0A39A0253516454998; sources {}
+H15 := derive(gammaL,mZ,weinbergreading); frame M; status reading; inputs {gBI,gstr,countrule,mZ,weinbergreading}; hash D584B91712CFCF298FD55DBF08DAD2C1; sources {AF4290DA47446088512C176480B850B1,511078467F6646F00A2E057103D76498,032DA812916FFC0A39A0253516454998}
+dixon := claim; frame M; status reading; inputs {}; hash 4FA9A0972A360E8B28A16D23A9F64DB2; sources {}
+tm2 := <6,tm2>; frame M; status reading; inputs {tm2}; hash AADE0898DD4B8A55B894E9A92D3714D0; sources {}
+maskchoice := <6,maskchoice>; frame M; status reading; inputs {maskchoice}; hash D88E8710129100762F35619FF31636A3; sources {}
+nudata := <6,nudata>; frame M; status computed; inputs {nudata}; hash 590DB4F77526ECBC1C19AB14FDE4CE85; sources {}
+H42 := derive(dixon,tm2,maskchoice,nudata); frame M; status reading; inputs {tm2,maskchoice,nudata}; hash 2BA1E520CABD820353A5553944C9772A; sources {4FA9A0972A360E8B28A16D23A9F64DB2,AADE0898DD4B8A55B894E9A92D3714D0,D88E8710129100762F35619FF31636A3,590DB4F77526ECBC1C19AB14FDE4CE85}
+epseta := <6,epseta>; frame M; status reading; inputs {epseta}; hash 35600850EF493FD475E6648F59B4EFDB; sources {}
+H46 := derive(dixon,tm2,maskchoice,nudata,epseta,beta); frame M; status reading; inputs {tm2,maskchoice,nudata,epseta,gBI,gstr,countrule}; hash 1494015B1D78E0D73EF181B52F776ECC; sources {4FA9A0972A360E8B28A16D23A9F64DB2,AADE0898DD4B8A55B894E9A92D3714D0,D88E8710129100762F35619FF31636A3,590DB4F77526ECBC1C19AB14FDE4CE85,35600850EF493FD475E6648F59B4EFDB,7DBF7D94F8E147AF111A146AE6759535}
+% record 46B7D137860FC3D2794D7A0AF976BDD9

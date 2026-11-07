@@ -1,0 +1,35 @@
+% Annahmenliste: die vier offenen Vorhersagen H15, H42, H46, H96 in QAM-Buchfuehrung. 7.11.2026.
+% Bauen: qam.sty (GitHub qam/tex) in den Suchpfad, pdflatex. Erwartung: keine Meldung; der Export zeigt Status und Eingaben.
+\documentclass{article}
+\usepackage[export]{qam}
+\begin{document}
+\qamframe{M}\qamframe{T}
+% ===== gemeinsamer gamma_L-Kern =====
+\qaminput{gBI}{M}{computed}            % L1: gamma_BI, U(1) alle Spins, kalibriert auf S = A/4
+\qaminput{gstr}{T}{computed}           % L2: gamma_string, j = 1/2, kalibriert auf S = A/4
+\qaminput{countrule}{*}{reading}       % Z1: M alle Spins, T j = 1/2; U(1) statt SU(2) (r63, r68)
+\qammap{Fo}{T}{M}                      % F1: Frame-Versatz T -> M
+\qamconvert{gstrM}{reading}{Fo}{gstr}
+\qamclaim{lorentzreading}{M}{reading}  % F1: gamma_L ist Lorentzfaktor
+\qamderive{gammaL}{reading}{gBI,gstrM,countrule,lorentzreading}
+\qamclaim{halfrapidity}{M}{reading}    % F2: beta = tanh(eta/2), cosh eta = gamma_L
+\qamderive{beta}{reading}{gammaL,halfrapidity}
+% ===== H96: Omega_M = beta^2 =====
+\qamclaim{cascade}{M}{reading}         % K1: thm:dark-energy, r31, r67
+\qaminput{epoch}{*}{reading}           % E1: Epoche heute (Autor 6.11.)
+\qamderive{H96}{reading}{beta,cascade,epoch}
+% ===== H15: cot theta_W (on-shell) = gamma_L =====
+\qaminput{mZ}{M}{computed}             % PDG-Wert m_Z
+\qaminput{weinbergreading}{M}{reading} % W1: cot theta_W = gamma_L, nachtraeglich gefunden (E9), Look-elsewhere ~0.17
+\qamderive{H15}{reading}{gammaL,mZ,weinbergreading}
+% ===== H42: sin^2 theta_23 <= 0.54 =====
+\qamclaim{dixon}{M}{reading}           % D: Dixon-Ablage, gemeinsame Symmetrie A4 (r33)
+\qaminput{tm2}{M}{reading}             % N1: Lesart je Teilchenart, Dirac Z3, Majorana Z2 (r55, Autorfrage)
+\qaminput{maskchoice}{M}{reading}      % N2: Maske W_l = diag(0,0,-3), Formen S/K, zirkulant / Z2-invariant (r57)
+\qaminput{nudata}{M}{computed}         % theta_12 (JUNO 2 sigma), theta_13 (NuFIT 3 sigma) als Einschraenkung
+\qamderive{H42}{reading}{dixon,tm2,maskchoice,nudata}
+% ===== H46: sin^2 theta_23 in [0.49, 0.50] unter eps = eta =====
+\qaminput{epseta}{M}{reading}          % N3: eps = artanh beta_sym (r60/H45, nicht blind gewaehlt)
+\qamderive{H46}{reading}{dixon,tm2,maskchoice,nudata,epseta,beta}
+\qamledger
+\end{document}

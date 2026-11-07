@@ -36,6 +36,41 @@ R ist kein Makel, aber eine Vorhersage, die auf R ruht, ist um diese Auswahl wen
 die künftigen Daten blind (DESI DR3, Euclid), die Wahl ihrer Bestandteile war es nicht ganz. Unabhängig vom Programm W1/W2: keine Annahme aus
 Abschnitt C geht ein.
 
+## A2. Die übrigen offenen Vorhersagen H15, H42, H46
+
+| Kürzel | Annahme | Herkunft | Kat. |
+|---|---|---|---|
+| W1 | cot θ_W (on-shell) = γ_L | E9 im Erkundungsprotokoll Weinberg-Kegel; beim Rechnen bemerkt, 0,8σ am bekannten Wert; Look-elsewhere ≈ 0,17 (H15-Offenlegung) | R |
+| L3 | m_Z = 91,1880 GeV | PDG | L |
+| D | Dixon-Ablage, gemeinsame Symmetrie A₄ | r33 (Autorabsicht) | V |
+| N1 | Lesart je Teilchenart: Dirac ℤ₃, Majorana ℤ₂ (⇒ TM2) | r55 (Autorfrage; „nach Wortlaut Anpassung mit einem Winkel“) | A |
+| N2 | Maske W_l = diag(0, 0, −3), Formen S/K, zirkulante Dirac- und ℤ₂-invariante Majorana-Kopplung | r47, r57 (Modellwahlen) | A |
+| L4 | θ₁₂ im JUNO-2σ-, θ₁₃ im NuFIT-3σ-Bereich als Einschränkung | Daten | L |
+| N3 | ε = artanh β_sym (Rapidität des Materie-Frames) | r60/H45, nicht blind (Trefferfenster aus r59 bekannt) | R |
+
+Bei H42 ist die Grenze selbst nachträglich bemerkt (r57), bei H46 der Wert von θ₂₃ vorher nicht bekannt.
+
+**QAM-Prüfung aller vier** (`llm/qam_annahmen_vorhersagen.tex`, Export `.qam`; mit `qam.sty` ohne Meldung). Alle vier haben den Status **reading**.
+Eingaben laut Export:
+
+| Vorhersage | Eingaben |
+|---|---|
+| H96 (Ω_M = β²) | gBI, gstr, countrule, epoch |
+| H15 (m_W) | gBI, gstr, countrule, mZ, weinbergreading |
+| H46 (θ₂₃ ∈ [0,49; 0,50]) | tm2, maskchoice, nudata, epseta, gBI, gstr, countrule |
+| H42 (θ₂₃ ≤ 0,54) | tm2, maskchoice, nudata |
+
+**Befund: Die vier Vorhersagen sind keine vier unabhängigen Prüfungen.**
+- **H15, H46 und H96 hängen am selben γ_L-Kern** (L1, L2, Z1, über F1 auch an der Frame-Abbildung). Fällt die Zählregel Z1, fallen alle drei.
+  Gegenrechnung mit der SU(2)-Zählung der Literatur (γ_L ≈ 2,15 statt 1,8647): m_W = 82,68 GeV statt 80,361 GeV, Ω_M = 0,365 statt 0,302.
+  Die U(1)-Wahl wurde durch das Leptonfenster getroffen (r63), die m_W-Beziehung nachträglich bemerkt; die beiden „Treffer“ der U(1)-Zählung
+  sind also nicht unabhängig von ihrer Auswahl.
+- **H42 und H46 teilen die Neutrino-Lesart** (N1, N2, L4). H46 = H42-Kette plus ε = η, also plus der γ_L-Kern.
+- **Nur H42 ist vom γ_L-Kern unabhängig.** Effektiv gibt es zwei unabhängige Gruppen: {H15, H46, H96} am γ_L-Kern und H42 an der Neutrino-Lesart.
+- H15 fällt nach eigener Offenlegung mit der SM-Vorhersage auf wenige MeV zusammen; eine Bestätigung unterscheidet erst bei < 1 MeV Unsicherheit.
+- Folge für die Bewertung: Wird eine der drei Kern-Vorhersagen widerlegt, ist zuerst Z1/F1 verdächtig, nicht die Einzelaussage. Werden alle drei
+  bestätigt, stützt das vor allem den Kern; das ist mehr wert als drei Einzeltreffer, aber weniger als drei unabhängige.
+
 ## B. Strukturannahmen des Kerns
 
 | Kürzel | Annahme | Herkunft | Kat. |
@@ -73,4 +108,6 @@ Abschnitt C geht ein.
 2. H96 hängt an den Lesarten F1, F2, K1. Wer H96 stärken will, muss eine davon herleiten, nicht eine neue Zahl finden. Nach r07.4 kann F1
    nur ein Verhältnis liefern; das ist für Ω_M ausreichend (dimensionslos), für G nicht.
 3. Neu sichtbar: Annahme U war stillschweigend. Sie ist plausibel (sonst Verletzung des Äquivalenzprinzips), muss aber ausgesprochen werden.
-4. Nächster Ausbau: H15 (m_W), H42/H46 (θ₂₃) in derselben Form; dann ist für jede offene Vorhersage sichtbar, worauf sie ruht.
+4. Ausgebaut (7.11.): H15, H42, H46 in derselben Form (Abschnitt A2). Drei der vier offenen Vorhersagen ruhen auf dem γ_L-Kern; die Zählregel Z1
+   ist die am stärksten belastete Annahme des Companion. Sie aus den Frames zu begründen (OP1 seit r63: „Zählregeln aus den Frames begründen“)
+   wäre der Schritt, der drei Vorhersagen zugleich stärkt.
