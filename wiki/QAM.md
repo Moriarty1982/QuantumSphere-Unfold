@@ -496,6 +496,174 @@ The [shell residual QAM example](https://github.com/Moriarty1982/QuantumSphere-U
 
 **Residual zero with higher-order terms.** With the model intervals at $0,0.1,0.2$ and the additional bound $|f'''|\le0.1$, a possible second positive zero on the sampled interval lies at or below approximately $0.002778$. A cubic extremizer attains the bound. A vanishing third derivative recovers $1/406$.
 
+**HC-Boost und Flächenquantum.** Ein unitärer Profilwechsel desselben Flächenoperators erhält sein Spektrum. Hat dieses eine kleinste positive Fläche, kann ein solcher Wechsel die Fläche nicht um den r10-Faktor $1/G$ skalieren, außer $G=1$. Der HC-Uhrfaktor benötigt für die r10-Zählannahme eine zusätzliche Spektralabbildung.
+
+**HC boost and area quantum.** A unitary profile change of the same area operator preserves its spectrum. If there is a smallest positive area, this change cannot scale it by the r10 factor $1/G$ unless $G=1$. The HC clock factor needs a separate spectral map for the r10 counting assumption.
+
+**Eingeschränkter Horizontzugang.** Eine Auswahl vorhandener Spektralstufen kann die kleinste positive Fläche desselben Operators nicht senken. Eine Kompression auf einen nicht reduzierenden Teilraum kann kleinere Eigenwerte liefern. Diese gehören zu einem effektiven Operator und sind im Zweiniveaubeispiel Erwartungswerte der ursprünglichen Flächenmessung.
+
+**Restricted horizon access.** Selecting existing spectral levels cannot lower the smallest positive area of the same operator. Compressing onto a nonreducing subspace can give smaller eigenvalues. These belong to an effective operator and are expectation values of the original area measurement in the two-level example.
+
+**Varianzprüfung der Flächenauslesung.** Für Ausgänge in $\{0\}\cup[a,\infty)$ und Mittelwert $0<\mu<a$ gilt $\operatorname{Var}(A)\ge\mu(a-\mu)$. Ein scharfer effektiver Wert $\mu=a/G$ hat dagegen Varianz null bezüglich seiner eigenen Messung. So lassen sich derselbe Mittelwert und verschiedene Flächenauslesungen auseinanderhalten.
+
+**Variance check of the area readout.** For outcomes in $\{0\}\cup[a,\infty)$ and mean $0<\mu<a$, $\operatorname{Var}(A)\ge\mu(a-\mu)$. A sharp effective value $\mu=a/G$ instead has zero variance under its own measurement. This distinguishes area readouts with the same mean.
+
+**Exponentielles Flächengewicht.** Für Flächenausgänge in $\{0\}\cup[a,\infty)$ und mittlere Fläche $a/G$ mit $G>1$ gilt $\mathbb E[e^{-\lambda A}]\ge1-1/G+e^{-\lambda a}/G>e^{-\lambda a/G}$ bei $\lambda>0$. Das Gewicht eines scharfen effektiven Werts unterscheidet sich somit vom spektral gemittelten Gewicht. Die vollständige Horizontzählung benötigt zusätzlich ihre Zustandsgewichte und Entartungen.
+
+**Exponential area weight.** For area outcomes in $\{0\}\cup[a,\infty)$ and mean area $a/G$ with $G>1$, $\mathbb E[e^{-\lambda A}]\ge1-1/G+e^{-\lambda a}/G>e^{-\lambda a/G}$ for $\lambda>0$. A sharp effective value therefore has a different weight from the spectral average. The full horizon count also requires its state weights and degeneracies.
+
+**Angepasste Fläche aus einem Gewicht.** Der Wert $-\log\mathbb E[e^{-\lambda A}]/\lambda$ stellt ein einzelnes exponentielles Gewicht als scharfen Flächenwert dar. Für eine nichtkonstante Flächenverteilung fällt er streng mit $\lambda$. Zwei unterschiedliche Gewichtungen derselben Auslesung können daher einen konstanten scharfen Wert von einer Mischung unterscheiden.
+
+**Area fitted from one weight.** The value $-\log\mathbb E[e^{-\lambda A}]/\lambda$ represents one exponential weight as a sharp area. For a nonconstant area distribution it strictly decreases with $\lambda$. Two distinct weightings of the same readout can therefore distinguish a constant sharp value from a mixture.
+
+**Kompression und Gewichtung.** Im endlichen Modell unterscheiden sich $P e^{-\lambda A}P$ und $e^{-\lambda PAP}$ auf dem zugänglichen Teilraum erstmals durch den quadratischen Term $\lambda^2 PA(I-P)AP/2$, sofern er von null verschieden ist. Der Term misst die Kopplung an die ausgeblendeten Zustände. Ist der Teilraum reduzierend, stimmen beide Gewichtungen überein.
+
+**Compression and weighting.** In the finite model, $P e^{-\lambda A}P$ and $e^{-\lambda PAP}$ on the accessible subspace first differ by the quadratic term $\lambda^2 PA(I-P)AP/2$ when it is nonzero. This term measures coupling to excluded states. Both weightings agree on a reducing subspace.
+
+**Spurvergleich bei fester Gewichtung.** Im endlichen Modell gilt $\operatorname{tr}_P(Pe^{-\lambda A}P)\ge\operatorname{tr}_P e^{-\lambda A_{\rm eff}}$ für jedes $\lambda>0$. Gleichheit bei einem solchen Parameter gilt genau für einen reduzierenden Teilraum. Der Vergleich ist eine Spuraussage bei gemeinsamem Gewichtungsmaß.
+
+**Trace comparison at fixed weighting.** In the finite model, $\operatorname{tr}_P(Pe^{-\lambda A}P)\ge\operatorname{tr}_P e^{-\lambda A_{\rm eff}}$ for every $\lambda>0$. Equality at any such parameter holds exactly for a reducing subspace. This compares traces with a common weighting measure.
+
+**Spektralauswahl und Neunormierung in r10.** Entfernt man bei festem $\gamma$ positive Spinbeiträge aus der auf eins normierten Zählsumme, fällt die Summe unter eins. Erst ihre erneute Normierung erfordert ein kleineres $\gamma$. Die Spin-Auswahl allein ändert keine vorhandene Flächenstufe desselben Operators.
+
+**Spectral selection and renormalization in r10.** At fixed $\gamma$, removing positive spin contributions lowers the normalized counting sum below one. Restoring normalization then requires a smaller $\gamma$. Spin selection alone does not change an existing area level of the same operator.
+
+**Boost und Minimalspinzugang.** Im Ein-Punkt-Vergleich mit gemeinsamem Flächenoperator und $K\propto A$ ist die Minimalspinmaske eine Spektralprojektion des Boostgenerators. Eine unitäre Abbildung, die mit dessen Spektralprojektionen kommutiert, erhält diese Maske und den vollen Zugang jeweils separat. Eine native Einschränkung auf Minimalspin verlangt eine eigene Zugangsregel.
+
+**Boost and minimal-spin access.** In the single-puncture comparison with a shared area operator and $K\propto A$, the minimal-spin mask is a spectral projection of the boost generator. A unitary commuting with its spectral projections preserves that mask and full access separately. Native restriction to minimal spin requires its own access rule.
+
+**Gesamtfläche und Minimalspin.** Im additiven Mehrpunktmodell haben vier Minimalspinpunkte dieselbe Gesamtfläche wie ein Punkt mit $j=3$. Ein gemeinsamer Boostgenerator proportional zur Gesamtfläche kann die Belegungen nicht unterscheiden. Die Minimalspinmaske braucht auf einem Träger mit beiden Belegungen zusätzliche Punktdaten.
+
+**Total area and minimal spin.** In the additive multi-puncture model, four minimal-spin punctures have the same total area as one puncture with $j=3$. A shared boost generator proportional to total area cannot distinguish the configurations. A minimal-spin mask needs additional puncture data if both configurations are admitted.
+
+**Fläche und Punktzahl.** Im additiven Horizontmodell mit $j\ge1/2$ erkennt der Überschuss $X=\mathcal A-a(1/2)N$ die Minimalspinbelegung bei $N>0$ exakt. Die kleinste positive Abweichung beträgt $\sqrt2-\sqrt3/2$. Gesamtfläche und Punktzahl genügen gemeinsam. Die native Zugänglichkeit der Punktzahl und die Auswahl durch T bleiben eigene Bedingungen.
+
+**Area and puncture count.** In the additive horizon model with $j\ge1/2$, the excess $X=\mathcal A-a(1/2)N$ identifies all-minimal spin when $N>0$. The smallest positive deviation is $\sqrt2-\sqrt3/2$. Total area and puncture count suffice jointly. Native access to puncture count and T selection remain separate requirements.
+
+**Thermisches Gewicht und Minimalspin.** Bei fester Punktzahl ändert der Wechsel von Gesamtfläche zu $X=\mathcal A-a(1/2)N$ die normierte Spinverteilung nicht. Eine zusätzliche endliche Unterdrückung $e^{-\nu X}$ lässt höheren Spins positives Gewicht. Exakte Auswahl der Nullfaser braucht eine Projektion oder einen separat begründeten Grenzprozess.
+
+**Thermal weighting and minimal spin.** At fixed puncture count, replacing total area by $X=\mathcal A-a(1/2)N$ leaves the normalized spin distribution unchanged. An extra finite penalty $e^{-\nu X}$ leaves higher spins with positive weight. Exact selection of the zero fiber requires a projection or a separately justified limit.
+
+**Thermische Unterdrückung bei vielen Punkten.** Im unabhängigen Vergleichsmodell ist die Wahrscheinlichkeit einer vollständig minimalen Belegung $(1+R_\nu)^{-N}$. Für feste Zielgenauigkeit muss das höhere Spingewicht pro Punkt von der Größenordnung $1/N$ sein. Im Zweiniveaumodell braucht dies eine Strafe von der Größenordnung $(\log N)/\Delta$.
+
+**Thermal suppression across many punctures.** In the independent comparison model the probability of an entirely minimal configuration is $(1+R_\nu)^{-N}$. At fixed target accuracy, the higher-spin weight per puncture needs to be of order $1/N$. In the two-level model this takes a penalty of order $(\log N)/\Delta$.
+
+**Korrelationen und Minimalspin.** Bei gleicher höherer Einzelspinwahrscheinlichkeit $p$ und beliebiger Kopplung liegt die Wahrscheinlichkeit für ausschließlich Minimalspin scharf zwischen $\max(0,1-Np)$ und $1-p$. Die Einzelstatistik allein bestimmt die gemeinsame Maske nicht.
+
+**Correlations and minimal spin.** With the same higher-spin marginal probability $p$ and arbitrary dependence, the probability of an entirely minimal configuration lies sharply between $\max(0,1-Np)$ and $1-p$. Single-puncture statistics alone do not determine the joint mask.
+
+**Flächenmomente und gemeinsame Spinmaske.** Bei $\mu=\mathbb E[X]$, $M_2=\mathbb E[X^2]>0$ und Überschusslücke $\Delta$ gilt ohne Unabhängigkeit $\max(0,1-\mu/\Delta)\le P(X=0)\le1-\mu^2/M_2$. Das zweite Moment liefert Information über die gemeinsame Belegung, die dem Mittelwert fehlt.
+
+**Area moments and the joint spin mask.** With $\mu=\mathbb E[X]$, $M_2=\mathbb E[X^2]>0$, and excess gap $\Delta$, the bounds $\max(0,1-\mu/\Delta)\le P(X=0)\le1-\mu^2/M_2$ hold without independence. The second moment adds information about joint occupancy beyond the mean.
+
+**Exponentielle Auslesung der Minimalspinmaske.** Für $W_\nu=\mathbb E[e^{-\nu X}]$, Überschusslücke $\Delta>0$ und $q_\nu=e^{-\nu\Delta}$ gilt $\max(0,(W_\nu-q_\nu)/(1-q_\nu))\le P(X=0)\le W_\nu$. Das prüft die Maske im festgehaltenen Zustand ohne Unabhängigkeit der Punkte.
+
+**Exponential readout of the minimal-spin mask.** For $W_\nu=\mathbb E[e^{-\nu X}]$, excess gap $\Delta>0$, and $q_\nu=e^{-\nu\Delta}$, the bound is $\max(0,(W_\nu-q_\nu)/(1-q_\nu))\le P(X=0)\le W_\nu$. This checks the mask in a fixed state without assuming independent punctures.
+
+Das [QAM-Beispiel zum Horizontzugang](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/qam/examples/horizon-access.tex) exportiert den Flächengleichstand, die durch Punktzahl ergänzte Minimalspinmaske und die Schranken aus Momenten oder exponentieller Auslesung getrennt.
+
+The [QAM horizon-access example](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/qam/examples/horizon-access.tex) separately exports the area collision, the minimal-spin mask augmented by puncture count, and bounds from moments or exponential readout.
+
+**Flächengleichstand bei Gesamtspin null.** Vier Minimalspin-Singulettpaare und ein Singulettpaar aus zwei $j=3$-Punkten haben im additiven Vergleichsmodell beide Gesamtfläche $4\sqrt3$ und Gesamtspin null. Die Minimalspinmaske unterscheidet sie. Gesamtfläche und Gesamtspin allein genügen auf diesem Träger daher nicht.
+
+**Area degeneracy at zero total spin.** Four minimal-spin singlet pairs and one singlet pair of two $j=3$ punctures both have area $4\sqrt3$ and total spin zero in the additive comparison model. The minimal-spin mask distinguishes them. Total area and total spin therefore do not suffice on this carrier.
+
+**Maximale Punktzahl bei fester Fläche.** Ist $A_*=m\,a(1/2)$ und eine zulässige Belegung mit $m$ Minimalspinpunkten vorhanden, ist die Faser maximaler Punktzahl genau die Minimalspinmaske. Ohne eine solche sättigende Belegung kann die Maximalpunktregel höhere Spins auswählen. Ihre native Begründung bleibt offen.
+
+**Maximum puncture count at fixed area.** If $A_*=m\,a(1/2)$ and an admissible all-minimal configuration with $m$ punctures exists, the maximum-count fiber is exactly the minimal-spin mask. Without a saturating configuration, maximum count can select higher spins. A native justification remains open.
+
+**Singulettzahl beim Flächengleichstand.** Im gewöhnlichen Tensorproduktmodell haben acht Minimalspinpunkte $14$ unabhängige Singuletts und zwei Spin-$3$-Punkte eines. Bei Gleichgewichtung innerhalb dieser beiden flächengleichen Konfigurationen hat die Minimalbelegung Gewicht $14/15$. Der höhere Spin bleibt zugänglich.
+
+**Singlet count at equal area.** In the ordinary tensor-product model, eight minimal-spin punctures have $14$ independent singlets and two spin-$3$ punctures have one. Equal weighting within these two equal-area configurations gives minimal occupancy weight $14/15$. Higher spin remains accessible.
+
+**Vollständige Flächenfaser im Singulettvergleich.** Bei exakt $4\sqrt3$ sind im additiven Modell nur die drei Belegungen $(n_{1/2},n_3)=(8,0),(4,1),(0,2)$ möglich. Die Mischbelegung kann keinen Gesamtspin null tragen. Daher gilt der Minimalspinanteil $14/15$ für die ganze exakte Flächenfaser unter dem gewählten Tensorprodukt-Zählmaß.
+
+**Complete area fiber in the singlet comparison.** At exact area $4\sqrt3$, the additive model allows only $(n_{1/2},n_3)=(8,0),(4,1),(0,2)$. The mixed configuration cannot have total spin zero. Thus the minimal-spin share $14/15$ holds on the entire exact area fiber under the chosen tensor-product count.
+
+**Minimalspin bei wachsender exakter Fläche.** Bei geradem $N$ kann man vier Minimalspinpunkte durch einen Spin-$3$-Punkt ersetzen, ohne die Fläche zu ändern. Die Singulettzahl einer solchen festen Mischanordnung verhält sich zur reinen Minimalbelegung asymptotisch wie $7/16$. Bei gleicher Gewichtung und Zulassung beider Belegungen bleibt der Minimalspinanteil damit asymptotisch höchstens $16/23$.
+
+**Minimal spin at growing exact area.** For even $N$, replacing four minimal-spin punctures by one spin-$3$ puncture preserves area. The singlet count of one fixed mixed arrangement is asymptotically $7/16$ of the all-minimal count. With equal weighting and both configurations admitted, the minimal-spin share has asymptotic upper bound $16/23$.
+
+**Platzierungsentartung bei gleicher Fläche.** Werden Spinlisten geordnet gezählt, hat ein einzelner Spin-$3$-Punkt in der Mischbelegung $N-3$ mögliche Positionen. Diese Konkurrenten allein drücken den Minimalspinanteil im Vergleichsmodell auf $O(1/N)$. Eine zusätzliche Gewichtung $e^{\chi N}$ müsste für feste Zielgenauigkeit mindestens $\chi\sim(\log N)/3$ erreichen, um diese Familie zu unterdrücken.
+
+**Placement degeneracy at equal area.** With ordered spin lists, the one spin-$3$ puncture in the mixed configuration has $N-3$ possible positions. These competitors alone bound the minimal-spin share by $O(1/N)$ in the comparison model. An extra weight $e^{\chi N}$ needs at least logarithmic growth $\chi\sim(\log N)/3$ at fixed target accuracy to suppress this family.
+
+**Mehrere Spin-3-Ersetzungen.** Bei geordneten Belegungen und $\chi=(\log N)/3+b$ liefern feste Ersetzungszahlen relative Grenzgewichte $\Lambda^m/m!$ mit $\Lambda=(7/16)e^{-3b}$. Diese Belegungen allein geben $\limsup P_{\rm minimal}\le e^{-\Lambda}$. Ein fester Zusatz zur logarithmischen Gewichtung reicht für exakte Konzentration im Grenzwert nicht aus.
+
+**Multiple spin-3 replacements.** With ordered configurations and $\chi=(\log N)/3+b$, fixed replacement counts have limiting relative weights $\Lambda^m/m!$ with $\Lambda=(7/16)e^{-3b}$. These configurations alone give $\limsup P_{\rm minimal}\le e^{-\Lambda}$. A fixed additive correction to logarithmic weighting does not yield full concentration in the limit.
+
+**Schwelle für die gesamte additive Flächenfaser.** Bei exakter Fläche $N a(1/2)$, geordneten Spinlisten und gewöhnlicher Singulettzählung geht der gewichtete Minimalspinanteil genau dann gegen eins, wenn $\chi-(\log N)/3\to+\infty$. Die hinreichende Richtung zählt auch höhere Flächenstufen mit. Eine native Herleitung des Gewichts bleibt offen.
+
+**Threshold for the full additive area fiber.** At exact area $N a(1/2)$ with ordered spin lists and ordinary singlet counting, the weighted minimal-spin share tends to one exactly when $\chi-(\log N)/3\to+\infty$. The sufficient bound includes higher area levels. A native derivation of the weight remains open.
+
+**Grenzwert an der Punktzahlschwelle.** Bei $\chi=(\log N)/3+b$ hat die gesamte additive Flächenfaser im geordneten Singulettmodell den Minimalspin-Grenzanteil $\exp[-(7/16)e^{-3b}]$. Die Anzahl der Spin-$3$-Punkte wird im Grenzwert Poisson-verteilt. Höhere Flächenstufen tragen asymptotisch kein Gewicht.
+
+**Limit at the puncture-count threshold.** At $\chi=(\log N)/3+b$, the entire additive area fiber in the ordered singlet model has limiting minimal-spin share $\exp[-(7/16)e^{-3b}]$. The spin-$3$ count tends to a Poisson law. Higher area levels have vanishing weight.
+
+**Gegenrechnung bei endlicher Fläche.** Eine direkte Zählung nach Fläche und magnetischer Komponente liefert bei kritischer Punktzahlgewichtung und $b=0$ für $N=64,128,256$ die Minimalspinanteile $0{,}73470$, $0{,}69260$, $0{,}66979$. Der analytische Grenzwert ist $0{,}64565$.
+
+**Finite-area cross-check.** Direct counting by area and magnetic component at critical puncture weighting with $b=0$ gives minimal-spin shares $0.73470$, $0.69260$, and $0.66979$ at $N=64,128,256$. The analytic limit is $0.64565$.
+
+**Punktzahlgewicht und Horizontgenerator.** Das Modellgewicht $e^{-\lambda A+\chi N_{\rm Punkte}}$ ändert bei gleicher Fläche die relativen Gewichte verschiedener Punktzahlen. Zugängliche Übergänge zwischen solchen Zuständen würden beim Generator $K_\chi$ eine relative Phase tragen. Bei Zugang nur innerhalb fester Punktzahlsektoren legt der Fluss die Gewichte zwischen Sektoren nicht fest.
+
+**Puncture weighting and horizon generator.** The model weight $e^{-\lambda A+\chi N_{\rm Punkte}}$ changes relative weights at equal area. Accessible transitions between different counts would acquire a relative phase under $K_\chi$. With access only within fixed-count sectors, the flow leaves weights across sectors undetermined.
+
+**OP1-Ausschlusskorridor.** Der nominale T-Zielwert $a_T/a_M\approx0{,}5363$ liegt außerhalb unitärer Wechsel, reiner Spektralauswahl und Kompression auf den positiven M-Sektor. Auf einem gemeinsamen positiven Sektor schließt eine relative Formschranke unter $0{,}4637$ den Zielwert aus. Eine Kompression, die ihn erreicht, braucht mindestens $0{,}4637$ Überlappungsgewicht mit dem ursprünglichen Nullraum.
+
+**OP1 exclusion range.** The nominal T target $a_T/a_M\approx0.5363$ lies outside unitary changes, spectral selection, and compression confined to the positive M sector. On a common positive sector, a relative form bound below $0.4637$ excludes the target. A compression reaching it requires at least $0.4637$ overlap weight with the original null space.
+
+**T-Flächenoperator als Referenzdefinition.** Im additiven Durchstoßpunktmodell liest der M-Operator die Wurzel des Spin-Casimirs aus. Die Maxwell-Dualität aus r07 definiert keine Abbildung des gravitativen Flusses. Ein explizites Produktmodell mit unveränderter Geometrie liefert einen T-Operator mit derselben kleinsten Flächenstufe. Eine nichttriviale gleichförmige Reskalierung der normierten Spinoperatoren erhält ihre Kommutatoren nicht.
+
+**Reference definition of the T area operator.** In the additive puncture model the M operator reads out the square root of the spin Casimir. The Maxwell duality in r07 specifies no map of gravitational flux. An explicit product model with unchanged geometry gives the same minimum area in T. A nontrivial uniform rescaling of normalized spin generators does not preserve their commutators.
+
+**T-Fluss vor der Quantisierung.** Eine gleichförmige Coframe-Skalierung ändert die klassische Fläche desselben Schnitts und ist unter der r10-Annahme gleicher Geometrie ausgeschlossen. Ein kanonischer Koordinatenwechsel erhält die ursprüngliche Flächenauslesung, wenn sie mittransformiert wird. Ein anderes Quantisierungsergebnis braucht eine begründete Änderung der gravitativen Auslesung oder ihrer Randdaten.
+
+**T flux before quantization.** A uniform coframe rescaling changes the classical area of the same section and is excluded under the r10 shared-geometry assumption. A canonical coordinate change preserves the original area readout when it is transformed along with the coordinates. A different quantized result needs a justified change in the gravitational readout or its boundary data.
+
+**Palatini-Randprüfung.** Hält T Coframe, Verbindung und Randbedingungen fest, bleibt der gravitative Palatini-Strom unverändert. Eine reine totale Ableitung verschiebt das lokale Randpotential um eine exakte Feldvariation und ändert den antisymmetrisierten Strom unter denselben Variations- und Eckendaten nicht. Eine andere T-Quantisierung braucht hier zusätzliche Randstruktur.
+
+**Palatini boundary check.** If T keeps the coframe, connection and boundary conditions fixed, the gravitational Palatini current is unchanged. A total derivative adds an exact field variation to the local boundary potential and preserves the antisymmetrized current under the same variation and corner data. A different T quantization needs additional boundary structure here.
+
+**Minimales Randmodell für eine andere Flächenstufe.** Bei einem periodischen Randwinkel, Fluss $P$ und Randterm $kP\dot\theta$ ist die klassische Fläche $|P|$ und die kleinste positive Stufe bei periodischer Quantisierung $\hbar/k$. Ein veränderter symplektischer Koeffizient kann so die Stufe bei gleicher klassischer Auslesung ändern. Der native Koeffizient und die Zuordnung zu Horizontspins bleiben nachzuweisen.
+
+**Minimal boundary model for a different area step.** With a periodic boundary angle, flux $P$, and boundary term $kP\dot\theta$, the classical area is $|P|$ and the smallest positive step under periodic quantization is $\hbar/k$. Changing the symplectic coefficient can thus change the step at fixed classical readout. The native coefficient and identification with horizon spins remain to be derived.
+
+**Randwinkel und Flächenstufe.** Die periodische Randquantisierung liefert $a_{\min}=2\pi\hbar/(kL)$. Eine Winkelumnormierung erhält $kL$. Eine Kreisüberlagerung vom Grad $d$ gibt bei voller Quantisierung die Stufe $a_M/d$, bei ausschließlich zurückgezogenen M-Zuständen wieder $a_M$. Der nominale r10-Faktor ist kein ganzzahliger Grad.
+
+**Boundary angle and area step.** Periodic boundary quantization gives $a_{\min}=2\pi\hbar/(kL)$. Rescaling the angle preserves $kL$. A degree-$d$ cover gives the step $a_M/d$ on the full quantization and $a_M$ on pulled-back M states only. The nominal r10 factor is not an integer degree.
+
+**Randphase und Flächenlücke.** Bei festem $k$, vollständigem Winkelimpulsspektrum und Fläche $|P|$ liefert eine Randphase $\alpha$ die Stufe $a_T/a_M=\min(\alpha,1-\alpha)$ für $0<\alpha<1$. Die periodische Wahl liefert $1$. Der nominale r10-Wert $0{,}5363$ liegt außerhalb dieses Korridors.
+
+**Boundary phase and area gap.** At fixed $k$, with the full angular momentum spectrum and area $|P|$, a boundary phase $\alpha$ gives $a_T/a_M=\min(\alpha,1-\alpha)$ for $0<\alpha<1$. Periodic quantization gives $1$. The nominal r10 value $0.5363$ lies outside this range.
+
+**Flussumkehr und Randphase.** Die kanonische Umkehr $(\theta,P)\mapsto(-\theta,-P)$ sendet die Randphase $\alpha$ auf $-\alpha$ modulo eins. Gepaarte Profile haben dasselbe Betragsflächenspektrum. Innerhalb eines Profils sind nur die Phasen $0$ und $1/2$ fest.
+
+**Flux reversal and boundary phase.** Canonical reversal $(\theta,P)\mapsto(-\theta,-P)$ sends phase $\alpha$ to $-\alpha$ modulo one. Paired profiles have the same absolute area spectrum. Only phases $0$ and $1/2$ are fixed within a single profile.
+
+**Kanonischer Wechsel auf dem Randzylinder.** Eine glatte invertierbare Abbildung mit $|P_T|=|P|$ und gleichen Winkelperioden kann die Symplektik $k\,dP\wedge d\theta$ nur bei $k_T=k_M$ transportieren. Die Winkelabbildung muss auf jeder Flussfaser Grad $\pm1$ haben. Flussabhängige Winkelverschiebungen ändern die Stufe bei periodischer Quantisierung nicht.
+
+**Canonical change on the boundary cylinder.** A smooth invertible map with $|P_T|=|P|$ and equal angle periods can transport $k\,dP\wedge d\theta$ only when $k_T=k_M$. The angle map must have degree $\pm1$ on each flux fiber. Flux-dependent angle shifts do not change the step under periodic quantization.
+
+**Zwei Randkanäle.** Bei fester Gesamtfläche $|P_1|+|P_2|=|P|$ und Flussanteil $w$ ergibt eine Reduktion mit Winkelwindungen $(2,1)$ den symplektischen Faktor $1+w$. Bei anschließender periodischer Quantisierung liegt $a_T/a_M$ in $[1/2,1]$. Der r10-Wert liegt darin, erfordert aber eine unabhängig bestimmte Flussaufteilung und eine Begründung der Quantisierungsreihenfolge.
+
+**Two boundary channels.** With fixed total area $|P_1|+|P_2|=|P|$ and flux share $w$, reduction with angle windings $(2,1)$ gives symplectic factor $1+w$. Subsequent periodic quantization gives $a_T/a_M$ in $[1/2,1]$. The r10 target lies in this range, but requires an independently determined split and justification of the quantization order.
+
+**Quantisierungsreihenfolge der Randkanäle.** Bei getrennt quantisierten Kanälen und exakt ausgewähltem Flussanteil $w=p/q$ ist die kleinste positive Gesamtfläche $q a_M$. Irrationales $w$ lässt nur den Nullwert zu. Die Winkelbindung und die Flussbindung haben eine von null verschiedene Poisson-Klammer. Eine kleinere Stufe im Modell beruht auf der gekoppelten Reduktion vor der Quantisierung.
+
+**Order of boundary-channel quantization.** Separate channel quantization followed by exact selection of flux share $w=p/q$ gives minimum positive total area $q a_M$. Irrational $w$ leaves only zero. The angle and flux constraints have a nonzero Poisson bracket. A smaller step in the model relies on coupled reduction before quantization.
+
+**Variationsregel der Randaufteilung.** Die Minimierung einer positiven quadratischen Randenergie bei festem Gesamtfluss ergibt $w=c_2/(c_1+c_2)$. Für die deklarierte Winkelbindung $(2,1)$ liefert gleiche Steifigkeit den Flächenquotienten $2/3$. Der nominale r10-Faktor würde ein unabhängig hergeleitetes Steifigkeitsverhältnis von etwa $6{,}39$ verlangen.
+
+**Variational flux split.** Minimizing a positive quadratic boundary energy at fixed total flux gives $w=c_2/(c_1+c_2)$. For the declared $(2,1)$ angle constraint, equal stiffness gives area ratio $2/3$. The nominal r10 factor would require an independently derived stiffness ratio of about $6.39$.
+
+**Dynamische Bindung der Randwinkel.** Ein Potential mit Minimum bei $\theta_1-2\theta_2=0$ hält diese Winkelbindung nur bei $c_1P_1=2c_2P_2$ dauerhaft fest. Der zugehörige erhaltene Impuls ist $2P_1+P_2$. Für gleiche Steifigkeiten liefert die Reduktion die Flächenstufe $3/5$ relativ zu M.
+
+**Dynamical locking of boundary angles.** A potential minimized at $\theta_1-2\theta_2=0$ preserves locking when $c_1P_1=2c_2P_2$. The associated conserved momentum is $2P_1+P_2$. Equal stiffness then gives area-step ratio $3/5$ after reduction.
+
+**Flächenmessung im voll quantisierten Zweikanalmodell.** Die Winkelbindung mischt Flussbelegungen bei festem Gesamtimpulsindex $n=2m_1+m_2$. Die ursprüngliche Fläche liefert weiterhin ganzzahlige Vielfache von $a_M$, im Sektor $n=1$ mindestens $a_M$. Der reduzierte Wert $3a_M/5$ erfordert daher eine eigene Flächenauslesung.
+
+**Area measurement in the fully quantized two-channel model.** Angle locking mixes flux configurations at fixed total momentum index $n=2m_1+m_2$. The original area still gives integer multiples of $a_M$, at least $a_M$ in sector $n=1$. The reduced value $3a_M/5$ therefore requires a distinct area readout.
+
 ## Vorhandene Buchführungswerkzeuge
 
 Die vorhandene Werkzeugschicht realisiert typisierte Buchführungsprüfungen für lange Forschungstexte, mit oder ohne Sprachmodelle. Sie hängt **nicht** am Projekt Quantum Sphaera; das Projekt ist nur ihre erste Fallstudie. Ausführlich: Methodenpapier `paper/qam/` (Entwurf, 12 Seiten, nur Zenodo). Diese Werkzeugbeschreibung ersetzt nicht die oben erklärte Frame-Schnittstellenrolle.
@@ -562,3 +730,15 @@ Ein unabhängiger Agent spielte einen Mathematiker mit vier offenen Projekten (Z
 - `QSFormal.Store`, `StoreProgress`: die Speicher-Maschine verlässt nie einen zulässigen Zustand, bleibt nie hängen, weist ungültige Schritte ohne Nebenwirkung ab, protokolliert jeden Schritt und kann keine falsche Aussage zertifizieren.
 
 Alles ohne `sorry`, in CI gebaut (`lean-build.yml`).
+
+**Gemischte Auslesung im Zweikanal-Randmodell.** Für ein nichtkonstantes Potential der relativen Phase erzwingt Erhaltung im linearen orientierten Aggregat das Verhältnis $2:1$. Kalibriert man den Betrag dieses Aggregats auf die klassische Fläche der gebundenen Teilfläche, ist der quantisierte Ausgang im Sektor $n$ genau $a_M|n|(c_1+2c_2)/(c_1+4c_2)$. Bei gleichen Steifigkeiten ergibt sich im ersten positiven Sektor $3a_M/5$. Die native T-Auslesung und das für den nominalen Zielwert erforderliche Steifigkeitsverhältnis bleiben offen.
+
+**Mixed readout in the two-channel boundary model.** A nonconstant relative-phase potential forces the ratio $2:1$ in a conserved linear aggregate of the oriented fluxes. Calibrating its absolute value against the classical area on the locked submanifold gives the quantized outcome $a_M|n|(c_1+2c_2)/(c_1+4c_2)$ in sector $n$. Equal stiffnesses give $3a_M/5$ in the first positive sector. The native T readout and the stiffness ratio needed for the nominal target remain open.
+
+**Qiskit-Erkundung.** Ein Qubit kodiert zwei benachbarte Fouriermoden im Sektor $n=1$. Für eine gleichgewichtete Überlagerung liefert die additive Auslesung $a_M$ und $2a_M$ mit je $1/2$, die gemischte Auslesung $3a_M/5$ mit Wahrscheinlichkeit eins. Das sind die analytischen Sollwerte für die Schaltung in `notes/research/qam_hc_area_qiskit.py`.
+
+**Qiskit exploration.** One qubit encodes two adjacent Fourier modes in sector $n=1$. For an equal-weight superposition, the additive readout gives $a_M$ and $2a_M$ with probability $1/2$ each. The mixed readout gives $3a_M/5$ with probability one. These are the analytic expected values for the circuit in `notes/research/qam_hc_area_qiskit.py`.
+
+**Qiskit-Simulator für QAM-Modelle.** Das optionale Modul `qam.simulation` kodiert endliche Zustandsräume mit expliziten Frame- und Basislabels. Schaltungen entwickeln den Zustand oder beschreiben einen vorgeschlagenen Frameübergang mit deklarierter Zielbasis. Diagonale Auslesungen gruppieren die Basiswahrscheinlichkeiten nach Messwert. Das Flächenbeispiel vergleicht additive und gemischte Auslesung auf demselben Zustand.
+
+**Qiskit simulator for QAM models.** The optional `qam.simulation` module encodes finite state spaces with explicit frame and basis labels. Circuits evolve a state or represent a proposed frame transition with a declared target basis. Diagonal readouts group basis probabilities by measurement outcome. The area example compares additive and mixed readouts on the same state.
