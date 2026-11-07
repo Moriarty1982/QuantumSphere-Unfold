@@ -8,7 +8,8 @@
 Hash of a claim (same rule as qam.sty): MD5, upper-case hex, of the canonical line
     kind;key;frame;status;inputs;sources;statement
 kind is input, claim, thesis, derive or convert(<map>); inputs are the listed inputs, sources the
-hashes of the premises, both comma-separated; statement is empty except for a thesis.
+hashes of the premises, both comma-separated; statement may carry a thesis or
+an explicitly interpreted formula payload (qam-physics).
 Record hash: MD5 of all claim hashes in declaration order, each followed by a comma.
 Only the standard library is used.
 """

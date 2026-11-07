@@ -1,5 +1,6 @@
 #!/bin/sh
 # Runs the qam.sty tests: pass*.tex must compile, fail*.tex must stop with the expected qam error.
+# For profile provenance, warning-mode atomicity and PDF checks use run_tests.py.
 cd "$(dirname "$0")"; export TEXINPUTS=..:
 tmp=$(mktemp -d); ok=0; bad=0
 for f in pass*.tex; do

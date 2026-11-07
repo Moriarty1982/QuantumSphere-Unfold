@@ -1,6 +1,101 @@
-# QAM — bookkeeping checks for research records
+# QAM — frame interfaces and checks for research records
 
-QAM is a small typed bookkeeping discipline for long research records, written with or without language models.
+## Frame-local physics and ordinary notation
+
+`qam/tex/qam-physics.sty` implements declared physics profiles and scoped default
+contexts on top of the existing QAM record. A profile assigns an interpretation
+to ordinary mathematical formulas in one declared frame. It does not derive
+that physics from QAM or silently extend it to other frames.
+
+```latex
+\usepackage{amsmath}
+\usepackage[export]{qam}
+\usepackage{qam-physics}
+
+\qamframe{ART}\qamframe{QM}
+\qamprofile{gr}{ART}{L_{\rm ART}}{conditional}
+  {Classical GR with Lorentz metric and Levi-Civita connection, SI units}
+\qamprofile{qm}{QM}{L_{\rm QM}}{conditional}
+  {Schrodinger QM with a specified Hilbert space and Hamiltonian}
+
+\begin{qamcontext}{gr}
+\[
+\qamformula{einstein}{conditional}
+  {G_{\mu\nu}+\Lambda g_{\mu\nu}=\frac{8\pi G_{\rm N}}{c^4}T_{\mu\nu}}
+\]
+\begin{qamcontext}{qm}
+\[
+\qamformula{schrodinger}{conditional}
+  {i\hbar\frac{\partial}{\partial t}|\psi(t)\rangle=\hat H|\psi(t)\rangle}
+\]
+\end{qamcontext} % the ART default is restored
+\end{qamcontext}
+```
+
+The equations print in their ordinary notation inside their exact profile.
+`\qamphys{einstein}` reuses a stored formula. Outside its profile it automatically
+shows both left roles, `ART` and the declared language `L_ART`, around the ordinary
+formula. `\qamphys*{einstein}` always shows them, including inside the default
+context. Nesting restores the outer context; it never relabels old records.
+
+| Command | Meaning |
+|---|---|
+| `\qamprofile{key}{frame}{language}{status}{interpretation}` | Declare one immutable interpretation profile; the frame must already exist and cannot be `*`. |
+| `\begin{qamcontext}{profile} ... \end{qamcontext}` | Choose a scoped default profile for ordinary-looking formulas. |
+| `\qamformula[premises]{key}{status}{ordinary TeX}` | Register and display a formula in that context, with the profile and any extra premises retained as dependencies. |
+| `\qamphys{key}` / `\qamphys*{key}` | Display an existing formula with automatic / always explicit left roles. |
+| `\qamphysconvert{key}{status}{map}{source}{target-profile}{target-formula}` | Explicitly transport through a declared map and provide the target interpretation. This always prints explicit roles. |
+
+No GR-to-QM transition is supplied by the example. A transition must have the
+declared source and target frames; its target formula must be explicitly supplied.
+The new record depends on both the transported source and the target profile.
+Profiles within the same named frame are still distinct: the formula API refuses
+an implicit mixture of their premises. Use an explicit declared self-frame map
+and target interpretation if such a comparison is intended.
+
+Formula/profile identifiers start with an ASCII letter and use letters, digits,
+hyphens or underscores. `qphys-profile-...` and `qphys-transfer-...` are internal
+record keys and must not be redeclared. Interpretation text and formulas cannot
+contain literal semicolons, which delimit the existing `.qam` record format.
+Ordinary TeX math commands such as `\;` are not literal semicolon tokens.
+
+**Export and status.** With `export`, the unchanged `.qam` format contains an
+explicit frame, language/profile in the statement, and the original formula TeX.
+The profile is a hashed premise, so changing the interpretation or formula changes
+the record hash. Extra inputs remain tracked. `conditional` in the example marks
+an imported model/profile assumption, not a claim that QAM has disproved established
+physics. Authors assign the appropriate status to each statement; translation never
+raises it. Formula registration records an interpretation and declared dependencies,
+not a machine-verified mathematical derivation of its contents.
+
+**Actual checking scope.** The new package checks context, profile identity, source/
+target frames, duplicate declarations and inherited status/provenance. Its commands
+do not commit invalid records even in `mode=warning`. The ordinary formula is an
+unexpanded TeX payload, not an executable CAS expression: Einstein tensors, units,
+operator domains, physical laws and the truth of a transition are not automatically
+verified. Existing low-level `\qamclaim`/`\qamderive` remain available with their
+original frame-level checking; they do not gain a profile checker by being loaded
+alongside this package. The existing Lean checker validates the resulting record
+dependencies and frame links; it does not interpret the physical formula/profile.
+
+Complete example: [`examples/physics.tex`](examples/physics.tex). It exercises ART,
+QM, nested defaults, explicit notation and standalone reuse. The test suite also
+checks an explicit transition with a different target formula; this is an
+illustrative declared map, not a GR/QM theory.
+
+```sh
+python3 qam/tex/tests/run_tests.py
+# Retain compiler logs, PDFs and exported records for inspection:
+python3 qam/tex/tests/run_tests.py --output-dir build/qam-tests
+```
+
+The runner is cross-platform and uses the installed `pdflatex`. If `pdftotext` is
+available, it also checks the rendered implicit/explicit roles and nested context
+restoration. CI installs it. These are software tests, not physical hypothesis tests.
+
+## Existing record checks
+
+The base QAM package implements typed bookkeeping checks for long research records, written with or without language models.
 It is independent of the Quantum Sphaera project, which only serves as its first case study.
 
 It catches three kinds of error:

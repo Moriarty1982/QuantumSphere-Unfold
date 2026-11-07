@@ -45,6 +45,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- **7.11.2026, QAM-Physikprofile umgesetzt:** QAM und Hinweise-fuer-LLMs erläutern das optionale TeX-Zusatzpaket, ART-/QM-Beispiele, Standardkontexte, explizite Konversion und Exporte. 34 Kompilier-/Fehlerfälle, zehn Exporte und Lean-Kompatibilität lokal geprüft; keine physikalischen Behauptungen oder nummerierten Forschungsschichten geändert.
+
 - **6.11.2026, QAM-Standardkontext:** QAM-Seite und Schnittstellenentwurf erlauben auf Autorwunsch das Weglassen linker Rollen bei eindeutig deklariertem Standard-Frame/-Profil. Kontext bleibt bei Expansion und Export erhalten; abweichende Frames werden sichtbar markiert.
 
 - **6.11.2026, QAM-Autorpräzisierung und Frame-Physikinterface-Entwurf:** QAM und Hinweise-fuer-LLMs trennen Frame-Schnittstellensprache, framegebundene Physikinterpretation und vorhandene Buchführungswerkzeuge. Kein universelles ART-Gesetz, keine automatische Invertierbarkeit und kein neuer physikalischer Beweis behauptet.

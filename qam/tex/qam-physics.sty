@@ -1,0 +1,228 @@
+% Frame-local physics profiles and implicit left roles over the existing QAM record.
+% Formula payloads are ordinary TeX, not a new tensor calculus or a physics solver.
+\NeedsTeXFormat{LaTeX2e}[2022-06-01]
+\ProvidesExplPackage{qam-physics}{2026-11-07}{0.1}{QAM frame-local physics interfaces}
+\RequirePackage{qam}
+
+\prop_new:N \g__qphys_frame_prop
+\prop_new:N \g__qphys_language_prop
+\prop_new:N \g__qphys_profile_prop % formula -> immutable profile
+\prop_new:N \g__qphys_formula_prop % formula -> unexpanded ordinary TeX
+\tl_new:N \l__qphys_context_tl     % local to a qamcontext environment/group
+\tl_new:N \l__qphys_profile_tl
+\tl_new:N \l__qphys_frame_tl
+\tl_new:N \l__qphys_prem_tl
+\tl_new:N \l__qphys_via_tl
+\clist_new:N \l__qphys_prem_clist
+\bool_new:N \l__qphys_valid_bool
+\bool_new:N \l__qphys_explicit_bool
+\cs_generate_variant:Nn \prop_item:Nn { NV }
+
+\msg_new:nnn { qam } { physics-profile }
+  { Physics~profile~`#1'~is~unknown~or~already~declared. }
+\msg_new:nnn { qam } { physics-key }
+  { Physics~identifier~`#1'~must~start~with~a~letter~and~use~only~letters,~digits,~hyphens~or~underscores. }
+\msg_new:nnn { qam } { physics-context }
+  { No~valid~physics~context:~declare~a~profile~and~use~qamcontext. }
+\msg_new:nnn { qam } { physics-mix }
+  { Physics~profile~mismatch~for~`#1';~use~an~explicit~qamphysconvert. }
+\msg_new:nnn { qam } { physics-formula }
+  { Physics~formula~`#1'~is~not~declared. }
+\msg_new:nnn { qam } { physics-text }
+  { Empty~language/formula~or~literal~semicolon~in~`#1';~the~QAM~record~must~remain~unambiguous. }
+\msg_new:nnn { qam } { physics-target }
+  { Map~`#1'~does~not~connect~the~source~formula~to~the~target~profile. }
+\msg_new:nnn { qam } { physics-any }
+  { A~physics~profile~needs~a~specific~declared~frame,~not~the~convention-free~frame~*. }
+
+% New commands fail closed even when qam is in warning mode. Existing qam commands
+% retain their original behavior; this package never changes the verified checker.
+\cs_new_protected:Npn \__qphys_problem:nn #1#2
+  { \bool_set_false:N \l__qphys_valid_bool
+    \__qam_problem:nnn {#1} {#2} { } }
+\cs_new_protected:Npn \__qphys_key:n #1
+  { \regex_match:nnF { \A [A-Za-z] [-A-Za-z0-9_]* \Z } {#1}
+      { \__qphys_problem:nn { physics-key } {#1} } }
+\cs_new_protected:Npn \__qphys_fresh:n #1
+  { \__qphys_key:n {#1}
+    \prop_if_in:NnT \g__qam_status_prop {#1}
+      { \__qphys_problem:nn { duplicate } {#1} } }
+\cs_new_protected:Npn \__qphys_status:n #1
+  { \int_compare:nNnT { \__qam_rank:n {#1} } < {0}
+      { \__qphys_problem:nn { bad-status } {#1} } }
+\cs_new_protected:Npn \__qphys_text:nn #1#2
+  { \tl_if_blank:nT {#2} { \__qphys_problem:nn { physics-text } {#1} }
+    \tl_if_in:nnT {#2} { ; } { \__qphys_problem:nn { physics-text } {#1} } }
+\cs_new_protected:Npn \__qphys_profile:n #1
+  { \prop_if_in:NnF \g__qphys_frame_prop {#1}
+      { \__qphys_problem:nn { physics-profile } {#1} } }
+\cs_generate_variant:Nn \__qphys_profile:n { V }
+\cs_new_protected:Npn \__qphys_formula:n #1
+  { \prop_if_in:NnF \g__qphys_formula_prop {#1}
+      { \__qphys_problem:nn { physics-formula } {#1} } }
+
+% \qamprofile{profile}{frame}{language symbol}{status}{interpretation/conventions}
+% The profile is a statement-bearing QAM premise, so every formula hash depends
+% on its precise interpretation. No status is silently assigned to imported laws.
+\NewDocumentCommand \qamprofile { m m m m m }
+  {
+    \bool_set_true:N \l__qphys_valid_bool
+    \__qphys_key:n {#1}
+    \__qphys_status:n {#4}
+    \__qphys_text:nn {#1} {#3}
+    \__qphys_text:nn {#1} {#5}
+    \prop_if_in:NnT \g__qphys_frame_prop {#1}
+      { \__qphys_problem:nn { physics-profile } {#1} }
+    \prop_if_in:NnT \g__qam_status_prop { qphys-profile-#1 }
+      { \__qphys_problem:nn { duplicate } { qphys-profile-#1 } }
+    \prop_if_in:NnF \g__qam_frames_prop {#2}
+      { \bool_set_false:N \l__qphys_valid_bool
+        \__qam_problem:nnn { undeclared } {#2} { Frame } }
+    \str_if_eq:nnT {#2} {*}
+      { \__qphys_problem:nn { physics-any } {#1} }
+    \bool_if:NT \l__qphys_valid_bool
+      {
+        \__qam_meta:nnnn { thesis } { \mathrm{#1} } { qphys-profile-#1 } { }
+        \tl_set:Nx \l__qam_stmt_tl
+          { profile~#1~|~language~\tl_to_str:n {#3}~|~\tl_to_str:n {#5} }
+        \tl_trim_spaces:N \l__qam_stmt_tl
+        \__qam_cmd_claim:nnn { qphys-profile-#1 } {#2} {#4}
+        \prop_gput:Nnn \g__qphys_frame_prop {#1} {#2}
+        \prop_gput:Nnn \g__qphys_language_prop {#1} {#3}
+        \prop_gput:Nnn \g__qphys_profile_prop { qphys-profile-#1 } {#1}
+      }
+  }
+
+% A context is scoped by the ordinary LaTeX environment group, not a global mode.
+\NewDocumentEnvironment { qamcontext } { m }
+  { \tl_clear:N \l__qphys_context_tl
+    \bool_set_true:N \l__qphys_valid_bool
+    \__qphys_profile:n {#1}
+    \bool_if:NT \l__qphys_valid_bool { \tl_set:Nn \l__qphys_context_tl {#1} } }
+  { }
+
+% Check explicit extra premises before calling the existing record machinery.
+\cs_new_protected:Npn \__qphys_premises:nn #1#2
+  {
+    \clist_map_inline:nn {#2}
+      {
+        \prop_if_in:NnTF \g__qam_status_prop {##1}
+          {
+            \int_compare:nNnT { \__qam_rank:n {#1} } >
+              { \prop_item:Nn \g__qam_status_prop {##1} }
+              { \bool_set_false:N \l__qphys_valid_bool
+                \__qam_problem:nnnnn { promotion } {formula} {#1} {##1}
+                  { \__qam_name:n { \prop_item:Nn \g__qam_status_prop {##1} } } }
+            \bool_lazy_or:nnF
+              { \str_if_eq_p:ee { \prop_item:Nn \g__qam_frame_prop {##1} } { \l__qphys_frame_tl } }
+              { \str_if_eq_p:ee { \prop_item:Nn \g__qam_frame_prop {##1} } {*} }
+              { \__qphys_problem:nn { physics-mix } {##1} }
+            \prop_if_in:NnT \g__qphys_profile_prop {##1}
+              { \str_if_eq:eeF { \prop_item:Nn \g__qphys_profile_prop {##1} } { \l__qphys_profile_tl }
+                  { \__qphys_problem:nn { physics-mix } {##1} } }
+          }
+          { \bool_set_false:N \l__qphys_valid_bool
+            \__qam_problem:nnn { undeclared } {##1} { Claim } }
+      }
+  }
+\cs_generate_variant:Nn \__qphys_premises:nn { nV }
+\cs_generate_variant:Nn \__qam_meta:nnnn { nnnV }
+\cs_generate_variant:Nn \__qam_cmd_derive:nnn { nnV }
+
+\cs_new_protected:Npn \__qphys_store:nnn #1#2#3
+  {
+    \__qam_meta:nnnV { derive } { \mathrm{#1} } {#1} \l__qphys_prem_tl
+    \tl_set:Nx \l__qam_stmt_tl
+      { profile~\l__qphys_profile_tl~|~language~
+        \exp_args:Ne \tl_to_str:n { \prop_item:NV \g__qphys_language_prop \l__qphys_profile_tl }
+        ~|~\l__qphys_via_tl~formula~\tl_to_str:n {#3} }
+    \tl_trim_spaces:N \l__qam_stmt_tl
+    \__qam_cmd_derive:nnV {#1} {#2} \l__qphys_prem_tl
+    \prop_gput:NnV \g__qphys_profile_prop {#1} \l__qphys_profile_tl
+    \prop_gput:Nnn \g__qphys_formula_prop {#1} {#3}
+  }
+
+% Print an existing formula. Outside its exact profile, always expose both left roles.
+\cs_new_protected:Npn \__qphys_display:nn #1#2
+  {
+    \bool_set_true:N \l__qphys_valid_bool
+    \__qphys_formula:n {#1}
+    \bool_if:NT \l__qphys_valid_bool
+      {
+        \bool_set_true:N \l__qphys_explicit_bool
+        \str_if_eq:nnF {#2} {full}
+          { \str_if_eq:eeT { \prop_item:Nn \g__qphys_profile_prop {#1} } { \l__qphys_context_tl }
+              { \bool_set_false:N \l__qphys_explicit_bool } }
+        \ensuremath
+          {
+            \bool_if:NTF \l__qphys_explicit_bool
+              { {}^{ \exp_args:NNe \prop_item:Nn \g__qphys_frame_prop
+                        { \prop_item:Nn \g__qphys_profile_prop {#1} } }
+                    _{ \exp_args:NNe \prop_item:Nn \g__qphys_language_prop
+                        { \prop_item:Nn \g__qphys_profile_prop {#1} } }
+                \left[ \prop_item:Nn \g__qphys_formula_prop {#1} \right] }
+              { \prop_item:Nn \g__qphys_formula_prop {#1} }
+          }
+      }
+  }
+\NewDocumentCommand \qamphys { s m }
+  { \IfBooleanTF{#1}{\__qphys_display:nn {#2}{full}}{\__qphys_display:nn {#2}{auto}} }
+
+% \qamformula[premises]{key}{status}{ordinary formula} registers and prints it.
+\NewDocumentCommand \qamformula { O{} m m m }
+  {
+    \bool_set_true:N \l__qphys_valid_bool
+    \__qphys_fresh:n {#2} \__qphys_status:n {#3} \__qphys_text:nn {#2} {#4}
+    \tl_set_eq:NN \l__qphys_profile_tl \l__qphys_context_tl
+    \tl_if_empty:NTF \l__qphys_profile_tl
+      { \__qphys_problem:nn { physics-context } {#2} }
+      {
+        \__qphys_profile:V \l__qphys_profile_tl
+        \tl_set:Nx \l__qphys_frame_tl { \prop_item:NV \g__qphys_frame_prop \l__qphys_profile_tl }
+        \tl_set:Nx \l__qphys_prem_tl { qphys-profile-\l__qphys_profile_tl , \exp_not:n {#1} }
+        \__qphys_premises:nV {#3} \l__qphys_prem_tl
+      }
+    \bool_if:NT \l__qphys_valid_bool
+      { \tl_clear:N \l__qphys_via_tl
+        \__qphys_store:nnn {#2}{#3}{#4} \__qphys_display:nn {#2}{auto} }
+  }
+
+% Explicit cross-profile transfer. The target interpretation is supplied, never copied
+% automatically. Its record depends on both the converted source and target profile.
+\NewDocumentCommand \qamphysconvert { m m m m m m }
+  {
+    \bool_set_true:N \l__qphys_valid_bool
+    \__qphys_fresh:n {#1} \__qphys_status:n {#2} \__qphys_formula:n {#4}
+    \__qphys_profile:n {#5} \__qphys_text:nn {#1} {#6}
+    \prop_if_in:NnT \g__qam_status_prop { qphys-transfer-#1 }
+      { \__qphys_problem:nn { duplicate } { qphys-transfer-#1 } }
+    \prop_if_in:NnF \g__qam_src_prop {#3}
+      { \bool_set_false:N \l__qphys_valid_bool
+        \__qam_problem:nnn { undeclared } {#3} { Map } }
+    \bool_if:NT \l__qphys_valid_bool
+      {
+        \bool_lazy_and:nnF
+          { \str_if_eq_p:ee { \prop_item:Nn \g__qam_src_prop {#3} } { \prop_item:Nn \g__qam_frame_prop {#4} } }
+          { \str_if_eq_p:ee { \prop_item:Nn \g__qam_tgt_prop {#3} } { \prop_item:Nn \g__qphys_frame_prop {#5} } }
+          { \__qphys_problem:nn { physics-target } {#3} }
+        \prop_get:NnN \g__qphys_profile_prop {#4} \l__qphys_profile_tl
+        \tl_set:Nx \l__qphys_frame_tl { \prop_item:Nn \g__qam_frame_prop {#4} }
+        \__qphys_premises:nn {#2} {#4}
+        % The source profile is intentionally different here; the declared map permits it.
+      }
+    \bool_if:NT \l__qphys_valid_bool
+      {
+        \tl_set:Nn \l__qphys_profile_tl {#5}
+        \tl_set:Nx \l__qphys_frame_tl { \prop_item:Nn \g__qphys_frame_prop {#5} }
+        \tl_set:Nn \l__qphys_prem_tl { qphys-profile-#5 }
+        \__qphys_premises:nV {#2} \l__qphys_prem_tl
+      }
+    \bool_if:NT \l__qphys_valid_bool
+      {
+        \qamconvert{qphys-transfer-#1}{#2}{#3}{#4}
+        \tl_set:Nn \l__qphys_prem_tl { qphys-profile-#5 , qphys-transfer-#1 }
+        \tl_set:Nn \l__qphys_via_tl { via~#3~from~#4~|~ }
+        \__qphys_store:nnn {#1}{#2}{#6} \__qphys_display:nn {#1}{full}
+      }
+  }
+\endinput

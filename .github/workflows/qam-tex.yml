@@ -19,8 +19,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           sparse-checkout: qam
-      - run: sudo apt-get update -qq && sudo apt-get install -y -qq texlive-latex-base texlive-latex-recommended texlive-fonts-recommended >/dev/null
-      - run: sh qam/tex/tests/run_tests.sh
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq texlive-latex-base texlive-latex-recommended texlive-fonts-recommended poppler-utils >/dev/null
+      - run: python3 qam/tex/tests/run_tests.py --output-dir /tmp/qam-tests
       - name: Exported records are up to date
         run: |
           cd qam/examples

@@ -2,23 +2,23 @@
 
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.**
 
-## Stand vom 6. November 2026 (Codex)
+## Stand vom 7. November 2026 (Codex)
 
 - **Ausgangsstand:** main 11674501ff915b46e3a8bfb0d2802c31e4a1309d; zuletzt #82 (qsc-audit-Schichterkennung), Forschung bis v4.10.0-r05.
-- **Lokal:** Branch codex/op5-question-rebuild; Rückgang zur Grundidee als 4ab1a9e gesichert. Aktueller Arbeitsblock: quellenbasierter QAM-Frame-/Physikinterface-Entwurf durch ausdrücklich beauftragten eigenen Agenten und Wiki-Nachzug. Keine neue physikalische Rechnung oder nummerierte Runde.
+- **Lokal:** Branch codex/op5-question-rebuild; vorheriger Standardkontext-Entwurf als 5bb46a4 gesichert. Aktueller Arbeitsblock: QAM-Physikprofile und implizite linke Rollen implementiert, dokumentiert und getestet. Keine neue physikalische Rechnung oder nummerierte Runde.
 - **Autorentscheidung:** Historische OP5-Herleitung als Grundlage aussetzen; Frage vom unabhängig begründeten Kern neu aufbauen (Chat 6.11., „dann mach das mal“, genaue Uhrzeit nicht protokolliert).
 - **Noch nicht auf GitHub:** bisherige OP5-Notizen, Rückgang zur Grundidee und aktueller QAM-Entwurf; kein Push, kein PR und kein Merge in diesem Arbeitsblock.
 - **Hypothesen:** im geprüften predictions-Ordner zuletzt H97; keine neue H- oder k-Nummer vergeben. Vor späterer Vergabe gegen vollständigen aktuellen Stand prüfen.
-- **Build:** nicht ausgeführt, ausschließlich Markdown geändert; Prüfung von Änderungsumfang, Verweisen und Whitespace.
+- **Build:** 34 TeX-Kompilier-/Fehlerfälle bestanden, zehn Exporte unabhängig mit qamhash geprüft; Formel-/Profilmanipulationen erkannt. PDF-Textprüfung bestätigt implizite/ausführliche Rollen und Kontextwiederherstellung. Lean-Build bestanden; zehn neue positive Exporte akzeptiert, sechs vorhandene negative Beispiele verworfen. Lean prüft Abhängigkeiten/Framelinks, nicht Inhaltshashes oder Physik.
 - **GitHub:** offene PRs/Actions in diesem Arbeitsblock nicht erneut abgefragt; keine neue Live-Aussage hierzu.
 - **Nächste Bundle-Basis:** unverändert 11674501ff915b46e3a8bfb0d2802c31e4a1309d; kein Monolith-Bundle erzeugt.
 - **Zurückgestellte Ideen:** I1 durch γ-Verhältnis berührt. I2 durch nächsten Projektor-Prüfpunkt berührt: CRT/mod-HC-Idee erst bei konkreten gemeinsamen ganzzahligen Daten sinnvoll, hier nicht geliefert. I3/I4 in geprüften Formen gescheitert. Keine Idee als Lösung aktiviert.
 - **Aktuelle Autorpräzisierung:** Einheit von M/T/P war immer die zu prüfende Hypothese, kein als bewiesen vorausgesetzter Ausgang. QAM ist Frame-Schnittstellensprache; ART samt gewöhnlichem Physikmapping gilt im dafür bestimmten Frame. Keine Herleitung aller Physik aus QAM und keine automatische Übertragung von ART auf andere Frames.
 - **Entwurfsdatei:** notes/research/qam_frame_physics_interface_design_2026_11_06.md. Quellen: zweiseitige r02/r03-Notation, QAM-Tupel/Readouts, paper/qam, vorhandene Prüfer. Rolle der Sprache, lokale Physikinterpretation und Interframe-Abbildung getrennt; keine globale Linearität/Invertierbarkeit voraussetzen.
-- **Neu auf Autorwunsch:** Standardkontext (Frame, Physikprofil) darf in abgegrenztem Bereich implizit sein; linke Rollen können im Druck entfallen. Expansion ergänzt sie, Exporte erhalten sie; abweichende Frames/Übergänge explizit. Designregel, noch kein Parsercode. Vorheriger Entwurf als a1c9ecd gesichert.
-- **Prüfung:** separater Agent lieferte Entwurf; koordinierender Codex las ihn vollständig, prüfte Schlüssel-Quellenlabels, Notation und Verweise. ART-Beispiel auf Levi-Civita-Verbindung festgelegt; allgemeine partielle/nichtlineare Maps nicht als gewöhnliche lineare Tensoren ausgegeben. Kein ausführbarer ART-Adapter behauptet.
+- **Neu auf Autorwunsch umgesetzt:** Optionales Paket qam/tex/qam-physics.sty mit qamprofile, qamcontext, qamformula, qamphys und qamphysconvert. Im exakten Standardprofil entfallen linke Rollen im Druck; Wiederverwendung außerhalb zeigt sie. Exporte behalten Profil, Sprache, Frame und Formel. Übergänge benötigen deklarierte Map und explizite Zielformel, auch zwischen verschiedenen Profilen desselben Frames.
+- **Dateien/Prüfung:** ART-/QM-Beispiel qam/examples/physics.tex, Anleitung qam/README.md; plattformübergreifende Tests qam/tex/tests/run_tests.py, beide QAM-CI-Abläufe ergänzt. Formel ist gewöhnlicher unexpandierter TeX-Ausdruck mit deklariertem Profil, kein CAS-/Physiksolver. Bestehendes qam.sty und Lean-Beweise unverändert. Beispiel-PDF: build/qam-physics-tests/pass_physics/pass_physics.pdf (ignoriertes Buildprodukt).
 - **Folge für frühere Notizen:** algebraische Gegenbeispiele gelten in ihrem angegebenen gemeinsamen Setup. Sie beweisen ohne deklarierte Vergleichsabbildung keine Unmöglichkeit über verschiedene framegebundene Physikmappings hinweg. Frühere Notizen bleiben erhalten; aktuelle Klarstellung vor Verwendung berücksichtigen.
-- **Nächster Schritt:** konkretes ART-Frameprofil gemäß geprüftem Entwurf mit ausführlichem Tupel-/Rollenausdruck und gewöhnlicher Rückübersetzung ausarbeiten beziehungsweise implementieren; Sprache nicht mit Umfang der heutigen Buchführungsprüfer verwechseln. Keine neue physikalische Theorie dafür erfinden.
+- **Nächster Schritt:** Neues ART-/QM-Beispiel gemeinsam verwenden; bei weiterer Physikmodellierung konkrete Profile und Übergänge fachlich deklarieren. Implementation ist abgeschlossen, kein allgemeiner semantischer Formelparser behauptet. Kein Push oder Merge ohne weiteren Auftrag.
 
 ## Inhaltlicher Stand
 
