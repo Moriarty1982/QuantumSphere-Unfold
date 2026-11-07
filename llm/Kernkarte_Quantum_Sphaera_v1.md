@@ -2742,6 +2742,13 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **r08.3:** QAM: H15, H42, H46, H96 alle Status reading; H15, H46, H96 am selben γ_L-Kern (Zählregel je Frame); SU(2) gäbe m_W = 82,68 GeV, Ω_M = 0,365; nur H42 unabhängig.
 - R_chk = (1,1,0); Guards unverändert. Lokal 1360 Seiten, 4022 Labels.
 
+### K145 Runde v4.10.0-r09: Zählregel je Frame, Sonderstellung (H98) und ein Prinzip (2026-11-07)
+
+`sec:v4100-r09-counting-rule`, Snippet `llm/v4100_r09_round.tex`, Notizen `notes/research/v4_10_0_r09/`.
+- **r09.1 H98 bestätigt** (nicht blind gegenüber den Daten): 36 Paare im Regelraum S; Leptonfenster 2, m_W 1, Ω_M 2, alle drei nur DL/M + ABCK; SU(2)-Paar verfehlt alles.
+- **r09.2:** Prinzip P = Unschärfesättigung (P1) + Energiebedingung je Frame (P2: M alle Stufen, T Boden, kleinste Fläche; Brücke E ∝ A); wählt genau dieses Paar; Brücke in P2 offen.
+- R_chk = (1,1,0); Guards unverändert. Lokal 1362 Seiten, 4027 Labels.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2948,3 +2955,4 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - v15.8 (2026-11-07): K142 Runde v4.10.0-r06 (Literaturbezug Dorau–Much).
 - v15.9 (2026-11-07): K143 Runde v4.10.0-r07 (Kette im Tachyon-Frame, Korrektur r06.5).
 - v16.0 (2026-11-07): K144 Runde v4.10.0-r08 (Annahmenliste, Abhängigkeit der Vorhersagen).
+- v16.1 (2026-11-07): K145 Runde v4.10.0-r09 (H98, Prinzip für die Zählregel).

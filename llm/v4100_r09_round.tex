@@ -1,0 +1,119 @@
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r09 Source-Only: The Counting Rule per Frame, Its Singular Position (H98) and a Principle}
+\addcontentsline{toc}{section}{v4.10.0-r09 Source-Only: The Counting Rule per Frame, Its Singular Position (H98) and a Principle}
+\label{sec:v4100-r09-counting-rule}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.10.0-r08.3 found that three of the four open predictions rest on one assumption: the assignment of horizon counting rules to the frames
+(M counts all spins with weight \(2\), T counts \(j=\tfrac12\); v4.9.0-r63).  This layer asks how much the known agreements say about that assignment
+(pre-registered test H98) and records a principle that selects it (exploration).  The notes are \texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r09/}.
+Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r09 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.10.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23991357}{10.5281/zenodo.23991357} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r09 results}
+\label{subsec:v4100-r09-results}
+
+\paragraph{Theoremlet v4.10.0-r09.1 (H98: the singular position of the pair).}
+Pre-registered (note \texttt{Vorab\_\allowbreak Notiz\_\allowbreak H98\_\allowbreak Zaehlregel\_\allowbreak Sonderstellung.md}, commit \texttt{0cad2d8}); \emph{not blind with respect to
+the data}: all three values were known, and so was the agreement of the chosen pair.  A rule is a spin range and a weight; \(\gamma\) solves
+\(\sum_j g(j)\,e^{-2\pi\gamma a(j)}=1\) with \(a(j)=\sqrt{j(j+1)}\).  The fixed rule space \(S\) has the spin ranges all \(j\), half-integer \(j\), integer
+\(j\ge1\), \(j=\tfrac12\) only, \(j=1\) only, and the weights \(2\) and \(2j+1\): nine distinct rules, \(36\) pairs with \(\gamma_M>\gamma_T\).  The three windows are the
+lepton window \(\beta_{\rm sym}\in[0.545,0.570]\) (v4.9.0-r61), \(m_W\) within \(2\sigma\) of PDG 2025 (\(80.3692\pm0.0133\) GeV, via \(\cot\theta_W=\gamma_L\)), and
+\(\Omega_M\) within \(2\sigma\) of DESI DR2 BAO (\(0.2975\pm0.0086\), via \(\Omega_M=\beta^2\)).
+\begin{center}
+\small
+\begin{tabular}{@{}lc@{}}
+\toprule
+window & pairs inside\\
+\midrule
+lepton window & 2\\
+\(m_W\) & 1\\
+\(\Omega_M\) & 2\\
+all three & 1: all spins with weight \(2\) for M, \(j=\tfrac12\) for T (DL/M with ABCK)\\
+\bottomrule
+\end{tabular}
+\end{center}
+\textbf{Confirmed} by the criterion.  Values of the pair: \(\gamma_L=1.864700\), \(\beta=0.54941\), \(m_W=80.3615\) GeV (\(0.6\sigma\)), \(\Omega_M=0.3018\) (\(0.5\sigma\)).  The
+SU(2) pair of the literature (weight \(2j+1\) for M) gives \(\gamma_L=2.1515\) and misses all three windows.
+
+\emph{Reading.}  Each single window admits other pairs; only \(m_W\) selects uniquely.  The \(36\) values of \(\gamma_L\) lie between \(1.006\) and \(3.51\); the \(m_W\)
+window is about \(\pm0.003\) wide in \(\gamma_L\), so about \(0.08\) pairs would be expected inside it.  The weight of the result rests on the \(m_W\) relation,
+which was itself found afterwards (H15 disclosure, look-elsewhere about \(0.17\)).  A chance triple agreement is of the order of a few per cent; this
+is no significance in the strict sense.  H98 does not derive the assignment; it shows that among natural rules only this pair agrees with all three
+known values.
+
+\paragraph{Remark v4.10.0-r09.2 (a principle for the assignment; exploration, not blind).}
+From the two exact lemmas of v4.9.0-r63 a principle P can be stated: a frame counts at a horizon exactly the states that
+(P1) saturate the uncertainty bound, and (P2) are compatible with its energy condition, where M has all excitation levels and T relaxes to the floor and
+reaches only the smallest non-zero excitation.  Energy and area are linked by the local first law of isolated horizons (Frodden, Ghosh and Perez,
+2011): for an observer at fixed distance the energy is proportional to the area.  In the rule space \(S\), P1 excludes the weight \(2j+1\) except at
+\(j=\tfrac12\) (where every state saturates, r63.2), P2 gives M all spins and T only \(j=\tfrac12\) (smallest area \(a(\tfrac12)=\sqrt3/2\)).  P selects exactly the
+pair confirmed in r09.1.
+
+The counting rule is thus not derived but reduced: instead of a selection by the data (category R in r08.2) it rests on two readings with a reason of
+their own, uncertainty and energy, together with proved lemmas (r63.2, r63.3) and one literature input (the first law).  Both readings came from author
+remarks after H47 and are not blind.  P1 is a reinterpretation: the counting of Meissner counts projections \(m\), not ``saturating states''
+(v4.9.0-r68), and the SU(2) treatment violates P1.  The untested bridge is in P2: the particle energy of the tachyon at its floor (r63.3) is identified
+with the horizon energy seen by an observer.  It could be examined through the boost energy at the Rindler horizon, the modular flow of
+\S\ref{sec:v4100-r06-relative-entropy}.
+
+\paragraph{Proof and measurement sources.}
+\texttt{k218\_\allowbreak regelraum\_\allowbreak paare.py} with output (r09.1, sums to \(j_{\max}=4000\)); \texttt{Ergebnis\_\allowbreak H98\_\allowbreak Zaehlregel\_\allowbreak Sonderstellung.md};
+\texttt{Erkundung\_\allowbreak Zaehlregel\_\allowbreak Prinzip.md} (r09.2, analytic on the rule space).  \(\square\)
+
+\paragraph{Consequence.}
+The assignment of counting rules, the most loaded assumption of the companion (r08.3), has a singular position among natural rules with respect to
+three known values, and a principle with two readings selects it.  It is still an assumption.  A derivation needs the bridge of P2; a blind test needs a
+consequence of P other than \(\gamma_L\).
+
+\subsection*{v4.10.0-r09 status in the three frames}
+\label{subsec:v4100-r09-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item M: counts all spins with weight \(2\) (P1, P2: all levels).
+\item T: counts \(j=\tfrac12\) only (P2: floor, smallest area).
+\item P: carries no counting (v4.9.0-r63).
+\end{itemize}
+The rules differ between M and T by construction; no frame-free statement is made.
+
+\subsection*{v4.10.0-r09 register entries}
+\label{subsec:v4100-r09-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r09\\
+\midrule
+H98 (singular position of DL/M with ABCK) & confirmed, not blind with respect to the data\\
+counting rule per frame (OP1) & reduced to two readings (P1, P2) and the local first law; not derived\\
+bridge in P2 (floor energy vs.\ horizon energy) & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r09 ledger and guard update}
+\label{subsec:v4100-r09-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r09}=(1,1,0)
+\]
+for (H98 confirmed; principle P recorded; the bridge of P2 not established).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r09,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r09}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
