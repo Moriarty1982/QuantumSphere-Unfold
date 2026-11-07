@@ -321,4 +321,354 @@ flux, while changing the observer.
 The Lorentz factors compare observer velocities to the laboratory.
 Zero field flux tests the flux-free family. The additional velocity
 or inertial clock comparison selects its minimum-speed member.
+
+\section*{Complex invariant and the directed HC return}
+\qamframe{Outer}
+\qamprofile{outer}{Outer}{L_{\rm EM}}{conditional}
+  {Outer observer of the complex-invariant example, with aligned boost axes}
+\begin{qamcontext}{hc}
+\[
+\qamformula{complex-source}{conditional}
+  {\begin{gathered}
+   E=\tfrac52 e_x+\tfrac34 e_y,\qquad
+   B=\tfrac54 e_x-\tfrac32 e_y,\\
+   s=3+4i,\qquad n=85/8,\qquad E\times B=-(75/16)e_z .
+   \end{gathered}}
+\]
+\end{qamcontext}
+\qammap{complex-outer-boost}{Lab}{Outer}
+\[
+\qamphysconvert{complex-outer-field}{conditional}{complex-outer-boost}
+  {complex-source}{outer}
+  {\begin{gathered}
+   v_{\rm outer}=-\tfrac{15}{17}e_z,\qquad s_o=3+4i,\\
+   E_o=\tfrac52 e_x-\tfrac34 e_y,\qquad
+   B_o=\tfrac54 e_x+\tfrac32 e_y .
+  \end{gathered}}
+\]
+\begin{qamcontext}{outer}
+\[
+\qamformula[complex-outer-field]{complex-active-duality}{conditional}
+  {\begin{gathered}
+    \zeta=i\bar s_o/|s_o|=(4+3i)/5,\qquad
+    \zeta(E_o+iB_o)=B+iE,\\
+    s_{\rm out}=-3+4i .
+   \end{gathered}}
+\]
+\end{qamcontext}
+The unprimed vectors on the right are the source components written
+in the aligned axes. The observer boost preserves \(s\). The active
+duality changes \(s\) and uses the same outer observer. On return
+the reversed flux selects the inverse boost.
+\qammap{complex-inverse-boost}{Outer}{Lab}
+\[
+\qamphysconvert{complex-return-field}{conditional}{complex-inverse-boost}
+  {complex-active-duality}{hc}
+  {\begin{gathered}
+     v_{\rm return}=\tfrac{15}{17}e_z,\qquad s_r=-3+4i,\\
+     E_r=\tfrac54 e_x+\tfrac32 e_y,\qquad
+     B_r=\tfrac52 e_x-\tfrac34 e_y .
+   \end{gathered}}
+\]
+\begin{qamcontext}{hc}
+\[
+\qamformula[complex-return-field,complex-source]{complex-return-check}{conditional}
+  {\begin{gathered}
+    \zeta_r=i\bar s_r/|s_r|=(4-3i)/5,\qquad
+    \zeta_r(E_r+iB_r)=E+iB,\\
+    v_{\rm net}=\frac{15/17-15/17}{1-(15/17)^2}=0 .
+  \end{gathered}}
+\]
+\end{qamcontext}
+The field equality checks the return in aligned axes. The velocity
+sum checks the return of the observer.
+
+\section*{Same field output from an active laboratory operation}
+\begin{qamcontext}{hc}
+\[
+\qamformula[complex-source]{active-lab-half-turn}{conditional}
+  {\begin{gathered}
+    M=EE^{\mathsf T}+BB^{\mathsf T}
+      =\operatorname{diag}(125,45,0)/16,\\
+    R_x=\operatorname{diag}(1,-1,-1),\quad
+    \tfrac{4+3i}{5}R_x(E+iB)=B+iE .
+   \end{gathered}}
+\]
+\end{qamcontext}
+Here \(e_x\) is the principal axis of \(M\). Record only the outer
+field report in the laboratory comparison, using the aligned axes.
+\qammap{outer-field-report}{Outer}{Lab}
+\[
+\qamphysconvert{reported-outer-exchange}{conditional}{outer-field-report}
+  {complex-active-duality}{hc}
+  {w_{\rm report}=B+iE}
+\]
+\begin{qamcontext}{hc}
+\[
+\qamformula[active-lab-half-turn,reported-outer-exchange]{field-clock-comparison}{conditional}
+  {\begin{gathered}
+    w_{\rm active}=w_{\rm report}=B+iE,\\
+    \gamma_{\rm active}=1,\qquad
+    \gamma_{\rm outer}=\bigl(1-(15/17)^2\bigr)^{-1/2}=17/8 .
+   \end{gathered}}
+\]
+\end{qamcontext}
+The Lorentz factors are relative to the source laboratory. The report
+map compares aligned components and retains their observer provenance.
+
+\section*{Duality phase and target axes}
+\begin{qamcontext}{outer}
+The complex example has both fields in the \(xy\)-plane.
+Keep the outer observer velocity fixed and change the target axes
+by a half-turn around \(z\). For this half-turn the component
+rotation equals its inverse.
+\[
+\qamformula[complex-outer-field]{outer-axis-half-turn}{conditional}
+  {R_z=\operatorname{diag}(-1,-1,1),\quad
+   R_z(E_o+iB_o)=-(E_o+iB_o)}
+\]
+\[
+\qamformula[outer-axis-half-turn,complex-active-duality]
+  {phase-axis-ambiguity}{conditional}
+  {(-\zeta)R_z(E_o+iB_o)=\zeta(E_o+iB_o)=B+iE}
+\]
+\end{qamcontext}
+Both choices have the same observer velocity and give the same field
+components. A declared phase or an independent directed axis in
+the field plane distinguishes the two decompositions.
+
+\section*{Null boundary of the factorization}
+\begin{qamcontext}{hc}
+\[
+\qamformula{null-source}{conditional}
+  {E=e_x,\quad B=e_y,\quad s=0,\quad n=2,\quad E\times B=e_z}
+\]
+\[
+\qamformula[null-source]{null-collinear-boost}{conditional}
+  {n(\eta)=2e^{-2\eta},\quad
+   P_z(\eta)=e^{-2\eta}>0\quad\text{for finite }\eta}
+\]
+An active duality preserves the flux, so the collinear boost and
+duality cannot realize flux reversal at this input.
+\[
+\qamformula[null-source]{null-phase-paths}{conditional}
+  {\begin{gathered}
+     (E,B)=((1+\epsilon)e_x,e_y)\quad\Longrightarrow\quad
+       i\bar s/|s|\longrightarrow i,\\
+     (E,B)=(e_x,e_y+\epsilon e_x)\quad\Longrightarrow\quad
+       i\bar s/|s|\longrightarrow1
+       \qquad(\epsilon\to0^+).
+   \end{gathered}}
+\]
+\[
+\qamformula[null-source]{null-spatial-exchange}{conditional}
+  {a=(e_x+e_y)/\sqrt2,\quad R=2aa^{\mathsf T}-I,\quad
+    (RE,RB)=(B,E)}
+\]
+\end{qamcontext}
+The last operation is an active spatial half-turn in the laboratory
+profile. It realizes the HC field exchange at the null input.
+
+\section*{Independent field and observer readouts}
+\begin{qamcontext}{hc}
+Use a laboratory comparison record for the extended HC boost family.
+The clock factor \(G\) is relative to the laboratory, and \(v_a\)
+is the signed velocity component along the declared field axis.
+The following are chosen exact data for an illustrative comparison.
+\[
+\qamformula{observer-data}{conditional}
+  {G=43/20,\qquad |v_a|=3\sqrt{14}/43}
+\]
+\[
+\qamformula[observer-data]{observer-ratio}{conditional}
+  {h=\frac{G^2v_a^2+2(G+1)}{(G+1)^2}=\frac23,\qquad
+   r_{\rm obs}=\frac{h}{2-h}=\frac12}
+\]
+Use separate norm data with the shared affine calibration of the
+four-norm example. Here \(n=4\) and \(s=2\) before calibration.
+\[
+\qamformula{comparison-norm-data}{conditional}
+  {(\widehat N_+,\widehat N_-,\widehat N_E,\widehat N_B)
+   =g(4,4,12,4)+b(1,1,1,1),\qquad g>0}
+\]
+\[
+\qamformula[comparison-norm-data,relative-invariant]{field-ratio}{conditional}
+  {T=4g,\qquad S_\Delta=2g,\qquad r_{\rm field}=1/2}
+\]
+\[
+\qamformula[observer-ratio,field-ratio]{ratio-agreement}{conditional}
+  {r_{\rm obs}=r_{\rm field}}
+\]
+For a separate comparison at the same clock factor, take zero
+field-axis velocity.
+\[
+\qamformula{zero-axis-observer}{conditional}{G=43/20,\qquad v_a=0}
+\]
+\[
+\qamformula[zero-axis-observer,field-ratio]{ratio-disagreement}{conditional}
+  {r_{\rm obs}=20/43\ne r_{\rm field}=1/2}
+\]
+\end{qamcontext}
+Agreement checks compatibility with the declared family. Disagreement
+excludes the joint data within that family.
+
+\section*{Closed field path and signed axis return}
+\begin{qamcontext}{hc}
+\[
+\qamformula{closed-field-path}{conditional}
+  {\begin{gathered}
+    w(t)=e^{i\pi t}R_z(\pi t)(2e_x+i e_y),\quad 0\le t\le1,\\
+    w(1)=w(0),\qquad s(t)=3e^{2\pi i t}.
+   \end{gathered}}
+\]
+\[
+\qamformula[closed-field-path]{signed-axis-return}{conditional}
+  {a(t)=R_z(\pi t)e_x,\quad a(1)=-a(0),\quad
+   a(1)a(1)^{\mathsf T}=a(0)a(0)^{\mathsf T}}
+\]
+For a closed sampled record, use \(Z_j=g_js(t_j)+e_j\) with
+\(g_j>0\), \(|e_j|\le d_j<|Z_j|\), and \(Z_N=Z_0\).
+Let \(V_j\) bound the true unwrapped angular change in interval \(j\).
+\[
+\qamformula[closed-field-path,shared-calibration]{sampled-winding}{conditional}
+  {\begin{gathered}
+    \alpha_j=\arcsin(d_j/|Z_j|),\qquad
+    V_j+\alpha_j+\alpha_{j+1}<\pi,\\
+    m=\frac1{2\pi}\sum_{j=0}^{N-1}\operatorname{Arg}(Z_{j+1}/Z_j),
+    \qquad a(1)=(-1)^m a(0).
+   \end{gathered}}
+\]
+Eight equal steps give \(V_j=\pi/4\) for this path. If each
+\(d_j/|Z_j|\le0.1\), the inequality holds and the sampled record
+certifies \(m=1\). The gains may vary between samples.
+
+\section*{Two paths to the same sector endpoint}
+\[
+\qamformula[closed-field-path]{sector-paths}{conditional}
+  {\begin{gathered}
+    w_0=2e_x+i e_y,\qquad
+    w_+(t)=e^{i\pi t/2}w_0,\\
+    w_-(t)=e^{-i\pi t/2}R_z(\pi t)w_0,\qquad
+    s_\pm(t)=3e^{\pm i\pi t}.
+   \end{gathered}}
+\]
+\[
+\qamformula[sector-paths]{sector-endpoints}{conditional}
+  {w_+(0)=w_-(0)=w_0,\qquad w_+(1)=w_-(1)=i w_0}
+\]
+Choose \(e_x\) as the directed reference on the principal line at
+both endpoints. Start both continuous lifts with that direction.
+\[
+\qamformula[sector-paths,sector-endpoints]{sector-axis-comparison}{conditional}
+  {\begin{gathered}
+     a_+(t)=e_x,\qquad a_-(t)=R_z(\pi t)e_x,\\
+     a_+(1)\cdot e_x=1,\qquad a_-(1)\cdot e_x=-1 .
+   \end{gathered}}
+\]
+The individual signs use the chosen endpoint references. The relative
+sign is independent of reversing the common target reference and
+equals the parity sign for the upper path followed by the inverse
+lower path. Both paths are active field operations in the laboratory.
+
+\section*{Fixed and rotating axes on the closed field path}
+Let \(u_\pm=(e_x\pm i e_y)/\sqrt2\) and use the representation
+\(w=q(\ell u_++\zeta u_-/(2\ell))\). In the fixed axes the closed
+field path above has the following data.
+\[
+\qamformula[closed-field-path]{fixed-axis-dictionary}{conditional}
+  {\ell=\sqrt{3/2},\qquad q=\sqrt3,\qquad
+   \zeta(t)=e^{2\pi it},\qquad s(t)=\zeta(t)q^2}
+\]
+Rotate the representation axes by \(\theta=\pi t\), preserving
+the geometric field. Denote the rotated null basis by \(u'_\pm\).
+\[
+\qamformula[fixed-axis-dictionary]{rotating-axis-dictionary}{conditional}
+  {\begin{gathered}
+    u'_\pm=e^{\mp i\theta}u_\pm,\qquad
+    q'=e^{i\theta}q,\qquad \zeta'=e^{-2i\theta}\zeta=1,\\
+    \zeta'(q')^2=s(t).
+   \end{gathered}}
+\]
+\[
+\qamformula[rotating-axis-dictionary]{dictionary-endpoint-signs}{conditional}
+  {q'(1)=-q'(0),\quad u'_\pm(1)=-u'_\pm(0),\quad w(1)=w(0)}
+\]
+The rotating representation makes the ratio constant and carries
+the odd parity in its endpoint signs. The observer stays fixed.
+
+\section*{Local anti-phase representations and closure}
+Use the same oriented plane normal on both pieces. Choose
+\(\theta_A=\pi t+\pi/2\) on the first half and
+\(\theta_B=\pi t-\pi/2\) on the second.
+\[
+\qamformula[fixed-axis-dictionary,rotating-axis-dictionary]
+  {local-antiphase-pieces}{conditional}
+  {\zeta_A=\zeta_B=-1,\qquad
+   q_A=i\sqrt3\,e^{i\pi t},\qquad q_B=-q_A}
+\]
+\[
+\qamformula[local-antiphase-pieces]{axis-seam-product}{conditional}
+  {\epsilon_{A\to B}=-1,\qquad
+   \epsilon_{B\to A}=+1,\qquad
+   \epsilon_{A\to B}\epsilon_{B\to A}=-1}
+\]
+The closing comparison uses the end of \(B\) and the start of \(A\).
+Reversing both axes on piece \(B\) changes both seam signs. The
+negative sign moves to closure and the product remains negative.
+
+\section*{An orientation bit on the route carrier}
+Carry \((w,\sigma)\), where \(\sigma=\pm1\) compares the transported
+axis with the declared reference at the current field.
+\[
+\qamformula[sector-axis-comparison]{oriented-sector-steps}{conditional}
+  {\begin{gathered}
+     (w_0,\sigma)\xrightarrow{\rm upper}(iw_0,\sigma),\\
+     (w_0,\sigma)\xrightarrow{\rm lower}(iw_0,-\sigma).
+   \end{gathered}}
+\]
+The inverse of each step has the same sign factor.
+\[
+\qamformula[oriented-sector-steps]{mixed-oriented-return}{conditional}
+  {(w_0,+1)\xrightarrow{\rm upper}(iw_0,+1)
+    \xrightarrow{\rm inverse\ lower}(w_0,-1)}
+\]
+\[
+\qamformula[mixed-oriented-return]{double-oriented-return}{conditional}
+  {(w_0,+1)\xrightarrow{\rm mixed}(w_0,-1)
+    \xrightarrow{\rm mixed}(w_0,+1)}
+\]
+Projecting onto \(w\) gives field closure after either circuit.
+Keeping \(\sigma\) distinguishes one circuit from two.
+
+\section*{Comparing a refinement by phase}
+Compare two non-null field paths with equal endpoint fields and
+a declared synchronization. Use only the relative phase.
+\[
+\qamformula{refinement-phase-ratio}{conditional}
+  {R(t)=\frac{s_{\rm fine}(t)}{|s_{\rm fine}(t)|}
+        \frac{\overline{s_{\rm coarse}(t)}}{|s_{\rm coarse}(t)|}}
+\]
+\[
+\qamformula[refinement-phase-ratio]{refinement-phase-check}{conditional}
+  {R(t)\ne-1\ \text{for all }t
+   \quad\Longrightarrow\quad \operatorname{wind}(R)=0}
+\]
+Separate positive gains cancel. The principal angle of \(R\) is
+continuous in this case and returns to zero.
+\[
+\qamformula[refinement-phase-check]{radial-refinement}{conditional}
+  {\begin{gathered}
+   w_{\rm coarse}=w_0,\quad
+   w_{\rm fine}=\sqrt{1+9\sin^2(\pi t)}\,w_0,\\
+   s_{\rm fine}/s_{\rm coarse}=1+9\sin^2(\pi t),\qquad R=1 .
+   \end{gathered}}
+\]
+\[
+\qamformula[refinement-phase-ratio,sector-paths]{odd-refinement-comparison}{conditional}
+  {R=s_-/s_+=e^{-2\pi i t},\qquad \operatorname{wind}(R)=-1}
+\]
+The first pair has matching axis transport despite its different
+amplitudes. In the second pair the odd winding reverses the relative
+target axis. Both are local field comparisons.
+\end{qamcontext}
 \end{document}
