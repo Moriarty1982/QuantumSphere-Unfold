@@ -1,0 +1,93 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[export]{qam}
+\usepackage{qam-physics}
+\begin{document}
+\qamframe{Shell}
+\qamprofile{shell}{Shell}{L_{\rm shell}}{conditional}
+  {Local visible shell residual along a declared single-coordinate route}
+\begin{qamcontext}{shell}
+\section*{A certificate from unequal linear gains}
+At a fixed profile, use \(|\xi|\le R\), with
+\(|r_\delta|+|r_\eta|\le C_\xi|\xi|^2\) and
+\(|R_{\ge2}|\le C_{\rm sh}(|\delta|+|\eta|)^2\).
+\[
+\qamformula{shell-input}{conditional}
+  {f=A\delta+B\eta+R_{\ge2},\qquad
+   \delta=a\xi+r_\delta,\quad \eta=b\xi+r_\eta}
+\]
+\[
+\qamformula[shell-input]{linear-residual-bound}{conditional}
+  {\begin{gathered}
+    D=Aa+Bb,\quad L=|a|+|b|+C_\xi R,\quad
+    C_*=\max(|A|,|B|)C_\xi+C_{\rm sh}L^2,\\
+    |f(\xi)-D\xi|\le C_*|\xi|^2 .
+   \end{gathered}}
+\]
+\[
+\qamformula[linear-residual-bound]{linear-isolation}{conditional}
+  {D\ne0,\quad C_*|\xi|\le |D|/2
+   \quad\Longrightarrow\quad |f(\xi)|\ge |D||\xi|/2}
+\]
+
+\section*{A certificate at exact linear balance}
+At \(D=0\), take a smooth residual \(f\) on the actual route with
+\(f(0)=f'(0)=0\). Use the symmetric difference to estimate
+\(K=f''(0)/2\). The error bound below assumes \(|f^{(4)}|\le M_4\)
+on \([-h,h]\) and absolute errors \(\delta_+,\delta_-,\delta_0\)
+on the three reported values.
+\[
+\qamformula[shell-input]{quadratic-estimate}{conditional}
+  {\begin{gathered}
+   \widehat K_h=\frac{\widehat f(h)+\widehat f(-h)-2\widehat f(0)}{2h^2},\\
+   |\widehat K_h-K|\le M_4h^2/24+
+   \frac{\delta_++\delta_-+2\delta_0}{2h^2}.
+   \end{gathered}}
+\]
+\[
+\qamformula[quadratic-estimate]{quadratic-isolation}{conditional}
+  {|K|\ge k_*>0,\quad |f'''|\le M_3,\quad M_3|\xi|\le3k_*
+   \ \Longrightarrow\ |f(\xi)|\ge k_*\xi^2/2}
+\]
+Use the derivative bound on the entire interval between \(0\) and
+\(\xi\). The historical first-order bounds do not supply \(M_3\),
+\(M_4\), or a nonzero \(K\).
+
+\section*{Two balanced model routes}
+\[
+\qamformula{balanced-route-pair}{conditional}
+  {\begin{gathered}
+    F(U,V)=2U+V^2,\quad
+    (U,V)_1=(0,\xi),\quad (U,V)_2=(-\xi^2/2,\xi),\\
+    f_1(\xi)=\xi^2,\qquad f_2(\xi)=0.
+   \end{gathered}}
+\]
+\[
+\qamformula[balanced-route-pair,quadratic-estimate]{balanced-route-check}{conditional}
+  {h=1/10,\quad K_{h,1}=1,\quad K_{h,2}=0}
+\]
+
+\section*{One-sided admissible route}
+When only \(0\le\xi\le2h\) is available, assume \(|f'''|\le M_3\)
+on that interval and absolute errors \(\delta_j\) at \(jh\).
+\[
+\qamformula{one-sided-estimate}{conditional}
+  {\begin{gathered}
+   \widehat K_h^+
+     =\frac{\widehat f(2h)-2\widehat f(h)+\widehat f(0)}{2h^2},\\
+   |\widehat K_h^+-K|\le M_3h/2+
+         \frac{\delta_2+2\delta_1+\delta_0}{2h^2}.
+   \end{gathered}}
+\]
+\[
+\qamformula[one-sided-estimate,balanced-route-pair]{one-sided-model-check}{conditional}
+  {h=1/10,\quad K_{h,1}^+=1,\quad K_{h,2}^+=0}
+\]
+The difference removes any linear term. Using the quadratic
+isolation result additionally requires independently established
+linear balance and the derivative bound on the route.
+\end{qamcontext}
+Both model routes have the same linear balance. The second-order
+certificate distinguishes them through the residual on the route.
+The displayed polynomial routes are chosen comparison models.
+\end{document}
