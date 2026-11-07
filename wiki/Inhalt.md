@@ -1,6 +1,6 @@
 # Was im Companion steht
 
-**Stand: 5. November 2026, Forschungsfassung 4.10.0-draft mit Runden bis v4.10.0-r10.** Diese Seite gibt den Inhalt des *Quantum Sphaera Companion* wieder: Was wird angenommen, was wird definiert und gezeigt, und wie weit trägt es heute? Die Quellenangaben am Ende jedes Abschnitts dienen zum Nachprüfen; zum Verstehen sollte diese Seite allein reichen. [English version](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Content-overview) · [Startseite](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Home)
+**Stand: 5. November 2026, Forschungsfassung 4.10.0-draft mit Runden bis v4.10.0-r11.** Diese Seite gibt den Inhalt des *Quantum Sphaera Companion* wieder: Was wird angenommen, was wird definiert und gezeigt, und wie weit trägt es heute? Die Quellenangaben am Ende jedes Abschnitts dienen zum Nachprüfen; zum Verstehen sollte diese Seite allein reichen. [English version](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Content-overview) · [Startseite](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Home)
 
 ## So ist jede Aussage zu lesen
 
@@ -129,6 +129,7 @@ Der Companion leitet aus dem Frame-Versatz physikalische Größen ab. Der heutig
 - **Annahmen und Vorhersagen:** Die offenen Vorhersagen H15, H46 und H96 hängen am selben γ_L-Kern (Literaturwerte und Zählregel je Frame), H42 nicht (v4.10.0-r08). Alle vier ruhen auf Lesarten des Kerns, nicht auf Herleitungen.
 - **Zählregel je Frame:** Unter natürlichen Horizontzählungen ist das gewählte Paar das einzige, das Leptonfenster, m_W und Ω_M zugleich trifft (H98, nicht blind gegenüber den Daten); ein Prinzip aus Unschärfesättigung und Energiebedingung wählt es aus (v4.10.0-r09). Hergeleitet ist die Zuordnung nicht.
 - **Flächenquantum je Frame:** Die Zählregel je Frame ist gleichwertig mit einem frame-abhängigen Barbero–Immirzi-Parameter (γ_M/γ_T = γ_L); eine Begründung über Unruh-Temperatur oder Tachyon-Boden trägt nicht (v4.10.0-r10).
+- **OP5 neu gestellt (r11):** Die historische Aufgabe, einen nackten Λ-Term auszulöschen, ist als Grundlage ausgesetzt; der Quelle–Rückweg-Satz ist ein bedingtes Schema ohne native Route, Ω_M = β² eine zusätzliche Gleichsetzung (H96). Die Registeralgebra wählt q nicht aus; Register-, Fluss-, Zähl- und Dichteverhältnis haben verschiedene Nenner.
 - **Alte Vorhersagen P1–P6:** keine bestätigt (P1 nicht bestätigt, P2 ausgeschlossen, P3 Zufall, P4 widersprüchlich, P5 korrigiert auf ½, P6 ungetestet).
 
 *Quelle: `thm:dark-energy`, `rem:regularization-B`, `cor:falsifiable`; Runden v4.8.0-r03–r09, v4.9.0-r63–r70.*

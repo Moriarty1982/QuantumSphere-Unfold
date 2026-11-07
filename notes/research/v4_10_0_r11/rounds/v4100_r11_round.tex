@@ -1,0 +1,161 @@
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r11 Source-Only: Integration of the OP5 Source Reconstruction Made with Another Language Model}
+\addcontentsline{toc}{section}{v4.10.0-r11 Source-Only: Integration of the OP5 Source Reconstruction Made with Another Language Model}
+\label{sec:v4100-r11-op5-reconstruction}
+% ============================================================================
+
+\paragraph{Purpose.}
+On 6 and 7 November 2026 the author, working with another language model (Codex), traced the origin of OP5 back to the core and brought the result to
+\texttt{main} (merge \texttt{4ae32c9}, branch \texttt{codex/\allowbreak op5-\allowbreak question-\allowbreak rebuild}): twelve notes
+\texttt{notes/\allowbreak research/\allowbreak op5\_*\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 06.md} and
+\texttt{qsc\_\allowbreak back\_\allowbreak to\_\allowbreak basic\_\allowbreak idea\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 06.md}, four QAM notes
+\texttt{qam\_*\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 0[67].md}, an optional QAM package \texttt{qam/\allowbreak tex/\allowbreak qam-physics.sty} with examples
+and 34 tests, and wiki changes.  The work ran in parallel with layers v4.10.0-r06 to r10 and partly examined the same questions; layer r10.4 already cites three
+of the notes.  This layer records the content, checks the load-bearing formulas with independent code, and places the findings against layers r05 to
+r10, following the pattern of v4.9.0-r69.  It contains one author decision made through Codex, two precisions of layer r05 and one reading candidate.  No
+test, no new hypothesis number.  The notes are \texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r11/}.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r11 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.10.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23991357}{10.5281/zenodo.23991357} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r11 results}
+\label{subsec:v4100-r11-results}
+
+\paragraph{Decision v4.10.0-r11.1 (author, 6 November, through Codex: the historical OP5 derivation is suspended as a foundation).}
+The historical chain was: spectral carrier \(\to\) trace formula \(\to\) metric action \(\to\) physical bare \(\Lambda\) term \(\to\) prescribed remainder \(\to\)
+cancellation task (OP5, \texttt{sec:lambda\_cancel}).  The step to a well-defined metric action and its variation is missing, and the size of the bare term does
+not follow (v4.8.0-r03 F3/F4, r04, r05).  The author decided to suspend this derivation as the active foundation and to rebuild the question from the
+independently founded core.  New working question: \emph{which independently defined physical quantity can be obtained by an explicit, justified readout
+of the algebraic core, and which checkable constraint follows, without presupposing the historical \(\Lambda\) cancellation?}  The decision is not a
+refutation of the whole idea; earlier layers, negative results and pre-registered criteria stay.  H96 stays open, H97 refuted, W1/W2 frozen.  A
+second precision of the author (7 November, Codex hand-over): the unity of M, T and P was always the hypothesis to be tested, not a presupposed outcome.
+
+\paragraph{Theoremlet v4.10.0-r11.2 (what the reconstruction establishes; checked independently).}
+Analytic; 31 checks with own code, all confirmed.
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \emph{Source--return package.}  Theorem~\ref{thm:op15-closure} holds as a conditional schema; in parts 21/22 no native route with evaluable
+\(A_2,A_3,A_4\), class test and readout is instantiated.  The published mean \(m=(f+b)/2\) loses the branch datum \(d=(f-b)/2\): in the shear model on
+\(\mathbb R^3\) with \(A_2(u,z,y)=(u,z+y,y)\), class \(u\) and readout \((u,z)\), the carriers \((1,2,\pm1)\) give the same \(m=(1,2)\) and forward values
+\((1,3)\), \((1,1)\).  Class conservation with inverse transports does not fix the forward branch.
+\item[(b)] \emph{Four denominators.}  The register ratio \(q=\lambda_-/\lambda_+=\tanh^2\eta\), the outflow fraction \(f_4/(f_4+f_2)\) from \(S^8\) in r31,
+the contrast \((\gamma_M-\gamma_T)/(\gamma_M+\gamma_T)\) of r67 and \(\Omega_M\) (matter density over critical density) have different reference quantities.
+In r31 the outflow fraction returns the input \(q\), while the occupation ratio \(p_4/p_2=qr\) depends on the return rate; r31 stabilises \(q\), it does
+not derive it.  The smaller normalised eigenweight is \(q/(1+q)\), not \(q\).
+\item[(c)] \emph{State selection.}  The family \(E_q=(1+q)^{-1/2}e_x\), \(B_q=(q/(1+q))^{1/2}e_y\) has \(\operatorname{tr}G=1\), \(E\cdot B=0\), the same
+orientation and sector \(s_q=(1-q)/(1+q)>0\), and any ratio \(0<q<1\); in the \(\sigma_x\) analyser all have \(p_\pm=\tfrac12\).  The register algebra does
+not select \(q\).  With positive energy weights the minus share is \(w_-q/(w_++w_-q)\); \(f_-=q\) needs \(w_-/w_+=1/(1-q)\).
+\item[(d)] \emph{Spin selection.}  \(j(j+1)-m^2-|m|=(j-|m|)(j+|m|+1)\): saturation is \(|m|=j\) at every \(j\).  With weight 2, the spin set
+\(\{\tfrac12\}\) gives \(\gamma=\ln2/(\pi\sqrt3)=0.127384\), the set \(\{\tfrac12,1\}\) gives \(0.201784\); saturation plus the counting equation fixes no
+\(\gamma\) until the spin set is fixed.
+\item[(e)] \emph{Common state and projector bridge.}  An invertible change of description cannot remove spin sectors; a restricted readout keeps the unread
+rest in the balance, a selection has its own weight \(w\); ``not accessible'' does not imply ``zero energy''.  The chirality projector
+\(C_{\rm ch}=\tfrac12(1+iL_{e_7})\) commutes with the tachyon map \(z\mapsto iz\) (r51, \texttt{Sektoren.lean}); a compatible injective bridge
+\(B\) with \(C_{\rm ch}B=B\Pi\), \(U_DB=BU_{\rm spin}\) passes this on, \(\Pi U_{\rm spin}=U_{\rm spin}\Pi\).  No internal projector yields different M/T spin
+masks without a declared mask-changing rule.
+\item[(f)] \emph{Back to the basic idea.}  Under duality \(z\mapsto e^{i\alpha}z\) the invariant \(s=z\cdot z\) goes to \(e^{2i\alpha}s\), \(|s|\) is kept,
+\(z\mapsto iz\) gives \(s\mapsto-s\); a configuration with \(s\neq0\) does not reach \(s=0\) under Lorentz and duality maps.  The compensator image
+\(C(z)=\tfrac12(z+i\bar z)=(E+B)(1+i)/2\) has \(s'=2i|E'|^2\neq0\), it is not null.  ``One object'' has at least four meanings (same carrier, same physical
+state, states linked by an active operation, different readouts of one state), which must be kept apart.
+\end{enumerate}
+
+\paragraph{Proof and measurement sources.}
+\texttt{llm/\allowbreak k219\_\allowbreak nachrechnung\_\allowbreak codex\_\allowbreak op5.py}, output \texttt{k219\_\allowbreak out.txt} (groups A--H), protocol
+\texttt{Integration\_\allowbreak Codex\_\allowbreak OP5\_\allowbreak Rekonstruktion.md}; the commutation in (e) is the existing Lean result.  \(\square\)
+
+\paragraph{Remark v4.10.0-r11.3 (relation to layers r05 to r10).}
+No contradiction.  In detail:
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \emph{Precision of r05.3(i).}  ``OP5 (core) locally closed'' is to be read as: closed as a conditional schema under the assumptions of
+Theorem~\ref{thm:op15-closure}; a native instance of the route is open (r11.2(a)).  The guards are unaffected.
+\item[(b)] \emph{Precision of r05.3(ii) and of the r05 note on sources.}  That note named r31 as the place where the ratio ``comes from a dynamics''.
+Read narrowly, the dynamics gives stationarity; the branching number is an input (r11.2(b)).  The \(\Lambda\) readout is the additional identification
+\(q=\Omega_M(\text{today})\), as pre-registered in H96.  This agrees with r08.2, where K1 (\(\Omega_M=\beta^2\) as cascade branching) is already listed as an
+assumption.
+\item[(c)] \emph{r08.3, r09.1.}  The \(\gamma_L\) core of H15, H46, H96 is the same chain; r11.2(b), (c) add the denominators and \(q\neq\lambda_-\).  The
+freedom of r11.2(d) is exactly the rule space S of H98; the singular position found there is unaffected.
+\item[(d)] \emph{r10.}  r11.2(d), (e) were taken up in r10.4.  The projector bridge confirms r10.3 from the internal side: as the duality rotation fixes
+every geometric quantity, the tachyon map fixes the internal sectors; neither yields a frame-dependent mask or area quantum by itself.
+\item[(e)] \emph{r03.2, r22, r24.}  r11.2(f) restates known results (the compensator image of a light wave is not a light wave; P is the degenerate fixed
+point; R \(\neq\) P) and adds the shell argument.
+\end{enumerate}
+
+\paragraph{Remark v4.10.0-r11.4 (QAM as frame interface language).}
+The package \texttt{qam-physics.sty} declares physics profiles (for example GR and QM), nested default contexts, implicit or explicit left roles, an exported
+formula payload, and a conversion between profiles only with a declared map and an explicit target formula; 34 software cases and ten exports pass,
+and the existing Lean checker accepts the records.  These are bookkeeping tests, not physics tests.  The author's precision: QAM is a frame interface
+language; GR and its physics mapping hold in the frame assigned to them and are not carried to other frames automatically.  Relation: v4.10.0-r07.2 is
+such a declared conversion (map \(z\mapsto iz\), commuting with \(SO(3,\mathbb C)\); target formula the same Einstein equation); the Dorau--Much example
+does not identify the Rindler observer with M, T or P, as in r07.3.  In this language r10.3 says that the T profile differs from the M profile by its
+declared area quantum, \(\gamma_T=\gamma_M/\gamma_L\), and that no map is known that produces it.
+
+\paragraph{Remark v4.10.0-r11.5 (two observations from the r27 notes; one reading candidate).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] With \(U_{\pm\alpha}\) on the Bloch disc, the direction mean is \(m=\cos2\alpha\,(x,z)\) and \((Q(f)+Q(b))/2=Q(m)+Q(d)\) for the second moment
+\(Q(v)=vv^{\mathsf T}\).  At \(v=(1,0)\), \(\alpha=\pi/6\) the trace is \(1\) before and \(1/4\) after averaging; the missing \(3/4=\sin^2(\pi/3)\) is the squared
+direction difference.  This is the factor \(3/4\) of r27 and of the reading ``rotate by \(\pi/6\), then compensate'' (r10, r11); consistent, not new.
+\item[(b)] For a non-null field with flux \(\mathbf P=E\times B\), the observers at rapidity \(0\) and \(2\eta_{\rm ref}\) along \(\mathbf P\) see the same field
+scale and opposite fluxes; the flux-free profile lies in the middle, and \(1/r=|s|^{-1}n=\cosh2\eta_{\rm ref}\) is the ordinary Lorentz factor between the
+two (example \(E=2e_x\), \(B=e_y\): \(v=\tfrac12\) flux free, \(v=\tfrac45\) gives \(E'=2e_x\), \(B'=-e_y\)).  At \(r=1/\gamma_L\) the boost to the flux-free
+profile has \(v=\beta_{\rm sym}\) (r17).  \emph{Reading candidate, a posteriori:} r10.3 asks for a reason from the boost part of the frame map; the pair of
+flux-opposed observers at relative Lorentz factor \(\gamma_L\) is a concrete place where \(\gamma_L\) is an ordinary Lorentz factor.  Codex states expressly
+that this does not identify the r27 step with an observer change, and nothing here identifies the pair with M and T.
+\end{enumerate}
+
+\paragraph{Consequence.}
+The two lines of work agree.  OP5 in its historical form (cancellation of a bare \(\Lambda\)) is no longer an active task; what remains is the conditional
+source--return schema (no native instance) and the additional identification \(q=\Omega_M\) of H96, which stays a pre-registered hypothesis without a
+derivation of the bridge.  The open points are the same as after r10: the reason for the counting rule per frame (a frame-dependent area quantum), a
+mechanism selecting \(q\), and a measurement map from register to density.  Codex proposes the meaning of ``one object'' as the next question before
+any further spin or counting branch.
+
+\subsection*{v4.10.0-r11 status in the three frames}
+\label{subsec:v4100-r11-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item M and T: the shell argument (r11.2(f)) links \(s>0\) and \(s<0\) of equal modulus by duality; the internal sectors are the same in both frames (r11.2(e));
+frame free.
+\item P: not on the orbit of \(s\neq0\); the compensator image is not P.  R \(\neq\) P (r24); \(\gamma_L\) compares M with R.
+\item Conversions between frame profiles need a declared map and target formula (r11.4); the counting rule per frame remains an assumption (r10.3).
+\end{itemize}
+
+\subsection*{v4.10.0-r11 register entries}
+\label{subsec:v4100-r11-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r11\\
+\midrule
+historical OP5 cancellation task & suspended as foundation (author, 6 November)\\
+OP5 (core), r05.3(i) & conditional schema closed; native route open (precision)\\
+\(\Lambda\) readout, r05.3(ii) & additional identification \(q=\Omega_M\) (H96, open); r31 stabilises, does not derive (precision)\\
+selection of \(q\) by the register algebra & none (explicit family)\\
+internal projector as M/T spin mask & no (commutes with the tachyon map)\\
+\(\gamma_L\) as Lorentz factor of flux-opposed observers & algebraic fact; link to r10.3 a reading candidate\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r11 ledger and guard update}
+\label{subsec:v4100-r11-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r11}=(1,1,0)
+\]
+for (reconstruction integrated; formulas checked; native route and selection of \(q\) open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r11,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r11}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
