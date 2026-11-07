@@ -2725,6 +2725,15 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **r06.5 (offen):** z → iz macht den Boost zur Drehung; KMS-Periode 2π = euklidischer Vollwinkel (thm:artqft); Frage: Modulargruppe des Tachyon-Bezugszustands.
 - R_chk = (1,1,0); Guards unverändert. Lokal 1353 Seiten, 4012 Labels.
 
+### K143 Runde v4.10.0-r07: die Dorau–Much-Kette im Tachyon-Frame, Korrektur zu r06.5 (2026-11-07)
+
+`sec:v4100-r07-tachyon-chain`, Snippet `llm/v4100_r07_round.tex`, Notizen `notes/research/v4_10_0_r07/`, Erkundung `llm/Erkundung_Gravitation_Tachyonframe_Dualitaet.md`.
+- **r07.1 Korrektur:** z → iz = Dualitätsdrehung im Feldraum, vertauscht mit SO(3,ℂ) (v4.8.0-r20.1); Boost bleibt Boost; nicht die Wick-Rotation von thm:artqft.
+- **r07.2:** freies Maxwell-Feld: dieselbe Einstein-Gleichung in M und T; Tensor hermitesch und dualitätsinvariant, s = z·z wechselt das Vorzeichen; nicht blind, k217.
+- **r07.3:** QAM-Zutatenkarte: gleiche Eingaben wie Dorau–Much (lokale Flachheit, Flächengesetz).
+- **r07.4:** Vorfaktor nicht herleitbar: γ* = Nκ, N fällt in γ_L = κ_DL/M/κ_ABCK, β_sym, Ω_M heraus; nötig wäre ein absoluter γ-Wert aus der Struktur; 1/4 des Hopf-Punkts nicht gleichgesetzt.
+- R_chk = (1,1,0); Guards unverändert. Lokal 1357 Seiten, 4017 Labels.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2929,3 +2938,4 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - v15.6 (2026-11-06): K140 Runde v4.10.0-r04.
 - v15.7 (2026-11-06): K141 Runde v4.10.0-r05.
 - v15.8 (2026-11-07): K142 Runde v4.10.0-r06 (Literaturbezug Dorau–Much).
+- v15.9 (2026-11-07): K143 Runde v4.10.0-r07 (Kette im Tachyon-Frame, Korrektur r06.5).
