@@ -206,3 +206,27 @@ The older modules `QSFormal.QAM`, `Store`, `StoreProgress`, `Route` and `Models`
 see the methods paper in `paper/qam/`.
 
 License: CC BY 4.0.
+
+## Optional Qiskit simulation
+
+From the repository root:
+
+```sh
+python -m pip install -r qam/simulation/requirements.txt
+python -m qam.examples.area_qiskit
+```
+
+Use `qam.simulation.Basis(frame, labels)` to declare the QAM interpretation
+of the computational basis. Labels must be unique and hashable. Use a
+power-of-two basis size and model any padding states explicitly.
+`basis.prepare(label)` prepares one basis state. Apply a Qiskit circuit with
+`state.evolve(circuit)`. For a frame transition, declare the output basis
+with `state.evolve(circuit, target=target_basis)` and supply the circuit
+implementing the proposed map.
+
+Use `state.readout(frame, observable)` to obtain probabilities grouped by the
+output of a diagonal observable. For a mixed readout, the observable
+function implements the model's selector and aggregation on each basis label.
+A rotated measurement can be represented by applying its basis-change
+circuit before readout. The simulator checks frame labels and dimensions.
+The model author supplies the interpretation and justification of the circuit.
