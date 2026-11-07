@@ -2749,6 +2749,15 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **r09.2:** Prinzip P = Unschärfesättigung (P1) + Energiebedingung je Frame (P2: M alle Stufen, T Boden, kleinste Fläche; Brücke E ∝ A); wählt genau dieses Paar; Brücke in P2 offen.
 - R_chk = (1,1,0); Guards unverändert. Lokal 1362 Seiten, 4027 Labels.
 
+### K146 Runde v4.10.0-r10: Brücke des Zählprinzips, Zählregel als frame-abhängiges Flächenquantum (2026-11-07)
+
+`sec:v4100-r10-area-quantum`, Snippet `llm/v4100_r10_round.tex`, Notizen `notes/research/v4_10_0_r10/`, Erkundung `llm/Erkundung_Bruecke_P2_Unruh.md`.
+- **r10.1:** Zählgleichung = Unruh-Statistik (E_j = γa(j)/ℓ, T_U = 1/(2πℓ)), ℓ fällt heraus.
+- **r10.2:** T mit derselben Modularstruktur ⇒ Brücke in P2 trägt nicht (Korrektur zu r09.2).
+- **r10.3:** Zählregel ⇔ frame-abhängiges Flächenquantum, γ_M/γ_T = γ_L; Grund unbekannt.
+- **r10.4:** Codex-Prüfung (GitHub, 6.11.) gleiches Urteil; Sättigung wählt j = ½ nicht, Boden enthält j nicht.
+- R_chk = (1,1,0); Guards unverändert. Lokal 1365 Seiten, 4032 Labels.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2956,3 +2965,4 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - v15.9 (2026-11-07): K143 Runde v4.10.0-r07 (Kette im Tachyon-Frame, Korrektur r06.5).
 - v16.0 (2026-11-07): K144 Runde v4.10.0-r08 (Annahmenliste, Abhängigkeit der Vorhersagen).
 - v16.1 (2026-11-07): K145 Runde v4.10.0-r09 (H98, Prinzip für die Zählregel).
+- v16.2 (2026-11-07): K146 Runde v4.10.0-r10 (Brücke P2, Flächenquantum je Frame).
