@@ -45,6 +45,18 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 7.11.2026: QAM – kompilierbares HC-Beispiel für gewichtete Rückwegwerte und Nullprüfungen.
+
+- 7.11.2026: QAM – ausführbares r27-Beispiel für gemeinsame und unabhängige Zweikopienrotation.
+
+- 7.11.2026: QAM – gerichtete r27-Rotationen mit getrenntem Port-Readout und nichtselektivem Messschritt.
+
+- 7.11.2026: QAM – Quelle–Rückweg, gerichtete Rückwegwerte und Vergleich mit der historischen C5-Schwelle.
+
+- 7.11.2026: QAM – Lorentz-Boost vor und nach Gram-Auslesung, mit rekonstruierbarer Darstellung auf dem Rang-zwei-Chart.
+
+- 7.11.2026: QAM – Dorau–Much als Fallstudie zur Trennung von Beobachteruhr, Algebraeinschränkung und geometrischer Auslesung.
+
 - **7.11.2026, QAM-Physikprofile umgesetzt:** QAM und Hinweise-fuer-LLMs erläutern das optionale TeX-Zusatzpaket, ART-/QM-Beispiele, Standardkontexte, explizite Konversion und Exporte. 34 Kompilier-/Fehlerfälle, zehn Exporte und Lean-Kompatibilität lokal geprüft; keine physikalischen Behauptungen oder nummerierten Forschungsschichten geändert.
 
 - **6.11.2026, QAM-Standardkontext:** QAM-Seite und Schnittstellenentwurf erlauben auf Autorwunsch das Weglassen linker Rollen bei eindeutig deklariertem Standard-Frame/-Profil. Kontext bleibt bei Expansion und Export erhalten; abweichende Frames werden sichtbar markiert.

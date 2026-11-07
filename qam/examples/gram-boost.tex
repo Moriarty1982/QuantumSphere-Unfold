@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[export]{qam}
+\usepackage{qam-physics}
+\begin{document}
+\qamframe{Lab}\qamframe{Boosted}
+\qamprofile{lab}{Lab}{L_{\rm EM}}{conditional}{Laboratory fields and their Gram readouts}
+\qamprofile{boosted}{Boosted}{L_{\rm EM}}{conditional}{Fields of an observer boosted along z, with c=1}
+\begin{qamcontext}{lab}
+\[
+\qamformula{field-pair}{conditional}
+  {F_b=[2e_x\mid b e_y],\quad b\in\{+1,-1\}}
+\]
+\[
+\qamformula[field-pair]{gram-input}{conditional}
+  {\rho(F_b)=\frac{F_b^{\mathsf T}F_b}{\operatorname{tr}(F_b^{\mathsf T}F_b)}
+    =\operatorname{diag}(4/5,1/5)}
+\]
+\end{qamcontext}
+\qammap{lorentz-z}{Lab}{Boosted}
+\[
+\qamphysconvert{boosted-fields}{conditional}{lorentz-z}{field-pair}{boosted}
+  {F'_b=\gamma[(2-vb)e_x\mid(b-2v)e_y]}
+\]
+\begin{qamcontext}{boosted}
+\[
+\qamformula[boosted-fields]{gram-output}{conditional}
+  {\rho(F'_{+1})\big|_{v=1/4}=\operatorname{diag}(49,4)/53,\quad
+   \rho(F'_{-1})\big|_{v=1/4}=\operatorname{diag}(9,4)/13}
+\]
+\end{qamcontext}
+Reading the Gram register before the boost yields one input for both
+fields. Reading it after the boost yields two outputs. A map on the
+normalized register alone would therefore have to assign two values to
+one input. The source records the same obstruction infinitesimally.
+
+On the rank-two chart write \(F=O F_0(G)\), \(G=n\rho\),
+\(n=\operatorname{tr}G>0\), and \(O\in SO(3)\), with \(F_0\)
+the triangular Gram representative from the Companion. Set
+\(D=(\rho,n,O)\) and denote reconstruction by \(R\) and encoding by \(P\).
+\begin{qamcontext}{lab}
+\[
+\qamformula[field-pair]{enriched-input}{conditional}
+  {D_b=(\operatorname{diag}(4/5,1/5),5,\operatorname{diag}(1,b,b))}
+\]
+\end{qamcontext}
+\qammap{reconstruct-boost-encode}{Lab}{Boosted}
+\[
+\qamphysconvert{enriched-output}{conditional}{reconstruct-boost-encode}
+  {enriched-input}{boosted}{D'_b=P B_v R(D_b),\quad R(D'_b)=B_v F_b}
+\]
+The last equality uses \(RP=\mathrm{id}\) wherever the boosted field
+also lies in the chart. Both fields do at \(v=1/4\). Their extended
+outputs have scales \(53/15\) and \(39/5\), respectively, and
+orientations \(\operatorname{diag}(1,b,b)\). The orientations separate
+the two inputs. The scale recovers the full field and cancels from the
+normalized output for a homogeneous Lorentz transformation.
+
+\medskip
+\noindent Source: Companion, section on the orientation-complete local
+mediator. The maps record which data the
+calculation uses. The displayed values follow from ordinary field algebra.
+\end{document}
