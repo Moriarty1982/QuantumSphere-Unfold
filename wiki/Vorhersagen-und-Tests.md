@@ -97,6 +97,7 @@ Zu H46: Eine Bestätigung würde die Kette r55–r60 prüfen, nicht die Lesart a
 | H94 | Gewichtete Norm am Urknall-Übergang: Bosonen +1 → −1 mit genau einer Nullstelle, dazwischen nicht normerhaltend; Fermionen exakt −1 (teilweise nicht blind) | bestätigt; Nullstellen k*Δ = 0,736 / 0,257; nachträglich auch Verstärkung (v4.10.0-r03) |
 | H95 | I3 mit dynamischem Zweig-Gas auf FRW: Fenster mit dunkler Materie zur Rekombination und w ≈ −0,7 heute (nicht blind) | widerlegt (0 von 144 000 Punkten); nachträglich: große Spannung nur bei Schwelle heute, dann zu viel dunkle Materie (v4.10.0-r04) |
 | H97 | Rückgekoppelte Kaskade (Vakuum zerfällt mit Rate β²H in Materie, ε = 1) gegen DESI DR2 BAO (nicht blind) | widerlegt, χ² = 105 bei 12 Freiheitsgraden; ΛCDM bei Ω_M = β² χ² = 10,9; nachträglich ε ≲ 0,4 (v4.10.0-r05) |
+| H98 | Sonderstellung des Zählregel-Paars (M alle Spins mit Gewicht 2, T nur j = ½) unter 36 natürlichen Paaren: einziges, das Leptonfenster, m_W (2σ) und Ω_M (2σ) zugleich trifft (nicht blind gegenüber den Daten) | bestätigt; je Fenster 2 / 1 / 2 Paare, alle drei nur dieses; SU(2)-Paar verfehlt alles; Dreifachtreffer zufällig etwa wenige Prozent (m_W-Relation nachträglich) (v4.10.0-r09) |
 
 ## Erkundungen ohne Vorab-Notiz
 
