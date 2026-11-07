@@ -1,0 +1,28 @@
+% Zutatenkarte: Dorau--Much-Kette im Companion, Materie- und Tachyon-Frame (QAM). Erkundung, 7.11.2026.
+% Bauen: qam.sty (GitHub qam/tex) in den Suchpfad legen, pdflatex. Erwartung: keine Fehlermeldung.
+\documentclass{article}
+\usepackage[export]{qam}
+\begin{document}
+\qamframe{M}\qamframe{T}
+\qammap{D}{M}{T}                                 % Dualitaetsdrehung z -> iz (Konvention F, r28)
+% --- gemeinsame Eingaben (wie Dorau--Much) ---
+\qaminput{loclin}{*}{conditional}                % lokal flach, fuehrende Ordnung
+\qaminput{arealaw}{*}{conditional}               % S_rel = dA/4 (Normierung 1/4G)
+\qamclaim{raych}{*}{proved}                      % Raychaudhuri
+\qamderive{geom}{conditional}{raych,loclin}
+% --- Materie-Frame: Maxwell-Feld ---
+\qamclaim{bw}{M}{proved}                         % Bisognano--Wichmann: Modulargruppe = Boost
+\qamclaim{araki}{M}{proved}                      % Araki-Entropie kohaerenter Zustaende
+\qamderive{flux}{proved}{bw,araki}               % S_rel = Energiefluss
+\qamderive{fluxc}{conditional}{flux,loclin}
+\qamderive{einsteinM}{conditional}{fluxc,arealaw,geom}
+% --- Tachyon-Frame ---
+\qamclaim{commute}{*}{proved}                    % z -> iz vertauscht mit SO(3,C) (v4.8.0-r20.1)
+\qamclaim{tinv}{*}{proved}                       % T_ab duality-invariant (k217)
+\qamconvert{fluxT}{conditional}{D}{fluxc}        % Fluss ins T-Bild
+\qamderive{fluxTc}{conditional}{fluxT,commute,tinv}
+\qamderive{einsteinT}{conditional}{fluxTc,arealaw,geom}
+\qamconvert{einsteinMT}{conditional}{D}{einsteinM}
+\qamcompare{einsteinMT}{einsteinT}               % gleicher Frame: Vergleich zulaessig
+\qamledger
+\end{document}

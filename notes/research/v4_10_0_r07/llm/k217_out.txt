@@ -1,0 +1,5 @@
+(1) max |L(iz) - i Lz|            = 0.00e+00
+(2) max |T(iz) - T(z)|            = 0.00e+00
+(3) max |L(iz)+L(z)|,|EB(iz)+EB(z)| = 0.00e+00  (Vorzeichenwechsel)
+(4) max |T_kk(iz) - T_kk(z)|      = 0.00e+00
+Negativkontrolle (1+0.3i)z: max |dT| = 1.61e+00  (muss O(1) sein)

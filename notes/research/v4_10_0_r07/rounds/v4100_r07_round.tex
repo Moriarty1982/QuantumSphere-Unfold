@@ -1,0 +1,143 @@
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r07 Source-Only: The Relative-Entropy Chain in the Tachyon Frame, and a Correction to r06.5}
+\addcontentsline{toc}{section}{v4.10.0-r07 Source-Only: The Relative-Entropy Chain in the Tachyon Frame, and a Correction to r06.5}
+\label{sec:v4100-r07-tachyon-chain}
+% ============================================================================
+
+\paragraph{Purpose.}
+The author asked whether the companion can map the derivation of Dorau and Much (\S\ref{sec:v4100-r06-relative-entropy}) onto its own frames and
+so obtain the Einstein equations internally.  A pre-registered test was planned.  The search of prior work showed that the answer is fixed
+analytically, so this layer is an exploration, not a test; no hypothesis number is assigned.  On the way, Remark r06.5 turned out to be wrong.  A second question of the author, why frame independence is reached and the prefactor of the area law is not, is answered in r07.4.
+The notes are \texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r07/}.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r07 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v4.10.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.23991357}{10.5281/zenodo.23991357} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r07 results}
+\label{subsec:v4100-r07-results}
+
+\paragraph{Correction v4.10.0-r07.1 (to Remark r06.5).}
+Remark v4.10.0-r06.5 states that under the tachyon map \(z\mapsto iz\) the rapidity becomes imaginary and the boost a rotation, and asks whether
+\(z\mapsto iz\) is the Wick rotation of Theorem~\ref{thm:artqft}.  This is wrong.  With \(z=E+iB\) (v4.9.0-r02), \(z\mapsto iz\) is the
+electromagnetic duality rotation \(E\mapsto-B\), \(B\mapsto E\), a map of field space, not of spacetime.  By Theoremlet v4.8.0-r20.1 it commutes with
+every element of \(SO(3,\mathbb C)\), the proper Lorentz group acting on \(z\).  A boost stays a boost with real rapidity.  The question of r06.5 is
+answered in the negative: \(z\mapsto iz\) is not the Wick rotation \(t\mapsto i\tau_E\); the two act on different objects.  The frame entries of r06 for
+frame T are replaced by r07.2.
+
+\paragraph{Theoremlet v4.10.0-r07.2 (the chain in frame T for the free Maxwell field).}
+Exploration, not blind (fixed analytically before the check).  For the free Maxwell field, the chain of r06.1 gives in frame T the same Einstein
+equation as in frame M: the same coupling, the same sign, the same inputs.
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] The duality rotation \(U_\alpha\) is a symmetry of the free Maxwell field (conserved helicity).  It acts pointwise on \(F\), maps the algebra of
+the Rindler wedge onto itself and leaves the vacuum invariant.
+\item[(b)] It commutes with the boost (v4.8.0-r20.1), hence with the modular group of the vacuum (Bisognano--Wichmann).
+\item[(c)] Relative entropy is invariant under such an automorphism: \(S_{\rm rel}(\omega_0\Vert\omega_\phi)=S_{\rm rel}(\omega_0\Vert\omega_{U\phi})\).
+\item[(d)] The energy--momentum tensor is Hermitian in \(z\) (energy density \(\tfrac12|z|^2\), Poynting vector \((\bar z\times z)/2i\)) and therefore
+duality invariant; the flux \(T_{ab}\xi^a\xi^b\) is unchanged.  The bilinear invariant \(s=z\cdot z\) changes sign: the Lagrangian density
+\(\tfrac12(E^2-B^2)\) and \(E\cdot B\) are odd (v4.8.0-r06.3, v4.9.0-r40).
+\end{enumerate}
+\emph{Reading.} Gravity couples to the Hermitian tensor; the frames differ in the bilinear invariants.  For the Maxwell field, gravity is therefore
+frame blind.  This turns the reading of v4.9.0-r64 (``gravity itself is frame independent'') into a statement for this case.  It is not new physics:
+the duality invariance of the Maxwell tensor is textbook knowledge.
+
+\paragraph{Proof and measurement sources.}
+(a)--(c) are standard (duality symmetry of the free Maxwell field; invariance of the Araki relative entropy under automorphisms that fix the
+reference state).  (d) and the commutation are checked numerically by \texttt{k217\_\allowbreak dualitaet\_\allowbreak gravitation.py} (2000 random fields and
+boosts): commutation, invariance of the tensor and of the null flux, and the sign change of \(E^2-B^2\) and \(E\cdot B\) hold exactly in floating point;
+a non-unitary scaling \((1+0.3i)z\) changes the tensor by \(O(1)\) (negative control).  \(\square\)
+
+\paragraph{Theoremlet v4.10.0-r07.3 (bookkeeping: what the internal version gains).}
+The chain is written in QAM bookkeeping for frames M and T, with the duality rotation as a declared map
+(\texttt{qam\_\allowbreak dorau\_\allowbreak much\_\allowbreak companion.tex}); \texttt{qam.sty} raises no error.  The exported record gives for both frames the
+Einstein equation with status \emph{conditional} and inputs \{local flatness, area law\}, the same inputs as in Dorau--Much.  The internal version
+gains frame independence as a statement (r07.2).  It does not reduce the inputs: the area law, and with it the normalization \(1/4G\), remains an
+input (r06.2).  For comparison, the same bookkeeping applied to the paper itself (\texttt{qam\_\allowbreak dorau\_\allowbreak much\_\allowbreak paper.tex}) reports a
+promotion if the Einstein equation is declared proved, the area law as an input of the result, and, under the main-body typing of the
+Bekenstein--Hawking law as a photon-frame statement (\S\ref{sec:bh}), a frame mixing without declared map.
+
+\paragraph{Theoremlet v4.10.0-r07.4 (why frame independence is reached and the prefactor of the area law is not).}
+Analytic, not blind (author question after r07.3).
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \emph{Frame independence is a statement about relations.}  The map between M and T is a symmetry of the system that fixes the reference state
+and commutes with its modular group (r07.2), and every link of the chain is built from objects invariant under it.  Such an argument yields equalities
+between the frames.  It says nothing about the value both frames share.
+\item[(b)] \emph{The prefactor is an absolute number.}  The area law \(S=\delta A/4\) fixes the entropy per Planck area, i.e.\ the coupling (r06.2).  A
+symmetry between frames cannot fix it; something must give one frame its absolute value.
+\item[(c)] \emph{The countings used by the companion are calibrated to it.}  A horizon counting gives \(S=(\kappa/\gamma)\,A/\ell_P^2\) with a combinatorial
+constant \(\kappa\); the value of the Barbero--Immirzi parameter at which it reproduces the area law \(S=A/(N\ell_P^2)\) is \(\gamma_*=N\kappa\).  Both literature
+values used by the companion are of this kind: \(\gamma_{\rm string}=4\kappa_{\rm ABCK}\), \(\kappa_{\rm ABCK}=\ln2/(4\pi\sqrt3)\) (v4.8.0-r03 F11a), and
+\(\gamma_{\rm BI}=4\kappa_{\rm DL/M}\).  Their ratio
+\[
+\gamma_L=\frac{\gamma_{\rm BI}}{\gamma_{\rm string}}=\frac{\kappa_{\rm DL/M}}{\kappa_{\rm ABCK}}=1.864700
+\]
+does not depend on \(N\): the prefactor cancels (checked for \(N=1,4,8\)).  So do \(\beta_{\rm sym}=(\gamma_L-1)/(\gamma_L+1)\) and \(\Omega_M=\beta_{\rm sym}^2\)
+(H96).  Every quantity the companion builds from the two countings is exactly the part in which the normalization of the area law drops out.
+\item[(d)] \emph{Consequence.}  With these inputs the prefactor cannot be derived, in principle and not only in practice: it was put into each
+\(\gamma_*\) and removed again by taking the ratio.  The companion inherits the Barbero--Immirzi ambiguity of loop quantum gravity, in which the area
+law is matched, not derived.  A derivation would need one absolute value of \(\gamma\) (or of the entropy per state) from the structure of the companion,
+not a ratio; no such statement exists in the corpus.
+\item[(e)] \emph{A caution.}  The state disc at the Hopf point has eigenvalues \(3/4\) and \(1/4\) (v4.9.0-r17).  Identifying that \(1/4\) with the one of the
+area law would be a single-number identification of the kind recorded in v4.10.0-r05.2; there is no mechanism linking the two, and it is not proposed.
+\end{enumerate}
+
+\paragraph{Limits.}
+Only the free Maxwell field.  For massive fields the tachyon image of the action is tachyonic (H71); a tachyonic field has no stable Hadamard
+ground state and the premises of the chain fail.  Under the second reading (v4.9.0-r84, H79) the tachyon part is a weight on the matter action; how it
+enters the flux is not examined.  Interacting fields: duality is in general not a symmetry.
+
+\paragraph{Consequence.}
+The companion reproduces the Dorau--Much derivation in both frames for the Maxwell field and so obtains frame-blind gravity as a statement.  It adds
+no derivation of the area law; \(G\) and \(\Lambda\) remain as in r06.  The reason is structural (r07.4): the frame map gives relations,
+and the countings enter only through a ratio in which the prefactor cancels.  The open front is one absolute value of \(\gamma\) from the structure.
+
+\subsection*{v4.10.0-r07 status in the three frames}
+\label{subsec:v4100-r07-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item M: the chain of r06.1 holds as stated.
+\item T: for the free Maxwell field the chain holds unchanged (r07.2); for massive fields the tachyon image has no stable ground state (open under
+the second reading).
+\item P: the null sector \(s=0\) is fixed by \(z\mapsto iz\); no separate statement.
+\end{itemize}
+For the Maxwell field, M and T agree: the Einstein equation of the chain is frame free in that case.
+
+\subsection*{v4.10.0-r07 register entries}
+\label{subsec:v4100-r07-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r07\\
+\midrule
+r06.5 (boost becomes rotation under \(z\mapsto iz\)) & wrong; \(z\mapsto iz\) commutes with \(SO(3,\mathbb C)\) (correction r07.1)\\
+Einstein equation in frame T (Maxwell) & same as in frame M (exploration, not blind)\\
+gravity frame independent (r64) & a statement for the free Maxwell field; open for massive fields\\
+inputs of the internal chain & same as Dorau--Much (local flatness, area law)\\
+prefactor of the area law & not derivable from the two countings: it cancels in \(\gamma_L\) (r07.4)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r07 ledger and guard update}
+\label{subsec:v4100-r07-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r07}=(1,1,0)
+\]
+for (r06.5 corrected; chain in frame T for the Maxwell field; area law still an input, prefactor cancels in the ratio of countings).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r07,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r07}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.

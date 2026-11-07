@@ -1,0 +1,26 @@
+% Dorau--Much (PRL 136, 091602) in QAM-Buchfuehrung. Erkundung.
+\documentclass{article}
+\usepackage[export,mode=warning]{qam}
+\begin{document}
+% ---------- Teil A: wie im Paper, ein Frame (Lorentz, lokal) ----------
+\qamframe{M}
+\qaminput{loclin}{M}{conditional}      % g ~ eta, fuehrende Ordnung (Annahme)
+\qamclaim{bw}{M}{proved}               % Bisognano--Wichmann / Summers--Verch (Satz)
+\qamclaim{araki}{M}{proved}            % Araki-Entropie, kohaerente Zustaende
+\qamderive{flux}{proved}{bw,araki}     % S_rel = Energiefluss (Minkowski, exakt)
+\qamderive{fluxc}{conditional}{flux,loclin}  % dasselbe am gekruemmten Punkt
+\qaminput{arealaw}{M}{conditional}     % S_rel = dA/4: gesetzt (Bekenstein--Hawking)
+\qamclaim{raych}{M}{proved}            % Raychaudhuri
+\qamderive{geom}{conditional}{raych,loclin}
+\qamderive{einstein}{proved}{fluxc,arealaw,geom}       % (1) als bewiesen?
+\qamderive{einsteinc}{conditional}{fluxc,arealaw,geom} % (2) ehrlich
+\qamindependent{einsteinc}                             % (3) G hergeleitet?
+% ---------- Teil B: Typisierung des Companion (Flaechengesetz im Photon-Frame) ----------
+\qamframe{P}
+\qaminput{arealawP}{P}{conditional}    % rem. ``The entropy factor'': BH = Photon-Frame-Aussage
+\qamderive{einsteinP}{conditional}{fluxc,arealawP,geom} % (4) ohne Abbildung
+\qammap{Z}{P}{M}                        % erklaerte Abbildung P -> M (Zaehlregel, gamma)
+\qamconvert{arealawM}{conditional}{Z}{arealawP}
+\qamderive{einsteinPM}{conditional}{fluxc,arealawM,geom} % (5) mit Abbildung
+\qamledger
+\end{document}

@@ -1,0 +1,20 @@
+% QAM record exported by qam.sty
+% source qam_dorau_much_companion.tex md5 050D7F9D6790BD9F7DFCED444A9816C6
+map D : M -> T
+loclin := <6,loclin>; frame *; status conditional; inputs {loclin}; hash 4E1EE58725876D743FF04724B47EE6B6; sources {}
+arealaw := <6,arealaw>; frame *; status conditional; inputs {arealaw}; hash 28CBFE9A6755F7F0E45F4281E0793256; sources {}
+raych := claim; frame *; status proved; inputs {}; hash 6B01E4C38DF160C2F53835E601558494; sources {}
+geom := derive(raych,loclin); frame *; status conditional; inputs {loclin}; hash B07C431CF699488761329B3992725EB2; sources {6B01E4C38DF160C2F53835E601558494,4E1EE58725876D743FF04724B47EE6B6}
+bw := claim; frame M; status proved; inputs {}; hash 37C1E702FD9BC0CA2E24788B7BDCEDC7; sources {}
+araki := claim; frame M; status proved; inputs {}; hash D1266CDD29F1F2908469CED9EE9DA45C; sources {}
+flux := derive(bw,araki); frame M; status proved; inputs {}; hash DFA440E13753DADAD8EE5ED14CBC1E02; sources {37C1E702FD9BC0CA2E24788B7BDCEDC7,D1266CDD29F1F2908469CED9EE9DA45C}
+fluxc := derive(flux,loclin); frame M; status conditional; inputs {loclin}; hash 5B894068BC3D59F8399312A56B9448CC; sources {DFA440E13753DADAD8EE5ED14CBC1E02,4E1EE58725876D743FF04724B47EE6B6}
+einsteinM := derive(fluxc,arealaw,geom); frame M; status conditional; inputs {loclin,arealaw}; hash F71C7A2778245463B9A05A76817E339E; sources {5B894068BC3D59F8399312A56B9448CC,28CBFE9A6755F7F0E45F4281E0793256,B07C431CF699488761329B3992725EB2}
+commute := claim; frame *; status proved; inputs {}; hash 3CD900B211526EC2E16296C8936FA294; sources {}
+tinv := claim; frame *; status proved; inputs {}; hash E93B9FF3EE8A7131808FCE1E15FE4FC1; sources {}
+fluxT := convert(D,fluxc); frame T; status conditional; inputs {loclin}; hash EB44FF65684431D5598329E27953519A; sources {5B894068BC3D59F8399312A56B9448CC}
+fluxTc := derive(fluxT,commute,tinv); frame T; status conditional; inputs {loclin}; hash 79A9856AA994A3B946E455CD499C6815; sources {EB44FF65684431D5598329E27953519A,3CD900B211526EC2E16296C8936FA294,E93B9FF3EE8A7131808FCE1E15FE4FC1}
+einsteinT := derive(fluxTc,arealaw,geom); frame T; status conditional; inputs {loclin,arealaw}; hash 266D52342EADA50C0001A24B06C0B9DE; sources {79A9856AA994A3B946E455CD499C6815,28CBFE9A6755F7F0E45F4281E0793256,B07C431CF699488761329B3992725EB2}
+einsteinMT := convert(D,einsteinM); frame T; status conditional; inputs {loclin,arealaw}; hash 42180BA4EA2447073D1405AA1CE8B010; sources {F71C7A2778245463B9A05A76817E339E}
+compare einsteinMT einsteinT
+% record 81F16643ED693E6252D672A850A2DE5A

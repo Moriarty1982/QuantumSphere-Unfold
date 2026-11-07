@@ -1,6 +1,6 @@
 # Was im Companion steht
 
-**Stand: 5. November 2026, Forschungsfassung 4.10.0-draft mit Runden bis v4.10.0-r06.** Diese Seite gibt den Inhalt des *Quantum Sphaera Companion* wieder: Was wird angenommen, was wird definiert und gezeigt, und wie weit trägt es heute? Die Quellenangaben am Ende jedes Abschnitts dienen zum Nachprüfen; zum Verstehen sollte diese Seite allein reichen. [English version](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Content-overview) · [Startseite](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Home)
+**Stand: 5. November 2026, Forschungsfassung 4.10.0-draft mit Runden bis v4.10.0-r07.** Diese Seite gibt den Inhalt des *Quantum Sphaera Companion* wieder: Was wird angenommen, was wird definiert und gezeigt, und wie weit trägt es heute? Die Quellenangaben am Ende jedes Abschnitts dienen zum Nachprüfen; zum Verstehen sollte diese Seite allein reichen. [English version](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Content-overview) · [Startseite](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Home)
 
 ## So ist jede Aussage zu lesen
 
@@ -125,6 +125,7 @@ Der Companion leitet aus dem Frame-Versatz physikalische Größen ab. Der heutig
 - **Regularisierung der alten Bilanz:** Die gedruckte Entwicklung, der Gegenterm und der Wert 0,940 waren falsch. Richtig ist $R(\tau) = -1/\tau + 1 - \tfrac{11}{24}\tau + \dots$ mit Gegenterm $-\log(\varepsilon/\mu)$ und endlichem Teil 1,686953 bei $T = 0{,}393$, $\mu = 1$ (r69, korrigiert r70).
 - **Planck-Länge und Hawking-Temperatur:** In der Zähl-Lesart (r63) steckt der Frame-Unterschied in $\gamma$, nicht in $\hbar$ oder $G$. Die Photon-Planck-Skalierung $\gamma_L^{-3/2}$ und der Vakuumquotient $\gamma_L^5$ werden dadurch nicht gestützt (r64); der Hawking-Abschnitt ordnet eine Tachyonzählung dem austretenden Photon zu (r64, Statusvermerk r65).
 - **Entropiefaktor und Gravitationskopplung:** Nach der Herleitung von Dorau und Much (PRL 2026) bestimmt der Vorfaktor des Flächengesetzes die Gravitationskopplung, $G_{\mathrm{eff}} = G/c$. Die beiden Horizontzählungen des Companion unterscheiden sich bei gleichem $\gamma$ um $\gamma_L$; ein einziges gemessenes $G$ verlangt deshalb, dass jeder Frame mit seinem eigenen passenden $\gamma$ zählt (v4.10.0-r06). $\Lambda$ bleibt auch dort frei.
+- **Gravitation in beiden Frames:** Für das freie Maxwell-Feld gibt dieselbe Herleitung im Tachyon-Frame dieselbe Einstein-Gleichung, weil die Tachyon-Abbildung (Dualitätsdrehung) mit den Lorentz-Transformationen vertauscht und der Energie-Impuls-Tensor dualitätsinvariant ist (v4.10.0-r07). Den Vorfaktor ¼ des Flächengesetzes liefert der Companion nicht: Er fällt im Verhältnis der beiden Zählungen heraus.
 - **Alte Vorhersagen P1–P6:** keine bestätigt (P1 nicht bestätigt, P2 ausgeschlossen, P3 Zufall, P4 widersprüchlich, P5 korrigiert auf ½, P6 ungetestet).
 
 *Quelle: `thm:dark-energy`, `rem:regularization-B`, `cor:falsifiable`; Runden v4.8.0-r03–r09, v4.9.0-r63–r70.*
