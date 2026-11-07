@@ -395,6 +395,19 @@ Daher haben Labor und Beobachter bei $2\eta_0$ dieselbe Feldskala und entgegenge
 
 Im Beispiel $E=2e_x$, $B=e_y$ ist der Boost zum flussfreien Profil $v=1/2$. Der Boost mit doppelter Rapidität hat $v=4/5$ und liefert $E'=2e_x$, $B'=-e_y$. Beide Profile haben $n=5$, $s=3$ und dieselben vier HC-Normen. Die gerichtete Flussauslesung trennt sie. Die Übereinstimmung des Faktors mit r27 ergibt sich für dasselbe Eingangsregister. Die r27-Messung wird dadurch nicht zur Abbildung zwischen diesen Beobachtern.
 
+## Wirkung der doppelten Rapidität auf das volle Feld
+
+Analytische Fortsetzung nach dem Merge. Betrachte ein nichtnullartiges Feld mit nichtverschwindendem Laborfluss. Im flussfreien Zwischenprofil seien $E_0=e\,a$ und $B_0=b\,a$, mit gemeinsamer Einheitsachse $a$. Die Boostachse $k$ steht senkrecht zu $a$. Die beiden äußeren Beobachter liegen bei entgegengesetzten Rapiditäten relativ zu diesem Zwischenprofil. Ihre Felder lauten in parallel ausgerichteten kartesischen Achsen
+
+$$
+E_\pm=\gamma_0(e\,a\pm\beta_0 b\,k\times a),
+\qquad B_\pm=\gamma_0(b\,a\mp\beta_0 e\,k\times a).
+$$
+
+Eine räumliche Drehung um $\pi$ um $a$ fixiert die $a$-Anteile und kehrt die $k\times a$-Anteile um. Sie bildet somit das gesamte Feldpaar $(E_+,B_+)$ auf $(E_-,B_-)$ ab. Insbesondere stimmen alle vier HC-Normen überein. Der Energiefluss dreht sich mit und wechselt sein Vorzeichen entlang der festgehaltenen Boostachse. Die Feldwirkung dieser Drehung und des doppelten Beobachterboosts fällt für diesen Eingang zusammen. Die Operationen bleiben als Abbildungen verschieden, insbesondere bezüglich der Beobachteruhr.
+
+Beim früheren Paar $(2e_x,\pm e_y)$ ist $a=e_x$. Für allgemein nichtorthogonale Laborfelder bleibt die Aussage mit der im Zwischenprofil bestimmten Achse gültig. Die normierten Gram-Daten bestimmen diese räumliche Achse nicht. Der Vergleich benötigt die deklarierte Ausrichtung der Achsen.
+
 ## Auslesung der Spur aus getrennten Messreihen
 
 Auf zwei gleich präparierten Eingaben definiere die Portausgänge als $\pm1$, mit Mittelwerten $q_\pm=2p_\pm-1=cx\pm tz$. Für $ct\ne0$ gilt

@@ -186,6 +186,10 @@ The HC example declares the wrong laboratory boost and its correction as separat
 
 **Observer at twice the rapidity.** The collinear boost at twice the reference rapidity preserves the laboratory field scale and reverses directed energy flux. The flux-free profile is the midpoint. For this specified map, $1/r$ is the Lorentz factor between the laboratory and the observer with reversed flux.
 
+**Volles Feld bei doppelter Rapidität.** In gemeinsam ausgerichteten Achsen unterscheiden sich die beiden äußeren Feldausgaben durch eine räumliche Halbdrehung um die gemeinsame Feldachse des flussfreien Zwischenprofils. Ihre vier HC-Normen stimmen überein. Der gerichtete Fluss wechselt das Vorzeichen. Die räumliche Drehung und der Beobachterboost werden als getrennte Abbildungen geführt.
+
+**Full field at twice the rapidity.** In aligned axes, the outer field readouts differ by a half-turn around the common field axis of the flux-free intermediate profile. Their four HC norms agree, while the directed flux reverses. The spatial rotation and observer boost are distinct maps.
+
 ## Vorhandene Buchführungswerkzeuge
 
 Die vorhandene Werkzeugschicht realisiert typisierte Buchführungsprüfungen für lange Forschungstexte, mit oder ohne Sprachmodelle. Sie hängt **nicht** am Projekt Quantum Sphaera; das Projekt ist nur ihre erste Fallstudie. Ausführlich: Methodenpapier `paper/qam/` (Entwurf, 12 Seiten, nur Zenodo). Diese Werkzeugbeschreibung ersetzt nicht die oben erklärte Frame-Schnittstellenrolle.
