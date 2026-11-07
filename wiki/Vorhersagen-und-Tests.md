@@ -4,6 +4,8 @@
 
 ## Offene Vorhersagen (warten auf neue Daten)
 
+**Abhängigkeit (v4.10.0-r08):** H15, H46 und H96 ruhen auf demselben Kern (γ_BI, γ_string und die Zuordnung der Zählregeln zu den Frames, U(1) statt SU(2)); H42 ist davon unabhängig. Die vier sind also zwei unabhängige Prüfungen. Wird eine der drei Kern-Vorhersagen widerlegt, steht zuerst die Zählregel unter Verdacht. Alle vier haben in der QAM-Buchführung den Status einer Lesart.
+
 | Nr. | Vorhersage | Prüfdaten | widerlegt, wenn |
 |---|---|---|---|
 | **H9** | $\sin^2\theta_{12} = \beta_{\mathrm{sym}}^2/\cos^2\theta_{13} = 0{,}3086$ | künftige JUNO-Daten | Kriterium in der Vorab-Notiz; nachträglich gefunden, also nicht blind gewählt |

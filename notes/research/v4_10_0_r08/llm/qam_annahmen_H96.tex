@@ -1,0 +1,28 @@
+% Annahmenliste, Kette zu H96 (Omega_M = beta_sym^2), in QAM-Buchfuehrung. 7.11.2026.
+% Bauen: qam.sty (GitHub qam/tex) in den Suchpfad, pdflatex. Erwartung: keine Meldung; der Export zeigt Status und Eingaben.
+\documentclass{article}
+\usepackage[export]{qam}
+\begin{document}
+\qamframe{M}\qamframe{T}
+% --- Literatur-Eingaben (L), beide auf S = A/4 kalibriert (r07.4) ---
+\qaminput{gBI}{M}{computed}        % gamma_BI = 0.237533, U(1)-Zaehlung alle Spins (DL/M)
+\qaminput{gstr}{T}{computed}       % gamma_string = ln2/(pi sqrt3), nur j = 1/2 (ABCK)
+% --- Zuordnung der Zaehlregeln zu den Frames (Z1, r63/H47, nicht blind; U(1) statt SU(2), r68) ---
+\qaminput{countrule}{*}{reading}
+% --- Frame-Versatz als erklaerte Abbildung T -> M (F1, thm:frame-offset, r16) ---
+\qammap{Fo}{T}{M}
+\qamconvert{gstrM}{reading}{Fo}{gstr}
+% --- gamma_L als Lorentzfaktor (F1) und beta_sym = tanh(eta/2), cosh eta = gamma_L (F2, Kern T6/OP1) ---
+\qamclaim{lorentzreading}{M}{reading}
+\qamderive{gammaL}{reading}{gBI,gstrM,countrule,lorentzreading}
+\qamclaim{halfrapidity}{M}{reading}
+\qamderive{beta}{reading}{gammaL,halfrapidity}
+% --- Kaskaden-Verzweigung Omega_M = beta^2 (K1, thm:dark-energy, r31, Korrektur r67) ---
+\qamclaim{cascade}{M}{reading}
+% --- Epoche heute (E1, Autorentscheidung 6.11.) ---
+\qaminput{epoch}{*}{reading}
+\qamderive{OmegaM}{reading}{beta,cascade,epoch}
+\qamshow{OmegaM}
+
+\qamledger
+\end{document}
