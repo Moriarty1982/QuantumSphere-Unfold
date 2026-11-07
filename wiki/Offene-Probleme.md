@@ -76,6 +76,8 @@ Die folgende r05-Trennung bleibt als dokumentierter Stand erhalten: H96 ist offe
 
 **Stand nach v4.10.0-r09:** Das gewählte Paar ist unter 36 natürlichen Paaren das einzige, das alle drei bekannten Werte trifft (H98). Ein Prinzip (Unschärfesättigung, Energiebedingung je Frame) wählt es aus. Offen ist die Brücke: ob ein Beobachter am Tachyon-Boden am Horizont nur die kleinste Flächenanregung auflöst. Prüfbar über die Boost-Energie am Rindler-Horizont (Modularfluss, r06). Eine blinde Prüfung bräuchte eine Folgerung des Prinzips außer γ_L.
 
+**Stand nach v4.10.0-r10:** Die Brücke trägt nicht: Über das lokale erste Gesetz und die Unruh-Temperatur zählen M und T gleich, der Boden des Tachyons enthält j nicht, und Unschärfesättigung allein wählt j = ½ nicht aus. Die Zählregel ist gleichwertig mit einem frame-abhängigen Flächenquantum (γ_M/γ_T = γ_L). Offen ist, warum das Flächenquantum vom Frame abhängen sollte, wenn die Geometrie frame-blind ist (r07); die Dualitätsdrehung allein kann es nicht ändern.
+
 Der folgende Text beschreibt den Stand des Dynamik-Zweigs bis v4.10.0-r04.
 
 Lokal ist OP5 über eine Detektorschwelle geschlossen ($\mathrm{OP5}_{\mathrm{eff}}$). Exakt ist es offen. Der Stand nach r69 bis r86:

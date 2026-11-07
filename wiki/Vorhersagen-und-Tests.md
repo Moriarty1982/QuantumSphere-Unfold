@@ -4,7 +4,8 @@
 
 ## Offene Vorhersagen (warten auf neue Daten)
 
-**Abhängigkeit (v4.10.0-r08):** H15, H46 und H96 ruhen auf demselben Kern (γ_BI, γ_string und die Zuordnung der Zählregeln zu den Frames, U(1) statt SU(2)); H42 ist davon unabhängig. Die vier sind also zwei unabhängige Prüfungen. Wird eine der drei Kern-Vorhersagen widerlegt, steht zuerst die Zählregel unter Verdacht. Alle vier haben in der QAM-Buchführung den Status einer Lesart.
+**Abhängigkeit (v4.10.0-r08, präzisiert in r10):** H15, H46 und H96 ruhen auf demselben Kern (γ_BI, γ_string und die Zuordnung der Zählregeln zu den Frames, U(1) statt SU(2)); H42 ist davon unabhängig. Die vier sind also zwei unabhängige Prüfungen. Wird eine der drei Kern-Vorhersagen widerlegt, steht zuerst die Zählregel unter Verdacht. Alle vier haben in der QAM-Buchführung den Status einer Lesart.
+Nach v4.10.0-r10 ist der gemeinsame Kern gleichwertig mit einem frame-abhängigen Flächenquantum (γ_M/γ_T = γ_L); eine Begründung dafür fehlt.
 
 | Nr. | Vorhersage | Prüfdaten | widerlegt, wenn |
 |---|---|---|---|
