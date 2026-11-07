@@ -1,6 +1,6 @@
 # Offene Probleme und wo die Arbeit festsitzt
 
-**Stand: 7. November 2026, nach v4.10.0-r08.** Diese Seite beschreibt, was offen ist, warum, und was der nächste sinnvolle Schritt wäre. [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie) · [GitHub Issues](https://github.com/Moriarty1982/QuantumSphere-Unfold/issues)
+**Stand: 7. November 2026, nach v4.10.0-r09.** Diese Seite beschreibt, was offen ist, warum, und was der nächste sinnvolle Schritt wäre. [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) · [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie) · [GitHub Issues](https://github.com/Moriarty1982/QuantumSphere-Unfold/issues)
 
 ## Der gemeinsame Kern: Es fehlt eine Dynamik
 
@@ -44,6 +44,8 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 **Literaturbezug (v4.10.0-r06):** Auch die strenge Herleitung der semiklassischen Einstein-Gleichungen aus relativer Entropie (Dorau–Much, PRL 2026) legt Λ nicht fest; Λ ist dort Integrationskonstante. Die in r06 gestellte Frage nach der Modulargruppe im Tachyon-Frame ist in r07 beantwortet: $z \mapsto iz$ vertauscht mit dem Boost, die Kette gilt für das Maxwell-Feld in beiden Frames gleich. **Offen bleibt der Vorfaktor des Flächengesetzes (r07.4):** Die beiden Horizontzählungen sind auf ihn kalibriert, im Verhältnis $\gamma_L$ fällt er heraus. Ein Fortschritt bräuchte einen absoluten Wert von $\gamma$ aus der Struktur des Companion. Massive Felder sind nach r08.1 für die heutige Gravitation kein offener Punkt: Unter G2 lebt nach dem Urknall nur die Materie-Lesart.
 
 **Zählregel je Frame (v4.10.0-r08):** Drei der vier offenen Vorhersagen (H15, H46, H96) ruhen auf der Zuordnung der Horizontzählungen zu den Frames (M alle Spins, T j = ½, U(1) statt SU(2)). Diese Zuordnung ist gewählt, nicht hergeleitet (r63, r68). Sie aus den Frames zu begründen (OP1) ist der Schritt, der drei Vorhersagen zugleich stärken würde.
+
+**Stand nach v4.10.0-r09:** Das gewählte Paar ist unter 36 natürlichen Paaren das einzige, das alle drei bekannten Werte trifft (H98). Ein Prinzip (Unschärfesättigung, Energiebedingung je Frame) wählt es aus. Offen ist die Brücke: ob ein Beobachter am Tachyon-Boden am Horizont nur die kleinste Flächenanregung auflöst. Prüfbar über die Boost-Energie am Rindler-Horizont (Modularfluss, r06). Eine blinde Prüfung bräuchte eine Folgerung des Prinzips außer γ_L.
 
 Der folgende Text beschreibt den Stand des Dynamik-Zweigs bis v4.10.0-r04.
 
