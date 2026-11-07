@@ -496,6 +496,10 @@ The [shell residual QAM example](https://github.com/Moriarty1982/QuantumSphere-U
 
 **Residual zero with higher-order terms.** With the model intervals at $0,0.1,0.2$ and the additional bound $|f'''|\le0.1$, a possible second positive zero on the sampled interval lies at or below approximately $0.002778$. A cubic extremizer attains the bound. A vanishing third derivative recovers $1/406$.
 
+**HC-Boost und Flächenquantum.** Ein unitärer Profilwechsel desselben Flächenoperators erhält sein Spektrum. Hat dieses eine kleinste positive Fläche, kann ein solcher Wechsel die Fläche nicht um den r10-Faktor $1/G$ skalieren, außer $G=1$. Der HC-Uhrfaktor benötigt für die r10-Zählannahme eine zusätzliche Spektralabbildung.
+
+**HC boost and area quantum.** A unitary profile change of the same area operator preserves its spectrum. If there is a smallest positive area, this change cannot scale it by the r10 factor $1/G$ unless $G=1$. The HC clock factor needs a separate spectral map for the r10 counting assumption.
+
 ## Vorhandene Buchführungswerkzeuge
 
 Die vorhandene Werkzeugschicht realisiert typisierte Buchführungsprüfungen für lange Forschungstexte, mit oder ohne Sprachmodelle. Sie hängt **nicht** am Projekt Quantum Sphaera; das Projekt ist nur ihre erste Fallstudie. Ausführlich: Methodenpapier `paper/qam/` (Entwurf, 12 Seiten, nur Zenodo). Diese Werkzeugbeschreibung ersetzt nicht die oben erklärte Frame-Schnittstellenrolle.
