@@ -45,6 +45,48 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 7.11.2026: QAM – kompilierbares HC-Beispiel für gewichtete Rückwegwerte und Nullprüfungen.
+
+- 7.11.2026: QAM – ausführbares r27-Beispiel für gemeinsame und unabhängige Zweikopienrotation.
+
+- 7.11.2026: QAM – gerichtete r27-Rotationen mit getrenntem Port-Readout und nichtselektivem Messschritt.
+
+- 7.11.2026: QAM – Quelle–Rückweg, gerichtete Rückwegwerte und Vergleich mit der historischen C5-Schwelle.
+
+- 7.11.2026: QAM – Lorentz-Boost vor und nach Gram-Auslesung, mit rekonstruierbarer Darstellung auf dem Rang-zwei-Chart.
+
+- 7.11.2026: QAM – Dorau–Much als Fallstudie zur Trennung von Beobachteruhr, Algebraeinschränkung und geometrischer Auslesung.
+
+- **7.11.2026, QAM-Physikprofile umgesetzt:** QAM und Hinweise-fuer-LLMs erläutern das optionale TeX-Zusatzpaket, ART-/QM-Beispiele, Standardkontexte, explizite Konversion und Exporte. 34 Kompilier-/Fehlerfälle, zehn Exporte und Lean-Kompatibilität lokal geprüft; keine physikalischen Behauptungen oder nummerierten Forschungsschichten geändert.
+
+- **6.11.2026, QAM-Standardkontext:** QAM-Seite und Schnittstellenentwurf erlauben auf Autorwunsch das Weglassen linker Rollen bei eindeutig deklariertem Standard-Frame/-Profil. Kontext bleibt bei Expansion und Export erhalten; abweichende Frames werden sichtbar markiert.
+
+- **6.11.2026, QAM-Autorpräzisierung und Frame-Physikinterface-Entwurf:** QAM und Hinweise-fuer-LLMs trennen Frame-Schnittstellensprache, framegebundene Physikinterpretation und vorhandene Buchführungswerkzeuge. Kein universelles ART-Gesetz, keine automatische Invertierbarkeit und kein neuer physikalischer Beweis behauptet.
+
+- **6.11.2026, Rückgang bis zur Grundidee (Arbeitsnotiz):** Gesamtbild und Offene-Probleme priorisieren die gemeinsame-Träger-/physikalische-Identifikationsfrage vor weiteren Spinmasken. Zehnstufige Rückwärtskette trennt Nullbegriffe, Projektor, Sektoren und ursprüngliche Einheitshypothese; kein neuer Gesamtabschluss.
+
+- **6.11.2026, Projektor-/Spinbrücke (Erkundung):** Offene-Probleme trennt elektromagnetischen Reflektor, Dixon-Chiralität, P_C7 und Horizontmaske. Die vorhandene r51-Erhaltung ist kein neues Spin-Auswahlgesetz; „mod HC“ bleibt ohne konkrete Träger-/Zähldaten offen.
+
+- **6.11.2026, gemeinsamer Zustand und Spinzugriff (Erkundung):** Offene-Probleme unterscheidet vollständige Frameumrechnung, eingeschränkten Zugriff und selektierten Zustand. Restbeiträge bleiben bilanziell relevant; keine physikalische Horizontabbildung wird durch das Vergleichsmodell behauptet.
+
+- **6.11.2026, begrenzte Spinauswahlprüfung (nicht blind):** Offene-Probleme trennt Sättigung bei festem j, zusätzliche absolute Minimierung und vollständige Spinsektorzählung. Die feste-μ-Floorkinematik liefert keine j-Auswahl; bestehende Zählannahmen von H96 bleiben bestehen.
+
+- **6.11.2026, analytische OP5-Auswahlerkundung (nicht blind):** Offene-Probleme beschreibt die explizite freie q-Familie bei festen lokalen Zusatzdaten und die getrennte Energiegewichtsabhängigkeit. Keine empirische Prüfung oder neue H-Nummer; zusätzliche native Auswahlgesetze bleiben außerhalb des begrenzten Gegenbeispiels.
+
+- **6.11.2026, Zwischenabschluss OP5-Rückverfolgung:** Offene-Probleme und Hinweise-fuer-LLMs bündeln die sechs Arbeitsnotizen und benennen die verbleibende physikalische Zustands-/Messabbildung. Kein neuer Test, keine nummerierte Schicht und kein Abschlussstatus geändert.
+
+- **6.11.2026, OP5-Nennerprüfung (Arbeitsnotiz):** Offene-Probleme trennt Eigenwertverhältnis, Übergangsfluss, Zählparameterkontrast und kosmologischen Dichteanteil. r31 als Stabilität einer eingesetzten Verzweigung präzisiert, nicht als Herleitung ihres Zahlenwerts.
+
+- **6.11.2026, Frame-/Parameterprüfung (Arbeitsnotiz):** Offene-Probleme erläutert die bestehende R/P-Korrektur aus r24 und trennt Eigenwertverhältnis, Eigenanteil, Messport und kosmologischen Dichteanteil. H96 und Guards unverändert.
+
+- **6.11.2026, OP5-Operations-Datenblatt (Arbeitsnotiz):** Offene-Probleme trennt Projektion, Referenz-/Basiswechsel, Dualität, Zeitumkehr und Beobachterboost. Feldrapidität und symmetrischer Frame-Versatz werden nicht gleichgesetzt; keine neue Evidenz oder Schicht.
+
+- **6.11.2026, Feld-/Port-Datenblatt (Arbeitsnotiz):** Offene-Probleme erläutert die lokale Port-Auslesung, fehlende Skala/Orientierung des reduzierten Registers und die Trennung von nullartigem Feld, leerem Port und vollständigem Nullfeld. Keine neue Rechnung oder nummerierte Schicht.
+
+- **6.11.2026, erstes OP5-Route-Datenblatt (Arbeitsnotiz):** Offene-Probleme und Hinweise-fuer-LLMs trennen das abstrakte Quelle–Rückweg-Schema von einer konkreten nativen Instanz und kennzeichnen Suchumfang sowie offene physikalische Brücke.
+
+- **6.11.2026, Arbeitsnotiz nach r05 (keine neue Schicht):** Offene-Probleme, Gesamtbild und Hinweise-fuer-LLMs geben die beauftragte Aussetzung der historischen OP5-Auslöschungsgrundlage und die neue Messgrößen-/Auslesefrage wieder. Frühere Kriterien, Guards und Status von H96/H97 bleiben bestehen.
+
 **6.11.2026, Anleitungen modellunabhängig:** Hinweise für LLMs um die Liste der Anleitungen in `notes/anleitungen/` ergänzt (Sitzungsstart und -übergabe, Hypothesentest, Runde, OP5, Wiki, `tools/qs.py`, Zenodo); sie gelten für Claude, ChatGPT und Codex gleich.
 
 **2.11.2026, Layer r71:** Forschungsstand, Forschungslinie, Offene Probleme (OP5), Vorhersagen und Tests (H49, H50), Inhalt und Content overview um die Struktur des OP5-Vergleichssystems und die Polarwinkel-Eichsymmetrie ergänzt; Stand-Zeilen auf r71.

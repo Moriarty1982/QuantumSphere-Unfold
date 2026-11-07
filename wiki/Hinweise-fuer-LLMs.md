@@ -8,6 +8,12 @@ Zuerst das [Gesamtbild](https://github.com/Moriarty1982/QuantumSphere-Unfold/wik
 
 ## Kontext für Antworten
 
+**QAM-Umsetzung, 7.11.2026:** `qam/tex/qam-physics.sty` implementiert Profile, geschachtelte Standardkontexte, implizite beziehungsweise explizite linke Rollen, Formelpayload-Export und ausdrückliche Konversion mit Zielinterpretation. ART und QM werden im Beispiel als lokale Profile deklariert. Die 34 Softwarefälle und zehn Exporte prüfen Zuordnung, Herkunft und Darstellung; sie sind keine neuen Physiktests. Der bestehende Lean-Prüfer akzeptiert die erzeugten Records. Die Erweiterung ist kein allgemeiner Formelbeweiser, keine Herleitung der Einheitshypothese und keine automatische gemeinsame ART/QM-Dynamik. [Implementierung und Beispiel](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/qam/README.md).
+
+**QAM-Autorpräzisierung, 6.11.2026:** QAM ist Frame-Schnittstellensprache, nicht eine physikalische Theorie, aus der alle Frame-Gesetze herzuleiten wären. Ein Physikmapping interpretiert gewöhnliche Tensoren und Gleichungen im dafür festgelegten Frame. Es wird weder automatisch auf andere Frames übertragen noch durch die vorhandenen Buchführungsprüfer vollständig implementiert. Siehe [QAM-Schnittstellenentwurf](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/qam_frame_physics_interface_design_2026_11_06.md). Die früheren OP5-Prüfnotizen behalten ihre ausdrücklich begrenzten Voraussetzungen; Aussagen über gemeinsame physikalische Größen gelten nicht ungeprüft über unterschiedliche Physikmappings hinweg. Die Einheit von M/T/P ist das zu untersuchende Forschungsziel, keine hier vorausgesetzte Schlussfolgerung.
+
+**Neuere Arbeitsentscheidung, 6.11.2026 nach r05:** Die ursprüngliche OP5-Auslöschungsherleitung ist als aktive Grundlage ausgesetzt, nicht die gesamte Kernstruktur widerlegt. Vor einer Fortsetzung die [neue Arbeitsfrage samt Quellen](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_neuaufbau_2026_11_06.md) lesen. Zuerst sind Träger, konkrete Route, Auslesung, Invariante und mögliche Messgröße zu bestimmen; ein physikalischer Vakuumterm mit vorgegebener Skala oder Restwert wird nicht vorausgesetzt. H96 bleibt offen, H97 widerlegt, W1/W2 eingefroren; Guards und frühere Tests bleiben unverändert. Die folgende ältere Standangabe ist historisch und wird durch README/AGENTS.md für die aktuelle Baseline v4.10.0 sowie durch die jüngsten Quellen ergänzt. Die neue Notiz ist keine nummerierte Forschungsschicht.
+
 Am geprüften Stand **5.11.2026 / main a5bf106** ist **v4.9.0** die öffentliche Baseline (Version DOI **10.5281/zenodo.23534954**). Die Forschungsquellen bilden **4.10.0-draft** mit dokumentierten Layern bis **v4.9.0-r85**. Vor einer aktuellen Aussage den neuesten Stand erneut prüfen. [Quellenkarte](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Versionen-und-Quellen).
 
 ## Arbeitsanleitung für KI-Assistenten
@@ -42,6 +48,10 @@ Ohne Shell oder GitHub-Zugang nennt ein Modell die Befehle, und der Autor führt
 werkzeugübergreifender Standard. `CLAUDE.md` verweist nur darauf.
 
 ## Vorgehen bei Fachfragen
+
+Der [Zwischenabschluss der OP5-Rückverfolgung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_reconstruction_verdict_2026_11_06.md) bündelt die sechs Prüfnotizen. Die historische Auslöschungspflicht ist als Grundlage ausgesetzt. Lokale Ausleseidentitäten, bedingte Erhaltung und die empirische Identifikation q = Ω_M(heute) sind getrennte Aussagen. Die Kaskade setzt q bereits ein; ihre Flussstabilität ist keine unabhängige Herleitung seines Werts. Die Quellenrekonstruktion nicht ohne neue Evidenz als neuen Beweis oder neue physikalische Theorie ausgeben.
+
+Für die neue OP5-Arbeitsfrage liegt ein [erstes Route-Datenblatt](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_route_inventory_2026_11_06.md) vor: Der abstrakte Erhaltungssatz und die Realisierung seiner Voraussetzungen sind getrennt zu behandeln. Insbesondere bezeichnet sein Λ einen Zielraum, nicht schon die kosmologische Konstante; die Klassenabbildung J ist nicht ohne Nachweis die Kern-Involution. Das Datenblatt ist ein begrenzter Rekonstruktionsbefund, kein vollständiger Audit späterer Atlas- oder Abschlusslayer.
 
 1. Klären, ob die Frage Veröffentlichung, aktuelle Forschung oder einen historischen Zustand betrifft.
 2. Commit/Tag, Dateipfad und möglichst Satzlabel oder Abschnitt nennen.

@@ -1,0 +1,74 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\usepackage[export]{qam}
+\usepackage{qam-physics}
+\begin{document}
+\qamframe{Inertial}\qamframe{Rindler}\qamframe{Geometry}
+\qamprofile{inertial}{Inertial}{L_{\rm AQFT}}{conditional}
+  {Flat reference model: Minkowski Klein--Gordon algebra and vacuum}
+\qamprofile{horizon}{Rindler}{L_{\rm AQFT}}{conditional}
+  {Dorau--Much right horizon scaling algebra, coherent horizon data and affine coordinate U<0}
+\qamprofile{geometry}{Geometry}{L_{\rm GR}}{conditional}
+  {Same Rindler observer, geometric area readout in the leading local approximation, Planck units}
+
+\section*{Change of observer and change of accessible algebra}
+\begin{qamcontext}{inertial}
+\[
+\qamformula{vacuum}{conditional}{(\mathcal A(\mathbb M),\omega_{\rm M})}
+\]
+\end{qamcontext}
+\qammap{wedge-access}{Inertial}{Rindler}
+\[
+\qamphysconvert{wedge-vacuum}{conditional}{wedge-access}{vacuum}{horizon}
+  {\omega_W=\omega_{\rm M}|_{\mathcal A(W)}}
+\]
+Here the map means restriction to the right wedge. Horizon scaling is
+a separate step inside the target profile.
+\begin{qamcontext}{horizon}
+\[
+\qamformula[wedge-vacuum]{horizon-state}{conditional}
+  {(\mathcal A_H,\omega_0,\omega_\phi),\quad
+    \omega_\phi=\omega_0\circ\operatorname{Ad}W(\phi)^*}
+\]
+\[
+\qamformula[horizon-state]{modular-action}{conditional}
+  {\phi^t(U,y)=\phi(e^{2\pi t}U,y)}
+\]
+\[
+\qamformula[modular-action]{relative-entropy}{conditional}
+  {S_H(\omega_0\Vert\omega_\phi)
+    =-2\pi\!\int_H U(\partial_U\phi)^2\,dU\,d\mathrm{vol}_{\mathcal S}}
+\]
+\[
+\qamformula[horizon-state]{null-stress}{conditional}
+  {\langle{:T_{UU}:}\rangle_{\omega_\phi}=(\partial_U\phi)^2}
+\]
+\[
+\qamformula[relative-entropy,null-stress]{boost-flux}{conditional}
+  {S_H=2\pi J_B,\quad
+    J_B=-\!\int_H U\langle{:T_{UU}:}\rangle_{\omega_\phi}\,dU\,d\mathrm{vol}_{\mathcal S}}
+\]
+\end{qamcontext}
+
+\section*{Change of physical readout for the same observer}
+\qammap{area-assumption}{Rindler}{Geometry}
+\[
+\qamphysconvert{area-law}{conditional}{area-assumption}{boost-flux}{geometry}
+  {\delta A=4S_H=8\pi J_B}
+\]
+\begin{qamcontext}{geometry}
+\[
+\qamformula{focusing}{conditional}
+  {\delta A\simeq-\!\int_H U R_{UU}\,dU\,d\mathrm{vol}_{\mathcal S}}
+\]
+\[
+\qamformula[area-law,focusing]{semiclassical-einstein}{conditional}
+  {G_{ab}+\Lambda g_{ab}=8\pi\langle{:T_{ab}:}\rangle_{\omega_\phi}}
+\]
+\end{qamcontext}
+The last step uses local matching in every null direction, conservation
+and the contracted Bianchi identity. The area map is an imported
+assumption; the wedge map is a restriction, not an inverse observer map.
+See Dorau and Much, Phys. Rev. Lett. 136, 091602 (2026), Eqs. (4),
+(10)--(13), (18), (20)--(28), DOI 10.1103/lmq8-nsty.
+\end{document}

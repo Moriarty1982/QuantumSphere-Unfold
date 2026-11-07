@@ -1,0 +1,15 @@
+\documentclass{article}\usepackage[export]{qam}\usepackage{qam-physics}
+\begin{document}
+\qamframe{GRF}\qamframe{QMF}
+\qamprofile{gr}{GRF}{\mathrm{LANGART}}{conditional}{ART display profile}
+\qamprofile{qm}{QMF}{\mathrm{LANGQM}}{conditional}{QM display profile}
+\begin{qamcontext}{gr}
+IMPLICITBEGIN \(\qamformula{local}{conditional}{x=1}\) IMPLICITEND\par
+FULLBEGIN \(\qamphys*{local}\) FULLEND\par
+\begin{qamcontext}{qm}
+FOREIGNBEGIN \(\qamphys{local}\) FOREIGNEND\par
+\end{qamcontext}
+RESTOREDBEGIN \(\qamphys{local}\) RESTOREDEND\par
+\end{qamcontext}
+STANDALONEBEGIN \(\qamphys{local}\) STANDALONEEND
+\end{document}

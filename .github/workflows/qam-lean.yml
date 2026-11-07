@@ -5,10 +5,10 @@ name: QAM Lean (standalone, no Mathlib)
 on:
   workflow_dispatch:
   pull_request:
-    paths: ["qam/lean/**", "qam/examples/**", ".github/workflows/qam-lean.yml"]
+    paths: ["qam/**", ".github/workflows/qam-lean.yml"]
   push:
     branches: [main]
-    paths: ["qam/lean/**", "qam/examples/**", ".github/workflows/qam-lean.yml"]
+    paths: ["qam/**", ".github/workflows/qam-lean.yml"]
 
 permissions:
   contents: read
@@ -59,4 +59,12 @@ jobs:
           lake exe qamcheck ../examples/frames.qam
           for f in ../examples/bad_*.qam; do
             if lake exe qamcheck "$f"; then echo "::error::$f was accepted"; exit 1; fi
+          done
+      - name: Physics profiles export through the existing record checker
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq texlive-latex-base texlive-latex-recommended texlive-fonts-recommended poppler-utils >/dev/null
+          python3 qam/tex/tests/run_tests.py --output-dir /tmp/qam-physics-tests
+          for f in /tmp/qam-physics-tests/pass*/*.qam; do
+            qam/lean/.lake/build/bin/qamcheck "$f"
           done
