@@ -2758,6 +2758,16 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - **r10.4:** Codex-Prüfung (GitHub, 6.11.) gleiches Urteil; Sättigung wählt j = ½ nicht, Boden enthält j nicht.
 - R_chk = (1,1,0); Guards unverändert. Lokal 1365 Seiten, 4032 Labels.
 
+### K147 Runde v4.10.0-r11: Einordnung der Codex-OP5-Rekonstruktion (2026-11-07)
+
+`sec:v4100-r11-op5-reconstruction`, Snippet `llm/v4100_r11_round.tex`, Notizen `notes/research/v4_10_0_r11/`, Protokoll `llm/Integration_Codex_OP5_Rekonstruktion.md`, Nachrechnung `llm/k219_nachrechnung_codex_op5.py` (31/31). Quelle GitHub `4ae32c9`, lokal übernommen unter `notes/research/` und `qam/`.
+- **r11.1:** Autorentscheidung (6.11., über Codex): historische OP5-Auslöschungsherleitung als Grundlage ausgesetzt; neue Arbeitsfrage Messgröße aus begründeter Auslesung; M/T/P-Einheit = zu prüfende Hypothese.
+- **r11.2:** Quelle–Rückweg nur Schema (keine native Route, Mittel verliert d); vier Nenner, r31 setzt β² ein; Feldfamilie trägt jedes q; Sättigung wählt j nicht; C_ch vertauscht mit z ↦ iz; s-Schalen, Kompensatorbild nicht null.
+- **r11.3:** kein Widerspruch; Präzisierungen zu r05.3(i) (Schema geschlossen, native Route offen) und r05.3(ii) (q = Ω_M zusätzliche Gleichsetzung, wie K1 in r08).
+- **r11.4:** QAM-Physikprofile, Konversion nur mit deklarierter Map und Zielformel; r07.2 ist eine solche.
+- **r11.5:** 3/4 als quadrierte Richtungsdifferenz (= r27); 1/r = cosh 2η Lorentzfaktor zwischen Gegenfluss-Beobachtern, bei r = 1/γ_L Boost β_sym; Lesart-Kandidat zu r10.3, nachträglich.
+- R_chk = (1,1,0); Guards unverändert. Lokal 1369 Seiten, 4037 Labels.
+
 ## 8. Änderungsprotokoll
 
 - v1 (2026-10-19): Erstfassung der Kernkarte.
@@ -2966,3 +2976,4 @@ Autor hat an OP5 lokal mit einem anderen Sprachmodell gearbeitet (GitHub `analys
 - v16.0 (2026-11-07): K144 Runde v4.10.0-r08 (Annahmenliste, Abhängigkeit der Vorhersagen).
 - v16.1 (2026-11-07): K145 Runde v4.10.0-r09 (H98, Prinzip für die Zählregel).
 - v16.2 (2026-11-07): K146 Runde v4.10.0-r10 (Brücke P2, Flächenquantum je Frame).
+- v16.3 (2026-11-07): K147 Runde v4.10.0-r11 (Einordnung der Codex-OP5-Rekonstruktion).
