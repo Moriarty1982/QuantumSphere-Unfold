@@ -1,0 +1,15 @@
+% QAM record exported by qam.sty
+% source qam_annahmen_H96.tex md5 9DA9E6F5B93656F9DFB77A16DD7FB62E
+gBI := <6,gBI>; frame M; status computed; inputs {gBI}; hash C6408815223D24C878C86FDF4BF80773; sources {}
+gstr := <6,gstr>; frame T; status computed; inputs {gstr}; hash 1FF0A17D034165B9BE5CBB985FF5791C; sources {}
+countrule := <6,countrule>; frame *; status reading; inputs {countrule}; hash 17A320DEC3E5257505F1B02C6480E307; sources {}
+map Fo : T -> M
+gstrM := convert(Fo,gstr); frame M; status reading; inputs {gstr}; hash B9A0EB0249C6E02908C07130CAEF3A53; sources {1FF0A17D034165B9BE5CBB985FF5791C}
+lorentzreading := claim; frame M; status reading; inputs {}; hash 86626291F66278CAB4E2AEC66CC08EF4; sources {}
+gammaL := derive(gBI,gstrM,countrule,lorentzreading); frame M; status reading; inputs {gBI,gstr,countrule}; hash AF4290DA47446088512C176480B850B1; sources {C6408815223D24C878C86FDF4BF80773,B9A0EB0249C6E02908C07130CAEF3A53,17A320DEC3E5257505F1B02C6480E307,86626291F66278CAB4E2AEC66CC08EF4}
+halfrapidity := claim; frame M; status reading; inputs {}; hash 12E0C0318FA50C1E7F66072D0454C46F; sources {}
+beta := derive(gammaL,halfrapidity); frame M; status reading; inputs {gBI,gstr,countrule}; hash 7DBF7D94F8E147AF111A146AE6759535; sources {AF4290DA47446088512C176480B850B1,12E0C0318FA50C1E7F66072D0454C46F}
+cascade := claim; frame M; status reading; inputs {}; hash 21D1E9EFD9B6451BA6A4044C9847BA4C; sources {}
+epoch := <6,epoch>; frame *; status reading; inputs {epoch}; hash 2AD7DE761D5188843B1AEBB283E33F62; sources {}
+OmegaM := derive(beta,cascade,epoch); frame M; status reading; inputs {gBI,gstr,countrule,epoch}; hash 7799603D95FC3A824CA3D43895AE9FAB; sources {7DBF7D94F8E147AF111A146AE6759535,21D1E9EFD9B6451BA6A4044C9847BA4C,2AD7DE761D5188843B1AEBB283E33F62}
+% record 89CEF1480DD7B3965E482F76BFE33D79
