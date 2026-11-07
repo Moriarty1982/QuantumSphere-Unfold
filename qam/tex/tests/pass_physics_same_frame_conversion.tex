@@ -1,0 +1,9 @@
+\documentclass{article}\usepackage[export]{qam}\usepackage{qam-physics}
+\begin{document}\qamframe{F}
+\qamprofile{a}{F}{L_a}{conditional}{First interpretation}
+\qamprofile{b}{F}{L_b}{conditional}{Different interpretation in the same named frame}
+\begin{qamcontext}{a}\(\qamformula{x}{conditional}{x=1}\)\end{qamcontext}
+\qammap{reinterpret}{F}{F}
+\(\qamphysconvert{y}{conditional}{reinterpret}{x}{b}{y=2}\)
+\begin{qamcontext}{b}\(\qamformula[y]{z}{conditional}{z=y}\)\end{qamcontext}
+\end{document}

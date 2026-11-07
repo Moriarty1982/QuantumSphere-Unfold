@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[export]{qam}
+\usepackage{qam-physics}
+\begin{document}
+\qamframe{ART}\qamframe{QM}
+\qamprofile{gr}{ART}{L_{\rm ART}}{conditional}
+  {Classical GR on a Lorentz manifold with Levi-Civita connection, fixed curvature convention, SI units}
+\qamprofile{qm}{QM}{L_{\rm QM}}{conditional}
+  {Schrodinger quantum mechanics on a complex Hilbert space, specified Hamiltonian and time parameter}
+
+\section*{Ordinary ART notation in its default context}
+\begin{qamcontext}{gr}
+\[
+\qamformula{einstein}{conditional}
+  {G_{\mu\nu}+\Lambda g_{\mu\nu}=\frac{8\pi G_{\rm N}}{c^4}T_{\mu\nu}}
+\]
+Full left roles on request: \(\qamphys*{einstein}\).
+
+\section*{A nested QM context}
+\begin{qamcontext}{qm}
+\[
+\qamformula{schrodinger}{conditional}
+  {i\hbar\frac{\partial}{\partial t}|\psi(t)\rangle=\hat H|\psi(t)\rangle}
+\]
+An ART formula remains explicitly labelled here: \(\qamphys{einstein}\).
+\end{qamcontext}
+The ART default is restored: \(\qamphys{einstein}\).
+\end{qamcontext}
+
+\section*{Standalone use keeps its context}
+\[\qamphys{schrodinger}\]
+The formulas are imported model statements, not a GR--QM derivation.
+No physical transition between these profiles has been declared.
+\end{document}

@@ -1,0 +1,119 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\usepackage[export]{qam}
+\usepackage{qam-physics}
+\begin{document}
+\qamframe{R27}
+\qamprofile{r27}{R27}{L_{\rm Bloch}}{conditional}
+  {Real Bloch disk, independent identical preparation, and the r27 operations}
+\begin{qamcontext}{r27}
+\section*{One preparation and two rotation protocols}
+\[
+\qamformula{source-pair}{conditional}
+  {\rho=\tfrac12(I+\sigma_x),\quad S=\rho\otimes\rho,\quad
+    \alpha=\pi/6}
+\]
+\[
+\qamformula[source-pair]{directed-copies}{conditional}
+  {\rho_\pm=U_{\pm\alpha}\rho U_{\pm\alpha}^\dagger,\quad
+    U_\alpha=e^{-i\alpha\sigma_y}}
+\]
+\[
+\qamformula[directed-copies]{shared-direction}{conditional}
+  {S_{\rm shared}=\tfrac12(\rho_+\otimes\rho_++\rho_-\otimes\rho_-)}
+\]
+\[
+\qamformula[directed-copies]{independent-directions}{conditional}
+  {S_{\rm ind}=\bar\rho\otimes\bar\rho,\quad
+    \bar\rho=\tfrac12(\rho_++\rho_-)}
+\]
+\section*{One observable and separate readouts}
+\[
+\qamformula{observable}{conditional}
+  {H=\sigma_x\otimes\sigma_x+\sigma_z\otimes\sigma_z,\quad
+    h(X)=\operatorname{tr}(HX)}
+\]
+\[
+\qamformula[source-pair,shared-direction,independent-directions,observable]
+  {rotation-values}{conditional}{h(S)=h(S_{\rm shared})=1,\quad
+    h(S_{\rm ind})=\tfrac14}
+\]
+\[
+\qamformula[shared-direction,observable]{measurement-value}{conditional}
+  {D(X)=\tfrac12(X+\sigma_x X\sigma_x),\quad
+    h((D\otimes D)S_{\rm shared})=\tfrac14}
+\]
+\end{qamcontext}
+The shared direction uses one sign per pair. Independent directions
+use one sign per copy. For this input, both protocols have the same
+single-copy marginal. Their two-copy correlations distinguish them.
+The final line applies the nonselective measurement to the shared
+protocol. All steps use the same r27 profile.
+
+\begin{qamcontext}{r27}
+\section*{What the port data determine}
+Let \(k\) be the correlation of the two fair rotation signs. Use
+conditionally independent port outcomes \(Y_1,Y_2\in\{-1,1\}\)
+and write \(\mu=\mathbb E[Y_i]\), \(C=\operatorname{Cov}(Y_1,Y_2)\).
+Here \(c=\cos(2\alpha)\), \(t=\sin(2\alpha)\), and \((X,Z)\)
+is the Bloch input after any common pre-rotation.
+\[
+\qamformula{port-moments}{conditional}
+  {\mu=cX,\quad C=kt^2 Z^2,\quad
+   \mathbb E[Y_1Y_2]=\mu^2+C}
+\]
+At \(\alpha=\pi/6\), the scalar pair readout has a collision even
+when the entire curve in the pre-rotation angle \(\beta\) is stored.
+\[
+\qamformula[port-moments]{scalar-collision}{conditional}
+  {\begin{gathered}
+     (x,z,k)=(1/2,0,1),\quad(0,\sqrt{3}/2,1/9),\\
+     \mathbb E[Y_1Y_2]=(\cos^2\beta+3\sin^2\beta)/16
+     \quad\text{for both inputs.}
+   \end{gathered}}
+\]
+Their plus-port probabilities at \(\beta=0\) are \(5/8\) and \(1/2\).
+For reconstruction, repeat the measurement with the same preparation
+and coupling, using \(U_{\pi/4}\) to send \((x,z)\) to \((z,-x)\).
+\[
+\qamformula[port-moments]{second-setting}{conditional}
+  {\mu'=cz,\quad C'=kt^2x^2}
+\]
+\[
+\qamformula[port-moments,second-setting]{reconstruct}{conditional}
+  {x=\mu/c,\quad z=\mu'/c,\quad
+   k=\frac{C+C'}{t^2(x^2+z^2)}}
+\]
+The inverse applies when \(ct\ne0\) and \(x^2+z^2>0\).
+At the maximally mixed input the port statistics are independent of \(k\).
+
+\section*{Reconstruction and consistency}
+For a nonzero input one covariance suffices once the means determine
+\(x,z\). Choose the covariance with the larger denominator.
+\[
+\qamformula[port-moments,second-setting]{adaptive-coupling}{conditional}
+  {k=\begin{cases}
+     C/(t^2z^2), & |z|\ge |x|,\\
+     C'/(t^2x^2), & |z|<|x|.
+   \end{cases}}
+\]
+Retaining both covariances permits a check of the common-coupling model.
+\[
+\qamformula[reconstruct]{common-coupling-check}{conditional}
+  {x^2+z^2\le1,\quad x^2 C=z^2 C',\quad
+   |C+C'|\le t^2(x^2+z^2)}
+\]
+These conditions characterize compatible exact moments on the nonzero
+input domain. At zero input the model requires both covariances to vanish.
+\[
+\qamformula[adaptive-coupling,common-coupling-check]{check-example}{conditional}
+  {\begin{gathered}
+     \alpha=\pi/6,\quad (\mu,\mu')=(3/10,2/5),\quad C=6/25,\\
+     k_{\rm adaptive}=1/2,\qquad C'_{\rm required}=27/200,\\
+     C'=1/10\quad\Longrightarrow\quad x^2 C\ne z^2 C'.
+   \end{gathered}}
+\]
+The adaptive value is unchanged by the altered fourth datum.
+The four moments together then fail the common-coupling check.
+\end{qamcontext}
+\end{document}

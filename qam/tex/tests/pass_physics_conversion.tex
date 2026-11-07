@@ -1,0 +1,10 @@
+\documentclass{article}\usepackage[export]{qam}\usepackage{qam-physics}
+\begin{document}
+\qamframe{F}\qamframe{K}
+\qamprofile{a}{F}{L_a}{conditional}{Source interpretation}
+\qamprofile{b}{K}{L_b}{conditional}{Different target interpretation}
+\begin{qamcontext}{a}\(\qamformula{source}{conditional}{x=1}\)\end{qamcontext}
+\qammap{bridge}{F}{K}
+\(\qamphysconvert{target}{conditional}{bridge}{source}{b}{y=2}\)
+\begin{qamcontext}{b}\(\qamformula[target]{consequence}{conditional}{y+1=3}\)\end{qamcontext}
+\end{document}

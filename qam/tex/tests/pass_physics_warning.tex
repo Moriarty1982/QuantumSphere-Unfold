@@ -1,0 +1,17 @@
+\documentclass{article}\usepackage[export,mode=warning]{qam}\usepackage{qam-physics}
+\begin{document}
+\qamframe{F}\qamframe{K}
+\qamprofile{a}{F}{L_a}{conditional}{Source model}
+\qamprofile{b}{K}{L_b}{conditional}{Target model}
+\begin{qamcontext}{a}
+\(\qamformula{source}{conditional}{x=1}\)
+\begin{qamcontext}{missing}
+\(\qamformula{badContext}{conditional}{x=2}\)
+\end{qamcontext}
+\(\qamformula{restored}{conditional}{x+1=2}\)
+\(\qamformula{badPromotion}{proved}{x=1}\)
+\end{qamcontext}
+\qammap{wrong}{K}{F}
+\(\qamphysconvert{badTransfer}{conditional}{wrong}{source}{b}{y=2}\)
+Warnings must not create any of the rejected formula records.
+\end{document}

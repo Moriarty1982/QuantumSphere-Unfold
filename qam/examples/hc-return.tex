@@ -1,0 +1,324 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\usepackage[export]{qam}
+\usepackage{qam-physics}
+\begin{document}
+\qamframe{Lab}
+\qamprofile{hc}{Lab}{L_{\rm EM}}{conditional}
+  {Real electromagnetic doublet in a fixed laboratory profile with active duality}
+\begin{qamcontext}{hc}
+\section*{Two-port readout}
+\[
+\qamformula{ports}{conditional}
+  {A=E+B,\quad D=E-B,\quad
+   (N_+,N_-,N_E)=(|A|^2,|D|^2,|A+D|^2)}
+\]
+\[
+\qamformula[ports]{field-invariant}{conditional}
+  {s=\tfrac12(N_E-N_+-N_-)+\tfrac i2(N_+-N_-)}
+\]
+\[
+\qamformula[field-invariant]{duality-pair}{conditional}
+  {(E,B)=(2e_x,e_y),\quad s=3,\quad s_\pm=e^{\pm i\pi/2}s=\pm3i}
+\]
+\[
+\qamformula[duality-pair]{distinct-means}{conditional}
+  {\bar s=\tfrac12(s_++s_-)=0,\quad
+   M_2=\tfrac12(|s_+|^2+|s_-|^2)=9}
+\]
+\section*{Weighted zero checks}
+Take \(p_j\ge0\) with \(\sum_j p_j=1\).
+\[
+\qamformula{moments}{conditional}
+  {\bar s=\sum_jp_js_j,\quad M_2=\sum_jp_j|s_j|^2,\quad
+   M_2-|\bar s|^2=\sum_jp_j|s_j-\bar s|^2}
+\]
+\[
+\qamformula[moments]{branch-zero}{conditional}
+  {M_2=0\iff s_j=0\ \text{for every }j\text{ with }p_j>0}
+\]
+\[
+\qamformula[moments]{branch-bound}{conditional}
+  {M_2\le\varepsilon^2,\ p_j>0
+   \ \Longrightarrow\ |s_j|\le\varepsilon/\sqrt{p_j}}
+\]
+\[
+\qamformula[branch-zero]{nonzero-null}{conditional}
+  {\begin{gathered}
+     n_j=|E_j|^2+|B_j|^2,\qquad \bar n=\sum_jp_j n_j,\\
+     M_2=0,\ \bar n>0
+     \ \Longrightarrow\ \exists j:\ p_j>0,\ s_j=0,\ n_j>0 .
+   \end{gathered}}
+\]
+\end{qamcontext}
+The final implication certifies existence. For a statement on every
+positive-weight branch, require \(n_j>0\) on every such branch. For
+example, invertible field transports preserve nonzero input fields.
+The profile describes the local field route and its declared readouts.
+
+\begin{qamcontext}{hc}
+\section*{Nullity of the coherently reconstructed input}
+The two port norms fix the imaginary part of the input invariant.
+Cauchy--Schwarz bounds its real part, and every intermediate value is
+realized by varying the angle between the port vectors.
+\[
+\qamformula[field-invariant]{input-range}{conditional}
+  {|\operatorname{Re}s|\le\sqrt{N_+N_-},\quad
+   \operatorname{Im}s=\tfrac12(N_+-N_-)}
+\]
+\[
+\qamformula[field-invariant]{input-null}{conditional}
+  {s=0\iff N_+=N_-\ \text{and}\ N_E=2N_+}
+\]
+Unequal norms already exclude nullity. If both norms are zero, the
+input field vanishes. With equal positive norms, measure the squared
+norm of the vector sum or equivalently \(4|E|^2\).
+\[
+\qamformula[input-null]{input-collision}{conditional}
+  {\begin{gathered}
+    (N_+,N_-,N_E)=(5,5,16)\ \Longrightarrow\ s=3,\\
+    (N_+,N_-,N_E)=(5,5,10)\ \Longrightarrow\ s=0,\quad |E|^2+|B|^2=5 .
+   \end{gathered}}
+\]
+Both inputs have the same projected invariants \(\pm5i/2\) and
+the same equally weighted projected second moment \(25/4\).
+
+\section*{Input nullity with bounded measurement errors}
+Let \(I_+,I_-,I_E\) be the allowed intervals for the three squared
+norms. Assume these intervals give all the error constraints.
+\[
+\qamformula[input-null]{interval-compatibility}{conditional}
+  {\begin{gathered}
+    J=I_+\cap I_-\cap(I_E/2)\cap[0,\infty),\\
+    \text{A nonzero null input is compatible}
+    \iff J\cap(0,\infty)\ne\varnothing .
+   \end{gathered}}
+\]
+Every positive \(q\in J\) is realized by orthogonal electric and
+magnetic vectors of length \(\sqrt{q/2}\). Zero field is compatible
+exactly when \(0\in J\).
+\[
+\qamformula[interval-compatibility,input-collision]{interval-examples}{conditional}
+  {\begin{gathered}
+    (5,5,16)\ \Longrightarrow\ J=\varnothing,\qquad
+    (5,5,10)\ \Longrightarrow\ J=[4.95,5.05]
+   \end{gathered}}
+\]
+Here each measured squared norm has absolute error at most \(0.1\).
+For the second triple, the invariant is an affine function of the
+three errors. Convexity bounds its modulus by the largest value at
+the eight corners of the error box.
+\[
+\qamformula[field-invariant,interval-examples]{sharp-input-bound}{conditional}
+  {|s|\le0.15,\qquad
+   (N_+,N_-,N_E)=(5.1,5.1,9.9)\ \Longrightarrow\ s=-0.15}
+\]
+The corner is physically realizable by real port vectors. Thus the
+bound is sharp even with the Gram constraints. Compatibility with
+exact nullity and a guaranteed upper bound are separate readouts.
+
+\section*{Four norms with shared calibration}
+\[
+\qamformula[ports,field-invariant]{four-norm-readout}{conditional}
+  {\begin{gathered}
+    N_B=|A-D|^2,\qquad N_E+N_B=2(N_++N_-),\\
+    s=(N_E-N_B)/4+i(N_+-N_-)/2 .
+   \end{gathered}}
+\]
+Take \(\widehat N_j=gN_j+b\) with one common gain \(g>0\)
+and one common offset \(b\).
+\[
+\qamformula[four-norm-readout]{shared-calibration}{conditional}
+  {\begin{gathered}
+    S_\Delta=(\widehat N_E-\widehat N_B)/4+
+      i(\widehat N_+-\widehat N_-)/2=gs,\\
+    b=\bigl[2(\widehat N_++\widehat N_-)
+           -(\widehat N_E+\widehat N_B)\bigr]/2 .
+   \end{gathered}}
+\]
+The measured tuple \((5.1,5.1,10.1,10.1)\) gives \(S_\Delta=0\)
+and \(b=0.1\). Its corrected port norms are positive, certifying
+a nonzero null input in this calibration model.
+
+If \(\widehat N_j=gN_j+b+e_j\) with \(|e_j|\le\delta_j\),
+the offset still cancels. The remaining error obeys
+\[
+\qamformula[shared-calibration]{calibration-residual}{conditional}
+  {|S_\Delta-gs|\le
+  \sqrt{\left(\frac{\delta_E+\delta_B}{4}\right)^2+
+        \left(\frac{\delta_++\delta_-}{2}\right)^2}.}
+\]
+An upper bound on \(|s|\) from these data uses a positive lower
+bound on \(g\). The normalized invariant can instead use the field
+scale in the same observer profile.
+\[
+\qamformula[shared-calibration]{calibrated-scale}{conditional}
+  {T=\frac{\widehat N_E+\widehat N_B-\widehat N_+-\widehat N_-}{2}
+   =gn,\qquad n=|E|^2+|B|^2}
+\]
+\[
+\qamformula[calibrated-scale,shared-calibration]{relative-invariant}{conditional}
+  {T>0\ \Longrightarrow\ |S_\Delta|/T=|s|/n}
+\]
+With residual errors, let \(D_s\) be the bound on \(|S_\Delta-gs|\)
+above and \(D_n=(\delta_E+\delta_B+\delta_++\delta_-)/2\).
+The same scale readout satisfies \(|T-gn|\le D_n\).
+\[
+\qamformula[calibration-residual,calibrated-scale]{relative-error-bound}{conditional}
+  {T>D_n\ \Longrightarrow\
+   \frac{\max(0,|S_\Delta|-D_s)}{T+D_n}
+   \le \frac{|s|}{n}
+   \le \frac{|S_\Delta|+D_s}{T-D_n}.}
+\]
+For \((5.1,5.1,10.1,10.1)\) with all \(\delta_j=0.1\), one has
+\(T=5\), \(D_n=0.2\), and \(D_s=\sqrt5/20\).
+The normalized modulus is therefore at most \(\sqrt5/96\).
+
+\section*{Reference boost from scale and directed flux}
+Use \(c=1\). In addition to the norm data, retain the directed
+flux \(F_g=2g(E\times B)\) in the same laboratory axes and with the
+same gain as the norm readout.
+\[
+\qamformula[calibrated-scale,shared-calibration]{reference-boost}{conditional}
+  {\begin{gathered}
+    n^2-|s|^2=4|E\times B|^2,\qquad
+    v_{\rm ref}=\frac{F_g}{T+|S_\Delta|}\quad (|S_\Delta|>0),\\
+    |F_g|^2=T^2-|S_\Delta|^2 .
+   \end{gathered}}
+\]
+The last equality is a consistency condition on exact flux and
+norm data. The positive gain cancels from the boost vector.
+\[
+\qamformula[reference-boost]{opposite-reference-boosts}{conditional}
+  {E=2e_x,\quad B=\pm e_y:\quad
+   T=5g,\quad S_\Delta=3g,\quad F_g=\pm4g e_z,\quad
+   v_{\rm ref}=\pm e_z/2}
+\]
+The four norm values agree for these inputs. The directed flux
+selects the boost. A nonzero null input instead gives a formal speed
+of one and has no finite reference boost.
+
+\section*{Reference boost with a separately calibrated flux}
+The flux magnitude is optional for reconstruction. Let \(F_{\rm dir}\)
+be any positive multiple of \(E\times B\) in the laboratory axes.
+Its gain may differ from that of the norm readout.
+\[
+\qamformula[relative-invariant,reference-boost]{direction-only-boost}{conditional}
+  {\begin{gathered}
+     r=|S_\Delta|/T,\qquad
+     v_{\rm ref}=\sqrt{\frac{1-r}{1+r}}\,
+       \frac{F_{\rm dir}}{|F_{\rm dir}|}\quad (0<r<1),\\
+     r=1\quad\Longrightarrow\quad v_{\rm ref}=0 .
+   \end{gathered}}
+\]
+For \(0<r<1\), the flux is nonzero by the field identity above.
+The direction must retain its sign. At \(r=1\) no direction
+measurement is needed. The magnitude consistency check above still
+requires matched gains.
+\end{qamcontext}
+
+\section*{Directed flux from opposite observer boosts}
+\qamframe{PlusZ}\qamframe{MinusZ}
+\qamprofile{plus-z}{PlusZ}{L_{\rm EM}}{conditional}
+  {Observer boosted along positive z at speed one quarter}
+\qamprofile{minus-z}{MinusZ}{L_{\rm EM}}{conditional}
+  {Observer boosted along negative z at speed one quarter}
+\begin{qamcontext}{hc}
+\[
+\qamformula{boost-probe-input}{conditional}
+  {E=2e_x,\quad B=b e_y,\quad b\in\{-1,1\},\quad v=1/4}
+\]
+\end{qamcontext}
+\qammap{probe-plus}{Lab}{PlusZ}
+\qammap{probe-minus}{Lab}{MinusZ}
+\[
+\qamphysconvert{plus-scale}{conditional}{probe-plus}{boost-probe-input}
+  {plus-z}{n_+=(85-32b)/15}
+\]
+\[
+\qamphysconvert{minus-scale}{conditional}{probe-minus}{boost-probe-input}
+  {minus-z}{n_-=(85+32b)/15}
+\]
+For comparison, record each observer's reported value in the
+laboratory record with its observer label. These maps copy the reported
+values, preserving their meaning as boosted field scales.
+\qammap{report-plus}{PlusZ}{Lab}
+\qammap{report-minus}{MinusZ}{Lab}
+\[
+\qamphysconvert{plus-report}{conditional}{report-plus}{plus-scale}
+  {hc}{N_{\rm report,+}=n_+}
+\]
+\[
+\qamphysconvert{minus-report}{conditional}{report-minus}{minus-scale}
+  {hc}{N_{\rm report,-}=n_-}
+\]
+\begin{qamcontext}{hc}
+\[
+\qamformula[plus-report,minus-report]{probe-flux}{conditional}
+  {N_{\rm report,-}-N_{\rm report,+}=\tfrac{64b}{15}
+   =8\gamma^2v\, e_z\cdot(E\times B)}
+\]
+\end{qamcontext}
+The x and y probe differences vanish for this pair. The z difference
+selects the signed flux direction, giving \(v_{\rm ref}=b e_z/2\).
+
+\section*{Residual flux and a corrective boost}
+\qamframe{WrongZ}\qamframe{Rest}
+\qamprofile{wrong-z}{WrongZ}{L_{\rm EM}}{conditional}
+  {Observer moving along negative z at speed one half relative to the laboratory}
+\qamprofile{rest}{Rest}{L_{\rm EM}}{conditional}
+  {Flux-free observer reached by the declared corrective boost}
+\qammap{wrong-boost}{Lab}{WrongZ}
+\[
+\qamphysconvert{residual-flux}{conditional}{wrong-boost}{boost-probe-input}
+  {wrong-z}{b=1,\quad s=3,\quad E'\times B'=(20/3)e_z}
+\]
+\begin{qamcontext}{wrong-z}
+\[
+\qamformula[residual-flux]{corrective-rapidity}{conditional}
+  {\eta_{\rm corr}=\tfrac12\operatorname{arsinh}
+   \left(2|E'\times B'|/|s|\right),\qquad
+   v_{\rm corr}=\tfrac45 e_z}
+\]
+\end{qamcontext}
+\qammap{correct-boost}{WrongZ}{Rest}
+\[
+\qamphysconvert{rest-flux-check}{conditional}{correct-boost}
+  {corrective-rapidity}{rest}{B''=0,\quad |E''|^2=3,\quad E''\times B''=0}
+\]
+The correction is relative to the intermediate observer. Collinear
+velocity addition yields the net laboratory velocity
+\[
+\frac{-1/2+4/5}{1-(1/2)(4/5)}=\frac12 .
+\]
+The target flux check here is a calculation. An independent probe
+in the target profile would check the realized transformation.
+
+\section*{Identifying the minimum-speed flux-free observer}
+In the computed rest profile the electric field points along \(e_x\).
+A further boost along this axis preserves the field and its zero
+flux, while changing the observer.
+\begin{qamcontext}{rest}
+\[
+\qamformula[rest-flux-check]{flux-free-family}{conditional}
+  {\begin{gathered}
+     E''=\sqrt3 e_x,\quad B''=0,\quad
+     \gamma_{\rm ref}=2/\sqrt3,\\
+     \gamma_{\rm target}=\gamma_{\rm ref}\cosh\xi
+     \quad\text{for a further field-axis boost of rapidity }\xi .
+   \end{gathered}}
+\]
+\[
+\qamformula[flux-free-family]{clock-selection}{conditional}
+  {\gamma_{\rm target}=\gamma_{\rm ref}\iff \xi=0}
+\]
+\[
+\qamformula[flux-free-family]{clock-example}{conditional}
+  {\tanh\xi=\pm1/4\quad\Longrightarrow\quad
+   \gamma_{\rm target}=8/\sqrt{45}>\gamma_{\rm ref}}
+\]
+\end{qamcontext}
+The Lorentz factors compare observer velocities to the laboratory.
+Zero field flux tests the flux-free family. The additional velocity
+or inertial clock comparison selects its minimum-speed member.
+\end{document}
