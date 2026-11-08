@@ -1013,3 +1013,72 @@ Ziel ist eine aus der nativen QAM-Dynamik begründete T-Flächenauslesung. Der M
 Für den relationalen Kohärenztest seien Rand und Referenz zwei getrennte Flussregister. Setze $N=\hat n\otimes I+I\otimes\hat r$. Eine Präparation und Steuerung, die mit beiden lokalen Flüssen kommutiert, kann die relative Phase der gegenläufigen Paare nicht auslesen: Das betreffende Matrixelement jedes so erzeugten Effekts verschwindet. Ein gemeinsamer Swap $S|n,r\rangle=|r,n\rangle$ auf identischen Flussträgern kommutiert dagegen mit $N$ und tauscht im Null-Doublet die beiden Paare. Sein Partial-Swap $e^{-i\theta S}=\cos\theta I-i\sin\theta S$ realisiert bei $\theta=\pi/2$ den für das Echo benötigten Tausch bis auf globale Phase. Mit dem binären, intern kohärenten Nullselektor und zwei frischen Hilfsregistern entfernt das Echo die statische blockabhängige Phase relativ zum Leerlauf. Die zertifizierte Einzellaufschranke liefert im Null-Doublet den Abstand kleiner als $0{,}010714$ für idealen Swap. Der Nullselektor testet die kohärente gemeinsame Auslesung, während die T-Flächenausgabe zusätzlich das Betragslabel des Randflusses und die Kalibrierung $v$ benötigt.
 
 Quellenabgleich: r28.2(c) verwendet einen Partial-Swap mit dem eigenen Tachyonbild und betrachtet die Kontraktion des Bloch-Vektors. r30.3 motiviert kohärenten Austausch über den Kompensator. Daraus folgt keine Identifikation der beiden dortigen Register mit unabhängigen gravitativen Randflussregistern. Ein hinreichender nativer Nachweis müsste eine QAM-Kodierung der Rand- und Referenzsektoren angeben, unter der der dortige Swap die Flussregister vertauscht, der Gesamtfluss erhalten bleibt und das gemeinsame Ausleseinstrument innerhalb der Nullfaser keinen lokalen Vorzeichenrekord hinterlässt. Unabhängig davon muss die T-Ausgabe mit der nativen T-Geometrie und ihrer Flächennormierung verbunden werden. Die bisher geprüften Quellen und Simulationen liefern diese Brücken nicht. OP1 bleibt offen. Weitere Optimierung desselben idealisierten Pulsmodells entscheidet diese Zuordnungen nicht.
+
+### Zählnormierung und Selektor sind zwei getrennte OP1-Bedingungen
+
+Erkundung nach dem Merge. In r63.1 wird derselbe dimensionslose Einpunkt-Flächenterm $a(j)=\sqrt{j(j+1)}$ in zwei Normierungsgleichungen verwendet. Der Unterschied liegt im zugelassenen Spinträger: volle Zählung mit Gewicht zwei gegenüber nur $j=1/2$ mit Gewicht zwei. Eine gemeinsame Skalierung aller Flächenwerte $a(j)\mapsto\lambda a(j)$ bei unverändertem Träger kann den numerischen Normierungsparameter ändern. Die neue Lösung ist exakt $\gamma_M/\lambda$, denn die Gleichung hängt nur vom Produkt $\gamma\lambda$ ab. Die einzelnen normierten Gewichte bleiben identisch und jeder zuvor zugelassene Spin behält positives Gewicht. Eine numerische Übereinstimmung des Normierungsparameters allein weist daher keinen Übergang zur Minimalspinzählung nach.
+
+Die r63-Brücke lässt sich als Forderung an einen nativen Selektor formulieren. Auf einem Einpunktträger mit Casimir $C=J^2$ ist der erforderliche Effekt der Spektralprojektor $P_{1/2}=\mathbf1_{\{3/4\}}(C)$, bis auf eine Beschreibung, die dieselbe Zählung reproduziert. Ein interner invertierbarer Framewechsel, der $C$ erhält, transportiert die vorhandenen Spinsektoren, entfernt aber keinen davon. Selbst ein normerhaltender Wechsel auf einem vergrößerten Träger liefert die Einschränkung erst durch ein Ausleseinstrument, das höhere Spins verwirft oder aus dem zugänglichen Zählträger ausschließt. Das für die r63.1-Normierung benötigte Gewicht zwei auf dem verbleibenden Sektor ist zusätzlich zu prüfen. Mehrpunktbedingungen und die native Identifikation des T-Trägers folgen aus dieser Einpunktrechnung nicht.
+
+Damit sind zwei zuvor zusammen diskutierte Modellschritte getrennt. Der gemischte Torusoperator kann eine kleinere Flächenstufe modellieren. Der kohärente Nullzeiger implementiert eine Auswahl nach Flusslabel. Um daraus r63 zu gewinnen, müsste eine Abbildung zeigen, dass der native T-Selektor gerade den Casimirwert $3/4$ mit der geforderten Multiplizität auswählt. In den geprüften Quellen ist diese Zuordnung noch offen.
+
+### Minimalspin aus einer transversalen quadratischen Auslesung
+
+Erkundung. Eine einzelne normierte Flusskomponente $J_z$ liefert das Label $m$. Die Werte $m=\pm1/2$ kommen in jedem halbzahligen Spinsektor vor. Jede Auslesung, die ausschließlich von $J_z$ abhängt, akzeptiert daher bei diesen Labels auch höhere Spins. Gemeinsame Vorzeichenparität oder Auswahl der beiden Vorzeichen allein behebt die Kollision nicht.
+
+Ein hinreichender Einpunkt-Selektor ist die spektrale Auslesung der gemeinsamen transversalen Quadratsumme $B=J_x^2+J_y^2=J^2-J_z^2$. Ihr Eigenwert ist $j(j+1)-m^2\ge j$, mit Gleichheit bei $|m|=j$. Somit gilt $\mathbf1_{\{1/2\}}(B)=P_{1/2}$ auf dem gesamten Spinträger, einschließlich eines möglichen Spin-null-Sektors. Die beiden Minimalspinzustände tragen denselben Zeigerwert. In einer einzelnen Kopie des Spin-$1/2$-Irreps hat dieser Projektor Rang zwei. Bei zusätzlichen Kopien oder weiteren Horizontbedingungen muss das effektive Zählgewicht separat bestimmt werden.
+
+Die gemeinsame Spektralmessung der Quadratsumme ist eine eigenständige Modelloperation. Getrennte Auslesungen der transversalen Komponenten mit nachträglicher Addition ergeben im Allgemeinen ein anderes Instrument. Die native Frage ist damit, ob der T-Übergang einen gemeinsamen quadratischen Flusseffekt oder ein dazu äquivalentes Instrument bereitstellt. Der bisherige skalare Torus-Flusszeiger allein reicht dazu nicht aus.
+
+### Minimalspin durch zwei binäre Flussfilter
+
+Erkundung. Wenn die gemeinsame Quadratsumme nicht direkt messbar ist, genügen im Einpunktmodell zwei ideale binäre Filter als Grenzverfahren. Setze $P_x=\mathbf1_{\{1/4\}}(J_x^2)$ und $P_y=\mathbf1_{\{1/4\}}(J_y^2)$. Ihr gemeinsamer Bildraum ist exakt der Spin-$1/2$-Sektor: Jeder Vektor im Schnitt erfüllt $(J_x^2+J_y^2)\psi=\psi/2$, und auf Spin $1/2$ sind beide Filter die Identität. Die Filter messen nur den jeweiligen Betragstest und speichern kein Vorzeichen.
+
+Für einen normierten Zustand im Bild von $P_x$ innerhalb eines höheren halbzahligen Spins $j$ gilt $\langle J_y^2\rangle\ge j-1/4$ und $J_y^2\le j^2 I$. Folglich ist die Ablehnungswahrscheinlichkeit des $y$-Filters mindestens $(j-1/2)/(j^2-1/4)=1/(j+1/2)$. Nach einer anfänglichen $x$-Auswahl und $k$ erfolgreichen $y$-Abfragen mit erneuter $x$-Auswahl vor jeder weiteren Abfrage beträgt die gesamte Falschakzeptanz für $j\le J$ höchstens $(1-1/(J+1/2))^k$. Ganzzahlige Spins scheitern schon am ersten Filter. Bei Spin $1/2$ passieren beide magnetischen Zustände und alle ihre Überlagerungen sicher. Ohne Spinobergrenze liefert diese Abschätzung punktweise Konvergenz und keine einheitliche endliche Fehlerschranke.
+
+Damit gibt es neben der gemeinsamen Quadratsummenmessung eine zweite Modellroute: zwei binäre, vorzeichenblinde Spektralfilter auf transversalen Achsen. Die Robertson-Aussage in r63.2 liefert die Spektralarithmetik, aber kein natives Messinstrument für diese Filter. Eine endliche Filterfolge liefert im Allgemeinen eine Näherung, und das effektive Horizontzählgewicht bleibt separat zu prüfen.
+
+### Kronecker-Delta und exakter Betragszeiger
+
+Erkundung. In der $J_x$-Eigenbasis ist der binäre Filter durch $P_x|j,m_x\rangle=\delta_{4m_x^2,1}|j,m_x\rangle$ gegeben. Für einen Spinträger mit Obergrenze $J$ wähle eine ganze Zahl $L>4J^2+1$. Dann liefert die endliche Charakter-Mittelung
+
+$$
+P_x=\frac1L\sum_{k=0}^{L-1}\exp\!left[\frac{2\pi i k}{L}(4J_x^2-I)\right]
+$$
+
+den exakten Projektor, denn $2m_x$ ist ganzzahlig und kein von null verschiedener Wert von $4m_x^2-1$ ist ein Vielfaches von $L$. Analog ergibt $2B-I$ mit $B=J_x^2+J_y^2$ ganzzahlige Eigenwerte und liefert bei $L>2J(J+1)+1$ einen einzelnen exakten Minimalspinzeiger. Die kontrollierten Phasen sind Modellressourcen. Eine gemeinsame Zeigerkopplung an die jeweilige quadratische Observable erhält die Kohärenz innerhalb ihres Ja-Sektors, sofern nur das Ja-Nein-Bit gespeichert und das Arbeitsregister zurückgesetzt wird. Die alternierenden Achsenfilter bleiben im Allgemeinen von einer einmaligen gemeinsamen Minimalspinmessung verschieden.
+
+### Minimalspin-Delta aus gemeinsamen Rotationen
+
+Erkundung. Kopple den Einpunktträger an ein Referenzdoublet $R$ mit Spin $1/2$ und mittlere die gemeinsame $SU(2)$-Rotation mit normiertem Haarmaß. Der so erhaltene Operator $Q$ projiziert auf die invarianten Zustände. Nach der Drehimpulsaddition enthält $V_j\otimes V_{1/2}$ genau dann ein Singulett, wenn $j=1/2$. Ein maximales Verschränkungspaar aus $R$ und einem unberührten zweiten Doublet $A$ präpariert auf $R$ den reduzierten Zustand $I_R/2$. Bezeichne die Einbettung durch Anhängen dieses Paares mit $V$. Dann gilt
+
+$$
+V^\dagger(Q\otimes I_A)V=\tfrac14 P_{1/2}.
+$$
+
+Der Faktor folgt daraus, dass die partielle Spur des Singulettprojektors auf dem ausgewählten Systemdoublet $I/2$ ist. Multiplizitätsräume des Systemspins bleiben unangetastet.
+
+Der Faktor vier lässt sich kohärent entfernen. Schreibe $Q'=Q\otimes I_A$, $R_V=2VV^\dagger-I$ und $R_Q=I-2Q'$. Für jeden eingebetteten Minimalspinzustand $v=V\psi$ gilt $VV^\dagger Q'v=v/4$, also $R_VR_Qv=2Q'v$. Dieser Zustand ist normiert und liegt vollständig im Singulettbild. Für höhere Spins und Spin null ist $Q'v=0$ und $R_VR_Qv=v$. Eine binäre Singulettmarkierung zwischen dieser Folge und ihrer Inversion liefert daher exakt $P_{1/2}$ als Ja-Effekt und setzt die Referenz zurück. Sie erhält beide magnetischen Zustände und ihre Überlagerungen.
+
+Dies ist eine alternative ideale Konstruktion zur quadratischen Phasenmessung. Die Haarmittelung definiert den Projektor algebraisch. Der physikalische Aufbau braucht eine kohärente gemeinsame Singulettreflexion und eine Reflexion um die Referenzpräparation. Eine zufällige gemeinsame Rotation mit anschließendem Vergessen des Winkels realisiert diese Reflexion nicht. Native Verfügbarkeit und das tatsächliche Horizontzählgewicht bleiben offen.
+
+### Austauschgenerator und Horizontzählung des Referenzfilters
+
+Erkundung. Mit Referenzspin $R=\boldsymbol\sigma/2$ hat der rotationsinvariante Austausch $K=2\mathbf J\cdot\mathbf R=(\mathbf J+\mathbf R)^2-\mathbf J^2-\mathbf R^2$ auf den gekoppelten Sektoren $j+1/2$ und $j-1/2$ die Eigenwerte $j$ beziehungsweise $-(j+1)$; bei $j=0$ existiert nur der erste Zweig. Der Eigenwert $-3/2$ gehört genau zum gemeinsamen Singulett von System und Referenz. Auf einem Träger mit $j\le J$ lässt sich sein Projektor per kontrollierter Phase des ganzzahligen Operators $2K+3I$ bestimmen. Ein ganzzahliger Modulus $L>2J+3$ verhindert Aliaswerte. Binäre Markierung und Rückrechnung geben sowohl den Singulettzeiger als auch die für die Verstärkung benötigte Reflexion. Damit ist der gesuchte Kopplungsterm konkret: isotroper Austausch zwischen gravitativem Durchstoßpunkt und einer Spin-$1/2$-Referenz. Eine verfügbare gewöhnliche Spinrotation oder ein elektromagnetischer Kompensator allein etabliert diesen Term nicht.
+
+Die beiden Referenzdoublets können als gemeinsames Singulett statt als ein anders orientiertes maximal verschränktes Paar präpariert werden. So sind die Präparation und ihre Reflexion invariant unter gemeinsamer Rotation aller Register. Der verstärkte und rückgerechnete Filter lässt auf einer einzelnen Systemkopie von Spin $1/2$ beide magnetischen Zustände intakt. Würde man stattdessen das Punkt-Referenz-Singulett als Endzustand zählen, erhielte man pro Systemkopie nur einen invarianten Zustand. Das ursprüngliche Zählgewicht zwei bezieht sich auf den nach der Rückrechnung verbleibenden lokalen Systemträger.
+
+Auch perfekte lokale Filter entscheiden die Mehrpunktzählung nicht. Für $N=2k$ ausgewählte Punkte hat der freie Produktträger Dimension $2^N$, der Teilraum mit magnetischer Gesamtsumme null Dimension $\binom{2k}{k}$ und der volle $SU(2)$-Singulettsektor Dimension $\binom{2k}{k}-\binom{2k}{k+1}$. Beide Einschränkungen behalten denselben führenden Exponenten pro Punkt $\ln2$, haben aber verschiedene endliche Multiplizitäten. Bei ungeradem $N$ sind beide Nullsektoren leer. Damit kann der lokale Filter die minimale Spinunterstützung und das lokale Gewicht zwei reproduzieren, ohne eine konkrete native Horizontprojektion zu bestimmen. Offen bleiben die Ableitung der Austauschkopplung und der von T tatsächlich zugängliche Mehrpunktträger.
+
+### Gemeinsame Form der M- und T-Zählmasken
+
+Erkundung. Auf dem Einpunktträger ohne $j=0$ wähle eine Achse $u$ und setze $B_u=J^2-J_u^2$. Die beiden Spektralmasken
+
+$$
+P_M(u)=\mathbf1_{\{0\}}(B_u-|J_u|),\qquad
+P_T=\mathbf1_{\{1/2\}}(B_u)
+$$
+
+reproduzieren gemeinsam die r63-Einpunktgewichte. Denn $B_u-|J_u|=(j-|m|)(j+|m|+1)$ verschwindet genau bei $m=\pm j$, während $B_u=1/2$ genau Spin $1/2$ auswählt. Damit gilt $P_T\le P_M(u)$. Bei einer Kopie je Irrep hat $P_M(u)$ Rang zwei in jedem Spin und $P_T$ Rang zwei insgesamt. Die beiden Spuren mit Gewicht $\exp[-2\pi\gamma\sqrt{J^2}]$ sind genau die beiden r63-Normierungsgleichungen im Einpunktmodell. Die Achsenwahl allein genügt nicht: Jeder Effekt $f(J_u)$ muss demselben $m$ in verschiedenen Spins denselben Wert geben. Insbesondere kann er $m=1/2$ in Spin $1/2$ nicht akzeptieren und in Spin $3/2$ verwerfen. Beide oben definierten Masken brauchen daher mehr Information als ein U(1)-Label.
+
+Über alle Achsen gemittelt ist der M-Effekt innerhalb jedes Irreps nach Schur skalar. Seine Spur bleibt zwei, sodass er dort genau $2I/(2j+1)$ beträgt. Die r63-Zählspur bleibt bei der Mittelung gleich. Der gemittelte Effekt akzeptiert jedoch für $j>1/2$ jeden Zustand mit einer Wahrscheinlichkeit zwischen null und eins. Er definiert dort keinen scharfen zweidimensionalen Unterraum. Der T-Projektor ist bereits achsenunabhängig. Somit erzwingt das M-Zählgewicht zwei allein keine physikalisch ausgezeichnete Achse, wohl aber eine zusätzliche Erklärung, wenn es als scharfe Auswahl verstanden wird. Die innere Einheit der QAM ist bislang weder mit der gravitativen Achse $u$ identifiziert noch als Erzeuger der gemeinsamen quadratischen Auslesung nachgewiesen. Globale Horizontbedingungen bleiben separat.

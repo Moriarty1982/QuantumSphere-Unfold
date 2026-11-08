@@ -978,3 +978,29 @@ Alles ohne `sorry`, in CI gebaut (`lean-build.yml`).
 **Modellschluss und native OP1-Brücke.** Auf dem periodischen Randmodell liefert die erhaltene und klassisch kalibrierte gemischte Auslesung $v a_M|n|$. Der relationale Nullselektor und ein kohärenter Registertausch ermöglichen einen gesamtflusserhaltenden Kohärenztest. Der Partial-Swap aus r28 und r30 ist eine Vorlage; die Identifikation seiner Register mit gravitativen Randflüssen und die native T-Flächenkalibrierung bleiben offen.
 
 **Model result and native OP1 bridge.** On the periodic boundary model, the conserved and classically calibrated mixed readout gives $v a_M|n|$. The relational zero selector and a coherent register swap permit a total-flux-conserving coherence test. The partial swap in r28 and r30 supplies a template; identification of its registers with gravitational boundary fluxes and native T-area calibration remain open.
+
+**Zählnormierung und T-Selektor.** Gleichförmige Flächenskalierung ändert bei festem Spinträger den Normierungsparameter invers, lässt aber alle normierten Spingewichte gleich. Die Minimalspinzählung aus r63 benötigt eine eigene Einschränkung auf den Casimirsektor $J^2=3/4$ und das Zählgewicht zwei. Der Flusszeiger des Randmodells weist diese Zuordnung nicht nach.
+
+**Counting normalization and T selector.** Uniform area scaling at fixed spin support changes the normalization parameter inversely while leaving all normalized spin weights unchanged. The r63 minimal-spin counting requires a separate restriction to the Casimir sector $J^2=3/4$ and counting weight two. The boundary-model flux pointer does not establish that identification.
+
+**Transversaler Minimalspin-Selektor.** Das einzelne Flusslabel $m=\pm1/2$ tritt auch bei höheren halbzahligen Spins auf. Der Spektralwert $1/2$ der gemeinsamen Quadratsumme $J_x^2+J_y^2$ wählt dagegen genau den Spin-$1/2$-Sektor. Die native Realisierung dieser Auslesung und das effektive Zählgewicht bleiben zu prüfen.
+
+**Transverse minimal-spin selector.** The single flux label $m=\pm1/2$ also occurs at higher half-integer spins. The spectral value $1/2$ of the joint quadratic observable $J_x^2+J_y^2$ instead selects exactly the spin-$1/2$ sector. Native implementation of this readout and its effective counting weight remain open.
+
+**Alternierende Minimalspin-Filter.** Die Betragsfilter $J_x^2=1/4$ und $J_y^2=1/4$ lassen beide Minimalspinzustände kohärent passieren. Auf einem Träger mit Spinobergrenze $J$ sinkt die Falschakzeptanz nach $k$ alternierenden Abfragen des zweiten Filters höchstens wie $(1-1/(J+1/2))^k$. Die beiden binären Instrumente bleiben native Voraussetzungen.
+
+**Alternating minimal-spin filters.** The magnitude filters $J_x^2=1/4$ and $J_y^2=1/4$ pass both minimal-spin states coherently. With spin cutoff $J$, false acceptance after $k$ alternating queries of the second filter is bounded by $(1-1/(J+1/2))^k$. Both binary instruments remain native requirements.
+
+**Kronecker-Delta als Spinfilter.** In der Eigenbasis markiert $\delta_{4m_x^2,1}$ beide Vorzeichen gemeinsam. Auf einem begrenzten Spinträger kann eine gemeinsame kontrollierte quadratische Phase diesen Filter als endliche Charakter-Mittelung umsetzen. Die entsprechende Phase von $2(J_x^2+J_y^2)-I$ liefert direkt den Minimalspinfilter.
+
+**Minimalspin-Delta mit Referenzdoublet.** Eine gemeinsame Singulettauswahl mit Spin-$1/2$-Referenz erkennt nur den Minimalspin und hat zunächst Erfolg $1/4$. Zwei kohärente Reflexionen verstärken die Auswahl im idealen Modell exakt, ohne die magnetischen Zustände zu unterscheiden. Die Singulettreflexion ist eine zusätzliche native Voraussetzung.
+
+**Isotroper Referenzaustausch und Zählgewicht.** Der Eigenwert $-3/2$ von $2\mathbf J\cdot\mathbf R$ mit Spin-$1/2$-Referenz isoliert den gemeinsamen Singulettsektor. Kohärente Rückrechnung lässt lokal beide magnetischen Systemzustände bestehen. Globale magnetische Projektion und volle Singulettprojektion liefern verschiedene endliche Zählungen und denselben führenden Exponenten pro Punkt. Native Austauschkopplung und Horizontprojektion bleiben offen.
+
+**Gemeinsame M- und T-Zählmasken.** Im Einpunktmodell wählt $B_u-|J_u|=0$ die beiden Extremzustände jedes nichttrivialen Spins. $B_u=1/2$ wählt nur den Minimalspin. Eine einzelne U(1)-Komponente kann diese Masken nicht unterscheiden. Die Achsenmittelung erhält das M-Zählgewicht zwei je Irrep, ergibt bei höheren Spins aber einen probabilistischen Effekt.
+
+**Common M and T counting masks.** In the single-puncture model, $B_u-|J_u|=0$ selects the two extremal states in each nontrivial spin. $B_u=1/2$ selects only minimal spin. A single U(1) component cannot implement these masks. Axis averaging preserves the M counting weight of two per irrep but gives a probabilistic effect at higher spins.
+
+**QAM-Rückwärtssuche für Spin-Zählungen.** Das Werkzeug `python -m qam.tools.spin_readout_search` berechnet erzwungene Effekte und rotationsinvariante Kandidaten aus exakten Zählgewichten. Die verschachtelten magnetischen Labels je Parität liefern einen vollständigen Machbarkeitstest für eine gemeinsame Funktion von $2m$. Für OP1 scheitert T beim Übergang von $j=1/2$ zu $j=3/2$: Die geforderte Spur sinkt um zwei, obwohl zwei neue Labels hinzukommen und alle Effekte nichtnegativ sind. Auf dem kleineren Träger bis $j=1$ gelingt der T-Filter. Die Befunde betreffen die deklarierten Spinträger und Zugriffsarten.
+
+**QAM inverse search for spin counts.** The solver computes forced effects, rotation-invariant candidates, and exact single-axis witnesses or trace-increment obstructions. In OP1, the single-axis T effect becomes impossible as soon as both spin $1/2$ and spin $3/2$ are included.

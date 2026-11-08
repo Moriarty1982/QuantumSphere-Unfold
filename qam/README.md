@@ -230,3 +230,28 @@ function implements the model's selector and aggregation on each basis label.
 A rotated measurement can be represented by applying its basis-change
 circuit before readout. The simulator checks frame labels and dimensions.
 The model author supplies the interpretation and justification of the circuit.
+
+## Exact inverse search for spin readouts
+
+From the repository root, run the OP1 example with Python's standard library:
+
+```sh
+python -m qam.tools.spin_readout_search --max-twice-spin 3
+```
+
+Supply custom counting weights to `sector_effects(weights)` and
+`axis_effect(weights)` from `qam.tools.spin_readout_search`. Keys are
+nonnegative integer labels `2j`, with one copy of each listed irrep.
+Values are integers or fractions. The solver reports effects forced by
+trace zero or full dimension and the unique rotation-invariant scalar
+effect on each listed sector, assuming the effect preserves spin sectors.
+
+The single-axis search assumes a shared function of `2m` alone. Within
+each parity, the magnetic label sets are nested. The required trace
+increment must lie between zero and the number of newly admitted labels.
+This condition is also sufficient: the solver distributes the increment
+evenly among those new labels. It returns an exact rational witness or
+the first conflicting pair. Omitted sectors impose no constraints.
+These checks establish representability in the selected access model.
+A native QAM transition or measurement instrument requires its own
+dynamical justification.
