@@ -1,0 +1,6 @@
+% Hand-authored provenance record for the analytic interval derivation
+% source gram-boost.tex md5 1C4C7DEFAAA9E19D796125C17F609812
+map lorentz-z : Lab -> Boosted
+gram-preparation := claim; frame Lab; status conditional; inputs {}; hash BE014772A536438E3767BBAE3EBC7AE5; sources {}; statement E=2 e_x, B=t e_y+u e_z, t^2+u^2=1, c=1, boost v=1/4 along z
+gram-range-rule := convert(lorentz-z,gram-preparation); frame Boosted; status conditional; inputs {}; hash 7C36EDC97D94E61FF80542EC521D2BC9; sources {BE014772A536438E3767BBAE3EBC7AE5}; statement For -1<=a<=b<=1 and t in [a,b], the exact image is diag(p,1-p) with p in [p(a),p(b)], p(t)=(8-t)^2/(2(8-t)^2-45)
+% record 39D440CA79240687AC8F9F98084C907C

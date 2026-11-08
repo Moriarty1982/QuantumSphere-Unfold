@@ -6,11 +6,13 @@ import re
 from pathlib import Path
 import sqlite3
 from contextlib import closing
+from fractions import Fraction
 
 from qam.tools.qamhash import verify
 
 
 DEFAULT_DB = Path("build/qam.sqlite3")
+GRAM_RANGE_RULE = "7C36EDC97D94E61FF80542EC521D2BC9"
 
 
 def connect(path):
@@ -18,6 +20,7 @@ def connect(path):
     path.parent.mkdir(parents=True, exist_ok=True)
     db = sqlite3.connect(path)
     db.executescript("""
+        BEGIN IMMEDIATE;
         CREATE TABLE IF NOT EXISTS claims (
             source TEXT, claim_key TEXT, frame TEXT, record TEXT, payload TEXT,
             PRIMARY KEY (source, claim_key)
@@ -25,6 +28,54 @@ def connect(path):
         CREATE TABLE IF NOT EXISTS readouts (
             identity TEXT PRIMARY KEY, result TEXT NOT NULL
         );
+        CREATE INDEX IF NOT EXISTS claims_hash
+            ON claims (json_extract(payload, '$.hash'), source, claim_key);
+        CREATE TABLE IF NOT EXISTS claim_dependencies (
+            claim_hash TEXT NOT NULL,
+            premise_hash TEXT NOT NULL,
+            PRIMARY KEY (claim_hash, premise_hash)
+        ) WITHOUT ROWID;
+        CREATE INDEX IF NOT EXISTS claim_dependents
+            ON claim_dependencies (premise_hash, claim_hash);
+        CREATE TABLE IF NOT EXISTS claim_replacements (
+            old_hash TEXT NOT NULL,
+            new_hash TEXT NOT NULL CHECK (new_hash <> old_hash),
+            reason TEXT NOT NULL CHECK (length(trim(reason)) > 0),
+            PRIMARY KEY (old_hash, new_hash)
+        ) WITHOUT ROWID;
+        CREATE INDEX IF NOT EXISTS claim_replacement_sources
+            ON claim_replacements (new_hash, old_hash);
+        CREATE TRIGGER IF NOT EXISTS reject_replacement_cycle
+        BEFORE INSERT ON claim_replacements
+        WHEN EXISTS (
+            WITH RECURSIVE successors(digest) AS (
+                SELECT NEW.new_hash
+                UNION
+                SELECT replacement.new_hash FROM successors
+                JOIN claim_replacements AS replacement ON replacement.old_hash = successors.digest
+            )
+            SELECT 1 FROM successors WHERE digest = NEW.old_hash
+        )
+        BEGIN
+            SELECT RAISE(ABORT, 'Replacement would create a cycle');
+        END;
+        CREATE TABLE IF NOT EXISTS rule_catalog (
+            recipe TEXT PRIMARY KEY NOT NULL,
+            target TEXT NOT NULL,
+            rule_hash TEXT NOT NULL
+        );
+        CREATE TABLE IF NOT EXISTS rule_requirements (
+            recipe TEXT NOT NULL REFERENCES rule_catalog(recipe),
+            requirement TEXT NOT NULL,
+            required INTEGER NOT NULL CHECK (required IN (0, 1)),
+            PRIMARY KEY (recipe, requirement)
+        );
+        CREATE TABLE IF NOT EXISTS rule_outputs (
+            recipe TEXT NOT NULL REFERENCES rule_catalog(recipe),
+            quantity TEXT NOT NULL,
+            PRIMARY KEY (recipe, quantity)
+        ) WITHOUT ROWID;
+        CREATE INDEX IF NOT EXISTS rule_output_quantity ON rule_outputs (quantity, recipe);
         CREATE TABLE IF NOT EXISTS mma_contexts (
             context_hash TEXT PRIMARY KEY NOT NULL, context TEXT NOT NULL
         );
@@ -46,7 +97,53 @@ def connect(path):
             ON CONFLICT (status) DO UPDATE SET count = count + 1;
         END;
     """)
+    with db:
+        if db.execute("PRAGMA user_version").fetchone()[0] == 0:
+            refresh_dependencies(db)
+            db.execute("PRAGMA user_version = 1")
+        db.execute("INSERT OR IGNORE INTO rule_catalog VALUES (?, ?, ?)",
+                   ("em.gram-boost-range", "boosted-gram-range", GRAM_RANGE_RULE))
+        db.executemany("INSERT OR IGNORE INTO rule_requirements VALUES (?, ?, ?)", (
+            ("em.gram-boost-range", "preparation:E2x-B-unit-yz", 1),
+            ("em.gram-boost-range", "boost:z:1/4", 1),
+            ("em.gram-boost-range", "measurement:B-dot-ey-interval", 0),
+        ))
+        db.execute("INSERT OR IGNORE INTO rule_outputs VALUES (?, ?)",
+                   ("em.gram-boost-range", "boosted-gram-range"))
     return db
+
+
+def find_rules(db, target, available):
+    """Match declared data against the requirements for a target."""
+    rows = db.execute("""
+        WITH available(requirement) AS (SELECT value FROM json_each(?))
+        , matches AS (
+            SELECT rule.recipe, rule.rule_hash,
+                   EXISTS (SELECT 1 FROM claims
+                           WHERE json_extract(payload, '$.hash') = rule.rule_hash) AS indexed,
+                   requirement.requirement, requirement.required,
+                   EXISTS (SELECT 1 FROM available
+                           WHERE available.requirement = requirement.requirement) AS present
+            FROM rule_catalog AS rule
+            LEFT JOIN rule_requirements AS requirement USING (recipe)
+            WHERE rule.target = ?
+        )
+        SELECT *, indexed AND NOT MAX(CASE WHEN required AND NOT present THEN 1 ELSE 0 END)
+            OVER (PARTITION BY recipe) AS ready
+        FROM matches
+        ORDER BY recipe, required DESC, requirement
+    """, (json.dumps(available), target))
+    rules = {}
+    for recipe, digest, indexed, requirement, required, present, ready in rows:
+        rule = rules.setdefault(recipe, {
+            "recipe": recipe, "rule_hash": digest, "indexed": bool(indexed),
+            "ready_for_validation": bool(ready), "requirements": [],
+        })
+        if requirement is not None:
+            rule["requirements"].append({
+                "name": requirement, "required": bool(required), "present": bool(present),
+            })
+    return list(rules.values())
 
 
 def cached_readout(path, identity, calculate):
@@ -65,6 +162,15 @@ def _cached_readout(db, identity, calculate):
         db.execute("INSERT OR IGNORE INTO readouts VALUES (?, ?)",
                    (key, json.dumps(result, allow_nan=False)))
     return result, False
+
+
+def refresh_dependencies(db):
+    db.execute("DELETE FROM claim_dependencies")
+    db.execute("""
+        INSERT INTO claim_dependencies
+        SELECT DISTINCT json_extract(payload, '$.hash'), premise.value
+        FROM claims JOIN json_each(payload, '$.sources') AS premise
+    """)
 
 
 def rebuild_index(db, roots):
@@ -91,37 +197,109 @@ def rebuild_index(db, roots):
     with db:
         db.execute("DELETE FROM claims")
         db.executemany("INSERT INTO claims VALUES (?, ?, ?, ?, ?)", rows)
+        refresh_dependencies(db)
     return len(rows)
 
 
 def premise_trace(db, roots):
     """Snapshot indexed premises in dependency order, with unresolved hashes."""
+    rows = db.execute("""
+        WITH RECURSIVE reachable(digest) AS (
+            SELECT value FROM json_each(?)
+            UNION
+            SELECT edge.premise_hash
+            FROM reachable AS child
+            JOIN claim_dependencies AS edge ON edge.claim_hash = child.digest
+        )
+        SELECT reachable.digest, claim.source, claim.payload
+        FROM reachable
+        LEFT JOIN claims AS claim ON claim.rowid = (
+            SELECT rowid FROM claims
+            WHERE json_extract(payload, '$.hash') = reachable.digest
+            ORDER BY source, claim_key LIMIT 1
+        )
+    """, (json.dumps(roots),))
+    claims = {digest: {"source": source, **json.loads(payload)}
+              for digest, source, payload in rows if payload is not None}
     nodes = []
     missing = []
     seen = set()
-
-    def visit(digest):
+    pending = [(digest, False) for digest in reversed(roots)]
+    while pending:
+        digest, expanded = pending.pop()
+        if expanded:
+            nodes.append(claims[digest])
+            continue
         if digest in seen:
-            return
+            continue
         seen.add(digest)
-        row = db.execute(
-            """SELECT source, payload FROM claims
-               WHERE json_extract(payload, '$.hash') = ?
-               ORDER BY source, claim_key LIMIT 1""",
-            (digest,),
-        ).fetchone()
-        if row is None:
+        claim = claims.get(digest)
+        if claim is None:
             missing.append(digest)
-            return
-        source, payload = row
-        claim = json.loads(payload)
-        for parent in claim["sources"]:
-            visit(parent)
-        nodes.append({"source": source, **claim})
-
-    for root in roots:
-        visit(root)
+            continue
+        pending.append((digest, True))
+        pending.extend((parent, False) for parent in reversed(claim["sources"]))
     return {"roots": roots, "claims": nodes, "missing": missing}
+
+
+def claim_impact(db, digest):
+    """Current downstream claims and historical receipt references."""
+    dependents = db.execute("""
+        WITH RECURSIVE downstream(digest) AS (
+            VALUES (?)
+            UNION
+            SELECT edge.claim_hash FROM downstream
+            JOIN claim_dependencies AS edge ON edge.premise_hash = downstream.digest
+        )
+        SELECT source, claim_key, json_extract(payload, '$.hash')
+        FROM claims WHERE json_extract(payload, '$.hash') IN (SELECT digest FROM downstream)
+            AND json_extract(payload, '$.hash') <> ?
+        ORDER BY source, claim_key
+    """, (digest, digest))
+    receipts = db.execute("""
+        SELECT receipt_hash, instruction, status, json_extract(request, '$.id'),
+               EXISTS (SELECT 1 FROM json_each(receipt, '$.premise_trace.missing')
+                       WHERE value = ?) AS missing
+        FROM mma_receipts
+        WHERE missing OR EXISTS (
+            SELECT 1 FROM json_each(receipt, '$.premise_trace.claims')
+            WHERE json_extract(value, '$.hash') = ?
+        )
+        ORDER BY receipt_hash
+    """, (digest, digest))
+    replacements = db.execute("""
+        SELECT old_hash, new_hash, reason FROM claim_replacements
+        WHERE old_hash = ? OR new_hash = ? ORDER BY old_hash, new_hash
+    """, (digest, digest))
+    return {
+        "claim_hash": digest,
+        "dependents": [dict(source=source, claim_key=key, hash=claim_hash)
+                       for source, key, claim_hash in dependents],
+        "receipts": [dict(receipt_hash=key, instruction=instruction, status=status,
+                          request_id=request_id, premise_missing=bool(missing))
+                     for key, instruction, status, request_id, missing in receipts],
+        "replacements": [dict(old_hash=old, new_hash=new, reason=reason)
+                         for old, new, reason in replacements],
+    }
+
+
+def rule_chains(db, target, max_steps):
+    """Suggest catalog paths by matching an output to a requirement."""
+    return [json.loads(path) for (path,) in db.execute("""
+        WITH RECURSIVE paths(recipe, steps, path) AS (
+            SELECT recipe, 1, json_array(recipe) FROM rule_catalog
+            UNION ALL
+            SELECT requirement.recipe, steps + 1,
+                   json_insert(path, '$[#]', requirement.recipe)
+            FROM paths JOIN rule_outputs AS output USING (recipe)
+            JOIN rule_requirements AS requirement ON requirement.requirement = output.quantity
+            WHERE steps < ? AND NOT EXISTS (
+                SELECT 1 FROM json_each(path) WHERE value = requirement.recipe
+            )
+        )
+        SELECT DISTINCT path FROM paths JOIN rule_outputs AS output USING (recipe)
+        WHERE steps >= 2 AND output.quantity = ? ORDER BY path
+    """, (max_steps, target))]
 
 
 def adapter_receipt(interface, request):
@@ -231,6 +409,68 @@ def spin_mml(db, interface, request, *, use_cache=True, trace=None):
     return dict(receipt, receipt_hash=tensor.digest(receipt))
 
 
+def gram_mml(db, interface, request, *, trace=None):
+    from scripts.qsc_audit import tensor_grammar_check as tensor
+
+    receipt, roots = adapter_receipt(interface, request)
+    if isinstance(roots, list) and GRAM_RANGE_RULE not in roots:
+        roots = [GRAM_RANGE_RULE, *roots]
+    attach_premises(db, receipt, roots, trace)
+    receipt["adapter_hash"] = tensor.digest_bytes(Path(__file__).read_bytes())
+    args = request["arguments"]
+    fixed = {
+        "recipe": "em.gram-boost-range", "preparation": "E2x-B-unit-yz",
+        "frame": "Lab", "target_frame": "Boosted", "boost": "z:1/4",
+    }
+    try:
+        if set(args) not in (fixed.keys(), fixed.keys() | {"a", "b"}) or any(
+            args[key] != value for key, value in fixed.items()
+        ):
+            raise ValueError("Gram range requires the declared Lab preparation and z boost to Boosted")
+        endpoints = []
+        for key, default in (("a", "-1"), ("b", "1")):
+            value = args.get(key, default)
+            if not isinstance(value, str) or not re.fullmatch(r"-?[0-9]{1,7}(?:/[1-9][0-9]{0,6})?", value):
+                raise ValueError("Gram endpoints must be bounded rational strings")
+            endpoints.append(Fraction(value))
+        a, b = endpoints
+        bounds = db.execute("""
+            WITH inputs(an, ad, bn, bd) AS (VALUES (?, ?, ?, ?)),
+            admissible AS (
+                SELECT (8*ad-an)*(8*ad-an) AS left_sq, ad,
+                       (8*bd-bn)*(8*bd-bn) AS right_sq, bd
+                FROM inputs
+                WHERE an >= -ad AND bn <= bd AND an*bd <= bn*ad
+            )
+            SELECT left_sq, 2*left_sq-45*ad*ad,
+                   right_sq, 2*right_sq-45*bd*bd
+            FROM admissible
+        """, (a.numerator, a.denominator, b.numerator, b.denominator)).fetchone()
+        if bounds is None:
+            raise ValueError("Gram endpoints must satisfy -1 <= a <= b <= 1")
+    except ValueError as error:
+        receipt["errors"].append(str(error))
+        receipt["mma_status"] = "reject"
+    else:
+        if receipt["mma_status"] == "continue":
+            lo_n, lo_d, hi_n, hi_d = bounds
+            receipt["result"] = {
+                "rule_hash": GRAM_RANGE_RULE,
+                "target_frame": fixed["target_frame"],
+                "target": "first diagonal entry of diag(p,1-p)",
+                "input_interval": [str(a), str(b)],
+                "target_interval": [str(Fraction(lo_n, lo_d)), str(Fraction(hi_n, hi_d))],
+            }
+    return dict(receipt, receipt_hash=tensor.digest(receipt))
+
+
+def readout_mml(db, interface, request, *, use_cache=True, trace=None):
+    arguments = request.get("arguments")
+    if isinstance(arguments, dict) and arguments.get("recipe") == "em.gram-boost-range":
+        return gram_mml(db, interface, request, trace=trace)
+    return spin_mml(db, interface, request, use_cache=use_cache, trace=trace)
+
+
 def execute_mml(db, context, request):
     """Run the existing guarded interpreter and persist its receipt."""
     from scripts.qsc_audit.framework_interface import FrameworkInterface
@@ -238,7 +478,7 @@ def execute_mml(db, context, request):
     interface = FrameworkInterface(context)
     instruction = request.get("instruction") if isinstance(request, dict) else None
     if instruction == "READOUT":
-        receipt = spin_mml(db, interface, request)
+        receipt = readout_mml(db, interface, request)
     elif instruction == "SEARCH_ROUTE":
         receipt = route_mml(db, interface, request)
     else:
@@ -286,6 +526,9 @@ def readout_tex(receipt, instruction="READOUT"):
             if "selective_success_upper_bound" in channel:
                 output.append(line("Selective success upper bound: " + channel["selective_success_upper_bound"]))
             output.extend(line(text) for text in channel["exclusions"])
+    elif receipt["mma_status"] == "continue" and "target_interval" in result:
+        output.append(line("Gram target interval: [" + ", ".join(result["target_interval"]) + "]"))
+        output.append(line("QAM rule: " + result["rule_hash"]))
     elif receipt["mma_status"] == "continue":
         from qam.tools.spin_readout_search import report_lines
 
@@ -355,6 +598,22 @@ def main():
     find = commands.add_parser("find")
     find.add_argument("query")
     find.add_argument("--limit", type=int)
+    rules = commands.add_parser("rules", help="match rules and data requirements for a target")
+    rules.add_argument("target")
+    rules.add_argument("--have", action="append", default=[], metavar="REQUIREMENT")
+    chains = commands.add_parser("chains", help="suggest rule chains for an output quantity")
+    chains.add_argument("target")
+    chains.add_argument("--max-steps", type=int, choices=range(2, 6), default=3)
+    for name, help_text in (
+        ("premises", "trace premises of a claim"),
+        ("impact", "list downstream claims and historical receipts"),
+    ):
+        graph = commands.add_parser(name, help=help_text)
+        graph.add_argument("claim_hash")
+    replace = commands.add_parser("register-replacement", help="record an explicit claim correction")
+    replace.add_argument("old_hash")
+    replace.add_argument("new_hash")
+    replace.add_argument("--reason", required=True)
     mma = commands.add_parser("mma", help="run a guarded MML request and store its receipt")
     mma.add_argument("context", type=Path)
     mma.add_argument("request", type=Path)
@@ -378,14 +637,36 @@ def main():
     args = parser.parse_args()
     if args.command == "receipt" and args.summary and (args.trace or args.tex_output):
         parser.error("--summary cannot be combined with --trace or --tex-output")
-    if args.read_only and (args.command in ("index", "mma") or getattr(args, "tex_output", None)):
-        parser.error("--read-only forbids index, mma and file export")
+    if args.read_only and (args.command in ("index", "mma", "register-replacement")
+                           or getattr(args, "tex_output", None)):
+        parser.error("--read-only forbids database updates and file export")
+    for name in ("claim_hash", "old_hash", "new_hash"):
+        value = getattr(args, name, None)
+        if value is not None:
+            if re.fullmatch(r"[0-9a-fA-F]{32}", value) is None:
+                parser.error(f"{name} requires a 32-digit QAM claim hash")
+            setattr(args, name, value.upper())
     if args.read_only and not args.db.is_file():
         parser.exit(1, "QAM database not found. Build its index first.\n")
     database = (sqlite3.connect(args.db.resolve().as_uri() + "?mode=ro", uri=True)
                 if args.read_only else connect(args.db))
     with closing(database) as db:
-        if args.command == "index":
+        if args.command == "rules":
+            print(json.dumps(find_rules(db, args.target, args.have), indent=2))
+        elif args.command == "chains":
+            print(json.dumps(rule_chains(db, args.target, args.max_steps), indent=2))
+        elif args.command == "premises":
+            print(json.dumps(premise_trace(db, [args.claim_hash]), indent=2))
+        elif args.command == "impact":
+            print(json.dumps(claim_impact(db, args.claim_hash), indent=2))
+        elif args.command == "register-replacement":
+            try:
+                with db:
+                    db.execute("INSERT INTO claim_replacements VALUES (?, ?, ?)",
+                               (args.old_hash, args.new_hash, args.reason.strip()))
+            except sqlite3.IntegrityError as error:
+                parser.exit(1, f"Replacement rejected: {error}\n")
+        elif args.command == "index":
             if any(not root.is_dir() for root in args.root):
                 parser.error("each explicit index root must be a directory")
             roots = args.root or [Path("qam"), Path("notes/research"), Path("build/qam-records")]
@@ -460,7 +741,7 @@ def main():
                 if instruction == "SEARCH_ROUTE":
                     current = route_mml(db, interface, request, use_cache=False, trace=receipt.get("premise_trace"))
                 elif instruction == "READOUT":
-                    current = spin_mml(db, interface, request, use_cache=False, trace=receipt.get("premise_trace"))
+                    current = readout_mml(db, interface, request, use_cache=False, trace=receipt.get("premise_trace"))
                 else:
                     current = interface.execute(request)
                 response["replay"] = {
