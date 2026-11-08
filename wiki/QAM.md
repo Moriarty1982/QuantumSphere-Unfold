@@ -930,3 +930,51 @@ Alles ohne `sorry`, in CI gebaut (`lean-build.yml`).
 **Vollständiger endlicher Echo-Zeiger.** Auf fünf Blöcken und 101 Offsetpunkten ergibt die Simulation maximal rund $3{,}60\cdot10^{-6}$ Fehlklassifikation und $6{,}71\cdot10^{-6}$ Restanregung des Hilfsdoubletts. Der vollständige Zustandsvektorabstand ist höchstens rund $0{,}003294$ auf diesen Prüfpunkten.
 
 **Full finite-pulse echo pointer.** Across five blocks and 101 offset points the simulation gives maximum misclassification of about $3.60\cdot10^{-6}$ and residual auxiliary excitation of $6.71\cdot10^{-6}$. The full state-vector distance is at most about $0.003294$ at those sampled points.
+
+**Intervallschätzung für den vollständigen Echo-Zeiger.** Analytische Interpolation mit numerischen Stützstellen ergibt rund $9{,}05\cdot10^{-6}$ maximale Fehlklassifikation und $1{,}37\cdot10^{-5}$ Restanregung im gemeinsamen statischen Offsetintervall. Die Stützwerte des Gesamtprotokolls sind noch nicht intervallzertifiziert.
+
+**Interval estimate for the full echo pointer.** Analytic interpolation with numerical grid values gives about $9.05\cdot10^{-6}$ maximum misclassification and $1.37\cdot10^{-5}$ residual excitation over the common static offset interval. The full protocol's grid values are not interval-certified.
+
+**Intervallabgleich des vollständigen Echo-Zeigers.** Die fixierten Pulsfolgen wurden an allen 505 Stützstellen mit Intervallarithmetik geprüft. Für das gesamte statische Offsetintervall ergeben sich Fehlklassifikation unter $9{,}06\cdot10^{-6}$ und Restanregung unter $1{,}371\cdot10^{-5}$ im idealisierten Blockmodell.
+
+**Interval check of the full echo pointer.** The fixed pulse sequences were checked with interval arithmetic at all 505 grid points. Over the full static-offset interval, misclassification is below $9.06\cdot10^{-6}$ and residual excitation below $1.371\cdot10^{-5}$ in the idealized block model.
+
+**Kopierpuls bei laufender Drift.** Zwei komplementär gesteuerte Kopierhälften mit Hilfsflip dazwischen lassen beide Hilfszustände gleich lange auf beiden Driftenergien liegen. Der Zeiger registriert weiterhin das ursprüngliche Hilfsbit. Die endliche Kopierzeit und die zusätzlichen Hilfsflips ändern die Wartezeitbilanz.
+
+**Copy pulse with active drift.** Two complementary controlled copy halves with an auxiliary flip in between let both auxiliary states spend equal times at both drift energies. The pointer still records the original auxiliary bit. The finite copy duration and additional flips change the wait-time balance.
+
+**Endlicher Kopierpuls im vollständigen Zeiger.** Mit sechs endlichen Hilfsflips und zwei Kopierhälften bei laufender Drift liefert die Simulation auf 505 Prüfpunkten höchstens rund $4{,}40\cdot10^{-6}$ Fehlklassifikation und $1{,}51\cdot10^{-5}$ Restanregung. Die komplementären diagonalen Kopierkopplungen bleiben Modellannahmen.
+
+**Finite copy pulse in the full pointer.** With six finite auxiliary flips and two copy halves under active drift, the simulation gives maximum misclassification of about $4.40\cdot10^{-6}$ and residual excitation of $1.51\cdot10^{-5}$ at 505 sampled points. The complementary diagonal copy couplings remain model assumptions.
+
+**Intervallprüfung des endlichen Kopierpulses.** Für fünf Blöcke und das ganze statische Offsetintervall bleiben Fehlklassifikation und Restanregung unter $1{,}658\cdot10^{-5}$ und $3{,}431\cdot10^{-5}$. Die Rechnung verwendet die modellierten komplementären Kopierkopplungen.
+
+**Interval check of the finite copy pulse.** Across five blocks and the full static offset interval, misclassification and residual excitation remain below $1.658\cdot10^{-5}$ and $3.431\cdot10^{-5}$. The calculation uses the model's complementary copy couplings.
+
+**Eine bedingte Kopplung für beide Kopierhälften.** Die komplementäre Hälfte entsteht aus einer freien Zeigerrotation und derselben bedingten Kopplung mit umgekehrtem Vorzeichen. Bei gleichzeitiger Anwendung bleibt die zertifizierte Modellsequenz identisch. Eine Umkehr nur der transversalen Komponente erfordert zusätzlich eine bedingte Phasenkorrektur.
+
+**One conditional coupling for both copy halves.** The complementary half combines a free pointer rotation with the same conditional coupling at reversed sign. With simultaneous application the certified model sequence is identical. Reversing only the transverse component requires an additional conditional phase correction.
+
+**Kopierhälften mit positiver Kopplung.** Die Periodizität der Zeigerrotation erlaubt, die inverse Kopierhälfte durch einen längeren positiven Puls und eine freie Zeigerrotation zu ersetzen. Ein zusätzlicher Driftabschnitt in der ersten Hälfte erhält den Phasenausgleich. Die Fehler der längeren Sequenz sind separat zu prüfen.
+
+**Copy halves with positive coupling.** Pointer rotation periodicity replaces the inverse copy half with a longer positive pulse and a free pointer rotation. Additional idle drift in the first half preserves phase balance. The longer sequence requires its own error check.
+
+**Intervallprüfung mit positiver Kopierkopplung.** Die verlängerte Kopierfolge hält im Modell über das gesamte statische Offsetintervall die Fehlklassifikation unter $1{,}091\cdot10^{-5}$ und die Restanregung unter $1{,}866\cdot10^{-5}$. Vorausgesetzt sind exakte Kopierpulsflächen und die freie Zeigerrotation.
+
+**Interval check with positive copy coupling.** Throughout the static offset interval the longer copy sequence keeps model misclassification below $1.091\cdot10^{-5}$ and residual excitation below $1.866\cdot10^{-5}$. The calculation assumes exact copy pulse areas and free pointer rotation.
+
+**Toleranz der Kopierpulsflächen.** Bei festen Abschnittsdauern und relativen Kopierflächenfehlern bis $0{,}1$ Prozent bleibt die Fehlklassifikation im Modell unter $1{,}25\cdot10^{-4}$. Die Schranke addiert die aus den Kopierfehlern resultierende Amplitudenabweichung zum zertifizierten Modellwert.
+
+**Copy pulse area tolerance.** At fixed segment durations, relative copy area errors up to $0.1$ percent keep model misclassification below $1.25\cdot10^{-4}$. The bound adds the copy-induced amplitude error to the certified model value.
+
+**Unabhängige Verstimmungsoffsets.** Die Klassifikationsschranke bleibt blockweise gültig, aber verschiedene Offsets der akzeptierten Paare erzeugen eine relative Phase $40\pi(\epsilon_{+3}-\epsilon_{-3})$. Schon eine Differenz von $0{,}025$ vertauscht im Modell die Austauschports, obwohl der Nullzeiger korrekt selektiert.
+
+**Independent detuning offsets.** The classification bound remains valid block by block, but different offsets in the accepted pair produce a relative phase $40\pi(\epsilon_{+3}-\epsilon_{-3})$. A difference of $0.025$ already exchanges the model's interference ports while the zero pointer still selects correctly.
+
+**Austausch-Echo für statische Blockphasen.** Zwei Zeigerläufe mit kohärentem Tausch der Nullzustände dazwischen geben beiden Zuständen dieselbe Summe der Blockphasen. Bei frischen Hilfsregistern und idealem Tausch ist der leerlaufbereinigte Zustandsvektorfehler im Null-Doublet kleiner als $0{,}010714$.
+
+**Exchange echo for static block phases.** Two pointer runs with a coherent swap of the zero states between them give both states the same sum of block phases. With fresh auxiliary registers and an ideal swap, the idle-corrected state-vector error in the zero doublet is below $0.010714$.
+
+**Modellschluss und native OP1-Brücke.** Auf dem periodischen Randmodell liefert die erhaltene und klassisch kalibrierte gemischte Auslesung $v a_M|n|$. Der relationale Nullselektor und ein kohärenter Registertausch ermöglichen einen gesamtflusserhaltenden Kohärenztest. Der Partial-Swap aus r28 und r30 ist eine Vorlage; die Identifikation seiner Register mit gravitativen Randflüssen und die native T-Flächenkalibrierung bleiben offen.
+
+**Model result and native OP1 bridge.** On the periodic boundary model, the conserved and classically calibrated mixed readout gives $v a_M|n|$. The relational zero selector and a coherent register swap permit a total-flux-conserving coherence test. The partial swap in r28 and r30 supplies a template; identification of its registers with gravitational boundary fluxes and native T-area calibration remain open.
