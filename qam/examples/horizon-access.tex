@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\usepackage[export]{qam}
+\usepackage{qam-physics}
+\begin{document}
+\qamframe{Horizon}
+\qamprofile{horizon}{Horizon}{L_{\rm area}}{conditional}
+  {Additive comparison model with positive puncture count and spins starting at one half}
+\begin{qamcontext}{horizon}
+\section*{Area and puncture count}
+\[
+\qamformula{area-input}{conditional}
+  {a(j)=\sqrt{j(j+1)},\quad
+   \mathcal A=\sum_{i=1}^N a(j_i),\quad N>0}
+\]
+\[
+\qamformula[area-input]{area-collision}{conditional}
+  {4a(1/2)=a(3)=2\sqrt3}
+\]
+The two configurations share an area but differ in puncture count.
+\[
+\qamformula[area-input]{excess-mask}{conditional}
+  {X=\mathcal A-N a(1/2),\quad
+   X=0\iff j_i=1/2\ \text{for all }i}
+\]
+\[
+\qamformula[excess-mask]{excess-gap}{conditional}
+  {X>0\quad\Longrightarrow\quad X\ge\Delta=\sqrt2-\sqrt3/2}
+\]
+
+\section*{Checking access in a fixed state}
+The expectations below use one fixed state, with any joint
+distribution of the punctures.
+\[
+\qamformula[excess-gap]{excess-moments}{conditional}
+  {\begin{gathered}
+    P_0=\Pr(X=0),\quad \mu=\mathbb E[X],\quad M_2=\mathbb E[X^2]>0,\\
+    \max(0,1-\mu/\Delta)\le P_0\le1-\mu^2/M_2 .
+   \end{gathered}}
+\]
+\[
+\qamformula[excess-gap]{exponential-mask}{conditional}
+  {\begin{gathered}
+    W_\nu=\mathbb E[e^{-\nu X}],\quad q_\nu=e^{-\nu\Delta},\quad \nu>0,\\
+    \max\left(0,\frac{W_\nu-q_\nu}{1-q_\nu}\right)
+       \le P_0\le W_\nu .
+   \end{gathered}}
+\]
+\[
+\qamformula[exponential-mask]{mask-interval}{conditional}
+  {q_\nu=1/100,\quad W_\nu=99/100
+   \quad\Longrightarrow\quad 98/99\le P_0\le99/100}
+\]
+\end{qamcontext}
+The area and count enter a joint readout. The exponential expectation
+bounds mask weight in the given state. Selecting that mask as the
+accessible sector is a separate operation. The numerical inputs are
+chosen comparison values.
+\end{document}

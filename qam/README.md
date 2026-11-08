@@ -423,3 +423,121 @@ a four-step route through the half-integer sector. The preliminary
 parity step has its own coherent-control guard. The route appears when
 the reduced spectrum has no target collision and the prefilter removes
 at least one distinct competing eigenvalue.
+
+An optional `channel` object in SEARCH_ROUTE checks necessary multipoint
+conditions using declared input, output and environment dimensions.
+It reports the ceiling of the input/output dimension ratio and, in exact
+area mode, checks for the obstruction from noninteger residuals below one
+and a neutral environment with positive gap at least one. The test is
+separate from the single-puncture route search. Passing both checks does
+not certify a channel or compute the declared dimensions.
+
+For exact area fibers, SEARCH_ROUTE can also derive the channel dimensions
+from `"channel": {"exact_fiber_units": 8, "environment_dimension": 1}`.
+It enumerates Pell spin species and counts ordered lists by area and
+magnetic weight. Weight zero minus weight one gives the SU(2) singlet
+dimension. The model accepts even area indices from 2 to 100 and uses
+no point quotient. The example derives 15 input and 14 output singlets.
+
+The exact fiber option accepts `"point_quotient": "cyclic"` or
+`"point_quotient": "dihedral"` for up to 64 area units. The solver averages
+singlet traces over permutations at each list length. It projects onto
+the trivial point character, so it differs from a quotient twisted by
+the phase of a separate right singlet. Empty carriers are reported
+explicitly. At eight units both quotients give four input and three
+minimal-spin singlets.
+
+For a separate right singlet made of one auxiliary doublet per point,
+add `"right_singlet_phase": true` alongside the point quotient. This
+retains even list lengths, for which the right singlet of the two
+alternating groups has character `(-1)^(points/2 * shift)` (and the
+analogous reflection character). The left spin list may contain higher
+spins. The character belongs to the declared auxiliary doublets, not
+to a derived right carrier of the mixed list.
+
+Use `"right_singlet_phase": "actual"` to put the actual point spins
+on the right as well. This mode retains even lists with equal maximal
+spin sums on alternating groups and computes the group-swap character
+from that common spin. It remains an explicit model assumption.
+With the dihedral quotient the dimensions are 4 to 3 at eight units
+and 182 to 65 at sixteen units.
+
+Channel checks also report an exact rational upper bound for selective
+success on a uniform input. They use the declared environment dimension
+as an upper bound on the number of Kraus operators in the Ja branch.
+This dimension bound can overestimate success when some exact area
+residuals have no allowed environment eigenvalue.
+
+For a declared exact window, `channel.area_sectors` can map each
+residual label to its `input_dimension` and `environment_dimension`.
+Use `"0"` for the exact target area. Other labels denote distinct
+nonzero residuals below one. The solver sums accepted dimensions
+sector by sector and reports the sum of required environment dimensions.
+The labels and multiplicities are declarations, not a computed spectrum.
+
+For small exact window examples use
+`"channel": {"window_units": 8, "window_width": "1/2", "environment_dimension": 2}`.
+The solver counts ordered SU(2) singlets without a point quotient by default.
+Full window enumeration supports even starts from 2 to 10 and rational
+widths below one. It keeps exact radical labels and uses integer bounds to compare
+areas with the rational endpoints. The environment is assumed initially
+neutral with positive area gap at least one, so all its declared capacity
+can serve the exact target sector, and no positive residual can succeed.
+At eight units and width one half it finds 13 nonempty sectors and a
+selective success ceiling of 15/652 with two environment states.
+
+The window mode also accepts `"point_quotient": "cyclic"` or
+`"point_quotient": "dihedral"`. Each exact area sector is projected
+separately. The default is the trivial point character. The
+right_singlet_phase options true and actual also apply in window mode.
+
+When a window contains a positive residual, the receipt reports its
+smallest one with its input dimension. The ordering uses integer
+enclosures of signed radical sums. The result encodes three times the
+residual as pairs of square-free radicand and integer coefficient.
+
+Window mode accepts an optional `spin_species` list of distinct integer
+`2j` labels in 1 to 24, including 1. The receipt reports the square-free
+radicands, field degree and norm separation power. It reports the
+critical rate-loss power only when the declared species span every
+radical basis direction and the field degree exceeds one.
+
+The finite-carrier receipt also reports a rational
+`positive_residual_lower_bound` and `window_certified_exact_only`.
+For field degree D greater than one it bounds the other conjugates
+of the residual using their mean absolute bound, then uses the nonzero
+integer norm of three times the residual. A false certificate flag is
+inconclusive.
+A true certificate flag selects the faster exact-fiber counter restricted
+to the same declared spin species and point projection. Otherwise the
+solver enumerates the window. The receipt records the chosen method.
+
+An exact-only certificate extends the window request to even starts up to
+100 without a point quotient, or 64 with cyclic or dihedral projection.
+Larger windows without that certificate are rejected rather than
+silently approximated.
+
+SEARCH_ROUTE results also use the SQLite cache. Its identity includes
+the search arguments, QAM context, premise hashes and the adapter
+and solver versions. Guards are checked before accessing the cache.
+Replay deliberately recomputes the search. Cache hits preserve the
+same receipt hash.
+
+Both `mma` and `receipt` support `--tex-output` for SEARCH_ROUTE as
+well as READOUT. The route fragment renders candidates, open guards,
+exclusions, the minimum environment dimension and the selective
+success bound when available. A guarded search can still produce a
+fragment and returns exit code 1. The full structured result remains
+in the SQLite receipt.
+
+To find stored receipts affected by a QAM claim, use:
+
+```powershell
+python -m qam.tools.readout_db receipts --instruction SEARCH_ROUTE --status guard --premise 17A320DEC3E5257505F1B02C6480E307
+```
+
+Filters are optional and combine. The premise filter includes indirect
+dependencies and missing hashes recorded in the saved trace. Results
+contain the receipt hash, instruction, status, request ID and context hash.
+Use `receipt HASH --trace` for the full argument. This search reports
+recorded dependencies and does not alter old receipts.

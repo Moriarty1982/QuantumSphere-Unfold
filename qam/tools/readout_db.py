@@ -153,26 +153,44 @@ def attach_premises(db, receipt, roots, trace):
                 receipt["mma_status"] = "guard"
 
 
-def route_mml(db, interface, request, *, trace=None):
+def route_mml(db, interface, request, *, use_cache=True, trace=None):
     from qam.tools import route_search, spin_readout_search
     from scripts.qsc_audit import tensor_grammar_check as tensor
 
     receipt, roots = adapter_receipt(interface, request)
     attach_premises(db, receipt, roots, trace)
+    receipt["route_solver_hash"] = tensor.digest_bytes(Path(route_search.__file__).read_bytes())
+    receipt["spin_solver_hash"] = tensor.digest_bytes(Path(spin_readout_search.__file__).read_bytes())
+    receipt["adapter_hash"] = tensor.digest_bytes(Path(__file__).read_bytes())
     if receipt["mma_status"] == "continue":
         try:
-            result = route_search.search(request.get("arguments"), interface.context["qam"]["guards"])
+            arguments = request.get("arguments")
+            guards = interface.context["qam"]["guards"]
+
+            def calculate():
+                return route_search.search(arguments, guards)
+
+            identity = {
+                "readout": "op1.search-route",
+                "arguments": arguments,
+                "context_hash": receipt["context_hash"],
+                "premise_hashes": [root.upper() for root in roots],
+                "route_solver_hash": receipt["route_solver_hash"],
+                "spin_solver_hash": receipt["spin_solver_hash"],
+                "adapter_hash": receipt["adapter_hash"],
+            }
+            result = _cached_readout(db, identity, calculate)[0] if use_cache else calculate()
         except ValueError as error:
             receipt["errors"].append(str(error))
             receipt["mma_status"] = "reject"
         else:
             receipt["result"] = result
+            if result.get("channel_check", {}).get("exclusions"):
+                receipt["mma_status"] = "guard"
+                receipt["obligations"].append("Declared multipoint channel fails a necessary condition")
             if not any(not route["open_guards"] for route in result["routes"]):
                 receipt["mma_status"] = "guard"
                 receipt["obligations"].append("No unguarded route in the declared search space")
-    receipt["route_solver_hash"] = tensor.digest_bytes(Path(route_search.__file__).read_bytes())
-    receipt["spin_solver_hash"] = tensor.digest_bytes(Path(spin_readout_search.__file__).read_bytes())
-    receipt["adapter_hash"] = tensor.digest_bytes(Path(__file__).read_bytes())
     return dict(receipt, receipt_hash=tensor.digest(receipt))
 
 
@@ -239,7 +257,7 @@ def execute_mml(db, context, request):
     return receipt
 
 
-def readout_tex(receipt):
+def readout_tex(receipt, instruction="READOUT"):
     """Render the bounded recipe receipt as TeX data, never as raw source text."""
     escapes = {
         chr(92): r"\textbackslash{}", "{": r"\{", "}": r"\}", "$": r"\$",
@@ -254,7 +272,21 @@ def readout_tex(receipt):
 
     output = [line(f"MMA status: {receipt['mma_status']}")]
     result = receipt["result"]
-    if receipt["mma_status"] == "continue":
+    if instruction == "SEARCH_ROUTE":
+        output.extend(line(text) for text in receipt["errors"] + receipt["obligations"])
+        for route in result.get("routes", []):
+            output.append(line("Route: " + " -> ".join(route["operations"])))
+            if route["open_guards"]:
+                output.append(line("Open guards: " + ", ".join(route["open_guards"])))
+        for path in result.get("excluded", []):
+            output.append(line("Excluded: " + " -> ".join(path["operations"]) + ". " + path["reason"]))
+        channel = result.get("channel_check", {})
+        if channel:
+            output.append(line(f"Minimum environment dimension: {channel['minimum_environment_dimension']}"))
+            if "selective_success_upper_bound" in channel:
+                output.append(line("Selective success upper bound: " + channel["selective_success_upper_bound"]))
+            output.extend(line(text) for text in channel["exclusions"])
+    elif receipt["mma_status"] == "continue":
         from qam.tools.spin_readout_search import report_lines
 
         output.extend(line(text) for text in report_lines(
@@ -269,28 +301,90 @@ def readout_tex(receipt):
     return "".join(output)
 
 
+def receipt_summary(receipt, instruction, request):
+    summary = {
+        "receipt_hash": receipt["receipt_hash"],
+        "instruction": instruction,
+        "mma_status": receipt["mma_status"],
+        "errors": receipt.get("errors", []),
+        "obligations": receipt.get("obligations", []),
+        "declared_guards": receipt.get("declared_guards", []),
+    }
+    if instruction == "SEARCH_ROUTE":
+        result = receipt["result"]
+        routes = result.get("routes", [])
+        summary["route_count"] = len(routes)
+        summary["open_route_guards"] = sorted({
+            guard for route in routes for guard in route.get("open_guards", [])
+        })
+        if routes:
+            minimum = min(len(route.get("open_guards", [])) for route in routes)
+            summary["fewest_open_guards"] = minimum
+            summary["routes_with_fewest_open_guards"] = [
+                {"operations": route["operations"], "open_guards": route.get("open_guards", [])}
+                for route in routes if len(route.get("open_guards", [])) == minimum
+            ]
+        channel = result.get("channel_check")
+        if channel:
+            summary["channel_exclusions"] = channel.get("exclusions", [])
+            declared_channel = request.get("arguments", {}).get("channel", {})
+            dimensions = channel.get("fiber") or declared_channel
+            summary["channel_dimensions"] = {
+                key: dimensions[key]
+                for key in ("input_dimension", "output_dimension")
+                if key in dimensions
+            }
+            if "environment_dimension" in declared_channel:
+                summary["channel_dimensions"]["declared_environment_dimension"] = (
+                    declared_channel["environment_dimension"]
+                )
+            if "minimum_environment_dimension" in channel:
+                summary["channel_dimensions"]["minimum_environment_dimension"] = (
+                    channel["minimum_environment_dimension"]
+                )
+    return summary
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--db", type=Path, default=DEFAULT_DB)
+    parser.add_argument("--read-only", action="store_true")
     commands = parser.add_subparsers(dest="command", required=True)
     index = commands.add_parser("index")
     index.add_argument("root", type=Path, nargs="*")
     find = commands.add_parser("find")
     find.add_argument("query")
+    find.add_argument("--limit", type=int)
     mma = commands.add_parser("mma", help="run a guarded MML request and store its receipt")
     mma.add_argument("context", type=Path)
     mma.add_argument("request", type=Path)
-    mma.add_argument("--tex-output", type=Path, help="write a LaTeX fragment for READOUT")
+    mma.add_argument("--summary", action="store_true", help="return only the receipt identity and MMA diagnostics")
+    mma.add_argument("--tex-output", type=Path, help="write a LaTeX fragment for READOUT or SEARCH_ROUTE")
     commands.add_parser("mma-status", help="count distinct stored MMA receipts by status")
+    receipts = commands.add_parser("receipts", help="find stored MMA receipts and premise dependents")
+    receipts.add_argument("--instruction", choices=("EXPORT", "SCRUB", "READOUT", "SEARCH_ROUTE"))
+    receipts.add_argument("--status", choices=("continue", "guard", "reject"))
+    receipts.add_argument("--premise", help="QAM claim hash, including transitive premises")
+    receipts.add_argument("--limit", type=int, default=20)
     receipt_command = commands.add_parser("receipt", help="retrieve an MMA receipt by SHA-512")
     receipt_command.add_argument("hash", nargs="+", help="hash, optionally in the printed groups")
-    receipt_command.add_argument("--tex-output", type=Path, help="regenerate a READOUT fragment")
+    receipt_command.add_argument("--tex-output", type=Path, help="regenerate a readout or route fragment")
     receipt_command.add_argument("--replay", action="store_true",
                                  help="rerun against the stored context without using cached results")
     receipt_command.add_argument("--trace", action="store_true",
                                  help="include the stored premise chain in dependency order")
+    receipt_command.add_argument("--summary", action="store_true",
+                                 help="return only the receipt identity and MMA diagnostics")
     args = parser.parse_args()
-    with closing(connect(args.db)) as db:
+    if args.command == "receipt" and args.summary and (args.trace or args.tex_output):
+        parser.error("--summary cannot be combined with --trace or --tex-output")
+    if args.read_only and (args.command in ("index", "mma") or getattr(args, "tex_output", None)):
+        parser.error("--read-only forbids index, mma and file export")
+    if args.read_only and not args.db.is_file():
+        parser.exit(1, "QAM database not found. Build its index first.\n")
+    database = (sqlite3.connect(args.db.resolve().as_uri() + "?mode=ro", uri=True)
+                if args.read_only else connect(args.db))
+    with closing(database) as db:
         if args.command == "index":
             if any(not root.is_dir() for root in args.root):
                 parser.error("each explicit index root must be a directory")
@@ -302,8 +396,8 @@ def main():
             try:
                 request = tensor.load_json(args.request)
                 if args.tex_output:
-                    if not isinstance(request, dict) or request.get("instruction") != "READOUT":
-                        parser.error("--tex-output requires a READOUT request")
+                    if not isinstance(request, dict) or request.get("instruction") not in ("READOUT", "SEARCH_ROUTE"):
+                        parser.error("--tex-output requires READOUT or SEARCH_ROUTE")
                     output = args.tex_output.resolve()
                     if (output.suffix != ".tex" or output in
                             {path.resolve() for path in (args.context, args.request, args.db)}):
@@ -311,10 +405,14 @@ def main():
                 receipt = execute_mml(db, tensor.load_json(args.context), request)
                 if args.tex_output:
                     output.parent.mkdir(parents=True, exist_ok=True)
-                    output.write_text(readout_tex(receipt), encoding="utf-8")
+                    output.write_text(readout_tex(receipt, request["instruction"]), encoding="utf-8")
             except (ValueError, TypeError, KeyError, OSError) as error:
                 parser.exit(2, f"Framework input/report error: {error}\n")
-            print(json.dumps(receipt))
+            if args.summary:
+                instruction = request.get("instruction") if isinstance(request, dict) else None
+                print(json.dumps(receipt_summary(receipt, instruction, request)))
+            else:
+                print(json.dumps(receipt))
             return 0 if receipt["mma_status"] == "continue" else 1
         elif args.command == "receipt":
             from scripts.qsc_audit import tensor_grammar_check as tensor
@@ -335,11 +433,11 @@ def main():
                 parser.exit(2, "Stored MMA receipt or request failed integrity verification.\n")
             if args.tex_output:
                 output = args.tex_output.resolve()
-                if (instruction != "READOUT" or output.suffix != ".tex"
+                if (instruction not in ("READOUT", "SEARCH_ROUTE") or output.suffix != ".tex"
                         or output == args.db.resolve()):
-                    parser.error("--tex-output requires a READOUT receipt and a separate .tex file")
+                    parser.error("--tex-output requires a readout or route receipt and a separate .tex file")
                 output.parent.mkdir(parents=True, exist_ok=True)
-                output.write_text(readout_tex(receipt), encoding="utf-8")
+                output.write_text(readout_tex(receipt, request["instruction"]), encoding="utf-8")
             response = {"request": request, "receipt": receipt}
             if args.trace:
                 response["trace"] = receipt.get("premise_trace", {
@@ -360,7 +458,7 @@ def main():
                     parser.exit(2, "Stored MMA context failed integrity verification.\n")
                 interface = FrameworkInterface(context)
                 if instruction == "SEARCH_ROUTE":
-                    current = route_mml(db, interface, request, trace=receipt.get("premise_trace"))
+                    current = route_mml(db, interface, request, use_cache=False, trace=receipt.get("premise_trace"))
                 elif instruction == "READOUT":
                     current = spin_mml(db, interface, request, use_cache=False, trace=receipt.get("premise_trace"))
                 else:
@@ -371,16 +469,57 @@ def main():
                                       == receipt["result"].get("readout", receipt["result"]),
                     "current_receipt": current,
                 }
-            print(json.dumps(response))
+            if args.summary:
+                summary = receipt_summary(receipt, instruction, request)
+                if args.replay:
+                    summary["replay"] = {
+                        "receipt_matches": response["replay"]["receipt_matches"],
+                        "result_matches": response["replay"]["result_matches"],
+                        "current_receipt_hash": current["receipt_hash"],
+                        "changed_fields": sorted(
+                            key for key in (receipt.keys() | current.keys()) - {"receipt_hash"}
+                            if key not in receipt or key not in current or receipt[key] != current[key]
+                        ),
+                    }
+                print(json.dumps(summary))
+            else:
+                print(json.dumps(response))
             if args.replay:
                 return 0 if response["replay"]["receipt_matches"] else 1
+        elif args.command == "receipts":
+            if args.limit < 1:
+                parser.error("--limit must be positive")
+            premise = args.premise.upper() if args.premise else None
+            if premise is not None and re.fullmatch(r"[0-9A-F]{32}", premise) is None:
+                parser.error("--premise requires a 32-digit QAM claim hash")
+            rows = db.execute(
+                """SELECT receipt_hash, instruction, status,
+                          json_extract(request, '$.id'), context_hash
+                   FROM mma_receipts AS entry
+                   WHERE (? IS NULL OR instruction = ?)
+                     AND (? IS NULL OR status = ?)
+                     AND (? IS NULL OR EXISTS (
+                         SELECT 1 FROM json_each(entry.receipt, '$.premise_trace.claims')
+                         WHERE json_extract(value, '$.hash') = ?
+                     ) OR EXISTS (
+                         SELECT 1 FROM json_each(entry.receipt, '$.premise_trace.missing')
+                         WHERE value = ?
+                     ))
+                   ORDER BY entry.rowid DESC LIMIT ?""",
+                (args.instruction, args.instruction, args.status, args.status,
+                 premise, premise, premise, args.limit),
+            )
+            fields = ("receipt_hash", "instruction", "status", "request_id", "context_hash")
+            print(json.dumps([dict(zip(fields, row)) for row in rows]))
         elif args.command == "mma-status":
             print(json.dumps(dict(db.execute("SELECT status, count FROM mma_status_counts ORDER BY status"))))
         else:
+            if args.limit is not None and args.limit < 1:
+                parser.error("--limit must be positive")
             for source, payload in db.execute(
                 """SELECT source, payload FROM claims
-                   WHERE instr(lower(payload), lower(?)) > 0 ORDER BY source, claim_key""",
-                (args.query,),
+                   WHERE instr(lower(payload), lower(?)) > 0 ORDER BY source, claim_key LIMIT ?""",
+                (args.query, args.limit if args.limit is not None else -1),
             ):
                 print(json.dumps({"source": source, **json.loads(payload)}, ensure_ascii=True))
 

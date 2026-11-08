@@ -52,3 +52,35 @@ Claude Desktop (`claude_desktop_config.json`), with the absolute path of your cl
 ```
 
 The server resolves the repository root from its own location, so it must stay in `mcp/` of a full clone.
+
+## QAM database and MMA tools
+
+These tools use the local `build/qam.sqlite3` database through the same
+CLI as the QAM examples.
+
+| Tool | What it does | Writes |
+|---|---|---|
+| `rebuild_qam_index()` | Rebuilds the claim index while preserving receipts and cached calculations | SQLite |
+| `find_qam_claims(query, limit)` | Finds indexed claims with their frames, status and premises | None |
+| `list_qam_receipts(instruction, status, premise_hash, limit)` | Lists receipts and can follow recorded indirect premise dependencies | None |
+| `get_qam_receipt(receipt_hash, trace, replay)` | Checks stored hashes, optionally returns the premise trace or recomputes without cache | None |
+| `run_qam_mml(context, request)` | Executes a declared MML JSON request, including READOUT and SEARCH_ROUTE, with MMA guards | SQLite |
+
+Use `get_qam_receipt(receipt_hash, summary=true)` for the verified hash,
+instruction, MMA status, errors, obligations and declared guards. The
+summary supports `replay=true` and adds the result and receipt comparisons,
+the new hash and changed field names. Request the trace separately.
+Use `run_qam_mml(context, request, summary=true)` for the same concise
+diagnostics on execution. SQLite stores the full receipt in either mode.
+For route searches, the summary also reports the number of candidates and
+the distinct open guards across them. It also lists the operations and guards
+for the candidates with the fewest open guards, including ties.
+For checked channels, the summary includes any exclusion reasons and available
+input, output, declared environment and minimum environment dimensions.
+
+Run the index tool first if the local database does not exist.
+MML inputs must be existing JSON files under `qam/examples/`,
+`scripts/qsc_audit/examples/`, or `notes/research/`. These tools run a
+fixed Python module with a 60-second timeout. Search limits range from
+one to 50. The response preserves the MMA status and exit code, so
+a guarded route can return a valid result with code 1.

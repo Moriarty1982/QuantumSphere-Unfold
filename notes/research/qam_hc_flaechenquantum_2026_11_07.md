@@ -1292,3 +1292,569 @@ $$
 Denn die Spur eines Shifts um $a$ zählt binäre Listen, die auf seinen Zyklen konstant sind. Der Summand $a=0$ liefert $2^N/N$. Jeder andere Summand hat Betrag höchstens $2^{N/2}/N$. Der zyklische Quotient erhält damit den führenden Exponenten $\ln2$ pro Punkt, verändert aber die endliche Zählung. Das unterscheidet ihn vom zuvor ausgeschlossenen Quotienten nach allen Punktpermutationen.
 
 Der Orbit-Scan definiert Shift und Parität auf seinem Scanindex. Die geprüften Horizontstellen r63 und r10 geben den Punktspins und Flächentermen keine solche zyklische Ordnung. Der Nachweis muss daher die Scanindizes mit den gravitativen Durchstoßpunkten verknüpfen und die gruppenübergreifende Kopplung sowie Grundraumauswahl begründen. Die Rechnung setzt keine native zyklische Ordnung voraus.
+
+### Spiegelungen der zyklischen Randordnung
+
+Erkundung. Auf $N=2k$ zyklischen Punktplätzen mit Indizes modulo $N$ wirken die Spiegelungen als $i\mapsto a-i$. Sie erhalten die Zweigruppenkopplung. Bei geradem $a$ erhalten sie beide Gruppen und bei ungeradem $a$ tauschen sie diese. Die rechte Grundlinie trägt daher unter Spiegelung dieselbe Phase $(-1)^{ka}$ wie unter Shift um $a$. Die linke Dimension nach gemeinsamer Diederprojektion ist
+
+$$
+\frac1{2N}\sum_{a=0}^{N-1}(-1)^{ka}
+\left[2^{\gcd(N,a)}+2^{k+\mathbf1_{\{a\,{\rm gerade}\}}}\right].
+$$
+
+Die Spiegelung hat bei geradem $a$ zwei Fixpunkte und bei ungeradem $a$ keine. Die übrigen Punkte bilden Zweierzyklen, woraus der zweite Spurfaktor folgt. Für $N=8$ bleiben bei zyklischer Projektion 36, mit Spiegelungen 30 linke Zustände. Asymptotisch ergibt die Identität $2^N/(2N)$ und die übrigen Beiträge sind insgesamt $O(2^{N/2})$. Der führende Exponent bleibt $\ln2$ pro Punkt. Diese Aussage setzt eine native zyklische Punktordnung und die angegebene gemeinsame Wirkung auf dem linken und rechten Träger voraus; sie belegt weder diese Ordnung noch die Auswahl der rechten Grundlinie durch die QAM.
+
+### Linke Singulettbedingung mit zyklischer oder Diederprojektion
+
+Erkundung. Auf $N=2k$ linken Doublets kommutieren Punktpermutationen mit dem gemeinsamen $SU(2)$. Die Spur einer Punktpermutation $g$ auf dem linken Singulettsektor ist deshalb die Differenz ihrer Spuren auf magnetischer Gesamtsumme null und eins. Jede Kopie eines höheren ganzzahligen Spins trägt denselben Permutationsoperator zu beiden Gewichtsräumen bei. Hat $g$ Zyklenlängen $d_1,\ldots,d_r$, zählen die beiden Spuren in der Produktbasis konstante Vorzeichen auf den Zyklen. Mit $F_g(x)=\prod_i(1+x^{d_i})$ ergibt sich
+
+$$
+\operatorname{tr}_{S=0}(g)=[x^k]F_g-[x^{k+1}]F_g.
+$$
+
+Setzt man diese Spur statt $2^{\#\text{Zyklen}}$ in die vorigen Charakterprojektionen ein, erhält man die exakten Dimensionen nach beiden Bedingungen. Bei acht Punkten bleiben sowohl für zyklische als auch für Diederprojektion drei linke Singuletts. Die Identität trägt die Catalan-Zahl $\binom{2k}{k}/(k+1)$ bei. Die Nichtidentitätsterme sind nach Division durch die Gruppenordnung insgesamt $O(2^{N/2})$, da jede Nichtidentität höchstens $N/2+1$ Zyklen hat. Die Dimension ist daher asymptotisch Catalan-Zahl geteilt durch $N$ beziehungsweise $2N$. Insbesondere bleibt der führende Exponent $\ln2$ pro Punkt erhalten, während die Unterkorrektur $-5/2\ln N$ beträgt. Der Befund gilt für die linke volle Singulettprojektion und die deklarierten Punktgruppen. Er identifiziert keine dieser Projektionen mit der nativen T-Horizontbedingung.
+
+### Vergleich der linken U(1)- und SU(2)-Schließung
+
+Erkundung. Für die linke U(1)-Bedingung ist die Spur der Punktpermutation $g$ mit Zyklenlängen $d_i$ gleich $[x^k]\prod_i(1+x^{d_i})$. Für SU(2) wird zusätzlich der Koeffizient von $x^{k+1}$ abgezogen. Beide Spuren werden mit derselben rechten Shift- beziehungsweise Spiegelphase projiziert. Bei acht Punkten ergibt U(1) zehn Zustände unter zyklischer und acht unter Diederprojektion. SU(2) ergibt in beiden Fällen drei.
+
+Asymptotisch liefert U(1) ohne Punktquotient die zentrale Binomialzahl und mit zyklischem oder Diederquotient dieselbe Zahl geteilt durch die Gruppenordnung, bis auf exponentiell kleinere Beiträge. Der logarithmische Koeffizient in $\ln\dim$ ist folglich $-1/2$ ohne Punktquotient und $-3/2$ mit Punktquotient. Bei SU(2) sind es entsprechend $-3/2$ und $-5/2$. Der führende Term ist in allen vier Fällen $N\ln2$. Insbesondere ist der Koeffizient $-3/2$ allein im Modell mehrdeutig: Er kommt bei linker SU(2)-Schließung ohne Punktquotient sowie bei U(1)-Schließung mit zyklischem oder Diederquotient vor. Die exakten endlichen Zählungen und die tatsächlich zulässigen Randoperationen müssen bei einem Vergleich zusätzlich angegeben werden.
+
+### Die Zweigruppenkopplung ersetzt den Minimalspinfilter nicht
+
+Erkundung. Erweitere den rechten Zweigruppen-Hamiltonoperator $H=g\mathbf S_A\cdot\mathbf S_B$ auf zugelassene höhere Punktspins, mit derselben positiven Konstante $g$ für beide Belegungen. Für gleiche maximale Gruppenspins $s$ ist seine niedrigste Energie $-gs(s+1)$. Auf der bereits betrachteten exakten dimensionslosen Flächenfaser $A_*=4\sqrt3$ liegen sowohl acht Spin-$1/2$-Punkte als auch zwei Spin-$3$-Punkte. Bei alternierender Zuordnung zu den beiden Gruppen ergeben acht Minimalspinpunkte vier pro Gruppe und damit $s=2$, also $E_0=-6g$. Die beiden Spin-$3$-Punkte ergeben einen pro Gruppe und $s=3$, also $E_0=-12g$. Beide rechten Grundzustände sind Singuletts; links existiert für beide Belegungen ebenfalls ein Gesamtspin-null-Zustand.
+
+Damit bevorzugt die ungeänderte Zweigruppenkopplung auf dieser gemeinsamen Flächenfaser die höhere Spinbelegung. Die Rechnung vergleicht die Energien vor einem zusätzlichen Punktquotienten und setzt voraus, dass Punktzahl und Spinbelegung variieren dürfen. Sie schließt andere Normierungen, eigene Selektoren oder Zusatzterme nicht aus. Sie zeigt aber, dass die Zweigruppenkopplung als Mechanismus für die rechte Multiplizität erst nach einer unabhängig begründeten Minimalspinselektion eingesetzt werden kann, wenn man die bisherige Auslesung erhalten will.
+
+### Skalierungstest für einen lokalen Casimir-Gegenterm
+
+Erkundung. Auf der exakten Fläche $A_k=4k\sqrt3$ vergleiche $8k$ Minimalspinpunkte mit $2k$ Spin-$3$-Punkten. Bei balancierter Zuordnung sind die maximalen Gruppenspins $2k$ beziehungsweise $3k$. Ergänze zur bisherigen Zweigruppenkopplung den lokalen Term $\lambda\sum_p[J_p^2-3I/4]$ mit $\lambda\ge0$. Die Energiedifferenz (Spin-$3$-Belegung minus Minimalspinbelegung) beträgt exakt
+
+$$
+\Delta E=-g(5k^2+k)+\frac{45}{2}\lambda k.
+$$
+
+Ein fixes $\lambda$ kann die höhere Spinbelegung bei konstantem Paargewicht $g>0$ daher für hinreichend große Fläche nicht verdrängen. Der Austauschgewinn wächst quadratisch, die lokale Strafe nur linear. Dies ist ein Ausschluss für diese feste Normierung und diese Vergleichsfamilie; er benötigt keine vollständige Klassifikation der Flächenfaser.
+
+Skaliert man das Paargewicht auf der gemeinsamen Flächenfaser als $g=g_0/k$, ist für diese Familie die Minimalspinbelegung bei allen $k\ge1$ energetisch bevorzugt, wenn $\lambda>4g_0/15$. In diesem Fall ist die rechte Anregungslücke der reinen Zweigruppenkopplung jedoch $g_0/k$. Die Flächennormierung und der positive lokale Term sind zusätzliche Modellannahmen. Der Vergleich belegt weder eine globale Minimalspinauswahl gegenüber allen Belegungen noch eine native T-Wirkung.
+
+### Gleichmäßige Spinselektion bei inverser Flächennormierung
+
+Erkundung. Betrachte die dimensionslose exakte Fläche $A=\sum_p\sqrt{j_p(j_p+1)}$ mit nichttrivialen Punktspins. Vorausgesetzt sei eine reine Minimalspinbelegung mit gerader Punktzahl und gleich großen Gruppen. Setze $S=\sum_p j_p$, $S_0=A/\sqrt3$ für die reine Minimalspinbelegung und $D=\sum_p[j_p(j_p+1)-3/4]$. Aus $j/\sqrt{j(j+1)}\in[1/\sqrt3,1)$ folgt $S_0\le S\le A$. Außerdem gilt
+
+$$
+S-S_0\le (1-1/\sqrt3)D,
+$$
+
+denn Minimalspinpunkte tragen zur Differenz nichts bei, und für $j\ge1$ gilt $j\le j(j+1)-3/4$.
+
+Für beliebige Gruppenspins $a,b$ ist $a+b\le S$. Die tiefste Austauschenergie des Blocks ist $-g\min(a,b)(\max(a,b)+1)\ge-g(S/2)(S/2+1)$, weil bei fester Summe das Produkt und der kleinere Summand bei Balance maximal sind. Die reine Minimalspinbelegung erreicht diese Schranke bei $S=S_0$. Daher ist der mögliche Austauschgewinn jeder anderen Belegung höchstens
+
+$$
+g(S-S_0)\big[(S+S_0)/4+1/2\big].
+$$
+
+Bei $g=g_0/A$ und $A\ge\sqrt3$ ist dies höchstens $g_0 D/(2\sqrt3)$, nach Einsetzen der obigen Schranken. Folglich garantiert $\lambda>g_0/(2\sqrt3)$, dass der lokale Term $\lambda D$ jede Belegung mit einem höheren Spin energetisch abweist. Dies ist eine hinreichende, nicht als scharf beanspruchte Schranke über alle Belegungen auf solchen Flächenfasern. Sie setzt die Zulassung der balancierten reinen Minimalspinbelegung, den Vergleich vor weiteren Punktprojektionen und das Fehlen anderer Energieterme voraus. Die inverse Flächennormierung und die Casimir-Strafe sind zusätzliche Modellannahmen; weder die native T-Dynamik noch die Präparation ihres Grundraums folgt daraus.
+
+### Thermische Grenze der rechten Grundraumauswahl
+
+Erkundung. Beschränke zunächst auf die reine Minimalspinbelegung mit $N=2k$ und $A=k\sqrt3$. Schon im rechten Block mit maximalen Gruppenspins $a=b=k/2$ gibt es für jeden Gesamtspin $S=0,\ldots,k$ genau ein Multiplett mit Entartung $2S+1$. Relativ zum Singulettgrundzustand ist seine Energie $g_0 S(S+1)/(2A)$. Der lokale Casimir-Term verschwindet auf der gesamten Minimalspinbelegung und ändert diese Abstände nicht. Für einen Gibbszustand des Modellhamiltonoperators bei inverser Temperatur $\beta$ gilt deshalb für das rechte Grundgewicht
+
+$$
+p_0\le
+\left[\sum_{S=0}^k (2S+1)e^{-\beta g_0 S(S+1)/(2A)}\right]^{-1}.
+$$
+
+Für festes $\beta g_0>0$ kann man alle Terme bis $L=\lfloor\sqrt{A/(\beta g_0)}\rfloor$ verwenden, sobald $L\le k$ und $A$ hinreichend groß ist. Ihre Exponentialfaktoren sind gleichmäßig nach unten beschränkt, und ihre Multiplizitäten summieren sich zu $(L+1)^2$. Damit ist $p_0=O(A^{-1})$ bei fester Temperatur. Höhere Gruppenblöcke können das Grundgewicht nur weiter senken. Bereits das erste Triplett zeigt, dass $\beta g_0/A\to\infty$ notwendig ist, wenn das Grundgewicht gegen eins gehen soll. Diese notwendige Bedingung wird hier nicht als hinreichend für den gesamten Modellträger beansprucht.
+
+Die Rechnung gilt für Gibbsgewichte des angesetzten rechten Hamiltonoperators vor einer zusätzlichen globalen Projektion. Eine harte rechte Gesamtspin-null-Bedingung entfernt die hier benutzten angeregten Multipletts und verlangt einen eigenen Vergleich. Ebenso kann eine direkte Grundraumselektion die thermische Besetzung umgehen. Die gefundene energetische Bevorzugung begründet daher für sich keine T-Zählung im thermischen Zustand.
+
+### Thermik nach harter rechter Singulettprojektion
+
+Erkundung. Beschränke auf $2k$ Minimalspinpunkte mit $A=k\sqrt3$ und zwei gleich großen Gruppen. Die rechte Gesamtspin-null-Bedingung erzwingt gleiche Gruppenspins $a=b=k/2-d$, $0\le d\le\lfloor k/2\rfloor$. Die Multiplizität pro Gruppe ist $m_d=\binom{k}{d}-\binom{k}{d-1}$, mit $\binom{k}{-1}=0$. Daher gibt es $m_d^2$ rechte Singuletts auf dieser Stufe. Bei Paargewicht $g_0/A$ beträgt der Abstand zur eindeutigen Grundlinie $\Delta_d=(g_0/\sqrt3)d(1+(1-d)/k)$. Schon $d=1$ hat den konstanten Abstand $g_0/\sqrt3$, aber Multiplizität $(k-1)^2$. Das Gibbsgewicht der Grundlinie ist folglich höchstens $[1+(k-1)^2 e^{-\beta g_0/\sqrt3}]^{-1}$. Bei fester positiver Temperatur sinkt es auch nach der harten Projektion auf höchstens $O(k^{-2})$.
+
+Eine Temperaturskala lässt sich für dieses Modell genauer eingrenzen. Setze $b=\beta g_0/\sqrt3$. Für $b\le(2-\eta)\ln k$ mit festem $\eta>0$ erzwingt schon $d=1$ verschwindendes Grundgewicht. Für $b\ge(2+\eta)\ln k$ geht das Grundgewicht gegen eins: Wähle ein festes kleines $\delta>0$ mit $(2+\eta)(1-\delta)>2$. Für $1\le d\le\delta k$ begrenzt $m_d\le k^d/d!$ die relativen Gibbsgewichte durch $k^{-c d}/(d!)^2$ mit $c=(2+\eta)(1-\delta)-2>0$. Für $d>\delta k$ ist der Energieexponent mindestens $b\delta k/2$ und die gesamte Multiplizität höchstens $4^k$. Beide Restbeiträge verschwinden. Der kritische Bereich um $b=2\ln k$ wird hier nicht weiter aufgelöst. Die Rechnung behandelt die rechte projizierte Gibbsstatistik auf einer festen Minimalspinbelegung; zusätzliche Randbedingungen können die Multiplizitäten ändern.
+
+### Thermisches Übergangsfenster der rechten Singuletts
+
+Erkundung. Setze im projizierten Zweigruppenmodell $b=\beta g_0/\sqrt3=2\ln k+c$ mit festem reellem $c$. Für jedes feste $d$ gilt $m_d/k^d\to1/d!$. Zusammen mit dem Energieabstand folgt
+
+$$
+m_d^2\exp[-b d(1+(1-d)/k)]\longrightarrow \frac{e^{-cd}}{(d!)^2}.
+$$
+
+Der Grenzübergang gilt für die ganze Summe. Für $d\le k/\ln k$ liefert $m_d\le k^d/d!$ eine summierbare Majorante $e^{C d}/(d!)^2$ mit einer nur von $c$ abhängigen Konstanten $C$: Der Korrekturexponent $b d(d-1)/k$ ist dort höchstens linear in $d$. Für $k/\ln k<d\le k/2$ gilt $m_d\le(ek/d)^d$ und $1+(1-d)/k\ge1/2$. Der logarithmische Summand ist damit höchstens $d[2\ln(e\ln k)-\ln k-c/2]$, sodass der gesamte Rest verschwindet.
+
+Das Grenzgewicht der eindeutigen rechten Grundlinie ist folglich
+
+$$
+\lim_{k\to\infty}p_0(k)=\left[\sum_{d=0}^{\infty}\frac{e^{-cd}}{(d!)^2}\right]^{-1}.
+$$
+
+Bei $c=0$ ergibt sich rund $0{,}4387$. Eine feste additive Verschiebung oberhalb der logarithmischen Schwelle liefert eine feste Reinheit unter eins. Aus Monotonie im inversen Temperaturparameter und der Grenzfunktion folgt zudem: Auf dieser festen Minimalspinbelegung geht das Grundgewicht genau dann gegen eins, wenn $b-2\ln k\to+\infty$; es geht genau dann gegen null, wenn diese Differenz gegen $-\infty$ geht. Die Aussage betrifft Gibbsgewichte nach harter rechter Singulettprojektion. Sie begründet keine native Temperaturwahl oder rechte Projektion.
+
+### Exponentieller Beitrag der rechten Singuletts bei fester Temperatur
+
+Erkundung. Für festes $b=\beta g_0/\sqrt3\ge0$ sei $Z_k$ die rechte Singulett-Zustandssumme relativ zur Grundenergie. Für $x=d/k$ gilt gleichmäßig auf $0\le d\le\lfloor k/2\rfloor$:
+
+$$
+\ln m_d=k h(x)+O(\ln k),\qquad h(x)=-x\ln x-(1-x)\ln(1-x).
+$$
+
+Dies folgt aus der Binomialabschätzung und $m_d=\binom{k}{d}(k-2d+1)/(k-d+1)$, dessen zusätzlicher Faktor zwischen $1/(k+1)$ und eins liegt. Der Energieexponent beträgt $bkx(1-x)+bx$. Da es nur linear viele Stufen gibt, bestimmt die größte Stufe den Grenzwert
+
+$$
+\lim_{k\to\infty}\frac{\ln Z_k}{k}
+=\max_{0\le x\le1/2}\{2h(x)-bx(1-x)\}=:f(b).
+$$
+
+Für jedes endliche $b$ ist $f(b)>0$: Für kleine positive $x$ wächst $2h(x)/x$ unbeschränkt, während $b(1-x)$ beschränkt bleibt. Das rechte Grundgewicht $1/Z_k$ fällt daher bei fester Temperatur exponentiell. Die frühere polynomial schwächere Schranke verwendete nur eine einzelne angeregte Stufe.
+
+Der Maximierer ist für $b\le4$ bei $x=1/2$, mit $f(b)=2\ln2-b/4$. Für $b>4$ liegt er im Inneren und ist eindeutig. Mit $y=1-2x$ lautet die stationäre Bedingung $b=4\operatorname{artanh}(y)/y$. Die rechte Seite steigt auf $0<y<1$ von vier gegen unendlich, wie die positive Potenzreihe zeigt. Der Vorzeichenwechsel der Ableitung liefert das Maximum. Wenn die linke Zustandszählung unabhängig bleibt, trägt der rechte Faktor zur logarithmierten thermischen Zustandssumme pro Punkt zusätzlich $f(b)/2$ bei. Das ist eine Aussage über die relativ zur Grundenergie normierte Gibbs-Summe, keine Gleichsetzung mit der mikrokanonischen Horizontentropie. Sie gilt für die feste Minimalspinbelegung mit harter rechter Singulettprojektion und dem deklarierten Hamiltonoperator.
+
+### Führendes Zählgewicht und Grundzustandsreinheit
+
+Erkundung. Im projizierten rechten Gibbsmodell sind zwei Grenzforderungen verschieden. Für den führenden Zählbeitrag genügt und ist notwendig, dass $b(k)=\beta g_0/\sqrt3\to\infty$: Dann gilt $k^{-1}\ln Z_k(b(k))\to0$. Zum Beweis ist $Z_k$ monoton fallend in $b$ und mindestens eins. Für jede feste Schranke $B$ liegt der obere Grenzwert daher bei höchstens $f(B)$. Die Funktion $f(B)=\max_x[2h(x)-Bx(1-x)]$ geht gegen null: Außerhalb einer beliebig kleinen Umgebung von null wird der Ausdruck schließlich negativ, innerhalb kann $2h(x)$ beliebig klein gemacht werden. Umgekehrt liefert eine beschränkte Teilfolge $b(k)\le B$ einen positiven unteren Grenzwert $f(B)>0$ entlang dieser Teilfolge.
+
+Auch die rechte Gibbsentropie pro Punkt verschwindet unter derselben Bedingung. Schreibe $Z=\sum_i e^{-b e_i}$ mit dimensionslosen Energien $e_i\ge0$. Dann ist $S_R=\ln Z(b)+b\langle e\rangle_b$. Aus der Konvexität von $\ln Z$ folgt $(b/2)\langle e\rangle_b\le\ln Z(b/2)-\ln Z(b)$. Damit liegt $S_R$ zwischen $\ln Z(b)$ und $2\ln Z(b/2)$. Beide Schranken liefern dasselbe Kriterium für einen verschwindenden Beitrag pro Punkt.
+
+Für Grundzustandsreinheit ist dagegen $b(k)-2\ln k\to+\infty$ erforderlich. Bei $b(k)=\ln k$ verschwindet der rechte Beitrag pro Punkt, obwohl das Gewicht der einzigen rechten Grundlinie gegen null geht. Folglich lässt sich die führende linke Entropie $\ln2$ pro Punkt thermisch reproduzieren, ohne einen scharfen Rang-eins-Träger zu erhalten. Diese Unterscheidung betrifft den deklarierten Gibbsvergleich auf der festen Minimalspinbelegung. Welche Forderung der native T-Horizont stellt, bleibt offen.
+
+### Zwischenregime der rechten Gibbs-Zustandssumme
+
+Erkundung. Setze $b=\alpha\ln k+c$ mit festem $0<\alpha<2$ und $c\in\mathbb R$. Dann ist $t=k e^{-b/2}=e^{-c/2}k^{1-\alpha/2}$ divergent und sublinear. Für die relative rechte Zustandssumme gilt
+
+$$
+\ln Z_k=2t+o(t).
+$$
+
+Für die untere Schranke genügt die Stufe $d=\lfloor t\rfloor$. Dort ist $\ln m_d=d\ln k-\ln(d!)+O(d^2/k+d/k)$, aus dem Binomialprodukt und dem Faktor $(k-2d+1)/(k-d+1)$. Der quadratische Anteil der Energie liefert eine Korrektur $O(bd^2/k)=o(t)$. Stirling liefert für den einzelnen Logarithmus $2t+o(t)$.
+
+Für die obere Schranke wähle $1-\alpha/2<p<1$ und $D=\lfloor k^p\rfloor$. Bis $D$ ist $m_d\le k^d/d!$ und $bd(d-1)/k\le (bD/k)d$ mit $bD/k=o(1)$. Die Teilsumme ist höchstens $\sum_d (t e^{bD/(2k)})^{2d}/(d!)^2\le\exp(2t e^{bD/(2k)})$. Zwischen $D$ und $k/\ln k$ ist $bd/k$ beschränkt, während $t/d\to0$ gleichmäßig. Mit $d!\ge(d/e)^d$ verschwindet diese Teilsumme. Oberhalb $k/\ln k$ gilt $\ln m_d\le d\ln(e\ln k)$ und der Energieexponent ist mindestens $bd/2$, sodass auch dieser Rest verschwindet.
+
+Bei $b=\ln k$ wächst die rechte Log-Zustandssumme somit wie $2\sqrt k$. Sie ist subextensiv, aber größer als jede logarithmische Korrektur der linken Zählung. Die Aussage betrifft die relativ zur Grundenergie normierte Zustandssumme des projizierten Modells. Sie setzt keinen solchen Temperaturverlauf im nativen T-Frame voraus.
+
+### Gibbsentropie im kritischen Temperaturfenster
+
+Erkundung. Im projizierten Zweigruppenmodell setze $b=2\ln k+c$ mit festem reellem $c$ und $e_d=d(1+(1-d)/k)$. Die zuvor für die Zustandssumme gezeigte Majorisierung gilt auch nach Multiplikation der Summanden mit $e_d$: Im kleinen Bereich genügt der zusätzliche Faktor $d$ in der summierbaren Majorante, und im großen Bereich bleibt selbst ein Faktor $k$ gegenüber dem exponentiellen Abfall unschädlich. Damit konvergiert die mittlere dimensionslose Anregungsenergie gegen
+
+$$
+\mu(c)=\frac{\sum_{d\ge0} d\,e^{-cd}/(d!)^2}{\sum_{d\ge0} e^{-cd}/(d!)^2}.
+$$
+
+Die rechte Gibbsentropie lautet $S_R=\ln Z_k+b\langle e_d\rangle$. Obwohl $\ln Z_k$ im kritischen Fenster beschränkt bleibt, gilt daher $S_R/\ln k\to 2\mu(c)$. Bei $c=0$ ergibt sich $2\mu(0)\approx1{,}39555$. Wenn der linke Faktor separat und gleichverteilt gezählt wird, addiert sich dieser Beitrag zu dessen logarithmischer Entropiekorrektur. Das ist ein Gibbsvergleich und keine Ableitung einer mikrokanonischen Horizontentropie.
+
+Die rechte Entropie ist bei $b\ge0$ monoton fallend in $b$, denn ihre Ableitung ist $-b\operatorname{Var}_b(e_d)$. Aus dem Fenstergrenzwert und $\mu(c)\to0$ für $c\to+\infty$ folgt deshalb für beliebige nichtnegative Temperaturfolgen: $S_R=o(\ln k)$ gilt genau dann, wenn $b-2\ln k\to+\infty$. Für die Notwendigkeit genügt jede Teilfolge mit $b-2\ln k\le C$, auf der die Entropie mindestens so groß wie bei festem $c=C$ ist. Der Befund gilt für die feste Minimalspinbelegung mit harter rechter Singulettprojektion und schließt die thermische Unterscheidung zwischen führendem und logarithmischem Zählbeitrag in diesem Modell.
+
+### Unruh-Normierung und rechte Kühlschwelle
+
+Erkundung. In der lokalen r10-Statistik ist die inverse Unruh-Temperatur proportional zum Beobachterabstand $\ell$, während die lokale Horizontenergie bei gleicher Flächenanregung proportional zu $1/\ell$ ist. Setzt man für die modellierte Austauschskala dieselbe Rotverschiebung an, $g_0(\ell,k)=\bar g(k)/\ell$, ergibt sich in den Einheiten von r10
+
+$$
+b(k)=\beta_U(\ell)g_0(\ell,k)/\sqrt3=2\pi\bar g(k)/\sqrt3.
+$$
+
+Eine Änderung des Beobachterabstands allein verändert $b$ damit nicht. Bei flächenunabhängigem $\bar g$ bleibt der rechte thermische Beitrag extensiv, selbst nach harter Singulettprojektion. Für unveränderte logarithmische Gibbsentropie müsste stattdessen $2\pi\bar g(k)/\sqrt3-2\ln k\to+\infty$ gelten oder eine andere Zugriffsregel den Grundraum auswählen. Eine logarithmisch wachsende Kopplung ist aus dem lokalen ersten Gesetz nicht abgeleitet. Dieses Argument setzt die gleiche Rotverschiebung für den angesetzten Austausch voraus und identifiziert seinen Hamiltonoperator nicht mit dem Modularhamiltonoperator.
+
+Auf jedem endlichen zugelassenen Träger ist zudem der Gibbsoperator bei endlicher inverser Temperatur und endlichen Energien strikt positiv. Ein endlicher Energieabstand kann Gewichte unterdrücken, aber keine zuvor zugelassenen Spinsektoren exakt entfernen. Die scharfe Minimalspinzählung verlangt daher einen Projektor, einen eingeschränkten Zustandsraum oder einen geeigneten Grenzprozess. Das sind getrennte Möglichkeiten, deren native Realisierung die r10-Thermik für sich nicht liefert.
+
+### Beobachterzugriff, Flächenobservable und Spinunterstützung
+
+Erkundung. Sei $\rho_M$ ein Zustand mit positivem Gewicht in höheren Spins auf einem endlichen Einpunktträger. Eine reine Einschränkung auf eine unital eingebettete Beobachteralgebra $\mathcal A_T$ übernimmt die Erwartungswerte aller darin enthaltenen Observablen. Bleibt die ursprüngliche Flächenobservable $A=a(J)$ darin enthalten, dann liegen wegen endlicher Spektralinterpolation auch ihre Spinprojektoren $P_j$ darin. Da $a(j)=\sqrt{j(j+1)}$ streng wächst, ist jeder $P_j$ ein Polynom in $A$. Also bleibt insbesondere $\operatorname{tr}(\rho_M P_{j>1/2})$ als zugängliche Wahrscheinlichkeit erhalten. Eine Beschränkung auf weniger Observablen kann dieses Gewicht unter diesen Voraussetzungen nicht entfernen. Das Argument gilt auch nach einem invertierbaren Framewechsel, wenn Zustand und Observable gemeinsam transportiert werden.
+
+Eine Projektion auf den Minimalspin ist dagegen ein eigener Auswahlzweig $\rho\mapsto P_{1/2}\rho P_{1/2}$. Sein Spurfaktor $p=\operatorname{tr}(\rho P_{1/2})$ bleibt Teil des Instruments; erst konditioniert auf Erfolg ergibt sich der normierte Minimalspinzustand. Ein Zugriff, der die ursprüngliche Fläche nicht enthält, kann die Spinsektoren ununterscheidbar machen, begründet aber ohne zusätzliche Definition keine neue Flächenstatistik. Die r06/r07-Lesart der Beobachterbeschränkung liefert somit keinen Minimalspinselektor, solange dieselbe gravitative Flächenobservable zugänglich bleibt. Für eine native T-Route braucht es eine begründete Selektion, eine neue Ausleseobservable oder einen eigenständig definierten Randzustand. Die Rechnung ist eine endliche Modellfolgerung und setzt keine konkrete T-Algebra voraus.
+
+### Aktiver T-Kanal und Erhaltung der Einpunktfläche
+
+Erkundung. Sei $A=\sum_j a(j)P_j$ die ursprüngliche Einpunktfläche in gemeinsamen Einheiten, auf einem endlichen Träger ohne Spin null. Ein deterministischer Quantenkanal $\Phi$ mit ausschließlich minimalem Ausgang hat $\Phi^*(P_{1/2})=I$ und daher $\Phi^*(A)=a(1/2)I$. Sobald höhere Spins zugelassen sind, kann er die Fläche nicht für alle Eingaben erhalten. Für jeden Eingang mit höherem Spingewicht $w=\operatorname{tr}[\rho(I-P_{1/2})]$ ist die Differenz der Flächenerwartungswerte mindestens $(a(1)-a(1/2))w$. Ist der Ausgang nur näherungsweise minimal, mit höherem Gewicht $\varepsilon$, ergibt die Messung des binären Ereignisses höherer Spin einen Abstand der Flächenverteilungen in Totalvariation von mindestens $|w-\varepsilon|$. Diese Schranke setzt keine unitäre oder passive Umsetzung voraus.
+
+Ein selektives Instrument kann die ursprüngliche Flächenstatistik dagegen über beide Ausgänge hinweg erhalten. Für $P=P_{1/2}$ und $Q=I-P$ lauten die unnormierten Zweige $P\rho P$ und $Q\rho Q$. Weil $A$ und seine Spektralprojektoren mit $P,Q$ kommutieren, ergibt ihre Summe dieselben ursprünglichen Flächenwahrscheinlichkeiten wie der Eingang. Konditioniert auf Ja ist die Fläche minimal. Damit ist eine genaue Unterscheidung möglich: Der gemeinsame, nichtselektive Vorgang kann die Fläche erhalten, während nur der Ja-Zweig die Minimalspin-Zählung trägt. Eine native Identifikation von T mit genau diesem Zweig müsste den Selektor und sein Eingangsgewicht erklären. Die Aussage betrifft die Einpunktfläche, nicht automatisch eine Gesamtfläche bei veränderlicher Punktzahl oder eine neu kalibrierte T-Observable.
+
+### Flächengleiche Punktaufspaltung und Drehimpulserhaltung
+
+Erkundung. Auf einer Minimalspin-Flächenfaser muss für jeden Punkt der Quotient $r=a(j)/a(1/2)$ ganzzahlig sein, wie bereits in der quadratfreien Faseranalyse gezeigt. Dann ist eine Aufspaltung in $r$ Minimalspinpunkte zwar flächengleich, kann aber für $j>1/2$ keinen lokalen $SU(2)$-Intertwiner liefern. Der größte Gesamtspin der $r$ Doublets ist $r/2$, während
+
+$$
+j>r/2\quad\Longleftrightarrow\quad 3j>j+1
+$$
+
+für $j>1/2$ gilt. Schon beim einfachsten Beispiel $j=3$ können vier Doublets höchstens Spin zwei tragen. Auch ein kovarianter Kanal mit einer Stinespring-Realisierung und einem anfangs invarianten Hilfszustand braucht im Ausgangsumfeld mindestens einen Spin $j-r/2$, damit der Eingangsspin in der gemeinsamen Darstellung überhaupt vorkommt. Falls dieser Rest selbst als gravitativer Flächenbeitrag gezählt wird, muss seine Fläche in die Bilanz aufgenommen werden.
+
+Für die vollständige ungefilterte Mehrpunktfaser gilt analog: Eine Belegung mit höherem Spin besitzt einen maximalen Gesamtspin $\sum_p j_p>N/2$, wobei $N=\sum_p r_p$ die flächengleiche Zahl der Minimalspinpunkte ist. Der reine Minimalspinträger enthält diesen Sektor nicht. Das Argument schließt keinen Übergang auf einem vorab eingeschränkten globalen Singulettträger aus, weil dort der maximale Gesamtspin bereits entfernt wurde. Es trennt somit arithmetische Flächengleichheit von der Möglichkeit einer nativen, lokal drehimpulserhaltenden Aufspaltung.
+
+### Dimensionsgrenze nach globaler Singulettprojektion
+
+Erkundung. Die bereits vollständig klassifizierte Faser bei $A=4\sqrt3$ enthält im betrachteten Tensorproduktmodell 14 Singuletts aus acht Minimalspinpunkten und ein weiteres Singulett aus zwei Spin-$3$-Punkten. Die gemischte Belegung liefert kein Singulett. Der Eingangsraum hat damit Dimension 15, das ausschließlich minimale Ausgabe-Singulettbild Dimension 14. Die Drehimpulsobstruktion aus der vorigen Rechnung entfällt, aber eine reversible oder isometrische Umwandlung aller Eingaben auf denselben Minimalspinträger bleibt dimensionsbedingt unmöglich.
+
+Ein deterministischer Quantenkanal kann den Übergang auf dieser Faser mit einem zweidimensionalen Umfeld realisieren. Er bettet jeden der 14 Minimalspinzustände als denselben Zustand mit Umfeldflag null ein. Das Spin-$3$-Singulett wird auf einen ausgewählten Minimalspinzustand mit Umfeldflag eins abgebildet. Die 15 Bilder sind orthogonal, haben dieselbe Gesamtfläche und tragen insgesamt Spin null, wenn das Flag rotationsinvariant ist. Das Flag ist also ein hinreichender zusätzlicher Träger und Dimension zwei zugleich notwendig, da $14\dim\mathcal H_{\rm Umfeld}\ge15$ gelten muss. Nach Ignorieren des Flags gehen die Kohärenzen zwischen den beiden Belegungszweigen verloren.
+
+Für einen selektiven Ja-Zweig mit nur einem Krausoperator $K$ in den 14-dimensionalen Raum gilt $\operatorname{tr}(K^\dagger K)\le14$. Bei gleichverteilter Eingabe auf der ganzen Faser ist die Ja-Wahrscheinlichkeit daher höchstens $14/15$; der einfache Minimalspinprojektor erreicht dies. Mehrere Krausoperatoren können den Erfolg erhöhen, wenn ein zusätzliches Register die Zweige trägt. Diese Grenze setzt exakt die angegebene Faser, den ausgewählten Ausgabe-Singulettträger und die gleichverteilte Eingabe voraus. Der konstruktive Kanal belegt keine native QAM-Realisierung und kann nicht als bloße Umbenennung der beiden Belegungen gelesen werden.
+
+### Der zusätzliche Träger muss auf großen Flächen wachsen
+
+Erkundung. Verwende das geordnete Tensorproduktmodell auf der exakten Faser $A=N a(1/2)$ und nehme $N$ als Vielfaches von 128. Setze $m=N/64$, also gerade. Die reine Minimalspinbelegung hat $N$ Punkte und Singulettdimension $D_0=\binom N{N/2}/(N/2+1)$. Eine flächengleiche Mischbelegung besteht aus $m$ Spin-$3$-Punkten und $N-4m$ Minimalspinpunkten. Es gibt $\binom{N-3m}{m}$ orthogonale geordnete Spinlisten. Je Liste kann man die Spin-$3$-Punkte disjunkt zu Singuletts koppeln und unabhängig jedes Singulett der verbleibenden Minimalspinpunkte verwenden. Damit ist die Zahl der Misch-Singuletts mindestens
+
+$$
+D_{\rm mix}\ge\binom{N-3m}{m}\frac{\binom{N-4m}{(N-4m)/2}}{(N-4m)/2+1}.
+$$
+
+Aus $\binom{L}{m}\ge(L/m)^m$ folgt hier der Faktor $61^m$. Das Verhältnis der beiden Catalan-Zahlen ist nach Stirling ein positiver asymptotisch konstanter Faktor mal $2^{-4m}$. Also wächst $D_{\rm mix}/D_0$ mindestens proportional zu $(61/16)^{N/64}$. Eine isometrische Einbettung der gesamten Eingangsfaser in einen ausschließlich minimalen Ausgang mit zusätzlichem Register benötigt deshalb mindestens $\log_2\dim\mathcal H_{\rm Umfeld}\ge (N/64)\log_2(61/16)-O(1)$ Bits an Zustandskapazität. Dieselbe Dimensionsgrenze gilt für die Stinespring-Einbettung eines deterministischen Kanals auf dieser Faser. Ein einzelner selektiver Krausoperator hat bei gleichverteilter Eingabe höchstens $D_0/(D_0+D_{\rm mix})$ Erfolg; dieser obere Wert fällt exponentiell.
+
+Das Argument benutzt nur eine Teilfamilie der Eingänge. Es setzt orthogonale geordnete Listen, globale $SU(2)$-Schließung, einen reinen Minimalspin-Ausgang derselben exakten Fläche und keine zusätzlichen Punktquotienten voraus. Andere Zählmaße oder ein bereits eingeschränkter Eingangsträger können die Schranke ändern. Die native QAM müsste daher neben dem zusätzlichen Kanal auch begründen, welche Eingangsfaser tatsächlich zugänglich ist.
+
+### Kapazitätsgrenze nach zyklischem Punktquotienten
+
+Erkundung. Verwende dieselbe Mischfamilie mit $m=N/64$ und Listenlänge $L=N-3m$. Die zyklische Gruppe $C_L$ verschiebt die Listen und transportiert die zugehörigen Tensorfaktoren. Eine Liste mit trivialem Stabilisator erzeugt einen Orbit aus $L$ orthogonalen Listensektoren. Ihr invarianter Raum hat dieselbe Dimension wie ein einzelner Listensektor: Jeder Vektor auf einer Repräsentantenliste setzt sich eindeutig durch zyklische Translation fort. Das gilt auch für eine vorgegebene zyklische Charakterphase, sofern sie ein Charakter von $C_L$ ist.
+
+Ein nichtidentischer Shift der Ordnung $q\ge2$ kann eine Liste nur fixieren, wenn $q$ sowohl $L$ als auch $m$ teilt. In diesem Fall fixiert er genau $\binom{L/q}{m/q}$ Listen. Mit $p=m/L=1/61$ ist diese Zahl höchstens $\exp[L h(p)/2]$, wobei $h$ die binäre Entropiefunktion in natürlichen Logarithmen ist. Die Gesamtzahl $\binom Lm$ wächst dagegen wie $\exp[Lh(p)+O(\ln L)]$. Selbst die Summe über alle nichttrivialen Shifts ist asymptotisch vernachlässigbar. Daher bleiben asymptotisch $\binom Lm/L$ freie Orbits. Pro Orbit steht mindestens die bereits verwendete Catalan-Zahl der Minimalspinreste zur Verfügung.
+
+Die reine minimale Ausgabedimension nach zyklischer Projektion ist höchstens die unprojizierte Dimension $D_0$. Der Quotient kostet im Eingang daher höchstens einen polynomialen Faktor in der bisherigen unteren Schranke: Die Zustandskapazität des Umfelds bleibt mindestens $(N/64)\log_2(61/16)-O(\ln N)$ Bits. Voraussetzung ist, dass die zyklische Identifikation je Listenlänge wirkt und verschiedene freie Orbits weiterhin orthogonale Eingangssektoren sind. Die Rechnung setzt keine native zyklische Punktordnung voraus und gilt nicht für einen Quotienten nach sämtlichen Punktpermutationen.
+
+### Kapazitätsgrenze nach Diederquotient
+
+Erkundung. Ergänze die zyklischen Shifts auf den Listen der Länge $L=N-3m$ durch Spiegelungen. Eine Spiegelung hat höchstens zwei Fixpunkte; alle übrigen Zyklen sind Paare. Eine fixierte Spinliste mit $m$ höheren Spins muss daher nach der Wahl der höheren Spins auf den Fixpunkten ganze Zweierzyklen belegen. Für $m/L=p=1/61$ ergibt das höchstens $\exp[(L/2)h(p)+O(\ln L)]$ Listen je Spiegelung, aus der Binomialabschätzung und den höchstens vier Fixpunktwahlen. Auch die Vereinigung aller Spiegelungs- und Shiftfixmengen ist damit gegenüber $\binom Lm$ exponentiell kleiner. Die Zahl der freien Diederorbits ist asymptotisch $\binom Lm/(2L)$. Auf jedem freien Orbit kann ein beliebiger Vektor des Repräsentantensektors zu einem invarianten Vektor fortgesetzt werden.
+
+Mit $m=N/64$ und der zuvor verwendeten Catalan-Untergrenze pro Liste folgt für die erforderliche Umfeldkapazität nun die schärfere Schranke
+
+$$
+\log_2\dim\mathcal H_{\rm Umfeld}
+\ge N\left[\frac{61}{64}H_2(1/61)-\frac1{16}\right]-O(\log N),
+$$
+
+wobei $H_2$ die binäre Entropie mit Logarithmus zur Basis zwei bezeichnet. Der Koeffizient beträgt rund $0{,}05252$ Bit pro Minimalspin-Flächeneinheit. Die Schranke gilt ebenso ohne Spiegelungen und verwendet die volle unprojizierte Minimalspindimension als Obergrenze für den möglichen Ausgang. Sie betrifft den geordneten Modellträger modulo der jeweils auf die Listenlänge wirkenden Diedergruppe. Ein nativer Quotient, der auch verschiedene freie Orbits identifiziert oder ihre Singulettsektoren beschränkt, ist nicht durch dieses Argument erfasst.
+
+### Optimierte Mischfamilie für die Umfeldkapazität
+
+Erkundung. Lasse in derselben Konstruktion die Dichte $\rho=m/N$ zwischen null und $1/4$ variieren. Die Singulett-Untergrenze pro Liste und die freie zyklische oder Dieder-Orbitzählung ergeben für jede feste innere Dichte den Exponenten
+
+$$
+F(\rho)=(1-3\rho)H_2\!\left(\frac{\rho}{1-3\rho}\right)-4\rho
+$$
+
+für das Verhältnis zur reinen Minimalspin-Ausgabedimension. Rundung von $m$ auf eine gerade Zahl bei geradem $N$ ändert den Exponenten nur um $O(\log N)$. Setze $p=\rho/(1-3\rho)$, den Spin-$3$-Anteil unter den Listeneinträgen. Dann ist $1+F=(H_2(p)+1-p)/(1+3p)$.
+
+Sei $z\in(0,1/2)$ die eindeutige Lösung von $2z+z^4=1$. Vergleiche die Bernoulli-Verteilung $(1-p,p)$ mit $(2z,z^4)$. Die Nichtnegativität der relativen Entropie liefert $H_2(p)+1-p\le-(1+3p)\log_2 z$, mit Gleichheit genau bei $p=z^4$. Daher maximiert diese Dichte die bewiesene Untergrenze und ergibt $F_{\max}=-\log_2 z-1$. Die Optimierung betrifft ausschließlich die Mischfamilie mit Spin $1/2$ und Spin $3$ und einer ausgewählten Singulettkopplung der höheren Spins je Liste. Zusätzliche Belegungen oder höhere Multiplizitäten können die tatsächliche Kapazität weiter erhöhen.
+
+### Interne Spin-3-Singuletts verschärfen die Kapazitätsgrenze
+
+Erkundung. Für gerades $m=2s$ zerlege die erste Hälfte der Spin-$3$-Faktoren in $V_3^{\otimes s}=\bigoplus_{j=0}^{3s} V_j\otimes\mathbb C^{n_j}$. Die zweite Hälfte hat dieselbe Zerlegung. In der gemeinsamen Kopplung enthält genau jedes Paar gleicher Spins ein Singulett. Die Zahl der Spin-$3$-Singuletts ist daher $\sum_j n_j^2$. Cauchy-Schwarz und $\sum_j(2j+1)n_j=7^s$ geben
+
+$$
+\frac{7^m}{\sum_{j=0}^{3s}(2j+1)^2}
+\le\sum_j n_j^2\le 7^m.
+$$
+
+Die interne Spin-$3$-Zählung liefert somit $m\log_2 7-O(\log m)$ Bits pro Liste. Man kann diese Singuletts unabhängig mit allen Singuletts der Minimalspinreste kombinieren. Auf einem freien zyklischen oder Diederorbit setzt sich der gesamte so konstruierte Unterraum vom Repräsentanten fort. Die vorige Orbitabschätzung bleibt unverändert.
+
+Mit $p=m/(N-3m)$ ist der optimierte Logarithmus der Eingangsdimension pro Minimalspin-Flächeneinheit mindestens das Maximum von $[H_2(p)+(1-p)+p\log_2 7]/(1+3p)$. Die relative Entropie zu $(2z,7z^4)$ liefert das Maximum $-\log_2 z$ bei $p=7z^4$, wobei $2z+7z^4=1$. Nach Abzug der maximalen reinen Ausgabekapazität von einem Bit pro Flächeneinheit folgt die entsprechende Untergrenze $N[-\log_2 z-1]-O(\log N)$. Dies verwendet weiterhin nur zwei Spinarten und getrennte Singulettbildung der beiden Spinarten; eine vollständige Faserzählung ist damit nicht behauptet.
+
+### Exakte exponentielle Kapazitätsrate im geordneten Faser-Modell
+
+Erkundung. Die auf $A=N a(1/2)$ möglichen Spinarten entsprechen den positiven Lösungen $d^2-3r^2=1$, mit $d=2j+1$ und Flächengewicht $r$. Die ersten Paare $(r,d)$ sind $(1,2),(4,7),(15,26),(56,97)$. Sei $z_*$ die eindeutige Lösung von $\sum_r d_r z_*^r=1$ in $(0,1/2)$. Die Reihe konvergiert dort, denn $d_r\le2r$. Für die Summe $W_N$ der vollen Tensorproduktdimensionen aller geordneten Listen gilt $W_0=1$ und $W_N=\sum_{r\le N}d_r W_{N-r}$. Induktion liefert $W_N\le z_*^{-N}$. Dies ist auch eine Obergrenze für die Singulettdimension, vor oder nach Punktquotienten.
+
+Für die untere Exponentenabschätzung wähle zunächst endlich viele Spinarten einschließlich Minimalspin. Sei $z_F$ die Wurzel der abgeschnittenen Summe und $p_r=d_r z_F^r$ die normierte Liste der Anteile. Für gerades $N$ wähle gerade Anzahlen jeder Spinart mit diesen asymptotischen Listenanteilen und fülle einen beschränkten Flächenrest mit einer geraden Anzahl Minimalspinpunkte auf. Je Spinart liefert die Halbierungs- und Cauchy-Schwarz-Abschätzung aus dem vorigen Abschnitt mindestens $d_r^{m_r}$ dividiert durch einen polynomialen Faktor an Singuletts. Zusammen mit der Multinomialzahl der Listen ergibt dies den Exponenten $-\log_2 z_F$ pro Flächeneinheit. Denn $H_2(p)+\sum_r p_r\log_2 d_r=-(\sum_r rp_r)\log_2 z_F$.
+
+Auch unter zyklischer oder Diederidentifikation bleibt dieser Exponent bestehen: Für die feste endliche Zusammensetzung haben Listen mit nichttrivialem Stabilisator höchstens halb so viele frei belegbare Zyklen, bis auf höchstens zwei Fixpunkte bei Spiegelung. Ihre Multinomialzahlen sind exponentiell kleiner als die volle Listenzahl, sofern mindestens zwei Arten positive Anteile haben. Auf den freien Orbits bleibt der volle Singulettunterraum einer Repräsentantenliste verfügbar. Lässt man die endliche Spinmenge wachsen, folgt $z_F\downarrow z_*$. Damit ist auf geraden Flächenindizes die exakte Eingangs-Exponentenrate $-\log_2 z_*$ bewiesen, auch für die deklarierten zyklischen oder Diederinvarianten. Die reine Minimalspin-Ausgabedimension hat in diesen Fällen Exponent eins. Der kleinste mögliche Umfelddimensionsfaktor eines abstrakten deterministischen Kanals ist $\lceil D_{\rm in}/D_{\rm out}\rceil$; auf den Spin-null-Trägern genügt eine beliebige isometrische Einbettung in den Ausgaberaum mal rotationsinvariantes Umfeld. Seine asymptotische Rate ist folglich $-\log_2 z_*-1$ Bit pro Flächeneinheit. Diese Rate setzt die vollständige Modellfaser und das deklarierte Zählmaß voraus. Sie begründet weder eine native Punktidentifikation noch einen physikalisch ausführbaren Kanal.
+
+### Exakte Flächenfaser und r63-Normierung
+
+Erkundung. Die vorige Kapazitätsrate verwendet volle Irrep-Dimensionen $d_r=2j+1$ und ausschließlich die Spinarten mit $a(j)/a(1/2)=r\in\mathbb N$. Für einen Vergleich mit r63 müssen beide Änderungen getrennt werden. Setze $z=e^{-2\pi\gamma a(1/2)}$. Mit dem r63-Gewicht zwei, aber weiterhin nur auf der exakten Minimalspin-Flächenfaser, lautet die entsprechende Listennormierung $\sum_{r\in\mathrm{Pell}}2z^r=1$. Ihr Verhältnis zur Minimalspin-Normierung ist $-\log_2 z$. Die volle r63-Gleichung enthält dagegen zusätzlich alle positiven nichtganzzahligen Flächenquotienten $a(j)/a(1/2)$. Bei gleicher Gewichtung sind diese zusätzlichen Terme positiv, sodass ihre Nullstelle strikt kleiner und der r63-Normierungsquotient strikt größer ist.
+
+Der Unterschied zwischen exakter Faser und voller r63-Zählung besteht also schon bei gleichem Gewicht zwei. Die Rechnung über $d_r$ liefert eine Dimensionsrate für einen flächengleichen Kanal im Tensorproduktmodell. Sie darf nicht als Herleitung der Barbero--Immirzi-Normierung interpretiert werden. Für eine native Brücke müsste man die tatsächlich verwendete Flächenauflösung und das Zählmaß deklarieren. Insbesondere ist eine exakte Flächenfaser mit einer Fläche in einem endlichen Fenster nicht gleichzusetzen.
+
+### Festes Flächenfenster gewinnt den vollen Listenexponenten zurück
+
+Erkundung. Verwende geordnete Spinlisten mit Gewicht zwei je Punkt und Flächeneinheiten $r_j=a(j)/a(1/2)$. Sei $D_N(\delta)$ das gewichtete Zählmaß im Fenster $[N,N+\delta]$ für festes $\delta>0$ und ganzzahliges $N$. Setze $s_*$ durch $\sum_{j>0}2e^{-s_*r_j}=1$. Für $s>s_*$ ist die Summe der Boltzmanngewichte aller Listen eine konvergente geometrische Reihe mit Quotient $\sum_j2e^{-sr_j}<1$. Da jede Liste im Fenster Gewicht mindestens $e^{-s(N+\delta)}$ relativ zu ihrem Zählgewicht hat, folgt $\limsup N^{-1}\ln D_N(\delta)\le s_*$.
+
+Für die untere Schranke wähle eine endliche Spinmenge einschließlich $j=1/2$ und $j=1$ mit Normierung $s_F$ und Listenanteilen $p_j=2e^{-s_Fr_j}$. Wähle ganzzahlige Anzahlen nahe $Np_j/\sum_i p_i r_i$; der Flächenfehler ist beschränkt. Der Quotient $r_1=\sqrt{8/3}$ ist irrational. Endlich viele Vielfache von $r_1$ bilden modulo eins ein hinreichend feines Netz, sodass eine beschränkte Änderung der Spin-1-Anzahl den verbleibenden Flächenrest modulo eins in das Zielfenster legt. Eine weitere beschränkte Änderung der Minimalspinanzahl füllt den ganzzahligen Rest auf. Beide Anzahlen wachsen linear mit $N$, sodass die Änderungen bei großen $N$ zulässig sind. Die angepassten Listen behalten dieselben asymptotischen Anteile und ihre gewichtete Multinomialzahl hat nach Stirling Exponent $s_F N+o(N)$. Durch Vergrößern der Spinmenge folgt $s_F\uparrow s_*$.
+
+Damit gilt für jedes feste positive Fenster der volle Listenexponent $s_*$. In Minimalspin-Normierung ist dies genau die r63-Skalargleichung, sofern das Gewicht zwei und die geordnete Listenzählung vorausgesetzt werden. Beim exakten Fenster der Breite null gilt stattdessen der zuvor gefundene Pell-Exponent. Die Grenzwerte der Fensterbreite null und der großen Fläche sind in diesem Sinn nicht austauschbar. Diese Rechnung berücksichtigt keine zusätzliche Horizontprojektion und leitet weder die native Fensterbreite noch die T-Auswahl her.
+
+### Schrumpfende Flächenfenster mit magnetischer Neutralität
+
+Erkundung. Sei $N$ gerade und $\delta_N>0$ mit $\delta_N\to0$ und $N\delta_N\to\infty$. Im geordneten Modell mit zwei magnetischen Labels $m=\pm j$ pro Punkt bleibt der volle r63-Listenexponent auch unter der zusätzlichen U(1)-Bedingung $\sum m=0$ erhalten. Die obere Schranke folgt wie zuvor durch Weglassen der Neutralitätsbedingung.
+
+Für die untere Schranke fixiere eine endliche Spinmenge einschließlich $1/2$ und $1$. Runde die optimalen Anzahlen jeder Spinart auf gerade Zahlen. Der Flächenfehler bleibt beschränkt. Durch Änderungen um jeweils zwei Punkte kann man den Flächenrest modulo zwei mit dem irrationalen Quotienten $\alpha=\sqrt{8/3}$ korrigieren. Die benötigte Zahl der Änderungen ist $O(1/\delta_N)$. Hierzu liefert die elementare Dirichlet-Approximation für jedes große $Q$ einen gekürzten Bruch $p/q$ mit $1\le q\le Q$ und $|\alpha-p/q|\le1/(qQ)$. Weil $3p^2-8q^2$ eine von null verschiedene ganze Zahl ist, gilt zugleich $|\alpha-p/q|\ge C/q^2$ für eine feste Konstante $C>0$. Damit ist $q\ge CQ$. Die ersten $q$ Vielfachen von $\alpha$ unterscheiden sich auf dem Einheitskreis um höchstens $1/Q$ von den entsprechend permutierten Gitterpunkten der Schrittweite $1/q$. Ihr maximaler Abstand zu einem beliebigen Ziel ist damit $O(1/Q)$. Wähle $Q$ proportional zu $1/\delta_N$ und ziele auf die Fenstermitte modulo zwei. Danach passt eine Änderung der Minimalspinanzahl um ein gerades ganzzahliges Maß die Gesamtfläche an. Beide Änderungen sind $o(N)$ und lassen die asymptotischen Listenanteile bestehen.
+
+Auf jeder so gewonnenen Liste wähle für jede Spinart genau die Hälfte ihrer magnetischen Vorzeichen positiv. Dies erfüllt die globale Neutralität und liefert mindestens $\prod_j\binom{n_j}{n_j/2}$ zulässige Zuweisungen. Bei fester endlicher Artenzahl unterscheidet sich ihr Logarithmus von $(\sum_j n_j)\ln2$ nur um $O(\ln N)$. Stirling liefert daher denselben führenden Exponenten wie ohne Neutralität, und das Vergrößern der endlichen Artenmenge liefert den vollen r63-Wert. Die Bedingung $N\delta_N\to\infty$ ist hinreichend. Engere Fenster, volle SU(2)-Schließung und eine native T-Zugriffsregel werden dadurch nicht entschieden.
+
+### Schrumpfende Flächenfenster mit voller SU(2)-Schließung
+
+Erkundung. Auf dem geordneten Modellträger mit einem vollen Spin-$j$-Irrep pro Punkt sei $D_N^{\rm sing}(\delta_N)$ die Summe der globalen Singulettdimensionen im Flächenfenster $[N,N+\delta_N]$. Die Flächeneinheit ist wieder $a(1/2)$. Für gerade $N$, $\delta_N\to0$ und $N\delta_N\to\infty$ gilt
+
+$$
+\lim\frac1N\ln D_N^{\rm sing}(\delta_N)=s_{SU(2)},\qquad
+\sum_{j>0}(2j+1)e^{-s_{SU(2)}r_j}=1.
+$$
+
+Für die obere Schranke genügen die vollen Produktdimensionen. Die geometrische Listensumme konvergiert für jedes $s>s_{SU(2)}$. Für die untere Schranke fixiere eine endliche Spinmenge mit Minimalspin und Spin eins, wähle Listenanteile proportional zu $(2j+1)e^{-s_F r_j}$ bei abgeschnittener Normierung $s_F$, und verwende die gerade Rundung und Flächenkorrektur aus dem vorherigen Abschnitt. Sie ändert $o(N)$ Punkte. Für jede Spinart mit gerader Anzahl $n_j$ zerlege die Hälfte ihrer Faktoren in Irreps mit Multiplizitäten $m_s$. Die Singulettdimension der beiden Hälften ist $\sum_s m_s^2\ge(2j+1)^{n_j}/\sum_s(2s+1)^2$. Für festes $j$ und $s\le jn_j/2$ ist der Nenner polynomial in $N$. Das Produkt solcher Singuletts über endlich viele Spinarten liegt im vollen globalen Singulettsektor. Der Verlust gegenüber den Produktdimensionen ist daher nur polynomial, und die geordneten Listen liefern durch Stirling den Exponenten $s_F$. Vergrößern der Spinmenge ergibt die Behauptung.
+
+Der Exponent unterscheidet sich von der Zwei-Label-Normierung, weil bei jedem $j>1/2$ das lokale Gewicht $2j+1$ strikt größer als zwei ist. Die globale Singulettprojektion ändert in diesem Modell den führenden Exponenten der vollen Irrep-Zählung nicht. Sie kann daher die Differenz zu r63 nicht allein erklären. Die Rechnung behandelt keine native Horizonttheorie mit zusätzlichen Randbedingungen oder endlichem Niveau.
+
+### Umfeldkapazität bei Erhaltung eines Flächenfensters
+
+Erkundung. Ersetze die Forderung nach Erhaltung des exakten Flächeneigenwerts durch Erhaltung des Fensters $[N,N+\delta_N]$ mit geradem $N$, $\delta_N\to0$ und $N\delta_N\to\infty$. Ein reiner Minimalspinausgang in diesem Fenster hat für große $N$ genau $N$ Punkte, weil ihre dimensionslose Fläche ganzzahlig ist. Sowohl seine magnetisch neutrale Zwei-Label-Dimension als auch seine volle Singulettdimension wachsen wie $2^{N+o(N)}$. Der Eingangsexponent ist in den beiden vorigen Modellzählungen dagegen $s/\ln2$ Bit pro Flächeneinheit.
+
+Für einen abstrakten deterministischen Kanal auf dem jeweiligen Fensterträger gilt daher $\dim\mathcal H_{\rm Umfeld}\ge\lceil D_{\rm in}/D_{\rm out}\rceil$. Eine beliebige isometrische Einbettung erreicht diese Dimensionsgrenze, wenn keine weitere Dynamik oder Unterscheidung der exakten Flächenwerte verlangt wird. Im vollen Singulettmodell können die Eingangs- und Ausgabeträger als Spin-null-Räume behandelt werden. Die asymptotische Umfeldrate ist $s/\ln2-1$. Mit den r63-Normierungswerten ergeben sich etwa $0{,}86470$ Bit pro Minimalspin-Flächeneinheit für das U(1)-Zwei-Label-Modell und $1{,}15150$ für das volle SU(2)-Modell. Die Zahlen sind dimensionsbedingte Kanalraten unter den deklarierten Zählmaßen, keine zusätzliche BI-Herleitung.
+
+Für das volle Spinmodell ist diese Rate deutlich größer als $0{,}302498$ auf der einzelnen exakten Pell-Faser. Obwohl die Fensterbedingung für den Kanal schwächer ist, umfasst sein Eingangsraum exponentiell mehr Zustände. Falls die Dynamik den exakten Flächenwert statt nur des Fensters bewahrt, kann dieser Kanal die Eingaben mit nichtganzzahligen Flächenquotienten im Allgemeinen nicht auf den Minimalspinausgang abbilden. Der Nachweis eines nativen Fensterinstruments und seines Umfelds bleibt offen.
+
+### Flächenbilanz des Umfelds beim Fensterkanal
+
+Erkundung. Auf dem Eingangsfenster $[N,N+\delta_N]$ mit $0<\delta_N<1$ hat der reine Minimalspinausgang exakt Fläche $N$. Sei das Umfeld anfangs flächenneutral und die gemeinsame Flächenobservable im Ausgang additiv, $A_{\rm out}\otimes I+I\otimes A_E$. Eine isometrische Umsetzung, die den exakten Gesamtflächenoperator verschränkt, muss jeden Eingangssektor der Fläche $N+\epsilon$ in den Umfeld-Eigenraum der Fläche $\epsilon$ abbilden. Für seine Dimension gilt notwendig
+
+$$
+D_{\rm in}(N+\epsilon)\le D_{\rm out}(N)\,\dim\ker(A_E-\epsilon I).
+$$
+
+Umgekehrt reichen diese Dimensionsbedingungen für eine abstrakte flächenerhaltende Isometrie aus, wenn keine weiteren Symmetrien oder Lokalitätsbedingungen verlangt werden: Jeder Eingangssektor kann separat in sein orthogonales Produktbild eingebettet werden. Auf einem Fenster mit endlich vielen Eigenwerten ist daher die kleinste Umfelddimension bei frei wählbarem Umfeldspektrum $\sum_\epsilon\lceil D_{\rm in}(N+\epsilon)/D_{\rm out}(N)\rceil$. Dies ist stärker als die vorherige Gesamtdimensionsbedingung, die nur das Fenster erhielt.
+
+Hat das Umfeld selbst dasselbe nichtnegative gravitative Flächenspektrum mit kleinster positiver Stufe eins, kann es keinen Rest $0<\epsilon<1$ aufnehmen. Auch eine große interne Multiplizität bei Fläche null hilft dabei nicht. In der untersuchten Fensterfolge gibt es tatsächlich solche nichtganzzahligen Eingangseigenwerte: Der volle Fensterexponent ist größer als der der exakten Faser, und diese Faser ist der einzige ganzzahlige Flächenwert im Fenster. Ein exakter Kanal für die ganze Fensterfaser braucht somit einen Träger mit passenden kleinen Flächendifferenzen, eine andere Kompositionsregel für die Fläche oder einen veränderten sichtbaren Ausgang. Das Argument setzt den flächenneutralen Eingang des Umfelds und die additive Ausgangsfläche voraus. Ein Umfeld mit vorbeladener Fläche oder eine bloß grobe Erhaltung des Fensters liegen außerhalb des Ausschlusses.
+
+### Flächenreserve bei einem vorbeladenen Umfeld
+
+Erkundung. Zerlege jeden exakten Flächenwert in Minimalspineinheiten nach den quadratfreien Radikalen und bezeichne mit $c_3(X)$ den Beitrag aus dem Radikal $\sqrt3$, ausgedrückt in diesen Einheiten. Auf dem additiven gravitativen Spektrum ist $c_3(X)$ eine nichtnegative ganze Zahl mit $c_3(X)\le X$. Für einen scharf präparierten Umfeld-Eingang der Fläche $B$ und einen sichtbaren Minimalspinausgang der Fläche $N$ erzwingt exakte Gesamtflächenerhaltung
+
+$$
+c_3(B_{\rm out})=c_3(B)+c_3(A_{\rm in})-N.
+$$
+
+Folglich braucht der Vorrat mindestens $N-c_3(A_{\rm in})$ Einheiten der Minimalspinklasse, wenn diese Differenz positiv ist. Andere Radikalklassen können diesen Fehlbetrag wegen linearer Unabhängigkeit nicht ersetzen.
+
+Diese Bedingung kann auf den untersuchten Fensterfolgen extensiv sein. Es gibt von unten approximierende konvergente Brüche $p/q$ für $\alpha=a(1)/a(1/2)=\sqrt{8/3}$ mit $0<q\alpha-p<1/q$. Setze $N=2p$ und wähle $2q$ Spin-1-Punkte. Ihre Fläche liegt bei $N+O(1/N)$ oberhalb von $N$. Damit liegt sie für hinreichend große Glieder in jedem Fenster mit $N\delta_N\to\infty$. Die Belegung lässt wegen gerader Punktzahl ein Singulett zu und hat $c_3(A_{\rm in})=0$. Auf dieser Teilfolge verlangt ein Kanal für das ganze Fenster also $B\ge c_3(B)\ge N$. Eine subextensive scharfe Flächenreserve mit demselben additiven Spektrum genügt nicht.
+
+Umgekehrt ist eine vorbereitete Reserve aus $N$ Minimalspinpunkten formal hinreichend, wenn das Umfeld den vollen ursprünglichen Eingangsträger aufnehmen kann: Ein Registertausch gibt den präparierten Minimalspinzustand sichtbar aus und überträgt den gesamten ursprünglichen Zustand ins Umfeld. Er erhält die additive Gesamtfläche, realisiert aber eine Ersetzung mit vorgegebenem Minimalspinzustand. Die Rechnung setzt scharfe Reserve, gleiche Flächeneinheiten und additive Gesamtfläche voraus. Sie begründet weder eine native Flächenreserve noch eine T-Auswahl durch den Companion.
+
+### Kohärente und katalytische Flächenreserven
+
+Erkundung. Die quadratfreien Komponenten sind auf dem additiven Flächenspektrum eindeutig durch den exakten Gesamtwert bestimmt. Die Minimalspinkomponente des Gesamtsystems ist daher auf diesem Spektrum sowohl eine Funktion der Gesamtfläche als auch die Summe der entsprechenden lokalen Komponenten $C_3$. Eine exakte flächenerhaltende Isometrie erhält deshalb auch die Verteilung dieser Gesamtkomponente. Für einen sichtbaren Eingang aus reinen Spin-1-Punkten ist seine Komponente null; ein garantierter Minimalspinausgang mit Fläche $N$ trägt dagegen exakt die Komponente $N$. Da die Ausgangskomponente des Umfelds nichtnegativ ist, muss das Anfangsumfeld vollständig in Komponenten $c_3\ge N$ getragen sein. Das gilt auch für gemischte oder kohärente Reserven und impliziert bei endlichem Erwartungswert $\langle B\rangle\ge N$. Eine kleine Amplitude auf einer großen Reserve genügt für einen deterministischen Kanal nicht.
+
+Allgemeiner sinkt bei genauem Minimalspinausgang der Erwartungswert der Umfeldkomponente um $N-c_3(A_{\rm in})$ für einen scharfen Eingangseigenwert. Wenn diese Differenz positiv ist, kann das Umfeld nach einem deterministischen Übergang nicht denselben Randzustand zurückerhalten, selbst wenn es mit dem Ausgang korreliert sein darf. Bei reinem Spin-1-Eingang kostet jeder Durchlauf $N$ Einheiten dieser Komponente; wiederholte Verwendung ohne Auffüllung erfordert eine entsprechend größere Anfangsreserve. Bei einem selektiven Kanal mit scharfem Eingang ist die Erfolgswahrscheinlichkeit höchstens das Anfangsgewicht des Umfelds in Komponenten $c_3\ge N-c_3(A_{\rm in})$, sofern auch die Auslesung der Erfolgsflagge die Gesamtkomponente erhält. Die Aussage setzt additive Spektren derselben Radikalklassen und exakte Erhaltung voraus. Ein externes Umfeld mit anderem Spektrum oder eine reine Fenstererhaltung sind andere Modelle.
+
+### Annähernd zurückkehrende Flächenreserve
+
+Erkundung. Beim deterministischen exakten Übergang vom reinen Spin-1-Eingang zum Minimalspinausgang der Fläche $N$ ist die Verteilung der Umfeldkomponente nach dem Übergang die Anfangsverteilung um $N$ nach unten verschoben. Bezeichne mit $C\ge N$ die anfängliche Komponente und mit $\varepsilon$ den Totalvariationsabstand zwischen den Verteilungen von $C$ und $C-N$. Für die Ereignisse $C\ge lN$ gilt dann $\Pr(C\ge lN)-\Pr(C\ge(l+1)N)\le\varepsilon$. Da $\Pr(C\ge N)=1$, folgt $\Pr(C\ge lN)\ge\max(0,1-(l-1)\varepsilon)$. Aufsummieren ergibt
+
+$$
+\mathbb E C\ge N\sum_{j\ge0}\max(0,1-j\varepsilon)
+\ge \frac{N}{2\varepsilon}.
+$$
+
+Die zweite Ungleichung folgt aus dem Integral der fallenden linearen Funktion. Wenn der Spurabstand der beiden Umfeldzustände höchstens $\varepsilon$ ist, gilt dieselbe Schranke, weil die Komponentenmessung den Abstand nicht vergrößert. Der führende Faktor ist auf Verteilungsebene scharf: Gleichverteilung auf $N,2N,\ldots,LN$ hat Abstand $1/L$ nach Verschiebung und Erwartungswert $N(L+1)/2$. Dies belegt weder die Realisierbarkeit des gesamten Kanals mit dieser Verteilung noch Kohärenzerhalt in anderen Freiheitsgraden. Die Schranke betrifft exakte additive Flächenerhaltung und eine garantierte sichtbare Minimalspinausgabe.
+
+### Flächenladder als realisierbare Referenzreserve
+
+Erkundung. Fixiere einen reinen Spin-1-Singulettzustand $|I\rangle$ mit Fläche $N+\epsilon$ und einen reinen Minimalspin-Singulettzustand $|M\rangle$ der Fläche $N$. Verwende im Umfeld $L$ unterscheidbare Blockplätze und definiere $|E_j\rangle$ als Produkt aus $j$ Kopien von $|I\rangle$ auf den ersten Plätzen und $L-j$ Kopien von $|M\rangle$ auf den übrigen, für $0\le j\le L$. Die Zustände sind orthogonal und haben Fläche $LN+j\epsilon$. Die Vorschrift
+
+$$
+|I\rangle\otimes|E_j\rangle\longmapsto |M\rangle\otimes|E_{j+1}\rangle,
+\qquad 0\le j<L,
+$$
+
+erhält exakte Gesamtfläche und Gesamtspin null. Sie lässt sich durch bedingten Tausch mit dem nächsten Minimalspinblock realisieren, oder als Unitäre in jedem gemeinsamen Flächensektor ergänzen. Das Umfeld speichert die Blockreihenfolge. Ein abstrakter Tausch auf den angegebenen Trägern setzt keinen nativen Punktprozess voraus.
+
+Die gleichverteilte Mischung über $E_0,\ldots,E_{L-1}$ geht in die gleichverteilte Mischung über $E_1,\ldots,E_L$ über. Ihr vollständiger Spurabstand ist $1/L$, nicht nur der Abstand der Komponentenstatistik. Die anfängliche mittlere Minimalspinkomponente ist $N(L+1)/2$, womit die vorige Untergrenze im führenden Faktor erreicht wird. Eine reine kohärente Reserve ist ebenfalls möglich: Wähle die normierten Amplituden $a_j=\sqrt{2/(L+1)}\sin[\pi(j+1)/(L+1)]$ auf $E_0,\ldots,E_{L-1}$. Ihr Überlapp mit der um einen Platz verschobenen Reserve ist $\sum_{j=1}^{L-1}a_ja_{j-1}=\cos[\pi/(L+1)]$ aus der Eigenvektorgleichung des Pfadgraphen. Ihr Spurabstand ist daher $\sin[\pi/(L+1)]$, ebenfalls von Ordnung $1/L$. Der Aufbau gilt für einen fixierten Eingangsvektor und gibt einen bereits präparierten Minimalspinzustand aus. Er zeigt keine universelle kohärenzerhaltende Umwandlung der gesamten Fensterfaser und keine native Verfügbarkeit dieser Reserve.
+
+### Rückkehrgrenze bei universeller Ersetzung durch einen festen Zustand
+
+Erkundung. Die Flächenleiter ist auf einen fest vorgegebenen Eingangsvektor zugeschnitten. Eine strengere Aufgabe ist, zwei orthogonale Eingänge $|I_1\rangle,|I_2\rangle$ durch dieselbe gemeinsame Unitäre auf denselben reinen sichtbaren Minimalspinzustand $|M\rangle$ abzubilden, bei derselben anfänglichen Reserve $\sigma$. Die gemeinsamen Eingänge $|I_i\rangle\langle I_i|\otimes\sigma$ sind vollkommen unterscheidbar. Ihre unitären Ausgaben bleiben es. Weil der sichtbare Randzustand rein und in beiden Fällen identisch ist, faktorisiert jede Ausgabe als $|M\rangle\langle M|\otimes\sigma_i'$. Folglich haben die beiden Umfeldzustände Spurabstand eins. Aus der Dreiecksungleichung folgt
+
+$$
+\max_i D(\sigma_i',\sigma)\ge\tfrac12.
+$$
+
+Diese Grenze gilt unabhängig vom Flächenvorrat und auch für gemischte Reserven. Alle zurückbleibenden Register müssen dabei zum Umfeld gezählt werden. Sie ist mit der kleinen Rückkehrabweichung der Flächenleiter vereinbar, weil diese nur einen Eingang reproduziert. Wenn der sichtbare Ausgang verschiedene Minimalspinzustände tragen darf, kann er einen Teil der Eingangsinformation erhalten; die Konstante $1/2$ folgt dann nicht aus diesem Argument. Für die native OP1-Zählung müssen daher Ersetzung durch einen präparierten Zustand, ein informationshaltiger Minimalspinausgang und ein selektiver Ja-Zweig separat behandelt werden.
+
+### Rückkehrgrenze mit informationshaltigem Minimalspinausgang
+
+Erkundung. Sei $D$ die Eingangsdimension einer Flächenfaser, $d$ die Dimension des erlaubten sichtbaren Minimalspinausgangs und $|e\rangle$ eine reine Anfangsreserve. Die reversible gemeinsame Umsetzung bildet die $D$ orthogonalen Eingänge in den sichtbaren $d$-dimensionalen Raum mal Umfeld ab. Für den gleichverteilten Eingang ist der Gesamtzustand nach dem Übergang ein Rang-$D$-Projektor geteilt durch $D$. Die Wahrscheinlichkeit, die Reserve wieder im Anfangszustand zu finden, ist höchstens $d/D$, denn der entsprechende Projektor $I_{\rm sichtbar}\otimes|e\rangle\langle e|$ hat Rang $d$. Die binäre Messung dieses Projektors liefert für den Spurabstand der mittleren Ausgangsreserve vom Anfangszustand die untere Schranke $1-d/D$. Mindestens ein Eingang aus jeder orthonormalen Eingangsbasis hat daher einen mindestens ebenso großen Rückkehrfehler. Die Rechnung erlaubt beliebige Korrelationen zwischen sichtbarem Ausgang und Umfeld.
+
+Für eine anfänglich gleichverteilte gemischte Reserve auf einem endlichen Rang-$r$-Unterraum gilt dieselbe Schranke: Der gemeinsame Zustand ist ein Rang-$Dr$-Projektor geteilt durch $Dr$, und der Test auf dem ursprünglichen Reserve-Unterraum hat Rang $dr$. Allgemeiner kann man für eine gemischte Reserve mit Eigenwerten $\lambda_i$ die Summe der größten $dr$ Eigenwerte des gemeinsamen Eingangs, also der jeweils $D$-fach auftretenden Werte $\lambda_i/D$, als Rückkehrwahrscheinlichkeits-Obergrenze verwenden. Eine universelle Schranke $1-d/D$ für beliebige ungleich gewichtete gemischte Reserven folgt daraus nicht.
+
+Auf der Faser mit 15 Eingangssinguletts und 14 Minimalspin-Singuletts ist die Rückkehrabweichung bei reiner oder flacher Reserve mindestens $1/15$. Auf den großen Fasern mit exponentiell wachsendem Verhältnis $D/d$ nähert sich die Schranke eins. Das ist eine Informationsgrenze zusätzlich zur Flächenbilanz. Sie setzt deterministische Umwandlung auf dem gesamten Eingangsträger, gemeinsame reversible Entwicklung und die Einbeziehung aller Hilfsregister ins Umfeld voraus.
+
+### Entropiegrenze für beliebig gemischte Reserven
+
+Erkundung. Sei $D$ die Eingangsdimension, $d$ die sichtbare Ausgabedimension und $R$ die gesamte endliche Umfelddimension. Für den gleichverteilten Eingang und eine beliebige Anfangsreserve $\sigma$ hat der gemeinsame Zustand vor und nach der reversiblen Umsetzung Entropie $\log_2 D+S(\sigma)$. Aus der Subadditivität und der sichtbaren Dimension folgt für die Ausgangsreserve $\sigma'$ daher $S(\sigma')-S(\sigma)\ge\log_2(D/d)$.
+
+Sei der Spurabstand $D(\sigma',\sigma)\le\varepsilon\le1/2$ und $R\ge2$. Eine Messung in der Eigenbasis von $\sigma$ liefert zwei Verteilungen $p,q$ mit Totalvariation höchstens $\varepsilon$. Dabei ist $S(\sigma)=H(p)$ und $S(\sigma')\le H(q)$, da die Dephasierung die Entropie nicht verringert. Koppelt man die beiden klassischen Verteilungen so, dass ihre Ziehungen mit Wahrscheinlichkeit gleich ihrem Totalvariationsabstand $t$ verschieden sind, ist die bedingte Entropie der zweiten Ziehung gegeben die erste höchstens $h_2(t)+t\log_2(R-1)$. Das folgt aus dem binären Fehlereignis und den höchstens $R-1$ verbleibenden Möglichkeiten. Die Schranke wächst für $0\le t\le1/2$. Somit gilt notwendig
+
+$$
+\log_2(D/d)\le h_2(\varepsilon)+\varepsilon\log_2(R-1).
+$$
+
+Wenn jede Eingabe die Reserve mit Fehler höchstens $\varepsilon$ zurückgibt, gilt dies durch Konvexität auch für den gleichverteilten Eingang. Die Schranke erlaubt Korrelationen zwischen sichtbarem Ausgang und Umfeld. Sie zählt alle Hilfsregister in $R$ und ist unabhängig von der Flächenbilanz. Auf der vollständigen exakten Modellfaser mit $\log_2(D/d)=(0{,}302498+o(1))N$ muss daher bei festem Rückkehrfehler $1$ Prozent die Umgebungskapazität mindestens $(30{,}2498+o(1))N$ Bits betragen. Die Abschätzung gibt eine notwendige Kapazität, keine Konstruktion und keine native QAM-Identifikation.
+
+### Gemischte Informationsleiter: Rückkehr im Mittel und pro Eingang
+
+Erkundung. Betrachte den reinen Dimensionsvergleich mit $D=dm$ und ganzzahligem $m\ge2$. Zerlege den Eingang in einen sichtbaren Index $x$ mit $d$ Werten und einen auszulagernden Index $y$ mit $m$ Werten. Das Umfeld besitzt orthogonale Stufen $E_j$ der Dimension $m^j$ für $0\le j\le L$. Auf der Stufe $j<L$ bildet die Isometrie $(x,y,w)\mapsto(x,wy)$ ab, wobei $w$ ein Wort der Länge $j$ und $wy$ das um $y$ ergänzte Wort ist. Sie lässt sich nach Einbettung von Ein- und Ausgängen in einen gemeinsamen Träger reversibel ergänzen. Die Reserve verteilt ihr Gewicht gleichmäßig über die ersten $L$ Stufen und ist innerhalb jeder Stufe maximal gemischt.
+
+Beim gleichverteilten Eingang ist der neue Buchstabe gleichverteilt und unabhängig vom alten Wort. Die Ausgangsreserve ist daher innerhalb jeder Stufe wieder maximal gemischt, mit Stufengewicht auf $1,\ldots,L$ statt $0,\ldots,L-1$. Ihr Spurabstand zur Anfangsreserve ist exakt $1/L$. Zugleich gilt $\log_2 R=L\log_2 m+O(1)$ für $R=\sum_{j=0}^L m^j$. Die Entropieuntergrenze wird also für den gemittelten Eingang im führenden Term erreicht.
+
+Für einen festen Basisbuchstaben $y$ bleiben auf jeder überlappenden Stufe hingegen nur Wörter mit diesem Endbuchstaben belegt. Der Spurabstand beträgt dann $1-(L-1)/(Lm)$ und konvergiert bei großem $L$ gegen $1-1/m$. Eine kleine mittlere Rückkehrabweichung belegt daher keine gleichmäßige Rückkehr für jeden Eingang. Diese Konstruktion behandelt nur Informationsdimensionen. Sie setzt keine zusätzliche Flächenerhaltung voraus. Auf einem einzelnen exakten Flächensektor könnte das Umfeld im Modell als flächenneutraler Informationsträger angesetzt werden; seine native QAM-Verfügbarkeit ist damit nicht begründet.
+
+### Rechte Phase aus den tatsächlichen Punktspins
+
+Erkundung. Ersetze auf einer geraden zyklischen Spinliste die rechten Hilfsdoublets durch dieselben Spins $j_p$, die links die Fläche tragen. Die maximalen Gruppenspins sind dann $a=\sum_{p\ {\rm gerade}}j_p$ und $b=\sum_{p\ {\rm ungerade}}j_p$. Im antiferromagnetischen Zweigruppenmodell entsteht eine eindeutige rechte Singulettlinie genau dann, wenn $a=b$. Eine Punktoperation, die eine solche Liste erhält und die Gruppen bewahrt, wirkt auf der rechten Grundlinie trivial. Eine gruppentauschende Operation wirkt dagegen mit $(-1)^{2a}$: Die maximalen Gruppenträger sind durch ihre höchsten Gewichtszustände kanonisch bis auf eine gemeinsame Phase identifizierbar, und der Tausch im Singulett zweier Spins $a$ hat dieses Vorzeichen. Dieses Kriterium muss je Liste beziehungsweise je Orbit geprüft werden. Die Zahl der Punkte allein bestimmt die Phase nicht.
+
+Auf der exakten Faser mit acht Minimalspin-Flächeneinheiten bleiben nach linker Singulettprojektion nur die reine Acht-Punkt-Belegung und die Belegung aus zwei Spin-$3$-Punkten. Für die reine Belegung ist $a=b=2$. Ihre rechte Phase ist positiv und die linke Diederprojektion liefert drei Zustände. Für die Spin-$3$-Belegung ist $a=b=3$. Sowohl das linke als auch das rechte Paarsingulett sind unter Tausch symmetrisch, weil $(-1)^{2\cdot3}=+1$. Der gemischte Eingangsraum hat damit vier Zustände gegenüber drei reinen Minimalspinausgängen. Mit einem rechten Hilfsdoublet pro Punkt war der rechte Tausch beim Spin-$3$-Paar dagegen negativ, sodass sein linker Singulettzustand aus dem gemeinsamen invarianten Raum fiel.
+
+Damit hängt die Dimensionsgleichheit auf der kleinen Faser direkt am gewählten rechten Träger. Der tatsächliche Spinträger ergibt im Modell wieder einen Bedarf von mindestens zwei Umfeldzuständen. Die derzeitige QAM-Option für Hilfsdoubletts bildet diesen spinabhängigen Charakter nicht ab. Die Rechnung setzt eine zyklische Ordnung, den maximalen Zweigruppen-Grundzustand und die gemeinsame Punktprojektion voraus; sie leitet diese Randstruktur nicht nativ her.
+
+### Asymptotische Kapazität mit tatsächlichen rechten Spins
+
+Erkundung. Die endlichen Zählungen mit spinabhängigem rechtem Charakter sind kleiner als der ungefilterte Eingang. Für den führenden Exponenten kann man dennoch dieselbe untere Schranke konstruieren. Fixiere eine endliche Pell-Spinmenge mit mindestens zwei Arten und die optimalen Listenanteile für ihre abgeschnittene Normierung. Wähle gerade Anzahlen $m_r$ nahe diesen Anteilen und fülle einen beschränkten geraden Flächenrest mit Minimalspinpunkten auf. Verteile jede Spinart mit genau $m_r/2$ Exemplaren auf jede der beiden alternierenden Gruppen. Damit stimmen die rechten maximalen Gruppenspins automatisch überein.
+
+Für Listenlänge $L=\sum_r m_r$ zählt diese Teilfamilie
+
+$$
+\left[\frac{(L/2)!}{\prod_r(m_r/2)!}\right]^2
+$$
+
+Listen. Ihr Logarithmus unterscheidet sich vom Logarithmus der unbeschränkten Multinomialzahl bei fester Artenzahl nur um $O(\log N)$. Nichtfreie zyklische und Diederorbits bleiben vernachlässigbar, weil selbst ihre unbeschränkten Fixmengen nur den halben Listenexponenten erreichen. Auf einem freien Orbit lässt sich jeder linke Singulettvektor zusammen mit der rechten Grundlinie konsistent fortsetzen; es gibt keinen Stabilisator, der eine zusätzliche Phasenbedingung erzwingt. Die linke Singulett-Untergrenze pro Liste bleibt durch die gerade Anzahl je Spinart unverändert.
+
+Damit erreicht diese balancierte Teilfamilie denselben Eingangs-Exponenten wie die volle Modellfaser, wenn die endliche Spinmenge anschließend vergrößert wird. Die frühere Obergrenze durch die vollen Produktdimensionen gilt weiterhin, da jede zulässige Liste genau eine rechte Grundlinie beiträgt. Im Modell mit tatsächlichen rechten Spins und zyklischer oder Diederprojektion bleibt die asymptotische Umfeldrate somit $-\log_2 z_*-1\approx0{,}302498$ Bit pro Flächeneinheit. Die kleineren endlichen Dimensionen ändern den führenden Exponenten nicht. Das Ergebnis setzt die deklarierte Ordnung und die Auswahl der rechten Grundlinie voraus; weitere native Einschränkungen können die Rate ändern.
+
+### Fensterkanal mit tatsächlicher rechter Spinbalance
+
+Erkundung. Die Fenster-Untergrenze mit voller linker SU(2)-Schließung lässt sich mit der tatsächlichen rechten Spinbalance verbinden. Auf geraden Flächenindizes und bei $N\delta_N\to\infty$ liefert die vorige Flächenkorrektur gerade Anzahlen je Spinart. Verteile jede Art anschließend hälftig auf beide alternierenden Gruppen. Bei fester endlicher Artenzahl ändert dies den Logarithmus der Listenmultiplizität nur um $O(\log N)$. Die linke Singulett-Untergrenze bleibt pro Liste erhalten. Nichtfreie zyklische und Diederorbits sind exponentiell seltener als die balancierten Listen, nach derselben Fixmengenabschätzung wie auf der exakten Faser. Auf freien Orbits können die linken Singuletts mit der rechten Grundlinie unabhängig vom Tauschcharakter fortgesetzt werden. Der volle Fensterexponent bleibt daher $s_{SU(2)}$; die obere Schranke folgt unverändert aus den Produktdimensionen. Da der projizierte reine Minimalspinausgang weiterhin Exponent $\ln2$ pro Punkt hat, beträgt die Umfeldrate für Fenstererhaltung auch in diesem Modell rund $1{,}15150$ Bit pro Flächeneinheit.
+
+Auch der flächenarithmetische Gegenfall für exakte Erhaltung bleibt zulässig. Die homogene Belegung aus $2q$ Spin-1-Punkten hat automatisch gleiche rechte Gruppenspins $q$. Ihre rechte Grundlinie trägt unter Gruppentausch das Zeichen $(-1)^{2q}=1$. Links existiert ein vollständig permutationssymmetrisches Singulett: Im symmetrischen Tensorraum der Spin-1-Vektordarstellung wird es durch die nichtverschwindende Potenz des invarianten quadratischen Polynoms $(x_1^2+x_2^2+x_3^2)^q$ repräsentiert. Dieser Eingang überlebt daher auch die Diederprojektion. Seine Fläche liegt entlang der zuvor konstruierten Teilfolge knapp oberhalb von $N$, und seine Minimalspinkomponente bleibt null. Der Ausschluss für ein flächenneutrales Umfeld mit Mindeststufe eins sowie die extensive Untergrenze für einen Vorrat bleiben für diesen Gegenfall bestehen.
+
+Der Befund gilt für geordnete Listen mit voller linker Singulettschließung, alternierender Zweiteilung und ausgewählter rechter Grundlinie. Er setzt keine native Gültigkeit dieser Randbedingungen voraus.
+
+### Erfolgswahrscheinlichkeit eines Ja-Zweigs mit internem Umfeld
+
+Erkundung. Sei $D$ die Eingangsdimension und $d$ die sichtbare Minimalspin-Ausgabedimension. Ein Ja-Zweig mit höchstens $r$ Krausoperatoren $K_i$ hat Effekt $E=\sum_i K_i^\dagger K_i\le I$. Da jeder $K_i$ Rang höchstens $d$ hat, gilt $\operatorname{rang}E\le rd$. Für den gleichverteilten Eingang folgt $p_{\rm Ja}=\operatorname{tr}E/D\le\min(1,rd/D)$. Die Schranke ist im abstrakten Dimensionsmodell scharf: Teile eine Eingangsbasis in höchstens $r$ disjunkte Gruppen von jeweils höchstens $d$ Vektoren, bilde jede Gruppe isometrisch in den sichtbaren Träger ab und führe ungenutzte Basisvektoren in den Nein-Zweig. Der interne Ja-Index ist dabei ein eigener Umfeldfreiheitsgrad, auch wenn der sichtbare Zeiger nur ein Bit ausgibt.
+
+Für jede fest positive Erfolgswahrscheinlichkeit ist folglich dieselbe führende Umfeldrate nötig wie für deterministischen Erfolg, sofern $D/d$ exponentiell wächst. Dies gilt auch im Modell mit tatsächlicher rechter Balance und Diederprojektion, mit der jeweils zuvor hergeleiteten exakten Faser- oder Fensterrate. Für exakte additive Flächenerhaltung mit einem anfänglich neutralen Umfeld der Mindeststufe eins kommt im schmalen Fenster eine weitere Grenze hinzu: Der Ja-Effekt kann nur auf dem exakten Eingangssektor der Fläche $N$ tragen. Die übrigen Flächenreste haben keinen zulässigen Umfeld-Eigenraum. Unabhängig von $r$ ist der Erfolg bei gleichverteilter Fenstereingabe deshalb höchstens $D_{\rm exakt}(N)/D_{\rm Fenster}(N)$. Im vollen SU(2)-Modell mit tatsächlicher rechter Balance fällt dieser Quotient exponentiell mit Rate $s_{SU(2)}/\ln2+\log_2 z_*\approx0{,}84900$ Bit pro Flächeneinheit.
+
+Diese Aussagen betreffen die gleichverteilten Modellträger und die deklarierten Flächeneinheiten. Auf einem anders präparierten Eingang ist die Besetzung der exakten Faser gesondert anzugeben. Eine bloße Ja-Nein-Ausgabe begründet keinen kleinen internen Hilfsträger und keine native T-Selektionsregel.
+
+### Wechsel des ersten Flächenrests zwischen acht und zehn Einheiten
+
+Erkundung. Im Fenster der Breite $999/1000$ mit Diederprojektion und tatsächlicher rechter Spinbalance liefert die exakte MML-Zählung für die Zielflächen $N=2,4,6,8,10$ die Eingangsdimensionen $1,2,8,48,418$. Bei zwei Einheiten gibt es in diesem Fenster keinen positiven Rest. Bei vier, sechs und acht ist der erste positive Rest $2\sqrt5-4$. Bei zehn sinkt er auf $(2\sqrt6+\sqrt{105}-15)/3\approx0{,}0486434$.
+
+Der erste Sektor bei zehn Einheiten lässt sich unabhängig identifizieren. Seine quadratfreien Beiträge erzwingen einen Spin-1-Punkt und einen Spin-$5/2$-Punkt sowie fünf Minimalspin-Flächeneinheiten aus der Pell-Klasse. Letztere lassen sich entweder mit fünf Minimalspinpunkten oder mit einem Spin-$3$-Punkt und einem Minimalspinpunkt füllen. Die erste Variante hat ungerade Punktzahl und entfällt im balancierten Modell. Die zweite hat die zwei Gruppen $(3,1/2)$ und $(5/2,1)$ mit Spin-Summe $7/2$. Die acht balancierten Anordnungen bilden einen freien Diederorbit. Links haben die beiden Paar-Kopplungen genau zwei gemeinsame Spinwerte, $5/2$ und $7/2$. Somit gibt es zwei linke Singuletts pro Repräsentantenliste und zwei Zustände im projizierten ersten Restsektor. Der Befund zeigt einen konkreten Wechsel der verantwortlichen Belegung, begründet aber kein allgemeines Gesetz für den Abstand zum nächsten Flächenwert.
+
+### Flächenreste der Ordnung 1/N auf allen großen geraden Zielflächen
+
+Erkundung. Definiere positive ganze Zahlen $(x_t,y_t)$ durch $x_0+y_0\sqrt6=2+\sqrt6$ und Multiplikation mit $(5+2\sqrt6)^t$. Dann gilt $x_t^2-6y_t^2=-2$. Setze $P_t=4x_t$, $Q_t=6y_t$. Die Fläche von $Q_t$ Spin-1-Punkten ist in Minimalspineinheiten
+
+$$
+Q_t\sqrt{8/3}=P_t+\epsilon_t,\qquad
+\epsilon_t=\frac{8}{y_t\sqrt6+x_t}>0.
+$$
+
+Die $P_t$ wachsen mit beschränktem Verhältnis aufeinanderfolgender Glieder und $\epsilon_t=O(1/P_t)$. Für jede hinreichend große gerade Zielfläche $N$ wähle das größte $P_t\le N/2$. Dann ist $P_t$ proportional zu $N$ bis auf feste Faktoren. Ergänze die $Q_t$ Spin-1-Punkte um $N-P_t$ Minimalspinpunkte. Beide Anzahlen sind gerade und wachsen linear mit $N$. Die Fläche der Belegung ist genau $N+\epsilon_t$ mit $0<\epsilon_t\le C/N$ für eine feste Konstante $C$.
+
+Verteile jede Spinart hälftig auf beide alternierenden Gruppen. Das erfüllt die tatsächliche rechte Spinbalance. Wegen der geraden Anzahlen hat der linke Tensorträger mindestens ein Singulett, etwa durch Paarung innerhalb jeder Spinart. Die beiden Arten haben Anteile, die gleichmäßig von null und eins entfernt sind. Daher existieren für große $N$ balancierte Listen mit freiem Diederorbit: Die Zahl balancierter Listen hat den vollen binomialen Exponenten, und alle nichttrivialen Fixmengen zusammen haben höchstens den halben Exponenten bis auf polynomiale Faktoren. Auf einem freien Orbit lässt sich ein linker Singulettvektor zusammen mit seiner rechten Grundlinie invariant fortsetzen.
+
+Damit liegt der erste positive Rest im deklarierten Modell für alle hinreichend großen geraden $N$ höchstens bei $C/N$, auch mit tatsächlicher rechter Spinbalance und Diederprojektion. Das ist eine obere Schranke für den Abstand, keine untere Schranke und keine Aussage über die volle Zählrate in Fenstern der Breite $C/N$. Anders als der reine Spin-1-Gegenfall enthält diese ergänzte Belegung bereits Minimalspinfläche; sie liefert hier den Abstandsnachweis. Native Gültigkeit der Randprojektion bleibt offen.
+
+### Bereits Fenster der Ordnung 1/N können den Exponenten erhöhen
+
+Erkundung. Im Modell mit tatsächlicher rechter Balance und Diederprojektion sei $s_P=-\ln z_*$ der exakte Pell-Exponent. Er kann durch eine endliche Pell-Spinmenge mit Exponent $s_F$ beliebig genau von unten angenähert werden. Fixiere zunächst eine kleine positive Zahl $\eta$ und wähle aus der vorigen Pell-Folge das größte $P_t\le\eta N$. Mit einer festen Konstante $R$ für das maximale Verhältnis aufeinanderfolgender $P_t$ liegt $u=P_t/N$ für alle großen geraden $N$ in $[\eta/R,\eta]$. Die $Q_t$ Spin-1-Punkte tragen Fläche $P_t+\epsilon_t$ mit $0<\epsilon_t\le C_\eta/N$. Fülle die übrige Fläche $N-P_t$ mit der endlichen optimalen Pell-Mischung und geraden Anzahlen jeder Art. Rundungsreste werden durch Minimalspinpunkte ergänzt. Damit liegt jede so erzeugte Liste im Fenster $[N,N+C_\eta/N]$.
+
+Sei $\ell_F>0$ die mittlere Punktzahl pro Pell-Flächeneinheit der gewählten endlichen Mischung und $\alpha=a(1)/a(1/2)$. Die Listenzahlen der beiden Teile sind asymptotisch $L_P=\ell_F(1-u)N+O(1)$ und $Q_t=(u/\alpha)N+O(1)$. Ihre frei wählbare Verzahnung liefert zusätzlich den Binomialfaktor $\binom{L_P+Q_t}{Q_t}$. Die linke Singulettdimension der geraden Spin-1-Anzahl ist bis auf polynomiale Faktoren $3^{Q_t}$, nach der früheren Halbierungsabschätzung. Gleichmäßige Verteilung jeder Art auf beide alternierenden Gruppen kostet nur polynomiale Faktoren. Freie Diederorbits erhalten den Exponenten, da Fixmengen gegenüber der balancierten Listenzahl exponentiell kleiner bleiben.
+
+Der resultierende untere Exponent pro Flächeneinheit ist damit
+
+$$
+(1-u)s_F+\frac{u}{\alpha}\ln3+
+\left[\ell_F(1-u)+\frac{u}{\alpha}\right]
+h\!\left(\frac{u/\alpha}{\ell_F(1-u)+u/\alpha}\right).
+$$
+
+Der letzte Term ist $(u/\alpha)\ln(1/u)+O(u)$ für kleine $u$. Die Konstante kann für hinreichend große endliche Pell-Mengen einheitlich gewählt werden: Ihre mittlere Fläche pro Punkt bleibt beschränkt, da die Gewichte $d_r z_F^r$ einen gemeinsamen exponentiellen Schwanz besitzen, und somit ist $\ell_F$ von null weg beschränkt. Wähle daher zuerst $\eta$ klein genug, dass der zusätzliche Verzahnungsterm die linearen Verluste im ganzen Intervall $[\eta/R,\eta]$ überwiegt. Wähle danach $s_F$ nahe genug an $s_P$. Damit gibt es feste $C_\eta$ und $\Delta>0$, für die der untere Fensterexponent mindestens $s_P+\Delta$ beträgt. Die Rechnung liefert keinen vollen Fensterexponenten bei Breite $C_\eta/N$ und keine native Fensterauflösung. Sie zeigt jedoch, dass bei dieser Breitenordnung bereits exponentiell relevante neue Zustände auftreten können.
+
+### Annäherung an den vollen Exponenten bei Breite C/N
+
+Erkundung. Fixiere eine endliche Spinmenge $F$ mit Spin $1/2$ und Spin eins und voller lokaler Irrep-Dimension $d_j=2j+1$. Sei $s_F$ durch $\sum_{j\in F}d_j e^{-s_F r_j}=1$ gegeben und $p_j=d_j e^{-s_F r_j}$. Für das Fenster $[N,N+C/N]$ erfordert die frühere dyadische Netzabschätzung der irrationalen Spin-1-Fläche Änderungen um höchstens $O(N/C)$ Punkte. Zusammen mit der ganzzahligen Minimalspinkorrektur erhält man bei großen geraden $N$ eine zulässige gerade Zusammensetzung mit Listenanteilen $q_j=p_j+O_F(1/C)+O_F(1/N)$. Für hinreichend großes festes $C$ bleiben alle Anteile positiv. Rechte Balance, linke Singulettbildung und der Diederquotient kosten bei dieser festen Artenmenge nur polynomiale Faktoren.
+
+Der Exponent pro Flächeneinheit der korrigierten Zusammensetzung lautet
+
+$$
+\frac{H(q)+\sum_j q_j\ln d_j}{\sum_j q_j r_j}
+=s_F-\frac{D(q\|p)}{\sum_j q_j r_j}.
+$$
+
+Für $q$ in einer festen kleinen Umgebung des strikt positiven Vektors $p$ ist $D(q\|p)\le\sum_j(q_j-p_j)^2/p_j$. Das folgt aus $\ln x\le x-1$ und $\sum_j(q_j-p_j)=0$. Der Exponentenverlust ist somit höchstens $O_F(C^{-2})$, im unteren Grenzwert über gerade $N$. Anders als eine lineare Fehlerabschätzung nutzt dies die Optimalität der ursprünglichen Zusammensetzung.
+
+Da sich $s_F$ dem vollen $s_{SU(2)}$ beliebig nähert, folgt: Zu jedem gewünschten Exponentenabstand $\varepsilon>0$ gibt es ein festes endliches $C$, sodass die untere Zählrate im Fenster $C/N$ mindestens $s_{SU(2)}-\varepsilon$ beträgt. Die obere Schranke bleibt $s_{SU(2)}$. Die Konstante der quadratischen Abschätzung hängt von $F$ ab. Für ein vorgegebenes endliches $C$ folgt daraus weder Gleichheit mit dem vollen Exponenten noch eine explizite native Fensterwahl.
+
+### Drei irrationale Spinflächen erschließen den vollen Exponenten bei C/N
+
+Erkundung. In Minimalspin-Flächeneinheiten liefern $j=1/2,1,3/2,9$ die Werte $1,2\sqrt6/3,\sqrt5,2\sqrt{30}$. Daher entspricht jedes Element von $12\mathbb Z[\sqrt6,\sqrt5]$ einer ganzzahligen Änderung durch gerade Punktanzahlen dieser vier Arten. Die Koeffizienten im Basisvektor $(1,\sqrt6,\sqrt5,\sqrt{30})$ bestimmen die vier Änderungen bis auf feste Faktoren.
+
+Für $Q>1$ bilde ein Produkt $u$ aus Potenzen der drei positiven Einheiten $5-2\sqrt6$, $9-4\sqrt5$ und $11-2\sqrt{30}$. Wähle jeden Exponenten so, dass sein Faktor in der ursprünglichen Einbettung zwischen $c_i/Q$ und $1/Q$ liegt, mit festem $c_i>0$. Jede der drei anderen reellen Einbettungen kehrt genau zwei dieser Einheiten um, weil ihre jeweilige Norm eins ist. Somit hat $u$ in der ursprünglichen Einbettung Größe $O(Q^{-3})$, und in den anderen Einbettungen Größe $O(Q)$. Die vier Elemente $12u$ mal die Basisvektoren bilden eine reelle Basis im Raum der vier Einbettungen. Für einen vorgegebenen beschränkten Flächenrest $x$ schreibe $(x,0,0,0)$ in dieser Basis und runde die vier reellen Koeffizienten auf ganze Zahlen. Der resultierende Gittervektor hat in der ursprünglichen Einbettung Fehler $O(Q^{-3})$ und in den übrigen Koordinaten Größe $O(Q)$. Die inverse feste Einbettungsmatrix zeigt, dass seine vier ganzzahligen Koeffizienten in der ursprünglichen Radikalbasis ebenfalls $O(Q)$ sind. Er wird somit durch $O(Q)$ Punktänderungen realisiert.
+
+Für ein Zielfenster $[N,N+\delta_N]$ runde zunächst die optimale Zusammensetzung einer festen endlichen Spinmenge, welche die vier Korrekturspins enthält, auf gerade Anzahlen. Der ursprüngliche Flächenfehler ist beschränkt. Ziele bei der Gitterkorrektur auf die Fenstermitte und wähle $Q$ als hinreichend großes konstantes Vielfaches von $\delta_N^{-1/3}$. Falls $N^3\delta_N\to\infty$, sind die Punktänderungen $o(N)$. Alle vier Korrekturarten haben positive asymptotische Anteile und die Änderungen sind daher zulässig. Rechte Balance, linke Singulettbildung und Diederprojektion kosten wie zuvor nur polynomiale Faktoren. Vergrößern der endlichen Spinmenge ergibt zusammen mit der bekannten oberen Schranke den vollen SU(2)-Listenexponenten auf dieser Fensterfolge.
+
+Insbesondere genügt jetzt jede feste Breite $C/N$ mit $C>0$. Die vorige Annäherung für großes $C$ war eine schwächere Abschätzung, da sie nur eine irrationale Korrekturart verwendete. Die Bedingung $N^3\delta_N\to\infty$ ist hinreichend; sie bestimmt keine scharfe Schwelle. Die Rechnung betrifft den deklarierten geordneten Modellträger und leitet keine native Horizontauflösung her.
+
+### Voller Exponent für jede feste inverse Potenz der Fläche
+
+Erkundung. Die vorige Einheitenkonstruktion verallgemeinert sich auf $K=\mathbb Q(\sqrt{p_1},\ldots,\sqrt{p_m})$ mit verschiedenen Primzahlen $p_i\ne3$ und Grad $D=2^m$. Schreibe $a_S=\prod_{i\in S}p_i$ für jede Teilmenge. Für jedes nichtleere $S$ liefert eine positive Pell-Lösung $d_S^2-3a_S r_S^2=1$ einen verfügbaren Spin $(d_S-1)/2$ mit Flächenquotient $r_S\sqrt{a_S}$. Die Minimalspinart liefert die Basisrichtung eins. Somit lässt sich jedes Element eines festen ganzzahligen Vielfachen der Radikalbasis durch gerade Änderungen der entsprechenden Punktanzahlen realisieren.
+
+Für jedes nichtleere $S$ wähle in der quadratischen Teilstruktur eine positive Norm-eins-Einheit $u_S<1$, beispielsweise den Kehrwert einer positiven Pell-Einheit für $a_S$. Für $Q>1$ wähle ihre Potenz so, dass sie in der ursprünglichen Einbettung Größenordnung $Q^{-1}$ hat. Das Produkt aller $D-1$ Potenzen hat dort Größe $O(Q^{-(D-1)})$. Jede andere Einbettung invertiert genau $D/2$ Faktoren und lässt $D/2-1$ Faktoren unverändert, weil ein nichttrivialer Vorzeichencharakter auf genau der Hälfte aller Teilmengen negativ ist. Daher hat das Produkt in jeder anderen Einbettung Größe $O(Q)$. Rundung in der mit diesem Produkt multiplizierten Radikalbasis liefert wie zuvor eine Flächenkorrektur mit Fehler $O(Q^{-(D-1)})$ und $O(Q)$ Punktänderungen.
+
+Für jedes feste $p>0$ wähle $D-1>p$ und ein Fenster $\delta_N=C N^{-p}$ mit festem $C>0$. Dann genügt $Q=O(N^{p/(D-1)})=o(N)$. Die endliche Startmischung muss alle Korrekturspins mit positiven Anteilen enthalten. Sie kann für den Exponenten anschließend um weitere Spinarten erweitert werden. Gerade Anzahlen, rechte Balance, linke Singuletts und freie Diederorbits funktionieren unverändert. Somit erreicht jedes solche Fenster den vollen SU(2)-Exponenten des deklarierten Modells. Auch eine breitere Fensterfolge mit einer festen polynomialen Untergrenze hat denselben Exponenten, sofern ihre Breite beschränkt bleibt. Die Konstruktion verwendet für jedes $p$ eine andere feste endliche Menge von Korrekturspins. Sie entscheidet keine superpolynomial schrumpfenden Fenster und keine native T-Auflösung.
+
+### Superpolynomiale Fenster und notwendiges Wachstum des Spinträgers
+
+Erkundung. Bei festem Spin-Cutoff liegen alle Flächenquotienten in einem festen multiquadratischen Körper $K$ vom Grad $D$. Es gibt einen gemeinsamen ganzzahligen Nenner $M$, sodass $M$ mal jeder Flächenquotient und die Zielfläche algebraisch ganzzahlig sind. Für einen von null verschiedenen Rest $\epsilon=A-N$ einer Liste in $[N,N+1]$ ist die Körpernorm von $M\epsilon$ eine von null verschiedene ganze Zahl. Jede andere Einbettung ändert bei den beteiligten Radikalen nur Vorzeichen. Daher hat dort $M\epsilon$ Betrag höchstens $M(2N+1)$. Aus dem Normprodukt folgt $|\epsilon|\ge c_K N^{-(D-1)}$. Für jedes superpolynomial schrumpfende Fenster bleibt bei festem Cutoff folglich schließlich nur die exakte Faser. Das Argument gilt bereits vor den Punkt- und Singulettprojektionen.
+
+Auf dem unbeschränkten Modellträger existiert dagegen mindestens eine superpolynomial schrumpfende Fensterfolge mit vollem Exponenten. Schreibe $S_N(\delta)=N^{-1}\ln D_N(\delta)$ für die gezählte Dieder-Singulettfaser mit tatsächlicher rechter Balance. Für jedes feste ganze $p\ge1$ wurde $S_N(N^{-p})\to s_{SU(2)}$ auf geraden $N$ gezeigt. Wähle streng wachsende Schwellen $N_p$, sodass für alle geraden $N\ge N_p$ die Rate bei Breite $N^{-p}$ mindestens $s_{SU(2)}-1/p$ beträgt. Definiere $\delta_N=N^{-p}$ für $N_p\le N<N_{p+1}$. Dann geht $p$ gegen unendlich, die Fenster sind schließlich schmaler als jede feste inverse Potenz und ihre Rate konvergiert dennoch gegen $s_{SU(2)}$. Die universelle obere Schranke stammt aus der vollen Listensumme.
+
+Dies ist ein Existenzbeweis ohne effektive Angabe der Schwellen. Er sagt nicht, dass eine vorgegebene superpolynomiale Folge wie $e^{-\sqrt N}$ den vollen Exponenten hat. Zusammen mit der Normschranke zeigt er, dass ein solcher Effekt tatsächlich unbeschränkt wachsende Spinarten benötigt. Die Folgerung betrifft den deklarierten Modellträger und keine native Horizontauflösung.
+
+### Auflösungsskala auf einem festen vollständigen Radikalträger
+
+Erkundung. Fixiere die vier Spinarten $F=\{1/2,1,3/2,9\}$. Ihre Flächenquotienten bilden, bis auf rationale Faktoren, die vollständige Basis von $\mathbb Q(\sqrt6,\sqrt5)$ mit Grad vier. Für alle geraden $N$ und beschränkte Fenster gilt damit eine zweiseitige Einordnung. Wenn $N^3\delta_N\to0$, enthält das Fenster schließlich keinen positiven Flächenrest: Die Normabschätzung gilt gleichmäßig für alle Listen dieses festen Trägers. Auf der exakten Faser bleibt von den vier Arten nur Spin $1/2$, da die drei anderen Radikalkoeffizienten positiv sind und nicht verschwinden können. Mit linker SU(2)-Schließung, rechter Balance und Diederprojektion ist der führende Exponent folglich $\ln2$.
+
+Wenn dagegen $N^3\delta_N\to\infty$, liefert die Einheitenkorrektur mit $Q\asymp\delta_N^{-1/3}$ den vollen Exponenten der vier Arten, $s_F$ mit $\sum_{j\in F}(2j+1)e^{-s_F r_j}=1$. Da alle vier Arten im optimalen Ansatz positive Anteile besitzen, sind die Korrekturen $o(N)$ zulässig. Es gilt $s_F>\ln2$, denn bei $s=\ln2$ trägt die Minimalspinart bereits eins bei und die drei weiteren Beiträge sind positiv. Somit ist die Ordnung $N^{-3}$ für diesen konkreten festen Träger die Skala, die beide bewiesenen Regime trennt. Feste Breiten $C/N^3$ im Übergangsbereich werden durch diese Argumente nicht vollständig klassifiziert.
+
+Allgemeiner gelten dieselben beiden Aussagen mit $D-1$ für eine feste Spinmenge in einem multiquadratischen Körper vom Grad $D$, sofern die Menge genügend Spinflächen für die gesamte Radikalbasis enthält. Die Untergrenze aus der Norm benötigt diese Vollständigkeit nicht. Deshalb kann man aus einem Spin-Cutoff allein die untere Abstandsschranke ableiten, aber für eine passende obere Konstruktion muss die tatsächlich verfügbare Basis geprüft werden. Die Rechnung behandelt die deklarierte Modellauswahl und keine native T-Auflösung.
+
+### Konkrete Grenzen im kritischen Fenster C/N³
+
+Erkundung. Auf dem Vier-Arten-Träger schreibe die Fläche als $A=n_0+x+y+z$, wobei $x,y,z\ge0$ die Beiträge proportional zu $\sqrt6,\sqrt5,\sqrt{30}$ sind. Für $\epsilon=A-N>0$ ist $3\epsilon$ algebraisch ganzzahlig. Die drei übrigen Einbettungen von $\epsilon$ sind $\epsilon-2(x+y)$, $\epsilon-2(x+z)$ und $\epsilon-2(y+z)$. Setze $A\in[N,N+C/N^3]$. Weil $|\epsilon-2t|\le\epsilon+2t$ für $t\ge0$, ist das Produkt der Beträge dieser drei Einbettungen nach dem arithmetisch-geometrischen Mittel höchstens $(\epsilon+4A/3)^3$. Die Norm des von null verschiedenen $3\epsilon$ hat Betrag mindestens eins. Damit folgt
+
+$$
+\epsilon\ge\frac{1}{81(\epsilon+4A/3)^3}.
+$$
+
+Für festes $C<1/192$ enthält das Fenster $[N,N+C/N^3]$ daher für große $N$ nur die exakte Minimalspinfaser. Bei geraden Anzahlen aller vier Spinarten und geradem $N$ ist sogar $3\epsilon/2$ algebraisch ganzzahlig, und dieselbe Rechnung schließt innerhalb dieser Teilfamilie $C<1/12$ aus. Die zweite Schranke wird nicht auf alle rechts balancierten Listen übertragen, da Balance keine gerade Anzahl jeder Art erzwingt.
+
+In der anderen Richtung liefert die Einheitenkorrektur bei großem festem $C$ mit $Q=O(N C^{-1/3})$ Spinanteile mit Abweichung $O(C^{-1/3})$ vom optimalen Vier-Arten-Vektor. Die relative Entropierechnung aus dem inversen Fenster ergibt deshalb eine untere Exponentenrate $s_F-O(C^{-2/3})$, sofern $C$ groß genug ist, um alle Anzahlen positiv zu halten. Rechte Balance und Diederprojektion kosten weiterhin nur polynomiale Faktoren. Damit sind ein konkretes exaktes Regime bei kleinen Vorfaktoren und eine quantitative Annäherung an den vollen Exponenten bei großen Vorfaktoren gezeigt. Weder die scharfe Vorfaktorschwelle noch die Gleichheit mit $s_F$ bei einem endlichen festen $C$ folgt daraus.
+
+### Fester kritischer Vorfaktor erzwingt einen Exponentenverlust auf einer Teilfolge
+
+Erkundung. Fixiere den Vier-Arten-Träger und $C>0$. Betrachte alle geraden Ziele $N$ in $[X,2X]$ mit Fenstern der Breite $C/N^3$. Für zwei verschiedene Reste $\epsilon,\epsilon'$ in diesen Fenstern ist $3(\epsilon-\epsilon')$ algebraisch ganzzahlig. Jede ihrer drei konjugierten Differenzen hat Betrag $O(X)$, gleichmäßig über die Listen: Konjugierte Flächen haben wegen positiver Originalbeiträge Betrag höchstens die Originalfläche, und die Subtraktion der ganzzahligen Zielfläche kostet höchstens weitere $2X$. Die Norm liefert daher $|\epsilon-\epsilon'|\ge c X^{-3}$ mit festem $c>0$ für alle großen $X$. Da sämtliche Reste im Intervall $[0,C X^{-3}]$ liegen, treten in diesem ganzen Zielblock höchstens $1+\lfloor C/c\rfloor$ verschiedene Reste auf.
+
+Ein fixer Rest legt wegen der linearen Unabhängigkeit von $1,\sqrt6,\sqrt5,\sqrt{30}$ die Anzahl jeder der drei Nichtminimalspinarten eindeutig fest. Nur die Minimalspinanzahl kann sich mit $N$ ändern. Schreibe $\nu_1>0$ für die optimale Anzahl der Spin-1-Punkte pro Flächeneinheit in der Vier-Arten-Zählung. Für eine feste Spin-1-Anzahl $n_1$ kann $|n_1/N-\nu_1|<\eta$ unter $X\le N\le2X$ nur auf einem Intervall der Länge $O(\eta X)$ gelten, mit Konstante abhängig von $\nu_1$. Wähle $\eta>0$ so klein, dass die endlich vielen Intervalle zusammen weniger als die Hälfte des Zielblocks abdecken. Dann gibt es in jedem großen Block einen positiven Anteil gerader Ziele, bei denen jede zugelassene Zusammensetzung um mindestens $\eta$ von der optimalen Spin-1-Dichte abweicht.
+
+Auf diesen Zielen liegt der Exponent der vollen Produktzählung bereits strikt unter $s_F$. Tatsächlich ist die Rate einer Zusammensetzung mit Listenanteilen $q$ gleich $s_F-D(q\|p)/\sum_j q_jr_j$ bis auf $o(1)$; das einzige Maximum liegt bei $q=p$. Auf der kompakten Menge mit Spin-1-Dichteabstand mindestens $\eta$ ist die Differenz daher gleichmäßig positiv. Die Zahl möglicher Zusammensetzungen ist polynomial und ändert diese obere Rate nicht. Linke Singulettschließung, rechte Balance und Diederprojektion können die Zählung nur weiter verringern.
+
+Folglich kann kein festes endliches $C$ beim kritischen Fenster $C/N^3$ den vollen Vier-Arten-Exponenten als Grenzwert über alle geraden Ziele liefern. Eine Teilfolge mit vollem Exponenten wird dadurch nicht ausgeschlossen. Das Resultat gilt für den festen Vier-Arten-Träger; weitere zugelassene Spinarten verändern das Normargument und können die Skala verschieben.
+
+### Größenordnung der Exponentenlücke im kritischen Fenster
+
+Erkundung. Schreibe $\nu_j=p_j/\sum_i p_i r_i$ für die optimale Anzahl der Spinart $j$ pro Flächeneinheit im Vier-Arten-Modell. Nenne eine Liste bei Ziel $N$ nah am Optimum, wenn $|n_j/N-\nu_j|<\eta$ für alle vier Arten. Sei $C$ hinreichend groß, aber fest, und setze $h=aC^{-1/3}$ mit einer kleinen, von $C$ unabhängigen Konstante $a>0$. Teile $[X,2X]$ in volle Teilintervalle der Länge $hX$. Wähle $\eta=\kappa h$ mit einer kleinen konstanten Zahl $\kappa>0$.
+
+Für zwei nahe optimale Listen in demselben Teilintervall unterscheiden sich die Anzahlen jeder Spinart um höchstens $\nu_j hX+4\eta X=O(hX)$. Auch die Zielflächen unterscheiden sich um höchstens $hX$. Deshalb haben die drei nichtursprünglichen Einbettungen der Restdifferenz Betrag höchstens $B hX$ mit einer festen Konstante $B$, wenn $\kappa\le1$. Die ursprüngliche Differenz ist höchstens $CX^{-3}$. Wäre die Restdifferenz ungleich null, hätte die algebraisch ganzzahlige dreifache Restdifferenz Norm mindestens eins. Andererseits ist ihr Normbetrag höchstens $81 B^3 C h^3=81 B^3 a^3<1$ für hinreichend kleines $a$. Damit haben alle nahe optimalen Listen desselben Teilintervalls denselben Rest und folglich dieselbe Spin-1-Anzahl.
+
+Diese feste Anzahl ist nur auf einem Teilstück der Länge $O(\eta X)$ mit der optimalen Spin-1-Dichte verträglich. Für hinreichend kleines festes $\kappa$ lässt dies mindestens die Hälfte der geraden Ziele jedes vollen Teilintervalls ohne nahe optimale Liste, bis auf Rundung an den Enden. Auf diesen Zielen ist die Entropielücke mindestens von Ordnung $\eta^2$: Für Listenanteile $q$ gilt $D(q\|p)\ge\tfrac12\sum_j(q_j-p_j)^2$, denn die Hesse-Matrix von $\sum_j q_j\ln q_j$ hat im Inneren Diagonaleinträge $1/q_j\ge1$, und die Abschätzung setzt sich stetig bis zum Rand fort. Die Abbildung von Listenanteilen auf Flächendichten $q_j/\sum_i q_i r_i$ ist auf dem endlichen Träger gleichmäßig Lipschitz. Der zusätzliche Unterschied zwischen $A$ und $N$ ist vernachlässigbar. Die Ableitung der Rate aus der relativen Entropie ergibt damit einen Verlust mindestens $c C^{-2/3}$ für eine feste Konstante $c>0$, bis auf $o(1)$ für $X\to\infty$. Die polynomial vielen Zusammensetzungen ändern diese Rate nicht.
+
+Zusammen mit der konstruktiven unteren Rate $s_F-O(C^{-2/3})$ für alle großen geraden Ziele hat der Verlust im unteren Grenzwert als Funktion großer fester Vorfaktoren $C$ genau die Ordnung $C^{-2/3}$. Dies bestimmt keine exakte Konstante oder obere Teilfolgenrate. Es gilt für den deklarierten Vier-Arten-Träger und seine Fensterzählung, nicht als native T-Flächenauflösung.
+
+### Kritische Exponentenlücke auf vollständigen multiquadratischen Trägern
+
+Erkundung. Fixiere eine endliche Spinmenge mit Minimalspin, deren Flächenquotienten im multiquadratischen Körper $K$ vom Grad $D>1$ liegen. Setze zusätzlich voraus, dass die Menge für jede Radikalbasisrichtung mindestens eine Spinart mit einem positiven rationalen Vielfachen dieser Richtung enthält. Sei $s_F$ der volle Listenexponent dieser Menge. Im Fenster $C/N^{D-1}$ liefert die Einheitenkorrektur bei großem festem $C$ höchstens $O_F(N C^{-1/(D-1)})$ Änderungen. Damit beträgt der Verlust der unteren Grenzrate höchstens $O_F(C^{-2/(D-1)})$, durch den quadratischen Entropieverlust um den strikt positiven optimalen Listenvektor. Linke Singulettschließung, rechte Balance und Diederprojektion kosten für die konstruierten Listen nur polynomiale Faktoren.
+
+Für die Gegenrichtung zerlege jeden großen Zielblock $[X,2X]$ in Intervalle der Länge $hX$ mit $h=a C^{-1/(D-1)}$. Innerhalb eines Intervalls haben nahe optimale Listen, deren Spinanzahldichten höchstens $\eta=\kappa h$ vom Optimum abweichen, konjugierte Restdifferenzen $O_F(hX)$. Der ursprüngliche Restunterschied ist höchstens $CX^{-(D-1)}$. Nach Multiplikation mit einem festen gemeinsamen Nenner ist das Normprodukt höchstens eine feste Konstante mal $Ch^{D-1}$. Wähle $a$ klein genug, dass dieser Wert kleiner als eins ist. Damit können nahe optimale Listen in demselben Intervall nur einen gemeinsamen Rest haben.
+
+Bei mehreren Spinarten mit demselben Radikal legt der Rest nicht mehr deren einzelne Anzahlen fest. Er legt aber die gewichtete Summe der Anzahlen innerhalb jeder nichttrivialen Radikalklasse fest. Mindestens eine solche Klasse hat im Optimum positive Dichte. Ihre feste gewichtete Summe kann nur auf einem Teilstück der Länge $O_F(\eta X)$ nahe an der optimalen Dichte liegen. Mit kleinem $\kappa$ bleibt auf einem positiven Anteil der Ziele ein Dichteabstand der Ordnung $h$. Die relative Entropie liefert dort einen Verlust mindestens $\Omega_F(h^2)$. Die polynomial vielen Zusammensetzungen ändern den Exponenten nicht.
+
+Damit beträgt der Verlust der unteren Grenzrate im kritischen Fenster auf einem solchen festen Träger $\Theta_F(C^{-2/(D-1)})$ für große feste Vorfaktoren. Die Vollständigkeit der Radikalrichtungen wird für die konstruktive Seite gebraucht. Die obere Begrenzung durch das Normargument benötigt sie nicht. Das Gesetz beschreibt den unteren Grenzwert auf dem deklarierten Modellträger und bestimmt keine native T-Auflösung.
