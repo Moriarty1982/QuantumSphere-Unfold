@@ -742,3 +742,191 @@ Alles ohne `sorry`, in CI gebaut (`lean-build.yml`).
 **Qiskit-Simulator für QAM-Modelle.** Das optionale Modul `qam.simulation` kodiert endliche Zustandsräume mit expliziten Frame- und Basislabels. Schaltungen entwickeln den Zustand oder beschreiben einen vorgeschlagenen Frameübergang mit deklarierter Zielbasis. Diagonale Auslesungen gruppieren die Basiswahrscheinlichkeiten nach Messwert. Das Flächenbeispiel vergleicht additive und gemischte Auslesung auf demselben Zustand.
 
 **Qiskit simulator for QAM models.** The optional `qam.simulation` module encodes finite state spaces with explicit frame and basis labels. Circuits evolve a state or represent a proposed frame transition with a declared target basis. Diagonal readouts group basis probabilities by measurement outcome. The area example compares additive and mixed readouts on the same state.
+
+**Informationsbedarf der gemischten Flächenauslesung.** Zwei Moden mit gleicher additiver Fläche können verschiedene Werte von $|2m_1+m_2|$ haben. Auf der additiven Faser $s=|m_1|+|m_2|$ erfordert exakte klassische Dekodierung deshalb mindestens $s+1$ Zusatzsymbole. Der Betrag des erhaltenen Flusses ist selbst ein hinreichendes Ausleselabel.
+
+**Information required by the mixed area readout.** Modes with the same additive area can have different values of $|2m_1+m_2|$. On the additive fiber $s=|m_1|+|m_2|$, exact classical decoding therefore requires at least $s+1$ auxiliary symbols. The magnitude of the conserved flux is itself a sufficient readout label.
+
+**Qiskit-Flusszeiger.** Auf der additiven Faser $s=1$ schreibt ein CNOT das Sektorlabel $n-1$ auf ein Zeigerqubit. Beide Moden liefern dieselbe additive Fläche, aber verschiedene scharfe Zeigerwerte. Die Simulation reproduziert auch die vollständige Korrelation in der gleichgewichteten Überlagerung.
+
+**Qiskit flux pointer.** On the additive fiber $s=1$, a CNOT writes the sector label $n-1$ to a pointer qubit. Both modes give the same additive area and distinct sharp pointer values. The simulation also reproduces their perfect correlation in an equal-weight superposition.
+
+**Betragszeiger und Kohärenz.** Im Ausschnitt $|n|=1$ liefert der Qiskit-Betragszeiger denselben Flächenwert mit oder ohne zusätzlichen Vorzeichenrekord. Ein Hadamard-Rückweg trennt die Fälle: Ohne Vorzeichenrekord ist das Interferenzbit sicher null, mit ihm gleichverteilt.
+
+**Magnitude pointer and coherence.** In the $|n|=1$ truncation, the Qiskit magnitude pointer gives the same area with or without a sign record. A Hadamard return distinguishes the cases: The interference bit is certainly zero without the sign record and uniformly distributed with it.
+
+**Zugang zur Vorzeichenphase.** Operationen, die den Randfluss $n$ erhalten, können die Phase zwischen $+n$ und $-n$ allein am Rand nicht auslesen. Ein Referenzkanal könnte die Phase im festen Gesamtflusssektor sichtbar machen, sofern eine Kopplung zwei Flusseinheiten zwischen Rand und Referenz austauschen darf.
+
+**Access to the sign phase.** Operations conserving the boundary flux $n$ cannot read the phase between $+n$ and $-n$ on the boundary alone. A reference channel could reveal that phase in a fixed total flux sector if an admissible coupling exchanges two units of flux between the boundary and the reference.
+
+**Relationaler Kompensatorport.** Die phasensensitive Portstruktur aus r30 liefert ein Modell für einen gemeinsamen Rand-Referenz-Port. Ein einzelner Port ergibt im festen Gesamtflusssektor null stets Wahrscheinlichkeit $1/2$. Der gemeinsame Austauschport unterscheidet dort symmetrische und antisymmetrische Überlagerungen. Die native Zuordnung der Doublets und die Zulassung des gemeinsamen Ports bleiben offen.
+
+**Relational compensator port.** The phase-sensitive port structure from r30 provides a model for a joint boundary-reference port. A single port gives probability $1/2$ in the zero-total-flux sector. The joint exchange port distinguishes symmetric and antisymmetric superpositions there. The native identification of the doublets and admissibility of the joint port remain open.
+
+**Austauschanteil in r27.** Bei versuchsweiser Zuordnung der r27-Z-Achse zum Flussvorzeichen enthält die vorhandene Zweikopien-Observable im Gesamtflusssektor null den gesuchten Austausch. Eine gemeinsame Phasenmittelung entfernt die gesamtflussändernden Terme auf dem vollen Doubletprodukt. Die native Achsenzuordnung und eine kohärente Präparation des Gesamtsektors bleiben zu begründen.
+
+**Exchange component in r27.** If the r27 Z axis is identified with the flux sign, the existing two-copy observable contains the required exchange in the zero-total-flux sector. A common phase average removes the total-flux-changing terms on the full doublet product. The native axis identification and coherent preparation of the total sector remain open.
+
+**Kohärente Gesamtflussauswahl im Modell.** Ein gemeinsames Paritätsbit wählt den Nullsektor mit Wahrscheinlichkeit $1/2$ aus und erhält dort die Austauschinterferenz. Werden auch die lokalen Vorzeichen gespeichert, sinkt die bedingte Wahrscheinlichkeit des positiven Austauschports von eins auf $1/2$. Die Simulation setzt die Zuordnung von Vorzeichendoublets und Randfluss voraus.
+
+**Coherent total-flux selection in the model.** A shared parity bit selects the zero sector with probability $1/2$ and preserves exchange interference there. Recording the local signs as well lowers the conditional probability of the positive exchange port from one to $1/2$. The simulation assumes the identification of sign doublets with boundary flux.
+
+**Orbit-Parität und Gesamtfluss.** Auf den zwei Vorzeichendoublets wählt der gerade Orbit-Projektor für den Modellindex $j=(n+r)/2$ genau den Nullsektor aus. Beide gegenläufigen Zustände benötigen getrennte interne Labels, die der Zeiger gemeinsam behandelt. Auf einem größeren Flussbereich erfasst dieselbe Parität auch Gesamtflüsse $\pm4,\pm8,\ldots$. Die native Indexzuordnung bleibt offen.
+
+**Orbit parity and total flux.** On two sign doublets, the even orbit projector with model index $j=(n+r)/2$ selects exactly the zero sector. The opposing-sign states require distinct internal labels that the pointer treats identically. On a larger flux range, the same parity also selects total fluxes $\pm4,\pm8,\ldots$. The native index identification remains open.
+
+**Gemeinsamer Phasenzeiger.** Ein Zeiger für $j\bmod L$ verallgemeinert die Orbit-Parität auf dem Modellindex $j=(n+r)/2$. Bei $|j|<L$ wählt der Zeigerausgang null genau den Gesamtfluss null und erhält die Kohärenz innerhalb dieses Sektors. Auf dem unbeschränkten Gitter bleiben Mehrdeutigkeiten für jedes feste $L$.
+
+**Common phase pointer.** A pointer for $j\bmod L$ generalizes orbit parity on the model index $j=(n+r)/2$. For $|j|<L$, pointer outcome zero selects precisely zero total flux and preserves coherence within that sector. On the unbounded lattice, aliases remain for every fixed $L$.
+
+**Grenze von Orbit-Shift und Parität.** Beide Operationen kommutieren mit dem Zweiershift. Ein daraus gebauter gemeinsamer Zeiger gibt bei den Orbit-Indizes null und zwei dieselbe Ausgangsstatistik. Ein Modulo-Zeiger mit $L>2$ braucht eine zusätzliche Operation, etwa eine Diagonalphase des Gesamtflusses.
+
+**Limit of orbit shift and parity.** Both operations commute with the double shift. A common pointer built from them has the same output statistics at orbit indices zero and two. A modulo pointer with $L>2$ requires another operation, such as a diagonal phase of total flux.
+
+**Relationaler Orbit-Vergleich.** Ein gemeinsamer Gleichheitszeiger wäre unter gleichzeitiger Translation invariant. Mit scharfem Referenzindex null wählt er den Systemindex null aus. Bei unscharfer Referenz ist die Akzeptanz bei Index $j$ gleich dem Referenzgewicht $p_j$. Die getrennten Shift- und Paritätsoperationen liefern den Gleichheitsvergleich allein nicht.
+
+**Relational orbit comparison.** A joint equality pointer would be invariant under simultaneous translation. A sharp reference at index zero selects system index zero. With an uncertain reference, acceptance at index $j$ equals its reference weight $p_j$. The separate shift and parity operations alone do not supply the equality comparison.
+
+**Gleichheitszeiger aus kontrollierten Shifts.** Zwei kohärent kontrollierte Orbit-Shifts berechnen die Differenz von System- und Referenzindex in einem Arbeitsregister. Nach einem binären Nulltest löschen die inversen Shifts die Differenz wieder. Der Zeiger speichert nur Gleichheit. Der Aufbau setzt kontrollierte Shift-Potenzen und einen Nulltest voraus.
+
+**Equality pointer from controlled shifts.** Two coherently controlled orbit shifts compute the difference of the system and reference indices in a work register. After a binary zero test, the inverse shifts erase that difference. The pointer retains only equality. This construction requires controlled shift powers and a zero test.
+
+**Orbit-Vergleich über Referenzkopien.** Ein symmetrischer Projektor auf dem Systemindex und $k$ scharfen Referenzkopien akzeptiert gleiche Indizes sicher und verschiedene mit Wahrscheinlichkeit $1/(k+1)$. Bei endlichem $k$ liefert er einen näherungsweisen Vergleich. Die interne Flussaufteilung muss für den Kohärenzerhalt von der Registerpermutation getrennt bleiben.
+
+**Orbit comparison using reference copies.** A symmetric projector on the system index and $k$ sharp reference copies accepts equal indices with certainty and different ones with probability $1/(k+1)$. At finite $k$ this gives an approximate comparison. To preserve coherence, the internal flux allocation must be kept separate from register permutations.
+
+**Grenze des basisunabhängigen Kopienvergleichs.** Sichere Akzeptanz gleicher Zustände in jeder Indexbasis erzwingt Akzeptanz des gesamten symmetrischen Unterraums. Für einen orthogonalen Systemzustand und $k$ identische Referenzkopien ist die Falschakzeptanz deshalb mindestens $1/(k+1)$. Der Symmetrieprojektor erreicht diese Schranke.
+
+**Limit of basis-independent copy comparison.** Certain acceptance of equal states in every index basis forces acceptance of the full symmetric subspace. For an orthogonal system state and $k$ identical reference copies the false acceptance probability is therefore at least $1/(k+1)$. The symmetric projector attains this bound.
+
+**Relativer Shift und Indexphase.** Die Spektralstatistik des relativen Shifts ist für alle Index-Basispaare gleichverteilt und erkennt Gleichheit nicht. Das Produkt entgegengesetzter diagonaler Indexphasen trägt dagegen den Indexunterschied als Eigenphase. Sein Eins-Sektor ist auf dem zyklischen Orbit der Gleichheitssektor.
+
+**Relative shift and index phase.** The spectral statistics of the relative shift are uniform for every index basis pair and cannot detect equality. Opposite diagonal index phases instead encode the index difference as an eigenphase. Their unit-eigenvalue sector is the equality sector on the cyclic orbit.
+
+**r11-Stufenphase und Orbit-Zeiger.** Ein unitäres Shift-Phase-Paar mit Phasenschritt $30^\circ$ verlangt mindestens zwölf orthogonale Indexsektoren. Die r11-Bloch-Doublet-Darstellung kann das allein nicht realisieren. Eine Anwendung als gemeinsamer Randflusszeiger benötigt einen separaten Indexträger und eine begründete Kopplung.
+
+**r11 stage phase and orbit pointer.** A unitary shift-phase pair with a $30^\circ$ phase step requires at least twelve orthogonal index sectors. The r11 Bloch doublet alone cannot realize it. A joint boundary-flux pointer needs a separate index carrier and a justified coupling.
+
+**Zusammengesetzter Zwölferindex.** Diagonale Charaktere modulo drei und vier auf demselben Indexträger ergeben gemeinsam einen Charakter modulo zwölf. Der Modellträger kann als Produkt eines Dreier- und Viererregisters organisiert werden. Der endgültige Nullzeiger bleibt binär. Die native Zuordnung beider Phasen zum selben Randindex ist offen.
+
+**Composite twelve-sector index.** Diagonal characters modulo three and four on the same index carrier combine into a character modulo twelve. The model carrier can use a product of three- and four-state registers. The final zero pointer remains binary. The native identification of both phases with the same boundary index is open.
+
+**r11-Rotation als Kanal oder kontrollierte Phase.** Die $30^\circ$-Rotationen nach $j$ und $j+6$ Schritten unterscheiden sich durch ein globales Minuszeichen und geben denselben Rotationskanal. Ein kohärent kontrollierter Zugriff könnte dieses Zeichen als Zeigerphase sichtbar machen. Dafür müsste der gemeinsame Randindex die Rotationspotenz steuern.
+
+**r11 rotation as a channel or a controlled phase.** The $30^\circ$ rotations after $j$ and $j+6$ steps differ by a global minus sign and give the same rotation channel. Coherent control could reveal this sign as a pointer phase. This requires the joint boundary index to control the rotation power.
+
+**Gemeinsamer Zeiger mit lokalen Kopplungen.** Zwei gleich starke kontrollierte Phasen am selben Zeiger addieren sich zur Phase des Gesamtflusses. Bei einer Abweichung $\delta$ der beiden Kopplungswinkel sinkt nach Ignorieren des Zeigers die Vorzeichenkohärenz im Nullsektor um den Faktor $|\cos\delta|$.
+
+**Common pointer with local couplings.** Two equally strong controlled phases on the same pointer add to the total-flux phase. If the two coupling angles differ by $\delta$, discarding the pointer reduces the zero-sector sign coherence by a factor of $|\cos\delta|$.
+
+**Qiskit-Abgleich der lokalen Pulse.** Die Zweizustandskodierung trennt $j=0$ und $j=6$ bei gleichen Pulsen sicher. Im Nullsektor ergibt der feste Interferenzport bei Winkeldifferenz $\delta$ die Wahrscheinlichkeit $(1+\cos^2\delta)/2$. Die phasenoptimierte Sichtbarkeit beträgt $|\cos\delta|$.
+
+**Qiskit check of the local pulses.** The two-state encoding separates $j=0$ and $j=6$ with certainty for equal pulses. In the zero sector the fixed interference port has probability $(1+\cos^2\delta)/2$ at angle mismatch $\delta$. Phase-optimized visibility is $|\cos\delta|$.
+
+**Qiskit-Zwölferzeiger.** Ein Zeiger mit zwölf besetzten Basisstufen akzeptiert in der Simulation genau den Rest null modulo zwölf. Die Flussbelegungen sind feste Schaltungsparameter.
+
+**Qiskit modulo-12 pointer.** A pointer with twelve populated basis levels accepts exactly residue zero modulo twelve in the simulation. Flux configurations are fixed circuit parameters.
+
+**Kohärenter Qiskit-Zwölferzeiger.** Zwei Flussqubits steuern die lokalen Phasen. Die Rückrechnung löscht den Arbeitszeiger und lässt das binäre Nullbit zurück. Der akzeptierte Zweig zeigt die volle Austauschinterferenz für die beiden gegenläufigen Flusspaare.
+
+**Coherent Qiskit modulo-12 pointer.** Two flux qubits control the local phases. Uncomputation resets the work pointer and retains the binary zero bit. The accepted branch exhibits full exchange interference for the opposing flux pairs.
+
+**Flussphase aus quadratischer Drift.** Ein kontrollierter Shift mit quadratischer Drift, Rückshift und Gegenevolution erzeugt eine lineare Flussphase. Der lokale Shift benötigt während des Pulses einen Ausgleich, falls Gesamtflusserhaltung für jeden Zwischenschritt gilt. Der direkte flusserhaltende Austausch erzeugt bei gleichen quadratischen Driften eine Differenzphase.
+
+**Flux phase from quadratic drift.** A controlled shift, quadratic drift, reverse shift and reverse evolution generate a linear flux phase. A local shift needs compensation if total flux must be conserved at each step. Direct flux-conserving exchange with equal quadratic drifts generates a difference phase.
+
+**Flusserhaltender Pufferzeiger.** Ein Puffer kann gleichzeitig je eine Flusseinheit an Rand und Referenz abgeben. Bei gleichen quadratischen Driftkoeffizienten und scharfem Pufferfluss ergibt der Rückshift mit Gegenevolution eine Phase des gemeinsamen Rand-Referenz-Flusses. Der Gesamtfluss aller drei Kanäle bleibt auch in den Zwischenschritten erhalten.
+
+**Flux-conserving buffer pointer.** A buffer can transfer one flux unit each to the boundary and reference. With equal quadratic drift coefficients and a sharp buffer flux, reverse transfer and reverse evolution yield a phase of the joint boundary-reference flux. Total flux across the three channels is conserved throughout.
+
+**Pufferzeiger mit Vorwärtsdrift.** Driftet der verschobene und der unverschobene Zeigerzweig gleich lange, liefert ihre relative Phase den Summenzeiger ohne inverse Drift. Die gemeinsame Drift bleibt auf dem Flussregister und ist für die beiden gegenläufigen Paare bei gleichen Koeffizienten global.
+
+**Buffer pointer with forward evolution.** Equal forward drift times in the shifted and unshifted pointer branches supply the sum phase without inverse drift. The common drift remains on the flux register and is global for the two opposing pairs at equal coefficients.
+
+**Grenze des Zweikanal-Transfers.** Bei einer festen positiv semidefiniten quadratischen Drift kann ein gesamtflusserhaltender Transfer keinen reinen linearen Summengenerator liefern. Das gilt auch mit Kreuzterm. Umschaltbare Driften oder diskrete Phasenübereinstimmungen liegen außerhalb des Ausschlusses.
+
+**Limit of two-channel transfer.** With a fixed positive semidefinite quadratic drift, a total-flux-conserving transfer cannot produce a nonzero linear sum generator. This includes cross terms. Switchable drifts and discrete phase coincidences are outside the exclusion.
+
+**Summenzeiger mit umschaltbarer Drift.** Zwei positive quadratische Driften mit vertauschten Kanalgewichten und entgegengesetzten kontrollierten Transfers ergeben gemeinsam eine Phase proportional zu $(a-b)(n+r)$. Der Gesamtfluss bleibt in jedem Schritt erhalten. Ein kohärenter Registertausch könnte die umgeschaltete Drift realisieren, sofern er nativ zugelassen ist.
+
+**Sum pointer with switchable drift.** Two positive quadratic drifts with swapped channel weights and opposite controlled transfers yield a phase proportional to $(a-b)(n+r)$. Total flux is conserved at each step. A coherent register swap could implement the switched drift if it is natively admissible.
+
+**Diskrete Summenphase bei fester Drift.** Auf dem ganzzahligen Gitter wird der Referenzterm bei $t(a+b)\in\pi\mathbb Z$ zu einer vollen Phase. Ein einzelner kontrollierter Hin- und Rücktransfer erzeugt dann eine Zeigerphase der Summe. Das gewählte Modellverhältnis $a:b=1:23$ liefert auf dem geraden Gesamtflussgitter einen Charakter modulo zwölf.
+
+**Discrete sum phase with fixed drift.** On the integer lattice, the reference term wraps to a full phase at $t(a+b)\in\pi\mathbb Z$. A single controlled transfer and its reversal then yield a sum-dependent pointer phase. The model ratio $a:b=1:23$ gives a modulo-twelve character on the even total-flux lattice.
+
+**Maximaler Modulus der Driftresonanz.** Für das gekürzte Verhältnis $a:b=u:v$ unterscheidet die Resonanz auf dem geraden Gesamtflussgitter höchstens modulo $(u+v)/\gcd(2,u+v)$. Symmetrische Drift liefert dort kein Signal. Bei irrationalem Verhältnis kommen Nichtnull-Indizes der Nullphase beliebig nahe; endlich viele feste Resonanzabfragen geben auf dem unbeschränkten Gitter keine exakte Nullselektion.
+
+**Maximum modulus of drift resonance.** For the reduced ratio $a:b=u:v$, resonance on the even total-flux lattice distinguishes at most modulo $(u+v)/\gcd(2,u+v)$. Symmetric drift gives no signal there. At an irrational ratio nonzero indices approach the zero phase arbitrarily closely; finitely many fixed resonance queries cannot select zero exactly on the unbounded lattice.
+
+**Sektordrift und relative Winkelmode.** Die ursprüngliche Winkelbindung liefert nach klassischer Minimierung eine quadratische Sektordrift. Zwei identische reduzierte Kopien erzeugen damit auf dem geraden Gesamtflussgitter kein Resonanzsignal. In der vollen Quantisierung bleibt zusätzlich eine sektorabhängige Verschiebung des relativen Fourierimpulses. Bei gleichen Steifigkeiten führt erst ein Sektorschritt um fünf diese Verschiebung durch einen ganzzahligen Fourier-Shift exakt mit.
+
+**Sector drift and relative angle mode.** The original angle locking yields a quadratic sector drift after classical minimization. Two identical reduced copies give no resonance signal on the even total-flux lattice. Full quantization retains a sector-dependent shift of relative Fourier momentum. At equal stiffnesses a five-sector step is the smallest positive step that can carry this shift exactly by an integer Fourier translation.
+
+**Winkelharmonische des Fünfertransfers.** Bei gleichen Steifigkeiten entspricht der exakte Sektorschritt um fünf der Windung $(2,1)$ in den ursprünglichen Randwinkeln. Die entgegengesetzte Windung einer Referenzkopie erhält den Gesamtfluss und führt die relative Winkelmode mit. Das vorhandene Bindungspotential erzeugt diese kopienübergreifende Harmonische nicht.
+
+**Angular harmonic of the five-unit transfer.** At equal stiffnesses the exact five-sector step corresponds to winding $(2,1)$ in the original boundary angles. The opposite winding on a reference copy conserves total flux and carries along the relative angle mode. The existing locking potential does not generate this cross-copy harmonic.
+
+**Gerichteter Transfer mit Hilfsdoublet.** Ein hermitescher Austausch koppelt den Fünfer-Hintransfer an den Flip des Hilfsdoublets und den Rücktransfer an den inversen Flip. Bei isoliertem Puls erzeugt dies eine gerichtete Verschiebung und setzt das Doublet nach dem zweiten Puls zurück. Die native Kopplung und die Pulskontrolle bleiben offen.
+
+**Directed transfer with an auxiliary doublet.** A Hermitian exchange ties the forward five-unit transfer to an auxiliary flip and the reverse transfer to the inverse flip. An isolated pulse gives a directed shift, and the second pulse resets the doublet. Native coupling and pulse control remain open.
+
+**Grenze des konstanten Transferpulses.** Bei gleichzeitig laufender quadratischer Drift haben die beiden gegenläufigen Flusspaare verschiedene Verstimmungen. Ein gemeinsamer Rechteckpuls kann deshalb bei endlicher Kopplung nicht beide vollständig übertragen. Die optimale gemeinsame Transferwahrscheinlichkeit bei mittiger Abstimmung ist $g^2/[g^2+q^2(a+b)^2]$.
+
+**Limit of the constant transfer pulse.** With quadratic drift active, the two opposing flux pairs have different detunings. A common rectangular pulse at finite coupling cannot transfer both completely. At midpoint tuning, the optimal common transfer probability is $g^2/[g^2+q^2(a+b)^2]$.
+
+**Doppelpuls bei laufender Drift.** Für die mittig abgestimmten Verstimmungen $\pm2d$ bewirken zwei gleich lange Pulse mit Kopplungen $+d,-d$ exakten Transfer in beiden Nullsektorblöcken. Die zentrierten Flip-Vorzeichen heben sich beim Rückweg bis auf eine gemeinsame Phase auf. Die mittleren Blockenergien bleiben in der Zeigerbilanz zu berücksichtigen.
+
+**Double pulse with active drift.** For midpoint detunings $\pm2d$, equal-duration pulses with couplings $+d,-d$ give exact transfer in both zero-sector blocks. The centered flip signs cancel on return up to a common phase. The mean block energies still enter the pointer phase balance.
+
+**Phasenabgleich des Doppelpulses.** Die mittleren Blockenergien verlängern die effektive Wartezeit um zwei Einzelpulsdauern. Bei $T=\pi(1-1/\sqrt2)/d$ stimmen die Zeigerphasen der beiden gegenläufigen Paare nach dem vollständigen Rückweg überein.
+
+**Double-pulse phase matching.** The mean block energies extend the effective wait by two single-pulse durations. At $T=\pi(1-1/\sqrt2)/d$, the two opposing flux pairs give identical pointer phases after the full return.
+
+**Nullselektion mit symmetrischer Drift.** Auf den vier Vorzeichenpaaren selektiert der Doppelpuls bei gleichen Driftgewichten den Nullsektor exakt. Die gegenläufigen Paare geben Zeigerphase minus eins, die gleichgerichteten plus eins. Beim Modellverhältnis $1:23$ akzeptiert dieselbe Nullsektor-Abstimmung gleichgerichtete Paare dagegen zu rund 93 Prozent.
+
+**Zero selection with symmetric drift.** On the four sign pairs the double pulse with equal drift weights selects the zero sector exactly. Opposing pairs give pointer phase minus one and aligned pairs plus one. At model ratio $1:23$, the same zero-sector tuning instead accepts aligned pairs about 93 percent of the time.
+
+**Verstimmungskollision auf dem Flussgitter.** Bei symmetrischer Drift haben $(1,-1)$ und $(2,0)$ denselben Transferblock. Der Doppelpuls akzeptiert daher beide sicher. Auch ein geformter Puls im selben Blockmodell kann diese Kollision nicht auflösen. Auf begrenzten Gittern sind disjunkte Verstimmungsmengen eine notwendige Voraussetzung für exakte Nullselektion.
+
+**Detuning collision on the flux lattice.** With symmetric drift, $(1,-1)$ and $(2,0)$ have the same transfer block, so the double pulse accepts both with certainty. Pulse shaping within the same block model cannot resolve this collision. On bounded lattices, disjoint detuning sets are necessary for exact zero selection.
+
+**Selektive Pulssteuerung auf endlichem Flussgitter.** Bei getrennten Verstimmungen und zwei unabhängigen Kopplungsquadraturen isoliert die erzeugte Lie-Algebra die einzelnen Transferblöcke. Das eröffnet im idealen reversiblen Kontrollmodell eine selektive Auslesung. Die native Verfügbarkeit der Quadraturen und der vollständigen Rückrechnung bleibt offen.
+
+**Selective pulse control on a finite flux lattice.** With distinct detunings and two independent coupling quadratures, the generated Lie algebra isolates the individual transfer blocks. This permits selective readout in the ideal reversible control model. Native availability of both quadratures and full uncomputation remains open.
+
+**Qiskit-Selektor für fünf Flusspaare.** Der kodierte Modulo-8-Vergleich markiert die Verstimmungslabels $\pm3$ gemeinsam und weist die drei anderen Modellpaare sicher ab. Die Rückrechnung erhält die relative Phase im ausgewählten Zweig. Der Zugriff auf das Verstimmungslabel wird vorausgesetzt.
+
+**Qiskit selector for five flux pairs.** The encoded modulo-eight comparison marks detuning labels $\pm3$ together and rejects the three other model pairs with certainty. Uncomputation preserves the relative phase in the selected branch. Access to the detuning label is assumed.
+
+**Numerische selektive Pulsfolge.** Eine gemeinsame Folge aus 16 Abschnitten dreht im Transfermodell die Verstimmungsblöcke $\pm3$ um und lässt das Hilfsbit in den Blöcken $-1,1,2$ bei null, jeweils bis auf numerische Genauigkeit. Die Verstimmung wirkt als Drift. Die kohärente Rückrechnung und die native Pulskontrolle bleiben offen.
+
+**Numerical selective pulse sequence.** A common 16-segment sequence flips the auxiliary bit in detuning blocks $\pm3$ and leaves it at zero in blocks $-1,1,2$ to numerical precision. Detuning acts through the drift. Coherent uncomputation and native pulse control remain open.
+
+**Rückrechnung und Verstimmungsfehler.** Der vollständige berechnete Pulszeiger erreicht auf fünf Sollblöcken einen maximalen Zustandsvektorfehler von rund $1{,}1\cdot10^{-14}$. Ein gemeinsamer Verstimmungsoffset $0{,}05$ erhöht die maximale Fehlklassifikation auf rund $8{,}6$ Prozent. Die Simulation setzt jeweils den exakt inversen Propagator voraus.
+
+**Uncomputation and detuning errors.** The calculated full pulse pointer has a maximum state-vector error of about $1.1\cdot10^{-14}$ on five target blocks. A common detuning offset of $0.05$ raises the maximum misclassification probability to about $8.6$ percent. The simulation assumes an exactly inverted propagator in each case.
+
+**Robustere selektive Pulsfolge.** Eine auf drei Verstimmungsoffsets optimierte 24-Abschnittsfolge erreicht auf 98 zusätzlichen Zwischenwerten eine maximale numerische Fehlklassifikation von rund $1{,}68\cdot10^{-6}$. Die frühere 16-Abschnittsfolge erreicht dort rund $0{,}0824$. Die Aussage gilt für das gesampelte Gitter.
+
+**More robust selective pulse sequence.** A 24-segment sequence optimized at three detuning offsets reaches a maximum numerical misclassification of about $1.68\cdot10^{-6}$ at 98 additional intermediate points. The earlier 16-segment sequence gives about $0.0824$ there. The result applies to the sampled grid.
+
+**Intervallschranke für den Pulsfehler.** Die Krümmung der Fehlamplitude ist bei statischem Offset durch $T^2$ begrenzt. Analytische Interpolation mit numerischen Stützstellen ergibt über das ganze Modellintervall eine Fehlerschranke von rund $1{,}727\cdot10^{-6}$. Die Stützstellen sind nicht intervallzertifiziert.
+
+**Interval bound on pulse error.** The curvature of the error amplitude under a static offset is bounded by $T^2$. Analytic interpolation with numerical grid values gives an error bound of about $1.727\cdot10^{-6}$ over the model interval. The grid values are not interval-certified.
+
+**Intervallabgleich der Pulsfolge.** Alle 505 Stützstellenamplituden der fixierten 24-Abschnittsfolge wurden mit Intervallarithmetik eingeschlossen. Mit der analytischen Interpolation bleibt die Fehlklassifikationswahrscheinlichkeit im idealen Modell über das ganze Offsetintervall unter $1{,}73\cdot10^{-6}$.
+
+**Interval check of the pulse sequence.** All 505 grid amplitudes of the fixed 24-segment sequence were enclosed using interval arithmetic. Analytic interpolation keeps the ideal-model misclassification probability below $1.73\cdot10^{-6}$ throughout the offset interval.
+
+**Echo-Rückrechnung.** Zwei gemeinsame Hilfsflips und eine zeitlich gespiegelte Pulsfolge invertieren den zentrierten Transferblock bei vorwärts laufender Drift. Eine zusätzliche Wartezeit im verschobenen Zustand gleicht die skalare Blockphase für die ganzzahligen Labels aus. Ideale gemeinsame Hilfsflips sind eine zusätzliche Voraussetzung.
+
+**Echo uncomputation.** Two common auxiliary flips and a time-reversed control sequence invert the centered transfer block with forward drift. An additional wait in the shifted state aligns the scalar block phases for integer labels. Ideal common auxiliary flips are an additional requirement.
+
+**Endlicher gemeinsamer Hilfsflip.** Eine 32-Abschnittsfolge approximiert das phasenfeste Gatter $-iX$ auf allen fünf Verstimmungsblöcken. Auf dem geprüften Offsetgitter beträgt der größte Operatornormfehler rund $0{,}00156$. Die zusätzlichen Blockphasen der endlichen Pulsdauer gehen in die Wartezeitbilanz ein.
+
+**Finite common auxiliary flip.** A 32-segment sequence approximates the phase-matched gate $-iX$ on all five detuning blocks. The largest operator-norm error on the sampled offset grid is about $0.00156$. The finite gate duration contributes additional block phases to the wait-time balance.
+
+**Vollständiger endlicher Echo-Zeiger.** Auf fünf Blöcken und 101 Offsetpunkten ergibt die Simulation maximal rund $3{,}60\cdot10^{-6}$ Fehlklassifikation und $6{,}71\cdot10^{-6}$ Restanregung des Hilfsdoubletts. Der vollständige Zustandsvektorabstand ist höchstens rund $0{,}003294$ auf diesen Prüfpunkten.
+
+**Full finite-pulse echo pointer.** Across five blocks and 101 offset points the simulation gives maximum misclassification of about $3.60\cdot10^{-6}$ and residual auxiliary excitation of $6.71\cdot10^{-6}$. The full state-vector distance is at most about $0.003294$ at those sampled points.
