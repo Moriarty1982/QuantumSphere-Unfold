@@ -1,0 +1,28 @@
+{
+  "id": "op1_t_route",
+  "instruction": "SEARCH_ROUTE",
+  "guards": [],
+  "arguments": {
+    "start": "M:spin-sectors",
+    "target": "T:minimal-spin-effect",
+    "operations": [
+      "passive-frame",
+      "read-all-preserved-sectors",
+      "u1-readout",
+      "quadratic-access",
+      "quadratic-delta",
+      "reference-exchange",
+      "singlet-delta"
+    ],
+    "max_steps": 4,
+    "max_twice_spin": 5,
+    "rotation_angles": [
+      90,
+      180,
+      360
+    ]
+  },
+  "premises": [
+    "17A320DEC3E5257505F1B02C6480E307"
+  ]
+}

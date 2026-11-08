@@ -66,7 +66,11 @@ def parse(path):
     return header, claims
 
 
-def verify(path):
+def md5_bytes_lf(raw):
+    return hashlib.md5(raw.replace(b"\r\n", b"\n")).hexdigest().upper()
+
+
+def verify(path, *, allow_crlf_source=False):
     header, claims = parse(path)
     errors, known = [], {}
     for c in claims:
@@ -87,8 +91,10 @@ def verify(path):
         sp = os.path.join(os.path.dirname(path), src)
         if os.path.exists(sp):
             with open(sp, "rb") as f:
-                m = hashlib.md5(f.read()).hexdigest().upper()
-            if m != header["source_md5"]:
+                raw = f.read()
+            m = hashlib.md5(raw).hexdigest().upper()
+            lf_match = allow_crlf_source and md5_bytes_lf(raw) == header["source_md5"]
+            if m != header["source_md5"] and not lf_match:
                 errors.append(f"source {src} has md5 {m}, the record says {header['source_md5']}")
     return header, claims, record, errors
 

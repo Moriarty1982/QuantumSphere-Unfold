@@ -2,6 +2,8 @@
 
 import argparse
 from fractions import Fraction
+from hashlib import sha256
+from pathlib import Path
 
 
 def sector_effects(weights):
@@ -42,10 +44,33 @@ def axis_effect(weights):
     return effect, None
 
 
+def solve(weights):
+    forced, scalar = sector_effects(weights)
+    witness, obstruction = axis_effect(weights)
+    return {
+        "forced": {str(spin): value for spin, value in forced.items()},
+        "scalar": {str(spin): str(value) for spin, value in scalar.items()},
+        "axis": None if witness is None else {
+            str(label): str(value) for label, value in sorted(witness.items())
+        },
+        "obstruction": obstruction,
+    }
+
+
+def report_lines(frame, result):
+    yield f"{frame}: forced scalar blocks by 2j: {result['forced']}"
+    yield f"{frame}: unique rotationally invariant effect by 2j: {result['scalar']}"
+    if result["obstruction"]:
+        yield f"{frame}: single-axis access impossible: {result['obstruction']}"
+    else:
+        yield f"{frame}: single-axis witness by 2m: {result['axis']}"
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--max-twice-spin", type=int, default=3,
                         help="largest 2j in the OP1 example (default: 3)")
+    parser.add_argument("--cache", type=Path, help="optional SQLite cache path")
     args = parser.parse_args()
     if args.max_twice_spin < 1:
         parser.error("--max-twice-spin must be at least 1")
@@ -54,17 +79,22 @@ def main():
         ("M", dict.fromkeys(spins, 2)),
         ("T", {spin: 2 * int(spin == 1) for spin in spins}),
     ):
-        forced, scalar = sector_effects(weights)
-        print(f"{frame}: forced scalar blocks by 2j: {forced}")
-        print(f"{frame}: unique rotationally invariant effect by 2j: "
-              f"{ {spin: str(value) for spin, value in scalar.items()} }")
-        witness, obstruction = axis_effect(weights)
-        if obstruction:
-            print(f"{frame}: single-axis access impossible: {obstruction}")
+        if args.cache is None:
+            result = solve(weights)
         else:
-            print(f"{frame}: single-axis witness by 2m: "
-                  f"{ {label: str(value) for label, value in sorted(witness.items())} }")
+            from qam.tools.readout_db import cached_readout
 
+            identity = {
+                "readout": "op1.spin-counting-effects",
+                "frame": frame,
+                "weights_by_twice_spin": weights,
+                "method": "exact-rational, one copy per irrep",
+                "implementation_sha256": sha256(Path(__file__).read_bytes()).hexdigest(),
+            }
+            result, hit = cached_readout(args.cache, identity, lambda: solve(weights))
+            print(f"{frame}: cache {'hit' if hit else 'miss'}")
+        for line in report_lines(frame, result):
+            print(line)
 
 if __name__ == "__main__":
     main()

@@ -1082,3 +1082,213 @@ $$
 reproduzieren gemeinsam die r63-Einpunktgewichte. Denn $B_u-|J_u|=(j-|m|)(j+|m|+1)$ verschwindet genau bei $m=\pm j$, während $B_u=1/2$ genau Spin $1/2$ auswählt. Damit gilt $P_T\le P_M(u)$. Bei einer Kopie je Irrep hat $P_M(u)$ Rang zwei in jedem Spin und $P_T$ Rang zwei insgesamt. Die beiden Spuren mit Gewicht $\exp[-2\pi\gamma\sqrt{J^2}]$ sind genau die beiden r63-Normierungsgleichungen im Einpunktmodell. Die Achsenwahl allein genügt nicht: Jeder Effekt $f(J_u)$ muss demselben $m$ in verschiedenen Spins denselben Wert geben. Insbesondere kann er $m=1/2$ in Spin $1/2$ nicht akzeptieren und in Spin $3/2$ verwerfen. Beide oben definierten Masken brauchen daher mehr Information als ein U(1)-Label.
 
 Über alle Achsen gemittelt ist der M-Effekt innerhalb jedes Irreps nach Schur skalar. Seine Spur bleibt zwei, sodass er dort genau $2I/(2j+1)$ beträgt. Die r63-Zählspur bleibt bei der Mittelung gleich. Der gemittelte Effekt akzeptiert jedoch für $j>1/2$ jeden Zustand mit einer Wahrscheinlichkeit zwischen null und eins. Er definiert dort keinen scharfen zweidimensionalen Unterraum. Der T-Projektor ist bereits achsenunabhängig. Somit erzwingt das M-Zählgewicht zwei allein keine physikalisch ausgezeichnete Achse, wohl aber eine zusätzliche Erklärung, wenn es als scharfe Auswahl verstanden wird. Die innere Einheit der QAM ist bislang weder mit der gravitativen Achse $u$ identifiziert noch als Erzeuger der gemeinsamen quadratischen Auslesung nachgewiesen. Globale Horizontbedingungen bleiben separat.
+
+### Quadratischer Erwartungswert und Spinfilter
+
+Erkundung. r63.2 gibt die Robertson-Arithmetik in $|j,m\rangle$. Daraus folgt die Spektralformel für $B=J_x^2+J_y^2$, aber keine gravitative Zeigerkopplung. Auch eine Messung des Erwartungswerts von $B$ allein rekonstruiert den binären T-Effekt für allgemeine Eingaben nicht. Der Extremzustand $|1,1\rangle$ hat $B=1$ und Minimalspin-Gewicht null. Eine gleichgewichtete Mischung aus $|1/2,1/2\rangle$ und $|3/2,3/2\rangle$ hat denselben Erwartungswert $1$, aber Minimalspin-Gewicht $1/2$. Die gemeinsame Spektralabfrage trennt diese Eingaben.
+
+Der QAM-Routenkatalog unterscheidet deshalb den nativen Zugriff auf die gravitative Quadratsumme von der Zulassung eines Spektralinstruments für ihren Wert $1/2$. Selbst wenn der erste Zugriff deklariert ist, bleibt der zweite Guard offen. Die r63-Formel und die elektromagnetische Dualitätsabbildung aus r28 liefern in den geprüften Abschnitten keinen Nachweis für diese beiden gravitativen Operationen.
+
+### Minimalspin aus der Achsenmittelung einer festen Spinrotation
+
+Erkundung. Auf dem gravitativen Einpunktträger bilde das kohärente Operatormittel $C=\int_{S^2}\exp(-i\pi J_u/2)\,du$ mit normiertem Flächenmaß. Die Mittelung ist rotationsinvariant und wegen der Paarung $u,-u$ selbstadjungiert. Nach Schur ist sie auf jedem Spin-$j$-Irrep ein Skalar. Seine Spur kann für die $z$-Achse berechnet werden. Für $d=2j+1$ ergibt die geometrische Reihe
+
+$$
+c_j=\frac{\sin(d\pi/4)}{d\sin(\pi/4)}.
+$$
+
+Der Spin $1/2$ hat $c_{1/2}=1/\sqrt2$. Für alle höheren Spins ist $d\ge3$ und damit $|c_j|\le\sqrt2/3<1/\sqrt2$. Der mögliche Spin null hat $c_0=1$. Somit ist der Spektralprojektor von $C$ zum Wert $1/\sqrt2$ exakt $P_{1/2}$, auch ohne Spinobergrenze. Das Ergebnis bleibt bei mehreren Kopien eines Irreps gültig, wählt dann aber alle Kopien. Der Abstand zum restlichen Spektrum ist mindestens $\sqrt2/6$.
+
+Das Integral mittelt Operatoramplituden. Der Kanal, der eine zufällig ausgewählte Rotation anwendet und die Achse vergisst, ist eine andere Operation. Er akzeptiert keinen Spin allein durch diese Mittelung. Auch der Erwartungswert von $C$ auf einer gemischten Eingabe ersetzt die binäre Spektralabfrage nicht. Die Route braucht kohärenten Zugriff auf die gravitativen Rotationen und ein Spektralinstrument für das zentrale Operatormittel. Diese Voraussetzungen sind im bisherigen Routenkatalog nicht als nativ zugelassen belegt.
+
+### Endliches exaktes Achsenmittel bei Spinobergrenze
+
+Erkundung. Auf dem Spin-$j$-Irrep ist die Rotation die symmetrische Potenz vom Grad $2j$ der fundamentalen Matrix $\cos(\alpha/2)I-i\sin(\alpha/2)\,u\cdot\boldsymbol\sigma$. Jeder Matrixeintrag ist daher ein Polynom in den Achsenkomponenten vom Grad höchstens $2j$. Setze $D=2J$ für die deklarierte Spinobergrenze. Schreibe $z=u_z$ und $u_x\pm i u_y=\sqrt{1-z^2}e^{\pm i\phi}$. Ein gleichverteiltes Gitter mit $D+1$ Azimuten löscht alle nichtnulligen Fouriermoden bis Grad $D$. Jeder verbleibende Monomterm hat gleiche Potenzen der beiden transversalen Faktoren und ist daher ein Polynom in $z$ vom Grad höchstens $D$. Eine Gauss-Legendre-Regel mit $\lfloor D/2\rfloor+1$ Knoten integriert diese Terme exakt. Die Gewichte für das normierte Achsenmittel sind die Gauss-Legendre-Gewichte dividiert durch $2(D+1)$.
+
+Für das Beispiel bis $j=5/2$ genügen sechs Azimute und drei Höhen, also 18 gewichtete Rotationen. Die Routensuche gibt diese hinreichende Knotenzahl automatisch aus. Die exakte Formel gilt auf dem deklarierten endlichen Träger; die 18 Achsen sind keine behauptete Minimalzahl. Die endliche Summe ist ein Operatormittel und erfordert weiterhin kohärente Steuerung, damit sie als QAM-Messressource nutzbar ist.
+
+### Kohärente endliche Rotationssumme und binärer Spektralzeiger
+
+Erkundung. Für die endliche Quadratur mit positiven normierten Gewichten $w_i$ präpariere ein Achsenregister in $|w\rangle=\sum_i\sqrt{w_i}|i\rangle$. Wende kontrolliert $U_i=\exp(-i\pi J_{u_i}/2)$ an und mache die Achsenpräparation rückgängig. Der Nullblock dieses unitären Aufbaus ist genau $C=\sum_i w_i U_i$. Ein einzelner Nullausgang implementiert damit den Effekt $C^2$. Beim Minimalspin hat er Wahrscheinlichkeit $1/2$; er ist noch kein binärer Minimalspinfilter. Auch wiederholte Nullauswahl lässt die Zielakzeptanz auf $2^{-k}$ sinken, während das relative Gewicht höherer Spins pro erfolgreicher Abfrage höchstens mit $4/9$ multipliziert wird, sofern Spin null ausgeschlossen ist.
+
+Für den begrenzten Träger lässt sich dagegen aus dem berechneten Spektrum ein exakter Filter konstruieren. Sei $\lambda=1/\sqrt2$ und $S$ die Menge der übrigen verschiedenen Eigenwerte von $C$. Das Polynom
+
+$$
+p(x)=\prod_{s\in S}\frac{x-s}{\lambda-s}
+$$
+
+ergibt $p(C)=P_{1/2}$. Produkte von unabhängigen Nullblöcken kodieren die Potenzen $C^k$. Eine weitere gewichtete kohärente Summe der Potenzen mit den Vorzeichen der Polynomkoeffizienten kodiert $P_{1/2}/\sum_k|p_k|$. Dieser Aufbau liefert einen skalierten Filter; eine deterministische binäre Messung braucht zusätzlich eine passende kohärente Verstärkung oder eine direkte Spektralmessung. Der Polynombeweis garantiert den exakten Zieloperator auf dem Modellträger. Er begründet weder eine effiziente Pulskonstruktion noch die native Verfügbarkeit kontrollierter gravitativer Rotationen.
+
+Im Beispiel bis $j=5/2$ sind die konkurrierenden Eigenwerte $1/3,0,-1/5,-\sqrt2/6$. Das Polynom hat daher Grad vier. Seine Nullstellen und sein Grad können unmittelbar aus dem bereits berechneten Charakterspektrum in den Suchbeleg übernommen werden.
+
+### Exakte Verstärkung des endlichen Rotationsfilters
+
+Erkundung. Für die Nullstellen $-1/5,-\sqrt2/6,0,1/3$ und den Zielwert $\lambda=1/\sqrt2$ ergibt die exakte Auswertung der Koeffizientensumme des normierten Polynoms
+
+$$
+\alpha=\sum_k |p_k|=\frac{582+201\sqrt2}{161}\approx5{,}38048.
+$$
+
+Die kohärente Polynomsumme kodiert den Projektor mit Zielamplitude $1/\alpha$ und hat auf dem Komplement Nullamplitude. Ein zusätzliches Zeigerbit kann die Zielamplitude weiter mit $\alpha\sin(\pi/18)\approx0{,}93431$ multiplizieren. Dann ist der Ausgangswinkel $\theta=\pi/18$. Vier gewöhnliche Amplitudenverstärkungsschritte rotieren den Zielzweig auf $(2\cdot4+1)\theta=\pi/2$ und lassen die Erfolgswahrscheinlichkeit auf dem Komplement null. Drei Schritte mit bloßer Abschwächung reichen in diesem Schema nicht, weil $\sin(\pi/14)>1/\alpha$. Der Verstärker wirkt mit derselben Amplitude auf beiden magnetischen Zuständen.
+
+Die verstärkte Vorbereitung benötigt neun Anwendungen der Polynomsummen-Unitären oder ihres Inversen und die dazugehörigen Reflexionen. Kopieren des Erfolgsbits und Rückrechnung verdoppeln die Zahl auf 18 Anwendungen. Diese Zahl zählt Blockzugriffe, keine elementaren Rotationen oder Pulse. Die Konstruktion setzt exakte gewichtete Präparationen, kontrollierte Rotationen, Inverse und die beiden Reflexionen voraus. Sie ist für den endlichen Beispielträger hergeleitet und wurde nicht als vollständige Schaltung simuliert.
+
+Die reduzierte Qiskit-Erkundung `python -m qam.examples.rotation_filter_amplification` setzt die abgeschwächte Zielamplitude durch eine auf die zwei Minimalspinlabels konditionierte Rotation um. Vier Verstärkungsschritte, Kopieren und Rückrechnung liefern den erwarteten Zeiger auf allen vier Modelllabels. Für eine kohärente Eingabe mit verschiedenen komplexen Phasen ergibt sich ein Zustandsvektorabstand von $5{,}14\cdot10^{-16}$. Die Schaltung setzt die vorberechnete spektrale Markierung voraus. Sie simuliert weder die 18 Achsenrotationen noch die kohärente Polynomsumme selbst.
+
+Die numerische Gegenrechnung `python -m qam.examples.rotation_filter_axis_check` bildet auf jedem der fünf Spinblöcke die Matrizen aller 18 gewichteten Vierteldrehungen direkt aus den Drehimpulsgeneratoren. Das Mittel weicht in Operatornorm um höchstens $4{,}12\cdot10^{-16}$ vom Charakterwert mal Identität ab. Das angewandte Polynom weicht um höchstens $2{,}09\cdot10^{-15}$ vom Zielprojektor ab. Diese Rechnung prüft die Matrixbausteine getrennt von der reduzierten Qiskit-Verstärkung. Sie zerlegt die gewichtete Summe nicht in eine vollständige kohärente Gatterschaltung.
+
+### Zusammengesetzte kohärente Simulation des Rotationsfilters
+
+Erkundung. `python -m qam.examples.rotation_filter_coherent` berechnet das Achsenmittel aus den 18 Drehungen und bettet seine hermitisierte Matrix in die unitäre Blockmatrix mit Diagonalblöcken $C,-C$ und Nebendiagonalblock $\sqrt{I-C^2}$ ein. Vier Arbeitsbits ermöglichen die Produkte der Nullblöcke. Ein Auswahlregister kombiniert die vier nichtverschwindenden Polynomterme kohärent einschließlich ihrer Vorzeichen. Abschwächung, vier Verstärkungsschritte, Kopieren und Rückrechnung laufen danach in derselben Qiskit-Schaltung. Für alle fünf Spinblöcke bleibt der Zustandsvektorabstand vom idealen markierten Eingang unter $7{,}5\cdot10^{-14}$. Die Eingaben sind innerhalb jedes Irreps kohärente Überlagerungen. Die Schaltung verwendet die kompakte Matrixdilatation des bereits berechneten Achsenmittels; die kohärente Ansteuerung einzelner Achsen wird darin nicht als eigene Gatefolge ausgeführt.
+
+### Qiskit-Abgleich der kontrollierten Achsenauswahl
+
+Erkundung. `python -m qam.examples.rotation_filter_axis_lcu` präpariert das Achsenregister mit den Quadratwurzeln der 18 Quadraturgewichte. Eine kontrollierte Blockmatrix wendet auf jedem Achsenlabel die zugehörige Vierteldrehung an. Die inverse Achsenpräparation liefert im Nullblock das kohärente Mittel. Die Simulation vergleicht alle Spalten dieses Blocks auf fünf Irreps mit dem exakten Charakter. Der größte Operatornormfehler beträgt $8{,}95\cdot10^{-15}$. Ungenutzte Achsenlabels sind mit Identität aufgefüllt und haben kein Präparationsgewicht. Die kontrollierte Blockmatrix ist eine Qiskit-Unitary; eine Zerlegung in elementare Hardwaregatter wurde nicht geprüft.
+
+Die algebraische Verbindung zur Polynomsumme gilt für jede unitäre Einbettung mit demselben Nullblock: Mit einem frischen Arbeitsregister je Faktor ist der gemeinsame Nullblock eines Produkts genau das Produkt der Einzelnullblöcke. Die anschließende kohärente Termwahl hängt im Erfolgsblock nur von diesen Produkten ab. Damit kann die hier geprüfte Achsenauswahl die kompakte Einbettung in der mathematischen Konstruktion ersetzen. Die gemeinsame Qiskit-Simulation mit sämtlichen separaten Achsenregistern wurde nicht ausgeführt.
+
+### Kürzerer Rotationsfilter mit zentraler Vorselektion
+
+Erkundung. Eine kohärent kontrollierte volle Spinrotation wirkt auf dem Spin-$j$-Sektor als $(-1)^{2j}I$. Ein Ramsey-Zeiger kann daher die ganzzahligen und halbzahligen Sektoren exakt trennen, ohne innerhalb eines Sektors magnetische Zustände zu unterscheiden. Die Volldrehung scheitert als alleiniger Minimalspinselektor, taugt aber als Vorfilter. Auf dem Beispielträger bis $j=5/2$ bleiben nach der halbzahligen Vorselektion außer dem Zielwert $1/\sqrt2$ nur die Werte $0$ und $-\sqrt2/6$ des Vierteldrehungsmittels. Der Filtergrad sinkt von vier auf zwei:
+
+$$
+p_{\rm halb}(x)=\tfrac32 x^2+\tfrac{\sqrt2}{4}x.
+$$
+
+Der Koeffizientennormierungsfaktor ist $3/2+\sqrt2/4<2$. Nach Abschwächung auf Zielamplitude $1/2$ genügt ein Amplitudenverstärkungsschritt. Mit Kopieren und Rückrechnung erfordert der Polynomteil sechs statt 18 Zugriffe auf seine jeweilige Polynomsummen-Unitäre oder deren Inverses. Hinzu kommt die kohärente Vorselektion und ihre Rückrechnung. Für den zusammengesetzten binären Zeiger wird die Polynommarkierung nur im halbzahligen Zweig ausgeführt; die Nebenregister können danach gelöscht werden. Die QAM gibt die reduzierten Nullstellen aus, wenn eine Volldrehung deklariert ist. Diese Ausgabe bewertet die algebraische Vorselektion, keine vollständige Hardware-Gatterzahl oder native Verfügbarkeit.
+
+Die erweiterte Qiskit-Simulation `python -m qam.examples.rotation_filter_coherent` prüft den verkürzten Filter auf der direkten Summe der fünf Spinblöcke. Sie verwendet eine kohärente Ramsey-Markierung der zentralen Volldrehung, den Filter zweiten Grades und einen Verstärkungsschritt. Eine Überlagerung aller 20 magnetischen Basiszustände mit komplexen Phasen hat nach Kopieren und Rückrechnung Zustandsvektorabstand $1{,}31\cdot10^{-14}$ zum idealen Zeiger. Wie bei der längeren Schaltung ist das berechnete Achsenmittel durch seine kompakte unitäre Dilatation eingebettet. Die zentrale Volldrehung ist als ihre exakte Blockwirkung kodiert.
+
+### Eichverträglichkeit der kontrollierten Spinrotation
+
+Erkundung. Auf dem Einpunktmodell sei $D(g)$ die lokale interne $SU(2)$-Wirkung und der Zeiger ein Eichsingulett. Die kontrollierte Rotation um eine fest eingesetzte Achse $u$ ist $W_u=P_0\otimes I+P_1\otimes D(h_u)$. Gemeinsame Eichkonjugation ergibt $W_{gu}$, da $D(g)D(h_u)D(g)^\dagger=D(gh_ug^{-1})$. Eine einzelne feste Vierteldrehung ist daher im Allgemeinen kein eichinvarianter Zeigeroperator. Das Ausschlussargument gilt ohne physikalisch mittransformierende Referenzachse. Die zentrale Volldrehung ist eine Ausnahme: Ihr Element $-I\in SU(2)$ kommutiert mit jeder Eichrotation und die kontrollierte Operation ist auf diesem Modellträger invariant. Die Existenz der abstrakten zentralen Wirkung liefert noch keine dynamische Steuerung.
+
+Auch das kohärente Achsenmittel ist invariant. Eine mögliche Realisierung muss daher entweder die Achse relational mitführen oder das invariant gemittelte Objekt direkt koppeln. Aus r28s elektromagnetischer Dualitätsrotation und aus r63s Spin-Arithmetik folgt in den geprüften Abschnitten keine solche gravitative Steuerung. Die Einschränkung betrifft den festen Achsenpuls mit neutralem Zeiger. Sie schließt kein eichinvariantes Instrument für das ganze Achsenmittel aus.
+
+### Relationales Achsenmittel mit einem Quantenrotor
+
+Erkundung. Verwende als Achsenreferenz $L^2(S^2,du)$ mit normiertem Maß und konstanter normierter Wellenfunktion $\Omega(u)=1$. Der gemeinsame Operator auf referenzabhängigen Spinvektoren lautet $(W\psi)(u)=D_j(h_u)\psi(u)$, wobei $h_u$ die Vierteldrehung um $u$ bezeichnet. Er ist unitär. Unter gemeinsamer interner Rotation wirkt $(G_g\psi)(u)=D_j(g)\psi(g^{-1}u)$. Wegen $D_j(g)D_j(h_{g^{-1}u})=D_j(h_u)D_j(g)$ kommutieren $W$ und $G_g$. Der Referenz-Nullblock $\langle\Omega|W|\Omega\rangle$ ist genau das kohärente Achsenmittel. Die Präparation und die Reflexion um $\Omega$ sind rotationsinvariant. Damit ist die Symmetriehürde im Modell konstruktiv gelöst, sofern der Rotor ein eigener physikalischer Freiheitsgrad ist und die gemeinsame Kopplung zugelassen wird.
+
+Für $j\le J$ reicht für einen Blockzugriff ein endlicher Referenzträger mit Kugelflächenfunktionen bis Grad $D=2J$. Auf der Eingabe $\Omega\otimes\psi$ ist die Ausgabe von $W$ ein achsenabhängiges Polynom vom Grad höchstens $D$ und liegt daher im abgeschnittenen Referenzträger. Die Dimension der Referenz ist $(D+1)^2$, im Beispiel also 36. Die so definierte Isometrie auf dem Eingangsunterraum ist ein Intertwiner und lässt sich auf dem endlichen Gesamtträger zu einer eichverträglichen Unitären ergänzen: Quelle und Bild sind äquivalente Unterdarstellungen, daher sind auch ihre orthogonalen Komplemente äquivalent. Diese Ergänzung ist im Allgemeinen nicht die Kompression des vollen Multiplikationsoperators. Frische Referenzregister pro Polynomfaktor und die inverse gewählte Ergänzung reichen für die zuvor beschriebene kohärente Rückrechnung. Die Rechnung zeigt Existenz im Modell, ohne eine native Rotorvariable oder einen erzeugenden gravitativen Hamiltonterm herzuleiten.
+
+### Rotorkopplung als eigener Pfad im QAM-Katalog
+
+Erkundung. Der Multiplikationsoperator des relationalen Modells ist die Zeitentwicklung des invariant kontrahierten Generators $H=\kappa\sum_i J_i\otimes U_i$, wobei $U_i$ die Multiplikation mit der $i$-ten Achsenkoordinate auf dem Rotor bezeichnet. Die $U_i$ transformieren als Vektor; ihre Kontraktion mit dem gravitativen Spin ist unter der gemeinsamen Wirkung invariant. Die Pulsfläche $\kappa t=\pi/2$ liefert die modellierte Vierteldrehung im vollen Rotorraum. Bei endlichem Rotorträger genügt die zuvor konstruierte unitäre Ergänzung für denselben Nullblock. Die Projektion des Hamiltonterms auf den abgeschnittenen Rotorraum und anschließende Exponentiation liefern diese Ergänzung im Allgemeinen nicht automatisch.
+
+Der Routenkatalog unterscheidet die invariante Rotorkopplung und die kohärente Rückkehrabfrage in den Rotorsingulettzustand. Beide sind native Voraussetzungen, zusätzlich zur binären Spektralabfrage des resultierenden Achsenmittels. Damit ersetzt der Modellpfad die direkt von außen gesteuerte gravitative Achsenrotation. Er liefert keine Identifikation des Rotors mit einem bereits vorhandenen QAM-Feld.
+
+### Fehlerkontrolle für den direkt abgeschnittenen Rotorgenerator
+
+Erkundung. Setze $H=\mathbf J\cdot\mathbf U$ und $H_K=P_{\le K} H P_{\le K}$ auf dem Rotorträger bis Kugelflächenordnung $K$. Multiplikation mit einer Achsenkomponente verbindet nur benachbarte Ordnungen. Eine Potenz, die von der konstanten Rotorwelle startet, den abgeschnittenen Bereich verlässt und zur Konstante zurückkehrt, braucht daher mindestens $2K+2$ Faktoren. Die Rotor-Nullblöcke von $H^m$ und $H_K^m$ stimmen für $m<2K+2$ exakt überein. Beide Generatoren haben auf Spin $j$ Norm höchstens $j$, denn punktweise ist $\mathbf J\cdot u$ unitär äquivalent zu $J_z$, und orthogonale Kompression vergrößert die Norm nicht. Für den Vierteldrehungspuls folgt daher
+
+$$
+\big\|\langle\Omega|(e^{-i\pi H/2}-e^{-i\pi H_K/2})|\Omega\rangle\big\|
+\le 2\sum_{m\ge 2K+2}\frac{(\pi j/2)^m}{m!}.
+$$
+
+Der abgeschnittene Hamiltonterm bleibt eichinvariant, da der Ordnungsprojektor mit den Rotorrotationen kommutiert. Die Abschätzung liefert somit eine kontrollierbare Annäherung mit einem konkreten endlichen Generator. Sie ist von der zuvor gezeigten exakten unitären Ergänzung zu unterscheiden. Für $j\le5/2$ liefert $K=12$ bereits eine Normabweichung unter $1{,}7\cdot10^{-11}$ nach der geometrischen Abschätzung der Reihe. Die Rechnung betrifft den Nullblock vor dem Polynomfilter und setzt die gravitative Rotorkopplung weiterhin voraus.
+
+Die Restschranke ist konservativ. Für den idealen isotropen Generator gibt es einen stärkeren exakten Schluss: $\Omega\otimes V_j$ hat unter gemeinsamen Rotationen Gesamtspin $j$. Der invariante Generator erhält diesen Gesamtspin. In $V_j\otimes V_\ell$ kann Gesamtspin $j$ nach der Dreiecksregel nur für $\ell\le2j$ vorkommen. Damit bleibt der gesamte von der Eingabe erreichte Raum innerhalb des Rotorträgers bis $K=2j$. Der direkt komprimierte Generator liefert dort exakt dieselbe Evolution wie der volle Rotor, nicht nur denselben Nullblock. Für alle fünf Beispielblöcke genügt gemeinsam $K=5$, also Referenzdimension 36. Für $K<2j$ bleibt die obige Restabschätzung anwendbar.
+
+Die Gegenrechnung `python -m qam.examples.rotation_filter_rotor_check` baut die drei projizierten Achsenoperatoren in der Kugelflächenbasis auf und exponentiert den invarianten Hamiltonoperator direkt. Bei $K=5$ liegt der Operatornormfehler des Rückkehrblocks auf allen fünf Spins unter $9\cdot10^{-16}$. Bei $K=4$ weicht der Block für $j=5/2$ um rund $1{,}75\cdot10^{-4}$ ab. Der Vergleich prüft den numerischen Aufbau des Modellgenerators. Die Exaktheit bei $K\ge2j$ folgt analytisch aus der Gesamtspin-Erhaltung.
+
+### Coframe-Normale als Referenz: Eigenfluss und zweiter Randpunkt
+
+Erkundung. Für ein nichtentartetes infinitesimales Flächenstück ist die interne Coframe-Normale im bereits verwendeten Flusswörterbuch $u^i=F^i/\|F\|$. Die Einsetzung in $\mathbf F\cdot\mathbf u$ ergibt klassisch $\|F\|$. Sie stellt damit keine unabhängige Achse für denselben Fluss bereit. Auf dem quantisierten nichttrivialen Spinträger ergibt die analoge symmetrische Wahl $U_i=J_i(J^2)^{-1/2}$ die Kontraktion $\sum_i J_iU_i=\sqrt{J^2}$. Außerdem gilt $[J_i,U_j]=i\epsilon_{ijk}U_k$. Das unterscheidet diese Wahl vom Rotormodell, in dem $J_i$ und $U_j$ auf getrennten Faktoren wirken und kommutieren. Die Eigenfluss-Normale reduziert den Ansatz folglich auf direkten Casimirzugriff. Sie liefert weder den relationalen Rotor noch seine unabhängige Präparation.
+
+Eine Normale eines zweiten Flächenstücks wäre davon zu unterscheiden. Wenn sein Fluss auf einem separat zugänglichen Faktor einen scharfen Spin $s>0$ trägt, lautet der entsprechend normierte Kandidat $\mathbf J\cdot\mathbf R/\sqrt{s(s+1)}$. Ein gemeinsames Singulett dieses Paars existiert genau für $j=s$. Ohne eine unabhängige Festlegung $s=1/2$ ist die Singulettbedingung daher nur ein Vergleich der Spins. Insbesondere genügt die globale Horizontschließung nicht, um einen Punkt mit Minimalspin als Referenz zu liefern. Selbst ein vorhandenes Punktpaar benötigt die zugelassene lokale Kopplung und ein kohärentes Paarinstrument. Der Befund betrifft die aus demselben beziehungsweise einem zweiten Fluss konstruierte Normale und lässt zusätzliche Randfreiheitsgrade offen.
+
+### Fundamentale Holonomie und Spin-null-Auslesung
+
+Erkundung. Auf dem Modellträger $L^2(SU(2),dg)$ mit normiertem Haarmaß sei $W$ die unitäre Multiplikation $(W\psi)(g)=g\psi(g)$ auf einem fundamentalen Hilfsdoublet. Der Spin-null-Ausgang projiziert das Gruppenregister auf die konstante Funktion. Für die Hilfszustände $b$ und $a$ ist die Übergangsamplitude $\int g_{ab} f(g)\,dg$. Schur-Orthogonalität zeigt, dass nur der Peter-Weyl-Block $j=1/2$ beiträgt. Für ein anfänglich maximal gemischtes Hilfsdoublet ist die Erfolgswahrscheinlichkeit $\tfrac12\sum_{ab}|\int g_{ab} f(g)\,dg|^2=\tfrac14\|P_{1/2}f\|^2$, weil die vier Funktionen $\sqrt2\,\overline{g_{ab}}$ eine Orthonormalbasis dieses Blocks bilden.
+
+Mit einer kohärenten Reinigung des Hilfszustands gilt daher dieselbe $1/4$-Kompression wie beim Referenzfilter. Ein Verstärkungsschritt, Kopieren des Spin-null-Bits und Rückrechnung liefern im Modell den exakten Spin-$1/2$-Effekt. Das Modell setzt eine fundamentale Holonomie als kontrollierte Randoperation und ein kohärentes Spin-null-Instrument voraus. Die zusätzliche Referenz ist hier ein fundamentales Hilfsdoublet und kein bereits auf Minimalspin selektierter gravitativer Randpunkt.
+
+Der volle Peter-Weyl-Block $V_{1/2}\otimes V_{1/2}^*$ hat allerdings Rang vier. Die r63-Einpunktzählung verlangt Gewicht zwei. Dazu muss eine native Randbedingung erklären, welcher der beiden magnetischen Indizes zugänglich ist beziehungsweise wie das Zählmaß entsteht. Die geprüften Companion-Fundstellen zur Holonomie liefern diese Zuordnung und das Spin-null-Instrument nicht. Der holonomische Modellweg beseitigt daher die zirkuläre Forderung nach einem bereits ausgewählten Randpunkt, lässt aber die native Randrepräsentation und Auslesung offen.
+
+### U(1)-Randladung und das Gewicht des Holonomiedoublets
+
+Erkundung. Auf dem Peter-Weyl-Block $V_j\otimes V_j^*$ lasse die gravitative $SU(2)$-Wirkung links und eine Rand-$U(1)$ rechts wirken. Die rechte magnetische Ladung $q$ hat in $V_j^*$ genau dann einen eindimensionalen Gewichtsraum, wenn $|q|\le j$ und $j-q$ ganzzahlig ist. Ein scharf festgelegter rechter Ladungssektor lässt deshalb genau eine Kopie des linken $V_j$ übrig. Nach dem Minimalspinfilter hat diese Einschränkung bei $q=+1/2$ oder $q=-1/2$ Rang zwei. Lässt man beide Ladungen als unabhängige Zustände zu, bleibt der Rang vier. Ein strikter rechter U(1)-Quotient ohne Ladung entspricht $q=0$ und entfernt den Spin-$1/2$-Block vollständig.
+
+Unter der vollen linken und rechten $SU(2)$-Wirkung ist der Spin-$1/2$-Peter-Weyl-Block irreduzibel als Produktdarstellung. Ein scharfer Rang-zwei-Projektor kann daher nicht beide Wirkungen erhalten. Bei nur linker Invarianz ist er von der Form $I\otimes |v\rangle\langle v|$. Wählt man zusätzlich rechte U(1)-Invarianz, muss $v$ eine der beiden Ladungen tragen. Eine vorzeichensymmetrische Mischung mit Effekt $I/2$ hat zwar Spur zwei, aber keinen scharfen Rang-zwei-Zählträger.
+
+Die U(1)-Lesart aus r68 benennt die Zählweise, aber in den geprüften Abschnitten keine rechte äquivariante Randbedingung mit einzeln festgelegter halbzahliger Ladung für den T-Holononomieträger. Das Modell liefert somit eine konkrete hinreichende Randbedingung für das lokale Gewicht. Die Auswahl der Ladung und ihre Vereinbarkeit mit der globalen Horizontbedingung bleiben zu begründen. Ein festes $q=1/2$ allein lässt alle höheren halbzahligen Spins zu; der Minimalspinfilter bleibt erforderlich.
+
+### Lokale Randladung und globale Neutralität
+
+Erkundung. Auf $N$ Minimalspin-Peter-Weyl-Blöcken sei $q_p=\pm1/2$ die rechte Randladung am Punkt $p$. Die linke Doubletseite bleibt bei der rechten U(1)-Projektion unangetastet. Die Bedingung $\sum_p q_p=0$ lässt bei geradem $N$ genau $\binom{N}{N/2}$ rechte Vorzeichenlisten zu und bei ungeradem $N$ keine. Wenn alle diese Listen als orthogonale Zustände gezählt werden und links keine weitere Projektion erfolgt, ist die Dimension also $2^N\binom{N}{N/2}$. Die führende Entropie pro Punkt ist dann $2\ln 2$ statt $\ln 2$. Die globale rechte Neutralität ersetzt somit unter diesem Zählmaß keine punktweise Festlegung der rechten Ladung.
+
+Eine vorab festgelegte ausgeglichene Vorzeichenliste genügt dagegen für die Neutralität und lässt links exakt $2^N$ Zustände vor weiteren Bedingungen. Wird an jedem Punkt dasselbe Vorzeichen festgelegt, ist für $N>0$ ein Hintergrund mit kompensierender Gesamtladung erforderlich. Eine Identifikation nur unter globaler Vorzeichenumkehr reduziert die Zahl der rechten Listen für gerades positives $N$ höchstens um den Faktor zwei und ändert den führenden Exponenten nicht. Wenn zusätzlich links ein globaler Singulettprojektor wirkt, ersetzt er im Produktmodell den Faktor $2^N$ durch die Singulettmultiplizität; der zusätzliche rechte Listenfaktor bleibt. Diese Folgerungen setzen unterscheidbare Punkte, unabhängige linke und rechte Faktoren und Zählung der zugelassenen Listen als Zustände voraus. Eine native Zuordnung, die die rechten Labels als feste Randdaten oder als Redundanz behandelt, ist gesondert herzuleiten.
+
+### Paarweise rechte Schließung statt fester Vorzeichenliste
+
+Erkundung. Für $N=2k$ Minimalspinpunkte und eine fest vorgegebene Paarung hat jedes rechte Doubletpaar unter der bloßen Bedingung $q_1+q_2=0$ zwei orthogonale Zustände. Auf dem getrennten linken und rechten Produktträger bleibt die Gesamtdimension daher $2^N2^k$. Die führende Entropie pro Punkt beträgt $3\ln2/2$. Wählt man hingegen pro Paar das rechte $SU(2)$-Singulett, bleibt dort genau eine kohärente Kombination beider Vorzeichen. Die Produktprojektion über die fest vorgegebene Paarung hat rechts Rang eins und lässt links exakt $2^N$ Zustände vor weiteren Horizontbedingungen. Beide lokalen rechten Vorzeichen haben dabei je Gewicht $1/2$.
+
+Eine bloße globale rechte Singulettbedingung genügt nicht zur Rang-eins-Aussage: Bei $2k$ Doublets ist ihre Multiplizität $\binom{2k}{k}/(k+1)$. Diese wächst exponentiell und beträgt schon bei vier Punkten zwei. Wenn die Paarung nicht ausgezeichnet ist, muss die Dynamik erklären, ob sie einen bestimmten rechten Zustand auswählt oder mehrere Invarianten mitzählt. Paarweise Singuletts auf einer deklarierten Paarung sind somit eine hinreichende Modellbedingung für Gewicht zwei pro Punkt, ohne ein lokales Vorzeichen festzulegen. Native Paarstruktur, Kopplung und Zugang zu den linken Zuständen sind weiterhin Voraussetzungen.
+
+### Dynamische Auswahl rechter Paarsinguletts
+
+Erkundung. Für eine feste disjunkte Paarung $\mathcal M$ wähle im rechten Minimalspinregister den positiven Hamiltonoperator
+
+$$
+H_R=\sum_{(p,q)\in\mathcal M} g_{pq}
+\left(\mathbf R_p\cdot\mathbf R_q+\tfrac34 I\right),\qquad g_{pq}>0.
+$$
+
+Jeder Summand ist der gewichtete Tripletprojektor. Die Summanden kommutieren, da die Paare disjunkt sind. Der rechte Grundraum ist eindimensional, das Produkt der Paarsinguletts, und die Lücke beträgt $\min g_{pq}$. Auf dem getrennten linken Register wirkt der Hamiltonoperator als Identität, sodass der gemeinsame Grundraum vor weiteren Bedingungen Dimension $2^N$ hat. Die Auswahl dieses Grundraums erfordert zusätzlich eine Grundraumpräparation, Relaxation oder einen Spektralfilter. Die reine Zeitentwicklung unter $H_R$ ändert die Besetzungen nicht.
+
+Wenn zwei geforderte Singulettkanten einen Punkt teilen, haben ihre Singulettbilder keinen gemeinsamen Vektor. Ein reiner Zustand, der für $(p,q)$ im Singulettbild liegt, faktorisiert als Paarsingulett mal Rest. Das reduzierte System $(p,r)$ für eine zweite Kante ist dann $I_p/2\otimes\rho_r$ und hat Singulettwahrscheinlichkeit $1/4$, nicht eins. Das Argument erstreckt sich per Konvexität auf gemischte Zustände im ersten Singulettbild. Eine Summe positiver Tripletprojektoren auf überlappenden Kanten hat daher keinen gemeinsamen Nullraum. Gleich starke Kopplungen zwischen allen Paaren liefern hingegen bis auf eine Konstante den rechten Gesamtcasimir und unterscheiden die mehrfach vorkommenden globalen Singuletts nicht. Der Modellschluss benötigt somit eine begründete disjunkte Paarstruktur oder eine andere Dynamik, die eine eindeutige rechte Grundlinie wählt.
+
+### Eindeutiger rechter Grundzustand ohne feste Paarung
+
+Erkundung. Teile $N=2k$ rechte Spin-$1/2$-Faktoren in zwei gleich große Gruppen $A,B$ und kopple alle gruppenübergreifenden Paare gleich antiferromagnetisch. Mit $\mathbf S_A=\sum_{p\in A}\mathbf R_p$ und analog $\mathbf S_B$ lautet der Hamiltonoperator $H=g\mathbf S_A\cdot\mathbf S_B$, $g>0$. Seine Energien sind $g[S(S+1)-a(a+1)-b(b+1)]/2$ für Gruppenspins $a,b$ und Gesamtspin $S$. Setze $s=k/2$. Da $a,b\le s$ und $S(S+1)\ge0$, ist $E\ge-gs(s+1)$. Gleichheit verlangt $a=b=s$ und $S=0$. Der maximale Spin kommt in jeder Gruppe genau einmal vor, weil der maximale magnetische Gewichtsraum eindimensional ist. Das Singulett ihrer Kopplung kommt ebenfalls genau einmal vor. Somit hat der rechte Grundraum Rang eins und links bleiben vor weiteren Bedingungen $2^N$ Zustände.
+
+Im Block $a=b=s$ liegt $S=1$ genau um $g$ höher. In allen anderen Blöcken sinkt mindestens einer der beiden Gruppenspins um mindestens eins, was allein aus den beiden negativen Casimirtermen eine Energieerhöhung von mindestens $gs$ gibt. Für $k\ge2$ ist $gs\ge g$; für $k=1$ existiert kein anderer Gruppenblock. Die Lücke ist daher exakt $g$. Bei extensiver Skalierung $g=g_0/k$ sinkt sie auf $g_0/k$. Die Route ersetzt die feste Paarung durch eine ausgezeichnete balancierte Zweiteilung und gruppenübergreifende Kopplung. Sie setzt weiterhin die Auswahl des Grundraums und die Entkopplung des linken Faktors voraus. Eine native Zweiteilung oder solche Randwechselwirkung ist hier nicht hergeleitet.
+
+### Unbalancierte Zweiteilung und Auswahl zwischen Gruppengrößen
+
+Erkundung. Seien die beiden Gruppen $N_A,N_B>0$ groß und setze $s_A=N_A/2$, $s_B=N_B/2$. Bei gegebenen Gruppenspins $a,b$ minimiert $S=|a-b|$ die Energie. Der zugehörige Wert ist $-g\min(a,b)(\max(a,b)+1)$. Für positive Spins sinkt diese Energie strikt, wenn einer der beiden Spins steigt. Daher sind beide Gruppen im Grundraum maximal ausgerichtet, $a=s_A,b=s_B$. Der rechte Grundraum trägt genau eine Kopie des Spins $|N_A-N_B|/2$ und hat Dimension $|N_A-N_B|+1$. Er ist nur bei gleicher Gruppengröße eine Singulettlinie. Beispielsweise lässt eine Aufteilung $3+1$ rechts ein Triplett statt einer einzigen Linie.
+
+Falls die Gruppengröße selbst variieren darf und alle Aufteilungen bei gleicher Gesamtpunktzahl und gleichem Kopplungskoeffizienten verglichen werden, ergibt sich für $N=2k$ und $N_A=k+d,N_B=k-d$ die Grundenergie
+
+$$
+E_0(d)=-\frac g4\,[k(k+2)-d(d+2)],\qquad d\ge0.
+$$
+
+Die tiefste Energie liegt bei $d=0$. Das Modell bevorzugt dann eine balancierte Aufteilung, unterscheidet aber die verschiedenen balancierten Zuordnungen der Punkte nicht. Wenn diese Zuordnungen als physische orthogonale Zustände mitgezählt werden, kann ihre Multiplizität das Zählgewicht erneut erhöhen. Die Energieaussage setzt vergleichbare Gruppensektoren und denselben Koeffizienten voraus; bei festem Gruppenträger gibt es keine Dynamik zwischen den Aufteilungen. Native Sektorzuordnung, Auswahl oder Identifikation der balancierten Aufteilungen bleiben offen.
+
+### Permutationsquotient der balancierten Aufteilungen
+
+Erkundung. Betrachte unterscheidbare Punktplätze und zunächst benannte Gruppen mit je $k$ Punkten. Die rechte Grundlinie einer festen Aufteilung ist unter Permutationen innerhalb jeder Gruppe invariant, weil beide rechten Gruppenspins maximal und damit vollständig symmetrisch sind. Wenn alle balancierten Aufteilungen als orthogonale Sektoren vorkommen und Punktpermutationen zugleich die Aufteilung und die linken Doublets permutieren, ist der physikalische invariante Raum durch seinen Vektor auf einer festen Aufteilung bestimmt. Dieser Vektor muss unter ihrem Stabilisator $S_k\times S_k$ invariant sein. Links bleibt daher $\operatorname{Sym}^k(\mathbb C^2)\otimes\operatorname{Sym}^k(\mathbb C^2)$ mit Dimension $(k+1)^2$. Dies folgt durch Fortsetzen des Vektors auf alle Aufteilungen mittels der Permutationswirkung; die Stabilisatorinvarianz macht die Fortsetzung wohldefiniert.
+
+Sind die Gruppen unbenannt und zählt auch ihr Tausch zur Redundanz, wirkt dieser auf dem rechten Singulett zweier Spins $k/2$ mit $(-1)^k$. Links ist deshalb die entsprechend symmetrische oder antisymmetrische Kombination der beiden Faktoren erforderlich. Für $d=k+1$ beträgt die Dimension $d[d+(-1)^k]/2$. Beide Quotienten haben nur polynomiales Wachstum. Sie beseitigen in diesem Modell die zusätzliche Aufteilungsentartung, reduzieren aber zugleich das linke Zustandswachstum unter $2^{2k}$.
+
+Die Aussage hängt an der diagonalen Wirkung derselben Punktpermutation auf Aufteilung und linke Doublets. Eine Redundanz, die ausschließlich ein separates Referenzlabel verändert und alle linken Punktfaktoren festhält, hätte diese Wirkung nicht. Der Companion müsste eine solche getrennte Redundanz oder eine ausgezeichnete geometrische Aufteilung eigens begründen. Die Rechnung behandelt keine native Horizont-Diffeomorphismusbedingung.
+
+### Kohärentes Mischen der balancierten Aufteilungen
+
+Erkundung. Für $N=2k$ sei $A$ eine $k$-elementige Teilmenge der Punktplätze, mit benannter Komplementärgruppe $A^c$. Führe ein Aufteilungsregister ein und bezeichne mit $|A,\Omega_A\rangle$ den Registerzustand zusammen mit der rechten Grundlinie der zugehörigen Zweigruppenkopplung. Die Singulettphasen können für benannte Gruppen so gewählt werden, dass Punktpermutationen diese Basisvektoren ohne Vorzeichen permutieren: Der Stabilisator wirkt auf den beiden maximalen Gruppenspins trivial.
+
+Verbinde zwei Aufteilungen, wenn sie durch Austausch eines Punkts aus jeder Gruppe auseinander hervorgehen. Dieser Graph ist zusammenhängend, denn man kann jede Abweichung von einer Zielmenge durch einen solchen Austausch verringern. Auf den rechten Grundlinien definiere den positiven Mischterm als Summe der Kantenprojektoren $(|A,\Omega_A\rangle-|B,\Omega_B\rangle)(\langle A,\Omega_A|-\langle B,\Omega_B|)$ mit gleicher positiver Gewichtung. Seine quadratische Form ist die Summe der Betragsquadrate der Koeffizientendifferenzen. Sein Kern ist daher genau die gleichgewichtete kohärente Überlagerung aller balancierten Aufteilungen. Der Term ist permutationsinvariant. Er wirkt als Identität auf den linken Doublets. Ergänzt man ihn zur blockdiagonalen Zweigruppenkopplung und setzt ihn außerhalb der balancierten Grundlinien auf null, bleibt rechts genau eine Grundlinie und links Dimension $2^N$ vor weiteren Bedingungen.
+
+Das ist eine dynamische Auswahl in einem erweiterten Modellträger. Sie setzt kohärente Übergänge zwischen Aufteilungen voraus, welche auch die zugehörigen rechten Singuletts transportieren. Klassische Mischung oder das bloße Vergessen der Aufteilung liefert diesen Grundzustand nicht. Wird die diagonale Punktpermutation darüber hinaus als Eichbedingung auch auf dem linken Träger erzwungen, reduziert sich dessen Dimension weiterhin. Die Permutationsinvarianz des Hamiltonoperators allein erzwingt eine solche Projektion nicht. Native Verfügbarkeit des Aufteilungsregisters, Mischterm und Auswahl des Grundzustands bleiben offen.
+
+### Warum ein permutationsinvarianter rechter Term allein nicht genügt
+
+Erkundung. Auf dem unvergrößerten rechten Träger $(\mathbb C^2)^{\otimes 2k}$ ist der Gesamtspin-null-Raum unter Punktpermutationen die irreduzible symmetrische Gruppendarstellung zum Young-Diagramm $(k,k)$, nach der Schur-Weyl-Zerlegung. Ein rechter Hamiltonoperator, der die gemeinsame Spinrotation und alle Punktpermutationen erhält, wirkt daher auf diesem Singulettsektor nach Schur als Skalar. Für $k\ge2$ hat dieser Sektor Dimension größer eins. Ein solcher Hamiltonoperator kann darin keine eindeutige Grundlinie auswählen, selbst mit Mehrpunkttermen.
+
+Die vorige Mischung umgeht das Hindernis durch einen vergrößerten Träger: Auf den balancierten Aufteilungslabels gibt es eine triviale Permutationsdarstellung, deren konstante Linie der Mischterm auswählt. Auf dem nackten rechten Singulettträger gibt es für $k\ge1$ keine solche triviale Linie. Das Ausschlussargument setzt volle Permutationssymmetrie, einen rechten Term und die Spin-null-Bedingung voraus. Eine nur geometrisch verbleibende Untergruppe, zusätzliche Randregister oder eine Änderung des Zählträgers liegen außerhalb dieser Voraussetzungen. Die nächste Quellenfrage ist somit, welche Punktpermutationen die native Randdynamik tatsächlich erhalten muss und ob sie bereits zusätzliche Randregister definiert.
+
+### Zyklische Punktordnung als hinreichende Randstruktur
+
+Erkundung. Falls die Horizontpunkte einen geraden zyklischen Orbit bilden, liefert die vorhandene Orbit-Parität eine alternierende balancierte Zweiteilung. Der einfache Shift vertauscht die beiden Gruppen. Der Hamiltonoperator $g\mathbf S_{\rm gerade}\cdot\mathbf S_{\rm ungerade}$ bleibt darunter invariant. Er hat den bereits hergeleiteten eindeutigen rechten Singulettgrundzustand. Die beiden Farben brauchen dabei keine physische Benennung, und ein Register aller balancierten Aufteilungen entfällt. Eine Rotation des zyklischen Ursprungs tauscht die maximalen Gruppenspins $k/2$ und wirkt auf deren rechtem Singulett mit $(-1)^k$ für $N=2k$. Permutationen innerhalb der Gruppen ändern diese rechte Linie nicht.
+
+Falls nur die zyklischen Shifts als Eichredundanz identifiziert werden und sie auch links wirken, muss die linke Seite dieselbe Shiftphase $\chi=(-1)^k$ tragen. Der zugehörige Projektor auf $N$ linken Doublets hat Rang
+
+$$
+\frac1N\sum_{a=0}^{N-1}\chi^{-a}\,2^{\gcd(N,a)}.
+$$
+
+Denn die Spur eines Shifts um $a$ zählt binäre Listen, die auf seinen Zyklen konstant sind. Der Summand $a=0$ liefert $2^N/N$. Jeder andere Summand hat Betrag höchstens $2^{N/2}/N$. Der zyklische Quotient erhält damit den führenden Exponenten $\ln2$ pro Punkt, verändert aber die endliche Zählung. Das unterscheidet ihn vom zuvor ausgeschlossenen Quotienten nach allen Punktpermutationen.
+
+Der Orbit-Scan definiert Shift und Parität auf seinem Scanindex. Die geprüften Horizontstellen r63 und r10 geben den Punktspins und Flächentermen keine solche zyklische Ordnung. Der Nachweis muss daher die Scanindizes mit den gravitativen Durchstoßpunkten verknüpfen und die gruppenübergreifende Kopplung sowie Grundraumauswahl begründen. Die Rechnung setzt keine native zyklische Ordnung voraus.
