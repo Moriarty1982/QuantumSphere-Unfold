@@ -45,6 +45,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 7.11.2026: QAM – Beispiel für Horizontzugang, Punktzahl und Prüfung der Minimalspinmaske.
+
 - 7.11.2026: QAM – bedingter Spektralabgleich zwischen HC-Boost und dem Flächenquantum aus r10.
 
 - 7.11.2026: QAM – Schalenrest-Beispiel mit getrennten linearen und quadratischen Nullnachweisen.

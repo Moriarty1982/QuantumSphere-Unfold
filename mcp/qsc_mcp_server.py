@@ -10,6 +10,7 @@ Works with the Model Context Protocol Python SDK 1.x (FastMCP) and 2.x (MCPServe
 
 from __future__ import annotations
 
+import json
 import re
 import subprocess
 import sys
@@ -25,6 +26,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 VERSION_RE = re.compile(r"^v\d+\.\d+\.\d+(?:-[A-Za-z0-9._-]+)?$")
 DEFAULT_TIMEOUT_SECONDS = 900
 MAX_OUTPUT_CHARS = 20000
+MAX_QAM_OUTPUT_CHARS = 100000
 DEFAULT_VERSION = "v4.9.0"  # current public release; pass e.g. "v4.10.0-draft" for the candidate
 
 mcp = FastMCP("qsc-audit")
@@ -221,6 +223,104 @@ def build_research_candidate() -> dict[str, Any]:
     return {"build_returncode": build.returncode, "gate_ok": bool(gate and gate.returncode == 0),
             "gate_output": tail(gate) if gate else "no build summary written", "summary": summary,
             "build_output_tail": tail(build)[-4000:]}
+
+
+def _qam_command(args, *, read_only=True, lines=False):
+    command = [sys.executable, "-X", "utf8", "-m", "qam.tools.readout_db"]
+    if read_only:
+        command.append("--read-only")
+    result = subprocess.run(
+        [*command, *args], cwd=PROJECT_ROOT, capture_output=True, text=True,
+        encoding="utf-8", timeout=60, check=False,
+    )
+    output = result.stdout.strip()
+    if len(output) > MAX_QAM_OUTPUT_CHARS:
+        return {"returncode": result.returncode, "error": "Response exceeds MCP limit; use a narrower query or the local CLI."}
+    try:
+        data = ([json.loads(line) for line in output.splitlines()] if lines
+                else json.loads(output))
+    except ValueError:
+        return {"returncode": result.returncode, "output": output,
+                "error": result.stderr.strip()[-MAX_OUTPUT_CHARS:]}
+    return {"returncode": result.returncode, "data": data}
+
+
+def _qam_limit(limit):
+    if type(limit) is not int or not 1 <= limit <= 50:
+        raise AuditError("QAM query limit must be between 1 and 50.")
+    return str(limit)
+
+
+def _qam_json_path(path):
+    candidate = (PROJECT_ROOT / path).resolve()
+    roots = (PROJECT_ROOT / "qam/examples", PROJECT_ROOT / "scripts/qsc_audit/examples",
+             PROJECT_ROOT / "notes/research")
+    if (candidate.suffix != ".json" or not candidate.is_file()
+            or not any(root.resolve() in candidate.parents for root in roots)):
+        raise AuditError("Use an existing JSON file under qam/examples, scripts/qsc_audit/examples or notes/research.")
+    return str(candidate)
+
+
+@mcp.tool()
+def rebuild_qam_index() -> dict[str, Any]:
+    """Rebuild the local QAM claim index in build/qam.sqlite3, preserving results and receipts."""
+    return _qam_command(["index"], read_only=False)
+
+
+@mcp.tool()
+def find_qam_claims(query: str, limit: int = 10) -> dict[str, Any]:
+    """Find hash-indexed QAM claims in the local database."""
+    if not query.strip() or len(query) > 256:
+        raise AuditError("Use a nonempty QAM query of at most 256 characters.")
+    return _qam_command(["find", "--limit", _qam_limit(limit), "--", query], lines=True)
+
+
+@mcp.tool()
+def list_qam_receipts(instruction: str | None = None, status: str | None = None,
+                      premise_hash: str | None = None, limit: int = 10) -> dict[str, Any]:
+    """Find saved MMA receipts, optionally by transitive premise, instruction or status."""
+    args = ["receipts", "--limit", _qam_limit(limit)]
+    if instruction is not None:
+        if instruction not in ("EXPORT", "SCRUB", "READOUT", "SEARCH_ROUTE"):
+            raise AuditError("Unsupported MML instruction filter.")
+        args.extend(["--instruction", instruction])
+    if status is not None:
+        if status not in ("continue", "guard", "reject"):
+            raise AuditError("Unsupported MMA status filter.")
+        args.extend(["--status", status])
+    if premise_hash is not None:
+        if not re.fullmatch(r"[0-9a-fA-F]{32}", premise_hash):
+            raise AuditError("Use a 32-digit QAM premise hash.")
+        args.extend(["--premise", premise_hash])
+    return _qam_command(args)
+
+
+@mcp.tool()
+def get_qam_receipt(receipt_hash: str, trace: bool = False,
+                    replay: bool = False, summary: bool = False) -> dict[str, Any]:
+    """Read a verified MMA receipt. Summary also supports replay, with comparison fields only."""
+    digest = "".join(receipt_hash.split())
+    if not re.fullmatch(r"[0-9a-fA-F]{128}", digest):
+        raise AuditError("Use a 128-digit SHA-512 receipt hash.")
+    args = ["receipt", digest]
+    if summary:
+        if trace:
+            raise AuditError("Use summary without trace.")
+        args.append("--summary")
+    if trace:
+        args.append("--trace")
+    if replay:
+        args.append("--replay")
+    return _qam_command(args)
+
+
+@mcp.tool()
+def run_qam_mml(context: str, request: str, summary: bool = False) -> dict[str, Any]:
+    """Run a declared MML request, store its full receipt, and optionally return only diagnostics."""
+    args = ["mma", _qam_json_path(context), _qam_json_path(request)]
+    if summary:
+        args.append("--summary")
+    return _qam_command(args, read_only=False)
 
 
 if __name__ == "__main__":

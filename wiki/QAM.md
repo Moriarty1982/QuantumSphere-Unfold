@@ -1102,3 +1102,186 @@ Alles ohne `sorry`, in CI gebaut (`lean-build.yml`).
 **Ausschluss ohne Aufteilungsregister.** Der rechte Singulettsektor der $2k$ Doublets ist als Darstellung der vollen Punktpermutationsgruppe irreduzibel. Ein spin- und permutationsinvarianter rechter Hamiltonoperator spaltet diese Entartung daher nicht auf. Die kohärente Aufteilungsmischung setzt einen größeren Träger voraus.
 
 **Zyklische Randordnung.** Eine gerade zyklische Ordnung würde die Orbit-Parität als alternierende Zweiteilung liefern. Die Zweigruppenkopplung bleibt unter dem einfachen Shift invariant und wählt rechts eine Linie. Selbst eine gemeinsame zyklische Projektion erhält links den führenden Zählexponenten. Die Zuordnung der Scanindizes zu Horizontpunkten ist offen.
+
+**Spiegelungen der zyklischen Randordnung.** Auch eine gemeinsame Diederprojektion erhält im Modell den führenden Zählexponenten $\ln2$ pro Punkt. Bei acht Punkten sinkt die linke Dimension gegenüber dem reinen Shiftquotienten von 36 auf 30. Die native zyklische Ordnung bleibt Voraussetzung.
+
+**Linke Schließung und zyklische Randordnung.** Mit zusätzlicher linker SU(2)-Singulettbedingung bleiben bei acht Punkten nach zyklischer oder Diederprojektion jeweils drei Zustände. Für große Punktzahl bleibt der führende Exponent $\ln2$ erhalten; die logarithmische Korrektur beträgt im Modell $-5/2\ln N$.
+
+**Vergleich der linken Schließungen.** Im zyklisch geordneten Modell verschiebt die gemeinsame Punktprojektion den logarithmischen Zählkoeffizienten um minus eins. Der Wert $-3/2$ tritt sowohl bei SU(2) ohne Punktquotient als auch bei U(1) mit Punktquotient auf. Bei acht Punkten bleiben mit Diederprojektion acht U(1)-Zustände und drei SU(2)-Singuletts.
+
+**Gegenprobe zur Spinselektion.** Auf derselben exakten Flächenfaser liefert die Zweigruppenkopplung bei acht Minimalspinpunkten Grundenergie $-6g$, bei zwei Spin-$3$-Punkten dagegen $-12g$. In dieser Erweiterung bevorzugt sie den höheren Spin. Die rechte Multiplizitätsreduktion ersetzt den unabhängigen Minimalspinfilter nicht.
+
+**Skalierung der Spinselektion.** Bei festem Paargewicht gewinnt die höhere Spinbelegung in der gleichflächigen Vergleichsfamilie quadratisch an Austauschenergie. Eine feste lokale Casimir-Strafe wächst nur linear. Eine extensive Paargewichtung vermeidet diesen konkreten Ausschluss, braucht aber eine eigene Begründung und lässt die rechte Lücke mit der Größe sinken.
+
+**Flächenweite Schranke für Minimalspin.** Im Zweigruppenmodell mit Paargewicht $g_0/A$ und lokaler Casimir-Strafe genügt $\lambda>g_0/(2\sqrt3)$, um auf jeder exakten Faser mit zugelassener balancierter Minimalspinbelegung höhere Spins energetisch abzuweisen. Die Normierung und die Strafe sind Modellannahmen.
+
+**Thermische Grenze des rechten Grundraums.** Bei Paargewicht $g_0/A$ enthält bereits der maximale Zweigruppenblock eine Folge rechter Multipletts mit Anregungsenergie $g_0S(S+1)/(2A)$. Ohne zusätzliche rechte Projektion fällt der thermische Singulettgrundanteil bei fester Temperatur mindestens auf die Größenordnung $1/A$ oder darunter. Energetische Auswahl und thermische Besetzung sind getrennt zu prüfen.
+
+**Thermik nach rechter Singulettprojektion.** Auch nach harter Gesamtspin-null-Projektion hat die erste angeregte Singulettstufe im Zweigruppenmodell Multiplizität $(k-1)^2$. Bei fester Temperatur verschwindet das Gewicht der Grundlinie. Die asymptotische Kühlschwelle liegt im Modell bei $\beta g_0/\sqrt3\sim2\ln k$.
+
+**Thermisches Übergangsfenster.** Bei $\beta g_0/\sqrt3=2\ln k+c$ konvergiert das rechte Grundgewicht im projizierten Zweigruppenmodell gegen $[\sum_{d\ge0}e^{-cd}/(d!)^2]^{-1}$. Direkt an der Schwelle beträgt es rund $0{,}439$.
+
+**Exponentieller thermischer Rest der rechten Singuletts.** Bei fester Temperatur wächst die rechte Zustandssumme relativ zur Grundenergie exponentiell. Ihr Exponent pro Gruppe ist das Maximum von $2h(x)-bx(1-x)$ und ist für jedes endliche $b$ positiv. Die harte Singulettprojektion allein entfernt den rechten thermischen Beitrag daher nicht.
+
+**Zählexponent und Grundzustandsreinheit.** Im rechten Gibbsmodell verschwindet der thermische Beitrag pro Punkt genau dann, wenn die dimensionslose inverse Temperatur $b$ divergiert. Die rechte Grundlinie wird erst rein, wenn zusätzlich $b-2\ln k$ gegen plus unendlich geht. Der führende Zählexponent prüft diese stärkere Auswahl nicht.
+
+**Zwischenregime der rechten Thermik.** Bei $b=\alpha\ln k+c$ mit $0<\alpha<2$ wächst die rechte Log-Zustandssumme wie $2e^{-c/2}k^{1-\alpha/2}$. Der Beitrag ist kleiner als der führende Flächenterm, kann aber die logarithmische Korrektur der linken Zählung überdecken.
+
+**Gibbsentropie im Übergangsfenster.** Bei $b=2\ln k+c$ bleibt die rechte Log-Zustandssumme beschränkt, doch die Gibbsentropie wächst wie $2\mu(c)\ln k$. Am Mittelpunkt beträgt der Koeffizient rund $1{,}396$. Für einen Beitrag unterhalb der logarithmischen Ordnung muss $b-2\ln k$ gegen plus unendlich gehen.
+
+**Unruh-Normierung und Kühlschwelle.** Wenn die Austauschenergie dieselbe lokale Rotverschiebung wie die r10-Horizontenergie hat, fällt der Beobachterabstand aus $b$ heraus. Die rechte Kühlschwelle benötigt dann eine zusätzliche Flächenabhängigkeit oder eine direkte Grundraumselektion. Endliche Gibbsgewichte allein liefern keinen scharfen Spinprojektor.
+
+**Beobachterzugriff und Spinunterstützung.** Enthält die eingeschränkte Beobachteralgebra weiterhin die ursprüngliche Einpunktfläche, enthält sie auf dem endlichen Träger auch deren Spinprojektoren. Die Einschränkung erhält dann alle Spinwahrscheinlichkeiten. Ein selektiver Minimalspinzweigeffekt braucht eine eigene Zugriffsoperation und führt seinen Erfolgsfaktor mit.
+
+**Aktive Selektion und Flächenerhaltung.** Ein deterministischer Kanal mit ausschließlich minimalem Einpunktausgang kann die ursprüngliche Fläche auf Eingaben mit höheren Spins nicht erhalten. Ein binäres Instrument erhält die Flächenstatistik über beide Zweige und liefert Minimalspin im konditionierten Ja-Zweig. Die native Identifikation von T mit diesem Zweig bleibt offen.
+
+**Drehimpulsgrenze der Punktaufspaltung.** Ein höherer Spin mit ganzzahligem Flächenquotienten $r$ ist flächengleich zu $r$ Minimalspinpunkten, deren maximaler Gesamtspin $r/2$ aber kleiner als der Eingangsspin ist. Lokale kovariante Aufspaltung braucht einen zusätzlichen Drehimpulsträger. Die Einschränkung gilt nicht automatisch auf einem vorab projizierten globalen Singulettträger.
+
+**Flächengleicher Kanal auf der Singulettfaser.** Bei Fläche $4\sqrt3$ hat der Modellträger 15 Singuletts, der reine Minimalspinausgang nur 14. Ein reversibler Übergang in diesen Ausgang allein scheitert. Ein rotationsinvariantes Zweizustandsregister genügt für eine isometrische Einbettung, speichert aber den Belegungszweig. Ohne dieses Register erreicht ein einzelner selektiver Krausoperator bei gleichverteilter Eingabe höchstens $14/15$ Erfolg.
+
+**Kapazität des Zusatzkanals.** Auf großen exakten Flächenfasern mit geordneten Spinlisten wächst das Verhältnis der Misch-Singuletts zum reinen Minimalspinraum mindestens exponentiell. Ein deterministischer flächengleicher Kanal braucht dort ein Umfeld mit mindestens linear in der Punktzahl wachsender Zustandskapazität in Bits. Ein einzelner selektiver Krausoperator hat bei gleichverteilter Eingabe höchstens exponentiell kleinen Erfolg.
+
+**Kapazität nach zyklischem Quotienten.** Auf der gleichflächigen Mischfamilie hat asymptotisch fast jede Spinliste trivialen zyklischen Stabilisator. Die Identifikation zyklischer Verschiebungen reduziert die Zahl der Listen nur polynomial. Die lineare untere Schranke für die Umfeldkapazität in Bits bleibt bestehen.
+
+**Kapazität mit Spiegelungen.** Auch der Diederquotient reduziert die Zahl der betrachteten Mischlisten nur polynomial. Die verschärfte untere Schranke für die Umfeldkapazität beträgt asymptotisch rund $0{,}05252$ Bit pro Minimalspin-Flächeneinheit, bis auf logarithmische Terme.
+
+**Optimierte Kapazitätsuntergrenze.** Für die Mischfamilie aus Minimalspin und Spin 3 ist der stärkste hier bewiesene Exponent $-\log_2 z-1$ mit $2z+z^4=1$. Er bleibt unter zyklischer und Diederidentifikation erhalten.
+
+**Interne Spin-3-Multiplizität.** Die Spin-3-Singuletts je Mischliste wachsen bis auf polynomiale Faktoren wie $7^m$. Die Kapazitätsuntergrenze des flächengleichen Kanals verschärft sich dadurch auf den Exponenten $-\log_2 z-1$ mit $2z+7z^4=1$. Zyklische und Diederidentifikation ändern den Exponenten nicht.
+
+**Exakte Kapazitätsrate im Faser-Modell.** Die Summe über die Pell-Spinarten bestimmt den Exponenten der vollständigen geordneten Singulettfaser. Mit $\sum_r d_r z_*^r=1$ ist die minimale asymptotische Umfeldrate $-\log_2 z_*-1$ Bit pro Flächeneinheit. Zyklische und Diederidentifikation ändern diese Rate im deklarierten Modell nicht.
+
+**Exakte Faser und r63-Normierung.** Bei Gewicht zwei liefert die Pell-Teilmenge der exakten Minimalspinfaser einen strikt kleineren Normierungsquotienten als die volle r63-Spinsumme. Die Kapazitätsrate des flächengleichen Kanals benutzt zusätzlich andere Gewichte und ist getrennt von der BI-Normierung zu lesen.
+
+**Festes Flächenfenster und r63-Exponent.** Im geordneten Modell mit Gewicht zwei je Punkt genügt jedes feste positive Flächenfenster für den vollen Exponenten der r63-Skalargleichung. Bei exakt verschwindender Fensterbreite bleibt nur die Pell-Faser. Native Flächenauflösung und zusätzliche Horizontprojektionen sind gesondert zu begründen.
+
+**Schrumpfende Fenster mit U(1)-Neutralität.** Auf geraden Flächenindizes bleibt im geordneten Zwei-Label-Modell der volle r63-Exponent auch bei schrumpfender Breite $\delta_N$ erhalten, sofern $N\delta_N$ divergiert. Gerade Anzahlen je Spinart erlauben eine magnetisch neutrale Teilzählung mit demselben führenden Exponenten.
+
+**Schrumpfende Fenster mit SU(2)-Schließung.** Unter derselben Fensterbedingung wie im U(1)-Vergleich kostet die volle Singulettprojektion im geordneten Irrep-Modell keinen führenden Exponenten. Die Normierung verwendet weiterhin die lokalen Gewichte $2j+1$ und unterscheidet sich deshalb von der Zwei-Label-Zählung.
+
+**Umfeldkapazität bei Fenstererhaltung.** Auf geraden Flächenindizes und unter der hinreichenden Fensterbedingung aus der Listenrechnung beträgt die abstrakte Umfeldrate $s/\ln2-1$. Das ergibt rund $0{,}865$ Bit pro Minimalspin-Flächeneinheit bei Zwei-Label-Zählung und $1{,}152$ bei voller SU(2)-Schließung. Die Modellkanäle erhalten das Fenster, nicht im Allgemeinen den exakten Flächeneigenwert.
+
+**Flächenbilanz des Fensterkanals.** Exakte Gesamtflächenerhaltung verlangt für jeden Eingangsrest $\epsilon$ einen passenden Umfeld-Eigenraum. Ein anfangs flächenneutrales Umfeld mit derselben positiven Mindeststufe eins kann Reste zwischen null und eins nicht tragen, unabhängig von seiner Kapazität bei Fläche null.
+
+**Vorbeladene Flächenreserve.** Bei exakter additiver Flächenerhaltung muss der Vorrat den Fehlbetrag in der quadratfreien Minimalspinklasse decken. Auf einer Folge zulässiger Spin-1-Eingänge im schmalen Fenster ist dieser Fehlbetrag die gesamte sichtbare Zielfläche $N$. Eine kleine Reserve genügt dort nicht.
+
+**Kohärente und katalytische Flächenreserven.** Ein deterministischer Übergang vom reinen Spin-1-Eingang zum Minimalspinausgang der Fläche $N$ braucht auch bei unscharfer Reserve vollständige Unterstützung oberhalb der Minimalspinkomponente $N$. Die Reserve verliert diese Komponente pro Lauf und kann unter exakter additiver Erhaltung nicht unverändert als Katalysator zurückkehren.
+
+**Näherungsweise Rückkehr der Flächenreserve.** Bei exakter Flächenbilanz verschiebt der garantierte Minimalspinausgang die Reserveverteilung um $N$. Liegt ihr Rückkehrfehler im Totalvariationsabstand unter $\varepsilon$, muss die anfängliche mittlere Minimalspinkomponente mindestens $N/(2\varepsilon)$ betragen.
+
+**Realisierbare Flächenreserve für einen fixierten Eingang.** Ein flächenerhaltender Tausch mit einer Leiter vorbereiteter Blöcke erreicht für eine gemischte Reserve den vollständigen Spurabstand $1/L$ bei mittlerer Minimalspinkomponente $N(L+1)/2$. Auch eine reine Sinusreserve erreicht Rückkehrfehler der Ordnung $1/L$. Der Aufbau präpariert den sichtbaren Minimalspin vorab.
+
+**Rückkehrgrenze bei universeller Ersetzung.** Gibt eine reversible Operation für zwei orthogonale Eingänge denselben reinen sichtbaren Minimalspinzustand aus, muss das Umfeld die Eingänge perfekt unterscheiden. Bei mindestens einem Eingang beträgt sein Spurabstand zur gemeinsamen Anfangsreserve daher mindestens $1/2$.
+
+**Rückkehr bei informationshaltigem T-Ausgang.** Für eine reine oder auf ihrem Träger gleichverteilte Reserve beträgt der Rückkehrfehler bei deterministischer Umwandlung einer $D$-dimensionalen Faser in einen $d$-dimensionalen sichtbaren Minimalspinraum für mindestens einen Eingang mindestens $1-d/D$. Ausgangskorrelationen ändern diese Dimensionsgrenze nicht.
+
+**Entropiegrenze für gemischte Reserven.** Bei gemeinsamer reversibler Kompression von Dimension $D$ nach $d$ muss eine Reserve mit Rückkehrfehler höchstens $\varepsilon$ und Gesamtdimension $R$ die Bedingung $\log_2(D/d)\le h_2(\varepsilon)+\varepsilon\log_2(R-1)$ erfüllen. Dies gilt auch für ungleich gewichtete gemischte Reserven und beliebige Ausgangskorrelationen.
+
+**Gemischte Informationsleiter.** Bei gleichverteiltem Eingang erreicht eine gestufte Reserve Rückkehrfehler $1/L$ mit Kapazität $L\log_2(D/d)+O(1)$. Für einen festen auszulagernden Basisindex bleibt der Fehler derselben Konstruktion groß. Die Rückkehr im Mittel und die Rückkehr für jeden Eingang sind daher getrennte Anforderungen.
+
+**Mehrpunkt-Kanalprüfung in SEARCH_ROUTE.** Der OP1-Beleg kann nun eine deklarierte Umgebungskapazität gegen die Trägerdimensionen und die exakte Flächenrestbedingung prüfen. Die Beispiel-Faser mit 15 Eingangs- und 14 Minimalspin-Singuletts braucht mindestens zwei Umfeldzustände. Die Rechnung prüft notwendige Bedingungen, keine native Kanalexistenz.
+
+**Exakte Faserzählung im Suchbeleg.** SEARCH_ROUTE kann die Kanalträger aus einer geraden Zahl von Minimalspin-Flächeneinheiten berechnen. Auf acht Einheiten ergeben sich 15 Eingangs- und 14 Ausgangssinguletts, auf sechzehn 7149 und 1430. Gezählt werden geordnete Spinlisten mit voller SU(2)-Schließung ohne Punktquotient.
+
+**Punktquotienten in der exakten Faserzählung.** SEARCH_ROUTE kann zyklische oder Diederinvarianten der vollständigen Spinlisten bis 24 Flächeneinheiten zählen. Verwendet wird der triviale Punktcharakter ohne zusätzliche rechte Singulettphase. Bei acht Einheiten ergeben beide Projektionen vier Eingangs- und drei Minimalspin-Singuletts.
+
+**Faserzählung mit rechter Singulettphase.** Der optionale rechte Charakter aus einem Hilfsdoublet je Punkt verändert den gemeinsamen Punktquotienten. Bei acht Flächeneinheiten ergibt die Diederprojektion dann drei Eingangs- und drei Ausgangssinguletts, bei sechzehn 204 und 65. Der Hilfsträger ist eine Modellannahme.
+
+**Rechte Phase aus tatsächlichen Punktspins.** Der Gruppentausch trägt auf der rechten Singulettlinie die Phase $(-1)^{2a}$ mit maximalem Gruppenspin $a=b$. Mit tatsächlichen Spin-$3$-Faktoren bleibt das zusätzliche Paarsingulett auf der Acht-Einheiten-Faser erhalten. Die Dimension ist dann vier zu drei statt drei zu drei beim Hilfsdoubletmodell.
+
+**Spinabhängiger Charakter in SEARCH_ROUTE.** Mit `right_singlet_phase: "actual"` prüft die Faserzählung die Balance der tatsächlichen Gruppenspins und den daraus folgenden Tauschcharakter je Liste. Die Diederprojektion liefert bei acht Flächeneinheiten vier Eingangs- und drei Ausgangssinguletts, bei sechzehn 182 und 65.
+
+**Kapazitätsrate mit tatsächlichen rechten Spins.** Verteilung jeder Spinart zu gleichen Teilen auf die alternierenden Gruppen erzwingt die rechte Balance mit nur polynomialem Listenverlust. Freie Orbits erhalten die linke Singulettmultiplizität. Die asymptotische Umfeldrate bleibt damit im Modell rund $0{,}302498$ Bit pro Flächeneinheit.
+
+**Fensterkanal mit tatsächlicher rechter Balance.** Die alternierende Spinbalance und gemeinsame Diederprojektion lassen den vollen Fensterexponenten im geordneten Modell bestehen. Ein symmetrisches Spin-1-Singulett liefert auch nach diesen Projektionen einen Gegenfall zur exakten Flächenerhaltung mit neutralem, lückenhaftem Umfeld.
+
+**Selektiver Fensterkanal.** Ein Ja-Zweig mit $r$ Krausoperatoren erreicht bei gleichverteiltem Eingang höchstens $\min(1,rd/D)$ Erfolg. Bei exakter Flächenerhaltung und neutralem Umfeld mit Mindeststufe eins kann er im schmalen Fenster nur auf der exakten Faser tragen. Der entsprechende Erfolgsanteil fällt im SU(2)-Modell mit tatsächlicher rechter Balance exponentiell.
+
+**Selektive Erfolgsgrenze im MMA-Beleg.** Die Mehrpunktprüfung gibt für gleichverteilte Eingänge die exakte Dimensionsschranke $\min(1,rd/D)$ aus. Dabei begrenzt die deklarierte Umfelddimension die Zahl der internen Ja-Ausgänge. Nicht verfügbare Flächenreste können die Erfolgsgrenze weiter senken.
+
+**Sektorweise Flächenbilanz in SEARCH_ROUTE.** Die Mehrpunktprüfung kann die Umfeldkapazität nach deklarierten Flächenresten aufteilen. Bei gleicher Gesamtdimension kann eine ungeeignete Verteilung der Umfeldzustände die Ja-Wahrscheinlichkeit senken. MMA nennt die fehlenden Reste einzeln.
+
+**Exakte kleine Fensterzählung in SEARCH_ROUTE.** MMA kann die Flächenrestsektoren eines kleinen rationalen Fensters aus geordneten SU(2)-Spinlisten selbst bestimmen. Im Fenster von acht bis achteinhalb Einheiten gibt es 13 Singulettsektoren mit zusammen 652 Zuständen. Bei neutralem Umfeld mit Mindeststufe eins und zwei Umfeldzuständen ist die Ja-Wahrscheinlichkeit höchstens $15/652$.
+
+**Punktquotient im Flächenfenster.** Im Fenster von acht bis achteinhalb Einheiten bleiben bei zyklischer Projektion 127 Singuletts und mit Spiegelungen 61. Beide enthalten vier Zustände auf der exakten Zielfläche. Bei neutralem Umfeld mit Mindeststufe eins und zwei Umfeldzuständen ergeben sich Erfolgsobergrenzen $4/127$ und $4/61$. Die Rechnung verwendet den trivialen Punktcharakter.
+
+**Rechte Spinbalance im Flächenfenster.** Die Fensterzählung berücksichtigt jetzt auch den Hilfsdoubletcharakter oder die tatsächlichen rechten Punktspins. Bei Diederprojektion im Fenster von acht bis achteinhalb Einheiten bleiben mit tatsächlichen Spins 13 Zustände, davon vier auf der exakten Zielfläche. Bei zwei neutralen Umfeldzuständen ist die Ja-Wahrscheinlichkeit höchstens $4/13$.
+
+**Erster positiver Flächenrest.** Die Fensterprüfung gibt den kleinsten nichtnulligen Rest als exakte Radikalsumme aus. Bei acht Flächeneinheiten mit Diederprojektion und tatsächlichen rechten Spins liegt der erste zusätzliche Sektor bei $2\sqrt5-4\approx0{,}472136$ und trägt neun Zustände. Bei Breite $0{,}472$ bleiben nur die vier Zustände der Zielfläche.
+
+**Erster Flächenrest bei zehn Einheiten.** Mit tatsächlicher rechter Spinbalance und Diederprojektion fällt der kleinste positive Rest von rund $0{,}472136$ bei acht auf rund $0{,}0486434$ bei zehn Einheiten. Der neue Sektor hat zwei Singuletts. Seine balancierten Paare sind $(3,1/2)$ und $(5/2,1)$.
+
+**Kleine Flächenreste bei großen Zielflächen.** Eine Pell-Familie aus Spin-1-Punkten, ergänzt um Minimalspinpunkte, liefert für jede große gerade Zielfläche einen positiven Rest höchstens der Ordnung $1/N$. Die Belegung kann rechte Spinbalance und Diederprojektion erfüllen. Ein asymptotischer Mindestabstand folgt daraus nicht.
+
+**Exponentenanstieg bei Breite $C/N$.** Eine kleine Spin-1-Beimischung mit Pell-korrigierter Fläche und freier Verzahnung erhöht den unteren Zählexponenten bereits bei einem Fenster der Breite $C/N$ über den exakten Pell-Wert. Rechte Spinbalance und Diederprojektion ändern diesen Schluss im Modell nicht. Der volle Fensterexponent bei dieser Breitenordnung bleibt offen.
+
+**Annäherung im inversen Flächenfenster.** Für jede feste endliche Spinmenge senkt die Flächenkorrektur im Fenster $C/N$ den optimalen Exponenten um höchstens einen Term der Ordnung $C^{-2}$. Durch Wahl eines hinreichend großen festen $C$ lässt sich der volle Exponent beliebig genau von unten annähern. Gleichheit bei festem $C$ bleibt offen.
+
+**Voller Exponent bei Breite $C/N$.** Vier Spinflächen bilden eine Radikalbasis. Ein Produkt von Einheiten liefert eine Flächenkorrektur mit Fehler $O(Q^{-3})$ bei $O(Q)$ Punktänderungen. Dadurch genügt im balancierten SU(2)-Modell sogar $N^3\delta_N\to\infty$ für den vollen Fensterexponenten. Insbesondere funktioniert jedes feste $C/N$ mit $C>0$.
+
+**Voller Exponent in polynomial schmalen Fenstern.** Eine größere multiquadratische Spinflächenbasis liefert im deklarierten balancierten Modell den vollen SU(2)-Exponenten für jede feste Breite $C N^{-p}$ mit $p,C>0$. Die benötigten Korrekturspins hängen von $p$ ab. Superpolynomial schmale Fenster bleiben offen.
+
+**Superpolynomiale Fenster.** Bei festem Spin-Cutoff erzwingt die algebraische Norm einen polynomialen Mindestabstand für jeden von null verschiedenen Flächenrest. Auf dem unbeschränkten Modellträger existiert durch eine Diagonalwahl trotzdem eine superpolynomial schmale Fensterfolge mit vollem Zählexponenten. Eine vorgegebene solche Folge ist damit nicht entschieden.
+
+**Auflösungsskala bei festem Spinträger.** Für die vier Spinarten $1/2,1,3/2,9$ trennt die Größenordnung $N^{-3}$ die beiden bewiesenen Regime: deutlich schmaler bleibt nur die Minimalspinfaser, deutlich breiter gilt der volle Vier-Arten-Exponent. Der kritische Bereich mit festem Vorfaktor bleibt offen.
+
+**Kritisches Fenster des Vier-Spin-Trägers.** Bei Breite $C/N^3$ mit $C<1/192$ bleibt für große Flächen nur die exakte Faser. Für große feste $C$ liegt die untere Zählrate höchstens um einen Term der Ordnung $C^{-2/3}$ unter dem vollen Vier-Arten-Exponenten. Die scharfe Schwelle bleibt offen.
+
+**Kritischer Vorfaktor und Zählrate.** Bei festem $C/N^3$ treten auf jedem großen Zielblock nur beschränkt viele verschiedene Flächenreste des Vier-Arten-Trägers auf. Jeder legt die Nichtminimalspinanzahlen fest. Daher bleibt auf einem positiven Anteil der geraden Ziele eine gleichmäßig positive Lücke zum vollen Vier-Arten-Exponenten.
+
+**Quantitative Lücke im kritischen Fenster.** Im Vier-Arten-Modell liegt der Verlust der unteren Grenzrate bei Breite $C/N^3$ für große feste Vorfaktoren in der Größenordnung $C^{-2/3}$. Eine lokale Normabschätzung liefert die passende untere Schranke auf einem positiven Anteil der geraden Ziele.
+
+**Allgemeine kritische Zähllücke.** Auf einem festen vollständigen multiquadratischen Spinträger vom Grad $D>1$ hat der Verlust der unteren Grenzrate bei Fensterbreite $C/N^{D-1}$ die Ordnung $C^{-2/(D-1)}$. Für die Gegenabschätzung genügt, dass ein fixer Rest die gewichtete Dichte einer nichttrivialen Radikalklasse festlegt.
+
+**Radikalträger im MMA-Beleg.** Die Fensterprüfung kann eine feste Spinmenge zählen und ihren Körpergrad sowie die Vollständigkeit der Radikalbasis prüfen. Für $\{1/2,1,3/2,9\}$ erkennt sie Grad vier und den kritischen Verlustexponenten $2/3$. Ohne Spin neun bleibt die Normschranke verfügbar, während die vollständige Korrekturkonstruktion nicht zertifiziert wird.
+
+**Endliches Abstandszertifikat.** Bei deklarierter Spinmenge meldet MMA eine rationale Normuntergrenze für positive Flächenreste. Unterschreitet die Fensterbreite diese Schranke, kann nur die exakte Faser beitragen. Eine größere Breite bleibt für diesen Test unentschieden.
+
+**Normzertifikat als schneller Rechenweg.** Wenn das Fenster sicher keine positiven Reste enthält, überspringt MMA die Fensterenumeration und zählt die exakte Faser mit derselben Spinmenge und Punktprojektion. Der gewählte Rechenweg steht im Beleg.
+
+**Größere zertifizierte Fenster.** Ein Normzertifikat erlaubt Fensteranfragen bis 100 Flächeneinheiten ohne Punktquotient und bis 24 mit Punktquotient. Bei 24 Einheiten mit Diederprojektion und tatsächlichen rechten Spins ergibt der Beispielträger mit Spin 3 genau 47.480 Eingangs- und 4.588 Minimalspin-Singuletts. Die vollständige Enumeration bleibt auf zehn Einheiten begrenzt.
+
+**Größere Punktquotienten.** Die exakte Faserzählung und normzertifizierte Fenster unterstützen jetzt zyklische und Diederprojektion bis 48 Flächeneinheiten. Die Grenze der vollständigen Fensterenumeration bleibt zehn.
+
+**Schnellere Punktquotienten.** Die exakte Zählung verwirft Zwischenzustände, deren minimale Restfläche bereits zu groß ist. Kontrollierte Zählergebnisse bleiben gleich. Zyklische und Diederprojektion sind nun bis 64 Einheiten zugelassen.
+
+**Cache für Routensuche und Faserzählung.** MMA verwendet identische Suchergebnisse aus SQLite erneut. Suchparameter, Kontext, Prämissen und Implementierungsversionen bestimmen die Wiederverwendung. Replay rechnet unabhängig vom Cache.
+
+**Routensuche im LaTeX-Dokument.** Das Zusatzpaket `qam-readout` zeigt auch Suchbelege mit Kandidaten, Guards, Ausschlüssen und Kanalgrenzen. Der SQLite-Beleg lässt sich anhand seines Hashes erneut als identisches Fragment exportieren.
+
+**Rückwärtssuche nach Prämissen.** `readout_db receipts --premise HASH` findet gespeicherte MMA-Belege, die eine QAM-Aussage direkt oder indirekt referenzieren. Filter nach MML-Befehl und MMA-Status lassen sich kombinieren. Auch im Beleg vermerkte fehlende Prämissen sind auffindbar.
+
+**QAM-Datenbank im MCP.** Der QSC-MCP-Server bietet Indexaufbau, Formel- und Belegsuche, Trace und Replay sowie deklarierte MML-Ausführung über MMA. Such- und Belegwerkzeuge öffnen SQLite lesend. Indexaufbau und MML-Ausführung schreiben nur in die lokale Datenbank.
+**Kompakte Belegansicht.** Der MCP-Parameter `summary=true` liefert nach der Hashprüfung den Beleg-Hash, den MML-Befehl, den MMA-Status sowie Fehler, Pflichten und deklarierte Guards. Ergebnisdetails, Prämissenspur und Neuberechnung lassen sich über die ausführlichen Ansichten abrufen.
+
+**Kompakter Replay.** Mit `summary=true` und `replay=true` liefert der MCP getrennt den Ergebnis- und den Hashvergleich, den neuen Beleg-Hash und die Namen abweichender Felder. Ein abweichender Hash behält Rückgabecode 1.
+
+**Kompakte MML-Ausführung.** Auch `run_qam_mml` kann mit `summary=true` nur die MMA-Diagnose und den Beleg-Hash liefern. Der vollständige Beleg bleibt in SQLite über den Hash abrufbar.
+
+**Offene Guards in der Routenkurzansicht.** Die Kurzansicht zeigt die Anzahl der gefundenen Routen und die zusammengefassten offenen Guards. Der vollständige Beleg ordnet die Guards den einzelnen Routen zu.
+
+**Kanaldiagnose in der Kurzansicht.** Bei einer Kanalprüfung zeigt der Beleg die Ausschlussgründe sowie, soweit vorhanden, Eingangs- und Ausgangsdimension und die deklarierte und erforderliche Mindestdimension der Umgebung.
+
+**Routen mit den wenigsten offenen Guards.** Die Kurzansicht nennt die minimale Anzahl offener Guards und zeigt bei allen gleichauf liegenden Kandidaten die Operationsfolge und ihre offenen Guards.
+
+**Kohärenter Ringmarkentest.** Das Qiskit-Beispiel `python -m qam.examples.marked_ring_transport_qiskit` prüft acht Spins mit einer überlagerten Kantenmarke. Der gemeinsame Transport liefert sichere Singulettannahme und vollständige Markeninterferenz. Beim reinen Markenschritt liegen die Annahme bei $5/8$ und der bedingte Plus-Ausgang bei $7/10$. Die Schaltung vergleicht deklarierte Modelltransporte.
+
+**Phasenprüfung im Ringmarkentest.** Eine zusätzliche relative Phase von $\pi$ im bewegten Zweig lässt die Singulettannahme bei eins, kippt aber den Interferenzausgang von Plus auf Minus. Damit prüft das Beispiel die relative Zeigerphase getrennt vom Paartransport.
+
+**Zwei Interferenzquadraturen.** Der Ringmarkentest misst nach Annahme $X+iY$ am Markenqubit. Der Betrag trennt den reduzierten Kontrast des reinen Markenschritts ($2/5$) von einer kalibrierbaren relativen Phase beim gemeinsamen Transport (Betrag eins).
+
+**Getrennte Diagnose der Markenzweige.** Der Test zeigt die Singulettannahme je Marke und die normierte Überlappung der angenommenen Zweige nach Rücktransport. Beim reinen Markenschritt ergeben sich Annahmen von $1$ und $1/4$ sowie Überlappung $1/2$. Der gemessene Kontrast $2/5$ ist das Produkt aus dieser Überlappung und dem Ausgleichsfaktor $4/5$ der Zweiggewichte.
+
+**Transport gegen festen Soll-Rückweg.** Der Qiskit-Test kann Hintransport und inversen Referenztransport getrennt wählen. Beim reinen Markenschritt mit idealem gemeinsamem Soll-Rückweg bleibt die Annahme $5/8$, aber Kontrast und Zweigüberlappung fallen auf $1/5$ und $1/4$. Die Interferenzdiagnose bezieht sich auf den jeweils angegebenen Rückweg.
+
+**Fehler außerhalb der markierten Kante.** Ein zusätzlicher Tausch zwischen zwei anderen Singulettpaaren lässt die lokale Annahme bei eins. Gegen den idealen Rückweg sinken Interferenzkontrast und Zweigüberlappung auf $1/2$. Der lokale Ja-Ausgang allein prüft daher nur das markierte Paar.
+
+**Spurprüfung des gesamten Singulettträgers.** Der Ringmarkentest mittelt zusätzlich einen Hadamard-Test ohne Singulett-Nachauswahl über alle 105 Paarungen der acht Spins. Der normierte Spurrealteil ist null beim reinen Markenschritt, eins beim gemeinsamen Transport und $2/7$ beim zusätzlichen Tausch außerhalb der markierten Kante.
+
+**Komplexe Spurprüfung.** Über alle Paarungen werden beide Interferenzquadraturen gemittelt. Ein gemeinsamer Transport mit relativer Phase $\pi/2$ liefert die normierte Spur $i$ bei Betrag eins. Ein zusätzlicher Tausch liefert weiterhin Betrag $2/7$ und kann durch eine gemeinsame Phase nicht korrigiert werden.
+
+**Prüfung eigener Transportkandidaten.** Beide Ringmarkentests nehmen einen kontrollierten Hintransport und einen fest vorgegebenen inversen Referenztransport entgegen. Ein externer Modellkandidat mit zusätzlicher lokaler $Z$-Phase außerhalb der markierten Kante erreicht weiterhin volle lokale Singulettannahme, aber komplexe Spur null.
+
+**Globale Singulettleckage.** Der Qiskit-Spurtest berechnet zusätzlich die mittlere Leckage des bewegten Zweigs aus dem globalen Singulettträger. Ein zusätzlicher Spintausch liefert Spur $2/7$ bei Leckage null. Eine einzelne zusätzliche $Z$-Phase liefert Spur null bei vollständiger Leckage.
+
+**Maximale Singulettleckage.** Die normierte Paarungsfamilie erlaubt die Bestimmung der Singulärwerte des auf den globalen Singulettträger komprimierten Transports. Der zusätzliche $Z_iZ_j$-Puls liefert mittlere Leckage $4/7$, maximale Leckage $8/9$ und normierte Spur $-1/7$.
