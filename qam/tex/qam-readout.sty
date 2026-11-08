@@ -1,0 +1,16 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{qam-readout}[2026/11/08 QAM MMA receipt display]
+\RequirePackage{qam}
+
+\newcommand{\qamreadout}[1]{%
+  \par\begingroup
+  \small
+  \InputIfFileExists{#1}{}{%
+    \PackageWarning{qam-readout}{Receipt fragment '#1' missing}%
+    \noindent\textit{QAM receipt unavailable.}\par
+  }%
+  \endgroup
+}
+
+\newcommand{\qamreadoutline}[1]{\noindent #1\par}
+\endinput

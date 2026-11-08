@@ -1,0 +1,13 @@
+{
+  "id": "op1_t_spin_count",
+  "instruction": "READOUT",
+  "guards": [],
+  "arguments": {
+    "recipe": "op1.spin-counting-effects",
+    "frame": "T",
+    "max_twice_spin": 3
+  },
+  "premises": [
+    "17A320DEC3E5257505F1B02C6480E307"
+  ]
+}

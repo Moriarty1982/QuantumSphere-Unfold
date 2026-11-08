@@ -1004,3 +1004,101 @@ Alles ohne `sorry`, in CI gebaut (`lean-build.yml`).
 **QAM-Rückwärtssuche für Spin-Zählungen.** Das Werkzeug `python -m qam.tools.spin_readout_search` berechnet erzwungene Effekte und rotationsinvariante Kandidaten aus exakten Zählgewichten. Die verschachtelten magnetischen Labels je Parität liefern einen vollständigen Machbarkeitstest für eine gemeinsame Funktion von $2m$. Für OP1 scheitert T beim Übergang von $j=1/2$ zu $j=3/2$: Die geforderte Spur sinkt um zwei, obwohl zwei neue Labels hinzukommen und alle Effekte nichtnegativ sind. Auf dem kleineren Träger bis $j=1$ gelingt der T-Filter. Die Befunde betreffen die deklarierten Spinträger und Zugriffsarten.
 
 **QAM inverse search for spin counts.** The solver computes forced effects, rotation-invariant candidates, and exact single-axis witnesses or trace-increment obstructions. In OP1, the single-axis T effect becomes impossible as soon as both spin $1/2$ and spin $3/2$ are included.
+
+**Lokaler QAM-Index und Ergebniscache.** `qam.tools.readout_db` indexiert vorhandene QAM-Exporte mit Fundstelle, Frame, Status und Prämissen. Der Spin-Solver speichert exakte strukturierte Ergebnisse optional in derselben SQLite-Datei. Frame, Eingaben, Methode und Implementierungsstand bestimmen die Wiederverwendung. Formeln und Nachweise bleiben in den versionierten Quellen.
+
+**Local QAM index and result cache.** The SQLite index makes existing QAM exports searchable with source, frame, status and premises. The spin solver can cache structured exact results in the same local database. The request identity includes frame, inputs, method and implementation version.
+
+**MML und MMA in SQLite.** Der Datenbankadapter führt deklarierte MML-Anfragen über den vorhandenen MMA-Interpreter aus und speichert Anfrage und Prüfprotokoll. Ein SQLite-Trigger zählt eindeutige Protokolle nach `continue`, `guard` oder `reject`. Der Trigger wertet keine Formeln aus.
+
+**MML and MMA in SQLite.** The database adapter runs declared MML requests through the existing MMA interpreter and stores the request and receipt. A SQLite trigger counts distinct receipts by outcome. Formula evaluation remains in explicit application recipes.
+
+**Spin-Auslesung per MML.** Der SQLite-Adapter akzeptiert `READOUT` für den fest registrierten OP1-Spin-Solver. MMA prüft die Guards vor Cachezugriff oder Rechnung. Das Protokoll enthält auch einen etwaigen Ausschluss der Einachsen-Auslesung.
+
+**Spin readout via MML.** The SQLite adapter supports `READOUT` for the allowlisted OP1 spin solver. MMA checks guards before cache access or evaluation. The receipt includes any single-axis obstruction.
+
+**MMA-Auslesungen in LaTeX.** Das Zusatzpaket `qam-readout` zeigt vorab erzeugte MMA-Ergebnisfragmente im Dokument. Der SQLite-Adapter erzeugt das Fragment aus einer deklarierten `READOUT`-Anfrage mit Status, Resultat und Protokollhash. LaTeX startet dabei keine Berechnung.
+
+**MMA readouts in LaTeX.** The `qam-readout` package displays a generated MMA result fragment in the document. The SQLite adapter renders a declared `READOUT` request as status, result and receipt hash. LaTeX does not launch the computation.
+
+**Rückweg vom LaTeX-Beleg.** `readout_db receipt` findet anhand des gedruckten SHA-512-Hashes die MML-Anfrage und das MMA-Protokoll. Es prüft beide Hashbindungen und kann das LaTeX-Fragment aus dem gespeicherten READOUT erneut erzeugen.
+
+**LaTeX receipt lookup.** `readout_db receipt` retrieves the MML request and MMA receipt by the printed SHA-512 hash, checks both hash bindings and can regenerate the READOUT fragment.
+
+**MMA-Wiederholungsprüfung.** Neue Protokolle verweisen auf einen gespeicherten QAM-Kontext. `readout_db receipt HASH --replay` prüft dessen Hash und führt die gespeicherte Anfrage ohne Ergebniscache erneut aus. Ergebnisgleichheit und Protokollgleichheit werden getrennt angezeigt.
+
+**MMA replay.** New receipts refer to a stored QAM context. Replay verifies its hash and reruns the stored request without the result cache, reporting result and receipt equality separately.
+
+**Argumentationskette zum MMA-Protokoll.** READOUT-Anfragen können QAM-Prämissen per Hash deklarieren. Der Adapter speichert die rekursiv aufgelöste Kette mit Status und Fundstelle im Protokoll. `receipt HASH --trace` gibt die Kette in Abhängigkeitsreihenfolge aus. Fehlende Prämissen führen zu `guard`.
+
+**Argument trace for MMA receipts.** READOUT requests can declare QAM premises by hash. The adapter snapshots their recursively resolved chain with status and source location. `receipt HASH --trace` returns the chain in dependency order. Missing premises trigger a guard.
+
+**MML-Routensuche für OP1.** `SEARCH_ROUTE` durchsucht einen deklarierten Operationskatalog mit begrenzter Schrittzahl. Der Beispielbeleg trennt Ausschlüsse durch passiven Sektorerhalt und die U(1)-Kollision von zwei bedingten Routen über quadratischen Fluss oder eine Referenz. SQLite speichert den replayfähigen Beleg samt offenen Guards.
+
+**MML route search for OP1.** `SEARCH_ROUTE` searches a declared operation catalogue within a step limit. The example records passive-transport and single-axis exclusions alongside conditional quadratic-flux and reference routes. SQLite stores the replayable receipt and open guards.
+
+**Quellenkette der Routensuche.** `SEARCH_ROUTE` speichert deklarierte QAM-Prämissen mit dem Ergebnis. Fehlende Prämissen blockieren die Suche. Abruf und Replay verwenden die gespeicherte Kette.
+
+**Quadratischer Zugriff und Spektralfilter.** Zwei Zustände können denselben Erwartungswert der transversalen Quadratsumme und verschiedene Minimalspin-Gewichte haben. Die Routensuche verlangt deshalb getrennte Nachweise für den Zugriff auf die gravitative Quadratsumme und für das binäre Spektralinstrument.
+
+**Minimalspin über ein Rotationsmittel.** Das kohärente Achsenmittel der gravitativen Vierteldrehung ist je Spin skalar. Sein Eigenwert $1/\sqrt2$ isoliert Spin $1/2$ auch auf dem unbeschränkten Spinträger. Die kohärente Mittelung und die binäre Spektralabfrage sind zusätzliche native Voraussetzungen.
+
+**Automatisch erzeugte Rotationsrouten.** Die MML-Routensuche konstruiert aus deklarierten Spinrotationen ein kohärentes Achsenmittel und prüft dessen normalisierten Charakter exakt. Im OP1-Beispiel isoliert die Vierteldrehung den Zielspin. Halb- und Volldrehung liefern Kollisionen mit höheren halbzahligen Spins. Die native Ausführung bleibt separat bewacht.
+
+**Automatically generated rotation routes.** The MML search constructs a coherent axis mean from declared spin rotations and checks its normalized character exactly. In the OP1 example the quarter turn isolates the target spin, while half and full turns collide with higher half-integer spins. Native execution remains separately guarded.
+
+**Endliches Achsenmittel.** Bei maximalem Spin $J$ integriert ein Produktgitter aus $2J+1$ Azimuten und $\lfloor J\rfloor+1$ Gauss-Legendre-Höhen das kohärente Rotationsmittel exakt. Die Routensuche gibt die Größe des Gitters aus. Im OP1-Beispiel bis $j=5/2$ genügen 18 gewichtete Rotationen.
+
+**Polynomfilter für das Rotationsmittel.** Eine kohärente gewichtete Rotationssumme liefert einen Nullblock mit Zielakzeptanz $1/2$. Ein Interpolationspolynom, das alle konkurrierenden Eigenwerte auf null abbildet, liefert auf dem endlichen Modellträger den exakten Zielprojektor. Bis $j=5/2$ hat es Grad vier. Die kohärente Implementierung bleibt eine eigene Voraussetzung.
+
+**Verstärkung des Rotationsfilters.** Im Beispiel bis $j=5/2$ hat die Polynomsumme Normierungsfaktor $\alpha\approx5{,}38048$. Nach kalibrierter Abschwächung liefern vier Amplitudenverstärkungsschritte im idealen Modell eine deterministische Zielmarkierung. Mit Rückrechnung sind es 18 Zugriffe auf die Polynomsummen-Unitäre oder ihr Inverses.
+
+**Qiskit-Abgleich der Rotationsfilter-Verstärkung.** Die reduzierte Spektralschaltung prüft vier Verstärkungsschritte mit anschließendem Kopieren und Rückrechnen. Sie erhält die komplexen Amplituden einer kohärenten Eingabe bis auf numerische Genauigkeit und setzt die Polynommarkierung als kodierte Operation voraus.
+
+**Gegenrechnung der 18 Rotationen.** Die direkte Matrixrechnung reproduziert das Achsenmittel bis auf rund $4{,}12\cdot10^{-16}$ und den Polynomprojektor bis auf rund $2{,}09\cdot10^{-15}$ in Operatornorm. Sie prüft die Bausteine vor der reduzierten Verstärkungsschaltung.
+
+**Kohärente Simulation des Rotationsfilters.** Qiskit verbindet die Matrixdilatation des berechneten Achsenmittels mit der kohärenten Polynomsumme, Verstärkung und Rückrechnung. Auf den fünf Spinblöcken liegt der Zustandsvektorabstand unter $7{,}5\cdot10^{-14}$. Die einzelnen kontrollierten Achsenrotationen werden durch die kompakte Dilatation ersetzt.
+
+**Kohärente Auswahl der 18 Achsen.** Die Qiskit-Kontrollmatrix der einzelnen Drehungen und die gewichtete Achsenpräparation ergeben auf fünf Spinblöcken den erwarteten Nullblock mit Operatornormfehler unter $9\cdot10^{-15}$. Die Polynomsumme kann diesen Nullblock algebraisch anstelle der kompakten Dilatation verwenden.
+
+**Volldrehung als Vorfilter.** Eine kohärent kontrollierte Volldrehung trennt ganzzahlige und halbzahlige Spins. Zusammen mit dem Vierteldrehungsmittel sinkt im OP1-Beispiel der Polynomgrad von vier auf zwei. Für den Polynomteil genügt dann ein statt vier Amplitudenverstärkungsschritten.
+
+**Zusammengesetzte Rotationsroute.** Die Routensuche gibt die Volldrehung als Vorfilter und das Vierteldrehungsmittel als anschließenden Selektor gemeinsam aus, wenn die Vorselektion konkurrierende Eigenwerte entfernt. Ein eigener Guard erfasst den kohärenten Zugriff auf die Spinparität.
+
+**Qiskit-Abgleich mit Spinparitätsvorfilter.** Auf einer kohärenten Überlagerung aller 20 Modellbasiszustände markiert die kombinierte Schaltung den Minimalspin und rechnet die Hilfsregister zurück. Der Zustandsvektorabstand zum idealen Zeiger beträgt rund $1{,}31\cdot10^{-14}$.
+
+**Eichverträglichkeit der Rotationsroute.** Eine kontrollierte interne Vierteldrehung um eine fest eingesetzte Achse ist mit neutralem Zeiger im Allgemeinen nicht eichinvariant. Die zentrale Volldrehung und das vollständige Achsenmittel sind invariant. Für die Vierteldrehungsroute braucht es eine mittransformierende Achse oder einen direkten Zugriff auf das invariante Mittel.
+
+**Relationales Achsenmittel.** Ein mitrotierender Quantenrotor mit rotationsinvariantem Anfangszustand liefert das kohärente Achsenmittel als Nullblock einer gemeinsamen eichverträglichen Unitären. Bis Spin $J$ lässt sich der benötigte Blockzugriff mit einem endlichen Referenzträger der Dimension $(2J+1)^2$ realisieren. Der physikalische Rotor und seine gravitative Kopplung bleiben Modellannahmen.
+
+**Relationale Route in SEARCH_ROUTE.** Die Suche erzeugt für die Vierteldrehung einen zusätzlichen Pfad über die invariante Kopplung $\mathbf J\cdot\mathbf U$ und die kohärente Rückkehr zum Rotorsingulett. Der dafür hinreichende endliche Referenzträger und die offenen nativen Guards stehen im Suchprotokoll.
+
+**Abgeschnittener Rotorgenerator.** Der direkte eichinvariante Rotorpuls reproduziert die Nullblock-Momente bis Ordnung $2K+1$. Der Exponentialrest begrenzt seine Abweichung vom exakten Achsenmittel. Auf dem Beispielträger bis $j=5/2$ gibt $K=12$ eine Schranke unter $1{,}7\cdot10^{-11}$ für diesen Block.
+
+**Exakter endlicher Rotorpuls.** Der isotrope Generator erhält den gemeinsamen Gesamtspin $j$ der Eingabe. Darin können Rotorordnungen größer als $2j$ nicht vorkommen. Der direkt abgeschnittene Generator ist daher ab $K=2j$ auf dem gesamten erreichten Raum exakt. Für das Beispiel reicht $K=5$ mit 36 Referenzzuständen.
+
+**Gegenrechnung des endlichen Rotorpulses.** Die direkte Matrixexponentiation bestätigt den Rückkehrblock mit 36 Rotorzuständen. Ein kleinerer Träger mit 25 Rotorzuständen weicht für Spin $5/2$ um rund $1{,}75\cdot10^{-4}$ in Operatornorm ab.
+
+**Coframe-Normale und Rotor.** Die aus dem eigenen Fluss normierte Flächennormale liefert bei Kontraktion den Flussbetrag. Sie stellt keinen unabhängigen Rotorkanal bereit. Ein zweiter Randfluss kann als getrennte Referenz dienen, aber die gemeinsame Singulettauswahl prüft zunächst nur Gleichheit der Spins. Minimalspin erfordert einen unabhängig festgelegten Referenzspin $1/2$.
+
+**Fundamentale Holonomie als Minimalspinprobe.** Auf dem Peter-Weyl-Modellträger kann eine fundamentale Holonomiemultiplikation nur aus dem Spin-$1/2$-Block in die konstante Funktion führen. Der rohe Erfolg ist $1/4$, kohärente Verstärkung liefert den exakten Filter. Der volle Block hat Rang vier; das r63-Zählgewicht zwei erfordert eine eigene Randbedingung.
+
+**U(1)-Randladung und Holonomiegewicht.** Ein einzelner rechter Ladungssektor $q=\pm1/2$ reduziert den ausgewählten Peter-Weyl-Minimalspinblock von Rang vier auf Rang zwei. Beide Ladungen zusammen lassen Rang vier. Die ladungsfreie Invarianzbedingung entfernt den Minimalspin. Die native Wahl einer einzelnen Ladung ist offen.
+
+**Globale rechte Neutralität.** Werden alle rechten Vorzeichenlisten mit Gesamtsumme null als Zustände gezählt, entsteht im Minimalspin-Holonomiemodell der zusätzliche Faktor $\binom{N}{N/2}$. Eine fest vorgegebene ausgeglichene Liste lässt das lokale Gewicht zwei bestehen. Welche rechten Labels native Randdaten sind, bleibt offen.
+
+**Paarweise rechte Schließung.** Eine feste Paarung mit einem rechten Singulett je Paar lässt im Holonomiemodell links exakt zwei Zustände pro Minimalspinpunkt. Paarweise U(1)-Neutralität allein lässt zwei rechte Zustände je Paar und erzeugt ein zusätzliches Zählgewicht. Die native Paarung und der lokale Singulettzugriff bleiben offen.
+
+**Randdynamik für Paarsinguletts.** Positive Tripletprojektoren auf disjunkten Paaren geben rechts einen eindeutigen, durch eine Lücke getrennten Grundzustand. Überlappende Kanten können nicht gleichzeitig im Singulett liegen. Gleichförmiger Austausch aller Paare lässt den globalen Singulettsektor entartet.
+
+**Rechter Grundzustand durch zwei Gruppen.** Gleich starke antiferromagnetische Kopplung zwischen zwei gleich großen Gruppen rechter Doublets liefert einen eindeutigen rechten Grundzustand mit Lücke $g$. Eine feste Punktpaarung ist dafür entbehrlich. Die balancierte Zweiteilung, Kopplung und Grundraumauswahl bleiben Modellannahmen.
+
+**Balance der rechten Zweiteilung.** Bei Gruppengrößen $N_A,N_B$ hat der rechte Grundraum Dimension $|N_A-N_B|+1$. Gleiche Größen sind bei festem Gesamtumfang und einheitlicher Kopplung energetisch bevorzugt. Die Energie unterscheidet die verschiedenen balancierten Punktzuordnungen nicht.
+
+**Permutationsquotient und linkes Zählgewicht.** Werden balancierte Aufteilungen durch dieselben Punktpermutationen identifiziert, die auch die linken Doublets vertauschen, bleiben bei benannten Gruppen nur $(k+1)^2$ linke Zustände für $N=2k$. Eine bloße Identifikation der Aufteilung darf daher nicht ohne Prüfung der Wirkung auf den linken Träger angesetzt werden.
+
+**Kohärente Aufteilungsmischung.** Ein positiver Kantenterm verbindet balancierte Aufteilungen durch Punktwechsel zwischen den Gruppen. Auf dem erweiterten rechten Modellträger wählt er genau eine kohärente Grundlinie aus und lässt die linken Doublets unangetastet. Das erfordert zugelassene kohärente Übergänge zwischen Aufteilungen.
+
+**Ausschluss ohne Aufteilungsregister.** Der rechte Singulettsektor der $2k$ Doublets ist als Darstellung der vollen Punktpermutationsgruppe irreduzibel. Ein spin- und permutationsinvarianter rechter Hamiltonoperator spaltet diese Entartung daher nicht auf. Die kohärente Aufteilungsmischung setzt einen größeren Träger voraus.
+
+**Zyklische Randordnung.** Eine gerade zyklische Ordnung würde die Orbit-Parität als alternierende Zweiteilung liefern. Die Zweigruppenkopplung bleibt unter dem einfachen Shift invariant und wählt rechts eine Linie. Selbst eine gemeinsame zyklische Projektion erhält links den führenden Zählexponenten. Die Zuordnung der Scanindizes zu Horizontpunkten ist offen.
