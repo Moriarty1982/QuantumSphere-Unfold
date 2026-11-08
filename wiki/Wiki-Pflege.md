@@ -45,6 +45,14 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 8.11.2026: QAM – beidseitig indexierter Prämissengraph, Belegsuche, Korrekturverweise und Vorschläge für Regelketten.
+
+- 8.11.2026: QAM – SQLite-Regelkatalog mit Pflichtanforderungen und optionalen Messungen für die Gram-Vorhersage.
+
+- 8.11.2026: QAM – rekursive Prämissenauflösung in SQLite und Wiederverwendung der analytischen Gram-Intervallregel im MMA-Beleg.
+
+- 8.11.2026: QAM – analytische Erkundung zum scharfen Gram-Zielbereich mit und ohne zusätzliche Intervallmessung.
+
 - 7.11.2026: QAM – Beispiel für Horizontzugang, Punktzahl und Prüfung der Minimalspinmaske.
 
 - 7.11.2026: QAM – bedingter Spektralabgleich zwischen HC-Boost und dem Flächenquantum aus r10.

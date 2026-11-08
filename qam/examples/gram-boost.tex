@@ -56,6 +56,53 @@ orientations \(\operatorname{diag}(1,b,b)\). The orientations separate
 the two inputs. The scale recovers the full field and cancels from the
 normalized output for a homogeneous Lorentz transformation.
 
+\section*{Prediction from interval data}
+This analytic exploration restricts the preparation to
+\(E=2e_x\), \(B=t e_y+u e_z\), \(t^2+u^2=1\). All these
+fields have the same input Gram register. The additional measurement
+is the signed component \(t=B\cdot e_y\) in the Lab profile.
+\begin{qamcontext}{lab}
+\[
+\qamformula{orientation-family}{conditional}
+  {F(t,u)=[2e_x\mid t e_y+u e_z],\quad t^2+u^2=1}
+\]
+\[
+\qamformula[orientation-family]{orientation-bound}{conditional}
+  {t\in I=[a,b]\subseteq[-1,1]}
+\]
+\end{qamcontext}
+At \(v=1/4\), the boosted vectors are
+\(E'=\gamma(2-t/4)e_x\) and
+\(B'=\gamma(t-1/2)e_y+u e_z\). They are orthogonal.
+After canceling the common \(\gamma^2\), their squared norms are
+\(A(t)=(2-t/4)^2\) and \(A(t)-45/16\).
+\[
+\qamphysconvert{gram-prediction-range}{conditional}{lorentz-z}
+  {orientation-bound}{boosted}
+  {\rho'\in\{\operatorname{diag}(p,1-p):p(a)\le p\le p(b)\},
+   \quad p(t)=\frac{A(t)}{2A(t)-45/16}}
+\]
+The denominator is positive. As \(t\) increases, \(A(t)\) decreases
+and \(p(t)\) increases because \(d p/d A<0\).
+Every value between the endpoints is attained by a preparation
+in this family. For the measured interval below, the target interval
+is narrower than for \(I=[-1,1]\).
+\begin{qamcontext}{lab}
+\[
+\qamformula[orientation-bound]{example-measurement}{conditional}
+  {t\in[-1/4,1/4]}
+\]
+\end{qamcontext}
+\[
+\qamphysconvert{gram-narrowed-range}{conditional}{lorentz-z}
+  {example-measurement}{boosted}
+  {p\in[121/162,961/1202]\subset[9/13,49/53]}
+\]
+The width drops from about \(0.232\) to \(0.0525\), a reduction
+of about \(77\%\). These bounds assume the stated preparation and
+exact boost speed. The interval is a deterministic constraint on
+the measurement, with no probability distribution assumed.
+
 \medskip
 \noindent Source: Companion, section on the orientation-complete local
 mediator. The maps record which data the

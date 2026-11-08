@@ -1,0 +1,14 @@
+{
+  "id": "gram_boost_interval",
+  "instruction": "READOUT",
+  "guards": [],
+  "arguments": {
+    "recipe": "em.gram-boost-range",
+    "preparation": "E2x-B-unit-yz",
+    "frame": "Lab",
+    "target_frame": "Boosted",
+    "boost": "z:1/4",
+    "a": "-1/4",
+    "b": "1/4"
+  }
+}

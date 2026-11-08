@@ -321,6 +321,58 @@ identity, including the context hash and implementation versions.
 returns a mathematical obstruction in the selected access model.
 The standalone framework interpreter retains its original instruction set.
 
+The database also supports `em.gram-boost-range` for the fixed Lab
+preparation and boost declared in `examples/gram_range_mml.json`.
+
+```sh
+python -m qam.tools.readout_db index
+python -m qam.tools.readout_db mma scripts/qsc_audit/examples/framework_context.json qam/examples/gram_range_mml.json
+```
+
+Edit `a` and `b` to supply a closed measurement interval, using integers
+or fractions with up to seven digits per numerator and denominator.
+Omit both to use the full admissible interval `[-1,1]`.
+The recipe automatically links the hash of the conditional analytic rule
+in `examples/gram-range-rule.qam`. This hand-authored record points to the
+derivation in `gram-boost.tex` and can be indexed directly. A missing rule
+or premise guards execution. SQLite follows transitive premise hashes
+with a recursive query, checks the interval, and computes exact integer
+numerators and denominators. The adapter reduces the fractions and
+stores the result and premise trace in the MMA receipt.
+
+The rule catalog and its requirements can be queried before execution.
+
+```sh
+python -m qam.tools.readout_db rules boosted-gram-range --have preparation:E2x-B-unit-yz --have boost:z:1/4
+```
+
+Add `--have measurement:B-dot-ey-interval` to mark the optional measurement
+as available. SQLite matches these declarations against the required and
+optional entries. `ready_for_validation` means all required declarations
+are present and the rule itself is indexed. MMA checks the concrete values
+and the full premise chain at execution.
+
+SQLite materializes the claim-to-premise edges and indexes both directions.
+Opening an older database in writable mode backfills the edges from its
+existing claims. Reindexing refreshes the edges in the same transaction as
+the claim index.
+
+```sh
+python -m qam.tools.readout_db --read-only premises 7C36EDC97D94E61FF80542EC521D2BC9
+python -m qam.tools.readout_db --read-only impact BE014772A536438E3767BBAE3EBC7AE5
+python -m qam.tools.readout_db --read-only chains boosted-gram-range
+```
+
+`impact` lists current downstream claims and receipts that recorded the
+queried hash as a resolved or missing premise. Explicit corrections are
+recorded with `register-replacement OLD_HASH NEW_HASH --reason "reason"`.
+Reindexing preserves those links and the original receipts.
+
+`chains` matches declared output quantities to downstream requirements
+and suggests paths of two to five rules. These are catalog suggestions.
+Execution still requires value, frame and premise checks. The Gram rule
+currently has no downstream rule registered in the catalog.
+
 ## LaTeX display of MMA readouts
 
 Load `qam-readout` and use `\qamreadout{path/to/result.tex}` to include a
