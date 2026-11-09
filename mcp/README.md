@@ -65,6 +65,7 @@ CLI as the QAM examples.
 | `list_qam_receipts(instruction, status, premise_hash, limit)` | Lists receipts and can follow recorded indirect premise dependencies | None |
 | `get_qam_receipt(receipt_hash, trace, replay)` | Checks stored hashes, optionally returns the premise trace or recomputes without cache | None |
 | `run_qam_mml(context, request)` | Executes a declared MML JSON request, including READOUT and SEARCH_ROUTE, with MMA guards | SQLite |
+| `run_qam_mml_batch(context, batch, workers)` | Runs a saved MML pair batch in dependency order and returns its report | SQLite |
 
 Use `get_qam_receipt(receipt_hash, summary=true)` for the verified hash,
 instruction, MMA status, errors, obligations and declared guards. The
@@ -79,8 +80,79 @@ For checked channels, the summary includes any exclusion reasons and available
 input, output, declared environment and minimum environment dimensions.
 
 Run the index tool first if the local database does not exist.
+
+For a pair search, call `run_qam_mml` with context
+`scripts/qsc_audit/examples/framework_context.json` and request
+`qam/examples/marked_ring_pair_search_mml.json`. With `summary=true`, the
+response includes the candidate count and, when the count is zero, the
+conflicting constraint and a witness from the preceding step. Retrieve the
+same summary by hash using `get_qam_receipt` on the full server or
+`read_qam_receipt` on the read-only server.
 MML inputs must be existing JSON files under `qam/examples/`,
 `scripts/qsc_audit/examples/`, or `notes/research/`. These tools run a
 fixed Python module with a 60-second timeout. Search limits range from
 one to 50. The response preserves the MMA status and exit code, so
 a guarded route can return a valid result with code 1.
+
+## Local batch server for Codex
+
+`qam_batch_server.py` exposes `run_qam_mml_batch` for saved JSON and
+`run_qam_pair_batch` for a batch supplied directly as JSON with
+`requests`, optional `depends_on` and optional `requires_match`.
+Both use the same repository
+database as the local CLI and save individual receipts when they run.
+The inline tool defaults to the example framework context. Register the
+server from the repository root:
+
+```powershell
+$qamPython = (Get-Command python.exe).Source
+$qamBatchServer = (Resolve-Path mcp/qam_batch_server.py).Path
+codex mcp add qsc-qam-batch -- $qamPython $qamBatchServer
+```
+
+In a fresh Codex chat, use the context
+`scripts/qsc_audit/examples/framework_context.json` and batch
+`qam/examples/marked_ring_pair_batch_mml.json` to run the example.
+Use `qsc-qam` to read the resulting individual receipts by hash.
+Use `replay_qam_batch_report` on `qsc-qam-batch` to recompute a saved report
+without saving new receipts. It verifies the stored input and context,
+then resolves premises against the current index.
+
+## Read-only QAM container
+
+Build from the repository root. Use an existing, consistent SQLite snapshot
+containing both the claim index and the receipts you want to query. To create
+an index in a fresh database, run `python -m qam.tools.readout_db index`.
+Receipts come from previous MML runs.
+
+```powershell
+docker build -f mcp/Dockerfile.qam -t qsc-qam .
+$qamDb = (Resolve-Path build/qam.sqlite3).Path
+docker run --rm -i --read-only --network none --mount "type=bind,source=$qamDb,target=/app/build/qam.sqlite3,readonly" qsc-qam
+```
+
+Configure the MCP client to launch that `docker run` command over stdio,
+with the absolute database path substituted for `$qamDb`. For example, in
+Codex on Windows, add this entry to the MCP configuration.
+
+```toml
+[mcp_servers.qsc-qam]
+command = "docker"
+args = ["run", "--rm", "-i", "--read-only", "--network", "none", "--mount", 'type=bind,source=C:\path\to\qam.sqlite3,target=/app/build/qam.sqlite3,readonly', "qsc-qam"]
+```
+
+The client starts the container on demand. It exposes `find_qam_claims`,
+`list_qam_receipts`, `read_qam_receipt` (with optional trace or summary),
+`list_qam_batch_reports(limit, request_id, status)`, and
+`read_qam_batch_report(report_hash)`.
+The list shows the most recently stored distinct reports first, with request
+IDs and counts for each status. Optional filters match the same entry
+by exact ID and status. The full report includes blocked entries
+and references to individual receipts.
+Use `compare_qam_batch_reports(previous_hash, current_hash)` to compare
+stored reports by request ID and check whether batch input, context and
+request order agree.
+Use `audit_qam_batch_report(report_hash)` to verify a report's saved context,
+individual receipts and blocked entries without recalculating the batch.
+The snapshot is mounted read-only. Build the index and run MML using the
+local CLI or the full MCP server when you need to update it.

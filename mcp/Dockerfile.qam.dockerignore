@@ -1,0 +1,11 @@
+**
+!mcp/
+!mcp/qsc_mcp_server.py
+!mcp/qam_readonly_server.py
+!qam/
+!qam/tools/
+!qam/tools/qamhash.py
+!qam/tools/readout_db.py
+!scripts/
+!scripts/qsc_audit/
+!scripts/qsc_audit/tensor_grammar_check.py

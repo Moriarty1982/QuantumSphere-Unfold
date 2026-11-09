@@ -1,0 +1,9 @@
+{
+  "id": "synthesize_marked_ring_rotation",
+  "instruction": "READOUT",
+  "guards": [],
+  "arguments": {
+    "recipe": "op1.marked-ring-synthesis",
+    "pair_count": 7
+  }
+}

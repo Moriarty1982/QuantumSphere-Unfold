@@ -225,13 +225,13 @@ def build_research_candidate() -> dict[str, Any]:
             "build_output_tail": tail(build)[-4000:]}
 
 
-def _qam_command(args, *, read_only=True, lines=False):
+def _qam_command(args, *, read_only=True, lines=False, input_text=None):
     command = [sys.executable, "-X", "utf8", "-m", "qam.tools.readout_db"]
     if read_only:
         command.append("--read-only")
     result = subprocess.run(
         [*command, *args], cwd=PROJECT_ROOT, capture_output=True, text=True,
-        encoding="utf-8", timeout=60, check=False,
+        encoding="utf-8", timeout=60, check=False, input=input_text,
     )
     output = result.stdout.strip()
     if len(output) > MAX_QAM_OUTPUT_CHARS:
@@ -321,6 +321,81 @@ def run_qam_mml(context: str, request: str, summary: bool = False) -> dict[str, 
     if summary:
         args.append("--summary")
     return _qam_command(args, read_only=False)
+
+
+@mcp.tool()
+def run_qam_mml_batch(context: str, batch: str, workers: int = 2) -> dict[str, Any]:
+    """Run a saved MML pair batch and store its individual receipts."""
+    if type(workers) is not int or not 1 <= workers <= 4:
+        raise AuditError("Use between 1 and 4 batch workers.")
+    return _qam_command(
+        ["mma-batch", _qam_json_path(context), _qam_json_path(batch), "--workers", str(workers)],
+        read_only=False,
+    )
+
+
+def run_qam_pair_batch(
+    batch_json: str, workers: int = 2,
+    context: str = "scripts/qsc_audit/examples/framework_context.json",
+) -> dict[str, Any]:
+    """Run inline JSON with requests and optional depends_on, and store the receipts."""
+    if type(workers) is not int or not 1 <= workers <= 4:
+        raise AuditError("Use between 1 and 4 batch workers.")
+    if len(batch_json) > 100_000:
+        raise AuditError("Inline MML batches must fit in 100,000 JSON characters.")
+    return _qam_command(
+        ["mma-batch", _qam_json_path(context), "-", "--workers", str(workers)],
+        read_only=False, input_text=batch_json,
+    )
+
+
+def read_qam_batch_report(report_hash: str) -> dict[str, Any]:
+    """Return a saved MMA batch report after verifying it and its original MML input."""
+    digest = "".join(report_hash.split())
+    if not re.fullmatch(r"[0-9a-fA-F]{128}", digest):
+        raise AuditError("Use a 128-digit SHA-512 batch report hash.")
+    return _qam_command(["batch-report", digest, "--report-only"])
+
+
+def list_qam_batch_reports(limit: int = 10, request_id: str | None = None,
+                           status: str | None = None) -> dict[str, Any]:
+    """List recent verified batch reports, optionally matching one entry by ID and status."""
+    args = ["batch-reports", "--limit", _qam_limit(limit)]
+    if request_id is not None:
+        if not request_id.strip() or len(request_id) > 256:
+            raise AuditError("Use a nonempty request ID of at most 256 characters.")
+        args.append(f"--request-id={request_id}")
+    if status is not None:
+        if status not in ("continue", "guard", "reject", "blocked"):
+            raise AuditError("Unsupported MMA batch status.")
+        args.append(f"--status={status}")
+    return _qam_command(args)
+
+
+def compare_qam_batch_reports(previous_hash: str, current_hash: str) -> dict[str, Any]:
+    """Compare two verified stored reports, matching entries by request ID."""
+    hashes = ["".join(value.split()) for value in (previous_hash, current_hash)]
+    if any(not re.fullmatch(r"[0-9a-fA-F]{128}", value) for value in hashes):
+        raise AuditError("Use two 128-digit SHA-512 batch report hashes.")
+    return _qam_command(["compare-batches", *hashes])
+
+
+def audit_qam_batch_report(report_hash: str) -> dict[str, Any]:
+    """Verify a saved batch, context, individual receipt links and blocked entries."""
+    digest = "".join(report_hash.split())
+    if not re.fullmatch(r"[0-9a-fA-F]{128}", digest):
+        raise AuditError("Use a 128-digit SHA-512 batch report hash.")
+    return _qam_command(["audit-batch", digest])
+
+
+def replay_qam_batch_report(report_hash: str, workers: int = 2) -> dict[str, Any]:
+    """Recompute a saved batch against current indexed premises without saving new receipts."""
+    digest = "".join(report_hash.split())
+    if not re.fullmatch(r"[0-9a-fA-F]{128}", digest):
+        raise AuditError("Use a 128-digit SHA-512 batch report hash.")
+    if type(workers) is not int or not 1 <= workers <= 4:
+        raise AuditError("Use between 1 and 4 batch workers.")
+    return _qam_command(["replay-batch", digest, "--workers", str(workers)])
 
 
 if __name__ == "__main__":

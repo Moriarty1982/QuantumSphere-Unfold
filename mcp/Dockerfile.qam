@@ -1,0 +1,11 @@
+FROM python:3.12-slim
+
+WORKDIR /app
+ENV PYTHONDONTWRITEBYTECODE=1
+RUN pip install --no-cache-dir mcp==2.3.0
+COPY mcp/qsc_mcp_server.py mcp/qam_readonly_server.py ./mcp/
+COPY qam/tools/qamhash.py qam/tools/readout_db.py ./qam/tools/
+COPY scripts/qsc_audit/tensor_grammar_check.py ./scripts/qsc_audit/
+RUN mkdir build && touch build/qam.sqlite3
+USER 65534:65534
+ENTRYPOINT ["python", "mcp/qam_readonly_server.py"]
