@@ -13,6 +13,7 @@ from qam.tools.qamhash import verify
 
 DEFAULT_DB = Path("build/qam.sqlite3")
 GRAM_RANGE_RULE = "7C36EDC97D94E61FF80542EC521D2BC9"
+MARKED_RING_RULE = "615F0E4DF0932311F66EDCB74924463E"
 
 
 def connect(path):
@@ -110,6 +111,16 @@ def connect(path):
         ))
         db.execute("INSERT OR IGNORE INTO rule_outputs VALUES (?, ?)",
                    ("em.gram-boost-range", "boosted-gram-range"))
+        recipe = "op1.marked-ring-pair-certificate"
+        target = "marked-ring-transport-certificate"
+        db.execute("INSERT OR IGNORE INTO rule_catalog VALUES (?, ?, ?)",
+                   (recipe, target, MARKED_RING_RULE))
+        db.executemany("INSERT OR IGNORE INTO rule_requirements VALUES (?, ?, 1)", (
+            (recipe, "model:eight-spin-half-ring"),
+            (recipe, "candidate:unitary-marked-step"),
+            (recipe, "evidence:seven-exact-pair-yes-no-intertwiners"),
+        ))
+        db.execute("INSERT OR IGNORE INTO rule_outputs VALUES (?, ?)", (recipe, target))
     return db
 
 
@@ -464,10 +475,51 @@ def gram_mml(db, interface, request, *, trace=None):
     return dict(receipt, receipt_hash=tensor.digest(receipt))
 
 
+def marked_ring_mml(db, interface, request, *, trace=None):
+    from scripts.qsc_audit import tensor_grammar_check as tensor
+
+    receipt, roots = adapter_receipt(interface, request)
+    if isinstance(roots, list) and MARKED_RING_RULE not in roots:
+        roots = [MARKED_RING_RULE, *roots]
+    attach_premises(db, receipt, roots, trace)
+    receipt["adapter_hash"] = tensor.digest_bytes(Path(__file__).read_bytes())
+    args = request["arguments"]
+    permutation = args.get("permutation")
+    pauli = args.get("last_spin_pauli", "I")
+    if (set(args) not in ({"recipe", "permutation"}, {"recipe", "permutation", "last_spin_pauli"})
+            or not isinstance(permutation, list)
+            or len(permutation) != 8 or any(type(point) is not int for point in permutation)
+            or set(permutation) != set(range(8)) or pauli not in ("I", "X", "Y", "Z")):
+        receipt["errors"].append(
+            "Expected a permutation of labels 0 through 7 and an optional Pauli I, X, Y or Z."
+        )
+        receipt["mma_status"] = "reject"
+    elif receipt["mma_status"] == "continue":
+        failed = [
+            i for i in range(7)
+            if {permutation[i], permutation[i + 1]} != {i + 1, (i + 2) % 8}
+            or (i == 6 and pauli != "I")
+        ]
+        receipt["result"] = {
+            "rule_hash": MARKED_RING_RULE,
+            "scope": "Declared eight-spin point permutation with optional Pauli on the moved last spin.",
+            "failed_pair_indices": failed,
+            "first_six_pairs_preserved": all(i == 6 for i in failed),
+            "seventh_pair_yes_preserved": 6 not in failed,
+            "matches_ring_rotation_on_singlet": not failed,
+        }
+        if failed:
+            receipt["obligations"].append("The candidate fails exact adjacent pair transport.")
+            receipt["mma_status"] = "guard"
+    return dict(receipt, receipt_hash=tensor.digest(receipt))
+
+
 def readout_mml(db, interface, request, *, use_cache=True, trace=None):
     arguments = request.get("arguments")
     if isinstance(arguments, dict) and arguments.get("recipe") == "em.gram-boost-range":
         return gram_mml(db, interface, request, trace=trace)
+    if isinstance(arguments, dict) and arguments.get("recipe") == "op1.marked-ring-pair-certificate":
+        return marked_ring_mml(db, interface, request, trace=trace)
     return spin_mml(db, interface, request, use_cache=use_cache, trace=trace)
 
 
@@ -553,6 +605,10 @@ def receipt_summary(receipt, instruction, request):
         "obligations": receipt.get("obligations", []),
         "declared_guards": receipt.get("declared_guards", []),
     }
+    if "failed_pair_indices" in receipt["result"]:
+        for key in ("failed_pair_indices", "first_six_pairs_preserved", "seventh_pair_yes_preserved"):
+            if key in receipt["result"]:
+                summary[key] = receipt["result"][key]
     if instruction == "SEARCH_ROUTE":
         result = receipt["result"]
         routes = result.get("routes", [])

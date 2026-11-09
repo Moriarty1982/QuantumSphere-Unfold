@@ -1,0 +1,4 @@
+% Conditional finite model certificate. Proof in qam/README.md under Marked ring transport.
+marked-ring-assumptions := claim; frame M; status conditional; inputs {}; hash 75E786C179D795D181384DFC53FFEEF6; sources {}; statement On eight spin-half points let W be the global SU(2) singlet and U a unitary candidate. Each of the seven adjacent pair singlet projectors is transported to the next pair on both its Yes and No subspaces in W.
+marked-ring-transport-rule := derive(marked-ring-assumptions); frame M; status conditional; inputs {}; hash 615F0E4DF0932311F66EDCB74924463E; sources {75E786C179D795D181384DFC53FFEEF6}; statement Under these hypotheses U restricts to the one-point ring rotation on W up to one common phase.
+% record E35D9B986AF003721B258C1E71821433
