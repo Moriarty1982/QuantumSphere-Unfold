@@ -1301,3 +1301,41 @@ Alles ohne `sorry`, in CI gebaut (`lean-build.yml`).
 **Globale Singulettleckage.** Der Qiskit-Spurtest berechnet zusätzlich die mittlere Leckage des bewegten Zweigs aus dem globalen Singulettträger. Ein zusätzlicher Spintausch liefert Spur $2/7$ bei Leckage null. Eine einzelne zusätzliche $Z$-Phase liefert Spur null bei vollständiger Leckage.
 
 **Maximale Singulettleckage.** Die normierte Paarungsfamilie erlaubt die Bestimmung der Singulärwerte des auf den globalen Singulettträger komprimierten Transports. Der zusätzliche $Z_iZ_j$-Puls liefert mittlere Leckage $4/7$, maximale Leckage $8/9$ und normierte Spur $-1/7$.
+
+**Kovarianz der Paarabfragen.** Der Qiskit-Test berechnet nach dem Soll-Rückweg die Operatornormen der sieben Kommutatoren mit benachbarten Punkttauschen auf dem Singulettträger. Der reine Markenschritt verletzt alle sieben, der zusätzliche Spintausch nur die Bedingungen mit Index 1 bis 4. Die Prüfung der Singulettleckage bleibt separat.
+
+**Paartransport über Präparation und Auslesung.** Je festem Eingangssingulett mittelt der Qiskit-Test über alle 15 Paarungen der übrigen sechs Spins und fragt die physisch nächste Kante ab. Der gemeinsame Transport liefert siebenmal eins. Der reine Markenschritt liefert siebenmal $1/4$. Beim zusätzlichen Spintausch fallen nur die Paare mit Index 1 bis 4 auf $1/4$.
+
+**Ergänzende Nein-Paarprüfung.** Der Qiskit-Test mittelt über alle 105 Paarungen und konditioniert auf ein Nein am Eingangspaar. Der ideale Transport liefert siebenmal sicher Nein am Zielpaar. Die gestörten Modelltransporte liefern an den jeweils betroffenen Kanten $7/12$ statt eins. Zusammen mit dem Ja-Test prüft das beide Eingangsunterräume.
+
+**Singulettleckage aus Paarmessungen.** Für die feste Acht-Punkte-Paarpräparation liest das Qiskit-Beispiel alle 28 Paarwahrscheinlichkeiten aus. Ihre Summe ergibt über $10-\sum_{i<j}p_{ij}$ die halbe Gesamtspin-Casimir-Erwartung. Sie ist null beim idealen Transport und beim zusätzlichen Spintausch, eins beim einzelnen $Z$-Puls und zwei beim $ZZ$-Puls. Als Wahrscheinlichkeitsschranke wird sie bei eins begrenzt.
+
+**Zweites Gesamtspinmoment aus Paarabfragen.** Der Ringmarkentest ergänzt die gemeinsamen Ja-Wahrscheinlichkeiten disjunkter Paare. Für Ausgänge mit Gesamtspin höchstens zwei ergibt $(4\langle X\rangle-\langle X^2\rangle)/3$ mit $X=\mathbf J_{\mathrm{ges}}^2/2$ die exakte Singulettleckage. Für die feste Paarpräparation liefert der $ZZ$-Fehler die Momente zwei und sechs und damit Leckage $2/3$.
+
+**Scharfes Leckageintervall aus zwei Momenten.** Der Ringmarkentest gibt die engsten mit den Momenten und dem Acht-Spin-Casimirspektrum verträglichen Grenzen aus. Für den $ZZ$-Modellfehler liefern die Momente zwei und sechs das Intervall $[2/3,1]$. Der exakte Wert $2/3$ nutzt zusätzlich die bekannte Beschränkung des Ausgangs auf Gesamtspins bis zwei.
+
+**Drittes Casimir-Moment im Simulator.** Das Qiskit-Beispiel wertet das dritte Moment direkt am Zustandsvektor aus. Beim $ZZ$-Fall liefern die Momente zwei, sechs und achtzehn den Rest $\langle X(X-3I)^2\rangle=0$. Das beschränkt den Ausgang auf Gesamtspin null und zwei und bestimmt die Leckage zu $2/3$. Eine Messschaltung für das dritte Moment ist separat zu entwickeln.
+
+**Gesamtspingewichte aus Achsenauslesung.** Der Qiskit-Ringmarkentest mittelt die Gesamtmagnetisierung über 45 gewichtete Messachsen. Für die gemittelte Wahrscheinlichkeit $q_m$ eines einzelnen vorzeichenbehafteten Magnetisierungswerts gilt $p_j=(2j+1)(q_j-q_{j+1})$. Der $ZZ$-Referenzfall liefert $p_0=1/3$ und $p_2=2/3$. Ein voll polarisierter Zustand liefert $p_4=1$.
+
+**OP1-Paarzertifikat im Regelkatalog.** Die bedingte Regel `marked-ring-transport-certificate` verknüpft einen unitären Acht-Punkte-Kandidaten und sieben exakte Ja/Nein-Paarbedingungen mit dem Solltransport auf dem Singulettträger bis auf eine Phase. Der Katalog führt die benötigten Eingaben auf. Ein nativer Markenschritt und eine MMA-Ausführung dieser Regel sind separat.
+
+**MMA-Ausführung des Paarzertifikats.** Die Regel ist für deklarierte Punktpermutationen des Acht-Spin-Modells ausführbar. MMA prüft die sieben Kanten exakt, gibt fehlgeschlagene Paarindizes auch in der Kurzansicht aus und speichert den Beleg mit Regelprämisse und Replay. Der Geltungsbereich ist das deklarierte Modell.
+
+**Verkürztes Paarzertifikat in MMA.** Eine deklarierte Punktpermutation kann mit einem Pauli auf dem mittransportierten achten Spin geprüft werden. Bei der Sollrotation erfüllen $X$, $Y$ und $Z$ die ersten sechs Paarbedingungen. Die siebte Ja-Prüfung erkennt den Fehler. Beleg und Kurzansicht weisen beide Prüfbereiche getrennt aus.
+
+**Zwei-Ring-Transport und Pulskalibrierung.** Das Beispiel `python -m qam.examples.two_ring_transport_qiskit` prüft die ideale Heisenberg-Phasenauslöschung für sechs und acht Punkte. Bei acht Punkten ergeben sich die quadratischen Rückkehrverlustkoeffizienten eins für gemeinsame Fehler und acht beziehungsweise dreizehn für gegenläufige Fehler bei zwei linken Präparationen. Symmetrische Pulsänderungen rekonstruieren die Vorzeichen im Zustandsvektormodell.
+
+**Empfindlichste Eingänge der Zwei-Ring-Kalibrierung.** Das Qiskit-Beispiel konstruiert die 14-dimensionalen Verlustoperatoren und prüft ihre Extremaleingänge. Die führenden Koeffizienten für den rechten Rückkehrverlust sind rund 2,486835 und 13,025178 für gemeinsame beziehungsweise gegenläufige Fehler. Nach rechter Rückkehr liegen die quartischen linken Treueverlustkoeffizienten bei rund 0,181447 und 7,720932.
+
+**Reproduzierbare 12-Puls-Korrektur.** Das Zwei-Ring-Beispiel enthält die verschachtelte Austauschfolge im Vergleichsbild und ihren positiven Ersatz. Beim geprüften Acht-Punkte-Eingang stimmen beide Ausgänge einschließlich Phase numerisch überein. Die positive Folge verwendet bei fünf Prozent Überlappung die Gesamtaustauschfläche $12\pi$.
+
+**Überlappung und Korrektur im selben Lauf.** Das Zwei-Ring-Beispiel entwickelt den 16-Spin-Zustand mit überlappenden Rechteckpulsen im Vergleichsbild und wendet anschließend beide 12-Puls-Varianten an. Bei fünf Prozent Überlappung sinkt der bedingte linke Verlust von rund $1{,}224\cdot10^{-6}$ auf $2{,}535\cdot10^{-9}$. Bei Halbierung der Überlappung sinkt der korrigierte Verlust um ungefähr Faktor 245.
+
+**Kalibrierfehler der Korrekturpulse.** Das Zwei-Ring-Beispiel erlaubt relative Flächenfehler getrennt je Austauschlage. Bei fünf Prozent Überlappung und gegenläufigen relativen Fehlern von $10^{-3}$ liefert eine Erkundung auf der linken Nachbarpaarung bedingte Treueverluste von rund $2{,}54\cdot10^{-9}$ mit kurzen inversen und $4{,}89\cdot10^{-7}$ mit langen positiven Pulsen. Die fehlerfreie Überlappungsevolution ist in beiden Fällen gleich.
+
+**Getrennt kalibrierte Ersatzperioden.** Bei fünf Prozent Überlappung und relativen Flächenfehlern von $+10^{-3}$ und $-10^{-3}$ verwendet das Zwei-Ring-Beispiel für jede Lage ihre eigene Periode $2\pi/(1+\epsilon)$. Die positive Korrektur reproduziert damit die kurze Folge mit denselben Flächenfehlern einschließlich Phase. Die Kalibrierung setzt innerhalb jeder Lage eine gemeinsame Pulsskalierung voraus.
+
+**Exakter Ausgleich der mitlaufenden Bindung.** Das Beispiel `python -m qam.examples.marked_ring_drift_certificate` prüft den 76-Tausch-Weg mit 28 besuchten Aufteilungen und nichtnegativen rationalen Pausenzeiten an 17 Aufteilungen. Die effektive Kante hat in erster Ordnung Gewicht 112 abzüglich einer halben Einheit für Kanten der ursprünglichen Kopplung. Der gleichmäßige Anteil wirkt auf dem rechten Singulettträger skalar.
+
+**Simulation der kompensierten Tauschfolgen.** Mit `python -m qam.examples.marked_ring_drift_certificate --simulate 0.0001 0.001` vergleicht das Beispiel die 76-, 228- und 304-Tausch-Folgen auf dem gesamten rechten Singulettträger. Die Rechnung verwendet die exakt geprüften Pausen und bestimmt den größten Treueverlust aus dem kleinsten Eigenphasenbogen des relativen Operators. Ohne Simulationsoption genügt die Python-Standardbibliothek.

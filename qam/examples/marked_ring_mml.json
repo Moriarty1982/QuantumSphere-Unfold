@@ -1,0 +1,9 @@
+{
+  "id": "marked_ring_rotation",
+  "instruction": "READOUT",
+  "guards": [],
+  "arguments": {
+    "recipe": "op1.marked-ring-pair-certificate",
+    "permutation": [1, 2, 3, 4, 5, 6, 7, 0]
+  }
+}
