@@ -45,6 +45,32 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 9.11.2026: QAM – Erkundung aller 56 Fünferauswahlen benachbarter Ringkanten und Abgleich mit der Graphzählung.
+
+- 9.11.2026: QAM – Folgeanfragen können mindestens einen Kandidaten bei einem Vorgänger voraussetzen.
+
+- 9.11.2026: QAM – abhängige Stapelanfragen starten nach ihren eigenen Vorgängern, sobald ein Prozess frei ist.
+
+- 9.11.2026: QAM – Integritätsprüfung gespeicherter Stapel samt Kontext, Einzelbelegen und blockierten Anfragen.
+
+- 9.11.2026: QAM – direkter Vergleich zweier gespeicherter MMA-Stapelberichte nach Anfrage-ID.
+
+- 9.11.2026: QAM – schreibgeschützter Replay gespeicherter MMA-Stapel mit Änderungen je Anfrage.
+
+- 9.11.2026: QAM – Stapelberichte nach Anfrage-ID und MMA-Status filtern.
+
+- 9.11.2026: QAM – jüngste verifizierte Stapelberichte mit Anfrage-IDs und Anzahlen je Status.
+
+- 9.11.2026: QAM – gespeicherte MMA-Sammelberichte mit schreibgeschütztem Abruf per Hash.
+
+- 9.11.2026: QAM – MML-Paarstapel direkt aus dem Chat über den lokalen MCP-Stapelserver.
+
+- 9.11.2026: QAM – Abhängigkeiten für MMA-Stapel und Ausführung gespeicherter Stapel im vollständigen MCP-Server.
+
+- 9.11.2026: QAM – parallele MMA-Ausführung unabhängiger MML-Paarabfragen mit gehashtem Sammelbericht.
+
+- 9.11.2026: QAM – frei wählbare Paarbedingungen, exakte Kandidatenzahl und Konfliktbeleg mit MCP-Abruf.
+
 - 8.11.2026: QAM – beidseitig indexierter Prämissengraph, Belegsuche, Korrekturverweise und Vorschläge für Regelketten.
 
 - 8.11.2026: QAM – SQLite-Regelkatalog mit Pflichtanforderungen und optionalen Messungen für die Gram-Vorhersage.

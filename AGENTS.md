@@ -18,6 +18,19 @@ Sphaera“. Die öffentliche Baseline ist **v4.10.0** vom 2026-11-06 (Version-DO
 - `notes/anleitungen/`: Schritt-für-Schritt-Abläufe.
 
 ## Für alle Modelle verbindlich
+- **QAM-Belege abrufen:** Bei Fragen zu gespeicherten MMA-Belegen, QAM-Aussagen oder Prämissenspuren im Projekt
+  zuerst den schreibgeschützten MCP-Server `qsc-qam` verwenden, falls verfügbar. Belege per Hash prüfen und
+  offene Guards in der Antwort angeben. Falls MCP nicht verfügbar ist, die lokalen Lesebefehle aus
+  `mcp/README.md` verwenden, soweit verfügbar. Neue MML-Rechnungen laufen über den dafür vorgesehenen MMA-Ablauf.
+  Stapelberichte ohne bekannten Hash über `list_qam_batch_reports` suchen und anschließend per Hash abrufen.
+- **QAM-Belegprüfung parallelisieren:** Bei einem Auftrag zur Prüfung mehrerer unabhängiger MMA-Belege oder
+  Prämissenzweige in Codex je Prüfgruppe einen `qam_evidence_reviewer` parallel einsetzen. Gemeinsame
+  Prämissen nur einmal prüfen, Abhängigkeiten in ihrer Reihenfolge auswerten und die Befunde nach Beleg-
+  und Prämissenhash zusammenführen. Einzelne Abrufe direkt erledigen.
+- **MML-Stapel ausführen:** Für ausdrücklich beauftragte gespeicherte Paarstapel in Codex `qsc-qam-batch`
+  verwenden, falls verfügbar. Den Sammelbericht in Eingabereihenfolge auswerten und blockierte Anfragen mit
+  ihrem Vorgänger benennen. Bei fehlendem Stapelserver den lokalen `mma-batch`-Aufruf aus `qam/README.md` nutzen.
+  Für ausdrücklich beauftragte Paarstapel aus dem Chat `run_qam_pair_batch` auf demselben Server nutzen.
 - **Abläufe:** Schritt-für-Schritt-Anleitungen in `notes/anleitungen/` (Übersicht und Nutzung je Modell in
   `notes/anleitungen/README.md`). Sie sind die einzige Quelle; Claude-Skills im lokalen Ordner verweisen nur darauf.
   - `weitermachen.md`: Sitzungsstart, Stand aus Übergabe und Repo rekonstruieren.

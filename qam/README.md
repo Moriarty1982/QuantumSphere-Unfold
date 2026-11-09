@@ -375,6 +375,120 @@ currently has no downstream rule registered in the catalog.
 
 ## Marked ring transport
 
+Use `op1.marked-ring-pair-search` for a freely chosen list of 1 to 28
+unordered source and target pairs on labels 0 through 7. MMA checks all
+eight-point permutations, reports the exact count and returns up to eight
+examples. If the count is zero, the receipt identifies the first constraint
+that eliminates all remaining candidates and shows a permutation that
+satisfied the preceding constraints, together with its actual pair image.
+Constraint indices start at zero. The receipt records the request hash and
+any explicitly supplied QAM premise hashes. The result concerns finite
+permutations. Transport in the two-ring model uses the separate synthesis recipe.
+
+```sh
+python -m qam.tools.readout_db mma scripts/qsc_audit/examples/framework_context.json qam/examples/marked_ring_pair_search_mml.json --summary
+```
+
+Run up to 64 independent pair requests with unique IDs against one context:
+
+```sh
+python -m qam.tools.readout_db mma-batch scripts/qsc_audit/examples/framework_context.json qam/examples/marked_ring_pair_batch_mml.json --workers 2
+```
+
+The batch accepts 1 to 4 worker processes. The parent reads the premise
+traces before starting the workers and stores the ordinary MMA receipts
+in one SQLite transaction after all workers return. Standard output
+contains a hashed report with entries in request order. Each entry includes
+the ordinary receipt hash and diagnostics. A guarded or rejected request
+appears in the report and makes the command exit with code 1. A valid request
+with zero matching permutations counts as a completed calculation. Existing
+receipt tools, including MCP, can retrieve the individual receipts by hash.
+MMA stores the report and its original batch input in the same transaction
+as the individual receipts. Retrieve and verify both by report hash with
+`python -m qam.tools.readout_db --read-only batch-report REPORT_HASH`.
+Reports from before this change can be stored by running their batches again.
+Use `python -m qam.tools.readout_db --read-only batch-reports` to find
+recent report hashes. Repeating an identical run retains the existing report
+and its original position in the list.
+Filter by exact request ID with `--request-id` and by MMA status with
+`--status`. If both are given, one entry must match both filters.
+Use `python -m qam.tools.readout_db --read-only replay-batch REPORT_HASH`
+to recompute the stored batch with its saved context and the current
+indexed premises. Replay returns the new report hash and changed fields
+per request, without writing new receipts or reports. A changed receipt
+hash alone can reflect an adapter change even when the result agrees.
+Use `python -m qam.tools.readout_db --read-only compare-batches OLD_HASH NEW_HASH`
+to compare two stored reports. It verifies their hashes and matches entries
+by request ID, including IDs added to or removed from the batch. It also
+reports whether the batch input, context and request order match.
+Use `python -m qam.tools.readout_db --read-only audit-batch REPORT_HASH`
+to verify the saved context and individual receipt links and check blocked
+entries against their declared predecessors. The audit exits with code 1
+if it finds inconsistent or missing links. It performs no replay.
+
+An optional top-level `depends_on` maps request IDs to lists of predecessor
+IDs, for example `"depends_on": {"second": ["first"]}`. MMA validates the
+graph before starting. A ready request can start as soon as its own
+predecessors finish and a worker is free, even while another branch runs.
+A predecessor with a guard, rejection or blocked status prevents
+execution of its dependents. The report lists them as `blocked` with
+`blocked_by`, and the command exits with code 1. Blocked entries have no
+individual receipt. Dependencies control scheduling and do not supply new
+arguments or mathematical premises.
+Use `"requires_match": {"second": ["first"]}` alongside `depends_on`
+when `second` should run only if `first` finds at least one candidate.
+Every ID in a match requirement must also be a declared predecessor.
+A zero-candidate result remains a completed calculation, and only
+dependents requiring a match are blocked by that result.
+
+Run the pair batch regression checks from the repository root:
+
+```sh
+python -m unittest discover -s scripts/qsc_audit/tests -p test_qam_pair_batch.py
+```
+
+To synthesize candidates from a prefix of shifted adjacent pair constraints:
+
+```sh
+python -m qam.tools.readout_db mma scripts/qsc_audit/examples/framework_context.json qam/examples/marked_ring_synthesis_mml.json --summary
+```
+
+Set `pair_count` from one to seven. MMA derives the fixed point images,
+counts all completions and returns up to eight examples. A unique
+candidate also gets the explicit composition of the declared two-ring
+model layers in the full receipt. The model route is built in and its
+native exchange requirements remain open, so the receipt stays guarded.
+An optional `singlet_blocks` argument partitions the 16 endpoint labels
+(left 0–7, right 8–15) into even blocks with independent singlet constraints.
+The full receipt checks each layer and the composition separately and
+gives an input pair whose images land in different blocks on failure.
+Set `enumerate_singlet_blocks` to true to list all invariant partitions
+once the rotation is unique. The full receipt marks the partitions that
+admit every left singlet input with the fixed right alternating reference.
+For the parallel-frame singlet model, `edge_holonomies` accepts eight
+unit quaternions in traversal order as lists of four rational strings
+`[scalar, i, j, k]`. The full receipt computes the ordered product,
+checks whether it is central and gives the singlet witness probability.
+It separately checks the case where all edge matrices are given in an
+already fixed common spin frame. In that case all matrices must agree up
+to sign, and the receipt gives a pair witness if they do not.
+The parallel-frame recovery entry distinguishes direct transport, zero
+singlet return and conditional amplification. If the singlet amplitude
+has magnitude at least one half, it gives the exact ancilla amplitude and
+the nine-forward-step model plan. These are conditional model resources.
+For noncentral holonomy the receipt also lists the fixed-pair alternative:
+two initial forward steps followed by seven swaps at `[0,1]`, with a
+forward step between swaps. This plan works even at zero singlet return
+and needs access to intermediate states outside the singlet.
+With an assumed first parity axis `z`, the receipt also checks whether the
+loop supplies a second axis. The triplet overlap is the squared axis
+overlap. When reported, `one_test_weights` are probabilities for a coherent
+test using identity and the indicated powers of the forward and inverse
+products of the two parity reflections, following the first parity filter.
+The rational recurrence searches through power 32 and reports when a
+larger power is required.
+These inputs are declared model transports.
+
 Query `readout_db rules marked-ring-transport-certificate` for the
 conditional OP1 model certificate. On eight spin-half points let (W)
 be the global singlet, (R) the ring rotation and (P_i) the adjacent

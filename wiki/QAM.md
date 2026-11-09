@@ -1268,6 +1268,8 @@ Alles ohne `sorry`, in CI gebaut (`lean-build.yml`).
 **Rückwärtssuche nach Prämissen.** `readout_db receipts --premise HASH` findet gespeicherte MMA-Belege, die eine QAM-Aussage direkt oder indirekt referenzieren. Filter nach MML-Befehl und MMA-Status lassen sich kombinieren. Auch im Beleg vermerkte fehlende Prämissen sind auffindbar.
 
 **QAM-Datenbank im MCP.** Der QSC-MCP-Server bietet Indexaufbau, Formel- und Belegsuche, Trace und Replay sowie deklarierte MML-Ausführung über MMA. Such- und Belegwerkzeuge öffnen SQLite lesend. Indexaufbau und MML-Ausführung schreiben nur in die lokale Datenbank.
+**QAM-Lesecontainer.** Ein lokaler MCP-Client kann über stdio einen Container mit einem schreibgeschützt eingebundenen SQLite-Snapshot starten. Der Container stellt Formelsuche, Belegliste und Belegabruf mit Prämissenspur bereit. Indexaufbau, MML-Ausführung und Replay stehen über den vollständigen Server oder die lokale CLI zur Verfügung.
+
 **Kompakte Belegansicht.** Der MCP-Parameter `summary=true` liefert nach der Hashprüfung den Beleg-Hash, den MML-Befehl, den MMA-Status sowie Fehler, Pflichten und deklarierte Guards. Ergebnisdetails, Prämissenspur und Neuberechnung lassen sich über die ausführlichen Ansichten abrufen.
 
 **Kompakter Replay.** Mit `summary=true` und `replay=true` liefert der MCP getrennt den Ergebnis- und den Hashvergleich, den neuen Beleg-Hash und die Namen abweichender Felder. Ein abweichender Hash behält Rückgabecode 1.
@@ -1341,3 +1343,83 @@ Alles ohne `sorry`, in CI gebaut (`lean-build.yml`).
 **Simulation der kompensierten Tauschfolgen.** Mit `python -m qam.examples.marked_ring_drift_certificate --simulate 0.0001 0.001` vergleicht das Beispiel die 76-, 228- und 304-Tausch-Folgen auf dem gesamten rechten Singulettträger. Die Rechnung verwendet die exakt geprüften Pausen und bestimmt den größten Treueverlust aus dem kleinsten Eigenphasenbogen des relativen Operators. Ohne Simulationsoption genügt die Python-Standardbibliothek.
 
 **Verstimmter Registertausch.** Das Beispiel `python -m qam.examples.detuned_register_swap` prüft eine zusammengesetzte Folge aus drei Austauschpulsen in einem Zweiniveau-Energieblock. Bei normierter Verstimmung 0,05 sinkt die Tauschfehlerrate von rund $2{,}50\cdot10^{-3}$ auf $1{,}56\cdot10^{-7}$. Der vollständige Operator einschließlich Phase wird separat verglichen. Das Modell setzt ein steuerbares Vorzeichen des Ganzregister-Tauschgenerators voraus.
+
+**OP1-Rückwärtssuche aus Paarbedingungen.** Die MML-Anfrage `qam/examples/marked_ring_synthesis_mml.json` zählt die exakten Punktpermutationen für ein Präfix verschobener Paarabfragen und zeigt bis zu acht Kandidaten. Bei eindeutiger Rotation berechnet der volle MMA-Beleg die Links- und Rechtswirkung der eingebauten Zwei-Ring-Zerlegung. Die native Verfügbarkeit beider Austauschlagen bleibt als Guard sichtbar.
+
+**Frei wählbare Paarbedingungen (9. November 2026).** Die MML-Operation
+`op1.marked-ring-pair-search` akzeptiert bis zu 28 Abbildungen ungeordneter
+Paare. MMA durchsucht die $8!=40\,320$ Punktpermutationen und gibt die exakte
+Anzahl sowie bis zu acht Lösungen zurück. Bei null Lösungen nennt der Beleg
+die erste Bedingung, an der alle verbleibenden Kandidaten scheitern, und zeigt
+das tatsächliche Paarbild eines Kandidaten aus dem vorherigen Schritt. Der
+Beleg umfasst den Anfragehash und explizit angegebene QAM-Prämissen. Über MCP
+kann derselbe Beleg samt Konfliktdaten abgerufen werden. Die native
+Realisierbarkeit der Austauschoperationen bleibt offen.
+
+**Parallele Paarabfragen.** `mma-batch` verarbeitet bis zu 64 unabhängige
+MML-Paarabfragen im selben Kontext mit bis zu vier Rechenprozessen. Der
+Hauptprozess liest die Prämissenspuren und speichert nach der Rechnung alle
+Einzelbelege in einer SQLite-Transaktion. Der gehashte Bericht folgt der
+Eingabereihenfolge und führt je Anfrage Beleg-Hash, Ergebnis und Guards auf.
+Im Beispiel liefert die erste Anfrage 120 Kandidaten und die zweite null.
+Die Einzelbelege sind über die vorhandenen MCP-Lesewerkzeuge abrufbar.
+
+Mit `depends_on` können Stapelanfragen Vorgänger angeben. MMA prüft den
+Graphen vor dem Start auf Zyklen. Sobald die eigenen Vorgänger fertig sind
+und ein Prozess frei ist, kann eine Anfrage starten, auch wenn ein anderer
+Zweig noch rechnet. Bleibt ein Vorgänger bewacht, wird er abgelehnt oder
+blockiert, nennt der Bericht ihn als Ursache für die blockierte Anfrage.
+Die Abhängigkeiten steuern die Ausführung. Mathematische Prämissen werden
+weiterhin ausdrücklich im Einzelauftrag angegeben. Der vollständige
+MCP-Server kann gespeicherte Stapel über `run_qam_mml_batch` ausführen.
+Über `requires_match` kann eine Folgeanfrage zusätzlich verlangen, dass
+ein ausdrücklich benannter Vorgänger mindestens einen Kandidaten findet.
+Ein erfolgreich berechnetes Ergebnis mit null Kandidaten blockiert nur
+die Folgeanfragen, die einen Treffer voraussetzen.
+Der lokale Stapelserver nimmt über `run_qam_pair_batch` auch direkt im
+Chat formulierte Paarbedingungen entgegen. MMA verwendet dieselbe
+Stapelprüfung und speichert die Einzelbelege für den späteren Abruf per Hash.
+MMA speichert auch den Sammelbericht und die ursprüngliche Stapelanfrage
+in derselben Transaktion wie die Einzelbelege. `read_qam_batch_report` prüft
+beide Hashes und gibt den Bericht samt blockierten Anfragen zurück.
+`list_qam_batch_reports` zeigt die zuletzt gespeicherten unterschiedlichen
+Berichte mit Anfrage-IDs und Anzahlen je MMA-Status. Damit lässt sich ein
+Bericht auch ohne vorher bekannten Hash finden.
+Die Liste lässt sich nach exakter Anfrage-ID und Status filtern. Sind beide
+Filter gesetzt, muss dieselbe Anfrage im Bericht beide erfüllen.
+Beim Replay verifiziert MMA die gespeicherte Stapelanfrage und den
+Kontext, löst die Prämissen im aktuellen Index auf und meldet geänderte
+Felder je Anfrage. Es entstehen keine neuen gespeicherten Berichte oder
+Belege. Ein geänderter Beleg-Hash kann auch auf einer Änderung des
+Adapters beruhen.
+Zwei gespeicherte Berichte lassen sich auch direkt über
+`compare_qam_batch_reports` vergleichen. Der Vergleich ordnet Anfragen anhand
+ihrer IDs zu und meldet Abweichungen von Stapelanfrage, Kontext und Reihenfolge.
+Der schreibgeschützte Abruf `audit_qam_batch_report` prüft zusätzlich den
+gespeicherten Kontext, die Zuordnung der Einzelbelege und die angegebenen
+blockierenden Vorgänger. Das ist eine Integritätsprüfung der gespeicherten
+Daten.
+
+**Auswahl von fünf Ringkanten.** Im endlichen Acht-Punkte-Modell bestimmen
+16 der 56 Fünferauswahlen die Sollrotation eindeutig. 32 lassen zwei und
+8 lassen vier Kandidaten. Das zusammenhängende Fünferpräfix lässt zwei
+isolierte Punkte vertauschbar. Zwei Pfade mit zwei und drei Kanten fixieren
+zusammen sieben Punkte. Die Graphzählung $i!2^s$ für $i$ isolierte Punkte
+und $s$ isolierte Kanten stimmt für alle 56 Auswahlen mit MMA überein.
+Die Aussage betrifft Punktpermutationen. Die native Ausführung und OP1
+bleiben offen.
+
+> **Anmerkung zur Quellenprüfung:** `notes/research/qam_ring_five_pair_batch.md` und
+> `notes/research/qam_ring_five_pair_batch.py`.
+
+**Randblöcke als Ausschlussfilter.** Die OP1-Rückwärtssuche akzeptiert eine deklarierte Zerlegung der 16 Endpunkte in gerade Singulettblöcke. MMA prüft beide Austauschlagen und ihre Zusammensetzung separat. Bei einem gespaltenen Block nennt der Beleg ein Eingangspaar mit Bildern in verschiedenen Blöcken. Punktgleiche Zweierblöcke bestehen den ersten Tausch, scheitern aber am Nachbartausch und an der Zusammensetzung.
+
+**Synthese der Randblockzerlegungen.** Bei eindeutiger Sollrotation liefert `enumerate_singlet_blocks: true` im vollständigen MMA-Beleg alle 18 geraden Zerlegungen, die beide Austauschlagen erhalten. Davon lassen nur der gemeinsame 16-Endpunkte-Block und die beiden getrennten Ringblöcke den gesamten linken Singulettträger mit der festen rechten Gerade/Ungerade-Referenz zu.
+
+**Holonomieprüfung im OP1-Beleg.** Acht deklarierte rationale Einheitsquaternionen werden in Umlaufrichtung multipliziert. Im Parallelrahmenmodell prüft MMA die Zentralität des Produkts und gibt die Paar-Singulettwahrscheinlichkeit als exakten Bruch aus. Der Beleg unterscheidet dieses Modellresultat von der nativen Herleitung der Nachbartransporte.
+
+**Holonomie und fest gewählter Randrahmen.** Der Beleg unterscheidet den Parallelrahmen vom Fall eines unabhängig festgelegten gemeinsamen Spinrahmens. Im festen Rahmen erhält der Ringschritt den ganzen Singulettträger genau dann, wenn alle acht Transportmatrizen bis auf Vorzeichen übereinstimmen. Der Test liefert andernfalls einen exakten Paarzeugen, auch wenn das Umlaufprodukt zentral ist.
+
+**Bedingte Holonomie-Korrektur im MMA-Beleg.** Die Parallelrahmenprüfung unterscheidet direkten Transport, verschwindende Singulett-Rückkehr und bedingte Verstärkung. Ab Rückkehramplitude vom Betrag $1/2$ gibt der Beleg die exakte Hilfszeigeramplitude und den Modellplan mit neun Vorwärtsschritten an. Die native Kopplung der Punkt-an-Rest-Reflexion bleibt eine Voraussetzung.
+
+**Vorwärtsfolge bei verschwindender Singulett-Rückkehr.** Der Holonomiebeleg nennt auch bei skalarer Amplitude null die Modellroute mit acht Vorwärtsschritten und sieben Tauschen an derselben Kante. Sie braucht keine globale Nachauswahl, setzt aber einen kohärenten gravitativen Paartausch und zugängliche Zwischenzustände voraus.

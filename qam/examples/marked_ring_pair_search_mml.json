@@ -1,0 +1,13 @@
+{
+  "id": "search_marked_ring_pairs",
+  "instruction": "READOUT",
+  "guards": [],
+  "arguments": {
+    "recipe": "op1.marked-ring-pair-search",
+    "pair_constraints": [
+      {"source": [0, 3], "target": [1, 4]},
+      {"source": [0, 5], "target": [1, 6]},
+      {"source": [0, 3], "target": [1, 6]}
+    ]
+  }
+}

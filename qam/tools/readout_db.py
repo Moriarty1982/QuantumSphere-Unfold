@@ -5,8 +5,12 @@ import json
 import re
 from pathlib import Path
 import sqlite3
+import sys
+from concurrent.futures import FIRST_COMPLETED, ProcessPoolExecutor, wait
 from contextlib import closing
 from fractions import Fraction
+from itertools import combinations, islice, permutations
+from math import factorial
 
 from qam.tools.qamhash import verify
 
@@ -90,6 +94,11 @@ def connect(path):
         );
         CREATE TABLE IF NOT EXISTS mma_status_counts (
             status TEXT PRIMARY KEY NOT NULL, count INTEGER NOT NULL
+        );
+        CREATE TABLE IF NOT EXISTS mma_batch_reports (
+            report_hash TEXT PRIMARY KEY NOT NULL,
+            batch TEXT NOT NULL,
+            report TEXT NOT NULL
         );
         CREATE TRIGGER IF NOT EXISTS count_mma_receipt
         AFTER INSERT ON mma_receipts
@@ -514,12 +523,304 @@ def marked_ring_mml(db, interface, request, *, trace=None):
     return dict(receipt, receipt_hash=tensor.digest(receipt))
 
 
+def split_singlet_block(permutation, blocks):
+    """Find a pair in one input block whose images land in different blocks."""
+    membership = {point: index for index, block in enumerate(blocks) for point in block}
+    for block in blocks:
+        left = block[0]
+        for right in block[1:]:
+            if membership[permutation[left]] != membership[permutation[right]]:
+                return {"input_pair": [left, right],
+                        "split_image": [permutation[left], permutation[right]]}
+    return None
+
+
+def ring_singlet_partitions(onsite, neighbor):
+    """Enumerate invariant even partitions for the transitive two-ring action."""
+    partitions = []
+    for size in (2, 4, 8, 16):
+        for tail in combinations(range(1, 16), size - 1):
+            initial = frozenset((0, *tail))
+            blocks = [initial]
+            seen = {initial}
+            covered = set(initial)
+            for block in blocks:
+                for operation in (onsite, neighbor):
+                    image = frozenset(operation[point] for point in block)
+                    if image in seen:
+                        continue
+                    if image & covered:
+                        break
+                    blocks.append(image)
+                    seen.add(image)
+                    covered.update(image)
+                else:
+                    continue
+                break
+            else:
+                if len(covered) == 16:
+                    partitions.append({
+                        "block_size": size,
+                        "blocks": sorted(sorted(block) for block in blocks),
+                        "admits_full_input": all(
+                            sum(point < 8 for point in block) in (0, 8)
+                            and sum(point >= 8 for point in block) in (0, 8)
+                            for block in blocks
+                        ),
+                    })
+    return partitions
+
+
+def ring_holonomy_check(edges):
+    """Check eight exact unit quaternions in traversal order."""
+    if not isinstance(edges, list) or len(edges) != 8:
+        raise ValueError("Expected eight edge holonomies.")
+    product = (Fraction(1), Fraction(0), Fraction(0), Fraction(0))
+    transports = []
+    for edge in edges:
+        if (not isinstance(edge, list) or len(edge) != 4
+                or any(not isinstance(value, str)
+                       or not re.fullmatch(r"-?[0-9]{1,7}(?:/[1-9][0-9]{0,6})?", value)
+                       for value in edge)):
+            raise ValueError("Each holonomy needs four bounded rational strings.")
+        a, b, c, d = map(Fraction, edge)
+        if a*a + b*b + c*c + d*d != 1:
+            raise ValueError("Each holonomy must be a unit quaternion.")
+        transports.append((a, b, c, d))
+        e, f, g, h = product
+        product = (a*e-b*f-c*g-d*h, a*f+b*e+c*h-d*g,
+                   a*g-b*h+c*e+d*f, a*h+b*g-c*f+d*e)
+    fixed_frame_witness = None
+    for index, transport in enumerate(transports[1:], 1):
+        probability = sum(a * b for a, b in zip(transports[0], transport)) ** 2
+        if probability != 1:
+            fixed_frame_witness = {
+                "source_pair": [0, index],
+                "yes_probability": str(probability),
+            }
+            break
+    amplitude = abs(product[0])
+    if amplitude == 1:
+        recovery = {"status": "direct"}
+    elif not amplitude:
+        recovery = {"status": "zero_singlet_return"}
+    else:
+        recovery = {
+            "status": "conditional_amplification",
+            "success_probability": str(amplitude ** 2),
+            "additional_requirements": [
+                "Coherent control of the repeated holonomic step",
+                "Point-to-rest exchange reflection at the two marked sites",
+            ],
+        }
+        if amplitude >= Fraction(1, 2):
+            recovery["one_step_amplification"] = {
+                "ancilla_amplitude": str(Fraction(1, 2) / amplitude),
+                "forward_step_count": 9,
+                "output_sign": 1 if product[0] > 0 else -1,
+            }
+    if amplitude != 1:
+        recovery["fixed_pair_route"] = {
+            "forward_step_count": 8,
+            "fixed_pair_swap_count": 7,
+            "fixed_pair": [0, 1],
+            "initial_forward_steps": 2,
+            "forward_steps_between_swaps": 1,
+            "additional_requirements": [
+                "Coherent gravitational swap at the fixed pair",
+                "Access to intermediate states outside the global singlet",
+            ],
+        }
+    scalar, x, y, z = product
+    axis_overlap = 1 - 2 * (x*x + y*y)
+    parity_axes = {
+        "assumed_first_axis": "z",
+        "axis_overlap": str(axis_overlap),
+        "independent": abs(axis_overlap) != 1,
+        "triplet_overlap_probability": str(axis_overlap ** 2),
+    }
+    if parity_axes["independent"]:
+        phase_cosine = 2 * axis_overlap ** 2 - 1
+        previous, cosine = Fraction(1), phase_cosine
+        for power in range(1, 33):
+            if cosine <= 0:
+                parity_axes["reflection_product_power"] = power
+                if max(cosine.numerator.bit_length(), cosine.denominator.bit_length()) <= 12000:
+                    parity_axes["one_test_weights"] = {
+                        "identity": str(-cosine / (1 - cosine)),
+                        "forward": str(1 / (2 * (1 - cosine))),
+                        "inverse": str(1 / (2 * (1 - cosine))),
+                    }
+                else:
+                    parity_axes["weights_exceed_size_limit"] = True
+                break
+            previous, cosine = cosine, 2 * phase_cosine * cosine - previous
+        else:
+            parity_axes["reflection_product_power_exceeds"] = 32
+    return {
+        "loop_quaternion": [str(value) for value in product],
+        "central": not any(product[1:]),
+        "witness_pair_yes_probability": str(product[0] ** 2),
+        "fixed_frame_singlet_preserved": fixed_frame_witness is None,
+        "fixed_frame_witness": fixed_frame_witness,
+        "parallel_frame_recovery": recovery,
+        "parallel_frame_parity_axes": parity_axes,
+    }
+
+
+def marked_ring_synthesis(db, interface, request, *, trace=None):
+    from scripts.qsc_audit import tensor_grammar_check as tensor
+
+    receipt, roots = adapter_receipt(interface, request)
+    if isinstance(roots, list) and MARKED_RING_RULE not in roots:
+        roots = [MARKED_RING_RULE, *roots]
+    attach_premises(db, receipt, roots, trace)
+    receipt["adapter_hash"] = tensor.digest_bytes(Path(__file__).read_bytes())
+    args = request["arguments"]
+    count = args.get("pair_count")
+    blocks = args.get("singlet_blocks")
+    enumerate_blocks = args.get("enumerate_singlet_blocks", False)
+    holonomy = None
+    if "edge_holonomies" in args:
+        try:
+            holonomy = ring_holonomy_check(args["edge_holonomies"])
+        except ValueError as error:
+            receipt["errors"].append(str(error))
+            receipt["mma_status"] = "reject"
+    if (set(args) - {"recipe", "pair_count", "singlet_blocks", "enumerate_singlet_blocks",
+                     "edge_holonomies"}
+            or type(count) is not int
+            or not 1 <= count <= 7 or type(enumerate_blocks) is not bool):
+        receipt["errors"].append("Expected a prefix of one to seven shifted adjacent pairs.")
+        receipt["mma_status"] = "reject"
+    elif "singlet_blocks" in args and (
+        not isinstance(blocks, list)
+        or any(not isinstance(block, list) or not block or len(block) % 2
+               or any(type(point) is not int for point in block) for block in blocks)
+        or sorted(point for block in blocks for point in block) != list(range(16))
+    ):
+        receipt["errors"].append("Singlet blocks must partition labels 0 through 15 into even blocks.")
+        receipt["mma_status"] = "reject"
+    elif receipt["mma_status"] == "continue":
+        rotation = [(i + 1) % 8 for i in range(8)]
+        prefixes = ([1, 2], [2, 1]) if count == 1 else (rotation[:count + 1],)
+        completions = (
+            prefix + list(tail)
+            for prefix in prefixes
+            for tail in permutations(sorted(set(range(8)) - set(prefix)))
+        )
+        candidate_count = len(prefixes) * factorial(7 - count)
+        result = {
+            "scope": "Eight-point permutations satisfying a prefix of shifted pair constraints.",
+            "pair_count": count,
+            "candidate_count": candidate_count,
+            "candidates": list(islice(completions, 8)),
+            "all_candidates_returned": candidate_count <= 8,
+        }
+        if candidate_count == 1:
+            onsite = [(i + 8) % 16 for i in range(16)]
+            neighbor = [8 + (i - 1) % 8 for i in range(8)] + rotation
+            composed = [neighbor[onsite[i]] for i in range(16)]
+            result["model_route"] = {
+                "register_order": "L0..L7,R0..R7",
+                "layers": [onsite, neighbor],
+                "left_action": composed[:8],
+                "right_action": [point - 8 for point in composed[8:]],
+                "reference_condition": "The right reference is a rotation eigenstate.",
+                "open_native_requirements": [
+                    "Gravitational onsite left-right exchange",
+                    "Gravitational left-right exchange to the marked neighbor",
+                ],
+            }
+            receipt["obligations"].extend(result["model_route"]["open_native_requirements"])
+            if holonomy is not None:
+                result["model_route"]["holonomy_check"] = holonomy
+                if not holonomy["central"]:
+                    receipt["obligations"].append(
+                        "Noncentral holonomy fails the parallel-frame singlet pair test."
+                    )
+            if enumerate_blocks:
+                partitions = ring_singlet_partitions(onsite, neighbor)
+                result["model_route"]["invariant_singlet_partitions"] = partitions
+                result["model_route"]["full_input_partition_count"] = sum(
+                    entry["admits_full_input"] for entry in partitions
+                )
+            if blocks is not None:
+                checks = {
+                    name: split_singlet_block(operation, blocks)
+                    for name, operation in (("onsite", onsite), ("neighbor", neighbor),
+                                            ("composition", composed))
+                }
+                result["model_route"]["split_singlet_blocks"] = checks
+                if any(checks.values()):
+                    receipt["obligations"].append(
+                        "A layer or the composition splits the declared fixed singlet partition."
+                    )
+        else:
+            receipt["obligations"].append("The declared pair constraints leave multiple candidates.")
+        receipt["result"] = result
+        receipt["mma_status"] = "guard"
+    return dict(receipt, receipt_hash=tensor.digest(receipt))
+
+
+def marked_ring_pair_search(db, interface, request, *, trace=None):
+    from scripts.qsc_audit import tensor_grammar_check as tensor
+
+    receipt, roots = adapter_receipt(interface, request)
+    attach_premises(db, receipt, roots, trace)
+    receipt["adapter_hash"] = tensor.digest_bytes(Path(__file__).read_bytes())
+    args = request["arguments"]
+    constraints = args.get("pair_constraints")
+    if (set(args) != {"recipe", "pair_constraints"}
+            or not isinstance(constraints, list) or not 1 <= len(constraints) <= 28
+            or any(not isinstance(row, dict) or set(row) != {"source", "target"}
+                   for row in constraints)
+            or any(not isinstance(pair, list) or len(pair) != 2
+                   or any(type(point) is not int or not 0 <= point < 8 for point in pair)
+                   or pair[0] == pair[1]
+                   for row in constraints for pair in row.values())):
+        receipt["errors"].append(
+            "Expected 1 to 28 source/target pairs of distinct point labels from 0 through 7."
+        )
+        receipt["mma_status"] = "reject"
+    elif receipt["mma_status"] == "continue":
+        candidates = list(permutations(range(8)))
+        result = {
+            "scope": "Eight-point permutations mapping each unordered source pair to its target.",
+            "pair_count": len(constraints),
+        }
+        for index, row in enumerate(constraints):
+            left, right = row["source"]
+            target = set(row["target"])
+            remaining = [p for p in candidates if {p[left], p[right]} == target]
+            if not remaining:
+                result["pair_conflict"] = {
+                    "constraint_index": index,
+                    "preceding_candidate_count": len(candidates),
+                    "preceding_candidate": list(candidates[0]),
+                    "actual_image": sorted((candidates[0][left], candidates[0][right])),
+                    "required_image": sorted(target),
+                }
+            candidates = remaining
+            if not candidates:
+                break
+        result.update(candidate_count=len(candidates),
+                      candidates=[list(p) for p in candidates[:8]],
+                      all_candidates_returned=len(candidates) <= 8)
+        receipt["result"] = result
+    return dict(receipt, receipt_hash=tensor.digest(receipt))
+
+
 def readout_mml(db, interface, request, *, use_cache=True, trace=None):
     arguments = request.get("arguments")
     if isinstance(arguments, dict) and arguments.get("recipe") == "em.gram-boost-range":
         return gram_mml(db, interface, request, trace=trace)
     if isinstance(arguments, dict) and arguments.get("recipe") == "op1.marked-ring-pair-certificate":
         return marked_ring_mml(db, interface, request, trace=trace)
+    if isinstance(arguments, dict) and arguments.get("recipe") == "op1.marked-ring-synthesis":
+        return marked_ring_synthesis(db, interface, request, trace=trace)
+    if isinstance(arguments, dict) and arguments.get("recipe") == "op1.marked-ring-pair-search":
+        return marked_ring_pair_search(db, interface, request, trace=trace)
     return spin_mml(db, interface, request, use_cache=use_cache, trace=trace)
 
 
@@ -536,17 +837,293 @@ def execute_mml(db, context, request):
     else:
         receipt = interface.execute(request)
     with db:
-        db.execute("INSERT OR IGNORE INTO mma_contexts VALUES (?, ?)",
-                   (receipt["context_hash"], json.dumps(interface.context, allow_nan=False)))
-        db.execute(
-            """INSERT INTO mma_receipts VALUES (?, ?, ?, ?, ?, ?)
-               ON CONFLICT (receipt_hash) DO NOTHING""",
-            (receipt["receipt_hash"], receipt["context_hash"],
-             instruction if isinstance(instruction, str) else "",
-             receipt["mma_status"], json.dumps(request, allow_nan=False),
-             json.dumps(receipt, allow_nan=False)),
-        )
+        store_mml_receipt(db, interface.context, request, receipt, instruction)
     return receipt
+
+
+def store_mml_receipt(db, context, request, receipt, instruction):
+    db.execute("INSERT OR IGNORE INTO mma_contexts VALUES (?, ?)",
+               (receipt["context_hash"], json.dumps(context, allow_nan=False)))
+    db.execute(
+        """INSERT INTO mma_receipts VALUES (?, ?, ?, ?, ?, ?)
+           ON CONFLICT (receipt_hash) DO NOTHING""",
+        (receipt["receipt_hash"], receipt["context_hash"],
+         instruction if isinstance(instruction, str) else "",
+         receipt["mma_status"], json.dumps(request, allow_nan=False),
+         json.dumps(receipt, allow_nan=False)),
+    )
+
+
+def calculate_pair_request(context, request, trace):
+    from scripts.qsc_audit.framework_interface import FrameworkInterface
+
+    return marked_ring_pair_search(None, FrameworkInterface(context), request, trace=trace)
+
+
+def pair_batch_blockers(parents, required_matches, completed):
+    return [
+        parent for parent in parents
+        if completed[parent]["mma_status"] != "continue"
+        or (parent in required_matches and not completed[parent].get("candidate_count"))
+    ]
+
+
+def execute_pair_batch(db, context, batch, workers, *, persist=True):
+    """Compute pair requests in dependency order without worker database access."""
+    from scripts.qsc_audit.framework_interface import FrameworkInterface
+    from scripts.qsc_audit import tensor_grammar_check as tensor
+
+    requests = batch.get("requests") if isinstance(batch, dict) else None
+    if (not isinstance(requests, list) or not 1 <= len(requests) <= 64
+            or set(batch) - {"requests", "depends_on", "requires_match"}
+            or any(not isinstance(request, dict) or request.get("instruction") != "READOUT"
+                   or not isinstance(request.get("arguments"), dict)
+                   or request["arguments"].get("recipe") != "op1.marked-ring-pair-search"
+                   or not isinstance(request.get("id"), str) or not request["id"].strip()
+                   for request in requests)):
+        raise ValueError("Expected 1 to 64 independent marked-ring pair READOUT requests.")
+    if len({request["id"] for request in requests}) != len(requests):
+        raise ValueError("Batch request IDs must be unique.")
+    ids = [request["id"] for request in requests]
+    dependencies = batch.get("depends_on", {})
+    if (not isinstance(dependencies, dict) or set(dependencies) - set(ids)
+            or any(not isinstance(parents, list)
+                   or any(not isinstance(parent, str) or parent not in ids for parent in parents)
+                   or len(set(parents)) != len(parents)
+                   for parents in dependencies.values())):
+        raise ValueError("Batch dependencies must name existing request IDs without duplicates.")
+    required_matches = batch.get("requires_match", {})
+    if (not isinstance(required_matches, dict) or set(required_matches) - set(ids)
+            or any(not isinstance(parents, list)
+                   or any(not isinstance(parent, str) or parent not in dependencies.get(key, [])
+                          for parent in parents)
+                   or len(set(parents)) != len(parents)
+                   for key, parents in required_matches.items())):
+        raise ValueError("Match requirements must name declared predecessors without duplicates.")
+    pending = ids.copy()
+    resolved = set()
+    while pending:
+        ready = [key for key in pending if resolved.issuperset(dependencies.get(key, []))]
+        if not ready:
+            raise ValueError("Batch dependencies contain a cycle.")
+        resolved.update(ready)
+        pending = [key for key in pending if key not in resolved]
+    context = FrameworkInterface(context).context
+    traces = []
+    with db:
+        db.execute("BEGIN")
+        for request in requests:
+            roots = request.get("premises", [])
+            if isinstance(roots, list) and roots and all(
+                isinstance(root, str) and re.fullmatch(r"[0-9A-Fa-f]{32}", root) for root in roots
+            ):
+                traces.append(premise_trace(db, [root.upper() for root in roots]))
+            else:
+                traces.append(None)
+
+    inputs = dict(zip(ids, zip(requests, traces)))
+    receipts = {}
+    pending = ids.copy()
+    completed_entries = {}
+    worker_count = min(workers, len(ids))
+    with ProcessPoolExecutor(max_workers=worker_count) as pool:
+        running = {}
+        while pending or running:
+            for key in pending.copy():
+                parents = dependencies.get(key, [])
+                if not completed_entries.keys() >= set(parents):
+                    continue
+                failed = pair_batch_blockers(parents, required_matches.get(key, []), completed_entries)
+                if failed:
+                    completed_entries[key] = {
+                        "id": key, "mma_status": "blocked", "blocked_by": failed,
+                    }
+                elif len(running) < worker_count:
+                    running[pool.submit(calculate_pair_request, context, *inputs[key])] = key
+                else:
+                    continue
+                pending.remove(key)
+            if running:
+                completed, _ = wait(running, return_when=FIRST_COMPLETED)
+                for future in completed:
+                    key = running.pop(future)
+                    receipts[key] = future.result()
+                    completed_entries[key] = {
+                        "id": key, **receipt_summary(receipts[key], "READOUT", inputs[key][0])
+                    }
+    report = {
+        "batch_hash": tensor.digest(batch),
+        "context_hash": receipts[next(key for key in ids if key in receipts)]["context_hash"],
+        "entries": [completed_entries[key] for key in ids],
+    }
+    report["report_hash"] = tensor.digest(report)
+    if not persist:
+        return report
+    with db:
+        for key in ids:
+            if key in receipts:
+                store_mml_receipt(db, context, inputs[key][0], receipts[key], "READOUT")
+        db.execute(
+            """INSERT INTO mma_batch_reports VALUES (?, ?, ?)
+               ON CONFLICT (report_hash) DO NOTHING""",
+            (report["report_hash"], json.dumps(batch, allow_nan=False),
+             json.dumps(report, allow_nan=False)),
+        )
+    return report
+
+
+def read_pair_batch_report(db, report_hash):
+    from scripts.qsc_audit import tensor_grammar_check as tensor
+
+    if not db.execute(
+        "SELECT 1 FROM sqlite_master WHERE type = 'table' AND name = 'mma_batch_reports'"
+    ).fetchone():
+        return None
+    row = db.execute("SELECT batch, report FROM mma_batch_reports WHERE report_hash = ?",
+                     (report_hash,)).fetchone()
+    if row is None:
+        return None
+    batch, report = map(json.loads, row)
+    body = {key: value for key, value in report.items() if key != "report_hash"}
+    if (report.get("report_hash") != report_hash or tensor.digest(body) != report_hash
+            or tensor.digest(batch) != report.get("batch_hash")):
+        raise ValueError("Stored MMA batch report or input failed integrity verification.")
+    return {"batch": batch, "report": report}
+
+
+def compare_pair_batch_reports(previous, current):
+    old_entries = {entry["id"]: entry for entry in previous["entries"]}
+    new_entries = {entry["id"]: entry for entry in current["entries"]}
+    changes = []
+    for key in dict.fromkeys([*old_entries, *new_entries]):
+        old = old_entries.get(key, {})
+        new = new_entries.get(key, {})
+        fields = sorted(field for field in old.keys() | new.keys()
+                        if field not in old or field not in new or old[field] != new[field])
+        if fields:
+            changes.append({"id": key, "changed_fields": fields,
+                            "previous_status": old.get("mma_status"),
+                            "current_status": new.get("mma_status")})
+    return {
+        "report_hash": previous["report_hash"],
+        "current_report_hash": current["report_hash"],
+        "report_matches": current == previous,
+        "changes": changes,
+    }
+
+
+def audit_pair_batch_report(db, stored):
+    from scripts.qsc_audit import tensor_grammar_check as tensor
+
+    batch, report = stored["batch"], stored["report"]
+    entries = report["entries"]
+    requests = batch["requests"]
+    entries_by_id = {entry["id"]: entry for entry in entries}
+    issues = []
+    verified_receipts = 0
+    verified_blocked = 0
+    context = db.execute("SELECT context FROM mma_contexts WHERE context_hash = ?",
+                         (report["context_hash"],)).fetchone()
+    if context is None or tensor.digest(json.loads(context[0])) != report["context_hash"]:
+        issues.append({"error": "Missing or mismatched context snapshot."})
+    if [entry["id"] for entry in entries] != [request["id"] for request in requests]:
+        issues.append({"error": "Report entries do not match the batch request order."})
+    for entry, request in zip(entries, requests):
+        key = entry["id"]
+        if key != request["id"]:
+            continue
+        predecessors = batch.get("depends_on", {}).get(key, [])
+        if any(parent not in entries_by_id for parent in predecessors):
+            issues.append({"id": key, "error": "Missing predecessor entry."})
+            continue
+        blocked_by = pair_batch_blockers(
+            predecessors, batch.get("requires_match", {}).get(key, []), entries_by_id
+        )
+        if entry["mma_status"] == "blocked":
+            if blocked_by and entry.get("blocked_by") == blocked_by and "receipt_hash" not in entry:
+                verified_blocked += 1
+            else:
+                issues.append({"id": key, "error": "Invalid blocked entry."})
+            continue
+        digest = entry.get("receipt_hash")
+        row = db.execute("SELECT instruction, request, receipt FROM mma_receipts WHERE receipt_hash = ?",
+                         (digest,)).fetchone()
+        if row is None:
+            issues.append({"id": key, "error": "Missing individual receipt."})
+            continue
+        try:
+            instruction, stored_request, body = row
+            receipt = json.loads(body)
+            payload = {field: value for field, value in receipt.items() if field != "receipt_hash"}
+            valid = (
+                not blocked_by and instruction == request["instruction"]
+                and json.loads(stored_request) == request and receipt["request_hash"] == tensor.digest(request)
+                and receipt["context_hash"] == report["context_hash"]
+                and receipt["receipt_hash"] == digest and tensor.digest(payload) == digest
+                and entry == {"id": key, **receipt_summary(receipt, instruction, request)}
+            )
+        except (ValueError, AttributeError, KeyError, TypeError):
+            valid = False
+        if valid:
+            verified_receipts += 1
+        else:
+            issues.append({"id": key, "error": "Receipt, request, context or summary mismatch."})
+    return {"report_hash": report["report_hash"], "verified": not issues,
+            "verified_receipts": verified_receipts, "verified_blocked": verified_blocked,
+            "issues": issues}
+
+
+def replay_pair_batch_report(db, report_hash, workers):
+    from scripts.qsc_audit import tensor_grammar_check as tensor
+
+    stored = read_pair_batch_report(db, report_hash)
+    if stored is None:
+        raise ValueError("MMA batch report not found.")
+    previous = stored["report"]
+    context_hash = previous["context_hash"]
+    row = db.execute("SELECT context FROM mma_contexts WHERE context_hash = ?",
+                     (context_hash,)).fetchone()
+    if row is None:
+        raise ValueError("No context snapshot stored for this MMA batch report.")
+    context = json.loads(row[0])
+    if tensor.digest(context) != context_hash:
+        raise ValueError("Stored MMA batch context failed integrity verification.")
+    current = execute_pair_batch(db, context, stored["batch"], workers, persist=False)
+    return compare_pair_batch_reports(previous, current)
+
+
+def list_pair_batch_reports(db, limit, request_id=None, status=None):
+    if not db.execute(
+        "SELECT 1 FROM sqlite_master WHERE type = 'table' AND name = 'mma_batch_reports'"
+    ).fetchone():
+        return []
+    if request_id is None and status is None:
+        rows = db.execute("SELECT report_hash FROM mma_batch_reports ORDER BY rowid DESC LIMIT ?",
+                          (limit,))
+    else:
+        rows = db.execute(
+            """SELECT report_hash FROM mma_batch_reports
+               WHERE EXISTS (
+                   SELECT 1 FROM json_each(report, '$.entries') AS entry
+                   WHERE (? IS NULL OR json_extract(entry.value, '$.id') = ?)
+                     AND (? IS NULL OR json_extract(entry.value, '$.mma_status') = ?)
+               )
+               ORDER BY rowid DESC LIMIT ?""",
+            (request_id, request_id, status, status, limit),
+        )
+    summaries = []
+    for (report_hash,) in rows:
+        report = read_pair_batch_report(db, report_hash)["report"]
+        counts = {"continue": 0, "guard": 0, "reject": 0, "blocked": 0}
+        for entry in report["entries"]:
+            counts[entry["mma_status"]] += 1
+        summaries.append({
+            "report_hash": report_hash,
+            "batch_hash": report["batch_hash"],
+            "request_ids": [entry["id"] for entry in report["entries"]],
+            "status_counts": counts,
+        })
+    return summaries
 
 
 def readout_tex(receipt, instruction="READOUT"):
@@ -578,6 +1155,14 @@ def readout_tex(receipt, instruction="READOUT"):
             if "selective_success_upper_bound" in channel:
                 output.append(line("Selective success upper bound: " + channel["selective_success_upper_bound"]))
             output.extend(line(text) for text in channel["exclusions"])
+    elif "candidate_count" in result:
+        output.append(line(f"Matching permutations: {result['candidate_count']}"))
+        if conflict := result.get("pair_conflict"):
+            output.append(line(
+                f"Constraint {conflict['constraint_index'] + 1} eliminates the remaining candidates. "
+                f"Witness image {conflict['actual_image']}, required {conflict['required_image']}."
+            ))
+        output.extend(line(text) for text in receipt["errors"] + receipt["obligations"])
     elif receipt["mma_status"] == "continue" and "target_interval" in result:
         output.append(line("Gram target interval: [" + ", ".join(result["target_interval"]) + "]"))
         output.append(line("QAM rule: " + result["rule_hash"]))
@@ -607,6 +1192,11 @@ def receipt_summary(receipt, instruction, request):
     }
     if "failed_pair_indices" in receipt["result"]:
         for key in ("failed_pair_indices", "first_six_pairs_preserved", "seventh_pair_yes_preserved"):
+            if key in receipt["result"]:
+                summary[key] = receipt["result"][key]
+    if instruction == "READOUT" and "candidate_count" in receipt["result"]:
+        for key in ("pair_count", "candidate_count", "candidates", "all_candidates_returned",
+                    "pair_conflict"):
             if key in receipt["result"]:
                 summary[key] = receipt["result"][key]
     if instruction == "SEARCH_ROUTE":
@@ -675,6 +1265,26 @@ def main():
     mma.add_argument("request", type=Path)
     mma.add_argument("--summary", action="store_true", help="return only the receipt identity and MMA diagnostics")
     mma.add_argument("--tex-output", type=Path, help="write a LaTeX fragment for READOUT or SEARCH_ROUTE")
+    batch_command = commands.add_parser("mma-batch", help="run a batch of marked-ring pair requests")
+    batch_command.add_argument("context", type=Path)
+    batch_command.add_argument("batch", type=Path, help="batch JSON file, or - to read standard input")
+    batch_command.add_argument("--workers", type=int, choices=range(1, 5), default=2)
+    batch_report = commands.add_parser("batch-report", help="retrieve a verified MMA batch report")
+    batch_report.add_argument("report_hash")
+    batch_report.add_argument("--report-only", action="store_true", help="omit the original input")
+    replay_batch = commands.add_parser("replay-batch", help="recompute a verified MMA batch report")
+    replay_batch.add_argument("report_hash")
+    replay_batch.add_argument("--workers", type=int, choices=range(1, 5), default=2)
+    compare_batch = commands.add_parser("compare-batches", help="compare two verified MMA batch reports")
+    compare_batch.add_argument("previous_hash")
+    compare_batch.add_argument("current_hash")
+    audit_batch = commands.add_parser("audit-batch", help="verify report links to its individual receipts")
+    audit_batch.add_argument("report_hash")
+    batch_reports = commands.add_parser("batch-reports", help="list recent verified MMA batch reports")
+    batch_reports.add_argument("--limit", type=int, choices=range(1, 51), default=10,
+                               metavar="1..50")
+    batch_reports.add_argument("--request-id", help="match this exact request ID")
+    batch_reports.add_argument("--status", choices=("continue", "guard", "reject", "blocked"))
     commands.add_parser("mma-status", help="count distinct stored MMA receipts by status")
     receipts = commands.add_parser("receipts", help="find stored MMA receipts and premise dependents")
     receipts.add_argument("--instruction", choices=("EXPORT", "SCRUB", "READOUT", "SEARCH_ROUTE"))
@@ -693,7 +1303,7 @@ def main():
     args = parser.parse_args()
     if args.command == "receipt" and args.summary and (args.trace or args.tex_output):
         parser.error("--summary cannot be combined with --trace or --tex-output")
-    if args.read_only and (args.command in ("index", "mma", "register-replacement")
+    if args.read_only and (args.command in ("index", "mma", "mma-batch", "register-replacement")
                            or getattr(args, "tex_output", None)):
         parser.error("--read-only forbids database updates and file export")
     for name in ("claim_hash", "old_hash", "new_hash"):
@@ -727,6 +1337,64 @@ def main():
                 parser.error("each explicit index root must be a directory")
             roots = args.root or [Path("qam"), Path("notes/research"), Path("build/qam-records")]
             print(f"Indexed {rebuild_index(db, roots)} hash-verified claims.")
+        elif args.command == "batch-reports":
+            try:
+                print(json.dumps(list_pair_batch_reports(db, args.limit, args.request_id, args.status)))
+            except (ValueError, AttributeError, TypeError, KeyError, sqlite3.OperationalError) as error:
+                parser.exit(2, f"{error}\n")
+        elif args.command == "compare-batches":
+            hashes = ["".join(value.split()).lower()
+                      for value in (args.previous_hash, args.current_hash)]
+            if any(not re.fullmatch(r"[0-9a-f]{128}", value) for value in hashes):
+                parser.error("compare-batches requires two 128-digit SHA-512 hashes")
+            try:
+                reports = [read_pair_batch_report(db, value) for value in hashes]
+                for value, stored in zip(hashes, reports):
+                    if stored is None:
+                        raise ValueError(f"MMA batch report not found: {value}")
+                previous, current = (stored["report"] for stored in reports)
+                comparison = compare_pair_batch_reports(previous, current)
+                comparison["batch_matches"] = previous["batch_hash"] == current["batch_hash"]
+                comparison["context_matches"] = previous["context_hash"] == current["context_hash"]
+                comparison["request_order_matches"] = (
+                    [entry["id"] for entry in previous["entries"]]
+                    == [entry["id"] for entry in current["entries"]]
+                )
+            except (ValueError, AttributeError, TypeError, KeyError) as error:
+                parser.exit(2, f"{error}\n")
+            print(json.dumps(comparison))
+        elif args.command in ("batch-report", "replay-batch", "audit-batch"):
+            digest = "".join(args.report_hash.split()).lower()
+            if not re.fullmatch(r"[0-9a-f]{128}", digest):
+                parser.error("batch-report requires a 128-digit SHA-512 hash")
+            try:
+                if args.command == "replay-batch":
+                    result = replay_pair_batch_report(db, digest, args.workers)
+                else:
+                    result = read_pair_batch_report(db, digest)
+                    if result is not None:
+                        if args.command == "audit-batch":
+                            result = audit_pair_batch_report(db, result)
+                        elif args.report_only:
+                            result = result["report"]
+            except (ValueError, AttributeError, TypeError, KeyError, OSError, RuntimeError) as error:
+                parser.exit(2, f"{error}\n")
+            if result is None:
+                parser.exit(1, "MMA batch report not found. Run the batch to store its report.\n")
+            print(json.dumps(result))
+            if args.command == "audit-batch":
+                return int(not result["verified"])
+        elif args.command == "mma-batch":
+            from scripts.qsc_audit import tensor_grammar_check as tensor
+
+            try:
+                batch = (json.load(sys.stdin.buffer) if args.batch == Path("-")
+                         else tensor.load_json(args.batch))
+                report = execute_pair_batch(db, tensor.load_json(args.context), batch, args.workers)
+            except (ValueError, TypeError, KeyError, OSError, RuntimeError) as error:
+                parser.exit(2, f"Framework input/report error: {error}\n")
+            print(json.dumps(report))
+            return int(any(entry["mma_status"] != "continue" for entry in report["entries"]))
         elif args.command == "mma":
             from scripts.qsc_audit import tensor_grammar_check as tensor
 
