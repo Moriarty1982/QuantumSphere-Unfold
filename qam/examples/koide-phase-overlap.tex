@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[export]{qam}
+\usepackage{qam-physics}
+\begin{document}
+\qamframe{M}
+\qamprofile{koide-overlap}{M}{L_{\rm K}}{conditional}{Common-basis charged-lepton root readout}
+\begin{qamcontext}{koide-overlap}
+\[
+\qamformula{koide-overlap-input}{conditional}
+ {x_{jk}=a[1+\sqrt{2}\cos(\phi_j/3+2\pi k/3)],\quad
+ x_{jk}\geq0,\quad a>0,\quad w_j\geq0,\quad\sum_j w_j=1}
+\]
+\[
+\qamformula[koide-overlap-input]{koide-overlap-moment}{conditional}
+ {Z=\sum_j w_j e^{i\phi_j/3},\qquad
+ x_k=\sum_j w_j x_{jk}
+ =a[1+\sqrt{2}\operatorname{Re}(e^{2\pi i k/3}Z)]}
+\]
+\[
+\qamformula[koide-overlap-moment]{koide-overlap-output}{conditional}
+ {m_k=x_k^2,\qquad K=\frac{1+|Z|^2}{3},\qquad
+ \phi_{\rm eff}=3\arg Z\pmod{2\pi}\quad(Z\ne0)}
+\]
+\[
+\qamformula[koide-overlap-moment]{koide-overlap-mirror}{conditional}
+ {\phi_\pm=\phi_0\pm3h,\quad w_+=w_-=1/2,\quad
+ Z=e^{i\phi_0/3}\cos h,\quad |h|<\pi/2}
+\]
+\[
+\qamformula[koide-overlap-input]{koide-overlap-incoherent-control}{conditional}
+ {\sum_jw_j x_{jk}^2-\left(\sum_jw_j x_{jk}\right)^2
+ =\sum_j w_j\left(x_{jk}-\sum_lw_lx_{lk}\right)^2}
+\]
+\end{qamcontext}
+The input phases use a common lift and fixed generation labels.
+The mirror rule lowers the radius without shifting the effective phase.
+The input preparation, weights, shared channel, and amplitude readout
+are conditions of the model. They are not derived native operations.
+\end{document}

@@ -28,7 +28,21 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 
 ## OP3: Zulässige Hüllen-Übergänge
 
+Für das ursprüngliche Koide-OP3 zeigt die bedingte Überlagerungsrechnung, dass zwei bis sechzehn Auslesungen mit jeweils exakt K = 2/3 dieselben gemischten Leptonmassen liefern können. Der Fit legt ein komplexes Phasenmittel fest und identifiziert weder die Zahl der Auslesungen noch eine native Überlagerung. Eine symmetrische Paarung um exakt 2/3 Radiant mit gleichen Gewichten kann den beobachteten Phasenversatz nicht erzeugen. [Rechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/qam/examples/koide_phase_overlap.py)
+
+Das ursprüngliche OP3 betraf den Koide-Winkel. Im bedingten zyklischen Massenwurzelmodell ist der Winkel durch das basisphaseninvariante Produkt der drei orientierten Kopplungen bestimmt, bis auf Umordnung der Eigenwerte. Eine durch Basisphasen reell machbare Kopplung ergibt am exakten Koide-Radius eine andere Form als der historische Massenvergleich. Die native Kopplung bleibt offen. [Koide-Erkundung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/koide_original_op3_cycle_phase.md)
+
+Bei festen spektralen Eingaben kann der explizit definierte Theta-Defekt unter einer gemeinsamen Schwelle nicht erst im zweiten Schritt ausfallen. Eine zustandsabhängige Auslesung und die native Konstruktion des reparierten Folgezustands bleiben offen. [Quellenprüfung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op3_native_threshold_repair_2026_11_10.md)
+
+Im endlichen QAM-Modell des historischen Atlas identifizieren zwei Paarauslesungen 24 Permutationen eindeutig. Nur vier erhalten sowohl die Blatt- als auch die Paritätspaarstruktur. Jede der beiden Strukturprüfungen allein lässt acht Permutationen zu. Die Rechnung prüft die Übergangskodierung. Die native Realisierung und geometrische Persistenz sind offen. [QAM-Erkundung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op3_atlas_qam_exploration.md)
+
+Eine reproduzierbare geometrische Erkundung hält die sichtbare Vorzeichenumkehr fest und variiert ihre Fortsetzung quer zur sichtbaren Achse. Für die ebene Involution `(x,y) → (−x+by,y)` gilt für das Verhältnis der größten zur kleinsten Streckung `K ≤ 2` genau dann, wenn `b² ≤ 1/2`. Die Schranke ist eine Modellwahl. Für OP3 bleiben die native Fortsetzung und ihre Verbindung zum Verzerrungsmonitor offen. [Rechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op3_parity_distortion_exploration.py)
+
+Die quadratische Modellfamilie `(x,y) → (−x+ay²,y)` erhält die Modell-Schließungsklasse `y` und kommutiert mit der orthogonalen Involution `(x,y) → (x,−y)`. Auf der sichtbaren Achse haben alle Varianten dieselbe orthogonale Ableitung. Trotzdem kann ihre Verzerrung abseits der Achse beliebig groß werden. [Analytische Erkundung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op3_closure_distortion_independence.md)
+
 In der QAM als lokales Schließungszertifikat formuliert und im Kristallbild als Verträglichkeit benachbarter Zellen gelesen. Für die aktive Schließungsphase reicht das nach dem Text nicht mehr; eine lokale Persistenzkorrektur wird verlangt.
+
+Die im Zweischritt-Test angegebene geometrische Verschärfung senkt beide Obergrenzen. Bei denselben Zuständen und demselben Monitor kann sie daher ein bereits geometrisch gescheitertes Fenster nicht reparieren. Wird der zweite Zustand aktualisiert, muss er nativ zulässig erreichbar sein. Sein Monitorwert muss zugleich unter der verschärften Einzelgrenze und im erlaubten Abstand zum ersten Wert liegen. Eine solche Zustandsaktualisierung ist in den geprüften Reparaturpassagen nicht konstruiert. [Quellenprüfung und exakte Bedingung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op3_native_threshold_repair_2026_11_10.md)
 
 ## OP4: Herkunft der Mischungswinkel
 
