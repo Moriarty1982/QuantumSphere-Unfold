@@ -7,6 +7,28 @@ import math
 MASSES = (0.51099895, 105.6583755, 1776.93)
 
 
+def finite_gap_target(roots, mean, gap, omega):
+    direct = 1 + math.sqrt(2)
+    normalized = tuple(root / mean for root in roots)
+    second_moment = sum(value**2 for value in normalized) / 3
+    linear = 1 + direct / gap
+    scale = 2 / (linear + math.sqrt(linear**2 - 4 * second_moment / gap))
+    poles = tuple(scale * value for value in normalized)
+    static = tuple(pole + pole * (direct - pole) / gap for pole in poles)
+    return math.sqrt(2) * sum(value * omega**(-k-1) for k, value in enumerate(static)) / 3
+
+
+def equal_weight_minimum_real(imaginary, count):
+    """Minimum mean cosine at fixed mean sine in the positive root chamber."""
+    end_sine = math.sin(math.pi / 12)
+    end_cosine = math.cos(math.pi / 12)
+    if abs(imaginary) > end_sine:
+        return math.inf
+    upper = min(count - 1, math.floor(count * (imaginary + end_sine) / (2 * end_sine)))
+    remaining = count * imaginary - (2 * upper - count + 1) * end_sine
+    return ((count - 1) * end_cosine + math.sqrt(1 - remaining**2)) / count
+
+
 def main():
     roots = tuple(map(math.sqrt, MASSES))
     mean = sum(roots) / 3
@@ -62,6 +84,15 @@ def main():
         fitted = tuple((sum(values) / count)**2 for values in zip(*readings))
         assert all(math.isclose(x, y, abs_tol=1e-10) for x, y in zip(fitted, MASSES))
         print(f"N={count:2d}, orbit step={3*step:.12f} rad, masses={fitted}")
+
+    for gap in (68, 100):
+        target = finite_gap_target(roots, mean, gap, omega)
+        allowed = [
+            count for count in range(2, 17)
+            if equal_weight_minimum_real(target.imag, count) <= target.real
+            <= math.sqrt(1 - target.imag**2)
+        ]
+        print(f"D={gap}, feasible counts through 16: {allowed}")
 
 
 if __name__ == "__main__":
