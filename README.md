@@ -1,19 +1,19 @@
 # Quantum Sphaera Companion
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23991357.svg)](https://doi.org/10.5281/zenodo.23991357)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24108818.svg)](https://doi.org/10.5281/zenodo.24108818)
 
 Structure-first mathematical companion material for the Quantum Sphaera / Sphere Framework project.
 
 ## Current public baseline
 
-- Public version: `v4.10.0` (2026-11-06)
-- Version DOI: [`10.5281/zenodo.23991357`](https://doi.org/10.5281/zenodo.23991357) ([Zenodo record](https://zenodo.org/records/23991357))
+- Public version: `v4.11.0` (2026-11-10)
+- Version DOI: [`10.5281/zenodo.24108818`](https://doi.org/10.5281/zenodo.24108818) ([Zenodo record](https://zenodo.org/records/24108818))
 - Concept DOI: [`10.5281/zenodo.19210728`](https://doi.org/10.5281/zenodo.19210728)
-- Previous version: `v4.9.0`, DOI `10.5281/zenodo.23534954`; earlier `v4.8.0`, DOI `10.5281/zenodo.23365244`, and `v4.7.0`, DOI `10.5281/zenodo.20232911`
-- Release files: [`release/v4.10.0/`](release/v4.10.0/) (PDF, single-file TeX source, SHA256 manifest)
+- Previous version: `v4.10.0`, DOI `10.5281/zenodo.23991357`; earlier `v4.9.0`, DOI `10.5281/zenodo.23534954`; earlier `v4.8.0`, DOI `10.5281/zenodo.23365244`, and `v4.7.0`, DOI `10.5281/zenodo.20232911`
+- Release files: [`release/v4.11.0/`](release/v4.11.0/) (PDF, single-file TeX source, SHA256 manifest)
 - Repository and source history: [Moriarty1982/QuantumSphere-Unfold](https://github.com/Moriarty1982/QuantumSphere-Unfold)
 
-The current public baseline is the Zenodo-published `v4.10.0` release, built from the full-source research line in [`sources/research/`](sources/research/README.md). It continues `v4.9.0` on the 4.10 base: the inherited main body is revised under the rule of layer v4.9.0-r25 (dead ends archived word for word in `parts/v4100-archive.tex` with number and label kept in place, known errors corrected with status notes, open statements marked), the 30 October consolidation adds state/mediator and clock comparisons and OP5 field slices, and the layers v4.9.0-r01 to r86 are appended verbatim in `parts/v490-post-release-layers.tex`. The layers record frame typing, a construction of one generation from the Dixon algebra under named choices, tests of masses and mixing, the OP5 comparison model (closed in r80), and a joint action W1/W2 with the tachyon part as a second reading of the same field; pre-registered tests H14 to H89 are listed in [`notes/research/predictions/`](notes/research/predictions/README.md). The release source in `release/v4.10.0/` is a single file flattened from the modular sources. Guard and residual vectors are unchanged; OP5 is not closed. Repository changes after this release are post-release research; new layers are named `v4.10.0-rNN`.
+The current public baseline, `v4.11.0`, adds a conditional analysis of charged-lepton mass-root overlap, finite-scale poles and feasibility bounds. Its predecessor, `v4.10.0`, was built from the full-source research line in [`sources/research/`](sources/research/README.md). It continues `v4.9.0` on the 4.10 base: the inherited main body is revised under the rule of layer v4.9.0-r25 (dead ends archived word for word in `parts/v4100-archive.tex` with number and label kept in place, known errors corrected with status notes, open statements marked), the 30 October consolidation adds state/mediator and clock comparisons and OP5 field slices, and the layers v4.9.0-r01 to r86 are appended verbatim in `parts/v490-post-release-layers.tex`. The layers record frame typing, a construction of one generation from the Dixon algebra under named choices, tests of masses and mixing, the OP5 comparison model (closed in r80), and a joint action W1/W2 with the tachyon part as a second reading of the same field; pre-registered tests H14 to H89 are listed in [`notes/research/predictions/`](notes/research/predictions/README.md). The release source in `release/v4.10.0/` is a single file flattened from the modular sources. Guard and residual vectors are unchanged; OP5 is not closed. The `v4.10.0-rNN` label identifies rounds started on the v4.10.0 baseline.
 
 ## Scope guard
 

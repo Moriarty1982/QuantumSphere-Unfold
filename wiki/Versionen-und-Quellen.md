@@ -4,7 +4,7 @@ Stand: **2.11.2026**, geprüft gegen Commit [`cf48496c95b6c9ec3f6a3c196df2c8c2c8
 
 | Ebene | Stand | Verwendung |
 |---|---|---|
-| Öffentliche Baseline | v4.10.0, 6.11.2026, DOI 10.5281/zenodo.23991357; Layer bis v4.9.0-r86 | Publizierte Aussagen und Zitation |
+| Öffentliche Baseline | v4.11.0, 10.11.2026, DOI 10.5281/zenodo.24108818 | Publizierte Aussagen und Zitation |
 | Forschung | nach v4.10.0; neue Layer `v4.10.0-rNN` | Nachträgliche Forschung und Korrekturen |
 | Vorherige Veröffentlichung | v4.9.0, DOI 10.5281/zenodo.23534954 | Historischer Vergleich |
 | Ältere Veröffentlichung | v4.8.0, DOI 10.5281/zenodo.23365244 | Historischer Vergleich |
@@ -15,7 +15,8 @@ Stand: **2.11.2026**, geprüft gegen Commit [`cf48496c95b6c9ec3f6a3c196df2c8c2c8
 
 - [README am geprüften Commit](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/cf48496c95b6c9ec3f6a3c196df2c8c2c84e3d0b/README.md): öffentliche Baseline und Scope Guard.
 - [CITATION.cff am geprüften Commit](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/cf48496c95b6c9ec3f6a3c196df2c8c2c84e3d0b/CITATION.cff): Zitiermetadaten.
-- [Zenodo v4.10.0](https://zenodo.org/records/23991357): aktueller veröffentlichter Datensatz (PDF, Quelltext als Einzeldatei, Abbildung, Manifest); [Version DOI](https://doi.org/10.5281/zenodo.23991357). GitHub-Release [v4.10.0](https://github.com/Moriarty1982/QuantumSphere-Unfold/releases/tag/v4.10.0).
+- [Zenodo v4.11.0](https://zenodo.org/records/24108818) ist der aktuelle Datensatz mit Haupt-PDF, Einzelquelltext, Abbildung und SHA256-Manifest.
+- [Zenodo v4.10.0](https://zenodo.org/records/23991357): Vorgängerversion (PDF, Quelltext als Einzeldatei, Abbildung, Manifest); [Version DOI](https://doi.org/10.5281/zenodo.23991357). GitHub-Release [v4.10.0](https://github.com/Moriarty1982/QuantumSphere-Unfold/releases/tag/v4.10.0).
 - [Zenodo v4.9.0](https://zenodo.org/records/23534954): Vorgänger; [Version DOI](https://doi.org/10.5281/zenodo.23534954).
 - **Ablauf eines Zenodo-Releases** (`release/zenodo/README.md`): Entwurf als neue Version reservieren, DOI auf die Titelseite, Payload bauen, hochladen mit `default_preview` = Haupt-PDF (es wird zuerst hochgeladen und vor dem Veröffentlichen geprüft; bei v4.10.0 zeigte Zenodo zunächst die Abbildung als Vorschau), Entwurf prüfen, veröffentlichen, danach Tag und GitHub-Release `vX.Y.Z`.
 - [Concept DOI](https://doi.org/10.5281/zenodo.19210728): versionsübergreifender Projektverweis. Für eine bestimmte Fassung den Version DOI angeben.
