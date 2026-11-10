@@ -1,0 +1,41 @@
+{
+  "title": "Quantum Sphaera Companion: A Structure-First Mathematical Unfolding",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "creators": [
+    {
+      "name": "Brendecke, Marc",
+      "affiliation": "Independent Researcher, Bochum"
+    }
+  ],
+  "description": "<p>Quantum Sphaera Companion v4.11.0 extends the full-source v4.10.0 baseline with a conditional analysis of charged-lepton mass-root readouts. The new section treats phase overlap in a common generation basis, exact poles at a finite intermediate scale, and feasibility bounds for equal-weight readouts on the positive-root arc.</p><p>The lepton masses are inputs to the inverse comparison. The number and phases of the readouts, the intermediate scale, the native generation operator and the coherent transport mechanism remain open. The historical Koide question and the later OP3 shell-persistence question are distinguished. The work retains its local, restricted and effective scope.</p>",
+  "version": "v4.11.0",
+  "language": "eng",
+  "license": "cc-by-4.0",
+  "keywords": [
+    "Quantum Sphaera",
+    "Koide relation",
+    "charged lepton mass ratios",
+    "phase overlap",
+    "finite-gap comparison",
+    "mathematical physics"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Moriarty1982/QuantumSphere-Unfold",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "10.5281/zenodo.19210728",
+      "relation": "isVersionOf",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.23991357",
+      "relation": "isNewVersionOf",
+      "scheme": "doi"
+    }
+  ],
+  "notes": "Local, restricted and effective scope. The new Koide results are conditional comparison and inverse-reconstruction results. No native Koide mechanism, physical mass scale or OP closure is established."
+}
