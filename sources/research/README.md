@@ -1,10 +1,10 @@
 # Full-Source 4.11 Research Candidate
 
-The local v4.11.0 draft starts from GitHub commit `ec9b2b8` and the published v4.10.0 baseline. The first new section integrates the conditional Koide overlap model, the exact finite-gap pole calculation, and the feasibility test for equally weighted readouts. The native generation operator, path selection, and physical readout remain open. The notes below document the inherited source.
+The v4.11.0 release candidate starts from GitHub commit `ec9b2b8` and the published v4.10.0 baseline. Zenodo reserved version DOI 10.5281/zenodo.24108818 in unpublished draft 24108818. The first new section integrates the conditional Koide overlap model, the exact finite-gap pole calculation, and the feasibility test for equally weighted readouts. The native generation operator, path selection, and physical readout remain open. The notes below document the inherited source.
 
 **4.10 base (2026-10-22).** This candidate is the source of the v4.10.0 release (`\workingversion` = `4.10.0`, Version DOI 10.5281/zenodo.23991357). The parts in `parts/v470/` are no longer frozen: the revision of the main body from layer v4.9.0-r25 was applied to them in place. Dead ends are archived word for word in `parts/v4100-archive.tex` (each keeps its number and label at its original place, with a status and a pointer); known errors are corrected with a status note giving the earlier wording; open or reinterpreted statements carry a status note. The frozen state and `v480-source-map.json` refer to the tag `v4.9.0`. See `notes/research/v4_10_0_base/`. Statements below about frozen fragments describe the state up to v4.9.0.
 
-Entry point: `v480-companion.tex` (historical filename retained for existing audits and builds). Its working metadata identifies `4.11.0-draft`. The preceding published versions are v4.10.0 and v4.9.0. The latter was published on 2026-10-21 with Version DOI 10.5281/zenodo.23534954. Its release source in `release/v4.9.0/` is a single file flattened from the full-monolith-derived working line.
+Entry point: `v480-companion.tex` (historical filename retained for existing audits and builds). Its working metadata identifies `4.11.0`. The preceding published versions are v4.10.0 and v4.9.0. The latter was published on 2026-10-21 with Version DOI 10.5281/zenodo.23534954. Its release source in `release/v4.9.0/` is a single file flattened from the full-monolith-derived working line.
 
 ## Origin and Preservation
 
