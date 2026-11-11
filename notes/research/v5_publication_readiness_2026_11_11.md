@@ -53,3 +53,15 @@ einer falschen Aussage, sondern kennzeichnen den offenen Prüfungsumfang.
 
 Es wurden keine OPs geschlossen, keine wissenschaftlichen Guards geändert
 und keine Zenodo-Aktionen ausgeführt.
+
+## Nachtrag: fachliche Selbstprüfung
+
+Die vollständige englische Physikfassung samt Anhang wurde im folgenden
+Arbeitsblock sequentiell selbst geprüft. Bericht und unveränderlicher
+Manuskriptsnapshot: `referee/v5-physics-2026-11-11-pass1/report.md`.
+Kein tragender Fehler wurde festgestellt. Dies ersetzt keine unabhängige
+Begutachtung. Die beiden lokalen Präzisierungsvorschläge und die Grenze
+der Robertson-Quellenauthentifizierung stehen dort; keine Manuskript-
+oder Beweisstatusänderung. Die nächste Vorbereitung betrifft Metadaten
+und Änderungsübersicht; die bisherigen Merge-/Zenodo-Freigaben bleiben
+unverändert erforderlich.

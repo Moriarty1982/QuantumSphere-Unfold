@@ -1,0 +1,1836 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=27mm]{geometry}
+\setlength{\emergencystretch}{2em}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\newtheorem{proposition}{Proposition}[section]
+\title{Graded carriers and physical readouts: conditions for mass and geometric interpretation}
+\author{Marc Brendecke\\\small Independent Researcher, Bochum, Germany}
+\date{Working paper 5.0.0-draft\\\small 11 November 2026; not peer reviewed}
+\begin{document}
+\maketitle
+\begin{abstract}
+We examine the conditions under which a common graded state space can
+support particle and geometric readouts. The Quantum Sphaera construction
+is formulated here as a set of conditional interfaces rather than a
+completed identification with physical fields. For a real orthogonal
+involution, the associated compensator gives an exact projection, but
+does not determine a three-generation mass spectrum. We derive the
+additional equal-norm condition for the Koide root ratio and express it
+as an orthogonality condition in a declared HC representation. Direct
+odd-input and cyclic-equivariant readouts exhibit obstructions, while
+positive quadratic readouts require a restricted state domain. A
+projection of the dynamics supplies a separate autonomy condition for
+observable variables. Together these results isolate the operator,
+metric and state-selection data needed to turn an algebraic framework
+into a physical model. No lepton masses, absolute mass scale or
+gravitational field equations are predicted by the present construction.
+\end{abstract}
+\section{\raggedright Introduction}
+Attempts to describe different physical sectors on a common mathematical
+carrier face a recurring difficulty: a shared state space does not by
+itself specify the observables that distinguish those sectors. The same
+algebra can support different representations, couplings and measurement
+maps. A physical interpretation therefore requires more than a matching
+number of components or a symmetry with the expected name.
+
+The Quantum Sphaera Companion develops a common-carrier proposal using
+biquaternionic and division-algebra structures, an involution and a
+compensating projection \cite{QSC411}. This paper extracts a connected
+question from that broader programme: under what conditions can the
+graded structure be transferred to particle, mass and geometric
+readouts without inserting the desired observables into the transfer?
+The emphasis is on explicit conditions and consistency constraints.
+
+The mass sector makes this distinction particularly sharp. A relation
+among three positive roots can be represented algebraically in many ways,
+but a representation selected after the roots are specified is not a
+mechanism for their values. We use the Koide ratio as a test of this
+interface, derive its missing norm condition, and compare linear and
+quadratic readouts. The same distinction reappears in projected dynamics:
+an equation on the full carrier need not induce an autonomous equation
+for the variables identified as observables.
+
+The scope is consequently conditional. The algebraic projection and
+the stated comparison results are available; the identification of a
+native carrier, its couplings and its physical observables remains to be
+completed. This distinction also governs the particle assignments and
+geometric constructions discussed below.
+\subsection{Observable equivalence and sufficient state variables}
+
+A common carrier is useful only together with an observable equivalence
+relation. Let $\mathcal X$ be an admitted state domain, $\Phi_t$ its
+full evolution, and $\pi:\mathcal X\to\mathcal Y$ a readout.
+Two states are equivalent for this readout when $\pi(x)=\pi(x')$.
+An induced evolution $\phi_t$ on the image exists precisely when
+\begin{equation}
+ \pi(x)=\pi(x')\quad\Longrightarrow\quad
+ \pi(\Phi_t x)=\pi(\Phi_t x')
+\end{equation}
+for all admitted states and times. Necessity follows by applying
+$\phi_t$ to the common initial readout. For sufficiency, define
+$\phi_t(y)=\pi(\Phi_t x)$ using any representative with $\pi(x)=y$;
+the condition makes the definition independent of the representative.
+For a full flow preserving the domain, its composition law descends
+as well. Existence, regularity, and locality of a field flow remain
+separate analytic questions.
+
+This elementary criterion connects two seemingly different issues.
+A compressed field register can omit orientation needed for a Lorentz
+transformation. A projected state can omit an amplitude needed for
+the derivative of its phase. In both cases equivalence classes of
+the original readout are split by the proposed operation. The remedy
+must supply the missing information, restrict the admitted domain,
+or describe a family of possible outputs. It cannot be supplied by
+renaming the original register.
+
+\subsection{Three tests of a proposed physical interface}
+
+We organize the investigation around three questions. First, what
+is represented? This requires a carrier, scalar field, adjoint and
+operator action. The distinction between an involution and an internal
+complex structure is already a necessary test at this level. Second,
+which operation selects the physical states? Closure, positive
+spectral selection and a generation seed are different restrictions.
+Their intersection may have smaller dimension than any one separately.
+Third, which measured quantity is read out? An expectation, a transition
+norm, a matrix eigenvalue and a pole of a dressed propagator need not
+give the same mass law.
+
+The answers can be checked before a detailed phenomenological fit.
+Rank rules out three positive eigenmasses from a one-dimensional
+transition output. Positivity bounds exclude a globally positive
+linear-density realization at the intended root radius. A hidden-lift
+counterexample excludes a universal phase-only evolution for a given
+projection. These are useful negative results because their hypotheses
+identify which part of a model would have to change. They do not
+exclude every representation on the common carrier.
+
+The presentation follows these interfaces rather than the historical
+order of research rounds. After the carrier and its comparison metrics,
+an electromagnetic example explains the assertion and execution
+language. Particle representations are separated from generation
+seeds and mixing. The mass section then follows a transition operator
+through its Gram matrix, a gapped effective comparison, and the positive
+root constraints. The geometric section examines projected evolution,
+action reduction, coframes and finite compatibility. Finally, a zeta
+comparison tests whether arithmetic and uncertainty can supply an
+additional selection operation. Original supporting mass arguments are
+retained in Appendix~A; the full Companion \cite{QSC411} supplies the
+broader research setting and alternative routes.
+\section{\raggedright A graded carrier and its interpretation}
+Let $H$ be a real Hilbert space and let $J:H\to H$ be an orthogonal
+involution. Since $J^{-1}=J=J^*$, the operators
+\begin{equation}
+ C=\frac{I+J}{2},\qquad P_-=\frac{I-J}{2}
+\end{equation}
+are complementary orthogonal projections. Indeed,
+$C^2=(I+2J+J^2)/4=C$, and similarly $P_-^2=P_-$, while
+$CP_-=0$ and $C+P_-=I$. We refer to $C$ as the HC compensator.
+It selects the $J$-even part of a state; $P_-$ selects the odd part.
+
+This grading is the minimal structure needed for the subsequent tests.
+It does not identify either range with a particle species. In the
+Companion, a biquaternionic carrier and extensions involving
+$\mathbb C\otimes\mathbb H\otimes\mathbb O$ motivate proposed
+particle and frame assignments. Division algebras provide a mathematical
+setting for such representation questions \cite{Baez2002}. A positive
+Hilbert metric used in a readout calculation must nevertheless be
+distinguished from a Lorentzian spacetime metric.
+
+The scalar field also matters. An antiunitary involution on a complex
+Hilbert space is generally only real-linear when averaged with the
+identity. Here $J$ is explicitly real orthogonal; when complex amplitudes
+are used, we mean its declared complex-linear extension. No equivalence
+with an inherited antiunitary convention is presumed. Likewise, a change
+between the proposed matter, light and tachyon frames requires an
+explicit map, not merely a relabelling of components.
+\subsection{The algebraic carrier and its two conjugations}
+A concrete carrier is needed before the word ``sector'' acquires a
+mathematical meaning. Write a biquaternion as
+\begin{equation}
+ q=q_0+z_1e_1+z_2e_2+z_3e_3,\qquad q_0,z_k\in\mathbb C,
+ \qquad e_ie_j=-\delta_{ij}+\epsilon_{ijk}e_k.
+\end{equation}
+The scalar imaginary unit commutes with the quaternion units. This is
+different from choosing a quaternion direction as an internal complex
+structure. In particular, a statement formulated with the commuting
+scalar unit cannot automatically be transferred to left multiplication
+by one of the $e_k$. The representation and the relevant adjoint must
+be specified for each transfer.
+
+There are also two distinct conjugations. Define quaternion conjugation
+by $\widetilde q=q_0-\sum_kz_ke_k$, leaving the complex coefficients
+unchanged, and coefficient conjugation by
+$\overline q=\overline{q_0}+\sum_k\overline{z_k}e_k$. Then
+\begin{equation}
+ q\widetilde q=q_0^2+z_1^2+z_2^2+z_3^2,
+\end{equation}
+whereas the positive coefficient norm is
+\begin{equation}
+ \|q\|_E^2=|q_0|^2+|z_1|^2+|z_2|^2+|z_3|^2.
+\end{equation}
+The first expression is a complex quadratic form; the second is a
+positive Hermitian norm. Using the same word ``norm'' for both can
+conceal a change of mathematical problem. A positivity argument about
+principal mass roots uses a positive comparison. It cannot use a
+complex quadratic invariant as though it were that comparison.
+
+One familiar realization sends $e_k$ to $-i\sigma_k$, with the Pauli
+matrices $\sigma_k$. The biquaternion becomes a complex two-by-two
+matrix, and its determinant is $q_0^2+\sum_kz_k^2$. On the Hermitian
+slice $X=tI+\boldsymbol x\cdot\boldsymbol\sigma$ this gives
+\begin{equation}
+ \det X=t^2-|\boldsymbol x|^2,\qquad
+ X\longmapsto AXA^*,\quad A\in SL(2,\mathbb C).
+\end{equation}
+The determinant is preserved. With the $(-,+,+,+)$ spacetime
+convention used in the geometric comparisons, the Lorentz quadratic
+form on this slice is $-\det X$. This conventional sign does not
+turn the coefficient norm into a Lorentz-invariant Hilbert norm.
+For example, $A=\operatorname{diag}(e^{\chi/2},e^{-\chi/2})$
+is a boost representative and is not a unitary matrix when
+$\chi\ne0$. A similarity, a physical observer transformation and
+a unitary change of a positive comparison basis must consequently be
+tracked as different operations.
+
+\subsection{What the sign of a field invariant actually distinguishes}
+An electromagnetic comparison gives a useful, independently interpretable
+instance of the complex vector part. In units with $c=1$, put
+$z=\boldsymbol E+i\boldsymbol B$. Then
+\begin{equation}
+ s=z\cdot z=|\boldsymbol E|^2-|\boldsymbol B|^2
+                 +2i\boldsymbol E\cdot\boldsymbol B.
+\end{equation}
+This identity distinguishes the two real electromagnetic invariants.
+Only on a real-$s$ slice, for example
+$\boldsymbol E\cdot\boldsymbol B=0$, is a classification by
+$s>0$, $s<0$ and $s=0$ directly meaningful. The first two cases are
+electric- and magnetic-dominated respectively; the last is a null
+invariant when the field is nonzero. Extending a sign label to a
+general complex $s$ would require another declared rule.
+
+These algebraic categories are useful for the Companion's proposed
+matter, tachyon and photon readouts, but their physical identification
+requires dynamics and observables. A null electromagnetic invariant,
+for instance, does not by itself specify a quantum photon state.
+Nor does a common carrier identify different invariant strata as the
+same physical state. The distinction is operational: one must specify
+which preparations, transformations and measurements are being compared.
+
+The HC construction is formulated on a positive Hilbert realization
+precisely so that its projection identities can be tested independently
+of these interpretations. In such a realization every $f$ decomposes
+uniquely as
+\begin{equation}
+ f=f_++f_-,\qquad f_+=Cf,\quad f_-=P_-f,\qquad
+ \|f\|^2=\|f_+\|^2+\|f_-\|^2.
+\end{equation}
+For a normalized state its involution expectation is
+\begin{equation}
+ \langle f,Jf\rangle=\|f_+\|^2-\|f_-\|^2.
+\end{equation}
+Zero expectation means equal weights in these two orthogonal sectors.
+It is not a fixed-point condition: a $J$-fixed unit vector has expectation
+one. This difference is decisive when a symmetry axis or a critical
+line is proposed as an explanation of mass-root balance.
+
+\subsection{Realification and the meaning of an adjoint}
+Suppose instead that an inherited $J$ is antiunitary on a complex
+Hilbert space. It obeys $J(if)=-iJf$, so $(I+J)/2$ is generally not
+complex-linear. Regard the same vectors as a real Hilbert space with
+inner product $\operatorname{Re}\langle f,g\rangle$. An antiunitary
+involution then becomes an orthogonal real-linear involution, and the
+projection calculation is valid on that real space. What changes is
+the allowed class of operators and subspaces.
+
+One can also complexify a real orthogonal realization and extend its
+involution complex-linearly. This produces a different comparison
+construction, in which multiplication by $i$ commutes with $J$.
+These alternatives cannot be combined in an argument by keeping only
+the symbol $J$. Later formulas such as $-iJA$ require the stated
+complex-linear extension and a selfadjoint anticommuting $A$ on the
+same positive Hilbert space. They are not formulas for an unspecified
+antiunitary operation.
+
+The same discipline applies to tensors. A spacetime metric contracts
+spacetime indices; an internal Hermitian metric compares internal
+amplitudes; a generation metric compares generation coordinates.
+Their signatures, dimensions and transformation rules differ. Even
+when their numerical matrices happen to coincide in one chart, an
+identification must explain how the corresponding spaces and adjoints
+are transported. The QAM context records discussed next serve to make
+these choices visible at the point where they enter an inference.
+
+\subsection{The physical interface as an additional piece of data}
+A physical readout consists of a domain of admitted states together
+with a map to observables. For the mass branch this includes a
+generation assignment, positivity of principal roots and a dimensional
+normalization. For a geometric branch it includes an invertible
+coframe or a metric, its differentiation rules and its coupling to
+the equations of motion. These requirements are stronger than the
+existence of a vector-space isomorphism.
+
+The common-carrier proposal can therefore be investigated in two
+directions. Forward construction starts from a represented carrier
+and computes its readout. Backward analysis starts from a required
+property of the observable and asks which carrier operations could
+produce it. The mass-root conditions and the projected-autonomy test
+in this paper are backward constraints of this second kind. They do
+not discard the common-carrier hypothesis; they specify the extra
+mathematical work needed to give it physical content.
+\section{\raggedright Statement language and reproducibility}
+The Companion uses QAM as an object and assertion language, MML for
+typed instructions and MMA for their execution semantics. For the
+physical arguments in this paper, their essential role is to keep an
+assertion attached to its domain, assumptions, calculation and remaining
+interpretation requirements. A guard denotes a condition still needed
+for a stated inference. A finite calculation and a general proof have
+different scopes, even when both concern the same formula.
+
+The projection identity provides a complete elementary example. Its
+inputs are a Hilbert space, $J^2=I$, $J^*=J$ and the definition of $C$;
+the calculation in the preceding section proves $C^2=C$. An exact
+finite instance is
+\begin{equation}
+ P=\frac12\begin{pmatrix}1&1\\1&1\end{pmatrix},\quad
+ M=\frac14\begin{pmatrix}5&3\\3&5\end{pmatrix},\quad
+ N=\begin{pmatrix}1&0\\0&2\end{pmatrix}.
+\end{equation}
+Direct multiplication gives $P^2=P$, $[M,P]=0$, and
+\begin{equation}
+ [N,P]=\frac12\begin{pmatrix}0&-1\\1&0\end{pmatrix}\ne0.
+\end{equation}
+An exact rational check therefore confirms the projection and one
+commuting transport while rejecting the other transport as a commuting
+example. This rejection is a control result, not a failure of the
+projection theorem. None of these matrix equations identifies a native
+field, a physical transport or a mass operator.
+
+Ordinary mathematical notation is retained throughout the main text.
+The accompanying assertion records specify precise source versions,
+prerequisites and finite checks; they allow the chain of reasoning to
+be inspected without treating content identity as proof. The original
+mass-readout arguments are collected in Appendix~A, while the separate
+audit records retain the detailed provenance and unresolved obligations.
+\subsection{An assertion is more than a displayed formula}
+Consider the familiar expression $C^2=C$. The formula is ambiguous
+until the domain of $C$, the scalar field, the composition operation
+and the assumptions on its defining involution are fixed. It also
+does not state whether the assertion is adopted, derived generally,
+or checked only for a particular matrix. A physical application adds
+the question of what is measured by the range of $C$.
+
+For exposition, write an assertion record as
+\begin{equation}
+ r=(\varphi,\mathcal F,s,W,G),
+\end{equation}
+where $\varphi$ is the statement, $\mathcal F$ its declared context,
+$s$ its evidence status, $W$ its sources and premises, and $G$ its
+remaining guards. This tuple summarizes the record's role here; it
+is not an additional literal MML instruction. Two records with the
+same displayed formula can describe different assertions when their
+contexts or premises differ.
+
+QAM is the project's language for such objects and assertions. MML
+specifies operations on the declared objects. MMA interprets the
+supported instructions and returns execution information. The
+implementation used in the examples is a finite interface, not an
+unrestricted interpreter for every symbolic statement in the Companion.
+Consequently an indexed formula is not automatically executable, and
+a successful execution is not automatically a proof of its physical
+interpretation.
+
+An object can carry explicit index-role data. The implemented interface
+records an index label, its side, variance, role and declared space.
+The side and role must be a permitted pair in that interface. A
+contraction must also specify which spaces are paired. For instance,
+two upper structural indices do not define a scalar product until
+a compatible comparison tensor is supplied. Merely printing repeated
+labels cannot replace that tensor. This is especially relevant when
+an internal comparison is proposed as a spacetime contraction.
+
+\subsection{Derivations, combinations and frame changes}
+Three simple operations illustrate the distinction between manipulating
+records and proving their contents. A derivation step attaches a
+conclusion to its premise record. A join combines records in a common
+context. A conversion transports a record through an explicitly
+declared map. In the independent provenance checker these appear as
+the constructors \texttt{step}, \texttt{join} and \texttt{conv}.
+
+The checker uses an ordered status vocabulary: open, reading,
+conditional, computed and proved. This is a protocol ordering used
+to prohibit unsupported promotion. It is not a universal ranking of
+scientific confidence. In particular, a conditional general theorem
+and an exact computation of one example answer different questions.
+A valid record tree cannot obtain a stronger status simply by
+combining or converting its premises. Its witness inputs remain
+tracked, and a frame conversion must name a declared comparison map.
+
+These structural properties have formal record-level statements in
+the project's Lean implementation. Their scope is important. A
+theorem that well-formed records do not lose witness identifiers
+does not prove that a witness describes the correct physical system.
+Similarly, a declared map can be type-correct before its metric or
+observable-preservation properties have been proved. The semantic
+conditions must appear as their own premises or guards.
+
+In the LaTeX interface, a frame declaration introduces an identifier,
+a map declaration specifies its source and target, and a formula
+declaration supplies a formula, context and status. The actual macro
+names include \texttt{qamframe}, \texttt{qammap},
+\texttt{qamformula} and \texttt{qamphysconvert}. These are document
+commands rather than assertions that a physical conversion exists.
+They allow the same ordinary equation to be displayed with its
+explicit profile when taken outside its local context. A laboratory
+formula and a formula in a boosted-observer profile must therefore
+retain the information identifying their different preparation and
+comparison data.
+
+\subsection{A complete physical example: information lost by a readout}
+Take classical electromagnetic fields in units $c=1$ and form the
+three-by-two matrix $F=[\boldsymbol E\mid\boldsymbol B]$. On nonzero
+fields define the normalized Gram readout
+\begin{equation}
+ \rho(F)=\frac{F^{\mathsf T}F}{\operatorname{Tr}(F^{\mathsf T}F)}.
+\end{equation}
+This positive two-by-two matrix records relative norms and the scalar
+product of the two vectors. It discards their common scale and their
+orientation in physical space. These omissions matter under an
+observer transformation whose direction is specified in the laboratory.
+
+For a boost of velocity $v$ in the positive $z$ direction, consider
+the pair of preparations
+\begin{equation}
+ \boldsymbol E=2e_x,\qquad \boldsymbol B=b e_y,\quad b=\pm1.
+\end{equation}
+Both have the same input register $\rho=\operatorname{diag}(4/5,1/5)$.
+The ordinary field transformation gives
+\begin{equation}
+ \boldsymbol E'_b=\gamma(2-vb)e_x,\qquad
+ \boldsymbol B'_b=\gamma(b-2v)e_y,
+ \quad \gamma=(1-v^2)^{-1/2}.
+\end{equation}
+At $v=1/4$, the common factor cancels from the normalized Gram
+readout and the two outputs are
+\begin{equation}
+ \rho(F'_{+1})=\operatorname{diag}(49,4)/53,\qquad
+ \rho(F'_{-1})=\operatorname{diag}(9,4)/13.
+\end{equation}
+Thus there is no single-valued boosted readout depending only on
+the original normalized register for this family. A map on that
+register would need to assign two different outputs to one input.
+This is an elementary failure of information sufficiency, not a
+failure of the Lorentz transformation on the full fields.
+
+The example explains why a frame label alone cannot repair a reduced
+description. One must either retain additional preparation data or
+replace a single predicted value by the set of outputs compatible
+with the data actually available. This same distinction will later
+appear in the hidden-lift term of projected dynamics.
+
+\subsection{An exact interval prediction from an additional measurement}
+Allow the laboratory preparation to vary as
+\begin{equation}
+ \boldsymbol E=2e_x,\qquad
+ \boldsymbol B=t e_y+u e_z,\qquad t^2+u^2=1.
+\end{equation}
+All these fields again have the same input Gram register. Suppose
+an extra measurement constrains the signed laboratory component
+$t=\boldsymbol B\cdot e_y$ to $[a,b]\subseteq[-1,1]$. At the
+same boost speed $v=1/4$,
+\begin{equation}
+ \boldsymbol E'=\gamma(2-t/4)e_x,\qquad
+ \boldsymbol B'=\gamma(t-1/2)e_y+u e_z.
+\end{equation}
+The vectors remain orthogonal. Divide their squared norms by
+$\gamma^2$ and set $A(t)=(2-t/4)^2$. Then
+\begin{equation}
+ \frac{|\boldsymbol B'|^2}{\gamma^2}
+ =(t-1/2)^2+(15/16)(1-t^2)=A(t)-45/16.
+\end{equation}
+Consequently the first diagonal entry is
+\begin{equation}
+ p(t)=\frac{A(t)}{2A(t)-45/16}
+     =\frac{(8-t)^2}{2(8-t)^2-45}.
+\end{equation}
+The denominator is strictly positive on the admitted interval.
+Moreover $A$ decreases with $t$ and
+$dp/dA=-(45/16)/(2A-45/16)^2<0$, so $p$ increases. The exact
+image of the measurement interval is therefore
+\begin{equation}
+ \rho'\in\{\operatorname{diag}(p,1-p):p(a)\leq p\leq p(b)\}.
+\end{equation}
+Every intermediate value is attained by some preparation in the
+specified family. This is a deterministic interval statement; no
+probability distribution on $t$ has been assumed.
+
+For $[a,b]=[-1/4,1/4]$ the exact result is
+\begin{equation}
+ p\in[121/162,\ 961/1202]
+      \subset[9/13,\ 49/53].
+\end{equation}
+The wider interval is the output when only $t\in[-1,1]$ is known.
+The additional measurement has therefore narrowed the prediction
+without reconstructing an arbitrary orientation. The numbers in
+this example are a controlled classical preparation, not fitted
+lepton masses or an empirical confirmation of the common-carrier
+hypothesis.
+
+\subsection{From the assertion to the MML request and the MMA receipt}
+The QAM record for this example declares a map
+$\mathrm{Lab}\to\mathrm{Boosted}$ and two conditional assertions:
+the preparation, and the interval rule derived from it. In the
+implemented request the instruction is \texttt{READOUT}. Its
+arguments name the recipe \texttt{em.gram-boost-range}, the preparation
+\texttt{E2x-B-unit-yz}, source frame \texttt{Lab}, target frame
+\texttt{Boosted}, boost \texttt{z:1/4}, and endpoints
+\texttt{-1/4} and \texttt{1/4}. The endpoints are rational strings,
+so the adapter can evaluate them without a floating rounding step.
+
+The stored receipt for request \texttt{gram\_boost\_interval} returns
+the exact target interval $[121/162,961/1202]$. Its recorded premise
+chain links the interval rule to the stated laboratory preparation.
+This receipt was retrieved by its content hash and checked through
+the read-only evidence interface for this edition. The complete
+identifier and source fingerprints belong in the accompanying evidence
+files, where a reader can distinguish this saved calculation from
+a newly executed or replayed one.
+
+Its execution status is \texttt{continue}, with no outstanding
+adapter obligations and no missing recorded premises. The premises
+themselves remain conditional. In particular, the same receipt records
+that closure is not proved and that no general mathematical relation
+is certified by the interpreter. The analytic derivation above supplies
+the general interval argument; the receipt verifies the specified
+instance and its recorded execution context.
+
+The other execution outcomes have equally limited meanings.
+\texttt{guard} identifies an unmet prerequisite for the requested
+operation, whereas \texttt{reject} identifies a request that cannot
+be accepted under the interpreter's contract. These outcomes are not
+statistical likelihoods or statements about the truth of an entire
+physical theory. An empty list of additional request guards does not
+erase the assumptions in the preparation or the rule.
+
+\subsection{What is preserved when the document is regenerated}
+The document store retains immutable assertion versions, source
+identities and ordered selections. A reader edition can move an
+original proof to an appendix while keeping its exact source
+association. A change of prose order does not create a new inference,
+and a content hash does not settle whether an imported theorem heading
+is justified. The expanded physical argument must continue to state
+its mathematical assumptions in the body, rather than relying on a
+reader to discover them in an audit log.
+
+This division of work is useful in a multi-branch programme. The main
+paper explains a restricted set of connected results. Its evidence
+package supplies the reproducible records for those results. The long
+Companion retains alternative routes and their history, including
+failed or qualified claims. A future change to a preparation or a
+comparison tensor must be traced through dependent results before the
+corresponding physical conclusion can be reused.
+\section{\raggedright Particle and generation assignments}
+The algebraic carrier suggests several representation-theoretic
+ingredients: unit quaternions provide an $SU(2)$ action, complex scalars
+provide phase transformations, and the octonionic setting motivates
+colour representations. These ingredients are useful starting points,
+but they do not uniquely fix the physical gauge theory. In particular,
+a common complex phase is not by itself the electromagnetic charge
+operator or a derivation of hypercharge.
+
+The distinction between colour and generation is equally important.
+A three-dimensional subspace carrying a colour action cannot be
+identified with three generations merely by counting its basis vectors.
+The Companion's inherited slot assignments require additional choices
+of embeddings, charge operators and the relation between internal
+representations and physical states. We therefore retain the gauge and
+generation discussion as a conditional assignment problem, not as a
+derivation of the complete Standard Model.
+
+A more explicit comparison construction starts from a seed isometry
+$T_0:\mathbb C^3\to\mathcal K$ and an orthogonal closure projector
+$P_c$ on a declared common carrier. If $T_0^*P_cT_0$ is positive
+definite, then
+\begin{equation}
+ S=P_cT_0(T_0^*P_cT_0)^{-1/2},\qquad S^*S=I_3.
+\end{equation}
+This constructs three orthonormal closed states under its hypotheses.
+It does not determine the seed embedding or explain why those states
+are lepton generations. We distinguish $P_c$ from the HC projector $C$:
+closure within a selected space and even/odd HC grading are separate
+structures. This distinction becomes necessary when a coupling is
+used to define mass readout.
+\subsection{What a representation construction must specify}
+The algebraic question is not whether symbols resembling the three
+gauge factors can be placed in a diagram. It is which operators act
+on which states, how the actions commute, and which observables are
+assigned to their invariant subspaces. A physical gauge interpretation
+also requires local transformation laws, connections and the appropriate
+matter representations. The compact groups encountered in a carrier
+are only part of these data.
+
+For the quaternion factor, write the Hermitian generators as
+$T_k=\sigma_k/2$. The Pauli multiplication law gives
+\begin{equation}
+ [T_j,T_k]=i\epsilon_{jkl}T_l.
+\end{equation}
+This exhibits the Lie algebra of the unit-quaternion $SU(2)$ action.
+It does not decide whether a particular subspace represents a weak
+doublet, a spatial spinor or another two-component system. That
+decision depends on the remaining representation and coupling data.
+Likewise the commuting scalar phase $e^{i\theta}$ acts uniformly on
+the carrier until a nontrivial charge operator is specified.
+
+The octonionic ingredient is equally sensitive to the chosen complex
+structure. Fix an imaginary unit $e_7$ and let $I_7=L_{e_7}$ denote
+left multiplication on the real octonion space. Here $I_7^2=-I$,
+so it is a complex structure, not the involution $J$ used for the HC
+grading. Relative to it, the real eight-dimensional space can be
+read as a complex four-dimensional space. The familiar singlet/triplet
+organization associated with the stabilizer of $e_7$ motivates the
+colour comparison used in the Companion. All identifications in this
+paragraph refer to that selected internal complex structure.
+
+On the complexification, the corresponding complex-linear projections
+are
+\begin{equation}
+ \Pi_\pm=\frac{I\mp iI_7}{2},\qquad
+ \Pi_\pm I_7=\pm i\Pi_\pm.
+\end{equation}
+Complex coefficient conjugation exchanges these projections. They
+must not be substituted for $C$ or for a closure projector without
+a map that identifies the relevant domains and meanings. The same
+letter ``projector'' can otherwise hide three different decompositions:
+internal complex structure, HC parity and physical closure.
+
+\subsection{A conditional ladder construction and its exact counting}
+The charge construction retained in the Companion can be separated
+into an algebraic hypothesis and the consequences that follow from it.
+In its specified octonion multiplication convention, introduce
+\begin{equation}
+ \alpha_a=\tfrac12(L_{e_a}+iL_{e_7e_a}),\quad a=4,5,6,
+ \qquad N=\sum_{a=4}^6\alpha_a^*\alpha_a,
+ \qquad Q_{\rm ch}=N/3.
+\end{equation}
+The represented Clifford multiplication and adjoint must give the
+canonical anticommutation relations
+\begin{equation}
+ \alpha_a\alpha_b+\alpha_b\alpha_a=0,\qquad
+ \alpha_a\alpha_b^*+\alpha_b^*\alpha_a=\delta_{ab}I.
+\end{equation}
+Once these relations and a cyclic vacuum annihilated by the three
+$\alpha_a$ are supplied, the occupation counting is elementary.
+Each creation operator can occur at most once, because its square
+vanishes. The states with $k$ occupied modes therefore have dimension
+$\binom3k$, and $N$ has eigenvalue $k$ on that subspace. The charge
+comparison consequently has the spectrum
+\begin{equation}
+ \begin{array}{c|rrrr}
+ k&0&1&2&3\\\hline
+ \text{multiplicity}&1&3&3&1\\
+ Q_{\rm ch}&0&1/3&2/3&1
+ \end{array}
+\end{equation}
+The total dimension is eight, the dimension of the three-mode fermionic
+Fock representation. These multiplicities are consequences of the
+chosen ladder algebra. They do not establish three lepton families.
+
+An internal $SU(3)$ action that rotates the creation operators and
+preserves the vacuum acts on the one-occupation space as a triplet,
+and on the two-occupation space as its conjugate, since these are
+the first and second exterior powers of a three-dimensional complex
+space. Vacuum and full occupation are singlets. This gives a precise
+representation question: is the represented colour action on the
+proposed octonionic carrier the action required by these operators?
+It must be checked with the chosen multiplication and adjoint; the
+counting table alone is not that check.
+
+The Companion's historical calculations motivate this compatibility,
+but the current paper does not turn a preserved numerical calculation
+into a new formal theorem. Its physical use still needs the embedding
+of particles, their chirality and the electroweak charge assignments.
+In particular a number operator with the displayed eigenvalues does
+not, by itself, derive hypercharge or the full weak representation.
+
+This decomposition also explains a correction to the literal slot
+dictionary. With the inner complex structure, vectors such as
+$e_4,e_5,e_6$ can form a complex triplet basis only because their
+$I_7$-images supply the corresponding real partners. Counting the
+images as another independent physical triplet double-counts the
+same complex degrees of freedom. Changing to the commuting outer
+complex unit changes the decomposition into charge eigenvectors.
+State labels must follow that change; an unqualified equality of
+charges across the proposed frames is not justified.
+
+\subsection{The independent generation space}
+Three colours within one representation and three generations of a
+given particle are different multiplicities. If the colour action is
+nontrivial on a three-dimensional subspace, that action does not
+automatically act as a generation permutation. A generation assignment
+needs a second declared structure and its relation to the carrier.
+The closure-seed construction supplies a conditional way to express
+that requirement without identifying raw octonion coordinates with
+mass eigenstates.
+
+Let $T_0:\mathbb C^3\to\mathcal K$ be an isometric seed embedding,
+and let $P_c$ be an orthogonal projector. Define
+$G_0=T_0^*P_cT_0$. If $G_0>0$, then the states in
+\begin{equation}
+ S=P_cT_0G_0^{-1/2}
+\end{equation}
+are closed and orthonormal:
+\begin{equation}
+ P_cS=S,\qquad
+ S^*S=G_0^{-1/2}T_0^*P_c^2T_0G_0^{-1/2}=I_3.
+\end{equation}
+If $G_0$ has rank below three, projection has removed an independent
+seed direction and cannot produce three independent states by this
+formula. If $G_0$ is not diagonal, normalization already mixes the
+original seed slots. Thus even a successful construction does not
+identify each initial slot separately as a physical mass eigenstate.
+
+Suppose also that $[P_c,J]=0$ and $JT_0=-T_0$. The same calculation
+gives $JS=-S$. This realizes three closed odd inputs. A nonzero
+operator restricted to this odd space preserves oddness and commutes
+with the restricted $J=-I$. It cannot also anticommute with $J$.
+An HC-odd coupling must connect opposite parity sectors; an operator
+that merely has odd outputs is a different object.
+
+The distinction supplies a useful diagnostic before computing any
+spectrum. A proposed Dirac or mass coupling should specify whether
+it acts within a sector, changes HC grading, changes closure sector,
+or combines these operations. Its matrix blocks and domains determine
+the answer. Calling the operator ``odd'' or giving it a familiar
+letter does not determine which of these statements is intended.
+
+\subsection{A represented transition and the choice of mass basis}
+Take a bounded dimensionless comparison pacer $\widetilde R$ on the
+same carrier and define
+\begin{equation}
+ D=(I-P_c)\widetilde R P_c,\qquad B=DS,\qquad Q=B^*B.
+\end{equation}
+Then $Q\geq0$. If a mass law $M_{\rm mass}=\kappa Q$ is independently
+adopted, its candidate eigenmasses are $\kappa q_i$, where $q_i$
+are the eigenvalues of $Q$. A fixed-slot readout instead uses
+$\kappa Q_{ii}=\kappa\|B\varepsilon_i\|^2$. These prescriptions
+need not coincide.
+
+For example, with $\boldsymbol1=(1,1,1)^{\mathsf T}$, let
+\begin{equation}
+ Q=\tfrac13\boldsymbol1\boldsymbol1^*.
+\end{equation}
+Its three diagonal entries equal $1/3$, but its spectrum is $(1,0,0)$.
+The fixed-slot mass-root ratio would be $1/3$, whereas the spectral
+ratio would be $1$. These are different observables of one positive
+matrix. The example excludes the inference from equal diagonal
+couplings to degenerate physical eigenmasses.
+
+There is also a rank requirement. Since
+$\langle v,Qv\rangle=\|Bv\|^2$, the kernels of $Q$ and $B$
+coincide, and
+\begin{equation}
+ \operatorname{rank}Q=\operatorname{rank}B.
+\end{equation}
+Three strictly positive candidate masses require three independent
+transition outputs. A single scalar output channel has rank at most
+one, regardless of how many input labels it is given. An operator-valued
+channel may have higher dimension, but that dimension must be represented
+rather than inferred from the name of a probe channel.
+
+\subsection{What mixing angles would require}
+Mixing is a relative-basis observable. To make the requirement explicit,
+consider two Hermitian generation comparisons $Q_1,Q_2$ with specified
+physical meanings. Let $V_1,V_2$ diagonalize them in the same generation
+space. Their relative unitary matrix is
+\begin{equation}
+ U_{12}=V_1^*V_2.
+\end{equation}
+Changing the common generation coordinates by $F$ replaces the two
+diagonalizers by $FV_1,FV_2$ and leaves $U_{12}$ unchanged. Rephasing,
+ordering and eigenvalue degeneracies require their usual separate
+conventions before individual parameters can be interpreted.
+
+This construction identifies the data a mixing prediction would need:
+two independently represented operators, their common kinetic metric,
+their assignment to physical species, and a rule fixing their relative
+eigenspaces. A common cyclic action or the dimension three does not
+provide those data. In a degenerate eigenspace the basis is free, so
+apparent mixing angles obtained from an arbitrary diagonalizer are
+not predictions. The mass-readout analysis below therefore treats
+the spectrum, its physical scale and its generation basis as distinct
+questions, rather than allowing one successful matrix pattern to
+stand in for all three.
+\section{\raggedright Mass readout and consistency constraints}
+\paragraph{A necessary norm relation.}
+Let $x_i=\sqrt{m_i}\geq0$, with $x\ne0$, and define
+\begin{equation}
+ K=\frac{\sum_i x_i^2}{(\sum_i x_i)^2},\qquad
+ A=\frac{x_0+x_1+x_2}{3},\qquad x=A(1,1,1)+d.
+\end{equation}
+Since $\sum_i d_i=0$, the constant part and $d$ are orthogonal, so
+\begin{equation}
+ K=\frac13+\frac{\|d\|^2}{9A^2},\qquad
+ K=\frac23\ \Longleftrightarrow\ \|d\|^2=3A^2.
+\end{equation}
+Thus the Koide value requires equality of the symmetric and traceless
+squared norms. Cyclic symmetry preserves these norms separately and
+does not fix their ratio. For example, $x=(1,2,3)$ gives $K=7/18$,
+while equal roots give $K=1/3$.
+
+\paragraph{A conditional HC representation.}
+On Euclidean three-root space set $e=(1,1,1)/\sqrt3$ and let $J_m$
+be an orthogonal involution. For $C_m=(I+J_m)/2$, suppose
+$x=\alpha C_me$ is nonzero and componentwise nonnegative, with
+$\alpha>0$. Writing $h=\langle e,J_me\rangle$ gives
+\begin{equation}
+ \|C_me\|^2=\frac{1+h}{2},\qquad
+ K=\frac{2}{3(1+h)}.
+\end{equation}
+Consequently $h=0$ is the additional condition for Koide. The projector
+axioms permit $J_m=I$, for which $h=1$ and $K=1/3$; they do not select
+the desired value. Choosing $J_m$ after specifying the target roots
+cannot supply the missing physical selection rule.
+
+An explicit route from the original carrier to this representation
+would require a bounded coisometry $B:H\to\mathbb R^3$, $BB^*=I_3$,
+whose kernel is $J$-invariant. Then $J_m=BJB^*$ is an orthogonal
+involution and $BC=C_mB$. If an independently supplied seed satisfies
+$Bf_0=e$ and the physical root law is $x=\alpha BCf_0$, the criterion
+becomes
+\begin{equation}
+ \langle B^*e,JB^*e\rangle=0.
+\end{equation}
+Neither the name of a readout nor the number of its components supplies
+$B$, its metric control, this seed law or the orthogonality selection.
+Moreover, a purely odd input obeys $Cf=0$ and cannot yield nonzero roots
+through this direct compensated linear route.
+
+\paragraph{Positive nonlinear readout is a separate requirement.}
+For two complex amplitudes $\chi=(u,v)$ define
+$X_0=|u|^2+|v|^2$, $X_1=|u|^2-|v|^2$,
+$X_2=2\operatorname{Re}(\bar uv)$ and
+$X_3=2\operatorname{Im}(\bar uv)$. Then
+$X_0^2=X_1^2+X_2^2+X_3^2$. With the three-cycle $U$, an illustrative
+Hermitian root operator is
+\begin{equation}
+ L_\eta=X_0\frac{I_3}{\sqrt3}
+ +\eta X_1\frac{U+U^*}{\sqrt6}
+ +\eta X_2\frac{i(U-U^*)}{\sqrt6},\qquad \eta\geq0.
+\end{equation}
+Only where $L_\eta\geq0$ may its eigenvalues be read as principal
+roots. There
+\begin{equation}
+ K=\frac{1+\eta^2[1-(X_3/X_0)^2]}3.
+\end{equation}
+Positivity on every input requires $\eta\leq1/\sqrt2$ and gives
+$K\leq1/2$. The isometric coefficient $\eta=1$ can reach $2/3$
+on restricted positive phase chambers, but the preparation and
+preservation of such a chamber is additional physical information.
+Squaring a signed $L_\eta$ does not remove this issue: its physical
+principal root becomes $|L_\eta|$, changing the root sum.
+
+The recent HC-balance comparison illustrates the transfer problem
+more directly. If the two-mode grading is $J=\operatorname{diag}(1,-1)$,
+the balanced state $(1,i)/\sqrt2$ gives $X_1=X_2=0$ and hence $K=1/3$
+for this readout. More generally, an antipodal pair of root operators
+$cI_3\pm D$, with $c>0$ and $\operatorname{Tr}D=0$, cannot both
+be positive Koide readouts. Both positive implies eigenvalues of $D$
+in $[-c,c]$ and $\operatorname{Tr}D^2\leq2c^2$, so both ratios
+are at most $5/9$. This is a restriction on this isotropic readout
+pair, not on arbitrary mass mechanisms. It shows why state balance
+and the positive three-generation transfer must be derived together.
+\subsection{Why a transition norm is a new readout law}
+For a closed seed $P_c\psi=\psi$, the closure commutator satisfies
+\begin{equation}
+ [\widetilde R,P_c]\psi=(I-P_c)\widetilde R\psi=D\psi.
+\end{equation}
+The right-hand side lies in the orthogonal complementary space. Hence
+$\langle\psi,[\widetilde R,P_c]\psi\rangle=0$, even if its
+norm is nonzero. Replacing a commutator expectation by
+$\|D\psi\|^2$ therefore changes the observable. It is a legitimate
+candidate only when that change is stated and physically justified.
+
+The positive matrix $Q=S^*D^*DS$ measures a tendency to leave the
+selected closure space under the supplied operator. It does not
+assert that an evolving physical state actually leaves that space.
+The operator might be a diagnostic rather than the time generator.
+The physical mass law and the preservation of the admitted state
+domain must be supplied independently.
+
+The distinction between closure and HC parity gives another necessary
+test. Under $[P_c,J]=0$, define
+\begin{equation}
+ R_o=\tfrac12(\widetilde R-J\widetilde RJ),\qquad
+ D_o=\tfrac12(D-JDJ)=(I-P_c)R_oP_c.
+\end{equation}
+Only $D_o$ changes HC grading. A pacer commuting with $J$ has
+$R_o=0$ and cannot supply this channel, even if it has nonzero
+closure defect. A selfadjoint comparison coupling can be formed as
+$A_o=D_o+D_o^*$, but forming it is an additional operation; its
+appearance in the native equations is not established by its definition.
+
+\subsection{Closure penalties do not determine the missing channel}
+Let $M$ be a bounded represented matrix and split the carrier into
+the range and kernel of $P_c$. Write
+\begin{equation}
+ M=\begin{pmatrix}A&F\\G&H\end{pmatrix},\quad
+ K_c=[M,P_c]=\begin{pmatrix}0&-F\\G&0\end{pmatrix},\quad
+ E_c=\begin{pmatrix}0&F\\G&0\end{pmatrix}.
+\end{equation}
+Direct block multiplication gives
+\begin{equation}
+ K_c^*K_c=E_c^*E_c=
+ \begin{pmatrix}G^*G&0\\0&F^*F\end{pmatrix}.
+\end{equation}
+Thus a minimal positive penalty
+$H_c=\rho K_c^*K_c+\sigma E_c^*E_c$ is block diagonal and
+commutes with $P_c$. Its compression can measure the norm of a
+transition generated by $M$, but the penalty itself has no off-diagonal
+closure channel. Positivity of the penalty cannot replace the missing
+represented pacer block.
+
+If the pacer were a norm limit of polynomials in an exactly closed
+$M,M^*$, then it would commute with $P_c$ as well and its transition
+would vanish. Conversely, exact closure of $M$ says nothing about
+an independently specified pacer. One needs a bridge between those
+operators before transferring a closure statement from one to the other.
+
+There is a particularly sharp freedom result even when the pacer is
+unitary. Given any positive contraction $0\leq Q\leq I_3$, define
+\begin{equation}
+ R_Q=\begin{pmatrix}\sqrt{I_3-Q}&-\sqrt Q\\
+                         \sqrt Q&\sqrt{I_3-Q}\end{pmatrix},\qquad
+ P_c=\operatorname{diag}(I_3,0).
+\end{equation}
+The square roots commute because both are functions of $Q$.
+Block multiplication gives $R_Q^*R_Q=I_6$, and the transition from
+the first three coordinates to the complement has Gram matrix $Q$.
+Therefore unitarity, positive readout and the dimension three leave
+every positive contraction spectrum available. These assumptions
+do not select a hierarchy or the Koide radius.
+
+\subsection{When a Gram law follows from a gapped block}
+A possible physical route can be expressed more concretely at a
+frozen background. Assume a canonically normalized Hermitian mass
+operator on a retained three-dimensional space and its complement:
+\begin{equation}
+ \Omega_{\rm tr}=\begin{pmatrix}A&V^*\\V&H_\perp\end{pmatrix},
+ \qquad A=A^*,\quad H_\perp=H_\perp^*\geq\Delta I,
+ \quad \Delta>0.
+\end{equation}
+For an eigenvalue $|\lambda|<\Delta$, solve the lower equation to obtain
+\begin{equation}
+ y=-(H_\perp-\lambda I)^{-1}Vx,
+\end{equation}
+and substitute into the upper equation:
+\begin{equation}
+ [A-V^*(H_\perp-\lambda I)^{-1}V]x=\lambda x.
+\end{equation}
+This is an energy-dependent Schur complement. The resolvent identity
+controls the error made by replacing it by its static value:
+\begin{equation}
+ \|A_{\rm eff}(\lambda)-A_{\rm eff}(0)\|
+ \leq\frac{\|V\|^2|\lambda|}{\Delta(\Delta-|\lambda|)}.
+\end{equation}
+The bound uses the two inverse norms
+$\|(H_\perp-\lambda I)^{-1}\|\leq(\Delta-|\lambda|)^{-1}$
+and $\|H_\perp^{-1}\|\leq\Delta^{-1}$. It is a controlled
+comparison only in the stated gap regime.
+
+With the further assumptions $A=0$, $H_\perp=\Delta I$ and
+$V=\mu B$, each eigenvalue $q_i$ of $Q=B^*B$ gives a light
+signed eigenvalue $-m_i$, where
+\begin{equation}
+ m_i=\frac{\sqrt{\Delta^2+4\mu^2q_i}-\Delta}{2}
+ =\frac{\mu^2}{\Delta}q_i
+  +O\left(\frac{\mu^4q_i^2}{\Delta^3}\right).
+\end{equation}
+Thus a Gram mass-magnitude law can be a leading approximation in
+a canonical Hermitian Dirac-type reading. The signed effective
+operator is negative in this comparison; its interpretation as a
+positive physical mass magnitude is an additional reading, not
+a sign that can be dropped without comment.
+
+The exact eigenstate is dressed. Its complementary norm satisfies
+\begin{equation}
+ \frac{\|y\|^2}{\|x\|^2}=\frac{m_i}{\Delta+m_i},\qquad
+ \|y\|^2=\frac{m_i}{\Delta+2m_i}
+\end{equation}
+after normalization. Enforcing strict closure $y=0$ would instead
+require $Vx=0$. A nonzero light mass produced in this zero-direct-block
+mechanism is consequently incompatible with exact closure in the
+original retained projector. Approximate closure or a separately
+defined dressed spectral projector are possible alternatives, but
+they are different state constraints.
+
+\subsection{Cyclic compatibility fixes a form, not its coefficients}
+Suppose a unitary carrier operation $W$ and the generation three-cycle
+$U$ satisfy
+\begin{equation}
+ WS=SU,\qquad WP_c=P_cW,\qquad W\widetilde R=\widetilde RW.
+\end{equation}
+Then $BU=WB$ and hence $QU=UQ$. The positive root $L=\sqrt Q$
+also commutes with $U$. In three dimensions the three distinct Fourier
+eigenvalues of $U$ imply that every such Hermitian root has the form
+\begin{equation}
+ L=aI_3+zU+\overline zU^*,\qquad a>0,\quad z=re^{i\theta}.
+\end{equation}
+Its eigenvalues are
+\begin{equation}
+ \ell_k=a+2r\cos(\theta+2\pi k/3).
+\end{equation}
+Trace orthogonality gives
+\begin{equation}
+ \operatorname{Tr}L=3a,\qquad
+ \operatorname{Tr}L^2=3a^2+6r^2,\qquad
+ K=\frac13+\frac{2r^2}{3a^2}.
+\end{equation}
+The Koide value therefore requires $r=a/\sqrt2$. Cyclic compatibility
+does not supply this coefficient ratio. Conversely, once the native
+$Q$ were represented, its coefficients would be determined without a
+mass fit by
+\begin{equation}
+ a=\tfrac13\operatorname{Tr}\sqrt Q,\qquad
+ z=\tfrac13\operatorname{Tr}(U^*\sqrt Q).
+\end{equation}
+The native burden is thus a joint operator calculation, not the
+selection of a familiar trigonometric parametrization.
+
+At the Koide radius positivity gives three phase chambers,
+\begin{equation}
+ \theta\in\bigcup_{j=0}^2
+ [2\pi j/3-\pi/12,\ 2\pi j/3+\pi/12]
+ \pmod{2\pi}.
+\end{equation}
+They follow by intersecting the inequalities
+$\cos(\theta+2\pi k/3)\geq-1/\sqrt2$ for all three $k$.
+At the boundary $\theta_b=3\pi/4$, write
+$\theta=\theta_b-\delta$ inside the chamber. The small root is
+$\ell_0=a\delta+O(\delta^2)$, so its candidate mass is
+$m_0=\kappa a^2\delta^2+O(\delta^3)$. A light eigenmass can
+therefore arise near a boundary in this comparison. Neither the
+distance to the boundary nor its dynamical preservation has yet been
+selected by the native theory.
+
+\subsection{Deriving the positivity obstruction in the quadratic model}
+For $\eta\geq0$, the quadratic root model can be written as a linear function of the
+two-mode density matrix $\rho=\chi\chi^*$. In the Fourier basis of
+$U$, its signed root eigenvalues are
+\begin{equation}
+ \ell_k=\frac{X_0}{\sqrt3}
+ +\sqrt{\frac23}\eta[X_1\cos\varphi_k-X_2\sin\varphi_k],
+ \qquad \varphi_k=2\pi k/3.
+\end{equation}
+Equivalently $\ell_k=\sqrt3\operatorname{Tr}(F_k\rho)$, where
+\begin{equation}
+ F_k=\frac{I_2+\sqrt2\eta(\cos\varphi_k\sigma_z-
+                               \sin\varphi_k\sigma_x)}{3}.
+\end{equation}
+The three $F_k$ sum to $I_2$. The Pauli combination has eigenvalues
+$\pm1$, so $F_k$ has eigenvalues $(1\pm\sqrt2\eta)/3$.
+Positivity for every $\rho\geq0$ is therefore equivalent to
+$\eta\leq1/\sqrt2$. Necessity follows by testing a negative
+eigenvector if this condition fails; sufficiency follows because
+the trace of a product of two positive matrices is nonnegative.
+This is the precise sense in which a globally positive linear-density
+readout in this family cannot achieve the intended isometric radius.
+
+Replacing the input metric by the pullback metric of this map would
+make a chosen nonzero $\eta$ an isometry by definition. It would
+not derive its physical value. Nor does covariance under the three-cycle
+fix the relative singlet and doublet weights: the constant direction
+and the zero-sum plane are separate invariant pieces. A comparison
+tensor can assign them different positive weights while preserving
+the cyclic symmetry.
+
+The antipodal $5/9$ bound is similarly a property of the actual
+root eigenvalues. If $cI_3\pm D$ are both positive, the three
+eigenvalues $d_i$ obey $|d_i|\leq c$ and $\sum_i d_i=0$.
+The maximum of $\sum_i d_i^2$ on this planar cube section is
+$2c^2$, attained at permutations of $(c,0,-c)$. Consequently
+\begin{equation}
+ \frac{\operatorname{Tr}[(cI_3\pm D)^2]}
+      {[\operatorname{Tr}(cI_3\pm D)]^2}
+ =\frac{3c^2+\operatorname{Tr}D^2}{9c^2}\leq\frac59.
+\end{equation}
+Selecting one allowed positive branch can evade the pairwise
+requirement. A physical explanation then has to supply that branch
+selection rather than infer it from the involution alone.
+
+\subsection{Phase overlap: root averaging and mass averaging differ}
+The published overlap comparison provides another explicit test of
+what is being averaged. In one common generation basis, let
+\begin{equation}
+ x_{jk}=a[1+\sqrt2\operatorname{Re}(\omega^ke^{i\delta_j})],
+ \quad \omega=e^{2\pi i/3},\quad
+ w_j\geq0,\quad\sum_jw_j=1.
+\end{equation}
+Each preparation is assumed to have nonnegative roots and the same
+mean $a$. Averaging the roots before squaring gives
+\begin{equation}
+ \overline x_k=a[1+\sqrt2\operatorname{Re}(\omega^k Z)],
+ \qquad Z=\sum_jw_je^{i\delta_j},\qquad
+ K=\frac{1+|Z|^2}{3}.
+\end{equation}
+For two equally weighted phases $\delta_0\pm h$, this reduces the
+radius by $\cos h$ when $|h|<\pi/2$, leaving the central phase.
+It follows from a vector average on the unit circle, not from a
+new dynamical mass equation.
+
+Averaging squared roots gives a different answer:
+\begin{equation}
+ \sum_jw_jx_{jk}^2=\overline x_k^2+
+                      \sum_jw_j(x_{jk}-\overline x_k)^2.
+\end{equation}
+The variance term cannot be removed by calling both procedures a
+superposition. A coherent coupling of two paths is yet another
+specified construction. For $B(\phi)=B_1+e^{i\phi}B_2$,
+\begin{equation}
+ B(\phi)^*B(\phi)=B_1^*B_1+B_2^*B_2+
+ e^{i\phi}B_1^*B_2+e^{-i\phi}B_2^*B_1.
+\end{equation}
+Here relative phases can affect the operator spectrum through cross
+terms. A common phase multiplying all of $B$ cancels from its Gram
+matrix. Changing only the prepared probe can change spectral weights
+without moving the operator poles. These alternatives must be
+distinguished before a transport interpretation is assigned.
+
+An inverse reconstruction can find phase mixtures consistent with
+specified masses and an assumed intermediate gap. Its feasibility
+region is useful for excluding combinations of assumptions, but the
+reconstructed phases and gap are not independent predictions. The
+native operator, the admitted preparations and the rule for combining
+paths must be fixed before the resulting spectrum is compared with
+data as a test of the model.
+\section{\raggedright Projected dynamics and geometry}
+The same interface issue appears in the dynamics. Suppose a finite
+realification of the full state satisfies $\dot u=Gu$ and let
+$r=T(t)u$ be a surjective real-linear extraction. For a right inverse
+$R_s$, write $u=R_sr+z$, with $Tz=0$. Differentiation gives
+\begin{equation}
+ \dot r=(\dot T+TG)R_sr+(\dot T+TG)z.
+\end{equation}
+The observable equation is independent of the discarded lift precisely
+when
+\begin{equation}
+ (\dot T+TG)\ker T=0.
+\end{equation}
+This condition is additional to an algebraic projector identity. In its
+absence, two full states with the same readout can have different
+readout derivatives. Eliminating the hidden variables may then produce
+memory terms rather than an autonomous local equation.
+
+The Companion's geometric programme studies induced coframes, local
+field comparisons and compatible constraint data. Finite normal-source
+calculations can test whether prescribed tangential data determine a
+normal increment. Such a calculation is not yet a regional existence
+theorem, a derivation of the native action or an identification of an
+internal positive comparison metric with a spacetime metric. The
+reconstruction must respect common domains, conservation conditions
+and the ordering of the original operators.
+
+This identifies a concrete link between the mass and geometry branches:
+both require a represented extraction with controlled discarded degrees
+of freedom. A formal master equation supplies an organizing equation;
+well-posed evolution and the physical meaning of its projected fields
+are further obligations.
+\subsection{The formal full-state equation and its actual assumptions}
+The retained architecture organizes the probe through an ordered equation
+\begin{equation}
+ (i\Gamma^\mu D_\mu-\Omega)\Psi=0,\qquad
+ D_\mu=\partial_\mu+\mathcal B_\mu.
+\end{equation}
+Its ingredients include an internal connection, a closure projector,
+a mismatch field and proposed triadic couplings. Specifying their
+names does not determine their joint matrix elements on the generation
+states. It also does not ensure the adjoint relations needed for a
+real action or a selfadjoint time evolution.
+
+On a chosen time chart with invertible $\Gamma^0$, the equation can
+be rearranged algebraically as
+\begin{equation}
+ \partial_t\Psi=\mathcal G\Psi,
+ \quad \mathcal G=-\mathcal B_0-(\Gamma^0)^{-1}
+ \sum_{a=1}^3\Gamma^a(\partial_a+\mathcal B_a)
+              -i(\Gamma^0)^{-1}\Omega.
+\end{equation}
+This expression retains the order of noncommuting factors. Turning it
+into an evolution problem requires a domain, boundary or initial data,
+regularity and an appropriate adjoint. In a finite modal comparison
+these questions reduce to represented matrices; in a field theory they
+cannot be removed by matrix notation.
+
+The extraction condition given above tests an additional issue even
+when a full evolution is already supplied. The reduced variables must
+retain sufficient information to determine their own derivative.
+The kernel of the extraction is the exact place where this condition
+can fail. This is the dynamical counterpart of the electromagnetic
+example, in which a Gram register omitted the orientation needed for
+the transformed readout.
+
+\subsection{A hidden-lift counterexample with equal normalization}
+The dependence on discarded variables is not only a possibility for
+large nonlinear systems. Consider a two-component complex amplitude
+$f=x+ir$ evolving by $\dot f=-i\sigma_x f$, with $x,r$ real.
+Then
+\begin{equation}
+ \dot x=\sigma_xr,\qquad\dot r=-\sigma_xx.
+\end{equation}
+Extract only $r$. Fix $0<b<1$ and compare the initial states
+\begin{equation}
+ r=(b,0)^{\mathsf T},\qquad
+ x_\pm=(\pm\sqrt{1-b^2},0)^{\mathsf T}.
+\end{equation}
+Both full states have unit norm and the same extracted vector. Their
+extracted derivatives are
+\begin{equation}
+ \dot r_\pm=(0,\mp\sqrt{1-b^2})^{\mathsf T}.
+\end{equation}
+The polar angle of $r$ therefore has opposite initial angular
+velocities in the two cases. Equal extracted data and equal full
+norm have not defined an autonomous angular law. This example is an
+ordinary finite Hermitian evolution; it does not rely on an unstable
+Hamiltonian or a noisy numerical reduction.
+
+The linear criterion pinpoints the failure. If $T$ extracts $r$,
+then $TG$ does not vanish on $\ker T$, because the discarded real
+part drives $\dot r$. Adding a time-dependent extraction introduces
+$\dot T$ rather than eliminating that condition. A moving frame may
+be physically appropriate, but its derivative must be part of the
+calculation.
+
+\subsection{Exact elimination retains memory and initial-state data}
+For a constant Hermitian modal Hamiltonian write
+$H=S+iB$, where $S$ is real symmetric and $B$ real skew-symmetric.
+The real equations are
+\begin{equation}
+ \dot x=Bx+Sr,\qquad\dot r=Br-Sx.
+\end{equation}
+Solving the first equation and substituting into the second gives
+\begin{equation}
+ \dot r(t)=Br(t)-Se^{Bt}x(0)
+       -\int_0^tSe^{B(t-s)}Sr(s)\,ds.
+\end{equation}
+This is an exact reduced equation. It contains the discarded initial
+state and a history kernel. Dropping either term defines a different
+model unless an approximation and its range of validity are supplied.
+In particular, a local damping coefficient cannot be inferred merely
+from the fact that a component was projected out.
+
+The same lesson applies to positive-root phase chambers. A projected
+real or odd mode can remain on a kinematically selected slice while
+its phase exits a positive-root chamber. A phase minimum of an energy
+restricted to that slice is not enough to establish stability against
+the omitted amplitude and complex-phase directions. The full action
+and the resulting projected equation must determine which variations
+are physically admitted.
+
+\subsection{An action reduction that keeps the canonical partners}
+A controlled finite alternative illustrates how additional inertia
+can be derived without postulating a viscous law. Let
+\begin{equation}
+ L=\frac i2(f^*\dot f-\dot f^*f)-\mathcal E(f),\qquad
+ e=(\cos(\theta/2),\sin(\theta/2))^{\mathsf T},
+\end{equation}
+and write
+\begin{equation}
+ f=(a+ib)e+cNe,\quad
+ N=\begin{pmatrix}0&-1\\1&0\end{pmatrix},\quad b>0.
+\end{equation}
+The kinetic term is
+$b\dot a-a\dot b-bc\dot\theta$. Removing $a$ and $c$ before
+variation would remove the canonical partners of amplitude and
+phase. Instead set $q=(b,\theta)$, $h=(a,c)$ and
+$D_b=\operatorname{diag}(2,b)$. Up to a total derivative,
+\begin{equation}
+ L=-h^{\mathsf T}D_b\dot q-
+       V(q)-j(q)^{\mathsf T}h-\tfrac12h^{\mathsf T}W(q)h.
+\end{equation}
+For positive definite $W$, the algebraic equation for $h$ is
+\begin{equation}
+ h=-W^{-1}(D_b\dot q+j),
+\end{equation}
+and completing the square gives
+\begin{equation}
+ L_{\rm eff}=\tfrac12(D_b\dot q+j)^{\mathsf T}
+                    W^{-1}(D_b\dot q+j)-V.
+\end{equation}
+The induced kinetic metric is $D_bW^{-1}D_b$ and can depend on
+the retained coordinates. Its derivatives belong in the equations
+of motion. The hypotheses $W>0$ and $b>0$ are genuine conditions
+for this regular reduction.
+
+For the comparison $H=mI+\omega\sigma_y$, with $m>|\omega|$,
+the result is
+\begin{equation}
+ L_{\rm eff}=\dot b^2/m+
+       b^2(\dot\theta-2\omega)^2/(4m)-mb^2.
+\end{equation}
+The angular inertia is $b^2/(2m)$. Its equation
+$\ddot\theta=-2(\dot b/b)(\dot\theta-2\omega)$ describes
+reversible exchange with the amplitude. Contraction changes the sign
+of the term resembling damping. This is why it cannot be interpreted
+as positive viscosity without a separately represented dissipative
+mechanism. These are modal comparison coordinates, not yet a native
+fluid or a physical microscopic clock.
+
+\subsection{Reality of the action and the meaning of a positive mismatch}
+Consider ordinary Hermitian internal fields $A_\mu,H_c$, a fixed real
+covector $n_\mu$, and
+\begin{equation}
+ \mathcal B_\mu=iA_\mu+\kappa H_cn_\mu.
+\end{equation}
+For constant $n$, write
+\begin{align}
+ D_\mu^AH_c&=\partial_\mu H_c+i[A_\mu,H_c],\\
+ F^A_{\mu\nu}&=\partial_\mu A_\nu-\partial_\nu A_\mu
+                                      +i[A_\mu,A_\nu],\\
+ X_{\mu\nu}&=n_\nu D_\mu^AH_c-n_\mu D_\nu^AH_c.
+\end{align}
+The connection curvature is $F=iF^A+\kappa X$. Its literal quadratic
+trace action and an adjoint-paired trace action differ:
+\begin{align}
+ \operatorname{Re}\left[-\tfrac14\operatorname{Tr}(FF)\right]
+ &=\tfrac14\operatorname{Tr}(F^AF^A)
+          -\tfrac{\kappa^2}{4}\operatorname{Tr}(XX),\\
+ -\tfrac14\operatorname{Tr}(F^*F)
+ &=-\tfrac14\operatorname{Tr}(F^AF^A)
+          -\tfrac{\kappa^2}{4}\operatorname{Tr}(XX).
+\end{align}
+Spacetime indices are contracted in the declared real Lorentz metric.
+The traced cross commutator in the second expression vanishes.
+These formulas compare different actions, not two notations for the
+same variational problem. The choice must be made consistently with
+the probe law and its conserved currents.
+
+Even positivity of $H_c$ supplies no general damping theorem. In
+the constant-internal, flat-background comparison $H_c=hT_0$, with
+$T_0$ Hermitian and $c_T=\operatorname{Tr}T_0^2>0$, the null
+curvature term has the form
+\begin{equation}
+ L_{\rm HC}=\frac{\kappa^2c_T}{2}(n\cdot\partial h)^2,
+ \qquad n^2=0.
+\end{equation}
+Its principal tensor is proportional to $n^\mu n^\nu$ and has
+rank one for nonzero null $n$. A positive coefficient in one time
+slice is not a four-dimensional Lorentzian wave operator. A physical
+propagation or viscosity claim needs the rest of the represented
+field system.
+
+\subsection{Induced coframes and a direct same-frame obstruction}
+Under a fixed Hermitian spin/internal factorization, let
+$j^a=\Psi^*K^a\Psi$ and
+$v_H^a=\Psi^*K^aH_c\Psi$. The proposed real coframe can then
+have the identity
+\begin{equation}
+ E^a{}_{\mu}=\tfrac12\partial_\mu j^a+\kappa v_H^a n_\mu.
+\end{equation}
+If $H_c=0$ and $E$ has rank four, the functions $Y^a=j^a/2$
+are local coordinates, and $g=\eta_{ab}dY^a dY^b$ is flat.
+The inverse function theorem, rather than a curvature calculation,
+establishes this restricted result. A variable adjoint, a geometric
+spin connection or a different readout can change the hypotheses.
+
+For the nonzero rank-one update $E=E_0+\kappa v n^{\mathsf T}$,
+put $d=1+\kappa n^{\mathsf T}E_0^{-1}v$ and assume $d\ne0$.
+The determinant lemma and inverse update give
+\begin{equation}
+ \det E=(\det E_0)d,\qquad
+ n^{\mathsf T}g^{-1}n=
+       \frac{n^{\mathsf T}g_0^{-1}n}{d^2},
+ \quad g=E^{\mathsf T}\eta E.
+\end{equation}
+Thus a null covector remains null in this nonsingular update. This
+is a geometric compatibility statement. A full solution must also
+satisfy the probe, connection, closure and source equations.
+
+There is a stronger consistency test if exactly the same probe,
+adjoint and derivative are used both to reconstruct $E$ and to
+define the coordinate gamma matrices in the ordered equation. Assume
+\begin{equation}
+ E^a{}_{\mu}=s_0\operatorname{Re}(\overline\Psi\Gamma^aD_\mu\Psi),
+ \quad \Gamma^\mu=(E^{-1})^\mu{}_a\Gamma^a,\quad s_0\ne0,
+\end{equation}
+with real invertible $E$. Contraction of inverse and coframe yields
+\begin{equation}
+ 4=s_0\operatorname{Re}(\overline\Psi\Gamma^\mu D_\mu\Psi).
+\end{equation}
+For $R_\Psi=(i\Gamma^\mu D_\mu-\Omega)\Psi$ and
+$w=\overline\Psi\Omega\Psi$, it follows that
+\begin{equation}
+ \operatorname{Im}(\overline\Psi R_\Psi)=4/s_0-\operatorname{Im}w.
+\end{equation}
+If $w$ is real, the same-frame full-rank reconstruction cannot be
+on shell. Reality of $w$ follows, for example, when the mass-like
+operator has the required Hermiticity relative to the chosen probe
+adjoint. This excludes a particular additional identification; the
+Companion has not derived that identification as a native law. It
+is not a universal inconsistency theorem for every geometric branch.
+
+\subsection{Finite compatibility versus a field solution}
+At a prepared finite jet, normal derivative equations can be written
+as a linear system $Nx=r$ after lower data have been fixed. Let
+$L_N$ have orthonormal columns spanning $\ker N^{\mathsf T}$.
+Then the exact compatibility condition is
+\begin{equation}
+ L_N^{\mathsf T}r=0.
+\end{equation}
+For compatible $r$, the general solution is
+$x=N^+r+k$, $k\in\ker N$. If a kernel decomposition is supplied,
+its coordinates parametrize the remaining normal freedom. For
+incompatible $r$, the least-squares value $N^+r$ leaves residual
+$-L_NL_N^{\mathsf T}r$ and is not a field solution.
+
+The distinction already appears in
+$N=\begin{pmatrix}1&0\\0&1\\0&0\end{pmatrix}$, a three-by-two
+matrix with first two rows the identity. A target $(a,b,c)$ is
+compatible only when $c=0$, although a least-squares solver returns
+$(a,b)$ for every $c$. A small normal residual or a solver success
+flag cannot replace the explicit compatibility equation.
+
+The source problem is more informative when higher coordinates split
+into adjustable normal variables $w$ and prescribed tangential data $d$:
+\begin{equation}
+ h_0+Bq+A_fw+A_dd=0.
+\end{equation}
+Let $L_f$ span the left kernel of $A_f$ and define
+\begin{equation}
+ J_s=L_f^{\mathsf T}B,\qquad
+ b_s(d)=-L_f^{\mathsf T}(h_0+A_dd).
+\end{equation}
+Eliminating $w$ leaves $J_sq=b_s(d)$. If $J_s$ has full column
+rank, the source is unique for compatible data:
+\begin{equation}
+ (I-J_sJ_s^+)b_s(d)=0,\qquad q(d)=J_s^+b_s(d).
+\end{equation}
+The remaining higher lift is
+$w=-A_f^+(h_0+A_dd+Bq)+k$, $k\in\ker A_f$.
+This is a conditional finite source law. Changing which tangential
+coordinates are prescribed changes the left-kernel test and can
+remove a source constraint previously found by freezing all higher
+variables. The derivative mask is therefore part of the mathematical
+statement, not a numerical implementation detail.
+
+\subsection{Constraint propagation requires open-set hypotheses}
+The declared Cartan comparison uses an invertible real coframe, an
+independent Lorentz connection, probe fields and multipliers enforcing
+a constitutive coframe relation. Under compatible elimination of the
+connection, coordinate and local Lorentz variations give residual
+identities. Their source-free specialization requires both the
+constitutive residual and the full probe residual to vanish on an
+open region. A finite jet satisfying their point values does not
+establish those hypotheses.
+
+When the hypotheses do hold, and the spatially projected
+trace-reversed coframe evolution equations are imposed, the
+gravitational residual admits a symmetric hyperbolic subsidiary
+system. With lapse $N_l>0$, shift $\beta$, spatial metric $h$ and
+spatial covector $\xi$, its principal symbol can be written
+\begin{equation}
+ A(\xi)=-(\beta\cdot\xi)I_4+
+ N_l\begin{pmatrix}0&(h^{-1}\xi)^{\mathsf T}\\
+                         \xi&0_{3\times3}\end{pmatrix}.
+\end{equation}
+The positive matrix $W=\operatorname{diag}(1,h^{-1})$ symmetrizes
+the symbol. Retaining the required lower-order terms and excluding
+incoming constraint flux gives an energy estimate
+\begin{equation}
+ \mathcal E_g'(t)\leq C(t)\mathcal E_g(t).
+\end{equation}
+Zero initial constraints then remain zero under the stated regularity
+conditions. This conditional propagation result does not propagate
+the separate constitutive and probe equations from their initial
+values. Those field equations are inputs to the subsidiary argument.
+
+The geometric branch therefore has several distinct stages: an
+algebraically meaningful coframe, a finite compatible derivative
+system, a local field solution, and propagation of its constraints.
+The programme has concrete tests for these stages, but a result at
+one stage cannot be silently used as a result at the next. The same
+discipline that separates positive mass readout from a physical mass
+mechanism is needed when a finite source law is proposed as gravity.
+\section{\raggedright Discussion and outlook}
+The results above locate the main missing information in the transfer
+from a common carrier to observables. An HC projector gives an exact
+grading. Koide additionally requires a metric-preserving root
+representation and a selected norm relation. Positive nonlinear
+readouts introduce state-domain restrictions, while geometric
+projection introduces an independent autonomy condition. None of
+these requirements is fixed by the dimensionality of a representation.
+
+A recent comparison route couples this question to an arithmetically
+defined operator. For $\sigma>1$, the logarithmic derivative of zeta
+defines the real odd function
+\begin{equation}
+ a(t)=\operatorname{Im}\frac{\zeta'(\sigma+it)}{\zeta(\sigma+it)}
+ =\sum_{n\geq2}\Lambda(n)n^{-\sigma}\sin(t\log n),
+\end{equation}
+where $\Lambda$ is the von Mangoldt function \cite{DLMF274}.
+Multiplication by $a$ anticommutes with parity $R$. Thus the
+selfadjoint operator $T_a=-iRA_a$ has symmetric positive and negative
+spectral subspaces. A state restricted to either nonzero spectral side
+is parity-balanced, including when the spectrum is continuous.
+The construction $f(t)=Na(t)^2e^{-t^2}$,
+$\psi=(f+i\operatorname{sgn}(a)f)/\sqrt2$ gives a regular normalized
+example on the positive side. Its parameter and Fourier variances
+are finite. The corresponding Robertson relation is compatible with
+the balance, but need not be saturated \cite{Robertson1929}.
+
+This example establishes mathematical compatibility, not physical
+selection. The positive spectral restriction, its preparation, the
+window and the interpretation of $T_a$ as energy are additional
+choices; the parameter is not identified with physical time or position.
+The convergent prime series also does not justify substituting
+$\sigma=1/2$. Most importantly, the example supplies no map to three
+positive lepton roots and does not evade the readout restrictions above.
+
+A physical completion must therefore specify the carrier action,
+generation embedding, admissible state domain, observable map and
+dynamics on the same represented system. It must then determine which
+parameters are predictions and which are measured inputs. Until those
+steps are supplied, the framework supports conditional constructions
+and consistency tests rather than a recovered particle spectrum or
+a unified field theory. The long Companion retains the broader
+cosmological and structural proposals with their individual qualifications.
+\subsection{An arithmetic comparison operator}
+
+The suggestion that primes, a zeta function, and uncertainty might
+participate in the same selection mechanism can be made mathematically
+precise without identifying any of them with a physical observable.
+This distinction matters: an analogy becomes testable only after its
+operators, state space, and domains have been specified. The following
+construction is an analytic comparison model. It does not extend the
+Companion action or supply a lepton-mass prediction.
+
+Fix $\sigma>1$ and use the positive Hilbert space
+$\mathcal H=L^2(\mathbb R,dt)$, with dimensionless $t$. The logarithmic
+derivative of the Euler product gives \cite{DLMF274}
+\begin{equation}
+ -\frac{\zeta'(\sigma+it)}{\zeta(\sigma+it)}
+ =\sum_{n\geq2}\Lambda(n)n^{-\sigma}e^{-it\log n},
+ \qquad
+ \Lambda(p^k)=\log p.
+\end{equation}
+Here $\Lambda(n)=0$ unless $n$ is a prime power. In particular the
+real odd function
+\begin{equation}
+ a(t)=\operatorname{Im}\frac{\zeta'(\sigma+it)}{\zeta(\sigma+it)}
+     =\sum_{n\geq2}\Lambda(n)n^{-\sigma}\sin(t\log n)
+\end{equation}
+defines a bounded self-adjoint multiplication operator $Af=af$.
+Absolute and uniform convergence follow from
+$\Lambda(n)\leq\log n$ and convergence of
+$\sum (\log n)n^{-\sigma}$. Every fixed derivative is also uniformly
+convergent; the relevant majorant has an additional fixed power of
+$\log n$. Reflection $Rf(t)=f(-t)$ is a self-adjoint involution and
+$RA=-AR$. Thus a parity operator and a genuinely arithmetic odd
+partner coexist in one positive Hilbert space.
+
+For a normalized vector, Robertson's inequality \cite{Robertson1929}
+becomes
+\begin{equation}
+ \Delta R\,\Delta A\geq
+ \tfrac12|\langle[R,A]\rangle|=|\langle RA\rangle|.
+\end{equation}
+It does not require $\langle R\rangle=0$. An even normalized vector
+has $\langle R\rangle=1$ and both $\langle A\rangle$ and
+$\langle RA\rangle$ zero, so it satisfies the inequality without
+balance. This is a direct counterexample to an uncertainty-only
+selection argument. The inequality restricts a prepared state; it
+does not choose the preparation.
+
+\subsection{Why an eigenstate prescription fails}
+
+The bounded operator $T=-iRA$ is self-adjoint and satisfies
+$T^2=A^2$ and $RT=-TR$. If a normalized eigenvector with nonzero
+eigenvalue existed, anticommutation would force its parity expectation
+to vanish. That observation suggests a stronger selection rule than
+Robertson alone. In this particular realization, however, there are
+no nonzero normalizable eigenvectors, including at eigenvalue zero.
+
+Indeed, the sine series is holomorphic in the strip
+$|\operatorname{Im}t|<\sigma-1$ and hence real analytic on the real
+axis. Moreover,
+\begin{equation}
+ a(0)=0,\qquad
+ a'(0)=\sum_{n\geq2}\Lambda(n)(\log n)n^{-\sigma}>0.
+\end{equation}
+Consequently $a^2$ is not constant. An eigenvector of $T$ at real
+$\lambda$ would obey $(a(t)^2-\lambda^2)\psi(t)=0$ almost
+everywhere. The zero set of that nontrivial real-analytic function
+has measure zero, and an $L^2$ vector supported on it is zero.
+The argument excludes this eigenstate route, rather than every
+possible role for arithmetic. A finite grid could display discrete
+eigenvectors while missing this obstruction in the continuum.
+
+\subsection{A regular balanced spectral packet}
+
+One can retain the positive continuous spectral subspace instead.
+Let $S=\operatorname{sgn}(A)$; the null set of $a$ is negligible,
+so $S^2=I$ and $RS=-SR$. Choose the real even window
+$g(t)=e^{-t^2}$, set $f=Na^2g$ with $\|f\|=1$, and define
+\begin{equation}
+ \psi=\frac{f+iSf}{\sqrt2},\qquad
+ \operatorname{sgn}(T)=-iRS.
+\end{equation}
+Since $f$ is even and $Sf$ odd, their norms agree and their inner
+product vanishes. Direct substitution gives
+\begin{equation}
+ \|\psi\|=1,\quad \langle R\rangle_\psi=0,\quad
+ \operatorname{sgn}(T)\psi=\psi,\quad T\psi=|a|\psi.
+\end{equation}
+The last expression is multiplication by a variable function,
+not an eigenvalue equation. Thus it is consistent with the preceding
+nonexistence result. If $F_+=\mathbf1_{(0,\infty)}(T)$, then
+$F_+f=(f+iSf)/2$ and normalization gives this packet.
+
+The factor $a^2$ also resolves a domain issue. A generic sign change
+in $Sf$ could create a jump and an infinite Fourier second moment.
+Here $Sf=Na|a|g$, with weak derivatives
+\begin{align}
+ f'&=N(2aa'g+a^2g'),\\
+ (Sf)'&=N(2|a|a'g+a|a|g').
+\end{align}
+They lie in $L^2$ because $a,a'$ are bounded and the Gaussian and its
+derivative are square integrable. There is no delta contribution at a
+zero of $a$: the profile vanishes there. In addition $t\psi$ and
+$t\psi'$ lie in $L^2$. With $Qf=tf$ and the usual self-adjoint
+$P=-i\,d/dt$, both second moments are finite, $QP\psi$ and
+$PQ\psi$ exist, and $[Q,P]\psi=i\psi$. Hence
+\begin{equation}
+ \Delta Q\,\Delta P\geq\tfrac12.
+\end{equation}
+This is a parameter--Fourier uncertainty relation. Physical position,
+momentum, and a dimensional value of $\hbar$ have not been identified.
+
+Balance does not mean uncertainty saturation. Write
+$\mu_1=\int |a||f|^2dt$ and $\mu_2=\int a^2|f|^2dt$. For this packet
+\begin{equation}
+ \langle R\rangle=\langle A\rangle=0,\quad
+ \Delta R=1,\quad \Delta A=\sqrt{\mu_2},\quad
+ \langle RA\rangle=i\mu_1.
+\end{equation}
+The Robertson bound is $\sqrt{\mu_2}\geq\mu_1$ and is strict:
+equality would require $|a|$ constant almost everywhere on the
+support of $f$, whereas its level sets have measure zero. Balance
+comes from the chosen positive spectral projection. It is not an
+effect of saturating that inequality.
+
+\subsection{Preparation, preservation, and physical identification}
+
+This comparison separates three operations that an effective theory
+must not conflate. A spectral projector defines an allowed subspace;
+a preparation mechanism produces states in it; a generator preserves
+it during evolution. Functional calculus ensures that $e^{-isT}$
+commutes with $F_+$, but this does not prepare a generic incoming
+state in $\operatorname{im}F_+$, nor identify $T$ with the native
+Hamiltonian. The window, its scale, and the suppression of zeros
+are additional choices. None follows from the Euler product.
+
+The construction is confined to $\sigma>1$. Continuing the scalar
+zeta function does not automatically continue this bounded operator
+or its domain. On the critical line, poles of the logarithmic
+derivative require a separate analysis. No statement here proves
+the Riemann hypothesis or turns its zeros into the observed masses.
+The useful outcome is narrower: an arithmetic odd partner and a
+regular balanced packet are compatible with uncertainty, while
+their physical preparation and mass readout remain open.
+
+\subsection{What would constitute progress}
+
+For the mass branch, a decisive next result would specify the native
+operator $\widetilde R$, its compressed transition $B$, the positive
+three-dimensional readout, and the rule selecting its phase. A fit
+to three masses tests the flexibility of a chosen parameterization;
+it does not supply these missing definitions. A scale-independent
+ratio can constrain a mechanism before an overall mass scale is
+known, but agreement of a ratio cannot identify that scale or the
+underlying dynamics.
+
+For the generation branch, an admissible seed map must retain rank
+three and satisfy the grading requirements through the actual
+operator chain. Mixing requires a second physically identified
+operator in the same comparison space. For the geometric branch,
+an invertible coframe, compatible finite derivative data, and a
+local solution are separate obligations. Constraint propagation is
+valuable after its field-equation hypotheses are met.
+
+The database edition makes these distinctions inspectable. It
+stores statement versions, dependencies, source hashes, and the
+editorial selection used to assemble this paper. Its purpose is to
+prevent an algebraic possibility, a conditional calculation, and
+a physical identification from becoming indistinguishable during
+rewriting. The present work supplies explicit constructions and
+obstructions for these interfaces. A completed phenomenological
+theory would additionally need independently specified observables,
+units, preparation rules, and comparison with measured data.
+\begin{thebibliography}{99}
+\bibitem{Baez2002}
+J.~C.~Baez, \emph{The Octonions}, Bulletin of the American Mathematical
+Society \textbf{39} (2002), 145--205,
+doi:10.1090/S0273-0979-01-00934-X.
+\bibitem{Robertson1929}
+H.~P.~Robertson, \emph{The Uncertainty Principle}, Physical Review
+\textbf{34} (1929), 163--164, doi:10.1103/PhysRev.34.163.
+\bibitem{QSC411}
+M.~Brendecke, \emph{Quantum Sphaera Companion: A Structure-First Mathematical
+Unfolding}, v4.11.0 (2026), doi:10.5281/zenodo.24108818.
+\bibitem{DLMF274}
+NIST Digital Library of Mathematical Functions, Section 27.4,
+\emph{Euler Products and Dirichlet Series}, Eq.~27.4.12,
+dlmf.nist.gov/27.4 (accessed 11 November 2026).
+\end{thebibliography}
+\clearpage
+\appendix
+\section{Supporting mass-readout arguments}
+For completeness, the original mathematical arguments for the conditional mass-readout statements are reproduced below. Their hypotheses refer to the comparison domains stated in the text; they do not identify a native physical readout.
+Let $x_i=\sqrt{m_i}\geq0$, $x\ne0$, and write
+\[
+ A=\frac{x_0+x_1+x_2}{3}>0,\qquad
+ u=A(1,1,1),\quad d=x-u,\quad \sum_i d_i=0.
+\]
+The cyclic permutation preserves the one-dimensional symmetric line
+and its two-dimensional orthogonal plane. It preserves their norms
+separately; it does not prescribe their ratio.
+\begin{proposition}[Koide as an equal norm condition]
+\label{v480:koide-equal-norm}
+For these nonnegative principal roots,
+\[
+ K=\frac{\sum_i x_i^2}{(\sum_i x_i)^2}
+   =\frac13+\frac{\|d\|^2}{9A^2}.
+\]
+Consequently $K=2/3$ if and only if
+$\|d\|^2=\|u\|^2=3A^2$.
+\end{proposition}
+\begin{proof}
+Since $u\perp d$, $\|x\|^2=3A^2+\|d\|^2$, while
+$(\sum_i x_i)^2=9A^2$. Division proves both assertions.
+\end{proof}
+\begin{proposition}[A sufficient HC shaped mass root realization]
+\label{v480:koide-hc-mixing}
+In a declared real three-root representation, let
+$e=(1,1,1)/\sqrt3$, let $J_m$ be an orthogonal involution, and put
+$C_m=(I+J_m)/2$. Suppose $x=\alpha C_m e$ is nonzero and
+componentwise nonnegative, with $\alpha>0$. For
+$h=\langle e,J_m e\rangle$, one has $h>-1$ and
+\[
+ K=\frac{2}{3(1+h)}.
+\]
+Hence Koide holds precisely when $\langle e,J_m e\rangle=0$.
+\end{proposition}
+\begin{proof}
+An orthogonal involution is self-adjoint, so $C_m$ is an
+orthogonal projector. Thus
+$\|C_m e\|^2=\langle e,C_m e\rangle=(1+h)/2>0$ and
+$(\sum_i x_i)^2=3\alpha^2(1+h)^2/4$. Dividing
+$\|x\|^2=\alpha^2(1+h)/2$ by this denominator gives the formula.
+\end{proof}
+\begin{proposition}[Radius and phase in the three root parametrization]
+\label{v480:koide-radius-phase}
+Every nonzero nonnegative three-root vector admits
+\[
+ x_k=A\bigl(1+r\cos(\theta+2\pi k/3)\bigr),\qquad r\geq0,
+\]
+with $K=1/3+r^2/6$. The condition $K=2/3$ is precisely $r=\sqrt2$;
+it does not fix $A$ or $\theta$.
+\end{proposition}
+\begin{proof}
+The vectors $(\cos(2\pi k/3))_{k=0}^2$ and
+$(\sin(2\pi k/3))_{k=0}^2$ form an orthogonal basis of the
+zero-sum plane, each with squared norm $3/2$. Expressing $d/A$
+in that basis gives coefficients $r\cos\theta$ and
+$-r\sin\theta$. Therefore $\|d\|^2=(3/2)A^2r^2$ and the
+previous proposition gives the formula for $K$. If $r=0$ the
+phase is arbitrary.
+\end{proof}
+\begin{proposition}[Cyclic equivariant linear maps preserve symmetric inputs]
+\label{v480:koide-equivariant-obstruction}
+Let $P$ cyclically permute three real coordinates. If a linear map
+$T$ satisfies $TP=PT$, then $T(A(1,1,1))$ remains on the symmetric
+line. It cannot produce a nondegenerate root hierarchy from that input.
+\end{proposition}
+\begin{proof}
+$Pu=u$ implies $P(Tu)=T(Pu)=Tu$. The fixed space of $P$ is
+exactly the line spanned by $(1,1,1)$.
+\end{proof}
+\begin{proposition}[descent]
+\label{v480:hc-mass-descent}
+Let $H$ be a real Hilbert space, $J$ an orthogonal involution, and
+$B:H\to\mathbb R^3$ a bounded coisometry, $BB^*=I_3$. If
+$\ker B$ is $J$-invariant, then
+\[
+ J_m=BJB^*,\qquad J_m^*=J_m,\qquad J_m^2=I_3,
+ \qquad BC=C_mB,\quad C_m=(I_3+J_m)/2.
+\]
+Conversely, any relation $BJ=J_mB$ requires $\ker B$ to be
+$J$-invariant. The descended operator is unique because $B$ is onto.
+\end{proposition}
+\begin{proof}
+Put $E=B^*B$, the orthogonal projection onto $(\ker B)^\perp$.
+Since $J$ is self-adjoint and preserves $\ker B$, it also preserves
+its orthogonal complement, so $JE=EJ$. Thus $J_m^*=J_m$ and
+$J_m^2=BJEJB^*=BEB^*=I_3$. Also
+$J_mB=BJE=BJ$, since $J$ preserves $\ker B$ and $B$ kills it.
+The identity for $C$ follows by averaging. Conversely,
+$Bk=0$ implies $BJk=J_mBk=0$. Surjectivity gives uniqueness.
+\end{proof}
+\begin{proposition}[odd obstruction]
+\label{v480:hc-mass-odd-obstruction}
+If $Jf=-f$, then $Cf=0$. Consequently any homogeneous linear
+root readout $x=BCf$ is zero. Any readout $F(Cf)$ with $F(0)=0$
+has the same obstruction on this input lane. If instead a seed is
+$J$-fixed and the descended linear route has $Bf_0=e$, then
+$J_me=e$ and its nonzero root output has $K=1/3$.
+\end{proposition}
+\begin{proof}
+The first statement follows from $Cf=(f+Jf)/2=0$.
+For the second, $J_me=BJf_0=Bf_0=e$, so $C_me=e$ and
+all three roots are equal.
+\end{proof}
+\begin{proposition}[equivariant obstruction]
+\label{v480:hc-mass-equivariant-obstruction}
+Let $U$ preserve an admitted state set and let $P$ cyclically permute
+the three root coordinates. For any readout $F$ satisfying
+$F(Uf)=PF(f)$, an input $Uf_0=f_0$ has
+$F(f_0)=a(1,1,1)$. If this is a nonzero nonnegative root vector,
+then $K=1/3$. No linearity assumption on $F$ is needed.
+\end{proposition}
+\begin{proof}
+Equivariance gives $PF(f_0)=F(Uf_0)=F(f_0)$. The fixed vectors
+of the three-cycle are exactly the constant triples.
+\end{proof}
+\begin{proposition}[triole bound]
+\label{v480:hc-mass-triole-bound}
+Let $z_0+z_1+z_2=0$ in a normed vector space, not all $z_i=0$.
+Under the specific identification $m_i=\kappa\|z_i\|^2$ with a
+common $\kappa>0$, the principal-root ratio satisfies
+\[
+ \frac13\leq K\leq\frac12.
+\]
+In particular it cannot equal $2/3$.
+\end{proposition}
+\begin{proof}
+Put $r_i=\|z_i\|$ and $s=\sum_i r_i>0$. The triangle inequality
+gives $r_i\leq s-r_i$, hence $r_i\leq s/2$. Therefore
+$\sum_i r_i^2\leq(s/2)\sum_i r_i=s^2/2$.
+Cauchy--Schwarz gives the lower bound, and the common mass scale
+cancels from $K$.
+\end{proof}
+\begin{proposition}[fit freedom]
+\label{v480:hc-mass-fit-freedom}
+For every nonzero nonnegative triple $x$, there exist an orthogonal
+involution $J_x$ and $\alpha_x>0$ such that
+$x=\alpha_x(I+J_x)e/2$. Thus existence of an HC-shaped operator
+chosen after the masses is not a prediction of Koide or a hierarchy.
+\end{proposition}
+\begin{proof}
+Set $C_x=xx^{\mathsf T}/\|x\|^2$ and $J_x=2C_x-I_3$.
+This is an orthogonal involution. Since $s=\sum_i x_i>0$,
+$C_xe=sx/(\sqrt3\|x\|^2)$, so choose
+$\alpha_x=\sqrt3\|x\|^2/s$.
+\end{proof}
+\end{document}

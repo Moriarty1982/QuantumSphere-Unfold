@@ -1,0 +1,105 @@
+{
+  "preamble": "\\documentclass[11pt,a4paper]{article}\n\\usepackage[T1]{fontenc}\n\\usepackage[utf8]{inputenc}\n\\usepackage[margin=27mm]{geometry}\n\\setlength{\\emergencystretch}{2em}\n\\usepackage{amsmath}\n\\usepackage{amssymb}\n\\usepackage{amsthm}\n\\newtheorem{proposition}{Proposition}[section]\n\\title{Graded carriers and physical readouts: conditions for mass and geometric interpretation}\n\\author{Marc Brendecke\\\\\\small Independent Researcher, Bochum, Germany}\n\\date{Working paper 5.0.0-draft\\\\\\small 11 November 2026; not peer reviewed}\n",
+  "title": "Graded carriers and physical readouts: conditions for mass and geometric interpretation",
+  "abstracts": [
+    {
+      "text": "\nWe examine the conditions under which a common graded state space can\nsupport particle and geometric readouts. The Quantum Sphaera construction\nis formulated here as a set of conditional interfaces rather than a\ncompleted identification with physical fields. For a real orthogonal\ninvolution, the associated compensator gives an exact projection, but\ndoes not determine a three-generation mass spectrum. We derive the\nadditional equal-norm condition for the Koide root ratio and express it\nas an orthogonality condition in a declared HC representation. Direct\nodd-input and cyclic-equivariant readouts exhibit obstructions, while\npositive quadratic readouts require a restricted state domain. A\nprojection of the dynamics supplies a separate autonomy condition for\nobservable variables. Together these results isolate the operator,\nmetric and state-selection data needed to turn an algebraic framework\ninto a physical model. No lepton masses, absolute mass scale or\ngravitational field equations are predicted by the present construction.\n",
+      "location": {
+        "path": "build/v5-layout-ci-43078619869/qsc-v5-paired-documents-3/editions/physics/paper.tex",
+        "line": 15
+      }
+    }
+  ],
+  "statements": [
+    {
+      "environment": "proposition",
+      "label": "v480:koide-equal-norm",
+      "text": "\\begin{proposition}[Koide as an equal norm condition]\n\\label{v480:koide-equal-norm}\nFor these nonnegative principal roots,\n\\[\n K=\\frac{\\sum_i x_i^2}{(\\sum_i x_i)^2}\n   =\\frac13+\\frac{\\|d\\|^2}{9A^2}.\n\\]\nConsequently $K=2/3$ if and only if\n$\\|d\\|^2=\\|u\\|^2=3A^2$.\n\\end{proposition}",
+      "expanded_start": 82816,
+      "location": {
+        "path": "build/v5-layout-ci-43078619869/qsc-v5-paired-documents-3/editions/physics/paper.tex",
+        "line": 1699
+      }
+    },
+    {
+      "environment": "proposition",
+      "label": "v480:koide-hc-mixing",
+      "text": "\\begin{proposition}[A sufficient HC shaped mass root realization]\n\\label{v480:koide-hc-mixing}\nIn a declared real three-root representation, let\n$e=(1,1,1)/\\sqrt3$, let $J_m$ be an orthogonal involution, and put\n$C_m=(I+J_m)/2$. Suppose $x=\\alpha C_m e$ is nonzero and\ncomponentwise nonnegative, with $\\alpha>0$. For\n$h=\\langle e,J_m e\\rangle$, one has $h>-1$ and\n\\[\n K=\\frac{2}{3(1+h)}.\n\\]\nHence Koide holds precisely when $\\langle e,J_m e\\rangle=0$.\n\\end{proposition}",
+      "expanded_start": 83226,
+      "location": {
+        "path": "build/v5-layout-ci-43078619869/qsc-v5-paired-documents-3/editions/physics/paper.tex",
+        "line": 1713
+      }
+    },
+    {
+      "environment": "proposition",
+      "label": "v480:koide-radius-phase",
+      "text": "\\begin{proposition}[Radius and phase in the three root parametrization]\n\\label{v480:koide-radius-phase}\nEvery nonzero nonnegative three-root vector admits\n\\[\n x_k=A\\bigl(1+r\\cos(\\theta+2\\pi k/3)\\bigr),\\qquad r\\geq0,\n\\]\nwith $K=1/3+r^2/6$. The condition $K=2/3$ is precisely $r=\\sqrt2$;\nit does not fix $A$ or $\\theta$.\n\\end{proposition}",
+      "expanded_start": 83968,
+      "location": {
+        "path": "build/v5-layout-ci-43078619869/qsc-v5-paired-documents-3/editions/physics/paper.tex",
+        "line": 1732
+      }
+    },
+    {
+      "environment": "proposition",
+      "label": "v480:koide-equivariant-obstruction",
+      "text": "\\begin{proposition}[Cyclic equivariant linear maps preserve symmetric inputs]\n\\label{v480:koide-equivariant-obstruction}\nLet $P$ cyclically permute three real coordinates. If a linear map\n$T$ satisfies $TP=PT$, then $T(A(1,1,1))$ remains on the symmetric\nline. It cannot produce a nondegenerate root hierarchy from that input.\n\\end{proposition}",
+      "expanded_start": 84684,
+      "location": {
+        "path": "build/v5-layout-ci-43078619869/qsc-v5-paired-documents-3/editions/physics/paper.tex",
+        "line": 1750
+      }
+    },
+    {
+      "environment": "proposition",
+      "label": "v480:hc-mass-descent",
+      "text": "\\begin{proposition}[descent]\n\\label{v480:hc-mass-descent}\nLet $H$ be a real Hilbert space, $J$ an orthogonal involution, and\n$B:H\\to\\mathbb R^3$ a bounded coisometry, $BB^*=I_3$. If\n$\\ker B$ is $J$-invariant, then\n\\[\n J_m=BJB^*,\\qquad J_m^*=J_m,\\qquad J_m^2=I_3,\n \\qquad BC=C_mB,\\quad C_m=(I_3+J_m)/2.\n\\]\nConversely, any relation $BJ=J_mB$ requires $\\ker B$ to be\n$J$-invariant. The descended operator is unique because $B$ is onto.\n\\end{proposition}",
+      "expanded_start": 85153,
+      "location": {
+        "path": "build/v5-layout-ci-43078619869/qsc-v5-paired-documents-3/editions/physics/paper.tex",
+        "line": 1760
+      }
+    },
+    {
+      "environment": "proposition",
+      "label": "v480:hc-mass-odd-obstruction",
+      "text": "\\begin{proposition}[odd obstruction]\n\\label{v480:hc-mass-odd-obstruction}\nIf $Jf=-f$, then $Cf=0$. Consequently any homogeneous linear\nroot readout $x=BCf$ is zero. Any readout $F(Cf)$ with $F(0)=0$\nhas the same obstruction on this input lane. If instead a seed is\n$J$-fixed and the descended linear route has $Bf_0=e$, then\n$J_me=e$ and its nonzero root output has $K=1/3$.\n\\end{proposition}",
+      "expanded_start": 86031,
+      "location": {
+        "path": "build/v5-layout-ci-43078619869/qsc-v5-paired-documents-3/editions/physics/paper.tex",
+        "line": 1781
+      }
+    },
+    {
+      "environment": "proposition",
+      "label": "v480:hc-mass-equivariant-obstruction",
+      "text": "\\begin{proposition}[equivariant obstruction]\n\\label{v480:hc-mass-equivariant-obstruction}\nLet $U$ preserve an admitted state set and let $P$ cyclically permute\nthe three root coordinates. For any readout $F$ satisfying\n$F(Uf)=PF(f)$, an input $Uf_0=f_0$ has\n$F(f_0)=a(1,1,1)$. If this is a nonzero nonnegative root vector,\nthen $K=1/3$. No linearity assumption on $F$ is needed.\n\\end{proposition}",
+      "expanded_start": 86580,
+      "location": {
+        "path": "build/v5-layout-ci-43078619869/qsc-v5-paired-documents-3/editions/physics/paper.tex",
+        "line": 1794
+      }
+    },
+    {
+      "environment": "proposition",
+      "label": "v480:hc-mass-triole-bound",
+      "text": "\\begin{proposition}[triole bound]\n\\label{v480:hc-mass-triole-bound}\nLet $z_0+z_1+z_2=0$ in a normed vector space, not all $z_i=0$.\nUnder the specific identification $m_i=\\kappa\\|z_i\\|^2$ with a\ncommon $\\kappa>0$, the principal-root ratio satisfies\n\\[\n \\frac13\\leq K\\leq\\frac12.\n\\]\nIn particular it cannot equal $2/3$.\n\\end{proposition}",
+      "expanded_start": 87119,
+      "location": {
+        "path": "build/v5-layout-ci-43078619869/qsc-v5-paired-documents-3/editions/physics/paper.tex",
+        "line": 1806
+      }
+    },
+    {
+      "environment": "proposition",
+      "label": "v480:hc-mass-fit-freedom",
+      "text": "\\begin{proposition}[fit freedom]\n\\label{v480:hc-mass-fit-freedom}\nFor every nonzero nonnegative triple $x$, there exist an orthogonal\ninvolution $J_x$ and $\\alpha_x>0$ such that\n$x=\\alpha_x(I+J_x)e/2$. Thus existence of an HC-shaped operator\nchosen after the masses is not a prediction of Koide or a hierarchy.\n\\end{proposition}",
+      "expanded_start": 87723,
+      "location": {
+        "path": "build/v5-layout-ci-43078619869/qsc-v5-paired-documents-3/editions/physics/paper.tex",
+        "line": 1823
+      }
+    }
+  ]
+}

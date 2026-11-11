@@ -1,0 +1,9 @@
+{
+  "pass_id": "self-adversarial",
+  "issues": [],
+  "checks": [
+    "Singular seed Gram matrices, zero transition, J-fixed/odd states, degenerate spectra, positivity boundaries, strict closure versus dressed states",
+    "Continuous spectrum, null level sets and Q/P domains of arithmetic packet"
+  ],
+  "provenance": "Sequential coordinator self-review, not independent."
+}

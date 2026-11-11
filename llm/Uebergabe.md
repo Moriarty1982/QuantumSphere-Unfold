@@ -2,7 +2,7 @@
 
 11. November 2026 (Codex). Wird pro Arbeitsblock überschrieben.
 
-- Aktueller Branch codex/v5-layout-fixes, Layout-Codecommit 875a6ad; Basis codex/v5-ci-portability bei 5bc39f8.
+- Aktueller Branch codex/v5-physics-review, Basis Layoutbranch bei 159de9b; Layout-Codecommit 875a6ad.
 - Main bleibt edf1a1c, öffentliche Paper-Baseline v4.11.0; Entwicklung 5.0.0-draft.
 - PR #95 (CI-Reparatur) offen und zuletzt vollständig grün; kein neuer Merge freigegeben oder ausgeführt.
 - PR #96 (Layout) offen gegen codex/v5-ci-portability: https://github.com/Moriarty1982/QuantumSphere-Unfold/pull/96.
@@ -27,7 +27,8 @@
 - full-Edition: 8b1b4b5d803651660d91f95d9eb04af3afbabb007eeb94756b8478f1c77cadb9.
 - physics-Edition: 6fdaedf173b3c8ba2f5cbe0bee3711e56cc3405fbe254518e292d3e7e84a162c.
 - publication_ready bleibt false und beide incomplete_argument_review bleiben true. Kein Release, Tag, DOI oder Zenodo-Schritt.
-- Nächster Schritt: fachliche Schlussprüfung nach notes/research/v5_publication_readiness_2026_11_11.md; PR #95 und danach #96 nur nach Autorenfreigabe mergen.
+- Fachliche Selbstprüfung der gesamten Physikfassung samt Anhang abgeschlossen: notes/research/referee/v5-physics-2026-11-11-pass1/report.md; kein tragender Fehler festgestellt, keine unabhängige Begutachtung.
+- Nächster Schritt: v5-Metadaten und Änderungsübersicht vorbereiten; PR #95/#96 und Review nur nach Autorenfreigabe mergen.
 - Danach fachliche Schlussprüfung und konkrete Zwei-Dokument-Veröffentlichungsunterlagen vorbereiten.
 - .codex/environments/ nicht aufnehmen; alte Branchlöschung weiterhin nicht freigegeben.
 - Keine H-/k-Nummer vergeben; die historischen Satzinventare mit 58 lokal /45 im früheren Containerlauf bleiben als Vorzustand erhalten.

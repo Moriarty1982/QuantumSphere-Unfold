@@ -1,0 +1,185 @@
+{
+  "source_files_sha256": "10f737947fa65fe2fc2d8934f74ba978bb6c7971a4d87d88062aac4b41d1ba43",
+  "contract_sha256": "032dbef2b0536e14e9ca610bc8796bff98d99980dc3cedd99647085636bac78e",
+  "schema_version": 1,
+  "manuscript_sha256": "cfbeecedbfc9f7fd614789b24c0f2ab25c9576b575c3af087c96729b23577225",
+  "coverage": [
+    {
+      "pass_id": "self-correctness",
+      "lanes": [
+        "correctness"
+      ],
+      "scope": "All manuscript text; source and implementation checks bounded as in report.md",
+      "unit_ids": [
+        "sha256:ce15a44304f9a1d40a0539ee144bf3e069326879c7d19bfbe58d080bfc00f233:1",
+        "sha256:e4d92d095c42523c2a6853b7dfa9beec28a37486f267a776123bc578a3de9b90:1",
+        "sha256:55f3f7a781840e77474877d28898ef5f916980f0b5a00bde0d71bd7eb3d9ca6a:1",
+        "sha256:278de5ff6161f3fe12f81a5d059be983ad7197ff43ef9a77e4e531facdb33792:1",
+        "sha256:68f46ec0fedc0abe943977475f2a4e14d0609ec97c8a650bf556b4ea737dedd0:1",
+        "sha256:8ac93c11814da9612058521c32864b6538818f3c1457a426328fd0c42e769e56:1",
+        "sha256:4952df486e8e903a825c666e3f27b8469d89cbefb1b68effa20639dd6c71d1d1:1",
+        "sha256:9b5f621fc9e4cc2ff1c149209e63bde956265777355ad0f97f839dd547605e2e:1",
+        "sha256:6b475a1009524019a151eafc81b9ae942d77ed346ac7a104d949d073002bd813:1",
+        "sha256:aa1ab81b53b4e597b8c7ccc6ac8d6972d94e2bb854d8bd762e31fcaf02c866c4:1"
+      ],
+      "context": [
+        "report.md",
+        "source-records.md",
+        "receipt-retrieval.json"
+      ],
+      "executor": "coordinator",
+      "method": "self-review",
+      "status": "complete",
+      "model_assignment": {
+        "assignment_source": null,
+        "requested_model": null,
+        "requested_reasoning": null,
+        "actual_model": null,
+        "actual_reasoning": null,
+        "fallback_reason": null
+      }
+    },
+    {
+      "pass_id": "self-adversarial",
+      "lanes": [
+        "adversarial"
+      ],
+      "scope": "All manuscript text; source and implementation checks bounded as in report.md",
+      "unit_ids": [
+        "sha256:ce15a44304f9a1d40a0539ee144bf3e069326879c7d19bfbe58d080bfc00f233:1",
+        "sha256:e4d92d095c42523c2a6853b7dfa9beec28a37486f267a776123bc578a3de9b90:1",
+        "sha256:55f3f7a781840e77474877d28898ef5f916980f0b5a00bde0d71bd7eb3d9ca6a:1",
+        "sha256:278de5ff6161f3fe12f81a5d059be983ad7197ff43ef9a77e4e531facdb33792:1",
+        "sha256:68f46ec0fedc0abe943977475f2a4e14d0609ec97c8a650bf556b4ea737dedd0:1",
+        "sha256:8ac93c11814da9612058521c32864b6538818f3c1457a426328fd0c42e769e56:1",
+        "sha256:4952df486e8e903a825c666e3f27b8469d89cbefb1b68effa20639dd6c71d1d1:1",
+        "sha256:9b5f621fc9e4cc2ff1c149209e63bde956265777355ad0f97f839dd547605e2e:1",
+        "sha256:6b475a1009524019a151eafc81b9ae942d77ed346ac7a104d949d073002bd813:1",
+        "sha256:aa1ab81b53b4e597b8c7ccc6ac8d6972d94e2bb854d8bd762e31fcaf02c866c4:1"
+      ],
+      "context": [
+        "report.md",
+        "source-records.md",
+        "receipt-retrieval.json"
+      ],
+      "executor": "coordinator",
+      "method": "self-review",
+      "status": "complete",
+      "model_assignment": {
+        "assignment_source": null,
+        "requested_model": null,
+        "requested_reasoning": null,
+        "actual_model": null,
+        "actual_reasoning": null,
+        "fallback_reason": null
+      }
+    },
+    {
+      "pass_id": "self-exposition",
+      "lanes": [
+        "exposition"
+      ],
+      "scope": "All manuscript text; source and implementation checks bounded as in report.md",
+      "unit_ids": [
+        "sha256:ce15a44304f9a1d40a0539ee144bf3e069326879c7d19bfbe58d080bfc00f233:1",
+        "sha256:e4d92d095c42523c2a6853b7dfa9beec28a37486f267a776123bc578a3de9b90:1",
+        "sha256:55f3f7a781840e77474877d28898ef5f916980f0b5a00bde0d71bd7eb3d9ca6a:1",
+        "sha256:278de5ff6161f3fe12f81a5d059be983ad7197ff43ef9a77e4e531facdb33792:1",
+        "sha256:68f46ec0fedc0abe943977475f2a4e14d0609ec97c8a650bf556b4ea737dedd0:1",
+        "sha256:8ac93c11814da9612058521c32864b6538818f3c1457a426328fd0c42e769e56:1",
+        "sha256:4952df486e8e903a825c666e3f27b8469d89cbefb1b68effa20639dd6c71d1d1:1",
+        "sha256:9b5f621fc9e4cc2ff1c149209e63bde956265777355ad0f97f839dd547605e2e:1",
+        "sha256:6b475a1009524019a151eafc81b9ae942d77ed346ac7a104d949d073002bd813:1",
+        "sha256:aa1ab81b53b4e597b8c7ccc6ac8d6972d94e2bb854d8bd762e31fcaf02c866c4:1"
+      ],
+      "context": [
+        "report.md",
+        "source-records.md",
+        "receipt-retrieval.json"
+      ],
+      "executor": "coordinator",
+      "method": "self-review",
+      "status": "complete",
+      "model_assignment": {
+        "assignment_source": null,
+        "requested_model": null,
+        "requested_reasoning": null,
+        "actual_model": null,
+        "actual_reasoning": null,
+        "fallback_reason": null
+      }
+    },
+    {
+      "pass_id": "self-notation",
+      "lanes": [
+        "notation"
+      ],
+      "scope": "All manuscript text; source and implementation checks bounded as in report.md",
+      "unit_ids": [
+        "sha256:ce15a44304f9a1d40a0539ee144bf3e069326879c7d19bfbe58d080bfc00f233:1",
+        "sha256:e4d92d095c42523c2a6853b7dfa9beec28a37486f267a776123bc578a3de9b90:1",
+        "sha256:55f3f7a781840e77474877d28898ef5f916980f0b5a00bde0d71bd7eb3d9ca6a:1",
+        "sha256:278de5ff6161f3fe12f81a5d059be983ad7197ff43ef9a77e4e531facdb33792:1",
+        "sha256:68f46ec0fedc0abe943977475f2a4e14d0609ec97c8a650bf556b4ea737dedd0:1",
+        "sha256:8ac93c11814da9612058521c32864b6538818f3c1457a426328fd0c42e769e56:1",
+        "sha256:4952df486e8e903a825c666e3f27b8469d89cbefb1b68effa20639dd6c71d1d1:1",
+        "sha256:9b5f621fc9e4cc2ff1c149209e63bde956265777355ad0f97f839dd547605e2e:1",
+        "sha256:6b475a1009524019a151eafc81b9ae942d77ed346ac7a104d949d073002bd813:1",
+        "sha256:aa1ab81b53b4e597b8c7ccc6ac8d6972d94e2bb854d8bd762e31fcaf02c866c4:1"
+      ],
+      "context": [
+        "report.md",
+        "source-records.md",
+        "receipt-retrieval.json"
+      ],
+      "executor": "coordinator",
+      "method": "self-review",
+      "status": "complete",
+      "model_assignment": {
+        "assignment_source": null,
+        "requested_model": null,
+        "requested_reasoning": null,
+        "actual_model": null,
+        "actual_reasoning": null,
+        "fallback_reason": null
+      }
+    },
+    {
+      "pass_id": "self-claims",
+      "lanes": [
+        "claims"
+      ],
+      "scope": "All manuscript text; source and implementation checks bounded as in report.md",
+      "unit_ids": [
+        "sha256:ce15a44304f9a1d40a0539ee144bf3e069326879c7d19bfbe58d080bfc00f233:1",
+        "sha256:e4d92d095c42523c2a6853b7dfa9beec28a37486f267a776123bc578a3de9b90:1",
+        "sha256:55f3f7a781840e77474877d28898ef5f916980f0b5a00bde0d71bd7eb3d9ca6a:1",
+        "sha256:278de5ff6161f3fe12f81a5d059be983ad7197ff43ef9a77e4e531facdb33792:1",
+        "sha256:68f46ec0fedc0abe943977475f2a4e14d0609ec97c8a650bf556b4ea737dedd0:1",
+        "sha256:8ac93c11814da9612058521c32864b6538818f3c1457a426328fd0c42e769e56:1",
+        "sha256:4952df486e8e903a825c666e3f27b8469d89cbefb1b68effa20639dd6c71d1d1:1",
+        "sha256:9b5f621fc9e4cc2ff1c149209e63bde956265777355ad0f97f839dd547605e2e:1",
+        "sha256:6b475a1009524019a151eafc81b9ae942d77ed346ac7a104d949d073002bd813:1",
+        "sha256:aa1ab81b53b4e597b8c7ccc6ac8d6972d94e2bb854d8bd762e31fcaf02c866c4:1"
+      ],
+      "context": [
+        "report.md",
+        "source-records.md",
+        "receipt-retrieval.json"
+      ],
+      "executor": "coordinator",
+      "method": "self-review",
+      "status": "complete",
+      "model_assignment": {
+        "assignment_source": null,
+        "requested_model": null,
+        "requested_reasoning": null,
+        "actual_model": null,
+        "actual_reasoning": null,
+        "fallback_reason": null
+      }
+    }
+  ],
+  "issues": [],
+  "limits": "No confirmed substantive findings; local explicit-domain suggestions and unverified original-source attribution in report.md. Complete refers to text pass, not universal certification."
+}

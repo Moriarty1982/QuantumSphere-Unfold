@@ -812,3 +812,16 @@ die fachliche Schlussprüfung, konkrete Metadaten und ein gemeinsamer Build
 des eingefrorenen Release-Stands. Die Datenbankinventarisierung ersetzt
 keine Beweisprüfung; beide Editionen behalten offene Argumentprüfungen.
 Die öffentliche Zitationsbaseline bleibt v4.11.0; v5 hat noch keine DOI.
+
+
+### Fachliche Selbstprüfung der Physikfassung (11. November 2026)
+
+Die gesamte englische Physikfassung einschließlich Anhang wurde sequentiell
+selbst geprüft. In den rekonstruierten Schlüssen wurde kein tragender Fehler
+festgestellt. Dies ist keine unabhängige Begutachtung. Projektor, Rang- und
+Positivitätsgrenzen, bedingte geometrische Rekonstruktion und der Zeta-
+Vergleich behalten ihre Voraussetzungen; native Auslese, Präparation und
+Dynamik bleiben offen. Der MMA-Intervallbeleg wurde erneut per Hash mit
+Prämissenspur abgerufen; die Prämissen bleiben conditional. Zwei lokale
+Präzisierungen betreffen nichtnullige Quotienteneingaben und reelle
+Kopplungsskalen. Die Dokumente und Reviewflags wurden nicht umgestuft.

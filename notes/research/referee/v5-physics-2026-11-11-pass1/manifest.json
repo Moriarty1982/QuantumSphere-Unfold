@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "preparation_version": 1,
+  "main": "build/v5-layout-ci-43078619869/qsc-v5-paired-documents-3/editions/physics/paper.tex",
+  "source_sha256": "cfbeecedbfc9f7fd614789b24c0f2ab25c9576b575c3af087c96729b23577225",
+  "global_context_sha256": "6569777ce19ae91dc8fa500ffebf481da4f5febe3b14382015562432ab22b4b9",
+  "contract_sha256": "032dbef2b0536e14e9ca610bc8796bff98d99980dc3cedd99647085636bac78e",
+  "contract_files": {
+    "SKILL.md": "aabaf34132e9b92c0456897128b29bf4dae1c0bc8d11c1d39da60a1face44802",
+    "scripts/prepare_manuscript.py": "ac86d124803dce10f892fa07f8a0860905c0d9f70c8333a2930e5ba8b3630355",
+    "references/final-referee.md": "d0fdf800f7dbf077141a381aac65cdd43583b596ff612366e3e309addb4a6fbc",
+    "references/model-assignments.md": "30211143f779431c7f9da4d1d9179e253ee2fe614bd44027b2b868bef7458d13",
+    "references/output-contract.md": "b28619a165ac58215a3fe4d3dd44dafd6be7e8dd33481859e28d7d10fbc239b8",
+    "references/preparation.md": "c68421fff405be70cc14918b50c89a6548ef4b5ea97fe352e47854f9229a9496",
+    "references/review-protocol.md": "a9ea88eba2049d8c944711d7f777a2874343c3a3edf2663e9e36443976fa6def",
+    "references/reviewers/adversarial.md": "fa07c0c35a6a3c4606e3cad08241195b85d6c53ae4131173386fda8c2e17ed47",
+    "references/reviewers/claims.md": "525767b1fa6cc0cdc709cdf21f55827bcc798ab4762d168afe4b14fe4b855671",
+    "references/reviewers/correctness.md": "1de34877fcf90ae05fac943bdad3e16814f806a774d33e7b24e807019284c66f",
+    "references/reviewers/exposition.md": "cd1eb9d1e9a5057357d21a6afb5ffc51eaa9b896bd7d3d1bcaa1fbae176fc832",
+    "references/reviewers/notation.md": "e7333b5f91872b73610366f8e5cb179811c1d1317831db5d6ad56d1479356f8a"
+  },
+  "source_files_sha256": "10f737947fa65fe2fc2d8934f74ba978bb6c7971a4d87d88062aac4b41d1ba43",
+  "sources": [
+    {
+      "path": "build/v5-layout-ci-43078619869/qsc-v5-paired-documents-3/editions/physics/paper.tex",
+      "sha256": "cfbeecedbfc9f7fd614789b24c0f2ab25c9576b575c3af087c96729b23577225",
+      "bytes": 88269
+    }
+  ],
+  "source_map": [
+    {
+      "expanded_start": 0,
+      "expanded_end": 88268,
+      "path": "build/v5-layout-ci-43078619869/qsc-v5-paired-documents-3/editions/physics/paper.tex",
+      "source_start": 0,
+      "source_end": 88268,
+      "source_line": 1
+    },
+    {
+      "expanded_start": 88268,
+      "expanded_end": 88269,
+      "path": "build/v5-layout-ci-43078619869/qsc-v5-paired-documents-3/editions/physics/paper.tex",
+      "source_start": 88268,
+      "source_end": 88269,
+      "source_line": 1836
+    }
+  ],
+  "units": [
+    {
+      "id": "sha256:ce15a44304f9a1d40a0539ee144bf3e069326879c7d19bfbe58d080bfc00f233:1",
+      "sha256": "fc45878de6bcf9b0c1a5eb961558a129af4f4335d6bea52ffb61d98244ce42ad",
+      "identity_sha256": "ce15a44304f9a1d40a0539ee144bf3e069326879c7d19bfbe58d080bfc00f233",
+      "title": "Front matter",
+      "kind": "front-matter",
+      "reviewable": true,
+      "skip_reason": null,
+      "file": "sections/001-front-matter.tex",
+      "expanded_start": 531,
+      "expanded_end": 1614,
+      "location": {
+        "path": "build/v5-layout-ci-43078619869/qsc-v5-paired-documents-3/editions/physics/paper.tex",
+        "line": 13
+      }
+    },
+    {
+      "id": "sha256:e4d92d095c42523c2a6853b7dfa9beec28a37486f267a776123bc578a3de9b90:1",
+      "sha256": "8e515cd40abfad5f3eb353706087e601276b29b71bdf9c1ceefd89d2f7050ab5",
+      "identity_sha256": "e4d92d095c42523c2a6853b7dfa9beec28a37486f267a776123bc578a3de9b90",
+      "title": "\\raggedright Introduction",
+      "kind": "section",
+      "reviewable": true,
+      "skip_reason": null,
+      "file": "sections/002-introduction.tex",
+      "expanded_start": 1614,
+      "expanded_end": 6893,
+      "location": {
+        "path": "build/v5-layout-ci-43078619869/qsc-v5-paired-documents-3/editions/physics/paper.tex",
+        "line": 32
+      }
+    },
+    {
+      "id": "sha256:55f3f7a781840e77474877d28898ef5f916980f0b5a00bde0d71bd7eb3d9ca6a:1",
+      "sha256": "5114fae1db6a3d0957e67cc151dabb996fd2e945e0ec9cd9a50e2a657abdf6a1",
+      "identity_sha256": "55f3f7a781840e77474877d28898ef5f916980f0b5a00bde0d71bd7eb3d9ca6a",
+      "title": "\\raggedright A graded carrier and its interpretation",
+      "kind": "section",
+      "reviewable": true,
+      "skip_reason": null,
+      "file": "sections/003-a-graded-carrier-and-its-interpretation.tex",
+      "expanded_start": 6893,
+      "expanded_end": 15357,
+      "location": {
+        "path": "build/v5-layout-ci-43078619869/qsc-v5-paired-documents-3/editions/physics/paper.tex",
+        "line": 124
+      }
+    },
+    {
+      "id": "sha256:278de5ff6161f3fe12f81a5d059be983ad7197ff43ef9a77e4e531facdb33792:1",
+      "sha256": "7a0340cd89630ec2f2db6c0905de693414a1c75a58ea22d432654ecc41f851c5",
+      "identity_sha256": "278de5ff6161f3fe12f81a5d059be983ad7197ff43ef9a77e4e531facdb33792",
+      "title": "\\raggedright Statement language and reproducibility",
+      "kind": "section",
+      "reviewable": true,
+      "skip_reason": null,
+      "file": "sections/004-statement-language-and-reproducibility.tex",
+      "expanded_start": 15357,
+      "expanded_end": 28107,
+      "location": {
+        "path": "build/v5-layout-ci-43078619869/qsc-v5-paired-documents-3/editions/physics/paper.tex",
+        "line": 285
+      }
+    },
+    {
+      "id": "sha256:68f46ec0fedc0abe943977475f2a4e14d0609ec97c8a650bf556b4ea737dedd0:1",
+      "sha256": "e7e7fe277b72dbad32bc7b76ae4318f20252269d7baf0b06f1f567b2d04c4be2",
+      "identity_sha256": "68f46ec0fedc0abe943977475f2a4e14d0609ec97c8a650bf556b4ea737dedd0",
+      "title": "\\raggedright Particle and generation assignments",
+      "kind": "section",
+      "reviewable": true,
+      "skip_reason": null,
+      "file": "sections/005-particle-and-generation-assignments.tex",
+      "expanded_start": 28107,
+      "expanded_end": 39712,
+      "location": {
+        "path": "build/v5-layout-ci-43078619869/qsc-v5-paired-documents-3/editions/physics/paper.tex",
+        "line": 536
+      }
+    },
+    {
+      "id": "sha256:8ac93c11814da9612058521c32864b6538818f3c1457a426328fd0c42e769e56:1",
+      "sha256": "75340867b58fbc0799fbadae09ee3894a96817e5b33a070a8ea24e1c385e6a12",
+      "identity_sha256": "8ac93c11814da9612058521c32864b6538818f3c1457a426328fd0c42e769e56",
+      "title": "\\raggedright Mass readout and consistency constraints",
+      "kind": "section",
+      "reviewable": true,
+      "skip_reason": null,
+      "file": "sections/006-mass-readout-and-consistency-constraints.tex",
+      "expanded_start": 39712,
+      "expanded_end": 55137,
+      "location": {
+        "path": "build/v5-layout-ci-43078619869/qsc-v5-paired-documents-3/editions/physics/paper.tex",
+        "line": 767
+      }
+    },
+    {
+      "id": "sha256:4952df486e8e903a825c666e3f27b8469d89cbefb1b68effa20639dd6c71d1d1:1",
+      "sha256": "22c3e5f8555a312ef01998985528e4a9e5d2d057e33302cf85f92cf7d2006e1b",
+      "identity_sha256": "4952df486e8e903a825c666e3f27b8469d89cbefb1b68effa20639dd6c71d1d1",
+      "title": "\\raggedright Projected dynamics and geometry",
+      "kind": "section",
+      "reviewable": true,
+      "skip_reason": null,
+      "file": "sections/007-projected-dynamics-and-geometry.tex",
+      "expanded_start": 55137,
+      "expanded_end": 70849,
+      "location": {
+        "path": "build/v5-layout-ci-43078619869/qsc-v5-paired-documents-3/editions/physics/paper.tex",
+        "line": 1109
+      }
+    },
+    {
+      "id": "sha256:9b5f621fc9e4cc2ff1c149209e63bde956265777355ad0f97f839dd547605e2e:1",
+      "sha256": "a9b3fa9b03a57cc919391748c42827c1cda72eff6d8b66623135f5ee42bd9256",
+      "identity_sha256": "9b5f621fc9e4cc2ff1c149209e63bde956265777355ad0f97f839dd547605e2e",
+      "title": "\\raggedright Discussion and outlook",
+      "kind": "section",
+      "reviewable": true,
+      "skip_reason": null,
+      "file": "sections/008-discussion-and-outlook.tex",
+      "expanded_start": 70849,
+      "expanded_end": 81502,
+      "location": {
+        "path": "build/v5-layout-ci-43078619869/qsc-v5-paired-documents-3/editions/physics/paper.tex",
+        "line": 1456
+      }
+    },
+    {
+      "id": "sha256:6b475a1009524019a151eafc81b9ae942d77ed346ac7a104d949d073002bd813:1",
+      "sha256": "24a3ab8a607517fd74b87f5fb0c07fcfd659406cab7eae275833ba380632a525",
+      "identity_sha256": "6b475a1009524019a151eafc81b9ae942d77ed346ac7a104d949d073002bd813",
+      "title": "Bibliography",
+      "kind": "bibliography",
+      "reviewable": false,
+      "skip_reason": "Bibliography material",
+      "file": "sections/009-bibliography.tex",
+      "expanded_start": 81502,
+      "expanded_end": 82223,
+      "location": {
+        "path": "build/v5-layout-ci-43078619869/qsc-v5-paired-documents-3/editions/physics/paper.tex",
+        "line": 1671
+      }
+    },
+    {
+      "id": "sha256:aa1ab81b53b4e597b8c7ccc6ac8d6972d94e2bb854d8bd762e31fcaf02c866c4:1",
+      "sha256": "18fa4a73e59dec3aad25cf8e19fb90545e803d3dc5d61ace89c4a340ceb87852",
+      "identity_sha256": "aa1ab81b53b4e597b8c7ccc6ac8d6972d94e2bb854d8bd762e31fcaf02c866c4",
+      "title": "Supporting mass-readout arguments",
+      "kind": "section",
+      "reviewable": true,
+      "skip_reason": null,
+      "file": "sections/010-supporting-mass-readout-arguments.tex",
+      "expanded_start": 82223,
+      "expanded_end": 88254,
+      "location": {
+        "path": "build/v5-layout-ci-43078619869/qsc-v5-paired-documents-3/editions/physics/paper.tex",
+        "line": 1689
+      }
+    }
+  ],
+  "limitations": [
+    "Lexical preparation only: no TeX execution or arbitrary macro expansion.",
+    "Conditionals, catcode changes, includeonly, TEXINPUTS or import-package paths and custom input/section macros need manual inspection.",
+    "Literal masking covers verb/lstinline and common verbatim/listing/comment environments, not every package.",
+    "Bibliography files, graphics and package inputs are not loaded or authenticated.",
+    "Context is an extraction index; its order is not manuscript theorem numbering.",
+    "Hash comparison identifies text candidates, not dependency freshness or completed reviews."
+  ],
+  "comparison": null
+}

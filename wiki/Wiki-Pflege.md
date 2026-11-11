@@ -195,3 +195,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **25.10.2026:** Erstbefüllung mit Leseweg, Versions- und Quellenkarte, Forschungsstand, Begriffen und LLM-Hinweisen. Quellenbasis: Hauptrepository-Commit `64973efe8409cfd2ae985fbbd17b4ebc95845780`. Keine Release-Payloads oder mathematischen Quellen geändert; kein neuer Beweisaudit durchgeführt.
 
 11.11.2026: Technischen Zwei-PDF-Build als abgeschlossen eingeordnet; offene fachliche Prüfung und Release-Schritte im Forschungsstand nachgezogen.
+
+11.11.2026: Fachliche Selbstprüfung der vollständigen englischen Physikfassung dokumentiert, mit Quellen-/Prämissengrenzen und unveränderten Guards.

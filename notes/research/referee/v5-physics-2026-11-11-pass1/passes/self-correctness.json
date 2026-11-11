@@ -1,0 +1,10 @@
+{
+  "pass_id": "self-correctness",
+  "issues": [],
+  "checks": [
+    "report.md: reconstructed implications in every section and all nine appendix propositions",
+    "Read qam/lean/QAM/Provenance.lean and cartan-normal-source.tex lines 14-129",
+    "No new numerical experiment, Lean run or MMA execution"
+  ],
+  "provenance": "Sequential coordinator self-review, not independent."
+}

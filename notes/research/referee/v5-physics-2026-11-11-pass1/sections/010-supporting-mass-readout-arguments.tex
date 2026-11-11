@@ -1,0 +1,147 @@
+\section{Supporting mass-readout arguments}
+For completeness, the original mathematical arguments for the conditional mass-readout statements are reproduced below. Their hypotheses refer to the comparison domains stated in the text; they do not identify a native physical readout.
+Let $x_i=\sqrt{m_i}\geq0$, $x\ne0$, and write
+\[
+ A=\frac{x_0+x_1+x_2}{3}>0,\qquad
+ u=A(1,1,1),\quad d=x-u,\quad \sum_i d_i=0.
+\]
+The cyclic permutation preserves the one-dimensional symmetric line
+and its two-dimensional orthogonal plane. It preserves their norms
+separately; it does not prescribe their ratio.
+\begin{proposition}[Koide as an equal norm condition]
+\label{v480:koide-equal-norm}
+For these nonnegative principal roots,
+\[
+ K=\frac{\sum_i x_i^2}{(\sum_i x_i)^2}
+   =\frac13+\frac{\|d\|^2}{9A^2}.
+\]
+Consequently $K=2/3$ if and only if
+$\|d\|^2=\|u\|^2=3A^2$.
+\end{proposition}
+\begin{proof}
+Since $u\perp d$, $\|x\|^2=3A^2+\|d\|^2$, while
+$(\sum_i x_i)^2=9A^2$. Division proves both assertions.
+\end{proof}
+\begin{proposition}[A sufficient HC shaped mass root realization]
+\label{v480:koide-hc-mixing}
+In a declared real three-root representation, let
+$e=(1,1,1)/\sqrt3$, let $J_m$ be an orthogonal involution, and put
+$C_m=(I+J_m)/2$. Suppose $x=\alpha C_m e$ is nonzero and
+componentwise nonnegative, with $\alpha>0$. For
+$h=\langle e,J_m e\rangle$, one has $h>-1$ and
+\[
+ K=\frac{2}{3(1+h)}.
+\]
+Hence Koide holds precisely when $\langle e,J_m e\rangle=0$.
+\end{proposition}
+\begin{proof}
+An orthogonal involution is self-adjoint, so $C_m$ is an
+orthogonal projector. Thus
+$\|C_m e\|^2=\langle e,C_m e\rangle=(1+h)/2>0$ and
+$(\sum_i x_i)^2=3\alpha^2(1+h)^2/4$. Dividing
+$\|x\|^2=\alpha^2(1+h)/2$ by this denominator gives the formula.
+\end{proof}
+\begin{proposition}[Radius and phase in the three root parametrization]
+\label{v480:koide-radius-phase}
+Every nonzero nonnegative three-root vector admits
+\[
+ x_k=A\bigl(1+r\cos(\theta+2\pi k/3)\bigr),\qquad r\geq0,
+\]
+with $K=1/3+r^2/6$. The condition $K=2/3$ is precisely $r=\sqrt2$;
+it does not fix $A$ or $\theta$.
+\end{proposition}
+\begin{proof}
+The vectors $(\cos(2\pi k/3))_{k=0}^2$ and
+$(\sin(2\pi k/3))_{k=0}^2$ form an orthogonal basis of the
+zero-sum plane, each with squared norm $3/2$. Expressing $d/A$
+in that basis gives coefficients $r\cos\theta$ and
+$-r\sin\theta$. Therefore $\|d\|^2=(3/2)A^2r^2$ and the
+previous proposition gives the formula for $K$. If $r=0$ the
+phase is arbitrary.
+\end{proof}
+\begin{proposition}[Cyclic equivariant linear maps preserve symmetric inputs]
+\label{v480:koide-equivariant-obstruction}
+Let $P$ cyclically permute three real coordinates. If a linear map
+$T$ satisfies $TP=PT$, then $T(A(1,1,1))$ remains on the symmetric
+line. It cannot produce a nondegenerate root hierarchy from that input.
+\end{proposition}
+\begin{proof}
+$Pu=u$ implies $P(Tu)=T(Pu)=Tu$. The fixed space of $P$ is
+exactly the line spanned by $(1,1,1)$.
+\end{proof}
+\begin{proposition}[descent]
+\label{v480:hc-mass-descent}
+Let $H$ be a real Hilbert space, $J$ an orthogonal involution, and
+$B:H\to\mathbb R^3$ a bounded coisometry, $BB^*=I_3$. If
+$\ker B$ is $J$-invariant, then
+\[
+ J_m=BJB^*,\qquad J_m^*=J_m,\qquad J_m^2=I_3,
+ \qquad BC=C_mB,\quad C_m=(I_3+J_m)/2.
+\]
+Conversely, any relation $BJ=J_mB$ requires $\ker B$ to be
+$J$-invariant. The descended operator is unique because $B$ is onto.
+\end{proposition}
+\begin{proof}
+Put $E=B^*B$, the orthogonal projection onto $(\ker B)^\perp$.
+Since $J$ is self-adjoint and preserves $\ker B$, it also preserves
+its orthogonal complement, so $JE=EJ$. Thus $J_m^*=J_m$ and
+$J_m^2=BJEJB^*=BEB^*=I_3$. Also
+$J_mB=BJE=BJ$, since $J$ preserves $\ker B$ and $B$ kills it.
+The identity for $C$ follows by averaging. Conversely,
+$Bk=0$ implies $BJk=J_mBk=0$. Surjectivity gives uniqueness.
+\end{proof}
+\begin{proposition}[odd obstruction]
+\label{v480:hc-mass-odd-obstruction}
+If $Jf=-f$, then $Cf=0$. Consequently any homogeneous linear
+root readout $x=BCf$ is zero. Any readout $F(Cf)$ with $F(0)=0$
+has the same obstruction on this input lane. If instead a seed is
+$J$-fixed and the descended linear route has $Bf_0=e$, then
+$J_me=e$ and its nonzero root output has $K=1/3$.
+\end{proposition}
+\begin{proof}
+The first statement follows from $Cf=(f+Jf)/2=0$.
+For the second, $J_me=BJf_0=Bf_0=e$, so $C_me=e$ and
+all three roots are equal.
+\end{proof}
+\begin{proposition}[equivariant obstruction]
+\label{v480:hc-mass-equivariant-obstruction}
+Let $U$ preserve an admitted state set and let $P$ cyclically permute
+the three root coordinates. For any readout $F$ satisfying
+$F(Uf)=PF(f)$, an input $Uf_0=f_0$ has
+$F(f_0)=a(1,1,1)$. If this is a nonzero nonnegative root vector,
+then $K=1/3$. No linearity assumption on $F$ is needed.
+\end{proposition}
+\begin{proof}
+Equivariance gives $PF(f_0)=F(Uf_0)=F(f_0)$. The fixed vectors
+of the three-cycle are exactly the constant triples.
+\end{proof}
+\begin{proposition}[triole bound]
+\label{v480:hc-mass-triole-bound}
+Let $z_0+z_1+z_2=0$ in a normed vector space, not all $z_i=0$.
+Under the specific identification $m_i=\kappa\|z_i\|^2$ with a
+common $\kappa>0$, the principal-root ratio satisfies
+\[
+ \frac13\leq K\leq\frac12.
+\]
+In particular it cannot equal $2/3$.
+\end{proposition}
+\begin{proof}
+Put $r_i=\|z_i\|$ and $s=\sum_i r_i>0$. The triangle inequality
+gives $r_i\leq s-r_i$, hence $r_i\leq s/2$. Therefore
+$\sum_i r_i^2\leq(s/2)\sum_i r_i=s^2/2$.
+Cauchy--Schwarz gives the lower bound, and the common mass scale
+cancels from $K$.
+\end{proof}
+\begin{proposition}[fit freedom]
+\label{v480:hc-mass-fit-freedom}
+For every nonzero nonnegative triple $x$, there exist an orthogonal
+involution $J_x$ and $\alpha_x>0$ such that
+$x=\alpha_x(I+J_x)e/2$. Thus existence of an HC-shaped operator
+chosen after the masses is not a prediction of Koide or a hierarchy.
+\end{proposition}
+\begin{proof}
+Set $C_x=xx^{\mathsf T}/\|x\|^2$ and $J_x=2C_x-I_3$.
+This is an orthogonal involution. Since $s=\sum_i x_i>0$,
+$C_xe=sx/(\sqrt3\|x\|^2)$, so choose
+$\alpha_x=\sqrt3\|x\|^2/s$.
+\end{proof}
