@@ -1,0 +1,148 @@
+{
+  "source_run": 43087358029,
+  "payload": {
+    "format": "qsc-english-draft-payload-v1",
+    "source_commit": "802c7af9e672f138461ffb112b0fcd43b7b79c58",
+    "snapshot_hash": "63250fead33996bf0ad45483d8d5856c71648df6d202431fcab201c7bbf1e212",
+    "documents": {
+      "full": {
+        "returncode": 0,
+        "passes": 3,
+        "pdf_present": true,
+        "technical_check_passed": true,
+        "findings": {
+          "undefined_references": 0,
+          "multiply_defined_labels": 0,
+          "rerun_requests": 0,
+          "overfull_boxes": 0
+        },
+        "edition_hash": "4a4295b10e04d7219bc57f46751f7d07fa3d8fc1271c9dd393e5839737587290",
+        "incomplete_argument_review": true,
+        "assembly_sha256": "cb838a176ce7282dcc70f2585ee61cb4065e6bb4fd3f4b3d0812f7ba26f171dc",
+        "package_pdf": "Quantum_Sphaera_Companion_v5_0_0_draft_full.pdf",
+        "pdf_sha256": "d9243fdf7b18edc1dae5cae874a31babd3d17f8208399787dd7ce36e22a921c0"
+      },
+      "physics": {
+        "returncode": 0,
+        "passes": 2,
+        "pdf_present": true,
+        "technical_check_passed": true,
+        "findings": {
+          "undefined_references": 0,
+          "multiply_defined_labels": 0,
+          "rerun_requests": 0,
+          "overfull_boxes": 0
+        },
+        "edition_hash": "457d23dbfa6428de4e7373aa5a7d5a947b1dc8ba6827b19fd3023cf2ffdd2655",
+        "incomplete_argument_review": true,
+        "assembly_sha256": "f075108c47012b49ef8d3ff84e8b4ce5af38803d6ab8568107d72f934e4631d6",
+        "package_pdf": "Quantum_Sphaera_Companion_v5_0_0_draft_physics.pdf",
+        "pdf_sha256": "3be664fc3ce4b679fcb9f1fce3584d17bfbe5c6c358cf2d155737880f32b6e46"
+      }
+    },
+    "input_checksums_verified": 111,
+    "source_archive_entries": 86,
+    "excluded_narrative_reports": [
+      "README.md",
+      "editions/full-outline.md",
+      "editions/full/source/notes/research/hc_identification_store_review_2026_11_11.md",
+      "editions/full/source/notes/research/hc_koide_bridge_review_2026_11_11.md",
+      "editions/full/source/notes/research/hc_native_selection_gate_2026_11_11.md",
+      "editions/full/source/notes/research/hc_root_transfer_rotation_gate_2026_11_11.md",
+      "editions/full/source/notes/research/koide_store_branch_review_2026_11_11.md",
+      "editions/full/source/notes/research/zeta_positive_spectral_packet_2026_11_11.md",
+      "editions/full/source/notes/research/zeta_prime_operator_uncertainty_2026_11_11.md",
+      "editions/physics-outline.md",
+      "editions/physics/audit.md"
+    ],
+    "german_reader_included": false,
+    "publication_ready": false,
+    "doi_reserved": false,
+    "uploaded": false,
+    "database_integrity": "ok"
+  },
+  "files": [
+    {
+      "name": "build-manifest.json",
+      "size": 12428,
+      "sha256": "570ea072de35a4bdef61c67eefa22a076a531ab6d0c05ad7124e9e222d22cacb"
+    },
+    {
+      "name": "package-manifest.json",
+      "size": 2587,
+      "sha256": "2dc7bbd4fa57ff4ad4d1f32c52d91df0e368bf2e96df8fa0f959a01856dc6e9b"
+    },
+    {
+      "name": "qam.sqlite3",
+      "size": 53780480,
+      "sha256": "83558696b16473ca7b1113b9e1b0c15c1a37a166276cbe4ae88ea33eeaedaca7"
+    },
+    {
+      "name": "Quantum_Sphaera_Companion_v5_0_0_draft_full.pdf",
+      "size": 19837278,
+      "sha256": "d9243fdf7b18edc1dae5cae874a31babd3d17f8208399787dd7ce36e22a921c0"
+    },
+    {
+      "name": "Quantum_Sphaera_Companion_v5_0_0_draft_physics.pdf",
+      "size": 375764,
+      "sha256": "3be664fc3ce4b679fcb9f1fce3584d17bfbe5c6c358cf2d155737880f32b6e46"
+    },
+    {
+      "name": "Quantum_Sphaera_v5_0_0_draft_english_sources.zip",
+      "size": 1503275,
+      "sha256": "00b0f48912dfcf91b368c1bdbc8ca8bf0a5fb70e97b181216853a906b4e9bba0"
+    },
+    {
+      "name": "README.md",
+      "size": 602,
+      "sha256": "18ee59b398803d4c3c0c5d73be97ac5d77dbdca6e3797668faf13b2dcf9cb5f0"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "size": 681,
+      "sha256": "c157511597546c371d1e87aa55fe8ec8124d41d55c0a77856a1184604620d33b"
+    }
+  ],
+  "standalone_source_compilation": {
+    "full": {
+      "returncode": 0,
+      "passes": 3,
+      "pdf_present": true,
+      "technical_check_passed": true,
+      "findings": {
+        "undefined_references": 0,
+        "multiply_defined_labels": 0,
+        "rerun_requests": 0,
+        "overfull_boxes": 0
+      }
+    },
+    "physics": {
+      "returncode": 0,
+      "passes": 2,
+      "pdf_present": true,
+      "technical_check_passed": true,
+      "findings": {
+        "undefined_references": 0,
+        "multiply_defined_labels": 0,
+        "rerun_requests": 0,
+        "overfull_boxes": 0
+      }
+    }
+  },
+  "dry_run_passed": true,
+  "tamper_rejected": true,
+  "archive_reproducible": true,
+  "visual_pages": {
+    "full": [
+      1
+    ],
+    "physics": [
+      1,
+      12,
+      14,
+      15,
+      16
+    ]
+  },
+  "scope": "Technical English-only draft package; not a final release or publication approval"
+}

@@ -68,3 +68,11 @@ exact PDF filename through `--default-preview`.
 
 See `../../notes/anleitungen/zenodo-release.md` and the scoped self-review
 under `../../notes/research/referee/v5-physics-2026-11-11-pass1/`.
+
+## English upload selection
+
+The author requested English texts only. The concrete inspected draft
+payload, source-archive boundaries and validation are documented in
+ENGLISH_PAYLOAD.md and ENGLISH_PAYLOAD_VALIDATION.json. The German reader
+edition and German narrative notes are excluded. All earlier preparation
+PRs #95–#97 have been merged. Final DOI/title-page work remains pending.

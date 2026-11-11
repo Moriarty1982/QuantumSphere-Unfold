@@ -850,3 +850,16 @@ Satz-/Verweisbefunde. Die 17 vom Textumbruch betroffenen englischen und
 deutschen Seiten wurden gesichtet. Native Auslese, Präparation, Skala und
 regionale Existenz bleiben offen; keine Änderung der wissenschaftlichen
 Guards oder Veröffentlichung.
+
+
+### Englisches Veröffentlichungspaket
+
+Auf Autorenwunsch enthält der vorbereitete Upload nur die englische
+Langfassung und das englische Physikpaper. Die deutsche Lesefassung und
+deutsche redaktionelle Markdown-Berichte bleiben draußen. Das Paket
+ergänzt die englischen Quellen, den maschinenlesbaren Datenbankstand,
+Belege und Prüfsummen. Grundlage ist main 802c7af und der erfolgreiche
+GitHub-Lauf 43087358029. Beide Dokumente ließen sich zusätzlich direkt
+aus dem gepackten Quellenarchiv fehlerfrei bauen. Der vollständige lokale
+Trockenlauf ist erfolgreich; DOI-Reservierung, endgültige Titelseiten und
+Zenodo-Upload sind noch nicht ausgeführt.
