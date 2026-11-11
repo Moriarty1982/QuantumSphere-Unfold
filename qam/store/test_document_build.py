@@ -3,11 +3,20 @@ import json
 from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest
+from unittest.mock import patch
 
-from qam.tools.build_v5_documents import finalize_package, log_findings, verify_export
+from qam.tools.build_v5_documents import finalize_package, git_metadata, log_findings, verify_export
 
 
 class DocumentBuildTests(unittest.TestCase):
+    def test_container_git_trust_is_limited_to_one_checkout_and_command(self):
+        with TemporaryDirectory() as folder:
+            root = Path(folder).resolve()
+            with patch('qam.tools.build_v5_documents.subprocess.check_output', return_value='abc\n') as run:
+                self.assertEqual(git_metadata(root, 'rev-parse', 'HEAD'), 'abc')
+            run.assert_called_once_with(['git', '-c', 'safe.directory=' + str(root), 'rev-parse', 'HEAD'],
+                                        cwd=root, text=True)
+
     def test_missing_or_failed_document_never_completes_pair(self):
         with TemporaryDirectory() as folder:
             root = Path(folder)

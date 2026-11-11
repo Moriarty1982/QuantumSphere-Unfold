@@ -1,0 +1,659 @@
+{
+  "format": "qsc-layout-inventory-v1",
+  "source_log_sha256": "f96d53e1dbda6997792d80dcb3ebade8635ddeafde9ac93b834186fa09e41fe3",
+  "source_snapshot": "1ca5b8bfb5b78f8a498413bbbb64444323c904d727c94f830eae2be80c802f3d",
+  "source_mapping": "Most recently opened parts/*.tex in the compiler log; verify each hint against source before editing.",
+  "ci_run": 43067072925,
+  "compiler_header": [
+    "This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2026.4.26)  11 NOV 2026 17:21",
+    "entering extended mode",
+    " file:line:error style messages enabled.",
+    " %&-line parsing enabled."
+  ],
+  "source_sha256": {
+    "sources/research/parts/v470/36_frame_typed_endpoint.tex": "d88dcb6da18504283f7604a4061c2c7264857408e6e37f7be94c309f65eb474f",
+    "sources/research/parts/v470/34_mm_hc_and_c5_development.tex": "23b05ef996fd52d760a813c7cac8bbbda95a8410353da0fd546aef7d20f3e252"
+  },
+  "count": 45,
+  "by_kind": {
+    "paragraph": 1,
+    "display-or-box": 44
+  },
+  "by_source_hint": {
+    "sources/research/parts/v470/34_mm_hc_and_c5_development.tex": 44,
+    "sources/research/parts/v470/36_frame_typed_endpoint.tex": 1
+  },
+  "max_overflow_pt": 400.3517,
+  "findings": [
+    {
+      "log_line": 1277,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 3902,
+      "tex_line_end": 3912,
+      "overflow_pt": 84.66396,
+      "kind": "paragraph",
+      "message": "Overfull \\hbox (84.66396pt too wide) in paragraph at lines 3902--3912",
+      "context": [
+        " [] ",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1282,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 4033,
+      "tex_line_end": 4033,
+      "overflow_pt": 21.9621,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (21.9621pt too wide) detected at line 4033",
+      "context": [
+        "[]\\OML/cmm/m/it/12 ;  [];  []:",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1287,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 4188,
+      "tex_line_end": 4188,
+      "overflow_pt": 5.37303,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (5.37303pt too wide) detected at line 4188",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1292,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 4254,
+      "tex_line_end": 4254,
+      "overflow_pt": 43.73773,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (43.73773pt too wide) detected at line 4254",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1300,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 6279,
+      "tex_line_end": 6279,
+      "overflow_pt": 86.37376,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (86.37376pt too wide) detected at line 6279",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1305,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 6379,
+      "tex_line_end": 6379,
+      "overflow_pt": 23.4181,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (23.4181pt too wide) detected at line 6379",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1316,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 6678,
+      "tex_line_end": 6678,
+      "overflow_pt": 136.0847,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (136.0847pt too wide) detected at line 6678",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1322,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 8107,
+      "tex_line_end": 8107,
+      "overflow_pt": 299.50616,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (299.50616pt too wide) detected at line 8107",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1327,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 8210,
+      "tex_line_end": 8210,
+      "overflow_pt": 134.93835,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (134.93835pt too wide) detected at line 8210",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1332,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 8339,
+      "tex_line_end": 8339,
+      "overflow_pt": 400.3517,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (400.3517pt too wide) detected at line 8339",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1337,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 8573,
+      "tex_line_end": 8573,
+      "overflow_pt": 400.3517,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (400.3517pt too wide) detected at line 8573",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1342,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 8784,
+      "tex_line_end": 8784,
+      "overflow_pt": 400.3517,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (400.3517pt too wide) detected at line 8784",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1347,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 8921,
+      "tex_line_end": 8921,
+      "overflow_pt": 400.3517,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (400.3517pt too wide) detected at line 8921",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1352,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 8952,
+      "tex_line_end": 8952,
+      "overflow_pt": 70.51807,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (70.51807pt too wide) detected at line 8952",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1357,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 8984,
+      "tex_line_end": 8984,
+      "overflow_pt": 142.61305,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (142.61305pt too wide) detected at line 8984",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1362,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 9053,
+      "tex_line_end": 9053,
+      "overflow_pt": 400.3517,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (400.3517pt too wide) detected at line 9053",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1367,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 9074,
+      "tex_line_end": 9074,
+      "overflow_pt": 146.63124,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (146.63124pt too wide) detected at line 9074",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1372,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 9185,
+      "tex_line_end": 9185,
+      "overflow_pt": 400.3517,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (400.3517pt too wide) detected at line 9185",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1377,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 9203,
+      "tex_line_end": 9203,
+      "overflow_pt": 112.85126,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (112.85126pt too wide) detected at line 9203",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1382,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 9306,
+      "tex_line_end": 9306,
+      "overflow_pt": 143.92868,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (143.92868pt too wide) detected at line 9306",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1387,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 9336,
+      "tex_line_end": 9336,
+      "overflow_pt": 400.3517,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (400.3517pt too wide) detected at line 9336",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1392,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 9358,
+      "tex_line_end": 9358,
+      "overflow_pt": 220.7816,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (220.7816pt too wide) detected at line 9358",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1397,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 9505,
+      "tex_line_end": 9505,
+      "overflow_pt": 239.58469,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (239.58469pt too wide) detected at line 9505",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1402,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 9543,
+      "tex_line_end": 9543,
+      "overflow_pt": 400.3517,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (400.3517pt too wide) detected at line 9543",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1407,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 9566,
+      "tex_line_end": 9566,
+      "overflow_pt": 232.26164,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (232.26164pt too wide) detected at line 9566",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1412,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 9662,
+      "tex_line_end": 9662,
+      "overflow_pt": 345.58449,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (345.58449pt too wide) detected at line 9662",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1417,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 9691,
+      "tex_line_end": 9691,
+      "overflow_pt": 400.3517,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (400.3517pt too wide) detected at line 9691",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1422,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 9718,
+      "tex_line_end": 9718,
+      "overflow_pt": 193.54025,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (193.54025pt too wide) detected at line 9718",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1427,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 9762,
+      "tex_line_end": 9762,
+      "overflow_pt": 152.51433,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (152.51433pt too wide) detected at line 9762",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1432,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 9896,
+      "tex_line_end": 9896,
+      "overflow_pt": 400.3517,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (400.3517pt too wide) detected at line 9896",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1437,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 9926,
+      "tex_line_end": 9926,
+      "overflow_pt": 168.75285,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (168.75285pt too wide) detected at line 9926",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1442,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 10083,
+      "tex_line_end": 10083,
+      "overflow_pt": 400.3517,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (400.3517pt too wide) detected at line 10083",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1447,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 10103,
+      "tex_line_end": 10103,
+      "overflow_pt": 89.55875,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (89.55875pt too wide) detected at line 10103",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1452,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 10312,
+      "tex_line_end": 10312,
+      "overflow_pt": 400.3517,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (400.3517pt too wide) detected at line 10312",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1457,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 10334,
+      "tex_line_end": 10334,
+      "overflow_pt": 275.42325,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (275.42325pt too wide) detected at line 10334",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1462,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 10510,
+      "tex_line_end": 10510,
+      "overflow_pt": 400.3517,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (400.3517pt too wide) detected at line 10510",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1467,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 10530,
+      "tex_line_end": 10530,
+      "overflow_pt": 296.99243,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (296.99243pt too wide) detected at line 10530",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1472,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 10608,
+      "tex_line_end": 10608,
+      "overflow_pt": 400.3517,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (400.3517pt too wide) detected at line 10608",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1477,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 10655,
+      "tex_line_end": 10655,
+      "overflow_pt": 339.5961,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (339.5961pt too wide) detected at line 10655",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1484,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 10775,
+      "tex_line_end": 10775,
+      "overflow_pt": 400.3517,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (400.3517pt too wide) detected at line 10775",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1489,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 10809,
+      "tex_line_end": 10809,
+      "overflow_pt": 203.30032,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (203.30032pt too wide) detected at line 10809",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1494,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 10913,
+      "tex_line_end": 10913,
+      "overflow_pt": 19.4604,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (19.4604pt too wide) detected at line 10913",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1501,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 10957,
+      "tex_line_end": 10957,
+      "overflow_pt": 400.3517,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (400.3517pt too wide) detected at line 10957",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1506,
+      "source_hint": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "tex_line_start": 10977,
+      "tex_line_end": 10977,
+      "overflow_pt": 335.1812,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (335.1812pt too wide) detected at line 10977",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    },
+    {
+      "log_line": 1514,
+      "source_hint": "sources/research/parts/v470/36_frame_typed_endpoint.tex",
+      "tex_line_start": 340,
+      "tex_line_end": 340,
+      "overflow_pt": 32.53555,
+      "kind": "display-or-box",
+      "message": "Overfull \\hbox (32.53555pt too wide) detected at line 340",
+      "context": [
+        "[]",
+        " []",
+        ""
+      ]
+    }
+  ]
+}

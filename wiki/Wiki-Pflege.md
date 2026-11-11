@@ -1,5 +1,9 @@
 # Wiki-Pflege
 
+**11.11.2026, CI-Portabilität:** Forschungsstand um die Fehler des ersten
+GitHub-Paarbuilds und des Windows-Quellchecks sowie die begrenzte Reparatur
+ergänzt. Quellen und Reviewhashes unverändert; keine Beweisaufwertung.
+
 **11.11.2026, gemeinsamer Dokumentbau:** Forschungsstand um den gemeinsamen
 Entwurfsbuild für Langfassung und Physikpaper ergänzt. Quellen-/Verweisprüfung,
 gemeinsame Nachweise, Fehlerstatus und 58 verbleibende Satzüberläufe im
