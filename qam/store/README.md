@@ -1,5 +1,10 @@
 # QAM store – erster Aufbauschritt
 
+Dokumententwicklung seit 11.11.2026: **v5.0.0-draft**. Dies bezeichnet die
+datenbankgestützte Dokumentarchitektur, nicht eine neue Schemamigration oder
+eine mathematische Beweisfreigabe. Die historische Aufbauchronik unten bleibt
+erhalten. Aktueller Umfang: `notes/research/v5_0_0_development.md`.
+
 Die erste Migration ergänzt die lokale QAM-Datenbank um Tabellen mit dem Präfix qstore_. Die bestehenden Claim-, Prämissen-, Cache- und Belegtabellen sowie das Manuskriptinventar werden bei der Initialisierung erhalten.
 
 Aufruf aus dem Repository mit `python -m qam.tools.store_db`. Für eine andere Datenbank dient `--db PFAD`. Wiederholte Initialisierung ist idempotent. Migration und Typenkatalog werden in einer gemeinsamen Schreibtransaktion angelegt. Unbekannte Schemaversionen und abweichende Typenkataloge führen zum Abbruch.

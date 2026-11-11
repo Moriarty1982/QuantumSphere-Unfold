@@ -561,3 +561,31 @@ Die beschränkte R/S-Unschärferelation bleibt gültig. Keine OP-Schließung.
 > `notes/research/zeta_hc_uncertainty_exploration_2026_11_11.md` enthält
 > Herleitungen, Grenzfälle und externe Primärquellen. Analytische Erkundung,
 > kein blinder Test und keine neue QAM-Beweisfreigabe.
+
+### Arithmetischer Operator und Start von 5.0.0-draft (11.11.2026)
+
+Die gemeinsame Zeta-/Unschärferoute wurde konkretisiert: Für $\sigma>1$
+liefert $a_\sigma(t)=\operatorname{Im}(\zeta'/\zeta)(\sigma+it)$ einen
+reellen ungeraden, aus Primzahlpotenzen bestimmten Multiplikator.
+Der beschränkte selbstadjungierte Operator $A_\sigma$ antikommutiert
+mit der Parität $R$. Die Robertson-Relation ist damit arithmetisch
+angebunden. Sie erzwingt am geraden Zeta-Profil aber keine HC-Balance.
+
+Die stärkere Auswahl über Eigenzustände von $-iRA_\sigma$ scheitert in
+diesem kontinuierlichen Modell: Sein Quadrat multipliziert mit der
+nichtkonstanten reell-analytischen Funktion $a_\sigma^2$; die benötigten
+Niveaumengen haben Maß null. Es gibt daher keine nichtnulligen normierbaren
+Eigenzustände. Dies begrenzt diese konkrete Auswahlroute. Eine native
+nichtlokale Kopplung oder andere Zustandsauswahl bleibt zu konstruieren.
+Ein Übergang zur kritischen Linie ist durch diese Rechnung nicht gedeckt.
+
+Die Dokumententwicklung heißt jetzt **v5.0.0-draft**. Der Hauptversionssprung
+kennzeichnet Aussageninventar, Inhaltsversionen, Abhängigkeiten, Guards und
+ausgewählte LaTeX-Exporte. Die Migration zum vollständig geprüften
+Argumentationsbaum ist noch offen. Öffentliche Baseline bleibt v4.11.0;
+kein neuer Release, keine neue Version-DOI und keine OP-Schließung.
+
+> Anmerkung für LLMs und Quellenprüfung:
+> `notes/research/zeta_prime_operator_uncertainty_2026_11_11.md`
+> enthält die analytische Erkundung, `notes/research/v5_0_0_development.md`
+> den Versionsumfang. Keine numerische Simulation und keine QAM-Beweisfreigabe.

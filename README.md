@@ -4,6 +4,16 @@
 
 Structure-first mathematical companion material for the Quantum Sphaera / Sphere Framework project.
 
+## Current development line
+
+`v5.0.0-draft` (2026-11-11) starts the database-backed document architecture:
+registered statements, immutable versions, explicit dependencies and open guards,
+and selected LaTeX exports. The complete manuscript remains available while
+its database representation is reviewed. This development version is unpublished;
+the public release and its citation remain v4.11.0 below.
+See [the development scope](notes/research/v5_0_0_development.md) and
+[the statement store](qam/store/README.md).
+
 ## Current public baseline
 
 - Public version: `v4.11.0` (2026-11-10)

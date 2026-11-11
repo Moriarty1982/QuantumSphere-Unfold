@@ -6,6 +6,12 @@ Dieses Wiki erschließt den **Quantum Sphaera Companion**: ein strukturorientier
 
 ## Einstieg
 
+**Entwicklung seit 11. November 2026:** v5.0.0-draft führt ein
+datenbankgestütztes Aussageninventar mit Inhaltsversionen, Abhängigkeiten,
+offenen Guards und ausgewählten LaTeX-Exporten ein. Der vollständige
+Argumentationsbaum ist noch nicht geprüft. Die 5.0-Fassung ist unveröffentlicht
+und hat keine eigene Version-DOI; öffentliche Baseline bleibt v4.11.0.
+
 - **[Gesamtbild](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Gesamtbild):** das ganze Werk auf einer Seite: Mindmap, die zentralen Thesen mit ihrem heutigen Stand und eine Karte, wo was im Dokument steht.
 - **[Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt):** der Inhalt selbst, Teil für Teil: Annahmen, Definitionen, Ergebnisse und wie weit sie heute tragen.
 - **[Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie):** was die Runden seit v4.8.0 ergeben haben, nach Themen.

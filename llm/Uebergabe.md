@@ -1,35 +1,35 @@
 # Übergabe: Stand der letzten Sitzung
 
-11. November 2026 (Codex). Einstieg, keine vollständige Forschungsgeschichte.
+11. November 2026 (Codex).
 
-- Branch: `codex/qam-statement-store`; letzter Commit vor dieser Erkundung `236bc76`.
-- Öffentliche Baseline laut Repo: v4.11.0; kein Release in diesem Block.
-- Änderungen dieses Blocks: HC-Zweig (5 Aussagen/Originalbeweise) und bedingter HC–Koide-Anschluss mit quellengebundener Selbstprüfung.
-- Koide/HC-Quellen unverändert. Abstrakte Aussagen gelten unter den expliziten Hypothesen; native Realisierung bleibt offen.
-- Koide-Anschluss: K=2/[3(1+h)], h=<B*e,JB*e>; Koide genau bei h=0.
-- Drei neue Guards: native Abbildung/Seed/Wurzelgesetz; unabhängige Orthogonalität; maschinenprüfbare Frame-Abbildung.
-- Frame-Warnung bleibt bewusst bestehen; kein impliziter M/T/P-Wechsel.
-- Aktuelle DB: `build/qam.sqlite3`. Generierte Dateien sind lokale Buildartefakte.
+- Branch `codex/qam-statement-store`; letzter Commit vor diesem Block `9608e6a`.
+- Entwicklungsversion jetzt **5.0.0-draft**, auf Autorenanregung wegen Datenbankarchitektur.
+- Öffentliche Baseline bleibt v4.11.0, DOI 10.5281/zenodo.24108818. Kein neuer Release/DOI/Push/Merge.
+- Working-preamble (Titel/Datum/PDF-Metadaten), Orientierung, README, AGENTS und Wiki aktualisiert.
+- Versionsumfang: `notes/research/v5_0_0_development.md`; DB-Schema v5 ist davon unabhängig.
+- Gesamtinventar: 2468 Aussagen/61 Dateien; vollständige Beweisabhängigkeiten weiterhin ungeprüft.
+- DB: `build/qam.sqlite3`; lokale Builddateien nicht als einzige Reproduktionsquelle verwenden.
+- Kuratierte Koide-/HC-Zweige und bedingte Verbindung existieren; native Guards offen.
 - Bridge-Snapshot: `14a0793aec6832a8471ac18bf2c3305be1f47de08ab8970fa44780a74252e6dc`.
-- Baum/LaTeX: `build/qam-hc-koide-bridge/argument.md` und `paper/paper.tex`.
-- Reproduktion: `python -m qam.tools.review_hc_koide_bridge --out build/hc-koide-new` (neuer Zielordner).
-- Berichte: `notes/research/hc_identification_store_review_2026_11_11.md`, `hc_koide_bridge_review_2026_11_11.md`.
-- Neue Regressionstests prüfen Originalzuordnung, transitive Auswahl, offene Guards, Quellenänderungen und Idempotenz.
-- Validierung: 26 Storetests und 18 HC-Tests erfolgreich; statischer LaTeX-Export bestanden, kein PDF-Build dieses Blocks.
-- Keine neue H-/k-Nummer. Bisherige Übergabe nannte H98/k219; nicht neu vergeben.
-- `.codex/environments/` bleibt außerhalb des Commits.
-- Kein Push/Merge in diesem Block; GitHub-PRs/Actions hier nicht neu abgefragt.
-- Aktuelle Erkundung: `notes/research/zeta_hc_uncertainty_exploration_2026_11_11.md`.
-- Paritäts-HC R plus gerades Zeta-Profil: h=1; keine Koide-Balance. S=sign(t) ist eine zusätzliche Auslesung.
-- RS=-SR liefert Robertson. Sättigung allein selektiert keine Balance; Eigenzustände von T=-iRS würden sie liefern.
-- T-Auswahl und native Identifikation fehlen. Konstruktion nicht zetaspezifisch. Scharfe Signumzustände bei f(0)≠0 liegen nicht in der Impulsdomäne H¹.
-- Validierung dieses Folgeblocks: direkte Operatorherleitung und mathematische Selbstprüfung, keine numerische Rechnung oder neuen Tests; Original-TeX und QAM-Guards unverändert.
-- Nächster Schritt auf Wunsch des Autors: nativen zweiten selbstadjungierten Operator A mit AJ=-JA und eine vorhandene Auswahlregel für -iJA suchen. Kein weiterer Zeta-/Massenfit davor.
+- Neue Erkundung: `notes/research/zeta_prime_operator_uncertainty_2026_11_11.md`.
+- A_sigma multipliziert mit Im(zeta'/zeta)(sigma+it), sigma>1; beschränkt selbstadjungiert, antikommutiert mit Parität R.
+- Robertson-Relation hergeleitet; gerades Zeta-Profil bleibt unbalanciert für R.
+- T_sigma=-iRA_sigma besitzt im kontinuierlichen L²-Modell keine nichtnulligen normierbaren Eigenzustände.
+- Deshalb scheitert diese exakte Zustandsauswahl; keine allgemeine Widerlegung der Autorenidee.
+- Signum-Abflachung oder lokalisierte Pakete wären zusätzliche, nicht nativ begründete Operationen.
+- Kein ungeprüfter Übergang zur kritischen Linie und keine Reaktivierung alter RH-Spektralbehauptungen.
+- Analytische Selbstprüfung, nicht blind, keine numerische Rechnung, keine neue H-/k-Nummer.
+- Vorherige H-/k-Angabe H98/k219 nicht neu verifiziert oder vergeben.
+- Vorige Storevalidierung: 26 Tests; HC:18. Dieses Mal nur Forschungstext/Metadaten geändert.
+- Kein neuer vollständiger PDF-Build. CITATION und veröffentlichte Release-Dateien bleiben bei 4.11.0.
+- Quellenfrische beachten: Working-orientation wurde geändert; alte Inventarhashes nicht überschreiben.
+- Nächster Schritt Forschung: native nichtlokale Kopplung/Generator mit normalisierbaren Auswahlzuständen suchen, vor weiteren Simulationen.
+- Nächster Schritt Architektur: typisierte Frame-Abbildungen; danach weitere fachliche Teilprüfungen/5.0-Paper-Auswahl.
+- `.codex/environments/` außerhalb des Commits belassen.
 
-## Voriger Stand
+## Davor
 
-Gesamtinventar: 2468 Aussagen aus 61 Dateien, Rohimporte mit offenen Prüfpflichten.
-Koide-Zweig: vier Selbstprüfungen, originale Beweise, sechs offene native Guards.
-Die frühere lange Übergabe ist unter
-`notes/research/qam_store_handoff_history_2026_11_11.md` erhalten.
-OP1–OP5 und sonstige offene physikalische Identifikationen bleiben unverändert offen.
+`9608e6a`: generische R/S-Unschärfe, zusätzliche T-Auswahl und Impulsdomänengrenze.
+`236bc76`: HC-Originalbeweise und bedingter Koide-Anschluss, keine native Schließung.
+Alte lange Übergabe: `notes/research/qam_store_handoff_history_2026_11_11.md`.
+OP1–OP5 und sonstige offene physikalische Identifikationen bleiben offen.
