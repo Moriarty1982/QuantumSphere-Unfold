@@ -45,6 +45,12 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 11.11.2026: Forschungsstand – positive Spektralauswahl von Massenpositivität getrennt; explizites reguläres Zeta-Paket mit HC-Balance und endlichen Parameter-/Fourier-Streuungen dokumentiert.
+
+- 11.11.2026: Forschungsstand – Basisrotationen der quadratischen Auslesung und scharfe 5/9-Grenze positiver antipodaler Zustandspaare eingeordnet; native Zweigauswahl offen.
+
+- 11.11.2026: Forschungsstand – nach PR #93 HC-wechselnden Kopplungsblock von Closure-Leckage getrennt und die bedingte 5/9-Grenze der positiven quadratischen Zwei-Moden-Auslesung dokumentiert.
+
 - 11.11.2026: Home, Gesamtbild, Versionen und Quellen, Forschungsstand – Entwicklungslinie 5.0.0-draft von öffentlicher 4.11.0 getrennt; arithmetischen HC-Partner und Grenze seiner Eigenzustandsauswahl dokumentiert.
 
 - 11.11.2026: Forschungsstand – Zeta/HC/Unschärfe-Erkundung: Paritätsgrenze, antikommutierende Auslesungen, zusätzliche T-Auswahl und Impulsdomänengrenze dokumentiert.

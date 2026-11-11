@@ -589,3 +589,91 @@ kein neuer Release, keine neue Version-DOI und keine OP-Schließung.
 > `notes/research/zeta_prime_operator_uncertainty_2026_11_11.md`
 > enthält die analytische Erkundung, `notes/research/v5_0_0_development.md`
 > den Versionsumfang. Keine numerische Simulation und keine QAM-Beweisfreigabe.
+
+### Native Auswahl und Auslesung nach PR #93 (11.11.2026)
+
+Die Rückwärtssuche trennt Closure-Leckage und HC-Sektorwechsel. Unter
+den bestehenden Vergleichsannahmen $[P,J]=0$ ist nur der Block
+$(I-P)R_oP$ mit $R_o=(\widetilde R-J\widetilde R J)/2$ ein Kandidat
+für den gesuchten HC-wechselnden Anteil. Ein mit $J$ kommutierender
+Taktgeber liefert diesen Anteil nicht, auch wenn er Closure-Leckage besitzt.
+Der native Block ist weiterhin nicht ausgewertet.
+
+Eine nichtnullige endliche oder kompakte selbstadjungierte ungerade
+Kopplung könnte normalisierbare balancierte Auswahlzustände liefern.
+Ihre Existenz und eine physikalische Präparationsregel sind verschiedene
+Pflichten. Auch die Wurzelauslesung ist zusätzlich zu prüfen: In der
+vorhandenen quadratischen Zwei-Moden-Vergleichsauslesung liefert der
+Zustand $(1,i)/\sqrt2$ trotz HC-Balance $K=1/3$.
+
+Wird deren Zwei-Moden-Basis ausdrücklich mit $J=\operatorname{diag}(1,-1)$
+identifiziert, gilt für jede balancierte Eingabe und positive Auslesung
+sogar $K\leq5/9$. Diese scharfe Schranke betrifft genau diese zusätzliche
+Identifikation und dieses Wurzelgesetz; sie ist kein allgemeines Koide-Verbot.
+Die notwendige native Kopplung und der Transfer zur Massenauslesung bleiben offen.
+
+> Anmerkung für LLMs und Quellenprüfung:
+> `notes/research/hc_native_selection_gate_2026_11_11.md`; analytische,
+> nicht blinde Erkundung. Kein neuer numerischer Test oder OP-Abschluss.
+
+### Basisrotation und positive Zweigauswahl (11.11.2026)
+
+Die Rückwärtssuche hat alle festen unitären Zwei-Moden-Basisrotationen
+der vorhandenen quadratischen Auslesung erfasst. Soll die gesamte
+HC-Balancefamilie Koide liefern, muss die ausgelassene Bloch-Achse mit
+der HC-Achse übereinstimmen und der Transferparameter eins sein. Dann
+durchläuft die Auslesung jedoch auch negative Wurzelwerte. Eine globale
+Reparatur durch diese Basisrotation ist daher ausgeschlossen; die
+bekannten eingeschränkten positiven Phasenkammern bleiben möglich.
+
+Schon für ein antipodales Zustandspaar mit Auslesungen $cI_3\pm D$,
+$c>0$ und $\operatorname{Tr}D=0$, gilt: Sind beide positiv, so ist
+$K\leq5/9$. Beide können also nicht zugleich positive Koide-Zweige
+sein. Ein Mechanismus für balancierte Auswahlzustände benötigt zusätzlich
+eine native Entscheidung für einen zulässigen Zweig oder eine andere
+Auslesung. Dies ist eine bedingte Vergleichsgrenze, kein allgemeines
+Verbot einer Zeta-/Unschärfekopplung.
+
+> Anmerkung für LLMs und Quellenprüfung:
+> `notes/research/hc_root_transfer_rotation_gate_2026_11_11.md`;
+> analytische Erkundung ohne Massenfit, Simulation oder OP-Schließung.
+
+Eine zusätzliche analytische Fortsetzung trennt positive Energie und
+positive Masse: Für eine selbstadjungierte HC-ungerade Kopplung $A$
+bildet $J$ den positiven Spektralraum auf den negativen ab. Jeder Zustand
+im strikt positiven Spektralraum ist daher HC-balanciert. Das gilt auch
+bei kontinuierlichem Spektrum ohne normierbare Eigenvektoren und eröffnet
+eine bedingte Alternative zur gescheiterten exakten Eigenzustandsauswahl
+des arithmetischen Operators.
+
+Die native Zulässigkeit und Erhaltung dieses Spektralraums bleiben offen,
+ebenso der Transfer in eine positive Wurzelkammer. Die bloße Positivität
+von $|A|$ oder $A^2$ genügt nicht: Beide kommutieren mit $J$ und können
+auch unbalancierte Zustände mit positiver Masse enthalten. Die zusätzliche
+Spektralauswahl folgt weder aus Zeta noch aus der Unschärferelation allein.
+
+### Explizites arithmetisches Spektralpaket (11.11.2026)
+
+Für den vorhandenen ungeraden Zeta-Multiplikator $a(t)$ bei $\sigma>1$
+lässt sich die Alternative konkret ausführen. Mit
+$f(t)=N a(t)^2e^{-t^2}$ und
+$\psi=(f+i\operatorname{sgn}(a)f)/\sqrt2$ entsteht ein normiertes
+Paket im positiven kontinuierlichen Spektralraum von $T=-iRA$.
+Es ist HC-balanciert, ohne ein verbotener normierbarer Eigenzustand zu sein.
+
+Der Faktor $a^2$ lässt das Profil an den Vorzeichenwechseln ausreichend
+stark verschwinden. Das frühere Sprungproblem entfällt: Das Paket liegt
+in der Domäne des üblichen Ableitungsoperators und besitzt endliche
+Parameter-/Fourier-Streuungen. Die R/A-Unschärferelation ist gültig,
+wird hier aber nicht gesättigt. Die Balance folgt aus der zusätzlichen
+positiven Spektralauswahl.
+
+Das ist eine explizite Vergleichskonstruktion, keine native Präparation
+oder Leptonmassenvorhersage. Fensterwahl, Bedeutung von T als Energie,
+Erhaltung des Spektralraums und positive Generationenauslesung bleiben offen.
+Der Parameter und sein Fourier-Partner sind nicht mit physikalischem
+Ort/Impuls oder einer hergeleiteten hbar-Skala identifiziert.
+
+> Anmerkung für LLMs und Quellenprüfung:
+> `notes/research/zeta_positive_spectral_packet_2026_11_11.md` enthält
+> die analytischen Norm-, Domänen- und Erwartungswertprüfungen.
