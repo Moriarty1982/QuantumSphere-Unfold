@@ -1,5 +1,11 @@
 # Wiki-Pflege
 
+**11.11.2026, typografischer Umbruch:** Forschungsstand um die Vorbereitung
+mehrzeiliger Anhangsboxen, umbrechender Protokollpfade und passender
+Tabellenspalten ergänzt. Lokal keine verbleibenden Satzüberläufe;
+Inhaltsvergleich und begrenzte Sichtprüfung dokumentiert. Aussagen und
+historische Statuswerte unverändert.
+
 **11.11.2026, CI-Portabilität:** Forschungsstand um die Fehler des ersten
 GitHub-Paarbuilds und des Windows-Quellchecks sowie die begrenzte Reparatur
 ergänzt. Quellen und Reviewhashes unverändert; keine Beweisaufwertung.

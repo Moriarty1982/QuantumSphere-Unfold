@@ -25,6 +25,13 @@ Workflow: `.github/workflows/qsc-v5-dual-documents.yml`, manuell oder nach
 passenden Änderungen auf main. Er archiviert auch Fehlerdiagnosen und
 reserviert weder eine DOI noch lädt er etwas auf Zenodo hoch.
 
+Der anschließende reine Layoutnachzug beseitigt lokal alle 58 Satzüberläufe:
+1402 Seiten Langfassung und unverändert 27 Seiten Physikpaper, beide ohne
+Overfull-Boxen oder offene Verweise. Die historische Argumentation bleibt
+erhalten; ihre Quellhashes ändern sich durch die Satzbefehle und werden
+bei der Zusammenstellung neu registriert. Prüfung und Grenzen:
+`notes/research/v5_layout_reflow_2026_11_11.md`.
+
 ## Zwei Dokumentzusammenstellungen (Schema v6)
 
 `python -m qam.tools.configure_v5_editions --out build/v5-editions-new`

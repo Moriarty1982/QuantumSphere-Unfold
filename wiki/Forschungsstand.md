@@ -789,3 +789,15 @@ Bestandsaufnahme ordnet die Meldungen zunächst als Dateihinweise ein,
 mit Schwerpunkt auf breiten Statusboxen und langen Protokollbezeichnungen
 in älteren technischen Anhängen. Redaktionelle Korrektur und fachliche
 Schlussprüfung stehen weiter aus. PR #95 enthält die CI-Reparatur.
+
+Die vorbereitete typografische Korrektur der Langfassung setzt breite
+historische Status- und Entscheidungsboxen mehrzeilig, lässt lange
+Protokollpfade an Schrägstrichen umbrechen und gibt sechs Tabellen passende
+Absatzspalten. Ein begrenzter Inhaltsvergleich bestätigt die Erhaltung
+von Wortlaut, mathematischen Symbolen, Bedingungen und Statuswerten.
+Im lokalen Neusatz sind die zuvor 58 Satzüberläufe beseitigt; die
+Langfassung umfasst dadurch 1402 Seiten. Das Physikpaper bleibt bei
+27 Seiten und ist im LaTeX-Text unverändert. Die zu den Umbruchstellen
+gehörenden 56 Prüfseiten wurden visuell kontrolliert. Fachliche und
+vollständige visuelle Schlussprüfung des Gesamtwerks bleiben eigenständig;
+eine Beweis- oder Publikationsfreigabe folgt aus dieser Satzkorrektur nicht.
