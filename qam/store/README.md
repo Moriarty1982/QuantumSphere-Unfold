@@ -192,3 +192,15 @@ Die Paperfassungen sind Metadaten über einem Snapshot und liegen außerhalb des
 Die erste lokale Zusammenstellung koide-condition-note bindet den bisherigen Koide-Snapshot mit seinen offenen nativen Guards. Ihr Hash lautet e2ffe9581d15ebc347e60f77f3d83993fe0aeaa6b948fc7eddf057d0cb18354c. Die dreiseitige Ausgabe build/qam-koide-paper-profile/paper.pdf wurde gebaut und visuell geprüft. Sie ist ein Forschungsentwurf mit eigenem Titel.
 
 Siebzehn Tests prüfen einschließlich Paperrevisionen die Wiederholung, unveränderte alte Fassungen, identische Wiederholungsexporte bei gleichem Code, enthaltene Paperidentität, konkurrierende Vorgänger und die Sperre gegen Überschreiben oder Löschen.
+
+## Vollständige Datenbanksicherung und Wiederherstellung
+
+backup --out NEUER_ORDNER erzeugt mit der SQLite-Backup-API eine konsistente Kopie der ganzen Datenbank. Dadurch sind alle Tabellen enthalten, einschließlich älterer QAM-Claims und MMA-Belege, Store-Objekte, Snapshots und Paperfassungen. Änderungen im SQLite-WAL werden berücksichtigt. Der Lauf begrenzt die Kopierzeit auf 30 Sekunden.
+
+Die Ausgabe besteht aus qam.sqlite3 und einem zuletzt geschriebenen manifest.json mit Dateihash, Größe, SQLite-Version und Zeilenzahlen aller Tabellen. backup-check --archive ORDNER prüft Hash, Größe, SQLite-integrity_check, Fremdschlüssel und Tabelleninventar. Quellen- und PDF-Dateien außerhalb der Datenbank bleiben separate Artefakte. Die Sicherung des Quellrepositorys und der Python-Abhängigkeiten gehört für eine andere Maschine dazu.
+
+restore --archive ORDNER --out NEUE_DATENBANK validiert zuerst die Sicherung. Eine temporäre Kopie wird erneut geprüft und danach atomar unter einem neuen Datenbankpfad bereitgestellt. Vorhandene Ziele werden zurückgewiesen. Das Archivformat enthält eine vollständige SQLite-Datenbank und ist kein SQL-Dump, der beim Import frei definierte Anweisungen ausführt.
+
+Die lokale Sicherung build/qam-backup-2026-11-11 enthält 25 Tabellen. Die Wiederherstellung nach build/qam-restore-verification/qam.sqlite3 wurde geprüft. Aus der wiederhergestellten Datenbank erzeugte die gespeicherte Koide-Paperfassung byteidentische paper.tex- und manifest.json-Dateien. Es handelt sich um eine lokale Sicherung im Buildordner; eine unabhängige externe Kopie muss separat abgelegt werden.
+
+Achtzehn Tests sind erfolgreich. Der Sicherungstest deckt WAL-Inhalte, zusätzliche bestehende Tabellen, gespeicherte Paperfassungen, identische Wiederexporte, vorhandene Zielpfade und ein beschädigtes Archiv ab.

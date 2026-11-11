@@ -57,15 +57,34 @@ def initialize(path):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('command', nargs='?', choices=['initialize', 'status', 'store', 'link', 'guard', 'guards', 'review', 'verify', 'receipt', 'snapshot', 'snapshot-read', 'snapshot-check', 'select', 'export', 'scrub', 'view', 'freshness', 'impact', 'paper-save', 'paper-read', 'paper-export'], default='initialize')
+    parser.add_argument('command', nargs='?', choices=['initialize', 'status', 'store', 'link', 'guard', 'guards', 'review', 'verify', 'receipt', 'snapshot', 'snapshot-read', 'snapshot-check', 'select', 'export', 'scrub', 'view', 'freshness', 'impact', 'paper-save', 'paper-read', 'paper-export', 'backup', 'backup-check', 'restore'], default='initialize')
     parser.add_argument('--db', type=Path, default=Path('build/qam.sqlite3'))
     parser.add_argument('--request', type=Path)
     parser.add_argument('--hash')
     parser.add_argument('--label')
     parser.add_argument('--out', type=Path)
+    parser.add_argument('--archive', type=Path)
     parser.add_argument('--repo', type=Path, default=Path(__file__).resolve().parents[2])
     args = parser.parse_args()
-    if args.command in {'paper-save', 'paper-read', 'paper-export'}:
+    if args.command in {'backup', 'backup-check', 'restore'}:
+        from qam.store.backup import create_backup, check_backup, restore_backup
+
+        if args.command == 'backup':
+            if args.out is None:
+                parser.error('--out is required for backup')
+            result = create_backup(args.db, args.out)
+        else:
+            if args.archive is None:
+                parser.error('--archive is required for backup-check and restore')
+            if args.command == 'restore':
+                if args.out is None:
+                    parser.error('--out is required for restore')
+                result = restore_backup(args.archive, args.out)
+            else:
+                manifest = check_backup(args.archive)
+                result = {'result': 'passed', 'sha256': manifest['sha256'], 'table_rows': manifest['table_rows']}
+        print(json.dumps(result, ensure_ascii=False))
+    elif args.command in {'paper-save', 'paper-read', 'paper-export'}:
         from qam.store.papers import save_paper, read_paper, export_paper
 
         if args.command == 'paper-save':
