@@ -534,3 +534,30 @@ Frame-Abbildung als eigene Prüfpflicht sichtbar. Keine OP-Schließung.
 > `v480:hc-mass-descent`, Ziel `v480:koide-hc-mixing`;
 > Bericht `notes/research/hc_koide_bridge_review_2026_11_11.md`.
 > Der LaTeX-Entwurf besteht die statische Exportprüfung, bleibt aber Forschungsentwurf.
+
+### Zeta und Unschärfe: analytische Erkundung vom 11.11.2026
+
+Das normierte gerade Profil aus $\Xi(t)=\xi(1/2+it)$ liegt bei der im
+Paper genannten Paritätsinstanz vollständig im geraden HC-Sektor:
+$\langle R\rangle=1$, bedingt also $K=1/3$. Eine Vorzeichenauslesung
+$Sf(t)=\operatorname{sgn}(t)f(t)$ liefert zwar Balance, ist aber ein anderer
+Operator. Ein gemeinsamer Basiswechsel von Zustand und Operator ändert
+den Erwartungswert nicht.
+
+Spiegelung und Vorzeichenauslesung antikommutieren. Ihre Robertson-Relation
+lautet $\Delta R\Delta S\geq|\langle RS\rangle|$. Sie kann auch ohne
+HC-Balance exakt ausgeschöpft werden. Die zusätzliche Eigenzustandsregel
+für $T=-iRS$ würde dagegen $\langle R\rangle=\langle S\rangle=0$
+erzwingen. Ein nativer zweiter Operator und die entsprechende Zustandsauswahl
+fehlen; die Rechnung funktioniert für beliebige gerade Profile und zeichnet
+Zeta oder Primzahlen noch nicht aus.
+
+Beim scharfen Vorzeichen entstehen für das gewählte, bei null nichtverschwindende
+Profil Sprünge. Diese Zustände liegen außerhalb der Domäne des üblichen
+Impulsoperators; eine endliche Orts-/Impuls-Unschärfe wurde nicht hergeleitet.
+Die beschränkte R/S-Unschärferelation bleibt gültig. Keine OP-Schließung.
+
+> Anmerkung für LLMs und Quellenprüfung:
+> `notes/research/zeta_hc_uncertainty_exploration_2026_11_11.md` enthält
+> Herleitungen, Grenzfälle und externe Primärquellen. Analytische Erkundung,
+> kein blinder Test und keine neue QAM-Beweisfreigabe.

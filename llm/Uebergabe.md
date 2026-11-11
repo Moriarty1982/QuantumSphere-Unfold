@@ -2,7 +2,7 @@
 
 11. November 2026 (Codex). Einstieg, keine vollständige Forschungsgeschichte.
 
-- Branch: `codex/qam-statement-store`; letzter Commit vor diesem Block `31c11e6`.
+- Branch: `codex/qam-statement-store`; letzter Commit vor dieser Erkundung `236bc76`.
 - Öffentliche Baseline laut Repo: v4.11.0; kein Release in diesem Block.
 - Änderungen dieses Blocks: HC-Zweig (5 Aussagen/Originalbeweise) und bedingter HC–Koide-Anschluss mit quellengebundener Selbstprüfung.
 - Koide/HC-Quellen unverändert. Abstrakte Aussagen gelten unter den expliziten Hypothesen; native Realisierung bleibt offen.
@@ -19,7 +19,12 @@
 - Keine neue H-/k-Nummer. Bisherige Übergabe nannte H98/k219; nicht neu vergeben.
 - `.codex/environments/` bleibt außerhalb des Commits.
 - Kein Push/Merge in diesem Block; GitHub-PRs/Actions hier nicht neu abgefragt.
-- Nächster Schritt: eigenen typisierten Abbildungsdatensatz mit expliziter Quell-/Zieldomäne und Prüfpflichten entwerfen, bevor Frame-Warnungen aufgehoben werden.
+- Aktuelle Erkundung: `notes/research/zeta_hc_uncertainty_exploration_2026_11_11.md`.
+- Paritäts-HC R plus gerades Zeta-Profil: h=1; keine Koide-Balance. S=sign(t) ist eine zusätzliche Auslesung.
+- RS=-SR liefert Robertson. Sättigung allein selektiert keine Balance; Eigenzustände von T=-iRS würden sie liefern.
+- T-Auswahl und native Identifikation fehlen. Konstruktion nicht zetaspezifisch. Scharfe Signumzustände bei f(0)≠0 liegen nicht in der Impulsdomäne H¹.
+- Validierung dieses Folgeblocks: direkte Operatorherleitung und mathematische Selbstprüfung, keine numerische Rechnung oder neuen Tests; Original-TeX und QAM-Guards unverändert.
+- Nächster Schritt auf Wunsch des Autors: nativen zweiten selbstadjungierten Operator A mit AJ=-JA und eine vorhandene Auswahlregel für -iJA suchen. Kein weiterer Zeta-/Massenfit davor.
 
 ## Voriger Stand
 

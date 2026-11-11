@@ -45,6 +45,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 11.11.2026: Forschungsstand – Zeta/HC/Unschärfe-Erkundung: Paritätsgrenze, antikommutierende Auslesungen, zusätzliche T-Auswahl und Impulsdomänengrenze dokumentiert.
+
 - 11.11.2026: Forschungsstand – HC-Selbstprüfung und bedingten Anschluss an Koide mit Seed, Wurzelgesetz und offener Orthogonalitätsselektion dokumentiert; keine native Schließung.
 
 - 9.11.2026: QAM – Erkundung aller 56 Fünferauswahlen benachbarter Ringkanten und Abgleich mit der Graphzählung.
