@@ -2,31 +2,21 @@
 
 11. November 2026 (Codex).
 
-- Branch `codex/hc-native-selection`; letzter Commit vor diesem Block 9c5d574.
-- PR #93 bleibt als e0e25fc18c078294933341a3e291f373f43245b7 in main; nächste Bundle-Basis ist dieser Merge.
-- Dort PDF-Build, Wiki Sync, Lean/TeX/Batch erfolgreich; aktuelle Fortsetzung noch nicht in main.
-- Entwicklung 5.0.0-draft; öffentliche Baseline v4.11.0, DOI 10.5281/zenodo.24108818.
-- Neue Texte: `notes/research/hc_root_transfer_rotation_gate_2026_11_11.md` und `zeta_positive_spectral_packet_2026_11_11.md`.
-- Alle festen Zwei-Moden-Basisrotationen der bisherigen quadratischen Auslesung geprüft: keine globale positive Koide-Auslesung aller balancierten Zustände.
-- Antipodales Auslesepaar cI±D, Tr D=0: beiderseitige Positivität erzwingt K<=5/9. Native Zweig-/Kammerauswahl oder anderes Wurzelgesetz nötig.
-- Neue Alternative: positiver Spektralraum eines selbstadjungierten J-ungeraden Operators erzwingt Balance, auch bei kontinuierlichem Spektrum ohne Eigenvektoren.
-- Positive Masse |A| oder A² allein selektiert diesen Raum nicht und lässt unbalancierte Zustände zu.
-- Explizites Paket für a(t)=Im(zeta'/zeta)(sigma+it), sigma>1: f=N a² exp(-t²), psi=(f+i sign(a)f)/sqrt(2).
-- psi ist normiert, HC-balanciert und im positiven Spektralraum von T=-iRA; Tpsi=|a(t)|psi ist keine Eigenwertgleichung.
-- f und sign(a)f liegen in H¹. Q=t und P=-i d/dt haben endliche zweite Momente; keine physikalische Orts-/Impulsidentifikation.
-- Robertson für R/A ist strikt; Balance wird durch die zusätzliche Spektralprojektion erzeugt, nicht durch Sättigung.
-- Native Energieidentifikation, Präparation/Erhaltung, Fensterwahl und positive Drei-Generationen-Wurzelauslesung bleiben offen.
-- sigma=1/2 nicht durch diese Primzahlreihe gedeckt; historische RH-Spektralroute bleibt gesperrt.
-- Validierung dieses Blocks: direkte analytische Selbstprüfung, keine Simulation oder neuen Tests; keine H-/k-Neuvergabe oder QAM-Beweisfreigabe.
-- Letzte lokale Codevalidierung vor PR93: 26 Storetests +18 HC +35 Koide/Kernel erfolgreich.
-- Nächster Schritt: positiven arithmetischen Spektralprojektor und reguläre Profildomäne gegen vorhandene native Dynamik prüfen. Keine weiteren Massen-/Phasenfits.
-- Beispielhafte e^{-isT}-Evolution erhält den Spektralraum, ist aber noch keine native Präparation.
-- Datenbank build/qam.sqlite3; Inventar 2468 Aussagen/61 Dateien, viele rohe Guards offen.
-- `.codex/environments/` bleibt außerhalb des Commits. Neuer Merge braucht Autorenfreigabe.
-
-## Davor
-
-9c5d574: J-wechselnder nativer Block und bedingte positive Zwei-Moden-Ausleseschranke.
-772503e: arithmetischer Zeta-Multiplikator, Start 5.0-Entwurf.
-Alte lange Übergabe: `notes/research/qam_store_handoff_history_2026_11_11.md`.
-OP1–OP5 und sonstige offene physikalische Identifikationen bleiben offen.
+- Autorenauftrag: commit/merge/push, erledigte Branches aufräumen, 5.0-Veröffentlichung vorbereiten; künftig Langfassung und Physikpaper, möglichst gemeinsame DOI.
+- PR #94 gemergt als 3a68669b0b12766c256ae6eeed1f52ae0693acc4; main lokal synchronisiert. Das ist die nächste Bundle-Basis.
+- Vorbereitungsbranch: `codex/v5-release-prep`.
+- Entwicklung 5.0.0-draft, öffentliche Baseline 4.11.0/10.5281/zenodo.24108818.
+- **Aktuelle Steuerung:** Autor möchte den Umfang der Physikfassung erst besprechen, insbesondere QAM/MML/MMA als neue Schreibweise. KEINE Entscheidung für ein reines Koide/HC-Paper.
+- Plan `notes/research/v5_0_0_dual_document_plan.md`: Langfassung plus eigenständige physikalische Argumentationslinie, notwendige Notationseinführung und vollständiges Methodenbeispiel.
+- Datenbankexport vorhanden, vollständiger Argumentationsbaum nicht geprüft. Automatischer gemeinsamer Zwei-PDF-Build noch nicht implementiert; keine Physikfassung fertiggestellt.
+- Zenodo offiziell geprüft: mehrere Dateien können in einem Record dieselbe Versions-DOI teilen. Neue 5.0-Version bekommt neue Versions-DOI, Concept-DOI bleibt 10.5281/zenodo.19210728.
+- Kein Zenodo-Entwurf/Upload/Publish in diesem Block. Keine neue DOI.
+- Branch-Aufräumen blockiert: alle 22 geprüften lokalen/Remote-Verweise sind Vorfahren von main, 0 exklusive Commits. Automatische Freigabeprüfung lehnte die breite Löschung historischer Forschungsbranches wegen unklarer Autorisierung ab. NICHT umgehen oder ohne ausdrückliche Listenfreigabe erneut versuchen.
+- Exakte Liste mit Spitzen: `notes/research/v5_0_0_branch_cleanup_review.md`. Nichts gelöscht; main und Vorbereitung bleiben erhalten.
+- Neue Forschung (jetzt in main): reguläres positives Zeta-Spektralpaket, HC-Balance und endliche Parameter-/Fourier-Streuungen. Native Auswahl und physikalische Massenauslesung offen.
+- Bisherige Mathematiknotizen: hc_root_transfer_rotation_gate_2026_11_11.md, zeta_positive_spectral_packet_2026_11_11.md.
+- Weiterhin keine OP-Schließung, keine neue H-/k-Nummer oder QAM-Beweisfreigabe.
+- DB build/qam.sqlite3, Inventar 2468 Aussagen/61 Dateien; viele rohe Guards offen.
+- Letzte Codevalidierung vor PR93: 26 Storetests, 18 HC-Tests, 35 Koide/Kernel. PR93 main-PDF/Wiki/Lean/TeX/Batch erfolgreich.
+- Nächster Schritt: mit Autor physikalische Leitfrage/Themenumfang und Methodenanteil abstimmen, dann zwei feste Ausgabeprofile und Buildautomation implementieren. Aktuelle Pläne sind noch kein Releasepaket.
+- `.codex/environments/` außerhalb der Commits belassen.

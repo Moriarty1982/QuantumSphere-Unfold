@@ -677,3 +677,20 @@ Ort/Impuls oder einer hergeleiteten hbar-Skala identifiziert.
 > Anmerkung für LLMs und Quellenprüfung:
 > `notes/research/zeta_positive_spectral_packet_2026_11_11.md` enthält
 > die analytischen Norm-, Domänen- und Erwartungswertprüfungen.
+
+### Veröffentlichungsvorbereitung 5.0: zwei Fassungen (11.11.2026)
+
+Geplant sind eine vollständige Langfassung und ein eigenständig lesbares
+Physikpaper aus demselben Quellstand. Die Physikfassung benötigt eine
+redaktionell festgelegte Argumentationslinie und eine Einführung in die
+tatsächlich verwendete QAM/MML/MMA-Schreibweise, einschließlich eines
+vollständigen Beispiels und der Grenzen von Rechenbelegen.
+Die Themenauswahl wird mit dem Autor noch besprochen; eine Beschränkung
+auf Koide/HC ist nicht beschlossen. Der gemeinsame Zwei-PDF-Build ist
+noch zu implementieren. Beide PDFs können als Dateien desselben Zenodo-
+Eintrags eine gemeinsame neue Versions-DOI erhalten. Es wurde keine neue
+DOI reserviert und keine Veröffentlichung vorgenommen.
+
+> Anmerkung für LLMs und Quellenprüfung:
+> `notes/research/v5_0_0_dual_document_plan.md` beschreibt den offenen
+> Umfang und den geplanten Buildvertrag, keine fertig erzeugte Physikfassung.

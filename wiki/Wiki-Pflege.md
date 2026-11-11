@@ -45,6 +45,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 11.11.2026: Forschungsstand – Plan für Langfassung und eigenständiges Physikpaper mit notwendiger QAM/MML/MMA-Einführung sowie gemeinsamer Zenodo-Ablage festgehalten; Scope und Zwei-PDF-Build offen.
+
 - 11.11.2026: Forschungsstand – positive Spektralauswahl von Massenpositivität getrennt; explizites reguläres Zeta-Paket mit HC-Balance und endlichen Parameter-/Fourier-Streuungen dokumentiert.
 
 - 11.11.2026: Forschungsstand – Basisrotationen der quadratischen Auslesung und scharfe 5/9-Grenze positiver antipodaler Zustandspaare eingeordnet; native Zweigauswahl offen.
