@@ -19,6 +19,40 @@ Die Physikfassung soll nicht bloß alle Themen verkürzt aufzählen. Zuerst
 müssen Leitfrage, Hauptaussagen und erforderliche Argumentationszweige
 redaktionell festgelegt werden. Diese Auswahl ist derzeit offen.
 
+## Vorschlag zur Themenauswahl, noch nicht beschlossen
+
+Leitfrage: Welche Teilchen- und Geometrieauslesungen lassen sich aus einem
+gemeinsamen graduierten Träger konsistent konstruieren, und welche zusätzlichen
+physikalischen Annahmen sind dafür erforderlich?
+
+Die Physikfassung wäre ein Paper über das Framework und seine geprüften
+Schnittstellen. Vorgeschlagene Reihenfolge:
+
+| Abschnitt | Inhalt | Grenze / Voraussetzung |
+|---|---|---|
+| 1. Physikalische Frage | Gemeinsamer Träger, unterschiedliche Auslesungen; Ziel und Status | Physikalische Identifikation bleibt Hypothese |
+| 2. Mathematischer Kern | Biquaternion-/Dixon-Träger, HC-Zerlegung, Sektoren und erklärte Frame-Abbildungen | Algebra von physikalischer Deutung trennen |
+| 3. QAM/MML/MMA als Methode | Minimale Sprache, Guards, Voraussetzungen und vollständiges HC-Beispiel | Hash und Ausführungsprotokoll ersetzen keinen Beweis |
+| 4. Teilchen und Generationen | Bedingte Eichgruppen-/Generationen-Konstruktionen und benannte Wahlen | Fachliche Auswahlprüfung nötig; rohe Inventarimporte nicht als Beweise behandeln |
+| 5. Massen als Schnittstellentest | HC-/Koide-Bedingung, Kopplung, Positivität, Anpassung versus Vorhersage | Native Auslesung und Skala offen |
+| 6. Dynamik und Geometrie | Ausgewählte Wirkungs-, Mastergleichungs- und Geometrie-Schnittstellen | Lokale Vergleichsresultate von nativer Feldtheorie unterscheiden |
+| 7. Grenzen und offene Prüfungen | Fehlende Operationen, Statuskarte, belegte Prüffragen | Keine neuen Vorhersagen aus Zusammenfassungen erfinden |
+
+Kurzer Ausblick: Zeta/Unschärfe als neue Vergleichsroute mit offenen Auswahl-
+und Massenauslesepflichten, ohne verworfene globale Zeta-Spektralbehauptung.
+
+Nur in der Langfassung ausführlich: ZF-/Kodierungsgrundlagen, gesamte
+QAM-Spracharchitektur, alle MML/MMA-Varianten, Forschungsrunden, negative
+Versuchsserien, große Tabellen und alternative Modellrouten. Kosmologie,
+Hawking-, String-/LQG- und Konstanten-Deutungen werden im Physikpaper nur
+ausgeführt, wenn ihre geprüften Aussagen die Leitfrage tragen; sonst in
+der Grenzenübersicht genannt und in der Langfassung behandelt.
+Zurückgezogene Herleitungen dürfen nicht als aktuelle Begründung auftreten.
+
+Vor dem Build: Vorschlag mit dem Autor abstimmen, dann die genauen Aussagen,
+Voraussetzungen, Belege und offenen Verbindungen je Abschnitt prüfen und
+erst danach verbindliche Ausgabeprofile speichern.
+
 ## QAM/MML/MMA im Physikpaper
 
 Die neue Schreibweise muss erklärt werden, soweit sie im Dokument verwendet wird:

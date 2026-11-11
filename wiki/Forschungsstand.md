@@ -694,3 +694,10 @@ DOI reserviert und keine Veröffentlichung vorgenommen.
 > Anmerkung für LLMs und Quellenprüfung:
 > `notes/research/v5_0_0_dual_document_plan.md` beschreibt den offenen
 > Umfang und den geplanten Buildvertrag, keine fertig erzeugte Physikfassung.
+
+Als noch nicht beschlossener Themenvorschlag soll die Physikfassung den Weg
+vom gemeinsamen graduierten Träger über HC und die QAM/MML/MMA-Methode zu
+Teilchen-/Generationenstruktur, Massenauslesung und ausgewählten Dynamik-/
+Geometrie-Schnittstellen erklären. Historische Herleitungen und alternative
+Modellrouten bleiben ausführlich in der Langfassung. Die genaue Aussagenwahl
+und ihre fachliche Prüfung stehen vor einem verbindlichen Exportprofil aus.
