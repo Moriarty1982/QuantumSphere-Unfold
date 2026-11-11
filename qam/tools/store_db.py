@@ -57,7 +57,7 @@ def initialize(path):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('command', nargs='?', choices=['initialize', 'status', 'store', 'link', 'guard', 'guards', 'review', 'verify', 'receipt', 'snapshot', 'snapshot-read', 'snapshot-check', 'select', 'export', 'scrub', 'view', 'freshness', 'impact', 'paper-save', 'paper-read', 'paper-export', 'backup', 'backup-check', 'restore'], default='initialize')
+    parser.add_argument('command', nargs='?', choices=['initialize', 'status', 'store', 'link', 'guard', 'guards', 'review', 'verify', 'receipt', 'snapshot', 'snapshot-read', 'snapshot-check', 'select', 'export', 'scrub', 'view', 'freshness', 'impact', 'paper-save', 'paper-read', 'paper-export', 'backup', 'backup-check', 'restore', 'import-inventory', 'inventory-view'], default='initialize')
     parser.add_argument('--db', type=Path, default=Path('build/qam.sqlite3'))
     parser.add_argument('--request', type=Path)
     parser.add_argument('--hash')
@@ -66,7 +66,34 @@ def main():
     parser.add_argument('--archive', type=Path)
     parser.add_argument('--repo', type=Path, default=Path(__file__).resolve().parents[2])
     args = parser.parse_args()
-    if args.command in {'backup', 'backup-check', 'restore'}:
+    if args.command == 'inventory-view':
+        from qam.store.manuscript_import import overview_from_snapshot
+
+        if not args.hash or args.request is None:
+            parser.error('--hash and --request are required for inventory-view')
+        request = json.loads(args.request.read_text(encoding='utf-8-sig'))
+        if not isinstance(request, dict) or set(request) != {'root'}:
+            parser.error('Inventory view request requires root only')
+        text = overview_from_snapshot(args.db, args.hash, request['root'])
+        if args.out is None:
+            print(text)
+        else:
+            with args.out.open('x', encoding='utf-8') as stream:
+                stream.write(text)
+            print(json.dumps({'file': str(args.out)}))
+    elif args.command == 'import-inventory':
+        from qam.store.manuscript_import import import_manuscript, overview
+        from qam.store.snapshots import create_snapshot
+
+        if args.out is None:
+            parser.error('--out is required for import-inventory reports')
+        args.out.mkdir(parents=True, exist_ok=False)
+        result = import_manuscript(args.db, args.repo)
+        result['snapshot'] = create_snapshot(args.db, 'manuscript-inventory-' + result['generation'][:16])
+        (args.out / 'overview.md').write_text(overview(result), encoding='utf-8')
+        (args.out / 'import.json').write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')
+        print(json.dumps(result, ensure_ascii=False))
+    elif args.command in {'backup', 'backup-check', 'restore'}:
         from qam.store.backup import create_backup, check_backup, restore_backup
 
         if args.command == 'backup':

@@ -40,7 +40,7 @@ def source_record(repo, source):
 
 
 def link(session, models, source, target, kind, status, description):
-    if kind not in {'interpreted-by', 'requires', 'explains', 'proves', 'contains', 'supersedes'}:
+    if kind not in {'interpreted-by', 'requires', 'explains', 'proves', 'contains', 'belongs-to', 'supersedes'}:
         raise ValueError('Unknown relation type')
     if status not in {'proposed', 'declared'}:
         raise ValueError('Registration permits proposed or declared links')

@@ -8,7 +8,25 @@ import re
 import sqlite3
 
 
-def build(repo, database):
+def mask_comments(text):
+    """Mask comments without changing offsets or line numbers."""
+    chars = list(text)
+    index = 0
+    while index < len(text):
+        if text[index] == '\\':
+            index += 2
+        elif text[index] == '%':
+            end = text.find('\n', index)
+            end = len(text) if end < 0 else end
+            chars[index:end] = [' '] * (end - index)
+            index = end
+        else:
+            index += 1
+    return ''.join(chars)
+
+
+def collect(repo):
+    repo = Path(repo).resolve()
     root = repo / 'sources/research'
     entry = root / 'v480-companion.tex'
     nodes = []
@@ -30,8 +48,7 @@ def build(repo, database):
         digest = hashlib.sha256(raw).hexdigest()
         key = 'file:' + relative
         add(key, parent, 'file', relative, 1, relative, digest)
-        # Strip LaTeX comments before detecting declarations and includes.
-        clean = re.sub(r'(?<!\\)%[^\n]*', '', text)
+        clean = mask_comments(text)
         events = re.compile(
             r'\\(?:input|include)\{([^}]+)\}|'
             r'\\begin\{(theorem|lemma|proposition|corollary|definition|assumption|axiom|conjecture)\}'
@@ -48,14 +65,25 @@ def build(repo, database):
                 visit(target, key)
                 continue
             kind = match.group(2)
-            end = clean.find('\\end{' + kind + '}', match.end())
-            if end < 0:
+            depth = 1
+            end = None
+            for closing in re.finditer(r'\\(begin|end)\{' + re.escape(kind) + r'\}', clean[match.end():]):
+                depth += 1 if closing.group(1) == 'begin' else -1
+                if depth == 0:
+                    end = match.end() + closing.end()
+                    break
+            if end is None:
                 raise ValueError(f'Unclosed {kind} at {relative}:{line}')
-            statement = clean[match.start():end + len('\\end{' + kind + '}')]
+            statement = text[match.start():end]
             claim_key = f'{relative}:{line}:{kind}'
             add(claim_key, key, kind, relative, line, statement, digest)
 
     visit(entry, None)
+    return nodes
+
+
+def build(repo, database):
+    nodes = collect(repo)
     database.parent.mkdir(parents=True, exist_ok=True)
     with sqlite3.connect(database) as db:
         db.execute('''CREATE TABLE IF NOT EXISTS manuscript_inventory (
@@ -66,8 +94,9 @@ def build(repo, database):
         db.executemany('INSERT INTO manuscript_inventory VALUES (?,?,?,?,?,?,?,?,?,?)', nodes)
         count = db.execute('SELECT count(*) FROM manuscript_inventory').fetchone()[0]
         assert count == len(nodes)
-    print(json.dumps({'database': str(database), 'files': len(seen),
-                      'statements': len(nodes) - len(seen),
+    files = sum(row[2] == 'file' for row in nodes)
+    print(json.dumps({'database': str(database), 'files': files,
+                      'statements': len(nodes) - files,
                       'status': 'imported-unreviewed', 'logical_edges': 0}))
 
 

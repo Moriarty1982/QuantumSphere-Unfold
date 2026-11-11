@@ -204,3 +204,23 @@ restore --archive ORDNER --out NEUE_DATENBANK validiert zuerst die Sicherung. Ei
 Die lokale Sicherung build/qam-backup-2026-11-11 enthält 25 Tabellen. Die Wiederherstellung nach build/qam-restore-verification/qam.sqlite3 wurde geprüft. Aus der wiederhergestellten Datenbank erzeugte die gespeicherte Koide-Paperfassung byteidentische paper.tex- und manifest.json-Dateien. Es handelt sich um eine lokale Sicherung im Buildordner; eine unabhängige externe Kopie muss separat abgelegt werden.
 
 Achtzehn Tests sind erfolgreich. Der Sicherungstest deckt WAL-Inhalte, zusätzliche bestehende Tabellen, gespeicherte Paperfassungen, identische Wiederexporte, vorhandene Zielpfade und ein beschädigtes Archiv ab.
+
+## Gesamtinventar im Store
+
+import-inventory --out NEUER_ORDNER übernimmt die unterstützten Aussageumgebungen der aktiven Einbindungskette in einer gemeinsamen Store-Transaktion. Erfasst werden definition, theorem, lemma, proposition, corollary, assumption, axiom und conjecture. Definitionen erhalten den Typ definition, Annahmen/Axiome assumption und die übrigen Aussageformen claim. Der ursprüngliche Umgebungstyp bleibt als Metadatum erhalten.
+
+Der Import bewahrt den Originaltext einschließlich Kommentaren. Kommentare werden für die Erkennung längentreu maskiert. Geschachtelte gleichartige Umgebungen werden bis zum passenden Ende gelesen. Die Erkennung erfolgt vor TeX-Expansion; Aussagen in freiem Fließtext, bedingte TeX-Ausführung, Makrodefinitionen mit eingebettetem Umgebungstext und Verbatim-Sonderfälle benötigen weitere fachliche beziehungsweise Parserprüfung.
+
+Jede Aussage trägt imported-unreviewed, Frame unspecified und eine offene Prüfpflicht für Status, Interpretation, tatsächliche Voraussetzungen, Beweiszuordnung und Ressourcen. Die Prüfpflicht verlangt eine native physikalische Brücke nur dort, wo sie fachlich erforderlich ist. Der Import schreibt keine bewiesenen logischen Abhängigkeiten. Insbesondere ist eine im Quelltext theorem genannte Umgebung dadurch nicht mathematisch neu bestätigt. Archiv- und historische Texte innerhalb der aktiven Einbindung sind enthalten.
+
+Dateien und Themen sind topic-Objekte. contains-Kanten deklarieren die Dokumentstruktur, belongs-to-Kanten sind vorgeschlagene organisatorische Themenzuordnungen. Die Heuristik nutzt Dateinamen, Titel und den letzten erkannten Abschnitt. Ihre Kategorien lehnen sich an das Gesamtbild an. Mehrdeutige Fälle verbleiben im Bereich Übergreifend oder noch zuzuordnen.
+
+Eine Importgeneration bindet die Quellhashes sowie Importer- und Collector-Codehashes. Root-, Datei- und Themencontainer werden je Generation versioniert, damit eine spätere Quelle nicht die frühere Dokumentstruktur überschreibt. Aussageidentitäten verwenden quellqualifizierte Labels, bei fehlenden Labels vorläufige positionsabhängige Kennungen. Diese Kennungen benötigen bei Umstellungen eine gesonderte Identitätsprüfung. Früher manuell kuratierte Fassungen bleiben separat; eine automatische mathematische Gleichsetzung mit Importobjekten erfolgt nicht.
+
+Der Lauf am 11. November erfasste 2468 Aussageumgebungen aus 61 Dateien, darunter 983 Definitionen. Er legte 2468 offene Prüfpflichten an. 518 Aussagen haben kein Label. 841 Aussagen bleiben thematisch übergreifend oder unzugeordnet. Ein identischer Wiederholungslauf erzeugte keine neuen Objekte oder Ledgerereignisse.
+
+inventory-view --hash SNAPSHOT --request DATEI mit root als Inventar-Rootversion rekonstruiert die Übersicht direkt aus den gespeicherten contains- und belongs-to-Kanten. --out DATEI schreibt sie in eine neue Datei. Die Übersicht enthält Themenzahlen und eine Quellenliste. Die technische Prüf- und Exportbereitschaft einzelner importierter Aussagen ist weiterhin separat herzustellen.
+
+Die aktuelle Übersicht liegt unter build/qam-manuscript-inventory/database-overview.md, der Importbericht unter build/qam-manuscript-inventory/import.json. Der geprüfte Snapshot ist 2a3b9f873a47cdb91eca2c4016820b492ca30c516918112fc714b65200073735. Eine lokale vollständige Sicherung liegt unter build/qam-manuscript-inventory-backup. Die Grenzen der externen Quelldateisicherung gelten weiterhin.
+
+Zwanzig Tests sind erfolgreich. Die neuen Regressionen prüfen Kommentare, geschachtelte Umgebungen, wiederholten Import, unverändertes Ledger, neue Inhaltsversionen, erhaltene alte Snapshots und die direkt aus der Datenbank erzeugte Übersicht.
