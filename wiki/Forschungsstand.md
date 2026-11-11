@@ -863,3 +863,19 @@ GitHub-Lauf 43087358029. Beide Dokumente ließen sich zusätzlich direkt
 aus dem gepackten Quellenarchiv fehlerfrei bauen. Der vollständige lokale
 Trockenlauf ist erfolgreich; DOI-Reservierung, endgültige Titelseiten und
 Zenodo-Upload sind noch nicht ausgeführt.
+
+
+### Zurück zur ursprünglichen OP3-Frage
+
+Die Veröffentlichungsvorbereitung ruht auf Autorenwunsch zugunsten der
+inhaltlichen Arbeit. Die Quellenprüfung trennt das historische Koide-/
+Phasenproblem vom späteren Hüllen- und Residualinterface. Die heutige
+positive Closure-Defekt-Gram-Matrix ist eine bedingte Ausleseroute, keine
+nachgewiesene identische Übersetzung beider Fragen. Ein Kommutator-
+Erwartungswert ist für exakt geschlossene Zustände unter orthogonalem
+Projektor null; seine Übergangsnorm kann trotzdem positiv sein. Der
+Wechsel zwischen beiden ist ein Wechsel der Observable. Ein innerer
+Operator aus der bestehenden Mastergleichung kann mit Closure vereinbar
+nichtnullig sein, benötigt aber ebenfalls native Matrixelemente und ein
+physikalisches Auslesegesetz. Nächster Quellenauftrag sind die vier
+Beiträge zur Kompression S*Omega S; OP3 bleibt offen.

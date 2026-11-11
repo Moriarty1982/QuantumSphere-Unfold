@@ -2,7 +2,7 @@
 
 11. November 2026 (Codex). Wird pro Arbeitsblock überschrieben.
 
-- Branch codex/v5-release-payload ab main 802c7af; englische Quellen-/Evidenz-Payload vorbereitet.
+- Branch codex/op3-question-audit ab codex/v5-release-payload (3f194c9); Veröffentlichungsvorbereitung ruht auf ausdrücklichen Autorenwunsch.
 - Main jetzt 802c7af9e672f138461ffb112b0fcd43b7b79c58; öffentliche Baseline v4.11.0, Entwicklung v5.0.0-draft ohne eigene DOI.
 - Auf ausdrückliche Autorenfreigabe alle drei PRs gemergt: #95 als 4200c23, #96 als fdd9acc, #97 als 802c7af. Keine offenen PRs.
 - Lokales main per Fast-forward synchronisiert; neue Paketbranch darauf angelegt.
@@ -27,7 +27,10 @@
 - Konkreter Kandidat build/v5-english-upload-verified/: zwei EN-PDFs (1401/27 Seiten), Quellen-ZIP mit 86 Einträgen, DB und Manifeste; vollständiger Trockenlauf erfolgreich.
 - Beide Dokumente aus dem Quellen-ZIP lokal erfolgreich gebaut, alle vier Befunde null; 111 Eingangshashes, DB-Integrität und Editions-/Snapshotbindung geprüft.
 - Paketwerkzeug qam/tools/package_v5_documents.py; Dokumentation und exaktes Inventar release/v5.0.0-prep/ENGLISH_PAYLOAD*.
-- Nächster Schritt: DOI-Reservierung und endgültige Titelseiten vorbereiten, dann finale Payload neu bauen/prüfen; aktueller Kandidat bleibt draft.
+- Aktive Inhaltsarbeit: ursprüngliche Koide-/OP3-Frage gegen Hülleninterface und Defektoperatorroute abgeglichen.
+- Befund und Quellen: notes/research/op3_original_question_operator_map_2026_11_11.md. Keine native Gleichsetzung der drei Fragen nachgewiesen.
+- Nächster Schritt: vier Beiträge zu S*Omega S aus bestehender Mastergleichung auf native Matrixelemente und freie Daten prüfen; keine weiteren Parameterfits.
+- Release-Paket und PR #98 bleiben ruhend; keine DOI-Reservierung oder Upload begonnen.
 - Alle drei PRs vor dem Merge auf main umgestellt und verbleibende Diffs geprüft; alle PR-Prüfungen erfolgreich.
 - Kein weiterer Merge, Release, DOI-Schritt oder Löschen alter Branches freigegeben.
 - DOI-Reservierung, tatsächliches Veröffentlichungsdatum, finaler Quellenarchivbau und serverseitige Metadatenannahme bleiben offen.
