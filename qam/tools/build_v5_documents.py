@@ -15,6 +15,13 @@ def digest(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
+def git_metadata(repo, *arguments):
+    """Trust only this checkout for one read-only Git invocation in containers."""
+    repo = Path(repo).resolve()
+    return subprocess.check_output(['git', '-c', 'safe.directory=' + str(repo), *arguments],
+                                   cwd=repo, text=True).strip()
+
+
 def verify_export(root):
     root = Path(root).resolve()
     manifest = json.loads((root / 'assembly.json').read_text(encoding='utf-8'))
@@ -94,8 +101,8 @@ def build(output):
     output.mkdir(parents=True, exist_ok=False)
     result = {'format': 'qsc-dual-document-build-v1', 'version': '5.0.0-draft', 'documents': {}}
     try:
-        result['git_commit'] = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=repo, text=True).strip()
-        result['tracked_changes'] = bool(subprocess.check_output(['git', 'status', '--porcelain', '--untracked-files=no'], cwd=repo, text=True).strip())
+        result['git_commit'] = git_metadata(repo, 'rev-parse', 'HEAD')
+        result['tracked_changes'] = bool(git_metadata(repo, 'status', '--porcelain', '--untracked-files=no'))
         result['builder_sha256'] = digest(Path(__file__))
         result['editions_builder_sha256'] = digest(repo / 'qam/tools/configure_v5_editions.py')
         provenance = output / 'provenance'

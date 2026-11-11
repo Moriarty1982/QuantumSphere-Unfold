@@ -770,3 +770,12 @@ Ausführung hat noch 58 Satzüberläufe im Langtext ergeben; im Physikpaper
 gab es keine. Fachliche Schlussprüfung und redaktionelle Freigabe bleiben
 offen. Der Ablauf ist kein Veröffentlichungsautomat: Eine Freigabe zur
 Publikation wird nicht daraus abgeleitet, und Zenodo wird nicht angesprochen.
+
+Die erste GitHub-Ausführung zeigte zwei Unterschiede zur lokalen Umgebung:
+Git verweigerte im Container die Metadatenabfrage wegen abweichender
+Eigentümerschaft; der Windows-Checkout änderte die Zeilenenden zweier
+bytegenau geprüfter Quellen. Die vorbereitete Reparatur begrenzt Git-Vertrauen
+auf den einzelnen Aufruf im Projektverzeichnis und schreibt für diese
+beiden Quellen LF-Zeilenenden vor. Weder Quellinhalt noch Belegstatus oder
+die strenge Hashprüfung werden dadurch geändert. Die Satzüberläufe und
+die fachliche Schlussprüfung bleiben eigenständige Aufgaben.
