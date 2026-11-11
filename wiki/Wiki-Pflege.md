@@ -1,5 +1,10 @@
 # Wiki-Pflege
 
+**11.11.2026, gemeinsamer Dokumentbau:** Forschungsstand um den gemeinsamen
+Entwurfsbuild für Langfassung und Physikpaper ergänzt. Quellen-/Verweisprüfung,
+gemeinsame Nachweise, Fehlerstatus und 58 verbleibende Satzüberläufe im
+Langtext benannt. Keine Publikationsfreigabe oder Zenodo-Aktion.
+
 **11.11.2026, deutsche Lesefassung:** Forschungsstand um die vollständige
 persönliche Übersetzung mit unveränderten Formeln und erhaltenen offenen
 Voraussetzungen ergänzt. Quellenbindung an die englische Physikedition;

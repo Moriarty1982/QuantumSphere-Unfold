@@ -759,3 +759,14 @@ und gleicht sämtliche mathematischen Fragmente ab. Das ist eine
 persönliche Leseübersetzung und noch kein zusätzliches Sprachprofil in
 der Editionsdatenbank oder eine eigene Veröffentlichung. Die englische
 Physikedition bleibt die zugrunde liegende registrierte Ausgabe.
+
+Der gemeinsame Entwurfsbuild erzeugt jetzt Langfassung und englisches
+Physikpaper aus einem gemeinsamen eingefrorenen Quellenbestand. Seine
+Prüfung verlangt beide PDFs und konsistente Quellen, Verweise und Labels.
+Er bewahrt die Datenbank, den vollständigen Langquellbaum, Auswahl- und
+Prüfmanifeste sowie Compilerprotokolle gemeinsam auf. Fehlgeschlagene
+Teilbauten können keinen vollständigen Buildstatus erhalten. Die erste
+Ausführung hat noch 58 Satzüberläufe im Langtext ergeben; im Physikpaper
+gab es keine. Fachliche Schlussprüfung und redaktionelle Freigabe bleiben
+offen. Der Ablauf ist kein Veröffentlichungsautomat: Eine Freigabe zur
+Publikation wird nicht daraus abgeleitet, und Zenodo wird nicht angesprochen.

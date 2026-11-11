@@ -156,3 +156,21 @@ Die Module sind als Erklärungen registriert; die ursprünglichen offenen
 Beweis- und Identifikationspflichten erhalten dadurch keinen neuen Status.
 Quellenzuordnung und Prüfungsumfang stehen im begleitenden redaktionellen
 Prüfbericht vom 11.11.2026.
+
+## Gemeinsamer Entwurfsbuild eingerichtet
+
+Der Folgeauftrag führt nun zum gemeinsamen Ablauf
+`python -m qam.tools.build_v5_documents --out NEUER_ORDNER` und zum Workflow
+`qsc-v5-dual-documents.yml`. Beide englischen PDFs werden aus einem eigenen
+gemeinsamen Snapshot gebaut. Ein Manifest protokolliert Editionen,
+Quellhashes, Repositoriumsstand, Compilerbefunde und weiterhin unvollständige
+Argumentprüfung; Datenbank, Quellbaum und Auditdaten werden mitgeliefert.
+Ohne beide erfolgreich geprüften PDFs gibt es keinen vollständigen Buildstatus.
+
+Der erste erfolgreiche Lauf ergab 1397 Seiten Langfassung und 27 Seiten
+Physikpaper. Keine offenen Verweise oder doppelten Labels; 58 Satzüberläufe
+im Langtext und keine im Physikpaper. Die Satzüberläufe und die fachliche
+Schlussprüfung sind weiter offen. `publication_ready` bleibt false. Die
+deutsche persönliche Leseübersetzung ist weiterhin separat; sie ist nicht
+eines der beiden geplanten Veröffentlichungsdokumente. Kein Zenodo-Schritt
+und kein Release wurden damit ausgeführt.

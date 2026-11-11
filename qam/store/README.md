@@ -1,5 +1,30 @@
 # QAM store – erster Aufbauschritt
 
+## Gemeinsamer Bau beider Dokumente
+
+`python -m qam.tools.build_v5_documents --out build/v5-paired-new` erzeugt
+beide englischen Entwürfe gemeinsam in einem neuen Ordner. Der Ablauf legt
+einen eigenen Aussagenbestand an, friert beide Editionen ein, prüft ihre
+gemeinsamen Quellhashes und setzt beide Dokumente mit pdflatex ohne
+Shell-Escape. Bis zu sechs Durchläufe warten auf stabile Hilfsdateien.
+
+Das Paket enthält beide benannten PDFs, den exportierten Langquellbaum,
+die Aussagen-Datenbank, beide Zusammenstellungsmanifeste, Auditdaten,
+Compilerprotokolle, die verwendeten Erzeugungsskripte und `SHA256SUMS.txt`.
+`build-manifest.json` meldet `build_complete` nur, wenn beide PDFs vorhanden
+sind und Quellen-/Verweisprüfungen bestehen. Auch ein gescheiterter Lauf
+schreibt ein ausdrücklich fehlgeschlagenes Manifest. Offene wissenschaftliche
+Reviews und Guards bleiben erhalten; `publication_ready` bleibt immer false.
+Satzüberläufe werden gezählt und verlangen redaktionelle Prüfung.
+
+Der erste erfolgreiche gemeinsame Lauf lieferte 1397 Seiten Langfassung
+und 27 Seiten Physikpaper; 58 Satzüberläufe im Langtext, keine im Physikpaper.
+Keine offenen Verweise, doppelten Labels oder verbleibenden Rerun-Meldungen.
+Das ist keine fachliche oder vollständige visuelle Freigabe der Langfassung.
+Workflow: `.github/workflows/qsc-v5-dual-documents.yml`, manuell oder nach
+passenden Änderungen auf main. Er archiviert auch Fehlerdiagnosen und
+reserviert weder eine DOI noch lädt er etwas auf Zenodo hoch.
+
 ## Zwei Dokumentzusammenstellungen (Schema v6)
 
 `python -m qam.tools.configure_v5_editions --out build/v5-editions-new`
