@@ -589,3 +589,29 @@ kein neuer Release, keine neue Version-DOI und keine OP-Schließung.
 > `notes/research/zeta_prime_operator_uncertainty_2026_11_11.md`
 > enthält die analytische Erkundung, `notes/research/v5_0_0_development.md`
 > den Versionsumfang. Keine numerische Simulation und keine QAM-Beweisfreigabe.
+
+### Native Auswahl und Auslesung nach PR #93 (11.11.2026)
+
+Die Rückwärtssuche trennt Closure-Leckage und HC-Sektorwechsel. Unter
+den bestehenden Vergleichsannahmen $[P,J]=0$ ist nur der Block
+$(I-P)R_oP$ mit $R_o=(\widetilde R-J\widetilde R J)/2$ ein Kandidat
+für den gesuchten HC-wechselnden Anteil. Ein mit $J$ kommutierender
+Taktgeber liefert diesen Anteil nicht, auch wenn er Closure-Leckage besitzt.
+Der native Block ist weiterhin nicht ausgewertet.
+
+Eine nichtnullige endliche oder kompakte selbstadjungierte ungerade
+Kopplung könnte normalisierbare balancierte Auswahlzustände liefern.
+Ihre Existenz und eine physikalische Präparationsregel sind verschiedene
+Pflichten. Auch die Wurzelauslesung ist zusätzlich zu prüfen: In der
+vorhandenen quadratischen Zwei-Moden-Vergleichsauslesung liefert der
+Zustand $(1,i)/\sqrt2$ trotz HC-Balance $K=1/3$.
+
+Wird deren Zwei-Moden-Basis ausdrücklich mit $J=\operatorname{diag}(1,-1)$
+identifiziert, gilt für jede balancierte Eingabe und positive Auslesung
+sogar $K\leq5/9$. Diese scharfe Schranke betrifft genau diese zusätzliche
+Identifikation und dieses Wurzelgesetz; sie ist kein allgemeines Koide-Verbot.
+Die notwendige native Kopplung und der Transfer zur Massenauslesung bleiben offen.
+
+> Anmerkung für LLMs und Quellenprüfung:
+> `notes/research/hc_native_selection_gate_2026_11_11.md`; analytische,
+> nicht blinde Erkundung. Kein neuer numerischer Test oder OP-Abschluss.

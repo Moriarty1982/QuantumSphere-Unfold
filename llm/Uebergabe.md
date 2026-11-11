@@ -2,34 +2,34 @@
 
 11. November 2026 (Codex).
 
-- Branch `codex/qam-statement-store`; letzter Commit vor diesem Block `9608e6a`.
-- Entwicklungsversion jetzt **5.0.0-draft**, auf Autorenanregung wegen Datenbankarchitektur.
-- Öffentliche Baseline bleibt v4.11.0, DOI 10.5281/zenodo.24108818. Kein neuer Release/DOI/Push/Merge.
-- Working-preamble (Titel/Datum/PDF-Metadaten), Orientierung, README, AGENTS und Wiki aktualisiert.
-- Versionsumfang: `notes/research/v5_0_0_development.md`; DB-Schema v5 ist davon unabhängig.
-- Gesamtinventar: 2468 Aussagen/61 Dateien; vollständige Beweisabhängigkeiten weiterhin ungeprüft.
-- DB: `build/qam.sqlite3`; lokale Builddateien nicht als einzige Reproduktionsquelle verwenden.
-- Kuratierte Koide-/HC-Zweige und bedingte Verbindung existieren; native Guards offen.
-- Bridge-Snapshot: `14a0793aec6832a8471ac18bf2c3305be1f47de08ab8970fa44780a74252e6dc`.
-- Neue Erkundung: `notes/research/zeta_prime_operator_uncertainty_2026_11_11.md`.
-- A_sigma multipliziert mit Im(zeta'/zeta)(sigma+it), sigma>1; beschränkt selbstadjungiert, antikommutiert mit Parität R.
-- Robertson-Relation hergeleitet; gerades Zeta-Profil bleibt unbalanciert für R.
-- T_sigma=-iRA_sigma besitzt im kontinuierlichen L²-Modell keine nichtnulligen normierbaren Eigenzustände.
-- Deshalb scheitert diese exakte Zustandsauswahl; keine allgemeine Widerlegung der Autorenidee.
-- Signum-Abflachung oder lokalisierte Pakete wären zusätzliche, nicht nativ begründete Operationen.
-- Kein ungeprüfter Übergang zur kritischen Linie und keine Reaktivierung alter RH-Spektralbehauptungen.
-- Analytische Selbstprüfung, nicht blind, keine numerische Rechnung, keine neue H-/k-Nummer.
-- Vorherige H-/k-Angabe H98/k219 nicht neu verifiziert oder vergeben.
-- Vorige Storevalidierung: 26 Tests; HC:18. Dieses Mal nur Forschungstext/Metadaten geändert.
-- Kein neuer vollständiger PDF-Build. CITATION und veröffentlichte Release-Dateien bleiben bei 4.11.0.
-- Quellenfrische beachten: Working-orientation wurde geändert; alte Inventarhashes nicht überschreiben.
-- Nächster Schritt Forschung: native nichtlokale Kopplung/Generator mit normalisierbaren Auswahlzuständen suchen, vor weiteren Simulationen.
-- Nächster Schritt Architektur: typisierte Frame-Abbildungen; danach weitere fachliche Teilprüfungen/5.0-Paper-Auswahl.
-- `.codex/environments/` außerhalb des Commits belassen.
+- Autorenauftrag: commit, merge, push, dann weiter.
+- PR #93 gemergt: https://github.com/Moriarty1982/QuantumSphere-Unfold/pull/93
+- Merge und nächste Bundle-Basis: e0e25fc18c078294933341a3e291f373f43245b7.
+- main lokal per Fast-forward synchronisiert; Forschungsfortsetzung auf `codex/hc-native-selection`.
+- PR-Prüfungen Lean/TeX/Batch erfolgreich. Auch nach Merge PDF-Build, Wiki Sync, Lean/TeX/Batch und Dependency Graph erfolgreich.
+- Lokale Validierung vor Merge: 26 Storetests, 18 HC-Tests, 35 Koide/Kerneltests erfolgreich.
+- Entwicklung v5.0.0-draft; öffentliche Baseline v4.11.0, DOI 10.5281/zenodo.24108818.
+- Keine neue Publikation/DOI. Store-Schema v5 ist unabhängig von der Dokumentversion.
+- Aktuelle DB `build/qam.sqlite3`; Inventar 2468 Aussagen/61 Dateien, viele rohe Guards offen.
+- Kuratierte Koide-/HC-Originalbeweise und bedingte Verbindung vorhanden, kein nativer Massenmechanismus.
+- Bridge-Snapshot: 14a0793aec6832a8471ac18bf2c3305be1f47de08ab8970fa44780a74252e6dc.
+- Vorige Erkundung: arithmetischer Multiplikator aus Im(zeta'/zeta), sigma>1, antikommutiert mit Parität, hat aber keine exakten normierbaren T-Auswahlzustände.
+- Neue Notiz: `notes/research/hc_native_selection_gate_2026_11_11.md`.
+- Native Suchbedingung: D_o=(I-P)R_oP, R_o=(R_tilde-J R_tilde J)/2 bei [P,J]=0.
+- Closure-Leckage und HC-Sektorwechsel sind verschieden; R_o ist nicht nativ ausgewertet.
+- Endliche/kompakte ungerade Kopplung kann balancierte Singularpaar-Zustände liefern; native Präparation fehlt.
+- Vorhandene quadratische Auslesung: (1,i)/sqrt(2) liefert trotz J-Balance K=1/3.
+- Wenn die Zwei-Moden-Basis mit J=diag(1,-1) identifiziert wird, erzwingt Positivität für balancierte Eingaben K<=5/9. Bedingte Vergleichsschranke, kein allgemeines Koide-No-go.
+- Nur analytische Selbstprüfung; keine Simulation, H-/k-Neuvergabe oder QAM-Beweisfreigabe.
+- Nächster Schritt: ausgewerteten nativen R_o-Block UND ein anderes geeignetes positives Wurzelgesetz bzw. begründete Basisabbildung suchen. Nicht erneut nur Spektren/Phasen fitten.
+- Native M/T/P-Zuordnung, B, Seed/Wurzelgesetz, Phase und Massenskala bleiben offen.
+- Forschungsfortsetzung noch nicht in main; neuer Merge benötigt Freigabe.
+- `.codex/environments/` bleibt außerhalb des Commits.
 
 ## Davor
 
-`9608e6a`: generische R/S-Unschärfe, zusätzliche T-Auswahl und Impulsdomänengrenze.
-`236bc76`: HC-Originalbeweise und bedingter Koide-Anschluss, keine native Schließung.
+772503e: Start 5.0-Draft und arithmetischer Zeta-/Unschärfepartner.
+9608e6a: generische R/S-Unschärfe und Impulsdomänengrenze.
+236bc76: HC-Originalbeweise und bedingter Koide-Anschluss.
 Alte lange Übergabe: `notes/research/qam_store_handoff_history_2026_11_11.md`.
 OP1–OP5 und sonstige offene physikalische Identifikationen bleiben offen.
