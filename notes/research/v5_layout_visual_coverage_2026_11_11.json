@@ -1,0 +1,665 @@
+{
+  "pdf_sha256": "877bad63aa244a97225a425f9202172aaa8188e2acd6b600a03bf03f7d232253",
+  "pages": [
+    193,
+    194,
+    661,
+    663,
+    664,
+    665,
+    666,
+    667,
+    668,
+    669,
+    670,
+    672,
+    673,
+    674,
+    675,
+    962,
+    964,
+    966,
+    967,
+    991,
+    992,
+    993,
+    996,
+    997,
+    1012,
+    1013,
+    1014,
+    1015,
+    1017,
+    1020,
+    1021,
+    1022,
+    1023,
+    1024,
+    1025,
+    1026,
+    1027,
+    1028,
+    1029,
+    1030,
+    1031,
+    1033,
+    1035,
+    1038,
+    1040,
+    1041,
+    1042,
+    1043,
+    1044,
+    1045,
+    1046,
+    1047,
+    1048,
+    1053,
+    1055,
+    1056
+  ],
+  "records": [
+    {
+      "path": "sources/research/parts/v470/07_qam_infrastructure.tex",
+      "line": 320,
+      "before": "fig:qam-mml-mma-store-array-map",
+      "after": "tab:qam-mml-mma-store-array-overview",
+      "pages": [
+        193,
+        194
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/07_qam_infrastructure.tex",
+      "line": 324,
+      "before": "fig:qam-mml-mma-store-array-map",
+      "after": "tab:qam-mml-mma-store-array-overview",
+      "pages": [
+        193,
+        194
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/26_inherited_technical_appendices.tex",
+      "line": 4480,
+      "before": "rem:what-the-first-downstream-task-to-program-layer-now-buys",
+      "after": "sec:first-downstream-program-to-cycle-layer-extracted-from-the-downstream-task-to-program-layer",
+      "pages": [
+        661,
+        661
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/26_inherited_technical_appendices.tex",
+      "line": 4571,
+      "before": "cor:the-present-post-v3290-line-already-carries-a-first-downstream-program-to-cycle-layer",
+      "after": "rem:what-the-first-downstream-program-to-cycle-layer-now-buys",
+      "pages": [
+        663,
+        663
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/26_inherited_technical_appendices.tex",
+      "line": 4580,
+      "before": "rem:what-the-first-downstream-program-to-cycle-layer-now-buys",
+      "after": "sec:first-downstream-cycle-to-return-close-or-promote-interface-extracted-from-the-downstream-program-to-cycle-layer",
+      "pages": [
+        663,
+        664
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/26_inherited_technical_appendices.tex",
+      "line": 4664,
+      "before": "cor:the-present-post-v3290-line-already-carries-a-first-downstream-cycle-to-return-interface",
+      "after": "rem:what-the-first-downstream-cycle-to-return-interface-now-buys",
+      "pages": [
+        665,
+        665
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/26_inherited_technical_appendices.tex",
+      "line": 4673,
+      "before": "rem:what-the-first-downstream-cycle-to-return-interface-now-buys",
+      "after": "sec:first-downstream-close-promote-branch-resolution-rule-extracted-from-the-downstream-cycle-to-return-interface",
+      "pages": [
+        665,
+        666
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/26_inherited_technical_appendices.tex",
+      "line": 4753,
+      "before": "cor:the-present-post-v3290-line-already-carries-a-first-downstream-close-promote-branch-resolution-rule",
+      "after": "rem:what-the-first-downstream-close-promote-branch-resolution-rule-now-buys",
+      "pages": [
+        667,
+        668
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/26_inherited_technical_appendices.tex",
+      "line": 4762,
+      "before": "rem:what-the-first-downstream-close-promote-branch-resolution-rule-now-buys",
+      "after": "sec:first-downstream-branch-consumption-layer-extracted-from-the-downstream-close-promote-branch-resolution-rule",
+      "pages": [
+        668,
+        668
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/26_inherited_technical_appendices.tex",
+      "line": 4847,
+      "before": "cor:the-present-post-v3290-line-already-carries-a-first-downstream-branch-consumption-layer-second-level",
+      "after": "rem:what-the-first-downstream-branch-consumption-layer-now-buys-second-level",
+      "pages": [
+        669,
+        670
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/26_inherited_technical_appendices.tex",
+      "line": 4856,
+      "before": "rem:what-the-first-downstream-branch-consumption-layer-now-buys-second-level",
+      "after": "sec:first-downstream-branch-to-task-layer-extracted-from-the-downstream-branch-consumption-layer-second-level",
+      "pages": [
+        670,
+        670
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/26_inherited_technical_appendices.tex",
+      "line": 4946,
+      "before": "cor:the-present-post-v3290-line-already-carries-a-first-downstream-branch-to-task-layer-on-the-consumed-follow-on-level",
+      "after": "rem:what-the-first-downstream-branch-to-task-layer-on-the-consumed-follow-on-level-now-buys",
+      "pages": [
+        672,
+        672
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/26_inherited_technical_appendices.tex",
+      "line": 4955,
+      "before": "rem:what-the-first-downstream-branch-to-task-layer-on-the-consumed-follow-on-level-now-buys",
+      "after": "sec:first-downstream-task-to-program-layer-extracted-from-the-downstream-branch-to-task-layer-on-the-consumed-follow-on-level",
+      "pages": [
+        672,
+        673
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/26_inherited_technical_appendices.tex",
+      "line": 5045,
+      "before": "cor:the-present-post-v3290-line-already-carries-a-first-downstream-task-to-program-layer-on-the-consumed-follow-on-level",
+      "after": "rem:what-the-first-downstream-task-to-program-layer-on-the-consumed-follow-on-level-now-buys",
+      "pages": [
+        674,
+        675
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 3902,
+      "before": "subsec:v470-r17-relay-chain-stitching",
+      "after": "cor:v470-r17-finite-chain-status",
+      "pages": [
+        962,
+        962
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 4028,
+      "before": "lem:v470-r18-v0-boundary-front-decision",
+      "after": "subsec:v470-r18-finite-chain-guard-audit",
+      "pages": [
+        964,
+        964
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 4181,
+      "before": "subsec:v470-r19-boundary-source-candidate-scan",
+      "after": "lem:v470-r19-minimal-coherent-reservoir-threshold",
+      "pages": [
+        966,
+        966
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 4248,
+      "before": "subsec:v470-r19-c4-guard-preserving-audit",
+      "after": "prop:v470-r19-guard-preserving-outcome",
+      "pages": [
+        966,
+        967
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 6277,
+      "before": "subsec:v470-r28-mmhc-coefficient-typing-rule",
+      "after": "thmlet:v470-r28-seed-consistency-coefficient-typing",
+      "pages": [
+        991,
+        992
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 6370,
+      "before": "subsec:v470-r29-typed-residual-functional",
+      "after": "def:v470-r29-typed-zero-debt-minimizer",
+      "pages": [
+        993,
+        993
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 6671,
+      "before": "subsec:v470-r30-admissibility-certificate",
+      "after": "prop:v470-r30-local-admissibility-certificate",
+      "pages": [
+        996,
+        997
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 8106,
+      "before": "subsec:r38-guard-preserving-consequence",
+      "after": "subsec:r38-handoff",
+      "pages": [
+        1012,
+        1013
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 8207,
+      "before": "subsec:r39-admissibility-only-operator-tags",
+      "after": "subsec:r39-two-sided-tag-typing",
+      "pages": [
+        1013,
+        1014
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 8338,
+      "before": "subsec:r39-guard-preserving-consequence",
+      "after": "subsec:r39-handoff",
+      "pages": [
+        1015,
+        1015
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 8570,
+      "before": "subsec:r40-guard-preserving-consequence",
+      "after": "subsec:r40-handoff",
+      "pages": [
+        1017,
+        1017
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 8779,
+      "before": "subsec:r41-guard-preservation",
+      "after": "subsec:r41-handoff",
+      "pages": [
+        1020,
+        1020
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 8914,
+      "before": "subsec:r42-guard-preservation",
+      "after": "subsec:r42-decision",
+      "pages": [
+        1021,
+        1022
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 8944,
+      "before": "subsec:r42-decision",
+      "after": "sec:r43-metadata-freeze-handoff",
+      "pages": [
+        1022,
+        1022
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 8979,
+      "before": "subsec:r43-metadata-freeze-check",
+      "after": "subsec:r43-local-certificate-handoff",
+      "pages": [
+        1022,
+        1022
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 9048,
+      "before": "subsec:r43-guard-preservation-ledger",
+      "after": "subsec:r43-decision",
+      "pages": [
+        1023,
+        1023
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 9067,
+      "before": "subsec:r43-decision",
+      "after": "sec:r44-handoff-integrity-certificate-index",
+      "pages": [
+        1023,
+        1023
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 9184,
+      "before": "subsec:r44-certificate-index-guard-ledger",
+      "after": "subsec:r44-decision",
+      "pages": [
+        1024,
+        1025
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 9200,
+      "before": "subsec:r44-decision",
+      "after": "sec:r45-reader-routing-next-branch",
+      "pages": [
+        1025,
+        1025
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 9306,
+      "before": "subsec:r45-next-branch-queue",
+      "after": "subsec:r45-guard-preservation-ledger",
+      "pages": [
+        1026,
+        1026
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 9339,
+      "before": "subsec:r45-guard-preservation-ledger",
+      "after": "subsec:r45-decision",
+      "pages": [
+        1026,
+        1027
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 9358,
+      "before": "subsec:r45-decision",
+      "after": "sec:r46-dependency-graph-route-crosscheck",
+      "pages": [
+        1027,
+        1027
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 9504,
+      "before": "subsec:r46-dependency-integrity-guard-separation",
+      "after": "subsec:r46-guard-preservation-ledger",
+      "pages": [
+        1028,
+        1029
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 9552,
+      "before": "subsec:r46-guard-preservation-ledger",
+      "after": "subsec:r46-decision-next-queue",
+      "pages": [
+        1029,
+        1029
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 9571,
+      "before": "subsec:r46-decision-next-queue",
+      "after": "sec:r47-dependency-order-theoremlet-branch-preflight",
+      "pages": [
+        1029,
+        1029
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 9666,
+      "before": "subsec:r47-branch-launch-guard-preflight",
+      "after": "subsec:r47-guard-preservation-ledger",
+      "pages": [
+        1030,
+        1030
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 9706,
+      "before": "subsec:r47-guard-preservation-ledger",
+      "after": "subsec:r47-decision-next-queue",
+      "pages": [
+        1030,
+        1031
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 9730,
+      "before": "subsec:r47-decision-next-queue",
+      "after": "sec:v470-r48-branch-queue-work-package-split",
+      "pages": [
+        1031,
+        1031
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 9775,
+      "before": "subsec:r48-queue-selection-rule",
+      "after": "subsec:r48-candidate-branch-queue",
+      "pages": [
+        1031,
+        1031
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 9917,
+      "before": "subsec:r48-guard-preservation-ledger",
+      "after": "subsec:r48-decision-next-queue",
+      "pages": [
+        1033,
+        1033
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 9943,
+      "before": "subsec:r48-decision-next-queue",
+      "after": "sec:v470-r49-interface-slot-glossary-typing-recap",
+      "pages": [
+        1033,
+        1033
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 10108,
+      "before": "subsec:r49-audit-guard-preservation",
+      "after": "subsec:r49-decision-next-step",
+      "pages": [
+        1035,
+        1035
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 10125,
+      "before": "subsec:r49-decision-next-step",
+      "after": "sec:r50-operator-domain-refinement",
+      "pages": [
+        1035,
+        1035
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 10341,
+      "before": "subsec:r50-no-promotion-guard",
+      "after": "subsec:r50-decision-next-step",
+      "pages": [
+        1038,
+        1038
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 10359,
+      "before": "subsec:r50-decision-next-step",
+      "after": "sec:r51-prefield-interface-diagram",
+      "pages": [
+        1038,
+        1038
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 10543,
+      "before": "subsec:r51-no-action-guard",
+      "after": "subsec:r51-decision-next-step",
+      "pages": [
+        1040,
+        1041
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 10559,
+      "before": "subsec:r51-decision-next-step",
+      "after": "sec:r52-no-action-no-promotion-audit-refresh",
+      "pages": [
+        1041,
+        1041
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 10645,
+      "before": "subsec:r52-guard-preservation-refresh",
+      "after": "subsec:r52-refreshed-audit-ledger",
+      "pages": [
+        1042,
+        1042
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 10687,
+      "before": "subsec:r52-decision-next-step",
+      "after": "sec:r53-local-interface-consolidation-checkpoint",
+      "pages": [
+        1042,
+        1043
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 10816,
+      "before": "subsec:r53-guarded-branch-checkpoint",
+      "after": "subsec:r53-no-action-no-promotion-confirmation",
+      "pages": [
+        1044,
+        1044
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 10846,
+      "before": "subsec:r53-decision-next-step",
+      "after": "sec:r54-local-interface-theoremlet-selector-preflight",
+      "pages": [
+        1044,
+        1045
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 10956,
+      "before": "subsec:r54-next-branch-selector-preflight",
+      "after": "subsec:r54-no-action-no-promotion-guard-audit",
+      "pages": [
+        1046,
+        1046
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 11002,
+      "before": "subsec:r54-no-action-no-promotion-guard-audit",
+      "after": "subsec:r54-decision",
+      "pages": [
+        1046,
+        1047
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "line": 11019,
+      "before": "subsec:r54-decision",
+      "after": "v480:support-solve",
+      "pages": [
+        1047,
+        1048
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/36_frame_typed_endpoint.tex",
+      "line": 316,
+      "before": "subsec:r83-reclassification-theoremlet",
+      "after": "subsec:r83-status-ledger",
+      "pages": [
+        1053,
+        1053
+      ]
+    },
+    {
+      "path": "sources/research/parts/v470/36_frame_typed_endpoint.tex",
+      "line": 445,
+      "before": "subsec:r84-release-scope-refresh",
+      "after": "subsec:r84-release-path-implication",
+      "pages": [
+        1055,
+        1056
+      ]
+    }
+  ],
+  "page_count": 1402,
+  "scope": "Changed regions and their bounding neighbour-label pages, not a whole-manuscript review."
+}

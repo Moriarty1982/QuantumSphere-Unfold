@@ -1,0 +1,68 @@
+{
+  "source_checks": [
+    {
+      "path": "sources/research/parts/v470/07_qam_infrastructure.tex",
+      "before_local_sha256": "380455cda15546021d2caea8e8676e64af7d1327f9a78a0af0e118b7a37371f2",
+      "after_local_sha256": "ac5c289643482b5efd0f5f436fd9ffcb216e08fd79f4b05e9cde2caddf232ded",
+      "content_projection_unchanged": true
+    },
+    {
+      "path": "sources/research/parts/v470/26_inherited_technical_appendices.tex",
+      "before_local_sha256": "18e2a0094992d4436963629c1814303e5de613bdc89cbfc78752f2d997493f70",
+      "after_local_sha256": "42ada4a48c506925e8fb8bb83f17a668e9c07c0f0e26dbbe4df57249c054f157",
+      "content_projection_unchanged": true
+    },
+    {
+      "path": "sources/research/parts/v470/34_mm_hc_and_c5_development.tex",
+      "before_local_sha256": "da00b2b30d61bb8eb3836b471efc24e1372107888a2b378311e463351dac2fb5",
+      "after_local_sha256": "20a435e1e7754258de3df2a100c969c194aec024c446aa9995e0fb52ad8cad6e",
+      "content_projection_unchanged": true
+    },
+    {
+      "path": "sources/research/parts/v470/36_frame_typed_endpoint.tex",
+      "before_local_sha256": "1dce7b115b4e9e5f48efbc013b7c02da1929a09c9e0389f855b1617d4fa2c631",
+      "after_local_sha256": "d926732ab36cdbcaa5b50d0bd1de645028353e31883ec0d9d2eb51059d114650",
+      "content_projection_unchanged": true
+    }
+  ],
+  "snapshot": "74a9596b8370c849870e816102181cb3f4aec0802944dd66a1a427029fe223b9",
+  "documents": {
+    "full": {
+      "returncode": 0,
+      "passes": 3,
+      "pdf_present": true,
+      "technical_check_passed": true,
+      "findings": {
+        "undefined_references": 0,
+        "multiply_defined_labels": 0,
+        "rerun_requests": 0,
+        "overfull_boxes": 0
+      },
+      "edition_hash": "8b1b4b5d803651660d91f95d9eb04af3afbabb007eeb94756b8478f1c77cadb9",
+      "incomplete_argument_review": true,
+      "assembly_sha256": "24751bbbea72c4e9f2e5c22f30a43f311483e0373d151bf1d6f2652b307201f9",
+      "package_pdf": "Quantum_Sphaera_Companion_v5_0_0_draft_full.pdf",
+      "pdf_sha256": "877bad63aa244a97225a425f9202172aaa8188e2acd6b600a03bf03f7d232253"
+    },
+    "physics": {
+      "returncode": 0,
+      "passes": 2,
+      "pdf_present": true,
+      "technical_check_passed": true,
+      "findings": {
+        "undefined_references": 0,
+        "multiply_defined_labels": 0,
+        "rerun_requests": 0,
+        "overfull_boxes": 0
+      },
+      "edition_hash": "6fdaedf173b3c8ba2f5cbe0bee3711e56cc3405fbe254518e292d3e7e84a162c",
+      "incomplete_argument_review": true,
+      "assembly_sha256": "cc6f68db9e1355a3899a347b07f0a1f7402a5cd538bc27be15aeb4e549f8c53e",
+      "package_pdf": "Quantum_Sphaera_Companion_v5_0_0_draft_physics.pdf",
+      "pdf_sha256": "87a47f078c7101eb749bd65093d56448cac252084b9475fc8e81e526f532c4e2"
+    }
+  },
+  "checksums_verified": true,
+  "physics_tex_unchanged": true,
+  "scope": "Typography and bounded content-projection comparison; no independent mathematical proof audit."
+}

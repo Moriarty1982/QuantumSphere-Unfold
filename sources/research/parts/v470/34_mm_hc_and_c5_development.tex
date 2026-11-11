@@ -3899,7 +3899,7 @@ This is a finite stitched relay chain over the nonzero-index valley-front
 sample.  It does not include \(V0\), and it is not a global atlas-cover theorem.
 
 \begin{center}
-\begin{tabular}{c|c|c|c}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{.14\linewidth}>{\raggedright\arraybackslash}p{.25\linewidth}>{\raggedright\arraybackslash}p{.25\linewidth}>{\raggedright\arraybackslash}p{.25\linewidth}@{}}
 \toprule
 edge & r16 status & r17 status & guard\\
 \midrule
@@ -4025,11 +4025,13 @@ Within the current r18 source grammar, \(V0\) is not absorbed by the
 boundary-front obstruction.  Any lift of \(V0\) must declare at least one of the
 following additional structures:
 \[
+\begin{gathered}
 \text{boundary source chart},
-\qquad
+\\
 \text{boundary zero-clock phase window},
-\qquad
+\\
 \text{external packet injection rule}.
+\end{gathered}
 \]
 \end{lemma}
 
@@ -4175,17 +4177,17 @@ lifting but grammar-inadmissible.
 \label{subsec:v470-r19-boundary-source-candidate-scan}
 
 The finite candidate scan is:
-\[
-\begin{array}{c|c|c|c|c|c|c}
-\text{candidate} & N & \kappa & G & S & H=GS & \text{r19 decision}\\
+\begin{center}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.19\linewidth}>{\raggedright\arraybackslash}p{0.04\linewidth}>{\raggedright\arraybackslash}p{0.065\linewidth}>{\raggedright\arraybackslash}p{0.075\linewidth}>{\raggedright\arraybackslash}p{0.04\linewidth}>{\raggedright\arraybackslash}p{0.09\linewidth}>{\raggedright\arraybackslash}p{0.3\linewidth}@{}}
+candidate & \(N\) & \(\kappa\) & \(G\) & \(S\) & \(H=GS\) & r19 decision\\
 \hline
-\text{baseline} &4&0&1&4&4&\text{blocked}\\
-\text{clock-only} &4&0&4&4&16&\text{numerical only; undeclared clock debt}\\
-\text{external injection} &16&0&1&16&16&\text{numerical only; injection debt}\\
-\text{coherent boundary reservoir} &5&3/4&1&20&20&\text{conditionally admissible}\\
-\text{clock-assisted overlap} &4&3/4&16/13&13&16&\text{conditionally admissible}
-\end{array}
-\]
+baseline & \(4\) & \(0\) & \(1\) & \(4\) & \(4\) & blocked\\
+clock-only & \(4\) & \(0\) & \(4\) & \(4\) & \(16\) & numerical only; undeclared clock debt\\
+external injection & \(16\) & \(0\) & \(1\) & \(16\) & \(16\) & numerical only; injection debt\\
+coherent boundary reservoir & \(5\) & \(3/4\) & \(1\) & \(20\) & \(20\) & conditionally admissible\\
+clock-assisted overlap & \(4\) & \(3/4\) & \(16/13\) & \(13\) & \(16\) & conditionally admissible\\
+\end{tabular}
+\end{center}
 The baseline fails the threshold.  The clock-only and external-injection rows
 show that \(V0\) can be forced to the threshold numerically, but only by adding
 an undeclared source of gain or packets.  Those rows remain inadmissible in the
@@ -4242,16 +4244,16 @@ S_{4,\mu}^{\rm mixker}:\mathsf{route\mbox{-}stable\ persistent},
 \beta_4=\frac1{256}.
 \]
 The guard audit is:
-\[
-\begin{array}{c|c|c|c}
-\text{candidate} & \text{threshold} & C4\text{ guard} & \text{decision}\\
+\begin{center}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.11\linewidth}>{\raggedright\arraybackslash}p{0.28\linewidth}>{\raggedright\arraybackslash}p{0.27\linewidth}@{}}
+candidate & threshold & \(C4\)  guard & decision\\
 \hline
-\text{clock-only} & \text{met} & \text{not certified} & \text{reject unless clock source declared}\\
-\text{external injection} & \text{met} & \text{not certified} & \text{reject as external debt}\\
-\text{coherent boundary reservoir} & \text{met} & P_{\partial0}S_{4,\mu}^{\rm mixker}=0 & \text{conditional pass}\\
-\text{clock-assisted overlap} & \text{met} & \text{requires clock-source audit} & \text{conditional only}
-\end{array}
-\]
+clock-only & met & not certified & reject unless clock source declared\\
+external injection & met & not certified & reject as external debt\\
+coherent boundary reservoir & met & \(P_{\partial0}S_{4,\mu}^{\rm mixker}=0\) & conditional pass\\
+clock-assisted overlap & met & requires clock-source audit & conditional only\\
+\end{tabular}
+\end{center}
 Accordingly, r19 makes no unconditional reduction of \(\beta_4\):
 \[
 \boxed{
@@ -6272,9 +6274,12 @@ The r28 coefficient rule is:
 Equivalently,
 \[
 \boxed{
+\begin{gathered}
 \lambda_i E_i^2
-\quad\text{is admissible only after declaring whether }E_i
+\\\text{is admissible only after declaring whether }E_i
+\\
 \text{ is a monitor, selector, violation residual, or hard guard.}
+\end{gathered}
 }
 \]
 This rule blocks the common false upgrade
@@ -6362,19 +6367,21 @@ H(N,\kappa,G)=G\bigl(N+\kappa N(N-1)\bigr)
 be the local relay height.  The r29 typed admissibility residual is
 \[
 \boxed{
+\begin{gathered}
 \mathcal D_{\rm typed}^{r29}
 =
 \lambda_{\rm rel}\bigl(E_{\rm rel}^{-}\bigr)^2
-+
+\\+
 \lambda_{\rm src}\bigl(E_{\rm src}^{-}\bigr)^2
-+
+\\+
 \lambda_{\rm seam}\|\Sigma_{\rm trans}^{r26}\|^2
-+
+\\+
 \lambda_{\rm mix}\|P_{\partial}S_{4,\mu}^{\rm mixker}\|^2
-+
+\\+
 \lambda_{\rm col}\bigl(E_{\rm col}\bigr)^2
-+
+\\+
 \lambda_{\rm clk}\bigl(E_{\rm clk}^{\rm win}\bigr)^2.
+\end{gathered}
 }
 \]
 Here
@@ -6661,19 +6668,21 @@ physical field equation and not a closure theorem.
 The associated certificate is
 \[
 \boxed{
+\begin{gathered}
 \mathsf{Cert}_{\rm MM/HC}^{r30}
 =
-\left[
-\mathrm{Type}_{\partial/{\rm relay}},
-E_{\rm rel}^{-}=0,
-E_{\rm src}^{-}=0,
-\Sigma_{\rm trans}=0,
-P_{\partial}S_{4,\mu}^{\rm mixker}=0,
-\beta_4={1\over256},
-\Phi_5^{(n+1)}={3\over4}\Phi_5^{(n)},
-\mathcal C_{\gamma}(\tau_v)\geq G_{\rm req},
+\bigl[
+\mathrm{Type}_{\partial/{\rm relay}},\\
+E_{\rm rel}^{-}=0,\\
+E_{\rm src}^{-}=0,\\
+\Sigma_{\rm trans}=0,\\
+P_{\partial}S_{4,\mu}^{\rm mixker}=0,\\
+\beta_4={1\over256},\\
+\Phi_5^{(n+1)}={3\over4}\Phi_5^{(n)},\\
+\mathcal C_{\gamma}(\tau_v)\geq G_{\rm req},\\
 \Gamma_{\rm guard}
-\right].
+\bigr].
+\end{gathered}
 }
 \]
 For the comfortable r29/r30 operational anchor
@@ -8094,15 +8103,13 @@ All global guards remain unchanged:
 Equivalently,
 \[
 \boxed{
-\beta_4={1\over256}\hbox{ remains unspent},
-\quad
-\Phi_5^{(n)}>0\ (n<\infty),
-\quad
-C6/T2\hbox{ remains blocked},
-\quad
-\mathrm{RH}\hbox{ remains probe-only},
-\quad
+\begin{gathered}
+\beta_4={1\over256}\hbox{ remains unspent},\\
+\Phi_5^{(n)}>0\ (n<\infty),\\
+C6/T2\hbox{ remains blocked},\\
+\mathrm{RH}\hbox{ remains probe-only},\\
 \hbox{global all-readout closure remains unclaimed}.
+\end{gathered}
 }
 \]
 
@@ -8197,15 +8204,17 @@ Their intended local meanings are:
 Each tag is constrained by the declaration
 \[
 \boxed{
+\begin{gathered}
 \mathcal O_i\in\mathrm{Op}_{\rm adm}^{\rm loc}
-\quad\Longrightarrow\quad
+\\\Longrightarrow\\
 \mathcal O_i\notin
-\left\{
-\mathrm{physical\ action},
-\mathrm{Euler\mbox{-}Lagrange\ operator},
-\mathrm{derived\ field\ operator},
+\bigl\{
+\mathrm{physical\ action},\\
+\mathrm{Euler\mbox{-}Lagrange\ operator},\\
+\mathrm{derived\ field\ operator},\\
 \mathrm{global\ readout\ operator}
-\right\}.
+\bigr\}.
+\end{gathered}
 }
 \]
 Thus the operator tags are grammatical handles for admissibility tests only.
@@ -8326,15 +8335,13 @@ The guard vector remains fully active:
 Equivalently,
 \[
 \boxed{
-\beta_4={1\over256}\hbox{ remains unspent},
-\quad
-C5\hbox{ has no finite closure},
-\quad
-C6/T2\hbox{ remains blocked},
-\quad
-\mathrm{RH}\hbox{ remains photon-clock probe only},
-\quad
+\begin{gathered}
+\beta_4={1\over256}\hbox{ remains unspent},\\
+C5\hbox{ has no finite closure},\\
+C6/T2\hbox{ remains blocked},\\
+\mathrm{RH}\hbox{ remains photon-clock probe only},\\
 \hbox{global all-readout closure remains unclaimed}.
+\end{gathered}
 }
 \]
 
@@ -8560,15 +8567,13 @@ The guard vector is unchanged:
 Equivalently,
 \[
 \boxed{
-\beta_4={1\over256}\hbox{ remains unspent},
-\quad
-C5\hbox{ has no finite closure},
-\quad
-C6/T2\hbox{ remains blocked},
-\quad
-\mathrm{RH}\hbox{ remains photon-clock probe only},
-\quad
+\begin{gathered}
+\beta_4={1\over256}\hbox{ remains unspent},\\
+C5\hbox{ has no finite closure},\\
+C6/T2\hbox{ remains blocked},\\
+\mathrm{RH}\hbox{ remains photon-clock probe only},\\
 \hbox{global all-readout closure remains unclaimed}.
+\end{gathered}
 }
 \]
 
@@ -8771,15 +8776,13 @@ The guard vector remains active:
 Equivalently,
 \[
 \boxed{
-\beta_4={1\over256}\hbox{ remains unspent},
-\quad
-C5\hbox{ has no finite closure},
-\quad
-C6/T2\hbox{ remains blocked},
-\quad
-\mathrm{RH}\hbox{ remains photon-clock probe only},
-\quad
+\begin{gathered}
+\beta_4={1\over256}\hbox{ remains unspent},\\
+C5\hbox{ has no finite closure},\\
+C6/T2\hbox{ remains blocked},\\
+\mathrm{RH}\hbox{ remains photon-clock probe only},\\
 \hbox{global all-readout closure remains unclaimed}.
+\end{gathered}
 }
 \]
 
@@ -8908,15 +8911,13 @@ The r42 guard vector is unchanged:
 The entries retain their previous meanings:
 \[
 \boxed{
-\beta_4={1\over256}\hbox{ remains unspent},
-\quad
-C5\hbox{ has no finite closure},
-\quad
-C6/T2\hbox{ remains blocked},
-\quad
-\mathrm{RH}\hbox{ remains photon-clock probe only},
-\quad
+\begin{gathered}
+\beta_4={1\over256}\hbox{ remains unspent},\\
+C5\hbox{ has no finite closure},\\
+C6/T2\hbox{ remains blocked},\\
+\mathrm{RH}\hbox{ remains photon-clock probe only},\\
 \hbox{global all-readout closure remains unclaimed}.
+\end{gathered}
 }
 \]
 The no-action and no-promotion ledgers are
@@ -8940,14 +8941,16 @@ The total leak vector is still
 The decision ledger is
 \[
 \boxed{
+\begin{gathered}
 \mathsf D_{\rm r42}
 =
 \{
-\mathrm{local\ monitor\ certificate}=\mathrm{pass},
-\mathrm{RC\ guard\ audit}=\mathrm{pass},
-\mathrm{public\ release}=\mathrm{false},
+\mathrm{local\ monitor\ certificate}=\mathrm{pass},\\
+\mathrm{RC\ guard\ audit}=\mathrm{pass},\\
+\mathrm{public\ release}=\mathrm{false},\\
 \mathrm{PDF}=\mathrm{not\ built}
 \}.
+\end{gathered}
 }
 \]
 Therefore the safe next source-only step is
@@ -8973,13 +8976,15 @@ separate the local monitor certificate from every still-active guard.
 The active source metadata is frozen as
 \[
 \boxed{
+\begin{gathered}
 \mathsf M_{\rm freeze}^{r43}
 =
-(\mathrm{version}=4.7.0\hbox{-}r43,
-\mathrm{mode}=\mathrm{source\mbox{-}only},
-\mathrm{baseline\ DOI}=10.5281/zenodo.20117361,
-\mathrm{new\ DOI}=\varnothing,
+(\mathrm{version}=4.7.0\hbox{-}r43,\\
+\mathrm{mode}=\mathrm{source\mbox{-}only},\\
+\mathrm{baseline\ DOI}=10.5281/zenodo.20117361,\\
+\mathrm{new\ DOI}=\varnothing,\\
 \mathrm{PDF}=0).
+\end{gathered}
 }
 \]
 The concept DOI remains the stable Companion-line pointer, while the v4.6.0
@@ -9040,15 +9045,13 @@ The r43 guard vector remains
 The entries retain their previous meanings:
 \[
 \boxed{
-\beta_4={1\over256}\hbox{ remains unspent},
-\quad
-C5\hbox{ has no finite closure},
-\quad
-C6/T2\hbox{ remains blocked},
-\quad
-\mathrm{RH}\hbox{ remains photon-clock probe only},
-\quad
+\begin{gathered}
+\beta_4={1\over256}\hbox{ remains unspent},\\
+C5\hbox{ has no finite closure},\\
+C6/T2\hbox{ remains blocked},\\
+\mathrm{RH}\hbox{ remains photon-clock probe only},\\
 \hbox{global all-readout closure remains unclaimed}.
+\end{gathered}
 }
 \]
 Thus r43 freezes and packages the local monitor certificate without spending any
@@ -9061,15 +9064,17 @@ promoting the local monitor closure to a global all-readout closure.
 The decision ledger is
 \[
 \boxed{
+\begin{gathered}
 \mathsf D_{\rm r43}
 =
 \{
-\mathrm{metadata\ freeze}=\mathrm{pass},
-\mathrm{local\ certificate\ handoff}=\mathrm{pass},
-\mathrm{public\ release}=\mathrm{false},
-\mathrm{new\ DOI}=\varnothing,
+\mathrm{metadata\ freeze}=\mathrm{pass},\\
+\mathrm{local\ certificate\ handoff}=\mathrm{pass},\\
+\mathrm{public\ release}=\mathrm{false},\\
+\mathrm{new\ DOI}=\varnothing,\\
 \mathrm{PDF}=\mathrm{not\ built}
 \}.
+\end{gathered}
 }
 \]
 Therefore the safe next source-only step is
@@ -9176,11 +9181,13 @@ The guard vector remains
 Thus
 \[
 \boxed{
-\beta_4={1\over256}\text{ remains unspent},\quad
-C5\text{ has no finite closure},\quad
-C6/T2\text{ remains blocked},\quad
-\mathrm{RH}\text{ remains photon-clock probe only},\quad
+\begin{gathered}
+\beta_4={1\over256}\text{ remains unspent},\\
+C5\text{ has no finite closure},\\
+C6/T2\text{ remains blocked},\\
+\mathrm{RH}\text{ remains photon-clock probe only},\\
 \text{global all-readout closure remains unclaimed}.
+\end{gathered}
 }
 \]
 
@@ -9190,15 +9197,17 @@ C6/T2\text{ remains blocked},\quad
 The decision ledger is
 \[
 \boxed{
+\begin{gathered}
 \mathsf D_{\rm r44}
 =
 \{
-\mathrm{handoff\ integrity}=\mathrm{pass},
-\mathrm{certificate\ index}=\mathrm{pass},
-\mathrm{public\ release}=\mathrm{false},
-\mathrm{new\ DOI}=\varnothing,
+\mathrm{handoff\ integrity}=\mathrm{pass},\\
+\mathrm{certificate\ index}=\mathrm{pass},\\
+\mathrm{public\ release}=\mathrm{false},\\
+\mathrm{new\ DOI}=\varnothing,\\
 \mathrm{PDF}=\mathrm{not\ built}
 \}.
+\end{gathered}
 }
 \]
 Therefore the safe next source-only step is
@@ -9293,17 +9302,17 @@ The next-branch queue is recorded as
 }
 \]
 The entries are
-\[
-\begin{array}{c|l|l|l}
-\text{queue} & \text{working title} & \text{mode} & \text{guard status}\\
+\begin{center}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.08\linewidth}>{\raggedright\arraybackslash}p{0.39\linewidth}>{\raggedright\arraybackslash}p{0.21\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}@{}}
+queue & working title & mode & guard status\\
 \hline
-Q_1 & \text{local certificate dependency graph} & \text{source-only} & \text{guarded}\\
-Q_2 & \text{reader-route cross-reference hygiene} & \text{source-only} & \text{guarded}\\
-Q_3 & \text{local pre-field interface theoremlet candidate} & \text{source-only} & \text{no action, no field equation}\\
-Q_4 & \text{MM/HC interface handoff to next research branch} & \text{source-only} & \text{local only}\\
-Q_5 & \text{release-candidate hygiene preflight, if requested} & \text{source-only unless PDF requested} & \text{no DOI by default}
-\end{array}
-\]
+\(Q_1\) & local certificate dependency graph & source-only & guarded\\
+\(Q_2\) & reader-route cross-reference hygiene & source-only & guarded\\
+\(Q_3\) & local pre-field interface theoremlet candidate & source-only & no action, no field equation\\
+\(Q_4\) & MM/HC interface handoff to next research branch & source-only & local only\\
+\(Q_5\) & release-candidate hygiene preflight, if requested & source-only unless PDF requested & no DOI by default\\
+\end{tabular}
+\end{center}
 The default next source-only step is
 \[
 \boxed{
@@ -9327,11 +9336,13 @@ The r45 reader-routing layer preserves the guard vector
 The entries retain their previous meanings:
 \[
 \boxed{
-\beta_4={1\over256}\text{ remains unspent},\quad
-C5\text{ has no finite closure},\quad
-C6/T2\text{ remains blocked},\quad
-\mathrm{RH}\text{ remains photon-clock probe only},\quad
+\begin{gathered}
+\beta_4={1\over256}\text{ remains unspent},\\
+C5\text{ has no finite closure},\\
+C6/T2\text{ remains blocked},\\
+\mathrm{RH}\text{ remains photon-clock probe only},\\
 \text{global all-readout closure remains unclaimed}.
+\end{gathered}
 }
 \]
 The r45 reader-routing map therefore changes only the navigability of the local
@@ -9344,16 +9355,18 @@ field equation, and does not convert local monitor closure into global closure.
 The r45 decision ledger is
 \[
 \boxed{
+\begin{gathered}
 \mathsf D_{\rm r45}
 =
 \{
-\mathrm{reader\ routing}=\mathrm{pass},
-\mathrm{routing\ residual}=0,
-\mathrm{next\ branch\ queue}=\mathrm{pass},
-\mathrm{public\ release}=\mathrm{false},
-\mathrm{new\ DOI}=\varnothing,
+\mathrm{reader\ routing}=\mathrm{pass},\\
+\mathrm{routing\ residual}=0,\\
+\mathrm{next\ branch\ queue}=\mathrm{pass},\\
+\mathrm{public\ release}=\mathrm{false},\\
+\mathrm{new\ DOI}=\varnothing,\\
 \mathrm{PDF}=\mathrm{not\ built}
 \}.
+\end{gathered}
 }
 \]
 Therefore the safe next source-only step is
@@ -9488,19 +9501,21 @@ The unresolved-route residual is
 The dependency integrity vector is
 \[
 \boxed{
+\begin{gathered}
 \mathsf I_{\rm dep}^{r46}
 =
 (
-\mathrm{nodes},
-\mathrm{edges},
-\mathrm{acyclic},
-\mathrm{topological\ order},
-\mathrm{route\ coverage},
-\mathrm{no\ dangling\ node},
-\mathrm{no\ dangling\ route},
+\mathrm{nodes},\\
+\mathrm{edges},\\
+\mathrm{acyclic},\\
+\mathrm{topological\ order},\\
+\mathrm{route\ coverage},\\
+\mathrm{no\ dangling\ node},\\
+\mathrm{no\ dangling\ route},\\
 \mathrm{guard\ separation}
 )
 =(1,1,1,1,1,1,1,1).
+\end{gathered}
 }
 \]
 The dependency residual is
@@ -9534,11 +9549,13 @@ The r46 dependency graph and reader-route cross-check preserve the guard vector
 The entries retain their previous meanings:
 \[
 \boxed{
-\beta_4={1\over256}\text{ remains unspent},\quad
-C5\text{ has no finite closure},\quad
-C6/T2\text{ remains blocked},\quad
-\mathrm{RH}\text{ remains photon-clock probe only},\quad
+\begin{gathered}
+\beta_4={1\over256}\text{ remains unspent},\\
+C5\text{ has no finite closure},\\
+C6/T2\text{ remains blocked},\\
+\mathrm{RH}\text{ remains photon-clock probe only},\\
 \text{global all-readout closure remains unclaimed}.
+\end{gathered}
 }
 \]
 No r46 route, dependency edge, or topological ordering spends any of these
@@ -9551,17 +9568,19 @@ packet, not a public release certificate and not a global theorem.
 The r46 decision ledger is
 \[
 \boxed{
+\begin{gathered}
 \mathsf D_{\rm r46}
 =
 \{
-\mathrm{dependency\ graph}=\mathrm{pass},
-\mathrm{route\ cross\ check}=\mathrm{pass},
-\Delta_{\rm dep}=0,
-\Delta_{\rm route}=0,
-\mathrm{PDF}=\mathrm{not\ built},
-\mathrm{new\ DOI}=\varnothing,
+\mathrm{dependency\ graph}=\mathrm{pass},\\
+\mathrm{route\ cross\ check}=\mathrm{pass},\\
+\Delta_{\rm dep}=0,\\
+\Delta_{\rm route}=0,\\
+\mathrm{PDF}=\mathrm{not\ built},\\
+\mathrm{new\ DOI}=\varnothing,\\
 \mathrm{public\ release}=\mathrm{false}
 \}.
+\end{gathered}
 }
 \]
 The safe next source-only step is
@@ -9644,20 +9663,22 @@ The next local branch may be launched only through a guard-preserving queue.
 The preflight checks are
 \[
 \boxed{
+\begin{gathered}
 \mathsf{BL}_{\rm pre}^{r47}
 =
 (
-\mathrm{source\mbox{-}only},
-\mathrm{metadata\ freeze},
-\mathrm{dependency\ order},
-\mathrm{reader\ routes},
-\mathrm{guard\ vector},
-\mathrm{no\ PDF},
-\mathrm{no\ DOI},
-\mathrm{no\ public\ release},
+\mathrm{source\mbox{-}only},\\
+\mathrm{metadata\ freeze},\\
+\mathrm{dependency\ order},\\
+\mathrm{reader\ routes},\\
+\mathrm{guard\ vector},\\
+\mathrm{no\ PDF},\\
+\mathrm{no\ DOI},\\
+\mathrm{no\ public\ release},\\
 \mathrm{no\ promotion}
 )
 =(1,1,1,1,1,1,1,1,1).
+\end{gathered}
 }
 \]
 Thus the branch-launch residual is
@@ -9682,11 +9703,13 @@ The r47 dependency-order theoremlet preserves the guard vector
 The five entries retain the standing meanings:
 \[
 \boxed{
-\beta_4={1\over256}\text{ remains unspent},
-\quad C5\text{ has no finite closure},
-\quad C6/T2\text{ remains blocked},
-\quad \mathrm{RH}\text{ remains photon-clock probe only},
-\quad \text{global all-readout closure remains unclaimed}.
+\begin{gathered}
+\beta_4={1\over256}\text{ remains unspent},\\
+C5\text{ has no finite closure},\\
+C6/T2\text{ remains blocked},\\
+\mathrm{RH}\text{ remains photon-clock probe only},\\
+\text{global all-readout closure remains unclaimed}.
+\end{gathered}
 }
 \]
 Equivalently,
@@ -9704,16 +9727,18 @@ Equivalently,
 The r47 decision ledger is
 \[
 \boxed{
+\begin{gathered}
 \mathsf D_{\rm r47}
 =
 \{
-\mathrm{dependency\ theoremlet}=\mathrm{pass},
-\mathrm{branch\ preflight}=\mathrm{pass},
-\Delta_{\rm BL}=0,
-\mathrm{PDF}=\mathrm{not\ built},
-\mathrm{new\ DOI}=\varnothing,
+\mathrm{dependency\ theoremlet}=\mathrm{pass},\\
+\mathrm{branch\ preflight}=\mathrm{pass},\\
+\Delta_{\rm BL}=0,\\
+\mathrm{PDF}=\mathrm{not\ built},\\
+\mathrm{new\ DOI}=\varnothing,\\
 \mathrm{public\ release}=\mathrm{false}
 \}.
+\end{gathered}
 }
 \]
 The safe next source-only step is
@@ -9747,17 +9772,19 @@ A branch candidate \(Q\) is admissible for the next source-only layer only if it
 satisfies
 \[
 \boxed{
+\begin{gathered}
 \mathsf{Adm}_{\rm branch}^{r48}(Q)
 =
 \mathrm{sourceOnly}(Q)
-\wedge
+\\\wedge
 \mathrm{dependencyRouted}(Q)
-\wedge
+\\\wedge
 \mathrm{guardPreserving}(Q)
-\wedge
+\\\wedge
 \neg\mathrm{claimsClosure}(Q)
-\wedge
+\\\wedge
 \neg\mathrm{requestsDOI}(Q).
+\end{gathered}
 }
 \]
 This rule selects branch work by admissibility and guard preservation, not by
@@ -9887,11 +9914,13 @@ The guard vector remains
 Its entries retain the standing meanings:
 \[
 \boxed{
-\beta_4={1\over256}\text{ remains unspent},
-\quad C5\text{ has no finite closure},
-\quad C6/T2\text{ remains blocked},
-\quad \mathrm{RH}\text{ remains photon-clock probe only},
-\quad \text{global all-readout closure remains unclaimed}.
+\begin{gathered}
+\beta_4={1\over256}\text{ remains unspent},\\
+C5\text{ has no finite closure},\\
+C6/T2\text{ remains blocked},\\
+\mathrm{RH}\text{ remains photon-clock probe only},\\
+\text{global all-readout closure remains unclaimed}.
+\end{gathered}
 }
 \]
 Equivalently,
@@ -9911,17 +9940,19 @@ Equivalently,
 The r48 decision ledger is
 \[
 \boxed{
+\begin{gathered}
 \mathsf D_{r48}
 =
 \{
-\mathrm{queue\ selected}=Q_1,
-\mathrm{work\ packages}=4,
-\Delta_{\rm QS}=0,
-\Delta_{\rm WP}=0,
-\mathrm{PDF}=\mathrm{not\ built},
-\mathrm{new\ DOI}=\varnothing,
+\mathrm{queue\ selected}=Q_1,\\
+\mathrm{work\ packages}=4,\\
+\Delta_{\rm QS}=0,\\
+\Delta_{\rm WP}=0,\\
+\mathrm{PDF}=\mathrm{not\ built},\\
+\mathrm{new\ DOI}=\varnothing,\\
 \mathrm{public\ release}=\mathrm{false}
 \}.
+\end{gathered}
 }
 \]
 The safe next source-only step is
@@ -10074,11 +10105,13 @@ scope preserved, and no-promotion audit preserved.  The guard vector remains
 Thus
 \[
 \boxed{
-\beta_4={1\over256}\text{ remains unspent},
-\quad C5\text{ has no finite closure},
-\quad C6/T2\text{ remains blocked},
-\quad \mathrm{RH}\text{ remains photon-clock probe only},
-\quad \text{global all-readout closure remains unclaimed}.
+\begin{gathered}
+\beta_4={1\over256}\text{ remains unspent},\\
+C5\text{ has no finite closure},\\
+C6/T2\text{ remains blocked},\\
+\mathrm{RH}\text{ remains photon-clock probe only},\\
+\text{global all-readout closure remains unclaimed}.
+\end{gathered}
 }
 \]
 No new DOI, PDF, release packet, public upload, or global theorem is authorized.
@@ -10089,16 +10122,18 @@ No new DOI, PDF, release packet, public upload, or global theorem is authorized.
 The r49 decision ledger is
 \[
 \boxed{
+\begin{gathered}
 \mathsf D_{r49}
 =
 \{
-W_1\text{ complete},
-\Delta_{W_1}=0,
-\mathrm{PDF}=\mathrm{not\ built},
-\mathrm{new\ DOI}=\varnothing,
-\mathrm{public\ release}=\mathrm{false},
+W_1\text{ complete},\\
+\Delta_{W_1}=0,\\
+\mathrm{PDF}=\mathrm{not\ built},\\
+\mathrm{new\ DOI}=\varnothing,\\
+\mathrm{public\ release}=\mathrm{false},\\
 \Gamma_{\rm guard}=(1,1,1,1,1)
 \}.
+\end{gathered}
 }
 \]
 The safe next source-only step is
@@ -10303,11 +10338,13 @@ The guard vector remains
 Thus
 \[
 \boxed{
-\beta_4={1\over256}\text{ remains unspent},
-\quad C5\text{ has no finite closure},
-\quad C6/T2\text{ remains blocked},
-\quad \mathrm{RH}\text{ remains photon-clock probe only},
-\quad \text{global all-readout closure remains unclaimed}.
+\begin{gathered}
+\beta_4={1\over256}\text{ remains unspent},\\
+C5\text{ has no finite closure},\\
+C6/T2\text{ remains blocked},\\
+\mathrm{RH}\text{ remains photon-clock probe only},\\
+\text{global all-readout closure remains unclaimed}.
+\end{gathered}
 }
 \]
 No new DOI, PDF, release packet, public upload, physical action, or field
@@ -10319,17 +10356,19 @@ equation is authorized.
 The r50 decision ledger is
 \[
 \boxed{
+\begin{gathered}
 \mathsf D_{r50}
 =
 \{
-W_2\text{ complete},
-\mathcal R_{\rm dom}=(0,0,0,0,0,0),
-\mathsf D_{\rm adm}=(1,1,1,1,1,1),
-\mathrm{PDF}=\mathrm{not\ built},
-\mathrm{new\ DOI}=\varnothing,
-\mathrm{public\ release}=\mathrm{false},
+W_2\text{ complete},\\
+\mathcal R_{\rm dom}=(0,0,0,0,0,0),\\
+\mathsf D_{\rm adm}=(1,1,1,1,1,1),\\
+\mathrm{PDF}=\mathrm{not\ built},\\
+\mathrm{new\ DOI}=\varnothing,\\
+\mathrm{public\ release}=\mathrm{false},\\
 \Gamma_{\rm guard}=(1,1,1,1,1)
 \}.
+\end{gathered}
 }
 \]
 The safe next source-only step is
@@ -10501,11 +10540,13 @@ The guard vector remains
 Thus
 \[
 \boxed{
-\beta_4={1\over256}\text{ remains unspent},
-\quad C5\text{ has no finite closure},
-\quad C6/T2\text{ remains blocked},
-\quad \mathrm{RH}\text{ remains photon-clock probe only},
-\quad \text{global all-readout closure remains unclaimed}.
+\begin{gathered}
+\beta_4={1\over256}\text{ remains unspent},\\
+C5\text{ has no finite closure},\\
+C6/T2\text{ remains blocked},\\
+\mathrm{RH}\text{ remains photon-clock probe only},\\
+\text{global all-readout closure remains unclaimed}.
+\end{gathered}
 }
 \]
 
@@ -10515,17 +10556,19 @@ Thus
 The r51 decision ledger is
 \[
 \boxed{
+\begin{gathered}
 \mathsf D_{r51}
 =
 \{
-W_3\text{ complete},
-\mathcal R_{\rm diag}=(0,0,0,0,0,0,0),
-\mathsf D_{\rm diag}=(1,1,1,1,1,1,1),
-\mathrm{PDF}=\mathrm{not\ built},
-\mathrm{new\ DOI}=\varnothing,
-\mathrm{public\ release}=\mathrm{false},
+W_3\text{ complete},\\
+\mathcal R_{\rm diag}=(0,0,0,0,0,0,0),\\
+\mathsf D_{\rm diag}=(1,1,1,1,1,1,1),\\
+\mathrm{PDF}=\mathrm{not\ built},\\
+\mathrm{new\ DOI}=\varnothing,\\
+\mathrm{public\ release}=\mathrm{false},\\
 \Gamma_{\rm guard}=(1,1,1,1,1)
 \}.
+\end{gathered}
 }
 \]
 The safe next source-only step is
@@ -10599,11 +10642,13 @@ The guard vector remains
 Equivalently,
 \[
 \boxed{
-\beta_4={1\over256}\text{ remains unspent},
-\quad C5\text{ has no finite closure},
-\quad C6/T2\text{ remains blocked},
-\quad \mathrm{RH}\text{ remains photon-clock probe only},
-\quad \text{global all-readout closure remains unclaimed}.
+\begin{gathered}
+\beta_4={1\over256}\text{ remains unspent},\\
+C5\text{ has no finite closure},\\
+C6/T2\text{ remains blocked},\\
+\mathrm{RH}\text{ remains photon-clock probe only},\\
+\text{global all-readout closure remains unclaimed}.
+\end{gathered}
 }
 \]
 The local pre-field interface diagram may therefore be used as a reader-routing and admissibility-monitor object, but it still does not license a physical field equation.
@@ -10639,18 +10684,20 @@ Thus r52 completes \(W_4^{r48}\) without changing the closure status of any glob
 The r52 decision ledger is
 \[
 \boxed{
+\begin{gathered}
 \mathsf D_{r52}
 =
 \{
-W_4\text{ complete},
-\mathfrak A_{\rm noact}=(0,0,0,0,0,0),
-\Pi_{\rm np}=(0,0,0,0,0,0,0),
-\Gamma_{\rm guard}=(1,1,1,1,1),
-\Delta_{\rm audit}=0,
-\mathrm{PDF}=\mathrm{not\ built},
-\mathrm{new\ DOI}=\varnothing,
+W_4\text{ complete},\\
+\mathfrak A_{\rm noact}=(0,0,0,0,0,0),\\
+\Pi_{\rm np}=(0,0,0,0,0,0,0),\\
+\Gamma_{\rm guard}=(1,1,1,1,1),\\
+\Delta_{\rm audit}=0,\\
+\mathrm{PDF}=\mathrm{not\ built},\\
+\mathrm{new\ DOI}=\varnothing,\\
 \mathrm{public\ release}=\mathrm{false}
 \}.
+\end{gathered}
 }
 \]
 The safe next source-only step is
@@ -10766,11 +10813,13 @@ The guard vector remains
 Equivalently,
 \[
 \boxed{
-\beta_4={1\over256}\text{ remains unspent},\quad
-C5\text{ has no finite closure},\quad
-C6/T2\text{ remains blocked},\quad
-\mathrm{RH}\text{ remains photon-clock probe only},\quad
+\begin{gathered}
+\beta_4={1\over256}\text{ remains unspent},\\
+C5\text{ has no finite closure},\\
+C6/T2\text{ remains blocked},\\
+\mathrm{RH}\text{ remains photon-clock probe only},\\
 \text{global all-readout closure remains unclaimed}.
+\end{gathered}
 }
 \]
 No guard entry is consumed by the local-interface consolidation.
@@ -10794,17 +10843,19 @@ Thus r53 still asserts no physical action, no Lagrangian, no Euler--Lagrange var
 The r53 decision ledger is
 \[
 \boxed{
+\begin{gathered}
 \mathsf D_{r53}
 =
 \{
-Q1\text{ consolidated},
-W_1\text{--}W_4\text{ complete},
-\mathcal R_{\rm cons}=0,
-\Gamma_{\rm guard}=(1,1,1,1,1),
-\mathrm{PDF}=\mathrm{not\ built},
-\mathrm{new\ DOI}=\varnothing,
+Q1\text{ consolidated},\\
+W_1\text{--}W_4\text{ complete},\\
+\mathcal R_{\rm cons}=0,\\
+\Gamma_{\rm guard}=(1,1,1,1,1),\\
+\mathrm{PDF}=\mathrm{not\ built},\\
+\mathrm{new\ DOI}=\varnothing,\\
 \mathrm{public\ release}=\mathrm{false}
 \}.
+\end{gathered}
 }
 \]
 The safe next source-only step is
@@ -10901,16 +10952,16 @@ Thus r54 extracts a real local theoremlet, but it does not solve the global prob
 \label{subsec:r54-next-branch-selector-preflight}
 
 The r48 branch queue remains available after Q1 completion.  The selector evaluates the remaining branch families as follows:
-\[
-\begin{array}{c|l|c|l}
-\text{branch} & \text{candidate} & \text{admissible} & \text{reason}\\
+\begin{center}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.08\linewidth}>{\raggedright\arraybackslash}p{0.33\linewidth}>{\raggedright\arraybackslash}p{0.14\linewidth}>{\raggedright\arraybackslash}p{0.34\linewidth}@{}}
+branch & candidate & admissible & reason\\
 \hline
-Q_2 & \text{local theoremlet-to-lemma packaging} & 1 & \text{uses r54 theoremlet, no guard spending}\\
-Q_3 & \text{field-equation ansatz promotion} & 0 & \text{would violate no-action/no-field guard}\\
-Q_4 & \text{C4 mixed-kernel spending attempt} & 0 & \beta_4=1/256\text{ remains unspent}\\
-Q_5 & \text{all-readout/T2 branch} & 0 & C6/T2\text{ remains blocked}
-\end{array}
-\]
+\(Q_2\) & local theoremlet-to-lemma packaging & \(1\) & uses r54 theoremlet, no guard spending\\
+\(Q_3\) & field-equation ansatz promotion & \(0\) & would violate no-action/no-field guard\\
+\(Q_4\) & C4 mixed-kernel spending attempt & \(0\) & \(\beta_4=1/256\)  remains unspent\\
+\(Q_5\) & all-readout/T2 branch & \(0\) & \(C6/T2\)  remains blocked\\
+\end{tabular}
+\end{center}
 The selector vector is therefore
 \[
 \boxed{
@@ -10948,31 +10999,36 @@ The guard vector remains
 Equivalently,
 \[
 \boxed{
-\beta_4={1\over256}\text{ remains unspent},\quad
-C5\text{ has no finite closure},\quad
-C6/T2\text{ remains blocked},\quad
-\mathrm{RH}\text{ remains photon-clock probe only},\quad
+\begin{gathered}
+\beta_4={1\over256}\text{ remains unspent},\\
+C5\text{ has no finite closure},\\
+C6/T2\text{ remains blocked},\\
+\mathrm{RH}\text{ remains photon-clock probe only},\\
 \text{global all-readout closure remains unclaimed}.
+\end{gathered}
 }
 \]
 
+\begin{samepage}
 \subsection{r54 Decision}
 \label{subsec:r54-decision}
 
 The r54 decision is
 \[
 \boxed{
+\begin{gathered}
 \mathsf D_{r54}
 =
 \{
-\text{local-interface theoremlet found},
-\text{global solution not found},
-Q_2\text{ selected},
-\Gamma_{\rm guard}=(1,1,1,1,1),
-\mathrm{PDF}=\mathrm{not\ built},
-\mathrm{new\ DOI}=\varnothing,
+\text{local-interface theoremlet found},\\
+\text{global solution not found},\\
+Q_2\text{ selected},\\
+\Gamma_{\rm guard}=(1,1,1,1,1),\\
+\mathrm{PDF}=\mathrm{not\ built},\\
+\mathrm{new\ DOI}=\varnothing,\\
 \mathrm{public\ release}=\mathrm{false}
 \}.
+\end{gathered}
 }
 \]
 The safe next source-only step is
@@ -10981,6 +11037,7 @@ The safe next source-only step is
 \text{v4.7.0-r55: local theoremlet-to-lemma packaging and guard-stable lemma registry.}
 }
 \]
+\end{samepage}
 
 
 
