@@ -1,0 +1,193 @@
+\subsection{Warum eine Übergangsnorm ein neues Auslesegesetz ist}
+Für einen geschlossenen Seed @@0@@ erfüllt der Schließungskommutator
+@@1@@
+Die rechte Seite liegt im orthogonalen Komplement. Daher gilt @@2@@,
+selbst wenn ihre Norm nicht verschwindet. Einen Kommutatorerwartungswert
+durch @@3@@ zu ersetzen, ändert also die Observable. Das ist nur dann
+ein zulässiger Vorschlag, wenn dieser Wechsel ausdrücklich benannt und
+physikalisch begründet wird.
+
+Die positive Matrix @@4@@ misst eine Tendenz, unter dem vorgegebenen
+Operator den gewählten Schließungsraum zu verlassen. Sie behauptet nicht,
+dass ein zeitlich entwickelter physikalischer Zustand diesen Raum
+tatsächlich verlässt. Der Operator könnte eine Diagnosegröße und nicht
+der Zeitgenerator sein. Das physikalische Massengesetz und die Erhaltung
+des zulässigen Zustandsbereichs sind unabhängig vorzugeben.
+
+Die Unterscheidung von Schließung und HC-Parität liefert eine weitere
+notwendige Prüfung. Unter @@5@@ definieren wir
+@@6@@
+Nur @@7@@ ändert die HC-Graduierung. Ein mit @@8@@ kommutierender
+Taktgeber hat @@9@@ und kann diesen Kanal nicht liefern, selbst bei
+nichtverschwindendem Schließungsdefekt. Eine selbstadjungierte
+Vergleichskopplung lässt sich als @@10@@ bilden. Ihre Bildung ist jedoch
+eine zusätzliche Operation; die Definition allein weist ihr Auftreten
+in den nativen Gleichungen nicht nach.
+
+\subsection{Schließungsstrafen bestimmen den fehlenden Kanal nicht}
+Sei @@11@@ eine beschränkte dargestellte Matrix. Wir zerlegen den Träger
+in Bild und Kern von @@12@@ und schreiben
+@@13@@
+Direkte Blockmultiplikation ergibt
+@@14@@
+Ein minimaler positiver Strafoperator @@15@@ ist somit blockdiagonal
+und kommutiert mit @@16@@. Seine Kompression kann die Norm eines von
+@@17@@ erzeugten Übergangs messen. Der Strafoperator selbst hat aber
+keinen nichtdiagonalen Schließungskanal. Seine Positivität ersetzt den
+fehlenden dargestellten Taktgeberblock nicht.
+
+Wäre der Taktgeber ein Normgrenzwert von Polynomen in exakt geschlossenen
+@@18@@, würde auch er mit @@19@@ kommutieren, und sein Übergang wäre
+null. Umgekehrt sagt die exakte Schließung von @@20@@ nichts über einen
+unabhängig festgelegten Taktgeber aus. Eine Schließungsaussage lässt
+sich erst dann zwischen den Operatoren übertragen, wenn eine entsprechende
+Verbindung nachgewiesen ist.
+
+Selbst für einen unitären Taktgeber gibt es ein besonders klares
+Freiheitsresultat. Zu einer beliebigen positiven Kontraktion @@21@@
+definieren wir
+@@22@@
+Die Wurzeln kommutieren, weil beide Funktionen von @@23@@ sind.
+Blockmultiplikation liefert @@24@@; der Übergang von den ersten drei
+Koordinaten ins Komplement besitzt die Gram-Matrix @@25@@. Unitarität,
+positive Auslesung und Dimension drei lassen also jedes Spektrum einer
+positiven Kontraktion zu. Diese Voraussetzungen wählen weder eine
+Hierarchie noch den Koide-Radius aus.
+
+\subsection{Wann ein Gram-Gesetz aus einem Block mit Spektrallücke folgt}
+Ein möglicher physikalischer Weg lässt sich bei eingefrorenem Hintergrund
+konkreter formulieren. Wir nehmen einen kanonisch normierten hermiteschen
+Massenoperator auf einem beibehaltenen dreidimensionalen Raum und dessen
+Komplement an:
+@@26@@
+Für einen Eigenwert @@27@@ lösen wir die untere Gleichung nach
+@@28@@
+auf und setzen in die obere ein:
+@@29@@
+Dies ist ein energieabhängiges Schur-Komplement. Die Resolventenidentität
+kontrolliert den Fehler, der beim Ersetzen durch den statischen Wert entsteht:
+@@30@@
+Die Schranke verwendet die beiden inversen Normen @@31@@ und @@32@@.
+Nur im angegebenen Lückenbereich handelt es sich um einen kontrollierten
+Vergleich.
+
+Mit den weiteren Annahmen @@33@@, @@34@@ und @@35@@ liefert jeder
+Eigenwert @@36@@ von @@37@@ einen leichten vorzeichenbehafteten
+Eigenwert @@38@@, wobei
+@@39@@
+Damit kann ein Gram-Gesetz für den Massenbetrag die führende Näherung
+in einer kanonischen hermiteschen Dirac-artigen Lesart sein. Der
+vorzeichenbehaftete effektive Operator ist in diesem Vergleich negativ.
+Ihn als positiven physikalischen Massenbetrag zu interpretieren, ist
+eine zusätzliche Lesart; das Vorzeichen darf nicht kommentarlos
+weggelassen werden.
+
+Der exakte Eigenzustand ist gedresst, enthält also einen komplementären
+Anteil. Für dessen Norm gilt nach Normierung
+@@40@@
+Strikte Schließung @@41@@ würde stattdessen @@42@@ verlangen. Eine von
+null verschiedene leichte Masse aus diesem Mechanismus ohne direkten
+Massenblock ist deshalb mit exakter Schließung bezüglich des ursprünglichen
+Projektors unvereinbar. Näherungsweise Schließung oder ein separat
+definierter gedresster Spektralprojektor sind mögliche Alternativen,
+stellen jedoch andere Zustandsbedingungen dar.
+
+\subsection{Zyklische Verträglichkeit legt die Form fest, nicht die Koeffizienten}
+Eine unitäre Trägeroperation @@43@@ und der Generationen-Dreierzyklus
+@@44@@ erfüllten
+@@45@@
+Dann gelten @@46@@ und folglich @@47@@. Auch die positive Wurzel @@48@@
+kommutiert mit @@49@@. In drei Dimensionen folgt aus den drei
+verschiedenen Fourier-Eigenwerten von @@50@@, dass jede solche
+hermitesche Wurzel die Form
+@@51@@
+hat. Ihre Eigenwerte lauten
+@@52@@
+Spurorthogonalität ergibt
+@@53@@
+Der Koide-Wert verlangt also @@54@@. Zyklische Verträglichkeit liefert
+dieses Koeffizientenverhältnis nicht. Wäre umgekehrt der native Operator
+@@55@@ dargestellt, ließen sich seine Koeffizienten ohne Massenanpassung
+bestimmen durch
+@@56@@
+Die native Aufgabe besteht somit in einer gemeinsamen Operatorrechnung,
+nicht in der Wahl einer vertrauten trigonometrischen Parametrisierung.
+
+Beim Koide-Radius liefert Positivität drei Phasenkammern:
+@@57@@
+Sie entstehen als Schnitt der Ungleichungen @@58@@ für alle drei @@59@@.
+Am Rand @@60@@ schreiben wir innerhalb der Kammer @@61@@. Die kleine
+Wurzel ist @@62@@, ihre mögliche Masse daher @@63@@. In diesem Vergleich
+kann also nahe einem Rand eine leichte Eigenmasse entstehen. Weder der
+Abstand zum Rand noch seine dynamische Erhaltung ist bislang durch die
+native Theorie ausgewählt.
+
+\subsection{Herleitung der Positivitätssperre im quadratischen Modell}
+Für @@64@@ lässt sich das quadratische Wurzelmodell als lineare Funktion
+der Zweimoden-Dichtematrix @@65@@ schreiben. In der Fourier-Basis von
+@@66@@ lauten seine vorzeichenbehafteten Wurzeleigenwerte
+@@67@@
+Äquivalent gilt @@68@@ mit
+@@69@@
+Die drei @@70@@ summieren sich zu @@71@@. Die Pauli-Kombination hat
+Eigenwerte @@72@@, also hat @@73@@ die Eigenwerte @@74@@.
+Positivität für jedes @@75@@ ist daher äquivalent zu @@76@@.
+Ist diese Bedingung verletzt, zeigt ein Eigenvektor zum negativen
+Eigenwert die Notwendigkeit. Die Hinlänglichkeit folgt daraus, dass
+die Spur eines Produkts zweier positiver Matrizen nichtnegativ ist.
+In genau diesem Sinn kann eine global positive, in der Dichtematrix
+lineare Auslesung dieser Familie den beabsichtigten isometrischen
+Radius nicht erreichen.
+
+Ersetzte man die Eingabemetrik durch die Rückzugsmetrik dieser Abbildung,
+würde ein gewähltes nichtverschwindendes @@77@@ definitionsgemäß eine
+Isometrie liefern. Sein physikalischer Wert wäre dadurch nicht hergeleitet.
+Auch Kovarianz unter dem Dreierzyklus legt die relativen Singulett-
+und Dublettgewichte nicht fest: Die konstante Richtung und die Ebene
+mit Komponentensumme null sind getrennte invariante Teile. Ein
+Vergleichstensor kann ihnen unterschiedliche positive Gewichte zuordnen
+und dabei die zyklische Symmetrie erhalten.
+
+Ebenso ist die antipodale Schranke @@78@@ eine Eigenschaft der tatsächlichen
+Wurzeleigenwerte. Sind beide @@79@@ positiv, erfüllen die drei Eigenwerte
+@@80@@ die Bedingungen @@81@@ und @@82@@. Das Maximum von @@83@@ auf
+diesem ebenen Würfelschnitt ist @@84@@ und wird bei Permutationen von
+@@85@@ erreicht. Folglich gilt
+@@86@@
+Die Auswahl eines einzelnen zulässigen positiven Zweigs kann die
+paarweise Anforderung umgehen. Eine physikalische Erklärung muss
+dann diese Zweigauswahl liefern, statt sie allein aus der Involution
+zu erschließen.
+
+\subsection{Phasenüberlagerung: Wurzelmittel und Massenmittel sind verschieden}
+Der veröffentlichte Überlagerungsvergleich prüft ebenfalls explizit,
+was gemittelt wird. In einer gemeinsamen Generationenbasis sei
+@@87@@
+Jede Präparation habe nichtnegative Wurzeln und denselben Mittelwert
+@@88@@. Mitteln der Wurzeln vor dem Quadrieren ergibt
+@@89@@
+Bei zwei gleich gewichteten Phasen @@90@@ wird der Radius für @@92@@
+um den Faktor @@91@@ reduziert, während die zentrale Phase erhalten
+bleibt. Das folgt aus einer Vektormittelung auf dem Einheitskreis,
+nicht aus einer neuen dynamischen Massengleichung.
+
+Mitteln der quadrierten Wurzeln liefert ein anderes Ergebnis:
+@@93@@
+Der Varianzterm verschwindet nicht dadurch, dass man beide Verfahren
+Überlagerung nennt. Eine kohärente Kopplung zweier Wege ist wiederum
+eine eigens festgelegte Konstruktion. Für @@94@@ gilt
+@@95@@
+Hier können relative Phasen über Kreuzterme das Operatorspektrum
+beeinflussen. Eine gemeinsame Phase vor dem gesamten @@96@@ kürzt sich
+aus seiner Gram-Matrix heraus. Nur die präparierte Sonde zu ändern,
+kann spektrale Gewichte verändern, ohne die Operatorpole zu verschieben.
+Diese Möglichkeiten müssen unterschieden werden, bevor ihnen eine
+Transportinterpretation zugeordnet wird.
+
+Eine inverse Rekonstruktion kann Phasenmischungen finden, die mit
+vorgegebenen Massen und einer angenommenen Zwischenlücke verträglich
+sind. Ihr Zulässigkeitsbereich hilft, Kombinationen von Annahmen
+auszuschließen. Die rekonstruierten Phasen und die Lücke sind aber keine
+unabhängigen Vorhersagen. Nativer Operator, zulässige Präparationen
+und Regel zum Zusammenführen der Wege müssen feststehen, bevor das
+entstehende Spektrum als Modelltest mit Daten verglichen wird.

@@ -1,0 +1,277 @@
+% section:abstract
+Wir untersuchen, unter welchen Bedingungen ein gemeinsamer graduierter
+Zustandsraum Teilchen- und Geometrieauslesungen tragen kann. Die
+Quantum-Sphaera-Konstruktion wird als System bedingter Schnittstellen
+formuliert; eine vollständige Identifikation mit physikalischen Feldern
+liegt noch nicht vor. Zu einer reellen orthogonalen Involution liefert
+der zugehörige Kompensator eine exakte Projektion, bestimmt jedoch kein
+Massenspektrum mit drei Generationen. Wir leiten die zusätzliche
+Gleichnormbedingung für das Koide-Wurzelverhältnis her und stellen sie
+in einer ausdrücklich festgelegten HC-Darstellung als Orthogonalitätsbedingung
+dar. Direkte Auslesungen ungerader Eingaben und zyklisch äquivariante
+Auslesungen stoßen auf Hindernisse; positive quadratische Auslesungen
+benötigen einen eingeschränkten Zustandsbereich. Bei einer Projektion
+der Dynamik tritt eine weitere Autonomiebedingung für die beobachtbaren
+Variablen hinzu. Zusammen grenzen diese Ergebnisse ein, welche Operatoren,
+Metriken und Auswahlregeln nötig sind, um aus dem algebraischen Rahmen
+ein physikalisches Modell zu machen. Die vorliegende Konstruktion sagt
+weder Leptonmassen noch eine absolute Massenskala oder gravitative
+Feldgleichungen voraus.
+% section:question
+Wer verschiedene physikalische Sektoren auf einem gemeinsamen mathematischen
+Träger beschreiben möchte, steht vor einer wiederkehrenden Schwierigkeit:
+Ein gemeinsamer Zustandsraum legt noch nicht die Observablen fest, die
+diese Sektoren unterscheiden. Dieselbe Algebra kann unterschiedliche
+Darstellungen, Kopplungen und Messabbildungen tragen. Für eine physikalische
+Interpretation genügt daher weder die passende Anzahl von Komponenten
+noch eine Symmetrie mit dem erwarteten Namen.
+
+Der Quantum Sphaera Companion entwickelt einen solchen gemeinsamen Träger
+mithilfe von Biquaternionen, Divisionsalgebren, einer Involution und einer
+kompensierenden Projektion \cite{QSC411}. Aus diesem umfassenderen Programm
+greift die vorliegende Arbeit eine zusammenhängende Frage heraus: Unter
+welchen Bedingungen lässt sich die graduierte Struktur auf Teilchen-,
+Massen- und Geometrieauslesungen übertragen, ohne die gewünschten
+Observablen bereits in die Übertragung einzusetzen? Im Mittelpunkt
+stehen explizite Voraussetzungen und Konsistenzbedingungen.
+
+Im Massensektor wird dieser Unterschied besonders deutlich. Eine Beziehung
+zwischen drei positiven Wurzeln lässt sich auf viele Arten algebraisch
+darstellen. Eine erst nach Vorgabe dieser Wurzeln gewählte Darstellung
+erklärt ihre Werte aber nicht. Wir verwenden das Koide-Verhältnis als
+Prüffall für diese Schnittstelle, leiten die fehlende Normbedingung her
+und vergleichen lineare mit quadratischen Auslesungen. Derselbe Unterschied
+tritt in der projizierten Dynamik auf: Eine Gleichung auf dem gesamten
+Träger muss keine autonome Gleichung für die als beobachtbar ausgewählten
+Variablen erzeugen.
+
+Die Aussagen sind entsprechend bedingt. Die algebraische Projektion und
+die angegebenen Vergleichsergebnisse liegen vor; die Identifikation eines
+aus dem ursprünglichen Modell selbst hergeleiteten, also nativen Trägers,
+seiner Kopplungen und physikalischen Observablen ist noch zu vervollständigen.
+Diese Unterscheidung gilt ebenso für die nachfolgend behandelten
+Teilchenzuordnungen und geometrischen Konstruktionen.
+% section:core
+Sei @@0@@ ein reeller Hilbertraum und @@1@@ eine orthogonale Involution.
+Wegen @@2@@ sind die Operatoren
+@@3@@
+komplementäre orthogonale Projektionen. Tatsächlich gilt
+@@4@@ und entsprechend @@5@@; außerdem sind
+@@6@@ und @@7@@. Wir nennen @@8@@ den HC-Kompensator.
+Er wählt den bezüglich @@9@@ geraden Anteil eines Zustands aus;
+@@10@@ wählt den ungeraden Anteil.
+
+Diese Graduierung ist die minimale Struktur für die folgenden Prüfungen.
+Sie identifiziert keinen der beiden Bildräume mit einer Teilchensorte.
+Im Companion motivieren ein biquaternionischer Träger und Erweiterungen
+mit @@11@@ die vorgeschlagenen Teilchen- und Framezuordnungen.
+Divisionsalgebren liefern einen mathematischen Rahmen für solche
+Darstellungsfragen \cite{Baez2002}. Eine positive Hilbertraummetrik in
+einer Ausleserechnung muss dennoch von einer lorentzschen Raumzeitmetrik
+unterschieden werden.
+
+Auch der Skalarkörper ist entscheidend. Das Mittel aus einer antiunitären
+Involution und der Identität ist auf einem komplexen Hilbertraum im
+Allgemeinen nur reell-linear. Hier ist @@12@@ ausdrücklich reell
+orthogonal; bei komplexen Amplituden ist seine explizit festgelegte
+komplex-lineare Fortsetzung gemeint. Eine Gleichwertigkeit mit einer
+übernommenen antiunitären Konvention wird nicht vorausgesetzt. Ebenso
+verlangt der Wechsel zwischen den vorgeschlagenen Materie-, Licht- und
+Tachyon-Frames eine explizite Abbildung und mehr als eine Umbenennung
+der Komponenten.
+% section:method
+Der Companion verwendet QAM als Objekt- und Aussagensprache, MML für
+typisierte Anweisungen und MMA für deren Ausführungssemantik. Für die
+physikalischen Argumente dieser Arbeit halten sie eine Aussage mit ihrem
+Definitionsbereich, ihren Voraussetzungen, ihrer Rechnung und den noch
+fehlenden Interpretationsschritten zusammen. Ein Guard bezeichnet eine
+Voraussetzung, die für eine bestimmte Schlussfolgerung noch benötigt
+wird. Eine endliche Rechnung und ein allgemeiner Beweis haben einen
+unterschiedlichen Geltungsbereich, auch wenn sie dieselbe Formel betreffen.
+
+Die Projektionsidentität liefert ein vollständiges elementares Beispiel.
+Ihre Voraussetzungen sind ein Hilbertraum, @@13@@, @@14@@ und die
+Definition von @@15@@; die Rechnung im vorigen Abschnitt beweist @@16@@.
+Eine exakte endliche Instanz lautet
+@@17@@
+Direktes Ausmultiplizieren ergibt @@18@@, @@19@@ und
+@@20@@
+Eine exakte rationale Prüfung bestätigt somit die Projektion und einen
+kommutierenden Transport, während der andere Transport als kommutierendes
+Beispiel verworfen wird. Diese Zurückweisung ist ein Kontrollergebnis
+und kein Scheitern des Projektionssatzes. Keine dieser Matrixgleichungen
+identifiziert ein natives Feld, einen physikalischen Transport oder
+einen Massenoperator.
+
+Im Haupttext bleibt die gewöhnliche mathematische Schreibweise erhalten.
+Die begleitenden Aussagendatensätze legen genaue Quellversionen,
+Voraussetzungen und endliche Prüfungen fest. Dadurch lässt sich die
+Argumentationskette nachvollziehen, ohne Inhaltsidentität als Beweis
+zu behandeln. Die ursprünglichen Argumente zur Massenauslesung stehen
+in Anhang~A; die getrennten Auditdaten bewahren die genaue Herkunft
+und die noch offenen Nachweispflichten.
+% section:particles
+Der algebraische Träger legt mehrere darstellungstheoretische Bausteine
+nahe: Einheitsquaternionen liefern eine @@21@@-Wirkung, komplexe Skalare
+Phasentransformationen, und die oktonionische Struktur motiviert
+Farbdarstellungen. Das sind nützliche Ausgangspunkte, sie bestimmen
+jedoch nicht eindeutig die physikalische Eichtheorie. Insbesondere
+ist eine gemeinsame komplexe Phase allein weder der elektromagnetische
+Ladungsoperator noch eine Herleitung der Hyperladung.
+
+Ebenso wichtig ist der Unterschied zwischen Farbe und Generation.
+Ein dreidimensionaler Unterraum mit einer Farbwirkung lässt sich nicht
+allein durch Abzählen seiner Basisvektoren mit drei Generationen
+identifizieren. Die übernommenen Komponentenzuordnungen des Companion
+benötigen zusätzliche Festlegungen der Einbettungen, Ladungsoperatoren
+und Beziehungen zwischen inneren Darstellungen und physikalischen
+Zuständen. Wir behandeln Eich- und Generationenzuordnung deshalb als
+bedingtes Zuordnungsproblem, nicht als Herleitung des vollständigen
+Standardmodells.
+
+Eine konkretere Vergleichskonstruktion beginnt mit einer isometrischen
+Seed-Einbettung @@22@@ und einem orthogonalen Schließungsprojektor @@23@@
+auf einem festgelegten gemeinsamen Träger. Ist @@24@@ positiv definit,
+so gilt
+@@25@@
+Unter diesen Voraussetzungen entstehen drei orthonormale geschlossene
+Zustände. Die Konstruktion bestimmt nicht die Seed-Einbettung und erklärt
+nicht, warum die Zustände Leptongenerationen sein sollten. Wir unterscheiden
+@@26@@ vom HC-Projektor @@27@@: Schließung innerhalb eines gewählten
+Raums und gerade/ungerade HC-Graduierung sind eigenständige Strukturen.
+Diese Unterscheidung wird erforderlich, sobald eine Kopplung die
+Massenauslesung definieren soll.
+% section:masses
+\paragraph{Eine notwendige Normbeziehung.}
+Sei @@28@@ mit @@29@@. Wir definieren
+@@30@@
+Wegen @@31@@ sind der konstante Anteil und @@32@@ orthogonal. Daher gilt
+@@33@@
+Der Koide-Wert verlangt somit gleiche quadrierte Normen des symmetrischen
+und des spurlosen Anteils. Zyklische Symmetrie erhält beide Normen jeweils
+für sich und legt ihr Verhältnis nicht fest. Zum Beispiel ergibt @@34@@
+den Wert @@35@@, während gleiche Wurzeln @@36@@ liefern.
+
+\paragraph{Eine bedingte HC-Darstellung.}
+Im euklidischen Drei-Wurzel-Raum setzen wir @@37@@ und wählen eine
+orthogonale Involution @@38@@. Für @@39@@ sei @@40@@ von null
+verschieden und komponentenweise nichtnegativ, wobei @@41@@ gilt.
+Mit @@42@@ folgt
+@@43@@
+Somit ist @@44@@ die zusätzliche Koide-Bedingung. Die Projektoraxiome
+erlauben @@45@@; dann gelten @@46@@ und @@47@@. Den gewünschten Wert
+wählen sie nicht aus. @@48@@ erst nach Vorgabe der Zielwurzeln zu
+wählen, liefert die fehlende physikalische Auswahlregel nicht.
+
+Ein expliziter Weg vom ursprünglichen Träger zu dieser Darstellung
+benötigt eine beschränkte Koisometrie @@49@@ mit @@50@@, deren Kern
+@@51@@-invariant ist. Dann ist @@52@@ eine orthogonale Involution,
+und es gilt @@53@@. Erfüllt ein unabhängig vorgegebener Seed @@54@@
+und lautet das physikalische Wurzelgesetz @@55@@, so wird das Kriterium zu
+@@56@@
+Weder die Bezeichnung einer Auslesung noch die Anzahl ihrer Komponenten
+liefert @@57@@, die Kontrolle seiner Metrik, dieses Seed-Gesetz oder die
+Orthogonalitätsauswahl. Eine rein ungerade Eingabe erfüllt zudem @@58@@
+und kann auf diesem direkten kompensierten linearen Weg keine von null
+verschiedenen Wurzeln ergeben.
+
+\paragraph{Positive nichtlineare Auslesung als zusätzliche Anforderung.}
+Für zwei komplexe Amplituden @@59@@ definieren wir
+@@60@@, @@61@@, @@62@@ und @@63@@. Dann gilt @@64@@.
+Mit dem Dreierzyklus @@65@@ lautet ein beispielhafter hermitescher
+Wurzeloperator
+@@66@@
+Nur dort, wo @@67@@ gilt, dürfen seine Eigenwerte als nichtnegative
+Hauptwurzeln gelesen werden. In diesem Bereich gilt
+@@68@@
+Positivität für jede Eingabe verlangt @@69@@ und ergibt @@70@@.
+Mit dem isometrischen Koeffizienten @@71@@ ist @@72@@ in eingeschränkten
+positiven Phasenkammern erreichbar. Präparation und Erhaltung einer
+solchen Kammer sind jedoch zusätzliche physikalische Angaben. Einen
+vorzeichenbehafteten Operator @@73@@ zu quadrieren, löst dieses Problem
+nicht: Seine physikalische Hauptwurzel wird zu @@74@@, wodurch sich
+die Wurzelsumme ändert.
+
+Der jüngste HC-Balancevergleich verdeutlicht das Übertragungsproblem.
+Für die Zweimodengradierung @@75@@ liefert der balancierte Zustand
+@@76@@ die Werte @@77@@ und damit @@78@@ für diese Auslesung.
+Allgemeiner können bei einem antipodalen Paar von Wurzeloperatoren
+@@79@@ mit @@80@@ und @@81@@ nicht beide Operatoren positive
+Koide-Auslesungen sein. Sind beide positiv, liegen die Eigenwerte von
+@@82@@ in @@83@@, und es gilt @@84@@; beide Verhältnisse sind daher
+höchstens @@85@@. Das beschränkt dieses isotrope Auslesepaar, nicht
+beliebige Massenmechanismen. Es zeigt, weshalb Zustandsbalance und
+positive Drei-Generationen-Übertragung gemeinsam herzuleiten sind.
+% section:geometry
+Dasselbe Schnittstellenproblem tritt in der Dynamik auf. Eine endliche
+Realisierung des Gesamtzustands über den reellen Zahlen erfülle @@86@@,
+und @@87@@ sei eine surjektive reell-lineare Ausleseabbildung. Für eine
+Rechtsinverse @@88@@ schreiben wir @@89@@ mit @@90@@. Ableiten ergibt
+@@91@@
+Die Observable ist in ihrer Bewegungsgleichung genau dann unabhängig
+vom verworfenen Anteil des angehobenen Zustands, wenn
+@@92@@
+Diese Bedingung kommt zur algebraischen Projektoridentität hinzu.
+Fehlt sie, können zwei Gesamtzustände mit gleicher Auslesung
+unterschiedliche Ausleseableitungen haben. Das Eliminieren verborgener
+Variablen kann dann Gedächtnisterme anstelle einer autonomen lokalen
+Gleichung erzeugen.
+
+Das geometrische Programm des Companion untersucht induzierte Koframes,
+lokale Feldvergleiche und kompatible Zwangsbedingungsdaten. Endliche
+Rechnungen mit Normalableitungen und Quellen können prüfen, ob vorgegebene
+tangentiale Daten einen normalen Zuwachs festlegen. Eine solche Rechnung
+ist noch kein regionaler Existenzsatz, keine Herleitung der nativen
+Wirkung und keine Identifikation einer inneren positiven Vergleichsmetrik
+mit einer Raumzeitmetrik. Die Rekonstruktion muss gemeinsame
+Definitionsbereiche, Erhaltungsbedingungen und die Reihenfolge der
+ursprünglichen Operatoren berücksichtigen.
+
+Hier liegt eine konkrete Verbindung zwischen Massen- und Geometriezweig:
+Beide benötigen eine dargestellte Ausleseabbildung mit kontrollierten
+verworfenen Freiheitsgraden. Eine formale Mastergleichung ordnet den
+Ansatz; eine wohlgestellte Entwicklung und die physikalische Bedeutung
+der projizierten Felder bleiben zusätzliche Nachweispflichten.
+% section:limits
+Die Ergebnisse verorten die wesentlichen fehlenden Angaben in der
+Übertragung vom gemeinsamen Träger zu Observablen. Ein HC-Projektor
+liefert eine exakte Graduierung. Koide benötigt zusätzlich eine
+metriktreue Wurzeldarstellung und eine ausgewählte Normbeziehung.
+Positive nichtlineare Auslesungen schränken den Zustandsbereich ein;
+geometrische Projektion führt eine eigenständige Autonomiebedingung
+ein. Keine dieser Anforderungen folgt allein aus der Dimension
+einer Darstellung.
+
+Ein neuerer Vergleichsansatz verbindet diese Frage mit einem arithmetisch
+definierten Operator. Für @@93@@ definiert die logarithmische Ableitung
+der Zetafunktion die reelle ungerade Funktion
+@@94@@
+Dabei ist @@95@@ die von-Mangoldt-Funktion \cite{DLMF274}. Multiplikation
+mit @@96@@ antikommutiert mit der Parität @@97@@. Der selbstadjungierte
+Operator @@98@@ besitzt daher symmetrische positive und negative
+Spektralunterräume. Ein Zustand, der auf eine der beiden von null
+verschiedenen Spektralseiten beschränkt ist, ist paritätsbalanciert,
+auch bei kontinuierlichem Spektrum. Die Konstruktion @@99@@,
+@@100@@ liefert ein reguläres normiertes Beispiel auf der positiven
+Seite. Seine Parameter- und Fourier-Varianzen sind endlich. Die
+zugehörige Robertson-Relation ist mit dieser Balance vereinbar,
+muss aber nicht gesättigt sein \cite{Robertson1929}.
+
+Das Beispiel zeigt mathematische Verträglichkeit, keine physikalische
+Auswahl. Die positive Spektralbeschränkung, ihre Präparation, das Fenster
+und die Interpretation von @@101@@ als Energie sind zusätzliche
+Festlegungen; der Parameter ist nicht mit physikalischer Zeit oder
+Position identifiziert. Die konvergente Primzahlreihe rechtfertigt
+auch nicht das Einsetzen von @@102@@. Vor allem liefert das Beispiel
+keine Abbildung auf drei positive Leptonwurzeln und umgeht die obigen
+Auslesebeschränkungen nicht.
+
+Eine physikalische Vervollständigung muss daher Trägerwirkung,
+Generationeneinbettung, zulässigen Zustandsbereich, Observablenabbildung
+und Dynamik am selben dargestellten System festlegen. Anschließend
+ist zu bestimmen, welche Parameter Vorhersagen und welche gemessene
+Eingaben sind. Bis dahin trägt der Rahmen bedingte Konstruktionen und
+Konsistenzprüfungen, aber kein hergeleitetes Teilchenspektrum und keine
+vereinheitlichte Feldtheorie. Der lange Companion bewahrt die breiteren
+kosmologischen und strukturellen Vorschläge mit ihren jeweiligen
+Einschränkungen.

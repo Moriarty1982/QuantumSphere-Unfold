@@ -750,3 +750,12 @@ elektromagnetische Intervall wurde per Hash abgerufen und geprüft; die
 Prämissen bleiben bedingt, Closure und allgemeine mathematische Beziehungen
 werden vom Beleg nicht als bewiesen zertifiziert. Der Ausbau ist keine
 neue Messung, vollständige Begutachtung oder OP-Schließung.
+
+Für den Autor liegt außerdem eine vollständige deutsche Lesefassung vor,
+einschließlich des Beweisanhangs. Sie übersetzt die Argumentation und die
+offenen Voraussetzungen; Formeln, Zahlen und Gleichungsnummern bleiben
+erhalten. Eine Prüfung bindet die Übersetzung an die englische Vorlage
+und gleicht sämtliche mathematischen Fragmente ab. Das ist eine
+persönliche Leseübersetzung und noch kein zusätzliches Sprachprofil in
+der Editionsdatenbank oder eine eigene Veröffentlichung. Die englische
+Physikedition bleibt die zugrunde liegende registrierte Ausgabe.

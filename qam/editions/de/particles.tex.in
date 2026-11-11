@@ -1,0 +1,177 @@
+\subsection{Was eine Darstellungskonstruktion festlegen muss}
+Die algebraische Frage lautet nicht, ob sich Symbole, die den drei
+Eichfaktoren ähneln, in ein Diagramm setzen lassen. Entscheidend ist,
+welche Operatoren auf welchen Zuständen wirken, wie ihre Wirkungen
+kommutieren und welche Observablen den invarianten Unterräumen
+zugeordnet werden. Eine physikalische Eichinterpretation verlangt
+außerdem lokale Transformationsgesetze, Zusammenhänge und die passenden
+Materiedarstellungen. Die auf einem Träger auftretenden kompakten
+Gruppen sind nur ein Teil dieser Angaben.
+
+Für den Quaternionenfaktor schreiben wir die hermiteschen Erzeuger
+als @@0@@. Das Pauli-Multiplikationsgesetz liefert
+@@1@@
+Das zeigt die Lie-Algebra der @@2@@-Wirkung der Einheitsquaternionen.
+Es entscheidet nicht, ob ein bestimmter Unterraum ein schwaches Dublett,
+einen räumlichen Spinor oder ein anderes Zweikomponentensystem darstellt.
+Dafür sind die übrigen Darstellungs- und Kopplungsdaten maßgeblich.
+Ebenso wirkt die kommutierende skalare Phase @@3@@ gleichförmig auf
+dem Träger, solange kein nichttrivialer Ladungsoperator festgelegt ist.
+
+Der oktonionische Baustein hängt ebenso empfindlich von der gewählten
+komplexen Struktur ab. Wir fixieren eine imaginäre Einheit @@4@@ und
+bezeichnen mit @@5@@ die Linksmultiplikation auf dem reellen
+Oktonionenraum. Hier gilt @@6@@; es handelt sich also um eine komplexe
+Struktur, nicht um die Involution @@7@@ der HC-Graduierung. Bezüglich
+dieser Struktur lässt sich der reelle achtdimensionale Raum als komplexer
+vierdimensionaler Raum lesen. Die bekannte Singulett-/Triplettgliederung
+beim Stabilisator von @@8@@ motiviert den Farbvergleich des Companion.
+Alle Identifikationen dieses Absatzes beziehen sich auf diese ausgewählte
+innere komplexe Struktur.
+
+Auf der Komplexifizierung lauten die zugehörigen komplex-linearen
+Projektionen
+@@9@@
+Komplexe Koeffizientenkonjugation vertauscht diese Projektionen. Ohne
+eine Abbildung, die die betreffenden Bereiche und Bedeutungen
+identifiziert, dürfen sie weder @@10@@ noch einen Schließungsprojektor
+ersetzen. Die Bezeichnung ,,Projektor`` könnte sonst drei verschiedene
+Zerlegungen verdecken: innere komplexe Struktur, HC-Parität und
+physikalische Schließung.
+
+\subsection{Eine bedingte Leiterkonstruktion und ihre exakte Zählung}
+Die im Companion beibehaltene Ladungskonstruktion lässt sich in eine
+algebraische Voraussetzung und deren Folgerungen zerlegen. In der dort
+festgelegten Oktonionen-Multiplikationskonvention setzen wir
+@@11@@
+Die dargestellte Clifford-Multiplikation und Adjungierung müssen die
+kanonischen Antikommutatorrelationen liefern:
+@@12@@
+Sobald diese Relationen und ein zyklisches Vakuum vorliegen, das von den
+drei @@13@@ vernichtet wird, ist die Besetzungszählung elementar.
+Jeder Erzeugungsoperator kann höchstens einmal auftreten, weil sein
+Quadrat verschwindet. Die Zustände mit @@14@@ besetzten Moden haben
+deshalb Dimension @@15@@, und @@16@@ hat auf diesem Unterraum den
+Eigenwert @@17@@. Der Ladungsvergleich besitzt folglich das Spektrum
+@@18@@
+Die Gesamtdimension ist acht, entsprechend der fermionischen
+Fock-Darstellung mit drei Moden. Diese Vielfachheiten folgen aus der
+gewählten Leiteralgebra. Sie begründen keine drei Leptonfamilien.
+
+Eine innere @@19@@-Wirkung, die die Erzeugungsoperatoren rotiert und das
+Vakuum erhält, wirkt auf dem einfach besetzten Raum als Triplett und
+auf dem zweifach besetzten Raum als dessen konjugierte Darstellung.
+Es handelt sich um die erste und zweite äußere Potenz eines
+dreidimensionalen komplexen Raums. Vakuum und volle Besetzung sind
+Singuletts. Daraus entsteht eine präzise Darstellungsfrage: Ist die
+dargestellte Farbwirkung auf dem vorgeschlagenen oktonionischen Träger
+diejenige, die diese Operatoren verlangen? Das muss mit der gewählten
+Multiplikation und Adjungierung geprüft werden; die Zähltabelle allein
+leistet diese Prüfung nicht.
+
+Die historischen Rechnungen des Companion motivieren diese Verträglichkeit.
+Die vorliegende Arbeit macht aus einer erhaltenen numerischen Rechnung
+aber keinen neuen formalen Satz. Für die physikalische Verwendung fehlen
+weiter die Teilcheneinbettung, ihre Chiralität und die elektroschwachen
+Ladungszuordnungen. Insbesondere leitet ein Anzahloperator mit den
+angegebenen Eigenwerten allein weder Hyperladung noch die vollständige
+schwache Darstellung her.
+
+Diese Zerlegung erklärt auch eine Korrektur des wörtlichen
+Komponentenwörterbuchs. Bei der inneren komplexen Struktur können etwa
+@@20@@ nur deshalb eine komplexe Triplettbasis bilden, weil ihre
+@@21@@-Bilder die zugehörigen reellen Partner liefern. Diese Bilder
+als weiteres unabhängiges physikalisches Triplett mitzuzählen, zählt
+dieselben komplexen Freiheitsgrade doppelt. Beim Wechsel zur kommutierenden
+äußeren komplexen Einheit ändert sich die Zerlegung in Ladungseigenvektoren.
+Die Zustandsbezeichnungen müssen diesem Wechsel folgen; eine
+uneingeschränkte Gleichheit der Ladungen zwischen den vorgeschlagenen
+Frames ist nicht gerechtfertigt.
+
+\subsection{Der eigenständige Generationenraum}
+Drei Farben innerhalb einer Darstellung und drei Generationen eines
+Teilchens sind unterschiedliche Vielfachheiten. Eine nichttriviale
+Farbwirkung auf einem dreidimensionalen Unterraum wirkt nicht automatisch
+als Generationenpermutation. Eine Generationenzuordnung benötigt eine
+zweite deklarierte Struktur und deren Beziehung zum Träger. Die
+Schließungs-Seed-Konstruktion formuliert diese Anforderung bedingt,
+ohne rohe Oktonionenkoordinaten mit Masseneigenzuständen gleichzusetzen.
+
+Sei @@22@@ eine isometrische Seed-Einbettung und @@23@@ ein orthogonaler
+Projektor. Wir definieren @@24@@. Gilt @@25@@, so sind die Zustände in
+@@26@@
+geschlossen und orthonormal:
+@@27@@
+Hat @@28@@ Rang kleiner als drei, hat die Projektion eine unabhängige
+Seed-Richtung entfernt; die Formel kann dann keine drei unabhängigen
+Zustände erzeugen. Ist @@29@@ nicht diagonal, mischt schon die Normierung
+die ursprünglichen Seed-Komponenten. Auch eine erfolgreiche Konstruktion
+identifiziert daher nicht jede Ausgangskomponente einzeln als physikalischen
+Masseneigenzustand.
+
+Zusätzlich seien @@30@@ und @@31@@ erfüllt. Dieselbe Rechnung ergibt
+@@32@@. So entstehen drei geschlossene ungerade Eingaben. Ein von null
+verschiedener Operator, der auf diesen ungeraden Raum beschränkt ist,
+erhält die Ungeradheit und kommutiert mit dem eingeschränkten @@33@@.
+Er kann nicht zugleich mit @@34@@ antikommutieren. Eine HC-ungerade
+Kopplung muss entgegengesetzte Paritätssektoren verbinden; ein Operator,
+der lediglich ungerade Ausgaben besitzt, ist ein anderes Objekt.
+
+Diese Unterscheidung ist schon vor jeder Spektrumsrechnung ein nützlicher
+Prüfschritt. Eine vorgeschlagene Dirac- oder Massenkopplung sollte
+festlegen, ob sie innerhalb eines Sektors wirkt, die HC-Graduierung
+wechselt, den Schließungssektor wechselt oder diese Operationen kombiniert.
+Matrixblöcke und Definitionsbereiche entscheiden darüber. Den Operator
+,,ungerade`` zu nennen oder ihm einen vertrauten Buchstaben zu geben,
+legt die gemeinte Aussage nicht fest.
+
+\subsection{Ein dargestellter Übergang und die Wahl der Massenbasis}
+Wir wählen auf demselben Träger einen beschränkten dimensionslosen
+Vergleichstaktgeber @@35@@ und definieren
+@@36@@
+Dann gilt @@37@@. Wird unabhängig ein Massengesetz @@38@@ angenommen,
+so lauten die möglichen Eigenmassen @@39@@, wobei @@40@@ die Eigenwerte
+von @@41@@ sind. Eine Auslesung fester Komponenten verwendet stattdessen
+@@42@@. Diese Vorschriften müssen nicht übereinstimmen.
+
+Beispielsweise sei mit @@43@@
+@@44@@
+Die drei Diagonaleinträge sind @@45@@, das Spektrum ist jedoch @@46@@.
+Das Massenwurzelverhältnis der festen Komponenten wäre @@47@@, das
+spektrale Verhältnis dagegen @@48@@. Das sind unterschiedliche
+Observablen derselben positiven Matrix. Das Beispiel schließt den
+Schluss von gleichen Diagonalkopplungen auf entartete physikalische
+Eigenmassen aus.
+
+Hinzu kommt eine Ranganforderung. Wegen @@49@@ stimmen die Kerne
+von @@50@@ und @@51@@ überein, und es gilt
+@@52@@
+Drei strikt positive mögliche Massen verlangen drei unabhängige
+Übergangsausgaben. Ein einzelner skalarer Ausgabekanal hat höchstens
+Rang eins, unabhängig von der Anzahl seiner Eingabebezeichnungen.
+Ein operatorwertiger Kanal kann eine höhere Dimension haben. Diese
+Dimension muss aber dargestellt werden, statt sie aus dem Namen eines
+Sondenkanals zu erschließen.
+
+\subsection{Was Mischungswinkel voraussetzen würden}
+Mischung ist eine Observable relativer Basen. Um die Anforderung
+explizit zu machen, betrachten wir zwei hermitesche
+Generationenvergleichsoperatoren @@53@@ mit festgelegter physikalischer
+Bedeutung. @@54@@ diagonalisieren sie im selben Generationenraum.
+Ihre relative unitäre Matrix ist
+@@55@@
+Ein gemeinsamer Koordinatenwechsel mit @@56@@ ersetzt die beiden
+Diagonalisierer durch @@57@@ und lässt @@58@@ unverändert. Umphasung,
+Reihenfolge und Eigenwertentartung verlangen die üblichen gesonderten
+Konventionen, bevor einzelne Parameter interpretiert werden können.
+
+Damit sind die Angaben benannt, die eine Mischungsvorhersage benötigen
+würde: zwei unabhängig dargestellte Operatoren, ihre gemeinsame kinetische
+Metrik, ihre Zuordnung zu physikalischen Spezies und eine Regel für ihre
+relativen Eigenräume. Eine gemeinsame zyklische Wirkung oder die Dimension
+drei liefert diese Angaben nicht. In einem entarteten Eigenraum ist die
+Basis frei; scheinbare Mischungswinkel aus einem beliebigen Diagonalisierer
+sind daher keine Vorhersagen. Die nachfolgende Massenauslesung behandelt
+Spektrum, physikalische Skala und Generationenbasis deshalb als
+eigenständige Fragen. Ein passendes Matrixmuster beantwortet nicht alle
+drei zugleich.

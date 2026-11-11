@@ -2,9 +2,9 @@
 
 11. November 2026 (Codex). Diese Datei wird je Arbeitsblock überschrieben.
 
-- Branch codex/v5-release-prep; Basis vor diesem Block 210a161.
+- Branch codex/v5-release-prep; Basis vor der Übersetzung b5f032e.
 - Main/Basis bleibt PR94 / 3a68669b0b12766c256ae6eeed1f52ae0693acc4.
-- Autorenauftrag: knappe Physikfassung inhaltlich zu einem eigenständigen Paper ausarbeiten.
+- Letzter Autorenauftrag: vollständige deutsche Lesefassung des ausgearbeiteten Physikpapers.
 - Sieben neue Module qam/editions/v5_expanded_*.tex, jeweils als Erklärung registriert und quellengehasht.
 - Umfang: 27 Seiten, davon 24 Argumentation, eine Literaturseite und zwei Seiten Originalbeweise.
 - PDF: build/qam-v5-expanded-final/physics/paper.pdf; LaTeX, assembly.json und audit.md im selben Ordner.
@@ -28,6 +28,10 @@
 - Langfassung weiterhin 61 Quellstationen / 2468 Aussagen mit vollständigem gehashtem Quellbaum.
 - Entwicklung 5.0.0-draft; öffentliche Baseline 4.11.0 / DOI 10.5281/zenodo.24108818.
 - Kein Main-Merge, neuer Release, DOI oder Zenodo-Upload in diesem Block.
-- Nächster Schritt: fachliche Schlussprüfung der erweiterten Lesefassung; danach gemeinsamen Zwei-PDF-Releasejob fertigstellen.
+- Deutsche persönliche Lesefassung: build/qam-v5-physics-de-final/paper.pdf, 29 Seiten einschließlich Beweisanhang.
+- Übersetzungsquellen qam/editions/de/ und Werkzeug qam.tools.build_v5_german_reader; 640 mathematische Fragmente erhalten, nur Tabellenbeschriftung lokalisiert.
+- Deutsche Fassung zweimal gesetzt, alle 29 Seiten visuell geprüft; keine Overfull/undefined/Rerun/mehrfachen Labels. Wiederholbarkeit und Zurückweisung geänderter Vorlage geprüft.
+- Kein neues Datenbank-Sprachprofil; englische Edition bleibt Quelle. Bericht notes/research/v5_german_reader_2026_11_11.md.
+- Nächster Schritt: Autor liest die deutsche Fassung; fachliche Schlussprüfung und gemeinsamen Zwei-PDF-Releasejob fortsetzen.
 - Branchlöschung weiterhin durch automatische Freigabeprüfung blockiert; Liste notes/research/v5_0_0_branch_cleanup_review.md, keine neue Freigabe.
 - .codex/environments/ nicht aufnehmen. Frühere H-/k-Nummern hier nicht neu vergeben.

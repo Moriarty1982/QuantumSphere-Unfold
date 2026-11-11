@@ -1,5 +1,10 @@
 # Wiki-Pflege
 
+**11.11.2026, deutsche Lesefassung:** Forschungsstand um die vollständige
+persönliche Übersetzung mit unveränderten Formeln und erhaltenen offenen
+Voraussetzungen ergänzt. Quellenbindung an die englische Physikedition;
+keine neue Datenbank-Sprachausgabe oder Publikation.
+
 **11.11.2026, erweiterte Physikfassung:** Forschungsstand um den Ausbau auf
 27 Seiten, die konkreten Herleitungen und die weiterhin offenen nativen
 Pflichten ergänzt. Sieben registrierte Textmodule und ein per Hash geprüfter

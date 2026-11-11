@@ -1,0 +1,241 @@
+\subsection{Die formale Gesamtzustandsgleichung und ihre tatsächlichen Voraussetzungen}
+Die beibehaltene Architektur ordnet die Sonde durch eine Gleichung
+mit festgelegter Operatorreihenfolge:
+@@0@@
+Zu ihren Bestandteilen gehören ein innerer Zusammenhang, ein
+Schließungsprojektor, ein Fehlanpassungsfeld und vorgeschlagene
+triadische Kopplungen. Ihre Namen festzulegen, bestimmt nicht ihre
+gemeinsamen Matrixelemente auf den Generationenzuständen. Ebenso wenig
+sichert es die Adjungierungsbeziehungen, die für eine reelle Wirkung
+oder selbstadjungierte Zeitentwicklung nötig sind.
+
+Auf einer gewählten Zeitkarte mit invertierbarem @@1@@ lässt sich die
+Gleichung algebraisch umstellen zu
+@@2@@
+Dabei bleibt die Reihenfolge nichtkommutierender Faktoren erhalten.
+Für ein Entwicklungsproblem benötigt man Definitionsbereich, Rand-
+oder Anfangsdaten, Regularität und eine geeignete Adjungierung. In
+einem endlichen Modenvergleich reduzieren sich diese Fragen auf
+dargestellte Matrizen; in einer Feldtheorie lassen sie sich durch
+Matrixschreibweise nicht beseitigen.
+
+Die obige Auslesebedingung prüft auch dann noch eine zusätzliche Frage,
+wenn bereits eine vollständige Entwicklung vorliegt. Die reduzierten
+Variablen müssen genügend Information behalten, um ihre eigene
+Ableitung festzulegen. Genau am Kern der Ausleseabbildung kann diese
+Bedingung scheitern. Das ist das dynamische Gegenstück zum
+elektromagnetischen Beispiel: Dort verwarf das Gram-Register die
+Orientierung, die für die transformierte Auslesung benötigt wurde.
+
+\subsection{Ein Gegenbeispiel mit verborgenem Zustandsanteil und gleicher Normierung}
+Die Abhängigkeit von verworfenen Variablen ist nicht nur ein mögliches
+Problem großer nichtlinearer Systeme. Wir betrachten eine komplexe
+Zweikomponentenamplitude @@3@@ mit Entwicklung @@4@@ und reellen @@5@@.
+Dann gilt
+@@6@@
+Ausgelesen werde nur @@7@@. Wir fixieren @@8@@ und vergleichen die
+Anfangszustände
+@@9@@
+Beide Gesamtzustände haben Norm eins und denselben ausgelesenen Vektor.
+Ihre Ausleseableitungen lauten jedoch
+@@10@@
+Der Polarwinkel von @@11@@ hat somit in beiden Fällen entgegengesetzte
+anfängliche Winkelgeschwindigkeiten. Gleiche Auslesedaten und gleiche
+Gesamtnorm haben kein autonomes Winkelgesetz definiert. Das Beispiel
+ist eine gewöhnliche endliche hermitesche Entwicklung; es benötigt
+weder einen instabilen Hamiltonoperator noch eine verrauschte
+numerische Reduktion.
+
+Das lineare Kriterium lokalisiert den Fehler. Liest @@12@@ den Anteil
+@@13@@ aus, verschwindet @@14@@ nicht auf @@15@@, weil der verworfene
+Realteil @@16@@ antreibt. Eine zeitabhängige Ausleseabbildung führt
+@@17@@ ein, statt die Bedingung aufzuheben. Ein mitbewegter Frame kann
+physikalisch angemessen sein; seine Ableitung muss dann mitgerechnet werden.
+
+\subsection{Exakte Elimination erhält Gedächtnis und Anfangszustandsdaten}
+Für einen konstanten hermiteschen Moden-Hamiltonoperator schreiben wir
+@@18@@ mit reell-symmetrischem @@19@@ und reell-schiefsymmetrischem
+@@20@@. Die reellen Gleichungen sind
+@@21@@
+Lösen der ersten und Einsetzen in die zweite Gleichung ergibt
+@@22@@
+Dies ist eine exakte reduzierte Gleichung. Sie enthält den verworfenen
+Anfangszustand und einen Gedächtniskern. Einen der Terme wegzulassen,
+definiert ein anderes Modell, solange keine Näherung samt Geltungsbereich
+angegeben ist. Insbesondere folgt ein lokaler Dämpfungskoeffizient nicht
+allein daraus, dass eine Komponente herausprojiziert wurde.
+
+Dasselbe gilt für Phasenkammern positiver Wurzeln. Eine projizierte
+reelle oder ungerade Mode kann auf einem kinematisch ausgewählten
+Schnitt bleiben, während ihre Phase eine positive Wurzelkammer verlässt.
+Ein Phasenminimum der auf diesen Schnitt eingeschränkten Energie
+begründet keine Stabilität gegenüber ausgelassenen Amplituden- und
+komplexen Phasenrichtungen. Die vollständige Wirkung und die daraus
+folgende projizierte Gleichung müssen festlegen, welche Variationen
+physikalisch zulässig sind.
+
+\subsection{Eine Wirkungsreduktion mit erhaltenen kanonischen Partnern}
+Eine kontrollierte endliche Alternative zeigt, wie zusätzliche Trägheit
+hergeleitet werden kann, ohne ein Viskositätsgesetz anzusetzen. Sei
+@@23@@
+und schreiben wir
+@@24@@
+Der kinetische Term lautet @@25@@. Würde man @@26@@ und @@27@@ vor
+der Variation entfernen, entfernte man die kanonischen Partner von
+Amplitude und Phase. Stattdessen setzen wir @@28@@, @@29@@ und @@30@@.
+Bis auf eine totale Ableitung gilt
+@@31@@
+Für positiv definites @@32@@ lautet die algebraische Gleichung für @@33@@
+@@34@@
+Quadratische Ergänzung liefert
+@@35@@
+Die induzierte kinetische Metrik ist @@36@@ und kann von den
+beibehaltenen Koordinaten abhängen. Ihre Ableitungen gehören in die
+Bewegungsgleichungen. Die Voraussetzungen @@37@@ und @@38@@ sind
+echte Bedingungen dieser regulären Reduktion.
+
+Für den Vergleich @@39@@ mit @@40@@ ergibt sich
+@@41@@
+Die Winkelträgheit ist @@42@@. Ihre Gleichung @@43@@ beschreibt einen
+reversiblen Austausch mit der Amplitude. Bei Kontraktion wechselt der
+dämpfungsähnliche Term sein Vorzeichen. Ohne einen gesondert dargestellten
+dissipativen Mechanismus darf er deshalb nicht als positive Viskosität
+interpretiert werden. Dies sind Vergleichskoordinaten von Moden, noch
+kein natives Fluid und keine physikalische mikroskopische Uhr.
+
+\subsection{Reellwertigkeit der Wirkung und Bedeutung einer positiven Fehlanpassung}
+Wir betrachten gewöhnliche hermitesche innere Felder @@44@@, einen
+festen reellen Kovektor @@45@@ und
+@@46@@
+Für konstantes @@47@@ schreiben wir
+@@48@@
+Die Krümmung des Zusammenhangs lautet @@49@@. Die wörtliche quadratische
+Spurwirkung und eine mit Adjungierten gepaarte Spurwirkung unterscheiden sich:
+@@50@@
+Raumzeitindizes werden mit der festgelegten reellen Lorentzmetrik
+kontrahiert. Der Kreuzkommutator unter der Spur verschwindet im zweiten
+Ausdruck. Diese Formeln vergleichen unterschiedliche Wirkungen, nicht
+zwei Schreibweisen desselben Variationsproblems. Die Wahl muss mit
+Sondengesetz und erhaltenen Strömen übereinstimmen.
+
+Auch die Positivität von @@51@@ liefert keinen allgemeinen Dämpfungssatz.
+Im Vergleich mit konstantem innerem Faktor und flachem Hintergrund
+@@52@@, hermiteschem @@53@@ und @@54@@ hat der nullartige
+Krümmungsterm die Form
+@@55@@
+Sein Haupttensor ist proportional zu @@56@@ und hat für nichtverschwindendes
+nullartiges @@57@@ Rang eins. Ein positiver Koeffizient auf einem
+Zeitschnitt ist kein vierdimensionaler lorentzscher Wellenoperator.
+Eine physikalische Ausbreitungs- oder Viskositätsaussage benötigt das
+übrige dargestellte Feldsystem.
+
+\subsection{Induzierte Koframes und eine direkte Sperre im selben Frame}
+Bei festgelegter hermitescher Faktorisierung in Spin- und inneren Anteil
+seien @@58@@ und @@59@@. Für den vorgeschlagenen reellen Koframe
+kann dann die Identität gelten:
+@@60@@
+Falls @@61@@ gilt und @@62@@ Rang vier hat, sind die Funktionen @@63@@
+lokale Koordinaten und @@64@@ ist flach. Dieses eingeschränkte Ergebnis
+folgt aus dem Satz über die inverse Funktion und benötigt keine
+Krümmungsrechnung. Eine variable Adjungierung, ein geometrischer
+Spinzusammenhang oder eine andere Auslesung können die Voraussetzungen
+ändern.
+
+Für die nichtverschwindende Rang-eins-Änderung @@65@@ setzen wir @@66@@
+und nehmen @@67@@ an. Determinantenlemma und inverse Rang-eins-Formel
+liefern
+@@68@@
+Ein nullartiger Kovektor bleibt bei dieser regulären Änderung also
+nullartig. Dies ist eine geometrische Verträglichkeitsaussage. Eine
+vollständige Lösung muss zusätzlich Sonden-, Zusammenhangs-,
+Schließungs- und Quellgleichungen erfüllen.
+
+Eine stärkere Konsistenzprüfung ergibt sich, wenn genau dieselbe Sonde,
+Adjungierung und Ableitung sowohl zur Rekonstruktion von @@69@@ als
+auch zur Definition der koordinatenbezogenen Gamma-Matrizen in der
+geordneten Gleichung verwendet werden. Es gelte
+@@70@@
+mit reellem invertierbarem @@71@@. Kontraktion von Inverse und Koframe ergibt
+@@72@@
+Für @@73@@ und @@74@@ folgt
+@@75@@
+Ist @@76@@ reell, kann die vollrangige Rekonstruktion im selben Frame
+die Bewegungsgleichung nicht erfüllen, also nicht ,,on shell`` sein.
+Die Reellwertigkeit von @@77@@ folgt etwa dann, wenn der massenartige
+Operator bezüglich der gewählten Sondenadjungierung die benötigte
+Hermitizität besitzt. Das schließt eine bestimmte zusätzliche
+Identifikation aus. Der Companion hat diese Identifikation nicht als
+natives Gesetz hergeleitet. Es ist kein allgemeiner Inkonsistenzsatz
+für jeden geometrischen Zweig.
+
+\subsection{Endliche Kompatibilität gegenüber einer Feldlösung}
+An einem vorbereiteten endlichen Jet, also einem endlichen Satz von
+Ableitungsdaten, lassen sich die Normalableitungsgleichungen nach
+Fixierung der niedrigeren Daten als lineares System @@78@@ schreiben.
+Die orthonormalen Spalten von @@79@@ mögen @@80@@ aufspannen. Dann
+lautet die exakte Kompatibilitätsbedingung
+@@81@@
+Für kompatibles @@82@@ ist die allgemeine Lösung @@83@@, @@84@@.
+Ist eine Kernzerlegung vorgegeben, parametrisieren deren Koordinaten
+die verbleibende normale Freiheit. Für inkompatibles @@85@@ hinterlässt
+der Kleinste-Quadrate-Wert @@86@@ das Residuum @@87@@ und ist keine
+Feldlösung.
+
+Dieser Unterschied zeigt sich bereits bei @@88@@, einer
+Drei-mal-zwei-Matrix mit der Identität in den ersten beiden Zeilen.
+Ein Ziel @@89@@ ist nur bei @@90@@ kompatibel, obwohl ein
+Kleinste-Quadrate-Löser für jedes @@92@@ den Wert @@91@@ zurückgibt.
+Ein kleines Normalresiduum oder eine Erfolgsmeldung des Lösers ersetzt
+die explizite Kompatibilitätsgleichung nicht.
+
+Das Quellenproblem wird aussagekräftiger, wenn höhere Koordinaten in
+anpassbare normale Variablen @@93@@ und vorgegebene tangentiale Daten
+@@94@@ zerlegt werden:
+@@95@@
+Sei @@96@@ eine Basis des linken Kerns von @@97@@. Wir definieren
+@@98@@
+Nach Elimination von @@99@@ bleibt @@100@@. Hat @@101@@ vollen
+Spaltenrang, ist die Quelle für kompatible Daten eindeutig:
+@@102@@
+Der verbleibende höhere Lift lautet @@103@@, @@104@@.
+Dies ist ein bedingtes endliches Quellgesetz. Eine andere Wahl der
+vorgegebenen tangentialen Koordinaten ändert die Linkskernprüfung.
+Sie kann eine Quellenbedingung beseitigen, die zuvor durch Einfrieren
+aller höheren Variablen gefunden wurde. Die Ableitungsmaske ist daher
+Teil der mathematischen Aussage, kein numerisches Implementierungsdetail.
+
+\subsection{Fortpflanzung von Zwangsbedingungen setzt ein offenes Gebiet voraus}
+Der festgelegte Cartan-Vergleich verwendet einen invertierbaren reellen
+Koframe, einen unabhängigen Lorentz-Zusammenhang, Sondenfelder und
+Multiplikatoren, die eine konstitutive Koframebeziehung erzwingen.
+Bei kompatibler Elimination des Zusammenhangs liefern Koordinaten-
+und lokale Lorentzvariationen Identitäten der Residuen. Deren
+quellenfreie Spezialisierung setzt voraus, dass sowohl das konstitutive
+Residuum als auch das vollständige Sondenresiduum auf einem offenen
+Gebiet verschwinden. Ein endlicher Jet, der ihre Punktwerte erfüllt,
+weist diese Voraussetzungen nicht nach.
+
+Sind die Voraussetzungen erfüllt und werden die räumlich projizierten,
+spurumgekehrten Koframe-Entwicklungsgleichungen auferlegt, besitzt das
+gravitative Residuum ein symmetrisch-hyperbolisches Subsidiärsystem.
+Mit Lapse @@105@@, Shift @@106@@, räumlicher Metrik @@107@@ und
+räumlichem Kovektor @@108@@ lässt sich sein Hauptsymbol schreiben als
+@@109@@
+Die positive Matrix @@110@@ symmetrisiert das Symbol. Behält man die
+erforderlichen Terme niedrigerer Ordnung bei und schließt einströmenden
+Zwangsbedingungsfluss aus, ergibt sich eine Energieabschätzung
+@@111@@
+Anfangs verschwindende Zwangsbedingungen bleiben dann unter den
+angegebenen Regularitätsbedingungen null. Dieses bedingte
+Fortpflanzungsergebnis pflanzt die gesonderten konstitutiven und
+Sondengleichungen nicht aus ihren Anfangswerten fort. Diese
+Feldgleichungen sind Voraussetzungen des Subsidiärarguments.
+
+Der geometrische Zweig besitzt somit mehrere getrennte Stufen: einen
+algebraisch sinnvollen Koframe, ein endliches kompatibles
+Ableitungssystem, eine lokale Feldlösung und die Fortpflanzung ihrer
+Zwangsbedingungen. Für diese Stufen gibt es konkrete Prüfungen. Ein
+Ergebnis auf einer Stufe darf aber nicht stillschweigend als Ergebnis
+der nächsten verwendet werden. Wird ein endliches Quellgesetz als
+Gravitation vorgeschlagen, ist dieselbe Sorgfalt nötig, die positive
+Massenauslesung von einem physikalischen Massenmechanismus trennt.

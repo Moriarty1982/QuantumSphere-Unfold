@@ -1,0 +1,149 @@
+\subsection{Ein arithmetischer Vergleichsoperator}
+
+Die Vermutung, dass Primzahlen, Zetafunktion und Unschärfe am selben
+Auswahlmechanismus beteiligt sein könnten, lässt sich mathematisch
+präzisieren, ohne einen dieser Bestandteile schon mit einer physikalischen
+Observable zu identifizieren. Dieser Unterschied ist wesentlich: Eine
+Analogie wird erst prüfbar, wenn Operatoren, Zustandsraum und
+Definitionsbereiche feststehen. Die folgende Konstruktion ist ein
+analytisches Vergleichsmodell. Sie erweitert weder die Wirkung des
+Companion noch liefert sie eine Vorhersage von Leptonmassen.
+
+Wir fixieren @@0@@ und verwenden den positiven Hilbertraum @@1@@ mit
+dimensionslosem @@2@@. Die logarithmische Ableitung des Euler-Produkts
+liefert \cite{DLMF274}
+@@3@@
+Dabei gilt @@4@@, sofern @@5@@ keine Primzahlpotenz ist. Insbesondere
+definiert die reelle ungerade Funktion
+@@6@@
+einen beschränkten selbstadjungierten Multiplikationsoperator @@7@@.
+Absolute und gleichmäßige Konvergenz folgen aus @@8@@ und der
+Konvergenz von @@9@@. Auch jede feste Ableitungsordnung konvergiert
+gleichmäßig; die entsprechende Majorante enthält eine zusätzliche
+feste Potenz von @@10@@. Die Spiegelung @@11@@ ist eine selbstadjungierte
+Involution, und es gilt @@12@@. Ein Paritätsoperator und ein tatsächlich
+arithmetischer ungerader Partner existieren also auf demselben positiven
+Hilbertraum.
+
+Für einen normierten Vektor wird die Robertson-Ungleichung
+\cite{Robertson1929} zu
+@@13@@
+Sie verlangt nicht @@14@@. Ein gerader normierter Vektor hat @@15@@,
+während sowohl @@16@@ als auch @@17@@ verschwinden. Er erfüllt die
+Ungleichung also ohne Balance. Das ist ein direktes Gegenbeispiel
+gegen ein Auswahlargument allein aus Unschärfe. Die Ungleichung
+beschränkt einen präparierten Zustand; sie wählt seine Präparation
+nicht aus.
+
+\subsection{Warum eine Eigenzustandsvorschrift scheitert}
+
+Der beschränkte Operator @@18@@ ist selbstadjungiert und erfüllt @@19@@
+und @@20@@. Gäbe es einen normierten Eigenvektor mit nichtverschwindendem
+Eigenwert, würde die Antikommutation seinen Paritätserwartungswert zum
+Verschwinden zwingen. Das legt eine stärkere Auswahlregel als Robertson
+allein nahe. In dieser konkreten Realisierung gibt es jedoch keine
+von null verschiedenen normierbaren Eigenvektoren, auch nicht zum
+Eigenwert null.
+
+Die Sinusreihe ist nämlich im Streifen @@21@@ holomorph und deshalb
+auf der reellen Achse reell-analytisch. Außerdem gilt
+@@22@@
+Somit ist @@23@@ nicht konstant. Ein Eigenvektor von @@24@@ zu reellem
+@@25@@ müsste fast überall @@26@@ erfüllen. Die Nullstellenmenge dieser
+nichttrivialen reell-analytischen Funktion hat Maß null. Ein darauf
+getragener @@27@@-Vektor ist daher null. Das Argument schließt diesen
+Eigenzustandsweg aus, nicht jede mögliche Rolle der Arithmetik.
+Ein endliches Gitter könnte diskrete Eigenvektoren anzeigen und dabei
+dieses Hindernis im Kontinuum verfehlen.
+
+\subsection{Ein reguläres balanciertes Spektralpaket}
+
+Stattdessen kann man den positiven kontinuierlichen Spektralunterraum
+verwenden. Sei @@28@@. Die Nullstellenmenge von @@29@@ ist vernachlässigbar,
+also gelten @@30@@ und @@31@@. Wir wählen das reelle gerade Fenster
+@@32@@, setzen @@33@@ mit @@34@@ und definieren
+@@35@@
+Da @@36@@ gerade und @@37@@ ungerade ist, stimmen ihre Normen überein,
+und ihr Skalarprodukt verschwindet. Direktes Einsetzen ergibt
+@@38@@
+Der letzte Ausdruck ist Multiplikation mit einer variablen Funktion,
+keine Eigenwertgleichung. Er ist daher mit dem vorigen
+Nichtexistenzergebnis verträglich. Für @@39@@ gilt @@40@@;
+Normierung liefert das angegebene Paket.
+
+Der Faktor @@41@@ löst zugleich ein Definitionsbereichsproblem. Ein
+allgemeiner Vorzeichenwechsel in @@42@@ könnte einen Sprung und ein
+unendliches zweites Fourier-Moment erzeugen. Hier gilt @@43@@ mit
+schwachen Ableitungen
+@@44@@
+Sie liegen in @@45@@, weil @@46@@ beschränkt und die Gaußfunktion
+sowie ihre Ableitung quadratintegrierbar sind. An einer Nullstelle
+von @@47@@ entsteht kein Delta-Beitrag: Das Profil verschwindet dort.
+Zusätzlich liegen @@48@@ und @@49@@ in @@50@@. Mit @@51@@ und dem
+üblichen selbstadjungierten @@52@@ sind beide zweiten Momente endlich;
+@@53@@ und @@54@@ existieren, und es gilt @@55@@. Folglich
+@@56@@
+Dies ist eine Parameter-Fourier-Unschärferelation. Physikalischer Ort,
+Impuls und ein dimensionsbehafteter Wert von @@57@@ sind nicht identifiziert.
+
+Balance bedeutet keine Sättigung der Unschärferelation. Wir schreiben
+@@58@@ und @@59@@. Für dieses Paket gilt
+@@60@@
+Die Robertson-Schranke lautet @@61@@ und ist strikt: Gleichheit würde
+verlangen, dass @@62@@ fast überall auf dem Träger von @@63@@ konstant
+ist. Seine Niveaumengen haben jedoch Maß null. Die Balance folgt aus
+der gewählten positiven Spektralprojektion und ist kein Effekt einer
+Sättigung dieser Ungleichung.
+
+\subsection{Präparation, Erhaltung und physikalische Identifikation}
+
+Dieser Vergleich trennt drei Operationen, die eine effektive Theorie
+nicht vermischen darf. Ein Spektralprojektor definiert einen zulässigen
+Unterraum; ein Präparationsmechanismus erzeugt darin Zustände; ein
+Generator erhält ihn während der Entwicklung. Der Funktionalkalkül
+sichert, dass @@64@@ mit @@65@@ kommutiert. Das präpariert aber keinen
+beliebigen Eingangszustand in @@66@@ und identifiziert @@67@@ nicht
+mit dem nativen Hamiltonoperator. Fenster, Fensterskala und Unterdrückung
+der Nullstellen sind zusätzliche Festlegungen. Keine davon folgt aus
+dem Euler-Produkt.
+
+Die Konstruktion ist auf @@68@@ beschränkt. Eine Fortsetzung der
+skalaren Zetafunktion setzt diesen beschränkten Operator oder seinen
+Definitionsbereich nicht automatisch fort. Auf der kritischen Linie
+benötigen die Pole der logarithmischen Ableitung eine eigene Analyse.
+Keine Aussage hier beweist die Riemannsche Vermutung oder macht ihre
+Nullstellen zu den beobachteten Massen. Das nützliche Ergebnis ist enger:
+Ein arithmetischer ungerader Partner und ein reguläres balanciertes
+Paket sind mit Unschärfe vereinbar; ihre physikalische Präparation und
+Massenauslesung bleiben offen.
+
+\subsection{Was einen Fortschritt darstellen würde}
+
+Im Massenzweig wäre ein entscheidender nächster Befund die Festlegung
+des nativen Operators @@69@@, seines komprimierten Übergangs @@70@@,
+der positiven dreidimensionalen Auslesung und der Regel zur Auswahl
+ihrer Phase. Eine Anpassung an drei Massen prüft die Flexibilität einer
+gewählten Parametrisierung; sie liefert diese fehlenden Definitionen
+nicht. Ein skalenunabhängiges Verhältnis kann einen Mechanismus schon
+vor Kenntnis einer Gesamtmassenskala einschränken. Die Übereinstimmung
+eines Verhältnisses identifiziert aber weder diese Skala noch die
+zugrunde liegende Dynamik.
+
+Im Generationenzweig muss eine zulässige Seed-Abbildung Rang drei
+behalten und die Graduierungsanforderungen entlang der tatsächlichen
+Operatorkette erfüllen. Mischung benötigt einen zweiten physikalisch
+identifizierten Operator im selben Vergleichsraum. Im Geometriezweig
+sind invertierbarer Koframe, kompatible endliche Ableitungsdaten und
+lokale Lösung getrennte Nachweispflichten. Die Fortpflanzung von
+Zwangsbedingungen wird wirksam, nachdem ihre Feldgleichungsvoraussetzungen
+erfüllt sind.
+
+Die Datenbankausgabe macht diese Unterschiede nachvollziehbar. Sie
+speichert Aussageversionen, Abhängigkeiten, Quellhashes und die
+redaktionelle Auswahl, aus der dieses Paper zusammengestellt wird.
+Sie soll verhindern, dass algebraische Möglichkeit, bedingte Rechnung
+und physikalische Identifikation beim Umschreiben ununterscheidbar
+werden. Die vorliegende Arbeit liefert explizite Konstruktionen und
+Hindernisse an diesen Schnittstellen. Eine vollständige phänomenologische
+Theorie benötigte zusätzlich unabhängig festgelegte Observablen,
+Einheiten, Präparationsregeln und einen Vergleich mit Messdaten.

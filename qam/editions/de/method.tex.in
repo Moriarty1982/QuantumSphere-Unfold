@@ -1,0 +1,195 @@
+\subsection{Eine Aussage ist mehr als eine angezeigte Formel}
+Betrachten wir den bekannten Ausdruck @@0@@. Er bleibt mehrdeutig,
+solange Definitionsbereich von @@1@@, Skalarkörper, Verknüpfung und
+Voraussetzungen der zugrunde liegenden Involution nicht feststehen.
+Außerdem sagt er nicht, ob die Aussage übernommen, allgemein hergeleitet
+oder nur an einer bestimmten Matrix geprüft wurde. Bei einer physikalischen
+Anwendung kommt die Frage hinzu, was der Bildraum von @@2@@ misst.
+
+Zur Erläuterung schreiben wir einen Aussagendatensatz als
+@@3@@
+Dabei bezeichnet @@4@@ die Aussage, @@5@@ ihren festgelegten Kontext,
+@@6@@ ihren Belegstatus, @@7@@ ihre Quellen und Prämissen sowie @@8@@
+die verbleibenden Guards. Das Tupel beschreibt hier die Rolle des
+Datensatzes; es ist keine zusätzliche wörtliche MML-Anweisung. Zwei
+Datensätze mit derselben angezeigten Formel können unterschiedliche
+Aussagen beschreiben, wenn ihre Kontexte oder Prämissen verschieden sind.
+
+QAM ist die Projektsprache für solche Objekte und Aussagen. MML legt
+Operationen auf den deklarierten Objekten fest. MMA interpretiert die
+unterstützten Anweisungen und liefert Angaben zur Ausführung zurück.
+Die Beispielimplementierung ist eine begrenzte Schnittstelle und kein
+uneingeschränkter Interpreter aller symbolischen Aussagen des Companion.
+Eine indizierte Formel ist deshalb nicht automatisch ausführbar, und
+eine erfolgreiche Ausführung beweist nicht automatisch ihre physikalische
+Interpretation.
+
+Ein Objekt kann explizite Daten zu seinen Indexrollen tragen. Die
+implementierte Schnittstelle erfasst Indexbezeichnung, Seite, Varianz,
+Rolle und deklarierten Raum. Seite und Rolle müssen darin ein erlaubtes
+Paar bilden. Eine Kontraktion muss außerdem festlegen, welche Räume
+gepaart werden. Zwei obere strukturelle Indizes definieren beispielsweise
+noch kein Skalarprodukt, solange kein kompatibler Vergleichstensor
+vorliegt. Wiederholte Indexbezeichnungen allein ersetzen diesen Tensor
+nicht. Das ist besonders wichtig, wenn ein innerer Vergleich als
+Raumzeitkontraktion gelesen werden soll.
+
+\subsection{Ableitungen, Verknüpfungen und Framewechsel}
+Drei einfache Operationen verdeutlichen den Unterschied zwischen dem
+Bearbeiten von Datensätzen und dem Beweisen ihres Inhalts. Ein
+Ableitungsschritt hängt eine Schlussfolgerung an ihren Prämissendatensatz.
+Eine Verknüpfung kombiniert Datensätze in einem gemeinsamen Kontext.
+Eine Konversion transportiert einen Datensatz durch eine explizit
+deklarierte Abbildung. Im unabhängigen Herkunftsprüfer heißen diese
+Konstruktoren \texttt{step}, \texttt{join} und \texttt{conv}.
+
+Der Prüfer verwendet die geordneten Statuswerte open, reading,
+conditional, computed und proved. Diese Protokollordnung verhindert
+eine unbegründete Statusaufwertung. Sie ist keine universelle Rangfolge
+wissenschaftlicher Gewissheit. Insbesondere beantworten ein bedingter
+allgemeiner Satz und die exakte Berechnung eines Beispiels verschiedene
+Fragen. Ein gültiger Datensatzbaum kann nicht allein durch Kombination
+oder Konversion seiner Prämissen einen stärkeren Status erhalten.
+Seine Nachweiseingaben bleiben verfolgt, und eine Framekonversion muss
+eine deklarierte Vergleichsabbildung nennen.
+
+Für diese strukturellen Eigenschaften enthält die Lean-Implementierung
+des Projekts formale Aussagen auf Datensatzebene. Ihr Geltungsbereich
+ist entscheidend. Ein Satz darüber, dass wohlgeformte Datensätze keine
+Nachweiskennungen verlieren, beweist nicht, dass ein Nachweis das richtige
+physikalische System beschreibt. Ebenso kann eine deklarierte Abbildung
+bereits typkorrekt sein, bevor ihre metrischen Eigenschaften oder die
+Erhaltung von Observablen bewiesen sind. Solche semantischen Bedingungen
+müssen als eigene Prämissen oder Guards erscheinen.
+
+In der LaTeX-Schnittstelle führt eine Framedeklaration eine Kennung ein,
+eine Abbildungsdeklaration legt Quelle und Ziel fest, und eine
+Formeldeklaration gibt Formel, Kontext und Status an. Zu den tatsächlichen
+Makronamen gehören \texttt{qamframe}, \texttt{qammap},
+\texttt{qamformula} und \texttt{qamphysconvert}. Dies sind Dokumentbefehle,
+keine Behauptungen über die Existenz einer physikalischen Konversion.
+Sie erlauben, eine gewöhnliche Gleichung auch außerhalb ihres lokalen
+Zusammenhangs mit ihrem expliziten Profil anzuzeigen. Eine Laborformel
+und eine Formel im Profil eines relativ bewegten Beobachters müssen
+daher die Angaben behalten, die ihre unterschiedlichen Präparations-
+und Vergleichsdaten kennzeichnen.
+
+\subsection{Ein vollständiges physikalisches Beispiel: Informationsverlust bei der Auslesung}
+Wir betrachten klassische elektromagnetische Felder in Einheiten @@9@@
+und bilden die Drei-mal-zwei-Matrix @@10@@. Für nichtverschwindende
+Felder definieren wir die normierte Gram-Auslesung
+@@11@@
+Diese positive Zwei-mal-zwei-Matrix erfasst die relativen Normen und
+das Skalarprodukt der beiden Vektoren. Sie verwirft ihre gemeinsame
+Skala und ihre Orientierung im physikalischen Raum. Das ist bei einer
+Beobachtertransformation relevant, deren Richtung im Labor festgelegt ist.
+
+Für einen Boost mit Geschwindigkeit @@12@@ in positiver @@13@@-Richtung
+betrachten wir das Präparationspaar
+@@14@@
+Beide Präparationen haben dasselbe Eingaberegister @@15@@.
+Die gewöhnliche Feldtransformation ergibt
+@@16@@
+Für @@17@@ kürzt sich der gemeinsame Faktor aus der normierten
+Gram-Auslesung heraus, und die beiden Ausgaben lauten
+@@18@@
+Für diese Familie gibt es somit keine eindeutige Auslesung im bewegten
+Frame, die nur vom ursprünglichen normierten Register abhängt. Eine
+Abbildung auf diesem Register müsste einer Eingabe zwei verschiedene
+Ausgaben zuordnen. Die gespeicherte Information reicht elementar nicht
+aus; die Lorentztransformation der vollständigen Felder versagt dabei
+nicht.
+
+Das Beispiel erklärt, warum eine Framebezeichnung allein eine reduzierte
+Beschreibung nicht reparieren kann. Man muss entweder weitere
+Präparationsdaten erhalten oder einen einzelnen vorhergesagten Wert
+durch die Menge der Ausgaben ersetzen, die mit den tatsächlich
+vorhandenen Daten verträglich sind. Derselbe Unterschied begegnet
+später beim verborgenen Zustandsanteil der projizierten Dynamik.
+
+\subsection{Eine exakte Intervallvorhersage aus einer zusätzlichen Messung}
+Wir lassen die Laborpräparation folgendermaßen variieren:
+@@19@@
+Alle diese Felder haben wieder dasselbe Gram-Eingaberegister. Eine
+zusätzliche Messung schränke die vorzeichenbehaftete Laborkomponente
+@@20@@ auf @@21@@ ein. Bei derselben Boostgeschwindigkeit @@22@@ gilt
+@@23@@
+Die Vektoren bleiben orthogonal. Wir teilen ihre quadrierten Normen
+durch @@24@@ und setzen @@25@@. Dann ist
+@@26@@
+Damit lautet der erste Diagonaleintrag
+@@27@@
+Der Nenner ist auf dem zulässigen Intervall strikt positiv. Außerdem
+nimmt @@28@@ mit @@29@@ ab, und es gilt @@30@@; deshalb nimmt @@31@@ zu.
+Das exakte Bild des Messintervalls ist folglich
+@@32@@
+Jeder Zwischenwert wird von einer Präparation der angegebenen Familie
+erreicht. Dies ist eine deterministische Intervallaussage; eine
+Wahrscheinlichkeitsverteilung für @@33@@ wurde nicht vorausgesetzt.
+
+Für @@34@@ ergibt sich exakt
+@@35@@
+Das größere Intervall ist die Ausgabe, wenn lediglich @@36@@ bekannt
+ist. Die zusätzliche Messung hat die Vorhersage also eingeengt, ohne
+eine beliebige Orientierung vollständig zu rekonstruieren. Die Zahlen
+dieses Beispiels beschreiben eine kontrollierte klassische Präparation.
+Sie sind weder angepasste Leptonmassen noch eine empirische Bestätigung
+der Hypothese eines gemeinsamen Trägers.
+
+\subsection{Von der Aussage zur MML-Anfrage und zum MMA-Beleg}
+Der QAM-Datensatz dieses Beispiels deklariert eine Abbildung @@37@@
+und zwei bedingte Aussagen: die Präparation und die daraus hergeleitete
+Intervallregel. In der implementierten Anfrage heißt die Anweisung
+\texttt{READOUT}. Ihre Argumente benennen das Rezept
+\texttt{em.gram-boost-range}, die Präparation \texttt{E2x-B-unit-yz},
+den Quellframe \texttt{Lab}, den Zielframe \texttt{Boosted}, den Boost
+\texttt{z:1/4} sowie die Intervallgrenzen \texttt{-1/4} und
+\texttt{1/4}. Die Grenzen sind rationale Zeichenketten. Der Adapter
+kann sie deshalb ohne Gleitkommarundung auswerten.
+
+Der gespeicherte Beleg zur Anfrage \texttt{gram\_boost\_interval}
+liefert das exakte Zielintervall @@38@@. Seine aufgezeichnete
+Prämissenkette verbindet die Intervallregel mit der angegebenen
+Laborpräparation. Dieser Beleg wurde für die Ausgabe anhand seines
+Inhaltshashs über die schreibgeschützte Belegschnittstelle abgerufen
+und geprüft. Die vollständige Kennung und die Quellfingerabdrücke
+stehen in den begleitenden Belegdateien. Dort lässt sich die gespeicherte
+Rechnung von einer neu ausgeführten oder erneut abgespielten Rechnung
+unterscheiden.
+
+Der Ausführungsstatus lautet \texttt{continue}. Es gibt keine offenen
+Adapterpflichten und keine fehlenden aufgezeichneten Prämissen. Die
+Prämissen selbst bleiben jedoch bedingt. Insbesondere hält derselbe
+Beleg fest, dass Schließung nicht bewiesen ist und der Interpreter
+keine allgemeine mathematische Beziehung zertifiziert. Die analytische
+Herleitung oben liefert das allgemeine Intervallargument; der Beleg
+verifiziert die angegebene Instanz und ihren aufgezeichneten
+Ausführungskontext.
+
+Auch die anderen Ausführungsausgänge haben einen begrenzten Sinn.
+\texttt{guard} bezeichnet eine unerfüllte Voraussetzung der angeforderten
+Operation; \texttt{reject} bezeichnet eine Anfrage, die gemäß den Regeln
+des Interpreters nicht angenommen werden kann. Diese Ausgänge sind keine
+statistischen Wahrscheinlichkeiten oder Aussagen über die Wahrheit
+einer gesamten physikalischen Theorie. Eine leere Liste zusätzlicher
+Anfrageguards beseitigt die Annahmen der Präparation oder Regel nicht.
+
+\subsection{Was bei erneuter Dokumenterzeugung erhalten bleibt}
+Der Dokumentenspeicher bewahrt unveränderliche Aussageversionen,
+Quellidentitäten und geordnete Auswahlen. Eine Lesefassung kann einen
+Originalbeweis in einen Anhang verschieben und dabei seine genaue
+Quellzuordnung erhalten. Eine andere Reihenfolge der Prosa erzeugt
+keinen neuen Schluss, und ein Inhaltshash entscheidet nicht, ob eine
+importierte Satzüberschrift gerechtfertigt ist. Auch die ausgearbeitete
+physikalische Argumentation muss ihre mathematischen Annahmen im
+Haupttext nennen, statt den Leser auf deren Entdeckung im Auditprotokoll
+zu verweisen.
+
+Diese Arbeitsteilung ist in einem Programm mit mehreren Zweigen nützlich.
+Das Hauptpaper erläutert eine begrenzte Menge zusammenhängender Ergebnisse.
+Sein Belegpaket liefert deren reproduzierbare Datensätze. Der lange
+Companion bewahrt alternative Wege und ihre Geschichte, einschließlich
+gescheiterter oder eingeschränkter Behauptungen. Eine spätere Änderung
+einer Präparation oder eines Vergleichstensors muss durch die abhängigen
+Ergebnisse verfolgt werden, bevor die entsprechende physikalische
+Schlussfolgerung erneut verwendet werden kann.
