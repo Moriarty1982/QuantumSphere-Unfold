@@ -801,3 +801,14 @@ Langfassung umfasst dadurch 1402 Seiten. Das Physikpaper bleibt bei
 gehörenden 56 Prüfseiten wurden visuell kontrolliert. Fachliche und
 vollständige visuelle Schlussprüfung des Gesamtwerks bleiben eigenständig;
 eine Beweis- oder Publikationsfreigabe folgt aus dieser Satzkorrektur nicht.
+
+### Veröffentlichungsstand Version 5 (11. November 2026)
+
+Der gemeinsame Build von Langfassung und Physikpaper ist eingerichtet und
+auf GitHub erfolgreich geprüft. Beide Ausgaben haben im geprüften Lauf
+43078619869 keine Satzüberläufe, offenen Verweise, doppelten Labels oder
+Rerun-Meldungen. PR #95 und #96 sind noch offen. Vor dem Release folgen
+die fachliche Schlussprüfung, konkrete Metadaten und ein gemeinsamer Build
+des eingefrorenen Release-Stands. Die Datenbankinventarisierung ersetzt
+keine Beweisprüfung; beide Editionen behalten offene Argumentprüfungen.
+Die öffentliche Zitationsbaseline bleibt v4.11.0; v5 hat noch keine DOI.

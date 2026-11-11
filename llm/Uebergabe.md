@@ -22,12 +22,12 @@
 - Einmalskript v5_layout_reflow_2026_11_11.py erwartet exakt die Inventar-Ausgangsbytes; kein Bestandteil des regulären Builds.
 - Hilfsskript v5_layout_visual_check_2026_11_11.py nutzt pypdf, Pillow und pdftoppm (gebündelte Laufzeit verfügbar).
 - GitHub-Containerprüfung des Layout-Codecommits: Run 43078619869; aktuelle Ergebnisse über GitHub abrufen.
-- Plattform-, Lean- und TeX-Prüfungen laufen am PR #96; aktuelle Ergebnisse dort abrufen.
+- Alle vier Prüfungen von PR #96 bestanden; Containerlauf 43078619869 erfolgreich, beide Dokumente ohne Befunde; 111 Prüfsummen geprüft.
 - Lokaler Snapshot: 74a9596b8370c849870e816102181cb3f4aec0802944dd66a1a427029fe223b9.
 - full-Edition: 8b1b4b5d803651660d91f95d9eb04af3afbabb007eeb94756b8478f1c77cadb9.
 - physics-Edition: 6fdaedf173b3c8ba2f5cbe0bee3711e56cc3405fbe254518e292d3e7e84a162c.
 - publication_ready bleibt false und beide incomplete_argument_review bleiben true. Kein Release, Tag, DOI oder Zenodo-Schritt.
-- Nächster Schritt: Abschlussstatus von PR #96/Containerprüfung prüfen; PR #95 und danach #96 nur nach Autorenfreigabe mergen.
+- Nächster Schritt: fachliche Schlussprüfung nach notes/research/v5_publication_readiness_2026_11_11.md; PR #95 und danach #96 nur nach Autorenfreigabe mergen.
 - Danach fachliche Schlussprüfung und konkrete Zwei-Dokument-Veröffentlichungsunterlagen vorbereiten.
 - .codex/environments/ nicht aufnehmen; alte Branchlöschung weiterhin nicht freigegeben.
 - Keine H-/k-Nummer vergeben; die historischen Satzinventare mit 58 lokal /45 im früheren Containerlauf bleiben als Vorzustand erhalten.

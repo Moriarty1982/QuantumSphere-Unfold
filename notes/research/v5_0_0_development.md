@@ -26,9 +26,18 @@ vollständige automatische Verifikation des Papers.
 - Überleitungstexte und Ressourcen für weitere Paper-Auswahlen registrieren.
 - Quellenfrische nach Änderungen am Manuskript prüfen und bewusst neue
   Inventargenerationen erzeugen; keine alten Hashes überschreiben.
-- Die eingerichteten 5.0-Ausgabeprofile fachlich vervollständigen und den
-  gemeinsamen Zwei-PDF-Releasejob einrichten. Der Physikentwurf ist gebaut;
-  die Langfassung exportiert vorerst den vollständigen Quellbaum.
+- Die eingerichteten 5.0-Ausgabeprofile fachlich abschließend prüfen. Der
+  gemeinsame Zwei-PDF-Build ist eingerichtet und erfolgreich ausgeführt;
+  die Langfassung enthält den vollständigen Quellbaum. Technischer Build
+  und fachliche Publikationsreife bleiben getrennt.
+
+## Abschlussstand der technischen Vorbereitung (11. November 2026)
+
+PR #95 repariert die plattformübergreifenden Builds; darauf baut PR #96 mit
+den Satzkorrekturen auf. Beide sind offen. Der Containerlauf 43078619869
+baut beide Dokumente ohne offene Verweise, doppelte Labels, Rerun-Meldungen
+oder Satzüberläufe. Die konkrete Freigabereihenfolge und noch nötigen
+Unterlagen stehen in `v5_publication_readiness_2026_11_11.md`.
 
 `sources/research/v480-companion.tex` bleibt der historische Einstiegspfad.
 `working-preamble.tex` setzt die aktuelle Entwicklungsversion. Historische
