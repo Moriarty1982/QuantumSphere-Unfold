@@ -75,3 +75,12 @@ und die Metadaten erfolgreich geprüft, ohne Zenodo zu verändern.
 Dies validiert kein finales Quellenarchiv und keine serverseitige
 Metadatenannahme. Als Nächstes folgen die lokalen Präzisierungen aus
 dem Review, dann der eingefrorene Release-Stand und die konkrete Payload.
+
+## Nachtrag: Präzisierungen geprüft
+
+Die lokalen Hinweise sind nun in der englischen und deutschen Fassung
+umgesetzt. Siehe v5_precision_followup_2026_11_11.md. Der neue gemeinsame
+lokale Build und die deutsche Lesefassung sind erfolgreich; alte
+Review-/Trockenlaufergebnisse bleiben an ihre damaligen Dateien gebunden.
+Als Nächstes muss die konkrete Quellen-/Evidenz-Payload für den gewählten
+Release-Stand zusammengestellt und erneut geprüft werden.

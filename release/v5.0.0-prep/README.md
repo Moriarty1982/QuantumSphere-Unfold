@@ -53,7 +53,8 @@ exact PDF filename through `--default-preview`.
 
 1. Obtain merge approval for the open CI, layout and review/preparation PRs;
    merge in dependency order and recheck each retargeted diff.
-2. Address or explicitly retain the self-review's local precision notes.
+2. The self-review's local precision notes have been addressed in both languages
+   and locally rebuilt; see the dated precision follow-up in notes/research.
    Open research claims must remain qualified; they need not become solved
    merely to publish an honestly scoped preprint.
 3. Freeze the selected release revision. Reserve a DOI only after explicit

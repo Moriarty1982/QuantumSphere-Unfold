@@ -199,3 +199,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 11.11.2026: Fachliche Selbstprüfung der vollständigen englischen Physikfassung dokumentiert, mit Quellen-/Prämissengrenzen und unveränderten Guards.
 
 11.11.2026: v5-Entwurfsmetadaten und Änderungsübersicht ergänzt; lokalen Zwei-PDF-Trockenlauf und noch offene finale Payload-Schritte dokumentiert.
+
+11.11.2026: Review-Präzisierungen in beiden Sprachen sowie erneute lokale Builds und Sichtprüfung dokumentiert.

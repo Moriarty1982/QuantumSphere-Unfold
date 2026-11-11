@@ -1,15 +1,16 @@
 {
-  "english_edition": "1db88536ab67af7a1087fb999f63ef46ccfb9a0f8d22335c8969cf51a306c1d8",
-  "english_tex_sha256": "cfbeecedbfc9f7fd614789b24c0f2ab25c9576b575c3af087c96729b23577225",
+  "english_edition": "af90ae83e7a9ba9756bc8f1a995fd4f353ed98868d8d5afb110cb79a3385a186",
+  "english_tex_sha256": "987d187f54e82fad6b05ab2089ea38faaf89b17b84ec62bd508628172076e28f",
   "parts": {
-    "base": "6f0f58de3a788f03da7c9019d79c477f7fdf33bc2127695c555805b2bc24c95e",
+    "base": "4ee9c0a2c16136aac78c6b04c6d8755628a7ffe391eb78f524a28dadc073d98f",
     "question": "24cd6feaa99f84cc3c459f5eab08adcd92429e96a769466157276085c3631c6c",
     "core": "5d1306e52bd37020ef2adb210202e03074c1578301ad8effa3d3096f8da4ff83",
     "method": "986a8f6546456952ee94366ea7027c50f7a2eb05efe9cb0df00f7e0dc979b99a",
     "particles": "e175fa06390a2ce37aea3e6f1b626193883a5d68ee07a1c5e7fe5a34a6673698",
-    "masses": "f4e8552d1490d935d9f732b20e7d6c6ebd24b82d3b7ccc42cb99e4de4e2cb054",
+    "masses": "4459e4e31378517b1a412dfdce70d54cdf1eb4c29bb84bc058c16f12f33bfd6d",
     "geometry": "96f5c14b4823175c1cf89a73aaad3c77f4669d1c9d042e110e0e329f1ba077b7",
     "limits": "007a9a79b55953665f46402941c7703005f28f9bbbd17d6de77bdc3bc4ae1d15",
     "appendix": "bfe5d23aec63bef7453380f84d1bed7930add907ec7859b84291e78d6e3edc4b"
-  }
+  },
+  "previous_english_edition": "1db88536ab67af7a1087fb999f63ef46ccfb9a0f8d22335c8969cf51a306c1d8"
 }

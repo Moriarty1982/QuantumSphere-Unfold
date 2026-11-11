@@ -16,16 +16,16 @@ des Gesamtdokuments. Anschließend wird nur die Tabellenbeschriftung
 in Formeln und Zitationskennungen ändern sich dadurch nicht.
 
 `sources.json` bindet die Übersetzung an die englische Edition
-`1db88536ab67af7a1087fb999f63ef46ccfb9a0f8d22335c8969cf51a306c1d8`
+`af90ae83e7a9ba9756bc8f1a995fd4f353ed98868d8d5afb110cb79a3385a186`
 und an die genauen normalisierten UTF-8-Quellinhalte. Englische Quelle:
-`build/qam-v5-expanded-final/physics/paper.tex` aus dem Editionslauf.
+`build/v5-precision-paired-verified/editions/physics/paper.tex` aus dem Editionslauf.
 
 Erzeugung in einem neuen Zielordner:
 
 ```powershell
-python -m qam.tools.build_v5_german_reader --source build/qam-v5-expanded-final/physics/paper.tex --out build/qam-v5-physics-de-final
-pdflatex -interaction=batchmode -halt-on-error -no-shell-escape -output-directory=build/qam-v5-physics-de-final build/qam-v5-physics-de-final/paper.tex
-pdflatex -interaction=batchmode -halt-on-error -no-shell-escape -output-directory=build/qam-v5-physics-de-final build/qam-v5-physics-de-final/paper.tex
+python -m qam.tools.build_v5_german_reader --source build/v5-precision-paired-verified/editions/physics/paper.tex --out build/qam-v5-physics-de-precision
+pdflatex -interaction=batchmode -halt-on-error -no-shell-escape -output-directory=build/qam-v5-physics-de-precision build/qam-v5-physics-de-precision/paper.tex
+pdflatex -interaction=batchmode -halt-on-error -no-shell-escape -output-directory=build/qam-v5-physics-de-precision build/qam-v5-physics-de-precision/paper.tex
 ```
 
 `translation.json` enthält Quellbindung, Übersetzungsdateihashes und
@@ -33,3 +33,8 @@ Ausgabehash. Deutsche Silbentrennung und deutsche Bezeichnungen für
 Zusammenfassung, Literatur und Beweis kommen über Babel. Die Fassung ist
 eine persönliche Leseübersetzung der Datenbankausgabe, noch kein eigenes
 registriertes Sprachprofil der Editionsdatenbank und kein Release.
+
+Nachtrag 11.11.2026: Nichtnullige Auslesen und reelle Kopplungsskala aus dem
+Review wurden in beiden Sprachen präzisiert; alle 640 mathematischen
+Fragmente bleiben erhalten. sources.json nennt auch die vorherige Edition.
+Die aktuelle lokale geprüfte Ausgabe liegt unter build/v5-precision-de-final/.

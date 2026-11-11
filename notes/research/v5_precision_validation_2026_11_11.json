@@ -1,0 +1,56 @@
+{
+  "scope": "Local paired draft after three prose restrictions; not a release",
+  "snapshot_hash": "83a07eed57a127f216cca38bcd93c20fea05b5c04eb19555ac5de242f6874fd3",
+  "documents": {
+    "full": {
+      "returncode": 0,
+      "passes": 3,
+      "pdf_present": true,
+      "technical_check_passed": true,
+      "findings": {
+        "undefined_references": 0,
+        "multiply_defined_labels": 0,
+        "rerun_requests": 0,
+        "overfull_boxes": 0
+      },
+      "edition_hash": "a885b4ddbad0546084be1a00d3b5aec3d6304edb592eaa67897ef929703bc709",
+      "incomplete_argument_review": true,
+      "assembly_sha256": "cc2e738ea918066423d0c1f192217d4734ab192d07cdb558f10b24311dd152f6",
+      "package_pdf": "Quantum_Sphaera_Companion_v5_0_0_draft_full.pdf",
+      "pdf_sha256": "ff8a8c1f23d48664a1b96546a27a94d425898b3eac44906ec55ae9373aa669aa"
+    },
+    "physics": {
+      "returncode": 0,
+      "passes": 2,
+      "pdf_present": true,
+      "technical_check_passed": true,
+      "findings": {
+        "undefined_references": 0,
+        "multiply_defined_labels": 0,
+        "rerun_requests": 0,
+        "overfull_boxes": 0
+      },
+      "edition_hash": "af90ae83e7a9ba9756bc8f1a995fd4f353ed98868d8d5afb110cb79a3385a186",
+      "incomplete_argument_review": true,
+      "assembly_sha256": "09e0495d49fae5b6dfb849bef6210ba01da4d4f17de0ab096d994e8463857fcb",
+      "package_pdf": "Quantum_Sphaera_Companion_v5_0_0_draft_physics.pdf",
+      "pdf_sha256": "e537e2093d5828f8924d5180f51785db8f7a9c1d370e1332297d57cf3e1728cd"
+    }
+  },
+  "publication_ready": false,
+  "checksums_verified": 111,
+  "edition_tests_passed": 3,
+  "math_fragments_unchanged_in_order": 640,
+  "german": {
+    "returncode": 0,
+    "passes": 2,
+    "pdf_present": true,
+    "technical_check_passed": true,
+    "findings": {
+      "undefined_references": 0,
+      "multiply_defined_labels": 0,
+      "rerun_requests": 0,
+      "overfull_boxes": 0
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "en": {
+    "old_pages": 27,
+    "new_pages": 27,
+    "text_changed_pages": [
+      12,
+      14,
+      15,
+      16
+    ],
+    "pdf_sha256": "e537e2093d5828f8924d5180f51785db8f7a9c1d370e1332297d57cf3e1728cd"
+  },
+  "de": {
+    "old_pages": 29,
+    "new_pages": 29,
+    "text_changed_pages": [
+      14,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "pdf_sha256": "d35357dc79cbfef2724dc88b91576a3964112e2645246fec6ea19d60df6893cd"
+  }
+}

@@ -837,3 +837,16 @@ vorhandenen PDFs war erfolgreich; eine Annahme durch den Zenodo-Server
 ist damit nicht geprüft. Version-DOI, Veröffentlichungsdatum und finales
 Quellenpaket fehlen noch. Es wurde kein Zenodo-Entwurf angelegt und nichts
 veröffentlicht. Die öffentliche Zitation bleibt v4.11.0.
+
+
+### Präzisierungen der Physikfassung
+
+Die lokalen Hinweise aus der Selbstprüfung sind in Englisch und Deutsch
+umgesetzt: Quotienten verwenden ausdrücklich nichtnullige Eingaben, und
+die Kopplungsskala des Schur-Beispiels ist reell. Die 640 mathematischen
+Fragmente bleiben unverändert. Langfassung (1402 Seiten), englisches
+Physikpaper (27) und deutsche Lesefassung (29) bauen lokal ohne die vier
+Satz-/Verweisbefunde. Die 17 vom Textumbruch betroffenen englischen und
+deutschen Seiten wurden gesichtet. Native Auslese, Präparation, Skala und
+regionale Existenz bleiben offen; keine Änderung der wissenschaftlichen
+Guards oder Veröffentlichung.
