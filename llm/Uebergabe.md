@@ -2,32 +2,28 @@
 
 11. November 2026 (Codex). Wird pro Arbeitsblock überschrieben.
 
-- Aktueller Branch codex/v5-layout-fixes, Layout-Codecommit 875a6ad; Basis codex/v5-ci-portability bei 5bc39f8.
-- Main bleibt edf1a1c, öffentliche Paper-Baseline v4.11.0; Entwicklung 5.0.0-draft.
-- PR #95 (CI-Reparatur) offen und zuletzt vollständig grün; kein neuer Merge freigegeben oder ausgeführt.
-- PR #96 (Layout) offen gegen codex/v5-ci-portability: https://github.com/Moriarty1982/QuantumSphere-Unfold/pull/96.
-- Layout korrigiert vier Dateien unter sources/research/parts/v470/: 07, 26, 34, 36.
-- Lange Protokollpfade umbrechen; breite Boxen mehrzeilig; sechs Tabellen mit Absatzspalten; r54-Abschluss zusammengehalten.
-- Historischer Wortlaut, mathematische Symbole, Bedingungen, Labels und Guards erhalten; keine wissenschaftliche Neubewertung.
-- Koide-/HC-Reviewquellen weiterhin bytegleich zu ihren festen Sollhashes.
-- Lokaler Gesamtbuild build/v5-layout-final-v2/: 1402 Seiten Langfassung, 27 Seiten Physikpaper.
-- Beide ohne Overfull-Boxen, offene Verweise, doppelte Labels oder Rerun-Meldungen; vorher lokal 58 Überläufe.
-- Physik-LaTeX bytegleich zur vorher vollständig visuell geprüften Ausgabe. Deutsche Lesefassung bleibt unverändert (29 Seiten).
-- Neue Quellhashes im gemeinsamen Snapshot registriert; alle Paketprüfsummen nach dem Build kontrolliert.
-- 33 Storetests erfolgreich; drei Editionstests nach letztem Satznachzug nochmals erfolgreich.
-- Sichtprüfung: 60 Satzstellen über Nachbarlabels eingegrenzt, 56 Prüfseiten in Kontaktbögen, sechs Beispiele groß geprüft.
-- Letzte Seitenbindung änderte nur die gerenderten Seiten 1046/1047; beide erneut geprüft. Keine Gesamtsichtung aller 1402 Seiten.
-- Prüfbericht notes/research/v5_layout_reflow_2026_11_11.md; Inhaltsdaten v5_layout_reflow_validation_2026_11_11.json.
-- Visueller Umfang v5_layout_visual_coverage_2026_11_11.json; QA-PDF/Bilder tmp/v5-layout-qa-final-v2/.
-- Einmalskript v5_layout_reflow_2026_11_11.py erwartet exakt die Inventar-Ausgangsbytes; kein Bestandteil des regulären Builds.
-- Hilfsskript v5_layout_visual_check_2026_11_11.py nutzt pypdf, Pillow und pdftoppm (gebündelte Laufzeit verfügbar).
-- GitHub-Containerprüfung des Layout-Codecommits: Run 43078619869; aktuelle Ergebnisse über GitHub abrufen.
-- Alle vier Prüfungen von PR #96 bestanden; Containerlauf 43078619869 erfolgreich, beide Dokumente ohne Befunde; 111 Prüfsummen geprüft.
-- Lokaler Snapshot: 74a9596b8370c849870e816102181cb3f4aec0802944dd66a1a427029fe223b9.
-- full-Edition: 8b1b4b5d803651660d91f95d9eb04af3afbabb007eeb94756b8478f1c77cadb9.
-- physics-Edition: 6fdaedf173b3c8ba2f5cbe0bee3711e56cc3405fbe254518e292d3e7e84a162c.
-- publication_ready bleibt false und beide incomplete_argument_review bleiben true. Kein Release, Tag, DOI oder Zenodo-Schritt.
-- Nächster Schritt: fachliche Schlussprüfung nach notes/research/v5_publication_readiness_2026_11_11.md; PR #95 und danach #96 nur nach Autorenfreigabe mergen.
-- Danach fachliche Schlussprüfung und konkrete Zwei-Dokument-Veröffentlichungsunterlagen vorbereiten.
+- Branch codex/v5-physics-review, PR #97 auf Basis codex/v5-layout-fixes (#96).
+- Main bleibt edf1a1c; öffentliche Baseline v4.11.0, Entwicklung v5.0.0-draft ohne eigene DOI.
+- PR #95 (CI) und #96 (Layout) weiterhin offen. Kein neuer Main-Merge freigegeben.
+- Containerlauf 43078619869 des alten Layoutstands 875a6ad erfolgreich: 1401/27 Seiten, alle vier Befunde null, 111 Prüfsummen geprüft.
+- Fachliche Selbstprüfung der vollständigen englischen Physikfassung samt Anhang: notes/research/referee/v5-physics-2026-11-11-pass1/report.md.
+- Kein tragender Fehler festgestellt; keine unabhängige Begutachtung. Archivierter Review bleibt an seinen Snapshot gebunden.
+- Review-Präzisierungen jetzt in Englisch/Deutsch umgesetzt: nichtnullige Amplituden und Übergangs-Gram-Matrix, reelle Schur-Kopplungsskala.
+- Alle 640 mathematischen Fragmente in derselben Reihenfolge erhalten. Originalbeweise und historische Runden unverändert.
+- Nachtrag notes/research/v5_precision_followup_2026_11_11.md; Validierung und visuelle Abdeckung in den gleichnamigen JSON-Dateien.
+- Neuer lokaler Gesamtbuild build/v5-precision-paired-verified/: 1402 Seiten Langfassung, 27 Seiten Physikpaper, alle vier Befunde null.
+- Alle 111 Paketprüfsummen geprüft; drei Editionstests erfolgreich.
+- Neue Physikedition af90ae83e7a9ba9756bc8f1a995fd4f353ed98868d8d5afb110cb79a3385a186.
+- Snapshot 83a07eed57a127f216cca38bcd93c20fea05b5c04eb19555ac5de242f6874fd3; weitere Hashes im Validierungs-JSON.
+- Deutsche sources.json neu gebunden; build/v5-precision-de-final/compile/paper.pdf: 29 Seiten, alle Befunde null.
+- 4 englische und 13 deutsche Seiten mit geänderten Seitentexten gerendert und in Kontaktbögen geprüft; keine Gesamtsichtung der Langfassung.
+- Erster eingeschränkter MiKTeX-Start scheiterte am Profilzugriff; der neue Build mit passendem Zugriff war erfolgreich.
+- Entwurfsmetadaten release/zenodo/metadata_v5_0_0_draft.json; Paketplan, Changelog und Trockenlaufprotokoll unter release/v5.0.0-prep/.
+- Der Metadaten-Trockenlauf bezeichnet ausdrücklich ältere PDFs; finale Dateien erneut prüfen.
+- publication_ready=false und beide incomplete_argument_review=true; Guards und OPs unverändert.
+- Nächster Schritt: konkrete Quellen-/Evidenz-Payload zum gewählten Release-Stand zusammenstellen und erneut prüfen.
+- PR #95, danach #96 und #97 nur nach Autorenfreigabe mergen; retargetete Diffs prüfen.
+- DOI-Reservierung, tatsächliches Veröffentlichungsdatum, finaler Quellenarchivbau und serverseitige Metadatenannahme bleiben offen.
+- Kein Zenodo-Entwurf, Upload, Release oder Tag; CITATION.cff bleibt auf v4.11.0.
 - .codex/environments/ nicht aufnehmen; alte Branchlöschung weiterhin nicht freigegeben.
-- Keine H-/k-Nummer vergeben; die historischen Satzinventare mit 58 lokal /45 im früheren Containerlauf bleiben als Vorzustand erhalten.
+- Keine H-/k-Nummer vergeben.

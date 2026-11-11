@@ -1,0 +1,19 @@
+{
+  "source_files_sha256": "10f737947fa65fe2fc2d8934f74ba978bb6c7971a4d87d88062aac4b41d1ba43",
+  "contract_sha256": "032dbef2b0536e14e9ca610bc8796bff98d99980dc3cedd99647085636bac78e",
+  "schema_version": 1,
+  "manuscript_sha256": "cfbeecedbfc9f7fd614789b24c0f2ab25c9576b575c3af087c96729b23577225",
+  "executor": "coordinator",
+  "method": "self-review",
+  "model_assignment": {
+    "assignment_source": null,
+    "requested_model": null,
+    "requested_reasoning": null,
+    "actual_model": null,
+    "actual_reasoning": null,
+    "fallback_reason": null
+  },
+  "entries": [],
+  "concerns": [],
+  "notes": "No raw defect findings. Source limits and non-defect editorial suggestions retained in report.md."
+}

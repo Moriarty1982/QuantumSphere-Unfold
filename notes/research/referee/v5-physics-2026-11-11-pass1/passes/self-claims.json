@@ -1,0 +1,9 @@
+{
+  "pass_id": "self-claims",
+  "issues": [],
+  "checks": [
+    "Compared title, abstract, introduction and conclusion with section hypotheses and Appendix A",
+    "External original Robertson text unavailable; inequality derived directly; no novelty search"
+  ],
+  "provenance": "Sequential coordinator self-review, not independent."
+}

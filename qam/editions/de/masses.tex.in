@@ -71,7 +71,7 @@ Die Schranke verwendet die beiden inversen Normen @@31@@ und @@32@@.
 Nur im angegebenen Lückenbereich handelt es sich um einen kontrollierten
 Vergleich.
 
-Mit den weiteren Annahmen @@33@@, @@34@@ und @@35@@ liefert jeder
+Mit den weiteren Annahmen @@33@@, @@34@@ und @@35@@ mit reeller Kopplungsskala liefert jeder
 Eigenwert @@36@@ von @@37@@ einen leichten vorzeichenbehafteten
 Eigenwert @@38@@, wobei
 @@39@@
@@ -96,8 +96,8 @@ stellen jedoch andere Zustandsbedingungen dar.
 Eine unitäre Trägeroperation @@43@@ und der Generationen-Dreierzyklus
 @@44@@ erfüllten
 @@45@@
-Dann gelten @@46@@ und folglich @@47@@. Auch die positive Wurzel @@48@@
-kommutiert mit @@49@@. In drei Dimensionen folgt aus den drei
+Dann gelten @@46@@ und folglich @@47@@. Für eine nichtnullige Übergangs-Gram-Matrix
+kommutiert auch die positive Wurzel @@48@@ mit @@49@@. In drei Dimensionen folgt aus den drei
 verschiedenen Fourier-Eigenwerten von @@50@@, dass jede solche
 hermitesche Wurzel die Form
 @@51@@

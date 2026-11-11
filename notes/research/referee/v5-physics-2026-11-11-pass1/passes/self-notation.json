@@ -1,0 +1,8 @@
+{
+  "pass_id": "self-notation",
+  "issues": [],
+  "checks": [
+    "Compared scalar versus inner imaginary units, realification, adjoints, closure versus HC projectors, signed roots versus principal roots, kernel/source masks"
+  ],
+  "provenance": "Sequential coordinator self-review, not independent."
+}

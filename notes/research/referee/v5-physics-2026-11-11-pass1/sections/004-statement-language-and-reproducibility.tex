@@ -1,0 +1,251 @@
+\section{\raggedright Statement language and reproducibility}
+The Companion uses QAM as an object and assertion language, MML for
+typed instructions and MMA for their execution semantics. For the
+physical arguments in this paper, their essential role is to keep an
+assertion attached to its domain, assumptions, calculation and remaining
+interpretation requirements. A guard denotes a condition still needed
+for a stated inference. A finite calculation and a general proof have
+different scopes, even when both concern the same formula.
+
+The projection identity provides a complete elementary example. Its
+inputs are a Hilbert space, $J^2=I$, $J^*=J$ and the definition of $C$;
+the calculation in the preceding section proves $C^2=C$. An exact
+finite instance is
+\begin{equation}
+ P=\frac12\begin{pmatrix}1&1\\1&1\end{pmatrix},\quad
+ M=\frac14\begin{pmatrix}5&3\\3&5\end{pmatrix},\quad
+ N=\begin{pmatrix}1&0\\0&2\end{pmatrix}.
+\end{equation}
+Direct multiplication gives $P^2=P$, $[M,P]=0$, and
+\begin{equation}
+ [N,P]=\frac12\begin{pmatrix}0&-1\\1&0\end{pmatrix}\ne0.
+\end{equation}
+An exact rational check therefore confirms the projection and one
+commuting transport while rejecting the other transport as a commuting
+example. This rejection is a control result, not a failure of the
+projection theorem. None of these matrix equations identifies a native
+field, a physical transport or a mass operator.
+
+Ordinary mathematical notation is retained throughout the main text.
+The accompanying assertion records specify precise source versions,
+prerequisites and finite checks; they allow the chain of reasoning to
+be inspected without treating content identity as proof. The original
+mass-readout arguments are collected in Appendix~A, while the separate
+audit records retain the detailed provenance and unresolved obligations.
+\subsection{An assertion is more than a displayed formula}
+Consider the familiar expression $C^2=C$. The formula is ambiguous
+until the domain of $C$, the scalar field, the composition operation
+and the assumptions on its defining involution are fixed. It also
+does not state whether the assertion is adopted, derived generally,
+or checked only for a particular matrix. A physical application adds
+the question of what is measured by the range of $C$.
+
+For exposition, write an assertion record as
+\begin{equation}
+ r=(\varphi,\mathcal F,s,W,G),
+\end{equation}
+where $\varphi$ is the statement, $\mathcal F$ its declared context,
+$s$ its evidence status, $W$ its sources and premises, and $G$ its
+remaining guards. This tuple summarizes the record's role here; it
+is not an additional literal MML instruction. Two records with the
+same displayed formula can describe different assertions when their
+contexts or premises differ.
+
+QAM is the project's language for such objects and assertions. MML
+specifies operations on the declared objects. MMA interprets the
+supported instructions and returns execution information. The
+implementation used in the examples is a finite interface, not an
+unrestricted interpreter for every symbolic statement in the Companion.
+Consequently an indexed formula is not automatically executable, and
+a successful execution is not automatically a proof of its physical
+interpretation.
+
+An object can carry explicit index-role data. The implemented interface
+records an index label, its side, variance, role and declared space.
+The side and role must be a permitted pair in that interface. A
+contraction must also specify which spaces are paired. For instance,
+two upper structural indices do not define a scalar product until
+a compatible comparison tensor is supplied. Merely printing repeated
+labels cannot replace that tensor. This is especially relevant when
+an internal comparison is proposed as a spacetime contraction.
+
+\subsection{Derivations, combinations and frame changes}
+Three simple operations illustrate the distinction between manipulating
+records and proving their contents. A derivation step attaches a
+conclusion to its premise record. A join combines records in a common
+context. A conversion transports a record through an explicitly
+declared map. In the independent provenance checker these appear as
+the constructors \texttt{step}, \texttt{join} and \texttt{conv}.
+
+The checker uses an ordered status vocabulary: open, reading,
+conditional, computed and proved. This is a protocol ordering used
+to prohibit unsupported promotion. It is not a universal ranking of
+scientific confidence. In particular, a conditional general theorem
+and an exact computation of one example answer different questions.
+A valid record tree cannot obtain a stronger status simply by
+combining or converting its premises. Its witness inputs remain
+tracked, and a frame conversion must name a declared comparison map.
+
+These structural properties have formal record-level statements in
+the project's Lean implementation. Their scope is important. A
+theorem that well-formed records do not lose witness identifiers
+does not prove that a witness describes the correct physical system.
+Similarly, a declared map can be type-correct before its metric or
+observable-preservation properties have been proved. The semantic
+conditions must appear as their own premises or guards.
+
+In the LaTeX interface, a frame declaration introduces an identifier,
+a map declaration specifies its source and target, and a formula
+declaration supplies a formula, context and status. The actual macro
+names include \texttt{qamframe}, \texttt{qammap},
+\texttt{qamformula} and \texttt{qamphysconvert}. These are document
+commands rather than assertions that a physical conversion exists.
+They allow the same ordinary equation to be displayed with its
+explicit profile when taken outside its local context. A laboratory
+formula and a formula in a boosted-observer profile must therefore
+retain the information identifying their different preparation and
+comparison data.
+
+\subsection{A complete physical example: information lost by a readout}
+Take classical electromagnetic fields in units $c=1$ and form the
+three-by-two matrix $F=[\boldsymbol E\mid\boldsymbol B]$. On nonzero
+fields define the normalized Gram readout
+\begin{equation}
+ \rho(F)=\frac{F^{\mathsf T}F}{\operatorname{Tr}(F^{\mathsf T}F)}.
+\end{equation}
+This positive two-by-two matrix records relative norms and the scalar
+product of the two vectors. It discards their common scale and their
+orientation in physical space. These omissions matter under an
+observer transformation whose direction is specified in the laboratory.
+
+For a boost of velocity $v$ in the positive $z$ direction, consider
+the pair of preparations
+\begin{equation}
+ \boldsymbol E=2e_x,\qquad \boldsymbol B=b e_y,\quad b=\pm1.
+\end{equation}
+Both have the same input register $\rho=\operatorname{diag}(4/5,1/5)$.
+The ordinary field transformation gives
+\begin{equation}
+ \boldsymbol E'_b=\gamma(2-vb)e_x,\qquad
+ \boldsymbol B'_b=\gamma(b-2v)e_y,
+ \quad \gamma=(1-v^2)^{-1/2}.
+\end{equation}
+At $v=1/4$, the common factor cancels from the normalized Gram
+readout and the two outputs are
+\begin{equation}
+ \rho(F'_{+1})=\operatorname{diag}(49,4)/53,\qquad
+ \rho(F'_{-1})=\operatorname{diag}(9,4)/13.
+\end{equation}
+Thus there is no single-valued boosted readout depending only on
+the original normalized register for this family. A map on that
+register would need to assign two different outputs to one input.
+This is an elementary failure of information sufficiency, not a
+failure of the Lorentz transformation on the full fields.
+
+The example explains why a frame label alone cannot repair a reduced
+description. One must either retain additional preparation data or
+replace a single predicted value by the set of outputs compatible
+with the data actually available. This same distinction will later
+appear in the hidden-lift term of projected dynamics.
+
+\subsection{An exact interval prediction from an additional measurement}
+Allow the laboratory preparation to vary as
+\begin{equation}
+ \boldsymbol E=2e_x,\qquad
+ \boldsymbol B=t e_y+u e_z,\qquad t^2+u^2=1.
+\end{equation}
+All these fields again have the same input Gram register. Suppose
+an extra measurement constrains the signed laboratory component
+$t=\boldsymbol B\cdot e_y$ to $[a,b]\subseteq[-1,1]$. At the
+same boost speed $v=1/4$,
+\begin{equation}
+ \boldsymbol E'=\gamma(2-t/4)e_x,\qquad
+ \boldsymbol B'=\gamma(t-1/2)e_y+u e_z.
+\end{equation}
+The vectors remain orthogonal. Divide their squared norms by
+$\gamma^2$ and set $A(t)=(2-t/4)^2$. Then
+\begin{equation}
+ \frac{|\boldsymbol B'|^2}{\gamma^2}
+ =(t-1/2)^2+(15/16)(1-t^2)=A(t)-45/16.
+\end{equation}
+Consequently the first diagonal entry is
+\begin{equation}
+ p(t)=\frac{A(t)}{2A(t)-45/16}
+     =\frac{(8-t)^2}{2(8-t)^2-45}.
+\end{equation}
+The denominator is strictly positive on the admitted interval.
+Moreover $A$ decreases with $t$ and
+$dp/dA=-(45/16)/(2A-45/16)^2<0$, so $p$ increases. The exact
+image of the measurement interval is therefore
+\begin{equation}
+ \rho'\in\{\operatorname{diag}(p,1-p):p(a)\leq p\leq p(b)\}.
+\end{equation}
+Every intermediate value is attained by some preparation in the
+specified family. This is a deterministic interval statement; no
+probability distribution on $t$ has been assumed.
+
+For $[a,b]=[-1/4,1/4]$ the exact result is
+\begin{equation}
+ p\in[121/162,\ 961/1202]
+      \subset[9/13,\ 49/53].
+\end{equation}
+The wider interval is the output when only $t\in[-1,1]$ is known.
+The additional measurement has therefore narrowed the prediction
+without reconstructing an arbitrary orientation. The numbers in
+this example are a controlled classical preparation, not fitted
+lepton masses or an empirical confirmation of the common-carrier
+hypothesis.
+
+\subsection{From the assertion to the MML request and the MMA receipt}
+The QAM record for this example declares a map
+$\mathrm{Lab}\to\mathrm{Boosted}$ and two conditional assertions:
+the preparation, and the interval rule derived from it. In the
+implemented request the instruction is \texttt{READOUT}. Its
+arguments name the recipe \texttt{em.gram-boost-range}, the preparation
+\texttt{E2x-B-unit-yz}, source frame \texttt{Lab}, target frame
+\texttt{Boosted}, boost \texttt{z:1/4}, and endpoints
+\texttt{-1/4} and \texttt{1/4}. The endpoints are rational strings,
+so the adapter can evaluate them without a floating rounding step.
+
+The stored receipt for request \texttt{gram\_boost\_interval} returns
+the exact target interval $[121/162,961/1202]$. Its recorded premise
+chain links the interval rule to the stated laboratory preparation.
+This receipt was retrieved by its content hash and checked through
+the read-only evidence interface for this edition. The complete
+identifier and source fingerprints belong in the accompanying evidence
+files, where a reader can distinguish this saved calculation from
+a newly executed or replayed one.
+
+Its execution status is \texttt{continue}, with no outstanding
+adapter obligations and no missing recorded premises. The premises
+themselves remain conditional. In particular, the same receipt records
+that closure is not proved and that no general mathematical relation
+is certified by the interpreter. The analytic derivation above supplies
+the general interval argument; the receipt verifies the specified
+instance and its recorded execution context.
+
+The other execution outcomes have equally limited meanings.
+\texttt{guard} identifies an unmet prerequisite for the requested
+operation, whereas \texttt{reject} identifies a request that cannot
+be accepted under the interpreter's contract. These outcomes are not
+statistical likelihoods or statements about the truth of an entire
+physical theory. An empty list of additional request guards does not
+erase the assumptions in the preparation or the rule.
+
+\subsection{What is preserved when the document is regenerated}
+The document store retains immutable assertion versions, source
+identities and ordered selections. A reader edition can move an
+original proof to an appendix while keeping its exact source
+association. A change of prose order does not create a new inference,
+and a content hash does not settle whether an imported theorem heading
+is justified. The expanded physical argument must continue to state
+its mathematical assumptions in the body, rather than relying on a
+reader to discover them in an audit log.
+
+This division of work is useful in a multi-branch programme. The main
+paper explains a restricted set of connected results. Its evidence
+package supplies the reproducible records for those results. The long
+Companion retains alternative routes and their history, including
+failed or qualified claims. A future change to a preparation or a
+comparison tensor must be traced through dependent results before the
+corresponding physical conclusion can be reused.

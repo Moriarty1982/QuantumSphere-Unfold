@@ -1,0 +1,8 @@
+{
+  "pass_id": "self-exposition",
+  "issues": [],
+  "checks": [
+    "Read all text and argument organization; no new PDF rendering"
+  ],
+  "provenance": "Sequential coordinator self-review, not independent."
+}

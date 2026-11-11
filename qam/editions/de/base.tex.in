@@ -176,7 +176,7 @@ und kann auf diesem direkten kompensierten linearen Weg keine von null
 verschiedenen Wurzeln ergeben.
 
 \paragraph{Positive nichtlineare Auslesung als zusätzliche Anforderung.}
-Für zwei komplexe Amplituden @@59@@ definieren wir
+Für ein nichtnulliges Paar komplexer Amplituden @@59@@ definieren wir
 @@60@@, @@61@@, @@62@@ und @@63@@. Dann gilt @@64@@.
 Mit dem Dreierzyklus @@65@@ lautet ein beispielhafter hermitescher
 Wurzeloperator
