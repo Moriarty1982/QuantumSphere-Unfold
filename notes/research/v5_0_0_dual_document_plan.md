@@ -131,3 +131,14 @@ LaTeX-Export beider Zusammenstellungen und einen PDF-Entwurf der Physikfassung,
 aber noch keine veröffentlichungsfertige Physikfassung oder einen garantierten
 gemeinsamen Zwei-PDF-Releasejob. Historische Planpunkte oben beschreiben die
 weiteren Schritte vor einer Veröffentlichung.
+
+Nach Autorenkritik am protokollartigen Stil wurde die Physikfassung
+redaktionell neu geschrieben. Das aktuelle Ausgabeprofil enthält einen
+zusammenhängenden Haupttext mit Abstract, Motivation, Modell, Ergebnissen,
+Methoden, Diskussion und Literatur. Die Originalbeweise stehen im Anhang;
+technische Kennungen und Prüfstatus in `audit.md` und `assembly.json`.
+Fachliche Voraussetzungen und Grenzen werden weiterhin im Paper erklärt.
+Der neue Entwurf umfasst fünf Seiten Haupttext einschließlich Literatur
+und zwei Seiten Beweisanhang. Dies ist eine redaktionelle Synthese,
+keine zusätzliche Beweisfreigabe für die Rohimporte und noch kein Abschluss
+der Veröffentlichungsvorbereitung.

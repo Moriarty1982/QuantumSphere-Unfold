@@ -23,11 +23,19 @@ Beispiel: `python -m qam.tools.store_db edition-read --hash HASH --out build/edi
   Einstiegspunkt. Er bewahrt auch Text ohne Satzumgebung. Dies ist noch
   kein vollständig verifizierter Datenbankersatz für den Langtext.
 
-Die Physikfassung wird als `paper.tex` mit `assembly.json` ausgegeben;
-ungeprüfte Kandidaten erscheinen als benannte offene Punkte statt ungeprüft
-als bewiesene Aussagen. Abschnitte mit fehlenden TeX-Ressourcen werden im
-Entwurf ausdrücklich blockiert, nicht still entfernt. Quellenänderungen
-brechen den Export vor dem Anlegen des Ausgabeordners ab.
+Die Physikfassung wird inzwischen als zusammenhängendes Paper mit Abstract,
+Einleitung, wissenschaftlichem Haupttext, Literatur und Beweisanhang ausgegeben.
+`presentation.style=physics-paper` und die registrierte Abstractversion sind
+Teil der unveränderlichen Editionsrevision (Format v2, Schema bleibt v6).
+Die Textblöcke stammen aus `qam/editions/v5_physics_article.tex`, die Literatur
+aus `v5_physics_references.tex`. Die früheren Audit-Ausgaben bleiben abrufbar.
+
+Der Export erzeugt `paper.tex`, `assembly.json` und `audit.md`. Einzelne
+Versionskennungen, noch ungeprüfte Kandidaten und Prüfstatus stehen im
+Auditbericht; ihre fachlichen Grenzen bleiben im Haupttext ausdrücklich
+beschrieben. Die neue Darstellung verleiht keinem importierten Satz einen
+Beweisstatus. Fehlende TeX-Ressourcen blockieren die lesbare Fassung, statt
+Abschnitte still wegzulassen. Quellenänderungen werden vor dem Export erkannt.
 
 Editionsdaten sind wie benannte Paper-Metadaten außerhalb des
 Inventar-Snapshotumfangs; ihre Speicherung ändert daher nicht den zugehörigen

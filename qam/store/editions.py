@@ -22,12 +22,23 @@ def safe_path(repo, name):
 
 def save_edition(database, repo, request):
     fields = {'edition_id', 'title', 'mode', 'snapshot_hash', 'sections', 'source_files', 'entrypoint', 'previous'}
-    if set(request) != fields or request['mode'] not in {'selected-arguments', 'manuscript-source'}:
+    if set(request) not in (fields, fields | {'presentation'}) or request['mode'] not in {'selected-arguments', 'manuscript-source'}:
         raise ValueError('Invalid edition contract')
     for name in ('edition_id', 'title', 'snapshot_hash'):
         require_text(request[name], name)
     snapshot = read_snapshot(database, request['snapshot_hash'])
     versions = {v['version_hash']: v for v in snapshot['tables']['qstore_versions']}
+    if 'presentation' in request:
+        presentation = request['presentation']
+        if request['mode'] != 'selected-arguments' or set(presentation) != {'style', 'author', 'version', 'abstract'}:
+            raise ValueError('Invalid reader presentation')
+        if presentation['style'] != 'physics-paper' or presentation['abstract'] not in versions:
+            raise ValueError('Reader abstract must be source-pinned in the snapshot')
+        abstract_payload = json.loads(versions[presentation['abstract']]['payload_json'])
+        if not isinstance(abstract_payload.get('latex'), str):
+            raise ValueError('Reader abstract must be a LaTeX text block')
+        for field in ('author', 'version'):
+            require_text(presentation[field], field)
     if not request['sections']:
         raise ValueError('Edition requires sections')
     keys = set()
@@ -46,6 +57,8 @@ def save_edition(database, repo, request):
             if member['version'] not in versions:
                 raise ValueError('Edition member absent from snapshot')
             payload = json.loads(versions[member['version']]['payload_json'])
+            if 'presentation' in request and member['use'] == 'prose' and not isinstance(payload.get('latex'), str):
+                raise ValueError('Reader prose must be a LaTeX text block')
             if member['use'] != 'candidate' and (payload.get('inventory') or versions[member['version']]['status'] == 'imported-unreviewed'):
                 raise ValueError('Raw inventory members must remain candidates')
             (candidates if member['use'] == 'candidate' else roots).append(member['version'])
@@ -55,6 +68,9 @@ def save_edition(database, repo, request):
         else:
             selected, report = None, None
         selections.append({'selection': selected, 'technical_check': report, 'candidates': candidates})
+    if 'presentation' in request and not any(m['version'] == request['presentation']['abstract'] and m['use'] == 'prose'
+            for s in request['sections'] for m in s['members']):
+        raise ValueError('Reader abstract must be a registered prose member')
     if not isinstance(request['source_files'], dict):
         raise ValueError('source_files must be a path/hash mapping')
     for name, expected in request['source_files'].items():
@@ -64,7 +80,7 @@ def save_edition(database, repo, request):
         raise ValueError('Full edition entrypoint must be source-pinned')
     if request['mode'] == 'selected-arguments' and request['entrypoint'] is not None:
         raise ValueError('Selected edition has no manuscript entrypoint')
-    payload = {'format': 'qstore-edition-v1', **request, 'sections_state': selections,
+    payload = {'format': 'qstore-edition-v2' if 'presentation' in request else 'qstore-edition-v1', **request, 'sections_state': selections,
                'status': 'research-draft', 'selector_sha256': hashlib.sha256(Path(__file__).with_name('selection.py').read_bytes()).hexdigest()}
     key = digest(payload)
     with store_session(database) as (session, models):
@@ -131,6 +147,14 @@ def export_edition(database, repo, key, destination):
             target.write_bytes(data)
         entry = 'source/' + edition['entrypoint']
         incomplete = True  # Complete source, not a fully reviewed argument graph.
+    elif edition.get('presentation', {}).get('style') == 'physics-paper':
+        from qam.store.physics_paper import render_paper, audit_markdown
+        snapshot = read_snapshot(database, edition['snapshot_hash'])
+        (destination / 'paper.tex').write_text(render_paper(edition, snapshot), encoding='utf-8')
+        (destination / 'audit.md').write_text(audit_markdown(edition, snapshot), encoding='utf-8')
+        entry = 'paper.tex'
+        incomplete = any(state['candidates'] or (state['selection'] and state['selection']['findings'])
+                         for state in edition['sections_state'])
     else:
         snapshot = read_snapshot(database, edition['snapshot_hash'])
         versions = {v['version_hash']: v for v in snapshot['tables']['qstore_versions']}

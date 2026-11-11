@@ -18,10 +18,10 @@ from qam.tools.store_koide_branch import run as store_koide
 from qam.tools.store_example import run as matrix_example
 
 
-TITLES = [('question', 'Physical question and scope'), ('core', 'Carrier, HC and frames'),
-          ('method', 'Reading QAM, MML and MMA'), ('particles', 'Particles and generations'),
-          ('masses', 'Masses as a readout test'), ('geometry', 'Dynamics and geometry'),
-          ('limits', 'Limits and open physical identifications')]
+TITLES = [('question', 'Introduction'), ('core', 'A graded carrier and its interpretation'),
+          ('method', 'Statement language and reproducibility'), ('particles', 'Particle and generation assignments'),
+          ('masses', 'Mass readout and consistency constraints'), ('geometry', 'Projected dynamics and geometry'),
+          ('limits', 'Discussion and outlook')]
 
 
 def configure(database, destination):
@@ -34,19 +34,39 @@ def configure(database, destination):
     hc = hc_review(database, repo)
     bridge = bridge_review(database, repo)
     matrices = matrix_example(database)
-    source_path = 'qam/editions/v5_sections.tex'
+    source_path = 'qam/editions/v5_physics_article.tex'
     text = (repo / source_path).read_text(encoding='utf-8')
     source = {'path': source_path, 'sha256': hashlib.sha256((repo / source_path).read_bytes()).hexdigest(),
-              'revision': 'v5-edition-editorial-v1', 'locator': 'section markers'}
+              'revision': 'v5-physics-narrative-v2', 'locator': 'section markers'}
     blocks = dict(re.findall(r'% section:(\w+)\n(.*?)(?=% section:|\Z)', text, re.S))
+    frame = 'editorial-physics-scope'
+    package = register(database, repo, {'object_id': 'v5-paper-amssymb', 'kind': 'latex-resource',
+        'frame': frame, 'status': 'declared', 'source': source,
+        'payload': {'title': 'Mathematical symbol alphabet', 'package': 'amssymb', 'assumptions': []}})['version_hash']
+    reference_path = 'qam/editions/v5_physics_references.tex'
+    reference_text = (repo / reference_path).read_text(encoding='utf-8')
+    reference_source = {'path': reference_path, 'sha256': hashlib.sha256((repo / reference_path).read_bytes()).hexdigest(),
+                        'revision': 'v5-physics-narrative-v2', 'locator': 'bibliography entries'}
+    references = []
+    for entry, citation_key in re.findall(r'(?:^|\n)(\\bibitem\{([^}]+)\}.*?)(?=\n\\bibitem|\Z)', reference_text, re.S):
+        references.append(register(database, repo, {'object_id': 'v5-physics-bib-' + citation_key,
+            'kind': 'latex-resource', 'frame': frame, 'status': 'declared', 'source': reference_source,
+            'payload': {'title': citation_key, 'resource_type': 'bibliography', 'key': citation_key,
+                        'latex': entry.strip(), 'assumptions': [], 'dependencies': []}})['version_hash'])
+    dependencies = [package] + references
+    abstract = register(database, repo, {'object_id': 'v5-physics-abstract', 'kind': 'explanation',
+        'frame': frame, 'status': 'declared', 'source': source,
+        'payload': {'title': 'Abstract', 'latex': blocks['abstract'].strip(), 'assumptions': [],
+                    'dependencies': dependencies}})['version_hash']
     sections = []
     for key, title in TITLES:
         note = register(database, repo, {'object_id': 'v5-edition-intro-' + key, 'kind': 'explanation',
             'frame': 'editorial-physics-scope', 'status': 'declared', 'source': source,
             'payload': {'title': title + ': introduction', 'latex': blocks[key].strip(),
-                        'assumptions': [], 'dependencies': []}})['version_hash']
+                        'assumptions': [], 'dependencies': dependencies}})['version_hash']
         sections.append({'key': key, 'title': title, 'members': [{'version': note, 'use': 'prose'}]})
     by_key = {s['key']: s for s in sections}
+    by_key['question']['members'].insert(0, {'version': abstract, 'use': 'prose'})
     def add(key, versions, use):
         by_key[key]['members'] += [{'version': v, 'use': use} for v in dict.fromkeys(versions)]
     add('method', list(matrices['seeds'].values()), 'argument')
@@ -77,6 +97,12 @@ def configure(database, destination):
                     for p in (repo / 'sources/research').rglob('*')
                     if p.is_file() and p.suffix.lower() in {'.tex', '.bib', '.sty', '.pdf', '.png', '.jpg'}}
     source_files[source_path] = source['sha256']
+    source_files[reference_path] = reference_source['sha256']
+    for path in ('notes/research/hc_native_selection_gate_2026_11_11.md',
+                 'notes/research/hc_root_transfer_rotation_gate_2026_11_11.md',
+                 'notes/research/zeta_positive_spectral_packet_2026_11_11.md',
+                 'notes/research/zeta_prime_operator_uncertainty_2026_11_11.md'):
+        source_files[path] = hashlib.sha256((repo / path).read_bytes()).hexdigest()
     for path in ('qam/store/matrix_example.json', 'notes/research/koide_store_branch_review_2026_11_11.md',
                  'notes/research/hc_identification_store_review_2026_11_11.md', 'notes/research/hc_koide_bridge_review_2026_11_11.md'):
         source_files[path] = hashlib.sha256((repo / path).read_bytes()).hexdigest()
@@ -86,9 +112,11 @@ def configure(database, destination):
     full_sections = [{'key': 'source-' + str(i), 'title': path,
         'members': [{'version': v, 'use': 'candidate'} for v, p in raw_files.get(path, [])]}
         for i, path in enumerate(inventory['source_hashes'])]
-    def save(edition_id, title, mode, outline, entrypoint):
+    def save(edition_id, title, mode, outline, entrypoint, presentation=None):
         request = {'edition_id': edition_id, 'title': title, 'mode': mode, 'snapshot_hash': snapshot,
                    'sections': outline, 'source_files': source_files, 'entrypoint': entrypoint, 'previous': None}
+        if presentation is not None:
+            request['presentation'] = presentation
         with store_session(database) as (session, models):
             rows = list(session.scalars(select(models.qstore_editions).where(models.qstore_editions.edition_id == edition_id)))
             previous = {r.previous_hash for r in rows}
@@ -97,9 +125,11 @@ def configure(database, destination):
                 raise ValueError('Conflicting edition heads')
             if heads:
                 old = json.loads(heads[0].payload_json)
-                request['previous'] = old['previous'] if all(old[k] == v for k, v in request.items() if k != 'previous') else heads[0].edition_hash
+                request['previous'] = old['previous'] if all(old.get(k) == v for k, v in request.items() if k != 'previous') else heads[0].edition_hash
         return save_edition(database, repo, request)['edition_hash']
-    physics = save('qsc-v5-physics', 'Quantum Sphaera Companion v5.0.0-draft: Physics edition', 'selected-arguments', sections, None)
+    physics = save('qsc-v5-physics', 'Graded carriers and physical readouts: conditions for mass and geometric interpretation',
+                  'selected-arguments', sections, None, {'style': 'physics-paper', 'author': 'Marc Brendecke',
+                  'version': '5.0.0-draft', 'abstract': abstract})
     full = save('qsc-v5-full', 'Quantum Sphaera Companion v5.0.0-draft: Full edition', 'manuscript-source', full_sections,
                 'sources/research/v480-companion.tex')
     exports = {name: export_edition(database, repo, key, destination / name) for name, key in [('physics', physics), ('full', full)]}

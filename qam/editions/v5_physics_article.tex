@@ -1,0 +1,292 @@
+% section:abstract
+We examine the conditions under which a common graded state space can
+support particle and geometric readouts. The Quantum Sphaera construction
+is formulated here as a set of conditional interfaces rather than a
+completed identification with physical fields. For a real orthogonal
+involution, the associated compensator gives an exact projection, but
+does not determine a three-generation mass spectrum. We derive the
+additional equal-norm condition for the Koide root ratio and express it
+as an orthogonality condition in a declared HC representation. Direct
+odd-input and cyclic-equivariant readouts exhibit obstructions, while
+positive quadratic readouts require a restricted state domain. A
+projection of the dynamics supplies a separate autonomy condition for
+observable variables. Together these results isolate the operator,
+metric and state-selection data needed to turn an algebraic framework
+into a physical model. No lepton masses, absolute mass scale or
+gravitational field equations are predicted by the present construction.
+% section:question
+Attempts to describe different physical sectors on a common mathematical
+carrier face a recurring difficulty: a shared state space does not by
+itself specify the observables that distinguish those sectors. The same
+algebra can support different representations, couplings and measurement
+maps. A physical interpretation therefore requires more than a matching
+number of components or a symmetry with the expected name.
+
+The Quantum Sphaera Companion develops a common-carrier proposal using
+biquaternionic and division-algebra structures, an involution and a
+compensating projection \cite{QSC411}. This paper extracts a connected
+question from that broader programme: under what conditions can the
+graded structure be transferred to particle, mass and geometric
+readouts without inserting the desired observables into the transfer?
+The emphasis is on explicit conditions and consistency constraints.
+
+The mass sector makes this distinction particularly sharp. A relation
+among three positive roots can be represented algebraically in many ways,
+but a representation selected after the roots are specified is not a
+mechanism for their values. We use the Koide ratio as a test of this
+interface, derive its missing norm condition, and compare linear and
+quadratic readouts. The same distinction reappears in projected dynamics:
+an equation on the full carrier need not induce an autonomous equation
+for the variables identified as observables.
+
+The scope is consequently conditional. The algebraic projection and
+the stated comparison results are available; the identification of a
+native carrier, its couplings and its physical observables remains to be
+completed. This distinction also governs the particle assignments and
+geometric constructions discussed below.
+% section:core
+Let $H$ be a real Hilbert space and let $J:H\to H$ be an orthogonal
+involution. Since $J^{-1}=J=J^*$, the operators
+\begin{equation}
+ C=\frac{I+J}{2},\qquad P_-=\frac{I-J}{2}
+\end{equation}
+are complementary orthogonal projections. Indeed,
+$C^2=(I+2J+J^2)/4=C$, and similarly $P_-^2=P_-$, while
+$CP_-=0$ and $C+P_-=I$. We refer to $C$ as the HC compensator.
+It selects the $J$-even part of a state; $P_-$ selects the odd part.
+
+This grading is the minimal structure needed for the subsequent tests.
+It does not identify either range with a particle species. In the
+Companion, a biquaternionic carrier and extensions involving
+$\mathbb C\otimes\mathbb H\otimes\mathbb O$ motivate proposed
+particle and frame assignments. Division algebras provide a mathematical
+setting for such representation questions \cite{Baez2002}. A positive
+Hilbert metric used in a readout calculation must nevertheless be
+distinguished from a Lorentzian spacetime metric.
+
+The scalar field also matters. An antiunitary involution on a complex
+Hilbert space is generally only real-linear when averaged with the
+identity. Here $J$ is explicitly real orthogonal; when complex amplitudes
+are used, we mean its declared complex-linear extension. No equivalence
+with an inherited antiunitary convention is presumed. Likewise, a change
+between the proposed matter, light and tachyon frames requires an
+explicit map, not merely a relabelling of components.
+% section:method
+The Companion uses QAM as an object and assertion language, MML for
+typed instructions and MMA for their execution semantics. For the
+physical arguments in this paper, their essential role is to keep an
+assertion attached to its domain, assumptions, calculation and remaining
+interpretation requirements. A guard denotes a condition still needed
+for a stated inference. A finite calculation and a general proof have
+different scopes, even when both concern the same formula.
+
+The projection identity provides a complete elementary example. Its
+inputs are a Hilbert space, $J^2=I$, $J^*=J$ and the definition of $C$;
+the calculation in the preceding section proves $C^2=C$. An exact
+finite instance is
+\begin{equation}
+ P=\frac12\begin{pmatrix}1&1\\1&1\end{pmatrix},\quad
+ M=\frac14\begin{pmatrix}5&3\\3&5\end{pmatrix},\quad
+ N=\begin{pmatrix}1&0\\0&2\end{pmatrix}.
+\end{equation}
+Direct multiplication gives $P^2=P$, $[M,P]=0$, and
+\begin{equation}
+ [N,P]=\frac12\begin{pmatrix}0&-1\\1&0\end{pmatrix}\ne0.
+\end{equation}
+An exact rational check therefore confirms the projection and one
+commuting transport while rejecting the other transport as a commuting
+example. This rejection is a control result, not a failure of the
+projection theorem. None of these matrix equations identifies a native
+field, a physical transport or a mass operator.
+
+Ordinary mathematical notation is retained throughout the main text.
+The accompanying assertion records specify precise source versions,
+prerequisites and finite checks; they allow the chain of reasoning to
+be inspected without treating content identity as proof. The original
+mass-readout arguments are collected in Appendix~A, while the separate
+audit records retain the detailed provenance and unresolved obligations.
+% section:particles
+The algebraic carrier suggests several representation-theoretic
+ingredients: unit quaternions provide an $SU(2)$ action, complex scalars
+provide phase transformations, and the octonionic setting motivates
+colour representations. These ingredients are useful starting points,
+but they do not uniquely fix the physical gauge theory. In particular,
+a common complex phase is not by itself the electromagnetic charge
+operator or a derivation of hypercharge.
+
+The distinction between colour and generation is equally important.
+A three-dimensional subspace carrying a colour action cannot be
+identified with three generations merely by counting its basis vectors.
+The Companion's inherited slot assignments require additional choices
+of embeddings, charge operators and the relation between internal
+representations and physical states. We therefore retain the gauge and
+generation discussion as a conditional assignment problem, not as a
+derivation of the complete Standard Model.
+
+A more explicit comparison construction starts from a seed isometry
+$T_0:\mathbb C^3\to\mathcal K$ and an orthogonal closure projector
+$P_c$ on a declared common carrier. If $T_0^*P_cT_0$ is positive
+definite, then
+\begin{equation}
+ S=P_cT_0(T_0^*P_cT_0)^{-1/2},\qquad S^*S=I_3.
+\end{equation}
+This constructs three orthonormal closed states under its hypotheses.
+It does not determine the seed embedding or explain why those states
+are lepton generations. We distinguish $P_c$ from the HC projector $C$:
+closure within a selected space and even/odd HC grading are separate
+structures. This distinction becomes necessary when a coupling is
+used to define mass readout.
+% section:masses
+\paragraph{A necessary norm relation.}
+Let $x_i=\sqrt{m_i}\geq0$, with $x\ne0$, and define
+\begin{equation}
+ K=\frac{\sum_i x_i^2}{(\sum_i x_i)^2},\qquad
+ A=\frac{x_0+x_1+x_2}{3},\qquad x=A(1,1,1)+d.
+\end{equation}
+Since $\sum_i d_i=0$, the constant part and $d$ are orthogonal, so
+\begin{equation}
+ K=\frac13+\frac{\|d\|^2}{9A^2},\qquad
+ K=\frac23\ \Longleftrightarrow\ \|d\|^2=3A^2.
+\end{equation}
+Thus the Koide value requires equality of the symmetric and traceless
+squared norms. Cyclic symmetry preserves these norms separately and
+does not fix their ratio. For example, $x=(1,2,3)$ gives $K=7/18$,
+while equal roots give $K=1/3$.
+
+\paragraph{A conditional HC representation.}
+On Euclidean three-root space set $e=(1,1,1)/\sqrt3$ and let $J_m$
+be an orthogonal involution. For $C_m=(I+J_m)/2$, suppose
+$x=\alpha C_me$ is nonzero and componentwise nonnegative, with
+$\alpha>0$. Writing $h=\langle e,J_me\rangle$ gives
+\begin{equation}
+ \|C_me\|^2=\frac{1+h}{2},\qquad
+ K=\frac{2}{3(1+h)}.
+\end{equation}
+Consequently $h=0$ is the additional condition for Koide. The projector
+axioms permit $J_m=I$, for which $h=1$ and $K=1/3$; they do not select
+the desired value. Choosing $J_m$ after specifying the target roots
+cannot supply the missing physical selection rule.
+
+An explicit route from the original carrier to this representation
+would require a bounded coisometry $B:H\to\mathbb R^3$, $BB^*=I_3$,
+whose kernel is $J$-invariant. Then $J_m=BJB^*$ is an orthogonal
+involution and $BC=C_mB$. If an independently supplied seed satisfies
+$Bf_0=e$ and the physical root law is $x=\alpha BCf_0$, the criterion
+becomes
+\begin{equation}
+ \langle B^*e,JB^*e\rangle=0.
+\end{equation}
+Neither the name of a readout nor the number of its components supplies
+$B$, its metric control, this seed law or the orthogonality selection.
+Moreover, a purely odd input obeys $Cf=0$ and cannot yield nonzero roots
+through this direct compensated linear route.
+
+\paragraph{Positive nonlinear readout is a separate requirement.}
+For two complex amplitudes $\chi=(u,v)$ define
+$X_0=|u|^2+|v|^2$, $X_1=|u|^2-|v|^2$,
+$X_2=2\operatorname{Re}(\bar uv)$ and
+$X_3=2\operatorname{Im}(\bar uv)$. Then
+$X_0^2=X_1^2+X_2^2+X_3^2$. With the three-cycle $U$, an illustrative
+Hermitian root operator is
+\begin{equation}
+ L_\eta=X_0\frac{I_3}{\sqrt3}
+ +\eta X_1\frac{U+U^*}{\sqrt6}
+ +\eta X_2\frac{i(U-U^*)}{\sqrt6},\qquad \eta\geq0.
+\end{equation}
+Only where $L_\eta\geq0$ may its eigenvalues be read as principal
+roots. There
+\begin{equation}
+ K=\frac{1+\eta^2[1-(X_3/X_0)^2]}3.
+\end{equation}
+Positivity on every input requires $\eta\leq1/\sqrt2$ and gives
+$K\leq1/2$. The isometric coefficient $\eta=1$ can reach $2/3$
+on restricted positive phase chambers, but the preparation and
+preservation of such a chamber is additional physical information.
+Squaring a signed $L_\eta$ does not remove this issue: its physical
+principal root becomes $|L_\eta|$, changing the root sum.
+
+The recent HC-balance comparison illustrates the transfer problem
+more directly. If the two-mode grading is $J=\operatorname{diag}(1,-1)$,
+the balanced state $(1,i)/\sqrt2$ gives $X_1=X_2=0$ and hence $K=1/3$
+for this readout. More generally, an antipodal pair of root operators
+$cI_3\pm D$, with $c>0$ and $\operatorname{Tr}D=0$, cannot both
+be positive Koide readouts. Both positive implies eigenvalues of $D$
+in $[-c,c]$ and $\operatorname{Tr}D^2\leq2c^2$, so both ratios
+are at most $5/9$. This is a restriction on this isotropic readout
+pair, not on arbitrary mass mechanisms. It shows why state balance
+and the positive three-generation transfer must be derived together.
+% section:geometry
+The same interface issue appears in the dynamics. Suppose a finite
+realification of the full state satisfies $\dot u=Gu$ and let
+$r=T(t)u$ be a surjective real-linear extraction. For a right inverse
+$R_s$, write $u=R_sr+z$, with $Tz=0$. Differentiation gives
+\begin{equation}
+ \dot r=(\dot T+TG)R_sr+(\dot T+TG)z.
+\end{equation}
+The observable equation is independent of the discarded lift precisely
+when
+\begin{equation}
+ (\dot T+TG)\ker T=0.
+\end{equation}
+This condition is additional to an algebraic projector identity. In its
+absence, two full states with the same readout can have different
+readout derivatives. Eliminating the hidden variables may then produce
+memory terms rather than an autonomous local equation.
+
+The Companion's geometric programme studies induced coframes, local
+field comparisons and compatible constraint data. Finite normal-source
+calculations can test whether prescribed tangential data determine a
+normal increment. Such a calculation is not yet a regional existence
+theorem, a derivation of the native action or an identification of an
+internal positive comparison metric with a spacetime metric. The
+reconstruction must respect common domains, conservation conditions
+and the ordering of the original operators.
+
+This identifies a concrete link between the mass and geometry branches:
+both require a represented extraction with controlled discarded degrees
+of freedom. A formal master equation supplies an organizing equation;
+well-posed evolution and the physical meaning of its projected fields
+are further obligations.
+% section:limits
+The results above locate the main missing information in the transfer
+from a common carrier to observables. An HC projector gives an exact
+grading. Koide additionally requires a metric-preserving root
+representation and a selected norm relation. Positive nonlinear
+readouts introduce state-domain restrictions, while geometric
+projection introduces an independent autonomy condition. None of
+these requirements is fixed by the dimensionality of a representation.
+
+A recent comparison route couples this question to an arithmetically
+defined operator. For $\sigma>1$, the logarithmic derivative of zeta
+defines the real odd function
+\begin{equation}
+ a(t)=\operatorname{Im}\frac{\zeta'(\sigma+it)}{\zeta(\sigma+it)}
+ =\sum_{n\geq2}\Lambda(n)n^{-\sigma}\sin(t\log n),
+\end{equation}
+where $\Lambda$ is the von Mangoldt function \cite{DLMF274}.
+Multiplication by $a$ anticommutes with parity $R$. Thus the
+selfadjoint operator $T_a=-iRA_a$ has symmetric positive and negative
+spectral subspaces. A state restricted to either nonzero spectral side
+is parity-balanced, including when the spectrum is continuous.
+The construction $f(t)=Na(t)^2e^{-t^2}$,
+$\psi=(f+i\operatorname{sgn}(a)f)/\sqrt2$ gives a regular normalized
+example on the positive side. Its parameter and Fourier variances
+are finite. The corresponding Robertson relation is compatible with
+the balance, but need not be saturated \cite{Robertson1929}.
+
+This example establishes mathematical compatibility, not physical
+selection. The positive spectral restriction, its preparation, the
+window and the interpretation of $T_a$ as energy are additional
+choices; the parameter is not identified with physical time or position.
+The convergent prime series also does not justify substituting
+$\sigma=1/2$. Most importantly, the example supplies no map to three
+positive lepton roots and does not evade the readout restrictions above.
+
+A physical completion must therefore specify the carrier action,
+generation embedding, admissible state domain, observable map and
+dynamics on the same represented system. It must then determine which
+parameters are predictions and which are measured inputs. Until those
+steps are supplied, the framework supports conditional constructions
+and consistency tests rather than a recovered particle spectrum or
+a unified field theory. The long Companion retains the broader
+cosmological and structural proposals with their individual qualifications.

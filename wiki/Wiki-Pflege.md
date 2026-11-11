@@ -45,6 +45,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 11.11.2026: Forschungsstand – Physikfassung vom technischen Auszug zum wissenschaftlichen Haupttext mit Abstract, Literatur und Beweisanhang überarbeitet; Detailprovenienz im separaten Auditbericht erhalten.
+
 - 11.11.2026: Forschungsstand – beide Datenbankeditionen, sieben Physikabschnitte, vollständigen Langquellbaum und sichtbar offene Kandidaten dokumentiert; keine Releasefreigabe.
 
 - 11.11.2026: Forschungsstand – unbestätigten Themenvorschlag der Physikfassung entlang Träger, Methode, Teilchen, Massen und Geometrie eingeordnet; kein fertiges Ausgabeprofil.

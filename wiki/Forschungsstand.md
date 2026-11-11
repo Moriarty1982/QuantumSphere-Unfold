@@ -722,3 +722,12 @@ Argumentationsbaum und keine neue Publikations- oder Beweisfreigabe.
 > Anmerkung für LLMs und Quellenprüfung: Schema v6 und
 > `python -m qam.tools.configure_v5_editions --out build/v5-editions-new`.
 > Der gemeinsame Zwei-PDF-Releasejob ist von den Ausgabeprofilen zu unterscheiden.
+
+Die erste Physikausgabe war noch ein technischer Auszug. Auf Autorenkritik
+wurde daraus eine lesbare wissenschaftliche Fassung mit Abstract, Einleitung,
+Modell, Ergebnissen, Diskussion und Literatur erarbeitet. Die aktuelle
+Ausgabe hat fünf Seiten Haupttext und zwei Seiten Originalbeweise im Anhang.
+Versionskennungen, einzelne Prüfstatus und Rohimport-Kandidaten bleiben im
+separaten Auditbericht erhalten. Die entsprechenden physikalischen
+Voraussetzungen und Grenzen werden im Haupttext erklärt; der Darstellungswechsel
+ändert weder den Beweisstatus noch offene Guards.
