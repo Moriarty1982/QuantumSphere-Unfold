@@ -2,9 +2,11 @@
 
 11. November 2026 (Codex). Wird pro Arbeitsblock überschrieben.
 
-- Branch codex/v5-physics-review, PR #97 auf Basis codex/v5-layout-fixes (#96).
-- Main bleibt edf1a1c; öffentliche Baseline v4.11.0, Entwicklung v5.0.0-draft ohne eigene DOI.
-- PR #95 (CI) und #96 (Layout) weiterhin offen. Kein neuer Main-Merge freigegeben.
+- Branch codex/v5-release-payload, neu ab main 802c7af für die weitere Paketvorbereitung; bisher nur lokale Übergabe aktualisiert.
+- Main jetzt 802c7af9e672f138461ffb112b0fcd43b7b79c58; öffentliche Baseline v4.11.0, Entwicklung v5.0.0-draft ohne eigene DOI.
+- Auf ausdrückliche Autorenfreigabe alle drei PRs gemergt: #95 als 4200c23, #96 als fdd9acc, #97 als 802c7af. Keine offenen PRs.
+- Lokales main per Fast-forward synchronisiert; neue Paketbranch darauf angelegt.
+- Main-CI auf 802c7af gestartet: paired PDF 43087358029, Lean 43087357965, TeX 43087358072, Batch 43087357942; Ergebnisse vor Weiterarbeit prüfen. Wiki Sync 43087357911 erfolgreich.
 - Containerlauf 43078619869 des alten Layoutstands 875a6ad erfolgreich: 1401/27 Seiten, alle vier Befunde null, 111 Prüfsummen geprüft.
 - Fachliche Selbstprüfung der vollständigen englischen Physikfassung samt Anhang: notes/research/referee/v5-physics-2026-11-11-pass1/report.md.
 - Kein tragender Fehler festgestellt; keine unabhängige Begutachtung. Archivierter Review bleibt an seinen Snapshot gebunden.
@@ -22,7 +24,8 @@
 - Der Metadaten-Trockenlauf bezeichnet ausdrücklich ältere PDFs; finale Dateien erneut prüfen.
 - publication_ready=false und beide incomplete_argument_review=true; Guards und OPs unverändert.
 - Nächster Schritt: konkrete Quellen-/Evidenz-Payload zum gewählten Release-Stand zusammenstellen und erneut prüfen.
-- PR #95, danach #96 und #97 nur nach Autorenfreigabe mergen; retargetete Diffs prüfen.
+- Alle drei PRs vor dem Merge auf main umgestellt und verbleibende Diffs geprüft; alle PR-Prüfungen erfolgreich.
+- Kein weiterer Merge, Release, DOI-Schritt oder Löschen alter Branches freigegeben.
 - DOI-Reservierung, tatsächliches Veröffentlichungsdatum, finaler Quellenarchivbau und serverseitige Metadatenannahme bleiben offen.
 - Kein Zenodo-Entwurf, Upload, Release oder Tag; CITATION.cff bleibt auf v4.11.0.
 - .codex/environments/ nicht aufnehmen; alte Branchlöschung weiterhin nicht freigegeben.
