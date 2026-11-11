@@ -779,3 +779,13 @@ auf den einzelnen Aufruf im Projektverzeichnis und schreibt für diese
 beiden Quellen LF-Zeilenenden vor. Weder Quellinhalt noch Belegstatus oder
 die strenge Hashprüfung werden dadurch geändert. Die Satzüberläufe und
 die fachliche Schlussprüfung bleiben eigenständige Aufgaben.
+
+Auf dem Reparaturbranch bestehen inzwischen die Windows-/Linux-Tests,
+Lean, TeX und der vollständige gemeinsame Containerbuild. Das erzeugte
+Paket wurde mit allen 111 verzeichneten Prüfsummen kontrolliert. Im
+Container bleiben 45 Satzmeldungen der Langfassung, lokal 58; die
+unterschiedliche Satzumgebung beseitigt keine Quelle. Eine getrennte
+Bestandsaufnahme ordnet die Meldungen zunächst als Dateihinweise ein,
+mit Schwerpunkt auf breiten Statusboxen und langen Protokollbezeichnungen
+in älteren technischen Anhängen. Redaktionelle Korrektur und fachliche
+Schlussprüfung stehen weiter aus. PR #95 enthält die CI-Reparatur.

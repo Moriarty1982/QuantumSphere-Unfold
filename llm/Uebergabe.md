@@ -2,13 +2,14 @@
 
 11. November 2026 (Codex). Wird pro Arbeitsblock überschrieben.
 
-- Branch main; Autorenfreigabe: commit, merge und push.
+- Branch codex/v5-ci-portability; Basis main edf1a1c; CI-Codecommit 6e524f5.
+- PR #95 offen: https://github.com/Moriarty1982/QuantumSphere-Unfold/pull/95. Reparatur noch nicht gemergt.
 - Merge des vollständigen Vorbereitungsbranches: 459b90eeafb07d6ccf22ec7cc999d7307041821f.
 - Vorherige Main-Basis PR94 / 3a68669b0b12766c256ae6eeed1f52ae0693acc4; öffentliche Paper-Baseline bleibt v4.11.0.
 - Entwicklung v5.0.0-draft, keine eigene DOI oder Veröffentlichung.
 - Folgeauftrag weiter: gemeinsamen Zwei-Dokument-Build eingerichtet und lokal vollständig geprüft.
 - Werkzeug: python -m qam.tools.build_v5_documents --out NEUER_ORDNER.
-- Workflow .github/workflows/qsc-v5-dual-documents.yml: manuell oder passende Änderungen auf main; GitHub-Ausführung noch nicht geprüft.
+- Workflow .github/workflows/qsc-v5-dual-documents.yml: auf Reparaturbranch erfolgreich geprüft (Run 43067072925).
 - Ausgabe build/v5-paired-documents-final/: Lang-PDF 1397 Seiten, englisches Physikpaper 27 Seiten.
 - Langfassung drei Satzläufe, Physik zwei; beide ohne offene Verweise, doppelte Labels oder Rerun-Meldungen.
 - 58 Overfull-Boxen im Langtext, keine im Physikpaper. Diese sind nicht bereinigt und bleiben redaktionell offen.
@@ -17,7 +18,7 @@
 - Alle verzeichneten Prüfsummen nach dem Lauf geprüft.
 - build_complete=true bedeutet technische Paar-Vollständigkeit. publication_ready bleibt false; beide incomplete_argument_review bleiben true.
 - Keine neue mathematische Beweisfreigabe, native Identifikation oder OP-Schließung.
-- 32 Storetests erfolgreich; neue Fehlerfallprüfungen verhindern vollständigen Status bei fehlendem/fehlgeschlagenem Dokument oder geänderter Quelle.
+- Jetzt 33 lokale Storetests erfolgreich; GitHub QAM Windows/Linux (43067075940), Lean (43067076106) und TeX (43067076143) erfolgreich.
 - Compiler verwendet pdflatex direkt ohne Shell-Escape, bis zu sechs Läufe. latexmk scheiterte lokal an fehlendem Perl.
 - Bericht notes/research/v5_dual_document_build_2026_11_11.md enthält genaue Buildidentitäten.
 - Snapshot: 168977e6c8ec955214fc5463769eb2ae709d0815dc6cee38d3d1e05245cb0f67.
@@ -28,7 +29,13 @@
 - Deutsche Quellen qam/editions/de/, Builder qam.tools.build_v5_german_reader; 640 mathematische Fragmente erhalten.
 - Deutsche Fassung ist kein Datenbank-Sprachprofil; ihre englische Vorlage bleibt 1db88536ab67af7a1087fb999f63ef46ccfb9a0f8d22335c8969cf51a306c1d8.
 - Der gespeicherte MMA-Intervallbeleg bleibt bedingt, closure_proved und mathematical_relations_proved false.
-- Nächster Schritt: 58 Satzüberläufe im Langtext nach Fundstelle/Art erfassen und korrigieren; danach fachliche Schlussprüfung und Workflow-Prüfung.
+- CI-Ursachen: Container-Git-Eigentumsprüfung und Windows-Zeilenenden zweier bytegeprüfter Quellen.
+- Fix: Git-Vertrauen pro Metadatenaufruf nur für genau dieses Repo; .gitattributes erzwingt LF nur für Koide-/HC-Beweisquellen. Keine Hashprüfung gelockert.
+- Bericht notes/research/v5_ci_portability_2026_11_11.md. Erfolgreiches CI-Artefakt build/v5-ci-artifact-43067072925/, alle 111 SHA256 geprüft.
+- CI-PDFs: 1396 Seiten lang, 27 Physik; 45 statt lokal 58 Satzmeldungen, kein Quellfix. publication_ready=false bleibt.
+- Satzinventare als JSON + Notiz notes/research/v5_layout_inventory*_2026_11_11.* gespeichert; Dateihinweise vor Edits verifizieren.
+- 44 Meldungen jeweils bei 34_mm_hc_and_c5_development.tex, eine bei 36_frame_typed_endpoint.tex; lokal weitere 13 Absatzmeldungen.
+- Nächster Schritt: PR #95 nach Autorenfreigabe mergen; breite Formelboxen/Protokollbezeichnungen rein typografisch korrigieren und beide Builds neu prüfen.
 - Main-Merge ausdrücklich freigegeben und ausgeführt; kein Tag, DOI, Zenodo-Entwurf, Upload oder Paper-Release.
 - Branchlöschung bleibt durch automatische Freigabeprüfung blockiert; Liste notes/research/v5_0_0_branch_cleanup_review.md, keine neue Freigabe.
 - .codex/environments/ nicht aufnehmen. Keine H-/k-Nummer vergeben.

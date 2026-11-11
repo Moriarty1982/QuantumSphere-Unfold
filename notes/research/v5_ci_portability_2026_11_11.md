@@ -37,9 +37,20 @@ erneut beide Plattformen prüfen.
 Ein frischer temporärer Git-Bestand mit `core.autocrlf=true` wurde mit
 den unveränderten geprüften Quellbytes und den neuen Attributen angelegt.
 Beide daraus ausgecheckten Quellen bleiben bytegleich zur Vorlage.
-Die vier Tests des Dokumentbuilders bestehen. Die vollständige Store-Suite
-wird ebenfalls ausgeführt; GitHub-Läufe auf dem Reparaturbranch prüfen
-zusätzlich den tatsächlichen Container und beide Betriebssysteme.
+Die vier Tests des Dokumentbuilders und alle 33 lokalen Storetests bestehen.
+Auf dem Codecommit `6e524f5c01037bcbdfa29263d18776bc88211341` sind auch die
+GitHub-Prüfungen erfolgreich: QAM Windows und Linux (Run 43067075940),
+Lean (43067076106), TeX (43067076143) sowie der vollständige gemeinsame
+PDF-Build im Container (43067072925). PR: #95.
+
+Das erfolgreiche Artefakt `qsc-v5-paired-documents-2` wurde heruntergeladen.
+Sein Manifest bestätigt beide vollständigen Dokumente und weiterhin
+`publication_ready=false` sowie `incomplete_argument_review=true`.
+Alle 111 verzeichneten SHA256 wurden nach dem Download geprüft.
+Der Container liefert 1396 Seiten Langfassung und 27 Seiten Physikpaper,
+45 Satzüberläufe im Langtext und keinen im Physikpaper. Die abweichenden
+Seiten- und Satzmeldungszahlen gegenüber lokalem MiKTeX sind keine
+Quellkorrektur: Der lokale Lauf hatte 1397 Seiten und 58 Meldungen.
 
 Die 58 Satzüberläufe der Langfassung sind hiervon getrennt und bleiben
 offen. Diese Reparatur selbst führt weder einen Main-Merge noch eine
