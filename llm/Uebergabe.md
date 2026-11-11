@@ -2,8 +2,9 @@
 
 11. November 2026 (Codex). Wird pro Arbeitsblock überschrieben.
 
-- Branch codex/v5-release-prep; Basis vor diesem Block 01ca2a8.
-- Main bleibt PR94 / 3a68669b0b12766c256ae6eeed1f52ae0693acc4; öffentliche Baseline v4.11.0.
+- Branch main; Autorenfreigabe: commit, merge und push.
+- Merge des vollständigen Vorbereitungsbranches: 459b90eeafb07d6ccf22ec7cc999d7307041821f.
+- Vorherige Main-Basis PR94 / 3a68669b0b12766c256ae6eeed1f52ae0693acc4; öffentliche Paper-Baseline bleibt v4.11.0.
 - Entwicklung v5.0.0-draft, keine eigene DOI oder Veröffentlichung.
 - Folgeauftrag weiter: gemeinsamen Zwei-Dokument-Build eingerichtet und lokal vollständig geprüft.
 - Werkzeug: python -m qam.tools.build_v5_documents --out NEUER_ORDNER.
@@ -28,6 +29,6 @@
 - Deutsche Fassung ist kein Datenbank-Sprachprofil; ihre englische Vorlage bleibt 1db88536ab67af7a1087fb999f63ef46ccfb9a0f8d22335c8969cf51a306c1d8.
 - Der gespeicherte MMA-Intervallbeleg bleibt bedingt, closure_proved und mathematical_relations_proved false.
 - Nächster Schritt: 58 Satzüberläufe im Langtext nach Fundstelle/Art erfassen und korrigieren; danach fachliche Schlussprüfung und Workflow-Prüfung.
-- Kein Main-Merge, Tag, DOI, Zenodo-Entwurf, Upload oder Release in diesem Block.
+- Main-Merge ausdrücklich freigegeben und ausgeführt; kein Tag, DOI, Zenodo-Entwurf, Upload oder Paper-Release.
 - Branchlöschung bleibt durch automatische Freigabeprüfung blockiert; Liste notes/research/v5_0_0_branch_cleanup_review.md, keine neue Freigabe.
 - .codex/environments/ nicht aufnehmen. Keine H-/k-Nummer vergeben.
