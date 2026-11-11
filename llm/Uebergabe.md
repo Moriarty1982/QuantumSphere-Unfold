@@ -1,28 +1,33 @@
 # Übergabe: Stand der letzten Sitzung
 
-11. November 2026 (Codex).
+11. November 2026 (Codex). Diese Datei wird je Arbeitsblock überschrieben.
 
-- Branch codex/v5-release-prep; letzter Commit vor diesem Block 8edd317.
+- Branch codex/v5-release-prep; Basis vor diesem Block 210a161.
 - Main/Basis bleibt PR94 / 3a68669b0b12766c256ae6eeed1f52ae0693acc4.
-- Autorenkritik: Physikfassung liest sich wie Datenbankbericht. Redaktionell zu wissenschaftlichem Artikel überarbeitet.
-- Neue Textquellen: qam/editions/v5_physics_article.tex und v5_physics_references.tex.
-- Neuer Renderer qam/store/physics_paper.py; technische Auditdarstellung weiterhin für alte Editionen verfügbar.
-- Editionsformat v2 ergänzt optionale presentation mit style=physics-paper, Autor, Version, registrierter Abstractversion. Schema unverändert v6.
-- Sieben Abschnitte: Einleitung, Träger, Methode, Teilchen/Generationen, Massenauslesung, Dynamik/Geometrie, Diskussion.
-- Abstract, wissenschaftliche Prosa, nummerierte Gleichungen, vier Literaturangaben; Koide-/HC-Originalbeweise in Anhang A.
-- Keine Versionshashes, Frame-Statuslisten oder einzelnen Checkresultate im Haupttext. Diese stehen vollständig in audit.md und assembly.json.
-- Wissenschaftliche Voraussetzungen/Grenzen bleiben im Haupttext; Rohimporte erhalten keinen neuen Beweisstatus.
-- Physikhash: c384db1ca558247d592fae55c32c15c4733f194ca0a6760975c2700bf0714c05.
-- Vollhash: ceead7e916aa05d0b112d7a85342b44ddb03b6092a2bb741c9ab8ab1044b2133.
-- Snapshot: b2a85f3128c8cad6a122a15cb82df4da1aae5254038c23e2c51b5c05e8f1cd5e.
-- PDF: build/qam-v5-physics-narrative/physics/paper.pdf. Fünf Seiten Haupttext inkl. Literatur + zwei Seiten Beweisanhang.
-- Zweimal mit pdflatex gebaut, keine Overfull/undefinierten Zitate/Verweise/Rerun-Meldungen. Alle sieben Seiten visuell geprüft.
-- Ganze Store-Suite: 29 Tests erfolgreich, inkl. neuer Tests für Abstract/Autor, getrennte Auditdaten und Erhaltung offener Kandidaten.
+- Autorenauftrag: knappe Physikfassung inhaltlich zu einem eigenständigen Paper ausarbeiten.
+- Sieben neue Module qam/editions/v5_expanded_*.tex, jeweils als Erklärung registriert und quellengehasht.
+- Umfang: 27 Seiten, davon 24 Argumentation, eine Literaturseite und zwei Seiten Originalbeweise.
+- PDF: build/qam-v5-expanded-final/physics/paper.pdf; LaTeX, assembly.json und audit.md im selben Ordner.
+- Einleitung: Observable Äquivalenz, Kriterien der Darstellung, Selektion und Auslesung.
+- Träger: Biquaternionen, zwei Konjugationen, Pauli-/Lorentz-Realisierung, HC-Grading und Realifizierung.
+- Methode: QAM/MML/MMA erklärt; komplette elektromagnetische Gram-/Lorentz-Intervallherleitung.
+- Ein gespeicherter MMA-Beleg per Hash geprüft und unter qam/editions/evidence/gram_interval_receipt.json gesichert.
+- Ergebnis [121/162,961/1202]; Prämissen bedingt, closure_proved und mathematical_relations_proved bleiben false.
+- Teilchen: bedingte CAR-Zählung 1,3,3,1; Generationenseeds, Rang, Slot/Spektrum, relative Mischungsbasis.
+- Massen: Defektnorm, positive Penalty, freie unitäre Dilatation, Schur-Komplement und endliche Lücke, zyklische Wurzeln, Positivität, Überlagerung.
+- Geometrie: versteckter Lift, Gedächtnis, kanonische Partner, Wirkungsreduktion, Koframe, endliche Quellenkompatibilität, bedingte Constraint-Fortpflanzung.
+- Zeta: arithmetischer Partner bei sigma > 1, Eigenzustandssperre, reguläres positives Spektralpaket, Unschärfe und offene native Selektion.
+- Originalbeweise und Runden unverändert; Rohimporte erhalten keinen neuen Beweisstatus. OPs bleiben offen.
+- Prüfbericht: notes/research/v5_expanded_physics_editorial_review_2026_11_11.md; Quellenkarte, Grenzen und Korrekturleseumfang.
+- Physikhash: 1db88536ab67af7a1087fb999f63ef46ccfb9a0f8d22335c8969cf51a306c1d8.
+- Vollhash: 7dac95aad8d2d2db2e36090a24d298d975f06c24f88a1b0035f9139faa3bc0df.
+- Snapshot: fda9214d02e556594f39696505729fd64e8624055237ecf880d6bafe89d646b4.
+- Zweimal pdflatex ohne Shell-Escape, finales Log ohne Overfull/undefined/Rerun/mehrfache Labels; alle 27 Seiten visuell geprüft.
+- 29 Storetests erfolgreich, anschließend drei Editionstests erneut erfolgreich. Unveränderte Eingaben bleiben idempotent.
 - Reproduktion: python -m qam.tools.configure_v5_editions --out build/v5-editions-new (neuer Zielordner).
-- CLI edition-read/save/export in qam.tools.store_db; Datenbank build/qam.sqlite3, weiterhin 2468 Aussagen/61 Langquellstationen.
+- Langfassung weiterhin 61 Quellstationen / 2468 Aussagen mit vollständigem gehashtem Quellbaum.
 - Entwicklung 5.0.0-draft; öffentliche Baseline 4.11.0 / DOI 10.5281/zenodo.24108818.
-- Kein neuer Release, DOI, Zenodo-Upload oder Main-Merge. Redaktionelle Fassung noch kein publikationsfertig geprüftes Gesamtpaper.
-- Nächster Schritt: Autor soll die neue Lesefassung beurteilen; dann fachliche Lücken der ausgewählten Teilchen-/Geometrieaussagen vervollständigen und gemeinsamen Zwei-PDF-Releasejob fertigstellen.
-- Alte Editionsrevisionen und Vorläufertexte bleiben unverändert abrufbar, alte Quellhashes nicht überschreiben.
-- Branchlöschung weiterhin durch automatische Freigabeprüfung blockiert; Liste in notes/research/v5_0_0_branch_cleanup_review.md. Keine neue Freigabe erhalten.
-- .codex/environments/ außerhalb des Commits belassen. OPs und native Identifikationen bleiben offen.
+- Kein Main-Merge, neuer Release, DOI oder Zenodo-Upload in diesem Block.
+- Nächster Schritt: fachliche Schlussprüfung der erweiterten Lesefassung; danach gemeinsamen Zwei-PDF-Releasejob fertigstellen.
+- Branchlöschung weiterhin durch automatische Freigabeprüfung blockiert; Liste notes/research/v5_0_0_branch_cleanup_review.md, keine neue Freigabe.
+- .codex/environments/ nicht aufnehmen. Frühere H-/k-Nummern hier nicht neu vergeben.

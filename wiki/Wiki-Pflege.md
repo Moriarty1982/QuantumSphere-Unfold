@@ -1,5 +1,10 @@
 # Wiki-Pflege
 
+**11.11.2026, erweiterte Physikfassung:** Forschungsstand um den Ausbau auf
+27 Seiten, die konkreten Herleitungen und die weiterhin offenen nativen
+Pflichten ergänzt. Sieben registrierte Textmodule und ein per Hash geprüfter
+bedingter MMA-Intervallbeleg; kein neuer Beweisstatus oder Release.
+
 Das Wiki erschließt Quellen und Forschungsergebnisse. Neue mathematische Behauptungen benötigen ihre Begründung in den Projektquellen; eine Wiki-Formulierung allein ändert keinen Beweisstatus.
 
 ## Aktualisierung

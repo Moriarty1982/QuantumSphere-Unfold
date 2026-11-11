@@ -1,0 +1,134 @@
+\subsection{The algebraic carrier and its two conjugations}
+A concrete carrier is needed before the word ``sector'' acquires a
+mathematical meaning. Write a biquaternion as
+\begin{equation}
+ q=q_0+z_1e_1+z_2e_2+z_3e_3,\qquad q_0,z_k\in\mathbb C,
+ \qquad e_ie_j=-\delta_{ij}+\epsilon_{ijk}e_k.
+\end{equation}
+The scalar imaginary unit commutes with the quaternion units. This is
+different from choosing a quaternion direction as an internal complex
+structure. In particular, a statement formulated with the commuting
+scalar unit cannot automatically be transferred to left multiplication
+by one of the $e_k$. The representation and the relevant adjoint must
+be specified for each transfer.
+
+There are also two distinct conjugations. Define quaternion conjugation
+by $\widetilde q=q_0-\sum_kz_ke_k$, leaving the complex coefficients
+unchanged, and coefficient conjugation by
+$\overline q=\overline{q_0}+\sum_k\overline{z_k}e_k$. Then
+\begin{equation}
+ q\widetilde q=q_0^2+z_1^2+z_2^2+z_3^2,
+\end{equation}
+whereas the positive coefficient norm is
+\begin{equation}
+ \|q\|_E^2=|q_0|^2+|z_1|^2+|z_2|^2+|z_3|^2.
+\end{equation}
+The first expression is a complex quadratic form; the second is a
+positive Hermitian norm. Using the same word ``norm'' for both can
+conceal a change of mathematical problem. A positivity argument about
+principal mass roots uses a positive comparison. It cannot use a
+complex quadratic invariant as though it were that comparison.
+
+One familiar realization sends $e_k$ to $-i\sigma_k$, with the Pauli
+matrices $\sigma_k$. The biquaternion becomes a complex two-by-two
+matrix, and its determinant is $q_0^2+\sum_kz_k^2$. On the Hermitian
+slice $X=tI+\boldsymbol x\cdot\boldsymbol\sigma$ this gives
+\begin{equation}
+ \det X=t^2-|\boldsymbol x|^2,\qquad
+ X\longmapsto AXA^*,\quad A\in SL(2,\mathbb C).
+\end{equation}
+The determinant is preserved. With the $(-,+,+,+)$ spacetime
+convention used in the geometric comparisons, the Lorentz quadratic
+form on this slice is $-\det X$. This conventional sign does not
+turn the coefficient norm into a Lorentz-invariant Hilbert norm.
+For example, $A=\operatorname{diag}(e^{\chi/2},e^{-\chi/2})$
+is a boost representative and is not a unitary matrix when
+$\chi\ne0$. A similarity, a physical observer transformation and
+a unitary change of a positive comparison basis must consequently be
+tracked as different operations.
+
+\subsection{What the sign of a field invariant actually distinguishes}
+An electromagnetic comparison gives a useful, independently interpretable
+instance of the complex vector part. In units with $c=1$, put
+$z=\boldsymbol E+i\boldsymbol B$. Then
+\begin{equation}
+ s=z\cdot z=|\boldsymbol E|^2-|\boldsymbol B|^2
+                 +2i\boldsymbol E\cdot\boldsymbol B.
+\end{equation}
+This identity distinguishes the two real electromagnetic invariants.
+Only on a real-$s$ slice, for example
+$\boldsymbol E\cdot\boldsymbol B=0$, is a classification by
+$s>0$, $s<0$ and $s=0$ directly meaningful. The first two cases are
+electric- and magnetic-dominated respectively; the last is a null
+invariant when the field is nonzero. Extending a sign label to a
+general complex $s$ would require another declared rule.
+
+These algebraic categories are useful for the Companion's proposed
+matter, tachyon and photon readouts, but their physical identification
+requires dynamics and observables. A null electromagnetic invariant,
+for instance, does not by itself specify a quantum photon state.
+Nor does a common carrier identify different invariant strata as the
+same physical state. The distinction is operational: one must specify
+which preparations, transformations and measurements are being compared.
+
+The HC construction is formulated on a positive Hilbert realization
+precisely so that its projection identities can be tested independently
+of these interpretations. In such a realization every $f$ decomposes
+uniquely as
+\begin{equation}
+ f=f_++f_-,\qquad f_+=Cf,\quad f_-=P_-f,\qquad
+ \|f\|^2=\|f_+\|^2+\|f_-\|^2.
+\end{equation}
+For a normalized state its involution expectation is
+\begin{equation}
+ \langle f,Jf\rangle=\|f_+\|^2-\|f_-\|^2.
+\end{equation}
+Zero expectation means equal weights in these two orthogonal sectors.
+It is not a fixed-point condition: a $J$-fixed unit vector has expectation
+one. This difference is decisive when a symmetry axis or a critical
+line is proposed as an explanation of mass-root balance.
+
+\subsection{Realification and the meaning of an adjoint}
+Suppose instead that an inherited $J$ is antiunitary on a complex
+Hilbert space. It obeys $J(if)=-iJf$, so $(I+J)/2$ is generally not
+complex-linear. Regard the same vectors as a real Hilbert space with
+inner product $\operatorname{Re}\langle f,g\rangle$. An antiunitary
+involution then becomes an orthogonal real-linear involution, and the
+projection calculation is valid on that real space. What changes is
+the allowed class of operators and subspaces.
+
+One can also complexify a real orthogonal realization and extend its
+involution complex-linearly. This produces a different comparison
+construction, in which multiplication by $i$ commutes with $J$.
+These alternatives cannot be combined in an argument by keeping only
+the symbol $J$. Later formulas such as $-iJA$ require the stated
+complex-linear extension and a selfadjoint anticommuting $A$ on the
+same positive Hilbert space. They are not formulas for an unspecified
+antiunitary operation.
+
+The same discipline applies to tensors. A spacetime metric contracts
+spacetime indices; an internal Hermitian metric compares internal
+amplitudes; a generation metric compares generation coordinates.
+Their signatures, dimensions and transformation rules differ. Even
+when their numerical matrices happen to coincide in one chart, an
+identification must explain how the corresponding spaces and adjoints
+are transported. The QAM context records discussed next serve to make
+these choices visible at the point where they enter an inference.
+
+\subsection{The physical interface as an additional piece of data}
+A physical readout consists of a domain of admitted states together
+with a map to observables. For the mass branch this includes a
+generation assignment, positivity of principal roots and a dimensional
+normalization. For a geometric branch it includes an invertible
+coframe or a metric, its differentiation rules and its coupling to
+the equations of motion. These requirements are stronger than the
+existence of a vector-space isomorphism.
+
+The common-carrier proposal can therefore be investigated in two
+directions. Forward construction starts from a represented carrier
+and computes its readout. Backward analysis starts from a required
+property of the observable and asks which carrier operations could
+produce it. The mass-root conditions and the projected-autonomy test
+in this paper are backward constraints of this second kind. They do
+not discard the common-carrier hypothesis; they specify the extra
+mathematical work needed to give it physical content.

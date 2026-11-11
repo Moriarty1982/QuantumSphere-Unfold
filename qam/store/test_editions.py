@@ -102,6 +102,14 @@ class EditionTests(unittest.TestCase):
             self.assertNotIn('pending review / version', main)
             self.assertNotIn('source statements are registered', main)
             self.assertIn('additional physical information', main)
+            edition = read_edition(db, first['physics'])
+            for key in ('core', 'method', 'particles', 'masses', 'geometry', 'limits'):
+                path = 'qam/editions/v5_expanded_' + key + '.tex'
+                self.assertIn(path, edition['source_files'])
+                section = next(s for s in edition['sections'] if s['key'] == key)
+                self.assertEqual(sum(m['use'] == 'prose' for m in section['members']), 2)
+            self.assertIn('A complete physical example', main)
+            self.assertIn('A regular balanced spectral packet', main)
             audit = (root / 'first/physics/audit.md').read_text(encoding='utf-8')
             self.assertIn('thm:SM', audit)
             self.assertIn('candidate', audit)

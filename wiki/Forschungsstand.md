@@ -725,9 +725,28 @@ Argumentationsbaum und keine neue Publikations- oder Beweisfreigabe.
 
 Die erste Physikausgabe war noch ein technischer Auszug. Auf Autorenkritik
 wurde daraus eine lesbare wissenschaftliche Fassung mit Abstract, Einleitung,
-Modell, Ergebnissen, Diskussion und Literatur erarbeitet. Die aktuelle
-Ausgabe hat fünf Seiten Haupttext und zwei Seiten Originalbeweise im Anhang.
+Modell, Ergebnissen, Diskussion und Literatur erarbeitet. Die
+erste Lesefassung hatte fünf Seiten Haupttext und zwei Seiten Originalbeweise im Anhang.
 Versionskennungen, einzelne Prüfstatus und Rohimport-Kandidaten bleiben im
 separaten Auditbericht erhalten. Die entsprechenden physikalischen
 Voraussetzungen und Grenzen werden im Haupttext erklärt; der Darstellungswechsel
 ändert weder den Beweisstatus noch offene Guards.
+
+Der anschließende inhaltliche Ausbau umfasst 27 Seiten: 24 Seiten
+Argumentation, eine Literaturseite und zwei Seiten Beweisanhang. Die
+Physikfassung entwickelt nun die konkreten Schnittstellen: ein
+elektromagnetisches Lorentz-/Gram-Beispiel mit exakter Intervallauslesung,
+die bedingte Ladungszählung und unabhängige Generationenseeds, Übergangsnorm
+und gapped Schur-Auslesung, zyklische Wurzeln und Positivität, Gedächtnis
+bei Projektion, kanonische Wirkungsreduktion sowie Koordinaten-, Quell- und
+Fortpflanzungsbedingungen der geometrischen Vergleiche. Ein eigener
+Zeta-/Unschärfeabschnitt zeigt die Eigenzustandssperre und ein reguläres
+balanciertes Spektralpaket bei sigma > 1. Native Präparation, Massenskala,
+Generationenauslesung und regionale Feldexistenz bleiben offene Aufgaben.
+
+Sieben zusätzliche Textmodule sind als versionierte Erklärungen in der
+Datenbankausgabe enthalten. Ein gespeicherter MMA-Beleg für das
+elektromagnetische Intervall wurde per Hash abgerufen und geprüft; die
+Prämissen bleiben bedingt, Closure und allgemeine mathematische Beziehungen
+werden vom Beleg nicht als bewiesen zertifiziert. Der Ausbau ist keine
+neue Messung, vollständige Begutachtung oder OP-Schließung.

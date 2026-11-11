@@ -138,7 +138,21 @@ zusammenhängenden Haupttext mit Abstract, Motivation, Modell, Ergebnissen,
 Methoden, Diskussion und Literatur. Die Originalbeweise stehen im Anhang;
 technische Kennungen und Prüfstatus in `audit.md` und `assembly.json`.
 Fachliche Voraussetzungen und Grenzen werden weiterhin im Paper erklärt.
-Der neue Entwurf umfasst fünf Seiten Haupttext einschließlich Literatur
-und zwei Seiten Beweisanhang. Dies ist eine redaktionelle Synthese,
+Die erste Lesefassung umfasste fünf Seiten Haupttext einschließlich Literatur
+und zwei Seiten Beweisanhang. Dies war eine redaktionelle Synthese,
 keine zusätzliche Beweisfreigabe für die Rohimporte und noch kein Abschluss
 der Veröffentlichungsvorbereitung.
+
+Auf den Folgeauftrag zum inhaltlichen Ausbau ist die Physikfassung auf
+27 Seiten gewachsen: 24 Seiten Argumentation, eine Seite Literatur und
+zwei Seiten Originalbeweise. Sieben eigene, gehashte Textmodule entwickeln
+Einleitung, Träger, Methode, Teilchen/Generationen, Massen, Geometrie und
+Diskussion. Der Umfang entsteht durch Herleitungen und Gegenbeispiele bei
+unverändertem Satzspiegel. Dazu gehören eine vollständige Lorentz-/Gram-
+Intervallrechnung, Seed- und Rangbedingungen, endliche Lücke und Schur-
+Komplement, Positivität, Gedächtnisterme, Wirkungsreduktion, lokale
+Kompatibilität sowie ein reguläres Zeta-Spektralpaket mit Domänenprüfung.
+Die Module sind als Erklärungen registriert; die ursprünglichen offenen
+Beweis- und Identifikationspflichten erhalten dadurch keinen neuen Status.
+Quellenzuordnung und Prüfungsumfang stehen im begleitenden redaktionellen
+Prüfbericht vom 11.11.2026.

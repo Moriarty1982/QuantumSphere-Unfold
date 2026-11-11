@@ -1,0 +1,172 @@
+\subsection{An arithmetic comparison operator}
+
+The suggestion that primes, a zeta function, and uncertainty might
+participate in the same selection mechanism can be made mathematically
+precise without identifying any of them with a physical observable.
+This distinction matters: an analogy becomes testable only after its
+operators, state space, and domains have been specified. The following
+construction is an analytic comparison model. It does not extend the
+Companion action or supply a lepton-mass prediction.
+
+Fix $\sigma>1$ and use the positive Hilbert space
+$\mathcal H=L^2(\mathbb R,dt)$, with dimensionless $t$. The logarithmic
+derivative of the Euler product gives \cite{DLMF274}
+\begin{equation}
+ -\frac{\zeta'(\sigma+it)}{\zeta(\sigma+it)}
+ =\sum_{n\geq2}\Lambda(n)n^{-\sigma}e^{-it\log n},
+ \qquad
+ \Lambda(p^k)=\log p.
+\end{equation}
+Here $\Lambda(n)=0$ unless $n$ is a prime power. In particular the
+real odd function
+\begin{equation}
+ a(t)=\operatorname{Im}\frac{\zeta'(\sigma+it)}{\zeta(\sigma+it)}
+     =\sum_{n\geq2}\Lambda(n)n^{-\sigma}\sin(t\log n)
+\end{equation}
+defines a bounded self-adjoint multiplication operator $Af=af$.
+Absolute and uniform convergence follow from
+$\Lambda(n)\leq\log n$ and convergence of
+$\sum (\log n)n^{-\sigma}$. Every fixed derivative is also uniformly
+convergent; the relevant majorant has an additional fixed power of
+$\log n$. Reflection $Rf(t)=f(-t)$ is a self-adjoint involution and
+$RA=-AR$. Thus a parity operator and a genuinely arithmetic odd
+partner coexist in one positive Hilbert space.
+
+For a normalized vector, Robertson's inequality \cite{Robertson1929}
+becomes
+\begin{equation}
+ \Delta R\,\Delta A\geq
+ \tfrac12|\langle[R,A]\rangle|=|\langle RA\rangle|.
+\end{equation}
+It does not require $\langle R\rangle=0$. An even normalized vector
+has $\langle R\rangle=1$ and both $\langle A\rangle$ and
+$\langle RA\rangle$ zero, so it satisfies the inequality without
+balance. This is a direct counterexample to an uncertainty-only
+selection argument. The inequality restricts a prepared state; it
+does not choose the preparation.
+
+\subsection{Why an eigenstate prescription fails}
+
+The bounded operator $T=-iRA$ is self-adjoint and satisfies
+$T^2=A^2$ and $RT=-TR$. If a normalized eigenvector with nonzero
+eigenvalue existed, anticommutation would force its parity expectation
+to vanish. That observation suggests a stronger selection rule than
+Robertson alone. In this particular realization, however, there are
+no nonzero normalizable eigenvectors, including at eigenvalue zero.
+
+Indeed, the sine series is holomorphic in the strip
+$|\operatorname{Im}t|<\sigma-1$ and hence real analytic on the real
+axis. Moreover,
+\begin{equation}
+ a(0)=0,\qquad
+ a'(0)=\sum_{n\geq2}\Lambda(n)(\log n)n^{-\sigma}>0.
+\end{equation}
+Consequently $a^2$ is not constant. An eigenvector of $T$ at real
+$\lambda$ would obey $(a(t)^2-\lambda^2)\psi(t)=0$ almost
+everywhere. The zero set of that nontrivial real-analytic function
+has measure zero, and an $L^2$ vector supported on it is zero.
+The argument excludes this eigenstate route, rather than every
+possible role for arithmetic. A finite grid could display discrete
+eigenvectors while missing this obstruction in the continuum.
+
+\subsection{A regular balanced spectral packet}
+
+One can retain the positive continuous spectral subspace instead.
+Let $S=\operatorname{sgn}(A)$; the null set of $a$ is negligible,
+so $S^2=I$ and $RS=-SR$. Choose the real even window
+$g(t)=e^{-t^2}$, set $f=Na^2g$ with $\|f\|=1$, and define
+\begin{equation}
+ \psi=\frac{f+iSf}{\sqrt2},\qquad
+ \operatorname{sgn}(T)=-iRS.
+\end{equation}
+Since $f$ is even and $Sf$ odd, their norms agree and their inner
+product vanishes. Direct substitution gives
+\begin{equation}
+ \|\psi\|=1,\quad \langle R\rangle_\psi=0,\quad
+ \operatorname{sgn}(T)\psi=\psi,\quad T\psi=|a|\psi.
+\end{equation}
+The last expression is multiplication by a variable function,
+not an eigenvalue equation. Thus it is consistent with the preceding
+nonexistence result. If $F_+=\mathbf1_{(0,\infty)}(T)$, then
+$F_+f=(f+iSf)/2$ and normalization gives this packet.
+
+The factor $a^2$ also resolves a domain issue. A generic sign change
+in $Sf$ could create a jump and an infinite Fourier second moment.
+Here $Sf=Na|a|g$, with weak derivatives
+\begin{align}
+ f'&=N(2aa'g+a^2g'),\\
+ (Sf)'&=N(2|a|a'g+a|a|g').
+\end{align}
+They lie in $L^2$ because $a,a'$ are bounded and the Gaussian and its
+derivative are square integrable. There is no delta contribution at a
+zero of $a$: the profile vanishes there. In addition $t\psi$ and
+$t\psi'$ lie in $L^2$. With $Qf=tf$ and the usual self-adjoint
+$P=-i\,d/dt$, both second moments are finite, $QP\psi$ and
+$PQ\psi$ exist, and $[Q,P]\psi=i\psi$. Hence
+\begin{equation}
+ \Delta Q\,\Delta P\geq\tfrac12.
+\end{equation}
+This is a parameter--Fourier uncertainty relation. Physical position,
+momentum, and a dimensional value of $\hbar$ have not been identified.
+
+Balance does not mean uncertainty saturation. Write
+$\mu_1=\int |a||f|^2dt$ and $\mu_2=\int a^2|f|^2dt$. For this packet
+\begin{equation}
+ \langle R\rangle=\langle A\rangle=0,\quad
+ \Delta R=1,\quad \Delta A=\sqrt{\mu_2},\quad
+ \langle RA\rangle=i\mu_1.
+\end{equation}
+The Robertson bound is $\sqrt{\mu_2}\geq\mu_1$ and is strict:
+equality would require $|a|$ constant almost everywhere on the
+support of $f$, whereas its level sets have measure zero. Balance
+comes from the chosen positive spectral projection. It is not an
+effect of saturating that inequality.
+
+\subsection{Preparation, preservation, and physical identification}
+
+This comparison separates three operations that an effective theory
+must not conflate. A spectral projector defines an allowed subspace;
+a preparation mechanism produces states in it; a generator preserves
+it during evolution. Functional calculus ensures that $e^{-isT}$
+commutes with $F_+$, but this does not prepare a generic incoming
+state in $\operatorname{im}F_+$, nor identify $T$ with the native
+Hamiltonian. The window, its scale, and the suppression of zeros
+are additional choices. None follows from the Euler product.
+
+The construction is confined to $\sigma>1$. Continuing the scalar
+zeta function does not automatically continue this bounded operator
+or its domain. On the critical line, poles of the logarithmic
+derivative require a separate analysis. No statement here proves
+the Riemann hypothesis or turns its zeros into the observed masses.
+The useful outcome is narrower: an arithmetic odd partner and a
+regular balanced packet are compatible with uncertainty, while
+their physical preparation and mass readout remain open.
+
+\subsection{What would constitute progress}
+
+For the mass branch, a decisive next result would specify the native
+operator $\widetilde R$, its compressed transition $B$, the positive
+three-dimensional readout, and the rule selecting its phase. A fit
+to three masses tests the flexibility of a chosen parameterization;
+it does not supply these missing definitions. A scale-independent
+ratio can constrain a mechanism before an overall mass scale is
+known, but agreement of a ratio cannot identify that scale or the
+underlying dynamics.
+
+For the generation branch, an admissible seed map must retain rank
+three and satisfy the grading requirements through the actual
+operator chain. Mixing requires a second physically identified
+operator in the same comparison space. For the geometric branch,
+an invertible coframe, compatible finite derivative data, and a
+local solution are separate obligations. Constraint propagation is
+valuable after its field-equation hypotheses are met.
+
+The database edition makes these distinctions inspectable. It
+stores statement versions, dependencies, source hashes, and the
+editorial selection used to assemble this paper. Its purpose is to
+prevent an algebraic possibility, a conditional calculation, and
+a physical identification from becoming indistinguishable during
+rewriting. The present work supplies explicit constructions and
+obstructions for these interfaces. A completed phenomenological
+theory would additionally need independently specified observables,
+units, preparation rules, and comparison with measured data.

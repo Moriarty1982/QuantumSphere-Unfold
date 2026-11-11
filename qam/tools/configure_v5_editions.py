@@ -66,6 +66,18 @@ def configure(database, destination):
                         'assumptions': [], 'dependencies': dependencies}})['version_hash']
         sections.append({'key': key, 'title': title, 'members': [{'version': note, 'use': 'prose'}]})
     by_key = {s['key']: s for s in sections}
+    expansion_sources = {}
+    for key, title in TITLES:
+        path = 'qam/editions/v5_expanded_' + key + '.tex'
+        expansion_sources[path] = hashlib.sha256((repo / path).read_bytes()).hexdigest()
+        expansion = register(database, repo, {'object_id': 'v5-expanded-' + key,
+            'kind': 'explanation', 'frame': frame, 'status': 'declared',
+            'source': {'path': path, 'sha256': expansion_sources[path],
+                       'revision': 'v5-physics-expanded-v1', 'locator': 'complete section development'},
+            'payload': {'title': title + ': development',
+                        'latex': (repo / path).read_text(encoding='utf-8').strip(),
+                        'assumptions': [], 'dependencies': dependencies}})['version_hash']
+        by_key[key]['members'].append({'version': expansion, 'use': 'prose'})
     by_key['question']['members'].insert(0, {'version': abstract, 'use': 'prose'})
     def add(key, versions, use):
         by_key[key]['members'] += [{'version': v, 'use': use} for v in dict.fromkeys(versions)]
@@ -98,6 +110,11 @@ def configure(database, destination):
                     if p.is_file() and p.suffix.lower() in {'.tex', '.bib', '.sty', '.pdf', '.png', '.jpg'}}
     source_files[source_path] = source['sha256']
     source_files[reference_path] = reference_source['sha256']
+    source_files.update(expansion_sources)
+    for path in ('qam/examples/gram-boost.tex', 'qam/examples/gram_range_mml.json',
+                 'qam/examples/gram-range-rule.qam', 'qam/lean/QAM/Provenance.lean',
+                 'qam/editions/evidence/gram_interval_receipt.json'):
+        source_files[path] = hashlib.sha256((repo / path).read_bytes()).hexdigest()
     for path in ('notes/research/hc_native_selection_gate_2026_11_11.md',
                  'notes/research/hc_root_transfer_rotation_gate_2026_11_11.md',
                  'notes/research/zeta_positive_spectral_packet_2026_11_11.md',

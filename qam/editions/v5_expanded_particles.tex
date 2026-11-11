@@ -1,0 +1,200 @@
+\subsection{What a representation construction must specify}
+The algebraic question is not whether symbols resembling the three
+gauge factors can be placed in a diagram. It is which operators act
+on which states, how the actions commute, and which observables are
+assigned to their invariant subspaces. A physical gauge interpretation
+also requires local transformation laws, connections and the appropriate
+matter representations. The compact groups encountered in a carrier
+are only part of these data.
+
+For the quaternion factor, write the Hermitian generators as
+$T_k=\sigma_k/2$. The Pauli multiplication law gives
+\begin{equation}
+ [T_j,T_k]=i\epsilon_{jkl}T_l.
+\end{equation}
+This exhibits the Lie algebra of the unit-quaternion $SU(2)$ action.
+It does not decide whether a particular subspace represents a weak
+doublet, a spatial spinor or another two-component system. That
+decision depends on the remaining representation and coupling data.
+Likewise the commuting scalar phase $e^{i\theta}$ acts uniformly on
+the carrier until a nontrivial charge operator is specified.
+
+The octonionic ingredient is equally sensitive to the chosen complex
+structure. Fix an imaginary unit $e_7$ and let $I_7=L_{e_7}$ denote
+left multiplication on the real octonion space. Here $I_7^2=-I$,
+so it is a complex structure, not the involution $J$ used for the HC
+grading. Relative to it, the real eight-dimensional space can be
+read as a complex four-dimensional space. The familiar singlet/triplet
+organization associated with the stabilizer of $e_7$ motivates the
+colour comparison used in the Companion. All identifications in this
+paragraph refer to that selected internal complex structure.
+
+On the complexification, the corresponding complex-linear projections
+are
+\begin{equation}
+ \Pi_\pm=\frac{I\mp iI_7}{2},\qquad
+ \Pi_\pm I_7=\pm i\Pi_\pm.
+\end{equation}
+Complex coefficient conjugation exchanges these projections. They
+must not be substituted for $C$ or for a closure projector without
+a map that identifies the relevant domains and meanings. The same
+letter ``projector'' can otherwise hide three different decompositions:
+internal complex structure, HC parity and physical closure.
+
+\subsection{A conditional ladder construction and its exact counting}
+The charge construction retained in the Companion can be separated
+into an algebraic hypothesis and the consequences that follow from it.
+In its specified octonion multiplication convention, introduce
+\begin{equation}
+ \alpha_a=\tfrac12(L_{e_a}+iL_{e_7e_a}),\quad a=4,5,6,
+ \qquad N=\sum_{a=4}^6\alpha_a^*\alpha_a,
+ \qquad Q_{\rm ch}=N/3.
+\end{equation}
+The represented Clifford multiplication and adjoint must give the
+canonical anticommutation relations
+\begin{equation}
+ \alpha_a\alpha_b+\alpha_b\alpha_a=0,\qquad
+ \alpha_a\alpha_b^*+\alpha_b^*\alpha_a=\delta_{ab}I.
+\end{equation}
+Once these relations and a cyclic vacuum annihilated by the three
+$\alpha_a$ are supplied, the occupation counting is elementary.
+Each creation operator can occur at most once, because its square
+vanishes. The states with $k$ occupied modes therefore have dimension
+$\binom3k$, and $N$ has eigenvalue $k$ on that subspace. The charge
+comparison consequently has the spectrum
+\begin{equation}
+ \begin{array}{c|rrrr}
+ k&0&1&2&3\\\hline
+ \text{multiplicity}&1&3&3&1\\
+ Q_{\rm ch}&0&1/3&2/3&1
+ \end{array}
+\end{equation}
+The total dimension is eight, the dimension of the three-mode fermionic
+Fock representation. These multiplicities are consequences of the
+chosen ladder algebra. They do not establish three lepton families.
+
+An internal $SU(3)$ action that rotates the creation operators and
+preserves the vacuum acts on the one-occupation space as a triplet,
+and on the two-occupation space as its conjugate, since these are
+the first and second exterior powers of a three-dimensional complex
+space. Vacuum and full occupation are singlets. This gives a precise
+representation question: is the represented colour action on the
+proposed octonionic carrier the action required by these operators?
+It must be checked with the chosen multiplication and adjoint; the
+counting table alone is not that check.
+
+The Companion's historical calculations motivate this compatibility,
+but the current paper does not turn a preserved numerical calculation
+into a new formal theorem. Its physical use still needs the embedding
+of particles, their chirality and the electroweak charge assignments.
+In particular a number operator with the displayed eigenvalues does
+not, by itself, derive hypercharge or the full weak representation.
+
+This decomposition also explains a correction to the literal slot
+dictionary. With the inner complex structure, vectors such as
+$e_4,e_5,e_6$ can form a complex triplet basis only because their
+$I_7$-images supply the corresponding real partners. Counting the
+images as another independent physical triplet double-counts the
+same complex degrees of freedom. Changing to the commuting outer
+complex unit changes the decomposition into charge eigenvectors.
+State labels must follow that change; an unqualified equality of
+charges across the proposed frames is not justified.
+
+\subsection{The independent generation space}
+Three colours within one representation and three generations of a
+given particle are different multiplicities. If the colour action is
+nontrivial on a three-dimensional subspace, that action does not
+automatically act as a generation permutation. A generation assignment
+needs a second declared structure and its relation to the carrier.
+The closure-seed construction supplies a conditional way to express
+that requirement without identifying raw octonion coordinates with
+mass eigenstates.
+
+Let $T_0:\mathbb C^3\to\mathcal K$ be an isometric seed embedding,
+and let $P_c$ be an orthogonal projector. Define
+$G_0=T_0^*P_cT_0$. If $G_0>0$, then the states in
+\begin{equation}
+ S=P_cT_0G_0^{-1/2}
+\end{equation}
+are closed and orthonormal:
+\begin{equation}
+ P_cS=S,\qquad
+ S^*S=G_0^{-1/2}T_0^*P_c^2T_0G_0^{-1/2}=I_3.
+\end{equation}
+If $G_0$ has rank below three, projection has removed an independent
+seed direction and cannot produce three independent states by this
+formula. If $G_0$ is not diagonal, normalization already mixes the
+original seed slots. Thus even a successful construction does not
+identify each initial slot separately as a physical mass eigenstate.
+
+Suppose also that $[P_c,J]=0$ and $JT_0=-T_0$. The same calculation
+gives $JS=-S$. This realizes three closed odd inputs. A nonzero
+operator restricted to this odd space preserves oddness and commutes
+with the restricted $J=-I$. It cannot also anticommute with $J$.
+An HC-odd coupling must connect opposite parity sectors; an operator
+that merely has odd outputs is a different object.
+
+The distinction supplies a useful diagnostic before computing any
+spectrum. A proposed Dirac or mass coupling should specify whether
+it acts within a sector, changes HC grading, changes closure sector,
+or combines these operations. Its matrix blocks and domains determine
+the answer. Calling the operator ``odd'' or giving it a familiar
+letter does not determine which of these statements is intended.
+
+\subsection{A represented transition and the choice of mass basis}
+Take a bounded dimensionless comparison pacer $\widetilde R$ on the
+same carrier and define
+\begin{equation}
+ D=(I-P_c)\widetilde R P_c,\qquad B=DS,\qquad Q=B^*B.
+\end{equation}
+Then $Q\geq0$. If a mass law $M_{\rm mass}=\kappa Q$ is independently
+adopted, its candidate eigenmasses are $\kappa q_i$, where $q_i$
+are the eigenvalues of $Q$. A fixed-slot readout instead uses
+$\kappa Q_{ii}=\kappa\|B\varepsilon_i\|^2$. These prescriptions
+need not coincide.
+
+For example, with $\boldsymbol1=(1,1,1)^{\mathsf T}$, let
+\begin{equation}
+ Q=\tfrac13\boldsymbol1\boldsymbol1^*.
+\end{equation}
+Its three diagonal entries equal $1/3$, but its spectrum is $(1,0,0)$.
+The fixed-slot mass-root ratio would be $1/3$, whereas the spectral
+ratio would be $1$. These are different observables of one positive
+matrix. The example excludes the inference from equal diagonal
+couplings to degenerate physical eigenmasses.
+
+There is also a rank requirement. Since
+$\langle v,Qv\rangle=\|Bv\|^2$, the kernels of $Q$ and $B$
+coincide, and
+\begin{equation}
+ \operatorname{rank}Q=\operatorname{rank}B.
+\end{equation}
+Three strictly positive candidate masses require three independent
+transition outputs. A single scalar output channel has rank at most
+one, regardless of how many input labels it is given. An operator-valued
+channel may have higher dimension, but that dimension must be represented
+rather than inferred from the name of a probe channel.
+
+\subsection{What mixing angles would require}
+Mixing is a relative-basis observable. To make the requirement explicit,
+consider two Hermitian generation comparisons $Q_1,Q_2$ with specified
+physical meanings. Let $V_1,V_2$ diagonalize them in the same generation
+space. Their relative unitary matrix is
+\begin{equation}
+ U_{12}=V_1^*V_2.
+\end{equation}
+Changing the common generation coordinates by $F$ replaces the two
+diagonalizers by $FV_1,FV_2$ and leaves $U_{12}$ unchanged. Rephasing,
+ordering and eigenvalue degeneracies require their usual separate
+conventions before individual parameters can be interpreted.
+
+This construction identifies the data a mixing prediction would need:
+two independently represented operators, their common kinetic metric,
+their assignment to physical species, and a rule fixing their relative
+eigenspaces. A common cyclic action or the dimension three does not
+provide those data. In a degenerate eigenspace the basis is free, so
+apparent mixing angles obtained from an arbitrary diagonalizer are
+not predictions. The mass-readout analysis below therefore treats
+the spectrum, its physical scale and its generation basis as distinct
+questions, rather than allowing one successful matrix pattern to
+stand in for all three.

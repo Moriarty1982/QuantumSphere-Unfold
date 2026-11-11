@@ -28,7 +28,20 @@ Einleitung, wissenschaftlichem Haupttext, Literatur und Beweisanhang ausgegeben.
 `presentation.style=physics-paper` und die registrierte Abstractversion sind
 Teil der unveränderlichen Editionsrevision (Format v2, Schema bleibt v6).
 Die Textblöcke stammen aus `qam/editions/v5_physics_article.tex`, die Literatur
-aus `v5_physics_references.tex`. Die früheren Audit-Ausgaben bleiben abrufbar.
+aus `v5_physics_references.tex`. Sieben zusätzliche registrierte Blöcke
+`v5_expanded_<Abschnitt>.tex` entwickeln die Argumente; jeder Abschnitt
+enthält die Einführung und genau diesen Ausbau. Fehlende Ausbauquellen
+brechen die Zusammenstellung ab. Die früheren Audit-Ausgaben bleiben abrufbar.
+
+Der erweiterte Entwurf vom 11.11.2026 umfasst 27 Seiten: 24 Seiten
+Argumentation, eine Seite Literatur und zwei Seiten Beweisanhang. Er enthält
+das vollständig hergeleitete elektromagnetische Intervallbeispiel, bedingte
+Teilchen-/Generationen-Konstruktionen, Gram-/Schur-Massenauslesung,
+Positivitätsgrenzen, projizierte Dynamik, geometrische Kompatibilität und
+den Zeta-/Unschärfevergleich. Der gespeicherte MMA-Intervallbeleg liegt in
+`qam/editions/evidence/gram_interval_receipt.json`; seine bedingten Prämissen
+bleiben offen. Die sieben Ausbauten sind redaktionelle Erklärungsobjekte,
+keine automatisch als bewiesen registrierten neuen Aussagen.
 
 Der Export erzeugt `paper.tex`, `assembly.json` und `audit.md`. Einzelne
 Versionskennungen, noch ungeprüfte Kandidaten und Prüfstatus stehen im

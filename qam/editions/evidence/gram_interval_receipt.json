@@ -1,0 +1,101 @@
+{
+  "returncode": 0,
+  "data": {
+    "request": {
+      "id": "gram_boost_interval",
+      "instruction": "READOUT",
+      "guards": [],
+      "arguments": {
+        "recipe": "em.gram-boost-range",
+        "preparation": "E2x-B-unit-yz",
+        "frame": "Lab",
+        "target_frame": "Boosted",
+        "boost": "z:1/4",
+        "a": "-1/4",
+        "b": "1/4"
+      }
+    },
+    "receipt": {
+      "schema": "qsc-framework-interface/2",
+      "hash_algorithm": "sha512",
+      "scope": {
+        "description": "Conceptual QAM/MML/MMA interface; declared assumptions only.",
+        "regime": "local"
+      },
+      "context_hash": "8609480c4001676ed60f5669f85b921d097a38505b482453be43a2dfef58768bd968e749a464a723dea2d81443400f14162c52a708d283d619907f3b9f2d7c00",
+      "request_hash": "a5f67d039ca0ecce8d276828ea48f6104678bf61cebe25b7cdccf874e52348892eb169401b3cce6020c690e1b091dc002326a2cafb118a26009cf4f21c7d3b87",
+      "mma_status": "continue",
+      "errors": [],
+      "obligations": [],
+      "declared_guards": {},
+      "result": {
+        "rule_hash": "7C36EDC97D94E61FF80542EC521D2BC9",
+        "target_frame": "Boosted",
+        "target": "first diagonal entry of diag(p,1-p)",
+        "input_interval": [
+          "-1/4",
+          "1/4"
+        ],
+        "target_interval": [
+          "121/162",
+          "961/1202"
+        ]
+      },
+      "state_changed": false,
+      "closure_proved": false,
+      "mathematical_relations_proved": false,
+      "implementation_hash": "192819e21a1c17288c2ed13e371843069e2531450e683b48d43db8b7d72380a6d3186adc12e5459d32bb316bbb9cf265c11cf6abd0d208655550a1bb4283230b",
+      "tensor_adapter_hash": "a2db72c9bc8aa314ceaeb4de4e8f1f70ccb465bc0990f710d0848a4155e2e89caf21335ff4ba25d008f47622a4c6788dc2f8d2b63187d3ac2f0f358a537a1b89",
+      "source_hashes": {
+        "sources/parts/01_qam_mml_mma_pre_v4_infrastructure/02_store_array_and_pre_v4_readouts.tex": "4d3d8e4b1dba828fb425ef92979f4e4441fcd567cf4822846173d1eb253c0c216e3f632399b77a6051006668a4bed841d480e08d18574c286e397d792a755bbe",
+        "sources/parts/01_qam_mml_mma_pre_v4_infrastructure/03_two_sided_tensor_masks_and_freeze.tex": "db6ca300d474bb66ffbff8ecbd25295f39b6a3989cd54a693a712383a3f2165de2c96c9039d1ec3060c4ce636281982dff7072e65df31a169f3451b85d340b5d",
+        "sources/parts/01_qam_mml_mma_pre_v4_infrastructure/05_qam_tensor_admissibility_translation.tex": "c11a2dd5cc946e9aea382ea45e1228a87dae6d4f93dfd5f353d6fff694d9f0d0f07a27b5e355d294aa6c6735efd3cf6b5519786a6402f4243449946db0a04606",
+        "sources/parts/01_qam_mml_mma_pre_v4_infrastructure/04_qam_predicates_transport_shell.tex": "50833bde89455da328c78ded67679f5146156fe0a154f7a5a8eb0fa5a7e91f8e45e66c5745eebeef455bf5441127ae3654d50410ce25fa2202995a253c7a867a"
+      },
+      "source_binding": {
+        "mode": "repository_source_files",
+        "source_text_available": true
+      },
+      "premise_trace": {
+        "roots": [
+          "7C36EDC97D94E61FF80542EC521D2BC9"
+        ],
+        "claims": [
+          {
+            "source": "qam/examples/gram-range-rule.qam",
+            "line": 4,
+            "key": "gram-preparation",
+            "kind": "claim",
+            "prem": [],
+            "frame": "Lab",
+            "status": "conditional",
+            "inputs": [],
+            "hash": "BE014772A536438E3767BBAE3EBC7AE5",
+            "sources": [],
+            "statement": "E=2 e_x, B=t e_y+u e_z, t^2+u^2=1, c=1, boost v=1/4 along z"
+          },
+          {
+            "source": "qam/examples/gram-range-rule.qam",
+            "line": 5,
+            "key": "gram-range-rule",
+            "kind": "convert(lorentz-z)",
+            "prem": [
+              "gram-preparation"
+            ],
+            "frame": "Boosted",
+            "status": "conditional",
+            "inputs": [],
+            "hash": "7C36EDC97D94E61FF80542EC521D2BC9",
+            "sources": [
+              "BE014772A536438E3767BBAE3EBC7AE5"
+            ],
+            "statement": "For -1<=a<=b<=1 and t in [a,b], the exact image is diag(p,1-p) with p in [p(a),p(b)], p(t)=(8-t)^2/(2(8-t)^2-45)"
+          }
+        ],
+        "missing": []
+      },
+      "adapter_hash": "96f54a204a5d738e9458d52dc8494b6fe6abc84535ed1eb7ed1cd0c6a9c4711095021cb823b64b077f6ae7ab0e974e31dfb3be4e3acb47a1ab96edf81806a206",
+      "receipt_hash": "ee5266bb67739789f1a14b3fcf732afd16184d94b9f090217d8c5003c64ebf8703ffc67262e72a6823e7e9cbdc4610006b41f29c658c6c4845a81e46d96e3722"
+    }
+  }
+}
