@@ -1,0 +1,127 @@
+\clearpage
+\appendix
+\section{Ergänzende Argumente zur Massenauslesung}
+Der Vollständigkeit halber folgen die ursprünglichen mathematischen
+Argumente zu den bedingten Massenausleseaussagen in deutscher Übersetzung.
+Ihre Voraussetzungen beziehen sich auf die im Text genannten
+Vergleichsbereiche; sie identifizieren keine native physikalische Auslesung.
+Seien @@0@@ und @@1@@. Wir schreiben
+@@2@@
+Die zyklische Permutation erhält die eindimensionale symmetrische Gerade
+und ihre zweidimensionale orthogonale Ebene. Sie erhält deren Normen
+einzeln, legt aber ihr Verhältnis nicht fest.
+\begin{proposition}[Koide als Gleichnormbedingung]
+\label{v480:koide-equal-norm}
+Für diese nichtnegativen Hauptwurzeln gilt
+@@3@@
+Somit gilt @@4@@ genau dann, wenn @@5@@.
+\end{proposition}
+\begin{proof}
+Wegen @@6@@ gilt @@7@@, während @@8@@ ist. Division beweist beide Aussagen.
+\end{proof}
+\begin{proposition}[Eine hinreichende HC-artige Massenwurzelrealisierung]
+\label{v480:koide-hc-mixing}
+In einer festgelegten reellen Drei-Wurzel-Darstellung sei @@9@@,
+@@10@@ eine orthogonale Involution und @@11@@. Es sei @@12@@ von
+null verschieden und komponentenweise nichtnegativ, mit @@13@@.
+Für @@14@@ gilt @@15@@ und
+@@16@@
+Koide gilt daher genau dann, wenn @@17@@.
+\end{proposition}
+\begin{proof}
+Eine orthogonale Involution ist selbstadjungiert, also ist @@18@@ ein
+orthogonaler Projektor. Daher gelten @@19@@ und @@20@@. Division von
+@@21@@ durch diesen Nenner ergibt die Formel.
+\end{proof}
+\begin{proposition}[Radius und Phase der Drei-Wurzel-Parametrisierung]
+\label{v480:koide-radius-phase}
+Jeder nichtverschwindende nichtnegative Drei-Wurzel-Vektor besitzt
+eine Darstellung
+@@22@@
+mit @@23@@. Die Bedingung @@24@@ ist genau @@25@@; sie legt weder @@26@@
+noch @@27@@ fest.
+\end{proposition}
+\begin{proof}
+Die Vektoren @@28@@ und @@29@@ bilden eine orthogonale Basis der Ebene
+mit Komponentensumme null, jeweils mit quadrierter Norm @@30@@.
+Die Darstellung von @@31@@ in dieser Basis liefert die Koeffizienten
+@@32@@ und @@33@@. Daher gilt @@34@@, und die vorige Proposition
+liefert die Formel für @@35@@. Bei @@36@@ ist die Phase beliebig.
+\end{proof}
+\begin{proposition}[Zyklisch äquivariante lineare Abbildungen erhalten symmetrische Eingaben]
+\label{v480:koide-equivariant-obstruction}
+Sei @@37@@ die zyklische Permutation dreier reeller Koordinaten. Erfüllt
+eine lineare Abbildung @@38@@ die Beziehung @@39@@, bleibt @@40@@ auf
+der symmetrischen Geraden. Aus dieser Eingabe kann sie keine
+nichtentartete Wurzelhierarchie erzeugen.
+\end{proposition}
+\begin{proof}
+Aus @@41@@ folgt @@42@@. Der Fixraum von @@43@@ ist genau die von @@44@@
+aufgespannte Gerade.
+\end{proof}
+\begin{proposition}[Abstieg auf den Ausleseraum]
+\label{v480:hc-mass-descent}
+Seien @@45@@ ein reeller Hilbertraum, @@46@@ eine orthogonale Involution
+und @@47@@ eine beschränkte Koisometrie mit @@48@@. Ist @@49@@
+@@50@@-invariant, dann gilt
+@@51@@
+Umgekehrt verlangt jede Beziehung @@52@@ die @@54@@-Invarianz von
+@@53@@. Der abgestiegene Operator ist eindeutig, weil @@55@@ surjektiv ist.
+\end{proposition}
+\begin{proof}
+Wir setzen @@56@@, die orthogonale Projektion auf @@57@@. Da @@58@@
+selbstadjungiert ist und @@59@@ erhält, erhält es auch dessen
+orthogonales Komplement; also gilt @@60@@. Somit sind @@61@@ und
+@@62@@ erfüllt. Außerdem gilt @@63@@, weil @@64@@ den Raum @@65@@
+erhält und @@66@@ ihn annihiliert. Die Identität für @@67@@ folgt
+durch Mitteln. Umgekehrt folgt aus @@68@@ die Beziehung @@69@@.
+Die Surjektivität liefert die Eindeutigkeit.
+\end{proof}
+\begin{proposition}[Sperre für ungerade Eingaben]
+\label{v480:hc-mass-odd-obstruction}
+Gilt @@70@@, so ist @@71@@. Jede homogene lineare Wurzelauslesung
+@@72@@ ist deshalb null. Jede Auslesung @@73@@ mit @@74@@ hat auf
+diesem Eingabepfad dieselbe Sperre. Ist dagegen ein Seed unter @@75@@
+fest und gilt auf dem abgestiegenen linearen Weg @@76@@, dann ist
+@@77@@ und seine nichtverschwindende Wurzelausgabe hat @@78@@.
+\end{proposition}
+\begin{proof}
+Die erste Aussage folgt aus @@79@@. Für die zweite gilt @@80@@,
+also @@81@@; alle drei Wurzeln sind gleich.
+\end{proof}
+\begin{proposition}[Äquivarianzsperre]
+\label{v480:hc-mass-equivariant-obstruction}
+Sei @@82@@ eine Operation, die eine zulässige Zustandsmenge erhält,
+und @@83@@ die zyklische Permutation der drei Wurzelkoordinaten.
+Für jede Auslesung @@84@@ mit @@85@@ erfüllt eine Eingabe @@86@@
+die Beziehung @@87@@. Ist dies ein nichtverschwindender nichtnegativer
+Wurzelvektor, gilt @@88@@. Linearität von @@89@@ wird nicht vorausgesetzt.
+\end{proposition}
+\begin{proof}
+Äquivarianz liefert @@90@@. Die Fixvektoren des Dreierzyklus sind
+genau die konstanten Tripel.
+\end{proof}
+\begin{proposition}[Triolen-Schranke]
+\label{v480:hc-mass-triole-bound}
+Es gelte @@91@@ in einem normierten Vektorraum, wobei nicht alle
+@@92@@ sind. Unter der besonderen Identifikation @@93@@ mit gemeinsamem
+@@94@@ erfüllt das Hauptwurzelverhältnis
+@@95@@
+Insbesondere kann es nicht gleich @@96@@ sein.
+\end{proposition}
+\begin{proof}
+Wir setzen @@97@@ und @@98@@. Die Dreiecksungleichung liefert @@99@@,
+also @@100@@. Daher gilt @@101@@. Cauchy--Schwarz liefert die untere
+Schranke, und die gemeinsame Massenskala kürzt sich aus @@102@@ heraus.
+\end{proof}
+\begin{proposition}[Freiheit nachträglicher Anpassung]
+\label{v480:hc-mass-fit-freedom}
+Für jedes nichtverschwindende nichtnegative Tripel @@103@@ gibt es eine
+orthogonale Involution @@104@@ und @@105@@ mit @@106@@. Die Existenz
+eines erst nach Vorgabe der Massen gewählten HC-artigen Operators ist
+somit keine Vorhersage von Koide oder einer Hierarchie.
+\end{proposition}
+\begin{proof}
+Wir setzen @@107@@ und @@108@@. Dies ist eine orthogonale Involution.
+Wegen @@109@@ gilt @@110@@; wir wählen daher @@111@@.
+\end{proof}

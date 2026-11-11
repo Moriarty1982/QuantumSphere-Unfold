@@ -1,0 +1,315 @@
+\subsection{The formal full-state equation and its actual assumptions}
+The retained architecture organizes the probe through an ordered equation
+\begin{equation}
+ (i\Gamma^\mu D_\mu-\Omega)\Psi=0,\qquad
+ D_\mu=\partial_\mu+\mathcal B_\mu.
+\end{equation}
+Its ingredients include an internal connection, a closure projector,
+a mismatch field and proposed triadic couplings. Specifying their
+names does not determine their joint matrix elements on the generation
+states. It also does not ensure the adjoint relations needed for a
+real action or a selfadjoint time evolution.
+
+On a chosen time chart with invertible $\Gamma^0$, the equation can
+be rearranged algebraically as
+\begin{equation}
+ \partial_t\Psi=\mathcal G\Psi,
+ \quad \mathcal G=-\mathcal B_0-(\Gamma^0)^{-1}
+ \sum_{a=1}^3\Gamma^a(\partial_a+\mathcal B_a)
+              -i(\Gamma^0)^{-1}\Omega.
+\end{equation}
+This expression retains the order of noncommuting factors. Turning it
+into an evolution problem requires a domain, boundary or initial data,
+regularity and an appropriate adjoint. In a finite modal comparison
+these questions reduce to represented matrices; in a field theory they
+cannot be removed by matrix notation.
+
+The extraction condition given above tests an additional issue even
+when a full evolution is already supplied. The reduced variables must
+retain sufficient information to determine their own derivative.
+The kernel of the extraction is the exact place where this condition
+can fail. This is the dynamical counterpart of the electromagnetic
+example, in which a Gram register omitted the orientation needed for
+the transformed readout.
+
+\subsection{A hidden-lift counterexample with equal normalization}
+The dependence on discarded variables is not only a possibility for
+large nonlinear systems. Consider a two-component complex amplitude
+$f=x+ir$ evolving by $\dot f=-i\sigma_x f$, with $x,r$ real.
+Then
+\begin{equation}
+ \dot x=\sigma_xr,\qquad\dot r=-\sigma_xx.
+\end{equation}
+Extract only $r$. Fix $0<b<1$ and compare the initial states
+\begin{equation}
+ r=(b,0)^{\mathsf T},\qquad
+ x_\pm=(\pm\sqrt{1-b^2},0)^{\mathsf T}.
+\end{equation}
+Both full states have unit norm and the same extracted vector. Their
+extracted derivatives are
+\begin{equation}
+ \dot r_\pm=(0,\mp\sqrt{1-b^2})^{\mathsf T}.
+\end{equation}
+The polar angle of $r$ therefore has opposite initial angular
+velocities in the two cases. Equal extracted data and equal full
+norm have not defined an autonomous angular law. This example is an
+ordinary finite Hermitian evolution; it does not rely on an unstable
+Hamiltonian or a noisy numerical reduction.
+
+The linear criterion pinpoints the failure. If $T$ extracts $r$,
+then $TG$ does not vanish on $\ker T$, because the discarded real
+part drives $\dot r$. Adding a time-dependent extraction introduces
+$\dot T$ rather than eliminating that condition. A moving frame may
+be physically appropriate, but its derivative must be part of the
+calculation.
+
+\subsection{Exact elimination retains memory and initial-state data}
+For a constant Hermitian modal Hamiltonian write
+$H=S+iB$, where $S$ is real symmetric and $B$ real skew-symmetric.
+The real equations are
+\begin{equation}
+ \dot x=Bx+Sr,\qquad\dot r=Br-Sx.
+\end{equation}
+Solving the first equation and substituting into the second gives
+\begin{equation}
+ \dot r(t)=Br(t)-Se^{Bt}x(0)
+       -\int_0^tSe^{B(t-s)}Sr(s)\,ds.
+\end{equation}
+This is an exact reduced equation. It contains the discarded initial
+state and a history kernel. Dropping either term defines a different
+model unless an approximation and its range of validity are supplied.
+In particular, a local damping coefficient cannot be inferred merely
+from the fact that a component was projected out.
+
+The same lesson applies to positive-root phase chambers. A projected
+real or odd mode can remain on a kinematically selected slice while
+its phase exits a positive-root chamber. A phase minimum of an energy
+restricted to that slice is not enough to establish stability against
+the omitted amplitude and complex-phase directions. The full action
+and the resulting projected equation must determine which variations
+are physically admitted.
+
+\subsection{An action reduction that keeps the canonical partners}
+A controlled finite alternative illustrates how additional inertia
+can be derived without postulating a viscous law. Let
+\begin{equation}
+ L=\frac i2(f^*\dot f-\dot f^*f)-\mathcal E(f),\qquad
+ e=(\cos(\theta/2),\sin(\theta/2))^{\mathsf T},
+\end{equation}
+and write
+\begin{equation}
+ f=(a+ib)e+cNe,\quad
+ N=\begin{pmatrix}0&-1\\1&0\end{pmatrix},\quad b>0.
+\end{equation}
+The kinetic term is
+$b\dot a-a\dot b-bc\dot\theta$. Removing $a$ and $c$ before
+variation would remove the canonical partners of amplitude and
+phase. Instead set $q=(b,\theta)$, $h=(a,c)$ and
+$D_b=\operatorname{diag}(2,b)$. Up to a total derivative,
+\begin{equation}
+ L=-h^{\mathsf T}D_b\dot q-
+       V(q)-j(q)^{\mathsf T}h-\tfrac12h^{\mathsf T}W(q)h.
+\end{equation}
+For positive definite $W$, the algebraic equation for $h$ is
+\begin{equation}
+ h=-W^{-1}(D_b\dot q+j),
+\end{equation}
+and completing the square gives
+\begin{equation}
+ L_{\rm eff}=\tfrac12(D_b\dot q+j)^{\mathsf T}
+                    W^{-1}(D_b\dot q+j)-V.
+\end{equation}
+The induced kinetic metric is $D_bW^{-1}D_b$ and can depend on
+the retained coordinates. Its derivatives belong in the equations
+of motion. The hypotheses $W>0$ and $b>0$ are genuine conditions
+for this regular reduction.
+
+For the comparison $H=mI+\omega\sigma_y$, with $m>|\omega|$,
+the result is
+\begin{equation}
+ L_{\rm eff}=\dot b^2/m+
+       b^2(\dot\theta-2\omega)^2/(4m)-mb^2.
+\end{equation}
+The angular inertia is $b^2/(2m)$. Its equation
+$\ddot\theta=-2(\dot b/b)(\dot\theta-2\omega)$ describes
+reversible exchange with the amplitude. Contraction changes the sign
+of the term resembling damping. This is why it cannot be interpreted
+as positive viscosity without a separately represented dissipative
+mechanism. These are modal comparison coordinates, not yet a native
+fluid or a physical microscopic clock.
+
+\subsection{Reality of the action and the meaning of a positive mismatch}
+Consider ordinary Hermitian internal fields $A_\mu,H_c$, a fixed real
+covector $n_\mu$, and
+\begin{equation}
+ \mathcal B_\mu=iA_\mu+\kappa H_cn_\mu.
+\end{equation}
+For constant $n$, write
+\begin{align}
+ D_\mu^AH_c&=\partial_\mu H_c+i[A_\mu,H_c],\\
+ F^A_{\mu\nu}&=\partial_\mu A_\nu-\partial_\nu A_\mu
+                                      +i[A_\mu,A_\nu],\\
+ X_{\mu\nu}&=n_\nu D_\mu^AH_c-n_\mu D_\nu^AH_c.
+\end{align}
+The connection curvature is $F=iF^A+\kappa X$. Its literal quadratic
+trace action and an adjoint-paired trace action differ:
+\begin{align}
+ \operatorname{Re}\left[-\tfrac14\operatorname{Tr}(FF)\right]
+ &=\tfrac14\operatorname{Tr}(F^AF^A)
+          -\tfrac{\kappa^2}{4}\operatorname{Tr}(XX),\\
+ -\tfrac14\operatorname{Tr}(F^*F)
+ &=-\tfrac14\operatorname{Tr}(F^AF^A)
+          -\tfrac{\kappa^2}{4}\operatorname{Tr}(XX).
+\end{align}
+Spacetime indices are contracted in the declared real Lorentz metric.
+The traced cross commutator in the second expression vanishes.
+These formulas compare different actions, not two notations for the
+same variational problem. The choice must be made consistently with
+the probe law and its conserved currents.
+
+Even positivity of $H_c$ supplies no general damping theorem. In
+the constant-internal, flat-background comparison $H_c=hT_0$, with
+$T_0$ Hermitian and $c_T=\operatorname{Tr}T_0^2>0$, the null
+curvature term has the form
+\begin{equation}
+ L_{\rm HC}=\frac{\kappa^2c_T}{2}(n\cdot\partial h)^2,
+ \qquad n^2=0.
+\end{equation}
+Its principal tensor is proportional to $n^\mu n^\nu$ and has
+rank one for nonzero null $n$. A positive coefficient in one time
+slice is not a four-dimensional Lorentzian wave operator. A physical
+propagation or viscosity claim needs the rest of the represented
+field system.
+
+\subsection{Induced coframes and a direct same-frame obstruction}
+Under a fixed Hermitian spin/internal factorization, let
+$j^a=\Psi^*K^a\Psi$ and
+$v_H^a=\Psi^*K^aH_c\Psi$. The proposed real coframe can then
+have the identity
+\begin{equation}
+ E^a{}_{\mu}=\tfrac12\partial_\mu j^a+\kappa v_H^a n_\mu.
+\end{equation}
+If $H_c=0$ and $E$ has rank four, the functions $Y^a=j^a/2$
+are local coordinates, and $g=\eta_{ab}dY^a dY^b$ is flat.
+The inverse function theorem, rather than a curvature calculation,
+establishes this restricted result. A variable adjoint, a geometric
+spin connection or a different readout can change the hypotheses.
+
+For the nonzero rank-one update $E=E_0+\kappa v n^{\mathsf T}$,
+put $d=1+\kappa n^{\mathsf T}E_0^{-1}v$ and assume $d\ne0$.
+The determinant lemma and inverse update give
+\begin{equation}
+ \det E=(\det E_0)d,\qquad
+ n^{\mathsf T}g^{-1}n=
+       \frac{n^{\mathsf T}g_0^{-1}n}{d^2},
+ \quad g=E^{\mathsf T}\eta E.
+\end{equation}
+Thus a null covector remains null in this nonsingular update. This
+is a geometric compatibility statement. A full solution must also
+satisfy the probe, connection, closure and source equations.
+
+There is a stronger consistency test if exactly the same probe,
+adjoint and derivative are used both to reconstruct $E$ and to
+define the coordinate gamma matrices in the ordered equation. Assume
+\begin{equation}
+ E^a{}_{\mu}=s_0\operatorname{Re}(\overline\Psi\Gamma^aD_\mu\Psi),
+ \quad \Gamma^\mu=(E^{-1})^\mu{}_a\Gamma^a,\quad s_0\ne0,
+\end{equation}
+with real invertible $E$. Contraction of inverse and coframe yields
+\begin{equation}
+ 4=s_0\operatorname{Re}(\overline\Psi\Gamma^\mu D_\mu\Psi).
+\end{equation}
+For $R_\Psi=(i\Gamma^\mu D_\mu-\Omega)\Psi$ and
+$w=\overline\Psi\Omega\Psi$, it follows that
+\begin{equation}
+ \operatorname{Im}(\overline\Psi R_\Psi)=4/s_0-\operatorname{Im}w.
+\end{equation}
+If $w$ is real, the same-frame full-rank reconstruction cannot be
+on shell. Reality of $w$ follows, for example, when the mass-like
+operator has the required Hermiticity relative to the chosen probe
+adjoint. This excludes a particular additional identification; the
+Companion has not derived that identification as a native law. It
+is not a universal inconsistency theorem for every geometric branch.
+
+\subsection{Finite compatibility versus a field solution}
+At a prepared finite jet, normal derivative equations can be written
+as a linear system $Nx=r$ after lower data have been fixed. Let
+$L_N$ have orthonormal columns spanning $\ker N^{\mathsf T}$.
+Then the exact compatibility condition is
+\begin{equation}
+ L_N^{\mathsf T}r=0.
+\end{equation}
+For compatible $r$, the general solution is
+$x=N^+r+k$, $k\in\ker N$. If a kernel decomposition is supplied,
+its coordinates parametrize the remaining normal freedom. For
+incompatible $r$, the least-squares value $N^+r$ leaves residual
+$-L_NL_N^{\mathsf T}r$ and is not a field solution.
+
+The distinction already appears in
+$N=\begin{pmatrix}1&0\\0&1\\0&0\end{pmatrix}$, a three-by-two
+matrix with first two rows the identity. A target $(a,b,c)$ is
+compatible only when $c=0$, although a least-squares solver returns
+$(a,b)$ for every $c$. A small normal residual or a solver success
+flag cannot replace the explicit compatibility equation.
+
+The source problem is more informative when higher coordinates split
+into adjustable normal variables $w$ and prescribed tangential data $d$:
+\begin{equation}
+ h_0+Bq+A_fw+A_dd=0.
+\end{equation}
+Let $L_f$ span the left kernel of $A_f$ and define
+\begin{equation}
+ J_s=L_f^{\mathsf T}B,\qquad
+ b_s(d)=-L_f^{\mathsf T}(h_0+A_dd).
+\end{equation}
+Eliminating $w$ leaves $J_sq=b_s(d)$. If $J_s$ has full column
+rank, the source is unique for compatible data:
+\begin{equation}
+ (I-J_sJ_s^+)b_s(d)=0,\qquad q(d)=J_s^+b_s(d).
+\end{equation}
+The remaining higher lift is
+$w=-A_f^+(h_0+A_dd+Bq)+k$, $k\in\ker A_f$.
+This is a conditional finite source law. Changing which tangential
+coordinates are prescribed changes the left-kernel test and can
+remove a source constraint previously found by freezing all higher
+variables. The derivative mask is therefore part of the mathematical
+statement, not a numerical implementation detail.
+
+\subsection{Constraint propagation requires open-set hypotheses}
+The declared Cartan comparison uses an invertible real coframe, an
+independent Lorentz connection, probe fields and multipliers enforcing
+a constitutive coframe relation. Under compatible elimination of the
+connection, coordinate and local Lorentz variations give residual
+identities. Their source-free specialization requires both the
+constitutive residual and the full probe residual to vanish on an
+open region. A finite jet satisfying their point values does not
+establish those hypotheses.
+
+When the hypotheses do hold, and the spatially projected
+trace-reversed coframe evolution equations are imposed, the
+gravitational residual admits a symmetric hyperbolic subsidiary
+system. With lapse $N_l>0$, shift $\beta$, spatial metric $h$ and
+spatial covector $\xi$, its principal symbol can be written
+\begin{equation}
+ A(\xi)=-(\beta\cdot\xi)I_4+
+ N_l\begin{pmatrix}0&(h^{-1}\xi)^{\mathsf T}\\
+                         \xi&0_{3\times3}\end{pmatrix}.
+\end{equation}
+The positive matrix $W=\operatorname{diag}(1,h^{-1})$ symmetrizes
+the symbol. Retaining the required lower-order terms and excluding
+incoming constraint flux gives an energy estimate
+\begin{equation}
+ \mathcal E_g'(t)\leq C(t)\mathcal E_g(t).
+\end{equation}
+Zero initial constraints then remain zero under the stated regularity
+conditions. This conditional propagation result does not propagate
+the separate constitutive and probe equations from their initial
+values. Those field equations are inputs to the subsidiary argument.
+
+The geometric branch therefore has several distinct stages: an
+algebraically meaningful coframe, a finite compatible derivative
+system, a local field solution, and propagation of its constraints.
+The programme has concrete tests for these stages, but a result at
+one stage cannot be silently used as a result at the next. The same
+discipline that separates positive mass readout from a physical mass
+mechanism is needed when a finite source law is proposed as gravity.

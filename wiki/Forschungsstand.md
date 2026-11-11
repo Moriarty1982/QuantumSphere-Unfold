@@ -677,3 +677,96 @@ Ort/Impuls oder einer hergeleiteten hbar-Skala identifiziert.
 > Anmerkung für LLMs und Quellenprüfung:
 > `notes/research/zeta_positive_spectral_packet_2026_11_11.md` enthält
 > die analytischen Norm-, Domänen- und Erwartungswertprüfungen.
+
+### Veröffentlichungsvorbereitung 5.0: zwei Fassungen (11.11.2026)
+
+Geplant sind eine vollständige Langfassung und ein eigenständig lesbares
+Physikpaper aus demselben Quellstand. Die Physikfassung benötigt eine
+redaktionell festgelegte Argumentationslinie und eine Einführung in die
+tatsächlich verwendete QAM/MML/MMA-Schreibweise, einschließlich eines
+vollständigen Beispiels und der Grenzen von Rechenbelegen.
+Die Themenauswahl wird mit dem Autor noch besprochen; eine Beschränkung
+auf Koide/HC ist nicht beschlossen. Der gemeinsame Zwei-PDF-Build ist
+noch zu implementieren. Beide PDFs können als Dateien desselben Zenodo-
+Eintrags eine gemeinsame neue Versions-DOI erhalten. Es wurde keine neue
+DOI reserviert und keine Veröffentlichung vorgenommen.
+
+> Anmerkung für LLMs und Quellenprüfung:
+> `notes/research/v5_0_0_dual_document_plan.md` beschreibt den offenen
+> Umfang und den geplanten Buildvertrag, keine fertig erzeugte Physikfassung.
+
+Als noch nicht beschlossener Themenvorschlag soll die Physikfassung den Weg
+vom gemeinsamen graduierten Träger über HC und die QAM/MML/MMA-Methode zu
+Teilchen-/Generationenstruktur, Massenauslesung und ausgewählten Dynamik-/
+Geometrie-Schnittstellen erklären. Historische Herleitungen und alternative
+Modellrouten bleiben ausführlich in der Langfassung. Die genaue Aussagenwahl
+und ihre fachliche Prüfung stehen vor einem verbindlichen Exportprofil aus.
+
+### Zwei Zusammenstellungen in der Datenbank eingerichtet (11.11.2026)
+
+Auf Autorenauftrag sind Lang- und Physikfassung jetzt als versionierte
+Editionen mit geordneten Abschnitten und exakten Aussageversionen gespeichert.
+Die Physikfassung hat sieben Abschnitte: Leitfrage, Träger/HC, QAM/MML/MMA,
+Teilchen/Generationen, Massen, Dynamik/Geometrie und Grenzen. Einführungstexte
+und ein vollständiges Projektor-/Matrix-Prüfbeispiel sind registriert.
+Die Koide-/HC-Beweise werden mit ihren offenen nativen Guards übernommen.
+Fünf weitere Aussagen bleiben als benannte Prüfkandidaten sichtbar.
+
+Die Langfassung ordnet 2468 Aussagen in 61 Quellstationen und erhält beim
+Export zusätzlich den vollständigen festgehaltenen LaTeX-Quellbaum. Die
+Physikfassung wird bereits aus der Datenbank als LaTeX-Entwurf erzeugt.
+Wiederholte Erzeugung ändert unveränderte Editionen nicht; Quellenänderungen
+werden vor dem Export erkannt. Dies ist kein vollständig geprüfter
+Argumentationsbaum und keine neue Publikations- oder Beweisfreigabe.
+
+> Anmerkung für LLMs und Quellenprüfung: Schema v6 und
+> `python -m qam.tools.configure_v5_editions --out build/v5-editions-new`.
+> Der gemeinsame Zwei-PDF-Releasejob ist von den Ausgabeprofilen zu unterscheiden.
+
+Die erste Physikausgabe war noch ein technischer Auszug. Auf Autorenkritik
+wurde daraus eine lesbare wissenschaftliche Fassung mit Abstract, Einleitung,
+Modell, Ergebnissen, Diskussion und Literatur erarbeitet. Die
+erste Lesefassung hatte fünf Seiten Haupttext und zwei Seiten Originalbeweise im Anhang.
+Versionskennungen, einzelne Prüfstatus und Rohimport-Kandidaten bleiben im
+separaten Auditbericht erhalten. Die entsprechenden physikalischen
+Voraussetzungen und Grenzen werden im Haupttext erklärt; der Darstellungswechsel
+ändert weder den Beweisstatus noch offene Guards.
+
+Der anschließende inhaltliche Ausbau umfasst 27 Seiten: 24 Seiten
+Argumentation, eine Literaturseite und zwei Seiten Beweisanhang. Die
+Physikfassung entwickelt nun die konkreten Schnittstellen: ein
+elektromagnetisches Lorentz-/Gram-Beispiel mit exakter Intervallauslesung,
+die bedingte Ladungszählung und unabhängige Generationenseeds, Übergangsnorm
+und gapped Schur-Auslesung, zyklische Wurzeln und Positivität, Gedächtnis
+bei Projektion, kanonische Wirkungsreduktion sowie Koordinaten-, Quell- und
+Fortpflanzungsbedingungen der geometrischen Vergleiche. Ein eigener
+Zeta-/Unschärfeabschnitt zeigt die Eigenzustandssperre und ein reguläres
+balanciertes Spektralpaket bei sigma > 1. Native Präparation, Massenskala,
+Generationenauslesung und regionale Feldexistenz bleiben offene Aufgaben.
+
+Sieben zusätzliche Textmodule sind als versionierte Erklärungen in der
+Datenbankausgabe enthalten. Ein gespeicherter MMA-Beleg für das
+elektromagnetische Intervall wurde per Hash abgerufen und geprüft; die
+Prämissen bleiben bedingt, Closure und allgemeine mathematische Beziehungen
+werden vom Beleg nicht als bewiesen zertifiziert. Der Ausbau ist keine
+neue Messung, vollständige Begutachtung oder OP-Schließung.
+
+Für den Autor liegt außerdem eine vollständige deutsche Lesefassung vor,
+einschließlich des Beweisanhangs. Sie übersetzt die Argumentation und die
+offenen Voraussetzungen; Formeln, Zahlen und Gleichungsnummern bleiben
+erhalten. Eine Prüfung bindet die Übersetzung an die englische Vorlage
+und gleicht sämtliche mathematischen Fragmente ab. Das ist eine
+persönliche Leseübersetzung und noch kein zusätzliches Sprachprofil in
+der Editionsdatenbank oder eine eigene Veröffentlichung. Die englische
+Physikedition bleibt die zugrunde liegende registrierte Ausgabe.
+
+Der gemeinsame Entwurfsbuild erzeugt jetzt Langfassung und englisches
+Physikpaper aus einem gemeinsamen eingefrorenen Quellenbestand. Seine
+Prüfung verlangt beide PDFs und konsistente Quellen, Verweise und Labels.
+Er bewahrt die Datenbank, den vollständigen Langquellbaum, Auswahl- und
+Prüfmanifeste sowie Compilerprotokolle gemeinsam auf. Fehlgeschlagene
+Teilbauten können keinen vollständigen Buildstatus erhalten. Die erste
+Ausführung hat noch 58 Satzüberläufe im Langtext ergeben; im Physikpaper
+gab es keine. Fachliche Schlussprüfung und redaktionelle Freigabe bleiben
+offen. Der Ablauf ist kein Veröffentlichungsautomat: Eine Freigabe zur
+Publikation wird nicht daraus abgeleitet, und Zenodo wird nicht angesprochen.

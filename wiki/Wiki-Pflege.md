@@ -1,5 +1,20 @@
 # Wiki-Pflege
 
+**11.11.2026, gemeinsamer Dokumentbau:** Forschungsstand um den gemeinsamen
+Entwurfsbuild für Langfassung und Physikpaper ergänzt. Quellen-/Verweisprüfung,
+gemeinsame Nachweise, Fehlerstatus und 58 verbleibende Satzüberläufe im
+Langtext benannt. Keine Publikationsfreigabe oder Zenodo-Aktion.
+
+**11.11.2026, deutsche Lesefassung:** Forschungsstand um die vollständige
+persönliche Übersetzung mit unveränderten Formeln und erhaltenen offenen
+Voraussetzungen ergänzt. Quellenbindung an die englische Physikedition;
+keine neue Datenbank-Sprachausgabe oder Publikation.
+
+**11.11.2026, erweiterte Physikfassung:** Forschungsstand um den Ausbau auf
+27 Seiten, die konkreten Herleitungen und die weiterhin offenen nativen
+Pflichten ergänzt. Sieben registrierte Textmodule und ein per Hash geprüfter
+bedingter MMA-Intervallbeleg; kein neuer Beweisstatus oder Release.
+
 Das Wiki erschließt Quellen und Forschungsergebnisse. Neue mathematische Behauptungen benötigen ihre Begründung in den Projektquellen; eine Wiki-Formulierung allein ändert keinen Beweisstatus.
 
 ## Aktualisierung
@@ -44,6 +59,14 @@ Quelle der Seiten ist der Ordner [`wiki/`](https://github.com/Moriarty1982/Quant
 Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte Hintergrundpflege ist durch diese Erstbefüllung nicht eingerichtet.
 
 ## Änderungsnachweis
+
+- 11.11.2026: Forschungsstand – Physikfassung vom technischen Auszug zum wissenschaftlichen Haupttext mit Abstract, Literatur und Beweisanhang überarbeitet; Detailprovenienz im separaten Auditbericht erhalten.
+
+- 11.11.2026: Forschungsstand – beide Datenbankeditionen, sieben Physikabschnitte, vollständigen Langquellbaum und sichtbar offene Kandidaten dokumentiert; keine Releasefreigabe.
+
+- 11.11.2026: Forschungsstand – unbestätigten Themenvorschlag der Physikfassung entlang Träger, Methode, Teilchen, Massen und Geometrie eingeordnet; kein fertiges Ausgabeprofil.
+
+- 11.11.2026: Forschungsstand – Plan für Langfassung und eigenständiges Physikpaper mit notwendiger QAM/MML/MMA-Einführung sowie gemeinsamer Zenodo-Ablage festgehalten; Scope und Zwei-PDF-Build offen.
 
 - 11.11.2026: Forschungsstand – positive Spektralauswahl von Massenpositivität getrennt; explizites reguläres Zeta-Paket mit HC-Balance und endlichen Parameter-/Fourier-Streuungen dokumentiert.
 

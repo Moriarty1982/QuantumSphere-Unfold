@@ -1,0 +1,40 @@
+name: QSC v5 paired document draft
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'sources/research/**'
+      - 'qam/**'
+      - 'notes/research/**'
+      - '.github/workflows/qsc-v5-dual-documents.yml'
+
+permissions:
+  contents: read
+  packages: read
+
+jobs:
+  paired-documents:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/moriarty1982/quantumsphere-unfold/qsc-latex:latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install isolated Python environment support
+        run: apt-get update && apt-get install -y --no-install-recommends python3-venv
+      - name: Install document-store dependencies
+        run: |
+          python3 -m venv /tmp/qsc-documents-env
+          /tmp/qsc-documents-env/bin/python -m pip install -r qam/store/requirements.txt
+      - name: Build both draft documents and shared provenance
+        run: /tmp/qsc-documents-env/bin/python -m qam.tools.build_v5_documents --out build/v5-paired-documents
+      - name: Preserve PDFs, sources, evidence and failure diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qsc-v5-paired-documents-${{ github.run_number }}
+          path: build/v5-paired-documents
+          if-no-files-found: error
+          retention-days: 30

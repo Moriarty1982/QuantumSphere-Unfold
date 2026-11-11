@@ -1,5 +1,86 @@
 # QAM store – erster Aufbauschritt
 
+## Gemeinsamer Bau beider Dokumente
+
+`python -m qam.tools.build_v5_documents --out build/v5-paired-new` erzeugt
+beide englischen Entwürfe gemeinsam in einem neuen Ordner. Der Ablauf legt
+einen eigenen Aussagenbestand an, friert beide Editionen ein, prüft ihre
+gemeinsamen Quellhashes und setzt beide Dokumente mit pdflatex ohne
+Shell-Escape. Bis zu sechs Durchläufe warten auf stabile Hilfsdateien.
+
+Das Paket enthält beide benannten PDFs, den exportierten Langquellbaum,
+die Aussagen-Datenbank, beide Zusammenstellungsmanifeste, Auditdaten,
+Compilerprotokolle, die verwendeten Erzeugungsskripte und `SHA256SUMS.txt`.
+`build-manifest.json` meldet `build_complete` nur, wenn beide PDFs vorhanden
+sind und Quellen-/Verweisprüfungen bestehen. Auch ein gescheiterter Lauf
+schreibt ein ausdrücklich fehlgeschlagenes Manifest. Offene wissenschaftliche
+Reviews und Guards bleiben erhalten; `publication_ready` bleibt immer false.
+Satzüberläufe werden gezählt und verlangen redaktionelle Prüfung.
+
+Der erste erfolgreiche gemeinsame Lauf lieferte 1397 Seiten Langfassung
+und 27 Seiten Physikpaper; 58 Satzüberläufe im Langtext, keine im Physikpaper.
+Keine offenen Verweise, doppelten Labels oder verbleibenden Rerun-Meldungen.
+Das ist keine fachliche oder vollständige visuelle Freigabe der Langfassung.
+Workflow: `.github/workflows/qsc-v5-dual-documents.yml`, manuell oder nach
+passenden Änderungen auf main. Er archiviert auch Fehlerdiagnosen und
+reserviert weder eine DOI noch lädt er etwas auf Zenodo hoch.
+
+## Zwei Dokumentzusammenstellungen (Schema v6)
+
+`python -m qam.tools.configure_v5_editions --out build/v5-editions-new`
+legt die vollständige und die Physikfassung reproduzierbar an. Der Zielordner
+muss neu sein; die Datenbank bleibt standardmäßig `build/qam.sqlite3`.
+Ein erneuter Lauf mit unveränderten Eingaben behält dieselben Editionshashes.
+Geänderte Inhalte erzeugen eine neue Revision mit geprüftem Vorgänger.
+
+`qstore_editions`, `qstore_edition_sections` und `qstore_edition_members`
+speichern Version, Abschnittsfolge und genaue Aussagezuordnung. Die Daten
+sind unveränderlich; die Abschnittszuordnung ist keine Beweisabhängigkeit.
+`edition-read`, `edition-save` und `edition-export` stehen in `store_db` bereit.
+Beispiel: `python -m qam.tools.store_db edition-read --hash HASH --out build/edition.json`.
+
+- `qsc-v5-physics`: sieben Abschnitte, registrierte Einführungstexte,
+  vollständiges Methodenbeispiel mit rationalen Matrixbelegen und die
+  kuratierten Koide-/HC-Argumente. Fünf weitere konkrete Aussagen zu Träger,
+  Teilchen/Generationen und Geometrie bleiben als Kandidaten sichtbar.
+- `qsc-v5-full`: 61 Quellstationen in Eingabereihenfolge und 2468 Aussagen.
+  Der Export enthält den gehashten vollständigen Quellbaum und dessen
+  Einstiegspunkt. Er bewahrt auch Text ohne Satzumgebung. Dies ist noch
+  kein vollständig verifizierter Datenbankersatz für den Langtext.
+
+Die Physikfassung wird inzwischen als zusammenhängendes Paper mit Abstract,
+Einleitung, wissenschaftlichem Haupttext, Literatur und Beweisanhang ausgegeben.
+`presentation.style=physics-paper` und die registrierte Abstractversion sind
+Teil der unveränderlichen Editionsrevision (Format v2, Schema bleibt v6).
+Die Textblöcke stammen aus `qam/editions/v5_physics_article.tex`, die Literatur
+aus `v5_physics_references.tex`. Sieben zusätzliche registrierte Blöcke
+`v5_expanded_<Abschnitt>.tex` entwickeln die Argumente; jeder Abschnitt
+enthält die Einführung und genau diesen Ausbau. Fehlende Ausbauquellen
+brechen die Zusammenstellung ab. Die früheren Audit-Ausgaben bleiben abrufbar.
+
+Der erweiterte Entwurf vom 11.11.2026 umfasst 27 Seiten: 24 Seiten
+Argumentation, eine Seite Literatur und zwei Seiten Beweisanhang. Er enthält
+das vollständig hergeleitete elektromagnetische Intervallbeispiel, bedingte
+Teilchen-/Generationen-Konstruktionen, Gram-/Schur-Massenauslesung,
+Positivitätsgrenzen, projizierte Dynamik, geometrische Kompatibilität und
+den Zeta-/Unschärfevergleich. Der gespeicherte MMA-Intervallbeleg liegt in
+`qam/editions/evidence/gram_interval_receipt.json`; seine bedingten Prämissen
+bleiben offen. Die sieben Ausbauten sind redaktionelle Erklärungsobjekte,
+keine automatisch als bewiesen registrierten neuen Aussagen.
+
+Der Export erzeugt `paper.tex`, `assembly.json` und `audit.md`. Einzelne
+Versionskennungen, noch ungeprüfte Kandidaten und Prüfstatus stehen im
+Auditbericht; ihre fachlichen Grenzen bleiben im Haupttext ausdrücklich
+beschrieben. Die neue Darstellung verleiht keinem importierten Satz einen
+Beweisstatus. Fehlende TeX-Ressourcen blockieren die lesbare Fassung, statt
+Abschnitte still wegzulassen. Quellenänderungen werden vor dem Export erkannt.
+
+Editionsdaten sind wie benannte Paper-Metadaten außerhalb des
+Inventar-Snapshotumfangs; ihre Speicherung ändert daher nicht den zugehörigen
+Inventarcheckpoint. Vollständige DB-Backups enthalten sämtliche Editionstabellen.
+Der Export ist ein Forschungsentwurf und keine Publikationsfreigabe. Ein
+gemeinsamer automatischer PDF-/Zenodo-Releasejob bleibt ein eigener Schritt.
+
 Dokumententwicklung seit 11.11.2026: **v5.0.0-draft**. Dies bezeichnet die
 datenbankgestützte Dokumentarchitektur, nicht eine neue Schemamigration oder
 eine mathematische Beweisfreigabe. Die historische Aufbauchronik unten bleibt

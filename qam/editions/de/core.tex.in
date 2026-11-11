@@ -1,0 +1,121 @@
+\subsection{Der algebraische Träger und seine beiden Konjugationen}
+Bevor das Wort ,,Sektor`` eine mathematische Bedeutung erhält, muss
+ein konkreter Träger feststehen. Wir schreiben ein Biquaternion als
+@@0@@
+Die skalare imaginäre Einheit kommutiert mit den Quaternioneneinheiten.
+Das unterscheidet sich von der Wahl einer Quaternionenrichtung als
+innerer komplexer Struktur. Insbesondere kann eine mit der kommutierenden
+skalaren Einheit formulierte Aussage nicht automatisch auf
+Linksmultiplikation mit einem der @@1@@ übertragen werden. Für jede
+Übertragung müssen Darstellung und zugehörige Adjungierung feststehen.
+
+Auch die beiden Konjugationen unterscheiden sich. Wir definieren die
+Quaternionenkonjugation durch @@2@@, wobei die komplexen Koeffizienten
+unverändert bleiben, und die Koeffizientenkonjugation durch @@3@@. Dann gilt
+@@4@@
+Die positive Koeffizientennorm lautet dagegen
+@@5@@
+Der erste Ausdruck ist eine komplexe quadratische Form, der zweite eine
+positive hermitesche Norm. Beide ,,Norm`` zu nennen, kann einen Wechsel
+des mathematischen Problems verdecken. Ein Positivitätsargument für
+Hauptwurzeln von Massen verwendet einen positiven Vergleich. Eine komplexe
+quadratische Invariante darf dabei nicht so behandelt werden, als wäre
+sie dieser Vergleich.
+
+Eine bekannte Realisierung bildet @@6@@ auf @@7@@ ab, wobei @@8@@ die
+Pauli-Matrizen sind. Das Biquaternion wird zu einer komplexen
+Zwei-mal-zwei-Matrix mit Determinante @@9@@. Auf dem hermiteschen
+Schnitt @@10@@ ergibt sich
+@@11@@
+Die Determinante bleibt erhalten. In der in den geometrischen Vergleichen
+verwendeten Raumzeitkonvention @@12@@ ist die lorentzsche quadratische
+Form auf diesem Schnitt gleich @@13@@. Dieses konventionelle Vorzeichen
+macht die Koeffizientennorm nicht zu einer lorentzinvarianten
+Hilbertraumnorm. Beispielsweise stellt @@14@@ einen Boost dar und ist
+für @@15@@ nicht unitär. Eine Ähnlichkeitstransformation, eine physikalische
+Beobachtertransformation und ein unitärer Basiswechsel in einem positiven
+Vergleichsraum müssen deshalb als unterschiedliche Operationen verfolgt
+werden.
+
+\subsection{Was das Vorzeichen einer Feldinvariante tatsächlich unterscheidet}
+Ein elektromagnetischer Vergleich liefert eine nützliche, unabhängig
+interpretierbare Instanz des komplexen Vektorteils. In Einheiten mit
+@@16@@ setzen wir @@17@@. Dann gilt
+@@18@@
+Diese Identität unterscheidet die beiden reellen elektromagnetischen
+Invarianten. Nur auf einem Schnitt mit reellem @@19@@, etwa bei @@20@@,
+ist eine Einteilung nach @@21@@, @@22@@ und @@23@@ unmittelbar sinnvoll.
+Die ersten beiden Fälle sind elektrisch beziehungsweise magnetisch
+dominiert; der letzte ist bei nichtverschwindendem Feld nullartig.
+Eine Vorzeichenbezeichnung für ein allgemeines komplexes @@24@@ würde
+eine weitere ausdrücklich festgelegte Regel erfordern.
+
+Diese algebraischen Kategorien sind für die vorgeschlagenen Materie-,
+Tachyon- und Photonenauslesungen des Companion nützlich. Ihre physikalische
+Identifikation benötigt aber Dynamik und Observablen. Eine verschwindende
+elektromagnetische Invariante definiert beispielsweise noch keinen
+quantenmechanischen Photonenzustand. Ebenso identifiziert ein gemeinsamer
+Träger unterschiedliche Invariantenschichten nicht als denselben
+physikalischen Zustand. Die Unterscheidung ist operational: Es muss
+feststehen, welche Präparationen, Transformationen und Messungen
+verglichen werden.
+
+Die HC-Konstruktion wird gerade deshalb in einer positiven
+Hilbertraumrealisierung formuliert, damit ihre Projektionsidentitäten
+unabhängig von diesen Interpretationen geprüft werden können. In einer
+solchen Realisierung zerfällt jedes @@25@@ eindeutig als
+@@26@@
+Für einen normierten Zustand lautet der Erwartungswert der Involution
+@@27@@
+Ein verschwindender Erwartungswert bedeutet gleiche Gewichte in den
+beiden orthogonalen Sektoren. Das ist keine Fixpunktbedingung: Ein unter
+@@28@@ fester Einheitsvektor hat Erwartungswert eins. Dieser Unterschied
+ist entscheidend, wenn eine Symmetrieachse oder kritische Linie die
+Balance von Massenwurzeln erklären soll.
+
+\subsection{Reelle Betrachtung und die Bedeutung der Adjungierung}
+Sei ein übernommenes @@29@@ stattdessen antiunitär auf einem komplexen
+Hilbertraum. Dann gilt @@30@@, weshalb @@31@@ im Allgemeinen nicht
+komplex-linear ist. Man kann dieselben Vektoren als reellen Hilbertraum
+mit Skalarprodukt @@32@@ betrachten. Eine antiunitäre Involution wird
+dann zu einer orthogonalen reell-linearen Involution; die
+Projektionsrechnung gilt auf diesem reellen Raum. Die zulässige Klasse
+von Operatoren und Unterräumen ändert sich dabei.
+
+Man kann auch eine reelle orthogonale Realisierung komplexifizieren
+und ihre Involution komplex-linear fortsetzen. Dies ergibt eine andere
+Vergleichskonstruktion, in der Multiplikation mit @@33@@ mit @@34@@
+kommutiert. Diese Alternativen dürfen nicht allein durch Beibehalten
+des Symbols @@35@@ in einem Argument vermischt werden. Spätere Formeln
+wie @@36@@ verlangen die angegebene komplex-lineare Fortsetzung und
+einen selbstadjungierten antikommutierenden Operator @@37@@ auf demselben
+positiven Hilbertraum. Sie sind keine Formeln für eine unspezifizierte
+antiunitäre Operation.
+
+Dieselbe Sorgfalt gilt für Tensoren. Eine Raumzeitmetrik kontrahiert
+Raumzeitindizes; eine innere hermitesche Metrik vergleicht innere
+Amplituden; eine Generationenmetrik vergleicht Generationenkoordinaten.
+Signaturen, Dimensionen und Transformationsregeln unterscheiden sich.
+Selbst wenn ihre Zahlenmatrizen in einer Karte zufällig übereinstimmen,
+muss eine Identifikation erklären, wie die Räume und Adjungierungen
+transportiert werden. Die nachfolgend behandelten QAM-Kontextdatensätze
+machen diese Festlegungen dort sichtbar, wo sie in einen Schluss eingehen.
+
+\subsection{Die physikalische Schnittstelle als zusätzliche Angabe}
+Eine physikalische Auslesung besteht aus einem zulässigen Zustandsbereich
+und einer Abbildung auf Observablen. Im Massenzweig gehören dazu
+Generationenzuordnung, Positivität der Hauptwurzeln und eine
+dimensionsbehaftete Normierung. Im Geometriezweig gehören ein
+invertierbarer Koframe oder eine Metrik, die Differentiationsregeln
+und die Kopplung an die Bewegungsgleichungen dazu. Diese Anforderungen
+sind stärker als die bloße Existenz eines Vektorraumisomorphismus.
+
+Der gemeinsame Träger lässt sich daher in zwei Richtungen untersuchen.
+Eine Vorwärtskonstruktion beginnt beim dargestellten Träger und berechnet
+seine Auslesung. Eine Rückwärtsanalyse beginnt bei einer geforderten
+Eigenschaft der Observable und fragt, welche Trägeroperationen sie
+erzeugen könnten. Die Massenwurzelbedingungen und die Prüfung projizierter
+Autonomie in dieser Arbeit sind Rückwärtsbedingungen dieser zweiten
+Art. Sie verwerfen die Hypothese eines gemeinsamen Trägers nicht,
+sondern benennen die zusätzliche mathematische Arbeit, die ihm
+physikalischen Gehalt geben würde.

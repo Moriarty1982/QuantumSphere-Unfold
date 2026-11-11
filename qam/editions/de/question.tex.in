@@ -1,0 +1,63 @@
+\subsection{Observable Äquivalenz und ausreichende Zustandsvariablen}
+
+Ein gemeinsamer Träger wird erst zusammen mit einer auf Observablen
+bezogenen Äquivalenzrelation nützlich. Sei @@0@@ ein zulässiger
+Zustandsbereich, @@1@@ seine vollständige Entwicklung und @@2@@ eine
+Auslesung. Zwei Zustände sind bezüglich dieser Auslesung äquivalent,
+wenn @@3@@ gilt. Eine induzierte Entwicklung @@4@@ auf dem Bild existiert
+genau dann, wenn für alle zulässigen Zustände und Zeiten
+@@5@@
+gilt. Die Notwendigkeit folgt, indem man @@6@@ auf die gemeinsame
+Anfangsauslesung anwendet. Für die Hinlänglichkeit definiert man @@7@@
+mithilfe eines beliebigen Repräsentanten mit @@8@@; die Bedingung macht
+diese Definition unabhängig vom Repräsentanten. Erhält der vollständige
+Fluss den Definitionsbereich, überträgt sich auch sein Kompositionsgesetz.
+Existenz, Regularität und Lokalität eines Feldflusses bleiben gesonderte
+analytische Fragen.
+
+Dieses elementare Kriterium verbindet zwei scheinbar unterschiedliche
+Probleme. Ein komprimiertes Feldregister kann die Orientierung verwerfen,
+die für eine Lorentztransformation benötigt wird. Ein projizierter Zustand
+kann eine Amplitude verwerfen, die zur Ableitung seiner Phase nötig ist.
+In beiden Fällen spaltet die vorgeschlagene Operation Äquivalenzklassen
+der ursprünglichen Auslesung auf. Abhilfe erfordert zusätzliche Angaben,
+eine Einschränkung des zulässigen Bereichs oder die Beschreibung einer
+Familie möglicher Ausgaben. Das ursprüngliche Register umzubenennen,
+genügt nicht.
+
+\subsection{Drei Prüfungen einer vorgeschlagenen physikalischen Schnittstelle}
+
+Die Untersuchung richtet sich nach drei Fragen. Erstens: Was wird
+dargestellt? Dazu gehören Träger, Skalarkörper, Adjungierung und
+Operatorwirkung. Schon die Unterscheidung zwischen Involution und innerer
+komplexer Struktur ist hier eine notwendige Prüfung. Zweitens: Welche
+Operation wählt die physikalischen Zustände aus? Schließung, positive
+Spektralauswahl und ein Generationenseed sind unterschiedliche
+Einschränkungen. Ihr Schnitt kann eine kleinere Dimension haben als
+jede einzelne. Drittens: Welche Messgröße wird ausgelesen? Erwartungswert,
+Übergangsnorm, Matrixeigenwert und Pol eines gedressten Propagators
+müssen nicht dasselbe Massengesetz liefern.
+
+Diese Fragen lassen sich vor einer detaillierten phänomenologischen
+Anpassung prüfen. Der Rang schließt drei positive Eigenmassen aus einem
+eindimensionalen Übergangsausgang aus. Positivitätsschranken schließen
+beim angestrebten Wurzelradius eine global positive, in der Dichtematrix
+lineare Realisierung aus. Ein Gegenbeispiel mit verborgenem Zustandsanteil
+schließt für eine gegebene Projektion eine allgemeine reine Phasendynamik
+aus. Solche negativen Ergebnisse sind nützlich: Ihre Voraussetzungen
+zeigen, welcher Modellbestandteil geändert werden müsste. Sie schließen
+nicht jede Darstellung auf dem gemeinsamen Träger aus.
+
+Die Darstellung folgt diesen Schnittstellen statt der historischen
+Reihenfolge der Forschungsrunden. Nach Träger und Vergleichsmetriken
+erläutert ein elektromagnetisches Beispiel die Aussagen- und
+Ausführungssprache. Teilchendarstellungen werden von Generationenseeds
+und Mischung getrennt. Der Massenabschnitt verfolgt einen
+Übergangsoperator über seine Gram-Matrix und einen effektiven Vergleich
+mit Spektrallücke bis zu den positiven Wurzelbedingungen. Der
+Geometrieabschnitt behandelt projizierte Entwicklung, Wirkungsreduktion,
+Koframes und endliche Kompatibilität. Abschließend prüft ein
+Zetavergleich, ob Arithmetik und Unschärfe eine zusätzliche Auswahloperation
+liefern können. Die ursprünglichen unterstützenden Massenargumente stehen
+in Anhang~A; der vollständige Companion \cite{QSC411} enthält den
+weiteren Forschungszusammenhang und alternative Wege.

@@ -1,32 +1,33 @@
 # Übergabe: Stand der letzten Sitzung
 
-11. November 2026 (Codex).
+11. November 2026 (Codex). Wird pro Arbeitsblock überschrieben.
 
-- Branch `codex/hc-native-selection`; letzter Commit vor diesem Block 9c5d574.
-- PR #93 bleibt als e0e25fc18c078294933341a3e291f373f43245b7 in main; nächste Bundle-Basis ist dieser Merge.
-- Dort PDF-Build, Wiki Sync, Lean/TeX/Batch erfolgreich; aktuelle Fortsetzung noch nicht in main.
-- Entwicklung 5.0.0-draft; öffentliche Baseline v4.11.0, DOI 10.5281/zenodo.24108818.
-- Neue Texte: `notes/research/hc_root_transfer_rotation_gate_2026_11_11.md` und `zeta_positive_spectral_packet_2026_11_11.md`.
-- Alle festen Zwei-Moden-Basisrotationen der bisherigen quadratischen Auslesung geprüft: keine globale positive Koide-Auslesung aller balancierten Zustände.
-- Antipodales Auslesepaar cI±D, Tr D=0: beiderseitige Positivität erzwingt K<=5/9. Native Zweig-/Kammerauswahl oder anderes Wurzelgesetz nötig.
-- Neue Alternative: positiver Spektralraum eines selbstadjungierten J-ungeraden Operators erzwingt Balance, auch bei kontinuierlichem Spektrum ohne Eigenvektoren.
-- Positive Masse |A| oder A² allein selektiert diesen Raum nicht und lässt unbalancierte Zustände zu.
-- Explizites Paket für a(t)=Im(zeta'/zeta)(sigma+it), sigma>1: f=N a² exp(-t²), psi=(f+i sign(a)f)/sqrt(2).
-- psi ist normiert, HC-balanciert und im positiven Spektralraum von T=-iRA; Tpsi=|a(t)|psi ist keine Eigenwertgleichung.
-- f und sign(a)f liegen in H¹. Q=t und P=-i d/dt haben endliche zweite Momente; keine physikalische Orts-/Impulsidentifikation.
-- Robertson für R/A ist strikt; Balance wird durch die zusätzliche Spektralprojektion erzeugt, nicht durch Sättigung.
-- Native Energieidentifikation, Präparation/Erhaltung, Fensterwahl und positive Drei-Generationen-Wurzelauslesung bleiben offen.
-- sigma=1/2 nicht durch diese Primzahlreihe gedeckt; historische RH-Spektralroute bleibt gesperrt.
-- Validierung dieses Blocks: direkte analytische Selbstprüfung, keine Simulation oder neuen Tests; keine H-/k-Neuvergabe oder QAM-Beweisfreigabe.
-- Letzte lokale Codevalidierung vor PR93: 26 Storetests +18 HC +35 Koide/Kernel erfolgreich.
-- Nächster Schritt: positiven arithmetischen Spektralprojektor und reguläre Profildomäne gegen vorhandene native Dynamik prüfen. Keine weiteren Massen-/Phasenfits.
-- Beispielhafte e^{-isT}-Evolution erhält den Spektralraum, ist aber noch keine native Präparation.
-- Datenbank build/qam.sqlite3; Inventar 2468 Aussagen/61 Dateien, viele rohe Guards offen.
-- `.codex/environments/` bleibt außerhalb des Commits. Neuer Merge braucht Autorenfreigabe.
-
-## Davor
-
-9c5d574: J-wechselnder nativer Block und bedingte positive Zwei-Moden-Ausleseschranke.
-772503e: arithmetischer Zeta-Multiplikator, Start 5.0-Entwurf.
-Alte lange Übergabe: `notes/research/qam_store_handoff_history_2026_11_11.md`.
-OP1–OP5 und sonstige offene physikalische Identifikationen bleiben offen.
+- Branch codex/v5-release-prep; Basis vor diesem Block 01ca2a8.
+- Main bleibt PR94 / 3a68669b0b12766c256ae6eeed1f52ae0693acc4; öffentliche Baseline v4.11.0.
+- Entwicklung v5.0.0-draft, keine eigene DOI oder Veröffentlichung.
+- Folgeauftrag weiter: gemeinsamen Zwei-Dokument-Build eingerichtet und lokal vollständig geprüft.
+- Werkzeug: python -m qam.tools.build_v5_documents --out NEUER_ORDNER.
+- Workflow .github/workflows/qsc-v5-dual-documents.yml: manuell oder passende Änderungen auf main; GitHub-Ausführung noch nicht geprüft.
+- Ausgabe build/v5-paired-documents-final/: Lang-PDF 1397 Seiten, englisches Physikpaper 27 Seiten.
+- Langfassung drei Satzläufe, Physik zwei; beide ohne offene Verweise, doppelte Labels oder Rerun-Meldungen.
+- 58 Overfull-Boxen im Langtext, keine im Physikpaper. Diese sind nicht bereinigt und bleiben redaktionell offen.
+- Physik-LaTeX bytegleich zur vollständig visuell geprüften Vorfassung; Langfassung nur Titel, Leseführung und Schluss visuell geprüft.
+- Paket: PDFs, frische Datenbank, Quellbaum, Auswahl-/Auditmanifeste, Compilerprotokolle, Builderquellen, README und SHA256SUMS.
+- Alle verzeichneten Prüfsummen nach dem Lauf geprüft.
+- build_complete=true bedeutet technische Paar-Vollständigkeit. publication_ready bleibt false; beide incomplete_argument_review bleiben true.
+- Keine neue mathematische Beweisfreigabe, native Identifikation oder OP-Schließung.
+- 32 Storetests erfolgreich; neue Fehlerfallprüfungen verhindern vollständigen Status bei fehlendem/fehlgeschlagenem Dokument oder geänderter Quelle.
+- Compiler verwendet pdflatex direkt ohne Shell-Escape, bis zu sechs Läufe. latexmk scheiterte lokal an fehlendem Perl.
+- Bericht notes/research/v5_dual_document_build_2026_11_11.md enthält genaue Buildidentitäten.
+- Snapshot: 168977e6c8ec955214fc5463769eb2ae709d0815dc6cee38d3d1e05245cb0f67.
+- full-Edition: 07b52fadd6c9e325a04b06f0d391f921bbb073c15292851c97d5cd42cf3c53f2.
+- physics-Edition: 740eef6f937c78046d492df36fb4760527b00cb010075bd123aa0e31bb093380.
+- Redaktionelle englische Physiktexte qam/editions/v5_expanded_*.tex; Originalbeweise und Runden unverändert.
+- Deutsche persönliche Lesefassung: build/qam-v5-physics-de-final/paper.pdf, 29 Seiten, alle visuell geprüft.
+- Deutsche Quellen qam/editions/de/, Builder qam.tools.build_v5_german_reader; 640 mathematische Fragmente erhalten.
+- Deutsche Fassung ist kein Datenbank-Sprachprofil; ihre englische Vorlage bleibt 1db88536ab67af7a1087fb999f63ef46ccfb9a0f8d22335c8969cf51a306c1d8.
+- Der gespeicherte MMA-Intervallbeleg bleibt bedingt, closure_proved und mathematical_relations_proved false.
+- Nächster Schritt: 58 Satzüberläufe im Langtext nach Fundstelle/Art erfassen und korrigieren; danach fachliche Schlussprüfung und Workflow-Prüfung.
+- Kein Main-Merge, Tag, DOI, Zenodo-Entwurf, Upload oder Release in diesem Block.
+- Branchlöschung bleibt durch automatische Freigabeprüfung blockiert; Liste notes/research/v5_0_0_branch_cleanup_review.md, keine neue Freigabe.
+- .codex/environments/ nicht aufnehmen. Keine H-/k-Nummer vergeben.

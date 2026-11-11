@@ -30,7 +30,7 @@ def initialize(path):
         db.execute('BEGIN IMMEDIATE')
         exists = db.execute("SELECT 1 FROM sqlite_master WHERE name='qstore_schema'").fetchone()
         versions = db.execute('SELECT version FROM qstore_schema ORDER BY version').fetchall() if exists else []
-        if len(versions) > 5 or versions != [(n,) for n in range(1, len(versions) + 1)]:
+        if len(versions) > 6 or versions != [(n,) for n in range(1, len(versions) + 1)]:
             raise ValueError(f'Unsupported store schema versions: {versions}')
         if not versions:
             apply_sql(db, resources / 'schema_v1.sql')
@@ -40,13 +40,13 @@ def initialize(path):
         stored = dict(db.execute('SELECT name,description FROM qstore_object_types'))
         if stored != catalogue:
             raise ValueError('Stored type catalogue differs from catalogue_v1.json')
-        for version in range(2, 6):
+        for version in range(2, 7):
             if (version,) not in versions:
                 apply_sql(db, resources / f'schema_v{version}.sql')
                 db.execute('INSERT INTO qstore_ledger(event_type,payload_json) VALUES (?,?)',
                            ('schema-migrated', json.dumps({'schema': version})))
         db.commit()
-        return {'schema': 5, 'object_types': len(stored),
+        return {'schema': 6, 'object_types': len(stored),
                 'objects': db.execute('SELECT count(*) FROM qstore_objects').fetchone()[0]}
     except Exception:
         db.rollback()
@@ -57,7 +57,7 @@ def initialize(path):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('command', nargs='?', choices=['initialize', 'status', 'store', 'link', 'guard', 'guards', 'review', 'verify', 'receipt', 'snapshot', 'snapshot-read', 'snapshot-check', 'select', 'export', 'scrub', 'view', 'freshness', 'impact', 'paper-save', 'paper-read', 'paper-export', 'backup', 'backup-check', 'restore', 'import-inventory', 'inventory-view'], default='initialize')
+    parser.add_argument('command', nargs='?', choices=['initialize', 'status', 'store', 'link', 'guard', 'guards', 'review', 'verify', 'receipt', 'snapshot', 'snapshot-read', 'snapshot-check', 'select', 'export', 'scrub', 'view', 'freshness', 'impact', 'paper-save', 'paper-read', 'paper-export', 'edition-save', 'edition-read', 'edition-export', 'backup', 'backup-check', 'restore', 'import-inventory', 'inventory-view'], default='initialize')
     parser.add_argument('--db', type=Path, default=Path('build/qam.sqlite3'))
     parser.add_argument('--request', type=Path)
     parser.add_argument('--hash')
@@ -66,6 +66,27 @@ def main():
     parser.add_argument('--archive', type=Path)
     parser.add_argument('--repo', type=Path, default=Path(__file__).resolve().parents[2])
     args = parser.parse_args()
+    if args.command in {'edition-save', 'edition-read', 'edition-export'}:
+        from qam.store.editions import save_edition, read_edition, export_edition
+
+        if args.command == 'edition-save':
+            if args.request is None:
+                parser.error('--request is required for edition-save')
+            result = save_edition(args.db, args.repo, json.loads(args.request.read_text(encoding='utf-8-sig')))
+        else:
+            if not args.hash:
+                parser.error('--hash is required for edition-read and edition-export')
+            if args.command == 'edition-export':
+                if args.out is None:
+                    parser.error('--out is required for edition-export')
+                result = export_edition(args.db, args.repo, args.hash, args.out)
+            else:
+                result = read_edition(args.db, args.hash)
+                if args.out:
+                    args.out.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')
+                    result = {'edition_hash': result['edition_hash'], 'edition_id': result['edition_id'], 'sections': len(result['sections'])}
+        print(json.dumps(result, ensure_ascii=False))
+        return
     if args.command == 'inventory-view':
         from qam.store.manuscript_import import overview_from_snapshot
 

@@ -23,7 +23,8 @@ lambda mu nu xi pi varpi rho varrho sigma varsigma tau upsilon phi varphi chi ps
 Gamma Delta Theta Lambda Xi Pi Sigma Upsilon Phi Psi Omega
 le leq ge geq ne neq equiv sim simeq approx cong subset subseteq superset supset supseteq
 in notin ni cup cap setminus emptyset forall exists neg land lor implies iff
-to mapsto rightarrow leftarrow leftrightarrow Rightarrow Leftarrow Leftrightarrow
+to mapsto longmapsto rightarrow leftarrow leftrightarrow Rightarrow Leftarrow Leftrightarrow
+ell bigcup hbar
 longrightarrow longleftarrow longleftrightarrow Longrightarrow Longleftarrow Longleftrightarrow
 cdot times otimes oplus circ bullet ast star pm mp div perp parallel mid
 langle rangle lvert rvert lVert rVert vert Vert quad qquad hspace vspace
