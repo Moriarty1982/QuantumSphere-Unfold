@@ -1,12 +1,35 @@
 # Übergabe: Stand der letzten Sitzung
 
-10. November 2026 (Codex).
+11. November 2026 (Codex).
 
-- Basis dieses Arbeitsblocks ist `6d1ce66` (PR #91, Ringnotizen und Vortragsmaterial). PR #90 (`a788930`) enthält die parallelen QAM-Stapel und die Erkundung am markierten Ring.
-- Ursprüngliches OP3 (Koide): Das bedingte QAM-Beispiel erfasst die Überlagerung der Massenwurzeln. Die passenden Phasen und Gewichte sind aus den Daten rekonstruiert. Der nächste native Test betrifft einen unabhängig festgelegten Eichfluss und eine gemeinsame Auslesung. Das isolierte Paar erzeugt bei symmetrischer Maxwell-Rückantwort keinen relativen Eigenfeldbeitrag. Details in `notes/research/koide_original_op3_cycle_phase.md`.
-- OP3-Hüllenpersistenz: Der Theta-Monitor ist bei festen Eingaben schrittunabhängig. Ein Theta-Drift braucht eine native zustandsabhängige Auslesung. Der lokale HC setzt den reparierten Eingang bereits voraus.
-- QAM: Lokaler Wiederholungslauf erfolgreich (3 Stapeltests und 17 Framework-Tests). Das GitHub-Register #17 meldet erfolgreiche Stapeltests auf Ubuntu und Windows. Der direkte Zugriff auf GitHub Actions über gh schlug fehl, der gezielte Abruf für den Branch-Commit lieferte keine Läufe.
-- Ringmodell (T14, OP1): 16 von 56 Fünferauswahlen legen die Sollrotation eindeutig fest. Die lokalen Wiki-Notizen beschreiben eine sektortreue Gesamtsingulett-Kodierung der Vorwärtsroute mit Hilfsspin 0 bis 4 und die Beträge der Übergänge für zwei Spin-2-Partner.
-- Analytische Erkundung: Die normierte Austauschdifferenz stimmt nach gemeinsamer Hilfssektor-Phasenwahl auf allen Multiplizitätsräumen mit dem kodierten Sollgenerator überein. Begründung in wiki/QAM.md. Ein zusätzlicher steuerbarer Hilfspaar-Austausch trennt die vier Übergänge über ihre Frequenzen. Ein Zyklus aus neun konjugierten Pulsen ergibt die Normierung im Produktformel-Grenzwert. W1-Kandidat: der lokale Torsions-Kreuzterm. Symmetrische Randkopplungen und Hilfspaar-Austausch erhalten den Hilfsspin und verfehlen schon den ersten Sollübergang. Bedingte W1-Modenprojektion: Zwei Quartette mit identischen Dichteprofilen innerhalb jedes Quartetts tragen Spin 2. Die projizierten Kreuzterme liefern die drei benötigten Austauschoperatoren mit Überlappungskoeffizienten. Isolierte Randpulse sind mit Spinperiode 4π umkehrbar. Freier Weyl-Term: Ein lokalisiertes räumliches Einmoden-Spindublett hat einen Austritt proportional zur Impulsvarianz. Einzelne Impulsmoden in einer periodischen Box erhalten den Träger, liefern jedoch gleichförmige Überlappungen. Flacher W1-Weyl-Operator: Auch ein zeitabhängiges reelles Eichfeld kann kein lokalisiertes gemeinsames skalares Ortsprofil für das volle Spindublett erhalten. Räumlich gedrehte Dubletts: Der Kontakt-Kopplungstensor mittelt relative Drehungen. Exakt erhaltene Dubletts mit skalarer Punktdichte haben statische Dichten, bei voller isotroper Kopplung sind die Dichten auf der Überlappung proportional. Periodische Weyl-Dubletts liefern bei gleicher Achse den vollen isotropen Kontakt und bei orthogonalen Achsen exakt null Spin-Kontakt, bei unveränderter Dichte. Der W1-Kontaktterm streut in der freien Box resonant aus den gewählten Achsendubletts. Für gleiche Achsen ist ein Austrittsmatrixelement so groß wie der beabsichtigte Austausch, auch orthogonale Achsen besitzen einen Austrittskanal. Eine rechteckige Box mit eindeutiger längster Achse isoliert im positiven Zweiteilchenzweig das gewünschte Austauschdublett energetisch. Einheitlicher Austausch auf allen Paaren wirkt aber auf dem Gesamtsingulett skalar. Homogenes W1-U(1) trennt nur die beiden Ladungsklassen und kann aufgrund der Permutationssymmetrie keine einzelne physische Kante auswählen. Nächster Schritt: Eine lokale Steuerung prüfen, die gleich geladene Plätze unterscheidet und den Streuabstand erhält, oder eine kollektive Kodierung mit explizitem Solloperator untersuchen. Die Zuordnung zu gravitativen Randträgern bleibt offen. I1 ist ein möglicher Ausweg bei disjunkten Trägern.
-- Native Kantenkopplung und lokale Umsetzung der Normierung bleiben offen, ebenso OP1, Horizontzustandsraum und Flächenoperatorfrage. Keine neue H- oder k-Nummer in diesem Block. Die vorige Übergabe verweist auf H98 und k219.
-- OP3, analytische Erkundung: Die geometrische Schwellenverschärfung kann ein festes, gescheitertes Zweischritt-Fenster nicht reparieren. Für ein aktualisiertes Fenster mit festem erstem Zustand ist der exakte Test der Schnitt der nativ erreichbaren Monitorwerte mit dem zulässigen Intervall. Die geprüften Reparaturpassagen geben keine Zustandsaktualisierung an. Quellenprüfung und nächster Ansatz in `notes/research/op3_native_threshold_repair_2026_11_10.md`. OP3 bleibt offen.
+- Branch `codex/qam-statement-store`; letzter Commit vor diesem Block `9608e6a`.
+- Entwicklungsversion jetzt **5.0.0-draft**, auf Autorenanregung wegen Datenbankarchitektur.
+- Öffentliche Baseline bleibt v4.11.0, DOI 10.5281/zenodo.24108818. Kein neuer Release/DOI/Push/Merge.
+- Working-preamble (Titel/Datum/PDF-Metadaten), Orientierung, README, AGENTS und Wiki aktualisiert.
+- Versionsumfang: `notes/research/v5_0_0_development.md`; DB-Schema v5 ist davon unabhängig.
+- Gesamtinventar: 2468 Aussagen/61 Dateien; vollständige Beweisabhängigkeiten weiterhin ungeprüft.
+- DB: `build/qam.sqlite3`; lokale Builddateien nicht als einzige Reproduktionsquelle verwenden.
+- Kuratierte Koide-/HC-Zweige und bedingte Verbindung existieren; native Guards offen.
+- Bridge-Snapshot: `14a0793aec6832a8471ac18bf2c3305be1f47de08ab8970fa44780a74252e6dc`.
+- Neue Erkundung: `notes/research/zeta_prime_operator_uncertainty_2026_11_11.md`.
+- A_sigma multipliziert mit Im(zeta'/zeta)(sigma+it), sigma>1; beschränkt selbstadjungiert, antikommutiert mit Parität R.
+- Robertson-Relation hergeleitet; gerades Zeta-Profil bleibt unbalanciert für R.
+- T_sigma=-iRA_sigma besitzt im kontinuierlichen L²-Modell keine nichtnulligen normierbaren Eigenzustände.
+- Deshalb scheitert diese exakte Zustandsauswahl; keine allgemeine Widerlegung der Autorenidee.
+- Signum-Abflachung oder lokalisierte Pakete wären zusätzliche, nicht nativ begründete Operationen.
+- Kein ungeprüfter Übergang zur kritischen Linie und keine Reaktivierung alter RH-Spektralbehauptungen.
+- Analytische Selbstprüfung, nicht blind, keine numerische Rechnung, keine neue H-/k-Nummer.
+- Vorherige H-/k-Angabe H98/k219 nicht neu verifiziert oder vergeben.
+- Vorige Storevalidierung: 26 Tests; HC:18. Dieses Mal nur Forschungstext/Metadaten geändert.
+- Kein neuer vollständiger PDF-Build. CITATION und veröffentlichte Release-Dateien bleiben bei 4.11.0.
+- Quellenfrische beachten: Working-orientation wurde geändert; alte Inventarhashes nicht überschreiben.
+- Nächster Schritt Forschung: native nichtlokale Kopplung/Generator mit normalisierbaren Auswahlzuständen suchen, vor weiteren Simulationen.
+- Nächster Schritt Architektur: typisierte Frame-Abbildungen; danach weitere fachliche Teilprüfungen/5.0-Paper-Auswahl.
+- `.codex/environments/` außerhalb des Commits belassen.
+
+## Davor
+
+`9608e6a`: generische R/S-Unschärfe, zusätzliche T-Auswahl und Impulsdomänengrenze.
+`236bc76`: HC-Originalbeweise und bedingter Koide-Anschluss, keine native Schließung.
+Alte lange Übergabe: `notes/research/qam_store_handoff_history_2026_11_11.md`.
+OP1–OP5 und sonstige offene physikalische Identifikationen bleiben offen.

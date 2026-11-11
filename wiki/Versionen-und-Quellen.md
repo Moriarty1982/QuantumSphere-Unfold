@@ -1,10 +1,15 @@
 # Versionen und Quellen
 
+Entwicklungsnachtrag vom **11.11.2026**: v5.0.0-draft organisiert Aussagen
+und Teilausgaben über die Datenbank. Keine Veröffentlichung und keine eigene
+Version-DOI. Die unten datierte frühere Quellenprüfung ist davon getrennt.
+
 Stand: **2.11.2026**, geprüft gegen Commit [`cf48496c95b6c9ec3f6a3c196df2c8c2c84e3d0b`](https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/cf48496c95b6c9ec3f6a3c196df2c8c2c84e3d0b). Links auf `main` zeigen die weiterentwickelte Fassung; für reproduzierbare Aussagen einen Commit-Link verwenden.
 
 | Ebene | Stand | Verwendung |
 |---|---|---|
 | Öffentliche Baseline | v4.11.0, 10.11.2026, DOI 10.5281/zenodo.24108818 | Publizierte Aussagen und Zitation |
+| Entwicklung seit 11.11.2026 | v5.0.0-draft, keine eigene Version-DOI | Datenbankgestütztes Aussageninventar, Teilauswahlen und offene Guards; kein Release |
 | Forschung | nach v4.10.0; neue Layer `v4.10.0-rNN` | Nachträgliche Forschung und Korrekturen |
 | Vorherige Veröffentlichung | v4.9.0, DOI 10.5281/zenodo.23534954 | Historischer Vergleich |
 | Ältere Veröffentlichung | v4.8.0, DOI 10.5281/zenodo.23365244 | Historischer Vergleich |

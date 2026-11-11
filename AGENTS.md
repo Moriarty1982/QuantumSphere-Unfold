@@ -8,6 +8,11 @@ Quellen, Notizen und Werkzeuge zum *Quantum Sphaera Companion*, dem mathematisch
 Sphaera“. Die öffentliche Baseline ist **v4.11.0** vom 2026-11-10 (Version-DOI 10.5281/zenodo.24108818, Concept-DOI
 10.5281/zenodo.19210728; Vorgänger v4.10.0, 10.5281/zenodo.23991357). Alles danach liegt als Forschungsschicht vor und ist kein Release.
 
+Die aktuelle Entwicklungslinie ist **v5.0.0-draft** (seit 2026-11-11):
+datenbankgestütztes Aussageninventar und ausgewählte LaTeX-Exporte. Sie hat
+keine eigene Version-DOI; öffentliche Baseline und Zitation bleiben v4.11.0.
+Details: `notes/research/v5_0_0_development.md`.
+
 - `sources/research/`: der modulare Kandidat (`v480-companion.tex` mit Teilen unter `parts/`). Die Runden v4.9.0-r01–r86 stehen in
   `parts/v490-post-release-layers.tex` (so in v4.10.0 veröffentlicht); neue Runden heißen `v4.10.0-rNN` und kommen in eine neue Schichtdatei
   (z. B. `parts/v4100-post-release-layers.tex`).

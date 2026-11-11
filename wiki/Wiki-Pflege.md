@@ -45,6 +45,12 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 11.11.2026: Home, Gesamtbild, Versionen und Quellen, Forschungsstand – Entwicklungslinie 5.0.0-draft von öffentlicher 4.11.0 getrennt; arithmetischen HC-Partner und Grenze seiner Eigenzustandsauswahl dokumentiert.
+
+- 11.11.2026: Forschungsstand – Zeta/HC/Unschärfe-Erkundung: Paritätsgrenze, antikommutierende Auslesungen, zusätzliche T-Auswahl und Impulsdomänengrenze dokumentiert.
+
+- 11.11.2026: Forschungsstand – HC-Selbstprüfung und bedingten Anschluss an Koide mit Seed, Wurzelgesetz und offener Orthogonalitätsselektion dokumentiert; keine native Schließung.
+
 - 9.11.2026: QAM – Erkundung aller 56 Fünferauswahlen benachbarter Ringkanten und Abgleich mit der Graphzählung.
 
 - 9.11.2026: QAM – Folgeanfragen können mindestens einen Kandidaten bei einem Vorgänger voraussetzen.
