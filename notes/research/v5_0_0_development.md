@@ -26,13 +26,16 @@ vollständige automatische Verifikation des Papers.
 - Überleitungstexte und Ressourcen für weitere Paper-Auswahlen registrieren.
 - Quellenfrische nach Änderungen am Manuskript prüfen und bewusst neue
   Inventargenerationen erzeugen; keine alten Hashes überschreiben.
-- Eine konkrete 5.0-Paper-Auswahl zusammenstellen, bauen und prüfen.
+- Die eingerichteten 5.0-Ausgabeprofile fachlich vervollständigen und den
+  gemeinsamen Zwei-PDF-Releasejob einrichten. Der Physikentwurf ist gebaut;
+  die Langfassung exportiert vorerst den vollständigen Quellbaum.
 
 `sources/research/v480-companion.tex` bleibt der historische Einstiegspfad.
 `working-preamble.tex` setzt die aktuelle Entwicklungsversion. Historische
 docversion-Werte und freigegebene Dateien unter release/ bleiben erhalten.
 CITATION.cff beschreibt weiterhin die publizierte Baseline. Die vorläufige
-5.0-Kennzeichnung ist keine Änderung des Datenbankschemas (derzeit v5)
-und keine Neuvergabe mathematischer Aussageversionen.
+5.0-Kennzeichnung bezeichnet die Dokumentarchitektur und ist keine
+Neuvergabe mathematischer Aussageversionen. Das davon unabhängig versionierte
+Store-Schema wurde auf v6 erweitert, um geordnete Dokumenteditionen abzulegen.
 
 Kein Push, Tag, Merge, Zenodo-Upload oder Release durch diese Umstellung.

@@ -3,9 +3,10 @@
 11. November 2026. Veröffentlichungsvorbereitung, noch keine veröffentlichte
 Version. Autorenauftrag: Langfassung und eigenständig lesbare Physikfassung
 zukünftig gemeinsam erzeugen und möglichst unter einer Zenodo-DOI ablegen.
-Der Autor möchte die inhaltliche Aufteilung einschließlich QAM/MML/MMA
-vor der Wahl einer kurzen Physikfassung besprechen. Eine Beschränkung auf
-Koide/HC ist deshalb NICHT beschlossen.
+Nach der Themenbesprechung hat der Autor die Einrichtung der vorgeschlagenen
+Zusammenstellungen beauftragt. Die Physikfassung umfasst die unten stehende
+Argumentationslinie einschließlich QAM/MML/MMA; sie ist nicht auf Koide/HC
+beschränkt. Die Zuordnung ist eingerichtet, fachliche Lücken bleiben offen.
 
 ## Zwei Fassungen, gemeinsamer Aussagenbestand
 
@@ -15,18 +16,18 @@ Koide/HC ist deshalb NICHT beschlossen.
    ausgewählten Resultaten und expliziten Grenzen. Enthält einen ausreichenden
    Methodenteil zu QAM/MML/MMA und verweist für Details auf die Langfassung.
 
-Die Physikfassung soll nicht bloß alle Themen verkürzt aufzählen. Zuerst
-müssen Leitfrage, Hauptaussagen und erforderliche Argumentationszweige
-redaktionell festgelegt werden. Diese Auswahl ist derzeit offen.
+Die Physikfassung folgt der eingerichteten Leitfrage und Themenfolge unten.
+Die konkreten Aussagen sind zugeordnet; noch offene fachliche Prüfung wird
+nicht durch die redaktionelle Auswahl ersetzt.
 
-## Vorschlag zur Themenauswahl, noch nicht beschlossen
+## Eingerichtete Themenauswahl
 
 Leitfrage: Welche Teilchen- und Geometrieauslesungen lassen sich aus einem
 gemeinsamen graduierten Träger konsistent konstruieren, und welche zusätzlichen
 physikalischen Annahmen sind dafür erforderlich?
 
-Die Physikfassung wäre ein Paper über das Framework und seine geprüften
-Schnittstellen. Vorgeschlagene Reihenfolge:
+Die Physikfassung ist als Paper über das Framework und seine geprüften
+Schnittstellen angelegt. Eingerichtete Reihenfolge:
 
 | Abschnitt | Inhalt | Grenze / Voraussetzung |
 |---|---|---|
@@ -49,9 +50,9 @@ ausgeführt, wenn ihre geprüften Aussagen die Leitfrage tragen; sonst in
 der Grenzenübersicht genannt und in der Langfassung behandelt.
 Zurückgezogene Herleitungen dürfen nicht als aktuelle Begründung auftreten.
 
-Vor dem Build: Vorschlag mit dem Autor abstimmen, dann die genauen Aussagen,
-Voraussetzungen, Belege und offenen Verbindungen je Abschnitt prüfen und
-erst danach verbindliche Ausgabeprofile speichern.
+Die Ausgabeprofile sind als Forschungszusammenstellungen gespeichert.
+Vor einem Veröffentlichungsbuild müssen die noch offenen Aussagen,
+Voraussetzungen, Belege und Verbindungen je Abschnitt fertig geprüft werden.
 
 ## QAM/MML/MMA im Physikpaper
 
@@ -120,5 +121,13 @@ Offizielle Quellen: [Dateiverwaltung](https://help.zenodo.org/docs/deposit/manag
 - Beide PDFs fachlich und visuell prüfen; erst danach Zenodo-Entwurf/DOI,
   Metadaten, Upload und endgültige Veröffentlichung getrennt freigeben.
 
-Aktueller Status: Scope zur Diskussion, keine veröffentlichungsfertige
-Physikfassung und noch kein garantierter gemeinsamer Zwei-PDF-Build.
+Aktueller Status nach dem Einrichtungsauftrag: Beide Zusammenstellungen
+sind mit Schema v6 in der Datenbank registriert. Die Physikfassung hat
+sieben geordnete Abschnitte, Einführungstexte, das Methodenbeispiel,
+kuratierte Koide-/HC-Beweise und fünf ausdrücklich offene Kandidaten.
+Die Langfassung führt 61 Quellstationen und 2468 Aussagen; der Export
+bewahrt den vollständigen gehashten LaTeX-Quellbaum. Es gibt einen
+LaTeX-Export beider Zusammenstellungen und einen PDF-Entwurf der Physikfassung,
+aber noch keine veröffentlichungsfertige Physikfassung oder einen garantierten
+gemeinsamen Zwei-PDF-Releasejob. Historische Planpunkte oben beschreiben die
+weiteren Schritte vor einer Veröffentlichung.

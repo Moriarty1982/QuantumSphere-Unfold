@@ -701,3 +701,24 @@ Teilchen-/Generationenstruktur, Massenauslesung und ausgewählten Dynamik-/
 Geometrie-Schnittstellen erklären. Historische Herleitungen und alternative
 Modellrouten bleiben ausführlich in der Langfassung. Die genaue Aussagenwahl
 und ihre fachliche Prüfung stehen vor einem verbindlichen Exportprofil aus.
+
+### Zwei Zusammenstellungen in der Datenbank eingerichtet (11.11.2026)
+
+Auf Autorenauftrag sind Lang- und Physikfassung jetzt als versionierte
+Editionen mit geordneten Abschnitten und exakten Aussageversionen gespeichert.
+Die Physikfassung hat sieben Abschnitte: Leitfrage, Träger/HC, QAM/MML/MMA,
+Teilchen/Generationen, Massen, Dynamik/Geometrie und Grenzen. Einführungstexte
+und ein vollständiges Projektor-/Matrix-Prüfbeispiel sind registriert.
+Die Koide-/HC-Beweise werden mit ihren offenen nativen Guards übernommen.
+Fünf weitere Aussagen bleiben als benannte Prüfkandidaten sichtbar.
+
+Die Langfassung ordnet 2468 Aussagen in 61 Quellstationen und erhält beim
+Export zusätzlich den vollständigen festgehaltenen LaTeX-Quellbaum. Die
+Physikfassung wird bereits aus der Datenbank als LaTeX-Entwurf erzeugt.
+Wiederholte Erzeugung ändert unveränderte Editionen nicht; Quellenänderungen
+werden vor dem Export erkannt. Dies ist kein vollständig geprüfter
+Argumentationsbaum und keine neue Publikations- oder Beweisfreigabe.
+
+> Anmerkung für LLMs und Quellenprüfung: Schema v6 und
+> `python -m qam.tools.configure_v5_editions --out build/v5-editions-new`.
+> Der gemeinsame Zwei-PDF-Releasejob ist von den Ausgabeprofilen zu unterscheiden.

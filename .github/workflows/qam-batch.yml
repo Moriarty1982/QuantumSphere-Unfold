@@ -25,3 +25,7 @@ jobs:
           python-version: "3.12"
       - run: python -m unittest discover -s scripts/qsc_audit/tests -p test_qam_pair_batch.py
       - run: python -m unittest discover -s scripts/qsc_audit/tests -p test_framework_interface.py
+      - name: Install statement-store dependencies
+        run: python -m pip install -r qam/store/requirements.txt
+      - name: Check statement store and document editions
+        run: python -m unittest discover -s qam/store -p "test_*.py"

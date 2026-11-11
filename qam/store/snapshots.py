@@ -24,9 +24,9 @@ def create_snapshot(path, label):
             table = getattr(models, name).__table__
             tables[name] = sorted((dict(row) for row in session.execute(select(table)).mappings()), key=canonical)
         ledger_table = models.qstore_ledger.__table__
-        # Snapshot bookkeeping is excluded to make an unchanged checkpoint repeatable.
+        # Snapshot/edition bookkeeping is outside the inventory scope, preserving repeatability.
         ledger = [dict(row) for row in session.execute(select(ledger_table).where(
-            ledger_table.c.event_type != 'SNAPSHOT').order_by(ledger_table.c.event_id)).mappings()]
+            ledger_table.c.event_type.not_in(['SNAPSHOT', 'EDITION'])).order_by(ledger_table.c.event_id)).mappings()]
         payload = {'format': 'qstore-snapshot-v1', 'label': label, 'tables': tables,
                    'ledger': ledger, 'ledger_hash': digest(ledger),
                    'status': 'inventory-checkpoint',

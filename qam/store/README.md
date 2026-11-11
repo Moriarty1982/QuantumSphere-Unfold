@@ -1,5 +1,40 @@
 # QAM store – erster Aufbauschritt
 
+## Zwei Dokumentzusammenstellungen (Schema v6)
+
+`python -m qam.tools.configure_v5_editions --out build/v5-editions-new`
+legt die vollständige und die Physikfassung reproduzierbar an. Der Zielordner
+muss neu sein; die Datenbank bleibt standardmäßig `build/qam.sqlite3`.
+Ein erneuter Lauf mit unveränderten Eingaben behält dieselben Editionshashes.
+Geänderte Inhalte erzeugen eine neue Revision mit geprüftem Vorgänger.
+
+`qstore_editions`, `qstore_edition_sections` und `qstore_edition_members`
+speichern Version, Abschnittsfolge und genaue Aussagezuordnung. Die Daten
+sind unveränderlich; die Abschnittszuordnung ist keine Beweisabhängigkeit.
+`edition-read`, `edition-save` und `edition-export` stehen in `store_db` bereit.
+Beispiel: `python -m qam.tools.store_db edition-read --hash HASH --out build/edition.json`.
+
+- `qsc-v5-physics`: sieben Abschnitte, registrierte Einführungstexte,
+  vollständiges Methodenbeispiel mit rationalen Matrixbelegen und die
+  kuratierten Koide-/HC-Argumente. Fünf weitere konkrete Aussagen zu Träger,
+  Teilchen/Generationen und Geometrie bleiben als Kandidaten sichtbar.
+- `qsc-v5-full`: 61 Quellstationen in Eingabereihenfolge und 2468 Aussagen.
+  Der Export enthält den gehashten vollständigen Quellbaum und dessen
+  Einstiegspunkt. Er bewahrt auch Text ohne Satzumgebung. Dies ist noch
+  kein vollständig verifizierter Datenbankersatz für den Langtext.
+
+Die Physikfassung wird als `paper.tex` mit `assembly.json` ausgegeben;
+ungeprüfte Kandidaten erscheinen als benannte offene Punkte statt ungeprüft
+als bewiesene Aussagen. Abschnitte mit fehlenden TeX-Ressourcen werden im
+Entwurf ausdrücklich blockiert, nicht still entfernt. Quellenänderungen
+brechen den Export vor dem Anlegen des Ausgabeordners ab.
+
+Editionsdaten sind wie benannte Paper-Metadaten außerhalb des
+Inventar-Snapshotumfangs; ihre Speicherung ändert daher nicht den zugehörigen
+Inventarcheckpoint. Vollständige DB-Backups enthalten sämtliche Editionstabellen.
+Der Export ist ein Forschungsentwurf und keine Publikationsfreigabe. Ein
+gemeinsamer automatischer PDF-/Zenodo-Releasejob bleibt ein eigener Schritt.
+
 Dokumententwicklung seit 11.11.2026: **v5.0.0-draft**. Dies bezeichnet die
 datenbankgestützte Dokumentarchitektur, nicht eine neue Schemamigration oder
 eine mathematische Beweisfreigabe. Die historische Aufbauchronik unten bleibt
