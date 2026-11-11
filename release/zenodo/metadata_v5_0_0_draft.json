@@ -1,0 +1,45 @@
+{
+  "title": "Quantum Sphaera Companion: A Structure-First Mathematical Unfolding — full Companion and physics paper",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "creators": [
+    {
+      "name": "Brendecke, Marc",
+      "affiliation": "Independent Researcher, Bochum"
+    }
+  ],
+  "description": "<p>Quantum Sphaera Companion v5.0.0 introduces a database-backed organization of statements, definitions, dependencies, guards and ordered document editions. The planned release comprises two complementary documents from one source snapshot: the full Companion, retaining the broader programme and its research history, and the English physics paper <em>Graded carriers and physical readouts: conditions for mass and geometric interpretation</em>.</p><p>The physics paper studies the conditions needed to transfer a graded carrier to particle, mass and geometric readouts. It separates the exact projection identity from generation embeddings, positive principal-root laws, state selection and autonomous projected dynamics. Conditional Koide/HC comparisons, rank and positivity obstructions, a gapped mass comparison and finite geometric compatibility are presented with their hypotheses. An electromagnetic interval example explains the QAM assertion language, MML instructions and bounded MMA execution semantics. A zeta/parity comparison at sigma greater than one illustrates compatibility with uncertainty, without supplying a physical mass mechanism.</p><p>Scope: this is a conditional mathematical-physics research programme, not a completed unified theory. No native lepton spectrum, absolute physical mass scale, general gravitational field equations or closure of the open problems is established by this release. Historical qualified or withdrawn routes remain identified as such in the full Companion. Database registration, hashes, execution receipts and provenance checks do not constitute proof of physical interpretation. The manuscript has undergone documented self-review, not independent peer review.</p><p>Preparation status: these are draft metadata for a future release. No v5 version DOI or publication date has been assigned. Both document editions retain open argument-review obligations. The final PDFs, sources and evidence package must be rebuilt and checked against the frozen release revision before publication.</p>",
+  "version": "v5.0.0-draft",
+  "language": "eng",
+  "license": "cc-by-4.0",
+  "keywords": [
+    "Quantum Sphaera",
+    "mathematical physics",
+    "graded state spaces",
+    "physical readouts",
+    "Koide relation",
+    "projected dynamics",
+    "QAM",
+    "MML",
+    "MMA",
+    "research provenance"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Moriarty1982/QuantumSphere-Unfold",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "10.5281/zenodo.19210728",
+      "relation": "isVersionOf",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.24108818",
+      "relation": "isNewVersionOf",
+      "scheme": "doi"
+    }
+  ],
+  "notes": "Preparation only; not upload-ready release metadata. The planned deposit contains the full Companion and its selected English physics edition in one record. A common record DOI will identify the package, not a separate DOI for each PDF. Public citation remains v4.11.0 until v5 is actually published. The German reader edition is not part of the automatic two-document release. Open scientific guards and argument-review flags remain unchanged."
+}

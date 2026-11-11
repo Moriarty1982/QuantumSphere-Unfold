@@ -65,3 +65,13 @@ der Robertson-Quellenauthentifizierung stehen dort; keine Manuskript-
 oder Beweisstatusänderung. Die nächste Vorbereitung betrifft Metadaten
 und Änderungsübersicht; die bisherigen Merge-/Zenodo-Freigaben bleiben
 unverändert erforderlich.
+
+## Nachtrag: Metadaten und Änderungsübersicht
+
+Entwurfsmetadaten liegen in release/zenodo/metadata_v5_0_0_draft.json;
+Paketplan, Änderungsübersicht und Trockenlaufprotokoll unter
+release/v5.0.0-prep/. Der lokale Helfer hat beide konkreten Entwurfs-PDFs
+und die Metadaten erfolgreich geprüft, ohne Zenodo zu verändern.
+Dies validiert kein finales Quellenarchiv und keine serverseitige
+Metadatenannahme. Als Nächstes folgen die lokalen Präzisierungen aus
+dem Review, dann der eingefrorene Release-Stand und die konkrete Payload.

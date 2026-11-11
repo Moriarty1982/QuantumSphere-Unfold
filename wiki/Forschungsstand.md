@@ -825,3 +825,15 @@ Dynamik bleiben offen. Der MMA-Intervallbeleg wurde erneut per Hash mit
 Prämissenspur abgerufen; die Prämissen bleiben conditional. Zwei lokale
 Präzisierungen betreffen nichtnullige Quotienteneingaben und reelle
 Kopplungsskalen. Die Dokumente und Reviewflags wurden nicht umgestuft.
+
+
+### Unterlagen für Version 5
+
+Unter release/v5.0.0-prep liegen die englische Änderungsübersicht, der
+Plan für beide Dokumente und das Protokoll des lokalen Trockenlaufs.
+Die Entwurfsmetadaten beschreiben die Langfassung und das eigenständige
+Physikpaper als ein gemeinsames Paket. Der Trockenlauf mit beiden
+vorhandenen PDFs war erfolgreich; eine Annahme durch den Zenodo-Server
+ist damit nicht geprüft. Version-DOI, Veröffentlichungsdatum und finales
+Quellenpaket fehlen noch. Es wurde kein Zenodo-Entwurf angelegt und nichts
+veröffentlicht. Die öffentliche Zitation bleibt v4.11.0.

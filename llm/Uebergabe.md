@@ -28,7 +28,9 @@
 - physics-Edition: 6fdaedf173b3c8ba2f5cbe0bee3711e56cc3405fbe254518e292d3e7e84a162c.
 - publication_ready bleibt false und beide incomplete_argument_review bleiben true. Kein Release, Tag, DOI oder Zenodo-Schritt.
 - Fachliche Selbstprüfung der gesamten Physikfassung samt Anhang abgeschlossen: notes/research/referee/v5-physics-2026-11-11-pass1/report.md; kein tragender Fehler festgestellt, keine unabhängige Begutachtung.
-- Nächster Schritt: v5-Metadaten und Änderungsübersicht vorbereiten; PR #95/#96 und Review nur nach Autorenfreigabe mergen.
-- Danach fachliche Schlussprüfung und konkrete Zwei-Dokument-Veröffentlichungsunterlagen vorbereiten.
+- Entwurfsmetadaten: release/zenodo/metadata_v5_0_0_draft.json; Paketplan, Changelog und erfolgreicher lokaler Zwei-PDF-Trockenlauf unter release/v5.0.0-prep/.
+- Review und Veröffentlichungsvorbereitung liegen in PR #97 auf Basis #96.
+- Nächster Schritt: lokale Präzisierungen aus dem Review umsetzen und erneut prüfen; dann Release-Stand/Payload einfrieren. PR #95/#96/#97 nur nach Autorenfreigabe mergen.
+- Endgültige Version-DOI, tatsächliches Veröffentlichungsdatum, finaler Quellenarchivbau und serverseitige Metadatenannahme bleiben offen.
 - .codex/environments/ nicht aufnehmen; alte Branchlöschung weiterhin nicht freigegeben.
 - Keine H-/k-Nummer vergeben; die historischen Satzinventare mit 58 lokal /45 im früheren Containerlauf bleiben als Vorzustand erhalten.
