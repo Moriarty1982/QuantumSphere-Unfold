@@ -224,3 +224,17 @@ inventory-view --hash SNAPSHOT --request DATEI mit root als Inventar-Rootversion
 Die aktuelle Übersicht liegt unter build/qam-manuscript-inventory/database-overview.md, der Importbericht unter build/qam-manuscript-inventory/import.json. Der geprüfte Snapshot ist 2a3b9f873a47cdb91eca2c4016820b492ca30c516918112fc714b65200073735. Eine lokale vollständige Sicherung liegt unter build/qam-manuscript-inventory-backup. Die Grenzen der externen Quelldateisicherung gelten weiterhin.
 
 Zwanzig Tests sind erfolgreich. Die neuen Regressionen prüfen Kommentare, geschachtelte Umgebungen, wiederholten Import, unverändertes Ledger, neue Inhaltsversionen, erhaltene alte Snapshots und die direkt aus der Datenbank erzeugte Übersicht.
+
+## Fachliche Selbstprüfung des ersten Koide-Zweigs
+
+python -m qam.tools.review_koide_store --out NEUER_ORDNER gleicht die vier importierten Propositionen mit den kuratierten Aussageblöcken ab. Die Prüfung ist an den konkreten SHA256 der Originalquelle und den Bericht notes/research/koide_store_branch_review_2026_11_11.md gebunden. Eine geänderte Originalquelle verhindert die erneute Anwendung ohne Überprüfung des Berichts.
+
+Die dokumentarische same-source-as-Beziehung wird nach exaktem Vergleich des inneren Propositionstexts registriert. Sie gleicht Herkunft ab; sie ist keine physikalische Frameabbildung. Die vier Originalbeweise und ihre mathematischen Voraussetzungen wurden als Selbstprüfung unter den genannten Hypothesen beurteilt. Die zugehörigen Beweis- und Definitionsbeziehungen tragen deklarierte Review-Provenienz. Drei explizite Definitionsbereiche präzisieren die abstrakte reelle Interpretation.
+
+Für das zyklische lineare Lemma wurde die unnötige Abhängigkeit von Hauptwurzelpositivität zurückgewiesen. Vier alte generische Importprüfpflichten sind über die geprüfte kuratierte Interpretation bearbeitet protokolliert. Der rohe Import behält seinen ursprünglichen ungeprüften Status und den unspezifizierten Frame; sein alleiniger Export ist damit nicht freigegeben.
+
+Vier präzise native Guards betreffen Wurzelwörterbuch, Gleichnormauswahl, Phase/Skala und Hierarchiemechanismus. Die beiden vorherigen breiten nativen Guards bleiben offen. Die sechs offenen Einträge bedeuten vier präzisierte Pflichten neben den zwei übergeordneten Pflichten. Historische Zahlenvergleiche wurden nicht als neue Messungen oder neue numerische Vorhersagen geprüft.
+
+Der neue Snapshot ist 627534d5a7a69033cba57f9f5facb4f1a0fd4a1d9c300eb27fe46be99e7abeae. Die gespeicherte Paperrevision 6c0a3b0b995b5031648e3a0795fe84f23f456583abc1a62c3c031569648f2688 bindet die geprüften mathematischen Abhängigkeiten. Ihre Ausgabe build/qam-koide-reviewed-paper/paper.pdf wurde als vierseitiger Entwurf gebaut und visuell geprüft. Der Graph build/qam-koide-reviewed-v2/argument.md enthält zusätzlich die importierten Entsprechungen.
+
+22 Storetests einschließlich Quellenbindung, Idempotenz und verbleibender Guards sowie die 35 vorhandenen Koide-/Kerneltests sind erfolgreich. Die mathematischen Urteile stammen aus der dokumentierten Selbstprüfung. Die Tests und Reviewmarkierungen werden nicht als unabhängiges oder formales Beweiszertifikat behandelt.
