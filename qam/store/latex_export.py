@@ -28,7 +28,7 @@ def matrix_tex(value):
     return r'\begin{pmatrix}' + r'\\'.join(' & '.join(number(item) for item in row) for row in rows) + r'\end{pmatrix}'
 
 
-def render(selection):
+def render(selection, title='QAM registered comparison draft'):
     titles = {obj['version_hash']: obj['payload']['title'] for obj in selection['objects']}
     lines = [r'\documentclass[10pt,a4paper]{article}', r'\usepackage[T1]{fontenc}',
              r'\usepackage[utf8]{inputenc}', r'\usepackage{amsmath}',
@@ -39,7 +39,7 @@ def render(selection):
     for macro in macros:
         lines.append(macro['payload']['latex'])
     lines += [r'\begin{document}',
-             r'\section*{QAM registered comparison draft}',
+             r'\section*{' + escape(title) + '}',
              'Snapshot ' + selection['snapshot_hash'][:16] + r'.\par',
              'Selection ' + selection['selection_hash'][:16] + r'.\par',
              'This draft displays registered argument blocks with their declared assumptions. '
@@ -115,10 +115,14 @@ def render(selection):
 
 def export(path, snapshot_hash, roots, destination):
     selection = select_versions(path, snapshot_hash, roots)
+    return export_selection(selection, destination)
+
+
+def export_selection(selection, destination, paper=None):
     report = scrub(selection)
     if report['result'] != 'passed':
         raise ValueError('Technical export check blocked: ' + canonical(report['issues']))
-    tex = render(selection).encode('utf-8')
+    tex = render(selection, paper['title']).encode('utf-8') if paper else render(selection).encode('utf-8')
     manifest = {'format': 'qstore-latex-export-v1', 'selection': selection,
                 'generator_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
                 'selection_code_sha256': hashlib.sha256(Path(__file__).with_name('selection.py').read_bytes()).hexdigest(),
@@ -128,6 +132,8 @@ def export(path, snapshot_hash, roots, destination):
                 'files': {'paper.tex': hashlib.sha256(tex).hexdigest()},
                 'text_mode': 'escaped text; rational matrices; source-backed verbatim LaTeX blocks',
                 'status': 'research-draft'}
+    if paper:
+        manifest['paper'] = paper
     manifest_hash = digest(manifest)
     destination = Path(destination).resolve()
     destination.mkdir(parents=True, exist_ok=False)

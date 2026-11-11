@@ -30,7 +30,7 @@ def initialize(path):
         db.execute('BEGIN IMMEDIATE')
         exists = db.execute("SELECT 1 FROM sqlite_master WHERE name='qstore_schema'").fetchone()
         versions = db.execute('SELECT version FROM qstore_schema ORDER BY version').fetchall() if exists else []
-        if len(versions) > 4 or versions != [(n,) for n in range(1, len(versions) + 1)]:
+        if len(versions) > 5 or versions != [(n,) for n in range(1, len(versions) + 1)]:
             raise ValueError(f'Unsupported store schema versions: {versions}')
         if not versions:
             apply_sql(db, resources / 'schema_v1.sql')
@@ -40,13 +40,13 @@ def initialize(path):
         stored = dict(db.execute('SELECT name,description FROM qstore_object_types'))
         if stored != catalogue:
             raise ValueError('Stored type catalogue differs from catalogue_v1.json')
-        for version in range(2, 5):
+        for version in range(2, 6):
             if (version,) not in versions:
                 apply_sql(db, resources / f'schema_v{version}.sql')
                 db.execute('INSERT INTO qstore_ledger(event_type,payload_json) VALUES (?,?)',
                            ('schema-migrated', json.dumps({'schema': version})))
         db.commit()
-        return {'schema': 4, 'object_types': len(stored),
+        return {'schema': 5, 'object_types': len(stored),
                 'objects': db.execute('SELECT count(*) FROM qstore_objects').fetchone()[0]}
     except Exception:
         db.rollback()
@@ -57,7 +57,7 @@ def initialize(path):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('command', nargs='?', choices=['initialize', 'status', 'store', 'link', 'guard', 'guards', 'review', 'verify', 'receipt', 'snapshot', 'snapshot-read', 'snapshot-check', 'select', 'export', 'scrub', 'view', 'freshness', 'impact'], default='initialize')
+    parser.add_argument('command', nargs='?', choices=['initialize', 'status', 'store', 'link', 'guard', 'guards', 'review', 'verify', 'receipt', 'snapshot', 'snapshot-read', 'snapshot-check', 'select', 'export', 'scrub', 'view', 'freshness', 'impact', 'paper-save', 'paper-read', 'paper-export'], default='initialize')
     parser.add_argument('--db', type=Path, default=Path('build/qam.sqlite3'))
     parser.add_argument('--request', type=Path)
     parser.add_argument('--hash')
@@ -65,7 +65,24 @@ def main():
     parser.add_argument('--out', type=Path)
     parser.add_argument('--repo', type=Path, default=Path(__file__).resolve().parents[2])
     args = parser.parse_args()
-    if args.command in {'freshness', 'impact'}:
+    if args.command in {'paper-save', 'paper-read', 'paper-export'}:
+        from qam.store.papers import save_paper, read_paper, export_paper
+
+        if args.command == 'paper-save':
+            if args.request is None:
+                parser.error('--request is required for paper-save')
+            result = save_paper(args.db, json.loads(args.request.read_text(encoding='utf-8-sig')))
+        else:
+            if not args.hash:
+                parser.error('--hash is required for paper-read and paper-export')
+            if args.command == 'paper-export':
+                if args.out is None:
+                    parser.error('--out is required for paper-export')
+                result = export_paper(args.db, args.hash, args.out)
+            else:
+                result = read_paper(args.db, args.hash)
+        print(json.dumps(result, ensure_ascii=False))
+    elif args.command in {'freshness', 'impact'}:
         from qam.store.source_impact import freshness_report, impact_report
 
         if not args.hash:

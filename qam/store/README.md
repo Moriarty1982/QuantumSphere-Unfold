@@ -180,3 +180,15 @@ freshness enthält getrennte Auswirkungen veränderter Inhaltsquellen und verän
 Beide Abfragen ändern weder Inhalt noch Ledger. Bei Quellenabweichungen liefert freshness den Status review-needed und Prozesscode 1. Der Bericht hat einen eigenen Inhalts-Hash. Die Zuordnung eines gespeicherten Textblocks zum genauen Locator ist weiterhin eine deklarierte Herkunftsangabe.
 
 Sechzehn Tests sind erfolgreich. Der neue Test verändert Definition und Review-Nachweis, prüft transitive Abhängigkeiten, historische Ergebnisse, fehlende Dateien, CLI-Prozesscode und das unveränderte Ledger. Am vorhandenen Koide-Snapshot stimmen alle 27 erfassten Quellverknüpfungen einschließlich Guard-Quellen mit dem aktuellen Dateistand überein.
+
+## Gespeicherte Paperfassungen
+
+Schema v5 ergänzt qstore_papers als unveränderliche Folge benannter Zusammenstellungen. paper-save --request DATEI erwartet paper_id, title, snapshot_hash, roots, profile und previous. Im ersten Umfang ist profile research-draft. previous ist null für die erste Fassung und danach der aktuelle Paperhash. Ein veralteter oder fremder Vorgänger wird zurückgewiesen.
+
+Die Fassung speichert neben der Wurzelauswahl die vollständig aufgelöste Auswahl und den Hash des Auswahlcodes. Damit bleibt die gewählte Reihenfolge samt automatischen Voraussetzungen festgehalten. paper-read --hash HASH prüft Inhaltsidentität, gespeicherten Auswahlhash und den referenzierten Snapshot. paper-export --hash HASH --out NEUER_ORDNER verwendet die eingefrorene Auswahl und schreibt Paperidentität und Titel in das Manifest. Die aktuelle technische Exportprüfung läuft erneut. Bei geändertem Generator können sich Ausgabe und Manifest ändern; die Generatorhashes machen das sichtbar.
+
+Die Paperfassungen sind Metadaten über einem Snapshot und liegen außerhalb dessen bisherigem mathematischen Tabellenumfang. Eine vollständige Datenbanksicherung muss deshalb auch qstore_papers enthalten. Eine veröffentlichungsfähige Statusfreigabe und ein vollständiger portabler Store-Export stehen weiter aus.
+
+Die erste lokale Zusammenstellung koide-condition-note bindet den bisherigen Koide-Snapshot mit seinen offenen nativen Guards. Ihr Hash lautet e2ffe9581d15ebc347e60f77f3d83993fe0aeaa6b948fc7eddf057d0cb18354c. Die dreiseitige Ausgabe build/qam-koide-paper-profile/paper.pdf wurde gebaut und visuell geprüft. Sie ist ein Forschungsentwurf mit eigenem Titel.
+
+Siebzehn Tests prüfen einschließlich Paperrevisionen die Wiederholung, unveränderte alte Fassungen, identische Wiederholungsexporte bei gleichem Code, enthaltene Paperidentität, konkurrierende Vorgänger und die Sperre gegen Überschreiben oder Löschen.
