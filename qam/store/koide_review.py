@@ -1,15 +1,15 @@
 """Apply the explicit, source-pinned Koide self-review to registered branch versions."""
 
 import hashlib
-import json
 from pathlib import Path
 import re
 
 from sqlalchemy import select
 
 from qam.store.orm import store_session
-from qam.store.registry import register, register_link, register_guard, register_review, latest_review
+from qam.store.registry import register, register_guard
 from qam.store.snapshots import create_snapshot
+from qam.store.review_support import SourceReview
 
 
 SOURCE = 'sources/research/parts/koide-and-kernel.tex'
@@ -26,34 +26,8 @@ def apply_review(database, repo):
                 'sha256': hashlib.sha256(report.read_bytes()).hexdigest(),
                 'revision': 'codex-self-review-2026-11-11', 'locator': 'four claim cards and proof obligations'}
 
-    def find(object_id):
-        with store_session(database) as (session, models):
-            rows = list(session.scalars(select(models.qstore_versions).where(models.qstore_versions.object_id == object_id)))
-            valid = []
-            for row in rows:
-                sources = list(session.scalars(select(models.qstore_sources).where(models.qstore_sources.version_hash == row.version_hash)))
-                if any(item.source_path == SOURCE and item.source_hash == AUDITED_SHA256 for item in sources):
-                    valid.append((row.version_hash, json.loads(row.payload_json)))
-            if len(valid) != 1:
-                raise ValueError(f'Expected one source-pinned version of {object_id}')
-            return valid[0]
-
-    def assess(kind, subject, status, reason):
-        with store_session(database) as (session, models):
-            previous = latest_review(session, models, kind, subject)
-            if previous:
-                payload = json.loads(previous.payload_json)
-                if previous.status == status and payload['reason'] == reason and payload['evidence'] == evidence:
-                    return previous.review_hash
-            previous_hash = previous.review_hash if previous else None
-        return register_review(database, repo, {'kind': kind, 'subject': subject, 'previous': previous_hash,
-            'status': status, 'reviewer': 'Codex self-review 2026-11-11', 'reason': reason, 'evidence': evidence})['review_hash']
-
-    def reviewed_link(source, target, kind, reason):
-        key = register_link(database, {'source': source, 'target': target, 'kind': kind,
-                                     'status': 'declared', 'description': reason})['relation_hash']
-        assess('relation', key, 'reviewed', reason)
-        return key
+    review = SourceReview(database, repo, SOURCE, AUDITED_SHA256, evidence)
+    find, assess, reviewed_link = review.find, review.assess, review.reviewed_link
 
     # Complete every documentary check before writing the reviewed associations.
     pairs = []

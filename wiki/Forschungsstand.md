@@ -497,3 +497,40 @@ Ein orthogonaler Austausch von Feld- und Registerphase liefert den reversiblen L
 **Gesamtinventar im neuen Store:** 2468 Aussageumgebungen aus 61 Dateien sind mit Originaltext, Quellhash und offenem Prüfstatus registriert, darunter 983 Definitionen. Jede Aussage hat eine offene Pflicht zur Status-/Frame-/Prämissen-/Beweisprüfung. Themenzuordnungen sind organisatorische Vorschläge, 841 Aussagen bleiben übergreifend oder unzugeordnet. 518 Aussagen besitzen vorläufige Identitäten ohne eigenes Label. Historische und archivierte Quelltexte sind im Inventar enthalten; eine vollständige semantische QAM-Übersetzung folgt daraus nicht.
 
 **Erster fachlich geprüfter Store-Zweig:** Die vier Koide-Propositionen wurden mit den importierten Entsprechungen abgeglichen und unter ihren expliziten mathematischen Hypothesen selbstgeprüft. Drei Definitionsbereiche und vier Originalbeweise sind konkret zugeordnet. Die native Wurzelauslesung, Gleichnormauswahl, Phase/Skala und der Hierarchiemechanismus bleiben als vier präzise Pflichten neben den bisherigen breiten Guards offen. Dies ist eine dokumentierte Selbstprüfung und keine formale oder unabhängige Zertifizierung.
+
+
+## HC-Identifikationszweig: Selbstprüfung vom 2026-11-11
+
+Fünf Aussagen aus `hc-mass-identification.tex` sind mit Originalbeweisen,
+expliziten lokalen Definitionsbereichen und geprüften Quellzuordnungen registriert.
+Die Selbstprüfung bestätigt die abstrakten Aussagen unter ihren Voraussetzungen.
+Sie konstruiert keine native Massenauslesung. Vier Guards bleiben offen:
+HC-/Skalarinterpretation, native Mass-root-Abbildung, Generationenkopplung sowie
+unabhängige Normselektion, Phase und Skala. Die generischen Guards der Rohimporte
+bleiben vorsichtshalber offen; deren Metadaten werden nicht umgeschrieben.
+
+Reproduktion: `python -m qam.tools.review_hc_store --db build/qam.sqlite3 --out build/hc-review-new`.
+Der Zielordner muss neu sein. Der Lauf prüft den festgehaltenen Quellhash und
+registriert wiederholt dieselben Versionen. Ausgabe: Argumentationsbaum, JSON-Bericht
+und LaTeX-Entwurf. Selbstprüfung: `notes/research/hc_identification_store_review_2026_11_11.md`.
+Die Übertragung zum Koide-Zweig ist noch nicht als eigene geprüfte Verbindung registriert.
+
+### Ergänzung vom 11.11.2026: bedingte Verbindung zu Koide
+
+Der Anschluss ist jetzt mit seinen Zusatzvoraussetzungen registriert. Eine reelle
+Koisometrie $B$ mit HC-invariantem Kern transportiert den Projektor in den
+euklidischen Wurzelraum. Mit unabhängigem Seed $Bf_0=e$, positivem Faktor und
+nichtnulliger nichtnegativer Hauptwurzelauslesung folgt
+$K=2/[3(1+h)]$, wobei $h=\langle B^*e,JB^*e\rangle$.
+Koide verlangt zusätzlich $h=0$. Der Abstieg allein reicht nicht:
+$J=I$ liefert gleiche Wurzeln und $K=1/3$.
+
+Dies ist eine Selbstprüfung der bedingten Implikation im vorhandenen Paper.
+Native Abbildung, Seed/Wurzelgesetz und unabhängige Orthogonalitätsselektion
+bleiben offen. Die Datenbank hält außerdem die noch fehlende maschinenprüfbare
+Frame-Abbildung als eigene Prüfpflicht sichtbar. Keine OP-Schließung.
+
+> Anmerkung für LLMs und Quellenprüfung: Originalabsatz nach
+> `v480:hc-mass-descent`, Ziel `v480:koide-hc-mixing`;
+> Bericht `notes/research/hc_koide_bridge_review_2026_11_11.md`.
+> Der LaTeX-Entwurf besteht die statische Exportprüfung, bleibt aber Forschungsentwurf.

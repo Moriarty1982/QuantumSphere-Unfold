@@ -238,3 +238,37 @@ Vier präzise native Guards betreffen Wurzelwörterbuch, Gleichnormauswahl, Phas
 Der neue Snapshot ist 627534d5a7a69033cba57f9f5facb4f1a0fd4a1d9c300eb27fe46be99e7abeae. Die gespeicherte Paperrevision 6c0a3b0b995b5031648e3a0795fe84f23f456583abc1a62c3c031569648f2688 bindet die geprüften mathematischen Abhängigkeiten. Ihre Ausgabe build/qam-koide-reviewed-paper/paper.pdf wurde als vierseitiger Entwurf gebaut und visuell geprüft. Der Graph build/qam-koide-reviewed-v2/argument.md enthält zusätzlich die importierten Entsprechungen.
 
 22 Storetests einschließlich Quellenbindung, Idempotenz und verbleibender Guards sowie die 35 vorhandenen Koide-/Kerneltests sind erfolgreich. Die mathematischen Urteile stammen aus der dokumentierten Selbstprüfung. Die Tests und Reviewmarkierungen werden nicht als unabhängiges oder formales Beweiszertifikat behandelt.
+
+
+## HC-Identifikationszweig: Selbstprüfung vom 2026-11-11
+
+Fünf Aussagen aus `hc-mass-identification.tex` sind mit Originalbeweisen,
+expliziten lokalen Definitionsbereichen und geprüften Quellzuordnungen registriert.
+Die Selbstprüfung bestätigt die abstrakten Aussagen unter ihren Voraussetzungen.
+Sie konstruiert keine native Massenauslesung. Vier Guards bleiben offen:
+HC-/Skalarinterpretation, native Mass-root-Abbildung, Generationenkopplung sowie
+unabhängige Normselektion, Phase und Skala. Die generischen Guards der Rohimporte
+bleiben vorsichtshalber offen; deren Metadaten werden nicht umgeschrieben.
+
+Reproduktion: `python -m qam.tools.review_hc_store --db build/qam.sqlite3 --out build/hc-review-new`.
+Der Zielordner muss neu sein. Der Lauf prüft den festgehaltenen Quellhash und
+registriert wiederholt dieselben Versionen. Ausgabe: Argumentationsbaum, JSON-Bericht
+und LaTeX-Entwurf. Selbstprüfung: `notes/research/hc_identification_store_review_2026_11_11.md`.
+Die Übertragung zum Koide-Zweig ist noch nicht als eigene geprüfte Verbindung registriert.
+
+### Bedingte HC–Koide-Verbindung (Folgeschritt, 2026-11-11)
+
+Die zuvor fehlende Verbindung ist jetzt als source-pinned Erklärung mit zwei
+geprüften Abhängigkeiten zu den Originalbeweisen registrierbar:
+`python -m qam.tools.review_hc_koide_bridge --out build/hc-koide-new`.
+Voraussetzung sind der registrierte Koide- und HC-Zweig. Der Zielordner muss neu sein.
+`hc_koide_bridge.py` prüft beide Quellhashes vor der Registrierung.
+Die wiederholte Anwendung fügt keine neuen Versionen oder Reviews hinzu.
+
+Abstieg plus unabhängiger Seed und zulässiges Wurzelgesetz liefern
+`K=2/[3(1+h)]`, mit `h=<B*e,JB*e>`. Erst `h=0` liefert Koide.
+Drei zusätzliche Guards bleiben offen: native Realisierung, unabhängige
+Orthogonalität und maschinenprüfbare Frame-Abbildung. Die Auswahl behält
+`frame-bridge-required`; eine manuelle Selbstprüfung ersetzt keinen typisierten
+Abbildungsnachweis. Die Originalquellen und bestehende Guards bleiben unverändert.
+Bericht: `notes/research/hc_koide_bridge_review_2026_11_11.md`.
