@@ -168,3 +168,15 @@ snapshot-check --hash HASH prüft die internen Versions-, Relations-, Guard-, Re
 Geprüft werden insbesondere rekonstruierte Inhaltsversionshashes, fehlende Adressen, Review-Vorgänger und Verzweigungen, Belegheader und die Zuordnung ihrer Eingabeversionen. Die Prüfung betrifft den gespeicherten Stand. Aktuelle Dateibytes auf dem Dateisystem und mathematische Gültigkeit sind zusätzliche Prüfungen. Inhaltsadressierung ersetzt keine Authentifizierung des Urhebers.
 
 Fünfzehn Tests sind erfolgreich. Die Integritätstests verändern Kopien eines Snapshots und prüfen die Erkennung geänderter Inhalte, fehlerhafter Relationen, widersprüchlicher Belegheader und entfernter Eingabeverknüpfungen. Der bestehende Koide-Snapshot besteht die neue Integritätsprüfung.
+
+## Quellenstand und Auswirkungen
+
+freshness --hash SNAPSHOT vergleicht gespeicherte Quell-SHA256 mit den aktuellen Dateien unter --repo. Beobachtungen unterscheiden matches, bytes-changed, missing, unreadable und invalid-path. Die Auswertung erfasst Quellenfundstellen sowie Guard-Quellen und Review-Nachweise. Schon eine reine Änderung der Zeilenenden kann bytes-changed ergeben. Das ist ein Anlass zur Prüfung und keine automatische Aussage über eine mathematische Änderung.
+
+impact --hash SNAPSHOT --request DATEI verfolgt roots als genaue Versionshashes über deklarierte und review-markierte requires-/interpreted-by-Kanten zu abhängigen Versionen. Redaktionelle Übergangsendpunkte werden als eigene Kontextabhängigkeiten berücksichtigt. Die Ausgabe listet betroffene Prüfbelege, Guards und gespeicherte Snapshots, die betroffene Versionen enthalten. Vorgeschlagene oder abgelehnte Abhängigkeiten werden dabei nicht als bestätigte Voraussetzungen verfolgt.
+
+freshness enthält getrennte Auswirkungen veränderter Inhaltsquellen und veränderter Evidenzdateien. Ein Review mit inzwischen geänderter Nachweisdatei wird zur erneuten Prüfung gemeldet. Historische Reviews und Belege bleiben in ihren gespeicherten Zuständen erhalten. containing_snapshots bezeichnet Bestände, die die genannten Versionen enthalten. Daraus folgt keine automatische Ungültigkeit jeder möglichen Auswahl aus diesen Beständen.
+
+Beide Abfragen ändern weder Inhalt noch Ledger. Bei Quellenabweichungen liefert freshness den Status review-needed und Prozesscode 1. Der Bericht hat einen eigenen Inhalts-Hash. Die Zuordnung eines gespeicherten Textblocks zum genauen Locator ist weiterhin eine deklarierte Herkunftsangabe.
+
+Sechzehn Tests sind erfolgreich. Der neue Test verändert Definition und Review-Nachweis, prüft transitive Abhängigkeiten, historische Ergebnisse, fehlende Dateien, CLI-Prozesscode und das unveränderte Ledger. Am vorhandenen Koide-Snapshot stimmen alle 27 erfassten Quellverknüpfungen einschließlich Guard-Quellen mit dem aktuellen Dateistand überein.

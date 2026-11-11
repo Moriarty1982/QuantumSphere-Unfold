@@ -57,7 +57,7 @@ def initialize(path):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('command', nargs='?', choices=['initialize', 'status', 'store', 'link', 'guard', 'guards', 'review', 'verify', 'receipt', 'snapshot', 'snapshot-read', 'snapshot-check', 'select', 'export', 'scrub', 'view'], default='initialize')
+    parser.add_argument('command', nargs='?', choices=['initialize', 'status', 'store', 'link', 'guard', 'guards', 'review', 'verify', 'receipt', 'snapshot', 'snapshot-read', 'snapshot-check', 'select', 'export', 'scrub', 'view', 'freshness', 'impact'], default='initialize')
     parser.add_argument('--db', type=Path, default=Path('build/qam.sqlite3'))
     parser.add_argument('--request', type=Path)
     parser.add_argument('--hash')
@@ -65,7 +65,24 @@ def main():
     parser.add_argument('--out', type=Path)
     parser.add_argument('--repo', type=Path, default=Path(__file__).resolve().parents[2])
     args = parser.parse_args()
-    if args.command in {'select', 'export', 'scrub', 'view'}:
+    if args.command in {'freshness', 'impact'}:
+        from qam.store.source_impact import freshness_report, impact_report
+
+        if not args.hash:
+            parser.error('--hash is required for freshness and impact')
+        if args.command == 'freshness':
+            result = freshness_report(args.db, args.hash, args.repo)
+        else:
+            if not args.request:
+                parser.error('--request is required for impact')
+            request = json.loads(args.request.read_text(encoding='utf-8-sig'))
+            if not isinstance(request, dict) or set(request) != {'roots'}:
+                parser.error('Impact request requires roots only')
+            result = impact_report(args.db, args.hash, request['roots'])
+        print(json.dumps(result, ensure_ascii=False))
+        if result.get('result') == 'review-needed':
+            raise SystemExit(1)
+    elif args.command in {'select', 'export', 'scrub', 'view'}:
         from qam.store.selection import select_versions
 
         if not args.hash or not args.request:
