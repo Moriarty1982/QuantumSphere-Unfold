@@ -1,0 +1,14 @@
+{
+  "frame": "store-matrix-comparison",
+  "definition": {
+    "title": "Rational two-dimensional projector comparison",
+    "body": "P = [[1/2,1/2],[1/2,1/2]]. M = [[5/4,3/4],[3/4,5/4]]. N = [[1,0],[0,2]]. Check P squared equals P and compare MP-PM with NP-PN.",
+    "scope": "Finite rational comparison on Q squared in its declared coordinate basis",
+    "assumptions": ["No identification with a native physical transport is supplied"]
+  },
+  "seeds": {
+    "projector": [["1/2", "1/2"], ["1/2", "1/2"]],
+    "commuting-transport": [["5/4", "3/4"], ["3/4", "5/4"]],
+    "noncommuting-transport": [[1, 0], [0, 2]]
+  }
+}

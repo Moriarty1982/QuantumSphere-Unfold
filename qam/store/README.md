@@ -1,0 +1,170 @@
+# QAM store – erster Aufbauschritt
+
+Die erste Migration ergänzt die lokale QAM-Datenbank um Tabellen mit dem Präfix qstore_. Die bestehenden Claim-, Prämissen-, Cache- und Belegtabellen sowie das Manuskriptinventar werden bei der Initialisierung erhalten.
+
+Aufruf aus dem Repository mit `python -m qam.tools.store_db`. Für eine andere Datenbank dient `--db PFAD`. Wiederholte Initialisierung ist idempotent. Migration und Typenkatalog werden in einer gemeinsamen Schreibtransaktion angelegt. Unbekannte Schemaversionen und abweichende Typenkataloge führen zum Abbruch.
+
+## Definitionen und Seeds
+
+Der versionierte Typenkatalog catalogue_v1.json enthält insbesondere definition und seed. Eine Definition beschreibt Bedeutung, Geltungsbereich und Voraussetzungen. Ein mathematischer Seed ist ein Ausgangswert oder Ausgangsobjekt mit Typ, Frame, Herkunft und Annahmen. Ein Seed soll auf die konkrete Definitionsversion seiner Interpretation verweisen. Diese Verknüpfung wird im nächsten Schritt über die Registrierungs- und LINK-Schnittstelle validiert.
+
+Davon getrennt ist das technische Datenbank-Seeding. In diesem Schritt wird nur der Objekttypenkatalog initialisiert. Physikalische Ausgangswerte, Definitionen und Behauptungen müssen mit Quellen registriert werden. Der Datenbestand enthält dadurch noch keine neuen mathematischen Aussagen.
+
+## Schema und nächste Schnittstelle
+
+qstore_objects hält stabile Objektkennungen und ihren Typ. qstore_versions hält unveränderliche Inhaltsversionen mit Status und Frame. qstore_sources verknüpft Versionen mit Quellenstand, Quellhash und Fundstelle. qstore_relations nimmt typisierte Beziehungen zwischen genauen Versionen auf. qstore_guards hält offene oder geprüfte Verpflichtungen. qstore_ledger hält append-only Ereignisse.
+
+Das ist das erste physische Schema. Die STORE/LINK-API muss als Nächstes kanonische Versionshashes, Seed-Pflichtfelder, Quellprüfung, Relationsvokabular und atomare Ledgerereignisse durchsetzen. Die Statusmarke reviewed benötigt definierte Review-Provenienz. Relation- und Guard-Revisionen, Snapshots, Branches und Exportmanifeste folgen vor dem ersten produktiven Import. Bis dahin werden neue Objekte ausschließlich mit der später geprüften Registrierungsschnittstelle angelegt.
+
+Auf Autorentscheidung wird SQLAlchemy 2.0 als ORM über der vorhandenen SQLite-Datenbank eingesetzt. Das Schema modelliert den Store-Abschnitt aus sources/research/parts/v470/07_qam_infrastructure.tex und folgt dem Fahrplan notes/research/qam_store_latex_fahrplan_2026_11_11.md.
+
+## SQLAlchemy-Zugriff
+
+SQLAlchemy 2.0 ist die gewählte ORM-Schicht. Installation mit python -m pip install -r qam/store/requirements.txt. Das Modul qam/store/orm.py bildet die vorhandenen qstore_-Tabellen über Schema-Reflection auf ORM-Klassen ab. Die SQL-Migration bleibt für Constraints und Trigger maßgeblich. Beziehungen werden vorerst über ihre expliziten Endpunktspalten abgefragt; die geprüfte LINK-Schnittstelle folgt als eigener Schritt.
+
+Mit python -m qam.tools.store_db status läuft eine erste reguläre Abfrage über SQLAlchemy. store_session liefert eine transaktionale Session und die Modellklassen. Erfolgreiche Blöcke werden committet, Fehler führen zum Rollback. Jede ORM-Verbindung aktiviert Fremdschlüssel und explizite Transaktionen.
+
+python -m unittest qam.store.test_orm prüft Commit, Rollback, wiederholte Initialisierung, Fremdschlüssel sowie die Unveränderlichkeit von Inhaltsversionen und Ledger. Die Testwerte werden ausschließlich in einer temporären Datenbank angelegt. Die API für Hashprüfung und mathematische Registrierung folgt vor dem produktiven Inhaltsimport.
+
+## STORE und LINK für Definitionen und Seeds
+
+Die CLI unterstützt store --request DATEI und link --request DATEI neben initialize und status. --repo legt die Wurzel der zu prüfenden Quelldateien fest. STORE erwartet object_id, kind, frame, status, payload und source. Erlaubte erste Objekttypen sind definition und seed, mit Status imported-unreviewed, declared oder conditional.
+
+Eine Definition benötigt title, body, scope und assumptions. Ein Seed benötigt title, value, value_type, origin, assumptions und definition_version. assumptions ist eine Liste expliziter Annahmen. Ein leerer Eintrag oder ein fehlender Seedwert führt zum Abbruch. definition_version muss auf eine registrierte Definition im gleichen deklarierten Frame zeigen. Eine semantische Typprüfung des Feldwerts ist noch offen.
+
+source enthält den relativen Pfad path, den SHA256 der aktuellen Dateibytes, revision und locator. Der Pfad muss innerhalb der angegebenen Repositorywurzel liegen. Revision und Locator sind deklarierte Herkunftsangaben; ihre semantische Zuordnung zu Git beziehungsweise einer Aussage wird noch nicht automatisch geprüft. Eine Quellenänderung erzeugt eine neue Fundstelle und bei geändertem registriertem Inhalt eine neue Inhaltsversion.
+
+Versionshashes verwenden einen eigenen SHA256-Vertrag qstore-version-v1 über kanonisches UTF-8-JSON mit sortierten Schlüsseln, kompakten Trennzeichen und ausgeschlossenen NaN-/Infinity-Werten. Identität, Typ, Frame, Status und Payload gehen ein. Quellfundstellen werden separat protokolliert. Dieser Vertrag ist vom bestehenden QAM-MD5-Belegformat getrennt.
+
+Ein identischer STORE-Aufruf erzeugt keine zusätzliche Version oder Ledgerereignisse. Seedversion und interpreted-by-Verknüpfung werden atomar registriert. Fehler rollen Objekt, Version, Quelle und Ledger gemeinsam zurück. Schreibtransaktionen werden vor der Leseprüfung serialisiert.
+
+LINK erwartet source, target als Versionshashes sowie kind, status und description. Die ersten Beziehungstypen sind interpreted-by, requires, explains, proves, contains und supersedes. proposed und declared kennzeichnen den Registrierungsstand. Auch ein declared-proves-Eintrag ist eine Autorendeklaration. Eine überprüfte Beweiskante benötigt die spätere Review-Schnittstelle. Eine interpretierende Definition muss im selben Frame liegen; allgemeine Framebrücken sind noch nicht implementiert.
+
+Die automatisierten Tests qam.store.test_registry prüfen Wiederholbarkeit, neue Inhaltsversionen, veraltete Quellhashes, atomare Zurückweisung ungültiger Seeds und die Sperre einer ungeprüften Statuspromotion.
+
+## Offene Brücken registrieren
+
+guard --request DATEI registriert eine offene Nachweispflicht. Pflichtfelder sind subject als exakter Versionshash, target als Versionshash oder null, title, obligation und source mit demselben Quellformat wie STORE. Beide vorhandenen Endpunkte werden geprüft. Die Registrierung erfolgt atomar und identische Wiederholung erzeugt keinen zusätzlichen Eintrag. Der eigene qstore-guard-v1-Hash umfasst Endpunkte, offenen Status und Payload einschließlich Herkunft.
+
+guards gibt alle offenen Verpflichtungen mit Quellen und Endpunkten in stabiler Reihenfolge als JSON aus. Eine fehlende Verbindung kann damit gespeichert werden, ohne eine logische Abhängigkeit als bewiesen zu behandeln. Diese Schnittstelle erlaubt ausschließlich das Anlegen offener Verpflichtungen. Erledigung und Revision einer Verpflichtung benötigen die folgende Review-/Revisionsschicht mit konkreter Evidenz und nachvollziehbarer Herkunft.
+
+Die Registry-Tests prüfen zusätzlich identische Wiederholung, gespeicherten offenen Status, fehlende Endpunkte und die Zurückweisung eines mitgelieferten Erledigungsstatus. Die produktive Datenbank ist bisher ohne registrierte mathematische Inhalte; die Tests legen Beispiele in einer temporären Datenbank an.
+
+## Revisionsspur für Brücken und Beziehungen
+
+Schema v2 ergänzt unveränderliche Review-Einträge und schützt auch ursprüngliche Guards und Relationen gegen Überschreiben und Löschen. Bestehende v1-Datenbanken werden bei Initialisierung atomar erweitert.
+
+review --request DATEI erwartet kind (guard oder relation), subject als ursprünglichen Hash, previous als aktuellen Review-Hash oder null beim ersten Review, status, reviewer, reason und evidence. evidence verwendet das geprüfte Quellenformat. Eine neue Bewertung nennt den unmittelbaren Vorgänger; konkurrierende veraltete Bewertungen werden zurückgewiesen. Identische Wiederholung bleibt idempotent. Bewertungswechsel, einschließlich Wiederöffnung, erhalten die bisherige Historie.
+
+Das Review ist eine deklarierte Beurteilung eines benannten Menschen oder Agenten mit nachprüfbarem Dateihash. Die Schnittstelle prüft die Existenz des Nachweises und die Historie. Sie authentifiziert keine Person und führt keine automatische mathematische Beweisprüfung oder MMA-Zertifizierung aus. Der Status satisfied bedeutet deshalb eine protokollierte Beurteilung mit dieser Evidenzart.
+
+guards berücksichtigt den letzten Review-Status. Der ursprüngliche Eintrag bleibt unverändert. Die Tests prüfen Erledigung, Wiederöffnung, identische Wiederholung und konkurrierende Vorgänger. Der produktive Manuskriptimport steht weiterhin aus.
+
+## Automatische Prüfung
+Der erste rationale Matrixprüfer und seine Belegverträge stehen in [VERIFICATION.md](VERIFICATION.md). Schema v3 speichert unveränderliche Prüfbelege samt exakten Eingabeversionen. Die CLI stellt verify und receipt bereit.
+
+## Snapshots des Store-Bestands
+
+Schema v4 speichert unveränderliche, inhaltsadressierte Bestands-Snapshots. snapshot --label NAME bindet sämtliche Store-Objekte, Versionen, Quellen, Beziehungen, Guards, Reviews und Prüfbelege einschließlich der Eingabeverknüpfungen. Das zugehörige Ledger wird eingebettet und zusätzlich gehasht. snapshot-read --hash HASH liest den eingebetteten Zustand nach Integritätsprüfung zurück.
+
+Die Snapshots tragen inventory-checkpoint. Damit lassen sich auch bedingte oder ungeprüfte Bestände festhalten. Die stärkere mathematische Zulässigkeit eines guarded snapshot bleibt eine spätere SCRUB-Verpflichtung. Das ältere Claim-/MMA-Register und das Manuskriptinventar liegen außerhalb dieses ersten Snapshotumfangs; referenzierte Quelldateien werden durch Herkunftsmetadaten erfasst.
+
+Ein identischer Bestand mit identischem Label erzeugt denselben Snapshot. Die Snapshot-Buchungsereignisse selbst sind aus dem eingebetteten Ledger ausgeschlossen, damit die Wiederholung unverändert bleibt. Alle anderen Ledgerereignisse gehen ein. Ein anderer Labeltext erzeugt einen eigenen Snapshot.
+
+Der erste lokale Snapshot matrix-comparison-first enthält vier Inhaltsversionen, drei Definitionsverknüpfungen und zwei Matrixprüfbelege. Die vier Testsuiten einschließlich qam.store.test_snapshots prüfen Wiederholung, Unveränderlichkeit, Abfrage über CLI und den Erhalt alter Snapshots nach späterer Erweiterung des Live-Bestands. CLONE und ROLLBACK folgen als eigene Funktionen.
+
+## Auswahl aus einem festen Snapshot
+
+select --hash SNAPSHOT --request DATEI liest eine Anfrage mit roots als Liste genauer Versionshashes. Die Auswahl wird ausschließlich aus dem eingebetteten Snapshotzustand berechnet. interpreted-by und requires ziehen bei declared oder reviewed ihre Ziele als Voraussetzungen hinzu. proposed wird als offene Verbindung gemeldet. rejected wird nicht als Abhängigkeit verfolgt. Dokumentzugehörigkeit bestimmt keine logische Ableitung.
+
+Die Ausgabe enthält die Voraussetzungen vor ihren Verwendungen, jede Version einmal, einen deterministischen Auswahlhash sowie Statushinweise, Annahmen, offene beziehungsweise fehlgeschlagene Guards und erforderliche Framebrücken. Ein Zyklus oder eine im Snapshot fehlende Zielversion bricht die Auswahl mit Diagnose ab.
+
+Verwandte Prüfbelege werden mitgeführt. all_matrix_inputs_selected kennzeichnet, ob die Matrixeingaben des Belegs vollständig in der Auswahl enthalten sind. Ein nur über eine gemeinsame Definition verwandter Kontrollbeleg gilt dadurch nicht als Prüfung der gesamten Auswahl. passed hebt weder Objektstatus noch offene Voraussetzungen auf. LaTeX-Ressourcen und Veröffentlichungseignung sind noch gesondert zu prüfen.
+
+Der erste Auswahltest am gespeicherten Vergleichs-Snapshot liefert eine Definition und zwei Seeds sowie den passenden erfolgreichen Matrixbeleg. Der Regressionstest test_selection kontrolliert die Reihenfolge, Mehrfachverwendung, offenen Voraussetzungen, fehlende Wurzeln, Zyklen und die Unabhängigkeit eines alten Snapshots von späteren Live-Verknüpfungen.
+
+## Erster LaTeX-Export
+
+export --hash SNAPSHOT --request DATEI --out NEUER_ORDNER verwendet dieselbe roots-Anfrage wie select. Er erzeugt paper.tex und manifest.json. Bestehende Ausgabeordner werden zurückgewiesen. Das Manifest wird zuletzt geschrieben; eine Ausgabe ohne Manifest gilt als unvollständig. Die Generierung startet keinen Compiler.
+
+Der erste Export unterstützt Definitionen und rationale Matrix-Seeds. Registrierte Textfelder werden als Text maskiert; die Matrixformeln werden aus den bereits geprüften rationalen Eingabeformaten erzeugt. Das ist die erste begrenzte Exportroute. Originale LaTeX-Bausteine, Beweise, Übergangstexte und deren Makro-/Literaturabhängigkeiten folgen als weitere Objekttypen. Der aktuelle pdfLaTeX-Prototyp wurde mit dem englischen Vergleichsbestand geprüft; beliebige Unicode-Inhalte benötigen eine gesonderte Engine-/Fontprüfung.
+
+Der Entwurf zeigt Status, Frames, offene Voraussetzungen und nur diejenigen Matrixbelege, deren konkrete Matrixeingaben vollständig ausgewählt sind. Das Manifest enthält die vollständige Auswahl, Snapshot- und Versionshashes sowie SHA256 des erzeugten TeX und des Generator- und Auswahlcodes. Die TeX-/Manifestausgabe ist bei gleicher Auswahl und gleichem Code reproduzierbar. Ein PDF-Build ist ein separater Schritt.
+
+Der geprüfte lokale Beispielentwurf liegt unter build/qam-paper-comparison-v3/paper.pdf. Er wurde mit zwei pdfLaTeX-Durchläufen gebaut und als einseitiges A4-Dokument visuell kontrolliert. Das Log enthält keine undefinierten Verweise, doppelten Labels, Rerun- oder Overfull-Meldungen. Die sechs Testsuiten einschließlich test_latex_export prüfen Manifestintegrität, Reproduzierbarkeit, Textmaskierung und die Sperre gegen Überschreiben.
+
+## Originale LaTeX-Blöcke und Übergangstexte
+
+STORE unterstützt jetzt claim, proof, explanation und transition mit title, latex, assumptions und dependencies. dependencies nennt konkrete Versionshashes und wird atomar als deklarierte requires-Verknüpfung registriert. Alle abhängigen Versionen müssen im selben Frame liegen. Der LaTeX-Inhalt muss wörtlich in der per Hash geprüften Quelldatei vorkommen. Zeilenenden dürfen sich durch LF/CRLF-Konvertierung unterscheiden. Originaltext und Herkunft bleiben damit verbunden.
+
+latex-resource registriert zunächst Paketabhängigkeiten mit title, package und assumptions. Im ersten Paketumfang stehen amsthm, amssymb und array zur Verfügung. Der Export sammelt diese Ressourcen einmalig im Vorspann. Makros, Literatur, Abbildungen und Pakete außerhalb dieses Umfangs benötigen weitere geprüfte Ressourcentypen. Die deklarierte Abhängigkeitsliste wird noch nicht automatisch aus beliebigem TeX erschlossen.
+
+Ausgewählte Textblöcke werden als Original-LaTeX ausgegeben. Der Export startet weiterhin keinen Compiler. Redaktionelle Reihenfolge folgt der Wurzelauswahl unter Wahrung der deklarierten Voraussetzungen. Ein transition-Objekt ist derzeit ein explizit ausgewählter Textbaustein mit Voraussetzungen; die automatische Platzierung zwischen bestimmten Quell- und Zielaussagen folgt später.
+
+python -m qam.tools.store_latex_example --out NEUER_ORDNER registriert den vorhandenen Satz v480:native-penalty-identity und seinen Originalbeweis aus native-operator-link.tex. Die positiven Metrik-/Domänenannahmen werden mitgeführt. Das lokale Ergebnis build/qam-original-latex-example/paper.pdf wurde zweimal kompiliert und visuell als einseitige Ausgabe kontrolliert. Die Kompilierung prüft die Darstellung; eine neue mathematische Beweisprüfung ist damit nicht erfolgt.
+
+Sieben Testsuiten sind erfolgreich. test_latex_blocks prüft Paketauflösung, wortgetreuen Beweisexport, Übergangstext mit offener Voraussetzung, Quellenbindung sowie atomaren Abbruch bei fehlenden Abhängigkeiten.
+
+## Automatische Übergangsplatzierung
+
+transition unterstützt optional placement mit after und before als genauen Versionshashes. Beide Endpunkte müssen bereits im selben Frame registriert sein. Diese Angaben steuern die redaktionelle Reihenfolge und werden getrennt von dependencies gespeichert.
+
+Sind beide Endpunkte in einer Snapshot-Auswahl enthalten, wird der passende Übergang automatisch hinzugenommen. Wird ein Übergang selbst als Wurzel ausgewählt, werden seine beiden Endpunkte als Kontext aufgenommen. Die resultierende Reihenfolge erfüllt logische Voraussetzungen und die redaktionelle Bedingung after vor Übergang vor before. Widersprechende Bedingungen werden als Zyklus diagnostiziert.
+
+Bei mehreren Versionen desselben passenden Übergangsobjekts ist eine explizite Versionsauswahl erforderlich. Die Auswahl verwendet alle Informationen ausschließlich aus dem gewählten Snapshot. Ein Übergangstext wird durch seine Platzierung nicht zu einem geprüften mathematischen Schluss.
+
+Das Beispiel store_latex_example registriert jetzt einen eigenen redaktionellen Text aus penalty_transition.tex zwischen Originalsatz und Originalbeweis. Die resultierende PDF build/qam-transition-example-v2/paper.pdf wurde als eine Seite gebaut und visuell geprüft. Acht Tests prüfen unter anderem automatische Einfügung, explizite Versionswahl, alte Snapshots und Reihenfolgekonflikte.
+
+## Makro- und Literaturressourcen
+
+latex-resource unterstützt zusätzlich resource_type macro und bibliography. Gemeinsame Felder sind title, latex, assumptions und dependencies. Makros besitzen name ohne führenden Backslash; im ersten Umfang ist genau eine passende balancierte newcommand-Deklaration mit optionaler Argumentanzahl erlaubt. Literaturbausteine besitzen key und genau ein passendes bibitem. Beide müssen wörtlich in der angegebenen Quelldatei vorkommen.
+
+Der Export sammelt Makros nach Voraussetzungssortierung im Vorspann und Literaturbausteine am Dokumentende. Verschiedene ausgewählte Versionen derselben Makro- oder Literaturkennung führen vor Anlegen der Ausgabe zu einem Konflikt. Benutzerdefinierte Makros werden noch nicht automatisch im freien LaTeX erkannt; die benötigten Versionen werden als dependencies deklariert. Gleiches gilt für Zitate. Allgemeine Makrorekursion, Paketoptionen, BibTeX und Biber sind weitere Ausbaustufen.
+
+python -m qam.tools.store_resource_example --out NEUER_ORDNER übernimmt das Versionsmakro aus working-preamble.tex und den vorhandenen Edwards1974-Eintrag aus der Bibliografie. Ein expliziter Beispieltext verwendet beide. Die erzeugte einseitige PDF build/qam-resources-example/paper.pdf wurde zweimal kompiliert und visuell geprüft; das Log enthält keine undefinierten Zitate oder Verweise. Der Inhalt ist ein Montagebeispiel. Die bibliografische Quelle wird damit nicht fachlich neu verifiziert.
+
+Neun Tests prüfen unter anderem Ressourcensammlung, Einmaligkeit, Quellenbindung und Konflikte zwischen zwei Makroversionen. Das Manifest enthält zusätzlich den Hash des Ressourcencodes.
+
+## Technische Referenzprüfung vor dem Export
+
+scrub --hash SNAPSHOT --request DATEI prüft dieselbe roots-Auswahl wie select. Der begrenzte statische Prüfer erfasst literale label-, ref-, eqref-, pageref-, autoref-, cref-/Cref- und cite-/citep-/citet-/nocite-Verwendungen. Er überspringt Kommentare und maskierte Kontrollzeichen. Unterstützte Optionsklammern an Zitaten werden berücksichtigt. Doppelte Labels einschließlich Kollisionen mit generierten qv-Labels, fehlende Zielkennungen und fehlende Bibliografieeinträge führen zu blocked.
+
+Dynamisch gebildete Referenzen, externe Einbindungen und erkannte Verbatim-/Listing-Umgebungen sind außerhalb dieses ersten Prüfvertrags und blockieren die automatische Freigabe. Der Prüfer expandiert keine Makros und interpretiert keine beliebige TeX-Programmlogik. Die allgemeine Prüfung verfügbarer Makros und Paketbefehle steht noch aus. passed betrifft ausschließlich den dokumentierten statischen Umfang; der LaTeX-Build bleibt eine weitere Kontrolle.
+
+EXPORT führt diese Prüfung vor dem Anlegen des Ausgabeordners aus und legt Bericht sowie Prüferhash im Manifest ab. Die eigenständige scrub-Abfrage gibt bei blocked Prozesscode 1 zurück. Fachliche Findings und offene Guards bleiben im Entwurf sichtbar. Der technische Prüfstatus ändert ihre Beurteilung nicht.
+
+Elf Tests prüfen die bisherigen Pfade sowie Kommentare, dynamische Verweise, fehlende Zitate, doppelte Labels und den Abbruch vor der Dateierzeugung. Das Ressourcenbeispiel besteht die neue Prüfung. Sein erzeugter TeX-Text wurde bytegenau mit dem bereits kompilierten und visuell geprüften Beispiel verglichen.
+
+## Begrenzter Makro- und Umgebungscheck
+
+SCRUB prüft zusätzlich verwendete Kontrollwörter gegen einen expliziten Katalog für die feste article-/amsmath-Ausgabe, die ausgewählten Paketressourcen und die registrierten Makronamen. Erkannte unbekannte Befehle führen zu unresolved-command. Zum Beispiel benötigt mathbb die Paketressource amssymb und die proof-Umgebung amsthm. Weitere gültige TeX-Befehle außerhalb des Katalogs können deshalb zunächst blockiert werden und benötigen eine begründete Erweiterung des Vertrags.
+
+Registrierte Makros werden auf Kollisionen mit bekannten Befehlen und auf direkt erkennbare Rekursion über andere registrierte Makros geprüft. Unterstützte Umgebungen sind ebenfalls ausdrücklich begrenzt. Allgemeine TeX-Expansion, bedingte Definitionen, dynamische Befehlsnamen und sämtliche Kontrollsymbole werden dadurch nicht vollständig analysiert. Der technische Status bleibt auf diesen statischen Umfang beschränkt.
+
+Zwölf Tests prüfen die bisherigen Abläufe sowie fehlende Makros, fehlende Pakete, unbekannte Umgebungen, Selbstrekursion und Namenskollisionen. Die bereits gebauten Beispiele mit Originalbeweis und mit Versionsmakro/Literatur bestehen die erweiterte Prüfung auf ihren gespeicherten Auswahlen.
+
+## Erster zusammenhängender Forschungszweig
+
+python -m qam.tools.store_koide_branch --out NEUER_ORDNER übernimmt den begrenzten Abschnitt zur zusätzlichen Koide-Bedingung aus koide-and-kernel.tex. Enthalten sind der Ausgangsrahmen nichtnegativer Hauptwurzeln, vier Aussagen, vier Originalbeweise und vier Erläuterungen. Das umfasst Gleichnormbedingung, bedingte HC-Realisierung, Radius/Phase und die zyklische Symmetriesperre.
+
+Die Abhängigkeiten sind für diesen begrenzten Ausschnitt ausdrücklich zugeordnet. Die ursprünglichen Labels bleiben erhalten. Die native Massenauslesung und eine unabhängig hergeleitete Gleichnorm-/HC-Bedingung stehen als zwei offene Guards im Store. Der historische Zahlenvergleich behält seine Quellenqualifikation. Sämtliche mathematischen Textobjekte sind conditional übernommen. Dieser Import führt keine neue automatische Prüfung der allgemeinen Beweise durch.
+
+Die erzeugte PDF build/qam-koide-branch-v2/paper.pdf umfasst drei Seiten und wurde nach zwei LaTeX-Läufen visuell geprüft. Das Log enthält keine Overfull-, Referenz-, Label- oder Rerun-Meldungen. Wiederholte gleichlautende Prüfhinweise werden im sichtbaren Entwurf gezählt zusammengefasst; das Manifest behält alle einzelnen Findings. Dreizehn Tests prüfen einschließlich des echten Quellenimports die vier Aussagen, vier Beweise und zwei offenen Anschlussstellen.
+
+## Fachliche Argumentansicht
+
+view --hash SNAPSHOT --request DATEI verwendet die roots-Auswahl und erzeugt Markdown mit Mermaid-Graph, Bausteintabelle, genauen Versionshashes und offenen Anschlussstellen. --out DATEI schreibt die Ansicht in eine neue Datei. Die Ansicht wird vollständig aus dem Snapshot berechnet.
+
+requires und interpreted-by werden von der Voraussetzung zur Verwendung gezeichnet. Andere Beziehungen folgen ihrer gespeicherten Richtung. Deklarierte und vorgeschlagene Kanten sind gepunktet, review-markierte Kanten durchgezogen. Ein solcher Review ist die protokollierte Beurteilung mit ihrer vorhandenen Evidenzart. Er ist keine automatische mathematische Zertifizierung.
+
+Die Auswahl enthält nun auch die zugehörigen Relationsdatensätze mit effektivem Reviewstatus. Das ändert den Auswahlhash des erweiterten Ausgabeformats; bestehende Snapshots, Belege und alte Exportmanifeste behalten ihre ursprünglichen Inhalte. Die live erzeugte Argumentansicht kann deshalb einen anderen Auswahlhash als ein früherer PDF-Export derselben Wurzeln haben.
+
+Die erste Ansicht build/qam-koide-branch-v2/argument.md enthält 14 Bausteine und 17 deklarierte Kanten sowie zwei offene Guards. Vierzehn Tests prüfen inzwischen die Store-Kette einschließlich dieser Graphprojektion. Die fachliche Abhängigkeitszuordnung dieses begrenzten Zweigs ist ausdrücklich deklariert und noch separat zu prüfen.
+
+## Integrität des eingebetteten Store-Bestands
+
+snapshot-check --hash HASH prüft die internen Versions-, Relations-, Guard-, Review- und Belegidentitäten sowie deren Verweise. Die gleiche Prüfung läuft vor dem Speichern und nach dem Lesen eines Snapshots. Ein gültiger äußerer Snapshot-Hash allein genügt damit nicht, um inkonsistente eingebettete Daten als gültigen Bestand weiterzureichen.
+
+Geprüft werden insbesondere rekonstruierte Inhaltsversionshashes, fehlende Adressen, Review-Vorgänger und Verzweigungen, Belegheader und die Zuordnung ihrer Eingabeversionen. Die Prüfung betrifft den gespeicherten Stand. Aktuelle Dateibytes auf dem Dateisystem und mathematische Gültigkeit sind zusätzliche Prüfungen. Inhaltsadressierung ersetzt keine Authentifizierung des Urhebers.
+
+Fünfzehn Tests sind erfolgreich. Die Integritätstests verändern Kopien eines Snapshots und prüfen die Erkennung geänderter Inhalte, fehlerhafter Relationen, widersprüchlicher Belegheader und entfernter Eingabeverknüpfungen. Der bestehende Koide-Snapshot besteht die neue Integritätsprüfung.

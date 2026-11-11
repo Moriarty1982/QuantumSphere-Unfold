@@ -738,3 +738,9 @@ dependencies and missing hashes recorded in the saved trace. Results
 contain the receipt hash, instruction, status, request ID and context hash.
 Use `receipt HASH --trace` for the full argument. This search reports
 recorded dependencies and does not alter old receipts.
+
+## Manuskriptinventar mit offenen Verbindungen
+
+Mit python -m qam.tools.manuscript_inventory wird die aktive Einbindungskette ab sources/research/v480-companion.tex in der lokalen build/qam.sqlite3 erfasst. Die separate Tabelle manuscript_inventory enthält Datei-Elternknoten und benannte theorem-, lemma-, proposition-, corollary-, definition-, assumption-, axiom- und conjecture-Umgebungen mit Original-LaTeX, Zeilennummer und SHA256 der Quelldatei. Alle Einträge tragen imported-unreviewed, Frame unspecified und einen offenen Brückenhinweis. Die Elternkante bedeutet Dokumentzugehörigkeit. Logische Prämissenkanten werden nicht abgeleitet. Die vorhandenen claims- und Belegtabellen werden nicht verändert.
+
+Das Inventar erfasst weder Aussagen in freiem Fließtext noch automatisch deren aktuelle mathematische Gültigkeit. Historische und archivierte Aussagen innerhalb der aktiven Einbindung sind mit enthalten und müssen vor Verwendung geprüft werden. Ein Wiederholungslauf ersetzt nur das generierte Inventar. Der Quellhash ermöglicht den späteren Abgleich bei Änderungen. Das ist die erste Buchhaltungsschicht für eine spätere fachliche Argumentkarte.

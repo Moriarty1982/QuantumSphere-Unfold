@@ -1,0 +1,11 @@
+{
+  "definition": "Versioned definition with declared scope and interpretation.",
+  "seed": "Versioned mathematical or physical starting input, including its type, origin and assumptions.",
+  "claim": "Statement with an explicit evidence status.",
+  "assumption": "Explicit premise requiring separate justification or declared adoption.",
+  "proof": "Proof text with links to the precise statement and premise versions.",
+  "explanation": "Expository text associated with registered objects.",
+  "transition": "Connecting text with source, target and usage conditions.",
+  "latex-resource": "Macro, package, figure, bibliography or other export dependency.",
+  "topic": "Organizational grouping for argument views."
+}
