@@ -1,29 +1,32 @@
 # Quantum Sphaera Companion
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24108818.svg)](https://doi.org/10.5281/zenodo.24108818)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24152615.svg)](https://doi.org/10.5281/zenodo.24152615)
 
 Structure-first mathematical companion material for the Quantum Sphaera / Sphere Framework project.
 
-## Current development line
+## Current public release
 
-`v5.0.0-draft` (2026-11-11) starts the database-backed document architecture:
-registered statements, immutable versions, explicit dependencies and open guards,
-and selected LaTeX exports. The complete manuscript remains available while
-its database representation is reviewed. This development version is unpublished;
-the public release and its citation remain v4.11.0 below.
-See [the development scope](notes/research/v5_0_0_development.md) and
-[the statement store](qam/store/README.md).
-
-## Current public baseline
-
-- Public version: `v4.11.0` (2026-11-10)
-- Version DOI: [`10.5281/zenodo.24108818`](https://doi.org/10.5281/zenodo.24108818) ([Zenodo record](https://zenodo.org/records/24108818))
+- Public version: `v5.0.0` (2026-11-12)
+- Version DOI: [`10.5281/zenodo.24152615`](https://doi.org/10.5281/zenodo.24152615) ([Zenodo record](https://zenodo.org/records/24152615))
 - Concept DOI: [`10.5281/zenodo.19210728`](https://doi.org/10.5281/zenodo.19210728)
-- Previous version: `v4.10.0`, DOI `10.5281/zenodo.23991357`; earlier `v4.9.0`, DOI `10.5281/zenodo.23534954`; earlier `v4.8.0`, DOI `10.5281/zenodo.23365244`, and `v4.7.0`, DOI `10.5281/zenodo.20232911`
-- Release files: [`release/v4.11.0/`](release/v4.11.0/) (PDF, single-file TeX source, SHA256 manifest)
-- Repository and source history: [Moriarty1982/QuantumSphere-Unfold](https://github.com/Moriarty1982/QuantumSphere-Unfold)
+- Previous version: `v4.11.0`, DOI `10.5281/zenodo.24108818`.
+- Release package: two English PDFs (full Companion, 1402 pages; selected physics paper, 28 pages), source archive, database snapshot and manifests, available in the Zenodo record.
+- Frozen package source: `539b75bfce29ce20bb9aa7e59c251727b49faa45` (tag `v5.0.0`). Later repository metadata updates do not change the deposited package.
 
-The current public baseline, `v4.11.0`, adds a conditional analysis of charged-lepton mass-root overlap, finite-scale poles and feasibility bounds. Its predecessor, `v4.10.0`, was built from the full-source research line in [`sources/research/`](sources/research/README.md). It continues `v4.9.0` on the 4.10 base: the inherited main body is revised under the rule of layer v4.9.0-r25 (dead ends archived word for word in `parts/v4100-archive.tex` with number and label kept in place, known errors corrected with status notes, open statements marked), the 30 October consolidation adds state/mediator and clock comparisons and OP5 field slices, and the layers v4.9.0-r01 to r86 are appended verbatim in `parts/v490-post-release-layers.tex`. The layers record frame typing, a construction of one generation from the Dixon algebra under named choices, tests of masses and mixing, the OP5 comparison model (closed in r80), and a joint action W1/W2 with the tachyon part as a second reading of the same field; pre-registered tests H14 to H89 are listed in [`notes/research/predictions/`](notes/research/predictions/README.md). The release source in `release/v4.10.0/` is a single file flattened from the modular sources. Guard and residual vectors are unchanged; OP5 is not closed. The `v4.10.0-rNN` label identifies rounds started on the v4.10.0 baseline.
+Version 5 introduces the database-backed document architecture: registered
+statements, immutable content versions, dependencies, open guards and ordered
+LaTeX editions. Both documents retain the open question of unequal string
+relaxation under expansion and a fixed outer length (full section 46;
+physics section 7.6). This is a conditional comparison, not a derivation of
+lepton masses, the cosmological constant or a selected Koide ratio.
+
+The package was published by the author and its eight files, checksums,
+version relations and full-document preview were verified against the
+uploaded candidate. The complete argument graph remains under review;
+publication does not close the scientific guards. See
+[the release record](release/v5.0.0/README.md),
+[the development history](notes/research/v5_0_0_development.md) and
+[the statement store](qam/store/README.md).
 
 ## Scope guard
 

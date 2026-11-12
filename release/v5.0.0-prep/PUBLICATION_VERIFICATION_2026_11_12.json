@@ -32,6 +32,8 @@
   "published_by": "author (reported in chat; public status independently confirmed)",
   "source_commit": "539b75bfce29ce20bb9aa7e59c251727b49faa45",
   "upload_run": 43199728870,
-  "github_release_exists": false,
-  "citation_update_pending": true
+  "github_release_exists": true,
+  "citation_update_pending": true,
+  "github_release_url": "https://github.com/Moriarty1982/QuantumSphere-Unfold/releases/tag/v5.0.0",
+  "tag_target": "539b75bfce29ce20bb9aa7e59c251727b49faa45"
 }

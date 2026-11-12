@@ -1090,3 +1090,11 @@ beide PDFs sind byteidentisch mit dem geprüften Kandidaten. Die Langfassung
 ist als Vorschau gesetzt. Vorgänger- und Concept-DOI sind korrekt verknüpft.
 Der GitHub-Release und die bisherigen Zitationsangaben müssen noch
 nachgezogen werden. Die Veröffentlichung ändert keine wissenschaftlichen Guards.
+
+
+### GitHub-Abschluss v5.0.0 (12.11.2026)
+
+Zitation, README und DOI-Rollen werden auf die veröffentlichte v5.0.0
+umgestellt. Der Tag bezeichnet den tatsächlichen Paketquellstand 539b75b;
+der GitHub-Release verweist auf DOI und Dateien bei Zenodo. Historische
+Vorbereitungsvermerke oben bleiben als datierte Entwicklungsgeschichte erhalten.

@@ -5,15 +5,17 @@ unabhängig vom Werkzeug. `CLAUDE.md` verweist nur hierauf. Regeln werden **hier
 
 ## Was dieses Repository ist
 Quellen, Notizen und Werkzeuge zum *Quantum Sphaera Companion*, dem mathematischen Unfold der Paper-Reihe „Quantum
-Sphaera“. Die öffentliche Baseline ist **v4.11.0** vom 2026-11-10 (Version-DOI 10.5281/zenodo.24108818, Concept-DOI
-10.5281/zenodo.19210728; Vorgänger v4.10.0, 10.5281/zenodo.23991357). Alles danach liegt als Forschungsschicht vor und ist kein Release.
+Sphaera“. Die öffentliche Baseline ist **v5.0.0** vom 2026-11-12
+(Version-DOI 10.5281/zenodo.24152615, Concept-DOI 10.5281/zenodo.19210728;
+Vorgänger v4.11.0, 10.5281/zenodo.24108818).
 
-Die aktuelle Entwicklungslinie ist **v5.0.0-draft** (seit 2026-11-11):
-datenbankgestütztes Aussageninventar und ausgewählte LaTeX-Exporte. Sie hat
-für v5.0.0 die reservierte, unveröffentlichte Version-DOI
-10.5281/zenodo.24152615 (Entwurf 24152615); öffentliche Baseline und
-Zitation bleiben bis zur Veröffentlichung v4.11.0.
-Details: `notes/research/v5_0_0_development.md`.
+Version 5 enthält die datenbankgestützte Dokumentarchitektur und zwei englische
+Ausgaben (1402/28 Seiten). Der veröffentlichte Paketquellstand ist
+539b75bfce29ce20bb9aa7e59c251727b49faa45, Tag v5.0.0. Nachfolgende Arbeit ist
+Forschungsschicht, kein neues Release. Die offene Stringrelaxationsfrage bleibt
+offen; Veröffentlichung und technische Paketprüfung schließen keine Guards.
+Details: `release/v5.0.0/README.md`, Entwicklungsgeschichte in
+`notes/research/v5_0_0_development.md`.
 
 - `sources/research/`: der modulare Kandidat (`v480-companion.tex` mit Teilen unter `parts/`). Die Runden v4.9.0-r01–r86 stehen in
   `parts/v490-post-release-layers.tex` (so in v4.10.0 veröffentlicht); neue Runden heißen `v4.10.0-rNN` und kommen in eine neue Schichtdatei
