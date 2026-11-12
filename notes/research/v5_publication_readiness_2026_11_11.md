@@ -84,3 +84,14 @@ lokale Build und die deutsche Lesefassung sind erfolgreich; alte
 Review-/Trockenlaufergebnisse bleiben an ihre damaligen Dateien gebunden.
 Als Nächstes muss die konkrete Quellen-/Evidenz-Payload für den gewählten
 Release-Stand zusammengestellt und erneut geprüft werden.
+
+## Nachtrag: englische Payload zusammengestellt
+
+Alle Main-Prüfungen auf 802c7af sind erfolgreich, einschließlich des
+Zwei-PDF-Laufs 43087358029. Das konkrete englische Entwurfspaket unter
+build/v5-english-upload-verified/ ist mit vollständigem lokalen Trockenlauf
+geprüft. Beide Dokumente bauen direkt aus seinem Quellenarchiv.
+Die Sprachvorgabe schließt deutsche Lesefassung und redaktionelle Notizen
+aus; Quellen-/Datenbankbelege bleiben maschinenlesbare Begleitmaterialien.
+Details und exakte Dateien unter release/v5.0.0-prep/ENGLISH_PAYLOAD.md.
+DOI und endgültige Titelseiten sind noch offen; kein Upload ausgeführt.
