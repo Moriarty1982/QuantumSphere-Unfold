@@ -1,5 +1,24 @@
 # Forschungsstand
 
+### OP3: Komplexe Kreuzprodukte und Grenze der vollen Gram-Matrix (12.11.2026)
+
+Die Literatur kennt bereits ein SU(3)-angepasstes komplexes Kreuzprodukt:
+Das gewöhnliche epsilon-Kreuzprodukt wird komplex konjugiert und ist dann
+antilinear in beiden Eingängen. Seine Farbkomponenten dürfen nicht mit
+Generationenslots gleichgesetzt werden. Die Oktonionen liefern außerdem
+ein siebendimensionales Kreuzprodukt mit G2-invarianten Strukturkonstanten.
+Auf den imaginären Anteilen des farbfesten Torus verschwindet es, weil
+diese alle entlang e7 liegen. Der äußere Flächentensor ist davon verschieden.
+
+Die im Chat vorgeschlagene positive hermitesche Matrix
+$H_{ij}=\sum_{c,d}(A_i)_{cd}\overline{(A_j)_{cd}}$ behält mehr Korrelationen
+als ihre Diagonale. Auf dem bisherigen zweidimensionalen Slotträger sind
+aber alle A_i proportional zu derselben Zweiform: $H=2ss^{\mathsf T}$.
+Damit hat H höchstens Rang eins. Seine Eigenwerte liefern dort unter einer
+zusätzlichen Masseninterpretation keine drei positiven Massen. Dies
+schränkt den Vorschlag ein; OPs und Guards bleiben unverändert.
+[Herleitung, Quellen und Grenzen](../notes/research/op3_epsilon_hermitian_review_2026_11_12.md).
+
 ### OP3: Analytischer Ausschluss der H18-Torusroute (12.11.2026)
 
 Auf dem farbfesten r15-Torus gilt für die rechte Gram-Auslesung exakt

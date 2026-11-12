@@ -1,5 +1,10 @@
 # Wiki-Pflege
 
+**12.11.2026, epsilon-/Gram-Prüfung mit Netzquellen:** Komplexes
+SU(3)-Kreuzprodukt und oktonionische Dreiform eingeordnet; Farb-/Slotindizes
+getrennt. Analytische Rang-eins-Grenze der vorgeschlagenen vollen
+hermiteschen Gram-Matrix auf dem Torus dokumentiert, keine Massenherleitung.
+
 **12.11.2026, Gram-Auslesung auf dem Torus:** Exakte Sinusformel und
 Sehnen-Dreiecksargument ergänzt. Unter dem H18-Massengesetz ist K≤1/2;
 Phasenauswahl und gemeinsame Skala können K=2/3 nicht erreichen.

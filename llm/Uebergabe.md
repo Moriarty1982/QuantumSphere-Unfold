@@ -30,7 +30,9 @@
 - NEU op3_dixon_gram_bridge_2026_11_12.md: r33 liefert konkrete quartische Gram-Auslesungen mu_i, auch auf r15-Konfigurationen definiert; keine lineare Generationeneinbettung. Reiner Slotraum unter Linkswirkung nicht abgeschlossen (i*i=-1); Gram-Invarianz auf größerem Träger davon getrennt.
 - H18 bleibt für seine Potentialfamilien widerlegt; kein Replay. Reelle Positivität und komplex-bilineare Boost-Fassung unterscheiden. Selbstprüfung, kein unabhängiges Audit.
 - NEU op3_gram_torus_bound_2026_11_12.md: Auf farbfestem r15-Torus mu_i=2 sin²(alpha_j-alpha_k). Für H18 m_i=kappa sqrt(mu_i) sind Massen Sehnenlängen; Dreiecksbedingung impliziert exakt 1/3≤K≤1/2, K bei Gesamtnull undefiniert. Koide 2/3 für diese Route ausgeschlossen, unabhängig von Phasenauswahl/Skala. Analytische Erkundung/Selbstprüfung.
-- Nächster Schritt: spätere Kopplungsroute r53 auf eine vom H18-Gesetz verschiedene native Operation und bereits dokumentierte Ausschlüsse prüfen. Keine neuen Phasen-/Potentialscans derselben Route.
+- NEU op3_epsilon_hermitian_review_2026_11_12.md: Autorenauftrag epsilon/komplexe Kopplung mit Netzrecherche. Baez-Autorentexte gelesen; konjugiertes SU(3)-Kreuzprodukt und Im-O/G2-Kreuzprodukt eingeordnet, Farb-/Slotindizes getrennt. r53-Quelle abgeglichen, keine numerischen H37-Befunde neu geprüft.
+- Chatvorschlag H_ij=sum A_i conj(A_j) analytisch eingeschränkt: auf Torus A_i=s_i W, H=2ss^T, Rang≤1. Keine drei positiven Eigenmassen. Im-O-Kreuzprodukt der kollinearen imaginären Torusanteile null; äußere Zweiform davon verschieden.
+- Nächster Schritt: vorhandene native Kopplung auf linearem farbneutralem L³ statt bloßer Torus-Konfigurationsauslesung suchen; Darstellung, Closure/HC und Operatorbindung nötig. Keine neuen Phasen-/Potentialscans derselben Route.
 - Keine neuen Fits oder Simulationen; alle neuen Aussagen analytische, nicht blinde Erkundung/Selbstprüfung.
 - QAM-Leseserver derzeit nicht verfügbar; lokale read-only find-Suchen generation/triplet/e_4 ohne passende Ausgabe. Keine neuen MMA-Belege.
 - Wiki/Forschungsstand und Wiki-Pflege enthalten beide inhaltlichen Nachträge; keine historischen Runden oder Papertexte verändert.
