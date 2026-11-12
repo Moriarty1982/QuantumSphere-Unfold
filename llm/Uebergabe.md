@@ -1,6 +1,6 @@
 # Übergabe: Stand der letzten Sitzung
 
-13. November 2026, ca. 01:00 (Claude). Wird pro Arbeitsblock überschrieben.
+13. November 2026, ca. 01:20 (Claude). Wird pro Arbeitsblock überschrieben.
 
 - Öffentliche Baseline v5.0.0 (DOI 10.5281/zenodo.24152615, Tag v5.0.0 auf 539b75b). PR #100, #101, #102 gemergt; main 1eed465; Läufe 43265308165 (Zwei-PDF) und 43265308144 (Wiki-Sync) erfolgreich. Keine weitere Veröffentlichung nötig.
 - Lokaler Ordner des Autors (`Quantum Sphera`) stand noch auf dem 6.11. (93c3d21, r05) und wurde auf Autorenfreigabe per Fast-Forward auf 1eed465 gebracht. Der alte Stand ist als Tag `lokal-stand-2026-11-06` gesichert (dabei entfielen 58 verfolgte Dateien, u. a. `.claude/skills`, alte Zusammenfassungen; alle über den Tag erreichbar).
@@ -48,10 +48,18 @@
 - Nachträglich, nicht blind: gemeinsames reelles h verlangt gleichen Phasenbetrag für u und e; r11 hat 0,0518 gegen 0,2211. Einfachste Form passt nicht.
 - Stand: rho-ungerade Kopplung für Leptonen und Quarks vorhanden, zwei freie Winkel, kein festes Verhältnis. OP3/OP4 offen.
 
+## Nachtrag Verbinder und Hyperladung (13.11., „weiter“)
+
+- Skript `notes/research/op3_dixon_connector_link_2026_11_13.py`, Nachtrag in der Dixon-Notiz, im selben PR #103.
+- F_b-Kopplung = antilinearer Verbinderblock aus r44.1(b) (Rang 8, Dubletts). Idempotente (1∓ie3)⊗(1∓ie7) koppeln je einen Sektor; Y/2 = +1/2 (e, d), -1/2 (nu, u).
+- Hyperladung: Rückweg beta_s hängt am Koeffizienten des gespiegelten Sektors, nicht eichinvariant. Ein kovariantes Element gibt nur M_s = a_s + alpha_s P, also K <= 1/2; Koide nicht erreichbar. Gemeinsames Element: 1 : 1 : 2.
+- Der hermitesche Brannen-Fall (reelles h) ist vor der Brechung nicht eichinvariant; Bewertung in der Notiz korrigiert.
+
 ## Nächster Schritt (Autorentscheidung)
 
-- Prüfen, ob die F_b-Kopplung mit neutralem h die neutralen Mitglieder des antilinearen Verbinderblocks aus r44.1(b) trifft (bindet phi_H an die Dublett-Richtung).
-- Native Bedingung an phi_H, phi_O oder den Diagonalterm a_s suchen; erst dann Test mit Vorab-Notiz (H99). Noch unbekannt wäre nur die Beziehung Down-Quarks/Neutrinos.
+- Offen ist die Herkunft des Rückwegs: Gibt es im Companion ein zweites Element mit entgegengesetzter Hyperladung (oder einen Frame-Wechsel M/T), das den zweiten Umlaufsinn eichinvariant liefert? Ohne das bleibt K <= 1/2.
+- Alternativ die Platzstruktur selbst prüfen: ob die drei Generationen überhaupt als zyklisch gekoppelte gleiche Kopien (Modell I) zu lesen sind.
+- Ein Test mit Kriterium bekäme H99 und eine Vorab-Notiz.
 - Offen daneben: W-a, W-c der Stringfrage; Statusvermerke für die gemeldeten älteren Stellen in einer neuen Runde.
 
 ## Pflichten in jeder Sitzung

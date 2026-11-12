@@ -1335,8 +1335,32 @@ offen, Guards unverändert.
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notiz
 > `notes/research/op3_dixon_slot_coupling_2026_11_13.md` mit Prüfskript
-> (Zustände wie in k85). Der Bezug zu den Verbindern aus r44.1(b) ist
-> nicht geprüft. Keine H-/k-Nummer, kein MMA-Beleg.
+> (Zustände wie in k85). Keine H-/k-Nummer, kein MMA-Beleg.
+
+**Nachtrag: Verbinder und Hyperladung (13.11.2026).** Erkundung, nicht
+blind.
+
+- Die Dixon-Kopplung spannt über die acht skalaren, farbneutralen
+  Elemente $h$ genau den achtdimensionalen antilinearen Verbinderblock
+  aus r44.1(b) auf (schwache Dubletts).
+- Die Produkte der primitiven Idempotente koppeln je genau einen Sektor:
+  $(1-ie_3)(1-ie_7)$ das Elektron, $(1+ie_3)(1-ie_7)$ das Neutrino,
+  $(1+ie_3)(1+ie_7)$ die Up-Quarks, $(1-ie_3)(1+ie_7)$ die Down-Quarks.
+  Die Verbinder haben $Q_{\rm em}=0$ und $Y/2=+\tfrac12$ für $e,d$,
+  $-\tfrac12$ für $\nu,u$.
+- Der Rückweg $\beta_s$ hängt am Koeffizienten des gespiegelten Sektors
+  und hat die falsche Hyperladung. Mit einem eichkovarianten Element ist
+  nur ein Umlaufsinn erlaubt: $M_s=a_s+\alpha_sP$.
+- Dann gilt $K\le\tfrac12$ (zwei zyklische Harmonische, bekannt aus dem
+  Abschnitt zum Skalen-Kandidaten); Koide $2/3$ ist so nicht erreichbar.
+  Mit einem gemeinsamen Element stehen die Massen im Verhältnis
+  $1:1:2$.
+- Der hermitesche Brannen-Fall mit reellem $h$ von oben ist vor der
+  Brechung nicht eichinvariant. Er bräuchte ein zweites, unabhängig
+  begründetes Element für den Rückweg.
+
+Unter Eichkovarianz bricht die Dixon-Kopplung $\rho$ also maximal und
+liefert die Koide-Form nicht. OP3/OP4 bleiben offen.
 
 
 ### Version 5: Veröffentlichungsvorbereitung wieder aufgenommen (12.11.2026)

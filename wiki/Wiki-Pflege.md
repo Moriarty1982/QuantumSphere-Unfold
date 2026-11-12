@@ -261,3 +261,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 13.11.2026: Erkundung zur ρ-ungeraden Platzkopplung aus der Trialitätsform in Forschungsstand ergänzt (Quarks: Brannen-Form mit freiem Winkel in der Ebene (1, e₇); Leptonen: keine Kopplung); Kandidat, kein OP-Abschluss.
 
 13.11.2026: Erkundung zur Platzkopplung auf dem vollen Dixon-Raum in Forschungsstand ergänzt (Sektorformel für e, ν, u, d; zwei freie Winkel; Spiegelung Leptonen/Quarks; einfachste Form passt nicht zu r11); Kandidat, kein OP-Abschluss.
+
+13.11.2026: Nachtrag zur Dixon-Platzkopplung in Forschungsstand (Verbinderblock r44.1(b) getroffen, Sektoren an Idempotenten, Hyperladung erlaubt nur einen Umlaufsinn, K ≤ 1/2); kein OP-Abschluss.

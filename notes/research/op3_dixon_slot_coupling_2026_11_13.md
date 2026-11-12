@@ -115,3 +115,53 @@ F_0, F_a, F_b (Reste <= 1e-15); geladene h tragen 1e-15 bei; Sektorformel
 (Fehler 3e-17); Spiegelung an 50 zufälligen komplexen h (2e-15);
 Dimension 0 der invarianten trilinearen Formen auf H³. Die Zahlen aus r11
 wurden übernommen, nicht neu gerechnet.
+
+## Nachtrag (13.11., später): Anbindung an die Verbinder aus r44.1(b) und Hyperladung
+
+Auftrag „weiter“: den ersten Punkt aus „Was danach bleibt“ prüfen.
+Erkundung, nicht blind. Skript op3_dixon_connector_link_2026_11_13.py.
+
+1. **Treffer.** Die aus F_b gebildeten antilinearen Abbildungen
+   vertauschen mit Farbe und Lorentz-Drehungen und spannen über die acht
+   Elemente h = (H-Basis)⊗(1, e_7) genau einen achtdimensionalen Raum
+   schwacher Dubletts auf (Casimir 3/4). Das ist der antilineare Block
+   Kern → Bild aus r44.1(b).
+2. **Ein Sektor je Idempotent.** Die Elemente (1 ∓ i e_3)⊗(1 ∓ i e_7),
+   Produkte der primitiven Idempotente des Dixon-Raums, koppeln jeweils
+   genau einen Sektor:
+   (1 - i e_3)(1 - i e_7): e;  (1 + i e_3)(1 - i e_7): nu;
+   (1 + i e_3)(1 + i e_7): u;  (1 - i e_3)(1 + i e_7): d.
+   Die zugehörigen Verbinder haben Q_em = 0 und Y/2 = +1/2 für e und d,
+   Y/2 = -1/2 für nu und u. Das ist das Muster eines Dubletts und seines
+   Konjugierten.
+3. **Hyperladung verbietet den Rückweg.** Der Term beta_s (Feld chi im
+   früheren, psi im späteren Platz) hat dieselben Felder und dieselbe
+   Hyperladung wie alpha_s, hängt aber am Koeffizienten des gespiegelten
+   Sektors (beta_e an c_u, beta_u an c_e, entsprechend nu und d). Dieser
+   Koeffizient müsste sich für alpha_u genau entgegengesetzt
+   transformieren. Mit einem eichkovarianten Element h, auch zusammen mit
+   seinem komplex Konjugierten, ist deshalb nur ein Umlaufsinn
+   eichinvariant: M_s = a_s + alpha_s P.
+4. **Korrektur zur Bewertung oben.** Der hermitesche Fall mit reellem h
+   (beta_s = conj(alpha_s), Brannen-Form) ist vor der Brechung nicht
+   eichinvariant. Er beschreibt höchstens ein Objekt nach der Brechung
+   oder verlangt ein zweites Element mit entgegengesetzter Hyperladung
+   für den Rückweg.
+5. **Folge für Koide.** Mit nur einem Umlaufsinn sind die drei Massen
+   |a + alpha omega^k| im Allgemeinen verschieden, aber K <= 1/2 (bekannt
+   aus coupling-scale-candidate: zwei zyklische Harmonische). Numerisch an
+   200000 Zufallspunkten: größtes K 0,4994 (Singulärwert als Wurzel der
+   Masse) und 0,4837 (Singulärwert als Masse). Koide 2/3 ist so nicht
+   erreichbar. Mit einem gemeinsamen Element für Diagonale und Nachbarn
+   (a = alpha) stehen die Singulärwerte im Verhältnis 1 : 1 : 2.
+6. **Physikalische Phase.** Alle Terme eines Sektors tragen dieselben
+   Ladungen. Physikalisch ist nur die Phase von alpha_s relativ zu a_s,
+   also die relative Lage des Elements der Nachbarkopplung zum Element
+   der Diagonalkopplung; ein gemeinsamer Winkel fällt heraus.
+
+Ergebnis des Nachtrags: Die Dixon-Platzkopplung ist genau der
+Verbinderblock aus r44.1(b), und die Sektoren hängen an den Idempotenten.
+Unter Eichkovarianz mit einem Element bricht sie rho maximal (ein
+Umlaufsinn) und kann die Koide-Form nicht liefern. Die Brannen-Form
+bräuchte ein zweites, unabhängig begründetes Element oder eine andere
+Herkunft des Rückwegs. OP3/OP4 bleiben offen, Guards unverändert.
