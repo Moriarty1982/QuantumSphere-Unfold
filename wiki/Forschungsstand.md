@@ -1123,6 +1123,64 @@ unverändert.
 > MMA-Beleg.
 
 
+### Weg W-b: Quellensuche nach einer nicht konvexen Stringenergie (12.11.2026)
+
+Auf Autorenentscheidung wurde zuerst der Weg „gleiche Strings mit zweifach
+umkehrendem Kraftgesetz“ verfolgt. Quellenauftrag und analytische, nicht
+blinde Erkundung.
+
+**Quellenbefund: negativ.** Der Companion enthält keine Stringenergie als
+Funktion einer Länge. „String“ bezeichnet dort den Zählparameter
+$\gamma_{\rm string}=\ln 2/(\pi\sqrt3)$ und einen Sektor der
+String-LQG-Lesart (T11); Spannung, Wicklung oder ein Kraft-Längen-Gesetz
+kommen nicht vor. Der Feder-Satz (`thm:spring`) ist linear und ungedämpft,
+also konvex. Die einzige nicht konvexe Energie mit begrenzendem Ast ist
+das Higgs-Potential von W2 (r82.1); es ist eine Eingabe, gilt für ein Feld
+und liefert keine Länge $\ell_c$.
+
+**Kleinste passende Energie.** Das einfachste Kraftgesetz mit zwei
+Umkehrpunkten ist kubisch:
+
+$$
+U(\ell)=\frac{\lambda}{4}\bigl((\ell-\ell_0)^2-v^2\bigr)^2 .
+$$
+
+Gleiche Zugkraft bei drei verschiedenen Längen verlangt dann
+$\ell_0=L/3$ und gibt exakt die Brannen-Form
+
+$$
+\ell_i=\frac L3\Bigl(1+\frac{2\sqrt3\,v}{L}\cos\bigl(\theta+\tfrac{2\pi i}{3}\bigr)\Bigr),
+\qquad K=\frac13+\frac{2v^2}{L^2}.
+$$
+
+- $K=2/3$ gilt genau für $v=L/\sqrt6$. Das ist die Bedingung
+  $|b|=a/\sqrt2$ der Zirkulante aus r44.1(e) mit $a=L/3$, $|b|=v/\sqrt3$.
+- Die Phase $\theta$ bleibt frei: Die Energie ist auf dem Kreis exakt
+  entartet, die radiale Mode stabil. Die Lepton-Phase
+  $\theta\approx0{,}2222$ wird nicht gewählt.
+- Liegt der Topf nicht genau bei $L/3$, haben die Gleichgewichte zwei
+  gleiche Längen.
+- Positive Längen verlangen $|\theta|\le\pi/12$, derselbe Bogen wie im
+  v4.11-Abschnitt zur Koide-Phase.
+- Terme jenseits der Quartik legen $\theta$ fest; dann bestimmen
+  mindestens zwei Formzahlen die zwei Zielzahlen $K$ und $\theta$.
+
+**Ergebnis.** W-b liefert keine native Operation. In seiner kleinsten
+Form ist der Mechanismus die Brannen-Form in anderer Schreibweise und
+führt auf den bekannten offenen Punkt aus r44 zurück (Verhältnis $|b|/a$
+und Phase $\theta$). Die Expansion wählt darin nichts aus. Weder Koide
+$2/3$ noch die Phase oder das Leptonspektrum sind hergeleitet; die
+Stringfrage aus Version 5 und OP3 bleiben offen, Guards unverändert.
+Ungeprüft sind die Wege W-a (ungleiche Moduln) und W-c (Knotengeometrie).
+
+> **Anmerkungen für LLMs und Quellenprüfung:** Notiz
+> `notes/research/op3_string_energy_source_search_2026_11_12.md`,
+> Selbstprüfung `op3_string_energy_source_search_2026_11_12.py`. Gelesene
+> Quellen: `thm:spring`, `thm:koide-triolic`, `thm:string-lqg-duality`,
+> `sec:v490-r44-mass-frame-couplings`, `sec:v490-r82-higgs-stability`,
+> `sec:v4110-koide-overlap`. Keine H-/k-Nummer, kein MMA-Beleg.
+
+
 ### Version 5: Veröffentlichungsvorbereitung wieder aufgenommen (12.11.2026)
 
 PR #100 integriert die jüngsten OP3-Erkundungen. Auf Autorenauftrag werden

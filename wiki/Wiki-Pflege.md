@@ -253,3 +253,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 12.11.2026: Öffentliche Einstiegsseiten und Zitation auf v5.0.0 umgestellt; GitHub-Tag an den veröffentlichten Paketquellstand gebunden.
 
 12.11.2026: Rückwärtssuche zur Stringrelaxationsfrage in Forschungsstand ergänzt (notwendige Bedingungen, Maxwell-Klasse bei fester Außenlänge ausgeschlossen, drei verbleibende Wege); Forschungsschicht nach v5.0.0, kein OP-Abschluss.
+
+12.11.2026: Weg W-b in Forschungsstand ergänzt (Quellensuche negativ; kubisches Kraftgesetz gibt Brannen-Form mit freier Phase, Rückführung auf r44.1(e)); kein OP-Abschluss.
