@@ -2,15 +2,18 @@
 
 Dieses Wiki erschließt den **Quantum Sphaera Companion**: ein strukturorientiertes mathematisches Forschungsprojekt mit lokalen, bedingten und readout-abhängigen Aussagen. Es bietet Menschen und LLMs einen Einstieg, eine Quellenkarte und benannte Aussagegrenzen.
 
-**Öffentliche Baseline:** v4.11.0 vom 10. November 2026 mit bedingten Koide-Vergleichen zu Phasenüberlagerung und Massenwurzeln. [Version-DOI](https://doi.org/10.5281/zenodo.24108818). Vorgänger ist v4.10.0.
+**Öffentliche Baseline:** v5.0.0 vom 12. November 2026.
+[Version-DOI](https://doi.org/10.5281/zenodo.24152615),
+[Zenodo-Paket](https://zenodo.org/records/24152615). Vorgänger ist v4.11.0.
 
 ## Einstieg
 
-**Entwicklung seit 11. November 2026:** v5.0.0-draft führt ein
-datenbankgestütztes Aussageninventar mit Inhaltsversionen, Abhängigkeiten,
-offenen Guards und ausgewählten LaTeX-Exporten ein. Der vollständige
-Argumentationsbaum ist noch nicht geprüft. Die 5.0-Fassung ist unveröffentlicht
-und hat keine eigene Version-DOI; öffentliche Baseline bleibt v4.11.0.
+Version 5 führt das datenbankgestützte Aussageninventar mit Inhaltsversionen,
+Abhängigkeiten, offenen Guards und geordneten LaTeX-Ausgaben ein. Das Paket
+enthält die englische Langfassung (1402 Seiten) und die Physikfassung (28 Seiten).
+Die offene Frage zur ungleichen Stringrelaxation unter Expansion steht in
+Abschnitt 46 bzw. 7.6. Der vollständige Argumentationsbaum bleibt unter Prüfung;
+die Veröffentlichung schließt keine offenen physikalischen Probleme.
 
 - **[Gesamtbild](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Gesamtbild):** das ganze Werk auf einer Seite: Mindmap, die zentralen Thesen mit ihrem heutigen Stand und eine Karte, wo was im Dokument steht.
 - **[Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt):** der Inhalt selbst, Teil für Teil: Annahmen, Definitionen, Ergebnisse und wie weit sie heute tragen.

@@ -247,3 +247,7 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 12.11.2026: Lambda-Längenvorgabe, dissipative Stringrelaxation und offene Anschlussfrage für Version 5 dokumentiert; kein OP-Abschluss.
 
 12.11.2026: PR #100 integriert; v5-Reservierung und offene Frage in beiden englischen Ausgaben dokumentiert.
+
+12.11.2026: Vom Autor veröffentlichte v5.0.0 öffentlich geprüft; Dateiintegrität und Vorschau bestätigt, ausstehende GitHub-Nacharbeiten benannt.
+
+12.11.2026: Öffentliche Einstiegsseiten und Zitation auf v5.0.0 umgestellt; GitHub-Tag an den veröffentlichten Paketquellstand gebunden.

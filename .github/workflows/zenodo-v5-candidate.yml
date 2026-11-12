@@ -22,6 +22,10 @@ on:
       confirm_publish:
         type: boolean
         default: false
+      verify_only:
+        description: Verify the existing uploaded draft without uploading again
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -64,6 +68,7 @@ jobs:
           python -m pip install -r qam/store/requirements.txt
           python -m qam.tools.package_v5_documents --bundle build/v5-bundle --out build/v5-upload --expected-commit "$EXPECTED_COMMIT"
       - name: Validate or upload the existing draft
+        if: ${{ !inputs.verify_only }}
         env:
           ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
           DEPOSITION_ID: ${{ inputs.deposition_id }}
@@ -89,7 +94,7 @@ jobs:
           DEPOSITION_ID: ${{ inputs.deposition_id }}
         run: |
           python - <<'PY'
-          import hashlib, json, os
+          import hashlib, json, os, urllib.request
           from pathlib import Path
           from tools.zenodo_publish import request_json, ZENODO_API, reserved_doi
           token = os.environ['ZENODO_TOKEN']
@@ -102,11 +107,15 @@ jobs:
                       for p in Path('build/v5-upload').iterdir() if p.is_file()}
           actual = {f['filename']: f['checksum'].removeprefix('md5:') for f in dep['files']}
           assert expected == actual, 'Remote file coverage or checksums differ'
-          record = request_json('GET', f'{ZENODO_API}/records/{identifier}/draft', token)
+          request = urllib.request.Request(f'{ZENODO_API}/records/{identifier}/draft', headers={
+              'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.inveniordm.v1+json'})
+          with urllib.request.urlopen(request, timeout=60) as response:
+              record = json.load(response)
           preview = record.get('files', {}).get('default_preview')
           assert preview == 'Quantum_Sphaera_Companion_v5_0_0_full.pdf', 'Wrong or unset preview'
           report = {'deposition_id': identifier, 'published': False, 'files_verified': len(expected),
-                    'checksums': actual, 'default_preview': preview}
+                    'checksums': actual, 'default_preview': preview,
+                    'draft_url': record.get('links', {}).get('self_html')}
           Path('build/v5-upload-verification.json').write_text(json.dumps(report, indent=2) + '\n')
           print(json.dumps(report))
           PY

@@ -1,15 +1,17 @@
 # Versionen und Quellen
 
-Entwicklungsnachtrag vom **11.11.2026**: v5.0.0-draft organisiert Aussagen
-und Teilausgaben über die Datenbank. Keine Veröffentlichung und keine eigene
-Version-DOI. Die unten datierte frühere Quellenprüfung ist davon getrennt.
+Veröffentlichungsnachtrag vom **12.11.2026**: v5.0.0 ist veröffentlicht,
+DOI 10.5281/zenodo.24152615. Zwei englische Ausgaben (1402/28 Seiten),
+Quellenarchiv, Datenbank und Manifeste bilden ein gemeinsames Paket.
+Tag v5.0.0 fixiert den Paketquellstand 539b75bfce29ce20bb9aa7e59c251727b49faa45.
+Die unten datierte frühere Quellenprüfung bleibt historische Provenienz.
 
 Stand: **2.11.2026**, geprüft gegen Commit [`cf48496c95b6c9ec3f6a3c196df2c8c2c84e3d0b`](https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/cf48496c95b6c9ec3f6a3c196df2c8c2c84e3d0b). Links auf `main` zeigen die weiterentwickelte Fassung; für reproduzierbare Aussagen einen Commit-Link verwenden.
 
 | Ebene | Stand | Verwendung |
 |---|---|---|
-| Öffentliche Baseline | v4.11.0, 10.11.2026, DOI 10.5281/zenodo.24108818 | Publizierte Aussagen und Zitation |
-| Entwicklung seit 11.11.2026 | v5.0.0-draft, keine eigene Version-DOI | Datenbankgestütztes Aussageninventar, Teilauswahlen und offene Guards; kein Release |
+| Öffentliche Baseline | v5.0.0, 12.11.2026, DOI 10.5281/zenodo.24152615 | Publiziertes Zwei-Dokument-Paket und Zitation |
+| Direkter Vorgänger | v4.11.0, DOI 10.5281/zenodo.24108818 | Historische Veröffentlichung |
 | Forschung | nach v4.10.0; neue Layer `v4.10.0-rNN` | Nachträgliche Forschung und Korrekturen |
 | Vorherige Veröffentlichung | v4.9.0, DOI 10.5281/zenodo.23534954 | Historischer Vergleich |
 | Ältere Veröffentlichung | v4.8.0, DOI 10.5281/zenodo.23365244 | Historischer Vergleich |
@@ -20,7 +22,8 @@ Stand: **2.11.2026**, geprüft gegen Commit [`cf48496c95b6c9ec3f6a3c196df2c8c2c8
 
 - [README am geprüften Commit](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/cf48496c95b6c9ec3f6a3c196df2c8c2c84e3d0b/README.md): öffentliche Baseline und Scope Guard.
 - [CITATION.cff am geprüften Commit](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/cf48496c95b6c9ec3f6a3c196df2c8c2c84e3d0b/CITATION.cff): Zitiermetadaten.
-- [Zenodo v4.11.0](https://zenodo.org/records/24108818) ist der aktuelle Datensatz mit Haupt-PDF, Einzelquelltext, Abbildung und SHA256-Manifest.
+- [Zenodo v5.0.0](https://zenodo.org/records/24152615) ist das aktuelle Paket; [GitHub-Release v5.0.0](https://github.com/Moriarty1982/QuantumSphere-Unfold/releases/tag/v5.0.0).
+- [Zenodo v4.11.0](https://zenodo.org/records/24108818) ist die direkte Vorgängerversion.
 - [Zenodo v4.10.0](https://zenodo.org/records/23991357): Vorgängerversion (PDF, Quelltext als Einzeldatei, Abbildung, Manifest); [Version DOI](https://doi.org/10.5281/zenodo.23991357). GitHub-Release [v4.10.0](https://github.com/Moriarty1982/QuantumSphere-Unfold/releases/tag/v4.10.0).
 - [Zenodo v4.9.0](https://zenodo.org/records/23534954): Vorgänger; [Version DOI](https://doi.org/10.5281/zenodo.23534954).
 - **Ablauf eines Zenodo-Releases** (`release/zenodo/README.md`): Entwurf als neue Version reservieren, DOI auf die Titelseite, Payload bauen, hochladen mit `default_preview` = Haupt-PDF (es wird zuerst hochgeladen und vor dem Veröffentlichen geprüft; bei v4.10.0 zeigte Zenodo zunächst die Abbildung als Vorschau), Entwurf prüfen, veröffentlichen, danach Tag und GitHub-Release `vX.Y.Z`.

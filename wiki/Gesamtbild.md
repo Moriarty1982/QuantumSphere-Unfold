@@ -2,7 +2,11 @@
 
 **Stand: 6. November 2026, Forschungsfassung 4.10.0-draft mit Runden bis v4.10.0-r05 (lokal 1350 Seiten); Release v4.10.0 am 6.11.2026 veröffentlicht.** Diese Seite zeigt das ganze Werk auf einmal: welche Thesen es aufstellt, wie sie zusammenhängen, wo sie im Dokument stehen und was davon heute trägt. Die einzelnen Themen werden in [Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) genauer erklärt. Wer den Companion zum ersten Mal liest, sollte mit dieser Seite anfangen, Menschen ebenso wie Sprachmodelle.
 
-**Entwicklungshinweis vom 11.11.2026:** Die Arbeitsfassung heißt v5.0.0-draft und ergänzt die datenbankgestützte Aussagenorganisation. Öffentliche Baseline ist inzwischen v4.11.0 (10.11.2026); die oben datierte Gesamtkarte bleibt als historischer Überblick erhalten. Der Versionssprung ändert keinen Beweis- oder OP-Status.
+**Veröffentlichungshinweis vom 12.11.2026:** Öffentliche Baseline ist
+v5.0.0, DOI 10.5281/zenodo.24152615. Die datenbankgestützte Ausgabe enthält
+zwei englische Dokumente und die offene Stringrelaxationsfrage. Die oben
+datierte Gesamtkarte bleibt historischer Überblick; kein OP oder Guard
+wird durch den Versionswechsel geschlossen.
 
 ## In drei Sätzen
 

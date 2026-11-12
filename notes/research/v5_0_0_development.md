@@ -1,8 +1,9 @@
 # Version 5.0.0: Datenbankgestützte Dokumentarchitektur
 
-Start: 11. November 2026. Status: **5.0.0-draft**, unveröffentlicht.
-Öffentliche Baseline bleibt v4.11.0, Version-DOI 10.5281/zenodo.24108818.
-Der Entwurf hat keine eigene Version-DOI.
+Start: 11. November 2026. **v5.0.0 veröffentlicht am 12. November 2026**,
+Version-DOI 10.5281/zenodo.24152615, Vorgänger v4.11.0.
+Die folgenden Vorbereitungsabschnitte sind historische Stände. Der Abschluss
+und der eingefrorene Quellstand stehen in `../../release/v5.0.0/README.md`.
 
 Der Hauptversionssprung kennzeichnet die neue Organisation des Dokuments:
 registrierte Aussagen und Definitionen, unveränderliche Inhaltsversionen,

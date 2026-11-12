@@ -1,0 +1,39 @@
+{
+  "published": true,
+  "status": "published",
+  "latest": true,
+  "access": "open",
+  "doi": "10.5281/zenodo.24152615",
+  "conceptdoi": "10.5281/zenodo.19210728",
+  "version": "v5.0.0",
+  "publication_date": "2026-11-12",
+  "remote_files_verified": 8,
+  "sha256_manifest": "passed",
+  "pdf_identity_with_visually_reviewed_candidate": "passed",
+  "default_preview": "Quantum_Sphaera_Companion_v5_0_0_full.pdf",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Moriarty1982/QuantumSphere-Unfold",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "10.5281/zenodo.19210728",
+      "relation": "isVersionOf",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.24108818",
+      "relation": "isNewVersionOf",
+      "scheme": "doi"
+    }
+  ],
+  "checked_on": "2026-11-12",
+  "published_by": "author (reported in chat; public status independently confirmed)",
+  "source_commit": "539b75bfce29ce20bb9aa7e59c251727b49faa45",
+  "upload_run": 43199728870,
+  "github_release_exists": true,
+  "github_release_url": "https://github.com/Moriarty1982/QuantumSphere-Unfold/releases/tag/v5.0.0",
+  "tag_target": "539b75bfce29ce20bb9aa7e59c251727b49faa45",
+  "citation_update_pr": 102
+}
