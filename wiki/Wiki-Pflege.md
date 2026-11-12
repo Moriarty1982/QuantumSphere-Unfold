@@ -1,5 +1,9 @@
 # Wiki-Pflege
 
+**12.11.2026, String-Längenmodell:** Stabiles elastisches Vergleichsminimum
+und rückgerechnetes 2/3-Beispiel dokumentiert; gleiche Strings, offene
+Torus-Realisierung und zusätzliche Massenwurzel-Auslese getrennt.
+
 **12.11.2026, inverse Leptonmassendiagnose:** Forschungsstand um die
 bekannte-Daten-Rückrechnung ergänzt: Dreiecksfehlbetrag, notwendige
 relative Faktorstreuung, Ranggrenze und Nicht-Eindeutigkeit der Umkehrung.

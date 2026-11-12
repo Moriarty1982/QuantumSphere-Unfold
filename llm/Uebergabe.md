@@ -36,7 +36,8 @@
 - Imaginäre Dirac-Gesamtphase lässt D*D unverändert; k=0 im P-Endpunkt ist singulär. Drei innere e7-Slotdrehungen erhalten abc=1 nicht; äußere Frame-Drehung davon trennen. Keine neuen MMA-/Lean-Replays.
 - NEU op3_mass_backsolve_2026_11_12/README.md: Autorenauftrag inverse Messwertdiagnose. CODATA2022 e/mu, PDG2025 tau; Dreiecksfehlbetrag 1670.76063 MeV (94.0251% m_tau), notwendige positive Faktorstreuung≥16.73675. Daten-K≈0.66666446, keine exakte Setzung. H-Rang≤1 bleibt unvereinbar mit drei positiven Massen.
 - Skript/Inputs/Vertrag und run02-Manifest gespeichert; completed und Hashvalidierung erfolgreich. Erster Kontrolllauf durch Nullmassendivision fehlgeschlagen, korrigiert und Fehlprotokoll erhalten. Acht Unsicherheitsecken, keine Statistik-/Blindtestbehauptung.
-- Nächster Schritt: native relative Kopplung vor Frame-Normierung prüfen; Messmassen allein bestimmen weder Z_L,Z_R noch D eindeutig. Keine freien imaginären Matrizen oder Phasenscans.
+- NEU op3_string_length_exploration_2026_11_12.md: Autorenidee feste Außenlänge=sum drei dehnbarer innerer Endlängen. Zusätzliches quadratisches elastisches Modell liefert ell_i proportional 1/k_i, gleiche Strings K=1/3. Ein um 4+3sqrt(2) weicherer String liefert K=2/3 mit zwei gleichen Massen; Ziel rückgerechnet, keine native Herleitung.
+- Nächster Schritt für die Stringidee: konkrete Torus-Netzgeometrie/Wicklungen und unabhängig begründete Elastizität. Drei kürzeste paarweise Wege erfüllen die Dreiecksgrenze und reichen nicht. Auslese sqrt(m) proportional ell bleibt Zusatzannahme; keine OP-/Guard-Änderung.
 - Keine neuen Fits oder Simulationen; alle neuen Aussagen analytische, nicht blinde Erkundung/Selbstprüfung.
 - QAM-Leseserver derzeit nicht verfügbar; lokale read-only find-Suchen generation/triplet/e_4 ohne passende Ausgabe. Keine neuen MMA-Belege.
 - Wiki/Forschungsstand und Wiki-Pflege enthalten beide inhaltlichen Nachträge; keine historischen Runden oder Papertexte verändert.

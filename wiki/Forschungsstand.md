@@ -1,5 +1,19 @@
 # Forschungsstand
 
+### OP3: Elastische Strings mit fester Gesamtlänge (12.11.2026)
+
+Die Autorenidee wurde als zusätzliches Längenmodell untersucht:
+sum ell_i=L und E=(1/2)sum k_i ell_i². Das eindeutige Minimum hat
+ell_i proportional 1/k_i. Unter der zusätzlichen Auslese sqrt(m_i)
+proportional ell_i liefern gleiche Steifigkeiten K=1/3. Ein um den
+Faktor 4+3sqrt(2) weicherer String neben zwei gleichen liefert exakt
+K=2/3, aber zwei gleiche Massen. Der Faktor ist aus dem Ziel rückgerechnet.
+Für K>1/2 muss ein String länger als die beiden anderen zusammen sein;
+drei kürzeste paarweise Torusverbindungen scheiden daher aus.
+Eine konkrete Netzgeometrie mit Wicklungen sowie eine unabhängige
+Elastizitätsregel bleiben offen. Keine native Herleitung oder OP-Schließung.
+[Analytische Erkundung](../notes/research/op3_string_length_exploration_2026_11_12.md).
+
 ### OP3: Rückwärtsdiagnose mit gemessenen Leptonmassen (12.11.2026)
 
 Die ausdrücklich beauftragte Rückrechnung verwendet CODATA-2022-Werte
