@@ -879,3 +879,34 @@ Operator aus der bestehenden Mastergleichung kann mit Closure vereinbar
 nichtnullig sein, benötigt aber ebenfalls native Matrixelemente und ein
 physikalisches Auslesegesetz. Nächster Quellenauftrag sind die vier
 Beiträge zur Kompression S*Omega S; OP3 bleibt offen.
+
+
+### Innerer Operator: zusätzliche Generationenprüfung
+
+Die vier Beiträge der bestehenden Mastergleichung sind auf eine gemeinsame
+Seed-Isometrie S zurückgeführt. Der skalare Grundterm wird zu m_0 I_3;
+die minimale HC-Fehlanpassungsstrafe verschwindet bei exakter M/P-Closure.
+Die M- und Triadenkompressionen bleiben ohne ihre nativen Matrixelemente
+offen. Außerdem garantiert Closure im größeren P-Sektor nicht die Invarianz
+der drei gewählten Seeds. Eine positive hermitesche Gegenprobe zeigt:
+S*Omega S kann drei gleiche Diagonalwerte haben, obwohl ein weiterer
+geschlossener Zustand das volle Spektrum aufspaltet. Für eine autonome
+Drei-Generationen-Einschränkung ist zusätzlich (I-SS*)Omega S=0 nötig.
+Ein rein HC-ungerader Wechseloperator hat auf drei ungeraden Seeds keine
+direkte Kompression; indirekte Wirkungen benötigen eigene Voraussetzungen.
+Diese bedingten Aussagen identifizieren keine native Leptonmasse. OP3 bleibt offen.
+
+
+### Generationseinbettung: Farbtyp bleibt bei neutraler Closure erhalten (12.11.2026)
+
+Die Quellenprüfung verfolgt die e4/e5/e6-Slots zurück zu r35/r36: Mit
+festgelegter innerer komplexer Struktur bilden sie ein Farbtriplet.
+Unter zusätzlicher Farbinvarianz von Closure und direktem Massenterm
+bleibt die normierte Seed-Einbettung ein Farbtriplet. Die Kompression
+ist dann skalar und liefert keine drei verschiedenen Generationenmassen.
+Die im Paper deklarierte positive Seed-Normierung allein liefert die
+zusätzliche Farbinvarianz nicht und ersetzt keine Generationenidentifikation.
+Als vorhandene Alternativen bleiben die Trialitätsslots O³ und rechte
+Quaternion-/Dixon-Labels; deren physikalische Rollen und Dynamik sind
+separat zu bestimmen. Nächster Quellenauftrag ist die native Wirkung auf
+den Trialitätsslotindex. Kein neuer Massenfit oder OP-Abschluss.

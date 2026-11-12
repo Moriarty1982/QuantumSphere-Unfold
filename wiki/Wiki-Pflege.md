@@ -205,3 +205,7 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 11.11.2026: Englische Upload-Auswahl des Autors festgehalten; Quellen-/Datenbankpaket und vollständigen lokalen Trockenlauf dokumentiert.
 
 11.11.2026: Inhaltliche Wiederaufnahme von OP3 dokumentiert; historische Koide-Frage, Hüllenverträglichkeit und heutige Operatorroute getrennt, keine Änderung eines Guards.
+
+11.11.2026: Vier innere Operatorterme und die zusätzliche Invarianzpflicht des Drei-Seed-Raums dokumentiert; analytische Gegenprobe, kein Parameterfit oder OP-Abschluss.
+
+12.11.2026: Farbtriplet-/Generationenprüfung mit direkter Kommutantenrechnung ergänzt; Grenzen der neutralen Closure und vorhandene alternative Sloträume dokumentiert.
