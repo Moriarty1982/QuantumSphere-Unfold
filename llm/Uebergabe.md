@@ -1,6 +1,6 @@
 # Übergabe: Stand der letzten Sitzung
 
-12. November 2026, abends (Claude). Wird pro Arbeitsblock überschrieben.
+13. November 2026, ca. 00:40 (Claude). Wird pro Arbeitsblock überschrieben.
 
 - Öffentliche Baseline v5.0.0 (DOI 10.5281/zenodo.24152615, Tag v5.0.0 auf 539b75b). PR #100, #101, #102 gemergt; main 1eed465; Läufe 43265308165 (Zwei-PDF) und 43265308144 (Wiki-Sync) erfolgreich. Keine weitere Veröffentlichung nötig.
 - Lokaler Ordner des Autors (`Quantum Sphera`) stand noch auf dem 6.11. (93c3d21, r05) und wurde auf Autorenfreigabe per Fast-Forward auf 1eed465 gebracht. Der alte Stand ist als Tag `lokal-stand-2026-11-06` gesichert (dabei entfielen 58 verfolgte Dateien, u. a. `.claude/skills`, alte Zusammenfassungen; alle über den Tag erreichbar).
@@ -30,9 +30,18 @@
 - Native rho-ungerade Größen: Chiralitätsprojektor, Assoziator [e4,e5,e6]=-2e7, Q_J=iL_e7, Vorzeichen des Frame-Versatzes. Keine trägt einen Betrag. Quellensuche negativ, Lücke benannt.
 - Ältere Stellen ohne Statusvermerk (nur gemeldet): v470/17 Zeilen 18 und 194 („structurally closed“), Bemerkung „The 2/3 factor is everywhere“, rem:koide-mass-discrepancy.
 
+## Erkundung rho-ungerade Platzkopplung (13.11., Autor: „mach das mal“)
+
+- Notiz und Skript `notes/research/op3_rho_odd_coupling_2026_11_12.*`, im selben PR #103. Erkundung, kein Test.
+- Kandidat: Trialitätsform t mit festem Element h des dritten Platzes gibt M = a + alpha P + beta P², alpha = t(u, conj w, h), beta = t(conj w, u, h). Nur Oktonionenfaktor gerechnet.
+- Quarks: alpha = -2(h0 - i h7), beta = -2(h0 + i h7) für reelles h = h0 + h7 e7; hermitesch, Brannen-Form; Phase = Winkel von h in der Ebene (1, e7). Verhältnis nicht festgelegt.
+- Leptonen: Kopplung über t verschwindet für jedes h ((1+ie7)(1-ie7) = 0). Kein Platz-Kopplungsterm.
+- Stand: native rho-ungerade Kopplung existiert (e7-Komponente des dritten Platzes), ohne festen Betrag und nur für Farbe. OP3/OP4 offen.
+
 ## Nächster Schritt (Autorentscheidung)
 
-- Naheliegend: die fehlende Operation direkt untersuchen. Welche tau-invariante, rho-ungerade Kopplung der drei Plätze erlaubt die chirale Struktur (Modell I aus r45, Konnektoren r44.1(b)), und legt sie ein Verhältnis zu ihrem rho-geraden Partner fest? Erst als Quellen- und Strukturfrage; ein Test mit Kriterium bekäme H99 und eine Vorab-Notiz.
+- Leptonen: welche Platzkopplung lassen die Lepton-Verbinder aus r44.1(b) zu, wenn t ausfällt (H-Faktor, Frame-Wechsel)? Strukturfrage auf C⊗H⊗O wie in k85.
+- Quarks: native Bedingung an das Element des dritten Platzes suchen (Hopf-Träger r15, Dublett-Richtung r44.1(b)), die den Winkel in (1, e7) festlegt. Als Test: Vorab-Notiz, H99.
 - Offen daneben: W-a, W-c der Stringfrage; Statusvermerke für die gemeldeten älteren Stellen in einer neuen Runde.
 
 ## Pflichten in jeder Sitzung

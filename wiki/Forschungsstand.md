@@ -1234,6 +1234,54 @@ trägt das nach.
 > in `v470/10_sphaera_and_physics.tex`. Nur gemeldet, nicht geändert.
 
 
+### Erkundung: $\rho$-ungerade Platzkopplung aus der Trialitätsform (13.11.2026)
+
+Strukturerkundung ohne Entscheidungskriterium, nicht blind. Gefragt war,
+welche $\tau$-invariante, $\rho$-ungerade Kopplung die chirale Struktur
+(Modell I aus r45) erlaubt und ob sie ein Verhältnis festlegt.
+
+**Konstruktion (Kandidat).** Hält man in der Trialitätsform
+$t(x,y,z)=\mathrm{Re}((xy)z)$ das Element $h$ des dritten Platzes fest,
+koppelt sie die beiden anderen Plätze. Für ein linkes Feld $u$ und ein
+rechtes Partnerfeld $\bar w$ entsteht die Platzmatrix
+
+$$
+M=a+\alpha P+\beta P^2,\qquad
+\alpha=t(u,\bar w,h),\quad \beta=t(\bar w,u,h).
+$$
+
+Den Diagonalterm $a$ liefert $t$ nicht. Gerechnet wurde der
+Oktonionenfaktor.
+
+- **Quarks.** Für das Farbtriplett und reelles $h=h_0+h_7e_7$ gilt exakt
+  $\alpha=-2(h_0-ih_7)$, $\beta=-2(h_0+ih_7)$. Die Platzmatrix ist von
+  selbst hermitesch und hat Brannen-Form. Der $\rho$-gerade Anteil sitzt
+  an der Komponente entlang $1$, der $\rho$-ungerade an der Komponente
+  entlang $e_7$; die Brannen-Phase ist der Winkel von $h$ in der Ebene
+  $(1,e_7)$.
+- **Kein festes Verhältnis.** $t$ legt $h_7/h_0$ nicht fest. Für $h_7=0$
+  gibt es zwei gleiche Eigenwerte; für chirales $h=1\pm ie_7$ überlebt
+  nur ein Umlaufsinn.
+- **Leptonen.** Ihre Oktonionenanteile liegen in der kommutativen Ebene
+  $\mathrm{span}_{\mathbb C}(1,e_7)$, und $(1+ie_7)(1-ie_7)=0$. Die
+  Kopplung über $t$ verschwindet für jedes $h$: kein $\rho$-ungerader und
+  überhaupt kein Platz-Kopplungsterm.
+
+**Ergebnis.** Eine native $\rho$-ungerade Platzkopplung existiert: die
+$e_7$-Komponente des dritten Platzes. Ihr Verhältnis zum $\rho$-geraden
+Partner ist ein Winkel, den die Struktur nicht festlegt, und sie greift
+nur für farbige Zustände. Für die Leptonen liefert der Mechanismus
+nichts; eine Lepton-Phase müsste aus dem $\mathbb H$-Faktor, dem
+Frame-Wechsel oder einer anderen Kopplung kommen. Die Konstruktion ist
+ein Kandidat, kein Gesetz des Companion. Phase, Koide $2/3$ und Spektrum
+sind nicht hergeleitet; OP3/OP4 bleiben offen, Guards unverändert.
+
+> **Anmerkungen für LLMs und Quellenprüfung:** Notiz
+> `notes/research/op3_rho_odd_coupling_2026_11_12.md` mit Prüfskript
+> (Oktonionenprodukt der Konvention r04). Vorwissen: r44.1, r45.1, r46.1,
+> k85, k86. Keine H-/k-Nummer, kein MMA-Beleg.
+
+
 ### Version 5: Veröffentlichungsvorbereitung wieder aufgenommen (12.11.2026)
 
 PR #100 integriert die jüngsten OP3-Erkundungen. Auf Autorenauftrag werden

@@ -257,3 +257,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 12.11.2026: Weg W-b in Forschungsstand ergänzt (Quellensuche negativ; kubisches Kraftgesetz gibt Brannen-Form mit freier Phase, Rückführung auf r44.1(e)); kein OP-Abschluss.
 
 12.11.2026: Quellensuche zur Koide-Phase in Forschungsstand ergänzt (Phase als Verhältnis ρ-ungerade/ρ-gerade, ältere Bausteine ρ-symmetrisch, übersehenes Vorwissen zu W-b nachgetragen); kein OP-Abschluss.
+
+13.11.2026: Erkundung zur ρ-ungeraden Platzkopplung aus der Trialitätsform in Forschungsstand ergänzt (Quarks: Brannen-Form mit freiem Winkel in der Ebene (1, e₇); Leptonen: keine Kopplung); Kandidat, kein OP-Abschluss.
