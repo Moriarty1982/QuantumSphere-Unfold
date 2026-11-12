@@ -1,5 +1,21 @@
 # Forschungsstand
 
+### OP3: Rückwärtsdiagnose mit gemessenen Leptonmassen (12.11.2026)
+
+Die ausdrücklich beauftragte Rückrechnung verwendet CODATA-2022-Werte
+für Elektron/Myon und den PDG-2025-Tauwert 1776,93±0,09 MeV. Die
+H18-Torusbedingung m_tau≤m_mu+m_e scheitert an 1776,93 gegenüber
+106,16937 MeV: Fehlbetrag 1670,76063 MeV, rund 94,03 Prozent der
+Tau-Masse. Positive generationsabhängige Multiplikatoren derselben
+Dreiecksroute müssten notwendig eine Streuung f_max/f_min≥16,73675
+haben; eine gemeinsame Frame-Normierung kann das nicht leisten.
+Die volle Torus-Gram-Matrix scheitert separat an Rang≤1 gegenüber drei
+positiven Zielmassen. Aus den Messwerten folgt K≈0,66666446; Koide wird
+nicht als exakt vorausgesetzt. Die Massendaten bestimmen nur ein Spektrum,
+keine eindeutige native Kopplung. Bekannte-Daten-Erkundung mit gespeichertem
+Skript und geprüftem Laufmanifest, keine Vorhersage oder OP-Schließung.
+[Eingaben, Rechnung und Grenzen](../notes/research/op3_mass_backsolve_2026_11_12/README.md).
+
 ### OP3: Frameabhängige Massen und kanonische Rückauslesung (12.11.2026)
 
 Die Frame-Frage ist bereits in r84/r85 konkret behandelt: Der vollständige

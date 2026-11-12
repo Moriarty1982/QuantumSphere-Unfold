@@ -1,5 +1,10 @@
 # Wiki-Pflege
 
+**12.11.2026, inverse Leptonmassendiagnose:** Forschungsstand um die
+bekannte-Daten-Rückrechnung ergänzt: Dreiecksfehlbetrag, notwendige
+relative Faktorstreuung, Ranggrenze und Nicht-Eindeutigkeit der Umkehrung.
+Messquellen, Laufnachweis und Grenzen dokumentiert; keine Vorhersage.
+
 **12.11.2026, Frame-/Massenprüfung:** H82-Regel und kanonische Normierung
 für OP3 eingeordnet; gemeinsamer Massenfaktor von neuer Hierarchie getrennt.
 Imaginäre Dirac-Phase und singulärer Photon-Endpunkt ausdrücklich abgegrenzt.

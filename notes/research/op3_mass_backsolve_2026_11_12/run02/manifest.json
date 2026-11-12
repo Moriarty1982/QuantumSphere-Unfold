@@ -1,0 +1,121 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP3_KNOWN_MASS_BACKSOLVE",
+  "repository": {
+    "commit": "8da1e87f49aaea5ae37a312fa1f0419c56f9b60f",
+    "dirty": true
+  },
+  "command": [
+    "python",
+    "notes/research/op3_mass_backsolve_2026_11_12/backsolve.py",
+    "notes/research/op3_mass_backsolve_2026_11_12/run02/results.json"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "runner-python",
+        "version": "3.12.10"
+      },
+      {
+        "name": "Python",
+        "version": "3.12.10"
+      }
+    ],
+    "hardware": "Windows-11-10.0.26300-SP0"
+  },
+  "mathematics": {
+    "assertion_tested": "Evaluate necessary triangle, rank-one and common-scaling constraints against three published charged-lepton mass inputs and eight uncertainty-box corners",
+    "coefficient_domain": "decimal real arithmetic, 50 digits",
+    "conventions": "c=1, MeV; no running-mass conversion; order electron, muon, tau",
+    "inputs": [
+      "CODATA 2022 electron/muon and PDG 2025 tau central values with quoted individual uncertainties"
+    ],
+    "bounds": {
+      "central_cases": 1,
+      "uncertainty_corners": 8
+    },
+    "non_claims": [
+      "No prediction or new fit",
+      "No native operator identification",
+      "No global parameter scan",
+      "Corner envelope is not a statistical confidence region"
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-12T05:15:24.952047+00:00",
+    "runtime_seconds": 0.125,
+    "exit_status": 0,
+    "status": "completed",
+    "timeout_seconds": 30.0,
+    "max_output_bytes": 16000,
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    },
+    "missing_results": [],
+    "invalid_results": []
+  },
+  "execution_artifacts": [
+    "notes/research/op3_mass_backsolve_2026_11_12/backsolve.py",
+    "notes/research/op3_mass_backsolve_2026_11_12/inputs.json"
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op3_mass_backsolve_2026_11_12/backsolve.py",
+      "sha256": "1cf1860c9f0b338856db79a32e6e8af6cf6a7344e2272c92ddd80953e2b43312",
+      "sha256_after": "1cf1860c9f0b338856db79a32e6e8af6cf6a7344e2272c92ddd80953e2b43312"
+    },
+    {
+      "path": "notes/research/op3_mass_backsolve_2026_11_12/inputs.json",
+      "sha256": "0e8f925652c17e96efbb79e568aae3a04c7971177cc16e6c0fb21ebe2277470d",
+      "sha256_after": "0e8f925652c17e96efbb79e568aae3a04c7971177cc16e6c0fb21ebe2277470d"
+    }
+  ],
+  "output_directory": "notes/research/op3_mass_backsolve_2026_11_12/run02",
+  "declared_results": [
+    "notes/research/op3_mass_backsolve_2026_11_12/run02/results.json"
+  ],
+  "outputs": [
+    {
+      "path": "notes/research/op3_mass_backsolve_2026_11_12/run02/stdout.txt",
+      "sha256": "a7fd94be2fb0e7ecccc007ad5f3114feb9d544cbc936502e9aa69a794cebb66d",
+      "kind": "log"
+    },
+    {
+      "path": "notes/research/op3_mass_backsolve_2026_11_12/run02/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "log"
+    },
+    {
+      "path": "notes/research/op3_mass_backsolve_2026_11_12/run02/results.json",
+      "sha256": "cbbcee01e54f195c22359f2b13837b632644b3143d4d1c73cb964e26f9874687",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    {
+      "check": "input hashes unchanged",
+      "passed": true
+    },
+    {
+      "check": "process exited successfully within enforced limits",
+      "passed": true
+    },
+    {
+      "check": "declared result files are present and regular",
+      "passed": true
+    }
+  ],
+  "result": "Run completed; mathematical assertion requires interpretation and review.",
+  "residual_risks": [
+    "Command success does not establish the mathematical interpretation.",
+    "Only listed input artifacts are pinned; external dependencies need recorded versions."
+  ]
+}

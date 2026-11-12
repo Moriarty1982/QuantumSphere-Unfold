@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "C:\Users\marcb\OneDrive\Dokumente\GitHub\QuantumSphere-Unfold\notes\research\op3_mass_backsolve_2026_11_12\backsolve.py", line 62, in <module>
+    main()
+  File "C:\Users\marcb\OneDrive\Dokumente\GitHub\QuantumSphere-Unfold\notes\research\op3_mass_backsolve_2026_11_12\backsolve.py", line 51, in main
+    assert evaluate([Decimal(1),Decimal(1),Decimal(0)])['K'] == Decimal('0.5')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marcb\OneDrive\Dokumente\GitHub\QuantumSphere-Unfold\notes\research\op3_mass_backsolve_2026_11_12\backsolve.py", line 17, in evaluate
+    "triangle_deficit_fraction_of_tau": (tau-mu-e)/tau,
+                                        ~~~~~~~~~~^~~~
+decimal.DivisionByZero: [<class 'decimal.DivisionByZero'>]

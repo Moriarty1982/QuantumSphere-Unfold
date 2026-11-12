@@ -1,0 +1,14 @@
+{
+ "claim_id":"OP3_KNOWN_MASS_BACKSOLVE",
+ "mathematics":{
+  "assertion_tested":"Evaluate necessary triangle, rank-one and common-scaling constraints against three published charged-lepton mass inputs and eight uncertainty-box corners",
+  "coefficient_domain":"decimal real arithmetic, 50 digits",
+  "conventions":"c=1, MeV; no running-mass conversion; order electron, muon, tau",
+  "inputs":["CODATA 2022 electron/muon and PDG 2025 tau central values with quoted individual uncertainties"],
+  "bounds":{"central_cases":1,"uncertainty_corners":8},
+  "non_claims":["No prediction or new fit","No native operator identification","No global parameter scan","Corner envelope is not a statistical confidence region"]
+ },
+ "execution_artifacts":["notes/research/op3_mass_backsolve_2026_11_12/backsolve.py","notes/research/op3_mass_backsolve_2026_11_12/inputs.json"],
+ "software":[{"name":"Python","version":"3.12.10"}],
+ "randomness":{"used":false,"generator":"","seed":null}
+}
