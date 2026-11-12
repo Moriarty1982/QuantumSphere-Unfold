@@ -910,3 +910,19 @@ Als vorhandene Alternativen bleiben die Trialitätsslots O³ und rechte
 Quaternion-/Dixon-Labels; deren physikalische Rollen und Dynamik sind
 separat zu bestimmen. Nächster Quellenauftrag ist die native Wirkung auf
 den Trialitätsslotindex. Kein neuer Massenfit oder OP-Abschluss.
+
+
+### Trialitätsträger: Slotraum und Konfigurationsraum unterscheiden (12.11.2026)
+
+Die vorhandene Trialitätsroute trennt den Slotindex von Farbe. Im linearen
+Umgebungsraum O³ bilden die drei Farbsingletkopien unter der erklärten
+inneren komplexen Struktur einen möglichen C³-Mehrfachraum. Farbneutrale
+lineare Operatoren bewahren ihn; native Closure, Ladung, HC-Gradierung und
+Operatorwerte sind damit noch nicht ausgewertet. Der konkrete Hopf-Träger
+aus r15 besteht dagegen aus drei Einheitsoktonionen mit (ab)c=1 und ist
+kein linearer Hilbertraum. Sein farbfester Teil besitzt zwei unabhängige
+reelle Phasen. Das verhindert die direkte Gleichsetzung mit drei
+unabhängigen linearen Seeds, aber nicht drei Auslesungen einer gemeinsamen
+Konfiguration oder Zustände eines noch zu definierenden Funktionsraums.
+Die Brücke von dieser Konfiguration zu physikalischen Zuständen oder
+Massenauslesungen ist deshalb der nächste Quellenauftrag. OP3 bleibt offen.
