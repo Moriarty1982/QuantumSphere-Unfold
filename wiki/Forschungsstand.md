@@ -1282,6 +1282,63 @@ sind nicht hergeleitet; OP3/OP4 bleiben offen, Guards unverändert.
 > k85, k86. Keine H-/k-Nummer, kein MMA-Beleg.
 
 
+### Erkundung: Platzkopplung auf dem vollen Dixon-Raum (13.11.2026)
+
+Dieselbe Frage auf $\mathbb C\otimes\mathbb H\otimes\mathbb O$ mit dem
+Dixon-Produkt, für Leptonen und Quarks. Strukturerkundung ohne
+Entscheidungskriterium, nicht blind.
+
+**Konstruktion (Kandidat).** Mit $\langle\cdot\rangle$ als Komponente an
+$1\otimes1$ und der vollen Dixon-Konjugation $\hat x$ (Quaternionen- und
+Oktonionen-Konjugation) am ersten Eintrag:
+
+$$
+\alpha_s=\langle(\hat\psi\,\chi)\,h\rangle,\qquad
+\beta_s=\langle(\hat\chi\,\psi)\,h\rangle,\qquad
+M_s=a_s+\alpha_sP+\beta_sP^2,
+$$
+
+für $\psi$ im Bild und $\chi$ im Kern der Chiralität, $s=e,\nu,u,d$.
+
+- **Kein zyklischer Spinor-Term.** Auf $\mathbb H^3$ gibt es keine
+  trilineare Form, die unter gemeinsamer Lorentz-Drehung invariant ist.
+  Das Element $h$ des dritten Platzes muss ein Skalar sein.
+- **Leptonen koppeln** nur mit der vollen Konjugation; ohne
+  Oktonionen-Konjugation bleibt ihre Kopplung null.
+- **Sektorformel.** Für $h=(a_0+a_3e_3)\otimes(o_0+o_7e_7)$ gilt
+
+$$
+\alpha_s\propto(a_0+i\sigma_sa_3)(o_0+i\lambda_so_7),
+$$
+
+  mit $\sigma=+1$ für $e,d$ und $-1$ für $\nu,u$, $\lambda=+1$ für
+  Leptonen und $-1$ für Quarks. Bei reellen Komponenten ist die
+  Platzmatrix hermitesch, hat Brannen-Form und die Phase
+  $\theta_s=\sigma_s\varphi_H+\lambda_s\varphi_O$. Die Beträge sind in
+  allen Sektoren gleich.
+- **Zwei Quellen der Phase.** $\rho$-ungerade sind $1\otimes e_7$ und
+  $e_3\otimes1$, also die $e_7$-Richtung der Oktonionen und die
+  Isospin-Richtung der Quaternionen.
+- **Spiegelung.** Für jedes neutrale $h$ ist die Platzmatrix der
+  Up-Quarks das $\rho$-Bild der Platzmatrix der geladenen Leptonen, die
+  der Down-Quarks das $\rho$-Bild der Neutrinos.
+
+**Ergebnis.** Auf dem vollen Dixon-Raum existiert eine $\rho$-ungerade
+Platzkopplung für Leptonen und Quarks. Ein festes Verhältnis liefert sie
+nicht; aus vier Sektorphasen werden zwei freie Winkel. Nachträglich und
+nicht blind: In der einfachsten Form (ein gemeinsames reelles $h$) müssten
+Up-Quarks und geladene Leptonen denselben Phasenbetrag haben; r11 gibt bei
+$M_Z$ $0{,}0518$ gegen $0{,}2211$. Diese Form passt nicht zu den bekannten
+Massen. Die Konstruktion ist ein Kandidat, kein Gesetz des Companion.
+Phase, Koide $2/3$ und Spektrum sind nicht hergeleitet; OP3/OP4 bleiben
+offen, Guards unverändert.
+
+> **Anmerkungen für LLMs und Quellenprüfung:** Notiz
+> `notes/research/op3_dixon_slot_coupling_2026_11_13.md` mit Prüfskript
+> (Zustände wie in k85). Der Bezug zu den Verbindern aus r44.1(b) ist
+> nicht geprüft. Keine H-/k-Nummer, kein MMA-Beleg.
+
+
 ### Version 5: Veröffentlichungsvorbereitung wieder aufgenommen (12.11.2026)
 
 PR #100 integriert die jüngsten OP3-Erkundungen. Auf Autorenauftrag werden

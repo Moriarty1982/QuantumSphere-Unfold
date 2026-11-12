@@ -1,6 +1,6 @@
 # Übergabe: Stand der letzten Sitzung
 
-13. November 2026, ca. 00:40 (Claude). Wird pro Arbeitsblock überschrieben.
+13. November 2026, ca. 01:00 (Claude). Wird pro Arbeitsblock überschrieben.
 
 - Öffentliche Baseline v5.0.0 (DOI 10.5281/zenodo.24152615, Tag v5.0.0 auf 539b75b). PR #100, #101, #102 gemergt; main 1eed465; Läufe 43265308165 (Zwei-PDF) und 43265308144 (Wiki-Sync) erfolgreich. Keine weitere Veröffentlichung nötig.
 - Lokaler Ordner des Autors (`Quantum Sphera`) stand noch auf dem 6.11. (93c3d21, r05) und wurde auf Autorenfreigabe per Fast-Forward auf 1eed465 gebracht. Der alte Stand ist als Tag `lokal-stand-2026-11-06` gesichert (dabei entfielen 58 verfolgte Dateien, u. a. `.claude/skills`, alte Zusammenfassungen; alle über den Tag erreichbar).
@@ -38,10 +38,20 @@
 - Leptonen: Kopplung über t verschwindet für jedes h ((1+ie7)(1-ie7) = 0). Kein Platz-Kopplungsterm.
 - Stand: native rho-ungerade Kopplung existiert (e7-Komponente des dritten Platzes), ohne festen Betrag und nur für Farbe. OP3/OP4 offen.
 
+## Erkundung Dixon-Platzkopplung (13.11., Autor: Lepton-Fall versuchen, Dixon-Raum auch auf Quarks)
+
+- Notiz und Skript `notes/research/op3_dixon_slot_coupling_2026_11_13.*`, im selben PR #103. Erkundung, kein Test.
+- Kandidat F_b(x,y,h) = <(x^ y) h> auf C⊗H⊗O (volle Dixon-Konjugation am ersten Eintrag), Zustände wie k85.
+- Keine Lorentz-invariante zyklische trilineare Form auf drei Spinor-Plätzen; h muss Skalar sein. Nur neutrale h (1⊗1, 1⊗e7, e3⊗1, e3⊗e7) koppeln.
+- Sektorformel: alpha_s ∝ (a0 + i sigma a3)(o0 + i lambda o7); sigma = +1 (e, d), -1 (nu, u); lambda = +1 Leptonen, -1 Quarks. Reell: hermitesch, Brannen-Form, theta_s = sigma phi_H + lambda phi_O, Beträge gleich.
+- Spiegelung: Platzmatrix u = rho-Bild von e, d = rho-Bild von nu (für jedes neutrale h).
+- Nachträglich, nicht blind: gemeinsames reelles h verlangt gleichen Phasenbetrag für u und e; r11 hat 0,0518 gegen 0,2211. Einfachste Form passt nicht.
+- Stand: rho-ungerade Kopplung für Leptonen und Quarks vorhanden, zwei freie Winkel, kein festes Verhältnis. OP3/OP4 offen.
+
 ## Nächster Schritt (Autorentscheidung)
 
-- Leptonen: welche Platzkopplung lassen die Lepton-Verbinder aus r44.1(b) zu, wenn t ausfällt (H-Faktor, Frame-Wechsel)? Strukturfrage auf C⊗H⊗O wie in k85.
-- Quarks: native Bedingung an das Element des dritten Platzes suchen (Hopf-Träger r15, Dublett-Richtung r44.1(b)), die den Winkel in (1, e7) festlegt. Als Test: Vorab-Notiz, H99.
+- Prüfen, ob die F_b-Kopplung mit neutralem h die neutralen Mitglieder des antilinearen Verbinderblocks aus r44.1(b) trifft (bindet phi_H an die Dublett-Richtung).
+- Native Bedingung an phi_H, phi_O oder den Diagonalterm a_s suchen; erst dann Test mit Vorab-Notiz (H99). Noch unbekannt wäre nur die Beziehung Down-Quarks/Neutrinos.
 - Offen daneben: W-a, W-c der Stringfrage; Statusvermerke für die gemeldeten älteren Stellen in einer neuen Runde.
 
 ## Pflichten in jeder Sitzung
