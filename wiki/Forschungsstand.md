@@ -1,5 +1,22 @@
 # Forschungsstand
 
+### OP3: Analytischer Ausschluss der H18-Torusroute (12.11.2026)
+
+Auf dem farbfesten r15-Torus gilt für die rechte Gram-Auslesung exakt
+$\mu_i=2\sin^2(\alpha_j-\alpha_k)$. Die drei Werte können positiv und
+verschieden sein. Unter dem zusätzlichen H18-Massengesetz
+$m_i=\kappa\sqrt{\mu_i}$ sind die Massen jedoch proportional zu den
+Sehnenlängen der drei Punkte $e^{2e_7\alpha_i}$ und erfüllen deshalb
+eine Dreiecksbedingung. Auch die Massenwurzeln erfüllen diese Bedingung;
+daraus folgt $1/3\leq K\leq1/2$. Bei drei positiven Massen ist die obere
+Ungleichung strikt; bei ausschließlich verschwindenden Massen ist K
+undefiniert. Koide $K=2/3$ ist für diese Route unabhängig von der
+Phasenauswahl ausgeschlossen. Ein Auswahlpotential auf demselben Torus
+oder eine gemeinsame Skala kann das nicht ändern. Andere Massengesetze
+und Träger werden dadurch nicht allgemein ausgeschlossen. Analytische
+Erkundung/Selbstprüfung, kein neuer blinder Test; OPs und Guards unverändert.
+[Beweis und Grenzen](../notes/research/op3_gram_torus_bound_2026_11_12.md).
+
 ### OP3: Konkrete rechte Gram-Auslesung gefunden (12.11.2026)
 
 Der r33-Zweig definiert tatsächlich drei nichtlineare Auslesungen eines

@@ -29,7 +29,8 @@
 - Lineare Masseneigenzustände brauchen eine Zustandsabbildung und native Operatorwirkung; drei Auslesungen brauchen definierte Funktionen mit Einheiten und Bedeutung. Die Schnittstellennamen liefern beides nicht.
 - NEU op3_dixon_gram_bridge_2026_11_12.md: r33 liefert konkrete quartische Gram-Auslesungen mu_i, auch auf r15-Konfigurationen definiert; keine lineare Generationeneinbettung. Reiner Slotraum unter Linkswirkung nicht abgeschlossen (i*i=-1); Gram-Invarianz auf größerem Träger davon getrennt.
 - H18 bleibt für seine Potentialfamilien widerlegt; kein Replay. Reelle Positivität und komplex-bilineare Boost-Fassung unterscheiden. Selbstprüfung, kein unabhängiges Audit.
-- Nächster Schritt: vorhandene Gram-Auslesung auf farbfesten r15-Torus einschränken und Abhängigkeiten analytisch prüfen; keine neuen Potentialscans.
+- NEU op3_gram_torus_bound_2026_11_12.md: Auf farbfestem r15-Torus mu_i=2 sin²(alpha_j-alpha_k). Für H18 m_i=kappa sqrt(mu_i) sind Massen Sehnenlängen; Dreiecksbedingung impliziert exakt 1/3≤K≤1/2, K bei Gesamtnull undefiniert. Koide 2/3 für diese Route ausgeschlossen, unabhängig von Phasenauswahl/Skala. Analytische Erkundung/Selbstprüfung.
+- Nächster Schritt: spätere Kopplungsroute r53 auf eine vom H18-Gesetz verschiedene native Operation und bereits dokumentierte Ausschlüsse prüfen. Keine neuen Phasen-/Potentialscans derselben Route.
 - Keine neuen Fits oder Simulationen; alle neuen Aussagen analytische, nicht blinde Erkundung/Selbstprüfung.
 - QAM-Leseserver derzeit nicht verfügbar; lokale read-only find-Suchen generation/triplet/e_4 ohne passende Ausgabe. Keine neuen MMA-Belege.
 - Wiki/Forschungsstand und Wiki-Pflege enthalten beide inhaltlichen Nachträge; keine historischen Runden oder Papertexte verändert.

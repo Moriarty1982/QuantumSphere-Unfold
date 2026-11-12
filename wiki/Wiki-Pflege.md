@@ -1,5 +1,10 @@
 # Wiki-Pflege
 
+**12.11.2026, Gram-Auslesung auf dem Torus:** Exakte Sinusformel und
+Sehnen-Dreiecksargument ergänzt. Unter dem H18-Massengesetz ist K≤1/2;
+Phasenauswahl und gemeinsame Skala können K=2/3 nicht erreichen.
+Annahmen, Nullfall und Grenzen im Forschungsstand erhalten.
+
 **12.11.2026, rechte Gram-Auslesung:** Forschungsstand um die konkrete
 r33-Abbildung ergänzt. Skalare Labels von linearen Zuständen und reelle
 Positivität von bilinearer Boost-Invarianz getrennt; H18-Status erhalten.
