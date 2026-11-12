@@ -77,11 +77,11 @@ def finalize_package(output, result):
         all(d.get('technical_check_passed') and (output / d.get('package_pdf', '')).is_file()
             for d in documents.values()))
     result['publication_ready'] = False
-    result['status'] = 'draft-built' if result['build_complete'] else 'draft-build-failed'
+    result['status'] = 'candidate-built' if result['build_complete'] else 'candidate-build-failed'
     result['scope'] = 'Technical document build only; unresolved scientific guards and argument reviews remain open.'
     (output / 'build-manifest.json').write_text(json.dumps(result, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
-    lines = ['# Quantum Sphaera: paired document draft', '',
-             'This package is an unpublished development draft, not a release or proof certificate.', '',
+    lines = ['# Quantum Sphaera: paired document candidate', '',
+             'This package is a release candidate, not a publication confirmation or proof certificate.', '',
              'Build status: ' + result['status'],
              'Both PDFs technically complete: ' + str(result['build_complete']),
              'Publication ready: False', '',
@@ -99,7 +99,8 @@ def build(output):
     repo = Path(__file__).resolve().parents[2]
     output = Path(output).resolve()
     output.mkdir(parents=True, exist_ok=False)
-    result = {'format': 'qsc-dual-document-build-v1', 'version': '5.0.0-draft', 'documents': {}}
+    release = json.loads((repo / 'qam/editions/v5_release.json').read_text(encoding='utf-8'))
+    result = {'format': 'qsc-dual-document-build-v1', 'version': release['version'], 'release': release, 'documents': {}}
     try:
         result['git_commit'] = git_metadata(repo, 'rev-parse', 'HEAD')
         result['tracked_changes'] = bool(git_metadata(repo, 'status', '--porcelain', '--untracked-files=no'))
@@ -126,7 +127,7 @@ def build(output):
                            'incomplete_argument_review': manifest['incomplete_argument_review'],
                            'assembly_sha256': digest(output / 'editions' / name / 'assembly.json')})
             if report['pdf_present']:
-                filename = 'Quantum_Sphaera_Companion_v5_0_0_draft_' + name + '.pdf'
+                filename = 'Quantum_Sphaera_Companion_v5_0_0_' + name + '.pdf'
                 shutil.copyfile(pdf, output / filename)
                 report.update({'package_pdf': filename, 'pdf_sha256': digest(output / filename)})
             result['documents'][name] = report

@@ -1,0 +1,39 @@
+{
+  "source_commit": "539b75bfce29ce20bb9aa7e59c251727b49faa45",
+  "paired_run": 43197984602,
+  "snapshot_hash": "d4868e9f343cc2b977743d61943c7e1ad964e95f8bae8b8d714a07301a51cf27",
+  "page_counts": {
+    "full": 1402,
+    "physics": 28
+  },
+  "visually_inspected_pages": {
+    "full": [
+      1,
+      170,
+      171
+    ],
+    "physics": [
+      1,
+      25,
+      26
+    ]
+  },
+  "visual_findings": [],
+  "title_doi_check": "passed",
+  "input_checksums_verified": 113,
+  "source_archive_entries": 88,
+  "sqlite_integrity": "ok",
+  "local_zenodo_dry_run": "passed",
+  "scientific_guards_changed": false,
+  "independent_peer_review": false,
+  "files": {
+    "build-manifest.json": "60a6e336b0579da146c11885e65d7ba70e7d31cc21a7a78f1757ddac68a3be8f",
+    "package-manifest.json": "f0606c1cb9460e68f40276c65bb840c54d5612467a98c47d8735c7a5de8b1846",
+    "qam.sqlite3": "63a0c938e2569a783789265906b764de5d69bea8945cec5f4cd7bc8eb2485cad",
+    "Quantum_Sphaera_Companion_v5_0_0_full.pdf": "070fd250562c7a2a2056d896e231774b615f0b57ef2460a396c9261fe0ff139a",
+    "Quantum_Sphaera_Companion_v5_0_0_physics.pdf": "9dbbbee19a9d24886d14b2c9d794fa26e25ea7da51edb34e6cefddba218a2817",
+    "Quantum_Sphaera_v5_0_0_english_sources.zip": "e29445a7b8f697480d2194877f4760ee2cebbea8d412ba72d300143466fc354e",
+    "README.md": "e2d0f99658e7e3dae88594f16493197bdb022b2efb8fb5652997275cece09c70",
+    "SHA256SUMS.txt": "43c5f6686ea427bb52bf4ae934344b58572e076a1c6eb41bc8246d17f55df156"
+  }
+}

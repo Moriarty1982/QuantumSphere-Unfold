@@ -87,7 +87,7 @@ class EditionTests(unittest.TestCase):
             self.assertEqual((first['physics'], first['full']), (second['physics'], second['full']))
             self.assertEqual(first['physics_sections'], 7)
             self.assertEqual(first['full_statements'], 2468)
-            self.assertEqual(len(read_edition(db, first['full'])['sections']), 61)
+            self.assertEqual(len(read_edition(db, first['full'])['sections']), 62)
             with store_session(db) as (session, models):
                 self.assertEqual(count, session.scalar(select(func.count()).select_from(models.qstore_editions)))
             manifest = json.loads((root / 'first/physics/assembly.json').read_text(encoding='utf-8'))
@@ -98,6 +98,9 @@ class EditionTests(unittest.TestCase):
             main = article.split(r'\appendix')[0]
             self.assertIn(r'\begin{abstract}', main)
             self.assertIn(r'\author{Marc Brendecke', main)
+            self.assertIn('Version DOI: 10.5281/zenodo.24152615', main)
+            self.assertIn('Concept DOI: 10.5281/zenodo.19210728', main)
+            self.assertIn('Open research question: expansion and unequal string relaxation', main)
             self.assertNotIn('/ frame ', main)
             self.assertNotIn('pending review / version', main)
             self.assertNotIn('source statements are registered', main)
