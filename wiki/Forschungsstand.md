@@ -863,3 +863,66 @@ GitHub-Lauf 43087358029. Beide Dokumente ließen sich zusätzlich direkt
 aus dem gepackten Quellenarchiv fehlerfrei bauen. Der vollständige lokale
 Trockenlauf ist erfolgreich; DOI-Reservierung, endgültige Titelseiten und
 Zenodo-Upload sind noch nicht ausgeführt.
+
+
+### Zurück zur ursprünglichen OP3-Frage
+
+Die Veröffentlichungsvorbereitung ruht auf Autorenwunsch zugunsten der
+inhaltlichen Arbeit. Die Quellenprüfung trennt das historische Koide-/
+Phasenproblem vom späteren Hüllen- und Residualinterface. Die heutige
+positive Closure-Defekt-Gram-Matrix ist eine bedingte Ausleseroute, keine
+nachgewiesene identische Übersetzung beider Fragen. Ein Kommutator-
+Erwartungswert ist für exakt geschlossene Zustände unter orthogonalem
+Projektor null; seine Übergangsnorm kann trotzdem positiv sein. Der
+Wechsel zwischen beiden ist ein Wechsel der Observable. Ein innerer
+Operator aus der bestehenden Mastergleichung kann mit Closure vereinbar
+nichtnullig sein, benötigt aber ebenfalls native Matrixelemente und ein
+physikalisches Auslesegesetz. Nächster Quellenauftrag sind die vier
+Beiträge zur Kompression S*Omega S; OP3 bleibt offen.
+
+
+### Innerer Operator: zusätzliche Generationenprüfung
+
+Die vier Beiträge der bestehenden Mastergleichung sind auf eine gemeinsame
+Seed-Isometrie S zurückgeführt. Der skalare Grundterm wird zu m_0 I_3;
+die minimale HC-Fehlanpassungsstrafe verschwindet bei exakter M/P-Closure.
+Die M- und Triadenkompressionen bleiben ohne ihre nativen Matrixelemente
+offen. Außerdem garantiert Closure im größeren P-Sektor nicht die Invarianz
+der drei gewählten Seeds. Eine positive hermitesche Gegenprobe zeigt:
+S*Omega S kann drei gleiche Diagonalwerte haben, obwohl ein weiterer
+geschlossener Zustand das volle Spektrum aufspaltet. Für eine autonome
+Drei-Generationen-Einschränkung ist zusätzlich (I-SS*)Omega S=0 nötig.
+Ein rein HC-ungerader Wechseloperator hat auf drei ungeraden Seeds keine
+direkte Kompression; indirekte Wirkungen benötigen eigene Voraussetzungen.
+Diese bedingten Aussagen identifizieren keine native Leptonmasse. OP3 bleibt offen.
+
+
+### Generationseinbettung: Farbtyp bleibt bei neutraler Closure erhalten (12.11.2026)
+
+Die Quellenprüfung verfolgt die e4/e5/e6-Slots zurück zu r35/r36: Mit
+festgelegter innerer komplexer Struktur bilden sie ein Farbtriplet.
+Unter zusätzlicher Farbinvarianz von Closure und direktem Massenterm
+bleibt die normierte Seed-Einbettung ein Farbtriplet. Die Kompression
+ist dann skalar und liefert keine drei verschiedenen Generationenmassen.
+Die im Paper deklarierte positive Seed-Normierung allein liefert die
+zusätzliche Farbinvarianz nicht und ersetzt keine Generationenidentifikation.
+Als vorhandene Alternativen bleiben die Trialitätsslots O³ und rechte
+Quaternion-/Dixon-Labels; deren physikalische Rollen und Dynamik sind
+separat zu bestimmen. Nächster Quellenauftrag ist die native Wirkung auf
+den Trialitätsslotindex. Kein neuer Massenfit oder OP-Abschluss.
+
+
+### Trialitätsträger: Slotraum und Konfigurationsraum unterscheiden (12.11.2026)
+
+Die vorhandene Trialitätsroute trennt den Slotindex von Farbe. Im linearen
+Umgebungsraum O³ bilden die drei Farbsingletkopien unter der erklärten
+inneren komplexen Struktur einen möglichen C³-Mehrfachraum. Farbneutrale
+lineare Operatoren bewahren ihn; native Closure, Ladung, HC-Gradierung und
+Operatorwerte sind damit noch nicht ausgewertet. Der konkrete Hopf-Träger
+aus r15 besteht dagegen aus drei Einheitsoktonionen mit (ab)c=1 und ist
+kein linearer Hilbertraum. Sein farbfester Teil besitzt zwei unabhängige
+reelle Phasen. Das verhindert die direkte Gleichsetzung mit drei
+unabhängigen linearen Seeds, aber nicht drei Auslesungen einer gemeinsamen
+Konfiguration oder Zustände eines noch zu definierenden Funktionsraums.
+Die Brücke von dieser Konfiguration zu physikalischen Zuständen oder
+Massenauslesungen ist deshalb der nächste Quellenauftrag. OP3 bleibt offen.
