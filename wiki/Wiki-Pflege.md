@@ -1,5 +1,10 @@
 # Wiki-Pflege
 
+**12.11.2026, OP3-Schnittstellenprüfung:** Forschungsstand um den Abgleich
+der ursprünglichen spektral-zu-Masse- und Higgs-Schnittstellen ergänzt.
+Fehlende Trialitäts-Zustandsabbildung und konkrete Ausleseregeln benannt;
+keine Änderung von OP-Status, Guards oder historischen Runden.
+
 **11.11.2026, typografischer Umbruch:** Forschungsstand um die Vorbereitung
 mehrzeiliger Anhangsboxen, umbrechender Protokollpfade und passender
 Tabellenspalten ergänzt. Lokal keine verbleibenden Satzüberläufe;

@@ -25,7 +25,9 @@
 - Im linearen O³ gibt es unter innerer komplexer Struktur drei Singletkopien; deren native Closure-/Operator-/Ladungs-/HC-Daten bleiben offen.
 - Konkreter r15-Träger: Einheitsoktonionentripel mit (ab)c=1, kein linearer C³-Raum. Farbfester Konfigurationsraum ist ein reeller 2-Torus, farbfeste Tangente reell zweidimensional.
 - Nicht mit drei Funktionen/Auslesungen oder einem quantisierten Zustandsraum verwechseln; kein allgemeiner Ausschluss von drei Generationen.
-- Nächster Schritt: vorhandene spektral-zu-Masse-Schnittstelle auf eine definierte Brücke von Trialitätskonfigurationen zu physikalischen linearen Zuständen oder drei Massenauslesungen prüfen.
+- NEU op3_triality_mass_bridge_2026_11_12.md: Originalschnittstelle R_m benennt Nachordnung und Zulässigkeit, aber keine Auswertung einer Trialitätskonfiguration; Higgs-Vermittlung ergänzt keine Generationenkopplung.
+- Lineare Masseneigenzustände brauchen eine Zustandsabbildung und native Operatorwirkung; drei Auslesungen brauchen definierte Funktionen mit Einheiten und Bedeutung. Die Schnittstellennamen liefern beides nicht.
+- Nächster Schritt: r33-Dixon-/rechten-Gram-Zweig auf konkrete Zustands-/Ausleseabbildung und eine ausdrücklich angegebene Verbindung zum r15-Träger prüfen.
 - Keine neuen Fits oder Simulationen; alle neuen Aussagen analytische, nicht blinde Erkundung/Selbstprüfung.
 - QAM-Leseserver derzeit nicht verfügbar; lokale read-only find-Suchen generation/triplet/e_4 ohne passende Ausgabe. Keine neuen MMA-Belege.
 - Wiki/Forschungsstand und Wiki-Pflege enthalten beide inhaltlichen Nachträge; keine historischen Runden oder Papertexte verändert.
@@ -36,3 +38,5 @@
 
 - PR #98 war vollständig grün. PR #99 änderte nur Notizen/Wiki/Übergabe und war CLEAN; QAM-Testworkflows werden für diese Pfade nicht ausgelöst.
 - git diff --check vor Integration sauber. Main-Builds nach Merge sind gesondert abzurufen; keine Zenodo-Aktion ausgeführt.
+- Wiederaufnahme 12.11.: lokale Basis ce16eb4; GitHub-Abgleich per gh scheitert an Verbindung. Nur lokale Quellen geprüft; Remote-PR-/Actions-Stand nicht erneut bestätigt.
+- Neue Quellenprüfung und Wiki-Nachtrag lokal gesichert; .codex/environments/ bleibt ausgeschlossen. Keine neue H-/k-Nummer, kein Merge oder Push.

@@ -1,5 +1,22 @@
 # Forschungsstand
 
+### OP3: Spektrale Schnittstelle und Trialitäts-Massenbrücke (12.11.2026)
+
+Der Abgleich mit der ursprünglichen spektral-zu-Masse-Schnittstelle bestätigt
+die bereits dokumentierte Identifikationslücke: R_m benennt einen Übergang
+nach Closure und Transport, wertet aber keine Trialitätskonfiguration aus.
+Die Generationenzerlegung fordert eine zulässige Aufspaltung, konstruiert
+jedoch keine drei Zustände. Auch die Higgs-Vermittlung liefert dort keine
+generationenaufgelöste Kopplung. Für Masseneigenzustände fehlen die konkrete
+Abbildung in einen linearen physikalischen Zustandsraum und die native
+Operatorwirkung; für drei Auslesungen fehlen drei definierte Funktionen
+mit Einheiten und physikalischer Bedeutung. Drei Funktionen auf dem
+farbfesten Torus sind möglich, aber dadurch weder ausgewählt noch als drei
+Teilchenzustände identifiziert. Nächster Quellenauftrag ist der vorhandene
+rechte Dixon-/Gram-Zweig und seine mögliche Trägerbindung. OP3 und die
+Guards bleiben offen bzw. unverändert; kein neuer Fit oder MMA-Beleg.
+[Quellenabgleich](../notes/research/op3_triality_mass_bridge_2026_11_12.md).
+
 ## Lokaler v4.11.0-Kandidat
 
 Der Kandidat baut auf v4.10.0 und dem Forschungsstand `ec9b2b8` auf. Sein neuer Koide-Abschnitt trennt die bedingte Überlagerung von Massenwurzeln, die exakte Polrechnung bei endlicher Lücke und die Frage nach einem nativen Erzeugungsmechanismus. Bei der Modelllücke 68 sind unter 2 bis 16 gleich gewichteten Beiträgen nur 15 möglich, bei Lücke 100 sind es 10 bis 16. Das ist eine Rückrechnung aus den Leptonmassen. Die physikalische Zahl der Auslesungen und die native Lücke bleiben offen.
