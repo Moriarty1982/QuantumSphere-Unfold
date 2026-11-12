@@ -22,11 +22,18 @@
 - Kleinste passende Energie (quartischer Doppeltopf, kubische Kraft): gleiche Zugkraft bei drei verschiedenen Längen verlangt Topfmitte L/3 und gibt exakt die Brannen-Form, K=1/3+2v²/L², K=2/3 für v=L/sqrt(6) (entspricht |b|=a/sqrt(2) aus r44.1(e)). Phase theta exakt entartet, nicht gewählt. Höhere Terme legen theta fest, kosten aber je eine Formzahl.
 - Ergebnis: W-b liefert keine native Operation und führt auf den offenen Punkt aus r44 zurück (|b|/a, theta). Stringfrage und OP3 bleiben offen.
 
+## Quellensuche zur Koide-Phase (12.11., Autor: „such im companion“, ältere Bausteine haben das heutige Wissen nicht)
+
+- Notiz und Skript `notes/research/op3_phase_source_search_2026_11_12.*`, im selben PR #103.
+- Übersehenes Vorwissen zu W-b nachgetragen: r10–r12, r16 (H11), r26 (H16), r38, r44, r45, koide-and-kernel, generation-coupling, coupling-scale-candidate.
+- Befund: tau wirkt als delta -> delta+2pi/3, rho als delta -> -delta. Symmetrische Größen sehen nur cos(3 delta) und wählen zwei gleiche Massen. Die Phase misst das Verhältnis rho-ungerade zu rho-gerade (tan 3delta). Feder-Satz, Slot-Norm-Potentiale und die v5-Stringfrage sind rho-symmetrisch und scheitern deshalb (Grund aus r45: Chiralität).
+- Native rho-ungerade Größen: Chiralitätsprojektor, Assoziator [e4,e5,e6]=-2e7, Q_J=iL_e7, Vorzeichen des Frame-Versatzes. Keine trägt einen Betrag. Quellensuche negativ, Lücke benannt.
+- Ältere Stellen ohne Statusvermerk (nur gemeldet): v470/17 Zeilen 18 und 194 („structurally closed“), Bemerkung „The 2/3 factor is everywhere“, rem:koide-mass-discrepancy.
+
 ## Nächster Schritt (Autorentscheidung)
 
-- W-a (native Herkunft ungleicher Moduln) oder W-c (Knotengeometrie mit festen Winkeln/Wicklungen gegen Torusgrenze K<=1/2) prüfen, oder
-- die engere Quellenfrage: Gibt es im Companion eine Größe, die auf dem Brannen-Kreis von e_3=x_1x_2x_3 abhängt (also theta sieht) und deren Extremum nicht bei zwei gleichen Massen liegt? Das ist die Phasenfrage von OP3.
-- Erst wenn ein Weg eine native Größe liefert: vorab festgelegter Test (dann H99).
+- Naheliegend: die fehlende Operation direkt untersuchen. Welche tau-invariante, rho-ungerade Kopplung der drei Plätze erlaubt die chirale Struktur (Modell I aus r45, Konnektoren r44.1(b)), und legt sie ein Verhältnis zu ihrem rho-geraden Partner fest? Erst als Quellen- und Strukturfrage; ein Test mit Kriterium bekäme H99 und eine Vorab-Notiz.
+- Offen daneben: W-a, W-c der Stringfrage; Statusvermerke für die gemeldeten älteren Stellen in einer neuen Runde.
 
 ## Pflichten in jeder Sitzung
 

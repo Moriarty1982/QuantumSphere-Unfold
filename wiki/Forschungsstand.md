@@ -1181,6 +1181,59 @@ Ungeprüft sind die Wege W-a (ungleiche Moduln) und W-c (Knotengeometrie).
 > `sec:v4110-koide-overlap`. Keine H-/k-Nummer, kein MMA-Beleg.
 
 
+### Quellensuche zur Koide-Phase (12.11.2026)
+
+Gefragt war, ob der Companion eine Größe enthält, die die Phase $\delta$
+der Brannen-Form sieht und nicht zwei gleiche Massen wählt. Dabei wurden
+die älteren Kernbausteine mit dem Wissen der späteren Runden gelesen.
+Quellenprüfung, analytisch, nicht blind.
+
+**Was die Phase ist.** Auf dem Brannen-Kreis wirkt die zyklische
+Verschiebung $\tau$ als $\delta\to\delta+2\pi/3$ und die Spiegelung
+$\rho$ als $\delta\to-\delta$. Mit den Abweichungen $x_k$ vom Mittel und
+der Amplitude $A$ gilt
+
+$$
+x_0x_1x_2=\tfrac14A^3\cos3\delta,\qquad
+(x_0-x_1)(x_1-x_2)(x_2-x_0)=\pm\tfrac{3\sqrt3}{4}A^3\sin3\delta .
+$$
+
+Jede unter $\tau$ und $\rho$ invariante Größe hängt nur von
+$\cos3\delta$ ab und hat zwei gleiche Massen als kritische Punkte. Eine
+Phase daneben verlangt einen $\rho$-ungeraden, $\tau$-geraden Anteil; die
+Phase misst dann das Verhältnis beider Anteile. Leptonen:
+$\cos3\delta=0{,}78587$.
+
+**Ältere Bausteine.** Der Feder-Satz, die Slot-Norm-Potentiale aus r16
+und r26 und auch die Stringfrage aus Version 5 sind unter $\rho$
+symmetrisch. Sie scheitern aus demselben Grund an der Phase, den r45
+schon nennt: Sie kennen die Chiralität nicht. Die alte Phasenformel
+$\theta_K=\pi-\sqrt2\arcsin\beta_{\rm sym}$ benutzte mit dem Frame-Versatz
+eine $\rho$-ungerade Größe; ihre Zahl ist an den Daten ausgeschlossen
+(r09). Eine phasenabhängige Größe steht in r12.1 (Produkt der Wurzeln),
+sie ist aber $\rho$-gerade.
+
+**Was der Companion an $\rho$-ungeraden Größen hat.** Den
+Chiralitätsprojektor $\tfrac12(1+iL_{e_7})$ (r42, r45), den Assoziator
+$[e_4,e_5,e_6]=-2e_7$ (r13.1), die Ladung $Q_J=iL_{e_7}$ von W1 und das
+Vorzeichen des Frame-Versatzes. Keine dieser Größen trägt einen Betrag.
+
+**Ergebnis.** Die Quellensuche ist negativ, die Lücke ist benannt: Es
+fehlt eine $\tau$-invariante, $\rho$-ungerade Kopplung der drei Plätze mit
+hergeleitetem Betrag; ihr Ort ist die Chiralität, nicht eine
+Stringenergie. Phase, Koide $2/3$ und Leptonspektrum sind nicht
+hergeleitet; OP3/OP4 bleiben offen, Guards unverändert. Der W-b-Abschnitt
+oben hatte r10–r12, r16, r26 und r45 als Vorwissen übersehen; die Notiz
+trägt das nach.
+
+> **Anmerkungen für LLMs und Quellenprüfung:** Notiz
+> `notes/research/op3_phase_source_search_2026_11_12.md` mit Prüfskript.
+> Zwei ältere Stellen tragen noch den alten Stand ohne Statusvermerk:
+> `v470/17_open_question_genealogy.tex` („Koide/triolic block
+> structurally closed“) und die Bemerkung „The 2/3 factor is everywhere“
+> in `v470/10_sphaera_and_physics.tex`. Nur gemeldet, nicht geändert.
+
+
 ### Version 5: Veröffentlichungsvorbereitung wieder aufgenommen (12.11.2026)
 
 PR #100 integriert die jüngsten OP3-Erkundungen. Auf Autorenauftrag werden

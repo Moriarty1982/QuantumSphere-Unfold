@@ -135,3 +135,12 @@ Zusatzterme wie in Punkt 5; Leptonwerte (Amplitude 1,414201, theta
 „Vorwissen geprüft“; gelesen wurden thm:spring, thm:koide-triolic,
 thm:string-lqg-duality, r18, r44.1(e), r81.9, r82.1, r83.4 und der
 v4.11-Abschnitt zur Koide-Phase. Keine externen Quellen.
+
+## Nachtrag (12.11., später am Abend): übersehenes Vorwissen
+
+Der Abschnitt „Vorwissen geprüft“ oben war unvollständig. Nicht genannt
+wurden v4.8.0-r10 bis r12, r16 (H11), v4.9.0-r26 (H16, r26.1), r45 sowie
+koide-and-kernel, generation-coupling und coupling-scale-candidate. Sie
+enthalten die Brannen-Form, die freie Phase und das Scheitern
+symmetrischer Potentiale bereits. Einordnung und Folgerung stehen in
+op3_phase_source_search_2026_11_12.md.
