@@ -2,7 +2,7 @@
 
 12. November 2026 (Codex). Wird pro Arbeitsblock überschrieben.
 
-- Branch main; PR #98 als 41b420e und Forschungs-PR #99 als 3257b0e gemergt. Lokales main auf diesen Stand synchronisiert.
+- Aktiver Branch codex/op3-triality-mass-bridge; Quellenprüfung in 67f4768 lokal committet. Basis main bei ce16eb4; PR #98 als 41b420e und Forschungs-PR #99 als 3257b0e integriert.
 - Aktueller Forschungs-Merge 3257b0e384d9c0ca49892a6aa2cd58fdb44cc5ea; öffentliche Baseline v4.11.0, Entwicklung v5.0.0-draft ohne DOI.
 - Veröffentlichungsvorbereitung ruht auf ausdrücklichen Autorenwunsch; keine Reservierung, kein Upload, kein Release.
 - PR #95–#99 gemergt; keine offenen PRs beim Abschluss. Technische Payload-Vorbereitung ist integriert, Veröffentlichung bleibt zurückgestellt.
