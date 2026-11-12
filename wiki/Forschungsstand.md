@@ -1063,3 +1063,12 @@ Weder Koide 2/3 noch Lambda oder das Leptonspektrum sind daraus hergeleitet.
 Diese offene Frage bildet den Forschungsanschluss für die beauftragte
 Version 5; OPs und Guards bleiben unverändert. Details in
 [der Erkundungsnotiz](../notes/research/op3_string_relaxation_lambda_2026_11_12.md).
+
+
+### Version 5: Veröffentlichungsvorbereitung wieder aufgenommen (12.11.2026)
+
+PR #100 integriert die jüngsten OP3-Erkundungen. Auf Autorenauftrag werden
+beide englischen Ausgaben um die offene Stringrelaxationsfrage ergänzt.
+Zenodo-Entwurf 24152615 reserviert DOI 10.5281/zenodo.24152615; noch nicht
+veröffentlicht. Die bisherige Zitationsbaseline v4.11.0 bleibt bis dahin
+gültig. Technische Paketprüfung und offene fachliche Guards bleiben getrennt.

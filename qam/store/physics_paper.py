@@ -6,6 +6,10 @@ from qam.store.latex_resources import resource_groups
 
 def render_paper(edition, snapshot):
     presentation = edition['presentation']
+    date_lines = 'Working paper ' + escape(presentation['version']) + r'\\\small ' + escape(presentation.get('date', '11 November 2026')) + '; not peer reviewed'
+    if 'version_doi' in presentation:
+        date_lines += r'\\\small Version DOI: ' + escape(presentation['version_doi'])
+        date_lines += r'\\\small Concept DOI: ' + escape(presentation['concept_doi'])
     versions = {v['version_hash']: v for v in snapshot['tables']['qstore_versions']}
     abstract = json.loads(versions[presentation['abstract']]['payload_json'])['latex']
     objects = {}
@@ -23,7 +27,7 @@ def render_paper(edition, snapshot):
     lines += [r'\newtheorem{proposition}{Proposition}[section]',
               r'\title{' + escape(edition['title']) + '}',
               r'\author{' + escape(presentation['author']) + r'\\\small Independent Researcher, Bochum, Germany}',
-              r'\date{Working paper ' + escape(presentation['version']) + r'\\\small 11 November 2026; not peer reviewed}',
+              r'\date{' + date_lines + '}',
               r'\begin{document}', r'\maketitle', r'\begin{abstract}', abstract, r'\end{abstract}']
     for section in edition['sections']:
         lines.append(r'\section{\raggedright ' + escape(section['title']) + '}')

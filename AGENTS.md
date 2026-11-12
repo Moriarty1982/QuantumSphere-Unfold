@@ -10,7 +10,9 @@ Sphaera“. Die öffentliche Baseline ist **v4.11.0** vom 2026-11-10 (Version-DO
 
 Die aktuelle Entwicklungslinie ist **v5.0.0-draft** (seit 2026-11-11):
 datenbankgestütztes Aussageninventar und ausgewählte LaTeX-Exporte. Sie hat
-keine eigene Version-DOI; öffentliche Baseline und Zitation bleiben v4.11.0.
+für v5.0.0 die reservierte, unveröffentlichte Version-DOI
+10.5281/zenodo.24152615 (Entwurf 24152615); öffentliche Baseline und
+Zitation bleiben bis zur Veröffentlichung v4.11.0.
 Details: `notes/research/v5_0_0_development.md`.
 
 - `sources/research/`: der modulare Kandidat (`v480-companion.tex` mit Teilen unter `parts/`). Die Runden v4.9.0-r01–r86 stehen in

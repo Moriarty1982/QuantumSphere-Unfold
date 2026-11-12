@@ -30,7 +30,9 @@ def save_edition(database, repo, request):
     versions = {v['version_hash']: v for v in snapshot['tables']['qstore_versions']}
     if 'presentation' in request:
         presentation = request['presentation']
-        if request['mode'] != 'selected-arguments' or set(presentation) != {'style', 'author', 'version', 'abstract'}:
+        required_presentation = {'style', 'author', 'version', 'abstract'}
+        release_fields = {'date', 'version_doi', 'concept_doi'}
+        if request['mode'] != 'selected-arguments' or set(presentation) not in (required_presentation, required_presentation | release_fields):
             raise ValueError('Invalid reader presentation')
         if presentation['style'] != 'physics-paper' or presentation['abstract'] not in versions:
             raise ValueError('Reader abstract must be source-pinned in the snapshot')
@@ -38,6 +40,8 @@ def save_edition(database, repo, request):
         if not isinstance(abstract_payload.get('latex'), str):
             raise ValueError('Reader abstract must be a LaTeX text block')
         for field in ('author', 'version'):
+            require_text(presentation[field], field)
+        for field in release_fields & presentation.keys():
             require_text(presentation[field], field)
     if not request['sections']:
         raise ValueError('Edition requires sections')

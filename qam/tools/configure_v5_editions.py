@@ -26,6 +26,8 @@ TITLES = [('question', 'Introduction'), ('core', 'A graded carrier and its inter
 
 def configure(database, destination):
     repo = Path(__file__).resolve().parents[2]
+    release_path = 'qam/editions/v5_release.json'
+    release = json.loads((repo / release_path).read_text(encoding='utf-8'))
     destination = Path(destination)
     destination.mkdir(parents=True, exist_ok=False)
     inventory = import_manuscript(database, repo)
@@ -109,6 +111,7 @@ def configure(database, destination):
                     for p in (repo / 'sources/research').rglob('*')
                     if p.is_file() and p.suffix.lower() in {'.tex', '.bib', '.sty', '.pdf', '.png', '.jpg'}}
     source_files[source_path] = source['sha256']
+    source_files[release_path] = hashlib.sha256((repo / release_path).read_bytes()).hexdigest()
     source_files[reference_path] = reference_source['sha256']
     source_files.update(expansion_sources)
     for path in ('qam/examples/gram-boost.tex', 'qam/examples/gram_range_mml.json',
@@ -146,8 +149,8 @@ def configure(database, destination):
         return save_edition(database, repo, request)['edition_hash']
     physics = save('qsc-v5-physics', 'Graded carriers and physical readouts: conditions for mass and geometric interpretation',
                   'selected-arguments', sections, None, {'style': 'physics-paper', 'author': 'Marc Brendecke',
-                  'version': '5.0.0-draft', 'abstract': abstract})
-    full = save('qsc-v5-full', 'Quantum Sphaera Companion v5.0.0-draft: Full edition', 'manuscript-source', full_sections,
+                  **release, 'abstract': abstract})
+    full = save('qsc-v5-full', 'Quantum Sphaera Companion v' + release['version'] + ': Full edition', 'manuscript-source', full_sections,
                 'sources/research/v480-companion.tex')
     exports = {name: export_edition(database, repo, key, destination / name) for name, key in [('physics', physics), ('full', full)]}
     result = {'snapshot_hash': snapshot, 'physics': physics, 'full': full, 'exports': exports,

@@ -4,11 +4,12 @@
 
 - Autorenauftrag: aktuellen Stand committen, mergen, pushen; danach Version 5 für Zenodo mit der offenen Frage zur unterschiedlichen Stringrelaxation erstellen.
 - Die bisherige Veröffentlichungspause ist damit für die Vorbereitung aufgehoben.
-- Branch codex/op3-triality-mass-bridge, Basis main ce16eb4; Remote-main vor Integration bestätigt, keine offenen PRs.
+- Forschungs-PR #100 gemergt als e3a3d7e6b7fb44d3719c45abfa0b9802d5f89fa1; Main-Zwei-PDF-Build 43163957197 und Wiki erfolgreich.
+- Release-Branch codex/v5-zenodo-release; Metadaten-Commit 84fb168.
 - Lokale Forschungscommits bis 4232a1b; neue Erkundung op3_string_relaxation_lambda_2026_11_12.md sichert die letzten Chatfragen.
-- Öffentliche Baseline v4.11.0, DOI 10.5281/zenodo.24108818; v5 bislang ohne reservierte DOI.
+- Öffentliche Baseline v4.11.0, DOI 10.5281/zenodo.24108818; v5-DOI 10.5281/zenodo.24152615 reserviert, unveröffentlicht. Reservierungslauf 43164056602 erfolgreich.
 - Englische Zwei-Dokument-Ausgabe und Quellen-/DB-Paket beibehalten. Alter Entwurf build/v5-english-upload-verified ist kein finales Release.
-- Nächster Schritt: Forschungsstand integrieren, dann offene Frage englisch in die Release-Ausgabe aufnehmen und endgültiges Paket neu bauen.
+- Beide englischen Ausgaben enthalten die offene Frage; Release-Titelseiten und Paketcode werden geprüft. Nächster Schritt: eingefrorener Neubau, Paketprüfung, Upload in vorhandenen Entwurf 24152615. Kein erneutes new_version_of verwenden.
 
 ## Inhaltlicher Stand
 

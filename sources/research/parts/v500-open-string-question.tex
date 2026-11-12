@@ -1,0 +1,88 @@
+\section{Open research question: expansion and unequal string relaxation}
+\label{sec:v500-string-relaxation}
+
+The following comparison records the open question at the v5 release
+boundary. It is an analytical exploration, not a native consequence of
+the graded carrier or a physical identification of fundamental strings.
+Suppose three extensible inner paths have lengths $\ell_i$, while an
+outer path has fixed length $L$. The equality $\sum_i\ell_i=L$ can be
+imposed throughout motion or only as a terminal condition; these are
+different models. A concrete network, its winding classes and its
+endpoint constraints have not yet been specified.
+
+\paragraph{Elastic allocation and its limitation.}
+For independent nonnegative lengths, minimizing
+$U=\tfrac12\sum_i k_i\ell_i^2$, with $k_i>0$ and fixed sum $L$,
+gives $\ell_i/L=k_i^{-1}/\sum_j k_j^{-1}$ and equal generalized
+tensions. Under the additional readout $\sqrt{m_i}=c\ell_i$, $c>0$,
+the Koide ratio is $K=\sum_i\ell_i^2/L^2$.
+Equal stiffnesses give $K=1/3$. Stiffnesses $(k/q,k,k)$ give
+$K=(q^2+2)/(q+2)^2$, so $q=4+3\sqrt2$ yields $K=2/3$.
+This factor is inferred from the target, not independently predicted;
+the example also has two equal masses. Moreover, $K>1/2$ requires one
+length greater than $L/2$. The paths therefore cannot be the three
+sides of a straight triangle or three pairwise shortest geodesics in
+one metric. Prescribed winding, guides or another network would be needed.
+
+\paragraph{A length scale associated with a cosmological constant.}
+Dimensional consistency permits $\Lambda=C/L^2$, but does not determine
+$C$ or a stress--energy tensor. If the outer loop is additionally
+identified with a great circle on a pure four-dimensional de Sitter
+horizon, its radius $R_\Lambda=\sqrt{3/\Lambda}$ gives
+$L=2\pi R_\Lambda$ and $C=12\pi^2$.
+This fixed horizon scale is not a material loop comoving with expansion.
+If instead $L=Aa(t)$ and a separately conserved homogeneous,
+isotropic component has $\rho=B/L^2$, with constants $A,B>0$, the continuity equation
+$\dot\rho+3H(\rho+p)=0$ gives $w=p/\rho=-1/3$, in units $c=1$.
+Vacuum energy requires $w=-1$. Three individual paths do not by
+themselves supply the required isotropic cosmological component.
+
+\paragraph{A dissipative comparison.}
+Let $r_i$ be an evolving unloaded length. In the tensile regime, a
+Maxwell-type model with constant $k_i,\eta_i>0$ is
+\begin{equation}
+ F_i=k_i(\ell_i-r_i),\qquad
+ \dot r_i=F_i/\eta_i,\qquad
+ \dot F_i=k_i\dot\ell_i-F_i/\tau_i,\quad \tau_i=\eta_i/k_i.
+\end{equation}
+Different relaxation times allow different responses to the same imposed
+extension. Tension can decrease while length increases, provided
+$k_i\dot\ell_i<F_i/\tau_i$. At fixed length,
+$F_i(t)=F_i(0)e^{-t/\tau_i}$. The elastic energy satisfies
+\begin{equation}
+ \dot U_i=F_i\dot\ell_i-F_i^2/\eta_i,\qquad
+ U_i=\tfrac12 k_i(\ell_i-r_i)^2.
+\end{equation}
+The dissipated energy must enter the full energy accounting. Slack paths
+require a unilateral tensile law; negative spring force must not be
+interpreted as compressive string tension. This comparison represents
+creep and relaxation, not a derived cyclic-fatigue law or microscopic
+damage mechanism.
+
+If $\sum_i\ell_i=L$ holds at every instant, then
+$\sum_i\dot\ell_i=0$: all three actual lengths cannot grow together,
+although their unloaded lengths may grow and their tensions may relax.
+For freely redistributed quasistatic lengths, force balance can equalize
+tensions even when material responses differ. A soft penalty
+$\kappa(L-\sum_i\ell_i)^2/2$ supplies the same generalized force to
+each length, and does not impose exact equality of the lengths' sum.
+
+\paragraph{The retained question.}
+Can a justified coupling between expansion, internal relaxation and a
+fixed outer length select a stable unequal allocation? Answering it
+requires an embedded network, an expansion-to-strain map, an energy
+balance including dissipative degrees of freedom, and a mechanism that
+limits relaxation. Identical initial data and identical deterministic
+laws alone do not select distinct responses. No value of $\Lambda$,
+lepton spectrum, or dynamically selected $K=2/3$ follows here. All
+existing physical-identification guards remain open.
+
+\paragraph{Sources for the comparison.}
+The de Sitter radius is discussed by H.-Y.~Guo,
+\emph{The Beltrami Model of De Sitter Space} (2006),
+arXiv:hep-th/0607017. For vacuum cosmology see S.~M.~Carroll,
+\emph{A No-Nonsense Introduction to General Relativity} (2001),
+Section~6. For finite-rate viscoelastic comparisons see C.-Y.~Lin
+et al., \emph{Polymers} \textbf{14} (2022), 2124,
+doi:10.3390/polym14102124. These sources support the background models,
+not their proposed identification with the Companion's physical sectors.

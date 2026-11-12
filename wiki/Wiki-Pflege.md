@@ -245,3 +245,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 12.11.2026: Vorhandene Trialitäts-/Hopfroute gegen den linearen Generationenraum abgeglichen; farbfesten Umgebungsraum und zweiphasigen Konfigurationsraum getrennt.
 
 12.11.2026: Lambda-Längenvorgabe, dissipative Stringrelaxation und offene Anschlussfrage für Version 5 dokumentiert; kein OP-Abschluss.
+
+12.11.2026: PR #100 integriert; v5-Reservierung und offene Frage in beiden englischen Ausgaben dokumentiert.
