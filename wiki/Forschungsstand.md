@@ -1,5 +1,23 @@
 # Forschungsstand
 
+### OP3: Konkrete rechte Gram-Auslesung gefunden (12.11.2026)
+
+Der r33-Zweig definiert tatsächlich drei nichtlineare Auslesungen eines
+Trialitätstripels: Aus der quaternionischen Gram-Matrix werden drei
+imaginäre Komponenten und deren Quadratsummen gebildet,
+$\mu_i=2(\|x_j\|^2\|x_k\|^2-\langle x_j,x_k\rangle^2)$.
+Diese Funktionen sind auch auf dem r15-Konfigurationsraum auswertbar.
+Sie liefern skalare Labels, keine drei linearen Masseneigenzustände.
+Die reine Drei-Slot-Ablage ist unter der linken Spinorwirkung nicht
+abgeschlossen (schon $i\cdot i=-1$); die Gram-Invarianz gilt auf dem
+größeren Quaternionträger. Positive reelle Quadratsummen und die
+komplex-bilineare Boost-Fassung sind dabei zu unterscheiden.
+Der historische Massentest H18 mit $m_i\propto\sqrt{\mu_i}$ bleibt
+für seine geprüften Potentialfamilien widerlegt. Offen sind Auswahl,
+Massenskala und native Operatorbindung. Nächster Schritt ist die
+analytische Einschränkung dieser Auslesung auf den farbfesten r15-Torus.
+[Quellen und Selbstprüfung](../notes/research/op3_dixon_gram_bridge_2026_11_12.md).
+
 ### OP3: Spektrale Schnittstelle und Trialitäts-Massenbrücke (12.11.2026)
 
 Der Abgleich mit der ursprünglichen spektral-zu-Masse-Schnittstelle bestätigt

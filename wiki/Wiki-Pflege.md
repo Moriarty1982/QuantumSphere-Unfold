@@ -1,5 +1,9 @@
 # Wiki-Pflege
 
+**12.11.2026, rechte Gram-Auslesung:** Forschungsstand um die konkrete
+r33-Abbildung ergänzt. Skalare Labels von linearen Zuständen und reelle
+Positivität von bilinearer Boost-Invarianz getrennt; H18-Status erhalten.
+
 **12.11.2026, OP3-Schnittstellenprüfung:** Forschungsstand um den Abgleich
 der ursprünglichen spektral-zu-Masse- und Higgs-Schnittstellen ergänzt.
 Fehlende Trialitäts-Zustandsabbildung und konkrete Ausleseregeln benannt;
