@@ -2,13 +2,13 @@
 
 12. November 2026 (Codex). Wird pro Arbeitsblock überschrieben.
 
-- Branch codex/op3-question-audit; letzter bestätigter Commit vor diesem Arbeitsblock aebae99.
-- Grundlage main 802c7af; öffentliche Baseline v4.11.0, Entwicklung v5.0.0-draft ohne DOI.
+- Branch main; PR #98 als 41b420e und Forschungs-PR #99 als 3257b0e gemergt. Lokales main auf diesen Stand synchronisiert.
+- Aktueller Forschungs-Merge 3257b0e384d9c0ca49892a6aa2cd58fdb44cc5ea; öffentliche Baseline v4.11.0, Entwicklung v5.0.0-draft ohne DOI.
 - Veröffentlichungsvorbereitung ruht auf ausdrücklichen Autorenwunsch; keine Reservierung, kein Upload, kein Release.
-- PR #95/#96/#97 gemergt; englische Payload-Vorbereitung liegt in PR #98 und bleibt ruhend.
+- PR #95–#99 gemergt; keine offenen PRs beim Abschluss. Technische Payload-Vorbereitung ist integriert, Veröffentlichung bleibt zurückgestellt.
 - Technischer Main-Build 43087358029 sowie Lean/TeX/Linux/Windows/Wiki erfolgreich.
 - Lokaler englischer Kandidat build/v5-english-upload-verified/: 1401/27 Seiten, Quellen-ZIP/DB/Manifeste; vollständiger Trockenlauf erfolgreich. Keine deutsche Lesefassung im Uploadplan.
-- Keine weiteren Merges oder alte Branchlöschungen freigegeben; .codex/environments/ nicht aufnehmen.
+- Autor hat commit, merge, push freigegeben und diese Integration ist ausgeführt. Alte Branchlöschung nicht freigegeben; .codex/environments/ nicht aufnehmen.
 
 ## Aktive Inhaltsarbeit
 
@@ -31,3 +31,8 @@
 - Wiki/Forschungsstand und Wiki-Pflege enthalten beide inhaltlichen Nachträge; keine historischen Runden oder Papertexte verändert.
 - OP1–OP5/C5/C6/T2 und Guards unverändert; keine H-/k-Nummer vergeben.
 - Voriger nicht ausgeführter Commit der inneren Operatorterms ist in aebae99 zusammen mit der Generationenprüfung gesichert.
+
+## Integrationsprüfung
+
+- PR #98 war vollständig grün. PR #99 änderte nur Notizen/Wiki/Übergabe und war CLEAN; QAM-Testworkflows werden für diese Pfade nicht ausgelöst.
+- git diff --check vor Integration sauber. Main-Builds nach Merge sind gesondert abzurufen; keine Zenodo-Aktion ausgeführt.
