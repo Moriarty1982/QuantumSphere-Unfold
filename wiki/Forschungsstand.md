@@ -1072,3 +1072,9 @@ beide englischen Ausgaben um die offene Stringrelaxationsfrage ergänzt.
 Zenodo-Entwurf 24152615 reserviert DOI 10.5281/zenodo.24152615; noch nicht
 veröffentlicht. Die bisherige Zitationsbaseline v4.11.0 bleibt bis dahin
 gültig. Technische Paketprüfung und offene fachliche Guards bleiben getrennt.
+
+Der eingefrorene v5-Kandidat 539b75b baut beide englischen PDFs (1402/28
+Seiten) ohne offene Verweise oder Satzüberläufe. Die neue Frage steht in
+Abschnitt 46 der Langfassung und Abschnitt 7.6 der Physikfassung. Quellen-,
+Datenbank- und Prüfsummenprüfung erfolgreich; keine unabhängige Begutachtung
+oder neue physikalische Herleitung. Zenodo-Veröffentlichung noch ausstehend.

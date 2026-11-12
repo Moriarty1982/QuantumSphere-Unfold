@@ -82,6 +82,40 @@ jobs:
             args+=(--publish --confirm-publish)
           fi
           python tools/zenodo_publish.py "${args[@]}"
+      - name: Verify uploaded draft files and preview
+        if: ${{ !inputs.dry_run && !inputs.publish }}
+        env:
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+          DEPOSITION_ID: ${{ inputs.deposition_id }}
+        run: |
+          python - <<'PY'
+          import hashlib, json, os
+          from pathlib import Path
+          from tools.zenodo_publish import request_json, ZENODO_API, reserved_doi
+          token = os.environ['ZENODO_TOKEN']
+          identifier = os.environ['DEPOSITION_ID']
+          dep = request_json('GET', f'{ZENODO_API}/deposit/depositions/{identifier}', token)
+          assert not dep.get('submitted'), 'Expected an unpublished draft'
+          assert reserved_doi(dep) == '10.5281/zenodo.24152615', 'Wrong reserved DOI'
+          assert dep['metadata']['version'] == 'v5.0.0', 'Wrong metadata version'
+          expected = {p.name: hashlib.md5(p.read_bytes()).hexdigest()
+                      for p in Path('build/v5-upload').iterdir() if p.is_file()}
+          actual = {f['filename']: f['checksum'].removeprefix('md5:') for f in dep['files']}
+          assert expected == actual, 'Remote file coverage or checksums differ'
+          record = request_json('GET', f'{ZENODO_API}/records/{identifier}/draft', token)
+          preview = record.get('files', {}).get('default_preview')
+          assert preview == 'Quantum_Sphaera_Companion_v5_0_0_full.pdf', 'Wrong or unset preview'
+          report = {'deposition_id': identifier, 'published': False, 'files_verified': len(expected),
+                    'checksums': actual, 'default_preview': preview}
+          Path('build/v5-upload-verification.json').write_text(json.dumps(report, indent=2) + '\n')
+          print(json.dumps(report))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: ${{ !inputs.dry_run && !inputs.publish }}
+        with:
+          name: qsc-v5-zenodo-verification-${{ github.run_number }}
+          path: build/v5-upload-verification.json
+          if-no-files-found: error
       - uses: actions/upload-artifact@v4
         if: always()
         with:
