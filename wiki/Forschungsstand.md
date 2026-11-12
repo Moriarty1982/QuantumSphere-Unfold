@@ -1078,3 +1078,15 @@ Seiten) ohne offene Verweise oder Satzüberläufe. Die neue Frage steht in
 Abschnitt 46 der Langfassung und Abschnitt 7.6 der Physikfassung. Quellen-,
 Datenbank- und Prüfsummenprüfung erfolgreich; keine unabhängige Begutachtung
 oder neue physikalische Herleitung. Zenodo-Veröffentlichung noch ausstehend.
+
+
+### Zenodo-Veröffentlichung bestätigt (12.11.2026)
+
+Der Autor hat v5.0.0 selbst veröffentlicht. Der öffentliche Eintrag
+[24152615](https://zenodo.org/records/24152615) ist offen zugänglich und
+als neueste Version markiert. Alle acht Dateien stimmen anhand von Größe
+und Prüfsumme mit dem Uploadpaket überein; das SHA256-Manifest stimmt und
+beide PDFs sind byteidentisch mit dem geprüften Kandidaten. Die Langfassung
+ist als Vorschau gesetzt. Vorgänger- und Concept-DOI sind korrekt verknüpft.
+Der GitHub-Release und die bisherigen Zitationsangaben müssen noch
+nachgezogen werden. Die Veröffentlichung ändert keine wissenschaftlichen Guards.
