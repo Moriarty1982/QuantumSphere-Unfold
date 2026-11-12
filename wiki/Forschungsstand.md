@@ -1065,6 +1065,64 @@ Version 5; OPs und Guards bleiben unverändert. Details in
 [der Erkundungsnotiz](../notes/research/op3_string_relaxation_lambda_2026_11_12.md).
 
 
+### Rückwärtssuche zur Stringfrage (12.11.2026, nach v5.0.0)
+
+Statt weitere Netze vorwärts zu simulieren, hält die Erkundung fest, was
+jedes Modell für eine stabile ungleiche Aufteilung bei fester Außenlänge
+$L$ erfüllen muss. Analytisch, nicht blind; Forschungsschicht nach dem
+Release, kein Bestandteil von v5.0.0.
+
+- **Gleiche Zugkraft.** Bei frei umverteilbaren Längen mit
+  $\sum_i\ell_i=L$ gilt im Gleichgewicht $F_1=F_2=F_3$. Ungleiche Längen
+  kommen nur aus unterschiedlichem Materialzustand.
+- **Konvexe Energie.** Bei strikt konvexer Gleichgewichtsenergie und rein
+  dissipativer Kinetik ist der Endzustand das eindeutige Energieminimum.
+  Relaxationszeiten bestimmen den Weg, nicht das Ziel; gleiche Strings
+  geben $\ell_i=L/3$, also $K=1/3$.
+- **Reiner Maxwell-String.** Bei fester Summe fällt die Kraft
+  exponentiell auf null, und
+
+$$
+\ell_i(\infty)=r_i(0)+\Bigl(L-\sum_j r_j(0)\Bigr)\frac{1/\eta_i}{\sum_j 1/\eta_j}.
+$$
+
+  Die Aufteilung hängt an Anfangsdaten und eingesetzten Viskositäten. Es
+  gibt ein Kontinuum kraftfreier neutraler Zustände, keinen Attraktor;
+  die elastische Energie wird vollständig dissipiert.
+- **Wachsende Außenlänge.** Nur für $L\propto a=e^{Ht}$ gibt es einen von
+  den Anfangsdaten unabhängigen Grenzwert,
+  $\ell_i/L\to(1/\eta_i+H/k_i)/\sum_j(1/\eta_j+H/k_j)$. Das widerspricht
+  der festen Außenlänge, gibt für gleiche Strings wieder $1/3$, und die
+  von der Expansion geleistete Arbeit ist in keiner Friedmann-Bilanz
+  geführt.
+- **Gleiche Strings.** Ungleiche Längen verlangen ein nicht monotones
+  Kraftgesetz. Stabil ist ein Zustand genau dann, wenn höchstens ein
+  String auf einem fallenden Ast liegt und dann $\sum_i 1/F'(\ell_i)<0$
+  gilt. Ein Kraftgesetz mit einem Höcker erlaubt nur (lang, kurz, kurz),
+  also zwei gleiche Massen; $K=2/3$ legt dann die eine Zahl $L/\ell_c$
+  fest (Beispiel $F=\ell e^{-\ell/\ell_c}$: $L=2{,}983\,\ell_c$). Drei
+  verschiedene Längen verlangen mindestens zwei Umkehrpunkte des
+  Kraftgesetzes.
+
+**Ergebnis.** Für die Maxwell-Klasse bei fester Außenlänge ist die Frage
+aus Version 5 negativ beantwortet: Unterschiedliche Relaxation wählt keine
+stabile Aufteilung. Übrig bleiben drei Wege mit je einer benannten Lücke:
+ungleiche Strings (Herkunft der Moduln fehlt, Trialität spricht dagegen),
+gleiche Strings mit zweifach umkehrendem Kraftgesetz (native nicht konvexe
+Stringenergie und die Zahl $L/\ell_c$ fehlen) oder eine Knotengeometrie,
+in der die Kräfte nicht gleich sein müssen (Torusgrenze $K\le 1/2$ steht
+entgegen). Ein passendes Kraftgesetz lässt sich zu jedem Zieltripel
+konstruieren; das wäre keine Herleitung. Weder $\Lambda$ noch Koide $2/3$
+oder das Leptonspektrum folgen daraus. OP3 und OP5 bleiben offen, Guards
+unverändert.
+
+> **Anmerkungen für LLMs und Quellenprüfung:** Notiz
+> `notes/research/op3_string_relaxation_backward_2026_11_12.md`,
+> Selbstprüfung `op3_string_relaxation_backward_2026_11_12.py` (Formeln
+> gegen integrierte Gleichungen auf $10^{-12}$). Keine H-/k-Nummer, kein
+> MMA-Beleg.
+
+
 ### Version 5: Veröffentlichungsvorbereitung wieder aufgenommen (12.11.2026)
 
 PR #100 integriert die jüngsten OP3-Erkundungen. Auf Autorenauftrag werden

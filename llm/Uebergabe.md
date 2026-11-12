@@ -1,28 +1,31 @@
 # Übergabe: Stand der letzten Sitzung
 
-12. November 2026 (Codex). Wird pro Arbeitsblock überschrieben.
+12. November 2026, ca. 20:15 (Claude). Wird pro Arbeitsblock überschrieben.
 
-- Autorenauftrag: aktuellen Stand committen, mergen, pushen; danach Version 5 für Zenodo mit der offenen Frage zur unterschiedlichen Stringrelaxation erstellen.
-- Die bisherige Veröffentlichungspause ist damit für die Vorbereitung aufgehoben.
-- Forschungs-PR #100 gemergt als e3a3d7e6b7fb44d3719c45abfa0b9802d5f89fa1; Main-Zwei-PDF-Build 43163957197 und Wiki erfolgreich.
-- Release-PR #101 nach ausdrücklicher Autorenfreigabe gemergt als d15ce0f65fdab16627dccfdd4d05b2bbfdd36cdf. Lokaler Nachweiszweig codex/v5-zenodo-upload-record.
-- Lokale Forschungscommits bis 4232a1b; neue Erkundung op3_string_relaxation_lambda_2026_11_12.md sichert die letzten Chatfragen.
-- NEU: Autor hat v5.0.0 am 12.11.2026 auf Zenodo veröffentlicht. Öffentliche API bestätigt published/open/latest, DOI 10.5281/zenodo.24152615, Concept DOI 10.5281/zenodo.19210728. GitHub-Tag/Release v5.0.0 angelegt; Zitation/README/AGENTS/DOI-Rollen und Wiki in Abschluss-PR #102 aktualisiert.
-- Englische Zwei-Dokument-Ausgabe und Quellen-/DB-Paket beibehalten. Alter Entwurf build/v5-english-upload-verified ist kein finales Release.
-- Release-PR #101; Kandidat 539b75bfce29ce20bb9aa7e59c251727b49faa45, erfolgreicher Zwei-PDF-Lauf 43197984602 (1402/28 Seiten). Alle vier PR-Prüfungen erfolgreich.
-- 113 Hashes, 88 Archiveinträge, SQLite, DOI-Titelseiten, sechs Sichtprüfseiten und vollständiger lokaler Zenodo-Trockenlauf geprüft. Bericht release/v5.0.0-prep/RELEASE_VALIDATION_2026_11_12.json.
-- Uploadlauf 43199728870 übertrug alle acht Dateien erfolgreich; nur die nachgelagerte Vorschauprüfung scheiterte an API-Format/fehlender Auswahl. Autor veröffentlichte danach selbst. Öffentlicher Abgleich: alle acht MD5/Größen und SHA256-Manifest korrekt, beide PDFs byteidentisch mit dem sichtgeprüften Kandidaten, Vorschau full.pdf korrekt. Kein erneuter Upload oder Publish-Aufruf.
-- Nachweis: release/v5.0.0-prep/PUBLICATION_VERIFICATION_2026_11_12.json. Tag v5.0.0 zeigt auf den tatsächlichen Paketquellstand 539b75b. GitHub-Release veröffentlicht, DOI/Record verlinkt. Autor hat die GitHub-Nacharbeiten ausdrücklich beauftragt; Abschluss-PR #102 enthält Zitation/README/AGENTS/DOI-Rollen, Wiki und Prüfbericht.
-- Nächster inhaltlicher Schritt: offene Stringrelaxationsfrage mit konkreter Netzgeometrie, Expansionskopplung und vollständiger Energiebilanz untersuchen. Keine weitere Veröffentlichung erforderlich.
+- Öffentliche Baseline v5.0.0 (DOI 10.5281/zenodo.24152615, Tag v5.0.0 auf 539b75b). PR #100, #101, #102 gemergt; main 1eed465; Läufe 43265308165 (Zwei-PDF) und 43265308144 (Wiki-Sync) erfolgreich. Keine weitere Veröffentlichung nötig.
+- Lokaler Ordner des Autors (`Quantum Sphera`) stand noch auf dem 6.11. (93c3d21, r05) und wurde auf Autorenfreigabe per Fast-Forward auf 1eed465 gebracht. Der alte Stand ist als Tag `lokal-stand-2026-11-06` gesichert (dabei entfielen 58 verfolgte Dateien, u. a. `.claude/skills`, alte Zusammenfassungen; alle über den Tag erreichbar).
+- Offener Zweig `research/v5-string-relaxation-rueckwaertssuche` mit PR (Nummer siehe GitHub): Rückwärtssuche zur Stringrelaxationsfrage, Notiz und Selbstprüfungsskript unter `notes/research/op3_string_relaxation_backward_2026_11_12.*`, Wiki (Forschungsstand, Wiki-Pflege). Merge nur nach „PR NN mergen“.
+- Zuletzt vergebene Hypothese H98, letztes k219. In diesem Block keine neue H-/k-Nummer, kein MMA-Beleg.
 
 ## Inhaltlicher Stand
 
-- Farbtriplet ist keine Generationeneinbettung. Native Zustands-/Operatorbrücke bleibt offen.
-- H18-Auslesung auf farbfestem Trialitätstorus erfüllt 1/3<=K<=1/2; Hermitianisierung der Zweiformen hat Rang höchstens eins.
-- Gemeinsame Frame-Normierung oder imaginäre Gesamtphase liefert keine neue Massenhierarchie.
-- Inverse Messwertdiagnose und Hashmanifest in op3_mass_backsolve_2026_11_12/run02; kein neuer Blindtest.
-- Elastische freie Längenaufteilung erlaubt konstruiertes K=2/3 bei ungleichen Steifigkeiten, keine native Herleitung oder eingebettete Netzgeometrie.
-- Neu: Lambda-Längenskala und Maxwell-artige Relaxation sind zusätzliche Vergleichsannahmen. Dissipation, feste Summe, fehlende Expansionskopplung ausdrücklich benannt.
-- Offene Anschlussfrage: Kann unterschiedliche Relaxation unter Expansion eine stabile ungleiche Aufteilung bei fester Außenlänge wählen?
-- OP1–OP5/C5/C6/T2 unverändert; keine neue H-/k-Nummer und keine neuen MMA-Belege.
-- .codex/environments/ bleibt unversioniert und ausgeschlossen.
+- Autorenentscheidung 12.11.: erst Rückwärtssuche, keine Netzsimulation.
+- Ergebnis (analytisch, nicht blind): Bei fester Außenlänge und frei umverteilbaren Längen sind die Zugkräfte gleich. Konvexe Energie: Relaxationszeiten wählen nichts aus, gleiche Strings geben K=1/3. Reiner Maxwell-String: Endaufteilung r_i(0) plus Überschuss nach Fluidität, neutral und kraftfrei, kein Attraktor. Attraktor nur bei L proportional a (Anteile (1/eta_i+H/k_i)/Summe), im Widerspruch zur festen Außenlänge. Gleiche Strings: ungleiche Aufteilung nur mit nicht monotonem Kraftgesetz; ein Höcker gibt (lang, kurz, kurz), drei verschiedene Längen brauchen zwei Umkehrpunkte.
+- Damit ist die v5-Frage für die Maxwell-Klasse bei fester Außenlänge negativ beantwortet; allgemein bleibt sie offen. Weder Lambda noch Koide 2/3 oder das Leptonspektrum folgen.
+- Fehlende native Operation: nicht konvexe Energie des einzelnen Strings oder Herkunft ungleicher Moduln aus dem Companion.
+- OP1–OP5/C5/C6/T2 unverändert. I3 durch den Lambda-Bezug berührt, nicht benutzt.
+
+## Nächster Schritt (Autorentscheidung)
+
+Einen der drei verbleibenden Wege wählen:
+- W-a: native Herkunft ungleicher Gleichgewichtsmoduln suchen (Trialität spricht dagegen).
+- W-b: im Companion nach einer Stringenergie mit zwei Umkehrpunkten und nach der Zahl L/ell_c suchen (Quellenauftrag, keine Simulation).
+- W-c: Knotengeometrie mit festen Winkeln oder Wicklungen festlegen, in der die Kräfte nicht gleich sein müssen; gegen Torusgrenze K<=1/2 prüfen.
+
+Danach erst, falls ein Weg eine native Größe liefert: vorab festgelegter Test (dann H99).
+
+## Pflichten in jeder Sitzung
+
+- `AGENTS.md`, `wiki/Gesamtbild.md` und die einschlägige Anleitung unter `notes/anleitungen/` lesen; Auslöser in `notes/research/v4_10_0_w1/Zurueckgestellte_Ideen.md` prüfen.
+- Vorwissen-Pflicht, Vorab-Notizen, Suchrichtung prüfen. Merges nur nach ausdrücklicher Freigabe. Wiki im selben PR.
+- `.codex/environments/` bleibt unversioniert.
