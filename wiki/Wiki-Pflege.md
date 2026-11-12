@@ -1,5 +1,9 @@
 # Wiki-Pflege
 
+**12.11.2026, Frame-/Massenprüfung:** H82-Regel und kanonische Normierung
+für OP3 eingeordnet; gemeinsamer Massenfaktor von neuer Hierarchie getrennt.
+Imaginäre Dirac-Phase und singulärer Photon-Endpunkt ausdrücklich abgegrenzt.
+
 **12.11.2026, epsilon-/Gram-Prüfung mit Netzquellen:** Komplexes
 SU(3)-Kreuzprodukt und oktonionische Dreiform eingeordnet; Farb-/Slotindizes
 getrennt. Analytische Rang-eins-Grenze der vorgeschlagenen vollen

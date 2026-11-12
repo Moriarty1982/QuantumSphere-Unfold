@@ -1,5 +1,23 @@
 # Forschungsstand
 
+### OP3: Frameabhängige Massen und kanonische Rückauslesung (12.11.2026)
+
+Die Frame-Frage ist bereits in r84/r85 konkret behandelt: Der vollständige
+komplexe Spinorboost erhält den antisymmetrischen Massenterm,
+$S^{\mathsf T}\varepsilon S=\varepsilon$. Unter der dort festgelegten
+zweiten Lesart tragen Kinetik und Massenterm die gemeinsamen Gewichte
+$k=a-b$ und $p=a+b$. Für k>0 ergibt kanonische Normierung
+$D_{\rm eff}=(p/k)D$, bei Materiegewichten also $\gamma D$.
+Das skaliert alle Fermionmassen gemeinsam und erzeugt keine Hierarchie.
+Die Reduktion zweier Lesarten zu einem Feld ist dabei kein allgemeiner
+M/P-Frame-Wechsel. Eine bloße imaginäre Phase einer komplexen
+Dirac-Kopplungsmatrix verändert ihre positiven Singulärwerte nicht.
+Am Photon-Endpunkt k=0 ist diese Normierung undefiniert.
+Generationsabhängige kinetische Gewichte oder relative Kopplungen könnten
+andere Verhältnisse ergeben, sind auf den nativen Leptonzuständen jedoch
+noch nicht ausgewertet. OPs und Guards unverändert.
+[Quellenprüfung und Herleitung](../notes/research/op3_frame_mass_normalization_2026_11_12.md).
+
 ### OP3: Komplexe Kreuzprodukte und Grenze der vollen Gram-Matrix (12.11.2026)
 
 Die Literatur kennt bereits ein SU(3)-angepasstes komplexes Kreuzprodukt:
