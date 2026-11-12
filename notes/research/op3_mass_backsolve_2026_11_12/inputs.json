@@ -1,0 +1,9 @@
+{
+  "checked_date": "2026-11-12",
+  "convention": "Positive charged-lepton rest-mass energy equivalents in MeV, c=1; no conversion to running Yukawa masses",
+  "masses": ["0.51099895069", "105.6583755", "1776.93"],
+  "uncertainties": ["0.00000000016", "0.0000023", "0.09"],
+  "sources": ["https://physics.nist.gov/cuu/pdf/all.pdf", "https://pdg.lbl.gov/2025/listings/rpp2025-list-tau.pdf"],
+  "source_versions": ["CODATA 2022, electron and muon only", "PDG 2025 update, tau listing p.1"],
+  "uncertainty_note": "Eight corners of individual plus/minus quoted uncertainties; not a joint confidence region or covariance propagation"
+}

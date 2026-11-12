@@ -1,5 +1,37 @@
 # Wiki-Pflege
 
+**12.11.2026, String-Längenmodell:** Stabiles elastisches Vergleichsminimum
+und rückgerechnetes 2/3-Beispiel dokumentiert; gleiche Strings, offene
+Torus-Realisierung und zusätzliche Massenwurzel-Auslese getrennt.
+
+**12.11.2026, inverse Leptonmassendiagnose:** Forschungsstand um die
+bekannte-Daten-Rückrechnung ergänzt: Dreiecksfehlbetrag, notwendige
+relative Faktorstreuung, Ranggrenze und Nicht-Eindeutigkeit der Umkehrung.
+Messquellen, Laufnachweis und Grenzen dokumentiert; keine Vorhersage.
+
+**12.11.2026, Frame-/Massenprüfung:** H82-Regel und kanonische Normierung
+für OP3 eingeordnet; gemeinsamer Massenfaktor von neuer Hierarchie getrennt.
+Imaginäre Dirac-Phase und singulärer Photon-Endpunkt ausdrücklich abgegrenzt.
+
+**12.11.2026, epsilon-/Gram-Prüfung mit Netzquellen:** Komplexes
+SU(3)-Kreuzprodukt und oktonionische Dreiform eingeordnet; Farb-/Slotindizes
+getrennt. Analytische Rang-eins-Grenze der vorgeschlagenen vollen
+hermiteschen Gram-Matrix auf dem Torus dokumentiert, keine Massenherleitung.
+
+**12.11.2026, Gram-Auslesung auf dem Torus:** Exakte Sinusformel und
+Sehnen-Dreiecksargument ergänzt. Unter dem H18-Massengesetz ist K≤1/2;
+Phasenauswahl und gemeinsame Skala können K=2/3 nicht erreichen.
+Annahmen, Nullfall und Grenzen im Forschungsstand erhalten.
+
+**12.11.2026, rechte Gram-Auslesung:** Forschungsstand um die konkrete
+r33-Abbildung ergänzt. Skalare Labels von linearen Zuständen und reelle
+Positivität von bilinearer Boost-Invarianz getrennt; H18-Status erhalten.
+
+**12.11.2026, OP3-Schnittstellenprüfung:** Forschungsstand um den Abgleich
+der ursprünglichen spektral-zu-Masse- und Higgs-Schnittstellen ergänzt.
+Fehlende Trialitäts-Zustandsabbildung und konkrete Ausleseregeln benannt;
+keine Änderung von OP-Status, Guards oder historischen Runden.
+
 **11.11.2026, typografischer Umbruch:** Forschungsstand um die Vorbereitung
 mehrzeiliger Anhangsboxen, umbrechender Protokollpfade und passender
 Tabellenspalten ergänzt. Lokal keine verbleibenden Satzüberläufe;
@@ -211,3 +243,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 12.11.2026: Farbtriplet-/Generationenprüfung mit direkter Kommutantenrechnung ergänzt; Grenzen der neutralen Closure und vorhandene alternative Sloträume dokumentiert.
 
 12.11.2026: Vorhandene Trialitäts-/Hopfroute gegen den linearen Generationenraum abgeglichen; farbfesten Umgebungsraum und zweiphasigen Konfigurationsraum getrennt.
+
+12.11.2026: Lambda-Längenvorgabe, dissipative Stringrelaxation und offene Anschlussfrage für Version 5 dokumentiert; kein OP-Abschluss.

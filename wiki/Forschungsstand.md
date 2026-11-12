@@ -1,5 +1,124 @@
 # Forschungsstand
 
+### OP3: Elastische Strings mit fester Gesamtlänge (12.11.2026)
+
+Die Autorenidee wurde als zusätzliches Längenmodell untersucht:
+sum ell_i=L und E=(1/2)sum k_i ell_i². Das eindeutige Minimum hat
+ell_i proportional 1/k_i. Unter der zusätzlichen Auslese sqrt(m_i)
+proportional ell_i liefern gleiche Steifigkeiten K=1/3. Ein um den
+Faktor 4+3sqrt(2) weicherer String neben zwei gleichen liefert exakt
+K=2/3, aber zwei gleiche Massen. Der Faktor ist aus dem Ziel rückgerechnet.
+Für K>1/2 muss ein String länger als die beiden anderen zusammen sein;
+drei kürzeste paarweise Torusverbindungen scheiden daher aus.
+Eine konkrete Netzgeometrie mit Wicklungen sowie eine unabhängige
+Elastizitätsregel bleiben offen. Keine native Herleitung oder OP-Schließung.
+[Analytische Erkundung](../notes/research/op3_string_length_exploration_2026_11_12.md).
+
+### OP3: Rückwärtsdiagnose mit gemessenen Leptonmassen (12.11.2026)
+
+Die ausdrücklich beauftragte Rückrechnung verwendet CODATA-2022-Werte
+für Elektron/Myon und den PDG-2025-Tauwert 1776,93±0,09 MeV. Die
+H18-Torusbedingung m_tau≤m_mu+m_e scheitert an 1776,93 gegenüber
+106,16937 MeV: Fehlbetrag 1670,76063 MeV, rund 94,03 Prozent der
+Tau-Masse. Positive generationsabhängige Multiplikatoren derselben
+Dreiecksroute müssten notwendig eine Streuung f_max/f_min≥16,73675
+haben; eine gemeinsame Frame-Normierung kann das nicht leisten.
+Die volle Torus-Gram-Matrix scheitert separat an Rang≤1 gegenüber drei
+positiven Zielmassen. Aus den Messwerten folgt K≈0,66666446; Koide wird
+nicht als exakt vorausgesetzt. Die Massendaten bestimmen nur ein Spektrum,
+keine eindeutige native Kopplung. Bekannte-Daten-Erkundung mit gespeichertem
+Skript und geprüftem Laufmanifest, keine Vorhersage oder OP-Schließung.
+[Eingaben, Rechnung und Grenzen](../notes/research/op3_mass_backsolve_2026_11_12/README.md).
+
+### OP3: Frameabhängige Massen und kanonische Rückauslesung (12.11.2026)
+
+Die Frame-Frage ist bereits in r84/r85 konkret behandelt: Der vollständige
+komplexe Spinorboost erhält den antisymmetrischen Massenterm,
+$S^{\mathsf T}\varepsilon S=\varepsilon$. Unter der dort festgelegten
+zweiten Lesart tragen Kinetik und Massenterm die gemeinsamen Gewichte
+$k=a-b$ und $p=a+b$. Für k>0 ergibt kanonische Normierung
+$D_{\rm eff}=(p/k)D$, bei Materiegewichten also $\gamma D$.
+Das skaliert alle Fermionmassen gemeinsam und erzeugt keine Hierarchie.
+Die Reduktion zweier Lesarten zu einem Feld ist dabei kein allgemeiner
+M/P-Frame-Wechsel. Eine bloße imaginäre Phase einer komplexen
+Dirac-Kopplungsmatrix verändert ihre positiven Singulärwerte nicht.
+Am Photon-Endpunkt k=0 ist diese Normierung undefiniert.
+Generationsabhängige kinetische Gewichte oder relative Kopplungen könnten
+andere Verhältnisse ergeben, sind auf den nativen Leptonzuständen jedoch
+noch nicht ausgewertet. OPs und Guards unverändert.
+[Quellenprüfung und Herleitung](../notes/research/op3_frame_mass_normalization_2026_11_12.md).
+
+### OP3: Komplexe Kreuzprodukte und Grenze der vollen Gram-Matrix (12.11.2026)
+
+Die Literatur kennt bereits ein SU(3)-angepasstes komplexes Kreuzprodukt:
+Das gewöhnliche epsilon-Kreuzprodukt wird komplex konjugiert und ist dann
+antilinear in beiden Eingängen. Seine Farbkomponenten dürfen nicht mit
+Generationenslots gleichgesetzt werden. Die Oktonionen liefern außerdem
+ein siebendimensionales Kreuzprodukt mit G2-invarianten Strukturkonstanten.
+Auf den imaginären Anteilen des farbfesten Torus verschwindet es, weil
+diese alle entlang e7 liegen. Der äußere Flächentensor ist davon verschieden.
+
+Die im Chat vorgeschlagene positive hermitesche Matrix
+$H_{ij}=\sum_{c,d}(A_i)_{cd}\overline{(A_j)_{cd}}$ behält mehr Korrelationen
+als ihre Diagonale. Auf dem bisherigen zweidimensionalen Slotträger sind
+aber alle A_i proportional zu derselben Zweiform: $H=2ss^{\mathsf T}$.
+Damit hat H höchstens Rang eins. Seine Eigenwerte liefern dort unter einer
+zusätzlichen Masseninterpretation keine drei positiven Massen. Dies
+schränkt den Vorschlag ein; OPs und Guards bleiben unverändert.
+[Herleitung, Quellen und Grenzen](../notes/research/op3_epsilon_hermitian_review_2026_11_12.md).
+
+### OP3: Analytischer Ausschluss der H18-Torusroute (12.11.2026)
+
+Auf dem farbfesten r15-Torus gilt für die rechte Gram-Auslesung exakt
+$\mu_i=2\sin^2(\alpha_j-\alpha_k)$. Die drei Werte können positiv und
+verschieden sein. Unter dem zusätzlichen H18-Massengesetz
+$m_i=\kappa\sqrt{\mu_i}$ sind die Massen jedoch proportional zu den
+Sehnenlängen der drei Punkte $e^{2e_7\alpha_i}$ und erfüllen deshalb
+eine Dreiecksbedingung. Auch die Massenwurzeln erfüllen diese Bedingung;
+daraus folgt $1/3\leq K\leq1/2$. Bei drei positiven Massen ist die obere
+Ungleichung strikt; bei ausschließlich verschwindenden Massen ist K
+undefiniert. Koide $K=2/3$ ist für diese Route unabhängig von der
+Phasenauswahl ausgeschlossen. Ein Auswahlpotential auf demselben Torus
+oder eine gemeinsame Skala kann das nicht ändern. Andere Massengesetze
+und Träger werden dadurch nicht allgemein ausgeschlossen. Analytische
+Erkundung/Selbstprüfung, kein neuer blinder Test; OPs und Guards unverändert.
+[Beweis und Grenzen](../notes/research/op3_gram_torus_bound_2026_11_12.md).
+
+### OP3: Konkrete rechte Gram-Auslesung gefunden (12.11.2026)
+
+Der r33-Zweig definiert tatsächlich drei nichtlineare Auslesungen eines
+Trialitätstripels: Aus der quaternionischen Gram-Matrix werden drei
+imaginäre Komponenten und deren Quadratsummen gebildet,
+$\mu_i=2(\|x_j\|^2\|x_k\|^2-\langle x_j,x_k\rangle^2)$.
+Diese Funktionen sind auch auf dem r15-Konfigurationsraum auswertbar.
+Sie liefern skalare Labels, keine drei linearen Masseneigenzustände.
+Die reine Drei-Slot-Ablage ist unter der linken Spinorwirkung nicht
+abgeschlossen (schon $i\cdot i=-1$); die Gram-Invarianz gilt auf dem
+größeren Quaternionträger. Positive reelle Quadratsummen und die
+komplex-bilineare Boost-Fassung sind dabei zu unterscheiden.
+Der historische Massentest H18 mit $m_i\propto\sqrt{\mu_i}$ bleibt
+für seine geprüften Potentialfamilien widerlegt. Offen sind Auswahl,
+Massenskala und native Operatorbindung. Nächster Schritt ist die
+analytische Einschränkung dieser Auslesung auf den farbfesten r15-Torus.
+[Quellen und Selbstprüfung](../notes/research/op3_dixon_gram_bridge_2026_11_12.md).
+
+### OP3: Spektrale Schnittstelle und Trialitäts-Massenbrücke (12.11.2026)
+
+Der Abgleich mit der ursprünglichen spektral-zu-Masse-Schnittstelle bestätigt
+die bereits dokumentierte Identifikationslücke: R_m benennt einen Übergang
+nach Closure und Transport, wertet aber keine Trialitätskonfiguration aus.
+Die Generationenzerlegung fordert eine zulässige Aufspaltung, konstruiert
+jedoch keine drei Zustände. Auch die Higgs-Vermittlung liefert dort keine
+generationenaufgelöste Kopplung. Für Masseneigenzustände fehlen die konkrete
+Abbildung in einen linearen physikalischen Zustandsraum und die native
+Operatorwirkung; für drei Auslesungen fehlen drei definierte Funktionen
+mit Einheiten und physikalischer Bedeutung. Drei Funktionen auf dem
+farbfesten Torus sind möglich, aber dadurch weder ausgewählt noch als drei
+Teilchenzustände identifiziert. Nächster Quellenauftrag ist der vorhandene
+rechte Dixon-/Gram-Zweig und seine mögliche Trägerbindung. OP3 und die
+Guards bleiben offen bzw. unverändert; kein neuer Fit oder MMA-Beleg.
+[Quellenabgleich](../notes/research/op3_triality_mass_bridge_2026_11_12.md).
+
 ## Lokaler v4.11.0-Kandidat
 
 Der Kandidat baut auf v4.10.0 und dem Forschungsstand `ec9b2b8` auf. Sein neuer Koide-Abschnitt trennt die bedingte Überlagerung von Massenwurzeln, die exakte Polrechnung bei endlicher Lücke und die Frage nach einem nativen Erzeugungsmechanismus. Bei der Modelllücke 68 sind unter 2 bis 16 gleich gewichteten Beiträgen nur 15 möglich, bei Lücke 100 sind es 10 bis 16. Das ist eine Rückrechnung aus den Leptonmassen. Die physikalische Zahl der Auslesungen und die native Lücke bleiben offen.
@@ -926,3 +1045,21 @@ unabhängigen linearen Seeds, aber nicht drei Auslesungen einer gemeinsamen
 Konfiguration oder Zustände eines noch zu definierenden Funktionsraums.
 Die Brücke von dieser Konfiguration zu physikalischen Zuständen oder
 Massenauslesungen ist deshalb der nächste Quellenauftrag. OP3 bleibt offen.
+
+
+### Offene Stringfrage für Version 5 (12.11.2026)
+
+Die jüngste Erkundung verbindet eine feste äußere Längenvorgabe mit drei
+relaxierenden inneren Strings. Die zusätzliche de-Sitter-Identifikation
+würde Lambda=12*pi²/L² setzen; ein mit der Expansion wachsendes L liefert
+unter separater isotroper Energieerhaltung dagegen w=-1/3 statt Vakuumenergie.
+Ein Maxwell-artiger Vergleich F=k(ell-r), dot(r)=F/eta erlaubt abnehmende
+Zugkraft trotz wachsender Länge, wenn Relaxation die Belastung überwiegt.
+Die dissipierte Leistung F²/eta muss bilanziert werden. Bei jederzeit fester
+Längensumme können nicht alle drei tatsächlichen Längen zugleich wachsen;
+Ruhelängen und Spannungen können sich trotzdem ändern. Netzgeometrie,
+Expansionskopplung und ein stabilisierender Mechanismus bleiben offen.
+Weder Koide 2/3 noch Lambda oder das Leptonspektrum sind daraus hergeleitet.
+Diese offene Frage bildet den Forschungsanschluss für die beauftragte
+Version 5; OPs und Guards bleiben unverändert. Details in
+[der Erkundungsnotiz](../notes/research/op3_string_relaxation_lambda_2026_11_12.md).
