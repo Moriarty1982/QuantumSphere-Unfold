@@ -1045,3 +1045,21 @@ unabhängigen linearen Seeds, aber nicht drei Auslesungen einer gemeinsamen
 Konfiguration oder Zustände eines noch zu definierenden Funktionsraums.
 Die Brücke von dieser Konfiguration zu physikalischen Zuständen oder
 Massenauslesungen ist deshalb der nächste Quellenauftrag. OP3 bleibt offen.
+
+
+### Offene Stringfrage für Version 5 (12.11.2026)
+
+Die jüngste Erkundung verbindet eine feste äußere Längenvorgabe mit drei
+relaxierenden inneren Strings. Die zusätzliche de-Sitter-Identifikation
+würde Lambda=12*pi²/L² setzen; ein mit der Expansion wachsendes L liefert
+unter separater isotroper Energieerhaltung dagegen w=-1/3 statt Vakuumenergie.
+Ein Maxwell-artiger Vergleich F=k(ell-r), dot(r)=F/eta erlaubt abnehmende
+Zugkraft trotz wachsender Länge, wenn Relaxation die Belastung überwiegt.
+Die dissipierte Leistung F²/eta muss bilanziert werden. Bei jederzeit fester
+Längensumme können nicht alle drei tatsächlichen Längen zugleich wachsen;
+Ruhelängen und Spannungen können sich trotzdem ändern. Netzgeometrie,
+Expansionskopplung und ein stabilisierender Mechanismus bleiben offen.
+Weder Koide 2/3 noch Lambda oder das Leptonspektrum sind daraus hergeleitet.
+Diese offene Frage bildet den Forschungsanschluss für die beauftragte
+Version 5; OPs und Guards bleiben unverändert. Details in
+[der Erkundungsnotiz](../notes/research/op3_string_relaxation_lambda_2026_11_12.md).
