@@ -275,3 +275,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 13.11.2026: Indefinite Form im neutralen Sektor und Test H99 in Forschungsstand und Vorhersagen-und-Tests ergänzt (H99a verträglich, nicht blind; H99b nicht entscheidbar; Spannung mit JUNO nachträglich genannt); kein OP-Abschluss.
 
 13.11.2026, nachmittags: H99b mit der NuFIT-6.1-Primärtabelle entschieden (verträglich, +1,80σ, nicht blind) in Forschungsstand und Vorhersagen-und-Tests nachgetragen; Ersatzrechnungen aus Sekundärwerten als überholt markiert; kein OP-Abschluss.
+
+13.11.2026, abends: Erkundung zum Verlauf der NuFIT-Werte 2012–2025 mit Grafik in Forschungsstand ergänzt (R lag 2013/14 nur wegen des damals niedrigen Δm²₃₁ beim H99-Wert); kein Test, kein OP-Abschluss.

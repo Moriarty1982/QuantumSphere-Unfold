@@ -1593,7 +1593,30 @@ hergeleitet; nativ ist nur die Rolle von $\pi/12$ als Bogenrand. Koide
 $2/3$, die Phase und die Annahme „Massenwurzel = Eigenwert“ bleiben
 unbegründet. OP3/OP4 bleiben offen, Guards unverändert.
 
+**Erkundung: Verlauf der NuFIT-Werte 2012–2025** (13.11.2026, kein Test).
+Aus den Parametertabellen v1.0 bis v6.1 wurden $\Delta m^2_{21}$,
+$\Delta m^2_{31}$ (normale Ordnung) und $R$ gegen den Datenstand der
+Version aufgetragen und gewichtet ausgeglichen.
+
+![NuFIT-Verlauf](https://raw.githubusercontent.com/Moriarty1982/QuantumSphere-Unfold/main/notes/research/nufit_verlauf_2026_11_13.png)
+
+- $\Delta m^2_{21}$ liegt seit 2012 flach zwischen $7{,}39$ und
+  $7{,}54\cdot10^{-5}$ eV²; der Sprung in v6.1 kommt von JUNO.
+- $\Delta m^2_{31}$ stieg bis etwa 2017 von $2{,}42$ auf $2{,}51$ und ist
+  seither stabil (exponentielle Annäherung, Grenzwert $2{,}515$). Der
+  Anstieg fällt mit IceCube/DeepCore, NOvA, mehr T2K-Daten und Daya Bay
+  (1230 Tage) zusammen (v2.1, v2.2).
+- $R$ lag 2013/14 bei $0{,}0305$ bis $0{,}0308$, also beim H99-Wert. Das
+  lag fast nur am damals niedrigen $\Delta m^2_{31}$; in v1.x war die
+  normale Ordnung nur ein Nebenminimum. Seitdem fällt $R$ leicht.
+- Vorbehalt: Die Versionen teilen fast alle Daten ($\chi^2/\mathrm{ndf}
+  \approx 0{,}1$), die Bänder sind zu eng. Der heutige Bestwert ist die
+  beste Schätzung künftiger Werte; ein Trend ist Beschreibung, keine
+  Vorhersage. Nach JUNO bestimmt der Fehler von $\Delta m^2_{31}$ den
+  Test; bei gleichen Mittelwerten läge H99 dann etwa $3\sigma$ daneben.
+
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
+> `notes/research/nufit_verlauf_2026_11_13.py` (mit Grafik und Ausgabe),
 > `notes/research/op3_indefinite_form_2026_11_13.md`,
 > `notes/research/predictions/Vorab_Notiz_H99_Neutrino_Phase_Bogenrand.md`,
 > `Ergebnis_H99_Neutrino_Phase_Bogenrand.md`, Skript `k221_test_h99.py`.

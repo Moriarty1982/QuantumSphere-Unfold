@@ -93,6 +93,19 @@
 - **Zuletzt vergebene Hypothese: H99.** Nächste freie Nummer H100. Letztes k: k221 (k220 liegt auf einem lokalen Zweig des Autors).
 - H99, H99a in PR #103 (gemergt); H99b-Nachtrag in PR #104 (Ergebnis-Notiz, k221_out.txt, predictions/README, Wiki Forschungsstand, Vorhersagen-und-Tests, Wiki-Pflege).
 
+## Erkundung NuFIT-Verlauf (13.11., abends, Autor)
+
+- Skript, Grafik und Ausgabe `notes/research/nufit_verlauf_2026_11_13.{py,png}`, `..._out.txt`. Werte aus den Parametertabellen v1.0 bis v6.1 (nu-fit.org). Matplotlib fehlt in der System-Python; gerechnet in einer venv im Scratchpad.
+- Δm²₂₁ liegt seit 2012 flach bei 7,39 bis 7,54 (Fit konstant am besten, Mittel 7,47). Δm²₃₁ (NO) stieg bis etwa 2017 und ist seither bei 2,51 bis 2,52 (exponentielle Annäherung, Grenzwert 2,515). R driftet leicht nach unten (Trend 2030: 0,0294); H99 verlangt 0,030839. R lag 2013/14 bei 0,0305–0,0308 nur wegen des damals niedrigen Δm²₃₁ (2,42; NO nur Nebenminimum); Anstieg mit IceCube/DeepCore, NOvA, T2K, Daya Bay 1230 Tage (v2.1/v2.2). Nach JUNO bestimmt σ(Δm²₃₁) den Test; bei gleichen Mittelwerten etwa 3σ gegen H99.
+- Vorbehalt: Die Versionen teilen fast alle Daten, chi²/ndf etwa 0,1; die Fehlerbänder der Ausgleichskurven sind zu eng. Für einen Bestwert ist der heutige Wert die beste Schätzung künftiger Werte (Martingal); ein Trend ist Beschreibung, keine Vorhersage. Committet in PR #104, Wiki-Abschnitt im Forschungsstand.
+
+## Drei Erklärungsideen für die H99-Abweichung (Autor: „im Hinterkopf behalten“, ungeprüft)
+
+Die Daten verlangen eine Verschiebung von 0,2580 statt π/12 = 0,2618 (1,4 % kleiner; dR/dθ ≈ 0,22).
+1. Die Beziehung θ_ν = θ_e + π/12 ist nicht hergeleitet (Brannen); nur π/12 als Bogenrand ist nativ. Korrektur oder Zufall möglich.
+2. Gesetzte Annahmen: K = 2/3 auch für Neutrinos, Massenwurzel = Eigenwert, negative leichteste Wurzel.
+3. Skalenfrage: θ_e aus Polmassen, Neutrinos bei anderer Energie; Laufen von θ_e nie untersucht, 1–2 % denkbar.
+
 ## Nächster Schritt (Autorentscheidung)
 
 - PR #104 (H99b-Nachtrag) prüfen und auf „PR 104 mergen“ des Autors mergen.

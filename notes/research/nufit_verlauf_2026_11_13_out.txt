@@ -1,0 +1,23 @@
+C:\Users\marcb\OneDrive\Dokumente\Quantum Sphera\.claude\worktrees\qam-mml-mma-math-473bc4\notes\research\nufit_verlauf_2026_11_13.py:60: RuntimeWarning: overflow encountered in exp
+  expo = lambda x, inf, amp, tau: inf + amp * np.exp(-(x - T0) / tau)
+
+== dm21 (1e-5 eV^2)
+gewichtetes Mittel aller Versionen: 7.4681 +- 0.042 (Versionen nicht unabhaengig!)
+konstant      chi2/ndf = 1.47/17, AIC = 3.47, Parameter [7.46805], Wert 2027: 7.4681, 2030: 7.4681
+linear        chi2/ndf = 1.42/16, AIC = 5.42, Parameter [7.46968e+00 2.09000e-03], Wert 2027: 7.4843, 2030: 7.4906
+exponentiell  chi2/ndf = 1.43/15, AIC = 7.43, Parameter [ 7.5609  -0.10575 50.     ], Wert 2027: 7.4818, 2030: 7.4864
+
+== dm31 NO (1e-3 eV^2)
+gewichtetes Mittel aller Versionen: 2.499 +- 0.0071 (Versionen nicht unabhaengig!)
+konstant      chi2/ndf = 19.88/17, AIC = 21.88, Parameter [2.49896], Wert 2027: 2.499, 2030: 2.499
+linear        chi2/ndf = 11.40/16, AIC = 15.40, Parameter [2.49724 0.00492], Wert 2027: 2.5317, 2030: 2.5465
+exponentiell  chi2/ndf = 3.89/15, AIC = 9.89, Parameter [ 2.51519 -0.11872  2.13214], Wert 2027: 2.5151, 2030: 2.5152
+
+== R = dm21/dm31 (1)
+gewichtetes Mittel aller Versionen: 0.029889 +- 0.0002 (Versionen nicht unabhaengig!)
+konstant      chi2/ndf = 5.38/17, AIC = 7.38, Parameter [0.02989], Wert 2027: 0.029889, 2030: 0.029889
+linear        chi2/ndf = 4.38/16, AIC = 8.38, Parameter [ 2.988e-02 -4.000e-05], Wert 2027: 0.02957, 2030: 0.029439
+exponentiell  chi2/ndf = 2.41/15, AIC = 8.41, Parameter [2.96500e-02 1.31000e-03 2.37163e+00], Wert 2027: 0.029657, 2030: 0.029655
+
+H99: R_pred = 0.030839; R(6.1) = 0.030016 +- 0.000457
+Grafik: nufit_verlauf_2026_11_13.png
