@@ -335,3 +335,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 13.11.2026, spät: Rückwärtssuche Auswahlprinzip (Elektronmasse = Abstand vom Qubit-Oktanten; zwei Zahlen festzulegen) in Forschungsstand; kein OP-Abschluss.
 
 13.11.2026, spät: Herleitungsversuch (K = (1 + cos²β)/2; in A4 einziger Wert 2/3; Elektronmasse als A4-Bruch) in Forschungsstand; kein OP-Abschluss.
+
+13.11.2026, spät: H101 (Maske hebt Elektron) in Vorhersagen-und-Tests und Forschungsstand eingetragen (widerlegt, Sylvester; Nebenrechnung lineare Form); kein OP-Abschluss.

@@ -1,0 +1,7 @@
+Kontrolle: Spektrum von C = [0.       0.633975 2.366025] (ein Eigenwert null)
+Platz 1: Loesungen eps = []
+Platz 2: Loesungen eps = []
+Platz 3: Loesungen eps = []
+H101: keine Loesung -> widerlegt
+Nebenrechnung, lineare Form r47: eps = +0.087033, m_e/m_tau = 2.8757e-04, m_mu/m_tau = 0.059670 (Daten 0.059461, Abw. +0.35 %), K = 0.666343 (Pol 0.666664)
+Nebenrechnung, lineare Form r47: eps = -0.179617, m_e/m_tau = 2.8757e-04, m_mu/m_tau = 0.048255 (Daten 0.059461, Abw. -18.85 %), K = 0.685659 (Pol 0.666664)

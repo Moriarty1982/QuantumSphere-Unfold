@@ -1909,6 +1909,12 @@ Koide-Bogens ist exakt das Oktanten-Tripel. Zu den Fäden:
   Die exakte Konstruktion gibt aber ein masseloses Elektron; die
   Elektronmasse ist ein Bruch der $A_4$-Symmetrie, dessen Größe nicht
   hergeleitet ist. Offen bleibt auch der Qubit-Träger.
+- Test H101 (Vorab f470817): Die Lepton-Maske aus r47 in Form K
+  ($M=DCD$) hebt das Elektron nicht; eine Kongruenz erhält den Rang
+  (Sylvester), das Elektron bleibt masselos. Widerlegt. Nachträglich: Die
+  lineare r47-Form hebt es, gibt $m_\mu/m_\tau$ auf $0{,}35\,\%$, verfehlt
+  aber Koide um $3\cdot10^{-4}$ (etwa das 60-Fache der Pol-Unsicherheit).
+  Eine Anhebung, die Koide auf $10^{-5}$ erhält, ist nicht gefunden.
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),

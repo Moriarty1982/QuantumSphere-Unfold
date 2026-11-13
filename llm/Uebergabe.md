@@ -9,7 +9,7 @@
   `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf`. Rundentabelle und Kernkarte (Schritt 10 der Runden-Anleitung) gibt es
   im Repo-Klon nicht mehr; Runden stehen in `notes/research/v4_10_0_rNN/README.md` und im Wiki.
 - **Letzte Runde:** v4.10.0-r12 (Statusvermerke), Teil von PR #106; Build lokal und in CI ok (1406 Seiten, 0 Overfull).
-- **Zuletzt vergebene Hypothese:** H100 (Vorab 9c77ddd, offen); nächste frei H101; letztes Skript k222.
+- **Zuletzt vergebene Hypothese:** H101 (Vorab f470817, widerlegt); H100 (Vorab 9c77ddd) offen; nächste frei H102; letztes Skript k223.
 - **Offene Autorentscheidungen:** keine.
 - **Ausgelöste Zurückgestellte Ideen:** keine neuen (I4 durch den ν^c-Kanal berührt, am 6.11. bereits negativ eingeordnet).
 - **Nächster Schritt:** H100 auswerten, sobald eine neue NuFIT-Version erscheint:
@@ -19,7 +19,8 @@
     Abstand vom Qubit-Oktanten (= √m_e/⟨√m⟩ ≈ π/12 − θ_e = 0,04); offen.
     **Herleitungsversuch:** K = (1 + cos²β)/2 für Qubit-Bahnen; in A4 ist 2/3 der einzige Wert ⇒ Koide bedingt hergeleitet
     (Qubit-Träger, Klein-ℤ₂-Bezug, ℤ₃-Bahn = Auslesungen aus r55). Elektronmasse = A4-Bruch, Größe offen; Kandidat
-    Generationsmaske r47 (nur mit Vorab-Notiz prüfen).
+    Generationsmaske r47 geprüft: **H101 widerlegt** (Form K erhält den Rang, Sylvester); lineare r47-Form hebt das
+    Elektron, verfehlt aber Koide um 3·10⁻⁴ (nachträglich). Eine Koide-erhaltende Anhebung fehlt.
   · zur Wahl: zweite Familienstruktur mit neutralem Qubit (Profil unten) ·
   Fortsetzung der Ladung auf die Sedenionen anders als über e7.
 - **Aufräumen:** Zweig `research/v5-octant-weitersuche` (PR #106) und Worktree `.claude/worktrees/qam-mml-mma-math-473bc4`
