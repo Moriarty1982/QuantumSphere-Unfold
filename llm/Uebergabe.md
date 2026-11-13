@@ -1,24 +1,24 @@
 # Übergabe: Stand der letzten Sitzung
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.**
 
-## Stand vom 13.11.2026, ca. 19:20 (Claude Opus)
-- **GitHub:** zuletzt gemergt PR #103 als 83b2551 (OP3 nach v5.0.0, H99). **Offen: PR #104** (Zweig
-  `research/v5-h99b-nufit61`, Kopf efe8360 plus dieser Übergabe-Commit), nicht gemergt; enthält auch den
-  früheren lokalen Übergabe-Commit 0504201. Keine laufenden Actions; Wiki-Sync und Zwei-PDF zuletzt grün (43370355406/…373).
-- **Lokal:** Hauptordner auf `main` 0504201 (nur lokal, liegt in PR #104). Arbeit lief im Worktree
-  `.claude/worktrees/qam-mml-mma-math-473bc4`. Unversioniert: `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf`.
+## Stand vom 13.11.2026, ca. 19:35 (Claude Opus)
+- **GitHub:** **PR #104 gemergt als 32fa42c** (13.11., auf „pr 104 mergen“; Merge-Commit, Kopf bf51772).
+  Läufe 43481979108 (Zwei-PDF) und 43481979426 (Wiki-Sync) erfolgreich. Keine offenen PRs.
+- **Lokal:** Hauptordner per Fast-Forward auf 32fa42c; dieser Übergabe-Commit liegt nur lokal auf `main`.
+  Unversioniert: `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf`.
 - **Zuletzt vergebene Hypothese:** H99 (nächste frei H100); letztes Skript k221. Alle Arbeiten seit H99b sind
   Erkundungen, nicht blind, ohne H-Nummer.
-- **Offene Autorentscheidungen:** PR #104 mergen („PR 104 mergen“). H100 festschreiben oder erst η suchen.
+- **Offene Autorentscheidungen:** H100 festschreiben oder erst η suchen.
 - **Ausgelöste Zurückgestellte Ideen:** keine.
 - **Nächster Schritt:** native Form η im neutralen Sektor suchen, die ρ² erhält und die Phase um den Bogenrand
   θ_b verschiebt (präzise Fassung des Ursprungs von H99). Werkzeuge: `notes/research/op3_slot_u3_gauging_2026_11_13.*`,
   `op3_indefinite_form_2026_11_13.md`, r44.1, r55.
   · zur Wahl: H100 vorab festschreiben (Kandidaten unten) · T₁₂ als dynamisches Feld · Potential für ρ² = 1/2 ·
   Vereinigung Platzindex-U(3) mit SU(2)_L.
-- **Aufräumen:** Zweig `research/v5-string-relaxation-rueckwaertssuche` kann weg (PR #103 gemergt).
+- **Aufräumen:** Zweige `research/v5-string-relaxation-rueckwaertssuche` (PR #103) und `research/v5-h99b-nufit61`
+  (PR #104) können weg; Worktree `qam-mml-mma-math-473bc4` ebenso.
 
-## Dieser Block (13.11., 15–19 Uhr), alles in PR #104
+## Dieser Block (13.11., 15–19 Uhr), alles in PR #104 (gemergt)
 - **H99b** mit NuFIT-6.1-Primärtabelle (IC24 mit SK): verträglich, +1,80σ (nicht blind). Sekundärwerte überholt.
 - **NuFIT-Verlauf 2012–2025** (`nufit_verlauf_2026_11_13.*`, Grafik): Δm²₂₁ flach; Δm²₃₁ bis 2017 gestiegen;
   R lag 2013/14 nur wegen des niedrigen Δm²₃₁ beim H99-Wert.
