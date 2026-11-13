@@ -20,7 +20,8 @@
     **Herleitungsversuch:** K = (1 + cos²β)/2 für Qubit-Bahnen; in A4 ist 2/3 der einzige Wert ⇒ Koide bedingt hergeleitet
     (Qubit-Träger, Klein-ℤ₂-Bezug, ℤ₃-Bahn = Auslesungen aus r55). Elektronmasse = A4-Bruch, Größe offen; Kandidat
     Generationsmaske r47 geprüft: **H101 widerlegt** (Form K erhält den Rang, Sylvester); lineare r47-Form hebt das
-    Elektron, verfehlt aber Koide um 3·10⁻⁴ (nachträglich). Eine Koide-erhaltende Anhebung fehlt.
+    Elektron, verfehlt aber Koide um 3·10⁻⁴ (nachträglich). **Andere Anhebung:** nur ein Fluss erhält Koide; nötig
+    3θ_e = 2/3 rad (ΔΦ = 0,1187 vom Oktanten); Kreis zum historischen OP3 (δ = 2/9). Native Phasen geben nur Vielfache von π/6.
   · zur Wahl: zweite Familienstruktur mit neutralem Qubit (Profil unten) ·
   Fortsetzung der Ladung auf die Sedenionen anders als über e7.
 - **Aufräumen:** Zweig `research/v5-octant-weitersuche` (PR #106) und Worktree `.claude/worktrees/qam-mml-mma-math-473bc4`

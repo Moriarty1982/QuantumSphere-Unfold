@@ -1915,6 +1915,14 @@ Koide-Bogens ist exakt das Oktanten-Tripel. Zu den Fäden:
   lineare r47-Form hebt es, gibt $m_\mu/m_\tau$ auf $0{,}35\,\%$, verfehlt
   aber Koide um $3\cdot10^{-4}$ (etwa das 60-Fache der Pol-Unsicherheit).
   Eine Anhebung, die Koide auf $10^{-5}$ erhält, ist nicht gefunden.
+- Andere Anhebung: Jede Störung des Oktanten außer einer Phasendrehung
+  der Überlappungen ändert $K$ schon in erster Ordnung; eine Anhebung, die
+  Koide exakt erhält, ist daher eine reine Flussänderung durch das
+  Platzdreieck. Nötig sind $\Delta\Phi=0{,}1187$ rad, also ein Fluss der
+  geladenen Leptonen von $3\theta_e=0{,}6667\approx2/3$ rad (Brannen,
+  $\delta=2/9$). Native Phasen geben nur Vielfache von $\pi/6$. Damit
+  schließt sich der Kreis zum historischen OP3: Die Elektronmasse
+  herzuleiten heißt, einen Fluss von $2/3$ rad herzuleiten.
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),

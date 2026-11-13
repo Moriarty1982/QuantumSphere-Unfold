@@ -83,3 +83,39 @@ if __name__ == "__main__":
         print(f"    {g:34s}: K-Werte der Bahnen zweizaehliger Eigenzustaende {sorted(Ks)}")
     K, Phi, det = orbit_K(ax, np.array([1.0, 0, 0]))
     print(f"    A4: Eigenzustand der Klein-Achse x, Bahn unter der Drehung um (1,1,1): K = {K:.6f}, Phase {Phi:.6f}, det {det:.1e}")
+
+
+if __name__ == "__main__":
+    print("\n== Andere Anhebung: welche Stoerungen des Oktanten erhalten K? ==")
+    rng = np.random.default_rng(2213)
+    P = np.roll(np.eye(3), 1, axis=0)
+    z = np.exp(1j * np.pi / 12) / np.sqrt(2)
+    C = np.eye(3) + z * P + np.conj(z) * P.T
+    def K_of(S):
+        r2 = (abs(S[0, 1]) ** 2 + abs(S[1, 2]) ** 2 + abs(S[2, 0]) ** 2) / 3
+        return (1 + 2 * r2) / 3
+    def smin(S):
+        return np.linalg.eigvalsh(S).min()
+    eps = 1e-4
+    # (a) allgemeine hermitesche Stoerung mit Diagonale null
+    d1 = []
+    for _ in range(500):
+        V = rng.normal(size=(3, 3)) + 1j * rng.normal(size=(3, 3)); V = (V + V.conj().T) / 2; np.fill_diagonal(V, 0)
+        d1.append((K_of(C + eps * V) - K_of(C)) / eps)
+    # (b) reine Phasendrehung der Ueberlappungen (c_ab -> c_ab e^{i phi_ab}, hermitesch)
+    d2, dphi = [], []
+    for _ in range(500):
+        ph = rng.normal(size=3) * eps
+        S = C.copy()
+        for (a, b), p in zip(((0, 1), (1, 2), (2, 0)), ph):
+            S[a, b] *= np.exp(1j * p); S[b, a] = np.conj(S[a, b])
+        d2.append((K_of(S) - K_of(C)) / eps)
+    print(f"    (a) allgemeine Stoerung: dK/deps typisch {np.median(np.abs(d1)):.3f} (erste Ordnung)")
+    print(f"    (b) reine Phasendrehung: |dK/deps| max {np.max(np.abs(d2)):.1e} (K bleibt in jeder Ordnung, nur der Fluss aendert sich)")
+    # Fluss, der das Elektron hebt
+    te = lepton_phase(POL)
+    dPhi = 3 * (np.pi / 12 - te)
+    S = np.eye(3) + (np.exp(1j * te) / np.sqrt(2)) * P + np.conj(np.exp(1j * te) / np.sqrt(2)) * P.T
+    print(f"    Fluss vom Oktanten (pi/4) zu den geladenen Leptonen: Delta Phi = {dPhi:.5f} rad; Fluss der geladenen 3 theta_e = {3 * te:.6f} (2/3 = {2 / 3:.6f})")
+    print(f"    Kontrolle: Spektrum nach Flussaenderung {np.round(np.sort(np.linalg.eigvalsh(S)), 5)}, K = {K_of(S):.6f}")
+    print(f"    Delta Phi in Einheiten pi/6: {dPhi / (np.pi / 6):.4f} (nativ nur ganze Vielfache)")

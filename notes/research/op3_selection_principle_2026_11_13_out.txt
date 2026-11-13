@@ -15,3 +15,10 @@ Massenverhaeltnis m_e/m_tau = 2.876e-04; Bargmann-Abstand pi/4 - 3 theta_e = 0.1
     Oktaeder (S4), Kantenachsen       : K-Werte der Bahnen zweizaehliger Eigenzustaende [0.5, 0.8333]
     Ikosaeder (A5)                    : K-Werte der Bahnen zweizaehliger Eigenzustaende [0.5637, 0.6667, 0.9363]
     A4: Eigenzustand der Klein-Achse x, Bahn unter der Drehung um (1,1,1): K = 0.666667, Phase 0.785398, det 0.0e+00
+
+== Andere Anhebung: welche Stoerungen des Oktanten erhalten K? ==
+    (a) allgemeine Stoerung: dK/deps typisch 0.253 (erste Ordnung)
+    (b) reine Phasendrehung: |dK/deps| max 1.1e-12 (K bleibt in jeder Ordnung, nur der Fluss aendert sich)
+    Fluss vom Oktanten (pi/4) zu den geladenen Leptonen: Delta Phi = 0.11872 rad; Fluss der geladenen 3 theta_e = 0.666674 (2/3 = 0.666667)
+    Kontrolle: Spektrum nach Flussaenderung [0.04035 0.58022 2.37944], K = 0.666667
+    Delta Phi in Einheiten pi/6: 0.2267 (nativ nur ganze Vielfache)

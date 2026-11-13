@@ -63,3 +63,23 @@ Prüfung Punkt 3 (Hurwitz-Einheit, 2T über A_4). Zurückgestellte Ideen: kein A
 **Bewertung.** Die erste der beiden Zahlen (Treue 1/2) ist bedingt hergeleitet: Sie ist der einzige Wert, den die
 A_4-Geometrie auf einem Qubit zulässt. Die zweite (Abstand vom Oktanten, Elektronmasse) ist als A_4-Bruch eingeordnet,
 aber nicht hergeleitet. Offen sind der Qubit-Träger und die Größe des Bruchs. OP3/OP4 offen; H100 unberührt.
+
+## Nachtrag: andere Anhebung gesucht (13.11., spät, Autor: „Andere Anhebung suchen“)
+
+Rückwärtssuche nach H101. Skript, Abschnitt „Andere Anhebung“. Nicht blind, kein Test.
+
+1. **Nur ein Fluss erhält Koide.** Eine allgemeine hermitesche Störung des Oktanten (Diagonale fest) ändert K schon in
+   erster Ordnung (typisch dK/dε ≈ 0,25). Eine reine Phasendrehung der Überlappungen ändert K in keiner Ordnung (10⁻¹²),
+   weil K nur von den Beträgen abhängt; eichinvariant bleibt davon nur der Fluss durch das Platzdreieck. **Jede Anhebung,
+   die Koide exakt erhält, ist eine Flussänderung.**
+2. **Der nötige Fluss.** Vom Oktanten (Fluss π/4, Elektron masselos) zu den geladenen Leptonen ist ΔΦ = 3(π/12 − θ_e) =
+   0,11872 rad. Danach ist das Spektrum (0,0404; 0,5802; 2,3794) mit K = 2/3 exakt. Der Fluss der geladenen Leptonen ist
+   3θ_e = 0,666674, also Brannens 2/3 (δ = 2/9) innerhalb der Unsicherheit.
+3. **Native Quellen.** ΔΦ = 0,2267 · π/6; native Phasen (ω, i, −1) geben nur ganze Vielfache von π/6, die Hyperladungs-Regel
+   Vielfache von π/4. Ein Fluss von 0,1187 rad (bzw. 2/3 rad insgesamt) braucht eine stetige Größe, etwa eine
+   U(1)-Verbindung mit nicht quantisiertem Fluss.
+
+**Bewertung.** Die Suche schließt einen Kreis: Eine Koide-erhaltende Anhebung des Elektrons ist genau eine Änderung der
+Brannen-Phase, und deren Herleitung ist das historische OP3 (θ_K bzw. δ = 2/9), dessen Allgemeingültigkeit H1 widerlegt
+hat. Eine andere, neue Anhebung gibt es nicht: Alles außer einem Fluss bricht Koide. OP3 bleibt offen; die Frage ist jetzt
+scharf gestellt als „Woher kommt ein Fluss von 2/3 rad durch das Platzdreieck der geladenen Leptonen?“
