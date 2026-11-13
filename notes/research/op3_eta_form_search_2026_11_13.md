@@ -170,3 +170,32 @@ Vorbehalte:
 **Bewertung.** Der Spinor-Transport in der Raumzeit ist ausgeschlossen. Ein innerer Transport mit dem nativen Winkel
 π/6 je Kante erzeugt den H99-Unterschied genau dann, wenn die Ladungen von ℓ_L und e_R sich um 1/2 unterscheiden; die
 Hyperladung erfüllt das. Lesart, nicht hergeleitet; nachträglich gefunden. OP3/OP4 offen; H100 unberührt.
+
+## Nachtrag: Dixon-Sektorphase geprüft (13.11., Autor: „Dixon-Sektorphase prüfen“)
+
+Vorwissen: `op3_dixon_slot_coupling_2026_11_13.md`, Punkte 4 und 6 und Nachtrag Hyperladung: θ_s = σ_s φ_H + λ_s φ_O
+mit σ = +1 (e, d), −1 (ν, u), λ = +1 (Leptonen), −1 (Quarks); Verbinder mit Y/2 = +1/2 (e, d), −1/2 (ν, u);
+Spiegelung θ_u = −θ_e, θ_d = −θ_ν. Skript, Abschnitt 7. Nicht blind.
+
+**1. Die Struktur passt qualitativ.** Die Neutrino-Phase unterscheidet sich von der der geladenen Leptonen nur durch
+das Vorzeichen von φ_H: θ_ν − θ_e = −2φ_H. Das ist die Kopplung an die beiden Dublett-Richtungen (Y/2 = ±1/2,
+Higgs und konjugiertes Higgs). Der Sektorunterschied ist damit hyperladungsgebunden, wie im vorigen Nachtrag vermutet.
+
+**2. Die Zahl passt mit nativen Phasen nicht.** Weil die Brannen-Phase nur bis auf θ → −θ und θ → θ + 2π/3 bestimmt
+ist, gibt es mehrere Zweige. In allen verlangt H99 einen Wert φ_H oder φ_O, der ein **ungerades Vielfaches von π/24**
+ist (7, 15, 23, … in Einheiten π/24). Native Phasen sind Vielfache von π/6 = 4 · π/24. Mit nativen Werten von
+φ_H und φ_O ist H99 in der Sektorformel also nicht erreichbar (Paritätsargument wie zuvor).
+
+**3. Die Ladungsdifferenz ist 1, nicht 1/2.** In der Sektorformel trägt die Verbinder-Hyperladung (±1/2, Differenz 1),
+nicht die Differenz von ℓ_L und e_R (1/2). Mit π/6 je Einheit ergibt sich θ_ν − θ_e = π/6, also der nächste native
+Wert, der um π/12 neben H99 liegt.
+
+**4. Die Spiegelung widerspricht den Quarks.** Im hermiteschen Fall folgt |θ_u| = |θ_e| = 0,221 (r11 bei M_Z: 0,052)
+und mit H99 |θ_d| = |θ_ν| = 0,483 (r11: 0,100). Das war für die Up-Quarks schon bekannt; für die Down-Quarks ist es
+mit H99 nachträglich neu und ebenso deutlich verfehlt.
+
+**Bewertung.** Die Dixon-Sektorphase trägt die richtige Struktur (hyperladungsgebundenes Vorzeichen zwischen e und ν),
+aber nicht den Fluss π/4: Mit nativen Phasen gibt sie Vielfache von π/6, und ihre Spiegelung auf die Quarks passt nicht
+zu den Daten. In der einfachsten Form ist sie damit als Quelle ausgeschlossen. Offen bleiben ein je Sektor verschiedenes
+h (dann keine Spiegelung mehr) und eine Quelle für die halbe Ladungsdifferenz (ℓ_L gegen e_R statt Verbinder).
+OP3/OP4 offen; H100 unberührt.

@@ -13,8 +13,10 @@
 - **Ausgelöste Zurückgestellte Ideen:** keine.
 - **Nächster Schritt:** Spinor-Transport geprüft: raumzeitlich ausgeschlossen; innerer Transport π/6 je Kante gibt
   Φ_ν − Φ_e = (q_L − q_R)·π/2, H99 verlangt q_L − q_R = 1/2 = Hyperladung des Higgs (nachträglich, schwach).
-  Als Nächstes prüfen, ob die Dixon-Sektorphase θ_s = σ φ_H + λ φ_O (σ an Y/2) diesen Fluss trägt, und ob ein
-  Hyperladungsfluss durch den Familienraum im Companion begründbar ist. Alternativ ν^c-Verbinder (r44.1(d)).
+  Dixon-Sektorphase geprüft: Struktur passt (e/ν nur im Vorzeichen von φ_H), Zahl nicht (H99 verlangt ungerade
+  Vielfache von π/24; Verbinder-Differenz 1 gibt π/6), Quark-Spiegelung widerspricht Daten. Als Nächstes: Quelle der
+  halben Ladungsdifferenz (ℓ_L gegen e_R) im Companion suchen; alternativ ν^c-Verbinder (r44.1(d)); oder Pause bis
+  zur nächsten NuFIT-Version (H100).
   Werkzeuge: `notes/research/op3_eta_form_search_2026_11_13.*`, `op3_slot_u3_gauging_2026_11_13.*`.
   · zur Wahl: H100 vorab festschreiben (Kandidaten unten) · T₁₂ als dynamisches Feld · Potential für ρ² = 1/2 ·
   Vereinigung Platzindex-U(3) mit SU(2)_L.

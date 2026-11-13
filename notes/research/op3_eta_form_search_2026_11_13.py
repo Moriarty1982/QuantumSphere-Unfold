@@ -184,3 +184,28 @@ if __name__ == "__main__":
     for lab, qL, qR in (("Sumino (3, +1) / (3bar, -1)", 1.0, -1.0), ("vektorartig q_L = q_R", 1.0, 1.0),
                         ("L halbe Ladung, R neutral", 0.5, 0.0), ("Sumino mit halben Ladungen", 0.5, -0.5)):
         print(f"      {lab:30s}: Delta = {(qL - qR) * 3 * A:.5f}  (pi/4 = {np.pi / 4:.5f}; mit A = pi/6 noetig q_L - q_R = 1/2)")
+
+
+if __name__ == "__main__":
+    print("\n(7) Nachtrag Dixon-Sektorphase theta_s = sigma phi_H + lambda phi_O (sigma: e +1, nu -1; lambda: Leptonen +1)")
+    # Brannen-Phase ist nur bis auf theta -> -theta und theta -> theta + 2pi/3 bestimmt.
+    # H99: theta_nu ~ theta_e + pi/12. Alle Zweige: (phi_O - phi_H) = s*(phi_O + phi_H + pi/12) + 2 pi k/3, s = +-1.
+    unit = np.pi / 24
+    sols = set()
+    for s_ in (1, -1):
+        for k in range(-3, 4):
+            if s_ == 1:      # -2 phi_H = pi/12 + 2pi k/3  -> phi_H bestimmt, phi_O frei
+                val = -(np.pi / 12 + 2 * np.pi * k / 3) / 2
+                sols.add(("phi_H", round((val % (2 * np.pi)) / unit) % 48))
+            else:            # 2 phi_O = -pi/12 + 2pi k/3  -> phi_O bestimmt, phi_H frei
+                val = (-np.pi / 12 + 2 * np.pi * k / 3) / 2
+                sols.add(("phi_O", round((val % (2 * np.pi)) / unit) % 48))
+    print("    verlangte Werte in Einheiten pi/24 (mod 2pi):", sorted(sols))
+    print("    alle ungerade:", all(v % 2 == 1 for _, v in sols), "-> native Phasen (Vielfache von pi/6 = 4 * pi/24) scheiden aus")
+    # Mit Kantenwinkel pi/6 je Einheit der Verbinder-Hyperladung (Y/2 = +1/2 fuer e, -1/2 fuer nu): Differenz 1 * pi/6
+    print(f"    Verbinder-Hyperladung: Delta(Y/2) = 1 -> mit pi/6 je Einheit theta_nu - theta_e = pi/6 = {np.pi / 6:.5f} (verlangt pi/12)")
+    # Spiegelung: theta_u = -theta_e, theta_d = -theta_nu (im hermiteschen Fall)
+    te = 0.22112                                  # M_Z (r11)
+    tn = te + np.pi / 12
+    red = lambda t: min(abs(((t + np.pi / 3) % (2 * np.pi / 3)) - np.pi / 3), np.pi / 3)
+    print(f"    Spiegelung: |theta_u| = |theta_e| = {red(te):.4f} gegen r11 0.0518;  |theta_d| = |theta_nu| = {red(tn):.4f} gegen r11 0.1001")

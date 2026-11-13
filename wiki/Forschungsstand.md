@@ -1766,6 +1766,16 @@ Erkundung $\eta$, ohne Datenvergleich:
   Hyperladungsdifferenz von $\ell_L$ und $e_R$ (die Hyperladung des
   Higgs). Schwacher Treffer, weil mehrere Größen den Wert $1/2$ haben;
   ein Hyperladungsfluss durch den Familienraum ist nicht angelegt.
+- Nachtrag Dixon-Sektorphase: In $\theta_s=\sigma_s\phi_H+\lambda_s\phi_O$
+  unterscheiden sich $\nu$ und $e$ nur im Vorzeichen von $\phi_H$
+  (Higgs gegen konjugiertes Higgs), also hyperladungsgebunden. H99
+  verlangt aber in allen Zweigen ein ungerades Vielfaches von $\pi/24$
+  für $\phi_H$ oder $\phi_O$; native Phasen sind Vielfache von $\pi/6$.
+  Die Verbinder tragen die Differenz 1, nicht $1/2$, und ergeben mit
+  $\pi/6$ je Einheit $\pi/6$ statt $\pi/12$. Die Spiegelung auf die
+  Quarks ($|\theta_u|=|\theta_e|$, $|\theta_d|=|\theta_\nu|=0{,}48$ gegen
+  $0{,}10$) widerspricht den Daten. In der einfachsten Form ist die
+  Sektorphase keine Quelle des Flusses.
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),

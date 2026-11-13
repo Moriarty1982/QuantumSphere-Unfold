@@ -42,3 +42,9 @@
       vektorartig q_L = q_R         : Delta = 0.00000  (pi/4 = 0.78540; mit A = pi/6 noetig q_L - q_R = 1/2)
       L halbe Ladung, R neutral     : Delta = 0.78540  (pi/4 = 0.78540; mit A = pi/6 noetig q_L - q_R = 1/2)
       Sumino mit halben Ladungen    : Delta = 1.57080  (pi/4 = 0.78540; mit A = pi/6 noetig q_L - q_R = 1/2)
+
+(7) Nachtrag Dixon-Sektorphase theta_s = sigma phi_H + lambda phi_O (sigma: e +1, nu -1; lambda: Leptonen +1)
+    verlangte Werte in Einheiten pi/24 (mod 2pi): [('phi_H', 7), ('phi_H', 15), ('phi_H', 23), ('phi_H', 31), ('phi_H', 39), ('phi_H', 47), ('phi_O', 7), ('phi_O', 15), ('phi_O', 23), ('phi_O', 31), ('phi_O', 39), ('phi_O', 47)]
+    alle ungerade: True -> native Phasen (Vielfache von pi/6 = 4 * pi/24) scheiden aus
+    Verbinder-Hyperladung: Delta(Y/2) = 1 -> mit pi/6 je Einheit theta_nu - theta_e = pi/6 = 0.52360 (verlangt pi/12)
+    Spiegelung: |theta_u| = |theta_e| = 0.2211 gegen r11 0.0518;  |theta_d| = |theta_nu| = 0.4829 gegen r11 0.1001
