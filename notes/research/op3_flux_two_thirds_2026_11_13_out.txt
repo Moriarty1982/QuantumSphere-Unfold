@@ -1,0 +1,17 @@
+theta_e = 0.2222248 +- 6.3e-06; Phi_e = 0.666674; Delta Phi = 0.118724
+(1) als Qubit-Berry-Phase verlangt Phi_e einen Raumwinkel 1.3333 sr; der Oktant hat pi/2 = 1.5708
+(2) Scan: 11 Konstanten x 7 Faktoren x 2 Ziele = 154 Versuche, Treffer (<= 1 %): 1
+    Delta Phi = pi/4 - 3 theta_e   <- 1/2 * gamma_BI           = 0.118766 (+0.036 %)
+    erwartete Zahl zufaelliger Treffer bei log-gleichverteilten Werten (1e-3..10): 0.34
+
+(3) Nachtraeglich: Schaerfe der Beziehung Delta Phi = gamma_BI/2
+    theta_e aus der Beziehung = 0.2222106; gemessen 0.2222248 +- 6.3e-06 (aus m_tau): +2.27 sigma
+    Verhaeltnisse: m_e/m_mu = 4.839453e-03 (Daten 4.836332e-03), m_tau aus m_mu: 1777.069 MeV (PDG 1776.93 +- 0.09)
+    Abhaengigkeit von der Zaehlweise: gamma_BI = 0.237533 (Domagala-Lewandowski/Meissner, L1); andere Werte der Literatur
+      DL/Meissner           : gamma/2 = 0.11875 gegen Delta Phi 0.11872
+      ABCK SU(2)            : gamma/2 = 0.13700 gegen Delta Phi 0.11872
+      gamma_string (j=1/2)  : gamma/2 = 0.06370 gegen Delta Phi 0.11872
+
+(4) Konsistente Fassung: theta fest aus gamma_BI, rho^2 aus m_e/m_mu (genau bekannt), Vorhersage m_tau und K
+    rho^2 = 0.5000140, K = 0.6666760 (Pol 0.6666645 +- 5e-6), m_tau = 1777.134 MeV (PDG 1776.93 +- 0.09, +2.27 sigma)
+    Vergleich exaktes Koide aus m_e, m_mu: theta = 0.2222220, m_tau = 1776.969 MeV

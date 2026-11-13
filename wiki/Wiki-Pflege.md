@@ -339,3 +339,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 13.11.2026, spät: H101 (Maske hebt Elektron) in Vorhersagen-und-Tests und Forschungsstand eingetragen (widerlegt, Sylvester; Nebenrechnung lineare Form); kein OP-Abschluss.
 
 13.11.2026, spät: Nachtrag andere Anhebung (nur Fluss erhält Koide; nötiger Fluss 2/3 rad; Kreis zum historischen OP3) in Forschungsstand; kein OP-Abschluss.
+
+13.11.2026, spät: Erkundung Fluss 2/3 rad (kein Mechanismus; Scan-Treffer ΔΦ = γ_BI/2, nachträglich, verlangt m_τ = 1777,13 MeV) in Forschungsstand; kein OP-Abschluss.

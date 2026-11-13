@@ -22,6 +22,8 @@
     Generationsmaske r47 geprüft: **H101 widerlegt** (Form K erhält den Rang, Sylvester); lineare r47-Form hebt das
     Elektron, verfehlt aber Koide um 3·10⁻⁴ (nachträglich). **Andere Anhebung:** nur ein Fluss erhält Koide; nötig
     3θ_e = 2/3 rad (ΔΦ = 0,1187 vom Oktanten); Kreis zum historischen OP3 (δ = 2/9). Native Phasen geben nur Vielfache von π/6.
+    **Fluss 2/3 rad gesucht** (`op3_flux_two_thirds_2026_11_13.*`): kein Mechanismus; Scan-Treffer ΔΦ = γ_BI/2 (0,036 %,
+    nachträglich, 0,34 Zufallstreffer erwartet) verlangt m_τ = 1777,13 MeV (+2,3σ). Möglich: als H102 gegen künftiges m_τ festschreiben.
   · zur Wahl: zweite Familienstruktur mit neutralem Qubit (Profil unten) ·
   Fortsetzung der Ladung auf die Sedenionen anders als über e7.
 - **Aufräumen:** Zweig `research/v5-octant-weitersuche` (PR #106) und Worktree `.claude/worktrees/qam-mml-mma-math-473bc4`
