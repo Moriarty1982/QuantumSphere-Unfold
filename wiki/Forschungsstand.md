@@ -1795,11 +1795,20 @@ Erkundung $\eta$, ohne Datenvergleich:
   zusätzliche Higgs-Dublett des Majorana-Terms trägt diese Phase, wenn es
   an den drei Plätzen entlang orthogonaler Achsen zeigt. Hindernis: Solche
   Isospin-Richtungen sind nicht $Q_{\rm em}$-invariant (r33).
+- Nachtrag Hopf-Träger (r15): Die Bedingung $(ab)c=1$ ist das Schließen
+  einer Transportschleife über die drei Plätze. Am symmetrischen
+  Generationspunkt $a=\exp(2\pi e_7/3)$ ist jeder Schritt ein
+  Automorphismus, der $e_7$ festhält und mit $L_{e_7}$ vertauscht (das
+  Zentrum der Farb-$SU(3)$), also $Q_{\rm em}$-verträglich. Eine Richtung
+  unter dem Winkel $\arccos(1/\sqrt3)$ zur Ladungsachse läuft dabei genau
+  um ein Oktanten-Tripel: Überlappung $1/2$, Rang 2, Phase $\pi/4$. Das
+  Hindernis aus r33 entfällt für diesen Träger. Offen: warum dieser
+  Winkel, warum nur der Majorana-Block, Verträglichkeit mit r14.
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),
 > `notes/research/op3_slot_u3_gauging_2026_11_13.md` (Eichung Platzindex-U(3)),
-> `notes/research/op3_eta_form_search_2026_11_13.md` (Form η, Bargmann-Phase), `predictions/Vorab_Notiz_H100_Neutrino_Verhaeltnis_naechster_Fit.md`,
+> `notes/research/op3_eta_form_search_2026_11_13.md` (Form η, Bargmann-Phase), `notes/research/op3_hopf_octant_2026_11_13.md` (Oktanten-Tripel im Hopf-Träger), `predictions/Vorab_Notiz_H100_Neutrino_Verhaeltnis_naechster_Fit.md`,
 > `notes/research/nufit_verlauf_2026_11_13.py` (mit Grafik und Ausgabe),
 > `notes/research/op3_indefinite_form_2026_11_13.md`,
 > `notes/research/predictions/Vorab_Notiz_H99_Neutrino_Phase_Bogenrand.md`,

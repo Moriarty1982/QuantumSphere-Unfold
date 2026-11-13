@@ -19,7 +19,10 @@
   gibt π/6 = Dixon-Befund. Setzt Majorana-Neutrinos voraus. Mechanismus gesucht:
   Regel = Holonomie J^y; **Rand-Tripel des Koide-Bogens = drei Qubits entlang orthogonaler Achsen** (ρ² = 1/2, Rang 2,
   Phase π/4, exakt). Kandidat: zusätzliches Higgs-Dublett des Weinberg-Terms trägt diese Phase. Hindernis r33 (Q_em).
-  Als Nächstes: Hopf-Faser (r15) statt Isospin als Qubit prüfen; oder Majorana-Lesart als H101; oder Pause bis H100.
+  **Hopf-Träger (r15) geprüft** (`op3_hopf_octant_2026_11_13.*`): symmetrischer Punkt a = exp(2πe7/3) ist ein
+  Q_em-verträglicher Automorphismus (Farbzentrum); Richtung unter arccos(1/√3) zu e7 läuft um das Oktanten-Tripel
+  (ρ² = 1/2, Rang 2, π/4). r33-Hindernis entfällt. Als Nächstes: native Richtung unter dem magischen Winkel suchen
+  (Assoziator [e4,e5,e6] = −2e7?); Anschluss an Majorana-Verbinder; Verträglichkeit mit r14. Oder Pause bis H100.
   Werkzeuge: `notes/research/op3_eta_form_search_2026_11_13.*`, `op3_slot_u3_gauging_2026_11_13.*`.
   · zur Wahl: H100 vorab festschreiben (Kandidaten unten) · T₁₂ als dynamisches Feld · Potential für ρ² = 1/2 ·
   Vereinigung Platzindex-U(3) mit SU(2)_L.

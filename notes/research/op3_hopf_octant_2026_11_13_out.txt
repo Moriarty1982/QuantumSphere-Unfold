@@ -1,0 +1,14 @@
+Kontrolle: |xy| = |x||y| True, x(xy) = (xx)y True
+a^3 = 1: True
+(1) Konjugation mit a: Automorphismus (max. Fehler 1.0e-14), fixiert e7 True, vertauscht mit L_e7 (max. Fehler 0.0e+00)
+    C(g) = -0.5000 g -0.8660 e7g  (cos 4pi/3 = -0.5000, sin = -0.8660)
+(2) Bahn von f: Skalarprodukte
+[[ 1. -0.  0.]
+ [-0.  1. -0.]
+ [ 0. -0.  1.]]
+    C^3(f) = f: True;  Produkt f0 f1 = +-f2: True
+(3) als Qubits: rho^2 = 0.500000, Rang 2, Bargmann-Phase -0.785398 (pi/4 = 0.785398)
+    Winkel cos = 0.0000: <h, C h> = -0.5000
+    Winkel cos = 0.3000: <h, C h> = -0.3650
+    Winkel cos = 0.5774: <h, C h> = +0.0000
+    Winkel cos = 0.8000: <h, C h> = +0.4600
