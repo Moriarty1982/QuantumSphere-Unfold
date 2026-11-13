@@ -1869,6 +1869,24 @@ Erkundung $\eta$, ohne Datenvergleich:
   den Oktanten, ist aber kein Automorphismus der Sedenionen, und $e_8$,
   $e_{15}$ tragen dann die Ladungen $1/3$, $2/3$. Ein farb- und
   ladungsneutraler Träger ist auch in den Sedenionen nicht gefunden.
+- Nachtrag Ladung über $e_8$ (Erkundung, nicht blind): Rückwärts gesucht
+  wurde jede Ladung $Q$ auf $\mathbb C\otimes\mathbb S$ mit $[Q,\psi]=0$,
+  $[Q,su(3)_c]=0$, $\bar Q=1-Q$ und Spektrum $\{0,\tfrac13,\tfrac23,1\}$
+  ($3\mapsto\tfrac23$), ohne $Q|_{\mathbb O}=Q_8$ zu verlangen. Auf dem
+  farbigen Teil ist sie eindeutig. Auf dem farbneutralen Block
+  $\mathrm{span}(1,e_7,e_8,e_{15})$ ist sie bis auf zwei Vorzeichen
+  eindeutig: $Q_*=\tfrac12-\tfrac i2 L_{e_8}$ (oder $R_{e_8}$). Die
+  Ladungsachse der Leptonen ist also $e_8$, die einzige $\psi$-feste
+  imaginäre Richtung. Der Kern $N=\mathrm{span}(1+ie_8,\;e_7-ie_{15})$ ist
+  ein **farb- und ladungsneutrales Qubit**, auf dem $\psi$ als
+  $\mathrm{diag}(1,\omega)$ wirkt (Ordnung 3). Der Bezug unter dem
+  magischen Winkel ist dort aber nicht nativ: Für reelle Elemente mit
+  rationalen Koeffizienten ist $\cos\theta$ rational. Die frühere Diagonale
+  gibt $K=5/9$, die Hurwitz-Einheiten geben $K=1/2$. Nötig wäre das
+  Amplitudenverhältnis $\tan(\theta/2)=2\sin(\pi/12)$. Preis:
+  $Q_*$ lässt $\mathbb O$ nicht invariant, und $\varepsilon$ wirkt auf den
+  Leptonen als Ladungskonjugation ($S_3\to\mathbb Z_3$). Die Lücke
+  verschiebt sich vom neutralen Träger zum Bezugszustand. OP3/OP4 bleiben offen.
 
 **Runde v4.10.0-r12 und offene Fäden** (13.11.2026). Die Runde r12
 (Statusvermerke) hält fest: Das historische Koide-OP3 ist nicht
@@ -1949,7 +1967,7 @@ Koide-Bogens ist exakt das Oktanten-Tripel. Zu den Fäden:
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),
 > `notes/research/op3_slot_u3_gauging_2026_11_13.md` (Eichung Platzindex-U(3)),
-> `notes/research/op3_eta_form_search_2026_11_13.md` (Form η, Bargmann-Phase), `notes/research/op3_hopf_octant_2026_11_13.md` (Oktanten-Tripel im Hopf-Träger), `op3_lorentz_octant_2026_11_13.py` (Lorentz-Fassung), `op3_neutral_su2_octant_2026_11_13.md` (neutrale SU(2), Spin 1/2), `op3_sedenion_reference_2026_11_13.md` (Bezugszustand), `op3_koide_potential_2026_11_13.md` (Potential, T₁₂), `op3_selection_principle_2026_11_13.md` (Auswahlprinzip), `op3_flux_two_thirds_2026_11_13.md` (Fluss 2/3 rad), `v4_10_0_r12/` (Runde r12), `predictions/Vorab_Notiz_H100_Neutrino_Verhaeltnis_naechster_Fit.md`,
+> `notes/research/op3_eta_form_search_2026_11_13.md` (Form η, Bargmann-Phase), `notes/research/op3_hopf_octant_2026_11_13.md` (Oktanten-Tripel im Hopf-Träger), `op3_lorentz_octant_2026_11_13.py` (Lorentz-Fassung), `op3_neutral_su2_octant_2026_11_13.md` (neutrale SU(2), Spin 1/2), `op3_sedenion_reference_2026_11_13.md` (Bezugszustand), `op3_sedenion_charge_2026_11_13.md` (Ladung über $e_8$, neutrales Qubit), `op3_koide_potential_2026_11_13.md` (Potential, T₁₂), `op3_selection_principle_2026_11_13.md` (Auswahlprinzip), `op3_flux_two_thirds_2026_11_13.md` (Fluss 2/3 rad), `v4_10_0_r12/` (Runde r12), `predictions/Vorab_Notiz_H100_Neutrino_Verhaeltnis_naechster_Fit.md`,
 > `notes/research/nufit_verlauf_2026_11_13.py` (mit Grafik und Ausgabe),
 > `notes/research/op3_indefinite_form_2026_11_13.md`,
 > `notes/research/predictions/Vorab_Notiz_H99_Neutrino_Phase_Bogenrand.md`,
