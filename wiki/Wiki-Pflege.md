@@ -265,3 +265,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 13.11.2026: Nachtrag zur Dixon-Platzkopplung in Forschungsstand (Verbinderblock r44.1(b) getroffen, Sektoren an Idempotenten, Hyperladung erlaubt nur einen Umlaufsinn, K ≤ 1/2); kein OP-Abschluss.
 
 13.11.2026: Nachtrag 2 zur Dixon-Platzkopplung in Forschungsstand (Rückweg über Dixon-konjugiertes Element eichinvariant, Element trägt bei einem Dublett keine Phase; Phase = relative Phase zweier freier Kopplungskonstanten); kein OP-Abschluss.
+
+13.11.2026: Weg C in Forschungsstand ergänzt (vier Generationenträger mit heutigem Stand; r33-Labels nicht ladungsinvariant; Modell I ohne Vorhersage; Korrektur: r53 als Vorbefund der Kopplungsabschnitte); kein OP-Abschluss.

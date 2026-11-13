@@ -113,3 +113,11 @@ Quarkformel an 300 zufälligen reellen h (Fehler 3e-15, keine
 Lepton-Quark-Mischung); chirales h; Platzmatrix hermitesch und in
 Brannen-Form (2e-15), mit h_7 = 0 zwei gleiche Eigenwerte; drei
 Farbtripletts total antisymmetrisch. Gelesen: r44, r45, r46, k85, k86.
+
+## Nachtrag (13.11.): übersehenes Vorwissen
+
+Die Angabe „kein Vorbefund“ zur Platzkopplung über die Trialitätsform war
+falsch. v4.9.0-r53 (H37) hat eine solche Kopplung mit reell symmetrischem
+T(v) und Norm-Diagonalterm bereits getestet (t allein verboten, keine
+Quarkmischung, H/H-Schlange-Lesart widerlegt); r47–r60 behandeln Masken
+und A_4-Auslesung. Einordnung in op3_generation_carrier_review_2026_11_13.md.

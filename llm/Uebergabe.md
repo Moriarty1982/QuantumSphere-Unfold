@@ -1,6 +1,6 @@
 # Übergabe: Stand der letzten Sitzung
 
-13. November 2026, ca. 01:40 (Claude). Wird pro Arbeitsblock überschrieben.
+13. November 2026, ca. 02:00 (Claude). Wird pro Arbeitsblock überschrieben.
 
 - Öffentliche Baseline v5.0.0 (DOI 10.5281/zenodo.24152615, Tag v5.0.0 auf 539b75b). PR #100, #101, #102 gemergt; main 1eed465; Läufe 43265308165 (Zwei-PDF) und 43265308144 (Wiki-Sync) erfolgreich. Keine weitere Veröffentlichung nötig.
 - Lokaler Ordner des Autors (`Quantum Sphera`) stand noch auf dem 6.11. (93c3d21, r05) und wurde auf Autorenfreigabe per Fast-Forward auf 1eed465 gebracht. Der alte Stand ist als Tag `lokal-stand-2026-11-06` gesichert (dabei entfielen 58 verfolgte Dateien, u. a. `.claude/skills`, alte Zusammenfassungen; alle über den Tag erreichbar).
@@ -62,14 +62,19 @@
 - Rückweg über h~ ist eichinvariant, trägt aber denselben Koeffizienten wie der Hinweg: keine Phase aus dem Element. Rückweg über h+ bräuchte eine unabhängige zweite Dublett-Komponente; W2 hat ein Dublett, zweite Lesart passt dazu.
 - Stand: Brannen-Phase = relative Phase der Kopplungskonstanten von Hin- und Rückweg, frei (r45, jetzt verortet). Struktur allein liefert sie im heutigen Companion nicht.
 
+## Weg C: Platzstruktur geprüft (13.11., Autor: „c“)
+
+- Notiz und Skript `notes/research/op3_generation_carrier_review_2026_11_13.*`, im selben PR #103.
+- Korrektur: r53 (H37) ist Vorbefund zur Platzkopplung über t (t allein verboten, keine Quarkmischung); r47–r60 Masken und A4-Auslesung. In den beiden Kopplungsnotizen nachgetragen.
+- Träger: Farbtriplett ausgeschieden (12.11.); Quaternionen-Richtungen i, j, k (r33) ausgeschieden als Generationenlabel, weil mu_1, mu_2 unter Q_em nicht invariant sind (neu; Voraussetzung: derselbe H-Faktor wie r40–r43); Hopf-Träger K <= 1/2; Modell I widerspruchsfrei, ohne Vorhersage.
+- Antwort: kein Träger liefert Zahl drei und Massen zugleich. Es fehlt ein Grund für die Wiederholung (nativer Mehrfachraum gleicher Quantenzahlen oder eichinvariante Dreifachauslesung), nicht ein weiterer Kopplungsansatz.
+
 ## Nächster Schritt (Autorentscheidung)
 
-Die Strukturfrage ist an dieser Stelle ausgeschöpft; weiter geht es nur mit einer Entscheidung des Autors:
-- (A) zweite unabhängige Dublett-Komponente zulassen (etwa als T-Frame-Partner); dann wäre die relative Phase die Quelle, und die Folgen für W2 und die zweite Lesart wären vorab zu prüfen;
-- (B) ein Prinzip suchen, das Rückweg- an Hinweg-Konstante bindet (Quellenfrage: Chiralität r42/r43, Anomaliefreiheit);
-- (C) die Platzstruktur selbst in Frage stellen (Generationen nicht als zyklisch gekoppelte gleiche Kopien);
-- (D) die Linie hier ablegen und zur Stringfrage (W-a, W-c) oder zu den Statusvermerken zurückkehren.
-Ein Test mit Kriterium bekäme H99 und eine Vorab-Notiz.
+- Eichinvariante Dreifachauslesung einer Konfiguration in O³ untersuchen (invariant unter Farbe, Q_em, Lorentz; Beispiel Eigenwerte von adj(S), farbfest (0,0,m)).
+- Statusvermerke in einer neuen Runde: r33-Labels (Ladung), ältere Koide-Stellen (v470/17, „2/3 factor“, rem:koide-mass-discrepancy), thm:three-generations.
+- Oder die OP3-Linie ablegen: offene Vorhersagen H15, H42, H46, H96; Stringfrage W-a, W-c.
+- PR #103 wartet auf „PR 103 mergen“. Ein Test mit Kriterium bekäme H99 und eine Vorab-Notiz.
 
 ## Pflichten in jeder Sitzung
 

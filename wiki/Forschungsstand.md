@@ -1392,6 +1392,59 @@ Struktur verlangte eine zweite unabhängige Dublett-Komponente oder ein
 Prinzip, das die beiden Konstanten bindet. OP3/OP4 bleiben offen.
 
 
+### Weg C: Sind die Generationen zyklisch gekoppelte gleiche Kopien? (13.11.2026)
+
+Auf Autorenentscheidung wurde die Platzstruktur selbst geprüft.
+Quellenprüfung mit kleiner Erkundung, nicht blind.
+
+**Korrektur.** Die beiden Kopplungsabschnitte oben nannten keinen
+Vorbefund. Einschlägig ist r53 (H37): Die Kopplung zweier Generationen
+über $t$ mit einem Higgs-Wert im dritten Platz wurde dort mit reell
+symmetrischem $T(v)$ getestet; $t$ allein ist verboten
+($m_3=m_1+m_2$), mit Norm-Diagonalterm entsteht keine Quarkmischung. r47
+bis r60 behandeln die Generationenmaske und die Auslesung über
+Untergruppen von $A_4$. Neu an den Abschnitten oben bleiben der chirale,
+komplexe Anteil, die Sektorformel und die Rolle der Hyperladung.
+
+**Die vier vorhandenen Träger.**
+
+| Träger | Stand |
+|---|---|
+| Farbtriplett $e_4,e_5,e_6$ (Kern) | ausgeschieden: Kompression skalar (12.11.) |
+| Quaternionen-Richtungen $i,j,k$ mit Gram-Labels (r33) | ausgeschieden als Generationenlabel (neu, siehe unten) |
+| Hopf-Träger mit H18-Gesetz (r15, r33) | $K\le\tfrac12$ auf dem farbfesten Torus (12.11.) |
+| Drei gleiche lineare Kopien, zyklisch gekoppelt (Modell I, r45) | widerspruchsfrei, ohne Vorhersage |
+
+**Neu: Die Gram-Labels aus r33 sind nicht ladungsinvariant.** r33 legt
+die Plätze in die Richtungen $i,j,k$ und liest
+$\mu_i=2(\lVert x_j\rVert^2\lVert x_k\rVert^2-\langle x_j,x_k\rangle^2)$
+aus; das ist die Diagonale von $N=2\,\mathrm{adj}(S)$ mit der Gram-Matrix
+$S$ der Plätze. Seit r40–r43 ist die Rechtsmultiplikation in $\mathbb H$
+der schwache Isospin. Unter der elektrischen Ladung drehen sich $i$ und
+$j$ ineinander: $\mu_1$ und $\mu_2$ ändern sich, invariant sind nur die
+Eigenwerte von $N$. Die drei Richtungen sind die Komponenten (geladen,
+geladen, neutral) des Isospins und keine drei Generationen. Auf der
+farbfesten Ebene $\mathrm{span}(1,e_7)$ sind die Eigenwerte stets
+$(0,0,m)$. Vorausgesetzt ist, dass r33 denselben Quaternionenfaktor
+meint.
+
+**Antwort.** Im heutigen Companion liefert kein Träger die Zahl drei und
+die Massen zugleich. Zwei ältere Träger scheiden aus, weil ihre drei
+Einträge eine Eichquantenzahl tragen; eine Generation ist aber eine
+Wiederholung bei gleichen Quantenzahlen. Modell I bleibt als einzige
+widerspruchsfreie Lesart: Die Generationen sind dort ein
+Vielfachheitsraum, über dessen Kopplungen die Struktur nichts sagt, was
+nicht eingesetzt wird. „Zyklisch gekoppelte gleiche Kopien“ ist damit
+weder widerlegt noch gestützt. Es fehlt kein weiterer Kopplungsansatz,
+sondern ein Grund für die Wiederholung selbst (vgl. T7: ein Verbot einer
+vierten Generation fehlt). OP3/OP4 bleiben offen, Guards unverändert.
+
+> **Anmerkungen für LLMs und Quellenprüfung:** Notiz
+> `notes/research/op3_generation_carrier_review_2026_11_13.md` mit
+> Prüfskript. Vorwissen: r33, r37, r45, r46, r47, r50, r52–r60 und die
+> fünf OP3-Notizen vom 12.11. Keine H-/k-Nummer, kein MMA-Beleg.
+
+
 ### Version 5: Veröffentlichungsvorbereitung wieder aufgenommen (12.11.2026)
 
 PR #100 integriert die jüngsten OP3-Erkundungen. Auf Autorenauftrag werden

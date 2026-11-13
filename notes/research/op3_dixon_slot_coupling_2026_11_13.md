@@ -215,3 +215,11 @@ Dublett-Komponente mit festgelegter relativer Phase oder ein Prinzip, das
 die Rückweg-Konstante an die Hinweg-Konstante bindet. Beides wäre eine
 Erweiterung und Sache des Autors. OP3/OP4 bleiben offen, Guards
 unverändert.
+
+## Nachtrag (13.11.): übersehenes Vorwissen
+
+Die Angabe „kein Vorbefund“ zur Platzkopplung über die Trialitätsform war
+falsch. v4.9.0-r53 (H37) hat eine solche Kopplung mit reell symmetrischem
+T(v) und Norm-Diagonalterm bereits getestet (t allein verboten, keine
+Quarkmischung, H/H-Schlange-Lesart widerlegt); r47–r60 behandeln Masken
+und A_4-Auslesung. Einordnung in op3_generation_carrier_review_2026_11_13.md.
