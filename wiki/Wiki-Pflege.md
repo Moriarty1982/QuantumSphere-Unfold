@@ -285,3 +285,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 13.11.2026, spät: Nachtrag Koide-Spannung (Pol-Koide als Zufall unwahrscheinlich; Sumino-Weg rechnet die Neutrinos an die Daten heran, nicht nativ) in Forschungsstand; kein Test, kein OP-Abschluss.
 
 13.11.2026, spät: Nachtrag Exponent c (mit PMNS-Mittelung c ≈ 1,7–1,8; c = 1 +0,7σ) und Familiensymmetrie (keine native Eichsymmetrie; Platzindex-U(3) der Gram-Matrix als einziger stetiger Kandidat) in Forschungsstand; kein Test, kein OP-Abschluss.
+
+13.11.2026, spät: Nachtrag c als Integral (c = 1,8 ± 1,0; c = 1 verträglich, bei Sumino c = 1) in Forschungsstand; kein Test.

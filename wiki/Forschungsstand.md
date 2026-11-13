@@ -1668,6 +1668,13 @@ Auslesung), (3) Skala der Leptonmassen.
   wirkende $U(3)$ auf dem Platzindex der Gram-Matrix; formal spielt die
   Gram-Matrix die Rolle von Suminos Feld $\Phi$. Eichung,
   Bosonenmassen und $\alpha_F=4\alpha$ fehlen.
+- Nachtrag $c$ als Integral: $c=1{,}8\pm1{,}0$; $c-1$ ist nur
+  $0{,}8\sigma$ von null entfernt, $c=0$ (H99) $1{,}8\sigma$. Gelesen als
+  Verhältnis zweier Log-Integrale (Familienkorrektur, die der
+  Neutrino-Term sieht, zur QED-Korrektur der geladenen Leptonen) ist bei
+  Sumino $c=1$, weil $\alpha_F=4\alpha$ beide Integrale gleich macht.
+  $c\neq1$ wäre ein Maß für ein abweichendes Integral auf der
+  Neutrinoseite; heutige Daten verlangen das nicht.
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),
