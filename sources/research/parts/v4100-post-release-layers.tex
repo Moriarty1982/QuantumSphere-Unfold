@@ -1499,3 +1499,127 @@ R_{\rm glob}^{(v4100\text{-}r11,+)}=(0,1,1,1,1),
 \]
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r12 Source-Only: Status Notes on Inherited Koide and Generation Statements}
+\addcontentsline{toc}{section}{v4.10.0-r12 Source-Only: Status Notes on Inherited Koide and Generation Statements}
+\label{sec:v4100-r12-status-notes}
+% ============================================================================
+
+\paragraph{Purpose.}
+Several inherited passages state more about the Koide block and the generations than the later layers support.  They were
+noted during the OP3 work after v5.0.0 (12 and 13 November 2026, notes under \texttt{notes/\allowbreak research/\allowbreak op3\_*}) and
+are recorded here as status notes, as the append-only rule requires.  The layer also registers the two neutrino tests of
+that work (H99 evaluated, H100 pre-registered) and the explorations behind them.  No new test is evaluated here.  The notes
+are \texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r12/}.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r12 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.0.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24152615}{10.5281/zenodo.24152615} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r12 status notes}
+\label{subsec:v4100-r12-status}
+
+\paragraph{Theoremlet v4.10.0-r12.1 (historical OP~3 is not closed).}
+The open-question genealogy (part 17, ``Current reading'' and ``Historical OP synchronization'') calls the Koide/triolic block
+``structurally closed at the present level'' and says that historical OP~3 should no longer be listed as a primary open problem.
+This is superseded.  The Koide relation is an empirical fact whose derivation is open (status of
+Theorem~\ref{thm:koide-triolic}); the phase \(\delta=2/9\) holds only for charged-lepton pole masses and fails for quarks and
+for running lepton masses (v4.8.0-r11, H1); the overlap model of the v4.11 section is conditional; the v5.0.0 string question
+is answered negatively only for the Maxwell class and stays open in general.  OP~3 remains open.
+
+\paragraph{Theoremlet v4.10.0-r12.2 (the remark on the factor \(2/3\)).}
+The remark ``The \(2/3\) factor is everywhere'' lists four occurrences of \(2/3\) and reads them as one statement (two of the
+three triolic sectors collapse to the photon ground state).  No common derivation exists.  The measured dark-energy fraction
+is about \(0.685\), not \(2/3\); the spring coefficient and the stable sector fraction are separate constructions; for the Koide
+ratio the Gram reading of the post-v5 notes gives \(K=(1+2\rho^2)/3\), so \(K=2/3\) is a mean squared overlap
+\(\rho^2=1/2\), an assumption-bearing readout and not a sector count.  The remark is a list of coincidences and is not to be
+read as a result.
+
+\paragraph{Theoremlet v4.10.0-r12.3 (remark on the mass discrepancy near the electron).}
+Remark~\ref{rem:koide-mass-discrepancy} attributes the residual mass errors to the approximation of \(\beta_{\rm sym}\) in the
+phase formula \(\theta_K=\pi-\sqrt2\arcsin\beta_{\rm sym}\).  That formula is excluded at about \(300\)--\(400\sigma\)
+(v4.8.0-r09) and archived (status of Theorem~\ref{thm:koide-triolic}).  The attribution is therefore void.  The amplification
+near the electron (a small change of the phase moves \(m_e\) strongly) remains a correct property of the Brannen map.
+
+\paragraph{Theoremlet v4.10.0-r12.4 (generation labels).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] The left-invariant Gram labels \(\mu_i\) of v4.9.0-r33 are not invariant under the electromagnetic gauge
+transformation: right multiplication in the quaternion factor is the weak isospin, \(Q_{\rm em}\) contains \(T_3\), a
+\(Q_{\rm em}\) rotation mixes \(i\) and \(j\), so \(\mu_1\) and \(\mu_2\) change while \(\mu_3\) does not.  Only the eigenvalues of
+the Gram matrix are charge invariant (note \texttt{op3\_\allowbreak generation\_\allowbreak carrier\_\allowbreak review\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 13.md};
+the assumption is the same quaternion factor as in v4.9.0-r40 to r43).  The refutation of H18 is unchanged.
+\item[(b)] Theorem~\ref{thm:three-generations} keeps its v4.9.0 status (the triplet basis is colour).  In addition, none of the
+carriers examined after v5.0.0 gives the number three and the masses at once (colour triplet, quaternion directions, Hopf
+carrier, place-index \(U(3)\), sedenion plane); a second three-fold structure outside \(\OO\) is still required.
+\item[(c)] Exact, found in the explorations: three spin-\(\tfrac12\) states along three orthogonal axes have pairwise overlap
+\(\tfrac12\), rank \(2\) and Bargmann phase \(\pi/4\); this is precisely the boundary triple of the Koide arc
+(\(\rho^2=\tfrac12\), \(\theta=\pi/12\)).  The cyclic right action of \(1+i+j+k\) in r33.2 is, up to normalisation, the
+Hurwitz unit that generates this triple.  No colour- and charge-neutral native carrier was found (isospin breaks
+\(Q_{\rm em}\), octonionic directions carry colour, the neutral Dixon part has signature \((2,1)\), the sedenion cycle \(\psi\)
+moves the charge axis).
+\end{enumerate}
+
+\paragraph{Theoremlet v4.10.0-r12.5 (neutrino tests of the post-v5 work).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] H99 (pre-registration \texttt{5b23c5a}, not blind): equal overlap \(\rho^2=\tfrac12\) in both colour-neutral sectors and
+\(\theta_\nu=\theta_e+\pi/12\) give \(R=\Delta m^2_{21}/\Delta m^2_{31}=0.030839\).  Against NuFIT~6.0 \(+1.31\sigma\), against
+NuFIT~6.1 (primary table, IC24 with SK, normal ordering) \(+1.80\sigma\): compatible by the criterion.
+\item[(b)] H100 (pre-registration \texttt{9c77ddd}): three values of \(R\) are fixed for the next NuFIT release: \(0.030839\)
+(H99), \(0.030087\) (all ingredients at one short-distance scale), \(0.030375\) (Sumino-type family correction, \(c=1\),
+PMNS-averaged).  Pending.
+\item[(c)] Explorations (not tests): the Brannen phase is one third of the Bargmann phase of the three places; H99 is a flux
+\(\pi/4\) through the place triangle; the native phases \(\omega\), \(i\), \(-1\) generate only multiples of \(\pi/6\), so
+\(\pi/4\) needs a further source; a rule ``phase \((Y/2\text{ of the connector})\cdot\pi/6\)'' reproduces \(\pi/12\) for
+Majorana neutrinos (\(HH\)) and \(\pi/6\) for Dirac neutrinos, a posteriori and without mechanism.
+\end{enumerate}
+
+\subsection*{v4.10.0-r12 status in the three frames}
+\label{subsec:v4100-r12-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item M and T: the status notes concern readouts in the matter frame; the Gram and Bargmann statements are frame free in the
+places; nothing is transported to T.
+\item P: not evaluated.
+\end{itemize}
+
+\subsection*{v4.10.0-r12 register entries}
+\label{subsec:v4100-r12-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r12\\
+\midrule
+historical OP~3 ``structurally closed'' (part 17) & superseded; OP~3 open (r12.1)\\
+remark on the factor \(2/3\) & list of coincidences, not a result (r12.2)\\
+Remark~\ref{rem:koide-mass-discrepancy} & attribution to \(\beta_{\rm sym}\) void (r12.3)\\
+r33 Gram labels \(\mu_i\) & not \(Q_{\rm em}\) invariant (r12.4(a))\\
+Koide arc boundary & octant triple of spin-\(\tfrac12\) states, exact (r12.4(c))\\
+H99 / H100 & compatible \(+1.80\sigma\) / pending (r12.5)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r12 ledger and guard update}
+\label{subsec:v4100-r12-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r12}=(1,1,0)
+\]
+for (status notes recorded; formulas checked in the cited notes; native carrier and derivation of \(K\) open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r12,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r12}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.

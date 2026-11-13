@@ -1870,10 +1870,27 @@ Erkundung $\eta$, ohne Datenvergleich:
   $e_{15}$ tragen dann die Ladungen $1/3$, $2/3$. Ein farb- und
   ladungsneutraler Träger ist auch in den Sedenionen nicht gefunden.
 
+**Runde v4.10.0-r12 und offene Fäden** (13.11.2026). Die Runde r12
+(Statusvermerke) hält fest: Das historische Koide-OP3 ist nicht
+„strukturell geschlossen“, die Bemerkung zum Faktor $2/3$ ist kein
+Ergebnis, die Zuschreibung der Massenabweichung an $\beta_{\rm sym}$ ist
+hinfällig, die r33-Labels sind nicht ladungsinvariant, und der Rand des
+Koide-Bogens ist exakt das Oktanten-Tripel. Zu den Fäden:
+- Potential: $\mathrm{tr}\,S^2=3+6\rho^2$, $\mathrm{tr}\,S^3=3+18\rho^2+6\rho^3\cos3\theta$.
+  Grad 4 in $X$ ist linear in $\rho^2$ (kein inneres Extremum); Grad 6
+  gibt $\rho^2=1/2$ nur mit abgestimmtem Koeffizientenverhältnis. Koide
+  verlangt ein Auswahlprinzip; gleichwertige Lesarten sind die Mitte des
+  Bereichs $[1/3,1]$, die Gleichverteilung $\|S-1\|=\|1\|$ und die
+  paarweise Treue $1/2$. Der Kandidat $\mathrm{tr}(S^2-2S)^2$ gibt
+  $K=0{,}556$.
+- $\mathcal T_{12}$ dynamisch: Als Feld hat es nur die Singulärwerte als
+  Invarianten; $\rho$ und $\theta$ werden zu zwei abgestimmten
+  Kopplungen, eine Vorhersage entsteht nicht.
+
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),
 > `notes/research/op3_slot_u3_gauging_2026_11_13.md` (Eichung Platzindex-U(3)),
-> `notes/research/op3_eta_form_search_2026_11_13.md` (Form η, Bargmann-Phase), `notes/research/op3_hopf_octant_2026_11_13.md` (Oktanten-Tripel im Hopf-Träger), `op3_lorentz_octant_2026_11_13.py` (Lorentz-Fassung), `op3_neutral_su2_octant_2026_11_13.md` (neutrale SU(2), Spin 1/2), `op3_sedenion_reference_2026_11_13.md` (Bezugszustand), `predictions/Vorab_Notiz_H100_Neutrino_Verhaeltnis_naechster_Fit.md`,
+> `notes/research/op3_eta_form_search_2026_11_13.md` (Form η, Bargmann-Phase), `notes/research/op3_hopf_octant_2026_11_13.md` (Oktanten-Tripel im Hopf-Träger), `op3_lorentz_octant_2026_11_13.py` (Lorentz-Fassung), `op3_neutral_su2_octant_2026_11_13.md` (neutrale SU(2), Spin 1/2), `op3_sedenion_reference_2026_11_13.md` (Bezugszustand), `op3_koide_potential_2026_11_13.md` (Potential, T₁₂), `v4_10_0_r12/` (Runde r12), `predictions/Vorab_Notiz_H100_Neutrino_Verhaeltnis_naechster_Fit.md`,
 > `notes/research/nufit_verlauf_2026_11_13.py` (mit Grafik und Ausgabe),
 > `notes/research/op3_indefinite_form_2026_11_13.md`,
 > `notes/research/predictions/Vorab_Notiz_H99_Neutrino_Phase_Bogenrand.md`,

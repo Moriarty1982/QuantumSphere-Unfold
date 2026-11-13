@@ -8,6 +8,7 @@
 - **Lokal:** Hauptordner auf `main` 99d1bbb (Übergabe-Commit, liegt in PR #106). Arbeit im Worktree
   `.claude/worktrees/qam-mml-mma-math-473bc4` (kann nach dem nächsten Merge weg). Unversioniert:
   `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf`.
+- **Letzte Runde:** v4.10.0-r12 (in PR #106).
 - **Zuletzt vergebene Hypothese:** **H100** (Vorab 9c77ddd, offen bis zur nächsten NuFIT-Version, längstens 31.12.2027);
   nächste frei H101; letztes Skript k222. Auswertung: `python k222_test_h100.py dm21 sig21 dm31 sig31`.
 - **Offene Autorentscheidungen:** keine.
@@ -39,7 +40,13 @@
   Quaternionen, ψ = 120°-Drehung um e8, Raumdiagonale (e7+e8+e15)/√3 gibt Oktant (K = 2/3, π/4). Hindernis: Ladung
   (ψ dreht e7, L_e7 dreht (e8,e15)). **Ladung fortgesetzt:** keine Fortsetzung mit Q|_O = Q8 (k85) vertauscht mit ψ;
   Drehung um e7 (Konjugation mit a) ladungsverträglich, aber kein Automorphismus von S, e8/e15 mit Ladung 1/3, 2/3.
-  Native Trägersuche auch in den Sedenionen negativ. Empfehlung: PR #106 mergen, H100 abwarten.
+  Native Trägersuche auch in den Sedenionen negativ.
+- **Fäden (Autor: „erst die Fäden“):** (1) **Runde v4.10.0-r12** (Statusvermerke: OP3 nicht geschlossen, Bemerkung 2/3,
+  rem:koide-mass-discrepancy, r33-Labels, Oktant exakt, H99/H100 registriert) angehängt an `parts/v4100-post-release-layers.tex`
+  ab Zeile 1502; Notizen `notes/research/v4_10_0_r12/`; Guard-Linter 0 Treffer; lokaler Build ok, 1406 Seiten, 0 Overfull,
+  0 undefinierte Verweise; CI-Lauf (qsc-latex-build) noch nicht gestartet. (2) Potential: Grad 6 mit abgestimmtem Verhältnis
+  nötig, kein natürlicher Kandidat. (3) T₁₂ dynamisch: nur Singulärwerte invariant, ρ und θ abgestimmt
+  (`op3_koide_potential_2026_11_13.*`). Empfehlung: CI-Build starten, PR #106 mergen, H100 abwarten.
   Werkzeuge: `notes/research/op3_eta_form_search_2026_11_13.*`, `op3_slot_u3_gauging_2026_11_13.*`.
   · zur Wahl: H100 vorab festschreiben (Kandidaten unten) · T₁₂ als dynamisches Feld · Potential für ρ² = 1/2 ·
   Vereinigung Platzindex-U(3) mit SU(2)_L.

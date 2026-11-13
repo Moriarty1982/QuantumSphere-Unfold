@@ -327,3 +327,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 13.11.2026, spät: Erkundung Bezugszustand in den Sedenionen (farbneutrale Quaternionen span(1,e7,e8,e15), Raumdiagonale gibt Oktant; Ladung als Hindernis) in Forschungsstand; kein OP-Abschluss.
 
 13.11.2026, spät: Nachtrag Ladung auf die Sedenionen fortgesetzt (keine ψ-verträgliche Fortsetzung; Drehung um e7 kein Automorphismus, e8/e15 geladen) in Forschungsstand; kein OP-Abschluss.
+
+13.11.2026, spät: Runde v4.10.0-r12 (Statusvermerke) in Forschungslinie, Inhalt, Content-overview, Offene-Probleme und Forschungsstand; Fäden Potential und T₁₂ in Forschungsstand.
