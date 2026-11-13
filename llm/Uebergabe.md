@@ -1,6 +1,6 @@
 # Übergabe: Stand der letzten Sitzung
 
-13. November 2026, ca. 04:10 (Claude). Wird pro Arbeitsblock überschrieben.
+13. November 2026, ca. 04:35 (Claude). Wird pro Arbeitsblock überschrieben.
 
 - Öffentliche Baseline v5.0.0 (DOI 10.5281/zenodo.24152615, Tag v5.0.0 auf 539b75b). PR #100, #101, #102 gemergt; main 1eed465; Läufe 43265308165 (Zwei-PDF) und 43265308144 (Wiki-Sync) erfolgreich. Keine weitere Veröffentlichung nötig.
 - Lokaler Ordner des Autors (`Quantum Sphera`) stand noch auf dem 6.11. (93c3d21, r05) und wurde auf Autorenfreigabe per Fast-Forward auf 1eed465 gebracht. Der alte Stand ist als Tag `lokal-stand-2026-11-06` gesichert (dabei entfielen 58 verfolgte Dateien, u. a. `.claude/skills`, alte Zusammenfassungen; alle über den Tag erreichbar).
@@ -77,11 +77,17 @@
 - Mittel von K über Einheitsvektoren im R^n: (1 + 2/n)/3; farbfester Hopf-Torus: K in [1/2, 1], Mittel genau 2/3. Mittel über Konfigurationen, keine Herleitung; Numerologie-Vorbehalt.
 - Unterschied zum Ausschluss vom 12.11.: der galt für das H18-Gesetz (Diagonal-Labels), nicht für die Eigenwerte.
 
+## Zusätzliche Bedingung „Überlappung 1/2 für Leptonen und Neutrinos“ (13.11., Autorwahl)
+
+- Keine H99 vergeben, kein Test gerechnet: Die Frage ist durch H2 (v4.8.0-r12, Vorab 434c5a8, k15) beantwortet. K = 2/3 für Neutrinos geht nur mit negativer Wurzel (NO, Summe 0,0592 eV, verträglich, schwach trennend); mit positiven Wurzeln höchstens K = 0,585.
+- In der Gram-Lesart (Eigenwerte nie negativ) ist die Bedingung für Neutrinos mit bekannten Daten nicht erfüllbar. Nachtrag in `op3_gram_eigen_readout_2026_11_13.md`.
+- Zuletzt vergebene Hypothese bleibt H98.
+
 ## Nächster Schritt (Autorentscheidung)
 
-- Entscheiden, ob die Eigenwert-Auslesung als Kandidat weiterverfolgt wird. Wenn ja, braucht sie vorab: (1) einen Grund, warum Massenwurzeln Eigenwerte sind; (2) eine Regel, die die Konfiguration festlegt oder über welche Menge gemittelt wird; (3) eine dritte farbneutrale Richtung für die Elektronmasse. Ein Test dazu bekäme H99 und eine Vorab-Notiz.
+- Andere zusätzliche Bedingung wählen (hermitesche Platzmatrix; zweite Dublett-Komponente; koplanare Plätze mit Korrektur) oder prüfen, ob der Companion ein indefinites Skalarprodukt auf den Plätzen hat (negative Wurzel von H2).
 - Statusvermerke in einer neuen Runde: r33-Labels (Ladung), ältere Koide-Stellen (v470/17, „2/3 factor“, rem:koide-mass-discrepancy), thm:three-generations.
-- Oder die OP3-Linie ablegen: offene Vorhersagen H15, H42, H46, H96; Stringfrage W-a, W-c.
+- Oder die OP3-Linie ablegen: offene Vorhersagen H2, H15, H42, H46, H96; Stringfrage W-a, W-c.
 - PR #103 wartet auf „PR 103 mergen“.
 
 ## Pflichten in jeder Sitzung

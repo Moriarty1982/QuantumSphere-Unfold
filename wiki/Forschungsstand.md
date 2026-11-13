@@ -1509,6 +1509,22 @@ $\det S=0{,}0557$. OP3/OP4 bleiben offen, Guards unverändert.
 > Vorwissen: r10.1, r12.1, r53.1(b), r33/H18, `sec:v4110-koide-overlap`.
 > Keine H-/k-Nummer, kein MMA-Beleg.
 
+**Nachtrag: dieselbe Bedingung für Neutrinos (13.11.2026).** Der Autor
+wählte als zusätzliche Bedingung $\rho^2=\tfrac12$ für beide farbneutralen
+Sektoren. Die Vorwissen-Suche zeigte, dass die Frage beantwortet ist; es
+wurde kein neuer Test gerechnet und keine H-Nummer vergeben.
+
+- H2 (v4.8.0-r12) hat $K=2/3$ für Neutrinos schon geprüft: Mit positiven
+  Wurzeln erreichen sie bei den gemessenen Massendifferenzen höchstens
+  $K=0{,}585$ (normale Ordnung) bzw. $0{,}500$ (invertiert). $K=2/3$
+  verlangt eine negative Wurzel; dann normale Ordnung und
+  $\sum m_\nu=0{,}0592\pm0{,}0002$ eV, verträglich und schwach trennend.
+- Eigenwerte einer Gram-Matrix sind nie negativ. In der Gram-Lesart ist
+  die Bedingung für Neutrinos deshalb mit bekannten Daten nicht erfüllbar
+  (höchstens $\rho^2=0{,}378$). Die negative Wurzel von H2 entspräche
+  einem indefiniten Skalarprodukt; ob der Companion dafür eine native
+  Form hat, ist nicht geprüft.
+
 
 ### Version 5: Veröffentlichungsvorbereitung wieder aufgenommen (12.11.2026)
 

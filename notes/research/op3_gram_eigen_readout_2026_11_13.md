@@ -104,3 +104,36 @@ Randwerte; hermitesche Gram-Eigenwerte unter fünf Erzeugern (invariant
 bis 1e-15, Boost ändert sie); Hopf-Träger allgemein und farbfest an je
 200000 Punkten. Die Bereichsgrenzen des allgemeinen Trägers sind
 Stichprobenwerte, kein Beweis.
+
+## Nachtrag (13.11., ca. 04:30): Bedingung „Überlappung 1/2 auch für Neutrinos“
+
+Autorenentscheidung: als zusätzliche Bedingung die mittlere quadratische
+Überlappung 1/2 für beide farbneutralen Sektoren ansetzen. Vor dem
+Schreiben einer Vorab-Notiz verlangt die Anleitung die Vorwissen-Suche;
+sie hat die Frage als bereits beantwortet gezeigt. **Es wurde keine
+H-Nummer vergeben und kein neuer Test gerechnet.**
+
+- **H2 (v4.8.0-r12, Vorab 434c5a8 vom 20.10.2026, Skript k15):** „Jeder
+  Kern lichtartig, r = 1“ für alle Leptonen, also K = 2/3 auch für
+  Neutrinos. Vorbefund dort: Mit ausschließlich positiven Wurzeln
+  erreichen die Neutrinos bei den gemessenen Massendifferenzen höchstens
+  K = 0,585 (normale Ordnung, m_1 = 0) bzw. 0,500 (invertiert). K = 2/3
+  geht nur mit einer negativen Wurzel; dann normale Ordnung,
+  Summe 0,0592 ± 0,0002 eV, verträglich, aber schwach trennend und in der
+  Literatur bekannt (Brannen 2006). Status dort: verträglich, als
+  Vorhersage festgeschrieben.
+- **Folge für die Gram-Lesart (ohne neue Rechnung):** Eigenwerte einer
+  Gram-Matrix sind nie negativ. Mit sqrt(m_k) proportional s_k sind alle
+  Wurzeln positiv, und die Bedingung rho² = 1/2 ist für die Neutrinos mit
+  den bekannten Massendifferenzen nicht erfüllbar: höchstens
+  rho² = 0,378 (normale Ordnung) bzw. 0,25 (invertiert). Die Bedingung in
+  dieser Lesart scheitert also an bereits bekannten Daten. Das ist kein
+  blinder Befund, sondern eine Folge aus H2 (Zahlen dort; die
+  Grenzwerte hier mit den H2-Eingaben nachgerechnet).
+- **Was bliebe:** Die negative Wurzel von H2 entspräche einem negativen
+  Eigenwert, also einer „Gram-Matrix“ zu einem indefiniten Skalarprodukt
+  (det S < 0, Phase außerhalb des Bogens). Ob der Companion dafür eine
+  native Form hat, ist nicht geprüft; die Zahlen wären dieselben wie in
+  H2 und brächten keine neue Vorhersage.
+
+Zuletzt vergebene Hypothese bleibt H98.
