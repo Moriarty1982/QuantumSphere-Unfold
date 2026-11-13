@@ -297,3 +297,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 13.11.2026, spät: Nachtrag Neutrino-Block L-L (Ω₁, c = 1, negative Wurzel bei Signatur (2,1); Seesaw und Tensorprodukt ausgeschlossen; offene Bedingung an η) in Forschungsstand; kein Test, kein OP-Abschluss.
 
 13.11.2026, abends: H100 vorab in Vorhersagen-und-Tests und Forschungsstand eingetragen; Erkundung Form η (Brannen-Phase = Bargmann-Phase/3, H99 als Drehung um π/4, Ausschlüsse) in Forschungsstand; kein OP-Abschluss.
+
+13.11.2026, abends: Nachtrag Paar-Phase (Fluss π/4 durch das Platzdreieck; native Phasen geben nur Vielfache von π/6; π/4 als Bargmann-Phase eines koplanaren Koide-Tripels) in Forschungsstand; Formulierung zur bilinearen Phase berichtigt; kein OP-Abschluss.

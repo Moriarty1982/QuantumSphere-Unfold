@@ -1740,9 +1740,18 @@ Erkundung $\eta$, ohne Datenvergleich:
   Vorzeichenwechsel in der Eigenbasis (gleiche Massenverhältnisse), der
   bloße Wechsel hermitesch → bilinear (keine feste Verschiebung, 0 von
   4000 Tripeln).
-- Verlangt ist eine gleichmäßige Phase $\pi/12$ auf jeder Überlappung.
-  Das geht nur bei symmetrischen (bilinearen) Überlappungen, also gerade
-  im Majorana-Block. Eine native Quelle dafür ist nicht gefunden.
+- Verlangt ist ein Fluss $\pi/4$ durch das Dreieck der drei Plätze:
+  gerichtete Kantenphasen $\pi/12$, in Gegenrichtung konjugiert. Das
+  ist hermitesch möglich und eichinvariant.
+- Die nativen Phasen ($\omega$ aus Triole und $\tau$, $i$ aus $L_{e_7}$,
+  $-1$ aus Spiegelungen) erzeugen nur Vielfache von $\pi/6$; $\pi/4$ ist
+  nicht darunter (Paritätsargument). Gebraucht würde eine achte
+  Einheitswurzel.
+- $\pi/4$ ist die Bargmann-Phase eines koplanaren Koide-Tripels
+  ($\cos\pi/4=1/\sqrt2=\rho$). H99 heißt: Neutrino-Phase = geladene
+  Phase plus die eines koplanaren Koide-Tripels. Eine native Quelle ist
+  nicht gefunden; der Majorana-Verbinder für $\nu^c$ ist ein möglicher,
+  ungeprüfter Ort.
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),

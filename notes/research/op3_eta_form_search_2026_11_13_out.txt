@@ -13,3 +13,10 @@
 (3) Lesart B: geladen hermitesch, neutral bilinear auf denselben Plaetzen
     4000 Plaetze-Tripel mit rho_e^2 = 0.50 +- 0.02: Delta Phi Mittel -0.006, Streuung 1.356; Delta rho^2 Mittel +0.698, Streuung 3.877
     Anteil mit |Delta rho^2| < 0.02 und |Delta Phi - pi/4| < 0.05: 0.000
+
+(4) Nachtrag Paar-Phase: Fluss durch das Platzdreieck
+    gerichtete Kantenphase theta_b: hermitesch True, rho^2 0.5000 -> 0.5000, theta 0.2222 -> 0.4840 (Differenz 0.2618 = pi/12)
+    Fluss nach Umphasen: -1.4520 (vorher -1.4520)
+    erzeugte Fluesse in Einheiten pi/12: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22]
+    pi/4 = 3 * pi/12 enthalten: False; naechste: pi/6 und pi/3 (Abstand pi/12)
+    koplanares Koide-Tripel (theta = pi/12): det S = -1.4e-16, Fluss = -0.78540 (pi/4 = 0.78540)

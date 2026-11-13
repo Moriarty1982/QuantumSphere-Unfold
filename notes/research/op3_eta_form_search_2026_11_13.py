@@ -94,3 +94,29 @@ if __name__ == "__main__":
           f"Delta rho^2 Mittel {dr2.mean():+.3f}, Streuung {dr2.std():.3f}")
     print(f"    Anteil mit |Delta rho^2| < 0.02 und |Delta Phi - pi/4| < 0.05: "
           f"{np.mean((np.abs(dr2) < 0.02) & (np.abs(dphi - np.pi / 4) < 0.05)):.3f}")
+
+
+if __name__ == "__main__":
+    print("\n(4) Nachtrag Paar-Phase: Fluss durch das Platzdreieck")
+    # gerichtete Phase auf jeder Kante a -> a+1 (Gegenrichtung konjugiert): hermitesch bleibt hermitesch
+    z = np.sqrt(0.5) * np.exp(1j * 0.2222)
+    Se = np.eye(3) + z * P + np.conj(z) * P.T
+    tb = np.pi / 12
+    Sn = np.eye(3) + z * np.exp(1j * tb) * P + np.conj(z * np.exp(1j * tb)) * P.T
+    r2e, the = brannen(Se); r2n, thn = brannen(Sn)
+    print(f"    gerichtete Kantenphase theta_b: hermitesch {np.allclose(Sn, Sn.conj().T)}, rho^2 {r2e:.4f} -> {r2n:.4f}, "
+          f"theta {the:.4f} -> {thn:.4f} (Differenz {thn - the:.4f} = pi/12)")
+    # Eichinvarianz: Umphasen verteilt die Kantenphasen um, der Fluss (Summe) bleibt
+    ph = np.exp(1j * np.array([0.3, -1.1, 2.0]))
+    Sg = np.diag(ph.conj()) @ Sn @ np.diag(ph)
+    print(f"    Fluss nach Umphasen: {np.angle(Sg[0, 1] * Sg[1, 2] * Sg[2, 0]):.4f} (vorher {np.angle(Sn[0, 1] * Sn[1, 2] * Sn[2, 0]):.4f})")
+    # native Phasen: omega (Triole, tau, Sedenion psi), i (L_e7, Q_J, z -> iz), -1 (Spiegelungen, eta)
+    fluxes = sorted({round(((a * 2 * np.pi / 3 + b * np.pi / 2 + c * np.pi) % (2 * np.pi)) / (np.pi / 12)) % 24
+                     for a in range(3) for b in range(4) for c in range(2)})
+    print(f"    erzeugte Fluesse in Einheiten pi/12: {fluxes}")
+    print(f"    pi/4 = 3 * pi/12 enthalten: {3 in fluxes}; naechste: pi/6 und pi/3 (Abstand pi/12)")
+    # Rand des Bogens: der Fluss pi/4 ist die Bargmann-Phase eines koplanaren Koide-Tripels
+    zb = np.sqrt(0.5) * np.exp(1j * tb)
+    Sb = np.eye(3) + zb * P + np.conj(zb) * P.T
+    print(f"    koplanares Koide-Tripel (theta = pi/12): det S = {np.real(np.linalg.det(Sb)):.1e}, Fluss = "
+          f"{np.angle(Sb[0, 1] * Sb[1, 2] * Sb[2, 0]):.5f} (pi/4 = {np.pi / 4:.5f})")

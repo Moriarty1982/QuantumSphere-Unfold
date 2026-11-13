@@ -11,8 +11,9 @@
   nächste frei H101; letztes Skript k222. Auswertung: `python k222_test_h100.py dm21 sig21 dm31 sig31`.
 - **Offene Autorentscheidungen:** PR #105 mergen („PR 105 mergen“).
 - **Ausgelöste Zurückgestellte Ideen:** keine.
-- **Nächster Schritt:** native Paar-Phase π/12 im neutralen Sektor suchen (gleichwertig: Bargmann-Phase π/4 je
-  Umlauf über die drei Plätze bei erhaltenen Beträgen). Kandidaten: Assoziator, Q_J = iL_e7, Lesart B auf dem Kern.
+- **Nächster Schritt:** prüfen, ob der Majorana-Verbinder für ν^c (r44.1(d)) einen koplanaren Rang-2-Block
+  bildet, dessen Fluss π/4 sich zum geladenen addiert; sonst native achte Einheitswurzel suchen (Spin(8)/Trialität).
+  Native Phasen ω, i, −1 sind ausgeschlossen (nur Vielfache von π/6).
   Werkzeuge: `notes/research/op3_eta_form_search_2026_11_13.*`, `op3_slot_u3_gauging_2026_11_13.*`.
   · zur Wahl: H100 vorab festschreiben (Kandidaten unten) · T₁₂ als dynamisches Feld · Potential für ρ² = 1/2 ·
   Vereinigung Platzindex-U(3) mit SU(2)_L.
@@ -23,7 +24,8 @@
 - **H100** vorab (siehe oben); Erwartung bei gleichem Mittelwert: A ≈ +2,7σ, B ≈ +0,2σ, C ≈ +1,2σ.
 - **Form η** (`op3_eta_form_search_2026_11_13.*`): Brannen-Phase = Bargmann-Phase/3; H99 ⇔ ΔΦ = π/4 bei gleichen
   Beträgen. Ausgeschlossen: Umphasen, Vorzeichen in der Eigenbasis, hermitesch → bilinear allein (0/4000).
-  Verlangt: gleichmäßige Phase π/12 je Überlappung, nur bei bilinearen (Majorana-)Überlappungen möglich.
+  Verlangt: Fluss π/4 durch das Platzdreieck (hermitesch möglich). Native Phasen ω, i, −1 geben nur Vielfache
+  von π/6 (Paritätsargument). π/4 = Bargmann-Phase eines koplanaren Koide-Tripels.
 
 ## Block 15–19 Uhr, alles in PR #104 (gemergt)
 - **H99b** mit NuFIT-6.1-Primärtabelle (IC24 mit SK): verträglich, +1,80σ (nicht blind). Sekundärwerte überholt.
