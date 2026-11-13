@@ -113,7 +113,7 @@ Gesammelt und geprüft, ob sie einen Mechanismus liefern oder nur die Zahl:
 als Doppelüberlagerung). Ist der Transport von Platz zu Platz eine solche Drehung und sind die Plätze Spinoren, trägt
 jede Kante π/12, und die drei Kanten des Dreiecks geben den Fluss 3 · π/12 = π/4. Das passt zum Zwei-Sonden-System:
 Die Sonden Ψ_1, Ψ_2 sind Dirac-Spinoren. Ein nativer Winkel π/6 kommt außer aus ω · i⁻¹ auch als Winkel zwischen
-Wurzel und Gewicht im Wurzelsystem A_2 vor (die Bemerkung zum Ausleseschestern in v490 nennt A_2 für die sechs
+Wurzel und Gewicht im Wurzelsystem A_2 vor (die Bemerkung zum Auslese-Sechseck in v490 nennt A_2 für die sechs
 Richtungen im Abstand von 60°).
 
 **Was dafür fehlt.**

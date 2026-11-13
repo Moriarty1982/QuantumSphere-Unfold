@@ -1752,6 +1752,12 @@ Erkundung $\eta$, ohne Datenvergleich:
   Phase plus die eines koplanaren Koide-Tripels. Eine native Quelle ist
   nicht gefunden; der Majorana-Verbinder für $\nu^c$ ist ein möglicher,
   ungeprüfter Ort.
+- Nachtrag $\pi/4=\tfrac32\cdot\pi/6$: $\pi/6$ ist nativ
+  ($\omega\,i^{-1}$). Die Faktoren $3\rho^2$ und $1/K$ treffen $3/2$ nur
+  bei $\rho^2=1/2$ (Numerologie). Strukturell trägt die Lesart
+  $3/2=3\cdot\tfrac12$: drei Kanten des Platzdreiecks, je eine Drehung um
+  $\pi/6$, die auf Spinoren mit $\pi/12$ wirkt. Offen: warum $\pi/6$ je
+  Kante und warum nur im Majorana-Block.
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),
