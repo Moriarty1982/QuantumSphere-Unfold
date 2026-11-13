@@ -1,0 +1,8 @@
+theta_e = 0.222225; Abstand vom Rand pi/12 - theta_e = 0.039575
+s_min = sqrt(m_e)/<sqrt m> = 0.040347; Verhaeltnis s_min/Abstand = 1.0195 (erste Ordnung: sqrt2 sin(3pi/4) = 1, zweite Ordnung korrigiert)
+   theta = 0.2618: s_min = 0.00000, Abstand +0.00000, m_min/m_max = 0.000e+00
+   theta = 0.2500: s_min = 0.01187, Abstand +0.01180, m_min/m_max = 2.507e-05
+   theta = 0.2222: s_min = 0.04035, Abstand +0.03957, m_min/m_max = 2.875e-04
+   theta = 0.1800: s_min = 0.08505, Abstand +0.08180, m_min/m_max = 1.265e-03
+   theta = 0.1000: s_min = 0.17416, Abstand +0.16180, m_min/m_max = 5.234e-03
+Massenverhaeltnis m_e/m_tau = 2.876e-04; Bargmann-Abstand pi/4 - 3 theta_e = 0.11872

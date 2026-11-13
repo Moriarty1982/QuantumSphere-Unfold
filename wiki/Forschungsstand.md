@@ -1893,11 +1893,17 @@ Koide-Bogens ist exakt das Oktanten-Tripel. Zu den Fäden:
   aber nicht (Streuung 0,11), und die geladenen Leptonen liegen mit Rang 3
   außerhalb der Qubit-Ebene. Ein Prinzip, das die Treue genau auf $1/2$
   legt, fehlt.
+- Rückwärtssuche Auswahlprinzip: Bei $\rho^2=1/2$ ist der kleinste
+  Eigenwert in erster Ordnung der Abstand vom Rand, $s_{\min}\approx\pi/12-\theta$.
+  Für die geladenen Leptonen ist $\pi/12-\theta_e=0{,}0396$ und
+  $\sqrt{m_e}/\langle\sqrt m\rangle=0{,}0403$: Die Elektronmasse misst den
+  Abstand vom Qubit-Oktanten. Ein Prinzip muss also zwei Zahlen liefern,
+  die Treue $1/2$ und diesen Abstand; keine ist hergeleitet.
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),
 > `notes/research/op3_slot_u3_gauging_2026_11_13.md` (Eichung Platzindex-U(3)),
-> `notes/research/op3_eta_form_search_2026_11_13.md` (Form η, Bargmann-Phase), `notes/research/op3_hopf_octant_2026_11_13.md` (Oktanten-Tripel im Hopf-Träger), `op3_lorentz_octant_2026_11_13.py` (Lorentz-Fassung), `op3_neutral_su2_octant_2026_11_13.md` (neutrale SU(2), Spin 1/2), `op3_sedenion_reference_2026_11_13.md` (Bezugszustand), `op3_koide_potential_2026_11_13.md` (Potential, T₁₂), `v4_10_0_r12/` (Runde r12), `predictions/Vorab_Notiz_H100_Neutrino_Verhaeltnis_naechster_Fit.md`,
+> `notes/research/op3_eta_form_search_2026_11_13.md` (Form η, Bargmann-Phase), `notes/research/op3_hopf_octant_2026_11_13.md` (Oktanten-Tripel im Hopf-Träger), `op3_lorentz_octant_2026_11_13.py` (Lorentz-Fassung), `op3_neutral_su2_octant_2026_11_13.md` (neutrale SU(2), Spin 1/2), `op3_sedenion_reference_2026_11_13.md` (Bezugszustand), `op3_koide_potential_2026_11_13.md` (Potential, T₁₂), `op3_selection_principle_2026_11_13.md` (Auswahlprinzip), `v4_10_0_r12/` (Runde r12), `predictions/Vorab_Notiz_H100_Neutrino_Verhaeltnis_naechster_Fit.md`,
 > `notes/research/nufit_verlauf_2026_11_13.py` (mit Grafik und Ausgabe),
 > `notes/research/op3_indefinite_form_2026_11_13.md`,
 > `notes/research/predictions/Vorab_Notiz_H99_Neutrino_Phase_Bogenrand.md`,

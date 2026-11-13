@@ -331,3 +331,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 13.11.2026, spät: Runde v4.10.0-r12 (Statusvermerke) in Forschungslinie, Inhalt, Content-overview, Offene-Probleme und Forschungsstand; Fäden Potential und T₁₂ in Forschungsstand.
 
 13.11.2026, spät: Nachtrag Auswahlprinzip (Koide als qubitartige Treue; Mittelwert erklärt die Genauigkeit nicht) in Forschungsstand; kein OP-Abschluss.
+
+13.11.2026, spät: Rückwärtssuche Auswahlprinzip (Elektronmasse = Abstand vom Qubit-Oktanten; zwei Zahlen festzulegen) in Forschungsstand; kein OP-Abschluss.
