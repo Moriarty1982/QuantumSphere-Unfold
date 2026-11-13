@@ -1,15 +1,14 @@
 # Übergabe: Stand der letzten Sitzung
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.**
 
-## Stand vom 13.11.2026, ca. 20:30 (Claude Opus)
-- **GitHub:** **PR #104 gemergt als 32fa42c** (13.11., auf „pr 104 mergen“; Merge-Commit, Kopf bf51772).
-  Läufe 43481979108 (Zwei-PDF) und 43481979426 (Wiki-Sync) erfolgreich. **Offen: PR #105** vom Zweig
-  `research/v5-h100-eta` (H100-Vorab 9c77ddd, η-Suche, Wiki); nicht gemergt.
-- **Lokal:** Hauptordner auf `main` f405c05 (Übergabe-Commit nach dem Merge, liegt in PR #105).
+## Stand vom 13.11.2026, ca. 23:00 (Claude Opus)
+- **GitHub:** **PR #105 gemergt als fcc87c6** (13.11., auf „PR 105 mergen“; Merge-Commit, Kopf 747849b). Läufe
+  43489278392 (Zwei-PDF) und 43489278498 (Wiki-Sync) erfolgreich. Keine offenen PRs.
+- **Lokal:** Hauptordner per Fast-Forward auf fcc87c6; dieser Übergabe-Commit liegt nur lokal auf `main`.
   Unversioniert: `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf`.
 - **Zuletzt vergebene Hypothese:** **H100** (Vorab 9c77ddd, offen bis zur nächsten NuFIT-Version, längstens 31.12.2027);
   nächste frei H101; letztes Skript k222. Auswertung: `python k222_test_h100.py dm21 sig21 dm31 sig31`.
-- **Offene Autorentscheidungen:** PR #105 mergen („PR 105 mergen“).
+- **Offene Autorentscheidungen:** keine.
 - **Ausgelöste Zurückgestellte Ideen:** keine.
 - **Nächster Schritt:** Spinor-Transport geprüft: raumzeitlich ausgeschlossen; innerer Transport π/6 je Kante gibt
   Φ_ν − Φ_e = (q_L − q_R)·π/2, H99 verlangt q_L − q_R = 1/2 = Hyperladung des Higgs (nachträglich, schwach).
@@ -29,10 +28,10 @@
   Werkzeuge: `notes/research/op3_eta_form_search_2026_11_13.*`, `op3_slot_u3_gauging_2026_11_13.*`.
   · zur Wahl: H100 vorab festschreiben (Kandidaten unten) · T₁₂ als dynamisches Feld · Potential für ρ² = 1/2 ·
   Vereinigung Platzindex-U(3) mit SU(2)_L.
-- **Aufräumen:** Zweige `research/v5-string-relaxation-rueckwaertssuche` (PR #103) und `research/v5-h99b-nufit61`
-  (PR #104) können weg; Worktree `qam-mml-mma-math-473bc4` ebenso.
+- **Aufräumen:** Zweige `research/v5-string-relaxation-rueckwaertssuche` (PR #103), `research/v5-h99b-nufit61` (PR #104)
+  und `research/v5-h100-eta` (PR #105) können weg; Worktree `qam-mml-mma-math-473bc4` ebenso.
 
-## Block 19:40–20:30 (PR #105)
+## Block 19:40–23:00 (PR #105, gemergt)
 - **H100** vorab (siehe oben); Erwartung bei gleichem Mittelwert: A ≈ +2,7σ, B ≈ +0,2σ, C ≈ +1,2σ.
 - **Form η** (`op3_eta_form_search_2026_11_13.*`): Brannen-Phase = Bargmann-Phase/3; H99 ⇔ ΔΦ = π/4 bei gleichen
   Beträgen. Ausgeschlossen: Umphasen, Vorzeichen in der Eigenbasis, hermitesch → bilinear allein (0/4000).
