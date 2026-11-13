@@ -3,7 +3,7 @@
 
 ## Stand vom 13.11.2026, ca. 22:00 (Claude Opus)
 - **GitHub:** Gemergt am 13.11.: #104 (32fa42c), #105 (fcc87c6), #106 (ca29c5b) und #107 (a08d918).
-  **Offen: PR #108** (Branch `claude/anthropic-skills-weitermachen-08cc3e`) mit der Erkundung „Ladung über e8“, dem Wiki
+  **Offen: PR #108** (Branch `research/v5-sedenion-ladung-e8`, lokal im Worktree `claude/anthropic-skills-weitermachen-08cc3e`) mit der Erkundung „Ladung über e8“, dem Wiki
   und dieser Übergabe. Er wartet auf „PR 108 mergen“.
 - **Lokal:** Der Hauptordner steht auf `main` mit zwei nur lokalen Commits: 3b8c1cc (Merge) und b388da9 (Übergabe).
   Die Arbeit liegt im Worktree `.claude/worktrees/anthropic-skills-weitermachen-08cc3e`. Unversioniert:
