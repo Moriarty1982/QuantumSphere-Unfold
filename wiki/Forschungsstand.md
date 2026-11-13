@@ -1704,6 +1704,16 @@ mit einem $u(3)$-Zusammenhang geeicht. Das ist ein neues Strukturelement.
   $M\to UMU^T$ mit Suminos Ladungen); mit $X$ als Feld wäre
   $\alpha_F=8\alpha$. Dafür braucht es Überlappungen zwischen zwei
   verschieden geladenen Tripeln (links und rechts); das ist nicht nativ.
+- Nachtrag zwei Tripel und Sonden: Die beiden Tripel liefert das
+  Zwei-Sonden-System (prop:triadic-two-probe). $\Psi_1$ und $\Psi_2$ sind
+  L- und R-Tripel, $g_Y\mathcal T_{12}$ ist ihre Überlappung als
+  Massenblock, $\Psi_\perp$ der dritte Platz. Der Block
+  $\begin{pmatrix}0&C\C^\dagger&0\end{pmatrix}$ hat die Eigenwerte
+  $\pm s_k$ der Gram-Matrix (Auslesung A als Dirac-Paar). Transformiert
+  $\mathcal T_{12}$ als Feld wie bei Sumino ($C\to U^\dagger CU^*$), sind
+  alle Familienbosonen massiv und $\alpha_F=4\alpha$. Offen: $\mathcal T_{12}$
+  ist im Text ein fester Operator, die Eichung ist nicht angelegt, der
+  Neutrino-Block (L mit L) fehlt.
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),

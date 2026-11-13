@@ -108,3 +108,66 @@ if __name__ == "__main__":
     th = np.linspace(-np.pi / 3, np.pi / 3, 200001)
     ok = np.all((1 + np.sqrt(2) * np.cos(th[:, None] + 2 * np.pi * np.arange(3) / 3)) >= -1e-12, axis=1)
     print(f"  numerisch: groesstes |theta| mit allen Wurzeln >= 0: {np.abs(th[ok]).max():.6f}, pi/12 = {np.pi / 12:.6f}")
+
+
+if __name__ == "__main__":
+    print("\n== Zwei Tripel L/R: X -> X U (3, wie l_L), Y -> Y U* (3bar, wie e_R) ==")
+    n = 8
+    X = rng.normal(size=(n, 3)) + 1j * rng.normal(size=(n, 3))
+    Y = rng.normal(size=(n, 3)) + 1j * rng.normal(size=(n, 3))
+    T = u3_generators()
+    objs = {
+        "X^dag X (L mit L, hermitesch)": (lambda X, Y: X.conj().T @ X),
+        "Y^dag Y (R mit R, hermitesch)": (lambda X, Y: Y.conj().T @ Y),
+        "X^T X (L mit L, bilinear)": (lambda X, Y: X.T @ X),
+        "X^dag Y (L mit R, hermitesch)": (lambda X, Y: X.conj().T @ Y),
+        "X^T Y (L mit R, bilinear)": (lambda X, Y: X.T @ Y),
+        "X^dag X* (R = konjugiertes L, hermitesch)": (lambda X, Y: X.conj().T @ X.conj()),
+    }
+    eps = 1e-6
+    for lab, f in objs.items():
+        C0 = f(X, Y)
+        # Darstellungstyp: Variation unter allen Generatoren -> Massenmatrix, als elementares Feld gelesen
+        dC = []
+        for a in T:
+            Ua = np.eye(3) + 1j * eps * a
+            dC.append((f(X @ Ua, Y @ Ua.conj()) - C0) / eps)
+        # Vakuumwert in Normalform: Singulaerwertzerlegung, damit Diagonal-Bosonen ablesbar
+        M = np.array([[np.real(np.vdot(p, q)) for q in dC] for p in dC])
+        nz = int(np.sum(np.linalg.eigvalsh((M + M.T) / 2) < 1e-6 * np.abs(M).max()))
+        inv = np.abs(np.linalg.svd(f(X @ rand_unitary(3), Y @ rand_unitary(3).conj()), compute_uv=False)
+                     - np.linalg.svd(C0, compute_uv=False)).max()
+        print(f"  {lab:45s} masselose Bosonen (als Feld): {nz};  Singulaerwerte invariant (bei verschiedenen U fuer X,Y): {inv < 1e-9}")
+    U = rand_unitary(3)
+    C = X.conj().T @ X.conj()
+    print("  Pruefung: X^dag X* = (X^T X)*:", np.allclose(C, (X.T @ X).conj()),
+          "; transformiert als U^dag C U*:", np.allclose((X @ U).conj().T @ (X @ U).conj(), U.conj().T @ C @ U.conj()))
+
+
+if __name__ == "__main__":
+    print("\n== Zwei-Sonden-System (prop:triadic-two-probe): Psi_1 = L-Tripel, Psi_2 = R-Tripel, g_Y T_12 = Ueberlappung ==")
+    # reelle Einheitsvektoren mit Koide-Ueberlappung: Gram S mit Eigenwerten ~ sqrt(m) (Auslesung A)
+    s = np.sqrt(POL); s = 3 * s / s.sum()
+    Q = np.linalg.qr(rng.normal(size=(3, 3)))[0]
+    S = Q @ np.diag(s) @ Q.T
+    d = np.sqrt(np.diag(S)); S = S / np.outer(d, d)          # Einheitsdiagonale, Eigenwerte danach neu
+    w, V = np.linalg.eigh(S)
+    X = np.diag(np.sqrt(w)) @ V.T                            # reelle Plaetze mit X^T X = S
+    print(f"  Plaetze Einheitsvektoren: {np.allclose(np.diag(X.T @ X), 1)}; rho^2 = {((S ** 2).sum() - 3) / 6:.4f}")
+    C = X.conj().T @ X.conj()                                # Y = konj(X): R-Tripel aus demselben Koerper
+    Om = np.block([[np.zeros((3, 3)), C], [C.conj().T, np.zeros((3, 3))]])
+    ev = np.sort(np.linalg.eigvalsh(Om))
+    print(f"  Block [[0, C], [C^dag, 0]]: Eigenwerte {np.round(ev, 4)}")
+    print(f"  = +- Eigenwerte von S: {np.allclose(np.sort(np.abs(ev))[::2], np.sort(np.linalg.eigvalsh(S)))}")
+    # T_12 als eigenes Feld: C -> U^dag C U*  (Psi_1 in 3, Psi_2 in 3bar); diagonale Bosonenschwellen
+    Cd = np.diag(np.sort(s))                                  # Vakuumwert mit Singulaerwerten ~ sqrt(m)
+    act = lambda a: -(a.conj().T @ Cd + Cd @ a.conj())       # Variation von U^dag C U* fuer U = 1 + i eps a
+    T = u3_generators()
+    Mb = np.array([[np.real(np.trace(act(a).conj().T @ act(b))) for b in T] for a in T])
+    thr = []
+    for i in range(3):
+        E = np.zeros((3, 3), complex); E[i, i] = 1
+        thr.append(np.real(np.trace(act(E).conj().T @ act(E))))
+    slope = np.polyfit(np.log(POL), np.log(thr), 1)[0]
+    print(f"  T_12 als Feld: masselose Bosonen {int(np.sum(np.linalg.eigvalsh((Mb + Mb.T) / 2) < 1e-12))}, "
+          f"ln M_ii^2 = {slope:.2f} ln m -> alpha_F = {4 / slope:.1f} alpha (Auslesung A)")

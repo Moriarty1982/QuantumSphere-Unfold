@@ -16,3 +16,18 @@
 
   Bogen unabhaengig von der Auslesung: K = 2/3 und alle Brannen-Wurzeln >= 0  <=>  |theta| <= pi/12
   numerisch: groesstes |theta| mit allen Wurzeln >= 0: 0.261799, pi/12 = 0.261799
+
+== Zwei Tripel L/R: X -> X U (3, wie l_L), Y -> Y U* (3bar, wie e_R) ==
+  X^dag X (L mit L, hermitesch)                 masselose Bosonen (als Feld): 3;  Singulaerwerte invariant (bei verschiedenen U fuer X,Y): True
+  Y^dag Y (R mit R, hermitesch)                 masselose Bosonen (als Feld): 3;  Singulaerwerte invariant (bei verschiedenen U fuer X,Y): True
+  X^T X (L mit L, bilinear)                     masselose Bosonen (als Feld): 0;  Singulaerwerte invariant (bei verschiedenen U fuer X,Y): True
+  X^dag Y (L mit R, hermitesch)                 masselose Bosonen (als Feld): 0;  Singulaerwerte invariant (bei verschiedenen U fuer X,Y): True
+  X^T Y (L mit R, bilinear)                     masselose Bosonen (als Feld): 1;  Singulaerwerte invariant (bei verschiedenen U fuer X,Y): True
+  X^dag X* (R = konjugiertes L, hermitesch)     masselose Bosonen (als Feld): 0;  Singulaerwerte invariant (bei verschiedenen U fuer X,Y): True
+  Pruefung: X^dag X* = (X^T X)*: True ; transformiert als U^dag C U*: True
+
+== Zwei-Sonden-System (prop:triadic-two-probe): Psi_1 = L-Tripel, Psi_2 = R-Tripel, g_Y T_12 = Ueberlappung ==
+  Plaetze Einheitsvektoren: True; rho^2 = 0.5174
+  Block [[0, C], [C^dag, 0]]: Eigenwerte [-2.4087 -0.5484 -0.0429  0.0429  0.5484  2.4087]
+  = +- Eigenwerte von S: True
+  T_12 als Feld: masselose Bosonen 0, ln M_ii^2 = 1.00 ln m -> alpha_F = 4.0 alpha (Auslesung A)

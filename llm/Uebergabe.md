@@ -124,7 +124,8 @@ Die Daten verlangen eine Verschiebung von 0,2580 statt π/12 = 0,2618 (1,4 % kle
 - Auslesung A (√m ∝ s, Gram, H99): M_ii² ∝ √m_i ⇒ Aufhebung bei α_F = 8α. Auslesung B (m ∝ s): X = Suminos Φ, α_F = 4α, Überlappungs-Lesart von Koide verloren.
 - Sumino-Ladungen ⇒ Massenmatrix bilinear XᵀX; c für Neutrinos bleibt 1.
 - **Auslesung entschieden: A** (√m ∝ s). Nur A erlaubt negative Wurzeln (Neutrinos, H2); B gibt K_ν ≤ 0,585. Bogen gilt in beiden. Sumino-Bedingung hängt am Feld: X ⇒ α_F = 8α; Überlappungsmatrix als Feld (Φ → UΦ oder M → U M Uᵀ) ⇒ α_F = 4α. Letzteres braucht Überlappungen zwischen zwei verschieden geladenen Tripeln (links/rechts), nicht nativ.
-- Offen: Überlappungsmatrix als eigenes Feld begründen (zwei Tripel L/R); Potential (ρ² = 1/2); Vereinigung mit SU(2)_L.
+- **Zwei Tripel = Zwei-Sonden-System (Autor-Hinweis bestätigt):** prop:triadic-two-probe: Ψ₁ = L-Tripel (3), Ψ₂ = R-Tripel (3̄), g_Y T₁₂ = Überlappung als Massenblock, Ψ_⊥ = dritter Platz h. Block [[0,C],[C†,0]] hat Eigenwerte ±s (Auslesung A als Dirac-Paar). T₁₂ als Feld (C → U† C U*): alle Bosonen massiv, α_F = 4α. Überlappungstabelle: X†Y und X†X* massiv, X†X adjungiert.
+- Offen: T₁₂ ist im Text fester Operator (keine Dynamik, keine Eichung); Neutrino-Block L-L (Majorana, indefinite Form) fehlt im Zwei-Sonden-System; Potential (ρ² = 1/2); Vereinigung mit SU(2)_L.
 
 ## Nächster Schritt (Autorentscheidung)
 

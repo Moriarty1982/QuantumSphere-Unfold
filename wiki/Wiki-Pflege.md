@@ -291,3 +291,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 13.11.2026, spät: Erkundung Eichung der Platzindex-U(3) in Forschungsstand (Bosonenmassen s_i und (s_i+s_j)/2; Auslesung A verlangt α_F = 8α, Auslesung B ist Sumino mit 4α); kein Test, kein OP-Abschluss.
 
 13.11.2026, spät: Nachtrag Auslesung A oder B (Entscheidung A; Sumino-Bedingung hängt am Feldtyp) in Forschungsstand; kein Test, kein OP-Abschluss.
+
+13.11.2026, spät: Nachtrag zwei Tripel und Zwei-Sonden-System (Ψ₁/Ψ₂ als L/R-Tripel, T₁₂ als Massenblock, α_F = 4α) in Forschungsstand; kein Test, kein OP-Abschluss.

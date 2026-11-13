@@ -142,3 +142,66 @@ mit einer Wirkung von einer Seite oder als symmetrische Massenmatrix.
   passend zu ℓ_L in 3, e_R in 3̄). Das ist nicht nativ.
 - B bleibt als direkte Sumino-Übernahme widerspruchsfrei, aber nur für
   geladene Leptonen.
+
+## Nachtrag: zwei Tripel L/R und das Zwei-Sonden-System (13.11., Autor: „die zwei Tripel gibt es als Idee schon, die Sonden machen am Ende nichts anderes“)
+
+Vorwissen geprüft: prop:triadic-two-probe (v470/10, Abschnitt Sondensektor;
+Statusbemerkung: Feldarchitektur, keine Herleitung), lem:two-probe-compatibility
+(r20-Arbeitsquelle: zwei Sonden „aufeinander gerichtet“, aus demselben
+normierten Körper), generation-coupling.tex (Generationsplätze als
+Sondenplätze, geschlossene Seeds S = P T G^(−1/2), Gram-Matrix als
+Massenauslesung), op3_inner_operator_terms_2026_11_11.md.
+
+**1. Überlappungen zweier Tripel** (Skript, Abschnitt „Zwei Tripel“). L-Tripel
+X → XU (3, wie ℓ_L), R-Tripel Y → YU* (3̄, wie e_R). Als eigenes Feld gelesen:
+
+| Überlappung | masselose Familienbosonen |
+|---|---|
+| X†X, Y†Y (L mit L, R mit R, hermitesch) | 3 (adjungiert) |
+| Xᵀ X (L mit L, bilinear) | 0 |
+| X† Y (L mit R, hermitesch) | **0** |
+| Xᵀ Y (L mit R, bilinear) | 1 |
+| X† X* (R = konjugiertes L) = (Xᵀ X)* | **0** |
+
+Die gemischte hermitesche Überlappung von L und R hat genau Suminos
+Darstellung (C → U† C U*, Konjugierte von M → U M Uᵀ). Ist das R-Tripel das
+konjugierte L-Tripel, wird sie zur konjugierten bilinearen Gram-Matrix; für
+reelle Plätze ist sie die gewöhnliche Gram-Matrix S.
+
+**2. Das Zwei-Sonden-System trägt genau das.** In prop:triadic-two-probe ist
+
+    Ω_△ = [[Ω_1, g_Y T_12, 0], [g_Y T_21, Ω_2, 0], [0, 0, Ω_⊥]] + χ (Kopplung an Ψ_⊥).
+
+Zuordnung (Lesart, nicht im Text festgelegt):
+- Ψ_1 ↔ L-Tripel, Ψ_2 ↔ R-Tripel; nach lem:two-probe-compatibility stammen
+  beide aus demselben normierten Körper und sind aufeinander gerichtet,
+  passend zu „R = konjugiertes L“.
+- g_Y T_12 ↔ die Überlappung C, also der Massenblock (g_Y ist die
+  Yokamono-Kopplung, im Text als Yukawa-artig geführt).
+- Ψ_⊥ mit χ ↔ der dritte Platz h der Dixon-Platzkopplung F_b(x, y, h).
+
+Numerisch (reelle Einheitsvektoren, Ω_1 = Ω_2 = 0): Der Block
+[[0, C], [C†, 0]] hat die Eigenwerte ± s_k mit s_k den Eigenwerten der
+Gram-Matrix S. Die Zwei-Sonden-Masse ist also genau die Auslesung A, als
+Dirac-Paar ±s.
+
+**3. T_12 als Feld gibt Suminos Bedingung.** Trägt T_12 einen Vakuumwert mit
+Singulärwerten s ∝ √m (Auslesung A) und transformiert als U† T_12 U*, sind
+alle neun Familienbosonen massiv, und die diagonalen Schwellen erfüllen
+ln M_ii² = 1,00 · ln m_i + const, also **α_F = 4α** wie bei Sumino.
+
+**Bewertung.**
+- Der Hinweis des Autors trägt: Das Zwei-Sonden-System liefert die beiden
+  Tripel, ihre Kopplung als Massenblock und einen dritten Kanal. Mit
+  T_12 als Kopplungsfeld passt Auslesung A zu Suminos α_F = 4α; der Preis
+  aus dem vorigen Nachtrag („nicht nativ“) entfällt damit in der Struktur.
+- Die Dirac-Form ±s erklärt nebenbei, warum geladene Leptonen positive
+  Wurzeln haben (Singulärwerte) und innerhalb des Bogens liegen.
+- Weiter offen: Im Text ist T_12 ein fester Operator, kein Feld mit
+  eigener Dynamik; die Transformation der Sonden unter einer Familien-U(3)
+  und deren Eichung sind nicht angelegt. Der Neutrino-Fall braucht den
+  symmetrischen L-L-Block (Majorana) mit indefiniter Form; das
+  Zwei-Sonden-System hat dafür keinen eigenen Block. Ω_1, Ω_2 und χ sind
+  unbestimmt. prop:triadic-two-probe hat den Status einer
+  Feldarchitektur, keiner Herleitung.
+- OP3/OP4 offen; OP1–OP5, C5, C6/T2 unverändert.
