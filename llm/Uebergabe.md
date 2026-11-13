@@ -35,7 +35,9 @@
   **Punkt 3 geprüft und berichtigt:** stetige SU(2) nicht nötig; Bahn unter Hurwitz-Einheit a = −(1+i+j+k)/2 (a³ = 1)
   gibt den Oktanten; 2T mit SO(3)-Bild A4 (native Platzsymmetrie, r55). Sedenion-Ebene (e7, e15) ist farbneutrales
   S3-Dublett mit Zyklus diag(ω, ω²); reelle Zustände geben K = 1/2, ein komplexer Bezug unter dem magischen Winkel
-  K = 2/3 und π/4. Als Nächstes: nativen komplexen Bezugszustand in (e7, e15) suchen; Q_em von e15 prüfen.
+  K = 2/3 und π/4. **Bezugszustand gefunden** (`op3_sedenion_reference_2026_11_13.*`): H_n = span(1,e7,e8,e15) farbneutrale
+  Quaternionen, ψ = 120°-Drehung um e8, Raumdiagonale (e7+e8+e15)/√3 gibt Oktant (K = 2/3, π/4). Hindernis: Ladung
+  (ψ dreht e7, L_e7 dreht (e8,e15)). Als Nächstes: Fortsetzung der Ladung auf die Sedenionen prüfen; sonst H100 abwarten.
   Werkzeuge: `notes/research/op3_eta_form_search_2026_11_13.*`, `op3_slot_u3_gauging_2026_11_13.*`.
   · zur Wahl: H100 vorab festschreiben (Kandidaten unten) · T₁₂ als dynamisches Feld · Potential für ρ² = 1/2 ·
   Vereinigung Platzindex-U(3) mit SU(2)_L.

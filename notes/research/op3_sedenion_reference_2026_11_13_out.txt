@@ -1,0 +1,13 @@
+(1) Achsen in A4 gegen D3: Winkel zweizaehlige zu dreizaehliger Achse
+    A4: Koordinatenachse gegen (1,1,1): 54.74 Grad (magisch); D3: 90 Grad
+(2) e7 e8 = +e15; e15^2 = -1; assoziativ auf span(1,e7,e8,e15): True
+    psi mit Winkel +120 Grad: Automorphismus-Fehler 1.1e-14
+    psi mit Winkel -120 Grad: Automorphismus-Fehler 1.2e-14
+(3) psi(e8) = e8: True; psi(e7) = [-0.5, 0.866] in (e7, e15)
+    -> auf Im span(1,e7,e8,e15) ist psi eine Drehung um 120 Grad um die Achse e8
+(4) f = (e7+e8+e15)/sqrt3: Winkel zu e8 cos = 0.577350; Skalarprodukte der Bahn
+[[ 1.  0. -0.]
+ [ 0.  1.  0.]
+ [-0.  0.  1.]]
+    als Qubits: rho^2 = 0.5000, K = 0.6667, Bargmann-Phase 0.785398
+    psi vertauscht mit L_e7: False;  L_e7 bildet e8 auf [0.0, 1.0] in (e8, e15) ab

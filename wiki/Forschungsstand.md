@@ -1852,11 +1852,21 @@ Erkundung $\eta$, ohne Datenvergleich:
   $\mathrm{diag}(\omega,\omega^2)$ wirkt. Reelle Zustände dort geben
   $K=1/2$; erst ein komplexer Bezug unter dem magischen Winkel gibt
   $K=2/3$ und $\pi/4$. Es fehlt nur noch dieser Bezugszustand.
+- Nachtrag Bezugszustand: In den Sedenionen ist
+  $\mathbb H_n=\mathrm{span}(1,e_7,e_8,e_{15})$ eine farbneutrale
+  Quaternionenalgebra; der Zyklus $\psi$ ist dort eine Drehung um $120^\circ$
+  um $e_8$. Die Raumdiagonale $(e_7+e_8+e_{15})/\sqrt3$ steht unter dem
+  magischen Winkel und liefert als Bahn das Oktanten-Tripel ($K=2/3$,
+  $\pi/4$) aus nativen Bausteinen. Hindernis ist nun die Ladung: $\psi$
+  dreht $e_7$ nach $e_{15}$, und $L_{e_7}$ dreht $(e_8,e_{15})$; mit
+  $J=L_{e_7}$ als Ladungsstruktur ist der Träger nicht
+  $Q_{\rm em}$-verträglich (Ladung auf den Sedenionen im Companion nicht
+  definiert).
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),
 > `notes/research/op3_slot_u3_gauging_2026_11_13.md` (Eichung Platzindex-U(3)),
-> `notes/research/op3_eta_form_search_2026_11_13.md` (Form η, Bargmann-Phase), `notes/research/op3_hopf_octant_2026_11_13.md` (Oktanten-Tripel im Hopf-Träger), `op3_lorentz_octant_2026_11_13.py` (Lorentz-Fassung), `op3_neutral_su2_octant_2026_11_13.md` (neutrale SU(2), Spin 1/2), `predictions/Vorab_Notiz_H100_Neutrino_Verhaeltnis_naechster_Fit.md`,
+> `notes/research/op3_eta_form_search_2026_11_13.md` (Form η, Bargmann-Phase), `notes/research/op3_hopf_octant_2026_11_13.md` (Oktanten-Tripel im Hopf-Träger), `op3_lorentz_octant_2026_11_13.py` (Lorentz-Fassung), `op3_neutral_su2_octant_2026_11_13.md` (neutrale SU(2), Spin 1/2), `op3_sedenion_reference_2026_11_13.md` (Bezugszustand), `predictions/Vorab_Notiz_H100_Neutrino_Verhaeltnis_naechster_Fit.md`,
 > `notes/research/nufit_verlauf_2026_11_13.py` (mit Grafik und Ausgabe),
 > `notes/research/op3_indefinite_form_2026_11_13.md`,
 > `notes/research/predictions/Vorab_Notiz_H99_Neutrino_Phase_Bogenrand.md`,
