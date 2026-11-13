@@ -4,7 +4,7 @@
 ## Stand vom 13.11.2026, ca. 23:59 (Claude Opus)
 - **GitHub:** **PR #106 gemergt als ca29c5b** (13.11., auf „PR 106 mergen“; Merge-Commit, Kopf 65f4e8e). Läufe 43495772155
   (QSC LaTeX PDF Build), 43495772054 (Zwei-PDF), 43495772194 (Wiki-Sync) erfolgreich. Vorher heute gemergt: #104 (32fa42c),
-  #105 (fcc87c6). **Offen:** Zweig `research/v5-auswahlprinzip` (Rückwärtssuche Auswahlprinzip), PR folgt.
+  #105 (fcc87c6). **Offen: PR #107** (Zweig `research/v5-auswahlprinzip`, Rückwärtssuche Auswahlprinzip), nicht gemergt.
 - **Lokal:** Hauptordner per Fast-Forward auf ca29c5b; dieser Übergabe-Commit liegt nur lokal auf `main`. Unversioniert:
   `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf`. Rundentabelle und Kernkarte (Schritt 10 der Runden-Anleitung) gibt es
   im Repo-Klon nicht mehr; Runden stehen in `notes/research/v4_10_0_rNN/README.md` und im Wiki.
