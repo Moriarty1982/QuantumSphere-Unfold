@@ -1,0 +1,7 @@
+Spin-j-Zustaende entlang x, y, z (Oktant, Raumwinkel pi/2):
+  j = 0.5: Treue 0.5000 (= (1/2)^(2j) 0.5000), rho^2 = 0.5000, K = 0.6667, Bargmann-Phase 0.7854 (j * pi/2 mod 2pi = 0.7854)
+  j = 1.0: Treue 0.2500 (= (1/2)^(2j) 0.2500), rho^2 = 0.2500, K = 0.5000, Bargmann-Phase 1.5708 (j * pi/2 mod 2pi = 1.5708)
+  j = 1.5: Treue 0.1250 (= (1/2)^(2j) 0.1250), rho^2 = 0.1250, K = 0.4167, Bargmann-Phase 2.3562 (j * pi/2 mod 2pi = 2.3562)
+  j = 2.0: Treue 0.0625 (= (1/2)^(2j) 0.0625), rho^2 = 0.0625, K = 0.3750, Bargmann-Phase 3.1416 (j * pi/2 mod 2pi = 3.1416)
+  -> nur j = 1/2 gibt rho^2 = 1/2 (Koide) und die Phase pi/4.
+  SO(3)-Vektoren entlang der Achsen: Ueberlappungen [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] -> rho^2 = 0, keine Phase

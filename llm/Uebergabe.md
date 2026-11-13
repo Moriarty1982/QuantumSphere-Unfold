@@ -2,10 +2,12 @@
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.**
 
 ## Stand vom 13.11.2026, ca. 23:00 (Claude Opus)
-- **GitHub:** **PR #105 gemergt als fcc87c6** (13.11., auf „PR 105 mergen“; Merge-Commit, Kopf 747849b). Läufe
-  43489278392 (Zwei-PDF) und 43489278498 (Wiki-Sync) erfolgreich. Keine offenen PRs.
-- **Lokal:** Hauptordner per Fast-Forward auf fcc87c6; dieser Übergabe-Commit liegt nur lokal auf `main`.
-  Unversioniert: `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf`.
+- **GitHub:** PR #105 gemergt als fcc87c6 (Läufe grün). **Offen: neuer PR** vom Zweig `research/v5-octant-weitersuche`
+  (Erkundung neutrale SU(2)). Aufgeräumt 13.11.: Remote-Zweige `research/v5-string-relaxation-rueckwaertssuche`,
+  `research/v5-h99b-nufit61`, `research/v5-h100-eta` gelöscht (alle in main enthalten).
+- **Lokal:** Hauptordner auf `main` 99d1bbb (Übergabe-Commit, liegt im neuen PR). Arbeit im Worktree
+  `.claude/worktrees/qam-mml-mma-math-473bc4` (kann nach dem nächsten Merge weg). Unversioniert:
+  `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf`.
 - **Zuletzt vergebene Hypothese:** **H100** (Vorab 9c77ddd, offen bis zur nächsten NuFIT-Version, längstens 31.12.2027);
   nächste frei H101; letztes Skript k222. Auswertung: `python k222_test_h100.py dm21 sig21 dm31 sig31`.
 - **Offene Autorentscheidungen:** keine.
@@ -24,12 +26,14 @@
   (Stabilisator 8 → 3), im H-Faktor Ladung (r33); neutraler Teil (e3, e7, e3e7) hat Signatur (2,1), kein exakter
   Oktant. **Lorentz-Fassung gerechnet** (`op3_lorentz_octant_2026_11_13.*`): Lorentz-Qubit hat |⟨a|b⟩|² ≥ 1 (kein
   Koide); in (2,1) trifft keine native Zeitachse H99 (nur nicht ausgezeichnete Familie). Mechanismus-Suche endet vorerst.
-  Empfehlung: PR #105 mergen und H100 abwarten; offene Fäden in der η- und Hopf-Notiz.
+  **Neutrale SU(2)** (`op3_neutral_su2_octant_2026_11_13.*`): Suminos Φ → UΦOᵀ setzt die Generationen auf orthogonale
+  SO(3)-Achsen (farb-, ladungsneutral); nur Spin 1/2 gibt ρ² = 1/2 und π/4 (allgemein ρ² = (1/2)^{2j}, Phase jπ/2).
+  Lesart: Neutrinos tragen einen Spinor dieser Gruppe. Im Companion keine solche SU(2) gefunden. Als Nächstes: neutrale
+  SU(2) im Companion suchen (SO(3) ⊂ Platzindex-U(3)?) und ν^c als deren Spinor prüfen; sonst H100 abwarten.
   Werkzeuge: `notes/research/op3_eta_form_search_2026_11_13.*`, `op3_slot_u3_gauging_2026_11_13.*`.
   · zur Wahl: H100 vorab festschreiben (Kandidaten unten) · T₁₂ als dynamisches Feld · Potential für ρ² = 1/2 ·
   Vereinigung Platzindex-U(3) mit SU(2)_L.
-- **Aufräumen:** Zweige `research/v5-string-relaxation-rueckwaertssuche` (PR #103), `research/v5-h99b-nufit61` (PR #104)
-  und `research/v5-h100-eta` (PR #105) können weg; Worktree `qam-mml-mma-math-473bc4` ebenso.
+- **Aufräumen:** erledigt (13.11.); nach dem nächsten Merge Zweig `research/v5-octant-weitersuche` und den Worktree löschen.
 
 ## Block 19:40–23:00 (PR #105, gemergt)
 - **H100** vorab (siehe oben); Erwartung bei gleichem Mittelwert: A ≈ +2,7σ, B ≈ +0,2σ, C ≈ +1,2σ.

@@ -1819,11 +1819,20 @@ Erkundung $\eta$, ohne Datenvergleich:
   Lösungen gibt es nur als nicht ausgezeichnete Familie. Die Suche nach
   einem nativen Mechanismus für $\pi/4$ endet vorerst hier; H100 bleibt
   der nächste belastbare Schritt.
+- Nachtrag neutrale $SU(2)$: In Suminos Modell transformiert $\Phi$ als
+  $U\Phi O^T$ mit $O\in SO(3)$; im Vakuum sitzen die drei Generationen auf
+  drei orthogonalen Achsen dieser farb- und ladungsneutralen Gruppe. Für
+  Spin $j$ entlang dreier orthogonaler Achsen ist $\rho^2=(1/2)^{2j}$ und
+  die Bargmann-Phase $j\pi/2$: Nur Spin 1/2 gibt zugleich Koide
+  ($\rho^2=1/2$) und $\pi/4$. Lesart: Die Neutrinos tragen die Phase eines
+  Spinors dieser Gruppe, die geladenen Leptonen koppeln über den
+  Vektorindex. Eine solche neutrale $SU(2)$ ist im Companion nicht
+  gefunden; der Ort liegt bisher in Suminos Modell.
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),
 > `notes/research/op3_slot_u3_gauging_2026_11_13.md` (Eichung Platzindex-U(3)),
-> `notes/research/op3_eta_form_search_2026_11_13.md` (Form η, Bargmann-Phase), `notes/research/op3_hopf_octant_2026_11_13.md` (Oktanten-Tripel im Hopf-Träger), `op3_lorentz_octant_2026_11_13.py` (Lorentz-Fassung), `predictions/Vorab_Notiz_H100_Neutrino_Verhaeltnis_naechster_Fit.md`,
+> `notes/research/op3_eta_form_search_2026_11_13.md` (Form η, Bargmann-Phase), `notes/research/op3_hopf_octant_2026_11_13.md` (Oktanten-Tripel im Hopf-Träger), `op3_lorentz_octant_2026_11_13.py` (Lorentz-Fassung), `op3_neutral_su2_octant_2026_11_13.md` (neutrale SU(2), Spin 1/2), `predictions/Vorab_Notiz_H100_Neutrino_Verhaeltnis_naechster_Fit.md`,
 > `notes/research/nufit_verlauf_2026_11_13.py` (mit Grafik und Ausgabe),
 > `notes/research/op3_indefinite_form_2026_11_13.md`,
 > `notes/research/predictions/Vorab_Notiz_H99_Neutrino_Phase_Bogenrand.md`,

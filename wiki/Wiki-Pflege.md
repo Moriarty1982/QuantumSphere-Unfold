@@ -315,3 +315,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 13.11.2026, spät: Nachtrag magischer Winkel (gleichwertig mit orthonormalen Platzrichtungen; Farb- bzw. Ladungsanteile; neutraler Teil mit Signatur (2,1) ohne exakten Oktanten) in Forschungsstand; kein OP-Abschluss.
 
 13.11.2026, spät: Nachtrag Lorentz-Fassung (Lorentz-Qubit ohne Koide-Tripel; in (2,1) keine native Zeitachse) in Forschungsstand; kein OP-Abschluss.
+
+13.11.2026, spät: Erkundung neutrale SU(2) (Suminos SO(3)-Vektorindex trägt die Generationen auf orthogonalen Achsen; nur Spin 1/2 gibt Koide und π/4) in Forschungsstand; kein OP-Abschluss.
