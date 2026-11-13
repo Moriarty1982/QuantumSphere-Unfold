@@ -287,3 +287,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 13.11.2026, spät: Nachtrag Exponent c (mit PMNS-Mittelung c ≈ 1,7–1,8; c = 1 +0,7σ) und Familiensymmetrie (keine native Eichsymmetrie; Platzindex-U(3) der Gram-Matrix als einziger stetiger Kandidat) in Forschungsstand; kein Test, kein OP-Abschluss.
 
 13.11.2026, spät: Nachtrag c als Integral (c = 1,8 ± 1,0; c = 1 verträglich, bei Sumino c = 1) in Forschungsstand; kein Test.
+
+13.11.2026, spät: Erkundung Eichung der Platzindex-U(3) in Forschungsstand (Bosonenmassen s_i und (s_i+s_j)/2; Auslesung A verlangt α_F = 8α, Auslesung B ist Sumino mit 4α); kein Test, kein OP-Abschluss.

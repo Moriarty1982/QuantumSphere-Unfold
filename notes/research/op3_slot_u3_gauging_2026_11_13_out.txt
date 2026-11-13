@@ -1,0 +1,9 @@
+(1) Invarianz der Gram-Eigenwerte: X->XU 2.1e-14, X->WX 3.6e-15
+(2) Bosonenmassen^2 (g = 1): [ 4.6811 11.1945 11.1945 15.8595 15.8595 17.708  22.3729 22.3729 27.0378]
+    erwartet {s_i} und je zweimal (s_i+s_j)/2: [ 4.6811 11.1945 11.1945 15.8595 15.8595 17.708  22.3729 22.3729 27.0378] Abweichung 1.1e-14
+    Diagonal-Bosonen massiv (kein masseloses Cartan-Boson): True
+    zum Vergleich S adjungiert: Zahl masseloser Bosonen = 3
+
+(3) Vergleich mit Sumino (Familienbosonen M_ij^2 ~ m_i + m_j, Aufhebung bei alpha_F = 4 alpha)
+    Auslesung A: sqrt(m) ~ s (Gram, wie H99): ln M_ii^2 = 0.500 * ln m_i + const  ->  noetig alpha_F = 8.0 alpha
+    Auslesung B: m ~ s (sqrt(m) ~ Singulaerwerte von X): ln M_ii^2 = 1.000 * ln m_i + const  ->  noetig alpha_F = 4.0 alpha

@@ -1676,8 +1676,29 @@ Auslesung), (3) Skala der Leptonmassen.
   $c\neq1$ wäre ein Maß für ein abweichendes Integral auf der
   Neutrinoseite; heutige Daten verlangen das nicht.
 
+**Erkundung: Eichung der U(3) auf dem Platzindex** (13.11.2026, nicht
+blind, kein Test). Die drei Plätze bilden ein Feld $X$, die Gram-Matrix
+ist $S=X^\dagger X$, die Familiensymmetrie wirkt als $X\to XU$ und wird
+mit einem $u(3)$-Zusammenhang geeicht. Das ist ein neues Strukturelement.
+
+- Die neun Familienbosonen erhalten aus dem kinetischen Term die Massen
+  $M^2=s_i$ (diagonal) und $(s_i+s_j)/2$ (je zweimal); alle sind massiv.
+  Das ist die Struktur, die Sumino braucht. Trüge $S$ selbst die Ladung,
+  blieben drei Bosonen masselos.
+- Die Auslesung legt die Kopplungsbedingung fest: Mit $\sqrt m\propto s$
+  (Gram-Lesart, H99) ist $M_{ii}^2\propto\sqrt{m_i}$ und die Aufhebung
+  verlangt $\alpha_F=8\alpha$; mit $m\propto s$ ist $X$ genau Suminos
+  $\Phi$ und $\alpha_F=4\alpha$, aber die Überlappungs-Lesart von Koide
+  geht verloren.
+- Mit Suminos Ladungen ($\ell_L$ in $\mathbf3$, $e_R$ in $\bar{\mathbf3}$)
+  ist die Massenmatrix die bilineare $X^TX$. Der Exponent $c$ für
+  Neutrinos bleibt 1.
+- Nicht hergeleitet: das Feld $X$, sein Potential, $\alpha_F$ und die
+  Vereinigung mit $SU(2)_L$.
+
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),
+> `notes/research/op3_slot_u3_gauging_2026_11_13.md` (Eichung Platzindex-U(3)),
 > `notes/research/nufit_verlauf_2026_11_13.py` (mit Grafik und Ausgabe),
 > `notes/research/op3_indefinite_form_2026_11_13.md`,
 > `notes/research/predictions/Vorab_Notiz_H99_Neutrino_Phase_Bogenrand.md`,

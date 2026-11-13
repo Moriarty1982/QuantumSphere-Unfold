@@ -117,6 +117,14 @@ Die Daten verlangen eine Verschiebung von 0,2580 statt π/12 = 0,2618 (1,4 % kle
 - **Nachtrag c und Familiensymmetrie:** c für z = 0: 1,3–1,4 ohne Mischung, 1,7–1,8 mit PMNS-Mittelung (richtige erste Näherung); c = 1 gibt +0,7σ bis +0,8σ. Sumino: ℓ_L in 3, e_R in 3̄, α_F = 4α, Vereinigung mit SU(2)_L bei 10²–10³ TeV; Weinberg-Term ℓℓ gleiches Vorzeichen wie geladen ⇒ Richtung stimmt, c = 1 natürlich. Companion: nur diskrete S_3 (Sedenionen r13, Trialität r14/r15), Δ(96) in der Farbe; keine Familien-Eichsymmetrie. Einziger stetiger Kandidat: globale U(3) auf dem Platzindex der Gram-Matrix (Gram-Matrix ↔ Suminos Φ). Fehlt: Eichung, Bosonenmassen aus S, α_F = 4α.
 - **c als Integral (Autor):** c = 1,8 ± 1,0 (PMNS-gemittelt); c − 1 nur 0,8σ, c = 0 (H99) 1,8σ. c = Verhältnis der Log-Integrale (Familie auf Neutrinoseite / QED geladen); bei Sumino exakt 1, da α_F = 4α beide gleich macht. c ≠ 1 wäre Maß eines abweichenden Integrals; heute nicht verlangt. Künftig σ_c ≈ 0,5.
 
+## Erkundung Eichung Platzindex-U(3) (13.11., spät, Autor: „Platzindex-U(3) eichen“)
+
+- Notiz, Skript, Ausgabe `notes/research/op3_slot_u3_gauging_2026_11_13.*`. Nicht blind, kein Test.
+- Feld X (drei Plätze), S = X†X, X → XU, D X = ∂X − i g X A. Bosonenmassen: s_i (diagonal), (s_i+s_j)/2 (je zweimal), alle massiv (numerisch 1e-14). S adjungiert gäbe drei masselose Bosonen ⇒ geladen muss X sein.
+- Auslesung A (√m ∝ s, Gram, H99): M_ii² ∝ √m_i ⇒ Aufhebung bei α_F = 8α. Auslesung B (m ∝ s): X = Suminos Φ, α_F = 4α, Überlappungs-Lesart von Koide verloren.
+- Sumino-Ladungen ⇒ Massenmatrix bilinear XᵀX; c für Neutrinos bleibt 1.
+- Offen: Auslesung A oder B begründen; Potential für X (ρ² = 1/2); Vereinigung mit SU(2)_L (legt α_F fest).
+
 ## Nächster Schritt (Autorentscheidung)
 
 - PR #104 (H99b-Nachtrag) prüfen und auf „PR 104 mergen“ des Autors mergen.
