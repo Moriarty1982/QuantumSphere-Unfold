@@ -106,10 +106,17 @@ Die Daten verlangen eine Verschiebung von 0,2580 statt π/12 = 0,2618 (1,4 % kle
 2. Gesetzte Annahmen: K = 2/3 auch für Neutrinos, Massenwurzel = Eigenwert, negative leichteste Wurzel.
 3. Skalenfrage: θ_e aus Polmassen, Neutrinos bei anderer Energie; Laufen von θ_e nie untersucht, 1–2 % denkbar.
 
+## Erkundung Varianten zu H99 (13.11., abends, Autor: „Idee 3 im Kopf, weiter mit 1 und 2; vor allem in Kombination“)
+
+- Notiz, Skript, Ausgabe `notes/research/op3_neutrino_phase_candidates_2026_11_13.*`. Nicht blind, kein Test, keine H-Nummer.
+- Raster 24 Varianten: nur die H99-Form passt; Spiegelung am Rand, c -> -c, det-Spiegelung, m ~ |s|, Seesaw m ~ s^4 scheiden mit 49σ bis >1000σ aus. Skala allein: 29 %.
+- **Kandidat (nachträglich aus Fit):** alle drei Bestandteile bei M_Z: rho_nu² = rho_e²(M_Z) (K = 0,6678), Verschiebung = eigener Bogenrand 0,26006, theta_e(M_Z) = 0,22112 ⇒ R = 0,030087, +0,16σ (NuFIT 6.1), dm21 = 7,555e-5 (+0,46σ JUNO). Erst die Kombination der drei Ideen schließt die Lücke. Offen: warum M_Z.
+- Trennung von H99 (0,030840) gegen künftige JUNO-Werte etwa 3σ.
+
 ## Nächster Schritt (Autorentscheidung)
 
 - PR #104 (H99b-Nachtrag) prüfen und auf „PR 104 mergen“ des Autors mergen.
-- Entscheiden, ob R = 0,030839 als Vorhersage gegen das nächste JUNO-Ergebnis zu dm21 festgeschrieben wird (H100, eigene Vorab-Notiz; nach heutigem Stand mit Widerlegungsrisiko).
+- H100 (Autorentscheidung): beide Fassungen (H99: R = 0,030840; eine Skala M_Z: R = 0,030087) vor dem nächsten JUNO-/NuFIT-Ergebnis als Vorab-Notiz mit Entscheidungskriterium festschreiben. Vorher Rückwärtssuche: nativer Grund für die Skala M_Z.
 - Statusvermerke in einer neuen Runde: r33-Labels (Ladung), ältere Koide-Stellen (v470/17, „2/3 factor“, rem:koide-mass-discrepancy), thm:three-generations.
 
 ## Pflichten in jeder Sitzung

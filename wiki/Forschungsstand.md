@@ -1615,7 +1615,31 @@ Version aufgetragen und gewichtet ausgeglichen.
   Vorhersage. Nach JUNO bestimmt der Fehler von $\Delta m^2_{31}$ den
   Test; bei gleichen Mittelwerten läge H99 dann etwa $3\sigma$ daneben.
 
+**Erkundung: Varianten zu H99 nach drei Ideen** (13.11.2026, nicht
+blind, kein Test). Gefragt war, warum H99 über dem Messwert liegt:
+(1) andere Verschiebung als $\pi/12$, (2) andere Annahmen ($K_\nu$,
+Auslesung), (3) Skala der Leptonmassen.
+
+- 24 naheliegende Varianten (Spiegelung am Rand, Vorzeichenwechsel der
+  Überlappungen, $\det S_\nu=-\det S_e$; Auslesung $m\propto|s|$ und
+  Seesaw $m\propto s^4$; Pol und $M_Z$): nur die H99-Form passt, alle
+  anderen liegen $49\sigma$ bis über $1000\sigma$ daneben.
+- Die Skala allein ($\theta_e$ bei $M_Z$) schließt 29 % der Lücke
+  ($+1{,}27\sigma$).
+- Nachträglich, aus einem Fit gefunden: Nimmt man alle drei Bestandteile
+  von H99 bei derselben Skala $M_Z$, also
+  $\rho_\nu^2=\rho_e^2(M_Z)$ ($K=0{,}6678$) und als Verschiebung den Rand
+  des eigenen Bogens $\theta_b=0{,}26006$, folgt ohne freie Zahl
+  $R=0{,}030087$: $+0{,}16\sigma$ gegen NuFIT 6.1,
+  $\Delta m^2_{21}=7{,}555\cdot10^{-5}$ eV² ($+0{,}46\sigma$ gegen JUNO
+  allein). Erst die Kombination der drei Ideen schließt die Lücke.
+- Vorbehalt: Bei rund 26 Varianten ist das kein Befund. Warum $M_Z$ die
+  richtige Skala sein soll, ist nicht begründet. Künftige JUNO-Werte
+  trennen beide Fassungen ($0{,}030840$ gegen $0{,}030087$) mit etwa
+  $3\sigma$; eine blinde Prüfung braucht eine Vorab-Notiz.
+
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
+> `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),
 > `notes/research/nufit_verlauf_2026_11_13.py` (mit Grafik und Ausgabe),
 > `notes/research/op3_indefinite_form_2026_11_13.md`,
 > `notes/research/predictions/Vorab_Notiz_H99_Neutrino_Phase_Bogenrand.md`,
