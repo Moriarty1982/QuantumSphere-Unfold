@@ -11,9 +11,10 @@
   nächste frei H101; letztes Skript k222. Auswertung: `python k222_test_h100.py dm21 sig21 dm31 sig31`.
 - **Offene Autorentscheidungen:** PR #105 mergen („PR 105 mergen“).
 - **Ausgelöste Zurückgestellte Ideen:** keine.
-- **Nächster Schritt:** Lesart „π/4 = 3 Kanten · (π/6)/2“ prüfen: Spinor-Transport um π/6 je Kante zwischen
-  den Plätzen; warum nur im Majorana-Block (ψᵀψ gegen ψ̄ψ). Alternativ: ν^c-Verbinder (r44.1(d)) auf koplanaren
-  Rang-2-Block prüfen. Native Phasen ω, i, −1 allein sind ausgeschlossen (nur Vielfache von π/6).
+- **Nächster Schritt:** Spinor-Transport geprüft: raumzeitlich ausgeschlossen; innerer Transport π/6 je Kante gibt
+  Φ_ν − Φ_e = (q_L − q_R)·π/2, H99 verlangt q_L − q_R = 1/2 = Hyperladung des Higgs (nachträglich, schwach).
+  Als Nächstes prüfen, ob die Dixon-Sektorphase θ_s = σ φ_H + λ φ_O (σ an Y/2) diesen Fluss trägt, und ob ein
+  Hyperladungsfluss durch den Familienraum im Companion begründbar ist. Alternativ ν^c-Verbinder (r44.1(d)).
   Werkzeuge: `notes/research/op3_eta_form_search_2026_11_13.*`, `op3_slot_u3_gauging_2026_11_13.*`.
   · zur Wahl: H100 vorab festschreiben (Kandidaten unten) · T₁₂ als dynamisches Feld · Potential für ρ² = 1/2 ·
   Vereinigung Platzindex-U(3) mit SU(2)_L.

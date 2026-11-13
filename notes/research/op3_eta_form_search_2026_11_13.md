@@ -126,3 +126,47 @@ Richtungen im Abstand von 60°).
 **Bewertung.** Die Zerlegung trägt als Lesart: Fluss = 3 Kanten · (π/6)/2. Sie macht aus „achte Einheitswurzel
 fehlt“ die Frage „Spinor-Transport um π/6 je Kante“. Nicht hergeleitet; kein Datenvergleich; H100 unberührt.
 OP3/OP4 offen.
+
+## Nachtrag: Spinor-Transport geprüft (13.11., Autor: „Spinor-Transport prüfen“)
+
+Skript, Abschnitt 6. Nicht blind (Ziel π/4 bekannt), kein Datenvergleich.
+
+**1. Raumzeitlicher Spinor-Transport scheidet aus.** Drehungen (SU(2)) und Boosts (SL(2,C)) erfüllen Uᵀ ε U = ε,
+Drehungen zusätzlich U†U = 1. Jeder Lorentz-invariante Massenterm (Dirac ψ̄ψ, Majorana ψᵀεψ) ist deshalb blind für
+einen solchen Kantentransport: Der Fluss bleibt numerisch unverändert (1,95980 vor und nach einer Drehung um π/6 auf
+jeder Kante). Die Phase π/12 je Kante erscheint nur in der Übergangsamplitude χ†Uχ, die kein Massenterm ist. Die
+Halbierung muss also aus einem **inneren** Transport kommen, nicht aus der Raumzeit.
+
+**2. Innerer Transport (U(1) auf dem Platzindex).** Mit Kantenwinkel A je Ladungseinheit sieht ein Massenblock den
+Fluss q · 3A, wobei q die Ladung des transportierten Partners ist (numerisch: q = 1 gibt π/2, q = 1/2 gibt π/4 bei
+A = π/6). Der Dirac-Block transportiert e_R, der Majorana-Block ℓ_L. Der Unterschied der Sektoren ist
+
+    Φ_ν − Φ_e = (q_L − q_R) · 3A.
+
+Mit dem nativen A = π/6 verlangt H99 also **q_L − q_R = 1/2**.
+
+| Ladungszuordnung | q_L − q_R | Φ_ν − Φ_e bei A = π/6 |
+|---|---|---|
+| Sumino (3, +1) und (3̄, −1) | 2 | π (passt nicht) |
+| vektorartig | 0 | 0 |
+| Sumino mit halben Ladungen | 1 | π/2 |
+| **Hyperladung Y/2: ℓ_L −1/2, e_R −1** | **1/2** | **π/4** |
+
+**3. Nachträglicher Fund, mit Vorbehalt.** Die verlangte Differenz 1/2 ist genau die Hyperladung des Higgs-Dubletts
+(Y_H/2 = 1/2), festgelegt durch die Eichinvarianz der Yukawa-Kopplung ℓ̄ H e. Die 3/2 aus π/4 = (3/2) · π/6 wären
+dann: drei Kanten mal Hyperladungsdifferenz 1/2. Das passt zum Vorbefund der Dixon-Platzkopplung
+(`op3_dixon_slot_coupling_2026_11_13.md`): Dort trägt die Sektorphase θ_s = σ φ_H + λ φ_O ein Vorzeichen σ, das an
+Y/2 hängt (e und d gegen ν und u).
+
+Vorbehalte:
+- Gesucht wurde nach einer Ladungsdifferenz 1/2, und davon gibt es mehrere (T₃, Y/2, Spinor-Halbierung). Der Treffer
+  bei der Hyperladung ist deshalb schwach.
+- Ein Fluss der Hyperladung durch das Dreieck der Generationsplätze verbindet Eichfeld und Familienraum. Das ist
+  im Companion nicht angelegt und physikalisch ungewöhnlich.
+- Suminos Aufhebung der QED-Korrektur braucht konjugierte Familienladungen (Differenz 2). Der Fluss müsste dann an
+  eine andere U(1) koppeln als Suminos Familien-U(1), etwa an die Hyperladung.
+- Warum der Kantenwinkel π/6 ist, bleibt offen (nativ verfügbar als ω · i⁻¹).
+
+**Bewertung.** Der Spinor-Transport in der Raumzeit ist ausgeschlossen. Ein innerer Transport mit dem nativen Winkel
+π/6 je Kante erzeugt den H99-Unterschied genau dann, wenn die Ladungen von ℓ_L und e_R sich um 1/2 unterscheiden; die
+Hyperladung erfüllt das. Lesart, nicht hergeleitet; nachträglich gefunden. OP3/OP4 offen; H100 unberührt.

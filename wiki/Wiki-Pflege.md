@@ -301,3 +301,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 13.11.2026, abends: Nachtrag Paar-Phase (Fluss π/4 durch das Platzdreieck; native Phasen geben nur Vielfache von π/6; π/4 als Bargmann-Phase eines koplanaren Koide-Tripels) in Forschungsstand; Formulierung zur bilinearen Phase berichtigt; kein OP-Abschluss.
 
 13.11.2026, abends: Nachtrag π/4 = (3/2)·π/6 in Forschungsstand (Lesart drei Kanten mal Spinor-Halbierung; 3ρ² und 1/K nur punktuell); kein OP-Abschluss.
+
+13.11.2026, abends: Nachtrag Spinor-Transport (raumzeitlich ausgeschlossen; innerer Transport verlangt q_L − q_R = 1/2, nachträglich = Hyperladung des Higgs) in Forschungsstand; kein OP-Abschluss.

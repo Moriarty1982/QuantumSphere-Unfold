@@ -1758,6 +1758,14 @@ Erkundung $\eta$, ohne Datenvergleich:
   $3/2=3\cdot\tfrac12$: drei Kanten des Platzdreiecks, je eine Drehung um
   $\pi/6$, die auf Spinoren mit $\pi/12$ wirkt. Offen: warum $\pi/6$ je
   Kante und warum nur im Majorana-Block.
+- Nachtrag Spinor-Transport: Ein raumzeitlicher Spinor-Transport
+  scheidet aus, weil jeder Lorentz-invariante Massenterm ihn nicht sieht
+  ($U^T\varepsilon U=\varepsilon$). Ein innerer Transport mit Winkel
+  $\pi/6$ je Kante gibt den Sektorunterschied $(q_L-q_R)\cdot3\cdot\pi/6$;
+  H99 verlangt $q_L-q_R=1/2$. Nachträglich: Das ist die
+  Hyperladungsdifferenz von $\ell_L$ und $e_R$ (die Hyperladung des
+  Higgs). Schwacher Treffer, weil mehrere Größen den Wert $1/2$ haben;
+  ein Hyperladungsfluss durch den Familienraum ist nicht angelegt.
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),

@@ -30,3 +30,15 @@
       rho^2 = 0.55: Phi_b = 0.6488, (pi/6)*3rho^2 = 0.8639, (pi/6)/K = 0.7480
       rho^2 = 0.60: Phi_b = 0.5342, (pi/6)*3rho^2 = 0.9425, (pi/6)/K = 0.7140
     Spinorbild einer Drehung um pi/6: Phasen [-0.2618  0.2618] (= -+pi/12); drei Kanten: Fluss 0.78540 = pi/4
+
+(6) Nachtrag Spinor-Transport
+    Drehung: U^dag U = 1 True, U^T eps U = eps True
+    Boost:   B^T eps B = eps True  (Majorana-Paarung invariant)
+    Majorana-Paarung psi^T eps psi mit Kantendrehung: Fluss vorher 1.95980, nachher 1.95980 (unveraendert)
+    zum Vergleich chi^dag U chi (kein Lorentz-Skalar): Phase -0.26180 je Kante, Fluss -0.78540
+    innerer Transport, A = pi/6: Block mit Ladung q sieht Fluss q*3A: q=1 -> 1.57080, q=1/2 -> 0.78540
+    Sektorunterschied Phi_nu - Phi_e = (q_L - q_R) * 3A; verlangt pi/4:
+      Sumino (3, +1) / (3bar, -1)   : Delta = 3.14159  (pi/4 = 0.78540; mit A = pi/6 noetig q_L - q_R = 1/2)
+      vektorartig q_L = q_R         : Delta = 0.00000  (pi/4 = 0.78540; mit A = pi/6 noetig q_L - q_R = 1/2)
+      L halbe Ladung, R neutral     : Delta = 0.78540  (pi/4 = 0.78540; mit A = pi/6 noetig q_L - q_R = 1/2)
+      Sumino mit halben Ladungen    : Delta = 1.57080  (pi/4 = 0.78540; mit A = pi/6 noetig q_L - q_R = 1/2)

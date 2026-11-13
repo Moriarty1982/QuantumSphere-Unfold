@@ -136,3 +136,51 @@ if __name__ == "__main__":
     Rspin = np.array([[np.exp(-1j * a / 2), 0], [0, np.exp(1j * a / 2)]])   # SU(2)-Bild einer Drehung um a
     print(f"    Spinorbild einer Drehung um pi/6: Phasen {np.round(np.angle(np.diag(Rspin)), 5)} (= -+pi/12); "
           f"drei Kanten: Fluss {3 * a / 2:.5f} = pi/4")
+
+
+def su2(axis, angle):
+    sx = np.array([[0, 1], [1, 0]], complex); sy = np.array([[0, -1j], [1j, 0]]); sz = np.diag([1, -1]).astype(complex)
+    n = np.array(axis) / np.linalg.norm(axis)
+    G = n[0] * sx + n[1] * sy + n[2] * sz
+    return np.cos(angle / 2) * np.eye(2) - 1j * np.sin(angle / 2) * G
+
+
+if __name__ == "__main__":
+    print("\n(6) Nachtrag Spinor-Transport")
+    eps = np.array([[0, 1], [-1, 0]], complex)
+    # (a) Lorentz-Transport auf den Kanten: Drehung (SU(2)) und Boost (SL(2,C))
+    U = su2((0.3, -0.5, 0.8), np.pi / 6)
+    Bst = np.diag([np.exp(0.4), np.exp(-0.4)]).astype(complex)
+    print(f"    Drehung: U^dag U = 1 {np.allclose(U.conj().T @ U, np.eye(2))}, U^T eps U = eps {np.allclose(U.T @ eps @ U, eps)}")
+    print(f"    Boost:   B^T eps B = eps {np.allclose(Bst.T @ eps @ Bst, eps)}  (Majorana-Paarung invariant)")
+    # Lorentz-invariante Massenterme zwischen transportierten Plaetzen: Kantenfaktoren heben sich auf
+    rng2 = np.random.default_rng(7)
+    chis = [rng2.normal(size=2) + 1j * rng2.normal(size=2) for _ in range(3)]
+    L = [su2((0, 0, 1), np.pi / 6) for _ in range(3)]             # gleiche Drehung um pi/6 auf jeder Kante
+    def maj(a, b, with_link):
+        Ub = L[a] if with_link else np.eye(2)
+        return (Ub @ chis[a]) @ eps @ (Ub @ chis[b])               # beide Partner mit demselben Kantenfaktor
+    flux0 = np.angle(maj(0, 1, False) * maj(1, 2, False) * maj(2, 0, False))
+    flux1 = np.angle(maj(0, 1, True) * maj(1, 2, True) * maj(2, 0, True))
+    print(f"    Majorana-Paarung psi^T eps psi mit Kantendrehung: Fluss vorher {flux0:.5f}, nachher {flux1:.5f} (unveraendert)")
+    # nicht invariante Uebergangsamplitude chi^dag U chi (kein Massenterm): traegt pi/12 je Kante
+    chi = np.array([1, 0], complex)
+    c = chi.conj() @ su2((0, 0, 1), np.pi / 6) @ chi
+    print(f"    zum Vergleich chi^dag U chi (kein Lorentz-Skalar): Phase {np.angle(c):.5f} je Kante, Fluss {3 * np.angle(c):.5f}")
+    # (b) innerer Transport: Familien-U(1), Kantenwinkel A je Ladungseinheit, Fluss F = 3A je Ladungseinheit.
+    # Ein Block sieht q_transp * F (Ladung des transportierten Partners): Dirac transportiert e_R, Majorana l_L.
+    # Normierter Bargmann-Fluss eines Blocks M_ab = f_a W_ab^q f_b, numerisch:
+    A = np.pi / 6
+    W = np.exp(1j * A)
+    def block_flux(q):
+        f = np.exp(1j * rng2.uniform(0, 2 * np.pi, 3)) * (1 + rng2.uniform(0, 1, 3))
+        M = np.array([[f[a] * f[b] * (W ** q if (b - a) % 3 == 1 else (np.conj(W) ** q if (a - b) % 3 == 1 else 1))
+                       for b in range(3)] for a in range(3)])
+        d = np.sqrt(np.diag(M))
+        Mn = M / np.outer(d, d)
+        return np.angle(Mn[0, 1] * Mn[1, 2] * Mn[2, 0])
+    print(f"    innerer Transport, A = pi/6: Block mit Ladung q sieht Fluss q*3A: q=1 -> {block_flux(1):.5f}, q=1/2 -> {block_flux(0.5):.5f}")
+    print("    Sektorunterschied Phi_nu - Phi_e = (q_L - q_R) * 3A; verlangt pi/4:")
+    for lab, qL, qR in (("Sumino (3, +1) / (3bar, -1)", 1.0, -1.0), ("vektorartig q_L = q_R", 1.0, 1.0),
+                        ("L halbe Ladung, R neutral", 0.5, 0.0), ("Sumino mit halben Ladungen", 0.5, -0.5)):
+        print(f"      {lab:30s}: Delta = {(qL - qR) * 3 * A:.5f}  (pi/4 = {np.pi / 4:.5f}; mit A = pi/6 noetig q_L - q_R = 1/2)")
