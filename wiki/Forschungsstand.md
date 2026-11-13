@@ -1804,6 +1804,14 @@ Erkundung $\eta$, ohne Datenvergleich:
   um ein Oktanten-Tripel: Überlappung $1/2$, Rang 2, Phase $\pi/4$. Das
   Hindernis aus r33 entfällt für diesen Träger. Offen: warum dieser
   Winkel, warum nur der Majorana-Block, Verträglichkeit mit r14.
+- Nachtrag magischer Winkel: Er ist gleichwertig mit „die drei
+  Platzrichtungen sind orthonormal“ (Achse einer zyklischen Drehung eines
+  Dreibeins ist dessen Diagonale). Im Oktonionenfaktor hat jede solche
+  Richtung Farbanteile (Stabilisator 8 → 3), im Isospinfaktor
+  Ladungsanteile (r33). Der farb- und ladungsneutrale Teil
+  ($e_3\otimes1$, $1\otimes e_7$, $e_3\otimes e_7$) hat Signatur (2,1),
+  passend zur negativen Wurzel, erlaubt aber keinen exakten Oktanten.
+  Ein neutraler Ort für das Oktanten-Tripel ist nicht gefunden.
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),

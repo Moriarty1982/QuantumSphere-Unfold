@@ -54,3 +54,36 @@ Betrag (Vorzeichen durch die Orientierung). Das ist genau das Rand-Tripel des Ko
 - Gibt es im Companion eine native Richtung unter dem Winkel arccos(1/√3) zu e_7 (etwa aus dem Assoziator
   [e_4, e_5, e_6] = −2e_7, dessen drei Faktoren mit e_7 ein Dreibein bilden könnten)?
 - Wie hängt diese Richtung am Majorana-Verbinder für ν^c (r44.1(d)) oder an der zweiten Higgs-Einsetzung?
+
+## Nachtrag: magischer Winkel gesucht (13.11., spät, Autor: „Magischen Winkel suchen“)
+
+Skript, Abschnitte „Magischer Winkel“ und „Neutrale Dixon-Richtungen“. Nicht blind, kein Datenvergleich.
+
+**1. Der Winkel ist keine eigene Zahl.** Eine 120°-Drehung, die ein Orthonormal-Dreibein zyklisch vertauscht, hat
+dessen Raumdiagonale als Achse; jeder Vektor des Dreibeins steht dann unter arccos(1/√3) zur Achse. Die Forderung
+„magischer Winkel zur Ladungsachse“ ist also gleichwertig mit: **Die drei Platzrichtungen sind orthonormal**, und der
+Generationsschritt aus r15 (Drehung um e_7) vertauscht sie. Ein natives Beispiel ist die Raumdiagonale einer
+Fano-Linie durch e_7, etwa (e_1 + e_6 + e_7)/√3 (Winkel zu e_7 genau arccos(1/√3)).
+
+**2. Im Oktonionenfaktor kostet das die Farbe.** Die einzige imaginäre Richtung, die die Farb-SU(3) festhält, ist e_7
+(numerisch). Jede Richtung unter dem magischen Winkel hat daher Farbanteile. Der Stabilisator in G_2 fällt von 8
+(SU(3), nur e_7 fest) auf 3 (e_7 und f fest, ebenso für die Fano-Diagonale): Als Feldwert gelesen bräche eine solche
+Richtung die Farbe auf SU(2). Das Hindernis aus r33 (Ladung, Isospinfaktor) kehrt im Oktonionenfaktor als
+Farbhindernis wieder. Unschädlich ist es nur, wenn die Platzrichtungen reine Etiketten des Trägers sind und kein
+Feldwert.
+
+**3. Der neutrale Teil des Dixon-Raums hat die Signatur (2,1).** Die farb- und ladungsneutralen Richtungen e_3⊗1,
+1⊗e_7 und e_3⊗e_7 haben die Quadrate −1, −1, +1. Das ist genau die indefinite Signatur, die die negative
+Neutrino-Wurzel verlangt. In Signatur (2,1) gibt es aber keine drei paarweise orthogonalen raumartigen
+Einheitsvektoren; ein exakter Oktant ist dort nicht möglich. Eine Lorentz-Fassung (Phase als hyperbolische Fläche)
+wäre eine eigene Rechnung.
+
+**Bewertung.**
+- Der magische Winkel ist auf die Bedingung „orthonormale Platzrichtungen“ zurückgeführt; native Kandidaten dafür
+  gibt es (Fano-Diagonalen).
+- Ein Ort, an dem das Oktanten-Tripel zugleich farb- und ladungsneutral wäre, ist nicht gefunden: Im Isospinfaktor
+  bricht es die Ladung (r33), im Oktonionenfaktor die Farbe, im neutralen Teil verhindert die Signatur (2,1) den
+  exakten Oktanten.
+- Die Signatur (2,1) des neutralen Teils passt dafür zur negativen Wurzel; ob eine Lorentz-Fassung der Bargmann-Phase
+  dort π/4 geben kann, ist die nächste offene Rechnung.
+- OP3/OP4 offen; H100 unberührt.

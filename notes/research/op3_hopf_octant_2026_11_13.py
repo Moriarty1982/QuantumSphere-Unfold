@@ -84,3 +84,79 @@ if __name__ == "__main__":
     for cosang in (0.0, 0.3, 1 / np.sqrt(3), 0.8):
         h = cosang * e7 + np.sqrt(1 - cosang ** 2) * g
         print(f"    Winkel cos = {cosang:.4f}: <h, C h> = {np.dot(h, C(h)):+.4f}")
+
+
+def derivations():
+    """Basis der Derivationsalgebra g2 (D(xy) = D(x)y + xD(y)) als 8x8-Matrizen."""
+    rows = []
+    for i in range(8):
+        for j in range(8):
+            ei, ej = unit(i), unit(j)
+            eij = mul(ei, ej)
+            # lineare Gleichung in den 64 Eintraegen von D
+            A = np.zeros((8, 64))
+            for k in range(8):
+                for l in range(8):
+                    E = np.zeros((8, 8)); E[k, l] = 1
+                    A[:, 8 * k + l] = E @ eij - mul(E @ ei, ej) - mul(ei, E @ ej)
+            rows.append(A)
+    A = np.vstack(rows)
+    _, sv, Vt = np.linalg.svd(A)
+    null = Vt[np.sum(sv > 1e-9):]
+    return [v.reshape(8, 8) for v in null]
+
+
+def stab_dim(D, vecs):
+    if not vecs:
+        return len(D)
+    A = np.array([np.concatenate([d @ v for v in vecs]) for d in D]).T
+    return len(D) - np.linalg.matrix_rank(A, tol=1e-9)
+
+
+if __name__ == "__main__":
+    print("\n== Magischer Winkel ==")
+    print("    (a) Eine 120-Grad-Drehung, die ein Orthonormal-Dreibein zyklisch vertauscht, hat dessen Raumdiagonale als Achse;")
+    print("        jeder Vektor des Dreibeins steht dann unter arccos(1/sqrt3) zur Achse. Bedingung = Plaetze orthonormal.")
+    D = derivations()
+    f = (e7 + np.sqrt(2) * unit(1)) / np.sqrt(3)
+    fano = (unit(1) + unit(6) + e7) / np.sqrt(3)
+    print(f"    (b) dim g2 = {len(D)}; Stabilisator von e7: {stab_dim(D, [e7])} (Farb-SU(3)); "
+          f"von e7 und f: {stab_dim(D, [e7, f])}; von e7 und der Fano-Diagonale (e1+e6+e7)/sqrt3: {stab_dim(D, [e7, fano])}")
+    print(f"        Fano-Diagonale: Winkel zu e7 cos = {np.dot(fano, e7):.6f} = 1/sqrt3 {1 / np.sqrt(3):.6f}")
+    # farbneutrale imaginaere Richtungen: vom Stabilisator von e7 festgehalten
+    # Unterraum der Stabilisator-Derivationen: Kern von d -> d e7
+    Bm = np.array([(d @ e7) for d in D]).T
+    _, sv, Vt = np.linalg.svd(Bm)
+    coeffs = Vt[np.sum(sv > 1e-9):]
+    Dsu3 = [sum(c * d for c, d in zip(cv, D)) for cv in coeffs]
+    Mfix = np.vstack([d[1:, 1:] for d in Dsu3])
+    _, sv2, Vt2 = np.linalg.svd(Mfix)
+    fixed = Vt2[np.sum(sv2 > 1e-9):]
+    print(f"    (c) imaginaere Richtungen, die die Farb-SU(3) festhaelt: {len(fixed)} (nur e7) -> jede Richtung unter dem "
+          "magischen Winkel hat Farbanteile")
+
+
+if __name__ == "__main__":
+    print("\n== Neutrale Dixon-Richtungen (ohne Farbe und Ladung): e3 (x) 1, 1 (x) e7, e3 (x) e7 ==")
+    # Linksmultiplikation auf H (x) O (reell 32-dim); Quaternionen ueber Paulimatrizen nicht noetig: H als 4x4 reell
+    def qmul_mat(k):
+        # Linksmultiplikation mit Quaternion-Einheit k in Basis (1, i, j, k)
+        tab = {(1, 1): (0, -1), (1, 2): (3, 1), (1, 3): (2, -1), (2, 1): (3, -1), (2, 2): (0, -1), (2, 3): (1, 1),
+               (3, 1): (2, 1), (3, 2): (1, -1), (3, 3): (0, -1)}
+        Mq = np.zeros((4, 4))
+        for b in range(4):
+            if b == 0:
+                Mq[k, 0] = 1
+            else:
+                idx, sg = tab[(k, b)]
+                Mq[idx, b] = sg
+        return Mq
+    Lo7 = np.array([mul(e7, unit(b)) for b in range(8)]).T
+    I4, I8 = np.eye(4), np.eye(8)
+    E3 = np.kron(qmul_mat(3), I8); E7 = np.kron(I4, Lo7); E37 = E3 @ E7
+    for lab, X in (("e3 (x) 1", E3), ("1 (x) e7", E7), ("e3 (x) e7", E37)):
+        sq = X @ X
+        print(f"    ({lab})^2 = {'+1' if np.allclose(sq, np.eye(32)) else ('-1' if np.allclose(sq, -np.eye(32)) else '?')}")
+    print("    -> zwei Richtungen mit Quadrat -1, eine mit +1: Signatur (2,1), wie die indefinite Form im neutralen Sektor.")
+    print("    In Signatur (2,1) gibt es keine drei paarweise orthogonalen raumartigen Einheitsvektoren: ein exakter Oktant")
+    print("    ist dort nicht moeglich (Sylvester); eine Lorentz-Fassung waere eine eigene Rechnung.")
