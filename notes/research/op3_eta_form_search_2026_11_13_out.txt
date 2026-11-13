@@ -1,0 +1,15 @@
+(1) Brannen-Phase als Bargmann-Phase
+    Eigenwerte = 1 + 2 rho cos(theta + 2 pi k/3) mit cos 3theta = Re(c12 c23 c31)/rho^3: max. Fehler 1.8e-15
+    zirkulant, Phi = arg(c12 c23 c31) = -0.7000: 3 theta = 0.7000
+    H99 als Bargmann-Bedingung: Delta Phi = 3 theta_b = 0.78540 = pi/4 bei rho^2 = 1/2; NuFIT 6.1 verlangt 3 * 0.25802 = 0.77406
+
+(2) Ausschluesse
+    (a) reell: Phi = arg(c12 c23 c31) in {0, pi} (hier 3.1416); theta aendert sich dann nur ueber die Betraege der einzelnen Ueberlappungen
+    (b) Umphasen der Plaetze: Phi vorher -0.128616, nachher -0.128616  (invariant)
+    (c) zirkulant, eta diagonal in der Eigenbasis (1, 1, -1): Betraege der Wurzeln wie geladen: True
+    (c) zirkulant, eta diagonal in der Eigenbasis (1, -1, 1): Betraege der Wurzeln wie geladen: True
+    (c) zirkulant, eta diagonal in der Eigenbasis (-1, 1, 1): Betraege der Wurzeln wie geladen: True
+
+(3) Lesart B: geladen hermitesch, neutral bilinear auf denselben Plaetzen
+    4000 Plaetze-Tripel mit rho_e^2 = 0.50 +- 0.02: Delta Phi Mittel -0.006, Streuung 1.356; Delta rho^2 Mittel +0.698, Streuung 3.877
+    Anteil mit |Delta rho^2| < 0.02 und |Delta Phi - pi/4| < 0.05: 0.000

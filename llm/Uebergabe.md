@@ -1,24 +1,31 @@
 # Übergabe: Stand der letzten Sitzung
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.**
 
-## Stand vom 13.11.2026, ca. 19:35 (Claude Opus)
+## Stand vom 13.11.2026, ca. 20:30 (Claude Opus)
 - **GitHub:** **PR #104 gemergt als 32fa42c** (13.11., auf „pr 104 mergen“; Merge-Commit, Kopf bf51772).
-  Läufe 43481979108 (Zwei-PDF) und 43481979426 (Wiki-Sync) erfolgreich. Keine offenen PRs.
-- **Lokal:** Hauptordner per Fast-Forward auf 32fa42c; dieser Übergabe-Commit liegt nur lokal auf `main`.
+  Läufe 43481979108 (Zwei-PDF) und 43481979426 (Wiki-Sync) erfolgreich. **Offen: neuer PR** vom Zweig
+  `research/v5-h100-eta` (H100-Vorab 9c77ddd, η-Suche, Wiki); nicht gemergt.
+- **Lokal:** Hauptordner auf `main` f405c05 (Übergabe-Commit nach dem Merge, liegt im neuen PR).
   Unversioniert: `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf`.
-- **Zuletzt vergebene Hypothese:** H99 (nächste frei H100); letztes Skript k221. Alle Arbeiten seit H99b sind
-  Erkundungen, nicht blind, ohne H-Nummer.
-- **Offene Autorentscheidungen:** H100 festschreiben oder erst η suchen.
+- **Zuletzt vergebene Hypothese:** **H100** (Vorab 9c77ddd, offen bis zur nächsten NuFIT-Version, längstens 31.12.2027);
+  nächste frei H101; letztes Skript k222. Auswertung: `python k222_test_h100.py dm21 sig21 dm31 sig31`.
+- **Offene Autorentscheidungen:** neuen PR mergen.
 - **Ausgelöste Zurückgestellte Ideen:** keine.
-- **Nächster Schritt:** native Form η im neutralen Sektor suchen, die ρ² erhält und die Phase um den Bogenrand
-  θ_b verschiebt (präzise Fassung des Ursprungs von H99). Werkzeuge: `notes/research/op3_slot_u3_gauging_2026_11_13.*`,
-  `op3_indefinite_form_2026_11_13.md`, r44.1, r55.
+- **Nächster Schritt:** native Paar-Phase π/12 im neutralen Sektor suchen (gleichwertig: Bargmann-Phase π/4 je
+  Umlauf über die drei Plätze bei erhaltenen Beträgen). Kandidaten: Assoziator, Q_J = iL_e7, Lesart B auf dem Kern.
+  Werkzeuge: `notes/research/op3_eta_form_search_2026_11_13.*`, `op3_slot_u3_gauging_2026_11_13.*`.
   · zur Wahl: H100 vorab festschreiben (Kandidaten unten) · T₁₂ als dynamisches Feld · Potential für ρ² = 1/2 ·
   Vereinigung Platzindex-U(3) mit SU(2)_L.
 - **Aufräumen:** Zweige `research/v5-string-relaxation-rueckwaertssuche` (PR #103) und `research/v5-h99b-nufit61`
   (PR #104) können weg; Worktree `qam-mml-mma-math-473bc4` ebenso.
 
-## Dieser Block (13.11., 15–19 Uhr), alles in PR #104 (gemergt)
+## Block 19:40–20:30 (neuer PR)
+- **H100** vorab (siehe oben); Erwartung bei gleichem Mittelwert: A ≈ +2,7σ, B ≈ +0,2σ, C ≈ +1,2σ.
+- **Form η** (`op3_eta_form_search_2026_11_13.*`): Brannen-Phase = Bargmann-Phase/3; H99 ⇔ ΔΦ = π/4 bei gleichen
+  Beträgen. Ausgeschlossen: Umphasen, Vorzeichen in der Eigenbasis, hermitesch → bilinear allein (0/4000).
+  Verlangt: gleichmäßige Phase π/12 je Überlappung, nur bei bilinearen (Majorana-)Überlappungen möglich.
+
+## Block 15–19 Uhr, alles in PR #104 (gemergt)
 - **H99b** mit NuFIT-6.1-Primärtabelle (IC24 mit SK): verträglich, +1,80σ (nicht blind). Sekundärwerte überholt.
 - **NuFIT-Verlauf 2012–2025** (`nufit_verlauf_2026_11_13.*`, Grafik): Δm²₂₁ flach; Δm²₃₁ bis 2017 gestiegen;
   R lag 2013/14 nur wegen des niedrigen Δm²₃₁ beim H99-Wert.

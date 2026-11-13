@@ -1725,9 +1725,29 @@ mit einem $u(3)$-Zusammenhang geeicht. Das ist ein neues Strukturelement.
   verlangt, dass $\eta$ die Überlappung erhält und die Phase um den
   Bogenrand verschiebt. Eine solche native Form ist nicht gefunden.
 
+**Vorab H100 und Suche nach der Form $\eta$** (13.11.2026). H100
+(Vorab 9c77ddd) legt drei Werte für $R$ im nächsten NuFIT-Fit fest:
+H99 $0{,}030839$, eine Skala $0{,}030087$, Sumino-Korrektur $0{,}030375$.
+
+Erkundung $\eta$, ohne Datenvergleich:
+- Die Brannen-Phase ist ein Drittel der Bargmann-Phase der drei Plätze:
+  $\cos3\theta=\mathrm{Re}(c_{12}c_{23}c_{31})/\rho^3$; bei gleichen
+  Beträgen ist $3\theta=\arg(c_{12}c_{23}c_{31})$, die geometrische
+  Phase des Tripels.
+- H99 heißt dann: Die geometrische Phase der Neutrinos ist um
+  $3\theta_b=\pi/4$ gedreht, bei gleichen Beträgen (Daten: $0{,}774$).
+- Ausgeschlossen: Umphasen der Plätze (Phase invariant),
+  Vorzeichenwechsel in der Eigenbasis (gleiche Massenverhältnisse), der
+  bloße Wechsel hermitesch → bilinear (keine feste Verschiebung, 0 von
+  4000 Tripeln).
+- Verlangt ist eine gleichmäßige Phase $\pi/12$ auf jeder Überlappung.
+  Das geht nur bei symmetrischen (bilinearen) Überlappungen, also gerade
+  im Majorana-Block. Eine native Quelle dafür ist nicht gefunden.
+
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),
 > `notes/research/op3_slot_u3_gauging_2026_11_13.md` (Eichung Platzindex-U(3)),
+> `notes/research/op3_eta_form_search_2026_11_13.md` (Form η, Bargmann-Phase), `predictions/Vorab_Notiz_H100_Neutrino_Verhaeltnis_naechster_Fit.md`,
 > `notes/research/nufit_verlauf_2026_11_13.py` (mit Grafik und Ausgabe),
 > `notes/research/op3_indefinite_form_2026_11_13.md`,
 > `notes/research/predictions/Vorab_Notiz_H99_Neutrino_Phase_Bogenrand.md`,

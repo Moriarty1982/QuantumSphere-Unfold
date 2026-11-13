@@ -295,3 +295,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 13.11.2026, spät: Nachtrag zwei Tripel und Zwei-Sonden-System (Ψ₁/Ψ₂ als L/R-Tripel, T₁₂ als Massenblock, α_F = 4α) in Forschungsstand; kein Test, kein OP-Abschluss.
 
 13.11.2026, spät: Nachtrag Neutrino-Block L-L (Ω₁, c = 1, negative Wurzel bei Signatur (2,1); Seesaw und Tensorprodukt ausgeschlossen; offene Bedingung an η) in Forschungsstand; kein Test, kein OP-Abschluss.
+
+13.11.2026, abends: H100 vorab in Vorhersagen-und-Tests und Forschungsstand eingetragen; Erkundung Form η (Brannen-Phase = Bargmann-Phase/3, H99 als Drehung um π/4, Ausschlüsse) in Forschungsstand; kein OP-Abschluss.
