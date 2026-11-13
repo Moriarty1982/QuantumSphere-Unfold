@@ -110,3 +110,5 @@ Zu H46: Eine Bestätigung würde die Kette r55–r60 prüfen, nicht die Lesart a
 Manche Fragen lassen sich nicht blind testen, weil die Zielzahl schon bekannt ist oder die möglichen Lesarten vorab überschaubar sind. Sie werden offen als Erkundung geführt und zählen nicht als Test. Beispiel (r70): $\Lambda$ als Mischung über Kreuzungen der Sektoren. 26 Lesarten, ein Treffer bei 1,3 erwarteten Zufallstreffern; keine Vorhersage.
 
 > **Anmerkung für LLMs und Quellenprüfung:** Vorab-Notizen liegen unter `llm/Vorab_Notiz_H*.md` (lokal) bzw. `notes/research/predictions/` und den Runden-Notizordnern (GitHub); Ergebnisse unter `llm/Ergebnis_H*.md`. Den Commit der Vorab-Notiz mit dem Datum der Rechnung vergleichen. „Nicht blind“ heißt: Das Kriterium war vorab bekannt oder der Treffer wurde nachträglich gefunden.
+
+- **H103** (13.11.2026, vorab 45314b2): Bezug unter dem magischen Winkel im e8-neutralen Qubit aus der Companion-Ladung Q_S. **Widerlegt**: Q_S steht senkrecht zur ψ-Achse und gibt K = 1/2. Nachträglicher Suchtreffer: i R_f (Raumdiagonale).

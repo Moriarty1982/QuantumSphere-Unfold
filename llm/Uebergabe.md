@@ -10,11 +10,12 @@
   `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf`.
   Die vorige Übergabe war auf „14.11., 00:30“ datiert; tatsächlich entstand sie am 13.11. um 21:28.
 - **Letzte Runde:** v4.10.0-r12 (Statusvermerke) aus PR #106.
-- **Zuletzt vergebene Hypothese:** H102.
+- **Zuletzt vergebene Hypothese:** H103 (vorab 45314b2, k225). **Widerlegt:** Q_S steht auf N senkrecht zur ψ-Achse. Nachträglicher Suchtreffer: i R_f mit der Raumdiagonale f gibt exakt den magischen Winkel; der nächste Schritt wäre dazu eine eigene Vorab-Notiz. Als Nächstes ist H104 frei, letztes Skript k225.
+- **Vorher vergeben:** H102.
   - H102 ist offen: m_τ = 1777,134 MeV wird gegen die erste PDG-Ausgabe nach dem 13.11.2026 geprüft
     (`k224_test_h102.py m_tau sigma`). Am 13.11. gab es noch keine neue Ausgabe.
   - H101 ist widerlegt. H100 ist offen; am 13.11. war NuFIT 6.1 weiterhin die neueste Version.
-  - Als Nächstes ist H103 frei. Das letzte k-Skript ist k224.
+  - 
 - **Offene Autorentscheidungen:** PR #108 mergen. Aufräumen (siehe unten).
 - **Ausgelöste Zurückgestellte Ideen:** keine. I1–I5 sind geprüft.
 

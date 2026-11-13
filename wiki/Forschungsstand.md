@@ -1887,6 +1887,11 @@ Erkundung $\eta$, ohne Datenvergleich:
   $Q_*$ lässt $\mathbb O$ nicht invariant, und $\varepsilon$ wirkt auf den
   Leptonen als Ladungskonjugation ($S_3\to\mathbb Z_3$). Die Lücke
   verschiebt sich vom neutralen Träger zum Bezugszustand. OP3/OP4 bleiben offen.
+- H103 (vorab 45314b2): Die Companion-Ladung $Q_S$ (über $e_7$) wirkt auf $N$
+  als $	frac12+	frac13\sigma_y$. Ihr Bezug steht senkrecht zur $\psi$-Achse und gibt
+  $K=1/2$. **H103a ist widerlegt.** In der festen Nebenliste mit 96 Einträgen trifft
+  nachträglich nur $iR_f$ mit $f=(e_7+e_8+e_{15})/\sqrt3$ den magischen Winkel. Das ist ein
+  Suchtreffer und bräuchte eine eigene Vorab-Notiz.
 
 **Runde v4.10.0-r12 und offene Fäden** (13.11.2026). Die Runde r12
 (Statusvermerke) hält fest: Das historische Koide-OP3 ist nicht
