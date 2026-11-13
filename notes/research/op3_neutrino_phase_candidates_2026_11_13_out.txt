@@ -74,3 +74,13 @@ wirkt bei Neutrinos allein: m_nu,k(phys) = m_nu,k(Struktur) * Q_k^(-c), Q_k = 1 
     alpha(M_Z) c = 0.5: R = 0.030524, z(6.1) = +1.11
     alpha(M_Z) c = 1.0: R = 0.030213, z(6.1) = +0.43
     alpha(M_Z) c = 2.0: R = 0.029598, z(6.1) = -0.91
+
+== Nachtrag Familiensymmetrie: c fuer null Abweichung und Mischung ==
+    |U|^2 (Zeilen e, mu, tau; Spalten nu1, nu2, nu3):
+ [[0.676 0.302 0.022]
+ [0.112 0.428 0.46 ]
+ [0.212 0.27  0.518]]
+    alpha(0)   ohne Mischung (nu_k <-> e,mu,tau nach Index)  : R(c=1) = 0.030253 (z = +0.52), c fuer z = 0: 1.409
+    alpha(0)   mit PMNS-Mittelung                            : R(c=1) = 0.030387 (z = +0.81), c fuer z = 0: 1.831
+    alpha(M_Z) ohne Mischung (nu_k <-> e,mu,tau nach Index)  : R(c=1) = 0.030213 (z = +0.43), c fuer z = 0: 1.318
+    alpha(M_Z) mit PMNS-Mittelung                            : R(c=1) = 0.030356 (z = +0.74), c fuer z = 0: 1.713

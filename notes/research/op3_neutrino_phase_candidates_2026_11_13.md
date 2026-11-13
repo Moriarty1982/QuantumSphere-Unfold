@@ -222,3 +222,75 @@ Familienkorrektur in den Neutrino-Massenterm eingeht.
   (R = 0,0302) liegen nahe beieinander; künftige Daten trennen beide kaum,
   wohl aber beide von H99 (0,030840).
 - OP3/OP4 offen; OP1–OP5, C5, C6/T2 unverändert.
+
+## Nachtrag: Exponent c und Familiensymmetrie (13.11., Autor: „wie muss man c wählen … und dann die Familiensymmetrie“)
+
+**1. c für null Abweichung** (nachträglich; Skript, Abschnitt „Familiensymmetrie“):
+
+| Zuordnung | α | R bei c = 1 | c für z = 0 |
+|---|---|---|---|
+| ν_k ↔ e, μ, τ nach Brannen-Index | α(0) | 0,030253 (+0,52σ) | 1,41 (1σ: 0,62–2,21) |
+| ν_k ↔ e, μ, τ nach Brannen-Index | α(M_Z) | 0,030213 (+0,43σ) | 1,32 (1σ: 0,58–2,06) |
+| mit PMNS-Mittelung (NuFIT 6.1) | α(0) | 0,030387 (+0,81σ) | 1,83 |
+| mit PMNS-Mittelung (NuFIT 6.1) | α(M_Z) | 0,030356 (+0,74σ) | 1,71 |
+
+Die Familienkorrektur ist in der Basis der geladenen Leptonen diagonal.
+Wegen der großen Mischung erhält jeder Neutrino-Zustand ein mit |U_ik|²
+gewichtetes Mittel der Korrekturen von e, μ, τ (erste Ordnung). Die
+Zuordnung nach dem Brannen-Index war eine Vereinfachung; die gemittelte
+Fassung ist die richtige erste Näherung.
+
+**2. Was Sumino für c sagt** (arXiv:0812.2103, nachgelesen). Das
+linkshändige Dublett ℓ_L liegt in **3** von U(3), e_R in **3̄**. Weil
+beide dieselbe elektrische Ladung, aber konjugierte Familienladungen
+tragen, hat die Familienkorrektur dieselbe Form wie die QED-Korrektur mit
+umgekehrtem Vorzeichen. Bei α_F = 4α heben sich beide auf; Sumino
+erreicht das durch Vereinigung von U(3) und SU(2)_L bei 10²–10³ TeV.
+Neutrinos: Der Majorana-Term ℓ_L ℓ_L (Weinberg-Operator) hat zwei Beine in
+**3**, also wie ψ̄_L e_R zwei gleichgerichtete Familienladungen. Das
+Vorzeichen der Korrektur ist dann dasselbe wie bei den geladenen
+Leptonen, die Richtung der Rechnung stimmt. Erhält jeder familien-
+geladene Massenterm dieselbe Log-Korrektur je Diagonalelement, ist
+**c = 1** (auch für Typ-I-Seesaw, wenn Dirac- und Majorana-Term beide
+korrigiert werden: −2 + 1). Gebraucht würde c ≈ 1,7–1,8; c = 1 liegt
+innerhalb 1σ. Der genaue Faktor hängt am Modell der Neutrinomassen und
+ist hier nicht hergeleitet.
+
+**3. Familiensymmetrie im Companion.**
+
+| Struktur | Quelle | Art | trägt Sumino? |
+|---|---|---|---|
+| S_3 aus den Sedenionen, Aut(S) = G_2 × S_3 | r13 (k28) | diskret | nein: keine Eichbosonen |
+| Trialitätsplätze von Re((xy)z), S_3 | r14, Träger r15 (Hopf) | diskret | nein |
+| Δ(96) ⊂ SU(3), Stabilisator von e_7 | r12.2 | diskret, liegt in der Farbe | nein (r14) |
+| Farb-SU(3) | Kern | stetig, geeicht | nein: Farbe, nicht Generation |
+| Quaternionen-Richtungen i, j, k | r33 | Labels | ausgeschieden (nicht Q_em-invariant) |
+| U(3) auf dem Platzindex der Gram-Matrix | Gram-Notiz | stetig, global | **Kandidat**, nicht geeicht |
+
+Native stetige Familien-Eichsymmetrie: **keine**. Der Companion kennt
+nur diskrete Dreiersymmetrien (S_3) und die Farbe.
+
+Formale Nähe, nicht mehr: Die Massen hängen in der Gram-Lesart nur von
+den Eigenwerten der hermiteschen 3×3-Matrix S ab, also invariant unter
+S → U S U† mit U ∈ U(3) auf dem Platzindex. Sumino bringt sein
+9-komponentiges Feld Φ durch eine U(3)×SU(2)-Transformation auf hermitesche
+Form Φ = V d V†, mit √m_i ∝ Eigenwerten. Die Gram-Matrix spielt also
+formal die Rolle von Φ. Auch die konjugierte Ladung von e_R hat ein
+mögliches Gegenstück: Die Dixon-Platzkopplung F_b(x, y, h) = ⟨(x^ y) h⟩
+konjugiert den ersten Eintrag.
+
+Was fehlt, damit daraus Suminos Mechanismus wird:
+1. Die Platzindex-U(3) müsste geeicht sein (ein Zusammenhang auf dem
+   Platzindex mit eigenen Eichbosonen); der Companion hat dafür kein Feld.
+2. Die Massen der Familienbosonen müssten aus S kommen und die Struktur
+   M_ij² ∝ v_i² + v_j² haben (bei Sumino aus Φ in drei (3,1)).
+3. α_F = 4α bei der passenden Skala, etwa über Vereinigung mit SU(2)_L.
+   Im Companion sitzt SU(2)_L im Quaternionenfaktor; eine Vereinigung mit
+   einer Platzindex-U(3) ist nicht angelegt.
+
+**Bewertung.** c ≈ 1,7–1,8 gleicht exakt aus; das natürliche c = 1 bleibt
+innerhalb 1σ (+0,7σ bis +0,8σ). Eine Familien-Eichsymmetrie gibt es im
+Companion nicht; die global wirkende Platzindex-U(3) der Gram-Lesart ist
+der einzige stetige Kandidat und müsste erst geeicht werden. Das wäre ein
+neues Strukturelement, keine Folgerung. OP3/OP4 offen; OP1–OP5, C5,
+C6/T2 unverändert.

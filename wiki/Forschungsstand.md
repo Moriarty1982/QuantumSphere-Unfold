@@ -1655,6 +1655,19 @@ Auslesung), (3) Skala der Leptonmassen.
   (Exponent $c=1$ bzw. $1/2$; $+0{,}5\sigma$ bzw. $+1{,}2\sigma$), bei
   $c=2$ $0{,}0297$ ($-0{,}8\sigma$). Nicht nativ: Der Companion hat keine
   Familien-Eichsymmetrie (r14, r33).
+- Nachtrag Exponent und Familiensymmetrie: Mit der Mittelung über die
+  PMNS-Mischung (die Familienkorrektur ist in der Basis der geladenen
+  Leptonen diagonal) gleicht $c\approx1{,}7$ bis $1{,}8$ exakt aus; das
+  natürliche $c=1$ gibt $+0{,}7\sigma$ bis $+0{,}8\sigma$. Bei Sumino
+  liegen $\ell_L$ in $\mathbf3$, $e_R$ in $\bar{\mathbf3}$, Aufhebung bei
+  $\alpha_F=4\alpha$; der Neutrino-Term $\ell_L\ell_L$ erhält die
+  Korrektur mit demselben Vorzeichen wie die geladenen Leptonen. Im
+  Companion gibt es nur diskrete Dreiersymmetrien ($S_3$ aus Sedenionen
+  und Trialität, $\Delta(96)$ in der Farbe) und keine
+  Familien-Eichsymmetrie. Einziger stetiger Kandidat ist die global
+  wirkende $U(3)$ auf dem Platzindex der Gram-Matrix; formal spielt die
+  Gram-Matrix die Rolle von Suminos Feld $\Phi$. Eichung,
+  Bosonenmassen und $\alpha_F=4\alpha$ fehlen.
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),

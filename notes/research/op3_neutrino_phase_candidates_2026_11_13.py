@@ -161,3 +161,36 @@ if __name__ == "__main__":
             m = np.sort(s_n ** 2 * Q ** (-c))
             R = (m[1] ** 2 - m[0] ** 2) / (m[2] ** 2 - m[0] ** 2)
             print(f"    {a_lab:10s} c = {c}: R = {R:.6f}, z(6.1) = {(R - R_OBS) / S_OBS:+.2f}")
+
+
+def pmns(t12, t23, t13, dcp):
+    s12, c12, s23, c23, s13, c13 = (np.sin(t12), np.cos(t12), np.sin(t23), np.cos(t23), np.sin(t13), np.cos(t13))
+    e = np.exp(-1j * dcp)
+    return np.array([[c12 * c13, s12 * c13, s13 * e],
+                     [-s12 * c23 - c12 * s23 * s13 / e, c12 * c23 - s12 * s23 * s13 / e, s23 * c13],
+                     [s12 * s23 - c12 * c23 * s13 / e, -c12 * s23 - s12 * c23 * s13 / e, c23 * c13]])
+
+
+if __name__ == "__main__":
+    print("\n== Nachtrag Familiensymmetrie: c fuer null Abweichung und Mischung ==")
+    te = lepton_phase(POL)
+    s_n = eig(te + np.pi / 12)
+    m_struct = np.sort(s_n ** 2)                     # nu1 < nu2 < nu3 (NO)
+    U = pmns(*np.radians([33.76, 43.29, 8.62, 212.0]))   # NuFIT 6.1, IC24 mit SK, NO
+    W = np.abs(U) ** 2                               # W[i, k]: Anteil der geladenen Generation i (e, mu, tau) am nu_k
+    print("    |U|^2 (Zeilen e, mu, tau; Spalten nu1, nu2, nu3):\n", np.round(W, 3))
+    for a_lab, a in (("alpha(0)", 1 / 137.036), ("alpha(M_Z)", 1 / 127.95)):
+        lnQ = np.log(1 + a / np.pi * (1 + 1.5 * np.log(91187.6 / np.array(POL))))   # je geladener Generation e, mu, tau
+        for lab, lnf in (("ohne Mischung (nu_k <-> e,mu,tau nach Index)", None), ("mit PMNS-Mittelung", W.T @ lnQ)):
+            if lnf is None:
+                # Zuordnung nach Brannen-Index wie oben: nu1 <-> e, nu2 <-> mu, nu3 <-> tau
+                lnf = lnQ
+            def R(c, lnf=lnf):
+                m = m_struct * np.exp(-c * lnf)
+                return (m[1] ** 2 - m[0] ** 2) / (m[2] ** 2 - m[0] ** 2)
+            try:
+                c0 = brentq(lambda c: R(c) - R_OBS, -3, 8)
+            except ValueError:
+                c0 = float("nan")
+            print(f"    {a_lab:10s} {lab:46s}: R(c=1) = {R(1.0):.6f} (z = {(R(1.0) - R_OBS) / S_OBS:+.2f}), "
+                  f"c fuer z = 0: {c0:.3f}")
