@@ -1828,6 +1828,14 @@ Erkundung $\eta$, ohne Datenvergleich:
   Spinors dieser Gruppe, die geladenen Leptonen koppeln über den
   Vektorindex. Eine solche neutrale $SU(2)$ ist im Companion nicht
   gefunden; der Ort liegt bisher in Suminos Modell.
+- Nachtrag Suche: Eine $SU(2)$, die mit Farbe, Isospin, Hyperladung und
+  Lorentz-Gruppe vertauscht, wirkt nach Schur nur auf den
+  Generationsindex (in $g_2$ ist der Zentralisator der Farbe null). In
+  der Familien-$U(3)$ gibt es nur zwei Einbettungen: $SO(3)$
+  (Generationen als Vektor, nur ganzzahlige Spins) oder $2+1$ (Spinor,
+  aber keine drei gleichberechtigten Achsen). Die Oktanten-Lesart braucht
+  daher eine zweite Familien-$SU(2)$ mit einem Spinor-Feld im neutralen
+  Sektor, etwa $\nu^c$. Im Companion ist sie nicht angelegt.
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),

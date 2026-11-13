@@ -5,3 +5,10 @@ Spin-j-Zustaende entlang x, y, z (Oktant, Raumwinkel pi/2):
   j = 2.0: Treue 0.0625 (= (1/2)^(2j) 0.0625), rho^2 = 0.0625, K = 0.3750, Bargmann-Phase 3.1416 (j * pi/2 mod 2pi = 3.1416)
   -> nur j = 1/2 gibt rho^2 = 1/2 (Koide) und die Phase pi/4.
   SO(3)-Vektoren entlang der Achsen: Ueberlappungen [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] -> rho^2 = 0, keine Phase
+
+== Wo eine neutrale SU(2) sitzen kann ==
+    (1) dim su(3) = 8; Zentralisator in g2: 0 -> keine Oktonionen-Symmetrie, die mit der Farbe vertauscht
+    (2) SO(3) reell (Generationen als Vektor): Spins in 3: [1.0], 6: [0.0, 2.0], 8: [1.0, 2.0]
+    (2) SU(2) als 2 + 1: Spins in 3: [0.0, 0.5], 6: [0.0, 0.5, 1.0], 8: [0.0, 0.5, 1.0]
+    -> In der Familien-U(3) gibt es entweder Generationen als Vektor (nur ganzzahlige Spins, kein Spinor)
+       oder einen Spinor (2 + 1), dann sind die Generationen kein Vektor auf drei Achsen.
