@@ -1,13 +1,14 @@
 # Übergabe: Stand der letzten Sitzung
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.**
 
-## Stand vom 13.11.2026, ca. 23:59 (Claude Opus)
-- **GitHub:** **PR #106 gemergt als ca29c5b** (13.11., auf „PR 106 mergen“; Merge-Commit, Kopf 65f4e8e). Läufe 43495772155
-  (QSC LaTeX PDF Build), 43495772054 (Zwei-PDF), 43495772194 (Wiki-Sync) erfolgreich. Vorher heute gemergt: #104 (32fa42c),
-  #105 (fcc87c6). **Offen: PR #107** (Zweig `research/v5-auswahlprinzip`, Rückwärtssuche Auswahlprinzip), nicht gemergt.
-- **Lokal:** Hauptordner per Fast-Forward auf ca29c5b; dieser Übergabe-Commit liegt nur lokal auf `main`. Unversioniert:
-  `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf`. Rundentabelle und Kernkarte (Schritt 10 der Runden-Anleitung) gibt es
-  im Repo-Klon nicht mehr; Runden stehen in `notes/research/v4_10_0_rNN/README.md` und im Wiki.
+## Stand vom 14.11.2026, ca. 00:30 (Claude Opus)
+- **GitHub:** **PR #107 gemergt als a08d918** (Auswahlprinzip, H101 widerlegt, Fluss 2/3 rad, H102 vorab; auf „PR 107 mergen“).
+  Läufe 43501398316 (Zwei-PDF) und 43501398492 (Wiki-Sync) erfolgreich. Am 13.11. außerdem gemergt: #104 (32fa42c),
+  #105 (fcc87c6), #106 (ca29c5b). Keine offenen PRs.
+- **Lokal:** Hauptordner auf `main` mit lokalem Merge-Commit 3b8c1cc (enthält den früheren lokalen Übergabe-Commit 3cca4b2;
+  Dateibaum gleich a08d918) und diesem Übergabe-Commit; beide nur lokal. Unversioniert:
+  `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf`. Rundentabelle/Kernkarte (Schritt 10 der Runden-Anleitung) gibt es
+  im Repo-Klon nicht mehr.
 - **Letzte Runde:** v4.10.0-r12 (Statusvermerke), Teil von PR #106; Build lokal und in CI ok (1406 Seiten, 0 Overfull).
 - **Zuletzt vergebene Hypothese:** H102 (Vorab ee0a103, offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem
   13.11.2026, `k224_test_h102.py m_tau sigma`); H101 widerlegt; H100 offen; nächste frei H103; letztes Skript k224.
@@ -31,8 +32,8 @@
     mit r10-Konvention 43,5-fach. Einheit bleibt frei.
   · zur Wahl: zweite Familienstruktur mit neutralem Qubit (Profil unten) ·
   Fortsetzung der Ladung auf die Sedenionen anders als über e7.
-- **Aufräumen:** Zweig `research/v5-octant-weitersuche` (PR #106) und Worktree `.claude/worktrees/qam-mml-mma-math-473bc4`
-  können weg.
+- **Aufräumen:** Zweige `research/v5-octant-weitersuche` (PR #106) und `research/v5-auswahlprinzip` (PR #107) sowie der
+  Worktree `.claude/worktrees/qam-mml-mma-math-473bc4` können weg.
 
 ## Heute (13.11.) erarbeitet, alles gemergt
 - **H99b** mit NuFIT-6.1-Primärtabelle: verträglich, +1,80σ (nicht blind). **H100** vorab: R im nächsten NuFIT-Fit,
