@@ -289,3 +289,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 13.11.2026, spät: Nachtrag c als Integral (c = 1,8 ± 1,0; c = 1 verträglich, bei Sumino c = 1) in Forschungsstand; kein Test.
 
 13.11.2026, spät: Erkundung Eichung der Platzindex-U(3) in Forschungsstand (Bosonenmassen s_i und (s_i+s_j)/2; Auslesung A verlangt α_F = 8α, Auslesung B ist Sumino mit 4α); kein Test, kein OP-Abschluss.
+
+13.11.2026, spät: Nachtrag Auslesung A oder B (Entscheidung A; Sumino-Bedingung hängt am Feldtyp) in Forschungsstand; kein Test, kein OP-Abschluss.

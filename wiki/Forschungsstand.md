@@ -1695,6 +1695,15 @@ mit einem $u(3)$-Zusammenhang geeicht. Das ist ein neues Strukturelement.
   Neutrinos bleibt 1.
 - Nicht hergeleitet: das Feld $X$, sein Potential, $\alpha_F$ und die
   Vereinigung mit $SU(2)_L$.
+- Nachtrag Auslesung A oder B: Entschieden für A ($\sqrt m\propto s$).
+  Nur A erlaubt negative Wurzeln (indefinite Form) und damit Koide für
+  Neutrinos (H2); B schließt sie aus ($K_\nu\le0{,}585$). Der Bogen
+  $|\theta|\le\pi/12$ gilt in beiden. Die Sumino-Bedingung
+  $\alpha_F=4\alpha$ hängt am Feld: In A gilt sie, wenn die
+  Überlappungsmatrix selbst das Feld ist (Singulärwerte $s$, etwa als
+  $M\to UMU^T$ mit Suminos Ladungen); mit $X$ als Feld wäre
+  $\alpha_F=8\alpha$. Dafür braucht es Überlappungen zwischen zwei
+  verschieden geladenen Tripeln (links und rechts); das ist nicht nativ.
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),

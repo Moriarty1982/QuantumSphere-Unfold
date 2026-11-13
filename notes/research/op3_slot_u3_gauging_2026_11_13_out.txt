@@ -7,3 +7,12 @@
 (3) Vergleich mit Sumino (Familienbosonen M_ij^2 ~ m_i + m_j, Aufhebung bei alpha_F = 4 alpha)
     Auslesung A: sqrt(m) ~ s (Gram, wie H99): ln M_ii^2 = 0.500 * ln m_i + const  ->  noetig alpha_F = 8.0 alpha
     Auslesung B: m ~ s (sqrt(m) ~ Singulaerwerte von X): ln M_ii^2 = 1.000 * ln m_i + const  ->  noetig alpha_F = 4.0 alpha
+
+== Auslesung A oder B: Feldtyp, Bosonenschwellen, Kopplungsbedingung ==
+  X fundamental (X -> XU), Wert mit X^dag X = S           masselos: 0;  A: ln M_ii^2 = 0.50 ln m  -> alpha_F = 8.0 alpha;  B: Steigung 1.00 -> alpha_F = 4.0 alpha
+  S adjungiert (S -> U^dag S U)                           masselos: 3;  A: ln M_ii^2 = nan ln m  -> alpha_F = nan alpha;  B: Steigung nan -> alpha_F = nan alpha
+  Phi = S von links (Phi -> U Phi), Singulaerwerte s      masselos: 0;  A: ln M_ii^2 = 1.00 ln m  -> alpha_F = 4.0 alpha;  B: Steigung 2.00 -> alpha_F = 2.0 alpha
+  M = S symmetrisch (M -> U M U^T, Sumino-Massenmatrix)   masselos: 0;  A: ln M_ii^2 = 1.00 ln m  -> alpha_F = 4.0 alpha;  B: Steigung 2.00 -> alpha_F = 2.0 alpha
+
+  Bogen unabhaengig von der Auslesung: K = 2/3 und alle Brannen-Wurzeln >= 0  <=>  |theta| <= pi/12
+  numerisch: groesstes |theta| mit allen Wurzeln >= 0: 0.261799, pi/12 = 0.261799

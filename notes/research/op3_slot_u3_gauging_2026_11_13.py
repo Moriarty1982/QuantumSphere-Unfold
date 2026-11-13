@@ -72,3 +72,39 @@ if __name__ == "__main__":
         diag = np.sort(s_l)                       # Diagonal-Bosonen M_ii^2 = s_i
         slope = np.polyfit(np.log(np.sort(POL)), np.log(diag), 1)[0]
         print(f"    {lab}: ln M_ii^2 = {slope:.3f} * ln m_i + const  ->  noetig alpha_F = {4 / slope:.1f} alpha")
+
+
+if __name__ == "__main__":
+    print("\n== Auslesung A oder B: Feldtyp, Bosonenschwellen, Kopplungsbedingung ==")
+    # Feldtypen mit Vakuumwert; Massenterm der Bosonen tr|delta Phi|^2 mit delta Phi = T-Wirkung
+    T = u3_generators()
+    sv = np.sqrt(POL) / np.sqrt(POL).sum() * 3      # A: s_i ~ sqrt(m_i)
+
+    def masses(act):
+        M = np.array([[np.real(np.trace(act(a).conj().T @ act(b))) for b in T] for a in T])
+        return np.sort(np.linalg.eigvalsh((M + M.T) / 2))
+
+    S0 = np.diag(sv)
+    fields = {
+        "X fundamental (X -> XU), Wert mit X^dag X = S": lambda a: np.diag(np.sqrt(sv)) @ a,
+        "S adjungiert (S -> U^dag S U)": lambda a: a @ S0 - S0 @ a,
+        "Phi = S von links (Phi -> U Phi), Singulaerwerte s": lambda a: a @ S0,
+        "M = S symmetrisch (M -> U M U^T, Sumino-Massenmatrix)": lambda a: a @ S0 + S0 @ a.T,
+    }
+    for lab, act in fields.items():
+        m2 = masses(act)
+        nz = int(np.sum(m2 < 1e-12))
+        # diagonale Schwellen: Wirkung der Diagonal-Generatoren E_ii
+        d = []
+        for i in range(3):
+            E = np.zeros((3, 3), complex); E[i, i] = 1
+            d.append(np.real(np.trace(act(E).conj().T @ act(E))))
+        d = np.array(d)
+        slopeA = np.polyfit(np.log(POL), np.log(np.maximum(d, 1e-300)), 1)[0] if nz == 0 else float("nan")
+        # Auslesung B: s ~ m statt s ~ sqrt(m); die Steigung von ln M_ii^2 gegen ln m verdoppelt sich
+        print(f"  {lab:55s} masselos: {nz};  A: ln M_ii^2 = {slopeA:.2f} ln m  -> alpha_F = {4 / slopeA if slopeA == slopeA else float('nan'):.1f} alpha;"
+              f"  B: Steigung {2 * slopeA:.2f} -> alpha_F = {2 / slopeA if slopeA == slopeA else float('nan'):.1f} alpha")
+    print("\n  Bogen unabhaengig von der Auslesung: K = 2/3 und alle Brannen-Wurzeln >= 0  <=>  |theta| <= pi/12")
+    th = np.linspace(-np.pi / 3, np.pi / 3, 200001)
+    ok = np.all((1 + np.sqrt(2) * np.cos(th[:, None] + 2 * np.pi * np.arange(3) / 3)) >= -1e-12, axis=1)
+    print(f"  numerisch: groesstes |theta| mit allen Wurzeln >= 0: {np.abs(th[ok]).max():.6f}, pi/12 = {np.pi / 12:.6f}")

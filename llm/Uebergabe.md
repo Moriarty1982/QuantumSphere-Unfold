@@ -123,7 +123,8 @@ Die Daten verlangen eine Verschiebung von 0,2580 statt π/12 = 0,2618 (1,4 % kle
 - Feld X (drei Plätze), S = X†X, X → XU, D X = ∂X − i g X A. Bosonenmassen: s_i (diagonal), (s_i+s_j)/2 (je zweimal), alle massiv (numerisch 1e-14). S adjungiert gäbe drei masselose Bosonen ⇒ geladen muss X sein.
 - Auslesung A (√m ∝ s, Gram, H99): M_ii² ∝ √m_i ⇒ Aufhebung bei α_F = 8α. Auslesung B (m ∝ s): X = Suminos Φ, α_F = 4α, Überlappungs-Lesart von Koide verloren.
 - Sumino-Ladungen ⇒ Massenmatrix bilinear XᵀX; c für Neutrinos bleibt 1.
-- Offen: Auslesung A oder B begründen; Potential für X (ρ² = 1/2); Vereinigung mit SU(2)_L (legt α_F fest).
+- **Auslesung entschieden: A** (√m ∝ s). Nur A erlaubt negative Wurzeln (Neutrinos, H2); B gibt K_ν ≤ 0,585. Bogen gilt in beiden. Sumino-Bedingung hängt am Feld: X ⇒ α_F = 8α; Überlappungsmatrix als Feld (Φ → UΦ oder M → U M Uᵀ) ⇒ α_F = 4α. Letzteres braucht Überlappungen zwischen zwei verschieden geladenen Tripeln (links/rechts), nicht nativ.
+- Offen: Überlappungsmatrix als eigenes Feld begründen (zwei Tripel L/R); Potential (ρ² = 1/2); Vereinigung mit SU(2)_L.
 
 ## Nächster Schritt (Autorentscheidung)
 

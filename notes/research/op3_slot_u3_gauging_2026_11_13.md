@@ -90,3 +90,55 @@ Suminos Mechanismus passt.
   eigenes Potential mit zusätzlichen Feldern.
 - Wie hängt die Platzindex-U(3) mit SU(2)_L im Quaternionenfaktor zusammen
   (Vereinigung, die α_F festlegt)?
+
+## Nachtrag: Auslesung A oder B (13.11., Autor)
+
+Vorwissen: r16 (H11) legt √m_k ∝ |Platz k| fest, also √m linear in der
+Amplitude (B-artig, Diagonal-Labels); die Gram-Notiz und H99 benutzen
+√m ∝ Eigenwerte von S (A). H2 (r12): Neutrinos erreichen K = 2/3 nur mit
+einer negativen Wurzel; mit nur positiven Wurzeln höchstens K = 0,585.
+
+**Kriterien**
+
+| Kriterium | A: √m ∝ s | B: m ∝ s |
+|---|---|---|
+| Bogen \|θ\| ≤ π/12 | ja | ja (der Bogen ist nur „alle Wurzeln ≥ 0“, numerisch geprüft) |
+| Koide als Überlappung ρ² = 1/2 | ja | nein |
+| negative Wurzel (Neutrinos, H2) | ja, über die indefinite Form (Eigenwert < 0) | nein: Singulärwerte sind nie negativ; dann K_ν ≤ 0,585, Koide für Neutrinos ausgeschlossen |
+| √m linear im Feld (wie bei Koide- und Sumino-Modellen, r16) | nein, wenn X das Feld ist | ja |
+| Sumino-Bedingung α_F = 4α | nur mit passendem Feld (siehe unten) | ja, mit X |
+
+**Feldtyp und Kopplungsbedingung** (Skript, Abschnitt „Auslesung A oder B“):
+
+| Feld, das die Familienbosonen massiv macht | masselose Bosonen | A | B |
+|---|---|---|---|
+| X fundamental (X → XU) | 0 | α_F = 8α | α_F = 4α |
+| S adjungiert (S → U†SU) | 3 | – | – |
+| Φ mit Singulärwerten s, Φ → UΦ | 0 | **α_F = 4α** | α_F = 2α |
+| Massenmatrix M = S, M → U M Uᵀ (Suminos Ladungen) | 0 | **α_F = 4α** | α_F = 2α |
+
+Die Sumino-Bedingung hängt also nicht an der Auslesung allein, sondern am
+Paar (Auslesung, Feld): Entscheidend ist, dass die diagonalen
+Bosonenschwellen M_ii² proportional zu m_i sind. In A gilt das, wenn das
+Feld die Überlappungen s selbst als Singulärwerte trägt, also S als Feld
+mit einer Wirkung von einer Seite oder als symmetrische Massenmatrix.
+
+**Entscheidung: A.**
+- Nur A trägt die Neutrinoseite. B schließt negative Wurzeln aus, und
+  nach H2 ist Koide für die gemessenen Neutrinos dann nicht erreichbar;
+  H99, die Fassung bei einer Skala und der Sumino-Weg für Neutrinos
+  fielen weg.
+- Nur A gibt Koide eine geometrische Bedeutung (mittlere quadratische
+  Überlappung 1/2) und verbindet die indefinite Form mit der Signatur.
+- Der Preis: Das Feld, das die Familienbosonen massiv macht, ist dann
+  nicht X, sondern ein Objekt mit Singulärwerten s, am natürlichsten die
+  Überlappungsmatrix selbst in der Darstellung, die Suminos Ladungen
+  verlangen (M → U M Uᵀ). Dann gilt α_F = 4α wie bei Sumino. Mit X als
+  Feld wäre α_F = 8α.
+- Offen: Warum ist die Überlappungsmatrix selbst ein Feld (und nicht nur
+  aus X gebildet)? Bei Gram-Bildung aus einem Tripel transformiert sie
+  adjungiert (masselose Bosonen); als M → U M Uᵀ braucht sie Überlappungen
+  zwischen zwei verschieden geladenen Tripeln (etwa links und rechts,
+  passend zu ℓ_L in 3, e_R in 3̄). Das ist nicht nativ.
+- B bleibt als direkte Sumino-Übernahme widerspruchsfrei, aber nur für
+  geladene Leptonen.
