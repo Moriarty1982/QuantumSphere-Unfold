@@ -15,3 +15,9 @@ theta_e = 0.2222248 +- 6.3e-06; Phi_e = 0.666674; Delta Phi = 0.118724
 (4) Konsistente Fassung: theta fest aus gamma_BI, rho^2 aus m_e/m_mu (genau bekannt), Vorhersage m_tau und K
     rho^2 = 0.5000140, K = 0.6666760 (Pol 0.6666645 +- 5e-6), m_tau = 1777.134 MeV (PDG 1776.93 +- 0.09, +2.27 sigma)
     Vergleich exaktes Koide aus m_e, m_mu: theta = 0.2222220, m_tau = 1776.969 MeV
+
+(5) Mechanismus-Suche: gamma aus den Zaehlregeln je Frame (r09, r10)
+    gamma_M (alle Spins, Gewicht 2) = 0.237533; gamma_T (nur j = 1/2) = 0.127384 = ln2/(pi sqrt3) 0.127384
+    gamma_M/2 = 0.118766 gegen Delta Phi = 0.118724;  gamma_T/2 = 0.063692
+    Lesart: Phase eines Spin-1/2-Objekts unter einer gamma-gewichteten Holonomie, Phi = gamma * m mit m = 1/2;
+    der Oktant liefert Omega/2 = pi/4, also beide Teile von Phi_e als Spin-1/2-Phasen: Phi_e = pi/4 - gamma_M/2.

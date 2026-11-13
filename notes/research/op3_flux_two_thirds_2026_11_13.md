@@ -32,3 +32,30 @@ Test. Keine H-Nummer. Skript `op3_flux_two_thirds_2026_11_13.py`, Ausgabe `..._o
 - Er ist aber scharf prüfbar: Er verlangt m_τ = 1777,13 MeV. Ein künftiger Wert von m_τ (Belle II, BES III) entscheidet;
   dafür wäre eine eigene Vorab-Notiz nötig. Ein Mechanismus, der γ_BI als Fluss durch das Generationsdreieck ausweist, fehlt.
 - OP3/OP4 offen; OP1–OP5, C5, C6/T2 unverändert; H100 unberührt.
+
+## Nachtrag: Mechanismus für ΔΦ = γ/2 gesucht (13.11., spät, Autor: „Erst Mechanismus suchen“)
+
+Vorwissen: v4.10.0-r07.4 (Zählungen auf das Flächengesetz kalibriert), r09 (Zählregel je Frame, H98), r10 (Zählgleichung als
+Unruh-Statistik, E_j/T_U = 2πγ a(j); Zählregel als frame-abhängiges Flächenquantum), Annahmenliste Z1 (M zählt alle Spins,
+T nur j = 1/2; U(1)-Behandlung). Skript, Abschnitt (5). Nicht blind, kein Test.
+
+1. **γ ist nativ der M-Wert.** Aus der Zählregel des Companion folgen γ_M = 0,237533 (alle Spins, Gewicht 2) und
+   γ_T = ln 2/(π√3) = 0,127384 (nur j = 1/2). Der Treffer benutzt γ_M, den Wert des Materie-Frames, in dem die geladenen
+   Leptonen gelesen werden.
+2. **Bisherige Rolle von γ im Companion:** nur als Parameter der Horizontzählung (Flächenquantum, Boltzmann-Gewicht
+   e^{−2πγ a(j)}). Als Phase oder Holonomie tritt γ bisher nicht auf.
+3. **Kandidaten für einen Mechanismus (Literatur-Lesarten, nicht im Companion angelegt):**
+   - Ashtekar-Barbero-Verbindung A = Γ + γK: Die Holonomie des γK-Anteils gibt einem Spin-1/2-Objekt die Phase γκ/2, mit κ
+     der aufintegrierten extrinsischen Krümmung entlang der Schleife. γ/2 verlangt κ = 1 rad; ein Grund dafür fehlt.
+   - U(1)-Durchstoßpunkt (Z1: U(1)-Behandlung): Ein Spin-1/2-Punkt mit |m| = 1/2 trägt den Fluss γ · m in Einheiten des
+     Flächenquantums; als Phase gelesen gibt das γ/2, wenn die Einheit genau 1 ist. Auch das ist nicht begründet.
+   - γ als topologischer Winkel (Holst- bzw. Nieh-Yan-Term): eine Phase proportional zu γ je Einheit; die Einheit bleibt offen.
+4. **Gemeinsame Struktur.** In allen Lesarten kommt der Faktor 1/2 vom Spin 1/2, wie beim Oktanten (Phase = halber
+   Raumwinkel). Die Formel Φ_e = π/4 − γ_M/2 hieße dann: Beide Anteile des Flusses der geladenen Leptonen sind
+   Spin-1/2-Phasen, ein geometrischer (Oktant) und einer aus der γ-gewichteten Holonomie.
+
+**Bewertung.** Ein Mechanismus ist nicht hergeleitet. Es gibt eine zusammenhängende Lesart (Spin-1/2-Phase einer
+γ-gewichteten Holonomie im Materie-Frame), aber jede Fassung braucht eine unbegründete Einheit (κ = 1 rad bzw. Fluss-Einheit 1),
+das Vorzeichen bleibt offen, und eine Abbildung des Generationsdreiecks auf eine LQG-Schleife oder einen Durchstoßpunkt
+gibt es im Companion nicht. Prüfbar bleibt die Zahl: m_τ = 1777,13 MeV. Ein zweites Delta hätte erst mit einem solchen
+Mechanismus eine vorgegebene Form. OP3/OP4 offen; H100 unberührt.

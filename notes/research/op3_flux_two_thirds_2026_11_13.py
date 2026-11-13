@@ -86,3 +86,15 @@ if __name__ == "__main__":
     thk = brentq(lambda t: ratios(r2k, t)[0] - target, 0.15, 0.26)
     mk = ratios(r2k, thk) * POL[1]
     print(f"    Vergleich exaktes Koide aus m_e, m_mu: theta = {thk:.7f}, m_tau = {mk[2]:.3f} MeV")
+
+
+if __name__ == "__main__":
+    print("\n(5) Mechanismus-Suche: gamma aus den Zaehlregeln je Frame (r09, r10)")
+    js = np.arange(1, 400) / 2
+    a = np.sqrt(js * (js + 1))
+    gM = brentq(lambda g: np.sum(2 * np.exp(-2 * np.pi * g * a)) - 1, 0.05, 1.0)          # M: alle Spins, Gewicht 2
+    gT = brentq(lambda g: 2 * np.exp(-2 * np.pi * g * np.sqrt(0.75)) - 1, 0.05, 1.0)    # T: nur j = 1/2, Gewicht 2
+    print(f"    gamma_M (alle Spins, Gewicht 2) = {gM:.6f}; gamma_T (nur j = 1/2) = {gT:.6f} = ln2/(pi sqrt3) {np.log(2) / (np.pi * np.sqrt(3)):.6f}")
+    print(f"    gamma_M/2 = {gM / 2:.6f} gegen Delta Phi = {np.pi / 4 - 3 * te:.6f};  gamma_T/2 = {gT / 2:.6f}")
+    print("    Lesart: Phase eines Spin-1/2-Objekts unter einer gamma-gewichteten Holonomie, Phi = gamma * m mit m = 1/2;")
+    print("    der Oktant liefert Omega/2 = pi/4, also beide Teile von Phi_e als Spin-1/2-Phasen: Phi_e = pi/4 - gamma_M/2.")

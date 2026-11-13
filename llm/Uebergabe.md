@@ -24,6 +24,8 @@
     3θ_e = 2/3 rad (ΔΦ = 0,1187 vom Oktanten); Kreis zum historischen OP3 (δ = 2/9). Native Phasen geben nur Vielfache von π/6.
     **Fluss 2/3 rad gesucht** (`op3_flux_two_thirds_2026_11_13.*`): kein Mechanismus; Scan-Treffer ΔΦ = γ_BI/2 (0,036 %,
     nachträglich, 0,34 Zufallstreffer erwartet) verlangt m_τ = 1777,13 MeV (+2,3σ). Möglich: als H102 gegen künftiges m_τ festschreiben.
+    **Mechanismus gesucht:** γ_BI = γ_M (native M-Zählung); γ im Companion nur in der Horizontzählung. Lesarten (γK-Holonomie,
+    U(1)-Durchstoßpunkt |m| = 1/2, topologischer Winkel) geben γ/2 als Spin-1/2-Phase, je mit unbegründeter Einheit. Nicht hergeleitet.
   · zur Wahl: zweite Familienstruktur mit neutralem Qubit (Profil unten) ·
   Fortsetzung der Ladung auf die Sedenionen anders als über e7.
 - **Aufräumen:** Zweig `research/v5-octant-weitersuche` (PR #106) und Worktree `.claude/worktrees/qam-mml-mma-math-473bc4`

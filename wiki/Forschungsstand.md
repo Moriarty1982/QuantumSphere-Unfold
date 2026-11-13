@@ -1930,6 +1930,13 @@ Koide-Bogens ist exakt das Oktanten-Tripel. Zu den Fäden:
   nachträglich. Konsistent gerechnet verlangt er $m_\tau=1777{,}13$ MeV,
   $+2{,}3\sigma$ gegen den PDG-Wert $1776{,}93\pm0{,}09$; künftige
   $m_\tau$-Messungen entscheiden.
+- Mechanismus für $\Delta\Phi=\gamma/2$ gesucht: $\gamma_{\rm BI}=0{,}237533$
+  ist der native Wert des Materie-Frames aus der Zählregel (alle Spins);
+  im Companion tritt $\gamma$ bisher nur in der Horizontzählung auf, nicht
+  als Phase. Literatur-Lesarten (Holonomie des $\gamma K$-Anteils der
+  Ashtekar-Barbero-Verbindung, U(1)-Durchstoßpunkt mit $|m|=1/2$,
+  topologischer Winkel) geben $\gamma/2$ als Spin-1/2-Phase, brauchen aber
+  jeweils eine unbegründete Einheit. Nicht hergeleitet.
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),
