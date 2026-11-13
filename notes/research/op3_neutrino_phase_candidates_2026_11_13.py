@@ -194,3 +194,15 @@ if __name__ == "__main__":
                 c0 = float("nan")
             print(f"    {a_lab:10s} {lab:46s}: R(c=1) = {R(1.0):.6f} (z = {(R(1.0) - R_OBS) / S_OBS:+.2f}), "
                   f"c fuer z = 0: {c0:.3f}")
+
+
+if __name__ == "__main__":
+    print("\n== Nachtrag: c als Mass einer Abweichung (Unsicherheit von c, mit PMNS-Mittelung) ==")
+    for a_lab, a in (("alpha(0)", 1 / 137.036), ("alpha(m_tau)", 1 / 133.5), ("alpha(M_Z)", 1 / 127.95)):
+        lnQ = np.log(1 + a / np.pi * (1 + 1.5 * np.log(91187.6 / np.array(POL))))
+        lnf = W.T @ lnQ
+        R = lambda c: (lambda m: (m[1] ** 2 - m[0] ** 2) / (m[2] ** 2 - m[0] ** 2))(m_struct * np.exp(-c * lnf))
+        f = lambda t: brentq(lambda c: R(c) - t, -5, 10)
+        c0, chi, clo = f(R_OBS), f(R_OBS - S_OBS), f(R_OBS + S_OBS)
+        print(f"    {a_lab:12s}: c = {c0:.2f} +{chi - c0:.2f} / -{c0 - clo:.2f};  c - 1 = {c0 - 1:.2f} "
+              f"= {(c0 - 1) / (c0 - clo):.2f} sigma_c;  R linear in c: dR/dc = {(R(1.01) - R(0.99)) / 0.02:.2e}")

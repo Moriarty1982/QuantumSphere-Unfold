@@ -294,3 +294,36 @@ Companion nicht; die global wirkende Platzindex-U(3) der Gram-Lesart ist
 der einzige stetige Kandidat und müsste erst geeicht werden. Das wäre ein
 neues Strukturelement, keine Folgerung. OP3/OP4 offen; OP1–OP5, C5,
 C6/T2 unverändert.
+
+## Nachtrag: c als Maß einer Abweichung, als Integral gelesen (13.11., Autor)
+
+**1. Wie gut c bestimmt ist** (mit PMNS-Mittelung): c = 1,83 ± 1,0 (α(0)),
+1,79 ± 1,0 (α(m_τ)), 1,71 ± 0,97 (α(M_Z)). R hängt fast linear von c ab
+(dR/dc ≈ −4,6·10⁻⁴). Damit ist c − 1 = 0,7–0,8 nur 0,8σ von null entfernt;
+c = 0 (H99) liegt 1,8σ entfernt. Die Daten verlangen also eine Korrektur
+dieser Art (c > 0), aber keine Abweichung von c = 1.
+
+**2. c als Verhältnis zweier Integrale.** Die generationsabhängigen Teile
+beider Korrekturen sind Integrale über die Skala zwischen den Schwellen:
+
+    QED (geladen):  δ ln(m_i/m_j) = (3/2π) ∫ from m_j to m_i of α(μ) d ln μ,
+    Familie:        dieselbe Form mit α_F zwischen den Schwellen der
+                    Familienbosonen (M_i² ∝ m_i, also halbe Log-Länge).
+
+So gelesen ist c = (Familien-Integral, das der Neutrino-Massenterm sieht)
+/ (QED-Integral der geladenen Leptonen). Suminos Bedingung α_F = 4α ist
+genau die Aussage, dass beide Integrale für die geladenen Leptonen gleich
+sind. Sieht der Neutrino-Term dieselben Familienschwellen, ist c = 1; das
+gilt in Suminos Rahmen unabhängig davon, ob die Neutrinomassen über den
+Weinberg-Operator oder einen Seesaw oberhalb oder unterhalb der
+Familienskala entstehen, weil die Generationsabhängigkeit nur aus den
+IR-Schwellen der Bosonen kommt.
+
+**3. Lesart.** c − 1 wäre ein Maß dafür, wie weit das Integral auf der
+Neutrinoseite vom geladenen abweicht: andere Schwellen, ein anderes
+Laufen von α_F, eine unvollständige Aufhebung bei den geladenen Leptonen
+oder ein zweiter Effekt wie die Skalenwahl aus Idee 3. Ein bestimmtes c ≠ 1
+folgt aus keinem dieser Punkte ohne weiteres Modell. Mit heutigen Daten
+ist c = 1 verträglich; ein eigenes Integral wird erst gebraucht, wenn
+genauere Daten c ≠ 1 verlangen. Künftige JUNO-Werte bringen σ_c auf etwa
+0,5; c = 0 und c = 1 trennen sie dann mit etwa 2σ, c = 1 und c = 1,8 kaum.

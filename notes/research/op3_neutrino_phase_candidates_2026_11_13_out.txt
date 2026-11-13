@@ -84,3 +84,8 @@ wirkt bei Neutrinos allein: m_nu,k(phys) = m_nu,k(Struktur) * Q_k^(-c), Q_k = 1 
     alpha(0)   mit PMNS-Mittelung                            : R(c=1) = 0.030387 (z = +0.81), c fuer z = 0: 1.831
     alpha(M_Z) ohne Mischung (nu_k <-> e,mu,tau nach Index)  : R(c=1) = 0.030213 (z = +0.43), c fuer z = 0: 1.318
     alpha(M_Z) mit PMNS-Mittelung                            : R(c=1) = 0.030356 (z = +0.74), c fuer z = 0: 1.713
+
+== Nachtrag: c als Mass einer Abweichung (Unsicherheit von c, mit PMNS-Mittelung) ==
+    alpha(0)    : c = 1.83 +1.04 / -1.02;  c - 1 = 0.83 = 0.81 sigma_c;  R linear in c: dR/dc = -4.49e-04
+    alpha(m_tau): c = 1.79 +1.01 / -1.00;  c - 1 = 0.79 = 0.79 sigma_c;  R linear in c: dR/dc = -4.60e-04
+    alpha(M_Z)  : c = 1.71 +0.97 / -0.96;  c - 1 = 0.71 = 0.75 sigma_c;  R linear in c: dR/dc = -4.79e-04
