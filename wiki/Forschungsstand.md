@@ -1786,6 +1786,15 @@ Erkundung $\eta$, ohne Datenvergleich:
   Nachträglich gefunden; die Annahme „Verbinder-Hyperladung erzeugt eine
   Kantenphase im Familienraum“ ist nicht hergeleitet. Die Lesart setzt
   Majorana-Neutrinos voraus.
+- Nachtrag Mechanismus: Die Regel ist eine Holonomie $J^{y}$ je Umlauf
+  ($J$ die Komplexstruktur, $y$ die Verbinder-Hyperladung); H99 ist
+  $J^{1/2}=e^{i\pi/4}$. Exakt gilt: Drei Spin-1/2-Zustände entlang dreier
+  orthogonaler Achsen haben $\rho^2=1/2$, Rang 2 und Bargmann-Phase
+  $\pi/4$ (halber Raumwinkel des Oktanten). Das Rand-Tripel des
+  Koide-Bogens ist also genau dieses Oktanten-Tripel. Kandidat: Das
+  zusätzliche Higgs-Dublett des Majorana-Terms trägt diese Phase, wenn es
+  an den drei Plätzen entlang orthogonaler Achsen zeigt. Hindernis: Solche
+  Isospin-Richtungen sind nicht $Q_{\rm em}$-invariant (r33).
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),

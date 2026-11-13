@@ -238,3 +238,46 @@ also überein, und der Unterschied zwischen ihnen ist Dirac gegen Majorana.
 **Bewertung.** Die halbe Ladungsdifferenz hat eine strukturelle Quelle: die zweite Higgs-Einsetzung des
 Majorana-Terms. Die Regel ist einfach, erklärt H99 und den Dixon-Befund zugleich, und sie ist nicht hergeleitet.
 OP3/OP4 offen; H100 unberührt.
+
+## Nachtrag: Mechanismus gesucht (13.11., Autor: „Mechanismus suchen“)
+
+Vorwissen: r33 (Quaternionen-Richtungen i, j, k als Generationslabel ausgeschieden, weil nicht Q_em-invariant), r15
+(Hopf-Faserung als Träger der Trialitätsplätze), Gram-Notiz (Hopf-Torus, Rand = koplanar, Rang 2), Status zu
+thm:three-generations (Triplett e_4, e_5, e_6 und ν_R ↔ e_7 im inneren Frame J = L_e7). Skript, Abschnitt 9.
+
+**1. Die Regel als Holonomie.** „π/6 je Kante und Einheit Y/2“ heißt: Der Umlauf über die drei Plätze trägt je
+Einheit Y/2 den Faktor e^{iπ/2} = i, also die Komplexstruktur J. Ein Block mit Verbinder-Hyperladung y sieht J^y.
+H99 ist dann J^1 / J^{1/2} = J^{1/2} = e^{iπ/4}. Die achte Einheitswurzel, die native Phasen nicht liefern, entsteht als
+Wurzel aus J wegen der halbzahligen Hyperladung des Higgs. Pro Kante ist das ω · i⁻¹ = e^{iπ/6}, dessen Kubus i ist.
+
+**2. Geometrische Quelle von π/4: das Oktanten-Tripel.** Drei Qubit-Zustände (Spin 1/2) entlang dreier orthogonaler
+Achsen x, y, z haben (numerisch exakt):
+- paarweise |Überlappung|² = 1/2, also **ρ² = 1/2 (Koide)**;
+- Rang 2 (der Qubit-Raum ist zweidimensional), also **det S = 0 (Rand des Bogens)**;
+- Bargmann-Phase **+π/4**, also **θ = π/12**; das ist der halbe Raumwinkel des Oktanten (π/2). Allgemein ist die
+  Bargmann-Phase dreier Qubits der halbe Raumwinkel ihres sphärischen Dreiecks (numerisch 10⁻¹⁴).
+
+Umgekehrt: Paarweise Überlappung 1/2 heißt paarweise orthogonale Bloch-Vektoren. **Das Rand-Tripel des Koide-Bogens
+ist also bis auf eine Drehung genau das Oktanten-Tripel**; die Händigkeit (x, y, z gegen x, z, y) legt das Vorzeichen
+fest (+π/4 gegen −π/4). Mit den Quaternionen i, j, k als −iσ ist die Händigkeit durch ijk = −1 festgelegt. Das ist
+eine exakte Aussage, kein Datenvergleich.
+
+**3. Mechanismus-Kandidat.** Der Weinberg-Term hat gegenüber dem Dirac-Term ein zusätzliches Higgs-Dublett, also ein
+zusätzliches Qubit (schwacher Isospin). Zeigt dessen Richtung an den drei Plätzen entlang dreier orthogonaler Achsen
+und wird es entlang der Kanten stetig transportiert (Berry-Zusammenhang auf geodätischen Bögen), trägt der Umlauf die
+reine Phase π/4 ohne Betragsverlust. Das ist genau die verlangte Verschiebung, und es erklärt alle drei Zahlen der
+Rand-Bedingung zugleich (Überlappung 1/2, Rang 2, Phase π/4).
+
+**Was dagegen spricht oder fehlt.**
+- r33: Richtungen i, j, k im Isospinraum sind nicht Q_em-invariant. Ein Higgs-Dublett, das an den drei Plätzen in
+  verschiedene Isospin-Richtungen zeigt, bräche die elektrische Ladung je Platz. Das Qubit müsste ein anderes sein
+  (etwa die Hopf-Faser aus r15) oder die Q_em-Frage anders gelöst werden.
+- Ein Tensorprodukt mit dem Qubit-Tripel ist ausgeschlossen (K = 1/2); nur der stetige Transport (Holonomie) trägt.
+  Warum der Transport stetig und nicht projektiv ist, ist nicht begründet.
+- Warum die Orientierungen orthogonal sind, ist nicht hergeleitet; es ist die einzige Wahl mit Überlappung 1/2.
+- Nachträglich, nach Kenntnis von π/4 gesucht.
+
+**Bewertung.** Der Rand des Koide-Bogens hat eine exakte geometrische Bedeutung: drei Spin-1/2-Zustände entlang
+orthogonaler Achsen. H99 liest sich damit als: Die Neutrino-Plätze tragen gegenüber den geladenen zusätzlich die
+geometrische Phase eines solchen Oktanten-Tripels, passend zum zusätzlichen Higgs-Dublett des Majorana-Terms.
+Lesart mit einem klaren Hindernis (Q_em, r33). OP3/OP4 offen; H100 unberührt.

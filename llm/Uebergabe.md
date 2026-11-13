@@ -16,8 +16,10 @@
   Dixon-Sektorphase geprüft: Struktur passt (e/ν nur im Vorzeichen von φ_H), Zahl nicht (H99 verlangt ungerade
   Vielfache von π/24; Verbinder-Differenz 1 gibt π/6), Quark-Spiegelung widerspricht Daten. Halbe Ladungsdifferenz
   gefunden (nachträglich): Verbinder-Hyperladung Y/2 mal π/6; Weinberg HH (1) gegen H (1/2) gibt π/12 = H99, Dirac H̃
-  gibt π/6 = Dixon-Befund. Setzt Majorana-Neutrinos voraus. Als Nächstes: Mechanismus „Verbinder-Hyperladung erzeugt
-  Kantenphase im Familienraum“ suchen; oder Majorana-Lesart als Vorhersage festschreiben (H101); oder Pause bis H100.
+  gibt π/6 = Dixon-Befund. Setzt Majorana-Neutrinos voraus. Mechanismus gesucht:
+  Regel = Holonomie J^y; **Rand-Tripel des Koide-Bogens = drei Qubits entlang orthogonaler Achsen** (ρ² = 1/2, Rang 2,
+  Phase π/4, exakt). Kandidat: zusätzliches Higgs-Dublett des Weinberg-Terms trägt diese Phase. Hindernis r33 (Q_em).
+  Als Nächstes: Hopf-Faser (r15) statt Isospin als Qubit prüfen; oder Majorana-Lesart als H101; oder Pause bis H100.
   Werkzeuge: `notes/research/op3_eta_form_search_2026_11_13.*`, `op3_slot_u3_gauging_2026_11_13.*`.
   · zur Wahl: H100 vorab festschreiben (Kandidaten unten) · T₁₂ als dynamisches Feld · Potential für ρ² = 1/2 ·
   Vereinigung Platzindex-U(3) mit SU(2)_L.

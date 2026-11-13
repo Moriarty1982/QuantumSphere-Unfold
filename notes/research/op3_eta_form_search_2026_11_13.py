@@ -230,3 +230,46 @@ if __name__ == "__main__":
         print(f"    {lab:62s} Y/2 = {y:+.1f}: Phasenverschiebung gegen geladen (y - 1/2) * pi/6 = {(y - 0.5) * A:+.4f}; "
               f"reduzierte Phase {th:.4f}")
     print(f"    verlangt (H99): +pi/12 = {np.pi / 12:.4f}; Dixon-Befund (Dirac): Betrag pi/6 = {np.pi / 6:.4f}")
+
+
+def qubit(n):
+    """Spin-1/2-Zustand mit Bloch-Vektor n."""
+    n = np.array(n, float) / np.linalg.norm(n)
+    th, ph = np.arccos(np.clip(n[2], -1, 1)), np.arctan2(n[1], n[0])
+    return np.array([np.cos(th / 2), np.exp(1j * ph) * np.sin(th / 2)])
+
+
+def solid_angle(a, b, c):
+    a, b, c = (np.array(v, float) / np.linalg.norm(v) for v in (a, b, c))
+    return 2 * np.arctan2(np.dot(a, np.cross(b, c)), 1 + a @ b + b @ c + c @ a)
+
+
+if __name__ == "__main__":
+    print("\n(9) Nachtrag Mechanismus: Holonomie und geometrische Quelle von pi/4")
+    print(f"    Regel als Holonomie: Fluss je Einheit Y/2 = 3 * pi/6 = pi/2 -> Schleifenfaktor i = J; "
+          f"HH gegen H: J^(1/2) = e^(i pi/4); (omega i^-1)^3 = {np.round((np.exp(2j * np.pi / 3) / 1j) ** 3, 12)}")
+    # (a) Qubit-Zustaende entlang dreier orthogonaler Achsen
+    vs = [qubit(e) for e in ((1, 0, 0), (0, 1, 0), (0, 0, 1))]
+    S = np.array([[np.vdot(a, b) for b in vs] for a in vs])
+    r2, th = brannen(S)
+    Phi = np.angle(S[0, 1] * S[1, 2] * S[2, 0])
+    print(f"    Qubits entlang x, y, z: rho^2 = {r2:.6f}, theta = {th:.6f} (pi/12 = {np.pi / 12:.6f}), Bargmann-Phase {Phi:+.6f}, "
+          f"det S = {np.real(np.linalg.det(S)):.1e}, Rang {np.linalg.matrix_rank(S, tol=1e-10)}")
+    print(f"    Raumwinkel des Oktanten {solid_angle((1, 0, 0), (0, 1, 0), (0, 0, 1)):.6f} = pi/2; Bargmann-Phase = Omega/2")
+    # (b) allgemein: Bargmann-Phase dreier Qubits = -Omega/2; Eindeutigkeit des Rand-Tripels
+    err = 0
+    for _ in range(300):
+        ns = [rng.normal(size=3) for _ in range(3)]
+        q = [qubit(n) for n in ns]
+        ph = np.angle(np.vdot(q[0], q[1]) * np.vdot(q[1], q[2]) * np.vdot(q[2], q[0]))
+        err = max(err, abs(((ph - solid_angle(*ns) / 2) + np.pi) % (2 * np.pi) - np.pi))
+    print(f"    Bargmann-Phase <0|1><1|2><2|0> dreier Qubits = +Omega/2 (Raumwinkel, Orientierung 0-1-2): max. Fehler {err:.1e}")
+    print("    paarweise Ueberlappung^2 = 1/2 heisst Bloch-Vektoren paarweise orthogonal: das Rand-Tripel (rho^2 = 1/2, Rang 2)")
+    print("    ist bis auf Drehung genau das Oktanten-Tripel; Haendigkeit bestimmt das Vorzeichen der Phase.")
+    rev = [qubit(e) for e in ((1, 0, 0), (0, 0, 1), (0, 1, 0))]
+    Sr = np.array([[np.vdot(a, b) for b in rev] for a in rev])
+    print(f"    Gegenrichtung (x, z, y): Bargmann-Phase {np.angle(Sr[0, 1] * Sr[1, 2] * Sr[2, 0]):+.6f}")
+    # (c) Quaternionen i, j, k als Achsen: Pauli-Darstellung i -> -i sigma_x usw., Haendigkeit i j k = -1
+    sx = np.array([[0, 1], [1, 0]], complex); sy = np.array([[0, -1j], [1j, 0]]); sz = np.diag([1, -1]).astype(complex)
+    qi, qj, qk = -1j * sx, -1j * sy, -1j * sz
+    print(f"    Quaternionen als -i sigma: i j k = -1: {np.allclose(qi @ qj @ qk, -np.eye(2))} -> Achsen x, y, z rechtshaendig festgelegt")
