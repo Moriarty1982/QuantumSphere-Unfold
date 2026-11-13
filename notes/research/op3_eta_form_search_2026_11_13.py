@@ -120,3 +120,19 @@ if __name__ == "__main__":
     Sb = np.eye(3) + zb * P + np.conj(zb) * P.T
     print(f"    koplanares Koide-Tripel (theta = pi/12): det S = {np.real(np.linalg.det(Sb)):.1e}, Fluss = "
           f"{np.angle(Sb[0, 1] * Sb[1, 2] * Sb[2, 0]):.5f} (pi/4 = {np.pi / 4:.5f})")
+
+
+if __name__ == "__main__":
+    print("\n(5) Nachtrag: pi/4 = (3/2) * pi/6 (Vorschlag des Autors)")
+    print(f"    pi/6 nativ: omega * i^-1 = e^(i(2pi/3 - pi/2)), Fluss {np.angle(np.exp(2j * np.pi / 3) / 1j):.5f} = pi/6 {np.pi / 6:.5f}")
+    # (b) 3/2 als 3 rho^2 oder 1/K: gilt die Beziehung nur bei rho^2 = 1/2?
+    print("    Rand-Fluss Phi_b(rho) = 3 theta_b gegen (pi/6) * 3 rho^2 und (pi/6) / K:")
+    for r2 in (0.40, 0.45, 0.50, 0.55, 0.60):
+        Phib = np.arccos(np.clip((3 * r2 - 1) / (2 * r2 ** 1.5), -1, 1))
+        K = (1 + 2 * r2) / 3
+        print(f"      rho^2 = {r2:.2f}: Phi_b = {Phib:.4f}, (pi/6)*3rho^2 = {np.pi / 6 * 3 * r2:.4f}, (pi/6)/K = {np.pi / 6 / K:.4f}")
+    # (a) 3/2 = 3 Kanten * 1/2 (Spinor): Drehung um pi/6 im Vektorbild wirkt auf Spinoren mit e^(i pi/12)
+    a = np.pi / 6
+    Rspin = np.array([[np.exp(-1j * a / 2), 0], [0, np.exp(1j * a / 2)]])   # SU(2)-Bild einer Drehung um a
+    print(f"    Spinorbild einer Drehung um pi/6: Phasen {np.round(np.angle(np.diag(Rspin)), 5)} (= -+pi/12); "
+          f"drei Kanten: Fluss {3 * a / 2:.5f} = pi/4")

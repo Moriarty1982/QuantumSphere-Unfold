@@ -20,3 +20,13 @@
     erzeugte Fluesse in Einheiten pi/12: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22]
     pi/4 = 3 * pi/12 enthalten: False; naechste: pi/6 und pi/3 (Abstand pi/12)
     koplanares Koide-Tripel (theta = pi/12): det S = -1.4e-16, Fluss = -0.78540 (pi/4 = 0.78540)
+
+(5) Nachtrag: pi/4 = (3/2) * pi/6 (Vorschlag des Autors)
+    pi/6 nativ: omega * i^-1 = e^(i(2pi/3 - pi/2)), Fluss 0.52360 = pi/6 0.52360
+    Rand-Fluss Phi_b(rho) = 3 theta_b gegen (pi/6) * 3 rho^2 und (pi/6) / K:
+      rho^2 = 0.40: Phi_b = 1.1644, (pi/6)*3rho^2 = 0.6283, (pi/6)/K = 0.8727
+      rho^2 = 0.45: Phi_b = 0.9524, (pi/6)*3rho^2 = 0.7069, (pi/6)/K = 0.8267
+      rho^2 = 0.50: Phi_b = 0.7854, (pi/6)*3rho^2 = 0.7854, (pi/6)/K = 0.7854
+      rho^2 = 0.55: Phi_b = 0.6488, (pi/6)*3rho^2 = 0.8639, (pi/6)/K = 0.7480
+      rho^2 = 0.60: Phi_b = 0.5342, (pi/6)*3rho^2 = 0.9425, (pi/6)/K = 0.7140
+    Spinorbild einer Drehung um pi/6: Phasen [-0.2618  0.2618] (= -+pi/12); drei Kanten: Fluss 0.78540 = pi/4

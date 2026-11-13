@@ -96,3 +96,33 @@ rationales Vielfaches von π, stammt also ebenfalls aus keiner Einheitswurzel.
   neutralen Sektor zu dem der geladenen addiert, etwa ein koplanarer (Rang-2-)Block, der nur neutral existiert. Der
   native Majorana-Verbinder für ν^c (r44.1(d)) ist ein möglicher Ort; ob er Rang 2 hat, ist nicht geprüft.
 - OP3/OP4 offen; OP1–OP5, C5, C6/T2 unverändert.
+
+## Nachtrag: π/4 = (3/2) · π/6 (13.11., Autor: „erst π/6 · 3/2 rechnen und schauen, wo die 3/2 herkommen“)
+
+π/6 ist nativ: ω · i⁻¹ = e^{i(2π/3 − π/2)} = e^{iπ/6} (Skript, Abschnitt 5). Gesucht ist also ein Faktor 3/2.
+Gesammelt und geprüft, ob sie einen Mechanismus liefern oder nur die Zahl:
+
+| Herkunft der 3/2 | gilt nur bei ρ² = 1/2? | Mechanismus |
+|---|---|---|
+| 3ρ² (Koide-Überlappung) | ja: bei ρ² = 0,40 bzw. 0,60 weicht Φ_b von (π/6)·3ρ² um 0,54 bzw. 0,41 ab | keiner |
+| 1/K | ja: Abweichung 0,29 bzw. 0,18 | keiner |
+| 3α/2π (QED-Log), Spin 3/2, Ladungsdifferenzen der Blöcke (Leptonzahl 2, T₃ 1/2, Y 1/2) | – | keiner, oder Zahl passt nicht |
+| **3 · 1/2: drei Kanten, Spinor-Halbierung** | nein, struktureller Faktor | **ja, als Lesart** |
+
+**Lesart „drei Kanten mal Spinor“.** Eine Drehung um π/6 im Vektorbild wirkt auf Spinoren mit e^{±iπ/12} (SU(2)
+als Doppelüberlagerung). Ist der Transport von Platz zu Platz eine solche Drehung und sind die Plätze Spinoren, trägt
+jede Kante π/12, und die drei Kanten des Dreiecks geben den Fluss 3 · π/12 = π/4. Das passt zum Zwei-Sonden-System:
+Die Sonden Ψ_1, Ψ_2 sind Dirac-Spinoren. Ein nativer Winkel π/6 kommt außer aus ω · i⁻¹ auch als Winkel zwischen
+Wurzel und Gewicht im Wurzelsystem A_2 vor (die Bemerkung zum Ausleseschestern in v490 nennt A_2 für die sechs
+Richtungen im Abstand von 60°).
+
+**Was dafür fehlt.**
+- Warum der Transport zwischen benachbarten Plätzen gerade eine Drehung um π/6 ist.
+- Warum er nur im neutralen (Majorana-)Block wirkt und nicht im geladenen (Dirac-)Block. Ein Hinweis zum Prüfen:
+  Unter einer Phasendrehung bleibt ψ̄ψ unverändert, ψᵀψ nicht; ob sich daraus die Beschränkung auf den neutralen
+  Block ergibt, ist nicht gerechnet.
+- Die anderen Herkünfte der 3/2 treffen die Zahl nur an der Stelle ρ² = 1/2 und sind daher Numerologie.
+
+**Bewertung.** Die Zerlegung trägt als Lesart: Fluss = 3 Kanten · (π/6)/2. Sie macht aus „achte Einheitswurzel
+fehlt“ die Frage „Spinor-Transport um π/6 je Kante“. Nicht hergeleitet; kein Datenvergleich; H100 unberührt.
+OP3/OP4 offen.
