@@ -87,3 +87,32 @@ wäre eine eigene Rechnung.
 - Die Signatur (2,1) des neutralen Teils passt dafür zur negativen Wurzel; ob eine Lorentz-Fassung der Bargmann-Phase
   dort π/4 geben kann, ist die nächste offene Rechnung.
 - OP3/OP4 offen; H100 unberührt.
+
+## Nachtrag: Lorentz-Fassung gerechnet (13.11., spät, Autor: „Lorentz-Fassung rechnen“)
+
+Skript `op3_lorentz_octant_2026_11_13.py`, Ausgabe `..._out.txt`. Nicht blind, kein Datenvergleich.
+
+**1. Lorentz-Qubit (C^{1,1}, SU(1,1)) scheidet aus.** Für Zustände mit ψ†ηψ = +1 gilt die umgekehrte
+Cauchy-Schwarz-Ungleichung |⟨a|b⟩|² ≥ 1 (kleinster Wert bei 20 000 Paaren 1,0001). Damit ist ρ² ≥ 1 und K ≥ 1; ein
+Koide-Tripel, also auch ein Lorentz-Oktant mit Überlappung 1/2, ist im Lorentz-Qubit unmöglich.
+
+**2. Signatur (2,1) auf drei Dimensionen.** Das geladene zirkulante Tripel (ρ² = 1/2, θ_e = 0,2222) wurde mit
+η = 1 − 2tt† für native Zeitachsen t gelesen und auf Einheitsdiagonale normiert:
+
+| Zeitachse t | ρ² | θ | Eigenwerte |
+|---|---|---|---|
+| Zyklusachse (1,1,1)/√3, Fourier k = 1, Eigenvektoren | 9,75 | 0,400 | (−3,98; 0,23; 6,75) |
+| Koordinatenachse e_1 | 0,556 | 0,249 | (−0,04; 0,60; 2,45) |
+| Koordinatenachse e_2 | 2,16 | 0,200 | (−0,95; 0,07; 3,88) |
+| eine Platzrichtung | ein Platz zeitartig, die anderen lichtartig (Norm 0) | – | – |
+| verlangt (H99) | 0,5 | 0,484 | (−0,196; 0,944; 2,252) relativ |
+
+Keine native Zeitachse trifft die Forderung. Bei 40 000 zufälligen Achsen erfüllen 7 beide Bedingungen
+(ρ² = 0,50 ± 0,01, θ = 0,484 ± 0,01): Lösungen gibt es als Familie, aber keine ist ausgezeichnet. Nebenbefund: Liegt die
+Zeitachse entlang eines Platzes, werden die beiden anderen Plätze lichtartig, eine direkte Folge von |Überlappung|² = 1/2.
+
+**Bewertung.** Eine Lorentz-Fassung des Oktanten gibt es im Lorentz-Qubit nicht, und in Signatur (2,1) wählt keine
+native Zeitachse die H99-Verschiebung aus. Die Suche nach einem nativen Mechanismus für π/4 endet damit vorerst bei:
+geometrisch exakt ist das Oktanten-Tripel (Qubits, Hopf-Träger), aber ein farb- und ladungsneutraler Ort dafür fehlt,
+und die neutrale Signatur (2,1) liefert ihn nicht. OP3/OP4 offen; H100 unberührt und als Datentest weiter der nächste
+belastbare Schritt.

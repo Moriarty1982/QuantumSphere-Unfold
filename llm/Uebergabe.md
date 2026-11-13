@@ -23,7 +23,9 @@
   Q_em-verträglicher Automorphismus (Farbzentrum); Richtung unter arccos(1/√3) zu e7 läuft um das Oktanten-Tripel
   (ρ² = 1/2, Rang 2, π/4). **Magischer Winkel** = orthonormale Platzrichtungen; im O-Faktor Farbanteile
   (Stabilisator 8 → 3), im H-Faktor Ladung (r33); neutraler Teil (e3, e7, e3e7) hat Signatur (2,1), kein exakter
-  Oktant. Als Nächstes: Lorentz-Fassung der Bargmann-Phase in Signatur (2,1) rechnen (gibt sie π/4?). Oder Pause bis H100.
+  Oktant. **Lorentz-Fassung gerechnet** (`op3_lorentz_octant_2026_11_13.*`): Lorentz-Qubit hat |⟨a|b⟩|² ≥ 1 (kein
+  Koide); in (2,1) trifft keine native Zeitachse H99 (nur nicht ausgezeichnete Familie). Mechanismus-Suche endet vorerst.
+  Empfehlung: PR #105 mergen und H100 abwarten; offene Fäden in der η- und Hopf-Notiz.
   Werkzeuge: `notes/research/op3_eta_form_search_2026_11_13.*`, `op3_slot_u3_gauging_2026_11_13.*`.
   · zur Wahl: H100 vorab festschreiben (Kandidaten unten) · T₁₂ als dynamisches Feld · Potential für ρ² = 1/2 ·
   Vereinigung Platzindex-U(3) mit SU(2)_L.

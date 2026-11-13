@@ -1812,11 +1812,18 @@ Erkundung $\eta$, ohne Datenvergleich:
   ($e_3\otimes1$, $1\otimes e_7$, $e_3\otimes e_7$) hat Signatur (2,1),
   passend zur negativen Wurzel, erlaubt aber keinen exakten Oktanten.
   Ein neutraler Ort für das Oktanten-Tripel ist nicht gefunden.
+- Nachtrag Lorentz-Fassung: Im Lorentz-Qubit ($SU(1,1)$) ist
+  $|\langle a|b\rangle|^2\ge1$, also kein Koide-Tripel. In Signatur (2,1)
+  auf drei Dimensionen trifft keine native Zeitachse (Zyklusachse,
+  Koordinatenachsen, Eigenvektoren, Platzrichtung) die H99-Forderung;
+  Lösungen gibt es nur als nicht ausgezeichnete Familie. Die Suche nach
+  einem nativen Mechanismus für $\pi/4$ endet vorerst hier; H100 bleibt
+  der nächste belastbare Schritt.
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),
 > `notes/research/op3_slot_u3_gauging_2026_11_13.md` (Eichung Platzindex-U(3)),
-> `notes/research/op3_eta_form_search_2026_11_13.md` (Form η, Bargmann-Phase), `notes/research/op3_hopf_octant_2026_11_13.md` (Oktanten-Tripel im Hopf-Träger), `predictions/Vorab_Notiz_H100_Neutrino_Verhaeltnis_naechster_Fit.md`,
+> `notes/research/op3_eta_form_search_2026_11_13.md` (Form η, Bargmann-Phase), `notes/research/op3_hopf_octant_2026_11_13.md` (Oktanten-Tripel im Hopf-Träger), `op3_lorentz_octant_2026_11_13.py` (Lorentz-Fassung), `predictions/Vorab_Notiz_H100_Neutrino_Verhaeltnis_naechster_Fit.md`,
 > `notes/research/nufit_verlauf_2026_11_13.py` (mit Grafik und Ausgabe),
 > `notes/research/op3_indefinite_form_2026_11_13.md`,
 > `notes/research/predictions/Vorab_Notiz_H99_Neutrino_Phase_Bogenrand.md`,
