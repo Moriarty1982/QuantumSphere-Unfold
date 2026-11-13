@@ -1893,11 +1893,63 @@ Koide-Bogens ist exakt das Oktanten-Tripel. Zu den Fäden:
   aber nicht (Streuung 0,11), und die geladenen Leptonen liegen mit Rang 3
   außerhalb der Qubit-Ebene. Ein Prinzip, das die Treue genau auf $1/2$
   legt, fehlt.
+- Rückwärtssuche Auswahlprinzip: Bei $\rho^2=1/2$ ist der kleinste
+  Eigenwert in erster Ordnung der Abstand vom Rand, $s_{\min}\approx\pi/12-\theta$.
+  Für die geladenen Leptonen ist $\pi/12-\theta_e=0{,}0396$ und
+  $\sqrt{m_e}/\langle\sqrt m\rangle=0{,}0403$: Die Elektronmasse misst den
+  Abstand vom Qubit-Oktanten. Ein Prinzip muss also zwei Zahlen liefern,
+  die Treue $1/2$ und diesen Abstand; keine ist hergeleitet.
+- Herleitungsversuch: Für die Bahn eines Qubits unter dem Winkel $\beta$ zur
+  Achse einer $120^\circ$-Drehung gilt $K=(1+\cos^2\beta)/2$. In der
+  Tetraedergruppe $A_4$ steht jede zweizählige Achse unter dem magischen
+  Winkel zu jeder dreizähligen, $K=2/3$ ist dort der einzige mögliche Wert
+  (Oktaeder- und Ikosaedergruppe lassen weitere zu). Koide ist damit
+  bedingt hergeleitet: Qubit-Träger, Bezug aus der Klein-Gruppe ($\mathbb Z_2$),
+  Plätze als $\mathbb Z_3$-Bahn, also genau die beiden Auslesungen aus r55.
+  Die exakte Konstruktion gibt aber ein masseloses Elektron; die
+  Elektronmasse ist ein Bruch der $A_4$-Symmetrie, dessen Größe nicht
+  hergeleitet ist. Offen bleibt auch der Qubit-Träger.
+- Test H101 (Vorab f470817): Die Lepton-Maske aus r47 in Form K
+  ($M=DCD$) hebt das Elektron nicht; eine Kongruenz erhält den Rang
+  (Sylvester), das Elektron bleibt masselos. Widerlegt. Nachträglich: Die
+  lineare r47-Form hebt es, gibt $m_\mu/m_\tau$ auf $0{,}35\,\%$, verfehlt
+  aber Koide um $3\cdot10^{-4}$ (etwa das 60-Fache der Pol-Unsicherheit).
+  Eine Anhebung, die Koide auf $10^{-5}$ erhält, ist nicht gefunden.
+- Andere Anhebung: Jede Störung des Oktanten außer einer Phasendrehung
+  der Überlappungen ändert $K$ schon in erster Ordnung; eine Anhebung, die
+  Koide exakt erhält, ist daher eine reine Flussänderung durch das
+  Platzdreieck. Nötig sind $\Delta\Phi=0{,}1187$ rad, also ein Fluss der
+  geladenen Leptonen von $3\theta_e=0{,}6667\approx2/3$ rad (Brannen,
+  $\delta=2/9$). Native Phasen geben nur Vielfache von $\pi/6$. Damit
+  schließt sich der Kreis zum historischen OP3: Die Elektronmasse
+  herzuleiten heißt, einen Fluss von $2/3$ rad herzuleiten.
+- Fluss $2/3$ rad gesucht: Kein nativer Mechanismus (Berry-Phase verlangt
+  $4/3$ sr, $\Phi=K$ ist durch H1 widerlegt). Ein fester Scan nativer Zahlen
+  (154 Versuche, 1 %) gibt einen Treffer: $\Delta\Phi=\gamma_{\rm BI}/2$ auf
+  $0{,}036\,\%$, bei 0,34 zufällig erwarteten Treffern unauffällig und
+  nachträglich. Konsistent gerechnet verlangt er $m_\tau=1777{,}13$ MeV,
+  $+2{,}3\sigma$ gegen den PDG-Wert $1776{,}93\pm0{,}09$; künftige
+  $m_\tau$-Messungen entscheiden.
+- Mechanismus für $\Delta\Phi=\gamma/2$ gesucht: $\gamma_{\rm BI}=0{,}237533$
+  ist der native Wert des Materie-Frames aus der Zählregel (alle Spins);
+  im Companion tritt $\gamma$ bisher nur in der Horizontzählung auf, nicht
+  als Phase. Literatur-Lesarten (Holonomie des $\gamma K$-Anteils der
+  Ashtekar-Barbero-Verbindung, U(1)-Durchstoßpunkt mit $|m|=1/2$,
+  topologischer Winkel) geben $\gamma/2$ als Spin-1/2-Phase, brauchen aber
+  jeweils eine unbegründete Einheit. Nicht hergeleitet.
+- **H102** vorab (ee0a103): Die Beziehung $\Phi_e=\pi/4-\gamma_M/2$ verlangt
+  $m_\tau=1777{,}134$ MeV (exaktes Koide: $1776{,}969$). Geprüft wird gegen
+  die erste PDG-Ausgabe nach dem 13.11.2026; heute $+2{,}3\sigma$.
+- Fläche und Phase zugleich: In der Holonomie-Fluss-Paarung ist $\gamma m$
+  Eigenwert des Flusses und Phasenrate der Holonomie; für $m=1/2$ gibt das
+  $\gamma/2$, aber nur mit der Flächeneinheit $8\pi G\hbar$ und dem U(1)-Wert
+  $|m|$. Mit den Konventionen von r10 ($8\pi\gamma\ell_P^2\sqrt{j(j+1)}$) käme
+  das 43,5-Fache heraus. Die Einheit bleibt frei.
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),
 > `notes/research/op3_slot_u3_gauging_2026_11_13.md` (Eichung Platzindex-U(3)),
-> `notes/research/op3_eta_form_search_2026_11_13.md` (Form η, Bargmann-Phase), `notes/research/op3_hopf_octant_2026_11_13.md` (Oktanten-Tripel im Hopf-Träger), `op3_lorentz_octant_2026_11_13.py` (Lorentz-Fassung), `op3_neutral_su2_octant_2026_11_13.md` (neutrale SU(2), Spin 1/2), `op3_sedenion_reference_2026_11_13.md` (Bezugszustand), `op3_koide_potential_2026_11_13.md` (Potential, T₁₂), `v4_10_0_r12/` (Runde r12), `predictions/Vorab_Notiz_H100_Neutrino_Verhaeltnis_naechster_Fit.md`,
+> `notes/research/op3_eta_form_search_2026_11_13.md` (Form η, Bargmann-Phase), `notes/research/op3_hopf_octant_2026_11_13.md` (Oktanten-Tripel im Hopf-Träger), `op3_lorentz_octant_2026_11_13.py` (Lorentz-Fassung), `op3_neutral_su2_octant_2026_11_13.md` (neutrale SU(2), Spin 1/2), `op3_sedenion_reference_2026_11_13.md` (Bezugszustand), `op3_koide_potential_2026_11_13.md` (Potential, T₁₂), `op3_selection_principle_2026_11_13.md` (Auswahlprinzip), `op3_flux_two_thirds_2026_11_13.md` (Fluss 2/3 rad), `v4_10_0_r12/` (Runde r12), `predictions/Vorab_Notiz_H100_Neutrino_Verhaeltnis_naechster_Fit.md`,
 > `notes/research/nufit_verlauf_2026_11_13.py` (mit Grafik und Ausgabe),
 > `notes/research/op3_indefinite_form_2026_11_13.md`,
 > `notes/research/predictions/Vorab_Notiz_H99_Neutrino_Phase_Bogenrand.md`,
