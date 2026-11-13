@@ -1445,6 +1445,71 @@ vierten Generation fehlt). OP3/OP4 bleiben offen, Guards unverändert.
 > fünf OP3-Notizen vom 12.11. Keine H-/k-Nummer, kein MMA-Beleg.
 
 
+### Erkundung: Eigenwerte der Platz-Gram-Matrix als eichinvariante Auslesung (13.11.2026)
+
+Analytische Erkundung mit numerischer Selbstprüfung, nicht blind. Gefragt
+war nach einer Auslesung einer Konfiguration dreier Plätze, die
+eichinvariant ist und drei Werte liefert.
+
+**Auslesung.** Die Eigenwerte der Gram-Matrix
+$S_{ab}=\langle x_a,x_b\rangle$ hängen von keiner Platzbasis ab und sind
+unter jeder unitären, auf allen Plätzen gleichen Wirkung invariant
+(Lorentz-Drehungen, $Q_{\rm em}$, schwaches SU(2), Hyperladung, Farbe;
+nicht Boosts). Die Zuordnung $\sqrt{m_k}\propto s_k$ ist eine Annahme.
+
+**Geschlossene Form.** Für drei Einheitsvektoren mit Überlappungen
+$c_{12},c_{13},c_{23}$ gilt
+
+$$
+s_k=1+2\rho\cos\bigl(\theta+\tfrac{2\pi k}{3}\bigr),\qquad
+\rho^2=\tfrac13\bigl(c_{12}^2+c_{13}^2+c_{23}^2\bigr),\qquad
+\cos3\theta=\frac{c_{12}c_{13}c_{23}}{\rho^3},
+$$
+
+und
+
+$$
+K=\frac{\sum_k s_k^2}{(\sum_k s_k)^2}=\frac{1+2\rho^2}{3},\qquad
+\det S=1-3\rho^2+2\rho^3\cos3\theta .
+$$
+
+Das ist r53.1(b) und r12.1, gelesen als Gram-Matrix.
+
+- **Koide als Überlappung.** $K=2/3$ gilt genau bei mittlerer
+  quadratischer Überlappung $\rho^2=\tfrac12$.
+- **Der Bogen folgt aus der Positivität.** Bei $\rho^2=\tfrac12$ ist
+  $\det S\ge0$ genau für $|\theta|\le\pi/12$, der Bogen aus dem
+  v4.11-Abschnitt. Der Rand sind drei Plätze in einer Ebene mit einem
+  masselosen leichtesten Zustand.
+- **Zahl der Massen = Rang.** Auf der farbfesten Ebene
+  $\mathrm{span}(1,e_7)$ ist ein Eigenwert immer null; drei gleiche
+  Zustände geben $(3,0,0)$.
+- **Mittelwert.** Über zufällige Einheitsvektoren im $\mathbb R^n$ ist
+  das Mittel von $K$ genau $(1+2/n)/3$, also $2/3$ für $n=2$. Auf dem
+  farbfesten Hopf-Torus von r15 liegt $K$ zwischen $\tfrac12$ und $1$
+  mit Mittel $2/3$.
+- **Unterschied zu H18.** Mit den Diagonal-Labels gilt dort
+  $K\le\tfrac12$ (12.11.), mit den Eigenwerten $K\ge\tfrac12$. Der
+  Ausschluss gilt für das H18-Gesetz, nicht für die ladungsinvariante
+  Auslesung.
+
+**Bewertung.** Koide wird zu einer Aussage über die Konfiguration; die
+Zahl $2/3$ ist damit nicht hergeleitet. Der Mittelwert ist ein Mittel
+von $K$ über Konfigurationen, keine Eigenschaft einer einzelnen, und kann
+Zufall der Dimension zwei sein. Die farbfeste Ebene gibt genau einen
+masselosen Zustand; eine Elektronmasse verlangte eine dritte, farbneutral
+nicht vorhandene Richtung. Offen bleibt, warum Massenwurzeln Eigenwerte
+sein sollen, was die Konfiguration festlegt und wie drei Plätze gleicher
+Quantenzahlen linear unabhängig sein können. Nachträglich, nicht blind:
+die geladenen Leptonen hätten $\rho^2=0{,}499991$ und
+$\det S=0{,}0557$. OP3/OP4 bleiben offen, Guards unverändert.
+
+> **Anmerkungen für LLMs und Quellenprüfung:** Notiz
+> `notes/research/op3_gram_eigen_readout_2026_11_13.md` mit Prüfskript.
+> Vorwissen: r10.1, r12.1, r53.1(b), r33/H18, `sec:v4110-koide-overlap`.
+> Keine H-/k-Nummer, kein MMA-Beleg.
+
+
 ### Version 5: Veröffentlichungsvorbereitung wieder aufgenommen (12.11.2026)
 
 PR #100 integriert die jüngsten OP3-Erkundungen. Auf Autorenauftrag werden

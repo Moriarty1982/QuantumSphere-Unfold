@@ -267,3 +267,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 13.11.2026: Nachtrag 2 zur Dixon-Platzkopplung in Forschungsstand (Rückweg über Dixon-konjugiertes Element eichinvariant, Element trägt bei einem Dublett keine Phase; Phase = relative Phase zweier freier Kopplungskonstanten); kein OP-Abschluss.
 
 13.11.2026: Weg C in Forschungsstand ergänzt (vier Generationenträger mit heutigem Stand; r33-Labels nicht ladungsinvariant; Modell I ohne Vorhersage; Korrektur: r53 als Vorbefund der Kopplungsabschnitte); kein OP-Abschluss.
+
+13.11.2026: Erkundung zur Eigenwert-Auslesung der Platz-Gram-Matrix in Forschungsstand ergänzt (K = (1+2ρ²)/3, Bogen aus Positivität, Rang = Zahl der Massen, Torus-Mittel 2/3); Auslesung ist Annahme, kein OP-Abschluss.

@@ -1,6 +1,6 @@
 # Übergabe: Stand der letzten Sitzung
 
-13. November 2026, ca. 02:00 (Claude). Wird pro Arbeitsblock überschrieben.
+13. November 2026, ca. 04:10 (Claude). Wird pro Arbeitsblock überschrieben.
 
 - Öffentliche Baseline v5.0.0 (DOI 10.5281/zenodo.24152615, Tag v5.0.0 auf 539b75b). PR #100, #101, #102 gemergt; main 1eed465; Läufe 43265308165 (Zwei-PDF) und 43265308144 (Wiki-Sync) erfolgreich. Keine weitere Veröffentlichung nötig.
 - Lokaler Ordner des Autors (`Quantum Sphera`) stand noch auf dem 6.11. (93c3d21, r05) und wurde auf Autorenfreigabe per Fast-Forward auf 1eed465 gebracht. Der alte Stand ist als Tag `lokal-stand-2026-11-06` gesichert (dabei entfielen 58 verfolgte Dateien, u. a. `.claude/skills`, alte Zusammenfassungen; alle über den Tag erreichbar).
@@ -69,12 +69,20 @@
 - Träger: Farbtriplett ausgeschieden (12.11.); Quaternionen-Richtungen i, j, k (r33) ausgeschieden als Generationenlabel, weil mu_1, mu_2 unter Q_em nicht invariant sind (neu; Voraussetzung: derselbe H-Faktor wie r40–r43); Hopf-Träger K <= 1/2; Modell I widerspruchsfrei, ohne Vorhersage.
 - Antwort: kein Träger liefert Zahl drei und Massen zugleich. Es fehlt ein Grund für die Wiederholung (nativer Mehrfachraum gleicher Quantenzahlen oder eichinvariante Dreifachauslesung), nicht ein weiterer Kopplungsansatz.
 
+## Erkundung Eigenwert-Auslesung (13.11., „weiter“)
+
+- Notiz und Skript `notes/research/op3_gram_eigen_readout_2026_11_13.*`, im selben PR #103. Erkundung, kein Test.
+- Eigenwerte der Platz-Gram-Matrix S sind eichinvariant (unitäre Wirkungen; nicht Boosts). Für drei Einheitsvektoren: s_k = 1 + 2 rho cos(theta + 2pi k/3), rho² = mittlere quadratische Überlappung, cos 3theta = c12 c13 c23/rho³, K = (1 + 2 rho²)/3 (mit sqrt(m) ∝ s als Annahme).
+- Koide ⇔ rho² = 1/2; Positivität gibt den Bogen |theta| <= pi/12; Rand = koplanare Plätze, leichtester Zustand masselos. Zahl der Massen = Rang. Farbfeste Ebene: immer ein Eigenwert null.
+- Mittel von K über Einheitsvektoren im R^n: (1 + 2/n)/3; farbfester Hopf-Torus: K in [1/2, 1], Mittel genau 2/3. Mittel über Konfigurationen, keine Herleitung; Numerologie-Vorbehalt.
+- Unterschied zum Ausschluss vom 12.11.: der galt für das H18-Gesetz (Diagonal-Labels), nicht für die Eigenwerte.
+
 ## Nächster Schritt (Autorentscheidung)
 
-- Eichinvariante Dreifachauslesung einer Konfiguration in O³ untersuchen (invariant unter Farbe, Q_em, Lorentz; Beispiel Eigenwerte von adj(S), farbfest (0,0,m)).
+- Entscheiden, ob die Eigenwert-Auslesung als Kandidat weiterverfolgt wird. Wenn ja, braucht sie vorab: (1) einen Grund, warum Massenwurzeln Eigenwerte sind; (2) eine Regel, die die Konfiguration festlegt oder über welche Menge gemittelt wird; (3) eine dritte farbneutrale Richtung für die Elektronmasse. Ein Test dazu bekäme H99 und eine Vorab-Notiz.
 - Statusvermerke in einer neuen Runde: r33-Labels (Ladung), ältere Koide-Stellen (v470/17, „2/3 factor“, rem:koide-mass-discrepancy), thm:three-generations.
 - Oder die OP3-Linie ablegen: offene Vorhersagen H15, H42, H46, H96; Stringfrage W-a, W-c.
-- PR #103 wartet auf „PR 103 mergen“. Ein Test mit Kriterium bekäme H99 und eine Vorab-Notiz.
+- PR #103 wartet auf „PR 103 mergen“.
 
 ## Pflichten in jeder Sitzung
 
