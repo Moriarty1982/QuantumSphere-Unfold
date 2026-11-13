@@ -2,10 +2,10 @@
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.**
 
 ## Stand vom 13.11.2026, ca. 23:00 (Claude Opus)
-- **GitHub:** PR #105 gemergt als fcc87c6 (Läufe grün). **Offen: neuer PR** vom Zweig `research/v5-octant-weitersuche`
+- **GitHub:** PR #105 gemergt als fcc87c6 (Läufe grün). **Offen: PR #106** vom Zweig `research/v5-octant-weitersuche`
   (Erkundung neutrale SU(2)). Aufgeräumt 13.11.: Remote-Zweige `research/v5-string-relaxation-rueckwaertssuche`,
   `research/v5-h99b-nufit61`, `research/v5-h100-eta` gelöscht (alle in main enthalten).
-- **Lokal:** Hauptordner auf `main` 99d1bbb (Übergabe-Commit, liegt im neuen PR). Arbeit im Worktree
+- **Lokal:** Hauptordner auf `main` 99d1bbb (Übergabe-Commit, liegt in PR #106). Arbeit im Worktree
   `.claude/worktrees/qam-mml-mma-math-473bc4` (kann nach dem nächsten Merge weg). Unversioniert:
   `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf`.
 - **Zuletzt vergebene Hypothese:** **H100** (Vorab 9c77ddd, offen bis zur nächsten NuFIT-Version, längstens 31.12.2027);
