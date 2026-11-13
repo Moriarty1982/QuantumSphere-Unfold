@@ -19,3 +19,8 @@ H99b (NuFIT 6.1): R_obs = 0.029775 +- 0.000456; Abweichung +0.001065 = +2.33 sig
 nachtraeglich: dm31 = 2.511e-03 -> vorhergesagtes dm21 = 7.744e-5 eV^2; JUNO 7.50 +- 0.12: +2.03 sigma (ohne Fehler von dm31)
 nachtraeglich: dm31 = 2.519e-03 -> vorhergesagtes dm21 = 7.768e-5 eV^2; JUNO 7.50 +- 0.12: +2.24 sigma (ohne Fehler von dm31)
 nachtraeglich: dm31 = 2.529e-03 -> vorhergesagtes dm21 = 7.799e-5 eV^2; JUNO 7.50 +- 0.12: +2.49 sigma (ohne Fehler von dm31)
+
+--- H99b, Primaertabelle NuFIT 6.1 (nu-fit.org, v61.tbl-parameters.pdf, IC24 with SK, NO), Nachtrag 13.11. nachmittags ---
+Eingabe: 7.537e-5 0.097e-5 2.511e-3 0.0205e-3
+H99b (NuFIT 6.1): R_obs = 0.030016 +- 0.000457; Abweichung +0.000823 = +1.80 sigma_tot -> bestaetigt (vertraeglich)
+nachtraeglich, nicht Kriterium: einseitige Fehler 0.10e-5 / 0.021e-3 -> +1.75 sigma_tot; Spalte IC23 (2.521e-3, 0.022e-3) -> +2.03 sigma_tot

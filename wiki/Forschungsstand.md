@@ -1572,13 +1572,17 @@ $$
 
 - **H99a** (NuFIT 6.0, $0{,}029805\pm0{,}000792$): Abweichung $+1{,}31\sigma$,
   nach dem Kriterium verträglich.
-- **H99b** (NuFIT 6.1): nicht entscheidbar, weil die Unsicherheit von
-  $\Delta m^2_{21}$ nicht gefunden und die Primärtabelle nicht eingesehen
-  wurde. Ersatzrechnungen außerhalb des Kriteriums geben $+1{,}8\sigma$
-  bis $+2{,}3\sigma$.
-- Nachträglich: Die Bedingung verlangt
-  $\Delta m^2_{21}=7{,}74$ bis $7{,}80\cdot10^{-5}$ eV²; JUNO hat
-  $7{,}50\pm0{,}12$ gemessen, also $+2{,}0\sigma$ bis $+2{,}5\sigma$. Die
+- **H99b** (NuFIT 6.1, Primärtabelle, Spalte IC24 mit SK, normale
+  Ordnung: $\Delta m^2_{21}=7{,}537^{+0{,}094}_{-0{,}10}\cdot10^{-5}$ eV²,
+  $\Delta m^2_{31}=2{,}511^{+0{,}021}_{-0{,}020}\cdot10^{-3}$ eV²):
+  $0{,}030016\pm0{,}000457$, Abweichung $+1{,}80\sigma$, nach dem
+  Kriterium verträglich (Nachtrag 13.11. nachmittags; die früheren
+  Ersatzrechnungen beruhten auf Sekundärwerten und sind überholt).
+  Die Spalte IC23 ohne SK gäbe $+2{,}03\sigma$; das ist nachträglich und
+  nicht Teil des Kriteriums.
+- Nachträglich: Die Bedingung verlangt mit $\Delta m^2_{31}=2{,}511$
+  den Wert $\Delta m^2_{21}=7{,}744\cdot10^{-5}$ eV²; JUNO allein hat
+  $7{,}50\pm0{,}12$ gemessen, also $+2{,}0\sigma$. Die
   Bedingung steht derzeit eher unter Druck und wird mit weiteren
   JUNO-Daten scharf prüfbar.
 - Abgeleitet, außerhalb des Kriteriums: Massen $0{,}38$; $8{,}81$;
