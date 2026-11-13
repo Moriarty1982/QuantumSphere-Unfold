@@ -32,7 +32,10 @@
   Familien-Symmetrie; in der Platzindex-U(3) gibt es nur SO(3) (Vektor, kein Spinor) oder 2+1 (Spinor, keine drei Achsen).
   Nötig wäre eine zweite Familien-SU(2) mit Spinor-Feld. **Feldsuche negativ:** Dixon-Raum ohne Platz (H links Lorentz,
   rechts Isospin; so(8)-Zentralisator der Farbe abelsch); ν^c-Kondensat (r82.4) mit Oktanten-Spins entartet, kein Koide.
-  Empfehlung: PR #106 mergen, H100 abwarten; ein neuer Ansatz bräuchte einen eigenen Familienfaktor außerhalb von C⊗H⊗O.
+  **Punkt 3 geprüft und berichtigt:** stetige SU(2) nicht nötig; Bahn unter Hurwitz-Einheit a = −(1+i+j+k)/2 (a³ = 1)
+  gibt den Oktanten; 2T mit SO(3)-Bild A4 (native Platzsymmetrie, r55). Sedenion-Ebene (e7, e15) ist farbneutrales
+  S3-Dublett mit Zyklus diag(ω, ω²); reelle Zustände geben K = 1/2, ein komplexer Bezug unter dem magischen Winkel
+  K = 2/3 und π/4. Als Nächstes: nativen komplexen Bezugszustand in (e7, e15) suchen; Q_em von e15 prüfen.
   Werkzeuge: `notes/research/op3_eta_form_search_2026_11_13.*`, `op3_slot_u3_gauging_2026_11_13.*`.
   · zur Wahl: H100 vorab festschreiben (Kandidaten unten) · T₁₂ als dynamisches Feld · Potential für ρ² = 1/2 ·
   Vereinigung Platzindex-U(3) mit SU(2)_L.

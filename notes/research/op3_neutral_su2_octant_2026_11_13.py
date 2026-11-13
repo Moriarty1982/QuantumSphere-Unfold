@@ -124,3 +124,54 @@ if __name__ == "__main__":
         sv2 = np.sort(np.linalg.svd(Mmaj + d * np.eye(3), compute_uv=False))
         K = (sv2 ** 2).sum() / sv2.sum() ** 2
         print(f"        M + {d}*1: Singulaerwerte {np.round(sv2, 4)}, K (positive Wurzeln) = {K:.4f}")
+
+
+if __name__ == "__main__":
+    print("\n== Pruefung Punkt 3: genuegt eine diskrete Gruppe? ==")
+    sx = np.array([[0, 1], [1, 0]], complex); sy = np.array([[0, -1j], [1j, 0]]); sz = np.diag([1, -1]).astype(complex)
+    qi, qj, qk = -1j * sx, -1j * sy, -1j * sz                       # Quaternionen als SU(2), ijk = -1
+    a = -(np.eye(2) + qi + qj + qk) / 2                             # Hurwitz-Einheit, a^3 = 1 (symmetrischer Punkt aus r15)
+    print(f"    Hurwitz-Einheit a = -(1+i+j+k)/2: unitaer {np.allclose(a.conj().T @ a, np.eye(2))}, a^3 = 1 {np.allclose(a @ a @ a, np.eye(2))}")
+    # binaere Tetraedergruppe 2T: erzeugt von i, j, k, a
+    G = [np.eye(2, dtype=complex)]
+    gens = [qi, qj, qk, a]
+    changed = True
+    while changed:
+        changed = False
+        for g in list(G):
+            for h in gens:
+                p = g @ h
+                if not any(np.allclose(p, x) for x in G):
+                    G.append(p); changed = True
+    print(f"    erzeugte Gruppe hat {len(G)} Elemente (binaere Tetraedergruppe 2T, Doppelueberlagerung von A4 mit 12)")
+    # Bahn eines Zustands unter a: Oktanten-Tripel?
+    def bloch(psi):
+        return np.real([np.vdot(psi, sx @ psi), np.vdot(psi, sy @ psi), np.vdot(psi, sz @ psi)])
+    psi = coherent(0.5, np.array([1.0, 0, 0]))
+    orb = [psi, a @ psi, a @ a @ psi]
+    B = [bloch(v) for v in orb]
+    S = np.array([[np.vdot(u, v) for v in orb] for u in orb])
+    print(f"    Bahn von |+x> unter a: Bloch-Vektoren {[np.round(b, 3).tolist() for b in B]}")
+    print(f"    Treuen {np.round(np.abs(S[0, 1]) ** 2, 4)}, {np.round(np.abs(S[1, 2]) ** 2, 4)}, {np.round(np.abs(S[2, 0]) ** 2, 4)}; "
+          f"Bargmann-Phase {abs(np.angle(S[0, 1] * S[1, 2] * S[2, 0])):.6f} (pi/4)")
+    # A4 auf den drei Achsen: Klein-Gruppe = Vorzeichenwechsel, Z3 = zyklische Vertauschung (Konjugation mit a)
+    R = np.array([[np.real(np.trace(s1 @ a @ s2 @ a.conj().T)) / 2 for s2 in (sx, sy, sz)] for s1 in (sx, sy, sz)])
+    print(f"    Wirkung von a auf die Achsen (SO(3)-Bild):\n{np.round(R, 6)}")
+    print("    -> Eine stetige SU(2) ist nicht noetig: Der Zyklus tau als Element der Ordnung 3 in SU(2) (Hurwitz-Einheit)")
+    print("       erzeugt das Oktanten-Tripel; A4 (r55, Platzsymmetrie) ist dessen Bild in SO(3), 2T die Spinor-Huelle.")
+    print("       Die Darstellungen von A4 (1, 1', 1'', 3) sind keine Spinoren; ein 2T-Dublett waere weiterhin ein neues Feld.")
+
+
+if __name__ == "__main__":
+    print("\n== Sedenionen (r13): farbneutrale Ebene (e7, e15) als S3-Dublett ==")
+    # psi dreht jede Ebene (e_i, e_{i+8}) um 2pi/3; komplexifiziert: Eigenwerte omega, omega^2 -> SU(2)-Element diag(omega, omega^2)
+    w3 = np.exp(2j * np.pi / 3)
+    U = np.diag([w3, w3 ** 2])
+    print(f"    Z3 auf der komplexifizierten Ebene: diag(omega, omega^2), det = {np.round(np.linalg.det(U), 12)}, U^3 = 1 {np.allclose(U @ U @ U, np.eye(2))}")
+    # Achse der Drehung = z (Eigenbasis); reelle Vektoren der Ebene, z.B. e7 = (f_w + f_w2)/sqrt2, liegen auf dem Aequator
+    for lab, psi in (("reeller Vektor e7 (Aequator)", np.array([1, 1]) / np.sqrt(2)),
+                     ("komplexer Bezug unter dem magischen Winkel", np.array([np.sqrt((1 + 1 / np.sqrt(3)) / 2), np.sqrt((1 - 1 / np.sqrt(3)) / 2)]))):
+        orb = [psi, U @ psi, U @ U @ psi]
+        S = np.array([[np.vdot(x, y) for y in orb] for x in orb])
+        r2 = (abs(S[0, 1]) ** 2 + abs(S[1, 2]) ** 2 + abs(S[2, 0]) ** 2) / 3
+        print(f"    {lab:44s}: rho^2 = {r2:.4f}, K = {(1 + 2 * r2) / 3:.4f}, Bargmann-Phase {abs(np.angle(S[0, 1] * S[1, 2] * S[2, 0])):.4f}")

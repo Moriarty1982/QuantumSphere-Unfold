@@ -1843,6 +1843,15 @@ Erkundung $\eta$, ohne Datenvergleich:
   Oktanten-Spins ein entartetes Spektrum und kein Koide. Ein passendes
   Feld verlangt eine Erweiterung außerhalb von $\mathbb C\otimes\mathbb
   H\otimes\mathbb O$ (eigener Familienfaktor mit $SU(2)$).
+- Prüfung dieses Punktes: Eine stetige $SU(2)$ ist nicht nötig. Das
+  Oktanten-Tripel ist die Bahn eines Qubits unter einem Element der
+  Ordnung 3 (Hurwitz-Einheit $-(1+i+j+k)/2$); zusammen mit $i,j,k$ erzeugt
+  es die binäre Tetraedergruppe, deren $SO(3)$-Bild die native
+  Platzsymmetrie $A_4$ (r55) ist. In den Sedenionen ist die Ebene
+  $(e_7,e_{15})$ ein farbneutrales Dublett, auf dem der Zyklus als
+  $\mathrm{diag}(\omega,\omega^2)$ wirkt. Reelle Zustände dort geben
+  $K=1/2$; erst ein komplexer Bezug unter dem magischen Winkel gibt
+  $K=2/3$ und $\pi/4$. Es fehlt nur noch dieser Bezugszustand.
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),

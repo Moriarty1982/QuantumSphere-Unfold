@@ -321,3 +321,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 13.11.2026, spät: Nachtrag neutrale SU(2) gesucht (Schur: nur Familien-Symmetrie; in U(3) kein Vektor-mit-Spinor; zweite Familien-SU(2) nötig) in Forschungsstand; kein OP-Abschluss.
 
 13.11.2026, spät: Nachtrag Feldsuche (Dixon-Raum ohne neutrale SU(2); ν^c-Kondensat gibt kein Koide; Erweiterung nötig) in Forschungsstand; kein OP-Abschluss.
+
+13.11.2026, spät: Prüfung der Feldsuche (stetige SU(2) nicht nötig; Hurwitz-Einheit, 2T, A4; Sedenion-Ebene (e7, e15) als neutrales Dublett, Bezugszustand fehlt) in Forschungsstand; kein OP-Abschluss.

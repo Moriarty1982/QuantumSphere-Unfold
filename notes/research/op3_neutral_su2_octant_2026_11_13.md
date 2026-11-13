@@ -117,3 +117,40 @@ unter den geltenden Lesarten als nicht verwirklichbar eingeordnet (`Erkundung_I4
 **Bewertung.** Die Feldsuche ist im Companion negativ: Weder der Dixon-Raum noch der native ν^c-Paarkanal trägt ein
 Spin-1/2-Feld einer neutralen Familien-SU(2). Die Oktanten-Lesart von H99 bleibt damit eine Lesart, die eine
 Erweiterung des Companion verlangt. OP3/OP4 offen; H100 unberührt.
+
+## Nachtrag: Punkt 3 geprüft (13.11., spät, Autor: „prüfe nochmal alles unter 3“)
+
+Punkt 3 der Feldsuche sagte: Nötig ist ein eigener Familienfaktor mit einer **stetigen** SU(2) und einem neutralen
+Spin-1/2-Feld; Sumino als Vorbild; die „zweite Dreierstruktur“ aus r14/r33; die Sedenionen liefern nur eine diskrete S_3.
+Skript, Abschnitte „Prüfung Punkt 3“ und „Sedenionen (r13)“.
+
+**1. Berichtigung: Eine stetige SU(2) ist nicht nötig.** Das Oktanten-Tripel ist schon die Bahn eines Qubit-Zustands
+unter einem einzigen Element der Ordnung 3 in SU(2). Die Hurwitz-Einheit a = −(1 + i + j + k)/2 erfüllt a³ = 1, schickt
+|+x⟩ nach |+y⟩ nach |+z⟩ (Treuen 1/2, Phase π/4) und wirkt auf den Achsen als zyklische Vertauschung. Zusammen mit
+i, j, k erzeugt sie die binäre Tetraedergruppe 2T (24 Elemente), die Doppelüberlagerung von A_4. Gebraucht wird also
+nur: der Generationszyklus τ als Element der Ordnung 3 auf einem Qubit. Das passt zu nativen Strukturen:
+- A_4 ist im Companion die gemeinsame Platzsymmetrie von Dixon-Ablage und Trialitätsplätzen (r55); sie ist genau das
+  SO(3)-Bild von 2T (Klein-Gruppe als Vorzeichenwechsel der Achsen, Z_3 als zyklische Vertauschung).
+- Der symmetrische Punkt aus r15 ist, in einer quaternionischen Unteralgebra gelesen, eine solche Hurwitz-Einheit.
+
+**2. Bestätigt: Das Spinor-Feld bleibt neu.** Die Darstellungen von A_4 (1, 1′, 1″, 3) sind keine Spinoren; ein
+2T-Dublett ist keine Darstellung der Platz-U(3) oder von A_4. Ein solches Feld bleibt ein neues Element, auch wenn
+die Gruppe diskret sein darf.
+
+**3. Sedenionen genauer.** Aut(S) = G_2 × S_3 ist richtig (Literatur, r13). Neu: Die Ebene (e_7, e_15) ist ein
+farbneutrales S_3-Dublett (G_2 hält e_7 nur bis auf die Farb-SU(3) fest, diese fixiert e_7 und e_8, also auch
+e_15 = e_7 e_8). Komplexifiziert wirkt der Zyklus dort als diag(ω, ω²), ein SU(2)-Element der Ordnung 3. Das ist ein
+nativer, farbneutraler Qubit-Kandidat, auf dem τ richtig wirkt. Aber:
+- Reelle Vektoren der Ebene (etwa e_7) liegen auf dem Äquator dieser Drehung; ihre Bahn hat ρ² = 1/4, K = 1/2 (wie
+  Spin 1 im Oktanten-Test).
+- Erst ein komplexer Bezugszustand unter dem magischen Winkel gibt ρ² = 1/2, K = 2/3 und π/4. Ein nativer Grund für
+  diesen Zustand ist nicht bekannt.
+- Q_em von e_15 ist nicht geprüft.
+
+**4. Unverändert.** Sumino enthält kein Dublett-Feld; r14/r33 verlangen eine zweite Dreierstruktur außerhalb von O.
+
+**Bewertung von Punkt 3 nach der Prüfung.** Die Forderung ist schwächer als formuliert: kein stetiger Familienfaktor,
+sondern ein neutrales Qubit, auf dem der native Zyklus τ als Element der Ordnung 3 wirkt, mit einem Bezugszustand
+unter dem magischen Winkel. Die Gruppe ist im Companion vorhanden (A_4, Hurwitz-Einheit, S_3-Dublett der Sedenionen),
+ebenso ein farbneutraler Träger (Ebene e_7, e_15). Es fehlt nur noch der komplexe Bezugszustand. OP3/OP4 offen;
+H100 unberührt.
