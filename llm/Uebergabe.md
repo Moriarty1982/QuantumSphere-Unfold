@@ -125,7 +125,8 @@ Die Daten verlangen eine Verschiebung von 0,2580 statt π/12 = 0,2618 (1,4 % kle
 - Sumino-Ladungen ⇒ Massenmatrix bilinear XᵀX; c für Neutrinos bleibt 1.
 - **Auslesung entschieden: A** (√m ∝ s). Nur A erlaubt negative Wurzeln (Neutrinos, H2); B gibt K_ν ≤ 0,585. Bogen gilt in beiden. Sumino-Bedingung hängt am Feld: X ⇒ α_F = 8α; Überlappungsmatrix als Feld (Φ → UΦ oder M → U M Uᵀ) ⇒ α_F = 4α. Letzteres braucht Überlappungen zwischen zwei verschieden geladenen Tripeln (links/rechts), nicht nativ.
 - **Zwei Tripel = Zwei-Sonden-System (Autor-Hinweis bestätigt):** prop:triadic-two-probe: Ψ₁ = L-Tripel (3), Ψ₂ = R-Tripel (3̄), g_Y T₁₂ = Überlappung als Massenblock, Ψ_⊥ = dritter Platz h. Block [[0,C],[C†,0]] hat Eigenwerte ±s (Auslesung A als Dirac-Paar). T₁₂ als Feld (C → U† C U*): alle Bosonen massiv, α_F = 4α. Überlappungstabelle: X†Y und X†X* massiv, X†X adjungiert.
-- Offen: T₁₂ ist im Text fester Operator (keine Dynamik, keine Eichung); Neutrino-Block L-L (Majorana, indefinite Form) fehlt im Zwei-Sonden-System; Potential (ρ² = 1/2); Vereinigung mit SU(2)_L.
+- **Neutrino-Block L-L:** Ω₁ im Zwei-Sonden-System (neutral; Ω₂ für ν^c nativ, r44.1(d)). Ω₁ ∝ Xᵀ η X: Bosonen massiv, c = 1; Signatur (2,1) ⇒ genau ein negativer Eigenwert (716/716). Seesaw mit geladener Struktur (R = 0,0035, −58σ) und Tensorprodukt (K = 1/2) ausgeschlossen. Gleiches Tripel für ν_L, e_L ⇒ ganzer Unterschied in η; H99 verlangt: η erhält ρ² und verschiebt Phase um θ_b. Native Form dafür nicht gefunden.
+- Offen: native Form η im neutralen Sektor (präzise Fassung des Ursprungs von H99); T₁₂ als dynamisches Feld; Potential (ρ² = 1/2); Vereinigung mit SU(2)_L.
 
 ## Nächster Schritt (Autorentscheidung)
 

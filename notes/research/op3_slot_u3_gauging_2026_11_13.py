@@ -171,3 +171,44 @@ if __name__ == "__main__":
     slope = np.polyfit(np.log(POL), np.log(thr), 1)[0]
     print(f"  T_12 als Feld: masselose Bosonen {int(np.sum(np.linalg.eigvalsh((Mb + Mb.T) / 2) < 1e-12))}, "
           f"ln M_ii^2 = {slope:.2f} ln m -> alpha_F = {4 / slope:.1f} alpha (Auslesung A)")
+
+
+def R_of_masses(m):
+    m = np.sort(np.abs(m))
+    return (m[1] ** 2 - m[0] ** 2) / (m[2] ** 2 - m[0] ** 2)
+
+
+if __name__ == "__main__":
+    print("\n== Neutrino-Block L-L (Majorana, Omega_1) ==")
+    # (a) Darstellung: N = X^T eta X, X -> X U  =>  N -> U^T N U ; als Feld: Bosonen
+    T = u3_generators()
+    s_e = np.sqrt(POL); s_e = 3 * s_e / s_e.sum()
+    Nd = np.diag(s_e)
+    act = lambda a: a.T @ Nd + Nd @ a                        # Variation von U^T N U
+    Mb = np.array([[np.real(np.trace(act(a).conj().T @ act(b))) for b in T] for a in T])
+    print(f"  (a) N -> U^T N U als Feld: masselose Bosonen {int(np.sum(np.linalg.eigvalsh((Mb + Mb.T) / 2) < 1e-12))} "
+          "(Majorana-Block in 3x3, Familienkorrektur gleiches Vorzeichen wie geladen -> c = 1)")
+    # (b) Vorzeichen: drei eta-Einheitsvektoren in Signatur (2,1)
+    eta = np.diag([1.0, 1.0, -1.0])
+    neg, acc = 0, 0
+    for _ in range(2000):
+        V = rng.normal(size=(3, 3))
+        nrm = np.einsum("ia,ij,ja->a", V, eta, V)
+        if np.any(nrm <= 0):
+            continue
+        V = V / np.sqrt(nrm)
+        acc += 1
+        ev = np.linalg.eigvalsh(V.T @ eta @ V)
+        neg += int(np.sum(ev < 0) == 1)
+    print(f"  (b) eta = diag(1,1,-1), drei raumartige eta-Einheitsvektoren ({acc} Ziehungen): "
+          f"genau ein negativer Eigenwert in {neg}/{acc} Faellen")
+    # (c) Seesaw: Omega_1 = 0, Omega_2 = M (nu^c, r44.1(d)), Dirac-Block C mit geladener Struktur
+    R_obs, s_obs = 0.030016, 0.000457
+    for lab, Mk in (("M ~ 1", np.ones(3)), ("M mit Vorzeichen (+,+,-) im Eigenraum", np.array([1.0, 1.0, -1.0]))):
+        m_light = -(s_e ** 2) / Mk
+        R = R_of_masses(m_light)
+        print(f"  (c) Seesaw, Dirac = geladene Struktur, {lab}: R = {R:.5f}, z = {(R - R_obs) / s_obs:+.1f}")
+    # (d) Produkt der Tripel: x_nu = x_e (x) x_b  ->  Ueberlappungen multiplizieren
+    rho_e, rho_b = np.sqrt(0.5), np.sqrt(0.5)
+    rho_nu2 = (rho_e * rho_b) ** 2
+    print(f"  (d) Tensorprodukt mit Rand-Tripel: rho_nu^2 = {rho_nu2:.3f}, K_nu = {(1 + 2 * rho_nu2) / 3:.3f} (Koide verlangt 2/3)")

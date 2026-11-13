@@ -1714,6 +1714,16 @@ mit einem $u(3)$-Zusammenhang geeicht. Das ist ein neues Strukturelement.
   alle Familienbosonen massiv und $\alpha_F=4\alpha$. Offen: $\mathcal T_{12}$
   ist im Text ein fester Operator, die Eichung ist nicht angelegt, der
   Neutrino-Block (L mit L) fehlt.
+- Nachtrag Neutrino-Block: Der Majorana-Block L mit L ist $\Omega_1$ im
+  Zwei-Sonden-System (neutraler Sektor; $\Omega_2$ für $\nu^c$ ist nativ,
+  r44.1(d)). Mit $\Omega_1\propto X^T\eta X$ sind alle Familienbosonen
+  massiv ($c=1$), und bei Signatur (2,1) ist genau ein Eigenwert negativ
+  (716 von 716 Ziehungen), also die negative Wurzel von H2. Ein Seesaw mit
+  der geladenen Struktur ($R=0{,}0035$, $-58\sigma$) und ein Tensorprodukt
+  ($K_\nu=1/2$) scheiden aus. Weil $\nu_L$ und $e_L$ dasselbe Tripel
+  teilen, muss der ganze Unterschied in der Form $\eta$ liegen: H99
+  verlangt, dass $\eta$ die Überlappung erhält und die Phase um den
+  Bogenrand verschiebt. Eine solche native Form ist nicht gefunden.
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),

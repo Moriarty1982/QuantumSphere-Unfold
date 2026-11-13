@@ -31,3 +31,10 @@
   Block [[0, C], [C^dag, 0]]: Eigenwerte [-2.4087 -0.5484 -0.0429  0.0429  0.5484  2.4087]
   = +- Eigenwerte von S: True
   T_12 als Feld: masselose Bosonen 0, ln M_ii^2 = 1.00 ln m -> alpha_F = 4.0 alpha (Auslesung A)
+
+== Neutrino-Block L-L (Majorana, Omega_1) ==
+  (a) N -> U^T N U als Feld: masselose Bosonen 0 (Majorana-Block in 3x3, Familienkorrektur gleiches Vorzeichen wie geladen -> c = 1)
+  (b) eta = diag(1,1,-1), drei raumartige eta-Einheitsvektoren (716 Ziehungen): genau ein negativer Eigenwert in 716/716 Faellen
+  (c) Seesaw, Dirac = geladene Struktur, M ~ 1: R = 0.00354, z = -57.9
+  (c) Seesaw, Dirac = geladene Struktur, M mit Vorzeichen (+,+,-) im Eigenraum: R = 0.00354, z = -57.9
+  (d) Tensorprodukt mit Rand-Tripel: rho_nu^2 = 0.250, K_nu = 0.500 (Koide verlangt 2/3)

@@ -205,3 +205,55 @@ ln M_ii² = 1,00 · ln m_i + const, also **α_F = 4α** wie bei Sumino.
   unbestimmt. prop:triadic-two-probe hat den Status einer
   Feldarchitektur, keiner Herleitung.
 - OP3/OP4 offen; OP1–OP5, C5, C6/T2 unverändert.
+
+## Nachtrag: Neutrino-Block L-L (13.11., Autor)
+
+Vorwissen geprüft: r44.1(d) (der einzige eichinvariante Verbinder ohne
+Higgs ist ein Majorana-Term für ν^c), r55 (Dirac-Kopplungen zirkulant,
+Z_3; Majorana mit eigener Untergruppe, Z_2 gibt TM2), H2 (negative Wurzel),
+`op3_indefinite_form_2026_11_13.md` (bilineare Form nur im neutralen Sektor
+ungleich null; Signatur (2,1) außerhalb des Bogens).
+
+**Platz im Zwei-Sonden-System.** Die Diagonalblöcke Ω_1 (L mit L) und Ω_2
+(R mit R) sind die Majorana-Blöcke; sie gibt es nur im neutralen Sektor,
+weil die bilineare Form auf geladenen Zuständen verschwindet. Ω_2 ist
+nativ (r44.1(d), ν^c ohne Higgs); Ω_1 braucht zwei Higgs-Einsetzungen
+(Weinberg) oder entsteht über Ω_2 als Seesaw. Der neutrale Block ist dann
+[[Ω_1, g T_12], [g T_21, Ω_2]]. Das Feld X der Plätze muss neutral sein
+(sonst verschwände die bilineare Überlappung); die Leptonen sind die
+Sondenfelder Ψ_1, Ψ_2.
+
+**Rechnungen** (Skript, Abschnitt „Neutrino-Block L-L“):
+
+| Prüfung | Ergebnis |
+|---|---|
+| (a) Ω_1 ∝ Xᵀ η X, transformiert U ᵀ N U | als Feld alle Familienbosonen massiv; Korrektur mit demselben Vorzeichen wie bei geladenen Leptonen, also c = 1 |
+| (b) Vorzeichen bei η mit Signatur (2,1) | drei raumartige η-Einheitsvektoren geben in 716 von 716 Fällen genau einen negativen Eigenwert: die negative Wurzel von H2 ist dort zwingend |
+| (c) Seesaw mit Ω_2 ∝ 1 und Dirac-Block mit geladener Struktur | R = 0,00354, −58σ: ausgeschlossen (leichte Massen ∝ m_e, m_μ, m_τ) |
+| (d) Neutrino-Tripel als Tensorprodukt aus geladenem und Rand-Tripel | ρ_ν² = 1/4, K_ν = 1/2: kein Koide |
+
+**Die eigentliche Bedingung.** ν_L und e_L sitzen im selben Dublett, also
+im selben linken Tripel X. Dann ist der geladene Block T_12 ∝ (Xᵀ X)*
+(R-Tripel = konjugiertes L-Tripel) und der Neutrino-Block Ω_1 ∝ Xᵀ η X.
+Mit η = 1 hätten beide dasselbe Spektrum, was die Daten ausschließen.
+Der ganze Unterschied zwischen den Sektoren muss also in η liegen, der
+Form im neutralen Sektor. H99 (und die Fassung bei einer Skala) verlangen
+von η genau zwei Dinge:
+1. dieselbe mittlere quadratische Überlappung ρ² (Koide in beiden Sektoren),
+2. eine Phasenverschiebung um den Bogenrand θ_b (π/12 bei ρ² = 1/2), also
+   aus der Signatur (3,0) in die Signatur (2,1).
+
+Teil 2 passt qualitativ: Ein indefinites η erzwingt die negative Wurzel,
+also eine Phase außerhalb des Bogens. Dass die Verschiebung genau θ_b
+beträgt und ρ² erhalten bleibt, folgt aus keinem der geprüften Ansätze.
+r55 passt dazu, dass η die zyklische Z_3 der Dirac-Kopplungen teilweise
+bricht (Majorana-Auslesung mit Z_2).
+
+**Bewertung.** Der L-L-Block hat im Zwei-Sonden-System einen natürlichen
+Platz (Ω_1, neutraler Sektor), die richtige Familiendarstellung (c = 1)
+und mit indefiniter Form zwingend eine negative Wurzel. Die einfachen
+Wege, ihn aus dem geladenen Block zu gewinnen (Seesaw mit gleicher
+Struktur, Tensorprodukt), scheiden aus. Offen ist eine native Form η im
+neutralen Sektor, die ρ² erhält und die Phase um θ_b verschiebt; das ist
+die präzise Fassung der Frage nach dem Ursprung von H99.
+OP3/OP4 offen; OP1–OP5, C5, C6/T2 unverändert.
