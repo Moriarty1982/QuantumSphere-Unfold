@@ -1,0 +1,29 @@
+Kontrolle: |xy| = |x||y| True, x(xy) = (xx)y True
+a^3 = 1: True
+(1) Konjugation mit a: Automorphismus (max. Fehler 1.0e-14), fixiert e7 True, vertauscht mit L_e7 (max. Fehler 0.0e+00)
+    C(g) = -0.5000 g -0.8660 e7g  (cos 4pi/3 = -0.5000, sin = -0.8660)
+(2) Bahn von f: Skalarprodukte
+[[ 1. -0.  0.]
+ [-0.  1. -0.]
+ [ 0. -0.  1.]]
+    C^3(f) = f: True;  Produkt f0 f1 = +-f2: True
+(3) als Qubits: rho^2 = 0.500000, Rang 2, Bargmann-Phase -0.785398 (pi/4 = 0.785398)
+    Winkel cos = 0.0000: <h, C h> = -0.5000
+    Winkel cos = 0.3000: <h, C h> = -0.3650
+    Winkel cos = 0.5774: <h, C h> = +0.0000
+    Winkel cos = 0.8000: <h, C h> = +0.4600
+
+== Magischer Winkel ==
+    (a) Eine 120-Grad-Drehung, die ein Orthonormal-Dreibein zyklisch vertauscht, hat dessen Raumdiagonale als Achse;
+        jeder Vektor des Dreibeins steht dann unter arccos(1/sqrt3) zur Achse. Bedingung = Plaetze orthonormal.
+    (b) dim g2 = 14; Stabilisator von e7: 8 (Farb-SU(3)); von e7 und f: 3; von e7 und der Fano-Diagonale (e1+e6+e7)/sqrt3: 3
+        Fano-Diagonale: Winkel zu e7 cos = 0.577350 = 1/sqrt3 0.577350
+    (c) imaginaere Richtungen, die die Farb-SU(3) festhaelt: 1 (nur e7) -> jede Richtung unter dem magischen Winkel hat Farbanteile
+
+== Neutrale Dixon-Richtungen (ohne Farbe und Ladung): e3 (x) 1, 1 (x) e7, e3 (x) e7 ==
+    (e3 (x) 1)^2 = -1
+    (1 (x) e7)^2 = -1
+    (e3 (x) e7)^2 = +1
+    -> zwei Richtungen mit Quadrat -1, eine mit +1: Signatur (2,1), wie die indefinite Form im neutralen Sektor.
+    In Signatur (2,1) gibt es keine drei paarweise orthogonalen raumartigen Einheitsvektoren: ein exakter Oktant
+    ist dort nicht moeglich (Sylvester); eine Lorentz-Fassung waere eine eigene Rechnung.

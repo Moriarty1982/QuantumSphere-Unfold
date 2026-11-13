@@ -1725,9 +1725,105 @@ mit einem $u(3)$-Zusammenhang geeicht. Das ist ein neues Strukturelement.
   verlangt, dass $\eta$ die Überlappung erhält und die Phase um den
   Bogenrand verschiebt. Eine solche native Form ist nicht gefunden.
 
+**Vorab H100 und Suche nach der Form $\eta$** (13.11.2026). H100
+(Vorab 9c77ddd) legt drei Werte für $R$ im nächsten NuFIT-Fit fest:
+H99 $0{,}030839$, eine Skala $0{,}030087$, Sumino-Korrektur $0{,}030375$.
+
+Erkundung $\eta$, ohne Datenvergleich:
+- Die Brannen-Phase ist ein Drittel der Bargmann-Phase der drei Plätze:
+  $\cos3\theta=\mathrm{Re}(c_{12}c_{23}c_{31})/\rho^3$; bei gleichen
+  Beträgen ist $3\theta=\arg(c_{12}c_{23}c_{31})$, die geometrische
+  Phase des Tripels.
+- H99 heißt dann: Die geometrische Phase der Neutrinos ist um
+  $3\theta_b=\pi/4$ gedreht, bei gleichen Beträgen (Daten: $0{,}774$).
+- Ausgeschlossen: Umphasen der Plätze (Phase invariant),
+  Vorzeichenwechsel in der Eigenbasis (gleiche Massenverhältnisse), der
+  bloße Wechsel hermitesch → bilinear (keine feste Verschiebung, 0 von
+  4000 Tripeln).
+- Verlangt ist ein Fluss $\pi/4$ durch das Dreieck der drei Plätze:
+  gerichtete Kantenphasen $\pi/12$, in Gegenrichtung konjugiert. Das
+  ist hermitesch möglich und eichinvariant.
+- Die nativen Phasen ($\omega$ aus Triole und $\tau$, $i$ aus $L_{e_7}$,
+  $-1$ aus Spiegelungen) erzeugen nur Vielfache von $\pi/6$; $\pi/4$ ist
+  nicht darunter (Paritätsargument). Gebraucht würde eine achte
+  Einheitswurzel.
+- $\pi/4$ ist die Bargmann-Phase eines koplanaren Koide-Tripels
+  ($\cos\pi/4=1/\sqrt2=\rho$). H99 heißt: Neutrino-Phase = geladene
+  Phase plus die eines koplanaren Koide-Tripels. Eine native Quelle ist
+  nicht gefunden; der Majorana-Verbinder für $\nu^c$ ist ein möglicher,
+  ungeprüfter Ort.
+- Nachtrag $\pi/4=\tfrac32\cdot\pi/6$: $\pi/6$ ist nativ
+  ($\omega\,i^{-1}$). Die Faktoren $3\rho^2$ und $1/K$ treffen $3/2$ nur
+  bei $\rho^2=1/2$ (Numerologie). Strukturell trägt die Lesart
+  $3/2=3\cdot\tfrac12$: drei Kanten des Platzdreiecks, je eine Drehung um
+  $\pi/6$, die auf Spinoren mit $\pi/12$ wirkt. Offen: warum $\pi/6$ je
+  Kante und warum nur im Majorana-Block.
+- Nachtrag Spinor-Transport: Ein raumzeitlicher Spinor-Transport
+  scheidet aus, weil jeder Lorentz-invariante Massenterm ihn nicht sieht
+  ($U^T\varepsilon U=\varepsilon$). Ein innerer Transport mit Winkel
+  $\pi/6$ je Kante gibt den Sektorunterschied $(q_L-q_R)\cdot3\cdot\pi/6$;
+  H99 verlangt $q_L-q_R=1/2$. Nachträglich: Das ist die
+  Hyperladungsdifferenz von $\ell_L$ und $e_R$ (die Hyperladung des
+  Higgs). Schwacher Treffer, weil mehrere Größen den Wert $1/2$ haben;
+  ein Hyperladungsfluss durch den Familienraum ist nicht angelegt.
+- Nachtrag Dixon-Sektorphase: In $\theta_s=\sigma_s\phi_H+\lambda_s\phi_O$
+  unterscheiden sich $\nu$ und $e$ nur im Vorzeichen von $\phi_H$
+  (Higgs gegen konjugiertes Higgs), also hyperladungsgebunden. H99
+  verlangt aber in allen Zweigen ein ungerades Vielfaches von $\pi/24$
+  für $\phi_H$ oder $\phi_O$; native Phasen sind Vielfache von $\pi/6$.
+  Die Verbinder tragen die Differenz 1, nicht $1/2$, und ergeben mit
+  $\pi/6$ je Einheit $\pi/6$ statt $\pi/12$. Die Spiegelung auf die
+  Quarks ($|\theta_u|=|\theta_e|$, $|\theta_d|=|\theta_\nu|=0{,}48$ gegen
+  $0{,}10$) widerspricht den Daten. In der einfachsten Form ist die
+  Sektorphase keine Quelle des Flusses.
+- Nachtrag halbe Ladungsdifferenz: Zählt man die Hyperladung des
+  Verbinders, der die Plätze koppelt, mit $\pi/6$ je Einheit $Y/2$, dann
+  verschiebt sich die Phase der Majorana-Neutrinos (Weinberg $\ell\ell HH$,
+  $Y/2=1$) gegen die der geladenen Leptonen ($H$, $Y/2=1/2$) um genau
+  $\pi/12$, wie H99 verlangt. Für Dirac-Neutrinos ($\tilde H$) folgt
+  $\pi/6$, derselbe Wert wie aus der Dixon-Sektorphase. Die halbe
+  Differenz ist also die zweite Higgs-Einsetzung des Majorana-Terms.
+  Nachträglich gefunden; die Annahme „Verbinder-Hyperladung erzeugt eine
+  Kantenphase im Familienraum“ ist nicht hergeleitet. Die Lesart setzt
+  Majorana-Neutrinos voraus.
+- Nachtrag Mechanismus: Die Regel ist eine Holonomie $J^{y}$ je Umlauf
+  ($J$ die Komplexstruktur, $y$ die Verbinder-Hyperladung); H99 ist
+  $J^{1/2}=e^{i\pi/4}$. Exakt gilt: Drei Spin-1/2-Zustände entlang dreier
+  orthogonaler Achsen haben $\rho^2=1/2$, Rang 2 und Bargmann-Phase
+  $\pi/4$ (halber Raumwinkel des Oktanten). Das Rand-Tripel des
+  Koide-Bogens ist also genau dieses Oktanten-Tripel. Kandidat: Das
+  zusätzliche Higgs-Dublett des Majorana-Terms trägt diese Phase, wenn es
+  an den drei Plätzen entlang orthogonaler Achsen zeigt. Hindernis: Solche
+  Isospin-Richtungen sind nicht $Q_{\rm em}$-invariant (r33).
+- Nachtrag Hopf-Träger (r15): Die Bedingung $(ab)c=1$ ist das Schließen
+  einer Transportschleife über die drei Plätze. Am symmetrischen
+  Generationspunkt $a=\exp(2\pi e_7/3)$ ist jeder Schritt ein
+  Automorphismus, der $e_7$ festhält und mit $L_{e_7}$ vertauscht (das
+  Zentrum der Farb-$SU(3)$), also $Q_{\rm em}$-verträglich. Eine Richtung
+  unter dem Winkel $\arccos(1/\sqrt3)$ zur Ladungsachse läuft dabei genau
+  um ein Oktanten-Tripel: Überlappung $1/2$, Rang 2, Phase $\pi/4$. Das
+  Hindernis aus r33 entfällt für diesen Träger. Offen: warum dieser
+  Winkel, warum nur der Majorana-Block, Verträglichkeit mit r14.
+- Nachtrag magischer Winkel: Er ist gleichwertig mit „die drei
+  Platzrichtungen sind orthonormal“ (Achse einer zyklischen Drehung eines
+  Dreibeins ist dessen Diagonale). Im Oktonionenfaktor hat jede solche
+  Richtung Farbanteile (Stabilisator 8 → 3), im Isospinfaktor
+  Ladungsanteile (r33). Der farb- und ladungsneutrale Teil
+  ($e_3\otimes1$, $1\otimes e_7$, $e_3\otimes e_7$) hat Signatur (2,1),
+  passend zur negativen Wurzel, erlaubt aber keinen exakten Oktanten.
+  Ein neutraler Ort für das Oktanten-Tripel ist nicht gefunden.
+- Nachtrag Lorentz-Fassung: Im Lorentz-Qubit ($SU(1,1)$) ist
+  $|\langle a|b\rangle|^2\ge1$, also kein Koide-Tripel. In Signatur (2,1)
+  auf drei Dimensionen trifft keine native Zeitachse (Zyklusachse,
+  Koordinatenachsen, Eigenvektoren, Platzrichtung) die H99-Forderung;
+  Lösungen gibt es nur als nicht ausgezeichnete Familie. Die Suche nach
+  einem nativen Mechanismus für $\pi/4$ endet vorerst hier; H100 bleibt
+  der nächste belastbare Schritt.
+
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),
 > `notes/research/op3_slot_u3_gauging_2026_11_13.md` (Eichung Platzindex-U(3)),
+> `notes/research/op3_eta_form_search_2026_11_13.md` (Form η, Bargmann-Phase), `notes/research/op3_hopf_octant_2026_11_13.md` (Oktanten-Tripel im Hopf-Träger), `op3_lorentz_octant_2026_11_13.py` (Lorentz-Fassung), `predictions/Vorab_Notiz_H100_Neutrino_Verhaeltnis_naechster_Fit.md`,
 > `notes/research/nufit_verlauf_2026_11_13.py` (mit Grafik und Ausgabe),
 > `notes/research/op3_indefinite_form_2026_11_13.md`,
 > `notes/research/predictions/Vorab_Notiz_H99_Neutrino_Phase_Bogenrand.md`,

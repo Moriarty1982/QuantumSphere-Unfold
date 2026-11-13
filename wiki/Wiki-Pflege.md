@@ -295,3 +295,23 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 13.11.2026, spät: Nachtrag zwei Tripel und Zwei-Sonden-System (Ψ₁/Ψ₂ als L/R-Tripel, T₁₂ als Massenblock, α_F = 4α) in Forschungsstand; kein Test, kein OP-Abschluss.
 
 13.11.2026, spät: Nachtrag Neutrino-Block L-L (Ω₁, c = 1, negative Wurzel bei Signatur (2,1); Seesaw und Tensorprodukt ausgeschlossen; offene Bedingung an η) in Forschungsstand; kein Test, kein OP-Abschluss.
+
+13.11.2026, abends: H100 vorab in Vorhersagen-und-Tests und Forschungsstand eingetragen; Erkundung Form η (Brannen-Phase = Bargmann-Phase/3, H99 als Drehung um π/4, Ausschlüsse) in Forschungsstand; kein OP-Abschluss.
+
+13.11.2026, abends: Nachtrag Paar-Phase (Fluss π/4 durch das Platzdreieck; native Phasen geben nur Vielfache von π/6; π/4 als Bargmann-Phase eines koplanaren Koide-Tripels) in Forschungsstand; Formulierung zur bilinearen Phase berichtigt; kein OP-Abschluss.
+
+13.11.2026, abends: Nachtrag π/4 = (3/2)·π/6 in Forschungsstand (Lesart drei Kanten mal Spinor-Halbierung; 3ρ² und 1/K nur punktuell); kein OP-Abschluss.
+
+13.11.2026, abends: Nachtrag Spinor-Transport (raumzeitlich ausgeschlossen; innerer Transport verlangt q_L − q_R = 1/2, nachträglich = Hyperladung des Higgs) in Forschungsstand; kein OP-Abschluss.
+
+13.11.2026, abends: Nachtrag Dixon-Sektorphase (Struktur hyperladungsgebunden, Zahl mit nativen Phasen nicht erreichbar, Spiegelung widerspricht Quarks) in Forschungsstand; kein OP-Abschluss.
+
+13.11.2026, abends: Nachtrag halbe Ladungsdifferenz (Verbinder-Hyperladung: Weinberg HH gegen H gibt π/12; Dirac H̃ gibt π/6 wie Dixon) in Forschungsstand; kein OP-Abschluss.
+
+13.11.2026, spät: Nachtrag Mechanismus (Holonomie J^y; Rand-Tripel = Oktanten-Tripel dreier Qubits mit Phase π/4; Kandidat zusätzliches Higgs-Dublett, Hindernis r33) in Forschungsstand; kein OP-Abschluss.
+
+13.11.2026, spät: Erkundung Oktanten-Tripel im Hopf-Träger von r15 in Forschungsstand (symmetrischer Punkt als Q_em-verträglicher Transport, magischer Winkel gibt Rand-Tripel; r33-Hindernis entfällt); kein OP-Abschluss.
+
+13.11.2026, spät: Nachtrag magischer Winkel (gleichwertig mit orthonormalen Platzrichtungen; Farb- bzw. Ladungsanteile; neutraler Teil mit Signatur (2,1) ohne exakten Oktanten) in Forschungsstand; kein OP-Abschluss.
+
+13.11.2026, spät: Nachtrag Lorentz-Fassung (Lorentz-Qubit ohne Koide-Tripel; in (2,1) keine native Zeitachse) in Forschungsstand; kein OP-Abschluss.

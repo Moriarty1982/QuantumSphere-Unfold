@@ -1,24 +1,45 @@
 # Übergabe: Stand der letzten Sitzung
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.**
 
-## Stand vom 13.11.2026, ca. 19:20 (Claude Opus)
-- **GitHub:** zuletzt gemergt PR #103 als 83b2551 (OP3 nach v5.0.0, H99). **Offen: PR #104** (Zweig
-  `research/v5-h99b-nufit61`, Kopf efe8360 plus dieser Übergabe-Commit), nicht gemergt; enthält auch den
-  früheren lokalen Übergabe-Commit 0504201. Keine laufenden Actions; Wiki-Sync und Zwei-PDF zuletzt grün (43370355406/…373).
-- **Lokal:** Hauptordner auf `main` 0504201 (nur lokal, liegt in PR #104). Arbeit lief im Worktree
-  `.claude/worktrees/qam-mml-mma-math-473bc4`. Unversioniert: `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf`.
-- **Zuletzt vergebene Hypothese:** H99 (nächste frei H100); letztes Skript k221. Alle Arbeiten seit H99b sind
-  Erkundungen, nicht blind, ohne H-Nummer.
-- **Offene Autorentscheidungen:** PR #104 mergen („PR 104 mergen“). H100 festschreiben oder erst η suchen.
+## Stand vom 13.11.2026, ca. 20:30 (Claude Opus)
+- **GitHub:** **PR #104 gemergt als 32fa42c** (13.11., auf „pr 104 mergen“; Merge-Commit, Kopf bf51772).
+  Läufe 43481979108 (Zwei-PDF) und 43481979426 (Wiki-Sync) erfolgreich. **Offen: PR #105** vom Zweig
+  `research/v5-h100-eta` (H100-Vorab 9c77ddd, η-Suche, Wiki); nicht gemergt.
+- **Lokal:** Hauptordner auf `main` f405c05 (Übergabe-Commit nach dem Merge, liegt in PR #105).
+  Unversioniert: `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf`.
+- **Zuletzt vergebene Hypothese:** **H100** (Vorab 9c77ddd, offen bis zur nächsten NuFIT-Version, längstens 31.12.2027);
+  nächste frei H101; letztes Skript k222. Auswertung: `python k222_test_h100.py dm21 sig21 dm31 sig31`.
+- **Offene Autorentscheidungen:** PR #105 mergen („PR 105 mergen“).
 - **Ausgelöste Zurückgestellte Ideen:** keine.
-- **Nächster Schritt:** native Form η im neutralen Sektor suchen, die ρ² erhält und die Phase um den Bogenrand
-  θ_b verschiebt (präzise Fassung des Ursprungs von H99). Werkzeuge: `notes/research/op3_slot_u3_gauging_2026_11_13.*`,
-  `op3_indefinite_form_2026_11_13.md`, r44.1, r55.
+- **Nächster Schritt:** Spinor-Transport geprüft: raumzeitlich ausgeschlossen; innerer Transport π/6 je Kante gibt
+  Φ_ν − Φ_e = (q_L − q_R)·π/2, H99 verlangt q_L − q_R = 1/2 = Hyperladung des Higgs (nachträglich, schwach).
+  Dixon-Sektorphase geprüft: Struktur passt (e/ν nur im Vorzeichen von φ_H), Zahl nicht (H99 verlangt ungerade
+  Vielfache von π/24; Verbinder-Differenz 1 gibt π/6), Quark-Spiegelung widerspricht Daten. Halbe Ladungsdifferenz
+  gefunden (nachträglich): Verbinder-Hyperladung Y/2 mal π/6; Weinberg HH (1) gegen H (1/2) gibt π/12 = H99, Dirac H̃
+  gibt π/6 = Dixon-Befund. Setzt Majorana-Neutrinos voraus. Mechanismus gesucht:
+  Regel = Holonomie J^y; **Rand-Tripel des Koide-Bogens = drei Qubits entlang orthogonaler Achsen** (ρ² = 1/2, Rang 2,
+  Phase π/4, exakt). Kandidat: zusätzliches Higgs-Dublett des Weinberg-Terms trägt diese Phase. Hindernis r33 (Q_em).
+  **Hopf-Träger (r15) geprüft** (`op3_hopf_octant_2026_11_13.*`): symmetrischer Punkt a = exp(2πe7/3) ist ein
+  Q_em-verträglicher Automorphismus (Farbzentrum); Richtung unter arccos(1/√3) zu e7 läuft um das Oktanten-Tripel
+  (ρ² = 1/2, Rang 2, π/4). **Magischer Winkel** = orthonormale Platzrichtungen; im O-Faktor Farbanteile
+  (Stabilisator 8 → 3), im H-Faktor Ladung (r33); neutraler Teil (e3, e7, e3e7) hat Signatur (2,1), kein exakter
+  Oktant. **Lorentz-Fassung gerechnet** (`op3_lorentz_octant_2026_11_13.*`): Lorentz-Qubit hat |⟨a|b⟩|² ≥ 1 (kein
+  Koide); in (2,1) trifft keine native Zeitachse H99 (nur nicht ausgezeichnete Familie). Mechanismus-Suche endet vorerst.
+  Empfehlung: PR #105 mergen und H100 abwarten; offene Fäden in der η- und Hopf-Notiz.
+  Werkzeuge: `notes/research/op3_eta_form_search_2026_11_13.*`, `op3_slot_u3_gauging_2026_11_13.*`.
   · zur Wahl: H100 vorab festschreiben (Kandidaten unten) · T₁₂ als dynamisches Feld · Potential für ρ² = 1/2 ·
   Vereinigung Platzindex-U(3) mit SU(2)_L.
-- **Aufräumen:** Zweig `research/v5-string-relaxation-rueckwaertssuche` kann weg (PR #103 gemergt).
+- **Aufräumen:** Zweige `research/v5-string-relaxation-rueckwaertssuche` (PR #103) und `research/v5-h99b-nufit61`
+  (PR #104) können weg; Worktree `qam-mml-mma-math-473bc4` ebenso.
 
-## Dieser Block (13.11., 15–19 Uhr), alles in PR #104
+## Block 19:40–20:30 (PR #105)
+- **H100** vorab (siehe oben); Erwartung bei gleichem Mittelwert: A ≈ +2,7σ, B ≈ +0,2σ, C ≈ +1,2σ.
+- **Form η** (`op3_eta_form_search_2026_11_13.*`): Brannen-Phase = Bargmann-Phase/3; H99 ⇔ ΔΦ = π/4 bei gleichen
+  Beträgen. Ausgeschlossen: Umphasen, Vorzeichen in der Eigenbasis, hermitesch → bilinear allein (0/4000).
+  Verlangt: Fluss π/4 durch das Platzdreieck (hermitesch möglich). Native Phasen ω, i, −1 geben nur Vielfache
+  von π/6 (Paritätsargument). π/4 = Bargmann-Phase eines koplanaren Koide-Tripels.
+
+## Block 15–19 Uhr, alles in PR #104 (gemergt)
 - **H99b** mit NuFIT-6.1-Primärtabelle (IC24 mit SK): verträglich, +1,80σ (nicht blind). Sekundärwerte überholt.
 - **NuFIT-Verlauf 2012–2025** (`nufit_verlauf_2026_11_13.*`, Grafik): Δm²₂₁ flach; Δm²₃₁ bis 2017 gestiegen;
   R lag 2013/14 nur wegen des niedrigen Δm²₃₁ beim H99-Wert.

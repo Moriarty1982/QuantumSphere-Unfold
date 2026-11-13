@@ -1,0 +1,13 @@
+(1) Lorentz-Qubit: eta = diag(1, -1), Zustaende mit psi^dag eta psi = +1
+    kleinstes |<a|b>|^2 bei 20000 Paaren: 1.000147 (umgekehrte Cauchy-Schwarz: >= 1) -> rho^2 >= 1, K >= 1; kein Koide-Tripel
+
+(2) Signatur (2,1) auf C^3, geladenes zirkulantes Tripel (rho^2 = 1/2, theta_e = 0.2222)
+    Kontrolle: rho^2 = 0.5000, theta = 0.2222; Ziel H99: rho^2 = 0.5, theta = 0.4840
+    Zyklusachse (1,1,1)/sqrt3 (Fourier k=0)     : rho^2 = 9.7494, theta = 0.4000, Eigenwerte [-3.982  0.23   6.752]
+    Fourier k=1                                 : rho^2 = 9.7494, theta = 0.4000, Eigenwerte [-3.982  0.23   6.752]
+    Koordinatenachse e_1                        : rho^2 = 0.5561, theta = 0.2494, Eigenwerte [-0.041  0.596  2.445]
+    Koordinatenachse e_2                        : rho^2 = 2.1594, theta = 0.2001, Eigenwerte [-0.946  0.066  3.88 ]
+    Eigenvektor kleinster Eigenwert (Elektron)  : rho^2 = 9.7494, theta = 0.4000, Eigenwerte [-3.982  0.23   6.752]
+    Eigenvektor groesster Eigenwert (Tau)       : rho^2 = 9.7494, theta = 0.4000, Eigenwerte [-3.982  0.23   6.752]
+    Platzrichtung x_1 normiert                  : ein Platz zeitartig (Norm [-1. -0. -0.]), keine Einheitsnormierung
+    Zufallsachsen mit rho^2 = 0.50 +- 0.01 und theta = Ziel +- 0.01: 7 von 40000 (Loesungen bilden eine Familie, keine ausgezeichnete Achse)
