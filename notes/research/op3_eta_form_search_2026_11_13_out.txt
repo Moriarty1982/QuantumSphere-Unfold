@@ -48,3 +48,10 @@
     alle ungerade: True -> native Phasen (Vielfache von pi/6 = 4 * pi/24) scheiden aus
     Verbinder-Hyperladung: Delta(Y/2) = 1 -> mit pi/6 je Einheit theta_nu - theta_e = pi/6 = 0.52360 (verlangt pi/12)
     Spiegelung: |theta_u| = |theta_e| = 0.2211 gegen r11 0.0518;  |theta_d| = |theta_nu| = 0.4829 gegen r11 0.1001
+
+(8) Nachtrag halbe Ladungsdifferenz: Hyperladung des Verbinders, der die Plaetze koppelt
+    geladen, Dirac (l H e^c): H                                    Y/2 = +0.5: Phasenverschiebung gegen geladen (y - 1/2) * pi/6 = +0.0000; reduzierte Phase 0.2222
+    Neutrino Dirac (l H~ nu^c): H~                                 Y/2 = -0.5: Phasenverschiebung gegen geladen (y - 1/2) * pi/6 = -0.5236; reduzierte Phase 0.3014
+    Neutrino Majorana (Weinberg l l H H, auch ueber Seesaw): H H   Y/2 = +1.0: Phasenverschiebung gegen geladen (y - 1/2) * pi/6 = +0.2618; reduzierte Phase 0.4840
+    nu^c-Majorana allein (r44.1(d)): kein Higgs                    Y/2 = +0.0: Phasenverschiebung gegen geladen (y - 1/2) * pi/6 = -0.2618; reduzierte Phase 0.0396
+    verlangt (H99): +pi/12 = 0.2618; Dixon-Befund (Dirac): Betrag pi/6 = 0.5236

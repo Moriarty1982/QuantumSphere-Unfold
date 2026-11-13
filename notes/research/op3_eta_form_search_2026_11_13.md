@@ -199,3 +199,42 @@ aber nicht den Fluss π/4: Mit nativen Phasen gibt sie Vielfache von π/6, und i
 zu den Daten. In der einfachsten Form ist sie damit als Quelle ausgeschlossen. Offen bleiben ein je Sektor verschiedenes
 h (dann keine Spiegelung mehr) und eine Quelle für die halbe Ladungsdifferenz (ℓ_L gegen e_R statt Verbinder).
 OP3/OP4 offen; H100 unberührt.
+
+## Nachtrag: halbe Ladungsdifferenz gesucht (13.11., Autor: „Halbe Ladungsdifferenz suchen“)
+
+Vorwissen: Hyperladungstabelle aus r44 (Y/2: (ν, e)_L −1/2, e^c +1, ν^c 0; Higgs +1/2), r44.1(d) (Majorana-Verbinder
+für ν^c ohne Higgs), Seesaw-Bemerkung in der v490-Schicht (Majorana-Masse für ν^c, über den Seesaw kleine
+Neutrinomassen), Dixon-Nachtrag (Verbinder Y/2 = +1/2 für e, −1/2 für ν). Skript, Abschnitt 8. Nicht blind.
+
+**Ansatz.** Nicht die Ladung eines der beiden Fermionen, sondern die Hyperladung des **Verbinders**, der die Plätze
+koppelt, bestimmt die Phase: Mit dem nativen Winkel π/6 je Einheit Y/2 verschiebt ein Block seine Brannen-Phase um
+(Y/2 des Verbinders) · π/6. Das ist unabhängig davon, welches Fermion man „transportiert“ denkt.
+
+| Block | Verbinder | Y/2 | Verschiebung gegen geladen |
+|---|---|---|---|
+| geladene Leptonen, Dirac (ℓ H e^c) | H | +1/2 | 0 |
+| Neutrinos, Dirac (ℓ H̃ ν^c) | H̃ | −1/2 | −π/6 |
+| **Neutrinos, Majorana (Weinberg ℓℓHH, auch über Seesaw)** | **HH** | **+1** | **+π/12** |
+| ν^c-Majorana allein (r44.1(d)) | – | 0 | −π/12 |
+
+**Ergebnis.** Die halbe Ladungsdifferenz ist Y(HH) − Y(H) = 1 − 1/2 = 1/2: Ein Majorana-Neutrino braucht zwei
+Higgs-Einsetzungen, ein geladenes Lepton eine. Mit π/6 je Einheit ergibt das genau die Verschiebung π/12 von H99,
+mit dem richtigen Vorzeichen. Die 3/2 aus π/4 = (3/2) · π/6 lesen sich dann als drei Kanten mal eine zusätzliche
+Higgs-Einsetzung mal deren Hyperladung 1/2.
+
+**Gegenprobe ohne Anpassung.** Dieselbe Regel gibt für Dirac-Neutrinos (Verbinder H̃) den Betrag π/6. Das ist genau
+der Wert, den die Dixon-Sektorphase im vorigen Nachtrag lieferte (Verbinder-Differenz 1). Beide Rechnungen stimmen
+also überein, und der Unterschied zwischen ihnen ist Dirac gegen Majorana.
+
+**Vorbehalte.**
+- Nachträglich gefunden, nach gezielter Suche nach einer Differenz 1/2.
+- Dass die Hyperladung eines Verbinders eine Phase auf den Kanten des Familiendreiecks erzeugt (π/6 je Einheit), ist
+  eine Annahme ohne Mechanismus; sie verbindet Eichladung und Familienraum.
+- Für einen symmetrischen (Majorana-)Block ist ein Fluss nicht wie bei einer hermiteschen Matrix definiert; die
+  Rechnung benutzt die hermitesche Gram-Lesart der Neutrinos aus H99.
+- Die Lesart sagt voraus, dass die Neutrinos Majorana-Teilchen sind. Mit Dirac-Neutrinos verschöbe sich die Phase um
+  π/6; daraus folgende Werte für R sind nicht gerechnet und nicht mit Daten verglichen.
+
+**Bewertung.** Die halbe Ladungsdifferenz hat eine strukturelle Quelle: die zweite Higgs-Einsetzung des
+Majorana-Terms. Die Regel ist einfach, erklärt H99 und den Dixon-Befund zugleich, und sie ist nicht hergeleitet.
+OP3/OP4 offen; H100 unberührt.

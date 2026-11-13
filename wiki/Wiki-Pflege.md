@@ -305,3 +305,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 13.11.2026, abends: Nachtrag Spinor-Transport (raumzeitlich ausgeschlossen; innerer Transport verlangt q_L − q_R = 1/2, nachträglich = Hyperladung des Higgs) in Forschungsstand; kein OP-Abschluss.
 
 13.11.2026, abends: Nachtrag Dixon-Sektorphase (Struktur hyperladungsgebunden, Zahl mit nativen Phasen nicht erreichbar, Spiegelung widerspricht Quarks) in Forschungsstand; kein OP-Abschluss.
+
+13.11.2026, abends: Nachtrag halbe Ladungsdifferenz (Verbinder-Hyperladung: Weinberg HH gegen H gibt π/12; Dirac H̃ gibt π/6 wie Dixon) in Forschungsstand; kein OP-Abschluss.

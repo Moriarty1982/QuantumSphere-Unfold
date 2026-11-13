@@ -209,3 +209,24 @@ if __name__ == "__main__":
     tn = te + np.pi / 12
     red = lambda t: min(abs(((t + np.pi / 3) % (2 * np.pi / 3)) - np.pi / 3), np.pi / 3)
     print(f"    Spiegelung: |theta_u| = |theta_e| = {red(te):.4f} gegen r11 0.0518;  |theta_d| = |theta_nu| = {red(tn):.4f} gegen r11 0.1001")
+
+
+if __name__ == "__main__":
+    print("\n(8) Nachtrag halbe Ladungsdifferenz: Hyperladung des Verbinders, der die Plaetze koppelt")
+    # Companion-Tabelle (r44): (nu,e)_L Y/2 = -1/2, e^c +1, nu^c 0; Higgs Y/2 = +1/2
+    links = {"geladen, Dirac (l H e^c): H": 0.5,
+             "Neutrino Dirac (l H~ nu^c): H~": -0.5,
+             "Neutrino Majorana (Weinberg l l H H, auch ueber Seesaw): H H": 1.0,
+             "nu^c-Majorana allein (r44.1(d)): kein Higgs": 0.0}
+    A = np.pi / 6
+    theta0 = 0.2222 - 0.5 * A              # Grundphase so, dass der geladene Block theta_e traegt
+    def theta_of(y):
+        z = np.sqrt(0.5) * np.exp(1j * (theta0 + y * A))
+        S = np.eye(3) + z * P + np.conj(z) * P.T
+        return brannen(S)[1]
+    te_ = theta_of(0.5)
+    for lab, y in links.items():
+        th = theta_of(y)
+        print(f"    {lab:62s} Y/2 = {y:+.1f}: Phasenverschiebung gegen geladen (y - 1/2) * pi/6 = {(y - 0.5) * A:+.4f}; "
+              f"reduzierte Phase {th:.4f}")
+    print(f"    verlangt (H99): +pi/12 = {np.pi / 12:.4f}; Dixon-Befund (Dirac): Betrag pi/6 = {np.pi / 6:.4f}")

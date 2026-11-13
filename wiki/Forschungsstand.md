@@ -1776,6 +1776,16 @@ Erkundung $\eta$, ohne Datenvergleich:
   Quarks ($|\theta_u|=|\theta_e|$, $|\theta_d|=|\theta_\nu|=0{,}48$ gegen
   $0{,}10$) widerspricht den Daten. In der einfachsten Form ist die
   Sektorphase keine Quelle des Flusses.
+- Nachtrag halbe Ladungsdifferenz: Zählt man die Hyperladung des
+  Verbinders, der die Plätze koppelt, mit $\pi/6$ je Einheit $Y/2$, dann
+  verschiebt sich die Phase der Majorana-Neutrinos (Weinberg $\ell\ell HH$,
+  $Y/2=1$) gegen die der geladenen Leptonen ($H$, $Y/2=1/2$) um genau
+  $\pi/12$, wie H99 verlangt. Für Dirac-Neutrinos ($\tilde H$) folgt
+  $\pi/6$, derselbe Wert wie aus der Dixon-Sektorphase. Die halbe
+  Differenz ist also die zweite Higgs-Einsetzung des Majorana-Terms.
+  Nachträglich gefunden; die Annahme „Verbinder-Hyperladung erzeugt eine
+  Kantenphase im Familienraum“ ist nicht hergeleitet. Die Lesart setzt
+  Majorana-Neutrinos voraus.
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),
