@@ -3,13 +3,13 @@
 
 ## Stand vom 13.11.2026, ca. 20:30 (Claude Opus)
 - **GitHub:** **PR #104 gemergt als 32fa42c** (13.11., auf „pr 104 mergen“; Merge-Commit, Kopf bf51772).
-  Läufe 43481979108 (Zwei-PDF) und 43481979426 (Wiki-Sync) erfolgreich. **Offen: neuer PR** vom Zweig
+  Läufe 43481979108 (Zwei-PDF) und 43481979426 (Wiki-Sync) erfolgreich. **Offen: PR #105** vom Zweig
   `research/v5-h100-eta` (H100-Vorab 9c77ddd, η-Suche, Wiki); nicht gemergt.
-- **Lokal:** Hauptordner auf `main` f405c05 (Übergabe-Commit nach dem Merge, liegt im neuen PR).
+- **Lokal:** Hauptordner auf `main` f405c05 (Übergabe-Commit nach dem Merge, liegt in PR #105).
   Unversioniert: `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf`.
 - **Zuletzt vergebene Hypothese:** **H100** (Vorab 9c77ddd, offen bis zur nächsten NuFIT-Version, längstens 31.12.2027);
   nächste frei H101; letztes Skript k222. Auswertung: `python k222_test_h100.py dm21 sig21 dm31 sig31`.
-- **Offene Autorentscheidungen:** neuen PR mergen.
+- **Offene Autorentscheidungen:** PR #105 mergen („PR 105 mergen“).
 - **Ausgelöste Zurückgestellte Ideen:** keine.
 - **Nächster Schritt:** native Paar-Phase π/12 im neutralen Sektor suchen (gleichwertig: Bargmann-Phase π/4 je
   Umlauf über die drei Plätze bei erhaltenen Beträgen). Kandidaten: Assoziator, Q_J = iL_e7, Lesart B auf dem Kern.
@@ -19,7 +19,7 @@
 - **Aufräumen:** Zweige `research/v5-string-relaxation-rueckwaertssuche` (PR #103) und `research/v5-h99b-nufit61`
   (PR #104) können weg; Worktree `qam-mml-mma-math-473bc4` ebenso.
 
-## Block 19:40–20:30 (neuer PR)
+## Block 19:40–20:30 (PR #105)
 - **H100** vorab (siehe oben); Erwartung bei gleichem Mittelwert: A ≈ +2,7σ, B ≈ +0,2σ, C ≈ +1,2σ.
 - **Form η** (`op3_eta_form_search_2026_11_13.*`): Brannen-Phase = Bargmann-Phase/3; H99 ⇔ ΔΦ = π/4 bei gleichen
   Beträgen. Ausgeschlossen: Umphasen, Vorzeichen in der Eigenbasis, hermitesch → bilinear allein (0/4000).
