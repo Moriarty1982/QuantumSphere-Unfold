@@ -271,3 +271,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 13.11.2026: Erkundung zur Eigenwert-Auslesung der Platz-Gram-Matrix in Forschungsstand ergänzt (K = (1+2ρ²)/3, Bogen aus Positivität, Rang = Zahl der Massen, Torus-Mittel 2/3); Auslesung ist Annahme, kein OP-Abschluss.
 
 13.11.2026: Nachtrag zur Eigenwert-Auslesung (Bedingung für Neutrinos durch H2 bereits beantwortet; in der Gram-Lesart mit bekannten Massendifferenzen nicht erfüllbar); keine neue H-Nummer.
+
+13.11.2026: Indefinite Form im neutralen Sektor und Test H99 in Forschungsstand und Vorhersagen-und-Tests ergänzt (H99a verträglich, nicht blind; H99b nicht entscheidbar; Spannung mit JUNO nachträglich genannt); kein OP-Abschluss.

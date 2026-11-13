@@ -1526,6 +1526,77 @@ wurde kein neuer Test gerechnet und keine H-Nummer vergeben.
   Form hat, ist nicht geprüft.
 
 
+### Indefinite Form im neutralen Sektor und Test H99 (13.11.2026)
+
+Autorenentscheidung: als zusätzliche Bedingung ein indefinites
+Skalarprodukt prüfen. Quellenauftrag, danach ein vorab festgelegter,
+nicht blinder Test.
+
+**Quellenbefund.** Der Companion hat eine indefinite, vollständig
+Lorentz-invariante Form.
+
+- In Lesart B ist $s=z_1^2+z_2^2+z_3^2$ die einzige quadratische
+  Lorentz-Invariante des Kernvektors $z=E+iB$ (r10.3); ihr Realteil
+  $E^2-B^2$ hat die Signatur $(3,3)$, die Tachyon-Abbildung $z\mapsto iz$
+  kehrt das Vorzeichen um, eine $120^\circ$-Triole ist ein Nullvektor.
+- Auf $\mathbb C\otimes\mathbb H\otimes\mathbb O$ ist die
+  komplex-bilineare Form $x^{\mathsf T}y$ invariant unter Drehungen,
+  Boosts, Farbe und elektrischer Ladung; die hermitesche Form ist unter
+  Boosts nicht invariant. Die bilineare Form paart Ladung $+q$ mit $-q$:
+  Auf Zuständen fester Ladung $q\ne0$ verschwindet sie, auf den
+  elektrisch neutralen nicht. Das passt zu r44.1(d).
+- Mit einer indefiniten Form können drei Plätze einen Raum der Signatur
+  $(2,1)$ aufspannen; dann ist ein Eigenwert negativ. Bei
+  $\rho^2=\tfrac12$ geschieht das genau für $|\theta|>\pi/12$. Der Rand
+  des v4.11-Bogens trennt die beiden Signaturen.
+
+Die negative Wurzel der Neutrinos aus H2 ist damit strukturell
+einordenbar (geladene Leptonen innerhalb, Neutrinos außerhalb des
+Bogens). Dass Neutrinos die Signatur $(2,1)$ haben müssen, ist nicht
+gezeigt.
+
+**Test H99** (Vorab-Notiz Commit 5b23c5a, Skript k221, nicht blind).
+Bedingung: gleiche Überlappung $\rho^2=\tfrac12$ in beiden farbneutralen
+Sektoren und
+
+$$
+\theta_\nu=\theta_e+\frac{\pi}{12},\qquad \theta_e=0{,}2222248
+\ \text{aus den Polmassen}.
+$$
+
+Daraus folgt ohne freie Zahl
+
+$$
+\frac{\Delta m^2_{21}}{\Delta m^2_{31}}=0{,}030839 .
+$$
+
+- **H99a** (NuFIT 6.0, $0{,}029805\pm0{,}000792$): Abweichung $+1{,}31\sigma$,
+  nach dem Kriterium verträglich.
+- **H99b** (NuFIT 6.1): nicht entscheidbar, weil die Unsicherheit von
+  $\Delta m^2_{21}$ nicht gefunden und die Primärtabelle nicht eingesehen
+  wurde. Ersatzrechnungen außerhalb des Kriteriums geben $+1{,}8\sigma$
+  bis $+2{,}3\sigma$.
+- Nachträglich: Die Bedingung verlangt
+  $\Delta m^2_{21}=7{,}74$ bis $7{,}80\cdot10^{-5}$ eV²; JUNO hat
+  $7{,}50\pm0{,}12$ gemessen, also $+2{,}0\sigma$ bis $+2{,}5\sigma$. Die
+  Bedingung steht derzeit eher unter Druck und wird mit weiteren
+  JUNO-Daten scharf prüfbar.
+- Abgeleitet, außerhalb des Kriteriums: Massen $0{,}38$; $8{,}81$;
+  $50{,}13$ meV, Summe $0{,}0593$ eV, normale Ordnung, praktisch wie H2.
+
+Die Beziehung ist aus der Literatur bekannt (Brannen) und nicht
+hergeleitet; nativ ist nur die Rolle von $\pi/12$ als Bogenrand. Koide
+$2/3$, die Phase und die Annahme „Massenwurzel = Eigenwert“ bleiben
+unbegründet. OP3/OP4 bleiben offen, Guards unverändert.
+
+> **Anmerkungen für LLMs und Quellenprüfung:** Notizen
+> `notes/research/op3_indefinite_form_2026_11_13.md`,
+> `notes/research/predictions/Vorab_Notiz_H99_Neutrino_Phase_Bogenrand.md`,
+> `Ergebnis_H99_Neutrino_Phase_Bogenrand.md`, Skript `k221_test_h99.py`.
+> Vorwissen: H2 (v4.8.0-r12), r10, r11, `sec:v4110-koide-overlap`.
+> NuFIT-6.1-Zentralwerte nur aus arXiv:2601.18781.
+
+
 ### Version 5: Veröffentlichungsvorbereitung wieder aufgenommen (12.11.2026)
 
 PR #100 integriert die jüngsten OP3-Erkundungen. Auf Autorenauftrag werden

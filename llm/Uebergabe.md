@@ -1,11 +1,11 @@
 # Übergabe: Stand der letzten Sitzung
 
-13. November 2026, ca. 04:35 (Claude). Wird pro Arbeitsblock überschrieben.
+13. November 2026, ca. 06:50 (Claude). Wird pro Arbeitsblock überschrieben.
 
 - Öffentliche Baseline v5.0.0 (DOI 10.5281/zenodo.24152615, Tag v5.0.0 auf 539b75b). PR #100, #101, #102 gemergt; main 1eed465; Läufe 43265308165 (Zwei-PDF) und 43265308144 (Wiki-Sync) erfolgreich. Keine weitere Veröffentlichung nötig.
 - Lokaler Ordner des Autors (`Quantum Sphera`) stand noch auf dem 6.11. (93c3d21, r05) und wurde auf Autorenfreigabe per Fast-Forward auf 1eed465 gebracht. Der alte Stand ist als Tag `lokal-stand-2026-11-06` gesichert (dabei entfielen 58 verfolgte Dateien, u. a. `.claude/skills`, alte Zusammenfassungen; alle über den Tag erreichbar).
 - Offener Zweig `research/v5-string-relaxation-rueckwaertssuche` mit PR #103: Rückwärtssuche zur Stringrelaxationsfrage, Notiz und Selbstprüfungsskript unter `notes/research/op3_string_relaxation_backward_2026_11_12.*`, Wiki (Forschungsstand, Wiki-Pflege). Merge nur nach „PR NN mergen“.
-- Zuletzt vergebene Hypothese H98, letztes k219. In diesem Block keine neue H-/k-Nummer, kein MMA-Beleg.
+- Zuletzt vergebene Hypothese H99 (siehe unten), letztes k221. Kein MMA-Beleg.
 
 ## Inhaltlicher Stand
 
@@ -83,11 +83,18 @@
 - In der Gram-Lesart (Eigenwerte nie negativ) ist die Bedingung für Neutrinos mit bekannten Daten nicht erfüllbar. Nachtrag in `op3_gram_eigen_readout_2026_11_13.md`.
 - Zuletzt vergebene Hypothese bleibt H98.
 
+## Indefinite Form und H99 (13.11., Autorwahl „Indefinites Skalarprodukt“)
+
+- Quellenbefund `notes/research/op3_indefinite_form_2026_11_13.*`: bilineare Form x^T y auf C⊗H⊗O ist invariant unter Drehungen, Boosts, Farbe, Q_em; verschwindet auf Zuständen fester Ladung q ≠ 0, nicht auf neutralen (passt zu r44.1(d)). Lesart B: Re s hat Signatur (3,3). Negativer Gram-Eigenwert genau außerhalb des Bogens |theta| > pi/12.
+- **H99** (Vorab 5b23c5a, nicht blind, k221 in `notes/research/predictions/`): rho² = 1/2 in beiden farbneutralen Sektoren, theta_nu = theta_e + pi/12 ⇒ dm21/dm31 = 0,030839. H99a (NuFIT 6.0) verträglich, +1,31 sigma. H99b (NuFIT 6.1) nicht entscheidbar: sigma(dm21) nicht gefunden, Zentralwerte nur aus arXiv:2601.18781 (7,53; 2,519 bzw. 2,529); Aufruf von nu-fit.org blieb ohne Freigabe. Nachträglich: verlangtes dm21 = 7,74–7,80e-5 gegen JUNO 7,50 ± 0,12 (+2,0 bis +2,5 sigma).
+- **Zuletzt vergebene Hypothese: H99.** Nächste freie Nummer H100. Letztes k: k221 (k220 liegt auf einem lokalen Zweig des Autors).
+- Alles im selben PR #103; predictions/README und Wiki (Forschungsstand, Vorhersagen-und-Tests) nachgezogen.
+
 ## Nächster Schritt (Autorentscheidung)
 
-- Andere zusätzliche Bedingung wählen (hermitesche Platzmatrix; zweite Dublett-Komponente; koplanare Plätze mit Korrektur) oder prüfen, ob der Companion ein indefinites Skalarprodukt auf den Plätzen hat (negative Wurzel von H2).
+- H99b nachholen: NuFIT-6.1-Tabelle (nu-fit.org) mit sigma(dm21) nachschlagen und das festgelegte Kriterium auswerten; das Kriterium nicht ändern.
+- Entscheiden, ob R = 0,030839 als Vorhersage gegen das nächste JUNO-Ergebnis zu dm21 festgeschrieben wird (H100, eigene Vorab-Notiz; nach heutigem Stand mit Widerlegungsrisiko).
 - Statusvermerke in einer neuen Runde: r33-Labels (Ladung), ältere Koide-Stellen (v470/17, „2/3 factor“, rem:koide-mass-discrepancy), thm:three-generations.
-- Oder die OP3-Linie ablegen: offene Vorhersagen H2, H15, H42, H46, H96; Stringfrage W-a, W-c.
 - PR #103 wartet auf „PR 103 mergen“.
 
 ## Pflichten in jeder Sitzung

@@ -1,0 +1,21 @@
+theta_e = 0.2222248, A = 1.4142089; theta_nu = 0.4840241
+Kontrolle 1: K - 2/3 = 1.1e-16
+Kontrolle 2: Leptonmassen zurueckgewonnen, groesster relativer Fehler 3.4e-14
+Kontrolle 3: Wurzeln [-0.19581   0.944048  2.251762] -> leichteste negativ: True
+R_pred = 0.030839 +- 0.000001 (aus m_tau)
+H99a (NuFIT 6.0): R_obs = 0.029805 +- 0.000792; Abweichung +0.001034 = +1.31 sigma_tot -> bestaetigt (vertraeglich)
+abgeleitet (Skala aus dm31, nicht Teil des Kriteriums): Massen [ 0.379  8.812 50.131] meV, Summe 0.05932 eV
+nachtraeglich: theta_e - pi/12 gibt R = 0.000297, Wurzeln [0.245  0.3419 2.4131]
+
+--- H99b, Ersatzrechnungen (Zentralwerte NuFIT 6.1 aus Sekundaerquelle arXiv:2601.18781, Tab. I; sigma(dm21) nicht gefunden) ---
+Eingabe: 7.53e-5 0.12e-5 2.519e-3 0.021e-3
+H99b (NuFIT 6.1): R_obs = 0.029893 +- 0.000538; Abweichung +0.000947 = +1.76 sigma_tot -> bestaetigt (vertraeglich)
+Eingabe: 7.53e-5 0.097e-5 2.519e-3 0.021e-3
+H99b (NuFIT 6.1): R_obs = 0.029893 +- 0.000459; Abweichung +0.000947 = +2.06 sigma_tot -> widerlegt
+Eingabe: 7.53e-5 0.12e-5 2.529e-3 0.021e-3
+H99b (NuFIT 6.1): R_obs = 0.029775 +- 0.000535; Abweichung +0.001065 = +1.99 sigma_tot -> bestaetigt (vertraeglich)
+Eingabe: 7.53e-5 0.097e-5 2.529e-3 0.021e-3
+H99b (NuFIT 6.1): R_obs = 0.029775 +- 0.000456; Abweichung +0.001065 = +2.33 sigma_tot -> widerlegt
+nachtraeglich: dm31 = 2.511e-03 -> vorhergesagtes dm21 = 7.744e-5 eV^2; JUNO 7.50 +- 0.12: +2.03 sigma (ohne Fehler von dm31)
+nachtraeglich: dm31 = 2.519e-03 -> vorhergesagtes dm21 = 7.768e-5 eV^2; JUNO 7.50 +- 0.12: +2.24 sigma (ohne Fehler von dm31)
+nachtraeglich: dm31 = 2.529e-03 -> vorhergesagtes dm21 = 7.799e-5 eV^2; JUNO 7.50 +- 0.12: +2.49 sigma (ohne Fehler von dm31)
