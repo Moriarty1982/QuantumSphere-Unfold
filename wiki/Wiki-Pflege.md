@@ -273,3 +273,25 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 13.11.2026: Nachtrag zur Eigenwert-Auslesung (Bedingung für Neutrinos durch H2 bereits beantwortet; in der Gram-Lesart mit bekannten Massendifferenzen nicht erfüllbar); keine neue H-Nummer.
 
 13.11.2026: Indefinite Form im neutralen Sektor und Test H99 in Forschungsstand und Vorhersagen-und-Tests ergänzt (H99a verträglich, nicht blind; H99b nicht entscheidbar; Spannung mit JUNO nachträglich genannt); kein OP-Abschluss.
+
+13.11.2026, nachmittags: H99b mit der NuFIT-6.1-Primärtabelle entschieden (verträglich, +1,80σ, nicht blind) in Forschungsstand und Vorhersagen-und-Tests nachgetragen; Ersatzrechnungen aus Sekundärwerten als überholt markiert; kein OP-Abschluss.
+
+13.11.2026, abends: Erkundung zum Verlauf der NuFIT-Werte 2012–2025 mit Grafik in Forschungsstand ergänzt (R lag 2013/14 nur wegen des damals niedrigen Δm²₃₁ beim H99-Wert); kein Test, kein OP-Abschluss.
+
+13.11.2026, abends: Erkundung der Varianten zu H99 (drei Ideen, 24-Varianten-Raster, nachträglicher Kandidat „H99 bei einer Skala M_Z“, +0,16σ) in Forschungsstand ergänzt; nicht blind, kein Test, kein OP-Abschluss.
+
+13.11.2026, spät: Nachtrag zur Skalenfrage in Forschungsstand (M_Z nicht ausgezeichnet; Wahl Polmassen oder Kopplungen; Grund und Gegengrund); kein Test, kein OP-Abschluss.
+
+13.11.2026, spät: Nachtrag Koide-Spannung (Pol-Koide als Zufall unwahrscheinlich; Sumino-Weg rechnet die Neutrinos an die Daten heran, nicht nativ) in Forschungsstand; kein Test, kein OP-Abschluss.
+
+13.11.2026, spät: Nachtrag Exponent c (mit PMNS-Mittelung c ≈ 1,7–1,8; c = 1 +0,7σ) und Familiensymmetrie (keine native Eichsymmetrie; Platzindex-U(3) der Gram-Matrix als einziger stetiger Kandidat) in Forschungsstand; kein Test, kein OP-Abschluss.
+
+13.11.2026, spät: Nachtrag c als Integral (c = 1,8 ± 1,0; c = 1 verträglich, bei Sumino c = 1) in Forschungsstand; kein Test.
+
+13.11.2026, spät: Erkundung Eichung der Platzindex-U(3) in Forschungsstand (Bosonenmassen s_i und (s_i+s_j)/2; Auslesung A verlangt α_F = 8α, Auslesung B ist Sumino mit 4α); kein Test, kein OP-Abschluss.
+
+13.11.2026, spät: Nachtrag Auslesung A oder B (Entscheidung A; Sumino-Bedingung hängt am Feldtyp) in Forschungsstand; kein Test, kein OP-Abschluss.
+
+13.11.2026, spät: Nachtrag zwei Tripel und Zwei-Sonden-System (Ψ₁/Ψ₂ als L/R-Tripel, T₁₂ als Massenblock, α_F = 4α) in Forschungsstand; kein Test, kein OP-Abschluss.
+
+13.11.2026, spät: Nachtrag Neutrino-Block L-L (Ω₁, c = 1, negative Wurzel bei Signatur (2,1); Seesaw und Tensorprodukt ausgeschlossen; offene Bedingung an η) in Forschungsstand; kein Test, kein OP-Abschluss.

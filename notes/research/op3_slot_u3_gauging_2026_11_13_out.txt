@@ -1,0 +1,40 @@
+(1) Invarianz der Gram-Eigenwerte: X->XU 2.1e-14, X->WX 3.6e-15
+(2) Bosonenmassen^2 (g = 1): [ 4.6811 11.1945 11.1945 15.8595 15.8595 17.708  22.3729 22.3729 27.0378]
+    erwartet {s_i} und je zweimal (s_i+s_j)/2: [ 4.6811 11.1945 11.1945 15.8595 15.8595 17.708  22.3729 22.3729 27.0378] Abweichung 1.1e-14
+    Diagonal-Bosonen massiv (kein masseloses Cartan-Boson): True
+    zum Vergleich S adjungiert: Zahl masseloser Bosonen = 3
+
+(3) Vergleich mit Sumino (Familienbosonen M_ij^2 ~ m_i + m_j, Aufhebung bei alpha_F = 4 alpha)
+    Auslesung A: sqrt(m) ~ s (Gram, wie H99): ln M_ii^2 = 0.500 * ln m_i + const  ->  noetig alpha_F = 8.0 alpha
+    Auslesung B: m ~ s (sqrt(m) ~ Singulaerwerte von X): ln M_ii^2 = 1.000 * ln m_i + const  ->  noetig alpha_F = 4.0 alpha
+
+== Auslesung A oder B: Feldtyp, Bosonenschwellen, Kopplungsbedingung ==
+  X fundamental (X -> XU), Wert mit X^dag X = S           masselos: 0;  A: ln M_ii^2 = 0.50 ln m  -> alpha_F = 8.0 alpha;  B: Steigung 1.00 -> alpha_F = 4.0 alpha
+  S adjungiert (S -> U^dag S U)                           masselos: 3;  A: ln M_ii^2 = nan ln m  -> alpha_F = nan alpha;  B: Steigung nan -> alpha_F = nan alpha
+  Phi = S von links (Phi -> U Phi), Singulaerwerte s      masselos: 0;  A: ln M_ii^2 = 1.00 ln m  -> alpha_F = 4.0 alpha;  B: Steigung 2.00 -> alpha_F = 2.0 alpha
+  M = S symmetrisch (M -> U M U^T, Sumino-Massenmatrix)   masselos: 0;  A: ln M_ii^2 = 1.00 ln m  -> alpha_F = 4.0 alpha;  B: Steigung 2.00 -> alpha_F = 2.0 alpha
+
+  Bogen unabhaengig von der Auslesung: K = 2/3 und alle Brannen-Wurzeln >= 0  <=>  |theta| <= pi/12
+  numerisch: groesstes |theta| mit allen Wurzeln >= 0: 0.261799, pi/12 = 0.261799
+
+== Zwei Tripel L/R: X -> X U (3, wie l_L), Y -> Y U* (3bar, wie e_R) ==
+  X^dag X (L mit L, hermitesch)                 masselose Bosonen (als Feld): 3;  Singulaerwerte invariant (bei verschiedenen U fuer X,Y): True
+  Y^dag Y (R mit R, hermitesch)                 masselose Bosonen (als Feld): 3;  Singulaerwerte invariant (bei verschiedenen U fuer X,Y): True
+  X^T X (L mit L, bilinear)                     masselose Bosonen (als Feld): 0;  Singulaerwerte invariant (bei verschiedenen U fuer X,Y): True
+  X^dag Y (L mit R, hermitesch)                 masselose Bosonen (als Feld): 0;  Singulaerwerte invariant (bei verschiedenen U fuer X,Y): True
+  X^T Y (L mit R, bilinear)                     masselose Bosonen (als Feld): 1;  Singulaerwerte invariant (bei verschiedenen U fuer X,Y): True
+  X^dag X* (R = konjugiertes L, hermitesch)     masselose Bosonen (als Feld): 0;  Singulaerwerte invariant (bei verschiedenen U fuer X,Y): True
+  Pruefung: X^dag X* = (X^T X)*: True ; transformiert als U^dag C U*: True
+
+== Zwei-Sonden-System (prop:triadic-two-probe): Psi_1 = L-Tripel, Psi_2 = R-Tripel, g_Y T_12 = Ueberlappung ==
+  Plaetze Einheitsvektoren: True; rho^2 = 0.5174
+  Block [[0, C], [C^dag, 0]]: Eigenwerte [-2.4087 -0.5484 -0.0429  0.0429  0.5484  2.4087]
+  = +- Eigenwerte von S: True
+  T_12 als Feld: masselose Bosonen 0, ln M_ii^2 = 1.00 ln m -> alpha_F = 4.0 alpha (Auslesung A)
+
+== Neutrino-Block L-L (Majorana, Omega_1) ==
+  (a) N -> U^T N U als Feld: masselose Bosonen 0 (Majorana-Block in 3x3, Familienkorrektur gleiches Vorzeichen wie geladen -> c = 1)
+  (b) eta = diag(1,1,-1), drei raumartige eta-Einheitsvektoren (716 Ziehungen): genau ein negativer Eigenwert in 716/716 Faellen
+  (c) Seesaw, Dirac = geladene Struktur, M ~ 1: R = 0.00354, z = -57.9
+  (c) Seesaw, Dirac = geladene Struktur, M mit Vorzeichen (+,+,-) im Eigenraum: R = 0.00354, z = -57.9
+  (d) Tensorprodukt mit Rand-Tripel: rho_nu^2 = 0.250, K_nu = 0.500 (Koide verlangt 2/3)

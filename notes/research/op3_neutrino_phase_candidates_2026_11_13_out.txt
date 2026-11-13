@@ -1,0 +1,91 @@
+theta_e: Pol 0.22222, M_Z 0.22112; Rand bei rho^2=1/2: pi/12 = 0.26180
+Ziel (Lesart s^2, rho^2=1/2): theta_nu = 0.48024 +- 0.00213
+
+== Raster: Beziehung x Auslesung x Skala (rho^2 = 1/2) ==
+a: th_e + pi/12 (H99)                                sqrt(m) ~ s (H99)  Pol  theta_nu=0.4840 R=0.030839 z=   +1.80  <-- |z|<=2
+a: th_e + pi/12 (H99)                                sqrt(m) ~ s (H99)  M_Z  theta_nu=0.4829 R=0.030598 z=   +1.27  <-- |z|<=2
+a: th_e + pi/12 (H99)                                m ~ |s|            Pol  theta_nu=0.4840 R=0.169489 z= +305.19
+a: th_e + pi/12 (H99)                                m ~ |s|            M_Z  theta_nu=0.4829 R=0.168850 z= +303.79
+a: th_e + pi/12 (H99)                                Seesaw m ~ s^4     Pol  theta_nu=0.4840 R=0.000954 z=  -63.59
+a: th_e + pi/12 (H99)                                Seesaw m ~ s^4     M_Z  theta_nu=0.4829 R=0.000940 z=  -63.62
+b: pi/6 - th_e (Spiegelung am Rand)                  sqrt(m) ~ s (H99)  Pol  theta_nu=0.3014 R=0.007354 z=  -49.59
+b: pi/6 - th_e (Spiegelung am Rand)                  sqrt(m) ~ s (H99)  M_Z  theta_nu=0.3025 R=0.007425 z=  -49.43
+b: pi/6 - th_e (Spiegelung am Rand)                  m ~ |s|            Pol  theta_nu=0.3014 R=0.085505 z= +121.42
+b: pi/6 - th_e (Spiegelung am Rand)                  m ~ |s|            M_Z  theta_nu=0.3025 R=0.085904 z= +122.29
+b: pi/6 - th_e (Spiegelung am Rand)                  Seesaw m ~ s^4     Pol  theta_nu=0.3014 R=0.000054 z=  -65.56
+b: pi/6 - th_e (Spiegelung am Rand)                  Seesaw m ~ s^4     M_Z  theta_nu=0.3025 R=0.000055 z=  -65.56
+c: pi/3 - th_e (cos3th -> -cos3th, Tachyon c -> -c)  sqrt(m) ~ s (H99)  Pol  theta_nu=0.8250 R=0.274513 z= +535.00
+c: pi/3 - th_e (cos3th -> -cos3th, Tachyon c -> -c)  sqrt(m) ~ s (H99)  M_Z  theta_nu=0.8261 R=0.276313 z= +538.94
+c: pi/3 - th_e (cos3th -> -cos3th, Tachyon c -> -c)  m ~ |s|            Pol  theta_nu=0.8250 R=0.506407 z=+1042.43
+c: pi/3 - th_e (cos3th -> -cos3th, Tachyon c -> -c)  m ~ |s|            M_Z  theta_nu=0.8261 R=0.508132 z=+1046.21
+c: pi/3 - th_e (cos3th -> -cos3th, Tachyon c -> -c)  Seesaw m ~ s^4     Pol  theta_nu=0.8250 R=0.075917 z= +100.44
+c: pi/3 - th_e (cos3th -> -cos3th, Tachyon c -> -c)  Seesaw m ~ s^4     M_Z  theta_nu=0.8261 R=0.076914 z= +102.62
+d: det S_nu = -det S_e                               sqrt(m) ~ s (H99)  Pol  theta_nu=0.2971 R=0.007085 z=  -50.18
+d: det S_nu = -det S_e                               sqrt(m) ~ s (H99)  M_Z  theta_nu=0.2980 R=0.007140 z=  -50.06
+d: det S_nu = -det S_e                               m ~ |s|            Pol  theta_nu=0.2971 R=0.083976 z= +118.07
+d: det S_nu = -det S_e                               m ~ |s|            M_Z  theta_nu=0.2980 R=0.084289 z= +118.76
+d: det S_nu = -det S_e                               Seesaw m ~ s^4     Pol  theta_nu=0.2971 R=0.000050 z=  -65.57
+d: det S_nu = -det S_e                               Seesaw m ~ s^4     M_Z  theta_nu=0.2980 R=0.000051 z=  -65.57
+
+Versuche: 24; innerhalb 2 sigma: 2
+Trefferwahrscheinlichkeit je zufaelligem theta_nu in [pi/12, pi/3]: 0.0107; bei 24 Versuchen mind. ein Treffer: 0.23
+
+== Idee 1+2 verbunden: Verschiebung = Rand des Bogens bei K_nu (rho_nu^2 frei) ==
+Pol: rho_nu^2 = 0.50281, K_nu = 0.66854, Rand = 0.25900 (Fit, keine Vorhersage)
+M_Z: rho_nu^2 = 0.50199, K_nu = 0.66799, Rand = 0.25982 (Fit, keine Vorhersage)
+
+== Idee 2 allein: K_nu frei bei theta_nu = theta_e + pi/12 ==
+Pol: rho_nu^2 = 0.51087, K_nu = 0.67391 (Fit, keine Vorhersage)
+M_Z: rho_nu^2 = 0.50767, K_nu = 0.67178 (Fit, keine Vorhersage)
+
+== Nachtraeglich (aus dem Fit oben gefunden): H99 konsequent bei einer Skala ==
+rho_nu^2 = rho_e^2(mu), theta_nu = theta_e(mu) + Rand(rho_e^2(mu)); bei mu = Pol praktisch H99
+Pol: rho_e^2 = 0.499997 (K = 0.666664), Rand = 0.26180, theta_nu = 0.48403, R = 0.030840; NuFIT 6.1: z = +1.80
+Pol: rho_e^2 = 0.499997 (K = 0.666664), Rand = 0.26180, theta_nu = 0.48403, R = 0.030840; NuFIT 6.0: z = +1.31
+     Wurzeln [-0.1958  0.9441  2.2518], Massen (Skala aus dm31) [ 0.379  8.808 50.111] meV, dm21 = 7.744e-5, JUNO 7.50 +- 0.12: +2.03 sigma
+M_Z: rho_e^2 = 0.501743 (K = 0.667829), Rand = 0.26006, theta_nu = 0.48119, R = 0.030087; NuFIT 6.1: z = +0.16
+M_Z: rho_e^2 = 0.501743 (K = 0.667829), Rand = 0.26006, theta_nu = 0.48119, R = 0.030087; NuFIT 6.0: z = +0.36
+     Wurzeln [-0.1957  0.9399  2.2558], Massen (Skala aus dm31) [ 0.377  8.7   50.111] meV, dm21 = 7.555e-5, JUNO 7.50 +- 0.12: +0.46 sigma
+
+== Nachtrag: Skalenabhaengigkeit der Fassung 'eine Skala' ==
+(1) QED-Umrechnung Pol -> MSbar bei mu (1 Schleife): m(mu) = m_pol / [1 + a/pi (1 + 3/2 ln(mu/m_pol))]
+    Das Verhaeltnis m_i(mu)/m_j(mu) haengt nicht von mu ab, nur von ln(m_i/m_j).
+    alpha(0)=1/137,036   mu =      5.0 GeV: theta_e = 0.22115, K = 0.667798, R = 0.030107, z(6.1) = +0.20
+    alpha(0)=1/137,036   mu =     91.2 GeV: theta_e = 0.22116, K = 0.667787, R = 0.030114, z(6.1) = +0.21
+    alpha(0)=1/137,036   mu =   1000.0 GeV: theta_e = 0.22117, K = 0.667778, R = 0.030120, z(6.1) = +0.23
+    alpha(M_Z)=1/127,95  mu =      5.0 GeV: theta_e = 0.22108, K = 0.667878, R = 0.030056, z(6.1) = +0.09
+    alpha(M_Z)=1/127,95  mu =     91.2 GeV: theta_e = 0.22109, K = 0.667865, R = 0.030064, z(6.1) = +0.11
+    alpha(M_Z)=1/127,95  mu =   1000.0 GeV: theta_e = 0.22110, K = 0.667855, R = 0.030071, z(6.1) = +0.12
+    Vergleich r11-Daten bei M_Z (2 Schleifen, mit Schwellen): theta_e = 0.22112, K = 0.667829, R = 0.030087
+(2) SM-Laufen der Lepton-Yukawas oberhalb M_Z (1 Schleife, nur nicht universeller Teil 3/2 y^2):
+    1 TeV    : theta_e = 0.221123, R = 0.030087, Aenderung gegen M_Z -1.6e-07
+    1e10 GeV : theta_e = 0.221121, R = 0.030086, Aenderung gegen M_Z -1.2e-06
+    2e16 GeV : theta_e = 0.221119, R = 0.030085, Aenderung gegen M_Z -2.2e-06
+
+== Nachtrag Koide-Spannung ==
+K_pol - 2/3 = -2.20e-06 +- 5.1e-06;  K(M_Z) - 2/3 = +1.16e-03
+QED-Verschiebung von K: +1.16e-03; Pol-Koide trifft 2/3 auf 0.2 % dieser Verschiebung
+Sumino-Weg: Struktur exakt (theta_e = Pol), Familienkorrektur hebt QED bei geladenen Leptonen auf,
+wirkt bei Neutrinos allein: m_nu,k(phys) = m_nu,k(Struktur) * Q_k^(-c), Q_k = 1 + a/pi (1 + 3/2 ln(mu/m_e,k)).
+    Zuordnung k -> Generation: geladen {np.int64(1): 'e', np.int64(2): 'mu', np.int64(0): 'tau'}, Neutrino-Wurzeln [ 2.2518 -0.1958  0.944 ]
+    alpha(0)   c = 0.5: R = 0.030545, z(6.1) = +1.16
+    alpha(0)   c = 1.0: R = 0.030253, z(6.1) = +0.52
+    alpha(0)   c = 2.0: R = 0.029677, z(6.1) = -0.74
+    alpha(M_Z) c = 0.5: R = 0.030524, z(6.1) = +1.11
+    alpha(M_Z) c = 1.0: R = 0.030213, z(6.1) = +0.43
+    alpha(M_Z) c = 2.0: R = 0.029598, z(6.1) = -0.91
+
+== Nachtrag Familiensymmetrie: c fuer null Abweichung und Mischung ==
+    |U|^2 (Zeilen e, mu, tau; Spalten nu1, nu2, nu3):
+ [[0.676 0.302 0.022]
+ [0.112 0.428 0.46 ]
+ [0.212 0.27  0.518]]
+    alpha(0)   ohne Mischung (nu_k <-> e,mu,tau nach Index)  : R(c=1) = 0.030253 (z = +0.52), c fuer z = 0: 1.409
+    alpha(0)   mit PMNS-Mittelung                            : R(c=1) = 0.030387 (z = +0.81), c fuer z = 0: 1.831
+    alpha(M_Z) ohne Mischung (nu_k <-> e,mu,tau nach Index)  : R(c=1) = 0.030213 (z = +0.43), c fuer z = 0: 1.318
+    alpha(M_Z) mit PMNS-Mittelung                            : R(c=1) = 0.030356 (z = +0.74), c fuer z = 0: 1.713
+
+== Nachtrag: c als Mass einer Abweichung (Unsicherheit von c, mit PMNS-Mittelung) ==
+    alpha(0)    : c = 1.83 +1.04 / -1.02;  c - 1 = 0.83 = 0.81 sigma_c;  R linear in c: dR/dc = -4.49e-04
+    alpha(m_tau): c = 1.79 +1.01 / -1.00;  c - 1 = 0.79 = 0.79 sigma_c;  R linear in c: dR/dc = -4.60e-04
+    alpha(M_Z)  : c = 1.71 +0.97 / -0.96;  c - 1 = 0.71 = 0.75 sigma_c;  R linear in c: dR/dc = -4.79e-04

@@ -1572,13 +1572,17 @@ $$
 
 - **H99a** (NuFIT 6.0, $0{,}029805\pm0{,}000792$): Abweichung $+1{,}31\sigma$,
   nach dem Kriterium verträglich.
-- **H99b** (NuFIT 6.1): nicht entscheidbar, weil die Unsicherheit von
-  $\Delta m^2_{21}$ nicht gefunden und die Primärtabelle nicht eingesehen
-  wurde. Ersatzrechnungen außerhalb des Kriteriums geben $+1{,}8\sigma$
-  bis $+2{,}3\sigma$.
-- Nachträglich: Die Bedingung verlangt
-  $\Delta m^2_{21}=7{,}74$ bis $7{,}80\cdot10^{-5}$ eV²; JUNO hat
-  $7{,}50\pm0{,}12$ gemessen, also $+2{,}0\sigma$ bis $+2{,}5\sigma$. Die
+- **H99b** (NuFIT 6.1, Primärtabelle, Spalte IC24 mit SK, normale
+  Ordnung: $\Delta m^2_{21}=7{,}537^{+0{,}094}_{-0{,}10}\cdot10^{-5}$ eV²,
+  $\Delta m^2_{31}=2{,}511^{+0{,}021}_{-0{,}020}\cdot10^{-3}$ eV²):
+  $0{,}030016\pm0{,}000457$, Abweichung $+1{,}80\sigma$, nach dem
+  Kriterium verträglich (Nachtrag 13.11. nachmittags; die früheren
+  Ersatzrechnungen beruhten auf Sekundärwerten und sind überholt).
+  Die Spalte IC23 ohne SK gäbe $+2{,}03\sigma$; das ist nachträglich und
+  nicht Teil des Kriteriums.
+- Nachträglich: Die Bedingung verlangt mit $\Delta m^2_{31}=2{,}511$
+  den Wert $\Delta m^2_{21}=7{,}744\cdot10^{-5}$ eV²; JUNO allein hat
+  $7{,}50\pm0{,}12$ gemessen, also $+2{,}0\sigma$. Die
   Bedingung steht derzeit eher unter Druck und wird mit weiteren
   JUNO-Daten scharf prüfbar.
 - Abgeleitet, außerhalb des Kriteriums: Massen $0{,}38$; $8{,}81$;
@@ -1589,7 +1593,142 @@ hergeleitet; nativ ist nur die Rolle von $\pi/12$ als Bogenrand. Koide
 $2/3$, die Phase und die Annahme „Massenwurzel = Eigenwert“ bleiben
 unbegründet. OP3/OP4 bleiben offen, Guards unverändert.
 
+**Erkundung: Verlauf der NuFIT-Werte 2012–2025** (13.11.2026, kein Test).
+Aus den Parametertabellen v1.0 bis v6.1 wurden $\Delta m^2_{21}$,
+$\Delta m^2_{31}$ (normale Ordnung) und $R$ gegen den Datenstand der
+Version aufgetragen und gewichtet ausgeglichen.
+
+![NuFIT-Verlauf](https://raw.githubusercontent.com/Moriarty1982/QuantumSphere-Unfold/main/notes/research/nufit_verlauf_2026_11_13.png)
+
+- $\Delta m^2_{21}$ liegt seit 2012 flach zwischen $7{,}39$ und
+  $7{,}54\cdot10^{-5}$ eV²; der Sprung in v6.1 kommt von JUNO.
+- $\Delta m^2_{31}$ stieg bis etwa 2017 von $2{,}42$ auf $2{,}51$ und ist
+  seither stabil (exponentielle Annäherung, Grenzwert $2{,}515$). Der
+  Anstieg fällt mit IceCube/DeepCore, NOvA, mehr T2K-Daten und Daya Bay
+  (1230 Tage) zusammen (v2.1, v2.2).
+- $R$ lag 2013/14 bei $0{,}0305$ bis $0{,}0308$, also beim H99-Wert. Das
+  lag fast nur am damals niedrigen $\Delta m^2_{31}$; in v1.x war die
+  normale Ordnung nur ein Nebenminimum. Seitdem fällt $R$ leicht.
+- Vorbehalt: Die Versionen teilen fast alle Daten ($\chi^2/\mathrm{ndf}
+  \approx 0{,}1$), die Bänder sind zu eng. Der heutige Bestwert ist die
+  beste Schätzung künftiger Werte; ein Trend ist Beschreibung, keine
+  Vorhersage. Nach JUNO bestimmt der Fehler von $\Delta m^2_{31}$ den
+  Test; bei gleichen Mittelwerten läge H99 dann etwa $3\sigma$ daneben.
+
+**Erkundung: Varianten zu H99 nach drei Ideen** (13.11.2026, nicht
+blind, kein Test). Gefragt war, warum H99 über dem Messwert liegt:
+(1) andere Verschiebung als $\pi/12$, (2) andere Annahmen ($K_\nu$,
+Auslesung), (3) Skala der Leptonmassen.
+
+- 24 naheliegende Varianten (Spiegelung am Rand, Vorzeichenwechsel der
+  Überlappungen, $\det S_\nu=-\det S_e$; Auslesung $m\propto|s|$ und
+  Seesaw $m\propto s^4$; Pol und $M_Z$): nur die H99-Form passt, alle
+  anderen liegen $49\sigma$ bis über $1000\sigma$ daneben.
+- Die Skala allein ($\theta_e$ bei $M_Z$) schließt 29 % der Lücke
+  ($+1{,}27\sigma$).
+- Nachträglich, aus einem Fit gefunden: Nimmt man alle drei Bestandteile
+  von H99 bei derselben Skala $M_Z$, also
+  $\rho_\nu^2=\rho_e^2(M_Z)$ ($K=0{,}6678$) und als Verschiebung den Rand
+  des eigenen Bogens $\theta_b=0{,}26006$, folgt ohne freie Zahl
+  $R=0{,}030087$: $+0{,}16\sigma$ gegen NuFIT 6.1,
+  $\Delta m^2_{21}=7{,}555\cdot10^{-5}$ eV² ($+0{,}46\sigma$ gegen JUNO
+  allein). Erst die Kombination der drei Ideen schließt die Lücke.
+- Vorbehalt: Bei rund 26 Varianten ist das kein Befund. Warum $M_Z$ die
+  richtige Skala sein soll, ist nicht begründet. Künftige JUNO-Werte
+  trennen beide Fassungen ($0{,}030840$ gegen $0{,}030087$) mit etwa
+  $3\sigma$; eine blinde Prüfung braucht eine Vorab-Notiz.
+- Nachtrag Skala: $M_Z$ ist nicht ausgezeichnet. Jede Skala zwischen
+  5 GeV und $2\cdot10^{16}$ GeV gibt $R=0{,}03006$ bis $0{,}03012$. Der
+  Unterschied zu den Polmassen ist die QED-Selbstenergie, im
+  Massenverhältnis der Faktor $1+(3\alpha/2\pi)\ln(m_i/m_j)$ (für
+  $\tau/e$ etwa 2,8 %). Die Wahl lautet also „Polmassen oder
+  Kopplungen“. Für die Kopplungsseite spricht, dass die Brannen-Form in
+  den Erkundungen in Kopplungen entsteht (Platzkopplung, W2-Yukawas) und
+  Neutrinos keine Photonwolke haben; dagegen, dass Koide $2/3$ nur bei
+  Polmassen exakt gilt.
+- Nachtrag Koide-Spannung: Die Pol-Koide-Beziehung trifft $2/3$ auf
+  0,2 % der QED-Verschiebung; als Zufall wäre das unwahrscheinlich. Ein
+  Ausweg aus der Literatur (Sumino 2009, arXiv:0812.2103): Eine
+  Familien-Eichkorrektur hebt die QED-Korrektur bei geladenen Leptonen
+  auf, deshalb gilt Koide für Polmassen. Bei Neutrinos wirkt sie allein.
+  Mit Koide exakt und dieser Korrektur folgt $R=0{,}0302$ bis $0{,}0305$
+  (Exponent $c=1$ bzw. $1/2$; $+0{,}5\sigma$ bzw. $+1{,}2\sigma$), bei
+  $c=2$ $0{,}0297$ ($-0{,}8\sigma$). Nicht nativ: Der Companion hat keine
+  Familien-Eichsymmetrie (r14, r33).
+- Nachtrag Exponent und Familiensymmetrie: Mit der Mittelung über die
+  PMNS-Mischung (die Familienkorrektur ist in der Basis der geladenen
+  Leptonen diagonal) gleicht $c\approx1{,}7$ bis $1{,}8$ exakt aus; das
+  natürliche $c=1$ gibt $+0{,}7\sigma$ bis $+0{,}8\sigma$. Bei Sumino
+  liegen $\ell_L$ in $\mathbf3$, $e_R$ in $\bar{\mathbf3}$, Aufhebung bei
+  $\alpha_F=4\alpha$; der Neutrino-Term $\ell_L\ell_L$ erhält die
+  Korrektur mit demselben Vorzeichen wie die geladenen Leptonen. Im
+  Companion gibt es nur diskrete Dreiersymmetrien ($S_3$ aus Sedenionen
+  und Trialität, $\Delta(96)$ in der Farbe) und keine
+  Familien-Eichsymmetrie. Einziger stetiger Kandidat ist die global
+  wirkende $U(3)$ auf dem Platzindex der Gram-Matrix; formal spielt die
+  Gram-Matrix die Rolle von Suminos Feld $\Phi$. Eichung,
+  Bosonenmassen und $\alpha_F=4\alpha$ fehlen.
+- Nachtrag $c$ als Integral: $c=1{,}8\pm1{,}0$; $c-1$ ist nur
+  $0{,}8\sigma$ von null entfernt, $c=0$ (H99) $1{,}8\sigma$. Gelesen als
+  Verhältnis zweier Log-Integrale (Familienkorrektur, die der
+  Neutrino-Term sieht, zur QED-Korrektur der geladenen Leptonen) ist bei
+  Sumino $c=1$, weil $\alpha_F=4\alpha$ beide Integrale gleich macht.
+  $c\neq1$ wäre ein Maß für ein abweichendes Integral auf der
+  Neutrinoseite; heutige Daten verlangen das nicht.
+
+**Erkundung: Eichung der U(3) auf dem Platzindex** (13.11.2026, nicht
+blind, kein Test). Die drei Plätze bilden ein Feld $X$, die Gram-Matrix
+ist $S=X^\dagger X$, die Familiensymmetrie wirkt als $X\to XU$ und wird
+mit einem $u(3)$-Zusammenhang geeicht. Das ist ein neues Strukturelement.
+
+- Die neun Familienbosonen erhalten aus dem kinetischen Term die Massen
+  $M^2=s_i$ (diagonal) und $(s_i+s_j)/2$ (je zweimal); alle sind massiv.
+  Das ist die Struktur, die Sumino braucht. Trüge $S$ selbst die Ladung,
+  blieben drei Bosonen masselos.
+- Die Auslesung legt die Kopplungsbedingung fest: Mit $\sqrt m\propto s$
+  (Gram-Lesart, H99) ist $M_{ii}^2\propto\sqrt{m_i}$ und die Aufhebung
+  verlangt $\alpha_F=8\alpha$; mit $m\propto s$ ist $X$ genau Suminos
+  $\Phi$ und $\alpha_F=4\alpha$, aber die Überlappungs-Lesart von Koide
+  geht verloren.
+- Mit Suminos Ladungen ($\ell_L$ in $\mathbf3$, $e_R$ in $\bar{\mathbf3}$)
+  ist die Massenmatrix die bilineare $X^TX$. Der Exponent $c$ für
+  Neutrinos bleibt 1.
+- Nicht hergeleitet: das Feld $X$, sein Potential, $\alpha_F$ und die
+  Vereinigung mit $SU(2)_L$.
+- Nachtrag Auslesung A oder B: Entschieden für A ($\sqrt m\propto s$).
+  Nur A erlaubt negative Wurzeln (indefinite Form) und damit Koide für
+  Neutrinos (H2); B schließt sie aus ($K_\nu\le0{,}585$). Der Bogen
+  $|\theta|\le\pi/12$ gilt in beiden. Die Sumino-Bedingung
+  $\alpha_F=4\alpha$ hängt am Feld: In A gilt sie, wenn die
+  Überlappungsmatrix selbst das Feld ist (Singulärwerte $s$, etwa als
+  $M\to UMU^T$ mit Suminos Ladungen); mit $X$ als Feld wäre
+  $\alpha_F=8\alpha$. Dafür braucht es Überlappungen zwischen zwei
+  verschieden geladenen Tripeln (links und rechts); das ist nicht nativ.
+- Nachtrag zwei Tripel und Sonden: Die beiden Tripel liefert das
+  Zwei-Sonden-System (prop:triadic-two-probe). $\Psi_1$ und $\Psi_2$ sind
+  L- und R-Tripel, $g_Y\mathcal T_{12}$ ist ihre Überlappung als
+  Massenblock, $\Psi_\perp$ der dritte Platz. Der Block
+  $\begin{pmatrix}0&C\C^\dagger&0\end{pmatrix}$ hat die Eigenwerte
+  $\pm s_k$ der Gram-Matrix (Auslesung A als Dirac-Paar). Transformiert
+  $\mathcal T_{12}$ als Feld wie bei Sumino ($C\to U^\dagger CU^*$), sind
+  alle Familienbosonen massiv und $\alpha_F=4\alpha$. Offen: $\mathcal T_{12}$
+  ist im Text ein fester Operator, die Eichung ist nicht angelegt, der
+  Neutrino-Block (L mit L) fehlt.
+- Nachtrag Neutrino-Block: Der Majorana-Block L mit L ist $\Omega_1$ im
+  Zwei-Sonden-System (neutraler Sektor; $\Omega_2$ für $\nu^c$ ist nativ,
+  r44.1(d)). Mit $\Omega_1\propto X^T\eta X$ sind alle Familienbosonen
+  massiv ($c=1$), und bei Signatur (2,1) ist genau ein Eigenwert negativ
+  (716 von 716 Ziehungen), also die negative Wurzel von H2. Ein Seesaw mit
+  der geladenen Struktur ($R=0{,}0035$, $-58\sigma$) und ein Tensorprodukt
+  ($K_\nu=1/2$) scheiden aus. Weil $\nu_L$ und $e_L$ dasselbe Tripel
+  teilen, muss der ganze Unterschied in der Form $\eta$ liegen: H99
+  verlangt, dass $\eta$ die Überlappung erhält und die Phase um den
+  Bogenrand verschiebt. Eine solche native Form ist nicht gefunden.
+
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
+> `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),
+> `notes/research/op3_slot_u3_gauging_2026_11_13.md` (Eichung Platzindex-U(3)),
+> `notes/research/nufit_verlauf_2026_11_13.py` (mit Grafik und Ausgabe),
 > `notes/research/op3_indefinite_form_2026_11_13.md`,
 > `notes/research/predictions/Vorab_Notiz_H99_Neutrino_Phase_Bogenrand.md`,
 > `Ergebnis_H99_Neutrino_Phase_Bogenrand.md`, Skript `k221_test_h99.py`.

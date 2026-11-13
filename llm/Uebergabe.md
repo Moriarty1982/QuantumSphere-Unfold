@@ -1,104 +1,48 @@
 # Übergabe: Stand der letzten Sitzung
+**Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.**
 
-13. November 2026, ca. 06:50 (Claude). Wird pro Arbeitsblock überschrieben.
+## Stand vom 13.11.2026, ca. 19:20 (Claude Opus)
+- **GitHub:** zuletzt gemergt PR #103 als 83b2551 (OP3 nach v5.0.0, H99). **Offen: PR #104** (Zweig
+  `research/v5-h99b-nufit61`, Kopf efe8360 plus dieser Übergabe-Commit), nicht gemergt; enthält auch den
+  früheren lokalen Übergabe-Commit 0504201. Keine laufenden Actions; Wiki-Sync und Zwei-PDF zuletzt grün (43370355406/…373).
+- **Lokal:** Hauptordner auf `main` 0504201 (nur lokal, liegt in PR #104). Arbeit lief im Worktree
+  `.claude/worktrees/qam-mml-mma-math-473bc4`. Unversioniert: `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf`.
+- **Zuletzt vergebene Hypothese:** H99 (nächste frei H100); letztes Skript k221. Alle Arbeiten seit H99b sind
+  Erkundungen, nicht blind, ohne H-Nummer.
+- **Offene Autorentscheidungen:** PR #104 mergen („PR 104 mergen“). H100 festschreiben oder erst η suchen.
+- **Ausgelöste Zurückgestellte Ideen:** keine.
+- **Nächster Schritt:** native Form η im neutralen Sektor suchen, die ρ² erhält und die Phase um den Bogenrand
+  θ_b verschiebt (präzise Fassung des Ursprungs von H99). Werkzeuge: `notes/research/op3_slot_u3_gauging_2026_11_13.*`,
+  `op3_indefinite_form_2026_11_13.md`, r44.1, r55.
+  · zur Wahl: H100 vorab festschreiben (Kandidaten unten) · T₁₂ als dynamisches Feld · Potential für ρ² = 1/2 ·
+  Vereinigung Platzindex-U(3) mit SU(2)_L.
+- **Aufräumen:** Zweig `research/v5-string-relaxation-rueckwaertssuche` kann weg (PR #103 gemergt).
 
-- Öffentliche Baseline v5.0.0 (DOI 10.5281/zenodo.24152615, Tag v5.0.0 auf 539b75b). PR #100, #101, #102 gemergt; main 1eed465; Läufe 43265308165 (Zwei-PDF) und 43265308144 (Wiki-Sync) erfolgreich. Keine weitere Veröffentlichung nötig.
-- Lokaler Ordner des Autors (`Quantum Sphera`) stand noch auf dem 6.11. (93c3d21, r05) und wurde auf Autorenfreigabe per Fast-Forward auf 1eed465 gebracht. Der alte Stand ist als Tag `lokal-stand-2026-11-06` gesichert (dabei entfielen 58 verfolgte Dateien, u. a. `.claude/skills`, alte Zusammenfassungen; alle über den Tag erreichbar).
-- Offener Zweig `research/v5-string-relaxation-rueckwaertssuche` mit PR #103: Rückwärtssuche zur Stringrelaxationsfrage, Notiz und Selbstprüfungsskript unter `notes/research/op3_string_relaxation_backward_2026_11_12.*`, Wiki (Forschungsstand, Wiki-Pflege). Merge nur nach „PR NN mergen“.
-- Zuletzt vergebene Hypothese H99 (siehe unten), letztes k221. Kein MMA-Beleg.
+## Dieser Block (13.11., 15–19 Uhr), alles in PR #104
+- **H99b** mit NuFIT-6.1-Primärtabelle (IC24 mit SK): verträglich, +1,80σ (nicht blind). Sekundärwerte überholt.
+- **NuFIT-Verlauf 2012–2025** (`nufit_verlauf_2026_11_13.*`, Grafik): Δm²₂₁ flach; Δm²₃₁ bis 2017 gestiegen;
+  R lag 2013/14 nur wegen des niedrigen Δm²₃₁ beim H99-Wert.
+- **Varianten zu H99** (`op3_neutrino_phase_candidates_2026_11_13.*`): 24er-Raster, nur H99-Form passt. Skala:
+  jede kurzreichweitige Skala gibt R ≈ 0,0301 (+0,16σ); Wahl ist Pol oder Kopplung. Koide-Spannung: Pol-Koide
+  kein Zufall. Sumino (arXiv:0812.2103): Familienkorrektur hebt QED auf; Neutrinos mit c = 1 (PMNS-gemittelt)
+  +0,7σ; c für z = 0 ist 1,8 ± 1,0 (c als Verhältnis zweier Log-Integrale).
+- **Familiensymmetrie** (`op3_slot_u3_gauging_2026_11_13.*`): keine native; Platzindex-U(3) geeicht ⇒ Bosonen
+  massiv. Auslesung A (√m ∝ s) gewählt (nur sie trägt die negative Neutrino-Wurzel). α_F = 4α, wenn die
+  Überlappung das Feld ist. **Zwei-Sonden-System** (prop:triadic-two-probe) liefert L/R-Tripel, T₁₂ als
+  Massenblock (±s), Ψ_⊥ als dritten Platz. **Neutrino-Block** Ω₁ ∝ Xᵀ η X: c = 1, Signatur (2,1) ⇒ genau eine
+  negative Wurzel; Seesaw mit geladener Struktur und Tensorprodukt ausgeschlossen; Sektorunterschied liegt ganz in η.
+
+## Kandidaten für H100 (noch nicht festgeschrieben)
+- H99 (Pol): R = 0,030840 · Kopplungsseite (eine Skala): R ≈ 0,0301 · Sumino c = 1, PMNS-gemittelt: R ≈ 0,0304.
+  Künftige JUNO-Daten trennen H99 von den beiden anderen mit etwa 2–3σ. Kriterium und Wahl vorab festlegen.
 
 ## Inhaltlicher Stand
-
-- Autorenentscheidung 12.11.: erst Rückwärtssuche, keine Netzsimulation.
-- Ergebnis (analytisch, nicht blind): Bei fester Außenlänge und frei umverteilbaren Längen sind die Zugkräfte gleich. Konvexe Energie: Relaxationszeiten wählen nichts aus, gleiche Strings geben K=1/3. Reiner Maxwell-String: Endaufteilung r_i(0) plus Überschuss nach Fluidität, neutral und kraftfrei, kein Attraktor. Attraktor nur bei L proportional a (Anteile (1/eta_i+H/k_i)/Summe), im Widerspruch zur festen Außenlänge. Gleiche Strings: ungleiche Aufteilung nur mit nicht monotonem Kraftgesetz; ein Höcker gibt (lang, kurz, kurz), drei verschiedene Längen brauchen zwei Umkehrpunkte.
-- Damit ist die v5-Frage für die Maxwell-Klasse bei fester Außenlänge negativ beantwortet; allgemein bleibt sie offen. Weder Lambda noch Koide 2/3 oder das Leptonspektrum folgen.
-- Fehlende native Operation: nicht konvexe Energie des einzelnen Strings oder Herkunft ungleicher Moduln aus dem Companion.
-- OP1–OP5/C5/C6/T2 unverändert. I3 durch den Lambda-Bezug berührt, nicht benutzt.
-
-## Weg W-b (12.11., abends, Autor: „versuche erst W-b“)
-
-- Notiz und Skript `notes/research/op3_string_energy_source_search_2026_11_12.*`, im selben PR #103.
-- Quellenbefund negativ: keine Stringenergie als Funktion einer Länge im Companion (gamma_string ist ein Zählparameter; thm:spring linear und ungedämpft; W2-Higgs-Potential ist Eingabe für ein Feld).
-- Kleinste passende Energie (quartischer Doppeltopf, kubische Kraft): gleiche Zugkraft bei drei verschiedenen Längen verlangt Topfmitte L/3 und gibt exakt die Brannen-Form, K=1/3+2v²/L², K=2/3 für v=L/sqrt(6) (entspricht |b|=a/sqrt(2) aus r44.1(e)). Phase theta exakt entartet, nicht gewählt. Höhere Terme legen theta fest, kosten aber je eine Formzahl.
-- Ergebnis: W-b liefert keine native Operation und führt auf den offenen Punkt aus r44 zurück (|b|/a, theta). Stringfrage und OP3 bleiben offen.
-
-## Quellensuche zur Koide-Phase (12.11., Autor: „such im companion“, ältere Bausteine haben das heutige Wissen nicht)
-
-- Notiz und Skript `notes/research/op3_phase_source_search_2026_11_12.*`, im selben PR #103.
-- Übersehenes Vorwissen zu W-b nachgetragen: r10–r12, r16 (H11), r26 (H16), r38, r44, r45, koide-and-kernel, generation-coupling, coupling-scale-candidate.
-- Befund: tau wirkt als delta -> delta+2pi/3, rho als delta -> -delta. Symmetrische Größen sehen nur cos(3 delta) und wählen zwei gleiche Massen. Die Phase misst das Verhältnis rho-ungerade zu rho-gerade (tan 3delta). Feder-Satz, Slot-Norm-Potentiale und die v5-Stringfrage sind rho-symmetrisch und scheitern deshalb (Grund aus r45: Chiralität).
-- Native rho-ungerade Größen: Chiralitätsprojektor, Assoziator [e4,e5,e6]=-2e7, Q_J=iL_e7, Vorzeichen des Frame-Versatzes. Keine trägt einen Betrag. Quellensuche negativ, Lücke benannt.
-- Ältere Stellen ohne Statusvermerk (nur gemeldet): v470/17 Zeilen 18 und 194 („structurally closed“), Bemerkung „The 2/3 factor is everywhere“, rem:koide-mass-discrepancy.
-
-## Erkundung rho-ungerade Platzkopplung (13.11., Autor: „mach das mal“)
-
-- Notiz und Skript `notes/research/op3_rho_odd_coupling_2026_11_12.*`, im selben PR #103. Erkundung, kein Test.
-- Kandidat: Trialitätsform t mit festem Element h des dritten Platzes gibt M = a + alpha P + beta P², alpha = t(u, conj w, h), beta = t(conj w, u, h). Nur Oktonionenfaktor gerechnet.
-- Quarks: alpha = -2(h0 - i h7), beta = -2(h0 + i h7) für reelles h = h0 + h7 e7; hermitesch, Brannen-Form; Phase = Winkel von h in der Ebene (1, e7). Verhältnis nicht festgelegt.
-- Leptonen: Kopplung über t verschwindet für jedes h ((1+ie7)(1-ie7) = 0). Kein Platz-Kopplungsterm.
-- Stand: native rho-ungerade Kopplung existiert (e7-Komponente des dritten Platzes), ohne festen Betrag und nur für Farbe. OP3/OP4 offen.
-
-## Erkundung Dixon-Platzkopplung (13.11., Autor: Lepton-Fall versuchen, Dixon-Raum auch auf Quarks)
-
-- Notiz und Skript `notes/research/op3_dixon_slot_coupling_2026_11_13.*`, im selben PR #103. Erkundung, kein Test.
-- Kandidat F_b(x,y,h) = <(x^ y) h> auf C⊗H⊗O (volle Dixon-Konjugation am ersten Eintrag), Zustände wie k85.
-- Keine Lorentz-invariante zyklische trilineare Form auf drei Spinor-Plätzen; h muss Skalar sein. Nur neutrale h (1⊗1, 1⊗e7, e3⊗1, e3⊗e7) koppeln.
-- Sektorformel: alpha_s ∝ (a0 + i sigma a3)(o0 + i lambda o7); sigma = +1 (e, d), -1 (nu, u); lambda = +1 Leptonen, -1 Quarks. Reell: hermitesch, Brannen-Form, theta_s = sigma phi_H + lambda phi_O, Beträge gleich.
-- Spiegelung: Platzmatrix u = rho-Bild von e, d = rho-Bild von nu (für jedes neutrale h).
-- Nachträglich, nicht blind: gemeinsames reelles h verlangt gleichen Phasenbetrag für u und e; r11 hat 0,0518 gegen 0,2211. Einfachste Form passt nicht.
-- Stand: rho-ungerade Kopplung für Leptonen und Quarks vorhanden, zwei freie Winkel, kein festes Verhältnis. OP3/OP4 offen.
-
-## Nachtrag Verbinder und Hyperladung (13.11., „weiter“)
-
-- Skript `notes/research/op3_dixon_connector_link_2026_11_13.py`, Nachtrag in der Dixon-Notiz, im selben PR #103.
-- F_b-Kopplung = antilinearer Verbinderblock aus r44.1(b) (Rang 8, Dubletts). Idempotente (1∓ie3)⊗(1∓ie7) koppeln je einen Sektor; Y/2 = +1/2 (e, d), -1/2 (nu, u).
-- Hyperladung: Rückweg beta_s hängt am Koeffizienten des gespiegelten Sektors, nicht eichinvariant. Ein kovariantes Element gibt nur M_s = a_s + alpha_s P, also K <= 1/2; Koide nicht erreichbar. Gemeinsames Element: 1 : 1 : 2.
-- Der hermitesche Brannen-Fall (reelles h) ist vor der Brechung nicht eichinvariant; Bewertung in der Notiz korrigiert.
-
-## Nachtrag 2 Herkunft des Rückwegs (13.11., „weiter“)
-
-- Nachtrag 2 in der Dixon-Notiz, Skript `op3_dixon_connector_link_2026_11_13.py` erweitert, im selben PR #103.
-- Varianten des Elements im dritten Platz: h (alpha c_s, beta c_s'), h* (conj c_s', conj c_s), h~ (c_s', c_s), h+ (conj c_s, conj c_s'); s' gespiegelt (e↔u, nu↔d). Eichinvariant: Koeffizient c_s oder conj c_s'.
-- Rückweg über h~ ist eichinvariant, trägt aber denselben Koeffizienten wie der Hinweg: keine Phase aus dem Element. Rückweg über h+ bräuchte eine unabhängige zweite Dublett-Komponente; W2 hat ein Dublett, zweite Lesart passt dazu.
-- Stand: Brannen-Phase = relative Phase der Kopplungskonstanten von Hin- und Rückweg, frei (r45, jetzt verortet). Struktur allein liefert sie im heutigen Companion nicht.
-
-## Weg C: Platzstruktur geprüft (13.11., Autor: „c“)
-
-- Notiz und Skript `notes/research/op3_generation_carrier_review_2026_11_13.*`, im selben PR #103.
-- Korrektur: r53 (H37) ist Vorbefund zur Platzkopplung über t (t allein verboten, keine Quarkmischung); r47–r60 Masken und A4-Auslesung. In den beiden Kopplungsnotizen nachgetragen.
-- Träger: Farbtriplett ausgeschieden (12.11.); Quaternionen-Richtungen i, j, k (r33) ausgeschieden als Generationenlabel, weil mu_1, mu_2 unter Q_em nicht invariant sind (neu; Voraussetzung: derselbe H-Faktor wie r40–r43); Hopf-Träger K <= 1/2; Modell I widerspruchsfrei, ohne Vorhersage.
-- Antwort: kein Träger liefert Zahl drei und Massen zugleich. Es fehlt ein Grund für die Wiederholung (nativer Mehrfachraum gleicher Quantenzahlen oder eichinvariante Dreifachauslesung), nicht ein weiterer Kopplungsansatz.
-
-## Erkundung Eigenwert-Auslesung (13.11., „weiter“)
-
-- Notiz und Skript `notes/research/op3_gram_eigen_readout_2026_11_13.*`, im selben PR #103. Erkundung, kein Test.
-- Eigenwerte der Platz-Gram-Matrix S sind eichinvariant (unitäre Wirkungen; nicht Boosts). Für drei Einheitsvektoren: s_k = 1 + 2 rho cos(theta + 2pi k/3), rho² = mittlere quadratische Überlappung, cos 3theta = c12 c13 c23/rho³, K = (1 + 2 rho²)/3 (mit sqrt(m) ∝ s als Annahme).
-- Koide ⇔ rho² = 1/2; Positivität gibt den Bogen |theta| <= pi/12; Rand = koplanare Plätze, leichtester Zustand masselos. Zahl der Massen = Rang. Farbfeste Ebene: immer ein Eigenwert null.
-- Mittel von K über Einheitsvektoren im R^n: (1 + 2/n)/3; farbfester Hopf-Torus: K in [1/2, 1], Mittel genau 2/3. Mittel über Konfigurationen, keine Herleitung; Numerologie-Vorbehalt.
-- Unterschied zum Ausschluss vom 12.11.: der galt für das H18-Gesetz (Diagonal-Labels), nicht für die Eigenwerte.
-
-## Zusätzliche Bedingung „Überlappung 1/2 für Leptonen und Neutrinos“ (13.11., Autorwahl)
-
-- Keine H99 vergeben, kein Test gerechnet: Die Frage ist durch H2 (v4.8.0-r12, Vorab 434c5a8, k15) beantwortet. K = 2/3 für Neutrinos geht nur mit negativer Wurzel (NO, Summe 0,0592 eV, verträglich, schwach trennend); mit positiven Wurzeln höchstens K = 0,585.
-- In der Gram-Lesart (Eigenwerte nie negativ) ist die Bedingung für Neutrinos mit bekannten Daten nicht erfüllbar. Nachtrag in `op3_gram_eigen_readout_2026_11_13.md`.
-- Zuletzt vergebene Hypothese bleibt H98.
-
-## Indefinite Form und H99 (13.11., Autorwahl „Indefinites Skalarprodukt“)
-
-- Quellenbefund `notes/research/op3_indefinite_form_2026_11_13.*`: bilineare Form x^T y auf C⊗H⊗O ist invariant unter Drehungen, Boosts, Farbe, Q_em; verschwindet auf Zuständen fester Ladung q ≠ 0, nicht auf neutralen (passt zu r44.1(d)). Lesart B: Re s hat Signatur (3,3). Negativer Gram-Eigenwert genau außerhalb des Bogens |theta| > pi/12.
-- **H99** (Vorab 5b23c5a, nicht blind, k221 in `notes/research/predictions/`): rho² = 1/2 in beiden farbneutralen Sektoren, theta_nu = theta_e + pi/12 ⇒ dm21/dm31 = 0,030839. H99a (NuFIT 6.0) verträglich, +1,31 sigma. H99b (NuFIT 6.1) nicht entscheidbar: sigma(dm21) nicht gefunden, Zentralwerte nur aus arXiv:2601.18781 (7,53; 2,519 bzw. 2,529); Aufruf von nu-fit.org blieb ohne Freigabe. Nachträglich: verlangtes dm21 = 7,74–7,80e-5 gegen JUNO 7,50 ± 0,12 (+2,0 bis +2,5 sigma).
-- **Zuletzt vergebene Hypothese: H99.** Nächste freie Nummer H100. Letztes k: k221 (k220 liegt auf einem lokalen Zweig des Autors).
-- Alles im selben PR #103; predictions/README und Wiki (Forschungsstand, Vorhersagen-und-Tests) nachgezogen.
-
-## Nächster Schritt (Autorentscheidung)
-
-- H99b nachholen: NuFIT-6.1-Tabelle (nu-fit.org) mit sigma(dm21) nachschlagen und das festgelegte Kriterium auswerten; das Kriterium nicht ändern.
-- Entscheiden, ob R = 0,030839 als Vorhersage gegen das nächste JUNO-Ergebnis zu dm21 festgeschrieben wird (H100, eigene Vorab-Notiz; nach heutigem Stand mit Widerlegungsrisiko).
-- Statusvermerke in einer neuen Runde: r33-Labels (Ladung), ältere Koide-Stellen (v470/17, „2/3 factor“, rem:koide-mass-discrepancy), thm:three-generations.
-- PR #103 wartet auf „PR 103 mergen“.
+- OP3/OP4 offen; OP1–OP5, C5, C6/T2 unverändert. Koide 2/3 und die Phase nicht hergeleitet.
+- Tragendes Bild (Erkundung): drei Plätze, Gram-Auslesung A, Zwei-Sonden-Block für Dirac-Massen, Majorana-Block
+  mit indefiniter Form für Neutrinos, Familien-U(3) auf dem Platzindex. Fehlt: native η, Dynamik von T₁₂,
+  Potential, α_F.
 
 ## Pflichten in jeder Sitzung
-
-- `AGENTS.md`, `wiki/Gesamtbild.md` und die einschlägige Anleitung unter `notes/anleitungen/` lesen; Auslöser in `notes/research/v4_10_0_w1/Zurueckgestellte_Ideen.md` prüfen.
-- Vorwissen-Pflicht, Vorab-Notizen, Suchrichtung prüfen. Merges nur nach ausdrücklicher Freigabe. Wiki im selben PR.
-- `.codex/environments/` bleibt unversioniert.
+- `AGENTS.md`, `wiki/Gesamtbild.md`, einschlägige Anleitung unter `notes/anleitungen/`; Auslöser in
+  `notes/research/v4_10_0_w1/Zurueckgestellte_Ideen.md` prüfen. Vorwissen-Pflicht, Vorab-Notizen, Suchrichtung.
+  Merges nur nach Freigabe. Wiki im selben PR. `.codex/environments/` bleibt unversioniert.
