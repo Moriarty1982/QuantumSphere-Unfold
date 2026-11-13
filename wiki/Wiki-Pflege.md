@@ -251,3 +251,25 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 12.11.2026: Vom Autor veröffentlichte v5.0.0 öffentlich geprüft; Dateiintegrität und Vorschau bestätigt, ausstehende GitHub-Nacharbeiten benannt.
 
 12.11.2026: Öffentliche Einstiegsseiten und Zitation auf v5.0.0 umgestellt; GitHub-Tag an den veröffentlichten Paketquellstand gebunden.
+
+12.11.2026: Rückwärtssuche zur Stringrelaxationsfrage in Forschungsstand ergänzt (notwendige Bedingungen, Maxwell-Klasse bei fester Außenlänge ausgeschlossen, drei verbleibende Wege); Forschungsschicht nach v5.0.0, kein OP-Abschluss.
+
+12.11.2026: Weg W-b in Forschungsstand ergänzt (Quellensuche negativ; kubisches Kraftgesetz gibt Brannen-Form mit freier Phase, Rückführung auf r44.1(e)); kein OP-Abschluss.
+
+12.11.2026: Quellensuche zur Koide-Phase in Forschungsstand ergänzt (Phase als Verhältnis ρ-ungerade/ρ-gerade, ältere Bausteine ρ-symmetrisch, übersehenes Vorwissen zu W-b nachgetragen); kein OP-Abschluss.
+
+13.11.2026: Erkundung zur ρ-ungeraden Platzkopplung aus der Trialitätsform in Forschungsstand ergänzt (Quarks: Brannen-Form mit freiem Winkel in der Ebene (1, e₇); Leptonen: keine Kopplung); Kandidat, kein OP-Abschluss.
+
+13.11.2026: Erkundung zur Platzkopplung auf dem vollen Dixon-Raum in Forschungsstand ergänzt (Sektorformel für e, ν, u, d; zwei freie Winkel; Spiegelung Leptonen/Quarks; einfachste Form passt nicht zu r11); Kandidat, kein OP-Abschluss.
+
+13.11.2026: Nachtrag zur Dixon-Platzkopplung in Forschungsstand (Verbinderblock r44.1(b) getroffen, Sektoren an Idempotenten, Hyperladung erlaubt nur einen Umlaufsinn, K ≤ 1/2); kein OP-Abschluss.
+
+13.11.2026: Nachtrag 2 zur Dixon-Platzkopplung in Forschungsstand (Rückweg über Dixon-konjugiertes Element eichinvariant, Element trägt bei einem Dublett keine Phase; Phase = relative Phase zweier freier Kopplungskonstanten); kein OP-Abschluss.
+
+13.11.2026: Weg C in Forschungsstand ergänzt (vier Generationenträger mit heutigem Stand; r33-Labels nicht ladungsinvariant; Modell I ohne Vorhersage; Korrektur: r53 als Vorbefund der Kopplungsabschnitte); kein OP-Abschluss.
+
+13.11.2026: Erkundung zur Eigenwert-Auslesung der Platz-Gram-Matrix in Forschungsstand ergänzt (K = (1+2ρ²)/3, Bogen aus Positivität, Rang = Zahl der Massen, Torus-Mittel 2/3); Auslesung ist Annahme, kein OP-Abschluss.
+
+13.11.2026: Nachtrag zur Eigenwert-Auslesung (Bedingung für Neutrinos durch H2 bereits beantwortet; in der Gram-Lesart mit bekannten Massendifferenzen nicht erfüllbar); keine neue H-Nummer.
+
+13.11.2026: Indefinite Form im neutralen Sektor und Test H99 in Forschungsstand und Vorhersagen-und-Tests ergänzt (H99a verträglich, nicht blind; H99b nicht entscheidbar; Spannung mit JUNO nachträglich genannt); kein OP-Abschluss.

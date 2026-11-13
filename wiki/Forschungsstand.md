@@ -1065,6 +1065,538 @@ Version 5; OPs und Guards bleiben unverändert. Details in
 [der Erkundungsnotiz](../notes/research/op3_string_relaxation_lambda_2026_11_12.md).
 
 
+### Rückwärtssuche zur Stringfrage (12.11.2026, nach v5.0.0)
+
+Statt weitere Netze vorwärts zu simulieren, hält die Erkundung fest, was
+jedes Modell für eine stabile ungleiche Aufteilung bei fester Außenlänge
+$L$ erfüllen muss. Analytisch, nicht blind; Forschungsschicht nach dem
+Release, kein Bestandteil von v5.0.0.
+
+- **Gleiche Zugkraft.** Bei frei umverteilbaren Längen mit
+  $\sum_i\ell_i=L$ gilt im Gleichgewicht $F_1=F_2=F_3$. Ungleiche Längen
+  kommen nur aus unterschiedlichem Materialzustand.
+- **Konvexe Energie.** Bei strikt konvexer Gleichgewichtsenergie und rein
+  dissipativer Kinetik ist der Endzustand das eindeutige Energieminimum.
+  Relaxationszeiten bestimmen den Weg, nicht das Ziel; gleiche Strings
+  geben $\ell_i=L/3$, also $K=1/3$.
+- **Reiner Maxwell-String.** Bei fester Summe fällt die Kraft
+  exponentiell auf null, und
+
+$$
+\ell_i(\infty)=r_i(0)+\Bigl(L-\sum_j r_j(0)\Bigr)\frac{1/\eta_i}{\sum_j 1/\eta_j}.
+$$
+
+  Die Aufteilung hängt an Anfangsdaten und eingesetzten Viskositäten. Es
+  gibt ein Kontinuum kraftfreier neutraler Zustände, keinen Attraktor;
+  die elastische Energie wird vollständig dissipiert.
+- **Wachsende Außenlänge.** Nur für $L\propto a=e^{Ht}$ gibt es einen von
+  den Anfangsdaten unabhängigen Grenzwert,
+  $\ell_i/L\to(1/\eta_i+H/k_i)/\sum_j(1/\eta_j+H/k_j)$. Das widerspricht
+  der festen Außenlänge, gibt für gleiche Strings wieder $1/3$, und die
+  von der Expansion geleistete Arbeit ist in keiner Friedmann-Bilanz
+  geführt.
+- **Gleiche Strings.** Ungleiche Längen verlangen ein nicht monotones
+  Kraftgesetz. Stabil ist ein Zustand genau dann, wenn höchstens ein
+  String auf einem fallenden Ast liegt und dann $\sum_i 1/F'(\ell_i)<0$
+  gilt. Ein Kraftgesetz mit einem Höcker erlaubt nur (lang, kurz, kurz),
+  also zwei gleiche Massen; $K=2/3$ legt dann die eine Zahl $L/\ell_c$
+  fest (Beispiel $F=\ell e^{-\ell/\ell_c}$: $L=2{,}983\,\ell_c$). Drei
+  verschiedene Längen verlangen mindestens zwei Umkehrpunkte des
+  Kraftgesetzes.
+
+**Ergebnis.** Für die Maxwell-Klasse bei fester Außenlänge ist die Frage
+aus Version 5 negativ beantwortet: Unterschiedliche Relaxation wählt keine
+stabile Aufteilung. Übrig bleiben drei Wege mit je einer benannten Lücke:
+ungleiche Strings (Herkunft der Moduln fehlt, Trialität spricht dagegen),
+gleiche Strings mit zweifach umkehrendem Kraftgesetz (native nicht konvexe
+Stringenergie und die Zahl $L/\ell_c$ fehlen) oder eine Knotengeometrie,
+in der die Kräfte nicht gleich sein müssen (Torusgrenze $K\le 1/2$ steht
+entgegen). Ein passendes Kraftgesetz lässt sich zu jedem Zieltripel
+konstruieren; das wäre keine Herleitung. Weder $\Lambda$ noch Koide $2/3$
+oder das Leptonspektrum folgen daraus. OP3 und OP5 bleiben offen, Guards
+unverändert.
+
+> **Anmerkungen für LLMs und Quellenprüfung:** Notiz
+> `notes/research/op3_string_relaxation_backward_2026_11_12.md`,
+> Selbstprüfung `op3_string_relaxation_backward_2026_11_12.py` (Formeln
+> gegen integrierte Gleichungen auf $10^{-12}$). Keine H-/k-Nummer, kein
+> MMA-Beleg.
+
+
+### Weg W-b: Quellensuche nach einer nicht konvexen Stringenergie (12.11.2026)
+
+Auf Autorenentscheidung wurde zuerst der Weg „gleiche Strings mit zweifach
+umkehrendem Kraftgesetz“ verfolgt. Quellenauftrag und analytische, nicht
+blinde Erkundung.
+
+**Quellenbefund: negativ.** Der Companion enthält keine Stringenergie als
+Funktion einer Länge. „String“ bezeichnet dort den Zählparameter
+$\gamma_{\rm string}=\ln 2/(\pi\sqrt3)$ und einen Sektor der
+String-LQG-Lesart (T11); Spannung, Wicklung oder ein Kraft-Längen-Gesetz
+kommen nicht vor. Der Feder-Satz (`thm:spring`) ist linear und ungedämpft,
+also konvex. Die einzige nicht konvexe Energie mit begrenzendem Ast ist
+das Higgs-Potential von W2 (r82.1); es ist eine Eingabe, gilt für ein Feld
+und liefert keine Länge $\ell_c$.
+
+**Kleinste passende Energie.** Das einfachste Kraftgesetz mit zwei
+Umkehrpunkten ist kubisch:
+
+$$
+U(\ell)=\frac{\lambda}{4}\bigl((\ell-\ell_0)^2-v^2\bigr)^2 .
+$$
+
+Gleiche Zugkraft bei drei verschiedenen Längen verlangt dann
+$\ell_0=L/3$ und gibt exakt die Brannen-Form
+
+$$
+\ell_i=\frac L3\Bigl(1+\frac{2\sqrt3\,v}{L}\cos\bigl(\theta+\tfrac{2\pi i}{3}\bigr)\Bigr),
+\qquad K=\frac13+\frac{2v^2}{L^2}.
+$$
+
+- $K=2/3$ gilt genau für $v=L/\sqrt6$. Das ist die Bedingung
+  $|b|=a/\sqrt2$ der Zirkulante aus r44.1(e) mit $a=L/3$, $|b|=v/\sqrt3$.
+- Die Phase $\theta$ bleibt frei: Die Energie ist auf dem Kreis exakt
+  entartet, die radiale Mode stabil. Die Lepton-Phase
+  $\theta\approx0{,}2222$ wird nicht gewählt.
+- Liegt der Topf nicht genau bei $L/3$, haben die Gleichgewichte zwei
+  gleiche Längen.
+- Positive Längen verlangen $|\theta|\le\pi/12$, derselbe Bogen wie im
+  v4.11-Abschnitt zur Koide-Phase.
+- Terme jenseits der Quartik legen $\theta$ fest; dann bestimmen
+  mindestens zwei Formzahlen die zwei Zielzahlen $K$ und $\theta$.
+
+**Ergebnis.** W-b liefert keine native Operation. In seiner kleinsten
+Form ist der Mechanismus die Brannen-Form in anderer Schreibweise und
+führt auf den bekannten offenen Punkt aus r44 zurück (Verhältnis $|b|/a$
+und Phase $\theta$). Die Expansion wählt darin nichts aus. Weder Koide
+$2/3$ noch die Phase oder das Leptonspektrum sind hergeleitet; die
+Stringfrage aus Version 5 und OP3 bleiben offen, Guards unverändert.
+Ungeprüft sind die Wege W-a (ungleiche Moduln) und W-c (Knotengeometrie).
+
+> **Anmerkungen für LLMs und Quellenprüfung:** Notiz
+> `notes/research/op3_string_energy_source_search_2026_11_12.md`,
+> Selbstprüfung `op3_string_energy_source_search_2026_11_12.py`. Gelesene
+> Quellen: `thm:spring`, `thm:koide-triolic`, `thm:string-lqg-duality`,
+> `sec:v490-r44-mass-frame-couplings`, `sec:v490-r82-higgs-stability`,
+> `sec:v4110-koide-overlap`. Keine H-/k-Nummer, kein MMA-Beleg.
+
+
+### Quellensuche zur Koide-Phase (12.11.2026)
+
+Gefragt war, ob der Companion eine Größe enthält, die die Phase $\delta$
+der Brannen-Form sieht und nicht zwei gleiche Massen wählt. Dabei wurden
+die älteren Kernbausteine mit dem Wissen der späteren Runden gelesen.
+Quellenprüfung, analytisch, nicht blind.
+
+**Was die Phase ist.** Auf dem Brannen-Kreis wirkt die zyklische
+Verschiebung $\tau$ als $\delta\to\delta+2\pi/3$ und die Spiegelung
+$\rho$ als $\delta\to-\delta$. Mit den Abweichungen $x_k$ vom Mittel und
+der Amplitude $A$ gilt
+
+$$
+x_0x_1x_2=\tfrac14A^3\cos3\delta,\qquad
+(x_0-x_1)(x_1-x_2)(x_2-x_0)=\pm\tfrac{3\sqrt3}{4}A^3\sin3\delta .
+$$
+
+Jede unter $\tau$ und $\rho$ invariante Größe hängt nur von
+$\cos3\delta$ ab und hat zwei gleiche Massen als kritische Punkte. Eine
+Phase daneben verlangt einen $\rho$-ungeraden, $\tau$-geraden Anteil; die
+Phase misst dann das Verhältnis beider Anteile. Leptonen:
+$\cos3\delta=0{,}78587$.
+
+**Ältere Bausteine.** Der Feder-Satz, die Slot-Norm-Potentiale aus r16
+und r26 und auch die Stringfrage aus Version 5 sind unter $\rho$
+symmetrisch. Sie scheitern aus demselben Grund an der Phase, den r45
+schon nennt: Sie kennen die Chiralität nicht. Die alte Phasenformel
+$\theta_K=\pi-\sqrt2\arcsin\beta_{\rm sym}$ benutzte mit dem Frame-Versatz
+eine $\rho$-ungerade Größe; ihre Zahl ist an den Daten ausgeschlossen
+(r09). Eine phasenabhängige Größe steht in r12.1 (Produkt der Wurzeln),
+sie ist aber $\rho$-gerade.
+
+**Was der Companion an $\rho$-ungeraden Größen hat.** Den
+Chiralitätsprojektor $\tfrac12(1+iL_{e_7})$ (r42, r45), den Assoziator
+$[e_4,e_5,e_6]=-2e_7$ (r13.1), die Ladung $Q_J=iL_{e_7}$ von W1 und das
+Vorzeichen des Frame-Versatzes. Keine dieser Größen trägt einen Betrag.
+
+**Ergebnis.** Die Quellensuche ist negativ, die Lücke ist benannt: Es
+fehlt eine $\tau$-invariante, $\rho$-ungerade Kopplung der drei Plätze mit
+hergeleitetem Betrag; ihr Ort ist die Chiralität, nicht eine
+Stringenergie. Phase, Koide $2/3$ und Leptonspektrum sind nicht
+hergeleitet; OP3/OP4 bleiben offen, Guards unverändert. Der W-b-Abschnitt
+oben hatte r10–r12, r16, r26 und r45 als Vorwissen übersehen; die Notiz
+trägt das nach.
+
+> **Anmerkungen für LLMs und Quellenprüfung:** Notiz
+> `notes/research/op3_phase_source_search_2026_11_12.md` mit Prüfskript.
+> Zwei ältere Stellen tragen noch den alten Stand ohne Statusvermerk:
+> `v470/17_open_question_genealogy.tex` („Koide/triolic block
+> structurally closed“) und die Bemerkung „The 2/3 factor is everywhere“
+> in `v470/10_sphaera_and_physics.tex`. Nur gemeldet, nicht geändert.
+
+
+### Erkundung: $\rho$-ungerade Platzkopplung aus der Trialitätsform (13.11.2026)
+
+Strukturerkundung ohne Entscheidungskriterium, nicht blind. Gefragt war,
+welche $\tau$-invariante, $\rho$-ungerade Kopplung die chirale Struktur
+(Modell I aus r45) erlaubt und ob sie ein Verhältnis festlegt.
+
+**Konstruktion (Kandidat).** Hält man in der Trialitätsform
+$t(x,y,z)=\mathrm{Re}((xy)z)$ das Element $h$ des dritten Platzes fest,
+koppelt sie die beiden anderen Plätze. Für ein linkes Feld $u$ und ein
+rechtes Partnerfeld $\bar w$ entsteht die Platzmatrix
+
+$$
+M=a+\alpha P+\beta P^2,\qquad
+\alpha=t(u,\bar w,h),\quad \beta=t(\bar w,u,h).
+$$
+
+Den Diagonalterm $a$ liefert $t$ nicht. Gerechnet wurde der
+Oktonionenfaktor.
+
+- **Quarks.** Für das Farbtriplett und reelles $h=h_0+h_7e_7$ gilt exakt
+  $\alpha=-2(h_0-ih_7)$, $\beta=-2(h_0+ih_7)$. Die Platzmatrix ist von
+  selbst hermitesch und hat Brannen-Form. Der $\rho$-gerade Anteil sitzt
+  an der Komponente entlang $1$, der $\rho$-ungerade an der Komponente
+  entlang $e_7$; die Brannen-Phase ist der Winkel von $h$ in der Ebene
+  $(1,e_7)$.
+- **Kein festes Verhältnis.** $t$ legt $h_7/h_0$ nicht fest. Für $h_7=0$
+  gibt es zwei gleiche Eigenwerte; für chirales $h=1\pm ie_7$ überlebt
+  nur ein Umlaufsinn.
+- **Leptonen.** Ihre Oktonionenanteile liegen in der kommutativen Ebene
+  $\mathrm{span}_{\mathbb C}(1,e_7)$, und $(1+ie_7)(1-ie_7)=0$. Die
+  Kopplung über $t$ verschwindet für jedes $h$: kein $\rho$-ungerader und
+  überhaupt kein Platz-Kopplungsterm.
+
+**Ergebnis.** Eine native $\rho$-ungerade Platzkopplung existiert: die
+$e_7$-Komponente des dritten Platzes. Ihr Verhältnis zum $\rho$-geraden
+Partner ist ein Winkel, den die Struktur nicht festlegt, und sie greift
+nur für farbige Zustände. Für die Leptonen liefert der Mechanismus
+nichts; eine Lepton-Phase müsste aus dem $\mathbb H$-Faktor, dem
+Frame-Wechsel oder einer anderen Kopplung kommen. Die Konstruktion ist
+ein Kandidat, kein Gesetz des Companion. Phase, Koide $2/3$ und Spektrum
+sind nicht hergeleitet; OP3/OP4 bleiben offen, Guards unverändert.
+
+> **Anmerkungen für LLMs und Quellenprüfung:** Notiz
+> `notes/research/op3_rho_odd_coupling_2026_11_12.md` mit Prüfskript
+> (Oktonionenprodukt der Konvention r04). Vorwissen: r44.1, r45.1, r46.1,
+> k85, k86. Keine H-/k-Nummer, kein MMA-Beleg.
+
+
+### Erkundung: Platzkopplung auf dem vollen Dixon-Raum (13.11.2026)
+
+Dieselbe Frage auf $\mathbb C\otimes\mathbb H\otimes\mathbb O$ mit dem
+Dixon-Produkt, für Leptonen und Quarks. Strukturerkundung ohne
+Entscheidungskriterium, nicht blind.
+
+**Konstruktion (Kandidat).** Mit $\langle\cdot\rangle$ als Komponente an
+$1\otimes1$ und der vollen Dixon-Konjugation $\hat x$ (Quaternionen- und
+Oktonionen-Konjugation) am ersten Eintrag:
+
+$$
+\alpha_s=\langle(\hat\psi\,\chi)\,h\rangle,\qquad
+\beta_s=\langle(\hat\chi\,\psi)\,h\rangle,\qquad
+M_s=a_s+\alpha_sP+\beta_sP^2,
+$$
+
+für $\psi$ im Bild und $\chi$ im Kern der Chiralität, $s=e,\nu,u,d$.
+
+- **Kein zyklischer Spinor-Term.** Auf $\mathbb H^3$ gibt es keine
+  trilineare Form, die unter gemeinsamer Lorentz-Drehung invariant ist.
+  Das Element $h$ des dritten Platzes muss ein Skalar sein.
+- **Leptonen koppeln** nur mit der vollen Konjugation; ohne
+  Oktonionen-Konjugation bleibt ihre Kopplung null.
+- **Sektorformel.** Für $h=(a_0+a_3e_3)\otimes(o_0+o_7e_7)$ gilt
+
+$$
+\alpha_s\propto(a_0+i\sigma_sa_3)(o_0+i\lambda_so_7),
+$$
+
+  mit $\sigma=+1$ für $e,d$ und $-1$ für $\nu,u$, $\lambda=+1$ für
+  Leptonen und $-1$ für Quarks. Bei reellen Komponenten ist die
+  Platzmatrix hermitesch, hat Brannen-Form und die Phase
+  $\theta_s=\sigma_s\varphi_H+\lambda_s\varphi_O$. Die Beträge sind in
+  allen Sektoren gleich.
+- **Zwei Quellen der Phase.** $\rho$-ungerade sind $1\otimes e_7$ und
+  $e_3\otimes1$, also die $e_7$-Richtung der Oktonionen und die
+  Isospin-Richtung der Quaternionen.
+- **Spiegelung.** Für jedes neutrale $h$ ist die Platzmatrix der
+  Up-Quarks das $\rho$-Bild der Platzmatrix der geladenen Leptonen, die
+  der Down-Quarks das $\rho$-Bild der Neutrinos.
+
+**Ergebnis.** Auf dem vollen Dixon-Raum existiert eine $\rho$-ungerade
+Platzkopplung für Leptonen und Quarks. Ein festes Verhältnis liefert sie
+nicht; aus vier Sektorphasen werden zwei freie Winkel. Nachträglich und
+nicht blind: In der einfachsten Form (ein gemeinsames reelles $h$) müssten
+Up-Quarks und geladene Leptonen denselben Phasenbetrag haben; r11 gibt bei
+$M_Z$ $0{,}0518$ gegen $0{,}2211$. Diese Form passt nicht zu den bekannten
+Massen. Die Konstruktion ist ein Kandidat, kein Gesetz des Companion.
+Phase, Koide $2/3$ und Spektrum sind nicht hergeleitet; OP3/OP4 bleiben
+offen, Guards unverändert.
+
+> **Anmerkungen für LLMs und Quellenprüfung:** Notiz
+> `notes/research/op3_dixon_slot_coupling_2026_11_13.md` mit Prüfskript
+> (Zustände wie in k85). Keine H-/k-Nummer, kein MMA-Beleg.
+
+**Nachtrag: Verbinder und Hyperladung (13.11.2026).** Erkundung, nicht
+blind.
+
+- Die Dixon-Kopplung spannt über die acht skalaren, farbneutralen
+  Elemente $h$ genau den achtdimensionalen antilinearen Verbinderblock
+  aus r44.1(b) auf (schwache Dubletts).
+- Die Produkte der primitiven Idempotente koppeln je genau einen Sektor:
+  $(1-ie_3)(1-ie_7)$ das Elektron, $(1+ie_3)(1-ie_7)$ das Neutrino,
+  $(1+ie_3)(1+ie_7)$ die Up-Quarks, $(1-ie_3)(1+ie_7)$ die Down-Quarks.
+  Die Verbinder haben $Q_{\rm em}=0$ und $Y/2=+\tfrac12$ für $e,d$,
+  $-\tfrac12$ für $\nu,u$.
+- Der Rückweg $\beta_s$ hängt am Koeffizienten des gespiegelten Sektors
+  und hat die falsche Hyperladung. Mit einem eichkovarianten Element ist
+  nur ein Umlaufsinn erlaubt: $M_s=a_s+\alpha_sP$.
+- Dann gilt $K\le\tfrac12$ (zwei zyklische Harmonische, bekannt aus dem
+  Abschnitt zum Skalen-Kandidaten); Koide $2/3$ ist so nicht erreichbar.
+  Mit einem gemeinsamen Element stehen die Massen im Verhältnis
+  $1:1:2$.
+- Der hermitesche Brannen-Fall mit reellem $h$ von oben ist vor der
+  Brechung nicht eichinvariant. Er bräuchte ein zweites, unabhängig
+  begründetes Element für den Rückweg.
+
+Unter Eichkovarianz bricht die Dixon-Kopplung $\rho$ also maximal und
+liefert die Koide-Form nicht. OP3/OP4 bleiben offen.
+
+**Nachtrag 2: Herkunft des Rückwegs (13.11.2026).** Erkundung, nicht
+blind. Sei $c_s$ der Koeffizient von $h$ am Idempotent des Sektors $s$
+und $s'$ der gespiegelte Sektor ($e\leftrightarrow u$,
+$\nu\leftrightarrow d$).
+
+| Element im dritten Platz | $\alpha_s$ | $\beta_s$ |
+|---|---|---|
+| $h$ | $c_s$ | $c_{s'}$ |
+| $h^*$ (Frame-Wechsel $T$) | $\bar c_{s'}$ | $\bar c_s$ |
+| $\tilde h$ (Dixon-konjugiert, Wirkung von $\rho$) | $c_{s'}$ | $c_s$ |
+| $h^\dagger=\tilde h^*$ | $\bar c_s$ | $\bar c_{s'}$ |
+
+Eichinvariant sind Terme mit $c_s$ oder $\bar c_{s'}$. Ein Rückweg
+existiert also: über $\tilde h$ mit demselben Koeffizienten wie der
+Hinweg, oder über $h^\dagger$ mit der Komponente entgegengesetzter
+Hyperladung. Im ersten Fall trägt das Element keine relative Phase. Im
+zweiten Fall wäre die relative Phase zweier unabhängiger
+Dublett-Komponenten eine Quelle der Brannen-Phase; W2 hat aber nur ein
+Dublett, und dann ist $\beta_s/\alpha_s$ eine Konstante unabhängig von
+$h$.
+
+Im heutigen Companion (Modell I, W2, zweite Lesart) kann das Element des
+dritten Platzes die Phase demnach nicht tragen. Die Brannen-Phase ist die
+relative Phase der Kopplungskonstanten von Hin- und Rückweg, die Stärke
+der $\rho$-Brechung ihr Betragsverhältnis; beides ist frei. Das ist die
+Aussage von r45, an einer bestimmten Stelle verortet. Eine Phase aus der
+Struktur verlangte eine zweite unabhängige Dublett-Komponente oder ein
+Prinzip, das die beiden Konstanten bindet. OP3/OP4 bleiben offen.
+
+
+### Weg C: Sind die Generationen zyklisch gekoppelte gleiche Kopien? (13.11.2026)
+
+Auf Autorenentscheidung wurde die Platzstruktur selbst geprüft.
+Quellenprüfung mit kleiner Erkundung, nicht blind.
+
+**Korrektur.** Die beiden Kopplungsabschnitte oben nannten keinen
+Vorbefund. Einschlägig ist r53 (H37): Die Kopplung zweier Generationen
+über $t$ mit einem Higgs-Wert im dritten Platz wurde dort mit reell
+symmetrischem $T(v)$ getestet; $t$ allein ist verboten
+($m_3=m_1+m_2$), mit Norm-Diagonalterm entsteht keine Quarkmischung. r47
+bis r60 behandeln die Generationenmaske und die Auslesung über
+Untergruppen von $A_4$. Neu an den Abschnitten oben bleiben der chirale,
+komplexe Anteil, die Sektorformel und die Rolle der Hyperladung.
+
+**Die vier vorhandenen Träger.**
+
+| Träger | Stand |
+|---|---|
+| Farbtriplett $e_4,e_5,e_6$ (Kern) | ausgeschieden: Kompression skalar (12.11.) |
+| Quaternionen-Richtungen $i,j,k$ mit Gram-Labels (r33) | ausgeschieden als Generationenlabel (neu, siehe unten) |
+| Hopf-Träger mit H18-Gesetz (r15, r33) | $K\le\tfrac12$ auf dem farbfesten Torus (12.11.) |
+| Drei gleiche lineare Kopien, zyklisch gekoppelt (Modell I, r45) | widerspruchsfrei, ohne Vorhersage |
+
+**Neu: Die Gram-Labels aus r33 sind nicht ladungsinvariant.** r33 legt
+die Plätze in die Richtungen $i,j,k$ und liest
+$\mu_i=2(\lVert x_j\rVert^2\lVert x_k\rVert^2-\langle x_j,x_k\rangle^2)$
+aus; das ist die Diagonale von $N=2\,\mathrm{adj}(S)$ mit der Gram-Matrix
+$S$ der Plätze. Seit r40–r43 ist die Rechtsmultiplikation in $\mathbb H$
+der schwache Isospin. Unter der elektrischen Ladung drehen sich $i$ und
+$j$ ineinander: $\mu_1$ und $\mu_2$ ändern sich, invariant sind nur die
+Eigenwerte von $N$. Die drei Richtungen sind die Komponenten (geladen,
+geladen, neutral) des Isospins und keine drei Generationen. Auf der
+farbfesten Ebene $\mathrm{span}(1,e_7)$ sind die Eigenwerte stets
+$(0,0,m)$. Vorausgesetzt ist, dass r33 denselben Quaternionenfaktor
+meint.
+
+**Antwort.** Im heutigen Companion liefert kein Träger die Zahl drei und
+die Massen zugleich. Zwei ältere Träger scheiden aus, weil ihre drei
+Einträge eine Eichquantenzahl tragen; eine Generation ist aber eine
+Wiederholung bei gleichen Quantenzahlen. Modell I bleibt als einzige
+widerspruchsfreie Lesart: Die Generationen sind dort ein
+Vielfachheitsraum, über dessen Kopplungen die Struktur nichts sagt, was
+nicht eingesetzt wird. „Zyklisch gekoppelte gleiche Kopien“ ist damit
+weder widerlegt noch gestützt. Es fehlt kein weiterer Kopplungsansatz,
+sondern ein Grund für die Wiederholung selbst (vgl. T7: ein Verbot einer
+vierten Generation fehlt). OP3/OP4 bleiben offen, Guards unverändert.
+
+> **Anmerkungen für LLMs und Quellenprüfung:** Notiz
+> `notes/research/op3_generation_carrier_review_2026_11_13.md` mit
+> Prüfskript. Vorwissen: r33, r37, r45, r46, r47, r50, r52–r60 und die
+> fünf OP3-Notizen vom 12.11. Keine H-/k-Nummer, kein MMA-Beleg.
+
+
+### Erkundung: Eigenwerte der Platz-Gram-Matrix als eichinvariante Auslesung (13.11.2026)
+
+Analytische Erkundung mit numerischer Selbstprüfung, nicht blind. Gefragt
+war nach einer Auslesung einer Konfiguration dreier Plätze, die
+eichinvariant ist und drei Werte liefert.
+
+**Auslesung.** Die Eigenwerte der Gram-Matrix
+$S_{ab}=\langle x_a,x_b\rangle$ hängen von keiner Platzbasis ab und sind
+unter jeder unitären, auf allen Plätzen gleichen Wirkung invariant
+(Lorentz-Drehungen, $Q_{\rm em}$, schwaches SU(2), Hyperladung, Farbe;
+nicht Boosts). Die Zuordnung $\sqrt{m_k}\propto s_k$ ist eine Annahme.
+
+**Geschlossene Form.** Für drei Einheitsvektoren mit Überlappungen
+$c_{12},c_{13},c_{23}$ gilt
+
+$$
+s_k=1+2\rho\cos\bigl(\theta+\tfrac{2\pi k}{3}\bigr),\qquad
+\rho^2=\tfrac13\bigl(c_{12}^2+c_{13}^2+c_{23}^2\bigr),\qquad
+\cos3\theta=\frac{c_{12}c_{13}c_{23}}{\rho^3},
+$$
+
+und
+
+$$
+K=\frac{\sum_k s_k^2}{(\sum_k s_k)^2}=\frac{1+2\rho^2}{3},\qquad
+\det S=1-3\rho^2+2\rho^3\cos3\theta .
+$$
+
+Das ist r53.1(b) und r12.1, gelesen als Gram-Matrix.
+
+- **Koide als Überlappung.** $K=2/3$ gilt genau bei mittlerer
+  quadratischer Überlappung $\rho^2=\tfrac12$.
+- **Der Bogen folgt aus der Positivität.** Bei $\rho^2=\tfrac12$ ist
+  $\det S\ge0$ genau für $|\theta|\le\pi/12$, der Bogen aus dem
+  v4.11-Abschnitt. Der Rand sind drei Plätze in einer Ebene mit einem
+  masselosen leichtesten Zustand.
+- **Zahl der Massen = Rang.** Auf der farbfesten Ebene
+  $\mathrm{span}(1,e_7)$ ist ein Eigenwert immer null; drei gleiche
+  Zustände geben $(3,0,0)$.
+- **Mittelwert.** Über zufällige Einheitsvektoren im $\mathbb R^n$ ist
+  das Mittel von $K$ genau $(1+2/n)/3$, also $2/3$ für $n=2$. Auf dem
+  farbfesten Hopf-Torus von r15 liegt $K$ zwischen $\tfrac12$ und $1$
+  mit Mittel $2/3$.
+- **Unterschied zu H18.** Mit den Diagonal-Labels gilt dort
+  $K\le\tfrac12$ (12.11.), mit den Eigenwerten $K\ge\tfrac12$. Der
+  Ausschluss gilt für das H18-Gesetz, nicht für die ladungsinvariante
+  Auslesung.
+
+**Bewertung.** Koide wird zu einer Aussage über die Konfiguration; die
+Zahl $2/3$ ist damit nicht hergeleitet. Der Mittelwert ist ein Mittel
+von $K$ über Konfigurationen, keine Eigenschaft einer einzelnen, und kann
+Zufall der Dimension zwei sein. Die farbfeste Ebene gibt genau einen
+masselosen Zustand; eine Elektronmasse verlangte eine dritte, farbneutral
+nicht vorhandene Richtung. Offen bleibt, warum Massenwurzeln Eigenwerte
+sein sollen, was die Konfiguration festlegt und wie drei Plätze gleicher
+Quantenzahlen linear unabhängig sein können. Nachträglich, nicht blind:
+die geladenen Leptonen hätten $\rho^2=0{,}499991$ und
+$\det S=0{,}0557$. OP3/OP4 bleiben offen, Guards unverändert.
+
+> **Anmerkungen für LLMs und Quellenprüfung:** Notiz
+> `notes/research/op3_gram_eigen_readout_2026_11_13.md` mit Prüfskript.
+> Vorwissen: r10.1, r12.1, r53.1(b), r33/H18, `sec:v4110-koide-overlap`.
+> Keine H-/k-Nummer, kein MMA-Beleg.
+
+**Nachtrag: dieselbe Bedingung für Neutrinos (13.11.2026).** Der Autor
+wählte als zusätzliche Bedingung $\rho^2=\tfrac12$ für beide farbneutralen
+Sektoren. Die Vorwissen-Suche zeigte, dass die Frage beantwortet ist; es
+wurde kein neuer Test gerechnet und keine H-Nummer vergeben.
+
+- H2 (v4.8.0-r12) hat $K=2/3$ für Neutrinos schon geprüft: Mit positiven
+  Wurzeln erreichen sie bei den gemessenen Massendifferenzen höchstens
+  $K=0{,}585$ (normale Ordnung) bzw. $0{,}500$ (invertiert). $K=2/3$
+  verlangt eine negative Wurzel; dann normale Ordnung und
+  $\sum m_\nu=0{,}0592\pm0{,}0002$ eV, verträglich und schwach trennend.
+- Eigenwerte einer Gram-Matrix sind nie negativ. In der Gram-Lesart ist
+  die Bedingung für Neutrinos deshalb mit bekannten Daten nicht erfüllbar
+  (höchstens $\rho^2=0{,}378$). Die negative Wurzel von H2 entspräche
+  einem indefiniten Skalarprodukt; ob der Companion dafür eine native
+  Form hat, ist nicht geprüft.
+
+
+### Indefinite Form im neutralen Sektor und Test H99 (13.11.2026)
+
+Autorenentscheidung: als zusätzliche Bedingung ein indefinites
+Skalarprodukt prüfen. Quellenauftrag, danach ein vorab festgelegter,
+nicht blinder Test.
+
+**Quellenbefund.** Der Companion hat eine indefinite, vollständig
+Lorentz-invariante Form.
+
+- In Lesart B ist $s=z_1^2+z_2^2+z_3^2$ die einzige quadratische
+  Lorentz-Invariante des Kernvektors $z=E+iB$ (r10.3); ihr Realteil
+  $E^2-B^2$ hat die Signatur $(3,3)$, die Tachyon-Abbildung $z\mapsto iz$
+  kehrt das Vorzeichen um, eine $120^\circ$-Triole ist ein Nullvektor.
+- Auf $\mathbb C\otimes\mathbb H\otimes\mathbb O$ ist die
+  komplex-bilineare Form $x^{\mathsf T}y$ invariant unter Drehungen,
+  Boosts, Farbe und elektrischer Ladung; die hermitesche Form ist unter
+  Boosts nicht invariant. Die bilineare Form paart Ladung $+q$ mit $-q$:
+  Auf Zuständen fester Ladung $q\ne0$ verschwindet sie, auf den
+  elektrisch neutralen nicht. Das passt zu r44.1(d).
+- Mit einer indefiniten Form können drei Plätze einen Raum der Signatur
+  $(2,1)$ aufspannen; dann ist ein Eigenwert negativ. Bei
+  $\rho^2=\tfrac12$ geschieht das genau für $|\theta|>\pi/12$. Der Rand
+  des v4.11-Bogens trennt die beiden Signaturen.
+
+Die negative Wurzel der Neutrinos aus H2 ist damit strukturell
+einordenbar (geladene Leptonen innerhalb, Neutrinos außerhalb des
+Bogens). Dass Neutrinos die Signatur $(2,1)$ haben müssen, ist nicht
+gezeigt.
+
+**Test H99** (Vorab-Notiz Commit 5b23c5a, Skript k221, nicht blind).
+Bedingung: gleiche Überlappung $\rho^2=\tfrac12$ in beiden farbneutralen
+Sektoren und
+
+$$
+\theta_\nu=\theta_e+\frac{\pi}{12},\qquad \theta_e=0{,}2222248
+\ \text{aus den Polmassen}.
+$$
+
+Daraus folgt ohne freie Zahl
+
+$$
+\frac{\Delta m^2_{21}}{\Delta m^2_{31}}=0{,}030839 .
+$$
+
+- **H99a** (NuFIT 6.0, $0{,}029805\pm0{,}000792$): Abweichung $+1{,}31\sigma$,
+  nach dem Kriterium verträglich.
+- **H99b** (NuFIT 6.1): nicht entscheidbar, weil die Unsicherheit von
+  $\Delta m^2_{21}$ nicht gefunden und die Primärtabelle nicht eingesehen
+  wurde. Ersatzrechnungen außerhalb des Kriteriums geben $+1{,}8\sigma$
+  bis $+2{,}3\sigma$.
+- Nachträglich: Die Bedingung verlangt
+  $\Delta m^2_{21}=7{,}74$ bis $7{,}80\cdot10^{-5}$ eV²; JUNO hat
+  $7{,}50\pm0{,}12$ gemessen, also $+2{,}0\sigma$ bis $+2{,}5\sigma$. Die
+  Bedingung steht derzeit eher unter Druck und wird mit weiteren
+  JUNO-Daten scharf prüfbar.
+- Abgeleitet, außerhalb des Kriteriums: Massen $0{,}38$; $8{,}81$;
+  $50{,}13$ meV, Summe $0{,}0593$ eV, normale Ordnung, praktisch wie H2.
+
+Die Beziehung ist aus der Literatur bekannt (Brannen) und nicht
+hergeleitet; nativ ist nur die Rolle von $\pi/12$ als Bogenrand. Koide
+$2/3$, die Phase und die Annahme „Massenwurzel = Eigenwert“ bleiben
+unbegründet. OP3/OP4 bleiben offen, Guards unverändert.
+
+> **Anmerkungen für LLMs und Quellenprüfung:** Notizen
+> `notes/research/op3_indefinite_form_2026_11_13.md`,
+> `notes/research/predictions/Vorab_Notiz_H99_Neutrino_Phase_Bogenrand.md`,
+> `Ergebnis_H99_Neutrino_Phase_Bogenrand.md`, Skript `k221_test_h99.py`.
+> Vorwissen: H2 (v4.8.0-r12), r10, r11, `sec:v4110-koide-overlap`.
+> NuFIT-6.1-Zentralwerte nur aus arXiv:2601.18781.
+
+
 ### Version 5: Veröffentlichungsvorbereitung wieder aufgenommen (12.11.2026)
 
 PR #100 integriert die jüngsten OP3-Erkundungen. Auf Autorenauftrag werden
