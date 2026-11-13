@@ -37,7 +37,9 @@
   S3-Dublett mit Zyklus diag(ω, ω²); reelle Zustände geben K = 1/2, ein komplexer Bezug unter dem magischen Winkel
   K = 2/3 und π/4. **Bezugszustand gefunden** (`op3_sedenion_reference_2026_11_13.*`): H_n = span(1,e7,e8,e15) farbneutrale
   Quaternionen, ψ = 120°-Drehung um e8, Raumdiagonale (e7+e8+e15)/√3 gibt Oktant (K = 2/3, π/4). Hindernis: Ladung
-  (ψ dreht e7, L_e7 dreht (e8,e15)). Als Nächstes: Fortsetzung der Ladung auf die Sedenionen prüfen; sonst H100 abwarten.
+  (ψ dreht e7, L_e7 dreht (e8,e15)). **Ladung fortgesetzt:** keine Fortsetzung mit Q|_O = Q8 (k85) vertauscht mit ψ;
+  Drehung um e7 (Konjugation mit a) ladungsverträglich, aber kein Automorphismus von S, e8/e15 mit Ladung 1/3, 2/3.
+  Native Trägersuche auch in den Sedenionen negativ. Empfehlung: PR #106 mergen, H100 abwarten.
   Werkzeuge: `notes/research/op3_eta_form_search_2026_11_13.*`, `op3_slot_u3_gauging_2026_11_13.*`.
   · zur Wahl: H100 vorab festschreiben (Kandidaten unten) · T₁₂ als dynamisches Feld · Potential für ρ² = 1/2 ·
   Vereinigung Platzindex-U(3) mit SU(2)_L.

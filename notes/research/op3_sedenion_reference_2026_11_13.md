@@ -44,3 +44,30 @@ Companion allerdings nicht definiert; die Prüfung gilt unter der Annahme, dass 
 - Nicht gezeigt: warum nur die Neutrinos diesen Träger sehen; wie der Sedenion-Anteil an den Platzüberlappungen
   hängt. Nachträglich, mit bekanntem Ziel.
 - OP3/OP4 offen; OP1–OP5, C5, C6/T2 unverändert; H100 unberührt.
+
+## Nachtrag: Ladung auf die Sedenionen fortgesetzt (13.11., spät, Autor: „Ladung fortsetzen“)
+
+Vorwissen: k85 (`k85_test_h29.py`) definiert die Ladung auf O als Q8 = 1/2 − (i/6) L_e7 − (i/3) R_e7 (Eigenwerte 0, 1/3,
+2/3, 1), Q_em = Isospin + Q − 1/2. Skript, Abschnitte „Ladung auf die Sedenionen fortsetzen“ und „Alternative“.
+
+**1. Natürliche Fortsetzung.** Q_S = 1/2 − (i/6) L_e7 − (i/3) R_e7 mit sedenionischer Multiplikation stimmt auf O mit Q8
+überein, vertauscht aber nicht mit ψ.
+
+**2. Keine Fortsetzung vertauscht mit ψ.** Gesucht wurde jedes Q auf S, das auf O gleich Q8 ist und mit ψ vertauscht
+(lineares Gleichungssystem für alle übrigen Einträge). Kleinster Restfehler 0,75: **nicht lösbar.** Grund: ψ dreht die
+Ladungsachse e_7 nach −e_7/2 + (√3/2) e_15; die einzige ψ-feste imaginäre Richtung ist e_8. Der Generationsschritt ψ
+der Sedenionen ist also mit der Ladung des Companion in keiner Fortsetzung verträglich.
+
+**3. Ladungsverträgliche Alternative.** Die Konjugation mit dem symmetrischen Punkt a = exp(2πe_7/3) aus r15, auf S
+fortgesetzt, hält e_7 fest, vertauscht mit Q_S und dreht (e_8, e_15) um 120°. Die Raumdiagonale (e_7 + e_8 + e_15)/√3
+steht auch zu e_7 unter dem magischen Winkel, ihre Bahn ist orthonormal: wieder das Oktanten-Tripel. Aber:
+- Diese Konjugation ist auf S **kein Automorphismus** (Fehler 21; auf O war sie einer).
+- Unter Q_S tragen die komplexifizierten Richtungen von span(1, e_7, e_8, e_15) die Ladungen 0, 1, 1/3, 2/3; die
+  Richtungen e_8, e_15 sind quarkartig geladen. Der Träger ist also nicht ladungsneutral, und der Bezugszustand mischt
+  Ladungen.
+
+**Bewertung.** Mit der Ladung des Companion gibt es in den Sedenionen keinen farb- und ladungsneutralen Träger des
+Oktanten-Tripels: Der Automorphismus ψ verletzt die Ladung in jeder Fortsetzung; die ladungsverträgliche Drehung um e_7
+ist kein Automorphismus und läuft durch geladene Richtungen. Die Fortsetzung Q_S ist dabei eine Annahme (im Companion
+ist auf S keine Ladung definiert); das Ergebnis 2 gilt für jede Fortsetzung, die auf O die bekannte Ladung behält.
+Die Suche nach einem nativen Träger ist damit auch in den Sedenionen negativ. OP3/OP4 offen; H100 unberührt.

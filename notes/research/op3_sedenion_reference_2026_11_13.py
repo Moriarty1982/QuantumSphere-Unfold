@@ -72,3 +72,67 @@ if __name__ == "__main__":
     # Ladungsstruktur: vertauscht psi mit L_e7? haelt psi e7 fest?
     Le7 = np.array([smul(e7, su(b)) for b in range(16)]).T
     print(f"    psi vertauscht mit L_e7: {np.allclose(P @ Le7, Le7 @ P)};  L_e7 bildet e8 auf {np.round(Le7 @ e8, 3)[[8, 15]].tolist()} in (e8, e15) ab")
+
+
+if __name__ == "__main__":
+    print("\n== Ladung auf die Sedenionen fortsetzen ==")
+    # Companion-Ladung auf O (k85): Q8 = 1/2 - (i/6) L_e7 - (i/3) R_e7 (komplexifiziert)
+    L8 = [np.array([omul(ho.unit(k), ho.unit(b)) for b in range(8)]).T for k in range(8)]
+    R8 = [np.array([omul(ho.unit(b), ho.unit(k)) for b in range(8)]).T for k in range(8)]
+    Q8 = 0.5 * np.eye(8) - (1j / 6) * L8[7] - (1j / 3) * R8[7]
+    print(f"    Q8 auf O: Eigenwerte {sorted(np.round(np.linalg.eigvals(Q8).real, 4).tolist())}")
+    P = psi_matrix(2 * np.pi / 3).astype(complex)
+    # (a) naheliegende Fortsetzung mit sedenionischer Links-/Rechtsmultiplikation
+    LS7 = np.array([smul(e7, su(b)) for b in range(16)]).T
+    RS7 = np.array([smul(su(b), e7) for b in range(16)]).T
+    QS = 0.5 * np.eye(16) - (1j / 6) * LS7 - (1j / 3) * RS7
+    print(f"    (a) Q_S = 1/2 - (i/6) L_e7 - (i/3) R_e7 auf S: stimmt auf O mit Q8 ueberein {np.allclose(QS[:8, :8], Q8)}, "
+          f"vertauscht mit psi {np.allclose(QS @ P, P @ QS)}")
+    # (b) allgemein: gibt es Q auf S mit Q|_O = Q8 (Block) und [Q, psi] = 0?
+    n = 16
+    unknown = [(i, j) for i in range(n) for j in range(n) if not (i < 8 and j < 8)]
+    idx = {ij: k for k, ij in enumerate(unknown)}
+    rows, rhs = [], []
+    for r in range(n):
+        for c in range(n):
+            row = np.zeros(len(unknown), complex); b = 0j
+            # (Q P - P Q)[r, c] = sum_k Q[r,k] P[k,c] - P[r,k] Q[k,c]
+            for k in range(n):
+                for (ii, jj, coef) in ((r, k, P[k, c]), (k, c, -P[r, k])):
+                    if coef == 0:
+                        continue
+                    if ii < 8 and jj < 8:
+                        b -= coef * Q8[ii, jj]
+                    else:
+                        row[idx[(ii, jj)]] += coef
+            rows.append(row); rhs.append(b)
+    A = np.array(rows); bvec = np.array(rhs)
+    sol, res, rank, _ = np.linalg.lstsq(A, bvec, rcond=None)
+    resid = np.abs(A @ sol - bvec).max()
+    print(f"    (b) Q mit Q|_O = Q8 und [Q, psi] = 0: kleinster Restfehler {resid:.2e} -> {'loesbar' if resid < 1e-9 else 'nicht loesbar'}")
+    # (c) psi bewegt die Ladungsachse: psi(e7)
+    print(f"    (c) psi(e7) = -1/2 e7 + sqrt3/2 e15: Jede Ladung aus Multiplikation mit e7 wird von psi in eine mit psi(e7) ueberfuehrt;")
+    print("        psi-feste imaginaere Richtung in S ist nur e8 (G2-fest, nicht die Ladungsachse des Companion).")
+
+
+if __name__ == "__main__":
+    print("\n== Alternative: Zyklus um die Ladungsachse e7 (symmetrischer Punkt a = exp(2pi e7/3), auf S fortgesetzt) ==")
+    a = np.cos(2 * np.pi / 3) * su(0) + np.sin(2 * np.pi / 3) * e7
+    ai = a.copy(); ai[1:] *= -1
+    Cm = np.array([smul(smul(a, su(b)), ai) for b in range(16)]).T     # x -> (a x) a^-1
+    Cm2 = np.array([smul(a, smul(su(b), ai)) for b in range(16)]).T    # x -> a (x a^-1)
+    print(f"    Klammerung egal: {np.allclose(Cm, Cm2)}; a^3 = 1: {np.allclose(smul(smul(a, a), a), su(0))}")
+    err = max(np.abs(Cm @ smul(x, y) - smul(Cm @ x, Cm @ y)).max() for x, y in
+              ((rng.normal(size=16), rng.normal(size=16)) for _ in range(100)))
+    print(f"    Konjugation mit a ist Automorphismus von S: Fehler {err:.1e}")
+    print(f"    vertauscht mit Q_S: {np.allclose(Cm @ QS, QS @ Cm)}; haelt e7 fest: {np.allclose(Cm @ e7, e7)}; "
+          f"dreht (e8, e15): {np.round(Cm @ e8, 3)[[8, 15]].tolist()}")
+    f2 = (e7 + e8 + e15) / np.sqrt(3)
+    orb = [f2, Cm @ f2, Cm @ Cm @ f2]
+    G = np.array([[x @ y for y in orb] for x in orb])
+    print(f"    Bahn der Diagonale unter diesem Zyklus orthonormal: {np.allclose(G, np.eye(3))}")
+    # Ladungen der Richtungen in H_n (komplexifiziert): Eigenwerte von Q_S auf span(1, e7, e8, e15)
+    idxH = [0, 7, 8, 15]
+    sub = QS[np.ix_(idxH, idxH)]
+    inv = np.allclose(QS[np.ix_([i for i in range(16) if i not in idxH], idxH)], 0)
+    print(f"    Q_S laesst span(1,e7,e8,e15) invariant: {inv}; Eigenwerte dort {sorted(np.round(np.linalg.eigvals(sub).real, 4).tolist())}")

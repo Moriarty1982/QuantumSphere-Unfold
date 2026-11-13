@@ -1862,6 +1862,13 @@ Erkundung $\eta$, ohne Datenvergleich:
   $J=L_{e_7}$ als Ladungsstruktur ist der Träger nicht
   $Q_{\rm em}$-verträglich (Ladung auf den Sedenionen im Companion nicht
   definiert).
+- Nachtrag Ladung fortgesetzt: Keine Fortsetzung der Ladung auf die
+  Sedenionen, die auf $\mathbb O$ die bekannte Ladung behält, vertauscht
+  mit $\psi$ (lineares System nicht lösbar), weil $\psi$ die Ladungsachse
+  $e_7$ dreht. Die ladungsverträgliche Drehung um $e_7$ gibt zwar wieder
+  den Oktanten, ist aber kein Automorphismus der Sedenionen, und $e_8$,
+  $e_{15}$ tragen dann die Ladungen $1/3$, $2/3$. Ein farb- und
+  ladungsneutraler Träger ist auch in den Sedenionen nicht gefunden.
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),

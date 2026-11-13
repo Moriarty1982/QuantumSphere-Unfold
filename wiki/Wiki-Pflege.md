@@ -325,3 +325,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 13.11.2026, spät: Prüfung der Feldsuche (stetige SU(2) nicht nötig; Hurwitz-Einheit, 2T, A4; Sedenion-Ebene (e7, e15) als neutrales Dublett, Bezugszustand fehlt) in Forschungsstand; kein OP-Abschluss.
 
 13.11.2026, spät: Erkundung Bezugszustand in den Sedenionen (farbneutrale Quaternionen span(1,e7,e8,e15), Raumdiagonale gibt Oktant; Ladung als Hindernis) in Forschungsstand; kein OP-Abschluss.
+
+13.11.2026, spät: Nachtrag Ladung auf die Sedenionen fortgesetzt (keine ψ-verträgliche Fortsetzung; Drehung um e7 kein Automorphismus, e8/e15 geladen) in Forschungsstand; kein OP-Abschluss.
