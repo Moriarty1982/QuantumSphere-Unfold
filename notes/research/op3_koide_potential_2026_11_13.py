@@ -47,3 +47,32 @@ if __name__ == "__main__":
     sb = np.sort(best.x)
     print(f"(4) V = tr(S^2 - 2S)^2 bei tr S = 3: Minimum bei s = {np.round(sb, 4)}, V = {best.fun:.4f}, "
           f"K = {np.sum(sb ** 2) / sb.sum() ** 2:.4f} (Koide 0.6667)")
+
+
+def haar_states(n, d, rng):
+    z = rng.normal(size=(n, d)) + 1j * rng.normal(size=(n, d))
+    return z / np.linalg.norm(z, axis=1, keepdims=True)
+
+
+if __name__ == "__main__":
+    print("\n== Auswahlprinzip: Koide als qubitartige Treue ==")
+    N = 200000
+    for d in (2, 3, 4):
+        r2s, Ks, phis = [], [], []
+        for _ in range(N // 10):
+            X = haar_states(3, d, rng)
+            S = X.conj() @ X.T
+            r2 = (abs(S[0, 1]) ** 2 + abs(S[1, 2]) ** 2 + abs(S[2, 0]) ** 2) / 3
+            r2s.append(r2); Ks.append((1 + 2 * r2) / 3)
+        r2s, Ks = np.array(r2s), np.array(Ks)
+        print(f"    C^{d} (Haar): Mittel rho^2 = {r2s.mean():.4f} (1/d = {1 / d:.4f}), Mittel K = {Ks.mean():.4f}, Streuung K = {Ks.std():.4f}, "
+              f"Anteil |K - 2/3| < 1e-5: {np.mean(np.abs(Ks - 2 / 3) < 1e-5):.1e}")
+    # Qubit-Tripel haben Rang 2: theta folgt aus rho (det = 0)
+    X = haar_states(3, 2, rng)
+    S = X.conj() @ X.T
+    print(f"    Qubit-Tripel: det S = {abs(np.linalg.det(S)):.1e} (immer Rang 2); bei rho^2 = 1/2 also theta = pi/12 (Rand)")
+    # drei Koide-Fakten in einer Zeile
+    print("    Zusammenfassung: rho^2 = 1/2 ist (a) die mittlere Treue zufaelliger Qubits, (b) die Treue der Qubits an orthogonalen")
+    print("    Achsen (Oktant, Rand), (c) unter Spins j an orthogonalen Achsen nur fuer j = 1/2 erreicht.")
+    print(f"    Geladene Leptonen: Rang 3 mit rho^2 = 1/2, Bargmann-Phase 3 theta_e = {3 * 0.22222:.4f} < pi/4 = {np.pi / 4:.4f}: "
+          "qubitartige Treue, aber aus der Qubit-Ebene herausgehoben.")

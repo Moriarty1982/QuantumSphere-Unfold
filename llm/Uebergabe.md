@@ -46,7 +46,10 @@
   ab Zeile 1502; Notizen `notes/research/v4_10_0_r12/`; Guard-Linter 0 Treffer; lokaler Build ok, 1406 Seiten, 0 Overfull,
   0 undefinierte Verweise; CI-Lauf (qsc-latex-build) noch nicht gestartet. (2) Potential: Grad 6 mit abgestimmtem Verhältnis
   nötig, kein natürlicher Kandidat. (3) T₁₂ dynamisch: nur Singulärwerte invariant, ρ und θ abgestimmt
-  (`op3_koide_potential_2026_11_13.*`). Empfehlung: CI-Build starten, PR #106 mergen, H100 abwarten.
+  (`op3_koide_potential_2026_11_13.*`). CI-Build 43495233521 (qsc-latex-build) erfolgreich.
+- **Auswahlprinzip (Autor: „weiter“):** Koide = paarweise Treue wie bei Qubits (Haar-Mittel in C² genau 2/3; Oktant;
+  nur Spin 1/2); Mittel erklärt die Genauigkeit nicht (Streuung 0,11), geladene Leptonen Rang 3. Prinzip fehlt.
+  Empfehlung: PR #106 mergen, H100 abwarten.
   Werkzeuge: `notes/research/op3_eta_form_search_2026_11_13.*`, `op3_slot_u3_gauging_2026_11_13.*`.
   · zur Wahl: H100 vorab festschreiben (Kandidaten unten) · T₁₂ als dynamisches Feld · Potential für ρ² = 1/2 ·
   Vereinigung Platzindex-U(3) mit SU(2)_L.

@@ -1886,6 +1886,13 @@ Koide-Bogens ist exakt das Oktanten-Tripel. Zu den Fäden:
 - $\mathcal T_{12}$ dynamisch: Als Feld hat es nur die Singulärwerte als
   Invarianten; $\rho$ und $\theta$ werden zu zwei abgestimmten
   Kopplungen, eine Vorhersage entsteht nicht.
+- Auswahlprinzip: Für Haar-zufällige Zustände in $\mathbb C^d$ ist die
+  mittlere Treue $1/d$, also $K$ im Mittel $(1+2/d)/3$, genau $2/3$ für
+  Qubits. Drei Koide-Fakten zeigen damit auf Qubits: mittlere Treue,
+  Oktant am Rand, nur Spin 1/2. Ein Mittelwert erklärt die Genauigkeit
+  aber nicht (Streuung 0,11), und die geladenen Leptonen liegen mit Rang 3
+  außerhalb der Qubit-Ebene. Ein Prinzip, das die Treue genau auf $1/2$
+  legt, fehlt.
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),

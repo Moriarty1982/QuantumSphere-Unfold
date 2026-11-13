@@ -4,3 +4,12 @@
     alpha/beta = -1 (abgestimmt). Passt zu r16 (Grad <= 4 hoechstens zwei Normen) und r26 (Grad 6 noetig).
 (3) bei rho^2 = 1/2: Reinheit von S/3 = 0.666667; Mitte von [1/3, 1] = 0.666667; ||S - 1||^2 = 3.0 = ||1||^2 = 3
 (4) V = tr(S^2 - 2S)^2 bei tr S = 3: Minimum bei s = [0.1453 0.7549 2.0998], V = 1.0000, K = 0.5556 (Koide 0.6667)
+
+== Auswahlprinzip: Koide als qubitartige Treue ==
+    C^2 (Haar): Mittel rho^2 = 0.5008 (1/d = 0.5000), Mittel K = 0.6672, Streuung K = 0.1115, Anteil |K - 2/3| < 1e-5: 0.0e+00
+    C^3 (Haar): Mittel rho^2 = 0.3342 (1/d = 0.3333), Mittel K = 0.5561, Streuung K = 0.0902, Anteil |K - 2/3| < 1e-5: 1.0e-04
+    C^4 (Haar): Mittel rho^2 = 0.2508 (1/d = 0.2500), Mittel K = 0.5005, Streuung K = 0.0739, Anteil |K - 2/3| < 1e-5: 0.0e+00
+    Qubit-Tripel: det S = 1.6e-18 (immer Rang 2); bei rho^2 = 1/2 also theta = pi/12 (Rand)
+    Zusammenfassung: rho^2 = 1/2 ist (a) die mittlere Treue zufaelliger Qubits, (b) die Treue der Qubits an orthogonalen
+    Achsen (Oktant, Rand), (c) unter Spins j an orthogonalen Achsen nur fuer j = 1/2 erreicht.
+    Geladene Leptonen: Rang 3 mit rho^2 = 1/2, Bargmann-Phase 3 theta_e = 0.6667 < pi/4 = 0.7854: qubitartige Treue, aber aus der Qubit-Ebene herausgehoben.

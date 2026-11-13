@@ -43,3 +43,24 @@ Gleichverteilung, Treue 1/2) sind Kandidaten für ein solches Prinzip, keines is
 Koide). Die Brannen-Parameter ρ und θ werden dabei zu zwei abgestimmten Kopplungen; eine Vorhersage entsteht nicht.
 
 OP3/OP4 offen; OP1–OP5, C5, C6/T2 unverändert; H100 unberührt.
+
+## Nachtrag: Auswahlprinzip, Koide als qubitartige Treue (13.11., spät, Autor: „weiter“)
+
+Vorwissen: Gram-Notiz, Punkt 5 (Mittel von K über reelle Einheitsvektoren im R^n ist (1 + 2/n)/3, für n = 2 genau 2/3).
+Skript, Abschnitt „Auswahlprinzip“. Nicht blind, kein Datenvergleich.
+
+1. **Auch komplex gilt der Mittelwert.** Für Haar-zufällige Zustände in C^d ist die mittlere Treue 1/d (numerisch
+   0,5008; 0,3342; 0,2508 für d = 2, 3, 4), also K im Mittel (1 + 2/d)/3: **2/3 genau für Qubits**.
+2. **Qubit-Tripel liegen immer auf dem Rand.** Drei Zustände in C² haben eine Gram-Matrix vom Rang 2 (det = 0); bei
+   ρ² = 1/2 ist dann θ = π/12.
+3. **Drei Koide-Fakten zeigen auf Qubits.** ρ² = 1/2 ist (a) die mittlere Treue zufälliger Qubits, (b) die Treue der
+   Qubits an orthogonalen Achsen (Oktant, Rand des Bogens), (c) unter Spins j an orthogonalen Achsen nur für j = 1/2
+   erreicht.
+4. **Was das nicht erklärt.** Das Mittel streut: Die Standardabweichung von K über zufällige Qubit-Tripel ist 0,11, kein
+   einziges von 20 000 Tripeln trifft 2/3 auf 10⁻⁵. Die Genauigkeit der Pol-Koide-Beziehung (2·10⁻⁶) folgt aus einem
+   Mittelwert nicht. Die geladenen Leptonen haben zudem Rang 3 (Bargmann-Phase 0,667 < π/4): qubitartige Treue, aber
+   aus der Qubit-Ebene herausgehoben.
+
+**Bewertung.** Koide lässt sich einheitlich als „paarweise Treue wie bei einem Qubit“ lesen; Mittelwert, Oktant und
+Spin 1/2 sind drei Seiten derselben Zahl. Ein Auswahlprinzip, das die Treue genau auf 1/2 festlegt und die Plätze
+zugleich aus der Qubit-Ebene hebt, fehlt. Lesart, keine Herleitung; Numerologie-Vorbehalt wie in der Gram-Notiz.
