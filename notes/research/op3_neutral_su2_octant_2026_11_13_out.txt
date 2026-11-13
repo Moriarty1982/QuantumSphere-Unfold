@@ -1,0 +1,40 @@
+Spin-j-Zustaende entlang x, y, z (Oktant, Raumwinkel pi/2):
+  j = 0.5: Treue 0.5000 (= (1/2)^(2j) 0.5000), rho^2 = 0.5000, K = 0.6667, Bargmann-Phase 0.7854 (j * pi/2 mod 2pi = 0.7854)
+  j = 1.0: Treue 0.2500 (= (1/2)^(2j) 0.2500), rho^2 = 0.2500, K = 0.5000, Bargmann-Phase 1.5708 (j * pi/2 mod 2pi = 1.5708)
+  j = 1.5: Treue 0.1250 (= (1/2)^(2j) 0.1250), rho^2 = 0.1250, K = 0.4167, Bargmann-Phase 2.3562 (j * pi/2 mod 2pi = 2.3562)
+  j = 2.0: Treue 0.0625 (= (1/2)^(2j) 0.0625), rho^2 = 0.0625, K = 0.3750, Bargmann-Phase 3.1416 (j * pi/2 mod 2pi = 3.1416)
+  -> nur j = 1/2 gibt rho^2 = 1/2 (Koide) und die Phase pi/4.
+  SO(3)-Vektoren entlang der Achsen: Ueberlappungen [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] -> rho^2 = 0, keine Phase
+
+== Wo eine neutrale SU(2) sitzen kann ==
+    (1) dim su(3) = 8; Zentralisator in g2: 0 -> keine Oktonionen-Symmetrie, die mit der Farbe vertauscht
+    (2) SO(3) reell (Generationen als Vektor): Spins in 3: [1.0], 6: [0.0, 2.0], 8: [1.0, 2.0]
+    (2) SU(2) als 2 + 1: Spins in 3: [0.0, 0.5], 6: [0.0, 0.5, 1.0], 8: [0.0, 0.5, 1.0]
+    -> In der Familien-U(3) gibt es entweder Generationen als Vektor (nur ganzzahlige Spins, kein Spinor)
+       oder einen Spinor (2 + 1), dann sind die Generationen kein Vektor auf drei Achsen.
+
+== Feldsuche ==
+    (1) Zentralisator der Farb-su(3) in so(8): Dimension 2 (nur abelsch moeglich, keine SU(2))
+    (2) Majorana-Paarung chi_a^T eps chi_b, Spins entlang x, y, z: |M_ab|^2 = [[0.0, 0.5, 0.5], [0.5, 0.0, 0.5], [0.5, 0.5, 0.0]]
+        Diagonale null (gleiche Richtung paart nicht), Nebendiagonale |.|^2 = 1/2; Singulaerwerte [0.     1.2247 1.2247]
+        M + 0.5*1: Singulaerwerte [0.1589 1.118  1.5731], K (positive Wurzeln) = 0.4617
+        M + 1.0*1: Singulaerwerte [0.4154 1.3408 2.0074], K (positive Wurzeln) = 0.4236
+        M + 1.5*1: Singulaerwerte [0.8099 1.7265 2.4725], K (positive Wurzeln) = 0.3886
+
+== Pruefung Punkt 3: genuegt eine diskrete Gruppe? ==
+    Hurwitz-Einheit a = -(1+i+j+k)/2: unitaer True, a^3 = 1 True
+    erzeugte Gruppe hat 24 Elemente (binaere Tetraedergruppe 2T, Doppelueberlagerung von A4 mit 12)
+    Bahn von |+x> unter a: Bloch-Vektoren [[1.0, 0.0, -0.0], [0.0, 1.0, 0.0], [0.0, 0.0, 1.0]]
+    Treuen 0.5, 0.5, 0.5; Bargmann-Phase 0.785398 (pi/4)
+    Wirkung von a auf die Achsen (SO(3)-Bild):
+[[0. 0. 1.]
+ [1. 0. 0.]
+ [0. 1. 0.]]
+    -> Eine stetige SU(2) ist nicht noetig: Der Zyklus tau als Element der Ordnung 3 in SU(2) (Hurwitz-Einheit)
+       erzeugt das Oktanten-Tripel; A4 (r55, Platzsymmetrie) ist dessen Bild in SO(3), 2T die Spinor-Huelle.
+       Die Darstellungen von A4 (1, 1', 1'', 3) sind keine Spinoren; ein 2T-Dublett waere weiterhin ein neues Feld.
+
+== Sedenionen (r13): farbneutrale Ebene (e7, e15) als S3-Dublett ==
+    Z3 auf der komplexifizierten Ebene: diag(omega, omega^2), det = (1-0j), U^3 = 1 True
+    reeller Vektor e7 (Aequator)                : rho^2 = 0.2500, K = 0.5000, Bargmann-Phase 3.1416
+    komplexer Bezug unter dem magischen Winkel  : rho^2 = 0.5000, K = 0.6667, Bargmann-Phase 0.7854

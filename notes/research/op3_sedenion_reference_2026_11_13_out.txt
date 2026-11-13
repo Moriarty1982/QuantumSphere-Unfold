@@ -1,0 +1,27 @@
+(1) Achsen in A4 gegen D3: Winkel zweizaehlige zu dreizaehliger Achse
+    A4: Koordinatenachse gegen (1,1,1): 54.74 Grad (magisch); D3: 90 Grad
+(2) e7 e8 = +e15; e15^2 = -1; assoziativ auf span(1,e7,e8,e15): True
+    psi mit Winkel +120 Grad: Automorphismus-Fehler 1.1e-14
+    psi mit Winkel -120 Grad: Automorphismus-Fehler 1.2e-14
+(3) psi(e8) = e8: True; psi(e7) = [-0.5, 0.866] in (e7, e15)
+    -> auf Im span(1,e7,e8,e15) ist psi eine Drehung um 120 Grad um die Achse e8
+(4) f = (e7+e8+e15)/sqrt3: Winkel zu e8 cos = 0.577350; Skalarprodukte der Bahn
+[[ 1.  0. -0.]
+ [ 0.  1.  0.]
+ [-0.  0.  1.]]
+    als Qubits: rho^2 = 0.5000, K = 0.6667, Bargmann-Phase 0.785398
+    psi vertauscht mit L_e7: False;  L_e7 bildet e8 auf [0.0, 1.0] in (e8, e15) ab
+
+== Ladung auf die Sedenionen fortsetzen ==
+    Q8 auf O: Eigenwerte [0.0, 0.3333, 0.3333, 0.3333, 0.6667, 0.6667, 0.6667, 1.0]
+    (a) Q_S = 1/2 - (i/6) L_e7 - (i/3) R_e7 auf S: stimmt auf O mit Q8 ueberein True, vertauscht mit psi False
+    (b) Q mit Q|_O = Q8 und [Q, psi] = 0: kleinster Restfehler 7.50e-01 -> nicht loesbar
+    (c) psi(e7) = -1/2 e7 + sqrt3/2 e15: Jede Ladung aus Multiplikation mit e7 wird von psi in eine mit psi(e7) ueberfuehrt;
+        psi-feste imaginaere Richtung in S ist nur e8 (G2-fest, nicht die Ladungsachse des Companion).
+
+== Alternative: Zyklus um die Ladungsachse e7 (symmetrischer Punkt a = exp(2pi e7/3), auf S fortgesetzt) ==
+    Klammerung egal: True; a^3 = 1: True
+    Konjugation mit a ist Automorphismus von S: Fehler 2.1e+01
+    vertauscht mit Q_S: True; haelt e7 fest: True; dreht (e8, e15): [-0.5, -0.866]
+    Bahn der Diagonale unter diesem Zyklus orthonormal: True
+    Q_S laesst span(1,e7,e8,e15) invariant: True; Eigenwerte dort [0.0, 0.3333, 0.6667, 1.0]

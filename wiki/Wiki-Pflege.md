@@ -315,3 +315,19 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 13.11.2026, spät: Nachtrag magischer Winkel (gleichwertig mit orthonormalen Platzrichtungen; Farb- bzw. Ladungsanteile; neutraler Teil mit Signatur (2,1) ohne exakten Oktanten) in Forschungsstand; kein OP-Abschluss.
 
 13.11.2026, spät: Nachtrag Lorentz-Fassung (Lorentz-Qubit ohne Koide-Tripel; in (2,1) keine native Zeitachse) in Forschungsstand; kein OP-Abschluss.
+
+13.11.2026, spät: Erkundung neutrale SU(2) (Suminos SO(3)-Vektorindex trägt die Generationen auf orthogonalen Achsen; nur Spin 1/2 gibt Koide und π/4) in Forschungsstand; kein OP-Abschluss.
+
+13.11.2026, spät: Nachtrag neutrale SU(2) gesucht (Schur: nur Familien-Symmetrie; in U(3) kein Vektor-mit-Spinor; zweite Familien-SU(2) nötig) in Forschungsstand; kein OP-Abschluss.
+
+13.11.2026, spät: Nachtrag Feldsuche (Dixon-Raum ohne neutrale SU(2); ν^c-Kondensat gibt kein Koide; Erweiterung nötig) in Forschungsstand; kein OP-Abschluss.
+
+13.11.2026, spät: Prüfung der Feldsuche (stetige SU(2) nicht nötig; Hurwitz-Einheit, 2T, A4; Sedenion-Ebene (e7, e15) als neutrales Dublett, Bezugszustand fehlt) in Forschungsstand; kein OP-Abschluss.
+
+13.11.2026, spät: Erkundung Bezugszustand in den Sedenionen (farbneutrale Quaternionen span(1,e7,e8,e15), Raumdiagonale gibt Oktant; Ladung als Hindernis) in Forschungsstand; kein OP-Abschluss.
+
+13.11.2026, spät: Nachtrag Ladung auf die Sedenionen fortgesetzt (keine ψ-verträgliche Fortsetzung; Drehung um e7 kein Automorphismus, e8/e15 geladen) in Forschungsstand; kein OP-Abschluss.
+
+13.11.2026, spät: Runde v4.10.0-r12 (Statusvermerke) in Forschungslinie, Inhalt, Content-overview, Offene-Probleme und Forschungsstand; Fäden Potential und T₁₂ in Forschungsstand.
+
+13.11.2026, spät: Nachtrag Auswahlprinzip (Koide als qubitartige Treue; Mittelwert erklärt die Genauigkeit nicht) in Forschungsstand; kein OP-Abschluss.

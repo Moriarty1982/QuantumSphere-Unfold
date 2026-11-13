@@ -1,15 +1,17 @@
 # Übergabe: Stand der letzten Sitzung
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.**
 
-## Stand vom 13.11.2026, ca. 20:30 (Claude Opus)
-- **GitHub:** **PR #104 gemergt als 32fa42c** (13.11., auf „pr 104 mergen“; Merge-Commit, Kopf bf51772).
-  Läufe 43481979108 (Zwei-PDF) und 43481979426 (Wiki-Sync) erfolgreich. **Offen: PR #105** vom Zweig
-  `research/v5-h100-eta` (H100-Vorab 9c77ddd, η-Suche, Wiki); nicht gemergt.
-- **Lokal:** Hauptordner auf `main` f405c05 (Übergabe-Commit nach dem Merge, liegt in PR #105).
-  Unversioniert: `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf`.
+## Stand vom 13.11.2026, ca. 23:00 (Claude Opus)
+- **GitHub:** PR #105 gemergt als fcc87c6 (Läufe grün). **Offen: PR #106** vom Zweig `research/v5-octant-weitersuche`
+  (Erkundung neutrale SU(2)). Aufgeräumt 13.11.: Remote-Zweige `research/v5-string-relaxation-rueckwaertssuche`,
+  `research/v5-h99b-nufit61`, `research/v5-h100-eta` gelöscht (alle in main enthalten).
+- **Lokal:** Hauptordner auf `main` 99d1bbb (Übergabe-Commit, liegt in PR #106). Arbeit im Worktree
+  `.claude/worktrees/qam-mml-mma-math-473bc4` (kann nach dem nächsten Merge weg). Unversioniert:
+  `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf`.
+- **Letzte Runde:** v4.10.0-r12 (in PR #106).
 - **Zuletzt vergebene Hypothese:** **H100** (Vorab 9c77ddd, offen bis zur nächsten NuFIT-Version, längstens 31.12.2027);
   nächste frei H101; letztes Skript k222. Auswertung: `python k222_test_h100.py dm21 sig21 dm31 sig31`.
-- **Offene Autorentscheidungen:** PR #105 mergen („PR 105 mergen“).
+- **Offene Autorentscheidungen:** keine.
 - **Ausgelöste Zurückgestellte Ideen:** keine.
 - **Nächster Schritt:** Spinor-Transport geprüft: raumzeitlich ausgeschlossen; innerer Transport π/6 je Kante gibt
   Φ_ν − Φ_e = (q_L − q_R)·π/2, H99 verlangt q_L − q_R = 1/2 = Hyperladung des Higgs (nachträglich, schwach).
@@ -25,14 +27,35 @@
   (Stabilisator 8 → 3), im H-Faktor Ladung (r33); neutraler Teil (e3, e7, e3e7) hat Signatur (2,1), kein exakter
   Oktant. **Lorentz-Fassung gerechnet** (`op3_lorentz_octant_2026_11_13.*`): Lorentz-Qubit hat |⟨a|b⟩|² ≥ 1 (kein
   Koide); in (2,1) trifft keine native Zeitachse H99 (nur nicht ausgezeichnete Familie). Mechanismus-Suche endet vorerst.
-  Empfehlung: PR #105 mergen und H100 abwarten; offene Fäden in der η- und Hopf-Notiz.
+  **Neutrale SU(2)** (`op3_neutral_su2_octant_2026_11_13.*`): Suminos Φ → UΦOᵀ setzt die Generationen auf orthogonale
+  SO(3)-Achsen (farb-, ladungsneutral); nur Spin 1/2 gibt ρ² = 1/2 und π/4 (allgemein ρ² = (1/2)^{2j}, Phase jπ/2).
+  Lesart: Neutrinos tragen einen Spinor dieser Gruppe. **Suche im Companion negativ:** neutrale SU(2) ist nach Schur eine
+  Familien-Symmetrie; in der Platzindex-U(3) gibt es nur SO(3) (Vektor, kein Spinor) oder 2+1 (Spinor, keine drei Achsen).
+  Nötig wäre eine zweite Familien-SU(2) mit Spinor-Feld. **Feldsuche negativ:** Dixon-Raum ohne Platz (H links Lorentz,
+  rechts Isospin; so(8)-Zentralisator der Farbe abelsch); ν^c-Kondensat (r82.4) mit Oktanten-Spins entartet, kein Koide.
+  **Punkt 3 geprüft und berichtigt:** stetige SU(2) nicht nötig; Bahn unter Hurwitz-Einheit a = −(1+i+j+k)/2 (a³ = 1)
+  gibt den Oktanten; 2T mit SO(3)-Bild A4 (native Platzsymmetrie, r55). Sedenion-Ebene (e7, e15) ist farbneutrales
+  S3-Dublett mit Zyklus diag(ω, ω²); reelle Zustände geben K = 1/2, ein komplexer Bezug unter dem magischen Winkel
+  K = 2/3 und π/4. **Bezugszustand gefunden** (`op3_sedenion_reference_2026_11_13.*`): H_n = span(1,e7,e8,e15) farbneutrale
+  Quaternionen, ψ = 120°-Drehung um e8, Raumdiagonale (e7+e8+e15)/√3 gibt Oktant (K = 2/3, π/4). Hindernis: Ladung
+  (ψ dreht e7, L_e7 dreht (e8,e15)). **Ladung fortgesetzt:** keine Fortsetzung mit Q|_O = Q8 (k85) vertauscht mit ψ;
+  Drehung um e7 (Konjugation mit a) ladungsverträglich, aber kein Automorphismus von S, e8/e15 mit Ladung 1/3, 2/3.
+  Native Trägersuche auch in den Sedenionen negativ.
+- **Fäden (Autor: „erst die Fäden“):** (1) **Runde v4.10.0-r12** (Statusvermerke: OP3 nicht geschlossen, Bemerkung 2/3,
+  rem:koide-mass-discrepancy, r33-Labels, Oktant exakt, H99/H100 registriert) angehängt an `parts/v4100-post-release-layers.tex`
+  ab Zeile 1502; Notizen `notes/research/v4_10_0_r12/`; Guard-Linter 0 Treffer; lokaler Build ok, 1406 Seiten, 0 Overfull,
+  0 undefinierte Verweise; CI-Lauf (qsc-latex-build) noch nicht gestartet. (2) Potential: Grad 6 mit abgestimmtem Verhältnis
+  nötig, kein natürlicher Kandidat. (3) T₁₂ dynamisch: nur Singulärwerte invariant, ρ und θ abgestimmt
+  (`op3_koide_potential_2026_11_13.*`). CI-Build 43495233521 (qsc-latex-build) erfolgreich.
+- **Auswahlprinzip (Autor: „weiter“):** Koide = paarweise Treue wie bei Qubits (Haar-Mittel in C² genau 2/3; Oktant;
+  nur Spin 1/2); Mittel erklärt die Genauigkeit nicht (Streuung 0,11), geladene Leptonen Rang 3. Prinzip fehlt.
+  Empfehlung: PR #106 mergen, H100 abwarten.
   Werkzeuge: `notes/research/op3_eta_form_search_2026_11_13.*`, `op3_slot_u3_gauging_2026_11_13.*`.
   · zur Wahl: H100 vorab festschreiben (Kandidaten unten) · T₁₂ als dynamisches Feld · Potential für ρ² = 1/2 ·
   Vereinigung Platzindex-U(3) mit SU(2)_L.
-- **Aufräumen:** Zweige `research/v5-string-relaxation-rueckwaertssuche` (PR #103) und `research/v5-h99b-nufit61`
-  (PR #104) können weg; Worktree `qam-mml-mma-math-473bc4` ebenso.
+- **Aufräumen:** erledigt (13.11.); nach dem nächsten Merge Zweig `research/v5-octant-weitersuche` und den Worktree löschen.
 
-## Block 19:40–20:30 (PR #105)
+## Block 19:40–23:00 (PR #105, gemergt)
 - **H100** vorab (siehe oben); Erwartung bei gleichem Mittelwert: A ≈ +2,7σ, B ≈ +0,2σ, C ≈ +1,2σ.
 - **Form η** (`op3_eta_form_search_2026_11_13.*`): Brannen-Phase = Bargmann-Phase/3; H99 ⇔ ΔΦ = π/4 bei gleichen
   Beträgen. Ausgeschlossen: Umphasen, Vorzeichen in der Eigenbasis, hermitesch → bilinear allein (0/4000).

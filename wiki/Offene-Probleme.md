@@ -28,6 +28,8 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 
 ## OP3: Zulässige Hüllen-Übergänge
 
+**Stand nach v4.10.0-r12 (13.11.2026):** Die geerbte Lesart, das Koide-OP3 sei „strukturell geschlossen“ (Teil 17), ist überholt; OP3 ist offen. Nach v5.0.0 erkundet: Koide als mittlere quadratische Überlappung ½ (Gram-Lesart), Rand des Bogens als Oktanten-Tripel, Neutrino-Phase als Fluss π/4 (H99 verträglich, H100 vorab). Ein Potential gibt ρ² = ½ nur mit abgestimmtem Koeffizientenverhältnis (Grad 6); ein nativer, farb- und ladungsneutraler Träger fehlt.
+
 Für das ursprüngliche Koide-OP3 zeigt die bedingte Überlagerungsrechnung, dass zwei bis sechzehn Auslesungen mit jeweils exakt K = 2/3 dieselben gemischten Leptonmassen liefern können. Der Fit legt ein komplexes Phasenmittel fest und identifiziert weder die Zahl der Auslesungen noch eine native Überlagerung. Eine symmetrische Paarung um exakt 2/3 Radiant mit gleichen Gewichten kann den beobachteten Phasenversatz nicht erzeugen. [Rechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/qam/examples/koide_phase_overlap.py)
 
 Das ursprüngliche OP3 betraf den Koide-Winkel. Im bedingten zyklischen Massenwurzelmodell ist der Winkel durch das basisphaseninvariante Produkt der drei orientierten Kopplungen bestimmt, bis auf Umordnung der Eigenwerte. Eine durch Basisphasen reell machbare Kopplung ergibt am exakten Koide-Radius eine andere Form als der historische Massenvergleich. Die native Kopplung bleibt offen. [Koide-Erkundung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/koide_original_op3_cycle_phase.md)

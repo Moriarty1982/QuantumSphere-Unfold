@@ -1819,11 +1819,85 @@ Erkundung $\eta$, ohne Datenvergleich:
   Lösungen gibt es nur als nicht ausgezeichnete Familie. Die Suche nach
   einem nativen Mechanismus für $\pi/4$ endet vorerst hier; H100 bleibt
   der nächste belastbare Schritt.
+- Nachtrag neutrale $SU(2)$: In Suminos Modell transformiert $\Phi$ als
+  $U\Phi O^T$ mit $O\in SO(3)$; im Vakuum sitzen die drei Generationen auf
+  drei orthogonalen Achsen dieser farb- und ladungsneutralen Gruppe. Für
+  Spin $j$ entlang dreier orthogonaler Achsen ist $\rho^2=(1/2)^{2j}$ und
+  die Bargmann-Phase $j\pi/2$: Nur Spin 1/2 gibt zugleich Koide
+  ($\rho^2=1/2$) und $\pi/4$. Lesart: Die Neutrinos tragen die Phase eines
+  Spinors dieser Gruppe, die geladenen Leptonen koppeln über den
+  Vektorindex. Eine solche neutrale $SU(2)$ ist im Companion nicht
+  gefunden; der Ort liegt bisher in Suminos Modell.
+- Nachtrag Suche: Eine $SU(2)$, die mit Farbe, Isospin, Hyperladung und
+  Lorentz-Gruppe vertauscht, wirkt nach Schur nur auf den
+  Generationsindex (in $g_2$ ist der Zentralisator der Farbe null). In
+  der Familien-$U(3)$ gibt es nur zwei Einbettungen: $SO(3)$
+  (Generationen als Vektor, nur ganzzahlige Spins) oder $2+1$ (Spinor,
+  aber keine drei gleichberechtigten Achsen). Die Oktanten-Lesart braucht
+  daher eine zweite Familien-$SU(2)$ mit einem Spinor-Feld im neutralen
+  Sektor, etwa $\nu^c$. Im Companion ist sie nicht angelegt.
+- Nachtrag Feldsuche: Im Dixon-Raum sind die beiden $SU(2)$ des
+  H-Faktors vergeben (links Lorentz, rechts Isospin); in $so(8)$ ist der
+  Zentralisator der Farbe nur abelsch. Der einzige native
+  Neutrino-Kandidat, ein $\nu^c\nu^c$-Kondensat (r82.4), gibt mit
+  Oktanten-Spins ein entartetes Spektrum und kein Koide. Ein passendes
+  Feld verlangt eine Erweiterung außerhalb von $\mathbb C\otimes\mathbb
+  H\otimes\mathbb O$ (eigener Familienfaktor mit $SU(2)$).
+- Prüfung dieses Punktes: Eine stetige $SU(2)$ ist nicht nötig. Das
+  Oktanten-Tripel ist die Bahn eines Qubits unter einem Element der
+  Ordnung 3 (Hurwitz-Einheit $-(1+i+j+k)/2$); zusammen mit $i,j,k$ erzeugt
+  es die binäre Tetraedergruppe, deren $SO(3)$-Bild die native
+  Platzsymmetrie $A_4$ (r55) ist. In den Sedenionen ist die Ebene
+  $(e_7,e_{15})$ ein farbneutrales Dublett, auf dem der Zyklus als
+  $\mathrm{diag}(\omega,\omega^2)$ wirkt. Reelle Zustände dort geben
+  $K=1/2$; erst ein komplexer Bezug unter dem magischen Winkel gibt
+  $K=2/3$ und $\pi/4$. Es fehlt nur noch dieser Bezugszustand.
+- Nachtrag Bezugszustand: In den Sedenionen ist
+  $\mathbb H_n=\mathrm{span}(1,e_7,e_8,e_{15})$ eine farbneutrale
+  Quaternionenalgebra; der Zyklus $\psi$ ist dort eine Drehung um $120^\circ$
+  um $e_8$. Die Raumdiagonale $(e_7+e_8+e_{15})/\sqrt3$ steht unter dem
+  magischen Winkel und liefert als Bahn das Oktanten-Tripel ($K=2/3$,
+  $\pi/4$) aus nativen Bausteinen. Hindernis ist nun die Ladung: $\psi$
+  dreht $e_7$ nach $e_{15}$, und $L_{e_7}$ dreht $(e_8,e_{15})$; mit
+  $J=L_{e_7}$ als Ladungsstruktur ist der Träger nicht
+  $Q_{\rm em}$-verträglich (Ladung auf den Sedenionen im Companion nicht
+  definiert).
+- Nachtrag Ladung fortgesetzt: Keine Fortsetzung der Ladung auf die
+  Sedenionen, die auf $\mathbb O$ die bekannte Ladung behält, vertauscht
+  mit $\psi$ (lineares System nicht lösbar), weil $\psi$ die Ladungsachse
+  $e_7$ dreht. Die ladungsverträgliche Drehung um $e_7$ gibt zwar wieder
+  den Oktanten, ist aber kein Automorphismus der Sedenionen, und $e_8$,
+  $e_{15}$ tragen dann die Ladungen $1/3$, $2/3$. Ein farb- und
+  ladungsneutraler Träger ist auch in den Sedenionen nicht gefunden.
+
+**Runde v4.10.0-r12 und offene Fäden** (13.11.2026). Die Runde r12
+(Statusvermerke) hält fest: Das historische Koide-OP3 ist nicht
+„strukturell geschlossen“, die Bemerkung zum Faktor $2/3$ ist kein
+Ergebnis, die Zuschreibung der Massenabweichung an $\beta_{\rm sym}$ ist
+hinfällig, die r33-Labels sind nicht ladungsinvariant, und der Rand des
+Koide-Bogens ist exakt das Oktanten-Tripel. Zu den Fäden:
+- Potential: $\mathrm{tr}\,S^2=3+6\rho^2$, $\mathrm{tr}\,S^3=3+18\rho^2+6\rho^3\cos3\theta$.
+  Grad 4 in $X$ ist linear in $\rho^2$ (kein inneres Extremum); Grad 6
+  gibt $\rho^2=1/2$ nur mit abgestimmtem Koeffizientenverhältnis. Koide
+  verlangt ein Auswahlprinzip; gleichwertige Lesarten sind die Mitte des
+  Bereichs $[1/3,1]$, die Gleichverteilung $\|S-1\|=\|1\|$ und die
+  paarweise Treue $1/2$. Der Kandidat $\mathrm{tr}(S^2-2S)^2$ gibt
+  $K=0{,}556$.
+- $\mathcal T_{12}$ dynamisch: Als Feld hat es nur die Singulärwerte als
+  Invarianten; $\rho$ und $\theta$ werden zu zwei abgestimmten
+  Kopplungen, eine Vorhersage entsteht nicht.
+- Auswahlprinzip: Für Haar-zufällige Zustände in $\mathbb C^d$ ist die
+  mittlere Treue $1/d$, also $K$ im Mittel $(1+2/d)/3$, genau $2/3$ für
+  Qubits. Drei Koide-Fakten zeigen damit auf Qubits: mittlere Treue,
+  Oktant am Rand, nur Spin 1/2. Ein Mittelwert erklärt die Genauigkeit
+  aber nicht (Streuung 0,11), und die geladenen Leptonen liegen mit Rang 3
+  außerhalb der Qubit-Ebene. Ein Prinzip, das die Treue genau auf $1/2$
+  legt, fehlt.
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),
 > `notes/research/op3_slot_u3_gauging_2026_11_13.md` (Eichung Platzindex-U(3)),
-> `notes/research/op3_eta_form_search_2026_11_13.md` (Form η, Bargmann-Phase), `notes/research/op3_hopf_octant_2026_11_13.md` (Oktanten-Tripel im Hopf-Träger), `op3_lorentz_octant_2026_11_13.py` (Lorentz-Fassung), `predictions/Vorab_Notiz_H100_Neutrino_Verhaeltnis_naechster_Fit.md`,
+> `notes/research/op3_eta_form_search_2026_11_13.md` (Form η, Bargmann-Phase), `notes/research/op3_hopf_octant_2026_11_13.md` (Oktanten-Tripel im Hopf-Träger), `op3_lorentz_octant_2026_11_13.py` (Lorentz-Fassung), `op3_neutral_su2_octant_2026_11_13.md` (neutrale SU(2), Spin 1/2), `op3_sedenion_reference_2026_11_13.md` (Bezugszustand), `op3_koide_potential_2026_11_13.md` (Potential, T₁₂), `v4_10_0_r12/` (Runde r12), `predictions/Vorab_Notiz_H100_Neutrino_Verhaeltnis_naechster_Fit.md`,
 > `notes/research/nufit_verlauf_2026_11_13.py` (mit Grafik und Ausgabe),
 > `notes/research/op3_indefinite_form_2026_11_13.md`,
 > `notes/research/predictions/Vorab_Notiz_H99_Neutrino_Phase_Bogenrand.md`,
