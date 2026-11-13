@@ -1899,6 +1899,16 @@ Koide-Bogens ist exakt das Oktanten-Tripel. Zu den Fäden:
   $\sqrt{m_e}/\langle\sqrt m\rangle=0{,}0403$: Die Elektronmasse misst den
   Abstand vom Qubit-Oktanten. Ein Prinzip muss also zwei Zahlen liefern,
   die Treue $1/2$ und diesen Abstand; keine ist hergeleitet.
+- Herleitungsversuch: Für die Bahn eines Qubits unter dem Winkel $\beta$ zur
+  Achse einer $120^\circ$-Drehung gilt $K=(1+\cos^2\beta)/2$. In der
+  Tetraedergruppe $A_4$ steht jede zweizählige Achse unter dem magischen
+  Winkel zu jeder dreizähligen, $K=2/3$ ist dort der einzige mögliche Wert
+  (Oktaeder- und Ikosaedergruppe lassen weitere zu). Koide ist damit
+  bedingt hergeleitet: Qubit-Träger, Bezug aus der Klein-Gruppe ($\mathbb Z_2$),
+  Plätze als $\mathbb Z_3$-Bahn, also genau die beiden Auslesungen aus r55.
+  Die exakte Konstruktion gibt aber ein masseloses Elektron; die
+  Elektronmasse ist ein Bruch der $A_4$-Symmetrie, dessen Größe nicht
+  hergeleitet ist. Offen bleibt auch der Qubit-Träger.
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),

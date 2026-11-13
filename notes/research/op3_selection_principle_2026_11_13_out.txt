@@ -6,3 +6,12 @@ s_min = sqrt(m_e)/<sqrt m> = 0.040347; Verhaeltnis s_min/Abstand = 1.0195 (erste
    theta = 0.1800: s_min = 0.08505, Abstand +0.08180, m_min/m_max = 1.265e-03
    theta = 0.1000: s_min = 0.17416, Abstand +0.16180, m_min/m_max = 5.234e-03
 Massenverhaeltnis m_e/m_tau = 2.876e-04; Bargmann-Abstand pi/4 - 3 theta_e = 0.11872
+
+== Teil A: Treue 1/2 aus der Geometrie einer endlichen Untergruppe von SU(2) ==
+    Bahn eines Qubits unter Winkel beta zur dreizaehligen Achse: K = (1 + cos^2 beta)/2 (max. Fehler 2.2e-16)
+    -> K = 2/3 genau fuer cos^2 beta = 1/3 (magischer Winkel); die Gram-Matrix hat stets Rang 2 (Rand des Bogens).
+    Tetraeder (A4)                    : K-Werte der Bahnen zweizaehliger Eigenzustaende [0.6667]
+    Oktaeder (S4), Koordinatenachsen  : K-Werte der Bahnen zweizaehliger Eigenzustaende [0.6667]
+    Oktaeder (S4), Kantenachsen       : K-Werte der Bahnen zweizaehliger Eigenzustaende [0.5, 0.8333]
+    Ikosaeder (A5)                    : K-Werte der Bahnen zweizaehliger Eigenzustaende [0.5637, 0.6667, 0.9363]
+    A4: Eigenzustand der Klein-Achse x, Bahn unter der Drehung um (1,1,1): K = 0.666667, Phase 0.785398, det 0.0e+00

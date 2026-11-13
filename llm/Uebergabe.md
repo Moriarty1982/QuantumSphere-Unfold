@@ -17,6 +17,9 @@
   asymmetrische Fehler gemittelt; Frist 31.12.2027).
   · Auswahlprinzip (Rückwärtssuche 13.11., `op3_selection_principle_2026_11_13.*`): zwei Zahlen festzulegen, Treue 1/2 und
     Abstand vom Qubit-Oktanten (= √m_e/⟨√m⟩ ≈ π/12 − θ_e = 0,04); offen.
+    **Herleitungsversuch:** K = (1 + cos²β)/2 für Qubit-Bahnen; in A4 ist 2/3 der einzige Wert ⇒ Koide bedingt hergeleitet
+    (Qubit-Träger, Klein-ℤ₂-Bezug, ℤ₃-Bahn = Auslesungen aus r55). Elektronmasse = A4-Bruch, Größe offen; Kandidat
+    Generationsmaske r47 (nur mit Vorab-Notiz prüfen).
   · zur Wahl: zweite Familienstruktur mit neutralem Qubit (Profil unten) ·
   Fortsetzung der Ladung auf die Sedenionen anders als über e7.
 - **Aufräumen:** Zweig `research/v5-octant-weitersuche` (PR #106) und Worktree `.claude/worktrees/qam-mml-mma-math-473bc4`
