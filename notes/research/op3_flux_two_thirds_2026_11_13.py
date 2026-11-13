@@ -98,3 +98,35 @@ if __name__ == "__main__":
     print(f"    gamma_M/2 = {gM / 2:.6f} gegen Delta Phi = {np.pi / 4 - 3 * te:.6f};  gamma_T/2 = {gT / 2:.6f}")
     print("    Lesart: Phase eines Spin-1/2-Objekts unter einer gamma-gewichteten Holonomie, Phi = gamma * m mit m = 1/2;")
     print("    der Oktant liefert Omega/2 = pi/4, also beide Teile von Phi_e als Spin-1/2-Phasen: Phi_e = pi/4 - gamma_M/2.")
+
+
+def su2_spin(j):
+    m = np.arange(j, -j - 1, -1)
+    Jz = np.diag(m)
+    Jp = np.zeros((len(m), len(m)))
+    for k in range(1, len(m)):
+        Jp[k - 1, k] = np.sqrt(j * (j + 1) - m[k] * (m[k] + 1))
+    return (Jp + Jp.T) / 2, (Jp - Jp.T) / 2j, Jz
+
+
+if __name__ == "__main__":
+    print("\n(6) Holonomie-Fluss-Paarung: Fluss E erzeugt Phasendrehungen der Holonomie, Kommutator mit Faktor gamma")
+    g = gM
+    # Flussoperator auf einer Kante mit Spin j: E^i = c * gamma * J^i (c = Flaecheneinheit); exp(i * alpha * E_3) dreht die Kante
+    for j in (0.5,):
+        Jx, Jy, Jz = su2_spin(j)
+        m = 0.5
+        psi = np.array([1.0, 0.0])                       # m = +1/2
+        for lab, c, area_form in (("kappa-Einheiten (8 pi G hbar = 1), |m|", 1.0, abs(m)),
+                                  ("kappa-Einheiten, sqrt(j(j+1))", 1.0, np.sqrt(j * (j + 1))),
+                                  ("Planck-Einheiten (G hbar = 1), |m|", 8 * np.pi, abs(m)),
+                                  ("Planck-Einheiten, sqrt(j(j+1)) (wie r10)", 8 * np.pi, np.sqrt(j * (j + 1)))):
+            phase = c * g * area_form                     # Phase von exp(i E) auf dem Eigenzustand
+            print(f"    {lab:44s}: Fluss-Eigenwert = Phase pro Einheitsdrehung = {phase:.5f} rad "
+                  f"({'= gamma/2' if abs(phase - g / 2) < 1e-12 else f'{phase / (g / 2):.3f} x gamma/2'})")
+        # Kontrolle der Erzeuger-Eigenschaft: [E_3, h] fuer h = exp(i theta J_x) eines Spin-1/2-Kantenstuecks
+        E3 = g * Jz
+        U = lambda a: np.diag(np.exp(1j * a * np.diag(E3)))
+        print(f"    Kontrolle: exp(i E_3) auf |m = +1/2>: Phase {np.angle(U(1.0)[0, 0]):.5f} rad (= gamma * m)")
+    print("    Ergebnis: gamma/2 entsteht nur mit Flaecheneinheit 8 pi G hbar und U(1)-Wert |m| statt sqrt(j(j+1));")
+    print("    mit den Konventionen von r10 (8 pi gamma l_P^2 sqrt(j(j+1))) ergaebe sich 8 pi gamma sqrt(3)/2.")

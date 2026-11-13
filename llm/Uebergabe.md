@@ -27,6 +27,8 @@
     nachträglich, 0,34 Zufallstreffer erwartet) verlangt m_τ = 1777,13 MeV (+2,3σ). Möglich: als H102 gegen künftiges m_τ festschreiben.
     **Mechanismus gesucht:** γ_BI = γ_M (native M-Zählung); γ im Companion nur in der Horizontzählung. Lesarten (γK-Holonomie,
     U(1)-Durchstoßpunkt |m| = 1/2, topologischer Winkel) geben γ/2 als Spin-1/2-Phase, je mit unbegründeter Einheit. Nicht hergeleitet.
+    **Holonomie-Fluss-Paarung gerechnet:** γ·m ist Fläche und Phasenrate zugleich; γ/2 nur mit Einheit 8πGħ und |m|,
+    mit r10-Konvention 43,5-fach. Einheit bleibt frei.
   · zur Wahl: zweite Familienstruktur mit neutralem Qubit (Profil unten) ·
   Fortsetzung der Ladung auf die Sedenionen anders als über e7.
 - **Aufräumen:** Zweig `research/v5-octant-weitersuche` (PR #106) und Worktree `.claude/worktrees/qam-mml-mma-math-473bc4`

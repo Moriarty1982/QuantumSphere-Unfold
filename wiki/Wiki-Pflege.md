@@ -345,3 +345,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 13.11.2026, spät: Nachtrag Mechanismus-Suche für ΔΦ = γ/2 (γ_M nativ; Literatur-Lesarten mit unbegründeter Einheit) in Forschungsstand; kein OP-Abschluss.
 
 13.11.2026, spät: H102 vorab (m_τ = 1777,134 MeV) in Vorhersagen-und-Tests und Forschungsstand eingetragen.
+
+13.11.2026, spät: Nachtrag Holonomie-Fluss-Paarung (γ m als Fläche und Phase; γ/2 nur mit Einheit 8πGħ und |m|) in Forschungsstand.

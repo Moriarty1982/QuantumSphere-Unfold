@@ -59,3 +59,31 @@ T nur j = 1/2; U(1)-Behandlung). Skript, Abschnitt (5). Nicht blind, kein Test.
 das Vorzeichen bleibt offen, und eine Abbildung des Generationsdreiecks auf eine LQG-Schleife oder einen Durchstoßpunkt
 gibt es im Companion nicht. Prüfbar bleibt die Zahl: m_τ = 1777,13 MeV. Ein zweites Delta hätte erst mit einem solchen
 Mechanismus eine vorgegebene Form. OP3/OP4 offen; H100 unberührt.
+
+## Nachtrag: Fläche und Phase zugleich, Holonomie-Fluss-Paarung gerechnet (13.11., spät, Autor: „versuche es mal“)
+
+Frage des Autors: Kann γ zugleich Flächenquantum und Phase oder Holonomie sein, je nach Lesart? Skript, Abschnitt (6).
+
+1. **Ja, strukturell.** In der Holonomie-Fluss-Algebra ist der Flussoperator E der Erzeuger der Drehungen der Holonomie; im
+   Kommutator steht γ. Auf einer Spin-1/2-Kante mit magnetischer Zahl m hat E den Eigenwert γ·m (in Einheiten 8πGħ), und
+   exp(iE) dreht die Kante um die Phase γ·m (Kontrolle: 0,11877 rad = γ_M/2). Dieselbe Zahl ist also Flächenbeitrag und
+   Phasenrate. Die Frames liefern dafür eine feste Regel statt freier Wahl: Zählung = Fläche, Holonomie = Phase.
+2. **Die Einheit ist aber nicht festgelegt.** Die Phase pro Einheitsdrehung hängt an zwei Konventionen:
+
+   | Flächeneinheit | Spinwert | Phase | gegen γ/2 |
+   |---|---|---|---|
+   | 8πGħ = 1 | \|m\| = 1/2 | 0,11877 | **= γ/2** |
+   | 8πGħ = 1 | √(j(j+1)) | 0,2057 | 1,73-fach |
+   | Għ = 1 | \|m\| | 2,985 | 25,1-fach |
+   | Għ = 1 | √(j(j+1)) (so r10) | 5,170 | 43,5-fach |
+
+   γ/2 entsteht nur mit der Flächeneinheit 8πGħ und dem U(1)-Wert |m|. Der Companion benutzt in r10 die Fläche
+   8πγℓ_P² √(j(j+1)); damit käme 43,5-mal γ/2 heraus.
+3. **Das Dreieck.** Eine Holonomie um das Platzdreieck misst die Krümmung F der Verbindung, nicht den Fluss E. Beide sind nur
+   über eine Randbedingung verknüpft (wie am Horizont, F ∝ (1 − γ²)π/a_H · E); deren Koeffizient hängt an einer Fläche und
+   gibt keinen festen Wert γ/2.
+
+**Bewertung.** Die Doppelrolle ist sauber: γ·m ist in der Holonomie-Fluss-Paarung zugleich Flächenbeitrag und Phasenrate,
+mit einer festen Regel über die Frames. Die Normierung entscheidet aber, und γ/2 ergibt sich nur mit einer Konventionswahl
+(Einheit 8πGħ, |m|), die nicht die des Companion ist. Die Einheit bleibt frei; ein Mechanismus ist nicht hergeleitet.
+H102 unberührt; OP3/OP4 offen.

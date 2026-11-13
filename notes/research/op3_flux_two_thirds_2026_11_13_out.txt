@@ -21,3 +21,12 @@ theta_e = 0.2222248 +- 6.3e-06; Phi_e = 0.666674; Delta Phi = 0.118724
     gamma_M/2 = 0.118766 gegen Delta Phi = 0.118724;  gamma_T/2 = 0.063692
     Lesart: Phase eines Spin-1/2-Objekts unter einer gamma-gewichteten Holonomie, Phi = gamma * m mit m = 1/2;
     der Oktant liefert Omega/2 = pi/4, also beide Teile von Phi_e als Spin-1/2-Phasen: Phi_e = pi/4 - gamma_M/2.
+
+(6) Holonomie-Fluss-Paarung: Fluss E erzeugt Phasendrehungen der Holonomie, Kommutator mit Faktor gamma
+    kappa-Einheiten (8 pi G hbar = 1), |m|      : Fluss-Eigenwert = Phase pro Einheitsdrehung = 0.11877 rad (= gamma/2)
+    kappa-Einheiten, sqrt(j(j+1))               : Fluss-Eigenwert = Phase pro Einheitsdrehung = 0.20571 rad (1.732 x gamma/2)
+    Planck-Einheiten (G hbar = 1), |m|          : Fluss-Eigenwert = Phase pro Einheitsdrehung = 2.98493 rad (25.133 x gamma/2)
+    Planck-Einheiten, sqrt(j(j+1)) (wie r10)    : Fluss-Eigenwert = Phase pro Einheitsdrehung = 5.17005 rad (43.531 x gamma/2)
+    Kontrolle: exp(i E_3) auf |m = +1/2>: Phase 0.11877 rad (= gamma * m)
+    Ergebnis: gamma/2 entsteht nur mit Flaecheneinheit 8 pi G hbar und U(1)-Wert |m| statt sqrt(j(j+1));
+    mit den Konventionen von r10 (8 pi gamma l_P^2 sqrt(j(j+1))) ergaebe sich 8 pi gamma sqrt(3)/2.

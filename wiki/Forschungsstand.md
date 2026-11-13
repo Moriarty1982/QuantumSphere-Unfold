@@ -1940,6 +1940,11 @@ Koide-Bogens ist exakt das Oktanten-Tripel. Zu den Fäden:
 - **H102** vorab (ee0a103): Die Beziehung $\Phi_e=\pi/4-\gamma_M/2$ verlangt
   $m_\tau=1777{,}134$ MeV (exaktes Koide: $1776{,}969$). Geprüft wird gegen
   die erste PDG-Ausgabe nach dem 13.11.2026; heute $+2{,}3\sigma$.
+- Fläche und Phase zugleich: In der Holonomie-Fluss-Paarung ist $\gamma m$
+  Eigenwert des Flusses und Phasenrate der Holonomie; für $m=1/2$ gibt das
+  $\gamma/2$, aber nur mit der Flächeneinheit $8\pi G\hbar$ und dem U(1)-Wert
+  $|m|$. Mit den Konventionen von r10 ($8\pi\gamma\ell_P^2\sqrt{j(j+1)}$) käme
+  das 43,5-Fache heraus. Die Einheit bleibt frei.
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),
