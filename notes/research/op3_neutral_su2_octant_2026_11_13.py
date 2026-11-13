@@ -99,3 +99,28 @@ if __name__ == "__main__":
         print(f"    (2) {lab}: Spins in 3: {casimir_spins(r['3'], 3)}, 6: {casimir_spins(r['6'], 6)}, 8: {casimir_spins(r['8'], 8)}")
     print("    -> In der Familien-U(3) gibt es entweder Generationen als Vektor (nur ganzzahlige Spins, kein Spinor)")
     print("       oder einen Spinor (2 + 1), dann sind die Generationen kein Vektor auf drei Achsen.")
+
+
+if __name__ == "__main__":
+    print("\n== Feldsuche ==")
+    # (1) so(8) (Trialitaets-Spin(8) auf O): Zentralisator der Farb-su(3)
+    so8 = []
+    for i in range(8):
+        for k in range(i + 1, 8):
+            E = np.zeros((8, 8)); E[i, k] = 1; E[k, i] = -1; so8.append(E)
+    A = np.array([np.concatenate([(x @ s_ - s_ @ x).ravel() for s_ in su3]) for x in so8]).T
+    print(f"    (1) Zentralisator der Farb-su(3) in so(8): Dimension {len(so8) - np.linalg.matrix_rank(A, tol=1e-9)} "
+          "(nur abelsch moeglich, keine SU(2))")
+    # (2) r82.4: Paarkanal nu^c nu^c (psi^T eps psi). Plaetze mit Spin-Richtungen entlang x, y, z:
+    eps = np.array([[0, 1], [-1, 0]], complex)
+    q = [coherent(0.5, a) for a in axes]
+    Mmaj = np.array([[qa @ eps @ qb for qb in q] for qa in q])
+    sv = np.sort(np.linalg.svd(Mmaj, compute_uv=False))
+    print(f"    (2) Majorana-Paarung chi_a^T eps chi_b, Spins entlang x, y, z: |M_ab|^2 = "
+          f"{np.round(np.abs(Mmaj) ** 2, 4).tolist()}")
+    print(f"        Diagonale null (gleiche Richtung paart nicht), Nebendiagonale |.|^2 = 1/2; Singulaerwerte {np.round(sv, 4)}")
+    # mit gemeinsamer Diagonale d: M + d*1, Koide der Singulaerwerte (mit Vorzeichen der Eigenwerte, falls reell-symmetrisch)
+    for d in (0.5, 1.0, 1.5):
+        sv2 = np.sort(np.linalg.svd(Mmaj + d * np.eye(3), compute_uv=False))
+        K = (sv2 ** 2).sum() / sv2.sum() ** 2
+        print(f"        M + {d}*1: Singulaerwerte {np.round(sv2, 4)}, K (positive Wurzeln) = {K:.4f}")

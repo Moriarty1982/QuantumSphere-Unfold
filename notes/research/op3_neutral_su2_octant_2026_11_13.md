@@ -84,3 +84,36 @@ nicht in der Platzindex-U(3) liegen (Einbettungen). Gebraucht würde eine zweite
 Spinor-Feld im neutralen Sektor. Im Companion ist sie nicht angelegt. Die Suche nach einem nativen Ort ist damit
 negativ abgeschlossen, solange keine zweite Familienstruktur eingeführt wird (vgl. r14/r33: „Generationen brauchen
 eine zweite Dreierstruktur außerhalb von O“). OP3/OP4 offen; H100 unberührt.
+
+## Nachtrag: das Feld gesucht (13.11., spät, Autor: „dann suche so ein Feld“)
+
+Skript, Abschnitt „Feldsuche“. Nicht blind, kein Datenvergleich.
+
+**Anforderungen (Rückwärtssuche).** Das Feld muss farb-, ladungs- und hyperladungsneutral sein, nur im Neutrino-Block
+(Majorana) auftreten und ein Dublett (Spin 1/2) einer neutralen Familien-SU(2) tragen, deren Vektorindex die drei
+Generationen auf orthogonalen Achsen hält.
+
+**1. Im Dixon-Raum C⊗H⊗O gibt es keinen Platz dafür.**
+- Der H-Faktor trägt zwei SU(2): Linksmultiplikation ist die Lorentz-Gruppe, Rechtsmultiplikation der schwache Isospin
+  (Konvention der Dixon-Notiz und von k85). Beide sind vergeben, keine ist neutral im verlangten Sinn.
+- Im Oktonionenfaktor ist der Zentralisator der Farb-su(3) in so(8) zweidimensional, also nur abelsch (numerisch); auch
+  die Trialitäts-Spin(8) enthält keine SU(2), die mit der Farbe vertauscht.
+- Zusammen mit dem Schur-Argument: Ein solches Dublett-Feld liegt nicht in C⊗H⊗O.
+
+**2. Der einzige native Kandidat im Neutrino-Sektor trägt nicht.** Nach r82.4 ist ν^c ν^c der einzige eichinvariante
+Paarkanal (ψᵀεψ, Torsionswechselwirkung anziehend); ein Kondensat dort wäre neutral und gehörte nur zu den Neutrinos.
+Seine Spin-Struktur ist aber die Lorentz-Struktur. Liest man die Spins der drei ν^c entlang x, y, z, gibt die
+Paarungsmatrix Diagonale 0 und Nebendiagonalen |·|² = 1/2, aber das entartete Spektrum (0; 1,22; 1,22). Mit einer
+gemeinsamen Diagonale (0,5; 1; 1,5) bleibt K bei 0,46; 0,42; 0,39 mit positiven Wurzeln. Kein Koide, kein H99.
+
+**3. Was bleibt.** Ein Feld mit den verlangten Eigenschaften braucht eine Erweiterung außerhalb von C⊗H⊗O, etwa einen
+eigenen Familienfaktor mit einer SU(2) (wie Suminos U(3) × SU(2)) und ein neutrales Dublett darin. Das ist die
+„zweite Dreierstruktur außerhalb von O“ aus r14/r33, jetzt mit der zusätzlichen Forderung nach einer stetigen SU(2)
+und Spin 1/2. Die Sedenionen (r13) liefern nur eine diskrete S_3.
+
+**Zurückgestellte Ideen.** I4 (Kondensation als Massenquelle) ist durch den ν^c-Kanal berührt; sie wurde am 6.11.
+unter den geltenden Lesarten als nicht verwirklichbar eingeordnet (`Erkundung_I4_Kondensat.md`). Kein neuer Auslöser.
+
+**Bewertung.** Die Feldsuche ist im Companion negativ: Weder der Dixon-Raum noch der native ν^c-Paarkanal trägt ein
+Spin-1/2-Feld einer neutralen Familien-SU(2). Die Oktanten-Lesart von H99 bleibt damit eine Lesart, die eine
+Erweiterung des Companion verlangt. OP3/OP4 offen; H100 unberührt.

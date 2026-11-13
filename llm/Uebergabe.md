@@ -30,8 +30,9 @@
   SO(3)-Achsen (farb-, ladungsneutral); nur Spin 1/2 gibt ρ² = 1/2 und π/4 (allgemein ρ² = (1/2)^{2j}, Phase jπ/2).
   Lesart: Neutrinos tragen einen Spinor dieser Gruppe. **Suche im Companion negativ:** neutrale SU(2) ist nach Schur eine
   Familien-Symmetrie; in der Platzindex-U(3) gibt es nur SO(3) (Vektor, kein Spinor) oder 2+1 (Spinor, keine drei Achsen).
-  Nötig wäre eine zweite Familien-SU(2) mit Spinor-Feld (ν^c?), nicht angelegt. Empfehlung: PR #106 mergen, H100 abwarten;
-  ein neuer Ansatz bräuchte die „zweite Dreierstruktur“ aus r14/r33.
+  Nötig wäre eine zweite Familien-SU(2) mit Spinor-Feld. **Feldsuche negativ:** Dixon-Raum ohne Platz (H links Lorentz,
+  rechts Isospin; so(8)-Zentralisator der Farbe abelsch); ν^c-Kondensat (r82.4) mit Oktanten-Spins entartet, kein Koide.
+  Empfehlung: PR #106 mergen, H100 abwarten; ein neuer Ansatz bräuchte einen eigenen Familienfaktor außerhalb von C⊗H⊗O.
   Werkzeuge: `notes/research/op3_eta_form_search_2026_11_13.*`, `op3_slot_u3_gauging_2026_11_13.*`.
   · zur Wahl: H100 vorab festschreiben (Kandidaten unten) · T₁₂ als dynamisches Feld · Potential für ρ² = 1/2 ·
   Vereinigung Platzindex-U(3) mit SU(2)_L.

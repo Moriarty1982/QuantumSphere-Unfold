@@ -319,3 +319,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 13.11.2026, spät: Erkundung neutrale SU(2) (Suminos SO(3)-Vektorindex trägt die Generationen auf orthogonalen Achsen; nur Spin 1/2 gibt Koide und π/4) in Forschungsstand; kein OP-Abschluss.
 
 13.11.2026, spät: Nachtrag neutrale SU(2) gesucht (Schur: nur Familien-Symmetrie; in U(3) kein Vektor-mit-Spinor; zweite Familien-SU(2) nötig) in Forschungsstand; kein OP-Abschluss.
+
+13.11.2026, spät: Nachtrag Feldsuche (Dixon-Raum ohne neutrale SU(2); ν^c-Kondensat gibt kein Koide; Erweiterung nötig) in Forschungsstand; kein OP-Abschluss.

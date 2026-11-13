@@ -1836,6 +1836,13 @@ Erkundung $\eta$, ohne Datenvergleich:
   aber keine drei gleichberechtigten Achsen). Die Oktanten-Lesart braucht
   daher eine zweite Familien-$SU(2)$ mit einem Spinor-Feld im neutralen
   Sektor, etwa $\nu^c$. Im Companion ist sie nicht angelegt.
+- Nachtrag Feldsuche: Im Dixon-Raum sind die beiden $SU(2)$ des
+  H-Faktors vergeben (links Lorentz, rechts Isospin); in $so(8)$ ist der
+  Zentralisator der Farbe nur abelsch. Der einzige native
+  Neutrino-Kandidat, ein $\nu^c\nu^c$-Kondensat (r82.4), gibt mit
+  Oktanten-Spins ein entartetes Spektrum und kein Koide. Ein passendes
+  Feld verlangt eine Erweiterung außerhalb von $\mathbb C\otimes\mathbb
+  H\otimes\mathbb O$ (eigener Familienfaktor mit $SU(2)$).
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),

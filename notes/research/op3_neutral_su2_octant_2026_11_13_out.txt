@@ -12,3 +12,11 @@ Spin-j-Zustaende entlang x, y, z (Oktant, Raumwinkel pi/2):
     (2) SU(2) als 2 + 1: Spins in 3: [0.0, 0.5], 6: [0.0, 0.5, 1.0], 8: [0.0, 0.5, 1.0]
     -> In der Familien-U(3) gibt es entweder Generationen als Vektor (nur ganzzahlige Spins, kein Spinor)
        oder einen Spinor (2 + 1), dann sind die Generationen kein Vektor auf drei Achsen.
+
+== Feldsuche ==
+    (1) Zentralisator der Farb-su(3) in so(8): Dimension 2 (nur abelsch moeglich, keine SU(2))
+    (2) Majorana-Paarung chi_a^T eps chi_b, Spins entlang x, y, z: |M_ab|^2 = [[0.0, 0.5, 0.5], [0.5, 0.0, 0.5], [0.5, 0.5, 0.0]]
+        Diagonale null (gleiche Richtung paart nicht), Nebendiagonale |.|^2 = 1/2; Singulaerwerte [0.     1.2247 1.2247]
+        M + 0.5*1: Singulaerwerte [0.1589 1.118  1.5731], K (positive Wurzeln) = 0.4617
+        M + 1.0*1: Singulaerwerte [0.4154 1.3408 2.0074], K (positive Wurzeln) = 0.4236
+        M + 1.5*1: Singulaerwerte [0.8099 1.7265 2.4725], K (positive Wurzeln) = 0.3886
