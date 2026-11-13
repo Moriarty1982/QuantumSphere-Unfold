@@ -343,3 +343,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 13.11.2026, spät: Erkundung Fluss 2/3 rad (kein Mechanismus; Scan-Treffer ΔΦ = γ_BI/2, nachträglich, verlangt m_τ = 1777,13 MeV) in Forschungsstand; kein OP-Abschluss.
 
 13.11.2026, spät: Nachtrag Mechanismus-Suche für ΔΦ = γ/2 (γ_M nativ; Literatur-Lesarten mit unbegründeter Einheit) in Forschungsstand; kein OP-Abschluss.
+
+13.11.2026, spät: H102 vorab (m_τ = 1777,134 MeV) in Vorhersagen-und-Tests und Forschungsstand eingetragen.

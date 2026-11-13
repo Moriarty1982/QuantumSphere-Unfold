@@ -9,7 +9,8 @@
   `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf`. Rundentabelle und Kernkarte (Schritt 10 der Runden-Anleitung) gibt es
   im Repo-Klon nicht mehr; Runden stehen in `notes/research/v4_10_0_rNN/README.md` und im Wiki.
 - **Letzte Runde:** v4.10.0-r12 (Statusvermerke), Teil von PR #106; Build lokal und in CI ok (1406 Seiten, 0 Overfull).
-- **Zuletzt vergebene Hypothese:** H101 (Vorab f470817, widerlegt); H100 (Vorab 9c77ddd) offen; nächste frei H102; letztes Skript k223.
+- **Zuletzt vergebene Hypothese:** H102 (Vorab ee0a103, offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem
+  13.11.2026, `k224_test_h102.py m_tau sigma`); H101 widerlegt; H100 offen; nächste frei H103; letztes Skript k224.
 - **Offene Autorentscheidungen:** keine.
 - **Ausgelöste Zurückgestellte Ideen:** keine neuen (I4 durch den ν^c-Kanal berührt, am 6.11. bereits negativ eingeordnet).
 - **Nächster Schritt:** H100 auswerten, sobald eine neue NuFIT-Version erscheint:

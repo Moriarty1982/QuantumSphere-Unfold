@@ -1937,6 +1937,9 @@ Koide-Bogens ist exakt das Oktanten-Tripel. Zu den Fäden:
   Ashtekar-Barbero-Verbindung, U(1)-Durchstoßpunkt mit $|m|=1/2$,
   topologischer Winkel) geben $\gamma/2$ als Spin-1/2-Phase, brauchen aber
   jeweils eine unbegründete Einheit. Nicht hergeleitet.
+- **H102** vorab (ee0a103): Die Beziehung $\Phi_e=\pi/4-\gamma_M/2$ verlangt
+  $m_\tau=1777{,}134$ MeV (exaktes Koide: $1776{,}969$). Geprüft wird gegen
+  die erste PDG-Ausgabe nach dem 13.11.2026; heute $+2{,}3\sigma$.
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),
