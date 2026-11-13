@@ -115,3 +115,25 @@ if __name__ == "__main__":
     print(f"Ein Umlaufsinn, M = a + alpha P: groesstes K bei 200000 Zufallspunkten: Wurzel-Lesart {Kroot:.4f}, Massen-Lesart {Klin:.4f}")
     sv = np.sort(np.abs(1 + np.exp(2j * np.pi * np.arange(3) / 3)))
     print(f"  ein gemeinsames Element (a = alpha): Singulaerwerte im Verhaeltnis {np.round(sv / sv[0], 6)}")
+
+    # Rueckweg-Varianten: welches Element im dritten Platz, welcher Koeffizient, welche Hyperladungsphase
+    cj = lambda x: D.cjO(D.cjH(x))                      # Dixon-Konjugation ohne komplexe Konjugation
+    cvals = dict(zip(D.SECT, rng.normal(size=4) + 1j * rng.normal(size=4)))
+    hgen = sum(cvals[s_] * hs_[s_] for s_ in D.SECT) / 4
+    def coef(s_, hh, swap):
+        J = D.mat(D.Fb, s_, D.hel(0, 0)); Mm = D.mat(D.Fb, s_, hh, swap=swap)
+        return np.vdot(J, Mm) / np.vdot(J, J)
+    expect = {"h": ("c_s", "c_s'"), "h*": ("conj c_s'", "conj c_s"), "h~": ("c_s'", "c_s"), "h+": ("conj c_s", "conj c_s'")}
+    variants = {"h": hgen, "h*": hgen.conj(), "h~": cj(hgen), "h+": cj(hgen).conj()}
+    val = lambda tag, s_: {"c_s": cvals[s_], "c_s'": cvals[mirror[s_]],
+                           "conj c_s": np.conj(cvals[s_]), "conj c_s'": np.conj(cvals[mirror[s_]])}[tag]
+    err = max(abs(coef(s_, variants[n_], sw) - val(expect[n_][int(sw)], s_))
+              for n_ in variants for s_ in D.SECT for sw in (False, True))
+    print(f"Koeffizienten (alpha, beta) je Variante: " + "; ".join(f"{n_}: {v}" for n_, v in expect.items()) + f"  (Fehler {err:.1e})")
+    print("  eichinvariant (Koeffizient c_s oder conj c_s'): alpha mit h oder h*, beta mit h~ oder h+")
+    # Ein Dublett: conj(c_s') proportional c_s  ->  beta/alpha haengt nicht mehr an h
+    y = rng.normal() + 1j * rng.normal()
+    c1 = dict(cvals); c1["u"] = np.conj(y * c1["e"]); c1["nu"] = np.conj(y * c1["d"])
+    h1 = sum(c1[s_] * hs_[s_] for s_ in D.SECT) / 4
+    ratios = [coef("e", cj(h1).conj(), True) / coef("e", h1, False), coef("e", cj(h1), True) / coef("e", h1, False)]
+    print(f"Ein Dublett (conj c_u = y c_e): beta_e/alpha_e mit h+ = {ratios[0]:.4f} (= y = {y:.4f}), mit h~ = {ratios[1]:.4f}")

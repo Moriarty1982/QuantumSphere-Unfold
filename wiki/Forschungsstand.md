@@ -1362,6 +1362,35 @@ blind.
 Unter Eichkovarianz bricht die Dixon-Kopplung $\rho$ also maximal und
 liefert die Koide-Form nicht. OP3/OP4 bleiben offen.
 
+**Nachtrag 2: Herkunft des Rückwegs (13.11.2026).** Erkundung, nicht
+blind. Sei $c_s$ der Koeffizient von $h$ am Idempotent des Sektors $s$
+und $s'$ der gespiegelte Sektor ($e\leftrightarrow u$,
+$\nu\leftrightarrow d$).
+
+| Element im dritten Platz | $\alpha_s$ | $\beta_s$ |
+|---|---|---|
+| $h$ | $c_s$ | $c_{s'}$ |
+| $h^*$ (Frame-Wechsel $T$) | $\bar c_{s'}$ | $\bar c_s$ |
+| $\tilde h$ (Dixon-konjugiert, Wirkung von $\rho$) | $c_{s'}$ | $c_s$ |
+| $h^\dagger=\tilde h^*$ | $\bar c_s$ | $\bar c_{s'}$ |
+
+Eichinvariant sind Terme mit $c_s$ oder $\bar c_{s'}$. Ein Rückweg
+existiert also: über $\tilde h$ mit demselben Koeffizienten wie der
+Hinweg, oder über $h^\dagger$ mit der Komponente entgegengesetzter
+Hyperladung. Im ersten Fall trägt das Element keine relative Phase. Im
+zweiten Fall wäre die relative Phase zweier unabhängiger
+Dublett-Komponenten eine Quelle der Brannen-Phase; W2 hat aber nur ein
+Dublett, und dann ist $\beta_s/\alpha_s$ eine Konstante unabhängig von
+$h$.
+
+Im heutigen Companion (Modell I, W2, zweite Lesart) kann das Element des
+dritten Platzes die Phase demnach nicht tragen. Die Brannen-Phase ist die
+relative Phase der Kopplungskonstanten von Hin- und Rückweg, die Stärke
+der $\rho$-Brechung ihr Betragsverhältnis; beides ist frei. Das ist die
+Aussage von r45, an einer bestimmten Stelle verortet. Eine Phase aus der
+Struktur verlangte eine zweite unabhängige Dublett-Komponente oder ein
+Prinzip, das die beiden Konstanten bindet. OP3/OP4 bleiben offen.
+
 
 ### Version 5: Veröffentlichungsvorbereitung wieder aufgenommen (12.11.2026)
 

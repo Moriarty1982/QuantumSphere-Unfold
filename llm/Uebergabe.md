@@ -1,6 +1,6 @@
 # Übergabe: Stand der letzten Sitzung
 
-13. November 2026, ca. 01:20 (Claude). Wird pro Arbeitsblock überschrieben.
+13. November 2026, ca. 01:40 (Claude). Wird pro Arbeitsblock überschrieben.
 
 - Öffentliche Baseline v5.0.0 (DOI 10.5281/zenodo.24152615, Tag v5.0.0 auf 539b75b). PR #100, #101, #102 gemergt; main 1eed465; Läufe 43265308165 (Zwei-PDF) und 43265308144 (Wiki-Sync) erfolgreich. Keine weitere Veröffentlichung nötig.
 - Lokaler Ordner des Autors (`Quantum Sphera`) stand noch auf dem 6.11. (93c3d21, r05) und wurde auf Autorenfreigabe per Fast-Forward auf 1eed465 gebracht. Der alte Stand ist als Tag `lokal-stand-2026-11-06` gesichert (dabei entfielen 58 verfolgte Dateien, u. a. `.claude/skills`, alte Zusammenfassungen; alle über den Tag erreichbar).
@@ -55,12 +55,21 @@
 - Hyperladung: Rückweg beta_s hängt am Koeffizienten des gespiegelten Sektors, nicht eichinvariant. Ein kovariantes Element gibt nur M_s = a_s + alpha_s P, also K <= 1/2; Koide nicht erreichbar. Gemeinsames Element: 1 : 1 : 2.
 - Der hermitesche Brannen-Fall (reelles h) ist vor der Brechung nicht eichinvariant; Bewertung in der Notiz korrigiert.
 
+## Nachtrag 2 Herkunft des Rückwegs (13.11., „weiter“)
+
+- Nachtrag 2 in der Dixon-Notiz, Skript `op3_dixon_connector_link_2026_11_13.py` erweitert, im selben PR #103.
+- Varianten des Elements im dritten Platz: h (alpha c_s, beta c_s'), h* (conj c_s', conj c_s), h~ (c_s', c_s), h+ (conj c_s, conj c_s'); s' gespiegelt (e↔u, nu↔d). Eichinvariant: Koeffizient c_s oder conj c_s'.
+- Rückweg über h~ ist eichinvariant, trägt aber denselben Koeffizienten wie der Hinweg: keine Phase aus dem Element. Rückweg über h+ bräuchte eine unabhängige zweite Dublett-Komponente; W2 hat ein Dublett, zweite Lesart passt dazu.
+- Stand: Brannen-Phase = relative Phase der Kopplungskonstanten von Hin- und Rückweg, frei (r45, jetzt verortet). Struktur allein liefert sie im heutigen Companion nicht.
+
 ## Nächster Schritt (Autorentscheidung)
 
-- Offen ist die Herkunft des Rückwegs: Gibt es im Companion ein zweites Element mit entgegengesetzter Hyperladung (oder einen Frame-Wechsel M/T), das den zweiten Umlaufsinn eichinvariant liefert? Ohne das bleibt K <= 1/2.
-- Alternativ die Platzstruktur selbst prüfen: ob die drei Generationen überhaupt als zyklisch gekoppelte gleiche Kopien (Modell I) zu lesen sind.
-- Ein Test mit Kriterium bekäme H99 und eine Vorab-Notiz.
-- Offen daneben: W-a, W-c der Stringfrage; Statusvermerke für die gemeldeten älteren Stellen in einer neuen Runde.
+Die Strukturfrage ist an dieser Stelle ausgeschöpft; weiter geht es nur mit einer Entscheidung des Autors:
+- (A) zweite unabhängige Dublett-Komponente zulassen (etwa als T-Frame-Partner); dann wäre die relative Phase die Quelle, und die Folgen für W2 und die zweite Lesart wären vorab zu prüfen;
+- (B) ein Prinzip suchen, das Rückweg- an Hinweg-Konstante bindet (Quellenfrage: Chiralität r42/r43, Anomaliefreiheit);
+- (C) die Platzstruktur selbst in Frage stellen (Generationen nicht als zyklisch gekoppelte gleiche Kopien);
+- (D) die Linie hier ablegen und zur Stringfrage (W-a, W-c) oder zu den Statusvermerken zurückkehren.
+Ein Test mit Kriterium bekäme H99 und eine Vorab-Notiz.
 
 ## Pflichten in jeder Sitzung
 

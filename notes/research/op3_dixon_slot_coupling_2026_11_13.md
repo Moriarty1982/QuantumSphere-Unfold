@@ -165,3 +165,53 @@ Unter Eichkovarianz mit einem Element bricht sie rho maximal (ein
 Umlaufsinn) und kann die Koide-Form nicht liefern. Die Brannen-Form
 bräuchte ein zweites, unabhängig begründetes Element oder eine andere
 Herkunft des Rückwegs. OP3/OP4 bleiben offen, Guards unverändert.
+
+## Nachtrag 2 (13.11.): Herkunft des Rückwegs
+
+Auftrag „weiter“: nach einem eichinvarianten zweiten Umlaufsinn suchen.
+Erkundung, nicht blind; Skript wie im ersten Nachtrag.
+
+Vorwissen geprüft: r82.1 (W2: ein Higgs-Dublett, Yukawa-Kopplungen über
+die Verbinder aus r44.1(b)); r84 und die Autorenentscheidungen vom 6.11.
+(zweite Lesart, T-Zweig nicht als eigene Freiheitsgrade); r45 (rho mit
+dem Frame-Wechsel T erhält die Chiralität nicht). Suche nach einem
+zweiten Dublett, einem konjugierten Higgs-Feld oder 2HDM in sources/ und
+notes/research: kein Treffer.
+
+Mit c_s als Koeffizient von h am Idempotent des Sektors s und s' als
+gespiegeltem Sektor (e↔u, nu↔d) gilt exakt:
+
+| Element im dritten Platz | alpha_s | beta_s |
+|---|---|---|
+| h | c_s | c_s' |
+| h* (komplex konjugiert, Frame-Wechsel T) | conj c_s' | conj c_s |
+| h~ (Dixon-konjugiert, Wirkung von rho auf einen Platz) | c_s' | c_s |
+| h+ = (h~)* (beides) | conj c_s | conj c_s' |
+
+Eichinvariant sind Terme mit Koeffizient c_s oder conj c_s'. Also:
+
+1. **Ein Rückweg existiert.** beta_s ist eichinvariant mit h~ (Koeffizient
+   c_s, derselbe wie im Hinweg mit h) und mit h+ (Koeffizient conj c_s').
+2. **Rückweg über h~.** Hin- und Rückweg tragen denselben Koeffizienten.
+   Das Element liefert dann keine relative Phase; die beiden Umlaufsinne
+   unterscheiden sich nur durch ihre Kopplungskonstanten. Sind diese
+   gleich (rho-symmetrisch), fallen zwei Massen zusammen.
+3. **Rückweg über h+.** Er benutzt die Komponente entgegengesetzter
+   Hyperladung. Wären c_s und c_s' unabhängig (zwei Dubletts), wäre ihre
+   relative Phase eine Quelle der Brannen-Phase, und |c_s'| = |c_s| wäre
+   die Bedingung für die hermitesche Form.
+4. **Stand im Companion.** W2 hat ein Dublett; dann ist conj c_s'
+   proportional zu c_s, und beta_s/alpha_s ist eine Konstante, unabhängig
+   von h (geprüft). Die zweite Lesart (T-Feld als Bild des M-Felds) passt
+   dazu: h* ist kein eigener Freiheitsgrad.
+
+Folge: Im heutigen Companion (Modell I, W2, zweite Lesart) kann das
+Element des dritten Platzes die Phase nicht tragen. Die Brannen-Phase ist
+die relative Phase der Kopplungskonstanten von Hin- und Rückweg, die
+Stärke der rho-Brechung ihr Betragsverhältnis. Beides ist frei; das ist
+die Aussage von r45, jetzt an einer bestimmten Stelle verortet. Eine
+Phase aus der Struktur verlangte entweder eine zweite unabhängige
+Dublett-Komponente mit festgelegter relativer Phase oder ein Prinzip, das
+die Rückweg-Konstante an die Hinweg-Konstante bindet. Beides wäre eine
+Erweiterung und Sache des Autors. OP3/OP4 bleiben offen, Guards
+unverändert.
