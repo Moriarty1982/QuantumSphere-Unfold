@@ -2,7 +2,7 @@
 
 13. November 2026, ca. 15:15 (Claude). Wird pro Arbeitsblock überschrieben.
 
-- **Dieser Block:** H99b mit der NuFIT-6.1-Primärtabelle entschieden: **verträglich, +1,80σ** (nicht blind). Zweig `claude/anthropic-skills-weitermachen-286405`, PR offen (Nummer siehe GitHub), noch nicht gemergt. Enthält auch den lokalen Übergabe-Commit 0504201.
+- **Dieser Block:** H99b mit der NuFIT-6.1-Primärtabelle entschieden: **verträglich, +1,80σ** (nicht blind). Zweig `research/v5-h99b-nufit61`, **PR #104 offen**, noch nicht gemergt. Enthält auch den lokalen Übergabe-Commit 0504201.
 
 - Öffentliche Baseline v5.0.0 (DOI 10.5281/zenodo.24152615, Tag v5.0.0 auf 539b75b). PR #100, #101, #102 gemergt; main 1eed465; Läufe 43265308165 (Zwei-PDF) und 43265308144 (Wiki-Sync) erfolgreich. Keine weitere Veröffentlichung nötig.
 - Lokaler Ordner des Autors (`Quantum Sphera`) stand noch auf dem 6.11. (93c3d21, r05) und wurde auf Autorenfreigabe per Fast-Forward auf 1eed465 gebracht. Der alte Stand ist als Tag `lokal-stand-2026-11-06` gesichert (dabei entfielen 58 verfolgte Dateien, u. a. `.claude/skills`, alte Zusammenfassungen; alle über den Tag erreichbar).
@@ -91,11 +91,11 @@
 - Quellenbefund `notes/research/op3_indefinite_form_2026_11_13.*`: bilineare Form x^T y auf C⊗H⊗O ist invariant unter Drehungen, Boosts, Farbe, Q_em; verschwindet auf Zuständen fester Ladung q ≠ 0, nicht auf neutralen (passt zu r44.1(d)). Lesart B: Re s hat Signatur (3,3). Negativer Gram-Eigenwert genau außerhalb des Bogens |theta| > pi/12.
 - **H99** (Vorab 5b23c5a, nicht blind, k221 in `notes/research/predictions/`): rho² = 1/2 in beiden farbneutralen Sektoren, theta_nu = theta_e + pi/12 ⇒ dm21/dm31 = 0,030839. H99a (NuFIT 6.0) verträglich, +1,31 sigma. H99b (Nachtrag 13.11. nachmittags, Primärtabelle nu-fit.org `v61.tbl-parameters.pdf`, IC24 mit SK, NO: dm21 = 7,537 +0,094/−0,10e-5, dm31 = 2,511 +0,021/−0,020e-3): R_obs = 0,030016 ± 0,000457, **+1,80 sigma, verträglich**. Nachträglich: Spalte IC23 gäbe +2,03 sigma; Sekundärwerte aus arXiv:2601.18781 (2,519/2,529) weichen von der Primärtabelle ab, Ersatzrechnungen überholt. Verlangtes dm21 = 7,744e-5 gegen JUNO allein 7,50 ± 0,12: +2,0 sigma.
 - **Zuletzt vergebene Hypothese: H99.** Nächste freie Nummer H100. Letztes k: k221 (k220 liegt auf einem lokalen Zweig des Autors).
-- H99, H99a in PR #103 (gemergt); H99b-Nachtrag im neuen PR (Ergebnis-Notiz, k221_out.txt, predictions/README, Wiki Forschungsstand, Vorhersagen-und-Tests, Wiki-Pflege).
+- H99, H99a in PR #103 (gemergt); H99b-Nachtrag in PR #104 (Ergebnis-Notiz, k221_out.txt, predictions/README, Wiki Forschungsstand, Vorhersagen-und-Tests, Wiki-Pflege).
 
 ## Nächster Schritt (Autorentscheidung)
 
-- PR mit dem H99b-Nachtrag prüfen und auf „PR NN mergen“ des Autors mergen.
+- PR #104 (H99b-Nachtrag) prüfen und auf „PR 104 mergen“ des Autors mergen.
 - Entscheiden, ob R = 0,030839 als Vorhersage gegen das nächste JUNO-Ergebnis zu dm21 festgeschrieben wird (H100, eigene Vorab-Notiz; nach heutigem Stand mit Widerlegungsrisiko).
 - Statusvermerke in einer neuen Runde: r33-Labels (Ladung), ältere Koide-Stellen (v470/17, „2/3 factor“, rem:koide-mass-discrepancy), thm:three-generations.
 
