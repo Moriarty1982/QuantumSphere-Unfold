@@ -138,3 +138,26 @@ if __name__ == "__main__":
         yy = y * np.exp(1.5 * y ** 2 * t / (16 * np.pi ** 2))
         te, r2, R = one_scale(yy)
         print(f"    {lab:9s}: theta_e = {te:.6f}, R = {R:.6f}, Aenderung gegen M_Z {R - one_scale(MZ)[2]:+.1e}")
+
+
+if __name__ == "__main__":
+    print("\n== Nachtrag Koide-Spannung ==")
+    v = np.sqrt(np.array(POL)); Kp = (v ** 2).sum() / v.sum() ** 2
+    # Unsicherheit von K aus m_tau
+    vp = np.sqrt(np.array([POL[0], POL[1], POL[2] + 0.09])); Kt = (vp ** 2).sum() / vp.sum() ** 2
+    vz = np.sqrt(np.array(MZ)); Kz = (vz ** 2).sum() / vz.sum() ** 2
+    print(f"K_pol - 2/3 = {Kp - 2 / 3:+.2e} +- {abs(Kt - Kp):.1e};  K(M_Z) - 2/3 = {Kz - 2 / 3:+.2e}")
+    print(f"QED-Verschiebung von K: {Kz - Kp:+.2e}; Pol-Koide trifft 2/3 auf {abs(Kp - 2 / 3) / abs(Kz - Kp) * 100:.1f} % dieser Verschiebung")
+    print("Sumino-Weg: Struktur exakt (theta_e = Pol), Familienkorrektur hebt QED bei geladenen Leptonen auf,")
+    print("wirkt bei Neutrinos allein: m_nu,k(phys) = m_nu,k(Struktur) * Q_k^(-c), Q_k = 1 + a/pi (1 + 3/2 ln(mu/m_e,k)).")
+    te = lepton_phase(POL)
+    s_e = eig(te); s_n = eig(te + np.pi / 12)
+    gen_e = np.argsort(s_e)            # Reihenfolge e, mu, tau nach k
+    print(f"    Zuordnung k -> Generation: geladen {dict(zip(gen_e, ['e', 'mu', 'tau']))}, Neutrino-Wurzeln {np.round(s_n, 4)}")
+    me_k = np.empty(3); me_k[gen_e] = POL           # geladene Polmasse zum Index k
+    for a_lab, a in (("alpha(0)", 1 / 137.036), ("alpha(M_Z)", 1 / 127.95)):
+        Q = 1 + a / np.pi * (1 + 1.5 * np.log(91187.6 / me_k))
+        for c in (0.5, 1.0, 2.0):
+            m = np.sort(s_n ** 2 * Q ** (-c))
+            R = (m[1] ** 2 - m[0] ** 2) / (m[2] ** 2 - m[0] ** 2)
+            print(f"    {a_lab:10s} c = {c}: R = {R:.6f}, z(6.1) = {(R - R_OBS) / S_OBS:+.2f}")

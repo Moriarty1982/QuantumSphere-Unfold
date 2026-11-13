@@ -169,3 +169,56 @@ weil er der exakten Pol-Koide-Beziehung widerspricht. Die Fassung hat
 damit keine freie Skala mehr, nur eine binäre Wahl. Das macht sie als
 Vorhersage schärfer: R = 0,0301 ± 0,00003 (Spannweite der Skalen) gegen
 H99 mit 0,030840.
+
+## Nachtrag: die Koide-Spannung (13.11., Autor: „Erst Koide-Spannung“)
+
+Vorwissen geprüft: Suche nach Sumino, Familien-Eichsymmetrie, QED-Korrektur
+zu Koide in notes/, sources/, wiki/: kein Treffer. Einschlägig sind
+thm:koide-triolic (Koide empirisch, Herleitung offen), H1 (r11), v4.8.0-r14
+und r33 (Generationen brauchen eine zweite Dreierstruktur außerhalb von O).
+Literatur: Y. Sumino, „Family Gauge Symmetry as an Origin of Koide's Mass
+Formula and Charged Lepton Spectrum“, arXiv:0812.2103, JHEP 0905 (2009) 075.
+
+**1. Wie scharf die Spannung ist.** K_pol − 2/3 = −2,2·10⁻⁶ ± 5,1·10⁻⁶ (aus
+m_τ). Die QED-Verschiebung zwischen Pol und Kopplung ist +1,16·10⁻³. Die
+Pol-Koide-Beziehung trifft also auf 0,2 % dieser Verschiebung. Liegt die
+Struktur auf der Kopplungsseite, wäre das ein Zufall dieser Größe. Das
+spricht deutlich für die Polseite.
+
+**2. Ausweg nach Sumino.** Bei Sumino ist die Struktur exakt, und eine
+Korrektur aus einer Familien-Eichwechselwirkung hebt die QED-Korrektur
+für geladene Leptonen genau auf; deshalb gilt Koide für Polmassen (dort
+mit Vereinigung von U(3) und SU(2)_L bei etwa 10²–10³ TeV). Neutrinos sind
+neutral: Die QED-Korrektur fehlt, die Familienkorrektur nicht. Sie wirkt
+bei ihnen allein und mit umgekehrtem Vorzeichen der QED-Korrektur.
+
+Rechnung (nachträglich, nicht blind): Struktur nach H99 mit θ_e aus
+Polmassen (Koide exakt); die physikalischen Neutrinomassen erhalten den
+Faktor Q_k^(−c) mit Q_k = 1 + (α/π)(1 + (3/2) ln(μ/m_k)) der geladenen
+Generation k. Zuordnung über den Index der Brannen-Form: ν₃ ↔ τ, ν₁ ↔ e
+(negative Wurzel), ν₂ ↔ μ. Der Exponent c hängt davon ab, wie die
+Familienkorrektur in den Neutrino-Massenterm eingeht.
+
+| c | R (α(0)) | gegen NuFIT 6.1 | R (α(M_Z)) | gegen NuFIT 6.1 |
+|---|---|---|---|---|
+| 0 (H99) | 0,030840 | +1,80σ | 0,030840 | +1,80σ |
+| 1/2 | 0,030545 | +1,16σ | 0,030524 | +1,11σ |
+| 1 (wie der geladene Massenterm) | 0,030253 | +0,52σ | 0,030213 | +0,43σ |
+| 2 | 0,029677 | −0,74σ | 0,029598 | −0,91σ |
+
+**Bewertung.**
+- Der Sumino-Weg löst die Spannung im Prinzip: Koide bleibt für Polmassen
+  exakt, und die Neutrinos rücken an die Daten heran. Für c = 1 bleibt
+  +0,5σ; jedes c zwischen 1/2 und 2 ist verträglich.
+- Die Richtung folgt aus dem Mechanismus, nicht aus den Daten: Die
+  Familienkorrektur muss bei den geladenen Leptonen die QED-Korrektur
+  aufheben und wirkt deshalb bei den Neutrinos mit entgegengesetztem
+  Vorzeichen. Der Betrag hängt an c und ist nicht festgelegt.
+- Nicht nativ: Der Companion hat keine Familien-Eichsymmetrie; die zweite
+  Dreierstruktur für Generationen fehlt (r14, r33). Der Weg ist Literatur.
+  Ob die Platzkopplung eine Familien-Eichwechselwirkung tragen kann, ist
+  eine neue offene Frage.
+- Die Fassung „Kopplungsseite“ (R = 0,0301) und der Sumino-Weg mit c = 1
+  (R = 0,0302) liegen nahe beieinander; künftige Daten trennen beide kaum,
+  wohl aber beide von H99 (0,030840).
+- OP3/OP4 offen; OP1–OP5, C5, C6/T2 unverändert.

@@ -1646,6 +1646,15 @@ Auslesung), (3) Skala der Leptonmassen.
   den Erkundungen in Kopplungen entsteht (Platzkopplung, W2-Yukawas) und
   Neutrinos keine Photonwolke haben; dagegen, dass Koide $2/3$ nur bei
   Polmassen exakt gilt.
+- Nachtrag Koide-Spannung: Die Pol-Koide-Beziehung trifft $2/3$ auf
+  0,2 % der QED-Verschiebung; als Zufall wäre das unwahrscheinlich. Ein
+  Ausweg aus der Literatur (Sumino 2009, arXiv:0812.2103): Eine
+  Familien-Eichkorrektur hebt die QED-Korrektur bei geladenen Leptonen
+  auf, deshalb gilt Koide für Polmassen. Bei Neutrinos wirkt sie allein.
+  Mit Koide exakt und dieser Korrektur folgt $R=0{,}0302$ bis $0{,}0305$
+  (Exponent $c=1$ bzw. $1/2$; $+0{,}5\sigma$ bzw. $+1{,}2\sigma$), bei
+  $c=2$ $0{,}0297$ ($-0{,}8\sigma$). Nicht nativ: Der Companion hat keine
+  Familien-Eichsymmetrie (r14, r33).
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),

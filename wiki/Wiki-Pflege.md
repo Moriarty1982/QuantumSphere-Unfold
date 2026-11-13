@@ -281,3 +281,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 13.11.2026, abends: Erkundung der Varianten zu H99 (drei Ideen, 24-Varianten-Raster, nachträglicher Kandidat „H99 bei einer Skala M_Z“, +0,16σ) in Forschungsstand ergänzt; nicht blind, kein Test, kein OP-Abschluss.
 
 13.11.2026, spät: Nachtrag zur Skalenfrage in Forschungsstand (M_Z nicht ausgezeichnet; Wahl Polmassen oder Kopplungen; Grund und Gegengrund); kein Test, kein OP-Abschluss.
+
+13.11.2026, spät: Nachtrag Koide-Spannung (Pol-Koide als Zufall unwahrscheinlich; Sumino-Weg rechnet die Neutrinos an die Daten heran, nicht nativ) in Forschungsstand; kein Test, kein OP-Abschluss.

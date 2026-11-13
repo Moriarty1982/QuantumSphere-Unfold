@@ -61,3 +61,16 @@ M_Z: rho_e^2 = 0.501743 (K = 0.667829), Rand = 0.26006, theta_nu = 0.48119, R = 
     1 TeV    : theta_e = 0.221123, R = 0.030087, Aenderung gegen M_Z -1.6e-07
     1e10 GeV : theta_e = 0.221121, R = 0.030086, Aenderung gegen M_Z -1.2e-06
     2e16 GeV : theta_e = 0.221119, R = 0.030085, Aenderung gegen M_Z -2.2e-06
+
+== Nachtrag Koide-Spannung ==
+K_pol - 2/3 = -2.20e-06 +- 5.1e-06;  K(M_Z) - 2/3 = +1.16e-03
+QED-Verschiebung von K: +1.16e-03; Pol-Koide trifft 2/3 auf 0.2 % dieser Verschiebung
+Sumino-Weg: Struktur exakt (theta_e = Pol), Familienkorrektur hebt QED bei geladenen Leptonen auf,
+wirkt bei Neutrinos allein: m_nu,k(phys) = m_nu,k(Struktur) * Q_k^(-c), Q_k = 1 + a/pi (1 + 3/2 ln(mu/m_e,k)).
+    Zuordnung k -> Generation: geladen {np.int64(1): 'e', np.int64(2): 'mu', np.int64(0): 'tau'}, Neutrino-Wurzeln [ 2.2518 -0.1958  0.944 ]
+    alpha(0)   c = 0.5: R = 0.030545, z(6.1) = +1.16
+    alpha(0)   c = 1.0: R = 0.030253, z(6.1) = +0.52
+    alpha(0)   c = 2.0: R = 0.029677, z(6.1) = -0.74
+    alpha(M_Z) c = 0.5: R = 0.030524, z(6.1) = +1.11
+    alpha(M_Z) c = 1.0: R = 0.030213, z(6.1) = +0.43
+    alpha(M_Z) c = 2.0: R = 0.029598, z(6.1) = -0.91
