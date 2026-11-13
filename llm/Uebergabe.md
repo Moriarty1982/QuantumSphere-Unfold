@@ -4,18 +4,32 @@
 ## Stand vom 13.11.2026, ca. 23:59 (Claude Opus)
 - **GitHub:** **PR #106 gemergt als ca29c5b** (13.11., auf „PR 106 mergen“; Merge-Commit, Kopf 65f4e8e). Läufe 43495772155
   (QSC LaTeX PDF Build), 43495772054 (Zwei-PDF), 43495772194 (Wiki-Sync) erfolgreich. Vorher heute gemergt: #104 (32fa42c),
-  #105 (fcc87c6). Keine offenen PRs.
+  #105 (fcc87c6). **Offen: PR #107** (Zweig `research/v5-auswahlprinzip`, Rückwärtssuche Auswahlprinzip), nicht gemergt.
 - **Lokal:** Hauptordner per Fast-Forward auf ca29c5b; dieser Übergabe-Commit liegt nur lokal auf `main`. Unversioniert:
   `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf`. Rundentabelle und Kernkarte (Schritt 10 der Runden-Anleitung) gibt es
   im Repo-Klon nicht mehr; Runden stehen in `notes/research/v4_10_0_rNN/README.md` und im Wiki.
 - **Letzte Runde:** v4.10.0-r12 (Statusvermerke), Teil von PR #106; Build lokal und in CI ok (1406 Seiten, 0 Overfull).
-- **Zuletzt vergebene Hypothese:** H100 (Vorab 9c77ddd, offen); nächste frei H101; letztes Skript k222.
+- **Zuletzt vergebene Hypothese:** H102 (Vorab ee0a103, offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem
+  13.11.2026, `k224_test_h102.py m_tau sigma`); H101 widerlegt; H100 offen; nächste frei H103; letztes Skript k224.
 - **Offene Autorentscheidungen:** keine.
 - **Ausgelöste Zurückgestellte Ideen:** keine neuen (I4 durch den ν^c-Kanal berührt, am 6.11. bereits negativ eingeordnet).
 - **Nächster Schritt:** H100 auswerten, sobald eine neue NuFIT-Version erscheint:
   `python notes/research/predictions/k222_test_h100.py dm21 sig21 dm31 sig31` (Spalte mit SK, normale Ordnung,
   asymmetrische Fehler gemittelt; Frist 31.12.2027).
-  · zur Wahl: Auswahlprinzip für Koide (Treue genau 1/2) · zweite Familienstruktur mit neutralem Qubit (Profil unten) ·
+  · Auswahlprinzip (Rückwärtssuche 13.11., `op3_selection_principle_2026_11_13.*`): zwei Zahlen festzulegen, Treue 1/2 und
+    Abstand vom Qubit-Oktanten (= √m_e/⟨√m⟩ ≈ π/12 − θ_e = 0,04); offen.
+    **Herleitungsversuch:** K = (1 + cos²β)/2 für Qubit-Bahnen; in A4 ist 2/3 der einzige Wert ⇒ Koide bedingt hergeleitet
+    (Qubit-Träger, Klein-ℤ₂-Bezug, ℤ₃-Bahn = Auslesungen aus r55). Elektronmasse = A4-Bruch, Größe offen; Kandidat
+    Generationsmaske r47 geprüft: **H101 widerlegt** (Form K erhält den Rang, Sylvester); lineare r47-Form hebt das
+    Elektron, verfehlt aber Koide um 3·10⁻⁴ (nachträglich). **Andere Anhebung:** nur ein Fluss erhält Koide; nötig
+    3θ_e = 2/3 rad (ΔΦ = 0,1187 vom Oktanten); Kreis zum historischen OP3 (δ = 2/9). Native Phasen geben nur Vielfache von π/6.
+    **Fluss 2/3 rad gesucht** (`op3_flux_two_thirds_2026_11_13.*`): kein Mechanismus; Scan-Treffer ΔΦ = γ_BI/2 (0,036 %,
+    nachträglich, 0,34 Zufallstreffer erwartet) verlangt m_τ = 1777,13 MeV (+2,3σ). Möglich: als H102 gegen künftiges m_τ festschreiben.
+    **Mechanismus gesucht:** γ_BI = γ_M (native M-Zählung); γ im Companion nur in der Horizontzählung. Lesarten (γK-Holonomie,
+    U(1)-Durchstoßpunkt |m| = 1/2, topologischer Winkel) geben γ/2 als Spin-1/2-Phase, je mit unbegründeter Einheit. Nicht hergeleitet.
+    **Holonomie-Fluss-Paarung gerechnet:** γ·m ist Fläche und Phasenrate zugleich; γ/2 nur mit Einheit 8πGħ und |m|,
+    mit r10-Konvention 43,5-fach. Einheit bleibt frei.
+  · zur Wahl: zweite Familienstruktur mit neutralem Qubit (Profil unten) ·
   Fortsetzung der Ladung auf die Sedenionen anders als über e7.
 - **Aufräumen:** Zweig `research/v5-octant-weitersuche` (PR #106) und Worktree `.claude/worktrees/qam-mml-mma-math-473bc4`
   können weg.

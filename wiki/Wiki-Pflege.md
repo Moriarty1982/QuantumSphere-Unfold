@@ -331,3 +331,19 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 13.11.2026, spät: Runde v4.10.0-r12 (Statusvermerke) in Forschungslinie, Inhalt, Content-overview, Offene-Probleme und Forschungsstand; Fäden Potential und T₁₂ in Forschungsstand.
 
 13.11.2026, spät: Nachtrag Auswahlprinzip (Koide als qubitartige Treue; Mittelwert erklärt die Genauigkeit nicht) in Forschungsstand; kein OP-Abschluss.
+
+13.11.2026, spät: Rückwärtssuche Auswahlprinzip (Elektronmasse = Abstand vom Qubit-Oktanten; zwei Zahlen festzulegen) in Forschungsstand; kein OP-Abschluss.
+
+13.11.2026, spät: Herleitungsversuch (K = (1 + cos²β)/2; in A4 einziger Wert 2/3; Elektronmasse als A4-Bruch) in Forschungsstand; kein OP-Abschluss.
+
+13.11.2026, spät: H101 (Maske hebt Elektron) in Vorhersagen-und-Tests und Forschungsstand eingetragen (widerlegt, Sylvester; Nebenrechnung lineare Form); kein OP-Abschluss.
+
+13.11.2026, spät: Nachtrag andere Anhebung (nur Fluss erhält Koide; nötiger Fluss 2/3 rad; Kreis zum historischen OP3) in Forschungsstand; kein OP-Abschluss.
+
+13.11.2026, spät: Erkundung Fluss 2/3 rad (kein Mechanismus; Scan-Treffer ΔΦ = γ_BI/2, nachträglich, verlangt m_τ = 1777,13 MeV) in Forschungsstand; kein OP-Abschluss.
+
+13.11.2026, spät: Nachtrag Mechanismus-Suche für ΔΦ = γ/2 (γ_M nativ; Literatur-Lesarten mit unbegründeter Einheit) in Forschungsstand; kein OP-Abschluss.
+
+13.11.2026, spät: H102 vorab (m_τ = 1777,134 MeV) in Vorhersagen-und-Tests und Forschungsstand eingetragen.
+
+13.11.2026, spät: Nachtrag Holonomie-Fluss-Paarung (γ m als Fläche und Phase; γ/2 nur mit Einheit 8πGħ und |m|) in Forschungsstand.
