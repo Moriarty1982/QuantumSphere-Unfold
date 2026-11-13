@@ -12,7 +12,7 @@ from scipy.optimize import brentq
 K3 = np.arange(3)
 R_OBS, S_OBS = 0.030016, 0.000457          # NuFIT 6.1, IC24 mit SK, NO (H99b)
 POL = [0.51099895, 105.6583755, 1776.93]
-MZ = [2.77713e-6, 5.85042e-4, 0.99378e-2]   # r11 / k14 (Huang-Zhou 2021)
+MZ = [2.77713e-6, 5.85042e-4, 0.99378e-2]   # r11 / k14: MSbar-Yukawas bei M_Z (Antusch, Hinze, Saad, arXiv:2510.01312)
 
 
 def lepton_phase(m):
@@ -110,3 +110,31 @@ if __name__ == "__main__":
         sc = np.sqrt(2.511e-3 / (mm[2] ** 2 - mm[0] ** 2))
         print(f"     Wurzeln {np.round(np.sort(v), 4)}, Massen (Skala aus dm31) {np.round(mm * sc * 1e3, 3)} meV, "
               f"dm21 = {R * 251.1:.3f}e-5, JUNO 7.50 +- 0.12: {(R * 251.1 - 7.50) / 0.12:+.2f} sigma")
+
+
+def one_scale(m):
+    r2 = lepton_rho2(m)
+    tv = lepton_phase(m) + boundary(r2)
+    return lepton_phase(m), r2, R_of(tv, 2, r2)
+
+
+if __name__ == "__main__":
+    print("\n== Nachtrag: Skalenabhaengigkeit der Fassung 'eine Skala' ==")
+    print("(1) QED-Umrechnung Pol -> MSbar bei mu (1 Schleife): m(mu) = m_pol / [1 + a/pi (1 + 3/2 ln(mu/m_pol))]")
+    print("    Das Verhaeltnis m_i(mu)/m_j(mu) haengt nicht von mu ab, nur von ln(m_i/m_j).")
+    for a_lab, a in (("alpha(0)=1/137,036", 1 / 137.036), ("alpha(M_Z)=1/127,95", 1 / 127.95)):
+        for mu in (5.0, 91.1876, 1000.0):
+            m = [p / (1 + a / np.pi * (1 + 1.5 * np.log(mu * 1e3 / p))) for p in POL]
+            te, r2, R = one_scale(m)
+            print(f"    {a_lab:20s} mu = {mu:8.1f} GeV: theta_e = {te:.5f}, K = {(1 + 2 * r2) / 3:.6f}, "
+                  f"R = {R:.6f}, z(6.1) = {(R - R_OBS) / S_OBS:+.2f}")
+    print("    Vergleich r11-Daten bei M_Z (2 Schleifen, mit Schwellen):", end=" ")
+    te, r2, R = one_scale(MZ)
+    print(f"theta_e = {te:.5f}, K = {(1 + 2 * r2) / 3:.6f}, R = {R:.6f}")
+    print("(2) SM-Laufen der Lepton-Yukawas oberhalb M_Z (1 Schleife, nur nicht universeller Teil 3/2 y^2):")
+    y = np.array(MZ)
+    for lab, mu in (("1 TeV", 1e3), ("1e10 GeV", 1e10), ("2e16 GeV", 2e16)):
+        t = np.log(mu / 91.1876)
+        yy = y * np.exp(1.5 * y ** 2 * t / (16 * np.pi ** 2))
+        te, r2, R = one_scale(yy)
+        print(f"    {lab:9s}: theta_e = {te:.6f}, R = {R:.6f}, Aenderung gegen M_Z {R - one_scale(MZ)[2]:+.1e}")

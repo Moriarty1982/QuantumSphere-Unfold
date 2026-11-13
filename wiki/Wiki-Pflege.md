@@ -279,3 +279,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 13.11.2026, abends: Erkundung zum Verlauf der NuFIT-Werte 2012–2025 mit Grafik in Forschungsstand ergänzt (R lag 2013/14 nur wegen des damals niedrigen Δm²₃₁ beim H99-Wert); kein Test, kein OP-Abschluss.
 
 13.11.2026, abends: Erkundung der Varianten zu H99 (drei Ideen, 24-Varianten-Raster, nachträglicher Kandidat „H99 bei einer Skala M_Z“, +0,16σ) in Forschungsstand ergänzt; nicht blind, kein Test, kein OP-Abschluss.
+
+13.11.2026, spät: Nachtrag zur Skalenfrage in Forschungsstand (M_Z nicht ausgezeichnet; Wahl Polmassen oder Kopplungen; Grund und Gegengrund); kein Test, kein OP-Abschluss.

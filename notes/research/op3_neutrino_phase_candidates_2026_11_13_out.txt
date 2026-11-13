@@ -46,3 +46,18 @@ Pol: rho_e^2 = 0.499997 (K = 0.666664), Rand = 0.26180, theta_nu = 0.48403, R = 
 M_Z: rho_e^2 = 0.501743 (K = 0.667829), Rand = 0.26006, theta_nu = 0.48119, R = 0.030087; NuFIT 6.1: z = +0.16
 M_Z: rho_e^2 = 0.501743 (K = 0.667829), Rand = 0.26006, theta_nu = 0.48119, R = 0.030087; NuFIT 6.0: z = +0.36
      Wurzeln [-0.1957  0.9399  2.2558], Massen (Skala aus dm31) [ 0.377  8.7   50.111] meV, dm21 = 7.555e-5, JUNO 7.50 +- 0.12: +0.46 sigma
+
+== Nachtrag: Skalenabhaengigkeit der Fassung 'eine Skala' ==
+(1) QED-Umrechnung Pol -> MSbar bei mu (1 Schleife): m(mu) = m_pol / [1 + a/pi (1 + 3/2 ln(mu/m_pol))]
+    Das Verhaeltnis m_i(mu)/m_j(mu) haengt nicht von mu ab, nur von ln(m_i/m_j).
+    alpha(0)=1/137,036   mu =      5.0 GeV: theta_e = 0.22115, K = 0.667798, R = 0.030107, z(6.1) = +0.20
+    alpha(0)=1/137,036   mu =     91.2 GeV: theta_e = 0.22116, K = 0.667787, R = 0.030114, z(6.1) = +0.21
+    alpha(0)=1/137,036   mu =   1000.0 GeV: theta_e = 0.22117, K = 0.667778, R = 0.030120, z(6.1) = +0.23
+    alpha(M_Z)=1/127,95  mu =      5.0 GeV: theta_e = 0.22108, K = 0.667878, R = 0.030056, z(6.1) = +0.09
+    alpha(M_Z)=1/127,95  mu =     91.2 GeV: theta_e = 0.22109, K = 0.667865, R = 0.030064, z(6.1) = +0.11
+    alpha(M_Z)=1/127,95  mu =   1000.0 GeV: theta_e = 0.22110, K = 0.667855, R = 0.030071, z(6.1) = +0.12
+    Vergleich r11-Daten bei M_Z (2 Schleifen, mit Schwellen): theta_e = 0.22112, K = 0.667829, R = 0.030087
+(2) SM-Laufen der Lepton-Yukawas oberhalb M_Z (1 Schleife, nur nicht universeller Teil 3/2 y^2):
+    1 TeV    : theta_e = 0.221123, R = 0.030087, Aenderung gegen M_Z -1.6e-07
+    1e10 GeV : theta_e = 0.221121, R = 0.030086, Aenderung gegen M_Z -1.2e-06
+    2e16 GeV : theta_e = 0.221119, R = 0.030085, Aenderung gegen M_Z -2.2e-06

@@ -112,11 +112,12 @@ Die Daten verlangen eine Verschiebung von 0,2580 statt π/12 = 0,2618 (1,4 % kle
 - Raster 24 Varianten: nur die H99-Form passt; Spiegelung am Rand, c -> -c, det-Spiegelung, m ~ |s|, Seesaw m ~ s^4 scheiden mit 49σ bis >1000σ aus. Skala allein: 29 %.
 - **Kandidat (nachträglich aus Fit):** alle drei Bestandteile bei M_Z: rho_nu² = rho_e²(M_Z) (K = 0,6678), Verschiebung = eigener Bogenrand 0,26006, theta_e(M_Z) = 0,22112 ⇒ R = 0,030087, +0,16σ (NuFIT 6.1), dm21 = 7,555e-5 (+0,46σ JUNO). Erst die Kombination der drei Ideen schließt die Lücke. Offen: warum M_Z.
 - Trennung von H99 (0,030840) gegen künftige JUNO-Werte etwa 3σ.
+- **Nachtrag Skala (Autor: „Grund für M_Z suchen“):** M_Z nicht ausgezeichnet; jede Skala von 5 GeV bis 2e16 GeV gibt R = 0,03006–0,03012. Unterschied zu Pol = QED-Selbstenergie (Faktor 1 + (3α/2π) ln(m_i/m_j)). Wahl ist binär: Polmassen oder Kopplungen. Für Kopplungen: Brannen-Form entsteht in Kopplungen (Dixon-Platzkopplung, W2-Yukawas), Neutrinos ohne Photonwolke. Dagegen: Koide 2/3 exakt nur bei Polmassen (wie H1/r11 für 2/9).
 
 ## Nächster Schritt (Autorentscheidung)
 
 - PR #104 (H99b-Nachtrag) prüfen und auf „PR 104 mergen“ des Autors mergen.
-- H100 (Autorentscheidung): beide Fassungen (H99: R = 0,030840; eine Skala M_Z: R = 0,030087) vor dem nächsten JUNO-/NuFIT-Ergebnis als Vorab-Notiz mit Entscheidungskriterium festschreiben. Vorher Rückwärtssuche: nativer Grund für die Skala M_Z.
+- H100 (Autorentscheidung): beide Fassungen (H99: R = 0,030840; eine Skala M_Z: R = 0,030087) vor dem nächsten JUNO-/NuFIT-Ergebnis als Vorab-Notiz mit Entscheidungskriterium festschreiben. Skalenfrage erledigt (binäre Wahl Pol/Kopplung); Kriterium muss diese Wahl vorab festlegen.
 - Statusvermerke in einer neuen Runde: r33-Labels (Ladung), ältere Koide-Stellen (v470/17, „2/3 factor“, rem:koide-mass-discrepancy), thm:three-generations.
 
 ## Pflichten in jeder Sitzung

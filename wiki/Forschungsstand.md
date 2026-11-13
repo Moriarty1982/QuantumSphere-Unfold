@@ -1637,6 +1637,15 @@ Auslesung), (3) Skala der Leptonmassen.
   richtige Skala sein soll, ist nicht begründet. Künftige JUNO-Werte
   trennen beide Fassungen ($0{,}030840$ gegen $0{,}030087$) mit etwa
   $3\sigma$; eine blinde Prüfung braucht eine Vorab-Notiz.
+- Nachtrag Skala: $M_Z$ ist nicht ausgezeichnet. Jede Skala zwischen
+  5 GeV und $2\cdot10^{16}$ GeV gibt $R=0{,}03006$ bis $0{,}03012$. Der
+  Unterschied zu den Polmassen ist die QED-Selbstenergie, im
+  Massenverhältnis der Faktor $1+(3\alpha/2\pi)\ln(m_i/m_j)$ (für
+  $\tau/e$ etwa 2,8 %). Die Wahl lautet also „Polmassen oder
+  Kopplungen“. Für die Kopplungsseite spricht, dass die Brannen-Form in
+  den Erkundungen in Kopplungen entsteht (Platzkopplung, W2-Yukawas) und
+  Neutrinos keine Photonwolke haben; dagegen, dass Koide $2/3$ nur bei
+  Polmassen exakt gilt.
 
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),

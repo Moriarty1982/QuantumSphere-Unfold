@@ -9,8 +9,8 @@ Skript `op3_neutrino_phase_candidates_2026_11_13.py`, Ausgabe `..._out.txt`.
 ## Vorwissen geprüft
 
 - H99 (Vorab 5b23c5a, k221) mit H99b (+1,80σ gegen NuFIT 6.1); H2 (v4.8.0-r12).
-- v4.8.0-r11 (H1, `k14_test_h1.py`): laufende Leptonmassen bei M_Z (Huang–Zhou
-  2021), dort K = 0,6678 und Phase 0,2211; δ ≈ 2/9 gilt nur bei Polmassen.
+- v4.8.0-r11 (H1, `k14_test_h1.py`): laufende MS-bar-Yukawas bei M_Z (Antusch, Hinze,
+  Saad, arXiv:2510.01312), dort K = 0,6678 und Phase 0,2211; δ ≈ 2/9 gilt nur bei Polmassen.
 - `op3_gram_eigen_readout_2026_11_13.md`: s_k = 1 + 2ρ cos(θ + 2πk/3),
   K = (1 + 2ρ²)/3, det S = 1 − 3ρ² + 2ρ³ cos 3θ; Bogen |θ| ≤ π/12 bei ρ² = 1/2.
 - `op3_indefinite_form_2026_11_13.md`: bilineare Form im neutralen Sektor,
@@ -114,3 +114,58 @@ Problem verschiebt sich auf die Frage, welche Skala die richtige ist.
   Δm²₃₁, rund 0,9 %). Eine blinde Prüfung braucht eine Vorab-Notiz, bevor
   neue Werte bekannt sind.
 - OP3/OP4 bleiben offen; OP1–OP5, C5, C6/T2 unverändert.
+
+## Nachtrag: Grund für die Skala M_Z (13.11., Autor: „Grund für M_Z suchen“)
+
+Rückwärtssuche: Welche Eigenschaft muss die Skala haben, und gibt der
+Companion sie her? Rechnung im selben Skript (Abschnitt „Nachtrag“).
+
+**1. M_Z ist nicht ausgezeichnet.** Die Fassung „eine Skala“ hängt kaum von
+der Skala ab, solange sie über den Leptonmassen liegt:
+
+| Skala der laufenden Massen | R | gegen NuFIT 6.1 |
+|---|---|---|
+| Polmassen | 0,030840 | +1,80σ |
+| 5 GeV (QED, 1 Schleife) | 0,030056–0,030107 | +0,09σ bis +0,20σ |
+| M_Z (QED, 1 Schleife) | 0,030064–0,030114 | +0,11σ bis +0,21σ |
+| M_Z (r11-Daten, 2 Schleifen) | 0,030087 | +0,16σ |
+| 1 TeV (QED, 1 Schleife) | 0,030071–0,030120 | +0,12σ bis +0,23σ |
+| 1 TeV bis 2·10¹⁶ GeV (SM-Laufen ab M_Z) | Änderung ≤ 2·10⁻⁶ | – |
+
+Die Spannweite bei 1 Schleife kommt von der Wahl α(0) oder α(M_Z).
+
+**2. Woher der Unterschied kommt.** In der QED gilt bei einer Schleife
+m(μ) = m_pol/[1 + (α/π)(1 + (3/2) ln(μ/m_pol))]. Im Verhältnis zweier
+Leptonen fällt μ heraus; es bleibt der Faktor 1 + (3α/2π) ln(m_i/m_j),
+für τ/e etwa 2,8 %. Oberhalb von M_Z laufen die Verhältnisse der
+Lepton-Yukawas praktisch nicht (Anteil (3/2) y², y_τ ≈ 0,01). Die Frage ist
+also nicht „welche Skala“, sondern **„Polmassen oder Kopplungen“**: Pol-
+massen enthalten die langreichweitige Photonwolke (QED-Selbstenergie), die
+laufenden Massen bei jeder kurzreichweitigen Skala sind die Kopplungen.
+
+**3. Was der Companion dazu sagt.** Die Brannen-Form entsteht in den
+bisherigen Erkundungen in **Kopplungskonstanten**, nicht in Massen: in der
+Platzkopplung über den Verbinder aus r44.1(b) mit h als Dublett-Richtung
+(`op3_dixon_slot_coupling_2026_11_13.md`) und in W2 (r82.1: Higgs-Dublett,
+Yukawa-Kopplungen über diese Verbinder). Eine solche Struktur gehört auf
+die Seite der Kopplungen. Neutrinos sind elektrisch neutral; für sie
+fehlt die Photonwolke, ihre Verhältnisse sind auf beiden Seiten gleich.
+Ein Vergleich beider Sektoren ist deshalb nur auf der Kopplungsseite
+gleichartig.
+
+**4. Was dagegen spricht.** Koide 2/3 ist mit Polmassen exakt
+(K = 0,666661), auf der Kopplungsseite nicht (0,6678). H1 (r11) hat
+dasselbe für die Phase 2/9 gefunden. Die Kopplungs-Lesart erklärt also
+die Neutrino-Beziehung und macht zugleich die Genauigkeit von Koide bei
+Polmassen zum Zufall; die Pol-Lesart umgekehrt. Beides zugleich gelingt
+keiner Lesart.
+
+**Bewertung.** Für M_Z selbst gibt es keinen und braucht es keinen Grund;
+jede kurzreichweitige Skala liefert dasselbe. Für die Wahl der
+Kopplungsseite gibt es einen strukturellen Grund (Brannen-Form in
+Kopplungen, Neutrinos ohne Photonwolke). Er ist nicht hergeleitet, weil
+die Platzkopplung als Yukawa-Kopplung im Companion eine Lesart ist und
+weil er der exakten Pol-Koide-Beziehung widerspricht. Die Fassung hat
+damit keine freie Skala mehr, nur eine binäre Wahl. Das macht sie als
+Vorhersage schärfer: R = 0,0301 ± 0,00003 (Spannweite der Skalen) gegen
+H99 mit 0,030840.
