@@ -1917,6 +1917,22 @@ Erkundung $\eta$, ohne Datenvergleich:
   Struktur von $\mathbb H_n$ ausgezeichnet. $\psi$ normalisiert $2T$ nicht. Einschränkungen:
   nur zwei Flavours, $\psi$ ist kein Generationsschritt, $e_8$ als Ladungsachse ist eine
   Annahme. Koide ist nicht hergeleitet.
+- Rechtswirkung von $\mathbb H_n$ auf ganz $\mathbb C\otimes\mathbb S$ (14.11., Erkundung; Punkt (c) „zweite
+  Familienstruktur“): Die Rechtsmultiplikationen $R_{e_7},R_{e_8},R_{e_{15}}$ vertauschen auf dem ganzen Raum mit
+  $\mathfrak{su}(3)_c$ und mit $Q_*$; die Linksmultiplikationen $L_{e_7},L_{e_{15}}$ tun das nicht. Auf dem neutralen
+  und auf dem farbigen Teil gelten die Quaternionen-Relationen, aber mit entgegengesetzter Orientierung
+  ($R_xR_y=R_{yx}$ neutral, $R_xR_y=R_{xy}$ farbig). Die erzeugte Lie-Algebra ist deshalb
+  $\mathfrak{su}(2)_{\text{Leptonen}}\oplus\mathfrak{su}(2)_{\text{Quarks}}$, und die $R_g$ der Hurwitz-Einheiten sind
+  erst mit $\bar g$ auf dem farbigen Teil eine Darstellung von $2T$. Jede Teilchenart ($\nu$, $e^+$, $u$, $\bar d$) ist
+  ein Dublett (Casimir $3/4$): Die zwei Generationen sind ein Dublett einer nativen, farb- und ladungsneutralen
+  Familien-$\mathfrak{su}(2)$. $\psi$ wirkt darauf als Drehung von $\operatorname{Im}\mathbb H_n$ um $e_8$ um $120^\circ$.
+  Mit einer Hurwitz-Einheit als Zyklus und einem $\psi$-Eigenzustand als Bezug entsteht der Oktant in seiner ersten
+  Form ($\rho^2=1/2$, $K=2/3$, $\pi/4$). Ein Majorana-Bilinear des Dubletts ist symmetrisch und damit ein Vektor in
+  $\operatorname{Im}\mathbb H_n$ ohne Singulett; ein Dirac-Term darf familienblind sein. Einschränkungen: Eine
+  $U(2)$ je Teilchenart folgt für zwei Generationen schon aus dem Schur-Lemma, neu ist nur die Realisierung durch eine
+  native Operation. Die Generationen sind ein Dublett und keine drei Achsen; es bleiben zwei Generationen (K28), und
+  das Dublett tragen alle Teilchenarten, nicht nur der Majorana-Block. Alles erbt die Guards von CT-003. Koide ist
+  nicht hergeleitet.
 - Platzhalter-Methode an der Einheit bei $\gamma/2$ (14.11., Erkundung, nicht blind):
   Rückwärts verlangen die Massen $\kappa s=\Delta\Phi/\gamma_M=0{,}49982$ (1σ-Band
   $[0{,}49974;\,0{,}49990]$). Die Bargmann-Phase des Qubit-Tripels selbst ist $\Omega/2\approx\pi/4$
