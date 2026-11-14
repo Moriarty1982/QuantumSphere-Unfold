@@ -362,6 +362,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 14.11.2026: Erkundung dritte Generation als Singulett (S ⊕ O gegen O³: farbig gleich, neutral eine Ebene verschieden; e8-Ladung nicht τ-symmetrisch; Weg B hat τ-symmetrisches 2 + 1, aber nur S3 und K = 1/2) in Forschungsstand; kein OP-Abschluss.
 
+14.11.2026: Erkundung Achse auf dem τ-Dublett (monomiale Slotoperationen, A4 und slotweise Trialität geben keinen magischen Winkel; Profil mit dem jetzigen Bestand nicht erfüllbar) in Forschungsstand; kein OP-Abschluss.
+
 13.11.2026, spät: Runde v4.10.0-r12 (Statusvermerke) in Forschungslinie, Inhalt, Content-overview, Offene-Probleme und Forschungsstand; Fäden Potential und T₁₂ in Forschungsstand.
 
 13.11.2026, spät: Nachtrag Auswahlprinzip (Koide als qubitartige Treue; Mittelwert erklärt die Genauigkeit nicht) in Forschungsstand; kein OP-Abschluss.

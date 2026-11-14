@@ -8,7 +8,7 @@
   (990a3cc), #114 (44cdcd1), #113 (10d670e), #112 (ad7756f), #111 (c247ea3), #110 (8606691), #109 (963f557), #108
   (91cbb69). Am 13.11.: #104–#107.
 - **Lokal:** `main` = `github/main` = 9b9dfda (Übergabe-Commits sind gepusht). Die Erkundung „Rechtswirkung von H_n“
-  , „Majorana-Vektor auf N“ und „dritte Generation als Singulett“ (14.11., Claude Fable) liegen als Commits auf dem Zweig `claude/anthropic-skills-weitermachen-0a9117` (Worktree
+  , „Majorana-Vektor auf N“, „dritte Generation als Singulett“ und „Achse auf dem τ-Dublett“ (14.11., Claude Fable) liegen als Commits auf dem Zweig `claude/anthropic-skills-weitermachen-0a9117` (Worktree
   `zealous-fermi-f46fd7`), nicht gepusht, kein PR.
   Unversioniert: `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf` (jetzt wirklich im Hauptordner).
 - **Letzte Runde:** v4.10.0-r12 (Statusvermerke) aus PR #106.
@@ -91,8 +91,13 @@
   τ-symmetrisches 2 + 1 für alle Arten (τ = diag(ω, ω̄) auf dem Dublett der Slot-Moden), aber nur S_3: zweizählige
   Achsen bei 90°, reeller Slot-Vektor gibt K = 1/2. Komplementär: Weg A hat 2T und Bezug, aber zwei Generationen;
   Weg B drei Generationen und Zyklus, aber keinen magischen Winkel. **Benannte Lücke:** eine zweizählige Achse unter
-  dem magischen Winkel auf dem τ-Dublett (S_3 → 2T). Nicht geprüft: ob Spin(8)-Trialität (r37) oder das A_4 aus r55
-  sie liefert.
+  dem magischen Winkel auf dem τ-Dublett (S_3 → 2T).
+- **14.11., Achse auf dem τ-Dublett** (`op3_tau_doublet_axis_2026_11_14.*`, Erkundung, nicht blind): Die Lücke wird
+  nicht geschlossen. Monomiale Slotoperationen (τ, ρ, Vorzeichenwechsel von A_4, slotweise Trialität) geben auf dem
+  Dublett nur 0° und 90°; A_4 erhält 2 + 1 gar nicht. Das gesuchte Element überlagert alle drei Slots. Grund: 2T
+  braucht ein Dublett aus zwei Slots (Weg A), τ macht das Dublett zum Fourier-Paar (Weg B). **Mit dem jetzigen
+  Bestand ist das Profil nicht erfüllbar.** Vierte Variante mit derselben offenen Voraussetzung: hier anhalten.
+  Nicht geprüft: eine neue Struktur auf O³ (Jordan-Algebra, F_4); die Trialitätsabbildungen wurden nicht neu gerechnet.
 - **Ausgelöste Zurückgestellte Ideen:** I1, Auslöser 4 (14.11.), auf Autorentscheidung verfolgt.
 
 ### Heute abend: Ladung über e8 (`notes/research/op3_sedenion_charge_2026_11_13.*`, Erkundung, nicht blind)
@@ -124,9 +129,9 @@
       ein neutrales Qubit mit derselben Struktur hat.
     - **(c)** erledigt am 14.11.: Die Rechtswirkung von H_n ist eine Familien-su(2) vom Typ 2 (+ 1), Generationen als
       Dublett. Der Majorana-Vektor auf N ist gerechnet und nicht festgelegt. Die dritte Generation als Singulett ist
-      gegen Weg B geprüft (Quarks passen, Leptonen nicht). Folgefragen (Autorentscheidung): prüfen, ob Spin(8)-
-      Trialität (r37) oder das A_4 aus r55 auf dem τ-Dublett von O³ eine zweizählige Achse außerhalb des Äquators
-      gibt; oder die Linie ablegen, bis H100 oder H102 entschieden sind.
+      gegen Weg B geprüft (Quarks passen, Leptonen nicht). Die Achse auf dem τ-Dublett ist geprüft:
+      nicht vorhanden. Empfehlung: die Linie ablegen, bis H100 oder H102 entschieden sind; wahlweise ein
+      Statusvermerk zum Profil in einer neuen Runde (Autorentscheidung).
   - Auswahlprinzip (`op3_selection_principle_2026_11_13.*`, `op3_flux_two_thirds_2026_11_13.*`): Treue 1/2 und Fluss
     2/3 rad bleiben offen. γ/2 ist nur mit einer Konventionswahl erreichbar, die Einheit ist frei.
 - **Aufgeräumt (14.11.):** Alle in `main` gemergten Zweige sind lokal und auf GitHub gelöscht. Auf GitHub waren das

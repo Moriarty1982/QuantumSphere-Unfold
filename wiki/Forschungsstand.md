@@ -1954,6 +1954,16 @@ Erkundung $\eta$, ohne Datenvergleich:
   Slot-Vektor gibt $K=1/2$. Die Wege sind komplementär: Weg A hat $2T$ und den Bezug, aber zwei Generationen; Weg B
   hat drei Generationen und den Zyklus, aber nur $S_3$. Es fehlt eine zweizählige Achse unter dem magischen Winkel auf
   dem $\tau$-Dublett. Koide ist nicht hergeleitet.
+- Achse auf dem $\tau$-Dublett (14.11., Erkundung, nicht blind): Die Lücke wird von den vorhandenen Operationen nicht
+  geschlossen. Monomiale Slotoperationen (Permutation mal Phasen je Slot; dazu gehören $\tau$, $\rho$, die
+  Vorzeichenwechsel von $A_4$ und die slotweise Trialität) erhalten die Zerlegung $2+1$ nur als Zahl mal Permutation
+  und geben auf dem Dublett nur Drehungen um die $\tau$-Achse oder um Achsen senkrecht dazu (10 368 Elemente
+  durchgezählt, 72 erhalten $2+1$, der magische Winkel kommt nicht vor). $A_4$ aus r55 erhält $2+1$ gar nicht; die drei
+  Slots sind dort der irreduzible Vektor. Das gesuchte Element überlagert alle drei Slots und ist nicht monomial.
+  Grund: Die Quaternionengruppe braucht ein Dublett aus zwei Slots (Weg A, dort sind $R_{e_7},R_{e_8},R_{e_{15}}$
+  monomial und die Hurwitz-Einheit ihre halbzahlige Summe); der Slotzyklus macht das Dublett zum Fourier-Paar (Weg B).
+  Mit dem jetzigen Bestand ist das Profil nicht erfüllbar. Nicht geprüft ist eine neue Struktur auf $\mathbb O^3$,
+  etwa die Jordan-Algebra mit $F_4$. Koide ist nicht hergeleitet; OP3/OP4 bleiben offen.
 - Platzhalter-Methode an der Einheit bei $\gamma/2$ (14.11., Erkundung, nicht blind):
   Rückwärts verlangen die Massen $\kappa s=\Delta\Phi/\gamma_M=0{,}49982$ (1σ-Band
   $[0{,}49974;\,0{,}49990]$). Die Bargmann-Phase des Qubit-Tripels selbst ist $\Omega/2\approx\pi/4$
