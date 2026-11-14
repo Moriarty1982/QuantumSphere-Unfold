@@ -166,3 +166,24 @@ Bei der Vorwissensprüfung für H105 kamen die Folgerunden von r47 hinzu. Sie ä
   0,104, liegt außerhalb des Fitbereichs von ε_e. Einschränkung: r54 benutzt volle Brannen-Zirkulanten, nicht
   den Rang-eins-Grenzfall. Der Vergleich ist daher ein Hinweis gegen die Gleichsetzung, keine Widerlegung.
   Steht damit schon fest, ohne Test.
+
+## Nachtrag 3 (14.11.): Idee des Autors, ε mit zwei Auslesungen je nach Kopplungspartner
+
+Frage des Autors: „was ist wenn epsilon in dem grenzfall zwei auslesungen hat, je nachdem wer es braucht oder besser,
+mit wem es gerade koppelt?“ Einordnung als Erkundung, nicht blind:
+
+- **Im Bestand schon angelegt:** r47 liest den rechtshändigen Partner im Frame T. r52 unterscheidet die
+  Formen K (Partner über Zeitumkehr) und S (Partner über die Tachyon-Abbildung). Im Rang-eins-Grenzfall geben
+  K und S aber **dasselbe** ε* = 0,10397 (Nachtrag 2). Die beiden vorhandenen Partnerlesarten spalten ε also
+  nicht. Eine Spaltung müsste im Betrag liegen, nicht in der Form.
+- **Nötiger Faktor:** Zwischen der Bezugslesart (ε* = 0,10397) und der Mischungslesart (ε_e ∈ [0,44; 0,82],
+  r54) liegt ein Faktor von 4,23 bis 7,89.
+- **Vorhandenes Frame-Gesetz r85.1 (H82):** Massenterme gehen mit P = a + b ein, Ableitungsterme mit
+  K = a − b. Bei Materiegewichten ist P/K = γ = 1,8645. Ein Faktor γ gibt 0,194, γ² gibt 0,362; beide liegen
+  außerhalb. Erst γ³ = 6,48 läge innerhalb, wofür r85 kein Gesetz hat. Mit dem vorhandenen Gesetz trägt die
+  Idee also nicht. Jeder andere Faktor wäre bei dieser Bandbreite eine Auswahl im Nachhinein (vgl. r56:
+  Korpuswerte treffen solche Bereiche zufällig).
+- **Wenn die Idee verfolgt werden soll:** Ohne eine vorab feste Ausleseregel ist ein partnerabhängiges ε ein
+  Gegenterm. Er gehört ins Gegenterm-Register (ein möglicher CT-004 „ε mit zwei Auslesungen“ mit Guards), und
+  jede Folgerung erbt diese Guards. Ein Test (H105) wäre erst sinnvoll, wenn die Regel (welcher Partner, welcher
+  Faktor) aus dem Bestand festgelegt ist, bevor gerechnet wird.
