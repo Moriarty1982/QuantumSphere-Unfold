@@ -44,18 +44,17 @@
   Chern-Simons und modulare S-Matrix kommen im Companion nicht vor.
 
 ## Nächster Schritt
-- **Autorentscheidung:** ε aus r47 herleiten. Vorab H105 festschreiben (Kriterium ε = 1/12, Herleitung ohne
-  Zielwert) oder ruhen lassen.
-- **Offene Autorentscheidung:** Zweig `research/op3-action-balance-search` pushen und als PR öffnen; Merge nur auf
-  „PR NN mergen“.
-- Danach: H100 und H102 auswerten, sobald neue Daten erscheinen.
-  - `python notes/research/predictions/k222_test_h100.py dm21 sig21 dm31 sig31`
-  - `python notes/research/predictions/k224_test_h102.py m_tau sigma`
-- OP3 inhaltlich erst wieder mit einer neuen Struktur aufnehmen, nicht mit weiteren Gewichtsfits. Kandidaten:
-  ein Gitter oder eine Kette über den Slots mit Kritikalitätsprinzip, eine native nicht monomiale Slotoperation
-  oder F₄ bzw. die Jordan-Algebra auf O³ (nicht gerechnet).
-- Wahlweise ein Statusvermerk in einer neuen Runde v4.10.0-r14 zum Profil der fehlenden Struktur
-  (Autorentscheidung).
+- **Stand 15.11.:** Zweig `research/op3-action-balance-search`, zehn lokale Commits, nicht gepusht, kein PR.
+  Notiz mit den Nachträgen 1–8: r47-Maske, ε-Vorwissen r50–r56, ε* = (1/3)ln((1+√3)/2), Photonengewichte,
+  Frame-Kreuzprodukte (sl(2,R)), Levi-Civita, geordnete Produkte und r33.
+- **Befund der r33-Prüfung (Nachtrag 8):** r33 ist nicht der Engpass. Die Nachträge 4–7 sind dort berichtigt.
+  Jede Frame-Ebene ist kommutativ, und die Frame-Triole ist eine Transposition (r38). Das Levi-Civita-Tripel mit
+  Hurwitz-Zyklus liegt nativ auf Im H (r33.1(a,b)), bricht dort aber Q_em.
+- **H105 nicht vergeben**; frei sind weiterhin H105 und k227.
+- **Mögliche nächste Frage (Autorentscheidung):** Gilt die Ladungssperre des Im-H-Tripels auch unter der
+  Ladungsachse e8 (CT-003)? Vorher sind Vorwissen und Suchrichtung zu prüfen.
+- **Offen:** pushen und PR (Merge nur auf „PR NN mergen“). H100 und H102 bei neuen Daten auswerten
+  (`k222_test_h100.py`, `k224_test_h102.py`).
 
 ## Profil der fehlenden Struktur
 Gesucht ist ein farb- und ladungsneutrales Qubit, auf dem der Generationszyklus als Element der Ordnung 3 wirkt,
