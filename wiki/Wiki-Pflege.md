@@ -102,6 +102,10 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 15.11.2026: Forschungsstand und Offene-Probleme um die Abbildung C⊗S → C⊗H⊗O ergänzt. Befunde: 20-dimensionale
+  farb- und ladungstreue Familie; die Familien-su(2) landet nur beim Lorentz-Spin, sektorweise mit entgegengesetzter
+  Orientierung; Generation und Spin über Farbe und Ladung nicht trennbar. Kein OP-Abschluss.
+
 - 14.11.2026: Forschungsstand und Offene-Probleme um die Rückwärtssuche nach einer Quelle für gleiche Kopplungen von Q und R ergänzt. Ergebnisse: keine native Slotsymmetrie, freie Paarwahl unter den unverzerrten Weyl-Basen, Gleichgewicht = F-Selbstdualität. Keine Quelle gefunden, die Linie ruht.
 
 - 14.11.2026: Forschungsstand und Offene-Probleme um die bedingte Bezugsauswahl durch zwei Projektorterme ergänzt. Exakte Koeffizientenbalance, S-Symmetrie-/Rangkontrolle und fehlende Präparation dokumentiert; symbolischer Verhältnisfamilien-Nachweis, keine native Massenherleitung oder Registry-Eintragung.

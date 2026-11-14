@@ -1,5 +1,23 @@
 # Forschungsstand
 
+### OP3: Abbildung C⊗S → C⊗H⊗O, die zwei Generationen sitzen am Platz des Spins (15.11.2026)
+
+Erste Abbildung zwischen dem Sedenionen-Rahmen (Ladung über e8, Platzhalter CT-003) und der Dixon-Algebra, als
+Rückwärtssuche (Erkundung, nicht blind).
+
+- **Ladungsinhalt:** C⊗S enthält {ν, e⁺, u, d̄} je zweifach.
+- **Abbildung:** Farb- und ladungstreue injektive Abbildungen gibt es, als 20-dimensionale Familie; Farbe und Ladung
+  legen sie also nicht fest. Die naive Cayley-Dickson-Einbettung erhält die Ladung nicht.
+- **Familien-su(2):** Die neutrale su(2) der Sedenionen lässt sich nur auf die Linkswirkung von H abbilden, die in r33
+  der Lorentz-Spin ist. Auf den Isospin (Rechtswirkung) und auf die r33-Slotdrehung (Konjugation) geht sie nie. Auch
+  beim Spin klappt es nur sektorweise, mit entgegengesetzter Orientierung für Leptonen und Quarks.
+
+**Lesart:** Über Farbe und Ladung verglichen, besetzen die zwei Generationen von C⊗S den Platz der zwei Spinzustände.
+Farbe und Ladung allein trennen Generation und Spin nicht, und das schwächt Weg A. H_n entspricht dem Spin-½-Dublett
+(Linkswirkung), das r33-Generationstripel dem Vektor Im H unter der Konjugation (Spin 1). Damit ist der Rollentausch
+erklärt: Ein Träger, der beides zugleich ist, müsste Spin ½ und Spin 1 auf denselben drei Achsen vereinen.
+[Rechnung und Einschränkungen](../notes/research/op3_cs_dixon_map_2026_11_15/README.md).
+
 ### OP3: Keine Quelle für gleiche Kopplungen gefunden (14.11.2026)
 
 Eine Rückwärtssuche (Erkundung, nicht blind) hat nach einer vorhandenen Wirkung gesucht, die

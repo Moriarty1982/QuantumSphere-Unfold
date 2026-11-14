@@ -1,0 +1,22 @@
+Spektrum Q8: [0.0, 0.333333, 0.333333, 0.333333, 0.666667, 0.666667, 0.666667, 1.0]
+C(x)S   (Farb-Casimir, Q_*) : {(-0.0, 0.0): 2, (-0.0, 1.0): 2, (1.3333, 0.3333): 6, (1.3333, 0.6667): 6}
+C(x)H(x)O (Farb-Casimir, Q_em): {(0.0, -1.0): 2, (0.0, -0.0): 4, (0.0, 1.0): 2, (1.3333, -0.6667): 6, (1.3333, -0.3333): 6, (1.3333, 0.3333): 6, (1.3333, 0.6667): 6}
+
+B1+B2: Loesungsraum dim 20; max. Rang gesamt 16 / 16, auf H_n 4 / 4, farbig 12 / 12
+
+B1+B2+B3, Familien-su(2) -> H von links (Lorentz-Spin): 48 Zuordnungen
+   bester Gesamtrang 12 / 16 (Zuordnung e7,e8,e15 -> ['i', 'j', 'k'], Vorzeichen (1, 1, 1))
+   bester Rang auf H_n 4 / 4, bester Rang farbig 12 / 12; Zuordnungen mit Rang 4 auf H_n: 24, mit Rang 12 farbig: 24
+
+B1+B2+B3, Familien-su(2) -> H von rechts (Isospin): 48 Zuordnungen
+   bester Gesamtrang 0 / 16 (Zuordnung e7,e8,e15 -> ['i', 'j', 'k'], Vorzeichen (1, 1, 1))
+   bester Rang auf H_n 0 / 4, bester Rang farbig 0 / 12; Zuordnungen mit Rang 4 auf H_n: 0, mit Rang 12 farbig: 0
+
+Orientierung (Linkswirkung): Zuordnungen mit vollem Rang auf H_n nach Determinante {-1: 24}, farbig {1: 24}
+Familien-su(2) -> Konjugation auf H (r33-Slotdrehung): bester Rang H_n 0 / 4, farbig 0 / 12
+Konjugation vertauscht mit Q_em: False; Linkswirkung vertauscht mit Q_em: True
+
+Kontrolle Cayley-Dickson-Einbettung a + b e8 -> 1(x)a + u(x)b:
+   u = i: Farbfehler 0.0e+00, Ladungsfehler 0.50
+   u = j: Farbfehler 0.0e+00, Ladungsfehler 0.50
+   u = k: Farbfehler 0.0e+00, Ladungsfehler 1.00

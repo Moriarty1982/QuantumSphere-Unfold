@@ -11,9 +11,19 @@
 - **Autorentscheidung 15.11. zur nächsten Version:** Erst weiterforschen, bis genug Stoff für eine neue Version
   *beider* Ausgaben (Vollausgabe und Physik-Paper) da ist; jetzt kein Ergänzungsentwurf. Seit v5.0.0 ist der Text des
   Physik-Papers unverändert (`qam/editions/v5_physics_article.tex`). Kandidaten für eine spätere Ergänzung:
-  H102 als Vorhersage mit Platzhaltern (CT-001/CT-002, sieben Guards, nicht blind) neben dem Satz „No lepton masses …
+  Generation und Spin über Farbe und Ladung nicht trennbar (15.11.); H102 als Vorhersage mit Platzhaltern (CT-001/CT-002, sieben Guards, nicht blind) neben dem Satz „No lepton masses …
   predicted“; das präzisierte Generationenhindernis (Weg A gegen Weg B, r13); die benannte Auswahlregel
   (Gleichgewichtung zweier unverzerrter Terme = F-Selbstdualität, PRs #123/#124).
+- **Neu, 15.11. (`notes/research/op3_cs_dixon_map_2026_11_15/`, Erkundung, nicht blind, Zweig
+  `research/op3-cs-dixon-map`, nicht gemergt):** Abbildung C⊗S → C⊗H⊗O.
+  - Farb- und ladungstreue Abbildungen bilden eine 20-dimensionale Familie.
+  - Die Familien-su(2) geht nur auf die Linkswirkung von H (Lorentz-Spin), sektorweise mit entgegengesetzter
+    Orientierung (Leptonen det −1, Quarks det +1). Auf Isospin und r33-Slotdrehung geht sie nie.
+  - Lesart: Die zwei Generationen von CT-003 sitzen am Platz des Spins; Farbe und Ladung trennen Generation und Spin
+    nicht. Das schwächt Weg A.
+  - Kandidat für das Physik-Paper (Abschnitt particles).
+  - Nächste mögliche Frage: Was unterscheidet eine Generation von einem Spinzustand (etwa Lorentz-Verhalten, Boosts,
+    Chiralität)?
 - **Lokal:** Hauptordner auf `main` = 087d13f (plus dieser Übergabe-Commit).
 - **Neu, 14.11. (`notes/research/op3_action_balance_search_2026_11_14/`, Erkundung, nicht blind, Rückwärtssuche,
   auf „Wirkung suchen“ des Autors):** Gesucht war eine vorhandene Wirkung, die H = −a(Q + R) mit gebunden gleichen
