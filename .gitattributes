@@ -4,3 +4,5 @@ sources/research/parts/hc-mass-identification.tex text eol=lf
 # Preserve the exact mixed-platform bytes recorded in this computation manifest.
 notes/research/op3_triality_slot_phases_2026_11_14/** -text
 notes/research/op3_triality_slot_phases_2026_11_14/run/** whitespace=cr-at-eol
+notes/research/op3_reference_energy_selection_2026_11_14/** -text
+notes/research/op3_reference_energy_selection_2026_11_14/run/** whitespace=cr-at-eol

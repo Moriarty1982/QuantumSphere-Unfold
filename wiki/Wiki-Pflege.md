@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 14.11.2026: Forschungsstand und Offene-Probleme um die bedingte Bezugsauswahl durch zwei Projektorterme ergänzt. Exakte Koeffizientenbalance, S-Symmetrie-/Rangkontrolle und fehlende Präparation dokumentiert; symbolischer Verhältnisfamilien-Nachweis, keine native Massenherleitung oder Registry-Eintragung.
+
 - 14.11.2026: Forschungsstand und Offene-Probleme um die Quellenprüfung der dynamischen Fourier-Brücke ergänzt: Erhaltung des Slotzyklus, bedingte statische Zwei-Sonden-Sperre und Unterschied zwischen Rückkehr/Übertragung. Fehlende native Matrixelemente, Typisierung und Auswahlgesetz benannt; Route bis zu diesen Eingaben ruhend, keine OP-/Guard-Schließung.
 
 - 14.11.2026: Forschungsstand und Offene-Probleme um die volle Trialitätshebung von D und projektivem S ergänzt (Ladungszeichen, zusätzliche Farbphasen, Ordnung neun). Direkte Sperre für Fourier als Symmetrie der ursprünglichen Form dokumentiert; exakte 512-Gleichungen-Kontrolle samt Laufnachweis. Keine neue Runde, Hypothese oder Änderung von Guards.

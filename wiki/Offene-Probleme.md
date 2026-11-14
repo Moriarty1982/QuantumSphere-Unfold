@@ -28,6 +28,16 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 
 ## OP3: Zulässige Hüllen-Übergänge
 
+**Bezugsauswahl, 14.11.2026:** Ein zusätzlich gesetztes Vergleichs-H
+aus zwei Rang-eins-Projektoren wählt bei gleichen Kopplungen den
+bekannten Bezug (1+sqrt(3),1,1) als eindeutiges Minimum. Das umgeht die
+Notwendigkeit eines aktiven Fourier-Pulses, leitet aber weder H noch
+die Kopplungsgleichheit her. K_orb=2/3 verlangt genau diese Gleichheit;
+die S-Symmetriekontrolle verliert die Auswahl, die Bahngrammatrix bleibt
+vom Rang zwei. Präparation, drei positive Massen und native Operatorbrücke
+bleiben offen. Keine Übernahme als neuer Registry-Platzhalter.
+[Bedingter Vergleich](../notes/research/op3_reference_energy_selection_2026_11_14/README.md).
+
 **Dynamischer Nachtrag 14.11.2026:** Der vorhandene Zwei-Sonden-Verbinder
 T_12 ist kein ausgewerteter Fourier-Generator. Tau-erhaltende Dynamik
 kann F nicht aktiv erzeugen. Beim zusätzlich angenommenen statischen,

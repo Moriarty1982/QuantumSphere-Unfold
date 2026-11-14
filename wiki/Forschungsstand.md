@@ -1,5 +1,27 @@
 # Forschungsstand
 
+### OP3: Bezugsauswahl durch zwei Energieterme (14.11.2026)
+
+Eine neue, nicht blinde Erkundung prüft eine schwächere Frage als die
+aktive Fourier-Herkunft: Kann derselbe Bezug als Energie-Minimum entstehen?
+Auf dem gewählten neutralen C³ seien e=(1,0,0), s=(1,1,1)/sqrt(3),
+Q=ee† und R=ss†. Die zusätzlich gesetzte Energie H=-(aQ+bR), a,b>0,
+hat einen eindeutigen Grundzustand. Bei a=b ist seine Richtung
+(1+sqrt(3),1,1); die bekannte S-Bahn liefert das Diagnostikum K_orb=2/3
+und die Bargmann-Phase pi/4. Fourier muss dafür nicht aktiv erzeugt werden.
+
+Die Kontrolle mit freien Gewichten zeigt jedoch exakt:
+K_orb=2/3 gilt bei positiven Gewichten genau für a=b. Das Austausch-/
+Balanceprinzip der beiden Projektoren ist eine neue, noch unbegründete
+Voraussetzung. Die Auswahl ist nicht automatisch eine Präparation.
+Das feste H bricht S; seine S-Bilder sind keine drei gleichenergetischen
+Grundzustände. S-Symmetrisierung verliert bei a=b die nichttriviale Bahn.
+Ihre Gram-Matrix hat zudem Rang zwei und eine Nullrichtung, also kein
+volles geladenes Leptonspektrum. Ein physisches Massengesetz fehlt weiter.
+Symbolisch für alle positiven Gewichtsverhältnisse und separat analytisch
+geprüft; keine neue Hypothese, Registry-Eintragung oder Guard-Schließung.
+[Herleitung, Symmetriekontrolle und Nachweis](../notes/research/op3_reference_energy_selection_2026_11_14/README.md).
+
 ### OP3: Dynamikbrücke über zwei Sonden geprüft (14.11.2026)
 
 Der vorhandene Kanal T_12 benennt eine mögliche Kopplung, legt seine

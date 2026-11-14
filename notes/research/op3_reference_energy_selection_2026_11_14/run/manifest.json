@@ -1,0 +1,126 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP3_REFERENCE_ENERGY_SELECTION_EXPLORATION",
+  "repository": {
+    "commit": "70a0f6e6e9e6d1db3a177198bed3c8d3f553c9ba",
+    "dirty": true
+  },
+  "command": [
+    "python",
+    "notes/research/op3_reference_energy_selection_2026_11_14/check.py",
+    "--result",
+    "notes/research/op3_reference_energy_selection_2026_11_14/run/results.json"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "runner-python",
+        "version": "3.12.10"
+      },
+      {
+        "name": "Python",
+        "version": "3.12.10"
+      },
+      {
+        "name": "SymPy",
+        "version": "1.14.0"
+      }
+    ],
+    "hardware": "Windows-11-10.0.26300-SP0"
+  },
+  "mathematics": {
+    "assertion_tested": "Exact symbolic ground projector for H=-(a Q+b R), a/b>0, with Q the first-slot projector and R the uniform-slot projector; S-orbit fidelity and K; balanced Bargmann invariant; symmetry-average and rank controls",
+    "coefficient_domain": "Exact real rational functions and algebraic radicals; positive ratio r=a/b; omega=(-1+i sqrt(3))/2",
+    "conventions": "Positive standard Hermitian metric on C^3, tau(x,y,z)=(y,z,x), D=diag(1,omega,omega^2), S=diag(1,omega,omega); Q=|e0><e0|, R=|s><s|; b sets the energy unit",
+    "inputs": [
+      "All real positive ratios r=a/b symbolically",
+      "Three-dimensional scalar slot space",
+      "Balanced r=1 orbit",
+      "S-symmetrized Hamiltonian"
+    ],
+    "bounds": {
+      "dimension": 3,
+      "orbit_size": 3,
+      "random_samples": 0
+    },
+    "non_claims": [
+      "Not blind: known target K=2/3 and pi/4",
+      "No native action or ground-state preparation derived",
+      "No coefficient balance derived",
+      "No physical mass-law identification",
+      "No new H test or CT registration"
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-14T20:12:00.852069+00:00",
+    "runtime_seconds": 3.625,
+    "exit_status": 0,
+    "status": "completed",
+    "timeout_seconds": 60.0,
+    "max_output_bytes": 65536,
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": 1
+    },
+    "missing_results": [],
+    "invalid_results": []
+  },
+  "execution_artifacts": [
+    "notes/research/op3_reference_energy_selection_2026_11_14/check.py"
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op3_reference_energy_selection_2026_11_14/check.py",
+      "sha256": "6fcb7ccb65621895ac3de5718768ae14ffe5ad8f837fdc03029be2b4ce06577f",
+      "sha256_after": "6fcb7ccb65621895ac3de5718768ae14ffe5ad8f837fdc03029be2b4ce06577f"
+    }
+  ],
+  "output_directory": "notes/research/op3_reference_energy_selection_2026_11_14/run",
+  "declared_results": [
+    "notes/research/op3_reference_energy_selection_2026_11_14/run/results.json"
+  ],
+  "outputs": [
+    {
+      "path": "notes/research/op3_reference_energy_selection_2026_11_14/run/stdout.txt",
+      "sha256": "e39b0a36f35e59dedcc8f3eadbd13880c8afdae83e3f68dd3f55ef29ed7ab850",
+      "kind": "log"
+    },
+    {
+      "path": "notes/research/op3_reference_energy_selection_2026_11_14/run/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "log"
+    },
+    {
+      "path": "notes/research/op3_reference_energy_selection_2026_11_14/run/results.json",
+      "sha256": "4126c19d061b564d24fcc99c92dd2022909fdde55f6c4ac786b22efc3bb9c335",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    {
+      "check": "input hashes unchanged",
+      "passed": true
+    },
+    {
+      "check": "process exited successfully within enforced limits",
+      "passed": true
+    },
+    {
+      "check": "declared result files are present and regular",
+      "passed": true
+    }
+  ],
+  "result": "Run completed; mathematical assertion requires interpretation and review.",
+  "residual_risks": [
+    "Command success does not establish the mathematical interpretation.",
+    "Only listed input artifacts are pinned; external dependencies need recorded versions.",
+    "The thread cap uses conventional environment variables; a child program may ignore them."
+  ]
+}
