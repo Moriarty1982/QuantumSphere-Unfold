@@ -3,7 +3,7 @@
 
 ## Stand vom 14.11.2026 (Claude Opus)
 - **GitHub:** **PR #109 gemergt als 963f557** (R_f-Nachtrag zu H103, Erkundung), auf „PR 109 mergen“; Läufe 43537048238
-  (Wiki-Sync) und 43537048230 (Zwei-PDF) erfolgreich. **Keine offenen PRs.**
+  (Wiki-Sync) und 43537048230 (Zwei-PDF) erfolgreich. **Offen: PR #110** (Generationen unter Q_*).
   **PR #108 gemergt als 91cbb69** (Ladung über e8, neutrales Qubit, H103 widerlegt).
   Am 13.11. gemergt: #104 (32fa42c), #105 (fcc87c6), #106 (ca29c5b), #107 (a08d918).
   Läufe 43534883771 (Wiki-Sync) und 43534883722 (Zwei-PDF) zu 91cbb69 erfolgreich.
