@@ -3,13 +3,14 @@
 
 ## Stand vom 14.11.2026 (Claude Opus, zuletzt Claude Fable)
 - **GitHub:** **PR #119 gemergt als 70da32a** (CT-003 eingetragen, Platzhalter-Bilanz), auf „PR 119 mergen“; Läufe
-  danach (Wiki-Sync, Zwei-PDF) erfolgreich. Zweig gelöscht. **Keine offenen PRs.**
+  danach (Wiki-Sync, Zwei-PDF) erfolgreich. Zweig gelöscht. **Offen: PR #120** (vier OP3-Erkundungen vom 14.11.,
+  Zweig `claude/anthropic-skills-weitermachen-0a9117`, mergebar, keine Checks am PR). Merge nur auf „PR 120 mergen“.
   Am 14.11. außerdem gemergt: #118 (60ba894, Register Phase 2), #117 (f4a62cf, CT-002/T11), #116 (a3fe755), #115
   (990a3cc), #114 (44cdcd1), #113 (10d670e), #112 (ad7756f), #111 (c247ea3), #110 (8606691), #109 (963f557), #108
   (91cbb69). Am 13.11.: #104–#107.
 - **Lokal:** `main` = `github/main` = 9b9dfda (Übergabe-Commits sind gepusht). Die Erkundung „Rechtswirkung von H_n“
-  , „Majorana-Vektor auf N“, „dritte Generation als Singulett“ und „Achse auf dem τ-Dublett“ (14.11., Claude Fable) liegen als Commits auf dem Zweig `claude/anthropic-skills-weitermachen-0a9117` (Worktree
-  `zealous-fermi-f46fd7`), nicht gepusht, kein PR.
+  , „Majorana-Vektor auf N“, „dritte Generation als Singulett“ und „Achse auf dem τ-Dublett“ (14.11., Claude Fable) liegen auf dem Zweig
+  `claude/anthropic-skills-weitermachen-0a9117` (Worktree `zealous-fermi-f46fd7`), gepusht als PR #120.
   Unversioniert: `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf` (jetzt wirklich im Hauptordner).
 - **Letzte Runde:** v4.10.0-r12 (Statusvermerke) aus PR #106.
 - **Zuletzt vergebene Hypothese:** H103 (vorab 45314b2, k225).
