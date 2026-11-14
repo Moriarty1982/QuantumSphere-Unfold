@@ -19,6 +19,13 @@
   - H101 ist widerlegt. H100 ist offen; am 13.11. war NuFIT 6.1 weiterhin die neueste Version.
   - Als Nächstes ist H104 frei, das letzte k-Skript ist k225.
 - **Offene Autorentscheidungen:** keine.
+- **Counterterm-Registry (14.11.):** Der Autor will damit Rapid Prototyping betreiben: Gegenterme setzen und später
+  durch Herleitungen ersetzen. Phase 1 läuft in einer eigenen Sitzung (Schema, Validator, Weitergabe der Guards,
+  Fixture CT-000-TEST). Ergänzt um die Herkunft der Fitdaten, eine Blindheitsprüfung, Δ als Prüfstein sowie diskrete
+  Konventionswahlen mit Versuchszahl. Phase 2 ist die Exporttabelle.
+  **Erster echter Platzhalter (Autorenwahl): CT-001, die Einheit bei ΔΦ = γ_M/2.** Der Entwurf liegt unter
+  `notes/research/counterterms/CT-001_gamma_halbe_einheit_entwurf.md`; registriert wird er nach dem Merge von Phase 1.
+  Bekannte Spannung: Die r10-Konvention gibt Δ = 42,5 · γ/2.
 - **14.11., Hurwitz-Einheiten auf N** (`op3_hurwitz_2t_neutral_qubit_2026_11_14.*`, Erkundung, nicht blind):
   Die 24 Hurwitz-Einheiten von H_n wirken von rechts treu auf N als 2T (projektiv A4). N ist also ein natives
   2T-Dublett. Die ψ-Achse e8 ist zweizählig, die vier dreizähligen Achsen liegen unter 1/√3 dazu. Der Bezug ist ein
