@@ -1,0 +1,25 @@
+Kontrolle: Spektrum Q8 auf C(x)O = [0.0, 0.3333, 0.3333, 0.3333, 0.6667, 0.6667, 0.6667, 1.0] (eine Generation: 0, 1/3 x3, 2/3 x3, 1)
+
+(1) Z3-Zerlegung der reellen Traeger: Vielfachheiten der Eigenwerte (1, omega, omegabar)
+    (S, psi)          : gesamt (2, 7, 7); farbneutral (2, 1, 1); farbig (0, 6, 6)
+    (S + O, psi + 1)  : gesamt (10, 7, 7); farbneutral (4, 1, 1); farbig (6, 6, 6)
+    (O^3, tau)        : gesamt (8, 8, 8); farbneutral (2, 2, 2); farbig (6, 6, 6)
+    (O (x) 2, tau) = O^3 ohne die tau-feste Kopie: gesamt (0, 8, 8); farbneutral (0, 2, 2); farbig (0, 6, 6)
+
+(2) Spektren je Teilchenart (Vielfachheiten von 1, omega, omegabar)
+    Kontrolle: [Q8 je Slot, tau] = 0.0e+00
+    nu   : psi auf C(x)S (1, 1, 0); psi + 1 auf S + O (2, 1, 0); tau auf C(x)O^3 (1, 1, 1)
+    e+   : psi auf C(x)S (1, 0, 1); psi + 1 auf S + O (2, 0, 1); tau auf C(x)O^3 (1, 1, 1)
+    u    : psi auf C(x)S (0, 3, 3); psi + 1 auf S + O (3, 3, 3); tau auf C(x)O^3 (3, 3, 3)
+    dbar : psi auf C(x)S (0, 3, 3); psi + 1 auf S + O (3, 3, 3); tau auf C(x)O^3 (3, 3, 3)
+
+(3) e8-artige Paarkopplung auf drei Plaetzen: A = d (1 (x) J) + c (Zyklus (x) X), gesucht A^2 = -1 mit c != 0
+    X aus L_e8 (e8-Ladung)  = [[1.0, 0.0], [0.0, -1.0]]: Rastermin |A^2 + 1| (|c| >= 0,3) = 0.3124 bei c = -0.30, d = -0.91; exakt bei |c| = 2/3, |d| = 1/3: 1.5e+00
+    X aus R_e8              = [[1.0, 0.0], [0.0, 1.0]]: Rastermin |A^2 + 1| (|c| >= 0,3) = 1.4143 bei c = -0.58, d = 0.00; exakt bei |c| = 2/3, |d| = 1/3: 2.2e+00
+    X aus L_e15             = [[0.0, 1.0], [1.0, 0.0]]: Rastermin |A^2 + 1| (|c| >= 0,3) = 0.3124 bei c = -0.30, d = -0.91; exakt bei |c| = 2/3, |d| = 1/3: 1.5e+00
+    X aus R_e15             = [[0.0, -1.0], [1.0, 0.0]]: Rastermin |A^2 + 1| (|c| >= 0,3) = 0.0284 bei c = -0.67, d = 0.33; exakt bei |c| = 2/3, |d| = 1/3: 2.8e-16
+
+(4) tau-symmetrisches 2 + 1 in O^3: Fourier-Moden der Slots
+    tau auf den Moden (sym, omega, omegabar): diag [(1+0j), (-0.5+0.866j), (-0.5-0.866j)]; auf dem Dublett det = (1-0j), Ordnung 3: True
+    Dublett-Bezug, Aequator (reeller Slot-Vektor): rho^2 = 0.250000, K = 0.500000, Phase 3.141593
+    Dublett-Bezug, magischer Winkel: rho^2 = 0.500000, K = 0.666667, Phase 0.785398

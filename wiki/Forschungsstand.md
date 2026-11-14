@@ -1941,6 +1941,19 @@ Erkundung $\eta$, ohne Datenvergleich:
   Raumdiagonale mit zwei gleichen Massen. $K$ läuft zwischen $1$ und $1/2$ und erreicht $2/3$ nur bei einem freien
   Mischwinkel. Der Majorana-Vektor ist durch die Symmetrien nicht festgelegt, drei Massen aus zwei Flavours gibt es
   nicht. Der Paarkanal $\nu^c\nu^c$ aus r82.4 ist hier nicht gerechnet. Koide ist nicht hergeleitet.
+- Dritte Generation als Singulett (14.11., Erkundung, Rückwärtssuche): Verglichen wurden $\mathbb S\oplus\mathbb O$
+  mit $\psi\oplus1$ und Weg B, $\mathbb O^3$ mit dem Slotzyklus $\tau$. Im farbigen Teil sind beide dieselbe
+  $\mathbb Z_3$-Darstellung (Vielfachheiten $(6,6,6)$ für $1,\omega,\bar\omega$); für $u$ und $\bar d$ stimmt
+  „Dublett plus Singulett“ also mit Weg B überein. Im neutralen Teil steht $(4,1,1)$ gegen $(2,2,2)$: Die Ebene
+  $\operatorname{span}(1,e_8)$, an der $Q_*$ und der $\psi$-feste Neutrinozustand hängen, ist unter $\psi$ fest und hat
+  in $\mathbb O^3$ kein Gegenstück. Die $e_8$-Ladung lässt sich nicht $\tau$-symmetrisch auf drei Plätze setzen (die
+  Paarkopplung ist eine Spiegelung, $A^2=-1$ ist dann unlösbar); $Q_*$ ist eine Paarstruktur. Weg B hat dagegen ein
+  $\tau$-symmetrisches $2+1$ für alle Teilchenarten: symmetrische Slot-Mode als Singulett, Dublett $(\omega,\bar\omega)$
+  mit $\tau=\operatorname{diag}(\omega,\bar\omega)\in SU(2)$. Dort fehlt der magische Winkel: Die native Slotgruppe
+  $S_3$ ist auf der Bloch-Kugel eine Diedergruppe mit zweizähligen Achsen senkrecht zur dreizähligen, ein reeller
+  Slot-Vektor gibt $K=1/2$. Die Wege sind komplementär: Weg A hat $2T$ und den Bezug, aber zwei Generationen; Weg B
+  hat drei Generationen und den Zyklus, aber nur $S_3$. Es fehlt eine zweizählige Achse unter dem magischen Winkel auf
+  dem $\tau$-Dublett. Koide ist nicht hergeleitet.
 - Platzhalter-Methode an der Einheit bei $\gamma/2$ (14.11., Erkundung, nicht blind):
   Rückwärts verlangen die Massen $\kappa s=\Delta\Phi/\gamma_M=0{,}49982$ (1σ-Band
   $[0{,}49974;\,0{,}49990]$). Die Bargmann-Phase des Qubit-Tripels selbst ist $\Omega/2\approx\pi/4$
