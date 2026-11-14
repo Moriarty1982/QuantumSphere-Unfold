@@ -3,7 +3,7 @@
 
 ## Stand vom 14.11.2026 (Claude Opus)
 - **GitHub:** **PR #108 gemergt als 91cbb69** (Ladung über e8, neutrales Qubit, H103 widerlegt), auf „pr 108 mergen“.
-  **Offen:** PR mit dem R_f-Nachtrag (Zweig `research/v5-rf-nachtrag`; er enthält auch die lokalen Übergabe-Commits).
+  **Offen: PR #109** mit dem R_f-Nachtrag (Zweig `research/v5-rf-nachtrag`; er enthält auch die lokalen Übergabe-Commits).
   Am 13.11. gemergt: #104 (32fa42c), #105 (fcc87c6), #106 (ca29c5b), #107 (a08d918).
   Läufe 43534883771 (Wiki-Sync) und 43534883722 (Zwei-PDF) zu 91cbb69 erfolgreich.
 - **Lokal:** Der Hauptordner steht auf `main` = 91cbb69 (vorgespult), dazu Übergabe-Commits, nur lokal. Der R_f-Nachtrag liegt im Worktree `anthropic-skills-weitermachen-08cc3e`.
@@ -18,7 +18,7 @@
   - H102 ist offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem 13.11.2026 (`k224_test_h102.py m_tau sigma`).
   - H101 ist widerlegt. H100 ist offen; am 13.11. war NuFIT 6.1 weiterhin die neueste Version.
   - Als Nächstes ist H104 frei, das letzte k-Skript ist k225.
-- **Offene Autorentscheidungen:** Merge des PR mit dem R_f-Nachtrag (Zweig `research/v5-rf-nachtrag`).
+- **Offene Autorentscheidungen:** „PR 109 mergen“ (R_f-Nachtrag).
 - **Ausgelöste Zurückgestellte Ideen:** keine. I1–I5 sind geprüft.
 
 ### Heute abend: Ladung über e8 (`notes/research/op3_sedenion_charge_2026_11_13.*`, Erkundung, nicht blind)
