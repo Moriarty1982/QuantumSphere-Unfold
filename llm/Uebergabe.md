@@ -1,13 +1,13 @@
 # Übergabe: Stand der letzten Sitzung
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.**
 
-## Stand vom 14.11.2026, abends (Claude Opus)
-- **GitHub:** `main` = 0f8fda0 (PR #123 von Codex, gemergt als 14856e3, alle Läufe grün). **Keine offenen PRs.**
-  Der gemergte Zweig `codex/op3-fourier-native-gate` ist auf GitHub gelöscht (Dauerauftrag).
-  Davor gemergt: #122 (f04c6ad), #121 (f39ca00, r13), #120, #119, #108–#118.
+## Stand vom 15.11.2026 (Claude Opus)
+- **GitHub:** **PR #124 gemergt als f5ede73** auf „PR 124 mergen“. Für den Zweig waren keine PR-Prüfungen eingerichtet.
+  Nach dem Merge war der Wiki-Sync erfolgreich, der Zwei-PDF-Lauf (43652233692) lief noch. **Keine offenen PRs.**
+  Der Zweig `research/op3-action-balance-search` ist lokal und auf GitHub gelöscht (Dauerauftrag).
+  Davor gemergt: #123 (14856e3, Codex), #122 (f04c6ad), #121 (f39ca00, r13), #120, #119, #108–#118.
   Nicht geprüft: die Darstellung von Mindmap und Formeln im GitHub-Wiki (im Browser des Modells gesperrt).
-- **Lokal:** Hauptordner auf dem Zweig `research/op3-action-balance-search` (von 0f8fda0), 15 Commits, **gepusht, PR #124 offen**. Er enthält die Erkundung unten, das Wiki (Forschungsstand, Offene-Probleme, Wiki-Pflege) und
-  diese Übergabe.
+- **Lokal:** Hauptordner auf `main` = f5ede73 (plus dieser Übergabe-Commit).
 - **Neu, 14.11. (`notes/research/op3_action_balance_search_2026_11_14/`, Erkundung, nicht blind, Rückwärtssuche,
   auf „Wirkung suchen“ des Autors):** Gesucht war eine vorhandene Wirkung, die H = −a(Q + R) mit gebunden gleichen
   Kopplungen liefert (nächster Ansatz aus der Codex-Notiz `op3_reference_energy_selection_2026_11_14`).
@@ -43,8 +43,8 @@
   Chern-Simons und modulare S-Matrix kommen im Companion nicht vor.
 
 ## Nächster Schritt
-- **Stand 15.11.:** Zweig `research/op3-action-balance-search`, gepusht, PR #124 offen.
-  Notiz mit den Nachträgen 1–8: r47-Maske, ε-Vorwissen r50–r56, ε* = (1/3)ln((1+√3)/2), Photonengewichte,
+- **Stand 15.11.:** Die Notiz mit den Nachträgen 1–9 ist über PR #124 auf main.
+  Inhalt der Nachträge: r47-Maske, ε-Vorwissen r50–r56, ε* = (1/3)ln((1+√3)/2), Photonengewichte,
   Frame-Kreuzprodukte (sl(2,R)), Levi-Civita, geordnete Produkte und r33.
 - **Befund der r33-Prüfung (Nachtrag 8):** r33 ist nicht der Engpass. Die Nachträge 4–7 sind dort berichtigt.
   Jede Frame-Ebene ist kommutativ, und die Frame-Triole ist eine Transposition (r38). Das Levi-Civita-Tripel mit
@@ -55,7 +55,7 @@
   Generationen als Dublett. In r33 sind die Generationen dagegen die drei Achsen, dort aber nicht neutral.
   Gesucht ist eine Struktur, in der beide Rollen zusammenfallen. Nicht gerechnet ist die Lage von H_n relativ zum
   r33-Faktor H; die Abbildung C⊗S ↔ C⊗H⊗O fehlt.
-- **PR #124 offen** (https://github.com/Moriarty1982/QuantumSphere-Unfold/pull/124), Zweig gepusht. Merge nur auf „PR 124 mergen“.
+- **Mögliche nächste Frage (Autorentscheidung):** Abbildung C⊗S ↔ C⊗H⊗O suchen und die Lage von H_n zum r33-Faktor H bestimmen. Vorher Vorwissen und Suchrichtung prüfen.
 - **Offen:** H100 und H102 bei neuen Daten auswerten
   (`k222_test_h100.py`, `k224_test_h102.py`).
 
