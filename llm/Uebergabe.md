@@ -4,7 +4,7 @@
 ## Stand vom 14.11.2026 (Claude Opus)
 - **GitHub:** **PR #108 gemergt als 91cbb69** (Ladung über e8, neutrales Qubit, H103 widerlegt), auf „pr 108 mergen“.
   Am 13.11. gemergt: #104 (32fa42c), #105 (fcc87c6), #106 (ca29c5b), #107 (a08d918). **Keine offenen PRs.**
-  Läufe 43534883771 (Wiki-Sync) und 43534883722 (Zwei-PDF) zu 91cbb69 waren beim Schreiben noch in Arbeit.
+  Läufe 43534883771 (Wiki-Sync) und 43534883722 (Zwei-PDF) zu 91cbb69 erfolgreich.
 - **Lokal:** Der Hauptordner steht auf `main` = 91cbb69 (vorgespult), dazu dieser Übergabe-Commit, nur lokal.
   Unversioniert: `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf`.
 - **Letzte Runde:** v4.10.0-r12 (Statusvermerke) aus PR #106.
