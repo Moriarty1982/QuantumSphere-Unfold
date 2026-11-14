@@ -1,6 +1,6 @@
 # Was im Companion steht
 
-**Stand: 5. November 2026, Forschungsfassung 4.10.0-draft mit Runden bis v4.10.0-r12.** Diese Seite gibt den Inhalt des *Quantum Sphaera Companion* wieder: Was wird angenommen, was wird definiert und gezeigt, und wie weit trägt es heute? Die Quellenangaben am Ende jedes Abschnitts dienen zum Nachprüfen; zum Verstehen sollte diese Seite allein reichen. [English version](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Content-overview) · [Startseite](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Home)
+**Stand: 5. November 2026, Forschungsfassung 4.10.0-draft mit Runden bis v4.10.0-r13.** Diese Seite gibt den Inhalt des *Quantum Sphaera Companion* wieder: Was wird angenommen, was wird definiert und gezeigt, und wie weit trägt es heute? Die Quellenangaben am Ende jedes Abschnitts dienen zum Nachprüfen; zum Verstehen sollte diese Seite allein reichen. [English version](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Content-overview) · [Startseite](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Home)
 
 ## So ist jede Aussage zu lesen
 
@@ -131,6 +131,7 @@ Der Companion leitet aus dem Frame-Versatz physikalische Größen ab. Der heutig
 - **Flächenquantum je Frame:** Die Zählregel je Frame ist gleichwertig mit einem frame-abhängigen Barbero–Immirzi-Parameter (γ_M/γ_T = γ_L); eine Begründung über Unruh-Temperatur oder Tachyon-Boden trägt nicht (v4.10.0-r10).
 - **OP5 neu gestellt (r11):** Die historische Aufgabe, einen nackten Λ-Term auszulöschen, ist als Grundlage ausgesetzt; der Quelle–Rückweg-Satz ist ein bedingtes Schema ohne native Route, Ω_M = β² eine zusätzliche Gleichsetzung (H96). Die Registeralgebra wählt q nicht aus; Register-, Fluss-, Zähl- und Dichteverhältnis haben verschiedene Nenner.
 - **Statusvermerke (r12):** Historisches OP3 ist nicht geschlossen; die Bemerkung zum Faktor 2/3 ist kein Ergebnis; die Zuschreibung der Massenabweichung an β_sym ist hinfällig; die r33-Labels sind nicht ladungsinvariant. Der Rand des Koide-Bogens ist exakt das Oktanten-Tripel dreier Spin-½-Zustände. H99 verträglich (+1,80σ), H100 vorab festgelegt.
+- **Statusvermerke (r13):** Unter der angenommenen Ladungsachse e₈ (Platzhalter CT-003) gibt es auf den Sedenionen ein farb- und ladungsneutrales Qubit N; die Hurwitz-Einheiten von H_n wirken darauf als 2T, und ein Eigenzustand einer Einheit der Ordnung 3 gibt K = 2/3 und π/4 (Konstruktion, keine Herleitung). C⊗S trägt unter dieser Ladung zwei Generationen; die Rechtswirkung von H_n macht sie zum Dublett einer Familien-su(2). Der Majorana-Vektor auf N ist nicht festgelegt. Der Trialitätsträger O³ hat drei Generationen, aber nur S₃ und K = 1/2. Das Profil der fehlenden Struktur ist mit dem jetzigen Bestand nicht erfüllbar. H103a widerlegt; H100 und H102 offen.
 - **Alte Vorhersagen P1–P6:** keine bestätigt (P1 nicht bestätigt, P2 ausgeschlossen, P3 Zufall, P4 widersprüchlich, P5 korrigiert auf ½, P6 ungetestet).
 
 *Quelle: `thm:dark-energy`, `rem:regularization-B`, `cor:falsifiable`; Runden v4.8.0-r03–r09, v4.9.0-r63–r70.*

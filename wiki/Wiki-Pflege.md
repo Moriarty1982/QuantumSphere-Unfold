@@ -364,6 +364,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 14.11.2026: Erkundung Achse auf dem τ-Dublett (monomiale Slotoperationen, A4 und slotweise Trialität geben keinen magischen Winkel; Profil mit dem jetzigen Bestand nicht erfüllbar) in Forschungsstand; kein OP-Abschluss.
 
+14.11.2026: Runde v4.10.0-r13 (Statusvermerke zum neutralen Qubit und zur zweiten Familienstruktur; Berichtigung zu r12.4(c); Vorzeichen des Paarkanals r82.4) in Forschungsstand, Forschungslinie, Offene-Probleme, Inhalt und Content-overview; Stand-Zeilen auf r13.
+
 13.11.2026, spät: Runde v4.10.0-r12 (Statusvermerke) in Forschungslinie, Inhalt, Content-overview, Offene-Probleme und Forschungsstand; Fäden Potential und T₁₂ in Forschungsstand.
 
 13.11.2026, spät: Nachtrag Auswahlprinzip (Koide als qubitartige Treue; Mittelwert erklärt die Genauigkeit nicht) in Forschungsstand; kein OP-Abschluss.

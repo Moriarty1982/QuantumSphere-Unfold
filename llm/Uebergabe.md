@@ -3,15 +3,21 @@
 
 ## Stand vom 14.11.2026 (Claude Opus, zuletzt Claude Fable)
 - **GitHub:** **PR #120 gemergt als 7d54ceb** (vier OP3-Erkundungen vom 14.11.), auf „PR 120 mergen“. Wiki-Sync und Zwei-PDF
-  danach erfolgreich. Zweig auf GitHub gelöscht. **Keine offenen PRs.** Davor #119 (70da32a, CT-003).
+  danach erfolgreich. Zweig auf GitHub gelöscht. **Offen: PR #121** (Runde v4.10.0-r13, Zweig
+  `research/v4.10-r13-neutral-qubit-status`, mergebar; CI-Lauf „QSC LaTeX PDF Build“ 43617607356 gestartet). Merge nur
+  auf „PR 121 mergen“; danach Zweig löschen und die Runde hier als gemergt eintragen. Davor #119 (70da32a, CT-003).
   Am 14.11. außerdem gemergt: #118 (60ba894, Register Phase 2), #117 (f4a62cf, CT-002/T11), #116 (a3fe755), #115
   (990a3cc), #114 (44cdcd1), #113 (10d670e), #112 (ad7756f), #111 (c247ea3), #110 (8606691), #109 (963f557), #108
   (91cbb69). Am 13.11.: #104–#107.
-- **Lokal:** `github/main` = 7d54ceb. Der Hauptordner steht noch auf 9b9dfda und braucht `git pull`. Der Worktree
-  `zealous-fermi-f46fd7` (Zweig `claude/anthropic-skills-weitermachen-0a9117`, gemergt, noch ausgecheckt) trägt
-  dazu diesen Übergabe-Commit, nur lokal.
-  Unversioniert: `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf` (jetzt wirklich im Hauptordner).
-- **Letzte Runde:** v4.10.0-r12 (Statusvermerke) aus PR #106.
+- **Lokal:** `github/main` = cc59747 (Merge 7d54ceb plus Übergabe-Commit, gepusht auf „Ja, pushen“). Der Hauptordner
+  steht noch auf 9b9dfda und braucht `git pull github main`. Der Worktree `zealous-fermi-f46fd7` steht auf
+  `research/v4.10-r13-neutral-qubit-status`.
+- **Datenstand 14.11.:** nu-fit.org antwortet mit 503, der NuFIT-Stand ist nicht geprüft (am 13.11. war 6.1 die
+  neueste Version). Die PDG-Ausgabe 2026 liegt vor dem 13.11.2026 und zählt für H102 nicht; maßgeblich ist die
+  nächste Ausgabe. H100 und H102 bleiben offen.
+- **Letzte Runde:** v4.10.0-r13 (Statusvermerke zum neutralen Qubit und zur zweiten Familienstruktur), auf dem Zweig
+  `research/v4.10-r13-neutral-qubit-status`; davor r12 aus PR #106. r13 berichtigt r12.4(c) und hält fest, dass der
+  Paarkanal r82.4 seit v4.10.0-r01.3(d) abstoßend ist. Guard-Linter 0 Treffer.
 - **Zuletzt vergebene Hypothese:** H103 (vorab 45314b2, k225).
   - **H103a ist widerlegt:** Q_S wirkt auf N als 1/2 + σ_y/3 und steht senkrecht zur ψ-Achse (K = 1/2).
   - Nachtrag 14.11. (Erkundung, auf „Als Erkundung nachtragen“, `op3_rf_reference_2026_11_14.*`): Der Suchtreffer

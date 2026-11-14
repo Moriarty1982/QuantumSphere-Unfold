@@ -1623,3 +1623,163 @@ R_{\rm glob}^{(v4100\text{-}r12,+)}=(0,1,1,1,1),
 \]
 It does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r13 Source-Only: Status Notes on the Neutral Qubit and the Second Family Structure}
+\addcontentsline{toc}{section}{v4.10.0-r13 Source-Only: Status Notes on the Neutral Qubit and the Second Family Structure}
+\label{sec:v4100-r13-neutral-qubit-family}
+% ============================================================================
+
+\paragraph{Purpose.}
+After v4.10.0-r12 the OP3 work continued on the profile of the missing structure: a colour- and charge-neutral qubit on
+which the generation cycle acts as an element of order three, with a reference state under the magic angle
+\(\arccos(1/\sqrt3)\).  This layer records what the explorations of 13 and 14 November 2026 found, corrects one sentence of
+r12.4(c), and states where the search stops.  All items except H103 are explorations without pre-registration; none is
+compared with data.  The notes are \texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r13/} and
+\texttt{notes/\allowbreak research/\allowbreak op3\_*\_2026\_11\_13.*}, \texttt{op3\_*\_2026\_11\_14.*}.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r13 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.0.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24152615}{10.5281/zenodo.24152615} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r13 status notes}
+\label{subsec:v4100-r13-status}
+
+\paragraph{Theoremlet v4.10.0-r13.1 (a neutral qubit exists under an assumed charge axis; correction to r12.4(c)).}
+r12.4(c) says that no colour- and charge-neutral native carrier was found and that the sedenion cycle \(\psi\) moves the
+charge axis.  That sentence holds for the inherited charge \(Q_S\) with axis \(e_7\).  A backward search over all charges on
+\(\mathbb C\otimes\mathbb S\) with \([Q,\psi]=0\), \([Q,\mathfrak{su}(3)_c]=0\), \(\bar Q=1-Q\) and spectrum
+\(\{0,\tfrac13,\tfrac23,1\}\) gives, up to two signs,
+\[
+Q_*=P_0\bigl(\tfrac12-\tfrac i2 L_{e_8}\bigr)P_0+\tfrac23P_3+\tfrac13P_{\bar3},
+\]
+with the charge axis \(e_8\), the only \(\psi\)-fixed imaginary direction.  Its kernel
+\(N=\operatorname{span}(1+ie_8,\;e_7-ie_{15})\) is a colour- and charge-neutral qubit, and \(\psi\) acts on it as
+\(\operatorname{diag}(1,\omega)\).  The condition \(Q|_{\OO}=Q_8\) is given up: \(Q_*\) does not leave \(\OO\) invariant.
+The axis \(e_8\) is an assumption.  It is entered in the counterterm registry as placeholder CT-003 with three registry
+guards; every statement below that uses \(Q_*\) or \(N\) inherits them.  H103a (pre-registration \texttt{45314b2}) is
+refuted: the inherited charge \(Q_S\) acts on \(N\) as \(\tfrac12+\tfrac13\sigma_y\), perpendicular to the \(\psi\) axis, and fixes
+no reference under the magic angle.
+
+\paragraph{Theoremlet v4.10.0-r13.2 (Hurwitz units and the reference state; not blind).}
+\(\mathbb H_n=\operatorname{span}(1,e_7,e_8,e_{15})\) is associative, and \(N\) is a right module over it: \(iR_{e_7}\),
+\(iR_{e_{15}}\), \(iR_{e_8}\) act on \(N\) as a Pauli triple with \(e_8\) as the \(\psi\) axis.  The 24 Hurwitz units of
+\(\mathbb H_n\) act from the right faithfully as the binary tetrahedral group \(2T\) (projectively \(A_4\)).  The \(\psi\) axis is
+a twofold axis of this group, and all four threefold axes lie under \(|\cos|=1/\sqrt3\) to it.  An eigenstate of a Hurwitz
+unit of order three, for instance of \((1+e_7+e_8+e_{15})/2\), has under \(\psi\) the orbit overlap \(\rho^2=\tfrac12\), hence
+\(K=\tfrac23\), and Bargmann phase \(\pi/4\).  The target was known in advance; this is a construction and not a derivation of
+the Koide relation.  \(\psi\) does not normalise \(2T\).
+
+\paragraph{Theoremlet v4.10.0-r13.3 (generation content under \(Q_*\)).}
+Under \((Q_*,\text{colour type},\psi)\) the space \(\mathbb C\otimes\mathbb S\) carries exactly two complete generations
+(\(2\,\nu\), \(2\,e^+\), two triplets \(u\), two triplets \(\bar d\)).  The \(\psi\) sectors are not generations
+(\(\psi=1\): \(\nu,e^+\); \(\omega\): \(\nu,u,\bar d\); \(\bar\omega\): \(e^+,u,\bar d\)).  \(\psi\) commutes with \(Q_*\) and colour
+and therefore acts inside every generation as a phase; it is not a generation step.  \(N\) is the space of two neutrino
+flavours.  The third generation is absent, as in the earlier sedenion analysis (\(\mathbb S=(1,1)\oplus(1,\mathrm{sgn})\oplus(7,2)\)
+under \(G_2\times S_3\)).
+
+\paragraph{Theoremlet v4.10.0-r13.4 (the right action of \(\mathbb H_n\) is a family symmetry).}
+On all of \(\mathbb C\otimes\mathbb S\) the right multiplications \(R_{e_7}\), \(R_{e_8}\), \(R_{e_{15}}\) commute with
+\(\mathfrak{su}(3)_c\) and with \(Q_*\) (numerically below \(3\cdot10^{-14}\)); \(L_{e_7}\) and \(L_{e_{15}}\) do not commute with
+\(Q_*\).  On the neutral and on the coloured part the quaternion relations hold exactly, with opposite orientation:
+\(R_xR_y=R_{yx}\) on the neutral part, \(R_xR_y=R_{xy}\) on the coloured part.  The Lie algebra generated is therefore
+\(\mathfrak{su}(2)_{\rm leptons}\oplus\mathfrak{su}(2)_{\rm quarks}\), and the \(R_g\) of the Hurwitz units represent \(2T\) on the whole
+space only with \(\bar g\) on the coloured part.  Every species (\(\nu\), \(e^+\), \(u\), \(\bar d\)) is a doublet (Casimir \(3/4\)).
+\(\psi\) acts on this family algebra as the rotation of \(\operatorname{Im}\mathbb H_n\) about \(e_8\) by \(120^\circ\).
+Limitation: for two generations a \(U(2)\) per species that commutes with colour and charge follows from Schur's lemma;
+new is only its realisation by one native operation.  The generations form a doublet, not three axes, and the doublet is
+carried by all species, not only by the Majorana block.
+
+\paragraph{Theoremlet v4.10.0-r13.5 (the Majorana vector on \(N\) is not fixed).}
+A symmetric bilinear form on \(N\) is \(M=(m\cdot\sigma)\varepsilon\) with \(m\in\mathbb C^3\), a vector in
+\(\operatorname{Im}\mathbb H_n\otimes\mathbb C\); its two singular values are the two masses.  The native bilinear form of \(\mathbb S\)
+vanishes on \(N\).  Words of length one and two in \(L_a\), \(R_a\) (\(a=e_7,e_8,e_{15}\)) give only real directions, along
+\(e_8\) or perpendicular to it.  A real direction gives two equal masses, a null vector exactly one mass.  Invariance under
+\(\psi\) admits only \(M_{11}\) (one massive, one massless neutrino); invariance under a Hurwitz unit of order three gives the
+space diagonal with two equal masses.  With a third mass zero, \(K\) runs from \(1\) to \(\tfrac12\) and passes \(\tfrac23\) only
+at a free mixing angle; that is an adjustment and no prediction.  Two flavours do not give three masses.  The pair channel
+\(\nu^c\nu^c\) of v4.9.0-r82.4 is not evaluated here; a map between \(\mathbb C\otimes\mathbb S\) and
+\(\mathbb C\otimes\mathbb H\otimes\OO\) is missing.  By v4.10.0-r01.3(d) that channel is repulsive and forms no condensate, so it
+is not available as a source of this vector; the note of 13 November that calls it attractive
+(\texttt{op3\_\allowbreak neutral\_\allowbreak su2\_\allowbreak octant\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 13.md}, field search, item 2) used the superseded sign.
+
+\paragraph{Theoremlet v4.10.0-r13.6 (third generation: the two routes are complementary).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Compare \((\mathbb S\oplus\OO,\ \psi\oplus1)\) with the triality carrier \((\OO^3,\tau)\), \(\tau(x,y,z)=(y,z,x)\).  The
+multiplicities of the eigenvalues \((1,\omega,\bar\omega)\) agree on the coloured part, \((6,6,6)\); for \(u\) and \(\bar d\)
+``doublet plus singlet'' is the same \(\mathbb Z_3\) representation as three slots.  On the neutral part they are \((4,1,1)\)
+against \((2,2,2)\).  The difference is the plane \(\operatorname{span}(1,e_8)\), fixed by \(\psi\), which carries the charge axis and
+the \(\psi\)-fixed neutrino state and has no counterpart in \(\OO^3\).
+\item[(b)] The \(e_8\) charge cannot be made \(\tau\)-symmetric on three slots.  On the neutral part
+\(\mathbb R^2\otimes\mathbb R^3\) a charge \(\tfrac12-\tfrac i2A\) needs \(A^2=-1\); with \(A=d(1\otimes J)+c(\text{cycle}\otimes X)\) and
+the pair coupling \(X\) of \(L_{e_8}\), a reflection, the off-diagonal block of \(A^2\) is \(c^2\cdot1\neq0\).  \(Q_*\) is a pair
+structure.
+\item[(c)] With the slot charge \(Q_8\) the carrier \(\OO^3\) has a \(\tau\)-symmetric splitting \(2+1\) for all species: the
+symmetric slot mode is the singlet, and on the doublet of the modes \((\omega,\bar\omega)\) the cycle is
+\(\tau=\operatorname{diag}(\omega,\bar\omega)\in SU(2)\).  A real slot vector lies on the equator and gives \(\rho^2=\tfrac14\),
+\(K=\tfrac12\).
+\item[(d)] No operation at hand supplies a twofold axis under the magic angle on that doublet.  Monomial slot operations
+(a permutation times phases per slot; these include \(\tau\), \(\rho\), the sign changes of \(A_4\) of v4.9.0-r55 and the
+slot-wise action of \(\mathrm{Spin}(8)\) that commutes with colour) preserve \(2+1\) only as a number times a permutation; of
+\(10\,368\) elements with twelfth roots of unity \(72\) preserve it, and on the doublet they rotate about the \(\tau\) axis or
+about axes perpendicular to it.  \(A_4\) does not preserve \(2+1\) at all; under it the three slots are the irreducible
+vector.  The required element superposes all three slots.  The triality maps themselves were not recomputed.
+\end{enumerate}
+Reason for the complementarity: the quaternion group needs a doublet made of two slots (route A, where
+\(R_{e_7},R_{e_8},R_{e_{15}}\) are monomial and the Hurwitz unit is their half-integer sum), whereas the slot cycle needs
+three slots and turns the doublet into the Fourier pair (route B).  With the present inventory the profile cannot be met.
+Not examined: a new algebra structure on \(\OO^3\) in which sums of slot operations are operations.
+
+\subsection*{v4.10.0-r13 status in the three frames}
+\label{subsec:v4100-r13-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item M and T: all statements are algebraic statements about carriers of the matter-frame readout; nothing is
+transported to T.
+\item P: not evaluated.
+\end{itemize}
+
+\subsection*{v4.10.0-r13 register entries}
+\label{subsec:v4100-r13-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r13\\
+\midrule
+r12.4(c) ``no neutral native carrier'' & holds for \(Q_S\); under the assumed axis \(e_8\) the qubit \(N\) exists (r13.1)\\
+charge axis \(e_8\) & assumption, placeholder CT-003, three registry guards (r13.1)\\
+H103a & refuted (r13.1)\\
+reference under the magic angle & eigenstate of a Hurwitz unit, a construction (r13.2)\\
+\(\psi\) as generation step & no; a phase inside two generations (r13.3)\\
+family symmetry of route A & right action of \(\mathbb H_n\), doublet, leptons and quarks separately (r13.4)\\
+Majorana vector on \(N\) & not fixed; no three masses (r13.5)\\
+profile of the missing structure & not met by the present inventory (r13.6)\\
+H100 / H102 & pending / pending\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r13 ledger and guard update}
+\label{subsec:v4100-r13-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r13}=(1,1,0)
+\]
+for (status notes recorded; formulas checked in the cited notes; derivation of \(K\), third generation and native reference
+open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r13,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r13}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+OP~3 and OP~4 remain open.  The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.

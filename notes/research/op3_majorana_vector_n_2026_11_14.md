@@ -66,3 +66,8 @@ freien Mischwinkel erreicht. Das ist eine Anpassung, keine Vorhersage.
 - Die dritte Generation direkt angehen: Welche native Struktur enthält C⊗S (Dublett) und eine weitere Generation
   (Singulett) zugleich? Ohne Kandidaten ist das eine Rückwärtssuche über die Bedingungen, keine Simulation.
 - Die Linie ablegen, bis H100 oder H102 entschieden sind.
+
+## Nachtrag 14.11.2026 (bei der Runde r13)
+Der Paarkanal ν^c ν^c aus r82.4 ist seit v4.10.0-r01.3(d) abstoßend und bildet kein Kondensat. Er steht als Quelle des
+Majorana-Vektors also nicht zur Verfügung, unabhängig von der fehlenden Abbildung zwischen den Rahmen. Der zweite
+Folgeschritt aus `op3_family_su2_right_action_2026_11_14.md` („Richtung im Paarkanal ausrechnen“) entfällt damit.
