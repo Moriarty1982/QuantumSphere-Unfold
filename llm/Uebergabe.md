@@ -7,7 +7,7 @@
   Am 14.11. außerdem gemergt: #112 (ad7756f, Hurwitz/2T), #111 (c247ea3, AGENTS.md), #110 (8606691), #109 (963f557),
   #108 (91cbb69). Am 13.11.: #104–#107.
   Auf GitHub liegt außerdem `claude/zealous-fermi-f46fd7` aus der Sitzung „Counterterm-Registry Phase 1“; er ist noch
-  nicht gemergt und bleibt stehen.
+  nicht gemergt und bleibt stehen. **Offen: PR #114** (I1-String-Brücke).
 - **Lokal:** Der Hauptordner steht auf `main` = 10d670e (vorgespult), dazu dieser Übergabe-Commit, nur lokal.
   Unversioniert: `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf` (jetzt wirklich im Hauptordner).
 - **Letzte Runde:** v4.10.0-r12 (Statusvermerke) aus PR #106.
@@ -20,7 +20,7 @@
   - H102 ist offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem 13.11.2026 (`k224_test_h102.py m_tau sigma`).
   - H101 ist widerlegt. H100 ist offen; am 13.11. war NuFIT 6.1 weiterhin die neueste Version.
   - Als Nächstes ist H104 frei, das letzte k-Skript ist k225.
-- **Offene Autorentscheidungen:** keine.
+- **Offene Autorentscheidungen:** „PR 114 mergen“ (Zweig `research/i1-string-bruecke`).
 - **Counterterm-Registry (14.11.):** Der Autor will damit Rapid Prototyping betreiben: Gegenterme setzen und später
   durch Herleitungen ersetzen. Phase 1 läuft in einer eigenen Sitzung (Schema, Validator, Weitergabe der Guards,
   Fixture CT-000-TEST). Ergänzt um die Herkunft der Fitdaten, eine Blindheitsprüfung, Δ als Prüfstein sowie diskrete
@@ -43,6 +43,12 @@
   γK-Phase eines vollen euklidischen Umlaufs ist. Offen ist nur noch die Kopplung (CT-002 neu gefasst): Warum
   durchläuft der Lepton-Fluss genau einen Radianten bei Spingewicht ½? Die Daten geben κ = 0,99964 ± 0,00016 rad,
   also 2,3σ.
+  **Schritt 4, I1 verfolgt (auf „Ja, I1 verfolgen“, `op3_i1_string_bridge_2026_11_14.*`):** Ein String zur
+  Horizont-Punktierung überstreicht euklidisch einen Sektor. Bei einer Lichtquerung (Bogen = Länge, φ = 1 bzw.
+  Rapidität 1) ist die normierte Weltfläche ½, also ΔΦ = γ_M/2; von vier gelisteten Dauern passt nur diese. CT-002 heißt
+  jetzt „eine Informationsquerung“. Offen sind der Grund für genau eine Querung, das Ende im Frame M und die
+  Stringdynamik. I1 hat in `Zurueckgestellte_Ideen.md` einen Stand-Eintrag. Nächste Frage: Gibt T11 bzw. die QAM-
+  Verschiebung einen Grund für genau eine Querung?
 - **14.11., Hurwitz-Einheiten auf N** (`op3_hurwitz_2t_neutral_qubit_2026_11_14.*`, Erkundung, nicht blind):
   Die 24 Hurwitz-Einheiten von H_n wirken von rechts treu auf N als 2T (projektiv A4). N ist also ein natives
   2T-Dublett. Die ψ-Achse e8 ist zweizählig, die vier dreizähligen Achsen liegen unter 1/√3 dazu. Der Bezug ist ein
@@ -52,7 +58,7 @@
   C⊗S hat unter Q_* genau zwei vollständige Generationen. Die ψ-Sektoren sind aber keine Generationen
   (1: ν, e⁺; ω: ν, u, d̄; ω̄: e⁺, u, d̄). ψ wirkt innerhalb der Generationen als Phase und ist kein Generationsschritt.
   N ist der Raum zweier Neutrino-Flavours; der dritte fehlt (K28).
-- **Ausgelöste Zurückgestellte Ideen:** keine. I1–I5 sind geprüft.
+- **Ausgelöste Zurückgestellte Ideen:** I1, Auslöser 4 (14.11.), auf Autorentscheidung verfolgt.
 
 ### Heute abend: Ladung über e8 (`notes/research/op3_sedenion_charge_2026_11_13.*`, Erkundung, nicht blind)
 - Rückwärtssuche nach jeder Ladung Q auf C⊗S mit diesen Bedingungen: [Q, ψ] = 0, [Q, su(3)_c] = 0, Q̄ = 1 − Q,

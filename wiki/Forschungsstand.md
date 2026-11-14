@@ -1943,6 +1943,15 @@ Erkundung $\eta$, ohne Datenvergleich:
   verlangt Spingewicht ½ über genau einen Radianten (Daten: $\kappa=0{,}99964\pm0{,}00016$, also
   2,3σ). Sektorlesart und $\gamma K$-Holonomie sind dieselbe Aussage. Offen ist nur die Kopplung:
   Warum durchläuft der Lepton-Fluss einen Radianten? Eingeordnet, nicht hergeleitet.
+- Schritt 4, I1 verfolgt (14.11., Zurückgestellte Idee I1, Auslöser 4): Ein String vom
+  Lepton-Sektor zu einer Horizont-Punktierung überstreicht im euklidischen Unruh-Bild einen
+  Kreissektor, $A_{\rm ws}=\ell^2\varphi/2$. Von vier vorab gelisteten Dauern (halbe Querung, eine
+  Lichtquerung, hin und zurück, thermischer Umlauf) passt nur **eine Lichtquerung**: Bogen = Länge,
+  also $\varphi=1$ (lorentzsch Rapidität 1). Dann ist $A_{\rm ws}/\ell^2=\tfrac12$ und
+  $\Delta\Phi=\gamma_M/2$. Damit hat jeder Faktor eine Herkunft: Zählregel, Unruh-Bild und Sektor.
+  Die Lesart lautet „die Information quert die Brücke einmal“. Hergeleitet ist sie nicht: Offen sind
+  der Grund für genau eine Querung, das Ende im Frame M und die Stringdynamik. Die Daten liegen
+  2,3σ neben einer Querung (H102).
 
 **Runde v4.10.0-r12 und offene Fäden** (13.11.2026). Die Runde r12
 (Statusvermerke) hält fest: Das historische Koide-OP3 ist nicht
@@ -2023,7 +2032,7 @@ Koide-Bogens ist exakt das Oktanten-Tripel. Zu den Fäden:
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),
 > `notes/research/op3_slot_u3_gauging_2026_11_13.md` (Eichung Platzindex-U(3)),
-> `notes/research/op3_eta_form_search_2026_11_13.md` (Form η, Bargmann-Phase), `notes/research/op3_hopf_octant_2026_11_13.md` (Oktanten-Tripel im Hopf-Träger), `op3_lorentz_octant_2026_11_13.py` (Lorentz-Fassung), `op3_neutral_su2_octant_2026_11_13.md` (neutrale SU(2), Spin 1/2), `op3_sedenion_reference_2026_11_13.md` (Bezugszustand), `op3_sedenion_charge_2026_11_13.md` (Ladung über $e_8$, neutrales Qubit), `op3_rf_reference_2026_11_14.py` (Rechtsmodul, Pauli-Tripel), `op3_sedenion_generations_estar_2026_11_14.md` (Generationen unter $Q_*$), `op3_hurwitz_2t_neutral_qubit_2026_11_14.md` (2T-Dublett, nativer Bezug), `op3_koide_potential_2026_11_13.md` (Potential, T₁₂), `op3_selection_principle_2026_11_13.md` (Auswahlprinzip), `op3_flux_two_thirds_2026_11_13.md` (Fluss 2/3 rad), `v4_10_0_r12/` (Runde r12), `predictions/Vorab_Notiz_H100_Neutrino_Verhaeltnis_naechster_Fit.md`,
+> `notes/research/op3_eta_form_search_2026_11_13.md` (Form η, Bargmann-Phase), `notes/research/op3_hopf_octant_2026_11_13.md` (Oktanten-Tripel im Hopf-Träger), `op3_lorentz_octant_2026_11_13.py` (Lorentz-Fassung), `op3_neutral_su2_octant_2026_11_13.md` (neutrale SU(2), Spin 1/2), `op3_sedenion_reference_2026_11_13.md` (Bezugszustand), `op3_sedenion_charge_2026_11_13.md` (Ladung über $e_8$, neutrales Qubit), `op3_rf_reference_2026_11_14.py` (Rechtsmodul, Pauli-Tripel), `op3_sedenion_generations_estar_2026_11_14.md` (Generationen unter $Q_*$), `op3_hurwitz_2t_neutral_qubit_2026_11_14.md` (2T-Dublett, nativer Bezug), `op3_i1_string_bridge_2026_11_14.md` (I1: String-Brücke, eine Querung), `op3_koide_potential_2026_11_13.md` (Potential, T₁₂), `op3_selection_principle_2026_11_13.md` (Auswahlprinzip), `op3_flux_two_thirds_2026_11_13.md` (Fluss 2/3 rad), `v4_10_0_r12/` (Runde r12), `predictions/Vorab_Notiz_H100_Neutrino_Verhaeltnis_naechster_Fit.md`,
 > `notes/research/nufit_verlauf_2026_11_13.py` (mit Grafik und Ausgabe),
 > `notes/research/op3_indefinite_form_2026_11_13.md`,
 > `notes/research/predictions/Vorab_Notiz_H99_Neutrino_Phase_Bogenrand.md`,
