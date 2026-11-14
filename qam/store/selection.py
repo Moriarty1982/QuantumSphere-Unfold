@@ -26,7 +26,7 @@ def select_versions(path, snapshot_hash, roots):
     dependencies = {}
     for relation in tables['qstore_relations']:
         status = effective('relation', relation['relation_hash'], relation['status'])
-        if relation['relation_type'] in {'interpreted-by', 'requires'}:
+        if relation['relation_type'] in {'interpreted-by', 'requires', 'depends-on-counterterm'}:
             dependencies.setdefault(relation['source_version'], []).append((relation, status))
     ordered = []
     active = set()
@@ -143,4 +143,46 @@ def select_versions(path, snapshot_hash, roots):
                             if row['source_version'] in visited and row['target_version'] in visited],
               'findings': findings, 'related_checks': checks,
               'scope': 'Dependency inventory; publication and LaTeX readiness are not certified'}
+    registry = counterterm_states(tables, versions, objects, selected, effective)
+    if registry:
+        # Only selections that reach a counterterm carry this key, so older selection hashes stay unchanged.
+        result['counterterms'] = registry
     return {'selection_hash': digest(result), **result}
+
+
+def counterterm_states(tables, versions, objects, selected, effective):
+    """Lifecycle and open guards of every selected counterterm-scheme version, read from the snapshot only."""
+    states = []
+    for obj in selected:
+        if obj['kind'] != 'counterterm-scheme':
+            continue
+        key = obj['version_hash']
+        rows = {version: json.loads(row['payload_json']) for version, row in versions.items()
+                if row['object_id'] == f'counterterm-transition:{key}'}
+        by_previous = {}
+        for version, payload in rows.items():
+            by_previous.setdefault(payload['previous'], []).append(version)
+        chain, cursor = [], None
+        while cursor in by_previous:
+            if len(by_previous[cursor]) != 1:
+                raise ValueError(f'Conflicting counterterm lifecycle in snapshot for {key}')
+            cursor = by_previous[cursor][0]
+            chain.append({'transition': cursor, **rows[cursor]})
+        if len(chain) != len(rows):
+            raise ValueError(f'Detached counterterm transition in snapshot for {key}')
+        head = chain[-1] if chain else None
+        status = head['to'] if head else 'placeholder'
+        guards = []
+        for guard in sorted(tables['qstore_guards'], key=lambda row: row['guard_hash']):
+            if guard['subject_version'] == key:
+                guard_status = effective('guard', guard['guard_hash'], guard['status'])
+                if guard_status != 'satisfied':
+                    payload = json.loads(guard['payload_json'])
+                    guards.append({'guard_hash': guard['guard_hash'], 'status': guard_status,
+                                   'title': payload['title'], 'obligation': payload.get('obligation', '')})
+        states.append({'scheme': key, 'object_id': obj['object_id'], 'status': status,
+                       'inherits_guards': status != 'structurally_matched',
+                       'replacement': head['replacement'] if head else None,
+                       'receipt': head['receipt'] if head else None,
+                       'transitions': [item['transition'] for item in chain], 'open_guards': guards})
+    return states

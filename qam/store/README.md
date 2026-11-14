@@ -440,8 +440,8 @@ oder ohne deklarierte Abhängigkeitskante; T3 Absorption in den Kern ohne
 protokollierten Strukturabgleich; T4 absorbiertes oder fehlendes
 Orientierungsvorzeichen; T5 eine reine Kernaussage, die still von einem nicht
 abgeglichenen Gegenterm abhängt. Tests: `python -m unittest
-qam.store.test_counterterms`. Der LaTeX-Export der Registertabelle ist
-Phase 2.
+qam.store.test_counterterms`. Der LaTeX-Export der Registertabelle folgt
+unten (Phase 2).
 
 ### Rapid Prototyping: Fit-Herkunft, Blindheit und Δ als Vorhersage
 
@@ -470,3 +470,26 @@ Herleitungen ersetzt werden. Dafür gilt zusätzlich:
   exceeds-tolerance-within-fit-uncertainty oder deviates-from-fit. Nur das
   erste Urteil erlaubt structurally_matched. Andernfalls bleibt δ_i stehen,
   und Δ_i wird als Abweichung der Herleitung vom Fit berichtet.
+
+### Phase 2: Registertabelle im LaTeX-Export (2026-11-14)
+
+- `select_versions` folgt jetzt auch `depends-on-counterterm`-Kanten. Erreicht
+  eine Auswahl einen Gegenterm, trägt sie den Schlüssel `counterterms` mit
+  Lebenslaufstatus, Übergängen, Ersatzstruktur und offenen Guards jedes
+  Eintrags, gelesen nur aus dem Snapshot. Auswahlen ohne Gegenterm bleiben
+  bitgleich, ihre Hashes ändern sich nicht.
+- `render` setzt Gegenterm-Einträge nie als Kerntext. Jede Aussage, die über
+  `requires`, `interpreted-by` oder `depends-on-counterterm` einen Gegenterm
+  erreicht, bekommt einen Vermerk „Effective scope“ mit Status und geerbten
+  Guards; nach einem Strukturabgleich verweist er auf den Anhang.
+- Der Anhang „Counterterm and compensation registry“ listet jeden Eintrag mit
+  Status, Basis, Funktionsform, Parametern (Grenzen oder diskrete Optionen),
+  Gültigkeitsbereich, Fit-Herkunft samt Hinweis „nicht blind“, bekannten
+  Spannungen und offenen Guards. Bei structurally_matched nennt er die
+  Abgleichsidentität F = δ + Δ mit Ersatzstruktur und Residuenbeleg; die
+  phänomenologische Form bleibt in der Versionsgeschichte.
+- Harte Prüfung in `export_selection`: Fehlt einer abhängigen Aussage ihr
+  Vermerk oder einem Eintrag sein Anhangsabschnitt, bricht der Export ab
+  (`counterterm_export_issues`).
+- Tests: `python -m unittest qam.store.test_counterterm_export`, einschließlich
+  einer pdflatex-Übersetzung des Entwurfs, wenn pdflatex vorhanden ist.
