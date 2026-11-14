@@ -11,9 +11,9 @@
 - **Lokal:** `github/main` = f39ca00 plus Übergabe-Commit (gepusht auf „Ja, pushen“). Der Hauptordner steht noch auf 9b9dfda und braucht `git pull github main`.
   Der Worktree `zealous-fermi-f46fd7` (Zweig `research/v4.10-r13-neutral-qubit-status`, gemergt, noch
   ausgecheckt) steht auf demselben Stand.
-- **Datenstand 14.11.:** nu-fit.org antwortet mit 503, der NuFIT-Stand ist nicht geprüft (am 13.11. war 6.1 die
-  neueste Version). Die PDG-Ausgabe 2026 liegt vor dem 13.11.2026 und zählt für H102 nicht; maßgeblich ist die
-  nächste Ausgabe. H100 und H102 bleiben offen.
+- **Datenstand 14.11.:** nu-fit.org (Seite „Results“) nennt v6.1 (Daten bis November 2025) als neueste Version;
+  H100 bleibt offen. Die PDG-Ausgabe 2026 liegt vor dem 13.11.2026 und zählt für H102 nicht; maßgeblich ist die
+  nächste Ausgabe. H102 bleibt offen.
 - **Letzte Runde:** v4.10.0-r13 (Statusvermerke zum neutralen Qubit und zur zweiten Familienstruktur), aus PR #121
   (f39ca00); davor r12 aus PR #106. r13 berichtigt r12.4(c) und hält fest, dass der
   Paarkanal r82.4 seit v4.10.0-r01.3(d) abstoßend ist. Guard-Linter 0 Treffer.
