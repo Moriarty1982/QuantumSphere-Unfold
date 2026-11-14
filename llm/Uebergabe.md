@@ -2,11 +2,11 @@
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.**
 
 ## Stand vom 14.11.2026 (Claude Opus)
-- **GitHub:** **PR #111 gemergt als c247ea3** (AGENTS.md: gemergte Zweige löschen), auf „PR 111 mergen“; Lauf
-  43538928669 (Wiki-Sync) erfolgreich (kein PDF-Lauf, nur AGENTS/Wiki geändert). Zweig gelöscht. **Offen: PR #112** (Hurwitz-Einheiten auf N).
-  Am 14.11. außerdem gemergt: #110 (8606691, Generationen unter Q_*), #109 (963f557, R_f-Nachtrag) und #108
-  (91cbb69, Ladung über e8, H103 widerlegt). Am 13.11. gemergt: #104–#107.
-- **Lokal:** Der Hauptordner steht auf `main` = c247ea3 (vorgespult), dazu dieser Übergabe-Commit, nur lokal.
+- **GitHub:** **PR #112 gemergt als ad7756f** (Hurwitz-Einheiten auf N, Erkundung), auf „PR 112 mergen“; Läufe
+  43539578174 (Wiki-Sync) und 43539578134 (Zwei-PDF) erfolgreich. Zweig gelöscht. **Offen: PR #113** (CT-001-Entwurf und Schritt 1).
+  Am 14.11. außerdem gemergt: #111 (c247ea3, AGENTS.md: gemergte Zweige löschen), #110 (8606691, Generationen unter Q_*),
+  #109 (963f557, R_f-Nachtrag), #108 (91cbb69, Ladung über e8, H103 widerlegt). Am 13.11.: #104–#107.
+- **Lokal:** Der Hauptordner steht auf `main` = ad7756f (vorgespult), dazu dieser Übergabe-Commit, nur lokal.
   Unversioniert: `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf` (jetzt wirklich im Hauptordner).
 - **Letzte Runde:** v4.10.0-r12 (Statusvermerke) aus PR #106.
 - **Zuletzt vergebene Hypothese:** H103 (vorab 45314b2, k225).
@@ -18,7 +18,29 @@
   - H102 ist offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem 13.11.2026 (`k224_test_h102.py m_tau sigma`).
   - H101 ist widerlegt. H100 ist offen; am 13.11. war NuFIT 6.1 weiterhin die neueste Version.
   - Als Nächstes ist H104 frei, das letzte k-Skript ist k225.
-- **Offene Autorentscheidungen:** „PR 112 mergen“ (Zweig `research/v5-hurwitz-2t`).
+- **Offene Autorentscheidungen:** „PR 113 mergen“ (Zweig `research/ct001-methode`).
+- **Counterterm-Registry (14.11.):** Der Autor will damit Rapid Prototyping betreiben: Gegenterme setzen und später
+  durch Herleitungen ersetzen. Phase 1 läuft in einer eigenen Sitzung (Schema, Validator, Weitergabe der Guards,
+  Fixture CT-000-TEST). Ergänzt um die Herkunft der Fitdaten, eine Blindheitsprüfung, Δ als Prüfstein sowie diskrete
+  Konventionswahlen mit Versuchszahl. Phase 2 ist die Exporttabelle.
+  **Erster echter Platzhalter (Autorenwahl): CT-001, die Einheit bei ΔΦ = γ_M/2.** Der Entwurf liegt unter
+  `notes/research/counterterms/CT-001_gamma_halbe_einheit_entwurf.md`; registriert wird er nach dem Merge von Phase 1.
+  Bekannte Spannung: Die r10-Konvention gibt Δ = 42,5 · γ/2.
+  **Schritt 1 nach der Methode (14.11., `ct001_shrink_2026_11_14.*`):** Verlangt ist κs = 0,49982 (1σ-Band
+  0,49974 bis 0,49990). ΔΦ ist ein äußerer Fluss, denn das Qubit-Tripel selbst gibt Ω/2 ≈ π/4. Als minimale
+  Dirac-Phase folgt κs = 1/2 pro Steradiant. CT-001 wird `partially_constrained` (Guard: Monopol angenommen), dazu
+  kommt der neue Restplatzhalter CT-002, Raumwinkel Ω_ext = γ_M. Nächste Frage: Ist γ_M im Companion als Winkel lesbar?
+  **Schritt 2 (Hinweis des Autors: Kreisfläche zur Bogenlänge gegen eingeschlossenen Winkel,
+  `ct001_sector_reading_2026_11_14.*`):** Der Sektor A = r²θ/2 gibt A/r² = θ/2. Liest man A_j aus r10 als Sektor mit
+  Öffnungswinkel γ (r_j² = 16π a(j), unabhängig von γ), sind γ/2, das √3-fache und das 43,5-fache drei Messweisen
+  desselben Sektors. Die einheitenfreie Weise (A/r², wie Ω = A/R²) gibt γ/2 für alle j. Vorschlag: CT-001
+  `structurally_matched` unter dem Guard „Phase = normierte Sektorfläche“. CT-002 heißt jetzt: γ_M als
+  Öffnungswinkel, warum? Offen ist auch, welche Messweise wofür gilt, denn r10.1 misst in 8πGħ.
+  **Schritt 3 (`ct002_gamma_angle_2026_11_14.*`):** Der Wert von γ_M ist nativ: Die Zählregel ist in der Sektorlesart
+  eine Gleichung für den Öffnungswinkel. Die Winkelbedeutung steckt im Unruh-Bild r10.1, wo der Boltzmann-Exponent die
+  γK-Phase eines vollen euklidischen Umlaufs ist. Offen ist nur noch die Kopplung (CT-002 neu gefasst): Warum
+  durchläuft der Lepton-Fluss genau einen Radianten bei Spingewicht ½? Die Daten geben κ = 0,99964 ± 0,00016 rad,
+  also 2,3σ.
 - **14.11., Hurwitz-Einheiten auf N** (`op3_hurwitz_2t_neutral_qubit_2026_11_14.*`, Erkundung, nicht blind):
   Die 24 Hurwitz-Einheiten von H_n wirken von rechts treu auf N als 2T (projektiv A4). N ist also ein natives
   2T-Dublett. Die ψ-Achse e8 ist zweizählig, die vier dreizähligen Achsen liegen unter 1/√3 dazu. Der Bezug ist ein

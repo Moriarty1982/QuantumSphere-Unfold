@@ -1,0 +1,9 @@
+(1) Zaehlregel (alle Spins, g = 2): gamma = 0.237533 (gamma_M = 0.237533); Sektor-Gleichung fuer den Oeffnungswinkel: theta = 0.237533; gleich: True
+    -> In der Sektorlesart ist gamma_M der Oeffnungswinkel, bei dem die Punktierungssektoren r_j^2 = 16 pi a(j) die Boltzmann-Summe 1 haben (Umformung, keine neue Information).
+(2) j = 0.5: E beta = 1.292511, gamma-K-Holonomie (w = a(j), voller euklidischer Umlauf) = 1.292511, gleich: True
+(2) j = 1.0: E beta = 2.110662, gamma-K-Holonomie (w = a(j), voller euklidischer Umlauf) = 2.110662, gleich: True
+    -> Der Boltzmann-Exponent der Zaehlregel ist die gamma-K-Phase eines vollen euklidischen Umlaufs (Lesart).
+(3) Lepton-Fluss als gamma-K-Phase gamma * w * kappa:
+    w = |m| = 1/2       : verlangtes kappa = 0.99964 rad (+- 0.00016); bei kappa = 1 rad: Phase 0.118766
+    w = a(1/2) = sqrt3/2: verlangtes kappa = 0.57714 rad (+- 0.00009); bei kappa = 1 rad: Phase 0.205710
+    Kandidat kappa = 1/sqrt3 rad mit w = a(1/2): Phase 0.118766 (= gamma/2, identisch, da a(1/2) = sqrt3/2)

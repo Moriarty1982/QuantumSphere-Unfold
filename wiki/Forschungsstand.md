@@ -1917,6 +1917,32 @@ Erkundung $\eta$, ohne Datenvergleich:
   Struktur von $\mathbb H_n$ ausgezeichnet. $\psi$ normalisiert $2T$ nicht. Einschränkungen:
   nur zwei Flavours, $\psi$ ist kein Generationsschritt, $e_8$ als Ladungsachse ist eine
   Annahme. Koide ist nicht hergeleitet.
+- Platzhalter-Methode an der Einheit bei $\gamma/2$ (14.11., Erkundung, nicht blind):
+  Rückwärts verlangen die Massen $\kappa s=\Delta\Phi/\gamma_M=0{,}49982$ (1σ-Band
+  $[0{,}49974;\,0{,}49990]$). Die Bargmann-Phase des Qubit-Tripels selbst ist $\Omega/2\approx\pi/4$
+  (Abweichung $10^{-5}$), also ist $\Delta\Phi$ ein äußerer Fluss. Als Dirac-Phase eines
+  Monopolfelds mit minimalem $qg=1/2$ folgt $\kappa s=1/2$ pro Steradiant, ohne
+  Flächeneinheit. Der Platzhalter ist damit verkleinert, nicht beseitigt: Es bleiben die
+  Monopol-Annahme und der Raumwinkel $\Omega_{\rm ext}=\gamma_M$ (neuer Restplatzhalter). Die
+  2,3σ-Spannung von H102 bleibt bestehen. Die Spannung zu r10 lautet jetzt: Ist $\gamma_M$ auch
+  als Winkel lesbar?
+- Schritt 2 (14.11., Hinweis des Autors „Kreisfläche zur Bogenlänge gegen eingeschlossenen
+  Winkel“): Ein Sektor mit Öffnungswinkel $\theta$ hat $A=r^2\theta/2$, also $A/r^2=\theta/2$. Liest
+  man den Flächenbeitrag $A_j=8\pi\gamma a(j)\ell_P^2$ als Sektor mit Öffnungswinkel $\gamma$
+  (Radius $r_j^2=16\pi a(j)\ell_P^2$, unabhängig von $\gamma$), sind die drei Konventionen von
+  CT-001 ein Sektor, dreimal gemessen: relativ zum eigenen Kreis $\gamma/2$ (für alle $j$), in
+  $8\pi G\hbar$ das $\sqrt3$-fache, in $G\hbar$ (r10) das $8\pi\sqrt3=43{,}5$-fache. Die
+  einheitenfreie Messweise ist die für Phasen übliche ($\Omega=A/R^2$) und gibt $\gamma/2$. Die ½ ist
+  damit Sektorgeometrie. Offen bleibt, warum der Öffnungswinkel $\gamma_M$ ist (CT-002). Die
+  Zählregel r10.1 misst in $8\pi G\hbar$; welche Messweise wofür gilt, ist die nächste Frage.
+- Schritt 3 (14.11., Herleitung von $\gamma_M$ als Winkel gesucht): Der Wert ist nativ. Die
+  Zählregel $\sum_j 2e^{-2\pi\gamma a(j)}=1$ ist in der Sektorlesart eine Gleichung für den
+  Öffnungswinkel, mit Wurzel $\gamma_M$. Im Unruh-Bild von r10.1 ist $\oint K\,ds$ der euklidische
+  Drehwinkel; der Boltzmann-Exponent $2\pi\gamma a(j)$ ist die $\gamma K$-Phase eines vollen Umlaufs.
+  $\gamma$ ist also die $\gamma K$-Phase pro Radiant und Spingewicht. Der Lepton-Fluss $\gamma/2$
+  verlangt Spingewicht ½ über genau einen Radianten (Daten: $\kappa=0{,}99964\pm0{,}00016$, also
+  2,3σ). Sektorlesart und $\gamma K$-Holonomie sind dieselbe Aussage. Offen ist nur die Kopplung:
+  Warum durchläuft der Lepton-Fluss einen Radianten? Eingeordnet, nicht hergeleitet.
 
 **Runde v4.10.0-r12 und offene Fäden** (13.11.2026). Die Runde r12
 (Statusvermerke) hält fest: Das historische Koide-OP3 ist nicht

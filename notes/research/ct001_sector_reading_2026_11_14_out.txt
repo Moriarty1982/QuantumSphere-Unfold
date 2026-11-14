@@ -1,0 +1,20 @@
+(0) Sektor: A = r^2 theta/2, s = r theta -> A/s = r/2, A/r^2 = theta/2 (Kontrolle numerisch):
+    r = 1.0, theta = 0.237533: A/s = 0.500000 (= r/2 0.5), A/r^2 = 0.118766 (= theta/2 0.118766)
+    r = 3.7, theta = 0.237533: A/s = 1.850000 (= r/2 1.85), A/r^2 = 0.118766 (= theta/2 0.118766)
+    r = 2.0, theta = 1.0: A/s = 1.000000 (= r/2 1.0), A/r^2 = 0.500000 (= theta/2 0.500000)
+
+(1) Punktierung j als Sektor mit Oeffnungswinkel gamma_M (l_P = 1):
+    j = 0.5: r_j^2 = 43.5312 (= 16 pi a(j) = 43.5312); (i) A/r^2 = 0.118766, (ii) A/8pi = 0.205710, (iii) A = 5.1700; Verhaeltnisse (ii)/(i) = 1.7321, (iii)/(i) = 43.5312
+    j = 1.0: r_j^2 = 71.0861 (= 16 pi a(j) = 71.0861); (i) A/r^2 = 0.118766, (ii) A/8pi = 0.335922, (iii) A = 8.4427; Verhaeltnisse (ii)/(i) = 2.8284, (iii)/(i) = 71.0861
+    j = 1.5: r_j^2 = 97.3387 (= 16 pi a(j) = 97.3387); (i) A/r^2 = 0.118766, (ii) A/8pi = 0.459981, (iii) A = 11.5606; Verhaeltnisse (ii)/(i) = 3.8730, (iii)/(i) = 97.3387
+
+(2) Abgleich mit der Konventionstabelle von CT-001 (j = 1/2):
+    8piGhbar=1, |m|=1/2           : Tabelle 0.11877, Sektor-Lesart 0.11877, Abweichung 2.9e-05
+    8piGhbar=1, sqrt(j(j+1))      : Tabelle 0.20570, Sektor-Lesart 0.20571, Abweichung 4.7e-05
+    Ghbar=1, sqrt(j(j+1)) (r10)   : Tabelle 5.17000, Sektor-Lesart 5.17005, Abweichung 9.0e-06
+    Faktoren: 2 a(1/2) = sqrt3 = 1.7321 (Tabelle 1,73), 16 pi a(1/2) = 8 pi sqrt3 = 43.531 (Tabelle 43,5)
+
+(3) r10.1 (Unruh): E beta = A_j/(4 G hbar) = 2 pi gamma a(j) -> Phase pro Radiant gamma a(j) = Messweise (ii):
+    j = 0.5: 2 pi gamma a(j) = 1.292512, pro Radiant 0.205710
+
+(4) Verlangt (Massen, CT-001 Schritt 1): Delta Phi = 0.118724 (1 sigma 0.118705 .. 0.118743); Messweise (i) gibt gamma_M/2 = 0.118766
