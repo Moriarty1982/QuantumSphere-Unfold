@@ -51,8 +51,11 @@
   Jede Frame-Ebene ist kommutativ, und die Frame-Triole ist eine Transposition (r38). Das Levi-Civita-Tripel mit
   Hurwitz-Zyklus liegt nativ auf Im H (r33.1(a,b)), bricht dort aber Q_em.
 - **H105 nicht vergeben**; frei sind weiterhin H105 und k227.
-- **Mögliche nächste Frage (Autorentscheidung):** Gilt die Ladungssperre des Im-H-Tripels auch unter der
-  Ladungsachse e8 (CT-003)? Vorher sind Vorwissen und Suchrichtung zu prüfen.
+- **e8 geprüft (Nachtrag 9):** Die Frage war schon beantwortet (`op3_family_su2_right_action_2026_11_14.md`).
+  Unter e8 wirkt das Tripel R_e7, R_e8, R_e15 neutral als Levi-Civita-Tripel mit Hurwitz-Zyklus, trägt aber nur zwei
+  Generationen als Dublett. In r33 sind die Generationen dagegen die drei Achsen, dort aber nicht neutral.
+  Gesucht ist eine Struktur, in der beide Rollen zusammenfallen. Nicht gerechnet ist die Lage von H_n relativ zum
+  r33-Faktor H; die Abbildung C⊗S ↔ C⊗H⊗O fehlt.
 - **Offen:** pushen und PR (Merge nur auf „PR NN mergen“). H100 und H102 bei neuen Daten auswerten
   (`k222_test_h100.py`, `k224_test_h102.py`).
 
