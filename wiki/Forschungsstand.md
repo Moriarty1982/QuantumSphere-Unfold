@@ -19,6 +19,10 @@ Gleichgewicht heißt Selbstdualität: −J(Z + Z†) − h(X + X†) ist bei J =
 Z3-Potts-Kette wäre das der kritische Punkt. Eine solche Kette gibt es im Companion aber nicht.
 Damit ist die Bezugsauswahl die fünfte Variante mit derselben offenen Voraussetzung, und die Linie
 ruht bis zur Entscheidung über H100 oder H102.
+Nachtrag nach Durchsicht der übrigen Teilbäume: Die Mischungsrechnung r46/r47 (OP4) benutzt dieselbe Form,
+zirkulante Kopplung plus Einslot-Maske. Ihre aus der Chiralitätsabweichung hergeleitete Maske ist nur für Leptonen
+ein reiner Einslot-Projektor, W_l = diag(0, 0, −3). In r47-Form gibt sie K_orb = 2/3 bei ε = 1/12 (numerisch).
+ε ist in r47 nicht hergeleitet; das ist der nächste mögliche Anknüpfungspunkt.
 [Rückwärtssuche und Nachweis](../notes/research/op3_action_balance_search_2026_11_14/README.md).
 
 ### OP3: Bezugsauswahl durch zwei Energieterme (14.11.2026)

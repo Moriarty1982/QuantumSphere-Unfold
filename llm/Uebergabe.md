@@ -37,7 +37,15 @@
   - lokal `claude/anthropic-skills-weitermachen-08cc3e`: inhaltsgleich in #118, Löschung braucht ein Wort des Autors.
   - `git fetch --prune` meldet weiterhin „Permission denied“ für verwaiste `.git/worktrees`-Einträge.
 
+- **Nachtrag (Durchsicht der Teilbäume):** Die Mischung r46/r47 hat dieselbe Form (Zirkulante plus Einslot-Maske).
+  Die Leptonmaske W_l = diag(0, 0, −3) ist ein reiner Projektor, die Quarkmaske nicht. In r47-Form gilt K_orb = 2/3
+  bei ε = 1/12; ε ist in r47 nicht hergeleitet. Weitere Kandidaten: r07 (z ↦ iz als EM-Dualität, es fehlt das
+  Wörterbuch D, τ ↔ B, E). Δ(96) scheidet aus, weil die Gruppe monomial ist.
+  Chern-Simons und modulare S-Matrix kommen im Companion nicht vor.
+
 ## Nächster Schritt
+- **Autorentscheidung:** ε aus r47 herleiten. Vorab H105 festschreiben (Kriterium ε = 1/12, Herleitung ohne
+  Zielwert) oder ruhen lassen.
 - **Offene Autorentscheidung:** Zweig `research/op3-action-balance-search` pushen und als PR öffnen; Merge nur auf
   „PR NN mergen“.
 - Danach: H100 und H102 auswerten, sobald neue Daten erscheinen.
