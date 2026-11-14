@@ -1,0 +1,18 @@
+Basis: Q_* v1 = 0, Q_* v_w = 0, psi v1 = v1, psi v_w = omega v_w: (True, True, True, True)
+Kontrolle: c(psi) = 1.0000000000 (soll 1); Q_* auf N skalar/0 (soll skalar); Magie-Mischung rho^2-1/2 = 0.0e+00, Phase-pi/4 = -4.4e-16
+
+H103a  Q_S auf N: Kompression [[(0.5+0j), 0.333333j], [-0.333333j, (0.5+0j)]]; c = 0.0000000000; Ziel 1/sqrt3 = 0.5773502692; Treffer: False
+       Winkel zur psi-Achse 90.0000 Grad (magisch 54.7356)
+
+H103b  Liste B, 47 Operatoren:
+    c = 0.0000000000: iR_e7, iR_e15, Proj Q_S=0.000, Proj Q_S=0.333, Proj Q_S=0.667, Proj Q_S=1.000, i(C_a-C_a^T)/2, iR_Im(psi^0a), iR_Im(psi^1a), iR_Im(psi^2a), Q_S+Q_*
+    c = 0.5773502692: iR_f
+    c = 1.0000000000: iR_e8
+    c = skalar/0: iL_e1, iR_e1, iL_e2, iR_e2, iL_e3, iR_e3, iL_e4, iR_e4, iL_e5, iR_e5, iL_e6, iR_e6, iL_e7, iL_e8, iL_e9, iR_e9, iL_e10, iR_e10, iL_e11, iR_e11, iL_e12, iR_e12, iL_e13, iR_e13, iL_e14, iR_e14, iL_e15, L_e7 R_e7, eps, (C_a+C_a^T)/2, iL_Im(psi^0a), iL_Im(psi^1a), iL_Im(psi^2a), iL_f
+       Liste B3, 49 Produkte:
+    c = 0.5000000000: 27 Produkte, z. B. 1*a, 1*psi a, 1*psi^2 a, e7*a
+    c = 0.6250000000: 6 Produkte, z. B. a*psi a, a*psi^2 a, psi a*a, psi a*psi^2 a
+    c = 1.0000000000: 16 Produkte, z. B. 1*1, 1*e7, 1*e8, 1*e15
+
+Treffer in Liste B: 1 ['iR_f']
+ERGEBNIS H103a: widerlegt

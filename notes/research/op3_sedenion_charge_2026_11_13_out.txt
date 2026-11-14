@@ -1,0 +1,30 @@
+(0) g2 diagonal auf S: Derivationsfehler 4.2e-14; dim g2 = 14; Farbalgebra Stab(e7): dim 8
+    farbneutraler Unterraum von S: dim 4, getragen von Basis ['e0', 'e7', 'e8', 'e15']
+(1) Kommutant von psi und su(3)_c auf C(x)S: komplexe Dimension 10 (erwartet 6 farbneutral [gl(2) + 1 + 1] + 4 farbig)
+    Triplett-Isotypie: span(V3, psi V3, psi^2 V3) hat dim 6; Projektor vertauscht mit su(3) True, mit psi True
+
+(2) Farbneutraler Block span(1, e7, e8, e15):
+    psi-Eigenwerte dort: [-1.0, 0.0, 0.0, 1.0] (x 2pi/3)
+    Schnitt mit fruehrerem Befund: psi-Mittel von L_e7 = 1.9e-16 -> generationsgemittelte Q_S = 1/2 konstant
+    L_e8 und R_e8 vertauschen mit psi: True, True; mit su(3): True
+    reell antisymmetrische A mit [A, psi] = 0: dim 2 (K: 1<->e8, J: e7<->e15)
+    = span(K, J): True; Q = 1/2 + i(b K + a J) hat Eigenwerte 1/2 +- b, 1/2 +- a
+    Spektrum {0, 1} (Leptonen) erzwingt |a| = |b| = 1/2: genau vier Ladungen (zwei Vorzeichen)
+    L_e8 auf dem Block = K - J: True; R_e8 = K + J: True
+
+(3) Kandidaten Q_* = P0 (1/2 - (i/2) X_e8) P0 + 2/3 P_3 + 1/3 P_3bar, X = L_e8 oder R_e8:
+    X = L_e8: {'herm': True, 'psi': True, 'su3': True, 'conj': True}, im Kommutant True; Spektrum {-0.0: 2, 0.333333: 6, 0.666667: 6, 1.0: 2}; laesst O invariant False; Q_*|_O = Q8: False
+    X = R_e8: {'herm': True, 'psi': True, 'su3': True, 'conj': True}, im Kommutant True; Spektrum {-0.0: 2, 0.333333: 6, 0.666667: 6, 1.0: 2}; laesst O invariant False; Q_*|_O = Q8: False
+    epsilon (a + b e8 -> a - b e8) vertauscht mit Q_*: False; eps Q_* eps = 1 - Q_* auf dem farbneutralen Block: True; auf dem farbigen Teil vertauscht eps: True
+
+(4) Farb- und ladungsneutraler Unterraum N = ker Q_* (X = L_e8):
+    dim N = 2; in span(1,e7,e8,e15): True
+    psi auf N: Eigenwerte [(-0.5+0.866025j), (1+0j)] -> projektiv Ordnung 3: True
+    psi-fester neutraler Zustand v1 ~ {'1': (1-0j), 'e8': (-0+1j)}; psi-Eigenwert omega: v_w ~ {'e7': (1-0j), 'e15': -1j}
+
+(5) Bezugszustand in N (Bloch-Achse = psi-Achse v1/v_w; Oktant verlangt cos theta = +-1/sqrt3 = +-0.57735):
+    Projektion der frueheren Diagonale (e7+e8+e15)/sqrt3: Norm^2 0.5000, cos theta -0.3333, rho^2 = 0.3333, K = 0.5556, Phase 1.5708
+    reelle Elemente mit Koeffizienten in {-1,0,1} auf (1,e7,e8,e15), auf N projiziert: cos theta in [-1.0, -0.333333, -0.0, 0.333333, 1.0]
+    allgemein: cos theta = (a^2 + c^2 - b^2 - d^2)/(a^2+b^2+c^2+d^2) fuer x = a + b e7 + c e8 + d e15 -> rational fuer rationale Koeffizienten; 1/sqrt3 nicht erreichbar
+    Bezug mit cos theta = 1/sqrt3 (von Hand gesetzt): rho^2 = 0.5000, K = 0.6667, Bargmann-Phase 0.785398 (pi/4 = 0.785398)
+    dafuer noetiges Amplitudenverhaeltnis tan(theta/2) = 0.517638 = 2 sin(pi/12) = 0.517638

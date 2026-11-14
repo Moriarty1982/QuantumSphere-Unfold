@@ -328,6 +328,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 13.11.2026, spät: Nachtrag Ladung auf die Sedenionen fortgesetzt (keine ψ-verträgliche Fortsetzung; Drehung um e7 kein Automorphismus, e8/e15 geladen) in Forschungsstand; kein OP-Abschluss.
 
+13.11.2026, abends: Erkundung Ladung über e8 (ψ- und farbverträgliche Ladung bis auf Vorzeichen eindeutig; farb- und ladungsneutrales Qubit span(1+ie8, e7−ie15); Bezug unter dem magischen Winkel nicht nativ) in Forschungsstand; kein OP-Abschluss.
+
 13.11.2026, spät: Runde v4.10.0-r12 (Statusvermerke) in Forschungslinie, Inhalt, Content-overview, Offene-Probleme und Forschungsstand; Fäden Potential und T₁₂ in Forschungsstand.
 
 13.11.2026, spät: Nachtrag Auswahlprinzip (Koide als qubitartige Treue; Mittelwert erklärt die Genauigkeit nicht) in Forschungsstand; kein OP-Abschluss.
