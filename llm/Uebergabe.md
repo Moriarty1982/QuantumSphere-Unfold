@@ -2,16 +2,17 @@
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.**
 
 ## Stand vom 14.11.2026 (Claude Opus, zuletzt Claude Fable)
-- **GitHub:** **PR #121 gemergt als f39ca00** (Runde v4.10.0-r13), auf „pr 121 mergen“. Läufe danach erfolgreich
-  (Wiki-Sync, LaTeX-Build, Zwei-PDF). Zweig auf GitHub gelöscht. **Offen: PR #122** (Gesamtbild nach r13, Fourier-Erkundung zu OP3,
-  H104; Zweig `docs/wiki-gesamtbild-r13`). Merge nur auf „PR 122 mergen“. Davor #120 (7d54ceb, vier
-  OP3-Erkundungen) und #119 (70da32a, CT-003).
+- **GitHub:** **PR #122 gemergt als f04c6ad** (Gesamtbild nach r13, Fourier-Erkundung zu OP3, H104), auf „PR 122
+  mergen“. Läufe danach erfolgreich (Wiki-Sync, Zwei-PDF). Zweig auf GitHub gelöscht. **Keine offenen PRs.** Davor
+  #121 (f39ca00, Runde r13), #120 (7d54ceb, vier OP3-Erkundungen), #119 (70da32a, CT-003).
+  **Nicht geprüft:** die Darstellung von `Gesamtbild` im GitHub-Wiki, vor allem die Mindmap mit den längeren
+  Knoten (github.com ist im Browser des Modells gesperrt). Bitte einmal ansehen.
   Am 14.11. außerdem gemergt: #118 (60ba894, Register Phase 2), #117 (f4a62cf, CT-002/T11), #116 (a3fe755), #115
   (990a3cc), #114 (44cdcd1), #113 (10d670e), #112 (ad7756f), #111 (c247ea3), #110 (8606691), #109 (963f557), #108
   (91cbb69). Am 13.11.: #104–#107.
-- **Lokal:** `github/main` = f39ca00 plus Übergabe-Commit (gepusht auf „Ja, pushen“). Der Hauptordner steht noch auf 9b9dfda und braucht `git pull github main`.
-  Der Worktree `zealous-fermi-f46fd7` (Zweig `research/v4.10-r13-neutral-qubit-status`, gemergt, noch
-  ausgecheckt) steht auf demselben Stand.
+- **Lokal:** `github/main` = f04c6ad. Der Hauptordner steht noch auf 9b9dfda und braucht `git pull github main`.
+  Der Worktree `zealous-fermi-f46fd7` (Zweig `docs/wiki-gesamtbild-r13`, gemergt, noch ausgecheckt) trägt dazu
+  einen Übergabe-Commit, nur lokal.
 - **14.11., Fourier-Transformation der Slots** (`op3_slot_fourier_2t_2026_11_14.*`, Erkundung, nicht blind): Die Lücke
   aus r13.6 hat einen Namen. F (Fourier der drei Slots) ist die gleichgewichtete Summe der neun Operationen τᵃDᵇ; F² ist
   der Slotteil von ρ und zerlegt C³ in Dublett und Singulett. Mit der Phase S = diag(1, ω, ω) erzeugt F auf dem
@@ -21,8 +22,8 @@
   Massenmatrix unter 2T. F₄ nicht gerechnet.
 - **I1, Auslöser 3** (Rechnung berührt β_sym als γ_BI/γ_string) trifft durch H104 zu; dem Autor als möglicher Ausweg
   für OP1 genannt, nicht umgesetzt.
-- **Gesamtbild (14.11.):** `wiki/Gesamtbild.md` ist auf den Stand nach r13 gezogen, auf dem Zweig
-  `docs/wiki-gesamtbild-r13`. Im selben Zweig: H100 und H102 stehen in
+- **Gesamtbild (14.11.):** `wiki/Gesamtbild.md` ist auf den Stand nach r13 gezogen (PR #122).
+  H100 und H102 stehen in
   `wiki/Vorhersagen-und-Tests.md` jetzt auch in der Tabelle der offenen Vorhersagen.
 - **Datenstand 14.11.:** nu-fit.org (Seite „Results“) nennt v6.1 (Daten bis November 2025) als neueste Version;
   H100 bleibt offen. Die PDG-Ausgabe 2026 liegt vor dem 13.11.2026 und zählt für H102 nicht; maßgeblich ist die
