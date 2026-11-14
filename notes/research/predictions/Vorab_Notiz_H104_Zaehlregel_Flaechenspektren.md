@@ -69,3 +69,6 @@ Auch im erweiterten Regelraum S′ trifft **genau ein** Paar alle drei Fenster, 
 - Der Raum S′ ist eine Wahl. Die drei Spektren sind die in der Literatur zur Horizontzählung gebräuchlichen Formen;
   weitere (etwa mit Quantengruppen-Abschneidung) sind nicht aufgenommen.
 - Guards unverändert. OP1 bleibt in jedem Fall offen.
+
+## Status (nachgetragen am 14.11.2026)
+**Widerlegt.** Ein zweites Paar, (L, A, g = 2j + 1) mit (E, H, g = 2j + 1), trifft alle drei Fenster. Siehe `Ergebnis_H104_Zaehlregel_Flaechenspektren.md`.

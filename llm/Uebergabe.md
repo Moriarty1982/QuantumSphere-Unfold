@@ -11,6 +11,15 @@
 - **Lokal:** `github/main` = f39ca00 plus Übergabe-Commit (gepusht auf „Ja, pushen“). Der Hauptordner steht noch auf 9b9dfda und braucht `git pull github main`.
   Der Worktree `zealous-fermi-f46fd7` (Zweig `research/v4.10-r13-neutral-qubit-status`, gemergt, noch
   ausgecheckt) steht auf demselben Stand.
+- **14.11., Fourier-Transformation der Slots** (`op3_slot_fourier_2t_2026_11_14.*`, Erkundung, nicht blind): Die Lücke
+  aus r13.6 hat einen Namen. F (Fourier der drei Slots) ist die gleichgewichtete Summe der neun Operationen τᵃDᵇ; F² ist
+  der Slotteil von ρ und zerlegt C³ in Dublett und Singulett. Mit der Phase S = diag(1, ω, ω) erzeugt F auf dem
+  Dublett 2T, |cos| der Achsen = 1/√3 = ⟨e₀|F|e₀⟩; die Bahn des Fourier-festen Vektors (1 + √3, 1, 1) unter S gibt
+  K = 2/3, π/4, tan(θ/2) = 2 sin(π/12). Angenommen: F und S als Operationen. Nicht erfüllt: Ordnung 3 ist S, nicht τ;
+  alle Teilchenarten. Nächste Fragen (Autorentscheidung): native Herkunft von F; liefert die Trialität S;
+  Massenmatrix unter 2T. F₄ nicht gerechnet.
+- **I1, Auslöser 3** (Rechnung berührt β_sym als γ_BI/γ_string) trifft durch H104 zu; dem Autor als möglicher Ausweg
+  für OP1 genannt, nicht umgesetzt.
 - **Gesamtbild (14.11.):** `wiki/Gesamtbild.md` ist auf den Stand nach r13 gezogen, auf dem Zweig
   `docs/wiki-gesamtbild-r13`. Im selben Zweig: H100 und H102 stehen in
   `wiki/Vorhersagen-und-Tests.md` jetzt auch in der Tabelle der offenen Vorhersagen.
@@ -20,7 +29,10 @@
 - **Letzte Runde:** v4.10.0-r13 (Statusvermerke zum neutralen Qubit und zur zweiten Familienstruktur), aus PR #121
   (f39ca00); davor r12 aus PR #106. r13 berichtigt r12.4(c) und hält fest, dass der
   Paarkanal r82.4 seit v4.10.0-r01.3(d) abstoßend ist. Guard-Linter 0 Treffer.
-- **Zuletzt vergebene Hypothese:** H103 (vorab 45314b2, k225).
+- **Zuletzt vergebene Hypothese:** H104 (vorab c58f449, k226), **widerlegt**: Bei freiem Flächenspektrum (23 Regeln,
+  253 Paare) trifft ein zweites Zählregel-Paar alle drei Fenster (γ_L = 1,864824 gegen 1,864700). H98 bleibt in seinem
+  Regelraum bestätigt; die Sonderstellung hängt am festgehaltenen Spektrum. Ein erster Lauf mit fehlerhaftem Löser
+  meldete „bestätigt“ (offengelegt, `k226_out_lauf1_fehlerhaft.txt`). Davor H103 (vorab 45314b2, k225).
   - **H103a ist widerlegt:** Q_S wirkt auf N als 1/2 + σ_y/3 und steht senkrecht zur ψ-Achse (K = 1/2).
   - Nachtrag 14.11. (Erkundung, auf „Als Erkundung nachtragen“, `op3_rf_reference_2026_11_14.*`): Der Suchtreffer
     i R_f ist analytisch erzwungen. N ist ein Rechtsmodul über H_n; i R_e7, i R_e15, i R_e8 sind dort ein Pauli-Tripel
@@ -28,7 +40,7 @@
     maßgeblich ist und was die Diagonale auszeichnet. H104 wird dafür nicht vergeben.
   - H102 ist offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem 13.11.2026 (`k224_test_h102.py m_tau sigma`).
   - H101 ist widerlegt. H100 ist offen; am 13.11. war NuFIT 6.1 weiterhin die neueste Version.
-  - Als Nächstes ist H104 frei, das letzte k-Skript ist k225.
+  - Als Nächstes ist H105 frei, das letzte k-Skript ist k226.
 - **Offene Autorentscheidungen:** keine.
 - **Platzhalter-Bilanz (14.11., `notes/research/counterterms/Bilanz_2026_11_14.md`):** Neu eingetragen ist CT-003, die
   Ladungsachse e8 statt e7 auf den Sedenionen (placeholder, drei Guards). Daran hängen S-N (neutrales Qubit), S-2T

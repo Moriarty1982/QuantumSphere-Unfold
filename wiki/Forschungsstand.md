@@ -1964,6 +1964,23 @@ Erkundung $\eta$, ohne Datenvergleich:
   monomial und die Hurwitz-Einheit ihre halbzahlige Summe); der Slotzyklus macht das Dublett zum Fourier-Paar (Weg B).
   Mit dem jetzigen Bestand ist das Profil nicht erfüllbar. Nicht geprüft ist eine neue Struktur auf $\mathbb O^3$,
   etwa die Jordan-Algebra mit $F_4$. Koide ist nicht hergeleitet; OP3/OP4 bleiben offen.
+- Fourier-Transformation der Slots (14.11., Erkundung, **nicht blind**, Ziel bekannt): Die Lücke aus r13.6 ist auf eine
+  benennbare Operation zurückgeführt. Die diskrete Fourier-Transformation $F$ der drei Slots ist die gleichgewichtete
+  Summe der neun monomialen Operationen $\tau^aD^b$ (Zyklus $\tau$, Uhr $D=\operatorname{diag}(1,\omega,\omega^2)$), alle
+  Koeffizienten vom Betrag $1/3$. $F^2$ ist die Vertauschung zweier Slots, also der Slotteil der nativen Operation
+  $\rho$, und zerlegt den Slotraum in ein gerades Dublett und ein ungerades Singulett. Auf dem Dublett erzeugen $F$
+  und die Phase $S=\operatorname{diag}(1,\omega,\omega)$ die Gruppe $2T$; zwischen ihren Achsen ist
+  $|\cos|=1/\sqrt3$, weil $\langle e_0|F|e_0\rangle=1/\sqrt n$ mit $n=3$ Slots. Die Bahn eines $F$-Eigenzustands,
+  etwa des Fourier-festen Slot-Vektors $(1+\sqrt3,1,1)$, unter $S$ gibt $\rho^2=1/2$, $K=2/3$, $\pi/4$ und
+  $\tan(\theta/2)=2\sin(\pi/12)$. Nur für $n=3$ ist der gerade Teil ein Qubit mit einem Singulett daneben. Angenommen
+  und nicht hergeleitet sind $F$ und $S$ als Operationen. Nicht erfüllt: Das Element der Ordnung 3 ist die Phase $S$,
+  nicht der Slotzyklus (der die Gruppe nur über die Heisenberg-Gruppe normalisiert); das Dublett tragen alle
+  Teilchenarten. $F_4$ und die Jordan-Algebra wurden nicht gerechnet. Koide ist nicht hergeleitet.
+- H104 (14.11., vorab c58f449, nicht blind gegenüber den Daten): Robustheit von H98 bei freiem Flächenspektrum.
+  **Widerlegt.** Mit den Spektren $\sqrt{j(j+1)}$, $j+\tfrac12$ und $j$ gibt es 23 Regeln und 253 Paare; im
+  $m_W$-Fenster liegen zwei, und beide treffen auch die anderen Fenster: das bekannte Paar ($\gamma_L=1{,}864700$)
+  und ein zweites mit $\gamma_L=2\ln(1-1/\sqrt2)/\ln(2-\sqrt3)=1{,}864824$. Die Sonderstellung aus H98 hängt also am
+  festgehaltenen Spektrum. H98 bleibt in seinem Regelraum bestätigt; H15, H46 und H96 sind nicht berührt. OP1 offen.
 - Platzhalter-Methode an der Einheit bei $\gamma/2$ (14.11., Erkundung, nicht blind):
   Rückwärts verlangen die Massen $\kappa s=\Delta\Phi/\gamma_M=0{,}49982$ (1σ-Band
   $[0{,}49974;\,0{,}49990]$). Die Bargmann-Phase des Qubit-Tripels selbst ist $\Omega/2\approx\pi/4$
