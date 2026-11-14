@@ -12,7 +12,14 @@ derivation. The registry only enforces bookkeeping:
 * a re-audit ledger event listing downstream versions at every status change;
 * an exact residual check Delta = F - delta on declared rational sample points;
 * a term-role check (structural_core / counterterm_compensation), kept apart
-  from the front/back index roles of qam-role-audit/2.
+  from the front/back index roles of qam-role-audit/2;
+* fit provenance (fitted_on, including discrete scans) and a blindness check:
+  a dependent statement tested against fitted data is reported as not_blind;
+* Delta reported against the tolerance and against the fit uncertainty of theta,
+  so a derivation that deviates from the fit is never adopted silently.
+
+The intended use is rapid prototyping: a placeholder is registered first and
+later replaced by a derivation F_i; the registry keeps that replacement honest.
 
 Passing checks never close OP1-OP5, C5 or C6/T2 and never certify physics.
 """
@@ -43,17 +50,21 @@ ALLOWED = {
     'deprecated': set(),
 }
 PARAMETER_ROLES = {'fit_parameter', 'regulator_cutoff', 'fixed_input'}
+DISCRETE = 'discrete_choice'
+BASIS_KINDS = {'lagrangian_operator', 'readout'}
 TERM_ROLES = {'structural_core', 'counterterm_compensation'}
 INDEX_ROLES = {'readout', 'frame', 'observer', 'language', 'address',
                'structure', 'action', 'field', 'transport', 'operator'}
 POLYNOMIAL = 'qam-polynomial-v1'
 RESIDUAL_CHECKER = 'qam-counterterm-residual-v1'
 ROLE_CHECKER = 'qam-term-role-v1'
+BLINDNESS_CHECKER = 'qam-counterterm-blindness-v1'
+MAX_OPTIONS = 64
 MAX_DEGREE = 16
 MAX_SAMPLES = 256
 SCHEME_FIELDS = {'title', 'target_sector', 'operator_basis', 'compensation_function', 'reference_scale',
                  'matching_condition', 'rg_flow', 'validity_domain', 'magnitude_convention',
-                 'replacement_tolerance', 'open_guards', 'assumptions', 'scope'}
+                 'replacement_tolerance', 'open_guards', 'assumptions', 'scope', 'fitted_on', 'known_tensions'}
 SCOPE = ('Local, effective and readout-dependent bookkeeping; no derivation, no global closure; '
          'OP1-OP5, C5 and C6/T2 stay open')
 RATIONAL = re.compile(r'[+-]?\d+(?:/[1-9]\d*)?')
@@ -99,11 +110,106 @@ def evaluate(form, parameters, point):
     return total
 
 
-def validate_scheme(payload):
+def validate_parameter(key, spec):
+    if not NAME.fullmatch(key):
+        raise ValueError('Parameter names must be identifiers')
+    if isinstance(spec, dict) and spec.get('role') == 'orientation_sign':
+        raise ValueError(f'Parameter {key}: the orientation sign o_R is not a counterterm parameter; '
+                         'keep it as an explicit factor outside |delta_i|')
+    if isinstance(spec, dict) and spec.get('role') == DISCRETE:
+        if set(spec) != {'value', 'options', 'role'}:
+            raise ValueError(f'Discrete parameter {key} requires value, options and role')
+        options = spec['options']
+        if not isinstance(options, list) or not 2 <= len(options) <= MAX_OPTIONS:
+            raise ValueError(f'Discrete parameter {key} needs 2 to {MAX_OPTIONS} options')
+        for option in options:
+            require_text(option, f'{key} option')
+        if len(set(options)) != len(options):
+            raise ValueError(f'Discrete parameter {key} has duplicate options')
+        if spec['value'] is not None and spec['value'] not in options:
+            raise ValueError(f'Discrete parameter {key} value is not one of its options')
+        return
+    if not isinstance(spec, dict) or set(spec) != {'value', 'bounds', 'role'}:
+        raise ValueError(f'Parameter {key} requires value, bounds and role')
+    if spec['role'] not in PARAMETER_ROLES:
+        raise ValueError(f'Parameter {key} role must be one of {sorted(PARAMETER_ROLES | {DISCRETE})}')
+    bounds = spec['bounds']
+    if not isinstance(bounds, list) or len(bounds) != 2:
+        raise ValueError(f'Parameter {key} bounds must be [lower, upper]')
+    lower, upper = (rational(item, f'{key} bound') for item in bounds)
+    if lower > upper:
+        raise ValueError(f'Parameter {key} lower bound exceeds upper bound')
+    if spec['value'] is not None and not lower <= rational(spec['value'], f'{key} value') <= upper:
+        raise ValueError(f'Parameter {key} value lies outside its declared bounds')
+
+
+def validate_fit(fit, parameters):
+    """fitted_on is null when every theta is set by declaration, else the fit provenance."""
+    if fit is None:
+        return
+    fields = {'method', 'parameters', 'data', 'uncertainty', 'scan'}
+    if not isinstance(fit, dict) or set(fit) != fields:
+        raise ValueError(f'fitted_on requires exactly {sorted(fields)}')
+    require_text(fit['method'], 'fitted_on.method')
+    names = fit['parameters']
+    if not isinstance(names, list) or not names or len(set(names)) != len(names):
+        raise ValueError('fitted_on.parameters must list distinct fitted parameter names')
+    for name in names:
+        if name not in parameters:
+            raise ValueError(f'fitted_on names undeclared parameter {name}')
+    data = fit['data']
+    if not isinstance(data, list) or not data:
+        raise ValueError('fitted_on.data must list the target data')
+    seen = set()
+    for item in data:
+        if not isinstance(item, dict) or set(item) != {'label', 'source', 'version', 'value'}:
+            raise ValueError('Each fitted datum requires label, source, version and value')
+        for name, value in item.items():
+            require_text(value, f'fitted datum {name}')
+        if (item['source'], item['label']) in seen:
+            raise ValueError('Duplicate fitted datum')
+        seen.add((item['source'], item['label']))
+    uncertainty = fit['uncertainty']
+    if not isinstance(uncertainty, dict):
+        raise ValueError('fitted_on.uncertainty must map fitted continuous parameters to rational sigma')
+    for name, sigma in uncertainty.items():
+        if name not in names or parameters[name]['role'] == DISCRETE:
+            raise ValueError(f'Uncertainty for {name} needs a fitted continuous parameter')
+        if rational(sigma, f'{name} uncertainty') < 0:
+            raise ValueError('Uncertainties must be nonnegative')
+    scan = fit['scan']
+    if scan is not None:
+        if not isinstance(scan, dict) or set(scan) != {'trials', 'hits', 'chance_expectation'}:
+            raise ValueError('scan requires trials, hits and chance_expectation')
+        trials, hits = scan['trials'], scan['hits']
+        if type(trials) is not int or type(hits) is not int or trials < 1 or not 0 <= hits <= trials:
+            raise ValueError('scan needs integer trials >= 1 and 0 <= hits <= trials')
+        if rational(scan['chance_expectation'], 'chance_expectation') < 0:
+            raise ValueError('chance_expectation must be nonnegative')
+
+
+def validate_scheme(payload, frame=None):
     if not isinstance(payload, dict) or set(payload) != SCHEME_FIELDS:
         raise ValueError(f'{SCHEME} payload requires exactly {sorted(SCHEME_FIELDS)}')
-    for name in ('title', 'target_sector', 'operator_basis', 'reference_scale', 'matching_condition', 'scope'):
+    for name in ('title', 'target_sector', 'reference_scale', 'matching_condition', 'scope'):
         require_text(payload[name], name)
+    basis = payload['operator_basis']
+    if not isinstance(basis, dict) or set(basis) != {'kind', 'expression', 'frame'}:
+        raise ValueError('operator_basis requires kind, expression and frame')
+    if basis['kind'] not in BASIS_KINDS:
+        raise ValueError(f'operator_basis.kind must be one of {sorted(BASIS_KINDS)}')
+    require_text(basis['expression'], 'operator_basis.expression')
+    require_text(basis['frame'], 'operator_basis.frame')
+    if frame is not None and basis['frame'] != frame:
+        raise ValueError('operator_basis frame must equal the declared frame (Konvention F)')
+    tensions = payload['known_tensions']
+    if not isinstance(tensions, list):
+        raise ValueError('known_tensions must be a list')
+    for item in tensions:
+        if not isinstance(item, dict) or set(item) != {'description', 'convention', 'delta', 'source'}:
+            raise ValueError('Each known tension requires description, convention, delta and source')
+        for name, value in item.items():
+            require_text(value, f'known tension {name}')
     if payload['rg_flow'] is not None:
         require_text(payload['rg_flow'], 'rg_flow')
     if not isinstance(payload['assumptions'], list):
@@ -118,23 +224,8 @@ def validate_scheme(payload):
     if not isinstance(parameters, dict):
         raise ValueError('parameters must map names to declarations')
     for key, spec in parameters.items():
-        if not NAME.fullmatch(key):
-            raise ValueError('Parameter names must be identifiers')
-        if not isinstance(spec, dict) or set(spec) != {'value', 'bounds', 'role'}:
-            raise ValueError(f'Parameter {key} requires value, bounds and role')
-        if spec['role'] == 'orientation_sign':
-            raise ValueError(f'Parameter {key}: the orientation sign o_R is not a counterterm parameter; '
-                             'keep it as an explicit factor outside |delta_i|')
-        if spec['role'] not in PARAMETER_ROLES:
-            raise ValueError(f'Parameter {key} role must be one of {sorted(PARAMETER_ROLES)}')
-        bounds = spec['bounds']
-        if not isinstance(bounds, list) or len(bounds) != 2:
-            raise ValueError(f'Parameter {key} bounds must be [lower, upper]')
-        lower, upper = (rational(item, f'{key} bound') for item in bounds)
-        if lower > upper:
-            raise ValueError(f'Parameter {key} lower bound exceeds upper bound')
-        if spec['value'] is not None and not lower <= rational(spec['value'], f'{key} value') <= upper:
-            raise ValueError(f'Parameter {key} value lies outside its declared bounds')
+        validate_parameter(key, spec)
+    validate_fit(payload['fitted_on'], parameters)
     domain = payload['validity_domain']
     if not isinstance(domain, dict) or set(domain) != {'variable', 'interval', 'samples', 'description'}:
         raise ValueError('validity_domain requires variable, interval, samples and description')
@@ -218,7 +309,7 @@ def register_scheme(path, repo, request):
         raise ValueError('Registration does not grant review or withdrawal status')
     if request['frame'] == 'unspecified':
         raise ValueError('A counterterm needs an explicit readout frame')
-    payload = validate_scheme(request['payload'])
+    payload = validate_scheme(request['payload'], request['frame'])
     source = source_record(repo, request['source'])
     guards = []
     with store_session(path) as (session, models):
@@ -322,8 +413,10 @@ def resolve(session, models, version):
         if object_type(session, models, current) == SCHEME:
             state = lifecycle(session, models, current)
             inherits = state['status'] != 'structurally_matched'
+            scheme_payload = version_identity(session, models, current)['payload']
             schemes[current] = {'scheme': current, 'status': state['status'], 'inherits_guards': inherits,
-                                'replacement': state['replacement'],
+                                'replacement': state['replacement'], 'fitted_on': scheme_payload['fitted_on'],
+                                'known_tensions': scheme_payload['known_tensions'],
                                 'guards': open_guards(session, models, current) if inherits else []}
             if state['replacement']:
                 # Once matched, the replacement's own guards and prerequisites take over.
@@ -378,7 +471,7 @@ def check_residual(path, request):
         raise ValueError('Residual check requires scheme and replacement version hashes')
     for name, value in request.items():
         require_text(value, name)
-    inputs, values, error, result = {}, [], None, 'blocked'
+    inputs, values, error, result, verdict = {}, [], None, 'blocked', 'undetermined'
     with store_session(path) as (session, models):
         scheme = version_identity(session, models, request['scheme'])
         replacement = version_identity(session, models, request['replacement'])
@@ -401,6 +494,9 @@ def check_residual(path, request):
             if structure['variable'] != payload['validity_domain']['variable']:
                 raise ValueError('Replacement uses another variable than the validity domain')
             magnitude_failures = []
+            fit = payload['fitted_on'] or {'uncertainty': {}}
+            sigma = {name: rational(value, 'uncertainty') for name, value in fit['uncertainty'].items()}
+            coefficients = function['form']['coefficients']
             for point in payload['validity_domain']['samples']:
                 x = rational(point, 'sample point')
                 delta = evaluate(function['form'], function['parameters'], x)
@@ -409,11 +505,22 @@ def check_residual(path, request):
                 structural = evaluate(structure, {}, x)
                 if payload['magnitude_convention'] == 'magnitude' and delta < 0:
                     magnitude_failures.append(str(x))
+                # delta is linear in each named coefficient: |d delta / d theta_k| = |sum of x^j| over its slots.
+                band = sum((abs(sum(x ** j for j, entry in enumerate(coefficients) if entry == name)) * value
+                            for name, value in sigma.items()), Fraction(0))
+                shift = structural - delta
                 values.append({'point': str(x), 'delta': str(delta), 'structure': str(structural),
-                               'residual': str(structural - delta)})
+                               'residual': str(shift), 'fit_band': str(band),
+                               'within_tolerance': abs(shift) <= tolerance, 'within_fit_band': abs(shift) <= band})
             maximum = max(abs(Fraction(item['residual'])) for item in values)
             within = maximum <= tolerance
             result = 'passed' if within and not magnitude_failures else 'failed'
+            if within:
+                verdict = 'compatible-within-tolerance'
+            elif all(item['within_fit_band'] for item in values):
+                verdict = 'exceeds-tolerance-within-fit-uncertainty'
+            else:
+                verdict = 'deviates-from-fit'
             if magnitude_failures:
                 error = ('Negative |delta_i| at ' + ', '.join(magnitude_failures)
                          + '; an orientation sign may have been absorbed')
@@ -422,7 +529,11 @@ def check_residual(path, request):
         receipt = {'format': 'qstore-check-v1', 'checker': RESIDUAL_CHECKER, 'checker_hash': checker_hash(),
                    'request': request, 'inputs': inputs, 'result': result, 'error': error,
                    'residuals': values, 'max_abs_residual': None if maximum is None else str(maximum),
-                   'tolerance': str(tolerance), 'guards': guard_snapshot(session, models, inputs),
+                   'tolerance': str(tolerance), 'verdict': verdict,
+                   'fitted_on': payload['fitted_on'], 'known_tensions': payload['known_tensions'],
+                   'adoption': 'Only compatible-within-tolerance may support structurally_matched; any other '
+                               'verdict keeps delta_i and reports Delta_i as the deviation of the derivation',
+                   'guards': guard_snapshot(session, models, inputs),
                    'assertion_tested': '|F(x) - delta(x)| <= tolerance at every declared sample point x',
                    'scope': 'Finitely many declared rational samples; not a bound on the whole validity domain; '
                             + SCOPE}
@@ -577,9 +688,53 @@ def check_term_roles(path, request):
     return {'receipt_hash': key, **receipt}
 
 
+def check_blindness(path, request):
+    """Report not_blind when a statement is tested against data its counterterms were fitted on."""
+    if not isinstance(request, dict) or set(request) != {'statement', 'tested_against'}:
+        raise ValueError('Blindness check requires statement and tested_against')
+    require_text(request['statement'], 'statement')
+    data = request['tested_against']
+    if not isinstance(data, list) or not data:
+        raise ValueError('tested_against must list the comparison data')
+    for item in data:
+        if not isinstance(item, dict) or set(item) != {'label', 'source', 'version'}:
+            raise ValueError('Each comparison datum requires label, source and version')
+        for name, value in item.items():
+            require_text(value, f'comparison datum {name}')
+    with store_session(path) as (session, models):
+        inputs = {request['statement']: version_identity(session, models, request['statement'])}
+        resolved = resolve(session, models, request['statement'])
+        findings = []
+        for scheme in resolved['counterterms']:
+            inputs[scheme['scheme']] = version_identity(session, models, scheme['scheme'])
+            fit = scheme['fitted_on']
+            if fit is None:
+                continue
+            fitted = {(item['source'], item['label']): item for item in fit['data']}
+            for item in data:
+                hit = fitted.get((item['source'], item['label']))
+                if hit is not None:
+                    findings.append({'scheme': scheme['scheme'], 'status': scheme['status'], 'datum': item,
+                                     'fitted_version': hit['version'],
+                                     'same_version': hit['version'] == item['version'], 'scan': fit['scan']})
+        verdict = 'not_blind' if findings else 'blind-with-respect-to-registered-fits'
+        result = 'failed' if findings else 'passed'
+        receipt = {'format': 'qstore-check-v1', 'checker': BLINDNESS_CHECKER, 'checker_hash': checker_hash(),
+                   'request': request, 'inputs': inputs, 'result': result, 'verdict': verdict,
+                   'findings': findings, 'inherited_guards': resolved['inherited_guards'],
+                   'assertion_tested': 'No comparison datum (source, label) occurs in fitted_on of a counterterm '
+                                       'in the dependency closure',
+                   'scope': 'Only registered fits are known; unregistered tuning cannot be excluded. '
+                            'A not_blind result must be reported as such (AGENTS: Nicht blind = offen sagen); '
+                            + SCOPE}
+        key = store_receipt(session, models, BLINDNESS_CHECKER, result, receipt, inputs, 'VERIFY')
+    return {'receipt_hash': key, **receipt}
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument('command', choices=['store', 'transition', 'residual', 'roles', 'resolve', 'lifecycle'])
+    parser.add_argument('command', choices=['store', 'transition', 'residual', 'roles', 'blindness', 'resolve',
+                                            'lifecycle'])
     parser.add_argument('--db', default='build/qam.sqlite3')
     parser.add_argument('--repo', default='.')
     parser.add_argument('--request', help='JSON request file (store, transition, residual, roles)')
@@ -592,6 +747,8 @@ def main(argv=None):
         result = register_transition(args.db, args.repo, request)
     elif args.command == 'residual':
         result = check_residual(args.db, request)
+    elif args.command == 'blindness':
+        result = check_blindness(args.db, request)
     elif args.command == 'roles':
         result = check_term_roles(args.db, request)
     elif args.command == 'resolve':

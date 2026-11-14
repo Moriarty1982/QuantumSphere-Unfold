@@ -436,3 +436,31 @@ Orientierungsvorzeichen; T5 eine reine Kernaussage, die still von einem nicht
 abgeglichenen Gegenterm abhängt. Tests: `python -m unittest
 qam.store.test_counterterms`. Der LaTeX-Export der Registertabelle ist
 Phase 2.
+
+### Rapid Prototyping: Fit-Herkunft, Blindheit und Δ als Vorhersage
+
+Das Register soll schnelle Prototypen tragen, deren Gegenterme später durch
+Herleitungen ersetzt werden. Dafür gilt zusätzlich:
+
+- `operator_basis` ist ein Objekt aus kind (lagrangian_operator oder
+  readout), expression und frame. Eine benannte Auslesegröße ist zulässig.
+  Ihr Frame muss dem deklarierten Frame entsprechen.
+- Ein Parameter mit der Rolle discrete_choice trägt options als endliche
+  Liste und value als gewählte Option oder null. Er hat keine Grenzen.
+- `fitted_on` ist null, wenn alle θ gesetzt sind. Andernfalls enthält es
+  method, die angepassten parameters, data mit label, source, version und
+  value, uncertainty als rationales σ je stetigem Fitparameter und scan.
+  scan ist null oder eine Auswahl aus trials, hits und chance_expectation.
+- `known_tensions` hält bekannte Spannungen vor jeder Ersetzung fest. Jeder
+  Eintrag enthält description, convention, delta und source.
+- `blindness --request DATEI` mit statement und tested_against (label,
+  source, version) meldet `not_blind`, sobald ein Vergleichsdatum über
+  (source, label) im fitted_on eines Gegenterms der Abhängigkeitshülle
+  vorkommt. Abweichende Datenversionen werden ausgewiesen. Der Beleg gilt nur
+  für registrierte Fits; nicht registriertes Tuning bleibt unerkannt.
+- Der Residuenbeleg weist Δ je Stützstelle gegen die Toleranz und gegen das
+  Fitband aus. Das Fitband ist die lineare Fehlerfortpflanzung
+  Σ_k |∂δ/∂θ_k| σ_k. Das Urteil lautet compatible-within-tolerance,
+  exceeds-tolerance-within-fit-uncertainty oder deviates-from-fit. Nur das
+  erste Urteil erlaubt structurally_matched. Andernfalls bleibt δ_i stehen,
+  und Δ_i wird als Abweichung der Herleitung vom Fit berichtet.
