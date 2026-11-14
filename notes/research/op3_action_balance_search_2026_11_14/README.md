@@ -298,3 +298,47 @@ Orientierungen ist das Levi-Civita-artige Objekt. Erkundung, nicht blind, `frame
   nicht: Für π/4 statt 0 muss das Dreifachprodukt in einer nichtkommutativen Ebene gebildet werden
   (quaternionisch oder mit unabhängigem i). In der kommutativen Frame-Ebene unter r33 ist M×T×P = M×P×T.
   Wieder dieselbe Stelle.
+
+## Nachtrag 8 (15.11.): Annahme r33 geprüft, Berichtigung der Nachträge 4 bis 7
+
+Auf „r33 prüfen“ des Autors. Gelesen wurden r33 (v490, Zeilen 4601–4730), r37/r38 (Triolen), r51 und v4.8.0-r20 (H13).
+
+**Was r33 sagt.** r33.1(a): Die Generationstripel liegen in (Im H) ⊗ O = i⊗O ⊕ j⊗O ⊕ k⊗O. Die drei Slots
+sind also die Quaternioneneinheiten i, j, k. r33.1(b): Die gemeinsame Symmetrie ist A4, die Konjugation mit der
+binären Tetraedergruppe 2T. r33.2: Die Rechtswirkung von 1 + i + j + k vertauscht die drei Labels zyklisch.
+Nur r33.1(c) ist bedingt formuliert („If the C factor is read as the amplitude plane“). r51 übernimmt das
+ausdrücklich als Annahme. Hergeleitet ist die Identifikation nicht; sie folgt der Absicht des Autors, die
+Dixon-Algebra als Ablage zu lesen.
+
+**Berichtigung.** Die Nachträge 5 bis 7 nannten r33 als Sperre. Das stimmt nicht:
+
+1. **Jede Frame-Ebene ist kommutativ, unabhängig von r33.** Die Tachyon-Abbildung ist Multiplikation mit
+   *einer* imaginären Einheit u. Eine Ebene span(1, u) mit u² = −1 ist immer ≅ C, gleich ob sie im C-Faktor,
+   in span(1, e7) (r51.1(c)) oder in H liegt. Die Frame-Abbildungen R, T, J_B bilden deshalb überall
+   sl(2, R), nie su(2). Eine andere Lage der Frame-Ebene behebt das Vorzeichen aus Nachtrag 6 nicht.
+2. **Die Frame-Triole ist nativ kein Dreierzyklus.** Nach r37/r38 hat sie die Form einer Transposition: Das
+   Photon ist der feste Slot, M und T sind die beiden vertauschten Spinor-Slots (Konvention F: P ist der entartete
+   Fixpunkt). Eine zyklische Rotation M → T → P ist keine native Symmetrie der Frames. Das passt zu Nachtrag 5:
+   P ist lichtartig und fest.
+3. **r33 liefert gerade die unabhängige Einheit.** Unter r33 ist die Frame-Einheit i_C ein eigener
+   Tensorfaktor und vertauscht mit H. Auf den Generationsslots i, j, k ergibt −i_C ⊗ (i, j, k) ein
+   hermitesches Pauli-Tripel, also su(2) mit nativem Levi-Civita-Symbol (ij = k). Der zyklische Wechsel ist die
+   Hurwitz-Konjugation (r33.1(b)). Das geordnete Produkt in Achsenzuständen gibt ±π/4 je nach Orientierung
+   (Nachtrag 7). Die Idee des Autors ist damit nativ verwirklicht, aber auf dem Generationstripel Im H
+   mit der Frame-Einheit als komplexem i, nicht auf den Frames selbst.
+4. **Die bekannte Sperre ist die Ladung.** Auf diesem Tripel ist der Oktant schon geprüft: Im Isospinfaktor
+   bricht er Q_em, denn die Labels i, j, k sind nicht Q_em-invariant (`../op3_neutral_su2_octant_2026_11_13.md`,
+   `../op3_hopf_octant_2026_11_13.md`). Das ist der Grund, warum Weg A ins Neutrale über die Sedenionen
+   ging (CT-003).
+5. **Schon getestet:** v4.8.0-r20 (H13): drei Materie-Frames mit Rapidität artanh(1/√3) in den drei
+   Triolen-Richtungen, als Boost-Schleife geschlossen. Die Wigner-Holonomie ist eine reine Drehung um
+   28,56°; H13 ist widerlegt. Die Reihenfolge der Frame-Boosts als Quelle einer Phase ist damit für diese
+   Konstruktion schon geprüft.
+
+**Ergebnis.** r33 ist nicht der Engpass. Die Lücke ist die bekannte des Profils: ein Tripel mit nativem
+Levi-Civita-Symbol, Zyklus der Ordnung 3 und Bezug, das zugleich farb- und ladungsneutral ist. Im H unter r33
+hat alles außer der Neutralität. r38 hält dieselbe Doppelrolle seit Langem fest: Frames und Generationen
+brauchen zwei Ebenen, und Im H ist der zweite Dreifachträger.
+
+**Offene Frage, die neu ist:** Gilt die Ladungssperre auch unter der Ladungsachse e8 von CT-003? Die bisherige
+Prüfung benutzte die Standardladung der Dixon-Algebra; die e8-Ladung lebt auf den Sedenionen. Nicht gerechnet.
