@@ -8,6 +8,12 @@
   Nicht geprüft: die Darstellung von Mindmap und Formeln im GitHub-Wiki (im Browser des Modells gesperrt).
 - **Dauerauftrag 15.11. (AGENTS.md):** Interne Nummern (H, k, Runden, CT) ohne Rückfrage vergeben; Übergabe- und
   Buchführungs-Commits ohne Rückfrage auf `main` pushen. Inhalt nur über PR; Zenodo und neue Versionen nur mit Freigabe.
+- **Autorentscheidung 15.11. zur nächsten Version:** Erst weiterforschen, bis genug Stoff für eine neue Version
+  *beider* Ausgaben (Vollausgabe und Physik-Paper) da ist; jetzt kein Ergänzungsentwurf. Seit v5.0.0 ist der Text des
+  Physik-Papers unverändert (`qam/editions/v5_physics_article.tex`). Kandidaten für eine spätere Ergänzung:
+  H102 als Vorhersage mit Platzhaltern (CT-001/CT-002, sieben Guards, nicht blind) neben dem Satz „No lepton masses …
+  predicted“; das präzisierte Generationenhindernis (Weg A gegen Weg B, r13); die benannte Auswahlregel
+  (Gleichgewichtung zweier unverzerrter Terme = F-Selbstdualität, PRs #123/#124).
 - **Lokal:** Hauptordner auf `main` = 087d13f (plus dieser Übergabe-Commit).
 - **Neu, 14.11. (`notes/research/op3_action_balance_search_2026_11_14/`, Erkundung, nicht blind, Rückwärtssuche,
   auf „Wirkung suchen“ des Autors):** Gesucht war eine vorhandene Wirkung, die H = −a(Q + R) mit gebunden gleichen
