@@ -350,6 +350,10 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 14.11.2026: CT-001 und CT-002 im Gegenterm-Register eingetragen (H102 erbt sieben Guards, Blindheit not_blind) in Forschungsstand und QAM (DE/EN); kein OP-Abschluss.
 
+14.11.2026: Erkundung T11/QAM-Shift zu CT-002 (kein Grund für eine Querung; Suche ruht) in Forschungsstand; kein OP-Abschluss.
+
+14.11.2026: Gegenterm-Register Phase 2 (LaTeX-Anhang, Guard-Vermerke, harte Exportprüfung) in QAM (DE/EN).
+
 13.11.2026, spät: Runde v4.10.0-r12 (Statusvermerke) in Forschungslinie, Inhalt, Content-overview, Offene-Probleme und Forschungsstand; Fäden Potential und T₁₂ in Forschungsstand.
 
 13.11.2026, spät: Nachtrag Auswahlprinzip (Koide als qubitartige Treue; Mittelwert erklärt die Genauigkeit nicht) in Forschungsstand; kein OP-Abschluss.

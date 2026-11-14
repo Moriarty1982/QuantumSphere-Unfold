@@ -185,3 +185,10 @@ allen Hashes liegt in `register_2026_11_14_report.json`; zwei unabhängige Läuf
   Vergleich mit der nächsten PDG-Ausgabe ergibt ebenfalls `not_blind`, aber mit `same_version = false`. Das Register
   meldet also richtig, dass m_τ in den Fit einging. Ob die neue Ausgabe neue Information trägt, hängt daran, ob sich
   ihr Wert gegenüber 1776,93 ± 0,09 MeV ändert. Das ist bei der Auswertung von H102 zu beachten.
+
+## Schritt 5: T11 und QAM-Shift (14.11.2026, Erkundung)
+Siehe `../op3_ct002_t11_shift_2026_11_14.md`. Die Wick-Rotation von T11 trägt die euklidische Lesart; der Guard
+„euklidisch gegen lorentzsch“ führt damit auf den Status von T11 zurück (Lesart). Einen Grund für **eine** Querung
+gibt weder T11 noch der QAM-Shift. Dieser ist eine inhaltsfreie Umbenennung (`prop:qam-hilbert-shift-conservative-shape`).
+CT-002 bleibt placeholder; das Register ist unverändert. Das ist der vierte Ansatz an derselben Stelle, und die Suche
+wird hier angehalten, bis neue Daten zu H102 vorliegen.
