@@ -187,3 +187,34 @@ mit wem es gerade koppelt?“ Einordnung als Erkundung, nicht blind:
   Gegenterm. Er gehört ins Gegenterm-Register (ein möglicher CT-004 „ε mit zwei Auslesungen“ mit Guards), und
   jede Folgerung erbt diese Guards. Ein Test (H105) wäre erst sinnvoll, wenn die Regel (welcher Partner, welcher
   Faktor) aus dem Bestand festgelegt ist, bevor gerechnet wird.
+
+## Nachtrag 4 (14.11.): Idee des Autors, ε gilt in seiner jetzigen Gestalt nur in einem Frame
+
+Frage des Autors: Gilt ε in der jetzigen Gestalt vielleicht nur in einem Frame und muss in einem anderen anders
+verstanden werden? Erkundung, nicht blind.
+
+- **Wo ε heute steht:** Die Mischungsanpassung r54 ist eine Aussage über Massenmatrizen in M, in T gleich wie
+  in r52; **P ist nicht ausgewertet** (Frametabelle r54). Die Maske selbst ist T-ungerade (r47.1(b):
+  TΔT⁻¹ = −Δ).
+- **Strukturelle Übereinstimmung:** Die Balance a = b, die der Koide-Bezug verlangt, ist genau die Bedingung
+  der Photonengewichte (r85.3: arctan(b/a) = 45°; r82/r83: Aufhebung bei Photonengewichten). Liest man
+  H = −(aQ + bR) mit den Frame-Gewichten a (M) und b (T), so gilt:
+
+  | Gewichte | a/b | K_orb |
+  |---|---|---|
+  | Materie (K = 1/γ, P = 1) | 1/β² = 3,3129 | 0,9545 |
+  | Tachyon (vertauscht) | β² = 0,3018 | 0,5006 |
+  | Photon | 1 | 2/3 exakt |
+
+  Lesart: Der Koide-Bezug wäre eine P-Auslesung und das Mischungs-ε eine M-Auslesung. Dass beide Zahlen
+  verschieden sind, wäre dann zu erwarten.
+- **Erste Lücke:** Die Lesart verlangt, dass die M→T-Abbildung den D-Projektor Q auf den τ-Projektor R
+  abbildet. Nach r51.1 wirkt die Tachyon-Abbildung z ↦ iz unter der Annahme r33 (C-Faktor der Dixon-Ablage
+  = Amplitudenebene) als Multiplikation mit der äußeren Einheit, auf dem Slotraum also skalar. Die
+  Zeitumkehr wirkt als Konjugation (D ↦ D⁻¹). Beide sind monomial (§1) und bilden Q nicht auf R ab. Unter r33
+  trägt die Lesart also nicht. Sie bräuchte eine andere Lage der Frame-Ebene, die auf den Slotindex wirkt.
+- **Zweite Lücke, nach dem Muster von r85.1, nicht gerechnet:** Ein T-ungerader Term geht mit a − b ein und
+  verschwindet bei Photonengewichten. Die Maske wäre in P dann null.
+- **Folge:** Die Idee ist der bisher sauberste Ort für die Balance, weil Photonengewichte sie ohne Wahl liefern.
+  Daran hängt eine benannte Annahme (r33), keine freie Zahl. Ein Gegenterm wäre daher „Q und R sind M- und
+  T-Lesart desselben Terms“, nicht „ε mit zwei Werten“.
