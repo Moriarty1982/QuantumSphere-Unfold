@@ -1,22 +1,21 @@
 # Übergabe: Stand der letzten Sitzung
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.**
 
-## Stand vom 13.11.2026, ca. 22:00 (Claude Opus)
-- **GitHub:** Gemergt am 13.11.: #104 (32fa42c), #105 (fcc87c6), #106 (ca29c5b) und #107 (a08d918).
-  **Offen: PR #108** (Branch `research/v5-sedenion-ladung-e8`, lokal im Worktree `claude/anthropic-skills-weitermachen-08cc3e`) mit der Erkundung „Ladung über e8“, dem Wiki
-  und dieser Übergabe. Er wartet auf „PR 108 mergen“.
-- **Lokal:** Der Hauptordner steht auf `main` mit zwei nur lokalen Commits: 3b8c1cc (Merge) und b388da9 (Übergabe).
-  Die Arbeit liegt im Worktree `.claude/worktrees/anthropic-skills-weitermachen-08cc3e`. Unversioniert:
-  `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf`.
-  Die vorige Übergabe war auf „14.11., 00:30“ datiert; tatsächlich entstand sie am 13.11. um 21:28.
+## Stand vom 14.11.2026 (Claude Opus)
+- **GitHub:** **PR #108 gemergt als 91cbb69** (Ladung über e8, neutrales Qubit, H103 widerlegt), auf „pr 108 mergen“.
+  Am 13.11. gemergt: #104 (32fa42c), #105 (fcc87c6), #106 (ca29c5b), #107 (a08d918). **Keine offenen PRs.**
+  Läufe 43534883771 (Wiki-Sync) und 43534883722 (Zwei-PDF) zu 91cbb69 waren beim Schreiben noch in Arbeit.
+- **Lokal:** Der Hauptordner steht auf `main` = 91cbb69 (vorgespult), dazu dieser Übergabe-Commit, nur lokal.
+  Unversioniert: `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf`.
 - **Letzte Runde:** v4.10.0-r12 (Statusvermerke) aus PR #106.
-- **Zuletzt vergebene Hypothese:** H103 (vorab 45314b2, k225). **Widerlegt:** Q_S steht auf N senkrecht zur ψ-Achse. Nachträglicher Suchtreffer: i R_f mit der Raumdiagonale f gibt exakt den magischen Winkel; der nächste Schritt wäre dazu eine eigene Vorab-Notiz. Als Nächstes ist H104 frei, letztes Skript k225.
-- **Vorher vergeben:** H102.
-  - H102 ist offen: m_τ = 1777,134 MeV wird gegen die erste PDG-Ausgabe nach dem 13.11.2026 geprüft
-    (`k224_test_h102.py m_tau sigma`). Am 13.11. gab es noch keine neue Ausgabe.
+- **Zuletzt vergebene Hypothese:** H103 (vorab 45314b2, k225).
+  - **H103a ist widerlegt:** Q_S wirkt auf N als 1/2 + σ_y/3 und steht senkrecht zur ψ-Achse (K = 1/2).
+  - Nachträglicher Suchtreffer in der Nebenliste (96 Einträge): i R_f mit f = (e7+e8+e15)/√3 gibt exakt den
+    magischen Winkel; L_f ist auf N skalar. Prüfen nur mit eigener Vorab-Notiz (H104).
+  - H102 ist offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem 13.11.2026 (`k224_test_h102.py m_tau sigma`).
   - H101 ist widerlegt. H100 ist offen; am 13.11. war NuFIT 6.1 weiterhin die neueste Version.
-  - 
-- **Offene Autorentscheidungen:** PR #108 mergen. Aufräumen (siehe unten).
+  - Als Nächstes ist H104 frei, das letzte k-Skript ist k225.
+- **Offene Autorentscheidungen:** ob H104 zum R_f-Treffer vorab festgelegt wird; Aufräumen (siehe unten).
 - **Ausgelöste Zurückgestellte Ideen:** keine. I1–I5 sind geprüft.
 
 ### Heute abend: Ladung über e8 (`notes/research/op3_sedenion_charge_2026_11_13.*`, Erkundung, nicht blind)
@@ -48,7 +47,8 @@
 - **Aufräumen:** Diese Teile können weg; gelöscht wird nur auf ausdrücklichen Auftrag.
   - die Zweige `research/v5-octant-weitersuche` (PR #106) und `research/v5-auswahlprinzip` (PR #107);
   - der Worktree `.claude/worktrees/qam-mml-mma-math-473bc4`;
-  - nach dem Merge von #108 auch dieser Worktree.
+  - der Zweig `research/v5-sedenion-ladung-e8` (PR #108) und der Worktree
+    `.claude/worktrees/anthropic-skills-weitermachen-08cc3e`.
 
 ## Früher am 13.11. erarbeitet, alles gemergt
 - **H99b** mit NuFIT-6.1-Primärtabelle: verträglich, +1,80σ (nicht blind). **H100** vorab: R im nächsten NuFIT-Fit,
