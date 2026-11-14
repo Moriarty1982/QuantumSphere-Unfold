@@ -111,4 +111,4 @@ Manche Fragen lassen sich nicht blind testen, weil die Zielzahl schon bekannt is
 
 > **Anmerkung für LLMs und Quellenprüfung:** Vorab-Notizen liegen unter `llm/Vorab_Notiz_H*.md` (lokal) bzw. `notes/research/predictions/` und den Runden-Notizordnern (GitHub); Ergebnisse unter `llm/Ergebnis_H*.md`. Den Commit der Vorab-Notiz mit dem Datum der Rechnung vergleichen. „Nicht blind“ heißt: Das Kriterium war vorab bekannt oder der Treffer wurde nachträglich gefunden.
 
-- **H103** (13.11.2026, vorab 45314b2): Bezug unter dem magischen Winkel im e8-neutralen Qubit aus der Companion-Ladung Q_S. **Widerlegt**: Q_S steht senkrecht zur ψ-Achse und gibt K = 1/2. Nachträglicher Suchtreffer: i R_f (Raumdiagonale).
+- **H103** (13.11.2026, vorab 45314b2): Bezug unter dem magischen Winkel im e8-neutralen Qubit aus der Companion-Ladung Q_S. **Widerlegt**: Q_S steht senkrecht zur ψ-Achse und gibt K = 1/2. Nachträglicher Suchtreffer: i R_f (Raumdiagonale). Nachtrag 14.11. (Erkundung): Der Treffer ist analytisch erzwungen, weil die Rechtsmultiplikation mit Im H_n auf N ein Pauli-Tripel mit e8 als ψ-Achse ist; jede Raumdiagonale trifft.

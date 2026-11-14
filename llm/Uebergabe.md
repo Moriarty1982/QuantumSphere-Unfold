@@ -1,22 +1,24 @@
 # Übergabe: Stand der letzten Sitzung
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.**
 
-## Stand vom 13.11.2026, ca. 22:00 (Claude Opus)
-- **GitHub:** Gemergt am 13.11.: #104 (32fa42c), #105 (fcc87c6), #106 (ca29c5b) und #107 (a08d918).
-  **Offen: PR #108** (Branch `research/v5-sedenion-ladung-e8`, lokal im Worktree `claude/anthropic-skills-weitermachen-08cc3e`) mit der Erkundung „Ladung über e8“, dem Wiki
-  und dieser Übergabe. Er wartet auf „PR 108 mergen“.
-- **Lokal:** Der Hauptordner steht auf `main` mit zwei nur lokalen Commits: 3b8c1cc (Merge) und b388da9 (Übergabe).
-  Die Arbeit liegt im Worktree `.claude/worktrees/anthropic-skills-weitermachen-08cc3e`. Unversioniert:
-  `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf`.
-  Die vorige Übergabe war auf „14.11., 00:30“ datiert; tatsächlich entstand sie am 13.11. um 21:28.
+## Stand vom 14.11.2026 (Claude Opus)
+- **GitHub:** **PR #108 gemergt als 91cbb69** (Ladung über e8, neutrales Qubit, H103 widerlegt), auf „pr 108 mergen“.
+  **Offen: PR #109** mit dem R_f-Nachtrag (Zweig `research/v5-rf-nachtrag`; er enthält auch die lokalen Übergabe-Commits).
+  Am 13.11. gemergt: #104 (32fa42c), #105 (fcc87c6), #106 (ca29c5b), #107 (a08d918).
+  Läufe 43534883771 (Wiki-Sync) und 43534883722 (Zwei-PDF) zu 91cbb69 erfolgreich.
+- **Lokal:** Der Hauptordner steht auf `main` = 91cbb69 (vorgespult), dazu Übergabe-Commits, nur lokal. Der R_f-Nachtrag liegt im Worktree `anthropic-skills-weitermachen-08cc3e`.
+  Unversioniert: `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf` (jetzt wirklich im Hauptordner).
 - **Letzte Runde:** v4.10.0-r12 (Statusvermerke) aus PR #106.
-- **Zuletzt vergebene Hypothese:** H103 (vorab 45314b2, k225). **Widerlegt:** Q_S steht auf N senkrecht zur ψ-Achse. Nachträglicher Suchtreffer: i R_f mit der Raumdiagonale f gibt exakt den magischen Winkel; der nächste Schritt wäre dazu eine eigene Vorab-Notiz. Als Nächstes ist H104 frei, letztes Skript k225.
-- **Vorher vergeben:** H102.
-  - H102 ist offen: m_τ = 1777,134 MeV wird gegen die erste PDG-Ausgabe nach dem 13.11.2026 geprüft
-    (`k224_test_h102.py m_tau sigma`). Am 13.11. gab es noch keine neue Ausgabe.
+- **Zuletzt vergebene Hypothese:** H103 (vorab 45314b2, k225).
+  - **H103a ist widerlegt:** Q_S wirkt auf N als 1/2 + σ_y/3 und steht senkrecht zur ψ-Achse (K = 1/2).
+  - Nachtrag 14.11. (Erkundung, auf „Als Erkundung nachtragen“, `op3_rf_reference_2026_11_14.*`): Der Suchtreffer
+    i R_f ist analytisch erzwungen. N ist ein Rechtsmodul über H_n; i R_e7, i R_e15, i R_e8 sind dort ein Pauli-Tripel
+    mit e8 als ψ-Achse, also gilt c(i R_u) = |⟨u, e8⟩|, und jede Raumdiagonale trifft. Offen: warum die Rechtswirkung
+    maßgeblich ist und was die Diagonale auszeichnet. H104 wird dafür nicht vergeben.
+  - H102 ist offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem 13.11.2026 (`k224_test_h102.py m_tau sigma`).
   - H101 ist widerlegt. H100 ist offen; am 13.11. war NuFIT 6.1 weiterhin die neueste Version.
-  - 
-- **Offene Autorentscheidungen:** PR #108 mergen. Aufräumen (siehe unten).
+  - Als Nächstes ist H104 frei, das letzte k-Skript ist k225.
+- **Offene Autorentscheidungen:** „PR 109 mergen“ (R_f-Nachtrag).
 - **Ausgelöste Zurückgestellte Ideen:** keine. I1–I5 sind geprüft.
 
 ### Heute abend: Ladung über e8 (`notes/research/op3_sedenion_charge_2026_11_13.*`, Erkundung, nicht blind)
@@ -38,17 +40,23 @@
       asymmetrische Fehler gemittelt; Frist 31.12.2027);
     - `k224_test_h102.py m_tau sigma`.
   - Inhaltlich zur Wahl:
-    - **(a)** einen nativen Bezugszustand in N suchen. Gesucht ist ein Gewicht 2 sin(π/12), zum Beispiel aus einer
+    - **(a)** einen nativen Bezugszustand in N suchen. Stand 14.11.: H103 widerlegt; der Bezug ist auf die Wahl einer
+      Richtung u ∈ Im H_n mit |⟨u, e8⟩| = 1/√3 zurückgeführt (Rechtsmodul). Offen ist, was diese Richtung auszeichnet. Gesucht ist ein Gewicht 2 sin(π/12), zum Beispiel aus einer
       Drehung um π/12 oder aus der Hurwitz-/2T-Struktur über H_n. Querbezug zum Auswahlprinzip: Der Abstand vom
       Oktanten ist dort π/12 − θ_e.
     - **(b)** prüfen, ob Q_* auf den Fermionideal-Zuständen (statt auf S als Vektorraum) die bekannten Ladungen gibt.
     - **(c)** die zweite Familienstruktur mit neutralem Qubit (Profil unten).
   - Auswahlprinzip (`op3_selection_principle_2026_11_13.*`, `op3_flux_two_thirds_2026_11_13.*`): Treue 1/2 und Fluss
     2/3 rad bleiben offen. γ/2 ist nur mit einer Konventionswahl erreichbar, die Einheit ist frei.
-- **Aufräumen:** Diese Teile können weg; gelöscht wird nur auf ausdrücklichen Auftrag.
-  - die Zweige `research/v5-octant-weitersuche` (PR #106) und `research/v5-auswahlprinzip` (PR #107);
-  - der Worktree `.claude/worktrees/qam-mml-mma-math-473bc4`;
-  - nach dem Merge von #108 auch dieser Worktree.
+- **Aufgeräumt (14.11., auf „Erst aufräumen“):**
+  - entfernt: Worktree `qam-mml-mma-math-473bc4`;
+  - lokal und auf GitHub gelöscht: die Zweige `research/v5-octant-weitersuche` und `research/v5-auswahlprinzip`;
+  - auf GitHub gelöscht: `research/v5-sedenion-ladung-e8`.
+
+  Alle drei waren vollständig in `main` enthalten. Die PDF `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf` lag
+  nur im entfernten Worktree und ist vorher in den Hauptordner kopiert worden (byte-gleich geprüft).
+  Übrig ist der Worktree dieser Sitzung (`anthropic-skills-weitermachen-08cc3e`, Zweig gemergt); er wird mit dem
+  Archivieren der Sitzung entfernt. Nicht angefasst: `wizardly-mendel-c790d3` und `github-main`.
 
 ## Früher am 13.11. erarbeitet, alles gemergt
 - **H99b** mit NuFIT-6.1-Primärtabelle: verträglich, +1,80σ (nicht blind). **H100** vorab: R im nächsten NuFIT-Fit,
