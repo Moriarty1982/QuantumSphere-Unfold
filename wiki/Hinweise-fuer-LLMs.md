@@ -25,6 +25,7 @@ Wer mit einem KI-Werkzeug im Repository arbeitet (Codex, Claude, ChatGPT und and
 - Runden nur anhängen, nie umschreiben;
 - Merges erst nach Freigabe des Autors;
 - gemergte Zweige nach jedem Merge ohne Rückfrage löschen, lokal und auf GitHub; nicht gemergte bleiben stehen;
+- interne Nummern (H, k, Runden, CT) selbst vergeben und Übergabe- oder Buchführungs-Commits ohne Rückfrage auf `main` pushen; Inhalt nur über PR, Zenodo und neue öffentliche Versionen nur mit Freigabe;
 - das Wiki im selben PR mitziehen;
 - keine festen absoluten Pfade in Skripten.
 
