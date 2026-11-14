@@ -1,0 +1,45 @@
+Kontrolle: e7 e8 = +e15; Spur Q_* = 8.0000 (soll 8); |[Q_*, psi]| = 2.8e-16; Raenge P0, P3, P3bar = 4, 6, 6
+
+(1) Quaternionen-Relationen der Rechtsmultiplikationen (Norm der Abweichung)
+    neutral : R^2 + 1: 0.0e+00; Antikommutatoren: 0.0e+00; orthogonal: 0.0e+00; mischt neutral/farbig: 0.0e+00; R_e7 R_e8 = -R_e15
+    farbig  : R^2 + 1: 0.0e+00; Antikommutatoren: 0.0e+00; orthogonal: 0.0e+00; mischt neutral/farbig: 0.0e+00; R_e7 R_e8 = +R_e15
+    (e7 e8 = +e15; ein Rechtsmodul verlangt R_e7 R_e8 = R_(e8 e7) = -R_e15)
+
+(2) Vertauschung (Norm des Kommutators)
+    R_e7 : mit su(3)_c 2.4e-14; mit Q_* 6.6e-16; mit P3 1.8e-15; mit psi 6.93
+    R_e8 : mit su(3)_c 0.0e+00; mit Q_* 2.9e-16; mit P3 9.9e-16; mit psi 0.00
+    R_e15: mit su(3)_c 2.4e-14; mit Q_* 6.9e-16; mit P3 1.9e-15; mit psi 6.93
+    zum Vergleich Linksmultiplikation: L_e7: su(3)_c 2.4e-14, Q_* 2.00; L_e8: su(3)_c 4.0e-15, Q_* 0.00; L_e15: su(3)_c 2.4e-14, Q_* 2.00
+
+(3) 24 Hurwitz-Einheiten von rechts auf ganz S
+    R_g orthogonal True; als Menge abgeschlossen False
+    neutral : max |R_x R_y - R_(y x)| = 0.0e+00
+    neutral : max |R_x R_y - R_(x y)| = 4.0e+00
+    farbig  : max |R_x R_y - R_(y x)| = 6.9e+00
+    farbig  : max |R_x R_y - R_(x y)| = 0.0e+00
+    T_g = R_g (neutral) + R_(g quer) (farbig): abgeschlossen True; treu True; Ordnungen {1: 1, 2: 1, 3: 8, 4: 6, 6: 8} (2T: 1:1, 2:1, 3:8, 4:6, 6:8)
+    T_g vertauscht mit su(3)_c und Q_*: 2.5e-14
+    Lie-Algebra aus R_e7, R_e8, R_e15 und ihren Kommutatoren: Dimension 6 (3: eine su(2); 6: su(2) neutral + su(2) farbig)
+
+(4) Wirkung je Teilchenart (Eigenwerte auf dem Teilraum; Dimension = Farbe x Familie)
+    nu    dim 2: i R_e8 {-1.0000+0.0000i, +1.0000+0.0000i}; i R_e7 {-1.0000+0.0000i, +1.0000+0.0000i}; Casimir j(j+1) {+0.7500+0.0000i}; psi {-0.5000+0.8660i, +1.0000+0.0000i}
+    e+    dim 2: i R_e8 {-1.0000+0.0000i, +1.0000+0.0000i}; i R_e7 {-1.0000+0.0000i, +1.0000+0.0000i}; Casimir j(j+1) {+0.7500+0.0000i}; psi {-0.5000-0.8660i, +1.0000+0.0000i}
+    u     dim 6: i R_e8 {-1.0000+0.0000i, +1.0000+0.0000i}; i R_e7 {-1.0000+0.0000i, +1.0000+0.0000i}; Casimir j(j+1) {+0.7500+0.0000i}; psi {-0.5000-0.8660i, -0.5000+0.8660i}
+    dbar  dim 6: i R_e8 {-1.0000+0.0000i, +1.0000+0.0000i}; i R_e7 {-1.0000+0.0000i, +1.0000+0.0000i}; Casimir j(j+1) {+0.7500+0.0000i}; psi {-0.5000-0.8660i, -0.5000+0.8660i}
+
+(5) psi auf der Familien-su(2): psi R_u psi^-1 = R_(psi u)
+    psi e7  = [-0.5, 0.0, 0.866] in (e7, e8, e15); |psi R psi^-1 - R_(psi u)| = 2.3e-15
+    psi e8  = [0.0, 1.0, 0.0] in (e7, e8, e15); |psi R psi^-1 - R_(psi u)| = 3.1e-16
+    psi e15 = [-0.866, 0.0, -0.5] in (e7, e8, e15); |psi R psi^-1 - R_(psi u)| = 2.3e-15
+
+(6) Oktant mit den urspruenglichen Rollen auf N (Bezug: psi-Eigenzustand; Zyklus: Hurwitz-Einheit)
+    h = (1, 1, 1, 1)/2, Bezug 1+i e8  : rho^2 = 0.500000, K = 0.666667, Phase 0.785398 (pi/4 = 0.785398), Rang 2, bleibt in N: True
+    h = (1, 1, 1, 1)/2, Bezug e7-i e15: rho^2 = 0.500000, K = 0.666667, Phase 0.785398 (pi/4 = 0.785398), Rang 2, bleibt in N: True
+    h = (-1, -1, -1, -1)/2, Bezug 1+i e8  : rho^2 = 0.500000, K = 0.666667, Phase 0.785398 (pi/4 = 0.785398), Rang 2, bleibt in N: True
+    h = (-1, -1, -1, -1)/2, Bezug e7-i e15: rho^2 = 0.500000, K = 0.666667, Phase 0.785398 (pi/4 = 0.785398), Rang 2, bleibt in N: True
+    h = (1, -1, 1, 1)/2, Bezug 1+i e8  : rho^2 = 0.500000, K = 0.666667, Phase 0.785398 (pi/4 = 0.785398), Rang 2, bleibt in N: True
+    h = (1, -1, 1, 1)/2, Bezug e7-i e15: rho^2 = 0.500000, K = 0.666667, Phase 0.785398 (pi/4 = 0.785398), Rang 2, bleibt in N: True
+    Konjugation mit h auf den Achsen: e7 -> [0.0, 0.0, 1.0]; e8 -> [1.0, 0.0, 0.0]; e15 -> [0.0, 1.0, 0.0]
+
+(7) Majorana-Bilinear des Familien-Dubletts N: Zerlegung von N (x) N unter der Familien-su(2)
+    Casimir auf dem symmetrischen Teil (dim 3): +2.0000+0.0000i (Vektor: 2); auf dem antisymmetrischen (dim 1): +0.0000+0.0000i (Singulett: 0)
