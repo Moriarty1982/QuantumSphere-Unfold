@@ -354,6 +354,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 14.11.2026: Gegenterm-Register Phase 2 (LaTeX-Anhang, Guard-Vermerke, harte Exportprüfung) in QAM (DE/EN).
 
+14.11.2026: CT-003 (Ladungsachse e8) eingetragen, Platzhalter-Bilanz in Forschungsstand und QAM (DE/EN); kein OP-Abschluss.
+
 13.11.2026, spät: Runde v4.10.0-r12 (Statusvermerke) in Forschungslinie, Inhalt, Content-overview, Offene-Probleme und Forschungsstand; Fäden Potential und T₁₂ in Forschungsstand.
 
 13.11.2026, spät: Nachtrag Auswahlprinzip (Koide als qubitartige Treue; Mittelwert erklärt die Genauigkeit nicht) in Forschungsstand; kein OP-Abschluss.

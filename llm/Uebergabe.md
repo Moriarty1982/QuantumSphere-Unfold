@@ -2,12 +2,15 @@
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.**
 
 ## Stand vom 14.11.2026 (Claude Opus)
-- **GitHub:** **PR #116 gemergt als a3fe755** (CT-001 und CT-002 im Gegenterm-Register, H102 erbt sieben Guards), auf
-  „PR 116 mergen“; Checks vorher grün (lean, tests ubuntu/windows); Läufe nach dem Merge alle erfolgreich (QAM batch,
-  QAM TeX, QAM Lean, Wiki-Sync, Zwei-PDF). Zweig gelöscht. **Offen: PR #117** (T11/QAM-Shift zu CT-002).
-  Am 14.11. außerdem gemergt: #115 (990a3cc, I1-String-Brücke), #114 (44cdcd1, Register Schema v7), #113 (10d670e),
-  #112 (ad7756f), #111 (c247ea3), #110 (8606691), #109 (963f557), #108 (91cbb69). Am 13.11.: #104–#107.
-- **Lokal:** Der Hauptordner steht auf `main` = a3fe755 (vorgespult), dazu dieser Übergabe-Commit, nur lokal.
+- **GitHub:** **PR #117 gemergt als f4a62cf** (CT-002: T11 trägt die euklidische Lesart, kein Grund für eine Querung,
+  Suche ruht) und **PR #118 gemergt als 60ba894** (Register Phase 2: LaTeX-Anhang, Guard-Vermerke, harte
+  Exportprüfung; Auswahl folgt depends-on-counterterm), beide auf „117 und 118 mergen“. #118 wurde nach #117 mit main
+  zusammengeführt (Konflikt nur in `wiki/Wiki-Pflege.md`, beide Einträge behalten); danach waren alle Checks grün. Alle
+  Läufe nach den Merges erfolgreich. Zweige gelöscht. **Offen: PR #119** (CT-003 und Platzhalter-Bilanz).
+  Am 14.11. außerdem gemergt: #116 (a3fe755, CT-001/CT-002 eingetragen), #115 (990a3cc), #114 (44cdcd1, Register
+  Schema v7), #113 (10d670e), #112 (ad7756f), #111 (c247ea3), #110 (8606691), #109 (963f557), #108 (91cbb69).
+  Am 13.11.: #104–#107.
+- **Lokal:** Der Hauptordner steht auf `main` = 60ba894 (zusammengeführt), dazu dieser Übergabe-Commit, nur lokal.
   Unversioniert: `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf` (jetzt wirklich im Hauptordner).
 - **Letzte Runde:** v4.10.0-r12 (Statusvermerke) aus PR #106.
 - **Zuletzt vergebene Hypothese:** H103 (vorab 45314b2, k225).
@@ -19,11 +22,17 @@
   - H102 ist offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem 13.11.2026 (`k224_test_h102.py m_tau sigma`).
   - H101 ist widerlegt. H100 ist offen; am 13.11. war NuFIT 6.1 weiterhin die neueste Version.
   - Als Nächstes ist H104 frei, das letzte k-Skript ist k225.
-- **Offene Autorentscheidungen:** „PR 117 mergen“ (Zweig `research/ct002-t11`).
+- **Offene Autorentscheidungen:** „PR 119 mergen“ (Zweig `research/ct003-bilanz`).
+- **Platzhalter-Bilanz (14.11., `notes/research/counterterms/Bilanz_2026_11_14.md`):** Neu eingetragen ist CT-003, die
+  Ladungsachse e8 statt e7 auf den Sedenionen (placeholder, drei Guards). Daran hängen S-N (neutrales Qubit), S-2T
+  (über S-N) und S-GEN (zwei Generationen); sie erben je drei Guards. Der Elektron-Abstand π/12 − θ_e ist ΔΦ/3 und hängt
+  an CT-001/CT-002, kein eigener Eintrag. Stand: drei Einträge, keiner strukturell abgeglichen. Der LaTeX-Export der
+  echten Auswahl besteht die harte Prüfung (3 Einträge, 4 Vermerke), übersetzt aber nicht, weil die Aussagetexte aus
+  Markdown stammen; der Anhang selbst übersetzt sauber.
 - **Counterterm-Registry (14.11.):** Der Autor will damit Rapid Prototyping betreiben: Gegenterme setzen und später
   durch Herleitungen ersetzen. Phase 1 ist seit PR #114 gemergt (Schema, Validator, Weitergabe der Guards,
   Fixture CT-000-TEST). Ergänzt um die Herkunft der Fitdaten, eine Blindheitsprüfung, Δ als Prüfstein sowie diskrete
-  Konventionswahlen mit Versuchszahl. Phase 2 ist die Exporttabelle.
+  Konventionswahlen mit Versuchszahl. Phase 2 ist seit PR #118 auf main (Exporttabelle, Guard-Vermerke, harte Exportprüfung).
   **Erster echter Platzhalter (Autorenwahl): CT-001, die Einheit bei ΔΦ = γ_M/2.** Der Entwurf liegt unter
   `notes/research/counterterms/CT-001_gamma_halbe_einheit_entwurf.md`; Eingetragen am 14.11. (`register_ct001_ct002_2026_11_14.py`, Bericht
   `register_2026_11_14_report.json`, reproduzierbar): CT-001 partially_constrained, CT-002 placeholder. H102 erbt
