@@ -247,3 +247,31 @@ Frames. Kann ε an diesen Orthogonalen hängen? Erkundung, nicht blind, `frame_c
   Photon-Frames, und zwar ohne Wahl. Offen bleibt dieselbe eine Stelle: ob die Frame-Ebene eine von ihr
   unabhängige komplexe Einheit hat bzw. auf den Slotindex wirkt (Annahme r33). Beide Wege zum Oktanten über die
   Frames scheitern bisher genau dort.
+
+## Nachtrag 6 (15.11.): Idee des Autors, Levi-Civita-Symbol aus zyklisch rotierten Frame-Kreuzprodukten
+
+Präzisierung des Autors: Das Kreuzprodukt aus (M, T, P) bilden und nur die Reihenfolge im Tupel zyklisch rotieren,
+um so ein Levi-Civita-Symbol zu erhalten. Erkundung, nicht blind, `frame_levi_civita.py`.
+
+- **Kriterium:** Ein Levi-Civita-Symbol liegt vor, wenn die Strukturkonstanten c in [X_i, X_j]/2 = c X_k unter
+  zyklischer Rotation des Tupels gleich bleiben (und unter Vertauschung das Vorzeichen wechseln). Das ist genau
+  der Fall einer Drehalgebra so(3) = su(2).
+- **Gewichtsvektoren:** M, T und P liegen in der (a, b)-Ebene und haben Rang 2. Ein dreidimensionales
+  Kreuzprodukt gibt es dort nicht. Es muss an den Frame-Abbildungen ansetzen.
+- **Native Frame-Abbildungen (R, T, J_B):** Die Konstanten sind (+1, −1, +1), exakt. Die zyklische Rotation
+  kippt ein Vorzeichen, und zwar an der Tachyon-Abbildung (R² = −1). Keine reelle Umskalierung ändert das
+  (64 Fälle geprüft); es ist die Signatur von so(2, 1). **Kein Levi-Civita-Symbol.**
+- **Mit unabhängiger Einheit i (iR statt R):** Alle drei Konstanten sind gleich (i), das Tupel ist zyklisch
+  invariant, und es entsteht ein Levi-Civita-Symbol (su(2)). Dann gilt automatisch:
+  - die drei Frame-Achsen sind orthogonal, die zyklische Rotation ist ein Element der Ordnung 3 um die
+    Diagonale, und jede Achse liegt unter arccos(1/√3) zu ihr;
+  - die Achsenzustände bilden das Oktanten-Tripel: mittlere Treue 1/2, K = 2/3, Bargmann-Phase π/4 (exakt
+    nachgerechnet).
+
+  **Ein Levi-Civita-Symbol auf den Frames wäre also genau das gesuchte Profil.**
+- **Folge:** Die Idee des Autors macht die Lücke so scharf wie bisher keine andere Formulierung. Es fehlt genau ein
+  Vorzeichen: das der Tachyon-Abbildung im zyklischen Kreuzprodukt. Es lässt sich nur mit einer vom Frame
+  unabhängigen komplexen Einheit beheben, also an der Annahme r33.
+- **Einschränkung:** Das Oktanten-Tripel wäre hier die Bahn eines Zustands über die drei Frame-Achsen. Die drei
+  geladenen Leptonen sind aber alle Materie im Frame M. Ob und wie die Frame-Bahn mit den Generationen
+  zusammenhängt, ist damit nicht gesagt.

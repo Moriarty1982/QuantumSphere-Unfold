@@ -1,0 +1,6 @@
+Frame-Abbildungen (R, T, J_B): {'[R,T]': (1+0j), '[T,J_B]': (-1+0j), '[J_B,R]': (1+0j)}
+mit i*R statt R (unabh. i)    : {'[iR,T]': 1j, '[T,J_B]': 1j, '[J_B,iR]': 1j}
+su(2) (sx, sy, sz)/i zum Vergleich: {'[sx/i,sy/i]': (1+0j), '[sy/i,sz/i]': (1+0j), '[sz/i,sx/i]': (1+0j)}
+keine reelle Umskalierung macht (R, T, J_B) zyklisch invariant: geprueft (64 Faelle)
+su(2)-Achsenzustaende: mittlere Treue 0.5 K = 0.666666666667 Bargmann/pi = 0.25
+Gewichtsvektoren M, T, P in der (a,b)-Ebene: Rang 2 (kein 3D-Kreuzprodukt)
