@@ -36,6 +36,11 @@
   desselben Sektors. Die einheitenfreie Weise (A/r², wie Ω = A/R²) gibt γ/2 für alle j. Vorschlag: CT-001
   `structurally_matched` unter dem Guard „Phase = normierte Sektorfläche“. CT-002 heißt jetzt: γ_M als
   Öffnungswinkel, warum? Offen ist auch, welche Messweise wofür gilt, denn r10.1 misst in 8πGħ.
+  **Schritt 3 (`ct002_gamma_angle_2026_11_14.*`):** Der Wert von γ_M ist nativ: Die Zählregel ist in der Sektorlesart
+  eine Gleichung für den Öffnungswinkel. Die Winkelbedeutung steckt im Unruh-Bild r10.1, wo der Boltzmann-Exponent die
+  γK-Phase eines vollen euklidischen Umlaufs ist. Offen ist nur noch die Kopplung (CT-002 neu gefasst): Warum
+  durchläuft der Lepton-Fluss genau einen Radianten bei Spingewicht ½? Die Daten geben κ = 0,99964 ± 0,00016 rad,
+  also 2,3σ.
 - **14.11., Hurwitz-Einheiten auf N** (`op3_hurwitz_2t_neutral_qubit_2026_11_14.*`, Erkundung, nicht blind):
   Die 24 Hurwitz-Einheiten von H_n wirken von rechts treu auf N als 2T (projektiv A4). N ist also ein natives
   2T-Dublett. Die ψ-Achse e8 ist zweizählig, die vier dreizähligen Achsen liegen unter 1/√3 dazu. Der Bezug ist ein

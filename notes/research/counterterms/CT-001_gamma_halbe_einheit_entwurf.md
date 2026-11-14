@@ -122,3 +122,42 @@ Konstruktion: Die Tabelle ist aus denselben Formeln entstanden. Neu ist die Ordn
 **Bewertung.** Der Hinweis trägt. Der Konventionsstreit „½, 1,73 oder 43,5“ löst sich als drei Messweisen eines
 Sektors auf, und die einheitenfreie liefert γ/2. Hergeleitet ist damit die **Messweise** (unter dem genannten Guard),
 nicht die Identifikation des Winkels mit γ_M. Alles ist nachträglich. OP3/OP4 bleiben offen, H102 ist unberührt.
+
+## Schritt 3: Herleitung von γ_M als Winkel gesucht (14.11.2026, Erkundung, nicht blind)
+Autor: „dann such mal bitte nach der Herleitung vom γ_M-Winkel“. Skript `../ct002_gamma_angle_2026_11_14.py`, Ausgabe
+`..._out.txt`.
+
+**Vorwissen.** `op3_flux_two_thirds_2026_11_13.md`, Punkt 3: Literatur-Lesart über die Ashtekar-Barbero-Verbindung
+A = Γ + γK. Die γK-Holonomie gibt einem Spin-½ die Phase γκ/2, mit κ der aufintegrierten äußeren Krümmung. γ/2
+verlangt κ = 1 rad, ein Grund fehlte. Im Companion trat γ bis dahin nur in der Zählregel auf (r09/r10).
+
+**(1) Der Wert ist schon nativ.** Die Zählregel Σ_j 2 e^{−2πγ a(j)} = 1 (alle Spins, Frame M) ist in der Sektorlesart
+von Schritt 2 eine Gleichung für den Öffnungswinkel: Σ_j 2 e^{−A_j(θ)/4} = 1 mit A_j = r_j²θ/2 und r_j² = 16π a(j).
+Ihre Wurzel ist θ = 0,237533 = γ_M. **γ_M ist also der Öffnungswinkel, bei dem die Punktierungssektoren die
+Boltzmann-Summe 1 haben.** Das ist eine Umformung und keine neue Information. Es zeigt aber: Für den Wert braucht CT-002
+keinen eigenen Platzhalter, er erbt nur die Annahmen der Zählregel (Guard aus r10.3: Zählregel je Frame, „no reason
+known“).
+
+**(2) Die Bedeutung als Winkel ist im Unruh-Bild von r10.1 angelegt.** Euklidisch ist der Rindler-Horizont das Zentrum
+eines Kreises vom Radius ℓ, die euklidische Zeit ist der Drehwinkel φ. Entlang dieses Kreises ist die äußere Krümmung
+K = 1/ℓ, also κ = ∮K ds = φ. Die γK-Phase für das Spingewicht w über den Winkel φ ist γ·w·φ. Für einen vollen Umlauf
+(φ = 2π) und w = a(j) ist das 2πγ a(j), **genau der Boltzmann-Exponent der Zählregel** (numerisch für j = ½ und 1).
+In dieser Lesart ist γ die γK-Phase pro Radiant euklidischer Drehung und pro Einheit Spingewicht. Damit ist γ ein
+Winkel im eigentlichen Sinn.
+
+**(3) Was für den Lepton-Fluss bleibt.** Derselbe γK-Mechanismus gibt γ/2, wenn w·κ = ½. Mit w = |m| = ½ verlangen die
+Massen κ = 0,99964 ± 0,00016 rad; mit w = a(½) ist es κ = 0,57714 rad, was dieselbe Bedingung ist. Die ½ aus Schritt 2
+(normierte Sektorfläche A/r² = θ/2) ist in dieser Sprache genau w·κ = ½. Sektorlesart und γK-Holonomie sind also
+**dieselbe Aussage in zwei Sprachen**.
+
+**Stand der Platzhalter nach Schritt 3**
+- **Wert von γ_M:** nativ aus der Zählregel, mit deren offenen Annahmen (r10.3).
+- **γ als Winkel:** angelegt im Unruh-Bild von r10.1 (γK-Phase pro Radiant und Spingewicht). Das ist eine Lesart,
+  numerisch konsistent.
+- **CT-002, neu gefasst als Kopplung:** Warum durchläuft der Lepton-Fluss genau **einen Radianten** euklidischer
+  Drehung bei Spingewicht ½? Gleichwertig: Warum ist er die normierte Fläche eines Punktierungssektors? Eine Herleitung
+  dafür ist **nicht gefunden**. Die Daten (κ = 0,99964 ± 0,00016) liegen 2,3σ neben 1 rad, das ist die Spannung von H102.
+
+**Bewertung.** Die Suche hat γ_M als Winkel **eingeordnet, nicht hergeleitet**. Der Zahlenwert und die
+Winkelbedeutung sind im Companion angelegt (Zählregel und Unruh-Bild). Offen ist allein die Kopplung des Lepton-Flusses
+an genau einen Radianten. Alles ist nachträglich. OP3/OP4 bleiben offen, H102 ist unberührt.

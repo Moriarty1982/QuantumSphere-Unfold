@@ -1935,6 +1935,14 @@ Erkundung $\eta$, ohne Datenvergleich:
   einheitenfreie Messweise ist die für Phasen übliche ($\Omega=A/R^2$) und gibt $\gamma/2$. Die ½ ist
   damit Sektorgeometrie. Offen bleibt, warum der Öffnungswinkel $\gamma_M$ ist (CT-002). Die
   Zählregel r10.1 misst in $8\pi G\hbar$; welche Messweise wofür gilt, ist die nächste Frage.
+- Schritt 3 (14.11., Herleitung von $\gamma_M$ als Winkel gesucht): Der Wert ist nativ. Die
+  Zählregel $\sum_j 2e^{-2\pi\gamma a(j)}=1$ ist in der Sektorlesart eine Gleichung für den
+  Öffnungswinkel, mit Wurzel $\gamma_M$. Im Unruh-Bild von r10.1 ist $\oint K\,ds$ der euklidische
+  Drehwinkel; der Boltzmann-Exponent $2\pi\gamma a(j)$ ist die $\gamma K$-Phase eines vollen Umlaufs.
+  $\gamma$ ist also die $\gamma K$-Phase pro Radiant und Spingewicht. Der Lepton-Fluss $\gamma/2$
+  verlangt Spingewicht ½ über genau einen Radianten (Daten: $\kappa=0{,}99964\pm0{,}00016$, also
+  2,3σ). Sektorlesart und $\gamma K$-Holonomie sind dieselbe Aussage. Offen ist nur die Kopplung:
+  Warum durchläuft der Lepton-Fluss einen Radianten? Eingeordnet, nicht hergeleitet.
 
 **Runde v4.10.0-r12 und offene Fäden** (13.11.2026). Die Runde r12
 (Statusvermerke) hält fest: Das historische Koide-OP3 ist nicht
