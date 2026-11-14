@@ -54,15 +54,16 @@
     - **(c)** die zweite Familienstruktur mit neutralem Qubit (Profil unten).
   - Auswahlprinzip (`op3_selection_principle_2026_11_13.*`, `op3_flux_two_thirds_2026_11_13.*`): Treue 1/2 und Fluss
     2/3 rad bleiben offen. γ/2 ist nur mit einer Konventionswahl erreichbar, die Einheit ist frei.
-- **Aufgeräumt (14.11., auf „Erst aufräumen“):**
-  - entfernt: Worktree `qam-mml-mma-math-473bc4`;
-  - lokal und auf GitHub gelöscht: die Zweige `research/v5-octant-weitersuche` und `research/v5-auswahlprinzip`;
-  - auf GitHub gelöscht: `research/v5-sedenion-ladung-e8`.
-
-  Alle drei waren vollständig in `main` enthalten. Die PDF `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf` lag
-  nur im entfernten Worktree und ist vorher in den Hauptordner kopiert worden (byte-gleich geprüft).
-  Übrig sind der Worktree dieser Sitzung (`anthropic-skills-weitermachen-08cc3e`, Zweig gemergt; wird mit dem
-  Archivieren der Sitzung entfernt) und die gemergten Zweige `research/v5-rf-nachtrag` und `research/v5-generationen-qstar` auf GitHub (können weg). Nicht angefasst: `wizardly-mendel-c790d3` und `github-main`.
+- **Aufgeräumt (14.11.):** Alle in `main` gemergten Zweige sind lokal und auf GitHub gelöscht. Auf GitHub waren das
+  20, darunter `codex/*`, `research/v4.10-r06` … `r11` und `research/v5-*`. Der Worktree `qam-mml-mma-math-473bc4` ist
+  entfernt; die PDF von dort liegt jetzt im Hauptordner.
+  - Bleiben, weil nicht gemergt: auf GitHub `codex/op3-triality-mass-bridge`, `codex/v5-zenodo-release` und
+    `codex/v5-zenodo-upload-record`; lokal `claude/quantenphysik-paper-herleitung-e723a3` und
+    `claude/wizardly-mendel-c790d3`.
+  - Der Zweig dieser Sitzung, `claude/anthropic-skills-weitermachen-08cc3e`, ist gemergt, aber noch ausgecheckt. Er
+    verschwindet mit dem Worktree beim Archivieren.
+- **Dauerauftrag des Autors (14.11.):** „bitte lösche zweige die weg können immer“. Gemergte Zweige ohne offenen PR
+  werden nach jedem Merge ohne Rückfrage gelöscht, lokal und auf GitHub. Nicht gemergte bleiben stehen.
 
 ## Früher am 13.11. erarbeitet, alles gemergt
 - **H99b** mit NuFIT-6.1-Primärtabelle: verträglich, +1,80σ (nicht blind). **H100** vorab: R im nächsten NuFIT-Fit,
