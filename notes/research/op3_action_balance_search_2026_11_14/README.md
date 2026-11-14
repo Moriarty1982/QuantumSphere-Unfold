@@ -275,3 +275,26 @@ um so ein Levi-Civita-Symbol zu erhalten. Erkundung, nicht blind, `frame_levi_ci
 - **Einschränkung:** Das Oktanten-Tripel wäre hier die Bahn eines Zustands über die drei Frame-Achsen. Die drei
   geladenen Leptonen sind aber alle Materie im Frame M. Ob und wie die Frame-Bahn mit den Generationen
   zusammenhängt, ist damit nicht gesagt.
+
+## Nachtrag 7 (15.11.): Präzisierung des Autors, M×P×T kann etwas anderes sein als M×T×P
+
+Gemeint ist das geordnete Dreifachprodukt: Seine Reihenfolge soll zählen, und der Unterschied zwischen den
+Orientierungen ist das Levi-Civita-artige Objekt. Erkundung, nicht blind, `frame_triple_order.py`.
+
+- **Geordnete Produkte der Frame-Abbildungen:** Sie sind exakt **±1**. R·T·J_B = T·J_B·R = J_B·R·T = +1, die drei
+  gegenläufigen Reihenfolgen geben −1. Das ist ein natives Levi-Civita-Symbol: Es ist zyklisch invariant und
+  ungerade unter Vertauschung. Inhaltlich kodiert es nur die Relation J_B = R∘T, also die Orientierung des
+  Frame-Tripels, aber kein Vorzeichen fehlt hier. (Nachtrag 6 prüfte den Kommutator, nicht das geordnete
+  Produkt.)
+- **Orientierungsungerader Teil als Phase:** Für drei Zustände ist die Bargmann-Invariante
+  ⟨1|2⟩⟨2|3⟩⟨3|1⟩ genau ein solches geordnetes Dreifachprodukt. Ihre Phase wechselt das Vorzeichen, wenn man die
+  Reihenfolge umkehrt.
+  - Achsenzustände einer su(2): x-y-z gibt +π/4, x-z-y gibt −π/4. Der Unterschied zwischen M×T×P und M×P×T
+    wäre dort genau das Vorzeichen der Koide-Phase. Das entspricht der Orientierung S gegen S⁻¹ bei Codex.
+  - Frame-Zustände in der Frame-Ebene (Winkel arctan(b/a) nach r85.3: M 16,8°, P 45°, T 73,2°): Betrag 0,4297,
+    Phase **0 in beiden Reihenfolgen**. Die Frame-Ebene ist nach r51.1(c) kommutativ (≅ span(1, e7)). Die
+    Zustände liegen auf einem Großkreis, und die Reihenfolge spielt keine Rolle.
+- **Folge:** Die Idee trägt als Orientierung, denn das Vorzeichen ±1 ist nativ vorhanden. Als Phase trägt sie
+  nicht: Für π/4 statt 0 muss das Dreifachprodukt in einer nichtkommutativen Ebene gebildet werden
+  (quaternionisch oder mit unabhängigem i). In der kommutativen Frame-Ebene unter r33 ist M×T×P = M×P×T.
+  Wieder dieselbe Stelle.

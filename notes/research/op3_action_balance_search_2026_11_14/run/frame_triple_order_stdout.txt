@@ -1,0 +1,9 @@
+RxTxJ_B = +1
+RxJ_BxT = -1
+TxRxJ_B = -1
+TxJ_BxR = +1
+J_BxRxT = +1
+J_BxTxR = -1
+Winkel/Grad: {'M': np.float64(16.8), 'T': np.float64(73.2), 'P': np.float64(45.0)}
+Frame-Ebene (kommutativ, r51.1(c)): M-T-P (np.float64(0.429702), np.float64(0.0))  M-P-T (np.float64(0.429702), np.float64(0.0))
+su(2)-Achsen: x-y-z (np.float64(0.353553), np.float64(0.25))  x-z-y (np.float64(0.353553), np.float64(-0.25))
