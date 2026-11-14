@@ -30,6 +30,12 @@
   0,49974 bis 0,49990). ΔΦ ist ein äußerer Fluss, denn das Qubit-Tripel selbst gibt Ω/2 ≈ π/4. Als minimale
   Dirac-Phase folgt κs = 1/2 pro Steradiant. CT-001 wird `partially_constrained` (Guard: Monopol angenommen), dazu
   kommt der neue Restplatzhalter CT-002, Raumwinkel Ω_ext = γ_M. Nächste Frage: Ist γ_M im Companion als Winkel lesbar?
+  **Schritt 2 (Hinweis des Autors: Kreisfläche zur Bogenlänge gegen eingeschlossenen Winkel,
+  `ct001_sector_reading_2026_11_14.*`):** Der Sektor A = r²θ/2 gibt A/r² = θ/2. Liest man A_j aus r10 als Sektor mit
+  Öffnungswinkel γ (r_j² = 16π a(j), unabhängig von γ), sind γ/2, das √3-fache und das 43,5-fache drei Messweisen
+  desselben Sektors. Die einheitenfreie Weise (A/r², wie Ω = A/R²) gibt γ/2 für alle j. Vorschlag: CT-001
+  `structurally_matched` unter dem Guard „Phase = normierte Sektorfläche“. CT-002 heißt jetzt: γ_M als
+  Öffnungswinkel, warum? Offen ist auch, welche Messweise wofür gilt, denn r10.1 misst in 8πGħ.
 - **14.11., Hurwitz-Einheiten auf N** (`op3_hurwitz_2t_neutral_qubit_2026_11_14.*`, Erkundung, nicht blind):
   Die 24 Hurwitz-Einheiten von H_n wirken von rechts treu auf N als 2T (projektiv A4). N ist also ein natives
   2T-Dublett. Die ψ-Achse e8 ist zweizählig, die vier dreizähligen Achsen liegen unter 1/√3 dazu. Der Bezug ist ein

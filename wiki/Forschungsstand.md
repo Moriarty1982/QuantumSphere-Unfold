@@ -1926,6 +1926,15 @@ Erkundung $\eta$, ohne Datenvergleich:
   Monopol-Annahme und der Raumwinkel $\Omega_{\rm ext}=\gamma_M$ (neuer Restplatzhalter). Die
   2,3σ-Spannung von H102 bleibt bestehen. Die Spannung zu r10 lautet jetzt: Ist $\gamma_M$ auch
   als Winkel lesbar?
+- Schritt 2 (14.11., Hinweis des Autors „Kreisfläche zur Bogenlänge gegen eingeschlossenen
+  Winkel“): Ein Sektor mit Öffnungswinkel $\theta$ hat $A=r^2\theta/2$, also $A/r^2=\theta/2$. Liest
+  man den Flächenbeitrag $A_j=8\pi\gamma a(j)\ell_P^2$ als Sektor mit Öffnungswinkel $\gamma$
+  (Radius $r_j^2=16\pi a(j)\ell_P^2$, unabhängig von $\gamma$), sind die drei Konventionen von
+  CT-001 ein Sektor, dreimal gemessen: relativ zum eigenen Kreis $\gamma/2$ (für alle $j$), in
+  $8\pi G\hbar$ das $\sqrt3$-fache, in $G\hbar$ (r10) das $8\pi\sqrt3=43{,}5$-fache. Die
+  einheitenfreie Messweise ist die für Phasen übliche ($\Omega=A/R^2$) und gibt $\gamma/2$. Die ½ ist
+  damit Sektorgeometrie. Offen bleibt, warum der Öffnungswinkel $\gamma_M$ ist (CT-002). Die
+  Zählregel r10.1 misst in $8\pi G\hbar$; welche Messweise wofür gilt, ist die nächste Frage.
 
 **Runde v4.10.0-r12 und offene Fäden** (13.11.2026). Die Runde r12
 (Statusvermerke) hält fest: Das historische Koide-OP3 ist nicht

@@ -82,3 +82,43 @@ Konventionen der Tabelle oben spielen dann keine Rolle mehr.
 **Bewertung.** Die Methode hat den Platzhalter **verkleinert, nicht beseitigt**. Aus „Einheit frei unter drei
 Konventionen“ wurde „minimale Dirac-Phase (Annahme) und Raumwinkel = γ_M (offen)“. Hergeleitet ist nichts. Jeder
 Schritt ist nachträglich, mit bekanntem m_τ. OP3/OP4 bleiben offen, H102 ist unberührt.
+
+## Schritt 2: Fläche gegen Winkel am Kreissektor (14.11.2026, Erkundung, nicht blind)
+Hinweis des Autors: „Es könnte was damit zu tun haben, dass wir einmal eine Kreisfläche im Verhältnis zur Bogenlänge
+und einmal den eingeschlossenen Winkel messen.“ Skript `../ct001_sector_reading_2026_11_14.py`, Ausgabe `..._out.txt`.
+
+**Geometrie.** Ein Kreissektor mit Öffnungswinkel θ und Radius r hat die Fläche A = r²θ/2 und den Bogen s = rθ. Also
+gilt A/s = r/2 und A/r² = θ/2. Die **½ ist die Sektorformel**, keine Konvention.
+
+**Lesart.** Der Flächenbeitrag einer Punktierung aus r10, A_j = 8πγ a(j) ℓ_P², ist die Fläche eines Sektors mit
+Öffnungswinkel γ. Sein Radius ist r_j² = 2A_j/γ = 16π a(j) ℓ_P², **unabhängig von γ**. Dieselbe Fläche lässt sich
+dreimal messen:
+
+| Messweise | Wert (j = 1/2) | Abhängig von |
+|---|---|---|
+| (i) relativ zum eigenen Kreis, A/r² | γ/2 = 0,118766 | nichts (gleich für alle j) |
+| (ii) in Einheiten 8πGħ | γ a(j) = 0,2057 (√3-fach) | j |
+| (iii) in Einheiten Għ (r10) | 8πγ a(j) = 5,170 (43,5-fach) | j und Einheiten |
+
+Damit sind alle drei Zeilen der Konventionstabelle **ein und derselbe Sektor, verschieden gemessen**. Die Faktoren
+1,73 = 2a(½) = √3 und 43,5 = 16π a(½) = 8π√3 sind die Umrechnungen. Ehrlich gesagt ist diese Übereinstimmung teilweise
+Konstruktion: Die Tabelle ist aus denselben Formeln entstanden. Neu ist die Ordnung, nicht die Zahlen.
+
+**Was das für CT-001 bedeutet.**
+- Nur die Messweise (i) ist frei von Einheit und Spin. Für eine **Phase**, also eine dimensionslose Größe, ist sie die
+  natürliche Wahl. Es ist dieselbe Regel wie bei der Bargmann-/Berry-Phase (Raumwinkel Ω = A/R²), die im Projekt
+  schon π/4 liefert.
+- Die ½ braucht damit weder die Wahl |m| = 1/2 noch eine minimale Dirac-Ladung (Schritt 1). Sie folgt aus der
+  Sektorgeometrie, für jedes j.
+- **CT-001 (Einheit):** Vorschlag `structurally_matched` unter dem Guard „Phase = normierte Sektorfläche“
+  (GUARD-CT001-SEKTORNORM), der als Regel im Projekt schon gilt. Δ_struct = 0 in der Lesart. Die 2,3σ-Datenspannung
+  (verlangt 0,49982) betrifft H102, nicht die Einheit.
+- **CT-002 (Rest) geschärft:** γ_M ist der **Öffnungswinkel des Punktierungssektors**. Warum gerade γ_M (Zählregel M)
+  und warum dieser Sektor den Lepton-Fluss trägt, bleibt offen.
+- **Spannung zu r10, jetzt benannt:** Die Zählregel von r10.1 (Unruh, E·β = 2πγ a(j)) misst die Fläche in der Weise
+  (ii), also γ a(j) pro Radiant. Der Lepton-Fluss verlangt die Weise (i). Beide messen denselben Sektor, offen ist,
+  welche Messweise für welche Größe gilt.
+
+**Bewertung.** Der Hinweis trägt. Der Konventionsstreit „½, 1,73 oder 43,5“ löst sich als drei Messweisen eines
+Sektors auf, und die einheitenfreie liefert γ/2. Hergeleitet ist damit die **Messweise** (unter dem genannten Guard),
+nicht die Identifikation des Winkels mit γ_M. Alles ist nachträglich. OP3/OP4 bleiben offen, H102 ist unberührt.
