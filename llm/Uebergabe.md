@@ -2,15 +2,12 @@
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.**
 
 ## Stand vom 14.11.2026 (Claude Opus)
-- **GitHub:** **PR #115 gemergt als 990a3cc** (I1-String-Brücke, Erkundung), auf „PR 115 mergen“; Läufe
-  43545271868 (Wiki-Sync) und 43545271712 (Zwei-PDF) erfolgreich. Zweig gelöscht. **Offen: PR #116** (Eintragung CT-001/CT-002).
-  **PR #114 gemergt als 44cdcd1** (Gegenterm-Register im Aussagenspeicher, Schema v7, Phase 1). Gemergt hat ihn die
-  Sitzung „Counterterm-Registry Phase 1“ nach grünen Checks (lean, tests, tests ubuntu, tests windows). Neu sind
-  `qam/store/counterterms.py`, `schema_v7.sql`, `catalogue_v7.json` und `test_counterterms.py`; Doku in
-  `qam/store/README.md` und `wiki/QAM.md`.
-  Am 14.11. außerdem gemergt: #113 (10d670e), #112 (ad7756f), #111 (c247ea3), #110 (8606691), #109 (963f557),
-  #108 (91cbb69). Am 13.11.: #104–#107.
-- **Lokal:** Der Hauptordner steht auf `main` = 990a3cc (vorgespult), dazu dieser Übergabe-Commit, nur lokal.
+- **GitHub:** **PR #116 gemergt als a3fe755** (CT-001 und CT-002 im Gegenterm-Register, H102 erbt sieben Guards), auf
+  „PR 116 mergen“; Checks vorher grün (lean, tests ubuntu/windows); Läufe nach dem Merge alle erfolgreich (QAM batch,
+  QAM TeX, QAM Lean, Wiki-Sync, Zwei-PDF). Zweig gelöscht. **Keine offenen PRs.**
+  Am 14.11. außerdem gemergt: #115 (990a3cc, I1-String-Brücke), #114 (44cdcd1, Register Schema v7), #113 (10d670e),
+  #112 (ad7756f), #111 (c247ea3), #110 (8606691), #109 (963f557), #108 (91cbb69). Am 13.11.: #104–#107.
+- **Lokal:** Der Hauptordner steht auf `main` = a3fe755 (vorgespult), dazu dieser Übergabe-Commit, nur lokal.
   Unversioniert: `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf` (jetzt wirklich im Hauptordner).
 - **Letzte Runde:** v4.10.0-r12 (Statusvermerke) aus PR #106.
 - **Zuletzt vergebene Hypothese:** H103 (vorab 45314b2, k225).
@@ -22,7 +19,7 @@
   - H102 ist offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem 13.11.2026 (`k224_test_h102.py m_tau sigma`).
   - H101 ist widerlegt. H100 ist offen; am 13.11. war NuFIT 6.1 weiterhin die neueste Version.
   - Als Nächstes ist H104 frei, das letzte k-Skript ist k225.
-- **Offene Autorentscheidungen:** „PR 116 mergen“ (Eintragung CT-001/CT-002, Zweig `research/ct-eintragung`).
+- **Offene Autorentscheidungen:** keine.
 - **Counterterm-Registry (14.11.):** Der Autor will damit Rapid Prototyping betreiben: Gegenterme setzen und später
   durch Herleitungen ersetzen. Phase 1 ist seit PR #114 gemergt (Schema, Validator, Weitergabe der Guards,
   Fixture CT-000-TEST). Ergänzt um die Herkunft der Fitdaten, eine Blindheitsprüfung, Δ als Prüfstein sowie diskrete
