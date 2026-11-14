@@ -3,7 +3,8 @@
 
 ## Stand vom 14.11.2026 (Claude Opus, zuletzt Claude Fable)
 - **GitHub:** **PR #121 gemergt als f39ca00** (Runde v4.10.0-r13), auf „pr 121 mergen“. Läufe danach erfolgreich
-  (Wiki-Sync, LaTeX-Build, Zwei-PDF). Zweig auf GitHub gelöscht. **Keine offenen PRs.** Davor #120 (7d54ceb, vier
+  (Wiki-Sync, LaTeX-Build, Zwei-PDF). Zweig auf GitHub gelöscht. **Offen: PR #122** (Gesamtbild nach r13, Fourier-Erkundung zu OP3,
+  H104; Zweig `docs/wiki-gesamtbild-r13`). Merge nur auf „PR 122 mergen“. Davor #120 (7d54ceb, vier
   OP3-Erkundungen) und #119 (70da32a, CT-003).
   Am 14.11. außerdem gemergt: #118 (60ba894, Register Phase 2), #117 (f4a62cf, CT-002/T11), #116 (a3fe755), #115
   (990a3cc), #114 (44cdcd1), #113 (10d670e), #112 (ad7756f), #111 (c247ea3), #110 (8606691), #109 (963f557), #108
