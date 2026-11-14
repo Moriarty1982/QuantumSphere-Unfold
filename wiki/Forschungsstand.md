@@ -1,5 +1,43 @@
 # Forschungsstand
 
+### OP3: Keine Quelle für gleiche Kopplungen gefunden (14.11.2026)
+
+Eine Rückwärtssuche (Erkundung, nicht blind) hat nach einer vorhandenen Wirkung gesucht, die
+H = −a(Q + R) mit gebunden gleichen Kopplungen liefert. Gefunden wurde keine. Drei Befunde
+schärfen die Voraussetzung:
+
+- **Symmetrie:** Native Slotsymmetrien (Permutationen mit Phasen, 1296 Elemente) bilden ⟨D⟩
+  stets auf ⟨D⟩ ab, nie auf ⟨τ⟩. Sie können a = b daher nicht erzwingen.
+- **Paarwahl:** Unter allen Summen der zwölf Eigenprojektoren der vier Weyl-Untergruppen
+  (gegenseitig unverzerrte Basen) wählt jedes gleich gewichtete Paar aus zwei verschiedenen Basen
+  den Oktanten-Bezug, mit K_orb = 2/3 und π/4. Das sind alle 54 Paare, denn die Überlappung ist
+  stets 1/3. Offen ist also nur die Gleichgewichtung, nicht die Wahl von Q und R.
+- **Zählregeln:** Demokratische Zählregeln treffen nicht. Die Eigenwert-1-Linien aller vier Basen
+  geben K_orb = 3/5.
+
+Gleichgewicht heißt Selbstdualität: −J(Z + Z†) − h(X + X†) ist bei J = h F-selbstdual. In einer
+Z3-Potts-Kette wäre das der kritische Punkt. Eine solche Kette gibt es im Companion aber nicht.
+Damit ist die Bezugsauswahl die fünfte Variante mit derselben offenen Voraussetzung, und die Linie
+ruht bis zur Entscheidung über H100 oder H102.
+Nachtrag nach Durchsicht der übrigen Teilbäume: Die Mischungsrechnung r46/r47 (OP4) benutzt dieselbe Form,
+zirkulante Kopplung plus Einslot-Maske. Ihre aus der Chiralitätsabweichung hergeleitete Maske ist nur für Leptonen
+ein reiner Einslot-Projektor, W_l = diag(0, 0, −3). In r47-Form gibt sie K_orb = 2/3 bei ε = 1/12 (numerisch).
+ε ist in r47 nicht hergeleitet. Die Folgerunden r50 bis r56 haben die lineare Form aber schon widerlegt. In den
+exakten Formen braucht der Bezug ε ≈ 0,104, die Mischungsanpassung gibt ε_e ∈ [0,44; 0,82].
+
+Im Gespräch mit dem Autor kamen am 14. und 15.11. Frame-Lesarten hinzu, alle als Erkundung, nicht blind:
+
+- **Balance als Photonengewicht:** Liest man a und b als Frame-Gewichte, gilt K_orb = 2/3 genau bei
+  Photonengewichten. P ist lichtartig und damit zu sich selbst orthogonal.
+- **Levi-Civita auf den Frames:** Ein Levi-Civita-Symbol auf den Frames wäre genau das Oktanten-Profil. Die
+  Frame-Abbildungen bilden aber sl(2, R): Ihr geordnetes Produkt ist nur ±1 und gibt keine Phase.
+- **r33 geprüft:** r33 ist nicht der Engpass. Jede Frame-Ebene ist kommutativ, und die native Frame-Triole ist
+  eine Transposition, kein Dreierzyklus (r38). Das Levi-Civita-Tripel mit Hurwitz-Zyklus gibt es nativ auf den
+  Generationsslots Im H, mit der Frame-Einheit als komplexem i. Dort bricht es aber die Ladung.
+
+Neue offene Frage: ob diese Ladungssperre auch unter der Ladungsachse e8 (CT-003) gilt.
+[Rückwärtssuche und Nachweis](../notes/research/op3_action_balance_search_2026_11_14/README.md).
+
 ### OP3: Bezugsauswahl durch zwei Energieterme (14.11.2026)
 
 Eine neue, nicht blinde Erkundung prüft eine schwächere Frage als die

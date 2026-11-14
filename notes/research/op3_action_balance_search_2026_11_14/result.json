@@ -1,0 +1,348 @@
+{
+ "part1_monomial_symmetries": {
+  "group_order": 1296,
+  "images_of_(D,tau)": {
+   "D|tau": 108,
+   "D|other": 972,
+   "D|tauD2": 108,
+   "D|tauD": 108
+  }
+ },
+ "part2_projector_sums": {
+  "weights_0_1": {
+   "n_hits": 270,
+   "subgroups_used": {
+    "D+tau": 9,
+    "D+tau+tauD": 27,
+    "D+tau+tauD+tauD2": 108,
+    "D+tau+tauD2": 27,
+    "D+tauD": 9,
+    "D+tauD+tauD2": 27,
+    "D+tauD2": 9,
+    "tau+tauD": 9,
+    "tau+tauD+tauD2": 27,
+    "tau+tauD2": 9,
+    "tauD+tauD2": 9
+   },
+   "smallest": [
+    {
+     "terms": [
+      "+P[tauD,w^2]",
+      "+P[tauD2,w^2]"
+     ],
+     "slot_phase": [
+      [
+       1,
+       -0.25
+      ]
+     ]
+    },
+    {
+     "terms": [
+      "+P[tauD,w^2]",
+      "+P[tauD2,w^1]"
+     ],
+     "slot_phase": [
+      [
+       0,
+       -0.25
+      ]
+     ]
+    },
+    {
+     "terms": [
+      "+P[tauD,w^2]",
+      "+P[tauD2,w^0]"
+     ],
+     "slot_phase": [
+      [
+       2,
+       -0.25
+      ]
+     ]
+    },
+    {
+     "terms": [
+      "+P[tauD,w^1]",
+      "+P[tauD2,w^2]"
+     ],
+     "slot_phase": [
+      [
+       2,
+       -0.25
+      ]
+     ]
+    },
+    {
+     "terms": [
+      "+P[tauD,w^1]",
+      "+P[tauD2,w^1]"
+     ],
+     "slot_phase": [
+      [
+       1,
+       -0.25
+      ]
+     ]
+    },
+    {
+     "terms": [
+      "+P[tauD,w^1]",
+      "+P[tauD2,w^0]"
+     ],
+     "slot_phase": [
+      [
+       0,
+       -0.25
+      ]
+     ]
+    },
+    {
+     "terms": [
+      "+P[tauD,w^0]",
+      "+P[tauD2,w^2]"
+     ],
+     "slot_phase": [
+      [
+       0,
+       -0.25
+      ]
+     ]
+    },
+    {
+     "terms": [
+      "+P[tauD,w^0]",
+      "+P[tauD2,w^1]"
+     ],
+     "slot_phase": [
+      [
+       2,
+       -0.25
+      ]
+     ]
+    },
+    {
+     "terms": [
+      "+P[tauD,w^0]",
+      "+P[tauD2,w^0]"
+     ],
+     "slot_phase": [
+      [
+       1,
+       -0.25
+      ]
+     ]
+    },
+    {
+     "terms": [
+      "+P[tau,w^2]",
+      "+P[tauD2,w^2]"
+     ],
+     "slot_phase": [
+      [
+       1,
+       -0.25
+      ]
+     ]
+    },
+    {
+     "terms": [
+      "+P[tau,w^2]",
+      "+P[tauD2,w^1]"
+     ],
+     "slot_phase": [
+      [
+       2,
+       -0.25
+      ]
+     ]
+    },
+    {
+     "terms": [
+      "+P[tau,w^2]",
+      "+P[tauD2,w^0]"
+     ],
+     "slot_phase": [
+      [
+       0,
+       -0.25
+      ]
+     ]
+    }
+   ]
+  },
+  "weights_-1_0_1": {
+   "n_hits": 5616,
+   "subgroups_used": {
+    "D+tau": 45,
+    "D+tau+tauD": 378,
+    "D+tau+tauD+tauD2": 3942,
+    "D+tau+tauD2": 378,
+    "D+tauD": 45,
+    "D+tauD+tauD2": 378,
+    "D+tauD2": 45,
+    "tau+tauD": 45,
+    "tau+tauD+tauD2": 270,
+    "tau+tauD2": 45,
+    "tauD+tauD2": 45
+   },
+   "smallest": [
+    {
+     "terms": [
+      "+P[tauD,w^2]",
+      "+P[tauD2,w^2]"
+     ],
+     "slot_phase": [
+      [
+       1,
+       -0.25
+      ]
+     ]
+    },
+    {
+     "terms": [
+      "+P[tauD,w^2]",
+      "+P[tauD2,w^1]"
+     ],
+     "slot_phase": [
+      [
+       0,
+       -0.25
+      ]
+     ]
+    },
+    {
+     "terms": [
+      "+P[tauD,w^2]",
+      "+P[tauD2,w^0]"
+     ],
+     "slot_phase": [
+      [
+       2,
+       -0.25
+      ]
+     ]
+    },
+    {
+     "terms": [
+      "+P[tauD,w^1]",
+      "+P[tauD2,w^2]"
+     ],
+     "slot_phase": [
+      [
+       2,
+       -0.25
+      ]
+     ]
+    },
+    {
+     "terms": [
+      "+P[tauD,w^1]",
+      "+P[tauD2,w^1]"
+     ],
+     "slot_phase": [
+      [
+       1,
+       -0.25
+      ]
+     ]
+    },
+    {
+     "terms": [
+      "+P[tauD,w^1]",
+      "+P[tauD2,w^0]"
+     ],
+     "slot_phase": [
+      [
+       0,
+       -0.25
+      ]
+     ]
+    },
+    {
+     "terms": [
+      "+P[tauD,w^0]",
+      "+P[tauD2,w^2]"
+     ],
+     "slot_phase": [
+      [
+       0,
+       -0.25
+      ]
+     ]
+    },
+    {
+     "terms": [
+      "+P[tauD,w^0]",
+      "+P[tauD2,w^1]"
+     ],
+     "slot_phase": [
+      [
+       2,
+       -0.25
+      ]
+     ]
+    },
+    {
+     "terms": [
+      "+P[tauD,w^0]",
+      "+P[tauD2,w^0]"
+     ],
+     "slot_phase": [
+      [
+       1,
+       -0.25
+      ]
+     ]
+    },
+    {
+     "terms": [
+      "+P[tau,w^2]",
+      "+P[tauD2,w^2]"
+     ],
+     "slot_phase": [
+      [
+       1,
+       -0.25
+      ]
+     ]
+    },
+    {
+     "terms": [
+      "+P[tau,w^2]",
+      "+P[tauD2,w^1]"
+     ],
+     "slot_phase": [
+      [
+       2,
+       -0.25
+      ]
+     ]
+    },
+    {
+     "terms": [
+      "+P[tau,w^2]",
+      "+P[tauD2,w^0]"
+     ],
+     "slot_phase": [
+      [
+       0,
+       -0.25
+      ]
+     ]
+    }
+   ]
+  }
+ },
+ "part3_clock_reading": {
+  "H_equals_-3JQ-3hR+(J+h)I": true,
+  "F_maps_Z_to_X_or_Xdag": true,
+  "balanced_ground_state": "(1+sqrt3,1,1)",
+  "eigenvalues_over_J": [
+   "-sqrt(3) - 1",
+   "-1 + sqrt(3)",
+   "2"
+  ],
+  "ground_eigenvalue_over_J": "-sqrt(3) - 1"
+ }
+}
