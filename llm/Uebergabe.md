@@ -15,7 +15,7 @@
   - H102 ist offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem 13.11.2026 (`k224_test_h102.py m_tau sigma`).
   - H101 ist widerlegt. H100 ist offen; am 13.11. war NuFIT 6.1 weiterhin die neueste Version.
   - Als Nächstes ist H104 frei, das letzte k-Skript ist k225.
-- **Offene Autorentscheidungen:** ob H104 zum R_f-Treffer vorab festgelegt wird; Aufräumen (siehe unten).
+- **Offene Autorentscheidungen:** ob H104 zum R_f-Treffer vorab festgelegt wird.
 - **Ausgelöste Zurückgestellte Ideen:** keine. I1–I5 sind geprüft.
 
 ### Heute abend: Ladung über e8 (`notes/research/op3_sedenion_charge_2026_11_13.*`, Erkundung, nicht blind)
@@ -44,11 +44,15 @@
     - **(c)** die zweite Familienstruktur mit neutralem Qubit (Profil unten).
   - Auswahlprinzip (`op3_selection_principle_2026_11_13.*`, `op3_flux_two_thirds_2026_11_13.*`): Treue 1/2 und Fluss
     2/3 rad bleiben offen. γ/2 ist nur mit einer Konventionswahl erreichbar, die Einheit ist frei.
-- **Aufräumen:** Diese Teile können weg; gelöscht wird nur auf ausdrücklichen Auftrag.
-  - die Zweige `research/v5-octant-weitersuche` (PR #106) und `research/v5-auswahlprinzip` (PR #107);
-  - der Worktree `.claude/worktrees/qam-mml-mma-math-473bc4`;
-  - der Zweig `research/v5-sedenion-ladung-e8` (PR #108) und der Worktree
-    `.claude/worktrees/anthropic-skills-weitermachen-08cc3e`.
+- **Aufgeräumt (14.11., auf „Erst aufräumen“):**
+  - entfernt: Worktree `qam-mml-mma-math-473bc4`;
+  - lokal und auf GitHub gelöscht: die Zweige `research/v5-octant-weitersuche` und `research/v5-auswahlprinzip`;
+  - auf GitHub gelöscht: `research/v5-sedenion-ladung-e8`.
+
+  Alle drei waren vollständig in `main` enthalten. Die PDF `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf` lag
+  nur im entfernten Worktree und ist vorher in den Hauptordner kopiert worden (byte-gleich geprüft).
+  Übrig ist der Worktree dieser Sitzung (`anthropic-skills-weitermachen-08cc3e`, Zweig gemergt); er wird mit dem
+  Archivieren der Sitzung entfernt. Nicht angefasst: `wizardly-mendel-c790d3` und `github-main`.
 
 ## Früher am 13.11. erarbeitet, alles gemergt
 - **H99b** mit NuFIT-6.1-Primärtabelle: verträglich, +1,80σ (nicht blind). **H100** vorab: R im nächsten NuFIT-Fit,
