@@ -148,3 +148,21 @@ nicht mit der Bezugsauswahl verbunden:
 3. **Δ(96) (r12.2/r12.3).** Die Flavourgruppe ist monomial, Phasen ±1, ±i. Nach §1 vertauscht sie Q und R
    nicht. Ihre Spalte (1/3, (2 ∓ √3)/6) enthält π/12. Mit dem Bezug ist sie nicht identisch
    (K_orb = 5/9 für einen Vektor mit p₀ = 1/3).
+
+## Nachtrag 2 (14.11.): Vorwissen zu ε vor H105, Berichtigung von Nachtrag 1
+
+Bei der Vorwissensprüfung für H105 kamen die Folgerunden von r47 hinzu. Sie ändern das Bild:
+
+- **r50 (H34):** Die lineare Form M + ε(WM + MW), die in Nachtrag 1 ε = 1/12 gab, ist als Mischungsmodell
+  widerlegt. Der Term ε²WCW erzeugt Massen, und die Hierarchie hält ε klein.
+- **r52 (H36):** Ersetzt wurde sie durch die exakten Formen K (DCD) und S (DCD⁻¹) mit D = exp(εW).
+- **r54 (H38) und r56 (H40):** Mit einem ε je Sektor passt Form S an CKM und PMNS, mit
+  ε_e ∈ [0,44; 0,82] und ε_ν ∈ [0,27; 0,55]. Die Runden nennen das eine Anpassung, keine Erklärung. Die Herkunft
+  von ε ist offen, und der Vergleich mit 14 Korpuswerten lag im Zufallsbereich.
+- **Exakte Formen, nachgerechnet:** Mit dem Rang-eins-Zirkulanten C = R ist der linke Singulärvektor in K und
+  S derselbe, nämlich D(1, 1, 1). K_orb = 2/3 gilt bei **ε* = (1/3) ln((1 + √3)/2) ≈ 0,10397**, numerisch auf
+  15 Stellen gleich. Dann ist e^{−3ε*} = √3 − 1, und das Gewicht des ausgezeichneten Slots ist (3 − √3)/6.
+- **Folge:** Der Wert 1/12 aus Nachtrag 1 gehört zu einer widerlegten Form. Der Wert der exakten Formen,
+  0,104, liegt außerhalb des Fitbereichs von ε_e. Einschränkung: r54 benutzt volle Brannen-Zirkulanten, nicht
+  den Rang-eins-Grenzfall. Der Vergleich ist daher ein Hinweis gegen die Gleichsetzung, keine Widerlegung.
+  Steht damit schon fest, ohne Test.
