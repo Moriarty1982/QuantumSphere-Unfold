@@ -218,3 +218,32 @@ verstanden werden? Erkundung, nicht blind.
 - **Folge:** Die Idee ist der bisher sauberste Ort für die Balance, weil Photonengewichte sie ohne Wahl liefern.
   Daran hängt eine benannte Annahme (r33), keine freie Zahl. Ein Gegenterm wäre daher „Q und R sind M- und
   T-Lesart desselben Terms“, nicht „ε mit zwei Werten“.
+
+## Nachtrag 5 (14.11.): Idee des Autors, Kreuzprodukte der Frames, ε an den Orthogonalen
+
+Frage des Autors: Bildet man aus jeder Kombination der Frames ein Kreuzprodukt, erhält man neue, senkrechte
+Frames. Kann ε an diesen Orthogonalen hängen? Erkundung, nicht blind, `frame_cross_check.py`.
+
+- **Kreuzprodukt der Frame-Abbildungen (r51):** Gemeint sind R: z ↦ iz, T: z ↦ z̄ und J_B = R∘T auf der reellen
+  Frame-Ebene. Exakt gilt [R, T]/2 = J_B, [T, J_B]/2 = −R und [J_B, R]/2 = T. Die Kreuzprodukte schließen also
+  und erzeugen **keine neuen Frames**; drei ist der vollständige Satz. Die Vorzeichen und die Quadrate
+  (R² = −1, T² = J_B² = +1) zeigen aber sl(2, R) bzw. so(2, 1), nicht su(2). Die drei sind daher nicht drei
+  gleichwertige senkrechte Achsen, sondern eine Drehung (Tachyon) und zwei Spiegelungen.
+- **Vorwissen:** Im neutralen Dixon-Teil verhinderte eine indefinite Signatur den exakten Oktanten
+  (`../op3_hopf_octant_2026_11_13.md`, Punkt 3). Bei den Frame-Abbildungen ist dieselbe Sperre zu erwarten. Mit
+  einer vom Frame unabhängigen imaginären Einheit i wäre −iR hermitesch, das Tripel wäre su(2), und die
+  Eigenzustände der drei Frame-Abbildungen bildeten das Oktanten-Tripel (K = 2/3, π/4, Zyklus der Ordnung 3).
+  Unter r33 ist i aber gerade R, und dann ist −iR = 1. **Die Sperre ist wieder die Annahme r33.**
+- **Orthogonale der Frame-Gewichte (r85):** Auf den Gewichten (a, b) gilt die Form a² − b² = P·K, das Produkt
+  aus Massen- und Ableitungsgewicht. Damit gilt exakt:
+  - ⟨M, T⟩ = 0: Jeder Frame ist zu seinem Tachyon-Bild orthogonal.
+  - ⟨M, M⟩ = 1/γ.
+  - ⟨P, P⟩ = 0: Der Photon-Frame ist lichtartig, also **zu sich selbst orthogonal**.
+
+  Hängt ε am Orthogonal des Frames, in dem gelesen wird, so wird es in M mit dem Gewicht von T gelesen und in
+  P mit dem Gewicht von P selbst. Nur in P fallen Term und orthogonaler Term zusammen. Das ist genau die
+  Balance a = b, also K_orb = 2/3 (Nachtrag 4) und F-Selbstdualität (§3).
+- **Folge:** Die Idee präzisiert Nachtrag 4. Die Balance ist die Selbstorthogonalität des lichtartigen
+  Photon-Frames, und zwar ohne Wahl. Offen bleibt dieselbe eine Stelle: ob die Frame-Ebene eine von ihr
+  unabhängige komplexe Einheit hat bzw. auf den Slotindex wirkt (Annahme r33). Beide Wege zum Oktanten über die
+  Frames scheitern bisher genau dort.
