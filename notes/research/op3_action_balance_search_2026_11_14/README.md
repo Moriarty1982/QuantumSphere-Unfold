@@ -342,3 +342,36 @@ brauchen zwei Ebenen, und Im H ist der zweite Dreifachträger.
 
 **Offene Frage, die neu ist:** Gilt die Ladungssperre auch unter der Ladungsachse e8 von CT-003? Die bisherige
 Prüfung benutzte die Standardladung der Dixon-Algebra; die e8-Ladung lebt auf den Sedenionen. Nicht gerechnet.
+
+## Nachtrag 9 (15.11.): Ladungssperre unter e8, schon beantwortet
+
+Auf „e8 prüfen“ des Autors. Keine neue Rechnung, denn die Frage ist beantwortet in
+`../op3_family_su2_right_action_2026_11_14.md` (Erkundung vom 14.11.):
+
+- **Punkt 1:** Die Rechtsmultiplikationen R_e7, R_e8, R_e15 vertauschen auf ganz C⊗S mit su(3)_c und mit
+  Q_* (≤ 3·10⁻¹⁴). Die Linksmultiplikationen tun das nicht. Unter der e8-Ladung (CT-003) **fällt die
+  Ladungssperre also**: Das Quaternionentripel H_n = span(1, e7, e8, e15) wirkt von rechts farb- und
+  ladungsneutral. i R_e7, i R_e15, i R_e8 sind ein Pauli-Tripel, also ein natives Levi-Civita-Symbol.
+- **Punkt 5:** Die Konjugation mit einer Hurwitz-Einheit der Ordnung 3 vertauscht die Achsen zyklisch,
+  e7 → e15 → e8 → e7. Das ist das Oktantenbild in seiner ursprünglichen Form.
+- **Einschränkung dort:** Die Generationen sind ein Dublett dieser su(2), nicht drei Achsen. Es bleiben zwei
+  Generationen (K28).
+
+**Einordnung gegen r33 (neu in dieser Notiz).** Dasselbe Quaternionentripel tritt zweimal auf, mit vertauschten
+Rollen:
+
+| | Ladung | Rolle von i, j, k | Generationen | neutral |
+|---|---|---|---|---|
+| r33 (Dixon, Standardladung) | Q_em | Generationsslots selbst | drei (die Achsen) | nein |
+| CT-003 (Sedenionen, e8) | Q_* | Wirkung von rechts auf ein Dublett | zwei (das Dublett) | ja |
+
+Das Profil verlangt beides zugleich: drei Generationen *und* ein neutrales Levi-Civita-Tripel. Es ist dieselbe
+Komplementarität wie bei Weg A gegen Weg B (r13), jetzt am Levi-Civita-Tripel festgemacht. Nach Codex hat die
+Bahngrammatrix in einem Qubit stets Rang zwei, also eine Masse null. Das ist dieselbe Lücke von der
+Massenseite.
+
+**Stand der Linie.** Alle Ideen dieser Sitzung (Wirkung, Paarwahl, r47-Maske, Frame-Lesarten, Levi-Civita, r33, e8)
+führen auf die eine bekannte Lücke: einen Träger, der drei Generationen als die drei Achsen eines neutralen
+Levi-Civita-Tripels trägt. Gesucht wäre eine Struktur, in der die Rollen von r33 und CT-003 zusammenfallen.
+Nicht gerechnet: die Lage von H_n relativ zum r33-Faktor H, falls man C⊗H⊗O in C⊗S einbettet. Die Abbildung
+C⊗S ↔ C⊗H⊗O fehlt (offen seit `../op3_majorana_vector_n_2026_11_14.md`).
