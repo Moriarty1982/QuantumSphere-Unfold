@@ -2088,6 +2088,20 @@ Koide-Bogens ist exakt das Oktanten-Tripel. Zu den Fäden:
   $|m|$. Mit den Konventionen von r10 ($8\pi\gamma\ell_P^2\sqrt{j(j+1)}$) käme
   das 43,5-Fache heraus. Die Einheit bleibt frei.
 
+**Runde v4.10.0-r13** (14.11.2026). Die Runde r13 (Statusvermerke) fasst die Erkundungen vom 13. und 14.11. zum
+neutralen Qubit und zur zweiten Familienstruktur zusammen; die Einzelbefunde stehen oben in der Liste. Sie hält fest:
+- r13.1: Berichtigung zu r12.4(c). Unter der angenommenen Ladungsachse $e_8$ (Platzhalter CT-003) gibt es das
+  neutrale Qubit $N$; H103a ist widerlegt.
+- r13.2: Die Hurwitz-Einheiten von $H_n$ wirken auf $N$ als $2T$; der Bezug unter dem magischen Winkel ist eine
+  Konstruktion mit bekanntem Ziel.
+- r13.3: Zwei Generationen unter $Q_*$; $\psi$ ist kein Generationsschritt.
+- r13.4: Die Rechtswirkung von $H_n$ ist eine Familien-su(2), Generationen als Dublett.
+- r13.5: Der Majorana-Vektor auf $N$ ist nicht festgelegt. Der Paarkanal aus r82.4 ist seit v4.10.0-r01 abstoßend
+  und bildet kein Kondensat; die Notiz vom 13.11., die ihn anziehend nennt, benutzte das überholte Vorzeichen.
+- r13.6: Weg A und Weg B sind komplementär; mit dem jetzigen Bestand ist das Profil nicht erfüllbar.
+
+Guards unverändert, OP3 und OP4 offen. Guard-Prüfung der neuen Runde: 0 Treffer.
+
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),
 > `notes/research/op3_slot_u3_gauging_2026_11_13.md` (Eichung Platzindex-U(3)),
