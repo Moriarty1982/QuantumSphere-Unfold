@@ -2,13 +2,16 @@
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben.**
 
 ## Stand vom 14.11.2026 (Codex)
-- **GitHub:** main erneut geprüft: 31e689e166e1c73917b8aabf2c055c1982ce549d.
-  Letzter PR-/Actions-Abgleich im Vorblock: keine offenen PRs;
-  Zwei-PDF 43620492362 und Wiki 43620492258 erfolgreich. Mindmap ungeprüft.
-- **Lokal:** Zweig codex/op3-fourier-native-gate, aus main 31e689e.
-  Vorherige Forschungscommits 6e602fd, 2fd8479, 70a0f6e; neuer Block unten.
-  Nächste Bundle-Basis: 31e689e166e1c73917b8aabf2c055c1982ce549d.
-  Alle vier Blöcke nur lokal, kein Push/Merge.
+- **GitHub:** Auf „commit, merge und push“ PR #123 erstellt und gemergt als
+  14856e33acbf5fb7df46db0f0bb21f3a24f2076a. Beide PR-Prüfungen erfolgreich.
+  Main-Zwei-PDF 43637050824 und Wiki 43637050919 erfolgreich.
+  Main-QAM-Prüfung 43637050812: Linux und Windows erfolgreich.
+  Wiki-Prüfkopie 97fdc0b: alle drei geänderten Seiten inhaltsgleich mit main.
+  Visuelle Browserprüfung der Formeln/Mindmap weiterhin nicht durchgeführt.
+- **Lokal:** main-Forschungsstand 14856e3; Zweig codex/op3-fourier-native-gate
+  bis c4f23ba gepusht. Alle vier Forschungscommits in PR #123 enthalten.
+  Nächste Bundle-Basis: 14856e33acbf5fb7df46db0f0bb21f3a24f2076a.
+  Diese Abschlussübergabe wird separat committet/gepusht; keine Forschung ausstehend.
 - **Neuer Block:** notes/research/op3_reference_energy_selection_2026_11_14/README.md.
   Nicht blinde Erkundung: statt aktiver F-Herkunft die schwächere Bezugsauswahl.
   Zusätzlicher Vergleich H=-(a Q+b R), Q Projektor auf e0, R auf s=(1,1,1)/sqrt3.
