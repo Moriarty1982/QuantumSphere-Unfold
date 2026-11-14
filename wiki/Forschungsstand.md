@@ -1,5 +1,29 @@
 # Forschungsstand
 
+### OP3: Dynamikbrücke über zwei Sonden geprüft (14.11.2026)
+
+Der vorhandene Kanal T_12 benennt eine mögliche Kopplung, legt seine
+Generationenmatrix aber nicht fest. Ein zu jeder Zeit tau-erhaltender
+Generator kann Fourier nicht als aktive Slotoperation erzeugen; das gilt
+auch mit Hilfskanälen bei derselben Gesamtzykluswirkung. Fourier-
+Diagonalisierung einer zirkulanten Matrix ist weiterhin ein Basiswechsel.
+
+Zusätzlich analytisch geprüft: Im kanonischen, komplex-linearen,
+statischen Vergleich H=[[0,C],[C†,0]] lautet der Rückkehrblock derselben
+Sonde cos(T sqrt(CC†)). Er ist hermitesch und kann daher kein unitäres
+Fourier mit Eigenwerten 1,-1,i bis auf Gesamtphase sein. Die antilinearen
+r44-Verbinder müssten für diese Lesart zuerst passend typisiert werden;
+die volle relativistische Gleichung ist damit nicht pauschal ausgeschlossen.
+Übertragung zwischen den Sonden ist etwas anderes: C=mu F überträgt
+bei T=pi/(2mu) mit Fourier, setzt F aber bereits ein und hat drei gleiche
+Singulärwerte. Daraus folgt keine Massenhierarchie.
+
+Offen bleiben der aus der Wirkung bestimmte tau-brechende Generator,
+beide physischen Dreierräume und ein begründetes Auswahlgesetz für Zeit
+oder Vakuum. Bis dahin ruht die reine Fourier-Herkunftsroute; keine
+weiteren Fits derselben freien Kopplungen. OPs und Guards unverändert.
+[Quellen und analytische Herleitung](../notes/research/op3_two_probe_fourier_bridge_2026_11_14.md).
+
 ### OP3: Trialitätsphasen und direkte Fourier-Sperre (14.11.2026)
 
 Die volle Trialität erlaubt verschiedene farbneutrale Phasen je Slot.

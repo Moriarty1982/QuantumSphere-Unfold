@@ -28,6 +28,18 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 
 ## OP3: Zulässige Hüllen-Übergänge
 
+**Dynamischer Nachtrag 14.11.2026:** Der vorhandene Zwei-Sonden-Verbinder
+T_12 ist kein ausgewerteter Fourier-Generator. Tau-erhaltende Dynamik
+kann F nicht aktiv erzeugen. Beim zusätzlich angenommenen statischen,
+kanonischen H=[[0,C],[C†,0]] ist eine Fourier-Rückkehr in dieselbe Sonde
+ebenfalls ausgeschlossen; eine Übertragung in die andere mit C=mu F
+setzt das Ziel hingegen ein und lässt die drei Singulärwerte gleich.
+Diese Aussagen ersetzen weder die Typisierung antilinearer Verbinder
+noch die Herleitung des Hamiltonoperators aus der Feldgleichung.
+Die Herkunftsroute ruht bis zur Angabe einer unabhängigen tau-brechenden
+Dynamik samt Zustandsraum und Auswahlgesetz; OP3 bleibt offen.
+[Prüfung der Zwei-Sonden-Brücke](../notes/research/op3_two_probe_fourier_bridge_2026_11_14.md).
+
 **Weiterer Nachtrag 14.11.2026, volle Trialität:** Die benötigte Uhr D
 besitzt eine farb- und Q_8-verträgliche Trialitätshebung, aber mit voller
 Ordnung neun statt drei. S ist nur projektiv auf dem neutralen Sektor
