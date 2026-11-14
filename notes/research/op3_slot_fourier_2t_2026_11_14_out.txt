@@ -1,0 +1,35 @@
+(1) Bausteine
+    F unitaer: True; F^4 = 1: True; P = F^2 vertauscht Slot 1 und 2: True
+    Eintraege ungleich null: tau 3, D 3, S 3, F 9 (monomial: 3)
+
+(2) Zerlegung nach der Paritaet P
+    S  : vertauscht mit P: True; mischt gerade/ungerade: 0.000; auf dem Singulett: (-0.5+0.866j)
+    F  : vertauscht mit P: True; mischt gerade/ungerade: 0.000; auf dem Singulett: 1j
+    tau: vertauscht mit P: False; mischt gerade/ungerade: 1.732; auf dem Singulett: (-0.5+0j)
+    D  : vertauscht mit P: False; mischt gerade/ungerade: 1.732; auf dem Singulett: (-0.5+0j)
+    S auf dem Dublett = [[(1+0j), 0j], [(-0+0j), (-0.5+0.866j)]]
+    F auf dem Dublett = [[0.57735, 0.816497], [0.816497, -0.57735]] (reell; 1/sqrt3 = 0.577350, sqrt(2/3) = 0.816497)
+    <S, F> auf C^3: 96 Elemente, projektiv 24; auf dem Dublett (Determinante 1): 24 Elemente, Ordnungen {1: 1, 2: 1, 3: 8, 4: 6, 6: 8} (2T: 1:1, 2:1, 3:8, 4:6, 6:8)
+
+(3) Achsen auf der Bloch-Kugel des Dubletts
+    S: Drehwinkel 120.0 Grad, Achse [0.0, 0.0, -1.0]; F: Drehwinkel 180.0 Grad, Achse [-0.8165, 0.0, -0.5774]
+    |cos| zwischen beiden Achsen = 0.5773502692; 1/sqrt3 = 0.5773502692
+
+(4) Oktant: Bahn eines F-Eigenzustands unter S
+    Eigenwert -1: Slot-Vektor ~ [-0.7321, 1.0, 1.0]; rho^2 = 0.500000, K = 0.666667, Phase 0.785398 (pi/4 = 0.785398); tan(theta/2) = 0.517638 (2 sin(pi/12) = 0.517638)
+    Eigenwert +1: Slot-Vektor ~ [1.0, 0.366, 0.366]; rho^2 = 0.500000, K = 0.666667, Phase 0.785398 (pi/4 = 0.785398); tan(theta/2) = 0.517638 (2 sin(pi/12) = 0.517638)
+    Kontrolle: F (1 + sqrt3, 1, 1) = (1 + sqrt3, 1, 1): True
+
+(5) Verhaeltnis zum Slotzyklus tau
+    Heisenberg-Gruppe <tau, D>: 27 Elemente; F tau F^-1 in ihr: True; F D F^-1: True; S tau S^-1: True; S D S^-1: True
+    F tau F^-1 = D oder D^-1: True; tau in <S, F> (projektiv): False
+
+(6) F als Summe monomialer Operationen: F = Summe c_ab tau^a D^b
+    Rekonstruktion exakt: True; Betraege der neun Koeffizienten: [0.333333] (1/3 = 0.333333)
+
+(7) Allgemeines n: gerader Teil unter j -> -j und <e0|F|e0>
+    n = 2: gerader Teil Dimension 2, ungerader 0; <e0|F|e0> = 1/sqrt(2) = 0.707107
+    n = 3: gerader Teil Dimension 2, ungerader 1; <e0|F|e0> = 1/sqrt(3) = 0.577350
+    n = 4: gerader Teil Dimension 3, ungerader 1; <e0|F|e0> = 1/sqrt(4) = 0.500000
+    n = 5: gerader Teil Dimension 3, ungerader 2; <e0|F|e0> = 1/sqrt(5) = 0.447214
+    n = 7: gerader Teil Dimension 4, ungerader 3; <e0|F|e0> = 1/sqrt(7) = 0.377964
