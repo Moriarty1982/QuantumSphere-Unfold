@@ -2,12 +2,11 @@
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.**
 
 ## Stand vom 14.11.2026 (Claude Opus)
-- **GitHub:** **PR #109 gemergt als 963f557** (R_f-Nachtrag zu H103, Erkundung), auf „PR 109 mergen“; Läufe 43537048238
-  (Wiki-Sync) und 43537048230 (Zwei-PDF) erfolgreich. **Offen: PR #110** (Generationen unter Q_*).
-  **PR #108 gemergt als 91cbb69** (Ladung über e8, neutrales Qubit, H103 widerlegt).
+- **GitHub:** **PR #110 gemergt als 8606691** (Generationen unter Q_*, Erkundung), auf „PR 110 mergen“; Läufe
+  43537835140 (Wiki-Sync) und 43537835219 (Zwei-PDF) erfolgreich. **Keine offenen PRs.**
+  Am 14.11. außerdem gemergt: #109 (963f557, R_f-Nachtrag) und #108 (91cbb69, Ladung über e8, H103 widerlegt).
   Am 13.11. gemergt: #104 (32fa42c), #105 (fcc87c6), #106 (ca29c5b), #107 (a08d918).
-  Läufe 43534883771 (Wiki-Sync) und 43534883722 (Zwei-PDF) zu 91cbb69 erfolgreich.
-- **Lokal:** Der Hauptordner steht auf `main` = 963f557 (vorgespult), dazu dieser Übergabe-Commit, nur lokal.
+- **Lokal:** Der Hauptordner steht auf `main` = 8606691 (vorgespult), dazu dieser Übergabe-Commit, nur lokal.
   Unversioniert: `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf` (jetzt wirklich im Hauptordner).
 - **Letzte Runde:** v4.10.0-r12 (Statusvermerke) aus PR #106.
 - **Zuletzt vergebene Hypothese:** H103 (vorab 45314b2, k225).
@@ -19,7 +18,7 @@
   - H102 ist offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem 13.11.2026 (`k224_test_h102.py m_tau sigma`).
   - H101 ist widerlegt. H100 ist offen; am 13.11. war NuFIT 6.1 weiterhin die neueste Version.
   - Als Nächstes ist H104 frei, das letzte k-Skript ist k225.
-- **Offene Autorentscheidungen:** „PR 110 mergen“ (Generationen unter Q_*, Zweig `research/v5-generationen-qstar`).
+- **Offene Autorentscheidungen:** keine.
 - **14.11., Generationen unter Q_*** (`op3_sedenion_generations_estar_2026_11_14.*`, Erkundung, nicht blind):
   C⊗S hat unter Q_* genau zwei vollständige Generationen. Die ψ-Sektoren sind aber keine Generationen
   (1: ν, e⁺; ω: ν, u, d̄; ω̄: e⁺, u, d̄). ψ wirkt innerhalb der Generationen als Phase und ist kein Generationsschritt.
@@ -63,7 +62,7 @@
   Alle drei waren vollständig in `main` enthalten. Die PDF `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf` lag
   nur im entfernten Worktree und ist vorher in den Hauptordner kopiert worden (byte-gleich geprüft).
   Übrig sind der Worktree dieser Sitzung (`anthropic-skills-weitermachen-08cc3e`, Zweig gemergt; wird mit dem
-  Archivieren der Sitzung entfernt) und der gemergte Zweig `research/v5-rf-nachtrag` auf GitHub (kann weg). Nicht angefasst: `wizardly-mendel-c790d3` und `github-main`.
+  Archivieren der Sitzung entfernt) und die gemergten Zweige `research/v5-rf-nachtrag` und `research/v5-generationen-qstar` auf GitHub (können weg). Nicht angefasst: `wizardly-mendel-c790d3` und `github-main`.
 
 ## Früher am 13.11. erarbeitet, alles gemergt
 - **H99b** mit NuFIT-6.1-Primärtabelle: verträglich, +1,80σ (nicht blind). **H100** vorab: R im nächsten NuFIT-Fit,
