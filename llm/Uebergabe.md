@@ -1,61 +1,64 @@
 # Übergabe: Stand der letzten Sitzung
-**Diese Datei wird am Ende jedes Arbeitsblocks überschrieben.**
+**Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.**
 
-## Stand vom 14.11.2026 (Codex)
-- **GitHub:** Auf „commit, merge und push“ PR #123 erstellt und gemergt als
-  14856e33acbf5fb7df46db0f0bb21f3a24f2076a. Beide PR-Prüfungen erfolgreich.
-  Main-Zwei-PDF 43637050824 und Wiki 43637050919 erfolgreich.
-  Main-QAM-Prüfung 43637050812: Linux und Windows erfolgreich.
-  Wiki-Prüfkopie 97fdc0b: alle drei geänderten Seiten inhaltsgleich mit main.
-  Visuelle Browserprüfung der Formeln/Mindmap weiterhin nicht durchgeführt.
-- **Lokal:** main-Forschungsstand 14856e3; Zweig codex/op3-fourier-native-gate
-  bis c4f23ba gepusht. Alle vier Forschungscommits in PR #123 enthalten.
-  Nächste Bundle-Basis: 14856e33acbf5fb7df46db0f0bb21f3a24f2076a.
-  Diese Abschlussübergabe wird separat committet/gepusht; keine Forschung ausstehend.
-- **Neuer Block:** notes/research/op3_reference_energy_selection_2026_11_14/README.md.
-  Nicht blinde Erkundung: statt aktiver F-Herkunft die schwächere Bezugsauswahl.
-  Zusätzlicher Vergleich H=-(a Q+b R), Q Projektor auf e0, R auf s=(1,1,1)/sqrt3.
-  Beide Projektoren aus neutralen Spektralprojektoren von D und tau benennbar;
-  daraus folgt aber noch keine Energie oder Kopplungsgleichheit.
-- **Befund:** H hat für a,b>0 eindeutigen Grundzustand mit Lücke
-  Delta=sqrt(a²+b²-2ab/3). Bei a=b Richtung (1+sqrt3,1,1).
-  S-Bahn gibt K_orb=2/3 genau bei a=b und Bargmann-Phase pi/4.
-  K_orb-2/3=(3a+b)(a-b)/(9 Delta²); Sensitivität bei a/b=1: 1/3.
-  Neu nötig ist ein natives Austausch-/Balanceprinzip, keine aktive F-Erzeugung.
-- **Kontrollen:** Festes H bricht S, seine S-Bilder sind nicht gleichenergetische
-  Grundzustände. S-Mittelung hat bei a=b Grundzustand e0, triviale Bahn K_orb=1.
-  Unitäre Entwicklung präpariert kein Minimum. Bahngrammatrix stets Rang zwei;
-  eine Nullrichtung und keine native Massenformel. Kein volles Leptonspektrum.
-- **Nachweis:** check.py, contract.json und run/ im neuen Ordner.
-  Ganze positive Verhältnisfamilie exakt symbolisch geprüft, nicht gesampelt.
-  Status completed, Manifest/aktuelle Hashes validiert; unabhängige analytische
-  Gegenprüfung ohne materielle Befunde. Byteerhalt über .gitattributes.
-- **Nächster begrenzter Ansatzpunkt:** Nur eine vorhandene Wirkung suchen,
-  welche genau diese zwei Projektoren mit gebundenen gleichen Koeffizienten
-  liefert und ihre Hintergrund-/S-Transformation bestimmt. Normierung allein
-  genügt nicht. Ohne Quelle keine weiteren Gewichtsfits oder CT-Registrierung.
-- **Vorherige Haltebedingung bleibt:** Reine aktive Fourier-Herkunftsroute ruht.
-  F erhält die ursprüngliche Trialitätsform nicht. Tau-erhaltende Dynamik
-  kann F nicht aktiv erzeugen. Statischer reiner Zwei-Sonden-Kanal erlaubt
-  keine F-Rückkehr; Transfer mit C=mu F setzt F ein und bleibt massenentartet.
-  Native Phasen: D mit voller Ordnung neun, S nur projektiv und artabhängig.
-- **QAM:** Kein Leseserver. Lokale read-only Abfragen ground/Fourier: Code 0,
-  keine Treffer; Vollständigkeit/Aktualität des Index nicht bestätigt.
-  Keine gespeicherten Belege/Prämissen als Nachweis benutzt.
-- **Hypothesen:** zuletzt H104/k226 widerlegt; nächste frei H105/k227.
-  H100 (nächster NuFIT-Fit) und H102 (erste PDG-Ausgabe nach 13.11.2026,
-  m_tau=1777,134 MeV) offen. Messdaten nicht neu geprüft.
-- **Platzhalter:** CT-001 partially_constrained, CT-002/CT-003 placeholder;
-  keiner strukturell abgeglichen. CT-001/CT-002 bis H102 ruhend.
-  Kein CT-004 vergeben, keine Registry geändert; CT-003 nicht vorausgesetzt.
-- **Ideen I1–I5:** erneut geprüft, kein neuer Auslöser; kein W1-Kondensat,
-  keine Materie-/Horizont-Brücke oder konkrete neue P_C7/M_16-Konstruktion.
-- **Abgabe:** Notiz und Wiki Forschungsstand/Offene-Probleme/Wiki-Pflege
-  nachgezogen, git diff --check. Keine neue Runde und kein PDF-Build.
-  .codex/environments/ unversioniert/unberührt; keine fremden Worktrees gelöscht.
+## Stand vom 14.11.2026, abends (Claude Opus)
+- **GitHub:** `main` = 0f8fda0 (PR #123 von Codex, gemergt als 14856e3, alle Läufe grün). **Keine offenen PRs.**
+  Der gemergte Zweig `codex/op3-fourier-native-gate` ist auf GitHub gelöscht (Dauerauftrag).
+  Davor gemergt: #122 (f04c6ad), #121 (f39ca00, r13), #120, #119, #108–#118.
+  Nicht geprüft: die Darstellung von Mindmap und Formeln im GitHub-Wiki (im Browser des Modells gesperrt).
+- **Lokal:** Hauptordner auf dem Zweig `research/op3-action-balance-search` (von 0f8fda0), ein Commit, **nicht
+  gepusht, kein PR**. Er enthält die Erkundung unten, das Wiki (Forschungsstand, Offene-Probleme, Wiki-Pflege) und
+  diese Übergabe.
+- **Neu, 14.11. (`notes/research/op3_action_balance_search_2026_11_14/`, Erkundung, nicht blind, Rückwärtssuche,
+  auf „Wirkung suchen“ des Autors):** Gesucht war eine vorhandene Wirkung, die H = −a(Q + R) mit gebunden gleichen
+  Kopplungen liefert (nächster Ansatz aus der Codex-Notiz `op3_reference_energy_selection_2026_11_14`).
+  **Keine gefunden.**
+  - Native Slotsymmetrien (monomial, 1296 Elemente) bilden ⟨D⟩ nie auf ⟨τ⟩ ab, können a = b also nicht erzwingen.
+  - Alle 54 gleich gewichteten Paare von Eigenlinien aus zwei verschiedenen Weyl-Untergruppen (MUBs) wählen den
+    Oktanten-Bezug (K_orb = 2/3, π/4), denn die Überlappung ist stets 1/3. Q und R sind nicht ausgezeichnet,
+    offen ist nur die Gleichgewichtung.
+  - Demokratische Zählregeln treffen nicht (alle vier Eigenwert-1-Linien: K_orb = 3/5).
+  - Lesart: Das Gleichgewicht ist die F-Selbstdualität von −J(Z+Z†) − h(X+X†) bei J = h. In einer Potts-Kette wäre
+    das der kritische Punkt. Eine solche Kette gibt es im Companion nicht.
+  - **Das ist die fünfte Variante mit derselben offenen Voraussetzung (nativer Bezug bzw. F). Die OP3-Linie ruht.**
+- **Codex-Stand vom selben Tag (PR #123):** Die Bezugsauswahl durch H = −(aQ + bR) braucht a = b. Ein festes H bricht
+  S, das Minimum ist keine Präparation, die Bahn-Gram-Matrix hat Rang zwei. Die aktive Fourier-Route ruht: F erhält
+  die Trialitätsform nicht, tau-erhaltende Dynamik erzeugt F nicht.
+- **Hypothesen:** zuletzt H104 (k226) widerlegt. **Als Nächstes frei: H105, k227.**
+  - H100 (nächster NuFIT-Fit, Frist 31.12.2027) ist offen; am 14.11. war NuFIT 6.1 die neueste Version.
+  - H102 ist offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem 13.11.2026.
+- **Platzhalter:** CT-001 partially_constrained, CT-002/CT-003 placeholder, keiner strukturell abgeglichen.
+  CT-001/CT-002 ruhen bis H102.
+- **Ideen I1–I5:** geprüft, kein neuer Auslöser.
+- **Letzte Runde:** v4.10.0-r13 (PR #121). Seither nur Erkundungen, keine neue Runde.
+- **Zweige, die stehen bleiben (nicht gemergt):**
+  - auf GitHub `codex/op3-triality-mass-bridge`, `codex/v5-zenodo-release` und `codex/v5-zenodo-upload-record`;
+  - lokal `claude/quantenphysik-paper-herleitung-e723a3` und `claude/wizardly-mendel-c790d3`;
+  - lokal `claude/anthropic-skills-weitermachen-08cc3e`: inhaltsgleich in #118, Löschung braucht ein Wort des Autors.
+  - `git fetch --prune` meldet weiterhin „Permission denied“ für verwaiste `.git/worktrees`-Einträge.
+
+## Nächster Schritt
+- **Offene Autorentscheidung:** Zweig `research/op3-action-balance-search` pushen und als PR öffnen; Merge nur auf
+  „PR NN mergen“.
+- Danach: H100 und H102 auswerten, sobald neue Daten erscheinen.
+  - `python notes/research/predictions/k222_test_h100.py dm21 sig21 dm31 sig31`
+  - `python notes/research/predictions/k224_test_h102.py m_tau sigma`
+- OP3 inhaltlich erst wieder mit einer neuen Struktur aufnehmen, nicht mit weiteren Gewichtsfits. Kandidaten:
+  ein Gitter oder eine Kette über den Slots mit Kritikalitätsprinzip, eine native nicht monomiale Slotoperation
+  oder F₄ bzw. die Jordan-Algebra auf O³ (nicht gerechnet).
+- Wahlweise ein Statusvermerk in einer neuen Runde v4.10.0-r14 zum Profil der fehlenden Struktur
+  (Autorentscheidung).
+
+## Profil der fehlenden Struktur
+Gesucht ist ein farb- und ladungsneutrales Qubit, auf dem der Generationszyklus als Element der Ordnung 3 wirkt,
+mit einem Bezugszustand unter dem magischen Winkel arccos(1/√3) zur Zyklusachse. Gleichwertig nach dem 14.11.:
+eine native Begründung für die F-Selbstdualität (gleiche Gewichte zweier unverzerrter Rang-eins-Terme).
 
 ## Inhaltlicher Stand
-Koide, Phase und native Massenbrücke offen; OP1–OP5, C5, C6/T2/Guards unverändert.
-Bezugsauswahl ist logisch schwächer als eine aktive Fourier-Operation;
-physische Energie, exakte Balance und Präparation bleiben zusätzliche Pflichten.
-Veröffentlichung v5.0.0 bleibt Baseline; keine neue Veröffentlichung vorbereitet.
+OP3/OP4 offen; OP1–OP5, C5, C6/T2 und die Guards sind unverändert. Koide 2/3, die Phase und die native
+Massenbrücke sind nicht hergeleitet. v5.0.0 bleibt die Baseline; keine neue Veröffentlichung vorbereitet.
+
+## Pflichten in jeder Sitzung
+`AGENTS.md`, `wiki/Gesamtbild.md`, die einschlägige Anleitung unter `notes/anleitungen/`, die Auslöser in
+`notes/research/v4_10_0_w1/Zurueckgestellte_Ideen.md`. Vorwissen-Pflicht, Vorab-Notizen, Suchrichtung prüfen.
+Merges nur nach Freigabe. Wiki im selben PR. `.codex/environments/` bleibt unversioniert.

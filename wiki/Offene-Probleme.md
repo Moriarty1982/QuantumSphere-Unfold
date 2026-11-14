@@ -38,6 +38,12 @@ vom Rang zwei. Präparation, drei positive Massen und native Operatorbrücke
 bleiben offen. Keine Übernahme als neuer Registry-Platzhalter.
 [Bedingter Vergleich](../notes/research/op3_reference_energy_selection_2026_11_14/README.md).
 
+**Quellensuche, 14.11.2026:** Keine vorhandene Wirkung liefert die gleichen Kopplungen. Native
+Slotsymmetrien tauschen Q und R nie. Jedes gleich gewichtete Paar aus zwei unverzerrten
+Weyl-Basen wählt denselben Bezug, also ist allein die Gleichgewichtung offen, und sie ist
+F-Selbstdualität. Die Linie ruht.
+[Rückwärtssuche](../notes/research/op3_action_balance_search_2026_11_14/README.md).
+
 **Dynamischer Nachtrag 14.11.2026:** Der vorhandene Zwei-Sonden-Verbinder
 T_12 ist kein ausgewerteter Fourier-Generator. Tau-erhaltende Dynamik
 kann F nicht aktiv erzeugen. Beim zusätzlich angenommenen statischen,

@@ -1,5 +1,26 @@
 # Forschungsstand
 
+### OP3: Keine Quelle für gleiche Kopplungen gefunden (14.11.2026)
+
+Eine Rückwärtssuche (Erkundung, nicht blind) hat nach einer vorhandenen Wirkung gesucht, die
+H = −a(Q + R) mit gebunden gleichen Kopplungen liefert. Gefunden wurde keine. Drei Befunde
+schärfen die Voraussetzung:
+
+- **Symmetrie:** Native Slotsymmetrien (Permutationen mit Phasen, 1296 Elemente) bilden ⟨D⟩
+  stets auf ⟨D⟩ ab, nie auf ⟨τ⟩. Sie können a = b daher nicht erzwingen.
+- **Paarwahl:** Unter allen Summen der zwölf Eigenprojektoren der vier Weyl-Untergruppen
+  (gegenseitig unverzerrte Basen) wählt jedes gleich gewichtete Paar aus zwei verschiedenen Basen
+  den Oktanten-Bezug, mit K_orb = 2/3 und π/4. Das sind alle 54 Paare, denn die Überlappung ist
+  stets 1/3. Offen ist also nur die Gleichgewichtung, nicht die Wahl von Q und R.
+- **Zählregeln:** Demokratische Zählregeln treffen nicht. Die Eigenwert-1-Linien aller vier Basen
+  geben K_orb = 3/5.
+
+Gleichgewicht heißt Selbstdualität: −J(Z + Z†) − h(X + X†) ist bei J = h F-selbstdual. In einer
+Z3-Potts-Kette wäre das der kritische Punkt. Eine solche Kette gibt es im Companion aber nicht.
+Damit ist die Bezugsauswahl die fünfte Variante mit derselben offenen Voraussetzung, und die Linie
+ruht bis zur Entscheidung über H100 oder H102.
+[Rückwärtssuche und Nachweis](../notes/research/op3_action_balance_search_2026_11_14/README.md).
+
 ### OP3: Bezugsauswahl durch zwei Energieterme (14.11.2026)
 
 Eine neue, nicht blinde Erkundung prüft eine schwächere Frage als die
