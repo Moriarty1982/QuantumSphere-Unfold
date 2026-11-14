@@ -2,11 +2,13 @@
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.**
 
 ## Stand vom 14.11.2026 (Claude Opus)
-- **GitHub:** **PR #112 gemergt als ad7756f** (Hurwitz-Einheiten auf N, Erkundung), auf „PR 112 mergen“; Läufe
-  43539578174 (Wiki-Sync) und 43539578134 (Zwei-PDF) erfolgreich. Zweig gelöscht. **Offen: PR #113** (CT-001-Entwurf und Schritt 1).
-  Am 14.11. außerdem gemergt: #111 (c247ea3, AGENTS.md: gemergte Zweige löschen), #110 (8606691, Generationen unter Q_*),
-  #109 (963f557, R_f-Nachtrag), #108 (91cbb69, Ladung über e8, H103 widerlegt). Am 13.11.: #104–#107.
-- **Lokal:** Der Hauptordner steht auf `main` = ad7756f (vorgespult), dazu dieser Übergabe-Commit, nur lokal.
+- **GitHub:** **PR #113 gemergt als 10d670e** (CT-001-Entwurf, Platzhalter-Methode Schritte 1–3), auf „PR 113
+  mergen“; Läufe 43543589360 (Wiki-Sync) und 43543589359 (Zwei-PDF) erfolgreich. Zweig gelöscht.
+  Am 14.11. außerdem gemergt: #112 (ad7756f, Hurwitz/2T), #111 (c247ea3, AGENTS.md), #110 (8606691), #109 (963f557),
+  #108 (91cbb69). Am 13.11.: #104–#107.
+  Auf GitHub liegt außerdem `claude/zealous-fermi-f46fd7` aus der Sitzung „Counterterm-Registry Phase 1“; er ist noch
+  nicht gemergt und bleibt stehen.
+- **Lokal:** Der Hauptordner steht auf `main` = 10d670e (vorgespult), dazu dieser Übergabe-Commit, nur lokal.
   Unversioniert: `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf` (jetzt wirklich im Hauptordner).
 - **Letzte Runde:** v4.10.0-r12 (Statusvermerke) aus PR #106.
 - **Zuletzt vergebene Hypothese:** H103 (vorab 45314b2, k225).
@@ -18,7 +20,7 @@
   - H102 ist offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem 13.11.2026 (`k224_test_h102.py m_tau sigma`).
   - H101 ist widerlegt. H100 ist offen; am 13.11. war NuFIT 6.1 weiterhin die neueste Version.
   - Als Nächstes ist H104 frei, das letzte k-Skript ist k225.
-- **Offene Autorentscheidungen:** „PR 113 mergen“ (Zweig `research/ct001-methode`).
+- **Offene Autorentscheidungen:** keine.
 - **Counterterm-Registry (14.11.):** Der Autor will damit Rapid Prototyping betreiben: Gegenterme setzen und später
   durch Herleitungen ersetzen. Phase 1 läuft in einer eigenen Sitzung (Schema, Validator, Weitergabe der Guards,
   Fixture CT-000-TEST). Ergänzt um die Herkunft der Fitdaten, eine Blindheitsprüfung, Δ als Prüfstein sowie diskrete
