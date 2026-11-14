@@ -11,8 +11,8 @@
   (990a3cc), #114 (44cdcd1), #113 (10d670e), #112 (ad7756f), #111 (c247ea3), #110 (8606691), #109 (963f557), #108
   (91cbb69). Am 13.11.: #104–#107.
 - **Lokal:** `github/main` = f04c6ad. Der Hauptordner steht noch auf 9b9dfda und braucht `git pull github main`.
-  Der Worktree `zealous-fermi-f46fd7` (Zweig `docs/wiki-gesamtbild-r13`, gemergt, noch ausgecheckt) trägt dazu
-  einen Übergabe-Commit, nur lokal.
+  Der Worktree `zealous-fermi-f46fd7` (Zweig `docs/wiki-gesamtbild-r13`, gemergt, noch ausgecheckt) steht auf
+  demselben Stand (Übergabe-Commit gepusht auf „Ja, pushen“).
 - **14.11., Fourier-Transformation der Slots** (`op3_slot_fourier_2t_2026_11_14.*`, Erkundung, nicht blind): Die Lücke
   aus r13.6 hat einen Namen. F (Fourier der drei Slots) ist die gleichgewichtete Summe der neun Operationen τᵃDᵇ; F² ist
   der Slotteil von ρ und zerlegt C³ in Dublett und Singulett. Mit der Phase S = diag(1, ω, ω) erzeugt F auf dem
