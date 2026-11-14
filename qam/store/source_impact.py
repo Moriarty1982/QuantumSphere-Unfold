@@ -23,7 +23,7 @@ def impact(snapshot, roots):
     downstream = {}
     for row in tables['qstore_relations']:
         status = relation_status.get(row['relation_hash'], row['status'])
-        if row['relation_type'] in {'requires', 'interpreted-by'} and status in {'declared', 'reviewed'}:
+        if row['relation_type'] in {'requires', 'interpreted-by', 'depends-on-counterterm'}                 and status in {'declared', 'reviewed'}:
             downstream.setdefault(row['target_version'], set()).add(row['source_version'])
     for key, row in versions.items():
         payload = json.loads(row['payload_json'])

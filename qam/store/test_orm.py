@@ -28,7 +28,8 @@ class StoreOrmTests(unittest.TestCase):
                     raise RuntimeError('abort transaction')
             with store_session(path) as (session, models):
                 self.assertIsNone(session.get(models.qstore_objects, 'rollback'))
-                self.assertEqual(session.scalar(select(func.count()).select_from(models.qstore_ledger)), 6)
+                # One initialization event plus one migration event each for schema v2 to v7.
+                self.assertEqual(session.scalar(select(func.count()).select_from(models.qstore_ledger)), 7)
             with self.assertRaises(IntegrityError):
                 with store_session(path) as (session, models):
                     session.add(models.qstore_objects(object_id='bad-type', object_type='missing'))

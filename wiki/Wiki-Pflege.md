@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 14.11.2026: QAM – Gegenterm-Register im Aussagenspeicher (Schema v7, Phase 1) beschrieben: Objekttyp, Lebenslauf, Guard-Vererbung, Residuenprüfung, Termrollen; kein physikalischer Gegenterm registriert, OP1–OP5, C5, C6/T2 offen.
+
 - 11.11.2026: Forschungsstand – Physikfassung vom technischen Auszug zum wissenschaftlichen Haupttext mit Abstract, Literatur und Beweisanhang überarbeitet; Detailprovenienz im separaten Auditbericht erhalten.
 
 - 11.11.2026: Forschungsstand – beide Datenbankeditionen, sieben Physikabschnitte, vollständigen Langquellbaum und sichtbar offene Kandidaten dokumentiert; keine Releasefreigabe.

@@ -365,3 +365,102 @@ Orthogonalität und maschinenprüfbare Frame-Abbildung. Die Auswahl behält
 `frame-bridge-required`; eine manuelle Selbstprüfung ersetzt keinen typisierten
 Abbildungsnachweis. Die Originalquellen und bestehende Guards bleiben unverändert.
 Bericht: `notes/research/hc_koide_bridge_review_2026_11_11.md`.
+
+## Gegenterm-Register (Schema v7, Phase 1, 2026-11-14)
+
+Das Register trennt einen geschützten Strukturkern von lokalen, effektiven
+Kompensationstermen δ_i. Ein Gegenterm ist Buchführung, keine Herleitung:
+Er schließt weder OP1–OP5 noch C5 oder C6/T2. Im Store ist kein
+physikalischer Gegenterm registriert; die Tests verwenden nur die Fixture
+CT-000-TEST in einer temporären Datenbank.
+
+Schema v7 ergänzt nur den Typenkatalog um `counterterm-scheme` und
+`counterterm-transition` (`catalogue_v7.json`) und sperrt den Katalog gegen
+Ändern und Löschen. Bestehende Tabellen und Trigger bleiben unverändert;
+v1–v6-Datenbanken werden bei der Initialisierung erweitert. Der neue
+Relationstyp `depends-on-counterterm` verlangt als Ziel eine
+`counterterm-scheme`-Version im selben Frame. `impact` folgt ihm wie
+`requires`.
+
+`python -m qam.store.counterterms store --request DATEI` registriert eine
+Version. Die Payload verlangt genau title, target_sector, operator_basis,
+compensation_function (symbolic, parameters, form), reference_scale,
+matching_condition, rg_flow (Text oder null), validity_domain (variable,
+interval, samples, description), magnitude_convention (signed oder
+magnitude), replacement_tolerance, open_guards, assumptions und scope.
+Parameter tragen value (exakt rational oder null), bounds und role
+(fit_parameter, regulator_cutoff, fixed_input). Werte außerhalb der Grenzen,
+leere Intervalle, Stützstellen außerhalb des Gültigkeitsbereichs und eine
+leere Guard-Liste werden abgelehnt. Die Rolle orientation_sign ist verboten:
+Das Orientierungsvorzeichen o_R bleibt ein eigener Faktor außerhalb von
+|δ_i|. Jeder Eintrag in open_guards wird als offener Guard der Version
+gespeichert. `form` ist optional ein exaktes Polynom (`qam-polynomial-v1`,
+Koeffizienten als Rationalzahlen oder Parameternamen).
+
+Der Lebenslauf jeder Gegenterm-Version ist eine append-only Kette von
+`counterterm-transition`-Versionen (`transition`). Ohne Übergang gilt
+placeholder. Erlaubt sind placeholder → partially_constrained | deprecated,
+partially_constrained → structurally_matched | deprecated und
+structurally_matched → deprecated; deprecated ist endgültig. Jeder Übergang
+nennt den aktuellen Vorgänger, Prüfer, Grund und eine gehashte Evidenzdatei.
+Eine veraltete Vorgängerangabe wird abgelehnt. Jeder Statuswechsel schreibt
+das Ledgerereignis `COUNTERTERM-REAUDIT` mit allen abhängigen Versionen.
+Das markiert Kandidaten für eine Neuprüfung und widerruft nichts.
+
+`residual --request DATEI` mit scheme und replacement wertet
+Δ = F − δ exakt an den deklarierten Stützstellen aus. Die Ersatzstruktur ist
+ein Seed mit value_type `qam-polynomial-v1` im selben Frame. Fehlende
+Parameterwerte ergeben `blocked`. Liegt |Δ| an einer Stelle über
+replacement_tolerance, ergibt sich `failed`, und der Beleg enthält die
+Verschiebung Δ je Stützstelle. Bei magnitude_convention = magnitude gilt ein
+negativer δ-Wert als `failed`, weil dann ein Vorzeichen absorbiert sein kann.
+Der Beleg prüft nur endlich viele Punkte und ist keine Schranke auf dem ganzen
+Bereich. structurally_matched verlangt einen bestandenen Beleg für genau
+dieses Paar.
+
+`resolve --hash VERSION` folgt deklarierten oder geprüften `requires`-,
+`interpreted-by`- und `depends-on-counterterm`-Kanten. Jeder erreichte
+Gegenterm mit Status ≠ structurally_matched vererbt seine offenen Guards;
+deprecated wird zusätzlich gesondert ausgewiesen. Nach einem Strukturabgleich
+folgt die Auflösung der Ersatzstruktur, deren eigene Guards unter
+replacement_guards erscheinen.
+
+`roles --request DATEI` prüft Termmarkierungen einer Aussage und speichert
+einen Beleg `qam-term-role-v1`. Die Rollen structural_core und
+counterterm_compensation sind Termrollen. Sie sind von den Front/Back-
+Indexrollen von `qam-role-audit/2` getrennt. Regeln: T1 unbekannte Rolle oder
+eingemischte Indexrolle; T2 Kompensationsterm ohne registrierten Gegenterm
+oder ohne deklarierte Abhängigkeitskante; T3 Absorption in den Kern ohne
+protokollierten Strukturabgleich; T4 absorbiertes oder fehlendes
+Orientierungsvorzeichen; T5 eine reine Kernaussage, die still von einem nicht
+abgeglichenen Gegenterm abhängt. Tests: `python -m unittest
+qam.store.test_counterterms`. Der LaTeX-Export der Registertabelle ist
+Phase 2.
+
+### Rapid Prototyping: Fit-Herkunft, Blindheit und Δ als Vorhersage
+
+Das Register soll schnelle Prototypen tragen, deren Gegenterme später durch
+Herleitungen ersetzt werden. Dafür gilt zusätzlich:
+
+- `operator_basis` ist ein Objekt aus kind (lagrangian_operator oder
+  readout), expression und frame. Eine benannte Auslesegröße ist zulässig.
+  Ihr Frame muss dem deklarierten Frame entsprechen.
+- Ein Parameter mit der Rolle discrete_choice trägt options als endliche
+  Liste und value als gewählte Option oder null. Er hat keine Grenzen.
+- `fitted_on` ist null, wenn alle θ gesetzt sind. Andernfalls enthält es
+  method, die angepassten parameters, data mit label, source, version und
+  value, uncertainty als rationales σ je stetigem Fitparameter und scan.
+  scan ist null oder eine Auswahl aus trials, hits und chance_expectation.
+- `known_tensions` hält bekannte Spannungen vor jeder Ersetzung fest. Jeder
+  Eintrag enthält description, convention, delta und source.
+- `blindness --request DATEI` mit statement und tested_against (label,
+  source, version) meldet `not_blind`, sobald ein Vergleichsdatum über
+  (source, label) im fitted_on eines Gegenterms der Abhängigkeitshülle
+  vorkommt. Abweichende Datenversionen werden ausgewiesen. Der Beleg gilt nur
+  für registrierte Fits; nicht registriertes Tuning bleibt unerkannt.
+- Der Residuenbeleg weist Δ je Stützstelle gegen die Toleranz und gegen das
+  Fitband aus. Das Fitband ist die lineare Fehlerfortpflanzung
+  Σ_k |∂δ/∂θ_k| σ_k. Das Urteil lautet compatible-within-tolerance,
+  exceeds-tolerance-within-fit-uncertainty oder deviates-from-fit. Nur das
+  erste Urteil erlaubt structurally_matched. Andernfalls bleibt δ_i stehen,
+  und Δ_i wird als Abweichung der Herleitung vom Fit berichtet.

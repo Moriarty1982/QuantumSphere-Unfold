@@ -1,0 +1,4 @@
+{
+  "counterterm-scheme": "Local, effective compensation term delta_i with operator basis, bounded parameters, validity domain and open guards; never a derivation.",
+  "counterterm-transition": "Append-only lifecycle step of one counterterm-scheme version (placeholder, partially_constrained, structurally_matched, deprecated)."
+}
