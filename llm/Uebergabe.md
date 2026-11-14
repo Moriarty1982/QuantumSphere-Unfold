@@ -2,12 +2,13 @@
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.**
 
 ## Stand vom 15.11.2026 (Claude Opus)
-- **GitHub:** **PR #124 gemergt als f5ede73** auf „PR 124 mergen“. Für den Zweig waren keine PR-Prüfungen eingerichtet.
-  Nach dem Merge war der Wiki-Sync erfolgreich, der Zwei-PDF-Lauf (43652233692) lief noch. **Keine offenen PRs.**
-  Der Zweig `research/op3-action-balance-search` ist lokal und auf GitHub gelöscht (Dauerauftrag).
-  Davor gemergt: #123 (14856e3, Codex), #122 (f04c6ad), #121 (f39ca00, r13), #120, #119, #108–#118.
+- **GitHub:** **PR #125 gemergt als 087d13f** (Dauerauftrag Versionsverwaltung in AGENTS.md und Wiki) und davor
+  **PR #124 als f5ede73** (OP3-Rückwärtssuche, Nachträge 1–9). **Keine offenen PRs.** Beide Zweige sind lokal und
+  auf GitHub gelöscht. Davor gemergt: #123 (14856e3, Codex), #122 (f04c6ad), #121 (f39ca00, r13), #120, #119, #108–#118.
   Nicht geprüft: die Darstellung von Mindmap und Formeln im GitHub-Wiki (im Browser des Modells gesperrt).
-- **Lokal:** Hauptordner auf `main` = f5ede73 (plus dieser Übergabe-Commit).
+- **Dauerauftrag 15.11. (AGENTS.md):** Interne Nummern (H, k, Runden, CT) ohne Rückfrage vergeben; Übergabe- und
+  Buchführungs-Commits ohne Rückfrage auf `main` pushen. Inhalt nur über PR; Zenodo und neue Versionen nur mit Freigabe.
+- **Lokal:** Hauptordner auf `main` = 087d13f (plus dieser Übergabe-Commit).
 - **Neu, 14.11. (`notes/research/op3_action_balance_search_2026_11_14/`, Erkundung, nicht blind, Rückwärtssuche,
   auf „Wirkung suchen“ des Autors):** Gesucht war eine vorhandene Wirkung, die H = −a(Q + R) mit gebunden gleichen
   Kopplungen liefert (nächster Ansatz aus der Codex-Notiz `op3_reference_energy_selection_2026_11_14`).
