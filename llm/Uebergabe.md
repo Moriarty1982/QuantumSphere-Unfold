@@ -2,11 +2,11 @@
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.**
 
 ## Stand vom 14.11.2026 (Claude Opus)
-- **GitHub:** **PR #111 gemergt als c247ea3** (AGENTS.md: gemergte Zweige löschen), auf „PR 111 mergen“; Lauf
-  43538928669 (Wiki-Sync) erfolgreich (kein PDF-Lauf, nur AGENTS/Wiki geändert). Zweig gelöscht. **Offen: PR #112** (Hurwitz-Einheiten auf N).
-  Am 14.11. außerdem gemergt: #110 (8606691, Generationen unter Q_*), #109 (963f557, R_f-Nachtrag) und #108
-  (91cbb69, Ladung über e8, H103 widerlegt). Am 13.11. gemergt: #104–#107.
-- **Lokal:** Der Hauptordner steht auf `main` = c247ea3 (vorgespult), dazu dieser Übergabe-Commit, nur lokal.
+- **GitHub:** **PR #112 gemergt als ad7756f** (Hurwitz-Einheiten auf N, Erkundung), auf „PR 112 mergen“; Läufe
+  43539578174 (Wiki-Sync) und 43539578134 (Zwei-PDF) erfolgreich. Zweig gelöscht. **Keine offenen PRs.**
+  Am 14.11. außerdem gemergt: #111 (c247ea3, AGENTS.md: gemergte Zweige löschen), #110 (8606691, Generationen unter Q_*),
+  #109 (963f557, R_f-Nachtrag), #108 (91cbb69, Ladung über e8, H103 widerlegt). Am 13.11.: #104–#107.
+- **Lokal:** Der Hauptordner steht auf `main` = ad7756f (vorgespult), dazu dieser Übergabe-Commit, nur lokal.
   Unversioniert: `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf` (jetzt wirklich im Hauptordner).
 - **Letzte Runde:** v4.10.0-r12 (Statusvermerke) aus PR #106.
 - **Zuletzt vergebene Hypothese:** H103 (vorab 45314b2, k225).
@@ -18,7 +18,7 @@
   - H102 ist offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem 13.11.2026 (`k224_test_h102.py m_tau sigma`).
   - H101 ist widerlegt. H100 ist offen; am 13.11. war NuFIT 6.1 weiterhin die neueste Version.
   - Als Nächstes ist H104 frei, das letzte k-Skript ist k225.
-- **Offene Autorentscheidungen:** „PR 112 mergen“ (Zweig `research/v5-hurwitz-2t`).
+- **Offene Autorentscheidungen:** keine.
 - **14.11., Hurwitz-Einheiten auf N** (`op3_hurwitz_2t_neutral_qubit_2026_11_14.*`, Erkundung, nicht blind):
   Die 24 Hurwitz-Einheiten von H_n wirken von rechts treu auf N als 2T (projektiv A4). N ist also ein natives
   2T-Dublett. Die ψ-Achse e8 ist zweizählig, die vier dreizähligen Achsen liegen unter 1/√3 dazu. Der Bezug ist ein
