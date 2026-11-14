@@ -1907,6 +1907,16 @@ Erkundung $\eta$, ohne Datenvergleich:
   ist kein Generationsschritt. Das neutrale Qubit $N$ ist der Raum der zwei
   Neutrino-Flavours, $\psi$ eine relative Phase zwischen ihnen. Der dritte Flavour
   fehlt (K28, Weg A).
+- Hurwitz-Einheiten auf $N$ (14.11., Erkundung, nicht blind): Die 24 Hurwitz-Einheiten
+  von $\mathbb H_n$ wirken von rechts treu auf $N$ als binäre Tetraedergruppe $2T$
+  (projektiv $A_4$). Damit ist $N$ ein natives $2T$-Dublett, also das Spinor-Feld, das in
+  der Feldsuche fehlte. Die $\psi$-Achse $e_8$ ist eine zweizählige Achse; alle vier
+  dreizähligen Achsen liegen unter $|\cos|=1/\sqrt3$ dazu. Der Bezug ist ein Eigenzustand
+  einer Hurwitz-Einheit der Ordnung 3, etwa $(1+e_7+e_8+e_{15})/2$, und gibt unter $\psi$
+  $\rho^2=1/2$, $K=2/3$ und $\pi/4$. Die Raumdiagonale ist damit durch die ganzzahlige
+  Struktur von $\mathbb H_n$ ausgezeichnet. $\psi$ normalisiert $2T$ nicht. Einschränkungen:
+  nur zwei Flavours, $\psi$ ist kein Generationsschritt, $e_8$ als Ladungsachse ist eine
+  Annahme. Koide ist nicht hergeleitet.
 
 **Runde v4.10.0-r12 und offene Fäden** (13.11.2026). Die Runde r12
 (Statusvermerke) hält fest: Das historische Koide-OP3 ist nicht
@@ -1987,7 +1997,7 @@ Koide-Bogens ist exakt das Oktanten-Tripel. Zu den Fäden:
 > **Anmerkungen für LLMs und Quellenprüfung:** Notizen
 > `notes/research/op3_neutrino_phase_candidates_2026_11_13.md` (Varianten),
 > `notes/research/op3_slot_u3_gauging_2026_11_13.md` (Eichung Platzindex-U(3)),
-> `notes/research/op3_eta_form_search_2026_11_13.md` (Form η, Bargmann-Phase), `notes/research/op3_hopf_octant_2026_11_13.md` (Oktanten-Tripel im Hopf-Träger), `op3_lorentz_octant_2026_11_13.py` (Lorentz-Fassung), `op3_neutral_su2_octant_2026_11_13.md` (neutrale SU(2), Spin 1/2), `op3_sedenion_reference_2026_11_13.md` (Bezugszustand), `op3_sedenion_charge_2026_11_13.md` (Ladung über $e_8$, neutrales Qubit), `op3_rf_reference_2026_11_14.py` (Rechtsmodul, Pauli-Tripel), `op3_sedenion_generations_estar_2026_11_14.md` (Generationen unter $Q_*$), `op3_koide_potential_2026_11_13.md` (Potential, T₁₂), `op3_selection_principle_2026_11_13.md` (Auswahlprinzip), `op3_flux_two_thirds_2026_11_13.md` (Fluss 2/3 rad), `v4_10_0_r12/` (Runde r12), `predictions/Vorab_Notiz_H100_Neutrino_Verhaeltnis_naechster_Fit.md`,
+> `notes/research/op3_eta_form_search_2026_11_13.md` (Form η, Bargmann-Phase), `notes/research/op3_hopf_octant_2026_11_13.md` (Oktanten-Tripel im Hopf-Träger), `op3_lorentz_octant_2026_11_13.py` (Lorentz-Fassung), `op3_neutral_su2_octant_2026_11_13.md` (neutrale SU(2), Spin 1/2), `op3_sedenion_reference_2026_11_13.md` (Bezugszustand), `op3_sedenion_charge_2026_11_13.md` (Ladung über $e_8$, neutrales Qubit), `op3_rf_reference_2026_11_14.py` (Rechtsmodul, Pauli-Tripel), `op3_sedenion_generations_estar_2026_11_14.md` (Generationen unter $Q_*$), `op3_hurwitz_2t_neutral_qubit_2026_11_14.md` (2T-Dublett, nativer Bezug), `op3_koide_potential_2026_11_13.md` (Potential, T₁₂), `op3_selection_principle_2026_11_13.md` (Auswahlprinzip), `op3_flux_two_thirds_2026_11_13.md` (Fluss 2/3 rad), `v4_10_0_r12/` (Runde r12), `predictions/Vorab_Notiz_H100_Neutrino_Verhaeltnis_naechster_Fit.md`,
 > `notes/research/nufit_verlauf_2026_11_13.py` (mit Grafik und Ausgabe),
 > `notes/research/op3_indefinite_form_2026_11_13.md`,
 > `notes/research/predictions/Vorab_Notiz_H99_Neutrino_Phase_Bogenrand.md`,

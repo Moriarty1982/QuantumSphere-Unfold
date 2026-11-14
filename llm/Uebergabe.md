@@ -2,11 +2,11 @@
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.**
 
 ## Stand vom 14.11.2026 (Claude Opus)
-- **GitHub:** **PR #110 gemergt als 8606691** (Generationen unter Q_*, Erkundung), auf „PR 110 mergen“; Läufe
-  43537835140 (Wiki-Sync) und 43537835219 (Zwei-PDF) erfolgreich. **Offen: PR #111** (Regel in AGENTS.md).
-  Am 14.11. außerdem gemergt: #109 (963f557, R_f-Nachtrag) und #108 (91cbb69, Ladung über e8, H103 widerlegt).
-  Am 13.11. gemergt: #104 (32fa42c), #105 (fcc87c6), #106 (ca29c5b), #107 (a08d918).
-- **Lokal:** Der Hauptordner steht auf `main` = 8606691 (vorgespult), dazu dieser Übergabe-Commit, nur lokal.
+- **GitHub:** **PR #111 gemergt als c247ea3** (AGENTS.md: gemergte Zweige löschen), auf „PR 111 mergen“; Lauf
+  43538928669 (Wiki-Sync) erfolgreich (kein PDF-Lauf, nur AGENTS/Wiki geändert). Zweig gelöscht. **Offen: PR #112** (Hurwitz-Einheiten auf N).
+  Am 14.11. außerdem gemergt: #110 (8606691, Generationen unter Q_*), #109 (963f557, R_f-Nachtrag) und #108
+  (91cbb69, Ladung über e8, H103 widerlegt). Am 13.11. gemergt: #104–#107.
+- **Lokal:** Der Hauptordner steht auf `main` = c247ea3 (vorgespult), dazu dieser Übergabe-Commit, nur lokal.
   Unversioniert: `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf` (jetzt wirklich im Hauptordner).
 - **Letzte Runde:** v4.10.0-r12 (Statusvermerke) aus PR #106.
 - **Zuletzt vergebene Hypothese:** H103 (vorab 45314b2, k225).
@@ -18,7 +18,12 @@
   - H102 ist offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem 13.11.2026 (`k224_test_h102.py m_tau sigma`).
   - H101 ist widerlegt. H100 ist offen; am 13.11. war NuFIT 6.1 weiterhin die neueste Version.
   - Als Nächstes ist H104 frei, das letzte k-Skript ist k225.
-- **Offene Autorentscheidungen:** „PR 111 mergen“ (Regel „gemergte Zweige löschen“ in AGENTS.md, Zweig `research/agents-zweige-loeschen`).
+- **Offene Autorentscheidungen:** „PR 112 mergen“ (Zweig `research/v5-hurwitz-2t`).
+- **14.11., Hurwitz-Einheiten auf N** (`op3_hurwitz_2t_neutral_qubit_2026_11_14.*`, Erkundung, nicht blind):
+  Die 24 Hurwitz-Einheiten von H_n wirken von rechts treu auf N als 2T (projektiv A4). N ist also ein natives
+  2T-Dublett. Die ψ-Achse e8 ist zweizählig, die vier dreizähligen Achsen liegen unter 1/√3 dazu. Der Bezug ist ein
+  Eigenzustand einer Hurwitz-Einheit der Ordnung 3 und gibt K = 2/3, π/4. ψ normalisiert 2T nicht. Die Frage zu Weg B
+  war schon beantwortet (`op3_neutral_su2_octant`, Punkt 3: dort nur der A4-Vektor).
 - **14.11., Generationen unter Q_*** (`op3_sedenion_generations_estar_2026_11_14.*`, Erkundung, nicht blind):
   C⊗S hat unter Q_* genau zwei vollständige Generationen. Die ψ-Sektoren sind aber keine Generationen
   (1: ν, e⁺; ω: ν, u, d̄; ω̄: e⁺, u, d̄). ψ wirkt innerhalb der Generationen als Phase und ist kein Generationsschritt.
@@ -44,7 +49,8 @@
       asymmetrische Fehler gemittelt; Frist 31.12.2027);
     - `k224_test_h102.py m_tau sigma`.
   - Inhaltlich zur Wahl:
-    - **(a)** einen nativen Bezugszustand in N suchen. Stand 14.11.: H103 widerlegt; der Bezug ist auf die Wahl einer
+    - **(a)** erledigt am 14.11.: Bezug = Eigenzustand einer Hurwitz-Einheit der Ordnung 3 (2T von rechts).
+      Frühere Fassung: einen nativen Bezugszustand in N suchen. Stand 14.11.: H103 widerlegt; der Bezug ist auf die Wahl einer
       Richtung u ∈ Im H_n mit |⟨u, e8⟩| = 1/√3 zurückgeführt (Rechtsmodul). Offen ist, was diese Richtung auszeichnet. Gesucht ist ein Gewicht 2 sin(π/12), zum Beispiel aus einer
       Drehung um π/12 oder aus der Hurwitz-/2T-Struktur über H_n. Querbezug zum Auswahlprinzip: Der Abstand vom
       Oktanten ist dort π/12 − θ_e.
@@ -63,7 +69,8 @@
   - Der Zweig dieser Sitzung, `claude/anthropic-skills-weitermachen-08cc3e`, ist gemergt, aber noch ausgecheckt. Er
     verschwindet mit dem Worktree beim Archivieren.
 - **Dauerauftrag des Autors (14.11.):** „bitte lösche zweige die weg können immer“. Gemergte Zweige ohne offenen PR
-  werden nach jedem Merge ohne Rückfrage gelöscht, lokal und auf GitHub. Nicht gemergte bleiben stehen.
+  werden nach jedem Merge ohne Rückfrage gelöscht, lokal und auf GitHub. Nicht gemergte bleiben stehen. Seit PR #111
+  steht das als Regel in `AGENTS.md`.
 
 ## Früher am 13.11. erarbeitet, alles gemergt
 - **H99b** mit NuFIT-6.1-Primärtabelle: verträglich, +1,80σ (nicht blind). **H100** vorab: R im nächsten NuFIT-Fit,
