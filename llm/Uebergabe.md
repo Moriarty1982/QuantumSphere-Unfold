@@ -3,19 +3,22 @@
 
 ## Stand vom 14.11.2026 (Claude Opus)
 - **GitHub:** **PR #108 gemergt als 91cbb69** (Ladung über e8, neutrales Qubit, H103 widerlegt), auf „pr 108 mergen“.
-  Am 13.11. gemergt: #104 (32fa42c), #105 (fcc87c6), #106 (ca29c5b), #107 (a08d918). **Keine offenen PRs.**
+  **Offen:** PR mit dem R_f-Nachtrag (Zweig `research/v5-rf-nachtrag`; er enthält auch die lokalen Übergabe-Commits).
+  Am 13.11. gemergt: #104 (32fa42c), #105 (fcc87c6), #106 (ca29c5b), #107 (a08d918).
   Läufe 43534883771 (Wiki-Sync) und 43534883722 (Zwei-PDF) zu 91cbb69 erfolgreich.
-- **Lokal:** Der Hauptordner steht auf `main` = 91cbb69 (vorgespult), dazu dieser Übergabe-Commit, nur lokal.
-  Unversioniert: `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf`.
+- **Lokal:** Der Hauptordner steht auf `main` = 91cbb69 (vorgespult), dazu Übergabe-Commits, nur lokal. Der R_f-Nachtrag liegt im Worktree `anthropic-skills-weitermachen-08cc3e`.
+  Unversioniert: `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf` (jetzt wirklich im Hauptordner).
 - **Letzte Runde:** v4.10.0-r12 (Statusvermerke) aus PR #106.
 - **Zuletzt vergebene Hypothese:** H103 (vorab 45314b2, k225).
   - **H103a ist widerlegt:** Q_S wirkt auf N als 1/2 + σ_y/3 und steht senkrecht zur ψ-Achse (K = 1/2).
-  - Nachträglicher Suchtreffer in der Nebenliste (96 Einträge): i R_f mit f = (e7+e8+e15)/√3 gibt exakt den
-    magischen Winkel; L_f ist auf N skalar. Prüfen nur mit eigener Vorab-Notiz (H104).
+  - Nachtrag 14.11. (Erkundung, auf „Als Erkundung nachtragen“, `op3_rf_reference_2026_11_14.*`): Der Suchtreffer
+    i R_f ist analytisch erzwungen. N ist ein Rechtsmodul über H_n; i R_e7, i R_e15, i R_e8 sind dort ein Pauli-Tripel
+    mit e8 als ψ-Achse, also gilt c(i R_u) = |⟨u, e8⟩|, und jede Raumdiagonale trifft. Offen: warum die Rechtswirkung
+    maßgeblich ist und was die Diagonale auszeichnet. H104 wird dafür nicht vergeben.
   - H102 ist offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem 13.11.2026 (`k224_test_h102.py m_tau sigma`).
   - H101 ist widerlegt. H100 ist offen; am 13.11. war NuFIT 6.1 weiterhin die neueste Version.
   - Als Nächstes ist H104 frei, das letzte k-Skript ist k225.
-- **Offene Autorentscheidungen:** ob H104 zum R_f-Treffer vorab festgelegt wird.
+- **Offene Autorentscheidungen:** Merge des PR mit dem R_f-Nachtrag (Zweig `research/v5-rf-nachtrag`).
 - **Ausgelöste Zurückgestellte Ideen:** keine. I1–I5 sind geprüft.
 
 ### Heute abend: Ladung über e8 (`notes/research/op3_sedenion_charge_2026_11_13.*`, Erkundung, nicht blind)
@@ -37,7 +40,8 @@
       asymmetrische Fehler gemittelt; Frist 31.12.2027);
     - `k224_test_h102.py m_tau sigma`.
   - Inhaltlich zur Wahl:
-    - **(a)** einen nativen Bezugszustand in N suchen. Gesucht ist ein Gewicht 2 sin(π/12), zum Beispiel aus einer
+    - **(a)** einen nativen Bezugszustand in N suchen. Stand 14.11.: H103 widerlegt; der Bezug ist auf die Wahl einer
+      Richtung u ∈ Im H_n mit |⟨u, e8⟩| = 1/√3 zurückgeführt (Rechtsmodul). Offen ist, was diese Richtung auszeichnet. Gesucht ist ein Gewicht 2 sin(π/12), zum Beispiel aus einer
       Drehung um π/12 oder aus der Hurwitz-/2T-Struktur über H_n. Querbezug zum Auswahlprinzip: Der Abstand vom
       Oktanten ist dort π/12 − θ_e.
     - **(b)** prüfen, ob Q_* auf den Fermionideal-Zuständen (statt auf S als Vektorraum) die bekannten Ladungen gibt.

@@ -1,0 +1,6 @@
+(1) e7: R_u laesst N invariant True; L_u laesst N invariant False; L_u auf N [[0j, 0j], [(-0+0j), 0j]]
+(1) e8: R_u laesst N invariant True; L_u laesst N invariant True; L_u auf N [[-1j, 0j], [0j, -1j]]
+(1) e15: R_u laesst N invariant True; L_u laesst N invariant False; L_u auf N [[(-0+0j), 0j], [-0j, 0j]]
+(2) Pauli-Tripel: Quadrate 1 True, Antikommutatoren 0 True; i R_e8 diagonal (psi-Achse) True
+(3) acht Diagonalen: c = [0.5773502692] (1/sqrt3 = 0.5773502692)
+    zufaellige u in Im H_n: max |c - |<u,e8>|| = 2.2e-16
