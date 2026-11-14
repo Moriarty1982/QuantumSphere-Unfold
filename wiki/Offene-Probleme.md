@@ -28,6 +28,17 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 
 ## OP3: Zulässige Hüllen-Übergänge
 
+**Nachtrag 14.11.2026, Fourier-Herkunft:** Komplexe Linearkombinationen der
+Slot-Permutationen erhalten die gleichmäßige Slotgerade; F tut das nicht.
+Auch das Zulassen solcher Summen liefert daher noch keine native
+Fourier-Operation. Mit einer unabhängig begründeten Uhr D würden die
+beiden geordneten Regeln U tau U†=D^-1 und U D U†=tau den Operator bis auf
+Gesamtphase festlegen. Die native Herkunft von D, U und S sowie die
+Bezugsauswahl bleiben offen. Die volle slotweise Trialität ist durch die
+Permutationsschranke nicht ausgeschlossen und muss auf dem gemeinsamen
+physikalischen Slotraum dargestellt werden. OP3 bleibt offen.
+[Analytische Erkundung](../notes/research/op3_fourier_native_gate_2026_11_14.md).
+
 **Stand nach v4.10.0-r12 (13.11.2026):** Die geerbte Lesart, das Koide-OP3 sei „strukturell geschlossen“ (Teil 17), ist überholt; OP3 ist offen. Nach v5.0.0 erkundet: Koide als mittlere quadratische Überlappung ½ (Gram-Lesart), Rand des Bogens als Oktanten-Tripel, Neutrino-Phase als Fluss π/4 (H99 verträglich, H100 vorab). Ein Potential gibt ρ² = ½ nur mit abgestimmtem Koeffizientenverhältnis (Grad 6); ein nativer, farb- und ladungsneutraler Träger fehlt.
 
 **Stand nach v4.10.0-r13 (14.11.2026):** Ein neutraler Träger existiert unter einer Annahme: Mit der Ladungsachse e₈ (Platzhalter CT-003) ist N = span(1 + i e₈, e₇ − i e₁₅) ein farb- und ladungsneutrales Qubit der Sedenionen, auf dem die Hurwitz-Einheiten als 2T wirken; der Bezug unter dem magischen Winkel ist dort ein Eigenzustand einer Einheit der Ordnung 3. Es bleiben aber zwei Generationen, und ψ ist kein Generationsschritt. Der Trialitätsträger O³ hat drei Generationen und ein τ-symmetrisches 2 + 1, aber keine zweizählige Achse unter dem magischen Winkel (nur S₃, K = 1/2). Kein vorhandener Träger erfüllt das ganze Profil. Koide 2/3 und die Phase sind nicht hergeleitet; OP3 und OP4 sind offen.

@@ -1,5 +1,26 @@
 # Forschungsstand
 
+### OP3: Native Herkunft der Fourier-Operation (14.11.2026)
+
+Analytische Erkundung, nicht blind: Auch beliebige komplexe Summen der
+Slot-Permutationen tau und P erhalten die gleichmäßige Slotgerade
+s=(1,1,1)/sqrt(3). Die Fourier-Matrix bildet s dagegen auf e_0 ab und liegt
+daher außerhalb dieser Algebra. Kohärente Summen der Permutationen allein
+schließen die in r13.6 benannte Lücke nicht. Die zusätzliche Uhr
+D=diag(1,omega,omega²) verlässt diese Algebra bereits.
+
+Eine native unitäre Operation U wäre bis auf Gesamtphase als Fourier
+festgelegt, wenn sie beide Regeln U tau U†=D^-1 und U D U†=tau erfüllt.
+Die erste Regel allein lässt relative Eigenraumphasen frei; F²=P allein
+hat ebenfalls andere unitäre Lösungen. Ein Basiswechsel zu Fourier-Moden
+begründet keine aktive Operation relativ zur festgehaltenen Phase S.
+Offen bleiben die native Uhr, ihre Vertauschungsoperation, S und die
+Bezugsauswahl. Die Schranke betrifft den skalaren Permutationsraum,
+keine bereits ausgewertete volle Trialitätswirkung. Nächste Pflicht ist
+deren Darstellung auf einem gemeinsamen farb- und ladungstypisierten
+Slotraum. Keine neue H-Nummer oder Guard-Schließung; H100/H102 bleiben offen.
+[Herleitung und Geltungsgrenzen](../notes/research/op3_fourier_native_gate_2026_11_14.md).
+
 ### OP3: Elastische Strings mit fester Gesamtlänge (12.11.2026)
 
 Die Autorenidee wurde als zusätzliches Längenmodell untersucht:
