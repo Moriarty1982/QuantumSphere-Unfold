@@ -336,6 +336,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 14.11.2026: Regel „gemergte Zweige löschen“ (AGENTS.md) in Hinweise-fuer-LLMs.
 
+14.11.2026: Erkundung Hurwitz-Einheiten auf N (2T-Dublett nativ; Bezug = Eigenzustand einer Hurwitz-Einheit der Ordnung 3; ψ normalisiert 2T nicht) in Forschungsstand; kein OP-Abschluss.
+
 13.11.2026, spät: Runde v4.10.0-r12 (Statusvermerke) in Forschungslinie, Inhalt, Content-overview, Offene-Probleme und Forschungsstand; Fäden Potential und T₁₂ in Forschungsstand.
 
 13.11.2026, spät: Nachtrag Auswahlprinzip (Koide als qubitartige Treue; Mittelwert erklärt die Genauigkeit nicht) in Forschungsstand; kein OP-Abschluss.

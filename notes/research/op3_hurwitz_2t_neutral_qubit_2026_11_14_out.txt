@@ -1,0 +1,10 @@
+(1) 24 Hurwitz-Einheiten auf N: unitaer True; treu (24 verschiedene Matrizen) True; abgeschlossen True; projektives Bild 12 Elemente (A4: 12)
+    Ordnungen der 24 Elemente: {1: 1, 2: 1, 3: 8, 4: 6, 6: 8} (2T: 1:1, 2:1, 4:6, 3:8, 6:8)
+(2) Achsen auf der Bloch-Kugel von N (psi-Achse = z):
+    Drehwinkel 120.000 Grad, |cos(Achse, psi-Achse)| = 0.577350: 16 Einheiten
+    Drehwinkel 180.000 Grad, |cos(Achse, psi-Achse)| = 0.000000: 4 Einheiten
+    Drehwinkel 180.000 Grad, |cos(Achse, psi-Achse)| = 1.000000: 2 Einheiten
+(3) Eigenzustand von R_h (h = (1+e7+e8+e15)/2), Eigenwert (0.5-0.866025j): unter psi rho^2 = 0.500000, K = 0.666667, Bargmann-Phase 0.785398 (pi/4 = 0.785398)
+(3) Eigenzustand von R_h (h = (1+e7+e8+e15)/2), Eigenwert (0.5+0.866025j): unter psi rho^2 = 0.500000, K = 0.666667, Bargmann-Phase 0.785398 (pi/4 = 0.785398)
+(4) psi normalisiert 2T auf N: False; projektiv: False
+    psi bildet 4 von 24 Hurwitz-Einheiten auf Hurwitz-Einheiten ab
