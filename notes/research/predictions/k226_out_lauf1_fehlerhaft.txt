@@ -1,0 +1,46 @@
+Regeln: 16 (entfallen: 14)
+  W,A,g=2          gamma = 0.237532957966
+  W,H,g=2          gamma = 0.189138418126
+  W,I,g=2          gamma = 0.137726864676
+  W,S1/2,g=2       gamma = 0.127384023141
+  W,S1,g=2         gamma = 0.0780064645196
+  W,S1,g=2j+1      gamma = 0.123637321077
+  E,A,g=2          gamma = 0.220635600153
+  E,H,g=2          gamma = 0.174849576283
+  E,I,g=2          gamma = 0.133568438452
+  E,S1/2,g=2       gamma = 0.110317800076
+  E,S1,g=2         gamma = 0.0735452000509
+  E,S1,g=2j+1      gamma = 0.116566384189
+  L,A,g=2          gamma = 0.349699152566
+  L,A,g=2j+1       gamma = 0.390867726246
+  L,H,g=2          gamma = 0.28054992617
+  L,H,g=2j+1       gamma = 0.315186515771
+  entfaellt W,A,g=2j+1       keine Loesung
+  entfaellt W,H,g=2j+1       keine Loesung
+  entfaellt W,I,g=2j+1       keine Loesung
+  entfaellt W,S1/2,g=2j+1    gleich W,S1/2,g=2
+  entfaellt E,A,g=2j+1       keine Loesung
+  entfaellt E,H,g=2j+1       keine Loesung
+  entfaellt E,I,g=2j+1       keine Loesung
+  entfaellt E,S1/2,g=2j+1    gleich E,S1/2,g=2
+  entfaellt L,I,g=2          gleich E,H,g=2
+  entfaellt L,I,g=2j+1       keine Loesung
+  entfaellt L,S1/2,g=2       gleich E,A,g=2
+  entfaellt L,S1/2,g=2j+1    gleich E,A,g=2
+  entfaellt L,S1,g=2         gleich E,S1/2,g=2
+  entfaellt L,S1,g=2j+1      gleich E,H,g=2
+
+gueltige Paare: 120; gamma_L von 1.0303 bis 5.3147
+Treffer: Leptonfenster 5, m_W 1, Omega_M 7; Anteil im m_W-Fenster 0.0083
+
+Paare mit mindestens zwei Treffern:
+M                T                  gamma_L    beta       m_W  z(m_W)    Om_M  L W O
+L,A,g=2          W,H,g=2           1.848906 0.54587  80.20794   -12.1   0.298  1 0 1
+W,A,g=2          W,S1/2,g=2          1.8647 0.54941  80.36149   -0.58  0.3018  1 1 1 <== alle drei
+W,I,g=2          E,S1,g=2          1.872683 0.55117  80.43795    5.17  0.3038  1 0 1
+E,A,g=2          E,S1,g=2j+1       1.892789 0.55554   80.6272    19.4  0.3086  1 0 1
+
+alle drei Fenster: 1 Paar(e)
+   W,A,g=2 / W,S1/2,g=2
+Kontrolle H98-Paar enthalten: True
+H104: BESTAETIGT

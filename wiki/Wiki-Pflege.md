@@ -366,6 +366,12 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 14.11.2026: Runde v4.10.0-r13 (Statusvermerke zum neutralen Qubit und zur zweiten Familienstruktur; Berichtigung zu r12.4(c); Vorzeichen des Paarkanals r82.4) in Forschungsstand, Forschungslinie, Offene-Probleme, Inhalt und Content-overview; Stand-Zeilen auf r13.
 
+14.11.2026: Gesamtbild auf den Stand nach v4.10.0-r13 gezogen (Arbeitsstand r06 bis r13, Mindmap, Thesen T5 bis T9, T11, T14, T15, Dokumentkarte Block I, Entwicklung 13 bis 19, Baseline v5.0.0); ältere Arbeitsnotizen bleiben stehen.
+
+14.11.2026: Vorhersagen-und-Tests: H100 und H102 in die Tabelle der offenen Vorhersagen gesetzt; die Zeilen unter den abgeschlossenen Tests bleiben mit Verweis stehen.
+
+14.11.2026: H104 (widerlegt, Robustheit von H98 bei freiem Flächenspektrum) in Vorhersagen-und-Tests, Forschungsstand, Offene-Probleme und Gesamtbild; Erkundung Fourier-Transformation der Slots (2T mit magischem Winkel, nicht blind) in Forschungsstand und Offene-Probleme; kein OP-Abschluss.
+
 13.11.2026, spät: Runde v4.10.0-r12 (Statusvermerke) in Forschungslinie, Inhalt, Content-overview, Offene-Probleme und Forschungsstand; Fäden Potential und T₁₂ in Forschungsstand.
 
 13.11.2026, spät: Nachtrag Auswahlprinzip (Koide als qubitartige Treue; Mittelwert erklärt die Genauigkeit nicht) in Forschungsstand; kein OP-Abschluss.
