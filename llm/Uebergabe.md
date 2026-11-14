@@ -19,7 +19,11 @@
   - H102 ist offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem 13.11.2026 (`k224_test_h102.py m_tau sigma`).
   - H101 ist widerlegt. H100 ist offen; am 13.11. war NuFIT 6.1 weiterhin die neueste Version.
   - Als Nächstes ist H104 frei, das letzte k-Skript ist k225.
-- **Offene Autorentscheidungen:** keine.
+- **Offene Autorentscheidungen:** „PR 110 mergen“ (Generationen unter Q_*, Zweig `research/v5-generationen-qstar`).
+- **14.11., Generationen unter Q_*** (`op3_sedenion_generations_estar_2026_11_14.*`, Erkundung, nicht blind):
+  C⊗S hat unter Q_* genau zwei vollständige Generationen. Die ψ-Sektoren sind aber keine Generationen
+  (1: ν, e⁺; ω: ν, u, d̄; ω̄: e⁺, u, d̄). ψ wirkt innerhalb der Generationen als Phase und ist kein Generationsschritt.
+  N ist der Raum zweier Neutrino-Flavours; der dritte fehlt (K28).
 - **Ausgelöste Zurückgestellte Ideen:** keine. I1–I5 sind geprüft.
 
 ### Heute abend: Ladung über e8 (`notes/research/op3_sedenion_charge_2026_11_13.*`, Erkundung, nicht blind)
@@ -45,7 +49,9 @@
       Richtung u ∈ Im H_n mit |⟨u, e8⟩| = 1/√3 zurückgeführt (Rechtsmodul). Offen ist, was diese Richtung auszeichnet. Gesucht ist ein Gewicht 2 sin(π/12), zum Beispiel aus einer
       Drehung um π/12 oder aus der Hurwitz-/2T-Struktur über H_n. Querbezug zum Auswahlprinzip: Der Abstand vom
       Oktanten ist dort π/12 − θ_e.
-    - **(b)** prüfen, ob Q_* auf den Fermionideal-Zuständen (statt auf S als Vektorraum) die bekannten Ladungen gibt.
+    - **(b)** erledigt am 14.11.: Ladungsinhalt richtig (zwei Generationen), ψ aber kein Generationsschritt.
+      Folgefrage: ob der Qubit-Oktant als Zwei-Flavour-Phänomen trägt oder ob Weg B (Triality, drei Generationen)
+      ein neutrales Qubit mit derselben Struktur hat.
     - **(c)** die zweite Familienstruktur mit neutralem Qubit (Profil unten).
   - Auswahlprinzip (`op3_selection_principle_2026_11_13.*`, `op3_flux_two_thirds_2026_11_13.*`): Treue 1/2 und Fluss
     2/3 rad bleiben offen. γ/2 ist nur mit einer Konventionswahl erreichbar, die Einheit ist frei.

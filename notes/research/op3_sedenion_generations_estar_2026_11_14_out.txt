@@ -1,0 +1,18 @@
+(1) Gemeinsame Zerlegung von C(x)S unter (Q_*, Farbtyp, psi-Eigenwert), Dimensionen:
+    Q = 0.000  1     psi = 1    : 1  (nu)
+    Q = 0.000  1     psi = w    : 1  (nu)
+    Q = 0.333  3bar  psi = w    : 3  (dbar)
+    Q = 0.333  3bar  psi = wbar : 3  (dbar)
+    Q = 0.667  3     psi = w    : 3  (u)
+    Q = 0.667  3     psi = wbar : 3  (u)
+    Q = 1.000  1     psi = 1    : 1  (e+)
+    Q = 1.000  1     psi = wbar : 1  (e+)
+    Summe 16
+
+(2) Inhalt je psi-Sektor (Generation = nu + e+ + 3 u + 3 dbar):
+    psi = 1    : {'nu': 1, 'e+': 1}; vollstaendige Generation False; Ladungssumme 1.000 (Generation: 4)
+    psi = w    : {'nu': 1, 'dbar': 3, 'u': 3}; vollstaendige Generation False; Ladungssumme 3.000 (Generation: 4)
+    psi = wbar : {'dbar': 3, 'u': 3, 'e+': 1}; vollstaendige Generation False; Ladungssumme 4.000 (Generation: 4)
+
+(3) Q_S auf O: Spektrum {0.0: 1, 0.333333: 3, 0.666667: 3, 1.0: 1} (eine vollstaendige Generation)
+(4) conj(Q_*) = 1 - Q_*: True; psi reell: True -> Konjugation paart (Q, psi = w) mit (1 - Q, psi = wbar)
