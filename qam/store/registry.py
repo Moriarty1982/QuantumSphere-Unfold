@@ -40,7 +40,8 @@ def source_record(repo, source):
 
 
 def link(session, models, source, target, kind, status, description):
-    if kind not in {'interpreted-by', 'requires', 'explains', 'proves', 'contains', 'belongs-to', 'supersedes', 'same-source-as'}:
+    if kind not in {'interpreted-by', 'requires', 'explains', 'proves', 'contains', 'belongs-to', 'supersedes',
+                    'same-source-as', 'depends-on-counterterm'}:
         raise ValueError('Unknown relation type')
     if status not in {'proposed', 'declared'}:
         raise ValueError('Registration permits proposed or declared links')
@@ -53,6 +54,10 @@ def link(session, models, source, target, kind, status, description):
         obj = session.get(models.qstore_objects, right.object_id)
         if obj.object_type != 'definition' or left.frame != right.frame:
             raise ValueError('Interpretation requires a definition in the same declared frame')
+    if kind == 'depends-on-counterterm':
+        obj = session.get(models.qstore_objects, right.object_id)
+        if obj.object_type != 'counterterm-scheme' or left.frame != right.frame:
+            raise ValueError('Counterterm dependency requires a counterterm-scheme in the same declared frame')
     payload = {'description': description}
     identity = {'source': source, 'target': target, 'kind': kind, 'status': status, 'payload': payload}
     key = digest(identity)

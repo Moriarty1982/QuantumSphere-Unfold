@@ -30,23 +30,29 @@ def initialize(path):
         db.execute('BEGIN IMMEDIATE')
         exists = db.execute("SELECT 1 FROM sqlite_master WHERE name='qstore_schema'").fetchone()
         versions = db.execute('SELECT version FROM qstore_schema ORDER BY version').fetchall() if exists else []
-        if len(versions) > 6 or versions != [(n,) for n in range(1, len(versions) + 1)]:
+        if len(versions) > 7 or versions != [(n,) for n in range(1, len(versions) + 1)]:
             raise ValueError(f'Unsupported store schema versions: {versions}')
         if not versions:
             apply_sql(db, resources / 'schema_v1.sql')
             db.executemany('INSERT INTO qstore_object_types VALUES (?,?)', catalogue.items())
             db.execute('INSERT INTO qstore_ledger(event_type,payload_json) VALUES (?,?)',
                        ('schema-initialized', json.dumps({'schema': 1, 'catalogue': 'catalogue_v1.json'})))
+        # Schema v7 adds the counterterm types; earlier stores must still hold exactly catalogue v1.
+        additions = json.loads((resources / 'catalogue_v7.json').read_text(encoding='utf-8'))
+        expected = {**catalogue, **additions} if (7,) in versions else catalogue
         stored = dict(db.execute('SELECT name,description FROM qstore_object_types'))
-        if stored != catalogue:
-            raise ValueError('Stored type catalogue differs from catalogue_v1.json')
-        for version in range(2, 7):
+        if stored != expected:
+            raise ValueError('Stored type catalogue differs from catalogue_v1.json/catalogue_v7.json')
+        for version in range(2, 8):
             if (version,) not in versions:
                 apply_sql(db, resources / f'schema_v{version}.sql')
                 db.execute('INSERT INTO qstore_ledger(event_type,payload_json) VALUES (?,?)',
                            ('schema-migrated', json.dumps({'schema': version})))
+        stored = dict(db.execute('SELECT name,description FROM qstore_object_types'))
+        if stored != {**catalogue, **additions}:
+            raise ValueError('Migrated type catalogue differs from catalogue_v1.json/catalogue_v7.json')
         db.commit()
-        return {'schema': 6, 'object_types': len(stored),
+        return {'schema': 7, 'object_types': len(stored),
                 'objects': db.execute('SELECT count(*) FROM qstore_objects').fetchone()[0]}
     except Exception:
         db.rollback()
