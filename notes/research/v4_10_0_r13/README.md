@@ -22,7 +22,7 @@ anziehend. Seit v4.10.0-r01.3(d) ist der Kanal abstoßend und bildet kein Konden
 - Guard-Linter (`python tools/qs.py guards sources/research/parts/v4100-post-release-layers.tex --start 1626`):
   0 Kandidaten in den Zeilen 1626–1785.
 - Kandidaten-Build lokal (`.github/scripts/qsc_latex_build.py --source-dir sources/research`, MiKTeX): Status ok,
-   Seiten, 0 fatale Fehler, 0 Overfull. `qs.py audit`: undefinierte Verweise 0, undefinierte Zitate 0,
+  1409 Seiten, 0 fatale Fehler, 0 Overfull. `qs.py audit`: undefinierte Verweise 0, undefinierte Zitate 0,
   doppelte Labels 0, Rerun 0; 4166 Labels.
 - Die lokale Monolith-Fassung und das Bündel aus der Anleitung entfallen wie bei r12: Der lokale Ordner ist ein Klon
   des Repos.
