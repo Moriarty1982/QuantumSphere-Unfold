@@ -119,3 +119,32 @@ python notes/research/op3_action_balance_search_2026_11_14/extra.py   # im Ordne
 - `search.py`: §1, §2 numerisch mit Toleranz 1e-9, §3 exakt mit sympy.
 - `extra.py`: natürliche Mehrtermkandidaten, Größenprofil und Reduktion der Treffer.
 - Ausgaben: `result.json`, `run/search_stdout.txt`, `run/extra_stdout.txt`.
+
+## Nachtrag 14.11.: Durchsicht der übrigen Teilbäume (nachträglich, auf Bitte des Autors)
+
+Durchsucht wurden alle Teile unter `sources/research/parts/` nach Fourier, modular, selbstdual, Dualität,
+Chern-Simons, Wilson und Verlinde. Chern-Simons, Wilson und Verlinde kommen nicht vor. Drei Stellen waren bisher
+nicht mit der Bezugsauswahl verbunden:
+
+1. **Mischung r46/r47 (OP4), stärkster Anknüpfungspunkt.** r46 schreibt die Mischung als zirkulante
+   Kopplung plus Einslot-Maske, M + δD_S. Das ist genau die Form von Codex' H, denn R ist eine
+   Rang-eins-Zirkulante (das τ-Mittel, „∨-Lesart“ von r39/r46), und D_S mit |S| = 1 ist Q.
+   r47 leitet die Maske aus der Chiralitätsabweichung J_II − J_I her: W_l = diag(0, 0, −3) für Leptonen,
+   also ein reiner Einslot-Projektor, aber W_q = diag(0, −2, −1) für Quarks, also kein Projektor. Dass
+   Koide nur für geladene Leptonen genau gilt, passt zu dieser Trennung. Das ist eine Beobachtung, kein Beleg.
+   Die Kopplung ε ist in r47 ausdrücklich nicht hergeleitet. `r47_mask_check.py`, numerisch auf sechs
+   Stellen:
+   - additiv (r46-Form), −R + δW_l: K_orb = 2/3 bei δ = 1/3, das ist die Balance a = b;
+   - in r47-Form, M + ε(W_l M + M W_l) mit M = −R: K_orb = 2/3 bei ε = 1/12, π/4, Lücke 0,8497.
+
+   Offen ist damit die Herleitung von ε. Ergäbe sie unabhängig ε = 1/12, wäre die Bezugsauswahl an OP4
+   gebunden. Ein solcher Test müsste vorab festgeschrieben werden. Der Zielwert ist jetzt bekannt, die
+   Herleitung von ε könnte aber blind gegen ihn sein, wenn sie ihn nicht benutzt.
+2. **Elektromagnetische Dualität (r07).** z ↦ iz ist die Dualitätsdrehung E ↦ −B, B ↦ E. Sie hat
+   Ordnung vier wie F und vertauscht mit Boost und Modulgruppe. Ihre Energie (E² + B²)/2 ist
+   dualitätsinvariant, also gleich gewichtet. Wären D und τ die magnetische und die elektrische
+   Z3-Variable eines Slotfelds, so erzwänge Dualitätsinvarianz a = b. Ein solches Wörterbuch gibt es im
+   Companion nicht.
+3. **Δ(96) (r12.2/r12.3).** Die Flavourgruppe ist monomial, Phasen ±1, ±i. Nach §1 vertauscht sie Q und R
+   nicht. Ihre Spalte (1/3, (2 ∓ √3)/6) enthält π/12. Mit dem Bezug ist sie nicht identisch
+   (K_orb = 5/9 für einen Vektor mit p₀ = 1/3).
