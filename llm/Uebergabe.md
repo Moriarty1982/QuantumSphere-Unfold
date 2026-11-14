@@ -3,7 +3,7 @@
 
 ## Stand vom 14.11.2026 (Claude Opus)
 - **GitHub:** **PR #112 gemergt als ad7756f** (Hurwitz-Einheiten auf N, Erkundung), auf „PR 112 mergen“; Läufe
-  43539578174 (Wiki-Sync) und 43539578134 (Zwei-PDF) erfolgreich. Zweig gelöscht. **Keine offenen PRs.**
+  43539578174 (Wiki-Sync) und 43539578134 (Zwei-PDF) erfolgreich. Zweig gelöscht. **Offen: PR #113** (CT-001-Entwurf und Schritt 1).
   Am 14.11. außerdem gemergt: #111 (c247ea3, AGENTS.md: gemergte Zweige löschen), #110 (8606691, Generationen unter Q_*),
   #109 (963f557, R_f-Nachtrag), #108 (91cbb69, Ladung über e8, H103 widerlegt). Am 13.11.: #104–#107.
 - **Lokal:** Der Hauptordner steht auf `main` = ad7756f (vorgespult), dazu dieser Übergabe-Commit, nur lokal.
@@ -18,7 +18,7 @@
   - H102 ist offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem 13.11.2026 (`k224_test_h102.py m_tau sigma`).
   - H101 ist widerlegt. H100 ist offen; am 13.11. war NuFIT 6.1 weiterhin die neueste Version.
   - Als Nächstes ist H104 frei, das letzte k-Skript ist k225.
-- **Offene Autorentscheidungen:** keine.
+- **Offene Autorentscheidungen:** „PR 113 mergen“ (Zweig `research/ct001-methode`).
 - **Counterterm-Registry (14.11.):** Der Autor will damit Rapid Prototyping betreiben: Gegenterme setzen und später
   durch Herleitungen ersetzen. Phase 1 läuft in einer eigenen Sitzung (Schema, Validator, Weitergabe der Guards,
   Fixture CT-000-TEST). Ergänzt um die Herkunft der Fitdaten, eine Blindheitsprüfung, Δ als Prüfstein sowie diskrete
@@ -26,6 +26,10 @@
   **Erster echter Platzhalter (Autorenwahl): CT-001, die Einheit bei ΔΦ = γ_M/2.** Der Entwurf liegt unter
   `notes/research/counterterms/CT-001_gamma_halbe_einheit_entwurf.md`; registriert wird er nach dem Merge von Phase 1.
   Bekannte Spannung: Die r10-Konvention gibt Δ = 42,5 · γ/2.
+  **Schritt 1 nach der Methode (14.11., `ct001_shrink_2026_11_14.*`):** Verlangt ist κs = 0,49982 (1σ-Band
+  0,49974 bis 0,49990). ΔΦ ist ein äußerer Fluss, denn das Qubit-Tripel selbst gibt Ω/2 ≈ π/4. Als minimale
+  Dirac-Phase folgt κs = 1/2 pro Steradiant. CT-001 wird `partially_constrained` (Guard: Monopol angenommen), dazu
+  kommt der neue Restplatzhalter CT-002, Raumwinkel Ω_ext = γ_M. Nächste Frage: Ist γ_M im Companion als Winkel lesbar?
 - **14.11., Hurwitz-Einheiten auf N** (`op3_hurwitz_2t_neutral_qubit_2026_11_14.*`, Erkundung, nicht blind):
   Die 24 Hurwitz-Einheiten von H_n wirken von rechts treu auf N als 2T (projektiv A4). N ist also ein natives
   2T-Dublett. Die ψ-Achse e8 ist zweizählig, die vier dreizähligen Achsen liegen unter 1/√3 dazu. Der Bezug ist ein

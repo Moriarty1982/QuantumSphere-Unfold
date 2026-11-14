@@ -1,0 +1,16 @@
+(a) Rueckwaerts aus den Massen (m_tau = PDG 2024 +- 1 sigma):
+    m_tau =  1776.84: K = 0.666659, rho^2 = 0.499989, theta_e = 0.222231, Delta Phi = pi/4 - 3 theta_e = 0.118705, verlangtes kappa*s = Delta Phi / gamma_M = 0.49974
+    m_tau =  1776.93: K = 0.666664, rho^2 = 0.499997, theta_e = 0.222225, Delta Phi = pi/4 - 3 theta_e = 0.118724, verlangtes kappa*s = Delta Phi / gamma_M = 0.49982
+    m_tau =  1777.02: K = 0.666670, rho^2 = 0.500004, theta_e = 0.222219, Delta Phi = pi/4 - 3 theta_e = 0.118743, verlangtes kappa*s = Delta Phi / gamma_M = 0.49990
+    Kontrolle gegen H102: theta_e(H102) = (pi/4 - gamma_M/2)/3 = 0.2222106
+
+(b) Bargmann-Phase eines gleichseitigen Qubit-Tripels = Omega/2 (Raumwinkel der Bloch-Vektoren):
+    rho^2 = 0.500000: Kantenwinkel 90.0000 Grad, Omega = 1.570796 (Oktant pi/2 = 1.570796), Phase Omega/2 = 0.785398; Abweichung von pi/4: -1.11e-16
+    rho^2 = 0.499997: Kantenwinkel 90.0004 Grad, Omega = 1.570816 (Oktant pi/2 = 1.570796), Phase Omega/2 = 0.785408; Abweichung von pi/4: +9.91e-06
+    Kontrolle Oktant mit Spinoren: |Bargmann-Phase| = 0.785398 = pi/4
+    -> Das Qubit-Tripel selbst kann Delta Phi = 0.1187 nicht liefern (Abweichung ~1e-5): Delta Phi muss ein aeusserer Fluss sein.
+
+(c) Aeusserer Fluss als Aharonov-Bohm-/Dirac-Phase: Phase = q g Omega_ext; Dirac: q g in Z/2, minimal 1/2.
+    minimal q g = 1/2 -> kappa*s = 1/2 pro Steradiant, ohne Flaecheneinheit; verlangt: 0.49982
+    1-sigma-Band (m_tau) fuer kappa*s: [0.49974, 0.49990]; 1/2 darin: False
+    Restplatzhalter: Omega_ext = 2 Delta Phi = 0.237448 sr gegen gamma_M = 0.237533 sr

@@ -1917,6 +1917,15 @@ Erkundung $\eta$, ohne Datenvergleich:
   Struktur von $\mathbb H_n$ ausgezeichnet. $\psi$ normalisiert $2T$ nicht. Einschränkungen:
   nur zwei Flavours, $\psi$ ist kein Generationsschritt, $e_8$ als Ladungsachse ist eine
   Annahme. Koide ist nicht hergeleitet.
+- Platzhalter-Methode an der Einheit bei $\gamma/2$ (14.11., Erkundung, nicht blind):
+  Rückwärts verlangen die Massen $\kappa s=\Delta\Phi/\gamma_M=0{,}49982$ (1σ-Band
+  $[0{,}49974;\,0{,}49990]$). Die Bargmann-Phase des Qubit-Tripels selbst ist $\Omega/2\approx\pi/4$
+  (Abweichung $10^{-5}$), also ist $\Delta\Phi$ ein äußerer Fluss. Als Dirac-Phase eines
+  Monopolfelds mit minimalem $qg=1/2$ folgt $\kappa s=1/2$ pro Steradiant, ohne
+  Flächeneinheit. Der Platzhalter ist damit verkleinert, nicht beseitigt: Es bleiben die
+  Monopol-Annahme und der Raumwinkel $\Omega_{\rm ext}=\gamma_M$ (neuer Restplatzhalter). Die
+  2,3σ-Spannung von H102 bleibt bestehen. Die Spannung zu r10 lautet jetzt: Ist $\gamma_M$ auch
+  als Winkel lesbar?
 
 **Runde v4.10.0-r12 und offene Fäden** (13.11.2026). Die Runde r12
 (Statusvermerke) hält fest: Das historische Koide-OP3 ist nicht
