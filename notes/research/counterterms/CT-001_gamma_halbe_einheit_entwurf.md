@@ -161,3 +161,10 @@ Massen κ = 0,99964 ± 0,00016 rad; mit w = a(½) ist es κ = 0,57714 rad, was d
 **Bewertung.** Die Suche hat γ_M als Winkel **eingeordnet, nicht hergeleitet**. Der Zahlenwert und die
 Winkelbedeutung sind im Companion angelegt (Zählregel und Unruh-Bild). Offen ist allein die Kopplung des Lepton-Flusses
 an genau einen Radianten. Alles ist nachträglich. OP3/OP4 bleiben offen, H102 ist unberührt.
+
+## Schritt 4: I1, ein String als Brücke (14.11.2026, Erkundung, nicht blind)
+Siehe `../op3_i1_string_bridge_2026_11_14.md`. Ein String vom Lepton-Sektor zu einer Horizont-Punktierung überstreicht
+euklidisch einen Sektor. Bei **einer Lichtquerung** (Bogen = Stringlänge, Rapidität 1) ist die normierte Weltfläche ½,
+und ΔΦ = γ_M · ½. Von vier vorab gelisteten Dauerbedingungen passt nur diese. **CT-002 wird zur Lesart „eine
+Informationsquerung“**, mit den Guards: warum eine Querung, warum ein Ende im Frame M, euklidisch gegen lorentzsch,
+Stringdynamik angenommen. Hergeleitet ist es nicht.

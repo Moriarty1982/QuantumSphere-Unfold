@@ -1,0 +1,11 @@
+(1) Weltflaechen-Sektor eines am Horizont endenden Strings (l beliebig, hier 3.3):
+    (a) eine Lichtquerung s = l   : phi = 1.0000, A/s = 1.650 (= l/2), A/l^2 = 0.5000, Delta Phi = gamma_M A/l^2 = 0.118767, Abstand zu den Daten +2.2 sigma
+    (b) halbe Querung s = l/2     : phi = 0.5000, A/s = 1.650 (= l/2), A/l^2 = 0.2500, Delta Phi = gamma_M A/l^2 = 0.059383, Abstand zu den Daten -3123.2 sigma
+    (c) hin und zurueck s = 2l    : phi = 2.0000, A/s = 1.650 (= l/2), A/l^2 = 1.0000, Delta Phi = gamma_M A/l^2 = 0.237533, Abstand zu den Daten +6253.1 sigma
+    (d) thermischer Umlauf 2 pi   : phi = 6.2832, A/s = 1.650 (= l/2), A/l^2 = 3.1416, Delta Phi = gamma_M A/l^2 = 0.746232, Abstand zu den Daten +33026.7 sigma
+    Nur (a) trifft die Groessenordnung; (a) gibt genau gamma_M/2 (die 2,3 sigma von H102).
+
+(2) Bezug zum Autorhinweis: A/s = l/2 fuer jeden Sektor; mit s = l (eine Querung) wird A/l^2 = 1/2 -> w = 1/2 aus der Flaeche.
+(3) Lorentzsch: Rapiditaet eta = 1.0: Eigenzeit des freien Endes 3.300 = Stablaenge 3.3 (Lichtquerung im momentanen Ruhesystem): True
+(4) gamma-K-Lesart: gamma * w * kappa mit kappa = phi = 1 und w = 1/2: 0.118766; Weltflaechen-Lesart gamma * A/l^2: 0.118767 (identisch)
+(5) Daten verlangen phi = 0.99964 +- 0.00016: eine Querung ist 1 - 0.00036, also 2.3 sigma daneben (wie H102).
