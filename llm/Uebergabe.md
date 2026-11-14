@@ -2,13 +2,15 @@
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.**
 
 ## Stand vom 14.11.2026 (Claude Opus)
-- **GitHub:** **PR #113 gemergt als 10d670e** (CT-001-Entwurf, Platzhalter-Methode Schritte 1–3), auf „PR 113
-  mergen“; Läufe 43543589360 (Wiki-Sync) und 43543589359 (Zwei-PDF) erfolgreich. Zweig gelöscht.
-  Am 14.11. außerdem gemergt: #112 (ad7756f, Hurwitz/2T), #111 (c247ea3, AGENTS.md), #110 (8606691), #109 (963f557),
+- **GitHub:** **PR #115 gemergt als 990a3cc** (I1-String-Brücke, Erkundung), auf „PR 115 mergen“; Läufe
+  43545271868 (Wiki-Sync) und 43545271712 (Zwei-PDF) erfolgreich. Zweig gelöscht. **Offen: PR #116** (Eintragung CT-001/CT-002).
+  **PR #114 gemergt als 44cdcd1** (Gegenterm-Register im Aussagenspeicher, Schema v7, Phase 1). Gemergt hat ihn die
+  Sitzung „Counterterm-Registry Phase 1“ nach grünen Checks (lean, tests, tests ubuntu, tests windows). Neu sind
+  `qam/store/counterterms.py`, `schema_v7.sql`, `catalogue_v7.json` und `test_counterterms.py`; Doku in
+  `qam/store/README.md` und `wiki/QAM.md`.
+  Am 14.11. außerdem gemergt: #113 (10d670e), #112 (ad7756f), #111 (c247ea3), #110 (8606691), #109 (963f557),
   #108 (91cbb69). Am 13.11.: #104–#107.
-  Auf GitHub liegt außerdem `claude/zealous-fermi-f46fd7` aus der Sitzung „Counterterm-Registry Phase 1“; er ist noch
-  nicht gemergt und bleibt stehen. **Offen: PR #115** (I1-String-Brücke) und PR #114 (Counterterm-Registry Phase 1, aus der eigenen Sitzung).
-- **Lokal:** Der Hauptordner steht auf `main` = 10d670e (vorgespult), dazu dieser Übergabe-Commit, nur lokal.
+- **Lokal:** Der Hauptordner steht auf `main` = 990a3cc (vorgespult), dazu dieser Übergabe-Commit, nur lokal.
   Unversioniert: `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf` (jetzt wirklich im Hauptordner).
 - **Letzte Runde:** v4.10.0-r12 (Statusvermerke) aus PR #106.
 - **Zuletzt vergebene Hypothese:** H103 (vorab 45314b2, k225).
@@ -20,13 +22,16 @@
   - H102 ist offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem 13.11.2026 (`k224_test_h102.py m_tau sigma`).
   - H101 ist widerlegt. H100 ist offen; am 13.11. war NuFIT 6.1 weiterhin die neueste Version.
   - Als Nächstes ist H104 frei, das letzte k-Skript ist k225.
-- **Offene Autorentscheidungen:** „PR 115 mergen“ (Zweig `research/i1-string-bruecke`); PR #114 (Phase 1) nach Prüfung.
+- **Offene Autorentscheidungen:** „PR 116 mergen“ (Eintragung CT-001/CT-002, Zweig `research/ct-eintragung`).
 - **Counterterm-Registry (14.11.):** Der Autor will damit Rapid Prototyping betreiben: Gegenterme setzen und später
-  durch Herleitungen ersetzen. Phase 1 läuft in einer eigenen Sitzung (Schema, Validator, Weitergabe der Guards,
+  durch Herleitungen ersetzen. Phase 1 ist seit PR #114 gemergt (Schema, Validator, Weitergabe der Guards,
   Fixture CT-000-TEST). Ergänzt um die Herkunft der Fitdaten, eine Blindheitsprüfung, Δ als Prüfstein sowie diskrete
   Konventionswahlen mit Versuchszahl. Phase 2 ist die Exporttabelle.
   **Erster echter Platzhalter (Autorenwahl): CT-001, die Einheit bei ΔΦ = γ_M/2.** Der Entwurf liegt unter
-  `notes/research/counterterms/CT-001_gamma_halbe_einheit_entwurf.md`; registriert wird er nach dem Merge von Phase 1.
+  `notes/research/counterterms/CT-001_gamma_halbe_einheit_entwurf.md`; Eingetragen am 14.11. (`register_ct001_ct002_2026_11_14.py`, Bericht
+  `register_2026_11_14_report.json`, reproduzierbar): CT-001 partially_constrained, CT-002 placeholder. H102 erbt
+  sieben Guards; Blindheit gegen m_τ der PDG: not_blind, eine neue Version wird mit same_version = false
+  ausgewiesen.
   Bekannte Spannung: Die r10-Konvention gibt Δ = 42,5 · γ/2.
   **Schritt 1 nach der Methode (14.11., `ct001_shrink_2026_11_14.*`):** Verlangt ist κs = 0,49982 (1σ-Band
   0,49974 bis 0,49990). ΔΦ ist ein äußerer Fluss, denn das Qubit-Tripel selbst gibt Ω/2 ≈ π/4. Als minimale

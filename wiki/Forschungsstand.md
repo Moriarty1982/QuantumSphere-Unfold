@@ -1952,6 +1952,10 @@ Erkundung $\eta$, ohne Datenvergleich:
   Die Lesart lautet „die Information quert die Brücke einmal“. Hergeleitet ist sie nicht: Offen sind
   der Grund für genau eine Querung, das Ende im Frame M und die Stringdynamik. Die Daten liegen
   2,3σ neben einer Querung (H102).
+- Eingetragen (14.11.): CT-001 (Status partially_constrained) und CT-002 (placeholder) stehen im
+  Gegenterm-Register (Schema v7, PR #114). H102 hängt an beiden und erbt sieben offene Guards.
+  Die Blindheitsprüfung meldet für jeden Vergleich mit $m_\tau$ der PDG `not_blind`, weil $m_\tau$ in
+  den Fit einging; eine neue Datenversion wird gesondert ausgewiesen.
 
 **Runde v4.10.0-r12 und offene Fäden** (13.11.2026). Die Runde r12
 (Statusvermerke) hält fest: Das historische Koide-OP3 ist nicht

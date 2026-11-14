@@ -168,3 +168,20 @@ euklidisch einen Sektor. Bei **einer Lichtquerung** (Bogen = Stringlänge, Rapid
 und ΔΦ = γ_M · ½. Von vier vorab gelisteten Dauerbedingungen passt nur diese. **CT-002 wird zur Lesart „eine
 Informationsquerung“**, mit den Guards: warum eine Querung, warum ein Ende im Frame M, euklidisch gegen lorentzsch,
 Stringdynamik angenommen. Hergeleitet ist es nicht.
+
+## Eingetragen (14.11.2026, Autor: „Ja, eintragen“)
+Mit dem Register aus PR #114 (Schema v7) eingetragen durch `register_ct001_ct002_2026_11_14.py`. Der Bericht mit
+allen Hashes liegt in `register_2026_11_14_report.json`; zwei unabhängige Läufe geben dieselben Hashes.
+- **CT-001** (35daa75b…): Parameter u als diskrete Auswahl unter den drei Messweisen, gewählt A/r² = ½. Dazu
+  `fitted_on` (PDG 2024, Scan 154/1/0,34), drei offene Guards (Sektornorm, Konvention r10, nachträglich) und zwei
+  bekannte Spannungen (r10 gibt das 43,5-fache, Daten liegen 2,3σ neben ½). Status **partially_constrained**
+  (Übergang b559b365…, Begründung: Schritte 1–3). structurally_matched ist nicht möglich, weil die Optionen nicht
+  rational sind und deshalb kein Residuenbeleg geht. Das ist auch inhaltlich richtig, solange die Sektornorm eine
+  Lesart ist.
+- **CT-002** (fcbac3c7…): Zahl der Querungen, Auswahl unter vier Dauern, gewählt „eine Lichtquerung“. Vier offene
+  Guards (eine Querung, Frame M, euklidisch/lorentzsch, Stringdynamik). Status **placeholder**.
+- **H102** (97e65307…) hängt über `depends-on-counterterm` an beiden und erbt **sieben offene Guards**.
+- **Blindheit:** Ein Vergleich von H102 mit m_τ aus PDG 2024 ergibt `not_blind` (dieselbe Version wie im Fit). Ein
+  Vergleich mit der nächsten PDG-Ausgabe ergibt ebenfalls `not_blind`, aber mit `same_version = false`. Das Register
+  meldet also richtig, dass m_τ in den Fit einging. Ob die neue Ausgabe neue Information trägt, hängt daran, ob sich
+  ihr Wert gegenüber 1776,93 ± 0,09 MeV ändert. Das ist bei der Auswertung von H102 zu beachten.
