@@ -28,6 +28,134 @@ def matrix_tex(value):
     return r'\begin{pmatrix}' + r'\\'.join(' & '.join(number(item) for item in row) for row in rows) + r'\end{pmatrix}'
 
 
+ACTIVE_EDGES = {'requires', 'interpreted-by', 'depends-on-counterterm'}
+NOTE_MARK = '% qstore-counterterm-note '
+ENTRY_MARK = '% qstore-counterterm-entry '
+
+
+def counterterm_dependencies(selection):
+    """Map each selected statement to the counterterm states it reaches through declared or reviewed edges."""
+    states = {item['scheme']: item for item in selection.get('counterterms', [])}
+    if not states:
+        return {}
+    forward = {}
+    for row in selection['relations']:
+        if row['relation_type'] in ACTIVE_EDGES and row['effective_status'] in {'declared', 'reviewed'}:
+            forward.setdefault(row['source_version'], set()).add(row['target_version'])
+    result = {}
+    for obj in selection['objects']:
+        if obj['kind'] == 'counterterm-scheme':
+            continue
+        seen, pending, reached = {obj['version_hash']}, [obj['version_hash']], set()
+        while pending:
+            for target in forward.get(pending.pop(), set()):
+                if target in states:
+                    reached.add(target)
+                if target not in seen:
+                    seen.add(target)
+                    pending.append(target)
+        if reached:
+            result[obj['version_hash']] = sorted(reached)
+    return result
+
+
+def counterterm_note(version, schemes, selection):
+    """Inline guard annotation for a statement that depends on registered counterterms."""
+    states = {item['scheme']: item for item in selection['counterterms']}
+    lines = [NOTE_MARK + version, r'\par\noindent\textit{Effective scope.} '
+             'This statement depends on registered compensation terms. It is local, effective and '
+             r'readout-dependent, not a parameter-free derivation.\par']
+    lines.append(r'\begin{itemize}\setlength{\itemsep}{0pt}')
+    for scheme in schemes:
+        state = states[scheme]
+        text = state['object_id'] + ' (status ' + state['status'] + ')'
+        if state['inherits_guards']:
+            titles = [guard['title'] for guard in state['open_guards']]
+            text += '; inherited open guards: ' + (', '.join(titles) if titles else 'none recorded')
+        else:
+            text += '; structurally matched, see the registry appendix'
+        if state['status'] == 'deprecated':
+            text += '; deprecated dependency'
+        lines.append(r'\item ' + escape(text))
+    lines.append(r'\end{itemize}')
+    return lines
+
+
+def parameter_text(name, spec):
+    if spec['role'] == 'discrete_choice':
+        return f"{name}: discrete choice {spec['value']} from {len(spec['options'])} options ({'; '.join(spec['options'])})"
+    bounds = spec.get('bounds')
+    return f"{name}: {spec['role']}, value {spec['value']}, bounds [{bounds[0]}, {bounds[1]}]"
+
+
+def counterterm_appendix(selection):
+    """Counterterm and compensation registry: one entry per selected scheme, with status and open guards."""
+    payloads = {obj['version_hash']: obj['payload'] for obj in selection['objects']
+                if obj['kind'] == 'counterterm-scheme'}
+    lines = [r'\section*{Counterterm and compensation registry}',
+             'Every compensation term used by a statement in this draft is listed here. Entries are local and '
+             'effective bookkeeping, not derivations. Statements depending on an entry that is not structurally '
+             r'matched inherit its open guards.\par',
+             r'\begin{tabular}{lll}', r'Entry & Status & Open guards\\ \hline']
+    for state in selection['counterterms']:
+        lines.append(escape(state['object_id']) + ' & ' + escape(state['status']) + ' & '
+                     + str(len(state['open_guards'])) + r'\\')
+    lines.append(r'\end{tabular}')
+    for state in selection['counterterms']:
+        payload = payloads[state['scheme']]
+        function = payload['compensation_function']
+        domain = payload['validity_domain']
+        lines += [ENTRY_MARK + state['scheme'],
+                  r'\subsection*{' + escape(state['object_id'] + ': ' + payload['title']) + '}',
+                  r'\begin{itemize}\setlength{\itemsep}{0pt}',
+                  r'\item ' + escape('Version ' + state['scheme'][:16] + ', status ' + state['status']
+                                     + ', transitions ' + str(len(state['transitions'])) + '.'),
+                  r'\item ' + escape('Target sector: ' + payload['target_sector'] + '.'),
+                  r'\item ' + escape('Basis (' + payload['operator_basis']['kind'] + ', frame '
+                                     + payload['operator_basis']['frame'] + '): '
+                                     + payload['operator_basis']['expression'] + '.'),
+                  r'\item ' + escape('Functional form: ' + function['symbolic'] + '.')]
+        for name, spec in sorted(function['parameters'].items()):
+            lines.append(r'\item ' + escape('Parameter ' + parameter_text(name, spec) + '.'))
+        lines.append(r'\item ' + escape('Validity domain: ' + domain['variable'] + ' in [' + domain['interval'][0]
+                                        + ', ' + domain['interval'][1] + ']; ' + domain['description'] + '.'))
+        fit = payload.get('fitted_on')
+        if fit:
+            data = ', '.join(item['label'] + ' (' + item['source'] + ' ' + item['version'] + ')' for item in fit['data'])
+            text = 'Fitted on: ' + data
+            if fit.get('scan'):
+                scan = fit['scan']
+                text += f"; scan with {scan['trials']} trials, {scan['hits']} hit(s), chance expectation {scan['chance_expectation']}"
+            lines.append(r'\item ' + escape(text + '. Comparisons with these data are not blind.'))
+        for tension in payload.get('known_tensions', []):
+            lines.append(r'\item ' + escape('Known tension: ' + tension['description'] + ' (delta '
+                                            + tension['delta'] + ').'))
+        if state['status'] == 'structurally_matched':
+            lines.append(r'\item ' + escape('Matching identity F_struct = delta_eff + Delta with replacement '
+                                            + str(state['replacement'])[:16] + ' and residual receipt '
+                                            + str(state['receipt'])[:16] + '. The phenomenological '
+                                            'parameterization stays in the version history.'))
+        if state['inherits_guards']:
+            for guard in state['open_guards']:
+                lines.append(r'\item ' + escape('Open guard ' + guard['title'] + ': ' + guard['obligation']
+                                                + ' (' + guard['status'] + ').'))
+        lines.append(r'\item ' + escape('Scope: ' + payload['scope'] + '.'))
+        lines.append(r'\end{itemize}')
+    return lines
+
+
+def counterterm_export_issues(selection, tex):
+    """Hard audit: every dependent statement carries its guard note and every scheme its registry entry."""
+    issues = []
+    for version in counterterm_dependencies(selection):
+        if NOTE_MARK + version not in tex:
+            issues.append({'kind': 'counterterm-note-missing', 'version': version})
+    for state in selection.get('counterterms', []):
+        if ENTRY_MARK + state['scheme'] not in tex:
+            issues.append({'kind': 'counterterm-entry-missing', 'scheme': state['scheme']})
+    return issues
+
+
 def render(selection, title='QAM registered comparison draft'):
     titles = {obj['version_hash']: obj['payload']['title'] for obj in selection['objects']}
     lines = [r'\documentclass[10pt,a4paper]{article}', r'\usepackage[T1]{fontenc}',
@@ -44,9 +172,11 @@ def render(selection, title='QAM registered comparison draft'):
              'Selection ' + selection['selection_hash'][:16] + r'.\par',
              'This draft displays registered argument blocks with their declared assumptions. '
              'Native physical interpretation requires separate review.']
+    dependent = counterterm_dependencies(selection)
     for obj in selection['objects']:
         payload = obj['payload']
-        if obj['kind'] == 'latex-resource':
+        if obj['kind'] in {'latex-resource', 'counterterm-scheme'}:
+            # Counterterm schemes appear only in the registry appendix, never as core text.
             continue
         lines += [r'\section{' + escape(payload['title']) + '}',
                   r'\label{qv-' + obj['version_hash'] + '}',
@@ -60,6 +190,8 @@ def render(selection, title='QAM registered comparison draft'):
             lines.append(payload['latex'])
         else:
             raise ValueError('Unsupported export object')
+        if dependent.get(obj['version_hash']):
+            lines += counterterm_note(obj['version_hash'], dependent[obj['version_hash']], selection)
     lines.append(r'\section*{Open prerequisites and review notes}')
     if selection['findings']:
         lines.append(r'\begin{itemize}\setlength{\itemsep}{0pt}')
@@ -105,6 +237,8 @@ def render(selection, title='QAM registered comparison draft'):
                      'Full input hashes and selection findings are recorded in the manifest.')
     else:
         lines.append('No matrix check with all matrix inputs in this selection is recorded.')
+    if selection.get('counterterms'):
+        lines += counterterm_appendix(selection)
     if references:
         lines.append(r'\begin{thebibliography}{' + str(len(references)) + '}')
         lines.extend(reference['payload']['latex'] for reference in references)
@@ -122,7 +256,11 @@ def export_selection(selection, destination, paper=None):
     report = scrub(selection)
     if report['result'] != 'passed':
         raise ValueError('Technical export check blocked: ' + canonical(report['issues']))
-    tex = render(selection, paper['title']).encode('utf-8') if paper else render(selection).encode('utf-8')
+    text = render(selection, paper['title']) if paper else render(selection)
+    issues = counterterm_export_issues(selection, text)
+    if issues:
+        raise ValueError('Counterterm export check blocked: ' + canonical(issues))
+    tex = text.encode('utf-8')
     manifest = {'format': 'qstore-latex-export-v1', 'selection': selection,
                 'generator_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
                 'selection_code_sha256': hashlib.sha256(Path(__file__).with_name('selection.py').read_bytes()).hexdigest(),
