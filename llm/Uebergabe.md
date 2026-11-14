@@ -12,8 +12,8 @@
   Der Worktree `zealous-fermi-f46fd7` (Zweig `research/v4.10-r13-neutral-qubit-status`, gemergt, noch
   ausgecheckt) steht auf demselben Stand.
 - **Gesamtbild (14.11.):** `wiki/Gesamtbild.md` ist auf den Stand nach r13 gezogen, auf dem Zweig
-  `docs/wiki-gesamtbild-r13`. Aufgefallen und nicht geändert: H100 und H102 stehen in
-  `wiki/Vorhersagen-und-Tests.md` in der Tabelle der abgeschlossenen Tests statt bei den offenen Vorhersagen.
+  `docs/wiki-gesamtbild-r13`. Im selben Zweig: H100 und H102 stehen in
+  `wiki/Vorhersagen-und-Tests.md` jetzt auch in der Tabelle der offenen Vorhersagen.
 - **Datenstand 14.11.:** nu-fit.org (Seite „Results“) nennt v6.1 (Daten bis November 2025) als neueste Version;
   H100 bleibt offen. Die PDG-Ausgabe 2026 liegt vor dem 13.11.2026 und zählt für H102 nicht; maßgeblich ist die
   nächste Ausgabe. H102 bleibt offen.
