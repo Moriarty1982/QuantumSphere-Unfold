@@ -1,0 +1,69 @@
+{
+  "CT-003": {
+    "guards": [
+      "a48799952909207418fff2dc4322971496290b40e5527d19844b69e9bf1e02f1",
+      "344e11e22e56d4db3d1f25bc89ff86ff3056faa222ff6ae0b6eb6c9e6198fc75",
+      "2c57602c8182e06d89d6e6e3568c2e4c128da42ec7bd3215ca3f3acf0b620cb3"
+    ],
+    "lifecycle": "placeholder",
+    "version_hash": "f5a04297f5ca5a8c1b8aa89d9b67b8c668a83d768b83193fec7799333565cf8e"
+  },
+  "balance": {
+    "by_status": {
+      "partially_constrained": [
+        "CT-001"
+      ],
+      "placeholder": [
+        "CT-002",
+        "CT-003"
+      ]
+    },
+    "counterterms": {
+      "CT-001": "partially_constrained",
+      "CT-002": "placeholder",
+      "CT-003": "placeholder"
+    },
+    "note": "Elektron-Abstand pi/12 - theta_e = Delta Phi / 3 haengt an CT-001/CT-002, kein eigener Eintrag",
+    "structurally_matched": 0
+  },
+  "database": "build/ct_register_full_2026_11_14.sqlite3",
+  "export": {
+    "directory": "build/ct_register_export_2026_11_14",
+    "guard_notes": 4,
+    "manifest_hash": "3e29604c7339c7dbe7e4ec6fa9c12a74940423b99e12e96c72cd97b64c2cf94a",
+    "registry_entries": 3
+  },
+  "selection_hash": "56e784e0e81fda0fb778c6172cef68fccd0eed5dd4ddc966f0f8d536e9eac609",
+  "snapshot": "c00f025db012e95627157bd3653b96dca5fd4ab3ec481c4ee5e79477443b2c12",
+  "statements": {
+    "H102": {
+      "counterterms": [
+        "partially_constrained",
+        "placeholder"
+      ],
+      "inherited_guards": 7,
+      "version_hash": "97e653078e8a2156f131350c75c1e6029d064805263efb84e954dee4680b31e6"
+    },
+    "S-2T": {
+      "counterterms": [
+        "placeholder"
+      ],
+      "inherited_guards": 3,
+      "version_hash": "16b5fa72dac4e2dbb0381a2117b52d0e27f5a90b1721191ea221a3f884c510ef"
+    },
+    "S-GEN": {
+      "counterterms": [
+        "placeholder"
+      ],
+      "inherited_guards": 3,
+      "version_hash": "9a82d66a5a8038277102bbae5c3e39c161fe09fa3c9a9f897da42f921ad48c71"
+    },
+    "S-N": {
+      "counterterms": [
+        "placeholder"
+      ],
+      "inherited_guards": 3,
+      "version_hash": "5e8c148827c45369405dd5416f3a41f2322d8aa7e51f6c1ec35db0a027383421"
+    }
+  }
+}
