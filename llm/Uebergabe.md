@@ -6,7 +6,7 @@
   Der gemergte Zweig `codex/op3-fourier-native-gate` ist auf GitHub gelöscht (Dauerauftrag).
   Davor gemergt: #122 (f04c6ad), #121 (f39ca00, r13), #120, #119, #108–#118.
   Nicht geprüft: die Darstellung von Mindmap und Formeln im GitHub-Wiki (im Browser des Modells gesperrt).
-- **Lokal:** Hauptordner auf dem Zweig `research/op3-action-balance-search` (von 0f8fda0), ein Commit, **gepusht, PR #124 offen**. Er enthält die Erkundung unten, das Wiki (Forschungsstand, Offene-Probleme, Wiki-Pflege) und
+- **Lokal:** Hauptordner auf dem Zweig `research/op3-action-balance-search` (von 0f8fda0), 15 Commits, **gepusht, PR #124 offen**. Er enthält die Erkundung unten, das Wiki (Forschungsstand, Offene-Probleme, Wiki-Pflege) und
   diese Übergabe.
 - **Neu, 14.11. (`notes/research/op3_action_balance_search_2026_11_14/`, Erkundung, nicht blind, Rückwärtssuche,
   auf „Wirkung suchen“ des Autors):** Gesucht war eine vorhandene Wirkung, die H = −a(Q + R) mit gebunden gleichen
@@ -43,7 +43,7 @@
   Chern-Simons und modulare S-Matrix kommen im Companion nicht vor.
 
 ## Nächster Schritt
-- **Stand 15.11.:** Zweig `research/op3-action-balance-search`, zehn lokale Commits, nicht gepusht, kein PR.
+- **Stand 15.11.:** Zweig `research/op3-action-balance-search`, gepusht, PR #124 offen.
   Notiz mit den Nachträgen 1–8: r47-Maske, ε-Vorwissen r50–r56, ε* = (1/3)ln((1+√3)/2), Photonengewichte,
   Frame-Kreuzprodukte (sl(2,R)), Levi-Civita, geordnete Produkte und r33.
 - **Befund der r33-Prüfung (Nachtrag 8):** r33 ist nicht der Engpass. Die Nachträge 4–7 sind dort berichtigt.
