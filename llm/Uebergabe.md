@@ -19,9 +19,6 @@
   - H102 ist offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem 13.11.2026 (`k224_test_h102.py m_tau sigma`).
   - H101 ist widerlegt. H100 ist offen; am 13.11. war NuFIT 6.1 weiterhin die neueste Version.
   - Als Nächstes ist H104 frei, das letzte k-Skript ist k225.
-<<<<<<< HEAD
-- **Offene Autorentscheidungen:** keine.
-=======
 - **Offene Autorentscheidungen:** keine.
 - **Platzhalter-Bilanz (14.11., `notes/research/counterterms/Bilanz_2026_11_14.md`):** Neu eingetragen ist CT-003, die
   Ladungsachse e8 statt e7 auf den Sedenionen (placeholder, drei Guards). Daran hängen S-N (neutrales Qubit), S-2T
@@ -29,7 +26,6 @@
   an CT-001/CT-002, kein eigener Eintrag. Stand: drei Einträge, keiner strukturell abgeglichen. Der LaTeX-Export der
   echten Auswahl besteht die harte Prüfung (3 Einträge, 4 Vermerke), übersetzt aber nicht, weil die Aussagetexte aus
   Markdown stammen; der Anhang selbst übersetzt sauber.
->>>>>>> github/main
 - **Counterterm-Registry (14.11.):** Der Autor will damit Rapid Prototyping betreiben: Gegenterme setzen und später
   durch Herleitungen ersetzen. Phase 1 ist seit PR #114 gemergt (Schema, Validator, Weitergabe der Guards,
   Fixture CT-000-TEST). Ergänzt um die Herkunft der Fitdaten, eine Blindheitsprüfung, Δ als Prüfstein sowie diskrete
