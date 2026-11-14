@@ -4,7 +4,7 @@
 ## Stand vom 14.11.2026 (Claude Opus)
 - **GitHub:** **PR #116 gemergt als a3fe755** (CT-001 und CT-002 im Gegenterm-Register, H102 erbt sieben Guards), auf
   „PR 116 mergen“; Checks vorher grün (lean, tests ubuntu/windows); Läufe nach dem Merge alle erfolgreich (QAM batch,
-  QAM TeX, QAM Lean, Wiki-Sync, Zwei-PDF). Zweig gelöscht. **Keine offenen PRs.**
+  QAM TeX, QAM Lean, Wiki-Sync, Zwei-PDF). Zweig gelöscht. **Offen: PR #117** (T11/QAM-Shift zu CT-002).
   Am 14.11. außerdem gemergt: #115 (990a3cc, I1-String-Brücke), #114 (44cdcd1, Register Schema v7), #113 (10d670e),
   #112 (ad7756f), #111 (c247ea3), #110 (8606691), #109 (963f557), #108 (91cbb69). Am 13.11.: #104–#107.
 - **Lokal:** Der Hauptordner steht auf `main` = a3fe755 (vorgespult), dazu dieser Übergabe-Commit, nur lokal.
@@ -19,7 +19,7 @@
   - H102 ist offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem 13.11.2026 (`k224_test_h102.py m_tau sigma`).
   - H101 ist widerlegt. H100 ist offen; am 13.11. war NuFIT 6.1 weiterhin die neueste Version.
   - Als Nächstes ist H104 frei, das letzte k-Skript ist k225.
-- **Offene Autorentscheidungen:** keine.
+- **Offene Autorentscheidungen:** „PR 117 mergen“ (Zweig `research/ct002-t11`).
 - **Counterterm-Registry (14.11.):** Der Autor will damit Rapid Prototyping betreiben: Gegenterme setzen und später
   durch Herleitungen ersetzen. Phase 1 ist seit PR #114 gemergt (Schema, Validator, Weitergabe der Guards,
   Fixture CT-000-TEST). Ergänzt um die Herkunft der Fitdaten, eine Blindheitsprüfung, Δ als Prüfstein sowie diskrete
@@ -51,6 +51,9 @@
   jetzt „eine Informationsquerung“. Offen sind der Grund für genau eine Querung, das Ende im Frame M und die
   Stringdynamik. I1 hat in `Zurueckgestellte_Ideen.md` einen Stand-Eintrag. Nächste Frage: Gibt T11 bzw. die QAM-
   Verschiebung einen Grund für genau eine Querung?
+  **Geprüft am 14.11. (`op3_ct002_t11_shift_2026_11_14.md`):** nein. T11 trägt nur die euklidische Lesart (Wick-Rotation),
+  der Shift ist eine inhaltsfreie Umbenennung. Das war der vierte Ansatz an derselben Stelle; die Suche ruht, bis die
+  nächste PDG-Ausgabe H102 prüft. Die Kette CT-001/CT-002 hängt an diesem Datum.
 - **14.11., Hurwitz-Einheiten auf N** (`op3_hurwitz_2t_neutral_qubit_2026_11_14.*`, Erkundung, nicht blind):
   Die 24 Hurwitz-Einheiten von H_n wirken von rechts treu auf N als 2T (projektiv A4). N ist also ein natives
   2T-Dublett. Die ψ-Achse e8 ist zweizählig, die vier dreizähligen Achsen liegen unter 1/√3 dazu. Der Bezug ist ein

@@ -1956,6 +1956,10 @@ Erkundung $\eta$, ohne Datenvergleich:
   Gegenterm-Register (Schema v7, PR #114). H102 hängt an beiden und erbt sieben offene Guards.
   Die Blindheitsprüfung meldet für jeden Vergleich mit $m_\tau$ der PDG `not_blind`, weil $m_\tau$ in
   den Fit einging; eine neue Datenversion wird gesondert ausgewiesen.
+- T11 und QAM-Shift (14.11., Erkundung): Die Wick-Rotation von T11 (`thm:wick`) trägt die euklidische
+  Lesart von CT-002, die damit den Status von T11 erbt (Lesart). Einen Grund für **eine** Querung gibt
+  weder T11 noch der QAM-Shift, der nur Marken umbenennt. Die Planck-Untergrenze gibt 0,152 rad, nicht 1.
+  Das ist der vierte Ansatz an derselben Stelle. Die Suche ruht, bis die nächste PDG-Ausgabe H102 prüft.
 
 **Runde v4.10.0-r12 und offene Fäden** (13.11.2026). Die Runde r12
 (Statusvermerke) hält fest: Das historische Koide-OP3 ist nicht
