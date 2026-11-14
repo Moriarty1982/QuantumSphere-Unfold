@@ -3,7 +3,7 @@
 
 ## Stand vom 14.11.2026 (Claude Opus)
 - **GitHub:** **PR #110 gemergt als 8606691** (Generationen unter Q_*, Erkundung), auf „PR 110 mergen“; Läufe
-  43537835140 (Wiki-Sync) und 43537835219 (Zwei-PDF) erfolgreich. **Keine offenen PRs.**
+  43537835140 (Wiki-Sync) und 43537835219 (Zwei-PDF) erfolgreich. **Offen: PR #111** (Regel in AGENTS.md).
   Am 14.11. außerdem gemergt: #109 (963f557, R_f-Nachtrag) und #108 (91cbb69, Ladung über e8, H103 widerlegt).
   Am 13.11. gemergt: #104 (32fa42c), #105 (fcc87c6), #106 (ca29c5b), #107 (a08d918).
 - **Lokal:** Der Hauptordner steht auf `main` = 8606691 (vorgespult), dazu dieser Übergabe-Commit, nur lokal.
@@ -18,7 +18,7 @@
   - H102 ist offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem 13.11.2026 (`k224_test_h102.py m_tau sigma`).
   - H101 ist widerlegt. H100 ist offen; am 13.11. war NuFIT 6.1 weiterhin die neueste Version.
   - Als Nächstes ist H104 frei, das letzte k-Skript ist k225.
-- **Offene Autorentscheidungen:** keine.
+- **Offene Autorentscheidungen:** „PR 111 mergen“ (Regel „gemergte Zweige löschen“ in AGENTS.md, Zweig `research/agents-zweige-loeschen`).
 - **14.11., Generationen unter Q_*** (`op3_sedenion_generations_estar_2026_11_14.*`, Erkundung, nicht blind):
   C⊗S hat unter Q_* genau zwei vollständige Generationen. Die ψ-Sektoren sind aber keine Generationen
   (1: ν, e⁺; ω: ν, u, d̄; ω̄: e⁺, u, d̄). ψ wirkt innerhalb der Generationen als Phase und ist kein Generationsschritt.

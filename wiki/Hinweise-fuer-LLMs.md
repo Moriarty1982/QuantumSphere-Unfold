@@ -24,6 +24,7 @@ Wer mit einem KI-Werkzeug im Repository arbeitet (Codex, Claude, ChatGPT und and
 - Vorab-Notizen vor jedem Test;
 - Runden nur anhängen, nie umschreiben;
 - Merges erst nach Freigabe des Autors;
+- gemergte Zweige nach jedem Merge ohne Rückfrage löschen, lokal und auf GitHub; nicht gemergte bleiben stehen;
 - das Wiki im selben PR mitziehen;
 - keine festen absoluten Pfade in Skripten.
 
