@@ -28,6 +28,51 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 
 ## OP3: Zulässige Hüllen-Übergänge
 
+**Bezugsauswahl, 14.11.2026:** Ein zusätzlich gesetztes Vergleichs-H
+aus zwei Rang-eins-Projektoren wählt bei gleichen Kopplungen den
+bekannten Bezug (1+sqrt(3),1,1) als eindeutiges Minimum. Das umgeht die
+Notwendigkeit eines aktiven Fourier-Pulses, leitet aber weder H noch
+die Kopplungsgleichheit her. K_orb=2/3 verlangt genau diese Gleichheit;
+die S-Symmetriekontrolle verliert die Auswahl, die Bahngrammatrix bleibt
+vom Rang zwei. Präparation, drei positive Massen und native Operatorbrücke
+bleiben offen. Keine Übernahme als neuer Registry-Platzhalter.
+[Bedingter Vergleich](../notes/research/op3_reference_energy_selection_2026_11_14/README.md).
+
+**Dynamischer Nachtrag 14.11.2026:** Der vorhandene Zwei-Sonden-Verbinder
+T_12 ist kein ausgewerteter Fourier-Generator. Tau-erhaltende Dynamik
+kann F nicht aktiv erzeugen. Beim zusätzlich angenommenen statischen,
+kanonischen H=[[0,C],[C†,0]] ist eine Fourier-Rückkehr in dieselbe Sonde
+ebenfalls ausgeschlossen; eine Übertragung in die andere mit C=mu F
+setzt das Ziel hingegen ein und lässt die drei Singulärwerte gleich.
+Diese Aussagen ersetzen weder die Typisierung antilinearer Verbinder
+noch die Herleitung des Hamiltonoperators aus der Feldgleichung.
+Die Herkunftsroute ruht bis zur Angabe einer unabhängigen tau-brechenden
+Dynamik samt Zustandsraum und Auswahlgesetz; OP3 bleibt offen.
+[Prüfung der Zwei-Sonden-Brücke](../notes/research/op3_two_probe_fourier_bridge_2026_11_14.md).
+
+**Weiterer Nachtrag 14.11.2026, volle Trialität:** Die benötigte Uhr D
+besitzt eine farb- und Q_8-verträgliche Trialitätshebung, aber mit voller
+Ordnung neun statt drei. S ist nur projektiv auf dem neutralen Sektor
+realisierbar; farbige Zustände tragen andere Phasen. Fourier selbst
+verändert die Trialitätsform schon an (1,0,0), auch bei Zulassung einer
+Gesamtphase und auf dem komplexifizierten neutralen Ladungsraum.
+Eine Erweiterung als Symmetrie der ursprünglichen Form ist damit bei
+dieser Einbettung ausgeschlossen. Als nächste Pflicht bleibt eine
+begründete Dynamik-/Operatorbrücke, die diese Form nicht erhalten muss.
+OP3 bleibt offen; ohne diese Brücke keine weitere Winkel- oder Massenanpassung.
+[Analytische Herleitung und exakte Kontrolle](../notes/research/op3_triality_slot_phases_2026_11_14/README.md).
+
+**Nachtrag 14.11.2026, Fourier-Herkunft:** Komplexe Linearkombinationen der
+Slot-Permutationen erhalten die gleichmäßige Slotgerade; F tut das nicht.
+Auch das Zulassen solcher Summen liefert daher noch keine native
+Fourier-Operation. Mit einer unabhängig begründeten Uhr D würden die
+beiden geordneten Regeln U tau U†=D^-1 und U D U†=tau den Operator bis auf
+Gesamtphase festlegen. Die native Herkunft von D, U und S sowie die
+Bezugsauswahl bleiben offen. Die volle slotweise Trialität ist durch die
+Permutationsschranke nicht ausgeschlossen und muss auf dem gemeinsamen
+physikalischen Slotraum dargestellt werden. OP3 bleibt offen.
+[Analytische Erkundung](../notes/research/op3_fourier_native_gate_2026_11_14.md).
+
 **Stand nach v4.10.0-r12 (13.11.2026):** Die geerbte Lesart, das Koide-OP3 sei „strukturell geschlossen“ (Teil 17), ist überholt; OP3 ist offen. Nach v5.0.0 erkundet: Koide als mittlere quadratische Überlappung ½ (Gram-Lesart), Rand des Bogens als Oktanten-Tripel, Neutrino-Phase als Fluss π/4 (H99 verträglich, H100 vorab). Ein Potential gibt ρ² = ½ nur mit abgestimmtem Koeffizientenverhältnis (Grad 6); ein nativer, farb- und ladungsneutraler Träger fehlt.
 
 **Stand nach v4.10.0-r13 (14.11.2026):** Ein neutraler Träger existiert unter einer Annahme: Mit der Ladungsachse e₈ (Platzhalter CT-003) ist N = span(1 + i e₈, e₇ − i e₁₅) ein farb- und ladungsneutrales Qubit der Sedenionen, auf dem die Hurwitz-Einheiten als 2T wirken; der Bezug unter dem magischen Winkel ist dort ein Eigenzustand einer Einheit der Ordnung 3. Es bleiben aber zwei Generationen, und ψ ist kein Generationsschritt. Der Trialitätsträger O³ hat drei Generationen und ein τ-symmetrisches 2 + 1, aber keine zweizählige Achse unter dem magischen Winkel (nur S₃, K = 1/2). Kein vorhandener Träger erfüllt das ganze Profil. Koide 2/3 und die Phase sind nicht hergeleitet; OP3 und OP4 sind offen.

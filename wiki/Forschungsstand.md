@@ -1,5 +1,99 @@
 # Forschungsstand
 
+### OP3: Bezugsauswahl durch zwei Energieterme (14.11.2026)
+
+Eine neue, nicht blinde Erkundung prüft eine schwächere Frage als die
+aktive Fourier-Herkunft: Kann derselbe Bezug als Energie-Minimum entstehen?
+Auf dem gewählten neutralen C³ seien e=(1,0,0), s=(1,1,1)/sqrt(3),
+Q=ee† und R=ss†. Die zusätzlich gesetzte Energie H=-(aQ+bR), a,b>0,
+hat einen eindeutigen Grundzustand. Bei a=b ist seine Richtung
+(1+sqrt(3),1,1); die bekannte S-Bahn liefert das Diagnostikum K_orb=2/3
+und die Bargmann-Phase pi/4. Fourier muss dafür nicht aktiv erzeugt werden.
+
+Die Kontrolle mit freien Gewichten zeigt jedoch exakt:
+K_orb=2/3 gilt bei positiven Gewichten genau für a=b. Das Austausch-/
+Balanceprinzip der beiden Projektoren ist eine neue, noch unbegründete
+Voraussetzung. Die Auswahl ist nicht automatisch eine Präparation.
+Das feste H bricht S; seine S-Bilder sind keine drei gleichenergetischen
+Grundzustände. S-Symmetrisierung verliert bei a=b die nichttriviale Bahn.
+Ihre Gram-Matrix hat zudem Rang zwei und eine Nullrichtung, also kein
+volles geladenes Leptonspektrum. Ein physisches Massengesetz fehlt weiter.
+Symbolisch für alle positiven Gewichtsverhältnisse und separat analytisch
+geprüft; keine neue Hypothese, Registry-Eintragung oder Guard-Schließung.
+[Herleitung, Symmetriekontrolle und Nachweis](../notes/research/op3_reference_energy_selection_2026_11_14/README.md).
+
+### OP3: Dynamikbrücke über zwei Sonden geprüft (14.11.2026)
+
+Der vorhandene Kanal T_12 benennt eine mögliche Kopplung, legt seine
+Generationenmatrix aber nicht fest. Ein zu jeder Zeit tau-erhaltender
+Generator kann Fourier nicht als aktive Slotoperation erzeugen; das gilt
+auch mit Hilfskanälen bei derselben Gesamtzykluswirkung. Fourier-
+Diagonalisierung einer zirkulanten Matrix ist weiterhin ein Basiswechsel.
+
+Zusätzlich analytisch geprüft: Im kanonischen, komplex-linearen,
+statischen Vergleich H=[[0,C],[C†,0]] lautet der Rückkehrblock derselben
+Sonde cos(T sqrt(CC†)). Er ist hermitesch und kann daher kein unitäres
+Fourier mit Eigenwerten 1,-1,i bis auf Gesamtphase sein. Die antilinearen
+r44-Verbinder müssten für diese Lesart zuerst passend typisiert werden;
+die volle relativistische Gleichung ist damit nicht pauschal ausgeschlossen.
+Übertragung zwischen den Sonden ist etwas anderes: C=mu F überträgt
+bei T=pi/(2mu) mit Fourier, setzt F aber bereits ein und hat drei gleiche
+Singulärwerte. Daraus folgt keine Massenhierarchie.
+
+Offen bleiben der aus der Wirkung bestimmte tau-brechende Generator,
+beide physischen Dreierräume und ein begründetes Auswahlgesetz für Zeit
+oder Vakuum. Bis dahin ruht die reine Fourier-Herkunftsroute; keine
+weiteren Fits derselben freien Kopplungen. OPs und Guards unverändert.
+[Quellen und analytische Herleitung](../notes/research/op3_two_probe_fourier_bridge_2026_11_14.md).
+
+### OP3: Trialitätsphasen und direkte Fourier-Sperre (14.11.2026)
+
+Die volle Trialität erlaubt verschiedene farbneutrale Phasen je Slot.
+Mit J_0=(L_e7+R_e7)/2 auf der neutralen Ebene und
+J_c=(L_e7-R_e7)/2 auf dem farbigen Teil erhält
+g_i=exp(alpha_i J_0+beta_i J_c) die Form Re((xy)z), wenn
+alpha_0=beta_2-beta_1 und zyklisch sowie sum beta_i=0 (modulo 2pi).
+Die g_i kommutieren mit dem gemeinsamen r35-Ladungsoperator Q_8.
+Alle 512 infinitesimalen Tensorbedingungen wurden exakt geprüft:
+sechs Unbekannte, Rang vier, zweidimensionaler Kern.
+
+D=diag(1,omega,omega²) ist neutral realisierbar, seine volle Hebung hat
+aber Ordnung neun: Der Kubus ist neutral eins und farbig ein nichttriviales
+Farbzentrum. S=diag(1,omega,omega) ist nur bis auf eine gemeinsame neutrale
+Phase realisierbar; diese Phase ist auf dem Gesamtträger nicht global.
+Auf Q_8=0 erscheinen die konjugierten neutralen Phasen, durch Inversion
+ebenfalls realisierbar. Die Winkel werden damit zugelassen, nicht ausgewählt.
+
+Die aktive Fourier-Operation selbst kann die ursprüngliche Trialitätsform
+bei dieser neutralen Einbettung nicht erhalten: Der Wert an (1,0,0) ist
+null, nach Fourier jedoch 1/(3sqrt(3)). Auch eine Gesamtphase behebt die
+Sperre nicht; sie gilt ebenso für den komplexifizierten Q_8=0-Dreierraum.
+Damit ist diese reine Symmetrieroute ausgeschlossen. Offen bleibt eine
+begründete Dynamik oder Operatorbrücke, die die Slots mischt und die Form
+nicht erhalten muss. Kein Koide-Nachweis, keine neue Hypothese oder
+Guard-Schließung. [Herleitung und exakter Lauf](../notes/research/op3_triality_slot_phases_2026_11_14/README.md).
+
+### OP3: Native Herkunft der Fourier-Operation (14.11.2026)
+
+Analytische Erkundung, nicht blind: Auch beliebige komplexe Summen der
+Slot-Permutationen tau und P erhalten die gleichmäßige Slotgerade
+s=(1,1,1)/sqrt(3). Die Fourier-Matrix bildet s dagegen auf e_0 ab und liegt
+daher außerhalb dieser Algebra. Kohärente Summen der Permutationen allein
+schließen die in r13.6 benannte Lücke nicht. Die zusätzliche Uhr
+D=diag(1,omega,omega²) verlässt diese Algebra bereits.
+
+Eine native unitäre Operation U wäre bis auf Gesamtphase als Fourier
+festgelegt, wenn sie beide Regeln U tau U†=D^-1 und U D U†=tau erfüllt.
+Die erste Regel allein lässt relative Eigenraumphasen frei; F²=P allein
+hat ebenfalls andere unitäre Lösungen. Ein Basiswechsel zu Fourier-Moden
+begründet keine aktive Operation relativ zur festgehaltenen Phase S.
+Offen bleiben die native Uhr, ihre Vertauschungsoperation, S und die
+Bezugsauswahl. Die Schranke betrifft den skalaren Permutationsraum,
+keine bereits ausgewertete volle Trialitätswirkung. Nächste Pflicht ist
+deren Darstellung auf einem gemeinsamen farb- und ladungstypisierten
+Slotraum. Keine neue H-Nummer oder Guard-Schließung; H100/H102 bleiben offen.
+[Herleitung und Geltungsgrenzen](../notes/research/op3_fourier_native_gate_2026_11_14.md).
+
 ### OP3: Elastische Strings mit fester Gesamtlänge (12.11.2026)
 
 Die Autorenidee wurde als zusätzliches Längenmodell untersucht:

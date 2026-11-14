@@ -1,0 +1,2 @@
+Exact ratio-family checks passed: K=2/3 iff a=b for positive weights.
+Balanced Bargmann=(1+i)/4; orbit Gram rank=2; S-average loses nontrivial orbit.

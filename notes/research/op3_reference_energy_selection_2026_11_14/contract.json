@@ -1,0 +1,14 @@
+{
+  "claim_id": "OP3_REFERENCE_ENERGY_SELECTION_EXPLORATION",
+  "mathematics": {
+    "assertion_tested": "Exact symbolic ground projector for H=-(a Q+b R), a/b>0, with Q the first-slot projector and R the uniform-slot projector; S-orbit fidelity and K; balanced Bargmann invariant; symmetry-average and rank controls",
+    "coefficient_domain": "Exact real rational functions and algebraic radicals; positive ratio r=a/b; omega=(-1+i sqrt(3))/2",
+    "conventions": "Positive standard Hermitian metric on C^3, tau(x,y,z)=(y,z,x), D=diag(1,omega,omega^2), S=diag(1,omega,omega); Q=|e0><e0|, R=|s><s|; b sets the energy unit",
+    "inputs": ["All real positive ratios r=a/b symbolically", "Three-dimensional scalar slot space", "Balanced r=1 orbit", "S-symmetrized Hamiltonian"],
+    "bounds": {"dimension": 3, "orbit_size": 3, "random_samples": 0},
+    "non_claims": ["Not blind: known target K=2/3 and pi/4", "No native action or ground-state preparation derived", "No coefficient balance derived", "No physical mass-law identification", "No new H test or CT registration"]
+  },
+  "execution_artifacts": ["notes/research/op3_reference_energy_selection_2026_11_14/check.py"],
+  "software": [{"name": "Python", "version": "3.12.10"}, {"name": "SymPy", "version": "1.14.0"}],
+  "randomness": {"used": false, "generator": "", "seed": null}
+}

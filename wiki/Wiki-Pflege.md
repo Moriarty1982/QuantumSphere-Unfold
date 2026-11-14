@@ -102,6 +102,14 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 14.11.2026: Forschungsstand und Offene-Probleme um die bedingte Bezugsauswahl durch zwei Projektorterme ergänzt. Exakte Koeffizientenbalance, S-Symmetrie-/Rangkontrolle und fehlende Präparation dokumentiert; symbolischer Verhältnisfamilien-Nachweis, keine native Massenherleitung oder Registry-Eintragung.
+
+- 14.11.2026: Forschungsstand und Offene-Probleme um die Quellenprüfung der dynamischen Fourier-Brücke ergänzt: Erhaltung des Slotzyklus, bedingte statische Zwei-Sonden-Sperre und Unterschied zwischen Rückkehr/Übertragung. Fehlende native Matrixelemente, Typisierung und Auswahlgesetz benannt; Route bis zu diesen Eingaben ruhend, keine OP-/Guard-Schließung.
+
+- 14.11.2026: Forschungsstand und Offene-Probleme um die volle Trialitätshebung von D und projektivem S ergänzt (Ladungszeichen, zusätzliche Farbphasen, Ordnung neun). Direkte Sperre für Fourier als Symmetrie der ursprünglichen Form dokumentiert; exakte 512-Gleichungen-Kontrolle samt Laufnachweis. Keine neue Runde, Hypothese oder Änderung von Guards.
+
+- 14.11.2026: Forschungsstand und Offene-Probleme um die analytische Schranke für F in der Slot-Permutationsalgebra ergänzt; notwendige zusätzliche Uhr und geordnete Vertauschungsregeln benannt. Keine neue Runde, Hypothese oder Änderung von Guards.
+
 - 14.11.2026: QAM – Gegenterm-Register im Aussagenspeicher (Schema v7, Phase 1) beschrieben: Objekttyp, Lebenslauf, Guard-Vererbung, Residuenprüfung, Termrollen; kein physikalischer Gegenterm registriert, OP1–OP5, C5, C6/T2 offen.
 
 - 11.11.2026: Forschungsstand – Physikfassung vom technischen Auszug zum wissenschaftlichen Haupttext mit Abstract, Literatur und Beweisanhang überarbeitet; Detailprovenienz im separaten Auditbericht erhalten.

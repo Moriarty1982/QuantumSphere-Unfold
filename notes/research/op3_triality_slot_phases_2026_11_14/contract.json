@@ -1,0 +1,14 @@
+{
+  "claim_id": "OP3_TRIALITY_SLOT_PHASES_EXPLORATION",
+  "mathematics": {
+    "assertion_tested": "Exact nullspace of all 512 entries of the triality-form infinitesimal invariance equation for A_i=a_i J0+b_i Jc; exact charge commutators and rational finite lift orders",
+    "coefficient_domain": "Q, Q(i), Q/Z; SymPy exact arithmetic",
+    "conventions": "Cayley-Dickson (a,b)(c,d)=(ac-conj(d)b,da+b conj(c)); t=Re((xy)z); J0=(L_e7+R_e7)/2; Jc=(L_e7-R_e7)/2; angles recorded as turns",
+    "inputs": ["eight standard octonion basis vectors", "three slots", "all 512 tensor entries", "six generator coefficients", "D and projective S rational angle triples"],
+    "bounds": {"basis_dimension": 8, "slots": 3, "tensor_entries": 512, "unknowns": 6},
+    "non_claims": ["Not blind: D and S targets known", "No new H test", "No mass or Koide derivation", "No active Fourier operation derived", "Full colour-centralizer coverage and finite extension arguments are analytic in the companion note"]
+  },
+  "execution_artifacts": ["notes/research/op3_triality_slot_phases_2026_11_14/check.py"],
+  "software": [{"name": "Python", "version": "3.12.10"}, {"name": "SymPy", "version": "1.14.0"}],
+  "randomness": {"used": false, "generator": "", "seed": null}
+}
