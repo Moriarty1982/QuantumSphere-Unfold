@@ -370,9 +370,15 @@ Bericht: `notes/research/hc_koide_bridge_review_2026_11_11.md`.
 
 Das Register trennt einen geschützten Strukturkern von lokalen, effektiven
 Kompensationstermen δ_i. Ein Gegenterm ist Buchführung, keine Herleitung:
-Er schließt weder OP1–OP5 noch C5 oder C6/T2. Im Store ist kein
-physikalischer Gegenterm registriert; die Tests verwenden nur die Fixture
-CT-000-TEST in einer temporären Datenbank.
+Er schließt weder OP1–OP5 noch C5 oder C6/T2. Die Tests verwenden nur die
+Fixture CT-000-TEST in einer temporären Datenbank. Seit 2026-11-14 sind
+zwei physikalische Gegenterme als reproduzierbare Eintragung festgehalten:
+CT-001 (Phaseneinheit des Lepton-Flusses, partially_constrained) und CT-002
+(Kopplung an eine Horizont-Punktierung, placeholder), dazu H102 mit
+`depends-on-counterterm`-Kanten. Skript und Bericht mit allen Hashes:
+`notes/research/counterterms/register_ct001_ct002_2026_11_14.py` und
+`register_2026_11_14_report.json`. Die Datenbank selbst liegt unter `build/`
+und ist nicht versioniert; das Skript baut sie mit denselben Hashes neu.
 
 Schema v7 ergänzt nur den Typenkatalog um `counterterm-scheme` und
 `counterterm-transition` (`catalogue_v7.json`) und sperrt den Katalog gegen

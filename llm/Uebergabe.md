@@ -3,7 +3,7 @@
 
 ## Stand vom 14.11.2026 (Claude Opus)
 - **GitHub:** **PR #115 gemergt als 990a3cc** (I1-String-Brücke, Erkundung), auf „PR 115 mergen“; Läufe
-  43545271868 (Wiki-Sync) und 43545271712 (Zwei-PDF) erfolgreich. Zweig gelöscht. **Keine offenen PRs.**
+  43545271868 (Wiki-Sync) und 43545271712 (Zwei-PDF) erfolgreich. Zweig gelöscht. **Offen: PR #116** (Eintragung CT-001/CT-002).
   **PR #114 gemergt als 44cdcd1** (Gegenterm-Register im Aussagenspeicher, Schema v7, Phase 1). Gemergt hat ihn die
   Sitzung „Counterterm-Registry Phase 1“ nach grünen Checks (lean, tests, tests ubuntu, tests windows). Neu sind
   `qam/store/counterterms.py`, `schema_v7.sql`, `catalogue_v7.json` und `test_counterterms.py`; Doku in
@@ -22,13 +22,16 @@
   - H102 ist offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem 13.11.2026 (`k224_test_h102.py m_tau sigma`).
   - H101 ist widerlegt. H100 ist offen; am 13.11. war NuFIT 6.1 weiterhin die neueste Version.
   - Als Nächstes ist H104 frei, das letzte k-Skript ist k225.
-- **Offene Autorentscheidungen:** ob CT-001 jetzt im Register (Schema v7) eingetragen wird.
+- **Offene Autorentscheidungen:** „PR 116 mergen“ (Eintragung CT-001/CT-002, Zweig `research/ct-eintragung`).
 - **Counterterm-Registry (14.11.):** Der Autor will damit Rapid Prototyping betreiben: Gegenterme setzen und später
   durch Herleitungen ersetzen. Phase 1 ist seit PR #114 gemergt (Schema, Validator, Weitergabe der Guards,
   Fixture CT-000-TEST). Ergänzt um die Herkunft der Fitdaten, eine Blindheitsprüfung, Δ als Prüfstein sowie diskrete
   Konventionswahlen mit Versuchszahl. Phase 2 ist die Exporttabelle.
   **Erster echter Platzhalter (Autorenwahl): CT-001, die Einheit bei ΔΦ = γ_M/2.** Der Entwurf liegt unter
-  `notes/research/counterterms/CT-001_gamma_halbe_einheit_entwurf.md`; Phase 1 ist gemergt (#114), registrieren ist jetzt möglich.
+  `notes/research/counterterms/CT-001_gamma_halbe_einheit_entwurf.md`; Eingetragen am 14.11. (`register_ct001_ct002_2026_11_14.py`, Bericht
+  `register_2026_11_14_report.json`, reproduzierbar): CT-001 partially_constrained, CT-002 placeholder. H102 erbt
+  sieben Guards; Blindheit gegen m_τ der PDG: not_blind, eine neue Version wird mit same_version = false
+  ausgewiesen.
   Bekannte Spannung: Die r10-Konvention gibt Δ = 42,5 · γ/2.
   **Schritt 1 nach der Methode (14.11., `ct001_shrink_2026_11_14.*`):** Verlangt ist κs = 0,49982 (1σ-Band
   0,49974 bis 0,49990). ΔΦ ist ein äußerer Fluss, denn das Qubit-Tripel selbst gibt Ω/2 ≈ π/4. Als minimale

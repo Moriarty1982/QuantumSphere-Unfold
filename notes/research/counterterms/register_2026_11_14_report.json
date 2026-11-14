@@ -1,0 +1,133 @@
+{
+  "CT-001": {
+    "guards": [
+      "b00caaafdd8c3b484df519c29b2430efbac3f05e35ed3800e48c20545a3e7d85",
+      "576c79dd9d4a2ae41cf7619bcab950dd13a117275db4c2236832627a0841be56",
+      "179991c2376c91fdce9231c3be6a92f6ad3eaddd8104cd4be59296ae5fa6ed85"
+    ],
+    "lifecycle": "partially_constrained",
+    "reaudit": {
+      "affected_versions": [
+        "97e653078e8a2156f131350c75c1e6029d064805263efb84e954dee4680b31e6"
+      ],
+      "format": "qstore-counterterm-reaudit-v1",
+      "from": "placeholder",
+      "meaning": "review candidates; recompute Delta_i and inherited guards, nothing is revoked",
+      "scheme": "35daa75bd3b2ab43c1c46a6edcffc979cd12d486b0b18c8732555ed85bcc6425",
+      "to": "partially_constrained",
+      "transition": "b559b365a604f4d20883e9184a7abe6d98403b273ab5b0a38a99765b5ea12684"
+    },
+    "transition": "b559b365a604f4d20883e9184a7abe6d98403b273ab5b0a38a99765b5ea12684",
+    "version_hash": "35daa75bd3b2ab43c1c46a6edcffc979cd12d486b0b18c8732555ed85bcc6425"
+  },
+  "CT-002": {
+    "guards": [
+      "8152f2b6578329b89034dcb8ff6ea04513932ebf0378a664041429effb2892d7",
+      "e8cac0ca9766747c72d0d297e13667e09aabb227567b57a1cc2f1981c06e3362",
+      "a9fd810cbfb62e20766bc53d61523f9b927f699f319215ba373e1f48b791fa95",
+      "ccbc8f5d0b7ec11eb4ad6bf9ee6d95cc0dcfa8af23238de27e75109be5362e26"
+    ],
+    "lifecycle": "placeholder",
+    "version_hash": "fcbac3c76934e3dad7b3f03ba6d4fe1f4c30cdee916aa1a0f761b8f7bc2261eb"
+  },
+  "H102": {
+    "counterterms": [
+      {
+        "scheme": "35daa75bd3b2ab43c1c46a6edcffc979cd12d486b0b18c8732555ed85bcc6425",
+        "status": "partially_constrained"
+      },
+      {
+        "scheme": "fcbac3c76934e3dad7b3f03ba6d4fe1f4c30cdee916aa1a0f761b8f7bc2261eb",
+        "status": "placeholder"
+      }
+    ],
+    "inherited_guards": [
+      "179991c2376c91fdce9231c3be6a92f6ad3eaddd8104cd4be59296ae5fa6ed85",
+      "576c79dd9d4a2ae41cf7619bcab950dd13a117275db4c2236832627a0841be56",
+      "8152f2b6578329b89034dcb8ff6ea04513932ebf0378a664041429effb2892d7",
+      "a9fd810cbfb62e20766bc53d61523f9b927f699f319215ba373e1f48b791fa95",
+      "b00caaafdd8c3b484df519c29b2430efbac3f05e35ed3800e48c20545a3e7d85",
+      "ccbc8f5d0b7ec11eb4ad6bf9ee6d95cc0dcfa8af23238de27e75109be5362e26",
+      "e8cac0ca9766747c72d0d297e13667e09aabb227567b57a1cc2f1981c06e3362"
+    ],
+    "version_hash": "97e653078e8a2156f131350c75c1e6029d064805263efb84e954dee4680b31e6"
+  },
+  "blindness_PDG_2024": {
+    "findings": [
+      {
+        "datum": {
+          "label": "m_tau",
+          "source": "PDG",
+          "version": "2024"
+        },
+        "fitted_version": "2024",
+        "same_version": true,
+        "scan": {
+          "chance_expectation": "17/50",
+          "hits": 1,
+          "trials": 154
+        },
+        "scheme": "35daa75bd3b2ab43c1c46a6edcffc979cd12d486b0b18c8732555ed85bcc6425",
+        "status": "partially_constrained"
+      },
+      {
+        "datum": {
+          "label": "m_tau",
+          "source": "PDG",
+          "version": "2024"
+        },
+        "fitted_version": "2024",
+        "same_version": true,
+        "scan": {
+          "chance_expectation": "1/4",
+          "hits": 1,
+          "trials": 4
+        },
+        "scheme": "fcbac3c76934e3dad7b3f03ba6d4fe1f4c30cdee916aa1a0f761b8f7bc2261eb",
+        "status": "placeholder"
+      }
+    ],
+    "result": "failed",
+    "verdict": "not_blind"
+  },
+  "blindness_next_PDG": {
+    "findings": [
+      {
+        "datum": {
+          "label": "m_tau",
+          "source": "PDG",
+          "version": "naechste Ausgabe nach 2026-11-13"
+        },
+        "fitted_version": "2024",
+        "same_version": false,
+        "scan": {
+          "chance_expectation": "17/50",
+          "hits": 1,
+          "trials": 154
+        },
+        "scheme": "35daa75bd3b2ab43c1c46a6edcffc979cd12d486b0b18c8732555ed85bcc6425",
+        "status": "partially_constrained"
+      },
+      {
+        "datum": {
+          "label": "m_tau",
+          "source": "PDG",
+          "version": "naechste Ausgabe nach 2026-11-13"
+        },
+        "fitted_version": "2024",
+        "same_version": false,
+        "scan": {
+          "chance_expectation": "1/4",
+          "hits": 1,
+          "trials": 4
+        },
+        "scheme": "fcbac3c76934e3dad7b3f03ba6d4fe1f4c30cdee916aa1a0f761b8f7bc2261eb",
+        "status": "placeholder"
+      }
+    ],
+    "result": "failed",
+    "verdict": "not_blind"
+  },
+  "database": "build/ct_register_2026_11_14.sqlite3",
+  "frame": "matter-frame-M"
+}
