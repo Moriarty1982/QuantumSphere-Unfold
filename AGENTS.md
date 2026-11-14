@@ -55,6 +55,10 @@ Details: `release/v5.0.0/README.md`, Entwicklungsgeschichte in
   Erkundungen ohne Vorab-Notiz heißen „Erkundung“.
 - **Append-only:** Bestehende Runden werden nie umgeschrieben. Korrekturen kommen in eine neue Runde.
 - **Merges** auf `main` nur nach ausdrücklicher Freigabe des Autors.
+- **Gemergte Zweige löschen:** Zweige, die vollständig in `main` enthalten sind und keinen offenen PR haben, nach
+  jedem Merge ohne Rückfrage löschen, lokal und auf GitHub (Dauerauftrag des Autors vom 14.11.2026). Prüfen mit
+  `git merge-base --is-ancestor <zweig> <remote>/main`. Nicht gemergte Zweige bleiben stehen, auch fremde. Den Zweig
+  eines ausgecheckten Worktrees nicht löschen; ungetrackte Dateien in Worktrees vor dem Entfernen sichern.
 - **Wiki:** Jede inhaltliche Änderung zieht `wiki/` im selben PR mit. Das Wiki gibt den Inhalt wieder, nicht nur Links.
 - **Keine festen absoluten Pfade** in Skripten. Datenordner als Argument übergeben oder relativ zum Repo auflösen.
 - **Sparsam arbeiten:** Skripte als Dateien ablegen und nur kurze Zusammenfassungen ausgeben.
