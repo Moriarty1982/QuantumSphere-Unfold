@@ -6,8 +6,7 @@
   Der gemergte Zweig `codex/op3-fourier-native-gate` ist auf GitHub gelöscht (Dauerauftrag).
   Davor gemergt: #122 (f04c6ad), #121 (f39ca00, r13), #120, #119, #108–#118.
   Nicht geprüft: die Darstellung von Mindmap und Formeln im GitHub-Wiki (im Browser des Modells gesperrt).
-- **Lokal:** Hauptordner auf dem Zweig `research/op3-action-balance-search` (von 0f8fda0), ein Commit, **nicht
-  gepusht, kein PR**. Er enthält die Erkundung unten, das Wiki (Forschungsstand, Offene-Probleme, Wiki-Pflege) und
+- **Lokal:** Hauptordner auf dem Zweig `research/op3-action-balance-search` (von 0f8fda0), ein Commit, **gepusht, PR #124 offen**. Er enthält die Erkundung unten, das Wiki (Forschungsstand, Offene-Probleme, Wiki-Pflege) und
   diese Übergabe.
 - **Neu, 14.11. (`notes/research/op3_action_balance_search_2026_11_14/`, Erkundung, nicht blind, Rückwärtssuche,
   auf „Wirkung suchen“ des Autors):** Gesucht war eine vorhandene Wirkung, die H = −a(Q + R) mit gebunden gleichen
@@ -56,7 +55,8 @@
   Generationen als Dublett. In r33 sind die Generationen dagegen die drei Achsen, dort aber nicht neutral.
   Gesucht ist eine Struktur, in der beide Rollen zusammenfallen. Nicht gerechnet ist die Lage von H_n relativ zum
   r33-Faktor H; die Abbildung C⊗S ↔ C⊗H⊗O fehlt.
-- **Offen:** pushen und PR (Merge nur auf „PR NN mergen“). H100 und H102 bei neuen Daten auswerten
+- **PR #124 offen** (https://github.com/Moriarty1982/QuantumSphere-Unfold/pull/124), Zweig gepusht. Merge nur auf „PR 124 mergen“.
+- **Offen:** H100 und H102 bei neuen Daten auswerten
   (`k222_test_h100.py`, `k224_test_h102.py`).
 
 ## Profil der fehlenden Struktur
