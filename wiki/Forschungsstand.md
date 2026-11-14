@@ -1933,6 +1933,16 @@ Erkundung $\eta$, ohne Datenvergleich:
   native Operation. Die Generationen sind ein Dublett und keine drei Achsen; es bleiben zwei Generationen (K28), und
   das Dublett tragen alle Teilchenarten, nicht nur der Majorana-Block. Alles erbt die Guards von CT-003. Koide ist
   nicht hergeleitet.
+- Majorana-Vektor auf $N$ (14.11., Erkundung, nicht blind): Eine symmetrische Form auf $N$ ist $M=(m\cdot\sigma)arepsilon$
+  mit $m\in\mathbb C^3$ in $\operatorname{Im}\mathbb H_n$. Die native Bilinearform von $\mathbb S$ verschwindet auf $N$.
+  Kurze native Wörter aus $L_a,R_a$ geben nur reelle Richtungen entlang $e_8$ oder senkrecht dazu, also zwei gleiche
+  Massen. Allgemein: reelle Richtung heißt zwei gleiche Massen, Nullvektor heißt eine Masse. $\psi$-Invarianz lässt
+  nur $M_{11}$ zu (ein massives, ein masseloses Neutrino); Invarianz unter einer Hurwitz-Einheit gibt die
+  Raumdiagonale mit zwei gleichen Massen. $K$ läuft zwischen $1$ und $1/2$ und erreicht $2/3$ nur bei einem freien
+  Mischwinkel. Der Majorana-Vektor ist durch die Symmetrien nicht festgelegt, drei Massen aus zwei Flavours gibt es
+  nicht. Der Paarkanal $
+u^c
+u^c$ aus r82.4 ist hier nicht gerechnet. Koide ist nicht hergeleitet.
 - Platzhalter-Methode an der Einheit bei $\gamma/2$ (14.11., Erkundung, nicht blind):
   Rückwärts verlangen die Massen $\kappa s=\Delta\Phi/\gamma_M=0{,}49982$ (1σ-Band
   $[0{,}49974;\,0{,}49990]$). Die Bargmann-Phase des Qubit-Tripels selbst ist $\Omega/2\approx\pi/4$

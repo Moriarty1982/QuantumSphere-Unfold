@@ -8,7 +8,7 @@
   (990a3cc), #114 (44cdcd1), #113 (10d670e), #112 (ad7756f), #111 (c247ea3), #110 (8606691), #109 (963f557), #108
   (91cbb69). Am 13.11.: #104–#107.
 - **Lokal:** `main` = `github/main` = 9b9dfda (Übergabe-Commits sind gepusht). Die Erkundung „Rechtswirkung von H_n“
-  (14.11., Claude Fable) liegt als Commit auf dem Zweig `claude/anthropic-skills-weitermachen-0a9117` (Worktree
+  und „Majorana-Vektor auf N“ (14.11., Claude Fable) liegen als Commits auf dem Zweig `claude/anthropic-skills-weitermachen-0a9117` (Worktree
   `zealous-fermi-f46fd7`), nicht gepusht, kein PR.
   Unversioniert: `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf` (jetzt wirklich im Hauptordner).
 - **Letzte Runde:** v4.10.0-r12 (Statusvermerke) aus PR #106.
@@ -78,6 +78,12 @@
   Im H_n um e8 um 120°. Hurwitz-Einheit als Zyklus mit ψ-Eigenzustand als Bezug gibt den Oktanten in erster Form.
   Majorana-Bilinear = Vektor ohne Singulett. Einschränkung: Eine U(2) je Teilchenart folgt schon aus Schur; es bleiben
   zwei Generationen, das Dublett tragen alle Teilchenarten. Erbt die Guards von CT-003.
+- **14.11., Majorana-Vektor auf N** (`op3_majorana_vector_n_2026_11_14.*`, Erkundung, nicht blind): Die native
+  Bilinearform verschwindet auf N. Symmetrische Formen sind Vektoren m ∈ C³ in Im H_n: reelle Richtung = zwei gleiche
+  Massen, Nullvektor = eine Masse. ψ-fest ist nur M₁₁ (ein massives Neutrino), Hurwitz-fest die Raumdiagonale (zwei
+  gleiche). K = 2/3 nur bei freiem Mischwinkel, also Anpassung. Der Paarkanal ν^c ν^c (r82.4) ist nicht gerechnet,
+  die Abbildung C⊗S ↔ C⊗H⊗O fehlt. Das war die dritte Variante mit derselben offenen Voraussetzung (dritte
+  Generation); weitere Rechnungen auf N erst, wenn sie geklärt ist.
 - **Ausgelöste Zurückgestellte Ideen:** I1, Auslöser 4 (14.11.), auf Autorentscheidung verfolgt.
 
 ### Heute abend: Ladung über e8 (`notes/research/op3_sedenion_charge_2026_11_13.*`, Erkundung, nicht blind)
@@ -108,8 +114,9 @@
       Folgefrage: ob der Qubit-Oktant als Zwei-Flavour-Phänomen trägt oder ob Weg B (Triality, drei Generationen)
       ein neutrales Qubit mit derselben Struktur hat.
     - **(c)** erledigt am 14.11.: Die Rechtswirkung von H_n ist eine Familien-su(2) vom Typ 2 (+ 1), Generationen als
-      Dublett. Folgefragen (Autorentscheidung): die dritte Generation als Singulett suchen (etwa C⊗O mit Q8, k85);
-      die Richtung des Majorana-Vektors im Paarkanal ν^c ν^c (r82.4) ausrechnen; oder die Linie ablegen.
+      Dublett. Der Majorana-Vektor auf N ist gerechnet und nicht festgelegt. Folgefragen (Autorentscheidung): die
+      dritte Generation als Singulett per Rückwärtssuche (welche native Struktur enthält C⊗S und eine weitere
+      Generation?); oder die Linie ablegen, bis H100 oder H102 entschieden sind.
   - Auswahlprinzip (`op3_selection_principle_2026_11_13.*`, `op3_flux_two_thirds_2026_11_13.*`): Treue 1/2 und Fluss
     2/3 rad bleiben offen. γ/2 ist nur mit einer Konventionswahl erreichbar, die Einheit ist frei.
 - **Aufgeräumt (14.11.):** Alle in `main` gemergten Zweige sind lokal und auf GitHub gelöscht. Auf GitHub waren das

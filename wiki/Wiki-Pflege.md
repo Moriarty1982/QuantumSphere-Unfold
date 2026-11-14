@@ -358,6 +358,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 14.11.2026: Erkundung Rechtswirkung von H_n auf ganz C⊗S (native Familien-su(2), Generationen als Dublett, getrennt für Leptonen und Quarks; Oktant in erster Form; nur zwei Generationen) in Forschungsstand; kein OP-Abschluss.
 
+14.11.2026: Erkundung Majorana-Vektor auf N (native Form verschwindet; reelle Richtung = zwei gleiche Massen, Nullvektor = eine Masse; ψ-fest nur M₁₁; 2/3 nur mit freiem Mischwinkel) in Forschungsstand; kein OP-Abschluss.
+
 13.11.2026, spät: Runde v4.10.0-r12 (Statusvermerke) in Forschungslinie, Inhalt, Content-overview, Offene-Probleme und Forschungsstand; Fäden Potential und T₁₂ in Forschungsstand.
 
 13.11.2026, spät: Nachtrag Auswahlprinzip (Koide als qubitartige Treue; Mittelwert erklärt die Genauigkeit nicht) in Forschungsstand; kein OP-Abschluss.
