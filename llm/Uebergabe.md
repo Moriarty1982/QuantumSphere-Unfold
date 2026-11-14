@@ -2,49 +2,54 @@
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben.**
 
 ## Stand vom 14.11.2026 (Codex)
-- **GitHub:** PR #122 gemergt als f04c6ade398e2d3d30df6998ac88e5deb6d77119.
-  API-Abgleich: keine offenen PRs, keine rechnen/**- oder research/**-Branches.
+- **GitHub zuletzt abgeglichen:** PR #122 gemergt als f04c6ad; keine offenen PRs.
   Zwei-PDF-Lauf 43620492362 und Wiki-Sync 43620492258 erfolgreich.
-  Die sichtbare Wiki-Darstellung, besonders die Mindmap, bleibt ungeprüft.
-- **Lokal:** Alter Stand 1eed465 auf main per Fast-forward auf
-  31e689e166e1c73917b8aabf2c055c1982ce549d aktualisiert (nächste Bundle-Basis).
-  Aktiver Arbeitszweig: codex/op3-fourier-native-gate. Kein Merge, kein Push.
-- **Neuer Arbeitsblock:** Analytische Erkundung, nicht blind, in
-  notes/research/op3_fourier_native_gate_2026_11_14.md; Wiki nachgezogen.
-  Auch die komplexe Algebra der Slot-Permutationen erhält die gleichmäßige
-  Slotgerade und kann F nicht liefern. D ist eine zusätzliche Struktur.
-  Die beiden geordneten Vertauschungsregeln mit tau und D wählen F bis auf
-  Gesamtphase; eine Regel oder F²=P allein genügt nicht.
-  Geltung nur im skalaren Permutationsraum; volle Trialität nicht ausgeschlossen.
-- **QAM:** Kein Leseserver verfügbar. Lokale read-only-Suche nach Fourier und
-  Heisenberg: Code 0, keine Treffer. Aktualität des Index gegenüber neuem
-  Quellstand nicht bestätigt; keine Belege oder Prämissen als Nachweis benutzt.
-- **Zuletzt vergebene Hypothese:** H104, k226, widerlegt; nächste frei H105/k227.
-  H104: zweites Zählregel-Paar bei freiem Flächenspektrum; erster fehlerhafter
-  Lauf offengelegt. H98 bleibt im ursprünglichen Regelraum bestätigt.
-- **Offene Tests:** H100 (nächster NuFIT-Fit), H102 (erste PDG-Ausgabe nach
-  13.11.2026, m_tau=1777,134 MeV). Datenstatus dieser Sitzung nicht neu geprüft.
+  Wiki-Mindmap im Browser weiterhin ungeprüft; kein erneuter Remote-Abgleich in diesem Block.
+- **Lokal:** Zweig codex/op3-fourier-native-gate, aus main 31e689e.
+  Letzter vorausgehender Forschungscommit 6e602fd (Permutation-Algebra/Fourier).
+  Nächste Bundle-Basis: 31e689e166e1c73917b8aabf2c055c1982ce549d.
+  Zwei lokale Forschungsblöcke, noch nicht gepusht; kein Merge.
+- **Neuer Block:** notes/research/op3_triality_slot_phases_2026_11_14/README.md.
+  Nicht blinde Erkundung. Vollständiger Phasentorus der farbneutralen
+  slotweisen Trialität: alpha_i=beta_(i-1)-beta_(i+1), sum beta=0 modulo 2pi.
+  Q_8-verträgliche C³-Mehrfachräume für neutrale Ladungssektoren angegeben.
+  D hebt sich mit voller Ordnung neun; S nur projektiv, mit anderen Farbphasen.
+  Auf Q_8=0 wirken die konjugierten neutralen Phasen (durch Inversion umkehrbar).
+- **Stärkere Sperre:** Fourier verändert die ursprüngliche Trialitätsform
+  schon an (1,0,0). Keine t-erhaltende Erweiterung von F auf diesem neutralen
+  Slotraum, auch nicht bis auf Gesamtphase oder in seiner Q_8=0-Komplexifizierung.
+  Eine t-brechende Dynamik/andere Zustandsabbildung ist dadurch nicht ausgeschlossen.
+- **Nachweis:** check.py, contract.json, run/results.json und run/manifest.json
+  im neuen Ordner. Status completed, Manifest und aktuelle Hashes validiert.
+  Exakt: 512 Tensorstellen, sechs Variablen, Rang vier, Kern zwei;
+  Ladungskommutatoren null, rationale Winkel/Ordnungen geprüft.
+  Analytische Herleitung unabhängig gegengeprüft. Keine numerischen Fits.
+  .gitattributes schützt nur diesen Laufordner vor Byteänderung durch Zeilenenden.
+- **QAM:** Kein Leseserver. Lokale read-only Suche nach triality: Code 0, keine Treffer.
+  Aktualität/Vollständigkeit des lokalen Index nicht bestätigt; keine Belegbehauptung.
+- **Nächster Schritt:** Eine bereits begründete Dynamik-/Operatorbrücke suchen,
+  die die drei gleichartigen Zustände aktiv mischt und t brechen darf.
+  Ohne benannten Generator und physische Rolle hier anhalten; keine weiteren
+  Winkel-, F4- oder Massenfits auf dieser Symmetrieroute.
+- **Hypothesen:** zuletzt H104/k226 widerlegt; nächste frei H105/k227.
+  H100 (nächster NuFIT-Fit) und H102 (erste PDG-Ausgabe nach 13.11.2026,
+  m_tau=1777,134 MeV) offen. Messdaten in diesem Block nicht neu geprüft.
 - **Platzhalter:** CT-001 partially_constrained, CT-002/CT-003 placeholder;
-  keiner strukturell abgeglichen. CT-003: e8-Ladungsachse, drei ererbte Guards.
-  CT-001/CT-002-Route nach vier Ansätzen bis H102 ruhend; nicht erneut anpassen.
-- **Nächster Schritt:** Slotweise Trialitätswirkung aus r37 auf einem gemeinsamen
-  farb- und ladungstypisierten Dreierraum darstellen: liefert sie D oder S?
-  Volle Spin(8)- und gemeinsame G2-Wirkung unterscheiden. Ohne diese Brücke
-  keine weitere Auswahl von F oder Anpassung der Massen. F4 nicht untersucht.
-- **Auslöser I1–I5:** geprüft, im neuen Block kein neuer Auslöser.
-- **Prüfung:** Herleitungen und Notation lokal durchgesehen; git diff --check.
-  Kein numerischer Lauf und kein neuer PDF-Build (nur Notiz/Wiki/Übergabe).
-- **Aufräumen:** .codex/environments/ bleibt unversioniert und unberührt.
-  Beim Pull Warnungen zu fremden .git/worktrees-Verzeichnissen; keine gelöscht.
+  keiner strukturell abgeglichen. CT-001/CT-002-Route bis H102 ruhend.
+  CT-003/e8-Ladungsachse gehört zum anderen Träger, hier nicht übernommen.
+- **Ideen I1–I5:** erneut geprüft, kein neuer Auslöser.
+- **Prüfung/Abgabe:** Wiki Forschungsstand, Offene-Probleme, Wiki-Pflege nachgezogen;
+  git diff --check; kein neuer PDF-Build, keine neue Runde oder MMA-Rechnung.
+- **Aufräumen:** .codex/environments/ unversioniert/unberührt. Frühere Pull-Warnungen
+  zu fremden .git/worktrees-Verzeichnissen; keine gelöscht.
 
-## Davor (Claude, 14.11.2026)
-PR #122: Gesamtbild nach r13, H104 und Fourier-Konstruktion auf O³.
-F und S als aktive Operationen angenommen; gerades P-Dublett trägt 2T,
-magischen Winkel und Oktanten. tau erhält dieses Dublett nicht.
-Frühere String-Rückwärtssuche bereits erledigt, keine Wiederholung nötig.
+## Davor
+6e602fd: komplexe Slot-Permutationsalgebra erhält die gleichmäßige Gerade,
+F nicht. Beide geordneten Positions-/Phasenvertauschungsregeln legen F bis
+auf Gesamtphase fest; eine Regel oder F²=P allein nicht. Neue Phasenprüfung siehe oben.
 
 ## Inhaltlicher Stand
-Koide und Phase nicht hergeleitet; OP1–OP5, C5, C6/T2 unverändert offen.
+Koide und Phase nicht hergeleitet; OP1–OP5, C5, C6/T2 und Guards unverändert offen.
 Weg A: neutrales 2T-Dublett unter CT-003, aber nur zwei Generationen.
-Weg B: drei Slots; F/S-Konstruktion bedingt, native Operationsbrücke offen.
-Keine neue Runde, H-/k-Nummer oder MMA-Rechnung. Veröffentlichung v5.0.0 bleibt Baseline.
+Weg B: drei Slots, native Phasen bedingt verfügbar; F ist keine Trialitätssymmetrie.
+Veröffentlichung v5.0.0 bleibt Baseline, keine neue Veröffentlichung vorbereitet.

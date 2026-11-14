@@ -1,5 +1,32 @@
 # Forschungsstand
 
+### OP3: Trialitätsphasen und direkte Fourier-Sperre (14.11.2026)
+
+Die volle Trialität erlaubt verschiedene farbneutrale Phasen je Slot.
+Mit J_0=(L_e7+R_e7)/2 auf der neutralen Ebene und
+J_c=(L_e7-R_e7)/2 auf dem farbigen Teil erhält
+g_i=exp(alpha_i J_0+beta_i J_c) die Form Re((xy)z), wenn
+alpha_0=beta_2-beta_1 und zyklisch sowie sum beta_i=0 (modulo 2pi).
+Die g_i kommutieren mit dem gemeinsamen r35-Ladungsoperator Q_8.
+Alle 512 infinitesimalen Tensorbedingungen wurden exakt geprüft:
+sechs Unbekannte, Rang vier, zweidimensionaler Kern.
+
+D=diag(1,omega,omega²) ist neutral realisierbar, seine volle Hebung hat
+aber Ordnung neun: Der Kubus ist neutral eins und farbig ein nichttriviales
+Farbzentrum. S=diag(1,omega,omega) ist nur bis auf eine gemeinsame neutrale
+Phase realisierbar; diese Phase ist auf dem Gesamtträger nicht global.
+Auf Q_8=0 erscheinen die konjugierten neutralen Phasen, durch Inversion
+ebenfalls realisierbar. Die Winkel werden damit zugelassen, nicht ausgewählt.
+
+Die aktive Fourier-Operation selbst kann die ursprüngliche Trialitätsform
+bei dieser neutralen Einbettung nicht erhalten: Der Wert an (1,0,0) ist
+null, nach Fourier jedoch 1/(3sqrt(3)). Auch eine Gesamtphase behebt die
+Sperre nicht; sie gilt ebenso für den komplexifizierten Q_8=0-Dreierraum.
+Damit ist diese reine Symmetrieroute ausgeschlossen. Offen bleibt eine
+begründete Dynamik oder Operatorbrücke, die die Slots mischt und die Form
+nicht erhalten muss. Kein Koide-Nachweis, keine neue Hypothese oder
+Guard-Schließung. [Herleitung und exakter Lauf](../notes/research/op3_triality_slot_phases_2026_11_14/README.md).
+
 ### OP3: Native Herkunft der Fourier-Operation (14.11.2026)
 
 Analytische Erkundung, nicht blind: Auch beliebige komplexe Summen der

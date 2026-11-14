@@ -1,3 +1,6 @@
 # These audited sources are bound to their exact LF bytes, including on Windows.
 sources/research/parts/koide-and-kernel.tex text eol=lf
 sources/research/parts/hc-mass-identification.tex text eol=lf
+# Preserve the exact mixed-platform bytes recorded in this computation manifest.
+notes/research/op3_triality_slot_phases_2026_11_14/** -text
+notes/research/op3_triality_slot_phases_2026_11_14/run/** whitespace=cr-at-eol

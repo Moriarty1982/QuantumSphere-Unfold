@@ -1,0 +1,2 @@
+Exact tensor: 512 equations, rank 4, kernel dimension 2.
+D lifts with order 9; S only projectively; Q commutators vanish exactly.

@@ -28,6 +28,18 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 
 ## OP3: Zulässige Hüllen-Übergänge
 
+**Weiterer Nachtrag 14.11.2026, volle Trialität:** Die benötigte Uhr D
+besitzt eine farb- und Q_8-verträgliche Trialitätshebung, aber mit voller
+Ordnung neun statt drei. S ist nur projektiv auf dem neutralen Sektor
+realisierbar; farbige Zustände tragen andere Phasen. Fourier selbst
+verändert die Trialitätsform schon an (1,0,0), auch bei Zulassung einer
+Gesamtphase und auf dem komplexifizierten neutralen Ladungsraum.
+Eine Erweiterung als Symmetrie der ursprünglichen Form ist damit bei
+dieser Einbettung ausgeschlossen. Als nächste Pflicht bleibt eine
+begründete Dynamik-/Operatorbrücke, die diese Form nicht erhalten muss.
+OP3 bleibt offen; ohne diese Brücke keine weitere Winkel- oder Massenanpassung.
+[Analytische Herleitung und exakte Kontrolle](../notes/research/op3_triality_slot_phases_2026_11_14/README.md).
+
 **Nachtrag 14.11.2026, Fourier-Herkunft:** Komplexe Linearkombinationen der
 Slot-Permutationen erhalten die gleichmäßige Slotgerade; F tut das nicht.
 Auch das Zulassen solcher Summen liefert daher noch keine native

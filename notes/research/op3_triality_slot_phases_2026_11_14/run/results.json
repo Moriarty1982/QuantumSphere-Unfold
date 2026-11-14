@@ -1,0 +1,93 @@
+{
+  "assertion_tested": "Exact kernel of all 512 triality tensor equations in six phase generators; charge commutators; rational phase orders",
+  "domain": "Q for tensor and ranks, Q(i) for charge, Q/Z for finite phases",
+  "tensor_equations": 512,
+  "unknowns": 6,
+  "rank": 4,
+  "kernel_dimension": 2,
+  "nonzero_rref_rows": [
+    [
+      "1",
+      "0",
+      "0",
+      "0",
+      "1/2",
+      "-3/2"
+    ],
+    [
+      "0",
+      "1",
+      "0",
+      "0",
+      "1/2",
+      "1/2"
+    ],
+    [
+      "0",
+      "0",
+      "1",
+      "0",
+      "1/2",
+      "3/2"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "1",
+      "-1/2",
+      "1/2"
+    ]
+  ],
+  "parameterization": {
+    "alpha": [
+      "-beta0 - 2*beta1",
+      "2*beta0 + beta1",
+      "-beta0 + beta1"
+    ],
+    "beta": [
+      "beta0",
+      "beta1",
+      "-beta0 - beta1"
+    ]
+  },
+  "D": {
+    "neutral_turns": [
+      "0",
+      "1/3",
+      "-1/3"
+    ],
+    "colour_turns": [
+      "2/9",
+      "-1/9",
+      "-1/9"
+    ],
+    "full_order": 9,
+    "cube_colour_turns_mod_1": [
+      "2/3",
+      "2/3",
+      "2/3"
+    ]
+  },
+  "projective_S": {
+    "neutral_turns": [
+      "-2/9",
+      "1/9",
+      "1/9"
+    ],
+    "colour_turns": [
+      "0",
+      "1/9",
+      "-1/9"
+    ],
+    "full_order": 9
+  },
+  "exact_S_neutral_counterexample": "-1/2 versus 1",
+  "charge_commutators": "zero, exact",
+  "non_claims": [
+    "No mass prediction or parameter selection",
+    "No Fourier lift",
+    "No full Lorentz, chirality, or Standard Model bridge",
+    "Six-parameter ansatz only; finite completeness is argued separately in the note"
+  ]
+}

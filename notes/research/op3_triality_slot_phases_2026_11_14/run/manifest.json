@@ -1,0 +1,128 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP3_TRIALITY_SLOT_PHASES_EXPLORATION",
+  "repository": {
+    "commit": "6e602fdcb14b77c0e7cfa59b5752503426a86962",
+    "dirty": true
+  },
+  "command": [
+    "python",
+    "notes/research/op3_triality_slot_phases_2026_11_14/check.py",
+    "--result",
+    "notes/research/op3_triality_slot_phases_2026_11_14/run/results.json"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "runner-python",
+        "version": "3.12.10"
+      },
+      {
+        "name": "Python",
+        "version": "3.12.10"
+      },
+      {
+        "name": "SymPy",
+        "version": "1.14.0"
+      }
+    ],
+    "hardware": "Windows-11-10.0.26300-SP0"
+  },
+  "mathematics": {
+    "assertion_tested": "Exact nullspace of all 512 entries of the triality-form infinitesimal invariance equation for A_i=a_i J0+b_i Jc; exact charge commutators and rational finite lift orders",
+    "coefficient_domain": "Q, Q(i), Q/Z; SymPy exact arithmetic",
+    "conventions": "Cayley-Dickson (a,b)(c,d)=(ac-conj(d)b,da+b conj(c)); t=Re((xy)z); J0=(L_e7+R_e7)/2; Jc=(L_e7-R_e7)/2; angles recorded as turns",
+    "inputs": [
+      "eight standard octonion basis vectors",
+      "three slots",
+      "all 512 tensor entries",
+      "six generator coefficients",
+      "D and projective S rational angle triples"
+    ],
+    "bounds": {
+      "basis_dimension": 8,
+      "slots": 3,
+      "tensor_entries": 512,
+      "unknowns": 6
+    },
+    "non_claims": [
+      "Not blind: D and S targets known",
+      "No new H test",
+      "No mass or Koide derivation",
+      "No active Fourier operation derived",
+      "Full colour-centralizer coverage and finite extension arguments are analytic in the companion note"
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-14T19:50:30.738648+00:00",
+    "runtime_seconds": 2.172,
+    "exit_status": 0,
+    "status": "completed",
+    "timeout_seconds": 60.0,
+    "max_output_bytes": 65536,
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": 1
+    },
+    "missing_results": [],
+    "invalid_results": []
+  },
+  "execution_artifacts": [
+    "notes/research/op3_triality_slot_phases_2026_11_14/check.py"
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op3_triality_slot_phases_2026_11_14/check.py",
+      "sha256": "950d1492417a03aebe8cbb89268c77d7864ed2a634fbe5130aaba3bf6ecfcf44",
+      "sha256_after": "950d1492417a03aebe8cbb89268c77d7864ed2a634fbe5130aaba3bf6ecfcf44"
+    }
+  ],
+  "output_directory": "notes/research/op3_triality_slot_phases_2026_11_14/run",
+  "declared_results": [
+    "notes/research/op3_triality_slot_phases_2026_11_14/run/results.json"
+  ],
+  "outputs": [
+    {
+      "path": "notes/research/op3_triality_slot_phases_2026_11_14/run/stdout.txt",
+      "sha256": "0c3fe3805d958d0c09a69879bd73e430e16fe17224e606bc07f82bf10424c307",
+      "kind": "log"
+    },
+    {
+      "path": "notes/research/op3_triality_slot_phases_2026_11_14/run/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "log"
+    },
+    {
+      "path": "notes/research/op3_triality_slot_phases_2026_11_14/run/results.json",
+      "sha256": "29802054929a246206335206901fe31239128407d4f416be2d0e2768139d9aa1",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    {
+      "check": "input hashes unchanged",
+      "passed": true
+    },
+    {
+      "check": "process exited successfully within enforced limits",
+      "passed": true
+    },
+    {
+      "check": "declared result files are present and regular",
+      "passed": true
+    }
+  ],
+  "result": "Run completed; mathematical assertion requires interpretation and review.",
+  "residual_risks": [
+    "Command success does not establish the mathematical interpretation.",
+    "Only listed input artifacts are pinned; external dependencies need recorded versions.",
+    "The thread cap uses conventional environment variables; a child program may ignore them."
+  ]
+}
