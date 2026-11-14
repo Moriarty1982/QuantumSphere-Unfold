@@ -59,6 +59,15 @@ Details: `release/v5.0.0/README.md`, Entwicklungsgeschichte in
   jedem Merge ohne Rückfrage löschen, lokal und auf GitHub (Dauerauftrag des Autors vom 14.11.2026). Prüfen mit
   `git merge-base --is-ancestor <zweig> <remote>/main`. Nicht gemergte Zweige bleiben stehen, auch fremde. Den Zweig
   eines ausgecheckten Worktrees nicht löschen; ungetrackte Dateien in Worktrees vor dem Entfernen sichern.
+- **Versionsverwaltung** (Dauerauftrag des Autors vom 15.11.2026):
+  - **Interne Nummern ohne Rückfrage vergeben:** H-, k-, Runden- (v4.10.0-rNN) und CT-Nummern. Vorher gegen das Repo
+    prüfen, damit keine Nummer doppelt vergeben wird, und die vergebene Nummer in der Übergabe nennen.
+  - **Buchführungs-Commits ohne Rückfrage auf `main` pushen:** `llm/Uebergabe.md` sowie Stand-Zeilen und
+    Änderungsnachweise ohne neuen Inhalt.
+  - **Weiterhin nur mit Freigabe:**
+    - inhaltliche Änderungen (nur über Zweig und PR) und Merges;
+    - jeder Zenodo-Schritt (Reservierung, Upload, Veröffentlichung);
+    - die Entscheidung, dass eine neue öffentliche Version entsteht.
 - **Wiki:** Jede inhaltliche Änderung zieht `wiki/` im selben PR mit. Das Wiki gibt den Inhalt wieder, nicht nur Links.
 - **Keine festen absoluten Pfade** in Skripten. Datenordner als Argument übergeben oder relativ zum Repo auflösen.
 - **Sparsam arbeiten:** Skripte als Dateien ablegen und nur kurze Zusammenfassungen ausgeben.
