@@ -1917,6 +1917,53 @@ Erkundung $\eta$, ohne Datenvergleich:
   Struktur von $\mathbb H_n$ ausgezeichnet. $\psi$ normalisiert $2T$ nicht. Einschränkungen:
   nur zwei Flavours, $\psi$ ist kein Generationsschritt, $e_8$ als Ladungsachse ist eine
   Annahme. Koide ist nicht hergeleitet.
+- Rechtswirkung von $\mathbb H_n$ auf ganz $\mathbb C\otimes\mathbb S$ (14.11., Erkundung; Punkt (c) „zweite
+  Familienstruktur“): Die Rechtsmultiplikationen $R_{e_7},R_{e_8},R_{e_{15}}$ vertauschen auf dem ganzen Raum mit
+  $\mathfrak{su}(3)_c$ und mit $Q_*$; die Linksmultiplikationen $L_{e_7},L_{e_{15}}$ tun das nicht. Auf dem neutralen
+  und auf dem farbigen Teil gelten die Quaternionen-Relationen, aber mit entgegengesetzter Orientierung
+  ($R_xR_y=R_{yx}$ neutral, $R_xR_y=R_{xy}$ farbig). Die erzeugte Lie-Algebra ist deshalb
+  $\mathfrak{su}(2)_{\text{Leptonen}}\oplus\mathfrak{su}(2)_{\text{Quarks}}$, und die $R_g$ der Hurwitz-Einheiten sind
+  erst mit $\bar g$ auf dem farbigen Teil eine Darstellung von $2T$. Jede Teilchenart ($\nu$, $e^+$, $u$, $\bar d$) ist
+  ein Dublett (Casimir $3/4$): Die zwei Generationen sind ein Dublett einer nativen, farb- und ladungsneutralen
+  Familien-$\mathfrak{su}(2)$. $\psi$ wirkt darauf als Drehung von $\operatorname{Im}\mathbb H_n$ um $e_8$ um $120^\circ$.
+  Mit einer Hurwitz-Einheit als Zyklus und einem $\psi$-Eigenzustand als Bezug entsteht der Oktant in seiner ersten
+  Form ($\rho^2=1/2$, $K=2/3$, $\pi/4$). Ein Majorana-Bilinear des Dubletts ist symmetrisch und damit ein Vektor in
+  $\operatorname{Im}\mathbb H_n$ ohne Singulett; ein Dirac-Term darf familienblind sein. Einschränkungen: Eine
+  $U(2)$ je Teilchenart folgt für zwei Generationen schon aus dem Schur-Lemma, neu ist nur die Realisierung durch eine
+  native Operation. Die Generationen sind ein Dublett und keine drei Achsen; es bleiben zwei Generationen (K28), und
+  das Dublett tragen alle Teilchenarten, nicht nur der Majorana-Block. Alles erbt die Guards von CT-003. Koide ist
+  nicht hergeleitet.
+- Majorana-Vektor auf $N$ (14.11., Erkundung, nicht blind): Eine symmetrische Form auf $N$ ist $M=(m\cdot\sigma)\varepsilon$
+  mit $m\in\mathbb C^3$ in $\operatorname{Im}\mathbb H_n$. Die native Bilinearform von $\mathbb S$ verschwindet auf $N$.
+  Kurze native Wörter aus $L_a,R_a$ geben nur reelle Richtungen entlang $e_8$ oder senkrecht dazu, also zwei gleiche
+  Massen. Allgemein: reelle Richtung heißt zwei gleiche Massen, Nullvektor heißt eine Masse. $\psi$-Invarianz lässt
+  nur $M_{11}$ zu (ein massives, ein masseloses Neutrino); Invarianz unter einer Hurwitz-Einheit gibt die
+  Raumdiagonale mit zwei gleichen Massen. $K$ läuft zwischen $1$ und $1/2$ und erreicht $2/3$ nur bei einem freien
+  Mischwinkel. Der Majorana-Vektor ist durch die Symmetrien nicht festgelegt, drei Massen aus zwei Flavours gibt es
+  nicht. Der Paarkanal $\nu^c\nu^c$ aus r82.4 ist hier nicht gerechnet. Koide ist nicht hergeleitet.
+- Dritte Generation als Singulett (14.11., Erkundung, Rückwärtssuche): Verglichen wurden $\mathbb S\oplus\mathbb O$
+  mit $\psi\oplus1$ und Weg B, $\mathbb O^3$ mit dem Slotzyklus $\tau$. Im farbigen Teil sind beide dieselbe
+  $\mathbb Z_3$-Darstellung (Vielfachheiten $(6,6,6)$ für $1,\omega,\bar\omega$); für $u$ und $\bar d$ stimmt
+  „Dublett plus Singulett“ also mit Weg B überein. Im neutralen Teil steht $(4,1,1)$ gegen $(2,2,2)$: Die Ebene
+  $\operatorname{span}(1,e_8)$, an der $Q_*$ und der $\psi$-feste Neutrinozustand hängen, ist unter $\psi$ fest und hat
+  in $\mathbb O^3$ kein Gegenstück. Die $e_8$-Ladung lässt sich nicht $\tau$-symmetrisch auf drei Plätze setzen (die
+  Paarkopplung ist eine Spiegelung, $A^2=-1$ ist dann unlösbar); $Q_*$ ist eine Paarstruktur. Weg B hat dagegen ein
+  $\tau$-symmetrisches $2+1$ für alle Teilchenarten: symmetrische Slot-Mode als Singulett, Dublett $(\omega,\bar\omega)$
+  mit $\tau=\operatorname{diag}(\omega,\bar\omega)\in SU(2)$. Dort fehlt der magische Winkel: Die native Slotgruppe
+  $S_3$ ist auf der Bloch-Kugel eine Diedergruppe mit zweizähligen Achsen senkrecht zur dreizähligen, ein reeller
+  Slot-Vektor gibt $K=1/2$. Die Wege sind komplementär: Weg A hat $2T$ und den Bezug, aber zwei Generationen; Weg B
+  hat drei Generationen und den Zyklus, aber nur $S_3$. Es fehlt eine zweizählige Achse unter dem magischen Winkel auf
+  dem $\tau$-Dublett. Koide ist nicht hergeleitet.
+- Achse auf dem $\tau$-Dublett (14.11., Erkundung, nicht blind): Die Lücke wird von den vorhandenen Operationen nicht
+  geschlossen. Monomiale Slotoperationen (Permutation mal Phasen je Slot; dazu gehören $\tau$, $\rho$, die
+  Vorzeichenwechsel von $A_4$ und die slotweise Trialität) erhalten die Zerlegung $2+1$ nur als Zahl mal Permutation
+  und geben auf dem Dublett nur Drehungen um die $\tau$-Achse oder um Achsen senkrecht dazu (10 368 Elemente
+  durchgezählt, 72 erhalten $2+1$, der magische Winkel kommt nicht vor). $A_4$ aus r55 erhält $2+1$ gar nicht; die drei
+  Slots sind dort der irreduzible Vektor. Das gesuchte Element überlagert alle drei Slots und ist nicht monomial.
+  Grund: Die Quaternionengruppe braucht ein Dublett aus zwei Slots (Weg A, dort sind $R_{e_7},R_{e_8},R_{e_{15}}$
+  monomial und die Hurwitz-Einheit ihre halbzahlige Summe); der Slotzyklus macht das Dublett zum Fourier-Paar (Weg B).
+  Mit dem jetzigen Bestand ist das Profil nicht erfüllbar. Nicht geprüft ist eine neue Struktur auf $\mathbb O^3$,
+  etwa die Jordan-Algebra mit $F_4$. Koide ist nicht hergeleitet; OP3/OP4 bleiben offen.
 - Platzhalter-Methode an der Einheit bei $\gamma/2$ (14.11., Erkundung, nicht blind):
   Rückwärts verlangen die Massen $\kappa s=\Delta\Phi/\gamma_M=0{,}49982$ (1σ-Band
   $[0{,}49974;\,0{,}49990]$). Die Bargmann-Phase des Qubit-Tripels selbst ist $\Omega/2\approx\pi/4$

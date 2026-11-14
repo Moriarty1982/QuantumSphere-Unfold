@@ -1,0 +1,24 @@
+Kontrolle: tau erhaelt 2 + 1: True; tau auf dem Dublett = diag[(-0.5+0.866j), (-0.5-0.866j)], Achse [-0.0, -0.0, 1.0]
+
+(1) Monomiale Slotoperationen: Permutation mal diag(Phasen), Phasen aus den 12. Einheitswurzeln
+    10368 Elemente, davon erhalten 72 die Zerlegung 2 + 1
+    Wirkung auf dem Dublett: 120 Grad, |cos| = 1.0000: 24 Elemente
+    Wirkung auf dem Dublett: 180 Grad, |cos| = 0.0000: 36 Elemente
+    Wirkung auf dem Dublett: Eins: 12 Elemente
+    magischer Winkel (|cos| = 0.5774) kommt vor: False
+
+(2) A4 auf den Slots: Klein-Gruppe der Vorzeichenwechsel und der Zyklus
+    Vorzeichenwechsel, die 2 + 1 erhalten: 1 von 4 (nur die Eins)
+    <sym| diag(1,-1,-1) |sym> = -0.3333 (Betrag 1 waere noetig)
+
+(3) Das gesuchte Element: g = i (n . sigma) auf dem Dublett, n unter cos = 1/sqrt3 zur tau-Achse
+    Azimut   0.0 Grad: g im Slotraum hat 8 von 9 Eintraegen ungleich null (monomial: 3), Betraege [0.0, 0.3333, 0.4714, 0.5774, 0.6667, 0.8165]; Ordnung von <tau, g> auf dem Dublett: 24
+    Azimut  45.0 Grad: g im Slotraum hat 9 von 9 Eintraegen ungleich null (monomial: 3), Betraege [0.1409, 0.3619, 0.3849, 0.5092, 0.5258, 0.6225, 0.6814, 0.7698, 0.8491]; Ordnung von <tau, g> auf dem Dublett: 24
+    Azimut  90.0 Grad: g im Slotraum hat 9 von 9 Eintraegen ungleich null (monomial: 3), Betraege [0.2722, 0.4303, 0.5443, 0.6383, 0.7201, 0.8607]; Ordnung von <tau, g> auf dem Dublett: 24
+    (Ordnung 24: tau und g erzeugen auf dem Dublett die binaere Tetraedergruppe 2T)
+
+(4) Gegenprobe Weg A: Slotpaar S = O + O e8 (Koordinaten 0..7 und 8..15)
+    R_e7 : Blocknormen [[11, 12], [21, 22]] = [[2.828, 0.0], [0.0, 2.828]]
+    R_e8 : Blocknormen [[11, 12], [21, 22]] = [[0.0, 2.828], [2.828, 0.0]]
+    R_e15: Blocknormen [[11, 12], [21, 22]] = [[0.0, 2.828], [2.828, 0.0]]
+    R_h  : Blocknormen = [[2.0, 2.0], [2.0, 2.0]] (Summe mit halbzahligen Koeffizienten, nicht monomial)

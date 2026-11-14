@@ -1,13 +1,16 @@
 # Übergabe: Stand der letzten Sitzung
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.**
 
-## Stand vom 14.11.2026 (Claude Opus)
+## Stand vom 14.11.2026 (Claude Opus, zuletzt Claude Fable)
 - **GitHub:** **PR #119 gemergt als 70da32a** (CT-003 eingetragen, Platzhalter-Bilanz), auf „PR 119 mergen“; Läufe
-  danach (Wiki-Sync, Zwei-PDF) erfolgreich. Zweig gelöscht. **Keine offenen PRs.**
+  danach (Wiki-Sync, Zwei-PDF) erfolgreich. Zweig gelöscht. **Offen: PR #120** (vier OP3-Erkundungen vom 14.11.,
+  Zweig `claude/anthropic-skills-weitermachen-0a9117`, mergebar, keine Checks am PR). Merge nur auf „PR 120 mergen“.
   Am 14.11. außerdem gemergt: #118 (60ba894, Register Phase 2), #117 (f4a62cf, CT-002/T11), #116 (a3fe755), #115
   (990a3cc), #114 (44cdcd1), #113 (10d670e), #112 (ad7756f), #111 (c247ea3), #110 (8606691), #109 (963f557), #108
   (91cbb69). Am 13.11.: #104–#107.
-- **Lokal:** Der Hauptordner steht auf `main` = 70da32a (zusammengeführt), dazu dieser Übergabe-Commit, nur lokal.
+- **Lokal:** `main` = `github/main` = 9b9dfda (Übergabe-Commits sind gepusht). Die Erkundung „Rechtswirkung von H_n“
+  , „Majorana-Vektor auf N“, „dritte Generation als Singulett“ und „Achse auf dem τ-Dublett“ (14.11., Claude Fable) liegen auf dem Zweig
+  `claude/anthropic-skills-weitermachen-0a9117` (Worktree `zealous-fermi-f46fd7`), gepusht als PR #120.
   Unversioniert: `llm/literatur/Dorau_Much_2026_arXiv_2510.24491v3.pdf` (jetzt wirklich im Hauptordner).
 - **Letzte Runde:** v4.10.0-r12 (Statusvermerke) aus PR #106.
 - **Zuletzt vergebene Hypothese:** H103 (vorab 45314b2, k225).
@@ -69,6 +72,33 @@
   C⊗S hat unter Q_* genau zwei vollständige Generationen. Die ψ-Sektoren sind aber keine Generationen
   (1: ν, e⁺; ω: ν, u, d̄; ω̄: e⁺, u, d̄). ψ wirkt innerhalb der Generationen als Phase und ist kein Generationsschritt.
   N ist der Raum zweier Neutrino-Flavours; der dritte fehlt (K28).
+- **14.11., Rechtswirkung von H_n auf ganz C⊗S** (`op3_family_su2_right_action_2026_11_14.*`, Erkundung zu (c)):
+  R_e7, R_e8, R_e15 vertauschen überall mit su(3)_c und Q_*. Quaternionen-Relationen gelten auf dem neutralen und dem
+  farbigen Teil mit entgegengesetzter Orientierung, die erzeugte Lie-Algebra ist su(2)_Leptonen ⊕ su(2)_Quarks. Jede
+  Teilchenart ist ein Dublett: Die zwei Generationen sind ein Dublett einer nativen neutralen Familien-su(2). ψ dreht
+  Im H_n um e8 um 120°. Hurwitz-Einheit als Zyklus mit ψ-Eigenzustand als Bezug gibt den Oktanten in erster Form.
+  Majorana-Bilinear = Vektor ohne Singulett. Einschränkung: Eine U(2) je Teilchenart folgt schon aus Schur; es bleiben
+  zwei Generationen, das Dublett tragen alle Teilchenarten. Erbt die Guards von CT-003.
+- **14.11., Majorana-Vektor auf N** (`op3_majorana_vector_n_2026_11_14.*`, Erkundung, nicht blind): Die native
+  Bilinearform verschwindet auf N. Symmetrische Formen sind Vektoren m ∈ C³ in Im H_n: reelle Richtung = zwei gleiche
+  Massen, Nullvektor = eine Masse. ψ-fest ist nur M₁₁ (ein massives Neutrino), Hurwitz-fest die Raumdiagonale (zwei
+  gleiche). K = 2/3 nur bei freiem Mischwinkel, also Anpassung. Der Paarkanal ν^c ν^c (r82.4) ist nicht gerechnet,
+  die Abbildung C⊗S ↔ C⊗H⊗O fehlt. Das war die dritte Variante mit derselben offenen Voraussetzung (dritte
+  Generation); weitere Rechnungen auf N erst, wenn sie geklärt ist.
+- **14.11., dritte Generation als Singulett** (`op3_third_generation_singlet_2026_11_14.*`, Erkundung, Rückwärtssuche):
+  (S ⊕ O, ψ ⊕ 1) und Weg B (O³, τ) sind im farbigen Teil dieselbe Z₃-Darstellung, für u und d̄ passt 2 + 1 also. Im
+  neutralen Teil steht (4, 1, 1) gegen (2, 2, 2): Die Ebene span(1, e8) ist unter ψ fest und hat in O³ kein
+  Gegenstück. Die e8-Ladung lässt sich nicht τ-symmetrisch auf drei Plätze setzen (Paarstruktur). Weg B hat ein
+  τ-symmetrisches 2 + 1 für alle Arten (τ = diag(ω, ω̄) auf dem Dublett der Slot-Moden), aber nur S_3: zweizählige
+  Achsen bei 90°, reeller Slot-Vektor gibt K = 1/2. Komplementär: Weg A hat 2T und Bezug, aber zwei Generationen;
+  Weg B drei Generationen und Zyklus, aber keinen magischen Winkel. **Benannte Lücke:** eine zweizählige Achse unter
+  dem magischen Winkel auf dem τ-Dublett (S_3 → 2T).
+- **14.11., Achse auf dem τ-Dublett** (`op3_tau_doublet_axis_2026_11_14.*`, Erkundung, nicht blind): Die Lücke wird
+  nicht geschlossen. Monomiale Slotoperationen (τ, ρ, Vorzeichenwechsel von A_4, slotweise Trialität) geben auf dem
+  Dublett nur 0° und 90°; A_4 erhält 2 + 1 gar nicht. Das gesuchte Element überlagert alle drei Slots. Grund: 2T
+  braucht ein Dublett aus zwei Slots (Weg A), τ macht das Dublett zum Fourier-Paar (Weg B). **Mit dem jetzigen
+  Bestand ist das Profil nicht erfüllbar.** Vierte Variante mit derselben offenen Voraussetzung: hier anhalten.
+  Nicht geprüft: eine neue Struktur auf O³ (Jordan-Algebra, F_4); die Trialitätsabbildungen wurden nicht neu gerechnet.
 - **Ausgelöste Zurückgestellte Ideen:** I1, Auslöser 4 (14.11.), auf Autorentscheidung verfolgt.
 
 ### Heute abend: Ladung über e8 (`notes/research/op3_sedenion_charge_2026_11_13.*`, Erkundung, nicht blind)
@@ -98,7 +128,11 @@
     - **(b)** erledigt am 14.11.: Ladungsinhalt richtig (zwei Generationen), ψ aber kein Generationsschritt.
       Folgefrage: ob der Qubit-Oktant als Zwei-Flavour-Phänomen trägt oder ob Weg B (Triality, drei Generationen)
       ein neutrales Qubit mit derselben Struktur hat.
-    - **(c)** die zweite Familienstruktur mit neutralem Qubit (Profil unten).
+    - **(c)** erledigt am 14.11.: Die Rechtswirkung von H_n ist eine Familien-su(2) vom Typ 2 (+ 1), Generationen als
+      Dublett. Der Majorana-Vektor auf N ist gerechnet und nicht festgelegt. Die dritte Generation als Singulett ist
+      gegen Weg B geprüft (Quarks passen, Leptonen nicht). Die Achse auf dem τ-Dublett ist geprüft:
+      nicht vorhanden. Empfehlung: die Linie ablegen, bis H100 oder H102 entschieden sind; wahlweise ein
+      Statusvermerk zum Profil in einer neuen Runde (Autorentscheidung).
   - Auswahlprinzip (`op3_selection_principle_2026_11_13.*`, `op3_flux_two_thirds_2026_11_13.*`): Treue 1/2 und Fluss
     2/3 rad bleiben offen. γ/2 ist nur mit einer Konventionswahl erreichbar, die Einheit ist frei.
 - **Aufgeräumt (14.11.):** Alle in `main` gemergten Zweige sind lokal und auf GitHub gelöscht. Auf GitHub waren das
@@ -107,8 +141,11 @@
   - Bleiben, weil nicht gemergt: auf GitHub `codex/op3-triality-mass-bridge`, `codex/v5-zenodo-release` und
     `codex/v5-zenodo-upload-record`; lokal `claude/quantenphysik-paper-herleitung-e723a3` und
     `claude/wizardly-mendel-c790d3`.
-  - Der Zweig dieser Sitzung, `claude/anthropic-skills-weitermachen-08cc3e`, ist gemergt, aber noch ausgecheckt. Er
-    verschwindet mit dem Worktree beim Archivieren.
+  - `claude/anthropic-skills-weitermachen-08cc3e` ist kein Vorfahre von `main`; sein einziger Commit c84b81b ist
+    inhaltsgleich über PR #118 enthalten (`git cherry`). Er steht noch, Löschung braucht ein Wort des Autors.
+  - Am 14.11. lokal gelöscht (gemergt): `ct-register-phase2`, `ct003-eintragung`, `claude/zealous-fermi-f46fd7`.
+  - `git fetch --prune` meldet „Permission denied“ für verwaiste Einträge unter `.git/worktrees` (`gh_r09`–`gh_r11`,
+    `qam-mml-mma-math-473bc4`, `wizardly-mendel-c790d3`).
 - **Dauerauftrag des Autors (14.11.):** „bitte lösche zweige die weg können immer“. Gemergte Zweige ohne offenen PR
   werden nach jedem Merge ohne Rückfrage gelöscht, lokal und auf GitHub. Nicht gemergte bleiben stehen. Seit PR #111
   steht das als Regel in `AGENTS.md`.

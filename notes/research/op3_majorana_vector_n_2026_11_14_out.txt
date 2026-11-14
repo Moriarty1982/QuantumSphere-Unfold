@@ -1,0 +1,29 @@
+Kontrolle: i R_e7, i R_e15, i R_e8 auf N sind ein Pauli-Tripel: True; i R_e8 = +-sz: True
+
+(1) Native symmetrische Bilinearform x^T y auf N:
+    Gram (bilinear) = [[(-0+0j), 0j], [0j, (-0+0j)]]  -> N ist isotrop: True
+
+(2) Formen x^T W y, W Wort aus L_a, R_a (a = e7, e8, e15), Laenge 1 und 2; symmetrischer Teil auf N
+    42 Woerter, davon 12 mit symmetrischem Teil ungleich null
+    Singulaerwerte (np.float64(1.0), np.float64(1.0)), |m.m|/|m|^2 = 1.0, |m_z|/|m| = 0.0: 8 Woerter, z. B. ['L_e7*R_e7', 'L_e7*R_e15', 'L_e15*R_e7']
+    Singulaerwerte (np.float64(1.0), np.float64(1.0)), |m.m|/|m|^2 = 1.0, |m_z|/|m| = 1.0: 4 Woerter, z. B. ['L_e7*R_e8', 'L_e15*R_e8', 'R_e8*L_e7']
+
+(3) Wirkung M -> U^T M U auf den symmetrischen Formen (Eigenwert; Singulaerwerte; Richtung)
+    psi (Ordnung 3, Achse e8): det U = (-0.5+0.866j)
+        Eigenwert (-0.5-0.866j): Massen [1.0, 0.0], |m.m|/|m|^2 = 0.0000, |m_z|/|m| = 0.0000
+        Eigenwert (1+0j): Massen [1.0, 0.0], |m.m|/|m|^2 = 0.0000, |m_z|/|m| = 0.0000
+        Eigenwert (-0.5+0.866j): Massen [1.0, 1.0], |m.m|/|m|^2 = 1.0000, |m_z|/|m| = 1.0000
+    R_e8 (zweizaehlig, Achse e8): det U = (1+0j)
+        Eigenwert (1+0j): Massen [1.0, 1.0], |m.m|/|m|^2 = 1.0000, |m_z|/|m| = 1.0000
+    R_e7 (zweizaehlig, Achse e7): det U = (1+0j)
+        Eigenwert (1+0j): Massen [1.0, 1.0], |m.m|/|m|^2 = 1.0000, |m_z|/|m| = 0.0000
+    R_h (dreizaehlig, Diagonale): det U = (1+0j)
+        Eigenwert (-0.5-0.866j): Massen [1.0, 0.0], |m.m|/|m|^2 = 0.0000, |m_z|/|m| = 0.5774
+        Eigenwert (-0.5+0.866j): Massen [1.0, 0.0], |m.m|/|m|^2 = 0.0000, |m_z|/|m| = 0.5774
+        Eigenwert (1+0j): Massen [1.0, 1.0], |m.m|/|m|^2 = 1.0000, |m_z|/|m| = 0.5774
+    feste Formen (Eigenwert 1): ['R_e7', 'R_e8', 'R_h', 'psi']
+
+(4) Mischung M = cos(t) M_psi + sin(t) e^(i d) M_h: K der Massen (m1, m2, 0)
+    d = 0.0000: K(t = 0 .. pi/2) = [1.0, 0.6013, 0.5478, 0.5235, 0.5101, 0.5026, 0.5]
+    d = 1.5708: K(t = 0 .. pi/2) = [1.0, 0.5927, 0.5399, 0.5235, 0.5129, 0.5032, 0.5]
+    K = 1: eine Masse; K = 1/2: zwei gleiche Massen; 2/3 wird bei einem freien Mischwinkel durchlaufen
