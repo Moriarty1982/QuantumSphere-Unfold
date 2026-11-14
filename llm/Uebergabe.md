@@ -8,9 +8,9 @@
   Am 14.11. außerdem gemergt: #118 (60ba894, Register Phase 2), #117 (f4a62cf, CT-002/T11), #116 (a3fe755), #115
   (990a3cc), #114 (44cdcd1), #113 (10d670e), #112 (ad7756f), #111 (c247ea3), #110 (8606691), #109 (963f557), #108
   (91cbb69). Am 13.11.: #104–#107.
-- **Lokal:** `github/main` = f39ca00. Der Hauptordner steht noch auf 9b9dfda und braucht `git pull github main`.
+- **Lokal:** `github/main` = f39ca00 plus Übergabe-Commit (gepusht auf „Ja, pushen“). Der Hauptordner steht noch auf 9b9dfda und braucht `git pull github main`.
   Der Worktree `zealous-fermi-f46fd7` (Zweig `research/v4.10-r13-neutral-qubit-status`, gemergt, noch
-  ausgecheckt) trägt dazu einen Übergabe-Commit, nur lokal.
+  ausgecheckt) steht auf demselben Stand.
 - **Datenstand 14.11.:** nu-fit.org antwortet mit 503, der NuFIT-Stand ist nicht geprüft (am 13.11. war 6.1 die
   neueste Version). Die PDG-Ausgabe 2026 liegt vor dem 13.11.2026 und zählt für H102 nicht; maßgeblich ist die
   nächste Ausgabe. H100 und H102 bleiben offen.
