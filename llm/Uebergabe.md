@@ -64,6 +64,15 @@
   Chern-Simons und modulare S-Matrix kommen im Companion nicht vor.
 
 ## Nächster Schritt
+- **Idee des Autors (15.11., noch nicht gerechnet):** Das Loch für den Fluss könnte der bewachte Kern des
+  Orbit-Scans sein. Fundstelle: v470/05, Prop. „Hopf completion versus guarded-core remainder“, X = S³ ∖ B_ε(K),
+  ε frei; dazu die Julia-Rand-Auslesung v470/14 und v470/15 (nur diagnostisch). Bisher ist das mit OP3 nicht
+  verbunden.
+  - Nötige Größe: Kappe mit Raumwinkel γ_M um die Zyklusachse, Winkelradius 15,8° auf der Bloch-Kugel, also
+    ε = 7,9° im S³. Sie passt in den Oktanten, und die 90°-Seiten (Koide) bleiben unberührt.
+  - Ein leeres Loch ändert die Bargmann-Phase nicht. Der Kern müsste einen Fluss tragen (Aharonov-Bohm-Faden).
+  - Offen: warum der Kern auf der Zyklusachse sitzt, warum er Fluss trägt, warum ε = 7,9°.
+  - Mögliche Brücke: Der bewachte Kollapskern als Horizont-Punktierung (CT-002) im Generationsraum.
 - **Stand 15.11.:** Die Notiz mit den Nachträgen 1–9 ist über PR #124 auf main.
   Inhalt der Nachträge: r47-Maske, ε-Vorwissen r50–r56, ε* = (1/3)ln((1+√3)/2), Photonengewichte,
   Frame-Kreuzprodukte (sl(2,R)), Levi-Civita, geordnete Produkte und r33.
