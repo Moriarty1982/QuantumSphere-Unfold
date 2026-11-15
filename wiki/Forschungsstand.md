@@ -1,6 +1,6 @@
 # Forschungsstand
 
-### OP1: Die Frame-Abbildungen wirken nur bei j = ½ irreduzibel (15.11.2026)
+### OP1: Die Frame-Abbildungen wirken nur bei j = ½ irreduzibel (15.11.2026, Runde r17)
 
 Erkundung (nicht blind). Unter der Annahme, dass die drei Frame-Abbildungen (halbe Drehungen um senkrechte Achsen, r16.7)
 auf einer Horizont-Punktierung mit Spin j über dieselbe SU(2) wirken, gilt: **Irreduzibel wirken sie nur bei j = ½**
