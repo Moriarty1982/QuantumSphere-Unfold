@@ -28,6 +28,9 @@ ct12 = ct3.ct12
 FRAME_T = 'tachyon-frame'
 NOTE = Path('notes/research/op1_i1_string_endpoints_2026_11_15/README.md')
 H98 = Path('notes/research/predictions/Ergebnis_H98_Zaehlregel_Sonderstellung.md')
+H15 = Path('notes/research/v4_9_0_r01_r16/llm/Vorab_Notiz_H15_W_Masse_gamma_L.md')
+H46 = Path('notes/research/predictions/Vorab_Notiz_H46_theta23_bei_eps_eta.md')
+H96 = Path('notes/research/predictions/Vorab_Notiz_H96_Omega_M_beta2.md')
 WINDOWS = [
     {'label': 'beta_sym (Leptonfenster)', 'source': 'Companion v4.9.0-r61.1(e)', 'version': '2026-11', 'value': '[0.545, 0.570]'},
     {'label': 'm_W', 'source': 'PDG', 'version': '2025', 'value': 'Fenster 2 sigma'},
@@ -137,10 +140,25 @@ def main():
                     'assumptions': ['CT-004'], 'dependencies': []}})['version_hash']
     register_link(db, {'source': count, 'target': s4['version_hash'], 'kind': 'depends-on-counterterm',
                        'status': 'declared', 'description': 'Die Zaehlregel in T ruht auf der Stringendpunkt-Lesart'})
+    # Autorenauftrag „H15/H46/H96 verknuepfen“ (15.11.): Die drei offenen Vorhersagen ruhen auf der Zaehlregel je Frame
+    # (v4.10.0-r08.3) und erben ueber S-COUNT die Guards von CT-004.
+    predictions = {}
+    for object_id, path, latex, title in (
+            ('H15', H15, 'm_W = m_Z · γ_L / √(1 + γ_L²)', 'H15 W-Masse aus gamma_L = gamma_BI/gamma_string'),
+            ('H46', H46, 'sin²θ₂₃ ∈ [0.49, 0.50]', 'H46 sin^2 theta_23 in [0.49, 0.50] unter epsilon = eta'),
+            ('H96', H96, 'Ω_M = β_sym² = (γ_L − 1)/(γ_L + 1)', 'H96 Omega_M = beta_sym^2')):
+        key = register(db, repo, {
+            'object_id': object_id, 'kind': 'claim', 'frame': ct12.FRAME, 'status': 'conditional',
+            'source': ct12.provenance(repo, path, 'Hypothese bzw. Vorhersage'),
+            'payload': {'title': title, 'latex': latex, 'assumptions': ['S-COUNT'], 'dependencies': []}})['version_hash']
+        register_link(db, {'source': key, 'target': count, 'kind': 'requires', 'status': 'declared',
+                           'description': 'gamma_L = gamma_BI/gamma_string ruht auf der Zaehlregel je Frame (r08.3)'})
+        predictions[object_id] = key
     resolved = {name: resolve_dependencies(db, key) for name, key in
-                (('H102', h102), ('S-N', n), ('S-2T', t2), ('S-GEN', gen), ('S-COUNT', count))}
+                (('H102', h102), ('S-N', n), ('S-2T', t2), ('S-GEN', gen), ('S-COUNT', count))
+                + tuple(predictions.items())}
     snapshot = create_snapshot(db, 'ct-register-full-2026-11-15')['snapshot_hash']
-    selection = select_versions(db, snapshot, [h102, t2, gen, count])
+    selection = select_versions(db, snapshot, [h102, t2, gen, count] + list(predictions.values()))
     exported = export_selection(selection, repo / args.export)
     tex = (Path(exported['directory']) / 'paper.tex').read_text(encoding='utf-8')
     schemes = {'CT-001': s1, 'CT-002': s2, 'CT-003': s3, 'CT-004': s4['version_hash']}

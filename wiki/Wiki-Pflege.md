@@ -103,7 +103,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 ## Änderungsnachweis
 
 - 15.11.2026: Forschungsstand um OP1 mit I1 ergänzt (Tachyon-Frame zählt Endpunkte fundamentaler Strings, Kramers-Regel
-  ausgeschlossen). Lesart, als Platzhalter CT-004 eingetragen; kein OP-Abschluss.
+  ausgeschlossen). Lesart, als Platzhalter CT-004 eingetragen; H15, H46, H96 damit verknüpft
+  (Forschungsstand, Vorhersagen-und-Tests); kein OP-Abschluss.
 
 - 15.11.2026: Forschungsstand um den bewachten Kern als flussverdrängende Kappe ergänzt. Vorzeichen aus der Lage;
   Menge = H102-Beziehung nur, wenn der verdrängte Fluss das Dreieck verlässt. Nachträge: Abfluss = Lesart „removed“;

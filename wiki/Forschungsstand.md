@@ -15,7 +15,8 @@ Materie-Frame alle Spins zählt (γ_M = 0,2375) und der Tachyon-Frame nur j = ½
 
 Annahmen bleiben: T = String-Sektor und der Chan–Paton-Schritt. Ein blinder Test folgt nicht; OP1 ist nicht geschlossen.
 Auf Autorentscheidung stehen beide Annahmen jetzt als Platzhalter **CT-004** im Gegenterm-Register, mit vier Guards; die
-Zählregel erbt sie.
+Zählregel erbt sie. Auf Autorenauftrag sind auch die offenen Vorhersagen H15 (m_W), H46 (sin²θ₂₃) und H96 (Ω_M), die
+auf dieser Zählregel ruhen, verknüpft und erben dieselben vier Guards; ihre Kriterien bleiben unverändert.
 [Rückwärtssuche](../notes/research/op1_i1_string_endpoints_2026_11_15/README.md).
 
 ### OP3: Bewachter Kern verdrängt Fluss (15.11.2026)
