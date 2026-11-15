@@ -2,6 +2,8 @@
 
 **Nachtrag 14.11.2026:** H100 und H102 sind offen und stehen jetzt auch in der Tabelle der offenen Vorhersagen; ihre Zeilen unter „Abgeschlossene Tests“ bleiben mit Verweis stehen. Kein neuer Test. Neu am 14.11.: H104 (widerlegt), eine Robustheitsprüfung von H98; die Vorhersagen H15, H46 und H96 sind davon nicht berührt.
 
+**Nachtrag 15.11.2026 (v4.10.0-r15):** Kein neuer Test. Die Runde berichtigt die Frame-Lesart von r38 und hält Erkundungen fest (nicht blind); keine Vorhersage ist berührt.
+
 **Stand: 7. November 2026.** Die Runden v4.10.0-r06 (Literaturbezug Dorau–Much) und r07 (die Kette im Tachyon-Frame) enthalten keinen Test und keine neue Vorhersage; ein geplanter Test zu r07 wurde nicht vergeben, weil das Ergebnis analytisch feststand. Seit v4.8.0 gilt eine feste Regel: Eine neue Vorhersage oder ein Test wird **vor** der Rechnung als Vorab-Notiz festgeschrieben (Hypothese, Daten, Entscheidungskriterium) und committet. Erst dann wird gerechnet. So lässt sich später prüfen, dass nichts nachträglich angepasst wurde. Diese Seite listet alle Tests mit ihrem Ergebnis. [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie) · [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt)
 
 ## Offene Vorhersagen (warten auf neue Daten)

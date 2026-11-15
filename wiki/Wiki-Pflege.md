@@ -102,6 +102,9 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 15.11.2026: Runde v4.10.0-r15 eingetragen (Forschungslinie, Inhalt, Gesamtbild, Offene-Probleme, Vorhersagen-und-Tests,
+  Content-overview, Forschungsstand): Berichtigung der Frame-Lesart von r38 und vier Statusvermerke. Kein OP-Abschluss.
+
 - 15.11.2026: Forschungsstand um die Neulesung von r38 ergänzt (Frame-Zuordnung zu Slots durch r51 überholt,
   Chiralitätsspur widerspricht r51.1(a)) und um die Lesart „eine Generation je Frame-Abbildung“. Kein OP-Abschluss.
 

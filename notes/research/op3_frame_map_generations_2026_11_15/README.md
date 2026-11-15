@@ -11,7 +11,7 @@ Skript `frame_map_states.py`, Ausgabe `run/frame_map_states_stdout.txt`.
   Offener Punkt 5: Auf einer Ebene können dieselben drei Slots nicht Frames und Generationen (r37) zugleich tragen.
   Punkt 6: M ↔ T wäre ein Chiralitätswechsel (Spur, nicht gerechnet).
 - **r39** trennt beide Rollen nach Zoomstufen, **r41** (H26) übernimmt das („the zoom levels separate frames from
-  generations“), **H29** (r42) liest die Massenaufspaltung als Brechung von ρ, „the frame triole of v4.9.0-r38“.
+  generations“), **H29** (r44) liest die Massenaufspaltung als Brechung von ρ, „the frame triole of v4.9.0-r38“.
 - **r51** (H35): Die drei Involutionen des Dubletts wirken über den C-Faktor des Dixon-Speichers, Tachyon-Abbildung
   z ↦ iz (σ_y, berichtigt in r28), Zeitumkehr z ↦ z̄ (σ_z, Tausch von Kompensator- und Partnerport), J_B = R∘T (σ_x).
   r51.1(a): Die Tachyon-Abbildung lässt jeden Sektor fest, also auch Ladung und Chiralität; die Ports und damit die

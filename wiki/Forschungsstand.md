@@ -1,6 +1,6 @@
 # Forschungsstand
 
-### OP3: r38 neu gelesen, eine Generation je Frame-Abbildung (15.11.2026)
+### OP3: r38 neu gelesen, eine Generation je Frame-Abbildung (15.11.2026, Runde r15)
 
 Erkundung (nicht blind). **r38** ordnet die Frames den Triality-Slots zu (Photon Vektor-Slot, Materie und Tachyon
 Spinor-Slots) und rechnet ohne den C-Faktor. Seit **r51** wirken die Frame-Abbildungen aber über den C-Faktor auf das
@@ -11,8 +11,8 @@ Tensorfaktoren sitzen.
 - **Lesart:** Jede Generation ist ein Eigenzustand je einer der drei Frame-Abbildungen T (σz), J_B (σx), R (z ↦ iz). Die
   Basen sind paarweise unverzerrt; alle Wahlen geben K = 2/3 und Phase ±π/4. Der Frame-Wechsel R erhält das Vorzeichen,
   die antiunitäre Konjugation kehrt es um.
-- **Offen:** ob der Generationsindex auf dem Frame-Dublett sitzt; die Biegung (Kern, OP1); Berichtigung von r38 in einer
-  neuen Runde.
+- **Offen:** ob der Generationsindex auf dem Frame-Dublett sitzt; die Biegung (Kern, OP1).
+- **Runde:** Berichtigung und Statusvermerke stehen in v4.10.0-r15.
 
 [Erkundung](../notes/research/op3_frame_map_generations_2026_11_15/README.md).
 
