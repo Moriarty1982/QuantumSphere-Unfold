@@ -1,7 +1,7 @@
 # Übergabe: Stand der letzten Sitzung
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.**
 
-## Stand vom 16.11.2026 (Claude Fable)
+## Stand vom 16.11.2026 (Claude Fable, dann Claude Opus 5.5)
 - **Öffentlich:** **v5.1.0**, veröffentlicht am 15.11.2026, Version-DOI 10.5281/zenodo.24237112,
   Record https://zenodo.org/records/24237112; Vorgänger v5.0.0 (10.5281/zenodo.24152615). Vollausgabe 1412 Seiten,
   Physik-Paper 29 Seiten. Paketquellstand dfdb413, Tag `v5.1.0`, GitHub-Release gesetzt. Nach der Veröffentlichung
@@ -10,14 +10,18 @@
   (b6ed1a5, Runde r15, Dauerauftrag Issues), #130 (eeb6083,
   Berichtigung zu CT-004), #129 (c9bfb19, OP1 mit I1, CT-004) und #128
   (14feb02, Release v5.1.0). **Offen: PR #147** (Zweig `research/v4.10-r21-c5-restated`, Runde r21, C5 neu gestellt; wartet
-  auf Freigabe; CI-Lauf „QSC LaTeX PDF Build“ am 16.11. gestartet, Ergebnis nicht geprüft). Gemergt am 14./15.11.: #124–#128
+  auf Freigabe; erster CI-Lauf erfolgreich, zweiter mit Nachtrag r21.8–r21.10 gestartet, Ergebnis nicht geprüft). Gemergt am 14./15.11.: #124–#128
   (OP3-Rückwärtssuche, Dauerauftrag Versionsverwaltung, Abbildung C⊗S → C⊗H⊗O, bewachter Kern, Release), davor #108–#123.
   Gemergte Zweige sind gelöscht (16.11.: drei lokale Altzweige). Die Läufe nach dem Merge von #146 waren erfolgreich.
 - **Letzte Runde (noch nicht gemergt):** v4.10.0-r21, C5 frame-sauber neu gestellt (PR #147). Anteile C5_M + C5_T = 1,
   frame-freier Boden |s|/2u. Drei Fragen: Übergangsfrage (Verlagerung, keine Entladung), Photonpunkt-Frage (für Felder
   positiv; bleibende Null nur bei s₊ = s₋ = w = 0), Brückenfrage (offen). Berichtigung zu r20.4: gleiche Anteile sind für P
   notwendig, nicht hinreichend. Notizen `notes/research/c5_restatement_2026_11_16/`, `notes/research/v4_10_0_r21/`.
-  Kandidat 1436 Seiten, Guard-Linter 0. Issues #13 und #17 nachgezogen. Zuletzt vergebene Runde: **r21**.
+  Nachtrag vor dem Merge (r21.8–r21.10): Unter Lorentz-Gruppe, Dualität und Skala gibt es genau zwei Klassen von Feldern
+  (lichtartig oder nicht), Vertreter P (φ = 0) und R (φ = 1), φ = sech 2η_R. Kollapszustand z⁻ = 0 des Hauptkorpus mit
+  heutigem Wissen: zwei Rollen, Nullpunkt des Versatzes (R, kein Nullzustand) und invariantes Objekt (P, Nullzustand);
+  Spannung mit r24.3 vermerkt („never fully reach z⁻ = 0“ passt zu P). Skript `two_classes.py`.
+  Kandidat 1438 Seiten, Guard-Linter 0. Issues #13 und #17 nachgezogen. Zuletzt vergebene Runde: **r21**.
 - **Davor:** v4.10.0-r20 (C5-Kandidat Nullaugenblick, Abgleich mit r88, Zeit gegen Kollar-Stufe, Frame-Audit r20.4),
   gemergt über PR #146 (d9d4b5c); ursprünglich als r19 geschrieben und wegen paralleler Vergabe von r19 (PR #144)
   umbenannt. Kandidat 1433 Seiten.
@@ -144,15 +148,21 @@
   Nullaugenblick tragen beide Helizitäten → keine Folge von Kollar-Stufen (passt zu (β), Zählung als Stufe offen).
   Keine Entladung; C5 offen.
 
-- **Offene Autorentscheidung zu C5 (B2 aus r21.7):** Zählt eine augenblickliche Null als endliche Stufe (r86,
-  Ereignis-Lesart), oder muss sie bestehen bleiben (Dauer-Lesart)? Bei Dauer scheidet der Kandidat aus r20 aus (r21.6).
-  Die Neufassung selbst ist am 16.11. entschieden („C5 neu stellen“) und steht in r21.
+- **C5, Autorentscheidungen 16.11.:** Neufassung („C5 neu stellen“, r21) und zu (B2) die Ereignis-Lesart als Arbeitsannahme
+  (r21.10; Autor: „erst die Existenz eines Augenblicks zeigen, dann eventuell verallgemeinern“). Gesetzt, nicht hergeleitet.
+  Offen bleiben (B1) Lesart „Obstruktion = Boden“ (r10) und (B3) Vorliegen der Felder von Kodimension 1.
+- **Hinweis des Autors (16.11.):** Die Idee des Kollapszustands stammt vom Anfang des Projekts und ist mit heutigem Wissen
+  zu überprüfen; r21.9 ist ein erster Schritt (vier Hauptkorpus-Stellen). Eine Durchsicht aller z⁻-Stellen des Hauptkorpus
+  (Statusvermerke nach r21.9-Tabelle) steht aus.
 - **OP3, Brücke r15.5 (15.11., Erkundung, `notes/research/op3_frame_bridge_2026_11_15/`, PR #144):** Kommutant von Eich- und Lorentzgruppe auf einer Generation von C⊗H⊗O = C⁶ (je Multiplett eine Phase), kein antilinearer Anteil → kein Generations-Qubit; R zentral, T und J_B keine Symmetrien. Mit n Kopien M_n(C). Beantwortet „geladener Träger“ aus r16.7 negativ für eine Generation. Nicht blind (Schur).
 - **Kurzfassung / Paper (15.11.):** Literaturprüfung: Algebra-Kern = Riemann–Silberstein-Stoff, Zustandsscheibe ≈ Symmetrie-Kugel (Golat et al. 2024), Koide-Oktant, π/4, π/12 bei Brannen 2010. Kein neues Ergebnis für ein Forschungspaper aus Kern oder Koide. Planungsdateien `paper/kernel-note/outline.md` und `paper/koide-note/novelty_check.md`, gemergt über PR #145 (81a6ccb). Literaturnotiz in `notes/research/literature_check_2026_11_15/` (PR #144).
 
 ## Nächster Schritt (Autorentscheidung)
 - **Zuerst:** PR #147 prüfen (CI-Lauf ansehen) und auf Freigabe mergen; danach Zweig löschen, #13 und #17 um den
-  Merge-Commit ergänzen. Dann die Entscheidung (B2) zu C5 einholen.
+  Merge-Commit ergänzen.
+- **Danach C5 (B3):** Gibt es eine native Bedingung, die genau die Felder mit Nullaugenblick auswählt (über w oder s₊/s₋),
+  oder ist es Feinabstimmung wie c⋆(N) in r88.1? Vorwissen prüfen, bei Kriterium Vorab-Notiz (H105 frei).
+- **Alternativ:** Kollapszustand im ganzen Hauptkorpus nach der Tabelle r21.9 typisieren (R oder P).
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,
   `Erkundung_Zaehlregel_Prinzip.md`) und Suchrichtung prüfen. Zu beachten: Eine Kramers-Regel (nur halbzahlige Spins,
   Θ² = −1) liegt im Regelraum von H98; dort trifft nur das gewählte Paar alle drei Fenster. Auslöser I1-3 der
