@@ -8,6 +8,8 @@ Quellen, Notizen und Werkzeuge zum *Quantum Sphaera Companion*, dem mathematisch
 Sphaera“. Die öffentliche Baseline ist **v5.0.0** vom 2026-11-12
 (Version-DOI 10.5281/zenodo.24152615, Concept-DOI 10.5281/zenodo.19210728;
 Vorgänger v4.11.0, 10.5281/zenodo.24108818).
+In Vorbereitung ist **v5.1.0**: Version-DOI 10.5281/zenodo.24237112 reserviert am 2026-11-15 (Entwurf 24237112,
+**unveröffentlicht**, Zweig `release/v5.1.0-prep`). Bis zur Veröffentlichung bleibt v5.0.0 die zitierte Version.
 
 Version 5 enthält die datenbankgestützte Dokumentarchitektur und zwei englische
 Ausgaben (1402/28 Seiten). Der veröffentlichte Paketquellstand ist
