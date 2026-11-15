@@ -85,7 +85,7 @@
   Nachtrag: R, T, J_B erhalten je eines der drei Feldvorzeichen (Re s, Im s, Helizität); Pole = Eigenzustände; Überlappung ½
   folgt bedingt aus „je Frame-Abbildung ein Eigenzustand“. Kein Dreierzyklus aus linearen Feldabbildungen (nur diagonal/
   vertauschend auf χ). Kandidat Hurwitz-Einheiten auf N (r13.2, CT-003) geprüft und ausgeschlossen: R skalar auf N,
-  T bildet N auf N̄ ab (Zweig `research/op3-cycle-search`). Prinzip „je Frame-Abbildung ein Auslesezustand“ bleibt gesetzt.
+  T bildet N auf N̄ ab (r16.5, PR #135). Prinzip „je Frame-Abbildung ein Auslesezustand“ bleibt gesetzt.
   Festgehalten in Runde r16.
 
 - **k220 übernommen (15.11.):** Die Erkundung „ein Objekt“ vom 7.11. (Bahnen von SO(3,ℂ) × Dualität; M und T eine Bahn,
