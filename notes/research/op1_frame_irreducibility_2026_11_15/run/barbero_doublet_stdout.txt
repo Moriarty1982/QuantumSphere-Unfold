@@ -1,0 +1,9 @@
+(1) A_gamma = c+ A+ + c- A-: True; reelles gamma: |c+| = |c-|: True
+(2) Wirkung auf gamma (an Zufallswerten gegen die Formeln geprueft)
+    R   : gamma -> -1/gamma (Abweichung 0.0e+00)
+    T   : gamma -> -gamma (Abweichung 0.0e+00)
+    J_B : gamma -> 1/gamma (Abweichung 0.0e+00)
+(3) gamma_M = 0.237533, gamma_T = 0.127384; Bilder von gamma_M: R: -4.2099, T: -0.2375, J_B: 4.2099 -> keine gleich gamma_T
+(4) Pole in gamma-Sprache: T-Achse (Materie/Tachyon) gamma = 0 bzw. unendlich; J_B-Achse gamma = -1, +1; R-Achse (selbst-/antiselbstdual) gamma = +i, -i
+    gamma_M: Aequatorwinkel 2 arctan gamma = 26.724 Grad
+    gamma_T: Aequatorwinkel 2 arctan gamma = 14.519 Grad
