@@ -6,14 +6,14 @@
   Record https://zenodo.org/records/24237112; Vorgänger v5.0.0 (10.5281/zenodo.24152615). Vollausgabe 1412 Seiten,
   Physik-Paper 29 Seiten. Paketquellstand dfdb413, Tag `v5.1.0`, GitHub-Release gesetzt. Nach der Veröffentlichung
   geprüft: acht Dateien prüfsummengleich mit dem Paket, Vorschau = Vollausgabe. Release-Notiz `release/v5.1.0/README.md`.
-- **GitHub:** `main` nach PR #137 (a835c46, OP1 Brücke: Barbero-Dublett, Penrose-Stränge), davor #136 (45f518d, OP3 Uhr-Abgleich und Treue-Lesart, OP1 Irreduzibilität), davor #135 (e0be304, Runde r16 mit r16.1–r16.9), davor #134 (f32ae5c, k220 „ein Objekt“ übernommen), davor #133 (37ac7da, OP3: C⊗O, Helizitätsachse, invariante Kugel, Feldvorzeichen), davor #132
+- **GitHub:** `main` nach PR #138 (68e1075, Runde r17), davor #137 (a835c46, OP1 Brücke: Barbero-Dublett, Penrose-Stränge), davor #136 (45f518d, OP3 Uhr-Abgleich und Treue-Lesart, OP1 Irreduzibilität), davor #135 (e0be304, Runde r16 mit r16.1–r16.9), davor #134 (f32ae5c, k220 „ein Objekt“ übernommen), davor #133 (37ac7da, OP3: C⊗O, Helizitätsachse, invariante Kugel, Feldvorzeichen), davor #132
   (b6ed1a5, Runde r15, Dauerauftrag Issues), #130 (eeb6083,
   Berichtigung zu CT-004), #129 (c9bfb19, OP1 mit I1, CT-004) und #128
   (14feb02, Release v5.1.0). **Keine offenen PRs.** Gemergt am 14./15.11.: #124–#128
   (OP3-Rückwärtssuche, Dauerauftrag Versionsverwaltung, Abbildung C⊗S → C⊗H⊗O, bewachter Kern, Release), davor #108–#123.
   Gemergte Zweige sind gelöscht. Nicht geprüft: die Läufe nach dem Merge von #128 (Wiki-Sync, Zwei-PDF).
 - **Letzte Runde:** v4.10.0-r17 (Statusvermerke zu Uhr-Funktional, Treue-Lesart, Irreduzibilität, Barbero-Dublett,
-  Penrose-Strängen, Rücknahme R² = −1), Zweig `research/op1-statistics`; davor r16 (PR #135), r15, r14 (in v5.1.0).
+  Penrose-Strängen, Rücknahme R² = −1), gemergt über PR #138 (68e1075); davor r16 (PR #135), r15, r14 (in v5.1.0).
   Kandidat 1424 Seiten.
 - **Hypothesen:** zuletzt vergeben H104 (k226, widerlegt). Frei: **H105, k227**.
   - H100 offen: nächster NuFIT-Fit nach 6.1, Frist 31.12.2027 (`notes/research/predictions/k222_test_h100.py`).
@@ -110,7 +110,7 @@
   −1/γ, −γ, 1/γ, keine gibt γ_T aus γ_M. Brücke (A) weiter offen.
   Nachtrag: Penrose-Bündel geben (A), wenn ein Strang ein Quant von χ ist; bosonische Stränge → alle j (M), fermionische →
   nur j = ½ (T). Ersetzt Guards T = String und Chan–Paton von CT-004 durch (S1)–(S3); Register unverändert; kein Test.
-  Nachtrag (Zweig `research/op1-statistics`): R² = −1 gibt Kramers, nicht Pauli; Frame-Abbildungen sehen die Statistik
+  Nachtrag (PR #138, r17.6): R² = −1 gibt Kramers, nicht Pauli; Frame-Abbildungen sehen die Statistik
   nicht. (S2) ist reine Setzung; Begründung über R² zurückgenommen.
 
 ## Nächster Schritt (Autorentscheidung)
