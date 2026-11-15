@@ -2,9 +2,10 @@
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.**
 
 ## Stand vom 15.11.2026 (Claude Opus)
-- **GitHub:** **PR #125 gemergt als 087d13f** (Dauerauftrag Versionsverwaltung in AGENTS.md und Wiki) und davor
-  **PR #124 als f5ede73** (OP3-Rückwärtssuche, Nachträge 1–9). **Keine offenen PRs.** Beide Zweige sind lokal und
-  auf GitHub gelöscht. Davor gemergt: #123 (14856e3, Codex), #122 (f04c6ad), #121 (f39ca00, r13), #120, #119, #108–#118.
+- **GitHub:** **PR #126 gemergt als 823802e** (Abbildung C⊗S → C⊗H⊗O, gebogene Achsen), davor #125 (087d13f,
+  Dauerauftrag Versionsverwaltung) und #124 (f5ede73, OP3-Rückwärtssuche). **Keine offenen PRs.** Gemergte Zweige
+  lokal und auf GitHub gelöscht. Davor gemergt: #123 (14856e3, Codex), #122 (f04c6ad), #121 (f39ca00, r13), #120,
+  #119, #108–#118.
   Nicht geprüft: die Darstellung von Mindmap und Formeln im GitHub-Wiki (im Browser des Modells gesperrt).
 - **Dauerauftrag 15.11. (AGENTS.md):** Interne Nummern (H, k, Runden, CT) ohne Rückfrage vergeben; Übergabe- und
   Buchführungs-Commits ohne Rückfrage auf `main` pushen. Inhalt nur über PR; Zenodo und neue Versionen nur mit Freigabe.
@@ -15,7 +16,7 @@
   predicted“; das präzisierte Generationenhindernis (Weg A gegen Weg B, r13); die benannte Auswahlregel
   (Gleichgewichtung zweier unverzerrter Terme = F-Selbstdualität, PRs #123/#124).
 - **Neu, 15.11. (`notes/research/op3_cs_dixon_map_2026_11_15/`, Erkundung, nicht blind, Zweig
-  `research/op3-cs-dixon-map`, nicht gemergt):** Abbildung C⊗S → C⊗H⊗O.
+  gemergt über PR #126):** Abbildung C⊗S → C⊗H⊗O.
   - Farb- und ladungstreue Abbildungen bilden eine 20-dimensionale Familie.
   - Die Familien-su(2) geht nur auf die Linkswirkung von H (Lorentz-Spin), sektorweise mit entgegengesetzter
     Orientierung (Leptonen det −1, Quarks det +1). Auf Isospin und r33-Slotdrehung geht sie nie.
@@ -27,7 +28,7 @@
     Biegung π/4 − 2/3 = 0,1187 rad ist der CT-001/002-Fluss. Kandidat für das Physik-Paper (Abschnitt masses).
   - Nächste mögliche Frage: Was unterscheidet eine Generation von einem Spinzustand (etwa Lorentz-Verhalten, Boosts,
     Chiralität)?
-- **Lokal:** Hauptordner auf `main` = 087d13f (plus dieser Übergabe-Commit).
+- **Lokal:** Hauptordner auf `main` = 823802e (plus dieser Übergabe-Commit).
 - **Neu, 14.11. (`notes/research/op3_action_balance_search_2026_11_14/`, Erkundung, nicht blind, Rückwärtssuche,
   auf „Wirkung suchen“ des Autors):** Gesucht war eine vorhandene Wirkung, die H = −a(Q + R) mit gebunden gleichen
   Kopplungen liefert (nächster Ansatz aus der Codex-Notiz `op3_reference_energy_selection_2026_11_14`).
