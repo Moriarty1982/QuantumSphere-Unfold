@@ -102,6 +102,9 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 15.11.2026: Runde v4.10.0-r16 eingetragen (Forschungslinie, Inhalt, Gesamtbild, Offene-Probleme, Vorhersagen-und-Tests,
+  Content-overview, Forschungsstand). Kein OP-Abschluss.
+
 - 15.11.2026: Forschungsstand um den Hurwitz-Kandidaten für den Dreierzyklus ergänzt (ausgeschlossen). Kein OP-Abschluss.
 
 - 15.11.2026: Forschungsstand um die Erkundung k220 („ein Objekt“, 7.11.) ergänzt, die bis dahin nur auf einem lokalen

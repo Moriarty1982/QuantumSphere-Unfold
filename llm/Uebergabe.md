@@ -12,8 +12,8 @@
   (14feb02, Release v5.1.0). **Keine offenen PRs.** Gemergt am 14./15.11.: #124–#128
   (OP3-Rückwärtssuche, Dauerauftrag Versionsverwaltung, Abbildung C⊗S → C⊗H⊗O, bewachter Kern, Release), davor #108–#123.
   Gemergte Zweige sind gelöscht. Nicht geprüft: die Läufe nach dem Merge von #128 (Wiki-Sync, Zwei-PDF).
-- **Letzte Runde:** v4.10.0-r15 (Berichtigung zu r38, Statusvermerke), gemergt über PR #132 (b6ed1a5); davor r14
-  (in v5.1.0). Kandidat 1416 Seiten.
+- **Letzte Runde:** v4.10.0-r16 (Statusvermerke zu Helizitätsachse, invariantem Dublett, Frame-Vorzeichen, Hurwitz-
+  Ausschluss, k220), Zweig `research/op3-cycle-search`; davor r15 (PR #132), r14 (in v5.1.0). Kandidat 1419 Seiten.
 - **Hypothesen:** zuletzt vergeben H104 (k226, widerlegt). Frei: **H105, k227**.
   - H100 offen: nächster NuFIT-Fit nach 6.1, Frist 31.12.2027 (`notes/research/predictions/k222_test_h100.py`).
   - H102 offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem 13.11.2026 (`k224_test_h102.py m_tau sigma`).
@@ -73,7 +73,7 @@
 - **Nachtrag zu r15.5 (15.11., gemergt über PR #133):** Auf C⊗O ist R skalar, T und J_B haben
   dieselben Eigenstrahlen, und diese tragen keine bestimmte Ladung (⟨Q⟩ = ½). Die Lesart „Generation je Frame-Abbildung“
   gilt nur auf der komplexifizierten Ebene z, also auf einem gesetzten Qubit; sie fällt auf r15.4 zurück. Gehört in die
-  nächste Runde (r16), noch nicht geschrieben.
+  Runde r16 (r16.1).
 
 - **Helizitätsachse (15.11., Erkundung, `notes/research/op3_helicity_axis_2026_11_15/`):** Auf dem Dublett (E, B) mit der
   Helizität als σy (r05.2) wirken R, T, J_B wie auf die Chiralität in r51; σy-Pole = Ports. Koide-Phase braucht Helizität
@@ -84,7 +84,7 @@
   folgt bedingt aus „je Frame-Abbildung ein Eigenzustand“. Kein Dreierzyklus aus linearen Feldabbildungen (nur diagonal/
   vertauschend auf χ). Kandidat Hurwitz-Einheiten auf N (r13.2, CT-003) geprüft und ausgeschlossen: R skalar auf N,
   T bildet N auf N̄ ab (Zweig `research/op3-cycle-search`). Prinzip „je Frame-Abbildung ein Auslesezustand“ bleibt gesetzt.
-  Zusammen mit dem Nachtrag zu r15.5 Stoff für r16 (noch nicht geschrieben).
+  Festgehalten in Runde r16.
 
 - **k220 übernommen (15.11.):** Die Erkundung „ein Objekt“ vom 7.11. (Bahnen von SO(3,ℂ) × Dualität; M und T eine Bahn,
   P Fixpunkt) lag nur auf dem lokalen Zweig `claude/quantenphysik-paper-herleitung-e723a3`; jetzt unter

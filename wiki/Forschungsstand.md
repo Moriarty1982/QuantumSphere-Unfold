@@ -13,7 +13,7 @@ Fixpunkt der Dualität.
 
 Die Erkundung lag bis zum 15.11. nur auf einem lokalen Zweig. [Notiz](../notes/research/k220_ein_objekt_2026_11_07/README.md).
 
-### OP3: Die Koide-Phase und die Helizitätsachse (15.11.2026)
+### OP3: Die Koide-Phase und die Helizitätsachse (15.11.2026, Runde r16)
 
 Erkundung (nicht blind). Das Feld-Dublett (E, B) hat nach r04 und r05.2 drei Stokes-Achsen: σz (Materie gegen Tachyon),
 σx (Photonseite) und σy, die **Helizität** (nur für komplexe Amplituden; reelle Felder füllen eine Scheibe).

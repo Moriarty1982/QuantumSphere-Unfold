@@ -1,0 +1,147 @@
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r16 Source-Only: Status Notes on the Helicity Axis, the Invariant Doublet and the Frame Signs}
+\addcontentsline{toc}{section}{v4.10.0-r16 Source-Only: Status Notes on the Helicity Axis, the Invariant Doublet and the Frame Signs}
+\label{sec:v4100-r16-helicity-invariant-doublet}
+% ============================================================================
+
+\paragraph{Purpose.}
+This layer records the OP3 explorations of 15 November 2026 that followed v4.10.0-r15, and an earlier exploration of
+7 November 2026 that had remained on a local branch.  It restricts the reading of v4.10.0-r15.5 on the states of
+\(\mathbb C\otimes\OO\), places the Koide phase on the helicity axis of the field doublet \((E,B)\) of v4.9.0-r04 and r05, moves
+the octant onto a Lorentz-invariant doublet, identifies the three axes with three signs of a field that the frame maps
+preserve one at a time, and excludes a candidate for the missing threefold cycle.  All items are explorations without
+pre-registration and without comparison with data; the Koide value \(K=\tfrac23\), the phases and most outcomes were fixed
+analytically before the checks.  The notes are \texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r16/} and the
+folders cited there.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r16 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.1.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24237112}{10.5281/zenodo.24237112} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r16 status notes}
+\label{subsec:v4100-r16-status}
+
+\paragraph{Theoremlet v4.10.0-r16.1 (restriction of r15.5 on \(\mathbb C\otimes\OO\)).}
+With the operators of v4.9.0-r51 on \(\mathbb C\otimes\OO\): the tachyon map \(R\) is multiplication by \(i\), a scalar, so every
+state is an eigenstate; \(T\) and \(J_B\) are antilinear and have the same eigenrays, the real states up to a phase, with mutual
+overlap \(1\); these states carry equal weight in \(P_{(\ell,r)}\) and \(P_{(-\ell,-r)}\) and have \(\langle Q\rangle=\tfrac12\).  The three
+mutually unbiased bases of r15.5 exist only on the complexified amplitude plane \(z\), not among the matter states.  Read on
+\(\mathbb C\otimes\OO\), two of the three ``generations'' of r15.5 would have no definite charge.  This restricts the reading of
+r15.5; its computation (a)--(c) stands on the plane \(z\).
+
+\paragraph{Theoremlet v4.10.0-r16.2 (the Koide phase needs the helicity axis).}
+Let \(b=(b_1,b_2,b_y)\) be the Stokes vector of the doublet \((E,B)\): \(b_1\), \(b_2\) as in v4.9.0-r04.2 and \(b_y\) the helicity
+component of v4.9.0-r05.2(b), \(-2\operatorname{Im}(\hat E^*\cdot\hat B)\) relative to the trace.
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] The tachyon map \((E,B)\mapsto(-B,E)\) is the duality rotation by \(90^\circ\), a half turn about the helicity axis: it
+reverses \(b_1\), \(b_2\) and keeps \(b_y\).  \(T\colon(E,B)\mapsto(E,-B)\) reverses \(b_2\) and \(b_y\); \(J_B\colon(E,B)\mapsto(B,E)\)
+reverses \(b_1\) and \(b_y\).  This is the pattern of v4.9.0-r51.1(a) for chirality.
+\item[(b)] Under the map \(\varphi\) of v4.9.0-r51.1(c) the \(\sigma_y\) eigenvectors \((1,\pm i)\) go to \(1\pm ie_7\), the
+eigenvectors of \(iL_{e_7}\) for \(\pm1\): compensator and partner port.
+\item[(c)] Three states with \(b_y=0\) have Bargmann phase \(0\) or \(\pi\).  For every octant triple (three orthonormal Bloch
+vectors) \(\sum_k b_{y,k}^2=1\).  Real fields alone cannot carry the Koide phase; it needs complex amplitudes.
+\item[(d)] For general complex amplitudes \(b_y\) changes under boosts; only the splitting into the helicity parts
+\(F_\pm=E\pm iB\) is preserved.
+\end{enumerate}
+
+\paragraph{Theoremlet v4.10.0-r16.3 (a Lorentz-invariant doublet).}
+Put \(s_\pm=F_\pm\cdot F_\pm\) (bilinear).  A boost acts on \(F_+\) by \(M\in SO(3,\mathbb C)\) and on \(F_-\) by \(\bar M\), so \(s_\pm\) are
+invariant (v4.8.0-r06.3), and \(\chi=(\sqrt{s_+},\sqrt{s_-})\) is a doublet whose Bloch sphere does not depend on the observer.
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Real fields lie on the equator at angle \(-\arg s\), the direction in the disk of r04; self-dual and anti-self-dual
+non-null fields lie at the poles; for plane waves \(s_+=s_-=0\) and light has no point.
+\item[(b)] \(R\) turns the equator by \(\pi\), \(T\) reflects \(\arg s\mapsto-\arg s\), \(J_B\) reflects \(\arg s\mapsto\pi-\arg s\), as in
+r04.2(b); \(R\) keeps the helicity sign, \(T\) and \(J_B\) reverse it.
+\item[(c)] The roots carry signs.  For real fields \(\sqrt{s_-}=\overline{\sqrt{s_+}}\) is a natural choice; the other choice gives
+the image under \(R\).  For general complex fields a point is fixed only up to \(R\); at the poles the choice is void.
+\item[(d)] A matter field (\(s=1\)), a field of the photon side (\(s=i\)) and a self-dual field (\(E=iB\)) give pairwise overlap
+\(\tfrac12\), \(K=\tfrac23\) and Bargmann phase \(\pm\pi/4\), and all three rays are unchanged under boosts.
+\end{enumerate}
+
+\paragraph{Theoremlet v4.10.0-r16.4 (three signs of a field and the frame maps).}
+The axes of r16.3 carry \(\operatorname{sign}\operatorname{Re}s\) (matter against tachyon), \(\operatorname{sign}\operatorname{Im}s\) (the side
+of v4.9.0-r02.1) and the helicity sign \(\operatorname{sign}(|s_+|-|s_-|)\).
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Each of \(R\), \(T\), \(J_B\) reverses two signs and keeps exactly one: \(R\) the helicity, \(T\) \(\operatorname{Re}s\), \(J_B\)
+\(\operatorname{Im}s\).  On the signs the three maps form the Klein four-group.
+\item[(b)] The poles of each axis are eigenstates of the map that keeps its sign (matter and tachyon field for \(T\), the two
+side fields for \(J_B\), the self-dual and anti-self-dual fields for \(R\)), and of no other.
+\item[(c)] A linear map of the index plane, \((F_+,F_-)\mapsto(aF_++bF_-,cF_++dF_-)\), gives
+\(s_+'=a^2s_++2ab\,F_+\cdot F_-+b^2s_-\).  The mixed term is not Lorentz invariant, so only diagonal and exchanging maps act on
+\(\chi\); they keep or exchange the poles.  No linear field map cycles the three axes.
+\end{enumerate}
+Reading: if each of three readout states is required to be an eigenstate of a different frame map, the overlap \(\tfrac12\),
+\(K=\tfrac23\) and the phase \(\pm\pi/4\) follow and are boost invariant; ``a complete set'' of r15.4 is no longer needed, since
+there are exactly three frame maps.  The rule ``one readout state per frame map'' remains assumed.  In the Gram reading the
+square roots of the masses are the eigenvalues of the Gram matrix; the three states are readout states, not mass eigenstates.
+
+\paragraph{Theoremlet v4.10.0-r16.5 (the Hurwitz cycle does not supply the threefold cycle).}
+On the neutral qubit \(N\) of v4.10.0-r13 (under CT-003) the tachyon map is the scalar \(i\), and complex conjugation maps
+\(N\) onto the charge-conjugate space \(\bar N\), orthogonal to \(N\).  The frame maps act on \(N\) differently from \(\chi\), so no
+identification of \(N\) with \(\chi\) compatible with \(R\), \(T\), \(J_B\) exists.  The threefold cycle of the Hurwitz units of r13.2
+permutes the Pauli axes of the family \(\mathfrak{su}(2)\) of r13.4, not the frame maps.  On the operator level the Clifford
+element of order three cycles \(T\sim\sigma_z\), \(J_B\sim\sigma_x\), \(R\sim\sigma_y\) by conjugation, but as a field map it is not
+diagonal and does not act on \(\chi\).
+
+\paragraph{Theoremlet v4.10.0-r16.6 (``one object'': orbits of \(SO(3,\mathbb C)\times U(1)\); exploration of 7 November 2026).}
+\(G=SO(3,\mathbb C)\times U(1)_{\rm duality}\) acts on \(z=E+iB\) transitively on every shell \(|s|=r>0\) (constructive check on 2000
+pairs, residual at most \(1.2\cdot10^{-14}\); different shells cannot be joined).  Its orbits are the shells, the punctured null
+cone and \(\{0\}\), and \(s=0\) is the only fixed point of duality.  Matter and tachyon lie on one orbit, ``one object'' in the sense
+of an active symmetry of the free carrier; light lies on another and is joined to them only through the common carrier or as
+a limit.  The identifications of the core fall into kinds: symmetries and changes of observer keep information; the
+compensator, the mixture \(P=I/2\) and the Hopf reading of r61 lose or mix it.  The counting rule per frame belongs to none of
+these kinds and cannot come from \(G\).  The exploration was kept on a local branch until 15 November 2026.
+
+\subsection*{v4.10.0-r16 status in the three frames}
+\label{subsec:v4100-r16-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item M, T: r16.3 and r16.4 are invariant under boosts; \(R\) exchanges the matter and tachyon signs and keeps the helicity,
+so the Koide data on \(\chi\) are the same in M and T.
+\item P: light has no point on \(\chi\) (r16.3(a)); by r16.6 it is the fixed point of duality, not on the orbit of M and T.
+\end{itemize}
+
+\subsection*{v4.10.0-r16 register entries}
+\label{subsec:v4100-r16-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r16\\
+\midrule
+one generation per frame map on \(\mathbb C\otimes\OO\) (r15.5) & does not hold there; only on the plane \(z\) (r16.1)\\
+Koide phase and helicity & phase needs the helicity axis; frame maps act on helicity as on chirality (r16.2)\\
+invariant doublet \(\chi\) & boost-invariant octant of three field types; root branch fixed up to \(R\) (r16.3)\\
+three field signs & each frame map keeps one; overlap \(\tfrac12\) conditional on one readout state per frame map (r16.4)\\
+threefold cycle & not from linear field maps, not from the Hurwitz units on \(N\) (r16.4(c), r16.5)\\
+one object (k220) & M and T one orbit, light the fixed point; counting rule not from \(G\) (r16.6)\\
+CT-001 to CT-004 & unchanged\\
+H100 / H102 & pending / pending\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r16 ledger and guard update}
+\label{subsec:v4100-r16-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r16}=(1,1,0)
+\]
+for (status notes recorded; formulas checked in the cited scripts; the rule of one readout state per frame map, the core size
+and a charged carrier not derived).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r16,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r16}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+OP~1, OP~3 and OP~4 remain open.  The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
