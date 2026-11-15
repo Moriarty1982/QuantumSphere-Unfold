@@ -1952,3 +1952,160 @@ R_{\rm glob}^{(v4100\text{-}r14,+)}=(0,1,1,1,1),
 \]
 OP~1, OP~3 and OP~4 remain open.  The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r15 Source-Only: A Correction of the Frame Reading of v4.9.0-r38, and Status Notes on Shadow, Spin-1 Triangle and Complementarity}
+\addcontentsline{toc}{section}{v4.10.0-r15 Source-Only: A Correction of the Frame Reading of v4.9.0-r38, and Status Notes on Shadow, Spin-1 Triangle and Complementarity}
+\label{sec:v4100-r15-r38-correction-complementarity}
+% ============================================================================
+
+\paragraph{Purpose.}
+At the author's request (2026-11-15) layer v4.9.0-r38 was read again against the later frame layers.  Its reading of the
+frames as triality slots predates v4.9.0-r51, and one of its statements contradicts r51.1(a); r51 corrected the frame rows
+of r41, r43 and r47--r49 but not those of r38.  This layer records that correction.  It also records four explorations of
+15 November 2026 that followed v4.10.0-r14: the core read as the shadow of a horizon, the spin-1 triangle, the Koide value
+as complete complementarity of a qubit, and the generations read as eigenstates of the three frame maps.  All items are
+explorations without pre-registration and without comparison with data; the Koide value \(K=\tfrac23\), the number three
+and the phases were known in advance.  The notes are
+\texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r15/} and the folders cited there.  Earlier layers are not
+rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r15 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.1.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24237112}{10.5281/zenodo.24237112} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r15 correction}
+\label{subsec:v4100-r15-correction}
+
+\paragraph{Correction v4.10.0-r15.1 (the frame reading of v4.9.0-r38).}
+Layer v4.9.0-r38 works on the real slots of \(\OO^3\), explicitly without the \(\mathbb C\) factor, and reads the frames as
+slots: the photon as the fixed vector slot, matter and tachyon as the two spinor slots exchanged by \(\rho\).  Since
+v4.9.0-r51 the frame maps act on the doublet through the \(\mathbb C\) factor of the Dixon store: the tachyon map
+\(z\mapsto iz\), the time reversal \(z\mapsto\bar z\) and \(J_B\).  The state-disk picture of v4.9.0-r04 and r19 places the
+frames on the same doublet, matter and tachyon at the two poles of one axis and the photon at the unpolarised centre.
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \emph{Unchanged.}  Theoremlet v4.9.0-r38.1(a)--(e) is algebra on \(\mathfrak{so}(8)^3\) and remains valid: \(\rho\) is outer of
+order two, its fixed algebra is \(\mathfrak{so}(7)\), and \(\tau\), \(\rho\) generate \(S_3\) on the slots.
+\item[(b)] \emph{Corrected.}  Reading item~6 of v4.9.0-r38 and its register row ``chirality: \(M\leftrightarrow T\) as exchange of the two
+spinor slots'' contradict v4.9.0-r51.1(a): the tachyon map fixes every sector and hence the chirality; the ports, and with them
+the chiralities, are exchanged by the time reversal.  The frame change \(M\leftrightarrow T\) is not a change of chirality.
+\item[(c)] \emph{Superseded as a frame statement.}  The assignment of M, P, T to triality slots (reading items~2 and~3 of
+v4.9.0-r38) is an earlier picture.  The slot transposition \(\rho\) stays a symmetry of the slots; it is not shown to be a frame
+map.  This affects the name, not the mathematics, of later readings: in v4.9.0-r44 (H29) the Brannen form from a
+\(\tau\)-symmetric, \(\rho\)-broken coupling stands, but ``breaking of the frame reflection'' is not covered.  The sentence ``the
+frame triole is a transposition (v4.9.0-r38)'' in v4.10.0-r14.3(d) holds for \(\rho\) on the slots, not for the frame maps of
+v4.9.0-r51.
+\item[(d)] \emph{Open item~5 of v4.9.0-r38.}  The conflict ``on one level the three slots cannot carry both frames and generations''
+arises only if both sit on the slots.  With the frames on the \(\mathbb C\) factor and the generations on the slots (v4.9.0-r37) or at
+the place of spin (v4.10.0-r14.4), the two roles lie on different tensor factors of \(\mathbb C\otimes\HH\otimes\OO\).  The
+separation by zoom level of v4.9.0-r39 and r41 remains a result of the model but is no longer needed for this purpose.
+\end{enumerate}
+Source: \texttt{notes/\allowbreak research/\allowbreak op3\_frame\_map\_generations\_2026\_11\_15/}.
+
+\subsection*{v4.10.0-r15 status notes}
+\label{subsec:v4100-r15-status}
+
+\paragraph{Theoremlet v4.10.0-r15.2 (the core as the shadow of a horizon).}
+Following the author's idea that one sphere casts a shadow on the other, read the flux-free core of v4.10.0-r14.6 as the
+visible shadow of the guarded collapse kernel (remark \texttt{rem:hc-shadow-vs-core}).  A shadow is the missing kind of map
+from a cross-section to a solid angle and is flux-free by construction.  Its size is not fixed: the Synge shadow of a
+Schwarzschild hole has \(\Omega=\gamma_M\) only for an observer at \(r=17.99\,M\), a distance given by nothing in the inventory; the
+distance from the frame offset (\(1-2M/r=1-\beta_{\rm sym}^2\)) gives \(1.537\) sr; the sector reading of CT-001 gives
+\(\Omega=\gamma/2\), half of what the spin-\(\tfrac12\) cap needs.  A spin-1 charge does not remove this factor two (r15.3).  Since a
+shadow depends on the observer while masses must not, the shadow that fixes the masses has to be read in the rest frame of
+matter; this gives the guard ``end in frame M'' of CT-002 a reason, as a reading.
+
+\paragraph{Theoremlet v4.10.0-r15.3 (the spin-1 triangle).}
+Three spin-1 coherent states symmetric about a cycle axis with pairwise overlap \(|\langle n_k|n_l\rangle|^2=\cos^4(a/2)=\tfrac12\)
+have side angle \(\cos a=\sqrt2-1\), axis angle \(\cos^2\psi=(2\sqrt2-1)/3\) (\(\psi=38.68^\circ\)), \(K=\tfrac23\), Bargmann phase
+\[
+\varphi=3\arccos\bigl(1-\tfrac1{\sqrt2}\bigr)-\pi=0.679042,
+\]
+and \(\det G=0.0503>0\): rank three, root ratios \(1:16.24:65.93\).  One \(\mathfrak{su}(2)\) thus carries the Koide value, three
+positive masses and a cycle of order three without any core; the remainder to the lepton phase \(\tfrac23\) is \(0.012376\).  A
+search over 143 candidate directions fixed beforehand in the script (lattice, \(A_4\), Hopf and phase angles; tolerance
+\(\pm0.05^\circ\)) found no native axis; the nearest are \(\tfrac23\) rad (\(-0.48^\circ\)) and the lattice direction \((2,1,0)\)
+(\(+0.56^\circ\)).  The direction is not independent: it follows from the overlap \(\tfrac12\) alone.  In every spin, Koide asks for
+three states pairwise half-way, in Fubini--Study distance \(\pi/4\), between equal and orthogonal.
+
+\paragraph{Theoremlet v4.10.0-r15.4 (Koide as complete complementarity).}
+The octant consists of one eigenstate each of \(\sigma_x\), \(\sigma_y\), \(\sigma_z\), one state from each of the three mutually
+unbiased bases of a qubit.  In dimension \(d\) a complete set has \(d+1\) bases with pairwise overlap \(1/d\); one state from each
+gives \(N=d+1\) states with
+\[
+K=\frac{\operatorname{Tr}G^2}{(\operatorname{Tr}G)^2}=\frac2{d+1}=\frac2N
+\]
+(checked with Wootters--Fields bases for \(d=2,3,5,7\)), and rank at most \(d<N\).  Only \(d=2\) gives three states, with
+\(K=\tfrac23\).  Read this way, ``three generations'' and ``Koide \(\tfrac23\)'' are one statement, \(K=2/N\) at \(N=3\).  Two principles
+are assumed: one state per complementary basis, and a complete set.
+
+\paragraph{Theoremlet v4.10.0-r15.5 (one generation per frame map).}
+On the doublet of v4.9.0-r51 take one eigenstate each of the time reversal \(T\) (\(\sigma_z\)), of \(J_B\) (\(\sigma_x\)) and of the
+tachyon map \(R\colon z\mapsto iz\).  As a real map \(R\) is a rotation with \(R^2=-1\); its eigenvalues are \(\pm i\) and its eigenlines
+are those of \(\sigma_y\), so the \(\mathbb C\) factor is needed.
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] The three eigenbases are pairwise unbiased.  All eight choices give \(K=\tfrac23\) and Bargmann phase \(\pm\pi/4\); the sign
+is the orientation of the three Bloch vectors.
+\item[(b)] The frame change \(R\) fixes its own eigenstate and sends the other two to their partners; the triple turns by \(\pi\) about
+the \(R\) axis, and \(K\) and the sign of the phase are kept.  Like the charges in v4.9.0-r51, the Koide data are the same in M and T.
+\item[(c)] Complex conjugation of the states, an antiunitary map, flips only the \(R\) eigenstate and reverses the sign of the phase.
+\end{enumerate}
+Reading: the two principles of r15.4 become one, a generation per frame map, and the number three of generations is the
+number of involutions of the doublet.  Whether the generation index sits on the frame doublet, and whether the time reversal
+acts on it linearly or antilinearly (v4.9.0-r02 requires an antilinear involutive exchange of matter and tachyon in three
+complex dimensions), is not shown.  The bend to the physical masses remains with the core, \(\gamma_M\) and OP1.
+
+\subsection*{v4.10.0-r15 status in the three frames}
+\label{subsec:v4100-r15-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item M: r15.2 reads the shadow, and hence the core size, in the matter frame; all mass statements are matter-frame readouts.
+\item T: by r15.1(b) and r15.5(b) chirality and the Koide data are the same in M and T.
+\item P: the photon is the unpolarised centre of the doublet (v4.9.0-r04, r19); otherwise not evaluated.
+\end{itemize}
+
+\subsection*{v4.10.0-r15 register entries}
+\label{subsec:v4100-r15-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r15\\
+\midrule
+r38.1(a)--(e) & unchanged (r15.1(a))\\
+``\(M\leftrightarrow T\) is a change of chirality'' (r38) & corrected: the tachyon map keeps the chirality; time reversal exchanges it (r15.1(b))\\
+frames as triality slots (r38) & earlier picture; frame maps act through the \(\mathbb C\) factor (r15.1(c))\\
+frames versus generations on the slots (r38, item~5) & conflict absent in its original form; different tensor factors (r15.1(d))\\
+core as shadow & reading; size open, frame M (r15.2)\\
+spin-1 triangle & exact; reference direction not native (r15.3)\\
+Koide as complementarity & \(K=2/(d+1)\); only \(d=2\) gives three states (r15.4)\\
+generations per frame map & reading; unbiased, \(K=\tfrac23\), sign of the phase from time reversal (r15.5)\\
+CT-001 to CT-004 & unchanged\\
+H100 / H102 & pending / pending\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r15 ledger and guard update}
+\label{subsec:v4100-r15-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r15}=(1,1,0)
+\]
+for (correction and status notes recorded; formulas checked in the cited scripts; generation index on the frame doublet,
+overlap \(\tfrac12\) and core size not derived).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r15,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r15}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+OP~1, OP~3 and OP~4 remain open.  The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.

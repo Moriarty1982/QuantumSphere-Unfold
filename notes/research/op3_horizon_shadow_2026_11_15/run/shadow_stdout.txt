@@ -1,0 +1,12 @@
+verlangtes Defizit pi/4 - 2/3 = 0.118731; gamma_M/2 = 0.118766
+(1) Schwarzschild-Schatten:
+    Photonensphaere 3M       r/M =    3.000: alpha =  90.00 Grad, Omega = 6.28318 sr
+    ISCO 6M                  r/M =    6.000: alpha =  45.00 Grad, Omega = 1.84030 sr
+    Frame-Versatz 2/beta^2   r/M =    6.626: alpha =  40.94 Grad, Omega = 1.53685 sr
+    10M                      r/M =   10.000: alpha =  27.69 Grad, Omega = 0.71982 sr
+    18M                      r/M =   18.000: alpha =  15.79 Grad, Omega = 0.23719 sr
+    Omega = gamma_M bei r/M = 17.9863 (= 8.9931 r_s); kein ausgezeichneter Abstand
+(2)+(3) flacher Schatten mit der Sektorlesart A/r^2 = gamma/2:
+    Spin 1/2 (q = 1/2)  : Defizit = q * gamma/2 = 0.059383  (verlangt 0.118731)
+    Vektor (q = 1)      : Defizit = q * gamma/2 = 0.118766  (verlangt 0.118731)
+    -> mit Ladung 1 trifft die Sektorlesart; mit Spin 1/2 braucht der Schatten Omega = gamma (Kappenbild)

@@ -1,0 +1,26 @@
+R hat Eigenwerte [-1j, 1j] ; gleiche Eigenlinien wie sigma_y: True
+
+(1) Ueberlappungen zwischen den Basen
+  T(sz) vs JB(sx): |<u|v>|^2 in [np.float64(0.5)]
+  T(sz) vs R(sy): |<u|v>|^2 in [np.float64(0.5)]
+  JB(sx) vs R(sy): |<u|v>|^2 in [np.float64(0.5)]
+
+(2) Alle 8 Wahlen (je ein Eigenzustand aus T, J_B, R)
+  Wahl (1, 1, 1): Phase/pi = +0.2500, K = 0.666667, Orientierung +1
+  Wahl (1, 1, -1): Phase/pi = -0.2500, K = 0.666667, Orientierung -1
+  Wahl (1, -1, 1): Phase/pi = -0.2500, K = 0.666667, Orientierung -1
+  Wahl (1, -1, -1): Phase/pi = +0.2500, K = 0.666667, Orientierung +1
+  Wahl (-1, 1, 1): Phase/pi = -0.2500, K = 0.666667, Orientierung -1
+  Wahl (-1, 1, -1): Phase/pi = +0.2500, K = 0.666667, Orientierung +1
+  Wahl (-1, -1, 1): Phase/pi = +0.2500, K = 0.666667, Orientierung +1
+  Wahl (-1, -1, -1): Phase/pi = -0.2500, K = 0.666667, Orientierung -1
+
+(3) Frame-Wechsel auf das Tripel (+,+,+)
+  R (Tachyon, unitaer): Phase/pi = +0.2500, K = 0.666667
+     T(sz): Eigenzustand [-1]
+     JB(sx): Eigenzustand [-1]
+     R(sy): Eigenzustand [1]
+  Konjugation (antiunitaer): Phase/pi = -0.2500, K = 0.666667
+     T(sz): Eigenzustand [1]
+     JB(sx): Eigenzustand [1]
+     R(sy): Eigenzustand [-1]

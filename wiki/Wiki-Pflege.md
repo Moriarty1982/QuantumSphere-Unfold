@@ -102,6 +102,21 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 15.11.2026: Runde v4.10.0-r15 eingetragen (Forschungslinie, Inhalt, Gesamtbild, Offene-Probleme, Vorhersagen-und-Tests,
+  Content-overview, Forschungsstand): Berichtigung der Frame-Lesart von r38 und vier Statusvermerke. Kein OP-Abschluss.
+
+- 15.11.2026: Forschungsstand um die Neulesung von r38 ergänzt (Frame-Zuordnung zu Slots durch r51 überholt,
+  Chiralitätsspur widerspricht r51.1(a)) und um die Lesart „eine Generation je Frame-Abbildung“. Kein OP-Abschluss.
+
+- 15.11.2026: Forschungsstand um Koide als vollständige Komplementarität ergänzt (K = 2/(d + 1), nur d = 2 gibt drei
+  Zustände). Kein OP-Abschluss.
+
+- 15.11.2026: Forschungsstand um das Spin-1-Dreieck ergänzt (Koide und Rang 3 in einer su(2); Bezugsrichtung nicht nativ,
+  folgt aus der Überlappung ½). Kein OP-Abschluss.
+
+- 15.11.2026: Forschungsstand um den Kern als Schatten eines Horizonts ergänzt (Anker rem:hc-shadow-vs-core,
+  Größenproben, Spin-1-Dreieck). Kein OP-Abschluss.
+
 - 15.11.2026: Forschungsstand: Berichtigung zu CT-004 (Name „string coupling“ trägt nichts, T11 ordnet nach J-Parität).
 
 - 15.11.2026: Forschungsstand um OP1 mit I1 ergänzt (Tachyon-Frame zählt Endpunkte fundamentaler Strings, Kramers-Regel

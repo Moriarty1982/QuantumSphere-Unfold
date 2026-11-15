@@ -10,7 +10,8 @@
   (14feb02, Release v5.1.0). **Keine offenen PRs.** Gemergt am 14./15.11.: #124–#128
   (OP3-Rückwärtssuche, Dauerauftrag Versionsverwaltung, Abbildung C⊗S → C⊗H⊗O, bewachter Kern, Release), davor #108–#123.
   Gemergte Zweige sind gelöscht. Nicht geprüft: die Läufe nach dem Merge von #128 (Wiki-Sync, Zwei-PDF).
-- **Letzte Runde:** v4.10.0-r14 (Statusvermerke zu Koide-Bezug, gebogenen Achsen und bewachtem Kern), in v5.1.0.
+- **Letzte Runde:** v4.10.0-r15 (Berichtigung zu r38, Statusvermerke), auf Zweig `research/op3-horizon-shadow`, nicht gepusht;
+  davor r14 (in v5.1.0).
 - **Hypothesen:** zuletzt vergeben H104 (k226, widerlegt). Frei: **H105, k227**.
   - H100 offen: nächster NuFIT-Fit nach 6.1, Frist 31.12.2027 (`notes/research/predictions/k222_test_h100.py`).
   - H102 offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem 13.11.2026 (`k224_test_h102.py m_tau sigma`).
@@ -24,7 +25,9 @@
   offener Strings (Chan–Paton, j = ½), M Kanten des Spin-Netzwerks. Die Kramers-Regel ist ausgeschlossen (β = 0,337).
   Kein blinder Test. Gemergt über PR #129 (c9bfb19).
 - **Daueraufträge:** gemergte Zweige löschen (14.11.); interne Nummern selbst vergeben und Buchführungs-Commits ohne
-  Rückfrage auf `main` pushen (15.11., `AGENTS.md`). Inhalt nur über PR, Zenodo nur mit Freigabe.
+  Rückfrage auf `main` pushen (15.11., `AGENTS.md`). Neu (15.11.): **Issues nachziehen** — Register #17 und berührte OP-Issues
+  nach jeder inhaltlichen Änderung ohne Rückfrage aktualisieren (`AGENTS.md`). Am 15.11. nachgezogen: #17 (Basis v5.1.0),
+  Sammelnachträge #10–#12, Stand-Vermerke #13–#16, **neues OP3-Issue #131**. Inhalt nur über PR, Zenodo nur mit Freigabe.
 - **Zenodo-Hinweis:** Das Upload-Hilfsskript setzt die Vorschau nicht selbst; der Autor setzt sie im Entwurf von Hand.
   Dabei kann die Veröffentlichung mit ausgelöst werden (so bei v5.1.0).
 
@@ -41,6 +44,29 @@
   Ein Drei-Generationen-Träger mit neutralem Levi-Civita-Tripel fehlt weiterhin (r13.6, r14.3–r14.4).
 - **Notizen:** `notes/research/op3_action_balance_search_2026_11_14/`, `op3_cs_dixon_map_2026_11_15/`,
   `op3_guarded_core_flux_2026_11_15/`, Runde `notes/research/v4_10_0_r14/`.
+
+- **Schatten (15.11., Erkundung, `notes/research/op3_horizon_shadow_2026_11_15/`, Idee des Autors):** Der Kern als
+  Schatten eines Horizonts auf dem Himmel des Beobachters. Er ist die gesuchte Abbildung und von selbst flussfrei,
+  mit Anker im Paper (`rem:hc-shadow-vs-core`). Die Größe bleibt offen: Synge braucht r ≈ 9 r_s, der Sektor gibt γ/2.
+  Spin 1 behebt den Faktor 2 nicht; das Spin-1-Dreieck mit Überlappung ½ ist aber schon von selbst gebogen (0,6790).
+  Frame M folgt aus der Invarianz der Massen (Lesart).
+
+- **Spin-1-Dreieck (15.11., Erkundung, `notes/research/op3_spin1_triangle_2026_11_15/`):** Drei kohärente Spin-1-Zustände
+  mit Überlappung ½ geben Koide 2/3, Rang 3 und Zyklus in einer su(2); Phase 0,6790, Rest bis zu den Leptonen 0,0124.
+  Die Bezugsrichtung (38,68°) ist nicht nativ (143 Kandidaten, kein Treffer) und folgt aus der Überlappung ½ selbst.
+  Koide = drei Zustände auf halbem Fubini–Study-Weg zwischen gleich und orthogonal. Den Rest nicht ohne Vorab-Notiz deuten.
+
+- **Koide als Komplementarität (15.11., Erkundung, `notes/research/op3_koide_complementarity_2026_11_15/`):** Der Oktant ist
+  je ein Zustand der drei gegenseitig unverzerrten Basen eines Qubits. Ein vollständiger Satz in Dimension d gibt
+  N = d + 1 Zustände mit K = 2/N; nur d = 2 gibt drei Zustände und K = 2/3. Zwei Prinzipien gesetzt (ein Zustand je Basis,
+  vollständiger Satz); Biegung bleibt beim Kern, Neutralität bei CT-003. Kandidat für das Physik-Paper.
+
+- **r38 neu gelesen (15.11., Erkundung, `notes/research/op3_frame_map_generations_2026_11_15/`, Auftrag des Autors):** r38
+  ordnet Frames den Triality-Slots zu, ohne C-Faktor. r51 legt die Frame-Abbildungen in den C-Faktor; Punkt 6 von r38
+  (M ↔ T = Chiralitätswechsel) widerspricht r51.1(a) und ist nicht berichtigt. Lesart „eine Generation je
+  Frame-Abbildung“ (T, J_B, R): unverzerrt, K = 2/3, Phase ±π/4; R erhält, Konjugation kehrt das Vorzeichen.
+  **Runde v4.10.0-r15 geschrieben** (Berichtigung zu r38 und Statusvermerke r15.2–r15.5 zu Schatten, Spin-1-Dreieck,
+  Komplementarität und Generationen je Frame-Abbildung), Notizen `notes/research/v4_10_0_r15/`. Zuletzt vergebene Runde: r15.
 
 ## Nächster Schritt (Autorentscheidung)
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,

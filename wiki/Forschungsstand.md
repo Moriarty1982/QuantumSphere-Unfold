@@ -1,5 +1,62 @@
 # Forschungsstand
 
+### OP3: r38 neu gelesen, eine Generation je Frame-Abbildung (15.11.2026, Runde r15)
+
+Erkundung (nicht blind). **r38** ordnet die Frames den Triality-Slots zu (Photon Vektor-Slot, Materie und Tachyon
+Spinor-Slots) und rechnet ohne den C-Faktor. Seit **r51** wirken die Frame-Abbildungen aber über den C-Faktor auf das
+Dublett, und die Tachyon-Abbildung lässt die Chiralität fest. Damit widerspricht r38 (Punkt 6: M ↔ T als
+Chiralitätswechsel) r51.1(a); r51 hat r41–r49 berichtigt, r38 nicht. Die Algebra von r38.1 bleibt gültig. Der offene
+Punkt „Frames und Generationen auf denselben Slots“ entfällt in seiner ursprünglichen Form, weil beide auf verschiedenen
+Tensorfaktoren sitzen.
+- **Lesart:** Jede Generation ist ein Eigenzustand je einer der drei Frame-Abbildungen T (σz), J_B (σx), R (z ↦ iz). Die
+  Basen sind paarweise unverzerrt; alle Wahlen geben K = 2/3 und Phase ±π/4. Der Frame-Wechsel R erhält das Vorzeichen,
+  die antiunitäre Konjugation kehrt es um.
+- **Offen:** ob der Generationsindex auf dem Frame-Dublett sitzt; die Biegung (Kern, OP1).
+- **Runde:** Berichtigung und Statusvermerke stehen in v4.10.0-r15.
+
+[Erkundung](../notes/research/op3_frame_map_generations_2026_11_15/README.md).
+
+### OP3: Koide als vollständige Komplementarität (15.11.2026)
+
+Erkundung (nicht blind). Der Oktant besteht aus je einem Eigenzustand von σx, σy und σz, also aus je einem Zustand jeder
+der drei gegenseitig unverzerrten Basen eines Qubits. Allgemein gibt ein Zustand aus jeder Basis eines vollständigen
+Satzes in Dimension d genau N = d + 1 Zustände mit **K = 2/(d + 1) = 2/N** (geprüft für d = 2, 3, 5, 7). Nur d = 2 gibt
+drei Zustände; dann ist K = 2/3. In dieser Lesart sind „drei Generationen“ und „Koide 2/3“ eine einzige Aussage.
+- **Was gesetzt bleibt:** zwei Prinzipien, „ein Zustand je komplementärer Basis“ und „vollständiger Satz“.
+- **Was die Lesart nicht leistet:** Die Biegung zu den echten Massen bleibt beim Kern (γ_M, OP1), die Neutralität bei
+  CT-003.
+
+[Erkundung](../notes/research/op3_koide_complementarity_2026_11_15/README.md).
+
+### OP3: Das Spin-1-Dreieck (15.11.2026)
+
+Erkundung (nicht blind). Drei kohärente Spin-1-Zustände mit Überlappung ½ (Seitenwinkel 65,53°, cos = √2 − 1) tragen in
+*einer* su(2) zugleich Koide 2/3, Rang 3 (drei positive Massen) und einen Zyklus der Ordnung 3. Das hebt das Hindernis
+„Spin ½ gegen Spin 1“ auf. Das Dreieck ist ohne Kern schon gebogen: Phase 3·arccos(1 − 1/√2) − π = 0,6790; bis zu den
+Leptonen fehlen 0,0124.
+- **Rückwärtssuche:** Für die Bezugsrichtung (38,68° zur Zyklusachse) gibt es unter 143 vorab festgelegten nativen
+  Kandidaten keinen Treffer.
+- **Warum:** Die Richtung folgt allein aus der Überlappung ½. Gleichwertig: Koide verlangt drei Zustände genau auf
+  halbem Fubini–Study-Weg zwischen gleich und orthogonal. Die Frage führt also auf die Herkunft der Überlappung ½ zurück.
+
+[Erkundung](../notes/research/op3_spin1_triangle_2026_11_15/README.md).
+
+### OP3/OP1: Der Kern als Schatten eines Horizonts (15.11.2026)
+
+Idee des Autors, als Erkundung festgehalten (nicht blind). Der flussfreie Kern auf der Generationskugel wird als
+**Schatten** eines Horizonts auf dem Himmel des Beobachters gelesen.
+- **Was der Schatten leistet:** Er ist die gesuchte Sorte Abbildung (Fläche → Raumwinkel) und von selbst flussfrei. Im
+  Paper hat er einen Anker: `rem:hc-shadow-vs-core` (v470/12), verschiedene Auslesungen zeigen verschiedene sichtbare
+  Schatten desselben Kerns.
+- **Die Größe bleibt offen:** Der Schwarzschild-Schatten hängt vom Abstand ab; γ_M ergäbe sich erst bei etwa 9 r_s, ohne
+  Grund. Die Sektorlesart von CT-001 gibt γ/2, also die Hälfte.
+- **Die Ladung behebt den Faktor 2 nicht:** Drei kohärente Spin-1-Zustände mit Überlappung ½ sind schon von selbst
+  gebogen (Phase 3·arccos(1 − 1/√2) − π = 0,6790, drei Massen 1 : 16,2 : 65,9), liegen aber neben den Leptonen.
+- **Frame M:** Weil Schatten frame-abhängig sind, die Massen aber nicht, muss der Schatten im Frame M gelesen werden.
+  Das gibt dem Guard „Ende im Frame M“ von CT-002 einen Grund (Lesart).
+
+[Erkundung](../notes/research/op3_horizon_shadow_2026_11_15/README.md).
+
 ### OP1 mit I1: Tachyon-Frame zählt Stringendpunkte (15.11.2026)
 
 Erkundung (nicht blind) auf Autorentscheidung, mit der zurückgestellten Idee I1. Gesucht war ein Grund, warum der
