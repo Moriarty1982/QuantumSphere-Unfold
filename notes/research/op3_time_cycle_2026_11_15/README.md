@@ -61,3 +61,25 @@ Deutung, keine Vorhersage.** Skript `harmonics_reading.py`, Ausgabe `run/harmoni
 **Grenzen:** Die Gewichte sind die Massen; vorhergesagt wird nichts. Die Spannung zu r16.7 (kohärenter Sektor dort, Rang 2
 hier) bleibt. Mögliche nächste Frage, nicht gerechnet: ob eine Uhr-Struktur des Papers (Photonuhr, Uhrfenster) eine
 Bedingung an die Autokorrelation nach einem Drittel der Periode liefert.
+
+## Nachtrag 15.11.2026: Legt die Photon-Uhr die Autokorrelation fest? Nein
+Auftrag des Autors: „weiter“ (die oben genannte nächste Frage). **Erkundung, nicht blind.** Skript `clock_coherence.py`,
+Ausgabe `run/clock_coherence_stdout.txt`.
+
+**Vorwissen:** Die Photon-Uhr-Sonde (v4.7.0-r90, Quelle v470-r15) ist C(τ) = 1 + η·|Σ w_m e^{iφ_m}|²/(Σ|w_m|)². Ein Fenster V
+erhält den Selektor, solange das Kohärenzfunktional mindestens ρ_V ist (r90: ρ_V3 = 3/5, ρ_V5 = 2/5, ρ_V8 = 7/9; erste
+Ordnung 1 − Var(φ) ≥ ρ_V). r12.2(a) (v4.9.0): Eine Dualitätsdrift α je Auslesung ist tolerierbar für sin²α < 1/5,
+α < 26,57°. Die Quelle lehnt die Gleichsetzung von Uhrfrequenzen mit physikalischen Frequenzen ausdrücklich ab
+(v4.9.0-r12, „What is fixed and what is not“); eine globale Photon-Uhr-Aussage ist durch die Guards verboten.
+
+**Ergebnisse**
+1. **Dasselbe Funktional.** Die Koide-Bedingung aus r16.9(b) ist genau das Kohärenzfunktional der Uhr-Sonde, mit den
+   Gewichten √m_k/Σ√m und den Phasen −2π/3, 0, +2π/3 nach einem Drittel der Periode: Wert 0,499991 (Koide ½).
+2. **Keine Schwelle bei ½.** ρ_V3 = 3/5, ρ_V5 = 2/5, ρ_V8 = 7/9. Der Selektor bliebe nur auf V5 erhalten. Dass ½ in der Mitte
+   der Schwellen der Primärkette {V3, V5} liegt, ist nachträglich gesehen und wird nicht verwertet.
+3. **Drift weit außerhalb.** Die Auslesungen des Zeitzyklus liegen auf den schwingenden Anteilen 120° auseinander; die Uhr
+   toleriert 26,57° je Auslesung. Die erste Ordnung von r90 ist bei dieser Streuung unbrauchbar (1 − Var = 0,23).
+
+**Folgerung:** Die Uhr-Strukturen haben dieselbe mathematische Form wie die Koide-Bedingung, legen den Wert ½ aber nicht
+fest. Eine Gleichsetzung der Uhr mit der Feldfrequenz ω würde zudem genau die Identifikation verlangen, die die Quelle
+ablehnt, und an die verbotene globale Photon-Uhr-Aussage rühren. Ein Prinzip für Σp² = 2/3 ist damit weiter nicht gefunden.

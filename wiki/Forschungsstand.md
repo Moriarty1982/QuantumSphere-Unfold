@@ -13,6 +13,9 @@ Dreierzyklus auf der invarianten Matrix S; ihre Bahn hat von selbst eine zirkula
   den schwingenden Anteilen der Mehrheits- bzw. Minderheitshelizität. Masseneigenzustände = Eigenzustände der
   Zeitverschiebung; drei, weil s(t) quadratisch ist. Koide heißt: Die Autokorrelation der Invariante nach einem Drittel
   der Periode hat den Betrag 1/√2. Im flachen Grenzfall ist der Minderheitsanteil null-artig (Elektron masselos).
+- **Photon-Uhr (Nachtrag):** Die Koide-Bedingung hat genau die Form des Kohärenzfunktionals der Photon-Uhr-Sonde (r90),
+  aber keine Fensterschwelle liegt bei ½ (V3 3/5, V5 2/5, V8 7/9), und die Drift von 120° je Auslesung liegt weit außerhalb
+  der Toleranz von 26,57°. Eine Gleichsetzung von Uhr- und Feldfrequenz lehnt die Quelle ab. Kein Prinzip für ½.
 
 [Erkundung](../notes/research/op3_time_cycle_2026_11_15/README.md).
 
