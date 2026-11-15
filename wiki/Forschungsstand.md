@@ -1,5 +1,19 @@
 # Forschungsstand
 
+### OP3: Die dritte Lorentz-Invariante w (15.11.2026)
+
+Erkundung (nicht blind). Ein zeitharmonisches Feld mit komplexen Amplituden hat sechs reelle Lorentz-Invarianten:
+s₊ = (E + iB)², s₋ = (E − iB)² und **w = F₊·F̄₋**. Die augenblickliche Invariante zerfällt exakt in
+s(t) = ¼ [s₊ e^{−2iωt} + 2w + s̄₋ e^{2iωt}]; w ist ihr Mittelwert.
+- **Matrix S = [[s₊, w], [w, s̄₋]]:** invariant, komplex symmetrisch, ein Spin-1-Objekt; die Zeitverschiebung gibt die
+  Gewichte −1, 0, +1, ihre Achse ist die Helizitätsachse. Rang-1-Matrizen sind die kohärenten Zustände, also das Dublett χ;
+  das Oktant aus r16.7 liegt dort.
+- **Biegung:** Die dritte Richtung, die sie braucht, ist der Rang-2-Anteil von S. Ihre Größe (σ₂/σ₁) legt die Feldstruktur
+  nicht fest; sie bleibt beim Kern (γ_M, OP1).
+- **H105 nicht vergeben:** Ohne ein Prinzip für σ₂/σ₁ würde ein Test eine Wahl prüfen, nicht die Struktur.
+
+[Erkundung](../notes/research/op3_third_invariant_2026_11_15/README.md).
+
 ### Grundidee: Was heißt „ein Objekt“? (k220, Erkundung vom 7.11.2026, übernommen am 15.11.)
 
 Erkundung ohne Kriterium. G = SO(3,ℂ) × U(1)_Dualität wirkt auf z = E + iB **transitiv auf jeder Schale |s| = r > 0**

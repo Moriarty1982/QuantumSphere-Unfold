@@ -91,6 +91,11 @@
   P Fixpunkt) lag nur auf dem lokalen Zweig `claude/quantenphysik-paper-herleitung-e723a3`; jetzt unter
   `notes/research/k220_ein_objekt_2026_11_07/` (PR #134). Lokale Altzweige danach gelöscht (Autorenauftrag).
 
+- **Dritte Invariante (15.11., Erkundung, `notes/research/op3_third_invariant_2026_11_15/`):** w = F₊·F̄₋ ist die
+  dritte komplexe Lorentz-Invariante (6 reelle); s(t) = ¼[s₊e^{−2iωt} + 2w + s̄₋e^{2iωt}]. S = [[s₊, w], [w, s̄₋]] ist Spin 1;
+  Rang 1 = χ (Oktant flach), Rang 2 gibt Platz für die Biegung, Größe σ₂/σ₁ frei. **H105 bewusst nicht vergeben** (keine
+  wahlfreie Konstruktion). Zuletzt vergeben weiterhin H104; frei H105, k227.
+
 ## Nächster Schritt (Autorentscheidung)
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,
   `Erkundung_Zaehlregel_Prinzip.md`) und Suchrichtung prüfen. Zu beachten: Eine Kramers-Regel (nur halbzahlige Spins,

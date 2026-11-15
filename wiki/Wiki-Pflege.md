@@ -102,6 +102,9 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 15.11.2026: Forschungsstand und Offene-Probleme um die dritte Lorentz-Invariante w ergänzt (S als Spin-1-Objekt, Biegung
+  ohne Größe; H105 nicht vergeben). Kein OP-Abschluss.
+
 - 15.11.2026: r16.7 (Auslesungen eines Objekts, höchstens drei nicht orthogonale Eigenzustände) in Forschungsstand,
   Forschungslinie, Inhalt, Gesamtbild, Offene-Probleme und Content-overview eingetragen. Kein OP-Abschluss.
 
