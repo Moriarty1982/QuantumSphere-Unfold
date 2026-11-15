@@ -115,7 +115,8 @@
 
 - **Suche nach blindem Test (15.11., `notes/research/blind_test_search_2026_11_15/`, Zweig `research/blind-test-search`):**
   kein Test gefunden. Neutrino-Kandidaten „Majorana: p₊ = p₋“ (R = 0) und „p₋ = 0“ (R = 0,0052) durch Daten ausgeschlossen;
-  δ_CP, Majorana/Dirac, Strang-Statistik ohne Konstruktion. Daten 15.11.: NuFIT weiter 6.0, PDG 2026 ohne neues m_τ.
+  δ_CP, Majorana/Dirac, Strang-Statistik ohne Konstruktion. Daten 15.11.: kein NuFIT nach 6.1, PDG 2026 ohne neues m_τ.
+  H2 nachgerechnet: Σm_ν = 0,0592 eV stabil (NuFIT 6.0/6.1, JUNO, SNO+), verträglich; Wiki-Angabe zur Ordnung berichtigt.
 
 ## Nächster Schritt (Autorentscheidung)
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,

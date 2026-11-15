@@ -102,6 +102,9 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 15.11.2026: H2 nachgerechnet; in Vorhersagen-und-Tests die unbelegte Angabe „normale Ordnung von JUNO gestützt“
+  berichtigt. Kein OP-Abschluss.
+
 - 15.11.2026: Forschungsstand und Vorhersagen-und-Tests um die Suche nach einem blinden Test ergänzt (ohne Ergebnis). Kein OP-Abschluss.
 
 - 15.11.2026: Runde v4.10.0-r17 eingetragen (Forschungslinie, Inhalt, Gesamtbild, Offene-Probleme, Vorhersagen-und-Tests,
