@@ -12,6 +12,9 @@ auf einer Horizont-Punktierung mit Spin j über dieselbe SU(2) wirken, gilt: **I
   sie gibt dieselbe T-Regel wie die Stringlesart (I1), ohne „T = String-Sektor“ (Guard 1 von CT-004).
 - **Offen:** die Brücke vom Feld-Dublett zur Punktierung; warum T Irreduzibilität verlangt und M nicht; M braucht weiter P1.
   Kein Test.
+- **Brücke über die Barbero-Verbindung (Nachtrag):** A_γ = c₊A₊ + c₋A₋ mit c± = (1 ∓ iγ)/2; reelles γ liegt auf dem
+  Äquator des Dubletts aus selbst- und antiselbstdualer Verbindung, wie reelle Felder bei χ. Die Frame-Abbildungen wirken
+  dann auf γ als −1/γ, −γ, 1/γ; keine bildet γ_M auf γ_T ab. Das gibt die Brücke zu den Punktierungen nicht.
 
 [Erkundung](../notes/research/op1_frame_irreducibility_2026_11_15/README.md).
 

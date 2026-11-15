@@ -65,3 +65,30 @@ und trägt alles Folgende.
 - H104 bleibt bestehen: Mit anderem Flächenspektrum gäbe dieselbe Bedingung andere Werte.
 
 OP1–OP5, C5, C6/T2 und die Guards sind unverändert.
+
+## Nachtrag 15.11.2026: Brücke (A) über die Barbero-Verbindung? Nur teilweise
+Auftrag des Autors: „weiter“. **Erkundung, nicht blind** (die Formeln sind Standard). Skript `barbero_doublet.py`, Ausgabe
+`run/barbero_doublet_stdout.txt`.
+
+**Suchrichtung:** Gesucht ist ein Grund, warum die Frame-Abbildungen des Feld-Dubletts auf Horizont-Punktierungen wirken.
+Die Punktierungen tragen Spins der SU(2) der Ashtekar–Barbero-Verbindung A_γ = Γ + γK. Kandidat: Die Gravitation hat
+dieselbe Zerlegung in selbst- und antiselbstduale Anteile wie das Maxwell-Feld (r05.2(c): Weyl-Krümmung =
+gravito-elektrisch + i gravito-magnetisch). Vorwissen: Im Repo kommt die Zerlegung A_γ = c₊A₊ + c₋A₋ nicht vor;
+`../op3_flux_two_thirds_2026_11_13.md` nennt γ als Holonomie-Phase bzw. topologischen Winkel.
+
+**Ergebnisse**
+1. Mit A± = Γ ± iK gilt exakt A_γ = c₊A₊ + c₋A₋, c± = (1 ∓ iγ)/2. **Reelles γ liegt auf dem Äquator** des Dubletts (A₊, A₋)
+   (|c₊| = |c₋|), die selbst- bzw. antiselbstdualen Ashtekar-Variablen γ = ±i an den **Polen**: dieselbe Geometrie wie bei χ
+   (reelle Felder auf dem Äquator, selbstduale an den Polen).
+2. Wirken die Frame-Abbildungen auf (c₊, c₋) wie auf χ, dann auf γ als R: γ ↦ −1/γ, T: γ ↦ −γ, J_B: γ ↦ 1/γ.
+3. **Keine bildet γ_M auf γ_T ab** (Bilder von γ_M: −4,21; −0,2375; 4,21; γ_T = 0,1274). Der Unterschied der Flächenquanten
+   (r10.3) ist also kein Frame-Bild der Verbindung.
+4. In γ-Sprache sind die sechs Pole von r16.7 die Werte γ = 0 bzw. ∞ (T-Achse), ±1 (J_B-Achse), ±i (R-Achse).
+
+**Folgerung:** Die Barbero-Verbindung bietet eine natürliche Stelle, an der die Frame-Abbildungen auf die Gravitation wirken,
+nämlich auf γ selbst. Das ist aber nicht die Brücke (A): (A) verlangt eine Wirkung auf die Spinzustände einer Punktierung
+(exp(−iπJ_k)), nicht auf den Parameter γ. Und die Wirkung auf γ erzeugt den Frame-Unterschied γ_M/γ_T nicht. Das passt zur
+Lesart der Erkundung oben: Der Unterschied liegt in der Zählung, nicht in einer Transformation von γ. (A) bleibt offen.
+
+Nachträglich gesehen und nicht verwertet: Der Äquatorwinkel 2 arctan γ_M = 26,72° liegt nahe der Uhr-Toleranz
+arctan ½ = 26,57° (v4.9.0-r12.2); das war nicht vorab gelistet.

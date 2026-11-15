@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 15.11.2026: Forschungsstand um die Barbero-Verbindung als Punkt des Dubletts (A₊, A₋) ergänzt. Kein OP-Abschluss.
+
 - 15.11.2026: Forschungsstand um die OP1-Erkundung zur Irreduzibilität der Frame-Abbildungen ergänzt. Kein OP-Abschluss.
 
 - 15.11.2026: Forschungsstand um den Entropie-Kandidaten für die Treue ½ ergänzt (Lesart). Kein OP-Abschluss.
