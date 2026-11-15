@@ -69,6 +69,11 @@
   **Runde v4.10.0-r15 geschrieben** (Berichtigung zu r38 und Statusvermerke r15.2–r15.5 zu Schatten, Spin-1-Dreieck,
   Komplementarität und Generationen je Frame-Abbildung), Notizen `notes/research/v4_10_0_r15/`. Zuletzt vergebene Runde: r15.
 
+- **Nachtrag zu r15.5 (15.11., Zweig `research/op3-frame-doublet-check`):** Auf C⊗O ist R skalar, T und J_B haben
+  dieselben Eigenstrahlen, und diese tragen keine bestimmte Ladung (⟨Q⟩ = ½). Die Lesart „Generation je Frame-Abbildung“
+  gilt nur auf der komplexifizierten Ebene z, also auf einem gesetzten Qubit; sie fällt auf r15.4 zurück. Gehört in die
+  nächste Runde (r16), noch nicht geschrieben.
+
 ## Nächster Schritt (Autorentscheidung)
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,
   `Erkundung_Zaehlregel_Prinzip.md`) und Suchrichtung prüfen. Zu beachten: Eine Kramers-Regel (nur halbzahlige Spins,

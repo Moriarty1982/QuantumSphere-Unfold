@@ -13,6 +13,10 @@ Tensorfaktoren sitzen.
   die antiunitäre Konjugation kehrt es um.
 - **Offen:** ob der Generationsindex auf dem Frame-Dublett sitzt; die Biegung (Kern, OP1).
 - **Runde:** Berichtigung und Statusvermerke stehen in v4.10.0-r15.
+- **Nachtrag (15.11., nach r15):** Auf den Zuständen von C⊗O trägt die Lesart nicht. Dort ist R die skalare
+  Multiplikation mit i, T und J_B sind antilinear und haben dieselben Eigenstrahlen (reelle Zustände), und diese haben
+  keine bestimmte Ladung oder Chiralität (⟨Q⟩ = ½). Die drei unverzerrten Basen gibt es nur auf der komplexifizierten
+  Amplitudenebene z; die Lesart fällt damit auf ein gesetztes Qubit zurück (Komplementarität, r15.4).
 
 [Erkundung](../notes/research/op3_frame_map_generations_2026_11_15/README.md).
 

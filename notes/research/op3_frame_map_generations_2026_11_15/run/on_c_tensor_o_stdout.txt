@@ -1,0 +1,5 @@
+(1) R = i*1 auf C x O: jeder Zustand Eigenzustand (Eigenwert i); R zeichnet keine Basis aus
+(2) Zufaellige T-Eigenstrahlen (Phase * reell), auch J_B-Eigenstrahlen: 200/200; T und J_B haben dieselben Eigenstrahlen, Ueberlappung 1 statt 1/2
+(3) Reelle Zustaende: Gewicht in P_(l,r) = Gewicht in P_(-l,-r) (max. Abweichung 0.0e+00); <Q> = 1/2 fuer alle (max. Abweichung 2.2e-16)
+    -> kein T- oder J_B-Eigenzustand hat eine bestimmte Ladung oder Chiralitaet
+(4) Ports (Eigenraeume von iL_e7): Dimension 4 und 4; conj tauscht sie: True

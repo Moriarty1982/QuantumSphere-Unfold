@@ -74,3 +74,26 @@ Frame-Abbildungen T, J_B, R des Dubletts.** Ergebnisse (exakt):
 - Ladungsneutralität weiter unter CT-003.
 
 OP1–OP5, C5, C6/T2 und die Guards sind unverändert.
+
+## Nachtrag 15.11.2026: Sitzt der Generationsindex auf dem Frame-Dublett? Nein, nicht auf C ⊗ O
+Auftrag des Autors: „weiter“. Geprüft wird der offene Punkt aus Teil B mit den Operatoren von r51 selbst
+(`notes/research/v4_10_0_r48_r55/llm/k91_test_h35.py`): R ist dort die C-lineare Multiplikation mit i, T die komplexe
+Konjugation (antilinear), J_B = R∘T. Skript `on_c_tensor_o.py`, Ausgabe `run/on_c_tensor_o_stdout.txt`.
+
+1. **R ist auf C ⊗ O ein Skalar.** Jeder Zustand ist R-Eigenzustand; R zeichnet keine Basis aus.
+2. **T und J_B haben dieselben Eigenstrahlen.** Für ein antilineares K ist Kv = λv genau für v = Phase · reell, bei T wie
+   bei J_B (200 von 200 Stichproben). Ihre Überlappung ist 1, nicht ½.
+3. **Kein T- oder J_B-Eigenzustand hat eine bestimmte Ladung oder Chiralität.** T bildet P_(l,r) auf P_(−l,−r) ab
+   (r51.1(a)); ein reeller Zustand hat deshalb in beiden Sektoren gleiches Gewicht, und ⟨Q⟩ = ½ für alle (Abweichung
+   höchstens 2·10⁻¹⁶).
+4. Die drei gegenseitig unverzerrten Basen gibt es nur auf der **komplexifizierten Amplitudenebene z** (dem reellen
+   2-dimensionalen Faktor), nicht unter den Materiezuständen von C ⊗ O. Die Ports (Eigenräume von iL_e7, je Dimension 4)
+   werden von der Konjugation vertauscht; auf ihnen ist R ebenfalls skalar.
+
+**Folge für r15.5:** Die Lesart „eine Generation je Frame-Abbildung“ trägt auf den Zuständen des Bestands nicht. Zwei der
+drei „Generationen“ hätten keine bestimmte Ladung (Ladung und Ladungskonjugat gemischt), und T und J_B lieferten gar keine
+verschiedenen Basen. Sie lässt sich nur auf einer **zusätzlichen Kopie** der Amplitudenebene halten, und damit fällt sie auf
+r15.4 zurück: ein gesetztes Qubit mit seinen drei Basen, ohne Quelle im Bestand. Die beiden Prinzipien der
+Komplementarität bleiben gesetzt. Die Mathematik von r15.5(a)–(c) ist richtig, aber nur auf der Ebene z.
+
+Das ist eine Einschränkung der Lesart, nicht eine Berichtigung einer Rechnung. Sie gehört in die nächste Runde (Append-only).

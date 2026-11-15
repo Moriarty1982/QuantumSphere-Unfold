@@ -102,6 +102,9 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 15.11.2026: Nachtrag zu r15.5 in Forschungsstand und Offene-Probleme (Frame-Eigenzustände auf C⊗O ohne bestimmte
+  Ladung; Lesart fällt auf die Komplementarität zurück). Kein OP-Abschluss.
+
 - 15.11.2026: Runde v4.10.0-r15 eingetragen (Forschungslinie, Inhalt, Gesamtbild, Offene-Probleme, Vorhersagen-und-Tests,
   Content-overview, Forschungsstand): Berichtigung der Frame-Lesart von r38 und vier Statusvermerke. Kein OP-Abschluss.
 
