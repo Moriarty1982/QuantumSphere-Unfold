@@ -98,7 +98,7 @@ class EditionTests(unittest.TestCase):
             main = article.split(r'\appendix')[0]
             self.assertIn(r'\begin{abstract}', main)
             self.assertIn(r'\author{Marc Brendecke', main)
-            self.assertIn('Version DOI: 10.5281/zenodo.24152615', main)
+            self.assertIn('Version DOI: ' + json.loads((Path(__file__).resolve().parents[2] / 'qam/editions/v5_release.json').read_text(encoding='utf-8'))['version_doi'], main)
             self.assertIn('Concept DOI: 10.5281/zenodo.19210728', main)
             self.assertIn('Open research question: expansion and unequal string relaxation', main)
             self.assertNotIn('/ frame ', main)

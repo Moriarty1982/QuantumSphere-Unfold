@@ -1,6 +1,18 @@
 # Übergabe: Stand der letzten Sitzung
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.**
 
+## Stand vom 15.11.2026, nachts (Claude Opus)
+- **v5.1.0 ist veröffentlicht** (vom Autor auf Zenodo, 15.11.2026): Version-DOI 10.5281/zenodo.24237112,
+  Record https://zenodo.org/records/24237112, Vorgänger v5.0.0 (24152615). Vollausgabe 1412 Seiten, Physik-Paper
+  29 Seiten. Paketquellstand dfdb413, **Tag v5.1.0** und GitHub-Release gesetzt. Nach der Veröffentlichung geprüft:
+  acht Dateien prüfsummengleich mit dem Paket, Vorschau = Vollausgabe, Relation „neue Version von“ v5.0.0.
+  Läufe: Reservierung 43661985497, Bau 43662217359, Upload 43663052541. Die Vorschau setzt das Hilfsskript weiterhin
+  nicht selbst; der Autor setzt sie von Hand.
+- **Zweig `release/v5.1.0-prep`** enthält Runde r14, die Ergänzungen im Physik-Paper, die auf
+  `qam/editions/v5_release.json` umgestellten Werkzeuge, Metadaten, Zitierdaten, Wiki und `release/v5.1.0/README.md`.
+  **PR offen, Merge nur auf „PR NN mergen“.**
+- **Nächste Version:** v5.1.0 enthält alles bis r14. Neue Kandidaten wieder in dieser Datei sammeln.
+
 ## Stand vom 15.11.2026 (Claude Opus)
 - **GitHub:** **PR #127 gemergt als 83e25e3** (bewachter Kern: Flussverdrängung, Fäden 1–3, Literatur, Topologie,
   Umkehrwalze, Frame-Quant), davor #126 (823802e, Abbildung C⊗S → C⊗H⊗O), #125 (087d13f), #124 (f5ede73).

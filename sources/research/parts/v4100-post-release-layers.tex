@@ -1783,3 +1783,172 @@ R_{\rm glob}^{(v4100\text{-}r13,+)}=(0,1,1,1,1),
 \]
 OP~3 and OP~4 remain open.  The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r14 Source-Only: Status Notes on the Koide Reference, Bent Axes and the Guarded Core}
+\addcontentsline{toc}{section}{v4.10.0-r14 Source-Only: Status Notes on the Koide Reference, Bent Axes and the Guarded Core}
+\label{sec:v4100-r14-bent-axes-guarded-core}
+% ============================================================================
+
+\paragraph{Purpose.}
+After v4.10.0-r13 the OP3 work continued from the profile that the present inventory could not meet.  This layer records
+the explorations of 14 and 15 November 2026: the slot Fourier operation and its limits, the search for a source of the
+balanced reference, a first map between the sedenion and the Dixon carriers, the reading of the charged-lepton phase as a
+bent octant, and the reading of the bend as a flux-free guarded core in the Hopf fibration.  It records one test (H104,
+refuted) and two corrections of statements made during the work.  Apart from H104 all items are explorations without
+pre-registration; none is compared with data, and the Koide target \(K=\tfrac23\) and the phases were known in advance.  The
+notes are \texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r14/} and the folders and files cited there.  Earlier layers
+are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r14 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.0.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24152615}{10.5281/zenodo.24152615} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r14 status notes}
+\label{subsec:v4100-r14-status}
+
+\paragraph{Theoremlet v4.10.0-r14.1 (H104: the singular position of the counting pair depends on the fixed spectrum).}
+Pre-registered (commit \texttt{c58f449}).  With a free area spectrum (23 rules, 253 pairs) a second pair of counting rules
+meets all three windows of v4.10.0-r09.1 (\(\gamma_L=1.864824\) against \(1.864700\)).  H104 is refuted.  H98 remains confirmed
+in its own rule space; the singular position of the pair rests on the fixed spectrum.  A first run with a faulty solver had
+reported ``confirmed''; it is disclosed and kept.
+
+\paragraph{Theoremlet v4.10.0-r14.2 (the slot Fourier operation and its limits).}
+On the slot space \(\mathbb C^3\) let \(\tau\) be the cyclic shift and \(D=\operatorname{diag}(1,\omega,\omega^2)\).  The Fourier
+matrix \(F\) of the three slots is the equally weighted sum of the nine operations \(\tau^aD^b\); \(F^2\) is the slot part of
+\(\rho\).  With the phase \(S=\operatorname{diag}(1,\omega,\omega)\), \(F\) and \(S\) generate \(2T\) on the doublet, the axes meet
+at \(|\cos|=1/\sqrt3=\langle e_0|F|e_0\rangle\), and the \(S\)-orbit of the Fourier-fixed vector \((1+\sqrt3,1,1)\) has
+\(K=\tfrac23\) and Bargmann phase \(\pi/4\).  \(F\) and \(S\) are assumed as operations.  \(F\) does not preserve the triality
+form, \(\tau\)-preserving dynamics cannot produce \(F\), and the static two-probe channel admits no return of \(F\).  The
+reference is selected as the unique ground state of \(H=-(aQ+bR)\), \(Q=(1+D+D^2)/3\), \(R=(1+\tau+\tau^2)/3\), with
+\(K_{\rm orb}=\tfrac23\) exactly for \(a=b\); a fixed \(H\) breaks \(S\), and the orbit Gram matrix has rank two.
+
+\paragraph{Theoremlet v4.10.0-r14.3 (no source for the balance \(a=b\)).}
+No action in the inventory supplies \(Q\) and \(R\) with bound equal couplings.
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Monomial slot symmetries (1296 elements with sixth roots of unity) map \(\langle D\rangle\) only to itself and cannot
+exchange \(Q\) and \(R\).
+\item[(b)] Every equally weighted pair of eigenlines from two different cyclic subgroups of the Weyl group (mutually
+unbiased bases) selects the octant reference; all 54 such pairs do.  Only the equal weight is open, and it is the
+\(F\)-self-duality of a \(\mathbb Z_3\) clock term \(-J(Z+Z^\dagger)-h(X+X^\dagger)\) at \(J=h\).
+\item[(c)] The mixing mask of v4.9.0-r47 has the same form.  In the exact forms of v4.9.0-r52 the rank-one reference
+needs \(\varepsilon^*=\tfrac13\ln\frac{1+\sqrt3}{2}\approx0.104\), whereas the mixing fit of v4.9.0-r54 gives
+\(\varepsilon_e\in[0.44,0.82]\).
+\item[(d)] Frame readings: with \(a\), \(b\) as frame weights the balance is the photon weight; the frame maps \(R\), \(T\),
+\(J_B\) close in \(\mathfrak{sl}(2,\mathbb R)\), and their ordered products are \(\pm1\) without a phase.  The assumption of
+v4.9.0-r33 is not the bottleneck: every frame plane is commutative, and the frame triole is a transposition (v4.9.0-r38).
+The native Levi-Civita triple with a Hurwitz cycle is \(\operatorname{Im}\mathbb H\) of v4.9.0-r33.1, which breaks \(Q_{\rm em}\);
+under the charge axis \(e_8\) the neutral triple \(R_{e_7},R_{e_8},R_{e_{15}}\) carries two generations only (r13.4).
+\end{enumerate}
+
+\paragraph{Theoremlet v4.10.0-r14.4 (a colour- and charge-preserving map \(\mathbb C\otimes\mathbb S\to\mathbb C\otimes\mathbb H\otimes\OO\)).}
+Under CT-003, \(\mathbb C\otimes\mathbb S\) carries \(\{\nu,e^+,u,\bar d\}\) twice.  Injective linear maps that intertwine
+\(\mathfrak{su}(3)_c\) and send \(Q_*\) to \(Q_{\rm em}\) form a 20-dimensional family.  The naive Cayley--Dickson embedding
+preserves colour but not charge.  The neutral family \(\mathfrak{su}(2)\) of r13.4 maps onto the left action of \(\mathbb H\) (the
+Lorentz spinor of v4.9.0-r33.2) sector by sector, with opposite orientation on leptons and quarks, and never onto the right
+action (weak isospin) or the conjugation of v4.9.0-r33.1(b).  Reading: compared through colour and charge, the two
+generations of route A occupy the place of the spin doublet; colour and charge alone do not separate generation and spin.
+
+\paragraph{Theoremlet v4.10.0-r14.5 (bent axes).}
+Three states with pairwise overlap \(|\langle a|b\rangle|^2=\tfrac12\) give \(K=\operatorname{Tr}G^2/(\operatorname{Tr}G)^2=\tfrac23\)
+for every Bargmann phase \(\varphi\), and
+\[
+\det G=\tfrac12\bigl(\sqrt2\cos\varphi-1\bigr).
+\]
+At \(\varphi=\pi/4\) (the flat octant) \(\det G=0\): the states lie in one qubit and one mass vanishes.  For \(\varphi<\pi/4\)
+they span \(\mathbb C^3\) and give three positive masses; \(\varphi=\tfrac23\) reproduces the charged-lepton ratios
+\(1:14.38:58.97\).  The bend \(\pi/4-\tfrac23=0.118731\) is the flux of the placeholders CT-001/CT-002, read as
+\(\gamma_M/2=0.118766\).  On the Bloch sphere three points at \(90^\circ\) form a rigid octant; a smaller enclosed area requires
+leaving the sphere for \(\mathbb C^3\).
+
+\paragraph{Theoremlet v4.10.0-r14.6 (the guarded core as a flux-free cap).}
+Read the guarded core of the orbit scan (\(X=S^3\setminus B_\varepsilon(K)\), proposition ``Hopf completion versus
+guarded-core remainder'') as a cap of solid angle \(\Omega\) on the Bloch sphere of the generations that contains no flux.
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] With the core inside the generation triangle the phase falls below \(\pi/4\), with the core outside it does not;
+the sign follows from the position, and inside the triangle the position does not matter.
+\item[(b)] Topology: on the sphere without \(n\) caps there are \(n-1\) free Aharonov--Bohm holonomies.  No core gives no bend,
+two or more cores leave the phase free; exactly one core is the only number that bends without a free parameter.
+\item[(c)] With one core the displaced flux stays on the sphere.  Spread evenly it gives \(\varphi=0.679475\); placed outside the
+triangle, for instance at the antipode, it gives \(\varphi=\pi/4-\Omega/2\), the relation of H102 for \(\Omega=\gamma_M\).  The
+two curves are proportional with factor \(4\pi/(4\pi-\gamma_M)\); core size and the fraction placed outside are degenerate,
+and \(\Omega=\gamma_M\) holds only together with full placement outside.
+\item[(d)] The antipode follows from the reflector.  By v4.9.0-r02.2 and r02.3 the involutive Umkehrwalze is antilinear and
+fixes no field.  On a spin-\(\tfrac12\) sphere an antilinear map \(\Theta\) with \(\Theta^2=-1\) is the antipodal map, without fixed
+points; with \(\Theta^2=+1\) it is a reflection with fixed points.  Read as a reflector, the core returns the flux at the
+antipode, point to point and not spread.  This is a reading.
+\item[(e)] The ball \(B_\varepsilon(K)\) removes no fibre for \(\varepsilon<\pi\) but breaks the fibres over a cap of radius
+\(2\varepsilon\).  \(\Omega=\gamma_M\) corresponds to \(\varepsilon=7.90^\circ\) (a cut fibre has no holonomy) or to a volume fraction
+\(\gamma_M/(4\pi)\) of \(S^3\) (proportional reading, \(\varepsilon=25.94^\circ\)).
+\end{enumerate}
+
+\paragraph{Theoremlet v4.10.0-r14.7 (the core size is OP1).}
+The counting rule \(\sum_j2e^{-2\pi\gamma\sqrt{j(j+1)}}=1\) gives \(\gamma_M\) as an opening angle in the plane of a puncture,
+not as a solid angle on the generation sphere.  The geometry of quantum isolated horizons (Ashtekar, Baez, Krasnov,
+arXiv:gr-qc/0005126; Engle, Noui, Perez, arXiv:0905.3168) has the same structure, a punctured sphere with a U(1)
+connection whose curvature sits in the punctures, but fixes no angle \(\gamma_M\): the defect \(4\pi a/k\) depends on the horizon
+area, and \(k=4\pi/\gamma_M=52.9\) is not an integer.  Reading the core as the area quantum of the observer frame gives
+\(\gamma_M\) for every mass measured in the matter frame, including neutrinos, which the main body reads there.  The core size
+thereby coincides with OP1: why the matter frame counts all spins and the tachyon frame only the floor.
+
+\paragraph{Corrections.}
+\begin{enumerate}[leftmargin=2em]
+\item During the work it was stated that H99 places the neutrinos on the octant.  That is wrong: H99 has
+\(\varphi_\nu=\varphi_e+\pi/4\) with a negative root.  The neutrino figure is two octants minus the same core; the idea that charge
+places the core inside the triangle is dropped.
+\item It was first stated that with a removed core the flux leaves over the boundary.  With exactly one core the remainder is
+simply connected and the flux stays on the sphere; r14.6(c) is the corrected form.
+\end{enumerate}
+
+\subsection*{v4.10.0-r14 status in the three frames}
+\label{subsec:v4100-r14-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item M: all mass statements are matter-frame readouts; r14.7 reads the core size as the matter-frame quantum.
+\item T: \(\gamma_T=\gamma_M/\gamma_L\) is the tachyon-frame quantum; no statement is transported to T.
+\item P: the balance of r14.3(d) is the photon weight; otherwise not evaluated.
+\end{itemize}
+
+\subsection*{v4.10.0-r14 register entries}
+\label{subsec:v4100-r14-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r14\\
+\midrule
+H104 & refuted (r14.1)\\
+slot Fourier \(F\) and reference selection & construction with assumed operations; balance \(a=b\) without source (r14.2, r14.3)\\
+map \(\mathbb C\otimes\mathbb S\to\mathbb C\otimes\mathbb H\otimes\OO\) & exists, not unique; family \(\mathfrak{su}(2)\) at the place of spin (r14.4)\\
+bent axes & exact: \(\det G=\tfrac12(\sqrt2\cos\varphi-1)\) (r14.5)\\
+guarded core & reading: flux-free, one core, displaced flux at the antipode (r14.6)\\
+core size \(\gamma_M\) & open; coincides with OP1 (r14.7)\\
+CT-001, CT-002, CT-003 & unchanged; none structurally matched\\
+H100 / H102 & pending / pending\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r14 ledger and guard update}
+\label{subsec:v4100-r14-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r14}=(1,1,0)
+\]
+for (status notes recorded; formulas checked in the cited notes; derivation of the overlap \(\tfrac12\), of the core size and
+of a three-generation carrier open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r14,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r14}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+OP~1, OP~3 and OP~4 remain open.  The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.

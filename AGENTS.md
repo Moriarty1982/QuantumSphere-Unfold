@@ -5,9 +5,11 @@ unabhängig vom Werkzeug. `CLAUDE.md` verweist nur hierauf. Regeln werden **hier
 
 ## Was dieses Repository ist
 Quellen, Notizen und Werkzeuge zum *Quantum Sphaera Companion*, dem mathematischen Unfold der Paper-Reihe „Quantum
-Sphaera“. Die öffentliche Baseline ist **v5.0.0** vom 2026-11-12
-(Version-DOI 10.5281/zenodo.24152615, Concept-DOI 10.5281/zenodo.19210728;
-Vorgänger v4.11.0, 10.5281/zenodo.24108818).
+Sphaera“. Die öffentliche Baseline ist **v5.1.0** vom 2026-11-15
+(Version-DOI 10.5281/zenodo.24237112, Concept-DOI 10.5281/zenodo.19210728;
+Vorgänger v5.0.0, 10.5281/zenodo.24152615; davor v4.11.0, 10.5281/zenodo.24108818).
+v5.1.0 bringt die Runden v4.10.0-r12 bis r14, das Gegenterm-Register und einen Abschnitt zum gebogenen Oktanten im
+Physik-Paper (1412/29 Seiten); Paketquellstand dfdb41387264e728a13a9a51a8636fd532011ff2, Tag v5.1.0.
 
 Version 5 enthält die datenbankgestützte Dokumentarchitektur und zwei englische
 Ausgaben (1402/28 Seiten). Der veröffentlichte Paketquellstand ist

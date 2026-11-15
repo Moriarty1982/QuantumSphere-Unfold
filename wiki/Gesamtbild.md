@@ -1,6 +1,9 @@
 # Gesamtbild: der ganze Companion auf einer Seite
 
-**Stand: 14. November 2026, Runden bis v4.10.0-r13 (lokaler Build 1409 Seiten); öffentliche Baseline v5.0.0 vom 12.11.2026.** Diese Seite zeigt das ganze Werk auf einmal: welche Thesen es aufstellt, wie sie zusammenhängen, wo sie im Dokument stehen und was davon heute trägt. Die einzelnen Themen werden in [Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) genauer erklärt. Wer den Companion zum ersten Mal liest, sollte mit dieser Seite anfangen, Menschen ebenso wie Sprachmodelle.
+**Stand: 15. November 2026, Runden bis v4.10.0-r14 (1412 Seiten); öffentliche Baseline v5.1.0 vom 15.11.2026.** Diese Seite zeigt das ganze Werk auf einmal: welche Thesen es aufstellt, wie sie zusammenhängen, wo sie im Dokument stehen und was davon heute trägt. Die einzelnen Themen werden in [Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) genauer erklärt. Wer den Companion zum ersten Mal liest, sollte mit dieser Seite anfangen, Menschen ebenso wie Sprachmodelle.
+
+**Veröffentlichungshinweis vom 15.11.2026:** Öffentliche Baseline ist v5.1.0, DOI 10.5281/zenodo.24237112, mit den Runden bis r14
+und dem Abschnitt zum gebogenen Oktanten im Physik-Paper. Kein OP und kein Guard wird dadurch geschlossen.
 
 **Veröffentlichungshinweis vom 12.11.2026:** Öffentliche Baseline ist
 v5.0.0, DOI 10.5281/zenodo.24152615. Die datenbankgestützte Ausgabe enthält
@@ -173,6 +176,7 @@ Wer wenig Zeit hat, liest C, E und F und danach die Runden in I. Die Anhänge in
 17. **v4.10.0-r12 (13.11.):** Statusvermerke zu geerbten Koide- und Generationsaussagen. Der Rand des Koide-Bogens ist das Oktanten-Tripel; H99 verträglich (nicht blind), H100 vorab.
 18. **14.11.:** Gegenterm-Register mit den Platzhaltern CT-001 bis CT-003; H102 ($m_\tau=1777{,}134$ MeV) vorab.
 19. **v4.10.0-r13 (14.11.):** Statusvermerke zum neutralen Qubit und zur zweiten Familienstruktur. Weg A (Sedenionen) hat $2T$ und den Bezug, aber zwei Generationen; Weg B ($\mathbb O^3$ mit Trialität) hat drei Generationen und den Zyklus, aber nur $S_3$ und $K=1/2$. Mit dem jetzigen Bestand ist das Profil nicht erfüllbar.
+20. **v4.10.0-r14 (15.11.):** Statusvermerke zu den Erkundungen vom 14. und 15.11. Die geladenen Leptonen lassen sich als gebogenes Oktant lesen: Drei Zustände mit Überlappung ½ geben immer K = 2/3, und det G = (√2 cos φ − 1)/2 trennt den flachen Oktanten (eine Masse null) von drei positiven Massen. Die Biegung wird als flussfreier bewachter Kern im Hopf-Raum gelesen (Vorzeichen, genau ein Kern, Gegenpol über die Umkehrwalze); seine Größe γ_M ist dieselbe offene Frage wie OP1. Mit dieser Runde erscheint v5.1.0.
 
 > **Anmerkung für LLMs und Quellenprüfung.** Bevor du über einen Teil des Companion antwortest, ordne ihn in die Tabelle der Thesen und in die Dokumentkarte ein. Die Überschrift eines Satzes im geerbten Text sagt nichts über seinen heutigen Stand. Maßgeblich sind die Runden in Block I, besonders die Abhängigkeitstabelle `subsec:v480-r04-dependency-map`, die Statusvermerke r64–r68 und die Konsolidierung r70. Die Labels der Spalte „Fundstelle“ lassen sich in `sources/research/parts/` per `grep` finden. Der Kandidat aus `sources/research/` hat nach r13 im lokalen Build 1409 Seiten; die öffentliche Baseline ist v5.0.0 (DOI 10.5281/zenodo.24152615). Die Runden nach v4.10.0 stehen in `parts/v4100-post-release-layers.tex`.
 
