@@ -73,6 +73,12 @@
     gleichmäßig, gilt φ = 0,6795.
   - Offen: warum der Fluss das Dreieck verlässt und warum Ω = γ_M; dazu Kugel B_ε(K) gegen Faser-Volltorus.
   - Mögliche Brücke: der bewachte Kollapskern als Horizont-Punktierung (CT-002, I1).
+  - Faden 1: Abfluss = Lesart „removed“ (v470/05: „removed or shielded“); Stützen in v470/05, v470/32 und v470/10.
+  - Faden 2: Berichtigung, H99 legt die Neutrinos ein Oktant über den Oktanten (negative Wurzel), nicht auf ihn.
+    Beide Sektoren verlieren denselben Kern γ_M; „Ladung legt den Kern ins Dreieck“ ist verworfen.
+  - Faden 3: Die Kugel B_ε(K) bricht die Fasern über einer Kappe vom Radius 2ε. γ_M entspricht ε = 7,90° (binär) oder
+    einem Volumenanteil γ_M/(4π) des S³ (gewichtet, ε = 25,94°). ε ist im Paper frei.
+  - Nächste Frage: ε bzw. den Volumenanteil γ_M/(4π) aus dem Paper begründen (Horizont-Zählregel).
 - **Stand 15.11.:** Die Notiz mit den Nachträgen 1–9 ist über PR #124 auf main.
   Inhalt der Nachträge: r47-Maske, ε-Vorwissen r50–r56, ε* = (1/3)ln((1+√3)/2), Photonengewichte,
   Frame-Kreuzprodukte (sl(2,R)), Levi-Civita, geordnete Produkte und r33.

@@ -11,7 +11,15 @@ X = S³ ∖ B_ε(K)) wird als flussfreie Kappe auf der Bloch-Kugel der Generatio
 - **Menge:** Verlässt der verdrängte Fluss das Dreieck, gilt φ = π/4 − γ_M/2, die Beziehung von H102. Verteilt er sich
   gleichmäßig, trifft es nicht (0,6795 statt 2/3).
 
-Offen ist, warum der Fluss das Dreieck verlässt und warum der Kern den Raumwinkel γ_M hat.
+Offen ist, warum der Kern den Raumwinkel γ_M hat.
+
+Drei Nachträge vom selben Tag:
+- **Abfluss:** Vollständiger Abfluss ist die Lesart „removed“ des Papers (v470/05: „removed or shielded“). Eine
+  entfernte Kappe hat einen Rand, und dann bindet keine Chern-Zahl den Fluss.
+- **Neutrinos:** H99 legt die Neutrinos ein Oktant *über* den Oktanten, nicht auf ihn. Beide Sektoren verlieren
+  denselben Kern γ_M; die Idee „Ladung legt den Kern ins Dreieck“ ist verworfen.
+- **Kugel und Fasern:** Die Kugel B_ε(K) des Papers entfernt keine Faser ganz, bricht aber die Fasern über einer Kappe
+  vom Radius 2ε. γ_M entspricht ε = 7,90° (binär) oder einem Volumenanteil γ_M/(4π) des S³ (gewichtet, ε = 25,94°).
 [Rechnung](../notes/research/op3_guarded_core_flux_2026_11_15/README.md).
 
 ### OP3: Abbildung C⊗S → C⊗H⊗O, die zwei Generationen sitzen am Platz des Spins (15.11.2026)

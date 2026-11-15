@@ -139,3 +139,34 @@ Vorab-Notiz H99 gilt θ_ν = θ_e + π/12 je Generation, also φ_ν = φ_e + π/
   oder zwei Oktanten umfasst. Das ist eine Umformulierung von H99, keine neue Vorhersage. Warum der neutrale Sektor das
   doppelte Oktant sieht, ist nicht hergeleitet.
 - Keine neue Hypothese. Neue Zahlen ergeben sich nicht; H99, H100 und H102 bleiben unverändert.
+
+## Faden 3 (15.11.): Kugel B_ε(K) im S³ gegen Faser-Volltorus
+
+`ball_vs_torus.py`, Ausgabe `run/ball_vs_torus_stdout.txt`. Analytisch, mit Quadratur und Monte-Carlo-Gegenprobe
+(4·10⁵ Punkte).
+
+**Was die Kugel aus v470/05 tut.**
+- Sie entfernt für ε < π keine einzige Faser ganz. Sie schneidet aber jede Faser an, deren Basispunkt näher als 2ε am
+  Bild von K liegt; die Hopf-Abbildung verdoppelt den Winkel (Monte Carlo: 34,28° gegen 2ε = 34,38° bei ε = 0,3).
+- Der abgeschnittene Anteil einer Faser ist f(θ) = arccos(cos ε / cos(θ/2))/π, am Mittelpunkt ε/π.
+- Auf der Basis fehlt also kein Punkt. Über der Kappe sind die Fasern aber keine Kreise mehr, sondern Bögen. Dort
+  bricht die U(1)-Struktur, und die Chern-Zahl bindet den Fluss nicht mehr. Das passt zu „removed“ (Faden 1), nur mit
+  weichem Rand statt scharfer Kappe.
+
+**Zwei Lesarten für den verlorenen Fluss:**
+
+| Lesart | Regel | ε für Raumwinkel γ_M | Rand |
+|---|---|---|---|
+| binär | Eine angeschnittene Faser ist kein geschlossener Kreis mehr und hat keine Holonomie | 0,137922 rad = 7,90° | scharf, Kappe 2ε |
+| gewichtet | Fluss geht anteilig zum abgeschnittenen Faserstück verloren | 0,452751 rad = 25,94° | weich |
+
+- **Binär** ist für eine Phase die natürlichere Lesart: Holonomie braucht einen geschlossenen Umlauf. Sie gibt genau
+  das Kappenmodell der Hauptrechnung.
+- **Gewichtet** führt zu einer runden Aussage: Der Kern nimmt den Anteil γ_M/(4π) = 0,018902 des Hopf-Raums S³ ein,
+  also das Volumen (π/2)·γ_M. Das ist derselbe Abfluss-Anteil wie im Nachtrag zur Fläche zwischen A und B.
+
+**Befund.** Die Kugel des Papers und die Kappe der Rechnung widersprechen sich nicht. Die Kugel bricht die Fasern
+über einer Kappe vom Radius 2ε und hebt damit die Flusserhaltung auf. ε selbst ist im Paper frei, und keine der beiden
+Lesarten legt es fest. Wer γ_M herleiten will, muss jetzt eine von drei gleichwertigen Formen begründen: Raumwinkel γ_M
+auf der Generationskugel (binär, ε = 7,90°), Volumenanteil γ_M/(4π) im S³ (gewichtet, ε = 25,94°) oder Abfluss-Anteil
+γ_M/(4π) des Gesamtflusses.
