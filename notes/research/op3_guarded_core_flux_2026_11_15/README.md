@@ -197,3 +197,36 @@ Zeile 1157: erster Hauptsatz nach Frodden, Ghosh und Perez).
 Punktierung, nicht im Generationsraum. Die Lücke ist damit genau benannt: eine Abbildung Punktierungsebene →
 Generationskugel. Die nächstliegende Quelle, die Geometrie isolierter Horizonte, steht nicht im Companion und müsste
 erst mit Literatur geprüft werden.
+
+## Literaturprüfung (15.11.): Geometrie quantisierter isolierter Horizonte
+
+Auf „Erst Literatur prüfen“ des Autors. Gelesen über alphaXiv: Ashtekar, Baez und Krasnov, „Quantum Geometry of
+Isolated Horizons and Black Hole Entropy“, arXiv:gr-qc/0005126 (ABK), sowie Engle, Noui und Perez, „Black hole
+entropy and SU(2) Chern-Simons theory“, arXiv:0905.3168 (ENP). Damit sind die ungeprüften Angaben aus Schritt 1 geprüft.
+
+**Bestätigt.**
+- **ABK:** Der Horizont ist eine punktierte Zwei-Sphäre mit U(1)-Chern-Simons-Zusammenhang. Er ist überall flach
+  außer in den Punktierungen. Die Holonomie um Punktierung i ist exp(2πi a_i/k) mit dem Level k = a₀/(4πγℓ_P²)
+  (Gl. 15). Der Winkeldefekt des Levi-Civita-Zusammenhangs ist 4π a_i/k; die Defekte summieren sich modulo 4π zu
+  null, als Quantenfassung von Gauß-Bonnet. Die Zuordnung zum Volumenzustand ist 2m_i = −a_i mod k.
+- **ENP (SU(2)):** Die Kopplung der Defekte ist 16π²β(1 − β²)ℓ_P²√(j(j+1))/a_H, nach den Autoren das Verhältnis
+  des Flächenquants des Defekts zur gesamten Horizontfläche.
+
+**Folgerungen für den Kern.**
+1. **Gleiche Struktur.** Eine Sphäre mit U(1)-Zusammenhang, dessen Krümmung in Punktierungen sitzt, ist dasselbe
+   Objekt wie unsere Generationskugel mit Kern. Spin ½ passt: Die Spinor-Holonomie 2π a/k ist die Hälfte des Defekts
+   4π a/k, wie unsere Phase γ/2 zum Raumwinkel γ.
+2. **Aber im Horizontbild *trägt* die Punktierung die Krümmung.** Dort ist die Fläche überall sonst flach, und die
+   Defekte addieren sich zu 4π. Das ist das Gegenteil unseres Bildes, in dem die Krümmung gleichmäßig verteilt ist und
+   der Kern sie ausschließt. Die Analogie ist also nur teilweise.
+3. **Der Defekt hängt von der Horizontfläche ab.** Eine minimale Punktierung (|m| = ½, a = 1) hat den Defekt
+   4π/k = 16π²γℓ_P²/a₀. Ein Defekt genau γ verlangt a₀ = 16π² ℓ_P² ≈ 157,9 ℓ_P², unabhängig von γ, und damit den
+   Level k = 4π/γ_M = 52,90. Der muss aber ganzzahlig sein (Präquantisierung). Das nächste Level, k = 53, gibt
+   γ = 0,237101, also 4,3·10⁻⁴ unter γ_M. Die verlangte Genauigkeit liegt bei etwa 4·10⁻⁵, das schließt es aus.
+4. Defekt und Fläche einer Punktierung skalieren verschieden: der Defekt mit |m|, die Fläche mit √(j(j+1)). Für
+   j = ½ ist das Verhältnis 1/√3.
+
+**Befund.** Die Horizontgeometrie liefert keinen festen Winkel γ_M für einen Kern, weder aus einer Punktierung (der
+Defekt hängt von a₀ ab, und k = 4π/γ_M ist nicht ganzzahlig) noch begrifflich (dort trägt die Punktierung die
+Krümmung). Diese Spur ist damit geprüft und **trägt nicht**. Der Companion zitiert die Zählung (v480, Zeile 250), nicht
+diese Geometrie. Es wird nichts davon übernommen.
