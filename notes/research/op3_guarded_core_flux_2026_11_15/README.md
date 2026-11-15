@@ -170,3 +170,30 @@ Vorab-Notiz H99 gilt θ_ν = θ_e + π/12 je Generation, also φ_ν = φ_e + π/
 Lesarten legt es fest. Wer γ_M herleiten will, muss jetzt eine von drei gleichwertigen Formen begründen: Raumwinkel γ_M
 auf der Generationskugel (binär, ε = 7,90°), Volumenanteil γ_M/(4π) im S³ (gewichtet, ε = 25,94°) oder Abfluss-Anteil
 γ_M/(4π) des Gesamtflusses.
+
+## Schritt 1 der Lückensuche (15.11.): Beschreibt die Zählregel den Kern im S³?
+
+Analytisch, mit Quellenabgleich. Gelesen wurden `../ct002_gamma_angle_2026_11_14.py` mit Ausgabe, CT-001 Schritt 2 und 3
+sowie die Fundstellen zu isolierten Horizonten im Paper (v480, Zeile 250: Zählung nach Corichi und Krasnov; v4100,
+Zeile 1157: erster Hauptsatz nach Frodden, Ghosh und Perez).
+
+- **Was die Zählregel ist:** Σ_j 2·exp(−2πγ a(j)) = 1 mit a(j) = √(j(j+1)), über alle Spins. Sie normiert
+  Boltzmann-Gewichte e^{−A_j/4} von Punktierungsflächen. In der Sektorlesart (CT-001) ist sie eine Gleichung für einen
+  Öffnungswinkel θ = γ_M in der Ebene einer Punktierung. Ein Sektor mit Öffnungswinkel γ und Radius 1 hat die Fläche γ/2.
+- **Gegen die Kugel im S³:** Die Zählregel enthält keine Geometrie des Hopf-Raums. Weder der Volumenanteil
+  (2ε − sin 2ε)/(2π) noch der Kappen-Raumwinkel 2π(1 − cos 2ε) hat in ihr ein Gegenstück. Beide gleich γ/(4π) bzw. γ
+  zu setzen, formuliert die Lücke nur um. **Eine Herleitung ergibt sich hier nicht.**
+- **Was übereinstimmt, und warum es nichts beweist:** Die normierte Sektorfläche γ/2 (CT-001) und die Berry-Phase einer
+  Kappe mit Raumwinkel γ (Spin ½: Phase = Raumwinkel/2) sind dieselbe Zahl. Das liegt am Faktor ½ beider Lesarten,
+  nicht an einer Abbildung. Gesucht bleibt eine Abbildung, die den Punktierungssektor in der Horizontebene auf die
+  Kernkappe der Generationskugel bringt.
+- **Spur außerhalb des Papers** (aus Vorwissen, ungeprüft, kein Literaturwerkzeug benutzt): In der Literatur zu
+  quantisierten isolierten Horizonten ist der Horizont eine Zwei-Sphäre mit U(1)-Zusammenhang, dessen Krümmung in den
+  Punktierungen sitzt. Das ist dasselbe Objekt wie unsere Generationskugel mit Kern. Dort hängt der Fluss einer
+  Punktierung aber nach meiner Erinnerung von der Horizontfläche ab. Ein fester Winkel γ bräuchte dann eine zusätzliche
+  Skalenbedingung. Der Companion enthält diese Geometrie nicht, nur die Zählung.
+
+**Befund Schritt 1:** Die Zählregel bindet den Kern nicht. Sie liefert γ_M als Winkel nur in der Ebene einer
+Punktierung, nicht im Generationsraum. Die Lücke ist damit genau benannt: eine Abbildung Punktierungsebene →
+Generationskugel. Die nächstliegende Quelle, die Geometrie isolierter Horizonte, steht nicht im Companion und müsste
+erst mit Literatur geprüft werden.
