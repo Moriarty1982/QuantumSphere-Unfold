@@ -6,12 +6,13 @@
   Record https://zenodo.org/records/24237112; Vorgänger v5.0.0 (10.5281/zenodo.24152615). Vollausgabe 1412 Seiten,
   Physik-Paper 29 Seiten. Paketquellstand dfdb413, Tag `v5.1.0`, GitHub-Release gesetzt. Nach der Veröffentlichung
   geprüft: acht Dateien prüfsummengleich mit dem Paket, Vorschau = Vollausgabe. Release-Notiz `release/v5.1.0/README.md`.
-- **GitHub:** `main` nach PR #130 (eeb6083, Berichtigung zu CT-004), davor #129 (c9bfb19, OP1 mit I1, CT-004) und #128
+- **GitHub:** `main` nach PR #132 (b6ed1a5, Runde r15, OP3-Erkundungen, Dauerauftrag Issues), davor #130 (eeb6083,
+  Berichtigung zu CT-004), #129 (c9bfb19, OP1 mit I1, CT-004) und #128
   (14feb02, Release v5.1.0). **Keine offenen PRs.** Gemergt am 14./15.11.: #124–#128
   (OP3-Rückwärtssuche, Dauerauftrag Versionsverwaltung, Abbildung C⊗S → C⊗H⊗O, bewachter Kern, Release), davor #108–#123.
   Gemergte Zweige sind gelöscht. Nicht geprüft: die Läufe nach dem Merge von #128 (Wiki-Sync, Zwei-PDF).
-- **Letzte Runde:** v4.10.0-r15 (Berichtigung zu r38, Statusvermerke), auf Zweig `research/op3-horizon-shadow`, nicht gepusht;
-  davor r14 (in v5.1.0).
+- **Letzte Runde:** v4.10.0-r15 (Berichtigung zu r38, Statusvermerke), gemergt über PR #132 (b6ed1a5); davor r14
+  (in v5.1.0). Kandidat 1416 Seiten.
 - **Hypothesen:** zuletzt vergeben H104 (k226, widerlegt). Frei: **H105, k227**.
   - H100 offen: nächster NuFIT-Fit nach 6.1, Frist 31.12.2027 (`notes/research/predictions/k222_test_h100.py`).
   - H102 offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem 13.11.2026 (`k224_test_h102.py m_tau sigma`).
