@@ -269,3 +269,38 @@ Kugel zum Gegenpol. Die Lesart „removed“ aus Faden 1 bleibt als Stütze für
 
 **Was offen bleibt:** warum der verdrängte Fluss zum Gegenpol geht und sich nicht gleichmäßig verteilt (B wäre das
 Energieminimum), und warum der Kern die Größe γ_M hat.
+
+## Umkehrwalze (15.11.): Warum der verdrängte Fluss zum Gegenpol geht
+
+Hinweis des Autors: „das hatte ich im paper glaube ich versucht mit der enigma analogie zu erklären“. Erkundung, nicht
+blind; `reflector.py`, Ausgabe `run/reflector_stdout.txt`.
+
+**Quellen im Paper.**
+- v470/24, „Computational Interpretation, Enigma Analogy, and Bomba-Style Structural Search“: Lesart als Reflektor,
+  Projektor und Weiche.
+- v470/09: J als „Umkehrwalze/involution“, C = ½(id + J) als HC-Ausleseprojektor.
+- **v4.9.0-r02, „The Round Trip about the Photon and the Umkehrwalze“:**
+  - r02.2: Die Umkehrwalze des Rundwegs ist z ↦ −z = C (Ladungskonjugation) = PT; sie „fixes no non-zero field“.
+  - r02.3: Ein involutiver Tausch von Materie und Tachyon kann nicht linear sein, er muss antilinear sein, also
+    Zeitumkehr enthalten.
+
+**Auf der Spin-½-Kugel der Generationen** wirken antilineare Abbildungen Θ = U·K so:
+- Θ² = +1 (etwa K): eine Spiegelung des Bloch-Vektors, mit Fixpunkten auf einem Großkreis.
+- **Θ² = −1 (etwa iσ_y K, Kramers):** die **Antipodenabbildung** n ↦ −n, ohne jeden Fixpunkt (geprüft).
+
+Die Enigma-Umkehrwalze ist genau eine fixpunktfreie Involution: Kein Buchstabe wird auf sich selbst abgebildet, und
+jedes Signal kommt an *genau einem* anderen Kontakt zurück, nicht verteilt. Auf der Spin-½-Kugel leistet das nur die
+Antipodenabbildung, und die verlangt Θ² = −1, also Fermionen. Leptonen sind Fermionen.
+
+**Lesart.** Der bewachte Kern wirkt als Umkehrwalze. Was in ihn hineinläuft, kommt am Gegenpol wieder heraus, als
+Punkt-zu-Punkt-Abbildung und nicht als Verteilung. Daraus folgt genau Fall A und nicht B:
+- Der Kern auf der Zyklusachse (1, 1, 1)/√3 hat den Gegenpol (−1, −1, −1)/√3. Er liegt außerhalb des Oktanten der
+  geladenen Leptonen und außerhalb des 90°-Mondes der Neutrinos (geprüft). In beiden Sektoren gilt also A.
+- Das stimmt mit Faden 2 überein (derselbe Kern in beiden Sektoren) und mit dem Dirac-Faden aus Schritt 2.
+
+**Was es leistet und was nicht.**
+- Damit ist die erste offene Frage aus Schritt 2 („warum Gegenpol statt gleichmäßig“) mit einer Struktur des Papers
+  beantwortet: Umkehrwalze, antilinear (r02.3), fixpunktfrei (r02.2, Enigma), auf Spin ½ also antipodal.
+- Dass der Kern als Umkehrwalze wirkt, ist **Lesart**. Das Paper nennt den Reflektor beim Kollapskern und bei OP5
+  (v470/32: „HC-cone/reflector“), setzt ihn aber nicht mit dem Kern im Generationsraum gleich.
+- Offen bleibt allein die Größe des Kerns, γ_M.

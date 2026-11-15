@@ -83,7 +83,10 @@
   - Schritt 2: Genau ein Kern ist topologisch ausgezeichnet: Biegung ohne freien Parameter. Kein Kern biegt nicht; ab
     zwei Kernen gibt es n − 1 freie AB-Holonomien. Berichtigung zu Faden 1: Bei einem Kern entweicht kein Fluss; A heißt
     flussfreier Kern mit verdrängtem Fluss außerhalb des Dreiecks (Gegenpol, Dirac-Faden).
-  - Offen: warum der verdrängte Fluss zum Gegenpol geht (B wäre das Energieminimum) und warum Ω = γ_M.
+  - Umkehrwalze (Hinweis des Autors, Enigma-Analogie; r02.2/r02.3, v470/24): Eine fixpunktfreie antilineare Involution
+    ist auf Spin ½ die Antipodenabbildung (Θ² = −1). Liest man den Kern als Umkehrwalze, geht der verdrängte Fluss
+    zum Gegenpol; das ist Fall A in beiden Sektoren. Lesart.
+  - Offen bleibt nur Ω = γ_M.
   - PR #127 offen (Zweig `research/op3-guarded-core-flux`); Schritt 2 wird nachgeschoben.
 - **Stand 15.11.:** Die Notiz mit den Nachträgen 1–9 ist über PR #124 auf main.
   Inhalt der Nachträge: r47-Maske, ε-Vorwissen r50–r56, ε* = (1/3)ln((1+√3)/2), Photonengewichte,

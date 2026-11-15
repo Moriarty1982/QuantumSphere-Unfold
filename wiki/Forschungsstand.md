@@ -27,6 +27,10 @@ Drei Nachträge vom selben Tag:
   biegt nicht; ab zwei Kernen gibt es freie Aharonov-Bohm-Holonomien.
 - **Berichtigung zu „Abfluss“:** Bei einem Kern kann der Fluss nicht entweichen. Fall A heißt richtig: Der Kern ist
   flussfrei, und der verdrängte Fluss sitzt außerhalb des Dreiecks, etwa am Gegenpol (Dirac-Faden).
+- **Umkehrwalze (Hinweis des Autors auf die Enigma-Analogie):** Nach r02 ist die involutive Umkehrwalze antilinear und
+  fixpunktfrei. Auf einer Spin-½-Kugel ist eine fixpunktfreie antilineare Abbildung die Antipodenabbildung, sie verlangt
+  Θ² = −1, also Fermionen. Liest man den Kern als Umkehrwalze, geht der verdrängte Fluss zum Gegenpol, und das ist genau
+  Fall A, für geladene Leptonen wie für Neutrinos. Das ist Lesart; offen bleibt die Größe γ_M.
 [Rechnung](../notes/research/op3_guarded_core_flux_2026_11_15/README.md).
 
 ### OP3: Abbildung C⊗S → C⊗H⊗O, die zwei Generationen sitzen am Platz des Spins (15.11.2026)

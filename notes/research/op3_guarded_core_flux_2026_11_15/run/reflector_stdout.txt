@@ -1,0 +1,4 @@
+K (Theta^2 = +1)             Theta^2 = +1; Antipodenabbildung: False; Beispiel n -> [ 0.854  0.506 -0.122] -> [ 0.854 -0.506 -0.122]
+i sigma_y K (Theta^2 = -1)   Theta^2 = -1; Antipodenabbildung: True; Beispiel n -> [ 0.462  0.87  -0.171] -> [-0.462 -0.87   0.171]
+Kern auf der Zyklusachse [0.5774 0.5774 0.5774] -> Gegenpol [-0.5774 -0.5774 -0.5774]
+Gegenpol im Oktanten x,y,z > 0: False ; im 90-Grad-Mond x,y > 0 (Neutrino-Figur): False
