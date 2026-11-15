@@ -1,5 +1,35 @@
 # Forschungsstand
 
+### OP3: Ein Drittel der Periode als Dreierzyklus (15.11.2026, Runde r16.9)
+
+Erkundung, Rückwärtssuche (nicht blind). Die Verschiebung um ein Drittel der Periode von s(t) ist ein nativer
+Dreierzyklus auf der invarianten Matrix S; ihre Bahn hat von selbst eine zirkulante Gram-Matrix (Brannen-Form).
+- **Rückwärts:** Koide und die Lepton-Phase verlangen die Gewichte p₀ = 0,793 (Mittelwertanteil w), p₊ = 0,193,
+  p₋ = 0,013 auf den drei Frequenzanteilen; Kontrolle: Massenverhältnisse 1 : 206,77 : 3477,5.
+- **Ergebnis:** Kein nativer Wert (5 abgeleitete Größen, 24 vorab gelistete Kandidaten, 0,5 %, Zufallserwartung 0,44).
+  Die Gewichte sind Brannens Parameter in anderer Form; die Zustände liegen weit vom kohärenten Sektor (Rang 2), also nicht
+  beim Oktanten aus r16.7. H105 bleibt frei.
+- **Lesart (Nachtrag):** Die Gewichte sind die normierten Massenwurzeln, √m_k/Σ√m: τ gehört zum Mittelwert w, μ und e zu
+  den schwingenden Anteilen der Mehrheits- bzw. Minderheitshelizität. Masseneigenzustände = Eigenzustände der
+  Zeitverschiebung; drei, weil s(t) quadratisch ist. Koide heißt: Die Autokorrelation der Invariante nach einem Drittel
+  der Periode hat den Betrag 1/√2. Im flachen Grenzfall ist der Minderheitsanteil null-artig (Elektron masselos).
+
+[Erkundung](../notes/research/op3_time_cycle_2026_11_15/README.md).
+
+### OP3: Die dritte Lorentz-Invariante w (15.11.2026, Runde r16.8)
+
+Erkundung (nicht blind). Ein zeitharmonisches Feld mit komplexen Amplituden hat sechs reelle Lorentz-Invarianten:
+s₊ = (E + iB)², s₋ = (E − iB)² und **w = F₊·F̄₋**. Die augenblickliche Invariante zerfällt exakt in
+s(t) = ¼ [s₊ e^{−2iωt} + 2w + s̄₋ e^{2iωt}]; w ist ihr Mittelwert.
+- **Matrix S = [[s₊, w], [w, s̄₋]]:** invariant, komplex symmetrisch, ein Spin-1-Objekt; die Zeitverschiebung gibt die
+  Gewichte −1, 0, +1, ihre Achse ist die Helizitätsachse. Rang-1-Matrizen sind die kohärenten Zustände, also das Dublett χ;
+  das Oktant aus r16.7 liegt dort.
+- **Biegung:** Die dritte Richtung, die sie braucht, ist der Rang-2-Anteil von S. Ihre Größe (σ₂/σ₁) legt die Feldstruktur
+  nicht fest; sie bleibt beim Kern (γ_M, OP1).
+- **H105 nicht vergeben:** Ohne ein Prinzip für σ₂/σ₁ würde ein Test eine Wahl prüfen, nicht die Struktur.
+
+[Erkundung](../notes/research/op3_third_invariant_2026_11_15/README.md).
+
 ### Grundidee: Was heißt „ein Objekt“? (k220, Erkundung vom 7.11.2026, übernommen am 15.11.)
 
 Erkundung ohne Kriterium. G = SO(3,ℂ) × U(1)_Dualität wirkt auf z = E + iB **transitiv auf jeder Schale |s| = r > 0**
@@ -13,7 +43,7 @@ Fixpunkt der Dualität.
 
 Die Erkundung lag bis zum 15.11. nur auf einem lokalen Zweig. [Notiz](../notes/research/k220_ein_objekt_2026_11_07/README.md).
 
-### OP3: Die Koide-Phase und die Helizitätsachse (15.11.2026)
+### OP3: Die Koide-Phase und die Helizitätsachse (15.11.2026, Runde r16)
 
 Erkundung (nicht blind). Das Feld-Dublett (E, B) hat nach r04 und r05.2 drei Stokes-Achsen: σz (Materie gegen Tachyon),
 σx (Photonseite) und σy, die **Helizität** (nur für komplexe Amplituden; reelle Felder füllen eine Scheibe).
@@ -33,6 +63,14 @@ Erkundung (nicht blind). Das Feld-Dublett (E, B) hat nach r04 und r05.2 drei Sto
   Helizitätsvorzeichen. R, T, J_B erhalten je genau eines davon (Kleinsche Vierergruppe), ihre Eigenzustände sind die
   Pole. Verlangt man je Frame-Abbildung einen Auslesezustand als Eigenzustand, folgt die Überlappung ½ (bedingt).
   Keine lineare Feldabbildung vertauscht die Achsen zyklisch; ein Dreierzyklus müsste aus anderer Struktur kommen.
+- **Hurwitz-Kandidat (Nachtrag):** Der Zyklus der Hurwitz-Einheiten auf N (r13.2) liefert ihn nicht. Auf N ist R skalar, und T
+  bildet N auf den ladungskonjugierten Raum ab; die Frame-Gruppe wirkt auf N anders als auf χ. Das Prinzip „je
+  Frame-Abbildung ein Auslesezustand“ bleibt ohne Begründung im Bestand.
+- **Auslesungen eines Objekts (r16.7):** Die sechs Pole sind die einzigen Eigenzustände der Frame-Abbildungen. Höchstens drei
+  davon sind paarweise nicht orthogonal, und die 8 Tripel dieser Größe sind genau die Oktanten (Überlappung ½, K = 2/3,
+  Phase ±π/4; zwei Bahnen nach Orientierung). Verlangt man, dass Auslesungen eines Objekts Eigenzustände und nicht
+  orthogonal sind und alle vorkommen, folgen Zahl drei, Überlappung ½ und Phase π/4 zusammen; ein Dreierzyklus wird nicht
+  gebraucht. Gesetzt bleiben Eigenzustands-Bedingung und Maximalität. Nicht blind.
 
 [Erkundung](../notes/research/op3_helicity_axis_2026_11_15/README.md).
 

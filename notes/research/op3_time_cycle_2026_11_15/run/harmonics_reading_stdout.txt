@@ -1,0 +1,8 @@
+(1) sqrt(m)/sum sqrt(m): e 0.013450, mu 0.193409, tau 0.793141
+    Gewichte aus Koide und phi = 2/3: p- 0.013450, p+ 0.193404, p0 0.793146
+(2) |<psi|U psi>|^2 = (3 sum p^2 - 1)/2 auf 1000 Zufallsgewichten: max. Abweichung 5.6e-16; Leptonen: sum p^2 = 0.666661 = K
+(3) phi = 0.785398: p- = -0.000000, (pi/4 - phi)/9 = 0.000000
+(3) phi = 0.700000: p- = 0.009622, (pi/4 - phi)/9 = 0.009489
+(3) phi = 0.666667: p- = 0.013450, (pi/4 - phi)/9 = 0.013192
+(3) phi = 0.600000: p- = 0.021223, (pi/4 - phi)/9 = 0.020600
+(4) reelles Feld: Parseval (1,4,1)/6 -> sum p^2 = 0.5000; Hilbert-Schmidt (1,2,1)/4 -> 0.3750

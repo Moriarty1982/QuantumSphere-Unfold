@@ -1,0 +1,17 @@
+(1) rel. Abweichung unter 400 Boosts: s+ 6.4e-15, s- 3.9e-15, w 3.5e-15; F+.F- 2.2e+01 (nicht invariant)
+    generische Bahndimension 6 von 12 reellen -> 6 reelle Invarianten = Re/Im von s+, s-, w
+(2) s(t) = [s+ e^(-2iwt) + 2w + conj(s-) e^(2iwt)]/4: max. Abweichung 9.9e-16
+(3) S = [[s+, w], [w, conj s-]]: True; symmetrisch: True
+    Dualitaet um alpha: S -> e^(-2i alpha) S (Skalar): True
+    Zeitverschiebung um tau: S -> U S U mit U = diag(e^(-i tau), e^(i tau)) (Gewichte -1, 0, +1 auf s+, w, conj s-): True
+    R: S -> -S: True
+    T: S -> X conj(S) X (antilinear, tauscht s+ und conj s-): True
+    J_B: S -> -X conj(S) X: True
+(4) Materie        : S = [[(1+0j), (1+0j)], [(1+0j), (1+0j)]], Takagi-Werte [2. 0.]
+(4) Tachyon        : S = [[(-1+0j), (-1+0j)], [(-1+0j), (-1+0j)]], Takagi-Werte [2. 0.]
+(4) Seite+         : S = [[1j, 1j], [1j, 1j]], Takagi-Werte [2. 0.]
+(4) Seite-         : S = [[-1j, -1j], [-1j, -1j]], Takagi-Werte [2. 0.]
+(4) selbstdual     : S = [[(-4+0j), 0j], [0j, 0j]], Takagi-Werte [4. 0.]
+(4) antiselbstdual : S = [[0j, 0j], [0j, (-4+0j)]], Takagi-Werte [4. 0.]
+    Materie und Tachyon: S und -S, also derselbe Strahl; das Vorzeichen steckt nur in den Wurzeln (chi, r16.3)
+    zufaellige komplexe Felder: sigma2/sigma1 im Mittel 0.307, Minimum 0.002 -> generisch Rang 2
