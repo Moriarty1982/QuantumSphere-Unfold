@@ -12,10 +12,9 @@
   (14feb02, Release v5.1.0). **Keine offenen PRs.** Gemergt am 14./15.11.: #124–#128
   (OP3-Rückwärtssuche, Dauerauftrag Versionsverwaltung, Abbildung C⊗S → C⊗H⊗O, bewachter Kern, Release), davor #108–#123.
   Gemergte Zweige sind gelöscht. Nicht geprüft: die Läufe nach dem Merge von #128 (Wiki-Sync, Zwei-PDF).
-- **Letzte Runde:** v4.10.0-r16 (Statusvermerke zu Helizitätsachse, invariantem Dublett, Frame-Vorzeichen, Hurwitz-
-  Ausschluss, k220, r16.7: höchstens drei nicht orthogonale Frame-Eigenzustände = Oktant, kein Zyklus nötig; r16.8: dritte Invariante w;
-  r16.9: Zeitzyklus, Gewichte = normierte √m, Koide = Autokorrelation 1/√2), gemergt
-  über PR #135 (e0be304); davor r15 (PR #132), r14 (in v5.1.0). Kandidat 1421 Seiten.
+- **Letzte Runde:** v4.10.0-r17 (Statusvermerke zu Uhr-Funktional, Treue-Lesart, Irreduzibilität, Barbero-Dublett,
+  Penrose-Strängen, Rücknahme R² = −1), Zweig `research/op1-statistics`; davor r16 (PR #135), r15, r14 (in v5.1.0).
+  Kandidat 1424 Seiten.
 - **Hypothesen:** zuletzt vergeben H104 (k226, widerlegt). Frei: **H105, k227**.
   - H100 offen: nächster NuFIT-Fit nach 6.1, Frist 31.12.2027 (`notes/research/predictions/k222_test_h100.py`).
   - H102 offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem 13.11.2026 (`k224_test_h102.py m_tau sigma`).
@@ -100,7 +99,7 @@
   von s(t) = nativer Dreierzyklus auf S, gibt Brannen-Form. Nötige Gewichte p₀ = 0,793, p₊ = 0,193, p₋ = 0,013 (Kontrolle
   1 : 206,77 : 3477,5); kein nativer Wert (24 Kandidaten, 0,5 %, Erwartung 0,44); Rang 2, weit vom Oktanten r16.7.
   Nachtrag (PR #136): Koide = Kohärenzfunktional der Photon-Uhr-Sonde (r90), aber keine
-  Fensterschwelle bei ½ und Drift 120° ≫ 26,57°; Uhr legt Σp² = 2/3 nicht fest. Noch in keiner Runde.
+  Fensterschwelle bei ½ und Drift 120° ≫ 26,57°; Uhr legt Σp² = 2/3 nicht fest. In Runde r17.
   Dazu Lesart: Treue ½ als maximale Unsicherheit „dasselbe Objekt?“ (ein Bit); kein Test. OP3 ruht; weiter mit OP1.
 
 - **OP1, Irreduzibilität (15.11., Erkundung, `notes/research/op1_frame_irreducibility_2026_11_15/`,
@@ -111,6 +110,8 @@
   −1/γ, −γ, 1/γ, keine gibt γ_T aus γ_M. Brücke (A) weiter offen.
   Nachtrag: Penrose-Bündel geben (A), wenn ein Strang ein Quant von χ ist; bosonische Stränge → alle j (M), fermionische →
   nur j = ½ (T). Ersetzt Guards T = String und Chan–Paton von CT-004 durch (S1)–(S3); Register unverändert; kein Test.
+  Nachtrag (Zweig `research/op1-statistics`): R² = −1 gibt Kramers, nicht Pauli; Frame-Abbildungen sehen die Statistik
+  nicht. (S2) ist reine Setzung; Begründung über R² zurückgenommen.
 
 ## Nächster Schritt (Autorentscheidung)
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,
