@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 15.11.2026: Forschungsstand um die Strang-Lesart für OP1 ergänzt (Penrose-Bündel, Statistik). Kein OP-Abschluss.
+
 - 15.11.2026: Forschungsstand um die Barbero-Verbindung als Punkt des Dubletts (A₊, A₋) ergänzt. Kein OP-Abschluss.
 
 - 15.11.2026: Forschungsstand um die OP1-Erkundung zur Irreduzibilität der Frame-Abbildungen ergänzt. Kein OP-Abschluss.

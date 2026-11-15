@@ -92,3 +92,41 @@ Lesart der Erkundung oben: Der Unterschied liegt in der Zählung, nicht in einer
 
 Nachträglich gesehen und nicht verwertet: Der Äquatorwinkel 2 arctan γ_M = 26,72° liegt nahe der Uhr-Toleranz
 arctan ½ = 26,57° (v4.9.0-r12.2); das war nicht vorab gelistet.
+
+## Nachtrag 15.11.2026: Brücke und Asymmetrie als Statistik von Penrose-Strängen
+Auftrag des Autors: „Ja, prüfen“. **Erkundung, nicht blind.** Skript `strand_bundles.py`, Ausgabe
+`run/strand_bundles_stdout.txt`.
+
+**Vorwissen:** Penrose-Stränge kommen im Paper nicht vor (Volltextsuche nach Penrose und Binor ohne Treffer). T11
+(`thm:string-lqg-duality`, v470/10) nennt den Kompensator-Sektor C = ½(1 + J) „symmetrisch, bosonisch – Stringtheorie“ und
+A = ½(1 − J) „antisymmetrisch, fermionisch – LQG“. Gemeint ist dort die **J-Parität eines Objekts**, nicht die
+Austauschsymmetrie vieler Stränge (so auch die Berichtigung zu CT-004: T11 ordnet nach J-Parität).
+
+**Ergebnisse**
+1. **Brücke (A) aus Bündeln.** Auf Sym^{2j}(ℂ²) ist σ_k^{⊗2j} bis auf eine Phase gleich exp(−iπJ_k) (geprüft für 2j = 1 bis 8,
+   Abweichung höchstens 2·10⁻¹⁵). Ist eine Spin-j-Kante ein symmetrisiertes Bündel aus 2j elementaren Zweikomponenten-Strängen
+   (Penrose) und ist der elementare Strang ein Quant des Dubletts χ, dann wirken die Frame-Abbildungen auf der Punktierung
+   genau wie in (A) angenommen. (A) wird damit auf eine Zuordnung zurückgeführt: **elementarer Strang = Quant von χ**.
+2. **Asymmetrie als Statistik.** Antisymmetrische Potenzen eines Dubletts: Λ¹ = Dublett (j = ½, Frame-Abbildungen
+   irreduzibel), Λ² = Singulett (j = 0, keine Fläche), Λⁿ = 0 für n ≥ 3. Symmetrische Potenzen geben alle j. **Bosonisch
+   gelesene Stränge geben die Spins von M, fermionisch gelesene genau j = ½, die Regel von T.** „Irreduzibel“, „einzelner
+   Strang“ und „Pauli-Ausschluss auf dem Dublett“ sind dieselbe Bedingung; die Kramers-Regel (alle halbzahligen j) ist davon
+   verschieden.
+3. **Ausgerichtete Bündel.** |↑⟩^{⊗2j} und |↓⟩^{⊗2j} sind in Sym^{2j} genau |j, ±j⟩: Das Extremdublett von M (P1) sind die
+   ausgerichteten, kohärenten Bündel.
+
+**Abgleich mit den Guards von CT-004** (Register nicht geändert):
+
+| Guard | Stringlesart (I1) | Strang-Lesart |
+|---|---|---|
+| T-GLEICH-STRING | nötig, ohne Stütze | nicht nötig |
+| CHAN-PATON | Endpunkte in der Fundamentaldarstellung | ersetzt durch „elementarer Strang = Quant von χ“ |
+| STATISTIK | T11 nennt den String-Sektor bosonisch, gezählt wird Spin ½ | T liest Stränge fermionisch (Austausch); T11 meint J-Parität, ein anderer Begriff, daher kein Widerspruch im Inhalt |
+| SPEKTRUM | Sonderstellung hängt am Spektrum (H104) | unverändert |
+
+**Neue Setzungen statt der alten:** (S1) elementarer Strang = Quant von χ; (S2) T liest Stränge fermionisch, M bosonisch;
+(S3) M zählt nur ausgerichtete Bündel (P1). Für (S2) gibt es eine Lesart, keinen Grund: Die Tachyon-Abbildung quadriert auf
+dem Dublett zu −1 (r14.3(d)), das Vorzeichen eines Fermions unter voller Drehung.
+
+**Grenzen:** Nicht blind; kein neuer Test. Die Statistik betrifft die Bündelung in einer Punktierung, nicht die Verteilung der
+Punktierungen; die Zählgleichung und damit γ ändern sich nicht. OP1 bleibt offen.

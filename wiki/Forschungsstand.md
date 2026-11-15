@@ -15,6 +15,12 @@ auf einer Horizont-Punktierung mit Spin j über dieselbe SU(2) wirken, gilt: **I
 - **Brücke über die Barbero-Verbindung (Nachtrag):** A_γ = c₊A₊ + c₋A₋ mit c± = (1 ∓ iγ)/2; reelles γ liegt auf dem
   Äquator des Dubletts aus selbst- und antiselbstdualer Verbindung, wie reelle Felder bei χ. Die Frame-Abbildungen wirken
   dann auf γ als −1/γ, −γ, 1/γ; keine bildet γ_M auf γ_T ab. Das gibt die Brücke zu den Punktierungen nicht.
+- **Penrose-Stränge (Nachtrag):** Ist eine Spin-j-Kante ein symmetrisiertes Bündel aus 2j Strängen und der Strang ein Quant
+  von χ, wirken die Frame-Abbildungen auf der Punktierung als exp(−iπJ) (geprüft bis 2j = 8). Bosonisch gelesene Stränge
+  geben alle j (M), fermionisch gelesene nur j = ½ (Λ² ist ein Singulett ohne Fläche, Λ³ leer), die Regel von T. Die
+  ausgerichteten Bündel sind das Extremdublett von M. Ersetzt die Guards T = String-Sektor und Chan–Paton von CT-004 durch
+  „Strang = Quant von χ“ und „T liest fermionisch“; T11 meint mit bosonisch/fermionisch die J-Parität (Register
+  unverändert).
 
 [Erkundung](../notes/research/op1_frame_irreducibility_2026_11_15/README.md).
 

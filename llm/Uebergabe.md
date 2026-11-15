@@ -109,6 +109,8 @@
   Asymmetrie M/T gesetzt; kein Test. Mögliche Alternative zu Guard 1 von CT-004 (Register unverändert).
   Nachtrag (Zweig `research/op1-bridge`): A_γ = c₊A₊ + c₋A₋, reelles γ auf dem Äquator; Frame-Abbildungen wirken auf γ als
   −1/γ, −γ, 1/γ, keine gibt γ_T aus γ_M. Brücke (A) weiter offen.
+  Nachtrag: Penrose-Bündel geben (A), wenn ein Strang ein Quant von χ ist; bosonische Stränge → alle j (M), fermionische →
+  nur j = ½ (T). Ersetzt Guards T = String und Chan–Paton von CT-004 durch (S1)–(S3); Register unverändert; kein Test.
 
 ## Nächster Schritt (Autorentscheidung)
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,
