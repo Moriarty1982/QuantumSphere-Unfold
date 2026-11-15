@@ -6,7 +6,7 @@
   Record https://zenodo.org/records/24237112; Vorgänger v5.0.0 (10.5281/zenodo.24152615). Vollausgabe 1412 Seiten,
   Physik-Paper 29 Seiten. Paketquellstand dfdb413, Tag `v5.1.0`, GitHub-Release gesetzt. Nach der Veröffentlichung
   geprüft: acht Dateien prüfsummengleich mit dem Paket, Vorschau = Vollausgabe. Release-Notiz `release/v5.1.0/README.md`.
-- **GitHub:** `main` nach PR #138 (68e1075, Runde r17), davor #137 (a835c46, OP1 Brücke: Barbero-Dublett, Penrose-Stränge), davor #136 (45f518d, OP3 Uhr-Abgleich und Treue-Lesart, OP1 Irreduzibilität), davor #135 (e0be304, Runde r16 mit r16.1–r16.9), davor #134 (f32ae5c, k220 „ein Objekt“ übernommen), davor #133 (37ac7da, OP3: C⊗O, Helizitätsachse, invariante Kugel, Feldvorzeichen), davor #132
+- **GitHub:** `main` nach PR #139 (86d80c8, Suche nach blindem Test, H2 nachgerechnet), davor #138 (68e1075, Runde r17), davor #137 (a835c46, OP1 Brücke: Barbero-Dublett, Penrose-Stränge), davor #136 (45f518d, OP3 Uhr-Abgleich und Treue-Lesart, OP1 Irreduzibilität), davor #135 (e0be304, Runde r16 mit r16.1–r16.9), davor #134 (f32ae5c, k220 „ein Objekt“ übernommen), davor #133 (37ac7da, OP3: C⊗O, Helizitätsachse, invariante Kugel, Feldvorzeichen), davor #132
   (b6ed1a5, Runde r15, Dauerauftrag Issues), #130 (eeb6083,
   Berichtigung zu CT-004), #129 (c9bfb19, OP1 mit I1, CT-004) und #128
   (14feb02, Release v5.1.0). **Keine offenen PRs.** Gemergt am 14./15.11.: #124–#128
@@ -113,7 +113,7 @@
   Nachtrag (PR #138, r17.6): R² = −1 gibt Kramers, nicht Pauli; Frame-Abbildungen sehen die Statistik
   nicht. (S2) ist reine Setzung; Begründung über R² zurückgenommen.
 
-- **Suche nach blindem Test (15.11., `notes/research/blind_test_search_2026_11_15/`, Zweig `research/blind-test-search`):**
+- **Suche nach blindem Test (15.11., `notes/research/blind_test_search_2026_11_15/`, PR #139):**
   kein Test gefunden. Neutrino-Kandidaten „Majorana: p₊ = p₋“ (R = 0) und „p₋ = 0“ (R = 0,0052) durch Daten ausgeschlossen;
   δ_CP, Majorana/Dirac, Strang-Statistik ohne Konstruktion. Daten 15.11.: kein NuFIT nach 6.1, PDG 2026 ohne neues m_τ.
   H2 nachgerechnet: Σm_ν = 0,0592 eV stabil (NuFIT 6.0/6.1, JUNO, SNO+), verträglich; Wiki-Angabe zur Ordnung berichtigt.
