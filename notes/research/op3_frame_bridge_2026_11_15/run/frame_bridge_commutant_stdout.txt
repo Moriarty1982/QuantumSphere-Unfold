@@ -1,0 +1,26 @@
+Teil A: reelles Dublett (E, B)
+  T^2 = 1: True,  J_B^2 = 1: True,  R^2 = -1: True  -> R ist keine Involution, sondern eine komplexe Struktur
+  reelle Huelle der Kommutatoren: Dimension 3; Spurform auf (T, J_B, R): Eigenwerte [-2.  2.  2.] -> indefinit, also sl(2,R), nicht su(2)
+  Involutionen von O(2) ausser +-1: Spiegelungen S(a) = cos(2a) sigma_z + sin(2a) sigma_x, eine Kreislinie;
+  sie liegen im 2-dim. Raum der spurfreien symmetrischen Matrizen -> hoechstens 2 paarweise antikommutierend
+  nach Komplexifizierung mit einer zweiten Einheit j (C^2 = R^2 x_R C):
+    |<T|J_B>|^2 = [0.5 0.5 0.5 0.5]
+    |<T|jR>|^2 = [0.5 0.5 0.5 0.5]
+    |<J_B|jR>|^2 = [0.5 0.5 0.5 0.5]
+  Die dritte Basis entsteht erst mit j; mit j = i (der Einheit von z = E + iB) waere R skalar (Teil B).
+
+Teil B: Kommutant der Symmetrien auf C x H x O (komplex 32-dim.)
+  Derivationen von O: 14 (g2), davon e7 fest: 8 (su(3))
+  Pruefung: SU(2)' und Y vertauschen mit Lorentz und Farbe, [T1',T2'] = i T3': True
+  Spektrum von 6*Y/2 (Vielfachheit): {-4: 6, -3: 4, 0: 2, 1: 12, 2: 6, 6: 2}
+  komplex-linearer Kommutant: Dimension 6 (ueber C)
+  ... kommutativ: True
+  antilinearer Kommutant: Dimension 0
+  -> reeller Kommutant = C^6, kommutativ: kein Paar antikommutierender Operatoren, also kein Generations-Qubit
+  R = i*1 liegt im Kommutanten (zentral); T = K vertauscht mit allen Generatoren: False; J_B = iK ebenso nicht
+  T scheitert an: ['Lorentz', "SU(2)'", 'Y']
+
+Teil C: n Kopien derselben Generation
+  n = 2: 1 x sigma_k vertauschen mit allen Generatoren (x 1): True; nach Schur ist der Kommutant (C^6) x M_2(C) -> Generations-Qubit mit drei unverzerrten Basen vorhanden
+  Der Raum fuer ein Generations-Qubit entsteht erst durch die Vielfachheit; R = i*1 wirkt darauf skalar,
+  T = K vertauscht weiterhin nicht mit den Symmetrien. Die Kopien muessen also vorher da sein.

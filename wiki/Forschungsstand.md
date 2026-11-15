@@ -1,5 +1,14 @@
 # Forschungsstand
 
+### OP3: Der Generationsindex braucht Kopien (15.11.2026, Runde r19)
+
+Erkundung (nicht blind; das Ergebnis folgt aus dem Lemma von Schur). Geprüft wurde, ob die drei Generationen als Eigenzustände der drei Frame-Abbildungen T, J_B und R auf dem Träger der Materie sitzen können (r15.5, offener Punkt „geladener Träger“ aus r16.7). Dafür müssten drei antikommutierende Operatoren mit Eich- und Lorentzgruppe vertauschen.
+- **Eine Generation:** Auf C⊗H⊗O vertauschen nur sechs Phasen, eine je Multiplett (Q, L, u^c, d^c, e^c, ν^c); kein antilinearer Operator. Kein Generations-Qubit. R ist zentral, T und J_B sind keine Symmetrien (sie bilden auf die konjugierte Darstellung ab).
+- **Mehrere Kopien:** Erst dann enthält der Kommutant M_n(C) und damit ein Qubit. Die Kopien müssen vorher da sein, und die Frame-Abbildungen wirken auf ihnen nicht. Die Lesart „drei Generationen = drei Frame-Abbildungen“ nimmt die Zahl drei deshalb als Eingabe.
+- **Vorliteratur:** Die drei Basen des Felddubletts (E/B, E ± B, Helizität) stehen bei Golat, Vernon und Rodríguez-Fortuño (2024); Oktant, Phase π/4 und Neutrino-Phase 2/9 + π/12 bei Brannen (2010); K = 2/3 als 45° bei Foot (1994).
+
+[Erkundung](../notes/research/op3_frame_bridge_2026_11_15/README.md) · [Literatur](../notes/research/literature_check_2026_11_15/README.md).
+
 ### C5, Form (iii): ein Nullaugenblick der Feldinvariante (15.11.2026)
 
 Erkundung (nicht blind); die verbotene Aussage C5 = 0 wird nicht gemacht. Für zeitharmonische Felder läuft die augenblickliche
