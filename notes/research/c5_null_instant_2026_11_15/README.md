@@ -55,3 +55,20 @@ Skript `null_instant.py`, Ausgabe `run/null_instant_stdout.txt`.
 - C5 bleibt offen; Form (iii) bleibt offen, hat jetzt aber einen benannten Kandidaten mit benannten Lücken.
 
 OP1–OP5, C5, C6/T2 und die Guards sind unverändert.
+
+## Nachtrag 15.11.2026: Lücke 1 – augenblicklich oder Zustandsgröße?
+Auftrag des Autors: „weiter“. **Lesart, aus dem Quelltext, nicht gerechnet.**
+
+- **Lesart B ist augenblicklich.** v4.9.0-r05.2(a): „At a point, E and B are real, so the state matrix of r04 has no σ_y part
+  anywhere.“ Der Dublett-Zustand von r04, auf den r10 den C5-Inhalt legt, ist also das reelle Feld in einem Punkt und zu einem
+  Zeitpunkt. Komplexe Amplituden und Zeitmittel kommen erst in r05.2(b) dazu, als andere Beschreibung.
+- **Die Obstruktion von r10 ist der Boden |s|.** r10.2(b) begründet die Obstruktion damit, dass der Inhalt E² + B² unter
+  Boosts den positiven Boden |s| nicht unterschreitet; r10.2(c) sagt, dass ein lichtartiges Feld (s = 0) diesen Boden nicht hat.
+  Gemeint ist das s des augenblicklichen reellen Feldes.
+- **Folge für (α):** Im Rahmen der Lesart von r10 ist die maßgebliche Größe das augenblickliche s(t), nicht die
+  Zustandsinvarianten s±, w der komplexen Beschreibung. Im Nullaugenblick ist dieser Boden exakt 0, während Inhalt und
+  Score positiv bleiben (Score ½ des Inhalts). **Lücke 1 ist damit innerhalb der Lesart von r10 zugunsten von (α)
+  geschlossen;** die Lesart selbst bleibt eine Lesart (r10: „an interpretation … not a derivation“).
+- **Was das nicht ändert:** Der Inhalt fällt im Nullaugenblick nicht auf 0; ein Boost könnte ihn dort nur im Grenzwert
+  leeren (r10.2(c)). Offen bleiben die Lücken 2 bis 4: periodische statt bleibende Null, keine Zuordnung zu Kollar-Stufen,
+  nicht generische Felder. Keine C5-Entladung; die Aussage C5 = 0 wird nicht gemacht.
