@@ -1,0 +1,99 @@
+{
+  "CT-004": {
+    "guards": [
+      "def4aa932da6b55bdea3397800ac3ba491b1fa19f5401e072efe21bbe52618df",
+      "dcc52eaf34fad9f61afc802df184aaec7f549f83ad17caaba9abbf01b5fa1cc5",
+      "1184069e9213e2e2ba54d022f9e603342948c08c1e32a973df4c2229573d9989",
+      "190cfc9e0af49c9b0b9b0d3684c53856999c56e8e277c2eddd0401292cade64b"
+    ],
+    "lifecycle": "placeholder",
+    "version_hash": "fc3ca8d2c8236c70c3b12941e2af9a13f44617efb332ee015824fbbbfee7e4dc"
+  },
+  "balance": {
+    "by_status": {
+      "partially_constrained": [
+        "CT-001"
+      ],
+      "placeholder": [
+        "CT-002",
+        "CT-003",
+        "CT-004"
+      ]
+    },
+    "counterterms": {
+      "CT-001": "partially_constrained",
+      "CT-002": "placeholder",
+      "CT-003": "placeholder",
+      "CT-004": "placeholder"
+    },
+    "structurally_matched": 0
+  },
+  "database": "build/ct_register_full_2026_11_15.sqlite3",
+  "export": {
+    "directory": "build/ct_register_export_2026_11_15",
+    "guard_notes": 8,
+    "manifest_hash": "bc0071d002d414a2c2deb7ddcde4c5cc95ce9e5968a76ef64b02f33de8c5a8ea",
+    "registry_entries": 4
+  },
+  "selection_hash": "73036af0c7dee40fe42f8572bfec3ffea365c4974f534fd31f76635be906595c",
+  "snapshot": "c8b0ab88bb3b7a4dcf303c5377d72bdbf7976459b056283043447a38cb919a97",
+  "statements": {
+    "H102": {
+      "counterterms": [
+        "partially_constrained",
+        "placeholder"
+      ],
+      "inherited_guards": 7,
+      "version_hash": "97e653078e8a2156f131350c75c1e6029d064805263efb84e954dee4680b31e6"
+    },
+    "H15": {
+      "counterterms": [
+        "placeholder"
+      ],
+      "inherited_guards": 4,
+      "version_hash": "eb1d20db80926f28f4a10618091eb3482bb9cdb5eaecde91758c7fe702378afe"
+    },
+    "H46": {
+      "counterterms": [
+        "placeholder"
+      ],
+      "inherited_guards": 4,
+      "version_hash": "3e5cf32d9c2150d340423d84345ca531dd40fa4b4f571af203a4dbec2fc3022e"
+    },
+    "H96": {
+      "counterterms": [
+        "placeholder"
+      ],
+      "inherited_guards": 4,
+      "version_hash": "a85ff115f88c45a462852fe23292a66854d95a62ac6a447992c518f03a4f6bbe"
+    },
+    "S-2T": {
+      "counterterms": [
+        "placeholder"
+      ],
+      "inherited_guards": 3,
+      "version_hash": "16b5fa72dac4e2dbb0381a2117b52d0e27f5a90b1721191ea221a3f884c510ef"
+    },
+    "S-COUNT": {
+      "counterterms": [
+        "placeholder"
+      ],
+      "inherited_guards": 4,
+      "version_hash": "19681a46424ee833d5ca2e9e4776180902bc4d302e6b547dd3f33cb469d89de1"
+    },
+    "S-GEN": {
+      "counterterms": [
+        "placeholder"
+      ],
+      "inherited_guards": 3,
+      "version_hash": "9a82d66a5a8038277102bbae5c3e39c161fe09fa3c9a9f897da42f921ad48c71"
+    },
+    "S-N": {
+      "counterterms": [
+        "placeholder"
+      ],
+      "inherited_guards": 3,
+      "version_hash": "5e8c148827c45369405dd5416f3a41f2322d8aa7e51f6c1ec35db0a027383421"
+    }
+  }
+}
