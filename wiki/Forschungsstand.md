@@ -1,5 +1,21 @@
 # Forschungsstand
 
+### OP3/OP1: Der Kern als Schatten eines Horizonts (15.11.2026)
+
+Idee des Autors, als Erkundung festgehalten (nicht blind). Der flussfreie Kern auf der Generationskugel wird als
+**Schatten** eines Horizonts auf dem Himmel des Beobachters gelesen.
+- **Was der Schatten leistet:** Er ist die gesuchte Sorte Abbildung (Fläche → Raumwinkel) und von selbst flussfrei. Im
+  Paper hat er einen Anker: `rem:hc-shadow-vs-core` (v470/12), verschiedene Auslesungen zeigen verschiedene sichtbare
+  Schatten desselben Kerns.
+- **Die Größe bleibt offen:** Der Schwarzschild-Schatten hängt vom Abstand ab; γ_M ergäbe sich erst bei etwa 9 r_s, ohne
+  Grund. Die Sektorlesart von CT-001 gibt γ/2, also die Hälfte.
+- **Die Ladung behebt den Faktor 2 nicht:** Drei kohärente Spin-1-Zustände mit Überlappung ½ sind schon von selbst
+  gebogen (Phase 3·arccos(1 − 1/√2) − π = 0,6790, drei Massen 1 : 16,2 : 65,9), liegen aber neben den Leptonen.
+- **Frame M:** Weil Schatten frame-abhängig sind, die Massen aber nicht, muss der Schatten im Frame M gelesen werden.
+  Das gibt dem Guard „Ende im Frame M“ von CT-002 einen Grund (Lesart).
+
+[Erkundung](../notes/research/op3_horizon_shadow_2026_11_15/README.md).
+
 ### OP1 mit I1: Tachyon-Frame zählt Stringendpunkte (15.11.2026)
 
 Erkundung (nicht blind) auf Autorentscheidung, mit der zurückgestellten Idee I1. Gesucht war ein Grund, warum der
