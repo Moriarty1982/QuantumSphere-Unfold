@@ -77,3 +77,61 @@ Die alte offene Frage sitzt nach der Neufassung allein in C5_br. Sie hängt an d
 - C5_tr ist nur innerhalb der Lesart von r10 und für die Transporte von Lesart B als Verlagerung eingeordnet.
 - C5_P ist eine Aussage über Felder, kein Abschluss von C5.
 - OP1–OP5, C6/T2 und die Guards sind unverändert.
+
+## Nachtrag 16.11.2026: Zwei Klassen und der Kollapszustand
+Frage des Autors: Der Kollapszustand ist der Nullzustand; gibt es auf der untersten Ebene nur „liegt drin oder nicht“? Auftrag:
+nachrechnen, die Abbildung zum Kollapszustand prüfen und mit heutigem Wissen neu beschreiben; der Autor weist darauf hin, dass
+die Idee des Kollapszustands vom Anfang des Projekts stammt. **Erkundung, nicht blind.** Skript `two_classes.py`, Ausgabe
+`run/two_classes_stdout.txt`.
+
+### Vorwissen geprüft
+- **k220 (7.11.2026, `../k220_ein_objekt_2026_11_07/`):** Bahnen von SO(3,ℂ) × Dualität auf z = E + iB sind die Schalen |s| = r > 0,
+  der punktierte Nullkegel und {0}; M und T liegen auf einer Bahn, s = 0 ist der einzige Fixpunkt der Dualität. Kompensator und
+  Mischung verlieren Information; R ≠ P.
+- **Hauptkorpus (`thm:unity`, `thm:origin`, `thm:dark-offset`):** z⁻ ist die Frame-Variable; z⁻ = 0 heißt Kollapszustand, wird mit
+  dem Photon und dem einzigen frame-invarianten Objekt gleichgesetzt, und „we can never fully reach z⁻ = 0“.
+- **v4.9.0-r24.3:** Der „Photon-Frame“ des Hauptkorpus (Versatz null) ist der Bezugsframe R, der reine Zustand |b| = 1; das Photon P
+  der Konvention F ist b = 0 und wird erst für β → 1 erreicht. |b_R|/|b_M| = γ_L.
+- **`../op5_reconstruction_verdict_2026_11_06.md`:** „Null“ und „Photon“ bezeichneten sechs verschiedene Dinge; ihre Gleichsetzung
+  ist keine zulässige Abkürzung.
+- **v4.10.0-r11.2(f):** Das Kompensatorbild ist nicht null.
+
+### Ergebnisse
+1. **Zwei Klassen.** Nimmt man zu SO(3,ℂ) die Skala z ↦ λz mit komplexem λ ≠ 0 hinzu (Dualitätsphase und Dilatation), bilden alle
+   nicht lichtartigen Felder eine einzige Bahn (2000 Paare, Residuum 2·10⁻¹⁴). Die lichtartigen Felder ≠ 0 bilden schon unter
+   SO(3,ℂ) eine Bahn (2000 Paare, Residuum 3·10⁻¹²). Unter Lorentz-Gruppe, Dualität und Skala gibt es also genau zwei Klassen von
+   Feldern ≠ 0, und die einzige verbleibende Aussage ist: lichtartig oder nicht.
+2. **Jede Klasse hat einen ausgezeichneten Vertreter.** Ein nicht lichtartiges Feld kommt durch einen endlichen Boost in den Frame
+   E ∥ B; dort ist der Boden φ = 1 (reiner Zustand). Das ist der Bezugsframe R von r24.3. Ein lichtartiges Feld hat φ = 0 in jedem
+   Frame; das ist der Photonpunkt P. Unter Boosts nimmt φ in der ersten Klasse alle Werte in (0, 1] an, in der zweiten nur 0.
+3. **R und P sind die beiden Enden einer Rapiditätslinie.** Für die Rapidität des Boosts nach R gilt φ = sech 2η_R. R ist η_R = 0,
+   P ist η_R = ∞. Entlang des Nullaugenblicks aus r20.1 divergiert η_R (0,74; 1,33; 2,02; 2,83; 3,98 bei t = −0,6; −0,2; −0,05;
+   −0,01; −0,001). Die freie Zeitentwicklung erreicht in endlicher Zeit, was Boosts erst bei unendlicher Rapidität erreichen.
+
+### Der Kollapszustand mit heutigem Wissen (Lesart)
+Der Hauptkorpus arbeitet in einem einzigen Frame (r24) und schreibt z⁻ = 0 für zwei Dinge, die heute getrennt sind:
+
+| Rolle von z⁻ = 0 im Hauptkorpus | heutige Beschreibung |
+|---|---|
+| Nullpunkt des Versatzes; Ziel der Umrechnungen γ_L^(−k); Λ = 0 | **R**: φ = 1, η_R = 0; ein Frame, durch endlichen Boost erreichbar (r24.3) |
+| das invariante Objekt; das Photon | **P**: φ = 0, die lichtartige Klasse, Fixpunkt der Dualität (k220); η_R = ∞ |
+| „we can never fully reach z⁻ = 0“ (`thm:dark-offset`, v4.8.0-r18) | als Aussage über Erreichbarkeit passt sie zu P (kein Transport, Boosts nur im Grenzwert), nicht zu R |
+| Kompensator als Projektion auf den Kollapszustand (`thm:unity` (iv)) | keines von beiden: Das Bild ist nicht null (r11.2(f)); eine Projektion verliert Information (k220) |
+
+- **„Kollapszustand = Nullzustand“ gilt für die Rolle des invarianten Objekts.** In dieser Rolle ist er P, die lichtartige Klasse, und
+  die Frage „liegt drin oder nicht“ ist genau die Klassenaussage aus Ergebnis 1.
+- **Für die Rolle des Nullpunkts gilt es nicht.** Der Nullpunkt des Versatzes ist R, und R ist das Gegenteil eines Nullzustands: Der
+  Boden ist dort maximal.
+- **Spannung, nicht aufgelöst:** Die dritte Zeile widerspricht der Typisierung von r24.3. „Unerreichbar“ passt zu P, die Rechnungen
+  mit dem Versatz (γ_L, Λ) passen zu R. Das ist ein Kandidat für einen Statusvermerk; der Hauptkorpus wird nicht umgeschrieben.
+
+### Folge für die Brückenfrage (B2)
+Trägt die unterste Ebene nur die Klassenaussage, dann ist Zugehörigkeit zu einem Augenblick der Grundbegriff: Sie ist
+Lorentz-invariant (r20.1(c)); eine Dauer braucht einen Zeitparameter, den die Klassenebene nicht hat. **Der Autor hat die
+Ereignis-Lesart am 16.11.2026 als Arbeitsannahme gesetzt.** Sie ist gesetzt, nicht hergeleitet. Offen bleiben (B1) und (B3).
+
+### Grenzen
+- Nur der freie Träger in Lesart B. Mit Ladungen ist die Dualität keine Symmetrie (k220), mit Massen die Dilatation nicht.
+- Dass Skala und Dualitätsphase auf der untersten Ebene herausgeteilt werden, ist eine Setzung.
+- Die Zuordnung der Hauptkorpus-Stellen ist eine Lesart an vier Stellen, keine Durchsicht des ganzen Hauptkorpus.
+- Keine C5-Entladung; die Aussage C5 = 0 wird nicht gemacht.

@@ -39,7 +39,36 @@ Es gilt immer $C5_M + C5_T = 1$; in der Kollar-Rekursion sind die kumulierten An
 Boden des augenblicklichen Feldes“ (r10, r20.2), die eine Lesart bleibt; (B2) Augenblick oder Dauer; (B3) warum Felder der Familie
 von Kodimension 1 vorliegen sollten. Zu (B2): Genügt ein invarianter Augenblick (Ereignis-Lesart), dann ist der Nullaugenblick aus
 r20.1 ein Kandidat. Muss die Null bestehen bleiben (Dauer-Lesart), dann liefert die freie Zeitentwicklung keinen Zeugen, und der
-Kandidat aus r20 scheidet aus. **(B2) ist eine offene Entscheidung des Autors.**
+Kandidat aus r20 scheidet aus. **Der Autor hat die Ereignis-Lesart am 16.11.2026 als Arbeitsannahme gesetzt (r21.10);** sie ist
+gesetzt, nicht hergeleitet. (B1) und (B3) bleiben offen.
+
+**Zwei Klassen (r21.8).** Anlass war die Frage des Autors, ob es auf der untersten Ebene nur „liegt im Nullzustand oder nicht“
+gibt. Die Erkundung k220 kannte die Bahnen von SO(3,ℂ) × Dualität auf z = E + iB: die Schalen |s| = r, den Nullkegel und {0}.
+Nimmt man die Skala z ↦ λz hinzu, bilden alle nicht lichtartigen Felder eine einzige Bahn, die lichtartigen eine zweite. Unter
+Lorentz-Gruppe, Dualität und Skala bleibt also genau eine Aussage: lichtartig oder nicht. Jede Klasse hat einen ausgezeichneten
+Vertreter:
+
+| Klasse | Vertreter | Boden | erreichbar |
+|---|---|---|---|
+| nicht lichtartig | Bezugsframe R (E ∥ B, reiner Zustand, r24.3) | $`\phi = 1`$ | durch einen endlichen Boost |
+| lichtartig | Photonpunkt P | $`\phi = 0`$ in jedem Frame | durch Boosts nur im Grenzwert |
+
+Für die Rapidität des Boosts nach R gilt $\phi = \operatorname{sech} 2\eta_R$; R und P sind die beiden Enden einer
+Rapiditätslinie ($\eta_R = 0$ und $\eta_R = \infty$). Entlang des Nullaugenblicks divergiert $\eta_R$: Die freie Zeitentwicklung
+erreicht in endlicher Zeit, was Boosts erst bei unendlicher Rapidität erreichen. Anteile, Score und der Wert des Bodens sind
+Auslesungen eines Frames über dieser Ja/Nein-Ebene.
+
+**Der Kollapszustand mit heutigem Wissen (r21.9, Lesart).** Der Hauptkorpus nennt z⁻ = 0 den Kollapszustand und setzt ihn mit dem
+Photon und dem einzigen frame-invarianten Objekt gleich. Er arbeitet in einem einzigen Frame (r24) und schreibt z⁻ = 0 für zwei
+Dinge, die heute getrennt sind:
+- **Nullpunkt des Versatzes** (Ziel der Umrechnungen mit γ_L, Λ = 0): Das ist R, ein Frame mit maximalem Boden, kein Nullzustand.
+- **Das invariante Objekt, das Photon:** Das ist P, die lichtartige Klasse. In dieser Rolle gilt „Kollapszustand = Nullzustand“.
+- **Spannung, nicht aufgelöst:** „We can never fully reach z⁻ = 0“ (`thm:dark-offset`) passt als Aussage über Erreichbarkeit zu P,
+  die Rechnungen mit dem Versatz passen zu R. Kandidat für einen Statusvermerk; der Hauptkorpus wird nicht umgeschrieben.
+- Der Kompensator als „Projektion auf den Kollapszustand“ trifft keines von beiden: Sein Bild ist nicht null (r11.2(f)).
+
+Grenzen: nur der freie Träger; mit Ladungen ist die Dualität keine Symmetrie, mit Massen die Dilatation nicht. Dass Skala und
+Dualitätsphase auf der untersten Ebene herausgeteilt werden, ist eine Setzung.
 
 [Erkundung](../notes/research/c5_restatement_2026_11_16/README.md) · [Runde](../notes/research/v4_10_0_r21/README.md).
 

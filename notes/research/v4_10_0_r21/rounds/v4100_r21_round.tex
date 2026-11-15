@@ -10,7 +10,7 @@
 Layer v4.10.0-r20.4 found that C5 in its old form asks, in the measure of one frame, about a passage between two frames, and left the
 restatement to the author.  The author has decided for it (2026-11-16).  This layer restates C5 in the way v4.9.0-r61 treated OP4: it
 types the quantities by frame, splits the old entry \(C5_{\rm zero}\) of v4.7.0-r86 into three questions, and records the status of
-each.  It also corrects one sentence of r20.4.  Exploration, not blind: every computation is fixed analytically beforehand.
+each.  It also corrects one sentence of r20.4 and relates the collapse state of the main body to the two classes of fields.  Exploration, not blind: every computation is fixed analytically beforehand.
 \textbf{The forbidden assertion \(C5=0\) is not made, and C5 stays open.}  The notes are
 \texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r21/} and
 \texttt{notes/\allowbreak research/\allowbreak c5\_restatement\_2026\_11\_16/}.  Earlier layers are not rewritten.
@@ -100,7 +100,51 @@ and (B3).  Under a \emph{duration reading} the zero must last; then by r21.6 fre
 candidate of r20 drops out.
 \item[(B3)] Presence.  Why fields of the codimension-one family should be present is open (r20).
 \end{enumerate}
-(B2) is the author's decision; this layer does not take it.
+(B2) is the author's decision.  On 2026-11-16 the author set the event reading as a working assumption (r21.10); it is set, not derived.
+
+\paragraph{Theoremlet v4.10.0-r21.8 (two classes).}
+The exploration k220 of 2026-11-07 found the orbits of \(SO(3,\mathbb C)\times U(1)_{\rm duality}\) on \(z=E+iB\): the shells \(|s|=r>0\), the
+punctured null cone and \(\{0\}\).  Add the scale, \(z\mapsto\lambda z\) with \(\lambda\in\mathbb C\setminus\{0\}\) (duality phase and dilation).
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] All non-null fields form one orbit: for \(s_1,s_2\ne0\) there are \(\lambda\) and \(L\in SO(3,\mathbb C)\) with \(z_2=\lambda Lz_1\).
+\item[(b)] The non-zero null fields form one orbit of \(SO(3,\mathbb C)\) alone.
+\item[(c)] Each class has a distinguished representative.  A non-null field is taken by a finite boost to the frame \(E\parallel B\), where
+\(\phi=1\); this is the pure state, the reference frame R of v4.9.0-r24.3.  A null field has \(\phi=0\) in every frame; this is the photon
+point \(P\).  Under boosts \(\phi\) takes every value in \((0,1]\) on the first class and only \(0\) on the second.
+\item[(d)] The rapidity of the boost to R obeys \(\phi=\operatorname{sech}2\eta_R\).  Along the null instant of r20.1 it diverges
+(\(\eta_R=0.74,\ 1.33,\ 2.02,\ 2.83,\ 3.98\) at \(t=-0.6,\ -0.2,\ -0.05,\ -0.01,\ -0.001\)).  Free time evolution reaches at a finite time what
+boosts reach only at infinite rapidity.
+\end{enumerate}
+Reading: below every frame readout there is one predicate left, whether the field lies in the null class or not.  The shares, the
+score \((3/4)^n\) and the value of the floor are readouts of a frame above it.  Checked in \texttt{two\_\allowbreak classes.py}
+(\(2000\) pairs each for (a) and (b), \(1000\) fields for (c)).
+
+\paragraph{Remark v4.10.0-r21.9 (the collapse state of the main body in present terms; reading).}
+The main body calls \(\zminus=0\) the collapse state, the zero of the frame variable, and identifies it with the photon and with the
+unique frame-invariant object (Theorem~\ref{thm:unity}, Theorem~\ref{thm:origin}).  v4.9.0-r24.3 typed the zero of the offset as R, the
+pure state, and separated it from the photon \(P\) of Convention~F.  With r21.8 the two roles of the collapse state are the two
+distinguished representatives:
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.40\textwidth}>{\raggedright\arraybackslash}p{0.52\textwidth}@{}}
+\toprule
+role of \(\zminus=0\) in the main body & present description\\
+\midrule
+zero of the offset; target of the \(\gL^{-k}\) conversions; \(\Lambda=0\) & R: \(\phi=1\), \(\eta_R=0\); a frame, reached by a finite boost (r24.3)\\
+the invariant object; the photon & \(P\): \(\phi=0\), the null class, fixed point of duality (k220); \(\eta_R=\infty\)\\
+``we can never fully reach \(\zminus=0\)'' (Theorem~\ref{thm:dark-offset}, v4.8.0-r18) & as a statement of reachability it fits \(P\) (no transport, boosts only in the limit), not R\\
+compensator output as projection onto the collapse state (Theorem~\ref{thm:unity}(iv)) & neither: the image is not null (v4.10.0-r11.2(f)); a projection loses information (k220)\\
+\bottomrule
+\end{tabular}
+\end{center}
+R and \(P\) are the two ends of one rapidity line, \(\eta_R=0\) and \(\eta_R=\infty\); the main body, which works in one frame (r24), wrote both
+as \(\zminus=0\).  The third row is a tension with the typing of r24.3 and is recorded, not resolved.  The main body is not rewritten.
+
+\paragraph{Remark v4.10.0-r21.10 (working assumption for (B2)).}
+If the lowest level carries only the class predicate of r21.8, membership at an instant is the primitive notion: it is
+Lorentz-invariant (r20.1(c)), while a duration needs a time parameter that the class level does not have.  On this ground the author
+set the event reading of (B2) as a working assumption on 2026-11-16.  It is a setting.  That the scale and the duality phase are
+divided out at the lowest level is a setting as well; both are symmetries of the free field only (k220).  (B1) and (B3) stay open.
 
 \paragraph{What this does not give.}
 No C5 discharge.  The classification of \(C5_{\rm tr}\) holds within the reading of v4.9.0-r10 and for the transports of Reading~B.
@@ -119,6 +163,7 @@ quantity or question & M / T / P\\
 floor \(\phi\) & frame-free; \(P\) is \(\phi=0\)\\
 \(C5_{\rm tr}\) & a passage from M to T\\
 \(C5_P\), \(C5_{\rm br}\) & frame-free\\
+class predicate (r21.8) & frame-free; R is a frame of the non-null class, \(P\) is the null class\\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -138,6 +183,9 @@ C5 in the old form & mixes frames (r20.4); restated as \(C5_{\rm tr}\), \(C5_P\)
 lasting zero of \(s(t)\) & only for \(s_+=s_-=w=0\), present from the start (r21.6)\\
 \(C5_{\rm br}\) (bridge) & open; depends on (B1), (B2), (B3); (B2) is the author's decision (r21.7)\\
 equal shares and \(P\) & necessary, not sufficient; correction to r20.4 (r21.3(c))\\
+classes of non-zero fields & two under Lorentz group, duality and scale: null or not; representatives \(P\) and R (r21.8)\\
+collapse state \(\zminus=0\) of the main body & two roles: zero of the offset (R) and invariant object (\(P\)); reading, one tension recorded (r21.9)\\
+(B2) instant or duration & event reading set as working assumption by the author; not derived (r21.10)\\
 \(C5_{\rm zero}\) & open; no discharge, no assertion \(C5=0\)\\
 \bottomrule
 \end{tabular}

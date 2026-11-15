@@ -14,9 +14,12 @@ bleibt offen.**
 | r21.5 | C5_P: für Felder positiv (freie Zeitentwicklung, Kodimension 1); Transporte von Lesart B und Rekursion nicht | ebenda |
 | r21.6 | Bleibende Null nur für s₊ = s₋ = w = 0, von Anfang an; Zeitmittel von \|s(t)\|² = (\|s₊\|² + 4\|w\|² + \|s₋\|²)/16 | ebenda |
 | r21.7 | Offen ist allein C5_br, abhängig von (B1) Lesart r10, (B2) Augenblick oder Dauer (Autorentscheidung), (B3) Vorliegen | ebenda |
+| r21.8 | Zwei Klassen: Unter Lorentz-Gruppe, Dualität und Skala gibt es genau zwei Bahnen von Feldern ≠ 0 (lichtartig oder nicht); Vertreter P (φ = 0) und R (φ = 1); φ = sech 2η_R | ebenda (Nachtrag), `two_classes.py` |
+| r21.9 | Kollapszustand z⁻ = 0 des Hauptkorpus heute: zwei Rollen, Nullpunkt des Versatzes (R) und invariantes Objekt (P); eine Spannung mit r24.3 vermerkt (Lesart) | ebenda (Nachtrag) |
+| r21.10 | Arbeitsannahme des Autors zu (B2): Ereignis-Lesart; gesetzt, nicht hergeleitet | ebenda (Nachtrag) |
 
 ## Prüfung
 - Guard-Linter (`python tools/qs.py guards sources/research/parts/v4100-post-release-layers.tex --start 2809`):
-  0 Kandidaten in den Zeilen 2809–2971.
+  0 Kandidaten in den Zeilen 2809–3019.
 - Kandidaten-Build (`python .github/scripts/qsc_latex_build.py --source-dir sources/research --output-dir <Pfad>`, MiKTeX):
-  1436 Seiten, 0 Fehler, 0 undefinierte Verweise, 0 Overfull; r21 im Inhaltsverzeichnis.
+  1438 Seiten (mit Nachtrag r21.8–r21.10), 0 Fehler, 0 undefinierte Verweise, 0 Overfull; r21 im Inhaltsverzeichnis.

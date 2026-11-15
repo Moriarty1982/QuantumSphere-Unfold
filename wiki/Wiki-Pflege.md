@@ -105,6 +105,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 - 16.11.2026: Runde v4.10.0-r21 (C5 frame-sauber neu gestellt) eingetragen: Forschungsstand, Offene-Probleme, Gesamtbild,
   Forschungslinie, Inhalt, Content-overview. Enthält eine Berichtigung zu r20.4 (gleiche Anteile kennzeichnen den Photonpunkt
   nicht). Kein Abschluss; C5 offen.
+- 16.11.2026: Nachtrag zu r21 vor dem Merge (r21.8–r21.10): zwei Klassen von Feldern, der Kollapszustand des Hauptkorpus in
+  heutiger Beschreibung (zwei Rollen, R und P), Ereignis-Lesart als Arbeitsannahme des Autors. Dieselben Seiten.
 
 - 15.11.2026: Die C5-Runde wurde von r19 in **r20** umbenannt, weil eine andere Sitzung r19 parallel vergeben und gemergt hatte
   (PR #144). Einträge zu r19 betreffen den Kommutanten einer Generation, Einträge zu r20 den C5-Kandidaten.
