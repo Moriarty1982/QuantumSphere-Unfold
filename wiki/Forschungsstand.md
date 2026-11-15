@@ -1,5 +1,17 @@
 # Forschungsstand
 
+### OP3: Koide als vollständige Komplementarität (15.11.2026)
+
+Erkundung (nicht blind). Der Oktant besteht aus je einem Eigenzustand von σx, σy und σz, also aus je einem Zustand jeder
+der drei gegenseitig unverzerrten Basen eines Qubits. Allgemein gibt ein Zustand aus jeder Basis eines vollständigen
+Satzes in Dimension d genau N = d + 1 Zustände mit **K = 2/(d + 1) = 2/N** (geprüft für d = 2, 3, 5, 7). Nur d = 2 gibt
+drei Zustände; dann ist K = 2/3. In dieser Lesart sind „drei Generationen“ und „Koide 2/3“ eine einzige Aussage.
+- **Was gesetzt bleibt:** zwei Prinzipien, „ein Zustand je komplementärer Basis“ und „vollständiger Satz“.
+- **Was die Lesart nicht leistet:** Die Biegung zu den echten Massen bleibt beim Kern (γ_M, OP1), die Neutralität bei
+  CT-003.
+
+[Erkundung](../notes/research/op3_koide_complementarity_2026_11_15/README.md).
+
 ### OP3: Das Spin-1-Dreieck (15.11.2026)
 
 Erkundung (nicht blind). Drei kohärente Spin-1-Zustände mit Überlappung ½ (Seitenwinkel 65,53°, cos = √2 − 1) tragen in
