@@ -56,3 +56,35 @@ Felder vorliegen sollten. **Suchrichtung:** rückwärts, von der Bedingung zu de
 - Der Nullaugenblick ist ein bekanntes Objekt der Literatur; der Befund ist keine Neuheit der Physik, nur eine Einordnung im Projekt.
 - Nur freie, monochromatische Felder in Lesart B. Für polychromatische Felder ist s(t) kein trigonometrisches Polynom zweiten Grades;
   die Flächenaussage (Kodimension 1 im Raum) bleibt plausibel, ist aber nicht gerechnet.
+
+## Nachtrag 16.11.2026: Hat „helizitätsneutral“ eine ausgezeichnete Rolle?
+Auftrag des Autors: „weiter“. Offener Punkt aus dieser Notiz: Ob lineare Polarisation (gleiche Helizitätsgewichte, b_y = 0) im
+Bestand eine ausgezeichnete Rolle hat. **Erkundung, nicht blind.** Skript `helicity_neutral.py`, Ausgabe
+`run/helicity_neutral_stdout.txt`.
+
+### Fundstellen
+- **v4.10.0-r16.2(a):** Die Tachyon-Abbildung R erhält b_y, T und J_B kehren es um (wie die Chiralität in v4.9.0-r51.1(a)).
+- **v4.10.0-r16.3(b):** Auf dem invarianten Dublett χ erhält R das Helizitätsvorzeichen, T und J_B kehren es um.
+- **v4.10.0-r16.2(d):** Für allgemeine komplexe Amplituden ändert sich b_y unter Boosts.
+- **v4.10.0-r18.1 (Warnung):** „Majorana heißt gleiche Helizitätsanteile“ wurde als Neutrino-Prinzip geprüft und ist durch Daten
+  ausgeschlossen (R = 0 gegen beobachtet 0,0298). Das betrifft Neutrinos, nicht Felder, zeigt aber, dass gleiche Helizitätsanteile
+  als Prinzip schon einmal gescheitert sind.
+
+### Ergebnisse
+1. **Die einzige Helizität, die alle drei Frame-Abbildungen erhalten, ist b_y = 0.** R lässt b_y fest, T und J_B kehren es um
+   (nachgerechnet: 0,2622 ↦ 0,2622, −0,2622, −0,2622). Die Menge b_y = 0 ist also die einzige Helizitätsstufe, die kein Frame
+   verschiebt.
+2. **Für eine ebene Welle ist diese Neutralität beobachterunabhängig.** Beide Helizitätsanteile einer ebenen Welle erhalten unter
+   einem Boost denselben Doppler-Faktor; eine linear polarisierte Welle bleibt linear (500 Boosts, |b_y| = 0), eine elliptische behält
+   ihr b_y (Abweichung ≤ 3·10⁻¹⁶). Für allgemeine Amplituden in einem Punkt gilt das nicht (Median der Änderung 0,14), wie r16.2(d).
+
+### Einordnung
+- **Ja, eine ausgezeichnete Rolle gibt es:** Helizitätsneutral ist die frame-invariante Helizitätsstufe, und für Teilwellen ist sie
+  Lorentz-invariant. Zusammen mit r21.11 heißt das: Eine Teilwelle, die kein Frame nach Helizität unterscheidet, erzeugt
+  Nullaugenblicke an jedem Punkt des Raums.
+- **Was das nicht ist:** Keine Begründung, dass eine solche Teilwelle vorliegt. Frame-Invarianz einer Menge ist kein Prinzip, das
+  einen Zustand auswählt; dafür bräuchte es eine Setzung wie „der Zeuge trägt keine Helizität, die ein Frame unterscheidet“. Diese
+  Setzung wird hier nicht gemacht.
+- **Nicht verwechseln:** Die Scheibe von r04 (b_y = 0) beschreibt das augenblickliche reelle Feld (r05.2(a)); dort ist b_y immer 0.
+  Die Neutralität hier betrifft die Amplituden einer Teilwelle (r05.2(b)), also die zeitgemittelte Helizität. Das sind zwei Ebenen.
+- C5 bleibt offen; (B1) bleibt eine Lesart.

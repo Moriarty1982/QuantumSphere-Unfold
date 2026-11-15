@@ -57,6 +57,11 @@ Amplituden in einem Punkt; im Raum ist sie auf Flächen erfüllt.
 sollten, entfällt; offen bleibt, warum ein Zeuge gerade an einem solchen Punkt sitzen sollte. **Literatur (nachträglich
 gefunden):** Die Nullstellen von F·F heißen Riemann–Silberstein-Wirbel (Kaiser 2003; Białynicki-Birula und Białynicka-Birula
 2003). Der Nullaugenblick ist ein Punkt auf einem bekannten Objekt; nur seine Rolle als C5-Kandidat ist projektspezifisch.
+**Nachtrag (Erkundung, noch nicht in der Runde):** Helizitätsneutral (lineare Polarisation, $b_y = 0$) ist die einzige
+Helizitätsstufe, die alle drei Frame-Abbildungen erhalten: R lässt $b_y$ fest, T und J_B kehren es um (r16.2(a)). Für eine ebene
+Welle ist die Neutralität zudem beobachterunabhängig. Eine Teilwelle, die kein Frame nach Helizität unterscheidet, erzeugt also
+Nullaugenblicke an jedem Punkt. Dass eine solche Teilwelle vorliegt, ist damit nicht begründet; „gleiche Helizitätsanteile“ ist
+als Neutrino-Prinzip schon einmal an den Daten gescheitert (r18.1).
 [Erkundung (B3)](../notes/research/c5_presence_2026_11_16/README.md).
 
 **Zwei Klassen (r21.8).** Anlass war die Frage des Autors, ob es auf der untersten Ebene nur „liegt im Nullzustand oder nicht“
