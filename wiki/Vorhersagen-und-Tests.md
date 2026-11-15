@@ -6,6 +6,8 @@
 
 **Nachtrag 15.11.2026 (v4.10.0-r16):** Kein neuer Test. Statusvermerke zu Helizitätsachse, invariantem Dublett und Frame-Vorzeichen sowie k220 (nicht blind); keine Vorhersage ist berührt.
 
+**Nachtrag 15.11.2026 (Suche):** Eine Suche nach einem blinden Test aus r15–r17 fand keinen; zwei Neutrino-Kandidaten sind durch vorhandene Daten ausgeschlossen (R = 0 bzw. 0,0052 gegen 0,0298). H105 bleibt frei.
+
 **Nachtrag 15.11.2026 (v4.10.0-r17):** Kein neuer Test. Statusvermerke zu Uhr-Funktional und Zählregel (nicht blind); die Zählgleichung und damit H15, H46, H96 sind nicht berührt.
 
 **Stand: 7. November 2026.** Die Runden v4.10.0-r06 (Literaturbezug Dorau–Much) und r07 (die Kette im Tachyon-Frame) enthalten keinen Test und keine neue Vorhersage; ein geplanter Test zu r07 wurde nicht vergeben, weil das Ergebnis analytisch feststand. Seit v4.8.0 gilt eine feste Regel: Eine neue Vorhersage oder ein Test wird **vor** der Rechnung als Vorab-Notiz festgeschrieben (Hypothese, Daten, Entscheidungskriterium) und committet. Erst dann wird gerechnet. So lässt sich später prüfen, dass nichts nachträglich angepasst wurde. Diese Seite listet alle Tests mit ihrem Ergebnis. [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie) · [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt)
@@ -37,7 +39,7 @@ Zu H46: Eine Bestätigung würde die Kette r55–r60 prüfen, nicht die Lesart a
 | Nr. | Hypothese | Ergebnis |
 |---|---|---|
 | H1 | Koide-Phase $\delta = K/3$ | widerlegt für Quarks und laufende Leptonmassen |
-| H2 | Neutrinos als lichtartige Triole | verträglich; sagt normale Ordnung und $\sum m_\nu = 0{,}0592$ eV voraus; normale Ordnung von JUNO gestützt |
+| H2 | Neutrinos als lichtartige Triole | verträglich; sagt normale Ordnung und $\sum m_\nu = 0{,}0592$ eV voraus; am 15.11.2026 nachgerechnet, mit JUNO und NuFIT 6.1 unverändert 0,0592 eV; die Ordnung ist noch nicht bestimmt (berichtigt 15.11.2026: die ersten JUNO-Daten messen sie nicht) |
 | H3 | Vorzeichen als Majorana-CP-Parität | verträglich, derzeit nicht prüfbar ($m_{\beta\beta} \le 3{,}5$ meV) |
 | H4 | TM1 gegen TM2 | TM1 zunächst bevorzugt, nach JUNO disfavorisiert |
 | H5 | Hopf-Winkel als Mischwinkel | gescheitert |

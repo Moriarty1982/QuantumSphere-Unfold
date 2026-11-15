@@ -1,5 +1,16 @@
 # Forschungsstand
 
+### Suche nach einem blinden Test aus r15–r17 (15.11.2026)
+
+Erkundung ohne Kriterium. Ergebnis: **kein blinder Test gefunden.** Die neuen Strukturen formulieren bekannte Größen um oder
+führen sie auf Setzungen zurück. Wo sie eine neue Aussage über Neutrinos machen, widerspricht sie vorhandenen Daten: „Majorana
+heißt gleiche Helizitätsanteile“ gibt R = 0, „nur eine Helizität“ gibt R = 0,0052 (beobachtet 0,0298); mit positiven Wurzeln
+ist K = 2/3 für Neutrinos nicht erreichbar (bekannt, H2). Für δ_CP, Majorana/Dirac und die Strang-Statistik fehlt eine
+Konstruktion ohne neue Wahl. Ein blinder Test braucht eine Struktur, die Treue ½, die Biegung oder die Statistik je Frame
+festlegt. H105 bleibt frei.
+
+[Erkundung](../notes/research/blind_test_search_2026_11_15/README.md).
+
 ### OP1: Die Frame-Abbildungen wirken nur bei j = ½ irreduzibel (15.11.2026, Runde r17)
 
 Erkundung (nicht blind). Unter der Annahme, dass die drei Frame-Abbildungen (halbe Drehungen um senkrechte Achsen, r16.7)

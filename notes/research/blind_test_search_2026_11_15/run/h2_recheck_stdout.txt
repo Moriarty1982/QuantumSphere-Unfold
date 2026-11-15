@@ -1,0 +1,5 @@
+NuFIT 6.0 (vorab) : m = (0.364, 8.662, 50.131) meV, Sigma = 0.05916 eV, MC 0.05916 +- 0.00023 eV; Untergrenze NO (m1 = 0) 0.05878 eV; Abstand 0.37 meV
+JUNO 2026         : m = (0.365, 8.668, 50.131) meV, Sigma = 0.05916 eV, MC 0.05916 +- 0.00021 eV; Untergrenze NO (m1 = 0) 0.05879 eV; Abstand 0.37 meV
+SNO+              : m = (0.372, 8.743, 50.131) meV, Sigma = 0.05925 eV, MC 0.05925 +- 0.00022 eV; Untergrenze NO (m1 = 0) 0.05886 eV; Abstand 0.38 meV
+NuFIT 6.1         : m = (0.367, 8.689, 50.111) meV, Sigma = 0.05917 eV, MC 0.05917 +- 0.00021 eV; Untergrenze NO (m1 = 0) 0.05879 eV; Abstand 0.38 meV
+Kosmologie (DESI DR2 + CMB, LCDM): Sigma < 0.0642 eV (vorab festgelegte Grenze); Feldman-Cousins-Variante < 0.053 eV
