@@ -20,6 +20,8 @@ Ein erster Test dieser Skizze (H48) zeigt eine Grenze: In der einfachsten Redukt
 
 $\beta_{\mathrm{sym}} \approx 0{,}549$ wird aus zwei veröffentlichten Barbero–Immirzi-Werten gebildet und eingesetzt. Die Zähl-Lesart (r63) liest es als Verhältnis einer Minimal-Spin-Zählung (Tachyon) zu einer Voll-Spin-Zählung (Materie). Sie trifft das aus der Leptonmischung gewonnene Fenster. Allerdings nur mit der U(1)-Behandlung der Horizontzustände; die besser begründete SU(2)-Behandlung gibt 0,604 (r68).
 
+**Nachtrag 15.11.2026 (Erkundung, nicht blind):** Unter der Annahme, dass die Frame-Abbildungen auf Horizont-Punktierungen über dieselbe SU(2) wirken wie auf dem Feld-Dublett, wirken sie nur bei j = ½ irreduzibel. „T zählt irreduzible Punktierungen, M das invariante Extremdublett je j“ gibt genau das Paar aus H98 und ersetzt die gescheiterte Energiebedingung P2; die Brücke und die Asymmetrie zwischen M und T sind gesetzt.
+
 **Offen:** warum die Frames gerade diese Zählregeln wählen. **Nächster Schritt:** die U(1)-Auswahl aus der inneren Einheit $J$ herleiten oder ausschließen.
 
 ## OP2: Dirac-Operator auf dem antisymmetrischen Sektor

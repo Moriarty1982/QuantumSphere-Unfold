@@ -1,5 +1,20 @@
 # Forschungsstand
 
+### OP1: Die Frame-Abbildungen wirken nur bei j = ½ irreduzibel (15.11.2026)
+
+Erkundung (nicht blind). Unter der Annahme, dass die drei Frame-Abbildungen (halbe Drehungen um senkrechte Achsen, r16.7)
+auf einer Horizont-Punktierung mit Spin j über dieselbe SU(2) wirken, gilt: **Irreduzibel wirken sie nur bei j = ½**
+(geprüft bis j = 20); das Extremdublett |j, ±j⟩ ist bei jedem j invariant.
+- **Zählregel:** T zählt Punktierungen, auf denen die Frame-Abbildungen irreduzibel wirken (nur j = ½, Gewicht 2); M zählt
+  je j das invariante Extremdublett (Gewicht 2). Das ist genau das Paar aus H98: γ_L = 1,864700, β = 0,54941. Die
+  Kramers-Regel (alle halbzahligen j) ist davon verschieden und bleibt ausgeschlossen.
+- **Gewinn:** Die gescheiterte Energiebedingung P2 (r10.2) wird durch eine gruppentheoretische Auslesebedingung ersetzt;
+  sie gibt dieselbe T-Regel wie die Stringlesart (I1), ohne „T = String-Sektor“ (Guard 1 von CT-004).
+- **Offen:** die Brücke vom Feld-Dublett zur Punktierung; warum T Irreduzibilität verlangt und M nicht; M braucht weiter P1.
+  Kein Test.
+
+[Erkundung](../notes/research/op1_frame_irreducibility_2026_11_15/README.md).
+
 ### OP3: Ein Drittel der Periode als Dreierzyklus (15.11.2026, Runde r16.9)
 
 Erkundung, Rückwärtssuche (nicht blind). Die Verschiebung um ein Drittel der Periode von s(t) ist ein nativer
@@ -13,6 +28,12 @@ Dreierzyklus auf der invarianten Matrix S; ihre Bahn hat von selbst eine zirkula
   den schwingenden Anteilen der Mehrheits- bzw. Minderheitshelizität. Masseneigenzustände = Eigenzustände der
   Zeitverschiebung; drei, weil s(t) quadratisch ist. Koide heißt: Die Autokorrelation der Invariante nach einem Drittel
   der Periode hat den Betrag 1/√2. Im flachen Grenzfall ist der Minderheitsanteil null-artig (Elektron masselos).
+- **Photon-Uhr (Nachtrag):** Die Koide-Bedingung hat genau die Form des Kohärenzfunktionals der Photon-Uhr-Sonde (r90),
+  aber keine Fensterschwelle liegt bei ½ (V3 3/5, V5 2/5, V8 7/9), und die Drift von 120° je Auslesung liegt weit außerhalb
+  der Toleranz von 26,57°. Eine Gleichsetzung von Uhr- und Feldfrequenz lehnt die Quelle ab. Kein Prinzip für ½.
+- **Kandidat für ein Prinzip (Lesart):** Treue ½ als maximale Unsicherheit der Frage „zeigen zwei Auslesungen dasselbe
+  Objekt?“ (ein Bit, Entropie maximal bei ½). Gibt das Oktant und K = 2/3 aus derselben Quelle; das Maximieren ist gesetzt,
+  ein neuer Test folgt nicht (Neutrinos schon in H2/H99/H100, Quarks ausgenommen nur per Setzung).
 
 [Erkundung](../notes/research/op3_time_cycle_2026_11_15/README.md).
 

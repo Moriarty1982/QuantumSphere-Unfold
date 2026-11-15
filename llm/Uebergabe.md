@@ -99,6 +99,14 @@
 - **Zeitzyklus (15.11., Rückwärtssuche, `notes/research/op3_time_cycle_2026_11_15/`):** Verschiebung um ⅓ der Periode
   von s(t) = nativer Dreierzyklus auf S, gibt Brannen-Form. Nötige Gewichte p₀ = 0,793, p₊ = 0,193, p₋ = 0,013 (Kontrolle
   1 : 206,77 : 3477,5); kein nativer Wert (24 Kandidaten, 0,5 %, Erwartung 0,44); Rang 2, weit vom Oktanten r16.7.
+  Nachtrag (Zweig `research/op3-clock-check`): Koide = Kohärenzfunktional der Photon-Uhr-Sonde (r90), aber keine
+  Fensterschwelle bei ½ und Drift 120° ≫ 26,57°; Uhr legt Σp² = 2/3 nicht fest. Noch in keiner Runde.
+  Dazu Lesart: Treue ½ als maximale Unsicherheit „dasselbe Objekt?“ (ein Bit); kein Test. OP3 ruht; weiter mit OP1.
+
+- **OP1, Irreduzibilität (15.11., Erkundung, `notes/research/op1_frame_irreducibility_2026_11_15/`, Zweig
+  `research/op3-clock-check`):** Frame-Abbildungen als exp(−iπJ_k) auf Spin j wirken nur bei j = ½ irreduzibel; T = irreduzibel,
+  M = invariantes Extremdublett gibt das H98-Paar (γ_L = 1,864700). Ersetzt P2; Annahme (A) Feld-Dublett → Punktierung und
+  Asymmetrie M/T gesetzt; kein Test. Mögliche Alternative zu Guard 1 von CT-004 (Register unverändert).
 
 ## Nächster Schritt (Autorentscheidung)
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,

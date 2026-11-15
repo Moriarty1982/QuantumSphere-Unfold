@@ -1,0 +1,6 @@
+(1) Kohaerenzfunktional |sum p e^(i phi)|^2/(sum p)^2 nach einem Drittel der Periode: 0.499991 (Koide: 1/2)
+    erste Ordnung 1 - Var(phi) = 0.2347 (Naeherung bei grosser Streuung unbrauchbar)
+(2) Fenster V3: rho = 0.6000; Selektor erhalten (Kohaerenz >= rho): False
+(2) Fenster V5: rho = 0.4000; Selektor erhalten (Kohaerenz >= rho): True
+(2) Fenster V8: rho = 0.7778; Selektor erhalten (Kohaerenz >= rho): False
+(3) Drift je Auslesung im Zeitzyklus: 2 pi/3 = 120 Grad auf den schwingenden Anteilen; Toleranz r12.2(a): 26.57 Grad
