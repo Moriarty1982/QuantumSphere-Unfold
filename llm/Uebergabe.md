@@ -128,6 +128,8 @@
 - **C5, Form (iii) (15.11., Erkundung, `notes/research/c5_null_instant_2026_11_15/`, PR #142):**
   Nullaugenblick: s(t) eines nicht generischen zeitharmonischen Feldes wird zu endlicher Zeit exakt 0 (Feld ≠ 0, Zustand im
   Photonpunkt, Score ½, Lorentz-invariant, periodisch). Erfüllt (β)–(δ) von r88, (α) nur unter „Obstruktion = augenblickliches s“.
+  Nachtrag (Zweig `research/c5-alpha`): Lesart B ist augenblicklich (r05.2(a)), r10s Obstruktion = Boden |s| des augenblicklichen
+  Feldes → (α) innerhalb der r10-Lesart erfüllt. Offen: periodische Null, Zuordnung zu Kollar-Stufen, nicht generische Felder.
   Keine Entladung; C5 offen.
 
 ## Nächster Schritt (Autorentscheidung)
