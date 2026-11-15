@@ -95,6 +95,9 @@
   dritte komplexe Lorentz-Invariante (6 reelle); s(t) = ¼[s₊e^{−2iωt} + 2w + s̄₋e^{2iωt}]. S = [[s₊, w], [w, s̄₋]] ist Spin 1;
   Rang 1 = χ (Oktant flach), Rang 2 gibt Platz für die Biegung, Größe σ₂/σ₁ frei. **H105 bewusst nicht vergeben** (keine
   wahlfreie Konstruktion). Zuletzt vergeben weiterhin H104; frei H105, k227.
+- **Zeitzyklus (15.11., Rückwärtssuche, `notes/research/op3_time_cycle_2026_11_15/`):** Verschiebung um ⅓ der Periode
+  von s(t) = nativer Dreierzyklus auf S, gibt Brannen-Form. Nötige Gewichte p₀ = 0,793, p₊ = 0,193, p₋ = 0,013 (Kontrolle
+  1 : 206,77 : 3477,5); kein nativer Wert (24 Kandidaten, 0,5 %, Erwartung 0,44); Rang 2, weit vom Oktanten r16.7.
 
 ## Nächster Schritt (Autorentscheidung)
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,

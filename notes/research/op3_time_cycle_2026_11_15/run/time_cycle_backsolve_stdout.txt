@@ -1,0 +1,7 @@
+[phi = 2/3 (delta = 2/9)] Gewichte p- = 0.013450, p0 = 0.793146, p+ = 0.193404; |<psi|U psi>|^2 = 0.500000, Bargmann-Phase 3 arg = 0.666667
+    Kontrolle: Eigenwerte der Gram-Matrix [0.04035  0.580212 2.379438], K = 0.666667, Verhaeltnisse der Quadrate 1 : 206.77 : 3477.47
+    abgeleitete Groessen: P0 = 0.793146, A = 0.869957, r = 0.263711, c_HS = 7.775527, c_Parseval = 3.887763
+    Treffer (<= 0,5 %): keine
+    Zufallserwartung je abgeleiteter Groesse im Bereich [0.119, 1.865]: 0.087; fuer 5 Groessen: 0.44
+
+Zum Vergleich aus Massen (PDG 2024): delta = 0.222230 (2/9 = 0.222222), Bargmann-Phase 3 delta = 0.666689

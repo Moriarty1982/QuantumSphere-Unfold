@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 15.11.2026: Forschungsstand und Offene-Probleme um den Zeitzyklus ergänzt (Rückwärtssuche ohne Treffer). Kein OP-Abschluss.
+
 - 15.11.2026: Forschungsstand und Offene-Probleme um die dritte Lorentz-Invariante w ergänzt (S als Spin-1-Objekt, Biegung
   ohne Größe; H105 nicht vergeben). Kein OP-Abschluss.
 

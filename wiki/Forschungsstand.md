@@ -1,5 +1,17 @@
 # Forschungsstand
 
+### OP3: Ein Drittel der Periode als Dreierzyklus (15.11.2026)
+
+Erkundung, Rückwärtssuche (nicht blind). Die Verschiebung um ein Drittel der Periode von s(t) ist ein nativer
+Dreierzyklus auf der invarianten Matrix S; ihre Bahn hat von selbst eine zirkulante Gram-Matrix (Brannen-Form).
+- **Rückwärts:** Koide und die Lepton-Phase verlangen die Gewichte p₀ = 0,793 (Mittelwertanteil w), p₊ = 0,193,
+  p₋ = 0,013 auf den drei Frequenzanteilen; Kontrolle: Massenverhältnisse 1 : 206,77 : 3477,5.
+- **Ergebnis:** Kein nativer Wert (5 abgeleitete Größen, 24 vorab gelistete Kandidaten, 0,5 %, Zufallserwartung 0,44).
+  Die Gewichte sind Brannens Parameter in anderer Form; die Zustände liegen weit vom kohärenten Sektor (Rang 2), also nicht
+  beim Oktanten aus r16.7. H105 bleibt frei.
+
+[Erkundung](../notes/research/op3_time_cycle_2026_11_15/README.md).
+
 ### OP3: Die dritte Lorentz-Invariante w (15.11.2026)
 
 Erkundung (nicht blind). Ein zeitharmonisches Feld mit komplexen Amplituden hat sechs reelle Lorentz-Invarianten:
