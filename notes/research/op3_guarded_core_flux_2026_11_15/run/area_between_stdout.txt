@@ -1,0 +1,11 @@
+Verhaeltnis phi_B/phi_A entlang des Wegs: min 1.019265 max 1.019267  analytisch 4pi/(4pi - gamma_M) = 1.019266
+Flaeche zwischen den Kurven ueber den Weg (rad * rad): 0.01722  = (ratio - 1) * Flaeche unter A: 0.017221
+Abfluss-Anteil gamma_M/(4 pi) = 0.018902  = 1 - 1/ratio = 0.018902
+Rampe (Kern auf der Kante) von 21.16 bis 49.37 Grad, Breite 28.21 Grad; Kappendurchmesser 2*alpha = 31.61 Grad
+Rampenhoehe A: 0.118766 = gamma_M/2 = 0.118766 ; Rampenhoehe B: 0.121055 = k*gamma_M = 0.121055
+Abfluss-Anteil lam -> benoetigter Raumwinkel Omega fuer phi = 2/3 (in Einheiten gamma_M):
+   lam = 1.00: Omega = 0.237463 sr = 0.9997 gamma_M
+   lam = 0.75: Omega = 0.244032 sr = 1.0274 gamma_M
+   lam = 0.50: Omega = 0.250908 sr = 1.0563 gamma_M
+   lam = 0.25: Omega = 0.258109 sr = 1.0866 gamma_M
+   lam = 0.00: Omega = 0.265649 sr = 1.1184 gamma_M

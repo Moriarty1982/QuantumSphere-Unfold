@@ -1,0 +1,5 @@
+geladene Leptonen phi_e = 3 theta_e    phi = 0.666665  det G = +0.055707  (definit, drei positive Wurzeln)
+Oktant                                 phi = 0.785398  det G = +0.000000  (Rand)
+H102: pi/4 - gamma_M/2                 phi = 0.666632  det G = +0.055722  (definit, drei positive Wurzeln)
+Neutrinos H99: phi_e + pi/4            phi = 1.452063  det G = -0.416240  (indefinit, eine negative Wurzel)
+theta_e = 0.222222; Raumwinkel 2 phi: Elektronen 1.33333 = pi/2 - 0.23747, Neutrinos 2.90413 = pi - 0.23747

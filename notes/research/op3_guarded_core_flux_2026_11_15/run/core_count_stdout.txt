@@ -1,0 +1,12 @@
+Ein Kern im Dreieck (Raumwinkel gamma_M), Bargmann-Phase der Dreiecksschleife:
+   Kern ausgeschnitten, Zusammenhang unveraendert                                 phi = 0.785398
+   Kern flussfrei, verdraengter Fluss gleichmaessig verteilt (B)                  phi = 0.679475
+   Kern flussfrei, verdraengter Fluss ausserhalb des Dreiecks, z. B. am Gegenpol (A) phi = 0.666632
+   Kern flussfrei, verdraengter Fluss im Dreieck abgelegt                         phi = 0.785398
+   Ziel (Leptonen) 2/3 = 0.666667 ; Oktant pi/4 = 0.785398
+Kein Kern: geschlossene Kugel, Gesamtfluss 2 pi fest, phi = pi/4 starr (keine Biegung).
+Zwei Kerne: Rest ist ein Ring; eine freie AB-Holonomie t um den Ring verschiebt phi beliebig:
+   t = +0.0: phi = 0.666632
+   t = +0.1: phi = 0.766632
+   t = -0.1: phi = 0.566632
+n Kerne: n - 1 freie Holonomien. Genau ein Kern ist die einzige Zahl, die Biegung erlaubt und keinen freien Parameter hat.

@@ -1,5 +1,42 @@
 # Forschungsstand
 
+### OP3: Bewachter Kern verdrängt Fluss (15.11.2026)
+
+Idee des Autors, als Erkundung nachgerechnet (nicht blind). Der bewachte Kern des Orbit-Scans (v470/05,
+X = S³ ∖ B_ε(K)) wird als flussfreie Kappe auf der Bloch-Kugel der Generationen gelesen.
+
+- **Vorzeichen:** Liegt der Kern im Generationsdreieck, sinkt die Bargmann-Phase unter π/4. Das ist die richtige
+  Richtung (drei Massen). Liegt er außerhalb, bricht Koide. Das Vorzeichen folgt also aus der Lage.
+- **Lage:** Innerhalb des Dreiecks spielt die genaue Position keine Rolle.
+- **Menge:** Verlässt der verdrängte Fluss das Dreieck, gilt φ = π/4 − γ_M/2, die Beziehung von H102. Verteilt er sich
+  gleichmäßig, trifft es nicht (0,6795 statt 2/3).
+
+Offen ist, warum der Kern den Raumwinkel γ_M hat.
+
+Drei Nachträge vom selben Tag:
+- **Abfluss:** Vollständiger Abfluss ist die Lesart „removed“ des Papers (v470/05: „removed or shielded“). Eine
+  entfernte Kappe hat einen Rand, und dann bindet keine Chern-Zahl den Fluss.
+- **Neutrinos:** H99 legt die Neutrinos ein Oktant *über* den Oktanten, nicht auf ihn. Beide Sektoren verlieren
+  denselben Kern γ_M; die Idee „Ladung legt den Kern ins Dreieck“ ist verworfen.
+- **Kugel und Fasern:** Die Kugel B_ε(K) des Papers entfernt keine Faser ganz, bricht aber die Fasern über einer Kappe
+  vom Radius 2ε. γ_M entspricht ε = 7,90° (binär) oder einem Volumenanteil γ_M/(4π) des S³ (gewichtet, ε = 25,94°).
+- **Zählregel und Literatur:** Die Zählregel legt die Kerngröße nicht fest. Die Geometrie isolierter Horizonte (ABK,
+  ENP, geprüft) hat dieselbe Struktur, gibt aber keinen festen Winkel γ_M: Der Defekt hängt von der Horizontfläche ab,
+  und das nötige Level 4π/γ_M = 52,9 ist nicht ganzzahlig.
+- **Topologie:** Genau ein Kern ist die einzige Zahl, die Biegung erlaubt und keinen freien Parameter hat. Kein Kern
+  biegt nicht; ab zwei Kernen gibt es freie Aharonov-Bohm-Holonomien.
+- **Berichtigung zu „Abfluss“:** Bei einem Kern kann der Fluss nicht entweichen. Fall A heißt richtig: Der Kern ist
+  flussfrei, und der verdrängte Fluss sitzt außerhalb des Dreiecks, etwa am Gegenpol (Dirac-Faden).
+- **Umkehrwalze (Hinweis des Autors auf die Enigma-Analogie):** Nach r02 ist die involutive Umkehrwalze antilinear und
+  fixpunktfrei. Auf einer Spin-½-Kugel ist eine fixpunktfreie antilineare Abbildung die Antipodenabbildung, sie verlangt
+  Θ² = −1, also Fermionen. Liest man den Kern als Umkehrwalze, geht der verdrängte Fluss zum Gegenpol, und das ist genau
+  Fall A, für geladene Leptonen wie für Neutrinos. Das ist Lesart; offen bleibt die Größe γ_M.
+- **Kerngröße als Frame-Quant:** Liest man den Kern als Flächenquant des Beobachter-Frames, ergibt sich γ_M für alle im
+  Materie-Frame gemessenen Massen, auch für Neutrinos (das Paper liest sie dort). Die Kerngröße fällt damit mit OP1
+  zusammen: warum M alle Spins zählt (γ_M) und T nur den Boden (γ_T). Das vereinheitlicht die Lücken, leitet aber nichts
+  her. Einen blinden Neutrino-Test mit anderem Frame gibt der Bestand nicht her.
+[Rechnung](../notes/research/op3_guarded_core_flux_2026_11_15/README.md).
+
 ### OP3: Abbildung C⊗S → C⊗H⊗O, die zwei Generationen sitzen am Platz des Spins (15.11.2026)
 
 Erste Abbildung zwischen dem Sedenionen-Rahmen (Ladung über e8, Platzhalter CT-003) und der Dixon-Algebra, als

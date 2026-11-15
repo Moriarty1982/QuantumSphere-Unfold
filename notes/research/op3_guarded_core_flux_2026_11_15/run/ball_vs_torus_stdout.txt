@@ -1,0 +1,7 @@
+eps = 0.1: gewichtet 0.002661, Volumenformel 0.002661
+eps = 0.3: gewichtet 0.070715, Volumenformel 0.070715
+eps = 0.5: gewichtet 0.317058, Volumenformel 0.317058
+Monte Carlo eps = 0.3: Anteil im Ball 0.00567, Volumenformel 0.00563; groesster Basiswinkel im Ball 34.28 Grad = 2 eps 34.38
+Ganz entfernte Fasern: keine fuer eps < pi (Anteil am Pol f(0) = eps/pi = 0.095)
+Raumwinkel gamma_M: binaer (Kappe) eps = 0.137922 rad = 7.902 Grad; gewichtet (Volumen) eps = 0.452751 rad = 25.941 Grad
+Volumen des Balls bei gewichtetem eps: Anteil an S^3 = 0.018902 = gamma_M/(4 pi) = 0.018902
