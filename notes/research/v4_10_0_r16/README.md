@@ -12,10 +12,12 @@ ohne Datenvergleich (nicht blind). Guards unverändert, keine neue H-Nummer, kei
 | r16.4 | Drei Feldvorzeichen; jede Frame-Abbildung erhält genau eines (Vierergruppe); Pole = Eigenzustände; Überlappung ½ bedingt; kein Dreierzyklus aus Feldabbildungen | ebenda, Nachtrag |
 | r16.5 | Hurwitz-Zyklus auf N liefert den Dreierzyklus nicht (R skalar auf N, T: N → N̄) | ebenda, Nachtrag |
 | r16.7 | Auslesungen eines Objekts: Unter den sechs Polen sind höchstens drei paarweise nicht orthogonal; genau 8 solche Tripel, alle Oktanten (½, 2/3, ±π/4), 2 Bahnen nach Orientierung; kein Dreierzyklus nötig | `../op3_helicity_axis_2026_11_15/README.md` (Nachtrag) |
+| r16.8 | Dritte Lorentz-Invariante w = F₊·F̄₋; s(t) = ¼[s₊e^{−2iωt} + 2w + s̄₋e^{2iωt}]; S = [[s₊, w], [w, s̄₋]] als Spin 1; Rang 2 gibt der Biegung Platz, Größe frei | `../op3_third_invariant_2026_11_15/README.md` |
+| r16.9 | Drittel der Periode als nativer Dreierzyklus; Brannen-Form; Gewichte = normierte √m (τ Mittelwert, μ/e schwingende Helizitätsanteile); Koide = Autokorrelation 1/√2; kein nativer Wert | `../op3_time_cycle_2026_11_15/README.md` |
 | r16.6 | „Ein Objekt“ (k220, 7.11.): Bahnen von SO(3,ℂ) × Dualität; M und T eine Bahn, Licht Fixpunkt; Zählregel nicht aus G | `../k220_ein_objekt_2026_11_07/README.md` |
 
 ## Prüfung
 - Guard-Linter (`python tools/qs.py guards sources/research/parts/v4100-post-release-layers.tex --start 2112`):
-  0 Kandidaten in den Zeilen 2112–2273.
+  0 Kandidaten in den Zeilen 2112–2311.
 - Kandidaten-Build (`python .github/scripts/qsc_latex_build.py --source-dir sources/research --output-dir <Pfad>`, MiKTeX):
-  1420 Seiten (vorher 1416), 0 Fehler, 0 undefinierte Verweise, 0 Overfull; r16 im Inhaltsverzeichnis.
+  1421 Seiten (vorher 1416), 0 Fehler, 0 undefinierte Verweise, 0 Overfull; r16 im Inhaltsverzeichnis.

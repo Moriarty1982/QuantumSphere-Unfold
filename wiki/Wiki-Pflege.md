@@ -102,6 +102,9 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 15.11.2026: r16.8 (dritte Invariante w) und r16.9 (Zeitzyklus, Gewichte = normierte Massenwurzeln) in
+  Forschungsstand, Forschungslinie, Inhalt, Gesamtbild und Content-overview eingetragen. Kein OP-Abschluss.
+
 - 15.11.2026: Forschungsstand und Offene-Probleme um den Zeitzyklus ergänzt (Rückwärtssuche ohne Treffer). Kein OP-Abschluss.
 
 - 15.11.2026: Forschungsstand und Offene-Probleme um die dritte Lorentz-Invariante w ergänzt (S als Spin-1-Objekt, Biegung

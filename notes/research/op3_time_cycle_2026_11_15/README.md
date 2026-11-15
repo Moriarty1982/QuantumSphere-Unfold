@@ -38,3 +38,26 @@ Bargmann-Phase 3·arg⟨ψ|Uψ⟩. Die Gram-Matrix ist zirkulant (Brannen-Form).
 - **Kein Test.** Ohne Prinzip für die Verteilung (p₋, p₀, p₊) gibt es nichts Blindes zu prüfen. H105 bleibt frei.
 
 OP1–OP5, C5, C6/T2 und die Guards sind unverändert.
+
+## Nachtrag 15.11.2026: Die drei Frequenzanteile als Generationen
+Auftrag des Autors: „Festhalten, in r16, PR“, nach Weiterdenken. **Erkundung, nicht blind; Umparametrisierung mit
+Deutung, keine Vorhersage.** Skript `harmonics_reading.py`, Ausgabe `run/harmonics_reading_stdout.txt`.
+
+1. **Die Gewichte sind die normierten Massenwurzeln.** Die Gram-Matrix der Bahn ist zirkulant mit Eigenwerten 3p_k, also
+   p_k = √m_k/Σ√m (Leptonen: e 0,013450, μ 0,193409, τ 0,793141 gegen die rückwärts bestimmten Gewichte 0,013450, 0,193404,
+   0,793146). Zuordnung: τ ↔ Mittelwert w, μ ↔ schwingender Anteil der Mehrheitshelizität (s̄₋), e ↔ schwingender Anteil der
+   Minderheitshelizität (s₊). Die Masseneigenzustände sind die Eigenzustände der Zeitverschiebung; die drei
+   Auslesezustände sind ihre Bahn unter der Verschiebung um ein Drittel der Periode.
+2. **Warum drei (Lesart).** s(t) ist quadratisch im Feld; eine quadratische Größe einer Schwingung der Frequenz ω hat genau
+   die drei Anteile −2ω, 0, +2ω. Offen ist, warum die Generationen an s hängen und nicht an einer höheren Invariante.
+3. **Koide als Autokorrelation.** Mit Σp = 1 gilt exakt |⟨ψ|Uψ⟩|² = (3Σp² − 1)/2 (geprüft auf 1000 Zufallsgewichten).
+   Koide heißt Σp² = 2/3 (= K) oder: Die Autokorrelation der Feldinvariante nach einem Drittel ihrer Periode hat den
+   Betrag 1/√2. Ein reelles Feld gibt Σp² = 1/2 (Parseval) bzw. 3/8 (Hilbert–Schmidt), nicht 2/3. Ein Prinzip für 2/3 fehlt.
+4. **Leichtes Elektron und Biegung.** Exakt p₋ = (1 − √2 sin(δ + π/6))/3 mit δ = φ/3. Im flachen Grenzfall φ = π/4 ist
+   p₋ = 0 (Elektron masselos, s₊ = 0, der Minderheitsanteil F₊ null-artig). Für kleine Biegung p₋ ≈ (π/4 − φ)/9 (bei
+   φ = 2/3: 0,01345 gegen 0,01319). Die Biegung, gelesen als γ_M/2, ist hier das Gewicht der schwingenden
+   Minderheitshelizität.
+
+**Grenzen:** Die Gewichte sind die Massen; vorhergesagt wird nichts. Die Spannung zu r16.7 (kohärenter Sektor dort, Rang 2
+hier) bleibt. Mögliche nächste Frage, nicht gerechnet: ob eine Uhr-Struktur des Papers (Photonuhr, Uhrfenster) eine
+Bedingung an die Autokorrelation nach einem Drittel der Periode liefert.

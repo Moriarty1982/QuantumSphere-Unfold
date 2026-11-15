@@ -1,6 +1,6 @@
 # Forschungsstand
 
-### OP3: Ein Drittel der Periode als Dreierzyklus (15.11.2026)
+### OP3: Ein Drittel der Periode als Dreierzyklus (15.11.2026, Runde r16.9)
 
 Erkundung, Rückwärtssuche (nicht blind). Die Verschiebung um ein Drittel der Periode von s(t) ist ein nativer
 Dreierzyklus auf der invarianten Matrix S; ihre Bahn hat von selbst eine zirkulante Gram-Matrix (Brannen-Form).
@@ -9,10 +9,14 @@ Dreierzyklus auf der invarianten Matrix S; ihre Bahn hat von selbst eine zirkula
 - **Ergebnis:** Kein nativer Wert (5 abgeleitete Größen, 24 vorab gelistete Kandidaten, 0,5 %, Zufallserwartung 0,44).
   Die Gewichte sind Brannens Parameter in anderer Form; die Zustände liegen weit vom kohärenten Sektor (Rang 2), also nicht
   beim Oktanten aus r16.7. H105 bleibt frei.
+- **Lesart (Nachtrag):** Die Gewichte sind die normierten Massenwurzeln, √m_k/Σ√m: τ gehört zum Mittelwert w, μ und e zu
+  den schwingenden Anteilen der Mehrheits- bzw. Minderheitshelizität. Masseneigenzustände = Eigenzustände der
+  Zeitverschiebung; drei, weil s(t) quadratisch ist. Koide heißt: Die Autokorrelation der Invariante nach einem Drittel
+  der Periode hat den Betrag 1/√2. Im flachen Grenzfall ist der Minderheitsanteil null-artig (Elektron masselos).
 
 [Erkundung](../notes/research/op3_time_cycle_2026_11_15/README.md).
 
-### OP3: Die dritte Lorentz-Invariante w (15.11.2026)
+### OP3: Die dritte Lorentz-Invariante w (15.11.2026, Runde r16.8)
 
 Erkundung (nicht blind). Ein zeitharmonisches Feld mit komplexen Amplituden hat sechs reelle Lorentz-Invarianten:
 s₊ = (E + iB)², s₋ = (E − iB)² und **w = F₊·F̄₋**. Die augenblickliche Invariante zerfällt exakt in
