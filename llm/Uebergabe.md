@@ -164,8 +164,15 @@
   Feldern auf Flächen im Raum, überall bei einer linear polarisierten Teilwelle; Punkte der Riemann–Silberstein-Wirbel
   (Kaiser 2003, Białynicki-Birula 2003; nachträglich gefunden). Offen: Wahl des Punktes. Notiz
   `notes/research/c5_presence_2026_11_16/`. Zweig `research/c5-b3-presence` ist in den r21-Zweig übernommen und gelöscht.
-  Kandidat 1439 Seiten; CI-Lauf gestartet, Ergebnis nicht geprüft.
-- **Alternativ:** Kollapszustand im ganzen Hauptkorpus nach der Tabelle r21.9 typisieren (R oder P).
+  Kandidat 1439 Seiten.
+- **C5 (B1) rückwärts als r21.12 in PR #147 (16.11.):** Im ursprünglichen C5 ist der Score das Normquadrat der Obstruktion
+  (`def:v470-r04-c5-lowering-score`), beide verschwinden nur gemeinsam. Am Nullaugenblick Boden 0, Score ½ → **kein C5-Zeuge**;
+  Brückenfrage unter der ursprünglichen Definition negativ; **Berichtigung zu r20.2** (Boden mit Residuum gleichgesetzt);
+  Form (iii) hat keinen Kandidaten mehr. C5 offen in der Übergangsfrage (nur Verlagerung, δ). Dazu Nachtrag zu (B3):
+  helizitätsneutral ist die einzige von allen Frame-Abbildungen erhaltene Helizitätsstufe (nur Notiz/Wiki, nicht im Rundentext).
+  Wiki: Berichtigungsvermerke an den r20-Einträgen. CI-Lauf gestartet, Ergebnis nicht geprüft.
+- **C5 ruht nach r21.12:** Form (iii) ohne Kandidat; ohne neue Struktur keine weiteren Varianten. Möglich: OP1 (a)
+  oder den Kollapszustand im ganzen Hauptkorpus nach der Tabelle r21.9 typisieren (R oder P).
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,
   `Erkundung_Zaehlregel_Prinzip.md`) und Suchrichtung prüfen. Zu beachten: Eine Kramers-Regel (nur halbzahlige Spins,
   Θ² = −1) liegt im Regelraum von H98; dort trifft nur das gewählte Paar alle drei Fenster. Auslöser I1-3 der
