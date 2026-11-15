@@ -1,0 +1,78 @@
+{
+  "CT-004": {
+    "guards": [
+      "af3ad35a91858e806261ec312dd470bf5ea19f3004e77f478354f26a1c480146",
+      "56c4c03af6ec0459ec08a8eb255f885e8cf63665bcd48a57f451b63bfbe96401",
+      "bb0f5615d41b9bbb109276af0fd55f8afac7f9af2cba8a3f915c24946f192043",
+      "8be952bee2a4c8dc1824fd5fd2a54d12c6137e5838877b4935a8a6612239605f"
+    ],
+    "lifecycle": "placeholder",
+    "version_hash": "fc3ca8d2c8236c70c3b12941e2af9a13f44617efb332ee015824fbbbfee7e4dc"
+  },
+  "balance": {
+    "by_status": {
+      "partially_constrained": [
+        "CT-001"
+      ],
+      "placeholder": [
+        "CT-002",
+        "CT-003",
+        "CT-004"
+      ]
+    },
+    "counterterms": {
+      "CT-001": "partially_constrained",
+      "CT-002": "placeholder",
+      "CT-003": "placeholder",
+      "CT-004": "placeholder"
+    },
+    "structurally_matched": 0
+  },
+  "database": "build/ct_register_full_2026_11_15.sqlite3",
+  "export": {
+    "directory": "build/ct_register_export_2026_11_15",
+    "guard_notes": 5,
+    "manifest_hash": "c344cda6ada315fdfd5cfe1ea0e2e438fc78a87a0aa6ccd49c1a6ae7a7097312",
+    "registry_entries": 4
+  },
+  "selection_hash": "8629259e715909a7eb2d5db73e59449922d150df5f6a2e16d796701206dbd70a",
+  "snapshot": "8f2a2028b986b598efd69cf7de70b2be2792fa354d045def02222b3f41f50f55",
+  "statements": {
+    "H102": {
+      "counterterms": [
+        "partially_constrained",
+        "placeholder"
+      ],
+      "inherited_guards": 7,
+      "version_hash": "97e653078e8a2156f131350c75c1e6029d064805263efb84e954dee4680b31e6"
+    },
+    "S-2T": {
+      "counterterms": [
+        "placeholder"
+      ],
+      "inherited_guards": 3,
+      "version_hash": "16b5fa72dac4e2dbb0381a2117b52d0e27f5a90b1721191ea221a3f884c510ef"
+    },
+    "S-COUNT": {
+      "counterterms": [
+        "placeholder"
+      ],
+      "inherited_guards": 4,
+      "version_hash": "19681a46424ee833d5ca2e9e4776180902bc4d302e6b547dd3f33cb469d89de1"
+    },
+    "S-GEN": {
+      "counterterms": [
+        "placeholder"
+      ],
+      "inherited_guards": 3,
+      "version_hash": "9a82d66a5a8038277102bbae5c3e39c161fe09fa3c9a9f897da42f921ad48c71"
+    },
+    "S-N": {
+      "counterterms": [
+        "placeholder"
+      ],
+      "inherited_guards": 3,
+      "version_hash": "5e8c148827c45369405dd5416f3a41f2322d8aa7e51f6c1ec35db0a027383421"
+    }
+  }
+}

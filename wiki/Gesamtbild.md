@@ -65,7 +65,7 @@ mindmap
       Sprache QAM, MML, MMA über ZF
       Guards: nur lokale, frame-typisierte Schließungen
       Aussagen-Datenbank seit v5.0.0
-      Gegenterm-Register CT-001 bis CT-003
+      Gegenterm-Register CT-001 bis CT-004
     Offene Probleme
       OP1 Herkunft von beta_sym
       OP2 Dirac-Operator

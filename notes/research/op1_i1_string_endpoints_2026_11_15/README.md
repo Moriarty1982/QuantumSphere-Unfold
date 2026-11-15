@@ -81,4 +81,9 @@ Kramers-Regel über die Umkehrwalze ist ausgeschlossen (C2). OP1 ist damit nicht
 T = String-Sektor und der Chan–Paton-Schritt sind Annahmen. Sie wären als ein Platzhalter (etwa CT-004) zu führen,
 falls der Autor das will.
 
+**Nachtrag (15.11., auf „Als CT-004 eintragen“):** Die beiden Annahmen stehen jetzt als **CT-004** im Gegenterm-Register
+(`../counterterms/register_ct004_2026_11_15.py`, Bilanz `../counterterms/Bilanz_2026_11_15.md`): Status placeholder,
+vier Guards (T = String-Sektor, Chan–Paton, Statistik, Spektrum). Die Zählregel S-COUNT erbt sie. H15, H46 und H96
+sind nicht verknüpft (Autorentscheidung).
+
 OP1–OP5, C5, C6/T2 und die Guards sind unverändert.
