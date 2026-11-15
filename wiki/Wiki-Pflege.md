@@ -102,13 +102,19 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
-- 15.11.2026: Frame-Audit von C5 (r19.4) in Forschungsstand, Offene-Probleme, Gesamtbild, Forschungslinie, Inhalt und
+- 15.11.2026: Die C5-Runde wurde von r19 in **r20** umbenannt, weil eine andere Sitzung r19 parallel vergeben und gemergt hatte
+  (PR #144). Einträge zu r19 betreffen den Kommutanten einer Generation, Einträge zu r20 den C5-Kandidaten.
+
+- 15.11.2026: Frame-Audit von C5 (r20.4) in Forschungsstand, Offene-Probleme, Gesamtbild, Forschungslinie, Inhalt und
   Content-overview eingetragen. Kein Abschluss.
 
-- 15.11.2026: Runde v4.10.0-r19 eingetragen (Forschungslinie, Inhalt, Gesamtbild, Offene-Probleme, Content-overview,
+- 15.11.2026: Runde v4.10.0-r20 eingetragen (Forschungslinie, Inhalt, Gesamtbild, Offene-Probleme, Content-overview,
   Forschungsstand). Kein Abschluss.
 
 - 15.11.2026: C5-Kandidat: Zeit gegen Kollar-Stufe geprüft (fallen nur bei reiner Helizität zusammen). Kein Abschluss.
+- 15.11.2026: Versionen-und-Quellen um die Neuheitsprüfungen zu Kern und Koide (`paper/kernel-note/`, `paper/koide-note/`) ergänzt.
+
+- 15.11.2026: Runde v4.10.0-r19 eingetragen (Forschungsstand, Forschungslinie, Inhalt, Content-overview, Gesamtbild, Offene-Probleme, Vorhersagen-und-Tests). Kein OP-Abschluss.
 
 - 15.11.2026: C5-Kandidat: Lücke „augenblicklich oder Zustandsgröße“ innerhalb der Lesart von r10 geklärt. Kein Abschluss.
 

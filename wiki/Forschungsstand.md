@@ -1,6 +1,16 @@
 # Forschungsstand
 
-### C5, Form (iii): ein Nullaugenblick der Feldinvariante (15.11.2026, Runde r19)
+### C5, Form (iii): ein Nullaugenblick der Feldinvariante (15.11.2026, Runde r20)
+### OP3: Der Generationsindex braucht Kopien (15.11.2026, Runde r19)
+
+Erkundung (nicht blind; das Ergebnis folgt aus dem Lemma von Schur). Geprüft wurde, ob die drei Generationen als Eigenzustände der drei Frame-Abbildungen T, J_B und R auf dem Träger der Materie sitzen können (r15.5, offener Punkt „geladener Träger“ aus r16.7). Dafür müssten drei antikommutierende Operatoren mit Eich- und Lorentzgruppe vertauschen.
+- **Eine Generation:** Auf C⊗H⊗O vertauschen nur sechs Phasen, eine je Multiplett (Q, L, u^c, d^c, e^c, ν^c); kein antilinearer Operator. Kein Generations-Qubit. R ist zentral, T und J_B sind keine Symmetrien (sie bilden auf die konjugierte Darstellung ab).
+- **Mehrere Kopien:** Erst dann enthält der Kommutant M_n(C) und damit ein Qubit. Die Kopien müssen vorher da sein, und die Frame-Abbildungen wirken auf ihnen nicht. Die Lesart „drei Generationen = drei Frame-Abbildungen“ nimmt die Zahl drei deshalb als Eingabe.
+- **Vorliteratur:** Die drei Basen des Felddubletts (E/B, E ± B, Helizität) stehen bei Golat, Vernon und Rodríguez-Fortuño (2024); Oktant, Phase π/4 und Neutrino-Phase 2/9 + π/12 bei Brannen (2010); K = 2/3 als 45° bei Foot (1994).
+
+[Erkundung](../notes/research/op3_frame_bridge_2026_11_15/README.md) · [Literatur](../notes/research/literature_check_2026_11_15/README.md).
+
+### C5, Form (iii): ein Nullaugenblick der Feldinvariante (15.11.2026)
 
 Erkundung (nicht blind); die verbotene Aussage C5 = 0 wird nicht gemacht. Für zeitharmonische Felder läuft die augenblickliche
 Invariante s(t) auf einer Ellipse um w/2. Bei nicht generischen Feldern (Kodimension 1) geht sie durch 0: Zu einer endlichen
@@ -15,7 +25,7 @@ Augenblick ist Lorentz-invariant und wiederholt sich jede halbe Periode.
   Helizität zusammen, und gerade dort gibt es keinen Nullaugenblick (|s(t)| konstant). Felder mit Nullaugenblick tragen beide
   Helizitäten; ihre Zeitentwicklung ist keine Folge von Kollar-Stufen. Das ist die Unabhängigkeit, die (β) verlangt, lässt aber
   offen, wie ein Zeitpunkt als endliche Stufe zu zählen wäre.
-- **Frame-Audit (r19.4):** Pro Frame liest M den Kompensatoranteil (3/4)ⁿ, der Tachyon-Frame den Partneranteil 1 − (3/4)ⁿ; die
+- **Frame-Audit (r20.4):** Pro Frame liest M den Kompensatoranteil (3/4)ⁿ, der Tachyon-Frame den Partneranteil 1 − (3/4)ⁿ; die
   Summe ist fest. Die alte Frage „C5 = 0“ heißt damit: Der Tachyon-Frame liest den ganzen Inhalt, ein vollständiger
   Frame-Wechsel. C5 ist in der alten Form, wie OP4 vor r61, frame-gemischt gestellt; frame-frei ist der Photonpunkt P mit
   beiden Anteilen ½, und den erreicht der Nullaugenblick. Dazu: Das Wort „Kompensator“ meint in der C5-Lesart die σ_x-Achse

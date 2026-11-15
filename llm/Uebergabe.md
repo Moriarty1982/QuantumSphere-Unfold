@@ -6,14 +6,19 @@
   Record https://zenodo.org/records/24237112; Vorgänger v5.0.0 (10.5281/zenodo.24152615). Vollausgabe 1412 Seiten,
   Physik-Paper 29 Seiten. Paketquellstand dfdb413, Tag `v5.1.0`, GitHub-Release gesetzt. Nach der Veröffentlichung
   geprüft: acht Dateien prüfsummengleich mit dem Paket, Vorschau = Vollausgabe. Release-Notiz `release/v5.1.0/README.md`.
-- **GitHub:** `main` nach PR #143 (80af436, C5 (α) in der r10-Lesart), davor #142 (cdb45bf, C5 Nullaugenblick), davor #141 (144d4ff, Runde r18), davor #140 (c66a5ab, OP4 Zeitzyklus und Spin(8)-Zentrum), davor #139 (86d80c8, Suche nach blindem Test, H2 nachgerechnet), davor #138 (68e1075, Runde r17), davor #137 (a835c46, OP1 Brücke: Barbero-Dublett, Penrose-Stränge), davor #136 (45f518d, OP3 Uhr-Abgleich und Treue-Lesart, OP1 Irreduzibilität), davor #135 (e0be304, Runde r16 mit r16.1–r16.9), davor #134 (f32ae5c, k220 „ein Objekt“ übernommen), davor #133 (37ac7da, OP3: C⊗O, Helizitätsachse, invariante Kugel, Feldvorzeichen), davor #132
+- **GitHub:** `main` nach PR #145 (81a6ccb, Neuheitsprüfungen Kern und Koide), davor #144 (982c476, Runde r19), davor #143 (80af436, C5 (α) in der r10-Lesart), davor #142 (cdb45bf, C5 Nullaugenblick), davor #141 (144d4ff, Runde r18), davor #140 (c66a5ab, OP4 Zeitzyklus und Spin(8)-Zentrum), davor #139 (86d80c8, Suche nach blindem Test, H2 nachgerechnet), davor #138 (68e1075, Runde r17), davor #137 (a835c46, OP1 Brücke: Barbero-Dublett, Penrose-Stränge), davor #136 (45f518d, OP3 Uhr-Abgleich und Treue-Lesart, OP1 Irreduzibilität), davor #135 (e0be304, Runde r16 mit r16.1–r16.9), davor #134 (f32ae5c, k220 „ein Objekt“ übernommen), davor #133 (37ac7da, OP3: C⊗O, Helizitätsachse, invariante Kugel, Feldvorzeichen), davor #132
   (b6ed1a5, Runde r15, Dauerauftrag Issues), #130 (eeb6083,
   Berichtigung zu CT-004), #129 (c9bfb19, OP1 mit I1, CT-004) und #128
   (14feb02, Release v5.1.0). **Keine offenen PRs.** Gemergt am 14./15.11.: #124–#128
   (OP3-Rückwärtssuche, Dauerauftrag Versionsverwaltung, Abbildung C⊗S → C⊗H⊗O, bewachter Kern, Release), davor #108–#123.
   Gemergte Zweige sind gelöscht. Nicht geprüft: die Läufe nach dem Merge von #128 (Wiki-Sync, Zwei-PDF).
-- **Letzte Runde:** v4.10.0-r19 (C5-Kandidat Nullaugenblick, Abgleich mit r88, Zeit gegen Kollar-Stufe, Frame-Audit r19.4),
-  Zweig `research/c5-stages`; davor r18 (PR #141), r17, r16, r15, r14 (in v5.1.0). Kandidat 1430 Seiten.
+- **Letzte Runde:** v4.10.0-r20 (C5-Kandidat Nullaugenblick, Abgleich mit r88, Zeit gegen Kollar-Stufe, Frame-Audit r20.4),
+  Zweig `research/c5-stages` (PR #146); ursprünglich als r19 geschrieben und wegen paralleler Vergabe von r19 (PR #144)
+  umbenannt. Kandidat 1433 Seiten.
+- **Davor:** v4.10.0-r19, gemergt über PR #144 (982c476) (Kommutant einer Generation C⁶, kein Generations-Qubit ohne Kopien; Vorliteratur Brannen 2010, Foot 1994, Golat et al. 2024). Nummer r19, weil r16–r18 schon vergeben waren. Kandidat 1430 Seiten.
+- **Davor:** v4.10.0-r18 (Statusvermerke zu Suche nach blindem Test, Nachrechnung H2, Dirac-Zyklus = Zeitzyklus,
+  Neutrino-ℤ₂ = Spin(8)-Zentrum), gemergt über PR #141 (144d4ff); davor r17 (PR #138), r16, r15, r14 (in v5.1.0).
+  Kandidat 1427 Seiten.
 - **Hypothesen:** zuletzt vergeben H104 (k226, widerlegt). Frei: **H105, k227**.
   - H100 offen: nächster NuFIT-Fit nach 6.1, Frist 31.12.2027 (`notes/research/predictions/k222_test_h100.py`).
   - H102 offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem 13.11.2026 (`k224_test_h102.py m_tau sigma`).
@@ -135,6 +140,8 @@
 
 - **Offene Autorentscheidung zu C5:** Soll C5 frame-sauber neu gestellt werden (Anteile C5_M, C5_T mit fester Summe;
   frame-freie Frage: endliches Erreichen des Photonpunkts)? Und zählt eine augenblickliche Null als endliche Stufe (r86)?
+- **OP3, Brücke r15.5 (15.11., Erkundung, `notes/research/op3_frame_bridge_2026_11_15/`, PR #144):** Kommutant von Eich- und Lorentzgruppe auf einer Generation von C⊗H⊗O = C⁶ (je Multiplett eine Phase), kein antilinearer Anteil → kein Generations-Qubit; R zentral, T und J_B keine Symmetrien. Mit n Kopien M_n(C). Beantwortet „geladener Träger“ aus r16.7 negativ für eine Generation. Nicht blind (Schur).
+- **Kurzfassung / Paper (15.11.):** Literaturprüfung: Algebra-Kern = Riemann–Silberstein-Stoff, Zustandsscheibe ≈ Symmetrie-Kugel (Golat et al. 2024), Koide-Oktant, π/4, π/12 bei Brannen 2010. Kein neues Ergebnis für ein Forschungspaper aus Kern oder Koide. Planungsdateien `paper/kernel-note/outline.md` und `paper/koide-note/novelty_check.md`, gemergt über PR #145 (81a6ccb). Literaturnotiz in `notes/research/literature_check_2026_11_15/` (PR #144).
 
 ## Nächster Schritt (Autorentscheidung)
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,
