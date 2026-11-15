@@ -1,0 +1,18 @@
+(1) Frame-Abbildungen auf chi und ihre Eigenzustaende
+    R    = sigma_z: Abweichung von der Feldwirkung 4.4e-16; Eigenzustaende (genau zwei Strahlen) = ['antiselbstdual', 'selbstdual']
+    T    = sigma_x: Abweichung von der Feldwirkung 4.4e-16; Eigenzustaende (genau zwei Strahlen) = ['Tachyon', 'Materie']
+    J_B  = sigma_y: Abweichung von der Feldwirkung 4.4e-16; Eigenzustaende (genau zwei Strahlen) = ['Seite+', 'Seite-']
+
+(2) Teilmengen ohne orthogonales Paar: 26; groesste Groesse 3; Anzahl maximaler Mengen 8
+    ('Materie', 'Seite+', 'selbstdual'): Ueberlappungen^2 [np.float64(0.5)], K = 0.666667, Phase/pi = -0.250
+    ('Materie', 'Seite+', 'antiselbstdual'): Ueberlappungen^2 [np.float64(0.5)], K = 0.666667, Phase/pi = +0.250
+    ('Materie', 'Seite-', 'selbstdual'): Ueberlappungen^2 [np.float64(0.5)], K = 0.666667, Phase/pi = +0.250
+    ('Materie', 'Seite-', 'antiselbstdual'): Ueberlappungen^2 [np.float64(0.5)], K = 0.666667, Phase/pi = -0.250
+    ('Tachyon', 'Seite+', 'selbstdual'): Ueberlappungen^2 [np.float64(0.5)], K = 0.666667, Phase/pi = +0.250
+    ('Tachyon', 'Seite+', 'antiselbstdual'): Ueberlappungen^2 [np.float64(0.5)], K = 0.666667, Phase/pi = -0.250
+    ('Tachyon', 'Seite-', 'selbstdual'): Ueberlappungen^2 [np.float64(0.5)], K = 0.666667, Phase/pi = -0.250
+    ('Tachyon', 'Seite-', 'antiselbstdual'): Ueberlappungen^2 [np.float64(0.5)], K = 0.666667, Phase/pi = +0.250
+
+(3) Bahnen der Frame-Abbildungen auf den 8 Tripeln: 2 Bahnen, Groessen [4, 4]
+    Bahn [('Materie', 'Seite+', 'selbstdual'), ('Materie', 'Seite-', 'antiselbstdual'), ('Seite+', 'Tachyon', 'antiselbstdual'), ('Seite-', 'Tachyon', 'selbstdual')]: Phasen/pi (Ecken nach Achsen geordnet) [np.float64(-0.25)]
+    Bahn [('Materie', 'Seite+', 'antiselbstdual'), ('Materie', 'Seite-', 'selbstdual'), ('Seite+', 'Tachyon', 'selbstdual'), ('Seite-', 'Tachyon', 'antiselbstdual')]: Phasen/pi (Ecken nach Achsen geordnet) [np.float64(0.25)]

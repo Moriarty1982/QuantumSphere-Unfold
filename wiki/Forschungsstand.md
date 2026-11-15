@@ -36,6 +36,11 @@ Erkundung (nicht blind). Das Feld-Dublett (E, B) hat nach r04 und r05.2 drei Sto
 - **Hurwitz-Kandidat (Nachtrag):** Der Zyklus der Hurwitz-Einheiten auf N (r13.2) liefert ihn nicht. Auf N ist R skalar, und T
   bildet N auf den ladungskonjugierten Raum ab; die Frame-Gruppe wirkt auf N anders als auf χ. Das Prinzip „je
   Frame-Abbildung ein Auslesezustand“ bleibt ohne Begründung im Bestand.
+- **Auslesungen eines Objekts (r16.7):** Die sechs Pole sind die einzigen Eigenzustände der Frame-Abbildungen. Höchstens drei
+  davon sind paarweise nicht orthogonal, und die 8 Tripel dieser Größe sind genau die Oktanten (Überlappung ½, K = 2/3,
+  Phase ±π/4; zwei Bahnen nach Orientierung). Verlangt man, dass Auslesungen eines Objekts Eigenzustände und nicht
+  orthogonal sind und alle vorkommen, folgen Zahl drei, Überlappung ½ und Phase π/4 zusammen; ein Dreierzyklus wird nicht
+  gebraucht. Gesetzt bleiben Eigenzustands-Bedingung und Maximalität. Nicht blind.
 
 [Erkundung](../notes/research/op3_helicity_axis_2026_11_15/README.md).
 

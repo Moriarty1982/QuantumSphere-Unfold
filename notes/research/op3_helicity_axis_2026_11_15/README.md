@@ -155,3 +155,31 @@ steigt aber nicht auf die invariante Kugel ab.
 
 **Stand:** Für „je Frame-Abbildung ein Auslesezustand“ ist im Bestand keine Begründung gefunden; das Prinzip bleibt gesetzt.
 Zurückgestellte Ideen geprüft: kein Auslöser von I1–I4 trifft auf diese Lücke zu.
+
+## Nachtrag 15.11.2026: Auslesungen eines Objekts sind höchstens drei, und sie bilden ein Oktant
+Auftrag des Autors: „Ja, prüfen“. **Erkundung, nicht blind** (das Ziel 3 und 2/3 war bekannt; die Bedingungen sind danach
+formuliert). Skript `non_orthogonal_readouts.py`, Ausgabe `run/non_orthogonal_readouts_stdout.txt`.
+
+**Bedingungen.** (1) Eine Auslesung ist Eigenzustand einer Frame-Abbildung. (2) Zwei Auslesungen desselben Objekts sind
+nicht orthogonal: Orthogonale Zustände schließen einander aus und wären verschiedene Objekte, nicht zwei Lesarten eines
+Objekts (Bedeutung (4) von „ein Objekt“ in `../k220_ein_objekt_2026_11_07/README.md`). (3) Maximalität: Alle solchen
+Auslesungen kommen vor.
+
+**Ergebnisse**
+1. Auf χ wirken R, T, J_B exakt als σ_z, σ_x, σ_y (bis auf Phase; Abweichung von der Feldwirkung 4·10⁻¹⁶ an den sechs Polen
+   und 200 reellen Feldern). Jede hat genau zwei Eigenstrahlen; zusammen sind das die **sechs Pole**: Materie und Tachyon (T),
+   die beiden Photonseiten (J_B), selbst- und antiselbstdual (R).
+2. Von den Teilmengen der sechs Pole sind 26 ohne orthogonales Paar. Die größte Größe ist **3**, und es gibt genau **8** solche
+   Tripel. Alle haben paarweise Überlappung ½, K = 2/3 und Phase ±π/4.
+3. Die Frame-Abbildungen zerlegen die 8 Tripel in **2 Bahnen zu je 4**, getrennt nach dem Vorzeichen der Phase (Ecken nach
+   Achsen geordnet): −π/4 und +π/4.
+
+**Folgerungen**
+- Aus (1)–(3) folgen zugleich die **Zahl drei**, die **Überlappung ½** (K = 2/3) und die **Phase π/4** bis aufs Vorzeichen. Das
+  Tripel ist bis auf Frame-Abbildungen und Orientierung eindeutig.
+- **Ein Dreierzyklus wird nicht gebraucht.** Die Verteilung auf drei verschiedene Frame-Abbildungen erzwingt die Bedingung
+  „nicht orthogonal“: Zwei Auslesungen derselben Abbildung wären orthogonal.
+- Die bisher gesetzte Regel „je Frame-Abbildung ein Auslesezustand“ ist damit auf (2) und (3) zurückgeführt.
+- **Gesetzt bleiben:** die Maximalität (3) und die Eigenzustands-Bedingung (1); dazu das Vorzeichen der Phase (nur die
+  Zeitumkehr kehrt es um), die Biegung zu φ = 2/3 (γ_M, OP1) und der Bezug zu geladenen Leptonen. Die drei Zustände sind
+  Auslesezustände; die Massenwurzeln sind die Eigenwerte der Gram-Matrix.
