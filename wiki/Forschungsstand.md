@@ -1,5 +1,18 @@
 # Forschungsstand
 
+### C5, Form (iii): ein Nullaugenblick der Feldinvariante (15.11.2026)
+
+Erkundung (nicht blind); die verbotene Aussage C5 = 0 wird nicht gemacht. Für zeitharmonische Felder läuft die augenblickliche
+Invariante s(t) auf einer Ellipse um w/2. Bei nicht generischen Feldern (Kodimension 1) geht sie durch 0: Zu einer endlichen
+Zeit ist s(t) = 0, das Feld aber nicht null, und der Zustand steht im Photonpunkt P (b = 0), mit Kompensatoranteil ½. Der
+Augenblick ist Lorentz-invariant und wiederholt sich jede halbe Periode.
+- **Gegen (α)–(δ) aus r88:** (β), (γ), (δ) erfüllt; (α) nur, wenn die Obstruktion die augenblickliche Invariante s(t) ist und
+  nicht die Zustandsgrößen s±, w.
+- **Keine Entladung:** offen sind die Lesart der Obstruktion, die Bedeutung einer periodischen Null, die Zuordnung zu
+  Kollar-Stufen und warum gerade solche Felder vorliegen. C5 bleibt offen.
+
+[Erkundung](../notes/research/c5_null_instant_2026_11_15/README.md).
+
 ### OP4: Der Zeitzyklus als Dreierzyklus der Dirac-Auslesung (15.11.2026, Runde r18)
 
 Erkundung (nicht blind). Der Slotzyklus τ, unter dem die Dirac-Kopplungen nach r55 invariant sind, ist gleichwertig zur
