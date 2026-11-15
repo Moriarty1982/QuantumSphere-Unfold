@@ -76,3 +76,40 @@ Daraus folgt:
 
   Ω = γ_M ist der Punkt λ = 1 auf dieser Linie. Wer γ_M herleiten will, muss auch begründen, dass der verdrängte Fluss
   ganz abfließt. Beides zusammen ist eine einzige Bedingung, keine zwei unabhängigen Treffer.
+
+## Faden 1 (15.11.): Warum fließt der verdrängte Fluss ganz ab?
+
+Erkundung, analytisch, mit Quellenabgleich. Gelesen wurden v470/05 (Einleitung und Prop. „Hopf completion versus
+guarded-core remainder“), v470/32, Zeile 446 (OP5-Route) und v470/10, Abschnitt „Black Holes and Hawking Radiation“.
+
+**Topologischer Kern.** Auf einer geschlossenen Kugel ist der Gesamtfluss eines U(1)-Bündels quantisiert (Chern-Zahl).
+Was eine Kappe nicht enthält, muss dann auf den Rest der Kugel; das ist B, gleichmäßig als Minimum der Feldenergie.
+Wird die Kappe dagegen wirklich *entfernt*, hat die Fläche einen Rand, und kein Erhaltungssatz zwingt den Fluss zurück.
+Ohne eine eigene Dynamik, die ihn umverteilt, ist das A (λ = 1).
+
+**Das Paper hat genau diese Zweiteilung offen gelassen.** Prop. „Hopf completion versus guarded-core remainder“ (b)
+sagt: „the core K is removed **or** shielded.“
+
+| Lesart in v470/05 | Topologie | Fluss | Ergebnis |
+|---|---|---|---|
+| removed: X = S³ ∖ B_ε(K) | Fläche mit Rand, Chern-Zahl nicht fest | fließt über den Rand ab | A, φ = π/4 − Ω/2 |
+| shielded | geschlossene Kugel, Chern-Zahl fest | verteilt sich um | B, φ = 0,6795 bei Ω = γ_M |
+
+**Was im Paper für „removed“ spricht (Lesart, nicht Herleitung):**
+- v470/05 schreibt das Scan-Gebiet ausdrücklich als S³ ∖ B_ε(K): Der Kern gehört nicht zum Auslesegebiet und wird nur
+  von außen gemessen.
+- v470/32, Zeile 446: Auf der OP5-Route soll gezeigt werden, dass kein zulässiger Zweig den Kollapskern kreuzt; jeder
+  hat einen Umkehrpunkt.
+- v470/10, Prop. „Horizon as cascade singularity“: Die Sphaera kann nicht über ihren eigenen Horizont hinaus
+  projizieren; der Horizont ist die Grenze ihres Zuständigkeitsbereichs. Was jenseits liegt, wird nicht ausgelesen und
+  auch nicht in den Rest zurückgeschoben.
+
+**Befund.**
+- A ist die Lesart „removed“, B die Lesart „shielded“. Die Daten verlangen „removed“. Das Paper hat diese Lesart schon
+  angelegt und stützt sie an drei Stellen, ohne sie zu erzwingen.
+- Damit ist λ = 1 kein freier Parameter mehr, sondern eine Lesartwahl, die das Paper an zwei der drei Stellen ohnehin
+  nahelegt.
+- **Offen bleibt Ω = γ_M:** warum der entfernte Kern auf der Generationskugel gerade den Raumwinkel eines Flächenquants
+  der Zählregel hat. Das ist weiter dieselbe Lücke wie bei CT-002, die Brücke zwischen Horizont-Punktierung und
+  Generationsraum.
+- Dass der Kollapskern ein Horizont ist, steht so im Paper nicht. Die Gleichsetzung ist Lesart.
