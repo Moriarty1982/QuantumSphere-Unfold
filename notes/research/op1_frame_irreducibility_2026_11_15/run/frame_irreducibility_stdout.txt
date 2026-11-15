@@ -1,0 +1,26 @@
+(1) Frame-Abbildungen exp(-i pi J_k) auf Spin j
+    j =  0.5: antikommutierend True , Kommutant    1 (erwartet    1), 1 x (2-dim.)        , Extremdublett invariant True, invariante Paare |j,+-m>: 1
+    j =  1.0: antikommutierend False, Kommutant    3 (erwartet    3), Charaktere 0+1+1+1  , Extremdublett invariant True, invariante Paare |j,+-m>: 2
+    j =  1.5: antikommutierend True , Kommutant    4 (erwartet    4), 2 x (2-dim.)        , Extremdublett invariant True, invariante Paare |j,+-m>: 2
+    j =  2.0: antikommutierend False, Kommutant    7 (erwartet    7), Charaktere 2+1+1+1  , Extremdublett invariant True, invariante Paare |j,+-m>: 3
+    j =  2.5: antikommutierend True , Kommutant    9 (erwartet    9), 3 x (2-dim.)        , Extremdublett invariant True, invariante Paare |j,+-m>: 3
+    j =  3.0: antikommutierend False, Kommutant   13 (erwartet   13), Charaktere 1+2+2+2  , Extremdublett invariant True, invariante Paare |j,+-m>: 4
+    j =  3.5: antikommutierend True , Kommutant   16 (erwartet   16), 4 x (2-dim.)        , Extremdublett invariant True, invariante Paare |j,+-m>: 4
+    j =  4.0: antikommutierend False, Kommutant   21 (erwartet   21), Charaktere 3+2+2+2  , Extremdublett invariant True, invariante Paare |j,+-m>: 5
+    j =  5.0: antikommutierend False, Kommutant   31 (erwartet   31), Charaktere 2+3+3+3  , Extremdublett invariant True, invariante Paare |j,+-m>: 6
+    j = 10.0: antikommutierend False, Kommutant  111 (erwartet  111), Charaktere 6+5+5+5  , Extremdublett invariant True, invariante Paare |j,+-m>: 11
+    j = 15.0: antikommutierend False, Kommutant  241 (erwartet  241), Charaktere 7+8+8+8  , Extremdublett invariant True, invariante Paare |j,+-m>: 16
+    j = 20.0: antikommutierend False, Kommutant  421 (erwartet  421), Charaktere 11+10+10+10, Extremdublett invariant True, invariante Paare |j,+-m>: 21
+    irreduzibel nur bei j = [0.5]
+
+(2)/(3) Regeln und gamma
+    M: Extremdublett je j (alle j, Gewicht 2)          gamma = 0.237533
+    M: alle invarianten Paare (alle j, Gewicht 2j+1)   gamma = 0.274067
+    M: irreduzibel (nur j = 1/2, Gewicht 2)            gamma = 0.127384
+    T: irreduzibel (nur j = 1/2, Gewicht 2)            gamma = 0.127384
+    T: antikommutierend (halbzahlig, Gewicht 2)        gamma = 0.189138
+    M: Extremdublett je j        / T: irreduzibel        : gamma_L = 1.864700, beta_sym = 0.54941
+    M: Extremdublett je j        / T: antikommutierend   : gamma_L = 1.255868, beta_sym = 0.33678
+    M: alle invarianten Paare    / T: irreduzibel        : gamma_L = 2.151501, beta_sym = 0.60447
+    M: irreduzibel               / T: irreduzibel        : gamma_L = 1.000000, beta_sym = 0.00000
+    Vergleich: H98-Paar gamma_L = 1.864700, beta = 0.54941; Leptonfenster beta in [0.545, 0.570]

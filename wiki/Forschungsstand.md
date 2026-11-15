@@ -1,5 +1,20 @@
 # Forschungsstand
 
+### OP1: Die Frame-Abbildungen wirken nur bei j = ½ irreduzibel (15.11.2026)
+
+Erkundung (nicht blind). Unter der Annahme, dass die drei Frame-Abbildungen (halbe Drehungen um senkrechte Achsen, r16.7)
+auf einer Horizont-Punktierung mit Spin j über dieselbe SU(2) wirken, gilt: **Irreduzibel wirken sie nur bei j = ½**
+(geprüft bis j = 20); das Extremdublett |j, ±j⟩ ist bei jedem j invariant.
+- **Zählregel:** T zählt Punktierungen, auf denen die Frame-Abbildungen irreduzibel wirken (nur j = ½, Gewicht 2); M zählt
+  je j das invariante Extremdublett (Gewicht 2). Das ist genau das Paar aus H98: γ_L = 1,864700, β = 0,54941. Die
+  Kramers-Regel (alle halbzahligen j) ist davon verschieden und bleibt ausgeschlossen.
+- **Gewinn:** Die gescheiterte Energiebedingung P2 (r10.2) wird durch eine gruppentheoretische Auslesebedingung ersetzt;
+  sie gibt dieselbe T-Regel wie die Stringlesart (I1), ohne „T = String-Sektor“ (Guard 1 von CT-004).
+- **Offen:** die Brücke vom Feld-Dublett zur Punktierung; warum T Irreduzibilität verlangt und M nicht; M braucht weiter P1.
+  Kein Test.
+
+[Erkundung](../notes/research/op1_frame_irreducibility_2026_11_15/README.md).
+
 ### OP3: Ein Drittel der Periode als Dreierzyklus (15.11.2026, Runde r16.9)
 
 Erkundung, Rückwärtssuche (nicht blind). Die Verschiebung um ein Drittel der Periode von s(t) ist ein nativer
