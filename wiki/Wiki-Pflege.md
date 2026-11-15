@@ -102,6 +102,9 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 15.11.2026: Forschungsstand und Offene-Probleme um die invariante Kugel χ = (√s₊, √s₋) ergänzt (Oktant boost-invariant,
+  Zweigwahl = R). Kein OP-Abschluss.
+
 - 15.11.2026: Forschungsstand und Offene-Probleme um die Helizitätsachse ergänzt (Koide-Phase braucht Helizität;
   Frame-Abbildungen auf Helizität wie auf Chiralität; b_y nicht boost-invariant). Kein OP-Abschluss.
 

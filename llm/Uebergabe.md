@@ -77,6 +77,8 @@
 - **Helizitätsachse (15.11., Erkundung, `notes/research/op3_helicity_axis_2026_11_15/`):** Auf dem Dublett (E, B) mit der
   Helizität als σy (r05.2) wirken R, T, J_B wie auf die Chiralität in r51; σy-Pole = Ports. Koide-Phase braucht Helizität
   (Σ b_y² = 1 je Oktant; Scheibe gibt Phase 0 oder π). Grenze: b_y nicht boost-invariant, kein Frame für drei Zustände.
+  Nachtrag: Auf der Kugel der Invarianten χ = (√s₊, √s₋), s± = (E ± iB)², gibt es ein boost-invariantes Oktant
+  (Materie, Photonseite, selbstdual); Zweigwahl der Wurzel = R. Überlappung ½ bleibt gesetzt.
   Zusammen mit dem Nachtrag zu r15.5 Stoff für r16 (noch nicht geschrieben).
 
 ## Nächster Schritt (Autorentscheidung)

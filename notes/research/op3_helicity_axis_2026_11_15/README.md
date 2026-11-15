@@ -58,3 +58,39 @@ es: Die Koide-Phase ist ein Helizitätseffekt, sie braucht komplexe Amplituden. 
 welchem Frame die drei Zustände gelesen werden, bleibt offen.
 
 OP1–OP5, C5, C6/T2 und die Guards sind unverändert.
+
+## Nachtrag 15.11.2026: das Lorentz-invariante Dublett χ = (√s₊, √s₋)
+Auftrag des Autors: „Ja, prüfen“, nach dem Vorschlag, die frame-abhängige Hermitesche Stokes-Kugel durch die bilinearen
+Invarianten zu ersetzen. **Erkundung, nicht blind.** Skript `invariant_doublet.py`, Ausgabe
+`run/invariant_doublet_stdout.txt`.
+
+**Ansatz.** Mit F± = E ± iB sind s± = F±·F± bilinear. Ein Boost wirkt auf F₊ als komplexe Drehung M ∈ SO(3, C) und auf F₋
+als M̄; nach v4.8.0-r06.3 bleiben s₊ und s₋ erhalten. Das Paar χ = (√s₊, √s₋) ist ein Dublett, dessen Bloch-Kugel nicht
+vom Bezugssystem abhängt. Die Hermitesche Stokes-Kugel von r05.2 hängt dagegen davon ab (Ergebnis (4) oben).
+
+**Ergebnisse**
+1. s₊ und s₋ sind unter 500 zufälligen Boosts komplexer Amplituden invariant (relative Abweichung höchstens 10⁻¹⁴).
+2. Reelle Felder liegen auf dem Äquator, und ihr Winkel ist −arg s, also die Richtung in der Scheibe von r04 (Radius |b|
+   entfällt, nur die invariante Richtung bleibt).
+3. Die Frame-Abbildungen wirken wie in r04.2(b) und r51: R dreht den Äquator um π (arg s ↦ arg s + π, Materie ↔ Tachyon),
+   T spiegelt arg s ↦ −arg s, J_B spiegelt arg s ↦ π − arg s. Auf die Helizitätskomponente: R erhält sie, T und J_B kehren
+   sie um (für allgemeine komplexe Felder geprüft).
+4. **Zweigwahl.** Die Wurzeln haben je ein Vorzeichen. Für reelle Felder gibt √s₋ = conj √s₊ eine natürliche Wahl. Die
+   andere Wahl liefert den um π um die Helizitätsachse gedrehten Punkt, also genau das R-Bild. Für allgemeine komplexe
+   Felder ist ein Punkt der Kugel deshalb nur bis auf R bestimmt; an den Polen spielt die Wahl keine Rolle.
+5. **Ein invariantes Oktant existiert.** Materiefeld (E = e₁, B = 0, s = 1), Feld der Photonseite (E = B = e₁/√2, s = i) und
+   selbstduales Feld (E = i e₁, B = e₁; s₊ = −4, s₋ = 0, Nordpol). Paarweise Überlappung ½, K = 2/3, Bargmann-Phase −π/4
+   (Vorzeichen nach Orientierung). Unter 50 zufälligen Boosts bleiben alle drei Strahlen unverändert.
+
+**Folgerungen**
+- **Der Frame-Einwand entfällt.** Auf der invarianten Kugel hängen Überlappungen, K und Phase nicht vom Beobachter ab.
+  Die drei Ecken des Oktanten sind drei Feldtypen, die in jedem Bezugssystem dieselben sind: Materie, Photonseite,
+  Helizität. Das Oktant aus beiden Zweigen ist eindeutig: Die Äquatorzustände sind reell (natürlicher Zweig), der Pol ist
+  zweigfrei.
+- **Licht hat keinen Punkt:** Für ebene Wellen ist s₊ = s₋ = 0, also χ = 0. Das passt zu r19 (das Photon als
+  Informations-Singular, kein Frame wie die anderen).
+- **Zweigwahl = Frame-Wahl M/T:** Die Vorzeichenfreiheit der Wurzel ist für komplexe Felder genau der Tausch durch R. Die
+  Unterscheidung von Materie und Tachyon braucht dort eine Spinorwahl. Ob r02.1/r06.4 sie festlegen, ist nicht geprüft.
+- **Unverändert offen:** Die Überlappung ½ ist gesetzt (das Oktant wird invariant, nicht hergeleitet). Wie ein
+  Feld-Dublett die Generationen geladener Leptonen trägt, bleibt eine Lesart. Die Biegung zu φ = 2/3 bleibt beim Kern
+  (γ_M, OP1).

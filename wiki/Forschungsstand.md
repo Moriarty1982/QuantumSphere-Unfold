@@ -9,8 +9,13 @@ Erkundung (nicht blind). Das Feld-Dublett (E, B) hat nach r04 und r05.2 drei Sto
   1 ± i e₇ über.
 - **Koide:** Drei Zustände in der Scheibe haben die Bargmann-Phase 0 oder π. Für jedes Oktant-Tripel gilt
   Σ b_y² = 1: Die Koide-Phase braucht Helizität, also komplexe Amplituden.
-- **Grenze:** Unter Boosts ändert sich b_y; erhalten bleibt nur die Zerlegung in die Helizitätsanteile. Die Kugel müsste in
-  einem ausgezeichneten Frame gelesen werden, und ein Frame, der drei Generationszustände zugleich auszeichnet, fehlt.
+- **Grenze der Hermiteschen Kugel:** Unter Boosts ändert sich b_y; erhalten bleibt nur die Zerlegung in die
+  Helizitätsanteile.
+- **Invariante Kugel (Nachtrag):** Die bilinearen Größen s± = (E ± iB)² sind Lorentz-invariant. Auf der Kugel des Dubletts
+  χ = (√s₊, √s₋) liegen reelle Felder auf dem Äquator (Winkel −arg s), selbstduale Felder an den Polen; Licht (s₊ = s₋ = 0)
+  hat keinen Punkt. R, T, J_B wirken wie in r04 und r51. Materiefeld, Feld der Photonseite und selbstduales Feld bilden ein
+  Oktant (K = 2/3, Phase ±π/4), das unter Boosts unverändert bleibt. Für komplexe Felder ist ein Punkt nur bis auf R
+  bestimmt (Wurzelzweig). Die Überlappung ½ bleibt gesetzt.
 
 [Erkundung](../notes/research/op3_helicity_axis_2026_11_15/README.md).
 
