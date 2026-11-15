@@ -1,0 +1,17 @@
+(1) Wirkung auf die Scheibe und auf die Ports
+    R (z -> iz)    : b_z +0.249 -> -0.249, b_x -0.949 -> +0.949; Scheiben-Ports getauscht: True; algebraische Ports getauscht: False
+    T (Zeitumkehr) : b_z +0.249 -> +0.249, b_x -0.949 -> +0.949; Scheiben-Ports getauscht: True; algebraische Ports getauscht: True
+    J_B            : b_z +0.249 -> -0.249, b_x -0.949 -> -0.949; Scheiben-Ports getauscht: False; algebraische Ports getauscht: True
+(2) Kollar-Rekursion je Frame (selektiv, alpha = pi/6, Start auf der Kompensatorachse)
+    n = 1: M liest (Kompensator) 0.75000 = (3/4)^1 0.75000; T liest (Partner) 0.25000; Summe 1.00000
+    n = 2: M liest (Kompensator) 0.56250 = (3/4)^2 0.56250; T liest (Partner) 0.43750; Summe 1.00000
+    n = 3: M liest (Kompensator) 0.42187 = (3/4)^3 0.42188; T liest (Partner) 0.57813; Summe 1.00000
+    n = 4: M liest (Kompensator) 0.31641 = (3/4)^4 0.31641; T liest (Partner) 0.68359; Summe 1.00000
+    n = 5: M liest (Kompensator) 0.23730 = (3/4)^5 0.23730; T liest (Partner) 0.76270; Summe 1.00000
+    'C5 = 0 in M' heisst 'T liest den ganzen Inhalt': vollstaendiger Frame-Wechsel
+(3) Nullaugenblick des Beispielfelds: Kompensatoranteil von M und von T
+    t = -0.6: M-Anteil 0.289, T-Anteil 0.711 (b_x = -0.422, b_z = -0.082)
+    t = -0.2: M-Anteil 0.430, T-Anteil 0.570 (b_x = -0.140, b_z = -0.008)
+    t = +0.0: M-Anteil 0.500, T-Anteil 0.500 (b_x = +0.000, b_z = +0.000)
+    t = +0.2: M-Anteil 0.570, T-Anteil 0.430 (b_x = +0.140, b_z = -0.008)
+    t = +0.6: M-Anteil 0.711, T-Anteil 0.289 (b_x = +0.422, b_z = -0.082)

@@ -12,8 +12,8 @@
   (14feb02, Release v5.1.0). **Keine offenen PRs.** Gemergt am 14./15.11.: #124–#128
   (OP3-Rückwärtssuche, Dauerauftrag Versionsverwaltung, Abbildung C⊗S → C⊗H⊗O, bewachter Kern, Release), davor #108–#123.
   Gemergte Zweige sind gelöscht. Nicht geprüft: die Läufe nach dem Merge von #128 (Wiki-Sync, Zwei-PDF).
-- **Letzte Runde:** v4.10.0-r19 (C5-Kandidat Nullaugenblick, Abgleich mit r88, Zeit gegen Kollar-Stufe), Zweig
-  `research/c5-stages`; davor r18 (PR #141), r17, r16, r15, r14 (in v5.1.0). Kandidat 1429 Seiten.
+- **Letzte Runde:** v4.10.0-r19 (C5-Kandidat Nullaugenblick, Abgleich mit r88, Zeit gegen Kollar-Stufe, Frame-Audit r19.4),
+  Zweig `research/c5-stages`; davor r18 (PR #141), r17, r16, r15, r14 (in v5.1.0). Kandidat 1430 Seiten.
 - **Hypothesen:** zuletzt vergeben H104 (k226, widerlegt). Frei: **H105, k227**.
   - H100 offen: nächster NuFIT-Fit nach 6.1, Frist 31.12.2027 (`notes/research/predictions/k222_test_h100.py`).
   - H102 offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem 13.11.2026 (`k224_test_h102.py m_tau sigma`).
@@ -132,6 +132,9 @@
   Nachtrag (Zweig `research/c5-stages`): Zeit = Kollar-Stufe nur bei reiner Helizität, dort kein Nullaugenblick; Felder mit
   Nullaugenblick tragen beide Helizitäten → keine Folge von Kollar-Stufen (passt zu (β), Zählung als Stufe offen).
   Keine Entladung; C5 offen.
+
+- **Offene Autorentscheidung zu C5:** Soll C5 frame-sauber neu gestellt werden (Anteile C5_M, C5_T mit fester Summe;
+  frame-freie Frage: endliches Erreichen des Photonpunkts)? Und zählt eine augenblickliche Null als endliche Stufe (r86)?
 
 ## Nächster Schritt (Autorentscheidung)
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,

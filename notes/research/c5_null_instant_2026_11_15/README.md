@@ -91,3 +91,48 @@ beiden Helizitätsanteile gegenläufig (F₊ ↦ e^{−iα}F₊, F₋ ↦ e^{iα
 Kandidaten, sondern genau die Unabhängigkeit, die (β) verlangt: Der Nullaugenblick entsteht nur, wo die Zeitentwicklung aus der
 Kollar-Dynamik herausfällt. Damit bleibt aber auch offen, wie ein Zeitpunkt als „endliche Stufe N“ im Sinn von r86 zu zählen
 wäre. Keine Entladung; die Aussage C5 = 0 wird nicht gemacht.
+
+## Nachtrag 15.11.2026: Frame-Audit von C5
+Auftrag des Autors: „Ja, Frame-Audit von C5 als Erkundung“, nach der Frage, ob bei C5 wieder der falsche Frame genommen oder pro
+Frame untersucht werden müsse. **Erkundung, nicht blind.** Skript `frame_audit.py`, Ausgabe `run/frame_audit_stdout.txt`.
+Vorbild ist das Frame-Audit von OP1–OP5 (v4.9.0-r61), das C5 nicht geprüft hat.
+
+**Vorwissen:** v4.7.0-r02/r04 führen C5 als „endliche Witness-Fit-Schnittstelle“ eines Feldgleichungsprogramms ein; der Score
+3/4 ist ein deklarierter Tabellenwert (r94). Die physikalische Lesart (Kompensatorinhalt des Dubletts, „drehe um π/6, dann
+kompensiere“) stammt aus v4.9.0-r10/r16/r27. **v4.9.0-r28** hat den Frame-Fehler von r27 bereits berichtigt: Die
+Tachyon-Abbildung ist z ↦ iz (nicht J_B); sie kehrt den ganzen Stokes-Vektor um und tauscht die Kompensatorports; J_B lässt die
+Ports fest (C_HC = ½(1 + J_B)). Die Ergebnisse von r27 änderten sich dadurch nicht.
+
+**Ergebnisse**
+1. **Zwei verschiedene Port-Begriffe.** Die Kompensatorports von r04–r28 liegen auf der σ_x-Achse der Scheibe, also auf der
+   Seite sign(E·B). Die Ports von r42/r51 (½(1 + iL_e7)) entsprechen nach r16.2(b) den σ_y-Polen, der Helizität. Unter den
+   Frame-Abbildungen verhalten sie sich verschieden:
+
+   | Abbildung | Scheiben-Ports (C5) | algebraische Ports (r51) |
+   |---|---|---|
+   | R (Tachyon) | getauscht | fest |
+   | T (Zeitumkehr) | getauscht | getauscht |
+   | J_B | fest | getauscht |
+
+   Das Wort „Kompensator“ bezeichnet also in der C5-Lesart eine andere Achse als in r42/r51. Das ist eine Begriffsmischung,
+   keine Rechenfehler; sie sollte beim Lesen von C5 beachtet werden.
+2. **Die Kollar-Rekursion pro Frame.** M liest den Kompensatorport und sieht (3/4)ⁿ. Der Tachyon-Frame liest nach r28 die
+   getauschten Ports, also den Partnerport, und sieht 1 − (3/4)ⁿ. Die Summe ist bei jeder Stufe 1. **„C5 = 0“ in der alten Form
+   heißt pro Frame: Der Tachyon-Frame liest den ganzen Inhalt.** Die Frage ist also kein Verschwinden, sondern ein
+   vollständiger Wechsel des Inhalts in den anderen Frame. Endlich geht das nur durch die Vierteldrehung, die C4, C6 und (δ)
+   sperren (r12.2(c), r10.2(a)).
+3. **Der Nullaugenblick pro Frame.** Beim Beispielfeld steigt der Kompensatoranteil von M durch den Nullaugenblick von 0,29 über
+   0,50 auf 0,71, der des Tachyon-Frames fällt entsprechend. Im Nullaugenblick sind beide gleich (½): Der Zustand steht im
+   Photonpunkt, wo kein Frame bevorzugt ist. Kein Frame-Score wird null.
+
+**Folgerungen**
+- **C5 ist in der alten Form wie OP4 frame-gemischt gestellt.** „Der Score wird endlich null“ fragt in der Messung eines Frames
+  nach einem Vorgang zwischen zwei Frames. Frame-sauber sind die Anteile C5_M und C5_T mit fester Summe; die alte Null heißt
+  C5_T = 1.
+- **Frame-freies Gegenstück** ist der Photonpunkt P, an dem beide Anteile ½ sind. Ihn erreicht die freie Zeitentwicklung zu
+  endlicher Zeit (Nullaugenblick), die selektive Rekursion nie, der nicht-selektive Fluss von r27 nur im Grenzwert (außer bei
+  α = π/4).
+- **Die Einordnung des Nullaugenblicks ändert sich:** Er ist kein Kandidat für „Score = 0“, sondern für „Boden |s| = 0“, und
+  dieser Boden ist frame-frei (R bildet s auf −s ab). Mit (α) aus r88 („Obstruktion selbst, nicht Score“) passt das zusammen.
+- Ob C5 neu gestellt wird (etwa als Frage nach dem endlichen Erreichen von P), ist eine Entscheidung des Autors. Die verbotene
+  Aussage C5 = 0 wird nicht gemacht.

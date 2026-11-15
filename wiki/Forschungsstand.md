@@ -15,8 +15,13 @@ Augenblick ist Lorentz-invariant und wiederholt sich jede halbe Periode.
   Helizität zusammen, und gerade dort gibt es keinen Nullaugenblick (|s(t)| konstant). Felder mit Nullaugenblick tragen beide
   Helizitäten; ihre Zeitentwicklung ist keine Folge von Kollar-Stufen. Das ist die Unabhängigkeit, die (β) verlangt, lässt aber
   offen, wie ein Zeitpunkt als endliche Stufe zu zählen wäre.
+- **Frame-Audit (r19.4):** Pro Frame liest M den Kompensatoranteil (3/4)ⁿ, der Tachyon-Frame den Partneranteil 1 − (3/4)ⁿ; die
+  Summe ist fest. Die alte Frage „C5 = 0“ heißt damit: Der Tachyon-Frame liest den ganzen Inhalt, ein vollständiger
+  Frame-Wechsel. C5 ist in der alten Form, wie OP4 vor r61, frame-gemischt gestellt; frame-frei ist der Photonpunkt P mit
+  beiden Anteilen ½, und den erreicht der Nullaugenblick. Dazu: Das Wort „Kompensator“ meint in der C5-Lesart die σ_x-Achse
+  (Seite), in r42/r51 die Helizitätsachse; R tauscht die einen Ports und lässt die anderen fest.
 - **Keine Entladung:** offen sind die Bedeutung einer periodischen Null, die Zählung als Stufe und warum gerade solche Felder
-  vorliegen. C5 bleibt offen.
+  vorliegen. Ob C5 frame-sauber neu gestellt wird, entscheidet der Autor. C5 bleibt offen.
 
 [Erkundung](../notes/research/c5_null_instant_2026_11_15/README.md).
 

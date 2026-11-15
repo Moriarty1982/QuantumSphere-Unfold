@@ -115,7 +115,7 @@ Layer v4.10.0-r17 records status notes after r16. OP3: the Koide condition has e
 
 Layer v4.10.0-r18 records that no blind test was found among the structures of r15–r17 (two neutrino candidates are excluded by existing data), recomputes H2 (Σm_ν = 0.0592 eV, stable with JUNO and NuFIT 6.1, compatible) and corrects an unsupported wiki statement on the ordering. For OP4 the Dirac readout cycle of r55 is read as the one-third-period time cycle, and the neutrino Z2 that generates TM2 as the fermion parity of Spin(8); with the r57 mask only mask-free fixed slots fit. No new number.
 
-Layer v4.10.0-r19 records a candidate shape-(iii) witness for C5: for non-generic time-harmonic fields the instantaneous invariant s(t) vanishes exactly at finite times while the field does not; the state is then the photon point and the score stays ½. Requirements (β)–(δ) of r88 are met, (α) within the r10 reading, since Reading B considers instantaneous fields. Time and collar stage coincide only for pure helicity, which has no null instant. No discharge; C5 = 0 is not asserted.
+Layer v4.10.0-r19 records a candidate shape-(iii) witness for C5: for non-generic time-harmonic fields the instantaneous invariant s(t) vanishes exactly at finite times while the field does not; the state is then the photon point and the score stays ½. Requirements (β)–(δ) of r88 are met, (α) within the r10 reading, since Reading B considers instantaneous fields. Time and collar stage coincide only for pure helicity, which has no null instant. A frame audit shows that the old question C5 = 0 is, per frame, a complete change of content from the matter frame to the tachyon frame; the frame-free point is the photon point (r19.4). No discharge; C5 = 0 is not asserted.
 
 ## Never claimed
 

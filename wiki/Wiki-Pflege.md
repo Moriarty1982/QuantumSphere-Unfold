@@ -102,6 +102,9 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 15.11.2026: Frame-Audit von C5 (r19.4) in Forschungsstand, Offene-Probleme, Gesamtbild, Forschungslinie, Inhalt und
+  Content-overview eingetragen. Kein Abschluss.
+
 - 15.11.2026: Runde v4.10.0-r19 eingetragen (Forschungslinie, Inhalt, Gesamtbild, Offene-Probleme, Content-overview,
   Forschungsstand). Kein Abschluss.
 
