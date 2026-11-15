@@ -1,5 +1,21 @@
 # Forschungsstand
 
+### OP1 mit I1: Tachyon-Frame zählt Stringendpunkte (15.11.2026)
+
+Erkundung (nicht blind) auf Autorentscheidung, mit der zurückgestellten Idee I1. Gesucht war ein Grund, warum der
+Materie-Frame alle Spins zählt (γ_M = 0,2375) und der Tachyon-Frame nur j = ½ (γ_T = 0,1274).
+
+- **Kramers ist ausgeschlossen:** Eine Regel über die fixpunktfreie Umkehrwalze würde alle halbzahligen Spins zählen.
+  Das gibt γ_L = 1,256 und β = 0,337, weit außerhalb des Fensters.
+- **Lesart über I1:** T ist der String-Sektor (T11; γ_string heißt im Companion „string coupling“). Seine
+  Punktierungen sind Endpunkte einzelner offener Strings, und die tragen die Fundamentaldarstellung (Chan–Paton),
+  also j = ½ mit Gewicht 2. M zählt Kanten des Spin-Netzwerks mit beliebigem j.
+- **Was das bindet:** Damit fallen die „eine Querung“ von CT-002, der eine Kern aus OP3 und die Zählung in T auf eine
+  Aussage. Die gescheiterte Energiebrücke von r09/r10 wird durch ein Argument aus der Darstellungstheorie ersetzt.
+
+Annahmen bleiben: T = String-Sektor und der Chan–Paton-Schritt. Ein blinder Test folgt nicht; OP1 ist nicht geschlossen.
+[Rückwärtssuche](../notes/research/op1_i1_string_endpoints_2026_11_15/README.md).
+
 ### OP3: Bewachter Kern verdrängt Fluss (15.11.2026)
 
 Idee des Autors, als Erkundung nachgerechnet (nicht blind). Der bewachte Kern des Orbit-Scans (v470/05,

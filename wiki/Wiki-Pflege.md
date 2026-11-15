@@ -102,6 +102,9 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 15.11.2026: Forschungsstand um OP1 mit I1 ergänzt (Tachyon-Frame zählt Endpunkte fundamentaler Strings, Kramers-Regel
+  ausgeschlossen). Lesart, kein OP-Abschluss.
+
 - 15.11.2026: Forschungsstand um den bewachten Kern als flussverdrängende Kappe ergänzt. Vorzeichen aus der Lage;
   Menge = H102-Beziehung nur, wenn der verdrängte Fluss das Dreieck verlässt. Nachträge: Abfluss = Lesart „removed“;
   Neutrinos nach H99 zwei Oktanten (Berichtigung); Kugel gegen Faser-Volltorus; Zählregel und Literatur (ABK, ENP)
