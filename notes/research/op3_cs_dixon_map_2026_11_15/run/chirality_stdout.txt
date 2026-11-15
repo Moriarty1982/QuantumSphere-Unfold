@@ -1,0 +1,5 @@
+[C, Q_em] = 0: True
+Bild in C (Kompensatorhaelfte): Loesungsraum dim 8, max. Rang 8 / 16, auf H_n 2 / 4
+Bild in N = 1 - C: Loesungsraum dim 12, max. Rang 10 / 16, auf H_n 4 / 4
+Q_em-Spektrum auf C: {-1.0: 2, -0.3333: 6, 0.0: 2, 0.6667: 6}
+Q_em-Spektrum auf N: {-0.6667: 6, 0.0: 2, 0.3333: 6, 1.0: 2}

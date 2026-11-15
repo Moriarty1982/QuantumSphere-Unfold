@@ -1,5 +1,30 @@
 # Forschungsstand
 
+### OP3: Abbildung C⊗S → C⊗H⊗O, die zwei Generationen sitzen am Platz des Spins (15.11.2026)
+
+Erste Abbildung zwischen dem Sedenionen-Rahmen (Ladung über e8, Platzhalter CT-003) und der Dixon-Algebra, als
+Rückwärtssuche (Erkundung, nicht blind).
+
+- **Ladungsinhalt:** C⊗S enthält {ν, e⁺, u, d̄} je zweifach.
+- **Abbildung:** Farb- und ladungstreue injektive Abbildungen gibt es, als 20-dimensionale Familie; Farbe und Ladung
+  legen sie also nicht fest. Die naive Cayley-Dickson-Einbettung erhält die Ladung nicht.
+- **Familien-su(2):** Die neutrale su(2) der Sedenionen lässt sich nur auf die Linkswirkung von H abbilden, die in r33
+  der Lorentz-Spin ist. Auf den Isospin (Rechtswirkung) und auf die r33-Slotdrehung (Konjugation) geht sie nie. Auch
+  beim Spin klappt es nur sektorweise, mit entgegengesetzter Orientierung für Leptonen und Quarks.
+
+**Lesart:** Über Farbe und Ladung verglichen, besetzen die zwei Generationen von C⊗S den Platz der zwei Spinzustände.
+Farbe und Ladung allein trennen Generation und Spin nicht, und das schwächt Weg A. H_n entspricht dem Spin-½-Dublett
+(Linkswirkung), das r33-Generationstripel dem Vektor Im H unter der Konjugation (Spin 1). Damit ist der Rollentausch
+erklärt: Ein Träger, der beides zugleich ist, müsste Spin ½ und Spin 1 auf denselben drei Achsen vereinen.
+**Nachtrag „gebogene Achsen“ (Idee des Autors):** Drei Zustände mit Überlappung ½ geben immer K = 2/3. Ihre
+Gram-Determinante ist det G = (√2 cos φ − 1)/2, wobei φ die Bargmann-Phase ist.
+- **Gerade Achsen (φ = π/4):** det G = 0. Das ist der flache Oktant, liegt in einem Qubit und hat eine Masse null.
+- **Gebogene Achsen (φ < π/4):** Die Zustände spannen C³ auf und tragen drei positive Massen. Bei φ = 2/3 rad ergeben
+  sich die Lepton-Verhältnisse 1 : 14,38 : 58,97.
+- **Die Biegung:** π/4 − 2/3 = 0,1187 rad, das ist der Fluss von CT-001/CT-002 (γ_M/2). Hergeleitet ist er nicht.
+
+[Rechnung und Einschränkungen](../notes/research/op3_cs_dixon_map_2026_11_15/README.md).
+
 ### OP3: Keine Quelle für gleiche Kopplungen gefunden (14.11.2026)
 
 Eine Rückwärtssuche (Erkundung, nicht blind) hat nach einer vorhandenen Wirkung gesucht, die

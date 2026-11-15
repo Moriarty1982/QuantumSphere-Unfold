@@ -44,6 +44,12 @@ Weyl-Basen wählt denselben Bezug, also ist allein die Gleichgewichtung offen, u
 F-Selbstdualität. Die Linie ruht.
 [Rückwärtssuche](../notes/research/op3_action_balance_search_2026_11_14/README.md).
 
+**Abbildung zur Dixon-Algebra, 15.11.2026:** Eine farb- und ladungstreue Abbildung C⊗S → C⊗H⊗O gibt es, aber nicht
+eindeutig. Die zwei Generationen der Sedenionen landen dabei am Platz des Lorentz-Spins (Linkswirkung von H), nicht
+beim Isospin und nicht bei den r33-Generationsslots. Farbe und Ladung trennen Generation und Spin also nicht. Offen
+bleibt, was eine Generation von einem Spinzustand unterscheidet.
+[Abbildung](../notes/research/op3_cs_dixon_map_2026_11_15/README.md).
+
 **Dynamischer Nachtrag 14.11.2026:** Der vorhandene Zwei-Sonden-Verbinder
 T_12 ist kein ausgewerteter Fourier-Generator. Tau-erhaltende Dynamik
 kann F nicht aktiv erzeugen. Beim zusätzlich angenommenen statischen,
