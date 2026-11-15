@@ -39,7 +39,7 @@ Zu H46: Eine Bestätigung würde die Kette r55–r60 prüfen, nicht die Lesart a
 | Nr. | Hypothese | Ergebnis |
 |---|---|---|
 | H1 | Koide-Phase $\delta = K/3$ | widerlegt für Quarks und laufende Leptonmassen |
-| H2 | Neutrinos als lichtartige Triole | verträglich; sagt normale Ordnung und $\sum m_\nu = 0{,}0592$ eV voraus; am 15.11.2026 nachgerechnet, mit JUNO und NuFIT 6.1 unverändert 0,0592 eV; die Ordnung ist noch nicht bestimmt (berichtigt 15.11.2026: die ersten JUNO-Daten messen sie nicht) |
+| H2 | Neutrinos als lichtartige Triole | verträglich; sagt normale Ordnung und $\sum m_\nu = 0{,}0592$ eV voraus; am 15.11.2026 nachgerechnet, mit JUNO und NuFIT 6.1 unverändert 0,0592 eV; die Ordnung ist noch nicht bestimmt (berichtigt 15.11.2026: JUNO allein bestimmt sie noch nicht; eine globale Analyse mit den öffentlichen JUNO-Daten bevorzugt die normale Ordnung schwach, Δχ² = 4,6, arXiv:2601.09791) |
 | H3 | Vorzeichen als Majorana-CP-Parität | verträglich, derzeit nicht prüfbar ($m_{\beta\beta} \le 3{,}5$ meV) |
 | H4 | TM1 gegen TM2 | TM1 zunächst bevorzugt, nach JUNO disfavorisiert |
 | H5 | Hopf-Winkel als Mischwinkel | gescheitert |

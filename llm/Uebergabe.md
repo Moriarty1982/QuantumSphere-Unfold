@@ -118,6 +118,13 @@
   δ_CP, Majorana/Dirac, Strang-Statistik ohne Konstruktion. Daten 15.11.: kein NuFIT nach 6.1, PDG 2026 ohne neues m_τ.
   H2 nachgerechnet: Σm_ν = 0,0592 eV stabil (NuFIT 6.0/6.1, JUNO, SNO+), verträglich; Wiki-Angabe zur Ordnung berichtigt.
 
+- **OP4, Zeitzyklus (15.11., Erkundung, `notes/research/op4_time_cycle_mixing_2026_11_15/`, Zweig
+  `research/op4-time-cycle`):** Slotzyklus τ (r55) = Zeitzyklus (r16.9); Slotzustände = Auslesungen zu 0, T/3, 2T/3,
+  Fourier-Moden = Massenbasis. TM2-ℤ₂ ohne Frame-Herkunft (T fixiert alle Slots, ρ gibt θ₁₃ = 0). Keine Zahl. Dazu Wiki-H2-Zeile
+  um JUNO-Globalanalyse (Δχ² = 4,6 für normale Ordnung) ergänzt. H9 offen (keine JUNO-Messung mit σ ≤ 0,004 gefunden).
+  Nachtrag: Neutrino-ℤ₂ = Spin(8)-Zentrum (1, −1, −1), Vektor-Slot fest → TM2; mit r57-Maske nur maskenfreie Slots als feste
+  Spalte (je 388 Treffer, Maskenslot 0). Begründung für G_M, keine neue Zahl.
+
 ## Nächster Schritt (Autorentscheidung)
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,
   `Erkundung_Zaehlregel_Prinzip.md`) und Suchrichtung prüfen. Zu beachten: Eine Kramers-Regel (nur halbzahlige Spins,

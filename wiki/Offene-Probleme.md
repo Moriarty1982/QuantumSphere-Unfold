@@ -125,6 +125,8 @@ Die im Zweischritt-Test angegebene geometrische Verschärfung senkt beide Obergr
 
 Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56). Die Lesart je Teilchenart (r55) mit Maskenkorrektur (r57) passt und liefert die offenen Vorhersagen H42 und H46. Nach r61 war OP4 in der alten Form falsch gestellt, weil es Frames vermischt.
 
+**Nachtrag 15.11.2026 (Erkundung, nicht blind):** Der Dreierzyklus der Dirac-Auslesung aus r55 ist gleichwertig zur Verschiebung um ein Drittel der Periode der Feldinvariante (r16.9): Slotzustände = gleich gewichtete Auslesungen zu drei Zeitpunkten, Fourier-Moden = Masseneigenzustände. Die ℤ₂ der Neutrinos (TM2) hat keine Frame-Herkunft; eine Zahl folgt nicht. H9 wartet auf eine JUNO-Messung mit σ ≤ 0,004. Die ℤ₂ lässt sich als Fermionparität von Spin(8) lesen (Vektor-Slot fest); das begründet TM2, gibt aber keine neue Zahl.
+
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
 **Eingeordnet als Runde v4.10.0-r11 (7.11.):** Die folgenden Arbeitsnotizen sind in den Companion aufgenommen und nachgerechnet (k219, 31 von 31). Präzisiert sind die Punkte 1 und 2 der r05-Neuordnung: Der OP5-Kern ist als bedingtes Schema geschlossen, eine native Route fehlt; die Λ-Auslesung ist die zusätzliche Gleichsetzung q = Ω_M (H96), die Kaskade leitet die Zahl nicht her. Offen: ein Mechanismus, der q auswählt, und eine Messabbildung vom Register zur Dichte. [Runde r11](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/v4_10_0_r11/README.md).
