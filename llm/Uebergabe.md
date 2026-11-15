@@ -1,131 +1,46 @@
 # Übergabe: Stand der letzten Sitzung
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.**
 
-## Stand vom 15.11.2026, nachts (Claude Opus)
-- **v5.1.0 ist veröffentlicht** (vom Autor auf Zenodo, 15.11.2026): Version-DOI 10.5281/zenodo.24237112,
-  Record https://zenodo.org/records/24237112, Vorgänger v5.0.0 (24152615). Vollausgabe 1412 Seiten, Physik-Paper
-  29 Seiten. Paketquellstand dfdb413, **Tag v5.1.0** und GitHub-Release gesetzt. Nach der Veröffentlichung geprüft:
-  acht Dateien prüfsummengleich mit dem Paket, Vorschau = Vollausgabe, Relation „neue Version von“ v5.0.0.
-  Läufe: Reservierung 43661985497, Bau 43662217359, Upload 43663052541. Die Vorschau setzt das Hilfsskript weiterhin
-  nicht selbst; der Autor setzt sie von Hand.
-- **Zweig `release/v5.1.0-prep`** enthält Runde r14, die Ergänzungen im Physik-Paper, die auf
-  `qam/editions/v5_release.json` umgestellten Werkzeuge, Metadaten, Zitierdaten, Wiki und `release/v5.1.0/README.md`.
-  **PR #128 gemergt als 14feb02**; Zweig lokal und auf GitHub gelöscht. Keine offenen PRs.
-- **Nächste Version:** v5.1.0 enthält alles bis r14. Neue Kandidaten wieder in dieser Datei sammeln.
-
 ## Stand vom 15.11.2026 (Claude Opus)
-- **GitHub:** **PR #127 gemergt als 83e25e3** (bewachter Kern: Flussverdrängung, Fäden 1–3, Literatur, Topologie,
-  Umkehrwalze, Frame-Quant), davor #126 (823802e, Abbildung C⊗S → C⊗H⊗O), #125 (087d13f), #124 (f5ede73).
-  **Keine offenen PRs.** Gemergte Zweige lokal und auf GitHub gelöscht. Davor: #123 (14856e3, Codex), #122 (f04c6ad),
-  #121 (f39ca00, r13), #120, #119, #108–#118.
-  Nicht geprüft: die Darstellung von Mindmap und Formeln im GitHub-Wiki (im Browser des Modells gesperrt).
-- **Dauerauftrag 15.11. (AGENTS.md):** Interne Nummern (H, k, Runden, CT) ohne Rückfrage vergeben; Übergabe- und
-  Buchführungs-Commits ohne Rückfrage auf `main` pushen. Inhalt nur über PR; Zenodo und neue Versionen nur mit Freigabe.
-- **Autorentscheidung 15.11. zur nächsten Version:** Erst weiterforschen, bis genug Stoff für eine neue Version
-  *beider* Ausgaben (Vollausgabe und Physik-Paper) da ist; jetzt kein Ergänzungsentwurf. Seit v5.0.0 ist der Text des
-  Physik-Papers unverändert (`qam/editions/v5_physics_article.tex`). Kandidaten für eine spätere Ergänzung:
-  Generation und Spin über Farbe und Ladung nicht trennbar (15.11.); H102 als Vorhersage mit Platzhaltern (CT-001/CT-002, sieben Guards, nicht blind) neben dem Satz „No lepton masses …
-  predicted“; das präzisierte Generationenhindernis (Weg A gegen Weg B, r13); die benannte Auswahlregel
-  (Gleichgewichtung zweier unverzerrter Terme = F-Selbstdualität, PRs #123/#124).
-- **Neu, 15.11. (`notes/research/op3_cs_dixon_map_2026_11_15/`, Erkundung, nicht blind, Zweig
-  gemergt über PR #126):** Abbildung C⊗S → C⊗H⊗O.
-  - Farb- und ladungstreue Abbildungen bilden eine 20-dimensionale Familie.
-  - Die Familien-su(2) geht nur auf die Linkswirkung von H (Lorentz-Spin), sektorweise mit entgegengesetzter
-    Orientierung (Leptonen det −1, Quarks det +1). Auf Isospin und r33-Slotdrehung geht sie nie.
-  - Lesart: Die zwei Generationen von CT-003 sitzen am Platz des Spins; Farbe und Ladung trennen Generation und Spin
-    nicht. Das schwächt Weg A.
-  - Kandidat für das Physik-Paper (Abschnitt particles).
-  - Nachtrag „gebogene Achsen“ (`bent_axes.py`): det G = (√2 cos φ − 1)/2. Der flache Oktant (φ = π/4) ist der
-    Qubit-Grenzfall mit einer Masse null. Mit φ = 2/3 rad ergeben sich die drei Leptonmassen mit Koide 2/3; die
-    Biegung π/4 − 2/3 = 0,1187 rad ist der CT-001/002-Fluss. Kandidat für das Physik-Paper (Abschnitt masses).
-  - Nächste mögliche Frage: Was unterscheidet eine Generation von einem Spinzustand (etwa Lorentz-Verhalten, Boosts,
-    Chiralität)?
-- **Lokal:** Hauptordner auf `main` = 83e25e3 (plus dieser Übergabe-Commit).
-- **Neu, 14.11. (`notes/research/op3_action_balance_search_2026_11_14/`, Erkundung, nicht blind, Rückwärtssuche,
-  auf „Wirkung suchen“ des Autors):** Gesucht war eine vorhandene Wirkung, die H = −a(Q + R) mit gebunden gleichen
-  Kopplungen liefert (nächster Ansatz aus der Codex-Notiz `op3_reference_energy_selection_2026_11_14`).
-  **Keine gefunden.**
-  - Native Slotsymmetrien (monomial, 1296 Elemente) bilden ⟨D⟩ nie auf ⟨τ⟩ ab, können a = b also nicht erzwingen.
-  - Alle 54 gleich gewichteten Paare von Eigenlinien aus zwei verschiedenen Weyl-Untergruppen (MUBs) wählen den
-    Oktanten-Bezug (K_orb = 2/3, π/4), denn die Überlappung ist stets 1/3. Q und R sind nicht ausgezeichnet,
-    offen ist nur die Gleichgewichtung.
-  - Demokratische Zählregeln treffen nicht (alle vier Eigenwert-1-Linien: K_orb = 3/5).
-  - Lesart: Das Gleichgewicht ist die F-Selbstdualität von −J(Z+Z†) − h(X+X†) bei J = h. In einer Potts-Kette wäre
-    das der kritische Punkt. Eine solche Kette gibt es im Companion nicht.
-  - **Das ist die fünfte Variante mit derselben offenen Voraussetzung (nativer Bezug bzw. F). Die OP3-Linie ruht.**
-- **Codex-Stand vom selben Tag (PR #123):** Die Bezugsauswahl durch H = −(aQ + bR) braucht a = b. Ein festes H bricht
-  S, das Minimum ist keine Präparation, die Bahn-Gram-Matrix hat Rang zwei. Die aktive Fourier-Route ruht: F erhält
-  die Trialitätsform nicht, tau-erhaltende Dynamik erzeugt F nicht.
-- **Hypothesen:** zuletzt H104 (k226) widerlegt. **Als Nächstes frei: H105, k227.**
-  - H100 (nächster NuFIT-Fit, Frist 31.12.2027) ist offen; am 14.11. war NuFIT 6.1 die neueste Version.
-  - H102 ist offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem 13.11.2026.
-- **Platzhalter:** CT-001 partially_constrained, CT-002/CT-003 placeholder, keiner strukturell abgeglichen.
-  CT-001/CT-002 ruhen bis H102.
-- **Ideen I1–I5:** geprüft, kein neuer Auslöser.
-- **Letzte Runde:** v4.10.0-r13 (PR #121). Seither nur Erkundungen, keine neue Runde.
-- **Zweige, die stehen bleiben (nicht gemergt):**
-  - auf GitHub `codex/op3-triality-mass-bridge`, `codex/v5-zenodo-release` und `codex/v5-zenodo-upload-record`;
-  - lokal `claude/quantenphysik-paper-herleitung-e723a3` und `claude/wizardly-mendel-c790d3`;
-  - lokal `claude/anthropic-skills-weitermachen-08cc3e`: inhaltsgleich in #118, Löschung braucht ein Wort des Autors.
-  - `git fetch --prune` meldet weiterhin „Permission denied“ für verwaiste `.git/worktrees`-Einträge.
+- **Öffentlich:** **v5.1.0**, veröffentlicht am 15.11.2026, Version-DOI 10.5281/zenodo.24237112,
+  Record https://zenodo.org/records/24237112; Vorgänger v5.0.0 (10.5281/zenodo.24152615). Vollausgabe 1412 Seiten,
+  Physik-Paper 29 Seiten. Paketquellstand dfdb413, Tag `v5.1.0`, GitHub-Release gesetzt. Nach der Veröffentlichung
+  geprüft: acht Dateien prüfsummengleich mit dem Paket, Vorschau = Vollausgabe. Release-Notiz `release/v5.1.0/README.md`.
+- **GitHub:** `main` nach PR #128 (14feb02, Release v5.1.0). **Keine offenen PRs.** Gemergt am 14./15.11.: #124–#128
+  (OP3-Rückwärtssuche, Dauerauftrag Versionsverwaltung, Abbildung C⊗S → C⊗H⊗O, bewachter Kern, Release), davor #108–#123.
+  Gemergte Zweige sind gelöscht. Nicht geprüft: die Läufe nach dem Merge von #128 (Wiki-Sync, Zwei-PDF).
+- **Letzte Runde:** v4.10.0-r14 (Statusvermerke zu Koide-Bezug, gebogenen Achsen und bewachtem Kern), in v5.1.0.
+- **Hypothesen:** zuletzt vergeben H104 (k226, widerlegt). Frei: **H105, k227**.
+  - H100 offen: nächster NuFIT-Fit nach 6.1, Frist 31.12.2027 (`notes/research/predictions/k222_test_h100.py`).
+  - H102 offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem 13.11.2026 (`k224_test_h102.py m_tau sigma`).
+    Gegenwind schon heute +2,3σ. Eingefroren; eine neue Herleitung wäre eine neue Hypothese.
+- **Platzhalter:** CT-001 partially_constrained, CT-002 und CT-003 placeholder; keiner strukturell abgeglichen.
+- **Daueraufträge:** gemergte Zweige löschen (14.11.); interne Nummern selbst vergeben und Buchführungs-Commits ohne
+  Rückfrage auf `main` pushen (15.11., `AGENTS.md`). Inhalt nur über PR, Zenodo nur mit Freigabe.
+- **Zenodo-Hinweis:** Das Upload-Hilfsskript setzt die Vorschau nicht selbst; der Autor setzt sie im Entwurf von Hand.
+  Dabei kann die Veröffentlichung mit ausgelöst werden (so bei v5.1.0).
 
-- **Nachtrag (Durchsicht der Teilbäume):** Die Mischung r46/r47 hat dieselbe Form (Zirkulante plus Einslot-Maske).
-  Die Leptonmaske W_l = diag(0, 0, −3) ist ein reiner Projektor, die Quarkmaske nicht. In r47-Form gilt K_orb = 2/3
-  bei ε = 1/12; ε ist in r47 nicht hergeleitet. Weitere Kandidaten: r07 (z ↦ iz als EM-Dualität, es fehlt das
-  Wörterbuch D, τ ↔ B, E). Δ(96) scheidet aus, weil die Gruppe monomial ist.
-  Chern-Simons und modulare S-Matrix kommen im Companion nicht vor.
+## Inhaltlicher Stand nach r14 (OP3)
+- **Gebogene Achsen (exakt):** Drei Zustände mit Überlappung ½ geben immer K = 2/3; det G = (√2 cos φ − 1)/2. Der
+  flache Oktant (φ = π/4) ist der Grenzfall mit einer Masse null; die geladenen Leptonen liegen bei φ = 2/3.
+- **Bewachter Kern (Lesart):** Die Biegung π/4 − φ lässt sich als flussfreie Kappe im Generationsdreieck lesen
+  (v470/05, X = S³ ∖ B_ε(K)). Daraus folgen das Vorzeichen (Lage), genau ein Kern (Topologie: n − 1 freie Holonomien)
+  und der Gegenpol für den verdrängten Fluss (Umkehrwalze nach r02: antilinear, fixpunktfrei, auf Spin ½ antipodal).
+  Kerngröße und Abfluss-Anteil sind entartet; Ω = γ_M gilt nur mit vollständiger Ablage außerhalb.
+- **Offen ist eine einzige Größe:** die Kerngröße γ_M. Gelesen als Flächenquant des Beobachter-Frames fällt sie mit
+  **OP1** zusammen: Warum zählt der Materie-Frame alle Spins (γ_M) und der Tachyon-Frame nur den Boden (γ_T)?
+- **Generationen:** Die zwei Generationen von CT-003 sitzen, über Farbe und Ladung verglichen, am Platz des Spins.
+  Ein Drei-Generationen-Träger mit neutralem Levi-Civita-Tripel fehlt weiterhin (r13.6, r14.3–r14.4).
+- **Notizen:** `notes/research/op3_action_balance_search_2026_11_14/`, `op3_cs_dixon_map_2026_11_15/`,
+  `op3_guarded_core_flux_2026_11_15/`, Runde `notes/research/v4_10_0_r14/`.
 
-## Nächster Schritt
-- **Bewachter Kern als flussverdrängende Kappe (15.11., Erkundung, `notes/research/op3_guarded_core_flux_2026_11_15/`,
-  gemergt über PR #127):**
-  - Fundstelle v470/05 (X = S³ ∖ B_ε(K)).
-  - Der Kern muss keinen Fluss tragen; ausschließen reicht. Liegt er im Dreieck, ist das Vorzeichen richtig, und die
-    genaue Lage spielt keine Rolle.
-  - Verlässt der verdrängte Fluss das Dreieck, gilt φ = π/4 − γ_M/2 (die H102-Beziehung). Verteilt er sich
-    gleichmäßig, gilt φ = 0,6795.
-  - Offen: warum der Fluss das Dreieck verlässt und warum Ω = γ_M; dazu Kugel B_ε(K) gegen Faser-Volltorus.
-  - Mögliche Brücke: der bewachte Kollapskern als Horizont-Punktierung (CT-002, I1).
-  - Faden 1: Abfluss = Lesart „removed“ (v470/05: „removed or shielded“); Stützen in v470/05, v470/32 und v470/10.
-  - Faden 2: Berichtigung, H99 legt die Neutrinos ein Oktant über den Oktanten (negative Wurzel), nicht auf ihn.
-    Beide Sektoren verlieren denselben Kern γ_M; „Ladung legt den Kern ins Dreieck“ ist verworfen.
-  - Faden 3: Die Kugel B_ε(K) bricht die Fasern über einer Kappe vom Radius 2ε. γ_M entspricht ε = 7,90° (binär) oder
-    einem Volumenanteil γ_M/(4π) des S³ (gewichtet, ε = 25,94°). ε ist im Paper frei.
-  - Schritt 1: Die Zählregel legt den Kern nicht fest. Literatur (ABK gr-qc/0005126, ENP 0905.3168, über alphaXiv
-    geprüft): gleiche Struktur, aber kein fester Winkel γ_M (Level 4π/γ_M = 52,9 nicht ganzzahlig).
-  - Schritt 2: Genau ein Kern ist topologisch ausgezeichnet: Biegung ohne freien Parameter. Kein Kern biegt nicht; ab
-    zwei Kernen gibt es n − 1 freie AB-Holonomien. Berichtigung zu Faden 1: Bei einem Kern entweicht kein Fluss; A heißt
-    flussfreier Kern mit verdrängtem Fluss außerhalb des Dreiecks (Gegenpol, Dirac-Faden).
-  - Umkehrwalze (Hinweis des Autors, Enigma-Analogie; r02.2/r02.3, v470/24): Eine fixpunktfreie antilineare Involution
-    ist auf Spin ½ die Antipodenabbildung (Θ² = −1). Liest man den Kern als Umkehrwalze, geht der verdrängte Fluss
-    zum Gegenpol; das ist Fall A in beiden Sektoren. Lesart.
-  - Kerngröße als Frame-Quant (Punkt 1): Kern = Flächenquant des Beobachter-Frames gibt γ_M für alle im Frame M
-    gemessenen Massen, auch Neutrinos. Die Kerngröße fällt mit OP1 zusammen (M zählt alle Spins, T nur den Boden).
-    Ein blinder Neutrino-Test mit γ_T hat im Bestand keinen Grund. Bewusst nicht gerechnet; wer ihn will, schreibt
-    ihn zuerst als H105 fest.
-- **Stand 15.11.:** Die Notiz mit den Nachträgen 1–9 ist über PR #124 auf main.
-  Inhalt der Nachträge: r47-Maske, ε-Vorwissen r50–r56, ε* = (1/3)ln((1+√3)/2), Photonengewichte,
-  Frame-Kreuzprodukte (sl(2,R)), Levi-Civita, geordnete Produkte und r33.
-- **Befund der r33-Prüfung (Nachtrag 8):** r33 ist nicht der Engpass. Die Nachträge 4–7 sind dort berichtigt.
-  Jede Frame-Ebene ist kommutativ, und die Frame-Triole ist eine Transposition (r38). Das Levi-Civita-Tripel mit
-  Hurwitz-Zyklus liegt nativ auf Im H (r33.1(a,b)), bricht dort aber Q_em.
-- **H105 nicht vergeben**; frei sind weiterhin H105 und k227.
-- **e8 geprüft (Nachtrag 9):** Die Frage war schon beantwortet (`op3_family_su2_right_action_2026_11_14.md`).
-  Unter e8 wirkt das Tripel R_e7, R_e8, R_e15 neutral als Levi-Civita-Tripel mit Hurwitz-Zyklus, trägt aber nur zwei
-  Generationen als Dublett. In r33 sind die Generationen dagegen die drei Achsen, dort aber nicht neutral.
-  Gesucht ist eine Struktur, in der beide Rollen zusammenfallen. Nicht gerechnet ist die Lage von H_n relativ zum
-  r33-Faktor H; die Abbildung C⊗S ↔ C⊗H⊗O fehlt.
-- **Mögliche nächste Frage (Autorentscheidung):** Abbildung C⊗S ↔ C⊗H⊗O suchen und die Lage von H_n zum r33-Faktor H bestimmen. Vorher Vorwissen und Suchrichtung prüfen.
-- **Offen:** H100 und H102 bei neuen Daten auswerten
-  (`k222_test_h100.py`, `k224_test_h102.py`).
-
-## Profil der fehlenden Struktur
-Gesucht ist ein farb- und ladungsneutrales Qubit, auf dem der Generationszyklus als Element der Ordnung 3 wirkt,
-mit einem Bezugszustand unter dem magischen Winkel arccos(1/√3) zur Zyklusachse. Gleichwertig nach dem 14.11.:
-eine native Begründung für die F-Selbstdualität (gleiche Gewichte zweier unverzerrter Rang-eins-Terme).
-
-## Inhaltlicher Stand
-OP3/OP4 offen; OP1–OP5, C5, C6/T2 und die Guards sind unverändert. Koide 2/3, die Phase und die native
-Massenbrücke sind nicht hergeleitet. v5.0.0 bleibt die Baseline; keine neue Veröffentlichung vorbereitet.
+## Nächster Schritt (Autorentscheidung)
+- **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,
+  `Erkundung_Zaehlregel_Prinzip.md`) und Suchrichtung prüfen. Zu beachten: Eine Kramers-Regel (nur halbzahlige Spins,
+  Θ² = −1) liegt im Regelraum von H98; dort trifft nur das gewählte Paar alle drei Fenster. Auslöser I1-3 der
+  zurückgestellten Ideen ist bei jeder OP1-Arbeit berührt und dem Autor zu nennen.
+- **(b) Daten:** H100 und H102 auswerten, sobald NuFIT oder PDG eine neue Ausgabe haben.
+- **(c) Ruhen:** OP3 ist bis auf die Kerngröße ausgeschöpft; ohne neue Struktur keine weiteren Varianten.
 
 ## Pflichten in jeder Sitzung
 `AGENTS.md`, `wiki/Gesamtbild.md`, die einschlägige Anleitung unter `notes/anleitungen/`, die Auslöser in
