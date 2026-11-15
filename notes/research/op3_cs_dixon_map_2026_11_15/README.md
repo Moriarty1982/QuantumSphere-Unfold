@@ -112,3 +112,31 @@ cd notes/research/op3_cs_dixon_map_2026_11_15 && python chirality_check.py
   lag nicht vor.
 - Bei der Slotdrehung waren die Generatoren zuerst mit dem Faktor ½ falsch normiert. Der Fehler ist berichtigt, und
   das Ergebnis (Rang 0) ist in beiden Fällen gleich.
+
+## Nachtrag (15.11.): Idee des Autors, „gebogene Achsen“
+
+Frage des Autors: Was, wenn die Achsen nicht gerade, sondern gebogen wären? Erkundung, nicht blind,
+`bent_axes.py`. Weitgehend Vorwissen (Brannen-Form r12.1, Rang zwei bei Codex, CT-001/CT-002), hier geometrisch
+zusammengeführt.
+
+Drei Zustände mit paarweiser Überlappung |⟨a|b⟩|² = ½ geben im Gram-Bild immer K = Tr G²/(Tr G)² = 2/3,
+unabhängig von ihrer Lage. Die Lage steckt in der Bargmann-Phase φ (Produkt G12 G23 G31 = e^{iφ}/(2√2)), also im
+eingeschlossenen Raumwinkel, der Krümmung. Exakt gilt:
+
+  det G = (√2 cos φ − 1)/2.
+
+- **φ = π/4 (gerade Achsen, flacher Oktant):** det G = 0. Die drei Zustände liegen in einer Ebene, also in einem
+  Qubit. Das ist genau der Fall „Spin ½, nur zwei Dimensionen“, Rang zwei mit einer Masse null (Codex).
+- **φ < π/4 (gebogen):** det G > 0. Die Zustände spannen C³ auf, die Eigenvektoren von G sind drei orthogonale
+  Zustände, und alle drei Massen sind positiv. Koide bleibt 2/3.
+- **Geladene Leptonen:** φ = 3 · 2/9 = 2/3 rad (Brannen) gibt die Wurzelmassen-Verhältnisse 1 : 14,38 : 58,97,
+  gemessen 1 : 14,379 : 58,969.
+- **Die Biegung ist eine bekannte Größe:** π/4 − 2/3 = 0,118731 rad. Das ist der Fluss ΔΦ, den CT-001/CT-002 als
+  γ_M/2 = 0,118766 lesen (Abstand 3·10⁻⁵ rad), und an ihm hängt H102.
+
+**Lesart.** Der Widerspruch aus Spin ½ (Koide, zu wenig Platz) und Spin 1 (Platz, kein Koide) gilt nur für gerade
+Achsen. Werden die drei Bezugszustände um einen Fluss aus dem Qubit herausgebogen, liegen sie in C³ und tragen drei
+Generationen mit Koide 2/3. Der flache Oktant ist der Grenzfall mit einer verschwindenden Masse. Die Frage
+verschiebt sich damit von „welcher Träger“ zu „welcher Fluss biegt um π/4 − φ“. Das ist dieselbe offene Kette wie
+CT-001/CT-002 („eine Informationsquerung“), jetzt mit dem geometrischen Grund, warum sie gebraucht wird.
+Hergeleitet ist weder die Überlappung ½ noch der Fluss.

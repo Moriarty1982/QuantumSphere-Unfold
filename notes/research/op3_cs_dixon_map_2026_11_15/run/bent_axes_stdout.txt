@@ -1,0 +1,7 @@
+det G = sqrt(2)*cos(phi)/2 - 1/2
+Bargmann G12 G23 G31 = sqrt(2)*exp(I*phi)/4
+det = 0 bei phi = pi/4: True
+Oktant pi/4: det +0.000000, Eigenwerte [0.       0.633975 2.366025], Koide 0.666667, Verhaeltnisse eine Null
+Brannen 3*2/9 = 2/3 rad: det +0.055706, Eigenwerte [0.04035  0.580212 2.379438], Koide 0.666667, Verhaeltnisse [ 1.   14.38 58.97]
+Wurzelmassen-Verhaeltnisse der geladenen Leptonen: [ 1.    14.379 58.969]
+Ausbiegung pi/4 - 2/3 = 0.118731  gamma_M/2 (0.2375330/2) = 0.118766
