@@ -33,8 +33,13 @@ def package(bundle, output, expected_commit):
     if not manifest.get('build_complete') or set(manifest.get('documents', {})) != {'full', 'physics'}:
         raise ValueError('Incomplete paired build')
     release = manifest.get('release', {})
-    if release.get('version') != '5.0.0' or release.get('version_doi') != '10.5281/zenodo.24152615':
+    expected = json.loads((Path(__file__).resolve().parents[2] / 'qam/editions/v5_release.json')
+                          .read_text(encoding='utf-8'))
+    if release.get('version') != expected['version'] or release.get('version_doi') != expected['version_doi']:
         raise ValueError('Unexpected release identity')
+    tag = 'v' + expected['version'].replace('.', '_')
+    label = 'v' + expected['version']
+    version_doi = expected['version_doi']
     verified = {}
     for line in (bundle / 'SHA256SUMS.txt').read_text(encoding='utf-8').splitlines():
         digest, name = line.split('  ', 1)
@@ -47,7 +52,7 @@ def package(bundle, output, expected_commit):
         raise ValueError('Bundle checksum manifest does not cover exactly its files')
     for name in ('full', 'physics'):
         doc = manifest['documents'][name]
-        if doc.get('package_pdf') != 'Quantum_Sphaera_Companion_v5_0_0_' + name + '.pdf':
+        if doc.get('package_pdf') != 'Quantum_Sphaera_Companion_' + tag + '_' + name + '.pdf':
             raise ValueError('Unexpected English document filename: ' + name)
         if not doc.get('technical_check_passed') or any(doc.get('findings', {}).values()):
             raise ValueError('Document has unresolved technical findings: ' + name)
@@ -89,10 +94,10 @@ def package(bundle, output, expected_commit):
         shutil.copyfile(bundle / doc['package_pdf'], output / doc['package_pdf'])
     shutil.copyfile(database, output / 'qam.sqlite3')
     shutil.copyfile(bundle / 'build-manifest.json', output / 'build-manifest.json')
-    archive = output / 'Quantum_Sphaera_v5_0_0_english_sources.zip'
+    archive = output / ('Quantum_Sphaera_' + tag + '_english_sources.zip')
     archive_readme = """# English document sources
 
-This is an source-bound v5.0.0 package; publication status is recorded on Zenodo.
+This is a source-bound """ + label + """ package; publication status is recorded on Zenodo.
 Compile the full edition from editions/full/source/sources/research/
 with pdflatex -no-shell-escape v480-companion.tex until references settle.
 Compile the physics edition from editions/physics/ with the same command
@@ -126,18 +131,18 @@ There is no German reader edition or translation template in this archive.
               'input_checksums_verified': len(verified), 'source_archive_entries': len(selected) + 1,
               'excluded_narrative_reports': sorted(n for n in verified if n.endswith('.md')),
               'german_reader_included': False, 'publication_ready': False,
-              'doi_reserved': True, 'version_doi': '10.5281/zenodo.24152615', 'uploaded': False,
+              'doi_reserved': True, 'version_doi': version_doi, 'uploaded': False,
               'database_integrity': 'ok'}
     (output / 'package-manifest.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
     (output / 'README.md').write_text(
         '# Quantum Sphaera: English paired-document package\n\n'
         'Two English PDFs, compilable exported sources and the machine-readable database.\n'
         'No German reader edition or German narrative reports are supplied.\n'
-        'Reserved version DOI: 10.5281/zenodo.24152615. Package creation does not publish it.\n'
+        'Reserved version DOI: ' + version_doi + '. Package creation does not publish it.\n'
         'The full Companion is the proposed preview. Source and snapshot identities, technical\n'
         'checks and remaining argument-review flags are in the two manifests.\n'
         'Database records and hashes do not prove physical interpretation.\n'
-        'Use the existing v4.11.0 public citation until a new version is actually published.\n', encoding='utf-8')
+        'Use the previous public citation until this version is actually published.\n', encoding='utf-8')
     files = sorted(p for p in output.iterdir() if p.is_file())
     (output / 'SHA256SUMS.txt').write_text(''.join(sha(p) + '  ' + p.name + '\n' for p in files), encoding='utf-8')
     return report

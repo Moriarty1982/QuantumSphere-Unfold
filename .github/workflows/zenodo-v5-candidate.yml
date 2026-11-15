@@ -12,7 +12,6 @@ on:
       deposition_id:
         description: Existing unpublished Zenodo draft
         required: true
-        default: '24152615'
       dry_run:
         type: boolean
         default: true
@@ -78,9 +77,10 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          args=(--metadata release/zenodo/metadata_v5_0_0.json --files 'build/v5-upload/*'
+          TAG=$(python -c "import json;print('v'+json.load(open('qam/editions/v5_release.json'))['version'].replace('.','_'))")
+          args=(--metadata "release/zenodo/metadata_${TAG}.json" --files 'build/v5-upload/*'
                 --environment production --deposition-id "$DEPOSITION_ID" --replace-files
-                --default-preview Quantum_Sphaera_Companion_v5_0_0_full.pdf)
+                --default-preview "Quantum_Sphaera_Companion_${TAG}_full.pdf")
           if [[ "$DRY_RUN" == true ]]; then args+=(--dry-run); fi
           if [[ "$PUBLISH" == true ]]; then
             test "$CONFIRM_PUBLISH" = true
@@ -101,8 +101,10 @@ jobs:
           identifier = os.environ['DEPOSITION_ID']
           dep = request_json('GET', f'{ZENODO_API}/deposit/depositions/{identifier}', token)
           assert not dep.get('submitted'), 'Expected an unpublished draft'
-          assert reserved_doi(dep) == '10.5281/zenodo.24152615', 'Wrong reserved DOI'
-          assert dep['metadata']['version'] == 'v5.0.0', 'Wrong metadata version'
+          rel = json.load(open('qam/editions/v5_release.json'))
+          tag = 'v' + rel['version'].replace('.', '_')
+          assert reserved_doi(dep) == rel['version_doi'], 'Wrong reserved DOI'
+          assert dep['metadata']['version'] == 'v' + rel['version'], 'Wrong metadata version'
           expected = {p.name: hashlib.md5(p.read_bytes()).hexdigest()
                       for p in Path('build/v5-upload').iterdir() if p.is_file()}
           actual = {f['filename']: f['checksum'].removeprefix('md5:') for f in dep['files']}
@@ -112,7 +114,7 @@ jobs:
           with urllib.request.urlopen(request, timeout=60) as response:
               record = json.load(response)
           preview = record.get('files', {}).get('default_preview')
-          assert preview == 'Quantum_Sphaera_Companion_v5_0_0_full.pdf', 'Wrong or unset preview'
+          assert preview == 'Quantum_Sphaera_Companion_' + tag + '_full.pdf', 'Wrong or unset preview'
           report = {'deposition_id': identifier, 'published': False, 'files_verified': len(expected),
                     'checksums': actual, 'default_preview': preview,
                     'draft_url': record.get('links', {}).get('self_html')}

@@ -127,7 +127,7 @@ def build(output):
                            'incomplete_argument_review': manifest['incomplete_argument_review'],
                            'assembly_sha256': digest(output / 'editions' / name / 'assembly.json')})
             if report['pdf_present']:
-                filename = 'Quantum_Sphaera_Companion_v5_0_0_' + name + '.pdf'
+                filename = 'Quantum_Sphaera_Companion_v' + release['version'].replace('.', '_') + '_' + name + '.pdf'
                 shutil.copyfile(pdf, output / filename)
                 report.update({'package_pdf': filename, 'pdf_sha256': digest(output / filename)})
             result['documents'][name] = report
