@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 15.11.2026: C5-Kandidat: Zeit gegen Kollar-Stufe geprüft (fallen nur bei reiner Helizität zusammen). Kein Abschluss.
+
 - 15.11.2026: C5-Kandidat: Lücke „augenblicklich oder Zustandsgröße“ innerhalb der Lesart von r10 geklärt. Kein Abschluss.
 
 - 15.11.2026: Forschungsstand und Offene-Probleme um den C5-Kandidaten Nullaugenblick ergänzt. Kein Abschluss.

@@ -130,6 +130,8 @@
   Photonpunkt, Score ½, Lorentz-invariant, periodisch). Erfüllt (β)–(δ) von r88, (α) nur unter „Obstruktion = augenblickliches s“.
   Nachtrag (PR #143): Lesart B ist augenblicklich (r05.2(a)), r10s Obstruktion = Boden |s| des augenblicklichen
   Feldes → (α) innerhalb der r10-Lesart erfüllt. Offen: periodische Null, Zuordnung zu Kollar-Stufen, nicht generische Felder.
+  Nachtrag (Zweig `research/c5-stages`): Zeit = Kollar-Stufe nur bei reiner Helizität, dort kein Nullaugenblick; Felder mit
+  Nullaugenblick tragen beide Helizitäten → keine Folge von Kollar-Stufen (passt zu (β), Zählung als Stufe offen).
   Keine Entladung; C5 offen.
 
 ## Nächster Schritt (Autorentscheidung)

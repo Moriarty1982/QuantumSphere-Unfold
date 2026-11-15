@@ -11,8 +11,12 @@ Augenblick ist Lorentz-invariant und wiederholt sich jede halbe Periode.
 - **Lesart der Obstruktion (Nachtrag):** Lesart B betrachtet reelle Felder in einem Punkt (r05.2(a)), und r10 begründet die
   Obstruktion mit dem Boden |s| dieses augenblicklichen Feldes. Innerhalb dieser Lesart ist (α) damit erfüllt; die Lesart
   selbst bleibt gesetzt.
-- **Keine Entladung:** offen sind die Bedeutung einer periodischen Null, die Zuordnung zu Kollar-Stufen und warum gerade
-  solche Felder vorliegen. C5 bleibt offen.
+- **Zeit und Kollar-Stufe (Nachtrag):** Zeitentwicklung und Dualitätsdrehung (die Kollar-Stufe) fallen nur bei reiner
+  Helizität zusammen, und gerade dort gibt es keinen Nullaugenblick (|s(t)| konstant). Felder mit Nullaugenblick tragen beide
+  Helizitäten; ihre Zeitentwicklung ist keine Folge von Kollar-Stufen. Das ist die Unabhängigkeit, die (β) verlangt, lässt aber
+  offen, wie ein Zeitpunkt als endliche Stufe zu zählen wäre.
+- **Keine Entladung:** offen sind die Bedeutung einer periodischen Null, die Zählung als Stufe und warum gerade solche Felder
+  vorliegen. C5 bleibt offen.
 
 [Erkundung](../notes/research/c5_null_instant_2026_11_15/README.md).
 

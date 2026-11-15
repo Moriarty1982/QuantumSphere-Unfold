@@ -72,3 +72,22 @@ Auftrag des Autors: „weiter“. **Lesart, aus dem Quelltext, nicht gerechnet.*
 - **Was das nicht ändert:** Der Inhalt fällt im Nullaugenblick nicht auf 0; ein Boost könnte ihn dort nur im Grenzwert
   leeren (r10.2(c)). Offen bleiben die Lücken 2 bis 4: periodische statt bleibende Null, keine Zuordnung zu Kollar-Stufen,
   nicht generische Felder. Keine C5-Entladung; die Aussage C5 = 0 wird nicht gemacht.
+
+## Nachtrag 15.11.2026: Lücke 3 – Zeitpunkte und Kollar-Stufen
+Auftrag des Autors: „weiter“. **Erkundung, nicht blind** (analytisch absehbar). Skript `time_vs_stage.py`, Ausgabe
+`run/time_vs_stage_stdout.txt`.
+
+Eine Kollar-Stufe ist nach r10.1 und r27 eine Dualitätsdrehung (um π/6) mit anschließender Kompensation. Die Dualität dreht die
+beiden Helizitätsanteile gegenläufig (F₊ ↦ e^{−iα}F₊, F₋ ↦ e^{iα}F₋), die Zeitverschiebung gleichläufig.
+
+1. **Zeit und Dualität fallen nur bei reiner Helizität zusammen.** Ist F₋ = 0, so ist z(t) = e^{−iωt} z(0): Die Zeitentwicklung
+   ist dann genau eine Dualitätsdrehung, und Zeitpunkte ließen sich als Stufen zählen.
+2. **Gerade diese Felder haben keinen Nullaugenblick.** Bei reiner Helizität ist |s(t)| konstant (im Beispiel 2,575); s(t) wird
+   nie null, außer das Feld ist von Anfang an lichtartig.
+3. **Felder mit Nullaugenblick tragen beide Helizitäten** (im Beispiel |F₊| = 1,09, |F₋| = 2,00), und ihre Zeitentwicklung ist
+   keine Dualitätsdrehung: Gegen die jeweils beste Drehung bleibt ein relativer Rest von im Median 0,49.
+
+**Folgerung:** Lücke 3 lässt sich nicht schließen, indem man Zeit mit Kollar-Stufen gleichsetzt. Das ist keine Schwäche des
+Kandidaten, sondern genau die Unabhängigkeit, die (β) verlangt: Der Nullaugenblick entsteht nur, wo die Zeitentwicklung aus der
+Kollar-Dynamik herausfällt. Damit bleibt aber auch offen, wie ein Zeitpunkt als „endliche Stufe N“ im Sinn von r86 zu zählen
+wäre. Keine Entladung; die Aussage C5 = 0 wird nicht gemacht.
