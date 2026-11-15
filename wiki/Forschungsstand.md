@@ -1,5 +1,18 @@
 # Forschungsstand
 
+### OP3: Das Spin-1-Dreieck (15.11.2026)
+
+Erkundung (nicht blind). Drei kohärente Spin-1-Zustände mit Überlappung ½ (Seitenwinkel 65,53°, cos = √2 − 1) tragen in
+*einer* su(2) zugleich Koide 2/3, Rang 3 (drei positive Massen) und einen Zyklus der Ordnung 3. Das hebt das Hindernis
+„Spin ½ gegen Spin 1“ auf. Das Dreieck ist ohne Kern schon gebogen: Phase 3·arccos(1 − 1/√2) − π = 0,6790; bis zu den
+Leptonen fehlen 0,0124.
+- **Rückwärtssuche:** Für die Bezugsrichtung (38,68° zur Zyklusachse) gibt es unter 143 vorab festgelegten nativen
+  Kandidaten keinen Treffer.
+- **Warum:** Die Richtung folgt allein aus der Überlappung ½. Gleichwertig: Koide verlangt drei Zustände genau auf
+  halbem Fubini–Study-Weg zwischen gleich und orthogonal. Die Frage führt also auf die Herkunft der Überlappung ½ zurück.
+
+[Erkundung](../notes/research/op3_spin1_triangle_2026_11_15/README.md).
+
 ### OP3/OP1: Der Kern als Schatten eines Horizonts (15.11.2026)
 
 Idee des Autors, als Erkundung festgehalten (nicht blind). Der flussfreie Kern auf der Generationskugel wird als

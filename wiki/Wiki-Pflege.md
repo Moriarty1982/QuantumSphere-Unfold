@@ -102,6 +102,9 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 15.11.2026: Forschungsstand um das Spin-1-Dreieck ergänzt (Koide und Rang 3 in einer su(2); Bezugsrichtung nicht nativ,
+  folgt aus der Überlappung ½). Kein OP-Abschluss.
+
 - 15.11.2026: Forschungsstand um den Kern als Schatten eines Horizonts ergänzt (Anker rem:hc-shadow-vs-core,
   Größenproben, Spin-1-Dreieck). Kein OP-Abschluss.
 

@@ -1,0 +1,15 @@
+A1 Ueberlappung: 1/2 | K = (1+2*1/2)/3 = 2/3
+A2 cos^2(psi) = -1/3 + 2*sqrt(2)/3 = 0.60947570824873 -> psi = 38.6763 Grad
+A3 Phase = 3*arccos(1 - 1/sqrt2) - pi: True = 0.6790422428312762
+A4 det G = 0.05025253169416733 > 0 (Rang 3)
+
+B Ziel psi = 38.6763 Grad; 143 Kandidaten; Zufallserwartung bei +-0,05 Grad: 0.159
+     38.1972 Grad  (Abstand -0.4791)  2/3 rad
+     39.2315 Grad  (Abstand +0.5552)  Gitterrichtung (-2, -1, 0) zur Diagonale
+     39.2315 Grad  (Abstand +0.5552)  Gitterrichtung (-2, 0, -1) zur Diagonale
+     39.2315 Grad  (Abstand +0.5552)  Gitterrichtung (-1, -2, 0) zur Diagonale
+     39.2315 Grad  (Abstand +0.5552)  Gitterrichtung (-1, 0, -2) zur Diagonale
+     39.2315 Grad  (Abstand +0.5552)  Gitterrichtung (0, -2, -1) zur Diagonale
+     39.2315 Grad  (Abstand +0.5552)  Gitterrichtung (0, -1, -2) zur Diagonale
+     39.2315 Grad  (Abstand +0.5552)  Gitterrichtung (0, 1, 2) zur Diagonale
+Treffer innerhalb 0,05 Grad: keiner
