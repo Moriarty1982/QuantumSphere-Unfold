@@ -132,3 +132,26 @@ Auftrag des Autors: „Ja, prüfen“. **Erkundung, nicht blind.** Skript `frame
 - **Vorbehalt:** In der Gram-Lesart sind die Massenwurzeln die Eigenwerte der Gram-Matrix; die drei Zustände sind
   Auslesezustände, nicht die Masseneigenzustände.
 - Unverändert offen: Biegung (γ_M, OP1), Bezug zu geladenen Leptonen.
+
+## Nachtrag 15.11.2026: Der Hurwitz-Zyklus auf N liefert den Dreierzyklus nicht
+Auftrag des Autors: „weiter“. **Erkundung, nicht blind** (analytisch vorher absehbar). Skript `hurwitz_cycle_check.py`,
+Ausgabe `run/hurwitz_cycle_check_stdout.txt`.
+
+Gesucht ist eine Struktur, die die drei Feldachsen (Re s, Im s, Helizität) und damit die drei Frame-Abbildungen zyklisch
+vertauscht. Feldabbildungen tun es nicht (Nachtrag davor). Kandidat war der Zyklus der Hurwitz-Einheiten auf dem neutralen
+Qubit N (v4.10.0-r13.2, unter CT-003), der dort drei Pauli-Basen vertauscht.
+
+1. **R ist auf N ein Skalar** (R|_N = i·1), wie auf C⊗O. R zeichnet auf N keine Achse aus.
+2. **T bildet N nicht in sich ab:** conj(N) steht senkrecht auf N (Anteil 0), es ist der ladungskonjugierte Raum N̄. T und
+   J_B tauschen N und N̄.
+3. Auf χ ist R dagegen eine echte Drehung, und T, J_B sind lineare Pauli-Drehungen. Die Frame-Gruppe wirkt auf N und auf χ
+   verschieden. **Eine mit R, T, J_B verträgliche Identifikation von N mit χ gibt es nicht.** Der Hurwitz-Zyklus vertauscht
+   Paulis der Rechtswirkung, also der Familien-su(2) von r13.4, nicht die Frame-Abbildungen.
+
+Dazu eine Bemerkung ohne Rechnung: Auf der komplexifizierten Indexebene (E, B) vertauscht das Clifford-Element der
+Ordnung 3 die drei Operatoren T ~ σ_z, J_B ~ σ_x und R ~ σ_y zyklisch durch Konjugation. Als Feldabbildung ist es aber nicht
+diagonal und daher auf χ nicht wohldefiniert (Nachtrag davor, (3)). Der Zyklus existiert also auf der Ebene der Operatoren,
+steigt aber nicht auf die invariante Kugel ab.
+
+**Stand:** Für „je Frame-Abbildung ein Auslesezustand“ ist im Bestand keine Begründung gefunden; das Prinzip bleibt gesetzt.
+Zurückgestellte Ideen geprüft: kein Auslöser von I1–I4 trifft auf diese Lücke zu.

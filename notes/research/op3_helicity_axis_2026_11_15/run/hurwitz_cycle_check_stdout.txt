@@ -1,0 +1,4 @@
+(1) R auf N = i * 1: True -> R zeichnet auf N keine Achse aus
+(2) Anteil von conj(N) in N: 0.000 -> T (und J_B) bilden N nicht in sich ab
+(3) Es gibt keine mit R, T, J_B vertraegliche Identifikation von N mit chi; der Hurwitz-Zyklus auf N vertauscht
+    Paulis der Rechtswirkung (Familien-su(2), r13.4), nicht die Frame-Abbildungen.

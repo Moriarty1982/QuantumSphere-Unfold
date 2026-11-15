@@ -33,6 +33,9 @@ Erkundung (nicht blind). Das Feld-Dublett (E, B) hat nach r04 und r05.2 drei Sto
   Helizitätsvorzeichen. R, T, J_B erhalten je genau eines davon (Kleinsche Vierergruppe), ihre Eigenzustände sind die
   Pole. Verlangt man je Frame-Abbildung einen Auslesezustand als Eigenzustand, folgt die Überlappung ½ (bedingt).
   Keine lineare Feldabbildung vertauscht die Achsen zyklisch; ein Dreierzyklus müsste aus anderer Struktur kommen.
+- **Hurwitz-Kandidat (Nachtrag):** Der Zyklus der Hurwitz-Einheiten auf N (r13.2) liefert ihn nicht. Auf N ist R skalar, und T
+  bildet N auf den ladungskonjugierten Raum ab; die Frame-Gruppe wirkt auf N anders als auf χ. Das Prinzip „je
+  Frame-Abbildung ein Auslesezustand“ bleibt ohne Begründung im Bestand.
 
 [Erkundung](../notes/research/op3_helicity_axis_2026_11_15/README.md).
 
