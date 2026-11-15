@@ -113,6 +113,10 @@
   Nachtrag (PR #138, r17.6): R² = −1 gibt Kramers, nicht Pauli; Frame-Abbildungen sehen die Statistik
   nicht. (S2) ist reine Setzung; Begründung über R² zurückgenommen.
 
+- **Suche nach blindem Test (15.11., `notes/research/blind_test_search_2026_11_15/`, Zweig `research/blind-test-search`):**
+  kein Test gefunden. Neutrino-Kandidaten „Majorana: p₊ = p₋“ (R = 0) und „p₋ = 0“ (R = 0,0052) durch Daten ausgeschlossen;
+  δ_CP, Majorana/Dirac, Strang-Statistik ohne Konstruktion. Daten 15.11.: NuFIT weiter 6.0, PDG 2026 ohne neues m_τ.
+
 ## Nächster Schritt (Autorentscheidung)
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,
   `Erkundung_Zaehlregel_Prinzip.md`) und Suchrichtung prüfen. Zu beachten: Eine Kramers-Regel (nur halbzahlige Spins,

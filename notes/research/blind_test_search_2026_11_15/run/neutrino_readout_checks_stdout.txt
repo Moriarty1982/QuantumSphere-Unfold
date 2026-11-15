@@ -1,0 +1,4 @@
+R_obs = 0.0298
+(1) positive Wurzeln: K_max normal = 0.5853 (bei m_1 = 0.0000 eV), K_max invertiert = 0.5000; K = 2/3 nicht erreichbar
+(2) Majorana p+ = p- (delta = 0): sqrt(m) ~ [0.2929 0.2929 2.4142], R = 0.0000 gegen 0.0298
+(3) eine Helizitaet p- = 0 (delta = pi/12): sqrt(m) ~ [0.    0.634 2.366], R = 0.0052 gegen 0.0298

@@ -6,6 +6,8 @@
 
 **Nachtrag 15.11.2026 (v4.10.0-r16):** Kein neuer Test. Statusvermerke zu Helizitätsachse, invariantem Dublett und Frame-Vorzeichen sowie k220 (nicht blind); keine Vorhersage ist berührt.
 
+**Nachtrag 15.11.2026 (Suche):** Eine Suche nach einem blinden Test aus r15–r17 fand keinen; zwei Neutrino-Kandidaten sind durch vorhandene Daten ausgeschlossen (R = 0 bzw. 0,0052 gegen 0,0298). H105 bleibt frei.
+
 **Nachtrag 15.11.2026 (v4.10.0-r17):** Kein neuer Test. Statusvermerke zu Uhr-Funktional und Zählregel (nicht blind); die Zählgleichung und damit H15, H46, H96 sind nicht berührt.
 
 **Stand: 7. November 2026.** Die Runden v4.10.0-r06 (Literaturbezug Dorau–Much) und r07 (die Kette im Tachyon-Frame) enthalten keinen Test und keine neue Vorhersage; ein geplanter Test zu r07 wurde nicht vergeben, weil das Ergebnis analytisch feststand. Seit v4.8.0 gilt eine feste Regel: Eine neue Vorhersage oder ein Test wird **vor** der Rechnung als Vorab-Notiz festgeschrieben (Hypothese, Daten, Entscheidungskriterium) und committet. Erst dann wird gerechnet. So lässt sich später prüfen, dass nichts nachträglich angepasst wurde. Diese Seite listet alle Tests mit ihrem Ergebnis. [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie) · [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt)
