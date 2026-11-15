@@ -1,0 +1,4 @@
+(1) Transitivitaet auf |s| = r: max Residuum 1.2e-14, max |L^T L - 1| 5.7e-14, max |det L - 1| 2.8e-14
+    Negativkontrolle |s2| = 4|s1|: Residuum ohne Skalierung 0.84
+(2) |s| unter G erhalten: max Abweichung 1.9e-14
+(3) Kompensatorbild: s' = 0.000+4.262j (nicht null, r11.2(f));  lambda z, lambda=1e-6: |s| = 5.5e-12 -> 0 nur im Grenzwert
