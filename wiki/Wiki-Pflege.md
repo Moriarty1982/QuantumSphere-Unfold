@@ -102,6 +102,9 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 15.11.2026: Forschungsstand und Offene-Probleme um die OP4-Erkundung zum Zeitzyklus ergänzt; H2-Zeile in
+  Vorhersagen-und-Tests um die globale Analyse mit JUNO-Daten (Δχ² = 4,6) ergänzt. Kein OP-Abschluss.
+
 - 15.11.2026: H2 nachgerechnet; in Vorhersagen-und-Tests die unbelegte Angabe „normale Ordnung von JUNO gestützt“
   berichtigt. Kein OP-Abschluss.
 

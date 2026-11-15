@@ -71,3 +71,7 @@ Auftrag des Autors: „rechne h2 nochmal nach“. Vorab-Notiz `../v4_8_0_r03_r12
 **Nebenbei berichtigt:** In der Antwort an den Autor zur Datenlage hieß es, der neueste NuFIT sei 6.0. Das Repo hat seit dem
 13.11. die Primärtabelle von **NuFIT 6.1** (Ergebnis H99); H100 wartet auf die Version danach. Der Befund „keine neue
 Version nach 6.1“ bleibt.
+
+**Nachtrag zur Berichtigung (15.11.2026):** Die Berichtigung unter Punkt 5 war zu knapp. JUNO allein bestimmt die Ordnung
+noch nicht; eine globale Analyse mit den öffentlichen JUNO-Daten (arXiv:2601.09791) bevorzugt aber die normale Ordnung mit
+Δχ² = 4,6, nach den Autoren „taken at face value“. Die Wiki-Zeile ist entsprechend ergänzt.

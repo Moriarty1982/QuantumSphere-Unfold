@@ -1,5 +1,19 @@
 # Forschungsstand
 
+### OP4: Der Zeitzyklus als Dreierzyklus der Dirac-Auslesung (15.11.2026)
+
+Erkundung (nicht blind). Der Slotzyklus τ, unter dem die Dirac-Kopplungen nach r55 invariant sind, ist gleichwertig zur
+Verschiebung um ein Drittel der Periode von s(t) (r16.9). Dann sind die Slotzustände die drei gleich gewichteten Auslesungen
+zu den Zeiten 0, T/3, 2T/3 und die Fourier-Moden die Masseneigenzustände der geladenen Leptonen. TM2 heißt in diesem Bild:
+Ein Neutrino-Masseneigenzustand ist die gleich gewichtete Auslesung zu einem Zeitpunkt.
+- **Grenze:** Die ℤ₂ der Neutrinos hat keine Frame-Herkunft. Die Frame-Abbildung T fixiert jeden Slotzustand; die
+  Transposition ρ gibt θ₁₃ = 0 (ausgeschlossen, vgl. H6). TM2 bleibt 3,6σ über JUNO; eine Zahl folgt nicht.
+- **H2 nachgerechnet (15.11.):** Σm_ν = 0,0592 eV, stabil mit JUNO, SNO+ und NuFIT 6.1; verträglich. Zur Ordnung: JUNO allein
+  bestimmt sie noch nicht; eine globale Analyse mit JUNO-Daten bevorzugt die normale Ordnung schwach (Δχ² = 4,6).
+
+[Erkundung](../notes/research/op4_time_cycle_mixing_2026_11_15/README.md),
+[Nachrechnung H2](../notes/research/blind_test_search_2026_11_15/README.md).
+
 ### Suche nach einem blinden Test aus r15–r17 (15.11.2026)
 
 Erkundung ohne Kriterium. Ergebnis: **kein blinder Test gefunden.** Die neuen Strukturen formulieren bekannte Größen um oder
