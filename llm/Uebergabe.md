@@ -6,7 +6,7 @@
   Record https://zenodo.org/records/24237112; Vorgänger v5.0.0 (10.5281/zenodo.24152615). Vollausgabe 1412 Seiten,
   Physik-Paper 29 Seiten. Paketquellstand dfdb413, Tag `v5.1.0`, GitHub-Release gesetzt. Nach der Veröffentlichung
   geprüft: acht Dateien prüfsummengleich mit dem Paket, Vorschau = Vollausgabe. Release-Notiz `release/v5.1.0/README.md`.
-- **GitHub:** `main` nach PR #135 (e0be304, Runde r16 mit r16.1–r16.9), davor #134 (f32ae5c, k220 „ein Objekt“ übernommen), davor #133 (37ac7da, OP3: C⊗O, Helizitätsachse, invariante Kugel, Feldvorzeichen), davor #132
+- **GitHub:** `main` nach PR #136 (45f518d, OP3 Uhr-Abgleich und Treue-Lesart, OP1 Irreduzibilität), davor #135 (e0be304, Runde r16 mit r16.1–r16.9), davor #134 (f32ae5c, k220 „ein Objekt“ übernommen), davor #133 (37ac7da, OP3: C⊗O, Helizitätsachse, invariante Kugel, Feldvorzeichen), davor #132
   (b6ed1a5, Runde r15, Dauerauftrag Issues), #130 (eeb6083,
   Berichtigung zu CT-004), #129 (c9bfb19, OP1 mit I1, CT-004) und #128
   (14feb02, Release v5.1.0). **Keine offenen PRs.** Gemergt am 14./15.11.: #124–#128
@@ -99,12 +99,12 @@
 - **Zeitzyklus (15.11., Rückwärtssuche, `notes/research/op3_time_cycle_2026_11_15/`):** Verschiebung um ⅓ der Periode
   von s(t) = nativer Dreierzyklus auf S, gibt Brannen-Form. Nötige Gewichte p₀ = 0,793, p₊ = 0,193, p₋ = 0,013 (Kontrolle
   1 : 206,77 : 3477,5); kein nativer Wert (24 Kandidaten, 0,5 %, Erwartung 0,44); Rang 2, weit vom Oktanten r16.7.
-  Nachtrag (Zweig `research/op3-clock-check`): Koide = Kohärenzfunktional der Photon-Uhr-Sonde (r90), aber keine
+  Nachtrag (PR #136): Koide = Kohärenzfunktional der Photon-Uhr-Sonde (r90), aber keine
   Fensterschwelle bei ½ und Drift 120° ≫ 26,57°; Uhr legt Σp² = 2/3 nicht fest. Noch in keiner Runde.
   Dazu Lesart: Treue ½ als maximale Unsicherheit „dasselbe Objekt?“ (ein Bit); kein Test. OP3 ruht; weiter mit OP1.
 
-- **OP1, Irreduzibilität (15.11., Erkundung, `notes/research/op1_frame_irreducibility_2026_11_15/`, Zweig
-  `research/op3-clock-check`):** Frame-Abbildungen als exp(−iπJ_k) auf Spin j wirken nur bei j = ½ irreduzibel; T = irreduzibel,
+- **OP1, Irreduzibilität (15.11., Erkundung, `notes/research/op1_frame_irreducibility_2026_11_15/`,
+  PR #136):** Frame-Abbildungen als exp(−iπJ_k) auf Spin j wirken nur bei j = ½ irreduzibel; T = irreduzibel,
   M = invariantes Extremdublett gibt das H98-Paar (γ_L = 1,864700). Ersetzt P2; Annahme (A) Feld-Dublett → Punktierung und
   Asymmetrie M/T gesetzt; kein Test. Mögliche Alternative zu Guard 1 von CT-004 (Register unverändert).
 
