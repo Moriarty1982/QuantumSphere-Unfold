@@ -135,3 +135,39 @@ Ereignis-Lesart am 16.11.2026 als Arbeitsannahme gesetzt.** Sie ist gesetzt, nic
 - Dass Skala und Dualitätsphase auf der untersten Ebene herausgeteilt werden, ist eine Setzung.
 - Die Zuordnung der Hauptkorpus-Stellen ist eine Lesart an vier Stellen, keine Durchsicht des ganzen Hauptkorpus.
 - Keine C5-Entladung; die Aussage C5 = 0 wird nicht gemacht.
+
+## Nachtrag 16.11.2026: (B1) rückwärts – Obstruktion und Score in der ursprünglichen Definition
+Auftrag des Autors: „Erst (B1) angehen“. AGENTS verlangt nach zwei Varianten mit derselben offenen Voraussetzung (r20, r21) eine
+Rückwärtssuche. **Erkundung, nicht blind.** Skript `b1_backward.py`, Ausgabe `run/b1_backward_stdout.txt`.
+
+### Ziel und notwendige Bedingung
+Gesucht ist, was „die C5-Obstruktion“ im Bestand ist und welche Bedingung jede Größe erfüllen muss, die man so liest.
+- **v4.7.0-r01 (W₅), r02:** C5 ist die endliche Witness-Fit-Schnittstelle: Prüfe, ob ein endlicher Zeuge das gemischte Residuum
+  senkt, ohne die Exaktheit aufzugeben.
+- **v4.7.0-r04, `def:v470-r04-c5-lowering-score`:** Φ₅(W) = ‖ρ₅,bd‖² + ‖ρ₅,ext‖² + ‖ρ₅,mix‖². **Der Score ist das Normquadrat des
+  Residuums ρ₅.** Also ist Φ₅ = 0 genau dann, wenn ρ₅ = 0.
+- **v4.7.0-r88:** (α) verlangt das Verschwinden der Obstruktion selbst, nicht die Kleinheit des Scores, und begründet das mit dem
+  Zugang: Wer über den Score geht, macht eine Aussage über den Grenzwert; ein Zeuge der Form (iii) muss die Obstruktion auf
+  anderem Weg erreichen. (α) unterscheidet also **Zugänge** (exakt gegen asymptotisch), nicht zwei verschiedene Größen.
+- **Notwendige Bedingung (N1):** Jede Größe O, die als C5-Obstruktion gelesen wird, muss O = 0 ⇔ Φ₅ = 0 erfüllen.
+
+### Kandidaten
+1. **Boden |s| auf der Kollar-Bahn:** Nach jeder Kompensation liegt der Zustand auf der Kompensatorachse (φ = 1). Dort sind Boden,
+   Score und Inhalt gleich, nämlich (3/4)ⁿ für n = 1 … 5. Auf der Bahn der Rekursion ist die Lesart von r10 also verträglich, aber
+   leer: Boden und Score lassen sich dort nicht unterscheiden.
+2. **Boden am Nullaugenblick:** Boden 0, Score ½ des Inhalts. **(N1) ist verletzt.** Eine Größe, die verschwindet, während der Score
+   positiv bleibt, ist nach der Definition von r04 nicht die C5-Obstruktion.
+3. **Score null:** Er verlangt einen leeren Kompensatorport, also E = −B (r21.4). Dort ist der Boden maximal. Unter (N1) ist das die
+   Übergangsfrage, also Verlagerung, und die ist durch (δ) gesperrt.
+
+### Folgerung
+- **Berichtigung zu r20.2:** r20.2 hielt (α) „innerhalb der Lesart von r10“ für erfüllt. r10.2(b) nennt den Boden aber ein Hindernis
+  für den **Weg** über Boosts, nicht das Residuum ρ₅. r20.2 hat beides gleichgesetzt. Gegen die Definition von r04 ist (α) am
+  Nullaugenblick **nicht** erfüllt: Dort verschwindet keine Größe, die mit dem Score zusammen verschwindet.
+- **Brückenfrage C5_br:** Unter der ursprünglichen Definition ist sie **negativ beantwortet**. Boden null ist keine Entladung, weil
+  der Score dort ½ ist. Eine positive Antwort bräuchte eine neue Definition, in der Obstruktion und Score getrennt sind. Das wäre
+  nicht mehr C5, sondern die frame-freie Photonpunkt-Frage C5_P, die r21.5 für Felder schon positiv beantwortet.
+- **Der Nullaugenblick bleibt ein Ergebnis über Felder** (r20.1, r21.5, r21.8, r21.11), ist aber unter der ursprünglichen Definition
+  **kein C5-Zeuge**.
+- **C5 bleibt offen**, und zwar in der Übergangsfrage, die innerhalb der Lesart von r10 nur durch Verlagerung erreichbar ist (δ).
+  Form (iii) hat damit keinen Kandidaten mehr.

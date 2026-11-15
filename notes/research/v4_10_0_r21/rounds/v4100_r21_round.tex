@@ -11,7 +11,8 @@ Layer v4.10.0-r20.4 found that C5 in its old form asks, in the measure of one fr
 restatement to the author.  The author has decided for it (2026-11-16).  This layer restates C5 in the way v4.9.0-r61 treated OP4: it
 types the quantities by frame, splits the old entry \(C5_{\rm zero}\) of v4.7.0-r86 into three questions, and records the status of
 each.  It also corrects one sentence of r20.4, relates the collapse state of the main body to the two classes of fields, and
-examines where null instants are present.  Exploration, not blind: every computation is fixed analytically beforehand.
+examines where null instants are present; a backward check of the reading of the obstruction
+corrects r20.2.  Exploration, not blind: every computation is fixed analytically beforehand.
 \textbf{The forbidden assertion \(C5=0\) is not made, and C5 stays open.}  The notes are
 \texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r21/} and
 \texttt{notes/\allowbreak research/\allowbreak c5\_restatement\_2026\_11\_16/}.  Earlier layers are not rewritten.
@@ -173,9 +174,32 @@ remains open is why a witness should sit at such a point.  \textbf{Prior literat
 physics/0305012, both 2003).  The null instant of r20 is a point on such a vortex; only its role as a C5 candidate is specific to this
 work.  Free monochromatic fields in Reading~B only.
 
+\paragraph{Theoremlet v4.10.0-r21.12 (backward check of (B1); correction to v4.10.0-r20.2).}
+The C5 obstruction is the residual of the finite witness fit (v4.7.0-r01, r02), and its score is
+\(\Phi_5(W)=\|\rho_{5,\rm bd}\|^2+\|\rho_{5,\rm ext}\|^2+\|\rho_{5,\rm mix}\|^2\) (Definition~\ref{def:v470-r04-c5-lowering-score}).  Hence any quantity
+read as the C5 obstruction must vanish exactly when the score does (N1).  Requirement (\(\alpha\)) of r88 separates two routes of
+access, exact against asymptotic, not two quantities.
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] On the collar orbit every compensated state lies on the compensator axis, \(\phi=1\), and floor, score and content coincide:
+\((3/4)^n\) for \(n=1,\dots,5\).  There the reading of v4.9.0-r10 is consistent and empty.
+\item[(b)] At the null instant of r20.1 the floor is \(0\) and the score is \(\tfrac12\) of the content.  (N1) fails.
+\item[(c)] The score vanishes only for an empty compensator port, \(E=-B\), where the floor is maximal (r21.4).
+\end{enumerate}
+Checked in \texttt{b1\_\allowbreak backward.py}.
+
+\paragraph{Correction.}
+r20.2 counted (\(\alpha\)) as met within the reading of r10.  r10.2(b) names the floor an obstacle to the route through boosts, not the
+residual \(\rho_5\); r20.2 identified the two.  Against Definition~\ref{def:v470-r04-c5-lowering-score}, (\(\alpha\)) is not met at the null instant.
+Consequently \(C5_{\rm br}\) is answered negatively under the original definition: a vanishing floor is no discharge, since the score is
+\(\tfrac12\) there.  A positive answer would need a new definition with obstruction and score apart; that is the photon-point question
+\(C5_P\) of r21.5, not C5.  The null instant remains a result about fields (r20.1, r21.5, r21.8, r21.11) and is no C5 witness under the
+original definition.  C5 stays open in the transfer question, which within the r10 reading is reached only by relocation
+(\(\delta\)); shape (iii) has no candidate left.  The working assumption r21.10 and the results of r21.11 are unaffected as statements
+about fields.
+
 \paragraph{What this does not give.}
 No C5 discharge.  The classification of \(C5_{\rm tr}\) holds within the reading of v4.9.0-r10 and for the transports of Reading~B.
-\(C5_P\) is answered for fields only.  \(C5_{\rm br}\) is open.
+\(C5_P\) is answered for fields only.  \(C5_{\rm br}\) is negative under the original definition (r21.12); C5 itself stays open.
 
 \subsection*{v4.10.0-r21 status in the three frames}
 \label{subsec:v4100-r21-frames}
@@ -208,12 +232,14 @@ C5 in the old form & mixes frames (r20.4); restated as \(C5_{\rm tr}\), \(C5_P\)
 \(C5_{\rm tr}\) (transfer, typed) & a relocation, not a vanishing, under the r10 reading; excluded inside the recursion (r21.4)\\
 \(C5_P\) (photon point, frame-free) & reached at finite time by free evolution on a codimension-one family; a statement about fields (r21.5)\\
 lasting zero of \(s(t)\) & only for \(s_+=s_-=w=0\), present from the start (r21.6)\\
-\(C5_{\rm br}\) (bridge) & open; depends on (B1), (B2), (B3); (B2) is the author's decision (r21.7)\\
+\(C5_{\rm br}\) (bridge) & depends on (B1), (B2), (B3) (r21.7); negative under the original definition (r21.12)\\
 equal shares and \(P\) & necessary, not sufficient; correction to r20.4 (r21.3(c))\\
 classes of non-zero fields & two under Lorentz group, duality and scale: null or not; representatives \(P\) and R (r21.8)\\
 collapse state \(\zminus=0\) of the main body & two roles: zero of the offset (R) and invariant object (\(P\)); reading, one tension recorded (r21.9)\\
 (B2) instant or duration & event reading set as working assumption by the author; not derived (r21.10)\\
 (B3) presence & null instants lie on surfaces in space for generic fields, everywhere with a linearly polarised partial wave; points of Riemann--Silberstein vortices; open: the choice of the point (r21.11)\\
+(B1) and \(C5_{\rm br}\) & the score is the squared norm of the obstruction (r04); the floor is no obstruction at the null instant; \(C5_{\rm br}\) negative under the original definition; correction to r20.2 (r21.12)\\
+shape (iii) (r88) & no candidate left (r21.12)\\
 \(C5_{\rm zero}\) & open; no discharge, no assertion \(C5=0\)\\
 \bottomrule
 \end{tabular}

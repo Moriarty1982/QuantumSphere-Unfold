@@ -18,9 +18,10 @@ bleibt offen.**
 | r21.9 | Kollapszustand z⁻ = 0 des Hauptkorpus heute: zwei Rollen, Nullpunkt des Versatzes (R) und invariantes Objekt (P); eine Spannung mit r24.3 vermerkt (Lesart) | ebenda (Nachtrag) |
 | r21.10 | Arbeitsannahme des Autors zu (B2): Ereignis-Lesart; gesetzt, nicht hergeleitet | ebenda (Nachtrag) |
 | r21.11 | (B3): Nullaugenblicke liegen in generischen Feldern auf Flächen im Raum, überall bei einer linear polarisierten Teilwelle; Punkte der Riemann–Silberstein-Wirbel (Literatur 2003); offen ist die Wahl des Punktes | `../c5_presence_2026_11_16/README.md`, `presence.py` |
+| r21.12 | (B1) rückwärts: Score = Normquadrat der Obstruktion (r04), beide verschwinden nur gemeinsam; am Nullaugenblick Boden 0, Score ½ → kein C5-Zeuge; C5_br unter der ursprünglichen Definition negativ; **Berichtigung zu r20.2**; Form (iii) ohne Kandidat | `../c5_restatement_2026_11_16/README.md` (Nachtrag B1), `b1_backward.py` |
 
 ## Prüfung
 - Guard-Linter (`python tools/qs.py guards sources/research/parts/v4100-post-release-layers.tex --start 2809`):
-  0 Kandidaten in den Zeilen 2809–3047.
+  0 Kandidaten in den Zeilen 2809–3073.
 - Kandidaten-Build (`python .github/scripts/qsc_latex_build.py --source-dir sources/research --output-dir <Pfad>`, MiKTeX):
-  1439 Seiten (mit Nachträgen r21.8–r21.11), 0 Fehler, 0 undefinierte Verweise, 0 Overfull; r21 im Inhaltsverzeichnis.
+  1439 Seiten (mit Nachträgen r21.8–r21.12), 0 Fehler, 0 undefinierte Verweise, 0 Overfull; r21 im Inhaltsverzeichnis.

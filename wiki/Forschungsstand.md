@@ -64,6 +64,21 @@ Nullaugenblicke an jedem Punkt. Dass eine solche Teilwelle vorliegt, ist damit n
 als Neutrino-Prinzip schon einmal an den Daten gescheitert (r18.1).
 [Erkundung (B3)](../notes/research/c5_presence_2026_11_16/README.md).
 
+**(B1) rückwärts und Berichtigung zu r20.2 (r21.12).** Was ist im Bestand „die C5-Obstruktion“? Nach v4.7.0-r01/r02 das Residuum
+des endlichen Witness-Fits, und nach r04 ist der Score $\Phi_5 = \lVert\rho_{5,\mathrm{bd}}\rVert^2 + \lVert\rho_{5,\mathrm{ext}}\rVert^2 +
+\lVert\rho_{5,\mathrm{mix}}\rVert^2$, das Normquadrat dieses Residuums. **Obstruktion und Score verschwinden also nur gemeinsam.**
+Die Anforderung (α) aus r88 unterscheidet zwei Zugänge (exakt gegen asymptotisch), nicht zwei Größen.
+- Auf der Kollar-Bahn liegen alle kompensierten Zustände auf der Kompensatorachse; Boden, Score und Inhalt sind dort gleich,
+  $(3/4)^n$. Die Lesart von r10 ist dort verträglich, aber leer.
+- Am Nullaugenblick ist der Boden 0, der Score ½ des Inhalts. Der Boden ist dort also nicht die C5-Obstruktion.
+- r10.2(b) nannte den Boden ein Hindernis für den Weg über Boosts; r20.2 hat ihn mit dem Residuum gleichgesetzt. Das ist
+  berichtigt: (α) ist am Nullaugenblick nicht erfüllt.
+
+**Folge:** Die Brückenfrage ist unter der ursprünglichen Definition **negativ beantwortet**. Der Nullaugenblick bleibt ein Ergebnis
+über Felder (Photonpunkt-Frage, zwei Klassen, Riemann–Silberstein-Wirbel), ist aber kein C5-Zeuge. **Form (iii) hat keinen
+Kandidaten mehr.** C5 bleibt offen, und zwar in der Übergangsfrage, die innerhalb der Lesart von r10 nur durch Verlagerung
+erreichbar ist.
+
 **Zwei Klassen (r21.8).** Anlass war die Frage des Autors, ob es auf der untersten Ebene nur „liegt im Nullzustand oder nicht“
 gibt. Die Erkundung k220 kannte die Bahnen von SO(3,ℂ) × Dualität auf z = E + iB: die Schalen |s| = r, den Nullkegel und {0}.
 Nimmt man die Skala z ↦ λz hinzu, bilden alle nicht lichtartigen Felder eine einzige Bahn, die lichtartigen eine zweite. Unter
@@ -114,7 +129,8 @@ Augenblick ist Lorentz-invariant und wiederholt sich jede halbe Periode.
   nicht die Zustandsgrößen s±, w.
 - **Lesart der Obstruktion (Nachtrag):** Lesart B betrachtet reelle Felder in einem Punkt (r05.2(a)), und r10 begründet die
   Obstruktion mit dem Boden |s| dieses augenblicklichen Feldes. Innerhalb dieser Lesart ist (α) damit erfüllt; die Lesart
-  selbst bleibt gesetzt.
+  selbst bleibt gesetzt. **Berichtigt in r21.12:** Der Score ist im ursprünglichen C5 das Normquadrat der Obstruktion; am
+  Nullaugenblick ist der Boden 0, der Score ½. (α) ist dort nicht erfüllt.
 - **Zeit und Kollar-Stufe (Nachtrag):** Zeitentwicklung und Dualitätsdrehung (die Kollar-Stufe) fallen nur bei reiner
   Helizität zusammen, und gerade dort gibt es keinen Nullaugenblick (|s(t)| konstant). Felder mit Nullaugenblick tragen beide
   Helizitäten; ihre Zeitentwicklung ist keine Folge von Kollar-Stufen. Das ist die Unabhängigkeit, die (β) verlangt, lässt aber
