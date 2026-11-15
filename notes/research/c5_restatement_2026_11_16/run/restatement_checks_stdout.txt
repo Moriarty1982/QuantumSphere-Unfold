@@ -1,0 +1,8 @@
+(1) 1000 Felder: |C5_M + C5_T - 1| <= 0.0e+00; R tauscht die Anteile (Abw. 0.0e+00); |s|/2u fest unter R, T, J_B (Abw. 0.0e+00)
+(2) E senkrecht B, |E| != |B|: C5_M = 0.500 = C5_T, aber |s|/2u = 0.724 != 0 (nicht P); reines E-Feld: C5_M = 0.500, |s|/2u = 1.000
+(3) E = -B (statisch): C5_M = 0.000, C5_T = 1.000, |s|/2u = 1.000 (Boden maximal)
+(4) Zeitmittel von |s(t)|^2 = (|s+|^2 + 4|w|^2 + |s-|^2)/16 (300 Felder, rel. Abw. 9.1e-16); bleibende Null <=> s+ = s- = w = 0
+    Beispielfeld r20.1: Zeitmittel 0.3050 > 0: Nullaugenblick, keine bleibende Null
+(5) ebene Welle, zirkular: |s+|, |s-|, |w| = 0.0e+00, 0.0e+00, 0.0e+00; max |s(t)| = 2.3e-16
+(5) ebene Welle, linear: |s+|, |s-|, |w| = 0.0e+00, 0.0e+00, 0.0e+00; max |s(t)| = 0.0e+00
+(6) (3/4)^n = 1/2 fuer ganzzahliges n: keine Loesung; reell n = 2.4094; (3/4)^2 = 0.5625, (3/4)^3 = 0.4219

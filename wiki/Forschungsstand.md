@@ -1,5 +1,114 @@
 # Forschungsstand
 
+### C5 frame-sauber neu gestellt (16.11.2026, Runde r21)
+
+Erkundung (nicht blind; alle Rechnungen stehen analytisch fest). Der Autor hat entschieden, C5 neu zu stellen (offene Frage aus
+r20.4). Die verbotene Aussage C5 = 0 wird nicht gemacht; **C5 bleibt offen.**
+
+**Größen.** Auf dem Dublett (E, B) mit $2u = E^2 + B^2$, $s = (E + iB)^2$ und $b_x = 2E\cdot B/2u$:
+
+| Größe | Definition | Frame |
+|---|---|---|
+| $`C5_M`$ | $`(1 + b_x)/2`$, Anteil im Kompensatorport | Materie-Frame |
+| $`C5_T`$ | $`(1 - b_x)/2`$, Anteil im Partnerport | Tachyon-Frame (liest nach r28 die getauschten Ports) |
+| Boden $`\phi`$ | $`\lvert s\rvert/2u`$ | frame-frei: fest unter R, T und J_B |
+
+Es gilt immer $C5_M + C5_T = 1$; in der Kollar-Rekursion sind die kumulierten Anteile $(3/4)^n$ und $1 - (3/4)^n$.
+
+**Drei Fragen statt einer.** Der alte Eintrag C5_zero („keine endliche Stufe N mit Score 0“, r86) zerfällt in:
+1. **Übergangsfrage (frame-typisiert):** Gibt es eine endliche Stufe mit $C5_M = 0$, also $C5_T = 1$?
+2. **Photonpunkt-Frage (frame-frei):** Erreicht ein nicht lichtartiger Zustand mit Inhalt ≠ 0 bei endlichem Parameter $\phi = 0$?
+3. **Brückenfrage:** Ist das Erreichen von $\phi = 0$ eine Entladung der Obstruktion im Sinn von r86 und r88?
+
+**Befunde.**
+- **Die Übergangsfrage ist eine Verlagerung (r21.4, innerhalb der Lesart von r10).** $C5_M = 0$ gilt genau für E = −B. Ein solches
+  Feld gibt es schon statisch; dort ist $C5_T = 1$ und der Boden maximal ($\phi = 1$). Wegen der festen Summe verschwindet in der
+  typisierten Frage nichts: Der Inhalt wechselt den Frame, und das fällt unter (δ) aus r88. In der selektiven Rekursion tritt
+  $C5_M = 0$ bei keiner endlichen Stufe ein (r86.2).
+- **Die Photonpunkt-Frage hat eine positive Antwort als Aussage über Felder (r21.5).** Boosts und die Drehungen von Lesart B lassen
+  |s| fest; der Fluss von r27 erreicht P nur im Grenzwert (außer bei α = π/4); die freie Zeitentwicklung erreicht $\phi = 0$ zu
+  endlicher Zeit für die Familie von Kodimension 1 aus r20.1. Das ist keine Aussage über C5.
+- **Bleibende Null (r21.6).** Das Zeitmittel von $|s(t)|^2$ ist $(|s_+|^2 + 4|w|^2 + |s_-|^2)/16$. Also ist s(t) = 0 für alle t
+  genau dann, wenn $s_+ = s_- = w = 0$, und die Beträge dieser Größen ändert die freie Zeitentwicklung nicht. Ein Feld, das
+  bleibend im Photonpunkt steht, stand dort von Anfang an (ebene Wellen). Die freie Zeitentwicklung führt in keine bleibende Null.
+- **Berichtigung zu r20.4 (r21.3(c)).** „Beide Anteile ½“ kennzeichnet den Photonpunkt nicht: Gleiche Anteile heißen E·B = 0 und
+  gelten auf der ganzen M–T-Achse der Scheibe, auch für ein reines E-Feld. Der Photonpunkt ist durch $\phi = 0$ gekennzeichnet;
+  gleiche Anteile sind notwendig, nicht hinreichend.
+
+**Wo die offene Frage jetzt sitzt (r21.7).** Allein in der Brückenfrage. Sie hängt an drei Punkten: (B1) der Lesart „Obstruktion =
+Boden des augenblicklichen Feldes“ (r10, r20.2), die eine Lesart bleibt; (B2) Augenblick oder Dauer; (B3) warum Felder der Familie
+von Kodimension 1 vorliegen sollten. Zu (B2): Genügt ein invarianter Augenblick (Ereignis-Lesart), dann ist der Nullaugenblick aus
+r20.1 ein Kandidat. Muss die Null bestehen bleiben (Dauer-Lesart), dann liefert die freie Zeitentwicklung keinen Zeugen, und der
+Kandidat aus r20 scheidet aus. **Der Autor hat die Ereignis-Lesart am 16.11.2026 als Arbeitsannahme gesetzt (r21.10);** sie ist
+gesetzt, nicht hergeleitet. (B1) bleibt offen.
+
+**Vorliegen der Felder, Punkt (B3) (r21.11).** Ein Nullaugenblick liegt in einem Punkt genau dann vor, wenn die Gleichung
+$\bar s_- x^2 + 2wx + s_+ = 0$ eine Wurzel auf dem Einheitskreis hat. Die Bedingung von Kodimension 1 aus r20.1 betrifft die
+Amplituden in einem Punkt; im Raum ist sie auf Flächen erfüllt.
+- **Eine ebene Welle:** $s(t) = 0$ immer, bei jeder Polarisation (bleibende Null, r21.6).
+- **Zwei ebene Wellen gleicher Frequenz:** $s(t) = 2\,z_1(t)\cdot z_2(t)$. Ist eine linear polarisiert, verschwindet sie zweimal je
+  Periode; das Feld ist dann die andere Welle, lichtartig und ≠ 0. **Nullaugenblick in jedem Punkt des Raums.** Sind beide
+  elliptisch, nur auf einer Fläche.
+- **Linear heißt gleiche Helizitätsgewichte (½, ½)**; das passt zu r20.3.
+- **Allgemeines monochromatisches Feld:** Die Punkte mit Nullaugenblick bilden Flächen im Raum (sechs Wellen auf einem Gitter
+  geprüft).
+
+„Nicht generisch“ war also eine Aussage über einen Punkt, nicht über ein Feld. Die alte Frage, warum solche Felder vorliegen
+sollten, entfällt; offen bleibt, warum ein Zeuge gerade an einem solchen Punkt sitzen sollte. **Literatur (nachträglich
+gefunden):** Die Nullstellen von F·F heißen Riemann–Silberstein-Wirbel (Kaiser 2003; Białynicki-Birula und Białynicka-Birula
+2003). Der Nullaugenblick ist ein Punkt auf einem bekannten Objekt; nur seine Rolle als C5-Kandidat ist projektspezifisch.
+**Nachtrag (Erkundung, noch nicht in der Runde):** Helizitätsneutral (lineare Polarisation, $b_y = 0$) ist die einzige
+Helizitätsstufe, die alle drei Frame-Abbildungen erhalten: R lässt $b_y$ fest, T und J_B kehren es um (r16.2(a)). Für eine ebene
+Welle ist die Neutralität zudem beobachterunabhängig. Eine Teilwelle, die kein Frame nach Helizität unterscheidet, erzeugt also
+Nullaugenblicke an jedem Punkt. Dass eine solche Teilwelle vorliegt, ist damit nicht begründet; „gleiche Helizitätsanteile“ ist
+als Neutrino-Prinzip schon einmal an den Daten gescheitert (r18.1).
+[Erkundung (B3)](../notes/research/c5_presence_2026_11_16/README.md).
+
+**(B1) rückwärts und Berichtigung zu r20.2 (r21.12).** Was ist im Bestand „die C5-Obstruktion“? Nach v4.7.0-r01/r02 das Residuum
+des endlichen Witness-Fits, und nach r04 ist der Score $\Phi_5 = \lVert\rho_{5,\mathrm{bd}}\rVert^2 + \lVert\rho_{5,\mathrm{ext}}\rVert^2 +
+\lVert\rho_{5,\mathrm{mix}}\rVert^2$, das Normquadrat dieses Residuums. **Obstruktion und Score verschwinden also nur gemeinsam.**
+Die Anforderung (α) aus r88 unterscheidet zwei Zugänge (exakt gegen asymptotisch), nicht zwei Größen.
+- Auf der Kollar-Bahn liegen alle kompensierten Zustände auf der Kompensatorachse; Boden, Score und Inhalt sind dort gleich,
+  $(3/4)^n$. Die Lesart von r10 ist dort verträglich, aber leer.
+- Am Nullaugenblick ist der Boden 0, der Score ½ des Inhalts. Der Boden ist dort also nicht die C5-Obstruktion.
+- r10.2(b) nannte den Boden ein Hindernis für den Weg über Boosts; r20.2 hat ihn mit dem Residuum gleichgesetzt. Das ist
+  berichtigt: (α) ist am Nullaugenblick nicht erfüllt.
+
+**Folge:** Die Brückenfrage ist unter der ursprünglichen Definition **negativ beantwortet**. Der Nullaugenblick bleibt ein Ergebnis
+über Felder (Photonpunkt-Frage, zwei Klassen, Riemann–Silberstein-Wirbel), ist aber kein C5-Zeuge. **Form (iii) hat keinen
+Kandidaten mehr.** C5 bleibt offen, und zwar in der Übergangsfrage, die innerhalb der Lesart von r10 nur durch Verlagerung
+erreichbar ist.
+
+**Zwei Klassen (r21.8).** Anlass war die Frage des Autors, ob es auf der untersten Ebene nur „liegt im Nullzustand oder nicht“
+gibt. Die Erkundung k220 kannte die Bahnen von SO(3,ℂ) × Dualität auf z = E + iB: die Schalen |s| = r, den Nullkegel und {0}.
+Nimmt man die Skala z ↦ λz hinzu, bilden alle nicht lichtartigen Felder eine einzige Bahn, die lichtartigen eine zweite. Unter
+Lorentz-Gruppe, Dualität und Skala bleibt also genau eine Aussage: lichtartig oder nicht. Jede Klasse hat einen ausgezeichneten
+Vertreter:
+
+| Klasse | Vertreter | Boden | erreichbar |
+|---|---|---|---|
+| nicht lichtartig | Bezugsframe R (E ∥ B, reiner Zustand, r24.3) | $`\phi = 1`$ | durch einen endlichen Boost |
+| lichtartig | Photonpunkt P | $`\phi = 0`$ in jedem Frame | durch Boosts nur im Grenzwert |
+
+Für die Rapidität des Boosts nach R gilt $\phi = \operatorname{sech} 2\eta_R$; R und P sind die beiden Enden einer
+Rapiditätslinie ($\eta_R = 0$ und $\eta_R = \infty$). Entlang des Nullaugenblicks divergiert $\eta_R$: Die freie Zeitentwicklung
+erreicht in endlicher Zeit, was Boosts erst bei unendlicher Rapidität erreichen. Anteile, Score und der Wert des Bodens sind
+Auslesungen eines Frames über dieser Ja/Nein-Ebene.
+
+**Der Kollapszustand mit heutigem Wissen (r21.9, Lesart).** Der Hauptkorpus nennt z⁻ = 0 den Kollapszustand und setzt ihn mit dem
+Photon und dem einzigen frame-invarianten Objekt gleich. Er arbeitet in einem einzigen Frame (r24) und schreibt z⁻ = 0 für zwei
+Dinge, die heute getrennt sind:
+- **Nullpunkt des Versatzes** (Ziel der Umrechnungen mit γ_L, Λ = 0): Das ist R, ein Frame mit maximalem Boden, kein Nullzustand.
+- **Das invariante Objekt, das Photon:** Das ist P, die lichtartige Klasse. In dieser Rolle gilt „Kollapszustand = Nullzustand“.
+- **Spannung, nicht aufgelöst:** „We can never fully reach z⁻ = 0“ (`thm:dark-offset`) passt als Aussage über Erreichbarkeit zu P,
+  die Rechnungen mit dem Versatz passen zu R. Kandidat für einen Statusvermerk; der Hauptkorpus wird nicht umgeschrieben.
+- Der Kompensator als „Projektion auf den Kollapszustand“ trifft keines von beiden: Sein Bild ist nicht null (r11.2(f)).
+
+Grenzen: nur der freie Träger; mit Ladungen ist die Dualität keine Symmetrie, mit Massen die Dilatation nicht. Dass Skala und
+Dualitätsphase auf der untersten Ebene herausgeteilt werden, ist eine Setzung.
+
+[Erkundung](../notes/research/c5_restatement_2026_11_16/README.md) · [Runde](../notes/research/v4_10_0_r21/README.md).
+
 ### C5, Form (iii): ein Nullaugenblick der Feldinvariante (15.11.2026, Runde r20)
 ### OP3: Der Generationsindex braucht Kopien (15.11.2026, Runde r19)
 
@@ -20,7 +129,8 @@ Augenblick ist Lorentz-invariant und wiederholt sich jede halbe Periode.
   nicht die Zustandsgrößen s±, w.
 - **Lesart der Obstruktion (Nachtrag):** Lesart B betrachtet reelle Felder in einem Punkt (r05.2(a)), und r10 begründet die
   Obstruktion mit dem Boden |s| dieses augenblicklichen Feldes. Innerhalb dieser Lesart ist (α) damit erfüllt; die Lesart
-  selbst bleibt gesetzt.
+  selbst bleibt gesetzt. **Berichtigt in r21.12:** Der Score ist im ursprünglichen C5 das Normquadrat der Obstruktion; am
+  Nullaugenblick ist der Boden 0, der Score ½. (α) ist dort nicht erfüllt.
 - **Zeit und Kollar-Stufe (Nachtrag):** Zeitentwicklung und Dualitätsdrehung (die Kollar-Stufe) fallen nur bei reiner
   Helizität zusammen, und gerade dort gibt es keinen Nullaugenblick (|s(t)| konstant). Felder mit Nullaugenblick tragen beide
   Helizitäten; ihre Zeitentwicklung ist keine Folge von Kollar-Stufen. Das ist die Unabhängigkeit, die (β) verlangt, lässt aber

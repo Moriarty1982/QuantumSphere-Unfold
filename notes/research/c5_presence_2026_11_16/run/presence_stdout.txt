@@ -1,0 +1,15 @@
+(1) Ellipsenbedingung: 'Ursprung innerhalb' (F < 0) <=> 0 oder 2 Wurzeln in |x| < 1, Uebereinstimmung 400/400; Nullaugenblick <=> Wurzel auf |x| = 1 <=> F = 0
+    Beispiel r20.1: F = +1.1e-15, |Wurzel| = [1.         0.55555556]
+(2) eine ebene Welle, linear: max |s(t)| = 3.3e-16
+(2) eine ebene Welle, zirkular: max |s(t)| = 4.6e-16
+(2) eine ebene Welle, elliptisch: max |s(t)| = 3.3e-16
+(3) zwei Wellen, linear + linear         : Anteil der Punkte mit Nullaugenblick 1.00 (Median Wurzelabstand 1.1e-16)
+(3) zwei Wellen, linear + elliptisch     : Anteil der Punkte mit Nullaugenblick 1.00 (Median Wurzelabstand 2.2e-16)
+(3) zwei Wellen, linear + zirkular       : Anteil der Punkte mit Nullaugenblick 1.00 (Median Wurzelabstand 2.2e-16)
+(3) zwei Wellen, elliptisch + elliptisch : Anteil der Punkte mit Nullaugenblick 0.00 (Median Wurzelabstand 8.6e-01)
+(3) zwei Wellen, zirkular + zirkular     : Anteil der Punkte mit Nullaugenblick 0.00 (Median Wurzelabstand 1.3e+16)
+(4) linear    : Helizitaetsgewichte 0.500 / 0.500; Feld hat zeitliche Nullstelle: True
+(4) zirkular  : Helizitaetsgewichte 1.000 / 0.000; Feld hat zeitliche Nullstelle: False
+(4) elliptisch: Helizitaetsgewichte 0.845 / 0.155; Feld hat zeitliche Nullstelle: False
+(5) 6 elliptische Wellen, Gitter 31^3: Anteil F < 0 (Ursprung in der Ellipse) 0.42, Vorzeichenwechsel entlang x: 3167
+    an 5 Punkten der Flaeche F = 0: |s(t0)|/2u <= 1.2e-15 zur Wurzelzeit (Nullaugenblick), Feld != 0

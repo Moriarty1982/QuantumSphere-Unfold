@@ -102,6 +102,17 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 16.11.2026: Runde v4.10.0-r21 (C5 frame-sauber neu gestellt) eingetragen: Forschungsstand, Offene-Probleme, Gesamtbild,
+  Forschungslinie, Inhalt, Content-overview. Enthält eine Berichtigung zu r20.4 (gleiche Anteile kennzeichnen den Photonpunkt
+  nicht). Kein Abschluss; C5 offen.
+- 16.11.2026: Nachtrag zu r21 vor dem Merge (r21.8–r21.10): zwei Klassen von Feldern, der Kollapszustand des Hauptkorpus in
+  heutiger Beschreibung (zwei Rollen, R und P), Ereignis-Lesart als Arbeitsannahme des Autors. Dieselben Seiten.
+- 16.11.2026: r21.11 (Vorliegen der Nullaugenblicke, Riemann–Silberstein-Wirbel) auf Autorentscheidung in PR #147
+  aufgenommen. Dieselben Seiten. Kein Abschluss; C5 offen.
+- 16.11.2026: r21.12 (Rückwärtsprüfung von (B1), **Berichtigung zu r20.2**): Die r20-Einträge in Forschungsstand, Gesamtbild,
+  Forschungslinie, Inhalt und Content-overview tragen jetzt einen Berichtigungsvermerk, statt still geändert zu werden;
+  Offene-Probleme nennt die negative Antwort auf die Brückenfrage. C5 offen.
+
 - 15.11.2026: Die C5-Runde wurde von r19 in **r20** umbenannt, weil eine andere Sitzung r19 parallel vergeben und gemergt hatte
   (PR #144). Einträge zu r19 betreffen den Kommutanten einer Generation, Einträge zu r20 den C5-Kandidaten.
 

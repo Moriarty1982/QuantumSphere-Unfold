@@ -1,0 +1,9 @@
+(1) Kollar-Bahn (drehen um pi/6, dann kompensieren):
+    n = 1: Score 0.75000 = (3/4)^n 0.75000; Boden |s| 0.75000; Inhalt 0.75000
+    n = 2: Score 0.56250 = (3/4)^n 0.56250; Boden |s| 0.56250; Inhalt 0.56250
+    n = 3: Score 0.42188 = (3/4)^n 0.42188; Boden |s| 0.42188; Inhalt 0.42188
+    n = 4: Score 0.31641 = (3/4)^n 0.31641; Boden |s| 0.31641; Inhalt 0.31641
+    n = 5: Score 0.23730 = (3/4)^n 0.23730; Boden |s| 0.23730; Inhalt 0.23730
+(2) Nullaugenblick r20.1: Boden/Inhalt 0.0e+00, Score/Inhalt 0.500
+(3) E = -B: Score/Inhalt 0.000, Boden/Inhalt 1.000
+    Score = 0 erzwingt E = -B und damit Boden = Inhalt (analytisch: b_x = -1 => |b| = 1)

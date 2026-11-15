@@ -1,0 +1,2 @@
+(1) b_y = 0.2622 -> {'R': np.float64(0.2622), 'T': np.float64(-0.2622), 'J_B': np.float64(-0.2622)}
+(2) ebene Welle linear: |b_y| nach Boost <= 0.0e+00; elliptisch: |Delta b_y| <= 3.3e-16; allgemeine Amplituden: Median |Delta b_y| = 0.140

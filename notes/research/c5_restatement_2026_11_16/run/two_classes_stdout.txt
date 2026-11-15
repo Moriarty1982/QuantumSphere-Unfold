@@ -1,0 +1,10 @@
+(1) nicht lichtartig, mit Skala: z2 = lambda L z1 fuer 2000 Paare, rel. Residuum 1.9e-14, |L^T L - 1| 4.8e-13, |det L - 1| 6.9e-14 -> eine Bahn
+(2) lichtartig: n2 = L n1 fuer 2000 Paare, rel. Residuum 3.3e-12, |L^T L - 1| 8.7e-09, |det L - 1| 3.4e-09 -> eine Bahn
+(3) nicht lichtartig: Boost nach E || B gibt phi = 1 (Abw. 2.6e-14); beliebige Boosts: phi in [0.0012, 0.9970]; lichtartig: phi = 0 in jedem Frame (max 2.0e-14)
+(4) Beispielfeld r20.1: Boden und Rapiditaet des Boosts nach R, phi = sech(2 eta_R)
+    t = -0.600: phi = 0.42964, eta_R = 0.744 (|phi - sech 2 eta_R| = 2e-16)
+    t = -0.200: phi = 0.14046, eta_R = 1.326 (|phi - sech 2 eta_R| = 3e-16)
+    t = -0.050: phi = 0.03501, eta_R = 2.023 (|phi - sech 2 eta_R| = 2e-15)
+    t = -0.010: phi = 0.00700, eta_R = 2.827 (|phi - sech 2 eta_R| = 2e-15)
+    t = -0.001: phi = 0.00070, eta_R = 3.979 (|phi - sech 2 eta_R| = 2e-14)
+    t = +0.000: phi = 0.00000, eta_R = inf (|phi - sech 2 eta_R| = 0e+00)

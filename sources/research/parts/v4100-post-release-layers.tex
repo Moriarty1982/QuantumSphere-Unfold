@@ -2806,3 +2806,268 @@ R_{\rm glob}^{(v4100\text{-}r20,+)}=(0,1,1,1,1),
 \]
 The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
 or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r21 Source-Only: C5 Restated per Frame: Port Shares, the Frame-Free Floor and the Bridge Question}
+\addcontentsline{toc}{section}{v4.10.0-r21 Source-Only: C5 Restated per Frame: Port Shares, the Frame-Free Floor and the Bridge Question}
+\label{sec:v4100-r21-c5-restated}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.10.0-r20.4 found that C5 in its old form asks, in the measure of one frame, about a passage between two frames, and left the
+restatement to the author.  The author has decided for it (2026-11-16).  This layer restates C5 in the way v4.9.0-r61 treated OP4: it
+types the quantities by frame, splits the old entry \(C5_{\rm zero}\) of v4.7.0-r86 into three questions, and records the status of
+each.  It also corrects one sentence of r20.4, relates the collapse state of the main body to the two classes of fields, and
+examines where null instants are present; a backward check of the reading of the obstruction
+corrects r20.2.  Exploration, not blind: every computation is fixed analytically beforehand.
+\textbf{The forbidden assertion \(C5=0\) is not made, and C5 stays open.}  The notes are
+\texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r21/} and
+\texttt{notes/\allowbreak research/\allowbreak c5\_restatement\_2026\_11\_16/}.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r21 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.1.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24237112}{10.5281/zenodo.24237112} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r21 the restatement}
+\label{subsec:v4100-r21-restatement}
+
+\paragraph{Definition v4.10.0-r21.1 (shares and floor).}
+On the doublet \((E,B)\) of v4.9.0-r04, with \(2u=E^2+B^2\), \(s=(E+iB)^2\) and \(b_x=2E\cdot B/2u\), put
+\[
+C5_M=\tfrac12(1+b_x),\qquad C5_T=\tfrac12(1-b_x),\qquad \phi=\frac{|s|}{2u}=|b| .
+\]
+\(C5_M\) is the share of the content in the compensator port \(C_{\rm HC}=\tfrac12(1+\sigma_x)\), read by the matter frame; \(C5_T\) is the
+share in the partner port, which the tachyon frame reads (v4.9.0-r28); \(\phi\) is the floor of v4.9.0-r10.2(b) relative to the content.
+For the selective collar recursion the cumulative shares are \(C5_M^{(n)}=(3/4)^n\) and \(C5_T^{(n)}=1-(3/4)^n\) (r20.4(b)).
+
+\paragraph{Restatement v4.10.0-r21.2 (three questions in place of \(C5_{\rm zero}\)).}
+\begin{enumerate}[leftmargin=2em]
+\item[\(C5_{\rm tr}\)] \emph{Transfer question, typed by frame.}  Is there a finite stage with \(C5_M=0\), equivalently \(C5_T=1\)?
+\item[\(C5_P\)] \emph{Photon-point question, frame-free.}  Does a non-null state with non-zero content reach \(\phi=0\) at a finite value of the
+parameter?
+\item[\(C5_{\rm br}\)] \emph{Bridge question.}  Is reaching \(\phi=0\) a discharge of the obstruction in the sense of v4.7.0-r86 and r88?
+\end{enumerate}
+The old entry ``\(\nexists N<\infty:\Phi_5^{(N)}=0\)'' read the score of one frame and is \(C5_{\rm tr}\); the route of r88, shape (iii) with
+requirement (\(\alpha\)), concerns the obstruction and is \(C5_P\) together with \(C5_{\rm br}\).
+
+\subsection*{v4.10.0-r21 results}
+\label{subsec:v4100-r21-results}
+
+\paragraph{Theoremlet v4.10.0-r21.3 (shares, exchange, floor).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \(C5_M+C5_T=1\) for every field, and for the cumulative shares at every stage.
+\item[(b)] The tachyon map \(z\mapsto iz\) exchanges \(C5_M\) and \(C5_T\); the floor \(\phi\) is fixed by \(R\), \(T\) and \(J_B\).
+\item[(c)] \(C5_M=C5_T=\tfrac12\) holds exactly for \(E\cdot B=0\).  This is the whole matter--tachyon axis of the disk, including a pure
+electric field (\(\phi=1\)).  The photon point \(P\) is \(\phi=0\); equal shares are necessary for it and not sufficient.
+\end{enumerate}
+
+\paragraph{Correction to v4.10.0-r20.4.}
+The reading of r20.4 named \(P\) as the frame-free point of a statement with the shares \(C5_M\), \(C5_T\), and the wiki called it the point
+where both shares are \(\tfrac12\).  By r21.3(c) equal shares do not characterise \(P\).  The frame-free quantity is the floor \(\phi\), and
+\(P\) is its zero.  The results r20.1 to r20.4(a)--(c) are unaffected.
+
+\paragraph{Theoremlet v4.10.0-r21.4 (the transfer question is a relocation; conditional on the reading of v4.9.0-r10).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \(C5_M=0\) holds exactly for \(E=-B\).  Such fields exist statically; they have \(C5_T=1\) and the maximal floor \(\phi=1\).
+\item[(b)] By r21.3(a) an empty compensator port is a full partner port.  In the typed question nothing vanishes; the content changes
+frame.  This is v4.9.0-r10.2(a) in typed form, and the passage falls under requirement (\(\delta\)) of r88.
+\item[(c)] Inside the selective collar recursion \(C5_M^{(n)}>0\) for every finite \(n\) (v4.7.0-r86.2).
+\end{enumerate}
+Reading: for the transports of Reading~B, \(C5_{\rm tr}\) asks for a complete change of frame and not for a vanishing.  It carries no
+discharge.
+
+\paragraph{Theoremlet v4.10.0-r21.5 (the photon-point question).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Boosts, spatial rotations and duality rotations keep \(|s|\) (v4.9.0-r10.2, r19.1); the non-selective flow of v4.9.0-r27 reaches
+\(P\) only in the limit, except at \(\alpha=\pi/4\).
+\item[(b)] Free time evolution reaches \(\phi=0\) at a finite time for the codimension-one family of r20.1.
+\item[(c)] The cumulative shares of the collar recursion are equal at no integer stage: \((3/4)^n=\tfrac12\) at \(n=2.409\), with
+\((3/4)^2=0.5625\) and \((3/4)^3=0.4219\).
+\end{enumerate}
+\(C5_P\) thus has a positive answer as a statement about fields.  It is not a statement about C5.
+
+\paragraph{Theoremlet v4.10.0-r21.6 (a lasting zero).}
+For a time-harmonic field the mean of \(|s(t)|^2\) over a period is \(\tfrac1{16}\bigl(|s_+|^2+4|w|^2+|s_-|^2\bigr)\).  Hence \(s(t)=0\) for all \(t\)
+if and only if \(s_+=s_-=w=0\).  Free time evolution keeps \(|s_+|\), \(|s_-|\) and \(|w|\).  A field that stays at the photon point was there
+from the start (plane waves, circular and linear); free time evolution leads into no lasting zero.  The example of r20.1 has mean
+\(0.305\).
+
+\paragraph{Proof sketch.}
+r21.3 and r21.4(a) from the definitions; \(b_x=-1\) forces \(2E\cdot B=-(E^2+B^2)\), that is \(|E+B|^2=0\).  r21.6 by Parseval on
+\(s(t)=\tfrac14\bigl(s_+e^{-2i\omega t}+2w+\bar s_-e^{2i\omega t}\bigr)\) (r16.8).  All items were checked in
+\texttt{restatement\_\allowbreak checks.py}: \(1000\) fields for r21.3, \(300\) fields for r21.6 (relative deviation \(9\cdot10^{-16}\)).  \(\square\)
+
+\paragraph{Remark v4.10.0-r21.7 (where the open question now sits).}
+After the restatement the open part of C5 is \(C5_{\rm br}\) alone.  It depends on three points.
+\begin{enumerate}[leftmargin=2em]
+\item[(B1)] The reading of the obstruction as the floor of the instantaneous field (v4.9.0-r10, r20.2).  It remains a reading.
+\item[(B2)] Instant or duration.  v4.7.0-r86 asks for a finite stage \(N\) with \(\Phi_5^{(N)}=0\) and does not say whether the zero must
+persist.  Under an \emph{event reading} an invariant instant suffices, and the null instant of r20.1 is a candidate, subject to (B1)
+and (B3).  Under a \emph{duration reading} the zero must last; then by r21.6 free time evolution supplies no witness and the
+candidate of r20 drops out.
+\item[(B3)] Presence.  Why fields of the codimension-one family should be present is open (r20).
+\end{enumerate}
+(B2) is the author's decision.  On 2026-11-16 the author set the event reading as a working assumption (r21.10); it is set, not derived.
+
+\paragraph{Theoremlet v4.10.0-r21.8 (two classes).}
+The exploration k220 of 2026-11-07 found the orbits of \(SO(3,\mathbb C)\times U(1)_{\rm duality}\) on \(z=E+iB\): the shells \(|s|=r>0\), the
+punctured null cone and \(\{0\}\).  Add the scale, \(z\mapsto\lambda z\) with \(\lambda\in\mathbb C\setminus\{0\}\) (duality phase and dilation).
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] All non-null fields form one orbit: for \(s_1,s_2\ne0\) there are \(\lambda\) and \(L\in SO(3,\mathbb C)\) with \(z_2=\lambda Lz_1\).
+\item[(b)] The non-zero null fields form one orbit of \(SO(3,\mathbb C)\) alone.
+\item[(c)] Each class has a distinguished representative.  A non-null field is taken by a finite boost to the frame \(E\parallel B\), where
+\(\phi=1\); this is the pure state, the reference frame R of v4.9.0-r24.3.  A null field has \(\phi=0\) in every frame; this is the photon
+point \(P\).  Under boosts \(\phi\) takes every value in \((0,1]\) on the first class and only \(0\) on the second.
+\item[(d)] The rapidity of the boost to R obeys \(\phi=\operatorname{sech}2\eta_R\).  Along the null instant of r20.1 it diverges
+(\(\eta_R=0.74,\ 1.33,\ 2.02,\ 2.83,\ 3.98\) at \(t=-0.6,\ -0.2,\ -0.05,\ -0.01,\ -0.001\)).  Free time evolution reaches at a finite time what
+boosts reach only at infinite rapidity.
+\end{enumerate}
+Reading: below every frame readout there is one predicate left, whether the field lies in the null class or not.  The shares, the
+score \((3/4)^n\) and the value of the floor are readouts of a frame above it.  Checked in \texttt{two\_\allowbreak classes.py}
+(\(2000\) pairs each for (a) and (b), \(1000\) fields for (c)).
+
+\paragraph{Remark v4.10.0-r21.9 (the collapse state of the main body in present terms; reading).}
+The main body calls \(\zminus=0\) the collapse state, the zero of the frame variable, and identifies it with the photon and with the
+unique frame-invariant object (Theorem~\ref{thm:unity}, Theorem~\ref{thm:origin}).  v4.9.0-r24.3 typed the zero of the offset as R, the
+pure state, and separated it from the photon \(P\) of Convention~F.  With r21.8 the two roles of the collapse state are the two
+distinguished representatives:
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.40\textwidth}>{\raggedright\arraybackslash}p{0.52\textwidth}@{}}
+\toprule
+role of \(\zminus=0\) in the main body & present description\\
+\midrule
+zero of the offset; target of the \(\gL^{-k}\) conversions; \(\Lambda=0\) & R: \(\phi=1\), \(\eta_R=0\); a frame, reached by a finite boost (r24.3)\\
+the invariant object; the photon & \(P\): \(\phi=0\), the null class, fixed point of duality (k220); \(\eta_R=\infty\)\\
+``we can never fully reach \(\zminus=0\)'' (Theorem~\ref{thm:dark-offset}, v4.8.0-r18) & as a statement of reachability it fits \(P\) (no transport, boosts only in the limit), not R\\
+compensator output as projection onto the collapse state (Theorem~\ref{thm:unity}(iv)) & neither: the image is not null (v4.10.0-r11.2(f)); a projection loses information (k220)\\
+\bottomrule
+\end{tabular}
+\end{center}
+R and \(P\) are the two ends of one rapidity line, \(\eta_R=0\) and \(\eta_R=\infty\); the main body, which works in one frame (r24), wrote both
+as \(\zminus=0\).  The third row is a tension with the typing of r24.3 and is recorded, not resolved.  The main body is not rewritten.
+
+\paragraph{Remark v4.10.0-r21.10 (working assumption for (B2)).}
+If the lowest level carries only the class predicate of r21.8, membership at an instant is the primitive notion: it is
+Lorentz-invariant (r20.1(c)), while a duration needs a time parameter that the class level does not have.  On this ground the author
+set the event reading of (B2) as a working assumption on 2026-11-16.  It is a setting.  That the scale and the duality phase are
+divided out at the lowest level is a setting as well; both are symmetries of the free field only (k220).  (B1) stays open; (B3) is
+shifted by r21.11.
+
+\paragraph{Theoremlet v4.10.0-r21.11 (presence of null instants; point (B3)).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] A time-harmonic field has a null instant at a point if and only if \(\bar s_-x^2+2wx+s_+=0\) has a root with \(|x|=1\).
+Equivalently, \(-2w\,e^{-i\gamma}\) with \(\gamma=\tfrac12(\arg s_+-\arg s_-)\) lies on the ellipse with semi-axes \(|s_+|+|s_-|\) and
+\(\bigl||s_+|-|s_-|\bigr|\).  The origin lies inside the ellipse exactly when \(0\) or \(2\) roots lie in \(|x|<1\).
+\item[(b)] A single plane wave has \(s(t)=0\) for all \(t\), for every polarisation (the lasting zero of r21.6).
+\item[(c)] For two plane waves of one frequency, \(s(t)=2\,z_1(t)\cdot z_2(t)\).  If one of them is linearly polarised, it vanishes twice per
+period, and the field is then the other wave, null and non-zero: a null instant at every point of space.  If both are elliptic or
+circular, null instants occur only on a surface.
+\item[(d)] A plane wave has a zero in time exactly when it is linearly polarised, that is, when it carries both helicities with weight
+\(\tfrac12\) (compare r20.3).
+\item[(e)] For a general monochromatic field the condition of (a) changes sign in space; the points with a null instant form surfaces.
+\end{enumerate}
+Checked in \texttt{presence.py} (\(400\) fields for (a); \(300\) points each for the two-wave cases; a field of six elliptic waves on a
+\(31^3\) grid for (e), with \(|s|/2u\le1.2\cdot10^{-15}\) at the root time on the surface).
+
+\paragraph{Reading.}
+The codimension one of r20.1(b) is a statement about the amplitudes at one point.  In space it is a surface: every generic
+monochromatic field that is not of pure helicity everywhere carries surfaces of null instants, and fields with a linearly polarised
+partial wave carry them everywhere.  The question of (B3), why such fields should be present, therefore lapses in its old form; what
+remains open is why a witness should sit at such a point.  \textbf{Prior literature, found afterwards:} the zeros of \(F\cdot F\) with
+\(F=E+iB\) are the Riemann--Silberstein vortices (G.~Kaiser, math-ph/0309010; I.~Bia\l{}ynicki-Birula and Z.~Bia\l{}ynicka-Birula,
+physics/0305012, both 2003).  The null instant of r20 is a point on such a vortex; only its role as a C5 candidate is specific to this
+work.  Free monochromatic fields in Reading~B only.
+
+\paragraph{Theoremlet v4.10.0-r21.12 (backward check of (B1); correction to v4.10.0-r20.2).}
+The C5 obstruction is the residual of the finite witness fit (v4.7.0-r01, r02), and its score is
+\(\Phi_5(W)=\|\rho_{5,\rm bd}\|^2+\|\rho_{5,\rm ext}\|^2+\|\rho_{5,\rm mix}\|^2\) (Definition~\ref{def:v470-r04-c5-lowering-score}).  Hence any quantity
+read as the C5 obstruction must vanish exactly when the score does (N1).  Requirement (\(\alpha\)) of r88 separates two routes of
+access, exact against asymptotic, not two quantities.
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] On the collar orbit every compensated state lies on the compensator axis, \(\phi=1\), and floor, score and content coincide:
+\((3/4)^n\) for \(n=1,\dots,5\).  There the reading of v4.9.0-r10 is consistent and empty.
+\item[(b)] At the null instant of r20.1 the floor is \(0\) and the score is \(\tfrac12\) of the content.  (N1) fails.
+\item[(c)] The score vanishes only for an empty compensator port, \(E=-B\), where the floor is maximal (r21.4).
+\end{enumerate}
+Checked in \texttt{b1\_\allowbreak backward.py}.
+
+\paragraph{Correction.}
+r20.2 counted (\(\alpha\)) as met within the reading of r10.  r10.2(b) names the floor an obstacle to the route through boosts, not the
+residual \(\rho_5\); r20.2 identified the two.  Against Definition~\ref{def:v470-r04-c5-lowering-score}, (\(\alpha\)) is not met at the null instant.
+Consequently \(C5_{\rm br}\) is answered negatively under the original definition: a vanishing floor is no discharge, since the score is
+\(\tfrac12\) there.  A positive answer would need a new definition with obstruction and score apart; that is the photon-point question
+\(C5_P\) of r21.5, not C5.  The null instant remains a result about fields (r20.1, r21.5, r21.8, r21.11) and is no C5 witness under the
+original definition.  C5 stays open in the transfer question, which within the r10 reading is reached only by relocation
+(\(\delta\)); shape (iii) has no candidate left.  The working assumption r21.10 and the results of r21.11 are unaffected as statements
+about fields.
+
+\paragraph{What this does not give.}
+No C5 discharge.  The classification of \(C5_{\rm tr}\) holds within the reading of v4.9.0-r10 and for the transports of Reading~B.
+\(C5_P\) is answered for fields only.  \(C5_{\rm br}\) is negative under the original definition (r21.12); C5 itself stays open.
+
+\subsection*{v4.10.0-r21 status in the three frames}
+\label{subsec:v4100-r21-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+quantity or question & M / T / P\\
+\midrule
+\(C5_M\), \(C5_T\) & M reads \(C5_M\), T reads \(C5_T\); the tachyon map exchanges them\\
+floor \(\phi\) & frame-free; \(P\) is \(\phi=0\)\\
+\(C5_{\rm tr}\) & a passage from M to T\\
+\(C5_P\), \(C5_{\rm br}\) & frame-free\\
+class predicate (r21.8) & frame-free; R is a frame of the non-null class, \(P\) is the null class\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r21 register entries}
+\label{subsec:v4100-r21-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r21\\
+\midrule
+C5 in the old form & mixes frames (r20.4); restated as \(C5_{\rm tr}\), \(C5_P\), \(C5_{\rm br}\) (r21.2)\\
+\(C5_{\rm tr}\) (transfer, typed) & a relocation, not a vanishing, under the r10 reading; excluded inside the recursion (r21.4)\\
+\(C5_P\) (photon point, frame-free) & reached at finite time by free evolution on a codimension-one family; a statement about fields (r21.5)\\
+lasting zero of \(s(t)\) & only for \(s_+=s_-=w=0\), present from the start (r21.6)\\
+\(C5_{\rm br}\) (bridge) & depends on (B1), (B2), (B3) (r21.7); negative under the original definition (r21.12)\\
+equal shares and \(P\) & necessary, not sufficient; correction to r20.4 (r21.3(c))\\
+classes of non-zero fields & two under Lorentz group, duality and scale: null or not; representatives \(P\) and R (r21.8)\\
+collapse state \(\zminus=0\) of the main body & two roles: zero of the offset (R) and invariant object (\(P\)); reading, one tension recorded (r21.9)\\
+(B2) instant or duration & event reading set as working assumption by the author; not derived (r21.10)\\
+(B3) presence & null instants lie on surfaces in space for generic fields, everywhere with a linearly polarised partial wave; points of Riemann--Silberstein vortices; open: the choice of the point (r21.11)\\
+(B1) and \(C5_{\rm br}\) & the score is the squared norm of the obstruction (r04); the floor is no obstruction at the null instant; \(C5_{\rm br}\) negative under the original definition; correction to r20.2 (r21.12)\\
+shape (iii) (r88) & no candidate left (r21.12)\\
+\(C5_{\rm zero}\) & open; no discharge, no assertion \(C5=0\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r21 ledger and guard update}
+\label{subsec:v4100-r21-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r21}=(1,1,0)
+\]
+for (restatement recorded; computations checked in the cited script; the bridge question open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r21,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r21}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.
