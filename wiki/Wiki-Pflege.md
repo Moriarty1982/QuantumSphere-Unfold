@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 15.11.2026: Forschungsstand um den Entropie-Kandidaten für die Treue ½ ergänzt (Lesart). Kein OP-Abschluss.
+
 - 15.11.2026: Forschungsstand um den Abgleich mit der Photon-Uhr ergänzt (gleiches Funktional, keine Schwelle bei ½).
   Kein OP-Abschluss.
 

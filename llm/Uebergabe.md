@@ -101,6 +101,7 @@
   1 : 206,77 : 3477,5); kein nativer Wert (24 Kandidaten, 0,5 %, Erwartung 0,44); Rang 2, weit vom Oktanten r16.7.
   Nachtrag (Zweig `research/op3-clock-check`): Koide = Kohärenzfunktional der Photon-Uhr-Sonde (r90), aber keine
   Fensterschwelle bei ½ und Drift 120° ≫ 26,57°; Uhr legt Σp² = 2/3 nicht fest. Noch in keiner Runde.
+  Dazu Lesart: Treue ½ als maximale Unsicherheit „dasselbe Objekt?“ (ein Bit); kein Test. OP3 ruht; weiter mit OP1.
 
 ## Nächster Schritt (Autorentscheidung)
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,

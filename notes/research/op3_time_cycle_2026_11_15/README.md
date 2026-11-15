@@ -83,3 +83,21 @@ Ordnung 1 − Var(φ) ≥ ρ_V). r12.2(a) (v4.9.0): Eine Dualitätsdrift α je A
 **Folgerung:** Die Uhr-Strukturen haben dieselbe mathematische Form wie die Koide-Bedingung, legen den Wert ½ aber nicht
 fest. Eine Gleichsetzung der Uhr mit der Feldfrequenz ω würde zudem genau die Identifikation verlangen, die die Quelle
 ablehnt, und an die verbotene globale Photon-Uhr-Aussage rühren. Ein Prinzip für Σp² = 2/3 ist damit weiter nicht gefunden.
+
+## Nachtrag 15.11.2026: Treue ½ als maximale Unsicherheit über „dasselbe Objekt?“ (Kandidat für ein Prinzip)
+Auftrag des Autors: „Festhalten, dann OP1“. **Lesart, nicht gerechnet, nicht blind.**
+
+**Vorwissen:** `../op3_koide_potential_2026_11_13.md` (Faden 2, Punkt 4) führt seit dem 13.11. vier gleichwertige Lesarten von
+K = 2/3 als Kandidaten für ein Prinzip: Reinheit der normierten Gram-Matrix 2/3, Mitte des Bereichs [1/3, 1],
+Gleichverteilung Diagonale/Nebendiagonale, paarweise Treue ½. Im Zeitzyklus ist G/3 eine Dichtematrix mit den Eigenwerten
+√m_k/Σ√m; Koide heißt Reinheit 2/3 der Mischung der drei Auslesungen.
+
+**Kandidat:** Zwischen zwei Auslesungen eines Objekts ist die Frage „bestätigt die eine die andere?“ ein Bit mit
+Wahrscheinlichkeit |⟨k|l⟩|². Orthogonal (0) hieße verschiedene Objekte (ausgeschlossen nach r16.7), gleich (1) hieße keine
+verschiedenen Auslesungen. Die Entropie des Bits ist maximal bei **Treue ½**. Prinzip: *Verschiedene Auslesungen eines
+Objekts lassen maximal offen, ob sie dasselbe zeigen.* Es gibt im Qubit-Bild das Oktant (r16.7) und im ℂ³-Bild des
+Zeitzyklus mit drei Auslesungen K = 2/3 (r16.9), aus derselben Quelle.
+
+**Bewertung:** Neu ist nur die Begründung über maximale Entropie; das Maximieren ist eine Setzung. Kein neuer Test: Für
+Neutrinos gibt das Prinzip wieder K = 2/3 (H2, H99, H100); für Quarks gilt Koide nicht, das Prinzip müsste sie als „keine
+freien Auslesungen“ ausnehmen (Setzung). Offen bleiben Phase bzw. Biegung (γ_M, OP1) und die Zahl drei.

@@ -16,6 +16,9 @@ Dreierzyklus auf der invarianten Matrix S; ihre Bahn hat von selbst eine zirkula
 - **Photon-Uhr (Nachtrag):** Die Koide-Bedingung hat genau die Form des Kohärenzfunktionals der Photon-Uhr-Sonde (r90),
   aber keine Fensterschwelle liegt bei ½ (V3 3/5, V5 2/5, V8 7/9), und die Drift von 120° je Auslesung liegt weit außerhalb
   der Toleranz von 26,57°. Eine Gleichsetzung von Uhr- und Feldfrequenz lehnt die Quelle ab. Kein Prinzip für ½.
+- **Kandidat für ein Prinzip (Lesart):** Treue ½ als maximale Unsicherheit der Frage „zeigen zwei Auslesungen dasselbe
+  Objekt?“ (ein Bit, Entropie maximal bei ½). Gibt das Oktant und K = 2/3 aus derselben Quelle; das Maximieren ist gesetzt,
+  ein neuer Test folgt nicht (Neutrinos schon in H2/H99/H100, Quarks ausgenommen nur per Setzung).
 
 [Erkundung](../notes/research/op3_time_cycle_2026_11_15/README.md).
 
