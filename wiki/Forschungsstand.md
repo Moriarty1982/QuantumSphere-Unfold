@@ -1,6 +1,6 @@
 # Forschungsstand
 
-### OP4: Der Zeitzyklus als Dreierzyklus der Dirac-Auslesung (15.11.2026)
+### OP4: Der Zeitzyklus als Dreierzyklus der Dirac-Auslesung (15.11.2026, Runde r18)
 
 Erkundung (nicht blind). Der Slotzyklus τ, unter dem die Dirac-Kopplungen nach r55 invariant sind, ist gleichwertig zur
 Verschiebung um ein Drittel der Periode von s(t) (r16.9). Dann sind die Slotzustände die drei gleich gewichteten Auslesungen

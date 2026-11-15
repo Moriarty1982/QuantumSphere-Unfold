@@ -99,6 +99,8 @@ physikalischen Slotraum dargestellt werden. OP3 bleibt offen.
 
 **Stand nach v4.10.0-r17 (15.11.2026):** Zu OP1: Die Zählregel je Frame ist auf drei Setzungen zurückgeführt (Strang = Quant von χ; T liest Stränge fermionisch, M bosonisch; M zählt ausgerichtete Bündel); die Energiebedingung P2 ist ersetzt, ein Grund für die Setzungen fehlt. Zu OP3: Die Uhr legt die Treue ½ nicht fest. OP1 und OP3 offen.
 
+**Stand nach v4.10.0-r18 (15.11.2026):** Kein blinder Test aus r15–r17. Zu OP4: Dirac-Zyklus = Zeitzyklus, Neutrino-ℤ₂ = Fermionparität von Spin(8); das begründet TM2, gibt aber keine neue Zahl. OP1, OP3 und OP4 offen.
+
 **Nachtrag 15.11.2026 (nach r15, noch keine Runde):** Der Träger aus r15.5 trägt nicht auf C⊗O: Eigenzustände der Zeitumkehr und von J_B haben dort keine bestimmte Ladung, und die Tachyon-Abbildung ist ein Skalar. Der Generationsindex sitzt nicht auf dem Frame-Dublett der Materiezustände; ein Qubit für die Komplementarität bleibt gesetzt. OP3 offen.
 
 **Nachtrag 15.11.2026 (Helizität):** Auf dem Feld-Dublett (E, B) mit der Helizitätsachse aus r05.2 wirken die drei Frame-Abbildungen wie die Chiralität in r51; die Koide-Phase braucht dort Helizität (Σ b_y² = 1 für jedes Oktant). Die Hermitesche Stokes-Lage ist nicht boost-invariant; auf der Kugel der Invarianten s± = (E ± iB)² gibt es aber ein Oktant aus Materiefeld, Photonseite und selbstdualem Feld, das in jedem Frame dasselbe ist. Die Überlappung ½ folgt bedingt, wenn je Frame-Abbildung ein Auslesezustand deren Eigenzustand ist (R, T, J_B erhalten je eines der drei Feldvorzeichen); ein Dreierzyklus der Achsen kommt aus keiner Feldsymmetrie. OP3 offen.

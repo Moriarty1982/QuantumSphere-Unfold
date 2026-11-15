@@ -12,9 +12,9 @@
   (14feb02, Release v5.1.0). **Keine offenen PRs.** Gemergt am 14./15.11.: #124–#128
   (OP3-Rückwärtssuche, Dauerauftrag Versionsverwaltung, Abbildung C⊗S → C⊗H⊗O, bewachter Kern, Release), davor #108–#123.
   Gemergte Zweige sind gelöscht. Nicht geprüft: die Läufe nach dem Merge von #128 (Wiki-Sync, Zwei-PDF).
-- **Letzte Runde:** v4.10.0-r17 (Statusvermerke zu Uhr-Funktional, Treue-Lesart, Irreduzibilität, Barbero-Dublett,
-  Penrose-Strängen, Rücknahme R² = −1), gemergt über PR #138 (68e1075); davor r16 (PR #135), r15, r14 (in v5.1.0).
-  Kandidat 1424 Seiten.
+- **Letzte Runde:** v4.10.0-r18 (Statusvermerke zu Suche nach blindem Test, Nachrechnung H2, Dirac-Zyklus = Zeitzyklus,
+  Neutrino-ℤ₂ = Spin(8)-Zentrum), Zweig `research/v4.10-r18`; davor r17 (PR #138), r16, r15, r14 (in v5.1.0).
+  Kandidat 1427 Seiten.
 - **Hypothesen:** zuletzt vergeben H104 (k226, widerlegt). Frei: **H105, k227**.
   - H100 offen: nächster NuFIT-Fit nach 6.1, Frist 31.12.2027 (`notes/research/predictions/k222_test_h100.py`).
   - H102 offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem 13.11.2026 (`k224_test_h102.py m_tau sigma`).
