@@ -6,7 +6,8 @@
   Record https://zenodo.org/records/24237112; Vorgänger v5.0.0 (10.5281/zenodo.24152615). Vollausgabe 1412 Seiten,
   Physik-Paper 29 Seiten. Paketquellstand dfdb413, Tag `v5.1.0`, GitHub-Release gesetzt. Nach der Veröffentlichung
   geprüft: acht Dateien prüfsummengleich mit dem Paket, Vorschau = Vollausgabe. Release-Notiz `release/v5.1.0/README.md`.
-- **GitHub:** `main` nach PR #132 (b6ed1a5, Runde r15, OP3-Erkundungen, Dauerauftrag Issues), davor #130 (eeb6083,
+- **GitHub:** `main` nach PR #133 (37ac7da, OP3: C⊗O, Helizitätsachse, invariante Kugel, Feldvorzeichen), davor #132
+  (b6ed1a5, Runde r15, Dauerauftrag Issues), #130 (eeb6083,
   Berichtigung zu CT-004), #129 (c9bfb19, OP1 mit I1, CT-004) und #128
   (14feb02, Release v5.1.0). **Keine offenen PRs.** Gemergt am 14./15.11.: #124–#128
   (OP3-Rückwärtssuche, Dauerauftrag Versionsverwaltung, Abbildung C⊗S → C⊗H⊗O, bewachter Kern, Release), davor #108–#123.
@@ -69,7 +70,7 @@
   **Runde v4.10.0-r15 geschrieben** (Berichtigung zu r38 und Statusvermerke r15.2–r15.5 zu Schatten, Spin-1-Dreieck,
   Komplementarität und Generationen je Frame-Abbildung), Notizen `notes/research/v4_10_0_r15/`. Zuletzt vergebene Runde: r15.
 
-- **Nachtrag zu r15.5 (15.11., Zweig `research/op3-frame-doublet-check`):** Auf C⊗O ist R skalar, T und J_B haben
+- **Nachtrag zu r15.5 (15.11., gemergt über PR #133):** Auf C⊗O ist R skalar, T und J_B haben
   dieselben Eigenstrahlen, und diese tragen keine bestimmte Ladung (⟨Q⟩ = ½). Die Lesart „Generation je Frame-Abbildung“
   gilt nur auf der komplexifizierten Ebene z, also auf einem gesetzten Qubit; sie fällt auf r15.4 zurück. Gehört in die
   nächste Runde (r16), noch nicht geschrieben.
