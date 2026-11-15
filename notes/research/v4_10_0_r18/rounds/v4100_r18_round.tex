@@ -1,0 +1,111 @@
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r18 Source-Only: Status Notes on a Blind-Test Search, a Recomputation of H2, and the Readout Groups of Mixing}
+\addcontentsline{toc}{section}{v4.10.0-r18 Source-Only: Status Notes on a Blind-Test Search, a Recomputation of H2, and the Readout Groups of Mixing}
+\label{sec:v4100-r18-blind-search-h2-mixing}
+% ============================================================================
+
+\paragraph{Purpose.}
+This layer records the work of 15 November 2026 after v4.10.0-r17: a search for a blind test among the structures of r15 to r17,
+a recomputation of the pre-registered test H2 with newer data together with a correction of a wiki statement, and two OP4
+explorations on the readout groups of lepton mixing (v4.9.0-r55).  All items are explorations without pre-registration; H2 is
+recomputed under its original criterion.  The notes are \texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r18/} and the
+folders cited there.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r18 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.1.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24237112}{10.5281/zenodo.24237112} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r18 status notes}
+\label{subsec:v4100-r18-status}
+
+\paragraph{Remark v4.10.0-r18.1 (no blind test from r15 to r17).}
+A consequence of r15 to r17 that fixes a quantity not yet measured, without a new free choice, was sought.  The observables already
+covered by open predictions (\(\theta_{12}\) H9, \(m_W\) H15, \(\theta_{23}\) H42 and H46, \(\Omega_M\) H96, \(R\) H100, \(m_\tau\) H102, ordering and
+\(\sum m_\nu\) H2) were set aside.  Checked candidates: neutrinos as readouts of one object with positive weights (r16.9, r17.2) cannot
+reach \(K=\tfrac23\) (at most \(0.585\) for normal and \(0.500\) for inverted ordering; known from H2); ``Majorana means equal helicity parts''
+gives \(R=0\) and ``one helicity only'' gives \(R=0.0052\), both against the observed \(0.0298\); \(\delta_{CP}\) from the sign of the Koide phase,
+Majorana against Dirac from r16.5, and the strand statistics of r17.5 have no construction without a new choice.  No blind test was
+found; H105 stays unassigned.  A blind test needs a structure that fixes the overlap \(\tfrac12\), the bend or the statistics per frame.
+
+\paragraph{Remark v4.10.0-r18.2 (H2 recomputed; a correction).}
+The unchanged script of H2 (v4.8.0-r12, pre-registration \texttt{434c5a8}) reproduces the result of 20 October 2026: normal ordering,
+\(\sum m_\nu=0.05916\pm0.00023\) eV, lightest root negative, \(K=\tfrac23\); inverted ordering \(0.102\) eV.  With JUNO 2026
+(\(\Delta m^2_{21}=7.50\pm0.12\cdot10^{-5}\) eV\(^2\)), SNO+ and the full NuFIT 6.1 table, \(\sum m_\nu\) stays \(0.0592\) eV and \(m_1\approx0.37\) meV; under the
+fixed criterion H2 remains compatible and weakly discriminating, \(0.4\) meV above the floor of normal ordering.  The wiki had listed H2
+with ``normal ordering supported by JUNO'' without a source; this is corrected: JUNO alone does not yet determine the ordering, while
+a global analysis including the public JUNO data prefers normal ordering weakly (\(\Delta\chi^2=4.6\), arXiv:2601.09791).
+
+\paragraph{Theoremlet v4.10.0-r18.3 (the Dirac readout cycle as the time cycle).}
+The slot cycle \(\tau\), under which the Dirac couplings are circulant (v4.9.0-r55), is diagonalised by the Fourier matrix with eigenvalues
+\(1,\omega_3,\bar\omega_3\), those of translation by one third of the period of \(s(t)\) (r16.9).  Under this correspondence the slot states are
+the three equally weighted readouts at times \(0,T/3,2T/3\) and the Fourier modes are the mass eigenstates of the charged leptons; TM2
+reads: one neutrino mass eigenstate is the equally weighted readout at one time.  The frame map \(T\) fixes every slot state; the
+transposition \(\rho\) gives a column with \(|U_{e i}|^2=0\), \(\theta_{13}=0\) (cf.\ H6).
+
+\paragraph{Theoremlet v4.10.0-r18.4 (the neutrino \(\mathbb Z_2\) as the centre of \(\mathrm{Spin}(8)\)).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] In \(\mathrm{Cl}(8)\) the rotation by \(2\pi\) is \(+1\) on the vector and \(-1\) on both chiral spinors; on the triality slots
+\((8_v,8_s,8_c)\) it is the sign triple \((1,-1,-1)\) of v4.9.0-r38.1(c), the \(\mathbb Z_2\) that generates TM2 in r55.
+\item[(b)] A symmetric Majorana matrix with \(DMD=M\), \(D=\mathrm{diag}(1,-1,-1)\), decouples the vector slot; its fixed column in the flavour
+basis is exactly \((\tfrac13,\tfrac13,\tfrac13)\) (500 random matrices, deviation \(10^{-16}\)).
+\item[(c)] With the mask of v4.9.0-r57 (variant A of H41, same data and grid) only the \(\mathbb Z_2\) whose fixed slot has mask weight \(0\) give hits:
+slots \(1\) and \(2\) with \(388\) each, together the \(776\) of H41, and the mask slot \(3\) none.  This split is evaluated after the fact.
+\end{enumerate}
+Reading: the group \(G_M\) left free in r55 is the fermion parity of \(\mathrm{Spin}(8)\) in the frame in which a mask-free slot is the vector;
+the Majorana coupling respects it, the Dirac coupling respects \(\tau\).  By r47 the reference slot has mask weight \(0\), so ``fixed slot =
+vector slot = reference slot'' is compatible with H41.  This is a reason for the pattern, not a new number: TM2 with the mask correction,
+\(\theta_{23}\) free.  Why Majorana respects \((-1)^F\) and Dirac does not, the assignment of generations to slots (r37) and the choice of the
+vector slot are assumed.
+
+\subsection*{v4.10.0-r18 status in the three frames}
+\label{subsec:v4100-r18-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item M: mass and mixing statements are matter-frame readouts; H2 and the OP4 items are read there.
+\item T, P: not evaluated; the frame map \(T\) fixes the slot states (r18.3).
+\end{itemize}
+
+\subsection*{v4.10.0-r18 register entries}
+\label{subsec:v4100-r18-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r18\\
+\midrule
+blind test from r15--r17 & none found; two neutrino candidates excluded by existing data (r18.1)\\
+H2 & recomputed: \(\sum m_\nu=0.0592\) eV, stable with JUNO and NuFIT 6.1; compatible (r18.2)\\
+ordering from JUNO & not determined by JUNO alone; weak preference for normal ordering in a global analysis (r18.2)\\
+Dirac readout cycle & equivalent to the one-third-period time cycle (r18.3)\\
+neutrino \(\mathbb Z_2\) & fermion parity of \(\mathrm{Spin}(8)\); gives TM2; with the mask only mask-free fixed slots fit (r18.4)\\
+H9 & pending (no JUNO result with \(\sigma\le0.004\) found)\\
+H100 / H102 & pending / pending\\
+CT-001 to CT-004 & unchanged\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r18 ledger and guard update}
+\label{subsec:v4100-r18-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r18}=(1,1,0)
+\]
+for (status notes recorded; computations checked in the cited scripts; a blind test, the origin of \((-1)^F\) for Majorana couplings and
+the angle \(\theta_{12}\) not derived).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r18,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r18}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+OP~1, OP~3 and OP~4 remain open.  The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.

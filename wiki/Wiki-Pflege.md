@@ -102,6 +102,9 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 15.11.2026: Runde v4.10.0-r18 eingetragen (Forschungslinie, Inhalt, Gesamtbild, Offene-Probleme, Vorhersagen-und-Tests,
+  Content-overview, Forschungsstand). Kein OP-Abschluss.
+
 - 15.11.2026: Forschungsstand und Offene-Probleme um die Neutrino-ℤ₂ als Spin(8)-Zentrum ergänzt. Kein OP-Abschluss.
 
 - 15.11.2026: Forschungsstand und Offene-Probleme um die OP4-Erkundung zum Zeitzyklus ergänzt; H2-Zeile in
