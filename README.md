@@ -1,17 +1,17 @@
 # Quantum Sphaera Companion
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24152615.svg)](https://doi.org/10.5281/zenodo.24152615)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24237112.svg)](https://doi.org/10.5281/zenodo.24237112)
 
 Structure-first mathematical companion material for the Quantum Sphaera / Sphere Framework project.
 
 ## Current public release
 
-- Public version: `v5.0.0` (2026-11-12)
-- Version DOI: [`10.5281/zenodo.24152615`](https://doi.org/10.5281/zenodo.24152615) ([Zenodo record](https://zenodo.org/records/24152615))
+- Public version: `v5.1.0` (2026-11-15)
+- Version DOI: [`10.5281/zenodo.24237112`](https://doi.org/10.5281/zenodo.24237112) ([Zenodo record](https://zenodo.org/records/24237112))
 - Concept DOI: [`10.5281/zenodo.19210728`](https://doi.org/10.5281/zenodo.19210728)
-- Previous version: `v4.11.0`, DOI `10.5281/zenodo.24108818`.
-- Release package: two English PDFs (full Companion, 1402 pages; selected physics paper, 28 pages), source archive, database snapshot and manifests, available in the Zenodo record.
-- Frozen package source: `539b75bfce29ce20bb9aa7e59c251727b49faa45` (tag `v5.0.0`). Later repository metadata updates do not change the deposited package.
+- Previous version: `v5.0.0`, DOI `10.5281/zenodo.24152615`.
+- Release package: two English PDFs (full Companion, 1412 pages; selected physics paper, 29 pages), source archive, database snapshot and manifests, available in the Zenodo record.
+- Frozen package source: `dfdb41387264e728a13a9a51a8636fd532011ff2` (tag `v5.1.0`). Later repository metadata updates do not change the deposited package.
 
 Version 5 introduces the database-backed document architecture: registered
 statements, immutable content versions, dependencies, open guards and ordered
@@ -20,11 +20,18 @@ relaxation under expansion and a fixed outer length (full section 46;
 physics section 7.6). This is a conditional comparison, not a derivation of
 lepton masses, the cosmological constant or a selected Koide ratio.
 
+Version 5.1.0 adds the research layers v4.10.0-r12 to r14 and the counterterm
+registry to the full Companion. The physics paper gains a short section on a
+bent octant: for three states with overlap one half the Koide value holds for
+every Bargmann phase, and the Gram determinant separates the flat octant, with
+one vanishing mass, from three positive masses. A geometric reading as a
+flux-free core is given with its status; nothing in it is derived.
+
 The package was published by the author and its eight files, checksums,
 version relations and full-document preview were verified against the
 uploaded candidate. The complete argument graph remains under review;
 publication does not close the scientific guards. See
-[the release record](release/v5.0.0/README.md),
+[the release record](release/v5.1.0/README.md),
 [the development history](notes/research/v5_0_0_development.md) and
 [the statement store](qam/store/README.md).
 

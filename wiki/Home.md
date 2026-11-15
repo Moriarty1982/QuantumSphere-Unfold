@@ -2,9 +2,9 @@
 
 Dieses Wiki erschließt den **Quantum Sphaera Companion**: ein strukturorientiertes mathematisches Forschungsprojekt mit lokalen, bedingten und readout-abhängigen Aussagen. Es bietet Menschen und LLMs einen Einstieg, eine Quellenkarte und benannte Aussagegrenzen.
 
-**Öffentliche Baseline:** v5.0.0 vom 12. November 2026.
-[Version-DOI](https://doi.org/10.5281/zenodo.24152615),
-[Zenodo-Paket](https://zenodo.org/records/24152615). Vorgänger ist v4.11.0.
+**Öffentliche Baseline:** v5.1.0 vom 15. November 2026.
+[Version-DOI](https://doi.org/10.5281/zenodo.24237112),
+[Zenodo-Paket](https://zenodo.org/records/24237112). Vorgänger ist v5.0.0.
 
 ## Einstieg
 
