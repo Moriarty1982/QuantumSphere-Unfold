@@ -125,6 +125,11 @@
   Nachtrag: Neutrino-ℤ₂ = Spin(8)-Zentrum (1, −1, −1), Vektor-Slot fest → TM2; mit r57-Maske nur maskenfreie Slots als feste
   Spalte (je 388 Treffer, Maskenslot 0). Begründung für G_M, keine neue Zahl.
 
+- **C5, Form (iii) (15.11., Erkundung, `notes/research/c5_null_instant_2026_11_15/`, Zweig `research/c5-null-instant`):**
+  Nullaugenblick: s(t) eines nicht generischen zeitharmonischen Feldes wird zu endlicher Zeit exakt 0 (Feld ≠ 0, Zustand im
+  Photonpunkt, Score ½, Lorentz-invariant, periodisch). Erfüllt (β)–(δ) von r88, (α) nur unter „Obstruktion = augenblickliches s“.
+  Keine Entladung; C5 offen.
+
 ## Nächster Schritt (Autorentscheidung)
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,
   `Erkundung_Zaehlregel_Prinzip.md`) und Suchrichtung prüfen. Zu beachten: Eine Kramers-Regel (nur halbzahlige Spins,

@@ -1,0 +1,10 @@
+(1) Zustandsinvarianten s+ = -1.0000+0.0000j, s- = 1.8000+0.0000j, w = -0.4000+0.0000j (alle ungleich 0)
+    t = 0: E = [1. 0. 0.], B = [0. 1. 0.], s(0) = 0.00e+00+0.00e+00j, |z(0)| = 1.4142
+(2) Formel fuer s(t) bestaetigt: max. Abweichung 3.5e-16; Nullstellen pro halbe Periode bei t ~ [np.float64(0.0), np.float64(3.142)] (|s| min 0.0e+00)
+    t = 0.0: |z(t)| = 1.4142
+    t = 3.142: |z(t)| = 1.4142
+(3) Zufaellige Amplituden: kleinster relativer Abstand der Ellipse von 0: Median 0.149, Anteil < 1e-3: 0.0035 (Kodimension 1: nur Sonderfaelle)
+(4) Boost der augenblicklichen Felder: s bleibt 0 (max. |s'| = 3.9e-15); der Nullaugenblick ist ein invariantes Ereignis
+(5) Stokes-Vektor im Nullaugenblick b = [0. 0.] (Photonpunkt P); Kompensatoranteil 0.500 (nicht 0)
+    zum Vergleich t = 0.6: |b| = 0.430
+(6) reelle gleichphasige Amplituden: min |s| = 2.8e-33 bei t = 1.5708, dort |z| = 6.8e-17 (Feld null)
