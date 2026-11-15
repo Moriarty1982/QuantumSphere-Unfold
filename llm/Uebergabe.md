@@ -25,7 +25,9 @@
   offener Strings (Chan–Paton, j = ½), M Kanten des Spin-Netzwerks. Die Kramers-Regel ist ausgeschlossen (β = 0,337).
   Kein blinder Test. Gemergt über PR #129 (c9bfb19).
 - **Daueraufträge:** gemergte Zweige löschen (14.11.); interne Nummern selbst vergeben und Buchführungs-Commits ohne
-  Rückfrage auf `main` pushen (15.11., `AGENTS.md`). Inhalt nur über PR, Zenodo nur mit Freigabe.
+  Rückfrage auf `main` pushen (15.11., `AGENTS.md`). Neu (15.11.): **Issues nachziehen** — Register #17 und berührte OP-Issues
+  nach jeder inhaltlichen Änderung ohne Rückfrage aktualisieren (`AGENTS.md`). Am 15.11. nachgezogen: #17 (Basis v5.1.0),
+  Sammelnachträge #10–#12, Stand-Vermerke #13–#16, **neues OP3-Issue #131**. Inhalt nur über PR, Zenodo nur mit Freigabe.
 - **Zenodo-Hinweis:** Das Upload-Hilfsskript setzt die Vorschau nicht selbst; der Autor setzt sie im Entwurf von Hand.
   Dabei kann die Veröffentlichung mit ausgelöst werden (so bei v5.1.0).
 
