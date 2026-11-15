@@ -1,5 +1,19 @@
 # Forschungsstand
 
+### OP3: Die Koide-Phase und die Helizitätsachse (15.11.2026)
+
+Erkundung (nicht blind). Das Feld-Dublett (E, B) hat nach r04 und r05.2 drei Stokes-Achsen: σz (Materie gegen Tachyon),
+σx (Photonseite) und σy, die **Helizität** (nur für komplexe Amplituden; reelle Felder füllen eine Scheibe).
+- **Zusammenhang:** Die Tachyon-Abbildung ist die halbe Drehung um die Helizitätsachse und erhält die Helizität; T und J_B
+  kippen sie. Das ist dasselbe Muster wie die Chiralität der Algebra in r51.1(a). Die σy-Pole gehen unter φ in die Ports
+  1 ± i e₇ über.
+- **Koide:** Drei Zustände in der Scheibe haben die Bargmann-Phase 0 oder π. Für jedes Oktant-Tripel gilt
+  Σ b_y² = 1: Die Koide-Phase braucht Helizität, also komplexe Amplituden.
+- **Grenze:** Unter Boosts ändert sich b_y; erhalten bleibt nur die Zerlegung in die Helizitätsanteile. Die Kugel müsste in
+  einem ausgezeichneten Frame gelesen werden, und ein Frame, der drei Generationszustände zugleich auszeichnet, fehlt.
+
+[Erkundung](../notes/research/op3_helicity_axis_2026_11_15/README.md).
+
 ### OP3: r38 neu gelesen, eine Generation je Frame-Abbildung (15.11.2026, Runde r15)
 
 Erkundung (nicht blind). **r38** ordnet die Frames den Triality-Slots zu (Photon Vektor-Slot, Materie und Tachyon

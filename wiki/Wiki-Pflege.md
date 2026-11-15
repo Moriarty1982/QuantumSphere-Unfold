@@ -102,6 +102,9 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 15.11.2026: Forschungsstand und Offene-Probleme um die Helizitätsachse ergänzt (Koide-Phase braucht Helizität;
+  Frame-Abbildungen auf Helizität wie auf Chiralität; b_y nicht boost-invariant). Kein OP-Abschluss.
+
 - 15.11.2026: Nachtrag zu r15.5 in Forschungsstand und Offene-Probleme (Frame-Eigenzustände auf C⊗O ohne bestimmte
   Ladung; Lesart fällt auf die Komplementarität zurück). Kein OP-Abschluss.
 

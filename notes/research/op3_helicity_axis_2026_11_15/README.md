@@ -1,0 +1,60 @@
+# OP3: Die Koide-Phase und die Helizitätsachse des (E,B)-Dubletts
+
+15. November 2026, Claude Opus. **Erkundung, nicht blind** (K = 2/3, die Phasen und die Ergebnisse (1)–(3) standen
+analytisch vorher fest). Auftrag des Autors: „Ja, prüfen“, nach dem Vorschlag, die Generationen auf der Stokes-Kugel des
+Feld-Dubletts (E, B) statt unter den Materiezuständen von C⊗O zu lesen (Anlass: der Nachtrag in
+`../op3_frame_map_generations_2026_11_15/README.md`). Keine H-Nummer, kein CT-Eintrag, Guards unverändert.
+Skript `helicity_axis.py`, Ausgabe `run/helicity_axis_stdout.txt`.
+
+## Vorwissen geprüft
+- **v4.9.0-r04.2:** Die Gram-Matrix G von (E, B) ist für reelle Felder symmetrisch, ohne σ_y-Teil; die Zustände füllen eine
+  Scheibe. Materie (b₁ > 0) und Tachyon (b₁ < 0) liegen gegenüber, das Licht in der Mitte, die Photonseite ist sign b₂.
+  J_B spiegelt b₁, T spiegelt b₂. Unter Boosts wandert b entlang seiner eigenen Richtung.
+- **v4.9.0-r05.2(b):** Für zeitharmonische Felder mit komplexen Amplituden ist der σ_y-Teil von Ĝ = F̂†F̂ gleich
+  −2 Im(Ê*·B̂), ±1 für zirkulare und 0 für lineare Polarisation. **Die dritte Achse ist die Helizität**, erzeugt von der
+  Dualitätsdrehung; mit ihr wird die Scheibe zur Kugel, das Licht liegt auf der Helizitätsachse. Die Kopplung an
+  Schwarze Löcher ist dort offen.
+- **v4.9.0-r51:** Die Tachyon-Abbildung z ↦ iz ist σ_y; die Ports sind die Eigenräume von iL_e7.
+- **v4.10.0-r07.2(a), (b):** Die Dualitätsdrehung ist eine Symmetrie des freien Maxwell-Feldes (erhaltene Helizität) und
+  vertauscht mit Boosts.
+- **Literatur:** Tang und Cohen, PRL 104, 163901 (2010) (optische Chiralität, Lipkins Zilch); Bliokh und Nori, PRA 83,
+  021803 (2011) (Chiralitätsdichte und Helizität; Verhältnis zur Energiedichte betragsmäßig ≤ 1). Helizität ist nach
+  Noether die Erhaltungsgröße der Dualitätssymmetrie. Die Formel für zeitharmonische Felder steht im Repo in r05.2(b);
+  die Originalarbeiten sind nicht im Volltext gelesen.
+
+## Ergebnisse
+1. **Die Tachyon-Abbildung ist die halbe Drehung um die Helizitätsachse.** (E, B) ↦ (−B, E) ist die Dualitätsdrehung um
+   90°; sie kippt b₁ und b₂ und erhält b_y. T, also (E, B) ↦ (E, −B), kippt b₂ und b_y; J_B, also (E, B) ↦ (B, E), kippt b₁
+   und b_y. Das ist das Muster von r51.1(a): R erhält die Chiralität, T und J_B tauschen sie. **Die Chiralität der
+   Algebra und die Helizität des Dubletts verhalten sich unter den drei Frame-Abbildungen gleich.**
+2. **Die σ_y-Pole sind die Ports.** Die σ_y-Eigenvektoren (1, ±i) gehen unter der Abbildung φ von r51.1(c) in 1 ± i e₇
+   über, und das sind Eigenvektoren von iL_e7 zu ±1, also Kompensator- und Partnerport. Die Konjugation tauscht sie.
+3. **Ohne Helizität keine Koide-Phase.** Drei Zustände in der Scheibe (b_y = 0) haben die Bargmann-Phase 0 oder π
+   (500 Stichproben). Für jedes Oktant-Tripel (drei orthonormale Bloch-Vektoren) gilt dagegen exakt
+   **Σ_k b_{y,k}² = 1**: Die drei Zustände tragen zusammen genau eine Einheit Helizitätsgewicht, wie man das Oktant auch
+   dreht. Reelle Felder allein können die Koide-Phase also nicht tragen; sie braucht komplexe Amplituden, also den
+   C-Faktor.
+4. **Unter Boosts ist b_y nicht invariant.** Für allgemeine komplexe Amplituden ändert sich b_y unter Boosts deutlich
+   (bis |Δb_y| = 1,07 in 300 Stichproben). Erhalten bleibt nur die Zerlegung in die Helizitätsanteile F± = E ± iB: Ein reiner
+   Anteil bleibt rein, und die Dualitätsdrehung vertauscht mit dem Boost. Die Gewichte der beiden Anteile ändern sich.
+
+## Folgerungen
+- **Was trägt:** Die Lesart ist mit dem Bestand verträglich und braucht kein neues Qubit. Das Dublett (E, B) mit der
+  Helizitätsachse aus r05.2 hat genau die drei Achsen σ_z (Materie gegen Tachyon), σ_x (Photonseite) und σ_y (Helizität),
+  und die drei Frame-Abbildungen wirken darauf wie in r51. Es gibt dort kein Ladungsproblem wie auf C⊗O, weil die
+  Zustände Feldzustände sind.
+- **Was nicht trägt:** Der Ort eines Zustands auf der Kugel hängt vom Bezugssystem ab, für b₁, b₂ schon nach r04.2(c) und
+  nach (4) auch für b_y. Überlappungen und damit Koide-Daten wären frame-abhängig. Wie in
+  `../op3_horizon_shadow_2026_11_15/README.md` (Folgerung 2) müsste die Kugel in einem ausgezeichneten Frame gelesen
+  werden. Für ein reelles Feld gibt es ihn (E ∥ B, r04.2(c)); dort liegt der Zustand aber auf dem Rand der Scheibe, ohne
+  Helizitätsanteil. Für komplexe Amplituden ist ein solcher Frame nicht untersucht. Ein Frame, in dem drei Generationszustände zugleich ausgezeichnet sind, ist nicht gefunden.
+- **Offen wie zuvor:** wie ein Feld-Dublett die Generationen geladener Leptonen trägt (das ist eine Lesart, kein
+  Mechanismus); die Überlappung ½; die Biegung zu φ = 2/3 (Kern, γ_M, OP1).
+
+## Einordnung
+Ergebnis (1) ist der eigentliche Gewinn: Die Helizitätsachse des Feldes und die Chiralität der Algebra zeigen unter T, J_B
+und R dasselbe Verhalten. Damit hängen zwei bisher getrennte Stellen des Papers zusammen (r04/r05 und r51). Für OP3 heißt
+es: Die Koide-Phase ist ein Helizitätseffekt, sie braucht komplexe Amplituden. Woher die Überlappung ½ kommt und in
+welchem Frame die drei Zustände gelesen werden, bleibt offen.
+
+OP1–OP5, C5, C6/T2 und die Guards sind unverändert.

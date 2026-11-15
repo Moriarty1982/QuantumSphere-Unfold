@@ -74,6 +74,11 @@
   gilt nur auf der komplexifizierten Ebene z, also auf einem gesetzten Qubit; sie fällt auf r15.4 zurück. Gehört in die
   nächste Runde (r16), noch nicht geschrieben.
 
+- **Helizitätsachse (15.11., Erkundung, `notes/research/op3_helicity_axis_2026_11_15/`):** Auf dem Dublett (E, B) mit der
+  Helizität als σy (r05.2) wirken R, T, J_B wie auf die Chiralität in r51; σy-Pole = Ports. Koide-Phase braucht Helizität
+  (Σ b_y² = 1 je Oktant; Scheibe gibt Phase 0 oder π). Grenze: b_y nicht boost-invariant, kein Frame für drei Zustände.
+  Zusammen mit dem Nachtrag zu r15.5 Stoff für r16 (noch nicht geschrieben).
+
 ## Nächster Schritt (Autorentscheidung)
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,
   `Erkundung_Zaehlregel_Prinzip.md`) und Suchrichtung prüfen. Zu beachten: Eine Kramers-Regel (nur halbzahlige Spins,
