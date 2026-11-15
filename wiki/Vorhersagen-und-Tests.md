@@ -10,6 +10,8 @@
 
 **Nachtrag 15.11.2026 (v4.10.0-r18):** Suche, Nachrechnung von H2 und OP4-Erkundungen in Runde r18 eingetragen; kein neuer Test.
 
+**Nachtrag 15.11.2026 (v4.10.0-r19):** Kein neuer Test. Zu H99: Die Neutrino-Phase 2/9 + π/12 steht in der Originalarbeit von Brannen (Found. Phys. 40 (2010) 1681, arXiv:1006.3114); die Vorab-Notiz nannte sie nur über eine Sekundärquelle. Der Status von H99 (verträglich, nicht blind) bleibt.
+
 **Nachtrag 15.11.2026 (v4.10.0-r17):** Kein neuer Test. Statusvermerke zu Uhr-Funktional und Zählregel (nicht blind); die Zählgleichung und damit H15, H46, H96 sind nicht berührt.
 
 **Stand: 7. November 2026.** Die Runden v4.10.0-r06 (Literaturbezug Dorau–Much) und r07 (die Kette im Tachyon-Frame) enthalten keinen Test und keine neue Vorhersage; ein geplanter Test zu r07 wurde nicht vergeben, weil das Ergebnis analytisch feststand. Seit v4.8.0 gilt eine feste Regel: Eine neue Vorhersage oder ein Test wird **vor** der Rechnung als Vorab-Notiz festgeschrieben (Hypothese, Daten, Entscheidungskriterium) und committet. Erst dann wird gerechnet. So lässt sich später prüfen, dass nichts nachträglich angepasst wurde. Diese Seite listet alle Tests mit ihrem Ergebnis. [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie) · [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt)

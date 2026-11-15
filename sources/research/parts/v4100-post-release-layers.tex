@@ -2554,3 +2554,130 @@ R_{\rm glob}^{(v4100\text{-}r18,+)}=(0,1,1,1,1),
 \]
 OP~1, OP~3 and OP~4 remain open.  The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
 \(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r19 Source-Only: Status Notes on the Commutant of One Generation, and on Prior Literature for the Doublet and the Octant}
+\addcontentsline{toc}{section}{v4.10.0-r19 Source-Only: Status Notes on the Commutant of One Generation, and on Prior Literature for the Doublet and the Octant}
+\label{sec:v4100-r19-commutant-literature}
+% ============================================================================
+
+\paragraph{Purpose.}
+This layer records an exploration of 15 November 2026 on the open item ``a charged carrier'' of v4.10.0-r16.7, that is whether
+the generation index of v4.10.0-r15.5 can sit on the frame doublet, and a literature check made for a planned short paper.
+The exploration computes all operators on one generation of \(\mathbb C\otimes\HH\otimes\OO\) that commute with the gauge and
+Lorentz generators.  Its outcome was fixed by Schur's lemma before the computation; it is not blind and has no
+pre-registration.  The literature items attach references to earlier layers and add no new content.  The notes are
+\texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r19/} and the folders cited there.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r19 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.1.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24237112}{10.5281/zenodo.24237112} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r19 status notes}
+\label{subsec:v4100-r19-status}
+
+\paragraph{Theoremlet v4.10.0-r19.1 (the commutant of one generation is commutative).}
+On \(\mathbb C\otimes\HH\otimes\OO\cong\mathbb C^{32}\) take the generators of the short-paper construction: Lorentz rotations
+\(L_q\) and boosts \(iL_q\) on \(\HH\), the weak \(T_a'=C_{\rm ch}T_a\) with \(T_a=-\tfrac i2R_{e_a}\) and \(C_{\rm ch}=\tfrac12(1+iL_{e_7})\),
+the hypercharge \(Y/2=Q-\tfrac12+(1-C_{\rm ch})T_3\), and colour as the eight derivations of \(\OO\) that annihilate \(e_7\) (of the
+fourteen derivations).  The spectrum of \(Y\) gives the six Weyl multiplets \(Q,L,u^c,d^c,e^c,\nu^c\) with multiplicities
+\(12,4,6,6,2,2\).
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] The complex-linear operators commuting with all generators form a commutative algebra of dimension \(6\), one phase per
+multiplet; no antilinear operator commutes with all generators.  The real commutant is \(\mathbb C^6\).
+\item[(b)] Hence no pair of anticommuting operators is compatible with the symmetries, and no qubit with three mutually unbiased
+bases exists on one generation, whether built from the frame maps or from any other operators.
+\item[(c)] Of the frame maps of v4.9.0-r51, \(R=i\cdot1\) lies in the commutant but is central; \(T\) (complex conjugation) and
+\(J_B=iT\) do not commute with the Lorentz generators, \(SU(2)'\) and \(Y\), since they map to the conjugate representation.
+\item[(d)] With \(n\) copies of the generation the commutant contains \(M_n(\mathbb C)\) acting on the copy index (checked for
+\(n=2\) with \(1\otimes\sigma_k\)), so a qubit exists for \(n\ge2\).  On the copy index \(R\) is again a scalar, and \(T\) still does not
+commute with the symmetries.
+\end{enumerate}
+The statement is Schur's lemma for a representation whose irreducible constituents have multiplicity one and are of complex
+type; the computation confirms it on the concrete carrier and extends v4.10.0-r16.1 from samples on \(\mathbb C\otimes\OO\) to all
+symmetry-compatible operators on one generation.  On the real doublet \((E,B)\) the frame maps confirm v4.10.0-r14.3(d): \(R^2=-1\),
+\(T\), \(J_B\), \(R\) span \(\mathfrak{sl}(2,\mathbb R)\), and at most two reflections anticommute; the third unbiased basis needs a
+second imaginary unit, which the complex amplitudes of v4.10.0-r16.2 and r16.3 supply on \(\chi\).
+
+\paragraph{Remark v4.10.0-r19.2 (consequence for the charged carrier of r16.7).}
+In the Gram reading of v4.10.0-r16.4 the three states are readout states in a doublet \(W\), and the square roots of the masses
+are the eigenvalues of their Gram matrix on the generation space \(\mathbb C^3\).  A mass matrix that commutes with the charges
+requires the map \(\mathbb C^3\to W\) to act as the identity on the charge part; \(\mathbb C^3\) and \(W\) are then multiplicity
+spaces of the gauge representation, and by r19.1 the carrier must contain the generation several times.  The doublet
+\(\chi\) of r16.3 can therefore enter a charged carrier only through copies that are present beforehand (the sedenion route of
+v4.10.0-r13 has two, under CT-003), and the frame maps of r51 would have to be defined anew on the copy index.  The
+reading ``three generations are the three frame maps'' of r15.5 and r16.4 then takes the number of generations as input.
+It is not derived on the inventory.  The computations of r15.5(a)--(c), r16.3 and r16.7 on the field doublet stand.
+
+\paragraph{Remark v4.10.0-r19.3 (prior literature for the field doublet).}
+For time-harmonic fields the doublet \((E,H)\) has three bases, electric--magnetic, parallel--antiparallel (\(E\pm H\)) and
+right--left (helicity), with Stokes-type parameters on a sphere on which duality rotates about the helicity axis and time
+reversal acts as a mirror; boosts change the total and the helicity parameter and leave the other two fixed (Golat, Vernon,
+Rodr\'iguez-Fortu\~no, arXiv:2405.15718).  In the language of the Companion these are the eigenbases of \(T\), of \(J_B\) (the
+compensator ports) and of \(R\).  This answers the open third axis of v4.9.0-r04 from the literature and is the setting of
+v4.10.0-r16.2.  The Riemann--Silberstein reading of v4.8.0-r06 (Reading~B) and r07 is textbook material (Bialynicki-Birula and
+Bialynicka-Birula, J.~Phys.~A 46 (2013) 053001, arXiv:1211.2655).
+
+\paragraph{Remark v4.10.0-r19.4 (prior literature for the octant and the neutrino phase).}
+Three spin-\(\tfrac12\) states from the three mutually unbiased bases, a product of their projectors with phase \(e^{i\pi/4}\), amplitudes
+as roots of \(z^3=(1+i)/4\), the charged-lepton form \(1+\sqrt2\cos(2g\pi/3+2/9)\) and the neutrino phase \(2/9+\pi/12\) appear in
+C.~A.~Brannen, Found.\ Phys.\ 40 (2010) 1681, arXiv:1006.3114.  The equivalence of \(K=\tfrac23\) with an angle \(\pi/4\) between the
+vector of square-root masses and \((1,1,1)\) is due to R.~Foot, arXiv:hep-ph/9402242; the value \(\delta\approx2/9\) is discussed by
+P.~\.Zenczykowski, Phys.\ Rev.\ D 86 (2012) 117303 and 87 (2013) 077302.  These references belong to v4.10.0-r12.2, r12.4(c),
+r12.5(c), r14.5, r15.4 and r16.7, and to H99, whose pre-registration cites Brannen only through a secondary source.  The
+octant triple, its phase \(\pi/4\) and the shift \(\pi/12\) are therefore not results of the Companion; what is specific here is their
+placement on the frame maps of the field doublet (r15.5, r16.7), restricted by r19.2.  The two arXiv texts were read through
+automated summaries of the full text; formulas and equation numbers are to be confirmed in the PDFs before citation.
+
+\subsection*{v4.10.0-r19 status in the three frames}
+\label{subsec:v4100-r19-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item M, T: \(R\) acts as a scalar on every complex-linear carrier, so the change \(M\leftrightarrow T\) does not separate states of one
+generation; \(T\) maps a generation to its conjugate (r19.1(c)).
+\item P: not evaluated.
+\end{itemize}
+
+\subsection*{v4.10.0-r19 register entries}
+\label{subsec:v4100-r19-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r19\\
+\midrule
+commutant of one generation on \(\mathbb C\otimes\HH\otimes\OO\) & \(\mathbb C^6\), commutative, no antilinear part (r19.1)\\
+generation index on the frame doublet (r15.5) & excluded on one generation; possible only with copies set beforehand (r19.2)\\
+charged carrier of r16.7 & needs multiplicity at least two; frame maps not defined on the copy index (r19.2)\\
+three bases of the field doublet, helicity axis & in the literature (Golat et al.\ 2024) (r19.3)\\
+octant triple, phase \(\pi/4\), neutrino shift \(\pi/12\) & in the literature (Brannen 2010; Foot 1994) (r19.4)\\
+H99 & unchanged (compatible, not blind); attribution to Brannen confirmed at the primary source\\
+H100 / H102 & pending / pending\\
+CT-001 to CT-004 & unchanged\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r19 ledger and guard update}
+\label{subsec:v4100-r19-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r19}=(1,1,0)
+\]
+for (status notes recorded; the commutant computed in the cited script; a carrier with several generations and frame maps
+on it not derived).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r19,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r19}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+OP~1 and OP~3 remain open.  The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality,
+\(C6/T2\), a global photon-clock/RH theorem, or global all-readout closure.

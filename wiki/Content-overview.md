@@ -1,6 +1,6 @@
 # What the Companion contains
 
-**State: 5 November 2026, research draft 4.10.0-draft with layers through v4.10.0-r18.** English companion of the German [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt), which is the master. This page states what the *Quantum Sphaera Companion* assumes, defines and shows, and how far each part currently holds. Source labels at the end of each part are for checking; the page itself should be enough to understand the content. [Home](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/English)
+**State: 5 November 2026, research draft 4.10.0-draft with layers through v4.10.0-r19.** English companion of the German [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt), which is the master. This page states what the *Quantum Sphaera Companion* assumes, defines and shows, and how far each part currently holds. Source labels at the end of each part are for checking; the page itself should be enough to understand the content. [Home](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/English)
 
 ## How to read each statement
 
@@ -114,6 +114,8 @@ Layer v4.10.0-r16 records status notes after r15. On C⊗O the reading of r15.5 
 Layer v4.10.0-r17 records status notes after r16. OP3: the Koide condition has exactly the form of the photon-clock coherence functional, but no window threshold lies at ½ (r17.1); the overlap ½ can be read as maximal uncertainty whether two readouts show the same object (r17.2). OP1: assuming the frame maps act on horizon punctures through the same SU(2), they act irreducibly only on j = ½; "T counts irreducible punctures, M the invariant extremal doublet" gives the H98 pair (r17.3). The Barbero connection lies, for real γ, on the equator of the doublet of self-dual and anti-self-dual connections, but is not the bridge (r17.4). Penrose strand bundles give the bridge if a strand is a quantum of χ; bosonic strands give the spins of M, fermionic strands only j = ½ (r17.5). The motivation of the fermionic reading by R² = −1 is withdrawn; it gives Kramers (r17.6). All explorations, not blind.
 
 Layer v4.10.0-r18 records that no blind test was found among the structures of r15–r17 (two neutrino candidates are excluded by existing data), recomputes H2 (Σm_ν = 0.0592 eV, stable with JUNO and NuFIT 6.1, compatible) and corrects an unsupported wiki statement on the ordering. For OP4 the Dirac readout cycle of r55 is read as the one-third-period time cycle, and the neutrino Z2 that generates TM2 as the fermion parity of Spin(8); with the r57 mask only mask-free fixed slots fit. No new number.
+
+Layer v4.10.0-r19 records that the generation index of r15.5 cannot sit on the frame doublet of one generation: on one generation of C⊗H⊗O only six phases, one per multiplet, commute with the gauge and Lorentz groups (commutant C⁶, commutative, no antilinear part). A qubit with three mutually unbiased bases exists only if the generation is present several times, so the number of generations would be input. It also attaches prior literature: the three bases of the field doublet with the helicity axis are in Golat et al. (2024); the octant, the phase π/4 and the neutrino phase 2/9 + π/12 in Brannen (2010); K = 2/3 as 45° in Foot (1994). No new number.
 
 ## Never claimed
 
