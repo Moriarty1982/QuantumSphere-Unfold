@@ -38,3 +38,36 @@ braucht eine neue Struktur, die eine heute freie Größe festlegt: Σp² = 2/3 (
 Frame (S2). Bis dahin bleiben die offenen Vorhersagen H9, H15, H42, H46, H96, H100, H102 und H2 die Prüfsteine.
 
 OP1–OP5, C5, C6/T2 und die Guards sind unverändert.
+
+## Nachtrag 15.11.2026: H2 nachgerechnet
+Auftrag des Autors: „rechne h2 nochmal nach“. Vorab-Notiz `../v4_8_0_r03_r12/llm/Vorab_Notiz_H2_Neutrino_Triole.md`
+(Commit 434c5a8), Skript `k15_test_h2.py`, Ergebnis `Ergebnis_H2_Neutrino_Triole.md` (v4.8.0-r12). Nachrechnung mit
+`h2_recheck.py`, Ausgabe `run/h2_recheck_stdout.txt`.
+
+1. **Reproduktion:** Das unveränderte Skript k15 gibt dieselben Werte wie das Ergebnis vom 20.10.: normale Ordnung
+   m = (0,364; 8,662; 50,131) meV, Σ = 0,05916 ± 0,00023 eV, leichteste Wurzel negativ, K = 0,666667; invertierte Ordnung
+   Σ = 0,10201 eV (über der Grenze 0,0642 eV, auch an den 2σ-Rändern).
+2. **Neuere Eingaben** (normale Ordnung):
+
+   | Δm²₂₁-Quelle | Σm_ν | Abstand zur Untergrenze (m₁ = 0) |
+   |---|---|---|
+   | NuFIT 6.0 (vorab festgelegt) | 0,05916 ± 0,00023 eV | 0,37 meV |
+   | JUNO 2026 (erste Daten, 7,50 ± 0,12) | 0,05916 ± 0,00021 eV | 0,37 meV |
+   | SNO+ (7,63 ± 0,17) | 0,05925 ± 0,00022 eV | 0,38 meV |
+   | NuFIT 6.1 vollständig (7,537; Δm²₃₁ = 2,511) | 0,05917 ± 0,00021 eV | 0,38 meV |
+
+   Die Vorhersage ist stabil: **Σm_ν = 0,0592 eV, m₁ ≈ 0,37 meV**, unabhängig von der Quelle.
+3. **Urteil unverändert:** nach dem vorab festgelegten Kriterium (Grenze 0,0642 eV) **verträglich**. Die Einordnung von
+   damals bleibt richtig: schwach trennend, nur etwa 0,4 meV über der Untergrenze der normalen Ordnung.
+4. **Kosmologie, nachträglich und nicht Teil des Kriteriums:** Die Feldman–Cousins-Variante der DESI-Auswertung gibt
+   Σ < 0,053 eV und läge unter H2, aber ebenso unter der Untergrenze 0,0588 eV jeder normalen Ordnung. Das ist eine Spannung
+   zwischen ΛCDM-Kosmologie und Oszillationsdaten, kein besonderer Befund gegen H2; mit dynamischer dunkler Energie lockert
+   sich die Grenze (bis 0,163 eV).
+5. **Berichtigung im Wiki:** `wiki/Vorhersagen-und-Tests.md` führte H2 mit „normale Ordnung von JUNO gestützt“ (eingefügt
+   mit Commit 3ab4980, ohne Fundstelle). Das stimmt nicht: Die ersten JUNO-Daten (59,1 Tage) messen θ₁₂ und Δm²₂₁ und sind
+   unter Annahme der normalen Ordnung ausgewertet; die Ordnung bestimmt JUNO erst mit mehrjährigen Daten. Die Zeile ist
+   berichtigt.
+
+**Nebenbei berichtigt:** In der Antwort an den Autor zur Datenlage hieß es, der neueste NuFIT sei 6.0. Das Repo hat seit dem
+13.11. die Primärtabelle von **NuFIT 6.1** (Ergebnis H99); H100 wartet auf die Version danach. Der Befund „keine neue
+Version nach 6.1“ bleibt.
