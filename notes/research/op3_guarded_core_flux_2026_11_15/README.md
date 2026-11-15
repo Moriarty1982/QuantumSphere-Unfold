@@ -230,3 +230,42 @@ entropy and SU(2) Chern-Simons theory“, arXiv:0905.3168 (ENP). Damit sind die 
 Defekt hängt von a₀ ab, und k = 4π/γ_M ist nicht ganzzahlig) noch begrifflich (dort trägt die Punktierung die
 Krümmung). Diese Spur ist damit geprüft und **trägt nicht**. Der Companion zitiert die Zählung (v480, Zeile 250), nicht
 diese Geometrie. Es wird nichts davon übernommen.
+
+## Schritt 2 (15.11.): Warum genau ein Kern? Topologie, mit Berichtigung zu Faden 1
+
+`core_count.py`, Ausgabe `run/core_count_stdout.txt`. Phasenbuchhaltung über Holonomien, Erkundung, nicht blind.
+Vorwissen: Ein Grund für „genau eine Querung“ (CT-002) wurde in `../op3_i1_string_bridge_2026_11_14.md` und
+`../op3_ct002_t11_shift_2026_11_14.md` gesucht, nicht gefunden. Ein topologischer Ansatz war nicht darunter.
+
+**Grundtatsache.** Eine Holonomie hängt nur vom Zusammenhang *auf* der Schleife ab. Die Kugel ohne n Kappen hat
+n − 1 unabhängige Schleifen um Löcher, also n − 1 freie Aharonov-Bohm-Holonomien (für n = 1 ist der Rest eine Scheibe
+und einfach zusammenhängend).
+
+| Zahl der Kerne | Rest | freie Parameter | Biegung |
+|---|---|---|---|
+| 0 | geschlossene Kugel | keiner, Gesamtfluss 2π fest | keine; Oktant starr bei π/4 |
+| 1 | Scheibe | keiner | möglich, aber festgelegt durch die Lage des verdrängten Flusses |
+| 2 | Ring | eine Holonomie t | φ = π/4 − γ_M/2 + t, beliebig verschiebbar |
+| n | Scheibe mit n − 1 Löchern | n − 1 | frei |
+
+**Befund 1, genau ein Kern ist ausgezeichnet.** Es ist die einzige Zahl, die überhaupt Biegung erlaubt und dabei keinen
+freien Parameter einführt. Null Kerne biegen nicht, ab zwei Kernen ist die Phase eine freie Zahl und sagt nichts mehr
+vorher. Das ist ein topologischer Grund für die „eine Querung“ von CT-002: Sie ist die einzige vorhersagefähige Zahl.
+Hergeleitet ist damit nicht, dass es *überhaupt* einen Kern gibt; das verlangen die Daten (Biegung).
+
+**Befund 2, Berichtigung zu Faden 1.** Dort stand, bei „removed“ fließe der Fluss über den Rand ab, weil keine
+Chern-Zahl ihn binde. Für genau einen Kern ist das ungenau. Der Rest ist einfach zusammenhängend, der Fluss kann nicht
+entweichen, und die Holonomie um das Loch ist durch den Rest festgelegt. Die Rechnung zeigt:
+- Nur ausschneiden, mit unverändertem Zusammenhang, ändert nichts: φ = π/4.
+- Ein flussfreier Kern verdrängt Fluss, der auf der Kugel bleibt. Entscheidend ist, wohin er geht:
+  - ins Dreieck: φ = π/4, keine Biegung;
+  - gleichmäßig verteilt (B): φ = 0,679475;
+  - ganz außerhalb des Dreiecks, etwa am Gegenpol (A): φ = 0,666632, die H102-Beziehung.
+
+A heißt also richtig: **Der Kern ist flussfrei, und der verdrängte Fluss sitzt außerhalb des Dreiecks**, zum Beispiel
+am Gegenpol des Kerns. Der Gesamtfluss 2π bleibt dabei erhalten. Das passt zu einem Dirac-Faden vom Kern durch die
+Kugel zum Gegenpol. Die Lesart „removed“ aus Faden 1 bleibt als Stütze für einen flussfreien Kern, aber nicht für ein
+„Abfließen“.
+
+**Was offen bleibt:** warum der verdrängte Fluss zum Gegenpol geht und sich nicht gleichmäßig verteilt (B wäre das
+Energieminimum), und warum der Kern die Größe γ_M hat.

@@ -78,7 +78,13 @@
     Beide Sektoren verlieren denselben Kern γ_M; „Ladung legt den Kern ins Dreieck“ ist verworfen.
   - Faden 3: Die Kugel B_ε(K) bricht die Fasern über einer Kappe vom Radius 2ε. γ_M entspricht ε = 7,90° (binär) oder
     einem Volumenanteil γ_M/(4π) des S³ (gewichtet, ε = 25,94°). ε ist im Paper frei.
-  - Nächste Frage: ε bzw. den Volumenanteil γ_M/(4π) aus dem Paper begründen (Horizont-Zählregel).
+  - Schritt 1: Die Zählregel legt den Kern nicht fest. Literatur (ABK gr-qc/0005126, ENP 0905.3168, über alphaXiv
+    geprüft): gleiche Struktur, aber kein fester Winkel γ_M (Level 4π/γ_M = 52,9 nicht ganzzahlig).
+  - Schritt 2: Genau ein Kern ist topologisch ausgezeichnet: Biegung ohne freien Parameter. Kein Kern biegt nicht; ab
+    zwei Kernen gibt es n − 1 freie AB-Holonomien. Berichtigung zu Faden 1: Bei einem Kern entweicht kein Fluss; A heißt
+    flussfreier Kern mit verdrängtem Fluss außerhalb des Dreiecks (Gegenpol, Dirac-Faden).
+  - Offen: warum der verdrängte Fluss zum Gegenpol geht (B wäre das Energieminimum) und warum Ω = γ_M.
+  - PR #127 offen (Zweig `research/op3-guarded-core-flux`); Schritt 2 wird nachgeschoben.
 - **Stand 15.11.:** Die Notiz mit den Nachträgen 1–9 ist über PR #124 auf main.
   Inhalt der Nachträge: r47-Maske, ε-Vorwissen r50–r56, ε* = (1/3)ln((1+√3)/2), Photonengewichte,
   Frame-Kreuzprodukte (sl(2,R)), Levi-Civita, geordnete Produkte und r33.

@@ -20,6 +20,13 @@ Drei Nachträge vom selben Tag:
   denselben Kern γ_M; die Idee „Ladung legt den Kern ins Dreieck“ ist verworfen.
 - **Kugel und Fasern:** Die Kugel B_ε(K) des Papers entfernt keine Faser ganz, bricht aber die Fasern über einer Kappe
   vom Radius 2ε. γ_M entspricht ε = 7,90° (binär) oder einem Volumenanteil γ_M/(4π) des S³ (gewichtet, ε = 25,94°).
+- **Zählregel und Literatur:** Die Zählregel legt die Kerngröße nicht fest. Die Geometrie isolierter Horizonte (ABK,
+  ENP, geprüft) hat dieselbe Struktur, gibt aber keinen festen Winkel γ_M: Der Defekt hängt von der Horizontfläche ab,
+  und das nötige Level 4π/γ_M = 52,9 ist nicht ganzzahlig.
+- **Topologie:** Genau ein Kern ist die einzige Zahl, die Biegung erlaubt und keinen freien Parameter hat. Kein Kern
+  biegt nicht; ab zwei Kernen gibt es freie Aharonov-Bohm-Holonomien.
+- **Berichtigung zu „Abfluss“:** Bei einem Kern kann der Fluss nicht entweichen. Fall A heißt richtig: Der Kern ist
+  flussfrei, und der verdrängte Fluss sitzt außerhalb des Dreiecks, etwa am Gegenpol (Dirac-Faden).
 [Rechnung](../notes/research/op3_guarded_core_flux_2026_11_15/README.md).
 
 ### OP3: Abbildung C⊗S → C⊗H⊗O, die zwei Generationen sitzen am Platz des Spins (15.11.2026)
