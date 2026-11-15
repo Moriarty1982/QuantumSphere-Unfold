@@ -40,7 +40,24 @@ Boden des augenblicklichen Feldes“ (r10, r20.2), die eine Lesart bleibt; (B2) 
 von Kodimension 1 vorliegen sollten. Zu (B2): Genügt ein invarianter Augenblick (Ereignis-Lesart), dann ist der Nullaugenblick aus
 r20.1 ein Kandidat. Muss die Null bestehen bleiben (Dauer-Lesart), dann liefert die freie Zeitentwicklung keinen Zeugen, und der
 Kandidat aus r20 scheidet aus. **Der Autor hat die Ereignis-Lesart am 16.11.2026 als Arbeitsannahme gesetzt (r21.10);** sie ist
-gesetzt, nicht hergeleitet. (B1) und (B3) bleiben offen.
+gesetzt, nicht hergeleitet. (B1) bleibt offen.
+
+**Vorliegen der Felder, Punkt (B3) (r21.11).** Ein Nullaugenblick liegt in einem Punkt genau dann vor, wenn die Gleichung
+$\bar s_- x^2 + 2wx + s_+ = 0$ eine Wurzel auf dem Einheitskreis hat. Die Bedingung von Kodimension 1 aus r20.1 betrifft die
+Amplituden in einem Punkt; im Raum ist sie auf Flächen erfüllt.
+- **Eine ebene Welle:** $s(t) = 0$ immer, bei jeder Polarisation (bleibende Null, r21.6).
+- **Zwei ebene Wellen gleicher Frequenz:** $s(t) = 2\,z_1(t)\cdot z_2(t)$. Ist eine linear polarisiert, verschwindet sie zweimal je
+  Periode; das Feld ist dann die andere Welle, lichtartig und ≠ 0. **Nullaugenblick in jedem Punkt des Raums.** Sind beide
+  elliptisch, nur auf einer Fläche.
+- **Linear heißt gleiche Helizitätsgewichte (½, ½)**; das passt zu r20.3.
+- **Allgemeines monochromatisches Feld:** Die Punkte mit Nullaugenblick bilden Flächen im Raum (sechs Wellen auf einem Gitter
+  geprüft).
+
+„Nicht generisch“ war also eine Aussage über einen Punkt, nicht über ein Feld. Die alte Frage, warum solche Felder vorliegen
+sollten, entfällt; offen bleibt, warum ein Zeuge gerade an einem solchen Punkt sitzen sollte. **Literatur (nachträglich
+gefunden):** Die Nullstellen von F·F heißen Riemann–Silberstein-Wirbel (Kaiser 2003; Białynicki-Birula und Białynicka-Birula
+2003). Der Nullaugenblick ist ein Punkt auf einem bekannten Objekt; nur seine Rolle als C5-Kandidat ist projektspezifisch.
+[Erkundung (B3)](../notes/research/c5_presence_2026_11_16/README.md).
 
 **Zwei Klassen (r21.8).** Anlass war die Frage des Autors, ob es auf der untersten Ebene nur „liegt im Nullzustand oder nicht“
 gibt. Die Erkundung k220 kannte die Bahnen von SO(3,ℂ) × Dualität auf z = E + iB: die Schalen |s| = r, den Nullkegel und {0}.

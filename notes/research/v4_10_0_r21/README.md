@@ -17,9 +17,10 @@ bleibt offen.**
 | r21.8 | Zwei Klassen: Unter Lorentz-Gruppe, Dualität und Skala gibt es genau zwei Bahnen von Feldern ≠ 0 (lichtartig oder nicht); Vertreter P (φ = 0) und R (φ = 1); φ = sech 2η_R | ebenda (Nachtrag), `two_classes.py` |
 | r21.9 | Kollapszustand z⁻ = 0 des Hauptkorpus heute: zwei Rollen, Nullpunkt des Versatzes (R) und invariantes Objekt (P); eine Spannung mit r24.3 vermerkt (Lesart) | ebenda (Nachtrag) |
 | r21.10 | Arbeitsannahme des Autors zu (B2): Ereignis-Lesart; gesetzt, nicht hergeleitet | ebenda (Nachtrag) |
+| r21.11 | (B3): Nullaugenblicke liegen in generischen Feldern auf Flächen im Raum, überall bei einer linear polarisierten Teilwelle; Punkte der Riemann–Silberstein-Wirbel (Literatur 2003); offen ist die Wahl des Punktes | `../c5_presence_2026_11_16/README.md`, `presence.py` |
 
 ## Prüfung
 - Guard-Linter (`python tools/qs.py guards sources/research/parts/v4100-post-release-layers.tex --start 2809`):
-  0 Kandidaten in den Zeilen 2809–3019.
+  0 Kandidaten in den Zeilen 2809–3047.
 - Kandidaten-Build (`python .github/scripts/qsc_latex_build.py --source-dir sources/research --output-dir <Pfad>`, MiKTeX):
-  1438 Seiten (mit Nachtrag r21.8–r21.10), 0 Fehler, 0 undefinierte Verweise, 0 Overfull; r21 im Inhaltsverzeichnis.
+  1439 Seiten (mit Nachträgen r21.8–r21.11), 0 Fehler, 0 undefinierte Verweise, 0 Overfull; r21 im Inhaltsverzeichnis.

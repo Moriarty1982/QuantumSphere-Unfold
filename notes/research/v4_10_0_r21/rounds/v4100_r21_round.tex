@@ -10,7 +10,8 @@
 Layer v4.10.0-r20.4 found that C5 in its old form asks, in the measure of one frame, about a passage between two frames, and left the
 restatement to the author.  The author has decided for it (2026-11-16).  This layer restates C5 in the way v4.9.0-r61 treated OP4: it
 types the quantities by frame, splits the old entry \(C5_{\rm zero}\) of v4.7.0-r86 into three questions, and records the status of
-each.  It also corrects one sentence of r20.4 and relates the collapse state of the main body to the two classes of fields.  Exploration, not blind: every computation is fixed analytically beforehand.
+each.  It also corrects one sentence of r20.4, relates the collapse state of the main body to the two classes of fields, and
+examines where null instants are present.  Exploration, not blind: every computation is fixed analytically beforehand.
 \textbf{The forbidden assertion \(C5=0\) is not made, and C5 stays open.}  The notes are
 \texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r21/} and
 \texttt{notes/\allowbreak research/\allowbreak c5\_restatement\_2026\_11\_16/}.  Earlier layers are not rewritten.
@@ -144,7 +145,33 @@ as \(\zminus=0\).  The third row is a tension with the typing of r24.3 and is re
 If the lowest level carries only the class predicate of r21.8, membership at an instant is the primitive notion: it is
 Lorentz-invariant (r20.1(c)), while a duration needs a time parameter that the class level does not have.  On this ground the author
 set the event reading of (B2) as a working assumption on 2026-11-16.  It is a setting.  That the scale and the duality phase are
-divided out at the lowest level is a setting as well; both are symmetries of the free field only (k220).  (B1) and (B3) stay open.
+divided out at the lowest level is a setting as well; both are symmetries of the free field only (k220).  (B1) stays open; (B3) is
+shifted by r21.11.
+
+\paragraph{Theoremlet v4.10.0-r21.11 (presence of null instants; point (B3)).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] A time-harmonic field has a null instant at a point if and only if \(\bar s_-x^2+2wx+s_+=0\) has a root with \(|x|=1\).
+Equivalently, \(-2w\,e^{-i\gamma}\) with \(\gamma=\tfrac12(\arg s_+-\arg s_-)\) lies on the ellipse with semi-axes \(|s_+|+|s_-|\) and
+\(\bigl||s_+|-|s_-|\bigr|\).  The origin lies inside the ellipse exactly when \(0\) or \(2\) roots lie in \(|x|<1\).
+\item[(b)] A single plane wave has \(s(t)=0\) for all \(t\), for every polarisation (the lasting zero of r21.6).
+\item[(c)] For two plane waves of one frequency, \(s(t)=2\,z_1(t)\cdot z_2(t)\).  If one of them is linearly polarised, it vanishes twice per
+period, and the field is then the other wave, null and non-zero: a null instant at every point of space.  If both are elliptic or
+circular, null instants occur only on a surface.
+\item[(d)] A plane wave has a zero in time exactly when it is linearly polarised, that is, when it carries both helicities with weight
+\(\tfrac12\) (compare r20.3).
+\item[(e)] For a general monochromatic field the condition of (a) changes sign in space; the points with a null instant form surfaces.
+\end{enumerate}
+Checked in \texttt{presence.py} (\(400\) fields for (a); \(300\) points each for the two-wave cases; a field of six elliptic waves on a
+\(31^3\) grid for (e), with \(|s|/2u\le1.2\cdot10^{-15}\) at the root time on the surface).
+
+\paragraph{Reading.}
+The codimension one of r20.1(b) is a statement about the amplitudes at one point.  In space it is a surface: every generic
+monochromatic field that is not of pure helicity everywhere carries surfaces of null instants, and fields with a linearly polarised
+partial wave carry them everywhere.  The question of (B3), why such fields should be present, therefore lapses in its old form; what
+remains open is why a witness should sit at such a point.  \textbf{Prior literature, found afterwards:} the zeros of \(F\cdot F\) with
+\(F=E+iB\) are the Riemann--Silberstein vortices (G.~Kaiser, math-ph/0309010; I.~Bia\l{}ynicki-Birula and Z.~Bia\l{}ynicka-Birula,
+physics/0305012, both 2003).  The null instant of r20 is a point on such a vortex; only its role as a C5 candidate is specific to this
+work.  Free monochromatic fields in Reading~B only.
 
 \paragraph{What this does not give.}
 No C5 discharge.  The classification of \(C5_{\rm tr}\) holds within the reading of v4.9.0-r10 and for the transports of Reading~B.
@@ -186,6 +213,7 @@ equal shares and \(P\) & necessary, not sufficient; correction to r20.4 (r21.3(c
 classes of non-zero fields & two under Lorentz group, duality and scale: null or not; representatives \(P\) and R (r21.8)\\
 collapse state \(\zminus=0\) of the main body & two roles: zero of the offset (R) and invariant object (\(P\)); reading, one tension recorded (r21.9)\\
 (B2) instant or duration & event reading set as working assumption by the author; not derived (r21.10)\\
+(B3) presence & null instants lie on surfaces in space for generic fields, everywhere with a linearly polarised partial wave; points of Riemann--Silberstein vortices; open: the choice of the point (r21.11)\\
 \(C5_{\rm zero}\) & open; no discharge, no assertion \(C5=0\)\\
 \bottomrule
 \end{tabular}
