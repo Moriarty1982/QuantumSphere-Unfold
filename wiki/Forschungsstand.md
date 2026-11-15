@@ -1,5 +1,18 @@
 # Forschungsstand
 
+### Grundidee: Was heißt „ein Objekt“? (k220, Erkundung vom 7.11.2026, übernommen am 15.11.)
+
+Erkundung ohne Kriterium. G = SO(3,ℂ) × U(1)_Dualität wirkt auf z = E + iB **transitiv auf jeder Schale |s| = r > 0**
+(konstruktiv geprüft, 2000 Paare); die Bahnen sind die Schalen, der punktierte Nullkegel und {0}, und s = 0 ist der einzige
+Fixpunkt der Dualität.
+- **Materie und Tachyon** liegen auf einer Bahn: „ein Objekt“ im Sinn einer aktiven Symmetrie des freien Trägers.
+- **Licht** liegt auf einer anderen Bahn; mit M und T ist es nur über den gemeinsamen Träger oder als Grenzwert verbunden.
+- Die Gleichsetzungen des Kerns zerfallen in Arten: Symmetrien und Beobachterwechsel erhalten Information; Kompensator,
+  Mischung und Hopf-Lesart verlieren oder vermischen sie. Die Zählregel je Frame gehört zu keiner Art; ein frame-abhängiges
+  Flächenquantum kann nicht aus G kommen.
+
+Die Erkundung lag bis zum 15.11. nur auf einem lokalen Zweig. [Notiz](../notes/research/k220_ein_objekt_2026_11_07/README.md).
+
 ### OP3: Die Koide-Phase und die Helizitätsachse (15.11.2026)
 
 Erkundung (nicht blind). Das Feld-Dublett (E, B) hat nach r04 und r05.2 drei Stokes-Achsen: σz (Materie gegen Tachyon),

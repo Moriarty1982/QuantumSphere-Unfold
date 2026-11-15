@@ -85,6 +85,10 @@
   vertauschend auf χ). Kandidat für den Zyklus: Hurwitz-Einheiten auf N (r13.2, CT-003), nicht untersucht.
   Zusammen mit dem Nachtrag zu r15.5 Stoff für r16 (noch nicht geschrieben).
 
+- **k220 übernommen (15.11.):** Die Erkundung „ein Objekt“ vom 7.11. (Bahnen von SO(3,ℂ) × Dualität; M und T eine Bahn,
+  P Fixpunkt) lag nur auf dem lokalen Zweig `claude/quantenphysik-paper-herleitung-e723a3`; jetzt unter
+  `notes/research/k220_ein_objekt_2026_11_07/`. Lokale Altzweige danach gelöscht (Autorenauftrag).
+
 ## Nächster Schritt (Autorentscheidung)
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,
   `Erkundung_Zaehlregel_Prinzip.md`) und Suchrichtung prüfen. Zu beachten: Eine Kramers-Regel (nur halbzahlige Spins,
