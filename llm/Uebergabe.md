@@ -16,7 +16,9 @@
     Gegenwind schon heute +2,3σ. Eingefroren; eine neue Herleitung wäre eine neue Hypothese.
 - **Platzhalter:** CT-001 partially_constrained, CT-002, CT-003 und CT-004 placeholder; keiner strukturell abgeglichen.
   CT-004 (15.11.): Zählregel je Frame als Stringendpunkte (OP1 mit I1), vier Guards; H15, H46 und H96 auf Autorenauftrag verknüpft
-  (erben je vier Guards).
+  (erben je vier Guards). Berichtigung: Guard 1 („T = String-Sektor“) hat keine Stütze im Bestand (v4.8.0-r03 F11:
+  γ_string nur dem Namen nach Stringkopplung; T11 ordnet nach J-Parität); als Spannung eingetragen (Hash c8dffe0d…).
+- **Daten 15.11.:** PDG weiter Ausgabe 2026 (vor dem 13.11.), kein NuFIT nach 6.1 gefunden; H100 und H102 offen.
 - **OP1 mit I1 (15.11., Erkundung, `notes/research/op1_i1_string_endpoints_2026_11_15/`):** T zählt Endpunkte einzelner
   offener Strings (Chan–Paton, j = ½), M Kanten des Spin-Netzwerks. Die Kramers-Regel ist ausgeschlossen (β = 0,337).
   Kein blinder Test. Gemergt über PR #129 (c9bfb19).

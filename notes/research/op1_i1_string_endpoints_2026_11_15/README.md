@@ -87,3 +87,21 @@ vier Guards (T = String-Sektor, Chan–Paton, Statistik, Spektrum). Die Zählreg
 sind auch H15, H46 und H96 verknüpft und erben über S-COUNT dieselben vier Guards.
 
 OP1–OP5, C5, C6/T2 und die Guards sind unverändert.
+
+## Berichtigung (15.11., Prüfung von Guard 1)
+
+Bei der Prüfung von GUARD-CT004-T-GLEICH-STRING gegen den Bestand fiel auf, dass zwei Stützen der Lesart C3 nicht tragen:
+
+1. **Der Name trägt nichts.** v4.8.0-r03 (F11) hält fest: γ_string = ln 2/(π√3) wurde in der Nomenklatur als
+   „string coupling“ eingeführt, ist aber der ABCK-Wert aus der Zählung isolierter Horizonte, **kein Wert einer
+   Stringkopplung**. Domagała und Lewandowski zeigen außerdem, dass die Beschränkung auf j = ½ in der älteren Zählung
+   aus einer unechten Nebenbedingung stammt. Der Satz oben, γ_string heiße im Companion „string coupling“, ist richtig
+   zitiert, stützt die Gleichsetzung T = String-Sektor aber nicht.
+2. **T11 ordnet nicht nach Frame.** Der Satz `thm:string-lqg-duality` teilt nach der J-Parität: C(f) = ½(f + Jf) ist der
+   String-Sektor, A(f) = ½(f − Jf) der LQG-Sektor. J tauscht Materie und Tachyon. Ein Zustand eines einzelnen Frames
+   hat also Anteile in *beiden* Sektoren; der Tachyon-Frame ist kein Sektor von T11.
+
+**Folge.** Guard 1 von CT-004 ist nicht nur offen, er hat **keine Stütze im Bestand**. Die Lesart „T zählt
+Stringendpunkte“ hängt allein an der zurückgestellten Idee I1. Die Kramers-Prüfung (C2), die Bindung an CT-002 und
+die Verknüpfung von H15, H46, H96 bleiben gültig. CT-004 bleibt Platzhalter; die Spannung ist im Register als
+bekannte Spannung eingetragen (neuer Versionshash c8dffe0d…, gleiche vier Guards, gleiche Vererbung).
