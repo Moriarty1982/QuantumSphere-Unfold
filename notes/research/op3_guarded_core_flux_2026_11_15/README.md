@@ -113,3 +113,29 @@ sagt: „the core K is removed **or** shielded.“
   der Zählregel hat. Das ist weiter dieselbe Lücke wie bei CT-002, die Brücke zwischen Horizont-Punktierung und
   Generationsraum.
 - Dass der Kollapskern ein Horizont ist, steht so im Paper nicht. Die Gleichsetzung ist Lesart.
+
+## Faden 2 (15.11.): Liegt der Kern nur bei geladenen Teilchen im Dreieck? Berichtigung
+
+**Berichtigung einer Aussage im Gespräch.** Die Ausgangsidee lautete, die Neutrinos lägen nach H99 genau auf dem
+Oktanten (flach, leichtestes Neutrino masselos), und Ladung lege den Kern ins Dreieck. Das stimmt nicht. Nach der
+Vorab-Notiz H99 gilt θ_ν = θ_e + π/12 je Generation, also φ_ν = φ_e + π/4, mit **negativer** leichtester Wurzel
+(Kontrolle 3 dort). In H2 ist das leichteste Neutrino 0,36 meV schwer, nicht masselos.
+
+**Richtiges Bild** (`neutrino_phase.py`, Erkundung, nicht blind):
+
+| Sektor | φ | det G | Raumwinkel 2φ |
+|---|---|---|---|
+| geladene Leptonen (aus Polmassen) | 0,666665 | +0,0557, definit | π/2 − 0,23747 (Oktant minus Kern) |
+| Oktant | π/4 | 0, Rand | π/2 |
+| Neutrinos nach H99 | 1,452063 | −0,4162, indefinit | π − 0,23747 (90°-Mond minus Kern) |
+
+- **Der Kern ist in beiden Sektoren gleich.** Beide Raumwinkel fehlen um denselben Betrag 0,23747 ≈ γ_M. Gelten H99 und
+  H102 zugleich, schneidet derselbe Kern aus beiden Figuren aus.
+- **Der Unterschied ist die Größe der Figur, nicht der Kern.** Die geladenen Leptonen umschließen einen Oktanten (π/2),
+  die Neutrinos zwei Oktanten (einen Mond von 90°, π). Das zusätzliche Oktant schiebt die Neutrinos über den Rand in das
+  indefinite Gebiet, also eine negative Wurzel. Das passt zur indefiniten Form, die nur im neutralen Sektor existiert
+  (`../op3_indefinite_form_2026_11_13.md`).
+- Die Idee „Ladung legt den Kern ins Dreieck“ ist damit **verworfen**. Tragfähiger wäre: Ladung bestimmt, ob die Figur ein
+  oder zwei Oktanten umfasst. Das ist eine Umformulierung von H99, keine neue Vorhersage. Warum der neutrale Sektor das
+  doppelte Oktant sieht, ist nicht hergeleitet.
+- Keine neue Hypothese. Neue Zahlen ergeben sich nicht; H99, H100 und H102 bleiben unverändert.
