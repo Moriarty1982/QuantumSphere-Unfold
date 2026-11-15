@@ -1,5 +1,48 @@
 # Forschungsstand
 
+### C5 frame-sauber neu gestellt (16.11.2026, Runde r21)
+
+Erkundung (nicht blind; alle Rechnungen stehen analytisch fest). Der Autor hat entschieden, C5 neu zu stellen (offene Frage aus
+r20.4). Die verbotene Aussage C5 = 0 wird nicht gemacht; **C5 bleibt offen.**
+
+**Größen.** Auf dem Dublett (E, B) mit $2u = E^2 + B^2$, $s = (E + iB)^2$ und $b_x = 2E\cdot B/2u$:
+
+| Größe | Definition | Frame |
+|---|---|---|
+| $`C5_M`$ | $`(1 + b_x)/2`$, Anteil im Kompensatorport | Materie-Frame |
+| $`C5_T`$ | $`(1 - b_x)/2`$, Anteil im Partnerport | Tachyon-Frame (liest nach r28 die getauschten Ports) |
+| Boden $`\phi`$ | $`\lvert s\rvert/2u`$ | frame-frei: fest unter R, T und J_B |
+
+Es gilt immer $C5_M + C5_T = 1$; in der Kollar-Rekursion sind die kumulierten Anteile $(3/4)^n$ und $1 - (3/4)^n$.
+
+**Drei Fragen statt einer.** Der alte Eintrag C5_zero („keine endliche Stufe N mit Score 0“, r86) zerfällt in:
+1. **Übergangsfrage (frame-typisiert):** Gibt es eine endliche Stufe mit $C5_M = 0$, also $C5_T = 1$?
+2. **Photonpunkt-Frage (frame-frei):** Erreicht ein nicht lichtartiger Zustand mit Inhalt ≠ 0 bei endlichem Parameter $\phi = 0$?
+3. **Brückenfrage:** Ist das Erreichen von $\phi = 0$ eine Entladung der Obstruktion im Sinn von r86 und r88?
+
+**Befunde.**
+- **Die Übergangsfrage ist eine Verlagerung (r21.4, innerhalb der Lesart von r10).** $C5_M = 0$ gilt genau für E = −B. Ein solches
+  Feld gibt es schon statisch; dort ist $C5_T = 1$ und der Boden maximal ($\phi = 1$). Wegen der festen Summe verschwindet in der
+  typisierten Frage nichts: Der Inhalt wechselt den Frame, und das fällt unter (δ) aus r88. In der selektiven Rekursion tritt
+  $C5_M = 0$ bei keiner endlichen Stufe ein (r86.2).
+- **Die Photonpunkt-Frage hat eine positive Antwort als Aussage über Felder (r21.5).** Boosts und die Drehungen von Lesart B lassen
+  |s| fest; der Fluss von r27 erreicht P nur im Grenzwert (außer bei α = π/4); die freie Zeitentwicklung erreicht $\phi = 0$ zu
+  endlicher Zeit für die Familie von Kodimension 1 aus r20.1. Das ist keine Aussage über C5.
+- **Bleibende Null (r21.6).** Das Zeitmittel von $|s(t)|^2$ ist $(|s_+|^2 + 4|w|^2 + |s_-|^2)/16$. Also ist s(t) = 0 für alle t
+  genau dann, wenn $s_+ = s_- = w = 0$, und die Beträge dieser Größen ändert die freie Zeitentwicklung nicht. Ein Feld, das
+  bleibend im Photonpunkt steht, stand dort von Anfang an (ebene Wellen). Die freie Zeitentwicklung führt in keine bleibende Null.
+- **Berichtigung zu r20.4 (r21.3(c)).** „Beide Anteile ½“ kennzeichnet den Photonpunkt nicht: Gleiche Anteile heißen E·B = 0 und
+  gelten auf der ganzen M–T-Achse der Scheibe, auch für ein reines E-Feld. Der Photonpunkt ist durch $\phi = 0$ gekennzeichnet;
+  gleiche Anteile sind notwendig, nicht hinreichend.
+
+**Wo die offene Frage jetzt sitzt (r21.7).** Allein in der Brückenfrage. Sie hängt an drei Punkten: (B1) der Lesart „Obstruktion =
+Boden des augenblicklichen Feldes“ (r10, r20.2), die eine Lesart bleibt; (B2) Augenblick oder Dauer; (B3) warum Felder der Familie
+von Kodimension 1 vorliegen sollten. Zu (B2): Genügt ein invarianter Augenblick (Ereignis-Lesart), dann ist der Nullaugenblick aus
+r20.1 ein Kandidat. Muss die Null bestehen bleiben (Dauer-Lesart), dann liefert die freie Zeitentwicklung keinen Zeugen, und der
+Kandidat aus r20 scheidet aus. **(B2) ist eine offene Entscheidung des Autors.**
+
+[Erkundung](../notes/research/c5_restatement_2026_11_16/README.md) · [Runde](../notes/research/v4_10_0_r21/README.md).
+
 ### C5, Form (iii): ein Nullaugenblick der Feldinvariante (15.11.2026, Runde r20)
 ### OP3: Der Generationsindex braucht Kopien (15.11.2026, Runde r19)
 
