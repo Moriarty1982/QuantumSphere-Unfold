@@ -1,6 +1,6 @@
 # Forschungsstand
 
-### C5, Form (iii): ein Nullaugenblick der Feldinvariante (15.11.2026)
+### C5, Form (iii): ein Nullaugenblick der Feldinvariante (15.11.2026, Runde r19)
 
 Erkundung (nicht blind); die verbotene Aussage C5 = 0 wird nicht gemacht. Für zeitharmonische Felder läuft die augenblickliche
 Invariante s(t) auf einer Ellipse um w/2. Bei nicht generischen Feldern (Kodimension 1) geht sie durch 0: Zu einer endlichen

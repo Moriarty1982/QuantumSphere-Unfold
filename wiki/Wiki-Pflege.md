@@ -102,6 +102,9 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 15.11.2026: Runde v4.10.0-r19 eingetragen (Forschungslinie, Inhalt, Gesamtbild, Offene-Probleme, Content-overview,
+  Forschungsstand). Kein Abschluss.
+
 - 15.11.2026: C5-Kandidat: Zeit gegen Kollar-Stufe geprüft (fallen nur bei reiner Helizität zusammen). Kein Abschluss.
 
 - 15.11.2026: C5-Kandidat: Lücke „augenblicklich oder Zustandsgröße“ innerhalb der Lesart von r10 geklärt. Kein Abschluss.
