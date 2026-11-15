@@ -1,0 +1,5 @@
+(1) Clifford-Relationen: True; Drehung um 2 pi: Vektor True (+1), Spinor 8_s True (-1), Spinor 8_c True (-1)
+(2) 500 zufaellige D-invariante Majorana-Matrizen: feste Spalte |U|^2 = 1/3 in jeder Zeile (max. Abw. 1.1e-16) -> TM2
+(3) fester Slot 1 (Maskengewicht +0): 388 Treffer, eps_e 0.03 bis 0.64
+(3) fester Slot 2 (Maskengewicht +0): 388 Treffer, eps_e 0.03 bis 0.64
+(3) fester Slot 3 (Maskengewicht -3): 0 Treffer

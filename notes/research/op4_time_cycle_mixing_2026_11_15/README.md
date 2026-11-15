@@ -38,3 +38,26 @@ Autors: „Ja, prüfen“. Keine H-Nummer, kein CT-Eintrag, Guards unverändert.
 - **Kein Test.** Die Lesart erklärt das bekannte Muster, sagt aber nichts Neues voraus. H9 bleibt der offene Prüfstein für θ₁₂.
 
 OP4 bleibt offen. OP1–OP5, C5, C6/T2 und die Guards sind unverändert.
+
+## Nachtrag 15.11.2026: Die Neutrino-ℤ₂ als Zentrumselement von Spin(8)
+Auftrag des Autors: „Ja, prüfen“. **Erkundung, nicht blind** (TM2, r38.1(c) und die Treffer von H41 waren bekannt; die
+Aufteilung der Treffer nach festem Slot ist eine nachträgliche Auswertung derselben Daten). Skript `spin8_center_z2.py`,
+Ausgabe `run/spin8_center_z2_stdout.txt`.
+
+1. **(1, −1, −1) ist die Fermionparität von Spin(8).** In Cl(8) ist die Drehung um 2π auf dem Vektor +1 und auf beiden
+   chiralen Spinoren −1. Auf den Trialitäts-Slots (8_v, 8_s, 8_c) ist das genau das Vorzeichentripel aus r38.1(c), das als
+   ℤ₂ der Neutrinos (r55) TM2 erzeugt.
+2. **Eine Majorana-Matrix mit dieser Invarianz gibt TM2.** Für 500 zufällige symmetrische Matrizen mit D M D = M,
+   D = diag(1, −1, −1), ist die feste Spalte in der Flavourbasis exakt (⅓, ⅓, ⅓). Der Vektor-Slot entkoppelt; ν₂ ist der
+   Vektor-Slot, im Zeitbild die gleich gewichtete Auslesung zur Zeit 0.
+3. **Die Maske aus r57 unterscheidet die drei ℤ₂.** Mit der Lepton-Maske W_l = (0, 0, −3) (Variante A von H41, gleiche Daten
+   und Raster wie k97) treffen nur die ℤ₂, deren fester Slot das Maskengewicht 0 hat: Slot 1 und Slot 2 je 388 Treffer
+   (zusammen die 776 von H41), Slot 3 keinen. Nach r47 hat der Bezugsslot stets das Gewicht 0 („beide Chiralitäten stimmen
+   dort überein“). **Die Lesart „fester Slot = Vektor-Slot = Bezugsslot“ ist damit mit H41 verträglich.** Zwischen Slot 1 und
+   Slot 2 entscheidet die Lepton-Maske nicht.
+
+**Folgerung:** Die bisher freie Gruppe G_M der Neutrinos (r55) lässt sich als (−1)^F von Spin(8) lesen, im Bezugssystem, in dem
+ein maskenfreier Slot der Vektor ist. Die Majorana-Kopplung respektiert die Fermionparität der Trialität, die Dirac-Kopplung
+den Zyklus τ. Neu ist die Begründung, nicht das Muster: Es bleibt TM2 mit Maskenkorrektur, θ₂₃ frei, keine neue Zahl.
+Gesetzt bleiben: warum Majorana (−1)^F respektiert und Dirac nicht (Lesart: ein Feld mit sich selbst gegen links an rechts),
+die Zuordnung der Generationen zu den Trialitäts-Slots (r37) und die Wahl des Vektor-Slots.
