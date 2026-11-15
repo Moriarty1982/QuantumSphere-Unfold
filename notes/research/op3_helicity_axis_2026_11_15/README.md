@@ -94,3 +94,41 @@ vom Bezugssystem abhängt. Die Hermitesche Stokes-Kugel von r05.2 hängt dagegen
 - **Unverändert offen:** Die Überlappung ½ ist gesetzt (das Oktant wird invariant, nicht hergeleitet). Wie ein
   Feld-Dublett die Generationen geladener Leptonen trägt, bleibt eine Lesart. Die Biegung zu φ = 2/3 bleibt beim Kern
   (γ_M, OP1).
+
+## Nachtrag 15.11.2026: drei Vorzeichen, Frame-Abbildungen als Vierergruppe, kein Dreierzyklus
+Auftrag des Autors: „Ja, prüfen“. **Erkundung, nicht blind.** Skript `frame_labels.py`, Ausgabe
+`run/frame_labels_stdout.txt`.
+
+**Ergebnisse**
+1. **Die drei Achsen der invarianten Kugel sind drei Vorzeichen eines Feldes:** sign Re s (Materie gegen Tachyon),
+   sign Im s = sign E·B (Photonseite, r02.1) und das Helizitätsvorzeichen sign(|s₊| − |s₋|). Jede Frame-Abbildung kippt
+   zwei davon und erhält genau eines:
+
+   | Abbildung | Re s | Im s | Helizität |
+   |---|---|---|---|
+   | R | kippt | kippt | bleibt |
+   | T | bleibt | kippt | kippt |
+   | J_B | kippt | bleibt | kippt |
+
+   Die drei Abbildungen bilden (auf den Vorzeichen) die Kleinsche Vierergruppe.
+2. **Die Pole sind die Eigenzustände.** Materiefeld und Tachyonfeld sind Eigenzustände von T (Eigenwerte ±1), die beiden
+   Felder der Photonseite Eigenzustände von J_B (±1), selbst- und antiselbstduales Feld Eigenzustände von R (±i). Keiner
+   dieser Zustände ist Eigenzustand einer zweiten Abbildung.
+3. **Keine lineare Feldabbildung vertauscht die Achsen zyklisch.** Für eine Abbildung der Indexebene (E, B), geschrieben in
+   der Basis F± als (F₊, F₋) ↦ (aF₊ + bF₋, cF₊ + dF₋), gilt s₊' = a²s₊ + 2ab F₊·F₋ + b²s₋. Der Mischterm F₊·F₋ ist nicht
+   Lorentz-invariant und kommt in χ nicht vor. Auf χ wohldefiniert sind daher nur diagonale (ab = cd = 0, b = c = 0) und
+   vertauschende Abbildungen (a = d = 0); numerisch: 0 von 200 zufälligen Abbildungen, ein nicht diagonales Beispiel
+   ebenso nicht. Diagonale Abbildungen halten die Pole fest, vertauschende tauschen sie. Keine bringt die
+   Helizitätsachse auf den Äquator.
+
+**Folgerungen**
+- **Die Überlappung ½ ist bedingt abgeleitet.** Verlangt man von jedem der drei Auslesezustände, Eigenzustand einer
+  Frame-Abbildung zu sein, und zwar je einer anderen, liegen sie an Polen dreier senkrechter Achsen: Überlappung ½,
+  K = 2/3, Phase ±π/4, invariant unter Boosts. Das Prinzip „vollständiger Satz“ der Komplementaritätsnotiz entfällt, weil
+  es genau drei Frame-Abbildungen gibt. Gesetzt bleibt „je Frame-Abbildung ein Auslesezustand“.
+- **Die Verteilung auf drei Abbildungen folgt nicht aus einer Feldsymmetrie.** Ein Dreierzyklus der Achsen müsste aus einer
+  anderen Struktur kommen. Kandidat im Bestand: die Hurwitz-Einheiten, die auf dem neutralen Qubit N die drei Pauli-Basen
+  zyklisch vertauschen (r13.2, unter CT-003). Eine Verbindung von N mit χ ist nicht untersucht.
+- **Vorbehalt:** In der Gram-Lesart sind die Massenwurzeln die Eigenwerte der Gram-Matrix; die drei Zustände sind
+  Auslesezustände, nicht die Masseneigenzustände.
+- Unverändert offen: Biegung (γ_M, OP1), Bezug zu geladenen Leptonen.

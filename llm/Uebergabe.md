@@ -79,6 +79,9 @@
   (Σ b_y² = 1 je Oktant; Scheibe gibt Phase 0 oder π). Grenze: b_y nicht boost-invariant, kein Frame für drei Zustände.
   Nachtrag: Auf der Kugel der Invarianten χ = (√s₊, √s₋), s± = (E ± iB)², gibt es ein boost-invariantes Oktant
   (Materie, Photonseite, selbstdual); Zweigwahl der Wurzel = R. Überlappung ½ bleibt gesetzt.
+  Nachtrag: R, T, J_B erhalten je eines der drei Feldvorzeichen (Re s, Im s, Helizität); Pole = Eigenzustände; Überlappung ½
+  folgt bedingt aus „je Frame-Abbildung ein Eigenzustand“. Kein Dreierzyklus aus linearen Feldabbildungen (nur diagonal/
+  vertauschend auf χ). Kandidat für den Zyklus: Hurwitz-Einheiten auf N (r13.2, CT-003), nicht untersucht.
   Zusammen mit dem Nachtrag zu r15.5 Stoff für r16 (noch nicht geschrieben).
 
 ## Nächster Schritt (Autorentscheidung)

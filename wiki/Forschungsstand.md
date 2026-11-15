@@ -16,6 +16,10 @@ Erkundung (nicht blind). Das Feld-Dublett (E, B) hat nach r04 und r05.2 drei Sto
   hat keinen Punkt. R, T, J_B wirken wie in r04 und r51. Materiefeld, Feld der Photonseite und selbstduales Feld bilden ein
   Oktant (K = 2/3, Phase ±π/4), das unter Boosts unverändert bleibt. Für komplexe Felder ist ein Punkt nur bis auf R
   bestimmt (Wurzelzweig). Die Überlappung ½ bleibt gesetzt.
+- **Drei Vorzeichen (Nachtrag):** Die Achsen sind sign Re s (Materie/Tachyon), sign Im s (Photonseite) und das
+  Helizitätsvorzeichen. R, T, J_B erhalten je genau eines davon (Kleinsche Vierergruppe), ihre Eigenzustände sind die
+  Pole. Verlangt man je Frame-Abbildung einen Auslesezustand als Eigenzustand, folgt die Überlappung ½ (bedingt).
+  Keine lineare Feldabbildung vertauscht die Achsen zyklisch; ein Dreierzyklus müsste aus anderer Struktur kommen.
 
 [Erkundung](../notes/research/op3_helicity_axis_2026_11_15/README.md).
 
