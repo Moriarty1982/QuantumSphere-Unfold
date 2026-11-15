@@ -10,7 +10,7 @@
   nicht selbst; der Autor setzt sie von Hand.
 - **Zweig `release/v5.1.0-prep`** enthält Runde r14, die Ergänzungen im Physik-Paper, die auf
   `qam/editions/v5_release.json` umgestellten Werkzeuge, Metadaten, Zitierdaten, Wiki und `release/v5.1.0/README.md`.
-  **PR offen, Merge nur auf „PR NN mergen“.**
+  **PR #128 gemergt als 14feb02**; Zweig lokal und auf GitHub gelöscht. Keine offenen PRs.
 - **Nächste Version:** v5.1.0 enthält alles bis r14. Neue Kandidaten wieder in dieser Datei sammeln.
 
 ## Stand vom 15.11.2026 (Claude Opus)
