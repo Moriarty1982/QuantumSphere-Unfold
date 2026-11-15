@@ -1,0 +1,17 @@
+(1) Vorzeichen (Re s, Im s, Helizitaet): + bleibt, - kippt
+    R   : Re s -, Im s -, Helizitaet +
+    T   : Re s +, Im s -, Helizitaet -
+    J_B : Re s -, Im s +, Helizitaet -
+(2) Materie        : Eigenzustand von T: True (Eigenwert 1.0); auch von keiner anderen
+(2) Tachyon        : Eigenzustand von T: True (Eigenwert -1.0); auch von keiner anderen
+(2) Seite +        : Eigenzustand von J_B: True (Eigenwert 1.0); auch von keiner anderen
+(2) Seite -        : Eigenzustand von J_B: True (Eigenwert -1.0); auch von keiner anderen
+(2) selbstdual     : Eigenzustand von R: True (Eigenwert 1j); auch von keiner anderen
+(2) antiselbstdual : Eigenzustand von R: True (Eigenwert -1j); auch von keiner anderen
+(3) diagonal                        : auf chi wohldefiniert: True
+(3) vertauschend                    : auf chi wohldefiniert: True
+(3) nicht diagonal (Beispiel)       : auf chi wohldefiniert: False
+(3) allgemein                       : auf chi wohldefiniert: False
+    200 zufaellige A: wohldefiniert 0/200
+    Diagonale A: chi -> (a sqrt s+, d sqrt s-), Pole bleiben Pole; vertauschende A tauschen die Pole.
+    -> keine lineare Feldabbildung bringt die Helizitaetsachse auf den Aequator; kein Dreierzyklus der Achsen.

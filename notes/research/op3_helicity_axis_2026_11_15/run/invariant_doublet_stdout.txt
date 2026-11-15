@@ -1,0 +1,15 @@
+(1) s+ und s- unter 500 Boosts invariant: max. rel. Abweichung 9.4e-15
+(2) Reelle Felder: Helizitaetskomponente 0 und Aequatorwinkel = -arg s (max. Abweichung 4.4e-16)
+(3) R (E,B)->(-B,E): arg s -1.4862 -> +1.6554; Bloch [0.085 0.996 0.   ] -> [-0.085 -0.996  0.   ]
+(3) T (E,B)->(E,-B): arg s +0.7848 -> -0.7848; Bloch [ 0.707 -0.707  0.   ] -> [0.707 0.707 0.   ]
+(3) J_B (E,B)->(B,E): arg s +1.3364 -> +1.8052; Bloch [ 0.232 -0.973  0.   ] -> [-0.232 -0.973  0.   ]
+    Erwartung r04.2(b): R dreht um pi, T spiegelt arg s -> -arg s, J_B spiegelt arg s -> pi - arg s
+(3b) R (E,B)->(-B,E): Helizitaetskomponente -0.2245 -> -0.2245
+(3b) T (E,B)->(E,-B): Helizitaetskomponente +0.6279 -> -0.6279
+(3b) J_B (E,B)->(B,E): Helizitaetskomponente +0.5170 -> -0.5170
+(4) Zweigwahl: [ 0.2998  0.9483 -0.1039] vs. [-0.2998 -0.9483 -0.1039]; z gleich, (x,y) -> -(x,y): True
+(5) Materie (s = 1): s+ = 1.000+0.000j, s- = 1.000+0.000j, Bloch [ 1. -0.  0.]
+(5) Photonseite (s = i): s+ = 0.000+1.000j, s- = 0.000-1.000j, Bloch [ 0. -1.  0.]
+(5) selbstdual (E = iB, s- = 0): s+ = -4.000+0.000j, s- = 0.000+0.000j, Bloch [0. 0. 1.]
+    Ueberlappungen^2 [0.5 0.5 0.5], K = 0.666667, Bargmann-Phase/pi = -0.2500
+    Alle drei Zustaende unter 50 Boosts als Strahlen unveraendert: True

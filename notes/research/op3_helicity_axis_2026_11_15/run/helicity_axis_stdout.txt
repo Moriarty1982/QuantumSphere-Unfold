@@ -1,0 +1,9 @@
+(1) Dualitaetsdrehung 90 Grad: [ 0.1905 -0.2607 -0.7264] -> [-0.1905  0.2607 -0.7264] | b1,b2 kippen, by bleibt: True
+    T: (E,B)->(E,-B): True  J_B: (E,B)->(B,E): True   (T und J_B kippen by, R erhaelt by)
+(2) zirkular +: Stokes [0. 0. 1.]
+(2) zirkular -: Stokes [ 0.  0. -1.]
+(2) linear: Stokes [0. 0. 0.]
+(3) Oktant (drei orthonormale Bloch-Vektoren): Summe by^2 = 1, max. Abweichung 6.7e-16
+    Tripel in der Scheibe (by = 0): Bargmann-Phase stets 0 oder pi: True
+(4) Boost: by aendert sich (max. |Delta by| = 1.066); reine Helizitaetsanteile bleiben rein (F- nach Boost 0.0e+00); Dualitaet vertauscht mit Boost (0.0e+00)
+(5) iL_e7 (1 + i e7) = [1.+0.j 0.+1.j] (Eigenwert +1), iL_e7 (1 - i e7) = [-1.+0.j  0.+1.j] (Eigenwert -1); Konjugation tauscht sie: True

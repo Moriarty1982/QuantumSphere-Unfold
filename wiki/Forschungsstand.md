@@ -1,5 +1,28 @@
 # Forschungsstand
 
+### OP3: Die Koide-Phase und die Helizitätsachse (15.11.2026)
+
+Erkundung (nicht blind). Das Feld-Dublett (E, B) hat nach r04 und r05.2 drei Stokes-Achsen: σz (Materie gegen Tachyon),
+σx (Photonseite) und σy, die **Helizität** (nur für komplexe Amplituden; reelle Felder füllen eine Scheibe).
+- **Zusammenhang:** Die Tachyon-Abbildung ist die halbe Drehung um die Helizitätsachse und erhält die Helizität; T und J_B
+  kippen sie. Das ist dasselbe Muster wie die Chiralität der Algebra in r51.1(a). Die σy-Pole gehen unter φ in die Ports
+  1 ± i e₇ über.
+- **Koide:** Drei Zustände in der Scheibe haben die Bargmann-Phase 0 oder π. Für jedes Oktant-Tripel gilt
+  Σ b_y² = 1: Die Koide-Phase braucht Helizität, also komplexe Amplituden.
+- **Grenze der Hermiteschen Kugel:** Unter Boosts ändert sich b_y; erhalten bleibt nur die Zerlegung in die
+  Helizitätsanteile.
+- **Invariante Kugel (Nachtrag):** Die bilinearen Größen s± = (E ± iB)² sind Lorentz-invariant. Auf der Kugel des Dubletts
+  χ = (√s₊, √s₋) liegen reelle Felder auf dem Äquator (Winkel −arg s), selbstduale Felder an den Polen; Licht (s₊ = s₋ = 0)
+  hat keinen Punkt. R, T, J_B wirken wie in r04 und r51. Materiefeld, Feld der Photonseite und selbstduales Feld bilden ein
+  Oktant (K = 2/3, Phase ±π/4), das unter Boosts unverändert bleibt. Für komplexe Felder ist ein Punkt nur bis auf R
+  bestimmt (Wurzelzweig). Die Überlappung ½ bleibt gesetzt.
+- **Drei Vorzeichen (Nachtrag):** Die Achsen sind sign Re s (Materie/Tachyon), sign Im s (Photonseite) und das
+  Helizitätsvorzeichen. R, T, J_B erhalten je genau eines davon (Kleinsche Vierergruppe), ihre Eigenzustände sind die
+  Pole. Verlangt man je Frame-Abbildung einen Auslesezustand als Eigenzustand, folgt die Überlappung ½ (bedingt).
+  Keine lineare Feldabbildung vertauscht die Achsen zyklisch; ein Dreierzyklus müsste aus anderer Struktur kommen.
+
+[Erkundung](../notes/research/op3_helicity_axis_2026_11_15/README.md).
+
 ### OP3: r38 neu gelesen, eine Generation je Frame-Abbildung (15.11.2026, Runde r15)
 
 Erkundung (nicht blind). **r38** ordnet die Frames den Triality-Slots zu (Photon Vektor-Slot, Materie und Tachyon
@@ -13,6 +36,10 @@ Tensorfaktoren sitzen.
   die antiunitäre Konjugation kehrt es um.
 - **Offen:** ob der Generationsindex auf dem Frame-Dublett sitzt; die Biegung (Kern, OP1).
 - **Runde:** Berichtigung und Statusvermerke stehen in v4.10.0-r15.
+- **Nachtrag (15.11., nach r15):** Auf den Zuständen von C⊗O trägt die Lesart nicht. Dort ist R die skalare
+  Multiplikation mit i, T und J_B sind antilinear und haben dieselben Eigenstrahlen (reelle Zustände), und diese haben
+  keine bestimmte Ladung oder Chiralität (⟨Q⟩ = ½). Die drei unverzerrten Basen gibt es nur auf der komplexifizierten
+  Amplitudenebene z; die Lesart fällt damit auf ein gesetztes Qubit zurück (Komplementarität, r15.4).
 
 [Erkundung](../notes/research/op3_frame_map_generations_2026_11_15/README.md).
 
