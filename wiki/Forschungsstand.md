@@ -17,8 +17,11 @@ Zeit ist s(t) = 0, das Feld aber nicht null, und der Zustand steht im Photonpunk
 Augenblick ist Lorentz-invariant und wiederholt sich jede halbe Periode.
 - **Gegen (α)–(δ) aus r88:** (β), (γ), (δ) erfüllt; (α) nur, wenn die Obstruktion die augenblickliche Invariante s(t) ist und
   nicht die Zustandsgrößen s±, w.
-- **Keine Entladung:** offen sind die Lesart der Obstruktion, die Bedeutung einer periodischen Null, die Zuordnung zu
-  Kollar-Stufen und warum gerade solche Felder vorliegen. C5 bleibt offen.
+- **Lesart der Obstruktion (Nachtrag):** Lesart B betrachtet reelle Felder in einem Punkt (r05.2(a)), und r10 begründet die
+  Obstruktion mit dem Boden |s| dieses augenblicklichen Feldes. Innerhalb dieser Lesart ist (α) damit erfüllt; die Lesart
+  selbst bleibt gesetzt.
+- **Keine Entladung:** offen sind die Bedeutung einer periodischen Null, die Zuordnung zu Kollar-Stufen und warum gerade
+  solche Felder vorliegen. C5 bleibt offen.
 
 [Erkundung](../notes/research/c5_null_instant_2026_11_15/README.md).
 

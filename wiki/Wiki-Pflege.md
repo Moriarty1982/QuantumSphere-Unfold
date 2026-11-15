@@ -104,6 +104,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 - 15.11.2026: Runde v4.10.0-r19 eingetragen (Forschungsstand, Forschungslinie, Inhalt, Content-overview, Gesamtbild, Offene-Probleme, Vorhersagen-und-Tests). Kein OP-Abschluss.
 
+- 15.11.2026: C5-Kandidat: Lücke „augenblicklich oder Zustandsgröße“ innerhalb der Lesart von r10 geklärt. Kein Abschluss.
+
 - 15.11.2026: Forschungsstand und Offene-Probleme um den C5-Kandidaten Nullaugenblick ergänzt. Kein Abschluss.
 
 - 15.11.2026: Runde v4.10.0-r18 eingetragen (Forschungslinie, Inhalt, Gesamtbild, Offene-Probleme, Vorhersagen-und-Tests,
