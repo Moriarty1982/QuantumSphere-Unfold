@@ -8,8 +8,8 @@ kein CT-Eintrag, kein Guard ausgegeben. **Die verbotene Aussage C5 = 0 wird nich
 |---|---|---|
 | r19.1 | Nullaugenblicke von s(t): existieren für eine Familie von Kodimension 1; Lorentz-invariant; Zustand im Photonpunkt P, Score ½; trivialer Fall ausgeschlossen | `../c5_null_instant_2026_11_15/README.md`, `null_instant.py` |
 | r19.2 | Abgleich mit (α)–(δ) aus r88: (β)–(δ) erfüllt; (α) innerhalb der Lesart von r10, weil Lesart B augenblickliche reelle Felder betrachtet | ebenda (Nachtrag) |
-| r19.4 | Frame-Audit: zwei Port-Begriffe (Scheibe gegen r51); pro Frame ist die alte Frage C5 = 0 ein vollständiger Frame-Wechsel; frame-freier Punkt P; Nullaugenblick = gleiche Anteile ½ | ebenda (Nachtrag), `frame_audit.py` |
 | r19.3 | Zeit und Kollar-Stufe fallen nur bei reiner Helizität zusammen, die keinen Nullaugenblick hat | ebenda (Nachtrag), `time_vs_stage.py` |
+| r19.4 | Frame-Audit: zwei Port-Begriffe (Scheibe gegen r51); pro Frame ist die alte Frage C5 = 0 ein vollständiger Frame-Wechsel; frame-freier Punkt P; Nullaugenblick = gleiche Anteile ½ | ebenda (Nachtrag), `frame_audit.py` |
 
 ## Prüfung
 - Guard-Linter (`python tools/qs.py guards sources/research/parts/v4100-post-release-layers.tex --start 2557`):
