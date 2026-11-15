@@ -12,7 +12,10 @@
   (14feb02, Release v5.1.0). **Keine offenen PRs.** Gemergt am 14./15.11.: #124–#128
   (OP3-Rückwärtssuche, Dauerauftrag Versionsverwaltung, Abbildung C⊗S → C⊗H⊗O, bewachter Kern, Release), davor #108–#123.
   Gemergte Zweige sind gelöscht. Nicht geprüft: die Läufe nach dem Merge von #128 (Wiki-Sync, Zwei-PDF).
-- **Letzte Runde:** v4.10.0-r19, gemergt über PR #144 (982c476) (Kommutant einer Generation C⁶, kein Generations-Qubit ohne Kopien; Vorliteratur Brannen 2010, Foot 1994, Golat et al. 2024). Nummer r19, weil r16–r18 schon vergeben waren. Kandidat 1430 Seiten.
+- **Letzte Runde:** v4.10.0-r20 (C5-Kandidat Nullaugenblick, Abgleich mit r88, Zeit gegen Kollar-Stufe, Frame-Audit r20.4),
+  Zweig `research/c5-stages` (PR #146); ursprünglich als r19 geschrieben und wegen paralleler Vergabe von r19 (PR #144)
+  umbenannt. Kandidat 1433 Seiten.
+- **Davor:** v4.10.0-r19, gemergt über PR #144 (982c476) (Kommutant einer Generation C⁶, kein Generations-Qubit ohne Kopien; Vorliteratur Brannen 2010, Foot 1994, Golat et al. 2024). Nummer r19, weil r16–r18 schon vergeben waren. Kandidat 1430 Seiten.
 - **Davor:** v4.10.0-r18 (Statusvermerke zu Suche nach blindem Test, Nachrechnung H2, Dirac-Zyklus = Zeitzyklus,
   Neutrino-ℤ₂ = Spin(8)-Zentrum), gemergt über PR #141 (144d4ff); davor r17 (PR #138), r16, r15, r14 (in v5.1.0).
   Kandidat 1427 Seiten.
@@ -131,8 +134,12 @@
   Photonpunkt, Score ½, Lorentz-invariant, periodisch). Erfüllt (β)–(δ) von r88, (α) nur unter „Obstruktion = augenblickliches s“.
   Nachtrag (PR #143): Lesart B ist augenblicklich (r05.2(a)), r10s Obstruktion = Boden |s| des augenblicklichen
   Feldes → (α) innerhalb der r10-Lesart erfüllt. Offen: periodische Null, Zuordnung zu Kollar-Stufen, nicht generische Felder.
+  Nachtrag (Zweig `research/c5-stages`): Zeit = Kollar-Stufe nur bei reiner Helizität, dort kein Nullaugenblick; Felder mit
+  Nullaugenblick tragen beide Helizitäten → keine Folge von Kollar-Stufen (passt zu (β), Zählung als Stufe offen).
   Keine Entladung; C5 offen.
 
+- **Offene Autorentscheidung zu C5:** Soll C5 frame-sauber neu gestellt werden (Anteile C5_M, C5_T mit fester Summe;
+  frame-freie Frage: endliches Erreichen des Photonpunkts)? Und zählt eine augenblickliche Null als endliche Stufe (r86)?
 - **OP3, Brücke r15.5 (15.11., Erkundung, `notes/research/op3_frame_bridge_2026_11_15/`, PR #144):** Kommutant von Eich- und Lorentzgruppe auf einer Generation von C⊗H⊗O = C⁶ (je Multiplett eine Phase), kein antilinearer Anteil → kein Generations-Qubit; R zentral, T und J_B keine Symmetrien. Mit n Kopien M_n(C). Beantwortet „geladener Träger“ aus r16.7 negativ für eine Generation. Nicht blind (Schur).
 - **Kurzfassung / Paper (15.11.):** Literaturprüfung: Algebra-Kern = Riemann–Silberstein-Stoff, Zustandsscheibe ≈ Symmetrie-Kugel (Golat et al. 2024), Koide-Oktant, π/4, π/12 bei Brannen 2010. Kein neues Ergebnis für ein Forschungspaper aus Kern oder Koide. Planungsdateien `paper/kernel-note/outline.md` und `paper/koide-note/novelty_check.md`, gemergt über PR #145 (81a6ccb). Literaturnotiz in `notes/research/literature_check_2026_11_15/` (PR #144).
 

@@ -1,0 +1,4 @@
+(1) reine Helizitaet (F- = 0): Zeitverschiebung um t = Dualitaetsdrehung z -> e^(-it) z (max. Abweichung 0.0e+00)
+(2) |s(t)| konstant: min 2.5749, max 2.5749 -> kein Nullaugenblick (ausser s+ = 0, dann immer lichtartig)
+    Feld mit Nullaugenblick: |F+| = 1.086, |F-| = 1.995 (beide Helizitaeten)
+(3) Zeitentwicklung gegen beste Dualitaetsdrehung: relativer Rest min 0.021, Median 0.490 -> die Zeitentwicklung ist keine Folge von Kollar-Stufen
