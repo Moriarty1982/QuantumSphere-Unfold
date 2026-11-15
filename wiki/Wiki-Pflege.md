@@ -104,7 +104,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 - 15.11.2026: Forschungsstand und Offene-Probleme um die Abbildung C⊗S → C⊗H⊗O ergänzt. Befunde: 20-dimensionale
   farb- und ladungstreue Familie; die Familien-su(2) landet nur beim Lorentz-Spin, sektorweise mit entgegengesetzter
-  Orientierung; Generation und Spin über Farbe und Ladung nicht trennbar. Kein OP-Abschluss.
+  Orientierung; Generation und Spin über Farbe und Ladung nicht trennbar. Nachtrag „gebogene Achsen“: det G =
+  (√2 cos φ − 1)/2, Biegung π/4 − φ entspricht dem CT-001/002-Fluss. Kein OP-Abschluss.
 
 - 14.11.2026: Forschungsstand und Offene-Probleme um die Rückwärtssuche nach einer Quelle für gleiche Kopplungen von Q und R ergänzt. Ergebnisse: keine native Slotsymmetrie, freie Paarwahl unter den unverzerrten Weyl-Basen, Gleichgewicht = F-Selbstdualität. Keine Quelle gefunden, die Linie ruht.
 

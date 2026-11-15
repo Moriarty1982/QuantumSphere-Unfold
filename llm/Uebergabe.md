@@ -22,6 +22,9 @@
   - Lesart: Die zwei Generationen von CT-003 sitzen am Platz des Spins; Farbe und Ladung trennen Generation und Spin
     nicht. Das schwächt Weg A.
   - Kandidat für das Physik-Paper (Abschnitt particles).
+  - Nachtrag „gebogene Achsen“ (`bent_axes.py`): det G = (√2 cos φ − 1)/2. Der flache Oktant (φ = π/4) ist der
+    Qubit-Grenzfall mit einer Masse null. Mit φ = 2/3 rad ergeben sich die drei Leptonmassen mit Koide 2/3; die
+    Biegung π/4 − 2/3 = 0,1187 rad ist der CT-001/002-Fluss. Kandidat für das Physik-Paper (Abschnitt masses).
   - Nächste mögliche Frage: Was unterscheidet eine Generation von einem Spinzustand (etwa Lorentz-Verhalten, Boosts,
     Chiralität)?
 - **Lokal:** Hauptordner auf `main` = 087d13f (plus dieser Übergabe-Commit).
