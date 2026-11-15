@@ -15,7 +15,9 @@ Materie-Frame alle Spins zählt (γ_M = 0,2375) und der Tachyon-Frame nur j = ½
 
 Annahmen bleiben: T = String-Sektor und der Chan–Paton-Schritt. Ein blinder Test folgt nicht; OP1 ist nicht geschlossen.
 Auf Autorentscheidung stehen beide Annahmen jetzt als Platzhalter **CT-004** im Gegenterm-Register, mit vier Guards; die
-Zählregel erbt sie. Auf Autorenauftrag sind auch die offenen Vorhersagen H15 (m_W), H46 (sin²θ₂₃) und H96 (Ω_M), die
+Zählregel erbt sie. **Berichtigung nach Prüfung:** Der Name „string coupling“ für γ_string trägt nichts
+(v4.8.0-r03: ABCK-Wert, keine Stringkopplung), und T11 ordnet die Sektoren nach J-Parität, nicht nach Frame. Die Lesart
+hängt damit allein an I1; die Spannung steht im Register. Auf Autorenauftrag sind auch die offenen Vorhersagen H15 (m_W), H46 (sin²θ₂₃) und H96 (Ω_M), die
 auf dieser Zählregel ruhen, verknüpft und erben dieselben vier Guards; ihre Kriterien bleiben unverändert.
 [Rückwärtssuche](../notes/research/op1_i1_string_endpoints_2026_11_15/README.md).
 

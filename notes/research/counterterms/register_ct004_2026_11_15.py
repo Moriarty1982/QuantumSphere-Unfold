@@ -83,6 +83,12 @@ def ct004(repo):
                      'source': NOTE.as_posix()},
                     {'description': 'Freies Flaechenspektrum laesst ein zweites Paar zu', 'convention': 'H104',
                      'delta': 'gamma_L = 1.864824 gegen 1.864700', 'source': H98.as_posix()},
+                    {'description': 'gamma_string ist nur dem Namen nach eine Stringkopplung; T11 ordnet String- und '
+                                    'LQG-Sektor nach J-Paritaet, nicht nach Frame',
+                     'convention': 'v4.8.0-r03 (F11): ABCK-Wert, kein Stringtheorie-Wert; DL: j = 1/2 aus einer '
+                                   'unechten Nebenbedingung',
+                     'delta': 'Guard T-GLEICH-STRING ohne Stuetze im Bestand; die Lesart haengt allein an I1',
+                     'source': 'sources/research/parts/v480-post-release-layers.tex'},
                 ],
             }}
 

@@ -1,13 +1,13 @@
 {
   "CT-004": {
     "guards": [
-      "def4aa932da6b55bdea3397800ac3ba491b1fa19f5401e072efe21bbe52618df",
-      "dcc52eaf34fad9f61afc802df184aaec7f549f83ad17caaba9abbf01b5fa1cc5",
-      "1184069e9213e2e2ba54d022f9e603342948c08c1e32a973df4c2229573d9989",
-      "190cfc9e0af49c9b0b9b0d3684c53856999c56e8e277c2eddd0401292cade64b"
+      "15bf110de61867024e79494d9214852c844dfcb425e1598731c68dbb524fa7ce",
+      "f5a07f0a103fd5df16ae1fafae2b397eefa5b78d1a67aa63f1faebd997d679b2",
+      "41bcb22d1eb7241fc1f05794ad6b8789d82e5676fc46561837b0ccd8ce0b648b",
+      "4ed4993743950b165d7c0655904e85af87fe5bb5153e9da0d561d7f5fdacee4d"
     ],
     "lifecycle": "placeholder",
-    "version_hash": "fc3ca8d2c8236c70c3b12941e2af9a13f44617efb332ee015824fbbbfee7e4dc"
+    "version_hash": "c8dffe0df336e7e6527cfe71488c9dbbc33ee6cc0a52d16062c062348c7cee8d"
   },
   "balance": {
     "by_status": {
@@ -32,11 +32,11 @@
   "export": {
     "directory": "build/ct_register_export_2026_11_15",
     "guard_notes": 8,
-    "manifest_hash": "bc0071d002d414a2c2deb7ddcde4c5cc95ce9e5968a76ef64b02f33de8c5a8ea",
+    "manifest_hash": "294ea2b81ec69b89f6e1b4c319f75a7ebfda5aea6b4e1d21c249127d36cf74e2",
     "registry_entries": 4
   },
-  "selection_hash": "73036af0c7dee40fe42f8572bfec3ffea365c4974f534fd31f76635be906595c",
-  "snapshot": "c8b0ab88bb3b7a4dcf303c5377d72bdbf7976459b056283043447a38cb919a97",
+  "selection_hash": "3288fa768a43ec8f58945a5fb9cf2dde7afee86da56e326ea3109d095cd5a139",
+  "snapshot": "ebb94da6f3dc43b356621326f44fe6eda7e26872d83062e0e7b1aac60c2ae291",
   "statements": {
     "H102": {
       "counterterms": [

@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 15.11.2026: Forschungsstand: Berichtigung zu CT-004 (Name „string coupling“ trägt nichts, T11 ordnet nach J-Parität).
+
 - 15.11.2026: Forschungsstand um OP1 mit I1 ergänzt (Tachyon-Frame zählt Endpunkte fundamentaler Strings, Kramers-Regel
   ausgeschlossen). Lesart, als Platzhalter CT-004 eingetragen; H15, H46, H96 damit verknüpft
   (Forschungsstand, Vorhersagen-und-Tests); kein OP-Abschluss.
