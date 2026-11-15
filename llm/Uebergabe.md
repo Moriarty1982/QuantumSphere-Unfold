@@ -64,15 +64,15 @@
   Chern-Simons und modulare S-Matrix kommen im Companion nicht vor.
 
 ## Nächster Schritt
-- **Idee des Autors (15.11., noch nicht gerechnet):** Das Loch für den Fluss könnte der bewachte Kern des
-  Orbit-Scans sein. Fundstelle: v470/05, Prop. „Hopf completion versus guarded-core remainder“, X = S³ ∖ B_ε(K),
-  ε frei; dazu die Julia-Rand-Auslesung v470/14 und v470/15 (nur diagnostisch). Bisher ist das mit OP3 nicht
-  verbunden.
-  - Nötige Größe: Kappe mit Raumwinkel γ_M um die Zyklusachse, Winkelradius 15,8° auf der Bloch-Kugel, also
-    ε = 7,9° im S³. Sie passt in den Oktanten, und die 90°-Seiten (Koide) bleiben unberührt.
-  - Ein leeres Loch ändert die Bargmann-Phase nicht. Der Kern müsste einen Fluss tragen (Aharonov-Bohm-Faden).
-  - Offen: warum der Kern auf der Zyklusachse sitzt, warum er Fluss trägt, warum ε = 7,9°.
-  - Mögliche Brücke: Der bewachte Kollapskern als Horizont-Punktierung (CT-002) im Generationsraum.
+- **Bewachter Kern als flussverdrängende Kappe (15.11., Erkundung, `notes/research/op3_guarded_core_flux_2026_11_15/`,
+  Zweig `research/op3-guarded-core-flux`):**
+  - Fundstelle v470/05 (X = S³ ∖ B_ε(K)).
+  - Der Kern muss keinen Fluss tragen; ausschließen reicht. Liegt er im Dreieck, ist das Vorzeichen richtig, und die
+    genaue Lage spielt keine Rolle.
+  - Verlässt der verdrängte Fluss das Dreieck, gilt φ = π/4 − γ_M/2 (die H102-Beziehung). Verteilt er sich
+    gleichmäßig, gilt φ = 0,6795.
+  - Offen: warum der Fluss das Dreieck verlässt und warum Ω = γ_M; dazu Kugel B_ε(K) gegen Faser-Volltorus.
+  - Mögliche Brücke: der bewachte Kollapskern als Horizont-Punktierung (CT-002, I1).
 - **Stand 15.11.:** Die Notiz mit den Nachträgen 1–9 ist über PR #124 auf main.
   Inhalt der Nachträge: r47-Maske, ε-Vorwissen r50–r56, ε* = (1/3)ln((1+√3)/2), Photonengewichte,
   Frame-Kreuzprodukte (sl(2,R)), Levi-Civita, geordnete Produkte und r33.

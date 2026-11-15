@@ -1,5 +1,19 @@
 # Forschungsstand
 
+### OP3: Bewachter Kern verdrängt Fluss (15.11.2026)
+
+Idee des Autors, als Erkundung nachgerechnet (nicht blind). Der bewachte Kern des Orbit-Scans (v470/05,
+X = S³ ∖ B_ε(K)) wird als flussfreie Kappe auf der Bloch-Kugel der Generationen gelesen.
+
+- **Vorzeichen:** Liegt der Kern im Generationsdreieck, sinkt die Bargmann-Phase unter π/4. Das ist die richtige
+  Richtung (drei Massen). Liegt er außerhalb, bricht Koide. Das Vorzeichen folgt also aus der Lage.
+- **Lage:** Innerhalb des Dreiecks spielt die genaue Position keine Rolle.
+- **Menge:** Verlässt der verdrängte Fluss das Dreieck, gilt φ = π/4 − γ_M/2, die Beziehung von H102. Verteilt er sich
+  gleichmäßig, trifft es nicht (0,6795 statt 2/3).
+
+Offen ist, warum der Fluss das Dreieck verlässt und warum der Kern den Raumwinkel γ_M hat.
+[Rechnung](../notes/research/op3_guarded_core_flux_2026_11_15/README.md).
+
 ### OP3: Abbildung C⊗S → C⊗H⊗O, die zwei Generationen sitzen am Platz des Spins (15.11.2026)
 
 Erste Abbildung zwischen dem Sedenionen-Rahmen (Ladung über e8, Platzhalter CT-003) und der Dixon-Algebra, als

@@ -1,0 +1,11 @@
+Kern auf der Zyklusachse: phi_A = 0.666632  phi_B = 0.679475  Ziel 2/3 = 0.666667
+Szenario B braucht Omega = 0.265649 sr = 1.1184 * gamma_M
+{'t': 0.0, 'deg_from_axis': 70.53, 'f': 0.0, 'phiA': 0.785398, 'phiB': 0.80053}
+{'t': 0.125, 'deg_from_axis': 61.71, 'f': 0.0, 'phiA': 0.785398, 'phiB': 0.80053}
+{'t': 0.25, 'deg_from_axis': 52.9, 'f': 0.0, 'phiA': 0.785398, 'phiB': 0.80053}
+{'t': 0.375, 'deg_from_axis': 44.08, 'f': 0.1623, 'phiA': 0.766123, 'phiB': 0.780883}
+{'t': 0.5, 'deg_from_axis': 35.26, 'f': 0.4965, 'phiA': 0.726435, 'phiB': 0.740431}
+{'t': 0.625, 'deg_from_axis': 26.45, 'f': 0.8354, 'phiA': 0.686185, 'phiB': 0.699405}
+{'t': 0.75, 'deg_from_axis': 17.63, 'f': 1.0, 'phiA': 0.666632, 'phiB': 0.679475}
+{'t': 0.875, 'deg_from_axis': 8.82, 'f': 1.0, 'phiA': 0.666632, 'phiB': 0.679475}
+{'t': 1.0, 'deg_from_axis': 0.0, 'f': 1.0, 'phiA': 0.666632, 'phiB': 0.679475}
