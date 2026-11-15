@@ -102,6 +102,9 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 15.11.2026: Forschungsstand um die Neulesung von r38 ergänzt (Frame-Zuordnung zu Slots durch r51 überholt,
+  Chiralitätsspur widerspricht r51.1(a)) und um die Lesart „eine Generation je Frame-Abbildung“. Kein OP-Abschluss.
+
 - 15.11.2026: Forschungsstand um Koide als vollständige Komplementarität ergänzt (K = 2/(d + 1), nur d = 2 gibt drei
   Zustände). Kein OP-Abschluss.
 
