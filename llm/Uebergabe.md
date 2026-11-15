@@ -160,8 +160,12 @@
 ## Nächster Schritt (Autorentscheidung)
 - **Zuerst:** PR #147 prüfen (CI-Lauf ansehen) und auf Freigabe mergen; danach Zweig löschen, #13 und #17 um den
   Merge-Commit ergänzen.
-- **Danach C5 (B3):** Gibt es eine native Bedingung, die genau die Felder mit Nullaugenblick auswählt (über w oder s₊/s₋),
-  oder ist es Feinabstimmung wie c⋆(N) in r88.1? Vorwissen prüfen, bei Kriterium Vorab-Notiz (H105 frei).
+- **C5 (B3) erkundet (16.11., Zweig `research/c5-b3-presence`, auf r21 aufgesetzt, noch kein PR):**
+  `notes/research/c5_presence_2026_11_16/`. Nullaugenblicke liegen in jedem generischen monochromatischen Feld auf Flächen
+  im Raum, und überall, wenn eine Teilwelle linear polarisiert ist (gleiche Helizitätsgewichte). Es sind Punkte der
+  Riemann–Silberstein-Wirbel (Kaiser 2003, Białynicki-Birula 2003; nachträglich gefunden, kein neues Objekt). (B3) ist
+  verschoben: offen ist die Auswahl des Punktes, nicht das Vorliegen. Noch nicht im Wiki, keine Runde; Autor soll
+  entscheiden: als r21.11 in PR #147 oder als eigene Runde r22 nach dem Merge.
 - **Alternativ:** Kollapszustand im ganzen Hauptkorpus nach der Tabelle r21.9 typisieren (R oder P).
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,
   `Erkundung_Zaehlregel_Prinzip.md`) und Suchrichtung prüfen. Zu beachten: Eine Kramers-Regel (nur halbzahlige Spins,
