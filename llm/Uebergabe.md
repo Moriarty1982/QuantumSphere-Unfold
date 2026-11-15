@@ -6,7 +6,7 @@
   Record https://zenodo.org/records/24237112; Vorgänger v5.0.0 (10.5281/zenodo.24152615). Vollausgabe 1412 Seiten,
   Physik-Paper 29 Seiten. Paketquellstand dfdb413, Tag `v5.1.0`, GitHub-Release gesetzt. Nach der Veröffentlichung
   geprüft: acht Dateien prüfsummengleich mit dem Paket, Vorschau = Vollausgabe. Release-Notiz `release/v5.1.0/README.md`.
-- **GitHub:** `main` nach PR #134 (f32ae5c, k220 „ein Objekt“ übernommen), davor #133 (37ac7da, OP3: C⊗O, Helizitätsachse, invariante Kugel, Feldvorzeichen), davor #132
+- **GitHub:** `main` nach PR #135 (e0be304, Runde r16 mit r16.1–r16.9), davor #134 (f32ae5c, k220 „ein Objekt“ übernommen), davor #133 (37ac7da, OP3: C⊗O, Helizitätsachse, invariante Kugel, Feldvorzeichen), davor #132
   (b6ed1a5, Runde r15, Dauerauftrag Issues), #130 (eeb6083,
   Berichtigung zu CT-004), #129 (c9bfb19, OP1 mit I1, CT-004) und #128
   (14feb02, Release v5.1.0). **Keine offenen PRs.** Gemergt am 14./15.11.: #124–#128
@@ -14,8 +14,8 @@
   Gemergte Zweige sind gelöscht. Nicht geprüft: die Läufe nach dem Merge von #128 (Wiki-Sync, Zwei-PDF).
 - **Letzte Runde:** v4.10.0-r16 (Statusvermerke zu Helizitätsachse, invariantem Dublett, Frame-Vorzeichen, Hurwitz-
   Ausschluss, k220, r16.7: höchstens drei nicht orthogonale Frame-Eigenzustände = Oktant, kein Zyklus nötig; r16.8: dritte Invariante w;
-  r16.9: Zeitzyklus, Gewichte = normierte √m, Koide = Autokorrelation 1/√2), Zweig
-  `research/op3-cycle-search`; davor r15 (PR #132), r14 (in v5.1.0). Kandidat 1421 Seiten.
+  r16.9: Zeitzyklus, Gewichte = normierte √m, Koide = Autokorrelation 1/√2), gemergt
+  über PR #135 (e0be304); davor r15 (PR #132), r14 (in v5.1.0). Kandidat 1421 Seiten.
 - **Hypothesen:** zuletzt vergeben H104 (k226, widerlegt). Frei: **H105, k227**.
   - H100 offen: nächster NuFIT-Fit nach 6.1, Frist 31.12.2027 (`notes/research/predictions/k222_test_h100.py`).
   - H102 offen: m_τ = 1777,134 MeV gegen die erste PDG-Ausgabe nach dem 13.11.2026 (`k224_test_h102.py m_tau sigma`).
