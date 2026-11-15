@@ -111,6 +111,8 @@
   −1/γ, −γ, 1/γ, keine gibt γ_T aus γ_M. Brücke (A) weiter offen.
   Nachtrag: Penrose-Bündel geben (A), wenn ein Strang ein Quant von χ ist; bosonische Stränge → alle j (M), fermionische →
   nur j = ½ (T). Ersetzt Guards T = String und Chan–Paton von CT-004 durch (S1)–(S3); Register unverändert; kein Test.
+  Nachtrag (Zweig `research/op1-statistics`): R² = −1 gibt Kramers, nicht Pauli; Frame-Abbildungen sehen die Statistik
+  nicht. (S2) ist reine Setzung; Begründung über R² zurückgenommen.
 
 ## Nächster Schritt (Autorentscheidung)
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,

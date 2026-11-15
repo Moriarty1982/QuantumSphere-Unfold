@@ -1,0 +1,16 @@
+(1) Bedingungen an ein Buendel aus n Straengen
+    n = 1: symmetrisch j = 0.5, R^2 = -1; antisymmetrisch: j = 1/2
+    n = 2: symmetrisch j = 1.0, R^2 = +1; antisymmetrisch: j = 0
+    n = 3: symmetrisch j = 1.5, R^2 = -1; antisymmetrisch: leer
+    n = 4: symmetrisch j = 2.0, R^2 = +1; antisymmetrisch: leer
+    n = 5: symmetrisch j = 2.5, R^2 = -1; antisymmetrisch: leer
+    n = 6: symmetrisch j = 3.0, R^2 = +1; antisymmetrisch: leer
+    n = 7: symmetrisch j = 3.5, R^2 = -1; antisymmetrisch: leer
+    n = 8: symmetrisch j = 4.0, R^2 = +1; antisymmetrisch: leer
+    'R^2 = -1' waehlt die symmetrischen Buendel mit j = [0.5, 1.5, 2.5, 3.5] (alle halbzahligen j = Kramers-Regel)
+    'fermionischer Austausch' waehlt nur j = 1/2
+(2) Frame-Abbildungen auf chi
+    R   : det = -1; auf Lambda^2: -1; Spur auf Sym^2: +1; vertauscht mit dem Austausch: True
+    T   : det = -1; auf Lambda^2: -1; Spur auf Sym^2: +1; vertauscht mit dem Austausch: True
+    J_B : det = -1; auf Lambda^2: -1; Spur auf Sym^2: +1; vertauscht mit dem Austausch: True
+    Die Frame-Abbildungen vertauschen mit dem Austausch; sie unterscheiden symmetrische und antisymmetrische Paare nicht.

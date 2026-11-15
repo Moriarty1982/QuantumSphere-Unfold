@@ -21,6 +21,9 @@ auf einer Horizont-Punktierung mit Spin j über dieselbe SU(2) wirken, gilt: **I
   ausgerichteten Bündel sind das Extremdublett von M. Ersetzt die Guards T = String-Sektor und Chan–Paton von CT-004 durch
   „Strang = Quant von χ“ und „T liest fermionisch“; T11 meint mit bosonisch/fermionisch die J-Parität (Register
   unverändert).
+- **Begründung für „T liest fermionisch“ geprüft (Nachtrag):** Die Lesart über R² = −1 führt auf alle halbzahligen j, also
+  auf die ausgeschlossene Kramers-Regel; die Frame-Abbildungen vertauschen mit dem Austausch und sehen die Statistik nicht.
+  Die fermionische Lesart von T ist damit eine reine Setzung.
 
 [Erkundung](../notes/research/op1_frame_irreducibility_2026_11_15/README.md).
 

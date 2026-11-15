@@ -130,3 +130,19 @@ dem Dublett zu −1 (r14.3(d)), das Vorzeichen eines Fermions unter voller Drehu
 
 **Grenzen:** Nicht blind; kein neuer Test. Die Statistik betrifft die Bündelung in einer Punktierung, nicht die Verteilung der
 Punktierungen; die Zählgleichung und damit γ ändern sich nicht. OP1 bleibt offen.
+
+## Nachtrag 15.11.2026: Die Lesart R² = −1 stützt (S2) nicht; sie führt auf Kramers
+Auftrag des Autors: „weiter“. **Erkundung, nicht blind** (analytisch absehbar). Skript `r_squared_check.py`, Ausgabe
+`run/r_squared_check_stdout.txt`.
+
+1. **R² = −1 wählt Kramers, nicht Pauli.** Auf einem Bündel aus n Strängen wirkt R² (= z ↦ −z = C = PT, v4.9.0-r02) als
+   (−1)ⁿ. Die Bedingung „R² = −1 auf der Punktierung“ lässt alle symmetrischen Bündel mit ungeradem n übrig, also alle
+   halbzahligen j: die **Kramers-Regel**, die mit β = 0,337 ausgeschlossen ist. Nur der fermionische Austausch (Λⁿ) lässt
+   allein j = ½ übrig.
+2. **Die Frame-Abbildungen sehen die Statistik nicht.** Alle drei haben auf χ die Determinante −1, wirken auf dem Singulett
+   Λ² als −1 und vertauschen mit dem Austausch zweier Stränge. Sie unterscheiden symmetrische und antisymmetrische Bündel
+   nicht.
+
+**Folgerung:** Die in der Strang-Lesart genannte Begründung für (S2) („die Tachyon-Abbildung quadriert zu −1, wie ein Fermion“)
+ist **zurückgenommen**: Sie gibt die falsche Regel. Aus der Frame-Struktur folgt (S2) nicht; die fermionische Lesart von T
+braucht einen Grund außerhalb der Frame-Abbildungen. (S2) ist damit eine reine Setzung.
