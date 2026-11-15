@@ -31,6 +31,10 @@ Drei Nachträge vom selben Tag:
   fixpunktfrei. Auf einer Spin-½-Kugel ist eine fixpunktfreie antilineare Abbildung die Antipodenabbildung, sie verlangt
   Θ² = −1, also Fermionen. Liest man den Kern als Umkehrwalze, geht der verdrängte Fluss zum Gegenpol, und das ist genau
   Fall A, für geladene Leptonen wie für Neutrinos. Das ist Lesart; offen bleibt die Größe γ_M.
+- **Kerngröße als Frame-Quant:** Liest man den Kern als Flächenquant des Beobachter-Frames, ergibt sich γ_M für alle im
+  Materie-Frame gemessenen Massen, auch für Neutrinos (das Paper liest sie dort). Die Kerngröße fällt damit mit OP1
+  zusammen: warum M alle Spins zählt (γ_M) und T nur den Boden (γ_T). Das vereinheitlicht die Lücken, leitet aber nichts
+  her. Einen blinden Neutrino-Test mit anderem Frame gibt der Bestand nicht her.
 [Rechnung](../notes/research/op3_guarded_core_flux_2026_11_15/README.md).
 
 ### OP3: Abbildung C⊗S → C⊗H⊗O, die zwei Generationen sitzen am Platz des Spins (15.11.2026)

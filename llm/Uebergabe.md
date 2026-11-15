@@ -86,7 +86,10 @@
   - Umkehrwalze (Hinweis des Autors, Enigma-Analogie; r02.2/r02.3, v470/24): Eine fixpunktfreie antilineare Involution
     ist auf Spin ½ die Antipodenabbildung (Θ² = −1). Liest man den Kern als Umkehrwalze, geht der verdrängte Fluss
     zum Gegenpol; das ist Fall A in beiden Sektoren. Lesart.
-  - Offen bleibt nur Ω = γ_M.
+  - Kerngröße als Frame-Quant (Punkt 1): Kern = Flächenquant des Beobachter-Frames gibt γ_M für alle im Frame M
+    gemessenen Massen, auch Neutrinos. Die Kerngröße fällt mit OP1 zusammen (M zählt alle Spins, T nur den Boden).
+    Ein blinder Neutrino-Test mit γ_T hat im Bestand keinen Grund. Bewusst nicht gerechnet; wer ihn will, schreibt
+    ihn zuerst als H105 fest.
   - PR #127 offen (Zweig `research/op3-guarded-core-flux`); Schritt 2 wird nachgeschoben.
 - **Stand 15.11.:** Die Notiz mit den Nachträgen 1–9 ist über PR #124 auf main.
   Inhalt der Nachträge: r47-Maske, ε-Vorwissen r50–r56, ε* = (1/3)ln((1+√3)/2), Photonengewichte,

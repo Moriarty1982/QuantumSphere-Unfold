@@ -304,3 +304,45 @@ Punkt-zu-Punkt-Abbildung und nicht als Verteilung. Daraus folgt genau Fall A und
 - Dass der Kern als Umkehrwalze wirkt, ist **Lesart**. Das Paper nennt den Reflektor beim Kollapskern und bei OP5
   (v470/32: „HC-cone/reflector“), setzt ihn aber nicht mit dem Kern im Generationsraum gleich.
 - Offen bleibt allein die Größe des Kerns, γ_M.
+
+## Punkt 1 (15.11.): Hat der Kern die Größe des Flächenquants des Beobachter-Frames?
+
+Erkundung, Quellenabgleich, ohne Datenvergleich. Gelesen wurden v4.10.0-r08, r09 und r10 (README), die Fundstellen zu
+Neutrinos und Frames im Paper sowie r02.3.
+
+**Frame-Werte der Zählregel im Companion (r09, r10.3):**
+
+| Frame | Zählregel | Wert |
+|---|---|---|
+| M (Materie) | alle Spins, Gewicht 2 | γ_M = γ_BI = 0,237533 |
+| T (Tachyon) | nur j = ½ (Boden) | γ_T = γ_string = ln 2/(π√3) = 0,127384 = γ_M/γ_L |
+| P (Photon) | keine Zählregel zugeordnet | – |
+
+r10.3: Bei gleicher Statistik, Geometrie und S = A/4 in beiden Frames kann nur das Flächenquant verschieden sein. Einen
+Grund dafür kennt der Companion nicht. Das ist die am stärksten belastete Annahme (r08.3).
+
+**Regel „Kern = Flächenquant des Beobachter-Frames“.** Die Umkehrwalze tauscht nach r02.3 Materie und Tachyon. Daher
+liegt es nahe, dass der Kern das Quant des Frames trägt, in dem gemessen wird. Geladene Leptonen werden im Frame M
+gemessen, das gibt γ_M, also den H102-Wert. Das stimmt mit dem Guard „Ende im Frame M“ von CT-002 überein.
+
+**Neutrinos.** Das Paper liest Neutrinomassen ebenfalls im Materie-Frame:
+- v470/23, Zeile 11–13: „neutrino-mass ratio measured in the matter frame“.
+- Die Photon-Frame-Unterdrückung (prop:k-neutrino) gehört zu T10, das seit r64 nicht gestützt ist.
+
+Nach der Regel bekommen Neutrinos also ebenfalls γ_M, derselbe Kern wie in Faden 2. Eine Phase aus H102-Werten statt
+aus dem gemessenen θ_e unterscheidet sich von H99 nur um etwa 3·10⁻⁵ rad, weit unter der Auflösung der Neutrinodaten.
+
+**Folge für Punkt 2 (blinder Neutrino-Test).**
+- Einen *anderen* Frame für Neutrinos gibt das Paper nicht her. Ein Kandidat mit γ_T wäre eine Wahl ohne Grund im
+  Bestand.
+- Ein sauberer blinder Test ergibt sich daraus nicht. Wer einen γ_T-Kandidaten trotzdem prüfen will, muss ihn *vor*
+  jeder Rechnung als Hypothese festschreiben. Deshalb ist hier bewusst nicht ausgerechnet, welches Verhältnis der
+  Massendifferenzen er ergäbe; so bleibt eine spätere Vorab-Notiz blind gegenüber dieser Zahl.
+
+**Befund.**
+- Die Regel „Kern = Quant des Beobachter-Frames“ ist mit allem Bisherigen verträglich und bindet die Kerngröße an die
+  Zählregel des Frames M.
+- Sie verlagert die offene Frage dorthin, wo sie seit r08 liegt: warum der Materie-Frame alle Spins zählt (γ_M) und
+  der Tachyon-Frame nur den Boden (γ_T). Das ist OP1 (Herkunft von β_sym über γ_L = γ_M/γ_T).
+- Die Kerngröße ist damit keine eigene Lücke mehr, sondern **dieselbe wie OP1**. Das ist eine Vereinheitlichung, keine
+  Herleitung.
