@@ -2,10 +2,10 @@
 **Diese Datei wird am Ende jedes Arbeitsblocks überschrieben, nicht fortgeschrieben.**
 
 ## Stand vom 15.11.2026 (Claude Opus)
-- **GitHub:** **PR #126 gemergt als 823802e** (Abbildung C⊗S → C⊗H⊗O, gebogene Achsen), davor #125 (087d13f,
-  Dauerauftrag Versionsverwaltung) und #124 (f5ede73, OP3-Rückwärtssuche). **Keine offenen PRs.** Gemergte Zweige
-  lokal und auf GitHub gelöscht. Davor gemergt: #123 (14856e3, Codex), #122 (f04c6ad), #121 (f39ca00, r13), #120,
-  #119, #108–#118.
+- **GitHub:** **PR #127 gemergt als 83e25e3** (bewachter Kern: Flussverdrängung, Fäden 1–3, Literatur, Topologie,
+  Umkehrwalze, Frame-Quant), davor #126 (823802e, Abbildung C⊗S → C⊗H⊗O), #125 (087d13f), #124 (f5ede73).
+  **Keine offenen PRs.** Gemergte Zweige lokal und auf GitHub gelöscht. Davor: #123 (14856e3, Codex), #122 (f04c6ad),
+  #121 (f39ca00, r13), #120, #119, #108–#118.
   Nicht geprüft: die Darstellung von Mindmap und Formeln im GitHub-Wiki (im Browser des Modells gesperrt).
 - **Dauerauftrag 15.11. (AGENTS.md):** Interne Nummern (H, k, Runden, CT) ohne Rückfrage vergeben; Übergabe- und
   Buchführungs-Commits ohne Rückfrage auf `main` pushen. Inhalt nur über PR; Zenodo und neue Versionen nur mit Freigabe.
@@ -28,7 +28,7 @@
     Biegung π/4 − 2/3 = 0,1187 rad ist der CT-001/002-Fluss. Kandidat für das Physik-Paper (Abschnitt masses).
   - Nächste mögliche Frage: Was unterscheidet eine Generation von einem Spinzustand (etwa Lorentz-Verhalten, Boosts,
     Chiralität)?
-- **Lokal:** Hauptordner auf `main` = 823802e (plus dieser Übergabe-Commit).
+- **Lokal:** Hauptordner auf `main` = 83e25e3 (plus dieser Übergabe-Commit).
 - **Neu, 14.11. (`notes/research/op3_action_balance_search_2026_11_14/`, Erkundung, nicht blind, Rückwärtssuche,
   auf „Wirkung suchen“ des Autors):** Gesucht war eine vorhandene Wirkung, die H = −a(Q + R) mit gebunden gleichen
   Kopplungen liefert (nächster Ansatz aus der Codex-Notiz `op3_reference_energy_selection_2026_11_14`).
@@ -65,7 +65,7 @@
 
 ## Nächster Schritt
 - **Bewachter Kern als flussverdrängende Kappe (15.11., Erkundung, `notes/research/op3_guarded_core_flux_2026_11_15/`,
-  Zweig `research/op3-guarded-core-flux`):**
+  gemergt über PR #127):**
   - Fundstelle v470/05 (X = S³ ∖ B_ε(K)).
   - Der Kern muss keinen Fluss tragen; ausschließen reicht. Liegt er im Dreieck, ist das Vorzeichen richtig, und die
     genaue Lage spielt keine Rolle.
@@ -90,7 +90,6 @@
     gemessenen Massen, auch Neutrinos. Die Kerngröße fällt mit OP1 zusammen (M zählt alle Spins, T nur den Boden).
     Ein blinder Neutrino-Test mit γ_T hat im Bestand keinen Grund. Bewusst nicht gerechnet; wer ihn will, schreibt
     ihn zuerst als H105 fest.
-  - PR #127 offen (Zweig `research/op3-guarded-core-flux`); Schritt 2 wird nachgeschoben.
 - **Stand 15.11.:** Die Notiz mit den Nachträgen 1–9 ist über PR #124 auf main.
   Inhalt der Nachträge: r47-Maske, ε-Vorwissen r50–r56, ε* = (1/3)ln((1+√3)/2), Photonengewichte,
   Frame-Kreuzprodukte (sl(2,R)), Levi-Civita, geordnete Produkte und r33.
