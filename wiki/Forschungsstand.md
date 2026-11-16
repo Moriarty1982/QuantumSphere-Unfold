@@ -1,5 +1,21 @@
 # Forschungsstand
 
+### OP1/OP3: Grunddaten von H102 und die Zählregel des Frames M (16.11.2026)
+
+Auftrag des Autors: prüfen, ob H102 von falschen Grunddaten ausgeht, und die Zählregel angehen. Erkundung, nicht blind.
+
+- **Messdaten in Ordnung.** H102 rechnet mit PDG 2024 (m_τ = 1776,93 ± 0,09 MeV); die Listings 2026 geben denselben Wert. Spannung +2,3σ;
+  Belle II 2023 allein (1777,09 ± 0,14) läge bei +0,3σ. Entschieden wird wie festgelegt mit der ersten PDG-Ausgabe nach dem 13.11.2026.
+- **Kritisch ist γ_M.** Die Zählregel des Frames M ist genau die U(1)-Zählung von Domagala–Lewandowski/Meissner (nur m = ±j, γ = 0,237533). Die
+  neuere Literatur (Übersicht Barbero–Pranzetti 2022) bevorzugt für Horizonte die SU(2)-Zählung (Engle–Noui–Perez) bzw. Ghosh–Mitra mit γ = 0,274;
+  die U(1)-Randbedingungen gelten dort als leichte Überzählung. Mit 0,274 gäbe die H102-Beziehung φ = 0,648 und m_τ ≈ 1868 MeV, und der
+  Frame-Faktor γ_L wäre 2,1515 statt 1,8647. H102, γ_L sowie H15, H46 und H96 stehen also auf der U(1)-Zählung.
+- **Die Zählregel zerlegt.** DL für M folgt aus zwei Bedingungen: U1, der Materie-Frame liest an einer Punktierung nur eine U(1)-Ladung (Vermutung:
+  J = L_e7 wählt sie aus); U2, jede Ladung mit kleinster Fläche, j = |m| (Lesart: Extremdublett der Port-Auslesung, r24.2). Das Gewicht 2 ist dann
+  die Zahl der Extremzustände, kein Statistik-Ansatz. Offen ist U1; das ist die bisher genaueste Fassung von OP1.
+
+[Notiz](../notes/research/op1_counting_rule_data_2026_11_16/README.md). OP1 und OP3 offen; H102 unverändert.
+
 ### OP3: Auswahlgesetz – Berichtigung zur Diagnose, Rückführung auf OP1 (16.11.2026)
 
 Auftrag des Autors: das Auswahlgesetz für den Feldzustand angehen. Die Vorwissen-Suche fand den bewachten Kern (r14.5–r14.7) und die offene

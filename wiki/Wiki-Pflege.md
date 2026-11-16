@@ -102,6 +102,9 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 16.11.2026: Grunddaten von H102 und Zählregel des Frames M (U(1)-Zählung DL gegen SU(2)/GM) in Forschungsstand und
+  Offene-Probleme (OP1).
+
 - 16.11.2026: Nachtrag zur OP3-Diagnose (bewachter Kern übersehen, Rückführung des Auswahlgesetzes auf OP1) in Forschungsstand
   und Offene-Probleme.
 
