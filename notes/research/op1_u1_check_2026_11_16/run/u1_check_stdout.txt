@@ -1,0 +1,5 @@
+(1) Dualitaetsdrehung um a: Helizitaetskomponente von chi unveraendert (max. Abweichung 8.0e-16), Drehwinkel um die Helizitaetsachse = -2a bis auf die Wurzelwahl (max. Abweichung 8.9e-16)
+    selbstduales Feld (E = iB-Typ): chi-Bloch = [ 0.  0. -1.], antiselbstdual: [0. 0. 1.]
+(2) Rang der Maske P_M(u) fuer j = 1/2 .. 10: [2] (zwei Extremzustaende je j)
+    ausgerichtete Buendel (Gewicht 2 je j)  -> gamma = 0.237533 (DL)
+    alle j >= |m| zur Ladung (Gewicht 2j+1) -> gamma = 0.274067 (Ghosh-Mitra)

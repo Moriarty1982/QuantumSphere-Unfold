@@ -1,0 +1,11 @@
+(1)/(2) Zaehlvarianten, gamma, H102-Phase und m_tau:
+   DL/Meissner (U(1), m = +-j)    gamma = 0.237533  phi = pi/4 - gamma/2 = 0.666632  m_tau =  1777.134 MeV  (rho^2 = 0.50001)
+   GM (alle m, 2j+1)              gamma = 0.274067  phi = pi/4 - gamma/2 = 0.648365  m_tau =  1868.246 MeV  (rho^2 = 0.50753)
+   ABK (nur j = 1/2)              gamma = 0.127384  phi = pi/4 - gamma/2 = 0.721706  m_tau =  1541.375 MeV  (rho^2 = 0.47855)
+(3) Zielphase 3 delta und K je m_tau-Wert:
+   PDG 2022               m_tau =  1776.860 +- 0.12: 3 delta = 0.666689, K = 0.6666605, z(H102) = +2.28
+   PDG 2024 = PDG 2026    m_tau =  1776.930 +- 0.09: 3 delta = 0.666674, K = 0.6666645, z(H102) = +2.27
+   Belle II 2023          m_tau =  1777.090 +- 0.14: 3 delta = 0.666641, K = 0.6666735, z(H102) = +0.31
+   BESIII 2020            m_tau =  1776.910 +- 0.15: 3 delta = 0.666678, K = 0.6666633, z(H102) = +1.49
+   H102                   m_tau =  1777.134 +- 0.00: 3 delta = 0.666632, K = 0.6666760, z(H102) = +nan
+   exaktes Koide     

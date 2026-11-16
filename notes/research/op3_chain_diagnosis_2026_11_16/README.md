@@ -77,3 +77,41 @@ OP5 scheitert an derselben Stelle, und das Wiki nennt sie als gemeinsamen Kern a
 - Nicht blind: Ziel und Gewichte waren bekannt; die Diagnose ordnet ein, sie beweist keine Unmöglichkeit für jede denkbare Struktur.
 - Die Gram-Lesart (Glied G) bleibt eine Setzung. Fiele sie, wären alle Glieder darunter hinfällig, auch die Diagnose.
 - OP3 offen; OP1–OP5, C5, C6/T2 unverändert.
+
+## Nachtrag (16.11.2026): Auswahlgesetz angehen, mit Berichtigung
+Auftrag des Autors: „Auswahlgesetz für den Feldzustand angehen“. Die Vorwissen-Suche dafür hat einen Bestand gefunden, den diese Diagnose
+übersehen hatte: den **bewachten Kern** (`../op3_guarded_core_flux_2026_11_15/README.md`, r14.5–r14.7) und die offene Vorhersage **H102**
+(`../predictions/Vorab_Notiz_H102_Tau_Masse_aus_gamma.md`). Das ist mein Fehler: Ich hatte die Suche auf die Kopien-, Frame- und
+Renormierungsnotizen beschränkt.
+
+**Berichtigungen.**
+1. *Zu „Der Zahlentyp passt nicht zu einer reinen Geometrie“:* falsch. Der Raumwinkel $2\varphi=1{,}33333$ sr ist $\pi/2-0{,}237466$, also der
+   Oktant minus eine Kappe vom Raumwinkel $\gamma_M=0{,}237533$ (Abweichung $6{,}7\cdot10^{-5}$ sr, in der Phase $3{,}3\cdot10^{-5}$). Die
+   Phase hat damit eine geometrische Lesart: $\varphi=\pi/4-\gamma_M/2$ (H102).
+2. *Zu „Weitere Varianten im Träger werden nichts liefern“:* zu pauschal. Die Starrheit gilt für Zustände bei der natürlichen
+   Berry-Verbindung. Der bewachte Kern ändert nicht die Zustände, sondern **die Verbindung** auf der Generationskugel: eine flussfreie Kappe,
+   deren verdrängter Fluss am Gegenpol sitzt (Umkehrwalze, r02.2/r02.3). So entgeht er der Starrheit, ohne freie Gewichte.
+3. *Zu „Kein natives κ“ und zu H109/H110:* bleibt richtig für Dephasierung und Verschränkung. Der Kern ist ein anderer Mechanismus mit genau
+   einer Zahl.
+
+**Was das Auswahlgesetz damit ist.** Die Kette steht im Bestand schon so:
+
+| Glied | Inhalt | Quelle | Status |
+|---|---|---|---|
+| φ ← Kern | $\varphi=\pi/4-\Omega/2$ bei flussfreier Kappe Ω, verdrängter Fluss am Gegenpol | guarded core, Schritt 2, Umkehrwalze | Lesart |
+| genau ein Kern | einzige Zahl, die biegt und keinen freien Parameter einführt | ebenda, Schritt 2 | topologisch begründet |
+| Ω ← Frame | Kern = Flächenquant des Beobachter-Frames; geladene Leptonen im Frame M | ebenda, Punkt 1 | Regel, gesetzt |
+| γ_M ← Zählregel | $\sum_j 2e^{-2\pi\gamma\sqrt{j(j+1)}}=1$ über alle Spins | r08–r10 | gewählt, nicht hergeleitet |
+| Zählregel ← OP1 | warum M alle Spins mit Gewicht 2 zählt; T zählt Querungen (r24.4) | r17, r24 | offen ((S2) nicht begründbar, r24.1) |
+
+Das Auswahlgesetz für den Feldzustand ist also kein offenes Feld, sondern läuft auf **eine** Frage hinaus: die Zählregel des Frames M (OP1). Die
+Daten prüfen es schon: H102 sagt $m_\tau=1777{,}134$ MeV voraus und liegt heute $+2{,}3\sigma$ über PDG 2024; entschieden wird mit der ersten
+PDG-Ausgabe nach dem 13.11.2026.
+
+**Bezug zu Punkt 2 dieser Diagnose.** Die Aussage „die fehlende Zahl ist eine Eigenschaft des Feldzustands“ bleibt in der r16.9-Lesart richtig,
+ist aber nicht die einzige Lesart. Im Kern-Bild ist sie eine Eigenschaft der Verbindung auf der Generationskugel, und deren Größe ist ein
+Flächenquant. Beide Lesarten verlangen eine Zahl von außerhalb der Zustandsgeometrie; das Kern-Bild sagt, woher sie kommen soll.
+
+**Folgerung für den nächsten Schritt.** Nicht eine neue Dynamik suchen, sondern die Lücke OP1 angehen, an der Kern und Zählregel hängen: warum
+der Materie-Frame alle Spins mit Gewicht 2 zählt ((S2), (S3)), nachdem r24 die T-Seite als Querungszählung gelesen hat. H102 bleibt unverändert
+und eingefroren. OP1 und OP3 offen.
