@@ -153,9 +153,13 @@ def diss_cost(x, p0, tau, mode, mu):
     return A + C, (grad + gA).ravel()
 
 
+NACHLAUF = "--nachlauf" in sys.argv          # Nachtrag N1: Startfeld nahe null, nur tau = 3 pi
+INIT_SIGMA = 1e-3 if NACHLAUF else 0.3
+
+
 def solve(kind, start, tau, mode, seed):
     rng = np.random.default_rng(seed)
-    x0 = rng.normal(0, 0.3, 4 * N)
+    x0 = rng.normal(0, INIT_SIGMA, 4 * N)
     best = None
     for mu in (1.0, 10.0, 100.0):
         f = (lambda x: unitary_cost(x, start, tau, mode, mu)) if kind == "u" else (lambda x: diss_cost(x, np.abs(start) ** 2, tau, mode, mu))
@@ -216,7 +220,10 @@ if __name__ == "__main__":
     runs = []
     for sname, s in STARTS.items():
         for kind in ("u", "d"):
-            for label, tau, mode in (("V0 Haupt", np.pi, "min"), ("V1 glatt", np.pi, "smooth"), ("V2 tau=pi/3", np.pi / 3, "min"), ("V2 tau=3pi", 3 * np.pi, "min")):
+            variants = (("V0 Haupt", np.pi, "min"), ("V1 glatt", np.pi, "smooth"), ("V2 tau=pi/3", np.pi / 3, "min"), ("V2 tau=3pi", 3 * np.pi, "min"))
+            if NACHLAUF:
+                variants = (("N1 V2 tau=3pi", 3 * np.pi, "min"),)
+            for label, tau, mode in variants:
                 res = []
                 for seed in range(RESTARTS):
                     x = solve(kind, s, tau, mode, seed)
@@ -232,5 +239,5 @@ if __name__ == "__main__":
                 runs.append({"Start": sname, "Art": "unitaer" if kind == "u" else "dissipativ", "Variante": label, **b})
                 print(json.dumps(runs[-1], ensure_ascii=False))
     out["Laeufe"] = runs
-    with open("run/correction_term_result.json", "w", encoding="utf-8") as f:
+    with open("run/correction_term_nachlauf.json" if NACHLAUF else "run/correction_term_result.json", "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=1)

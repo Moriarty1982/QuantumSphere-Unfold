@@ -78,3 +78,10 @@ Festlegung lag das Ziel in einer anderen Benennung als S1 (φ = −5,604 ≡ +0,
 (Fubini–Study-Abstand 0,647 statt 0,0067). Festgelegt: Ziel und S2 liegen im **selben Sektor** wie S1 (arg Σ p u stetig von S1 aus), φ wird in
 (−π, π] gelesen. Damit: Ziel p = (0,793146; 0,193405; 0,013449), φ = +0,666674; S1 φ = +0,679043; S2 p = (0,788675; 0,211325; 0), φ = +π/4.
 Fubini–Study-Abstand zum Ziel: S1 0,006661, S2 0,117764 (keiner der Werte liegt innerhalb 10⁻³ an einer Konstante der Liste). Sonst unverändert.
+
+## Nachtrag N1 (16.11.2026, nach der ersten Rechnung, vor dem Nachlauf): Startfeld nahe null für τ = 3π
+Die erste Rechnung ließ die Varianten mit τ = 3π nicht konvergieren (stehengebliebenes Zufallsrauschen des Startfelds, σ = 0,3). Technische
+Änderung nur für diese Variante: Startfeld mit σ = 10⁻³ statt 0,3, sonst alles wie festgelegt (Zielbedingung, Generatoren, Auswahlprinzip, 20
+Zufallsstarts, Befundkriterium). Aufruf `python correction_term.py --nachlauf`, Ausgaben `run/correction_term_nachlauf_stdout.txt` und
+`run/correction_term_nachlauf.json`. Die Ergebnisse der ersten Rechnung bleiben stehen. Erwartung (nicht Teil eines Kriteriums): Der Eingriff
+sollte höchstens so groß sein wie bei τ = π, weil ein längeres Fenster die Lösungen des kürzeren enthält.
