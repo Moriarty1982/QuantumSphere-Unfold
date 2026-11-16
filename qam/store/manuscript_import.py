@@ -11,7 +11,11 @@ from sqlalchemy import insert, select
 
 from qam.store.orm import store_session
 from qam.store.registry import canonical, digest
-from qam.tools.manuscript_inventory import collect, mask_comments
+from qam.tools.manuscript_inventory import balanced, collect, mask_comments
+
+# Item numbers of research-layer paragraphs, e.g. "v4.10.0-r21.12", "v4.9.0-r28.2", "r86.1"; and the round of a layer heading.
+ROUND_ITEM = re.compile(r'\b(?:v\d+\.\d+\.\d+-)?r\d+(?:\.\d+)+')
+ROUND_LAYER = re.compile(r'\b(?:v\d+\.\d+\.\d+-)?r\d+(?![.\d])')
 
 
 THEMES = {
@@ -45,10 +49,13 @@ def import_manuscript(database, repo):
     generation = digest({'format': 'literal-import-v1', 'sources': source_hashes,
                          'importer_sha256': importer_hash, 'collector_sha256': collector_hash})
     headings = {}
+    sections = {}
     for source in source_hashes:
         text = mask_comments((repo / source).read_text(encoding='utf-8-sig'))
         headings[source] = [(text.count('\n', 0, match.start()) + 1, match.group(1))
                             for match in re.finditer(r'\\(?:sub)*section\*?\{([^{}\n]+)\}', text)]
+        sections[source] = [(text.count('\n', 0, match.start()) + 1, match.group(1))
+                            for match in re.finditer(r'\\section\*?\{([^\n]+)\}', text)]
     versions = {}
     objects = {}
     sources = {}
@@ -98,11 +105,31 @@ def import_manuscript(database, repo):
             continue
         counts[environment] += 1
         clean = mask_comments(statement)
-        label_match = re.search(r'\\label\{([^{}]+)\}', clean)
-        title_match = re.match(r'\\begin\{[^{}]+\}(?:\[([^\]]*)\])?', clean)
-        title = title_match.group(1) if title_match and title_match.group(1) else f'{environment} at {source}:{line}'
+        paragraph = environment.startswith('paragraph-')
+        label_match = None if paragraph else re.search(r'\\label\{([^{}]+)\}', clean)
+        if paragraph:
+            heading_end = balanced(statement, len(r'\paragraph'))
+            raw_title = statement[len(r'\paragraph{'):heading_end - 1].strip() if heading_end else ''
+            title_match = None
+            title = raw_title.rstrip('.') or f'{environment} at {source}:{line}'
+        else:
+            title_match = re.match(r'\\begin\{[^{}]+\}(?:\[([^\]]*)\])?', clean)
+            title = title_match.group(1) if title_match and title_match.group(1) else f'{environment} at {source}:{line}'
         ordinal[(source, environment)] += 1
-        if label_match:
+        item = ROUND_ITEM.search(title) if paragraph else None
+        if paragraph and item:
+            label = None
+            labels_seen[(source, environment + ':' + item.group(0))] += 1
+            occurrence = labels_seen[(source, environment + ':' + item.group(0))]
+            object_id = f'manuscript:{source}:item:{environment}:{item.group(0)}'
+            if occurrence > 1:
+                duplicate_labels += 1
+                object_id += ':occurrence:' + str(occurrence)
+        elif paragraph:
+            unlabelled += 1
+            label = None
+            object_id = f'manuscript:{source}:unlabelled:{environment}:{ordinal[(source, environment)]}'
+        elif label_match:
             label = label_match.group(1).strip()
             labels_seen[(source, label)] += 1
             occurrence = labels_seen[(source, label)]
@@ -114,9 +141,16 @@ def import_manuscript(database, repo):
             unlabelled += 1
             label = None
             object_id = f'manuscript:{source}:unlabelled:{environment}:{ordinal[(source, environment)]}'
-        kind = 'definition' if environment == 'definition' else 'assumption' if environment in {'assumption', 'axiom'} else 'claim'
+        kind = ('definition' if environment in {'definition', 'paragraph-definition'}
+                else 'assumption' if environment in {'assumption', 'axiom'} else 'claim')
         metadata = {'environment': environment, 'label': label,
-                    'registration': 'literal-import-v1', 'status_review': 'pending'}
+                    'registration': 'literal-paragraph-import-v1' if paragraph else 'literal-import-v1',
+                    'status_review': 'pending'}
+        if paragraph:
+            section_index = bisect_right([item[0] for item in sections[source]], line) - 1
+            layer = ROUND_LAYER.search(sections[source][section_index][1]) if section_index >= 0 else None
+            metadata['round'] = layer.group(0) if layer else None
+            metadata['item'] = item.group(0) if item else None
         if kind == 'definition':
             payload = {'title': title, 'body': statement, 'scope': 'Imported definition; interpretation pending',
                        'assumptions': [], 'inventory': metadata}
@@ -126,7 +160,8 @@ def import_manuscript(database, repo):
         relation(files[parent_id], key, 'contains', 'declared', 'Literal environment occurrence')
         section_index = bisect_right([item[0] for item in headings[source]], line) - 1
         heading = headings[source][section_index][1] if section_index >= 0 else ''
-        theme = proposed_theme(source, title_match.group(1) if title_match and title_match.group(1) else '', heading)
+        theme = proposed_theme(source, title if paragraph else
+                               (title_match.group(1) if title_match and title_match.group(1) else ''), heading)
         topic_counts[theme] += 1
         relation(key, topics[theme], 'belongs-to', 'proposed', 'Filename/title/section heuristic; thematic review pending')
         guard_payload = {'title': 'Imported statement awaits interpretation and dependency review',

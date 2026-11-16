@@ -32,6 +32,34 @@ erhalten; ihre Quellhashes ändern sich durch die Satzbefehle und werden
 bei der Zusammenstellung neu registriert. Prüfung und Grenzen:
 `notes/research/v5_layout_reflow_2026_11_11.md`.
 
+## Runden als eigene Aussagen (16.11.2026)
+
+Die Forschungsrunden (`v480-release-layers`, `v480-post-release-layers`, `v490-post-release-layers` mit v4.9.0-r01–r86 und
+`v4100-post-release-layers` mit v4.10.0-r01 ff.) formulieren ihre Ergebnisse nicht als Satzumgebungen, sondern als Absätze
+`\paragraph{Theoremlet v4.10.0-r21.12 (...)}`. Bis zum 16.11.2026 erfasste der Import jede dieser Dateien nur als ein einziges Thema.
+
+`qam/tools/manuscript_inventory.py` erkennt jetzt zusätzlich Absätze, deren Überschrift mit `Theoremlet`, `Remark`, `Correction`,
+`Restatement`, `Definition`, `Lemma`, `Proposition` oder `Corollary` beginnt. Ein Eintrag reicht bis zum nächsten `\paragraph`,
+`\(sub)section`, `\clearpage` oder zur nächsten Satzumgebung; „Purpose.“, „Proof sketch.“, „Reading.“ und anderer Fließtext werden
+nicht erfasst. `qam/store/manuscript_import.py` legt jeden Eintrag als ungeprüfte Aussage an (`definition` für Definitionen, sonst
+`claim`), mit offenem Prüf-Guard wie bei allen importierten Aussagen. Das Inventar trägt:
+
+- `environment`: `paragraph-theoremlet`, `paragraph-remark`, `paragraph-correction` usw.;
+- `registration`: `literal-paragraph-import-v1`, getrennt von `literal-import-v1` der Satzumgebungen;
+- `item`: die Nummer aus der Überschrift, z. B. `v4.10.0-r21.12` oder `r86.1`, sonst `null`;
+- `round`: die Runde aus der umgebenden `\section`-Überschrift, z. B. `v4.10.0-r21`.
+
+Die Objektkennung ist `manuscript:<Datei>:item:<environment>:<Nummer>`; Einträge ohne Nummer erhalten eine Positionskennung. Da die
+Rundendateien nur angehängt werden, bleiben Kennungen früherer Runden stabil.
+
+Stand am 16.11.2026 (Quellstand `main` mit Runde v4.10.0-r22): **354 Runden-Einträge** aus 134 Runden (294 Theoremlets, 33 Bemerkungen,
+18 Berichtigungen, 5 Definitionen, je ein Lemma, eine Proposition, ein Korollar und eine Neufassung); 26 davon ohne Itemnummer.
+Zusammen mit den 2468 Satzumgebungen sind es 2953 Objekte und 2835 offene Prüf-Guards. Frames bleiben `unspecified`; die
+Frame-Tabellen der Runden werden noch nicht eingelesen.
+
+**Die v5-Editionen bleiben unverändert:** `configure_v5_editions` nimmt nur Einträge mit `literal-import-v1` auf; `qsc-v5-full` hat
+weiterhin 2468 Mitglieder. Die Runden-Einträge sind Objekte des Speichers, keine Editionsmitglieder.
+
 ## Zwei Dokumentzusammenstellungen (Schema v6)
 
 `python -m qam.tools.configure_v5_editions --out build/v5-editions-new`

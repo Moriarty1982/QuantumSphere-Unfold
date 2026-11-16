@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 16.11.2026: QAM: Forschungsrunden im Aussagenspeicher (354 Runden-Einträge), Abschnitt in QAM ergänzt.
+
 - 16.11.2026: Runde v4.10.0-r22 (Kollapszustand im ganzen Hauptkorpus typisiert) eingetragen: Forschungsstand, Gesamtbild
   (These T1, Entwicklung), Forschungslinie, Inhalt, Content-overview. Berichtigung zu r21.9. Kein Abschluss.
 
