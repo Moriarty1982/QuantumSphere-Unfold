@@ -1,5 +1,16 @@
 # Forschungsstand
 
+### OP3: Das Kern-Bild topologisch (16.11.2026)
+
+Auftrag des Autors: topologische Analyse. Erkundung, analytisch.
+
+- **Grenze:** Topologie legt ganze Zahlen und Symmetrieanteile fest (Chern-Zahl 1, Oktant = 2π/8), keine stetigen Werte. Die Zielphase 2/3 ist kein rationaler Teil von 2π; ΔΦ = γ_M/2 muss also von außen kommen (OP1).
+- **Genau ein Kern** ist topologisch die einzige starre Biegung (n Kerne geben n − 1 freie Holonomien).
+- **Neu:** Als Symmetrie der Verbindung verlangt die Umkehrwalze Θ = iσ_y K eine antipodensymmetrische Flussdichte, F(−n) = F(n). Dann ist ein flussfreier Kern bei der Zyklusachse nur mit einem zweiten bei der Gegenachse verträglich; Fall A (Fluss sammelt sich am Gegenpol) widerspricht der Symmetrie. Das Kernpaar ist im Quotienten ℝP² wieder eine einzige Punktierung. Seine Phase ist nicht ausgewertet (nur mit Vorab-Notiz).
+- **Neu:** Nach Borsuk–Ulam gibt es über der Antipodenabbildung keine Struktur mit Θ² = −1 auf dem trivialen Bündel. Eine fermionische Umkehrwalze erzwingt Fluss, also eine nichtverschwindende Phase; ihren Wert legt sie nicht fest.
+
+[Notiz](../notes/research/op3_topology_core_2026_11_16/README.md).
+
 ### OP3: Methoden-Notiz zu einem zeitabhängigen Korrekturterm (16.11.2026)
 
 Idee des Autors: einen von der Zeit abhängigen Korrekturterm einfügen, der die Werte in die richtige Richtung biegt, und rückwärts untersuchen, wie er sich in jedem Schritt ändern müsste. Vor jeder Rechnung festgelegt: System (Basis s₊, w, s̄₋; freie Entwicklung nach r16.8; eine Periode), zwei Startzustände (Spin-1-Dreieck, flacher Oktant), Ziel K = 2/3 und φ = 0,666674 mit Spielraum, feste Generatoren (Dipol, Quadrupol; getrennt dissipativ), Auswahlprinzip kleinster Eingriff, Robustheitsvarianten, vier Formmerkmale (Richtung, Charakter, Zeitverlauf, Integral) und eine Liste erwarteter Artefakte. Vorab festgehalten: K und φ hängen nur von den Populationen ab. Ein Befund zählt erst, wenn er stabil ist und ein Übertragungstest mit eigener H-Nummer (Neutrinos, Laufen bis M_Z) ihn bestätigt. Erkundung, nicht blind. [Methoden-Notiz](../notes/research/op3_correction_term_2026_11_16/Methoden_Notiz.md).

@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 16.11.2026: Topologische Analyse des Kern-Bildes (Grenze, Umkehrwalze als Symmetrie, Borsuk–Ulam) in Forschungsstand.
+
 - 16.11.2026: Undurchlässiger Rand (kein Grund im Bestand, hinreichend für Kern) in Forschungsstand.
 
 - 16.11.2026: Ergebnis Methoden-Notiz 2 (Randlösung statt Kern, Ausschluss) in Forschungsstand.
