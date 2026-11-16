@@ -214,7 +214,9 @@
   Issue #131 und #17 nachgezogen.
 - **Berichtigung = Runde v4.10.0-r27 (16.11., PR #156):** Die Bildprüfung von HS(6) steht schon im Atlas (Schicht r59, keine offene
   Klasse); r26 hatte sie fälschlich als offen geführt. OP5 laut Atlas lokal geschlossen, offen nur an der Active-Core-Grenze. r59 rät
-  von neuen Trägern ab. Kandidat 1454 Seiten, Linter 0. Zuletzt vergebene Runde: **r27**.
+  von neuen Trägern ab. Dazu r27.2 (Frage des Autors): Gründe des Atlas geprüft: (a) endliche OP5-Routenprüfung gilt nur für Routen,
+  (b) Vorsicht vor Algebra-Verdopplung trifft Kopien nicht, (c) Rahmen ohne Teilchenanspruch heißt nur: Rollen getrennt halten. Keiner
+  verbietet HS(7)/HS(8) als Kopienträger. Kandidat 1454 Seiten, Linter 0. Zuletzt vergebene Runde: **r27**.
 - **C5 ruht nach r21.12:** Form (iii) ohne Kandidat; ohne neue Struktur keine weiteren Varianten. Möglich: OP1 (a)
   oder den Kollapszustand im ganzen Hauptkorpus nach der Tabelle r21.9 typisieren (R oder P).
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,
