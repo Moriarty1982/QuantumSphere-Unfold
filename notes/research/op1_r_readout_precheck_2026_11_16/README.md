@@ -42,3 +42,39 @@ M/T-Asymmetrie.** Das bestätigt r10.4(c) für die Flussauslesung.
 Keine Vorab-Notiz für die Konstruktion in der geplanten Form, denn ihr Ausgang steht fest (M und T zählen gleich). Ein Test ist nur für einen der zwei
 Auswege sinnvoll. Weg 2 wäre der, der eine Zahl liefern könnte; er verlangt zuerst die Literaturprüfung zu EPRL und Bianchi. OP1 offen; H98, H102
 unverändert; keine H-Nummer vergeben (H111 und k233 bleiben frei).
+
+## Nachtrag (16.11.2026): Literatur zu Ausweg 2 (EPRL, Bianchi)
+Auftrag des Autors: „Literatur EPRL/Bianchi“. Gelesen über alphaXiv: Engle–Livine–Pereira–Rovelli, „LQG vertex with finite Immirzi parameter“,
+arXiv:0711.0146; Bianchi, „Entropy of Non-Extremal Black Holes from Loop Gravity“, arXiv:1204.5122. Skript `spectrum_order.py`, Ausgabe
+`run/spectrum_order_stdout.txt`.
+
+**1. Sektormischende Boosts gibt es.** In EPRL (Lorentz-Fall) wählen die Simplizitätsbedingungen ρ = γn und k = n/2, also die **niedrigste**
+SU(2)-Darstellung in $H_{(n,\rho)}=\bigoplus_{k\ge n/2}H_k$. Die Bedingung L − K/γ ≈ 0 (bzw. K = γL bei Bianchi) gilt nur schwach, als
+Matrixelemente auf dem Bild der Y-Abbildung. Ein Boost führt aus diesem Bild hinaus in die höheren k. Bianchi zeigt es direkt: Die Eigenzustände
+|λ⟩ des Boost-Generators K_z sind keine Flächeneigenzustände; ein Zustand |j⟩ hat eine Verteilung über λ mit Mittel γj. Die Voraussetzung
+$[D,J^2]=0$ des Satzes aus der Vorprüfung gilt für Lorentz-Boosts in γ-einfachen Darstellungen also **nicht**; Ausweg 2 ist formal offen.
+
+**2. Aber der Boost-Weg macht γ und den Beobachter unsichtbar.** Bianchi definiert den Quanten-Rindler-Horizont über den Boost-Hamiltonoperator
+$H=\sum_f\hbar K^z_f a$, mit Facettenzuständen |j⟩ = |(γ(j+1), j); j, **+j**⟩ (größte magnetische Zahl längs der Normalen). Ergebnisse: Energie
+⟨H⟩ = A a/(8πG) (Frodden–Ghosh–Perez), Temperatur ℏa/2π unabhängig von j und γ, Entropie je Facette 2πγj, insgesamt **S = A/4 für jeden Wert
+von γ**; die Entropiedichte hängt nicht vom Abstand des Beobachters ab. Das ist r10.1/r10.2 in kovarianter Form: Der Boost-Teil liefert keinen
+frame-abhängigen Flächenquant, und γ wird durch die Entropie gar nicht festgelegt („the entropy of large black holes is independent from the
+Immirzi parameter“). Der in r10.3 als einziger möglicher Ort genannte Boost-Teil gibt in der Literatur also gerade **keine** Zahl.
+
+**3. Was das für die Zählregel und für H102 heißt.**
+- Der Wert γ_M = 0,237533 ist eine Eigenschaft der **Flächen-Ensemble-Zählung** (mikrokanonisch, ABK/DL). Im kovarianten, thermischen Zugang fällt γ
+  aus der Entropie heraus. Die Frage OP1 verschiebt sich damit noch einmal: nicht nur „warum U(1)“, sondern „warum zählt der Frame M mikrokanonisch
+  im Flächen-Ensemble“.
+- Bianchis Facettenzustände sind die Extremzustände längs der Normalen. Das stützt U1 (Achse = Normale) und U2 (Extremzustand) auch im kovarianten
+  Bild, dort aber ohne Zählgewicht.
+- **Neue Grunddaten-Empfindlichkeit:** EPRL weisen auf eine Ordnungsmehrdeutigkeit des Flächenspektrums hin (√(j(j+1)) oder j bzw. j + ½). Die
+  DL-Zählung gibt dann γ = 0,237533 / 0,349699 / 0,220636 und die H102-Beziehung π/4 − γ/2 = 0,666632 / 0,610549 / 0,675080. H102 hängt also
+  zusätzlich an der Wahl √(j(j+1)).
+
+**4. Zirkelregeln auf Ausweg 2 angewandt.** Ein Test über sektormischende Boosts müsste γ als freie Größe führen und eine Selbstkonsistenz suchen,
+die es festlegt. Bianchi zeigt, dass die naheliegende thermische Selbstkonsistenz (Clausius mit Unruh-Temperatur) γ gerade **nicht** festlegt. Ein
+solcher Test bräuchte also eine zusätzliche Bedingung, die im Bestand nicht steht. Ein Test wird hier nicht angelegt.
+
+**Folgerung.** Ausweg 2 ist formal offen (Boosts mischen Sektoren), physikalisch aber in der Literatur gerade der Weg, auf dem γ und der Beobachter
+herausfallen. Der verbleibende Ausweg ist 1 (verschiedene Objekte: Flusslinien gegen Querungen). OP1 offen; H102 unverändert, mit einer weiteren
+benannten Abhängigkeit (Spektrumsordnung).

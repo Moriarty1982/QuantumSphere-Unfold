@@ -4,6 +4,8 @@
 
 Geplant war ein Test: eine Auslesung im Bezugsframe R (dein ursprünglicher „Photon-Frame“), M bei Rapidität η, T bei −η + iπ/2. Die Vorprüfung zeigt, dass der Ausgang feststeht: Sind die Frame-Abbildungen invertierbar und sektorerhaltend, hat der Effekt in jedem Spin denselben Rang wie die Maske; M und T zählen dann gleich (Form von r10.4(c), nachgerechnet bis j = 5). Keine H-Nummer. Offen bleiben zwei Auswege: verschiedene Objekte (Flusslinien gegen Querungen, r24.4) oder sektormischende Boosts wie in Spinschaum-Modellen (K = γL), den Ort, den r10.3 nennt; Literatur dazu nicht geprüft. [Notiz](../notes/research/op1_r_readout_precheck_2026_11_16/README.md).
 
+**Nachtrag Literatur (EPRL arXiv:0711.0146, Bianchi arXiv:1204.5122):** Lorentz-Boosts mischen in γ-einfachen Darstellungen die SU(2)-Spins (K = γL gilt nur schwach), Ausweg 2 ist also formal offen. Bianchis Quanten-Rindler-Horizont (Facetten |j, +j⟩ längs der Normalen) gibt aber Unruh-Temperatur unabhängig von j und γ und S = A/4 für jedes γ: Der Boost-Teil liefert keinen frame-abhängigen Flächenquant, und γ wird durch die Entropie nicht festgelegt. γ_M = 0,2375 ist eine Eigenschaft der mikrokanonischen Flächen-Ensemble-Zählung. Dazu eine neue Grunddaten-Abhängigkeit von H102: Mit dem Flächenspektrum j bzw. j + ½ statt √(j(j+1)) gäbe die Beziehung 0,6105 bzw. 0,6751.
+
 ### OP1: Setzung (S1) geprüft – masselose Querungen statt „derselben SU(2)“ (16.11.2026)
 
 Auftrag des Autors: (S1) prüfen. Erkundung, nicht blind.
