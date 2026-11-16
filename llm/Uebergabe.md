@@ -37,6 +37,9 @@
     PR #157; Idee des Autors):** Kopien von HS(8) = Kleinsche Vierergruppe {1,R,T,J_B}, Kopie 00 = Betrachter. Reiner Betrachter: Phase starr π/4.
     Verschränkter Betrachter: Tr ρ_iρ_j = ½ für jedes λ, Phase arctan λ³, nötig λ = 0,923199. λ offen → kein H110. Nächster Schritt:
     Zustand der HS(7)-Hälfte {1,F} (Aufteilung 7+6+6 des Autors) aus dem Bestand herleiten, Konstruktion vor dem Auswerten festlegen.
+  - **C⊗H⊗O⊗S (16.11., Erkundung, `notes/research/op3_dixon_times_sedenions_2026_11_16/`, 8a58f51 im Zweig von PR #157; Frage des Autors):**
+    Stufe HS(10), nicht HS(7). Kopienregister von HS(8) = zweites H (Einheiten = Frame-Abbildungen). S bringt Nullteiler, keine
+    Normmultiplikativität (Kopien-/Gram-Lesarten brechen), Cl(8)/Trialität. Offen: ob S₃ ⊂ Aut(S) die Frame-Zyklussymmetrie nativ liefert.
   - Davor H108 (k230, widerlegt, Vorab 01a0f86).
   - H108: verschränkte Generationszustände als Majorana-Paare {n_k, b_k} im Triplett, b_k aus den natürlichen Punkten (Nachbar, ±z,
     Gegenpunkt, Gegenpunkt des Nachbarn; E1–E5). Widerlegt: ±z gibt flachen Oktanten, Gegenpunkte Phase 0, Nachbar 0,176.
