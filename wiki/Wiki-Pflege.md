@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 16.11.2026: Nachtrag wechselnde Walze (Triolenraster gegen Viertelraster) in Forschungsstand.
+
 - 16.11.2026: Nachtrag mehrere Umkehrwalzen (Kryptologie-Teile, r02, r04) in Forschungsstand.
 
 - 16.11.2026: Topologische Analyse des Kern-Bildes (Grenze, Umkehrwalze als Symmetrie, Borsuk–Ulam) in Forschungsstand.

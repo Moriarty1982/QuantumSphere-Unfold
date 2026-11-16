@@ -92,3 +92,31 @@ Dualitätsdrehung). r02.5 sagt es ausdrücklich: Hin, Reflexion, zurück ergibt 
 die eine Walzenstellung α = π/8, die Kern und Gegenpol tauscht. Als Symmetrie gibt jede von ihnen ein Kernpaar, nicht Fluss am Gegenpol. Eine
 fixpunktfreie Umkehrwalze auf χ wäre ein neues Element (Θ). Die Bedeutung von α = π/8 (halber Oktantenwinkel) ist nicht geprüft und wird nicht
 gedeutet. OP3 offen.
+
+## Nachtrag (16.11.2026): Wechselnde Walze
+Auftrag des Autors: „Wechselnde Walze“. Skript `rotor_steps.py`, Ausgabe `run/rotor_steps_stdout.txt`. Erkundung, analytisch, kein Zielwert.
+
+**Der Walzenschritt im Bestand.** r13.1/r14.1: Der Kompensator wirkt, wenn arg s eine der sechs Auslese-Richtungen Triole ∪ J_B(Triole) passiert, also alle
+30° Dualitätswinkel, sechs Kicks je Schlag; ein Schlag ist ein Umlauf von s um das Photon und gleich der Rundweg-Umkehrwalze C (r14.1(c)). Die wirksame
+Umkehrwalze in der Walzenstellung α ist R_α⁻¹ J_B R_α (r02.5). r14.1(b) nennt als Alternative das Viertelraster (45° in arg s, 22,5° Dualitätswinkel),
+das den Faktor ½ statt ¾ gäbe und deshalb nicht übernommen wurde.
+
+**Ergebnis (nachgerechnet):**
+
+| Raster | Achsen der wirksamen Walzen auf χ | Produkt zweier aufeinanderfolgender Walzen | Bahn der Zyklusachse z_c |
+|---|---|---|---|
+| Triole ∪ J_B(Triole) (r14, sechs Kicks je Schlag) | drei Achsen in der Äquatorebene bei 90°, 150°, 30°, Periode drei Kicks | Drehung um die Helizitätsachse um **120°** | sechs Punkte bei ±1/√3 Höhe, keine Oktantenmitten außer (−1, 1, −1); nächster Abstand zu −z_c 24,4° |
+| Viertelraster (r14.1(b), abgelehnt) | vier Achsen bei 90°, 135°, 0°, 45° | Drehung um die Helizitätsachse um **90°** | nur Oktantenmitten: (−1, 1, −1), (−1, −1, −1), (1, −1, −1), (1, 1, −1); bei α = 22,5° genau −z_c |
+
+1. **Im Bestandsraster setzen zwei aufeinanderfolgende Walzen einen Generationsschritt zusammen.** Zwei Kicks sind ein Drittel des Schlags, und das
+   Produkt der beiden wirksamen Umkehrwalzen ist die Drehung um 120° um die Helizitätsachse. Das ist genau der Drittelzyklus von r16.9 (Zeitverschiebung
+   um ein Drittel der Periode als Generationszyklus). Eine wechselnde Walze verbindet damit das Enigma-Bild (r02, r14) mit dem Generationszyklus. Die
+   Drei steckt dabei schon in der Triole von r14; neu ist nur, dass sie als Produkt zweier Reflexionen erscheint.
+2. **Die Walze, die Kern und Gegenpol tauscht (α = π/8), liegt nicht im Bestandsraster, sondern im Viertelraster.** Das Viertelraster ist die
+   Maschine der Oktanten: Es führt die Zyklusachse nur über Oktantenmitten, und sein Grundschritt ist 90°. Das Triolenraster ist die Maschine der
+   Generationen (120°) und berührt die Oktantenmitten fast nie.
+3. **Lesart, nicht gerechnet:** Das Kern-Bild (Oktant, Umkehrwalze bei π/8) und der Generationszyklus (Triole, 120°) gehören zu zwei verschiedenen
+   Walzenrastern. Der Faktor des Viertelrasters ist ½, die Oktanten-Überlappung; der des Triolenrasters ist ¾. Ob die Biegung vom Oktanten weg mit dem
+   Unterschied der beiden Raster zusammenhängt, wäre eine eigene Frage; sie wird hier nicht beantwortet und nicht numerisch geprüft.
+
+OP3 offen; keine H-Nummer.
