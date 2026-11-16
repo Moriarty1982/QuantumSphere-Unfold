@@ -33,6 +33,10 @@
   - H109: generationsabhängige zyklische Frame-Lesung (Generation k im Frame F_k aus R/T/J_B; L1 F⊗F, L2 kontrollierte Lesung einer Hälfte),
     9 Mechanismen, 14 Versuche, kein Treffer. Drehungen lassen 0,679042 stehen (kohärentes Dreieck, Überlappung ½); L2 gibt 0,05–0,78.
     Folgerung: Eine Lösung müsste die Überlappung ½ oder die Kohärenz ändern. Fünf Wege geprüft, Rest 0,012376 offen.
+  - **Frame-Algebren mit Betrachter (16.11., Erkundung, nicht blind, `notes/research/op3_frame_algebras_observer_2026_11_16/`, 719a164 im Zweig von
+    PR #157; Idee des Autors):** Kopien von HS(8) = Kleinsche Vierergruppe {1,R,T,J_B}, Kopie 00 = Betrachter. Reiner Betrachter: Phase starr π/4.
+    Verschränkter Betrachter: Tr ρ_iρ_j = ½ für jedes λ, Phase arctan λ³, nötig λ = 0,923199. λ offen → kein H110. Nächster Schritt:
+    Zustand der HS(7)-Hälfte {1,F} (Aufteilung 7+6+6 des Autors) aus dem Bestand herleiten, Konstruktion vor dem Auswerten festlegen.
   - Davor H108 (k230, widerlegt, Vorab 01a0f86).
   - H108: verschränkte Generationszustände als Majorana-Paare {n_k, b_k} im Triplett, b_k aus den natürlichen Punkten (Nachbar, ±z,
     Gegenpunkt, Gegenpunkt des Nachbarn; E1–E5). Widerlegt: ±z gibt flachen Oktanten, Gegenpunkte Phase 0, Nachbar 0,176.
