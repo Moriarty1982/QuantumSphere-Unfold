@@ -1,0 +1,25 @@
+(0) ohne Frame-Lesung, Kaesten 00/01/10/11 je Generation:
+    [0.792713 0.097631 0.097631 0.012024]
+    [0.792713 0.097631 0.097631 0.012024]
+    [0.792713 0.097631 0.097631 0.012024]
+(1) Lesung nach R = sigma_z (halbe Drehung um eine Frame-Achse), je Generation:
+    [0.01317  0.101592 0.101592 0.783645]
+    [0.390635 0.234373 0.234373 0.140619]
+    [0.136815 0.23307  0.23307  0.397045]
+(1) Lesung nach T = sigma_x (halbe Drehung um eine Frame-Achse), je Generation:
+    [0.136815 0.23307  0.23307  0.397045]
+    [0.01317  0.101592 0.101592 0.783645]
+    [0.390635 0.234373 0.234373 0.140619]
+(1) Lesung nach J_B = sigma_y (halbe Drehung um eine Frame-Achse), je Generation:
+    [0.390635 0.234373 0.234373 0.140619]
+    [0.136815 0.23307  0.23307  0.397045]
+    [0.01317  0.101592 0.101592 0.783645]
+(2) halbe Drehung um eine Achse senkrecht zur Zyklusachse, je Generation:
+    [0.012024 0.097631 0.097631 0.792713]
+    [0.012024 0.097631 0.097631 0.792713]
+    [0.012024 0.097631 0.097631 0.792713]
+    Drehung um die Zyklusachse (2pi/3), je Generation:
+    [0.792713 0.097631 0.097631 0.012024]
+    [0.792713 0.097631 0.097631 0.012024]
+    [0.792713 0.097631 0.097631 0.012024]
+(3) senkrechte halbe Drehung vertauscht die Kaesten 00 <-> 11: [0.792713 0.097631 0.097631 0.012024] -> [0.012024 0.097631 0.097631 0.792713]; in einer Haelfte normiert: 01/H0 = 0.1097, gelesen nach der Drehung = 0.8903 = 10/H1 ohne Drehung 0.8903 (Werte schon in H107)
