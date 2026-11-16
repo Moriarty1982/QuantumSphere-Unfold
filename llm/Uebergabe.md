@@ -9,7 +9,7 @@
 - **GitHub:** `main` nach PR #152 (ad665b4, Runde r24, OP1), davor PR #151 (Frame-Abschnitte im Aussagenspeicher), davor PR #150 (fdde521, Runden-Absätze im Aussagenspeicher), davor PR #149 (f495e5a, Runde r23, Kaskade), davor PR #148 (a141650, Runde r22, Kollapszustand typisiert), davor PR #147 (c0f3011, Runde r21, C5 neu gestellt), davor PR #146 (d9d4b5c, Runde r20, C5), davor PR #145 (81a6ccb, Neuheitsprüfungen Kern und Koide), davor #144 (982c476, Runde r19), davor #143 (80af436, C5 (α) in der r10-Lesart), davor #142 (cdb45bf, C5 Nullaugenblick), davor #141 (144d4ff, Runde r18), davor #140 (c66a5ab, OP4 Zeitzyklus und Spin(8)-Zentrum), davor #139 (86d80c8, Suche nach blindem Test, H2 nachgerechnet), davor #138 (68e1075, Runde r17), davor #137 (a835c46, OP1 Brücke: Barbero-Dublett, Penrose-Stränge), davor #136 (45f518d, OP3 Uhr-Abgleich und Treue-Lesart, OP1 Irreduzibilität), davor #135 (e0be304, Runde r16 mit r16.1–r16.9), davor #134 (f32ae5c, k220 „ein Objekt“ übernommen), davor #133 (37ac7da, OP3: C⊗O, Helizitätsachse, invariante Kugel, Feldvorzeichen), davor #132
   (b6ed1a5, Runde r15, Dauerauftrag Issues), #130 (eeb6083,
   Berichtigung zu CT-004), #129 (c9bfb19, OP1 mit I1, CT-004) und #128
-  (14feb02, Release v5.1.0). **Offen: PR #153** (Zweig `research/h105-area-steps`: Vorab-Notiz H105, Skript k227, Testsuche, Wiki; wartet auf Freigabe). Gemergt am 14./15.11.: #124–#128
+  (14feb02, Release v5.1.0). **Offen: PR #154** (Zweig `research/v4.10-r25-dixon-copies`, Runde r25, Dixon-Kopien; wartet auf Freigabe; CI gestartet). **Offen: PR #153** (Zweig `research/h105-area-steps`: Vorab-Notiz H105, Skript k227, Testsuche, Wiki; wartet auf Freigabe). Gemergt am 14./15.11.: #124–#128
   (OP3-Rückwärtssuche, Dauerauftrag Versionsverwaltung, Abbildung C⊗S → C⊗H⊗O, bewachter Kern, Release), davor #108–#123.
   Gemergte Zweige sind gelöscht (16.11.: drei lokale Altzweige). Die Läufe nach dem Merge von #146 waren erfolgreich.
 - **Letzte Runde:** v4.10.0-r24 (OP1, Querungen, PR #152, ad665b4). **Davor:** v4.10.0-r23 (Kaskade, PR #149, f495e5a), v4.10.0-r22 (Kollapszustand, PR #148, a141650), davor v4.10.0-r21 (gemergt über PR #147 als c0f3011), C5 frame-sauber neu gestellt (PR #147). Anteile C5_M + C5_T = 1,
@@ -200,11 +200,13 @@
   Folge: Flächenschritte 4 ln 2 l_P² (Bekenstein–Mukhanov, α = 4 ln 2), Echos im Ringdown nur, wenn jede Querung ein T-Quant ist
   (V1). (V1) ist eine neue Wahl, Beobachtbarkeit umstritten (arXiv:2201.03245), Wert nicht projektspezifisch; (V2) nur Hawking.
   Autor hat V1 gesetzt → H105 (siehe Hypothesen).
-- **OP3, Dixon-Kopien (16.11., Idee des Autors, Zweig `research/op3-dixon-copies`, nur Notiz):**
+- **OP3, Dixon-Kopien = Runde v4.10.0-r25 (16.11., Idee des Autors, PR #154):**
   `notes/research/op3_dixon_copies_2026_11_16/`. HS(7) = 2 Kopien → Kopien-Qubit (Ladung bestimmt), drei unverzerrte Zustände =
   flacher Oktant (det G = 0). HS(8) = 4 Kopien = Triplett + Singulett; Spin-1-Dreieck im Triplett gebogen; Spatprodukt der drei
   → Singulett, |det V|² = det G: vierte Kopie speichert die Biegung (neutraler Levi-Civita-Träger aus r13.6). Halbierung bestätigt,
-  3 + 1 liegt quer dazu. Offen: HS(7)/HS(8) im Atlas nicht definiert; Rest 0,0124; Auswahl der drei Zustände. Vorschlag: Runde r25.
+  3 + 1 liegt quer dazu. Offen: HS(7)/HS(8) im Atlas nicht definiert; Rest 0,0124; Auswahl der drei Zustände.
+  Kandidat 1450 Seiten, Linter 0; Issue #131 und #17 nachgezogen. Zuletzt vergebene Runde: **r25**. Nächster Schritt dort: Zulässigkeit
+  von HS(7)/HS(8) nach den Atlas-Regeln (HS(4)-Tor, HS(5)-Zweiseitigkeit) prüfen.
 - **C5 ruht nach r21.12:** Form (iii) ohne Kandidat; ohne neue Struktur keine weiteren Varianten. Möglich: OP1 (a)
   oder den Kollapszustand im ganzen Hauptkorpus nach der Tabelle r21.9 typisieren (R oder P).
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,

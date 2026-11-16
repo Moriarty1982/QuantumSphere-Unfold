@@ -1,0 +1,8 @@
+(1) Flaechenquant j = 1/2 in T: a = 2.772589 = 4 ln 2 = 2.772589
+(2) Schwarzschild: M omega_0 = 0.027579 = ln2 * M T_H = 0.027579; M omega_220 = 0.37367; Verhaeltnis = 13.549 (nicht ganzzahlig -> 220-Ton liegt zwischen zwei Linien)
+(3) Kerr a = 0.00: M omega_220 = 0.3683, Linienabstand M dw = 0.02758, Lage n = 13.354 (Abstand zur naechsten Linie 0.354 Linienabstaende)
+(3) Kerr a = 0.50: M omega_220 = 0.4674, Linienabstand M dw = 0.02560, Lage n = 7.791 (Abstand zur naechsten Linie 0.209 Linienabstaende)
+(3) Kerr a = 0.69: M omega_220 = 0.5307, Linienabstand M dw = 0.02316, Lage n = 5.633 (Abstand zur naechsten Linie 0.367 Linienabstaende)
+(3) Kerr a = 0.80: M omega_220 = 0.5855, Linienabstand M dw = 0.02068, Lage n = 4.133 (Abstand zur naechsten Linie 0.133 Linienabstaende)
+(3) Kerr a = 0.90: M omega_220 = 0.6660, Linienabstand M dw = 0.01674, Lage n = 2.340 (Abstand zur naechsten Linie 0.340 Linienabstaende)
+(4) M-Regel: Flaechenquanten j = 1/2..3: [ 5.17    8.4427 11.5606 14.6231 17.6591 20.6802] -> Verhaeltnisse nicht rational, Summen dicht
