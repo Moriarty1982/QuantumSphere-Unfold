@@ -8,7 +8,7 @@ Auftrag des Autors: die Logikkette zurückgehen und bei OP5 nachsehen. Erkundung
   unabhängige Zahl. Aus den Polmassen: $|G_{01}|^2=0{,}499991$, Bargmann-Phase 0,666689.
 - **Zwei Zahlen, eine Geometrie.** In jeder reinen, generationssymmetrischen Konstruktion legt die Überlappung den Kegel und der Kegel die Phase
   fest. Kohärente Zustände mit Überlappung² ½ geben für Spin ½, 1, 3/2, 2 die Phasen 0,785, 0,679, 0,650, 0,637; 2/3 liegt zwischen Spin 1 und 3/2.
-- **Der Zielzustand ist nicht kohärent.** In der Lesart von r16.9 verlangen $K=arphi=2/3$ ein Kohärenzmaß 1,068 statt 1, also Rang zwei der
+- **Der Zielzustand ist nicht kohärent.** In der Lesart von r16.9 verlangen $K=\varphi=2/3$ ein Kohärenzmaß 1,068 statt 1, also Rang zwei der
   Invariantenmatrix $S$ (r16.8), deren Größe für jedes Feld frei ist. Die fehlende Zahl ist eine Eigenschaft des Feldzustands, nicht des Trägers.
 - **Gleiche Lücke wie OP5:** Auch dort lässt die Algebra eine Familie frei und wählt den Wert nicht aus (Zustandsauswahl); ein berechneter Umlauf
   (Quelle–Rückweg) fehlt. Folgerung: Weitere Träger-Varianten helfen OP3 nicht; Fortschritt hängt an der Dynamik.
