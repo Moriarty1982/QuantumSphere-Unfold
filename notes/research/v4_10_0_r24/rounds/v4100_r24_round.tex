@@ -1,0 +1,127 @@
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r24 Source-Only: OP1, the Statistics per Frame Checked Backwards, and the Tachyon Frame as Counting Crossings}
+\addcontentsline{toc}{section}{v4.10.0-r24 Source-Only: OP1, the Statistics per Frame Checked Backwards, and the Tachyon Frame as Counting Crossings}
+\label{sec:v4100-r24-op1-crossing}
+% ============================================================================
+
+\paragraph{Purpose.}
+OP1 asks why the matter frame M counts all spins with weight \(2\) and the tachyon frame T only \(j=\tfrac12\) (H98, v4.10.0-r09.1).
+v4.10.0-r17.5 read the rule as the statistics of Penrose strands, bosonic for M and fermionic for T, with the settings (S1) a strand is a
+quantum of \(\chi\), (S2) T reads strands fermionically and M bosonically, (S3) M counts only aligned bundles; r17.6 withdrew the reason
+given for (S2).  This layer checks (S2) by a backward search, follows the deferred idea I1 on the author's decision (2026-11-16), and
+replaces the guard ``T = string sector'' of CT-004 by a reading supported in the source.  Exploration, not blind; trigger~3 of I1 is
+met.  The register CT-004 is not changed.  The notes are \texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r24/},
+\texttt{notes/\allowbreak research/\allowbreak op1\_statistics\_backward\_2026\_11\_16/} and
+\texttt{notes/\allowbreak research/\allowbreak op1\_i1\_crossing\_2026\_11\_16/}.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r24 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.1.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24237112}{10.5281/zenodo.24237112} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r24 results}
+\label{subsec:v4100-r24-results}
+
+\paragraph{Theoremlet v4.10.0-r24.1 (no statistics per frame from frame or port structure).}
+A reason for (S2) must act on the exchange of strands (Sym against \(\Lambda\)), must be exchanged by the tachyon map so as to separate M
+and T, and must not lead to the Kramers rule.
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] The frame maps act strand by strand; \(U^{\otimes n}\) commutes with the exchange of two strands (checked for \(n=2,3\)), so
+\(\mathrm{Sym}^n\) and \(\Lambda^n\) stay apart (as r17.6).
+\item[(b)] The port parity of the main body (\(C=\tfrac12(1+J)\) ``bosonic'', \(A=\tfrac12(1-J)\) ``fermionic'', Theorem~\ref{thm:origin}(ii),
+Theorem~\ref{thm:string-lqg-duality}) is no exchange: \(J_B\) sends \(F_+\mapsto iF_-\), \(F_-\mapsto-iF_+\), a swap, up to phases, of the two
+helicity parts of one field.
+\item[(c)] The compensator applied strand by strand maps every bundle onto the aligned bundle \(|c\rangle^{\otimes n}\) (or \(|a\rangle^{\otimes n}\) with
+the partner port), which lies in \(\mathrm{Sym}^n\); it never gives \(\Lambda^n\).
+\end{enumerate}
+Everything in the source that the tachyon map exchanges acts strand by strand.  (S2) is therefore not derivable from the frame and port
+structure; further variants with this premise are excluded.
+
+\paragraph{Remark v4.10.0-r24.2 (a reading of (S3)).}
+By r24.1(c), reading each strand through a port turns a bundle into \(|c\rangle^{\otimes2j}\) or \(|a\rangle^{\otimes2j}\), the two states \(|j,\pm j\rangle\) along the
+port axis: the extremal doublet of M with weight \(2\).  (S3) can thus be read as ``M reads every strand through a port''; saturation
+(P1) and the selectivity of the compensator (r23.2) are then one property.  A reading, not a derivation; it does not explain why M
+counts both alignments.
+
+\paragraph{Remark v4.10.0-r24.3 (the guard ``T = string sector'' is not supported by T11).}
+Theorem~\ref{thm:string-lqg-duality} assigns strings to \(C\) and LQG to \(A\).  With the disk ports of the C5 reading, which the tachyon map
+exchanges (v4.9.0-r28, r20.4(a)), M reads \(C\) and T reads \(A\): strings for M and LQG for T, the opposite of the guard.  With the
+algebraic ports of v4.9.0-r42/r51, which the tachyon map fixes, M and T read the same port and T11 does not separate the frames.  The
+name ``string coupling'' of \(\gstring\) is nominal; the value is the ABCK counting with \(j=\tfrac12\) only (v4.9.0-r63, v4.8.0-r03 F11).
+
+\paragraph{Remark v4.10.0-r24.4 (T counts crossings; reading).}
+The source gives the tachyon frame a role of its own between two separated regions: the core of a black hole reaches the outside only
+through tunnelling as a tachyon (Theorem~\ref{thm:core}); under the counting reading \(\gstring\) is the counting of the infalling tachyon
+(status note of Theorem~\ref{thm:hawking-triolic}, v4.9.0-r64(e)); a tachyon losing energy runs to a single floor (v4.9.0-r63.3).  Read
+with I1, the bridge between the systems is what crosses the horizon, and in the source that is the tachyon.  A puncture of the tachyon
+frame is then a crossing.  If a crossing is one quantum of \(\chi\) (S1), it carries one strand, hence \(j=\tfrac12\) with weight \(2\):
+one crossing, one strand; a property of T; no exchange needed.  The guard ``T = string sector'' is replaced by ``T counts crossings of
+the horizon, one crossing carries one strand''; the string of I1 is the world line of the crossing, not a sector of its own.
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.32\textwidth}@{}}
+\toprule
+setting & I1 reading of 2026-11-15 & after r24.4\\
+\midrule
+guard 1 of CT-004 & T = string sector, unsupported & T counts crossings; \ref{thm:core}, r64(e), r63.3\\
+(S2) statistics per frame & needed, not derivable (r24.1) & not needed\\
+(S1) strand = quantum of \(\chi\) & needed & still needed\\
+(S3) aligned bundles in M & needed & still needed; reading r24.2\\
+area spectrum \(\sqrt{j(j+1)}\) & fixed (H104) & unchanged\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{What this does not give.}
+No derivation and no test.  Theorem~\ref{thm:core} is a narrative of the main body without a status note of its own; r64(e) is a typing.
+Why M counts the same punctures as spin-network edges with any \(j\), and sees no crossings, is read as ``M stays outside'', not shown.
+(S1) and (S3) remain settings; H104 stands.  A test would need a consequence of the crossing reading that is not \(\gL\), for example
+for the number of T punctures of a horizon relative to its Hawking rate; none is derived here.  OP1 stays open.
+
+\subsection*{v4.10.0-r24 status in the three frames}
+\label{subsec:v4100-r24-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item M: counts spin-network edges with any \(j\), weight \(2\) (extremal doublet; reading r24.2); stays outside the horizon.
+\item T: counts crossings of the horizon, one strand each, \(j=\tfrac12\) (r24.4); the tachyon map exchanges the disk ports (r24.3).
+\item P: not evaluated.
+\end{itemize}
+
+\subsection*{v4.10.0-r24 register entries}
+\label{subsec:v4100-r24-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r24\\
+\midrule
+(S2) statistics per frame & not derivable from frame or port structure (r24.1); not needed under r24.4\\
+(S3) aligned bundles & reading: strand-wise port readout (r24.2)\\
+guard ``T = string sector'' (CT-004) & not supported by T11, contradicted with disk ports (r24.3); replacement ``T counts crossings'' (r24.4); register unchanged\\
+OP1 & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r24 ledger and guard update}
+\label{subsec:v4100-r24-ledger-guard}
+
+\[
+R_{\rm op}^{v4100\text{-}r24}=(1,1,0)
+\]
+for (backward search recorded; strand computations checked in the cited script; OP1 open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r24,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r24}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.

@@ -1,0 +1,10 @@
+(K3) J_B auf (F+, F-): F+ -> i F-: True ; F- -> -i F+: True
+     also J_B = sigma_y auf dem Helizitaets-Dublett eines Strangs (nach Umphasung F- -> i F-: sigma_x, ein Tausch der
+     beiden Helizitaetskomponenten EINES Feldes, kein Tausch zweier Straenge)
+(K1/K3) n = 2: jede strangweise Abbildung U^(x)n vertauscht mit dem Strangtausch: True -> Sym und Lambda bleiben getrennt
+(K1/K3) n = 3: jede strangweise Abbildung U^(x)n vertauscht mit dem Strangtausch: True -> Sym und Lambda bleiben getrennt
+     dim Lambda^1(C^2) = 2, dim Sym^1(C^2) = 2
+     dim Lambda^2(C^2) = 1, dim Sym^2(C^2) = 3
+     dim Lambda^3(C^2) = 0, dim Sym^3(C^2) = 4
+(K4) C^(x)3 auf einem beliebigen 3-Strang-Zustand: Bild parallel zu |c>^(x)3 (ausgerichtetes Buendel): True
+     Bild liegt in Sym^3: True; mit A^(x)3 entsprechend |a>^(x)3: beide Ports geben ausgerichtete, symmetrische Buendel, nie Lambda^n
