@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 16.11.2026: Erkundung Renormierung und Restbiegung in Forschungsstand und Offene-Probleme (OP3).
+
 - 16.11.2026: H108 (verschränkte Generationszustände, widerlegt) in Vorhersagen-und-Tests, Forschungsstand und Offene-Probleme (OP3).
 
 - 16.11.2026: H107 (verschachtelte Normierung, widerlegt) in Vorhersagen-und-Tests, Forschungsstand und Offene-Probleme (OP3).

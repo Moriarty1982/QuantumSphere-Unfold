@@ -1,5 +1,23 @@
 # Forschungsstand
 
+### OP3: Renormierung schließt den Rest nicht (16.11.2026)
+
+Erkundung, nicht blind (die Richtung folgte schon aus H1, v4.8.0-r12); der zweite Weg des Autors nach H106–H108. Die Bargmann-Phase der Runden ist
+dreimal die Koide-Phase δ von H1 (Polmassen 0,666674, Spin-1-Dreieck 0,679042).
+
+| Massen | 3δ | gegen Polmassen |
+|---|---|---|
+| Polmassen | 0,666674 | 0 |
+| laufend bei M_Z (H1) | 0,663370 | −0,0033 |
+| Ein-Schleifen-QED bei m_τ / M_Z / 10⁹ MeV | 0,663406 / 0,663360 / 0,663247 | −0,0033 bis −0,0034 |
+| Spin-1-Dreieck (Ziel) | 0,679042 | +0,0124 |
+
+Die Renormierung verschiebt die Phase um einen fast festen Sprung **nach unten**, weg vom Spin-1-Dreieck, und um nur ein Viertel des Rests. Sie
+schließt ihn nicht. Damit sind vier Wege geprüft (Singulett, verschachtelte Normierung, Verschränkung, Renormierung); der Rest 0,012376 bleibt
+offen.
+
+[Erkundung](../notes/research/op3_renormalisation_2026_11_16/README.md).
+
 ### OP3: Test H108, verschränkte Generationszustände (16.11.2026)
 
 Auftrag des Autors nach H107: verschränkte Zustände prüfen. Vorab festgelegt (H108, 01a0f86): Jeder Spin-1-Zustand der zwei Kopien-Qubits ist

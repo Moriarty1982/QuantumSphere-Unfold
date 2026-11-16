@@ -1,0 +1,10 @@
+(1) Polmassen: K = 0.666664, delta = 0.222225, 3 delta = 0.666674 (Lepton-Phase der Runden 2/3 = 0.666667)
+    Spin-1-Dreieck (Wurzelgewichte exakt [0.01202 0.19526 0.79271]): K = 0.666667, 3 delta = 0.679042 (0.679042)
+(2) laufende Massen bei M_Z (H1): K = 0.667829, delta = 0.221123, 3 delta = 0.663370; Aenderung gegen Polmassen -0.003304
+(3) Ein-Schleifen-QED ab den Polmassen:
+    mu =       1777 MeV: K = 0.667824, 3 delta = 0.663406, Aenderung -0.003268
+    mu =      1e+04 MeV: K = 0.667831, 3 delta = 0.663386, Aenderung -0.003288
+    mu =  9.119e+04 MeV: K = 0.667840, 3 delta = 0.663360, Aenderung -0.003314
+    mu =      1e+06 MeV: K = 0.667850, 3 delta = 0.663332, Aenderung -0.003342
+    mu =      1e+09 MeV: K = 0.667880, 3 delta = 0.663247, Aenderung -0.003427
+(4) Spin-1-Dreieck 0.679042 liegt +0.012368 ueber der Polmassen-Phase; das Laufen zu hoeheren Skalen senkt die Phase -> Abstand waechst.  Unterhalb der Polmassen ist die MSbar-Masse eines Leptons nicht definiert (Entkopplung).
