@@ -53,6 +53,8 @@
   - **Verwischte HC-Auslesung (16.11., PR #164, `notes/research/op1_hc_blur_2026_11_16/`, Ideen des Autors):** Achsengemittelte M-Maske
     SU(2)-invariant, Gewicht 2 je Spin → γ = 0,2375 ohne Eichfixierung; offen: Zustandszahl oder Spur einer unscharfen Auslesung.
     Gegen-HC: Komplement → 0,274, Verwischen → 0,2375. Verwischen nicht aus M↔T, evtl. aus Horizontgeometrie (Normale Grad 1).
+    Nachtrag HC je Frame: T nur j=1/2 (0,1274), M Extremzustaende (0,2375), P keine Auswahl (F2) -> alle 2j+1 (0,2741); geschachtelt T⊆M⊆P;
+    Spannung: Konvention F hat P zwischen M und T, Zaehlung aussen. Setzung; Test nur mit Vorab-Notiz (H112).
     Nächster Schritt: prüfen, ob die Stränge masselos sind und normal queren; Literatur zur Helizitätslesart der U(1)-Zählung.
   - **Literatur (16.11., PR #160):** ABK: U(1)-Achse = Horizontnormale. Mitra 0705.3741: U2 folgt aus Entropie bei Zählung nur der
     Horizontzustände → Zählregel M hängt allein an U1. GNP 1309.4563: Statistik nicht entscheidbar. Helizitätslesart nicht gefunden.
