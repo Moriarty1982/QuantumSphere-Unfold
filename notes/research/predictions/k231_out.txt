@@ -1,0 +1,17 @@
+Kontrolle ohne Abbildung: ['psi = 38.6763, phi = 0.679042', 'psi = 141.3237, phi = 0.679042']
+Z1/L1: psi =  40.0708 Grad, Ueberlappungen^2 = [0.5 0.5 0.5], phi = 0.679042, phi - Ziel = +0.012377, Kaesten gleich: True, Ueberlappungen gleich: True
+Z1/L1: psi =  95.5139 Grad, Ueberlappungen^2 = [0.5 0.5 0.5], phi = 0.679042, phi - Ziel = +0.012377, Kaesten gleich: True, Ueberlappungen gleich: True
+Z1/L2a: psi =  37.4328 Grad, Ueberlappungen^2 = [0.5 0.5 0.5], phi = 0.051474, phi - Ziel = -0.615191, Kaesten gleich: True, Ueberlappungen gleich: True
+Z1/L2b: psi =  17.9279 Grad, Ueberlappungen^2 = [0.5 0.5 0.5], phi = 0.780098, phi - Ziel = +0.113433, Kaesten gleich: True, Ueberlappungen gleich: True
+Z1/L2b: psi =  78.5211 Grad, Ueberlappungen^2 = [0.5 0.5 0.5], phi = 0.443925, phi - Ziel = -0.222740, Kaesten gleich: True, Ueberlappungen gleich: True
+Z1/L2b: psi = 142.0396 Grad, Ueberlappungen^2 = [0.5 0.5 0.5], phi = 0.442212, phi - Ziel = -0.224453, Kaesten gleich: True, Ueberlappungen gleich: True
+Z2/L1: psi =  84.4861 Grad, Ueberlappungen^2 = [0.5 0.5 0.5], phi = 0.679042, phi - Ziel = +0.012377, Kaesten gleich: True, Ueberlappungen gleich: True
+Z2/L1: psi = 139.9292 Grad, Ueberlappungen^2 = [0.5 0.5 0.5], phi = 0.679042, phi - Ziel = +0.012377, Kaesten gleich: True, Ueberlappungen gleich: True
+Z2/L2a: psi =  37.9604 Grad, Ueberlappungen^2 = [0.5 0.5 0.5], phi = 0.442212, phi - Ziel = -0.224453, Kaesten gleich: True, Ueberlappungen gleich: True
+Z2/L2a: psi = 101.4789 Grad, Ueberlappungen^2 = [0.5 0.5 0.5], phi = 0.443925, phi - Ziel = -0.222740, Kaesten gleich: True, Ueberlappungen gleich: True
+Z2/L2a: psi = 162.0721 Grad, Ueberlappungen^2 = [0.5 0.5 0.5], phi = 0.780098, phi - Ziel = +0.113433, Kaesten gleich: True, Ueberlappungen gleich: True
+Z2/L2b: psi = 142.5672 Grad, Ueberlappungen^2 = [0.5 0.5 0.5], phi = 0.051474, phi - Ziel = -0.615191, Kaesten gleich: True, Ueberlappungen gleich: True
+Z3/L1: keine Loesung mit Ueberlappung 1/2
+Z3/L2a: psi =  37.5855 Grad, Ueberlappungen^2 = [0.5 0.5 0.5], phi = 0.241272, phi - Ziel = -0.425393, Kaesten gleich: True, Ueberlappungen gleich: True
+Z3/L2b: psi = 142.4145 Grad, Ueberlappungen^2 = [0.5 0.5 0.5], phi = 0.241272, phi - Ziel = -0.425393, Kaesten gleich: True, Ueberlappungen gleich: True
+Versuche: 14; Treffer: []; Urteil: widerlegt

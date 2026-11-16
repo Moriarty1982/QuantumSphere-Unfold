@@ -1,0 +1,17 @@
+(1) Dimensionen (reell) und Stufe HS(n) = 2^n:
+     C x H x O (Dixon)                   64 = HS(6)
+     C x H x O x C                      128 = HS(7)
+     C x H x O x H                      256 = HS(8)
+     C x H x O x O                      512 = HS(9)
+     C x H x O x S                     1024 = HS(10)
+     C x H x S (O durch S ersetzt)      128 = HS(7)
+(2) C: e_a e_b = +- e_(a XOR b) fuer alle Basiseinheiten: True
+(2) H: e_a e_b = +- e_(a XOR b) fuer alle Basiseinheiten: True
+(2) O: e_a e_b = +- e_(a XOR b) fuer alle Basiseinheiten: True
+(2) S: e_a e_b = +- e_(a XOR b) fuer alle Basiseinheiten: True
+(3) O: max Abweichung Alternativitaet 2.27e-14, Normmultiplikativitaet 7.11e-15
+(3) S: max Abweichung Alternativitaet 1.30e+02, Normmultiplikativitaet 6.61e+00
+(3) S: Nullteiler (e_1 + e_10) (e_4 - e_15) = 0
+(4) O: alle L_ei^2 = -1: True; groesste antivertauschende Menge: 7 von 7 (Radon-Hurwitz-Grenze auf R^8: 7)
+(4) S: alle L_ei^2 = -1: True; groesste antivertauschende Menge: 8 von 15 (Radon-Hurwitz-Grenze auf R^16: 8)
+(5) Einheiten von H <-> -i sigma (R = sigma_z, T = sigma_x, J_B = sigma_y): Produkte stimmen bis auf Vorzeichen: True

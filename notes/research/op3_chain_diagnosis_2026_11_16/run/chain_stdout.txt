@@ -1,0 +1,10 @@
+(a) K = 0.666661; Amplitude 2|F1|/F0 = 1.414201 (fuer K = 2/3 noetig sqrt2 = 1.414214)
+    delta aus der Fourier-Komponente = 2.316625 (mod 2pi/3: 0.222230), 3 delta = 0.666689
+    Gram aus sqrt m: |G01|^2 = 0.499991, Bargmann-Phase |arg(G01 G12 G20)| = 0.666689
+(b) Spin 0.5: Kegel psi = 54.7356 Grad, Phase = 0.785398
+(b) Spin 1.0: Kegel psi = 38.6763 Grad, Phase = 0.679042
+(b) Spin 1.5: Kegel psi = 31.6324 Grad, Phase = 0.650463
+(c) Gewichte fuer K = 2/3, phi = 0.666665: p0 = 0.793146, p+ = 0.193404, p- = 0.013450 (r16.9(a): 0.793146/0.193404/0.013450 bis auf Umbenennung)
+    Koharenzmass r = 2 sqrt(p_gross p_klein)/p_mitte: Ziel 1.068084, Spin-1-Dreieck 1.000000 (koharent = 1)
+    Takagi-Verhaeltnis sigma2/sigma1 des Zielzustands ueber die freie relative Phase: 0.0066 ... 0.2087 (koharent: 0)
+(d) Raumwinkel fuer phi = 2/3 rad: Omega = 2 phi = 1.333330 sr; Oktant pi/4 -> Omega = pi/2 (ein Achtel der Kugel)

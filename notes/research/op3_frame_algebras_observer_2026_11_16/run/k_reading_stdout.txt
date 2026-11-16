@@ -1,0 +1,9 @@
+(a) gleichmaessig geschrumpft:
+    lam = 1.0: K = 0.666667 (Formel 0.666667), Phase = 0.785398
+    lam = 0.9: K = 0.635000 (Formel 0.635000), Phase = 0.629925
+    lam = 0.8: K = 0.606667 (Formel 0.606667), Phase = 0.473201
+(b) Dephasierung um n (Laengsanteil fest, Queranteil * kappa):
+    kappa = 1.0: K = 0.666667, Phase = 0.785398, Formel arctan(k^2/(2-k^2)) = 0.785398
+    kappa = 0.9: K = 0.666667, Phase = 0.597636, Formel arctan(k^2/(2-k^2)) = 0.597636
+    kappa = 0.8: K = 0.666667, Phase = 0.439843, Formel arctan(k^2/(2-k^2)) = 0.439843
+    noetig fuer 0.666665: kappa^2 = 0.880706, kappa = 0.938459

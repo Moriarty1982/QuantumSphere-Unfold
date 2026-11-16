@@ -1,0 +1,7 @@
+nachtraeglich: Singulettgewicht w = 0.097882 (Amplitude 0.312862) gibt phi = 0.666667 bei psi = 40.9053 Grad
+   w = 0.02: phi = 0.676729
+   w = 0.05: phi = 0.673063
+   w = 0.10: phi = 0.666367
+   w = 0.15: phi = 0.658815
+   w = 0.20: phi = 0.650231
+   w = 0.25: phi = 0.640384

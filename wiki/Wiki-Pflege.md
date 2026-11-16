@@ -102,6 +102,17 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 16.11.2026: H109, H110 (widerlegt), Erkundungen Frame-Hälften, Betrachter, C⊗H⊗O⊗S, natives κ und die OP3-Diagnose in
+  Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme (OP3).
+
+- 16.11.2026: Erkundung Renormierung und Restbiegung in Forschungsstand und Offene-Probleme (OP3).
+
+- 16.11.2026: H108 (verschränkte Generationszustände, widerlegt) in Vorhersagen-und-Tests, Forschungsstand und Offene-Probleme (OP3).
+
+- 16.11.2026: H107 (verschachtelte Normierung, widerlegt) in Vorhersagen-und-Tests, Forschungsstand und Offene-Probleme (OP3).
+
+- 16.11.2026: H106 (Singulett und Restbiegung, widerlegt) in Vorhersagen-und-Tests, Forschungsstand und Offene-Probleme (OP3).
+
 - 16.11.2026: Runde v4.10.0-r27 (Berichtigung zu r26: Bildprüfung von HS(6) steht im Atlas, r59) eingetragen; die r26-Einträge in
   Forschungsstand, Forschungslinie und Content-overview tragen einen Berichtigungsvermerk. Dazu r27.2: Gründe des Atlas gegen neue
   Stufen geprüft (dieselben Seiten).

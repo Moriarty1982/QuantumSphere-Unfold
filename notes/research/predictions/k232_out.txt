@@ -1,0 +1,9 @@
+Kontrolle rein: K = 0.666667, phi = 0.785398
+Kontrolle Singulett (B, +n): K = 0.500000, phi = 0.000000
+A +n: K = 0.737620 (K - 2/3 = +0.070954), phi = 0.491952 (phi - Ziel = -0.174713) | Kontrolle T/J_B gepaart: K = 0.737620, phi = 0.491952, K = 0.737620, phi = 0.491952
+A -n: K = 0.537199 (K - 2/3 = -0.129468), phi = 1.437615 (phi - Ziel = +0.770950) | Kontrolle T/J_B gepaart: K = 0.537199, phi = 1.437615, K = 0.537199, phi = 1.437615
+B +n: K = 0.888833 (K - 2/3 = +0.222167), phi = 0.156764 (phi - Ziel = -0.509901)
+B -n: K = 0.560871 (K - 2/3 = -0.105796), phi = 0.542188 (phi - Ziel = -0.124477)
+C +n: K = 0.730420 (K - 2/3 = +0.063753), phi = 0.477159 (phi - Ziel = -0.189506)
+C -n: K = 0.536072 (K - 2/3 = -0.130595), phi = 0.897232 (phi - Ziel = +0.230567)
+Versuche: 6; Treffer: []; Urteil: widerlegt

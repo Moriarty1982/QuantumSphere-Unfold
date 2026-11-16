@@ -1,0 +1,14 @@
+(1) Kopien-Bits -> Frame-Abbildungen, Produkt = Bit-Summe mod 2 (bis auf Phase):
+     {'00': '1', '01': 'R = sigma_z', '10': 'T = sigma_x', '11': 'J_B ~ sigma_y'} Homomorphismus: True | J_B-Kopie 11: X Z = -i sigma_y: True
+(2) Oktant: Ueberlappungen^2 [np.float64(0.5), np.float64(0.5), np.float64(0.5)], |Phase| = 0.785398 (pi/4 = 0.785398)
+(3a) Betrachter auf der Zyklusachse, Bilder F o: Ueberlappungen^2 mit o [np.float64(0.333333), np.float64(0.333333), np.float64(0.333333)], untereinander [np.float64(0.333333), np.float64(0.333333), np.float64(0.333333)] (Tetraeder: 1/3), |Phase| = 1.570796
+(3b) Filter mit Achse n, Kegel jeweils auf Ueberlappung 1/2 gestellt:
+     mu = -1.0: |Phase| bei den Loesungen [np.float64(0.785398), np.float64(0.785398)]
+     mu = -0.3: |Phase| bei den Loesungen [np.float64(0.785398), np.float64(0.785398)]
+     mu = +0.3: |Phase| bei den Loesungen [np.float64(0.785398), np.float64(0.785398)]
+     mu = +1.0: |Phase| bei den Loesungen [np.float64(0.785398), np.float64(0.785398)]
+(4) gemischte Auslesungen rho_k = (1 + lam e_k.sigma)/2 auf dem Oktanten:
+     lam = 1.00: Tr(rho_i rho_j) = 0.500000, Tr(rho_i^2) = 1.000000, |arg Tr(rho0 rho1 rho2)| = 0.785398, arctan(lam^3) = 0.785398
+     lam = 0.75: Tr(rho_i rho_j) = 0.500000, Tr(rho_i^2) = 0.781250, |arg Tr(rho0 rho1 rho2)| = 0.399221, arctan(lam^3) = 0.399221
+     lam = 0.50: Tr(rho_i rho_j) = 0.500000, Tr(rho_i^2) = 0.625000, |arg Tr(rho0 rho1 rho2)| = 0.124355, arctan(lam^3) = 0.124355
+     noetig fuer |Phase| = 0.666665: lam^3 = tan(0.666665) = 0.786840, lam = 0.923199

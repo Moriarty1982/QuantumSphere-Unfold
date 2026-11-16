@@ -1,0 +1,6 @@
+M0: psi =  38.6763 Grad, |Ueberlappung|^2 = 0.500000, phi = 0.679042, phi - 2/3 = +0.012376, det G = 0.050253, Singulettgewicht = 0.0000
+M0: psi = 141.3237 Grad, |Ueberlappung|^2 = 0.500000, phi = 0.679042, phi - 2/3 = +0.012376, det G = 0.050253, Singulettgewicht = 0.0000
+M1: psi =  45.3003 Grad, |Ueberlappung|^2 = 0.500000, phi = 0.640384, phi - 2/3 = -0.026282, det G = 0.067005, Singulettgewicht = 0.2500  -> kein Treffer
+M2: psi =  38.6763 Grad, |Ueberlappung|^2 = 0.500000, phi = 0.679042, phi - 2/3 = +0.012376, det G = 0.050253, Singulettgewicht = 0.1464  -> kein Treffer
+M2: psi = 141.3237 Grad, |Ueberlappung|^2 = 0.500000, phi = 0.679042, phi - 2/3 = +0.012376, det G = 0.050253, Singulettgewicht = 0.1464  -> kein Treffer
+Versuche (M1, M2, alle Loesungen): 3; Treffer: 0; Urteil: widerlegt

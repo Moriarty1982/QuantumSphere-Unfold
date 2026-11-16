@@ -1,0 +1,11 @@
+E1 Nachbar n_(k+1): psi =  57.7040 Grad, |Ueberlappung|^2 = 0.500000, phi = 0.176250, phi - Ziel = -0.490415, det G = 0.196152
+E1 Nachbar n_(k+1): psi = 122.2960 Grad, |Ueberlappung|^2 = 0.500000, phi = 0.176250, phi - Ziel = -0.490415, det G = 0.196152
+E2 Pol +z: psi =  72.4120 Grad, |Ueberlappung|^2 = 0.500000, phi = 0.785398, phi - Ziel = +0.118733, det G = 0.000000
+E2 Pol +z: psi = 139.7922 Grad, |Ueberlappung|^2 = 0.500000, phi = 0.785398, phi - Ziel = +0.118733, det G = -0.000000
+E3 Pol -z: psi =  40.2078 Grad, |Ueberlappung|^2 = 0.500000, phi = 0.785398, phi - Ziel = +0.118733, det G = 0.000000
+E3 Pol -z: psi = 107.5880 Grad, |Ueberlappung|^2 = 0.500000, phi = 0.785398, phi - Ziel = +0.118733, det G = 0.000000
+E4 Gegenpunkt -n_k (polar): psi =  26.2242 Grad, |Ueberlappung|^2 = 0.500000, phi = 0.000000, phi - Ziel = -0.666665, det G = 0.207107
+E4 Gegenpunkt -n_k (polar): psi = 153.7758 Grad, |Ueberlappung|^2 = 0.500000, phi = 0.000000, phi - Ziel = -0.666665, det G = 0.207107
+E5 Gegenpunkt des Nachbarn -n_(k+1): psi =  28.5739 Grad, |Ueberlappung|^2 = 0.500000, phi = 0.000000, phi - Ziel = -0.666665, det G = 0.207107
+E5 Gegenpunkt des Nachbarn -n_(k+1): psi = 151.4261 Grad, |Ueberlappung|^2 = 0.500000, phi = 0.000000, phi - Ziel = -0.666665, det G = 0.207107
+Versuche: 10; Treffer: []; Urteil: widerlegt

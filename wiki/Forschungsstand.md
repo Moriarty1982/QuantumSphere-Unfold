@@ -1,5 +1,91 @@
 # Forschungsstand
 
+### OP3: Diagnose – woran die Biegung scheitert (16.11.2026)
+
+Auftrag des Autors: die Logikkette zurückgehen und bei OP5 nachsehen. Erkundung, nicht blind.
+
+- **Ziel und Gram-Lesart stimmen.** Jede positive Dreiergruppe hat die Brannen-Form; $K$ legt nur $|c|$ fest, $\delta$ ist eine zweite,
+  unabhängige Zahl. Aus den Polmassen: $|G_{01}|^2=0{,}499991$, Bargmann-Phase 0,666689.
+- **Zwei Zahlen, eine Geometrie.** In jeder reinen, generationssymmetrischen Konstruktion legt die Überlappung den Kegel und der Kegel die Phase
+  fest. Kohärente Zustände mit Überlappung² ½ geben für Spin ½, 1, 3/2, 2 die Phasen 0,785, 0,679, 0,650, 0,637; 2/3 liegt zwischen Spin 1 und 3/2.
+- **Der Zielzustand ist nicht kohärent.** In der Lesart von r16.9 verlangen $K=\varphi=2/3$ ein Kohärenzmaß 1,068 statt 1, also Rang zwei der
+  Invariantenmatrix $S$ (r16.8), deren Größe für jedes Feld frei ist. Die fehlende Zahl ist eine Eigenschaft des Feldzustands, nicht des Trägers.
+- **Gleiche Lücke wie OP5:** Auch dort lässt die Algebra eine Familie frei und wählt den Wert nicht aus (Zustandsauswahl); ein berechneter Umlauf
+  (Quelle–Rückweg) fehlt. Folgerung: Weitere Träger-Varianten helfen OP3 nicht; Fortschritt hängt an der Dynamik.
+
+Davor am selben Tag (Erkundungen, Ideen des Autors): Frame-Lesung der Hälften und der Generationen (H109 widerlegt); die vier Kopien von HS(8)
+als Kleinsche Vierergruppe der Frame-Abbildungen mit Kopie 00 als Betrachter; Querdephasierung um die Zyklusachse mit $\kappa^2=0{,}880706$ als
+Bedingung (H110 widerlegt, kein natives $\kappa$); C⊗H⊗O⊗S ist HS(10) mit Nullteilern. OP3 offen.
+
+[Diagnose](../notes/research/op3_chain_diagnosis_2026_11_16/README.md) · [Betrachter](../notes/research/op3_frame_algebras_observer_2026_11_16/README.md) ·
+[Sedenionen](../notes/research/op3_dixon_times_sedenions_2026_11_16/README.md) · [natives κ](../notes/research/op3_native_kappa_2026_11_16/README.md) ·
+[H109](../notes/research/predictions/Ergebnis_H109_Generationsabhaengige_Frames.md) · [H110](../notes/research/predictions/Ergebnis_H110_Betrachter_HS7_Haelfte.md).
+
+### OP3: Renormierung schließt den Rest nicht (16.11.2026)
+
+Erkundung, nicht blind (die Richtung folgte schon aus H1, v4.8.0-r12); der zweite Weg des Autors nach H106–H108. Die Bargmann-Phase der Runden ist
+dreimal die Koide-Phase δ von H1 (Polmassen 0,666674, Spin-1-Dreieck 0,679042).
+
+| Massen | 3δ | gegen Polmassen |
+|---|---|---|
+| Polmassen | 0,666674 | 0 |
+| laufend bei M_Z (H1) | 0,663370 | −0,0033 |
+| Ein-Schleifen-QED bei m_τ / M_Z / 10⁹ MeV | 0,663406 / 0,663360 / 0,663247 | −0,0033 bis −0,0034 |
+| Spin-1-Dreieck (Ziel) | 0,679042 | +0,0124 |
+
+Die Renormierung verschiebt die Phase um einen fast festen Sprung **nach unten**, weg vom Spin-1-Dreieck, und um nur ein Viertel des Rests. Sie
+schließt ihn nicht. Damit sind vier Wege geprüft (Singulett, verschachtelte Normierung, Verschränkung, Renormierung); der Rest 0,012376 bleibt
+offen.
+
+[Erkundung](../notes/research/op3_renormalisation_2026_11_16/README.md).
+
+### OP3: Test H108, verschränkte Generationszustände (16.11.2026)
+
+Auftrag des Autors nach H107: verschränkte Zustände prüfen. Vorab festgelegt (H108, 01a0f86): Jeder Spin-1-Zustand der zwei Kopien-Qubits ist
+durch zwei Punkte auf der Kugel bestimmt (Majorana-Darstellung); gleiche Punkte geben den kohärenten, verschiedene einen verschränkten Zustand.
+Generation k bekam den Punkt n_k und als zweiten einen natürlichen Punkt der Konstruktion (Nachbar n_{k+1}, Pole ±z, Gegenpunkt −n_k, Gegenpunkt
+des Nachbarn).
+
+**Widerlegt:** 10 Versuche, kein Treffer. Ein gemeinsamer Punkt am Pol der Zyklusachse macht das Dreieck wieder flach (Phase π/4, eine masselose
+Generation), Gegenpunkte geben reelle Zustände (Phase 0), der Nachbarpunkt überdreht (0,176). Das unverschränkte kohärente Dreieck (0,679) bleibt
+am nächsten an der Lepton-Phase.
+
+**Einordnung:** Mit H106, H107 und H108 sind drei parameterfreie Familien aus der Kopienstruktur von HS(8) widerlegt. Nach der Regel zur Suchrichtung
+ist der nächste Schritt der zweite Weg des Autors, die Renormierung (Polmassen gegen laufende Massen).
+
+[Vorab-Notiz](../notes/research/predictions/Vorab_Notiz_H108_Verschraenkte_Generationen.md) · [Ergebnis](../notes/research/predictions/Ergebnis_H108_Verschraenkte_Generationen.md).
+
+### OP3: Test H107, verschachtelte Normierung in HS(8) (16.11.2026)
+
+Idee des Autors: HS(8) als ein HS(7) und zwei HS(6) verschachteln; ein HS(6) als Normierung, das HS(7) als Normierung der beiden HS(6), wobei
+die Basiswahl entscheiden könnte. Vorab festgelegt (H107, 30a4a50; vor der Rechnung auf die volle Grammatik von HS(8) erweitert, 44cda89):
+Das Singulettgewicht ist das Gewicht eines Knotens des Generationszustands, unnormiert oder in seiner HS(7)-Hälfte normiert; Basis ist die
+Zyklusachse. Für die Aufzählung der Beziehungen gibt es jetzt die Hilfskonstruktion `tools/hs_partition.py` (Idee des Autors).
+
+**Widerlegt:** 20 Versuche, kein Treffer auf 0,0002 rad. Am nächsten kommt das Gewicht eines mittleren HS(6) (−0,0015 statt −0,0124), außerhalb
+der Toleranz und nicht gedeutet.
+
+**Struktureller Befund:** Für die kohärenten Generationszustände $\lvert n\rangle\lvert n\rangle$ ist jedes HS(6), in seiner HS(7)-Hälfte
+normiert, genau das Gewicht eines einzelnen Kopien-Qubits ($\sin^2(\psi/2)$ oder $\cos^2(\psi/2)$). Die Verschachtelung trägt bei
+Produktzuständen also nichts über HS(7) hinaus. Damit sie Information trägt, müssten die Generationszustände über die Kopien verschränkt sein.
+Offen bleiben dieser Weg und die Renormierung (Polmassen gegen laufende Massen).
+
+[Vorab-Notiz](../notes/research/predictions/Vorab_Notiz_H107_Verschachtelte_Normierung.md) · [Ergebnis](../notes/research/predictions/Ergebnis_H107_Verschachtelte_Normierung.md).
+
+### OP3: Test H106, das Singulett schließt den Rest nicht (16.11.2026)
+
+Vorab festgelegt (H106, abf54a0): Kann das Singulett der vier Dixon-Kopien aus r25 den Rest der Biegung erklären, also die 0,012376 rad
+zwischen dem Spin-1-Dreieck (Phase 0,679042) und der Lepton-Phase 2/3? Geprüft wurden zwei Mechanismen ohne freien Parameter, jeweils mit
+Überlappung ½:
+- **M1:** jede Generation mit Singulettgewicht ¼ (Dimensionsanteil des Singuletts). Ergebnis: Phase 0,640, um das Doppelte des Rests zu weit.
+- **M2:** jede Generation als Paar benachbarter Richtungen $\lvert n_k\rangle\lvert n_{k+1}\rangle$ (die „Normalen“ der Paare). Ergebnis:
+  dieselbe Phase wie das Dreieck; die Paare sind nur eine andere Schreibweise.
+
+**Widerlegt.** Nachträglich und nicht gedeutet: Ein Singulettgewicht von 0,0979 träfe die Lepton-Phase genau; es ist ans Ziel angepasst.
+Ein Test dazu bräuchte einen Mechanismus, der das Gewicht vorher festlegt.
+
+[Vorab-Notiz](../notes/research/predictions/Vorab_Notiz_H106_Singulett_Restbiegung.md) · [Ergebnis](../notes/research/predictions/Ergebnis_H106_Singulett_Restbiegung.md).
+
 ### Berichtigung: Die Bildprüfung von HS(6) steht im Atlas (16.11.2026, Runde r27)
 
 Auf den Auftrag, die Bildprüfung von HS(6) zu machen, zeigte das Lesen des Atlas: Sie ist schon da, in der Schicht r59 direkt nach r58.
