@@ -13,7 +13,9 @@ Auftrag des Autors: (S1) prüfen. Erkundung, nicht blind.
   um). Annahme (A) fällt damit, und mit ihr die r17.3-Begründung der T-Regel; diese ruht dann allein auf r24.4 (Querungen). Masselose Stränge sind
   außerdem Nullfelder ohne Punkt auf der χ-Kugel (r16.3(a)).
 
-OP1 steht damit an der Frage, ob die Punktierungs-Stränge masselos sind und normal queren. Literatur dazu nicht geprüft. OP1 offen; H98, H102
+OP1 steht damit an der Frage, ob die Punktierungs-Stränge masselos sind und normal queren. Literatur dazu nicht geprüft.
+
+**Nachtrag Literatur (16.11.):** In ABK ist die U(1)-Achse die Horizontnormale (internes Feld r vom Grad 1; m = Spin längs r). Nach Mitra (arXiv:0705.3741) folgt j = |m| (U2) aus der Entropie, sobald nur die Horizontzustände gezählt werden; die Zählregel des Frames M verkürzt sich damit auf U1 („M zählt nur Horizontzustände“). Ghosh–Noui–Perez (arXiv:1309.4563): Die Statistik der Punktierungen lässt sich aus der Entropie nicht entscheiden, wie r24.1 für (S2). Eine Lesart der U(1)-Zählung als Zählung masseloser Helizitäten wurde in den gesichteten Arbeiten nicht gefunden. OP1 offen; H98, H102
 unverändert. [Notiz](../notes/research/op1_s1_check_2026_11_16/README.md).
 
 ### OP1: Bedingung U1 geprüft – die native Achse ist die Helizitätsachse (16.11.2026)

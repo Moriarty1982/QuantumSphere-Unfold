@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 16.11.2026: Literaturprüfung zu (S1) (ABK, Mitra, Ghosh–Noui–Perez) in Forschungsstand und Offene-Probleme (OP1).
+
 - 16.11.2026: (S1)-Prüfung (masselose Querungen, Annahme (A) fällt) in Forschungsstand und Offene-Probleme (OP1).
 
 - 16.11.2026: U1-Prüfung (Helizitätsachse als native U(1)-Achse, offen (S1)) und Berichtigung zum Vorwissen (r68.3) in

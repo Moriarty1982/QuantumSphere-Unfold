@@ -58,3 +58,32 @@ ist (M ist ein nicht-null Dublett-Zustand), ist offen.
 ## Grenzen
 Nicht blind: DL- und GM-Werte waren bekannt. Die Verriegelung ist eine Lesart, kein Beweis; die Tabelle unter 3 prüft nur Vorzeichen an
 Vertreterwellen. OP1 offen; H98, H102 unverändert.
+
+## Nachtrag (16.11.2026): Literaturprüfung
+Auftrag des Autors: „Literatur prüfen“. Gelesen über alphaXiv: Ashtekar–Baez–Krasnov, gr-qc/0005126 (ABK, Abschnitte II.A und V.A); Mitra,
+„Black hole state counting in loop quantum gravity“, arXiv:0705.3741; Ghosh–Noui–Perez, „Statistics, holography, and black hole entropy in loop
+quantum gravity“, arXiv:1309.4563. Gesucht wurde außerdem nach einer Lesart der U(1)-Zählung als Zählung masseloser Helizitäten.
+
+**1. Die U(1)-Achse ist in ABK die Horizontnormale (bestätigt).** ABK legen auf dem Horizont ein internes Einheitsfeld r: S → su(2) vom Grad 1
+fest; es wählt in jedem Punkt eine U(1)-Untergruppe aus, das U(1)-Bündel Q ist „just the spin bundle of S“, also die Drehungen um die Normale. Die
+Punktierungs-Labels m sind Eigenwerte von J·r, die Spinkomponente längs dieser Richtung. Als Eichgruppe bleiben nur die U(1)-Drehungen, die r
+festhalten. Damit ist die Frage aus `../op1_u1_check_2026_11_16/` beantwortet: In der Literatur ist die U1-Achse die Normale. Unter (S1′) fällt sie
+mit der Helizitätsachse eines normal querenden masselosen Strangs zusammen.
+
+**2. U2 hat in der Literatur eine eigene Herleitung, ohne Masselosigkeit.** Mitra (Abschnitt 3) zeigt: Zählt man nur die Horizontzustände, also
+nur die Labels m („pure horizon states“, die DL-Prescription), dann liegt die dominante Konfiguration bei j = j_min(m) = |m|, weil die Entropie bei
+fester Fläche maximal wird, wenn jede Ladung mit der kleinsten Fläche realisiert ist. Daraus folgt genau $\sum_j 2e^{-2\lambda\sqrt{j(j+1)}}=1$. Zählt
+man j als eigene Quantenzahl mit (Ghosh–Mitra), kommt 0,274 heraus. **U2 folgt also aus U1**, sobald der Frame M nur die Horizontzustände zählt;
+die masselose Lesart (S1′) ist dafür nicht nötig, aber verträglich (sie gibt U2 zusätzlich als Zustandszahl, nicht nur als dominante Konfiguration).
+
+**3. Statistik der Punktierungen ist offen (Bezug zu (S2)).** Ghosh–Noui–Perez behandeln Punktierungen als ununterscheidbare Teilchen und rechnen
+Bose und Fermi durch: Aus der Entropie lässt sich die Statistik nicht entscheiden („it seems unlikely that one can settle the issue of statistics“).
+Bei großer Fläche ist die Punktierungszahl nicht erhalten, das chemische Potential verschwindet, „very much analogous to a system of photons“. Das
+stützt r24.1 ((S2) nicht begründbar) und ist für (S1′) nur eine Analogie, kein Beleg.
+
+**4. Masselose Helizitätslesart nicht gefunden.** In den gesichteten Arbeiten und der Übersicht Barbero–Pranzetti 2022 wird die U(1)-Zählung nicht
+als Zählung masseloser Helizitäten gelesen. Die Suche war auf alphaXiv beschränkt; ein Fehlen ist damit nicht bewiesen.
+
+**Folgerung.** Die Kette für die Zählregel des Frames M wird kürzer: **DL ⇐ U1** (M zählt nur Horizontzustände, Label m = Spin längs der Normale),
+denn U2 folgt dann nach Mitra aus der Entropie. Offen bleibt, warum der Frame M nur die Horizontzustände zählt und der volle SU(2)-Ansatz (ENP) nicht
+gilt. (S1′) ist eine mögliche physikalische Begründung (masselose Querungen haben nur die Helizität als Label); ihr Preis (Annahme (A) fällt) bleibt.
