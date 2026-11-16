@@ -1,0 +1,8 @@
+(1) HS(5) = 2 x HS(4): beliebige Kopienoperation X (x) 1: Schuld = 4.9e-15
+(1) 4 Kopien von HS(4) (Muster fuer HS(8) = 4 x HS(6)): beliebige Kopienoperation X (x) 1: Schuld = 6.1e-15
+(2) Hadamard auf Kopien-Qubit 1 : Schuld = 3.0e-15
+(2) Phase S auf Kopien-Qubit 2  : Schuld = 2.9e-15
+(2) Projektion aufs Singulett   : Schuld = 1.4e-15
+(2) Projektion aufs Triplett    : Schuld = 2.5e-15
+(3) Kopienmischung mit Sektorbewegung A (x) X ([A, P] != 0): Schuld = 31.00  (dagegen A allein je Kopie, 1 (x) A: 31.00)
+(4) P^(8) auf einer Haelfte = P^(7): True; auf einem Viertel = P^(6): True
