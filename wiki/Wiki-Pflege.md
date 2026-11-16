@@ -102,6 +102,16 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 16.11.2026: H111 (widerlegt) in Vorhersagen-und-Tests und Forschungsstand.
+
+- 16.11.2026: Nachtrag zwei Walzenraster verglichen in Forschungsstand.
+
+- 16.11.2026: Nachtrag wechselnde Walze (Triolenraster gegen Viertelraster) in Forschungsstand.
+
+- 16.11.2026: Nachtrag mehrere Umkehrwalzen (Kryptologie-Teile, r02, r04) in Forschungsstand.
+
+- 16.11.2026: Topologische Analyse des Kern-Bildes (Grenze, Umkehrwalze als Symmetrie, Borsuk–Ulam) in Forschungsstand.
+
 - 16.11.2026: Undurchlässiger Rand (kein Grund im Bestand, hinreichend für Kern) in Forschungsstand.
 
 - 16.11.2026: Ergebnis Methoden-Notiz 2 (Randlösung statt Kern, Ausschluss) in Forschungsstand.

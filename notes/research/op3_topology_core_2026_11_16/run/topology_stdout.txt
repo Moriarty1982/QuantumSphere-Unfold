@@ -1,0 +1,4 @@
+(1) Theta bildet n auf -n ab und Theta^2 = -1 (300 Punkte): True
+(2) Phase(Antipodendreieck) = -Phase(Dreieck) (300 Dreiecke): True  -> mit Orientierungsumkehr: F(-n) = F(n)
+(3) Borsuk-Ulam-Probe: max |f(n) + f(-n)| bei 200 Kandidaten stets > 0 (Minimum 2.000); allgemein folgt es aus Borsuk-Ulam (jede stetige Abbildung S^2 -> R^2 hat ein Antipodenpaar mit gleichem Wert).
+(4) Oktant: pi/4 / (2 pi) = 0.125000 = 1/8;  2/3 / (2 pi) = 0.106103 (= 1/(3 pi), irrational)

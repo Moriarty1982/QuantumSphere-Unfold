@@ -1,0 +1,9 @@
+(1) Triolenraster erzeugt eine Gruppe der Ordnung 6, Viertelraster eine der Ordnung 8; gemeinsam: 2 Elemente
+    beide zusammen: Ordnung 24
+(2) |O| = 24; Viertelraster in O: True; Triolenraster in O: False
+    Frame-Abbildungen im Viertelraster: {'1': True, 'R (sigma_z)': True, 'T (sigma_x)': True, 'J_B (sigma_y)': True}
+    Frame-Abbildungen im Triolenraster: {'1': True, 'R (sigma_z)': False, 'T (sigma_x)': False, 'J_B (sigma_y)': True}
+    gemeinsame Elemente sind: ['1', 'J_B']
+(3) Winkel zwischen der Dreierachse des Triolenrasters (Helizitaetsachse) und der Oktantenachse (1,1,1): 54.7356 Grad (magischer Winkel arccos(1/sqrt3) = 54.7356)
+(4) Ist der Oktant eine Bahn des Drittelzyklus um die Helizitaetsachse? False  (die z-Ecke ist Fixpunkt: True)
+    Bahn des Drittelzyklus mit Kegelwinkel 54.74 Grad (Ueberlappung 1/2): paarweise orthogonale Bloch-Vektoren: True -> ein Oktant, aber um die Helizitaetsachse gedreht, nicht der Oktant der Frame-Abbildungen

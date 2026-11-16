@@ -1,0 +1,6 @@
+Kontrolle (Frame-Oktant gegen sich selbst): K = 0.666667, 3 delta = 0.785398
+Achse +z, phi0 = 30: Singulaerwerte [0.       0.67711  2.215299], K = 0.641407, 3 delta = 0.908526, 3 delta - Ziel = +0.241852
+Achse +z, phi0 = 90: Singulaerwerte [0.       0.67711  2.215299], K = 0.641407, 3 delta = 0.908526, 3 delta - Ziel = +0.241852
+Achse -z, phi0 = 30: Singulaerwerte [0.       0.889713 1.685938], K = 0.547782, 3 delta = 1.666808, 3 delta - Ziel = +1.000134
+Achse -z, phi0 = 90: Singulaerwerte [0.       0.889713 1.685938], K = 0.547782, 3 delta = 1.666808, 3 delta - Ziel = +1.000134
+Versuche: 4; Treffer: []; Urteil: widerlegt

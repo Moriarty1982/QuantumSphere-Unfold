@@ -1,0 +1,20 @@
+(1) Kick 0: alpha =   0 Grad, Halbdrehung (180 Grad) um Achse [0. 1. 0.] (Winkel in der Aequatorebene 90 Grad)
+(1) Kick 1: alpha =  30 Grad, Halbdrehung (180 Grad) um Achse [ 0.866 -0.5    0.   ] (Winkel in der Aequatorebene 150 Grad)
+(1) Kick 2: alpha =  60 Grad, Halbdrehung (180 Grad) um Achse [0.866 0.5   0.   ] (Winkel in der Aequatorebene 30 Grad)
+(1) Kick 3: alpha =  90 Grad, Halbdrehung (180 Grad) um Achse [0. 1. 0.] (Winkel in der Aequatorebene 90 Grad)
+(1) Kick 4: alpha = 120 Grad, Halbdrehung (180 Grad) um Achse [ 0.866 -0.5    0.   ] (Winkel in der Aequatorebene 150 Grad)
+(1) Kick 5: alpha = 150 Grad, Halbdrehung (180 Grad) um Achse [0.866 0.5   0.   ] (Winkel in der Aequatorebene 30 Grad)
+(2) M_1 M_0: Drehung um [0. 0. 1.] um 120.0 Grad
+(2) M_2 M_1: Drehung um [0. 0. 1.] um 120.0 Grad
+(2) M_3 M_2: Drehung um [0. 0. 1.] um 120.0 Grad
+(2) M_4 M_3: Drehung um [0. 0. 1.] um 120.0 Grad
+(2) M_5 M_4: Drehung um [0. 0. 1.] um 120.0 Grad
+    M2 M1 M0: det +1, Achse/Winkel [array([ 0.866, -0.5  ,  0.   ]), np.float64(180.0)]
+(3) Bahn von z_c unter der Kick-Folge: [[1.0, 1.0, 1.0], [-1.0, 1.0, -1.0], [-1.366, 0.366, 1.0], [-0.366, -1.366, -1.0], [0.366, -1.366, 1.0], [1.366, 0.366, -1.0], [1.0, 1.0, 1.0]]
+    alle Bahnpunkte Oktantenmitten (+-1, +-1, +-1)/sqrt3: False
+    Abstand des naechsten Bahnpunkts zu -z_c (Grad): 24.4
+(4) Viertelraster Kick 0: alpha =   0.0 Grad, Achse [0. 1. 0.], z_c -> [-1.0, 1.0, -1.0]
+(4) Viertelraster Kick 1: alpha =  22.5 Grad, Achse [ 0.7071 -0.7071  0.    ], z_c -> [-1.0, -1.0, -1.0]
+(4) Viertelraster Kick 2: alpha =  45.0 Grad, Achse [1. 0. 0.], z_c -> [1.0, -1.0, -1.0]
+(4) Viertelraster Kick 3: alpha =  67.5 Grad, Achse [0.7071 0.7071 0.    ], z_c -> [1.0, 1.0, -1.0]
+    Produkt aufeinanderfolgender Walzen im Viertelraster: Drehung um [0. 0. 1.] um 90.0 Grad

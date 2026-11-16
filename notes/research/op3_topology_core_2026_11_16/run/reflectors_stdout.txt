@@ -1,0 +1,9 @@
+(0) C auf chi (Bloch): [[1.0, -0.0, 0.0], [0.0, 1.0, 0.0], [0.0, 0.0, 1.0]]
+(1) Rotor-Konjugat bei Dualitaetswinkel   0.0 Grad: Halbdrehung um Achse [0. 1. 0.], z_c -> [-0.5774  0.5774 -0.5774]
+(1) Rotor-Konjugat bei Dualitaetswinkel  22.5 Grad: Halbdrehung um Achse [ 0.7071 -0.7071  0.    ], z_c -> [-0.5774 -0.5774 -0.5774]   <- bildet z_c auf -z_c ab
+(1) Rotor-Konjugat bei Dualitaetswinkel  45.0 Grad: Halbdrehung um Achse [1. 0. 0.], z_c -> [ 0.5774 -0.5774 -0.5774]
+(1) Rotor-Konjugat bei Dualitaetswinkel  67.5 Grad: Halbdrehung um Achse [0.7071 0.7071 0.    ], z_c -> [ 0.5774  0.5774 -0.5774]
+(1) Rotor-Konjugat bei Dualitaetswinkel  90.0 Grad: Halbdrehung um Achse [0. 1. 0.], z_c -> [-0.5774  0.5774 -0.5774]
+(2) dieses Konjugat bildet den Oktanten (Ecken x, y, z) ab auf: [[0.0, -1.0, 0.0], [-1.0, -0.0, 0.0], [0.0, 0.0, -1.0]]
+(3) Fixpunkte auf chi: die beiden Achsenpunkte (Eigenkanaele); fixpunktfrei auf chi ist nur die Antipodenabbildung (antiunitaer, Theta).
+(4) det der Bloch-Matrix: 1.0 -> Drehung, erhaelt Orientierung und Flussdichte: als Symmetrie F(M n) = F(n), also Kern bei z_c => Kern bei -z_c (Kernpaar), wie bei Theta.
