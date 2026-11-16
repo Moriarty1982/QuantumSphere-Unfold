@@ -1,5 +1,27 @@
 # Forschungsstand
 
+### Berichtigung: Die Bildprüfung von HS(6) steht im Atlas (16.11.2026, Runde r27)
+
+Auf den Auftrag, die Bildprüfung von HS(6) zu machen, zeigte das Lesen des Atlas: Sie ist schon da, in der Schicht r59 direkt nach r58.
+Runde r26 hatte sie fälschlich als offen geführt; r27 berichtigt das.
+
+**Was r59 zeigt:** Das erreichbare Bild der Codierungsabbildung über die Fangklassen ordnet sich so:
+
+| Klasse | Bedeutung | Status |
+|---|---|---|
+| A₁ | Kragen-Inneres | Dixon-zulässig |
+| A₂, A₃ | Selektor-Wechsel S₁₂, S₂₃ | geroutet |
+| A₄ | nicht benachbarter Wechsel S₁₃ | blockiert |
+| A₅ | HC/MM-Buchführungsfläche | absorbiert, schuldfrei |
+| A₆ | Überlappungskante | geroutet oder zulässig |
+
+Unter den Null-Register-Annahmen (Leck von HS(4), Schuld von HS(5), verborgenes Leck, HC/MM-Schuld) und der Vollständigkeit der Fangabbildung
+bleibt **keine offene Klasse**. Die Schichten danach prüfen das Routenmenü: OP5 ist im erklärten Rahmen lokal geschlossen und nur an der Grenze
+zur vollen Active-Core-Integration offen. r59 rät außerdem ausdrücklich, keinen neuen algebraischen Träger hinzuzufügen; HS(7) und HS(8) aus
+r25 und r26 liegen also außerhalb des Zwecks des Atlas-Turms (wie r26.3 schon sagte). Keine Rechnung, kein neues Ergebnis.
+
+[Runde](../notes/research/v4_10_0_r27/README.md).
+
 ### Zulässigkeit von HS(7) und HS(8): eine Verdopplungsregel (16.11.2026, Runde r26)
 
 Erkundung, nicht blind; offener Punkt aus r25. Der Atlas (v470/32, Schicht r58) definiert die Stufenzahl $C_n = 2^n$ für jedes $n$, deutet aber
@@ -17,7 +39,7 @@ $\mathrm{HS}(n+1) = \mathrm{HS}(n)\oplus\mathrm{HS}(n)$ mit demselben Projektor 
   in jeder Kopie gelten.
 - Die Stufen bleiben verschachtelt; die Halbierung aus r25 ist verträglich.
 
-**Grenzen (r26.3):** Die Regel ist gesetzt, die Bildprüfung von HS(6) ist nicht gemacht. Die Zulässigkeit zeigt nur, dass die Generations-
+**Grenzen (r26.3):** Die Regel ist gesetzt, die Bildprüfung von HS(6) ist nicht gemacht. **Berichtigt in r27:** Die Bildprüfung von HS(6) ist im Atlas bereits gemacht (Schicht r59): Im erreichbaren Bild der Fangklassen A₁–A₆ bleibt keine offene Klasse, unter den Null-Register-Annahmen und der Vollständigkeit der Fangabbildung. Die Zulässigkeit zeigt nur, dass die Generations-
 Lesart aus r25 den Atlas-Regeln nicht widerspricht; sie stützt sie nicht, denn im Atlas hat der Turm eine andere Aufgabe.
 
 [Erkundung](../notes/research/op3_hs78_admissibility_2026_11_16/README.md) · [Runde](../notes/research/v4_10_0_r26/README.md).
