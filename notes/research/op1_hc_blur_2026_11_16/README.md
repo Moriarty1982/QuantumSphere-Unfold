@@ -61,3 +61,38 @@ Zählgewicht bleibt in beiden Ansichten 2, die Unschärferelation bleibt unanget
 4. Offen bleibt, warum M das Gewicht 2 hat und nicht 2j + 1; neu ist die genauere Form: Zustandszahl oder Spur einer unscharfen Auslesung.
 
 OP1 offen; H98, H102 unverändert.
+
+## Nachtrag (16.11.2026): Ein gesonderter HC je Frame und die dritte Zählart
+Frage des Autors: „Prüfe die dritte Zählart, die wir noch nicht benutzt haben. Es könnte sein, dass wir für jeden Frame einen gesonderten HC brauchen;
+ich hatte ihn nur für den Materie-Frame entworfen, auf Photon- und Tachyon-Ebene könnte so ein HC anders aussehen.“ Skript `frame_hcs.py`, Ausgabe
+`run/frame_hcs_stdout.txt`. Erkundung; keine Zahl wird mit Daten verglichen.
+
+**Bestand.** Seit v4.9.0-r63 gilt durchgehend: M zählt alle Spins mit Gewicht 2, T zählt nur j = ½, **P trägt keine Zählung** (r63, r09, r10, r67). Die
+dritte Zählart, alle 2j + 1 Zustände (Ghosh–Mitra bzw. SU(2), γ = 0,274067), ist keinem Frame zugeordnet. Konvention F (r22) zeigt, dass der HC schon
+heute je Frame anders wirkt: Der Kompensator-Eigenwert ist in M p₊ = 0,768, in T p₋ = 0,232 und in P ½; am Photonpunkt sind alle portempfindlichen
+Größen entartet (F2). Der HC ist für M gebaut, wie der Autor sagt.
+
+**Vorschlag: ein HC je Frame als Auslesemaske an der Punktierung.**
+
+| Frame | HC an der Punktierung | Grund im Bestand | Zustände je j | γ |
+|---|---|---|---|---|
+| T | Minimalspin-Filter (nur j = ½) | r17.3 (irreduzibel), r24.4 (eine Querung, ein Strang) | 2 bei j = ½, sonst 0 | 0,127384 |
+| M | Extremzustände längs der Port-Achse | Kompensator-Port, r63.2 (Unschärfesättigung) | 2 | 0,237533 |
+| **P** | **keine Auswahl** | **Ports gleich (F2), der Kompensator wählt nichts aus** | **2j + 1** | **0,274067** |
+
+1. **Die dritte Zählart passt zum Photon-Frame.** Am Photonpunkt sind Kompensator- und Partner-Port gleich gewichtet, und der HC kann keine Achse und keine
+   Seite auswählen. Ein HC, der nichts auswählt, lässt alle 2j + 1 Zustände stehen; das ist genau die SU(2)-Zählung. Damit hätte jede der drei bekannten
+   Zählarten einen Frame, und P wäre nicht mehr ohne Zählung.
+2. **Die drei HCs sind ineinander geschachtelt:** T ⊆ M ⊆ P bei jedem Spin (nachgerechnet bis j = 5/2). T liest am wenigsten, P alles.
+3. **Verwischt sehen alle drei gleich aus, bis auf eine Annahmewahrscheinlichkeit je Spin:** a_P = 1, a_M = 2/(2j+1), a_T = 1 nur bei j = ½. Alle drei sind
+   dann drehinvariant; die Frames unterscheiden sich nur darin, mit welcher Wahrscheinlichkeit sie einen Zustand des Spins j annehmen. Der „gesonderte
+   HC je Frame“ ist in dieser Form eine Funktion a_X(j).
+4. **Neue Verhältnisse, falls die Zuordnung gilt** (nur strukturell, nicht mit Daten verglichen): γ_M/γ_T = 1,864700 (bekannt, γ_L), γ_P/γ_M = 1,153806,
+   γ_P/γ_T = 2,151501.
+
+**Spannung, offen gelassen.** In Konvention F liegt P zwischen M und T (x ↦ 1/x mit P als Fixpunkt). In der Zählung liegt P außen (T ⊆ M ⊆ P, γ_P am
+größten). Die Reihenfolge der Frames und die Reihenfolge der Zählarten stimmen also nicht überein. Ob das ein Widerspruch ist oder eine Aussage („am
+Photonpunkt sieht man alles“), ist nicht geprüft.
+
+**Was daraus folgt.** Die Zuordnung „P zählt alles“ ist naheliegend und aus F2 motiviert, aber eine Setzung. Ein Test bräuchte eine Folgerung von γ_P,
+die vorab festgelegt wird; die Verhältnisse oben werden hier bewusst mit keinem Messwert verglichen. OP1 offen; H98, H102 unverändert.

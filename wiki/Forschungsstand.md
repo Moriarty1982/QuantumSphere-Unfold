@@ -10,6 +10,8 @@ Zwei Ideen des Autors: Der Materie-Frame liest mehr aus, verwischt aber heimlich
 
 OP1 offen. [Notiz](../notes/research/op1_hc_blur_2026_11_16/README.md).
 
+**HC je Frame und dritte Zählart (Nachtrag):** Bisher trägt P keine Zählung (seit r63); die dritte Zählart (alle 2j + 1, SU(2), γ = 0,274) ist ungenutzt. Vorschlag: ein eigener HC je Frame. T: nur j = ½ (0,1274); M: Extremzustände längs der Port-Achse (0,2375); P: keine Auswahl, weil am Photonpunkt beide Ports gleich sind (F2), also alle 2j + 1 Zustände (0,2741). Die Masken sind geschachtelt (T ⊆ M ⊆ P); verwischt unterscheiden sie sich nur durch eine Annahme je Spin (1, 2/(2j+1), nur j = ½). Spannung: In Konvention F liegt P zwischen M und T, in der Zählung außen. Setzung, kein Datenvergleich.
+
 ### OP3: Das Kern-Bild topologisch (16.11.2026)
 
 Auftrag des Autors: topologische Analyse. Erkundung, analytisch.
