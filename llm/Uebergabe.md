@@ -9,7 +9,7 @@
 - **GitHub:** `main` nach PR #156 (f0bb768, Runde r27, Berichtigung), davor PR #155 (69863d8, Runde r26, Verdopplungsregel), davor PR #154 (942508b, Runde r25, Dixon-Kopien), davor PR #153 (17f20aa, Vorab-Notiz H105), davor PR #152 (ad665b4, Runde r24, OP1), davor PR #151 (Frame-Abschnitte im Aussagenspeicher), davor PR #150 (fdde521, Runden-Absätze im Aussagenspeicher), davor PR #149 (f495e5a, Runde r23, Kaskade), davor PR #148 (a141650, Runde r22, Kollapszustand typisiert), davor PR #147 (c0f3011, Runde r21, C5 neu gestellt), davor PR #146 (d9d4b5c, Runde r20, C5), davor PR #145 (81a6ccb, Neuheitsprüfungen Kern und Koide), davor #144 (982c476, Runde r19), davor #143 (80af436, C5 (α) in der r10-Lesart), davor #142 (cdb45bf, C5 Nullaugenblick), davor #141 (144d4ff, Runde r18), davor #140 (c66a5ab, OP4 Zeitzyklus und Spin(8)-Zentrum), davor #139 (86d80c8, Suche nach blindem Test, H2 nachgerechnet), davor #138 (68e1075, Runde r17), davor #137 (a835c46, OP1 Brücke: Barbero-Dublett, Penrose-Stränge), davor #136 (45f518d, OP3 Uhr-Abgleich und Treue-Lesart, OP1 Irreduzibilität), davor #135 (e0be304, Runde r16 mit r16.1–r16.9), davor #134 (f32ae5c, k220 „ein Objekt“ übernommen), davor #133 (37ac7da, OP3: C⊗O, Helizitätsachse, invariante Kugel, Feldvorzeichen), davor #132
   (b6ed1a5, Runde r15, Dauerauftrag Issues), #130 (eeb6083,
   Berichtigung zu CT-004), #129 (c9bfb19, OP1 mit I1, CT-004) und #128
-  (14feb02, Release v5.1.0). **Keine offenen PRs.** Gemergt am 14./15.11.: #124–#128
+  (14feb02, Release v5.1.0). **Offen: PR #157** (Zweig `research/h106-singlet-residual`: Test H106, widerlegt; wartet auf Freigabe). Gemergt am 14./15.11.: #124–#128
   (OP3-Rückwärtssuche, Dauerauftrag Versionsverwaltung, Abbildung C⊗S → C⊗H⊗O, bewachter Kern, Release), davor #108–#123.
   Gemergte Zweige sind gelöscht (16.11.: drei lokale Altzweige). Die Läufe nach dem Merge von #146 waren erfolgreich.
 - **Letzte Runde:** v4.10.0-r27 (Berichtigung zu r26, r27.2, PR #156, f0bb768). **Davor:** v4.10.0-r26 (Verdopplungsregel, PR #155, 69863d8). **Davor:** v4.10.0-r25 (Dixon-Kopien, PR #154, 942508b), v4.10.0-r24 (OP1, Querungen, PR #152, ad665b4). **Davor:** v4.10.0-r23 (Kaskade, PR #149, f495e5a), v4.10.0-r22 (Kollapszustand, PR #148, a141650), davor v4.10.0-r21 (gemergt über PR #147 als c0f3011), C5 frame-sauber neu gestellt (PR #147). Anteile C5_M + C5_T = 1,
@@ -28,7 +28,10 @@
 - **Davor:** v4.10.0-r18 (Statusvermerke zu Suche nach blindem Test, Nachrechnung H2, Dirac-Zyklus = Zeitzyklus,
   Neutrino-ℤ₂ = Spin(8)-Zentrum), gemergt über PR #141 (144d4ff); davor r17 (PR #138), r16, r15, r14 (in v5.1.0).
   Kandidat 1427 Seiten.
-- **Hypothesen:** zuletzt vergeben **H105** (k227, offen, Vorab b77ba9e, 16.11.). Frei: **H106, k228**.
+- **Hypothesen:** zuletzt vergeben **H106** (k228, widerlegt, Vorab abf54a0, 16.11.). Frei: **H107, k229**.
+  - H106 widerlegt: Singulett der vier Dixon-Kopien schließt den Rest 0,012376 nicht (M1 Gewicht ¼ → 0,640; M2 Normalen-Paare →
+    0,679). Nachträglich, nicht gedeutet: Gewicht 0,0979 träfe 2/3. Neuer Test nur mit Mechanismus, der das Gewicht vorher festlegt.
+  - H105 offen (Vorab b77ba9e, k227).
   - H105 offen: Flächenschritte 4 ln 2 l_P² und Echos im Ringdown unter Setzung V1 (Querungs-Lesart r24.4); nur Analysen nach
     dem 16.11.2026, Frist 31.12.2028 (`notes/research/predictions/Vorab_Notiz_H105_Flaechenschritte_Echos.md`, `k227_test_h105.py`).
   - H100 offen: nächster NuFIT-Fit nach 6.1, Frist 31.12.2027 (`notes/research/predictions/k222_test_h100.py`).
