@@ -113,3 +113,27 @@ genau die Lesart „removed“ aus Faden 1 der Kern-Notiz (S³ ∖ B_ε(K)). Ob 
 das wäre eine eigene Methoden-Notiz.
 
 OP3 offen; H111 frei.
+
+## Undurchlässiger Rand (16.11.2026, Erkundung, analytisch, nicht blind)
+Auftrag des Autors: „Undurchlässiger Rand“. Skript `boundary_check.py`, Ausgabe `run/boundary_check_stdout.txt`. Zwei Fragen: Gibt der Bestand einen Grund,
+dass Fluss die Kanten des Oktantendreiecks nicht queren kann? Und was folgt, wenn man es setzt?
+
+**1. Ein Grund im Bestand ist nicht gefunden.** Die drei Kanten liegen auf den Großkreisen x = 0, y = 0, z = 0. Das sind die Fixkreise der drei Spiegelungen
+der Bloch-Kugel, und antilineare Abbildungen (wie T und J_B auf dem Äquator von χ, r16.3(b)) wirken als solche Spiegelungen. Eine Spiegelsymmetrie
+erzwingt für eine *skalare* Dichte einen verschwindenden Normalstrom auf dem Spiegel. Der Berry-Fluss ist aber **pseudoskalar**: Unter komplexer
+Konjugation wechselt die Bargmann-Phase das Vorzeichen (Oktant +π/4 → −π/4; an 200 Zufallsdreiecken bestätigt; vgl. r16.7: zwei Bahnen nach dem
+Vorzeichen der Phase). Für eine pseudoskalare Dichte ist die Normalkomponente des Stroms unter der Spiegelung gerade und muss nicht verschwinden. Die
+Spiegelstruktur der Kanten macht den Rand also **nicht** undurchlässig. Weitere Kandidaten (feste Paralleltransporte längs der Kanten) würden die
+Holonomie um den Rand festhalten und damit jede Biegung verhindern, nicht nur die über den Rand.
+
+**2. Was ein gesetzter undurchlässiger Rand mit einer Punktierung liefert.** Kann Fluss T nur über eine Senke im Inneren verlassen, ist der sparsamste
+Abfluss eine flussfreie **Scheibe** um die Senke mit dem Raumwinkel 2ΔΦ = 0,237448 sr (Radius 15,8°). Ihre Lage ist frei, solange sie den Rand nicht
+berührt, also in einem Bereich von 19,5° um die Mitte; die Kosten hängen nicht von der Lage ab. Das ist genau die Struktur von H102 und deckt sich mit der
+Kern-Notiz („die genaue Lage im Innern spielt keine Rolle“, dort etwa 19°). Aber:
+- Die Größe 2ΔΦ ist die Zielbedingung, nicht ein Ergebnis. Die Übereinstimmung mit γ_M ist die H102-Beziehung selbst und kein neuer Befund.
+- Wohin der Fluss nach der Senke geht (Gegenpol oder verteilt), legt der Rand nicht fest; das bleibt die Frage der Umkehrwalze.
+
+**Ergebnis.** Ein undurchlässiger Rand mit einer Punktierung ist eine **hinreichende** Bedingung für einen Kern der H102-Art, mit freier Lage und der
+Zielgröße als Fläche. Der Bestand begründet ihn nicht, und die Spiegelstruktur der Kanten tut es auch nicht (Pseudoskalar). Die Kette endet damit wieder
+bei denselben zwei offenen Punkten: warum genau ein Kern bzw. eine Punktierung (topologisch ausgezeichnet, Kern-Notiz Schritt 2) und warum ΔΦ = γ_M/2
+(OP1, Zählregel des Frames M). OP3 offen; keine H-Nummer.

@@ -12,6 +12,8 @@ Idee des Autors: einen von der Zeit abhängigen Korrekturterm einfügen, der die
 
 **Ergebnis (16.11.):** Der sparsamste lokale Fluss leert einen flussfreien Saum entlang der drei Kanten des Dreiecks (Breite gegen gut 3°), keinen Kern in der Mitte. Die Kern-Konfiguration von H102 kostet mindestens das 270-fache, mit Fluss am Gegenpol etwa doppelt so viel wie bei gleichmäßiger Verteilung. Ausschluss: Ein lokaler, sparsamer Fluss erzeugt den Kern nicht. Erzwingen würde ihn ein undurchlässiger Rand des Dreiecks mit Abfluss nur über eine Punktierung (Lesart „removed“), nicht gerechnet. [Ergebnis](../notes/research/op3_correction_term_2026_11_16/README.md).
 
+**Undurchlässiger Rand (16.11.):** Ein Grund im Bestand ist nicht gefunden. Die Kanten sind Spiegelkreise, aber der Berry-Fluss ist pseudoskalar (die Bargmann-Phase wechselt unter Konjugation das Vorzeichen), also erzwingt die Spiegelung keinen verschwindenden Normalstrom. Setzt man den Rand undurchlässig mit einer Punktierung, wird der Abfluss eine flussfreie Scheibe vom Raumwinkel 2ΔΦ mit freier Lage (19,5° um die Mitte), also genau die Struktur von H102. Die Größe ist dabei die Zielbedingung, kein Ergebnis; offen bleiben „genau ein Kern“ und ΔΦ = γ_M/2 (OP1).
+
 ### OP1: Setzung (S1) geprüft – masselose Querungen statt „derselben SU(2)“ (16.11.2026)
 
 Auftrag des Autors: (S1) prüfen. Erkundung, nicht blind.
