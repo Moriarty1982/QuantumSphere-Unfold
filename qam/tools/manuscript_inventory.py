@@ -25,6 +25,50 @@ def mask_comments(text):
     return ''.join(chars)
 
 
+# Round items: the research layers state results as \paragraph{Theoremlet v4.10.0-r21.12 (...)} and similar,
+# not as theorem environments.  Only these headed kinds are registered; "Purpose.", "Proof sketch.", "Reading."
+# and other prose paragraphs are not.
+PARAGRAPH_KINDS = ('Theoremlet', 'Remark', 'Correction', 'Restatement', 'Definition', 'Lemma', 'Proposition', 'Corollary')
+PARAGRAPH_END = re.compile(r'\\paragraph\{|\\(?:sub)*section\*?\{|\\clearpage\b|\\begin\{(?:theorem|lemma|proposition|corollary|'
+                           r'definition|assumption|axiom|conjecture)\}')
+
+
+def balanced(text, start):
+    """Return the end offset of the brace group opening at text[start] == '{', or None."""
+    depth = 0
+    index = start
+    while index < len(text):
+        char = text[index]
+        if char == '\\':
+            index += 2
+            continue
+        if char == '{':
+            depth += 1
+        elif char == '}':
+            depth -= 1
+            if depth == 0:
+                return index + 1
+        index += 1
+    return None
+
+
+def paragraph_items(text, clean):
+    """Yield (offset, end, kind, title) for headed round items; kind is e.g. 'paragraph-theoremlet'."""
+    for match in re.finditer(r'\\paragraph\{', clean):
+        close = balanced(clean, match.end() - 1)
+        if close is None:
+            continue
+        title = clean[match.end():close - 1].strip()
+        word = re.match(r'([A-Za-z]+)', title)
+        if not word or word.group(1) not in PARAGRAPH_KINDS:
+            continue
+        following = PARAGRAPH_END.search(clean, close)
+        end = following.start() if following else len(clean)
+        while end > close and clean[end - 1].isspace():
+            end -= 1
+        yield match.start(), end, 'paragraph-' + word.group(1).lower(), text[match.end():close - 1].strip()
+
+
 def collect(repo):
     repo = Path(repo).resolve()
     root = repo / 'sources/research'
@@ -77,6 +121,9 @@ def collect(repo):
             statement = text[match.start():end]
             claim_key = f'{relative}:{line}:{kind}'
             add(claim_key, key, kind, relative, line, statement, digest)
+        for start, end, kind, _ in paragraph_items(text, clean):
+            line = clean.count('\n', 0, start) + 1
+            add(f'{relative}:{line}:{kind}', key, kind, relative, line, text[start:end], digest)
 
     visit(entry, None)
     return nodes

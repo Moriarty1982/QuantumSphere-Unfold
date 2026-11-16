@@ -1,3 +1,4 @@
+import json
 from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest
@@ -53,6 +54,47 @@ class ManuscriptImportTests(unittest.TestCase):
             entry.write_text(r'\input{missing}', encoding='utf-8')
             with self.assertRaises(ValueError):
                 import_manuscript(db, repo)
+
+    def test_research_layer_paragraph_items(self):
+        with TemporaryDirectory() as folder:
+            repo = Path(folder)
+            parts = repo / 'sources/research/parts'
+            parts.mkdir(parents=True)
+            (parts.parent / 'v480-companion.tex').write_text(r'\input{parts/layers}' + '\n', encoding='utf-8')
+            layers = parts / 'layers.tex'
+            layers.write_text(
+                '\\section*{v4.10.0-r21 Source-Only: Example}\n'
+                '\\paragraph{Purpose.}\nNot registered.\n'
+                '\\paragraph{Theoremlet v4.10.0-r21.3 (shares, \\(P\\) and floor).}\nShares add to one.\n'
+                '\\paragraph{Proof sketch.}\nBy definition.\n'
+                '\\paragraph{Correction.}\nA correction without number.\n'
+                '% \\paragraph{Theoremlet v4.10.0-r21.9 (commented).}\n'
+                '\\paragraph{Definition v4.10.0-r21.1 (floor).}\nThe floor.\n'
+                '\\subsection*{v4.10.0-r21 register}\n', encoding='utf-8')
+            nodes = [row for row in collect(repo) if row[2] != 'file']
+            self.assertEqual([row[2] for row in nodes],
+                             ['paragraph-theoremlet', 'paragraph-correction', 'paragraph-definition'])
+            self.assertTrue(nodes[0][5].endswith('Shares add to one.'))
+            self.assertNotIn('Proof sketch', nodes[0][5])
+            self.assertNotIn('\\subsection', nodes[2][5])
+            db = repo / 'store.sqlite3'
+            report = import_manuscript(db, repo)
+            self.assertEqual(report['statements'], 3)
+            with store_session(db) as (session, models):
+                obj = session.get(models.qstore_objects,
+                                  'manuscript:sources/research/parts/layers.tex:item:paragraph-theoremlet:v4.10.0-r21.3')
+                self.assertEqual(obj.object_type, 'claim')
+                version = session.scalar(select(models.qstore_versions).where(models.qstore_versions.object_id == obj.object_id))
+                payload = json.loads(version.payload_json)
+                self.assertEqual(payload['title'], r'Theoremlet v4.10.0-r21.3 (shares, \(P\) and floor)')
+                self.assertEqual(payload['inventory']['round'], 'v4.10.0-r21')
+                self.assertEqual(payload['inventory']['item'], 'v4.10.0-r21.3')
+                self.assertEqual(payload['inventory']['registration'], 'literal-paragraph-import-v1')
+                definition = session.get(models.qstore_objects,
+                                         'manuscript:sources/research/parts/layers.tex:item:paragraph-definition:v4.10.0-r21.1')
+                self.assertEqual(definition.object_type, 'definition')
+                self.assertEqual(session.scalar(select(func.count()).select_from(models.qstore_guards)), 3)
+            self.assertFalse(any(import_manuscript(db, repo)['new_rows'].values()))
 
     def test_nested_environment_preserves_full_source(self):
         with TemporaryDirectory() as folder:

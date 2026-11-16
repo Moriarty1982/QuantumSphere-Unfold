@@ -92,7 +92,9 @@ def configure(database, destination):
         source_rows = list(session.scalars(select(models.qstore_sources)))
         for version in rows:
             payload = json.loads(version.payload_json)
-            if not payload.get('inventory'):
+            # The v5 editions map literal theorem environments only; research-layer paragraph items
+            # (registration literal-paragraph-import-v1) are store objects, not edition members.
+            if payload.get('inventory', {}).get('registration') != 'literal-import-v1':
                 continue
             matching = [s for s in source_rows if s.version_hash == version.version_hash
                         and inventory['source_hashes'].get(s.source_path) == s.source_hash]
