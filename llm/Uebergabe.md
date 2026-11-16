@@ -29,7 +29,11 @@
 - **Davor:** v4.10.0-r18 (Statusvermerke zu Suche nach blindem Test, Nachrechnung H2, Dirac-Zyklus = Zeitzyklus,
   Neutrino-ℤ₂ = Spin(8)-Zentrum), gemergt über PR #141 (144d4ff); davor r17 (PR #138), r16, r15, r14 (in v5.1.0).
   Kandidat 1427 Seiten.
-- **Hypothesen:** zuletzt vergeben **H108** (k230, widerlegt, Vorab 01a0f86, 16.11.). Frei: **H109, k231**.
+- **Hypothesen:** zuletzt vergeben **H109** (k231, widerlegt, Vorab 15004ce, Ergebnis 302bb9f, 16.11.). Frei: **H110, k232**.
+  - H109: generationsabhängige zyklische Frame-Lesung (Generation k im Frame F_k aus R/T/J_B; L1 F⊗F, L2 kontrollierte Lesung einer Hälfte),
+    9 Mechanismen, 14 Versuche, kein Treffer. Drehungen lassen 0,679042 stehen (kohärentes Dreieck, Überlappung ½); L2 gibt 0,05–0,78.
+    Folgerung: Eine Lösung müsste die Überlappung ½ oder die Kohärenz ändern. Fünf Wege geprüft, Rest 0,012376 offen.
+  - Davor H108 (k230, widerlegt, Vorab 01a0f86).
   - H108: verschränkte Generationszustände als Majorana-Paare {n_k, b_k} im Triplett, b_k aus den natürlichen Punkten (Nachbar, ±z,
     Gegenpunkt, Gegenpunkt des Nachbarn; E1–E5). Widerlegt: ±z gibt flachen Oktanten, Gegenpunkte Phase 0, Nachbar 0,176.
     Drei parameterfreie Familien aus der Kopienstruktur (H106–H108) widerlegt → Suchrichtung wechseln: Renormierung (Autor).
@@ -39,8 +43,8 @@
 - **Frame-getypte Hälften geprüft (16.11., Erkundung, nicht blind, `notes/research/op3_frame_typed_halves_2026_11_16/`, 84bea88 im
   Zweig von PR #157; Frage des Autors „Partitionierungen in verschiedenen Frames lesen?“):** Die Frame-Abbildungen von r16.7
   (R=σz, T=σx, J_B=σy) brechen die Generationsgleichheit; zykluserhaltende Lesungen geben nur den Tausch 00↔11 (Werte schon in H107).
-  **Kein H109 angelegt** (H109/k231 weiter frei). Offene Autorentscheidung: generationsabhängige Lesungen als neue Familie zulassen
-  (freie Wahl Generation → Frame) oder OP3 ruhen lassen. PR-Kommentar #157 und Issue #131 nachgezogen.
+  Gemeinsame Lesung gibt nichts Neues; die generationsabhängige Familie hat der Autor danach als H109 prüfen lassen (widerlegt, s. o.).
+  PR #157 und Issue #131 nachgezogen. Nächster Schritt: Autorentscheidung, OP3 ruhen lassen oder Überlappung ½ selbst angehen; PR #157/#158 mergen.
   - H107 (k229, Vorab 30a4a50, erweitert 44cda89): widerlegt.
   - H107 widerlegt: verschachtelte Normierung HS(8) = HS(7) ⊕ HS(6) ⊕ HS(6) (Idee des Autors), volle Grammatik, 20 Versuche, kein Treffer
     auf 0,0002 rad; nächster N1 −0,0015. Struktur: Bei Produktzuständen |n⟩|n⟩ ist ein in seiner HS(7)-Hälfte normiertes HS(6) das Gewicht
