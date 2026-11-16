@@ -11,7 +11,7 @@
   Berichtigung zu CT-004), #129 (c9bfb19, OP1 mit I1, CT-004) und #128
   (14feb02, Release v5.1.0). Gemergt am 14./15.11.: #124–#128
   (OP3-Rückwärtssuche, Dauerauftrag Versionsverwaltung, Abbildung C⊗S → C⊗H⊗O, bewachter Kern, Release), davor #108–#123.
-  Keine offenen PRs. Gemergte Zweige sind gelöscht (16.11.: drei lokale Altzweige; nach #157/#158 deren Zweige). Die Läufe nach dem Merge von #146 waren erfolgreich.
+  **Offen: PR #159** (Zweig `research/op3-selection-law`: Nachtrag zur OP3-Diagnose, bewachter Kern/H102 übersehen, Auswahlgesetz → Zählregel M → OP1; wartet auf Freigabe). Gemergte Zweige sind gelöscht (16.11.: drei lokale Altzweige; nach #157/#158 deren Zweige). Die Läufe nach dem Merge von #146 waren erfolgreich.
 - **Letzte Runde:** v4.10.0-r27 (Berichtigung zu r26, r27.2, PR #156, f0bb768). **Davor:** v4.10.0-r26 (Verdopplungsregel, PR #155, 69863d8). **Davor:** v4.10.0-r25 (Dixon-Kopien, PR #154, 942508b), v4.10.0-r24 (OP1, Querungen, PR #152, ad665b4). **Davor:** v4.10.0-r23 (Kaskade, PR #149, f495e5a), v4.10.0-r22 (Kollapszustand, PR #148, a141650), davor v4.10.0-r21 (gemergt über PR #147 als c0f3011), C5 frame-sauber neu gestellt (PR #147). Anteile C5_M + C5_T = 1,
   frame-freier Boden |s|/2u. Drei Fragen: Übergangsfrage (Verlagerung, keine Entladung), Photonpunkt-Frage (für Felder
   positiv; bleibende Null nur bei s₊ = s₋ = w = 0), Brückenfrage (offen). Berichtigung zu r20.4: gleiche Anteile sind für P
@@ -40,6 +40,8 @@
     Überlappung (Spin ½/1/3/2: 0,785/0,679/0,650). Zielzustand nicht kohärent (Kohärenzmaß 1,068, Rang zwei von S, r16.8). Fehlende Zahl =
     Eigenschaft des Feldzustands → braucht Auswahlgesetz/Dynamik, wie OP5 (Zustandsauswahl, fehlender Umlauf). Issues #131, #12 kommentiert.
     Empfehlung: keine weiteren Träger-Varianten für OP3; Fortschritt an W1/W2 (eingefroren) gekoppelt.
+  - **Auswahlgesetz (16.11., PR #159):** Diagnose berichtigt; φ = π/4 − γ_M/2 (bewachter Kern, H102) ist die geometrische Lesart.
+    Kette: Phase ← Kern ← Flächenquant Frame M ← Zählregel M ← OP1. Nächster Schritt: OP1, warum M alle Spins mit Gewicht 2 zählt.
   - Davor H109 (k231, widerlegt, Vorab 15004ce, Ergebnis 302bb9f).
   - H109: generationsabhängige zyklische Frame-Lesung (Generation k im Frame F_k aus R/T/J_B; L1 F⊗F, L2 kontrollierte Lesung einer Hälfte),
     9 Mechanismen, 14 Versuche, kein Treffer. Drehungen lassen 0,679042 stehen (kohärentes Dreieck, Überlappung ½); L2 gibt 0,05–0,78.
