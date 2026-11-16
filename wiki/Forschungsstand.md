@@ -1,5 +1,15 @@
 # Forschungsstand
 
+### OP1: Verwischte HC-Auslesung und Gegen-HC (16.11.2026)
+
+Zwei Ideen des Autors: Der Materie-Frame liest mehr aus, verwischt aber heimlich; und zum HC gehört beim Wechsel oder Vergleich ein Gegen-HC, der ihn beim Messen rückgängig macht. Erkundung, analytisch.
+
+- **Verwischen:** Die HC-Maske (m = ±j längs einer Achse), über alle Achsen gemittelt, ist voll drehinvariant und nimmt jeden Zustand des Spins j mit Wahrscheinlichkeit 2/(2j+1) an. Ihr Zählgewicht bleibt 2 je Spin, also γ = 0,2375 ohne Eichfixierung. Preis: gezählt wird die Spur einer unscharfen Auslesung, keine Zustandszahl (die SU(2)-Literatur zählt Zustände und kommt auf 0,274).
+- **Unschärfe:** Der HC wählt genau die unschärfeminimalen Zustände (r63.2). Ein Gegen-HC als Komplement (Partner-Port) holt den Rest dazu und gibt 0,274; ein Gegen-HC als Verwischen der Achse behält 0,2375.
+- **Herkunft des Verwischens:** nicht aus dem Vergleich M ↔ T (gemeinsame Port-Achse nach Konvention F); möglich aus der Horizontgeometrie, weil die Normale über den Horizont jede Richtung genau einmal annimmt (ABK, Feld vom Grad 1). Nicht geprüft.
+
+OP1 offen. [Notiz](../notes/research/op1_hc_blur_2026_11_16/README.md).
+
 ### OP3: Das Kern-Bild topologisch (16.11.2026)
 
 Auftrag des Autors: topologische Analyse. Erkundung, analytisch.

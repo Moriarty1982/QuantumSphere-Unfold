@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 16.11.2026: Verwischte HC-Auslesung und Gegen-HC (OP1) in Forschungsstand und Offene-Probleme.
+
 - 16.11.2026: H111 (widerlegt) in Vorhersagen-und-Tests und Forschungsstand.
 
 - 16.11.2026: Nachtrag zwei Walzenraster verglichen in Forschungsstand.
