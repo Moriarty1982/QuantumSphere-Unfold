@@ -9,7 +9,8 @@
 - **GitHub:** `main` nach PR #147 (c0f3011, Runde r21, C5 neu gestellt), davor PR #146 (d9d4b5c, Runde r20, C5), davor PR #145 (81a6ccb, Neuheitsprüfungen Kern und Koide), davor #144 (982c476, Runde r19), davor #143 (80af436, C5 (α) in der r10-Lesart), davor #142 (cdb45bf, C5 Nullaugenblick), davor #141 (144d4ff, Runde r18), davor #140 (c66a5ab, OP4 Zeitzyklus und Spin(8)-Zentrum), davor #139 (86d80c8, Suche nach blindem Test, H2 nachgerechnet), davor #138 (68e1075, Runde r17), davor #137 (a835c46, OP1 Brücke: Barbero-Dublett, Penrose-Stränge), davor #136 (45f518d, OP3 Uhr-Abgleich und Treue-Lesart, OP1 Irreduzibilität), davor #135 (e0be304, Runde r16 mit r16.1–r16.9), davor #134 (f32ae5c, k220 „ein Objekt“ übernommen), davor #133 (37ac7da, OP3: C⊗O, Helizitätsachse, invariante Kugel, Feldvorzeichen), davor #132
   (b6ed1a5, Runde r15, Dauerauftrag Issues), #130 (eeb6083,
   Berichtigung zu CT-004), #129 (c9bfb19, OP1 mit I1, CT-004) und #128
-  (14feb02, Release v5.1.0). **Keine offenen PRs.** Gemergt am 14./15.11.: #124–#128
+  (14feb02, Release v5.1.0). **Offen: PR #148** (Zweig `research/v4.10-r22-collapse-state`, Runde r22, Kollapszustand typisiert; wartet auf
+  Freigabe; CI-Lauf gestartet, Ergebnis nicht geprüft). Gemergt am 14./15.11.: #124–#128
   (OP3-Rückwärtssuche, Dauerauftrag Versionsverwaltung, Abbildung C⊗S → C⊗H⊗O, bewachter Kern, Release), davor #108–#123.
   Gemergte Zweige sind gelöscht (16.11.: drei lokale Altzweige). Die Läufe nach dem Merge von #146 waren erfolgreich.
 - **Letzte Runde:** v4.10.0-r21 (gemergt über PR #147 als c0f3011, Zweig gelöscht), C5 frame-sauber neu gestellt (PR #147). Anteile C5_M + C5_T = 1,
@@ -168,12 +169,13 @@
   Form (iii) hat keinen Kandidaten mehr. C5 offen in der Übergangsfrage (nur Verlagerung, δ). Dazu Nachtrag zu (B3):
   helizitätsneutral ist die einzige von allen Frame-Abbildungen erhaltene Helizitätsstufe (nur Notiz/Wiki, nicht im Rundentext).
   Wiki: Berichtigungsvermerke an den r20-Einträgen. CI-Lauf gestartet, Ergebnis nicht geprüft.
-- **Kollapszustand typisiert (16.11., Zweig `research/collapse-state-typing`, noch kein PR, keine Runde):**
+- **Kollapszustand typisiert = Runde v4.10.0-r22 (16.11., PR #148, Zweig `research/v4.10-r22-collapse-state`):**
   `notes/research/collapse_state_typing_2026_11_16/`. Alle 93 z⁻-Stellen des Hauptkorpus: Gruppe 1 (Nullpunkt des Versatzes)
   = R; Gruppe 2 (invariantes Objekt) = Rolle von P am Punkt z⁻ = 0; Gruppe 3 (Horizont z⁻ → ∞, β → 1) = Ort von P; Gruppe 4
   kein Punkt; Gruppe 5 (Richtung der Kaskade) offen. Die Koordinate z⁻ läuft von R nach P wie η_R in r21.8. Der Nullzustand
   im Sinn von r21.8 liegt beim Horizont. **Berichtigung zu r21.9 Zeile 3:** „never fully reach z⁻ = 0“ ist R (bleibender
-  Versatz), nicht P. Vorschlag: als Runde v4.10.0-r22 mit Wiki und PR; Autorentscheidung ausstehend.
+  Versatz), nicht P. Wiki im selben PR; Register #17 nachgezogen. Kandidat 1442 Seiten, Guard-Linter 0.
+  Zuletzt vergebene Runde: **r22**.
 - **C5 ruht nach r21.12:** Form (iii) ohne Kandidat; ohne neue Struktur keine weiteren Varianten. Möglich: OP1 (a)
   oder den Kollapszustand im ganzen Hauptkorpus nach der Tabelle r21.9 typisieren (R oder P).
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,
