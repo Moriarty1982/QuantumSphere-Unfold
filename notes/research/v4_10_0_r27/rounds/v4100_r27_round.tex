@@ -9,7 +9,7 @@
 \paragraph{Purpose.}
 v4.10.0-r26 recorded the image audit of the HS(6) coding map, which the atlas layer r58 recommends before any new shift, as open.  The
 author asked for that audit to be carried out (2026-11-16).  Reading the atlas before computing anything shows that the audit is already
-there, in the layer directly after r58.  This layer corrects r26 and records what the atlas states.  No computation, no new result.  The
+there, in the layer directly after r58.  This layer corrects r26, records what the atlas states, and checks the atlas's reasons against later work.  No computation, no new result.  The
 notes are \texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r27/}.  Earlier layers are not rewritten.
 
 \noindent\textbf{Source-only status.}
@@ -37,6 +37,29 @@ hardening and old-branch mapping) continue this.  The atlas also states, in r59,
 carrier''.  HS(7) and HS(8) of r25 and r26 are such carriers; their use as generation carriers lies outside the purpose of the atlas
 tower, as r26.3 already said.
 
+\paragraph{Remark v4.10.0-r27.2 (why the atlas advised against new shifts, and what of it still holds).}
+On the author's request (2026-11-16) the reasons behind the advice of r58 (``the next meaningful layer is not a new shift'') and r59
+(``should not add a new algebraic carrier'') were checked against what happened since.  The atlas gives three.
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \emph{A finite OP5 audit.}  The Dixon coding turned the OP5 tunnel audit ``into a finite Dixon-mask admissibility audit rather
+than an unbounded route search''; a new carrier would reopen the route grammar.  Since then the old OP5 question was suspended and rebuilt:
+the historical \(\Lambda\)-cancellation duty is no established consequence of the core, and the source--return package is a conditional
+schema without a native route (v4.10.0-r05, r11.2(a)).  The local OP5 closure itself contains no frame quantity and stands within its
+grammar (v4.9.0-r23(f)).  Reason (a) still holds for coding OP5 routes; it does not bind other uses of the carrier.
+\item[(b)] \emph{Algebraic caution.}  HS(4) is ``the first level at which a naive 16-channel extension may behave like a sedenion-type
+expansion''; the atlas therefore gates it by the projector and a leakage register instead of using sedenions as a free algebra.  The
+concern is the Cayley--Dickson doubling of the algebra, beyond the octonions.  The rule of r26.1 doubles the carrier into copies, as HS(5)
+does, and doubles no algebra; the copies stay \(\C\otimes\Hh\otimes\Oo\).  Reason (b) does not apply to HS(7) and HS(8) as copies.  It would
+apply to a sedenion reading of 128 channels, route~A of r13.
+\item[(c)] \emph{Scope.}  The Dixon carrier is used as a route code, with no Standard-Model claim.  Since v4.8 the project uses
+\(\C\otimes\Hh\otimes\Oo\) explicitly as the carrier of one generation (CT-003, r13, r16.1, r19, r25).  Both roles now coexist; reason (c) is a
+scope statement for the atlas layer, not a theorem against the second role.  It asks that the two roles be kept apart: route masks are not
+generation states.
+\end{enumerate}
+Reading: the advice was a scope decision for the OP5 programme of v4.7, plus a caution against algebra doubling.  Neither forbids HS(7)
+and HS(8) as copy carriers for generations.  For OP5 route coding the advice stays sensible.  The atlas works in its ``photon frame'',
+typed R by v4.9.0-r24; the copy index of r25/r26 is frame-free, so no frame conflict arises.
+
 \paragraph{What this does not give.}
 No new audit and no computation; the content is that of the atlas.  The image audit of r59 is about OP5 routes on HS(6); it says nothing
 about HS(7), HS(8) or the generation reading of r25.
@@ -60,6 +83,7 @@ statement & status after v4.10.0-r27\\
 image audit of HS(6) & done in atlas layer r59; no residual-open class under the zero-register and exhaustiveness hypotheses; r26.3 corrected\\
 OP5 (atlas) & locally closed inside the declared grammar; open at the full Active-Core exhaustiveness boundary\\
 HS(7), HS(8) & admissible under the setting r26.1; outside the purpose of the atlas tower\\
+reasons of the atlas against new shifts & OP5 audit finiteness (still valid for routes), caution against algebra doubling (does not apply to copies), scope (two roles to be kept apart) (r27.2)\\
 \bottomrule
 \end{tabular}
 \end{center}

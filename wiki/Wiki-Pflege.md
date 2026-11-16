@@ -103,7 +103,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 ## Änderungsnachweis
 
 - 16.11.2026: Runde v4.10.0-r27 (Berichtigung zu r26: Bildprüfung von HS(6) steht im Atlas, r59) eingetragen; die r26-Einträge in
-  Forschungsstand, Forschungslinie und Content-overview tragen einen Berichtigungsvermerk.
+  Forschungsstand, Forschungslinie und Content-overview tragen einen Berichtigungsvermerk. Dazu r27.2: Gründe des Atlas gegen neue
+  Stufen geprüft (dieselben Seiten).
 
 - 16.11.2026: Runde v4.10.0-r26 (Verdopplungsregel, Zulässigkeit von HS(7)/HS(8)) eingetragen: Forschungsstand,
   Offene-Probleme (OP3), Gesamtbild, Forschungslinie, Inhalt, Content-overview. Kein Abschluss.

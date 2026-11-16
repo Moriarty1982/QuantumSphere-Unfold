@@ -20,6 +20,16 @@ bleibt **keine offene Klasse**. Die Schichten danach prüfen das Routenmenü: OP
 zur vollen Active-Core-Integration offen. r59 rät außerdem ausdrücklich, keinen neuen algebraischen Träger hinzuzufügen; HS(7) und HS(8) aus
 r25 und r26 liegen also außerhalb des Zwecks des Atlas-Turms (wie r26.3 schon sagte). Keine Rechnung, kein neues Ergebnis.
 
+**Warum der Atlas abgeraten hat, und was davon heute gilt (r27.2, auf Frage des Autors).** Der Atlas (v4.7) nennt drei Gründe:
+
+| Grund im Atlas | was seitdem passiert ist | gilt heute |
+|---|---|---|
+| (a) Die Dixon-Codierung macht die OP5-Prüfung endlich; ein neuer Träger öffnete die Routensuche wieder. | Die alte OP5-Frage wurde ausgesetzt und neu gestellt: Die Λ-Auslöschungspflicht ist keine etablierte Folge des Kerns, das Quelle–Rückweg-Paket ein bedingtes Schema ohne native Route (r05, r11.2). Der lokale OP5-Abschluss enthält keine Frame-Größe und bleibt in seinem Rahmen (v4.9.0-r23(f)). | für die Codierung von OP5-Routen ja, für andere Nutzungen des Trägers nicht |
+| (b) Vorsicht: Ab HS(4) kann eine naive Erweiterung „sedenionenartig“ werden; der Atlas setzt deshalb Projektor und Leckregister statt freier Sedenionen. | Die Regel aus r26 verdoppelt den Träger in Kopien, wie HS(5), und keine Algebra; die Kopien bleiben $\mathbb C\otimes\mathbb H\otimes\mathbb O$. | trifft Kopien nicht; träfe eine Sedenionen-Lesart von 128 Kanälen (Weg A aus r13) |
+| (c) Rahmen: Dixon nur als Routen-Code, ohne Teilchenanspruch. | Seit v4.8 nutzt das Projekt $\mathbb C\otimes\mathbb H\otimes\mathbb O$ ausdrücklich als Träger einer Generation (CT-003, r13, r16.1, r19, r25). | eine Rahmenaussage für die Atlas-Schicht, kein Satz gegen die zweite Rolle; beide Rollen getrennt halten (Routen-Masken sind keine Generationszustände) |
+
+Ergebnis: Der Rat war eine Rahmenentscheidung für das OP5-Programm von v4.7 und eine Vorsicht vor Algebra-Verdopplung. Keines von beiden verbietet HS(7) und HS(8) als Kopienträger für Generationen. Für die Codierung von OP5-Routen bleibt der Rat sinnvoll.
+
 [Runde](../notes/research/v4_10_0_r27/README.md).
 
 ### Zulässigkeit von HS(7) und HS(8): eine Verdopplungsregel (16.11.2026, Runde r26)
