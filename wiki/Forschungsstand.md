@@ -1,5 +1,27 @@
 # Forschungsstand
 
+### Zulässigkeit von HS(7) und HS(8): eine Verdopplungsregel (16.11.2026, Runde r26)
+
+Erkundung, nicht blind; offener Punkt aus r25. Der Atlas (v470/32, Schicht r58) definiert die Stufenzahl $C_n = 2^n$ für jedes $n$, deutet aber
+nur HS(0) bis HS(6). Er setzt zwei Regeln, das Leck-Tor von HS(4) (der Meta-Septum-Projektor muss mit dem inneren Operator vertauschen) und
+die Schuldfreiheit von HS(5) (Verdopplung vorne/hinten mit gleichem Projektor auf beiden Seiten). Außerdem empfiehlt er, vor einer neuen
+Stufe die Bildprüfung von HS(6) zu machen, und nutzt den Dixon-Träger als Routen-Code für OP5, ausdrücklich ohne Teilchenaussage.
+
+**Gesetzte Regel (r26.1, Autorentscheidung):** Über HS(6) entsteht jede Stufe durch Verdopplung nach dem Muster von HS(5):
+$\mathrm{HS}(n+1) = \mathrm{HS}(n)\oplus\mathrm{HS}(n)$ mit demselben Projektor in beiden Kopien. Also HS(7) = 2 × HS(6), HS(8) = 4 × HS(6).
+
+**Ergebnisse (r26.2):**
+- Jede Operation, die nur zwischen den Kopien wirkt, ist leck- und schuldfrei; das gilt für alles aus r25 (Kopien-Qubit, Triplett und
+  Singulett; das Spatprodukt ist eine Auslese und berührt die Register nicht).
+- Schuld entsteht nur durch Bewegung innerhalb einer Dixon-Kopie aus dem Sektor heraus, nie durch das Mischen von Kopien. Das HS(4)-Tor muss
+  in jeder Kopie gelten.
+- Die Stufen bleiben verschachtelt; die Halbierung aus r25 ist verträglich.
+
+**Grenzen (r26.3):** Die Regel ist gesetzt, die Bildprüfung von HS(6) ist nicht gemacht. Die Zulässigkeit zeigt nur, dass die Generations-
+Lesart aus r25 den Atlas-Regeln nicht widerspricht; sie stützt sie nicht, denn im Atlas hat der Turm eine andere Aufgabe.
+
+[Erkundung](../notes/research/op3_hs78_admissibility_2026_11_16/README.md) · [Runde](../notes/research/v4_10_0_r26/README.md).
+
 ### OP3: Zwei und vier Dixon-Kopien; die vierte als Normale der drei Generationen (16.11.2026, Runde r25)
 
 Erkundung, nicht blind; Idee des Autors. Frage: Reichen die 64 Dimensionen der Dixon-Algebra $\mathbb C\otimes\mathbb H\otimes\mathbb O$? Im

@@ -102,6 +102,9 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 16.11.2026: Runde v4.10.0-r26 (Verdopplungsregel, Zulässigkeit von HS(7)/HS(8)) eingetragen: Forschungsstand,
+  Offene-Probleme (OP3), Gesamtbild, Forschungslinie, Inhalt, Content-overview. Kein Abschluss.
+
 - 16.11.2026: Runde v4.10.0-r25 (Dixon-Kopien auf HS(7)/HS(8), vierte Kopie als Normale) eingetragen: Forschungsstand,
   Offene-Probleme (OP3), Gesamtbild, Forschungslinie, Inhalt, Content-overview. Kein Abschluss.
 
