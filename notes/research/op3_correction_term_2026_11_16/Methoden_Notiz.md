@@ -71,3 +71,10 @@ der Renormierungs-Erkundung), (iii) ein Quarksektor, falls eine Koide-artige Zie
 - Die Generatormenge ist eine Setzung: Auf S wirken nativ nur die Zeitverschiebung (diagonal) und antilineare Frame-Abbildungen (r16.8);
   jeder populationsändernde Term ist deshalb nicht nativ. Genau das ist der Zweck: Er zeigt, was der Bestand nicht liefert.
 - Änderungen an dieser Notiz nach dem Commit nur als Nachtrag.
+
+## Nachtrag (16.11.2026, vor der Rechnung): Benennung des Ziels
+Der Selbsttest des Skripts zeigte eine Mehrdeutigkeit: φ ist nur modulo 2π und bis auf zyklische Umbenennung der drei Komponenten bestimmt. Ohne
+Festlegung lag das Ziel in einer anderen Benennung als S1 (φ = −5,604 ≡ +0,679), und der Term hätte nur eine Umbenennung leisten müssen
+(Fubini–Study-Abstand 0,647 statt 0,0067). Festgelegt: Ziel und S2 liegen im **selben Sektor** wie S1 (arg Σ p u stetig von S1 aus), φ wird in
+(−π, π] gelesen. Damit: Ziel p = (0,793146; 0,193405; 0,013449), φ = +0,666674; S1 φ = +0,679043; S2 p = (0,788675; 0,211325; 0), φ = +π/4.
+Fubini–Study-Abstand zum Ziel: S1 0,006661, S2 0,117764 (keiner der Werte liegt innerhalb 10⁻³ an einer Konstante der Liste). Sonst unverändert.
