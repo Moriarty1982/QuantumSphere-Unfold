@@ -205,8 +205,11 @@
   flacher Oktant (det G = 0). HS(8) = 4 Kopien = Triplett + Singulett; Spin-1-Dreieck im Triplett gebogen; Spatprodukt der drei
   → Singulett, |det V|² = det G: vierte Kopie speichert die Biegung (neutraler Levi-Civita-Träger aus r13.6). Halbierung bestätigt,
   3 + 1 liegt quer dazu. Offen: HS(7)/HS(8) im Atlas nicht definiert; Rest 0,0124; Auswahl der drei Zustände.
-  Kandidat 1450 Seiten, Linter 0; Issue #131 und #17 nachgezogen. Zuletzt vergebene Runde: **r25**. Nächster Schritt dort: Zulässigkeit
-  von HS(7)/HS(8) nach den Atlas-Regeln (HS(4)-Tor, HS(5)-Zweiseitigkeit) prüfen.
+  Kandidat 1450 Seiten, Linter 0; Issue #131 und #17 nachgezogen. Zuletzt vergebene Runde: **r25**.
+- **Zulässigkeit HS(7)/HS(8) (16.11., Zweig `research/op3-hs78-admissibility`, nur Notiz):** Atlas definiert nur bis HS(6), empfiehlt
+  vor neuer Stufe die Bildprüfung und nutzt Dixon als OP5-Routen-Code ohne Teilchenaussage. Mit der Verdopplungsregel von HS(5) als
+  allgemeiner Regel (gesetzt) sind alle Kopienoperationen aus r25 leck- und schuldfrei; Schuld nur innerhalb einer Kopie. Formal
+  zulässig, stützt die physikalische Lesart aber nicht. Autorentscheidung: Regel als neue Definition erklären (Runde r26)?
 - **C5 ruht nach r21.12:** Form (iii) ohne Kandidat; ohne neue Struktur keine weiteren Varianten. Möglich: OP1 (a)
   oder den Kollapszustand im ganzen Hauptkorpus nach der Tabelle r21.9 typisieren (R oder P).
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,
