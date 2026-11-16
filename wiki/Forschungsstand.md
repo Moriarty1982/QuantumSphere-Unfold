@@ -1,5 +1,21 @@
 # Forschungsstand
 
+### OP1: Setzung (S1) geprüft – masselose Querungen statt „derselben SU(2)“ (16.11.2026)
+
+Auftrag des Autors: (S1) prüfen. Erkundung, nicht blind.
+
+- **(S1)/(A) als Gleichheit der Gruppen ist nicht haltbar.** Die räumliche Drehgruppe, deren Casimir die Fläche einer Punktierung gibt, lässt s₊ und
+  s₋ fest (nachgerechnet); χ ist ihr Singulett. Die Frame-Abbildungen wirken in einer inneren SU(2) des Dubletts.
+- **Natürliche Verriegelung (S1′): Stränge sind masselose Quanten, die den Horizont entlang der Normalen queren.** Dann ist die Helizität die
+  Spinkomponente längs der Normalen (U1, Pol von χ, Port), und die kleine Gruppe masseloser Teilchen lässt je Spin nur ±j zu (U2). Das ergibt die
+  DL-Zählung ohne weitere Wahl; massive Punktierungen gäben 2j + 1 (Ghosh–Mitra).
+- **Preis:** Unter (S1′) lassen R, T und J_B die Spinkomponente längs der Normalen fest (T und J_B kehren Helizität und Ausbreitungsrichtung zugleich
+  um). Annahme (A) fällt damit, und mit ihr die r17.3-Begründung der T-Regel; diese ruht dann allein auf r24.4 (Querungen). Masselose Stränge sind
+  außerdem Nullfelder ohne Punkt auf der χ-Kugel (r16.3(a)).
+
+OP1 steht damit an der Frage, ob die Punktierungs-Stränge masselos sind und normal queren. Literatur dazu nicht geprüft. OP1 offen; H98, H102
+unverändert. [Notiz](../notes/research/op1_s1_check_2026_11_16/README.md).
+
 ### OP1: Bedingung U1 geprüft – die native Achse ist die Helizitätsachse (16.11.2026)
 
 Auftrag des Autors: U1 prüfen. Erkundung, nicht blind. **Berichtigung vorweg:** Dass γ_M der U(1)-Wert ist und die Literatur SU(2) (0,274)
