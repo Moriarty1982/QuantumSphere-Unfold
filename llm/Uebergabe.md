@@ -10,7 +10,8 @@
   (b6ed1a5, Runde r15, Dauerauftrag Issues), #130 (eeb6083,
   Berichtigung zu CT-004), #129 (c9bfb19, OP1 mit I1, CT-004) und #128
   (14feb02, Release v5.1.0). **Offen: PR #157** (Zweig `research/h106-singlet-residual`: H106 widerlegt; H107 vorab festgelegt, Skript k229 NICHT ausgeführt;
-  wartet auf Freigabe). Gemergt am 14./15.11.: #124–#128
+  wartet auf Freigabe). **Offen: PR #158** (Zweig `tools/hs-partition`: Hilfskonstruktion `tools/hs_partition.py`,
+  Idee des Autors; Selbsttest reproduziert r25/H106; wartet auf Freigabe). Gemergt am 14./15.11.: #124–#128
   (OP3-Rückwärtssuche, Dauerauftrag Versionsverwaltung, Abbildung C⊗S → C⊗H⊗O, bewachter Kern, Release), davor #108–#123.
   Gemergte Zweige sind gelöscht (16.11.: drei lokale Altzweige). Die Läufe nach dem Merge von #146 waren erfolgreich.
 - **Letzte Runde:** v4.10.0-r27 (Berichtigung zu r26, r27.2, PR #156, f0bb768). **Davor:** v4.10.0-r26 (Verdopplungsregel, PR #155, 69863d8). **Davor:** v4.10.0-r25 (Dixon-Kopien, PR #154, 942508b), v4.10.0-r24 (OP1, Querungen, PR #152, ad665b4). **Davor:** v4.10.0-r23 (Kaskade, PR #149, f495e5a), v4.10.0-r22 (Kollapszustand, PR #148, a141650), davor v4.10.0-r21 (gemergt über PR #147 als c0f3011), C5 frame-sauber neu gestellt (PR #147). Anteile C5_M + C5_T = 1,
@@ -34,6 +35,9 @@
     unnormiert oder in seiner HS(7)-Hälfte normiert (Basis Zyklusachse, N1–N7), selbstkonsistent mit Überlappung ½. Kriterium: genau ein
     Treffer auf 0,0002 rad an 0,666665. N1 ist vom nachträglichen Befund aus H106 angeregt (offengelegt). Ausführen erst nach Freigabe;
     danach Ergebnis-Notiz. Falls widerlegt: Renormierung (laufende Massen, Polmassen-Matching) als nächster Weg (Autor).
+  - Vor dem Rechnen von H107 (Werkzeug `tools/hs_partition.py`): Die vollständige Grammatik von HS(8) hat 10 Beziehungen, 9
+    wertverschieden; H107 deckt 6 davon plus N4 (kein Knoten) ab. Autorentscheidung: H107 vor der Rechnung auf die volle Grammatik
+    erweitern (dokumentiert, Zufallserwartung ~0,07) oder wie festgelegt rechnen.
   - H106 (k228, Vorab abf54a0): widerlegt.
   - H106 widerlegt: Singulett der vier Dixon-Kopien schließt den Rest 0,012376 nicht (M1 Gewicht ¼ → 0,640; M2 Normalen-Paare →
     0,679). Nachträglich, nicht gedeutet: Gewicht 0,0979 träfe 2/3. Neuer Test nur mit Mechanismus, der das Gewicht vorher festlegt.
