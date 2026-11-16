@@ -3,7 +3,7 @@
 Konstruktion wie festgelegt.  Basis der Zyklusachse z; Kaesten |00>,|01>,|10>,|11>; HS(7)-Haelften H0 = {00, 01}, H1 = {10, 11}.
 g_k = sqrt(1-w) |n_k>|n_k> + sqrt(w) eps;  n_k auf dem Kegel psi um z.
 Kastengewichte des Triplettanteils: p00 = c^4, p01 = p10 = c^2 s^2, p11 = s^4 mit c = cos(psi/2), s = sin(psi/2).
-Mechanismen N1-N7: w = F(psi).  Loesungen (psi, w) aus |<g_j|g_k>|^2 = 1/2 und w = F(psi).
+Mechanismen N1-N10 (N8-N10 vor der Rechnung ergaenzt, Commit 44cda89): w = F(psi).  Loesungen (psi, w) aus |<g_j|g_k>|^2 = 1/2 und w = F(psi).
 Kriterium: bestaetigt, wenn genau ein Mechanismus |phi - 0.666665| <= 0.0002 trifft; mehrdeutig bei mehreren; sonst widerlegt.
 AUSFUEHRUNG ERST NACH FREIGABE DES AUTORS.
 """
@@ -47,6 +47,10 @@ MECH = {
     "N5 mittleres HS(6) in H0 normiert": lambda p: p["01"] / (p["00"] + p["01"]),
     "N6 mittleres HS(6) in H1 normiert": lambda p: p["10"] / (p["10"] + p["11"]),
     "N7 leichtes HS(6) in H1 normiert": lambda p: p["11"] / (p["10"] + p["11"]),
+    # Ergaenzung vor der Rechnung (Commit 44cda89): volle Grammatik von HS(8)
+    "N8 ganze HS(7)-Haelfte H0": lambda p: p["00"] + p["01"],
+    "N9 ganze HS(7)-Haelfte H1": lambda p: p["10"] + p["11"],
+    "N10 schweres HS(6) in H0 normiert": lambda p: p["00"] / (p["00"] + p["01"]),
 }
 
 
