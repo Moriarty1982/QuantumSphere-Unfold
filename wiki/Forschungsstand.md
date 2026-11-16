@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP3: Methoden-Notiz zu einem zeitabhängigen Korrekturterm (16.11.2026)
+
+Idee des Autors: einen von der Zeit abhängigen Korrekturterm einfügen, der die Werte in die richtige Richtung biegt, und rückwärts untersuchen, wie er sich in jedem Schritt ändern müsste. Vor jeder Rechnung festgelegt: System (Basis s₊, w, s̄₋; freie Entwicklung nach r16.8; eine Periode), zwei Startzustände (Spin-1-Dreieck, flacher Oktant), Ziel K = 2/3 und φ = 0,666674 mit Spielraum, feste Generatoren (Dipol, Quadrupol; getrennt dissipativ), Auswahlprinzip kleinster Eingriff, Robustheitsvarianten, vier Formmerkmale (Richtung, Charakter, Zeitverlauf, Integral) und eine Liste erwarteter Artefakte. Vorab festgehalten: K und φ hängen nur von den Populationen ab. Ein Befund zählt erst, wenn er stabil ist und ein Übertragungstest mit eigener H-Nummer (Neutrinos, Laufen bis M_Z) ihn bestätigt. Erkundung, nicht blind. [Methoden-Notiz](../notes/research/op3_correction_term_2026_11_16/Methoden_Notiz.md).
+
 ### OP1: Setzung (S1) geprüft – masselose Querungen statt „derselben SU(2)“ (16.11.2026)
 
 Auftrag des Autors: (S1) prüfen. Erkundung, nicht blind.

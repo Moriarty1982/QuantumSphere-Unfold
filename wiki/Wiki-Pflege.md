@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 16.11.2026: Methoden-Notiz zum zeitabhängigen Korrekturterm (OP3) in Forschungsstand.
+
 - 16.11.2026: Literaturprüfung zu (S1) (ABK, Mitra, Ghosh–Noui–Perez) in Forschungsstand und Offene-Probleme (OP1).
 
 - 16.11.2026: (S1)-Prüfung (masselose Querungen, Annahme (A) fällt) in Forschungsstand und Offene-Probleme (OP1).
