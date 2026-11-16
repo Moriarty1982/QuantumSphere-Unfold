@@ -55,6 +55,8 @@
     Gegen-HC: Komplement → 0,274, Verwischen → 0,2375. Verwischen nicht aus M↔T, evtl. aus Horizontgeometrie (Normale Grad 1).
     Nachtrag HC je Frame: T nur j=1/2 (0,1274), M Extremzustaende (0,2375), P keine Auswahl (F2) -> alle 2j+1 (0,2741); geschachtelt T⊆M⊆P;
     Spannung: Konvention F hat P zwischen M und T, Zaehlung aussen. Setzung; Test nur mit Vorab-Notiz (H112).
+    Lage von P (17.11.): in Rapiditaet gemeinsamer Endpunkt beider Aeste (M: eta, T: eta + i pi/2), liegt aussen; Zaehlung waechst mit
+    Register-Entropie auf dem reellen Ast; HC von P eigener (Rang kann im Grenzwert nicht steigen).
     Nächster Schritt: prüfen, ob die Stränge masselos sind und normal queren; Literatur zur Helizitätslesart der U(1)-Zählung.
   - **Literatur (16.11., PR #160):** ABK: U(1)-Achse = Horizontnormale. Mitra 0705.3741: U2 folgt aus Entropie bei Zählung nur der
     Horizontzustände → Zählregel M hängt allein an U1. GNP 1309.4563: Statistik nicht entscheidbar. Helizitätslesart nicht gefunden.
