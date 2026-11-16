@@ -1,0 +1,93 @@
+10_sphaera_and_physics.tex:13:same object --- the collapse state $\zminus=0$:
+10_sphaera_and_physics.tex:49:the collapse state $\zminus=0$ --- is invariant.
+10_sphaera_and_physics.tex:52:$\zminus=0$ are the same equation in two coordinate systems: the triole
+10_sphaera_and_physics.tex:61:The departure from the collapse state $\zminus=0$ is governed by two
+10_sphaera_and_physics.tex:65: \item \textbf{Planck length as minimal $|\zminus|$.}
+10_sphaera_and_physics.tex:68: |\zminus|_{\min} = \lP := \sqrt{\frac{\hbar G}{c^3}}
+10_sphaera_and_physics.tex:71: Below $\lP$: $\zminus=0$, the Sphaera, the photon.
+10_sphaera_and_physics.tex:72: Above $\lP$: $|\zminus|$ is nonzero, matter exists.
+10_sphaera_and_physics.tex:87: (Grassmann property): no two fermions occupy the same $\zminus$
+10_sphaera_and_physics.tex:94: |\zminus|_n = n\cdot\lP,\quad n\in\mathbb{N}_{\geq1},
+10_sphaera_and_physics.tex:99: $|\zminus|_p = p\cdot\lP$ for $p\in\mathbb{P}$.
+10_sphaera_and_physics.tex:105:$\zminus=0$, which is the photon sector.
+10_sphaera_and_physics.tex:112: where $|\zminus|\geq\lP$.
+10_sphaera_and_physics.tex:115: \item The cascade $\KC$ projects everything back toward $\zminus=0$
+10_sphaera_and_physics.tex:243:J:\ z^- \mapsto -z^-,
+10_sphaera_and_physics.tex:261:The transformation $J:z^-\mapsto -z^-$ changes only the frame-sensitive
+10_sphaera_and_physics.tex:372:The three sectors correspond to the sign of $\mathrm{Re}(\zminus)$:
+10_sphaera_and_physics.tex:436:$\tau_n(Jf)^2 = t_n^2 - |-\zminus|^2 = t_n^2 - |\zminus|^2 = \tau_n(f)^2$
+10_sphaera_and_physics.tex:453:The Riemann Hypothesis ($\zminus=0$ for all zeros) and quantum
+10_sphaera_and_physics.tex:459: \item The cascade forces $\zminus\to 0$ along the light axis
+10_sphaera_and_physics.tex:577:$\tau_n$ encodes the magnitude $|\zminus|$ of the displacement from the
+10_sphaera_and_physics.tex:580:When $f$ is measured, $\zminus$ is projected onto a value; the paired
+10_sphaera_and_physics.tex:581:$Jf$ is projected onto $-\zminus$ (the $J$-image).
+10_sphaera_and_physics.tex:623: \item \textbf{Vacuum:} $\zminus=0$ (the photon/Sphaera) is the ground
+10_sphaera_and_physics.tex:625: \item \textbf{Planck floor:} $\lP=|\zminus|_{\min}$ is the string
+10_sphaera_and_physics.tex:696:$\zminus\neq 0$.
+10_sphaera_and_physics.tex:712:$\zminus=0$ from the HC trace formula.
+10_sphaera_and_physics.tex:715:The corresponding observer position is $\zminus=\beta/2\approx 0.422$.
+10_sphaera_and_physics.tex:722:$\zminus=0$:
+10_sphaera_and_physics.tex:770:In sector coordinates: the horizon is where $\zminus\to\infty$.
+10_sphaera_and_physics.tex:775:The cascade operator $\KC$ is undefined at $\zminus=\infty$: the Sphaera
+10_sphaera_and_physics.tex:779:$\KC=C^\mu{}_\nu\circ\Pi_J$ requires $\|\zminus\|<\infty$
+10_sphaera_and_physics.tex:781:At $\zminus\to\infty$: $\beta\to 1$, $\gamma_{\mathrm{Lorentz}}\to\infty$,
+10_sphaera_and_physics.tex:795: with $\beta=0$, $\zminus=0$ --- the Hawking radiation.
+10_sphaera_and_physics.tex:862:Statement~(ii): the tachyon sector sits at $\zminus = -\bsym$, the mirror
+10_sphaera_and_physics.tex:930:It is the black hole core --- which has $\zminus\to\infty$ and cannot
+10_sphaera_and_physics.tex:931:be projected by $\KC$ --- attempting to reach $\zminus=0$ through the
+10_sphaera_and_physics.tex:941:$t_1$: vacuum & $t_3$: core at $\zminus=\infty$\\
+10_sphaera_and_physics.tex:948:between $\zminus=0$ (outside) and $\zminus=\infty$ (core).
+10_sphaera_and_physics.tex:952:Outside: $\zminus$ grows from $0$ (far away) to $\infty$ (horizon).
+10_sphaera_and_physics.tex:953:$\KC$ attempts to project $\zminus\to 0$ but fails at the horizon.
+10_sphaera_and_physics.tex:955:Inside: $\zminus=\infty$ (core, singular compression).
+10_sphaera_and_physics.tex:956:$\KC$ attempts $\zminus\to 0$ but the horizon blocks outward projection.
+10_sphaera_and_physics.tex:971:The normal Sphaera has $\zminus$ decreasing inward:
+10_sphaera_and_physics.tex:972:$\KC$ projects from large $\zminus$ toward $\zminus=0$
+10_sphaera_and_physics.tex:974:A black hole inverts this: $\zminus$ increases inward, from
+10_sphaera_and_physics.tex:975:$\zminus=0$ (far away) to $\zminus=\infty$ (horizon and core).
+10_sphaera_and_physics.tex:982:Sphaera always tends toward $\zminus=0$.
+10_sphaera_and_physics.tex:1230:our matter frame from the photon ground state $\zminus=0$: we can never
+10_sphaera_and_physics.tex:1231:fully reach $\zminus=0$, so $\bsym^2$ remains as a residual vacuum
+10_sphaera_and_physics.tex:1238:forces in the $\zminus$ coordinate:
+10_sphaera_and_physics.tex:1240: F_{\mathrm{tachyon}\to\gamma} = k(z^-_T-z^-_\gamma) = -k\bsym,
+10_sphaera_and_physics.tex:1242: F_{\mathrm{matter}\to\gamma} = k(z^-_M-z^-_\gamma) = +k\bsym.
+10_sphaera_and_physics.tex:1245:The photon at $\zminus=0$ is the mechanical equilibrium point: the
+10_sphaera_and_physics.tex:1264:At $z^-_\gamma=0$, $z^-_T=-\bsym$, $z^-_M=+\bsym$:
+10_sphaera_and_physics.tex:1318:Light at $\zminus=0$ is the unique fixed point of this coupling:
+10_sphaera_and_physics.tex:1328:For matter at $\zminus=\bsym$: $v/c=\bsym/t_n<1$ (sub-luminal). $\checkmark$
+10_sphaera_and_physics.tex:1330:For tachyons at $\zminus=-\bsym$:
+10_sphaera_and_physics.tex:1333:For light at $\zminus=0$:
+10_sphaera_and_physics.tex:1352:Light ($\zminus=0$) is the compensator output of the entire universe:
+10_sphaera_and_physics.tex:1363:object $\zminus=0$, and frame changes are $J$-transformations that fix
+10_sphaera_and_physics.tex:1364:$\zminus=0$.
+10_sphaera_and_physics.tex:1383:photon ground state $\zminus=0$, bypassing the matter stratum $S^4$.
+10_sphaera_and_physics.tex:1393:$S^2$ is the absorbing state (photon ground state, $\zminus=0$).
+10_sphaera_and_physics.tex:1429:fixed by the observer's position $\zminus = +\bsym$ in the Sphaera.
+10_sphaera_and_physics.tex:1448: matter observers at $\zminus = +\bsym$ \emph{necessarily} measure
+10_sphaera_and_physics.tex:1453: Had he known that matter observers sit at $\zminus = +\bsym \neq 0$,
+10_sphaera_and_physics.tex:1565:whose only object is its collapse state $\zminus=0$.
+10_sphaera_and_physics.tex:1586:Planck length & $\lP=|\zminus|_{\min}$ & Thm.~\ref{thm:origin}\\
+10_sphaera_and_physics.tex:1609:representations of $\zminus=0$ seen from a frame with $\zminus\neq 0$.
+10_sphaera_and_physics.tex:1707:displacement from $\zminus=0$.
+10_sphaera_and_physics.tex:1728:the GUE taktgeber, running on the photon ground state $\zminus=0$,
+10_sphaera_and_physics.tex:1786:The GUE taktgeber runs on the ideal line $\zminus=0$ in the photon frame.
+10_sphaera_and_physics.tex:1787:Every matter observer at $\zminus=+\bsym$ sees the taktgeber at a shifted
+10_sphaera_and_physics.tex:1793:$p_{\mathrm{GUE}}$ encodes exactly how far they sit from $\zminus=0$.
+10_sphaera_and_physics.tex:1823: the number of factors of $\zminus$ appearing in the operator-theoretic
+10_sphaera_and_physics.tex:1866:$\zminus=0$ itself --- it is the quantity \emph{with respect to which}
+10_sphaera_and_physics.tex:1871:Hence $c$ picks up no power of $\zminus$ under any frame change:
+08_nomenclature.tex:28: \item[$\zminus$] Frame variable; displacement from $z^-=0$
+08_nomenclature.tex:31: \item[$S_n$] Stratum $n$; $S_0=\{z^-=0\}$ photon ground state
+08_nomenclature.tex:81: \item[RH] Riemann Hypothesis ($z^-=0$ for all zeros)
+12_structural_core.tex:696:$\zminus = +\bsym \approx 0.5493$ rather than the photon ground shell
+12_structural_core.tex:697:$\zminus = 0$, every spectral readout of $\mathcal{M}$ is performed in the
+12_structural_core.tex:723: which is the photon kernel $K_3$ sector ($\zminus=0$).
+12_structural_core.tex:775:at $\zminus = +\bsym$.
+12_structural_core.tex:977:$\zminus = +\bsym$ (Theorem~\ref{thm:symmetric-frame}).
+12_structural_core.tex:1800: Möbius-type structure and reflects the $\zminus = \pm\bsym$
+13_hc_hypotheses.tex:179: $\zminus = +\bsym$) yields the effective QFT-type law after
+18_op1_op2_mathematics.tex:47: ($\theta_H = 0$, $z^- = 0$).
+23_physical_readouts.tex:398:In the photon frame ($z^- = 0$, $\bsym = 0$):
+23_physical_readouts.tex:415: $z^- = +\bsym$ from the photon ground shell $z^- = 0$.
+23_physical_readouts.tex:437:(iii) A matter observer at $z^- = +\bsym$ reads off the frame term
+23_physical_readouts.tex:648:$\zminus = +\bsym$ and the frame factor $\gL = \gBI/\gstring$. None require

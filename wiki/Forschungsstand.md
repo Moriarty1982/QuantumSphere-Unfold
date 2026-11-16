@@ -1,5 +1,32 @@
 # Forschungsstand
 
+### Der Kollapszustand im ganzen Hauptkorpus (16.11.2026, Runde r22)
+
+Lesart, nicht blind, ohne Rechnung. Der Kollapszustand $z^-=0$ ist die früheste Idee des Autors und trägt den zentralen Satz des
+Hauptkorpus (`thm:unity`). Auf Wunsch des Autors sind alle 93 Stellen mit $z^-$ im Hauptkorpus gegen Konvention F und die
+Berichtigungen r23, r24 und r29 typisiert. Der Hauptkorpus wird nicht umgeschrieben.
+
+| Gruppe | Stellen | $z^-=0$ ist dort |
+|---|---|---|
+| 1. Nullpunkt des Versatzes (rund zwei Drittel) | Dunkle Energie als Versatz, symmetrischer Frame, Feder, Vakuum, Λ = 0, GUE-Taktgeber, c, Hawking-Photon | **R**, der reine Bezugsframe |
+| 2. Das invariante Objekt | `thm:unity`, „die Sphaera ist ein Photon“, Licht als Fixpunkt und als Kompensator des Universums | die **Rolle von P**, aber dem Punkt $z^-=0$ zugeschrieben |
+| 3. Der Horizont | Schwarzschild-Horizont, Kaskaden-Singularität, `thm:core`, „Schwarzes Loch als umgekehrte Sphaera“ | $z^-\to\infty$ bei $\beta\to1$: der **Ort von P** |
+| 4. Kein Punkt | Planck-Boden, Pauli, $J$, Vorzeichen, zurückgezogene RH-Zeile | Skala, Orientierung oder zurückgezogen |
+| 5. Richtung der Kaskade | „die Kaskade projiziert alles zurück zu $z^-=0$“ | offen |
+
+- **Die Koordinate läuft von R nach P (r22.2, Lesart):** bei $z^-=0$ der reine Zustand, bei $z^-\to\infty$ der maximal gemischte. Das ist
+  dieselbe Linie wie die Rapidität in r21.8, mit derselben Funktion $\operatorname{sech} 2\eta$. Der Hauptkorpus benutzt $z^-$ aber mit
+  wechselnder Skala.
+- **Der Kollapszustand als Nullzustand ist das Horizont-Ende (r22.3).** Der Name steht bei $z^-=0$ (dort R), seine Hauptrolle als
+  invariantes Objekt gehört zu P, und P liegt in der Koordinate des Hauptkorpus beim Horizont. Das passt zum Kern als Schatten eines
+  Horizonts (r15.2) und zu r29.1(b).
+- **Berichtigung zu r21.9:** „We can never fully reach $z^-=0$“ meint den bleibenden Versatz des Materie-Frames, also R, nicht P. Die
+  dort vermerkte Spannung mit r24.3 besteht nicht.
+- **Offen (r22.4):** ob die Kaskade „zurück zu $z^-=0$“ zum Punkt R oder zur Klasse P führt. Versatz null spricht für R, ein
+  absorbierender, nicht umkehrbarer Schritt für P.
+
+[Erkundung](../notes/research/collapse_state_typing_2026_11_16/README.md) · [Runde](../notes/research/v4_10_0_r22/README.md).
+
 ### C5 frame-sauber neu gestellt (16.11.2026, Runde r21)
 
 Erkundung (nicht blind; alle Rechnungen stehen analytisch fest). Der Autor hat entschieden, C5 neu zu stellen (offene Frage aus
