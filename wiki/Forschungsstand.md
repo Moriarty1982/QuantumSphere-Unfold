@@ -1,5 +1,22 @@
 # Forschungsstand
 
+### OP3: Test H107, verschachtelte Normierung in HS(8) (16.11.2026)
+
+Idee des Autors: HS(8) als ein HS(7) und zwei HS(6) verschachteln; ein HS(6) als Normierung, das HS(7) als Normierung der beiden HS(6), wobei
+die Basiswahl entscheiden könnte. Vorab festgelegt (H107, 30a4a50; vor der Rechnung auf die volle Grammatik von HS(8) erweitert, 44cda89):
+Das Singulettgewicht ist das Gewicht eines Knotens des Generationszustands, unnormiert oder in seiner HS(7)-Hälfte normiert; Basis ist die
+Zyklusachse. Für die Aufzählung der Beziehungen gibt es jetzt die Hilfskonstruktion `tools/hs_partition.py` (Idee des Autors).
+
+**Widerlegt:** 20 Versuche, kein Treffer auf 0,0002 rad. Am nächsten kommt das Gewicht eines mittleren HS(6) (−0,0015 statt −0,0124), außerhalb
+der Toleranz und nicht gedeutet.
+
+**Struktureller Befund:** Für die kohärenten Generationszustände $\lvert n\rangle\lvert n\rangle$ ist jedes HS(6), in seiner HS(7)-Hälfte
+normiert, genau das Gewicht eines einzelnen Kopien-Qubits ($\sin^2(\psi/2)$ oder $\cos^2(\psi/2)$). Die Verschachtelung trägt bei
+Produktzuständen also nichts über HS(7) hinaus. Damit sie Information trägt, müssten die Generationszustände über die Kopien verschränkt sein.
+Offen bleiben dieser Weg und die Renormierung (Polmassen gegen laufende Massen).
+
+[Vorab-Notiz](../notes/research/predictions/Vorab_Notiz_H107_Verschachtelte_Normierung.md) · [Ergebnis](../notes/research/predictions/Ergebnis_H107_Verschachtelte_Normierung.md).
+
 ### OP3: Test H106, das Singulett schließt den Rest nicht (16.11.2026)
 
 Vorab festgelegt (H106, abf54a0): Kann das Singulett der vier Dixon-Kopien aus r25 den Rest der Biegung erklären, also die 0,012376 rad

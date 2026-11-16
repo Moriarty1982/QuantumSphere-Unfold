@@ -1,0 +1,21 @@
+N1 mittleres HS(6): psi =  41.1667 Grad, w = 0.108324, |Ueberlappung|^2 = 0.500000, phi = 0.665173, phi - Ziel = -0.001492
+N1 mittleres HS(6): psi = 148.8793 Grad, w = 0.066782, |Ueberlappung|^2 = 0.500000, phi = 0.194980, phi - Ziel = -0.471685
+N2 leichtes HS(6): psi =  38.9372 Grad, w = 0.012339, |Ueberlappung|^2 = 0.500000, phi = 0.677627, phi - Ziel = +0.010962
+N2 leichtes HS(6): psi = 141.7700 Grad, w = 0.797032, |Ueberlappung|^2 = 0.500000, phi = 0.453323, phi - Ziel = -0.213342
+N3 schweres HS(6): psi =  61.1016 Grad, w = 0.550014, |Ueberlappung|^2 = 0.500000, phi = 0.525936, phi - Ziel = -0.140729
+N3 schweres HS(6): psi = 142.4908 Grad, w = 0.010686, |Ueberlappung|^2 = 0.500000, phi = 0.599707, phi - Ziel = -0.066958
+N4 beide mittleren HS(6): psi =  45.4266 Grad, w = 0.253722, |Ueberlappung|^2 = 0.500000, phi = 0.639593, phi - Ziel = -0.027072
+N4 beide mittleren HS(6): psi = 153.2177 Grad, w = 0.101521, |Ueberlappung|^2 = 0.500000, phi = 0.047368, phi - Ziel = -0.619297
+N5 mittleres HS(6) in H0 normiert: psi =  41.6278 Grad, w = 0.126262, |Ueberlappung|^2 = 0.500000, phi = 0.662517, phi - Ziel = -0.004148
+N5 mittleres HS(6) in H0 normiert: psi = 126.1135 Grad, w = 0.794694, |Ueberlappung|^2 = 0.500000, phi = 0.230472, phi - Ziel = -0.436193
+N6 mittleres HS(6) in H1 normiert: psi =  72.2974 Grad, w = 0.652038, |Ueberlappung|^2 = 0.500000, phi = 0.426781, phi - Ziel = -0.239884
+N6 mittleres HS(6) in H1 normiert: psi = 149.2831 Grad, w = 0.070149, |Ueberlappung|^2 = 0.500000, phi = 0.171240, phi - Ziel = -0.495425
+N7 leichtes HS(6) in H1 normiert: psi =  41.6278 Grad, w = 0.126262, |Ueberlappung|^2 = 0.500000, phi = 0.662517, phi - Ziel = -0.004148
+N7 leichtes HS(6) in H1 normiert: psi = 126.1135 Grad, w = 0.794694, |Ueberlappung|^2 = 0.500000, phi = 0.230472, phi - Ziel = -0.436193
+N8 ganze HS(7)-Haelfte H0: psi =  72.2974 Grad, w = 0.652038, |Ueberlappung|^2 = 0.500000, phi = 0.426781, phi - Ziel = -0.239884
+N8 ganze HS(7)-Haelfte H0: psi = 149.2831 Grad, w = 0.070149, |Ueberlappung|^2 = 0.500000, phi = 0.171240, phi - Ziel = -0.495425
+N9 ganze HS(7)-Haelfte H1: psi =  41.6278 Grad, w = 0.126262, |Ueberlappung|^2 = 0.500000, phi = 0.662517, phi - Ziel = -0.004148
+N9 ganze HS(7)-Haelfte H1: psi = 126.1135 Grad, w = 0.794694, |Ueberlappung|^2 = 0.500000, phi = 0.230472, phi - Ziel = -0.436193
+N10 schweres HS(6) in H0 normiert: psi =  72.2974 Grad, w = 0.652038, |Ueberlappung|^2 = 0.500000, phi = 0.426781, phi - Ziel = -0.239884
+N10 schweres HS(6) in H0 normiert: psi = 149.2831 Grad, w = 0.070149, |Ueberlappung|^2 = 0.500000, phi = 0.171240, phi - Ziel = -0.495425
+Versuche: 20; Treffer: []; Urteil: widerlegt
