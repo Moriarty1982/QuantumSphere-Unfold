@@ -3687,3 +3687,111 @@ R_{\rm glob}^{(v4100\text{-}r26,+)}=(0,1,1,1,1),
 \]
 The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
 or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r27 Source-Only: Correction to r26, the Image Audit of HS(6) Is in the Atlas}
+\addcontentsline{toc}{section}{v4.10.0-r27 Source-Only: Correction to r26, the Image Audit of HS(6) Is in the Atlas}
+\label{sec:v4100-r27-image-audit-correction}
+% ============================================================================
+
+\paragraph{Purpose.}
+v4.10.0-r26 recorded the image audit of the HS(6) coding map, which the atlas layer r58 recommends before any new shift, as open.  The
+author asked for that audit to be carried out (2026-11-16).  Reading the atlas before computing anything shows that the audit is already
+there, in the layer directly after r58.  This layer corrects r26, records what the atlas states, and checks the atlas's reasons against later work.  No computation, no new result.  The
+notes are \texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r27/}.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r27 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.1.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24237112}{10.5281/zenodo.24237112} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r27 results}
+\label{subsec:v4100-r27-results}
+
+\paragraph{Correction to v4.10.0-r26.3.}
+r26.3 and the register of r26 call the image audit of HS(6) open.  That is wrong.  The atlas layer r59 (v470/32, ``Dixon image audit'')
+carries it out: it classifies the reachable image of the coding map over the capture classes \(A_1,\dots,A_6\) as Dixon-admissible (\(A_1\);
+\(A_6\) routed or admissible), routed (\(A_2\), \(A_3\)), blocked (\(A_4\)) and HC/MM absorbed (\(A_5\)), and proves that no residual-open class
+remains, under the zero-register hypotheses (HS(4) leakage, HS(5) debt, hidden leakage and HC/MM debt equal to zero) and exhaustiveness of
+the capture map.  The recommendation of r58 is thereby fulfilled.  The other statements of r26 (Definition r26.1, Theoremlet r26.2, the
+second limit of r26.3 on the change of meaning) are unaffected.
+
+\paragraph{Remark v4.10.0-r27.1 (what the atlas leaves open after r59).}
+The layers after r59 audit the route menu.  The integrated residual register concludes that the local route image is exhausted and that
+OP5 is locally closed inside the declared delta-stack grammar; it remains open only at the full Active-Core integration and exhaustiveness
+boundary, \(\mathcal R^{\mathrm{loc}}_{\mathrm{mono}}=\varnothing\) still to be shown.  Two further layers (monolithic promotion audit, closure
+hardening and old-branch mapping) continue this.  The atlas also states, in r59, that the next useful layer ``should not add a new algebraic
+carrier''.  HS(7) and HS(8) of r25 and r26 are such carriers; their use as generation carriers lies outside the purpose of the atlas
+tower, as r26.3 already said.
+
+\paragraph{Remark v4.10.0-r27.2 (why the atlas advised against new shifts, and what of it still holds).}
+On the author's request (2026-11-16) the reasons behind the advice of r58 (``the next meaningful layer is not a new shift'') and r59
+(``should not add a new algebraic carrier'') were checked against what happened since.  The atlas gives three.
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \emph{A finite OP5 audit.}  The Dixon coding turned the OP5 tunnel audit ``into a finite Dixon-mask admissibility audit rather
+than an unbounded route search''; a new carrier would reopen the route grammar.  Since then the old OP5 question was suspended and rebuilt:
+the historical \(\Lambda\)-cancellation duty is no established consequence of the core, and the source--return package is a conditional
+schema without a native route (v4.10.0-r05, r11.2(a)).  The local OP5 closure itself contains no frame quantity and stands within its
+grammar (v4.9.0-r23(f)).  Reason (a) still holds for coding OP5 routes; it does not bind other uses of the carrier.
+\item[(b)] \emph{Algebraic caution.}  HS(4) is ``the first level at which a naive 16-channel extension may behave like a sedenion-type
+expansion''; the atlas therefore gates it by the projector and a leakage register instead of using sedenions as a free algebra.  The
+concern is the Cayley--Dickson doubling of the algebra, beyond the octonions.  The rule of r26.1 doubles the carrier into copies, as HS(5)
+does, and doubles no algebra; the copies stay \(\C\otimes\Hh\otimes\Oo\).  Reason (b) does not apply to HS(7) and HS(8) as copies.  It would
+apply to a sedenion reading of 128 channels, route~A of r13.
+\item[(c)] \emph{Scope.}  The Dixon carrier is used as a route code, with no Standard-Model claim.  Since v4.8 the project uses
+\(\C\otimes\Hh\otimes\Oo\) explicitly as the carrier of one generation (CT-003, r13, r16.1, r19, r25).  Both roles now coexist; reason (c) is a
+scope statement for the atlas layer, not a theorem against the second role.  It asks that the two roles be kept apart: route masks are not
+generation states.
+\end{enumerate}
+Reading: the advice was a scope decision for the OP5 programme of v4.7, plus a caution against algebra doubling.  Neither forbids HS(7)
+and HS(8) as copy carriers for generations.  For OP5 route coding the advice stays sensible.  The atlas works in its ``photon frame'',
+typed R by v4.9.0-r24; the copy index of r25/r26 is frame-free, so no frame conflict arises.
+
+\paragraph{What this does not give.}
+No new audit and no computation; the content is that of the atlas.  The image audit of r59 is about OP5 routes on HS(6); it says nothing
+about HS(7), HS(8) or the generation reading of r25.
+
+\subsection*{v4.10.0-r27 status in the three frames}
+\label{subsec:v4100-r27-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item M, T, P: no frame statement; the atlas audit is set in the photon-frame HC-halo grammar of the local proof chain.
+\end{itemize}
+
+\subsection*{v4.10.0-r27 register entries}
+\label{subsec:v4100-r27-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r27\\
+\midrule
+image audit of HS(6) & done in atlas layer r59; no residual-open class under the zero-register and exhaustiveness hypotheses; r26.3 corrected\\
+OP5 (atlas) & locally closed inside the declared grammar; open at the full Active-Core exhaustiveness boundary\\
+HS(7), HS(8) & admissible under the setting r26.1; outside the purpose of the atlas tower\\
+reasons of the atlas against new shifts & OP5 audit finiteness (still valid for routes), caution against algebra doubling (does not apply to copies), scope (two roles to be kept apart) (r27.2)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r27 ledger and guard update}
+\label{subsec:v4100-r27-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r27}=(1,0,0)
+\]
+for (correction recorded; no computation; nothing new opened).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r27,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r27}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.

@@ -1,5 +1,37 @@
 # Forschungsstand
 
+### Berichtigung: Die Bildprüfung von HS(6) steht im Atlas (16.11.2026, Runde r27)
+
+Auf den Auftrag, die Bildprüfung von HS(6) zu machen, zeigte das Lesen des Atlas: Sie ist schon da, in der Schicht r59 direkt nach r58.
+Runde r26 hatte sie fälschlich als offen geführt; r27 berichtigt das.
+
+**Was r59 zeigt:** Das erreichbare Bild der Codierungsabbildung über die Fangklassen ordnet sich so:
+
+| Klasse | Bedeutung | Status |
+|---|---|---|
+| A₁ | Kragen-Inneres | Dixon-zulässig |
+| A₂, A₃ | Selektor-Wechsel S₁₂, S₂₃ | geroutet |
+| A₄ | nicht benachbarter Wechsel S₁₃ | blockiert |
+| A₅ | HC/MM-Buchführungsfläche | absorbiert, schuldfrei |
+| A₆ | Überlappungskante | geroutet oder zulässig |
+
+Unter den Null-Register-Annahmen (Leck von HS(4), Schuld von HS(5), verborgenes Leck, HC/MM-Schuld) und der Vollständigkeit der Fangabbildung
+bleibt **keine offene Klasse**. Die Schichten danach prüfen das Routenmenü: OP5 ist im erklärten Rahmen lokal geschlossen und nur an der Grenze
+zur vollen Active-Core-Integration offen. r59 rät außerdem ausdrücklich, keinen neuen algebraischen Träger hinzuzufügen; HS(7) und HS(8) aus
+r25 und r26 liegen also außerhalb des Zwecks des Atlas-Turms (wie r26.3 schon sagte). Keine Rechnung, kein neues Ergebnis.
+
+**Warum der Atlas abgeraten hat, und was davon heute gilt (r27.2, auf Frage des Autors).** Der Atlas (v4.7) nennt drei Gründe:
+
+| Grund im Atlas | was seitdem passiert ist | gilt heute |
+|---|---|---|
+| (a) Die Dixon-Codierung macht die OP5-Prüfung endlich; ein neuer Träger öffnete die Routensuche wieder. | Die alte OP5-Frage wurde ausgesetzt und neu gestellt: Die Λ-Auslöschungspflicht ist keine etablierte Folge des Kerns, das Quelle–Rückweg-Paket ein bedingtes Schema ohne native Route (r05, r11.2). Der lokale OP5-Abschluss enthält keine Frame-Größe und bleibt in seinem Rahmen (v4.9.0-r23(f)). | für die Codierung von OP5-Routen ja, für andere Nutzungen des Trägers nicht |
+| (b) Vorsicht: Ab HS(4) kann eine naive Erweiterung „sedenionenartig“ werden; der Atlas setzt deshalb Projektor und Leckregister statt freier Sedenionen. | Die Regel aus r26 verdoppelt den Träger in Kopien, wie HS(5), und keine Algebra; die Kopien bleiben $\mathbb C\otimes\mathbb H\otimes\mathbb O$. | trifft Kopien nicht; träfe eine Sedenionen-Lesart von 128 Kanälen (Weg A aus r13) |
+| (c) Rahmen: Dixon nur als Routen-Code, ohne Teilchenanspruch. | Seit v4.8 nutzt das Projekt $\mathbb C\otimes\mathbb H\otimes\mathbb O$ ausdrücklich als Träger einer Generation (CT-003, r13, r16.1, r19, r25). | eine Rahmenaussage für die Atlas-Schicht, kein Satz gegen die zweite Rolle; beide Rollen getrennt halten (Routen-Masken sind keine Generationszustände) |
+
+Ergebnis: Der Rat war eine Rahmenentscheidung für das OP5-Programm von v4.7 und eine Vorsicht vor Algebra-Verdopplung. Keines von beiden verbietet HS(7) und HS(8) als Kopienträger für Generationen. Für die Codierung von OP5-Routen bleibt der Rat sinnvoll.
+
+[Runde](../notes/research/v4_10_0_r27/README.md).
+
 ### Zulässigkeit von HS(7) und HS(8): eine Verdopplungsregel (16.11.2026, Runde r26)
 
 Erkundung, nicht blind; offener Punkt aus r25. Der Atlas (v470/32, Schicht r58) definiert die Stufenzahl $C_n = 2^n$ für jedes $n$, deutet aber
@@ -17,7 +49,7 @@ $\mathrm{HS}(n+1) = \mathrm{HS}(n)\oplus\mathrm{HS}(n)$ mit demselben Projektor 
   in jeder Kopie gelten.
 - Die Stufen bleiben verschachtelt; die Halbierung aus r25 ist verträglich.
 
-**Grenzen (r26.3):** Die Regel ist gesetzt, die Bildprüfung von HS(6) ist nicht gemacht. Die Zulässigkeit zeigt nur, dass die Generations-
+**Grenzen (r26.3):** Die Regel ist gesetzt, die Bildprüfung von HS(6) ist nicht gemacht. **Berichtigt in r27:** Die Bildprüfung von HS(6) ist im Atlas bereits gemacht (Schicht r59): Im erreichbaren Bild der Fangklassen A₁–A₆ bleibt keine offene Klasse, unter den Null-Register-Annahmen und der Vollständigkeit der Fangabbildung. Die Zulässigkeit zeigt nur, dass die Generations-
 Lesart aus r25 den Atlas-Regeln nicht widerspricht; sie stützt sie nicht, denn im Atlas hat der Turm eine andere Aufgabe.
 
 [Erkundung](../notes/research/op3_hs78_admissibility_2026_11_16/README.md) · [Runde](../notes/research/v4_10_0_r26/README.md).
