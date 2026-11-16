@@ -120,3 +120,34 @@ das den Faktor ½ statt ¾ gäbe und deshalb nicht übernommen wurde.
    Unterschied der beiden Raster zusammenhängt, wäre eine eigene Frage; sie wird hier nicht beantwortet und nicht numerisch geprüft.
 
 OP3 offen; keine H-Nummer.
+
+## Nachtrag (16.11.2026): Die zwei Walzenraster verglichen
+Auftrag des Autors: „Zwei Raster vergleichen“. Skript `two_rasters.py`, Ausgabe `run/two_rasters_stdout.txt`. Erkundung, analytisch; keine Zahl wird mit dem
+Zielwert verglichen.
+
+| | Triolenraster (r14, Bestand) | Viertelraster (r14.1(b), verworfen) |
+|---|---|---|
+| erzeugte Gruppe auf χ | Diedergruppe der Ordnung 6 (Dreierachse = Helizitätsachse) | Diedergruppe der Ordnung 8 (Viererachse = Helizitätsachse) |
+| in der Symmetriegruppe O des Oktanten (Würfelgruppe) | **nein** | **ja** |
+| enthält die Frame-Abbildungen 1, R, T, J_B | nur 1 und J_B | **alle vier** (die Kleinsche Vierergruppe der HS(8)-Kopien) |
+| Grundschritt zweier Walzen | 120° (Drittelzyklus r16.9, Generationsschritt) | 90° |
+| Faktor (r14) | ¾ | ½ (Oktanten-Überlappung) |
+
+Gemeinsam haben beide Raster nur **1 und J_B**; zusammen erzeugen sie eine Diedergruppe der Ordnung 24 um die Helizitätsachse (nicht die Würfelgruppe).
+
+**Befunde (nachgerechnet):**
+1. **Die Frame-Struktur gehört zum Viertelraster.** Die Kleinsche Vierergruppe {1, R, T, J_B}, also das Kopienregister von HS(8) und die Frame-Abbildungen,
+   liegt ganz im Viertelraster, und das Viertelraster liegt ganz in der Symmetrie des Oktanten.
+2. **Der Generationszyklus gehört zum Triolenraster** und liegt **nicht** in der Symmetrie des Oktanten.
+3. **Die beiden Dreierachsen stehen im magischen Winkel.** Die Dreierachse des Triolenrasters ist die Helizitätsachse; die Symmetrieachse des
+   Frame-Oktanten ist (1, 1, 1). Der Winkel zwischen ihnen ist genau arccos(1/√3) = 54,7356°.
+4. **Es gibt zwei verschiedene Oktanten.** Der Frame-Oktant (Ecken = Eigenzustände von R, T, J_B, r16.7) ist keine Bahn des Drittelzyklus; seine Ecke auf
+   der Helizitätsachse ist Fixpunkt des Zyklus. Eine Bahn des Drittelzyklus mit Überlappung ½ ist ebenfalls ein Oktant (paarweise orthogonale
+   Bloch-Vektoren), aber um die Helizitätsachse herum gelegt. Beide haben dieselbe Phase π/4, denn sie gehen durch eine Drehung ineinander über.
+
+**Einordnung.** Das Projekt hat beide Bilder benutzt: r16.7 (drei Auslesungen = Frame-Oktant) und r16.9 (Generationen = Drittelzyklus der Zeit). Der
+Vergleich zeigt, dass sie zu zwei verschiedenen Walzenrastern gehören, deren Dreierachsen im magischen Winkel stehen, und dass sie nur J_B gemeinsam
+haben. Solange beide Bilder für sich allein bleiben, geben sie dieselbe Phase π/4. Eine Biegung entstünde erst aus einer Konstruktion, die beide
+verbindet, zum Beispiel Generationen aus dem Zeitzyklus, ausgelesen über die Frame-Abbildungen. Eine solche Konstruktion hätte keinen freien Parameter
+nur dann, wenn J_B (das gemeinsame Element) die Lage festlegt. **Sie wird hier nicht gerechnet:** Ihr Ergebnis wäre eine Zahl, die mit 2/3 verglichen
+würde; sie braucht deshalb zuerst eine Vorab-Notiz mit festgelegter Konstruktion. OP3 offen; keine H-Nummer.
