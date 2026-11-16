@@ -1,5 +1,29 @@
 # Forschungsstand
 
+### Wohin führt die Kaskade? (16.11.2026, Runde r23)
+
+Erkundung, nicht blind. Offene Frage aus r22.4: Führt die Kaskade des Hauptkorpus, die „alles zurück zu $z^-=0$“ projiziert, zum
+Bezugsframe R (reiner Zustand, $\phi = 1$) oder zum Photonpunkt P (lichtartige Klasse, $\phi = 0$)?
+
+**Antwort: Der Hauptkorpus führt zwei Kaskaden unter einem Namen**, und ihre Endpunkte sind genau die beiden Rollen von $z^-=0$ (r21.9,
+r22):
+
+| Kaskade | Art des Schritts | Endpunkt |
+|---|---|---|
+| $\hat K = C\circ\Pi_J$, Kollar-Schritt, Hopf-Kette, Markov mit Λ = 0 | selektive Projektion (Kompensator) | **R** |
+| Nullachsen-Transport (`thm:fractal`, Nullachse nach v4.8.0-r06 = $s = 0$) | umkehrbar, klassenerhaltend | trägt **P**, führt nicht hin |
+| Dephasierung über viele Frequenzen (r28.2(b)) | effektiv nicht umkehrbar | **P** nur im Grenzwert |
+| offenes System mit Tachyon-Reservoir (r28.2(c)) | Austausch | zwischen P und R, je nach Kopplung |
+
+- **Kompensation macht rein, nicht lichtartig (r23.2):** Das Kompensatorbild jedes Feldes hat $\phi = 1$, auch das eines lichtartigen.
+  Die Kompensator-Kaskade endet daher immer in R.
+- **Reservoir (r23.4):** Der Attraktor $|b|_\infty = \sin^2\theta/(1-\cos^2\theta\cos 2\alpha)$ geht bei $\alpha = \pi/6$ von 0,0006 ($\theta = 1°$) über
+  0,40 (30°) bis 1,0000 (89,9°): Schwache Kopplung führt zu P, starke zu R.
+- **Zum Nullzustand P führt im Bestand keine endliche Kaskade.** Dahin kommen nur Grenzwerte (Boosts, Dephasierung, schwache Kopplung)
+  oder für einen Augenblick die freie Zeitentwicklung. Das ist dasselbe Bild wie bei C5.
+
+[Erkundung](../notes/research/cascade_endpoint_2026_11_16/README.md) · [Runde](../notes/research/v4_10_0_r23/README.md).
+
 ### Der Kollapszustand im ganzen Hauptkorpus (16.11.2026, Runde r22)
 
 Lesart, nicht blind, ohne Rechnung. Der Kollapszustand $z^-=0$ ist die früheste Idee des Autors und trägt den zentralen Satz des
@@ -23,7 +47,7 @@ Berichtigungen r23, r24 und r29 typisiert. Der Hauptkorpus wird nicht umgeschrie
 - **Berichtigung zu r21.9:** „We can never fully reach $z^-=0$“ meint den bleibenden Versatz des Materie-Frames, also R, nicht P. Die
   dort vermerkte Spannung mit r24.3 besteht nicht.
 - **Offen (r22.4):** ob die Kaskade „zurück zu $z^-=0$“ zum Punkt R oder zur Klasse P führt. Versatz null spricht für R, ein
-  absorbierender, nicht umkehrbarer Schritt für P.
+  absorbierender, nicht umkehrbarer Schritt für P. **Beantwortet in r23:** zwei Kaskaden unter einem Namen (siehe oben).
 
 [Erkundung](../notes/research/collapse_state_typing_2026_11_16/README.md) · [Runde](../notes/research/v4_10_0_r22/README.md).
 
