@@ -11,7 +11,7 @@
   Berichtigung zu CT-004), #129 (c9bfb19, OP1 mit I1, CT-004) und #128
   (14feb02, Release v5.1.0). Gemergt am 14./15.11.: #124–#128
   (OP3-Rückwärtssuche, Dauerauftrag Versionsverwaltung, Abbildung C⊗S → C⊗H⊗O, bewachter Kern, Release), davor #108–#123.
-  Keine offenen PRs. Gemergte Zweige sind gelöscht (16.11.: drei lokale Altzweige; nach #157/#158 deren Zweige). Die Läufe nach dem Merge von #146 waren erfolgreich.
+  **Offen: PR #164** (Zweig `research/op1-hc-blur`: verwischte HC-Auslesung und Gegen-HC; wartet auf Freigabe). Gemergte Zweige sind gelöscht (16.11.: drei lokale Altzweige; nach #157/#158 deren Zweige). Die Läufe nach dem Merge von #146 waren erfolgreich.
 - **Letzte Runde:** v4.10.0-r27 (Berichtigung zu r26, r27.2, PR #156, f0bb768). **Davor:** v4.10.0-r26 (Verdopplungsregel, PR #155, 69863d8). **Davor:** v4.10.0-r25 (Dixon-Kopien, PR #154, 942508b), v4.10.0-r24 (OP1, Querungen, PR #152, ad665b4). **Davor:** v4.10.0-r23 (Kaskade, PR #149, f495e5a), v4.10.0-r22 (Kollapszustand, PR #148, a141650), davor v4.10.0-r21 (gemergt über PR #147 als c0f3011), C5 frame-sauber neu gestellt (PR #147). Anteile C5_M + C5_T = 1,
   frame-freier Boden |s|/2u. Drei Fragen: Übergangsfrage (Verlagerung, keine Entladung), Photonpunkt-Frage (für Felder
   positiv; bleibende Null nur bei s₊ = s₋ = w = 0), Brückenfrage (offen). Berichtigung zu r20.4: gleiche Anteile sind für P
@@ -50,6 +50,9 @@
     (Horizontnormale = Helizitätsachse?). Berichtigung: U(1)-gegen-SU(2) stand schon in r68.3. Nächster Schritt: (S1) prüfen.
   - **(S1) geprüft (16.11., PR #160, `notes/research/op1_s1_check_2026_11_16/`):** als Gruppengleichheit nicht haltbar (χ Singulett unter
     Drehungen). (S1′) masselose Querung entlang der Normalen gibt U1+U2 → DL; dafür fällt (A) (r17.3-Begründung der T-Regel).
+  - **Verwischte HC-Auslesung (16.11., PR #164, `notes/research/op1_hc_blur_2026_11_16/`, Ideen des Autors):** Achsengemittelte M-Maske
+    SU(2)-invariant, Gewicht 2 je Spin → γ = 0,2375 ohne Eichfixierung; offen: Zustandszahl oder Spur einer unscharfen Auslesung.
+    Gegen-HC: Komplement → 0,274, Verwischen → 0,2375. Verwischen nicht aus M↔T, evtl. aus Horizontgeometrie (Normale Grad 1).
     Nächster Schritt: prüfen, ob die Stränge masselos sind und normal queren; Literatur zur Helizitätslesart der U(1)-Zählung.
   - **Literatur (16.11., PR #160):** ABK: U(1)-Achse = Horizontnormale. Mitra 0705.3741: U2 folgt aus Entropie bei Zählung nur der
     Horizontzustände → Zählregel M hängt allein an U1. GNP 1309.4563: Statistik nicht entscheidbar. Helizitätslesart nicht gefunden.
