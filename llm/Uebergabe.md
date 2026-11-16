@@ -168,6 +168,12 @@
   Form (iii) hat keinen Kandidaten mehr. C5 offen in der Übergangsfrage (nur Verlagerung, δ). Dazu Nachtrag zu (B3):
   helizitätsneutral ist die einzige von allen Frame-Abbildungen erhaltene Helizitätsstufe (nur Notiz/Wiki, nicht im Rundentext).
   Wiki: Berichtigungsvermerke an den r20-Einträgen. CI-Lauf gestartet, Ergebnis nicht geprüft.
+- **Kollapszustand typisiert (16.11., Zweig `research/collapse-state-typing`, noch kein PR, keine Runde):**
+  `notes/research/collapse_state_typing_2026_11_16/`. Alle 93 z⁻-Stellen des Hauptkorpus: Gruppe 1 (Nullpunkt des Versatzes)
+  = R; Gruppe 2 (invariantes Objekt) = Rolle von P am Punkt z⁻ = 0; Gruppe 3 (Horizont z⁻ → ∞, β → 1) = Ort von P; Gruppe 4
+  kein Punkt; Gruppe 5 (Richtung der Kaskade) offen. Die Koordinate z⁻ läuft von R nach P wie η_R in r21.8. Der Nullzustand
+  im Sinn von r21.8 liegt beim Horizont. **Berichtigung zu r21.9 Zeile 3:** „never fully reach z⁻ = 0“ ist R (bleibender
+  Versatz), nicht P. Vorschlag: als Runde v4.10.0-r22 mit Wiki und PR; Autorentscheidung ausstehend.
 - **C5 ruht nach r21.12:** Form (iii) ohne Kandidat; ohne neue Struktur keine weiteren Varianten. Möglich: OP1 (a)
   oder den Kollapszustand im ganzen Hauptkorpus nach der Tabelle r21.9 typisieren (R oder P).
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,
