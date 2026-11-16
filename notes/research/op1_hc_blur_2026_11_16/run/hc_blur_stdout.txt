@@ -1,0 +1,8 @@
+j | Spur HC-Maske | HC nach Verwischen (Mittel ueber Achsen) = c*I, c | 2/(2j+1) | Robertson-Saettigung nur m=+-j
+0.5 | 2 | Abweichung von c*I 0.000, c = 1.0000 | 1.0000 | [0.5, -0.5]
+1 | 2 | Abweichung von c*I 0.005, c = 0.6667 | 0.6667 | [1.0, -1.0]
+1.5 | 2 | Abweichung von c*I 0.007, c = 0.5000 | 0.5000 | [1.5, -1.5]
+2 | 2 | Abweichung von c*I 0.008, c = 0.4000 | 0.4000 | [2.0, -2.0]
+3 | 2 | Abweichung von c*I 0.005, c = 0.2857 | 0.2857 | [3.0, -3.0]
+gamma aus Spur der verwischten Maske (2 je j): 0.237533 | volle Zaehlung (2j+1): 0.274067
+Gegen-HC (Komplement, 2j-1 Zustaende) allein: 0.182486

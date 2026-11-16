@@ -102,6 +102,12 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 17.11.2026: Nachtrag Lage von P (Rapidität statt x, eigener HC von P) in Forschungsstand.
+
+- 16.11.2026: Nachtrag HC je Frame und dritte Zählart (P zählt alles) in Forschungsstand.
+
+- 16.11.2026: Verwischte HC-Auslesung und Gegen-HC (OP1) in Forschungsstand und Offene-Probleme.
+
 - 16.11.2026: H111 (widerlegt) in Vorhersagen-und-Tests und Forschungsstand.
 
 - 16.11.2026: Nachtrag zwei Walzenraster verglichen in Forschungsstand.
