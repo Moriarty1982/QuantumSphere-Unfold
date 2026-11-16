@@ -6,6 +6,8 @@ Idee des Autors: einen von der Zeit abhängigen Korrekturterm einfügen, der die
 
 **Erste Rechnung (16.11.):** Alle 16 Läufe erreichen das Ziel. Kein Befund nach den vorab festgelegten Kriterien: Die Richtung (Dipol gegen Quadrupol) und die dissipative Mischung (91 % J₊, 9 % J₋²) sind über die Varianten nicht stabil, der Zeitverlauf zeigt nur die benannten Artefakte (Resonanz, Geodätenform), und keine Pulsfläche trifft eine Konstante (S2: 0,123 gegen γ_M/2 = 0,1188). Der minimale Eingriff folgt der Tangente des Koide-Kreises. Die Läufe mit τ = 3π sind nicht konvergiert; eine Wiederholung steht aus. [Ergebnis](../notes/research/op3_correction_term_2026_11_16/README.md).
 
+**Nachlauf (16.11.):** Mit Startfeld nahe null konvergiert auch τ = 3π. Weiterhin kein Befund. Die über fast alle Varianten gleiche dissipative Mischung (91 % J₊, 9 % J₋²) ist analytisch durch die Tangente des Koide-Kreises festgelegt. Ergebnis: In der Darstellung auf S hängen K und φ nur an den Populationen, und kein natives Element verschiebt sie; jeder Korrekturterm ist dort fremd und sein minimaler Verlauf reine Geometrie. Vorschlag: denselben Ansatz mit einer zeitabhängigen Verbindung (Fluss, wie beim bewachten Kern) statt eines Hamiltonterms.
+
 ### OP1: Setzung (S1) geprüft – masselose Querungen statt „derselben SU(2)“ (16.11.2026)
 
 Auftrag des Autors: (S1) prüfen. Erkundung, nicht blind.

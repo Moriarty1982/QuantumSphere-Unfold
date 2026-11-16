@@ -1,0 +1,131 @@
+{
+ "Start": {
+  "S1 Spin-1-Dreieck": {
+   "p": [
+    0.7927133000409574,
+    0.19526236775155525,
+    0.012024332207487134
+   ],
+   "phi": 0.6790432870681791,
+   "K": 0.6666663528868045,
+   "d_FS zum Ziel": 0.006661380838869298
+  },
+  "S2 flacher Oktant": {
+   "p": [
+    0.7886751345948129,
+    0.21132486540518705,
+    6.406255845331899e-17
+   ],
+   "phi": 0.7853981633974483,
+   "K": 0.6666666666666666,
+   "d_FS zum Ziel": 0.11776400685783368
+  }
+ },
+ "Ziel": [
+  0.7931458032405072,
+  0.19340507376853225,
+  0.013449122990960615
+ ],
+ "Laeufe": [
+  {
+   "Start": "S1 Spin-1-Dreieck",
+   "Art": "unitaer",
+   "Variante": "N1 V2 tau=3pi",
+   "A": 4.310531769892223e-05,
+   "Pulsflaeche": 0.01887351297188059,
+   "phi": 0.6666740000179292,
+   "K": 0.6666666666772956,
+   "im Spielraum": true,
+   "Anteil Dipol": 0.4127633141047358,
+   "Spektralspitzen (Kreisfrequenz)": {
+    "D1 Jx": 2.0,
+    "D2 Jy": 19.333333333333336,
+    "Q1": 4.0,
+    "Q2": 4.0
+   },
+   "Huelle Dipol: Mittel, Streuung/Mittel, Schwerpunkt t/tau": [
+    0.0012240140984806794,
+    0.5099515319380714,
+    0.4961876795468472
+   ],
+   "Huelle Quadrupol: Mittel, Streuung/Mittel, Schwerpunkt t/tau": [
+    0.0014271808955159393,
+    0.5644514283413314,
+    0.48814301657233566
+   ],
+   "Streuung A ueber Starts (rel.)": 0.030872034370250382,
+   "Starts im Spielraum": "20/20",
+   "Treffer Konstantenliste (Pulsflaeche, d_FS; rel. <= 1e-3)": []
+  },
+  {
+   "Start": "S1 Spin-1-Dreieck",
+   "Art": "dissipativ",
+   "Variante": "N1 V2 tau=3pi",
+   "A": 0.005602993517171843,
+   "Pulsflaeche": 0.005602993517171843,
+   "phi": 0.6666740002287455,
+   "K": 0.6666666664531903,
+   "im Spielraum": true,
+   "Anteile je Sprung": {
+    "J-": 6.055193672200008e-07,
+    "J+": 0.9125112907139725,
+    "J-^2": 0.08747580457833987,
+    "J+^2": 1.2299188320431112e-05
+   },
+   "Schwerpunkt t/tau": 0.511411468358864,
+   "Streuung A ueber Starts (rel.)": 0.0004574933301419494,
+   "Starts im Spielraum": "20/20",
+   "Treffer Konstantenliste (Pulsflaeche, d_FS; rel. <= 1e-3)": []
+  },
+  {
+   "Start": "S2 flacher Oktant",
+   "Art": "unitaer",
+   "Variante": "N1 V2 tau=3pi",
+   "A": 0.0016494470614292363,
+   "Pulsflaeche": 0.12435890310892343,
+   "phi": 0.6666740000197571,
+   "K": 0.6666666667760475,
+   "im Spielraum": true,
+   "Anteil Dipol": 0.07077160206171453,
+   "Spektralspitzen (Kreisfrequenz)": {
+    "D1 Jx": 2.0,
+    "D2 Jy": 2.0,
+    "Q1": 4.0,
+    "Q2": 4.0
+   },
+   "Huelle Dipol: Mittel, Streuung/Mittel, Schwerpunkt t/tau": [
+    0.003379323609331999,
+    0.2908484096066472,
+    0.4988589780297861
+   ],
+   "Huelle Quadrupol: Mittel, Streuung/Mittel, Schwerpunkt t/tau": [
+    0.012717710053657936,
+    0.07400281871120513,
+    0.49861619904682297
+   ],
+   "Streuung A ueber Starts (rel.)": 0.0009694031444842952,
+   "Starts im Spielraum": "20/20",
+   "Treffer Konstantenliste (Pulsflaeche, d_FS; rel. <= 1e-3)": []
+  },
+  {
+   "Start": "S2 flacher Oktant",
+   "Art": "dissipativ",
+   "Variante": "N1 V2 tau=3pi",
+   "A": 0.04993788595087924,
+   "Pulsflaeche": 0.04993788595087924,
+   "phi": 0.6666740003143374,
+   "K": 0.6666666664835236,
+   "im Spielraum": true,
+   "Anteile je Sprung": {
+    "J-": 1.7523441887206454e-05,
+    "J+": 0.911843953659733,
+    "J-^2": 0.08798613394094944,
+    "J+^2": 0.00015238895743040809
+   },
+   "Schwerpunkt t/tau": 0.4817640657722889,
+   "Streuung A ueber Starts (rel.)": 0.002199449863778058,
+   "Starts im Spielraum": "20/20",
+   "Treffer Konstantenliste (Pulsflaeche, d_FS; rel. <= 1e-3)": []
+  }
+ ]
+}

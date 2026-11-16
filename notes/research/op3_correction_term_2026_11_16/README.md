@@ -42,3 +42,35 @@ nicht auswertbar.
   Methode. Erst danach ist die Robustheitsprüfung vollständig.
 
 OP3 offen; keine H-Nummer vergeben (H111 frei).
+
+## Nachlauf N1 (τ = 3π, Startfeld nahe null; Nachtrag N1 in der Methoden-Notiz, 0588c5d)
+Ausgaben `run/correction_term_nachlauf_stdout.txt`, `run/correction_term_nachlauf.json`; analytische Kontrolle `mix_analytic.py`,
+`run/mix_analytic_stdout.txt`.
+
+| Start | Art | A (τ = 3π, N1) | A (τ = π, V0) | Streuung über Starts | Merkmal |
+|---|---|---|---|---|---|
+| S1 | unitär | 4,3·10⁻⁵ | 9·10⁻⁵ | 0,03 | Dipol 41 %; Pulsfläche 0,0189 |
+| S1 | dissipativ | 5,60·10⁻³ | 5,6·10⁻³ | 0,000 | 91 % J₊, 9 % J₋² |
+| S2 | unitär | 1,65·10⁻³ | 4,8·10⁻³ | 0,001 | Dipol 7 %; Pulsfläche 0,1244 |
+| S2 | dissipativ | 4,99·10⁻² | 4,9·10⁻² | 0,002 | 91 % J₊, 9 % J₋² |
+
+- **Jetzt konvergiert:** Streuung über die Starts nahezu null, und das längere Fenster braucht wie erwartet höchstens so viel Eingriff wie τ = π.
+  Die Robustheitsprüfung V2 ist damit vollständig.
+- **M1 Richtung:** Dipolanteil über alle Varianten 7 % bis 53 %, je nach Start verschieden. Weiter **nicht stabil**.
+- **M2 dissipative Mischung:** 91 % J₊ / 9 % J₋² jetzt in V0, V2 (π/3 und 3π) und für beide Starts, nur in V1 (glatt) anders. **Sie ist
+  analytisch festgelegt:** Mit nur J₊ und J₋² bestimmt die Richtung der Verschiebung Δp die beiden Raten eindeutig (Restfehler 10⁻¹⁶); das ergibt
+  91,2 % (S1) bzw. 90,9 % (S2). Die Richtung ist die Tangente des Koide-Kreises, die Raten hängen nur an den Populationen. Kein Befund über die
+  Dynamik, sondern Geometrie (und das L1-Funktional wählt die sparsamste Zerlegung).
+- **M4:** Pulsfläche S2 0,1244 gegen γ_M/2 = 0,1188 (4,7 %); kein Treffer.
+
+## Gesamtbewertung nach Nachlauf
+**Kein Befund.** Die Rechnung hat etwas anderes gezeigt, das als Ergebnis festgehalten wird: In der Darstellung auf S (r16.8/r16.9) hängen K und φ nur
+an den Populationen, und kein natives Element des Bestands verschiebt Populationen (die Zeitverschiebung ist diagonal, die Frame-Abbildungen wirken
+auf S skalar oder antilinear). Jeder Korrekturterm ist dort fremd, und sein minimaler Verlauf ist reine Geometrie: die Bewegung entlang der Tangente
+des Koide-Kreises. **In dieser Darstellung kann die Methode grundsätzlich nichts über eine Dynamik verraten.**
+
+Eine Darstellung, in der das anders wäre, ist die mit Verbindung statt Zustand: der bewachte Kern (H102) ändert nicht die Zustände, sondern die
+Berry-Verbindung auf der Generationskugel. Ein zeitabhängiger Korrekturterm müsste dann eine zeitabhängige **Verbindung** (ein Fluss, der sich mit der
+Zeit aufbaut) sein, und seine Form könnte Struktur zeigen (Verteilung, Ort, Zeitverlauf des Flusses). Das wäre eine neue Methoden-Notiz.
+
+OP3 offen; H111 frei.

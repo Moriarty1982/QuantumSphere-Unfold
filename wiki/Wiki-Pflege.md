@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 16.11.2026: Nachlauf zum Korrekturterm (konvergiert, kein Befund, Grenze der Darstellung auf S) in Forschungsstand.
+
 - 16.11.2026: Erste Rechnung zum Korrekturterm (kein Befund, τ = 3π nicht konvergiert) in Forschungsstand.
 
 - 16.11.2026: Methoden-Notiz zum zeitabhängigen Korrekturterm (OP3) in Forschungsstand.
