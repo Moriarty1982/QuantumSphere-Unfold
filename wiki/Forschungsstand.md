@@ -1,5 +1,26 @@
 # Forschungsstand
 
+### OP3: Diagnose – woran die Biegung scheitert (16.11.2026)
+
+Auftrag des Autors: die Logikkette zurückgehen und bei OP5 nachsehen. Erkundung, nicht blind.
+
+- **Ziel und Gram-Lesart stimmen.** Jede positive Dreiergruppe hat die Brannen-Form; $K$ legt nur $|c|$ fest, $\delta$ ist eine zweite,
+  unabhängige Zahl. Aus den Polmassen: $|G_{01}|^2=0{,}499991$, Bargmann-Phase 0,666689.
+- **Zwei Zahlen, eine Geometrie.** In jeder reinen, generationssymmetrischen Konstruktion legt die Überlappung den Kegel und der Kegel die Phase
+  fest. Kohärente Zustände mit Überlappung² ½ geben für Spin ½, 1, 3/2, 2 die Phasen 0,785, 0,679, 0,650, 0,637; 2/3 liegt zwischen Spin 1 und 3/2.
+- **Der Zielzustand ist nicht kohärent.** In der Lesart von r16.9 verlangen $K=arphi=2/3$ ein Kohärenzmaß 1,068 statt 1, also Rang zwei der
+  Invariantenmatrix $S$ (r16.8), deren Größe für jedes Feld frei ist. Die fehlende Zahl ist eine Eigenschaft des Feldzustands, nicht des Trägers.
+- **Gleiche Lücke wie OP5:** Auch dort lässt die Algebra eine Familie frei und wählt den Wert nicht aus (Zustandsauswahl); ein berechneter Umlauf
+  (Quelle–Rückweg) fehlt. Folgerung: Weitere Träger-Varianten helfen OP3 nicht; Fortschritt hängt an der Dynamik.
+
+Davor am selben Tag (Erkundungen, Ideen des Autors): Frame-Lesung der Hälften und der Generationen (H109 widerlegt); die vier Kopien von HS(8)
+als Kleinsche Vierergruppe der Frame-Abbildungen mit Kopie 00 als Betrachter; Querdephasierung um die Zyklusachse mit $\kappa^2=0{,}880706$ als
+Bedingung (H110 widerlegt, kein natives $\kappa$); C⊗H⊗O⊗S ist HS(10) mit Nullteilern. OP3 offen.
+
+[Diagnose](../notes/research/op3_chain_diagnosis_2026_11_16/README.md) · [Betrachter](../notes/research/op3_frame_algebras_observer_2026_11_16/README.md) ·
+[Sedenionen](../notes/research/op3_dixon_times_sedenions_2026_11_16/README.md) · [natives κ](../notes/research/op3_native_kappa_2026_11_16/README.md) ·
+[H109](../notes/research/predictions/Ergebnis_H109_Generationsabhaengige_Frames.md) · [H110](../notes/research/predictions/Ergebnis_H110_Betrachter_HS7_Haelfte.md).
+
 ### OP3: Renormierung schließt den Rest nicht (16.11.2026)
 
 Erkundung, nicht blind (die Richtung folgte schon aus H1, v4.8.0-r12); der zweite Weg des Autors nach H106–H108. Die Bargmann-Phase der Runden ist
