@@ -64,7 +64,8 @@
     Erste Rechnung (f838987 Skript, Ergebnis im Zweig): alle 16 Läufe erreichen Ziel; kein Befund (Richtung, Mischung nicht stabil;
     nur Artefakte; keine Konstante). Nachlauf N1 (0588c5d) konvergiert: kein Befund; Mischung 91/9 geometrisch (Koide-Tangente).
     Grenze: auf S verschiebt kein natives Element Populationen → Methode zeigt dort nur Geometrie. Vorschlag: zeitabhängige Verbindung (Fluss).
-    Methoden-Notiz 2 (Verbindung, Flussumverteilung, `Methoden_Notiz_Verbindung.md`) festgeschrieben; Skript `connection_flow.py` folgt nach Freigabe.
+    Methoden-Notiz 2 (Verbindung) gerechnet: lokaler Fluss leert Saum am Rand, kein Kern; H102-Kern ≥ 270-fach teurer (Ausschluss).
+    Offene Lesart: undurchlässiger Rand + Abfluss über Punktierung würde Kern erzwingen (nicht gerechnet, eigene Notiz).
   - Davor H109 (k231, widerlegt, Vorab 15004ce, Ergebnis 302bb9f).
   - H109: generationsabhängige zyklische Frame-Lesung (Generation k im Frame F_k aus R/T/J_B; L1 F⊗F, L2 kontrollierte Lesung einer Hälfte),
     9 Mechanismen, 14 Versuche, kein Treffer. Drehungen lassen 0,679042 stehen (kohärentes Dreieck, Überlappung ½); L2 gibt 0,05–0,78.
