@@ -20,6 +20,15 @@ In preparation (17 November 2026). Not yet published.
   of symmetric carrier constructions, the core as the only escape, its size given only by the weight-two counting
   rule, dependence of the tau-mass test on counting rule and area spectrum), and one sentence in the outlook.
 
+## Validation (before upload)
+
+- Paired document build 43978954178 of commit 8fb6e93: full Companion 1457 pages, physics edition 30 pages; both with
+  zero undefined references, multiply defined labels, rerun requests and overfull boxes; no tracked changes.
+- Both title pages carry the version DOI 10.5281/zenodo.24294648 and the concept DOI exactly once and no predecessor
+  DOI (`tools/qs.py doi`). Pages inspected visually: full page 1, physics page 18 (new subsection 5.8).
+- Edition tests (`qam.store.test_editions`) passed locally; guard linter on round r28: 0 candidates.
+- Zenodo dry run 43978552171 and reservation 43978639426.
+
 ## Scope
 
 This minor version changes content, not the status of the open physical questions. The Koide overlap, the size of
