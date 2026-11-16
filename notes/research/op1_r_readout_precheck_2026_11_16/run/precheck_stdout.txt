@@ -1,0 +1,3 @@
+Rang des Effekts je Sektor fuer M und T, j = 1/2 .. 5, Boost laengs und quer: alle = 2: True
+max. |[D, J^2]| = 8.5e-12 (sektorerhaltend)
+Beispiele: [(0.5, 'laengs u', 'M', np.int64(2)), (0.5, 'laengs u', 'T', np.int64(2)), (0.5, 'quer', 'M', np.int64(2)), (0.5, 'quer', 'T', np.int64(2))]
