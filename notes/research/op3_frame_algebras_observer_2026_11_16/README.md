@@ -59,3 +59,18 @@ Kein H110 bisher: Der Mechanismus (§ 4) ist da, aber $\lambda$ ist ein freier P
 festlegt, zum Beispiel ein aus dem Bestand hergeleiteter Zustand der HS(7)-Hälfte $\{1,F\}$ (§ 5). Weil der Zielwert $\lambda=0{,}923199$ jetzt
 bekannt ist, wäre jeder solche Test nur in der Konstruktion blind, nicht im Zahlenwert; die Konstruktion muss vor dem Auswerten feststehen.
 OP3 offen.
+
+## Nachtrag (16.11.2026): K für gemischte Auslesungen, Berichtigung zu § 4
+Skript `k_reading.py`, Ausgabe `run/k_reading_stdout.txt`. § 4 hat $K$ über $\operatorname{Tr}\rho_i\rho_j$ allein gelesen und so behauptet, $K$ bleibe
+bei jedem $\lambda$ gleich 2/3. Die natürliche Fortsetzung der Gram-Lesart nimmt aber den Frame-Operator $S=\sum_k\rho_k$, also auch die Reinheiten
+auf der Diagonale: $K=\operatorname{Tr}S^2/(\operatorname{Tr}S)^2=(9+|R|^2)/18$ mit $R=\sum_k r_k$ (Summe der Bloch-Vektoren). Für reine Zustände ist
+das dasselbe wie $\operatorname{Tr}G^2/(\operatorname{Tr}G)^2$.
+- **Berichtigung:** Gleichmäßig geschrumpfte Auslesungen geben $K=(3+\lambda^2)/6$, also $K=2/3$ nur bei $\lambda=1$. Mit $\lambda=0{,}9232$ wäre
+  $K\approx0{,}642$. Der Mechanismus aus § 4 hält $K$ in dieser Lesart **nicht**.
+- **Was $K$ hält:** eine Dephasierung in der Basis des Betrachters auf der Zyklusachse $n$. Sie lässt den Längsanteil $r_k\cdot n=1/\sqrt3$ fest und
+  multipliziert den Queranteil mit einem Kohärenzfaktor $\kappa$. Dann bleibt $R$ und damit $K=2/3$ exakt, und die Phase ist
+  $\arctan\bigl(\kappa^2/(2-\kappa^2)\bigr)$. Für 0,666665 braucht es **$\kappa=0{,}938459$**.
+- Physikalisch: Der Betrachter hält in zwei Zuständen fest, ob die Auslesung entlang $+n$ oder $-n$ steht; $\kappa$ ist die Überlappung dieser
+  beiden Betrachterzustände.
+- **Vor der Vorab-Notiz H110 gesehen (nicht gezählt):** Nimmt man als Betrachterzustände $o$ und $Fo$ (Betrachter ohne und mit Frame-Abbildung),
+  ist $\kappa=|n\cdot f|=1/\sqrt3$ und die Phase $\arctan(1/5)=0{,}197$. Weit weg.
