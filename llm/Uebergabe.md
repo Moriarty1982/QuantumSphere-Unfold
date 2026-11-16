@@ -9,7 +9,8 @@
 - **GitHub:** `main` nach PR #155 (69863d8, Runde r26, Verdopplungsregel), davor PR #154 (942508b, Runde r25, Dixon-Kopien), davor PR #153 (17f20aa, Vorab-Notiz H105), davor PR #152 (ad665b4, Runde r24, OP1), davor PR #151 (Frame-Abschnitte im Aussagenspeicher), davor PR #150 (fdde521, Runden-Absätze im Aussagenspeicher), davor PR #149 (f495e5a, Runde r23, Kaskade), davor PR #148 (a141650, Runde r22, Kollapszustand typisiert), davor PR #147 (c0f3011, Runde r21, C5 neu gestellt), davor PR #146 (d9d4b5c, Runde r20, C5), davor PR #145 (81a6ccb, Neuheitsprüfungen Kern und Koide), davor #144 (982c476, Runde r19), davor #143 (80af436, C5 (α) in der r10-Lesart), davor #142 (cdb45bf, C5 Nullaugenblick), davor #141 (144d4ff, Runde r18), davor #140 (c66a5ab, OP4 Zeitzyklus und Spin(8)-Zentrum), davor #139 (86d80c8, Suche nach blindem Test, H2 nachgerechnet), davor #138 (68e1075, Runde r17), davor #137 (a835c46, OP1 Brücke: Barbero-Dublett, Penrose-Stränge), davor #136 (45f518d, OP3 Uhr-Abgleich und Treue-Lesart, OP1 Irreduzibilität), davor #135 (e0be304, Runde r16 mit r16.1–r16.9), davor #134 (f32ae5c, k220 „ein Objekt“ übernommen), davor #133 (37ac7da, OP3: C⊗O, Helizitätsachse, invariante Kugel, Feldvorzeichen), davor #132
   (b6ed1a5, Runde r15, Dauerauftrag Issues), #130 (eeb6083,
   Berichtigung zu CT-004), #129 (c9bfb19, OP1 mit I1, CT-004) und #128
-  (14feb02, Release v5.1.0). **Keine offenen PRs.** Gemergt am 14./15.11.: #124–#128
+  (14feb02, Release v5.1.0). **Offen: PR #156** (Zweig `research/v4.10-r27-image-audit-correction`, Runde r27, Berichtigung zu r26; wartet auf
+  Freigabe; CI gestartet). Gemergt am 14./15.11.: #124–#128
   (OP3-Rückwärtssuche, Dauerauftrag Versionsverwaltung, Abbildung C⊗S → C⊗H⊗O, bewachter Kern, Release), davor #108–#123.
   Gemergte Zweige sind gelöscht (16.11.: drei lokale Altzweige). Die Läufe nach dem Merge von #146 waren erfolgreich.
 - **Letzte Runde:** v4.10.0-r26 (Verdopplungsregel, PR #155, 69863d8). **Davor:** v4.10.0-r25 (Dixon-Kopien, PR #154, 942508b), v4.10.0-r24 (OP1, Querungen, PR #152, ad665b4). **Davor:** v4.10.0-r23 (Kaskade, PR #149, f495e5a), v4.10.0-r22 (Kollapszustand, PR #148, a141650), davor v4.10.0-r21 (gemergt über PR #147 als c0f3011), C5 frame-sauber neu gestellt (PR #147). Anteile C5_M + C5_T = 1,
@@ -210,7 +211,10 @@
   vor neuer Stufe die Bildprüfung und nutzt Dixon als OP5-Routen-Code ohne Teilchenaussage. Mit der Verdopplungsregel von HS(5) als
   allgemeiner Regel (gesetzt) sind alle Kopienoperationen aus r25 leck- und schuldfrei; Schuld nur innerhalb einer Kopie. Formal
   zulässig, stützt die physikalische Lesart aber nicht. Regel als r26.1 gesetzt (Autorentscheidung). Kandidat 1452 Seiten, Linter 0;
-  Issue #131 und #17 nachgezogen. Zuletzt vergebene Runde: **r26**. Offen im Atlas: Bildprüfung von HS(6).
+  Issue #131 und #17 nachgezogen.
+- **Berichtigung = Runde v4.10.0-r27 (16.11., PR #156):** Die Bildprüfung von HS(6) steht schon im Atlas (Schicht r59, keine offene
+  Klasse); r26 hatte sie fälschlich als offen geführt. OP5 laut Atlas lokal geschlossen, offen nur an der Active-Core-Grenze. r59 rät
+  von neuen Trägern ab. Kandidat 1454 Seiten, Linter 0. Zuletzt vergebene Runde: **r27**.
 - **C5 ruht nach r21.12:** Form (iii) ohne Kandidat; ohne neue Struktur keine weiteren Varianten. Möglich: OP1 (a)
   oder den Kollapszustand im ganzen Hauptkorpus nach der Tabelle r21.9 typisieren (R oder P).
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,
