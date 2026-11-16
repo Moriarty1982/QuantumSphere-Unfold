@@ -184,6 +184,12 @@
   Thema → geschlossen über PR #150 (fdde521): 354 Runden-Einträge aus 134 Runden (Stand r22), v5-Editionen unverändert.
   Frame-Abschnitte eingelesen (PR #151 gemergt): 236 von 359 Runden-Einträgen (83 Runden) mit Frame `convention-f-section`,
   117 mit eigener Zeile; wörtlicher Vermerk, keine geprüfte Typisierung, Guards offen. Danach: OP1 (Rückwärtssuche, I1-3 nennen).
+- **OP1, Rückwärtssuche zu (S2) (16.11., Zweig `research/op1-statistics-backward`, noch kein PR, keine Runde):**
+  `notes/research/op1_statistics_backward_2026_11_16/`. Kein Operator im Bestand wirkt auf den Strangtausch und wird zugleich von R
+  vertauscht (Frame-Abbildungen, Port-Parität J, strangweiser Kompensator wirken strangweise). (S2) aus Frame-/Portstruktur nicht
+  begründbar; weitere Varianten mit dieser Voraussetzung ausgeschlossen. Nebenbefund: strangweise Kompensation → ausgerichtete
+  Bündel = Lesart für (S3). Auslöser I1-3 getroffen, I1 dem Autor als Ausweg vorgelegt (T zählt Endpunkte einzelner Strings;
+  Preis Guard 1 von CT-004). Autorentscheidung ausstehend: I1 verfolgen? Runde r24?
 - **C5 ruht nach r21.12:** Form (iii) ohne Kandidat; ohne neue Struktur keine weiteren Varianten. Möglich: OP1 (a)
   oder den Kollapszustand im ganzen Hauptkorpus nach der Tabelle r21.9 typisieren (R oder P).
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,
