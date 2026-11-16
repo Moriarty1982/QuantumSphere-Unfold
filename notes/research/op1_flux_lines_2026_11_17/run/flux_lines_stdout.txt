@@ -1,0 +1,4 @@
+(1) reelle Felder (Flusslinien und beliebige): max |chi_z| = 4.1e-17  -> Breite 0 = P
+(2) Dualitaet an Flusslinien: Azimut dreht um -2a, Breite bleibt 0 (max. Abweichung 8.9e-16); Azimut = -2 arg(E_n + i B_n) bis auf Wurzelwahl, also der Ladungswinkel elektrisch/magnetisch
+(3) Breite von M (b = 0.5363) wird von komplexen Feldern erreicht (Beispiel t = 1.212: b = 0.5363); reelle Felder erreichen nur b = 0
+(4) Normalfluss S.n: Flusslinie 0.0e+00 (keine Querung), normal laufende Welle 1.0
