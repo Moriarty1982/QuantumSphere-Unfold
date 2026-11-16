@@ -102,6 +102,9 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 16.11.2026: Runde v4.10.0-r23 (wohin die Kaskade führt) eingetragen: Forschungsstand (mit Vermerk an r22.4),
+  Gesamtbild, Forschungslinie, Inhalt, Content-overview. Kein Abschluss.
+
 - 16.11.2026: Runde v4.10.0-r22 (Kollapszustand im ganzen Hauptkorpus typisiert) eingetragen: Forschungsstand, Gesamtbild
   (These T1, Entwicklung), Forschungslinie, Inhalt, Content-overview. Berichtigung zu r21.9. Kein Abschluss.
 
