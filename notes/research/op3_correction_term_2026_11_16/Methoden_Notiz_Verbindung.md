@@ -56,3 +56,21 @@ bewachte Kern (H102) wirkt. Status: **Erkundung, nicht blind**. Keine H-Nummer. 
 
 ## 7. Offenlegung
 Ziel bekannt; Transportprinzip und Gitter sind Setzungen; die Erwartung (Randlösung) ist vorab genannt. Änderungen nach dem Commit nur als Nachtrag.
+
+## Nachtrag N2 (16.11.2026, vor der Rechnung): Umsetzung statt dynamischem Gitterproblem
+Das in Abschnitt 3/4 beschriebene dynamische Problem (10 242 Knoten × 50 Zeitschritte, konvexes Programm) ist mit den verfügbaren Lösern (scipy,
+kein cvxpy) nicht lösbar. Es ist auch nicht nötig. Festgelegt wird deshalb, ohne dass ein Ergebnis bekannt ist:
+- **V0:** Benamou–Brenier ist exakt gleichwertig mit dem statischen Transport (Wasserstein-2) und Verschiebungsinterpolation mit konstanter
+  Geschwindigkeit. N3 (Zeitverlauf) ist damit analytisch: gleichförmig. Bei freiem Endzustand mit nur der Bedingung Fluss(T) = Ziel lohnt sich nur
+  Transport aus T hinaus, jede Masseneinheit zum nächsten Punkt außerhalb; die Lösung ist gierig exakt (Masse mit kleinstem Randabstand zuerst).
+  Gerechnet auf den Gittern 3, 4, 5 (642, 2562, 10 242 Knoten).
+- **V1 (Stromnorm ohne Gewichtung):** analytisch: Der Strom kleinster Norm ist J ∝ Bᵀχ_T, also nur auf den Kanten, die den Rand von T kreuzen, mit
+  Kosten ΔΦ²/(Zahl der Randkanten); wird mitgerechnet.
+- **V2 (Zyklussymmetrie):** ändert die minimalen Kosten nicht (konvexes Problem, Mittel über die Drehungen ist wieder optimal); entfällt als Rechnung.
+- **V4 (Antipoden-Kanal mit Länge π):** im statischen Transport ist jede geodätische Verschiebung schon erlaubt; ein Kanal mit Kosten gleich der
+  geodätischen Länge ist keine neue Möglichkeit. V4 = V0; entfällt als Rechnung.
+- **K-A, K-B:** exakter statischer Transport (lineares Programm, HiGHS) zwischen Start und festem Endzustand, dicht auf Gitter 3; auf Gitter 4 mit
+  Abstandsschranke 0,6 rad (Kaskaden aus kurzen Schritten bleiben erlaubt; auf Gitter 3 gegen die dichte Lösung geprüft). K-A: flussfreie Kappe um die
+  Zyklusachse, ihre Masse gleichmäßig in die gleich große Kappe um den Gegenpol; K-B: flussfreie Kappe, Masse gleichmäßig auf den ganzen Rest.
+  Ω so, dass Fluss(T) das Ziel trifft (auf dem Gitter: so viele Knoten wie nötig, Rest anteilig).
+- Kriterien (Abschnitt 6) unverändert.
