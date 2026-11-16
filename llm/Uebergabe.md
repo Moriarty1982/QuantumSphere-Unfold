@@ -28,7 +28,7 @@
 - **Davor:** v4.10.0-r18 (Statusvermerke zu Suche nach blindem Test, Nachrechnung H2, Dirac-Zyklus = Zeitzyklus,
   Neutrino-ℤ₂ = Spin(8)-Zentrum), gemergt über PR #141 (144d4ff); davor r17 (PR #138), r16, r15, r14 (in v5.1.0).
   Kandidat 1427 Seiten.
-- **Hypothesen:** zuletzt vergeben **H110** (k232, widerlegt, Vorab 8a97d9c, Ergebnis b5ee102, 16.11.). Frei: **H111, k233**.
+- **Hypothesen:** zuletzt vergeben **H111** (k233, Vorab festgelegt im Zweig von PR #163, noch nicht gerechnet: Zeit-Oktant ueber Frame-Eigenzustaende, Kreuz-Gram, 4 Versuche). Frei: **H112, k234**. Davor **H110** (k232, widerlegt, Vorab 8a97d9c, Ergebnis b5ee102, 16.11.). 
   - H110: Triplett-Paar {Betrachter, F} in der HS(7)-Hälfte (Aufteilung 7+6+6), 6 Versuche, kein Treffer; das Paar verschiebt den Längsanteil,
     K verlässt 2/3. Berichtigung (Nachtrag Betrachter-Erkundung): gleichmäßig gemischt hält K nicht (K = (3+λ²)/6). Scharfe Bedingung:
     Querdephasierung um die Zyklusachse, κ² = 0,880706 → K = 2/3 exakt, φ = 2/3. Native Konstruktion für κ offen. Sechs Wege, Rest offen.
