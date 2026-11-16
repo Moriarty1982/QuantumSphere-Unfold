@@ -49,3 +49,46 @@ Lesart: Dass die Leptonen überhaupt eine Koide-Phase haben, ist topologisch an 
 4. Eine fermionische Umkehrwalze erzwingt einen nichttrivialen Fluss (Borsuk–Ulam).
 
 Offen: die Holonomie auf dem Möbiusband unter Θ; die Phase des Kernpaars (nur mit Vorab-Notiz). OP1 und OP3 offen; H102 unverändert.
+
+## Nachtrag (16.11.2026): Mehrere Umkehrwalzen, abgeglichen mit den Kryptologie-Teilen
+Frage des Autors: „es könnte sein, dass es mehrere Umkehrwalzen gibt; vergleiche das mit den Teilen über Kryptologie im Paper.“ Skript `reflectors.py`,
+Ausgabe `run/reflectors_stdout.txt`.
+
+**Was das Paper zur Kryptologie sagt.** v470/24 („Computational Interpretation, Enigma Analogy, and Bomba-Style Structural Search“, im Hauptkorpus
+`sources/parts/08_computational_and_pre_op_foundation/01_computational_surface_to_local_zuse_core.tex`) ist inzwischen auf eine kurze Zitierfläche
+verdichtet: ein Reflektor-/Projektor-/Routing-Vergleich (Enigma) und eine Bombe-artige Eliminationssuche über zulässige Menüs (v470/15 „Bombe-guided
+compensator menu“, v470/19 „Bombe-sieve persistence“), ausdrücklich ohne kryptanalytischen Identitätsanspruch. v470/09 führt J als
+„Umkehrwalze/involution“ mit dem Ausleseprojektor C = ½(id + J). Die physikalische Ausarbeitung steht in **v4.9.0-r02** („The Round Trip about the
+Photon and the Umkehrwalze“) und **r04**.
+
+**Der Bestand kennt schon mehrere Umkehrwalzen:**
+
+| Umkehrwalze | Quelle | Art | auf Feldern | auf der Generationskugel χ |
+|---|---|---|---|---|
+| C = PT (z ↦ −z) | r02.2 | linear, zentral, Holonomie des seitenwechselnden Rundwegs | fixpunktfrei („fixes no non-zero field“) | **Identität** (s± unverändert) |
+| J_B (E ↔ B) | r02.3 | antilinear, Involution, Reflektor | Eigenkanäle E = ±B, je eine Seite des Photons | Halbdrehung um y (σ_y), Fixpunkte = Eigenkanäle |
+| Rotor-Konjugate R_α⁻¹ J_B R_α = R_{−2α} J_B | r02.5 (Enigma-Muster), r04 (O(2)) | ein Reflektor, durch die „Walzenstellung“ α verschoben | bei α = π/4 genau T | Halbdrehungen um alle Achsen der Äquatorebene (senkrecht zur Helizitätsachse), Periode 90° |
+| Familie iR z̄ (R ∈ O(3,ℂ), R R̄ = 1) | r02.3(b) | antilineare Involutionen, die Materie und Tachyon tauschen | – | nicht einzeln geprüft |
+
+Das ist das Enigma-Bild: **eine** feste Umkehrwalze, deren wirksame Form sich mit der Walzenstellung ändert (Konjugation durch den Rotor, hier die
+Dualitätsdrehung). r02.5 sagt es ausdrücklich: Hin, Reflexion, zurück ergibt die direkte Reflexion gefolgt von der Rundweg-Umkehrwalze C.
+
+**Abgleich mit dem Kern-Bild (nachgerechnet):**
+1. **Genau eine Walzenstellung tauscht Kern und Gegenpol.** Das Rotor-Konjugat bei Dualitätswinkel α = 22,5° = π/8 ist die Halbdrehung um
+   (1, −1, 0)/√2; sie bildet z_c auf −z_c ab und den Oktanten der geladenen Leptonen auf den gegenüberliegenden Oktanten. Bei α = 0 ist es J_B, bei
+   α = 45° T; keine dieser beiden tauscht Kern und Gegenpol.
+2. **Auch sie erzwingt als Symmetrie ein Kernpaar.** Sie ist auf χ eine Drehung (Determinante +1), erhält also die Flussdichte, F(Mn) = F(n). Als
+   Symmetrie der Verbindung zieht ein Kern bei z_c einen Kern bei −z_c nach sich, wie bei Θ. Das Ergebnis aus Abschnitt 2 gilt also für jede
+   Umkehrwalze, die Kern und Gegenpol verbindet.
+3. **Die Enigma-Eigenschaft „kein Buchstabe auf sich selbst“ gilt auf χ für keine Umkehrwalze des Bestands.** C ist auf χ die Identität; J_B, T und alle
+   Rotor-Konjugate haben auf χ zwei Fixpunkte (ihre Eigenkanäle). Fixpunktfrei auf χ ist nur die Antipodenabbildung Θ = iσ_y K (antiunitär), und die
+   steht nicht in r02/r04. Die Umkehrwalze der Kern-Notiz vom 15.11. ist damit eine **zusätzliche**: die Zeitumkehr des Dubletts χ selbst.
+4. **Mehrere Umkehrwalzen gleichzeitig als Symmetrie gehen nicht.** Wären alle Rotor-Konjugate zugleich Symmetrien, wäre die Flussdichte unter allen
+   Drehungen um die Helizitätsachse und unter deren Umkehr invariant; das verträgt sich nicht mit einem Oktanten. Im Enigma-Bild ist das natürlich: Zu
+   jedem Zeitpunkt wirkt **eine** Walzenstellung, und sie wechselt. Eine zeitabhängige wirksame Umkehrwalze wäre die Form, in der die Idee des
+   zeitabhängigen Korrekturterms und das Enigma-Bild zusammenkommen. Lesart, nicht gerechnet.
+
+**Folgerung.** Es gibt mehrere Umkehrwalzen, und das Paper hat sie schon (C, J_B, die Rotor-Familie, die Familie aus r02.3(b)). Für das Kern-Bild zählt
+die eine Walzenstellung α = π/8, die Kern und Gegenpol tauscht. Als Symmetrie gibt jede von ihnen ein Kernpaar, nicht Fluss am Gegenpol. Eine
+fixpunktfreie Umkehrwalze auf χ wäre ein neues Element (Θ). Die Bedeutung von α = π/8 (halber Oktantenwinkel) ist nicht geprüft und wird nicht
+gedeutet. OP3 offen.
