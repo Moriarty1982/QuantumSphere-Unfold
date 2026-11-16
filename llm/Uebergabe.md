@@ -29,7 +29,11 @@
 - **Davor:** v4.10.0-r18 (Statusvermerke zu Suche nach blindem Test, Nachrechnung H2, Dirac-Zyklus = Zeitzyklus,
   Neutrino-ℤ₂ = Spin(8)-Zentrum), gemergt über PR #141 (144d4ff); davor r17 (PR #138), r16, r15, r14 (in v5.1.0).
   Kandidat 1427 Seiten.
-- **Hypothesen:** zuletzt vergeben **H109** (k231, widerlegt, Vorab 15004ce, Ergebnis 302bb9f, 16.11.). Frei: **H110, k232**.
+- **Hypothesen:** zuletzt vergeben **H110** (k232, widerlegt, Vorab 8a97d9c, Ergebnis b5ee102, 16.11.). Frei: **H111, k233**.
+  - H110: Triplett-Paar {Betrachter, F} in der HS(7)-Hälfte (Aufteilung 7+6+6), 6 Versuche, kein Treffer; das Paar verschiebt den Längsanteil,
+    K verlässt 2/3. Berichtigung (Nachtrag Betrachter-Erkundung): gleichmäßig gemischt hält K nicht (K = (3+λ²)/6). Scharfe Bedingung:
+    Querdephasierung um die Zyklusachse, κ² = 0,880706 → K = 2/3 exakt, φ = 2/3. Native Konstruktion für κ offen. Sechs Wege, Rest offen.
+  - Davor H109 (k231, widerlegt, Vorab 15004ce, Ergebnis 302bb9f).
   - H109: generationsabhängige zyklische Frame-Lesung (Generation k im Frame F_k aus R/T/J_B; L1 F⊗F, L2 kontrollierte Lesung einer Hälfte),
     9 Mechanismen, 14 Versuche, kein Treffer. Drehungen lassen 0,679042 stehen (kohärentes Dreieck, Überlappung ½); L2 gibt 0,05–0,78.
     Folgerung: Eine Lösung müsste die Überlappung ½ oder die Kohärenz ändern. Fünf Wege geprüft, Rest 0,012376 offen.
