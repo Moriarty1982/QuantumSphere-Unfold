@@ -51,6 +51,8 @@
   - **(S1) geprüft (16.11., PR #160, `notes/research/op1_s1_check_2026_11_16/`):** als Gruppengleichheit nicht haltbar (χ Singulett unter
     Drehungen). (S1′) masselose Querung entlang der Normalen gibt U1+U2 → DL; dafür fällt (A) (r17.3-Begründung der T-Regel).
     Nächster Schritt: prüfen, ob die Stränge masselos sind und normal queren; Literatur zur Helizitätslesart der U(1)-Zählung.
+  - **Literatur (16.11., PR #160):** ABK: U(1)-Achse = Horizontnormale. Mitra 0705.3741: U2 folgt aus Entropie bei Zählung nur der
+    Horizontzustände → Zählregel M hängt allein an U1. GNP 1309.4563: Statistik nicht entscheidbar. Helizitätslesart nicht gefunden.
   - Davor H109 (k231, widerlegt, Vorab 15004ce, Ergebnis 302bb9f).
   - H109: generationsabhängige zyklische Frame-Lesung (Generation k im Frame F_k aus R/T/J_B; L1 F⊗F, L2 kontrollierte Lesung einer Hälfte),
     9 Mechanismen, 14 Versuche, kein Treffer. Drehungen lassen 0,679042 stehen (kohärentes Dreieck, Überlappung ½); L2 gibt 0,05–0,78.
