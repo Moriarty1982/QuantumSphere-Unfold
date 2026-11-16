@@ -102,6 +102,9 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 16.11.2026: Vorab-Notiz H105 (Flächenschritte und Echos unter Setzung V1) in Vorhersagen-und-Tests, Offene-Probleme
+  (OP1) und Forschungsstand eingetragen. Offen, Frist 31.12.2028.
+
 - 16.11.2026: Runde v4.10.0-r24 (OP1: Statistik je Frame rückwärts geprüft, T zählt Querungen) eingetragen: Forschungsstand,
   Offene-Probleme (OP1), Gesamtbild, Forschungslinie, Inhalt, Content-overview. Kein Abschluss.
 

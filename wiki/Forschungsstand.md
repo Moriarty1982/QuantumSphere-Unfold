@@ -1,5 +1,21 @@
 # Forschungsstand
 
+### OP1: Test H105 unter Setzung V1 (16.11.2026)
+
+Eine Suche nach einem blinden Test für die Querungs-Lesart (r24.4) ergab: Sie hat eine messbare Folge nur, wenn **jede** Querung des
+Horizonts ein T-Quant ist (Fassung V1), auch eine einfallende Gravitationswelle. Dann ändert jede Querung die Fläche um
+$4\ln 2\,\ell_P^2$; das ist das Bekenstein–Mukhanov-Spektrum mit $\alpha = 4\ln 2$, und ein Loch kann den Grundton des Ringdowns
+nicht absorbieren, wenn er zwischen zwei Linien liegt: Echos. In der Fassung V2 (nur Hawking-Partner) gibt es nur Linien in der nicht
+messbaren Hawking-Emission.
+
+Der Autor hat V1 gesetzt. **Vorab-Notiz H105** (b77ba9e), vor jeder Auswertung festgelegt: Es zählen nur Analysen, die nach dem
+16.11.2026 erscheinen und Flächenquantisierung ausdrücklich prüfen; Frist 31.12.2028; Ausgänge bestätigt, widerlegt, widersprüchlich,
+nicht entscheidbar. Offen gesagt: V1 ist eine Wahl, die den Test erst ermöglicht; $\alpha = 4\ln 2$ ist nicht projektspezifisch; ob
+solche Echos beobachtbar sind, ist umstritten (arXiv:2201.03245). Beispiel aus `k227_test_h105.py`: Endmasse 60 Sonnenmassen, Spin 0,7:
+Linienabstand 12,4 Hz, Grundton 288 Hz, Lage 5,51 Linien, also fast genau mittig.
+
+[Testsuche](../notes/research/op1_crossing_test_search_2026_11_16/README.md) · [Vorab-Notiz](../notes/research/predictions/Vorab_Notiz_H105_Flaechenschritte_Echos.md).
+
 ### OP1: Statistik je Frame rückwärts geprüft; T zählt Querungen (16.11.2026, Runde r24)
 
 Erkundung, nicht blind; OP1 bleibt offen. Die Zählregel „M alle Spins mit Gewicht 2, T nur j = ½“ (H98) war seit r17.5 als Statistik
