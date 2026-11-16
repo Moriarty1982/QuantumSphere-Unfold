@@ -9,7 +9,8 @@
 - **GitHub:** `main` nach PR #151 (Frame-Abschnitte im Aussagenspeicher), davor PR #150 (fdde521, Runden-Absätze im Aussagenspeicher), davor PR #149 (f495e5a, Runde r23, Kaskade), davor PR #148 (a141650, Runde r22, Kollapszustand typisiert), davor PR #147 (c0f3011, Runde r21, C5 neu gestellt), davor PR #146 (d9d4b5c, Runde r20, C5), davor PR #145 (81a6ccb, Neuheitsprüfungen Kern und Koide), davor #144 (982c476, Runde r19), davor #143 (80af436, C5 (α) in der r10-Lesart), davor #142 (cdb45bf, C5 Nullaugenblick), davor #141 (144d4ff, Runde r18), davor #140 (c66a5ab, OP4 Zeitzyklus und Spin(8)-Zentrum), davor #139 (86d80c8, Suche nach blindem Test, H2 nachgerechnet), davor #138 (68e1075, Runde r17), davor #137 (a835c46, OP1 Brücke: Barbero-Dublett, Penrose-Stränge), davor #136 (45f518d, OP3 Uhr-Abgleich und Treue-Lesart, OP1 Irreduzibilität), davor #135 (e0be304, Runde r16 mit r16.1–r16.9), davor #134 (f32ae5c, k220 „ein Objekt“ übernommen), davor #133 (37ac7da, OP3: C⊗O, Helizitätsachse, invariante Kugel, Feldvorzeichen), davor #132
   (b6ed1a5, Runde r15, Dauerauftrag Issues), #130 (eeb6083,
   Berichtigung zu CT-004), #129 (c9bfb19, OP1 mit I1, CT-004) und #128
-  (14feb02, Release v5.1.0). **Keine offenen PRs.** Gemergt am 14./15.11.: #124–#128
+  (14feb02, Release v5.1.0). **Offen: PR #152** (Zweig `research/v4.10-r24-op1-crossing`, Runde r24, OP1; wartet auf Freigabe; CI-Lauf gestartet,
+  Ergebnis nicht geprüft). Gemergt am 14./15.11.: #124–#128
   (OP3-Rückwärtssuche, Dauerauftrag Versionsverwaltung, Abbildung C⊗S → C⊗H⊗O, bewachter Kern, Release), davor #108–#123.
   Gemergte Zweige sind gelöscht (16.11.: drei lokale Altzweige). Die Läufe nach dem Merge von #146 waren erfolgreich.
 - **Letzte Runde:** v4.10.0-r23 (Kaskade, PR #149, f495e5a). **Davor:** v4.10.0-r22 (Kollapszustand, PR #148, a141650), davor v4.10.0-r21 (gemergt über PR #147 als c0f3011), C5 frame-sauber neu gestellt (PR #147). Anteile C5_M + C5_T = 1,
@@ -184,16 +185,18 @@
   Thema → geschlossen über PR #150 (fdde521): 354 Runden-Einträge aus 134 Runden (Stand r22), v5-Editionen unverändert.
   Frame-Abschnitte eingelesen (PR #151 gemergt): 236 von 359 Runden-Einträgen (83 Runden) mit Frame `convention-f-section`,
   117 mit eigener Zeile; wörtlicher Vermerk, keine geprüfte Typisierung, Guards offen. Danach: OP1 (Rückwärtssuche, I1-3 nennen).
-- **OP1, Rückwärtssuche zu (S2) (16.11., Zweig `research/op1-statistics-backward`, noch kein PR, keine Runde):**
+- **OP1, Rückwärtssuche zu (S2) = Runde v4.10.0-r24.1/r24.2 (16.11., PR #152):**
   `notes/research/op1_statistics_backward_2026_11_16/`. Kein Operator im Bestand wirkt auf den Strangtausch und wird zugleich von R
   vertauscht (Frame-Abbildungen, Port-Parität J, strangweiser Kompensator wirken strangweise). (S2) aus Frame-/Portstruktur nicht
   begründbar; weitere Varianten mit dieser Voraussetzung ausgeschlossen. Nebenbefund: strangweise Kompensation → ausgerichtete
   Bündel = Lesart für (S3). Auslöser I1-3 getroffen, I1 dem Autor als Ausweg vorgelegt (T zählt Endpunkte einzelner Strings;
   Preis Guard 1 von CT-004).
-- **OP1 mit I1 (16.11., selber Zweig, `notes/research/op1_i1_crossing_2026_11_16/`):** Guard 1 „T = String-Sektor“ hat keine Stütze;
+- **OP1 mit I1 = Runde v4.10.0-r24.3/r24.4 (16.11., PR #152, `notes/research/op1_i1_crossing_2026_11_16/`):** Guard 1 „T = String-Sektor“ hat keine Stütze;
   T11 widerspricht ihm sogar (Scheiben-Ports: M liest C = String, T liest A = LQG). Ersatz: „T zählt Querungen des Horizonts, eine
-  Querung = ein Strang“ (Stütze `thm:core`, r64(e), r63.3); j = ½ aus der Einzahl, (S2) entfällt. Lesart, kein Test. Vorschlag:
-  beide Notizen als Runde r24; Autorentscheidung ausstehend. CT-004-Register unverändert.
+  Querung = ein Strang“ (Stütze `thm:core`, r64(e), r63.3); j = ½ aus der Einzahl, (S2) entfällt. Lesart, kein Test.
+  CT-004-Register unverändert. Issue #10 und #17 nachgezogen. Kandidat 1447 Seiten, Linter 0. Zuletzt vergebene Runde: **r24**.
+  Nächster Schritt danach: eine Folge der Querungs-Lesart suchen, die nicht γ_L ist (z. B. Zahl der T-Punktierungen gegen
+  Hawking-Rate), als möglicher blinder Test mit Vorab-Notiz (H105 frei).
 - **C5 ruht nach r21.12:** Form (iii) ohne Kandidat; ohne neue Struktur keine weiteren Varianten. Möglich: OP1 (a)
   oder den Kollapszustand im ganzen Hauptkorpus nach der Tabelle r21.9 typisieren (R oder P).
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,
