@@ -62,7 +62,8 @@
   - **Korrekturterm (16.11., PR #162):** Methoden-Notiz `notes/research/op3_correction_term_2026_11_16/Methoden_Notiz.md` (Idee des Autors):
     System r16.8/r16.9, Start S1/S2, Ziel K=2/3, φ=0,666674, Generatoren Dipol/Quadrupol/dissipativ, kleinster Eingriff, V1–V3, M1–M4.
     Erste Rechnung (f838987 Skript, Ergebnis im Zweig): alle 16 Läufe erreichen Ziel; kein Befund (Richtung, Mischung nicht stabil;
-    nur Artefakte; keine Konstante). τ = 3π nicht konvergiert → Wiederholung mit Startfeld nahe null als Nachtrag offen (Autorentscheidung).
+    nur Artefakte; keine Konstante). Nachlauf N1 (0588c5d) konvergiert: kein Befund; Mischung 91/9 geometrisch (Koide-Tangente).
+    Grenze: auf S verschiebt kein natives Element Populationen → Methode zeigt dort nur Geometrie. Vorschlag: zeitabhängige Verbindung (Fluss).
   - Davor H109 (k231, widerlegt, Vorab 15004ce, Ergebnis 302bb9f).
   - H109: generationsabhängige zyklische Frame-Lesung (Generation k im Frame F_k aus R/T/J_B; L1 F⊗F, L2 kontrollierte Lesung einer Hälfte),
     9 Mechanismen, 14 Versuche, kein Treffer. Drehungen lassen 0,679042 stehen (kohärentes Dreieck, Überlappung ½); L2 gibt 0,05–0,78.
