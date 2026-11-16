@@ -6,13 +6,12 @@
   Record https://zenodo.org/records/24237112; Vorgänger v5.0.0 (10.5281/zenodo.24152615). Vollausgabe 1412 Seiten,
   Physik-Paper 29 Seiten. Paketquellstand dfdb413, Tag `v5.1.0`, GitHub-Release gesetzt. Nach der Veröffentlichung
   geprüft: acht Dateien prüfsummengleich mit dem Paket, Vorschau = Vollausgabe. Release-Notiz `release/v5.1.0/README.md`.
-- **GitHub:** `main` nach PR #156 (f0bb768, Runde r27, Berichtigung), davor PR #155 (69863d8, Runde r26, Verdopplungsregel), davor PR #154 (942508b, Runde r25, Dixon-Kopien), davor PR #153 (17f20aa, Vorab-Notiz H105), davor PR #152 (ad665b4, Runde r24, OP1), davor PR #151 (Frame-Abschnitte im Aussagenspeicher), davor PR #150 (fdde521, Runden-Absätze im Aussagenspeicher), davor PR #149 (f495e5a, Runde r23, Kaskade), davor PR #148 (a141650, Runde r22, Kollapszustand typisiert), davor PR #147 (c0f3011, Runde r21, C5 neu gestellt), davor PR #146 (d9d4b5c, Runde r20, C5), davor PR #145 (81a6ccb, Neuheitsprüfungen Kern und Koide), davor #144 (982c476, Runde r19), davor #143 (80af436, C5 (α) in der r10-Lesart), davor #142 (cdb45bf, C5 Nullaugenblick), davor #141 (144d4ff, Runde r18), davor #140 (c66a5ab, OP4 Zeitzyklus und Spin(8)-Zentrum), davor #139 (86d80c8, Suche nach blindem Test, H2 nachgerechnet), davor #138 (68e1075, Runde r17), davor #137 (a835c46, OP1 Brücke: Barbero-Dublett, Penrose-Stränge), davor #136 (45f518d, OP3 Uhr-Abgleich und Treue-Lesart, OP1 Irreduzibilität), davor #135 (e0be304, Runde r16 mit r16.1–r16.9), davor #134 (f32ae5c, k220 „ein Objekt“ übernommen), davor #133 (37ac7da, OP3: C⊗O, Helizitätsachse, invariante Kugel, Feldvorzeichen), davor #132
+- **GitHub:** `main` nach PR #157 (703c11c, H106–H110, Renormierung, Erkundungen, OP3-Diagnose, Wiki) und PR #158 (f32d63e, `tools/hs_partition.py`), davor PR #156 (f0bb768, Runde r27, Berichtigung), davor PR #155 (69863d8, Runde r26, Verdopplungsregel), davor PR #154 (942508b, Runde r25, Dixon-Kopien), davor PR #153 (17f20aa, Vorab-Notiz H105), davor PR #152 (ad665b4, Runde r24, OP1), davor PR #151 (Frame-Abschnitte im Aussagenspeicher), davor PR #150 (fdde521, Runden-Absätze im Aussagenspeicher), davor PR #149 (f495e5a, Runde r23, Kaskade), davor PR #148 (a141650, Runde r22, Kollapszustand typisiert), davor PR #147 (c0f3011, Runde r21, C5 neu gestellt), davor PR #146 (d9d4b5c, Runde r20, C5), davor PR #145 (81a6ccb, Neuheitsprüfungen Kern und Koide), davor #144 (982c476, Runde r19), davor #143 (80af436, C5 (α) in der r10-Lesart), davor #142 (cdb45bf, C5 Nullaugenblick), davor #141 (144d4ff, Runde r18), davor #140 (c66a5ab, OP4 Zeitzyklus und Spin(8)-Zentrum), davor #139 (86d80c8, Suche nach blindem Test, H2 nachgerechnet), davor #138 (68e1075, Runde r17), davor #137 (a835c46, OP1 Brücke: Barbero-Dublett, Penrose-Stränge), davor #136 (45f518d, OP3 Uhr-Abgleich und Treue-Lesart, OP1 Irreduzibilität), davor #135 (e0be304, Runde r16 mit r16.1–r16.9), davor #134 (f32ae5c, k220 „ein Objekt“ übernommen), davor #133 (37ac7da, OP3: C⊗O, Helizitätsachse, invariante Kugel, Feldvorzeichen), davor #132
   (b6ed1a5, Runde r15, Dauerauftrag Issues), #130 (eeb6083,
   Berichtigung zu CT-004), #129 (c9bfb19, OP1 mit I1, CT-004) und #128
-  (14feb02, Release v5.1.0). **Offen: PR #157** (Zweig `research/h106-singlet-residual`: H106–H108 widerlegt, Renormierung geprüft; wartet auf Freigabe). **Offen: PR #158** (Zweig `tools/hs-partition`: Hilfskonstruktion `tools/hs_partition.py`,
-  Idee des Autors; Selbsttest reproduziert r25/H106; wartet auf Freigabe). Gemergt am 14./15.11.: #124–#128
+  (14feb02, Release v5.1.0). Gemergt am 14./15.11.: #124–#128
   (OP3-Rückwärtssuche, Dauerauftrag Versionsverwaltung, Abbildung C⊗S → C⊗H⊗O, bewachter Kern, Release), davor #108–#123.
-  Gemergte Zweige sind gelöscht (16.11.: drei lokale Altzweige). Die Läufe nach dem Merge von #146 waren erfolgreich.
+  Keine offenen PRs. Gemergte Zweige sind gelöscht (16.11.: drei lokale Altzweige; nach #157/#158 deren Zweige). Die Läufe nach dem Merge von #146 waren erfolgreich.
 - **Letzte Runde:** v4.10.0-r27 (Berichtigung zu r26, r27.2, PR #156, f0bb768). **Davor:** v4.10.0-r26 (Verdopplungsregel, PR #155, 69863d8). **Davor:** v4.10.0-r25 (Dixon-Kopien, PR #154, 942508b), v4.10.0-r24 (OP1, Querungen, PR #152, ad665b4). **Davor:** v4.10.0-r23 (Kaskade, PR #149, f495e5a), v4.10.0-r22 (Kollapszustand, PR #148, a141650), davor v4.10.0-r21 (gemergt über PR #147 als c0f3011), C5 frame-sauber neu gestellt (PR #147). Anteile C5_M + C5_T = 1,
   frame-freier Boden |s|/2u. Drei Fragen: Übergangsfrage (Verlagerung, keine Entladung), Photonpunkt-Frage (für Felder
   positiv; bleibende Null nur bei s₊ = s₋ = w = 0), Brückenfrage (offen). Berichtigung zu r20.4: gleiche Anteile sind für P
@@ -35,7 +34,7 @@
     Querdephasierung um die Zyklusachse, κ² = 0,880706 → K = 2/3 exakt, φ = 2/3. Native Konstruktion für κ offen. Sechs Wege, Rest offen.
   - **Natives κ gesucht (16.11., Erkundung, nicht blind, `notes/research/op3_native_kappa_2026_11_16/`, im Zweig von PR #157):** passender Kanal
     = Zwirbeln mit n·σ = (R+T+J_B)/√3, p = 0,0308; zehn native Kandidaten alle zu stark (nächster Abstand 0,109). Kein natives κ.
-    Nächster Schritt: Autorentscheidung (kleine Kopplung als p lesen = neue Setzung, oder OP3 ruhen lassen); PR #157/#158 mergen.
+    Nächster Schritt: Autorentscheidung (kleine Kopplung als p lesen = neue Setzung, oder OP3 ruhen lassen); 
   - **Diagnose OP3 (16.11., `notes/research/op3_chain_diagnosis_2026_11_16/`, c071444 im Zweig von PR #157; Auftrag: Logikkette zurück, OP5):**
     Ziel und Gram-Lesart stimmen. δ ist eine zweite, unabhängige Zahl; reine symmetrische Konstruktionen binden die Phase starr an die
     Überlappung (Spin ½/1/3/2: 0,785/0,679/0,650). Zielzustand nicht kohärent (Kohärenzmaß 1,068, Rang zwei von S, r16.8). Fehlende Zahl =
@@ -63,7 +62,7 @@
   Zweig von PR #157; Frage des Autors „Partitionierungen in verschiedenen Frames lesen?“):** Die Frame-Abbildungen von r16.7
   (R=σz, T=σx, J_B=σy) brechen die Generationsgleichheit; zykluserhaltende Lesungen geben nur den Tausch 00↔11 (Werte schon in H107).
   Gemeinsame Lesung gibt nichts Neues; die generationsabhängige Familie hat der Autor danach als H109 prüfen lassen (widerlegt, s. o.).
-  PR #157 und Issue #131 nachgezogen. Nächster Schritt: Autorentscheidung, OP3 ruhen lassen oder Überlappung ½ selbst angehen; PR #157/#158 mergen.
+  PR #157 und Issue #131 nachgezogen. Nächster Schritt: Autorentscheidung, OP3 ruhen lassen oder Überlappung ½ selbst angehen; 
   - H107 (k229, Vorab 30a4a50, erweitert 44cda89): widerlegt.
   - H107 widerlegt: verschachtelte Normierung HS(8) = HS(7) ⊕ HS(6) ⊕ HS(6) (Idee des Autors), volle Grammatik, 20 Versuche, kein Treffer
     auf 0,0002 rad; nächster N1 −0,0015. Struktur: Bei Produktzuständen |n⟩|n⟩ ist ein in seiner HS(7)-Hälfte normiertes HS(6) das Gewicht
