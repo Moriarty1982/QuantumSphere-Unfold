@@ -22,6 +22,8 @@ $\beta_{\mathrm{sym}} \approx 0{,}549$ wird aus zwei veröffentlichten Barbero�
 
 **Nachtrag 15.11.2026 (Erkundung, nicht blind):** Unter der Annahme, dass die Frame-Abbildungen auf Horizont-Punktierungen über dieselbe SU(2) wirken wie auf dem Feld-Dublett, wirken sie nur bei j = ½ irreduzibel. „T zählt irreduzible Punktierungen, M das invariante Extremdublett je j“ gibt genau das Paar aus H98 und ersetzt die gescheiterte Energiebedingung P2; die Brücke und die Asymmetrie zwischen M und T sind gesetzt.
 
+**Nachtrag 16.11.2026 (Runde r24, Erkundung, nicht blind):** Die Statistik je Frame (T fermionisch, M bosonisch), die r17.5 für die Strang-Lesart braucht, ist aus der Frame- und Portstruktur nicht begründbar: Alles, was die Tachyon-Abbildung vertauscht, wirkt strangweise. Mit I1 lässt sich die T-Regel ohne Statistik lesen: T zählt Querungen des Horizonts, eine Querung trägt einen Strang, also j = ½. Die Stütze dafür sind `thm:core` (der Kern erreicht das Außen nur als Tachyon), r64(e) und r63.3, nicht T11; T11 widerspricht der früheren Setzung „T = String-Sektor“ sogar. Lesart, kein Test.
+
 **Offen:** warum die Frames gerade diese Zählregeln wählen. **Nächster Schritt:** die U(1)-Auswahl aus der inneren Einheit $J$ herleiten oder ausschließen.
 
 ## OP2: Dirac-Operator auf dem antisymmetrischen Sektor

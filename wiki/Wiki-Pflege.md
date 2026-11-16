@@ -102,6 +102,9 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 16.11.2026: Runde v4.10.0-r24 (OP1: Statistik je Frame rückwärts geprüft, T zählt Querungen) eingetragen: Forschungsstand,
+  Offene-Probleme (OP1), Gesamtbild, Forschungslinie, Inhalt, Content-overview. Kein Abschluss.
+
 - 16.11.2026: QAM: Frame-Abschnitte der Runden im Aussagenspeicher (Nachtrag im Abschnitt zu den Forschungsrunden).
 
 - 16.11.2026: QAM: Forschungsrunden im Aussagenspeicher (354 Runden-Einträge), Abschnitt in QAM ergänzt.

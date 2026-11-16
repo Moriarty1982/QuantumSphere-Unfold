@@ -1,5 +1,50 @@
 # Forschungsstand
 
+### OP1: Statistik je Frame rückwärts geprüft; T zählt Querungen (16.11.2026, Runde r24)
+
+Erkundung, nicht blind; OP1 bleibt offen. Die Zählregel „M alle Spins mit Gewicht 2, T nur j = ½“ (H98) war seit r17.5 als Statistik
+von Penrose-Strängen gelesen: bosonische Stränge geben alle j, fermionische nur j = ½. Offen war die Setzung (S2): Warum liest T
+fermionisch und M bosonisch?
+
+**Rückwärtssuche zu (S2) (r24.1).** Ein Grund müsste auf dem Austausch von Strängen wirken, von der Tachyon-Abbildung vertauscht werden
+und nicht auf die Kramers-Regel führen. Im Bestand gibt es keinen:
+
+| Kandidat | warum er ausscheidet |
+|---|---|
+| Frame-Abbildungen je Strang | wirken strangweise und vertauschen mit dem Strangtausch |
+| R² = −1 | führt auf Kramers (r17.6) |
+| Port-Parität J des Hauptkorpus („C bosonisch, A fermionisch“) | J_B tauscht nur die beiden Helizitätsanteile eines Feldes ($F_+\mapsto iF_-$), kein Strangtausch |
+| Kompensator strangweise | erzeugt ausgerichtete, symmetrische Bündel, nie antisymmetrische |
+
+Alles, was die Tachyon-Abbildung vertauscht, wirkt strangweise. (S2) ist aus der Frame- und Portstruktur **nicht begründbar**. Nebenbei
+gibt der strangweise Kompensator eine Lesart für (S3): Liest M jeden Strang durch einen Port, entstehen genau die ausgerichteten Bündel
+$|j,\pm j\rangle$, das Extremdublett mit Gewicht 2 (r24.2).
+
+**I1 verfolgt (Autorentscheidung; Auslöser I1-3 getroffen).** Zählt T Endpunkte einzelner Strings, folgt j = ½ aus der Einzahl, ohne
+Statistik. Die bisherige Setzung dafür, „T = String-Sektor“ (Guard 1 von CT-004), hat aber keine Stütze:
+- **T11 widerspricht ihr (r24.3):** T11 ordnet Strings dem Port C, LQG dem Port A zu. Mit den Scheiben-Ports der C5-Lesart liest M den
+  Port C und T den Port A, also M Strings, T LQG. Mit den algebraischen Ports trennt T11 die Frames gar nicht.
+- **Der Name γ_string ist nur ein Name:** Der Wert ist die LQG-Zählung (ABCK) mit nur j = ½.
+
+**Ersatz: T zählt Querungen (r24.4, Lesart).** Der Bestand gibt dem Tachyon eine eigene Rolle zwischen zwei getrennten Bereichen: Der
+Kern eines Schwarzen Lochs erreicht das Außen nur durch Tunnelung als Tachyon (`thm:core`), γ_string ist die Zählung des einfallenden
+Tachyons (r64(e)), und ein Tachyon läuft auf einen einzigen Boden zu (r63.3). Mit I1 gelesen ist die Brücke zwischen den Systemen das,
+was den Horizont quert. Eine T-Punktierung ist eine Querung, eine Querung trägt einen Strang, also j = ½ mit Gewicht 2.
+
+| Setzung | vorher | nach r24 |
+|---|---|---|
+| Guard 1 von CT-004 | T = String-Sektor, ohne Stütze | T zählt Querungen; Stütze `thm:core`, r64(e), r63.3 |
+| (S2) Statistik je Frame | nötig, nicht begründbar | nicht nötig |
+| (S1) Strang = Quant von χ | nötig | weiter nötig |
+| (S3) ausgerichtete Bündel in M | nötig | weiter nötig, mit Lesart r24.2 |
+| Flächenspektrum | fest (H104) | unverändert |
+
+**Grenzen:** Lesart, kein Test. `thm:core` ist eine Erzählung des Hauptkorpus ohne Statusvermerk; warum M keine Querungen sieht, ist nur
+als „M bleibt außen“ gelesen. Ein Test bräuchte eine weitere Folge der Querungs-Lesart, etwa die Zahl der T-Punktierungen eines
+Horizonts im Verhältnis zu seiner Hawking-Rate. Das Register CT-004 ist nicht geändert.
+
+[Rückwärtssuche](../notes/research/op1_statistics_backward_2026_11_16/README.md) · [I1, Querungen](../notes/research/op1_i1_crossing_2026_11_16/README.md) · [Runde](../notes/research/v4_10_0_r24/README.md).
+
 ### Wohin führt die Kaskade? (16.11.2026, Runde r23)
 
 Erkundung, nicht blind. Offene Frage aus r22.4: Führt die Kaskade des Hauptkorpus, die „alles zurück zu $z^-=0$“ projiziert, zum
