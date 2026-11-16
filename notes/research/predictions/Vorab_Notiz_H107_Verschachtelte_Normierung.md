@@ -57,6 +57,21 @@ nahe am Kastengewicht 0,0976 aus r25.5. Gesucht ist ein Mechanismus, der w **ohn
 - Weil ψ sich mit w ändert, ist das selbstkonsistente w von N1 vor der Rechnung nicht bekannt.
 - Ein Treffer wäre eine Lesart des Rests, keine Herleitung der Überlappung ½.
 
+## Ergänzung vor der Rechnung (16.11.2026, Auftrag des Autors „Ja, erweitern“)
+Die Hilfskonstruktion `tools/hs_partition.py` (PR #158) zählt in HS(8) zehn natürliche Beziehungen (Gewicht eines Knotens; Gewicht eines
+Knotens normiert in einem Vorfahren), davon neun wertverschieden, weil p₀₁ = p₁₀. N1–N7 decken sechs davon ab, dazu N4, das kein Knoten
+ist. **Vor jeder Rechnung** wird die Familie auf die volle Grammatik erweitert:
+
+| Name | Rolle | w |
+|---|---|---|
+| N8 | ganze HS(7)-Hälfte H₀ | p₀₀ + p₀₁ |
+| N9 | ganze HS(7)-Hälfte H₁ | p₁₀ + p₁₁ |
+| N10 | schweres HS(6), normiert in H₀ | p₀₀/(p₀₀ + p₀₁) |
+
+Die Beziehungen „HS(6)[10]“ und „HS(6)[10] in H₁“ haben dieselben Werte wie N1 und N6 und werden nicht doppelt gezählt. Die Familie ist damit
+N1–N10 (neun Beziehungen der Grammatik und N4). Das Kriterium bleibt (genau ein Treffer auf 0,0002 rad an 0,666665); die Zufallserwartung
+steigt auf etwa 10 × 0,007 = 0,07 Treffer. Gerechnet wurde vor dieser Ergänzung nichts.
+
 ## Ablauf
 1. Diese Notiz committen.
 2. `k229_test_h107.py` schreiben; Freigabe des Autors abwarten; dann ausführen (Ausgabe `k229_out.txt`).
