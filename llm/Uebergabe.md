@@ -33,6 +33,9 @@
   - H110: Triplett-Paar {Betrachter, F} in der HS(7)-Hälfte (Aufteilung 7+6+6), 6 Versuche, kein Treffer; das Paar verschiebt den Längsanteil,
     K verlässt 2/3. Berichtigung (Nachtrag Betrachter-Erkundung): gleichmäßig gemischt hält K nicht (K = (3+λ²)/6). Scharfe Bedingung:
     Querdephasierung um die Zyklusachse, κ² = 0,880706 → K = 2/3 exakt, φ = 2/3. Native Konstruktion für κ offen. Sechs Wege, Rest offen.
+  - **Natives κ gesucht (16.11., Erkundung, nicht blind, `notes/research/op3_native_kappa_2026_11_16/`, im Zweig von PR #157):** passender Kanal
+    = Zwirbeln mit n·σ = (R+T+J_B)/√3, p = 0,0308; zehn native Kandidaten alle zu stark (nächster Abstand 0,109). Kein natives κ.
+    Nächster Schritt: Autorentscheidung (kleine Kopplung als p lesen = neue Setzung, oder OP3 ruhen lassen); PR #157/#158 mergen.
   - Davor H109 (k231, widerlegt, Vorab 15004ce, Ergebnis 302bb9f).
   - H109: generationsabhängige zyklische Frame-Lesung (Generation k im Frame F_k aus R/T/J_B; L1 F⊗F, L2 kontrollierte Lesung einer Hälfte),
     9 Mechanismen, 14 Versuche, kein Treffer. Drehungen lassen 0,679042 stehen (kohärentes Dreieck, Überlappung ½); L2 gibt 0,05–0,78.
