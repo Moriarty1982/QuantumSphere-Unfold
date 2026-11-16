@@ -1,0 +1,17 @@
+(1) eine Generation: komplexe Dimension 32 (= 64 reell)
+    n = 1 Kopien: dim_C Kommutant = 6 (blockweise n^2 * 6 = 6)
+    n = 2 Kopien: dim_C Kommutant = 24 (blockweise n^2 * 6 = 24)
+    n = 4 Kopien: dim_C Kommutant = n^2 * 6 = 96 (blockweise, Kopienanteil M_4(C))
+(2) HS(7), Qubit-Zustaende +x, +y, +z: |Ueberlappung|^2 = 0.500, K = 0.6667, Phase = 0.785398 (pi/4 = 0.785398), det G = 0.00e+00
+    Spin-1-Dreieck: cos(Seitenwinkel) = 0.414214 (sqrt2 - 1 = 0.414214)
+(3) HS(8): Singulettanteil der drei Zustaende = 1.3e-17 (alle im Triplett); |Ueberlappung|^2 = 0.5000, K = 0.6667, Phase = 0.679042, det G = 0.050253
+(4) Spatprodukt det V = -0.000000-0.224171j; |det V|^2 = 0.050253 = det G = 0.050253
+    nach gemeinsamer SU(2)-Drehung: det V' = -0.000000-0.224171j (unveraendert), Singulett invariant: True
+    flach pi/4     : det G = (sqrt2 cos phi - 1)/2 = 0.000000
+    Spin-1-Dreieck : det G = (sqrt2 cos phi - 1)/2 = 0.050253
+    Leptonen 2/3   : det G = (sqrt2 cos phi - 1)/2 = 0.055706
+(5) Halbierung nach dem ersten Bit: Raenge 2 + 2 (je ein HS(7) aus zwei Dixon-Kopien); Singulett in einer Haelfte? False (Gewicht in der ersten Haelfte 0.50)
+    Triplett-Gewichte der drei Generationen je Dixon-Kasten |00>,|01>,|10>,|11>:
+      Generation 1: [0.7927 0.0976 0.0976 0.012 ]
+      Generation 2: [0.7927 0.0976 0.0976 0.012 ]
+      Generation 3: [0.7927 0.0976 0.0976 0.012 ]
