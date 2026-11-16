@@ -1,0 +1,17 @@
+Ziel: kappa^2 = 0.880706, kappa = 0.938459
+S1a Zwirbeln mit n.sigma, p = 0.1: Laengsanteil 0.5774 (vorher 0.5774), Queranteil 0.6532 (vorher 0.8165)
+S1b Frame-Abbildungen gleich gemischt, q = 0.05: Laengsanteil 0.4619 (vorher 0.5774), Queranteil 0.6532 (vorher 0.8165)
+S1c Mittel ueber den Generationszyklus: Laengsanteil 0.5774 (vorher 0.5774), Queranteil 0.0000 (vorher 0.8165)
+S2 noetiger Winkel der Aufzeichnungszustaende: cos theta = 0.761411, theta = 40.411 Grad
+Kandidaten (x = beta_sym^2 = 0.3021 aus p_+ = 0.768, gamma_M = 1.8657):
+   N1 1/N, N = 2 (Obergrenze)   kappa^2 = 0.500000  phi = 0.321751  phi - Ziel = -0.344914
+   N2 kappa = |b| = 1/gamma_M   kappa^2 = 0.287296  phi = 0.166197  phi - Ziel = -0.500468
+   N3 kappa = sinc(pi/3)        kappa^2 = 0.683918  phi = 0.479253  phi - Ziel = -0.187412
+   N4 kappa = 1/sqrt3           kappa^2 = 0.333333  phi = 0.197396  phi - Ziel = -0.469269
+   N5/N6 kappa = 1/sqrt2        kappa^2 = 0.500000  phi = 0.321751  phi - Ziel = -0.344914
+   N7 kappa^2 = 3/4             kappa^2 = 0.750000  phi = 0.540420  phi - Ziel = -0.126245
+   N7 kappa = 3/4               kappa^2 = 0.562500  phi = 0.372988  phi - Ziel = -0.293677
+   N8 kappa = p_+               kappa^2 = 0.589824  phi = 0.396150  phi - Ziel = -0.270515
+   N8 kappa^2 = p_+             kappa^2 = 0.768000  phi = 0.557431  phi - Ziel = -0.109234
+   N9 kappa = (1/sqrt3)^2       kappa^2 = 0.111111  phi = 0.058756  phi - Ziel = -0.607909
+   N9 kappa = (1/sqrt2)^2       kappa^2 = 0.250000  phi = 0.141897  phi - Ziel = -0.524768
