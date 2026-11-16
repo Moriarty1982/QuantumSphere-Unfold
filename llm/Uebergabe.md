@@ -194,8 +194,10 @@
   T11 widerspricht ihm sogar (Scheiben-Ports: M liest C = String, T liest A = LQG). Ersatz: „T zählt Querungen des Horizonts, eine
   Querung = ein Strang“ (Stütze `thm:core`, r64(e), r63.3); j = ½ aus der Einzahl, (S2) entfällt. Lesart, kein Test.
   CT-004-Register unverändert. Issue #10 und #17 nachgezogen. Kandidat 1447 Seiten, Linter 0. Zuletzt vergebene Runde: **r24**.
-  Nächster Schritt danach: eine Folge der Querungs-Lesart suchen, die nicht γ_L ist (z. B. Zahl der T-Punktierungen gegen
-  Hawking-Rate), als möglicher blinder Test mit Vorab-Notiz (H105 frei).
+- **Testsuche zur Querungs-Lesart (16.11., Zweig `research/op1-crossing-test-search`, nur Notiz):** Kein blinder Test.
+  Folge: Flächenschritte 4 ln 2 l_P² (Bekenstein–Mukhanov, α = 4 ln 2), Echos im Ringdown nur, wenn jede Querung ein T-Quant ist
+  (V1). (V1) ist eine neue Wahl, Beobachtbarkeit umstritten (arXiv:2201.03245), Wert nicht projektspezifisch; (V2) nur Hawking.
+  H105 frei. Autorentscheidung: (V1) setzen und Test mit Frist formulieren, oder OP1 hier ruhen lassen.
 - **C5 ruht nach r21.12:** Form (iii) ohne Kandidat; ohne neue Struktur keine weiteren Varianten. Möglich: OP1 (a)
   oder den Kollapszustand im ganzen Hauptkorpus nach der Tabelle r21.9 typisieren (R oder P).
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,
