@@ -1,0 +1,11 @@
+x_M = tanh^2(eta) = 0.301847, x_T = tanh^2(eta + i pi/2) = 3.312937 (1/x_M = 3.312937, Imaginaerteil 5.2e-16)
+   eta = 1.0: x_M = 0.580026, x_T = 1.724062  (beide -> 1 = P fuer eta -> unendlich)
+   eta = 2.0: x_M = 0.929349, x_T = 1.076022  (beide -> 1 = P fuer eta -> unendlich)
+   eta = 4.0: x_M = 0.998659, x_T = 1.001343  (beide -> 1 = P fuer eta -> unendlich)
+   eta = 8.0: x_M = 1.000000, x_T = 1.000000  (beide -> 1 = P fuer eta -> unendlich)
+Frame | x | |b| | Register-Entropie (bit) | reelle Rapiditaet | Zaehlung gamma
+R (eta = 0) | 0.0000 | 1.0000 | -0.0000 | 0 | -
+M | 0.3018 | 0.5363 | 0.7812 | 0.6175 | 0.2375
+P | 1.0000 | 0.0000 | 1.0000 | unendlich | 0.2741 (Vorschlag)
+T | 3.3129 | 0.5363 | 0.7812 | 0.6175 + i pi/2 | 0.1274
+Rang von Projektoren in einer Folge (Spur, stetig): [2, 2, 2, 2, 2] -> der Grenzwert hat Spur 2, nie 2j + 1 = 5

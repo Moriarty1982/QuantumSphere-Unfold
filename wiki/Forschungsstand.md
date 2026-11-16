@@ -12,6 +12,8 @@ OP1 offen. [Notiz](../notes/research/op1_hc_blur_2026_11_16/README.md).
 
 **HC je Frame und dritte Zählart (Nachtrag):** Bisher trägt P keine Zählung (seit r63); die dritte Zählart (alle 2j + 1, SU(2), γ = 0,274) ist ungenutzt. Vorschlag: ein eigener HC je Frame. T: nur j = ½ (0,1274); M: Extremzustände längs der Port-Achse (0,2375); P: keine Auswahl, weil am Photonpunkt beide Ports gleich sind (F2), also alle 2j + 1 Zustände (0,2741). Die Masken sind geschachtelt (T ⊆ M ⊆ P); verwischt unterscheiden sie sich nur durch eine Annahme je Spin (1, 2/(2j+1), nur j = ½). Spannung: In Konvention F liegt P zwischen M und T, in der Zählung außen. Setzung, kein Datenvergleich.
 
+**Lage von P (Nachtrag, 17.11.):** Die Spannung ist ein Effekt der Koordinate x. In Rapiditäten (x = tanh²η) liegt M bei η, T beim Tachyon-Boden η + iπ/2 (1/x), und beide Äste enden für η → ∞ bei P. P ist also der gemeinsame Endpunkt im Unendlichen, nicht die Mitte; von R aus liegt P außen, wie in der Zählung. Auf dem reellen Ast R → M → P wächst die Zählung mit der Register-Entropie (0 / 0,78 / 1 bit). T hat dieselbe Entropie wie M und bildet einen eigenen, imaginär verschobenen Ast. Restspannung: Ein Grenzwert von Masken mit Rang 2 erreicht nie 2j + 1; der HC von P muss ein eigener sein (aus F2), kein Grenzwert.
+
 ### OP3: Das Kern-Bild topologisch (16.11.2026)
 
 Auftrag des Autors: topologische Analyse. Erkundung, analytisch.

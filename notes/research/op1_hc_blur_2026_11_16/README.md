@@ -96,3 +96,36 @@ Photonpunkt sieht man alles“), ist nicht geprüft.
 
 **Was daraus folgt.** Die Zuordnung „P zählt alles“ ist naheliegend und aus F2 motiviert, aber eine Setzung. Ein Test bräuchte eine Folgerung von γ_P,
 die vorab festgelegt wird; die Verhältnisse oben werden hier bewusst mit keinem Messwert verglichen. OP1 offen; H98, H102 unverändert.
+
+## Nachtrag (17.11.2026): Die Spannung um die Lage von P
+Auftrag des Autors: „Spannung P-Lage prüfen.“ Skript `p_position.py`, Ausgabe `run/p_position_stdout.txt`. Erkundung, analytisch.
+
+**Die Spannung.** In Konvention F liegt P zwischen M und T (M bei x = β² = 0,3018, P beim Fixpunkt x = 1, T bei 1/x = 3,3129). In der vorgeschlagenen
+Zählung liegt P außen (T ⊆ M ⊆ P, γ_P am größten).
+
+**Lage von P in verschiedenen Koordinaten:**
+
+| Frame | x | Sichtbarkeit \|b\| | Register-Entropie | reelle Rapidität | Zählung γ |
+|---|---|---|---|---|---|
+| R | 0 | 1 | 0 bit | 0 | – |
+| M | 0,3018 | 0,5363 | 0,7812 bit | 0,6175 | 0,2375 |
+| P | 1 | 0 | 1 bit | ∞ | 0,2741 (Vorschlag) |
+| T | 3,3129 | 0,5363 | 0,7812 bit | 0,6175 + iπ/2 | 0,1274 |
+
+1. **„P zwischen M und T“ ist eine Eigenschaft der Koordinate x, nicht der Lage.** In Rapiditäten ist x = tanh²η; M liegt bei reeller Rapidität η,
+   T beim Tachyon-Boden η + iπ/2 (r63.3), denn tanh²(η + iπ/2) = coth²η = 1/x (nachgerechnet). Für η → ∞ gehen beide gegen x = 1. **P ist also nicht die
+   Mitte zwischen M und T, sondern der gemeinsame Endpunkt zweier Äste bei unendlicher Rapidität**: des reellen Asts R → M → P und des um iπ/2
+   verschobenen Asts. Von R aus gesehen liegt P außen, im Unendlichen. Die Spannung in der Reihenfolge löst sich damit auf.
+2. **Auf dem reellen Ast folgt die Zählung der Register-Entropie.** R (0 bit) → M (0,78 bit) → P (1 bit, maximal gemischt): Mit wachsender Entropie zählt
+   der Frame mehr Zustände (M Gewicht 2, P alle 2j + 1). „Am Photonpunkt sieht man alles“ passt zu „der Photonpunkt ist maximal gemischt“. Das ist eine
+   Ordnungsaussage, keine quantitative; ob die Gewichte aus der Entropie folgen, ist nicht geprüft.
+3. **T gehört nicht auf diese Ordnung.** T hat dieselbe Sichtbarkeit und dieselbe Entropie wie M (beide frame-frei gleich), zählt aber weniger. Sein
+   Unterschied ist die imaginäre Verschiebung iπ/2, also eine andere Art (Querung statt Fluss, r24.4), keine Stufe auf dem reellen Ast.
+4. **Eine echte Restspannung bleibt.** P ist in Konvention F nur als Grenzwert erreichbar (k220: Informationsverlust). Eine Folge von Masken mit Rang 2
+   (M) oder Rang 2 bei j = ½ (T) hat im Grenzwert höchstens denselben Rang; sie kann nie zu den 2j + 1 Zuständen von P werden (Spur bleibt 2). Der
+   HC von P kann deshalb **nicht** der Grenzwert der HCs von M oder T sein; er muss ein eigener sein, gerade wie der Autor vermutet hat. Er folgt aus
+   der Entartung der Ports (F2), nicht aus einem Übergang.
+
+**Ergebnis.** Die Spannung in der Reihenfolge ist ein Effekt der Koordinate x; in Rapiditäten ist P der gemeinsame Endpunkt beider Äste und liegt
+außen, passend zur Zählung. Auf dem reellen Ast wächst die Zählung mit der Register-Entropie. T bildet einen eigenen, imaginär verschobenen Ast. Es
+bleibt: Der HC von P ist kein Grenzwert der anderen HCs, sondern ein eigener. OP1 offen; Setzung „P zählt alles“ unverändert.
