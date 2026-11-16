@@ -1,5 +1,15 @@
 # Forschungsstand
 
+### OP1: Zählung aus der Register-Entropie (17.11.2026)
+
+Auftrag des Autors. Erkundung, nicht blind. Modell: Eine Punktierung mit Spin j ist ein Bündel aus 2j Strängen, jeder im Registerzustand seines Frames (Konvention F).
+
+- **P:** Der Photonpunkt ist maximal gemischt; das Bündel verteilt sich gleichmäßig auf alle 2j + 1 Zustände, also γ_P = 0,274067. Die dritte Zählart folgt damit aus dem Register von P.
+- **R:** reiner Zustand, ein Zustand je Spin.
+- **M:** Das Register von M gibt eine vom Spin abhängige Zahl (gegen 2,40 bzw. 1,865), nicht die konstante 2 der Regel. Die Regel von M entspricht stattdessen reinen Strängen mit unbekanntem Port (ein Bit je Punktierung), also der Zählung reiner R-Zustände mit unbekanntem Vorzeichen.
+
+Ergebnis: Die Entropie erklärt die Enden des reellen Asts (R und P), nicht M. OP1 offen. [Notiz](../notes/research/op1_entropy_count_2026_11_17/README.md).
+
 ### OP1: Verwischte HC-Auslesung und Gegen-HC (16.11.2026)
 
 Zwei Ideen des Autors: Der Materie-Frame liest mehr aus, verwischt aber heimlich; und zum HC gehört beim Wechsel oder Vergleich ein Gegen-HC, der ihn beim Messen rückgängig macht. Erkundung, analytisch.

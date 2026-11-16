@@ -1,0 +1,18 @@
+Register-Sichtbarkeit M: b = 0.5363
+j | R (b=1) N_Shannon | M (b=0,536) N_Shannon, N_Beteiligung | P (b=0) N_Shannon | Zaehlgewichte M / P
+ 0.5 | 1.000 | 1.719, 1.553 | 2.000 | 2 / 2
+   1 | 1.000 | 2.112, 1.765 | 3.000 | 2 / 3
+ 1.5 | 1.000 | 2.290, 1.834 | 4.000 | 2 / 4
+   2 | 1.000 | 2.362, 1.855 | 5.000 | 2 / 5
+   3 | 1.000 | 2.399, 1.864 | 7.000 | 2 / 7
+   5 | 1.000 | 2.404, 1.865 | 11.000 | 2 / 11
+  10 | 1.000 | 2.404, 1.865 | 21.000 | 2 / 21
++-Mischung (beide Ports): N_Shannon je j fuer b = 1 (reiner Fall) und b = b_M
+   j = 0.5: b = 1: 2.000   b = b_M: 2.000
+   j = 1: b = 1: 2.000   b = b_M: 2.903
+   j = 2: b = 1: 2.000   b = b_M: 4.091
+   j = 5: b = 1: 2.000   b = b_M: 4.786
+gamma mit N_Shannon aus rho_M: 0.234167 (Regel M: 0,237533)
+gamma mit N_Shannon aus rho_P (= 2j+1): 0.274067 (Vorschlag P: 0,274067)
+gamma mit +-Mischung reiner Zustaende (= 2 je j): 0.237533
+Bits je Punktierung: M-Regel 1 bit fuer jedes j; P-Regel log2(2j+1); Register-Entropie je Strang M 0.7812 bit, P 1 bit
