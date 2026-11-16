@@ -56,6 +56,9 @@
   - **Flussauslesung in R (16.11., PR #161):** Vorprüfung statt Test: invertierbare, sektorerhaltende Frame-Abbildungen → M und T zählen gleich
     (r10.4(c)). H111/k233 weiter frei. Offen: verschiedene Objekte (Flusslinien/Querungen) oder sektormischende Boosts (EPRL, Bianchi
     1204.5122; Ort aus r10.3) – Literatur zuerst.
+  - **Literatur EPRL/Bianchi (16.11., PR #161):** Boosts mischen Sektoren (Ausweg 2 formal offen), aber S = A/4 für jedes γ, beobachterunabhängig
+    (Bianchi) → γ_M ist Eigenschaft der mikrokanonischen Flächen-Zählung. H102 hängt zusätzlich an √(j(j+1)) (j: 0,6105; j+½: 0,6751).
+    Verbleibender Ausweg: verschiedene Objekte (Flusslinien gegen Querungen).
   - Davor H109 (k231, widerlegt, Vorab 15004ce, Ergebnis 302bb9f).
   - H109: generationsabhängige zyklische Frame-Lesung (Generation k im Frame F_k aus R/T/J_B; L1 F⊗F, L2 kontrollierte Lesung einer Hälfte),
     9 Mechanismen, 14 Versuche, kein Treffer. Drehungen lassen 0,679042 stehen (kohärentes Dreieck, Überlappung ½); L2 gibt 0,05–0,78.
