@@ -200,6 +200,11 @@
   Folge: Flächenschritte 4 ln 2 l_P² (Bekenstein–Mukhanov, α = 4 ln 2), Echos im Ringdown nur, wenn jede Querung ein T-Quant ist
   (V1). (V1) ist eine neue Wahl, Beobachtbarkeit umstritten (arXiv:2201.03245), Wert nicht projektspezifisch; (V2) nur Hawking.
   Autor hat V1 gesetzt → H105 (siehe Hypothesen).
+- **OP3, Dixon-Kopien (16.11., Idee des Autors, Zweig `research/op3-dixon-copies`, nur Notiz):**
+  `notes/research/op3_dixon_copies_2026_11_16/`. HS(7) = 2 Kopien → Kopien-Qubit (Ladung bestimmt), drei unverzerrte Zustände =
+  flacher Oktant (det G = 0). HS(8) = 4 Kopien = Triplett + Singulett; Spin-1-Dreieck im Triplett gebogen; Spatprodukt der drei
+  → Singulett, |det V|² = det G: vierte Kopie speichert die Biegung (neutraler Levi-Civita-Träger aus r13.6). Halbierung bestätigt,
+  3 + 1 liegt quer dazu. Offen: HS(7)/HS(8) im Atlas nicht definiert; Rest 0,0124; Auswahl der drei Zustände. Vorschlag: Runde r25.
 - **C5 ruht nach r21.12:** Form (iii) ohne Kandidat; ohne neue Struktur keine weiteren Varianten. Möglich: OP1 (a)
   oder den Kollapszustand im ganzen Hauptkorpus nach der Tabelle r21.9 typisieren (R oder P).
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,
