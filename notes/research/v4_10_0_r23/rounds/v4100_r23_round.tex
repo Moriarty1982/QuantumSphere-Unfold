@@ -1,0 +1,132 @@
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r23 Source-Only: Where the Cascade Leads: Two Cascades under One Name}
+\addcontentsline{toc}{section}{v4.10.0-r23 Source-Only: Where the Cascade Leads: Two Cascades under One Name}
+\label{sec:v4100-r23-cascade-endpoint}
+% ============================================================================
+
+\paragraph{Purpose.}
+v4.10.0-r22.4 left open whether the cascade of the main body, which ``projects everything back toward \(\zminus=0\)'', leads to the
+reference frame R (pure state, \(\phi=1\)) or to the photon point \(P\) (null class, \(\phi=0\)).  This layer answers the question from the
+three descriptions of the cascade in the main body and the readings already in the source.  Exploration, not blind: every result is
+fixed analytically beforehand.  The notes are \texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r23/} and
+\texttt{notes/\allowbreak research/\allowbreak cascade\_endpoint\_2026\_11\_16/}.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r23 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.1.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24237112}{10.5281/zenodo.24237112} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r23 results}
+\label{subsec:v4100-r23-results}
+
+\paragraph{Remark v4.10.0-r23.1 (three descriptions).}
+The main body describes the cascade \(\KC\) in three ways: as the transport of the null axis \(L_n\mapsto L_{n-1}\) towards the terminal
+photon sector \(S_0\) (Theorem~\ref{thm:fractal}); as \(\KC=C^\mu{}_\nu\circ\Pi_J\), compensation after the \(J\)-projection
+(Proposition~\ref{prop:horizon-cascade-singularity}); and as the chain \(S^{15}\to S^8\to S^4\to S^2\) with a Markov process whose absorbing
+state is the ``photon ground state'' (Theorems~\ref{thm:hopf} and \ref{thm:dark-energy}).  v4.8.0-r06 redefined the null axis invariantly as
+\(s=0\); v4.8.0-r09 showed that the chain is not a composition of Hopf maps.
+
+\paragraph{Theoremlet v4.10.0-r23.2 (the compensator cascade ends at R).}
+On the doublet of v4.9.0-r04, the image of every field with \(E+B\ne0\) under the compensator has \(\phi=1\); this includes null fields.
+The compensator cascade, and with it the collar step of v4.9.0-r10 and r27, therefore ends on the compensator axis, which is R
+(v4.9.0-r29.1(a)), and never reaches \(P\).  The Hopf reading (v4.9.0-r61.1(b)) and \(\Lambda=0\) (v4.9.0-r24.3) belong to the same side.
+
+\paragraph{Theoremlet v4.10.0-r23.3 (the null-axis transport carries \(P\)).}
+The Lorentz group and duality keep null fields null and keep \(|s|\) of non-null fields (k220).  A transport of the null axis from
+stratum to stratum stays in the null class.  ``Terminal compensated photon sector'' in Theorem~\ref{thm:fractal} names the class \(P\); it is
+not the end of a path from the other class.
+
+\paragraph{Theoremlet v4.10.0-r23.4 (open system and dephasing).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] With a replenished tachyon reservoir at angle \(\theta\) (v4.9.0-r28.2(c)) the attractor
+\(|b|_\infty=\sin^2\theta/(1-\cos^2\theta\cos2\alpha)\) runs, at \(\alpha=\pi/6\), from \(0.0006\) at \(\theta=1^\circ\) through \(0.40\) at \(30^\circ\) and \(0.86\)
+at \(60^\circ\) to \(1.0000\) at \(89.9^\circ\).  Weak coupling leads towards \(P\), strong coupling towards R.
+\item[(b)] Without a reservoir, many frequencies dephase the coherence like \(N^{-1/2}\) (v4.9.0-r28.2(b)); \(P\) is reached only in the limit.
+This repeats the clock model of r28 and is no independent check.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+r23.2: the compensator image has \(E'=B'\), so \(b_x=1\) and \(|b|=1\); checked on \(2000\) fields and on a null field.  r23.3: invariance
+of \(s\), checked on \(1000\) boosts and duality rotations.  r23.4(a): the closed form of r28.2(c).  Script
+\texttt{cascade\_\allowbreak endpoint.py}.  \(\square\)
+
+\paragraph{Remark v4.10.0-r23.5 (answer to r22.4).}
+The question was open not because the main body is silent, but because it carries two cascades under one name, and their end points
+are the two roles of \(\zminus=0\) found in r21.9 and r22:
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.40\textwidth}>{\raggedright\arraybackslash}p{0.28\textwidth}>{\raggedright\arraybackslash}p{0.24\textwidth}@{}}
+\toprule
+cascade & kind of step & end point\\
+\midrule
+\(C\circ\Pi_J\), collar step, Hopf chain, Markov with \(\Lambda=0\) & selective projection & R\\
+null-axis transport (Theorem~\ref{thm:fractal} with v4.8.0-r06) & invertible, class-preserving & carries \(P\)\\
+dephasing over many frequencies (r28.2(b)) & effectively irreversible & \(P\) in the limit only\\
+open system with reservoir (r28.2(c)) & exchange & between \(P\) and R\\
+\bottomrule
+\end{tabular}
+\end{center}
+``The cascade projects everything back toward \(\zminus=0\)'' is, for the compensator cascade, a statement about R: it makes states
+pure, not null.  No finite cascade in the source leads to the null state \(P\); only limits (boosts, dephasing, weak coupling) or, for an
+instant, free time evolution (r20.1) reach it.  This is the same picture as for C5 (r21.5, r21.12).
+
+\paragraph{What this does not give.}
+The assignment follows the cited passages and readings (v4.8.0-r06, v4.9.0-r10, r24, r28, r29); the main body does not define \(\KC\)
+uniformly.  The Markov process runs on strata, not on states of the doublet; its assignment to R rests on \(\Lambda=0\) (r24.3) alone.  No
+new number and no test.
+
+\subsection*{v4.10.0-r23 status in the three frames}
+\label{subsec:v4100-r23-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+item & M / T / P (and R)\\
+\midrule
+compensator cascade & ends at R; the tachyon map exchanges the ports (r28), so in T the end is the partner axis\\
+null-axis transport & stays in \(P\), frame-free\\
+reservoir attractor & between \(P\) and R; position set by the coupling\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r23 register entries}
+\label{subsec:v4100-r23-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r23\\
+\midrule
+cascade of the main body & two cascades under one name (r23.1, r23.5)\\
+compensator cascade & ends at R, never at \(P\) (r23.2)\\
+null-axis transport & carries \(P\), does not lead there (r23.3)\\
+open system, dephasing & between \(P\) and R by coupling; \(P\) only in the limit (r23.4)\\
+open question r22.4 & answered (r23.5)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r23 ledger and guard update}
+\label{subsec:v4100-r23-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r23}=(1,1,0)
+\]
+for (answer recorded; computations checked in the cited script; a uniform definition of the cascade absent from the main body).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r23,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r23}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.

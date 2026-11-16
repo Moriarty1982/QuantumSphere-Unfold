@@ -1,0 +1,17 @@
+(1) Kompensator-Bild: phi = 1 fuer 2000 Felder (max Abw. 0.0e+00, min phi 1.000000); P wird nie erreicht
+    auch ein lichtartiges Feld (phi = 2.2e-17) geht nach der Kompensation auf phi = 1.000
+(2) Boosts und Dualitaet: lichtartig bleibt lichtartig (max phi 8.1e-15); |s| nicht lichtartiger Felder bleibt (min |s'|/|s| = 1.000000)
+(3) Reservoir th =   1.0 Grad: Attraktor |b| = 0.0006
+(3) Reservoir th =  15.0 Grad: Attraktor |b| = 0.1256
+(3) Reservoir th =  30.0 Grad: Attraktor |b| = 0.4000
+(3) Reservoir th =  45.0 Grad: Attraktor |b| = 0.6667
+(3) Reservoir th =  60.0 Grad: Attraktor |b| = 0.8571
+(3) Reservoir th =  75.0 Grad: Attraktor |b| = 0.9653
+(3) Reservoir th =  89.9 Grad: Attraktor |b| = 1.0000
+    th -> 0: |b| -> 0 (P); th -> 90 Grad: |b| -> 1 (R).  Die Kopplung an das Reservoir legt die Lage zwischen P und R fest.
+    Selbstkonsistenz (r28, nachtraeglich): sin^2 th = x = 1/3 gibt |b| = 0.5000 = (1-x)/(1+x) = 0.5000
+(4)     2 Frequenzen ohne Reservoir: mittlere Kohaerenz 0.637 (N^-1/2 = 0.707)
+(4)    10 Frequenzen ohne Reservoir: mittlere Kohaerenz 0.282 (N^-1/2 = 0.316)
+(4)    40 Frequenzen ohne Reservoir: mittlere Kohaerenz 0.143 (N^-1/2 = 0.158)
+(4)   400 Frequenzen ohne Reservoir: mittlere Kohaerenz 0.044 (N^-1/2 = 0.050)
+(4)  4000 Frequenzen ohne Reservoir: mittlere Kohaerenz 0.014 (N^-1/2 = 0.016)
