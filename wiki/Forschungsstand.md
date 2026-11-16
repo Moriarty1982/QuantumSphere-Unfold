@@ -6,7 +6,7 @@ Vorab festgelegt (H106, abf54a0): Kann das Singulett der vier Dixon-Kopien aus r
 zwischen dem Spin-1-Dreieck (Phase 0,679042) und der Lepton-Phase 2/3? Geprüft wurden zwei Mechanismen ohne freien Parameter, jeweils mit
 Überlappung ½:
 - **M1:** jede Generation mit Singulettgewicht ¼ (Dimensionsanteil des Singuletts). Ergebnis: Phase 0,640, um das Doppelte des Rests zu weit.
-- **M2:** jede Generation als Paar benachbarter Richtungen $\lvert n_kangle\lvert n_{k+1}angle$ (die „Normalen“ der Paare). Ergebnis:
+- **M2:** jede Generation als Paar benachbarter Richtungen $\lvert n_k\rangle\lvert n_{k+1}\rangle$ (die „Normalen“ der Paare). Ergebnis:
   dieselbe Phase wie das Dreieck; die Paare sind nur eine andere Schreibweise.
 
 **Widerlegt.** Nachträglich und nicht gedeutet: Ein Singulettgewicht von 0,0979 träfe die Lepton-Phase genau; es ist ans Ziel angepasst.
